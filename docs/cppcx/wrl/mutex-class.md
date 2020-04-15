@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Mutex::Mutex, constructor
 - Microsoft::WRL::Wrappers::Mutex::operator= operator
 ms.assetid: 682a0963-721c-46a2-8871-000e9997505b
-ms.openlocfilehash: 93de43ac7e5314501d0391e2cde862ba32be0b4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36466bd00c5b100f20ee87173e68fdef4131ec23
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379145"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371234"
 ---
 # <a name="mutex-class"></a>Mutex — Klasa
 
-Reprezentuje obiekt synchronizacji, który wyłącznie kontroluje zasobu udostępnionego.
+Reprezentuje obiekt synchronizacji, który kontroluje wyłącznie zasób udostępniony.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,29 +32,29 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>;
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne definicje typów
+### <a name="public-typedefs"></a>Publiczne typedefs
 
 Nazwa       | Opis
 ---------- | ------------------------------------------------------
-`SyncLock` | Synonim dla klasy, która obsługuje synchronicznej blokad.
+`SyncLock` | Synonim dla klasy, która obsługuje blokady synchroniczne.
 
 ### <a name="public-constructor"></a>Konstruktor publiczny
 
 Nazwa                   | Opis
 ---------------------- | ------------------------------------------------
-[Mutex::mutex —](#mutex) | Inicjuje nowe wystąpienie klasy `Mutex` klasy.
+[Mutex::Mutex](#mutex) | Inicjuje nowe wystąpienie klasy `Mutex`.
 
-### <a name="public-members"></a>Publiczne elementy członkowskie
+### <a name="public-members"></a>Członkowie publiczni
 
 Nazwa                 | Opis
 -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Mutex::Lock](#lock) | Czeka, aż do bieżącego obiektu lub `Mutex` obiekt skojarzony z określonym dojściem wersji obiektu mutex lub określony limit czasu upłynął.
+[Mutex::Blokada](#lock) | Czeka, aż bieżący obiekt `Mutex` lub obiekt skojarzony z określonym uchwytem, zwalnia mutex lub upłynął określony interwał limit czasu.
 
 ### <a name="public-operator"></a>Operator publiczny
 
 Nazwa                                 | Opis
 ------------------------------------ | ---------------------------------------------------------------------------
-[Mutex::operator=](#operator-assign) | Przypisuje (ruch) określonego `Mutex` obiekt do bieżącego `Mutex` obiektu.
+[Mutex::operator=](#operator-assign) | Przypisuje (przenosi) określony `Mutex` obiekt do `Mutex` bieżącego obiektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -64,11 +64,11 @@ Nazwa                                 | Opis
 
 **Nagłówek:** corewrappers.h
 
-**Namespace:** Microsoft::wrl:: wrappers
+**Obszar nazw:** Microsoft::WRL::Otoki
 
-## <a name="lock"></a>Mutex::Lock —
+## <a name="mutexlock"></a><a name="lock"></a>Mutex::Blokada
 
-Czeka, aż do bieżącego obiektu lub `Mutex` obiekt skojarzony z określonym dojściem wersji obiektu mutex lub określony limit czasu upłynął.
+Czeka, aż bieżący obiekt `Mutex` lub obiekt skojarzony z określonym uchwytem, zwalnia mutex lub upłynął określony interwał limit czasu.
 
 ```cpp
 SyncLock Lock(
@@ -83,17 +83,17 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>Parametry
 
-*milliseconds*<br/>
-Interwał limitu czasu w milisekundach. Wartość domyślna to NIESKOŃCZONE, który oczekuje w nieskończoność.
+*milisekundy*<br/>
+Przedział limitów czasu w milisekundach. Wartością domyślną jest INFINITE, która czeka przez czas nieokreślony.
 
-*h*<br/>
+*H*<br/>
 Dojście `Mutex` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-## <a name="mutex"></a>Mutex::mutex —
+## <a name="mutexmutex"></a><a name="mutex"></a>Mutex::Mutex
 
-Inicjuje nowe wystąpienie klasy `Mutex` klasy.
+Inicjuje nowe wystąpienie klasy `Mutex`.
 
 ```cpp
 explicit Mutex(
@@ -107,16 +107,16 @@ Mutex(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
-Dojście lub odwołanie rvalue do uchwytu, aby `Mutex` obiektu.
+*H*<br/>
+Dojście lub odwołanie rvalue do dojścia `Mutex` do obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor inicjuje `Mutex` obiekt z określonego dojścia. Drugi Konstruktor inicjuje `Mutex` obiektu z określonego dojścia, a następnie przenosi własności obiektu mutex do bieżącego `Mutex` obiektu.
+Pierwszy konstruktor inicjuje `Mutex` obiekt z określonego dojścia. Drugi konstruktor inicjuje `Mutex` obiekt z określonego dojścia, a `Mutex` następnie przenosi własność obiektu mutex do bieżącego obiektu.
 
-## <a name="operator-assign"></a>Mutex::operator =
+## <a name="mutexoperator"></a><a name="operator-assign"></a>Mutex::operator=
 
-Przypisuje (ruch) określonego `Mutex` obiekt do bieżącego `Mutex` obiektu.
+Przypisuje (przenosi) określony `Mutex` obiekt do `Mutex` bieżącego obiektu.
 
 ```cpp
 Mutex& operator=(
@@ -126,8 +126,8 @@ Mutex& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
-Odwołania rvalue do `Mutex` obiektu.
+*H*<br/>
+Odwołanie do `Mutex` rvalue do obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -135,4 +135,4 @@ Odwołanie do bieżącego `Mutex` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz **przenoszenie semantyki** części [Rvalue Reference Declarator: & &](../../cpp/rvalue-reference-declarator-amp-amp.md).
+Aby uzyskać więcej informacji, zobacz sekcję **Przenieś semantyki** [rvalue reference declarator: &&](../../cpp/rvalue-reference-declarator-amp-amp.md).

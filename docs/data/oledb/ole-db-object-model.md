@@ -5,76 +5,76 @@ helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-ms.openlocfilehash: 192195d02b034546e50b1cb860b1f11c47dc2b65
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b37205eb91317c602010a4b568057845b2345ef0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210122"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369799"
 ---
 # <a name="ole-db-object-model"></a>Model obiektów OLE DB
 
-OLE DB model obiektów składa się z następujących obiektów lub składników. Pierwsze cztery obiekty lub składniki wymienione na liście (źródła danych, sesje, polecenia i zestawy wierszy) umożliwiają nawiązywanie połączenia ze źródłem danych i ich wyświetlanie. Pozostała część, rozpoczynająca się od metod dostępu, odnosi się do pracy z danymi wyświetlanymi.
+Model obiektów OLE DB składa się z następujących obiektów lub komponentów. Pierwsze cztery wymienione obiekty lub składniki (źródła danych, sesje, polecenia i zestawy wierszy) umożliwiają łączenie się ze źródłem danych i wyświetlanie go. Reszta, począwszy od akcesorów, odnoszą się do pracy z danymi, gdy są wyświetlane.
 
 ## <a name="data-sources"></a>Źródła danych
 
-Obiekty źródła danych umożliwiają łączenie się ze źródłem danych, takim jak plik lub system DBMS. Obiekt źródła danych tworzy połączenie i zarządza nim oraz zawiera uprawnienia i informacje dotyczące uwierzytelniania (takie jak nazwa logowania i hasło). Obiekt źródła danych może utworzyć co najmniej jedną sesję.
+Obiekty źródła danych umożliwiają łączenie się ze źródłem danych, takim jak plik lub system DBMS. Obiekt źródła danych tworzy połączenie i zarządza nim oraz zawiera informacje o uprawnieniach i uwierzytelnianiu (takie jak nazwa logowania i hasło). Obiekt źródła danych może utworzyć jedną lub więcej sesji.
 
 ## <a name="sessions"></a>Sesje
 
-Sesja zarządza określoną interakcją ze źródłem danych w celu wykonywania zapytań i pobierania danych. Każda sesja jest pojedynczą transakcją. Transakcja to niepodzielna jednostka robocza zdefiniowana przez test kwasu. Aby zapoznać się z definicją kwasu, zobacz [Transactions](#vcconoledbcomponents_transactions).
+Sesja zarządza określoną interakcją ze źródłem danych w celu wykonywania zapytań i pobierania danych. Każda sesja jest pojedynczą transakcją. Transakcja jest niepodzielną jednostką roboczą zdefiniowaną przez test ACID. Aby uzyskać definicję ACID, zobacz [Transakcje](#vcconoledbcomponents_transactions).
 
-Sesje są ważnymi zadaniami, takimi jak otwieranie zestawów wierszy i zwracanie obiektu źródła danych, który go utworzył. Sesje mogą również zwracać metadane lub informacje o samym źródle danych (takie jak informacje tabeli).
+Sesje wykonują ważne zadania, takie jak otwieranie zestawów wierszy i zwracanie obiektu źródła danych, który go utworzył. Sesje mogą również zwracać metadane lub informacje o samym źródle danych (takie jak informacje o tabeli).
 
 Sesja może utworzyć jedno lub więcej poleceń.
 
 ## <a name="commands"></a>Polecenia
 
-Polecenia wykonują polecenie tekstowe, takie jak instrukcja SQL. Jeśli polecenie tekstowe określa zestaw wierszy, taki jak instrukcja SQL **SELECT** , polecenie tworzy zestaw wierszy.
+Polecenia wykonują polecenie tekstowe, takie jak instrukcja SQL. Jeśli polecenie tekstowe określa zestaw wierszy, taki jak instrukcja SQL **SELECT,** polecenie tworzy zestaw wierszy.
 
-Polecenie jest po prostu kontenerem polecenia tekstowego, które jest ciągiem (na przykład instrukcją SQL) przekazaną przez odbiorcę do obiektu źródła danych w celu wykonania przez podstawowy magazyn danych dostawcy. Zazwyczaj polecenie Text jest instrukcją **SELECT** języka SQL (w tym przypadku, ponieważ SQL **SELECT** określa zestaw wierszy, polecenie automatycznie tworzy zestaw wierszy).
+Polecenie jest po prostu kontenerem dla polecenia tekstowego, który jest ciągiem (na przykład instrukcją SQL) przekazywanym z konsumenta do obiektu źródła danych do wykonania przez podstawowy magazyn danych dostawcy. Zazwyczaj polecenie tekstowe jest instrukcją SQL **SELECT** (w takim przypadku, ponieważ SQL **SELECT** określa zestaw wierszy, polecenie automatycznie tworzy zestaw wierszy).
 
-## <a name="rowsets"></a>Zestawy wierszy
+## <a name="rowsets"></a>Zestawów wierszy
 
-Zestawy wierszy pokazują dane w formacie tabelarycznym. Indeks jest specjalnym przypadkiem zestawu wierszy. Zestawy wierszy można tworzyć z sesji lub polecenia.
+Zestawy wierszy pokazują dane w formacie tabelarycznym. Indeks jest szczególnym przypadkiem zestawu wierszy. Zestawy wierszy można tworzyć z sesji lub polecenia.
 
 ### <a name="schema-rowsets"></a>Zestawy wierszy schematu
 
-Schematy mają metadane (informacje strukturalne) o bazie danych. Zestawy wierszy schematu są zestawami wierszy, które mają informacje o schemacie. Niektórzy dostawcy OLE DB dla systemu DBMS obsługują obiekty zestawu wierszy schematu. Aby uzyskać więcej informacji na temat zestawów wierszy schematu, zobacz [Uzyskiwanie metadanych za pomocą zestawów wierszy](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) schematu i klas [zestawów wierszy schematu oraz klas typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).
+Schematy mają metadane (informacje strukturalne) o bazie danych. Zestawy wierszy schematu są zestawami wierszy, które mają informacje o schemacie. Niektórzy dostawcy ole db dla dbms obsługi obiektów zestawu wierszy schematu. Aby uzyskać więcej informacji na temat zestawów wierszy schematu, zobacz [Uzyskiwanie metadanych za pomocą zestawów wierszy schematu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) i [klas zestawów wierszy schematu i klas Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).
 
-### <a name="view-objects"></a>Wyświetl obiekty
+### <a name="view-objects"></a>Wyświetlanie obiektów
 
-Obiekt widoku definiuje podzestaw wierszy i kolumn z zestawu wierszy. Nie ma własnych danych. Obiekty widoku nie mogą łączyć danych z wielu zestawów wierszy.
+Obiekt widoku definiuje podzbiór wierszy i kolumn z zestawu wierszy. Nie posiada własnych danych. Widok obiektów nie może łączyć danych z wielu zestawów wierszy.
 
-## <a name="accessors"></a>Metod dostępu
+## <a name="accessors"></a>Akcesorów
 
-Tylko OLE DB używa koncepcji metod dostępu. Metoda dostępu opisuje, jak dane są przechowywane w odbiorcy. Zawiera zestaw powiązań (nazywany mapowaniem kolumn) między polami zestawu wierszy (kolumnami) i elementami członkowskimi danych, które zostały zadeklarowane w odbiorcy.
+Tylko OLE DB używa pojęcia akcesorów. Akcesor opisuje, jak dane są przechowywane w konsumenta. Ma zestaw powiązań (nazywany mapą kolumn) między polami zestawu wierszy (kolumnami) i elementami członkowskich danych, które deklarujesz w konsumenta.
 
-##  <a name="transactions"></a><a name="vcconoledbcomponents_transactions"></a>Akcja
+## <a name="transactions"></a><a name="vcconoledbcomponents_transactions"></a>Transakcji
 
-Obiekty transakcji są używane podczas zatwierdzania lub przerywania transakcji zagnieżdżonych na poziomie innym niż najniższy. Transakcja to niepodzielna jednostka robocza zdefiniowana przez test kwasu. Oznacza KWASem:
+Obiekty transakcji są używane podczas zatwierdzania lub przerywania zagnieżdżonych transakcji na poziomie innym niż najniższy. Transakcja jest niepodzielną jednostką roboczą zdefiniowaną przez test ACID. Acid oznacza:
 
 - Niepodzielność, nie można podzielić na mniejsze jednostki robocze
 
-- Współbieżność, jednocześnie może wystąpić więcej niż jedna transakcja
+- Współbieżność, więcej niż jedna transakcja może wystąpić w czasie
 
-- Izolacja, jedna transakcja ma ograniczoną wiedzę o zmianach wprowadzonych przez inną
+- Izolacja, jedna transakcja ma ograniczoną wiedzę na temat zmian wprowadzonych przez inną
 
-- Trwałość, transakcja powoduje trwałe zmiany
+- Trwałość, transakcja wprowadza trwałe zmiany
 
 ## <a name="enumerators"></a>Modułów wyliczających
 
-Moduł wyliczający wyszukuje dostępne źródła danych i inne moduły wyliczające. Konsumenci niedostosowani do określonego źródła danych używają modułów wyliczających do wyszukiwania źródła danych do użycia.
+Wyliczacze wyszukują dostępne źródła danych i inne wyliczenia. Konsumenci, którzy nie są dostosowane do określonego źródła danych użyć inicjatorów do wyszukiwania źródła danych do użycia.
 
-Główny moduł wyliczający dostarczany w zestawie SDK dostępu do danych firmy Microsoft przechodzi rejestr szukający źródeł danych i innych modułów wyliczających. Inne moduły wyliczające przechodzą rejestr lub przeszukiwać w sposób specyficzny dla dostawcy.
+Wyliczenie główne, dostarczane w microsoft data access SDK, przechodzi przez rejestr w poszukiwaniu źródeł danych i innych wyliczaczy. Inne wyliczenia przechodzą przez rejestr lub wyszukiwania w sposób specyficzny dla dostawcy.
 
-## <a name="errors"></a>Błędy
+## <a name="errors"></a>Errors
 
-Każdy interfejs dowolnego OLE DB obiektu może generować błędy. Błędy zawierają dodatkowe informacje o błędzie, w tym opcjonalny obiekt błędu niestandardowego. Te informacje są przechowywane w wyniku HRESULT.
+Każdy interfejs na dowolnym obiekcie OLE DB może generować błędy. Błędy mają dodatkowe informacje o błędzie, w tym opcjonalny niestandardowy obiekt błędu. Informacje te są przechowywane w hresult.
 
 ## <a name="notifications"></a>Powiadomienia
 
-Powiadomienia są używane przez grupy współpracujących klientów, którzy współpracują z zestawem wierszy (gdzie udostępnianie oznacza, że odbiorcy będą pracować w ramach tej samej transakcji). Powiadomienia umożliwiają współpracownikom współpracującym udostępnianie zestawu wierszy w celu uzyskania informacji o działaniach w zestawie wierszy wykonywanym przez ich elementy równorzędne.
+Powiadomienia są używane przez grupy współpracujących konsumentów, którzy mają zestaw wierszy (gdzie udostępnianie oznacza, że zakłada się, że konsumenci pracują w ramach tej samej transakcji). Powiadomienia umożliwiają współpracującym konsumentom udostępniającym zestaw wierszy, aby byli informowani o działaniach w zestawie wierszy wykonywanych przez ich partnerów.
 
 ## <a name="see-also"></a>Zobacz też
 

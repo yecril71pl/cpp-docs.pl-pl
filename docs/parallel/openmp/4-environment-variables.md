@@ -2,40 +2,40 @@
 title: 4. Zmienne środowiskowe
 ms.date: 01/16/2019
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-ms.openlocfilehash: b41829fd9cf2f90312f669ef991f56dda02947f7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e93c59654c17ed6dbfb7483ac2dce716ce24b52a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417055"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370267"
 ---
-# <a name="4-environment-variables"></a>4. zmienne środowiskowe
+# <a name="4-environment-variables"></a>4. Zmienne środowiskowe
 
-W tym rozdziale opisano zmienne środowiskowe C++ środowiska OpenMP C i interfejsu API (lub podobne mechanizmy specyficzne dla platformy) kontrolujące wykonywanie kodu równoległego.  Nazwy zmiennych środowiskowych muszą być pisane wielką literą. Wartości przypisanych do nich nie uwzględniają wielkości liter i mogą zawierać odstępy wiodące i końcowe.  Modyfikacje wartości po rozpoczęciu pracy programu zostały zignorowane.
+W tym rozdziale opisano zmienne środowiskowe interfejsu API OpenMP C i C++ (lub podobne mechanizmy specyficzne dla platformy), które kontrolują wykonywanie kodu równoległego.  Nazwy zmiennych środowiskowych muszą być wielkie litery. Przypisane do nich wartości są niewrażliwe na wielkości liter i mogą mieć odstęp wiodący i końcowy.  Modyfikacje wartości po uruchomieniu programu są ignorowane.
 
 Zmienne środowiskowe są następujące:
 
-- [OMP_SCHEDULE](#41-omp_schedule) ustawia typ harmonogramu czasu wykonywania i rozmiar fragmentu.
-- [OMP_NUM_THREADS](#42-omp_num_threads) ustawia liczbę wątków, które mają być używane podczas wykonywania.
-- [OMP_DYNAMIC](#43-omp_dynamic) włącza lub wyłącza dynamiczne dopasowanie liczby wątków.
-- [OMP_NESTED](#44-omp_nested) włącza lub wyłącza zagnieżdżoną równoległość.
+- [OMP_SCHEDULE](#41-omp_schedule) ustawia typ harmonogramu wykonywania i rozmiar fragmentu.
+- [OMP_NUM_THREADS](#42-omp_num_threads) ustawia liczbę wątków do użycia podczas wykonywania.
+- [OMP_DYNAMIC](#43-omp_dynamic) włącza lub wyłącza dynamiczną regulację liczby wątków.
+- [OMP_NESTED](#44-omp_nested) włącza lub wyłącza równoległości zagnieżdżone.
 
-W przykładach w tym rozdziale przedstawiono tylko te zmienne, które można ustawić w środowiskach powłoki C Shell (CSH). W środowiskach powłoki Korna i systemu DOS działania są podobne:
+Przykłady w tym rozdziale pokazują tylko, jak te zmienne mogą być ustawione w środowiskach powłoki Uniks C (csh). W środowiskach Korn shell i DOS akcje są podobne:
 
-csh:  
+Csh:  
 `setenv OMP_SCHEDULE "dynamic"`
 
-ksh:  
+Ksh:  
 `export OMP_SCHEDULE="dynamic"`
 
-DOS:  
+Dos:  
 `set OMP_SCHEDULE="dynamic"`
 
-## <a name="41-omp_schedule"></a>4,1 OMP_SCHEDULE
+## <a name="41-omp_schedule"></a><a name="41-omp_schedule"></a>4.1 OMP_SCHEDULE
 
-`OMP_SCHEDULE` ma zastosowanie tylko do dyrektywy `for` i `parallel for`, które mają `runtime`typ harmonogramu. Typ harmonogramu i rozmiar fragmentu dla wszystkich takich pętli można ustawić w czasie wykonywania. Ustaw tę zmienną środowiskową na dowolny rozpoznany typ harmonogramu i opcjonalne *chunk_size*.
+`OMP_SCHEDULE`ma zastosowanie `for` tylko `parallel for` do i dyrektyw, `runtime`które mają typ harmonogramu . Typ harmonogramu i rozmiar fragmentu dla wszystkich takich pętli można ustawić w czasie wykonywania. Ustaw tę zmienną środowiskową na dowolny rozpoznany typ harmonogramu i na opcjonalną *chunk_size*.
 
-W przypadku dyrektyw `for` i `parallel for`, które mają typ harmonogramu inny niż `runtime`, `OMP_SCHEDULE` jest ignorowana. Wartością domyślną dla tej zmiennej środowiskowej jest zdefiniowana implementacja. Jeśli opcjonalny *chunk_size* jest ustawiony, wartość musi być dodatnia. Jeśli *chunk_size* nie jest ustawiona, zostanie przyjęta wartość 1, z wyjątkiem sytuacji, gdy harmonogram jest `static`. W przypadku harmonogramu `static` domyślny rozmiar fragmentu jest ustawiany na przestrzeń iteracji pętli podzieloną przez liczbę wątków zastosowanych do pętli.
+Dla `for` `parallel for` i dyrektyw, które mają `runtime`typ `OMP_SCHEDULE` harmonogramu inny niż , jest ignorowany. Wartość domyślna dla tej zmiennej środowiskowej jest zdefiniowana w implementacji. Jeśli ustawiono *opcjonalny chunk_size,* wartość musi być dodatnia. Jeśli *chunk_size* nie jest ustawiona, przyjmuje się wartość 1, z `static`wyjątkiem sytuacji, gdy harmonogram jest . W `static` przypadku harmonogramu domyślny rozmiar fragmentu jest ustawiony na spację iteracji pętli podzieloną przez liczbę wątków zastosowanych do pętli.
 
 Przykład:
 
@@ -47,19 +47,19 @@ setenv OMP_SCHEDULE "dynamic"
 ### <a name="cross-references"></a>Odsyłacze
 
 - [dla](2-directives.md#241-for-construct) dyrektywy
-- [Parallel dla](2-directives.md#251-parallel-for-construct) dyrektywy
+- [równolegle do](2-directives.md#251-parallel-for-construct) dyrektywy
 
-## <a name="42-omp_num_threads"></a>4,2 OMP_NUM_THREADS
+## <a name="42-omp_num_threads"></a><a name="42-omp_num_threads"></a>4.2 OMP_NUM_THREADS
 
-Zmienna środowiskowa `OMP_NUM_THREADS` ustawia domyślną liczbę wątków do użycia podczas wykonywania. `OMP_NUM_THREADS` jest ignorowany, jeśli ten numer zostanie jawnie zmieniony przez wywołanie procedury biblioteki `omp_set_num_threads`. Jest on również ignorowany, jeśli istnieje jawna klauzula `num_threads` w dyrektywie `parallel`.
+Zmienna środowiskowa `OMP_NUM_THREADS` ustawia domyślną liczbę wątków do użycia podczas wykonywania. `OMP_NUM_THREADS`jest ignorowana, jeśli ten numer jest `omp_set_num_threads` jawnie zmieniony przez wywołanie procedury biblioteki. Jest również ignorowane, jeśli istnieje `num_threads` jawna `parallel` klauzula w dyrektywie.
 
-Wartość zmiennej środowiskowej `OMP_NUM_THREADS` musi być dodatnią liczbą całkowitą. Jego wpływ zależy od tego, czy włączone jest dynamiczne dopasowanie liczby wątków. Aby uzyskać kompleksowy zestaw reguł dotyczących interakcji między zmienną środowiskową `OMP_NUM_THREADS` i dynamiczne dopasowanie wątków, zobacz [sekcję 2,3](2-directives.md#23-parallel-construct).
+Wartość zmiennej `OMP_NUM_THREADS` środowiskowej musi być dodatnią całkowitej liczby. Jego efekt zależy od tego, czy dynamiczna regulacja liczby wątków jest włączona. Aby uzyskać kompleksowy zestaw reguł `OMP_NUM_THREADS` dotyczących interakcji między zmienną środowiskową a dynamiczną regulacją wątków, zobacz [sekcję 2.3](2-directives.md#23-parallel-construct).
 
-Liczba wątków do użycia jest definiowana przez implementację, jeśli:
+Liczba wątków do użycia jest zdefiniowana w implementacji, jeśli:
 
-- Zmienna środowiskowa `OMP_NUM_THREADS` nie jest określona,
-- określona wartość nie jest dodatnią liczbą całkowitą.
-- wartość jest większa niż maksymalna liczba wątków obsługiwanych przez system.
+- zmienna `OMP_NUM_THREADS` środowiskowa nie jest określona,
+- określona wartość nie jest dodatnią całkowitej liczby, lub
+- wartość jest większa niż maksymalna liczba wątków, które system może obsługiwać.
 
 Przykład:
 
@@ -69,15 +69,15 @@ setenv OMP_NUM_THREADS 16
 
 ### <a name="cross-references"></a>Odsyłacze
 
-- klauzula [num_threads](2-directives.md#23-parallel-construct)
-- Funkcja [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function)
-- Funkcja [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)
+- [num_threads klauzula](2-directives.md#23-parallel-construct)
+- [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function) funkcja
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) funkcja
 
-## <a name="43-omp_dynamic"></a>4,3 OMP_DYNAMIC
+## <a name="43-omp_dynamic"></a><a name="43-omp_dynamic"></a>4.3 OMP_DYNAMIC
 
-Zmienna środowiskowa `OMP_DYNAMIC` włącza lub wyłącza dynamiczne dopasowanie liczby wątków dostępnych do wykonywania równoległych regionów. `OMP_DYNAMIC` jest ignorowana, gdy dynamiczne dopasowanie jest jawnie włączone lub wyłączone przez wywołanie procedury biblioteki `omp_set_dynamic`. Wartość musi być `TRUE` lub `FALSE`.
+Zmienna środowiskowa `OMP_DYNAMIC` włącza lub wyłącza dynamiczne dostosowanie liczby wątków dostępnych do wykonywania regionów równoległych. `OMP_DYNAMIC`jest ignorowana, gdy dynamiczne dopasowanie jest jawnie włączone lub wyłączone przez wywołanie procedury `omp_set_dynamic` biblioteki. Jego wartość `TRUE` musi `FALSE`być lub .
 
-Jeśli `OMP_DYNAMIC` jest ustawiona na `TRUE`, liczba wątków używanych do wykonywania regionów równoległych może zostać dostosowana przez środowisko uruchomieniowe, aby najlepiej wykorzystać zasoby systemowe.  Jeśli `OMP_DYNAMIC` jest ustawiona na `FALSE`, dynamiczne dopasowanie jest wyłączone. Domyślnym warunkiem jest zdefiniowana implementacja.
+Jeśli `OMP_DYNAMIC` jest `TRUE`ustawiona na , liczba wątków, które są używane do wykonywania regionów równoległych mogą być dostosowane przez środowisko wykonawcze, aby jak najlepiej wykorzystać zasoby systemowe.  Jeśli `OMP_DYNAMIC` jest `FALSE`ustawiona na , regulacja dynamiczna jest wyłączona. Warunkiem domyślnym jest zdefiniowana implementacja.
 
 Przykład:
 
@@ -87,12 +87,12 @@ setenv OMP_DYNAMIC TRUE
 
 ### <a name="cross-references"></a>Odsyłacze
 
-- [Równoległe regiony](2-directives.md#23-parallel-construct)
-- Funkcja [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)
+- [Regiony równoległe](2-directives.md#23-parallel-construct)
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) funkcja
 
-## <a name="44-omp_nested"></a>4,4 OMP_NESTED
+## <a name="44-omp_nested"></a><a name="44-omp_nested"></a>4.4 OMP_NESTED
 
-Zmienna środowiskowa `OMP_NESTED` włącza lub wyłącza zagnieżdżoną równoległość, chyba że zagnieżdżona równoległość jest włączona lub wyłączona przez wywołanie procedury biblioteki `omp_set_nested`. Jeśli `OMP_NESTED` jest ustawiona na `TRUE`, zagnieżdżona równoległość jest włączona. Jeśli `OMP_NESTED` jest ustawiona na `FALSE`, zagnieżdżona równoległość jest wyłączona. Wartością domyślną jest `FALSE`.
+Zmienna środowiskowa `OMP_NESTED` włącza lub wyłącza równoległości zagnieżdżonej, `omp_set_nested` chyba że zagnieżdżone równoległości jest włączona lub wyłączona przez wywołanie procedury biblioteki. Jeśli `OMP_NESTED` jest `TRUE`ustawiona na , zagnieżdżony równoległość jest włączona. Jeśli `OMP_NESTED` jest `FALSE`ustawiona na , zagnieżdżony równoległość jest wyłączona. Wartością domyślną jest `FALSE`.
 
 Przykład:
 
@@ -100,6 +100,6 @@ Przykład:
 setenv OMP_NESTED TRUE
 ```
 
-### <a name="cross-reference"></a>Odwołanie krzyżowe
+### <a name="cross-reference"></a>Odsyłacza
 
-- Funkcja [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function)
+- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) funkcja

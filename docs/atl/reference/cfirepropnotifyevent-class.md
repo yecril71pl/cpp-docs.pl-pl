@@ -1,5 +1,5 @@
 ---
-title: Klasa CFirePropNotifyEvent
+title: CFirePropNotifyEvent Klasa
 ms.date: 11/04/2016
 f1_keywords:
 - CFirePropNotifyEvent
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - CFirePropNotifyEvent class
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
-ms.openlocfilehash: 694127ceccc1d1b55e5da9abca799dff77dcfc60
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 1dfce42176341d74ffc7d9b42f856e71b17bf4f5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417867"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326966"
 ---
-# <a name="cfirepropnotifyevent-class"></a>Klasa CFirePropNotifyEvent
+# <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent Klasa
 
-Ta klasa dostarcza metody powiadamiania ujścia kontenera o zmianach właściwości formantu.
+Ta klasa zawiera metody powiadamiania kontenera ujścia dotyczące zmian właściwości kontroli.
 
 > [!IMPORTANT]
->  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,30 +31,30 @@ Ta klasa dostarcza metody powiadamiania ujścia kontenera o zmianach właściwo�
 class CFirePropNotifyEvent
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|Ruchom Powiadamia ujścia kontenera o zmianie właściwości kontrolki.|
-|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|Ruchom Powiadamia ujścia kontenera, że właściwość kontrolki ma zostać zmieniona.|
+|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|(Statyczne) Powiadamia ujście kontenera, że właściwość formantu została zmieniona.|
+|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|(Statyczne) Powiadamia ujście kontenera, że właściwość formantu ma się zmienić.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CFirePropNotifyEvent` ma dwie metody, które powiadamiają ujścia kontenera o zmianie właściwości kontrolki lub zmianie.
+`CFirePropNotifyEvent`ma dwie metody, które powiadamiają ujście kontenera, że właściwość formantu została zmieniona lub ma się zmienić.
 
-Jeśli klasa implementująca formant pochodzi od `IPropertyNotifySink`, metody `CFirePropNotifyEvent` są wywoływane po wywołaniu `FireOnRequestEdit` lub `FireOnChanged`. Jeśli Klasa formantu nie pochodzi od `IPropertyNotifySink`, wywołania tych funkcji zwracają S_OK.
+Jeśli klasa implementująca formant `IPropertyNotifySink`jest `CFirePropNotifyEvent` pochodną , metody `FireOnRequestEdit` są `FireOnChanged`wywoływane podczas wywoływania lub . Jeśli klasa kontroli nie jest `IPropertyNotifySink`pochodną , wywołania tych funkcji zwracają S_OK.
 
 Aby uzyskać więcej informacji na temat tworzenia formantów, zobacz [samouczek ATL](../../atl/active-template-library-atl-tutorial.md).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlctl. h
+**Nagłówek:** atlctl.h
 
-##  <a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged
+## <a name="cfirepropnotifyeventfireonchanged"></a><a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged
 
-Powiadamia wszystkie połączone interfejsy [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) (na każdym punkcie połączenia obiektu) o zmianie określonej właściwości obiektu.
+Powiadamia wszystkie podłączone [interfejsy IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) (w każdym punkcie połączenia obiektu), które zostały zmienione przez właściwość określonego obiektu.
 
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
@@ -62,13 +62,13 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 
 ### <a name="parameters"></a>Parametry
 
-*Punkt*<br/>
-podczas Wskaźnik do `IUnknown` obiektu wysyłającego powiadomienie.
+*Punk*<br/>
+[w] Wskaźnik do `IUnknown` obiektu wysyłającego powiadomienie.
 
-*dispID*<br/>
-podczas Identyfikator właściwości, która została zmieniona.
+*Dispid*<br/>
+[w] Identyfikator właściwości, która uległa zmianie.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Jedna ze standardowych wartości HRESULT.
 
@@ -76,9 +76,9 @@ Jedna ze standardowych wartości HRESULT.
 
 Ta funkcja jest bezpieczna do wywołania, nawet jeśli formant nie obsługuje punktów połączenia.
 
-##  <a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit
+## <a name="cfirepropnotifyeventfireonrequestedit"></a><a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit
 
-Powiadamia wszystkie połączone interfejsy [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) (na każdym punkcie połączenia obiektu), które mają zostać zmienione przez określoną właściwość obiektu.
+Powiadamia wszystkie podłączone [interfejsy IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) (w każdym punkcie połączenia obiektu), które ma się zmienić właściwość określonego obiektu.
 
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
@@ -86,13 +86,13 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 
 ### <a name="parameters"></a>Parametry
 
-*Punkt*<br/>
-podczas Wskaźnik do `IUnknown` obiektu wysyłającego powiadomienie.
+*Punk*<br/>
+[w] Wskaźnik do `IUnknown` obiektu wysyłającego powiadomienie.
 
-*dispID*<br/>
-podczas Identyfikator właściwości, która ma zostać zmieniona.
+*Dispid*<br/>
+[w] Identyfikator właściwości, która ma ulec zmianie.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Jedna ze standardowych wartości HRESULT.
 

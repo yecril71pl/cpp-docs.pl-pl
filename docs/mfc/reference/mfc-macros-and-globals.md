@@ -11,118 +11,118 @@ helpviewer_keywords:
 - Afx naming convention
 - macros
 ms.assetid: add4e33f-0e62-4d27-be14-896cb8675d22
-ms.openlocfilehash: 86fbda42d97c9086a3c1d021618a4694cfade7df
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: ed45fc7014bda18887be6dc8fbcdff8ba9a9c5f1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611810"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373040"
 ---
 # <a name="mfc-macros-and-globals"></a>Makra i funkcje globalne MFC
 
-Biblioteki klas Microsoft Foundation można podzielić na dwie główne części: (1 klas MFC i (2) makra i funkcje globalne. Jeśli funkcja lub zmienna nie jest składową klasy, jest to, globalnej funkcji lub zmienna.
+Biblioteka klas Microsoft Foundation można podzielić na dwie główne sekcje: (1) klasy MFC i (2) makra i globals. Jeśli funkcja lub zmienna nie jest członkiem klasy, jest to funkcja globalna lub zmienna.
 
-Biblioteka MFC i Active Template Library (ATL) używają makr konwersji ciągu. Aby uzyskać więcej informacji, zobacz [makra konwersji ciągów](../../atl/reference/string-conversion-macros.md) w dokumentacji ATL.
+Biblioteka MFC i biblioteka aktywnych szablonów (ATL) współużytkuje makra konwersji ciągów. Aby uzyskać więcej informacji, zobacz [Makra konwersji ciągów](../../atl/reference/string-conversion-macros.md) w dokumentacji ATL.
 
-Makra i globalne MFC oferują funkcje w następujących kategoriach.
+Makra MFC i globals oferują funkcje w następujących kategoriach.
 
 ## <a name="general-mfc"></a>Ogólne MFC
 
 - [Typy danych](data-types-mfc.md)
 
-- [Rzutowanie typów obiektów klas MFC](type-casting-of-mfc-class-objects.md)
+- [Typ rzutowania obiektów klasy MFC](type-casting-of-mfc-class-objects.md)
 
-- [Usługi modelu obiektów czasu wykonywania](run-time-object-model-services.md)
+- [Usługi modelu obiektów w czasie wykonywania](run-time-object-model-services.md)
 
 - [Usługi diagnostyczne](diagnostic-services.md)
 
 - [Przetwarzanie wyjątków](exception-processing.md)
 
-- [Formatowanie obiektu CString i wyświetlanie okna komunikatu](cstring-formatting-and-message-box-display.md)
+- [Formatowanie CString i wyświetlanie okna komunikatu](cstring-formatting-and-message-box-display.md)
 
-- [Mapy komunikatów](message-map-macros-mfc.md)
+- [Mapy wiadomości](message-map-macros-mfc.md)
 
-- [Delegata i mapy interfejsu](delegate-and-interface-maps.md)
+- [Delegowanie i mapy interfejsu](delegate-and-interface-maps.md)
 
 - [Moduły i biblioteki DLL](extension-dll-macros.md)
 
-- [Informacje o aplikacji i zarządzanie](application-information-and-management.md)
+- [Informacje o aplikacji i zarządzanie nimi](application-information-and-management.md)
 
-- [Standardowa identyfikatorów poleceń i okien](standard-command-and-window-ids.md)
+- [Standardowe identyfikatory poleceń i okien](standard-command-and-window-ids.md)
 
-- [Pomocnicy klasy kolekcji](collection-class-helpers.md)
+- [Pomocnicy klasy zbierania](collection-class-helpers.md)
 
-- [Funkcje szarych i symulowanych map bitowych](gray-and-dithered-bitmap-functions.md)
+- [Szare i roztrząsane funkcje mapy bitowej](gray-and-dithered-bitmap-functions.md)
 
-- [Standardowe procedury okna dialogowego dane programu exchange (DDX)](standard-dialog-data-exchange-routines.md)
+- [Standardowe procedury wymiany danych dialogowych (DDX)](standard-dialog-data-exchange-routines.md)
 
-- [Standardowe procedury okna dialogowego danych sprawdzania poprawności (DDV)](standard-dialog-data-validation-routines.md)
+- [Procedury sprawdzania poprawności danych w oknie dialogowym (DDV)](standard-dialog-data-validation-routines.md)
 
 - [Komunikaty AFX](afx-messages.md)
 
-- [Style kontrolki ToolBar](toolbar-control-styles.md)
+- [Style sterowania paskiem narzędzi](toolbar-control-styles.md)
 
-- [Wyliczanie CMFCImagePaintArea::IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md)
+- [CMFCImagePaintArea::IMAGE_EDIT_MODE — Wyliczenie](cmfcimagepaintarea-image-edit-mode-enumeration.md)
 
-## <a name="database"></a>Baza danych
+## <a name="database"></a>baza danych
 
-- [Zarejestruj funkcje wymiany pól (RFX)](record-field-exchange-functions.md) i [wymiana pól rekordów zbiorczego (zbiorcze RFX) funkcje](record-field-exchange-functions.md) dla klas MFC ODBC
+- [Funkcje wymiany pól rekordów (RFX)](record-field-exchange-functions.md) i [zbiorcza wymiana pól rekordów (zbiorcza RFX)](record-field-exchange-functions.md) dla klas MFC ODBC
 
-- [Funkcje wymiany (DXF) pola rejestrowania](record-field-exchange-functions.md) dla klas MFC DAO
+- [Funkcje wymiany pól rekordu (DFX)](record-field-exchange-functions.md) dla klas DAO MFC
 
-- [Wymiana danych okna dialogowego (DDX) funkcje dla formularzy CRecordView i CDaoRecordView](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md) (klas MFC ODBC i DAO)
+- [Funkcje wymiany danych dialogowych (DDX) dla CRecordView i CDaoRecordView](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md) (klasy MFC ODBC i DAO)
 
-- [Funkcje programu exchange (DDX) danych w oknie dialogowym dla formantów OLE](dialog-data-exchange-functions-for-ole-controls.md)
+- [Funkcje wymiany danych dialogowych (DDX) dla kontrolek OLE](dialog-data-exchange-functions-for-ole-controls.md)
 
-- [Makra i funkcje globalne do pomocy w bezpośrednie wywoływanie funkcji Open Database Connectivity (ODBC) interfejsu API](database-macros-and-globals.md)
+- [Makra i globals do pomocy w wywoływaniu funkcji API Open Database Connectivity (ODBC) bezpośrednio](database-macros-and-globals.md)
 
-- [Inicjowanie aparatu bazy danych DAO i zakończenie](dao-database-engine-initialization-and-termination.md)
+- [Inicjowanie i zakończenie aparatu bazy danych DAO](dao-database-engine-initialization-and-termination.md)
 
 ## <a name="internet"></a>Internet
 
-- [Funkcje globalne do analizowania internetowych adresów URL](internet-url-parsing-globals.md)
+- [Analizowanie adresów globalnych pod adresem URL w Internecie](internet-url-parsing-globals.md)
 
-## <a name="dhtml--dhtml-event-maps"></a>DHTML / mapy zdarzeń DHTML
+## <a name="dhtml--dhtml-event-maps"></a>Mapy zdarzeń DHTML / DHTML
 
-- [Makra pomocnika (DDX) wymiany danych okna dialogowego DHTML](ddx-dhtml-helper-macros.md)
+- [Makra pomocnicze wymiany danych w oknie dialogowym DHTML (DDX)](ddx-dhtml-helper-macros.md)
 
 - [Mapy zdarzeń DHTML](dhtml-event-maps.md)
 
 ## <a name="ole"></a>OLE
 
-- [Inicjalizacja OLE](ole-initialization.md)
+- [Inicjowanie OLE](ole-initialization.md)
 
-- [Sterowanie aplikacjami](application-control.md)
+- [Kontrola aplikacji](application-control.md)
 
-- [Mapy wysyłania](dispatch-maps.md)
+- [Mapy wysyłki](dispatch-maps.md)
 
-Ponadto biblioteka MFC zawiera funkcję o nazwie [afxenablecontrolcontainer —](ole-initialization.md#afxenablecontrolcontainer) czy umożliwia dowolnego kontenera OLE opracowanych za pomocą MFC 4.0 do zapewnienia pełnej obsługi osadzonych formantów OLE.
+Ponadto MFC udostępnia funkcję o nazwie [AfxEnableControlContainer,](ole-initialization.md#afxenablecontrolcontainer) która umożliwia dowolny kontener OLE opracowany z MFC 4.0 w pełni obsługiwać wbudowane formanty OLE.
 
-## <a name="ole-controls"></a>Formanty OLE
+## <a name="ole-controls"></a>Elementy sterujące OLE
 
-- [Stałe typów parametru Variant](variant-parameter-type-constants.md)
+- [Stałe typu parametru wariantu](variant-parameter-type-constants.md)
 
-- [Dostęp do biblioteki typów](type-library-access.md)
+- [Wpisz dostęp do biblioteki](type-library-access.md)
 
 - [Strony właściwości](property-pages-mfc.md)
 
 - [Mapy zdarzeń](event-maps.md)
 
-- [Mapy wychwytywania zdarzeń](event-sink-maps.md)
+- [Mapy zlewu zdarzeń](event-sink-maps.md)
 
 - [Mapy połączeń](connection-maps.md)
 
-- [Rejestrowanie formantów OLE](registering-ole-controls.md)
+- [Rejestrowanie kontrolek OLE](registering-ole-controls.md)
 
-- [Fabryki klas i Licencjonowanie](class-factories-and-licensing.md)
+- [Fabryki klas i licencjonowanie](class-factories-and-licensing.md)
 
-- [Stan trwały formantów OLE](persistence-of-ole-controls.md)
+- [Trwałość kontroli OLE](persistence-of-ole-controls.md)
 
-Pierwszej części tej sekcji krótko opisano każdy z poprzednich kategorii i wyświetla zmienne globalne i makra w danej kategorii, wraz z krótkie opisy funkcji. Zgodnie z dokumentem omówiono funkcje globalne, zmienne globalne i makra w bibliotece MFC.
+Pierwsza część tej sekcji pokrótce omawia każdą z poprzednich kategorii i zawiera listę globals i makra w kategorii, wraz z krótkimi opisami funkcji. Poniżej przedstawiono opisy funkcji globalnych, zmiennych globalnych i makr w bibliotece MFC.
 
 > [!NOTE]
->  Wiele funkcji globalnych rozpoczynają się prefiksem "Afx", ale niektóre, na przykład funkcje programu exchange (DDX) danych w oknie dialogowym i wielu funkcji bazy danych nie stosują taką Konwencję. Wszystkie zmienne globalne zaczynać od "afx" jako prefiksu. Makra rozpoczyna się od dowolnego określonego prefiksu, ale są one napisane wielkimi literami.
+> Wiele funkcji globalnych rozpoczyna się od prefiksu "Afx", ale niektóre, na przykład, funkcje wymiany danych dialogowych (DDX) i wiele funkcji bazy danych, nie są zgodne z tą konwencją. Wszystkie zmienne globalne zaczynają się od "afx" jako prefiksu. Makra nie zaczynają się od żadnego konkretnego prefiksu, ale są pisane wielką literą.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../mfc/class-library-overview.md)
+[Przegląd klas](../../mfc/class-library-overview.md)

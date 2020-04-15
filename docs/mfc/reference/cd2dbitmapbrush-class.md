@@ -42,16 +42,16 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-ms.openlocfilehash: 1569039db8c1f85d3091282b55d7eda253444deb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e26202392bf4783598aec0dddfea514fce806a8c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405797"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369301"
 ---
 # <a name="cd2dbitmapbrush-class"></a>Klasa CD2DBitmapBrush
 
-Otoka ID2D1BitmapBrush.
+Otoka dla ID2D1BitmapBrush.
 
 ## <a name="syntax"></a>Składnia
 
@@ -65,26 +65,26 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|Przeciążone. Tworzy obiekt CD2DBitmapBrush z pliku.|
-|[CD2DBitmapBrush::~CD2DBitmapBrush](#dtor)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt D2D bitmap pędzla.|
+|[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|Przeciążone. Konstruuje obiekt CD2DBitmapBrush z pliku.|
+|[CD2DBitmapBrush::~CD2DBitmapBrush](#dtor)|Destruktor. Wywoływane, gdy obiekt pędzla mapy bitowej D2D jest niszczony.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DBitmapBrush::attach](#attach)|Dołącza istniejących zasobów interfejsu do obiektu|
-|[CD2DBitmapBrush::Create](#create)|Tworzy CD2DBitmapBrush. (Przesłania [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DBitmapBrush::Destroy](#destroy)|Niszczy obiekt CD2DBitmapBrush. (Przesłania [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
-|[CD2DBitmapBrush::Detach](#detach)|Odłącza interfejsu zasobów z obiektu|
-|[CD2DBitmapBrush::Get](#get)|Zwraca ID2D1BitmapBrush interfejsu|
-|[CD2DBitmapBrush::GetBitmap](#getbitmap)|Pobiera źródło mapy bitowej, używającej tego pędzla do malowania|
-|[CD2DBitmapBrush::GetExtendModeX](#getextendmodex)|Pobiera metodę, za pomocą którego pędzla kafelków w poziomie tych obszarów, które wykraczać poza jego mapy bitowej|
-|[CD2DBitmapBrush::GetExtendModeY](#getextendmodey)|Pobiera metodę, za pomocą którego pędzla kafelków w pionie tych obszarów, które wykraczać poza jego mapy bitowej|
-|[CD2DBitmapBrush::GetInterpolationMode](#getinterpolationmode)|Pobiera metodę interpolacji związanych z mapy bitowej pędzla jest skalowany lub obrócono pionowe|
-|[CD2DBitmapBrush::SetBitmap](#setbitmap)|Określa źródło mapy bitowej, które korzysta z tego pędzla do malowania|
-|[CD2DBitmapBrush::SetExtendModeX](#setextendmodex)|Określa, jak pędzla kafelków w poziomie tych obszarów, które wykraczać poza jego mapy bitowej|
-|[CD2DBitmapBrush::SetExtendModeY](#setextendmodey)|Określa, jak pędzla kafelków w pionie tych obszarów, które wykraczać poza jego mapy bitowej|
-|[CD2DBitmapBrush::SetInterpolationMode](#setinterpolationmode)|Określa tryb interpolacji związanych z mapy bitowej pędzla jest skalowany lub obrócono pionowe|
+|[CD2DBitmapbrush::Dołącz](#attach)|Dołącza istniejący interfejs zasobu do obiektu|
+|[CD2DBitmapbrush::Tworzenie](#create)|Tworzy pędzel CD2DBitmapBrush. (Zastępuje [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DBitmapBrush::Destroy](#destroy)|Niszczy obiekt CD2DBitmapBrush. (Zastępuje [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
+|[CD2DBitmapBrush::Detach](#detach)|Odłącza interfejs zasobu od obiektu|
+|[CD2DBitmapBrush::Get](#get)|Zwraca interfejs ID2D1BitmapBrush|
+|[CD2DBitmapbrush::GetBitmap](#getbitmap)|Pobiera źródło mapy bitowej używane przez ten pędzel do malowania|
+|[CD2DBitmapBrush::GetExtendModeX](#getextendmodex)|Pobiera metodę, za pomocą której pędzel poziomo kafelki te obszary, które wykraczają poza jego mapy bitowej|
+|[CD2DBitmapBrush::GetExtendModeY](#getextendmodey)|Pobiera metodę, za pomocą której pędzel pionowo kafelki te obszary, które wykraczają poza jego mapy bitowej|
+|[CD2DBitmapBrush::GetInterpolationMode](#getinterpolationmode)|Pobiera metodę interpolacji używaną, gdy mapa bitowa pędzla jest skalowana lub obracana|
+|[CD2DBitmapBrush::SetBitmap](#setbitmap)|Określa źródło mapy bitowej używane przez ten pędzel do malowania|
+|[CD2DBitmapBrush::SetExtendModeX](#setextendmodex)|Określa sposób poziomego układania kafelków przez pędzel tych obszarów, które wykraczają poza mapę bitową|
+|[CD2DBitmapBrush::SetExtendModeY](#setextendmodey)|Określa sposób pionowego układania kafelków przez pędzel tych obszarów, które wykraczają poza mapę bitową|
+|[CD2DBitmapBrush::SetInterpolationMode](#setinterpolationmode)|Określa tryb interpolacji używany podczas skalowania lub obracania mapy bitowej pędzla|
 
 ### <a name="protected-methods"></a>Metody chronione
 
@@ -96,23 +96,23 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DBitmapBrush::operator ID2D1BitmapBrush *](#operator_id2d1bitmapbrush_star)|Zwraca ID2D1BitmapBrush interfejsu|
+|[CD2DBitmapBrush::operator ID2D1BitmapBrush*](#operator_id2d1bitmapbrush_star)|Zwraca interfejs ID2D1BitmapBrush|
 
-### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+### <a name="protected-data-members"></a>Członkowie chronionych danych
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[CD2DBitmapBrush::m_pBitmap](#m_pbitmap)|Przechowuje wskaźnik do obiektu CD2DBitmap.|
 |[CD2DBitmapBrush::m_pBitmapBrush](#m_pbitmapbrush)|Przechowuje wskaźnik do obiektu ID2D1BitmapBrush.|
-|[CD2DBitmapBrush::m_pBitmapBrushProperties](#m_pbitmapbrushproperties)|Mapa bitowa właściwości pędzla.|
+|[CD2DBitmapBrush::m_pBitmapBrushProperties](#m_pbitmapbrushproperties)|Właściwości pędzla mapy bitowej.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2DŹródło](../../mfc/reference/cd2dresource-class.md)
 
-[CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
+[Cd2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
 `CD2DBitmapBrush`
 
@@ -120,17 +120,17 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 **Nagłówek:** afxrendertarget.h
 
-##  <a name="dtor"></a>  CD2DBitmapBrush:: ~ CD2DBitmapBrush
+## <a name="cd2dbitmapbrushcd2dbitmapbrush"></a><a name="dtor"></a>CD2DBitmapBrush::~CD2DBitmapBrush
 
-Destruktor. Wywołuje się, kiedy niszczony jest obiekt D2D bitmap pędzla.
+Destruktor. Wywoływane, gdy obiekt pędzla mapy bitowej D2D jest niszczony.
 
 ```
 virtual ~CD2DBitmapBrush();
 ```
 
-##  <a name="attach"></a>  CD2DBitmapBrush::attach
+## <a name="cd2dbitmapbrushattach"></a><a name="attach"></a>CD2DBitmapbrush::Dołącz
 
-Dołącza istniejących zasobów interfejsu do obiektu
+Dołącza istniejący interfejs zasobu do obiektu
 
 ```
 void Attach(ID2D1BitmapBrush* pResource);
@@ -138,12 +138,12 @@ void Attach(ID2D1BitmapBrush* pResource);
 
 ### <a name="parameters"></a>Parametry
 
-*pResource*<br/>
-Istniejący interfejs zasobów. Nie może mieć wartości NULL
+*pŹródło*<br/>
+Istniejący interfejs zasobów. Nie może być null
 
-##  <a name="cd2dbitmapbrush"></a>  CD2DBitmapBrush::CD2DBitmapBrush
+## <a name="cd2dbitmapbrushcd2dbitmapbrush"></a><a name="cd2dbitmapbrush"></a>CD2DBitmapBrush::CD2DBitmapBrush
 
-Tworzy obiekt CD2DBitmapBrush.
+Konstruuje obiekt CD2DBitmapBrush.
 
 ```
 CD2DBitmapBrush(
@@ -173,30 +173,30 @@ CD2DBitmapBrush(
 ### <a name="parameters"></a>Parametry
 
 *pParentTarget*<br/>
-Wskaźnik do elementu docelowego renderowania.
+Wskaźnik do obiektu docelowego renderowania.
 
-*pBitmapBrushProperties*<br/>
-Wskaźnik do trybów rozszerzenie i trybu interpolacji pędzla mapy bitowej.
+*pBitmapBrushWłaściwości*<br/>
+Wskaźnik do trybów rozszerzania i trybu interpolacji pędzla mapy bitowej.
 
-*pBrushProperties*<br/>
-Wskaźnik do nieprzezroczystość i przekształcanie pędzla.
+*pBrushWłaściwki*<br/>
+Wskaźnik do krycia i przekształcenia pędzla.
 
-*bAutoDestroy*<br/>
-Wskazuje, że obiekt jest niszczony przez właściciela (pParentTarget).
+*bAutoDestroj*<br/>
+Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).
 
-*uiResID*<br/>
-Identyfikatora zasobu zasobu.
+*interfejs użytkownika uiResID*<br/>
+Numer identyfikatora zasobu.
 
-*lpszType*<br/>
-Wskaźnik na ciąg zakończony wartością null zawierający typ zasobu.
+*lpszType (typ)*<br/>
+Wskaźnik do ciągu zakończonego z wartością null, który zawiera typ zasobu.
 
-*sizeDest*<br/>
-Rozmiar docelowej mapy bitowej.
+*rozmiarDest*<br/>
+Rozmiar docelowy mapy bitowej.
 
-*lpszImagePath*<br/>
-Wskaźnik na ciąg zakończony znakiem null, który zawiera nazwę pliku.
+*lpszImagePath (Ścieżka lpszImagePath)*<br/>
+Wskaźnik do ciągu zakończonego wartością null, który zawiera nazwę pliku.
 
-##  <a name="commoninit"></a>  CD2DBitmapBrush::CommonInit
+## <a name="cd2dbitmapbrushcommoninit"></a><a name="commoninit"></a>CD2DBitmapBrush::CommonInit
 
 Inicjuje obiekt
 
@@ -206,12 +206,12 @@ void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 
 ### <a name="parameters"></a>Parametry
 
-*pBitmapBrushProperties*<br/>
+*pBitmapBrushWłaściwości*<br/>
 Wskaźnik do właściwości pędzla mapy bitowej.
 
-##  <a name="create"></a>  CD2DBitmapBrush::Create
+## <a name="cd2dbitmapbrushcreate"></a><a name="create"></a>CD2DBitmapbrush::Tworzenie
 
-Tworzy CD2DBitmapBrush.
+Tworzy pędzel CD2DBitmapBrush.
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -220,13 +220,13 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="parameters"></a>Parametry
 
 *pRenderTarget*<br/>
-Wskaźnik do elementu docelowego renderowania.
+Wskaźnik do obiektu docelowego renderowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda się powiedzie, zwraca wartość S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+Jeśli metoda powiedzie się, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
 
-##  <a name="destroy"></a>  CD2DBitmapBrush::Destroy
+## <a name="cd2dbitmapbrushdestroy"></a><a name="destroy"></a>CD2DBitmapBrush::Destroy
 
 Niszczy obiekt CD2DBitmapBrush.
 
@@ -234,9 +234,9 @@ Niszczy obiekt CD2DBitmapBrush.
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DBitmapBrush::detach
+## <a name="cd2dbitmapbrushdetach"></a><a name="detach"></a>CD2DBitmapBrush::Detach
 
-Odłącza interfejsu zasobów z obiektu
+Odłącza interfejs zasobu od obiektu
 
 ```
 ID2D1BitmapBrush* Detach();
@@ -244,11 +244,11 @@ ID2D1BitmapBrush* Detach();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu odłączyć zasobu.
+Wskaźnik do odłączony interfejs zasobu.
 
-##  <a name="get"></a>  CD2DBitmapBrush::Get
+## <a name="cd2dbitmapbrushget"></a><a name="get"></a>CD2DBitmapBrush::Get
 
-Zwraca ID2D1BitmapBrush interfejsu
+Zwraca interfejs ID2D1BitmapBrush
 
 ```
 ID2D1BitmapBrush* Get();
@@ -256,11 +256,11 @@ ID2D1BitmapBrush* Get();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu ID2D1BitmapBrush lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+Wskaźnik do interfejsu ID2D1BitmapBrush lub NULL, jeśli obiekt nie został jeszcze zainicjowany.
 
-##  <a name="getbitmap"></a>  CD2DBitmapBrush::GetBitmap
+## <a name="cd2dbitmapbrushgetbitmap"></a><a name="getbitmap"></a>CD2DBitmapbrush::GetBitmap
 
-Pobiera źródło mapy bitowej, używającej tego pędzla do malowania
+Pobiera źródło mapy bitowej używane przez ten pędzel do malowania
 
 ```
 CD2DBitmap* GetBitmap();
@@ -268,11 +268,11 @@ CD2DBitmap* GetBitmap();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do obiektu CD2DBitmap lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+Wskaźnik do obiektu CD2DBitmap lub NULL, jeśli obiekt nie został jeszcze zainicjowany.
 
-##  <a name="getextendmodex"></a>  CD2DBitmapBrush::GetExtendModeX
+## <a name="cd2dbitmapbrushgetextendmodex"></a><a name="getextendmodex"></a>CD2DBitmapBrush::GetExtendModeX
 
-Pobiera metodę, za pomocą którego pędzla kafelków w poziomie tych obszarów, które wykraczać poza jego mapy bitowej
+Pobiera metodę, za pomocą której pędzel poziomo kafelki te obszary, które wykraczają poza jego mapy bitowej
 
 ```
 D2D1_EXTEND_MODE GetExtendModeX() const;
@@ -280,11 +280,11 @@ D2D1_EXTEND_MODE GetExtendModeX() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość, która określa, jak pędzla kafelków w poziomie tych obszarów, które wykraczać poza jego mapy bitowej
+Wartość określająca sposób, w jaki pędzel jest poziomo kafelkami, które rozciągają się poza mapę bitową
 
-##  <a name="getextendmodey"></a>  CD2DBitmapBrush::GetExtendModeY
+## <a name="cd2dbitmapbrushgetextendmodey"></a><a name="getextendmodey"></a>CD2DBitmapBrush::GetExtendModeY
 
-Pobiera metodę, za pomocą którego pędzla kafelków w pionie tych obszarów, które wykraczać poza jego mapy bitowej
+Pobiera metodę, za pomocą której pędzel pionowo kafelki te obszary, które wykraczają poza jego mapy bitowej
 
 ```
 D2D1_EXTEND_MODE GetExtendModeY() const;
@@ -292,11 +292,11 @@ D2D1_EXTEND_MODE GetExtendModeY() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość, która określa, jak pędzla kafelków w pionie tych obszarów, które wykraczać poza jego mapy bitowej
+Wartość określająca sposób pionowego układania kafelków w pionie tych obszarów, które wykraczają poza mapę bitową
 
-##  <a name="getinterpolationmode"></a>  CD2DBitmapBrush::GetInterpolationMode
+## <a name="cd2dbitmapbrushgetinterpolationmode"></a><a name="getinterpolationmode"></a>CD2DBitmapBrush::GetInterpolationMode
 
-Pobiera metodę interpolacji związanych z mapy bitowej pędzla jest skalowany lub obrócono pionowe
+Pobiera metodę interpolacji używaną, gdy mapa bitowa pędzla jest skalowana lub obracana
 
 ```
 D2D1_BITMAP_INTERPOLATION_MODE GetInterpolationMode() const;
@@ -304,9 +304,9 @@ D2D1_BITMAP_INTERPOLATION_MODE GetInterpolationMode() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Metoda interpolacji związanych z mapy bitowej pędzla jest skalowany lub obrócono pionowe
+Metoda interpolacji używana podczas skalowania lub obracania mapy bitowej pędzla
 
-##  <a name="m_pbitmap"></a>  CD2DBitmapBrush::m_pBitmap
+## <a name="cd2dbitmapbrushm_pbitmap"></a><a name="m_pbitmap"></a>CD2DBitmapBrush::m_pBitmap
 
 Przechowuje wskaźnik do obiektu CD2DBitmap.
 
@@ -314,7 +314,7 @@ Przechowuje wskaźnik do obiektu CD2DBitmap.
 CD2DBitmap* m_pBitmap;
 ```
 
-##  <a name="m_pbitmapbrush"></a>  CD2DBitmapBrush::m_pBitmapBrush
+## <a name="cd2dbitmapbrushm_pbitmapbrush"></a><a name="m_pbitmapbrush"></a>CD2DBitmapBrush::m_pBitmapBrush
 
 Przechowuje wskaźnik do obiektu ID2D1BitmapBrush.
 
@@ -322,17 +322,17 @@ Przechowuje wskaźnik do obiektu ID2D1BitmapBrush.
 ID2D1BitmapBrush* m_pBitmapBrush;
 ```
 
-##  <a name="m_pbitmapbrushproperties"></a>  CD2DBitmapBrush::m_pBitmapBrushProperties
+## <a name="cd2dbitmapbrushm_pbitmapbrushproperties"></a><a name="m_pbitmapbrushproperties"></a>CD2DBitmapBrush::m_pBitmapBrushProperties
 
-Mapa bitowa właściwości pędzla.
+Właściwości pędzla mapy bitowej.
 
 ```
 D2D1_BITMAP_BRUSH_PROPERTIES* m_pBitmapBrushProperties;
 ```
 
-##  <a name="operator_id2d1bitmapbrush_star"></a>  CD2DBitmapBrush::operator ID2D1BitmapBrush *
+## <a name="cd2dbitmapbrushoperator-id2d1bitmapbrush"></a><a name="operator_id2d1bitmapbrush_star"></a>CD2DBitmapBrush::operator ID2D1BitmapBrush*
 
-Zwraca ID2D1BitmapBrush interfejsu
+Zwraca interfejs ID2D1BitmapBrush
 
 ```
 operator ID2D1BitmapBrush*();
@@ -340,11 +340,11 @@ operator ID2D1BitmapBrush*();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu ID2D1BitmapBrush lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+Wskaźnik do interfejsu ID2D1BitmapBrush lub NULL, jeśli obiekt nie został jeszcze zainicjowany.
 
-##  <a name="setbitmap"></a>  CD2DBitmapBrush::SetBitmap
+## <a name="cd2dbitmapbrushsetbitmap"></a><a name="setbitmap"></a>CD2DBitmapBrush::SetBitmap
 
-Określa źródło mapy bitowej, które korzysta z tego pędzla do malowania
+Określa źródło mapy bitowej używane przez ten pędzel do malowania
 
 ```
 void SetBitmap(CD2DBitmap* pBitmap);
@@ -352,12 +352,12 @@ void SetBitmap(CD2DBitmap* pBitmap);
 
 ### <a name="parameters"></a>Parametry
 
-*pBitmap*<br/>
-Źródła mapy bitowej stosowaną do pędzla
+*pBitmapa*<br/>
+Źródło mapy bitowej używane przez pędzel
 
-##  <a name="setextendmodex"></a>  CD2DBitmapBrush::SetExtendModeX
+## <a name="cd2dbitmapbrushsetextendmodex"></a><a name="setextendmodex"></a>CD2DBitmapBrush::SetExtendModeX
 
-Określa, jak pędzla kafelków w poziomie tych obszarów, które wykraczać poza jego mapy bitowej
+Określa sposób poziomego układania kafelków przez pędzel tych obszarów, które wykraczają poza mapę bitową
 
 ```
 void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
@@ -366,11 +366,11 @@ void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ### <a name="parameters"></a>Parametry
 
 *extendModeX*<br/>
-Wartość, która określa, jak pędzla kafelków w poziomie tych obszarów, które wykraczać poza jego mapy bitowej
+Wartość określająca sposób, w jaki pędzel jest poziomo kafelkami, które rozciągają się poza mapę bitową
 
-##  <a name="setextendmodey"></a>  CD2DBitmapBrush::SetExtendModeY
+## <a name="cd2dbitmapbrushsetextendmodey"></a><a name="setextendmodey"></a>CD2DBitmapBrush::SetExtendModeY
 
-Określa, jak pędzla kafelków w pionie tych obszarów, które wykraczać poza jego mapy bitowej
+Określa sposób pionowego układania kafelków przez pędzel tych obszarów, które wykraczają poza mapę bitową
 
 ```
 void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
@@ -378,12 +378,12 @@ void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 
 ### <a name="parameters"></a>Parametry
 
-*extendModeY*<br/>
-Wartość, która określa, jak pędzla kafelków w pionie tych obszarów, które wykraczać poza jego mapy bitowej
+*extendModeY (rozszerzamodey)*<br/>
+Wartość określająca sposób pionowego układania kafelków w pionie tych obszarów, które wykraczają poza mapę bitową
 
-##  <a name="setinterpolationmode"></a>  CD2DBitmapBrush::SetInterpolationMode
+## <a name="cd2dbitmapbrushsetinterpolationmode"></a><a name="setinterpolationmode"></a>CD2DBitmapBrush::SetInterpolationMode
 
-Określa tryb interpolacji związanych z mapy bitowej pędzla jest skalowany lub obrócono pionowe
+Określa tryb interpolacji używany podczas skalowania lub obracania mapy bitowej pędzla
 
 ```
 void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
@@ -391,9 +391,9 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 
 ### <a name="parameters"></a>Parametry
 
-*interpolationMode*<br/>
-Tryb interpolacji związanych z mapy bitowej pędzla jest skalowany lub obrócono pionowe
+*Interpolationmode*<br/>
+Tryb interpolacji używany podczas skalowania lub obracania mapy bitowej pędzla
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

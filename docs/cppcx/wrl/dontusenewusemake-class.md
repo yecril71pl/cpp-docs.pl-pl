@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::DontUseNewUseMake class
 - Microsoft::WRL::Details::DontUseNewUseMake::operator new operator
 ms.assetid: 8b38d07b-fc14-4cea-afb9-4c1a7dde0093
-ms.openlocfilehash: 02420f2657c7d7d6a7a0294f0321717a3bb2b5d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae67373b4f2f2d4a199b939b06e6f526f1365446
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398540"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371551"
 ---
 # <a name="dontusenewusemake-class"></a>DontUseNewUseMake — Klasa
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,7 +28,7 @@ class DontUseNewUseMake;
 
 ## <a name="remarks"></a>Uwagi
 
-Zapobiega za pomocą operatora `new` w `RuntimeClass`. W związku z tym, należy użyć [funkcji](make-function.md) zamiast tego.
+Zapobiega używaniu `new` `RuntimeClass`operatora w pliku . W związku z tym należy użyć [Make funkcji](make-function.md) zamiast tego.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -36,7 +36,7 @@ Zapobiega za pomocą operatora `new` w `RuntimeClass`. W związku z tym, należy
 
 Nazwa                                             | Opis
 ------------------------------------------------ | ---------------------------------------------------------------------------
-[DontUseNewUseMake::operator nowy](#operator-new) | Przeciążenia operatora `new` i zapobiega używana w `RuntimeClass`.
+[DontUseNewUseMake::operator nowy](#operator-new) | Przeciąża `new` operatora i zapobiega jego `RuntimeClass`użyciu w .
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -46,11 +46,11 @@ Nazwa                                             | Opis
 
 **Nagłówek:** implements.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obszar nazw:** Microsoft::WRL::Dszczegóły
 
-## <a name="operator-new"></a>DontUseNewUseMake::operator nowy
+## <a name="dontusenewusemakeoperator-new"></a><a name="operator-new"></a>DontUseNewUseMake::operator nowy
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 void* operator new(
@@ -64,13 +64,13 @@ void* operator new(
 *__unnamed0*<br/>
 Nienazwany parametr, który określa liczbę bajtów pamięci do przydzielenia.
 
-*placement*<br/>
-Typ do przydzielenia.
+*Umieszczenie*<br/>
+Typ, który ma zostać przydzielony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zapewnia sposób przekazywania dodatkowych argumentów, jeśli przeciążenia operatora `new`.
+Umożliwia przekazywanie dodatkowych argumentów w `new`przypadku przeciążenia operatora .
 
 ### <a name="remarks"></a>Uwagi
 
-Przeciążenia operatora `new` i zapobiega używana w `RuntimeClass`.
+Przeciąża `new` operatora i zapobiega jego `RuntimeClass`użyciu w .

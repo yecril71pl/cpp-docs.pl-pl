@@ -5,49 +5,49 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 1c4e6c585bf216518e46109e88a2388da03a0496
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 1064cd99d1820ae8865fa632c3097441172c78c4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611779"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372993"
 ---
 # <a name="property-pages-mfc"></a>Strony właściwości (MFC)
 
-Strony właściwości wyświetlić bieżących wartości określonych właściwości kontrolki OLE w można dostosować interfejs graficzny służący do wyświetlania i edytowania dzięki obsłudze mechanizmu mapowania danych oparte na wymiana danych okna dialogowego (DDX).
+Strony właściwości wyświetlają bieżące wartości określonych właściwości sterowania OLE w dostosowywanym, graficznym interfejsie do przeglądania i edycji, obsługując mechanizm mapowania danych oparty na wymianie danych dialogowych (DDX).
 
-Ten mechanizm mapowanie danych mapuje właściwości formantów strony do poszczególnych właściwości kontrolki OLE. Wartość właściwości kontrolki odzwierciedla stan lub zawartość formantu strony właściwości. Mapowanie między formantów strony właściwości i właściwości jest określona przez **ddp_ —** funkcja wywołuje na stronie właściwości `DoDataExchange` funkcja elementu członkowskiego. Poniżej przedstawiono listę **ddp_ —** funkcje, które wymiany danych wprowadzonych, używając strony właściwości kontrolki:
+Ten mechanizm mapowania danych mapuje formanty strony właściwości do poszczególnych właściwości formantu OLE. Wartość właściwości control odzwierciedla stan lub zawartość formantu strony właściwości. Mapowanie między formantami strony właściwości **DDP_** i właściwości jest określona przez `DoDataExchange` DDP_ wywołania funkcji funkcji w funkcji elementu członkowskiego strony właściwości. Poniżej znajduje się lista **DDP_** funkcji, które wymieniają dane wprowadzone przy użyciu strony właściwości formantu:
 
 ### <a name="property-page-data-transfer"></a>Transfer danych strony właściwości
 
 |||
 |-|-|
-|[DDP_CBIndex](#ddp_cbindex)|Łączy indeksu zaznaczony ciąg w polu kombi z właściwością kontrolki.|
-|[DDP_CBString](#ddp_cbstring)|Łączy zaznaczony ciąg w polu kombi z właściwością kontrolki. Zaznaczony ciąg może rozpoczynać się od tych samych liter jako wartość właściwości, ale nie musi, w pełni zgodny.|
-|[DDP_CBStringExact](#ddp_cbstringexact)|Łączy zaznaczony ciąg w polu kombi z właściwością kontrolki. Zaznaczony ciąg i wartość ciągu dla właściwości muszą być zgodne.|
-|[DDP_Check](#ddp_check)|Pole wyboru na stronie właściwości kontrolki z właściwością kontrolki łącza.|
-|[DDP_LBIndex](#ddp_lbindex)|Łączy indeksu zaznaczony ciąg w polu listy, z właściwością kontrolki.|
-|[DDP_LBString](#ddp_lbstring)|Łączy zaznaczony ciąg w polu listy, z właściwością kontrolki. Zaznaczony ciąg może rozpoczynać się od tych samych liter jako wartość właściwości, ale nie musi być zgodna go całkowicie.|
-|[DDP_LBStringExact](#ddp_lbstringexact)|Łączy zaznaczony ciąg w polu listy, z właściwością kontrolki. Zaznaczony ciąg i wartość ciągu dla właściwości muszą być zgodne.|
-|[Ddp_postprocessing —](#ddp_postprocessing)|Kończy transfer wartości właściwości z Twoją kontrolą.|
-|[DDP_Radio](#ddp_radio)|Grupa przycisków radiowych, na stronie właściwości kontrolki z właściwością kontrolki łącza.|
-|[DDP_Text](#ddp_text)|Łączy kontrolki na stronie właściwości kontrolki z właściwością kontrolki. Ta funkcja obsługuje kilka różnych typów właściwości, takie jak **double**, **krótki**, BSTR, i **długie**.|
+|[DDP_CBIndex](#ddp_cbindex)|Łączy indeks wybranego ciągu w polu kombi z właściwością formantu.|
+|[DDP_CBString](#ddp_cbstring)|Łączy zaznaczony ciąg w polu kombi z właściwością formantu. Wybrany ciąg może zaczynać się od tych samych liter co wartość właściwości, ale nie musi być w pełni dopasowany.|
+|[DDP_CBStringExact](#ddp_cbstringexact)|Łączy zaznaczony ciąg w polu kombi z właściwością formantu. Wybrany ciąg i wartość ciągu właściwości musi być dokładnie zgodna.|
+|[DDP_Check](#ddp_check)|Łączy pole wyboru na stronie właściwości formantu z właściwością formantu.|
+|[DDP_LBIndex](#ddp_lbindex)|Łączy indeks wybranego ciągu w polu listy z właściwością formantu.|
+|[DDP_LBString](#ddp_lbstring)|Łączy zaznaczony ciąg w polu listy z właściwością formantu. Wybrany ciąg może zaczynać się od tych samych liter co wartość właściwości, ale nie musi być w pełni dopasowany.|
+|[DDP_LBStringExact](#ddp_lbstringexact)|Łączy zaznaczony ciąg w polu listy z właściwością formantu. Wybrany ciąg i wartość ciągu właściwości musi być dokładnie zgodna.|
+|[DDP_PostProcessing](#ddp_postprocessing)|Kończy przenoszenie wartości właściwości z formantu.|
+|[DDP_Radio](#ddp_radio)|Łączy grupę przycisków opcji na stronie właściwości formantu z właściwością formantu.|
+|[DDP_Text](#ddp_text)|Łączy formant na stronie właściwości formantu z właściwością formantu. Ta funkcja obsługuje kilka różnych typów właściwości, takich jak **double**, **short**, BSTR i **long**.|
 
-Aby uzyskać więcej informacji na temat `DoDataExchange` strony funkcji i właściwości, zobacz artykuł [kontrolek ActiveX: Strony właściwości](../../mfc/mfc-activex-controls-property-pages.md).
+Aby uzyskać więcej `DoDataExchange` informacji na temat funkcji i stron właściwości, zobacz artykuł [ActiveX Formanty: Strony właściwości](../../mfc/mfc-activex-controls-property-pages.md).
 
-Oto lista makra używane do tworzenia i zarządzania nimi stron właściwości kontrolki OLE:
+Poniżej znajduje się lista makr używanych do tworzenia stron właściwości i zarządzania nimi dla formantu OLE:
 
 ### <a name="property-pages"></a>Strony właściwości
 
 |||
 |-|-|
-|[BEGIN_PROPPAGEIDS](#begin_proppageids)|Rozpoczyna się na liście identyfikatory stron właściwości.|
-|[END_PROPPAGEIDS](#end_proppageids)|Kończy się na liście identyfikatory stron właściwości.|
-|[PROPPAGEID](#proppageid)|Deklaruje strony właściwości klasy kontrolki.|
+|[BEGIN_PROPPAGEIDS](#begin_proppageids)|Rozpoczyna się lista identyfikatorów strony właściwości.|
+|[END_PROPPAGEIDS](#end_proppageids)|Kończy listę identyfikatorów stron właściwości.|
+|[PROPPAGEID (PROPPAGEID)](#proppageid)|Deklaruje stronę właściwości klasy formantu.|
 
-##  <a name="ddp_cbindex"></a>  Ddp_cbindex —
+## <a name="ddp_cbindex"></a><a name="ddp_cbindex"></a>DDP_CBIndex
 
-Wywołaj tę funkcję, na stronie właściwości `DoDataExchange` funkcję, aby zsynchronizować wartość właściwości Liczba całkowita z indeksem bieżące zaznaczenie w polu kombi na stronie właściwości.
+Wywołanie tej funkcji w `DoDataExchange` funkcji strony właściwości, aby zsynchronizować wartość właściwości całkowitej z indeksem bieżącego zaznaczenia w polu kombi na stronie właściwości.
 
 ```
 void AFXAPI DDP_CBIndex(
@@ -59,29 +59,29 @@ void AFXAPI DDP_CBIndex(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.
+*Pdx*<br/>
+Wskaźnik do `CDataExchange` obiektu. Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
 
-*id*<br/>
-Identyfikator zasobu kombi polu kontrolkę skojarzoną z określonym przez właściwości kontrolki *pszPropName*.
+*Identyfikator*<br/>
+Identyfikator zasobu formantu pola kombi skojarzonego z właściwością formantu określoną przez *pszPropName*.
 
-*Element członkowski*<br/>
-Skojarzony formant strony właściwości, które są określone przez zmienną członkowską *identyfikator* i określona przez właściwość *pszPropName*.
+*Członkowskich*<br/>
+Zmienna elementu członkowskiego skojarzona z formantem strony właściwości określonym przez *identyfikator* i właściwość określoną przez *pszPropName*.
 
 *pszPropName*<br/>
-Nazwa właściwości wymieniane z kontrolki pola kombi, które są określone przez właściwości kontrolki *identyfikator*.
+Nazwa właściwości właściwości formantu, która ma być wymieniona z formantem pola kombi określonym przez *id*.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja powinna zostać wywołana przed odpowiednimi `DDX_CBIndex` wywołania funkcji.
+Ta funkcja powinna być `DDX_CBIndex` wywoływana przed odpowiednim wywołaniem funkcji.
 
 ### <a name="requirements"></a>Wymagania
 
   **Nagłówek** afxctl.h
 
-##  <a name="ddp_cbstring"></a>  DDP_CBString
+## <a name="ddp_cbstring"></a><a name="ddp_cbstring"></a>DDP_CBString
 
-Wywołaj tę funkcję, na stronie właściwości `DoDataExchange` funkcję, aby zsynchronizować wartość właściwości ciągu zachowując bieżący wybór w polu kombi na stronie właściwości.
+Wywołanie tej funkcji w `DoDataExchange` funkcji strony właściwości, aby zsynchronizować wartość właściwości string z bieżącym zaznaczeniem w polu kombi na stronie właściwości.
 
 ```
 void AFXAPI DDP_CBString(
@@ -93,29 +93,29 @@ void AFXAPI DDP_CBString(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.
+*Pdx*<br/>
+Wskaźnik do `CDataExchange` obiektu. Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
 
-*id*<br/>
-Identyfikator zasobu kombi polu kontrolkę skojarzoną z określonym przez właściwości kontrolki *pszPropName*.
+*Identyfikator*<br/>
+Identyfikator zasobu formantu pola kombi skojarzonego z właściwością formantu określoną przez *pszPropName*.
 
-*Element członkowski*<br/>
-Skojarzony formant strony właściwości, które są określone przez zmienną członkowską *identyfikator* i określona przez właściwość *pszPropName*.
+*Członkowskich*<br/>
+Zmienna elementu członkowskiego skojarzona z formantem strony właściwości określonym przez *identyfikator* i właściwość określoną przez *pszPropName*.
 
 *pszPropName*<br/>
-Nazwa właściwości wymieniane parametrami pola kombi, określone przez właściwości kontrolki *identyfikator*.
+Nazwa właściwości właściwości formantu, która ma być wymieniona z ciągiem pola kombi określonym przez *id*.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja powinna zostać wywołana przed odpowiednimi `DDX_CBString` wywołania funkcji.
+Ta funkcja powinna być `DDX_CBString` wywoływana przed odpowiednim wywołaniem funkcji.
 
 ### <a name="requirements"></a>Wymagania
 
   **Nagłówek** afxctl.h
 
-##  <a name="ddp_cbstringexact"></a>  Ddp_cbstringexact —
+## <a name="ddp_cbstringexact"></a><a name="ddp_cbstringexact"></a>DDP_CBStringExact
 
-Wywołaj tę funkcję, na stronie właściwości `DoDataExchange` funkcję, aby zsynchronizować wartość właściwości ciągu, który dokładnie pasuje do bieżącego zaznaczenia w polu kombi na stronie właściwości.
+Wywołanie tej funkcji w `DoDataExchange` funkcji strony właściwości, aby zsynchronizować wartość właściwości string, która dokładnie pasuje do bieżącego zaznaczenia w polu kombi na stronie właściwości.
 
 ```
 void AFXAPI DDP_CBStringExact(
@@ -127,29 +127,29 @@ void AFXAPI DDP_CBStringExact(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.
+*Pdx*<br/>
+Wskaźnik do `CDataExchange` obiektu. Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
 
-*id*<br/>
-Identyfikator zasobu kombi polu kontrolkę skojarzoną z określonym przez właściwości kontrolki *pszPropName*.
+*Identyfikator*<br/>
+Identyfikator zasobu formantu pola kombi skojarzonego z właściwością formantu określoną przez *pszPropName*.
 
-*Element członkowski*<br/>
-Skojarzony formant strony właściwości, które są określone przez zmienną członkowską *identyfikator* i określona przez właściwość *pszPropName*.
+*Członkowskich*<br/>
+Zmienna elementu członkowskiego skojarzona z formantem strony właściwości określonym przez *identyfikator* i właściwość określoną przez *pszPropName*.
 
 *pszPropName*<br/>
-Nazwa właściwości wymieniane parametrami pola kombi, określone przez właściwości kontrolki *identyfikator*.
+Nazwa właściwości właściwości formantu, która ma być wymieniona z ciągiem pola kombi określonym przez *id*.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja powinna zostać wywołana przed odpowiednimi `DDX_CBStringExact` wywołania funkcji.
+Ta funkcja powinna być `DDX_CBStringExact` wywoływana przed odpowiednim wywołaniem funkcji.
 
 ### <a name="requirements"></a>Wymagania
 
   **Nagłówek** afxctl.h
 
-##  <a name="ddp_check"></a>  Ddp_check —
+## <a name="ddp_check"></a><a name="ddp_check"></a>DDP_Check
 
-Wywołaj tę funkcję, na stronie właściwości `DoDataExchange` funkcję, aby zsynchronizować wartości właściwości z kontrolka pola wyboru strony skojarzonej właściwości.
+Wywołanie tej funkcji w `DoDataExchange` funkcji strony właściwości, aby zsynchronizować wartość właściwości z formantem pola wyboru strony skojarzonej właściwości.
 
 ```
 void AFXAPI DDP_Check(
@@ -161,29 +161,29 @@ void AFXAPI DDP_Check(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.
+*Pdx*<br/>
+Wskaźnik do `CDataExchange` obiektu. Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
 
-*id*<br/>
-Identyfikator zasobu w kontrolce pola wyboru skojarzone z określonym przez właściwości kontrolki *pszPropName*.
+*Identyfikator*<br/>
+Identyfikator zasobu formantu pola wyboru skojarzonego z właściwością formantu określoną przez *pszPropName*.
 
-*Element członkowski*<br/>
-Skojarzony formant strony właściwości, które są określone przez zmienną członkowską *identyfikator* i określona przez właściwość *pszPropName*.
+*Członkowskich*<br/>
+Zmienna elementu członkowskiego skojarzona z formantem strony właściwości określonym przez *identyfikator* i właściwość określoną przez *pszPropName*.
 
 *pszPropName*<br/>
-Nazwa właściwości wymieniane z określonego przez formant pola wyboru właściwości kontrolki *identyfikator*.
+Nazwa właściwości właściwości formantu, która ma być wymieniona z formantem pola wyboru określonym przez *id*.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja powinna zostać wywołana przed odpowiednimi `DDX_Check` wywołania funkcji.
+Ta funkcja powinna być `DDX_Check` wywoływana przed odpowiednim wywołaniem funkcji.
 
 ### <a name="requirements"></a>Wymagania
 
   **Nagłówek** afxctl.h
 
-##  <a name="ddp_lbindex"></a>  DDP_LBIndex
+## <a name="ddp_lbindex"></a><a name="ddp_lbindex"></a>DDP_LBIndex
 
-Wywołaj tę funkcję, na stronie właściwości `DoDataExchange` funkcję, aby zsynchronizować wartość właściwości Liczba całkowita z indeksem bieżące zaznaczenie w polu listy na stronie właściwości.
+Wywołanie tej funkcji w `DoDataExchange` funkcji strony właściwości, aby zsynchronizować wartość właściwości całkowitej z indeksem bieżącego zaznaczenia w polu listy na stronie właściwości.
 
 ```
 void AFXAPI DDP_LBIndex(
@@ -195,29 +195,29 @@ void AFXAPI DDP_LBIndex(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.
+*Pdx*<br/>
+Wskaźnik do `CDataExchange` obiektu. Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
 
-*id*<br/>
-Identyfikator zasobu listy polu kontrolkę skojarzoną z określonym przez właściwości kontrolki *pszPropName*.
+*Identyfikator*<br/>
+Identyfikator zasobu formantu pola listy skojarzonego z właściwością formantu określoną przez *pszPropName*.
 
-*Element członkowski*<br/>
-Skojarzony formant strony właściwości, które są określone przez zmienną członkowską *identyfikator* i określona przez właściwość *pszPropName*.
+*Członkowskich*<br/>
+Zmienna elementu członkowskiego skojarzona z formantem strony właściwości określonym przez *identyfikator* i właściwość określoną przez *pszPropName*.
 
 *pszPropName*<br/>
-Nazwa właściwości wymieniane z określonej przez ciąg pole listy właściwości kontrolki *identyfikator*.
+Nazwa właściwości właściwości formantu, która ma być wymieniona z ciągiem pola listy określonym przez *id*.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja powinna zostać wywołana przed odpowiednimi `DDX_LBIndex` wywołania funkcji.
+Ta funkcja powinna być `DDX_LBIndex` wywoływana przed odpowiednim wywołaniem funkcji.
 
 ### <a name="requirements"></a>Wymagania
 
   **Nagłówek** afxctl.h
 
-##  <a name="ddp_lbstring"></a>  DDP_LBString
+## <a name="ddp_lbstring"></a><a name="ddp_lbstring"></a>DDP_LBString
 
-Wywołaj tę funkcję, na stronie właściwości `DoDataExchange` funkcję, aby zsynchronizować wartość właściwości ciągu zachowując bieżący wybór w polu listy na stronie właściwości.
+Wywołanie tej funkcji w `DoDataExchange` funkcji strony właściwości, aby zsynchronizować wartość właściwości string z bieżącym zaznaczeniem w polu listy na stronie właściwości.
 
 ```
 void AFXAPI DDP_LBString(
@@ -229,29 +229,29 @@ void AFXAPI DDP_LBString(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.
+*Pdx*<br/>
+Wskaźnik do `CDataExchange` obiektu. Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
 
-*id*<br/>
-Identyfikator zasobu listy polu kontrolkę skojarzoną z określonym przez właściwości kontrolki *pszPropName*.
+*Identyfikator*<br/>
+Identyfikator zasobu formantu pola listy skojarzonego z właściwością formantu określoną przez *pszPropName*.
 
-*Element członkowski*<br/>
-Skojarzony formant strony właściwości, które są określone przez zmienną członkowską *identyfikator* i określona przez właściwość *pszPropName*.
+*Członkowskich*<br/>
+Zmienna elementu członkowskiego skojarzona z formantem strony właściwości określonym przez *identyfikator* i właściwość określoną przez *pszPropName*.
 
 *pszPropName*<br/>
-Nazwa właściwości wymieniane z określonej przez ciąg pole listy właściwości kontrolki *identyfikator*.
+Nazwa właściwości właściwości formantu, która ma być wymieniona z ciągiem pola listy określonym przez *id*.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja powinna zostać wywołana przed odpowiednimi `DDX_LBString` wywołania funkcji.
+Ta funkcja powinna być `DDX_LBString` wywoływana przed odpowiednim wywołaniem funkcji.
 
 ### <a name="requirements"></a>Wymagania
 
   **Nagłówek** afxctl.h
 
-##  <a name="ddp_lbstringexact"></a>  Ddp_lbstringexact —
+## <a name="ddp_lbstringexact"></a><a name="ddp_lbstringexact"></a>DDP_LBStringExact
 
-Wywołaj tę funkcję, na stronie właściwości `DoDataExchange` funkcję, aby zsynchronizować wartość właściwości ciągu, który dokładnie pasuje do bieżącego zaznaczenia w polu listy na stronie właściwości.
+Wywołanie tej funkcji w `DoDataExchange` funkcji strony właściwości, aby zsynchronizować wartość właściwości string, która dokładnie pasuje do bieżącego zaznaczenia w polu listy na stronie właściwości.
 
 ```
 void AFXAPI DDP_LBStringExact(
@@ -263,29 +263,29 @@ void AFXAPI DDP_LBStringExact(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.
+*Pdx*<br/>
+Wskaźnik do `CDataExchange` obiektu. Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
 
-*id*<br/>
-Identyfikator zasobu listy polu kontrolkę skojarzoną z określonym przez właściwości kontrolki *pszPropName*.
+*Identyfikator*<br/>
+Identyfikator zasobu formantu pola listy skojarzonego z właściwością formantu określoną przez *pszPropName*.
 
-*Element członkowski*<br/>
-Skojarzony formant strony właściwości, które są określone przez zmienną członkowską *identyfikator* i określona przez właściwość *pszPropName*.
+*Członkowskich*<br/>
+Zmienna elementu członkowskiego skojarzona z formantem strony właściwości określonym przez *identyfikator* i właściwość określoną przez *pszPropName*.
 
 *pszPropName*<br/>
-Nazwa właściwości wymieniane z określonej przez ciąg pole listy właściwości kontrolki *identyfikator*.
+Nazwa właściwości właściwości formantu, która ma być wymieniona z ciągiem pola listy określonym przez *id*.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja powinna zostać wywołana przed odpowiednimi `DDX_LBStringExact` wywołania funkcji.
+Ta funkcja powinna być `DDX_LBStringExact` wywoływana przed odpowiednim wywołaniem funkcji.
 
 ### <a name="requirements"></a>Wymagania
 
   **Nagłówek** afxctl.h
 
-##  <a name="ddp_postprocessing"></a>  Ddp_postprocessing —
+## <a name="ddp_postprocessing"></a><a name="ddp_postprocessing"></a>DDP_PostProcessing
 
-Wywołaj tę funkcję, na stronie właściwości `DoDataExchange` funkcji, aby zakończyć transferu wartości właściwości na stronie właściwości do kontrolki, po zapisaniu wartości właściwości.
+Wywołanie tej funkcji w `DoDataExchange` funkcji strony właściwości, aby zakończyć przenoszenie wartości właściwości ze strony właściwości do formantu, gdy wartości właściwości są zapisywane.
 
 ```
 void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
@@ -293,12 +293,12 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.
+*Pdx*<br/>
+Wskaźnik do `CDataExchange` obiektu. Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja powinna być wywoływana po wykonaniu wszystkie funkcje wymiany danych. Na przykład:
+Ta funkcja powinna być wywoływana po zakończeniu wszystkich funkcji wymiany danych. Przykład:
 
 [!code-cpp[NVC_MFCAxCtl#15](../../mfc/reference/codesnippet/cpp/property-pages-mfc_1.cpp)]
 
@@ -306,9 +306,9 @@ Ta funkcja powinna być wywoływana po wykonaniu wszystkie funkcje wymiany danyc
 
   **Nagłówek** afxctl.h
 
-##  <a name="ddp_radio"></a>  DDP_Radio
+## <a name="ddp_radio"></a><a name="ddp_radio"></a>DDP_Radio
 
-Wywołaj tę funkcję w kontroli nad `DoPropExchange` funkcję, aby zsynchronizować wartości właściwości z kontrolkę przycisku radiowego strony skojarzonej właściwości.
+Wywołanie tej funkcji w `DoPropExchange` funkcji formantu, aby zsynchronizować wartość właściwości z kontrolką przycisku radiowego powiązanej strony właściwości.
 
 ```
 void AFXAPI DDP_Radio(
@@ -320,29 +320,29 @@ void AFXAPI DDP_Radio(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.
+*Pdx*<br/>
+Wskaźnik do `CDataExchange` obiektu. Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
 
-*id*<br/>
-Identyfikator zasobu radiowego przycisk kontrolkę skojarzoną z określonym przez właściwości kontrolki *pszPropName*.
+*Identyfikator*<br/>
+Identyfikator zasobu formantu przycisku radiowego skojarzonego z właściwością formantu określoną przez *pszPropName*.
 
-*Element członkowski*<br/>
-Skojarzony formant strony właściwości, które są określone przez zmienną członkowską *identyfikator* i określona przez właściwość *pszPropName*.
+*Członkowskich*<br/>
+Zmienna elementu członkowskiego skojarzona z formantem strony właściwości określonym przez *identyfikator* i właściwość określoną przez *pszPropName*.
 
 *pszPropName*<br/>
-Nazwa właściwości właściwości kontrolki wymieniane z określonym przez kontrolkę przycisku radiowego *identyfikator*.
+Nazwa właściwości właściwości formantu, która ma być wymieniona za pomocą kontrolki przycisku radiowego określonej przez *id*.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja powinna zostać wywołana przed odpowiednimi `DDX_Radio` wywołania funkcji.
+Ta funkcja powinna być `DDX_Radio` wywoływana przed odpowiednim wywołaniem funkcji.
 
 ### <a name="requirements"></a>Wymagania
 
   **Nagłówek** afxctl.h
 
-##  <a name="ddp_text"></a>  Ddp_text —
+## <a name="ddp_text"></a><a name="ddp_text"></a>DDP_Text
 
-Wywołaj tę funkcję w kontroli nad `DoDataExchange` funkcję, aby zsynchronizować wartości właściwości z formantu strony skojarzonej właściwości.
+Wywołanie tej funkcji w `DoDataExchange` funkcji formantu, aby zsynchronizować wartość właściwości z formantu strony skojarzonej właściwości.
 
 ```
 void AFXAPI DDP_Text(
@@ -396,29 +396,29 @@ void AFXAPI DDP_Text(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Wskaźnik do `CDataExchange` obiektu. Struktura dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.
+*Pdx*<br/>
+Wskaźnik do `CDataExchange` obiektu. Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
 
-*id*<br/>
-Identyfikator zasobu kontrolki skojarzone z określonym przez właściwości kontrolki *pszPropName*.
+*Identyfikator*<br/>
+Identyfikator zasobu formantu skojarzonego z właściwością formantu określoną przez *pszPropName*.
 
-*Element członkowski*<br/>
-Skojarzony formant strony właściwości, które są określone przez zmienną członkowską *identyfikator* i określona przez właściwość *pszPropName*.
+*Członkowskich*<br/>
+Zmienna elementu członkowskiego skojarzona z formantem strony właściwości określonym przez *identyfikator* i właściwość określoną przez *pszPropName*.
 
 *pszPropName*<br/>
-Nazwa właściwości wymieniane z kontrolki określonej przez właściwości kontrolki *identyfikator*.
+Nazwa właściwości właściwości formantu, która ma być wymieniona z formantem określonym przez *id*.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja powinna zostać wywołana przed odpowiednimi `DDX_Text` wywołania funkcji.
+Ta funkcja powinna być `DDX_Text` wywoływana przed odpowiednim wywołaniem funkcji.
 
 ### <a name="requirements"></a>Wymagania
 
   **Nagłówek** afxctl.h
 
-##  <a name="begin_proppageids"></a>  BEGIN_PROPPAGEIDS
+## <a name="begin_proppageids"></a><a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS
 
-Rozpoczyna się definicji listy kontroli nad identyfikatory stron właściwości.
+Rozpoczyna definicję listy identyfikatorów stron właściwości formantu.
 
 ```
 BEGIN_PROPPAGEIDS(class_name,  count)
@@ -427,24 +427,24 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 ### <a name="parameters"></a>Parametry
 
 *class_name*<br/>
-Nazwa klasy kontrolki dla właściwości, które są określone strony.
+Nazwa klasy formantu, dla której są określone strony właściwości.
 
 *Liczba*<br/>
-Liczba stron właściwości używane przez klasę formantu.
+Liczba stron właściwości używanych przez klasę kontrolną.
 
 ### <a name="remarks"></a>Uwagi
 
-W pliku implementacji (.cpp), który definiuje funkcji elementów członkowskich dla swojej klasy rozpoczynać lista stron właściwości BEGIN_PROPPAGEIDS — makro, a następnie dodaj makro wpisy dla każdej ze stron właściwości i Pełna lista strony właściwości, za pomocą END_PROPPAGEIDS makra.
+W pliku implementacji (.cpp), który definiuje funkcje członkowskie dla klasy, uruchom listę stron właściwości BEGIN_PROPPAGEIDS makra, a następnie dodaj wpisy makr dla każdej ze stron właściwości i uzupełnij listę stron właściwości END_PROPPAGEIDS makra.
 
-Aby uzyskać więcej informacji na stronach właściwości, zobacz artykuł [kontrolek ActiveX: Strony właściwości](../../mfc/mfc-activex-controls-property-pages.md).
+Aby uzyskać więcej informacji na temat stron właściwości, zobacz artykuł [ActiveX Controls: Property Pages](../../mfc/mfc-activex-controls-property-pages.md).
 
 ### <a name="requirements"></a>Wymagania
 
   **Nagłówek** afxctl.h
 
-##  <a name="end_proppageids"></a>  END_PROPPAGEIDS
+## <a name="end_proppageids"></a><a name="end_proppageids"></a>END_PROPPAGEIDS
 
-Kończy definicję listy identyfikator strony właściwości.
+Kończy definicję listy identyfikatorów strony właściwości.
 
 ```
 END_PROPPAGEIDS(class_name)
@@ -453,15 +453,15 @@ END_PROPPAGEIDS(class_name)
 ### <a name="parameters"></a>Parametry
 
 *class_name*<br/>
-Nazwa klasy kontrolki, która jest właścicielem strony właściwości.
+Nazwa klasy formantu, która jest właścicielem strony właściwości.
 
 ### <a name="requirements"></a>Wymagania
 
   **Nagłówek** afxctl.h
 
-##  <a name="proppageid"></a>  PROPPAGEID
+## <a name="proppageid"></a><a name="proppageid"></a>PROPPAGEID (PROPPAGEID)
 
-Dodaje do użycia strony właściwości kontrolki OLE.
+Dodaje stronę właściwości do użycia przez formant OLE.
 
 ```
 PROPPAGEID(clsid)
@@ -469,17 +469,17 @@ PROPPAGEID(clsid)
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator klasy*<br/>
-Identyfikator unikatowy klasy strony właściwości.
+*Clsid*<br/>
+Unikatowy identyfikator klasy strony właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-Wszystkie makra PROPPAGEID muszą być umieszczone między BEGIN_PROPPAGEIDS i END_PROPPAGEIDS makr w pliku implementacji formantu.
+Wszystkie makra PROPPAGEID muszą być umieszczone między makrami BEGIN_PROPPAGEIDS i END_PROPPAGEIDS w pliku implementacji formantu.
 
 ### <a name="requirements"></a>Wymagania
 
   **Nagłówek** afxctl.h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)
+[Makra i globals](../../mfc/reference/mfc-macros-and-globals.md)

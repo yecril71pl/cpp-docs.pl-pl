@@ -17,16 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-ms.openlocfilehash: 740920225fc513a869b4a92344f87004831e4768
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7d450f7762b39d7fa8fae07230690eecb8edbb4d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417881"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327460"
 ---
 # <a name="ccomptrbase-class"></a>Klasa CComPtrBase
 
-Ta klasa stanowi podstawę dla klas wskaźników inteligentnych korzystających z procedur pamięci opartych na modelu COM.
+Ta klasa stanowi podstawę dla inteligentnych klas wskaźnika przy użyciu procedur pamięci opartych na kom.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,60 +37,60 @@ class CComPtrBase
 
 #### <a name="parameters"></a>Parametry
 
-*&*<br/>
+*T*<br/>
 Typ obiektu, do którego odwołuje się inteligentny wskaźnik.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CComPtrBase:: ~ CComPtrBase](#dtor)|Destruktor.|
+|[Baza CComPtrBase::~CComPtrBase](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CComPtrBase:: Advise](#advise)|Wywołaj tę metodę, aby utworzyć połączenie między punktem połączenia `CComPtrBase`i ujściam klienta.|
-|[CComPtrBase:: Attach](#attach)|Wywołaj tę metodę, aby przejąć na własność istniejący wskaźnik.|
-|[CComPtrBase:: CoCreateInstance](#cocreateinstance)|Wywołaj tę metodę, aby utworzyć obiekt klasy skojarzonej z określonym IDENTYFIKATORem klasy lub IDENTYFIKATORem programu.|
-|[CComPtrBase:: CopyTo](#copyto)|Wywołaj tę metodę, aby skopiować wskaźnik `CComPtrBase` do innej zmiennej wskaźnika.|
-|[CComPtrBase::D etach](#detach)|Wywołaj tę metodę, aby zwolnić własność wskaźnika.|
-|[CComPtrBase:: isequalobject](#isequalobject)|Wywołaj tę metodę, aby sprawdzić, czy określony `IUnknown` wskazuje na ten sam obiekt skojarzony z obiektem `CComPtrBase`.|
-|[CComPtrBase:: QueryInterface](#queryinterface)|Wywołaj tę metodę, aby zwrócić wskaźnik do określonego interfejsu.|
-|[CComPtrBase:: Release](#release)|Wywołaj tę metodę, aby zwolnić interfejs.|
-|[CComPtrBase:: SetSite](#setsite)|Wywołaj tę metodę, aby ustawić lokację obiektu `CComPtrBase` na `IUnknown` obiektu nadrzędnego.|
+|[CComPtrBase::Doradzić](#advise)|Wywołanie tej metody, aby `CComPtrBase`utworzyć połączenie między punktem połączenia "s i ujścia klienta.|
+|[CComPtrBase::Dołącz](#attach)|Wywołanie tej metody, aby przejąć na własność istniejącego wskaźnika.|
+|[CComPtrBase::CoCreateInstance](#cocreateinstance)|Wywołanie tej metody, aby utworzyć obiekt klasy skojarzonej z określonym identyfikatorem klasy lub identyfikatorem programu.|
+|[CComPtrBase::CopyTo](#copyto)|Wywołanie tej metody, aby skopiować `CComPtrBase` wskaźnik do innej zmiennej wskaźnika.|
+|[CComPtrBase::Detach](#detach)|Wywołanie tej metody, aby zwolnić własność wskaźnika.|
+|[CComPtrBase::IsEqualObject](#isequalobject)|Wywołanie tej metody, `IUnknown` aby sprawdzić, czy określone `CComPtrBase` punkty do tego samego obiektu skojarzonego z obiektem.|
+|[CComPtrBase::QueryInterface](#queryinterface)|Wywołanie tej metody, aby zwrócić wskaźnik do określonego interfejsu.|
+|[CComPtrBase::Release](#release)|Wywołanie tej metody, aby zwolnić interfejs.|
+|[CComPtrBase::SetSite](#setsite)|Wywołanie tej metody, aby `CComPtrBase` ustawić `IUnknown` witrynę obiektu do obiektu nadrzędnego.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CComPtrBase:: operator T *](#operator_t_star)|Operator rzutowania.|
-|[CComPtrBase:: operator!](#operator_not)|Operator NOT.|
-|[CComPtrBase:: operator &](#operator_amp)|Operator &.|
-|[CComPtrBase:: operator *](#operator_star)|Operator \*.|
-|[CComPtrBase:: operator <](#ccomptrbase__operator lt)|Operator mniejszości.|
-|[CComPtrBase:: operator = =](#operator_eq_eq)|Operator równości.|
-|[CComPtrBase:: operator->](#operator_ptr)|Operator wskaźnika do elementów członkowskich.|
+|[CComPtrBase::operator T*](#operator_t_star)|Operator odlewu.|
+|[CComPtrBase::operator !](#operator_not)|Operator NOT.|
+|[CComPtrBase::operator &](#operator_amp)|Operator &.|
+|[CComPtrBase::operator *](#operator_star)|Operator \*.|
+|[CComPtrBase::operator <](#ccomptrbase__operator lt)|Operator mniej niż.|
+|[CComPtrBase::operator ==](#operator_eq_eq)|Operator równości.|
+|[CComPtrBase::operator ->](#operator_ptr)|Operator wskaźnik-do-członków.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CComPtrBase::p](#p)|Zmienna elementu członkowskiego danych wskaźnika.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa stanowi podstawę dla innych inteligentnych wskaźników, w których używane są procedury zarządzania pamięcią COM, takie jak [CComQIPtr](../../atl/reference/ccomqiptr-class.md) i [CComPtr](../../atl/reference/ccomptr-class.md). Klasy pochodne dodają własne konstruktory i operatory, ale polegają na metodach dostarczonych przez `CComPtrBase`.
+Ta klasa stanowi podstawę dla innych inteligentnych wskaźników, które używają procedur zarządzania pamięcią COM, takich jak [CComQIPtr](../../atl/reference/ccomqiptr-class.md) i [CComPtr](../../atl/reference/ccomptr-class.md). Klasy pochodne dodają własne konstruktory i operatory, ale opierają się na metodach dostarczonych przez `CComPtrBase`program .
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcomcli. h
+**Nagłówek:** atlcomcli.h
 
-##  <a name="advise"></a>CComPtrBase:: Advise
+## <a name="ccomptrbaseadvise"></a><a name="advise"></a>CComPtrBase::Doradzić
 
-Wywołaj tę metodę, aby utworzyć połączenie między punktem połączenia `CComPtrBase`i ujściam klienta.
+Wywołanie tej metody, aby `CComPtrBase`utworzyć połączenie między punktem połączenia "s i ujścia klienta.
 
 ```
 HRESULT Advise(
@@ -101,26 +101,26 @@ HRESULT Advise(
 
 ### <a name="parameters"></a>Parametry
 
-*Punkt*<br/>
-Wskaźnik do `IUnknown`klienta.
+*Punk*<br/>
+Wskaźnik do klienta `IUnknown`.
 
-*IID*<br/>
-Identyfikator GUID punktu połączenia. Zwykle jest to takie samo, jak interfejs wychodzący zarządzany przez punkt połączenia.
+*Iid*<br/>
+Identyfikator GUID punktu połączenia. Zazwyczaj jest to taka sama jak interfejs wychodzący zarządzany przez punkt połączenia.
 
-*Kreatora*<br/>
+*Pdw*<br/>
 Wskaźnik do pliku cookie, który jednoznacznie identyfikuje połączenie.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [AtlAdvise](connection-point-global-functions.md#atladvise) .
+Zobacz [AtlAdvise aby](connection-point-global-functions.md#atladvise) uzyskać więcej informacji.
 
-##  <a name="attach"></a>CComPtrBase:: Attach
+## <a name="ccomptrbaseattach"></a><a name="attach"></a>CComPtrBase::Dołącz
 
-Wywołaj tę metodę, aby przejąć na własność istniejący wskaźnik.
+Wywołanie tej metody, aby przejąć na własność istniejącego wskaźnika.
 
 ```
 void Attach(T* p2) throw();
@@ -128,14 +128,14 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*P2*<br/>
-Obiekt `CComPtrBase` przejdzie na własność tego wskaźnika.
+*p2*<br/>
+Obiekt `CComPtrBase` przejmie na własność ten wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
 
-`Attach` wywołuje [CComPtrBase:: Release](#release) w istniejącej zmiennej składowej [CComPtrBase::p](#p) , a następnie przypisuje *P2* do `CComPtrBase::p`. Gdy obiekt `CComPtrBase` przejmuje własność wskaźnika, automatycznie wywoła `Release` na wskaźniku, który spowoduje usunięcie wskaźnika i wszelkich przyznanych danych, jeśli liczba odwołań w obiekcie przejdzie do 0.
+`Attach`wywołuje [CComPtrBase::Release](#release) na istniejącej zmiennej [CComPtrBase::p,](#p) a `CComPtrBase::p`następnie przypisuje *p2* do . Gdy `CComPtrBase` obiekt przejmuje na własność wskaźnik, automatycznie `Release` wywoła wskaźnik, który usunie wskaźnik i wszystkie przydzielone dane, jeśli liczba odwołań na obiekcie przejdzie do 0.
 
-##  <a name="dtor"></a>CComPtrBase:: ~ CComPtrBase
+## <a name="ccomptrbaseccomptrbase"></a><a name="dtor"></a>Baza CComPtrBase::~CComPtrBase
 
 Destruktor.
 
@@ -145,11 +145,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia interfejs wskazywany przez `CComPtrBase`.
+Zwalnia interfejs wskazany `CComPtrBase`przez .
 
-##  <a name="cocreateinstance"></a>CComPtrBase:: CoCreateInstance
+## <a name="ccomptrbasecocreateinstance"></a><a name="cocreateinstance"></a>CComPtrBase::CoCreateInstance
 
-Wywołaj tę metodę, aby utworzyć obiekt klasy skojarzonej z określonym IDENTYFIKATORem klasy lub IDENTYFIKATORem programu.
+Wywołanie tej metody, aby utworzyć obiekt klasy skojarzonej z określonym identyfikatorem klasy lub identyfikatorem programu.
 
 ```
 HRESULT CoCreateInstance(
@@ -165,31 +165,31 @@ HRESULT CoCreateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*szProgID*<br/>
-Wskaźnik do identyfikatora ProgID używany do odzyskania identyfikatora CLSID.
+*szProgID (szProgID)*<br/>
+Wskaźnik do identyfikatora progid, używany do odzyskiwania identyfikatora CLSID.
 
-*pUnkOuter*<br/>
-Jeśli wartość jest równa NULL, wskazuje, że obiekt nie jest tworzony w ramach agregacji. Jeśli wartość nie jest równa NULL, jest wskaźnikiem do interfejsu `IUnknown` obiektu agregacji (kontrolowanie `IUnknown`).
+*pUnkOuter (Nieunikat.*<br/>
+Jeśli NULL, wskazuje, że obiekt nie jest tworzony jako część agregacji. Jeśli nie- NULL, jest wskaźnikiem do `IUnknown` interfejsu obiektu `IUnknown`agregacji (controlling ).
 
 *dwClsContext*<br/>
-Kontekst, w którym zostanie uruchomiony kod zarządzający nowo utworzonym obiektem.
+Kontekst, w którym zostanie uruchomiony kod, który zarządza nowo utworzonym obiektem.
 
-*rclsid*<br/>
-Identyfikator CLSID skojarzony z danymi i kodem, który zostanie użyty do utworzenia obiektu.
+*rclsid ( rclsid )*<br/>
+IDENTYFIKATOR CLSID skojarzony z danymi i kodem, który będzie używany do tworzenia obiektu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK dla sukcesu lub REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING lub E_NOINTERFACE w przypadku niepowodzenia. Opis tych błędów można znaleźć w tematach [CoCreateClassInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) i [CLSIDFromProgID](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid) .
+Zwraca S_OK na sukces lub REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING lub E_NOINTERFACE na niepowodzenie. Zobacz [CoCreateClassInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) i [CLSIDFromProgID](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid) opis tych błędów.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli zostanie wywołana pierwsza forma metody, [CLSIDFromProgID](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid) jest używana do odzyskania identyfikatora CLSID. Oba formularze następnie wywołują [CoCreateClassInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
+Jeśli wywoływana jest pierwsza forma metody, [CLSIDFromProgID](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid) jest używany do odzyskiwania CLSID. Oba formularze następnie wywołać [CoCreateClassInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
-W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli [CComPtrBase::p](#p) nie jest równa null.
+W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli [CComPtrBase::p](#p) nie jest równa NULL.
 
-##  <a name="copyto"></a>CComPtrBase:: CopyTo
+## <a name="ccomptrbasecopyto"></a><a name="copyto"></a>CComPtrBase::CopyTo
 
-Wywołaj tę metodę, aby skopiować wskaźnik `CComPtrBase` do innej zmiennej wskaźnika.
+Wywołanie tej metody, aby skopiować `CComPtrBase` wskaźnik do innej zmiennej wskaźnika.
 
 ```
 HRESULT CopyTo(T** ppT) throw();
@@ -197,38 +197,38 @@ HRESULT CopyTo(T** ppT) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Formacie*<br/>
-Adres zmiennej, która będzie odbierać wskaźnik `CComPtrBase`.
+*Ppt*<br/>
+Adres zmiennej, która `CComPtrBase` otrzyma wskaźnik.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu, E_POINTER w przypadku niepowodzenia.
+Zwraca S_OK na sukces, E_POINTER na porażkę.
 
 ### <a name="remarks"></a>Uwagi
 
-Kopiuje wskaźnik `CComPtrBase` do *PPT*. Liczba odwołań dla zmiennej składowej [CComPtrBase::p](#p) jest zwiększana.
+Kopiuje `CComPtrBase` wskaźnik do *ppT*. Liczba odwołań dla zmiennej [CComPtrBase::p](#p) element członkowski jest zwiększana.
 
-Błąd HRESULT zostanie zwrócony, jeśli wartość *PPT* jest równa null. W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli *PPT* będzie równa null.
+Błąd HRESULT zostanie zwrócony, jeśli *ppT* jest równa null. W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli *ppT* jest równa NULL.
 
-##  <a name="detach"></a>CComPtrBase::D etach
+## <a name="ccomptrbasedetach"></a><a name="detach"></a>CComPtrBase::Detach
 
-Wywołaj tę metodę, aby zwolnić własność wskaźnika.
+Wywołanie tej metody, aby zwolnić własność wskaźnika.
 
 ```
 T* Detach() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca kopię wskaźnika.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia własność wskaźnika, ustawia zmienną składową danych [CComPtrBase::p](#p) na null i zwraca kopię wskaźnika.
+Zwalnia własność wskaźnika, ustawia zmienną elementu członkowskiego [CComPtrBase::p](#p) na NULL i zwraca kopię wskaźnika.
 
-##  <a name="isequalobject"></a>CComPtrBase:: isequalobject
+## <a name="ccomptrbaseisequalobject"></a><a name="isequalobject"></a>CComPtrBase::IsEqualObject
 
-Wywołaj tę metodę, aby sprawdzić, czy określony `IUnknown` wskazuje na ten sam obiekt skojarzony z obiektem `CComPtrBase`.
+Wywołanie tej metody, `IUnknown` aby sprawdzić, czy określone `CComPtrBase` punkty do tego samego obiektu skojarzonego z obiektem.
 
 ```
 bool IsEqualObject(IUnknown* pOther) throw();
@@ -237,13 +237,13 @@ bool IsEqualObject(IUnknown* pOther) throw();
 ### <a name="parameters"></a>Parametry
 
 *pOther*<br/>
-`IUnknown *` do porównania.
+Do `IUnknown *` porównania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli obiekty są identyczne, w przeciwnym razie false.
+Zwraca wartość true, jeśli obiekty są identyczne, false inaczej.
 
-##  <a name="operator_not"></a>CComPtrBase:: operator!
+## <a name="ccomptrbaseoperator-"></a><a name="operator_not"></a>CComPtrBase::operator !
 
 Operator NOT.
 
@@ -251,11 +251,11 @@ Operator NOT.
 bool operator!() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli wskaźnik `CComHeapPtr` ma wartość NULL, w przeciwnym razie false.
+Zwraca wartość `CComHeapPtr` true, jeśli wskaźnik jest równy null, false w przeciwnym razie.
 
-##  <a name="operator_amp"></a>CComPtrBase:: operator &amp;
+## <a name="ccomptrbaseoperator-amp"></a><a name="operator_amp"></a>CComPtrBase::operator&amp;
 
 Operator &.
 
@@ -263,11 +263,11 @@ Operator &.
 T** operator&() throw();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca adres obiektu wskazywanego przez obiekt `CComPtrBase`.
+Zwraca adres obiektu wskazywalnego przez `CComPtrBase` obiekt.
 
-##  <a name="operator_star"></a>CComPtrBase:: operator \*
+## <a name="ccomptrbaseoperator-"></a><a name="operator_star"></a>CComPtrBase::operator\*
 
 Operator \*.
 
@@ -275,13 +275,13 @@ Operator \*.
 T& operator*() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość [CComPtrBase::p](#p); oznacza to, że wskaźnik do obiektu, do którego odwołuje się obiekt `CComPtrBase`.
+Zwraca wartość [CComPtrBase::p](#p); oznacza to, że wskaźnik do obiektu, do którego odwołuje się `CComPtrBase` obiekt.
 
-W przypadku kompilacji debugowania wystąpi błąd potwierdzenia, jeśli [CComPtrBase::p](#p) nie jest równa null.
+Jeśli debugowanie kompilacji, błąd potwierdzenia wystąpi, jeśli [CComPtrBase::p](#p) nie jest równa NULL.
 
-##  <a name="operator_eq_eq"></a>CComPtrBase:: operator = =
+## <a name="ccomptrbaseoperator-"></a><a name="operator_eq_eq"></a>CComPtrBase::operator ==
 
 Operator równości.
 
@@ -291,32 +291,32 @@ bool operator== (T* pT) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Zmiennoprzecinkow*<br/>
+*Pt*<br/>
 Wskaźnik do obiektu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli `CComPtrBase` i *pt* wskazuje na ten sam obiekt, w przeciwnym razie false.
+Zwraca wartość `CComPtrBase` true if i *pT* wskazują na ten sam obiekt, false w przeciwnym razie.
 
-##  <a name="operator_ptr"></a>CComPtrBase:: operator-&gt;
+## <a name="ccomptrbaseoperator--gt"></a><a name="operator_ptr"></a>CComPtrBase::operator -&gt;
 
-Operator wskaźnika do składowej.
+Operator wskaźnik-element.
 
 ```
 _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość zmiennej składowej danych [CComPtrBase::p](#p) .
+Zwraca wartość zmiennej elementu członkowskiego [CComPtrBase::p](#p) danych.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tego operatora, aby wywołać metodę w klasie wskazywanej przez obiekt `CComPtrBase`. W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli element członkowski danych `CComPtrBase` wskazuje wartość NULL.
+Ten operator służy do wywoływania metody w `CComPtrBase` klasie wskazywaluj przez obiekt. W kompilacjach debugowania błąd potwierdzenia `CComPtrBase` wystąpi, jeśli element członkowski danych wskazuje wartość NULL.
 
-##  <a name="operator_lt"></a>CComPtrBase:: operator &lt;
+## <a name="ccomptrbaseoperator-lt"></a><a name="operator_lt"></a>CComPtrBase::operator&lt;
 
-Operator mniejszości.
+Operator mniej niż.
 
 ```
 bool operator<(T* pT) const throw();
@@ -324,16 +324,16 @@ bool operator<(T* pT) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Zmiennoprzecinkow*<br/>
+*Pt*<br/>
 Wskaźnik do obiektu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość true, jeśli wskaźnik zarządzany przez bieżący obiekt jest mniejszy niż wskaźnik, do którego jest porównywany.
 
-##  <a name="operator_t_star"></a>CComPtrBase:: operator T\*
+## <a name="ccomptrbaseoperator-t"></a><a name="operator_t_star"></a>CComPtrBase::operator T\*
 
-Operator rzutowania.
+Operator odlewu.
 
 ```
 operator T*() const throw();
@@ -343,7 +343,7 @@ operator T*() const throw();
 
 Zwraca wskaźnik do typu danych obiektu zdefiniowanego w szablonie klasy.
 
-##  <a name="p"></a>CComPtrBase::p
+## <a name="ccomptrbasep"></a><a name="p"></a>CComPtrBase::p
 
 Zmienna elementu członkowskiego danych wskaźnika.
 
@@ -353,11 +353,11 @@ T* p;
 
 ### <a name="remarks"></a>Uwagi
 
-Ta zmienna członkowska zawiera informacje o wskaźniku.
+Ta zmienna elementu członkowskiego zawiera informacje o wskaźniku.
 
-##  <a name="queryinterface"></a>CComPtrBase:: QueryInterface
+## <a name="ccomptrbasequeryinterface"></a><a name="queryinterface"></a>CComPtrBase::QueryInterface
 
-Wywołaj tę metodę, aby zwrócić wskaźnik do określonego interfejsu.
+Wywołanie tej metody, aby zwrócić wskaźnik do określonego interfejsu.
 
 ```
 template <class Q> HRESULT QueryInterface(Q
@@ -366,25 +366,25 @@ template <class Q> HRESULT QueryInterface(Q
 
 ### <a name="parameters"></a>Parametry
 
-*Pytania*<br/>
+*P*<br/>
 Typ obiektu, którego wskaźnik interfejsu jest wymagany.
 
-*miesięcznie*<br/>
-Adres zmiennej wyjściowej, która odbiera żądany wskaźnik interfejsu.
+*S*<br/>
+Adres zmiennej wyjściowej odbieranej żądanego wskaźnika interfejsu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub E_NOINTERFACE w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub E_NOINTERFACE na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wywołuje [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)).
+Ta metoda wywołuje [IUnknown::QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)).
 
-W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli *PP* nie jest równy null.
+W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli *pp* nie jest równa NULL.
 
-##  <a name="release"></a>CComPtrBase:: Release
+## <a name="ccomptrbaserelease"></a><a name="release"></a>CComPtrBase::Release
 
-Wywołaj tę metodę, aby zwolnić interfejs.
+Wywołanie tej metody, aby zwolnić interfejs.
 
 ```
 void Release() throw();
@@ -392,11 +392,11 @@ void Release() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Interfejs jest wydawany, a [CComPtrBase::p](#p) ma wartość null.
+Interfejs jest zwalniany, a [CComPtrBase::p](#p) jest ustawiona na wartość NULL.
 
-##  <a name="setsite"></a>CComPtrBase:: SetSite
+## <a name="ccomptrbasesetsite"></a><a name="setsite"></a>CComPtrBase::SetSite
 
-Wywołaj tę metodę, aby ustawić lokację obiektu `CComPtrBase` na `IUnknown` obiektu nadrzędnego.
+Wywołanie tej metody, aby `CComPtrBase` ustawić `IUnknown` witrynę obiektu do obiektu nadrzędnego.
 
 ```
 HRESULT SetSite(IUnknown* punkParent) throw();
@@ -404,12 +404,12 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punkParent*<br/>
-Wskaźnik do interfejsu `IUnknown` elementu nadrzędnego.
+*punkRożka*<br/>
+Wskaźnik do `IUnknown` interfejsu nadrzędnego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 

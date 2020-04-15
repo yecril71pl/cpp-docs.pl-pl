@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::GenericReleaseNotifier::GenericReleaseNotifier, constructor
 - Microsoft::WRL::Module::GenericReleaseNotifier::Invoke method
 ms.assetid: 244a8fbe-f89b-409b-aa65-db3e37f9b125
-ms.openlocfilehash: 318415c9726426cbd60c205759a6ff8572cc555e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3cc8e33d596fb1d3ecc4a94fee7971a50ffe596
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325055"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371307"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier — Klasa
 
-Wywołuje program obsługi zdarzeń po udostępnieniu ostatni obiekt w bieżącego modułu. Program obsługi zdarzeń jest określone w lambda, funktor lub wskaźnik do funkcji.
+Wywołuje program obsługi zdarzeń, gdy ostatni obiekt w bieżącym module jest zwolniony. Program obsługi zdarzeń jest określony przez lambda, functor lub wskaźnik do funkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,7 +34,7 @@ class GenericReleaseNotifier : public ReleaseNotifier;
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ składowej danych, która zawiera lokalizację programu obsługi zdarzeń.
+Typ elementu członkowskiego danych, który zawiera lokalizację programu obsługi zdarzeń.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -42,19 +42,19 @@ Typ składowej danych, która zawiera lokalizację programu obsługi zdarzeń.
 
 Nazwa                                                                                                     | Opis
 -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------
-[Module::GenericReleaseNotifier::GenericReleaseNotifier](#genericreleasenotifier-genericreleasenotifier) | Inicjuje nowe wystąpienie klasy `Module::GenericReleaseNotifier` klasy.
+[Moduł::GenericReleaseNotifier::GenericReleaseNotifier](#genericreleasenotifier-genericreleasenotifier) | Inicjuje nowe wystąpienie klasy `Module::GenericReleaseNotifier`.
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Nazwa                                                                     | Opis
 ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------
-[Module::GenericReleaseNotifier:: Invoke](#genericreleasenotifier-invoke) | Wywołuje program obsługi zdarzeń skojarzonych z bieżącym `Module::GenericReleaseNotifier` obiektu.
+[Moduł::GenericReleaseNotifier::Wywołaj](#genericreleasenotifier-invoke) | Wywołuje program obsługi zdarzeń skojarzony z bieżącym `Module::GenericReleaseNotifier` obiektem.
 
-### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+### <a name="protected-data-members"></a>Członkowie chronionych danych
 
 Nazwa                                                                          | Opis
 ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------
-[Module::GenericReleaseNotifier::callback_](#genericreleasenotifier-callback) | Zawiera wyrażenie lambda, funktor lub obsługi zdarzeń wskaźnika do funkcji skojarzony z bieżącym `Module::GenericReleaseNotifier` obiektu.
+[Moduł::GenericReleaseNotifier::callback_](#genericreleasenotifier-callback) | Przechowuje lambda, functor lub wskaźnik do funkcji obsługi zdarzeń `Module::GenericReleaseNotifier` skojarzonych z bieżącego obiektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -66,19 +66,19 @@ Nazwa                                                                          |
 
 **Nagłówek:** module.h
 
-**Namespace:** Microsoft::WRL
+**Obszar nazw:** Microsoft::WRL
 
-## <a name="genericreleasenotifier-callback"></a>Module::GenericReleaseNotifier::callback_
+## <a name="modulegenericreleasenotifiercallback_"></a><a name="genericreleasenotifier-callback"></a>Moduł::GenericReleaseNotifier::callback_
 
-Zawiera wyrażenie lambda, funktor lub obsługi zdarzeń wskaźnika do funkcji skojarzony z bieżącym `Module::GenericReleaseNotifier` obiektu.
+Przechowuje lambda, functor lub wskaźnik do funkcji obsługi zdarzeń `Module::GenericReleaseNotifier` skojarzonych z bieżącego obiektu.
 
 ```cpp
 T callback_;
 ```
 
-## <a name="genericreleasenotifier-genericreleasenotifier"></a>Module::GenericReleaseNotifier::GenericReleaseNotifier
+## <a name="modulegenericreleasenotifiergenericreleasenotifier"></a><a name="genericreleasenotifier-genericreleasenotifier"></a>Moduł::GenericReleaseNotifier::GenericReleaseNotifier
 
-Inicjuje nowe wystąpienie klasy `Module::GenericReleaseNotifier` klasy.
+Inicjuje nowe wystąpienie klasy `Module::GenericReleaseNotifier`.
 
 ```cpp
 GenericReleaseNotifier(
@@ -89,15 +89,15 @@ GenericReleaseNotifier(
 
 ### <a name="parameters"></a>Parametry
 
-*callback*<br/>
-Wyrażenie lambda, funktor lub program obsługi zdarzeń wskaźnika do funkcji, który może być wywoływany przy użyciu funkcji nawiasów (`()`).
+*Wywołania zwrotnego*<br/>
+Program obsługi zdarzeń lambda, functor lub wskaźnik do funkcji, który można wywołać`()`za pomocą operatora funkcji nawiasy ( ).
 
 *Wydania*<br/>
-Określ `true` umożliwiające wywołanie bazowego [modułu:: ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release) metody; w przeciwnym razie określ `false`.
+Określ, `true` aby włączyć wywołanie podstawowej metody [modułu::ReleaseNotifier::Release();](module-releasenotifier-class.md#releasenotifier-release) w przeciwnym `false`razie należy określić .
 
-## <a name="genericreleasenotifier-invoke"></a>Module::GenericReleaseNotifier:: Invoke
+## <a name="modulegenericreleasenotifierinvoke"></a><a name="genericreleasenotifier-invoke"></a>Moduł::GenericReleaseNotifier::Wywołaj
 
-Wywołuje program obsługi zdarzeń skojarzonych z bieżącym `Module::GenericReleaseNotifier` obiektu.
+Wywołuje program obsługi zdarzeń skojarzony z bieżącym `Module::GenericReleaseNotifier` obiektem.
 
 ```cpp
 void Invoke();

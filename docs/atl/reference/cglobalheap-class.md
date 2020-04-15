@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - CGlobalHeap class
 ms.assetid: e348d838-3aa7-4bee-a1b3-cd000c99f834
-ms.openlocfilehash: 2b5aa09357ddcc77b6b10de58545bea86eff2488
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d596fd51c1bf33f606c1f14c9e8dbd2f1926c7f8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496762"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326942"
 ---
 # <a name="cglobalheap-class"></a>Klasa CGlobalHeap
 
-Ta klasa implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) przy użyciu globalnych funkcji sterty Win32.
+Ta klasa implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) przy użyciu funkcji globalnego sterty Win32.
 
 > [!IMPORTANT]
->  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,21 +37,21 @@ class CGlobalHeap : public IAtlMemMgr
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CGlobalHeap:: Allocate](#allocate)|Wywołaj tę metodę, aby przydzielić blok pamięci.|
-|[CGlobalHeap:: Free](#free)|Wywołaj tę metodę, aby zwolnić blok pamięci przydzielonej przez ten Menedżer pamięci.|
-|[CGlobalHeap:: GetSize](#getsize)|Wywołaj tę metodę, aby uzyskać przydzielonego rozmiaru bloku pamięci przydzielonego przez ten Menedżer pamięci.|
-|[CGlobalHeap:: Reallocate](#reallocate)|Wywołaj tę metodę, aby ponownie przydzielić pamięć przydzieloną przez ten Menedżer pamięci.|
+|[CGlobalHeap::Przydziel](#allocate)|Wywołanie tej metody, aby przydzielić blok pamięci.|
+|[CGlobalHeap::Za darmo](#free)|Wywołanie tej metody, aby zwolnić blok pamięci przydzielone przez ten menedżer pamięci.|
+|[CGlobalHeap::GetSize](#getsize)|Wywołanie tej metody, aby uzyskać przydzielony rozmiar bloku pamięci przydzielone przez tego menedżera pamięci.|
+|[CGlobalHeap::Ponowne przydzielenie](#reallocate)|Wywołanie tej metody, aby ponownie przydzielić pamięć przydzieloną przez tego menedżera pamięci.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CGlobalHeap`implementuje funkcje alokacji pamięci przy użyciu globalnych funkcji sterty Win32.
+`CGlobalHeap`implementuje funkcje alokacji pamięci przy użyciu funkcji sterty globalnej Win32.
 
 > [!NOTE]
->  Globalne funkcje sterty są wolniejsze niż inne funkcje zarządzania pamięcią i nie zapewniają jak wielu funkcji. W związku z tym nowe aplikacje powinny używać [funkcji sterty](/windows/win32/Memory/heap-functions). Są one dostępne w klasie [CWin32Heap](../../atl/reference/cwin32heap-class.md) . Funkcje globalne są nadal używane przez DDE i funkcje Schowka.
+> Globalne funkcje sterty są wolniejsze niż inne funkcje zarządzania pamięcią i nie zapewniają tak wielu funkcji. W związku z tym nowe aplikacje powinny używać [funkcji sterty](/windows/win32/Memory/heap-functions). Są one dostępne w [CWin32Heap](../../atl/reference/cwin32heap-class.md) klasy. Funkcje globalne są nadal używane przez DDE i funkcje schowka.
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład dla [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
+Zobacz przykład [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -61,11 +61,11 @@ Zobacz przykład dla [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlmem. h
+**Nagłówek:** atlmem.h
 
-##  <a name="allocate"></a>CGlobalHeap:: Allocate
+## <a name="cglobalheapallocate"></a><a name="allocate"></a>CGlobalHeap::Przydziel
 
-Wywołaj tę metodę, aby przydzielić blok pamięci.
+Wywołanie tej metody, aby przydzielić blok pamięci.
 
 ```
 virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
@@ -73,22 +73,22 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBytes*<br/>
+*n Bajty*<br/>
 Żądana liczba bajtów w nowym bloku pamięci.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do początku nowo przydzielony blok pamięci.
+Zwraca wskaźnik do początku nowo przydzielonego bloku pamięci.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie [CGlobalHeap:: Free](#free) lub [CGlobalHeap:: Reallocate](#reallocate) w celu zwolnienia pamięci przydzielonej przez tę metodę.
+Wywołanie [CGlobalHeap::Free](#free) lub [CGlobalHeap::Reallocate,](#reallocate) aby zwolnić pamięć przydzieloną przez tę metodę.
 
-Zaimplementowane przy użyciu [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) z parametrem flagi GMEM_FIXED.
+Zaimplementowano przy użyciu [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) z parametrem flagi GMEM_FIXED.
 
-##  <a name="free"></a>CGlobalHeap:: Free
+## <a name="cglobalheapfree"></a><a name="free"></a>CGlobalHeap::Za darmo
 
-Wywołaj tę metodę, aby zwolnić blok pamięci przydzielonej przez ten Menedżer pamięci.
+Wywołanie tej metody, aby zwolnić blok pamięci przydzielone przez ten menedżer pamięci.
 
 ```
 virtual void Free(void* p) throw();
@@ -96,16 +96,16 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*<br/>
-Wskaźnik do pamięci przydzielonej wcześniej przez ten Menedżer pamięci. Wartość NULL jest prawidłowa i nic nie robi.
+*P*<br/>
+Wskaźnik do pamięci wcześniej przydzielonej przez tego menedżera pamięci. NULL jest prawidłową wartością i nic nie robi.
 
 ### <a name="remarks"></a>Uwagi
 
-Zaimplementowane przy użyciu [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree).
+Zaimplementowano przy użyciu [programu GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree).
 
-##  <a name="getsize"></a>CGlobalHeap:: GetSize
+## <a name="cglobalheapgetsize"></a><a name="getsize"></a>CGlobalHeap::GetSize
 
-Wywołaj tę metodę, aby uzyskać przydzielonego rozmiaru bloku pamięci przydzielonego przez ten Menedżer pamięci.
+Wywołanie tej metody, aby uzyskać przydzielony rozmiar bloku pamięci przydzielone przez tego menedżera pamięci.
 
 ```
 virtual size_t GetSize(void* p) throw();
@@ -113,20 +113,20 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*<br/>
-Wskaźnik do pamięci przydzielonej wcześniej przez ten Menedżer pamięci.
+*P*<br/>
+Wskaźnik do pamięci wcześniej przydzielonej przez tego menedżera pamięci.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca rozmiar przydzielony blok pamięci w bajtach.
+Zwraca rozmiar przydzielonego bloku pamięci w bajtach.
 
 ### <a name="remarks"></a>Uwagi
 
-Zaimplementowane przy użyciu [GlobalSize](/windows/win32/api/winbase/nf-winbase-globalsize).
+Zaimplementowano przy użyciu [globalsize](/windows/win32/api/winbase/nf-winbase-globalsize).
 
-##  <a name="reallocate"></a>CGlobalHeap:: Reallocate
+## <a name="cglobalheapreallocate"></a><a name="reallocate"></a>CGlobalHeap::Ponowne przydzielenie
 
-Wywołaj tę metodę, aby ponownie przydzielić pamięć przydzieloną przez ten Menedżer pamięci.
+Wywołanie tej metody, aby ponownie przydzielić pamięć przydzieloną przez tego menedżera pamięci.
 
 ```
 virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
@@ -134,27 +134,27 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*<br/>
-Wskaźnik do pamięci przydzielonej wcześniej przez ten Menedżer pamięci.
+*P*<br/>
+Wskaźnik do pamięci wcześniej przydzielonej przez tego menedżera pamięci.
 
-*nBytes*<br/>
+*n Bajty*<br/>
 Żądana liczba bajtów w nowym bloku pamięci.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do początku nowo przydzielony blok pamięci.
+Zwraca wskaźnik do początku nowo przydzielonego bloku pamięci.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj [CGlobalHeap:: Free](#free) , aby zwolnić pamięć przydzieloną przez tę metodę.
+Wywołanie [CGlobalHeap::Free](#free) zwolnić pamięć przydzieloną przez tę metodę.
 
-Zaimplementowane przy użyciu [GlobalReAlloc](/windows/win32/api/winbase/nf-winbase-globalrealloc).
+Zaimplementowano przy użyciu [pliku GlobalReAlloc](/windows/win32/api/winbase/nf-winbase-globalrealloc).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przegląd klas](../../atl/atl-class-overview.md)<br/>
 [Klasa CComHeap](../../atl/reference/ccomheap-class.md)<br/>
-[Klasa CWin32Heap](../../atl/reference/cwin32heap-class.md)<br/>
+[CWin32Klasa heap](../../atl/reference/cwin32heap-class.md)<br/>
 [Klasa CLocalHeap](../../atl/reference/clocalheap-class.md)<br/>
 [Klasa CCRTHeap](../../atl/reference/ccrtheap-class.md)<br/>
 [Klasa IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)

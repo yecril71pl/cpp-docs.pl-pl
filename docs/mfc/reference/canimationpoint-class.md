@@ -1,5 +1,5 @@
 ---
-title: CAnimationPoint Class
+title: Klasa CAnimationPoint
 ms.date: 11/04/2016
 f1_keywords:
 - CAnimationPoint
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-ms.openlocfilehash: 15f06d2fa3478570d2f784879a13e7b68515e746
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f02010b6b73573a4800152e40c592fd1736ad5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218541"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369730"
 ---
-# <a name="canimationpoint-class"></a>CAnimationPoint Class
+# <a name="canimationpoint-class"></a>Klasa CAnimationPoint
 
-Implementuje funkcje punktu, którego współrzędne mogą być animowane.
+Implementuje funkcjonalność punktu, którego współrzędne mogą być animowane.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,46 +49,46 @@ class CAnimationPoint : public CAnimationBaseObject;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationPoint::CAnimationPoint](#canimationpoint)|Przeciążone. Tworzy obiekt CAnimationPoint.|
+|[CAnimationPoint::CAnimationPoint](#canimationpoint)|Przeciążone. Konstruuje obiekt CAnimationPoint.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationPoint::AddTransition](#addtransition)|Dodaje przejścia dla X i współrzędne Y.|
-|[CAnimationPoint::GetDefaultValue](#getdefaultvalue)|Zwraca wartości domyślne dla X i współrzędne Y.|
+|[CAnimationPoint::AddTransition](#addtransition)|Dodaje przejścia dla współrzędnych X i Y.|
+|[CAnimationPoint::GetDefaultValue](#getdefaultvalue)|Zwraca wartości domyślne współrzędnych X i Y.|
 |[CAnimationPoint::GetValue](#getvalue)|Zwraca bieżącą wartość.|
-|[CAnimationPoint::GetX](#getx)|Zapewnia dostęp do CAnimationVariable dla współrzędną X.|
-|[CAnimationPoint::GetY](#gety)|Zapewnia dostęp do CAnimationVariable współrzędnej Y.|
+|[CAnimationPoint::GetX](#getx)|Zapewnia dostęp do CAnimationVariable dla współrzędnych X.|
+|[CAnimationPoint::GetY](#gety)|Zapewnia dostęp do CAnimationVariable dla współrzędnych Y.|
 |[CAnimationPoint::SetDefaultValue](#setdefaultvalue)|Ustawia wartość domyślną.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationPoint::GetAnimationVariableList](#getanimationvariablelist)|Umieszcza zmienne zhermetyzowany animacji z listy. (Przesłania [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
+|[CAnimationPoint::GetAnimationVariableList](#getanimationvariablelist)|Umieszcza zhermetyzowane zmienne animacji na liście. (Zastępuje [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationPoint::operator CPoint](#operator_cpoint)|Konwertuje CAnimationPoint CPoint.|
-|[CAnimationPoint::operator =](#operator_eq)|Przypisuje ptSrc CAnimationPoint.|
+|[CAnimationPoint::operator CPoint](#operator_cpoint)|Konwertuje CAnimationPoint do CPoint.|
+|[CAnimationPoint::operator=](#operator_eq)|Przypisuje ptSrc do CAnimationPoint.|
 
-### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+### <a name="protected-data-members"></a>Członkowie chronionych danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationPoint::m_xValue](#m_xvalue)|Zmienna zhermetyzowany animacji, która reprezentuje X współrzędnych punktu animacji.|
-|[CAnimationPoint::m_yValue](#m_yvalue)|Zmienna zhermetyzowany animacji, która przedstawia współrzędną Y punktu animacji.|
+|[CAnimationPoint::m_xValue](#m_xvalue)|Zhermetyzowana zmienna animacji reprezentująca współrzędną X punktu animacji.|
+|[CAnimationPoint::m_yValue](#m_yvalue)|Zhermetyzowana zmienna animacji reprezentująca współrzędną Y punktu animacji.|
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa CAnimationPoint hermetyzuje dwa obiekty CAnimationVariable i może reprezentować w aplikacjach punkt. Na przykład można użyć tej klasy, aby animować położenie obiektów na ekranie (na przykład ciąg tekstowy, okrąg, punkt itp.). Aby użyć tej klasy w aplikacji, po prostu utworzyć wystąpienie obiektu tej klasy, dodaj go do kontrolera animacji przy użyciu CAnimationController::AddAnimationObject i wywoływać AddTransition dla każdego przejścia, które mają być stosowane do współrzędne X i/lub Y.
+CAnimationPoint Klasa hermetyzuje dwa CAnimationVariable obiektów i może reprezentować w aplikacjach punkt. Na przykład można użyć tej klasy do animowania pozycji dowolnego obiektu na ekranie (np. ciągu tekstowego, okręgu, punktu itp.). Aby użyć tej klasy w aplikacji, wystarczy utworzyć wystąpienie obiektu tej klasy, dodaj go do kontrolera animacji przy użyciu CAnimationController::AddAnimationObject i wywołać AddTransition dla każdego przejścia, które mają być stosowane do współrzędnych X i/lub Y.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 [CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)
 
@@ -98,9 +98,9 @@ Klasa CAnimationPoint hermetyzuje dwa obiekty CAnimationVariable i może repreze
 
 **Nagłówek:** afxanimationcontroller.h
 
-##  <a name="addtransition"></a>  CAnimationPoint::AddTransition
+## <a name="canimationpointaddtransition"></a><a name="addtransition"></a>CAnimationPoint::AddTransition
 
-Dodaje przejścia dla X i współrzędne Y.
+Dodaje przejścia dla współrzędnych X i Y.
 
 ```
 void AddTransition(
@@ -110,19 +110,19 @@ void AddTransition(
 
 ### <a name="parameters"></a>Parametry
 
-*pXTransition*<br/>
-Wskaźnik do przejścia dla X współrzędne.
+*pXTransition (tłumaczenie str.)*<br/>
+Wskaźnik do przejścia dla współrzędnych X.
 
-*pYTransition*<br/>
-Koordynowanie wskaźnik, do którego nastąpi przejście, y.
+*pYTransition (Tłumaczenie) pY*<br/>
+Wskaźnik do przejścia dla współrzędnej Y.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby dodać określonego przejścia do wewnętrznej listy przejścia, które mają być stosowane do zmiennych animacji dla X i współrzędne Y. Po dodaniu przejść, nie są stosowane natychmiast i przechowywane na liście wewnętrznych. Przejścia są stosowane (dodane do scenorysu dla określonej wartości) podczas wywoływania CAnimationController::AnimateGroup. Jeśli nie potrzebujesz zastosować przejścia do jednej współrzędnych, można przekazać wartości NULL.
+Wywołanie tej funkcji, aby dodać określone przejścia do wewnętrznej listy przejść, które mają być stosowane do zmiennych animacji dla współrzędnych X i Y. Po dodaniu przejść nie są one stosowane natychmiast i przechowywane na liście wewnętrznej. Przejścia są stosowane (dodawane do serii ujęć dla określonej wartości) podczas wywoływania CAnimationController::AnimateGroup. Jeśli nie trzeba zastosować przejście do jednej z współrzędnych, można przekazać NULL.
 
-##  <a name="canimationpoint"></a>  CAnimationPoint::CAnimationPoint
+## <a name="canimationpointcanimationpoint"></a><a name="canimationpoint"></a>CAnimationPoint::CAnimationPoint
 
-Tworzy obiekt CAnimationPoint.
+Konstruuje obiekt CAnimationPoint.
 
 ```
 CAnimationPoint();
@@ -136,10 +136,10 @@ CAnimationPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*ptDefault*<br/>
-Określa domyślny współrzędnych punktu.
+*ptDefault (niem.*<br/>
+Określa domyślne współrzędne punktów.
 
-*nGroupID*<br/>
+*nGrupaID*<br/>
 Określa identyfikator grupy.
 
 *nObjectID*<br/>
@@ -150,11 +150,11 @@ Określa dane zdefiniowane przez użytkownika.
 
 ### <a name="remarks"></a>Uwagi
 
-Tworzy obiekt CAnimationPoint za pomocą właściwości domyślne: domyślnie współrzędnych punktu, identyfikator grupy i identyfikator obiektu są ustawione na 0.
+Konstruuje obiekt CAnimationPoint z właściwościami domyślnymi: domyślne współrzędne punktów, identyfikator grupy i identyfikator obiektu są ustawione na 0.
 
-##  <a name="getanimationvariablelist"></a>  CAnimationPoint::GetAnimationVariableList
+## <a name="canimationpointgetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationPoint::GetAnimationVariableList
 
-Umieszcza zmienne zhermetyzowany animacji z listy.
+Umieszcza zhermetyzowane zmienne animacji na liście.
 
 ```
 virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVariable*>& lst);
@@ -162,12 +162,12 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
 
 ### <a name="parameters"></a>Parametry
 
-*lst*<br/>
-Po powrocie z tej funkcji zawiera wskaźniki do dwóch obiektów CAnimationVariable reprezentujący współrzędne X i Y.
+*Lst*<br/>
+Po powrocie funkcja zawiera wskaźniki do dwóch CAnimationVariable obiektów reprezentujących współrzędne X i Y.
 
-##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue
+## <a name="canimationpointgetdefaultvalue"></a><a name="getdefaultvalue"></a>CAnimationPoint::GetDefaultValue
 
-Zwraca wartości domyślne dla X i współrzędne Y.
+Zwraca wartości domyślne współrzędnych X i Y.
 
 ```
 CPoint GetDefaultValue();
@@ -175,13 +175,13 @@ CPoint GetDefaultValue();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Punkt zawierającego wartość domyślną.
+Punkt zawierający wartość domyślną.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję można pobrać wartości domyślnej, która została wcześniej ustawiona przez konstruktora lub SetDefaultValue.
+Wywołanie tej funkcji, aby pobrać wartość domyślną, która została wcześniej ustawiona przez konstruktora lub SetDefaultValue.
 
-##  <a name="getvalue"></a>  CAnimationPoint::GetValue
+## <a name="canimationpointgetvalue"></a><a name="getvalue"></a>CAnimationPoint::GetValue
 
 Zwraca bieżącą wartość.
 
@@ -191,20 +191,20 @@ BOOL GetValue(CPoint& ptValue);
 
 ### <a name="parameters"></a>Parametry
 
-*ptValue*<br/>
-Dane wyjściowe. Gdy metoda zwróci wartość, zawiera wartość bieżącą.
+*wartość ptValue*<br/>
+Wyjście. Zawiera bieżącą wartość, gdy ta metoda zwraca.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli bieżąca wartość został pomyślnie pobrany; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli bieżąca wartość została pomyślnie pobrana; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby pobrać bieżącą wartość punktu animacji. Jeśli ta metoda kończy się niepowodzeniem lub podstawowego modelu COM, obiekty x i współrzędne Y nie zostały zainicjowane, ptValue zawiera wartość domyślną, która została wcześniej ustawiona w konstruktorze lub SetDefaultValue.
+Wywołanie tej funkcji, aby pobrać bieżącą wartość punktu animacji. Jeśli ta metoda nie powiedzie się lub podstawowe obiekty COM dla współrzędnych X i Y nie zostały zainicjowane, ptValue zawiera wartość domyślną, która została wcześniej ustawiona w konstruktorze lub przez SetDefaultValue.
 
-##  <a name="getx"></a>  CAnimationPoint::GetX
+## <a name="canimationpointgetx"></a><a name="getx"></a>CAnimationPoint::GetX
 
-Zapewnia dostęp do CAnimationVariable dla współrzędną X.
+Zapewnia dostęp do CAnimationVariable dla współrzędnych X.
 
 ```
 CAnimationVariable& GetX();
@@ -212,15 +212,15 @@ CAnimationVariable& GetX();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do zhermetyzowanego CAnimationVariable reprezentujący X koordynacji.
+Odwołanie do hermetyzowanych CAnimationVariable reprezentujący współrzędnych X.
 
 ### <a name="remarks"></a>Uwagi
 
-Możesz wywołać tę metodę, aby uzyskać bezpośredni dostęp do podstawowych CAnimationVariable reprezentujący X koordynacji.
+Można wywołać tę metodę, aby uzyskać bezpośredni dostęp do podstawowej CAnimationVariable reprezentujący współrzędnych X.
 
-##  <a name="gety"></a>  CAnimationPoint::GetY
+## <a name="canimationpointgety"></a><a name="gety"></a>CAnimationPoint::GetY
 
-Zapewnia dostęp do CAnimationVariable współrzędnej Y.
+Zapewnia dostęp do CAnimationVariable dla współrzędnych Y.
 
 ```
 CAnimationVariable& GetY();
@@ -228,31 +228,31 @@ CAnimationVariable& GetY();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do zhermetyzowanego CAnimationVariable reprezentująca współrzędną Y.
+Odwołanie do hermetyzowanych CAnimationVariable reprezentujący współrzędną Y.
 
 ### <a name="remarks"></a>Uwagi
 
-Możesz wywołać tę metodę, aby uzyskać bezpośredni dostęp do podstawowych CAnimationVariable reprezentująca współrzędną Y.
+Można wywołać tę metodę, aby uzyskać bezpośredni dostęp do podstawowej CAnimationVariable reprezentujący współrzędnych Y.
 
-##  <a name="m_xvalue"></a>  CAnimationPoint::m_xValue
+## <a name="canimationpointm_xvalue"></a><a name="m_xvalue"></a>CAnimationPoint::m_xValue
 
-Zmienna zhermetyzowany animacji, która reprezentuje X współrzędnych punktu animacji.
+Zhermetyzowana zmienna animacji reprezentująca współrzędną X punktu animacji.
 
 ```
 CAnimationVariable m_xValue;
 ```
 
-##  <a name="m_yvalue"></a>  CAnimationPoint::m_yValue
+## <a name="canimationpointm_yvalue"></a><a name="m_yvalue"></a>CAnimationPoint::m_yValue
 
-Zmienna zhermetyzowany animacji, która przedstawia współrzędną Y punktu animacji.
+Zhermetyzowana zmienna animacji reprezentująca współrzędną Y punktu animacji.
 
 ```
 CAnimationVariable m_yValue;
 ```
 
-##  <a name="operator_cpoint"></a>  CAnimationPoint::operator CPoint
+## <a name="canimationpointoperator-cpoint"></a><a name="operator_cpoint"></a>CAnimationPoint::operator CPoint
 
-Konwertuje CAnimationPoint CPoint.
+Konwertuje CAnimationPoint do CPoint.
 
 ```
 operator CPoint();
@@ -264,11 +264,11 @@ Bieżąca wartość CAnimationPoint jako CPoint.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja wywołuje wewnętrznie GetValue. W przypadku niepowodzenia GetValue jakiegoś powodu zwracanego punktu będzie zawierać wartości domyślne dla X i współrzędne Y.
+Ta funkcja wewnętrznie wywołuje GetValue. Jeśli GetValue z jakiegoś powodu nie powiedzie się, zwracany punkt będzie zawierać wartości domyślne dla współrzędnych X i Y.
 
-##  <a name="operator_eq"></a>  CAnimationPoint::operator =
+## <a name="canimationpointoperator"></a><a name="operator_eq"></a>CAnimationPoint::operator=
 
-Przypisuje ptSrc CAnimationPoint.
+Przypisuje ptSrc do CAnimationPoint.
 
 ```
 void operator=(const CPoint& ptSrc);
@@ -276,14 +276,14 @@ void operator=(const CPoint& ptSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*ptSrc*<br/>
-Odnosi się do CPoint lub punktu.
+*ptSrc (polski)*<br/>
+Odnosi się do CPoint lub POINT.
 
 ### <a name="remarks"></a>Uwagi
 
-Przypisuje ptSrc CAnimationPoint. Zaleca się zrobić, czy przed jego rozpoczęciem animacji, ponieważ ten operator wywołuje SetDefaultValue, która odtwarza podstawowego modelu COM obiektów dla współrzędne X i Y, jeśli zostały utworzone. Jeśli subskrybujesz ten obiekt animacji na zdarzenia (ValueChanged lub IntegerValueChanged), należy ponownie włączyć te zdarzenia.
+Przypisuje ptSrc do CAnimationPoint. Zaleca się, aby to zrobić przed rozpoczęciem animacji, ponieważ ten operator wywołuje SetDefaultValue, który odtwarza podstawowe obiekty COM dla współrzędnych X i Y, jeśli zostały utworzone. Jeśli ten obiekt animacji został zasubskrybowany do zdarzeń (ValueChanged lub IntegerValueChanged), należy ponownie włączyć te zdarzenia.
 
-##  <a name="setdefaultvalue"></a>  CAnimationPoint::SetDefaultValue
+## <a name="canimationpointsetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationPoint::SetDefaultValue
 
 Ustawia wartość domyślną.
 
@@ -293,13 +293,13 @@ void SetDefaultValue(const POINT& ptDefault);
 
 ### <a name="parameters"></a>Parametry
 
-*ptDefault*<br/>
+*ptDefault (niem.*<br/>
 Określa domyślną wartość punktu.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby ustawić wartość domyślną obiektu animacji, należy użyć tej funkcji. To ustawienie domyślne przypisuje metody wartości współrzędnych X i Y punktu animacji. Odtwarza również obiektów COM, jeśli zostały utworzone. Jeśli subskrybujesz ten obiekt animacji na zdarzenia (ValueChanged lub IntegerValueChanged), należy ponownie włączyć te zdarzenia.
+Ta funkcja służy do ustawiania wartości domyślnej na obiekt animacji. Ta metoda przypisuje wartości domyślne do współrzędnych X i Y punktu animacji. Odtwarza również podstawowe obiekty COM, jeśli zostały utworzone. Jeśli ten obiekt animacji został zasubskrybowany do zdarzeń (ValueChanged lub IntegerValueChanged), należy ponownie włączyć te zdarzenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

@@ -1,73 +1,73 @@
 ---
-title: 'Instrukcje: Porządkowanie plików wyjściowych projektu dla kompilacji'
+title: 'Porady: porządkowanie plików wyjściowych projektu dla kompilacji'
 ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-ms.openlocfilehash: 202b2cbf135a5d8371354aac0fb8dd26367896c2
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 13aa3d1f8e2993ca34163ecbc0515948db56eb79
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220663"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328531"
 ---
-# <a name="how-to-organize-project-output-files-for-builds"></a>Instrukcje: Porządkowanie plików wyjściowych projektu dla kompilacji
+# <a name="how-to-organize-project-output-files-for-builds"></a>Porady: porządkowanie plików wyjściowych projektu dla kompilacji
 
-W tym temacie opisano najlepsze metody organizowania plików wyjściowych projektu. Twórz błędy mogą wystąpić, gdy niepoprawna konfiguracja plików wyjściowych projektu. W tym temacie przedstawiono również zalety i wady każdego rozwiązania alternatywnego do organizowania plików danych wyjściowych projektu.
+W tym temacie opisano najlepsze rozwiązania dotyczące organizowania plików wyjściowych projektu. Błędy kompilacji mogą wystąpić podczas niepoprawnej konfiguracji plików wyjściowych projektu. W tym temacie opisano również zalety i wady każdej alternatywy do organizowania plików wyjściowych projektu.
 
-## <a name="referencing-clr-assemblies"></a>Odwoływanie się do zestawów CLR
+## <a name="referencing-clr-assemblies"></a>Odwoływanie się do zespołów CLR
 
-#### <a name="to-reference-assemblies-with-using"></a>Aby zestawy odwołań przy użyciu #using
+#### <a name="to-reference-assemblies-with-using"></a>Aby odwoływać się do zestawów za pomocą #using
 
-1. Odwoływać zestawu bezpośredniego używania w kodzie za pomocą # dyrektywy using, takich jak `#using <System.Data.dll>`. Aby uzyskać więcej informacji, zobacz [# dyrektywa using](../preprocessor/hash-using-directive-cpp.md).
+1. Zestaw można odwoływać się bezpośrednio z kodu przy użyciu dyrektywy `#using <System.Data.dll>`#using, takiej jak . Aby uzyskać więcej informacji, zobacz [#using dyrektywy](../preprocessor/hash-using-directive-cpp.md).
 
-   Określony plik może być .dll, .exe, .netmodule lub .obj, tak długo, jak jest w MSIL. Wywoływany składnik może być skompilowana w dowolnym języku. Korzystając z tej opcji masz dostęp do technologii IntelliSense, ponieważ metadane zostaną wyodrębnione z MSIL. Dany plik musi być w ścieżce projektu. w przeciwnym razie nie można skompilować projekt i funkcja IntelliSense nie będą dostępne. Kliknij prawym przyciskiem myszy jest łatwym sposobem ustalenia, czy plik znajduje się w ścieżce #using wiersza, a następnie wybierz **otwartym dokumencie** polecenia. Użytkownik będzie powiadamiany, jeśli nie można odnaleźć pliku.
+   Określony plik może być .dll, .exe, .netmodule lub .obj, o ile jest w MSIL. Składnik, do którego istnieje odwołanie, można zbudować w dowolnym języku. Korzystając z tej opcji, będziesz mieć dostęp do IntelliSense, ponieważ metadane zostaną wyodrębnione z MSIL. Plik, o który mowa, musi znajdować się na ścieżce dla projektu; w przeciwnym razie projekt nie zostanie skompilowany i IntelliSense nie będzie dostępny. Łatwym sposobem określenia, czy plik znajduje się na ścieżce, jest kliknięcie prawym przyciskiem myszy wiersza #using i wybranie polecenia **Otwórz dokument.** Zostaniesz powiadomiony, jeśli nie można znaleźć pliku.
 
-   Jeśli nie chcesz umieścić pełnej ścieżki do pliku, możesz użyć **/AI** opcję kompilatora, aby edytować ścieżkę wyszukiwania dla #using. Aby uzyskać więcej informacji, zobacz [/AI (Określ katalogi metadanych)](reference/ai-specify-metadata-directories.md).
+   Jeśli nie chcesz umieszczać pełnej ścieżki do pliku, możesz użyć opcji kompilatora **/AI,** aby edytować ścieżkę wyszukiwania dla odwołań #using. Aby uzyskać więcej informacji, zobacz [/AI (Określ katalogi metadanych).](reference/ai-specify-metadata-directories.md)
 
-#### <a name="to-reference-assemblies-with-fu"></a>Aby odwoływać się do zestawów za pomocą /FU
+#### <a name="to-reference-assemblies-with-fu"></a>Aby odwołać się do zespołów z /FU
 
-1. Zamiast odwoływać się do zestawu bezpośrednio z pliku z kodem zgodnie z powyższym opisem, można użyć **/FU** — opcja kompilatora. Zaletą tej metody jest, że nie trzeba dodawać osobnej # instrukcję using do każdego pliku, który odwołuje się do danego zestawu.
+1. Zamiast odwoływać się do zestawu bezpośrednio z pliku kodu, jak opisano powyżej, można użyć opcji kompilatora **/FU.** Zaletą tej metody jest to, że nie trzeba dodawać oddzielną instrukcję #using do każdego pliku, który odwołuje się do danego zestawu.
 
-   Aby ustawić tę opcję, otwórz **strony właściwości** dla projektu. Rozwiń **właściwości konfiguracji** węzła, a następnie rozwiń węzeł **C/C++** a następnie wybierz węzeł **zaawansowane**. Dodaj żądane zestawy obok **życie #using**. Aby uzyskać więcej informacji, zobacz [/FU (nazwij wymuszone #using)](reference/fu-name-forced-hash-using-file.md).
+   Aby ustawić tę opcję, otwórz **strony Właściwości** dla projektu. Rozwiń węzeł **Właściwości konfiguracji,** a następnie rozwiń węzeł **C/C++** i wybierz pozycję **Zaawansowane**. Dodaj żądane złożenia obok pozycji **Wymuś #using**. Aby uzyskać więcej informacji, zobacz [/FU (Nazwa wymuszona #using pliku)](reference/fu-name-forced-hash-using-file.md).
 
-#### <a name="to-reference-assemblies-with-add-new-reference"></a>Aby odwoływać się do zestawów za pomocą Dodaj nowe odwołanie
+#### <a name="to-reference-assemblies-with-add-new-reference"></a>Aby odwołać się do zestawów za pomocą dodaj nowe odniesienie
 
-1. Jest to najłatwiejszy sposób na używanie zestawów CLR. Najpierw upewnij się, że projekt jest kompilowany za pomocą **/CLR** — opcja kompilatora. Następnie kliknij prawym przyciskiem myszy projekt z **Eksploratora rozwiązań** i wybierz **Dodaj**, **odwołania**. **Stron właściwości** pojawi się okno dialogowe.
+1. Jest to najprostszy sposób użycia zestawów CLR. Najpierw upewnij się, że projekt jest skompilowany za pomocą opcji kompilatora **/clr.** Następnie kliknij prawym przyciskiem myszy projekt w **Eksploratorze rozwiązań** i wybierz pozycję **Dodaj**, **Odwołania**. Zostanie wyświetlone okno dialogowe **Strony właściwości.**
 
-1. Z **stron właściwości** okno dialogowe, wybierz opcję **Dodaj nowe odwołanie**. Okno dialogowe pojawi się lista wszystkich .NET, COM i innych podzespołów dostępnych w bieżącym projekcie. Wybierz żądany zestaw i kliknij przycisk **OK**.
+1. W oknie dialogowym **Strony właściwości** wybierz pozycję Dodaj **nowe odniesienie**. Pojawi się okno dialogowe z listą wszystkich .NET, COM i innych zestawów dostępnych w bieżącym projekcie. Wybierz żądany zespół i kliknij przycisk **OK**.
 
-   Po ustawieniu odwołanie projektu odpowiadające mu zależności są realizowane automatycznie. Ponadto ponieważ metadane są częścią zestawu, nie ma potrzeby można dodać pliku nagłówkowego ani prototypować elementów, które są używane z zarządzanych zestawów.
+   Po ustawieniu odwołania do projektu odpowiednie zależności są obsługiwane automatycznie. Ponadto ponieważ metadane są częścią zestawu, nie ma potrzeby dodawania pliku nagłówka lub prototypu elementów, które są używane z zarządzanych zestawów.
 
-## <a name="referencing-native-dlls-or-static-libraries"></a>Odwoływanie się do macierzystych bibliotek DLL lub bibliotek statycznych
+## <a name="referencing-native-dlls-or-static-libraries"></a>Odwoływanie się do natywnych bibliotek DLL lub bibliotek statycznych
 
-#### <a name="to-reference-native-dlls-or-static-libraries"></a>Aby odwoływać się do macierzystych bibliotek DLL lub bibliotek statycznych
+#### <a name="to-reference-native-dlls-or-static-libraries"></a>Aby odwoływać się do natywnych bibliotek DLL lub bibliotek statycznych
 
-1. Odwołanie do odpowiedniego pliku nagłówka w kodzie przy użyciu # dyrektywy include. Plik nagłówka musi być w ścieżce Włącz lub częścią bieżącego projektu. Aby uzyskać więcej informacji, zobacz [#include — dyrektywa (C/C++)](../preprocessor/hash-include-directive-c-cpp.md).
+1. Odwołaj się do odpowiedniego pliku nagłówka w kodzie przy użyciu dyrektywy #include. Plik nagłówka musi znajdować się w ścieżce dołączania lub części bieżącego projektu. Aby uzyskać więcej informacji, zobacz [#include dyrektywy (C/C++)](../preprocessor/hash-include-directive-c-cpp.md).
 
-1. Można również ustawić zależności projektu. Ustawianie zależności projektu gwarantuje dwie rzeczy. Po pierwsze zapewnia, że projekty są kompilowane w odpowiedniej kolejności, tak aby projekt zawsze znajdował potrzebne pliki zależne. Po drugie niejawnie dodaje katalog wyjściowy projektu zależnego do ścieżki tak, aby pliki można je znaleźć łatwo w czasie konsolidacji.
+1. Można również ustawić zależności projektu. Ustawianie zależności projektu gwarantuje dwie rzeczy. Po pierwsze zapewnia, że projekty są budowane w odpowiedniej kolejności, dzięki czemu projekt zawsze można znaleźć pliki zależne, których potrzebuje. Po drugie niejawnie dodaje katalog wyjściowy projektu zależnego do ścieżki, dzięki czemu pliki można łatwo znaleźć w czasie łącza.
 
-1. Aby wdrożyć aplikację, należy umieścić biblioteki DLL w odpowiednim miejscu. Może to być jeden z następujących czynności:
+1. Aby wdrożyć aplikację, należy umieścić bibliotekę DLL w odpowiednim miejscu. Może to być jedna z następujących czynności:
 
-   1. Taką samą ścieżkę pliku wykonywalnego.
+   1. Ta sama ścieżka co plik wykonywalny.
 
-   1. Gdziekolwiek w ścieżce systemu ( **ścieżki** zmienną środowiskową).
+   1. W dowolnym miejscu ścieżki systemowej (zmienna środowiskowa **ścieżki).**
 
-   1. W zestawie side-by-side. Aby uzyskać więcej informacji, zobacz [zestawy języka C/C++ — równoczesne tworzenie](building-c-cpp-side-by-side-assemblies.md).
+   1. W zespole side-by-side. Aby uzyskać więcej informacji, zobacz [Tworzenie zestawów C/C++ side-by-side](building-c-cpp-side-by-side-assemblies.md).
 
 ## <a name="working-with-multiple-projects"></a>Praca z wieloma projektami
 
-Domyślnie projekty są kompilowane w taki sposób, że wszystkie pliki wyjściowe są tworzone w podkatalogu katalogu projektu. Katalog nosi nazwę na podstawie konfiguracji kompilacji (np. Debuguj lub Uwolnij). Aby projekty równorzędne do odwoływania się do siebie nawzajem każdy projekt musi jawnie dodać katalogi wyjściowe innych projektów do swojej ścieżki, aby łączenie powiodło się. Odbywa się to automatycznie po ustawieniu współzależności projektu. Jednak jeśli nie używasz zależności, należy starannie postępować, ponieważ kompilacje mogą stać się bardzo trudne do zarządzania. Na przykład gdy projekt ma konfiguracje Debug i Release, i obejmuje zewnętrzną bibliotekę z innego projektu, należy użyć innego pliku biblioteki w zależności od tego, która jest kompilowana konfiguracja. W związku z tym kodować tych ścieżek może być trudne.
+Domyślnie projekty są tworzone w taki sposób, że wszystkie pliki wyjściowe są tworzone w podkatalogu katalogu projektu. Nazwa katalogu jest oparta na konfiguracji kompilacji (np. debugowania lub wydania). Aby projekty równorzędne odwoływały się do siebie nawzajem, każdy projekt musi jawnie dodać inne katalogi danych wyjściowych projektu do ich ścieżki, aby łączenie zakończyło się pomyślnie. Odbywa się to automatycznie po ustawieniu zależności projektu. Jednak jeśli nie używasz zależności, należy dokładnie obsłużyć to, ponieważ kompilacje mogą stać się bardzo trudne do zarządzania. Na przykład, gdy projekt ma konfiguracje debugowania i wydania i zawiera bibliotekę zewnętrzną z projektu równorzędnego, należy użyć innego pliku biblioteki w zależności od konfiguracji, która jest budowana. W związku z tym, twarde kodowanie tych ścieżek może być trudne.
 
-Wszystkie podstawowe pliki wyjściowe (na przykład pliki wykonywalne, przyrostowe pliki konsolidatora i pliki PDB) są kopiowane do katalogu wspólnego rozwiązania. W związku z tym podczas pracy z rozwiązaniem, które zawiera wiele projektów w języku C++ z równoważnymi konfiguracjami, wszystkie pliki wyjściowe są scentralizowane dla uproszczonego łączenia i wdrażania. Można mieć pewność, że aplikacja/Biblioteka będą działać zgodnie z oczekiwaniami, jeśli oni zachować te pliki ze sobą (ponieważ pliki są musi być w ścieżce).
+Wszystkie niezbędne pliki wyjściowe (takie jak pliki wykonywalne, pliki konsolidatora przyrostowego i pliki PDB) są kopiowane do wspólnego katalogu rozwiązań. W związku z tym podczas pracy z rozwiązaniem, które zawiera wiele projektów języka C++ z równoważnych konfiguracji, wszystkie pliki wyjściowe są scentralizowane dla uproszczonego łączenia i wdrażania. Możesz mieć pewność, że ich aplikacja/biblioteka będzie działać zgodnie z oczekiwaniami, jeśli przechowują te pliki razem (ponieważ pliki są gwarantowane, aby znajdować się w ścieżce).
 
-Lokalizacja plików danych wyjściowych może być poważnym problemem podczas wdrażania w środowisku produkcyjnym. Podczas wykonywania projektów w IDE, ścieżki do dołączonych bibliotek niekoniecznie takie same jak w środowisku produkcyjnym. Na przykład, jeśli masz `#using "../../lib/debug/mylib.dll"` w kodzie, ale potem wdrożysz bibliotekę mylib.dll w innym położeniu względnym, aplikacja ulegnie awarii w czasie wykonywania. Aby tego uniknąć, należy unikać używania ścieżek względnych w # instrukcji include w kodzie. Lepiej jest upewnić się, że niezbędne pliki znajdują się w ścieżce kompilowania projektu i podobnie zapewnić, że odpowiadające im pliki produkcyjne są prawidłowo umieszczone.
+Lokalizacja plików wyjściowych może być poważnym problemem podczas wdrażania w środowisku produkcyjnym. Podczas uruchamiania projektów w IDE ścieżki do dołączonych bibliotek nie muszą być takie same jak w środowisku produkcyjnym. Na przykład jeśli `#using "../../lib/debug/mylib.dll"` masz w kodzie, ale następnie wdrożyć mylib.dll w innej pozycji względnej, aplikacja zakończy się niepowodzeniem w czasie wykonywania. Aby temu zapobiec, należy unikać używania ścieżek względnych w #include instrukcji w kodzie. Lepiej jest upewnić się, że niezbędne pliki znajdują się w ścieżce kompilacji projektu i podobnie zapewniając, że odpowiednie pliki produkcyjne są prawidłowo umieszczone.
 
 #### <a name="how-to-specify-where-output-files-go"></a>Jak określić, gdzie trafiają pliki wyjściowe
 
-1. Lokalizacja projektu danych wyjściowych ustawienia można znaleźć w projekcie **stron właściwości**. Rozwiń węzeł obok **właściwości konfiguracji** i wybierz **ogólne**. Lokalizacja danych wyjściowych jest określona obok **katalog wyjściowy**. Aby uzyskać więcej informacji, zobacz [strona właściwości ogólnych (projekt)](reference/general-property-page-project.md).
+1. Lokalizację ustawień wyjściowych projektu można znaleźć na **stronach właściwości**projektu . Rozwiń węzeł obok **pozycji Właściwości konfiguracji** i wybierz pozycję **Ogólne**. Lokalizacja danych wyjściowych jest określona obok pozycji **Katalog wyjściowy**. Aby uzyskać więcej informacji, zobacz [Strona właściwości ogólnych (projekt)](reference/general-property-page-project.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[C++typy projektów w programie Visual Studio](reference/visual-cpp-project-types.md)
+[Typy projektów języka C++ w programie Visual Studio](reference/visual-cpp-project-types.md)

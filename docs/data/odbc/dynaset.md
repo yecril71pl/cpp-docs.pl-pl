@@ -10,67 +10,67 @@ helpviewer_keywords:
 - recordsets [C++], dynasets
 - dynasets
 ms.assetid: 2867e6be-208e-4fe7-8bbe-b8697cb1045c
-ms.openlocfilehash: ed7098600126005978c8b017e7db378fca4c1a68
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2eb2447d1f984b7734d5e9c45087023e5a6f003f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213242"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371843"
 ---
 # <a name="dynaset"></a>Zestaw dynamiczny
 
-W tym temacie opisano zestawy dynamiczne i omówiono ich [dostępność](#_core_availability_of_dynasets).
+W tym temacie opisano dynasets i omówiono ich [dostępność](#_core_availability_of_dynasets).
 
 > [!NOTE]
->  Ten temat dotyczy klas MFC ODBC, w tym [CRecordset](../../mfc/reference/crecordset-class.md). Aby uzyskać informacje na temat zestawów dynamicznych w klasach DAO, zobacz [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md). Za pomocą obiektów DAO można otwierać zestawy rekordów typu dynamiczny.
+> Ten temat dotyczy klas MFC ODBC, w tym [CRecordset](../../mfc/reference/crecordset-class.md). Aby uzyskać informacje na temat dynasets w klasach DAO, zobacz [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md). Z DAO, można otworzyć dynaset typu recordsets.
 
-Dynamiczny jest zestawem rekordów z właściwościami dynamicznymi. W trakcie okresu istnienia obiekt zestawu rekordów w trybie dynamicznym (zwykle nazywany zestawem dynamicznym) pozostaje zsynchronizowany ze źródłem danych w następujący sposób. W środowisku wielodostępnym inni użytkownicy mogą edytować lub usuwać rekordy, które znajdują się w dynamicznym spisie, lub dodawać rekordy do tabeli, którą reprezentuje zestaw dynamiczny. Rejestruje, że aplikacja dodaje lub usuwa z zestawu rekordów są odzwierciedlone w zestawie dynamicznym. Rekordy dodawane przez innych użytkowników do tabeli nie zostaną odzwierciedlone w dynamicznym, dopóki nie zostanie odbudowany zestaw dynamiczny przez wywołanie jego `Requery` funkcji członkowskiej. Gdy inni użytkownicy usuwają rekordy, kod MFC pomija operacje usuwania w zestawie rekordów. Zmiany edytowane przez innych użytkowników w istniejących rekordach są uwzględniane w zestawie dynamicznym, gdy tylko przewiniesz do rekordu, którego to dotyczy.
+Dynaset jest zestawem rekordów o właściwościach dynamicznych. W okresie jego istnienia obiekt zestawu rekordów w trybie dynaset (zwykle nazywany dynaset) pozostaje zsynchronizowany ze źródłem danych w następujący sposób. W środowisku dla wielu użytkowników inni użytkownicy mogą edytować lub usuwać rekordy, które znajdują się w zestawie dynamiki lub dodawać rekordy do tabeli, którą reprezentuje zestaw dynaset. Rekordy dodania aplikacji do zestawu rekordów lub ich usunięcia są odzwierciedlane w zestawie dynamicznym. Rekordy dodawanye przez innych użytkowników do tabeli nie zostaną odzwierciedlone w `Requery` zestawie dynamiki, dopóki nie odbudujesz zestawu dynaset, wywołując jego funkcję elementu członkowskiego. Gdy inni użytkownicy usuwają rekordy, kod MFC pomija usunięcia w pliku recordset. Zmiany edycji innych użytkowników w istniejących rekordach są odzwierciedlane w zestawie dynamiki zaraz po przewinięciu do rekordu, którego dotyczy problem.
 
-Podobnie zmiany wprowadzane do rekordów w dynamicznym programie są odzwierciedlone w zestawach dynamicznych używanych przez innych użytkowników. Rekordy dodawane przez użytkownika nie są uwzględniane w zestawach dynamicznych innych użytkowników, dopóki nie ponowią kwerendy ich zestawów dynamicznych. Rekordy, które usuniesz, są oznaczane jako usunięte w innych zestawach rekordów użytkowników. Jeśli masz wiele połączeń z tą samą bazą danych (wielu `CDatabase` obiektów), zestawy rekordów skojarzone z tymi połączeniami mają taki sam stan jak zestawy rekordów innych użytkowników.
+Podobnie zmiany wprowadzone w rekordach w zestawie dynamiki są odzwierciedlane w zestawach dynasetów używanych przez innych użytkowników. Dodane rekordy nie są odzwierciedlane w dynasetach innych użytkowników, dopóki nie będą ponownie poddawać kwerendom. Usuwane rekordy są oznaczane jako "usunięte" w zestawy rekordów innych użytkowników. Jeśli masz wiele połączeń z tą `CDatabase` samą bazą danych (wiele obiektów), zestawy rekordów skojarzone z tymi połączeniami mają taki sam stan jak zestawy rekordów innych użytkowników.
 
-Zestawy dynamiczne są najbardziej cenne, gdy dane muszą być dynamiczne, jako (na przykład) w systemie rezerwacji linii lotniczej.
-
-> [!NOTE]
-> Aby korzystać z zestawów dynamicznych, musisz mieć sterownik ODBC dla źródła danych, które obsługuje zestawy dynamiczne, a Biblioteka kursora ODBC nie może być ładowana. Aby uzyskać więcej informacji, zobacz [dostępność zestawów dynamicznych](#_core_availability_of_dynasets).
-
-Aby określić, że zestaw rekordów jest dynamiczny, Przekaż `CRecordset::dynaset` jako pierwszy parametr do `Open` funkcji składowej obiektu zestawu rekordów.
+Dynasets są najcenniejsze, gdy dane muszą być dynamiczne, jak (na przykład) w systemie rezerwacji linii lotniczych.
 
 > [!NOTE]
-> W przypadku aktualizowalnych zestawów dynamicznych sterownik ODBC musi obsługiwać ustawione instrukcje aktualizacji lub funkcję `::SQLSetPos` ODBC API. Jeśli obie są obsługiwane, MFC używa `::SQLSetPos` w celu zwiększenia wydajności.
+> Aby używać dynasets, musi mieć sterownik ODBC dla źródła danych, który obsługuje dynasets i biblioteki kursora ODBC nie mogą być ładowane. Aby uzyskać więcej informacji, zobacz [Dostępność dynasetów](#_core_availability_of_dynasets).
 
-##  <a name="availability-of-dynasets"></a><a name="_core_availability_of_dynasets"></a>Dostępność zestawów dynamicznych
+Aby określić, że zestaw rekordów jest `CRecordset::dynaset` zestawem dynaset, należy przekazać jako pierwszy parametr funkcji `Open` elementu członkowskiego obiektu zestawu rekordów.
 
-Klasy baz danych MFC obsługują zestawy dynamiczne, jeśli spełnione są następujące wymagania:
+> [!NOTE]
+> W przypadku aktualizacji dynasets sterownik ODBC musi obsługiwać instrukcje aktualizacji pozycjonowane lub funkcję INTERFEJSU API `::SQLSetPos` ODBC. Jeśli oba są obsługiwane, MFC używa `::SQLSetPos` wydajności.
 
-- DLL biblioteki kursora ODBC nie może być używana dla tego źródła danych.
+## <a name="availability-of-dynasets"></a><a name="_core_availability_of_dynasets"></a>Dostępność dynasetów
 
-   Jeśli Biblioteka kursorów jest używana, maskuje pewne funkcje podstawowego sterownika ODBC, który jest niezbędny do obsługi systemu dynamicznego. Jeśli chcesz używać zestawów dynamicznych (a sterownik ODBC ma funkcje wymagane dla zestawów dynamicznych, zgodnie z opisem w dalszej części tej sekcji), możesz wywołać MFC, aby nie ładować biblioteki kursora podczas tworzenia obiektu `CDatabase`. Aby uzyskać więcej informacji, zobacz [ODBC](../../data/odbc/odbc-basics.md) oraz funkcja [OpenEx](../../mfc/reference/cdatabase-class.md#openex) lub [Open](../../mfc/reference/cdatabase-class.md#open) member klasy `CDatabase`.
+Klasy bazy danych MFC obsługują zestawy dynasets, jeśli spełnione są następujące wymagania:
 
-   W terminologii ODBC, zestawy dynamiczne i migawki są określane jako kursory. Kursor jest mechanizmem służącym do śledzenia jego pozycji w zestawie rekordów.
+- Biblioteka DLL biblioteki kursorów ODBC nie może być używana dla tego źródła danych.
+
+   Jeśli używana jest biblioteka kursorów, maskuje niektóre funkcje podstawowego sterownika ODBC, który jest niezbędny do obsługi dynaset. Jeśli chcesz użyć dynasets (a sterownik ODBC ma funkcje wymagane dla dynasets, jak opisano w pozostałej części tej sekcji), można spowodować `CDatabase` MFC nie załadować biblioteki kursora podczas tworzenia obiektu. Aby uzyskać więcej informacji, zobacz [ODBC](../../data/odbc/odbc-basics.md) i [OpenEx](../../mfc/reference/cdatabase-class.md#openex) lub [Otwórz](../../mfc/reference/cdatabase-class.md#open) funkcję członkowu klasy `CDatabase`.
+
+   W terminologii ODBC dynasets i migawki są określane jako kursory. Kursor jest mechanizmem używanym do śledzenia jego pozycji w ach.
 
 - Sterownik ODBC dla źródła danych musi obsługiwać kursory oparte na zestawie kluczy.
 
-   Kursory sterowane zestawem kluczy zarządzają danymi z tabeli przez pobranie i przechowywanie zestawu kluczy. Klucze są używane do uzyskiwania bieżących danych z tabeli, gdy użytkownik przewinie do określonego rekordu. Aby określić, czy sterownik obsługuje tę obsługę, wywołaj funkcję interfejsu API `::SQLGetInfo` ODBC z parametrem *SQL_SCROLL_OPTIONS* .
+   Kursory oparte na zestawie kluczy zarządzają danymi z tabeli, uzyskując i przechowując zestaw kluczy. Klucze są używane do uzyskiwania bieżących danych z tabeli, gdy użytkownik przewija do określonego rekordu. Aby ustalić, czy sterownik zapewnia `::SQLGetInfo` tę obsługę, należy wywołać funkcję INTERFEJSU API ODBC z *parametrem SQL_SCROLL_OPTIONS.*
 
-   Jeśli spróbujesz otworzyć dynamiczny, bez obsługi zestawu kluczy, uzyskasz `CDBException` z AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED wartością kodu powrotu.
+   Jeśli spróbujesz otworzyć dynaset bez obsługi zestawu `CDBException` kluczy, otrzymasz z wartością kodu zwrotnego AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED.
 
-- Sterownik ODBC dla źródła danych musi obsługiwać rozszerzone pobieranie.
+- Sterownik ODBC dla źródła danych musi obsługiwać pobieranie rozszerzone.
 
-   Rozszerzone pobieranie to możliwość przewijania do tyłu i do przodu w wyniku rekordów zapytania SQL. Aby określić, czy sterownik obsługuje tę możliwość, wywołaj funkcję interfejsu API `::SQLGetFunctions` ODBC z parametrem *SQL_API_SQLEXTENDEDFETCH* .
+   Pobieranie rozszerzone to możliwość przewijania do tyłu, a także do przodu za pośrednictwem rekordów wynikowych kwerendy SQL. Aby ustalić, czy sterownik obsługuje `::SQLGetFunctions` tę zdolność, należy wywołać funkcję INTERFEJSU API ODBC z *parametrem SQL_API_SQLEXTENDEDFETCH.*
 
-Jeśli chcesz, aby możliwe było aktualizowalne zestawy dynamiczne (lub migawki), sterownik ODBC musi również obsługiwać funkcję `::SQLSetPos` ODBC API lub aktualizacje położenia. Funkcja `::SQLSetPos` umożliwia MFC aktualizowanie źródła danych bez wysyłania instrukcji SQL. Jeśli ta obsługa jest dostępna, MFC używa jej w preferencjach, aby wprowadzać aktualizacje przy użyciu języka SQL. Aby określić, czy sterownik obsługuje `::SQLSetPos`, wywołaj `::SQLGetInfo` z parametrem *SQL_POS_OPERATIONS* .
+Jeśli chcesz aktualizować dynasets (lub migawki, o to chodzi), sterownik `::SQLSetPos` ODBC musi również obsługiwać funkcję INTERFEJSU API ODBC lub aktualizacje pozycjonowane. Funkcja `::SQLSetPos` umożliwia MFC zaktualizować źródło danych bez wysyłania instrukcji SQL. Jeśli ta obsługa jest dostępna, MFC używa go zamiast dokonywania aktualizacji przy użyciu języka SQL. Aby ustalić, czy `::SQLSetPos`sterownik `::SQLGetInfo` obsługuje, zadzwoń z *parametrem SQL_POS_OPERATIONS.*
 
-Aktualizacje pozycjonowane używają składni SQL (w postaci, w **której bieżąca** \<cursorname >) do identyfikowania konkretnego wiersza w tabeli w źródle danych. Aby określić, czy sterownik obsługuje aktualizacje rozmieszczone, wywołaj `::SQLGetInfo` z parametrem *SQL_POSITIONED_STATEMENTS* .
+Aktualizacje pozycjonowane używają składni SQL (formularza **WHERE CURRENT OF** \<cursorname>) do identyfikowania określonego wiersza w tabeli w źródle danych. Aby ustalić, czy sterownik obsługuje `::SQLGetInfo` aktualizacje pozycyjne, należy wywołać z *parametrem SQL_POSITIONED_STATEMENTS.*
 
-Ogólnie zestawy dynamiczne MFC (ale nie tylko zestaw rekordów) wymagają sterownika ODBC z zgodnym z interfejsem API poziomu 2. Jeśli sterownik źródła danych jest zgodny z zestawem interfejsów API poziomu 1, nadal można używać zarówno migawek, jak i tylko do odczytu, jak i zestawów rekordów, ale nie zestawów dynamicznych. Jednak sterownik Level 1 może obsługiwać zestawy dynamiczne, jeśli obsługuje rozszerzone pobieranie i kursory oparte na zestawie kluczy. Aby uzyskać więcej informacji na temat poziomów zgodności ODBC, zobacz [ODBC](../../data/odbc/odbc-basics.md).
+Ogólnie rzecz biorąc dynasets MFC (ale nie do przodu tylko recordsets) wymagają sterownika ODBC z poziomu 2 zgodności interfejsu API. Jeśli sterownik źródła danych jest zgodny z zestawem interfejsu API poziomu 1, nadal można używać zarówno aktualizacji, jak i migawek tylko do odczytu oraz zestawów rekordów tylko do przodu, ale nie zestawów dynamicznych. Jednak sterownik poziomu 1 może obsługiwać zestawy dynamiki, jeśli obsługuje rozszerzone pobieranie i kursory oparte na zestawie kluczy. Aby uzyskać więcej informacji na temat poziomów zgodności z ODBC, zobacz [ODBC](../../data/odbc/odbc-basics.md).
 
 > [!NOTE]
-> Jeśli chcesz użyć migawek i zestawów dynamicznych, musisz oprzeć je na dwóch różnych obiektach `CDatabase` (dwa różne połączenia).
+> Jeśli chcesz używać zarówno migawek, jak i zestawów dynamicznych, należy je oprzeć na dwóch różnych `CDatabase` obiektach (dwóch różnych połączeniach).
 
-W przeciwieństwie do migawek, które używają magazynu pośredniego obsługiwanego przez bibliotekę kursora ODBC, zestawy dynamiczne pobierają rekord bezpośrednio ze źródła danych, gdy tylko przewiniesz do niego. Pozwala to zachować rekordy początkowo wybrane przez zestaw dynamiczny ze źródłem danych.
+W przeciwieństwie do migawek, które używają magazynu pośredniego obsługiwanego przez bibliotekę kursora ODBC, zestawy dynasets pobierają rekord bezpośrednio ze źródła danych zaraz po przewinięciu do niego. Spowoduje to synchronizację rekordów pierwotnie wybranych przez zestaw dynaset ze źródłem danych.
 
-Aby uzyskać listę sterowników ODBC uwzględnionych w tej wersji programu Visual C++ i uzyskać informacje o uzyskiwaniu dodatkowych sterowników, zobacz [Lista sterowników ODBC](../../data/odbc/odbc-driver-list.md).
+Aby uzyskać listę sterowników ODBC zawartych w tej wersji programu Visual C++ oraz informacje na temat uzyskiwania dodatkowych sterowników, zobacz [Lista sterowników ODBC](../../data/odbc/odbc-driver-list.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+[Łączność z otwartą bazą danych (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

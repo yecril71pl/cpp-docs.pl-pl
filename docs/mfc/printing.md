@@ -7,55 +7,55 @@ helpviewer_keywords:
 - printing [MFC], from framework
 - printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
-ms.openlocfilehash: e0cd2d6d85cb9820b23495a003068994b13f9c85
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: a46096592c9983d04d2122bfabb56ece9346c4bc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339580"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371205"
 ---
 # <a name="printing"></a>Drukowanie
 
-Program Microsoft Windows implementuje wyświetlania niezależnych od urządzenia. W MFC, oznacza to, że ten sam wywołania rysowania, w `OnDraw` funkcji składowej klasy widoku, odpowiedzialność za rysunek na ekranie, a także na innych urządzeniach, takie jak drukarki. Podgląd wydruku urządzenie docelowe jest symulowane wydruk do wyświetlenia.
+System Microsoft Windows implementuje wyświetlanie niezależne od urządzenia. W MFC oznacza to, że te `OnDraw` same wywołania rysunku, w funkcji elementu członkowskiego klasy widoku, są odpowiedzialne za rysowanie na wyświetlaczu i na innych urządzeniach, takich jak drukarki. W przypadku podglądu wydruku urządzenie docelowe jest symulowanym wyjściem drukarki do wyświetlacza.
 
-##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> Twoja rola w drukowaniu, a w ramach roli
+## <a name="your-role-in-printing-vs-the-frameworks-role"></a><a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a>Twoja rola w druku a rola frameworka
 
 Klasa widoku ma następujące obowiązki:
 
-- Poinformuj platformę liczbę stron znajdują się w dokumencie.
+- Poinformuj platformę, ile stron znajduje się w dokumencie.
 
-- Po wyświetleniu monitu, aby wydrukować stronę na określonym, narysuj część dokumentu.
+- Gdy zostaniesz poproszony o wydrukowanie określonej strony, narysuj tę część dokumentu.
 
-- Przydzielanie i Cofnij Przydział czcionek, lub inne zasoby interface (GDI) urządzenia grafiki potrzeby związane z drukowaniem.
+- Przydzielanie i przydzielanie dowolnych czcionek lub innych zasobów interfejsu urządzenia graficznego (GDI) potrzebnych do drukowania.
 
-- Jeśli to konieczne, Wyślij dowolny znak ucieczki kody potrzebne, aby zmienić tryb drukarki przed wydrukowaniem danej strony, na przykład, aby zmienić orientację drukowania na zasadzie na stronie.
+- W razie potrzeby przed wydrukowaniem danej strony należy wysłać kody unikowe potrzebne do zmiany trybu drukarki, na przykład w celu zmiany orientacji drukowania na stronie.
 
-Obowiązki struktury są następujące:
+Zakres odpowiedzialności ram jest następujący:
 
-- Wyświetlanie **drukowania** okno dialogowe.
+- Wyświetl okno dialogowe **Drukowanie.**
 
-- Tworzenie [CDC](../mfc/reference/cdc-class.md) obiekt do drukarki.
+- Utwórz obiekt [CDC](../mfc/reference/cdc-class.md) dla drukarki.
 
-- Wywołaj [StartDoc](../mfc/reference/cdc-class.md#startdoc) i [EndDoc](../mfc/reference/cdc-class.md#enddoc) funkcje elementów członkowskich `CDC` obiektu.
+- Wywołanie funkcji elementu członkowskiego [StartDoc](../mfc/reference/cdc-class.md#startdoc) `CDC` i [EndDoc](../mfc/reference/cdc-class.md#enddoc) obiektu.
 
-- Wielokrotne wywołania [StartPage](../mfc/reference/cdc-class.md#startpage) funkcji składowej typu `CDC` obiektu informuje klasa widoku strony, na które mają być drukowane, a następnie wywołaj [EndPage](../mfc/reference/cdc-class.md#endpage) funkcji składowej typu `CDC` obiektu.
+- Wielokrotnie wywołać funkcję elementu członkowskiego `CDC` [StartPage](../mfc/reference/cdc-class.md#startpage) obiektu, poinformować klasę widoku, która strona powinna być `CDC` wydrukowana, i wywołać [endpage](../mfc/reference/cdc-class.md#endpage) funkcji elementu członkowskiego obiektu.
 
-- Wywoływanie funkcji możliwym do zastąpienia w widoku w odpowiednim czasie.
+- Wywołać zastępowalne funkcje w widoku w odpowiednim czasie.
 
-W następujących artykułach omówiono, jak platforma obsługuje drukowanie i Podgląd wydruku:
+W poniższych artykułach omówiono sposób, w jaki struktura obsługuje drukowanie i drukowanie wersji zapoznawczej:
 
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz wiedzieć więcej o
 
-- [Jak jest wykonywane Drukowanie domyślne](../mfc/how-default-printing-is-done.md)
+- [Jak odbywa się drukowanie domyślne](../mfc/how-default-printing-is-done.md)
 
 - [Dokumenty wielostronicowe](../mfc/multipage-documents.md)
 
 - [Nagłówki i stopki](../mfc/headers-and-footers.md)
 
-- [Alokowanie zasobów GDI związane z drukowaniem](../mfc/allocating-gdi-resources.md)
+- [Przydzielanie zasobów GDI do drukowania](../mfc/allocating-gdi-resources.md)
 
 - [Podgląd wydruku](../mfc/print-preview-architecture.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Drukowanie i podgląd wydruku](../mfc/printing-and-print-preview.md)

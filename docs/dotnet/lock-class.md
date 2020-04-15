@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: c8056146998443f4e24169a4464b834d8eff29b0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ea09dd3d4a2eaf4cf7708d09509cfecfa4a6c6d5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208530"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373075"
 ---
 # <a name="lock-class"></a>Klasa lock
 
-Ta klasa automatyzuje blokadę do synchronizowania dostępu do obiektu z kilku wątków.  Gdy jest konstruowany, uzyskuje blokadę i gdy zniszczy, zwalnia blokadę.
+Ta klasa automatyzuje przy blokadzie do synchronizowania dostępu do obiektu z kilku wątków.  Po skonstruowaniu nabywa blokadę, a po zniszczeniu zwalnia blokadę.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,45 +33,45 @@ ref class lock;
 
 ## <a name="remarks"></a>Uwagi
 
-`lock` jest dostępny tylko dla obiektów CLR i może być używany tylko w kodzie CLR.
+`lock`jest dostępna tylko dla obiektów CLR i może być używana tylko w kodzie CLR.
 
-Wewnętrznie, Klasa Lock używa <xref:System.Threading.Monitor> do synchronizowania dostępu. Aby uzyskać więcej informacji, zobacz artykuł, którego dotyczy odwołanie.
+Wewnętrznie, lock klasy używa <xref:System.Threading.Monitor> do synchronizacji dostępu. Aby uzyskać więcej informacji, zobacz artykuł, do którego istnieje odwołanie.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-constructors"></a>Konstruktory publiczne
+### <a name="public-constructors"></a>Konstruktorzy publiczni
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |---------|-----------|
-|[lock::lock](#lock)|Konstruuje obiekt `lock`, opcjonalnie oczekując na uzyskanie blokady w nieskończoność, przez określony czas lub wcale.|
-|[lock::~lock](#tilde-lock)|Destruktory obiektu `lock`.|
+|[lock::lock](#lock)|Tworzy `lock` obiekt, opcjonalnie czeka na uzyskanie blokady na zawsze, przez określony czas lub w ogóle.|
+|[blokada::~blokada](#tilde-lock)|Niszczy `lock` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |---------|-----------|
-|[lock::acquire](#acquire)|Uzyskuje blokadę obiektu, opcjonalnie oczekując na uzyskanie blokady w nieskończoność, przez określony czas lub wcale.|
+|[lock::acquire](#acquire)|Uzyskuje blokadę na obiekcie, opcjonalnie czekając na uzyskanie blokady na zawsze, przez określony czas lub wcale.|
 |[lock::is_locked](#is-locked)|Wskazuje, czy blokada jest utrzymywana.|
 |[lock::release](#release)|Zwalnia blokadę.|
-|[lock::try_acquire](#try-acquire)|Uzyskuje blokadę obiektu, czeka na określoną ilość czasu i zwraca `bool`, aby zgłosić powodzenie nabycia zamiast zgłaszania wyjątku.|
+|[lock::try_acquire](#try-acquire)|Uzyskuje blokadę na obiekcie, czekając na określoną ilość `bool` czasu i zwracając do raportu sukcesu nabycia zamiast zgłaszania wyjątku.|
 
-### <a name="public-operators"></a>Operatory publiczne
+### <a name="public-operators"></a>Operatorzy publiczni
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |---------|-----------|
-|[Lock:: operator&nbsp;bool](#operator-bool)|Operator służący do używania `lock` w wyrażeniu warunkowym.|
+|[blokada::operator&nbsp;bool](#operator-bool)|Operator do `lock` używania w wyrażeniu warunkowym.|
 |[lock::operator==](#operator-equality)|Operator równości.|
-|[lock::operator!=](#operator-inequality)|Operator nierówności.|
+|[blokada::operator!=](#operator-inequality)|Operator nierówności.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Plik nagłówka** \<msclr\lock.h >
+**Plik** \<nagłówka msclr\lock.h>
 
-Msclr **przestrzeni nazw**
+**Msclr przestrzeni nazw**
 
-## <a name="locklock"></a><a name="lock"></a>Lock:: Lock
+## <a name="locklock"></a><a name="lock"></a>blokada::blokada
 
-Konstruuje obiekt `lock`, opcjonalnie oczekując na uzyskanie blokady w nieskończoność, przez określony czas lub wcale.
+Tworzy `lock` obiekt, opcjonalnie czeka na uzyskanie blokady na zawsze, przez określony czas lub w ogóle.
 
 ```cpp
 template<class T> lock(
@@ -94,28 +94,28 @@ template<class T> lock(
 ### <a name="parameters"></a>Parametry
 
 *_object*<br/>
-Obiekt, który ma być zablokowany.
+Obiekt, który ma zostać zablokowany.
 
 *_timeout*<br/>
-Wartość limitu czasu w milisekundach lub jako <xref:System.TimeSpan>.
+Wartość przesuwu czasu w <xref:System.TimeSpan>milisekundach lub jako .
 
 ### <a name="exceptions"></a>Wyjątki
 
-Zgłasza <xref:System.ApplicationException>, jeśli nie nastąpiło przekroczenie limitu czasu blokady.
+Zgłasza, <xref:System.ApplicationException> jeśli nabycie blokady nie występuje przed przesuwem czasu.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsze trzy formy konstruktora próbują uzyskać blokadę na `_object` w określonym przedziale czasu (lub <xref:System.Threading.Timeout.Infinite>, jeśli nie jest określony).
+Pierwsze trzy formy konstruktora spróbuj uzyskać `_object` blokadę w określonym <xref:System.Threading.Timeout.Infinite> okresie limitu czasu (lub jeśli nie jest określony).
 
-Czwarta postać konstruktora nie uzyskuje blokady na `_object`. `lock_later` jest członkiem [lock_when enum](../dotnet/lock-when-enum.md). Użyj [blokady:: Acquire](../dotnet/lock-acquire.md) lub [lock:: try_acquire](../dotnet/lock-try-acquire.md) w celu uzyskania blokady w tym przypadku.
+Czwarta forma konstruktora nie uzyskuje `_object`blokady na . `lock_later`jest członkiem [lock_when wyliczenia](../dotnet/lock-when-enum.md). Użyj [lock::acquire](../dotnet/lock-acquire.md) lub [lock::try_acquire,](../dotnet/lock-try-acquire.md) aby uzyskać blokadę w tym przypadku.
 
-Blokada zostanie automatycznie wydana po wywołaniu destruktora.
+Blokada zostanie automatycznie zwolniona, gdy zostanie wywołana destruktor.
 
-nie można <xref:System.Threading.ReaderWriterLock>`_object`.  Jeśli tak, zostanie zwrócony błąd kompilatora.
+`_object`nie może <xref:System.Threading.ReaderWriterLock>być .  Jeśli tak jest, spowoduje błąd kompilatora.
 
 ### <a name="example"></a>Przykład
 
-W tym przykładzie jest stosowane pojedyncze wystąpienie klasy w wielu wątkach. Klasa używa blokady w celu upewnienia się, że dostęp do jego danych wewnętrznych jest spójny dla każdego wątku. Wątek aplikacji głównej używa blokady w tym samym wystąpieniu klasy, aby okresowo sprawdzać, czy istnieją wątki robocze nadal istnieją. Główna aplikacja czeka, aż wszystkie wątki robocze zakończą zadania.
+W tym przykładzie użyto pojedynczego wystąpienia klasy w kilku wątkach. Klasa używa blokady na siebie, aby upewnić się, że dostęp do swoich danych wewnętrznych są spójne dla każdego wątku. Główny wątek aplikacji używa blokady na tym samym wystąpieniu klasy, aby okresowo sprawdzać, czy nadal istnieją wątki robocze. Aplikacja główna następnie czeka na zakończenie, dopóki wszystkie wątki robocze nie zakończą swoich zadań.
 
 ```cpp
 // msl_lock_lock.cpp
@@ -203,9 +203,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locklock"></a><a name="tilde-lock"></a>Lock:: ~ Lock
+## <a name="locklock"></a><a name="tilde-lock"></a>blokada::~blokada
 
-Destruktory obiektu `lock`.
+Niszczy `lock` obiekt.
 
 ```cpp
 ~lock();
@@ -213,11 +213,11 @@ Destruktory obiektu `lock`.
 
 ### <a name="remarks"></a>Uwagi
 
-Destruktor wywołuje [blokadę:: Release](../dotnet/lock-release.md).
+Destruktor wywołuje [blokadę::release](../dotnet/lock-release.md).
 
 ### <a name="example"></a>Przykład
 
-W tym przykładzie jest stosowane pojedyncze wystąpienie klasy w wielu wątkach.  Klasa używa blokady w celu upewnienia się, że dostęp do jego danych wewnętrznych jest spójny dla każdego wątku.  Wątek aplikacji głównej używa blokady w tym samym wystąpieniu klasy, aby okresowo sprawdzać, czy istnieją wątki robocze nadal istnieją. Główna aplikacja czeka, aż wszystkie wątki robocze zakończą zadania.
+W tym przykładzie użyto pojedynczego wystąpienia klasy w kilku wątkach.  Klasa używa blokady na siebie, aby upewnić się, że dostęp do swoich danych wewnętrznych są spójne dla każdego wątku.  Główny wątek aplikacji używa blokady na tym samym wystąpieniu klasy, aby okresowo sprawdzać, czy nadal istnieją wątki robocze. Aplikacja główna następnie czeka na zakończenie, dopóki wszystkie wątki robocze nie zakończą swoich zadań.
 
 ```cpp
 // msl_lock_dtor.cpp
@@ -305,9 +305,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockacquire"></a><a name="acquire"></a>Blokada:: pozyskiwanie
+## <a name="lockacquire"></a><a name="acquire"></a>lock::acquire
 
-Uzyskuje blokadę obiektu, opcjonalnie oczekując na uzyskanie blokady w nieskończoność, przez określony czas lub wcale.
+Uzyskuje blokadę na obiekcie, opcjonalnie czekając na uzyskanie blokady na zawsze, przez określony czas lub wcale.
 
 ```cpp
 void acquire();
@@ -322,21 +322,21 @@ void acquire(
 ### <a name="parameters"></a>Parametry
 
 *_timeout*<br/>
-Wartość limitu czasu w milisekundach lub jako <xref:System.TimeSpan>.
+Wartość limitu czasu w milisekundach lub jako . <xref:System.TimeSpan>
 
 ### <a name="exceptions"></a>Wyjątki
 
-Zgłasza <xref:System.ApplicationException>, jeśli nie nastąpiło przekroczenie limitu czasu blokady.
+Zgłasza, <xref:System.ApplicationException> jeśli nabycie blokady nie występuje przed przesuwem czasu.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość limitu czasu nie zostanie podana, domyślnym limitem czasu jest <xref:System.Threading.Timeout.Infinite>.
+Jeśli nie podano wartości limitu czasu, domyślny <xref:System.Threading.Timeout.Infinite>limit czasu to .
 
-Jeśli blokada została już uzyskana, ta funkcja nic nie robi.
+Jeśli blokada została już nabyta, ta funkcja nic nie robi.
 
 ### <a name="example"></a>Przykład
 
-W tym przykładzie jest stosowane pojedyncze wystąpienie klasy w wielu wątkach.  Klasa używa blokady w celu upewnienia się, że dostęp do jego danych wewnętrznych jest spójny dla każdego wątku. Wątek aplikacji głównej używa blokady w tym samym wystąpieniu klasy, aby okresowo sprawdzać, czy istnieją wątki robocze nadal istnieją. Główna aplikacja czeka, aż wszystkie wątki robocze zakończą zadania.
+W tym przykładzie użyto pojedynczego wystąpienia klasy w kilku wątkach.  Klasa używa blokady na siebie, aby upewnić się, że dostęp do swoich danych wewnętrznych są spójne dla każdego wątku. Główny wątek aplikacji używa blokady na tym samym wystąpieniu klasy, aby okresowo sprawdzać, czy nadal istnieją wątki robocze. Aplikacja główna następnie czeka na zakończenie, dopóki wszystkie wątki robocze nie zakończą swoich zadań.
 
 ```cpp
 // msl_lock_acquire.cpp
@@ -424,7 +424,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockis_locked"></a><a name="is-locked"></a>Blokada:: is_locked
+## <a name="lockis_locked"></a><a name="is-locked"></a>blokada::is_locked
 
 Wskazuje, czy blokada jest utrzymywana.
 
@@ -434,11 +434,11 @@ bool is_locked();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true`, jeśli blokada jest utrzymywana, `false` w przeciwnym razie.
+`true`jeśli blokada jest `false` utrzymywana, w przeciwnym razie.
 
 ### <a name="example"></a>Przykład
 
-W tym przykładzie jest stosowane pojedyncze wystąpienie klasy w wielu wątkach.  Klasa używa blokady w celu upewnienia się, że dostęp do jego danych wewnętrznych jest spójny dla każdego wątku.  Wątek aplikacji głównej używa blokady w tym samym wystąpieniu klasy, aby okresowo sprawdzać, czy istnieją wątki robocze nadal istnieją i czy czekają na zakończenie, dopóki wszystkie wątki robocze nie ukończyą swoich zadań.
+W tym przykładzie użyto pojedynczego wystąpienia klasy w kilku wątkach.  Klasa używa blokady na siebie, aby upewnić się, że dostęp do swoich danych wewnętrznych są spójne dla każdego wątku.  Główny wątek aplikacji używa blokady na tym samym wystąpieniu klasy, aby okresowo sprawdzać, czy nadal istnieją wątki robocze i czeka na zakończenie, dopóki wszystkie wątki robocze nie zakończą swoich zadań.
 
 ```cpp
 // msl_lock_is_locked.cpp
@@ -527,9 +527,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator-bool"></a><a name="operator-bool"></a>Lock:: operator — bool
+## <a name="lockoperator-bool"></a><a name="operator-bool"></a>blokada::operator bool
 
-Operator służący do używania `lock` w wyrażeniu warunkowym.
+Operator do `lock` używania w wyrażeniu warunkowym.
 
 ```cpp
 operator bool();
@@ -537,15 +537,15 @@ operator bool();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true`, jeśli blokada jest utrzymywana, `false` w przeciwnym razie.
+`true`jeśli blokada jest `false` utrzymywana, w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten operator jest faktycznie konwertowany na `_detail_class::_safe_bool`, który jest bezpieczniejszy niż `bool`, ponieważ nie można go przekonwertować na typ całkowity.
+Ten operator faktycznie `_detail_class::_safe_bool` konwertuje `bool` do których jest bezpieczniejsze niż dlatego, że nie można przekonwertować na typ integralną.
 
 ### <a name="example"></a>Przykład
 
-W tym przykładzie jest stosowane pojedyncze wystąpienie klasy w wielu wątkach.  Klasa używa blokady w celu upewnienia się, że dostęp do jego danych wewnętrznych jest spójny dla każdego wątku. Wątek aplikacji głównej używa blokady w tym samym wystąpieniu klasy, aby okresowo sprawdzać, czy istnieją wątki robocze nadal istnieją. Główna aplikacja czeka na zakończenie, dopóki wszystkie wątki robocze nie ukończyją swoich zadań.
+W tym przykładzie użyto pojedynczego wystąpienia klasy w kilku wątkach.  Klasa używa blokady na siebie, aby upewnić się, że dostęp do swoich danych wewnętrznych są spójne dla każdego wątku. Główny wątek aplikacji używa blokady na tym samym wystąpieniu klasy, aby okresowo sprawdzać, czy nadal istnieją wątki robocze. Główna aplikacja czeka na zakończenie, dopóki wszystkie wątki robocze nie zakończą swoich zadań.
 
 ```cpp
 // msl_lock_op_bool.cpp
@@ -634,7 +634,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockrelease"></a><a name="release"></a>Lock:: Release
+## <a name="lockrelease"></a><a name="release"></a>blokada::release
 
 Zwalnia blokadę.
 
@@ -644,13 +644,13 @@ void release();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli blokada nie jest utrzymywana, `release` nic nie robi.
+Jeśli blokada nie `release` jest utrzymywana, nic nie robi.
 
-Nie musisz jawnie wywoływać tej funkcji. Gdy obiekt `lock` wykracza poza zakres, jego destruktor wywołuje `release`.
+Nie musisz wywoływać tej funkcji jawnie. Gdy `lock` obiekt wykracza poza zakres, jego `release`destruktor wywołuje .
 
 ### <a name="example"></a>Przykład
 
-W tym przykładzie jest stosowane pojedyncze wystąpienie klasy w wielu wątkach. Klasa używa blokady w celu upewnienia się, że dostęp do jego danych wewnętrznych jest spójny dla każdego wątku. Wątek aplikacji głównej używa blokady w tym samym wystąpieniu klasy, aby okresowo sprawdzać, czy istnieją wątki robocze nadal istnieją. Główna aplikacja czeka, aż wszystkie wątki robocze zakończą zadania.
+W tym przykładzie użyto pojedynczego wystąpienia klasy w kilku wątkach. Klasa używa blokady na siebie, aby upewnić się, że dostęp do swoich danych wewnętrznych są spójne dla każdego wątku. Główny wątek aplikacji używa blokady na tym samym wystąpieniu klasy, aby okresowo sprawdzać, czy nadal istnieją wątki robocze. Aplikacja główna następnie czeka na zakończenie, dopóki wszystkie wątki robocze nie zakończą swoich zadań.
 
 ```cpp
 // msl_lock_release.cpp
@@ -738,9 +738,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locktry_acquire"></a><a name="try-acquire"></a>Blokada:: try_acquire
+## <a name="locktry_acquire"></a><a name="try-acquire"></a>blokada::try_acquire
 
-Uzyskuje blokadę obiektu, czeka na określoną ilość czasu i zwraca `bool`, aby zgłosić powodzenie nabycia zamiast zgłaszania wyjątku.
+Uzyskuje blokadę na obiekcie, czekając na określoną ilość `bool` czasu i zwracając do raportu sukcesu nabycia zamiast zgłaszania wyjątku.
 
 ```cpp
 bool try_acquire(
@@ -754,19 +754,19 @@ bool try_acquire(
 ### <a name="parameters"></a>Parametry
 
 *_timeout*<br/>
-Wartość limitu czasu w milisekundach lub jako <xref:System.TimeSpan>.
+Wartość limitu czasu w milisekundach lub jako . <xref:System.TimeSpan>
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true`, jeśli Blokada została uzyskana, `false` w przeciwnym razie.
+`true`jeśli blokada `false` została nabyta, w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli blokada została już uzyskana, ta funkcja nic nie robi.
+Jeśli blokada została już nabyta, ta funkcja nic nie robi.
 
 ### <a name="example"></a>Przykład
 
-W tym przykładzie jest stosowane pojedyncze wystąpienie klasy w wielu wątkach. Klasa używa blokady w celu upewnienia się, że dostęp do jego danych wewnętrznych jest spójny dla każdego wątku. Wątek aplikacji głównej używa blokady w tym samym wystąpieniu klasy, aby okresowo sprawdzać, czy istnieją wątki robocze nadal istnieją. Główna aplikacja czeka, aż wszystkie wątki robocze zakończą zadania.
+W tym przykładzie użyto pojedynczego wystąpienia klasy w kilku wątkach. Klasa używa blokady na siebie, aby upewnić się, że dostęp do swoich danych wewnętrznych są spójne dla każdego wątku. Główny wątek aplikacji używa blokady na tym samym wystąpieniu klasy, aby okresowo sprawdzać, czy nadal istnieją wątki robocze. Aplikacja główna następnie czeka na zakończenie, dopóki wszystkie wątki robocze nie zakończą swoich zadań.
 
 ```cpp
 // msl_lock_try_acquire.cpp
@@ -854,7 +854,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator"></a><a name="operator-equality"></a>Lock:: operator = =
+## <a name="lockoperator"></a><a name="operator-equality"></a>blokada::operator==
 
 Operator równości.
 
@@ -866,12 +866,12 @@ template<class T> bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
-Obiekt, który ma zostać porównany pod kątem równości.
+*t*<br/>
+Obiekt do porównania dla równości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca `true`, jeśli `t` jest taka sama jak obiekt blokady, `false` w przeciwnym razie.
+`true` Zwraca, `t` jeśli jest taki sam jak `false` obiekt blokady, w przeciwnym razie.
 
 ### <a name="example"></a>Przykład
 
@@ -897,7 +897,7 @@ int main () {
 Equal!
 ```
 
-## <a name="lockoperator"></a><a name="operator-inequality"></a>Lock:: operator! =
+## <a name="lockoperator"></a><a name="operator-inequality"></a>blokada::operator!=
 
 Operator nierówności.
 
@@ -909,12 +909,12 @@ template<class T> bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
-Obiekt, który ma zostać porównany pod kątem nierówności.
+*t*<br/>
+Obiekt do porównania dla nierówności.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca `true`, jeśli `t` różni się od obiektu blokady, `false` w przeciwnym razie.
+`true` Zwraca, `t` jeśli różni się od `false` obiektu blokady, w przeciwnym razie.
 
 ### <a name="example"></a>Przykład
 

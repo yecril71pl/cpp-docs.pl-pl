@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArrayEqualHelper class
 ms.assetid: a2b55d89-78c9-42ef-842c-5304c6d20ad6
-ms.openlocfilehash: 8b7e32ddab5b2f0667b17b0f127ac2e7e5d9a426
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 386b005777b3e31dd74916a41bc5af2ab82df210
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277997"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330882"
 ---
 # <a name="csimplearrayequalhelper-class"></a>Klasa CSimpleArrayEqualHelper
 
-Ta klasa jest pomocnika dla [CSimpleArray](../../atl/reference/csimplearray-class.md) klasy.
+Ta klasa jest pomocnikiem dla [CSimpleArray](../../atl/reference/csimplearray-class.md) klasy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,7 +29,7 @@ class CSimpleArrayEqualHelper
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Klasy pochodnej.
+Klasa pochodna.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -37,19 +37,19 @@ Klasy pochodnej.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSimpleArrayEqualHelper::IsEqual](#isequal)|(Statyczny) Testuje dwa `CSimpleArray` obiektu elementy pod kątem równości.|
+|[CSimpleArrayEqualHelper::IsEqual](#isequal)|(Statyczne) Testy `CSimpleArray` dwóch elementów obiektu dla równości.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa cech jest uzupełnieniem `CSimpleArray` klasy. Zapewnia metodę porównywania dwóch elementów przechowywanych w `CSimpleArray` obiektu. Domyślnie elementy są porównywane za pomocą **operator=()**, ale jeśli tablica zawiera złożone typy danych, które nie mają własne operator równości, trzeba będzie zastąpić tę klasę.
+Ta klasa cech jest uzupełnieniem `CSimpleArray` klasy. Zapewnia metodę porównywania dwóch elementów `CSimpleArray` przechowywanych w obiekcie. Domyślnie elementy są porównywane przy użyciu **operator=()**, ale jeśli tablica zawiera złożone typy danych, które nie mają własnego operatora równości, należy zastąpić tę klasę.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlsimpcoll.h
 
-##  <a name="isequal"></a>  CSimpleArrayEqualHelper::IsEqual
+## <a name="csimplearrayequalhelperisequal"></a><a name="isequal"></a>CSimpleArrayEqualHelper::IsEqual
 
-Testuje dwa `CSimpleArray` obiektu elementy pod kątem równości.
+Testy `CSimpleArray` dwóch elementów obiektu dla równości.
 
 ```
 static bool IsEqual(
@@ -59,7 +59,7 @@ static bool IsEqual(
 
 ### <a name="parameters"></a>Parametry
 
-*t1*<br/>
+*T1*<br/>
 Obiekt typu T.
 
 *t2*<br/>
@@ -67,10 +67,10 @@ Obiekt typu T.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli elementy są równe, wartość false w przeciwnym razie.
+Zwraca wartość true, jeśli elementy są równe, false inaczej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CSimpleArray](../../atl/reference/csimplearray-class.md)<br/>
 [Klasa CSimpleArrayEqualHelperFalse](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

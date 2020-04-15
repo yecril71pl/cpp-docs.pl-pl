@@ -1,62 +1,62 @@
 ---
-title: Archetype procesu roboczego
+title: Archetyp pracownika
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: 2e57c575ed778184cf319bb84e61f585fcfa2111
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: b0b32232d7386df0c0f13a1c3af1003369b906e0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509344"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329347"
 ---
-# <a name="worker-archetype"></a>Archetype procesu roboczego
+# <a name="worker-archetype"></a>Archetyp pracownika
 
-Klasy, które są zgodne z archetypeem *roboczym* , udostępniają kod do przetwarzania elementów roboczych w kolejce w puli wątków.
+Klasy zgodne z archetypem *procesu roboczego* zapewniają kod do przetwarzania elementów pracy w kolejce w puli wątków.
 
-**Implementacja**
+**Wdrażanie**
 
-Aby zaimplementować klasę, która jest zgodna z tym Archetype, Klasa musi udostępniać następujące funkcje:
+Aby zaimplementować klasę zgodną z tym archetypem, klasa musi zawierać następujące funkcje:
 
 |Metoda|Opis|
 |------------|-----------------|
-|[Initialize](#initialize)|Wywołuje się, by zainicjować obiekt Worker przed przekazaniem żądań do [wykonania](#execute).|
-|[Execute](#execute)|Wywołuje się, by przetworzyć element roboczy.|
-|[Terminate](#terminate)|Wywołuje się, by zainicjować obiekt roboczy po przekazaniu wszystkich żądań do [wykonania](#execute).|
+|[Initialize](#initialize)|Wywoływany w celu zainicjowania obiektu procesu roboczego przed przekazaniem jakichkolwiek żądań do [żądania Execute](#execute).|
+|[Realizacja](#execute)|Wywoływana do przetwarzania elementu pracy.|
+|[Terminate](#terminate)|Wywoływany do niezainicjowania obiektu procesu roboczego po przekazaniu wszystkich żądań do [execute](#execute).|
 
-|Własne|Opis|
+|Typedef|Opis|
 |-------------|-----------------|
-|[RequestType](#requesttype)|Element typedef dla typu elementu roboczego, który może być przetwarzany przez klasę Worker.|
+|[RequestType](#requesttype)|Typedef dla typu elementu pracy, który może być przetwarzany przez klasę roboczą.|
 
-Typowa Klasa *procesu roboczego* wygląda następująco:
+Typowa klasa *pracownika* wygląda następująco:
 
 [!code-cpp[NVC_ATL_Utilities#137](../../atl/codesnippet/cpp/worker-archetype_1.cpp)]
 
 **Istniejące implementacje**
 
-Te klasy są zgodne z tym Archetype:
+Klasy te są zgodne z tym archetypem:
 
 |Klasa|Opis|
 |-----------|-----------------|
-|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Odbiera żądania z puli wątków i przekazuje je do obiektu procesu roboczego, który jest tworzony i niszczony dla każdego żądania.|
+|[CNonStatelessPracownik](../../atl/reference/cnonstatelessworker-class.md)|Odbiera żądania z puli wątków i przekazuje je do obiektu roboczego, który jest tworzony i niszczony dla każdego żądania.|
 
-**Korzystanie**
+**Użycie**
 
-Te parametry szablonu oczekują, aby Klasa była zgodna z tą Archetype:
+Te parametry szablonu oczekują, że klasa będzie zgodna z tym archetypem:
 
-|Nazwa parametru|Używana przez|
+|Nazwa parametru|Używany przez|
 |--------------------|-------------|
-|*Odpowiedzialn*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|
-|*Odpowiedzialn*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|
+|*Pracownik*|[Cthreadpool](../../atl/reference/cthreadpool-class.md)|
+|*Pracownik*|[CNonStatelessPracownik](../../atl/reference/cnonstatelessworker-class.md)|
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlutil. h
+**Nagłówek:** atlutil.h
 
-## <a name="execute"></a>WorkerArchetype:: Execute
+## <a name="workerarchetypeexecute"></a><a name="execute"></a>Typ roboczy::Wykonaj
 
-Wywołuje się, by przetworzyć element roboczy.
+Wywoływana do przetwarzania elementu pracy.
 
 ```
 void Execute(
@@ -67,18 +67,18 @@ void Execute(
 
 #### <a name="parameters"></a>Parametry
 
-*żądając*<br/>
-Element roboczy, który ma zostać przetworzony. Element roboczy jest tego samego typu co `RequestType`.
+*Żądanie*<br/>
+Element pracy do przetworzenia. Element roboczy jest tego `RequestType`samego typu co .
 
-*pvWorkerParam*<br/>
-Niestandardowy parametr zrozumiały dla klasy Worker. Przeszedł również do `WorkerArchetype::Initialize` i `Terminate`.
+*pvPracerParam*<br/>
+Parametr niestandardowy zrozumiały dla klasy procesu roboczego. Również przekazywane `WorkerArchetype::Initialize` `Terminate`do i .
 
-*pOverlapped*<br/>
-Wskaźnik do [NAkładającego](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) się struktury użytego do utworzenia kolejki, w której elementy robocze zostały umieszczone w kolejce.
+*pZamknienie*<br/>
+Wskaźnik do [struktury NAKŁADANE](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) używane do tworzenia kolejki, na którym elementy robocze były umieszczane w kolejce.
 
-## <a name="initialize"></a>WorkerArchetype:: Initialize
+## <a name="workerarchetypeinitialize"></a><a name="initialize"></a>Typ roboczy::Inicjalizacja
 
-Wywołuje się, by zainicjować obiekt Worker przed przekazaniem żądań do `WorkerArchetype::Execute`.
+Wywoływany w celu zainicjowania obiektu procesu `WorkerArchetype::Execute`roboczego przed przekazaniem jakichkolwiek żądań do .
 
 ```
 BOOL Initialize(void* pvParam) throw();
@@ -87,15 +87,15 @@ BOOL Initialize(void* pvParam) throw();
 #### <a name="parameters"></a>Parametry
 
 *pvParam*<br/>
-Niestandardowy parametr zrozumiały dla klasy Worker. Przeszedł również do `WorkerArchetype::Terminate` i `WorkerArchetype::Execute`.
+Parametr niestandardowy zrozumiały dla klasy procesu roboczego. Również przekazywane `WorkerArchetype::Terminate` `WorkerArchetype::Execute`do i .
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
+Powrót TRUE na sukces, FALSE na niepowodzenie.
 
-## <a name="requesttype"></a>WorkerArchetype:: RequestType
+## <a name="workerarchetyperequesttype"></a><a name="requesttype"></a>Typ roboczy::Typ żądania
 
-Element typedef dla typu elementu roboczego, który może być przetwarzany przez klasę Worker.
+Typedef dla typu elementu pracy, który może być przetwarzany przez klasę roboczą.
 
 ```
 typedef MyRequestType RequestType;
@@ -103,11 +103,11 @@ typedef MyRequestType RequestType;
 
 ### <a name="remarks"></a>Uwagi
 
-Ten typ musi być używany jako pierwszy parametr `WorkerArchetype::Execute` i musi być w stanie rzutować do i z ULONG_PTR.
+Ten typ musi być używany `WorkerArchetype::Execute` jako pierwszy parametr i musi być zdolny do rzutowania do i z ULONG_PTR.
 
-## <a name="terminate"></a>WorkerArchetype:: Przerwij
+## <a name="workerarchetypeterminate"></a><a name="terminate"></a>Typ roboczy::Zakończenie
 
-Wywołuje się, by zainicjować obiekt roboczy po przekazaniu wszystkich żądań do `WorkerArchetype::Execute`).
+Wywoływana w celu niezainicjowania obiektu procesu `WorkerArchetype::Execute`roboczego po przekazaniu wszystkich żądań do ).
 
 ```
 void Terminate(void* pvParam) throw();
@@ -116,7 +116,7 @@ void Terminate(void* pvParam) throw();
 #### <a name="parameters"></a>Parametry
 
 *pvParam*<br/>
-Niestandardowy parametr zrozumiały dla klasy Worker. Przeszedł również do `WorkerArchetype::Initialize` i `WorkerArchetype::Execute`.
+Parametr niestandardowy zrozumiały dla klasy procesu roboczego. Również przekazywane `WorkerArchetype::Initialize` `WorkerArchetype::Execute`do i .
 
 ## <a name="see-also"></a>Zobacz też
 

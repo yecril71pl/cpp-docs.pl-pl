@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCToolBarComboBoxEdit [MFC], CMFCToolBarComboBoxEdit
 ms.assetid: 4789c34a-ce58-48ba-a26f-38748b601352
-ms.openlocfilehash: 2a0ab1766f42d34c86339cffb86f876358c97a4a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: dfbf24f5833d143adc6d21b6cb54dd9ac81c2f0a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504867"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372203"
 ---
 # <a name="cmfctoolbarcomboboxedit-class"></a>Klasa CMFCToolBarComboBoxEdit
 
-Struktura używa `CMFCToolBarComboBoxEdit` klasy, aby utworzyć przycisk paska narzędzi, który zachowuje się jak kontrolka pola kombi do edycji.
+Struktura używa `CMFCToolBarComboBoxEdit` klasy do utworzenia przycisku paska narzędzi, który zachowuje się jak edytowalny formant pola kombi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,36 +31,36 @@ class CMFCToolBarComboBoxEdit : public CEdit
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdit](#cmfctoolbarcomboboxedit)|Konstruuje `CMFCToolBarComboBoxEdit` obiekt.|
-|`CMFCToolBarComboBoxEdit::~CMFCToolBarComboBoxEdit`|Destruktor.|
+|[CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdytuj](#cmfctoolbarcomboboxedit)|Konstruuje `CMFCToolBarComboBoxEdit` obiekt.|
+|`CMFCToolBarComboBoxEdit::~CMFCToolBarComboBoxEdit`|Destruktora.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Tłumaczy komunikaty okna przed ich wysłaniem do funkcji systemu Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Przesłania [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Tłumaczy komunikaty okna, zanim zostaną wysłane do [funkcji TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) systemu Windows. (Zastępuje [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
 
 ### <a name="remarks"></a>Uwagi
 
-Utwórz klasę z klasy, `CMFCToolBarComboBoxEdit` aby dostosować jej operacje edycji.
+Wyprowadzić klasę z `CMFCToolBarComboBoxEdit` klasy, aby dostosować swoje operacje edycji.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CEdit](../../mfc/reference/cedit-class.md)
+[Cedit](../../mfc/reference/cedit-class.md)
 
-[CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md)
+[CMFCToolBarComboBoxEdytuj](../../mfc/reference/cmfctoolbarcomboboxedit-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxtoolbarcomboboxbutton. h
+**Nagłówek:** afxtoolbarcomboboxbutton.h
 
-##  <a name="cmfctoolbarcomboboxedit"></a>CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdit
+## <a name="cmfctoolbarcomboboxeditcmfctoolbarcomboboxedit"></a><a name="cmfctoolbarcomboboxedit"></a>CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdytuj
 
 Konstruuje `CMFCToolBarComboBoxEdit` obiekt.
 
@@ -70,16 +70,16 @@ CMFCToolBarComboBoxEdit(CMFCToolBarComboBoxButton& combo);
 
 ### <a name="parameters"></a>Parametry
 
-*combo*<br/>
-podczas Odwołanie do obiektu [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) , który jest przyciskiem paska narzędzi, który zawiera kontrolkę pola kombi.
+*kombi*<br/>
+[w] Odwołanie do [obiektu CMFCToolBarComboBoxButton,](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) który jest przyciskiem paska narzędzi, który zawiera kontrolkę pola kombi.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób konstruowania obiektu `CMFCToolBarComboBoxEdit` klasy. Ten fragment kodu jest częścią przykładu demonstracyjnego dla programu [IE](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie pokazano, jak `CMFCToolBarComboBoxEdit` skonstruować obiekt klasy. Ten fragment kodu jest częścią [przykładu IE Demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#5](../../mfc/reference/codesnippet/cpp/cmfctoolbarcomboboxedit-class_1.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

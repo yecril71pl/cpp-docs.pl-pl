@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-ms.openlocfilehash: 795b20cba41eeca8cc1a32e312edf065b718f364
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29fc6210b9888b6a5ba5aaf15b66242c29c15dc8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347145"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369382"
 ---
 # <a name="ccreatecontext-structure"></a>Struktura CCreateContext
 
-Środowisko wykorzystuje `CCreateContext` struktury podczas tworzenia okna ramowe i widoki, które są skojarzone z dokumentem.
+Struktura używa `CCreateContext` struktury podczas tworzenia okien ramki i widoków, które są skojarzone z dokumentem.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,49 +25,49 @@ struct CCreateContext
 
 ## <a name="remarks"></a>Uwagi
 
-`CCreateContext` jest to struktura i nie ma klasy bazowej.
+`CCreateContext`jest strukturą i nie ma klasy podstawowej.
 
-Podczas tworzenia okna wartości w tej strukturze zapewniają informacje używane do łączenia składników dokumentu do widoku danych. Trzeba użyć `CCreateContext` jeśli są zastępują części procesu tworzenia.
+Podczas tworzenia okna wartości w tej strukturze zawierają informacje używane do łączenia składników dokumentu z widokiem jego danych. Należy użyć `CCreateContext` tylko wtedy, gdy są nadrzędne części procesu tworzenia.
 
-A `CCreateContext` struktura zawiera wskaźniki do dokumentu, okno ramowe, widok i szablonu dokumentu. Zawiera ona także wskaźnik do `CRuntimeClass` określający typ widoku, aby utworzyć. Informacje o klasie czasu wykonywania i bieżący wskaźnik dokumentu są używane do tworzenie nowego widoku dynamicznego. Poniższa tabela sugeruje, jak i kiedy każdego `CCreateContext` element członkowski może być używany:
+Struktura `CCreateContext` zawiera wskaźniki do dokumentu, okna ramki, widoku i szablonu dokumentu. Zawiera również wskaźnik do, `CRuntimeClass` który identyfikuje typ widoku do utworzenia. Informacje o klasie w czasie wykonywania i bieżący wskaźnik dokumentu są używane do dynamicznego tworzenia nowego widoku. W poniższej tabeli `CCreateContext` przedstawiono, jak i kiedy każdy element członkowski może być używany:
 
-|Element członkowski|Typ|Co to jest|
+|Członek|Typ|Do czego służy|
 |------------|----------|--------------------|
-|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` Aby utworzyć nowego widoku.|
-|`m_pCurrentDoc`|`CDocument*`|Istniejący dokument ma zostać skojarzony z nowego widoku.|
-|`m_pNewDocTemplate`|`CDocTemplate*`|Szablon dokumentu, związane z tworzeniem nowe okno ramek MDI.|
-|`m_pLastView`|`CView*`|Widok oryginalnej, na którym są modelowane dodatkowe widoki, jak tworzenie widoków okno rozdzielacza lub Tworzenie drugiego widoku do dokumentu.|
-|`m_pCurrentFrame`|`CFrameWnd*`|Okno ramki, na którym są modelowane dodatkowe okna ramowe, jak tworzenie drugiego okna ramki dokumentu.|
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass`nowego widoku do utworzenia.|
+|`m_pCurrentDoc`|`CDocument*`|Istniejący dokument, który ma być skojarzony z nowym widokiem.|
+|`m_pNewDocTemplate`|`CDocTemplate*`|Szablon dokumentu skojarzony z utworzeniem nowego okna ramki MDI.|
+|`m_pLastView`|`CView*`|Oryginalny widok, na którym są modelowane dodatkowe widoki, jak podczas tworzenia widoków okna rozdzielacza lub tworzenia drugiego widoku w dokumencie.|
+|`m_pCurrentFrame`|`CFrameWnd*`|Okno ramki, na którym są modelowane dodatkowe okna ramek, jak podczas tworzenia drugiego okna ramki w dokumencie.|
 
-Gdy szablon dokumentu tworzy dokument i powiązanych z nim składników, sprawdza poprawność informacji przechowywanych w `CCreateContext` struktury. Na przykład widoku nie można utworzyć dla nieistniejącego dokumentu.
+Gdy szablon dokumentu tworzy dokument i skojarzone z nim składniki, `CCreateContext` sprawdza poprawność informacji przechowywanych w strukturze. Na przykład widok nie powinien być tworzony dla nieistniejącego dokumentu.
 
 > [!NOTE]
->  Wszystkie wskaźniki w `CCreateContext` są opcjonalne i może być `NULL` nieokreślony lub nieznany.
+> Wszystkie wskaźniki w `CCreateContext` są opcjonalne `NULL` i może być, jeśli nieokreślone lub nieznane.
 
-`CCreateContext` jest używany przez funkcje składowe wyświetlane w obszarze "Zobacz też". Skonsultuj się opisy tych funkcji, aby uzyskać szczegółowe informacje, czy chcesz je zastąpić.
+`CCreateContext`jest używany przez funkcje członkowskie wymienione w obszarze "Zobacz też". Jeśli planujesz ich zastąpić, zapoznaj się z opisami tych funkcji.
 
-Poniżej przedstawiono kilka ogólnych wytycznych:
+Oto kilka ogólnych wytycznych:
 
-- Jeśli przekazywany jako argument do tworzenia okna, podobnie jak w `CWnd::Create`, `CFrameWnd::Create`, i `CFrameWnd::LoadFrame`, kontekstu Utwórz Określa, jakie nowe okno powinny być połączone. Dla większości systemów windows, cała struktura jest opcjonalna i `NULL` wskaźnika, które mogą być przekazywane.
+- Po przekazaniu jako argument do `CWnd::Create`tworzenia `CFrameWnd::Create`okna, jak w , i , kontekst `CFrameWnd::LoadFrame`tworzenia określa, co nowe okno powinno być połączone. W przypadku większości okien cała struktura `NULL` jest opcjonalna i można przekazać wskaźnik.
 
-- Dla funkcji składowych możliwym do zastąpienia takie jak `CFrameWnd::OnCreateClient`, `CCreateContext` argument jest opcjonalny.
+- Dla zastępowalnych funkcji elementów członkowskich, takich jak `CFrameWnd::OnCreateClient` `CCreateContext` argument jest opcjonalny.
 
-- Dla funkcji składowej biorących udział w widoku tworzenia, musisz podać wystarczających informacji do utworzenia widoku. Na przykład pierwszy widoku okna rozdzielacza musisz podać informacje o klasie widok i w bieżącym dokumencie.
+- W przypadku funkcji członkowskich zaangażowanych w tworzenie widoku należy podać wystarczającą ilość informacji, aby utworzyć widok. Na przykład dla pierwszego widoku w oknie rozdzielacza należy podać informacje o klasie widoku i bieżącym dokumencie.
 
-Ogólnie rzecz biorąc, korzystając z ustawień domyślnych framework, możesz zignorować `CCreateContext`. Jeśli spróbujesz bardziej zaawansowane modyfikacje, kod źródłowy biblioteki klas Microsoft Foundation lub przykładowych programów, takich jak VIEWEX, pomocne. Jeśli nie pamiętasz wymaganego parametru asercję framework informuje użytkownik zapomniał.
+Ogólnie rzecz biorąc, jeśli używasz domyślnych `CCreateContext`framework, można zignorować . W przypadku próby bardziej zaawansowanych modyfikacji, kod źródłowy biblioteki klas Programu Microsoft Foundation lub przykładowe programy, takie jak VIEWEX, poprowadzą Cię. Jeśli zapomnisz wymaganego parametru, asercja struktury powie Ci, co zapomniałeś.
 
-Aby uzyskać więcej informacji na temat `CCreateContext`, zobacz przykładową MFC [VIEWEX](../../overview/visual-cpp-samples.md).
+Aby uzyskać `CCreateContext`więcej informacji na temat , zobacz przykład MFC [VIEWEX](../../overview/visual-cpp-samples.md).
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** afxext.h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create)<br/>
+[CFrameWnd::Utwórz](../../mfc/reference/cframewnd-class.md#create)<br/>
 [CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)<br/>
 [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)<br/>
-[CSplitterWnd::Create](../../mfc/reference/csplitterwnd-class.md#create)<br/>
+[CSplitterWnd::Tworzenie](../../mfc/reference/csplitterwnd-class.md#create)<br/>
 [CSplitterWnd::CreateView](../../mfc/reference/csplitterwnd-class.md#createview)<br/>
-[CWnd::Create](../../mfc/reference/cwnd-class.md#create)
+[Cwnd::create](../../mfc/reference/cwnd-class.md#create)

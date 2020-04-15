@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::MakeAllocator::MakeAllocator, constructor
 - Microsoft::WRL::Details::MakeAllocator::~MakeAllocator, destructor
 ms.assetid: a1114615-abd7-4a56-9bc3-750c118f0fa1
-ms.openlocfilehash: 805f0c09b0490d8cec1a0be96dcb1fc99a051371
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc0d83f2550646572a4eff2bec7850037c6dbf6a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161241"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371332"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator — Klasa
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,15 +50,15 @@ class MakeAllocator<T, true>;
 Nazwa typu.
 
 *hasWeakReferenceSupport*<br/>
-**wartość true,** można przydzielić pamięci dla obiektu, który obsługuje słabe odwołania; **false** można przydzielić pamięci dla obiektu, który nie obsługuje słabe odwołania.
+**true,** aby przydzielić pamięć dla obiektu, który obsługuje słabe odwołania; **false,** aby przydzielić pamięć dla obiektu, który nie obsługuje słabych odwołań.
 
 ## <a name="remarks"></a>Uwagi
 
-Przydziela pamięć dla klasy aktywowalnej, z lub bez niej odwołanie tymczasowe wsparcia.
+Przydziela pamięć dla klasy aktywacji, z lub bez wsparcia odniesienia słabe.
 
-Zastąp `MakeAllocator` klasę, aby wdrożyć model przydzielania pamięci zdefiniowane przez użytkownika.
+Zastądnie klasy, `MakeAllocator` aby zaimplementować model alokacji pamięci zdefiniowanej przez użytkownika.
 
-`MakeAllocator` Zazwyczaj służy do zapobiec przeciekom pamięci, jeśli obiekt zgłasza wyjątek w trakcie konstruowania.
+`MakeAllocator`jest zwykle używany, aby zapobiec przeciekom pamięci, jeśli obiekt zostanie rzuci podczas budowy.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -66,15 +66,15 @@ Zastąp `MakeAllocator` klasę, aby wdrożyć model przydzielania pamięci zdefi
 
 Nazwa                                                  | Opis
 ----------------------------------------------------- | ----------------------------------------------------------------
-[MakeAllocator::MakeAllocator](#makeallocator)        | Inicjuje nowe wystąpienie klasy `MakeAllocator` klasy.
-[MakeAllocator::~MakeAllocator](#tilde-makeallocator) | Deinicjuje bieżące wystąpienie `MakeAllocator` klasy.
+[MakeAllocator::MakeAllocator](#makeallocator)        | Inicjuje nowe wystąpienie klasy `MakeAllocator`.
+[MakeAllocator::~MakeAllocator](#tilde-makeallocator) | Deinitializes bieżące wystąpienie `MakeAllocator` klasy.
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Nazwa                                 | Opis
 ------------------------------------ | -----------------------------------------------------------------------------------------------------------
-[MakeAllocator::Allocate](#allocate) | Przydziela pamięć i kojarzy ją z bieżącymi `MakeAllocator` obiektu.
-[MakeAllocator::Detach](#detach)     | Powoduje usunięcie pamięci przydzielonej przez [przydziel](#allocate) z bieżącej metody `MakeAllocator` obiektu.
+[MakeAllocator::Przydziel](#allocate) | Przydziela pamięć i kojarzy ją `MakeAllocator` z bieżącym obiektem.
+[MakeAllocator::Detach](#detach)     | Disassociates pamięci przydzielone przez [Allocate](#allocate) metody z bieżącego `MakeAllocator` obiektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -84,11 +84,11 @@ Nazwa                                 | Opis
 
 **Nagłówek:** implements.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obszar nazw:** Microsoft::WRL::Dszczegóły
 
-## <a name="allocate"></a>MakeAllocator::Allocate
+## <a name="makeallocatorallocate"></a><a name="allocate"></a>MakeAllocator::Przydziel
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 __forceinline void* Allocate();
@@ -96,19 +96,19 @@ __forceinline void* Allocate();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, wskaźnik do przydzielonego pamięci. w przeciwnym razie `nullptr`.
+Jeśli się powiedzie, wskaźnik do przydzielonej pamięci; w `nullptr`przeciwnym razie , .
 
 ### <a name="remarks"></a>Uwagi
 
-Przydziela pamięć i kojarzy ją z bieżącymi `MakeAllocator` obiektu.
+Przydziela pamięć i kojarzy ją `MakeAllocator` z bieżącym obiektem.
 
-Rozmiar alokacji pamięci jest rozmiar o typie określonym przez bieżącą `MakeAllocator` parametru szablonu.
+Rozmiar przydzielonej pamięci jest rozmiarem typu określonego `MakeAllocator` przez bieżący parametr szablonu.
 
-Deweloper musi zastąpić tylko `Allocate()` metodę, aby wdrożyć model przydzielania pamięci różnych.
+Deweloper musi zastąpić tylko metodę, `Allocate()` aby zaimplementować inny model alokacji pamięci.
 
-## <a name="detach"></a>MakeAllocator::Detach
+## <a name="makeallocatordetach"></a><a name="detach"></a>MakeAllocator::Detach
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 __forceinline void Detach();
@@ -116,13 +116,13 @@ __forceinline void Detach();
 
 ### <a name="remarks"></a>Uwagi
 
-Powoduje usunięcie pamięci przydzielonej przez [przydziel](#allocate) z bieżącej metody `MakeAllocator` obiektu.
+Disassociates pamięci przydzielone przez [Allocate](#allocate) metody z bieżącego `MakeAllocator` obiektu.
 
-Jeśli wywołasz `Detach()`, jesteś odpowiedzialny za usunięcie pamięci dostarczonej przez `Allocate` metody.
+Jeśli wywołasz, `Detach()`jesteś odpowiedzialny za usunięcie pamięci `Allocate` dostarczonej przez metodę.
 
-## <a name="makeallocator"></a>MakeAllocator::MakeAllocator
+## <a name="makeallocatormakeallocator"></a><a name="makeallocator"></a>MakeAllocator::MakeAllocator
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 MakeAllocator();
@@ -130,11 +130,11 @@ MakeAllocator();
 
 ### <a name="remarks"></a>Uwagi
 
-Inicjuje nowe wystąpienie klasy `MakeAllocator` klasy.
+Inicjuje nowe wystąpienie klasy `MakeAllocator`.
 
-## <a name="tilde-makeallocator"></a>MakeAllocator::~MakeAllocator
+## <a name="makeallocatormakeallocator"></a><a name="tilde-makeallocator"></a>MakeAllocator::~MakeAllocator
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 ~MakeAllocator();
@@ -142,6 +142,6 @@ Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bez
 
 ### <a name="remarks"></a>Uwagi
 
-Deinicjuje bieżące wystąpienie `MakeAllocator` klasy.
+Deinitializes bieżące wystąpienie `MakeAllocator` klasy.
 
-Ten destruktor spowoduje również usunięcie podstawowych ilość przydzielonej pamięci w razie potrzeby.
+Ten destruktor usuwa również podstawowej przydzielonej pamięci, jeśli to konieczne.

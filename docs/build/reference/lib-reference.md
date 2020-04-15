@@ -10,23 +10,23 @@ helpviewer_keywords:
 - LIB [C++]
 - 32-Bit Library Manager
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
-ms.openlocfilehash: 8e0c2815fdc3ab9ab171d3ebb94480393c8815ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4ce4e4723faa943a8de1431a604fc7acca2d528
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291499"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328217"
 ---
 # <a name="lib-reference"></a>Odwołanie do biblioteki LIB
 
-Menedżer biblioteki Microsoft (LIB.exe) tworzy i zarządza Biblioteka plików obiektów Common Object File Format (COFF). Lib — można również tworzyć pliki eksportu i Importuj biblioteki do definicji odwołanie, eksportowane.
+Menedżer biblioteki firmy Microsoft (LIB.exe) tworzy bibliotekę plików obiektów wspólnego formatu pliku (COFF) i zarządza nimi. Lib może być również używany do tworzenia plików eksportu i importowania bibliotek do odwoływania się do eksportowanych definicji.
 
 > [!NOTE]
->  To narzędzie można uruchomić tylko z poziomu wiersza polecenia programu Visual Studio. Nie można uruchomić go z wiersza poleceń systemu lub Eksploratora plików.
+> To narzędzie można uruchomić tylko w wierszu polecenia programu Visual Studio. Nie można go uruchomić z wiersza polecenia systemowego lub z Eksploratora plików.
 
 - [Informacje o LIB](overview-of-lib.md)
 
-- [Instrukcje: Ustawianie opcji LIB.EXE w środowisku programowania Visual Studio](how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
+- [Instrukcje: ustawianie opcji LIB.EXE w środowisku programowania Visual Studio](how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
 
 - [Uruchamianie LIB](running-lib.md)
 
@@ -36,6 +36,6 @@ Menedżer biblioteki Microsoft (LIB.exe) tworzy i zarządza Biblioteka plików o
 
 - [Praca z bibliotekami importowanymi oraz plikami eksportowanymi](working-with-import-libraries-and-export-files.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[MSVC dodatkowe narzędzia do kompilacji](c-cpp-build-tools.md)
+[Dodatkowe narzędzia do budowania MSVC](c-cpp-build-tools.md)

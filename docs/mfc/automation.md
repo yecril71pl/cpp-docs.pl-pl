@@ -20,54 +20,54 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: 7818aa708a762f2a284be029a6c3f3facd971d9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9320ccf7a21c6110c51366fa8af96596512a4a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374158"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370824"
 ---
 # <a name="automation"></a>Automatyzacja
 
-Automatyzacja (wcześniej znane jako automatyzacji OLE) umożliwia jedną aplikację do manipulowania obiektami implementowane w innej aplikacji lub do udostępnienia obiektów, dzięki czemu można manipulować.
+Automatyzacja (wcześniej znany jako automatyzacji OLE) umożliwia jednej aplikacji do manipulowania obiektami zaimplementowanymi w innej aplikacji lub uwidaczniać obiekty, dzięki czemu mogą być manipulowane.
 
-[Serwer automatyzacji](../mfc/automation-servers.md) to aplikacja (typ serwera COM), która udostępnia funkcję za pośrednictwem interfejsów COM do innych aplikacji o nazwie [klientów automatyzacji](../mfc/automation-clients.md). Narażenia umożliwia klientom usługi Automation do automatyzacji niektórych funkcji przez bezpośrednie uzyskiwanie dostępu do obiektów i korzystania z usług oferowanych przez.
+[Serwer automatyzacji](../mfc/automation-servers.md) to aplikacja (typ serwera COM), która udostępnia swoje funkcje za pośrednictwem interfejsów COM innym aplikacjom o nazwie [Klienci automatyzacji](../mfc/automation-clients.md). Ekspozycja umożliwia klientom automatyzacji automatyzację niektórych funkcji poprzez bezpośredni dostęp do obiektów i korzystanie z usług, które świadczą.
 
-Serwery automatyzacji i klienci korzystają z interfejsów COM, które zawsze są uzyskiwane z `IDispatch` i przyjmują i zwracają zestaw określonych typów danych o nazwie typy automatyzacji. Można zautomatyzować dowolny obiekt, który udostępnia interfejs automatyzacji, zapewniając metody i właściwości, do których masz dostęp z innych aplikacji. Usługa Automation jest dostępna dla obiektów COM i OLE. Automatyczne obiekt może być lokalnym lub zdalnym (na innym komputerze dostępnym przez sieć); Dlatego istnieją dwie kategorie automatyzacji:
+Serwery automatyzacji i klienci używają interfejsów `IDispatch` COM, które są zawsze pochodne i wziąć i zwrócić określony zestaw typów danych o nazwie typy automatyzacji. Można zautomatyzować dowolny obiekt, który udostępnia interfejs automatyzacji, zapewniając metody i właściwości, które można uzyskać dostęp z innych aplikacji. Automatyzacja jest dostępna dla obiektów OLE i COM. Obiekt zautomatyzowany może być lokalny lub zdalny (na innym komputerze dostępnym w sieci); w związku z tym istnieją dwie kategorie automatyzacji:
 
-- Automatyzacja (lokalne).
+- Automatyzacja (lokalna).
 
-- Automatyzacja zdalna (za pośrednictwem sieci przy użyciu rozproszonego modelu COM i DCOM).
+- Automatyzacja zdalna (za pośrednictwem sieci, przy użyciu rozproszonej com lub DCOM).
 
-Udostępnianie obiektów jest korzystne w przypadku, gdy aplikacje udostępniają funkcje przydatne do innych aplikacji. Na przykład kontrolki ActiveX jest typ serwera automatyzacji. hosting kontrolek ActiveX aplikacji jest klienta automatyzacji tej kontrolki.
+Uwidacznianie obiektów jest korzystne, gdy aplikacje zapewniają funkcje przydatne dla innych aplikacji. Na przykład formant ActiveX jest typem serwera automatyzacji; aplikacja hostująca formant ActiveX jest klientem automatyzacji tego formantu.
 
-Inny przykład edytora tekstów może narazić jego funkcje sprawdzania pisowni do innych programów. Narażenia obiektów umożliwia dostawcom ulepszaj swoje aplikacje za pomocą gotowych do użycia funkcji innych aplikacji. W ten sposób automatyzacji, ma zastosowanie niektórych zasad programowanie zorientowane obiektowo, takie jak możliwość ponownego wykorzystania i hermetyzacji na poziomie same aplikacje.
+Innym przykładem edytor tekstu może narazić jego funkcje sprawdzania pisowni na inne programy. Ekspozycja obiektów umożliwia dostawcom ulepszanie swoich aplikacji przy użyciu gotowych funkcji innych aplikacji. W ten sposób automatyzacja stosuje niektóre zasady programowania obiektowego, takie jak możliwość ponownego użycia i hermetyzacja, na poziomie samych aplikacji.
 
-Niezwykle ważne jest pomocy technicznej, udostępnia automatyzacji dla użytkowników i ich dostawców rozwiązań. Dzięki uwidocznieniu działania funkcji aplikacji za pomocą interfejsu wspólny, dobrze zdefiniowanych, automatyzacji sprawia, że można tworzyć kompleksowe rozwiązania w jednym ogólne języku programowania, takich jak Microsoft Visual Basic, zamiast w różnych języki specyficzne dla aplikacji makra.
+Ważniejsze jest wsparcie, które automatyzacja zapewnia użytkownikom i dostawcom rozwiązań. Udostępniając funkcje aplikacji za pośrednictwem wspólnego, dobrze zdefiniowanego interfejsu, automatyzacja umożliwia tworzenie kompleksowych rozwiązań w jednym ogólnym języku programowania, takim jak Microsoft Visual Basic, zamiast w różnych językach makr specyficznych dla aplikacji.
 
-Wiele aplikacji komercyjnych, takich jak program Microsoft Excel i Microsoft Visual C++ umożliwiają zautomatyzować większość operacji ich funkcje. Na przykład w programie Visual C++, możesz napisać, makra skrypt VBScript w celu zautomatyzowania kompilacje aspekty kodu, edytowanie i debugowanie zadań.
+Wiele aplikacji komercyjnych, takich jak Microsoft Excel i Microsoft Visual C++, umożliwia automatyzację wielu ich funkcji. Na przykład w języku Visual C++ można pisać makra VBScript, aby zautomatyzować kompilacje, aspekty edycji kodu lub debugowania zadań.
 
-##  <a name="_core_passing_parameters_in_automation"></a> Przekazywanie parametrów w usłudze Automation
+## <a name="passing-parameters-in-automation"></a><a name="_core_passing_parameters_in_automation"></a>Przekazywanie parametrów w automatyzacji
 
-Pomaga kłopotliwe w tworzeniu metod automatyzacji jednolitego mechanizm "bezpieczne", aby przekazać dane między klientami i serwerów usługi automation. Zastosowań automatyzacji **VARIANT** typu do przekazywania danych. **VARIANT** typem jest Unia oznakowane. Ma element członkowski danych dla wartości (jest to anonimowej Unii C++) i element członkowski danych wskazujący typ informacji przechowywanych w Unii. **VARIANT** typ obsługuje wiele typów danych w warstwie standardowa: 2 i 4-bajtowych liczb całkowitych, 4 i 8-bajtowych liczb zmiennoprzecinkowych, ciągi i wartości logiczne. Ponadto obsługuje **HRESULT** (kody błędów OLE), **waluty** (stałoprzecinkowe typu liczbowego), i **data** typów (Data bezwzględna i czas), a także wskaźniki do `IUnknown` i `IDispatch` interfejsów.
+Jedną z trudności w tworzeniu metod automatyzacji jest pomoc w zapewnieniu jednolitego "bezpiecznego" mechanizmu przekazywania danych między serwerami automatyzacji a klientami. Automatyzacja używa typu **VARIANT** do przekazywania danych. Typ **VARIANT** jest oznakowanym związkiem. Ma element członkowski danych dla wartości (jest to anonimowa unia C++ ) i element członkowski danych wskazujący typ informacji przechowywanych w unii. Typ **VARIANT** obsługuje szereg standardowych typów danych: 2- i 4-bajtowe liczby całkowite, 4- i 8-bajtowe liczby zmiennoprzecinkowe, ciągi i wartości logiczne. Ponadto obsługuje typy **HRESULT** (ole error codes), **CURRENCY** (typ numeryczny o stałym punkcie) i **DATE** (data `IUnknown` `IDispatch` bezwzględna i godzina), a także wskaźniki do i interfejsów.
 
-**VARIANT** typu jest hermetyzowany w [COleVariant](../mfc/reference/colevariant-class.md) klasy. Obsługa **waluty** i **data** klasy są hermetyzowane w [COleCurrency](../mfc/reference/colecurrency-class.md) i [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) klasy.
+Typ **VARIANT** jest hermetyzowany w [klasie COleVariant.](../mfc/reference/colevariant-class.md) Obsługuje **currency** i **date** klasy są hermetyzowane w [COleCurrency](../mfc/reference/colecurrency-class.md) i [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) klasy.
 
 ## <a name="automation-samples"></a>Przykłady automatyzacji
 
-- [Aplikacji AUTOCLIK](../overview/visual-cpp-samples.md) korzystać z tej próbki, Poznaj techniki automatyzacji i jako podstawa uczenia automatyzacji zdalnej.
+- [AUTOCLIK (AUTOCLIK)](../overview/visual-cpp-samples.md) Użyj tego przykładu, aby nauczyć się technik automatyzacji i jako podstawa do nauki automatyzacji zdalnej.
 
-- [Acdual —](../overview/visual-cpp-samples.md) dodaje dwa interfejsy aplikację serwera automatyzacji.
+- [ACDUAL (ACDUAL)](../overview/visual-cpp-samples.md) Dodaje dwa interfejsy do aplikacji serwera automatyzacji.
 
-- [CALCDRIV](../overview/visual-cpp-samples.md) nawyki MFCCALC automatyzacji aplikacji klienta.
+- [CALCDRIV (CALCDRIV)](../overview/visual-cpp-samples.md) Automatyzacja aplikacji klienckiej jazdy MFCCALC.
 
-- [INPROC](../overview/visual-cpp-samples.md) pokazuje aplikację serwera automatyzacji w procesie.
+- [INPROC (INPROC)](../overview/visual-cpp-samples.md) Demonstruje aplikację serwera automatyzacji w trakcie.
 
-- [IPDRIVE](../overview/visual-cpp-samples.md) zachęcanie INPROC automatyzacji aplikacji klienta.
+- [Usługa IPDRIVE](../overview/visual-cpp-samples.md) Automatyzacja aplikacji klienckiej jazdy INPROC.
 
-- [MFCCALC](../overview/visual-cpp-samples.md) pokazuje automatyzacji aplikacji klienta.
+- [MfccaLC ( MFCCALC )](../overview/visual-cpp-samples.md) Demonstruje aplikację klienta automatyzacji.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz wiedzieć więcej o
 
 - [Klienci automatyzacji](../mfc/automation-clients.md)
 
@@ -75,18 +75,18 @@ Pomaga kłopotliwe w tworzeniu metod automatyzacji jednolitego mechanizm "bezpie
 
 - [OLE](../mfc/ole-in-mfc.md)
 
-- [Technologia Active](../mfc/mfc-com.md)
+- [Aktywna technologia](../mfc/mfc-com.md)
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić
 
-- [Dodaj klasę automatyzacji](../mfc/automation-servers.md)
+- [Dodawanie klasy automatyzacji](../mfc/automation-servers.md)
 
-- [Korzystaj z bibliotek typów](../mfc/automation-clients-using-type-libraries.md)
+- [Korzystanie z bibliotek tekstowych](../mfc/automation-clients-using-type-libraries.md)
 
-- [Serwery automatyzacji dostępu](../mfc/automation-servers.md)
+- [Dostęp do serwerów automatyzacji dostępu](../mfc/automation-servers.md)
 
-- [Zapis klientów automatyzacji w języku C++](../mfc/automation-clients.md)
+- [Zapisuj klientów automatyzacji w języku C++](../mfc/automation-clients.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [MFC COM](../mfc/mfc-com.md)

@@ -2,22 +2,22 @@
 title: Zestaw znaków ASCII
 ms.date: 11/04/2016
 ms.assetid: 2390fd40-5fe2-4410-a06c-ccc0fea2709b
-ms.openlocfilehash: 637f605f839b363dd85278f4b85fd832ca5f8e08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 264d1f5a0f10d77a2c7c1dcc945ee6e508c70789
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313405"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335083"
 ---
 # <a name="ascii-character-set"></a>Zestaw znaków ASCII
 
-**ANSI 2.2.1** elementy członkowskie źródła i wykonania zestawów znaków
+**ANSI 2.2.1** Elementy zestawów znaków źródłowych i wykonawczych
 
-Źródłowy zestaw znaków jest zestaw znaków prawne, które mogą być wyświetlane w plikach źródłowych. Dla Microsoft C: źródłowy zestaw znaków jest standardowy zestaw znaków ASCII.
+Źródłowy zestaw znaków to zestaw znaków prawnych, które mogą pojawiać się w plikach źródłowych. W przypadku systemu Microsoft C źródłowy zestaw znaków jest standardowym zestawem znaków ASCII.
 
 > [!NOTE]
->  **Ostrzeżenie** sterowniki klawiatury i konsoli, można ponownie zamapować zestaw znaków, programy przeznaczone do dystrybucji międzynarodowych należy sprawdzić kod kraju/regionu.
+> **Ostrzeżenie** Ponieważ sterowniki klawiatury i konsoli mogą ponownie mapować zestaw znaków, programy przeznaczone do dystrybucji międzynarodowej powinny sprawdzić kod kraju/regionu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Znaki](../c-language/characters.md)
+[Znaków](../c-language/characters.md)

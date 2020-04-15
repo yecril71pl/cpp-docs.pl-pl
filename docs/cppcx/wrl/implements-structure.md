@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Implements::FillArrayWithIid method
 - Microsoft::WRL::Implements::IidCount method
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
-ms.openlocfilehash: 0ce6e9193107cbd0d033d99b257e41004b4343a8
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 223f37d7cabbd0b8cd238582773c05d7b9eaabf6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821860"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371407"
 ---
 # <a name="implements-structure"></a>Implements — Struktura
 
-Implementuje `QueryInterface` i `GetIid` dla określonych interfejsów.
+Implementuje `QueryInterface` `GetIid` i dla określonych interfejsów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -77,65 +77,65 @@ struct __declspec(novtable) Implements<
 ### <a name="parameters"></a>Parametry
 
 *I0*<br/>
-Identyfikator interfejsu zerowego. Wypełnione
+Identyfikator interfejsu zerowego. (Obowiązkowe)
 
-*Elementem I1*<br/>
-Identyfikator pierwszego interfejsu. (Opcjonalnie:)
+*I1*<br/>
+Pierwszy identyfikator interfejsu. (opcjonalnie)
 
 *I2*<br/>
-Identyfikator drugiego interfejsu. (Opcjonalnie:)
+Drugi identyfikator interfejsu. (opcjonalnie)
 
 *I3*<br/>
-Identyfikator trzeciego interfejsu. (Opcjonalnie:)
+Trzeci identyfikator interfejsu. (opcjonalnie)
 
 *I4*<br/>
-Identyfikator czwartego interfejsu. (Opcjonalnie:)
+Czwarty identyfikator interfejsu. (opcjonalnie)
 
 *I5*<br/>
-Identyfikator piątego interfejsu. (Opcjonalnie:)
+Identyfikator piątego interfejsu. (opcjonalnie)
 
 *I6*<br/>
-Identyfikator szóstego interfejsu. (Opcjonalnie:)
+Szósty identyfikator interfejsu. (opcjonalnie)
 
 *I7*<br/>
-Siódmy identyfikator interfejsu. (Opcjonalnie:)
+Identyfikator siódmego interfejsu. (opcjonalnie)
 
 *I8*<br/>
-Identyfikator ósmego interfejsu. (Opcjonalnie:)
+Identyfikator ósmego interfejsu. (opcjonalnie)
 
 *I9*<br/>
-Dziewiąty identyfikator interfejsu. (Opcjonalnie:)
+Identyfikator dziewiątego interfejsu. (opcjonalnie)
 
-*znaczników*<br/>
-Flagi konfiguracji dla klasy. Co najmniej jedno Wyliczenie [RuntimeClassType —](runtimeclasstype-enumeration.md) określone w strukturze [RuntimeClassFlags](runtimeclassflags-structure.md) .
+*flagi*<br/>
+Flagi konfiguracji dla klasy. Co najmniej jedno [wyliczenia RuntimeClassType,](runtimeclasstype-enumeration.md) które są określone w strukturze [RuntimeClassFlags.](runtimeclassflags-structure.md)
 
 ## <a name="remarks"></a>Uwagi
 
 Pochodzi z listy określonych interfejsów i implementuje szablony pomocników dla `QueryInterface` i `GetIid`.
 
-Każdy *I0* za pośrednictwem parametru interfejsu *i9* musi pochodzić od `IUnknown`, `IInspectable`lub szablonu [ChainInterfaces](chaininterfaces-structure.md) . Parametr *flags* określa, czy obsługa jest generowana dla `IUnknown` lub `IInspectable`.
+Każdy parametr interfejsu *I0* do *I9* `IUnknown`musi `IInspectable`pochodzić z szablonu [ChainInterfaces lub ChainInterfaces.](chaininterfaces-structure.md) Parametr *flags* określa, czy dla `IUnknown` `IInspectable`lub .
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne definicje typów
+### <a name="public-typedefs"></a>Publiczne typedefs
 
 | Nazwa        | Opis                               |
 | ----------- | ----------------------------------------- |
-| `ClassFlags`| Synonim dla `RuntimeClassFlags<WinRt>`. |
+| `ClassFlags`| Synonimem . `RuntimeClassFlags<WinRt>` |
 
 ### <a name="protected-methods"></a>Metody chronione
 
 | Nazwa                                              | Opis                                                                                                   |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [Implementuje:: CanCastTo —](#cancastto)               | Pobiera wskaźnik do określonego interfejsu.                                                                    |
-| [Implementuje:: CastToUnknown —](#casttounknown)       | Pobiera wskaźnik do podstawowego interfejsu `IUnknown`.                                                        |
-| [Implementuje:: FillArrayWithIid —](#fillarraywithiid) | Wstawia identyfikator interfejsu określony przez bieżący parametr szablonu zerowego do określonego elementu tablicy. |
+| [Implementacje::CanCastTo](#cancastto)               | Pobiera wskaźnik do określonego interfejsu.                                                                    |
+| [Implementuje::CastToUnknown](#casttounknown)       | Pobiera wskaźnik do `IUnknown` interfejsu źródłowego.                                                        |
+| [Implementuje::FillArrayWithIid](#fillarraywithiid) | Wstawia identyfikator interfejsu określony przez bieżący parametr szablonu zerowego do określonego elementu tablicy. |
 
-### <a name="protected-constants"></a>Chronione stałe
+### <a name="protected-constants"></a>Stałe chronione
 
 | Nazwa                              | Opis                                    |
 | --------------------------------- | ---------------------------------------------- |
-| [Implementuje:: IidCount —](#iidcount) | Przechowuje liczbę zaimplementowanych identyfikatorów interfejsów. |
+| [Implementuje::IidCount](#iidcount) | Przechowuje liczbę zaimplementowanych identyfikatorów interfejsu. |
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -153,11 +153,11 @@ Każdy *I0* za pośrednictwem parametru interfejsu *i9* musi pochodzić od `IUnk
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** implementuje. h
+**Nagłówek:** implements.h
 
-**Przestrzeń nazw:** Microsoft:: WRL
+**Obszar nazw:** Microsoft::WRL
 
-## <a name="cancastto"></a>Implementuje:: CanCastTo —
+## <a name="implementscancastto"></a><a name="cancastto"></a>Implementacje::CanCastTo
 
 Pobiera wskaźnik do określonego interfejsu.
 
@@ -170,37 +170,37 @@ __forceinline HRESULT CanCastTo(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*<br/>
+*Riid*<br/>
 Odwołanie do identyfikatora interfejsu.
 
-*ppv*<br/>
-Jeśli to się powiedzie, wskaźnik do interfejsu określony przez *riid*.
+*Ppv*<br/>
+Jeśli się powiedzie, wskaźnik do interfejsu określonego przez *riid*.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-S_OK, jeśli się to powiedzie; w przeciwnym razie wartość HRESULT wskazuje błąd, taki jak E_NOINTERFACE.
+S_OK, jeśli się powiedzie; w przeciwnym razie HRESULT, który wskazuje błąd, takich jak E_NOINTERFACE.
 
 ### <a name="remarks"></a>Uwagi
 
-Jest to wewnętrzna funkcja pomocnicza, która wykonuje operację QueryInterface.
+Jest to wewnętrzna funkcja pomocnika, która wykonuje queryinterface operacji.
 
-## <a name="casttounknown"></a>Implementuje:: CastToUnknown —
+## <a name="implementscasttounknown"></a><a name="casttounknown"></a>Implementuje::CastToUnknown
 
-Pobiera wskaźnik do podstawowego interfejsu `IUnknown`.
+Pobiera wskaźnik do `IUnknown` interfejsu źródłowego.
 
 ```cpp
 __forceinline IUnknown* CastToUnknown();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ta operacja zawsze powiedzie się i zwróci wskaźnik `IUnknown`.
+Ta operacja zawsze powiedzie `IUnknown` się i zwraca wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
 
 Wewnętrzna funkcja pomocnika.
 
-## <a name="fillarraywithiid"></a>Implementuje:: FillArrayWithIid —
+## <a name="implementsfillarraywithiid"></a><a name="fillarraywithiid"></a>Implementuje::FillArrayWithIid
 
 Wstawia identyfikator interfejsu określony przez bieżący parametr szablonu zerowego do określonego elementu tablicy.
 
@@ -213,19 +213,19 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parametry
 
-*index*<br/>
-Indeks (liczony od zera) wskazujący początkowy element tablicy dla tej operacji. Po zakończeniu tej operacji *indeks* jest zwiększany o 1.
+*Indeks*<br/>
+Indeks od zera, który wskazuje początkowy element tablicy dla tej operacji. Po zakończeniu tej operacji *indeks* jest zwiększany o 1.
 
-*IID*<br/>
+*iids*<br/>
 Tablica typu IID.
 
 ### <a name="remarks"></a>Uwagi
 
 Wewnętrzna funkcja pomocnika.
 
-## <a name="iidcount"></a>Implementuje:: IidCount —
+## <a name="implementsiidcount"></a><a name="iidcount"></a>Implementuje::IidCount
 
-Przechowuje liczbę zaimplementowanych identyfikatorów interfejsów.
+Przechowuje liczbę zaimplementowanych identyfikatorów interfejsu.
 
 ```cpp
 static const unsigned long IidCount;

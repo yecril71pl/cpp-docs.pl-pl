@@ -8,24 +8,24 @@ helpviewer_keywords:
 - single document interface (SDI) [MFC], applications
 - MDI [MFC], vs. SDI
 ms.assetid: bb7239d9-4759-4f63-bfff-44a04b48c067
-ms.openlocfilehash: 725249e5a71e8ee097c641e5972e3cc8bb0e3e33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9730e7baf9589c4b05a60703c619aae2e941bdec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308539"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372757"
 ---
 # <a name="sdi-and-mdi"></a>SDI i MDI
 
-MFC sprawia, że proste w użyciu interfejs dokumentu pojedynczego (SDI) i aplikacje interfejsu wielu dokumentów (MDI).
+MFC ułatwia pracę z aplikacjami interfejsu pojedynczego dokumentu (SDI), jak i z interfejsem wielu dokumentów (MDI).
 
-Aplikacje SDI umożliwiają tylko jedno okno ramki w otwartym dokumencie naraz. Aplikacje MDI umożliwiają wielu dokumentów, okien ramowych były otwarte w tym samym wystąpieniu aplikacji. Aplikacja MDI oknem w ramach której MDI wiele okien podrzędnych, które same okna ramki, można otworzyć, każdy z nich zawiera oddzielny dokument. W niektórych aplikacjach okien podrzędnych może być różnych typów, takich jak wykres systemu windows i windows arkusza kalkulacyjnego. W takim przypadku na pasku menu można zmieniać oknami podrzędnymi MDI o różnych typach zostaną aktywowane.
+Aplikacje SDI zezwalają tylko na jedno otwarte okno ramki dokumentu naraz. Aplikacje MDI umożliwiają otwieranie wielu okien ramek dokumentu w tym samym wystąpieniu aplikacji. Aplikacja MDI ma okno, w którym można otworzyć wiele okien podrzędnych MDI, które są oknami ramki, z których każdy zawiera oddzielny dokument. W niektórych aplikacjach okna podrzędne mogą być różnych typów, takich jak okna wykresu i arkusza kalkulacyjnego. W takim przypadku pasek menu może ulec zmianie, ponieważ aktywowane są okna podrzędne MDI różnych typów.
 
 > [!NOTE]
->  W obszarze Windows 95 i nowszych aplikacje są często SDI ponieważ system operacyjny przyjęła widok "tematyka dokumentu".
+> W systemie Windows 95 lub nowszych aplikacje są powszechnie SDI, ponieważ system operacyjny przyjął widok "wyśrodkowany do dokumentu".
 
-Aby uzyskać więcej informacji, zobacz [dokumenty, widoki i struktura](../mfc/documents-views-and-the-framework.md).
+Aby uzyskać więcej informacji, zobacz [Dokumenty, Widoki i Ramy](../mfc/documents-views-and-the-framework.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Używanie klas do pisania aplikacji dla systemu Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

@@ -40,18 +40,18 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: 9ef6a06a4889119e39e72a9e495e5d4f9e17cf56
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 82d8f1da0640e5b487a06585c72279e7d7ffdf99
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505154"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369643"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Klasa CMFCOutlookBarPane
 
-Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w folderze **VC\\atlmfc\\src\\MFC** instalacji programu Visual Studio.
+Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w folderze **vc\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
 
-Kontrolka pochodna [klasy CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) , którą można wstawić do paska programu Outlook ( [Klasa CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)). Okienko pasek programu Outlook zawiera kolumnę dużych przycisków. Użytkownik może przewijać listę przycisków w górę i w dół, jeśli jest większa niż w okienku. Gdy użytkownik odłączy okienko pasek programu Outlook z paska programu Outlook, może przepływać lub zadokować w oknie głównej ramki.
+Formant pochodzący z [cmfctoolbar klasy,](../../mfc/reference/cmfctoolbar-class.md) które mogą być wstawiane do paska programu Outlook ( [CMFCOutlookBar Klasy](../../mfc/reference/cmfcoutlookbar-class.md)). Okienko paska programu Outlook zawiera kolumnę dużych przycisków. Użytkownik może przewijać listę przycisków w górę i w dół, jeśli jest on większy niż okienko. Gdy użytkownik odłącza okienko paska programu Outlook od paska programu Outlook, może ono unosić się w powietrzu lub dokować w oknie ramki głównej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -65,82 +65,82 @@ class CMFCOutlookBarPane : public CMFCToolBar
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CMFCOutlookBarPane::CMFCOutlookBarPane`|Konstruktor domyślny.|
-|`CMFCOutlookBarPane::~CMFCOutlookBarPane`|Destruktor.|
+|`CMFCOutlookBarPane::CMFCOutlookBarPane`|Domyślny konstruktor.|
+|`CMFCOutlookBarPane::~CMFCOutlookBarPane`|Destruktora.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCOutlookBarPane:: AddButton](#addbutton)|Dodaje przycisk do okienka paska Outlook.|
-|[CMFCOutlookBarPane::CanBeAttached](#canbeattached)|Określa, czy okienko może być zadokowane do innego okienka lub okna ramki. (Przesłania [CBasePane:: CanBeAttached](../../mfc/reference/cbasepane-class.md#canbeattached).)|
-|`CMFCOutlookBarPane::CanBeRestored`|Określa, czy system może przywrócić oryginalny stan paska narzędzi po dostosowaniu. (Przesłania [CMFCToolBar:: CanBeRestored](../../mfc/reference/cmfctoolbar-class.md#canberestored).)|
-|[CMFCOutlookBarPane:: ClearAll](#clearall)|Zwalnia zasoby używane przez obrazy w okienku paska programu Outlook.|
-|[CMFCOutlookBarPane:: Create](#create)|Tworzy okienko paska Outlook.|
-|`CMFCOutlookBarPane::CreateObject`|Używane przez platformę do tworzenia wystąpienia dynamicznego tego typu klasy.|
-|`CMFCOutlookBarPane::Dock`|Wywoływane przez platformę, aby zadokować okienko paska programu Outlook. (Przesłania `CPane::Dock`).|
-|[CMFCOutlookBarPane::EnablePageScrollMode](#enablepagescrollmode)|Określa, czy strzałki przewijania w okienku Pasek programu Outlook zaawansowaną listę przycisków według strony, czy za pomocą przycisku.|
-|[CMFCOutlookBarPane::GetRegularColor](#getregularcolor)|Zwraca zwykły (niewybrany) kolor tekstu okienka paska Outlook.|
-|`CMFCOutlookBarPane::GetThisClass`|Używane przez platformę do uzyskania wskaźnika do obiektu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , który jest skojarzony z tym typem klasy.|
-|[CMFCOutlookBarPane::IsBackgroundTexture](#isbackgroundtexture)|Określa, czy dla okienka paska programu Outlook jest załadowany obraz tła.|
+|[CMFCOutlookBarPane::AddButton](#addbutton)|Dodaje przycisk do okienka paska programu Outlook.|
+|[CMFCOutlookBarPane::CanBeAttached](#canbeattached)|Określa, czy okienko można zadokować do innego okienka lub okna ramki. (Zastępuje [CBasePane::CanBeAttached](../../mfc/reference/cbasepane-class.md#canbeattached).)|
+|`CMFCOutlookBarPane::CanBeRestored`|Określa, czy system może przywrócić pasek narzędzi do stanu pierwotnego po dostosowaniu. (Zastępuje [CMFCToolBar::CanBeRestored](../../mfc/reference/cmfctoolbar-class.md#canberestored).)|
+|[CMFCOutlookBarPane::ClearAll](#clearall)|Zwalnia zasoby używane przez obrazy w okienku paska programu Outlook.|
+|[CMFCOutlookBarPane::Utwórz](#create)|Tworzy okienko paska programu Outlook.|
+|`CMFCOutlookBarPane::CreateObject`|Używany przez platformę do tworzenia dynamicznego wystąpienia tego typu klasy.|
+|`CMFCOutlookBarPane::Dock`|Wywoływane przez platformę do zadokowania okienka paska programu Outlook. (Przesłania `CPane::Dock`).|
+|[CMFCOutlookBarPane::EnablePageScrollMode](#enablepagescrollmode)|Określa, czy strzałki przewijania w okienku paska programu Outlook przesuwają listę przycisków według strony, czy przycisku.|
+|[CMFCOutlookBarPane::GetRegularColor](#getregularcolor)|Zwraca zwykły (niewykończalne) kolor tekstu okienka paska programu Outlook.|
+|`CMFCOutlookBarPane::GetThisClass`|Używany przez platformę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tego typu klasy.|
+|[CMFCOutlookBarPane::IsBackgroundTexture](#isbackgroundtexture)|Określa, czy dla okienka paska programu Outlook jest ładowany obraz tła.|
 |`CMFCOutlookBarPane::IsChangeState`|Określa, czy okienko przestawne może być zadokowane. (Przesłania `CPane::IsChangeState`).|
-|[CMFCOutlookBarPane::IsDrawShadedHighlight](#isdrawshadedhighlight)|Określa, czy obramowanie przycisku ma zostać zacieniowane, gdy przycisk zostanie wyróżniony i wyświetlany jest obraz tła.|
-|`CMFCOutlookBarPane::OnBeforeFloat`|Wywoływane przez platformę, gdy okienko będzie miało wartość zmiennoprzecinkową. (Przesłania [CPane:: OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat).)|
-|[CMFCOutlookBarPane::RemoveButton](#removebutton)|Usuwa przycisk, który ma określony identyfikator polecenia.|
-|`CMFCOutlookBarPane::RestoreOriginalstate`|Przywraca oryginalny stan paska narzędzi. (Przesłania [CMFCToolBar:: RestoreOriginalState](../../mfc/reference/cmfctoolbar-class.md#restoreoriginalstate).)|
+|[CMFCOutlookBarPane::IsDrawShadedHighlight](#isdrawshadedhighlight)|Określa, czy obramowanie przycisku jest zacieniowane po podświetleniu przycisku i wyświetleniu obrazu tła.|
+|`CMFCOutlookBarPane::OnBeforeFloat`|Wywoływana przez platformę, gdy okienko ma się unosić. (Zastępuje [CPane::OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat).)|
+|[CMFCOutlookBarPane::Usuńbutton](#removebutton)|Usuwa przycisk o określonym identyfikatorze polecenia.|
+|`CMFCOutlookBarPane::RestoreOriginalstate`|Przywraca oryginalny stan paska narzędzi. (Zastępuje [CMFCToolBar::RestoreOriginalState](../../mfc/reference/cmfctoolbar-class.md#restoreoriginalstate).)|
 |[CMFCOutlookBarPane::SetBackColor](#setbackcolor)|Ustawia kolor tła.|
 |[CMFCOutlookBarPane::SetBackImage](#setbackimage)|Ustawia obraz tła.|
 |[CMFCOutlookBarPane::SetDefaultState](#setdefaultstate)|Resetuje okienko paska programu Outlook do oryginalnego zestawu przycisków.|
-|[CMFCOutlookBarPane::SetExtraSpace](#setextraspace)|Ustawia liczbę pikseli wypełnienia użytą wokół przycisków w okienku paska Outlook.|
-|[CMFCOutlookBarPane::SetTextColor](#settextcolor)|Ustawia kolory regularnego i wyróżnionego tekstu w okienku paska programu Outlook.|
-|[CMFCOutlookBarPane::SetTransparentColor](#settransparentcolor)|Ustawia przezroczysty kolor okienka paska programu Outlook.|
-|`CMFCOutlookBarPane::SmartUpdate`|Używane wewnętrznie do aktualizowania paska Outlook. (Przesłania `CMFCToolBar::SmartUpdate`).|
+|[CMFCOutlookBarPane::SetExtraSpace](#setextraspace)|Ustawia liczbę pikseli dopełnienia używanych wokół przycisków w okienku paska programu Outlook.|
+|[CMFCOutlookBarPane::SetTextColor](#settextcolor)|Ustawia kolory zwykłego i wyróżnionego tekstu w okienku paska programu Outlook.|
+|[CMFCOutlookBarPane::SetTransparentColor](#settransparentcolor)|Ustawia kolor przezroczysty okienka paska programu Outlook.|
+|`CMFCOutlookBarPane::SmartUpdate`|Używane wewnętrznie do aktualizowania paska programu Outlook. (Przesłania `CMFCToolBar::SmartUpdate`).|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[CMFCOutlookBarPane::EnableContextMenuItems](#enablecontextmenuitems)|Określa, które elementy menu skrótów są wyświetlane w trybie dostosowywania.|
-|[CMFCOutlookBarPane::RemoveAllButtons](#removeallbuttons)|Usuwa wszystkie przyciski z okienka pasek programu Outlook. (Przesłania [CMFCToolBar:: RemoveAllButtons](../../mfc/reference/cmfctoolbar-class.md#removeallbuttons).)|
+|[CMFCOutlookBarPane::Usuń WszystkieButtony](#removeallbuttons)|Usuwa wszystkie przyciski z okienka paska programu Outlook. (Zastępuje [CMFCToolBar::RemoveAllButtons](../../mfc/reference/cmfctoolbar-class.md#removeallbuttons).)|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać informacje na temat implementowania paska programu Outlook, zobacz [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).
+Aby uzyskać informacje dotyczące sposobu zaimplementowania paska programu Outlook, zobacz [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).
 
-Przykład paska programu Outlook można znaleźć w przykładowym projekcie OutlookDemo.
+Na przykład paska programu Outlook zobacz przykładowy projekt Programu OutlookDemo.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak używać różnych metod `CMFCOutlookBarPane` klasy. W przykładzie pokazano, jak utworzyć okienko paska programu Outlook, włączyć tryb przewijania strony, włączyć dokowanie i ustawić kolor tła paska Outlook. Ten fragment kodu jest częścią [przykładu wiele widoków programu Outlook](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie pokazano, jak `CMFCOutlookBarPane` używać różnych metod klasy. W przykładzie pokazano, jak utworzyć okienko paska programu Outlook, włączyć tryb przewijania strony, włączyć dokowanie i ustawić kolor tła paska programu Outlook. Ten fragment kodu jest częścią [przykładu Outlook Multi Views](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#4](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_2.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CBasePane](../../mfc/reference/cbasepane-class.md)
+[Panel CBasePane](../../mfc/reference/cbasepane-class.md)
 
-[CPane](../../mfc/reference/cpane-class.md)
+[Cpane](../../mfc/reference/cpane-class.md)
 
 [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
 
-[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
+[Cmfctoolbar](../../mfc/reference/cmfctoolbar-class.md)
 
-[CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md)
+[Panel CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxoutlookbarpane. h
+**Nagłówek:** afxoutlookbarpane.h
 
-##  <a name="addbutton"></a>CMFCOutlookBarPane:: AddButton
+## <a name="cmfcoutlookbarpaneaddbutton"></a><a name="addbutton"></a>CMFCOutlookBarPane::AddButton
 
-Dodaje przycisk do okienka paska Outlook.
+Dodaje przycisk do okienka paska programu Outlook.
 
 ```
 BOOL AddButton(
@@ -178,47 +178,47 @@ BOOL AddButton(
 ### <a name="parameters"></a>Parametry
 
 *uiImage*<br/>
-podczas Określa identyfikator zasobu mapy bitowej.
+[w] Określa identyfikator zasobu mapy bitowej.
 
-*lpszLabel*<br/>
-podczas Określa tekst przycisku.
+*lpszLabel (lpszLabel)*<br/>
+[w] Określa tekst przycisku.
 
 *iIdCommand*<br/>
-podczas Określa identyfikator kontrolki przycisku.
+[w] Określa identyfikator formantu przycisku.
 
-*iInsertAt*<br/>
-podczas Określa indeks (liczony od zera) na stronie paska programu Outlook, w której ma zostać wstawiony przycisk.
+*iInsertAt (Właso)*<br/>
+[w] Określa indeks oparty na wartości zero na stronie paska programu Outlook, na którym ma być wstawiony przycisk.
 
-*uiLabel*<br/>
-podczas Identyfikator zasobu ciągu.
+*uiLabel (polski)*<br/>
+[w] Identyfikator zasobu ciągu.
 
 *szBmpFileName*<br/>
-podczas Określa nazwę pliku obrazu dysku do załadowania.
+[w] Określa nazwę pliku obrazu dysku do załadowania.
 
-*szLabel*<br/>
-podczas Określa tekst przycisku.
+*SzLabel (szLabel)*<br/>
+[w] Określa tekst przycisku.
 
-*hBmp*<br/>
-podczas Uchwyt mapy bitowej przycisku.
+*hBmp (wł.)*<br/>
+[w] Uchwyt do mapy bitowej przycisku.
 
-*hIcon*<br/>
-podczas Uchwyt ikony przycisków.
+*hIcon (własówce)*<br/>
+[w] Uchwyt do ikony przycisków.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli przycisk został pomyślnie dodany; w przeciwnym razie FALSE.
+PRAWDA, jeśli przycisk został dodany pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody, aby wstawić nowy przycisk do strony paska programu Outlook. Obraz przycisku można załadować z zasobów aplikacji lub z pliku dyskowego.
+Ta metoda służy do wstawiania nowego przycisku do strony paska programu Outlook. Obraz przycisku można załadować z zasobów aplikacji lub z pliku dysku.
 
-Jeśli identyfikator strony określony przez *uiPageID* ma wartość-1, przycisk zostanie wstawiony do pierwszej strony.
+Jeśli identyfikator strony określony przez *uiPageID* wynosi -1, przycisk zostanie wstawiony do pierwszej strony.
 
-Jeśli indeks określony przez *iInsertAt* ma wartość-1, przycisk zostanie dodany na końcu strony.
+Jeśli indeks określony przez *iInsertAt* jest -1, przycisk jest dodawany na końcu strony.
 
-##  <a name="canbeattached"></a>CMFCOutlookBarPane::CanBeAttached
+## <a name="cmfcoutlookbarpanecanbeattached"></a><a name="canbeattached"></a>CMFCOutlookBarPane::CanBeAttached
 
-Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w folderze **VC\\atlmfc\\src\\MFC** instalacji programu Visual Studio.
+Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w folderze **vc\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
 
 ```
 virtual BOOL CanBeAttached() const;
@@ -228,7 +228,7 @@ virtual BOOL CanBeAttached() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="clearall"></a>CMFCOutlookBarPane:: ClearAll
+## <a name="cmfcoutlookbarpaneclearall"></a><a name="clearall"></a>CMFCOutlookBarPane::ClearAll
 
 Zwalnia zasoby używane przez obrazy w okienku paska programu Outlook.
 
@@ -238,11 +238,11 @@ void ClearAll();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda bezpośrednio wywołuje [CMFCToolBarImages:: Clear](../../mfc/reference/cmfctoolbarimages-class.md#clear), który jest wywoływany na obrazach używanych przez okienko paska programu Outlook.
+Ta metoda bezpośrednio wywołuje [CMFCToolBarImages::Clear](../../mfc/reference/cmfctoolbarimages-class.md#clear), który jest wywoływany na obrazach, które są używane przez okienko paska programu Outlook.
 
-##  <a name="create"></a>CMFCOutlookBarPane:: Create
+## <a name="cmfcoutlookbarpanecreate"></a><a name="create"></a>CMFCOutlookBarPane::Utwórz
 
-Tworzy okienko paska Outlook.
+Tworzy okienko paska programu Outlook.
 
 ```
 virtual BOOL Create(
@@ -255,28 +255,28 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *pParentWnd*<br/>
-podczas Określa okno nadrzędne kontrolki okienka paska Outlook. Nie może mieć wartości NULL.
+[w] Określa okno nadrzędne formantu paska programu Outlook. Nie może być null.
 
-*dwStyle*<br/>
-podczas Styl okna.  Aby uzyskać listę stylów okna, zobacz [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+*Dwstyle*<br/>
+[w] Styl okna.  Aby uzyskać listę stylów okien, zobacz [Style okien](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*uiID*<br/>
-podczas Identyfikator formantu. Musi być unikatowa, aby umożliwić zapisanie stanu formantu.
+*Uiid*<br/>
+[w] Identyfikator sterowania. Musi być unikatowy, aby umożliwić zapisywanie stanu formantu.
 
-*dwControlBarStyle*<br/>
-podczas Określa specjalne style, które definiują zachowanie kontrolki okienka paska Outlook, gdy jest ona odłączona od paska Outlook.
+*styl dwControlBarStyle*<br/>
+[w] Określa specjalne style definiujące zachowanie formantu paska programu Outlook po odłączeniu go od paska programu Outlook.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli metoda zakończyła się pomyślnie. w przeciwnym razie FALSE.
+PRAWDA, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby skonstruować `CMFCOutlookBarPane` obiekt, najpierw Wywołaj konstruktora, a następnie Wywołaj `Create`, który tworzy formant okienka paska programu Outlook i `CMFCOutlookBarPane` dołącza go do obiektu.
+Aby skonstruować `CMFCOutlookBarPane` obiekt, najpierw należy wywołać `Create`konstruktora, a następnie wywołać , `CMFCOutlookBarPane` który tworzy kontrolkę okienka paska programu Outlook i dołącza go do obiektu.
 
-Aby uzyskać więcej informacji `dwControlBarStyle` na temat, zobacz [CBasePane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
+Aby uzyskać `dwControlBarStyle` więcej informacji na temat zobacz [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-##  <a name="enablecontextmenuitems"></a>CMFCOutlookBarPane::EnableContextMenuItems
+## <a name="cmfcoutlookbarpaneenablecontextmenuitems"></a><a name="enablecontextmenuitems"></a>CMFCOutlookBarPane::EnableContextMenuItems
 
 Określa, które elementy menu skrótów są wyświetlane w trybie dostosowywania.
 
@@ -288,28 +288,28 @@ virtual BOOL EnableContextMenuItems(
 
 ### <a name="parameters"></a>Parametry
 
-*pButton*<br/>
-podczas Wskaźnik do przycisku paska narzędzi, który został kliknięty przez użytkownika.
+*pButton (przycisk)*<br/>
+[w] Wskaźnik do przycisku paska narzędzi kliknięty przez użytkownika.
 
 *pPopup*<br/>
-podczas Wskaźnik do menu skrótów.
+[w] Wskaźnik do menu skrótów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE, jeśli menu skrótów powinno być wyświetlane; w przeciwnym razie FALSE.
+Zwraca wartość PRAWDA, jeśli powinno być wyświetlane menu skrótów; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę, aby zmodyfikować standardowe menu skrótów platformy wyświetlane w trybie dostosowywania.
+Zastąd w tej metodzie należy zmodyfikować standardowe menu skrótów struktury wyświetlane w trybie dostosowywania.
 
-Domyślna implementacja sprawdza tryb dostosowywania ( [CMFCToolBar::](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)iscustomizationmode) i jeśli ma wartość true, wyłącza wszystkie elementy menu skrótów z wyjątkiem **usuwania**. Następnie po prostu przekazuje parametry wejściowe do `CMFCToolBar::EnableContextMenuItems`programu.
+Domyślna implementacja sprawdza tryb dostosowywania ( [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)), a jeśli jest ustawiona na WARTOŚĆ TRUE, wyłącza wszystkie elementy menu skrótów z wyjątkiem **Usuń**. Następnie po prostu przekazuje parametry `CMFCToolBar::EnableContextMenuItems`wejściowe do .
 
 > [!NOTE]
 > *Menu kontekstowe* jest synonimem menu skrótów.
 
-##  <a name="enablepagescrollmode"></a>CMFCOutlookBarPane::EnablePageScrollMode
+## <a name="cmfcoutlookbarpaneenablepagescrollmode"></a><a name="enablepagescrollmode"></a>CMFCOutlookBarPane::EnablePageScrollMode
 
-Określa, czy strzałki przewijania w okienku Pasek programu Outlook zaawansowaną listę przycisków na stronie lub przycisk po przycisku.
+Określa, czy strzałki przewijania w okienku paska programu Outlook przesuwają listę przycisków strona po stronie, czy przycisk po.
 
 ```
 void EnablePageScrollMode(BOOL bPageScroll=TRUE);
@@ -317,12 +317,12 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bPageScroll*<br/>
-podczas W przypadku wartości TRUE Włącz tryb przewijania strony. W przypadku wartości FALSE Wyłącz tryb przewijania strony.
+*bPageScroll (StronaScroll)*<br/>
+[w] Jeśli true, włącz tryb przewijania strony. Jeśli FAŁSZ, wyłącz tryb przewijania strony.
 
-##  <a name="getregularcolor"></a>CMFCOutlookBarPane::GetRegularColor
+## <a name="cmfcoutlookbarpanegetregularcolor"></a><a name="getregularcolor"></a>CMFCOutlookBarPane::GetRegularColor
 
-Zwraca zwykły kolor tekstu (czyli niewybrany) okienka paska Outlook.
+Zwraca zwykły (czyli nieoczyszty) kolor tekstu okienka paska programu Outlook.
 
 ```
 DECLARE_MESSAGE_MAPCOLORREF GetRegularColor() const;
@@ -334,11 +334,11 @@ Bieżący kolor tekstu jako wartość koloru RGB.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj [CMFCOutlookBarPane:: SetTextColor](#settextcolor) , aby ustawić bieżący (normalny i wybrany) kolor tekstu paska Outlook. Możesz uzyskać domyślny kolor tekstu, wywołując funkcję [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor) z indeksem COLOR_WINDOW.
+Użyj [polecenia CMFCOutlookBarPane::SetTextColor,](#settextcolor) aby ustawić bieżący (zwykły i zaznaczony) kolor tekstu paska programu Outlook. Domyślny kolor tekstu można uzyskać, wywołując funkcję [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor) z indeksem COLOR_WINDOW.
 
-##  <a name="isbackgroundtexture"></a>CMFCOutlookBarPane::IsBackgroundTexture
+## <a name="cmfcoutlookbarpaneisbackgroundtexture"></a><a name="isbackgroundtexture"></a>CMFCOutlookBarPane::IsBackgroundTexture
 
-Określa, czy dla okienka paska programu Outlook jest załadowany obraz tła.
+Określa, czy dla okienka paska programu Outlook jest ładowany obraz tła.
 
 ```
 BOOL IsBackgroundTexture() const;
@@ -346,17 +346,17 @@ BOOL IsBackgroundTexture() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli jest wyświetlany obraz tła; w przeciwnym razie FALSE.
+PRAWDA, jeśli do wyświetlenia jest obraz tła; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Obraz tła można dodać, wywołując funkcję [CMFCOutlookBarPane:: SetBackImage](#setbackimage) .
+Obraz tła można dodać, wywołując funkcję [CMFCOutlookBarPane::SetBackImage.](#setbackimage)
 
-Jeśli nie ma obrazu tła, tło jest rysowane przy użyciu koloru określonego za pomocą [CMFCOutlookBarPane:: SetBackColor](#setbackcolor).
+Jeśli nie ma obrazu tła, tło jest malowane kolorem określonym przy użyciu [cmfcoutlookBarPane::SetBackColor](#setbackcolor).
 
-##  <a name="isdrawshadedhighlight"></a>CMFCOutlookBarPane::IsDrawShadedHighlight
+## <a name="cmfcoutlookbarpaneisdrawshadedhighlight"></a><a name="isdrawshadedhighlight"></a>CMFCOutlookBarPane::IsDrawShadedHighlight
 
-Określa, czy obramowanie przycisku ma zostać zacieniowane, gdy przycisk zostanie wyróżniony i wyświetlany jest obraz tła.
+Określa, czy obramowanie przycisku jest zacieniowane po podświetleniu przycisku i wyświetleniu obrazu tła.
 
 ```
 BOOL IsDrawShadedHighlight() const;
@@ -366,17 +366,17 @@ BOOL IsDrawShadedHighlight() const;
 
 PRAWDA, jeśli obramowania przycisku są zacieniowane; w przeciwnym razie FALSE.
 
-##  <a name="removeallbuttons"></a>CMFCOutlookBarPane::RemoveAllButtons
+## <a name="cmfcoutlookbarpaneremoveallbuttons"></a><a name="removeallbuttons"></a>CMFCOutlookBarPane::Usuń WszystkieButtony
 
-Usuwa wszystkie przyciski z okienka pasek programu Outlook.
+Usuwa wszystkie przyciski z okienka paska programu Outlook.
 
 ```
 virtual void RemoveAllButtons();
 ```
 
-##  <a name="removebutton"></a>CMFCOutlookBarPane::RemoveButton
+## <a name="cmfcoutlookbarpaneremovebutton"></a><a name="removebutton"></a>CMFCOutlookBarPane::Usuńbutton
 
-Usuwa przycisk, który ma określony identyfikator polecenia.
+Usuwa przycisk o określonym identyfikatorze polecenia.
 
 ```
 BOOL RemoveButton(UINT iIdCommand);
@@ -385,15 +385,15 @@ BOOL RemoveButton(UINT iIdCommand);
 ### <a name="parameters"></a>Parametry
 
 *iIdCommand*<br/>
-podczas Określa identyfikator polecenia przycisku do usunięcia.
+[w] Określa identyfikator polecenia przycisku do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli przycisk został pomyślnie usunięty; Wartość FALSE, jeśli określony identyfikator polecenia jest nieprawidłowy.
+PRAWDA, jeśli przycisk został pomyślnie usunięty; FAŁSZ, jeśli określony identyfikator polecenia jest nieprawidłowy.
 
-##  <a name="setbackcolor"></a>CMFCOutlookBarPane::SetBackColor
+## <a name="cmfcoutlookbarpanesetbackcolor"></a><a name="setbackcolor"></a>CMFCOutlookBarPane::SetBackColor
 
-Ustawia kolor tła paska Outlook.
+Ustawia kolor tła paska programu Outlook.
 
 ```
 void SetBackColor(COLORREF color);
@@ -401,14 +401,14 @@ void SetBackColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Kolor*<br/>
-podczas Określa nowy kolor tła.
+*color*<br/>
+[w] Określa nowy kolor tła.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby ustawić bieżący kolor tła paska Outlook. Kolor tła jest używany tylko wtedy, gdy nie ma obrazu tła.
+Wywołanie tej funkcji, aby ustawić bieżący kolor tła dla paska programu Outlook. Kolor tła jest używany tylko wtedy, gdy nie ma obrazu tła.
 
-##  <a name="setbackimage"></a>CMFCOutlookBarPane::SetBackImage
+## <a name="cmfcoutlookbarpanesetbackimage"></a><a name="setbackimage"></a>CMFCOutlookBarPane::SetBackImage
 
 Ustawia obraz tła.
 
@@ -419,13 +419,13 @@ void SetBackImage(UINT uiImageID);
 ### <a name="parameters"></a>Parametry
 
 *uiImageID*<br/>
-podczas Określa identyfikator zasobu obrazu.
+[w] Określa identyfikator zasobu obrazu.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę metodę, aby ustawić obraz tła paska programu Outlook. Lista obrazów tła jest zarządzana przez osadzony obiekt [klasy CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) .
+Wywołanie tej metody, aby ustawić obraz tła paska programu Outlook. Lista obrazów tła jest zarządzana przez osadzony obiekt [klasy CMFCToolBarImages.](../../mfc/reference/cmfctoolbarimages-class.md)
 
-##  <a name="setdefaultstate"></a>CMFCOutlookBarPane::SetDefaultState
+## <a name="cmfcoutlookbarpanesetdefaultstate"></a><a name="setdefaultstate"></a>CMFCOutlookBarPane::SetDefaultState
 
 Resetuje okienko paska programu Outlook do oryginalnego zestawu przycisków.
 
@@ -435,19 +435,19 @@ void SetDefaultState();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda przywraca oryginalny zestaw przycisków paska programu Outlook. Ta metoda jest taka `CMFCOutlookBarPane::RestoreOriginalstate`sama jak, z tą różnicą, że nie wyzwala ponownego rysowania okienka paska programu Outlook.
+Ta metoda przywraca przyciski paska programu Outlook do oryginalnego zestawu. Ta metoda `CMFCOutlookBarPane::RestoreOriginalstate`jest podobna , z tą różnicą, że nie wyzwala ponownego rysowania okienka paska programu Outlook.
 
-##  <a name="setextraspace"></a>CMFCOutlookBarPane::SetExtraSpace
+## <a name="cmfcoutlookbarpanesetextraspace"></a><a name="setextraspace"></a>CMFCOutlookBarPane::SetExtraSpace
 
-Ustawia liczbę pikseli wypełnienia użytą wokół przycisków w okienku paska Outlook.
+Ustawia liczbę pikseli dopełnienia używanych wokół przycisków w okienku paska programu Outlook.
 
 ```
 void SetExtraSpace()
 ```
 
-##  <a name="settextcolor"></a>CMFCOutlookBarPane::SetTextColor
+## <a name="cmfcoutlookbarpanesettextcolor"></a><a name="settextcolor"></a>CMFCOutlookBarPane::SetTextColor
 
-Ustawia kolory regularnego i wyróżnionego tekstu w okienku paska programu Outlook.
+Ustawia kolory zwykłego i wyróżnionego tekstu w okienku paska programu Outlook.
 
 ```
 void SetTextColor(
@@ -457,15 +457,15 @@ void SetTextColor(
 
 ### <a name="parameters"></a>Parametry
 
-*clrRegText*<br/>
-podczas Określa nowy kolor dla niezaznaczonego tekstu.
+*clrRegText (tekst clrRegText)*<br/>
+[w] Określa nowy kolor nie zaznaczonego tekstu.
 
-*clrSelText*<br/>
-podczas Określa nowy kolor zaznaczonego tekstu.
+*tekst clrSel*<br/>
+[w] Określa nowy kolor zaznaczonego tekstu.
 
-##  <a name="settransparentcolor"></a>CMFCOutlookBarPane::SetTransparentColor
+## <a name="cmfcoutlookbarpanesettransparentcolor"></a><a name="settransparentcolor"></a>CMFCOutlookBarPane::SetTransparentColor
 
-Ustawia przezroczysty kolor okienka paska programu Outlook.
+Ustawia kolor przezroczysty okienka paska programu Outlook.
 
 ```
 void SetTransparentColor(COLORREF color);
@@ -473,14 +473,14 @@ void SetTransparentColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametry
 
-*Kolor*<br/>
+*color*<br/>
 Określa nowy kolor przezroczysty.
 
 ### <a name="remarks"></a>Uwagi
 
-Kolor przezroczysty jest wymagany do wyświetlania przezroczystych obrazów. Wszystkie wystąpienia tego koloru w obrazie są rysowane kolorem tła.  Nie istnieje mieszanie obrazów tła i pierwszego planu.
+Do wyświetlania przezroczystych obrazów wymagany jest kolor przezroczysty. Każde wystąpienie tego koloru na obrazie jest malowane kolorem tła.  Nie ma mieszania obrazów tła i pierwszego planu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

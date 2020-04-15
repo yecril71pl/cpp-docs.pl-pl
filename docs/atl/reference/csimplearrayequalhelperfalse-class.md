@@ -1,5 +1,5 @@
 ---
-title: CSimpleArrayEqualHelperFalse Class
+title: Klasa CSimpleArrayEqualHelperFalse
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleArrayEqualHelperFalse
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArrayEqualHelperFalse class
 ms.assetid: 6918af6f-d23d-49eb-8482-c44272f5ffeb
-ms.openlocfilehash: 35207fdcbffc0e0367d86682b5f731eef617d761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5eca3145d64895e34b599fbf83834af142b65973
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277958"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330895"
 ---
-# <a name="csimplearrayequalhelperfalse-class"></a>CSimpleArrayEqualHelperFalse Class
+# <a name="csimplearrayequalhelperfalse-class"></a>Klasa CSimpleArrayEqualHelperFalse
 
-Ta klasa jest pomocnika dla [CSimpleArray](../../atl/reference/csimplearray-class.md) klasy.
+Ta klasa jest pomocnikiem dla [CSimpleArray](../../atl/reference/csimplearray-class.md) klasy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,7 +29,7 @@ class CSimpleArrayEqualHelperFalse
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Klasy pochodnej.
+Klasa pochodna.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -37,17 +37,17 @@ Klasy pochodnej.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSimpleArrayEqualHelperFalse::IsEqual](#isequal)|(Statyczny) Zwraca wartość false.|
+|[CSimpleArrayEqualHelperFalse::IsEqual](#isequal)|(Statyczne) Zwraca wartość false.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa cech jest uzupełnieniem `CSimpleArray` klasy. IT zawsze zwraca wartość false, a ponadto wywoła `ATLASSERT` z nieprawidłowym argumentem wartość false, jeśli nigdy nie jest wywoływany. W sytuacjach, w którym testu równości nie jest wystarczająco zdefiniowana ta klasa umożliwia tablica zawierająca elementy, aby działać prawidłowo w przypadku większości metod, ale nie działać w sposób dobrze zdefiniowanych dla metod, które są zależne od porównań, takich jak [CSimpleArray:: Znajdź](../../atl/reference/csimplearray-class.md#find).
+Ta klasa cech jest uzupełnieniem `CSimpleArray` klasy. Zawsze zwraca false, a ponadto `ATLASSERT` wywoła argument false, jeśli kiedykolwiek odwołuje się. W sytuacjach, gdy test równości nie jest wystarczająco zdefiniowany, ta klasa umożliwia tablicy zawierającej elementy działać poprawnie dla większości metod, ale nie w sposób dobrze zdefiniowany dla metod, które zależą od porównań, takich jak [CSimpleArray::Find](../../atl/reference/csimplearray-class.md#find).
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlsimpcoll.h
 
-##  <a name="isequal"></a>  CSimpleArrayEqualHelperFalse::IsEqual
+## <a name="csimplearrayequalhelperfalseisequal"></a><a name="isequal"></a>CSimpleArrayEqualHelperFalse::IsEqual
 
 Zwraca wartość false.
 
@@ -61,9 +61,9 @@ Zwraca wartość false.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zawsze zwraca wartość false i wywoła `ATLASSERT` z nieprawidłowym argumentem false, jeśli przywoływany. Celem `CSimpleArrayEqualHelperFalse::IsEqual` jest wymuszenie metod, które się nie powieść w dobrze zdefiniowany sposób w przypadku równości testy nie zostały odpowiednio zdefiniowane za pomocą porównania.
+Ta metoda zawsze zwraca false `ATLASSERT` i wywoła argument false, jeśli odwołuje się. Celem jest `CSimpleArrayEqualHelperFalse::IsEqual` wymuszenie użycia porównań w sposób dobrze zdefiniowany, gdy testy równości nie zostały odpowiednio zdefiniowane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

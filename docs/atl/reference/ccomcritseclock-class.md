@@ -1,5 +1,5 @@
 ---
-title: CComCritSecLock Class
+title: Klasa CComCritSecLock
 ms.date: 11/04/2016
 f1_keywords:
 - CComCritSecLock
@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-ms.openlocfilehash: 045e64504707fa8978c8236b376037d9f57bf12c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24d141c5b0ec703feadcd7db96da33f9de940dda
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259810"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327948"
 ---
-# <a name="ccomcritseclock-class"></a>CComCritSecLock Class
+# <a name="ccomcritseclock-class"></a>Klasa CComCritSecLock
 
-Ta klasa dostarcza metody do blokowanie i odblokowywanie obiektu sekcję krytyczną.
+Ta klasa zawiera metody blokowania i odblokowywania obiektu sekcji krytycznej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,8 +29,8 @@ template<class TLock> class CComCritSecLock
 
 #### <a name="parameters"></a>Parametry
 
-*TLock*<br/>
-Obiekt, który może zostać zablokowany i odblokować.
+*TLock (śluza)*<br/>
+Obiekt, który ma być zablokowany i odblokowany.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -45,18 +45,18 @@ Obiekt, który może zostać zablokowany i odblokować.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComCritSecLock::Lock](#lock)|Wywołaj tę metodę można zablokować obiektu sekcję krytyczną.|
-|[CComCritSecLock::Unlock](#unlock)|Wywołaj tę metodę w celu odblokowania obiektu sekcję krytyczną.|
+|[CComCritSecLock::Lock](#lock)|Wywołanie tej metody, aby zablokować obiekt sekcji krytycznej.|
+|[CComCritSecLock::Odblokuj](#unlock)|Wywołanie tej metody, aby odblokować obiekt sekcji krytycznej.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa umożliwia blokowanie i odblokowywanie obiektów w bezpieczniejszy sposób niż przy użyciu [klasa CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) lub [klasa CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md).
+Ta klasa służy do blokowania i odblokowywania obiektów w bezpieczniejszy sposób niż w [przypadku klasy CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) lub [CComAutoCriticalSection Class](../../atl/reference/ccomautocriticalsection-class.md).
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlbase.h
 
-##  <a name="ctor"></a>  CComCritSecLock::CComCritSecLock
+## <a name="ccomcritseclockccomcritseclock"></a><a name="ctor"></a>CComCritSecLock::CComCritSecLock
 
 Konstruktor.
 
@@ -66,17 +66,17 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 
 ### <a name="parameters"></a>Parametry
 
-*CS*<br/>
-Obiekt sekcję krytyczną.
+*Cs*<br/>
+Obiekt sekcji krytycznej.
 
 *bInitialLock*<br/>
-Stan początkowy blokady: **true** oznacza, że zablokowane.
+Początkowy stan blokady: **true** oznacza zablokowany.
 
 ### <a name="remarks"></a>Uwagi
 
-Inicjuje obiekt sekcję krytyczną.
+Inicjuje obiekt sekcji krytycznej.
 
-##  <a name="dtor"></a>  CComCritSecLock::~CComCritSecLock
+## <a name="ccomcritseclockccomcritseclock"></a><a name="dtor"></a>CComCritSecLock::~CComCritSecLock
 
 Destruktor.
 
@@ -86,11 +86,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Odblokowuje obiektu sekcję krytyczną.
+Odblokowuje obiekt sekcji krytycznej.
 
-##  <a name="lock"></a>  CComCritSecLock::Lock
+## <a name="ccomcritseclocklock"></a><a name="lock"></a>CComCritSecLock::Lock
 
-Wywołaj tę metodę można zablokować obiektu sekcję krytyczną.
+Wywołanie tej metody, aby zablokować obiekt sekcji krytycznej.
 
 ```
 HRESULT Lock() throw();
@@ -98,15 +98,15 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość S_OK, jeśli obiekt został pomyślnie zablokowany lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK, jeśli obiekt został pomyślnie zablokowany lub błąd HRESULT w przypadku awarii.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli obiekt jest już zablokowany, wystąpi błąd ASERCJI w kompilacjach do debugowania.
+Jeśli obiekt jest już zablokowany, błąd ASSERT wystąpi w kompilacjach debugowania.
 
-##  <a name="unlock"></a>  CComCritSecLock::Unlock
+## <a name="ccomcritseclockunlock"></a><a name="unlock"></a>CComCritSecLock::Odblokuj
 
-Wywołaj tę metodę w celu odblokowania obiektu sekcję krytyczną.
+Wywołanie tej metody, aby odblokować obiekt sekcji krytycznej.
 
 ```
 void Unlock() throw();
@@ -114,9 +114,9 @@ void Unlock() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli obiekt jest już odblokowane, wystąpi błąd ASERCJI w kompilacjach do debugowania.
+Jeśli obiekt jest już odblokowany, błąd ASSERT wystąpi w kompilacjach debugowania.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)<br/>
-[Klasa CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)
+[Klasa CComCriticalSekcja](../../atl/reference/ccomcriticalsection-class.md)<br/>
+[Klasa CComAutoCriticalSekcja](../../atl/reference/ccomautocriticalsection-class.md)

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleT::operator= operator
 - Microsoft::WRL::Wrappers::HandleT::~HandleT, destructor
 ms.assetid: 3822b32a-a426-4d94-a54d-919d4df60ee2
-ms.openlocfilehash: f66fbe23c305be15e09928242175dfa7ce8c141b
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: bde7d7f1bd6730d96cb0f7a0d191a32eb8ed3e8c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821821"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371463"
 ---
 # <a name="handlet-class"></a>HandleT — Klasa
 
@@ -47,51 +47,51 @@ class HandleT;
 
 ### <a name="parameters"></a>Parametry
 
-*HandleTraits*<br/>
-Wystąpienie struktury [HandleTraits](handletraits-structure.md) , które definiuje typowe cechy dojścia.
+*HandleTraits (HandleTraits)*<br/>
+Wystąpienie [HandleTraits](handletraits-structure.md) struktury, która definiuje wspólne cechy dojścia.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne definicje typów
+### <a name="public-typedefs"></a>Publiczne typedefs
 
 Nazwa     | Opis
 -------- | -----------------------------
-`Traits` | Synonim dla `HandleTraits`.
+`Traits` | Synonimem . `HandleTraits`
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
 Nazwa                                | Opis
 ----------------------------------- | --------------------------------------------------
-[Obsługa:: obsługa](#handlet)        | Inicjuje nowe wystąpienie klasy `HandleT` klasy.
-[HandleT::~HandleT](#tilde-handlet) | Deinicjalizuje wystąpienie klasy `HandleT`.
+[Uchwyt::Uchwyt](#handlet)        | Inicjuje nowe wystąpienie klasy `HandleT`.
+[Uchwyt::~Uchwyt](#tilde-handlet) | Deinitializes wystąpienia `HandleT` klasy.
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Nazwa                         | Opis
 ---------------------------- | ----------------------------------------------------------------------
-[Uchwyt:: Attach](#attach)   | Kojarzy określone dojście z bieżącym obiektem `HandleT`.
-[Obsługa:: Close](#close)     | Zamyka bieżący obiekt `HandleT`.
-[Obsługa::D etach](#detach)   | Odkojarzy bieżący obiekt `HandleT` z jego bazowego uchwytu.
-[Obsługa:: Get](#get)         | Pobiera wartość bazowego dojścia.
-[Obsługa:: IsValid](#isvalid) | Wskazuje, czy bieżący obiekt `HandleT` reprezentuje uchwyt.
+[Uchwyt::Dołącz](#attach)   | Kojarzy określony dojście `HandleT` z bieżącym obiektem.
+[Uchwyt::Zamknij](#close)     | Zamyka bieżący `HandleT` obiekt.
+[Uchwyt: :Detach](#detach)   | Odłącza bieżący `HandleT` obiekt od jego dojścia.
+[Uchwyt::Pobierz](#get)         | Pobiera wartość dojścia źródłowego.
+[Uchwyt::IsValid](#isvalid) | Wskazuje, czy `HandleT` bieżący obiekt reprezentuje dojście.
 
 ### <a name="protected-methods"></a>Metody chronione
 
 Nazwa                                     | Opis
 ---------------------------------------- | ------------------------------------
-[Obsługa:: InternalClose —](#internalclose) | Zamyka bieżący obiekt `HandleT`.
+[Uchwyt::InternalClose](#internalclose) | Zamyka bieżący `HandleT` obiekt.
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 Nazwa                                   | Opis
 -------------------------------------- | ----------------------------------------------------------------------------------
-[Handle:: operator =](#operator-assign) | Przenosi wartość określonego obiektu `HandleT` do bieżącego obiektu `HandleT`.
+[Uchwyt::operator=](#operator-assign) | Przenosi wartość określonego `HandleT` obiektu do `HandleT` bieżącego obiektu.
 
-### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+### <a name="protected-data-members"></a>Członkowie chronionych danych
 
 Nazwa                        | Opis
 --------------------------- | ----------------------------------------------------------------
-[Obsługa:: handle_](#handle) | Zawiera dojście reprezentowane przez obiekt `HandleT`.
+[Uchwyt::handle_](#handle) | Zawiera dojście, który `HandleT` jest reprezentowany przez obiekt.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -99,21 +99,21 @@ Nazwa                        | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** corewrappers. h
+**Nagłówek:** corewrappers.h
 
-**Przestrzeń nazw:** Microsoft:: WRL:: otoki
+**Obszar nazw:** Microsoft::WRL::Otoki
 
-## <a name="tilde-handlet"></a>Obsługa:: ~ obsługa
+## <a name="handlethandlet"></a><a name="tilde-handlet"></a>Uchwyt::~Uchwyt
 
-Deinicjalizuje wystąpienie klasy `HandleT`.
+Deinitializes wystąpienia `HandleT` klasy.
 
 ```cpp
 ~HandleT();
 ```
 
-## <a name="attach"></a>Uchwyt:: Attach
+## <a name="handletattach"></a><a name="attach"></a>Uchwyt::Dołącz
 
-Kojarzy określone dojście z bieżącym obiektem `HandleT`.
+Kojarzy określony dojście `HandleT` z bieżącym obiektem.
 
 ```cpp
 void Attach(
@@ -123,12 +123,12 @@ void Attach(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
+*H*<br/>
 Uchwyt.
 
-## <a name="close"></a>Obsługa:: Close
+## <a name="handletclose"></a><a name="close"></a>Uchwyt::Zamknij
 
-Zamyka bieżący obiekt `HandleT`.
+Zamyka bieżący `HandleT` obiekt.
 
 ```cpp
 void Close();
@@ -136,49 +136,49 @@ void Close();
 
 ### <a name="remarks"></a>Uwagi
 
-Dojście, które jest zależne od bieżącego `HandleT` jest zamknięte, a `HandleT` jest ustawiony na nieprawidłowy stan.
+Dojście, który leży `HandleT` u podstaw `HandleT` bieżącego jest zamknięty, a jest ustawiona na nieprawidłowy stan.
 
-Jeśli uchwyt nie zostanie zamknięty prawidłowo, wyjątek jest wywoływany w wątku wywołującym.
+Jeśli dojście nie zamyka się poprawnie, wyjątek jest wywoływany w wątku wywołującym.
 
-## <a name="detach"></a>Obsługa::D etach
+## <a name="handletdetach"></a><a name="detach"></a>Uchwyt: :Detach
 
-Odkojarzy bieżący obiekt `HandleT` z jego bazowego uchwytu.
+Odłącza bieżący `HandleT` obiekt od jego dojścia.
 
 ```cpp
 typename HandleTraits::Type Detach();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Podstawowy uchwyt.
+Dojście źródłowe.
 
 ### <a name="remarks"></a>Uwagi
 
-Po zakończeniu tej operacji bieżący `HandleT` jest ustawiony na nieprawidłowy stan.
+Po zakończeniu tej operacji `HandleT` bieżący jest ustawiony na nieprawidłowy stan.
 
-## <a name="get"></a>Obsługa:: Get
+## <a name="handletget"></a><a name="get"></a>Uchwyt::Pobierz
 
-Pobiera wartość bazowego dojścia.
+Pobiera wartość dojścia źródłowego.
 
 ```cpp
 typename HandleTraits::Type Get() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Uchwyt.
 
-## <a name="handle"></a>Obsługa:: handle_
+## <a name="handlethandle_"></a><a name="handle"></a>Uchwyt::handle_
 
-Zawiera dojście reprezentowane przez obiekt `HandleT`.
+Zawiera dojście, który `HandleT` jest reprezentowany przez obiekt.
 
 ```cpp
 typename HandleTraits::Type handle_;
 ```
 
-## <a name="handlet"></a>Obsługa:: obsługa
+## <a name="handlethandlet"></a><a name="handlet"></a>Uchwyt::Uchwyt
 
-Inicjuje nowe wystąpienie klasy `HandleT` klasy.
+Inicjuje nowe wystąpienie klasy `HandleT`.
 
 ```cpp
 explicit HandleT(
@@ -193,44 +193,44 @@ HandleT(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
+*H*<br/>
 Uchwyt.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor inicjuje obiekt `HandleT`, który nie jest prawidłowym dojściem do obiektu. Drugi Konstruktor tworzy nowy obiekt `HandleT` z parametru *h*.
+Pierwszy konstruktor inicjuje `HandleT` obiekt, który nie jest prawidłowym dojściem do obiektu. Drugi konstruktor tworzy `HandleT` nowy obiekt z *parametru h*.
 
-## <a name="internalclose"></a>Obsługa:: InternalClose —
+## <a name="handletinternalclose"></a><a name="internalclose"></a>Uchwyt::InternalClose
 
-Zamyka bieżący obiekt `HandleT`.
+Zamyka bieżący `HandleT` obiekt.
 
 ```cpp
 virtual bool InternalClose();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli bieżące `HandleT` zamknięte pomyślnie; w przeciwnym razie **false**.
+**true,** jeśli `HandleT` bieżący zamknięty pomyślnie; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-`InternalClose()` jest `protected`.
+Parametr `InternalClose()` ma wartość `protected`.
 
-## <a name="isvalid"></a>Obsługa:: IsValid
+## <a name="handletisvalid"></a><a name="isvalid"></a>Uchwyt::IsValid
 
-Wskazuje, czy bieżący obiekt `HandleT` reprezentuje uchwyt.
+Wskazuje, czy `HandleT` bieżący obiekt reprezentuje dojście.
 
 ```cpp
 bool IsValid() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli `HandleT` reprezentuje uchwyt; w przeciwnym razie **false**.
+**true,** `HandleT` jeśli reprezentuje dojście; w przeciwnym razie **false**.
 
-## <a name="operator-assign"></a>Handle:: operator =
+## <a name="handletoperator"></a><a name="operator-assign"></a>Uchwyt::operator=
 
-Przenosi wartość określonego obiektu `HandleT` do bieżącego obiektu `HandleT`.
+Przenosi wartość określonego `HandleT` obiektu do `HandleT` bieżącego obiektu.
 
 ```cpp
 HandleT& operator=(
@@ -240,13 +240,13 @@ HandleT& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
-Rvalue odwołanie do dojścia.
+*H*<br/>
+Odwołanie rvalue do dojścia.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do bieżącego obiektu `HandleT`.
+Odwołanie do bieżącego `HandleT` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta operacja unieważnia obiekt `HandleT` określony przez parametr *h*.
+Ta operacja unieważnia `HandleT` obiekt określony przez parametr *h*.

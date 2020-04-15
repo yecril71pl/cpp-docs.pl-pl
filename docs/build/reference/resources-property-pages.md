@@ -14,55 +14,55 @@ f1_keywords:
 - VC.Project.VCResourceCompilerTool.ResourceOutputFileName
 - VC.Project.VCResourceCompilerTool.NullTerminateStrings
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 16168e7eb5e27f4ec0380d53cf8a5c4b9586ec34
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c4a3048bfa07e9635662534b510fa57caa091f00
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171141"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336074"
 ---
-# <a name="resources-property-page"></a>Strona właściwości zasobów
+# <a name="resources-property-page"></a>Strona właściwości Zasoby
 
-W przypadku natywnych programów klasycznych systemu Windows kompilacja wywołuje [kompilator zasobów (RC. exe)](/windows/win32/menurc/resource-compiler) w celu dodania obrazów, tabel ciągów i plików *. res* do pliku binarnego. Właściwości uwidocznione na tej stronie właściwości są przesyłane do kompilatora zasobów, a nie do C++ kompilatora lub konsolidatora. Aby uzyskać więcej informacji o właściwościach wymienionych w tym miejscu i sposobach mapowania do wersji RC opcji wiersza polecenia, zobacz [using RC (wiersz polecenia RC)](/windows/win32/menurc/using-rc-the-rc-command-line-). Aby uzyskać informacje na temat uzyskiwania dostępu do stron właściwości **zasobów** , [Zobacz C++ Ustawianie kompilatora i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md). Aby programowo uzyskać dostęp do tych właściwości, zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.
+W przypadku natywnych programów klasycznych systemu Windows kompilacja wywołuje [kompilator zasobów (rc.exe)](/windows/win32/menurc/resource-compiler) w celu dodania obrazów, tabel ciągów i plików *.res* do pliku binarnego. Właściwości udostępniane na tej stronie właściwości są przekazywane do kompilatora zasobów, a nie do kompilatora języka C++ lub konsolidatora. Aby uzyskać więcej informacji na temat właściwości wymienionych tutaj i sposobu mapowania do opcji wiersza polecenia RC, zobacz [Korzystanie z RC (Wiersz polecenia RC)](/windows/win32/menurc/using-rc-the-rc-command-line-). Aby uzyskać informacje na temat uzyskiwania dostępu do stron właściwości **Zasoby,** zobacz [Ustawianie kompilatora języka C++ i właściwości kompilacji w programie Visual Studio.](../working-with-project-properties.md) Aby programowo uzyskać dostęp do <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>tych właściwości, zobacz .
 
-Właściwości zasobów platformy .NET w C++aplikacjach/CLI są ujawniane na [stronie właściwości zasoby zarządzane](managed-resources-property-page.md).
+Właściwości zasobów platformy .NET w aplikacjach C++/CLI są udostępniane na [stronie Właściwości zasobów zarządzanych](managed-resources-property-page.md).
 
 ## <a name="preprocessor-definitions"></a>Definicje preprocesora
 
-Określa co najmniej jedną definicję dla kompilatora zasobów. (/d [makro])
+Określa jedną lub więcej zdefiniowanych dla kompilatora zasobów. (/d[makro])
 
-## <a name="undefine-preprocessor-definitions"></a>Usuń Definicje preprocesora
+## <a name="undefine-preprocessor-definitions"></a>Definicje przederocesora przeddefine
 
-Usuń definicję symbolu. Określ
+Niedefińz symbolu. (/u)
 
-## <a name="culture"></a>Kultura
+## <a name="culture"></a>Culture
 
-Wyświetla listę kultur (na przykład angielski lub włoski) używanych w zasobach. (/l [NUM])
+Wyświetla listę kultury (na przykład angielski us lub włoski) używane w zasobach. (/l [liczba])
 
-## <a name="additional-include-directories"></a>Dodatkowe katalogi dołączane
+## <a name="additional-include-directories"></a>Dodatkowe katalogi dołączania
 
-Określa co najmniej jeden katalog do dodania do ścieżki dołączania; Użyj ogranicznika średnika, jeśli jest więcej niż jeden. (/I [ścieżka])
+Określa jeden lub więcej katalogów do dodania do ścieżki dołączania; użyj ogranicznika średnika, jeśli więcej niż jeden. (/I[ścieżka])
 
 ## <a name="ignore-standard-include-paths"></a>Ignoruj standardowe ścieżki dołączania
 
-Uniemożliwia kompilatorowi zasobów wyszukiwanie plików dołączanych w katalogach określonych w zmiennych środowiskowych INCLUDE. /X
+Uniemożliwia kompilatorowi zasobów wyszukiwanie plików dołączanych w katalogach określonych w zmiennych środowiskowych INCLUDE. (/X)
 
 ## <a name="show-progress"></a>Pokaż postęp
 
-Wysyłaj komunikaty o postępie do okna danych wyjściowych. przełącznika
+Wyślij komunikaty postępu do okna wyjściowego. (/v)
 
-## <a name="suppress-startup-banner"></a>Pomiń transparent startowy
+## <a name="suppress-startup-banner"></a>Pomijanie banera startowego
 
-Pomijaj wyświetlanie banera startowego i komunikatu informacyjnego (/nologo)
+Pomijanie wyświetlania banera startowego i komunikatu informacyjnego (/nologo)
 
 ## <a name="resource-file-name"></a>Nazwa pliku zasobu
 
-Określa nazwę pliku zasobu (/fo [plik])
+Określa nazwę pliku zasobu (/fo[file])
 
-## <a name="null-terminate-strings"></a>Ciągi kończące wartości null
+## <a name="null-terminate-strings"></a>Ciągi zakończenia zerowego
 
-Dołącz wartość null do wszystkich ciągów w tabelach ciągów. /n
+Dołącz null do wszystkich ciągów w tabelach ciągów. (/n)
 
 ## <a name="see-also"></a>Zobacz też
 
-[C++odwołanie do strony właściwości projektu](property-pages-visual-cpp.md)
+[Odwołanie do strony właściwości projektu języka C++](property-pages-visual-cpp.md)

@@ -1,8 +1,9 @@
 ---
 title: bsearch
-ms.date: 10/22/2019
+ms.date: 4/2/2020
 api_name:
 - bsearch
+- _o_bsearch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 6b476cbdd5e9c072cae03ad1091a96e2d0b7422b
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: efad391eb2512cfa59cc3597430a84727676f27e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811089"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333804"
 ---
 # <a name="bsearch"></a>bsearch
 
-Wykonuje binarne wyszukiwanie posortowanej tablicy. Dostępna jest bezpieczniejsza wersja tej funkcji; Zobacz [bsearch_s](bsearch-s.md).
+Wykonuje wyszukiwanie binarne tablicy posortowane. Dostępna jest bezpieczniejsza wersja tej funkcji; patrz [bsearch_s](bsearch-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,48 +53,50 @@ void *bsearch(
 
 ### <a name="parameters"></a>Parametry
 
-*klucz* \
-Wskaźnik na klucz, który ma zostać wyszukany.
+*Klucz*\
+Wskaźnik do klucza do wyszukiwania.
 
-\ *podstawowe*
-Wskaźnik do podstawy wyszukiwania danych.
+*Podstawowej*\
+Wskaźnik do podstawy danych wyszukiwania.
 
-*liczba*\
+*Numer*\
 Liczba elementów.
 
-*szerokość*\
+*Szerokość*\
 Szerokość elementów.
 
-*porównaj*\
-Funkcja wywołania zwrotnego, która porównuje dwa elementy. Pierwszy jest wskaźnikiem do klucza do wyszukania, a drugi jest wskaźnikiem do elementu tablicy, który będzie porównywany z kluczem.
+*Porównać*\
+Wywołanie zwrotne, który porównuje dwa elementy. Pierwszy to wskaźnik do klucza wyszukiwania, a drugi jest wskaźnikiem do elementu tablicy, który ma zostać porównany z kluczem.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**bsearch** zwraca wskaźnik do wystąpienia *klucza* w tablicy wskazywanym przez *bazę*. Jeśli nie odnaleziono *klucza* , funkcja zwraca **wartość null**. Jeśli tablica nie znajduje się w kolejności sortowania rosnącej lub zawiera zduplikowane rekordy z identycznymi kluczami, wynik jest nieprzewidywalny.
+**bsearch** zwraca wskaźnik do wystąpienia *klucza* w tablicy wskazywania według *podstawy*. Jeśli *klucz* nie zostanie znaleziony, funkcja zwraca **wartość NULL**. Jeśli tablica nie jest w kolejności sortowania rosnącego lub zawiera zduplikowane rekordy z identycznymi kluczami, wynik jest nieprzewidywalny.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **bsearch** wykonuje binarne wyszukiwanie posortowanej tablicy elementów *liczbowych* , a wszystkie bajty o *szerokości* . Wartość *podstawowa* jest wskaźnikiem do podstawy tablicy, która ma być przeszukiwana, a wartość *klucza* jest poszukiwana. Parametr *Compare* jest wskaźnikiem do procedury dostarczonej przez użytkownika, która porównuje żądany klucz z elementem tablicy. Zwraca jedną z następujących wartości, które określają ich relację:
+Funkcja **bsearch** wykonuje wyszukiwanie binarne posortowane tablicy elementów *liczbowych,* każdy o rozmiarze *szerokości.* Wartość *podstawowa* jest wskaźnikiem do podstawy tablicy, która ma być przeszukiwana, a *klucz* jest poszukiwaną wartością. Parametr *compare* jest wskaźnikiem do procedury dostarczonej przez użytkownika, która porównuje żądany klucz z elementem tablicy. Zwraca jedną z następujących wartości, które określają ich relacji:
 
-|Wartość zwrócona przez procedurę *porównania*|Opis|
+|Wartość zwrócona przez *procedurę porównywania*|Opis|
 |-----------------------------------------|-----------------|
-|\< 0|Klucz jest mniejszy niż element tablicy.|
-|0|Klucz jest równy elementowi tablicy.|
+|\<0|Klucz jest mniejszy niż element tablicy.|
+|0|Klucz jest równy element tablicy.|
 |> 0|Klucz jest większy niż element tablicy.|
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *Compare*, *Key* lub *Number* ma **wartość null**lub jeśli *Base* ma **wartość null** , a *Liczba* jest różna od zera lub jeśli *Szerokość* jest równa zero, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [parametrze Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiony na `EINVAL` i funkcja zwraca **wartość null**.
+Ta funkcja sprawdza poprawność jego parametrów. Jeśli *porównaj*, *klucz* lub *liczba* ma **wartość NULL**lub jeśli *podstawa* ma **wartość NULL,** a *liczba* jest niezerowa, lub jeśli *szerokość* wynosi zero, funkcja wywołuje nieprawidłowy program obsługi parametrów, zgodnie z opisem w obszarze Sprawdzanie [poprawności parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, **errno** jest `EINVAL` ustawiona na i funkcja zwraca **NULL**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**bsearch**|\<STDLIB. h > i \<Search. h >|
+|**bsearch**|\<> i \<search.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Ten program Sortuje tablicę ciągów z qsort, a następnie używa bsearch do znalezienia słowa "Cat".
+Ten program sortuje tablicę ciągów z qsort, a następnie używa bsearch, aby znaleźć słowo "kot".
 
 ```C
 // crt_bsearch.c
@@ -135,7 +139,7 @@ cat cow dog goat horse human pig rat
 cat found at 002F0F04
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyszukiwanie i sortowanie](../../c-runtime-library/searching-and-sorting.md)\
 [_lfind](lfind.md)\

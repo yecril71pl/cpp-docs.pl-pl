@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::RoInitializeWrapper::RoInitializeWrapper, constructor
 - Microsoft::WRL::Wrappers::RoInitializeWrapper::~RoInitializeWrapper, destructor
 ms.assetid: 4055fbe0-63a7-4c06-b5a0-414fda5640e5
-ms.openlocfilehash: b43d5bb2f553d298584ab2ae497c22637d3beb0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eba9162f17b98d13a9caf956b4f110b89dd81c37
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403207"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371220"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper — Klasa
 
-Inicjuje środowisko wykonawcze Windows.
+Inicjuje środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,7 +32,7 @@ class RoInitializeWrapper;
 
 ## <a name="remarks"></a>Uwagi
 
-`RoInitializeWrapper` To udogodnienie inicjuje środowiska wykonawczego Windows, która zwraca wartość HRESULT, która wskazuje, czy operacja zakończyła się powodzeniem. Ponieważ wywołuje destruktor klasy `::Windows::Foundation::Uninitialize`, wystąpień `RoInitializeWrapper` musi być zadeklarowana w zakresie globalnym lub najwyższego poziomu.
+`RoInitializeWrapper`jest wygoda, która inicjuje środowiska wykonawczego systemu Windows i zwraca HRESULT, który wskazuje, czy operacja zakończyła się pomyślnie. Ponieważ wywołania `::Windows::Foundation::Uninitialize`destruktora klasy, wystąpienia `RoInitializeWrapper` muszą być zadeklarowane w zakresie globalnym lub najwyższym poziomie.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -40,14 +40,14 @@ class RoInitializeWrapper;
 
 Nazwa                                                                    | Opis
 ----------------------------------------------------------------------- | -----------------------------------------------------------------
-[RoInitializeWrapper::RoInitializeWrapper](#roinitializewrapper)        | Inicjuje nowe wystąpienie klasy `RoInitializeWrapper` klasy.
-[RoInitializeWrapper::~RoInitializeWrapper](#tilde-roinitializewrapper) | Likwiduje bieżące wystąpienie `RoInitializeWrapper` klasy.
+[RoInitializeWrapper::RoInitializeWrapper](#roinitializewrapper)        | Inicjuje nowe wystąpienie klasy `RoInitializeWrapper`.
+[RoInitializeWrapper::~RoInitializeWrapper](#tilde-roinitializewrapper) | Niszczy bieżące wystąpienie `RoInitializeWrapper` klasy.
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 Nazwa                                       | Opis
 ------------------------------------------ | ------------------------------------------------------------------------
-[Roinitializewrapper:: HRESULT()](#hresult) | Pobiera wartość HRESULT produkowane przez `RoInitializeWrapper` konstruktora.
+[RoInitializeWrapper::HRESULT()](#hresult) | Pobiera HRESULT produkowane przez `RoInitializeWrapper` konstruktora.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -57,19 +57,19 @@ Nazwa                                       | Opis
 
 **Nagłówek:** corewrappers.h
 
-**Namespace:** Microsoft::wrl:: wrappers
+**Obszar nazw:** Microsoft::WRL::Otoki
 
-## <a name="hresult"></a>Roinitializewrapper:: HRESULT()
+## <a name="roinitializewrapperhresult"></a><a name="hresult"></a>RoInitializeWrapper::HRESULT()
 
-Pobiera wartość HRESULT produkowane przez ostatnią `RoInitializeWrapper` konstruktora.
+Pobiera wartość HRESULT produkowane przez `RoInitializeWrapper` ostatni konstruktora.
 
 ```cpp
 operator HRESULT()
 ```
 
-## <a name="roinitializewrapper"></a>RoInitializeWrapper::RoInitializeWrapper
+## <a name="roinitializewrapperroinitializewrapper"></a><a name="roinitializewrapper"></a>RoInitializeWrapper::RoInitializeWrapper
 
-Inicjuje nowe wystąpienie klasy `RoInitializeWrapper` klasy.
+Inicjuje nowe wystąpienie klasy `RoInitializeWrapper`.
 
 ```cpp
 RoInitializeWrapper(RO_INIT_TYPE flags)
@@ -78,15 +78,15 @@ RoInitializeWrapper(RO_INIT_TYPE flags)
 ### <a name="parameters"></a>Parametry
 
 *flagi*<br/>
-Jedno z wyliczeń RO_INIT_TYPE, które określa pomoc techniczną świadczoną przez środowisko wykonawcze Windows.
+Jednym z wyliczeń RO_INIT_TYPE, który określa obsługę zapewnianą przez środowisko wykonawcze systemu Windows.
 
 ### <a name="remarks"></a>Uwagi
 
-`RoInitializeWrapper` Wywołuje klasę `Windows::Foundation::Initialize(flags)`.
+Klasa `RoInitializeWrapper` wywołuje `Windows::Foundation::Initialize(flags)`.
 
-## <a name="tilde-roinitializewrapper"></a>RoInitializeWrapper::~RoInitializeWrapper
+## <a name="roinitializewrapperroinitializewrapper"></a><a name="tilde-roinitializewrapper"></a>RoInitializeWrapper::~RoInitializeWrapper
 
-Deinicjuje środowiska wykonawczego Windows.
+Uninitializes środowiska wykonawczego systemu Windows.
 
 ```cpp
 ~RoInitializeWrapper()
@@ -94,4 +94,4 @@ Deinicjuje środowiska wykonawczego Windows.
 
 ### <a name="remarks"></a>Uwagi
 
-`RoInitializeWrapper` Wywołuje klasę `Windows::Foundation::Uninitialize()`.
+Klasa `RoInitializeWrapper` wywołuje `Windows::Foundation::Uninitialize()`.

@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CCRTAllocator class
 ms.assetid: 3e1b8cb0-859a-41ab-8e93-6f0b5ceca49d
-ms.openlocfilehash: c08d594e1c0f4d532f46961e266bf6ced98c51b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f6bae3818fa0f1639e0e3cee4e09121580da768
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259082"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327171"
 ---
 # <a name="ccrtallocator-class"></a>Klasa CCRTAllocator
 
-Ta klasa dostarcza metody do zarządzania ilości pamięci za pomocą procedury pamięci CRT.
+Ta klasa zawiera metody zarządzania pamięcią przy użyciu procedur pamięci CRT.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,21 +33,21 @@ class ATL::CCRTAllocator
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CCRTAllocator::Allocate](#allocate)|(Statyczny) Wywołaj tę metodę można przydzielić pamięci.|
-|[CCRTAllocator::Free](#free)|(Statyczny) Wywołaj tę metodę, aby zwolnić pamięć.|
-|[CCRTAllocator::Reallocate](#reallocate)|(Statyczny) Wywołaj tę metodę w celu ponownego przydzielenia pamięci.|
+|[CCRTAllocator::Przydziel](#allocate)|(Statyczne) Wywołanie tej metody, aby przydzielić pamięć.|
+|[CCRTAllocator::Za darmo](#free)|(Statyczne) Wywołanie tej metody, aby zwolnić pamięć.|
+|[CCRTAllocator::Ponowne przydzielenie](#reallocate)|(Statyczne) Wywołanie tej metody, aby ponownie przydzielić pamięć.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa jest używana przez [CHeapPtr](../../atl/reference/cheapptr-class.md) do dostarczenia pamięci CRT procedur alokacji. Klasa odpowiednika [CComAllocator](../../atl/reference/ccomallocator-class.md), oferuje te same metody, za pomocą procedury COM.
+Ta klasa jest używana przez [CHeapPtr](../../atl/reference/cheapptr-class.md) do zapewnienia procedur alokacji pamięci CRT. Klasa odpowiednika, [CComAllocator,](../../atl/reference/ccomallocator-class.md)udostępnia te same metody przy użyciu procedur COM.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlcore.h
 
-##  <a name="allocate"></a>  CCRTAllocator::Allocate
+## <a name="ccrtallocatorallocate"></a><a name="allocate"></a>CCRTAllocator::Przydziel
 
-Wywołaj tę funkcję statyczne można przydzielić pamięci.
+Wywołanie tej funkcji statycznej, aby przydzielić pamięć.
 
 ```
 static __declspec(allocator) void* Allocate(size_t nBytes) throw();
@@ -55,20 +55,20 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBytes*<br/>
+*n Bajty*<br/>
 Liczba bajtów do przydzielenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca pusty wskaźnik do przydzielonego miejsca lub wartość NULL, jeśli ma za mało pamięci.
+Zwraca wskaźnik void do przydzielonego miejsca lub NULL, jeśli jest za mało dostępnej pamięci.
 
 ### <a name="remarks"></a>Uwagi
 
-Przydziela pamięć. Zobacz [— funkcja malloc](../../c-runtime-library/reference/malloc.md) Aby uzyskać więcej informacji.
+Przydziela pamięć. Zobacz [malloc](../../c-runtime-library/reference/malloc.md) więcej szczegółów.
 
-##  <a name="free"></a>  CCRTAllocator::Free
+## <a name="ccrtallocatorfree"></a><a name="free"></a>CCRTAllocator::Za darmo
 
-Wywołaj tę funkcję statycznej, aby zwolnić pamięć.
+Wywołanie tej funkcji statycznej w celu zwolnienia pamięci.
 
 ```
 static void Free(void* p) throw();
@@ -76,16 +76,16 @@ static void Free(void* p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*<br/>
-Wskaźnik do alokacji pamięci.
+*P*<br/>
+Wskaźnik do przydzielonej pamięci.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia ilość przydzielonej pamięci. Zobacz [bezpłatne](../../c-runtime-library/reference/free.md) Aby uzyskać więcej informacji.
+Zwalnia przydzieloną pamięć. Zobacz [za darmo,](../../c-runtime-library/reference/free.md) aby uzyskać więcej informacji.
 
-##  <a name="reallocate"></a>  CCRTAllocator::Reallocate
+## <a name="ccrtallocatorreallocate"></a><a name="reallocate"></a>CCRTAllocator::Ponowne przydzielenie
 
-Wywołaj tę funkcję statycznych w celu ponownego przydzielenia pamięci.
+Wywołanie tej funkcji statycznej w celu ponownego przydzielenia pamięci.
 
 ```
 static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
@@ -93,22 +93,22 @@ static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*<br/>
-Wskaźnik do alokacji pamięci.
+*P*<br/>
+Wskaźnik do przydzielonej pamięci.
 
-*nBytes*<br/>
-Liczba bajtów w celu ponownego przydzielenia.
+*n Bajty*<br/>
+Liczba bajtów do ponownego przydzielenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca pusty wskaźnik do przydzielonego miejsca lub wartość NULL, jeśli pamięć jest niewystarczająca.
+Zwraca wskaźnik void do przydzielonego miejsca lub NULL, jeśli jest za mało pamięci.
 
 ### <a name="remarks"></a>Uwagi
 
-Zmienia rozmiar ilość ilość przydzielonej pamięci. Zobacz [realloc](../../c-runtime-library/reference/realloc.md) Aby uzyskać więcej informacji.
+Zmienić rozmiar przydzielonej pamięci. Zobacz [realloc](../../c-runtime-library/reference/realloc.md) więcej szczegółów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
 [Klasa CComAllocator](../../atl/reference/ccomallocator-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

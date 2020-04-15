@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
-ms.openlocfilehash: 69e00893373ccca6e2ed676fbb7f5a109c49efdf
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2c4103f89f7fc74c5368bafac3c82685ff9b6e03
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143041"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372695"
 ---
 # <a name="dispatchstate-structure"></a>DispatchState — Struktura
 
-Struktura `DispatchState` jest używana do transferowania stanu do metody `IExecutionContext::Dispatch`. Opisano w nim sytuacje, w których Metoda `Dispatch` jest wywoływana w interfejsie `IExecutionContext`.
+Struktura `DispatchState` jest używana do przenoszenia `IExecutionContext::Dispatch` stanu do metody. Opisuje okoliczności, w `Dispatch` których metoda jest wywoływana w interfejsie. `IExecutionContext`
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,21 +28,21 @@ Struktura `DispatchState` jest używana do transferowania stanu do metody `IExec
 struct DispatchState;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[DispatchState::D ispatchState](#ctor)|Tworzy nowy obiekt `DispatchState`.|
+|[Stan wysyłki::Djednoczes](#ctor)|Konstruuje `DispatchState` nowy obiekt.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[DispatchState:: m_dispatchStateSize](#m_dispatchstatesize)|Rozmiar tej struktury, który jest używany do przechowywania wersji.|
-|[DispatchState:: m_fIsPreviousContextAsynchronouslyBlocked](#m_fispreviouscontextasynchronouslyblocked)|Wskazuje, czy ten kontekst wprowadził metodę `Dispatch`, ponieważ poprzedni kontekst został zablokowany asynchronicznie. Jest on używany tylko w kontekście planowania UMS i ma ustawioną wartość `0` dla wszystkich innych kontekstów wykonania.|
-|[DispatchState:: m_reserved](#m_reserved)|Bity zarezerwowane do przekazywania przyszłych informacji.|
+|[Stan wysyłki::m_dispatchStateSize](#m_dispatchstatesize)|Rozmiar tej struktury, która jest używana do przechowywania wersji.|
+|[Stan wysyłki::m_fIsPreviousContextAsynchronouslyBlocked](#m_fispreviouscontextasynchronouslyblocked)|Określa, czy ten kontekst `Dispatch` wszedł do metody, ponieważ poprzedni kontekst został zablokowany asynchronicznie. Jest to używane tylko w kontekście planowania usługi UMS i jest ustawiona na wartość `0` dla wszystkich innych kontekstów wykonywania.|
+|[Stan wysyłki::m_reserved](#m_reserved)|Bity zarezerwowane dla przyszłych przekazywania informacji.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -50,37 +50,37 @@ struct DispatchState;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrtrm. h
+**Nagłówek:** concrtrm.h
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="ctor"></a>DispatchState::D Konstruktor ispatchState
+## <a name="dispatchstatedispatchstate-constructor"></a><a name="ctor"></a>Stan wysyłki::DispatchKonstruktor stanu
 
-Tworzy nowy obiekt `DispatchState`.
+Konstruuje `DispatchState` nowy obiekt.
 
 ```cpp
 DispatchState();
 ```
 
-## <a name="m_dispatchstatesize"></a>Element członkowski danych DispatchState:: m_dispatchStateSize
+## <a name="dispatchstatem_dispatchstatesize-data-member"></a><a name="m_dispatchstatesize"></a>Stan wysyłki::m_dispatchStateSize element członkowski danych
 
-Rozmiar tej struktury, który jest używany do przechowywania wersji.
+Rozmiar tej struktury, która jest używana do przechowywania wersji.
 
 ```cpp
 unsigned long m_dispatchStateSize;
 ```
 
-## <a name="m_fispreviouscontextasynchronouslyblocked"></a>Element członkowski danych DispatchState:: m_fIsPreviousContextAsynchronouslyBlocked
+## <a name="dispatchstatem_fispreviouscontextasynchronouslyblocked-data-member"></a><a name="m_fispreviouscontextasynchronouslyblocked"></a>Stan wysyłki::m_fIsPreviousContextAsynchronouslyBlocked element członkowski danych
 
-Wskazuje, czy ten kontekst wprowadził metodę `Dispatch`, ponieważ poprzedni kontekst został zablokowany asynchronicznie. Jest on używany tylko w kontekście planowania UMS i ma ustawioną wartość `0` dla wszystkich innych kontekstów wykonania.
+Określa, czy ten kontekst `Dispatch` wszedł do metody, ponieważ poprzedni kontekst został zablokowany asynchronicznie. Jest to używane tylko w kontekście planowania usługi UMS i jest ustawiona na wartość `0` dla wszystkich innych kontekstów wykonywania.
 
 ```cpp
 unsigned int m_fIsPreviousContextAsynchronouslyBlocked : 1;
 ```
 
-## <a name="m_reserved"></a>Element członkowski danych DispatchState:: m_reserved
+## <a name="dispatchstatem_reserved-data-member"></a><a name="m_reserved"></a>Stan wysyłki::m_reserved element członkowski danych
 
-Bity zarezerwowane do przekazywania przyszłych informacji.
+Bity zarezerwowane dla przyszłych przekazywania informacji.
 
 ```cpp
 unsigned int m_reserved : 31;
@@ -88,4 +88,4 @@ unsigned int m_reserved : 31;
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przestrzeń nazw współbieżności](concurrency-namespace.md)
+[współbieżność Obszar nazw](concurrency-namespace.md)

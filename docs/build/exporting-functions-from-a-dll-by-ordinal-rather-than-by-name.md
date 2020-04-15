@@ -7,26 +7,26 @@ helpviewer_keywords:
 - exporting DLLs [C++], ordinal values
 - NONAME attribute
 ms.assetid: 679719fd-d965-4df3-9f7a-7d86ad831702
-ms.openlocfilehash: d91b516253fc160686e2f1f6ae1ca1704f707f75
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 66e99b18d181e9067e90398c35a61db2da66c301
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221428"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328577"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Eksportowanie funkcji z biblioteki DLL według numeru porządkowego a nie nazwy
 
-Najprostszym sposobem, aby wyeksportować funkcje z biblioteki DLL nie jest eksportowane je według nazwy. Jest to, co się stanie, gdy używasz **__declspec(dllexport)**, na przykład. Jednak zamiast tego możesz wyeksportować funkcje według liczby porządkowej. W przypadku tej techniki należy użyć pliku .def, zamiast **__declspec(dllexport)**. Aby określić wartości porządkowe funkcji, Dołącz jego numer nazwa funkcji w pliku .def. Aby uzyskać informacji na temat określania liczby porządkowe, zobacz [eksportowanie z biblioteki DLL za pomocą plików .def](exporting-from-a-dll-using-def-files.md).
+Najprostszym sposobem eksportowania funkcji z biblioteki DLL jest wyeksportowanie ich według nazwy. Dzieje się tak na przykład, gdy używasz **__declspec(dllexport).** Ale zamiast tego można eksportować funkcje przez porządkowe. Za pomocą tej techniki należy użyć pliku def zamiast **__declspec(dllexport).** Aby określić wartość porządkową funkcji, należy dołączyć jej porządek porządkowy do nazwy funkcji w pliku def. Aby uzyskać informacje dotyczące określania liczby porządkowej, zobacz [Eksportowanie z biblioteki DLL przy użyciu plików def](exporting-from-a-dll-using-def-files.md).
 
 > [!TIP]
->  Jeśli chcesz zoptymalizować rozmiar pliku biblioteki DLL, użyj **NONAME** atrybut na każdym eksportowanych funkcji. Za pomocą **NONAME** atrybutu, liczby porządkowe są przechowywane w DLL Eksportowanie tabeli, a nie nazwy funkcji. Jeśli eksportujesz wiele funkcji, może to być znaczne oszczędności.
+> Jeśli chcesz zoptymalizować rozmiar pliku biblioteki DLL, użyj atrybutu **NONAME** dla każdej wyeksportowanej funkcji. Za pomocą atrybutu **NONAME** liczby porządkowe są przechowywane w tabeli eksportu biblioteki DLL, a nie w nazwach funkcji. Może to być znaczne oszczędności, jeśli eksportujesz wiele funkcji.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Użyj pliku .def, dzięki czemu można wyeksportować według liczby porządkowej](exporting-from-a-dll-using-def-files.md)
+- [Użyj pliku def, abym mógł eksportować przez porządki porządkowe](exporting-from-a-dll-using-def-files.md)
 
-- [Użyj atrybutu __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Użyj __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Eksportowanie z biblioteki DLL](exporting-from-a-dll.md)

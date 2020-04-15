@@ -1,8 +1,9 @@
 ---
 title: wcsrtombs_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcsrtombs_s
+- _o_wcsrtombs_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-ms.openlocfilehash: 68f5b6f6b87fb3ad21899035dfc82d997d90cf38
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 71a2206df9d3afb64fcaf62848988cf116d9071f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518312"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328108"
 ---
 # <a name="wcsrtombs_s"></a>wcsrtombs_s
 
-Przekonwertuj ciąg znaków dwubajtowych na reprezentację w postaci ciągu znaków. Wersja [wcsrtombs](wcsrtombs.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konwertuj szeroki ciąg znaków na jego wielobajtową reprezentację ciągu znaków. Wersja [wcsrtombs](wcsrtombs.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcji zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,66 +62,68 @@ errno_t wcsrtombs_s(
 
 ### <a name="parameters"></a>Parametry
 
-*pReturnValue*<br/>
-Rozmiar w bajtach przekonwertowanego ciągu, łącznie z terminatorem wartości null.
+*pZawąkaWartość*<br/>
+Rozmiar w bajtach przekonwertowanego ciągu, w tym zerowy terminator.
 
 *mbstr*<br/>
-Adres buforu dla wyniku konwertowanego ciągu znaków wielobajtowych.
+Adres buforu dla wynikowego przekonwertowanego wielobajtowego ciągu znaków.
 
-*sizeInBytes*<br/>
-Rozmiar w bajtach buforu *mbstr* .
+*rozmiarWzdjęty*<br/>
+Rozmiar w bajtach buforu *mbstr.*
 
 *wcstr*<br/>
-Wskazuje ciąg znaków dwubajtowych do przekonwertowania.
+Wskazuje szeroki ciąg znaków do konwersji.
 
-*count*<br/>
-Maksymalna liczba bajtów, które mają być przechowywane w buforze *mbstr* , lub [_TRUNCATE](../../c-runtime-library/truncate.md).
+*Liczba*<br/>
+Maksymalna liczba bajtów, które mają być przechowywane w buforze *mbstr* lub [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *mbstate*<br/>
-Wskaźnik do obiektu stanu konwersji **mbstate_t** .
+Wskaźnik do obiektu stanu konwersji **mbstate_t.**
 
-## <a name="return-value"></a>Wartość zwrócona
+## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli to się powiedzie, kod błędu w przypadku niepowodzenia.
+Zero, jeśli się powiedzie, kod błędu w przypadku awarii.
 
-|Błąd|Wartość zwracana i **errno**|
+|Błąd|Zwracana wartość i **errno**|
 |---------------------|------------------------------|
-|*mbstr* ma **wartość NULL** i *sizeInBytes* > 0|**EINVAL**|
-|*wcstr* ma **wartość null**|**EINVAL**|
-|Bufor docelowy jest zbyt mały, aby zawierał przekonwertowany ciąg (chyba że *licznik* jest **_TRUNCATE**; Zobacz uwagi poniżej)|**ERANGE**|
+|*mbstr* ma **wartość NULL** i *rozmiarWzdjęty* > 0|**Einval**|
+|*wcstr* ma **wartość NULL**|**Einval**|
+|Bufor docelowy jest zbyt mały, aby zawierał przekonwertowany ciąg (chyba że *liczba* jest **_TRUNCATE**; patrz Uwagi poniżej)|**Układ ERANGE**|
 
-Jeśli wystąpi którykolwiek z tych warunków, wyjątek nieprawidłowego parametru jest wywoływany zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, funkcja zwraca kod błędu i ustawia **errno** , jak wskazano w tabeli.
+Jeśli wystąpi którykolwiek z tych warunków, nieprawidłowy wyjątek parametru jest wywoływany zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie jest dozwolone, funkcja zwraca kod błędu i ustawia **errno** jak wskazano w tabeli.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **wcsrtombs_s** konwertuje ciąg znaków dwubajtowych, do których odnoszą się *wcstr* w postaci znaków wielowartościowych przechowywanych w buforze wskazywanym przez *mbstr*, przy użyciu stanu konwersji zawartego w *mbstate*. Konwersja będzie kontynuowana dla każdego znaku do momentu spełnienia jednego z następujących warunków:
+Funkcja **wcsrtombs_s** konwertuje ciąg szerokich znaków wskazywalnych przez *wcstr* na znaki wielobajtowe przechowywane w buforze wskazyowanym przez *mbstr,* przy użyciu stanu konwersji zawartego w *mbstate*. Konwersja będzie kontynuowana dla każdego znaku, dopóki nie zostanie spełniony jeden z następujących warunków:
 
-- Napotkano zerowy znak dwubajtowy
+- Napotkany znak o szerokości null
 
-- Napotkano znak dwubajtowy, którego nie można przekonwertować
+- Napotkany szeroki znak, który nie może zostać przekonwertowany
 
-- Liczba bajtów przechowywanych w buforze *mbstr* jest równa *Count*.
+- Liczba bajtów przechowywanych w buforze *mbstr* jest równa *liczbie*.
 
-Ciąg docelowy jest zawsze zakończony wartością null (nawet w przypadku błędu).
+Ciąg docelowy jest zawsze zakończony zerem (nawet w przypadku błędu).
 
-Jeśli *Liczba* jest wartością specjalną [_TRUNCATE](../../c-runtime-library/truncate.md), wówczas **wcsrtombs_s** konwertuje tyle ciągu jako ciąg, jak zmieści się w buforze docelowym, pozostawiając nadal miejsce na terminator o wartości null.
+Jeśli *count* jest specjalną wartością [_TRUNCATE](../../c-runtime-library/truncate.md), następnie **wcsrtombs_s** konwertuje tyle ciągu, ile zmieści się w buforze docelowym, pozostawiając jednocześnie miejsce na zerowy terminator.
 
-Jeśli **wcsrtombs_s** pomyślnie przekonwertuje ciąg źródłowy, umieści rozmiar w bajtach przekonwertowanego ciągu, łącznie z terminatorem wartości null, na  *&#42;pReturnValue* (udostępniony *pReturnValue* nie ma **wartości null**). Dzieje się tak nawet wtedy, gdy argument *mbstr* ma **wartość null** i umożliwia określenie wymaganego rozmiaru buforu. Należy pamiętać, że jeśli *mbstr* ma **wartość null**, *Count* jest ignorowany.
+Jeśli **wcsrtombs_s** pomyślnie konwertuje ciąg źródłowy, umieszcza rozmiar w bajtach przekonwertowanego ciągu, w tym terminatora zerowego, na *&#42;pReturnValue* (pod warunkiem, że *wartość zwrotu* nie jest **null).** Dzieje się tak, nawet jeśli *mbstr* argument jest **NULL** i zapewnia sposób określenia rozmiaru buforu wymagane. Należy zauważyć, że jeśli *mbstr* ma **wartość NULL**, *liczba* jest ignorowana.
 
-Jeśli **wcsrtombs_s** napotka szeroki znak, nie można przekonwertować na znak wielobajtowy, umieszcza-1 w *\*pReturnValue*, ustawia bufor docelowy na pusty ciąg, ustawia **errno** na **EILSEQ**i zwraca **EILSEQ**.
+Jeśli **wcsrtombs_s** napotka szeroki znak, nie można go przekonwertować na znak wielobajtowy, umieszcza -1 w * \*pReturnValue*, ustawia bufor docelowy na pusty ciąg, ustawia **errno** na **EILSEQ**i zwraca **EILSEQ**.
 
-Jeśli sekwencje wskazywane przez *wcstr* i *mbstr* nakładają się na siebie, zachowanie **wcsrtombs_s** jest niezdefiniowane. na **wcsrtombs_s** ma wpływ Kategoria LC_TYPE bieżących ustawień regionalnych.
+Jeśli sekwencje wskazane przez *wcstr* i *mbstr* nakładają się na siebie, zachowanie **wcsrtombs_s** jest niezdefiniowane. **wcsrtombs_s** ma wpływ LC_TYPE kategorii bieżących ustawień regionalnych.
 
 > [!IMPORTANT]
-> Upewnij się, że *wcstr* i *mbstr* nie nakładają się na siebie, i że *licznik* poprawnie odzwierciedla liczbę szerokich znaków do przekonwertowania.
+> Upewnij się, że *wcstr* i *mbstr* nie nakładają się na siebie, a *liczba ta* poprawnie odzwierciedla liczbę szerokich znaków do konwersji.
 
-Funkcja **wcsrtombs_s** różni się od [wcstombs_s, _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md) od jej uruchomienia. Stan konwersji jest przechowywany w *mbstate* dla kolejnych wywołań do tych samych lub innych funkcji, które można uruchomić ponownie. Wyniki są niezdefiniowane podczas mieszania użycia funkcji ponownego uruchamiania i nieuruchomionych ponownie. Na przykład aplikacja będzie używać **wcsrlen** zamiast **wcslen**, jeśli podczas kolejnego wywołania do **wcsrtombs_s** były używane zamiast **wcstombs_s**.
+Funkcja **wcsrtombs_s** różni się od [wcstombs_s, _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md) możliwością ponownego uruchomienia. Stan konwersji jest przechowywany w *mbstate* dla kolejnych wywołań do tej samej lub innych funkcji, które można ponownie uruchomić. Wyniki są niezdefiniowane podczas mieszania użycia funkcji, które można ponownie uruchomić i niepodważalne. Na przykład aplikacja będzie używać **wcsrlen** zamiast **wcslen**, jeśli kolejne wywołanie **wcsrtombs_s** zostały użyte zamiast **wcstombs_s**.
 
-W C++programie korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszymi, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonu; przeciążenia można wywnioskować długość buforu automatycznie (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszych, bezpiecznych odpowiedników. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="exceptions"></a>Wyjątki
 
-Funkcja **wcsrtombs_s** jest bezpiecznie wielowątkowej, dopóki żadna funkcja w bieżącym wątku nie wywołuje metody **setlocaling** , podczas gdy ta funkcja jest wykonywana, a *mbstate* ma wartość null.
+Funkcja **wcsrtombs_s** jest bezpieczna wielowątkowej czynności, o ile żadna funkcja w bieżącym wątku wywołuje **setlocale** podczas wykonywania tej funkcji, a *mbstate* ma wartość null.
 
 ## <a name="example"></a>Przykład
 
@@ -172,12 +176,12 @@ The string was successfully converted.
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**wcsrtombs_s**|\<WCHAR. h >|
+|**wcsrtombs_s**|\<wchar.h>|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [wcrtomb](wcrtomb.md)<br/>
 [wcrtomb_s](wcrtomb-s.md)<br/>

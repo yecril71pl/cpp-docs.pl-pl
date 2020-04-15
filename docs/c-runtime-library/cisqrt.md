@@ -1,8 +1,9 @@
 ---
 title: _CIsqrt
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIsqrt
+- _o__CIsqrt
 api_location:
 - msvcr90.dll
 - msvcr80.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr110.dll
 - msvcr100.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - CIsqrt intrinsic
 - _CIsqrt intrinsic
 ms.assetid: 663548ea-398c-48ee-8397-a787c6ebb937
-ms.openlocfilehash: b914ac73fcaeb924832852294af1535bc87c1119
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: eb67474ce5ecd1e6769f8d5fb676fd1753ef6d72
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940494"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349516"
 ---
 # <a name="_cisqrt"></a>_CIsqrt
 
-Oblicza pierwiastek kwadratowy górnej wartości na stosie.
+Oblicza pierwiastek kwadratowy najwyższej wartości w stosie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,15 +44,17 @@ void __cdecl _CIsqrt();
 
 ## <a name="remarks"></a>Uwagi
 
-Ta wersja `sqrt` funkcji ma wyspecjalizowaną konwencję wywoływania, którą rozpoznaje kompilator. Przyspiesza to wykonywanie, ponieważ uniemożliwia generowanie kopii i pomaga w zarejestrowaniu alokacji.
+Ta wersja `sqrt` funkcji ma wyspecjalizowaną konwencję wywoływania, którą kompilator rozumie. Przyspiesza wykonanie, ponieważ zapobiega generowaniu kopii i pomaga w alokacji rejestru.
 
-Wartość wyników jest wypychana na górze stosu.
+Wynikowa wartość jest wypychany na górze stosu.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 **Platforma:** x86
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)

@@ -1,8 +1,9 @@
 ---
 title: wcsrtombs
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcsrtombs
+- _o_wcsrtombs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-ms.openlocfilehash: e6640a027b03b7aa0dceaf8e61af6cb43a44d6e0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: af22a7d55c5f4958db6962e98f212fb5bb89e61e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945053"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328060"
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 
-Przekonwertuj ciąg znaków dwubajtowych na reprezentację w postaci ciągu znaków. Dostępna jest bezpieczniejsza wersja tej funkcji; Zobacz [wcsrtombs_s](wcsrtombs-s.md).
+Konwertuj szeroki ciąg znaków na jego wielobajtową reprezentację ciągu znaków. Dostępna jest bezpieczniejsza wersja tej funkcji; patrz [wcsrtombs_s](wcsrtombs-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -58,36 +60,38 @@ size_t wcsrtombs(
 ### <a name="parameters"></a>Parametry
 
 *mbstr*<br/>
-W wyniku konwersji lokalizacja adresu ciągu znaków wielobajtowych.
+Wynikowa przekonwertowana lokalizacja adresu ciągu znaków wielobajtowych.
 
 *wcstr*<br/>
-Pośrednio wskazuje lokalizację ciągu znaków dwubajtowych do przekonwertowania.
+Pośrednio wskazuje położenie szerokiego ciągu znaków, który ma zostać przekonwertowany.
 
-*liczbą*<br/>
+*Liczba*<br/>
 Liczba znaków do przekonwertowania.
 
 *mbstate*<br/>
-Wskaźnik do obiektu stanu konwersji **mbstate_t** .
+Wskaźnik do obiektu stanu konwersji **mbstate_t.**
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca liczbę pomyślnie przekonwertowanych bajtów, bez uwzględnienia końcowego bajtu o wartości null (jeśli istnieje), w przeciwnym razie a-1, jeśli wystąpił błąd.
+Zwraca liczbę bajtów pomyślnie przekonwertowanych, z wyłączeniem zerowego zakończenia bajtu zerowego (jeśli istnieje), w przeciwnym razie -1, jeśli wystąpił błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **wcsrtombs** konwertuje ciąg znaków dwubajtowych, zaczynając od określonego stanu konwersji zawartego w *mbstate*, z wartości pośrednich wskazanych w *wcstr*w adresie *mbstr*. Konwersja będzie kontynuowana dla każdego znaku do: po napotkaniu znaku dwubajtowego zakończenia o wartości null, gdy zostanie napotkany nieodpowiadający znak lub gdy następny znak spowodowałoby przekroczenie limitu zawartego w *Count*. Jeśli **wcsrtombs** napotka znak dwubajtowy o wartości null (L ' \ 0 ') przed lub w przypadku *występowania* , konwertuje go na 8-bitowy 0 i zatrzyma.
+Funkcja **wcsrtombs** konwertuje ciąg szerokich znaków, począwszy od określonego stanu konwersji zawartego w *mbstate*, z wartości pośrednich wskazanych w *wcstr*, na adres *mbstr*. Konwersja będzie kontynuowana dla każdego znaku, dopóki nie zostanie napotkany znak o zerowym zakończeniu, po napotkaniu niezdyskliżernego znaku lub gdy następny znak przekroczy limit zawarty w *count*. Jeśli **wcsrtombs** napotka znak null o szerokim znaku (L'\0") przed lub po wystąpieniu *licznika,* konwertuje go na 8-bitowy 0 i zatrzymuje.
 
-W ten sposób ciąg znaków wielobajtowych w *mbstr* jest zakończony wartością null tylko wtedy, gdy **wcsrtombs** napotka znak dwuznakowy o wartości null podczas konwersji. Jeśli sekwencje wskazywane przez *wcstr* i *mbstr* nakładają się na siebie, zachowanie **wcsrtombs** jest niezdefiniowane. na **wcsrtombs** ma wpływ Kategoria LC_TYPE bieżących ustawień regionalnych.
+W związku z tym ciąg znaków wielobajtowych w *mbstr* jest zakończony zerem tylko wtedy, **gdy wcsrtombs** napotka szeroki znak null znak podczas konwersji. Jeśli sekwencje wskazane przez *wcstr* i *mbstr* nakładają się, zachowanie **wcsrtombs** jest niezdefiniowana. **wcsrtombs** ma wpływ na kategorię LC_TYPE bieżących ustawień regionalnych.
 
-Funkcja **wcsrtombs** różni się od [wcstombs, _wcstombs_l,](wcstombs-wcstombs-l.md) dzięki czemu można jej uruchomić. Stan konwersji jest przechowywany w *mbstate* dla kolejnych wywołań do tych samych lub innych funkcji, które można uruchomić ponownie. Wyniki są niezdefiniowane podczas mieszania użycia funkcji ponownego uruchamiania i nieuruchomionych ponownie.  Na przykład aplikacja będzie używać **wcsrlen** zamiast **wcsnlen**, jeśli zamiast **wcstombs**użyto kolejnego wywołania **wcsrtombs** .
+Funkcja **wcsrtombs** różni się od [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md) przez jego możliwości ponownego uruchomienia. Stan konwersji jest przechowywany w *mbstate* dla kolejnych wywołań do tej samej lub innych funkcji, które można ponownie uruchomić. Wyniki są niezdefiniowane podczas mieszania użycia funkcji, które można ponownie uruchomić i niepodważalne.  Na przykład aplikacja będzie używać **wcsrlen** zamiast **wcsnlen**, jeśli kolejne wywołanie **wcsrtombs** zostały użyte zamiast **wcstombs**.
 
-Jeśli argument *mbstr* ma **wartość null**, funkcja **wcsrtombs** zwraca wymagany rozmiar w bajtach ciągu docelowego. Jeśli *mbstate* ma wartość null, używany jest wewnętrzny stan konwersji **mbstate_t** . Jeśli *WCHAR* sekwencji znaków nie ma odpowiadającej reprezentacji znaków wielobajtowych, zwracana jest wartość-1, a **errno** jest ustawiona na **EILSEQ**.
+Jeśli argument *mbstr* ma **wartość NULL**, **wcsrtombs** zwraca wymagany rozmiar w bajtach ciągu docelowego. Jeśli *mbstate* ma wartość null, używany jest wewnętrzny stan konwersji **mbstate_t.** Jeśli sekwencja znaków *wchar* nie ma odpowiedniej reprezentacji znaków wielobajtowych, zwracana jest liczba -1, a **errno** jest ustawione na **EILSEQ**.
 
-W C++programie ta funkcja ma Przeciążenie szablonu, które wywołuje nowszy, bezpieczny odpowiednik tej funkcji. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ ta funkcja ma przeciążenie szablonu, który wywołuje nowszy, bezpieczny odpowiednik tej funkcji. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="exceptions"></a>Wyjątki
 
-Funkcja **wcsrtombs** jest wielowątkowej bezpiecznie, o ile funkcja w bieżącym wątku nie wywołuje metody **setlocaling** , podczas gdy ta funkcja jest wykonywana, a *mbstate* nie jest równa null.
+Funkcja **wcsrtombs** jest wielowątkowa, o ile żadna funkcja w bieżącym wątku wywołuje **setlocale** podczas wykonywania tej funkcji, a *mbstate* nie jest null.
 
 ## <a name="example"></a>Przykład
 
@@ -139,12 +143,12 @@ The string was successfuly converted.
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**wcsrtombs**|\<WCHAR. h >|
+|**wcsrtombs**|\<wchar.h>|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [wcrtomb](wcrtomb.md)<br/>
 [wcrtomb_s](wcrtomb-s.md)<br/>

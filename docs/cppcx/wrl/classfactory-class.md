@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ClassFactory::QueryInterface method
 - Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-ms.openlocfilehash: ccc1c43e8c68053a773883c25704cdea086bd0b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b738cc8f439e6653162ab99b0a26e87aa8fee36
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398737"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372663"
 ---
 # <a name="classfactory-class"></a>ClassFactory — Klasa
 
@@ -53,7 +53,7 @@ class ClassFactory :
 ### <a name="parameters"></a>Parametry
 
 *I0*<br/>
-Interfejsu zerowego.
+Interfejs zerowy.
 
 *I1*<br/>
 Pierwszy interfejs.
@@ -63,9 +63,9 @@ Drugi interfejs.
 
 ## <a name="remarks"></a>Uwagi
 
-Korzystanie z `ClassFactory` do implementacji fabryki zdefiniowanych przez użytkownika.
+`ClassFactory` Skorzystaj, aby zapewnić implementację fabryczną zdefiniowaną przez użytkownika.
 
-Następujący wzorzec programowania pokazuje sposób użycia [implementuje](implements-structure.md) struktury, aby określić więcej niż trzy interfejsy na fabrykę klas.
+Poniższy wzorzec programowania pokazuje, jak używać [Implements](implements-structure.md) struktury, aby określić więcej niż trzy interfejsy w fabryce klasy.
 
 `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`
 
@@ -81,10 +81,10 @@ Nazwa                                        | Opis
 
 Nazwa                                            | Opis
 ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
-[ClassFactory::AddRef](#addref)                 | Zwiększa liczbę odwołań dla bieżącego `ClassFactory` obiektu.
-[ClassFactory::LockServer](#lockserver)         | Zwiększa lub zmniejsza liczbę podstawowych obiektów, które są śledzone przez bieżącą `ClassFactory` obiektu.
-[ClassFactory::QueryInterface](#queryinterface) | Pobiera wskaźnik do interfejsu, określony przez parametr.
-[ClassFactory::Release](#release)               | Dekrementuje liczbę odwołań dla bieżącego `ClassFactory` obiektu.
+[ClassFactory::AddRef](#addref)                 | Zwiększa liczbę odwołań dla `ClassFactory` bieżącego obiektu.
+[ClassFactory::LockServer](#lockserver)         | Zwiększa lub zmniejsza liczbę obiektów bazowych, które są śledzone `ClassFactory` przez bieżący obiekt.
+[ClassFactory::QueryInterface](#queryinterface) | Pobiera wskaźnik do interfejsu określonego przez parametr.
+[ClassFactory::Release](#release)               | Zmniejsza liczbę odwołań dla `ClassFactory` bieżącego obiektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -112,11 +112,11 @@ Nazwa                                            | Opis
 
 **Nagłówek:** module.h
 
-**Namespace:** Microsoft::WRL
+**Obszar nazw:** Microsoft::WRL
 
-## <a name="addref"></a>ClassFactory::AddRef
+## <a name="classfactoryaddref"></a><a name="addref"></a>ClassFactory::AddRef
 
-Zwiększa liczbę odwołań dla bieżącego `ClassFactory` obiektu.
+Zwiększa liczbę odwołań dla `ClassFactory` bieżącego obiektu.
 
 ```cpp
 STDMETHOD_(
@@ -127,17 +127,17 @@ STDMETHOD_(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.
+S_OK, jeśli się powiedzie; w przeciwnym razie HRESULT, który opisuje błąd.
 
-## <a name="classfactory"></a>ClassFactory::ClassFactory
+## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>ClassFactory::ClassFactory
 
 ```cpp
 WRL_NOTHROW ClassFactory();
 ```
 
-## <a name="lockserver"></a>ClassFactory::LockServer
+## <a name="classfactorylockserver"></a><a name="lockserver"></a>ClassFactory::LockServer
 
-Zwiększa lub zmniejsza liczbę podstawowych obiektów, które są śledzone przez bieżącą `ClassFactory` obiektu.
+Zwiększa lub zmniejsza liczbę obiektów bazowych, które są śledzone `ClassFactory` przez bieżący obiekt.
 
 ```cpp
 STDMETHOD(
@@ -147,20 +147,20 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*Stada*<br/>
-**wartość true,** się zwiększać liczbę śledzonych obiektów. **FALSE** zmniejszyć liczbę obiektów śledzonych.
+*Stado*<br/>
+**true,** aby zwiększać liczbę śledzonych obiektów. **false,** aby zniegodzić liczbę śledzonych obiektów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK w przypadku powodzenia; w przeciwnym razie E_FAIL.
+S_OK, jeśli się powiedzie; w przeciwnym razie E_FAIL.
 
 ### <a name="remarks"></a>Uwagi
 
-`ClassFactory` przechowuje informacje o obiektów w wystąpieniu bazowego [modułu](module-class.md) klasy.
+`ClassFactory`przechowuje śledzenie obiektów w wystąpieniu podstawowym [Module](module-class.md) klasy.
 
-## <a name="queryinterface"></a>ClassFactory::QueryInterface
+## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>ClassFactory::QueryInterface
 
-Pobiera wskaźnik do interfejsu, określony przez parametr.
+Pobiera wskaźnik do interfejsu określonego przez parametr.
 
 ```cpp
 STDMETHOD(
@@ -170,19 +170,19 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*Parametr riid*<br/>
+*Riid*<br/>
 Identyfikator interfejsu.
 
-*ppvObject*<br/>
-Po zakończeniu tej operacji, wskaźnik do interfejsu, określony przez parametr *riid*.
+*ppvObiekt*<br/>
+Po zakończeniu tej operacji wskaźnik do interfejsu określony przez parametr *riid*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.
+S_OK, jeśli się powiedzie; w przeciwnym razie HRESULT, który opisuje błąd.
 
-## <a name="release"></a>ClassFactory::Release
+## <a name="classfactoryrelease"></a><a name="release"></a>ClassFactory::Release
 
-Dekrementuje liczbę odwołań dla bieżącego `ClassFactory` obiektu.
+Zmniejsza liczbę odwołań dla `ClassFactory` bieżącego obiektu.
 
 ```cpp
 STDMETHOD_(
@@ -193,4 +193,4 @@ STDMETHOD_(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.
+S_OK, jeśli się powiedzie; w przeciwnym razie HRESULT, który opisuje błąd.

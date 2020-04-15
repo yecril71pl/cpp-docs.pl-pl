@@ -10,74 +10,74 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 95d4cec61b230df5a019655617a25b1dc309cde4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 303b8a566a730c5abd06d51fb7977174e19a6435
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153506"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370540"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Usuwanie wszystkich obiektów z kolekcji CObject
 
-W tym artykule wyjaśniono, jak można usunąć wszystkich obiektów z kolekcji (bez usuwania sam obiekt kolekcji).
+W tym artykule wyjaśniono, jak usunąć wszystkie obiekty w kolekcji (bez usuwania samego obiektu kolekcji).
 
-Aby usunąć wszystkie obiekty w kolekcji `CObject`s (lub obiektów pochodzących od `CObject`), możesz użyć jednej z metod iteracji, opisaną w artykule [uzyskiwania dostępu do wszystkich elementów członkowskich kolekcji](../mfc/accessing-all-members-of-a-collection.md) można usunąć każdy obiekt w Włącz.
+Aby usunąć wszystkie obiekty w `CObject`kolekcji s (lub `CObject`obiektów pochodzących z ), należy użyć jednej z technik iteracji opisanych w artykule [Dostęp do wszystkich członków kolekcji,](../mfc/accessing-all-members-of-a-collection.md) aby usunąć każdy obiekt po kolei.
 
 > [!CAUTION]
->  Mogą być udostępniane obiekty w kolekcjach. Oznacza to, że kolekcja przechowuje wskaźnik do obiektu, ale inne części programu, mogą także mieć wskaźniki do tego samego obiektu. Należy uważać, aby nie usunąć obiektu, który jest udostępniany, do momentu zakończenia wszystkich części za pomocą obiektu.
+> Obiekty w kolekcjach mogą być współużytkowane. Oznacza to, że kolekcja przechowuje wskaźnik do obiektu, ale inne części programu może również mieć wskaźniki do tego samego obiektu. Należy uważać, aby nie usunąć obiektu, który jest współużytkowane, dopóki wszystkie części nie zostaną zakończone przy użyciu obiektu.
 
-W tym artykule pokazano, jak usuwanie obiektów w programie:
+W tym artykule pokazano, jak usunąć obiekty w:
 
 - [Lista](#_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject)
 
-- [Tablica](#_core_to_delete_all_elements_in_an_array)
+- [Tablicy](#_core_to_delete_all_elements_in_an_array)
 
-- [Mapy](#_core_to_delete_all_elements_in_a_map)
+- [Mapa](#_core_to_delete_all_elements_in_a_map)
 
-#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>  Aby usunąć wszystkie obiekty w postaci listy wskaźników do obiektu CObject
+#### <a name="to-delete-all-objects-in-a-list-of-pointers-to-cobject"></a><a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>Aby usunąć wszystkie obiekty z listy wskaźników do CObject
 
-1. Użyj `GetHeadPosition` i `GetNext` do iteracji przez listę.
+1. Użyj `GetHeadPosition` `GetNext` i iterować przez listę.
 
-1. Użyj **Usuń** operator można usunąć każdego obiektu, ponieważ jest podczas iteracji.
+1. Operator **usuwania** służy do usuwania każdego obiektu w miarę jego napotkania w iteracji.
 
-1. Wywołaj `RemoveAll` funkcję, aby usunąć wszystkie elementy z listy, po usunięciu obiektów skojarzonych z tymi elementami.
+1. Wywołanie `RemoveAll` funkcji, aby usunąć wszystkie elementy z listy po obiekty skojarzone z tymi elementami zostały usunięte.
 
-Poniższy przykład pokazuje, jak usunąć wszystkie obiekty z listy `CPerson` obiektów. Każdy obiekt na liście jest wskaźnikiem do `CPerson` obiekt, który pierwotnie został przydzielony na stosie.
+W poniższym przykładzie pokazano, jak `CPerson` usunąć wszystkie obiekty z listy obiektów. Każdy obiekt na liście jest `CPerson` wskaźnikiem do obiektu, który został pierwotnie przydzielony na stercie.
 
 [!code-cpp[NVC_MFCCollections#17](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_1.cpp)]
 
-Ostatnie wywołanie funkcji `RemoveAll`, jest funkcją składową listy, która usuwa wszystkie elementy z listy. Funkcja elementu członkowskiego `RemoveAt` Usuwa pojedynczy element.
+Ostatnie wywołanie `RemoveAll`funkcji , jest funkcją elementu członkowskiego listy, która usuwa wszystkie elementy z listy. Funkcja `RemoveAt` elementu członkowskiego usuwa pojedynczy element.
 
-Zwróć uwagę na różnicę między usunięcie elementu obiektu i usuwanie samego elementu. Usuwanie elementu z listy jedynie usuwa listy odwołania do obiektu. Obiekt nadal znajduje się w pamięci. Po usunięciu obiektu przestaje istnieć i jego pamięci są odzyskiwane. W związku z tym należy usunąć element natychmiast, po elementu obiekt został usunięty, tak aby lista nie będzie podejmowana próba dostępu do obiektów, które już istnieją.
+Zwróć uwagę na różnicę między usunięciem obiektu elementu a usunięciem samego elementu. Usunięcie elementu z listy jedynie usuwa odwołanie listy do obiektu. Obiekt nadal istnieje w pamięci. Po usunięciu obiektu przestaje istnieć, a jego pamięć zostanie odzyskana. W związku z tym ważne jest, aby usunąć element natychmiast po obiekt elementu został usunięty, tak aby lista nie będzie próbować uzyskać dostęp do obiektów, które już nie istnieją.
 
-#### <a name="_core_to_delete_all_elements_in_an_array"></a>  Aby usunąć wszystkie elementy w tablicy
+#### <a name="to-delete-all-elements-in-an-array"></a><a name="_core_to_delete_all_elements_in_an_array"></a>Aby usunąć wszystkie elementy w tablicy
 
-1. Użyj `GetSize` i liczby całkowitej wartości indeksu można wykonać iterację tablicy.
+1. Użyj `GetSize` i wartości indeksu liczby całkowitej, aby iterować za pośrednictwem tablicy.
 
-1. Użyj **Usuń** operator można usunąć każdego elementu, ponieważ jest podczas iteracji.
+1. Użyj **delete** operator, aby usunąć każdy element, jak to napotkane w iteracji.
 
-1. Wywołaj `RemoveAll` funkcję, aby usunąć wszystkie elementy z tablicy, po ich usunięciu.
+1. Wywołanie `RemoveAll` funkcji, aby usunąć wszystkie elementy z tablicy po ich usunięciu.
 
-   Kod do usuwania wszystkich elementów tablicy jest następująca:
+   Kod do usuwania wszystkich elementów tablicy jest następujący:
 
    [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
 
-Zgodnie z powyższym przykładzie listy może wywołać `RemoveAll` można usunąć wszystkich elementów w tablicy lub `RemoveAt` można usunąć pojedynczego elementu.
+Podobnie jak w przykładzie listy `RemoveAll` powyżej, można wywołać, aby usunąć wszystkie elementy w tablicy lub `RemoveAt` usunąć pojedynczy element.
 
-#### <a name="_core_to_delete_all_elements_in_a_map"></a> Aby usunąć wszystkich elementów w mapie.
+#### <a name="to-delete-all-elements-in-a-map"></a><a name="_core_to_delete_all_elements_in_a_map"></a>Aby usunąć wszystkie elementy na mapie
 
-1. Użyj `GetStartPosition` i `GetNextAssoc` można wykonać iterację tablicy.
+1. Użyj `GetStartPosition` `GetNextAssoc` i iterować za pośrednictwem tablicy.
 
-1. Użyj **Usuń** operator można usunąć klucza i/lub wartość dla każdego elementu na mapie, ponieważ jest podczas iteracji.
+1. Użyj **delete** operator, aby usunąć klucz i/lub wartość dla każdego elementu mapy, jak to napotkane w iteracji.
 
-1. Wywołaj `RemoveAll` funkcję, aby usunąć wszystkie elementy z mapy, po ich usunięciu.
+1. Wywołanie `RemoveAll` funkcji, aby usunąć wszystkie elementy z mapy po ich usunięciu.
 
-   Usunięcie wszystkich elementów w kodzie `CMap` kolekcja jest w następujący sposób. Każdy element w mapie ma ciąg jako klucz i `CPerson` obiektu (pochodną `CObject`) jako wartość.
+   Kod do usuwania wszystkich elementów `CMap` kolekcji jest w następujący sposób. Każdy element na mapie ma ciąg jako `CPerson` klucz i `CObject`obiekt (pochodną ) jako wartość.
 
    [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
 
-Możesz wywołać `RemoveAll` można usunąć wszystkich elementów w mapie lub `RemoveKey` można usunąć pojedynczego elementu z określonym kluczem.
+Można wywołać, `RemoveAll` aby usunąć wszystkie `RemoveKey` elementy na mapie lub usunąć pojedynczy element z określonym kluczem.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Uzyskiwanie dostępu do wszystkich składowych kolekcji](../mfc/accessing-all-members-of-a-collection.md)
+[Uzyskiwanie dostępu do wszystkich elementów członkowskich kolekcji](../mfc/accessing-all-members-of-a-collection.md)

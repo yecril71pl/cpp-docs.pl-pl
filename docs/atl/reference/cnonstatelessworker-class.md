@@ -1,5 +1,5 @@
 ---
-title: CNonStatelessWorker Class
+title: Klasa CNonStatelessWorker
 ms.date: 11/04/2016
 f1_keywords:
 - CNonStatelessWorker
@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
-ms.openlocfilehash: abfd3e585c843fcc4ed4ad273c8ed217eaaccb7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3604f95c8217c7407c100671265140bbadbab78
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245533"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326730"
 ---
-# <a name="cnonstatelessworker-class"></a>CNonStatelessWorker Class
+# <a name="cnonstatelessworker-class"></a>Klasa CNonStatelessWorker
 
-Odbiera żądania z puli wątków i przekazuje je do obiektu procesu roboczego, który jest tworzona i niszczona przy każdym żądaniu.
+Odbiera żądania z puli wątków i przekazuje je do obiektu roboczego, który jest tworzony i niszczony na każde żądanie.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,36 +34,36 @@ class CNonStatelessWorker
 
 #### <a name="parameters"></a>Parametry
 
-*Proces roboczy*<br/>
-Klasa wątek procesu roboczego zgodnych z [archetyp procesu roboczego](../../atl/reference/worker-archetype.md) nadających się do obsługi żądań w kolejce na [CThreadPool](../../atl/reference/cthreadpool-class.md).
+*Pracownik*<br/>
+Klasa wątku roboczego zgodna z [archetypem procesu roboczego](../../atl/reference/worker-archetype.md) odpowiednia do obsługi żądań w kolejce na [CThreadPool](../../atl/reference/cthreadpool-class.md).
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne definicje typów
+### <a name="public-typedefs"></a>Publiczne typedefs
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CNonStatelessWorker::RequestType](#requesttype)|Implementacja [WorkerArchetype::RequestType](worker-archetype.md#requesttype).|
+|[CNonStatelessWorker::Typ żądania](#requesttype)|Implementacja [WorkerArchetype::RequestType](worker-archetype.md#requesttype).|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CNonStatelessWorker::Execute](#execute)|Implementacja [WorkerArchetype::Execute](worker-archetype.md#execute).|
-|[CNonStatelessWorker::Initialize](#initialize)|Implementacja [WorkerArchetype::Initialize](worker-archetype.md#initialize).|
-|[CNonStatelessWorker::Terminate](#terminate)|Implementacja [WorkerArchetype::Terminate](worker-archetype.md#terminate).|
+|[CNonStatelessWorker::Wykonaj](#execute)|Implementacja [WorkerArchetype::Execute](worker-archetype.md#execute).|
+|[CNonStatelessWorker::Inicjalizuj](#initialize)|Implementacja [WorkerArchetype::Initialize](worker-archetype.md#initialize).|
+|[CNonStatelessWorker::Zakończ](#terminate)|Implementacja [WorkerArchetype::Terminate](worker-archetype.md#terminate).|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa jest wątku roboczego prosty do użycia z usługą [CThreadPool](../../atl/reference/cthreadpool-class.md). Ta klasa nie zapewnia jakichkolwiek możliwości obsługi żądań własne. Zamiast tego metoda tworzy jedno wystąpienie *procesu roboczego* na żądanie i wykonania jego metod do tego wystąpienia deleguje odpowiednie uprawnienia.
+Ta klasa jest prostym wątkiem roboczym do użytku z [CThreadPool](../../atl/reference/cthreadpool-class.md). Ta klasa nie zapewnia żadnych możliwości obsługi żądań własnych. Zamiast tego wystąpienia jednego wystąpienia *worker* na żądanie i deleguje implementacji jego metod do tego wystąpienia.
 
-Zaletą tej klasy jest zapewnia wygodny sposób, aby zmienić model stanu dla istniejących klas wątku roboczego. `CThreadPool` spowoduje utworzenie pojedynczego procesu roboczego przez okres istnienia wątku, więc jeśli klasa proces roboczy przechowuje stan, będą przechowywane jego dla wielu żądań. Po prostu opakowując tej klasy w `CNonStatelessWorker` szablon przed jego z użyciem `CThreadPool`, okres istnienia procesu roboczego i stan przechowuje, jest ograniczona do pojedynczego żądania.
+Zaletą tej klasy jest to, że zapewnia wygodny sposób, aby zmienić model stanu dla istniejących klas wątku roboczego. `CThreadPool`utworzy pojedynczy proces roboczy przez cały okres istnienia wątku, więc jeśli klasa robocza przechowuje stan, będzie go przechowywać w wielu żądaniach. Po prostu zawijania `CNonStatelessWorker` tej klasy w `CThreadPool`szablonie przed użyciem go z , okres istnienia pracownika i stan posiada jest ograniczona do pojedynczego żądania.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlutil.h
 
-##  <a name="execute"></a>  CNonStatelessWorker::Execute
+## <a name="cnonstatelessworkerexecute"></a><a name="execute"></a>CNonStatelessWorker::Wykonaj
 
 Implementacja [WorkerArchetype::Execute](worker-archetype.md#execute).
 
@@ -76,9 +76,9 @@ void Execute(
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda tworzy wystąpienie *procesu roboczego* klasy na stosie i wywołania [zainicjować](worker-archetype.md#initialize) dla tego obiektu. Jeśli inicjowanie zakończy się pomyślnie, ta metoda wywołuje również [Execute](worker-archetype.md#execute) i [Zakończ](worker-archetype.md#terminate) na tym samym obiekcie.
+Ta metoda tworzy wystąpienie *Worker* klasy na stosie i wywołuje [initialize](worker-archetype.md#initialize) na tym obiekcie. Jeśli inicjowanie zakończy się pomyślnie, ta metoda wywołuje również [Execute](worker-archetype.md#execute) i [Terminate](worker-archetype.md#terminate) na tym samym obiekcie.
 
-##  <a name="initialize"></a>  CNonStatelessWorker::Initialize
+## <a name="cnonstatelessworkerinitialize"></a><a name="initialize"></a>CNonStatelessWorker::Inicjalizuj
 
 Implementacja [WorkerArchetype::Initialize](worker-archetype.md#initialize).
 
@@ -92,9 +92,9 @@ Zawsze zwraca wartość PRAWDA.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta klasa nie wykonuje żadnych inicjowania `Initialize`.
+Ta klasa nie wykonuje inicjowania w . `Initialize`
 
-##  <a name="requesttype"></a>  CNonStatelessWorker::RequestType
+## <a name="cnonstatelessworkerrequesttype"></a><a name="requesttype"></a>CNonStatelessWorker::Typ żądania
 
 Implementacja [WorkerArchetype::RequestType](worker-archetype.md#requesttype).
 
@@ -104,9 +104,9 @@ typedef Worker::RequestType RequestType;
 
 ### <a name="remarks"></a>Uwagi
 
-Ta klasa obsługuje ten sam typ elementu roboczego jako klasa umożliwiający *procesu roboczego* parametru szablonu. Zobacz [Przegląd CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md) Aby uzyskać szczegółowe informacje.
+Ta klasa obsługuje ten sam typ elementu pracy, co klasa używana dla *parametru* Szablon procesu roboczego. Zobacz [CNonStatelessWorker Omówienie,](../../atl/reference/cnonstatelessworker-class.md) aby uzyskać szczegółowe informacje.
 
-##  <a name="terminate"></a>  CNonStatelessWorker::Terminate
+## <a name="cnonstatelessworkerterminate"></a><a name="terminate"></a>CNonStatelessWorker::Zakończ
 
 Implementacja [WorkerArchetype::Terminate](worker-archetype.md#terminate).
 
@@ -116,10 +116,10 @@ void Terminate(void* /* pvParam */) throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta klasa wykonanie oczyszczania `Terminate`.
+Ta klasa nie wykonuje żadnych `Terminate`oczyszczania w .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CThreadPool](../../atl/reference/cthreadpool-class.md)<br/>
-[Archetyp procesu roboczego](../../atl/reference/worker-archetype.md)<br/>
+[Archetyp pracownika](../../atl/reference/worker-archetype.md)<br/>
 [Klasy](../../atl/reference/atl-classes.md)

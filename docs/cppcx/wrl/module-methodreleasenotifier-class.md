@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier, constructor
 - Microsoft::WRL::Module::MethodReleaseNotifier::object_ data member
 ms.assetid: 5c2902be-964b-488f-9f1c-adf504995cbc
-ms.openlocfilehash: 41b7cfb2601cd2023e895dbcf1a56e85fe65b35d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c641f150b6f029facffa62f7b47c7da32138735e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325068"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371286"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier — Klasa
 
-Wywołuje program obsługi zdarzeń po udostępnieniu ostatni obiekt w bieżącego modułu. Program obsługi zdarzeń jest określona przez obiekt i jego elementów członkowskich wskaźnika do metody.
+Wywołuje program obsługi zdarzeń, gdy ostatni obiekt w bieżącym module jest zwolniony. Program obsługi zdarzeń jest określony przez obiekt i jego element członkowski pointer-to-a-method.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,7 +36,7 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ obiektu, którego funkcja członkowska jest program obsługi zdarzeń.
+Typ obiektu, którego funkcją elementu członkowskiego jest program obsługi zdarzeń.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -44,20 +44,20 @@ Typ obiektu, którego funkcja członkowska jest program obsługi zdarzeń.
 
 Nazwa                                                                                                 | Opis
 ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------
-[Module::methodreleasenotifier:: methodreleasenotifier —](#methodreleasenotifier-methodreleasenotifier) | Inicjuje nowe wystąpienie klasy `Module::MethodReleaseNotifier` klasy.
+[Moduł::MethodReleaseNotifier::MethodReleaseNotifier](#methodreleasenotifier-methodreleasenotifier) | Inicjuje nowe wystąpienie klasy `Module::MethodReleaseNotifier`.
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Nazwa                                                                   | Opis
 ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------
-[Module::MethodReleaseNotifier:: Invoke](#methodreleasenotifier-invoke) | Wywołuje program obsługi zdarzeń skojarzonych z bieżącym `Module::MethodReleaseNotifier` obiektu.
+[Moduł::MethodReleaseNotifier::Wywołaj](#methodreleasenotifier-invoke) | Wywołuje program obsługi zdarzeń skojarzony z bieżącym `Module::MethodReleaseNotifier` obiektem.
 
-### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+### <a name="protected-data-members"></a>Członkowie chronionych danych
 
 Nazwa                                                                    | Opis
 ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
-[Module::MethodReleaseNotifier::method_](#methodreleasenotifier-method) | Przechowuje wskaźnik do narzędzia obsługi zdarzeń dla bieżącego `Module::MethodReleaseNotifier` obiektu.
-[Module::methodreleasenotifier:: object_ —](#methodreleasenotifier-object) | Przechowuje wskaźnik do obiektu, którego funkcja członkowska jest program obsługi zdarzeń dla bieżącego `Module::MethodReleaseNotifier` obiektu.
+[Moduł::MethodReleaseNotifier::method_](#methodreleasenotifier-method) | Przechowuje wskaźnik do programu obsługi `Module::MethodReleaseNotifier` zdarzeń dla bieżącego obiektu.
+[Moduł::MethodReleaseNotifier::object_](#methodreleasenotifier-object) | Przechowuje wskaźnik do obiektu, którego funkcja elementu `Module::MethodReleaseNotifier` członkowskiego jest program obsługi zdarzeń dla bieżącego obiektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -69,27 +69,27 @@ Nazwa                                                                    | Opis
 
 **Nagłówek:** module.h
 
-**Namespace:** Microsoft::WRL
+**Obszar nazw:** Microsoft::WRL
 
-## <a name="methodreleasenotifier-invoke"></a>Module::MethodReleaseNotifier:: Invoke
+## <a name="modulemethodreleasenotifierinvoke"></a><a name="methodreleasenotifier-invoke"></a>Moduł::MethodReleaseNotifier::Wywołaj
 
-Wywołuje program obsługi zdarzeń skojarzonych z bieżącym `Module::MethodReleaseNotifier` obiektu.
+Wywołuje program obsługi zdarzeń skojarzony z bieżącym `Module::MethodReleaseNotifier` obiektem.
 
 ```cpp
 void Invoke();
 ```
 
-## <a name="methodreleasenotifier-method"></a>Module::MethodReleaseNotifier::method_
+## <a name="modulemethodreleasenotifiermethod_"></a><a name="methodreleasenotifier-method"></a>Moduł::MethodReleaseNotifier::method_
 
-Przechowuje wskaźnik do narzędzia obsługi zdarzeń dla bieżącego `Module::MethodReleaseNotifier` obiektu.
+Przechowuje wskaźnik do programu obsługi `Module::MethodReleaseNotifier` zdarzeń dla bieżącego obiektu.
 
 ```cpp
 void (T::* method_)();
 ```
 
-## <a name="methodreleasenotifier-methodreleasenotifier"></a>Module::methodreleasenotifier:: methodreleasenotifier —
+## <a name="modulemethodreleasenotifiermethodreleasenotifier"></a><a name="methodreleasenotifier-methodreleasenotifier"></a>Moduł::MethodReleaseNotifier::MethodReleaseNotifier
 
-Inicjuje nowe wystąpienie klasy `Module::MethodReleaseNotifier` klasy.
+Inicjuje nowe wystąpienie klasy `Module::MethodReleaseNotifier`.
 
 ```cpp
 MethodReleaseNotifier(
@@ -102,18 +102,18 @@ MethodReleaseNotifier(
 
 ### <a name="parameters"></a>Parametry
 
-*object*<br/>
-Obiekt, którego funkcja członkowska jest program obsługi zdarzeń.
+*obiekt*<br/>
+Obiekt, którego funkcja elementu członkowskiego jest programem obsługi zdarzeń.
 
-*— Metoda*<br/>
-Funkcja elementu członkowskiego parametru *obiektu* oznacza to program obsługi zdarzeń.
+*Metoda*<br/>
+Funkcja elementu członkowskiego *obiektu* parametru, który jest programem obsługi zdarzeń.
 
 *Wydania*<br/>
-Określ `true` umożliwiające wywołanie bazowego [modułu:: ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release) metody; w przeciwnym razie określ `false`.
+Określ, `true` aby włączyć wywołanie podstawowej metody [modułu::ReleaseNotifier::Release();](module-releasenotifier-class.md#releasenotifier-release) w przeciwnym `false`razie należy określić .
 
-## <a name="methodreleasenotifier-object"></a>Module::methodreleasenotifier:: object_ —
+## <a name="modulemethodreleasenotifierobject_"></a><a name="methodreleasenotifier-object"></a>Moduł::MethodReleaseNotifier::object_
 
-Przechowuje wskaźnik do obiektu, którego funkcja członkowska jest program obsługi zdarzeń dla bieżącego `Module::MethodReleaseNotifier` obiektu.
+Przechowuje wskaźnik do obiektu, którego funkcja elementu `Module::MethodReleaseNotifier` członkowskiego jest program obsługi zdarzeń dla bieżącego obiektu.
 
 ```cpp
 T* object_;

@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: b4c157435aaffab5f1315fd4636f55f9d4e0d5b4
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9a84d91e20242fb206d1d3f71fcb3dd207561f62
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496861"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327228"
 ---
 # <a name="ccomvariant-class"></a>Klasa CComVariant
 
-Ta klasa otacza typ VARIANT, dostarczając element członkowski wskazujący typ przechowywanych danych.
+Ta klasa zawija variant typu, zapewniając element członkowski wskazujący typ danych przechowywanych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,38 +44,38 @@ class CComVariant : public tagVARIANT
 |Nazwa|Opis|
 |----------|-----------------|
 |[CComVariant::CComVariant](#ccomvariant)|Konstruktor.|
-|[CComVariant:: ~ CComVariant](#dtor)|Destruktor.|
+|[CComVariant::~CComVariant](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComVariant:: Attach](#attach)|Dołącza wariant do `CComVariant` obiektu.|
-|[CComVariant:: ChangeType](#changetype)|`CComVariant` Konwertuje obiekt na nowy typ.|
-|[CComVariant:: Clear](#clear)|`CComVariant` Czyści obiekt.|
-|[CComVariant:: Copy](#copy)|Kopiuje wariant do `CComVariant` obiektu.|
-|[CComVariant:: CopyTo](#copyto)|Kopiuje zawartość `CComVariant` obiektu.|
-|[CComVariant::D etach](#detach)|Odłączenie bazowego wariantu `CComVariant` od obiektu.|
-|[CComVariant:: GetSize](#getsize)|Zwraca rozmiar (w bajtach) zawartości `CComVariant` obiektu.|
-|[CComVariant::ReadFromStream](#readfromstream)|Ładuje wariant ze strumienia.|
-|[CComVariant:: setbyref](#setbyref)|Inicjuje obiekt i `vt` ustawia element członkowski na VT_BYREF. `CComVariant`|
-|[CComVariant::WriteToStream](#writetostream)|Zapisuje bazowy wariant do strumienia.|
+|[CComVariant::Dołącz](#attach)|Dołącza wariant do `CComVariant` obiektu.|
+|[CComVariant::ChangeType](#changetype)|Konwertuje `CComVariant` obiekt na nowy typ.|
+|[CComVariant::Wyczyść](#clear)|Czyści `CComVariant` obiekt.|
+|[CComVariant::Kopiowanie](#copy)|Kopiuje wariant `CComVariant` do obiektu.|
+|[CComVariant::CopyTo](#copyto)|Kopiuje zawartość `CComVariant` obiektu.|
+|[CComVariant::Detach](#detach)|Odłącza podstawowy wariant `CComVariant` od obiektu.|
+|[CComVariant::GetSize](#getsize)|Zwraca rozmiar w liczbie bajtów zawartości `CComVariant` obiektu.|
+|[CComVariant::ReadFromStream](#readfromstream)|Ładuje WARIANT ze strumienia.|
+|[CComVariant::SetByRef](#setbyref)|Inicjuje `CComVariant` obiekt i `vt` ustawia element członkowski na VT_BYREF.|
+|[CComVariant::WriteToStream](#writetostream)|Zapisuje podstawowy wariant w strumieniu.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |||
 |-|-|
-|[CComVariant:: operator <](#operator_lt)|Wskazuje, czy `CComVariant` obiekt jest mniejszy niż określony wariant.|
-|[CComVariant:: operator >](#operator_gt)|Wskazuje, `CComVariant` czy obiekt jest większy niż określony wariant.|
-|[operator! =](#operator_neq)|Wskazuje, czy `CComVariant` obiekt nie jest równy określonemu wariantowi.|
+|[CComVariant::operator <](#operator_lt)|Wskazuje, `CComVariant` czy obiekt jest mniejszy niż określony VARIANT.|
+|[CComVariant::operator >](#operator_gt)|Wskazuje, `CComVariant` czy obiekt jest większy niż określony WARIANT.|
+|[operator !=](#operator_neq)|Wskazuje, `CComVariant` czy obiekt nie jest równy określonej variant.|
 |[operator =](#operator_eq)|Przypisuje wartość do `CComVariant` obiektu.|
-|[operator = =](#operator_eq_eq)|Wskazuje, czy `CComVariant` obiekt jest równy podanemu wariantowi.|
+|[operator ==](#operator_eq_eq)|Wskazuje, `CComVariant` czy obiekt jest równy określonej variant.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CComVariant`Zawija typ VARIANT i VARIANTARG, który składa się z Unii i składowej wskazujący typ danych przechowywanych w Unii. Warianty są zwykle używane w automatyzacji.
+`CComVariant`Zawija VARIANT i VARIANTARG typu, który składa się z unii i elementu członkowskiego wskazując typ danych przechowywanych w unii. VARIANTs są zwykle używane w automatyzacji.
 
-`CComVariant`pochodzi od typu VARIANT, więc można go użyć wszędzie tam, gdzie można użyć elementu VARIANT. Można na przykład użyć makra V_VT, aby wyodrębnić typ elementu `CComVariant` lub uzyskać dostęp do `vt` elementu członkowskiego bezpośrednio tak jak w przypadku wariantu.
+`CComVariant`pochodzi od typu VARIANT, dzięki czemu może być stosowany wszędzie tam, gdzie można użyć wariantu. Można na przykład użyć makra V_VT, aby wyodrębnić `CComVariant` typ lub uzyskać `vt` dostęp do elementu członkowskiego bezpośrednio, tak jak można z VARIANT.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -85,11 +85,11 @@ class CComVariant : public tagVARIANT
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcomcli. h
+**Nagłówek:** atlcomcli.h
 
-##  <a name="attach"></a>CComVariant:: Attach
+## <a name="ccomvariantattach"></a><a name="attach"></a>CComVariant::Dołącz
 
-Bezpiecznie czyści bieżącą zawartość `CComVariant` obiektu, kopiuje zawartość *pSrc* do tego obiektu, a następnie ustawia typ Variant *pSrc* na VT_EMPTY.
+Bezpiecznie czyści bieżącą `CComVariant` zawartość obiektu, kopiuje zawartość *pSrc* do tego obiektu, a następnie ustawia typ wariantu *pSrc* na VT_EMPTY.
 
 ```
 HRESULT Attach(VARIANT* pSrc);
@@ -97,8 +97,8 @@ HRESULT Attach(VARIANT* pSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*pSrc*<br/>
-podczas Wskazuje [wariant](/windows/win32/api/oaidl/ns-oaidl-variant) , który ma zostać dołączony do obiektu.
+*Psrc*<br/>
+[w] Wskazuje [na wariant,](/windows/win32/api/oaidl/ns-oaidl-variant) który ma być dołączony do obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -106,11 +106,11 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Własność danych przechowywanych przez *pSrc* jest przekazywana do `CComVariant` obiektu.
+Własność danych przechowywanych przez *pSrc* jest `CComVariant` przekazywana do obiektu.
 
-##  <a name="ccomvariant"></a>CComVariant::CComVariant
+## <a name="ccomvariantccomvariant"></a><a name="ccomvariant"></a>CComVariant::CComVariant
 
-Każdy Konstruktor obsługuje bezpieczne inicjowanie `CComVariant` obiektu przez `VariantInit` wywołanie funkcji Win32 lub przez ustawienie wartości i typu obiektu zgodnie z przekazaniem parametrów.
+Każdy konstruktor obsługuje bezpieczne inicjowanie `CComVariant` `VariantInit` obiektu, wywołując funkcję Win32 lub ustawiając wartość i typ obiektu zgodnie z przekazanymi parametrami.
 
 ```
 CComVariant() throw();
@@ -140,46 +140,46 @@ CComVariant(const CComBSTR& bstrSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*varSrc*<br/>
-podczas Wariant używany do `CComVariant` inicjowania obiektu. `CComVariant` Zawartość wariantu źródłowego jest kopiowana do lokalizacji docelowej bez konwersji.
+*varSrc ( varSrc )*<br/>
+[w] Lub `CComVariant` WARIANT używany do `CComVariant` inicjowania obiektu. Zawartość wariantu źródłowego są kopiowane do miejsca docelowego bez konwersji.
 
-*lpszSrc*<br/>
-podczas Ciąg znaków używany do inicjowania `CComVariant` obiektu. Można przekazać ciąg znaków (Unicode) zakończony zerem do wersji LPCOLESTR konstruktora lub ciąg ANSI do wersji LPCSTR. W każdym przypadku ciąg jest konwertowany na format znaków Unicode alokowany przy użyciu `SysAllocString`. Typ `CComVariant` obiektu będzie VT_BSTR.
+*lpszsrc*<br/>
+[w] Ciąg znaków używany do `CComVariant` inicjowania obiektu. Ciąg znaków szeroki (Unicode) można przekazać do wersji LPCOLESTR konstruktora lub ciągu ANSI do wersji LPCSTR. W obu przypadkach ciąg jest konwertowany na `SysAllocString`Unicode BSTR przydzielony przy użyciu programu . Typ `CComVariant` obiektu zostanie VT_BSTR.
 
-*bSrc*<br/>
-podczas **Bool** używany do inicjowania `CComVariant` obiektu. Argument **bool** jest konwertowany na element VARIANT_BOOL przed jego zapisaniem. Typ `CComVariant` obiektu będzie VT_BOOL.
+*bSrc (właz)*<br/>
+[w] **Bool** używany do inicjowania `CComVariant` obiektu. Argument **bool** jest konwertowany na VARIANT_BOOL przed zapisaniem. Typ `CComVariant` obiektu zostanie VT_BOOL.
 
-*nSrc*<br/>
-podczas Int, **Byte**, **Short**, **Long**, longlong, ULONGLONG, unsigned **Short**, unsigned **Long**lub unsigned **int** użyte do zainicjowania `CComVariant` obiektu. Typem `CComVariant` obiektu będzie VT_I4, VT_UI1, VT_I2, VT_I4, VT_I8, VT_UI8, VT_UI2, VT_UI4 lub VT_UI4.
+*nSrc (nSrc)*<br/>
+[w] **Int**, **BYTE**, **krótki**, **długi,** DŁUGI, ULONGLONG, **niepodpisany krótki,** **niepodpisany**długi `CComVariant` lub **niepodpisany int** używany do inicjowania obiektu. Typ `CComVariant` obiektu zostanie odpowiednio VT_I4, VT_UI1, VT_I2, VT_I4, VT_I8, VT_UI8, VT_UI2, VT_UI4 lub VT_UI4.
 
-*vtSrc*<br/>
-podczas Typ wariantu. Gdy pierwszy parametr to **int**, prawidłowe typy to VT_I4 i VT_INT. Gdy pierwszy parametr jest **długi**, prawidłowe typy to VT_I4 i VT_ERROR. Gdy pierwszy parametr jest **podwójny**, prawidłowe typy to VT_R8 i VT_DATE. Gdy pierwszy parametr ma wartość **int bez znaku**, prawidłowe typy to VT_UI4 i VT_UINT.
+*Vtsrc*<br/>
+[w] Typ wariantu. Gdy pierwszy parametr jest **int**, prawidłowe typy są VT_I4 i VT_INT. Gdy pierwszy parametr jest **długi,** prawidłowe typy są VT_I4 i VT_ERROR. Gdy pierwszy parametr jest **podwójny,** prawidłowe typy są VT_R8 i VT_DATE. Gdy pierwszy parametr jest **niepodpisany int, prawidłowe**typy są VT_UI4 i VT_UINT.
 
-*fltSrc*<br/>
-podczas Wartość **zmiennoprzecinkowa** użyta do `CComVariant` zainicjowania obiektu. Typ `CComVariant` obiektu będzie VT_R4.
+*fltSrc ( fltSrc )*<br/>
+[w] Float **float** używany do inicjowania `CComVariant` obiektu. Typ `CComVariant` obiektu zostanie VT_R4.
 
-*dblSrc*<br/>
-podczas **Podwójna** wartość użyta do `CComVariant` zainicjowania obiektu. Typ `CComVariant` obiektu będzie VT_R8.
+*dblSrc ( dblSrc )*<br/>
+[w] **Double** używane do inicjowania `CComVariant` obiektu. Typ `CComVariant` obiektu zostanie VT_R8.
 
-*cySrc*<br/>
-podczas `CY` Używane do`CComVariant` inicjowania obiektu. Typ `CComVariant` obiektu będzie VT_CY.
+*cysrc (cysrc)*<br/>
+[w] Używany `CY` do inicjowania `CComVariant` obiektu. Typ `CComVariant` obiektu zostanie VT_CY.
 
-*pSrc*<br/>
-podczas Wskaźnik lub używany`IUnknown` do inicjowania obiektu.`CComVariant` `IDispatch` `AddRef`zostanie wywołana na wskaźniku interfejsu. Typ `CComVariant` obiektu będzie odpowiednio VT_DISPATCH lub VT_UNKNOWN.
+*Psrc*<br/>
+[w] Lub `IDispatch` `IUnknown` wskaźnik używany do `CComVariant` inicjowania obiektu. `AddRef`zostanie wywołana na wskaźniku interfejsu. Typ `CComVariant` obiektu zostanie odpowiednio VT_DISPATCH lub VT_UNKNOWN.
 
-Lub wskaźnik SAFERRAY używany do inicjowania `CComVariant` obiektu. Kopia elementu SAFEARRAY jest przechowywana w `CComVariant` obiekcie. Typ `CComVariant` obiektu będzie kombinacją oryginalnego typu parametru SafeArray i VT_ARRAY.
+Lub wskaźnik SAFERRAY używany do `CComVariant` inicjowania obiektu. Kopia SAFEARRAY jest przechowywana `CComVariant` w obiekcie. Typ `CComVariant` obiektu będzie kombinacją oryginalnego typu SAFEARRAY i VT_ARRAY.
 
-*cSrc*<br/>
-podczas **Znak** używany do inicjowania `CComVariant` obiektu. Typ `CComVariant` obiektu będzie VT_I1.
+*Csrc*<br/>
+[w] **Znak** używany do inicjowania `CComVariant` obiektu. Typ `CComVariant` obiektu zostanie VT_I1.
 
-*bstrSrc*<br/>
-podczas BSTR używany do inicjowania `CComVariant` obiektu. Typ `CComVariant` obiektu będzie VT_BSTR.
+*okręg wyborczy bstrSrc*<br/>
+[w] BSTR używane do inicjowania `CComVariant` obiektu. Typ `CComVariant` obiektu zostanie VT_BSTR.
 
 ### <a name="remarks"></a>Uwagi
 
-Destruktor zarządza oczyszczaniem przez wywołanie [CComVariant:: Clear](#clear).
+Destruktor zarządza oczyszczaniem, wywołując [CComVariant::Clear](#clear).
 
-##  <a name="dtor"></a>CComVariant:: ~ CComVariant
+## <a name="ccomvariantccomvariant"></a><a name="dtor"></a>CComVariant::~CComVariant
 
 Destruktor.
 
@@ -189,11 +189,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda umożliwia zarządzanie oczyszczaniem przez wywołanie [CComVariant:: Clear](#clear).
+Ta metoda zarządza oczyszczaniem, wywołując [CComVariant::Clear](#clear).
 
-##  <a name="changetype"></a>CComVariant:: ChangeType
+## <a name="ccomvariantchangetype"></a><a name="changetype"></a>CComVariant::ChangeType
 
-`CComVariant` Konwertuje obiekt na nowy typ.
+Konwertuje `CComVariant` obiekt na nowy typ.
 
 ```
 HRESULT ChangeType(VARTYPE vtNew, const VARIANT* pSrc = NULL);
@@ -201,11 +201,11 @@ HRESULT ChangeType(VARTYPE vtNew, const VARIANT* pSrc = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*vtNew*<br/>
-podczas Nowy typ dla `CComVariant` obiektu.
+*vtNowy*<br/>
+[w] Nowy typ `CComVariant` obiektu.
 
-*pSrc*<br/>
-podczas Wskaźnik do WARIANTu, którego wartość zostanie przekonwertowana na nowy typ. Wartość domyślna to null, co oznacza, `CComVariant` że obiekt zostanie przekonwertowany na miejsce.
+*Psrc*<br/>
+[w] Wskaźnik do WARIANT, którego wartość zostanie przekonwertowana na nowy typ. Wartością domyślną jest `CComVariant` NULL, co oznacza, że obiekt zostanie przekonwertowany na miejscu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -213,11 +213,11 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku przekazania wartości dla *pSrc*, `ChangeType` program będzie używać tego wariantu jako źródła konwersji. W przeciwnym razie obiekt będzie źródłem. `CComVariant`
+Jeśli przekażesz wartość dla `ChangeType` *pSrc*, użyje tego wariantu jako źródła konwersji. W przeciwnym `CComVariant` razie obiekt będzie źródłem.
 
-##  <a name="clear"></a>CComVariant:: Clear
+## <a name="ccomvariantclear"></a><a name="clear"></a>CComVariant::Wyczyść
 
-Czyści obiekt, wywołując funkcję `VariantClear` Win32. `CComVariant`
+Czyści `CComVariant` obiekt, wywołując `VariantClear` funkcję Win32.
 
 ```
 HRESULT Clear();
@@ -231,9 +231,9 @@ Standardowa wartość HRESULT.
 
 Destruktor automatycznie wywołuje `Clear`.
 
-##  <a name="copy"></a>CComVariant:: Copy
+## <a name="ccomvariantcopy"></a><a name="copy"></a>CComVariant::Kopiowanie
 
-`CComVariant` Zwalnia obiekt, a następnie przypisuje go do kopii określonego wariantu.
+Zwalnia obiekt, `CComVariant` a następnie przypisuje mu kopię określonego wariantu.
 
 ```
 HRESULT Copy(const VARIANT* pSrc);
@@ -241,14 +241,14 @@ HRESULT Copy(const VARIANT* pSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*pSrc*<br/>
-podczas Wskaźnik do wariantu [](/windows/win32/api/oaidl/ns-oaidl-variant) do skopiowania.
+*Psrc*<br/>
+[w] Wskaźnik do [wariantu](/windows/win32/api/oaidl/ns-oaidl-variant) do skopiowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Standardowa wartość HRESULT.
 
-##  <a name="copyto"></a>CComVariant:: CopyTo
+## <a name="ccomvariantcopyto"></a><a name="copyto"></a>CComVariant::CopyTo
 
 Kopiuje zawartość `CComVariant` obiektu.
 
@@ -258,8 +258,8 @@ HRESULT CopyTo(BSTR* pstrDest);
 
 ### <a name="parameters"></a>Parametry
 
-*pstrDest*<br/>
-Wskazuje BSTR, który będzie otrzymywał kopię zawartości `CComVariant` obiektu.
+*pstrDest (pstrDest)*<br/>
+Wskazuje BSTR, który otrzyma kopię zawartości `CComVariant` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -267,11 +267,11 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-`CComVariant` Obiekt musi być typu VT_BSTR.
+Obiekt `CComVariant` musi być typu VT_BSTR.
 
-##  <a name="detach"></a>CComVariant::D etach
+## <a name="ccomvariantdetach"></a><a name="detach"></a>CComVariant::Detach
 
-Odłącza bazowy wariant od `CComVariant` obiektu i ustawia typ obiektu na VT_EMPTY.
+Odłącza podstawowy wariant `CComVariant` od obiektu i ustawia typ obiektu na VT_EMPTY.
 
 ```
 HRESULT Detach(VARIANT* pDest);
@@ -279,8 +279,8 @@ HRESULT Detach(VARIANT* pDest);
 
 ### <a name="parameters"></a>Parametry
 
-*pDest*<br/>
-określoną Zwraca podstawową wartość WARIANTu obiektu.
+*pDest (właśc.*<br/>
+[na zewnątrz] Zwraca podstawową wartość VARIANT obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -288,11 +288,11 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy zauważyć, że zawartość wariantu, do której odwołuje się *pDest* , zostanie automatycznie wyczyszczona, zanim zostanie przypisana wartość i typ obiektu wywołującego `CComVariant` .
+Należy zauważyć, że zawartość VARIANT odwołuje się *pDest* zostanie automatycznie wyczyszczone przed przypisaniem `CComVariant` wartości i typu obiektu wywołującego.
 
-##  <a name="getsize"></a>CComVariant:: GetSize
+## <a name="ccomvariantgetsize"></a><a name="getsize"></a>CComVariant::GetSize
 
-W przypadku wariantów o prostym rozmiarze, ta metoda zwraca wartość **sizeof** , a także bazowego typu danych i **sizeof (VARTYPE)** .
+W przypadku prostych zmiennic o stałym rozmiarze metoda zwraca **rozmiar** podstawowy typ danych plus **sizeof(VARTYPE).**
 
 ```
 ULONG GetSize() const;
@@ -300,19 +300,19 @@ ULONG GetSize() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Rozmiar w bajtach bieżącej zawartości `CComVariant` obiektu.
+Rozmiar w bajtach bieżącej `CComVariant` zawartości obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wariant zawiera wskaźnik interfejsu, `GetSize` zapytania dla `IPersistStream` lub `IPersistStreamInit`. Jeśli to się powiedzie, wartość zwracana jest niewielką kolejnością 32 bitów wartości zwracanej `GetSizeMax` przez Plus **sizeof** a CLSID i **sizeof (VARTYPE)** . Jeśli wskaźnik interfejsu ma wartość null, `GetSize` zwraca wartość **sizeof** a CLSID i **sizeof (VARTYPE)** . Jeśli całkowity rozmiar jest większy niż ULONG_MAX, zwraca `GetSize` wartość **sizeof (VARTYPE)** , która wskazuje na błąd.
+Jeśli VARIANT zawiera wskaźnik `GetSize` interfejsu, `IPersistStream` kwerendy dla lub `IPersistStreamInit`. Jeśli się powiedzie, zwracana wartość jest niskiej kolejności 32 bity wartości zwracanej przez `GetSizeMax` plus **sizeof** CLSID i **sizeof(VARTYPE)**. Jeśli wskaźnik interfejsu ma `GetSize` wartość NULL, zwraca **rozmiar** identyfikatora CLSID plus **sizeof(VARTYPE).** Jeśli całkowity rozmiar jest większy niż `GetSize` ULONG_MAX, zwraca **sizeof(VARTYPE),** który wskazuje błąd.
 
-We wszystkich innych przypadkach tymczasowa ODMIANa typu VT_BSTR jest przekształcana z bieżącego WARIANTu. Długość tego elementu BSTR jest obliczana jako rozmiar długości ciągu plus długość ciągu znaków oraz rozmiar znaku null Plus **sizeof (VARTYPE)** . Jeśli wariant nie może zostać przekształcony na wariant typu VT_BSTR, `GetSize` zwraca **sizeof (VARTYPE)** .
+We wszystkich innych przypadkach tymczasowy wariant typu VT_BSTR jest wymuszany z bieżącego WARIANTU. Długość tego BSTR jest obliczana jako rozmiar długości ciągu plus długość samego ciągu plus rozmiar znaku zerowego plus **sizeof(VARTYPE).** Jeśli wariant nie może być przymuszony do wariantu typu VT_BSTR, `GetSize` zwraca **sizeof(VARTYPE)**.
 
-Rozmiar zwrócony przez tę metodę jest zgodny z liczbą bajtów używanych przez [CComVariant:: WriteToStream](#writetostream) w warunkach zakończonych powodzeniem.
+Rozmiar zwracany przez tę metodę odpowiada liczbie bajtów używanych przez [CComVariant::WriteToStream](#writetostream) w pomyślnych warunkach.
 
-##  <a name="operator_eq"></a>CComVariant:: operator =
+## <a name="ccomvariantoperator-"></a><a name="operator_eq"></a>CComVariant::operator =
 
-Przypisuje wartość i odpowiadający jej typ `CComVariant` do obiektu.
+Przypisuje wartość i odpowiedni typ `CComVariant` do obiektu.
 
 ```
 CComVariant& operator=(const CComVariant& varSrc);
@@ -341,41 +341,41 @@ CComVariant& operator=(char cSrc) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*varSrc*<br/>
-podczas Wariant `CComVariant` , [](/windows/win32/api/oaidl/ns-oaidl-variant) który ma `CComVariant` zostać przypisany do obiektu. Zawartość wariantu źródłowego jest kopiowana do lokalizacji docelowej bez konwersji.
+*varSrc ( varSrc )*<br/>
+[w] Lub `CComVariant` [WARIANT, który](/windows/win32/api/oaidl/ns-oaidl-variant) ma `CComVariant` być przypisany do obiektu. Zawartość wariantu źródłowego są kopiowane do miejsca docelowego bez konwersji.
 
-*bstrSrc*<br/>
-podczas Wartość BSTR, która ma zostać przypisana do `CComVariant` obiektu. Typ `CComVariant` obiektu będzie VT_BSTR.
+*okręg wyborczy bstrSrc*<br/>
+[w] BSTR, który ma zostać `CComVariant` przypisany do obiektu. Typ `CComVariant` obiektu zostanie VT_BSTR.
 
-*lpszSrc*<br/>
-podczas Ciąg znaków, który ma zostać przypisany do `CComVariant` obiektu. Można przekazać ciąg znaków (Unicode) zakończony zerem do wersji LPCOLESTR operatora lub ciąg ANSI do wersji LPCSTR. W każdym z tych przypadków ciąg jest konwertowany na format znaków Unicode alokowany przy `SysAllocString`użyciu. Typ `CComVariant` obiektu będzie VT_BSTR.
+*lpszsrc*<br/>
+[w] Ciąg znaków, który ma `CComVariant` być przypisany do obiektu. Ciąg znaków z zerowym zakończeniem (Unicode) można przekazać do wersji LPCOLESTR operatora lub ciągu ANSI do wersji LPCSTR. W obu przypadkach ciąg jest konwertowany na Unicode BSTR przydzielony przy użyciu `SysAllocString`. Typ `CComVariant` obiektu zostanie VT_BSTR.
 
-*bSrc*<br/>
-podczas Wartość **logiczna** , która ma zostać przypisana do `CComVariant` obiektu. Argument **bool** jest konwertowany na element VARIANT_BOOL przed jego zapisaniem. Typ `CComVariant` obiektu będzie VT_BOOL.
+*bSrc (właz)*<br/>
+[w] **Bool, który** ma zostać `CComVariant` przypisany do obiektu. Argument **bool** jest konwertowany na VARIANT_BOOL przed zapisaniem. Typ `CComVariant` obiektu zostanie VT_BOOL.
 
-*nSrc*<br/>
-podczas Liczba **int**, Byte, **Short**, **Long**, longlong, ULONGLONG, **unsigned Short**, unsigned **Long**lub unsigned **int** , która ma zostać przypisana do `CComVariant` obiektu. Typem `CComVariant` obiektu będzie VT_I4, VT_UI1, VT_I2, VT_I4, VT_I8, VT_UI8, VT_UI2, VT_UI4 lub VT_UI4.
+*nSrc (nSrc)*<br/>
+[w] Int , BYTE, **krótki**, **długi,** DŁUGI, ULONGLONG, **niepodpisany krótki,** **niepodpisany długi**lub `CComVariant` **niepodpisany int,** który ma być przypisany do obiektu. **int** Typ `CComVariant` obiektu zostanie odpowiednio VT_I4, VT_UI1, VT_I2, VT_I4, VT_I8, VT_UI8, VT_UI2, VT_UI4 lub VT_UI4.
 
-*fltSrc*<br/>
-podczas Wartość **zmiennoprzecinkowa** , która ma zostać `CComVariant` przypisana do obiektu. Typ `CComVariant` obiektu będzie VT_R4.
+*fltSrc ( fltSrc )*<br/>
+[w] **Pływak,** który ma być `CComVariant` przypisany do obiektu. Typ `CComVariant` obiektu zostanie VT_R4.
 
-*dblSrc*<br/>
-podczas Wartość **Double** , która ma zostać przypisana do `CComVariant` obiektu. Typ `CComVariant` obiektu będzie VT_R8.
+*dblSrc ( dblSrc )*<br/>
+[w] **Double,** który ma być `CComVariant` przypisany do obiektu. Typ `CComVariant` obiektu zostanie VT_R8.
 
-*cySrc*<br/>
-podczas Wartość `CY` do przypisania `CComVariant` do obiektu. Typ `CComVariant` obiektu będzie VT_CY.
+*cysrc (cysrc)*<br/>
+[w] Do `CY` przypisania `CComVariant` do obiektu. Typ `CComVariant` obiektu zostanie VT_CY.
 
-*pSrc*<br/>
-podczas Wskaźnik `IDispatch` lub `IUnknown` ,`CComVariant` który ma zostać przypisany do obiektu. `AddRef`zostanie wywołana na wskaźniku interfejsu. Typ `CComVariant` obiektu będzie odpowiednio VT_DISPATCH lub VT_UNKNOWN.
+*Psrc*<br/>
+[w] Lub `IDispatch` `IUnknown` wskaźnik, który ma `CComVariant` być przypisany do obiektu. `AddRef`zostanie wywołana na wskaźniku interfejsu. Typ `CComVariant` obiektu zostanie odpowiednio VT_DISPATCH lub VT_UNKNOWN.
 
-Lub wskaźnik SAFEARRAY, który ma zostać przypisany do `CComVariant` obiektu. Kopia elementu SAFEARRAY jest przechowywana w `CComVariant` obiekcie. Typ `CComVariant` obiektu będzie kombinacją oryginalnego typu parametru SafeArray i VT_ARRAY.
+Lub wskaźnik SAFEARRAY, który ma `CComVariant` być przypisany do obiektu. Kopia SAFEARRAY jest przechowywana `CComVariant` w obiekcie. Typ `CComVariant` obiektu będzie kombinacją oryginalnego typu SAFEARRAY i VT_ARRAY.
 
-*cSrc*<br/>
-podczas Znak, który ma zostać przypisany do `CComVariant` obiektu. Typ `CComVariant` obiektu będzie VT_I1.
+*Csrc*<br/>
+[w] Znak, który ma zostać `CComVariant` przypisany do obiektu. Typ `CComVariant` obiektu zostanie VT_I1.
 
-##  <a name="operator_eq_eq"></a>CComVariant:: operator = =
+## <a name="ccomvariantoperator-"></a><a name="operator_eq_eq"></a>CComVariant::operator ==
 
-Wskazuje, czy `CComVariant` obiekt jest równy podanemu wariantowi.
+Wskazuje, `CComVariant` czy obiekt jest równy określonej variant.
 
 ```
 bool operator==(const VARIANT& varSrc) const throw();
@@ -383,13 +383,13 @@ bool operator==(const VARIANT& varSrc) const throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca wartość true, `CComVariant` Jeśli wartość i typ elementu *varSrc* są równe odpowiednio wartości i typu obiektu. W przeciwnym razie FALSE. Operator używa domyślnych ustawień regionalnych użytkownika do przeprowadzenia porównania.
+Zwraca wartość PRAWDA, jeśli wartość i typ *varSrc* są równe wartości `CComVariant` i typowi obiektu. W przeciwnym razie FALSE. Operator używa ustawień regionalnych użytkownika do wykonania porównania.
 
-Operator porównuje tylko wartość typów wariantów. Porównuje ciągi, liczby całkowite i punkty zmiennoprzecinkowe, ale nie tablice ani rekordy.
+Operator porównuje tylko wartość typów wariantów. Porównuje ciągi, liczby całkowite i zmiennoprzecinkowe, ale nie tablice lub rekordy.
 
-##  <a name="operator_neq"></a>CComVariant:: operator! =
+## <a name="ccomvariantoperator-"></a><a name="operator_neq"></a>CComVariant::operator !=
 
-Wskazuje, czy `CComVariant` obiekt nie jest równy określonemu wariantowi.
+Wskazuje, `CComVariant` czy obiekt nie jest równy określonej variant.
 
 ```
 bool operator!=(const VARIANT& varSrc) const throw();
@@ -397,13 +397,13 @@ bool operator!=(const VARIANT& varSrc) const throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca wartość true, jeśli wartość lub typ *varSrc* nie jest równa wartości lub typu, odpowiednio, `CComVariant` obiektu. W przeciwnym razie FALSE. Operator używa domyślnych ustawień regionalnych użytkownika do przeprowadzenia porównania.
+Zwraca wartość PRAWDA, jeśli wartość lub typ *varSrc* nie jest równa wartości `CComVariant` lub typowi obiektu. W przeciwnym razie FALSE. Operator używa ustawień regionalnych użytkownika do wykonania porównania.
 
-Operator porównuje tylko wartość typów wariantów. Porównuje ciągi, liczby całkowite i punkty zmiennoprzecinkowe, ale nie tablice ani rekordy.
+Operator porównuje tylko wartość typów wariantów. Porównuje ciągi, liczby całkowite i zmiennoprzecinkowe, ale nie tablice lub rekordy.
 
-##  <a name="operator_lt"></a>CComVariant:: operator&lt;
+## <a name="ccomvariantoperator-lt"></a><a name="operator_lt"></a>CComVariant::operator&lt;
 
-Wskazuje, czy `CComVariant` obiekt jest mniejszy niż określony wariant.
+Wskazuje, `CComVariant` czy obiekt jest mniejszy niż określony VARIANT.
 
 ```
 bool operator<(const VARIANT& varSrc) const throw();
@@ -411,11 +411,11 @@ bool operator<(const VARIANT& varSrc) const throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca wartość true, jeśli wartość `CComVariant` obiektu jest mniejsza niż wartość *varSrc*. W przeciwnym razie FALSE. Operator używa domyślnych ustawień regionalnych użytkownika do przeprowadzenia porównania.
+Zwraca wartość PRAWDA, `CComVariant` jeśli wartość obiektu jest mniejsza niż wartość *varSrc*. W przeciwnym razie FALSE. Operator używa ustawień regionalnych użytkownika do wykonania porównania.
 
-##  <a name="operator_gt"></a>CComVariant:: operator&gt;
+## <a name="ccomvariantoperator-gt"></a><a name="operator_gt"></a>CComVariant::operator&gt;
 
-Wskazuje, `CComVariant` czy obiekt jest większy niż określony wariant.
+Wskazuje, `CComVariant` czy obiekt jest większy niż określony WARIANT.
 
 ```
 bool operator>(const VARIANT& varSrc) const throw();
@@ -423,11 +423,11 @@ bool operator>(const VARIANT& varSrc) const throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca wartość true, jeśli wartość `CComVariant` obiektu jest większa niż wartość *varSrc*. W przeciwnym razie FALSE. Operator używa domyślnych ustawień regionalnych użytkownika do przeprowadzenia porównania.
+Zwraca wartość PRAWDA, `CComVariant` jeśli wartość obiektu jest większa niż wartość *varSrc*. W przeciwnym razie FALSE. Operator używa ustawień regionalnych użytkownika do wykonania porównania.
 
-##  <a name="readfromstream"></a>CComVariant::ReadFromStream
+## <a name="ccomvariantreadfromstream"></a><a name="readfromstream"></a>CComVariant::ReadFromStream
 
-Ustawia podstawowy wariant dla WARIANTu zawartego w określonym strumieniu.
+Ustawia wariant bazowy na WARIANT zawarty w określonym strumieniu.
 
 ```
 HRESULT ReadFromStream(IStream* pStream);
@@ -435,8 +435,8 @@ HRESULT ReadFromStream(IStream* pStream);
 
 ### <a name="parameters"></a>Parametry
 
-*pStream*<br/>
-podczas Wskaźnik do interfejsu [IStream](/windows/win32/api/objidl/nn-objidl-istream) w strumieniu zawierającym dane.
+*pStream (Strumień)*<br/>
+[w] Wskaźnik do interfejsu [IStream](/windows/win32/api/objidl/nn-objidl-istream) w strumieniu zawierającym dane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -444,11 +444,11 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-`ReadToStream`wymaga wcześniejszego wywołania do [WriteToStream](#writetostream).
+`ReadToStream`wymaga poprzedniego wywołania [WriteToStream](#writetostream).
 
-##  <a name="setbyref"></a>CComVariant:: setbyref
+## <a name="ccomvariantsetbyref"></a><a name="setbyref"></a>CComVariant::SetByRef
 
-Inicjuje obiekt i `vt` ustawia element członkowski na VT_BYREF. `CComVariant`
+Inicjuje `CComVariant` obiekt i `vt` ustawia element członkowski na VT_BYREF.
 
 ```
 template < typename T >
@@ -460,18 +460,18 @@ void SetByRef(T* pT) throw();
 *T*<br/>
 Typ VARIANT, na przykład BSTR, **int**lub **char**.
 
-*Zmiennoprzecinkow*<br/>
+*Pt*<br/>
 Wskaźnik używany do inicjowania `CComVariant` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-`SetByRef`jest szablonem funkcji, który inicjuje `CComVariant` obiekt na wskaźnik *pt* i ustawia `vt` element członkowski na VT_BYREF. Na przykład:
+`SetByRef`jest szablonem funkcji, który `CComVariant` inicjuje obiekt do `vt` wskaźnika *pT* i ustawia element członkowski na VT_BYREF. Przykład:
 
 [!code-cpp[NVC_ATL_Utilities#76](../../atl/codesnippet/cpp/ccomvariant-class_1.cpp)]
 
-##  <a name="writetostream"></a>CComVariant::WriteToStream
+## <a name="ccomvariantwritetostream"></a><a name="writetostream"></a>CComVariant::WriteToStream
 
-Zapisuje bazowy wariant do strumienia.
+Zapisuje podstawowy wariant w strumieniu.
 
 ```
 HRESULT WriteToStream(IStream* pStream);
@@ -479,13 +479,13 @@ HRESULT WriteToStream(IStream* pStream);
 
 ### <a name="parameters"></a>Parametry
 
-*pStream*<br/>
-podczas Wskaźnik do interfejsu [IStream](/windows/win32/api/objidl/nn-objidl-istream) w strumieniu.
+*pStream (Strumień)*<br/>
+[w] Wskaźnik do interfejsu [IStream](/windows/win32/api/objidl/nn-objidl-istream) w strumieniu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Standardowa wartość HRESULT.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przegląd klas](../../atl/atl-class-overview.md)

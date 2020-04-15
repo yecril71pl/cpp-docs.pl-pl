@@ -15,19 +15,19 @@ helpviewer_keywords:
 - storage, ATL
 - IPersistStorageImpl class
 ms.assetid: d652f02c-239c-47c7-9a50-3e9fc3014fff
-ms.openlocfilehash: a5b5dd4e5be43d01f00687ed9b96a3f27abcad0f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b235b190f237293932705e4d290ac963088722f3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495688"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326466"
 ---
 # <a name="ipersiststorageimpl-class"></a>Klasa IPersistStorageImpl
 
-Ta klasa implementuje interfejs [IPersistStorage](/windows/win32/api/objidl/nn-objidl-ipersiststorage) .
+Ta klasa implementuje interfejs [IPersistStorage.](/windows/win32/api/objidl/nn-objidl-ipersiststorage)
 
 > [!IMPORTANT]
->  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,7 +39,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Klasa, która pochodzi od `IPersistStorageImpl`.
+Twoja klasa, pochodząca od `IPersistStorageImpl`.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -47,21 +47,21 @@ Klasa, która pochodzi od `IPersistStorageImpl`.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IPersistStorageImpl:: GetClassID](#getclassid)|Pobiera identyfikator CLSID obiektu.|
-|[IPersistStorageImpl::HandsOffStorage](#handsoffstorage)|Powoduje, że obiekt zwalnia wszystkie obiekty magazynu i wprowadza tryb HandsOff. Implementacja ATL zwraca S_OK.|
+|[IPersistStorageImpl::GetClassID](#getclassid)|Pobiera identyfikator CLSID obiektu.|
+|[IPersistStorageImpl::HandsOffStorage](#handsoffstorage)|Nakazuje obiektowi zwolnić wszystkie obiekty magazynu i przejść do trybu HandsOff. Implementacja ATL zwraca S_OK.|
 |[IPersistStorageImpl::InitNew](#initnew)|Inicjuje nowy magazyn.|
-|[IPersistStorageImpl:: IsDirty](#isdirty)|Sprawdza, czy dane obiektu zostały zmienione od czasu ostatniego zapisywania.|
-|[IPersistStorageImpl:: Load](#load)|Ładuje właściwości obiektu z określonego magazynu.|
-|[IPersistStorageImpl:: Save](#save)|Zapisuje właściwości obiektu do określonego magazynu.|
-|[IPersistStorageImpl::SaveCompleted](#savecompleted)|Powiadamia obiekt, że może powrócić do trybu normalnego, aby zapisać do jego obiektu magazynu. Implementacja ATL zwraca S_OK.|
+|[IPersistStorageImpl::IsDirty](#isdirty)|Sprawdza, czy dane obiektu uległy zmianie od czasu jego ostatniego zapisania.|
+|[IPersistStorageImpl::Obciążenie](#load)|Ładuje właściwości obiektu z określonego magazynu.|
+|[IPersistStorageImpl::Zapisz](#save)|Zapisuje właściwości obiektu w określonym magazynie.|
+|[IPersistStorageImpl::SaveCompleted](#savecompleted)|Powiadamia obiekt, który może powrócić do trybu normalnego, aby zapisać do jego obiektu magazynu. Implementacja ATL zwraca S_OK.|
 
 ## <a name="remarks"></a>Uwagi
 
-`IPersistStorageImpl`implementuje interfejs [IPersistStorage](/windows/win32/api/objidl/nn-objidl-ipersiststorage) , dzięki czemu klient może zażądać załadowania obiektu i zapisania jego trwałych danych przy użyciu magazynu.
+`IPersistStorageImpl`implementuje interfejs [IPersistStorage,](/windows/win32/api/objidl/nn-objidl-ipersiststorage) który umożliwia klientowi żądanie załadowania obiektu i zapisanie jego trwałych danych przy użyciu magazynu.
 
-Implementacja tej klasy wymaga, aby Klasa `T` była implementacją `IPersistStreamInit` interfejsu dostępnego za pośrednictwem `QueryInterface`. Zazwyczaj oznacza to, że `T` Klasa powinna pochodzić od [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), podać wpis dla `IPersistStreamInit` w [mapie com](com-map-macros.md)i używać [mapy właściwości](property-map-macros.md) do opisywania trwałych danych klasy.
+Implementacja tej klasy `T` wymaga klasy, aby `IPersistStreamInit` implementacja `QueryInterface`interfejsu dostępna za pośrednictwem . Zazwyczaj oznacza to, `T` że klasa powinna pochodzić z [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), podać wpis w `IPersistStreamInit` mapie [COM](com-map-macros.md)i użyć mapy [właściwości](property-map-macros.md) do opisania danych trwałych klasy.
 
-**Powiązane artykuły** [Samouczek ATL](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)
+**Podobne artykuły** [ATL Tutorial](../../atl/active-template-library-atl-tutorial.md), Tworzenie projektu [ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -71,9 +71,9 @@ Implementacja tej klasy wymaga, aby Klasa `T` była implementacją `IPersistStre
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom. h
+**Nagłówek:** atlcom.h
 
-##  <a name="getclassid"></a>IPersistStorageImpl:: GetClassID
+## <a name="ipersiststorageimplgetclassid"></a><a name="getclassid"></a>IPersistStorageImpl::GetClassID
 
 Pobiera identyfikator CLSID obiektu.
 
@@ -83,11 +83,11 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IPersist:: GetClassID](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) w Windows SDK.
+Zobacz [IPersist::GetClassID](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) w windows SDK.
 
-##  <a name="handsoffstorage"></a>IPersistStorageImpl::HandsOffStorage
+## <a name="ipersiststorageimplhandsoffstorage"></a><a name="handsoffstorage"></a>IPersistStorageImpl::HandsOffStorage
 
-Powoduje, że obiekt zwalnia wszystkie obiekty magazynu i wprowadza tryb HandsOff.
+Nakazuje obiektowi zwolnić wszystkie obiekty magazynu i przejść do trybu HandsOff.
 
 ```
 STDMETHOD(HandsOffStorage)(void);
@@ -99,9 +99,9 @@ Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IPersistStorage:: HandsOffStorage](/windows/win32/api/objidl/nf-objidl-ipersiststorage-handsoffstorage) w Windows SDK.
+Zobacz [IPersistStorage::HandsOffStorage](/windows/win32/api/objidl/nf-objidl-ipersiststorage-handsoffstorage) w windows SDK.
 
-##  <a name="initnew"></a>IPersistStorageImpl::InitNew
+## <a name="ipersiststorageimplinitnew"></a><a name="initnew"></a>IPersistStorageImpl::InitNew
 
 Inicjuje nowy magazyn.
 
@@ -111,13 +111,13 @@ STDMETHOD(InitNew)(IStorage*);
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja ATL deleguje do interfejsu [IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit) .
+Implementacja ATL deleguje do interfejsu [IPersistStreamInit.](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)
 
-Zobacz [IPersistStorage: InitNew](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) w Windows SDK.
+Zobacz [IPersistStorage:InitNew](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) w windows SDK.
 
-##  <a name="isdirty"></a>IPersistStorageImpl:: IsDirty
+## <a name="ipersiststorageimplisdirty"></a><a name="isdirty"></a>IPersistStorageImpl::IsDirty
 
-Sprawdza, czy dane obiektu zostały zmienione od czasu ostatniego zapisywania.
+Sprawdza, czy dane obiektu uległy zmianie od czasu jego ostatniego zapisania.
 
 ```
 STDMETHOD(IsDirty)(void);
@@ -125,11 +125,11 @@ STDMETHOD(IsDirty)(void);
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja ATL deleguje do interfejsu [IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit) .
+Implementacja ATL deleguje do interfejsu [IPersistStreamInit.](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)
 
-Zobacz [IPersistStorage:](/windows/win32/api/objidl/nf-objidl-ipersiststorage-isdirty) IsDirty w Windows SDK.
+Zobacz [IPersistStorage:IsDirty](/windows/win32/api/objidl/nf-objidl-ipersiststorage-isdirty) w windows SDK.
 
-##  <a name="load"></a>IPersistStorageImpl:: Load
+## <a name="ipersiststorageimplload"></a><a name="load"></a>IPersistStorageImpl::Obciążenie
 
 Ładuje właściwości obiektu z określonego magazynu.
 
@@ -139,13 +139,13 @@ STDMETHOD(Load)(IStorage* pStorage);
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja ATL deleguje do interfejsu [IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit) . `Load`Pobiera dane obiektu za pomocą strumienia o nazwie "Contents". Metoda [Save](#save) tworzy pierwotnie ten strumień.
+Implementacja ATL deleguje do interfejsu [IPersistStreamInit.](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit) `Load`używa strumienia o nazwie "Zawartość", aby pobrać dane obiektu. Save [Save](#save) Metoda pierwotnie tworzy ten strumień.
 
-Zobacz [IPersistStorage: Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) w Windows SDK.
+Zobacz [IPersistStorage:Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) w windows SDK.
 
-##  <a name="save"></a>IPersistStorageImpl:: Save
+## <a name="ipersiststorageimplsave"></a><a name="save"></a>IPersistStorageImpl::Zapisz
 
-Zapisuje właściwości obiektu do określonego magazynu.
+Zapisuje właściwości obiektu w określonym magazynie.
 
 ```
 STDMETHOD(Save)(IStorage* pStorage, BOOL fSameAsLoad);
@@ -153,13 +153,13 @@ STDMETHOD(Save)(IStorage* pStorage, BOOL fSameAsLoad);
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja ATL deleguje do interfejsu [IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit) . Gdy `Save` jest wywoływana po raz pierwszy, tworzy strumień o nazwie "Contents" w określonym magazynie. Ten strumień jest następnie używany w późniejszych wywołaniach do `Save` i w wywołaniach do załadowania. [](#load)
+Implementacja ATL deleguje do interfejsu [IPersistStreamInit.](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit) Po `Save` pierwszym wywołaniu tworzy strumień o nazwie "Zawartość" w określonym magazynie. Ten strumień jest następnie używany `Save` w późniejszych wywołaniach do i w wywołaniach [załadować](#load).
 
-Zobacz [IPersistStorage: Save](/windows/win32/api/objidl/nf-objidl-ipersiststorage-save) w Windows SDK.
+Zobacz [IPersistStorage:Zapisz](/windows/win32/api/objidl/nf-objidl-ipersiststorage-save) w windows SDK.
 
-##  <a name="savecompleted"></a>IPersistStorageImpl::SaveCompleted
+## <a name="ipersiststorageimplsavecompleted"></a><a name="savecompleted"></a>IPersistStorageImpl::SaveCompleted
 
-Powiadamia obiekt, że może powrócić do trybu normalnego, aby zapisać do jego obiektu magazynu.
+Powiadamia obiekt, który może powrócić do trybu normalnego, aby zapisać do jego obiektu magazynu.
 
 ```
 STDMETHOD(SaveCompleted)(IStorage*);
@@ -171,9 +171,9 @@ Zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IPersistStorage: SaveCompleted](/windows/win32/api/objidl/nf-objidl-ipersiststorage-savecompleted) w Windows SDK.
+Zobacz [IPersistStorage:SaveCompleted](/windows/win32/api/objidl/nf-objidl-ipersiststorage-savecompleted) w windows SDK.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Magazyny i strumienie](/windows/win32/Stg/storages-and-streams)<br/>
 [Klasa IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)<br/>

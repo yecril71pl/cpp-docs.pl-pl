@@ -10,19 +10,19 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtr class
 ms.assetid: e5c5bfd4-9bf1-4164-8a83-8155fe253454
-ms.openlocfilehash: 8cb35139e707d81a53edb762a2b7fc2ab41ff247
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a512aa974cb57072915f887f0c2a20ed1263ffa3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258679"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326917"
 ---
 # <a name="cheapptr-class"></a>Klasa CHeapPtr
 
-Klasa inteligentnego wskaźnika do zarządzania wskaźniki stosu.
+Klasa inteligentnego wskaźnika do zarządzania wskaźnikami sterty.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,9 +34,9 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ obiektu, który ma być przechowywany na stosie.
+Typ obiektu, który ma być przechowywany na stercie.
 
-*Allocator*<br/>
+*Programu przydzielania*<br/>
 Klasa alokacji pamięci do użycia.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -51,8 +51,8 @@ Klasa alokacji pamięci do użycia.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CHeapPtr::Allocate](#allocate)|Wywołaj tę metodę można przydzielić pamięci na stosie do przechowywania obiektów.|
-|[CHeapPtr::Reallocate](#reallocate)|Wywołaj tę metodę w celu ponownego przydzielenia pamięci na stosie.|
+|[CHeapPtr::Przydziel](#allocate)|Wywołanie tej metody, aby przydzielić pamięć na stercie do przechowywania obiektów.|
+|[CHeapPtr::Ponowne przydzielenie](#reallocate)|Wywołanie tej metody, aby ponownie przydzielić pamięć na stosie.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
@@ -62,11 +62,11 @@ Klasa alokacji pamięci do użycia.
 
 ## <a name="remarks"></a>Uwagi
 
-`CHeapPtr` jest tworzony na podstawie [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) i domyślnie używa procedur CRT (w [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) do przydzielają i zwalniają pamięć. Klasa [CHeapPtrList](../../atl/reference/cheapptrlist-class.md) może służyć do utworzenia listy wskaźników sterty. Zobacz też [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), który używa procedur alokacji pamięci COM.
+`CHeapPtr`pochodzi z [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) i domyślnie używa procedur CRT (w [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) do przydzielania i zwalniania pamięci. Klasa [CHeapPtrList](../../atl/reference/cheapptrlist-class.md) może służyć do konstruowania listy wskaźników sterty. Zobacz też [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), który używa procedur alokacji pamięci COM.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)
+[Cheapptrbase](../../atl/reference/cheapptrbase-class.md)
 
 `CHeapPtr`
 
@@ -74,9 +74,9 @@ Klasa alokacji pamięci do użycia.
 
 **Nagłówek:** atlcore.h
 
-##  <a name="allocate"></a>  CHeapPtr::Allocate
+## <a name="cheapptrallocate"></a><a name="allocate"></a>CHeapPtr::Przydziel
 
-Wywołaj tę metodę można przydzielić pamięci na stosie do przechowywania obiektów.
+Wywołanie tej metody, aby przydzielić pamięć na stercie do przechowywania obiektów.
 
 ```
 bool Allocate(size_t nElements = 1) throw();
@@ -84,22 +84,22 @@ bool Allocate(size_t nElements = 1) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nElements*<br/>
-Liczba elementów używane do obliczania ilość pamięci do przydzielenia. Wartość domyślna to 1.
+*nElementy*<br/>
+Liczba elementów używanych do obliczania ilości pamięci do przydzielenia. Wartość domyślna to 1.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli pamięć została pomyślnie przydzielone, wartość false w przypadku niepowodzenia.
+Zwraca wartość true, jeśli pamięć została pomyślnie przydzielona, false na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Procedury programu przydzielania są używane do zarezerwować wystarczającej ilości pamięci na stosie, aby przechowywać *nElement* obiekty typu zdefiniowanego w konstruktorze.
+Procedury alokatora są używane do rezerwowania wystarczającej ilości pamięci na stercie do przechowywania *nElement* obiektów typu zdefiniowanego w konstruktorze.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#77](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]
 
-##  <a name="cheapptr"></a>  CHeapPtr::CHeapPtr
+## <a name="cheapptrcheapptr"></a><a name="cheapptr"></a>CHeapPtr::CHeapPtr
 
 Konstruktor.
 
@@ -111,18 +111,18 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*<br/>
-Istniejącego wskaźnika stosu lub `CHeapPtr`.
+*P*<br/>
+Istniejący wskaźnik sterty lub `CHeapPtr`.
 
 ### <a name="remarks"></a>Uwagi
 
-Opcjonalnie można utworzyć wskaźnik stosu przy użyciu istniejącego wskaźnika lub `CHeapPtr` obiektu. Jeśli tak, nowe `CHeapPtr` obiektu przyjmuje odpowiedzialność za zarządzanie nowy wskaźnik i zasobami.
+Wskaźnik sterty można opcjonalnie utworzyć przy użyciu `CHeapPtr` istniejącego wskaźnika lub obiektu. Jeśli tak, `CHeapPtr` nowy obiekt przejmuje odpowiedzialność za zarządzanie nowym wskaźnikiem i zasobami.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#78](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]
 
-##  <a name="operator_eq"></a>  CHeapPtr::operator =
+## <a name="cheapptroperator-"></a><a name="operator_eq"></a>CHeapPtr::operator =
 
 Operator przypisania.
 
@@ -133,20 +133,20 @@ CHeapPtr<T, Allocator>& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*p*<br/>
-Istniejące `CHeapPtr` obiektu.
+*P*<br/>
+Istniejący `CHeapPtr` obiekt.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwołanie do zaktualizowanego `CHeapPtr`.
+Zwraca odwołanie do `CHeapPtr`zaktualizowanego .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#80](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]
 
-##  <a name="reallocate"></a>  CHeapPtr::Reallocate
+## <a name="cheapptrreallocate"></a><a name="reallocate"></a>CHeapPtr::Ponowne przydzielenie
 
-Wywołaj tę metodę w celu ponownego przydzielenia pamięci na stosie.
+Wywołanie tej metody, aby ponownie przydzielić pamięć na stosie.
 
 ```
 bool Reallocate(size_t nElements) throw();
@@ -154,19 +154,19 @@ bool Reallocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nElements*<br/>
-Nowy numer elementy służące do obliczania ilość pamięci do przydzielenia.
+*nElementy*<br/>
+Nowa liczba elementów używanych do obliczania ilości pamięci do przydzielenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli pamięć została pomyślnie przydzielone, wartość false w przypadku niepowodzenia.
+Zwraca wartość true, jeśli pamięć została pomyślnie przydzielona, false na niepowodzenie.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#79](../../atl/codesnippet/cpp/cheapptr-class_4.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)<br/>
 [Klasa CCRTAllocator](../../atl/reference/ccrtallocator-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

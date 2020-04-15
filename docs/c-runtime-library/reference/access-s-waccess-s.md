@@ -1,9 +1,11 @@
 ---
 title: _access_s, _waccess_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _access_s
 - _waccess_s
+- _o__access_s
+- _o__waccess_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: e7e61369635a1a59ef16aa6262650d9648277eb0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7f16951b99eb29bcb8c39499c29be1018cb86616
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171323"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349123"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s, _waccess_s
 
-Określa uprawnienia do odczytu/zapisu w pliku. Jest to wersja [_access, _waccess](access-waccess.md) z ulepszonymi zabezpieczeniami, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Określa uprawnienia do odczytu/zapisu pliku. Jest to wersja [_access, _waccess](access-waccess.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcji zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,40 +62,42 @@ errno_t _waccess_s(
 
 ### <a name="parameters"></a>Parametry
 
-*path*<br/>
+*Ścieżka*<br/>
 Ścieżka pliku lub katalogu.
 
-*wyst*<br/>
+*Tryb*<br/>
 Ustawienie uprawnień.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca wartość 0, jeśli plik ma określony tryb. Funkcja zwraca kod błędu, jeśli nazwany plik nie istnieje lub jest niedostępny w danym trybie. W takim przypadku funkcja zwraca kod błędu z zestawu w następujący sposób, a także ustawia `errno` na tę samą wartość.
+Każda funkcja zwraca wartość 0, jeśli plik ma dany tryb. Funkcja zwraca kod błędu, jeśli nazwany plik nie istnieje lub nie jest dostępny w danym trybie. W takim przypadku funkcja zwraca kod błędu z zestawu `errno` w następujący sposób, a także ustawia tę samą wartość.
 
-|errno wartość|Warunek|
+|wartość errno|Warunek|
 |-|-|
-`EACCES`|Odmowa dostępu. Ustawienie uprawnienia pliku nie zezwala na określony dostęp.
-`ENOENT`|Nie odnaleziono nazwy pliku lub ścieżki.
+`EACCES`|Odmowa dostępu. Ustawienie uprawnień pliku nie zezwala na określony dostęp.
+`ENOENT`|Nie znaleziono nazwy pliku lub ścieżki.
 `EINVAL`|Nieprawidłowy parametr.
 
 Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-W przypadku użycia z plikami funkcja **_access_s** określa, czy określony plik istnieje i czy można uzyskać do niego dostęp zgodnie z określoną wartością *trybu*. W przypadku używania z katalogami, **_access_s** określa, czy istnieje określony katalog. W systemach operacyjnych Windows 2000 i nowszych wszystkie katalogi mają dostęp do odczytu i zapisu.
+W przypadku użycia z plikami funkcja **_access_s** określa, czy określony plik istnieje i można uzyskać do niego dostęp zgodnie z wartością *trybu*. W przypadku użycia z katalogami **_access_s** określa tylko, czy określony katalog istnieje. W systemach operacyjnych Windows 2000 i nowszych wszystkie katalogi mają dostęp do odczytu i zapisu.
 
 |wartość trybu|Sprawdza plik dla|
 |----------------|---------------------|
 |00|Tylko istnienie.|
 |02|Uprawnienie do zapisu.|
-|04|Uprawnienie Odczyt.|
-|06|Uprawnienia do odczytu i zapisu.|
+|04|Uprawnienie do odczytu.|
+|06|Uprawnienie do odczytu i zapisu.|
 
-Uprawnienie do odczytu lub zapisu pliku jest za mało, aby można było otworzyć plik. Na przykład, jeśli plik jest zablokowany przez inny proces, może nie być dostępny, nawet jeśli **_access_s** zwraca 0.
+Uprawnienie do odczytu lub zapisu pliku nie wystarczy, aby zapewnić możliwość otwarcia pliku. Na przykład jeśli plik jest zablokowany przez inny proces, może nie być dostępny, nawet **jeśli _access_s** zwraca 0.
 
-**_waccess_s** to wersja znaku dwubajtowego **_access_s**, gdzie argument *ścieżki* **_waccess_s** jest ciągiem znaków dwubajtowych. W przeciwnym razie **_waccess_s** i **_access_s** zachowują się identycznie.
+**_waccess_s** jest szerokoznakową wersją **_access_s**, gdzie argument *ścieżki* do **_waccess_s** jest ciągiem znaków o szerokim charakterze. W przeciwnym razie **_waccess_s** i **_access_s** zachowywać się identycznie.
 
-Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ścieżka* ma wartość null lub w *trybie* nie określono prawidłowego trybu, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają `errno` na `EINVAL` i zwracają `EINVAL`.
+Te funkcje sprawdzają ich parametry. Jeśli *ścieżka* ma wartość NULL lub *tryb* nie określa prawidłowego trybu, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w obszarze Sprawdzanie [poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, te `errno` funkcje są ustawione na `EINVAL` i zwraca. `EINVAL`
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -104,12 +109,12 @@ Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ścieżka* ma wa
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_access_s**|\<we/wy >|\<errno. h >|
-|**_waccess_s**|\<WCHAR. h > lub \<we/wy >|\<errno. h >|
+|**_access_s**|\<> io.h|\<> errno.h|
+|**_waccess_s**|\<wchar.h> lub \<io.h>|\<> errno.h|
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie używa się **_access_s** do sprawdzenia pliku o nazwie crt_access_s. c, aby sprawdzić, czy istnieje, i czy zapis jest dozwolony.
+W tym przykładzie użyto **_access_s,** aby sprawdzić plik o nazwie crt_access_s.c, aby sprawdzić, czy istnieje i czy zapis jest dozwolony.
 
 ```C
 // crt_access_s.c

@@ -12,65 +12,65 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: afd05e7380ec3838fe9763be23ccfae338adb4fb
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 9cdfef091b659151f427c381e386f0e83396e741
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220265"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332065"
 ---
-# <a name="import-directive-c"></a>#import — dyrektywaC++()
+# <a name="import-directive-c"></a>#import dyrektywy (C++)
 
-**C++Specjalne**
+**C++ Specyficzne**
 
-Służy do uwzględniania informacji z biblioteki typów. Zawartość biblioteki typów jest konwertowana na C++ klasy, głównie OPISUJĄC interfejsy com.
+Służy do dołączania informacji z biblioteki typów. Zawartość biblioteki typów jest konwertowana na klasy C++, głównie opisujące interfejsy COM.
 
 ## <a name="syntax"></a>Składnia
 
-> **#import** *atrybuty*"*filename*" \[] \
-> **#import** *atrybuty nazwy pliku*> ]\[ \<
+> **#import** "*nazwa*pliku \[" *atrybuty*]\
+> \< **#import** *atrybuty* *nazwy*> \[pliku ]
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa pliku*\
-Określa bibliotekę typów do zaimportowania. *Nazwa pliku* może być jednym z następujących rodzajów:
+*Pod nazwą*\
+Określa bibliotekę typów do zaimportowania. Nazwa *pliku* może być jednym z następujących rodzajów:
 
-- Nazwa pliku, który zawiera bibliotekę typów, na przykład plik. olb,. tlb lub. dll. Słowo kluczowe, `file:`, może poprzedzać każdą nazwę pliku.
+- Nazwa pliku zawierającego bibliotekę typów, taką jak plik .olb, .tlb lub .dll. Słowo kluczowe `file:`, może poprzedzać każdą nazwę pliku.
 
-- Identyfikator ProgID kontrolki w bibliotece typów. Słowo kluczowe, `progid:`, może poprzedzać każdy ProgID. Na przykład:
+- Progid formantu w bibliotece typów. Słowo kluczowe `progid:`, może poprzedzać każdy progid. Przykład:
 
     ```cpp
     #import "progid:my.prog.id.1.5"
     ```
 
-   Aby uzyskać więcej informacji na temat identyfikatorów ProgID, zobacz [Określanie identyfikatora lokalizacji i numeru wersji](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber).
+   Aby uzyskać więcej informacji na temat progidów, zobacz [Określanie identyfikatora lokalizacji i numeru wersji](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber).
 
-   W przypadku korzystania z 32-bitowego kompilatora krzyżowego w 64-bitowym systemie operacyjnym kompilator może odczytać tylko gałąź rejestru 32-bitowego. Możesz chcieć użyć natywnego kompilatora 64-bitowego do kompilowania i rejestrowania biblioteki typów 64-bitowych.
+   W przypadku korzystania z kompilatora 32-bitowego w 64-bitowym systemie operacyjnym kompilator może odczytać tylko gałąź rejestru 32-bitowego. Możesz użyć natywnego kompilatora 64-bitowego do tworzenia i rejestrowania biblioteki typów 64-bitowych.
 
-- Identyfikator biblioteki dla biblioteki typów. Słowo kluczowe, `libid:`, może poprzedzać każdy identyfikator biblioteki. Na przykład:
+- Identyfikator biblioteki typów. Słowo kluczowe `libid:`, może poprzedzać każdy identyfikator biblioteki. Przykład:
 
     ```cpp
     #import "libid:12341234-1234-1234-1234-123412341234" version("4.0") lcid("9")
     ```
 
-   Jeśli nie określisz `version` lub `lcid`, [reguły](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber) zastosowane do `progid:` są również stosowane do. `libid:`
+   Jeśli nie określisz `version` `lcid`lub , [reguły](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber) stosowane do `progid:` `libid:`są również stosowane do .
 
-- Plik wykonywalny (. exe).
+- Plik wykonywalny (.exe).
 
-- Plik biblioteki (dll) zawierający zasób biblioteki typów (na przykład. ocx).
+- Plik biblioteki (dll) zawierający zasób biblioteki typów (na przykład ocx).
 
 - Dokument złożony zawierający bibliotekę typów.
 
-- Każdy inny format pliku, który może być zrozumiały dla interfejsu API **LoadTypeLib** .
+- Każdy inny format pliku, który może być zrozumiany przez interfejs API **LoadTypeLib.**
 
-*Attributes*\
-Jeden lub więcej [atrybutów #import](#_predir_the_23import_directive_import_attributes). Oddziel atrybuty spacją lub przecinkiem. Przykład:
+*Atrybuty*\
+Co najmniej jeden [#import atrybutów](#_predir_the_23import_directive_import_attributes). Oddziel atrybuty spacją lub przecinkiem. Przykład:
 
 ```cpp
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only
 ```
 
-\-oraz
+\-lub-
 
 ```cpp
 #import "..\drawctl\drawctl.tlb" no_namespace raw_interfaces_only
@@ -78,92 +78,92 @@ Jeden lub więcej [atrybutów #import](#_predir_the_23import_directive_import_at
 
 ## <a name="remarks"></a>Uwagi
 
-### <a name="_predir_the_23import_directive_searchorderforfilename"></a>Kolejność wyszukiwania dla nazwy pliku
+### <a name="search-order-for-filename"></a><a name="_predir_the_23import_directive_searchorderforfilename"></a>Wyszukaj nazwę pliku
 
-*Nazwa pliku* jest opcjonalnie poprzedzona specyfikacją katalogu. Nazwa pliku musi mieć nazwę istniejącego pliku. Różnica między dwoma formularzami składni polega na kolejności, w której preprocesor wyszukuje pliki biblioteki typów, gdy ścieżka jest nieukończona.
+*nazwa pliku* jest opcjonalnie poprzedzona specyfikacją katalogu. Nazwa pliku musi nadać nazwę istniejącemu plikowi. Różnica między dwoma formularzami składni jest kolejność, w jakiej preprocesor wyszukuje pliki biblioteki typów, gdy ścieżka jest niecałkowicie określona.
 
 |Formularz składni|Akcja|
 |-----------------|------------|
-|Formularz w cudzysłowie|Nakazuje preprocesorowi wyszukanie plików biblioteki typów najpierw w katalogu pliku, który zawiera instrukcję **#import** , a następnie w katalogach dowolnego pliku (`#include`). Preprocesor przeszukuje następnie pokazane poniżej ścieżki.|
-|Formularz z nawiasami ostrymi|Nakazuje preprocesorowi wyszukanie plików biblioteki typów w następujących ścieżkach:<br /><br /> 1.  Lista ścieżek zmiennych środowiskowych `PATH`<br />2.  Lista ścieżek zmiennych środowiskowych `LIB`<br />3.  Ścieżka określona przez opcję kompilatora [/i](../build/reference/i-additional-include-directories.md) , z wyjątkiem tego, że kompilator wyszukuje bibliotekę typów, do której odwołuje się inna biblioteka typów z atrybutem [no_registry](../preprocessor/no-registry.md) .|
+|Cytowany formularz|Nakazuje preprocesorowi wyszukanie plików biblioteki typów najpierw w katalogu pliku zawierającego **instrukcję #import,** a następnie`#include`w katalogach dowolnego pliku zawierającego ( ) ten plik. Następnie preprocesor przeszukuje ścieżki pokazane poniżej.|
+|Formularz wspornika kątowego|Nakazuje preprocesorowi wyszukiwanie plików biblioteki typów w następujących ścieżkach:<br /><br /> 1. `PATH` Lista ścieżek zmiennych środowiskowych<br />2. `LIB` Lista ścieżek zmiennych środowiskowych<br />3. Ścieżka określona przez opcję kompilatora [/I,](../build/reference/i-additional-include-directories.md) z tą różnicą, że kompilator wyszukuje bibliotekę typów, do których odwołuje się inna biblioteka typów z atrybutem [no_registry.](../preprocessor/no-registry.md)|
 
-### <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a>Określ identyfikator lokalizacji i numer wersji
+### <a name="specify-the-localization-id-and-version-number"></a><a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a>Określ identyfikator lokalizacji i numer wersji
 
-Podczas określania identyfikatora ProgID można także określić identyfikator lokalizacji i numer wersji ProgID. Na przykład:
+Po określeniu progidu można również określić identyfikator lokalizacji i numer wersji progidu. Przykład:
 
 ```cpp
 #import "progid:my.prog.id" lcid("0") version("4.0)
 ```
 
-Jeśli nie określisz identyfikatora lokalizacji, zostanie wybrany identyfikator ProgID zgodnie z następującymi regułami:
+Jeśli nie określisz identyfikatora lokalizacji, progid jest wybierany zgodnie z następującymi regułami:
 
-- Jeśli istnieje tylko jeden identyfikator lokalizacji, jest on używany.
+- Jeśli istnieje tylko jeden identyfikator lokalizacji, ten jest używany.
 
-- Jeśli istnieje więcej niż jeden identyfikator lokalizacji, zostanie użyta pierwsza z nich z numerem wersji 0, 9 lub 409.
+- Jeśli istnieje więcej niż jeden identyfikator lokalizacji, używany jest pierwszy z wersją o numerze 0, 9 lub 409.
 
-- Jeśli istnieje więcej niż jeden identyfikator lokalizacji i żadna z nich nie jest równa 0, 9 lub 409, zostanie użyta Ostatnia z nich.
+- Jeśli istnieje więcej niż jeden identyfikator lokalizacji i żaden z nich nie jest 0, 9 lub 409, używany jest ostatni.
 
-- Jeśli nie określisz numeru wersji, używana jest Najnowsza wersja.
+- Jeśli nie określisz numeru wersji, używana jest najnowsza wersja.
 
-###  <a name="_predir_the_23import_directive_header_files_created_by_import"></a>Pliki nagłówkowe utworzone przez import
+### <a name="header-files-created-by-import"></a><a name="_predir_the_23import_directive_header_files_created_by_import"></a>Pliki nagłówkowe utworzone przez import
 
-**#import** tworzy dwa pliki nagłówkowe, które odtworzą zawartość biblioteki typów w C++ kodzie źródłowym. Podstawowy plik nagłówkowy jest podobny do tego utworzonego przez kompilator Microsoft Interface Definition Language (MIDL), ale z dodatkowym, generowanym przez kompilator kodem i danymi. [Podstawowy plik nagłówkowy](#_predir_the_primary_type_library_header_file) ma taką samą nazwę bazową jak biblioteka typów i. Rozszerzenie TLH. Pomocniczy plik nagłówkowy ma taką samą nazwę bazową jak biblioteka typów, z. Rozszerzenie TLI. Zawiera implementacje dla funkcji składowych generowanych przez kompilator i jest dołączony (`#include`) w podstawowym pliku nagłówkowym.
+**#import** tworzy dwa pliki nagłówka, które rekonstruować zawartość biblioteki typów w kodzie źródłowym języka C++. Podstawowy plik nagłówka jest podobny do pliku produkowanego przez kompilator języka MIDL (Microsoft Interface Definition Language), ale z dodatkowym kodem i danymi generowanymi przez kompilator. [Podstawowy plik nagłówka](#_predir_the_primary_type_library_header_file) ma taką samą nazwę podstawową jak biblioteka typów oraz plik . rozszerzenie TLH. Pomocniczy plik nagłówka ma taką samą nazwę podstawową jak biblioteka typów, z plikiem . rozszerzenie TLI. Zawiera implementacje dla funkcji elementów członkowskich generowanych`#include`przez kompilator i jest uwzględniony ( ) w podstawowym pliku nagłówka.
 
-W przypadku importowania właściwości dispinterface, która `byref` używa parametrów, **#import** nie generuje instrukcji [__declspec (Property)](../cpp/property-cpp.md) dla funkcji.
+Jeśli importowanie dispinterface właściwość, która używa parametrów, `byref` **#import** nie generuje [__declspec(właściwość)](../cpp/property-cpp.md) instrukcji dla funkcji.
 
-Oba pliki nagłówkowe są umieszczane w katalogu wyjściowym określonym przez opcję [/FO (Name Object File)](../build/reference/fo-object-file-name.md) . Są one następnie odczytywane i kompilowane przez kompilator, tak jakby podstawowy plik nagłówkowy miał nazwę `#include` dyrektywy.
+Oba pliki nagłówkowe są umieszczane w katalogu wyjściowym określonym przez opcję [/Fo (plik obiektu nazwy).](../build/reference/fo-object-file-name.md) Są one następnie odczytywane i kompilowane przez kompilator, `#include` tak jakby podstawowy plik nagłówka został nazwany przez dyrektywę.
 
-Następujące optymalizacje kompilatora pochodzą z **#import** dyrektywie:
+Następujące optymalizacje kompilatora są dostarczane z **dyrektywą #import:**
 
-- Plik nagłówkowy, po utworzeniu, ma taką samą sygnaturę czasową jak biblioteka typów.
+- Po utworzeniu pliku nagłówka jest ono podane w tym samym czasie co biblioteka typów.
 
-- Podczas przetwarzania **#import** , kompilator najpierw sprawdza, czy nagłówek istnieje i jest aktualny. Jeśli tak, nie trzeba go ponownie tworzyć.
+- Podczas **przetwarzania #import** kompilator najpierw sprawdza, czy nagłówek istnieje i jest aktualny. Jeśli tak, to nie trzeba go odtworzyć.
 
-Dyrektywa **#import** również uczestniczy w minimalnej kompilacji i można ją umieścić w prekompilowanym pliku nagłówkowym.  Aby uzyskać więcej informacji, zobacz [Tworzenie prekompilowanych plików nagłówkowych](../build/creating-precompiled-header-files.md).
+**Dyrektywa #import** uczestniczy również w minimalnej przebudowy i może być umieszczona w wstępnie skompilowanym pliku nagłówka.  Aby uzyskać więcej informacji, zobacz [Tworzenie wstępnie skompilowanych plików nagłówkowych](../build/creating-precompiled-header-files.md).
 
-### <a name="_predir_the_primary_type_library_header_file"></a>Podstawowy plik nagłówka biblioteki typów
+### <a name="primary-type-library-header-file"></a><a name="_predir_the_primary_type_library_header_file"></a>Plik nagłówka biblioteki typów podstawowych
 
 Podstawowy plik nagłówka biblioteki typów składa się z siedmiu sekcji:
 
-- Styl standardowy: Składa się z `#include` komentarzy, instrukcji dla comdef. H (która definiuje niektóre standardowe makra używane w nagłówku) i inne informacje o różnych konfiguracjach.
+- Nagłówek boilerplate: Składa `#include` się z komentarzy, oświadczenie dla COMDEF. H (który definiuje niektóre standardowe makra używane w nagłówku) i inne różne informacje o konfiguracji.
 
-- Przekazanie do przodu i definicje typów: Składa się z deklaracji struktury `struct IMyInterface` , takich jak i Typedefs.
+- Forward odwołania i typedefs: Składa się `struct IMyInterface` z deklaracji struktury, takich jak i typedefs.
 
-- Deklaracje inteligentnego wskaźnika: Klasa `_com_ptr_t` szablonu jest inteligentnym wskaźnikiem. Hermetyzuje on wskaźniki interfejsu i eliminuje konieczność wywołania `AddRef`, `Release`, i `QueryInterface` funkcji. Powoduje także ukrycie `CoCreateInstance` wywołania podczas tworzenia nowego obiektu com. Ta sekcja używa instrukcji `_COM_SMARTPTR_TYPEDEF` makra do ustalenia elementów typedef interfejsów COM jako specjalizacji szablonu klasy szablonu [_com_ptr_t](../cpp/com-ptr-t-class.md) . Na przykład dla interfejsu `IMyInterface`,. Plik TLH będzie zawierać:
+- Deklaracje inteligentnego wskaźnika: klasa `_com_ptr_t` szablonu jest inteligentnym wskaźnikiem. Hermetyzuje wskaźniki interfejsu i eliminuje konieczność `AddRef`wywoływania `Release`programu `QueryInterface` i funkcji. Ukrywa również wywołanie `CoCreateInstance` podczas tworzenia nowego obiektu COM. W tej sekcji użyto instrukcji `_COM_SMARTPTR_TYPEDEF` makra do ustanowienia typedefs interfejsów COM jako specjalizacje szablonu [_com_ptr_t](../cpp/com-ptr-t-class.md) klasy szablonu. Na przykład dla `IMyInterface`interfejsu , . Plik TLH będzie zawierał:
 
     ```TLH
     _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
     ```
 
-   do którego kompilatora zostanie rozwinięty:
+   kompilator zostanie rozszerzony do:
 
     ```cpp
     typedef _com_ptr_t<_com_IIID<IMyInterface, __uuidof(IMyInterface)> > IMyInterfacePtr;
     ```
 
-   Typ `IMyInterfacePtr` może być następnie użyty zamiast wskaźnika `IMyInterface*`interfejsu RAW. W związku z tym nie ma potrzeby wywoływania różnych `IUnknown` funkcji składowych
+   Typ `IMyInterfacePtr` może być następnie używany zamiast `IMyInterface*`nieprzetworzonego wskaźnika interfejsu . W związku z tym nie ma `IUnknown` potrzeby wywoływania różnych funkcji członkowskich
 
-- Deklaracje "element": Przede wszystkim składają się z definicji klas i innych elementów, które uwidaczniają `ITypeLib:GetTypeInfo`poszczególne elementy elementu WebItems zwrócone przez. W tej sekcji wszystkie elementy informacyjne z biblioteki typów są odzwierciedlone w nagłówku formularza zależnie `TYPEKIND` od informacji.
+- Deklaracje typeinfo: Przede wszystkim składa się z definicji klas i innych `ITypeLib:GetTypeInfo`elementów eksponujących poszczególne elementy typeinfo zwrócone przez . W tej sekcji każdy typeinfo z biblioteki typów jest odzwierciedlany `TYPEKIND` w nagłówku w formularzu zależnym od informacji.
 
-- Opcjonalna Definicja identyfikatora GUID starego stylu: Zawiera inicjalizacje nazwanych stałych identyfikatora GUID. Te nazwy mają postać `CLSID_CoClass` i `IID_Interface`, podobnie jak te wygenerowane przez kompilator MIDL.
+- Opcjonalna definicja identyfikatora GUID w starym stylu: zawiera inicjalizowania nazwanych stałych GUID. Nazwy te mają `CLSID_CoClass` `IID_Interface`formularz i , podobne do tych generowanych przez kompilator MIDL.
 
-- `#include`Instrukcja dla nagłówka biblioteki typów pomocniczych.
+- `#include`instrukcji dla nagłówka biblioteki typów pomocniczych.
 
-- Standardowa stopka: Obecnie zawiera `#pragma pack(pop)`.
+- Stopka kotła: Obecnie `#pragma pack(pop)`zawiera .
 
-Wszystkie sekcje, z wyjątkiem standardowa sekcja i Standardowa stopka, są ujęte w przestrzeni nazw z nazwą określoną przez `library` instrukcję w oryginalnym pliku IDL. Można użyć nazw z nagłówka biblioteki typów według jawnej kwalifikacji przy użyciu nazwy przestrzeni nazw. Lub można uwzględnić następujące instrukcje:
+Wszystkie sekcje, z wyjątkiem pozycji kotła i sekcji standardowej stopki, są ujęte `library` w obszarze nazw z jego nazwą określoną przez instrukcję w oryginalnym pliku IDL. Nazwy z nagłówka biblioteki typów można używać według jawnej kwalifikacji przy użyciu nazwy obszaru nazw. Można też dołączyć następującą instrukcję:
 
 ```cpp
 using namespace MyLib;
 ```
 
-bezpośrednio po instrukcji **#import** w kodzie źródłowym.
+niezwłocznie po **#import** instrukcji w kodzie źródłowym.
 
-Przestrzeń nazw można pominąć przy użyciu atrybutu [no_namespace](no-namespace.md)) dyrektywy **#import** . Pomijanie przestrzeni nazw może jednak prowadzić do kolizji nazw. Nazwa przestrzeni nazw może również być zmieniona przez atrybut [rename_namespace](rename-namespace.md) .
+Obszar nazw można pominąć za pomocą atrybutu [no_namespace](no-namespace.md)) **dyrektywy #import.** Jednak wygaszenie obszaru nazw może prowadzić do kolizji nazw. Nazwa obszaru nazw może również zostać zmieniona przez atrybut [rename_namespace.](rename-namespace.md)
 
-Kompilator zapewnia pełną ścieżkę do dowolnej zależności biblioteki typów, która jest wymagana przez bibliotekę typów, która jest aktualnie przetwarzana. Ścieżka jest zapisywana w formie komentarzy do nagłówka biblioteki typów (. TLH), które kompilator generuje dla każdej przetworzonej biblioteki typów.
+Kompilator zapewnia pełną ścieżkę do dowolnej zależności biblioteki typów wymaganej przez aktualnie przetwarzaną bibliotekę typów. Ścieżka jest zapisywana w formie komentarzy do nagłówka biblioteki typów (. TLH), który kompilator generuje dla każdej przetworzonej biblioteki typów.
 
-Jeśli biblioteka typów zawiera odwołania do typów zdefiniowanych w innych bibliotekach typów, a następnie. Plik TLH będzie zawierać komentarze do następującego sortowania:
+Jeśli biblioteka typów zawiera odwołania do typów zdefiniowanych w innych bibliotekach typów, wówczas plik . Plik TLH będzie zawierał komentarze następującego rodzaju:
 
 ```TLH
 //
@@ -173,13 +173,13 @@ Jeśli biblioteka typów zawiera odwołania do typów zdefiniowanych w innych bi
 //
 ```
 
-Rzeczywista nazwa pliku w komentarzu **#import** jest pełną ścieżką biblioteki typów, do której istnieje odwołanie, jako przechowywane w rejestrze. Jeśli wystąpią błędy, które są spowodowane brakującymi definicjami typów, sprawdź komentarze w nagłówku. TLH, aby zobaczyć, które zależne biblioteki typów mogą wymagać zaimportowania jako pierwsze. Przyczyną błędów są błędy składniowe (na przykład C2143, C2146, C2321), C2501 (brakujące specyfikatory decl) lub C2433 ("inline" jest niedozwolone w deklaracji danych) podczas kompilowania. Plik TLI.
+Rzeczywista nazwa pliku w **komentarzu #import** jest pełną ścieżką biblioteki typów odsyłanych, przechowywaną w rejestrze. Jeśli wystąpią błędy spowodowane brakującymi definicjami typów, sprawdź komentarze na czele pliku . TLH, aby zobaczyć, które biblioteki typów zależnych mogą wymagać zaimportowania jako pierwsze. Prawdopodobne błędy to błędy składni (na przykład C2143, C2146, C2321), C2501 (brak specyfikatorów decl) lub C2433 ('inline' nie jest dozwolone w deklaracji danych) podczas kompilowania . TLI.
 
-Aby rozwiązać problemy z zależnościami, ustal, które z komentarzy dotyczących zależności nie są udostępniane przez nagłówki systemowe, a następnie podaj **#import** dyrektywę w pewnym momencie przed dyrektywą **#import** biblioteki typów zależnych.
+Aby rozwiązać błędy zależności, należy określić, które komentarze zależności nie są w inny sposób przewidziane przez nagłówki systemowe, a następnie podać **#import** dyrektywy w pewnym momencie przed **#import** dyrektywy biblioteki typów zależnych.
 
-### <a name="_predir_the_23import_directive_import_attributes"></a>Atrybuty #import
+### <a name="import-attributes"></a><a name="_predir_the_23import_directive_import_attributes"></a>#import atrybuty
 
-**#import** opcjonalnie może zawierać co najmniej jeden atrybut. Te atrybuty informują kompilator, aby zmodyfikował zawartość nagłówków biblioteki typów. Symbol ukośnika odwrotnego ( **\\** ) może służyć do dołączania dodatkowych wierszy w pojedynczej instrukcji **#import** . Na przykład:
+**#import** opcjonalnie może zawierać jeden lub więcej atrybutów. Te atrybuty powiedzieć kompilator zmodyfikować zawartość nagłówków biblioteki typów. Symbol ukośnika odwrotnego (**\\**) może służyć do uwzględnienia dodatkowych linii w jednej instrukcji **#import.** Przykład:
 
 ```cpp
 #import "test.lib" no_namespace \
@@ -188,9 +188,9 @@ Aby rozwiązać problemy z zależnościami, ustal, które z komentarzy dotycząc
 
 Aby uzyskać więcej informacji, zobacz [#import atrybuty](../preprocessor/hash-import-attributes-cpp.md).
 
-**ZAKOŃCZENIE C++ określonych**
+**KONIEC C++ Specyficzne**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md)\
-[Obsługa kompilatora COM](../cpp/compiler-com-support.md)
+[Obsługa com kompilatora](../cpp/compiler-com-support.md)

@@ -1,5 +1,5 @@
 ---
-title: Klasa korzystanie CAnimateCtrl
+title: Klasa CAnimateCtrl
 ms.date: 11/04/2016
 f1_keywords:
 - CAnimateCtrl
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 18adead999f26768ae669d3a829b557bf9632a29
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: fcee569659d732c26e274c8ca189042a16f13557
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177448"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371064"
 ---
-# <a name="canimatectrl-class"></a>Klasa korzystanie CAnimateCtrl
+# <a name="canimatectrl-class"></a>Klasa CAnimateCtrl
 
-Oferuje funkcje formantu typowej animacji systemu Windows.
+Udostępnia funkcje kontroli animacji wspólnego systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,56 +53,56 @@ class CAnimateCtrl : public CWnd
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Korzystanie CAnimateCtrl:: Close](#close)|Zamyka klip AVI.|
-|[Korzystanie CAnimateCtrl:: Create](#create)|Tworzy kontrolkę animacji i dołącza ją do `CAnimateCtrl` obiektu.|
+|[CAnimateCtrl::Zamknij](#close)|Zamyka klip AVI.|
+|[CAnimateCtrl::Utwórz](#create)|Tworzy formant animacji i `CAnimateCtrl` dołącza go do obiektu.|
 |[CAnimateCtrl::CreateEx](#createex)|Tworzy formant animacji z określonymi stylami rozszerzonymi systemu Windows i dołącza go do `CAnimateCtrl` obiektu.|
-|[CAnimateCtrl::IsPlaying](#isplaying)|Wskazuje, czy jest odtwarzany klip audio-wideo z przeplotem (AVI).|
-|[CAnimateCtrl::Open](#open)|Otwiera klip AVI z pliku lub zasobu i wyświetla pierwszą ramkę.|
-|[Korzystanie CAnimateCtrl::P](#play)|Odtwarza klip AVI bez dźwięku.|
-|[CAnimateCtrl::Seek](#seek)|Wyświetla wybraną pojedynczą ramkę klipu AVI.|
-|[CAnimateCtrl::Stop](#stop)|Kończy odtwarzanie klipu AVI.|
+|[CAnimateCtrl::IsPlaying](#isplaying)|Wskazuje, czy odtwarzany jest klip audio-wideo z przeplotem (AVI).|
+|[CAnimateCtrl::Otwórz](#open)|Otwiera klip AVI z pliku lub zasobu i wyświetla pierwszą klatkę.|
+|[CAnimateCtrl::Play](#play)|Odtwarza klip AVI bez dźwięku.|
+|[CAnimateCtrl::Szukaj](#seek)|Wyświetla wybraną pojedynczą klatkę klipu AVI.|
+|[CAnimateCtrl::Zatrzymaj](#stop)|Przestaje odtwarzać klip AVI.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ten formant (i w związku `CAnimateCtrl` z tym Klasa) jest dostępny tylko dla programów uruchomionych w systemach Windows 95, Windows 98 i Windows NT w wersji 3,51 i nowszych.
+Ten formant (i `CAnimateCtrl` dlatego klasa) jest dostępny tylko dla programów działających w systemach Windows 95, Windows 98 i Windows NT w wersji 3.51 lub nowszej.
 
-Kontrolka animacji to prostokątne okno, które wyświetla klip w formacie AVI (Audio Video Interleaved) — standardowy format wideo/audio systemu Windows. Klip AVI to seria klatek mapy bitowej, takich jak film.
+Kontrolka animacji to prostokątne okno, które wyświetla klip w formacie AVI (Audio Video Interleaved) — standardowym formacie wideo/audio systemu Windows. Klip AVI to seria klatek bitmapowych, takich jak film.
 
-Kontrolki animacji mogą odtwarzać tylko proste klipy AVI. W przypadku klipów, które mają być odtwarzane przez kontrolkę animacji, muszą spełniać następujące wymagania:
+Kontrolki animacji mogą odtwarzać tylko proste klipy AVI. W szczególności klipy, które mają być odtwarzane przez formant animacji, muszą spełniać następujące wymagania:
 
-- Musi istnieć dokładnie jeden strumień wideo i musi on zawierać co najmniej jedną ramkę.
+- Musi istnieć dokładnie jeden strumień wideo i musi mieć co najmniej jedną klatkę.
 
-- Może istnieć co najwyżej dwa strumienie w pliku (zazwyczaj jest to inny strumień, jeśli jest obecny, to strumień audio, chociaż formant animacji ignoruje informacje o dźwięku).
+- Może istnieć co najwyżej dwa strumienie w pliku (zazwyczaj inny strumień, jeśli jest obecny, jest strumieniem audio, chociaż formant animacji ignoruje informacje audio).
 
-- Klip musi być nieskompresowany lub skompresowany za pomocą kompresji RLE8.
+- Klips musi być nieskompresowany lub skompresowany za pomocą kompresji RLE8.
 
 - W strumieniu wideo nie są dozwolone żadne zmiany palety.
 
-Można dodać klip AVI do aplikacji jako zasób AVI lub dołączyć do aplikacji jako oddzielny plik AVI.
+Klip AVI można dodać do aplikacji jako zasób AVI lub może on towarzyszyć aplikacji jako osobnemu plikowi AVI.
 
-Ponieważ wątek kontynuuje wykonywanie podczas wyświetlania klipu AVI, jednym typowym zastosowaniem formantu animacji jest wskazanie działania systemu podczas długotrwałej operacji. Na przykład okno dialogowe Znajdowanie w Eksploratorze plików zawiera przesuwaną szklaną lupę jako system wyszukiwania pliku.
+Ponieważ wątek kontynuuje wykonywanie podczas wyświetlania klipu AVI, jednym z typowych zastosowań formantu animacji jest wskazanie aktywności systemu podczas długiej operacji. Na przykład w oknie dialogowym Znajdowanie Eksploratora plików jest wyświetlana ruchoma lupa podczas wyszukiwania pliku przez system.
 
-Jeśli utworzysz `CAnimateCtrl` obiekt w oknie dialogowym lub z poziomu zasobu okna dialogowego przy użyciu edytora okien dialogowych, zostanie on automatycznie zniszczony, gdy użytkownik zamknie okno dialogowe.
+Jeśli obiekt `CAnimateCtrl` zostanie utworzony w oknie dialogowym lub z zasobu okna dialogowego za pomocą edytora dialogów, zostanie on automatycznie zniszczony po zamknięciu okna dialogowego przez użytkownika.
 
-Jeśli utworzysz `CAnimateCtrl` obiekt w oknie, może być konieczne jego zniszczenie. Jeśli utworzysz `CAnimateCtrl` obiekt na stosie, zostanie on zniszczony automatycznie. Jeśli `CAnimateCtrl` obiekt jest tworzony na stercie przy użyciu **nowej** funkcji, należy wywołać metodę **delete** dla obiektu, aby zniszczyć go. Jeśli tworzysz nową klasę z `CAnimateCtrl` i przydzielę pamięć w tej klasie, `CAnimateCtrl` Zastąp destruktor, aby usunąć alokacje.
+Jeśli utworzysz `CAnimateCtrl` obiekt w oknie, może być konieczne jego zniszczenie. Jeśli utworzysz `CAnimateCtrl` obiekt na stosie, zostanie on automatycznie zniszczony. Jeśli `CAnimateCtrl` obiekt zostanie utworzony na stosie przy użyciu **nowej** funkcji, należy **wywołać delete** na obiekcie, aby go zniszczyć. Jeśli wyprowadzisz nową klasę `CAnimateCtrl` z tej klasy i przydzielisz dowolną pamięć, należy zastąpić `CAnimateCtrl` destruktora w celu usunięcia alokacji.
 
-Aby uzyskać więcej informacji na `CAnimateCtrl`temat korzystania z programu, zobacz [kontrolki](../../mfc/controls-mfc.md) i [Używanie korzystanie CAnimateCtrl](../../mfc/using-canimatectrl.md).
+Aby uzyskać więcej `CAnimateCtrl`informacji na temat używania , zobacz [Formanty](../../mfc/controls-mfc.md) i [Korzystanie z CAnimateCtrl](../../mfc/using-canimatectrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 `CAnimateCtrl`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxcmn. h
+**Nagłówek:** afxcmn.h
 
-##  <a name="canimatectrl"></a>Korzystanie CAnimateCtrl:: Korzystanie CAnimateCtrl
+## <a name="canimatectrlcanimatectrl"></a><a name="canimatectrl"></a>CAnimateCtrl::CAnimateCtrl
 
 Konstruuje `CAnimateCtrl` obiekt.
 
@@ -112,15 +112,15 @@ CAnimateCtrl();
 
 ### <a name="remarks"></a>Uwagi
 
-Aby można było wykonywać inne operacje na tworzonym obiekcie, należy wywołać funkcję [Utwórz](#create) element członkowski.
+Należy wywołać create funkcji [elementu](#create) członkowskiego, zanim będzie można wykonać inne operacje na utworzonym obiekcie.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFCControlLadenDialog#56](../../mfc/codesnippet/cpp/canimatectrl-class_1.cpp)]
 
-##  <a name="close"></a>Korzystanie CAnimateCtrl:: Close
+## <a name="canimatectrlclose"></a><a name="close"></a>CAnimateCtrl::Zamknij
 
-Zamyka klip AVI, który został wcześniej otwarty w kontrolce animacji (jeśli istnieje) i usuwa go z pamięci.
+Zamyka klip AVI, który został wcześniej otwarty w formancie animacji (jeśli istnieje) i usuwa go z pamięci.
 
 ```
 BOOL Close();
@@ -128,15 +128,15 @@ BOOL Close();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
+Nonzero jeśli się powiedzie; w przeciwnym razie zero.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla [Korzystanie CAnimateCtrl:: Korzystanie CAnimateCtrl](#canimatectrl).
+  Zobacz przykład [CAnimateCtrl::CAnimateCtrl](#canimatectrl).
 
-##  <a name="create"></a>Korzystanie CAnimateCtrl:: Create
+## <a name="canimatectrlcreate"></a><a name="create"></a>CAnimateCtrl::Utwórz
 
-Tworzy kontrolkę animacji i dołącza ją do `CAnimateCtrl` obiektu.
+Tworzy formant animacji i `CAnimateCtrl` dołącza go do obiektu.
 
 ```
 virtual BOOL Create(
@@ -148,45 +148,45 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*dwStyle*<br/>
-Określa styl kontrolki animacji. Zastosuj dowolną kombinację stylów systemu Windows opisanych w poniższej sekcji uwagi i style kontrolek animacji opisane we [stylach kontrolki](/windows/win32/Controls/animation-control-styles) animacji w Windows SDK.
+*Dwstyle*<br/>
+Określa styl formantu animacji. Zastosuj dowolną kombinację stylów systemu Windows opisanych w sekcji Uwagi poniżej i stylów formantów animacji opisanych w [stylach sterowania animacją](/windows/win32/Controls/animation-control-styles) w zestaw windows SDK.
 
-*cinania*<br/>
-Określa położenie i rozmiar kontrolki animacji. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub struktura. [](/windows/win32/api/windef/ns-windef-rect)
+*Rect*<br/>
+Określa położenie i rozmiar formantu animacji. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
-Określa okno nadrzędne kontrolki animacji, zazwyczaj a `CDialog`. Nie może mieć wartości NULL.
+Określa okno nadrzędne formantu animacji, zwykle `CDialog`. Nie może być null.
 
-*nID*<br/>
-Określa identyfikator kontrolki animacji.
+*Nid*<br/>
+Określa identyfikator formantu animacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
+Nonzero jeśli się powiedzie; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
-`CAnimateCtrl` Tworzysz dwa kroki. Najpierw Wywołaj konstruktora, a następnie Wywołaj `Create`, który tworzy formant animacji i dołącza go `CAnimateCtrl` do obiektu.
+Konstruujesz `CAnimateCtrl` w dwóch krokach. Najpierw wywołaj konstruktora, `Create`a następnie wywołaj , co `CAnimateCtrl` tworzy formant animacji i dołącza go do obiektu.
 
-Zastosuj następujące [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) do kontrolki animacji.
+Zastosuj następujące [style okien](../../mfc/reference/styles-used-by-mfc.md#window-styles) do formantu animacji.
 
 - WS_CHILD zawsze
 
-- WS_VISIBLE zazwyczaj
+- WS_VISIBLE zwykle
 
 - WS_DISABLED rzadko
 
-Jeśli chcesz użyć rozszerzonych stylów systemu Windows z kontrolką animacji, wywołaj [CreateEx](#createex) zamiast `Create`.
+Jeśli chcesz używać rozszerzonych stylów okien z formantem `Create`animacji, należy wywołać [createex](#createex) zamiast .
 
-Oprócz stylów okna wymienionych powyżej, można zastosować jeden lub więcej stylów kontrolki animacji do kontrolki animacji. Zobacz Windows SDK, aby uzyskać więcej informacji na temat [stylów kontrolek animacji](/windows/win32/Controls/animation-control-styles).
+Oprócz stylów okien wymienionych powyżej można zastosować jeden lub więcej stylów formantu animacji do formantu animacji. Zobacz sdk systemu Windows, aby uzyskać więcej informacji na temat [stylów sterowania animacją](/windows/win32/Controls/animation-control-styles).
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla [Korzystanie CAnimateCtrl:: Korzystanie CAnimateCtrl](#canimatectrl).
+  Zobacz przykład [CAnimateCtrl::CAnimateCtrl](#canimatectrl).
 
-##  <a name="createex"></a>Korzystanie CAnimateCtrl:: CreateEx
+## <a name="canimatectrlcreateex"></a><a name="createex"></a>CAnimateCtrl::CreateEx
 
-Tworzy kontrolkę (okno podrzędne) i kojarzy ją z `CAnimateCtrl` obiektem.
+Tworzy formant (okno podrzędne) i `CAnimateCtrl` kojarzy go z obiektem.
 
 ```
 virtual BOOL CreateEx(
@@ -199,32 +199,32 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Parametry
 
-*dwExStyle*<br/>
-Określa rozszerzony styl formantu, który jest tworzony. Aby zapoznać się z listą rozszerzonych stylów systemu Windows, zobacz *dwExStyle* parametru [elementu CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) w Windows SDK.
+*Dwexstyle*<br/>
+Określa rozszerzony styl tworzonego formantu. Aby uzyskać listę rozszerzonych stylów systemu Windows, zobacz parametr *dwExStyle* dla [createwindowex](/windows/win32/api/winuser/nf-winuser-createwindowexw) w zestawie Windows SDK.
 
-*dwStyle*<br/>
-Określa styl kontrolki animacji. Zastosuj dowolną kombinację stylów okna i animacji, które opisano w [stylach kontrolek animacji](/windows/win32/Controls/animation-control-styles) w Windows SDK.
+*Dwstyle*<br/>
+Określa styl formantu animacji. Zastosuj dowolną kombinację stylów sterowania okna i animacji opisanych w [stylach sterowania animacją](/windows/win32/Controls/animation-control-styles) w zestaw windows SDK.
 
-*cinania*<br/>
-Odwołanie do struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
+*Rect*<br/>
+Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
-Wskaźnik do okna, które jest elementem nadrzędnym formantu.
+Wskaźnik do okna, które jest nadrzędnym formantu.
 
-*nID*<br/>
-Identyfikator okna podrzędnego kontrolki.
+*Nid*<br/>
+Identyfikator okna podrzędnego formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj `CreateEx` zamiast [tworzenia](#create) , aby zastosować rozszerzone style systemu Windows, które są określone przez **WS_EX_** styl rozszerzony systemu Windows.
+Użyj `CreateEx` zamiast [Create,](#create) aby zastosować rozszerzone style systemu Windows, określone przez przedmową styl rozszerzony systemu Windows **WS_EX_**.
 
-##  <a name="isplaying"></a>Korzystanie CAnimateCtrl:: isPlay
+## <a name="canimatectrlisplaying"></a><a name="isplaying"></a>CAnimateCtrl::IsPlaying
 
-Wskazuje, czy jest odtwarzany klip audio-wideo z przeplotem (AVI).
+Wskazuje, czy odtwarzany jest klip audio-wideo z przeplotem (AVI).
 
 ```
 BOOL IsPlaying() const;
@@ -232,15 +232,15 @@ BOOL IsPlaying() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli jest odtwarzany klip AVI; w przeciwnym razie FALSE.
+PRAWDA, jeśli odtwarzany jest klip AVI; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wysyła komunikat [ACM_ISPLAYING](/windows/win32/Controls/acm-isplaying) , który jest opisany w Windows SDK.
+Ta metoda wysyła komunikat [ACM_ISPLAYING,](/windows/win32/Controls/acm-isplaying) który jest opisany w windows SDK.
 
-##  <a name="open"></a>Korzystanie CAnimateCtrl:: Open
+## <a name="canimatectrlopen"></a><a name="open"></a>CAnimateCtrl::Otwórz
 
-Wywołaj tę funkcję, aby otworzyć klip AVI i wyświetlić jego pierwszą ramkę.
+Wywołanie tej funkcji, aby otworzyć klip AVI i wyświetlić jego pierwszą klatkę.
 
 ```
 BOOL Open(LPCTSTR lpszFileName);
@@ -250,34 +250,34 @@ BOOL Open(UINT nID);
 ### <a name="parameters"></a>Parametry
 
 *lpszFileName*<br/>
-`CString` Obiekt lub wskaźnik do ciągu zakończonego wartością null, który zawiera nazwę pliku AVI lub nazwę zasobu AVI. Jeśli ten parametr ma wartość NULL, system zamknie klipu AVI, który został poprzednio otwarty dla formantu animacji, jeśli istnieje.
+Obiekt `CString` lub wskaźnik do ciągu zakończonego z wartością null, który zawiera nazwę pliku AVI lub nazwę zasobu AVI. Jeśli ten parametr ma wartość NULL, system zamyka klip AVI, który został wcześniej otwarty dla formantu animacji, jeśli istnieje.
 
-*nID*<br/>
-Identyfikator zasobu AVI. Jeśli ten parametr ma wartość NULL, system zamknie klipu AVI, który został poprzednio otwarty dla formantu animacji, jeśli istnieje.
+*Nid*<br/>
+Identyfikator zasobu AVI. Jeśli ten parametr ma wartość NULL, system zamyka klip AVI, który został wcześniej otwarty dla formantu animacji, jeśli istnieje.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
+Nonzero jeśli się powiedzie; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
-Zasób AVI jest ładowany z modułu, który utworzył kontrolkę animacji.
+Zasób AVI jest ładowany z modułu, który utworzył formant animacji.
 
 `Open`nie obsługuje dźwięku w klipie AVI; można otwierać tylko ciche klipy AVI.
 
-Jeśli kontrolka animacji ma `ACS_AUTOPLAY` styl, kontrolka animacji automatycznie rozpocznie odtwarzanie klipu natychmiast po jego otwarciu. Odtwarzanie klipu w tle będzie kontynuowane, gdy wątek kontynuuje wykonywanie. Po zakończeniu odtwarzania klipu zostanie on automatycznie powtórzony.
+Jeśli formant animacji ma `ACS_AUTOPLAY` styl, formant animacji automatycznie rozpocznie odtwarzanie klipu natychmiast po jego otwarciu. Będzie nadal odtwarzać klip w tle, podczas gdy wątek będzie kontynuował wykonywanie. Po zakończeniu odtwarzania klipu zostanie on automatycznie powtórzony.
 
-Jeśli kontrolka animacji ma `ACS_CENTER` styl, klip AVI zostanie wyśrodkowany w kontrolce, a rozmiar kontrolki nie ulegnie zmianie. Jeśli kontrolka animacji nie ma `ACS_CENTER` stylu, rozmiar kontrolki zostanie zmieniony, gdy klip AVI zostanie otwarty na rozmiar obrazów w klipie AVI. Pozycja lewego górnego rogu kontrolki nie ulegnie zmianie, tylko rozmiar kontrolki.
+Jeśli formant animacji ma `ACS_CENTER` styl, klip AVI zostanie wyśrodkowany w formancie, a rozmiar formantu nie ulegnie zmianie. Jeśli formant animacji `ACS_CENTER` nie ma stylu, formant zostanie zmieniony po otwarciu klipu AVI do rozmiaru obrazów w klipie AVI. Położenie lewego górnego rogu formantu nie ulegnie zmianie, tylko rozmiar formantu.
 
-Jeśli kontrolka animacji ma `ACS_TRANSPARENT` styl, pierwsza ramka zostanie narysowana przy użyciu przezroczystego tła, a nie koloru tła określonego w klipie animacji.
+Jeśli formant animacji ma `ACS_TRANSPARENT` styl, pierwsza klatka zostanie narysowana przy użyciu przezroczystego tła, a nie koloru tła określonego w klipie animacji.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla [Korzystanie CAnimateCtrl:: Korzystanie CAnimateCtrl](#canimatectrl).
+  Zobacz przykład [CAnimateCtrl::CAnimateCtrl](#canimatectrl).
 
-##  <a name="play"></a>Korzystanie CAnimateCtrl::P
+## <a name="canimatectrlplay"></a><a name="play"></a>CAnimateCtrl::Play
 
-Wywołaj tę funkcję, aby odtworzyć klip AVI w kontrolce animacji.
+Wywołanie tej funkcji, aby odtworzyć klip AVI w formancie animacji.
 
 ```
 BOOL Play(
@@ -288,30 +288,30 @@ BOOL Play(
 
 ### <a name="parameters"></a>Parametry
 
-*nFrom*<br/>
-Indeks (liczony od zera) ramki, w której rozpoczyna się odtwarzanie. Wartość musi być mniejsza niż 65 536. Wartość 0 oznacza początek pierwszej ramki w klipie AVI.
+*nZ*<br/>
+Indeks zerowy ramki, w której rozpoczyna się odtwarzanie. Wartość musi być mniejsza niż 65 536. Wartość 0 oznacza rozpocząć się od pierwszej klatki w klipie AVI.
 
-*nAby*<br/>
-Indeks (liczony od zera) ramki, w której nastąpi zakończenie odtwarzania. Wartość musi być mniejsza niż 65 536. Wartość-1 oznacza koniec ostatniej ramki w klipie AVI.
+*Nto*<br/>
+Indeks zerowy ramki, w której kończy się odtwarzanie. Wartość musi być mniejsza niż 65 536. Wartość - 1 oznacza koniec z ostatnią klatką w klipie AVI.
 
-*nRep*<br/>
-Liczba powtórzeń wycinka AVI. Wartość-1 oznacza powtarzanie pliku w nieskończoność.
+*nRep (wychowaw)*<br/>
+Ile razy można odtworzyć klip AVI. Wartość - 1 oznacza powtarzanie pliku przez czas nieokreślony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
+Nonzero jeśli się powiedzie; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
-Kontrolka animacji będzie odtwarzać klip w tle, gdy wątek kontynuuje wykonywanie. Jeśli kontrolka animacji ma `ACS_TRANSPARENT` styl, klip AVI zostanie odtworzony przy użyciu przezroczystego tła, a nie koloru tła określonego w klipie animacji.
+Formant animacji będzie odtwarzać klip w tle, podczas gdy wątek kontynuuje wykonywanie. Jeśli formant `ACS_TRANSPARENT` animacji ma styl, klip AVI będzie odtwarzany przy użyciu przezroczystego tła, a nie koloru tła określonego w klipie animacji.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla [Korzystanie CAnimateCtrl:: Korzystanie CAnimateCtrl](#canimatectrl).
+  Zobacz przykład [CAnimateCtrl::CAnimateCtrl](#canimatectrl).
 
-##  <a name="seek"></a>Korzystanie CAnimateCtrl:: Seek
+## <a name="canimatectrlseek"></a><a name="seek"></a>CAnimateCtrl::Szukaj
 
-Wywołaj tę funkcję, aby statycznie wyświetlić pojedynczą ramkę klipu AVI.
+Wywołanie tej funkcji, aby statycznie wyświetlić jedną klatkę klipu AVI.
 
 ```
 BOOL Seek(UINT nTo);
@@ -319,24 +319,24 @@ BOOL Seek(UINT nTo);
 
 ### <a name="parameters"></a>Parametry
 
-*nAby*<br/>
-Indeks (liczony od zera) ramki do wyświetlenia. Wartość musi być mniejsza niż 65 536. Wartość 0 oznacza wyświetlenie pierwszej ramki w klipie AVI. Wartość-1 oznacza wyświetlenie ostatniej ramki w klipie AVI.
+*Nto*<br/>
+Indeks ramki od zera do wyświetlenia. Wartość musi być mniejsza niż 65 536. Wartość 0 oznacza wyświetlanie pierwszej klatki w klipie AVI. Wartość -1 oznacza wyświetlanie ostatniej klatki w klipie AVI.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
+Nonzero jeśli się powiedzie; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli kontrolka animacji ma `ACS_TRANSPARENT` styl, klip AVI zostanie narysowany przy użyciu przezroczystego tła, a nie koloru tła określonego w klipie animacji.
+Jeśli formant `ACS_TRANSPARENT` animacji ma styl, klip AVI zostanie narysowany przy użyciu przezroczystego tła, a nie koloru tła określonego w klipie animacji.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [Korzystanie CAnimateCtrl:: Korzystanie CAnimateCtrl](#canimatectrl).
+Zobacz przykład [CAnimateCtrl::CAnimateCtrl](#canimatectrl).
 
-##  <a name="stop"></a>Korzystanie CAnimateCtrl:: Stop
+## <a name="canimatectrlstop"></a><a name="stop"></a>CAnimateCtrl::Zatrzymaj
 
-Wywołaj tę funkcję, aby zatrzymać odtwarzanie klipu AVI w kontrolce animacji.
+Wywołanie tej funkcji, aby zatrzymać odtwarzanie klipu AVI w formancie animacji.
 
 ```
 BOOL Stop();
@@ -344,15 +344,15 @@ BOOL Stop();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
+Nonzero jeśli się powiedzie; w przeciwnym razie zero.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla [Korzystanie CAnimateCtrl:: Korzystanie CAnimateCtrl](#canimatectrl).
+  Zobacz przykład [CAnimateCtrl::CAnimateCtrl](#canimatectrl).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Korzystanie CAnimateCtrl:: Create](#create)<br/>
+[CAnimateCtrl::Utwórz](#create)<br/>
 [ON_CONTROL](message-map-macros-mfc.md#on_control)

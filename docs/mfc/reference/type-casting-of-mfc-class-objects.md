@@ -8,29 +8,29 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-ms.openlocfilehash: c7586f3c3f3aefd78fa868cc847df27e8aac58ab
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 953acc32c3510b31c265f2d64d0a013f6dee06cc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611647"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372892"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Rzutowanie typów obiektów klas MFC
 
-Typ rzutowania makra umożliwiają rzutowanie danego wskaźnika do wskaźnika, który wskazuje na obiekt określonej klasy, z lub bez sprawdzania, czy rzutowanie jest prawnych.
+Makra rzutowania typu umożliwiają rzutowanie danego wskaźnika na wskaźnik wskazujący obiekt określonej klasy, z lub bez sprawdzania, czy rzutowanie jest legalne.
 
-W poniższej tabeli wymieniono makr rzutowania typu MFC.
+W poniższej tabeli wymieniono makra rzutowania typu MFC.
 
-### <a name="macros-that-cast-pointers-to-mfc-class-objects"></a>Makra, które rzutowanie wskaźników do obiektów klas MFC
+### <a name="macros-that-cast-pointers-to-mfc-class-objects"></a>Makra, które rzutuje wskaźniki do obiektów klasy MFC
 
 |||
 |-|-|
-|[DYNAMIC_DOWNCAST](#dynamic_downcast)|Rzutuje wskaźnika do wskaźnika do obiektu klasy podczas sprawdzania, jeśli rzutowanie jest dozwolony.|
-|[STATIC_DOWNCAST](#static_downcast)|Rzutuje wskaźnik do obiektu z jednej klasy do wskaźnika typu powiązane. Do kompilacji debugowanej powoduje potwierdzenie, jeśli obiekt nie jest "rodzaju" na typ docelowy.|
+|[DYNAMIC_DOWNCAST](#dynamic_downcast)|Rzutuje wskaźnik do wskaźnika do obiektu klasy podczas sprawdzania, czy rzutowanie jest legalne.|
+|[STATIC_DOWNCAST](#static_downcast)|Rzutuje wskaźnik do obiektu z jednej klasy do wskaźnika powiązanego typu. W kompilacji debugowania powoduje ASSERT, jeśli obiekt nie jest "rodzaj" typu docelowego.|
 
-##  <a name="dynamic_downcast"></a>  DYNAMIC_DOWNCAST
+## <a name="dynamic_downcast"></a><a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST
 
-Zapewnia wygodny sposób rzutowanie wskaźnika do wskaźnika do obiektu klasy podczas sprawdzania, jeśli rzutowanie jest dozwolony.
+Zapewnia przydatny sposób rzutowania wskaźnika do wskaźnika do obiektu klasy podczas sprawdzania, czy rzutowanie jest legalne.
 
 ```
 DYNAMIC_DOWNCAST(class, pointer)
@@ -42,17 +42,17 @@ DYNAMIC_DOWNCAST(class, pointer)
 Nazwa klasy.
 
 *pointer*<br/>
-Wskaźnik do być rzutowany na wskaźnik do obiektu typu *klasy*.
+Wskaźnik, który ma być rzutowy na wskaźnik do obiektu *klasy*typu .
 
 ### <a name="remarks"></a>Uwagi
 
-Makra zostanie rzutowania *wskaźnik* parametru na wskaźnik do obiektu *klasy* typu parametru.
+Makro przerzucy parametr *wskaźnika* na wskaźnik do obiektu typu parametru *klasy.*
 
-Jeśli obiekt odwołuje się wskaźnik jest "rodzaju" klasy zidentyfikowanych makro zwraca odpowiednie wskaźnik. Jeśli nie jest rzutowanie prawne, makro zwraca wartość NULL.
+Jeśli obiekt, do którego odwołuje się wskaźnik, jest "rodzajem" zidentyfikowanej klasy, makro zwraca odpowiedni wskaźnik. Jeśli nie jest to rzutowanie prawne, makro zwraca wartość NULL.
 
-##  <a name="static_downcast"></a>  STATIC_DOWNCAST
+## <a name="static_downcast"></a><a name="static_downcast"></a>STATIC_DOWNCAST
 
-Rzutowania *obiekt* na wskaźnik do *class_name* obiektu.
+Rzutuje *pobject* do wskaźnika do *obiektu class_name.*
 
 ```
 STATIC_DOWNCAST(class_name, pobject)
@@ -61,23 +61,23 @@ STATIC_DOWNCAST(class_name, pobject)
 ### <a name="parameters"></a>Parametry
 
 *class_name*<br/>
-Nazwa klasy rzutowany.
+Nazwa klasy, do która jest rzutowana.
 
-*pobject*<br/>
-Wskaźnik, aby być rzutowany na wskaźnik do *class_name* obiektu.
+*Pobject*<br/>
+Wskaźnik, który ma być rzutowy na wskaźnik do *obiektu class_name.*
 
 ### <a name="remarks"></a>Uwagi
 
-*obiekt* musi mieć wartość NULL albo wskazać obiekt klasy, która pochodzi bezpośrednio lub pośrednio z *class_name*. W kompilacjach do aplikacji za pomocą symbol preprocesora _DEBUG zdefiniowane makro będzie potwierdzenia, jeśli *obiekt* nie ma wartości NULL, lub jeśli wskazuje na obiekt, który nie jest "rodzaju" klasa określona w *class_name*parametr (zobacz [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)). W non - **_DEBUG** kompilacje, makro wykonuje rzutowanie bez sprawdzania typu.
+*pobject* musi mieć wartość NULL lub wskazywać obiekt klasy, który jest uzyskiwane bezpośrednio lub pośrednio z *class_name*. W kompilacjach aplikacji z zdefiniowanym symbolem preprocesora _DEBUG makro będzie potwierdzać, jeśli *pobject* nie ma wartości NULL lub jeśli wskazuje na obiekt, który nie jest "rodzajem" klasy określonej w *parametrze class_name* (patrz [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)). W kompilacjach **innych niż _DEBUG** makro wykonuje rzutowanie bez sprawdzania typu.
 
-Klasa określona w *class_name* parametru musi pochodzić od `CObject` i musi być DECLARE_DYNAMIC i IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE i IMPLEMENT_DYNCREATE, lub DECLARE_SERIAL i IMPLEMENT_ SERIAL makra, jak wyjaśniono w artykule [klasa CObject: Wyprowadzanie klasy z obiektu CObject](../../mfc/deriving-a-class-from-cobject.md).
+Klasa określona w *parametrze class_name* musi pochodzić z `CObject` DECLARE_DYNAMIC i IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE i IMPLEMENT_DYNCREATE lub makr DECLARE_SERIAL i IMPLEMENT_SERIAL, jak wyjaśniono w artykule [CObject Klasa: Pochodna klasy z CObject](../../mfc/deriving-a-class-from-cobject.md).
 
-Na przykład może rzutować wskaźnik do `CMyDoc`, co jest nazywane `pMyDoc`, wskaźnik do `CDocument` za pomocą następującego wyrażenia:
+Na przykład można rzutować `CMyDoc`wskaźnik `pMyDoc`do , wywoływane , do wskaźnika do `CDocument` korzystania z tego wyrażenia:
 
 [!code-cpp[NVC_MFCDocView#197](../../mfc/codesnippet/cpp/type-casting-of-mfc-class-objects_1.cpp)]
 
-Jeśli `pMyDoc` nie wskazuje na obiekt, który pochodzi bezpośrednio lub pośrednio z `CDocument`, makro będzie potwierdzenia.
+Jeśli `pMyDoc` nie wskazuje obiektu pochodzącego bezpośrednio lub `CDocument`pośrednio z , makro będzie ASSERT.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Makra i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md)
+[Makra i globals](../../mfc/reference/mfc-macros-and-globals.md)

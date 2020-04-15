@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultCharTraits class
 ms.assetid: f94a3934-597f-401d-8513-ed6924ae069a
-ms.openlocfilehash: fe599ee0e84c393bed656b7304fd13d55ce95a50
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40c4d107d05e6d7b610e7c46be920d91d8fe6086
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258744"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327090"
 ---
 # <a name="cdefaultchartraits-class"></a>Klasa CDefaultCharTraits
 
-Ta klasa udostępnia dwie funkcje statyczne konwersję znaków między wielkimi i małymi.
+Ta klasa udostępnia dwie funkcje statyczne do konwertowania znaków między wielką i małe litery.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,20 +38,20 @@ Typ danych, które mają być przechowywane w kolekcji.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDefaultCharTraits::CharToLower](#chartolower)|(Statyczny) Wywołaj tę funkcję w celu konwersji znaków na wielkie litery.|
-|[CDefaultCharTraits::CharToUpper](#chartoupper)|(Statyczny) Wywołaj tę funkcję w celu konwersji znaków na małe litery.|
+|[CDefaultCharTraits::CharToLower](#chartolower)|(Statyczne) Wywołanie tej funkcji, aby przekonwertować znak na wielkie litery.|
+|[CDefaultCharTraits::CharToUpper](#chartoupper)|(Statyczne) Wywołanie tej funkcji, aby przekonwertować znak na małe litery.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa udostępnia funkcje, które są wykorzystywane przez klasę [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).
+Ta klasa zawiera funkcje, które są wykorzystywane przez klasę [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlcoll.h
 
-##  <a name="chartolower"></a>  CDefaultCharTraits::CharToLower
+## <a name="cdefaultchartraitschartolower"></a><a name="chartolower"></a>CDefaultCharTraits::CharToLower
 
-Wywołaj tę funkcję w celu konwersji znaków na małe litery.
+Wywołanie tej funkcji, aby przekonwertować znak na małe litery.
 
 ```
 static wchar_t CharToLower(wchar_t x);
@@ -60,16 +60,16 @@ static char CharToLower(char x);
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Znak do przekonwertowania na małe litery.
+*X*<br/>
+Znak do konwersji na małe litery.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#132](../../atl/codesnippet/cpp/cdefaultchartraits-class_1.cpp)]
 
-##  <a name="chartoupper"></a>  CDefaultCharTraits::CharToUpper
+## <a name="cdefaultchartraitschartoupper"></a><a name="chartoupper"></a>CDefaultCharTraits::CharToUpper
 
-Wywołaj tę funkcję w celu konwersji znaków na wielkie litery.
+Wywołanie tej funkcji, aby przekonwertować znak na wielkie litery.
 
 ```
 static wchar_t CharToUpper(wchar_t x);
@@ -78,9 +78,9 @@ static char CharToUpper(char x);
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*X*<br/>
 Znak do przekonwertowania na wielkie litery.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

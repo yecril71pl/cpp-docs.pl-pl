@@ -1,5 +1,5 @@
 ---
-title: CComQIPtr Class
+title: Klasa CComQIPtr
 ms.date: 11/04/2016
 f1_keywords:
 - CComQIPtr
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
-ms.openlocfilehash: 64716d945ffbc6802ec23fb47523464246065192
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b1d8b92fbc5e95a5061956bafc4922d249a6f18
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258913"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327416"
 ---
-# <a name="ccomqiptr-class"></a>CComQIPtr Class
+# <a name="ccomqiptr-class"></a>Klasa CComQIPtr
 
-Klasa inteligentnego wskaźnika do zarządzania wskaźniki interfejsu COM.
+Klasa inteligentnego wskaźnika do zarządzania wskaźnikami interfejsu COM.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,10 +29,10 @@ class CComQIPtr: public CComPtr<T>
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Interfejs COM, określając typ wskaźnika, które mają być przechowywane.
+Interfejs COM określający typ wskaźnika do przechowywania.
 
 *piid*<br/>
-Wskaźnik do identyfikatora IID z *T*.
+Wskaźnik do identyfikatora *T*.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -50,13 +50,13 @@ Wskaźnik do identyfikatora IID z *T*.
 
 ## <a name="remarks"></a>Uwagi
 
-Używa ATL `CComQIPtr` i [CComPtr](../../atl/reference/ccomptr-class.md) Zarządzanie wskaźniki interfejsu COM, z których oba dziedziczyć [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Obie klasy wykonywać automatyczne zliczanie za pośrednictwem wywołania `AddRef` i `Release`. Przeciążone operatory obsługiwać operacje wskaźnika.
+ATL używa `CComQIPtr` i [CComPtr](../../atl/reference/ccomptr-class.md) do zarządzania wskaźnikami interfejsu COM, które pochodzą z [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Obie klasy wykonują automatyczne zliczanie odwołań za pośrednictwem wywołań do `AddRef` i `Release`. Przeciążone operatory obsługują operacje wskaźnika.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CComPtrBase](../../atl/reference/ccomptrbase-class.md)
+[Ccomptrbase](../../atl/reference/ccomptrbase-class.md)
 
-[CComPtr](../../atl/reference/ccomptr-class.md)
+[Ccomptr](../../atl/reference/ccomptr-class.md)
 
 `CComQIPtr`
 
@@ -64,7 +64,7 @@ Używa ATL `CComQIPtr` i [CComPtr](../../atl/reference/ccomptr-class.md) Zarząd
 
 **Nagłówek:** atlcomcli.h
 
-##  <a name="ccomqiptr"></a>  CComQIPtr::CComQIPtr
+## <a name="ccomqiptrccomqiptr"></a><a name="ccomqiptr"></a>CComQIPtr::CComQIPtr
 
 Konstruktor.
 
@@ -77,16 +77,16 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*LP*<br/>
-Używane do zainicjowania wskaźnika interfejsu.
+*Lp*<br/>
+Służy do inicjowania wskaźnika interfejsu.
 
 *T*<br/>
 Interfejs COM.
 
 *piid*<br/>
-Wskaźnik do identyfikatora IID z *T*.
+Wskaźnik do identyfikatora *T*.
 
-##  <a name="operator_eq"></a>  CComQIPtr::operator =
+## <a name="ccomqiptroperator-"></a><a name="operator_eq"></a>CComQIPtr::operator =
 
 Operator przypisania.
 
@@ -98,23 +98,23 @@ T* operator= (IUnknown* lp) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*LP*<br/>
-Używane do zainicjowania wskaźnika interfejsu.
+*Lp*<br/>
+Służy do inicjowania wskaźnika interfejsu.
 
 *T*<br/>
 Interfejs COM.
 
 *piid*<br/>
-Wskaźnik do identyfikatora IID z *T*.
+Wskaźnik do identyfikatora *T*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do zaktualizowanego `CComQIPtr` obiektu.
+Zwraca wskaźnik do `CComQIPtr` zaktualizowanego obiektu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)<br/>
 [CComQIPtr::CComQIPtr](#ccomqiptr)<br/>
 [Klasa CComPtrBase](../../atl/reference/ccomptrbase-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)<br/>
+[Przegląd klas](../../atl/atl-class-overview.md)<br/>
 [Klasa CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)

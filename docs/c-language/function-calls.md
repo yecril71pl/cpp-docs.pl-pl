@@ -7,31 +7,31 @@ helpviewer_keywords:
 - function calls, about function calls
 - function calls
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
-ms.openlocfilehash: 2402f3fef77b19c0420f0c4a52407a730b53b1d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cce1a888f3e1224822ab4e97c67bf59da4c46fc9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233232"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334570"
 ---
 # <a name="function-calls"></a>Wywołania funkcji
 
-A *wywołania funkcji* jest wyrażeniem, które przekazuje kontrolę i argumentów (jeśli istnieje) do funkcji i ma postać:
+*Wywołanie funkcji* jest wyrażeniem, które przekazuje kontrolę i argumenty (jeśli istnieją) do funkcji i ma formularz:
 
-*wyrażenie* (*lista wyrażeń*<sub>zoptymalizowany pod kątem</sub>)
+*wyrażenie* *(wyrażenie-lista*<sub>opt)</sub>
 
-gdzie *wyrażenie* jest nazwą funkcji lub daje w wyniku adres funkcji i *lista wyrażeń* znajduje się lista wyrażeń (oddzielonych przecinkami). Wartości tych końcowych wyrażeń są argumentami przekazywanymi do funkcji. Jeśli funkcja nie zwraca wartości, a następnie możesz deklarować jako funkcja, która zwraca `void`.
+gdzie *wyrażenie* jest nazwą funkcji lub ocenia adres funkcji, a *lista wyrażeń* jest listą wyrażeń (oddzielonych przecinkami). Wartości tych końcowych wyrażeń są argumentami przekazywanymi do funkcji. Jeśli funkcja nie zwraca wartości, należy zadeklarować, że `void`jest to funkcja zwracająca .
 
-Jeśli deklaracja istnieje przed wywołaniem funkcji, ale nie informacji znajduje się w odniesieniu do parametrów, argumenty niezadeklarowany po prostu przejść zwykle konwersje arytmetyczne.
+Jeśli deklaracja istnieje przed wywołaniem funkcji, ale nie podano żadnych informacji dotyczących parametrów, wszelkie niezadeklarowane argumenty po prostu przechodzą zwykłe konwersje arytmetyczne.
 
 > [!NOTE]
->  Może zostać oceniony wyrażeń na liście argumentów funkcji w dowolnej kolejności, dlatego argumentów, których wartości mogą zostać zmienione przez efekty uboczne z innego argumentu ma niezdefiniowane wartości. Tylko punktu sekwencji zdefiniowane przez operator wywołania funkcji gwarantuje, ze wszystkimi efektami ubocznymi na liście argumentów są oceniane przed kontrola przechodzi do wywołanej funkcji. (Zwróć uwagę, że kolejność, w której argumenty są wypychane na stos jest kwestią oddzielne). Zobacz [punktów sekwencji](../c-language/c-sequence-points.md) Aby uzyskać więcej informacji.
+> Wyrażenia na liście argumentów funkcji mogą być oceniane w dowolnej kolejności, więc argumenty, których wartości mogą zostać zmienione przez skutki uboczne z innego argumentu mają wartości niezdefiniowane. Punkt sekwencji zdefiniowany przez operator wywołania funkcji gwarantuje tylko, że wszystkie skutki uboczne na liście argumentów są oceniane przed przepuszczenia kontroli do wywoływana funkcja. (Należy zauważyć, że kolejność, w jakiej argumenty są wypychane na stosie jest osobną sprawą.) Zobacz [punkty sekwencji, aby](../c-language/c-sequence-points.md) uzyskać więcej informacji.
 
-Jedynym wymaganiem w żadnym wywołaniu, funkcja jest, że przed nawiasów wyrażenia musi być adresu funkcji. Oznacza to, że funkcja może być wywoływana przez dowolne wyrażenie wskaźnika funkcji.
+Jedynym wymaganiem w każdym wywołaniu funkcji jest to, że wyrażenie przed nawiasami musi ocenić adres funkcji. Oznacza to, że funkcja może być wywoływana za pośrednictwem dowolnego wyrażenia wskaźnik funkcji.
 
 ## <a name="example"></a>Przykład
 
-Ten przykład ilustruje wywołania funkcji o nazwie z `switch` instrukcji:
+W tym przykładzie przedstawiono `switch` wywołania funkcji wywoływane z instrukcji:
 
 ```
 int main()
@@ -73,24 +73,24 @@ void work( int number, long (*function)(int i) )
 }
 ```
 
-W tym przykładzie funkcja wywołania `main`,
+W tym przykładzie wywołanie funkcji w `main`,
 
 ```
 work( count, lift );
 ```
 
-przekazuje zmienną całkowitoliczbową `count`oraz adres funkcji `lift` funkcji `work`. Należy pamiętać, że adres funkcji jest przekazywany, podając identyfikator funkcji, ponieważ identyfikator funkcji ocenia wyrażenie wskaźnika. Aby użyć identyfikator funkcji w ten sposób, funkcja musi być zadeklarowane lub zdefiniowane przed użyciem identyfikator; w przeciwnym razie identyfikator nie został rozpoznany. W tym przypadku prototyp `work` znajduje się na początku `main` funkcji.
+przekazuje zmienną całkowitą, `count`a adres funkcji `lift` do funkcji `work`. Należy zauważyć, że adres funkcji jest przekazywany po prostu przez podanie identyfikatora funkcji, ponieważ identyfikator funkcji ocenia wyrażenie wskaźnika. Aby w ten sposób użyć identyfikatora funkcji, funkcja musi być zadeklarowana lub zdefiniowana przed użyciem identyfikatora; w przeciwnym razie identyfikator nie zostanie rozpoznany. W takim przypadku prototyp `work` dla jest podany na `main` początku funkcji.
 
-Parametr `function` w `work` jest deklarowana jako wskaźnik do funkcji, w których jedna `int` argumentów i zwracanie **długie** wartość. Nawiasy, w których nazwa parametru są wymagane; bez nich deklaracji należałoby określić funkcji zwracającej wskaźnik do **długie** wartość.
+Parametr `function` w `work` jest zadeklarowany jako wskaźnik do `int` funkcji przy jednym argumentie i zwracaniu **wartości długiej.** Nawiasy wokół nazwy parametru są wymagane; bez nich deklaracja określi funkcję zwracającą wskaźnik do wartości **długiej.**
 
-Funkcja `work` wywołuje funkcję wybranego z wewnątrz **dla** pętli za pomocą poniższe wywołanie funkcji:
+Funkcja `work` wywołuje wybraną funkcję z wewnątrz pętli **for** za pomocą następującego wywołania funkcji:
 
 ```
 ( *function )( i );
 ```
 
-Jeden argument `i`, jest przekazywany do funkcji o nazwie.
+Jeden argument `i`, jest przekazywany do wywoływana funkcja.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje](../c-language/functions-c.md)

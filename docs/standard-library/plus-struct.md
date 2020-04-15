@@ -7,20 +7,20 @@ helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-ms.openlocfilehash: 7071b7709f106fc974e401f89bb98c2525bd6558
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 628823a7fc3c176f83bbb1dca59ec194b5d3db97
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240508"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372067"
 ---
 # <a name="plus-struct"></a>plus — Struktura
 
-Obiekt wstępnie zdefiniowana funkcja, która wykonuje operację dodawania (binarne `operator+`) na jego argumenty.
+Wstępnie zdefiniowany obiekt funkcji, który wykonuje operację `operator+`dodawania (binarny) na jego argumenty.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template <class Type = void>
 struct plus : public binary_function <Type, Type, Type>
 {
@@ -40,17 +40,17 @@ struct plus<void>
 ### <a name="parameters"></a>Parametry
 
 *Typ*, *T*, *U*\
-Typ, który obsługuje dane binarne `operator+` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
+Typ, który obsługuje `operator+` plik binarny, który przyjmuje operandy określonych lub wywnioskowane typy.
 
-*po lewej stronie*\
-Lewy operand operacji dodawania. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
+*Lewej*\
+Lewy operand operacji dodawania. Szablon bezspecjalisyjny przyjmuje argument odwołania lvalue typu *Typ*. Szablon specjalistyczny doskonale przekazuje argumenty referencyjne lvalue i rvalue wnioskowanych typów *T*.
 
-*po prawej stronie*\
-Prawy operand operacji dodawania. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
+*Prawo*\
+Prawy operand operacji dodawania. Szablon bezspecjalisyjny przyjmuje argument odwołania lvalue typu *Typ*. Szablon specjalistyczny doskonale przekazuje argumenty referencyjne lvalue i rvalue wnioskowanych typów *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left + Right`. Wyspecjalizowane szablonu doskonała przekazywania wyniku, który ma typ, który jest zwracany przez plik binarny `operator+`.
+Wynik . `Left + Right` Szablon specjalistyczny doskonale przekazuje wynik, który ma typ zwracany `operator+`przez binarny.
 
 ## <a name="example"></a>Przykład
 

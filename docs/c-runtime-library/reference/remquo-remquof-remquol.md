@@ -1,10 +1,13 @@
 ---
 title: remquo, remquof, remquol
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - remquof
 - remquo
 - remquol
+- _o_remquo
+- _o_remquof
+- _o_remquol
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: c96357dda007e9bf12ddaf6091af47794bfc0630
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e6a6f211e83118379e0697464d21f5968ea68cee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949365"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332837"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -56,32 +60,34 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>Parametry
 
-*numeracj*<br/>
+*liczba*<br/>
 Licznik.
 
 *denom*<br/>
 Mianownik.
 
-*quo*<br/>
+*Quo*<br/>
 Wskaźnik do liczby całkowitej do przechowywania wartości, która ma znak i przybliżoną wielkość ilorazu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**remquo —** zwraca liczbę zmiennoprzecinkową z przestawu *x* / *y*. Jeśli wartość *y* to 0,0, **remquo —** zwraca cichy NaN. Aby uzyskać informacje o reprezentacji cichej wartości NaN przez rodzinę **printf** , zobacz [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**remquo** zwraca zmiennoprzecinową pozostałą część *x* / *y*. Jeśli wartość *y* wynosi 0,0, **remquo** zwraca cichą wartość NaN. Aby uzyskać informacje na temat reprezentacji cichej NaN przez rodzinę **printf,** zobacz [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **remquo —** oblicza pozostałą liczbę zmiennoprzecinkową *f* z *x* / *y* , taką jak *x* = *i* \* *y* + *f*, *gdzie* jest liczbą całkowitą, *f* ma ten sam znak jako *x*, a wartość bezwzględna *f* jest mniejsza niż wartość bezwzględna *y*.
+Funkcja **remquo** oblicza pozostałą część zmiennoprzecinową *f* *x* / *y* tak, że *x* = *i* \* *y* + *f*, gdzie *i* jest liczą całkowitą, *f* ma ten sam znak co *x*, a wartość bezwzględna *f* jest mniejsza niż wartość *bezwzględna y*.
 
-C++zezwala na Przeciążenie, dzięki czemu można wywoływać przeciążenia **remquo —** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** o **podwójnej precyzji** . W programie C **remquo —** zawsze przyjmuje dwa **podwójne** argumenty i zwraca wartość **podwójną**.
+C++ umożliwia przeciążenie, dzięki czemu można wywołać przeciążenia **remquo,** które biorą i zwracają **float** lub **długie** **podwójne** wartości. W programie C **remquo** zawsze przyjmuje dwa **podwójne** argumenty i zwraca **podwójny**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |--------------|---------------------|-|
-|**remquo**, **remquof**, **remquol**|\<math.h>|\<cmath > lub \<Math. h >|
+|**remquo**, **remquof**, **remquol**|\<> math.h|\<cmath> lub \<math.h>|
 
-Aby uzyskać informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -108,9 +114,9 @@ The remainder of -10.00 / 3.00 is -1.000000
 Approximate signed quotient is -3
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

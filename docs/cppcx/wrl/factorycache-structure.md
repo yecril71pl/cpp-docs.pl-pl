@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::FactoryCache::cookie data member
 - Microsoft::WRL::Details::FactoryCache::factory data member
 ms.assetid: 624544e6-0989-47f6-a3e9-edb60e1ee6d4
-ms.openlocfilehash: 7196363567dffa43844bbbd1de76934a317302d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 507d35179b9fa86399e56b18171800f41eaf1f10
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398501"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371487"
 ---
 # <a name="factorycache-structure"></a>FactoryCache — Struktura
 
-Obsługuje infrastrukturę Biblioteka szablonów C++ środowiska wykonawczego Windows i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę biblioteki szablonów środowiska wykonawczego systemu Windows W++ i nie jest przeznaczona do użycia bezpośrednio z kodu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,7 +30,7 @@ struct FactoryCache;
 
 ## <a name="remarks"></a>Uwagi
 
-Zawiera lokalizację fabryki klas i wartość, która identyfikuje zarejestrowany wrt lub obiekt klasy COM.
+Zawiera lokalizację fabryki klas i wartość identyfikującą zarejestrowany obiekt klasy wrt lub COM.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -38,8 +38,8 @@ Zawiera lokalizację fabryki klas i wartość, która identyfikuje zarejestrowan
 
 Nazwa                              | Opis
 --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------
-[FactoryCache::cookie](#cookie)   | Zawiera wartość, która identyfikuje zarejestrowanych obiektu klasy środowiska wykonawczego Windows lub COM i jest później używany do wyrejestrowania obiektu.
-[FactoryCache::factory](#factory) | Wskazuje fabrykę klas Windows Runtime lub COM.
+[FactoryCache::plik cookie](#cookie)   | Zawiera wartość identyfikującą zarejestrowany obiekt klasy Środowiska Wykonawczego systemu Windows lub COM, a później używany do wyrejestrowania obiektu.
+[FactoryCache::factory](#factory) | Wskazuje fabrykę środowiska wykonawczego systemu Windows lub klasy COM.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -49,11 +49,11 @@ Nazwa                              | Opis
 
 **Nagłówek:** module.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obszar nazw:** Microsoft::WRL::Dszczegóły
 
-## <a name="cookie"></a>FactoryCache::cookie
+## <a name="factorycachecookie"></a><a name="cookie"></a>FactoryCache::plik cookie
 
-Obsługuje infrastrukturę Biblioteka szablonów C++ środowiska wykonawczego Windows i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę biblioteki szablonów środowiska wykonawczego systemu Windows W++ i nie jest przeznaczona do użycia bezpośrednio z kodu.
 
 ```cpp
 union {
@@ -64,11 +64,11 @@ union {
 
 ### <a name="remarks"></a>Uwagi
 
-Zawiera wartość, która identyfikuje zarejestrowanych obiektu klasy środowiska wykonawczego Windows lub COM i jest później używany do wyrejestrowania obiektu.
+Zawiera wartość identyfikującą zarejestrowany obiekt klasy Środowiska Wykonawczego systemu Windows lub COM, a później używany do wyrejestrowania obiektu.
 
-## <a name="factory"></a>FactoryCache::factory
+## <a name="factorycachefactory"></a><a name="factory"></a>FactoryCache::factory
 
-Obsługuje infrastrukturę Biblioteka szablonów C++ środowiska wykonawczego Windows i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę biblioteki szablonów środowiska wykonawczego systemu Windows W++ i nie jest przeznaczona do użycia bezpośrednio z kodu.
 
 ```cpp
 IUnknown* factory;
@@ -76,4 +76,4 @@ IUnknown* factory;
 
 ### <a name="remarks"></a>Uwagi
 
-Wskazuje fabrykę klas Windows Runtime lub COM.
+Wskazuje fabrykę środowiska wykonawczego systemu Windows lub klasy COM.

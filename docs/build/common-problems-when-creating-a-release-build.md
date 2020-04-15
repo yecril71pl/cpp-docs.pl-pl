@@ -17,20 +17,20 @@ helpviewer_keywords:
 - troubleshooting release builds
 - memory [C++], overwrites
 ms.assetid: 73cbc1f9-3e33-472d-9880-39a8e9977b95
-ms.openlocfilehash: 5372fe4e96c444d454c277394dd811cfac14d1f6
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 9bd1cafe40417872d42f2e9e1427e5f2eccad7a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220895"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328869"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Typowe problemy podczas tworzenia kompilacji wydania
 
-Podczas tworzenia aplikacji będzie zazwyczaj kompilowania i testowania z kompilacji debugowania projektu. Jeśli następnie utworzysz aplikację dla kompilacji oficjalnej, może zostać naruszenie zasad dostępu.
+Podczas tworzenia zwykle będzie tworzyć i testować za pomocą kompilacji debugowania projektu. Jeśli następnie skompilować aplikację dla kompilacji wydania, może uzyskać naruszenie zasad dostępu.
 
-Poniższa lista zawiera podstawowe różnice między debugowania, jak i kompilację wydania (nondebug). Istnieją inne różnice, ale poniżej przedstawiono podstawowe różnice, które mogłoby spowodować awarię aplikacji kompilację wydania, gdy działa w kompilacji debugowania.
+Poniższa lista przedstawia podstawowe różnice między debugowania i wersji (nondebug) kompilacji. Istnieją inne różnice, ale poniżej są podstawowe różnice, które mogłyby spowodować, że aplikacja zakończy się niepowodzeniem w kompilacji wydania, gdy działa w kompilacji debugowania.
 
-- [Układ stosu](#_core_heap_layout)
+- [Układ sterty](#_core_heap_layout)
 
 - [Kompilacja](#_core_compilation)
 
@@ -38,31 +38,31 @@ Poniższa lista zawiera podstawowe różnice między debugowania, jak i kompilac
 
 - [Optymalizacje](#_core_optimizations)
 
-Zobacz [GZ (przechwytywać błędy kompilacji wydania w kompilacji debugowania)](reference/gz-enable-stack-frame-run-time-error-checking.md) — opcja kompilatora informacji na temat sposobu catch wersji kompilacji błędy w kompilacjach do debugowania.
+Zobacz [/GZ (Catch Release-Build błędy w debugowania kompilacji)](reference/gz-enable-stack-frame-run-time-error-checking.md) opcja kompilatora informacji na temat sposobu połowu błędów kompilacji wydania w kompilacji debugowania.
 
-##  <a name="_core_heap_layout"></a> Układ stosu
+## <a name="heap-layout"></a><a name="_core_heap_layout"></a>Układ sterty
 
-Układ stosu jest przyczyną około 90% widocznych problemów, jeśli aplikacja działa w debugowania, ale nie wersji.
+Układ sterty będzie przyczyną około dziewięćdziesięciu procent problemów, gdy aplikacja działa w debugowaniu, ale nie zwalnia.
 
-Podczas kompilowania projektu do debugowania używają alokatora pamięci debugowania. Oznacza to, czy wszystkie alokacje pamięci mają bajtów guard umieszczone wokół nich. Te bajtów guard wykryć Zastąp pamięci. Ponieważ układ sterty różni się między Zwolnij i Debuguj wersje, Zastąp pamięci nie może utworzyć wszelkie problemy w kompilacji debugowania, ale mogą mieć wpływ krytycznego kompilację wydania.
+Podczas tworzenia projektu do debugowania, używasz alokatora pamięci debugowania. Oznacza to, że wszystkie alokacje pamięci mają bajty straży umieszczone wokół nich. Te bajty straży wykryć zastąpienie pamięci. Ponieważ układ sterty różni się między wersjami wersji i debugowania, zastąpienie pamięci może nie powodować żadnych problemów w kompilacji debugowania, ale może mieć katastrofalne skutki w kompilacji wydania.
 
-Aby uzyskać więcej informacji, zobacz [sprawdzaj zastąpić pamięci](checking-for-memory-overwrites.md) i [na użytek debugowanie kompilacji Aby sprawdzić zastąpić pamięci](using-the-debug-build-to-check-for-memory-overwrite.md).
+Aby uzyskać więcej informacji, zobacz [Sprawdzanie zastępowania pamięci](checking-for-memory-overwrites.md) i używanie [kompilacji debugowania do sprawdzania zastępowania pamięci](using-the-debug-build-to-check-for-memory-overwrite.md).
 
-##  <a name="_core_compilation"></a> Kompilacja
+## <a name="compilation"></a><a name="_core_compilation"></a>Kompilacji
 
-Wiele z makr MFC i większość zmian implementacji MFC, podczas tworzenia wersji. W szczególności ASSERT — makro daje w wyniku nic w kompilacji wydania, więc żaden kod w potwierdzenia zostaną wykonane. Aby uzyskać więcej informacji, zobacz [zbadać instrukcjami ASSERT](using-verify-instead-of-assert.md).
+Wiele makr MFC i wiele zmian implementacji MFC podczas tworzenia do wydania. W szczególności makra ASSERT ocenia nic w kompilacji wydania, więc żaden z kodu znalezionego w ASSERTs zostaną wykonane. Aby uzyskać więcej informacji, zobacz [Badanie instrukcji ASSERT](using-verify-instead-of-assert.md).
 
-Niektóre funkcje są śródwierszowych dla zwiększona szybkość w kompilacji wydania. Optymalizacje ogólnie są włączone w kompilacji wydania. Alokator pamięci różnych jest również używany.
+Niektóre funkcje są inlined dla zwiększonej szybkości w kompilacji wydania. Optymalizacje są zazwyczaj włączone w kompilacji wydania. Używany jest również inny alokator pamięci.
 
-##  <a name="_core_pointer_support"></a> Obsługa wskaźnika
+## <a name="pointer-support"></a><a name="_core_pointer_support"></a>Obsługa wskaźnika
 
-Brak informacji o debugowaniu usuwa uzupełnienie z aplikacji. W kompilacji wydania wskaźniki stray mają większe prawdopodobieństwo wskazujący niezainicjowanej pamięci, a nie wskazuje na informacje o debugowaniu.
+Brak informacji debugowania usuwa dopełnienie z aplikacji. W kompilacji wydania bezpańskich wskaźników mają większe szanse na wskazanie niezainicjowanej pamięci zamiast wskazując na informacje debugowania.
 
-##  <a name="_core_optimizations"></a> Optymalizacje
+## <a name="optimizations"></a><a name="_core_optimizations"></a>Optymalizacje
 
-W zależności od charakteru niektórych fragmentów kodu kompilatora optymalizującego może generować nieoczekiwany kod. To jest najmniej prawdopodobne przyczyny problemów kompilacji wydania, ale czasami wystąpić. Dla rozwiązania, zobacz [optymalizacji kodu](optimizing-your-code.md).
+W zależności od charakteru niektórych segmentów kodu kompilator optymalizacji może generować nieoczekiwany kod. Jest to najmniej prawdopodobna przyczyna problemów kompilacji wydania, ale pojawia się czasami. Aby uzyskać rozwiązanie, zobacz [Optymalizacja kodu](optimizing-your-code.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kompilacje wydania](release-builds.md)<br/>
 [Naprawianie problemów kompilacji wydania](fixing-release-build-problems.md)

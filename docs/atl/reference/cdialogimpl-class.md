@@ -17,19 +17,19 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: bc39a5deeb270b0426a4b199fc9ba01917c292bc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 900a312c97d7b83eac93a372be39a006b3c4344d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496814"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327052"
 ---
 # <a name="cdialogimpl-class"></a>Klasa CDialogImpl
 
-Ta klasa udostępnia metody tworzenia modalnych lub niemodalnych okien dialogowych.
+Ta klasa zawiera metody tworzenia modalnego lub trybutowego okna dialogowego.
 
 > [!IMPORTANT]
->  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,10 +42,10 @@ template <class T,
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Klasa, która pochodzi od `CDialogImpl`.
+Twoja klasa, pochodząca od `CDialogImpl`.
 
-*TBase*<br/>
-Klasa bazowa nowej klasy. Domyślną klasą bazową jest [CWindow](../../atl/reference/cwindow-class.md).
+*Baza danych TBase*<br/>
+Klasa podstawowa nowej klasy. Domyślną klasą podstawową jest [CWindow](../../atl/reference/cwindow-class.md).
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -53,55 +53,55 @@ Klasa bazowa nowej klasy. Domyślną klasą bazową jest [CWindow](../../atl/ref
 
 |||
 |-|-|
-|[Tworzenie](#create)|Tworzy niemodalne okno dialogowe.|
-|[DestroyWindow](#destroywindow)|Niszczy niemodalne okno dialogowe.|
-|[DoModal](#domodal)|Tworzy modalne okno dialogowe.|
-|[Zdarzenie EndDialog](#enddialog)|Niszczy modalne okno dialogowe.|
+|[Utwórz](#create)|Tworzy niemodowe okno dialogowe.|
+|[Destroywindow](#destroywindow)|Niszczy niemodowe okno dialogowe.|
+|[Domodal](#domodal)|Tworzy modalne okno dialogowe.|
+|[Enddialog](#enddialog)|Niszczy modalne okno dialogowe.|
 
 ### <a name="cdialogimplbaset-methods"></a>Metody CDialogImplBaseT
 
 |||
 |-|-|
-|[GetDialogProc](#getdialogproc)|Zwraca bieżącą procedurę okna dialogowego.|
+|[GetDialogProc ( GetDialogProc )](#getdialogproc)|Zwraca bieżącą procedurę okna dialogowego.|
 |[MapDialogRect](#mapdialogrect)|Mapuje jednostki okna dialogowego określonego prostokąta na jednostki ekranu (piksele).|
-|[OnFinalMessage](#onfinalmessage)|Wywoływana po odebraniu ostatniego komunikatu, zazwyczaj WM_NCDESTROY.|
+|[OnFinalMessage](#onfinalmessage)|Wywoływana po otrzymaniu ostatniej wiadomości, zazwyczaj WM_NCDESTROY.|
 
 ### <a name="static-functions"></a>Funkcje statyczne
 
 |||
 |-|-|
-|[DialogProc](#dialogproc)|Przetwarza komunikaty wysyłane do okna dialogowego.|
-|[StartDialogProc](#startdialogproc)|Wywoływana, gdy zostanie odebrany pierwszy komunikat do przetwarzania komunikatów wysyłanych do okna dialogowego.|
+|[Dialogproc](#dialogproc)|Przetwarza wiadomości wysyłane do okna dialogowego.|
+|[StartDialogProc](#startdialogproc)|Wywoływana po odebraniu pierwszej wiadomości w celu przetworzenia wiadomości wysłanych do okna dialogowego.|
 
 ## <a name="remarks"></a>Uwagi
 
-Za `CDialogImpl` pomocą można utworzyć modalne lub niemodalne okno dialogowe. `CDialogImpl`zawiera procedurę okna dialogowego, która używa domyślnej mapy komunikatów do kierowania komunikatów do odpowiednich programów obsługi.
+Za `CDialogImpl` pomocą można utworzyć modalne lub trybowe okno dialogowe. `CDialogImpl`zawiera procedurę okna dialogowego, która używa domyślnej mapy wiadomości do kierowania wiadomości do odpowiednich programów obsługi.
 
-Destruktor klasy bazowej `~CWindowImplRoot` gwarantuje, że okno zostało utracone przed zniszczeniem obiektu.
+Destruktor `~CWindowImplRoot` klasy podstawowej zapewnia, że okno zniknie przed zniszczeniem obiektu.
 
-`CDialogImpl`pochodzi od `CDialogImplBaseT`, co z kolei wynika z `CWindowImplRoot`.
+`CDialogImpl`wynika z `CDialogImplBaseT`, który z `CWindowImplRoot`kolei pochodzi z .
 
 > [!NOTE]
->  Klasa musi definiować `IDD` składową, która określa identyfikator zasobu szablonu okna dialogowego. Na przykład Kreator projektu ATL automatycznie dodaje następujący wiersz do klasy:
+> Klasa musi zdefiniować element członkowski, `IDD` który określa identyfikator zasobu szablonu okna dialogowego. Na przykład Kreator projektu ATL automatycznie dodaje do klasy następujący wiersz:
 
 [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]
 
-gdzie `MyDlg` to **krótka nazwa** wprowadzona na stronie **nazw** kreatora.
+gdzie `MyDlg` znajduje się **krótka nazwa** wprowadzona na stronie **Nazwy** kreatora.
 
 |Aby uzyskać więcej informacji dotyczących|Zobacz|
 |--------------------------------|---------|
-|Tworzenie kontrolek|[Samouczek ATL](../../atl/active-template-library-atl-tutorial.md)|
-|Używanie okien dialogowych w ATL|[Klasy okien ATL](../../atl/atl-window-classes.md)|
+|Tworzenie formantów|[Samouczek ATL](../../atl/active-template-library-atl-tutorial.md)|
+|Korzystanie z okien dialogowych w atl|[Klasy okien atl](../../atl/atl-window-classes.md)|
 |Kreator projektu ATL|[Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)|
-|Okna dialogowe|[Okna dialogowe](/windows/win32/dlgbox/dialog-boxes) i kolejne tematy w Windows SDK|
+|Okna dialogowe|[Okna dialogowe](/windows/win32/dlgbox/dialog-boxes) i kolejne tematy w programie Windows SDK|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlwin. h
+**Nagłówek:** atlwin.h
 
-##  <a name="create"></a>CDialogImpl:: Create
+## <a name="cdialogimplcreate"></a><a name="create"></a>CDialogImpl::Tworzenie
 
-Tworzy niemodalne okno dialogowe.
+Tworzy niemodowe okno dialogowe.
 
 ```
 HWND Create(
@@ -116,25 +116,25 @@ HWND Create(
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*<br/>
-podczas Uchwyt do okna właściciela.
+*hWndRodziciek*<br/>
+[w] Dojście do okna właściciela.
 
-**& Rect** *prostokąt* podczas Struktura [prostokąta](/previous-versions/dd162897\(v=vs.85\)) określająca rozmiar i położenie okna dialogowego.
+**RECT&** *rect* [in] Struktura [RECT](/previous-versions/dd162897\(v=vs.85\)) określająca rozmiar i położenie okna dialogowego.
 
 *dwInitParam*<br/>
-podczas Określa wartość, która ma zostać przekazana do okna dialogowego w parametrze *lParam* komunikatu WM_INITDIALOG.
+[w] Określa wartość, która ma być przekazywalna do okna dialogowego w parametrze *lParam* komunikatu WM_INITDIALOG.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Uchwyt do nowo utworzonego okna dialogowego.
+Dojście do nowo utworzonego okna dialogowego.
 
 ### <a name="remarks"></a>Uwagi
 
-To okno dialogowe jest automatycznie dołączane `CDialogImpl` do obiektu. Aby utworzyć modalne okno dialogowe, wywołaj [DoModal](#domodal). Drugie zastąpienie powyżej jest używane tylko z [CComControl](../../atl/reference/ccomcontrol-class.md).
+To okno dialogowe jest automatycznie `CDialogImpl` dołączane do obiektu. Aby utworzyć modalne okno dialogowe, zadzwoń do [domodalu](#domodal). Drugie zastąpienie powyżej jest używane tylko z [CComControl](../../atl/reference/ccomcontrol-class.md).
 
-##  <a name="destroywindow"></a>CDialogImpl::D estroyWindow
+## <a name="cdialogimpldestroywindow"></a><a name="destroywindow"></a>CDialogImpl::DestroyWindow
 
-Niszczy niemodalne okno dialogowe.
+Niszczy niemodowe okno dialogowe.
 
 ```
 BOOL DestroyWindow();
@@ -146,9 +146,9 @@ PRAWDA, jeśli okno dialogowe zostało pomyślnie zniszczone; w przeciwnym razie
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca wartość TRUE, jeśli okno dialogowe zostało pomyślnie zniszczone; w przeciwnym razie FALSE.
+Zwraca wartość PRAWDA, jeśli okno dialogowe zostało pomyślnie zniszczone; w przeciwnym razie FALSE.
 
-##  <a name="dialogproc"></a>CDialogImpl::D ialogProc
+## <a name="cdialogimpldialogproc"></a><a name="dialogproc"></a>CDialogImpl::DialogProc
 
 Ta funkcja statyczna implementuje procedurę okna dialogowego.
 
@@ -162,29 +162,29 @@ static LRESULT CALLBACK DialogProc(
 
 ### <a name="parameters"></a>Parametry
 
-*Właściwość*<br/>
-podczas Uchwyt do okna dialogowego.
+*Hwnd*<br/>
+[w] Uchwyt do okna dialogowego.
 
 *uMsg*<br/>
-podczas Wiadomość wysłana do okna dialogowego.
+[w] Wiadomość wysłana do okna dialogowego.
 
-*wParam*<br/>
-podczas Dodatkowe informacje specyficzne dla wiadomości.
+*Wparam*<br/>
+[w] Dodatkowe informacje specyficzne dla wiadomości.
 
-*lParam*<br/>
-podczas Dodatkowe informacje specyficzne dla wiadomości.
+*Lparam*<br/>
+[w] Dodatkowe informacje specyficzne dla wiadomości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli komunikat jest przetwarzany; w przeciwnym razie FALSE.
+PRAWDA, jeśli wiadomość jest przetwarzana; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-`DialogProc`używa domyślnej mapy komunikatów do kierowania komunikatów do odpowiednich programów obsługi.
+`DialogProc`używa domyślnej mapy wiadomości do kierowania wiadomości do odpowiednich programów obsługi.
 
-Można przesłonić `DialogProc` , aby zapewnić inny mechanizm obsługi komunikatów.
+Można `DialogProc` zastąpić, aby zapewnić inny mechanizm obsługi komunikatów.
 
-##  <a name="domodal"></a>CDialogImpl::D oModal
+## <a name="cdialogimpldomodal"></a><a name="domodal"></a>CDialogImpl::DoModal
 
 Tworzy modalne okno dialogowe.
 
@@ -196,23 +196,23 @@ INT_PTR DoModal(
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*<br/>
-podczas Uchwyt do okna właściciela. Wartość domyślna jest wartością zwracaną funkcji Win32 [GetActiveWindow](/windows/win32/api/winuser/nf-winuser-getactivewindow) .
+*hWndRodziciek*<br/>
+[w] Dojście do okna właściciela. Wartością domyślną jest zwracana wartość funkcji [GetActiveWindow](/windows/win32/api/winuser/nf-winuser-getactivewindow) Win32.
 
 *dwInitParam*<br/>
-podczas Określa wartość, która ma zostać przekazana do okna dialogowego w parametrze *lParam* komunikatu WM_INITDIALOG.
+[w] Określa wartość, która ma być przekazywalna do okna dialogowego w parametrze *lParam* komunikatu WM_INITDIALOG.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, wartość parametru *nRetCode* określona w wywołaniu metody [zdarzenie EndDialog](#enddialog). W przeciwnym razie-1.
+Jeśli się powiedzie, wartość parametru *nRetCode* określona w wywołaniu [EndDialog](#enddialog). W przeciwnym razie -1.
 
 ### <a name="remarks"></a>Uwagi
 
-To okno dialogowe jest automatycznie dołączane `CDialogImpl` do obiektu.
+To okno dialogowe jest automatycznie `CDialogImpl` dołączane do obiektu.
 
-Aby utworzyć niemodalne okno dialogowe, wywołaj polecenie [Utwórz](#create).
+Aby utworzyć niemodowe okno dialogowe, zadzwoń [do programu Create](#create).
 
-##  <a name="enddialog"></a>CDialogImpl:: zdarzenie EndDialog
+## <a name="cdialogimplenddialog"></a><a name="enddialog"></a>CDialogImpl::KoniecDialog
 
 Niszczy modalne okno dialogowe.
 
@@ -222,21 +222,21 @@ BOOL EndDialog(int nRetCode);
 
 ### <a name="parameters"></a>Parametry
 
-*nRetCode*<br/>
-podczas Wartość, która ma zostać zwrócona przez [CDialogImpl::D omodal](#domodal).
+*kod nRetCode*<br/>
+[w] Wartość zwracana przez [CDialogImpl::DoModal](#domodal).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli okno dialogowe zostało zniszczone; w przeciwnym razie FALSE.
+PRAWDA, jeśli okno dialogowe zostanie zniszczone; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-`EndDialog`musi być wywoływana za pomocą procedury okna dialogowego. Po zniszczeniu okna dialogowego system Windows używa wartości *nRetCode* jako wartości zwracanej dla `DoModal`, która utworzyła okno dialogowe.
+`EndDialog`należy wywołać za pomocą procedury okna dialogowego. Po zniszczeniu okna dialogowego system Windows używa wartości *nRetCode* `DoModal`jako wartości zwracanej dla programu , która utworzyła okno dialogowe.
 
 > [!NOTE]
->  Nie wywołuj `EndDialog` , aby zniszczyć niemodalne okno dialogowe. W zamian wywołaj [CWindow::D estroywindow](../../atl/reference/cwindow-class.md#destroywindow) .
+> Nie wzywaj `EndDialog` do zniszczenia niemodytnego okna dialogowego. Zamiast tego zadzwoń [do CWindow::DestroyWindow.](../../atl/reference/cwindow-class.md#destroywindow)
 
-##  <a name="getdialogproc"></a>CDialogImpl::GetDialogProc
+## <a name="cdialogimplgetdialogproc"></a><a name="getdialogproc"></a>CDialogImpl::GetDialogProc
 
 Zwraca `DialogProc`bieżącą procedurę okna dialogowego.
 
@@ -250,9 +250,9 @@ Bieżąca procedura okna dialogowego.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę, aby zamienić procedurę dialogu z własnymi.
+Zastąp tę metodę, aby zastąpić procedurę okna dialogowego własną.
 
-##  <a name="mapdialogrect"></a>CDialogImpl::MapDialogRect
+## <a name="cdialogimplmapdialogrect"></a><a name="mapdialogrect"></a>CDialogImpl::MapDialogRect
 
 Konwertuje (mapuje) jednostki okna dialogowego określonego prostokąta na jednostki ekranu (piksele).
 
@@ -262,20 +262,20 @@ BOOL MapDialogRect(LPRECT lpRect);
 
 ### <a name="parameters"></a>Parametry
 
-*lpRect*<br/>
-Wskazuje na `CRect` obiekt lub strukturę [prostokąta](/windows/win32/api/windef/ns-windef-rect) , który ma otrzymywać współrzędne klienta aktualizacji, która zawiera region aktualizacji.
+*Lprect*<br/>
+Wskazuje obiekt `CRect` lub [strukturę RECT,](/windows/win32/api/windef/ns-windef-rect) która ma odbierać współrzędne klienta aktualizacji, która obejmuje region aktualizacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli aktualizacja się powiedzie; 0, jeśli aktualizacja nie powiedzie się. Aby uzyskać rozszerzone informacje o błędzie, `GetLastError`Wywołaj polecenie.
+Nonzero, jeśli aktualizacja zakończy się pomyślnie; 0, jeśli aktualizacja nie powiedzie się. Aby uzyskać rozszerzone informacje `GetLastError`o błędzie, zadzwoń do pliku .
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja zastępuje współrzędne w określonej `RECT` strukturze przy użyciu przekonwertowanych współrzędnych, dzięki czemu struktura ma być używana do tworzenia okna dialogowego lub pozycjonowania kontrolki w oknie dialogowym.
+Funkcja zastępuje współrzędne `RECT` w określonej strukturze konwertowanymi współrzędnymi, co umożliwia użycie struktury do utworzenia okna dialogowego lub umieszczenia formantu w oknie dialogowym.
 
-##  <a name="onfinalmessage"></a>CDialogImpl::OnFinalMessage
+## <a name="cdialogimplonfinalmessage"></a><a name="onfinalmessage"></a>CDialogImpl::OnFinalMessage
 
-Wywoływana po odebraniu ostatniej wiadomości (zazwyczaj `WM_NCDESTROY`).
+Wywoływana po otrzymaniu ostatniej wiadomości `WM_NCDESTROY`(zazwyczaj ).
 
 ```
 virtual void OnFinalMessage(HWND hWnd);
@@ -283,16 +283,16 @@ virtual void OnFinalMessage(HWND hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*Właściwość*<br/>
-podczas Dojście do uszkodzonego okna.
+*Hwnd*<br/>
+[w] Uchwyt do okna jest niszczony.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy pamiętać, że jeśli chcesz automatycznie usunąć obiekt przy zniszczeniu okna, możesz wywołać polecenie **Usuń** w tym miejscu.
+Zauważ, że jeśli chcesz automatycznie usunąć obiekt po zniszczeniu okna, możesz wywołać **usuń to;** tutaj.
 
-##  <a name="startdialogproc"></a>CDialogImpl::StartDialogProc
+## <a name="cdialogimplstartdialogproc"></a><a name="startdialogproc"></a>CDialogImpl::StartDialogProc
 
-Wywoływana tylko raz, gdy zostanie odebrany pierwszy komunikat, w celu przetworzenia komunikatów wysyłanych do okna dialogowego.
+Wywoływana tylko raz, po odebraniu pierwszej wiadomości, do przetwarzania wiadomości wysłanych do okna dialogowego.
 
 ```
 static LRESULT CALLBACK StartDialogProc(
@@ -304,17 +304,17 @@ static LRESULT CALLBACK StartDialogProc(
 
 ### <a name="parameters"></a>Parametry
 
-*Właściwość*<br/>
-podczas Uchwyt do okna dialogowego.
+*Hwnd*<br/>
+[w] Uchwyt do okna dialogowego.
 
 *uMsg*<br/>
-podczas Wiadomość wysłana do okna dialogowego.
+[w] Wiadomość wysłana do okna dialogowego.
 
-*wParam*<br/>
-podczas Dodatkowe informacje specyficzne dla wiadomości.
+*Wparam*<br/>
+[w] Dodatkowe informacje specyficzne dla wiadomości.
 
-*lParam*<br/>
-podczas Dodatkowe informacje specyficzne dla wiadomości.
+*Lparam*<br/>
+[w] Dodatkowe informacje specyficzne dla wiadomości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -322,9 +322,9 @@ Procedura okna.
 
 ### <a name="remarks"></a>Uwagi
 
-Po początkowej wywołaniu do `StartDialogProc`, `DialogProc` jest ustawiony jako procedura okna dialogowego, a następnie w tym miejscu znajdują się dalsze wywołania.
+Po początkowym `StartDialogProc`wywołaniu , `DialogProc` jest ustawiona jako procedura okna dialogowego, a dalsze połączenia tam.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)

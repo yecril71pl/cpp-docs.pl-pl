@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f05c2e9482f8a0bada3868fdc946d4d26a0e0e1d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421899"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371926"
 ---
 # <a name="collate-class"></a>collate — Klasa
 
-Szablon klasy, który opisuje obiekt, który może stanowić zestaw reguł ustawień regionalnych w celu sterowania kolejnością i grupowaniem znaków w ciągu, porównania między nimi a mieszaniem ciągów.
+Szablon klasy, który opisuje obiekt, który może służyć jako aspekt ustawień regionalnych do kontrolowania kolejności i grupowania znaków w ciągu, porównania między nimi i mieszania ciągów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,46 +42,46 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parametry
 
-\ *CharType*
+*Chartype*\
 Typ używany w programie do kodowania znaków.
 
 ## <a name="remarks"></a>Uwagi
 
-Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identyfikator obiektu statycznego ma początkową przechowywaną wartość zero. Pierwsza próba uzyskania dostępu do przechowywanej wartości przechowuje unikatową wartość dodatnią w `id`. W przypadku niektórych języków znaki są grupowane i traktowane jak pojedynczy znak, a w innych, pojedyncze znaki są traktowane tak, jakby były dwoma znakami. Usługi sortowania dostarczane przez klasę collate umożliwiają sortowanie w tych przypadkach.
+Podobnie jak w przypadku dowolnego zestawu reguł ustawień regionalnych, identyfikator obiektu statycznego ma początkową przechowywaną wartość zero. Pierwsza próba uzyskania dostępu do przechowywanej wartości `id`przechowuje unikatową wartość dodatnią w programie . W przypadku niektórych języków znaki są grupowane i traktowane jak pojedynczy znak, a w innych, pojedyncze znaki są traktowane tak, jakby były dwoma znakami. Usługi sortowania dostarczane przez klasę collate umożliwiają sortowanie w tych przypadkach.
 
-### <a name="constructors"></a>Konstruktorzy
+### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[sortowan](#collate)|Konstruktor dla obiektów klasy `collate`, który służy jako zestaw reguł ustawień regionalnych do obsługi Konwencji sortowania ciągów.|
+|[Collate](#collate)|Konstruktor dla obiektów `collate` klasy, który służy jako aspekt ustawień regionalnych do obsługi konwencji sortowania ciągów.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
-|[char_type](#char_type)|Typ, który opisuje znak typu `CharType`.|
-|[string_type](#string_type)|Typ, który opisuje ciąg typu `basic_string` zawierający znaki typu `CharType`.|
+|[Char_type](#char_type)|Typ opisujący znak typu `CharType`.|
+|[string_type](#string_type)|Typ opisujący ciąg typu `basic_string` zawierający znaki `CharType`typu .|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja członkowce|Opis|
 |-|-|
-|[porównaniu](#compare)|Porównuje dwie sekwencje znaków zgodnie z ich zasadami równości i nierówności specyficznymi dla zestawów reguł.|
+|[Porównać](#compare)|Porównuje dwie sekwencje znaków zgodnie z ich zasadami równości i nierówności specyficznymi dla zestawów reguł.|
 |[do_compare](#do_compare)|Funkcja wirtualna porównująca dwie sekwencje znaków zgodnie z ich zasadami równości i nierówności specyficznymi dla zestawów reguł.|
 |[do_hash](#do_hash)|Funkcja wirtualna wywoływana w celu określenia wartości mieszania sekwencji zgodnie z ich zasadami specyficznymi dla zestawów reguł.|
 |[do_transform](#do_transform)|Funkcja wirtualna wywoływana w celu konwersji sekwencji znaków z ustawień regionalnych na ciąg znaków, który może być używany w porównaniach leksykograficznych z innymi sekwencjami znaków podobnie przekonwertowanymi z tych samych ustawień regionalnych.|
-|[skrótu](#hash)|Określa wartość mieszania sekwencji zgodnie z ich zasadami specyficznymi dla zestawów reguł.|
-|[przekształcania](#transform)|Konwertuje sekwencję znaków z ustawień regionalnych na ciąg znaków, który może być używany w porównaniach leksykograficznych z innymi sekwencjami znaków podobnie przekonwertowanymi z tych samych ustawień regionalnych.|
+|[Mieszania](#hash)|Określa wartość mieszania sekwencji zgodnie z ich zasadami specyficznymi dla zestawów reguł.|
+|[Przekształcić](#transform)|Konwertuje sekwencję znaków z ustawień regionalnych na ciąg znaków, który może być używany w porównaniach leksykograficznych z innymi sekwencjami znaków podobnie przekonwertowanymi z tych samych ustawień regionalnych.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<locale >
+**Nagłówek:** \<> ustawień regionalnych
 
 **Przestrzeń nazw:** std
 
-## <a name="char_type"></a>COLLATE:: char_type
+## <a name="collatechar_type"></a><a name="char_type"></a>sortować::char_type
 
-Typ, który opisuje znak typu `CharType`.
+Typ opisujący znak typu `CharType`.
 
 ```cpp
 typedef CharType char_type;
@@ -89,11 +89,11 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru szablonu `CharType`.
+Typ jest synonimem parametru `CharType`szablonu .
 
-## <a name="collate"></a>COLLATE:: COLLATE
+## <a name="collatecollate"></a><a name="collate"></a>sortowanie::sortowanie
 
-Konstruktor dla obiektów klasy COLLATE, który służy jako zestaw reguł ustawień regionalnych do obsługi Konwencji sortowania ciągów.
+Konstruktor dla obiektów klasy sortowania, który służy jako aspekt ustawień regionalnych do obsługi konwencji sortowania ciągów.
 
 ```cpp
 public:
@@ -108,25 +108,25 @@ const char* _Locname,
 
 ### <a name="parameters"></a>Parametry
 
-*_Refs*\
-Wartość całkowita służąca do określania typu zarządzania pamięcią dla obiektu.
+*_refs*\
+Wartość całkowita używana do określania typu zarządzania pamięcią dla obiektu.
 
 *_Locname*\
 Nazwa ustawień regionalnych.
 
 ### <a name="remarks"></a>Uwagi
 
-Możliwe wartości parametru *_Refs* i ich znaczenie są następujące:
+Możliwe wartości parametru *_Refs* i ich znaczenie to:
 
-- 0: okres istnienia obiektu jest zarządzany przez elementy lokalne, które go zawierają.
+- 0: Okres istnienia obiektu jest zarządzany przez ustawienia regionalne, które go zawierają.
 
-- 1: okres istnienia obiektu musi być zarządzany ręcznie.
+- 1: Okres istnienia obiektu musi być zarządzany ręcznie.
 
-- \> 1: te wartości nie są zdefiniowane.
+- \>1: Te wartości nie są zdefiniowane.
 
-Konstruktor inicjuje swój obiekt podstawowy przy użyciu **ustawień regionalnych::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Konstruktor inicjuje swój obiekt bazowy`_Refs`za pomocą **ustawień regionalnych::**[aspekt](../standard-library/locale-class.md#facet_class)( ).
 
-## <a name="compare"></a>COLLATE:: Compare
+## <a name="collatecompare"></a><a name="compare"></a>sortowanie::porównanie
 
 Porównuje dwie sekwencje znaków zgodnie z ich zasadami równości i nierówności specyficznymi dla zestawów reguł.
 
@@ -139,33 +139,33 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parametry
 
-*first1*\
-Wskaźnik do pierwszego elementu w pierwszej sekwencji, który ma zostać porównany.
+*po pierwsze1*\
+Wskaźnik do pierwszego elementu w pierwszej sekwencji do porównania.
 
-*last1*\
-Wskaźnik do ostatniego elementu w pierwszej sekwencji, który ma zostać porównany.
+*ostatni1*\
+Wskaźnik do ostatniego elementu w pierwszej sekwencji do porównania.
 
-*first2*\
-Wskaźnik do pierwszego elementu w drugiej sekwencji, który ma zostać porównany.
+*pierwszy2*\
+Wskaźnik do pierwszego elementu w drugiej sekwencji do porównania.
 
-*last2*\
-Wskaźnik do ostatniego elementu w drugiej sekwencji, który ma zostać porównany.
+*ostatni2*\
+Wskaźnik do ostatniego elementu w drugiej sekwencji do porównania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Funkcja członkowska zwraca:
+Funkcja elementu członkowskiego zwraca:
 
-- -1, jeśli pierwsza sekwencja porównuje mniej niż drugą sekwencję.
+- -1, jeśli pierwsza sekwencja porównuje mniej niż druga sekwencja.
 
-- \+ 1, jeśli druga sekwencja porównuje mniej niż pierwszą sekwencję.
+- +1, jeśli druga sekwencja porównuje mniej niż pierwsza sekwencja.
 
 - 0, jeśli sekwencje są równoważne.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza sekwencja porównuje mniej, jeśli ma mniejszego elementu w najwcześniejszym nierównej parze w sekwencjach lub, jeśli nie istnieją pary nierówne, ale pierwsza sekwencja jest krótsza.
+Pierwsza sekwencja porównuje mniej, jeśli ma mniejszy element w najwcześniejszej pary nierównej w sekwencjach lub, jeśli nie istnieją nierówne pary, ale pierwsza sekwencja jest krótsza.
 
-Funkcja członkowska zwraca [do_compare](#do_compare)(`first1`, `last1`, `first2`, `last2`).
+Funkcja elementu [do_compare](#do_compare)członkowskiego zwraca `first1`do_compare `last1` `first2`( `last2`, , , ).
 
 ### <a name="example"></a>Przykład
 
@@ -192,7 +192,7 @@ int main() {
 }
 ```
 
-## <a name="do_compare"></a>sortowanie::d o_compare
+## <a name="collatedo_compare"></a><a name="do_compare"></a>sortować::do_compare
 
 Funkcja wirtualna porównująca dwie sekwencje znaków zgodnie z ich zasadami równości i nierówności specyficznymi dla zestawów reguł.
 
@@ -205,37 +205,37 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parametry
 
-*first1*\
-Wskaźnik do pierwszego elementu w pierwszej sekwencji, który ma zostać porównany.
+*po pierwsze1*\
+Wskaźnik do pierwszego elementu w pierwszej sekwencji do porównania.
 
-*last1*\
-Wskaźnik do ostatniego elementu w pierwszej sekwencji, który ma zostać porównany.
+*ostatni1*\
+Wskaźnik do ostatniego elementu w pierwszej sekwencji do porównania.
 
-*first2*\
-Wskaźnik do pierwszego elementu w drugiej sekwencji, który ma zostać porównany.
+*pierwszy2*\
+Wskaźnik do pierwszego elementu w drugiej sekwencji do porównania.
 
-*last2*\
-Wskaźnik do ostatniego elementu w drugiej sekwencji, który ma zostać porównany.
+*ostatni2*\
+Wskaźnik do ostatniego elementu w drugiej sekwencji do porównania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Funkcja członkowska zwraca:
+Funkcja elementu członkowskiego zwraca:
 
-- -1, jeśli pierwsza sekwencja porównuje mniej niż drugą sekwencję.
+- -1, jeśli pierwsza sekwencja porównuje mniej niż druga sekwencja.
 
-- \+ 1, jeśli druga sekwencja porównuje mniej niż pierwszą sekwencję.
+- +1, jeśli druga sekwencja porównuje mniej niż pierwsza sekwencja.
 
 - 0, jeśli sekwencje są równoważne.
 
 ### <a name="remarks"></a>Uwagi
 
-Chroniona funkcja wirtualna elementu członkowskiego porównuje sekwencję z [* FIRST1, Last1) * z sekwencją *[First2, last2*). Porównuje wartości poprzez zastosowanie `operator<` między parami odpowiednich elementów typu `CharType`. Pierwsza sekwencja porównuje mniej, jeśli ma mniejszy element w najwcześniejszym nierównej parze w sekwencjach lub jeśli nie ma żadnej nierównej pary, ale pierwsza sekwencja jest krótsza.
+Chroniona funkcja wirtualnego elementu członkowskiego porównuje sekwencję w [ * first1, Last1)* z sekwencją w *[ first2, last2*). Porównuje wartości, `operator<` stosując między parami odpowiednich elementów typu `CharType`. Pierwsza sekwencja porównuje mniej, jeśli ma mniejszy element w najwcześniejszej pary nierównej w sekwencjach lub jeśli nie istnieją żadne nierówne pary, ale pierwsza sekwencja jest krótsza.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [instrukcji COLLATE:: Compare](#compare), która wywołuje `do_compare`.
+Zobacz przykład [zestawienia::porównaj](#compare), `do_compare`który wywołuje .
 
-## <a name="do_hash"></a>sortowanie::d o_hash
+## <a name="collatedo_hash"></a><a name="do_hash"></a>sortować::do_hash
 
 Funkcja wirtualna wywoływana w celu określenia wartości mieszania sekwencji zgodnie z ich zasadami specyficznymi dla zestawów reguł.
 
@@ -245,25 +245,25 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
-Wskaźnik do pierwszego znaku w sekwencji, którego wartość ma zostać określona.
+*Pierwszym*\
+Wskaźnik do pierwszego znaku w sekwencji, którego ma wartość ma być określona.
 
-*ostatni*\
-Wskaźnik do ostatniego znaku w sekwencji, którego wartość ma zostać określona.
+*Ostatnio*\
+Wskaźnik do ostatniego znaku w sekwencji, którego ma wartość ma być określona.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość skrótu typu **Long** dla sekwencji.
+Wartość mieszania typu **long** dla sekwencji.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość skrótu może być przydatna na przykład w przypadku dystrybuowania sekwencji pseudo-losowo w tablicy list.
+Wartość mieszania może być przydatna, na przykład w dystrybucji sekwencji pseudolosowo w tablicy list.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [skrótu](#hash), który wywołuje `do_hash`.
+Zobacz przykład [skrótu](#hash), `do_hash`który wywołuje .
 
-## <a name="do_transform"></a>sortowanie::d o_transform
+## <a name="collatedo_transform"></a><a name="do_transform"></a>sortate::do_transform
 
 Funkcja wirtualna wywoływana w celu konwersji sekwencji znaków z ustawień regionalnych na ciąg znaków, który może być używany w porównaniach leksykograficznych z innymi sekwencjami znaków podobnie przekonwertowanymi z tych samych ustawień regionalnych.
 
@@ -273,25 +273,25 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
-Wskaźnik do pierwszego znaku w sekwencji do przekonwertowania.
+*Pierwszym*\
+Wskaźnik do pierwszego znaku w sekwencji, która ma zostać przekonwertowana.
 
-*ostatni*\
-Wskaźnik do ostatniego znaku w sekwencji do przekonwertowania.
+*Ostatnio*\
+Wskaźnik do ostatniego znaku w sekwencji do konwersji.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Ciąg, który jest przekształconą sekwencją znaków.
 
 ### <a name="remarks"></a>Uwagi
 
-Chroniona funkcja wirtualna elementu członkowskiego zwraca obiekt klasy [string_type](#string_type) której kontrolowana sekwencja jest kopią sekwencji [`first`, `last`). Jeśli klasa pochodna sortowania\< **chartype**> przesłania [do_compare](#do_compare), należy również przesłonić `do_transform` do dopasowania. Po przekazaniu do `collate::compare`dwa przekształcone ciągi powinny zwracać ten sam wynik, który można przekazać nieprzekształcone ciągi do porównania w klasie pochodnej.
+Funkcja chronionego wirtualnego elementu członkowskiego zwraca obiekt klasy [string_type](#string_type) której kontrolowana `first` `last`sekwencja jest kopią sekwencji [ , ). Jeśli klasa pochodząca z\< sortowania **CharType**> zastępuje [do_compare](#do_compare), należy również `do_transform` zastąpić dopasowywać. Po przekazaniu do `collate::compare`, dwa przekształcone ciągi powinny przynieść taki sam wynik, który można uzyskać od przekazywania nietransformowanych ciągów do porównania w klasie pochodnej.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [transformacji](#transform), która wywołuje `do_transform`.
+Zobacz przykład [przekształcania](#transform), `do_transform`który wywołuje .
 
-## <a name="hash"></a>COLLATE:: hash
+## <a name="collatehash"></a><a name="hash"></a>sortowanie::hash
 
 Określa wartość mieszania sekwencji zgodnie z ich zasadami specyficznymi dla zestawów reguł.
 
@@ -301,21 +301,21 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
-Wskaźnik do pierwszego znaku w sekwencji, którego wartość ma zostać określona.
+*Pierwszym*\
+Wskaźnik do pierwszego znaku w sekwencji, którego ma wartość ma być określona.
 
-*ostatni*\
-Wskaźnik do ostatniego znaku w sekwencji, którego wartość ma zostać określona.
+*Ostatnio*\
+Wskaźnik do ostatniego znaku w sekwencji, którego ma wartość ma być określona.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość skrótu typu **Long** dla sekwencji.
+Wartość mieszania typu **long** dla sekwencji.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [do_hash](#do_hash)(`first`, `last`).
+Funkcja elementu [do_hash](#do_hash)członkowskiego zwraca do_hash `first` `last`( , ).
 
-Wartość skrótu może być przydatna na przykład w przypadku dystrybuowania sekwencji pseudo-losowo w tablicy list.
+Wartość mieszania może być przydatna, na przykład w dystrybucji sekwencji pseudolosowo w tablicy list.
 
 ### <a name="example"></a>Przykład
 
@@ -345,9 +345,9 @@ int main( )
 541187293 551279837
 ```
 
-## <a name="string_type"></a>COLLATE:: string_type
+## <a name="collatestring_type"></a><a name="string_type"></a>sortować::string_type
 
-Typ, który opisuje ciąg typu `basic_string` zawierający znaki typu `CharType`.
+Typ opisujący ciąg typu `basic_string` zawierający znaki `CharType`typu .
 
 ```cpp
 typedef basic_string<CharType> string_type;
@@ -359,9 +359,9 @@ Typ opisuje specjalizację szablonu klasy [basic_string](../standard-library/bas
 
 ### <a name="example"></a>Przykład
 
-Przykład sposobu deklarowania i używania `string_type`można znaleźć w temacie [Transform](#transform).
+Na przykład jak zadeklarować `string_type`i używać , zobacz [transform .](#transform)
 
-## <a name="transform"></a>COLLATE:: Transform
+## <a name="collatetransform"></a><a name="transform"></a>sortowanie::przekształcanie
 
 Konwertuje sekwencję znaków z ustawień regionalnych na ciąg znaków, który może być używany w porównaniach leksykograficznych z innymi sekwencjami znaków podobnie przekonwertowanymi z tych samych ustawień regionalnych.
 
@@ -371,19 +371,19 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
-Wskaźnik do pierwszego znaku w sekwencji do przekonwertowania.
+*Pierwszym*\
+Wskaźnik do pierwszego znaku w sekwencji, która ma zostać przekonwertowana.
 
-*ostatni*\
-Wskaźnik do ostatniego znaku w sekwencji do przekonwertowania.
+*Ostatnio*\
+Wskaźnik do ostatniego znaku w sekwencji do konwersji.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ciąg, który zawiera przekształconą sekwencję znaków.
+Ciąg, który zawiera sekwencję przekształconych znaków.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [do_transform](#do_transform)(`first`, `last`).
+Funkcja elementu [do_transform](#do_transform)członkowskiego zwraca do_transform`first` `last`( , ).
 
 ### <a name="example"></a>Przykład
 
@@ -429,5 +429,5 @@ int main( )
 
 ## <a name="see-also"></a>Zobacz też
 
-[\<ustawienia regionalne >](../standard-library/locale.md)\
+[\<>ustawień regionalnych](../standard-library/locale.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

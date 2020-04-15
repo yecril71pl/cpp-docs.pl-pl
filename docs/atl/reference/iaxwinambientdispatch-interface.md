@@ -35,19 +35,19 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-ms.openlocfilehash: 85a8f1d41c6c54f94b500807a1e4ca504206f56a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a4f5322d957b1e978bd123db3b4796be6b300da
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276162"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330008"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>Interfejs IAxWinAmbientDispatch
 
-Ten interfejs zapewnia metody do określania właściwości kontrolki hostowanej lub kontenera.
+Ten interfejs zawiera metody określania właściwości hostowanego formantu lub kontenera.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,58 +61,58 @@ interface IAxWinAmbientDispatch : IDispatch
 
 |||
 |-|-|
-|[get_AllowContextMenu](#get_allowcontextmenu)|`AllowContextMenu` Właściwość określa, czy hostowanej formant może wyświetlić menu kontekstowe.|
-|[get_AllowShowUI](#get_allowshowui)|`AllowShowUI` Właściwość określa, czy hostowanej formant może wyświetlić interfejs użytkownika.|
-|[get_AllowWindowlessActivation](#get_allowwindowlessactivation)|`AllowWindowlessActivation` Właściwość określa, czy kontener będzie zezwalał na aktywacji niepowiązanej z oknami.|
-|[get_BackColor](#get_backcolor)|`BackColor` Właściwość określa kolor tła otoczenia kontenera.|
-|[get_DisplayAsDefault](#get_displayasdefault)|`DisplayAsDefault` jest zmieniono właściwość zapewnia kontrolę sprawdzić, czy jest domyślny formant.|
-|[get_DocHostDoubleClickFlags](#get_dochostdoubleclickflags)|`DocHostDoubleClickFlags` Właściwości określa operację, które powinny zostać wykonane w odpowiedzi na dwukrotne kliknięcie.|
-|[get_DocHostFlags](#get_dochostflags)|`DocHostFlags` Właściwość określa możliwości interfejsu użytkownika obiektu hosta.|
-|[get_Font](#get_font)|`Font` Właściwości Określa czcionkę otoczenia kontenera.|
-|[get_ForeColor](#get_forecolor)|`ForeColor` Właściwość określa kolor pierwszego planu otoczenia kontenera.|
-|[get_LocaleID](#get_localeid)|`LocaleID` Właściwość określa identyfikator ustawień regionalnych otoczenia kontenera.|
-|[get_MessageReflect](#get_messagereflect)|`MessageReflect` Zmieniono właściwość określa, czy kontener będzie odzwierciedlać wiadomości do obsługiwanego formantu.|
-|[get_OptionKeyPath](#get_optionkeypath)|`OptionKeyPath` Właściwość określa ścieżkę klucza rejestru w celu ustawienia użytkownika.|
-|[get_ShowGrabHandles](#get_showgrabhandles)|`ShowGrabHandles` Zmieniono właściwość zapewnia kontrolę dowiedzieć się, jeśli jego powinien być rysowany od samego za pomocą uchwytów.|
-|[get_ShowHatching](#get_showhatching)|`ShowHatching` Właściwość otoczenia umożliwia formant Aby dowiedzieć się, jeśli jego powinien być rysowany od samego wyklutych.|
-|[get_UserMode](#get_usermode)|`UserMode` Właściwość określa tryb otoczenia użytkownika kontenera.|
-|[put_AllowContextMenu](#put_allowcontextmenu)|`AllowContextMenu` Właściwość określa, czy hostowanej formant może wyświetlić menu kontekstowe.|
-|[put_AllowShowUI](#put_allowshowui)|`AllowShowUI` Właściwość określa, czy hostowanej formant może wyświetlić interfejs użytkownika.|
-|[put_AllowWindowlessActivation](#put_allowwindowlessactivation)|`AllowWindowlessActivation` Właściwość określa, czy kontener będzie zezwalał na aktywacji niepowiązanej z oknami.|
-|[put_BackColor](#put_backcolor)|`BackColor` Właściwość określa kolor tła otoczenia kontenera.|
-|[put_DisplayAsDefault](#put_displayasdefault)|`DisplayAsDefault` jest zmieniono właściwość zapewnia kontrolę sprawdzić, czy jest domyślny formant.|
-|[put_DocHostDoubleClickFlags](#put_dochostdoubleclickflags)|`DocHostDoubleClickFlags` Właściwości określa operację, które powinny zostać wykonane w odpowiedzi na dwukrotne kliknięcie.|
-|[put_DocHostFlags](#put_dochostflags)|`DocHostFlags` Właściwość określa możliwości interfejsu użytkownika obiektu hosta.|
-|[put_Font](#put_font)|`Font` Właściwości Określa czcionkę otoczenia kontenera.|
-|[put_ForeColor](#put_forecolor)|`ForeColor` Właściwość określa kolor pierwszego planu otoczenia kontenera.|
-|[put_LocaleID](#put_localeid)|`LocaleID` Właściwość określa identyfikator ustawień regionalnych otoczenia kontenera.|
-|[put_MessageReflect](#put_messagereflect)|`MessageReflect` Zmieniono właściwość określa, czy kontener będzie odzwierciedlać wiadomości do obsługiwanego formantu.|
-|[put_OptionKeyPath](#put_optionkeypath)|`OptionKeyPath` Właściwość określa ścieżkę klucza rejestru w celu ustawienia użytkownika.|
-|[put_UserMode](#put_usermode)|`UserMode` Właściwość określa tryb otoczenia użytkownika kontenera.|
+|[get_AllowContextMenu](#get_allowcontextmenu)|Właściwość `AllowContextMenu` określa, czy hostowany formant może wyświetlać własne menu kontekstowe.|
+|[get_AllowShowUI](#get_allowshowui)|Właściwość `AllowShowUI` określa, czy hostowany formant może wyświetlać własny interfejs użytkownika.|
+|[get_AllowWindowlessActivation](#get_allowwindowlessactivation)|Właściwość `AllowWindowlessActivation` określa, czy kontener pozwoli na aktywację bez okien.|
+|[get_BackColor](#get_backcolor)|Właściwość `BackColor` określa kolor otoczenia tła kontenera.|
+|[get_DisplayAsDefault](#get_displayasdefault)|`DisplayAsDefault`jest właściwość otoczenia, która pozwala formantu, aby dowiedzieć się, czy jest to formant domyślny.|
+|[get_DocHostDoubleClickFlags](#get_dochostdoubleclickflags)|Właściwość `DocHostDoubleClickFlags` określa operację, która powinna mieć miejsce w odpowiedzi na podwójne kliknięcie.|
+|[get_DocHostFlags](#get_dochostflags)|Właściwość `DocHostFlags` określa możliwości interfejsu użytkownika obiektu hosta.|
+|[get_Font](#get_font)|Właściwość `Font` określa czcionkę otoczenia kontenera.|
+|[get_ForeColor](#get_forecolor)|Właściwość `ForeColor` określa otaczający kolor pierwszego planu kontenera.|
+|[get_LocaleID](#get_localeid)|Właściwość `LocaleID` określa identyfikator ustawień regionalnych otoczenia kontenera.|
+|[get_MessageReflect](#get_messagereflect)|Właściwość otoczenia `MessageReflect` określa, czy kontener będzie odzwierciedlać komunikaty do hostowanego formantu.|
+|[get_OptionKeyPath](#get_optionkeypath)|Właściwość `OptionKeyPath` określa ścieżkę klucza rejestru do ustawień użytkownika.|
+|[get_ShowGrabHandles](#get_showgrabhandles)|Właściwość otoczenia `ShowGrabHandles` pozwala formantu, aby dowiedzieć się, czy należy rysować się za pomocą uchwytów.|
+|[get_ShowHatching](#get_showhatching)|Właściwość otoczenia `ShowHatching` pozwala formantu, aby dowiedzieć się, czy należy narysować się kreskować.|
+|[get_UserMode](#get_usermode)|Właściwość `UserMode` określa tryb użytkownika otoczenia kontenera.|
+|[put_AllowContextMenu](#put_allowcontextmenu)|Właściwość `AllowContextMenu` określa, czy hostowany formant może wyświetlać własne menu kontekstowe.|
+|[put_AllowShowUI](#put_allowshowui)|Właściwość `AllowShowUI` określa, czy hostowany formant może wyświetlać własny interfejs użytkownika.|
+|[put_AllowWindowlessActivation](#put_allowwindowlessactivation)|Właściwość `AllowWindowlessActivation` określa, czy kontener pozwoli na aktywację bez okien.|
+|[put_BackColor](#put_backcolor)|Właściwość `BackColor` określa kolor otoczenia tła kontenera.|
+|[put_DisplayAsDefault](#put_displayasdefault)|`DisplayAsDefault`jest właściwość otoczenia, która pozwala formantu, aby dowiedzieć się, czy jest to formant domyślny.|
+|[put_DocHostDoubleClickFlags](#put_dochostdoubleclickflags)|Właściwość `DocHostDoubleClickFlags` określa operację, która powinna mieć miejsce w odpowiedzi na podwójne kliknięcie.|
+|[put_DocHostFlags](#put_dochostflags)|Właściwość `DocHostFlags` określa możliwości interfejsu użytkownika obiektu hosta.|
+|[put_Font](#put_font)|Właściwość `Font` określa czcionkę otoczenia kontenera.|
+|[put_ForeColor](#put_forecolor)|Właściwość `ForeColor` określa otaczający kolor pierwszego planu kontenera.|
+|[put_LocaleID](#put_localeid)|Właściwość `LocaleID` określa identyfikator ustawień regionalnych otoczenia kontenera.|
+|[put_MessageReflect](#put_messagereflect)|Właściwość otoczenia `MessageReflect` określa, czy kontener będzie odzwierciedlać komunikaty do hostowanego formantu.|
+|[put_OptionKeyPath](#put_optionkeypath)|Właściwość `OptionKeyPath` określa ścieżkę klucza rejestru do ustawień użytkownika.|
+|[put_UserMode](#put_usermode)|Właściwość `UserMode` określa tryb użytkownika otoczenia kontenera.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ten interfejs jest udostępniany przez ActiveX hostingu formantu ATL, obiekty. Wywołanie metody tego interfejsu, można ustawić właściwości otoczenia, która jest dostępna do sterowania hostowanej lub określić inne aspekty zachowania kontenera. Aby uzupełnić właściwości dostarczonych przez `IAxWinAmbientDispatch`, użyj [IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md).
+Ten interfejs jest narażony przez obiekty hostingowe activex formantu ATL. Wywołanie metod w tym interfejsie, aby ustawić właściwości otoczenia dostępne dla hostowanego formantu lub określić inne aspekty zachowania kontenera. Aby uzupełnić właściwości `IAxWinAmbientDispatch`dostarczone przez program [IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md).
 
-<xref:System.Windows.Forms.AxHost> próbuje załadować informacji o typie o `IAxWinAmbientDispatch` i `IAxWinAmbientDispatchEx` z biblioteki typów, która zawiera kod.
+<xref:System.Windows.Forms.AxHost>spróbuje załadować informacje `IAxWinAmbientDispatch` `IAxWinAmbientDispatchEx` o typie o i z typelib, który zawiera kod.
 
-Jeśli łączysz się ATL90.dll, **AXHost** zostaną załadowane informacje o typie z biblioteki typów w bibliotece DLL.
+Jeśli łączysz się z plikum ATL90.dll, **AXHost** załaduje informacje o typie z typelib w pliku DLL.
 
-Zobacz [hostingu ActiveX kontrolek przy użyciu ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) Aby uzyskać więcej informacji.
+Aby uzyskać więcej informacji, zobacz [Hostowanie formantów ActiveX za pomocą AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) a.
 
 ## <a name="requirements"></a>Wymagania
 
-Definicja ten interfejs jest dostępny w wielu formach, jak pokazano w poniższej tabeli.
+Definicja tego interfejsu jest dostępna w wielu formach, jak pokazano w poniższej tabeli.
 
 |Typ definicji|Plik|
 |---------------------|----------|
-|IDL|atliface.IDL|
-|Biblioteki typów|ATL.dll|
-|C++|atliface.h (dołączone do dodatków ATLBase.h)|
+|Idl|atliface.idl|
+|Biblioteka typów|Plik ATL.dll|
+|C++|atliface.h (również w ATLBase.h)|
 
-##  <a name="get_allowcontextmenu"></a>  IAxWinAmbientDispatch::get_AllowContextMenu
+## <a name="iaxwinambientdispatchget_allowcontextmenu"></a><a name="get_allowcontextmenu"></a>IAxWinAmbientDispatch::get_AllowContextMenu
 
-`AllowContextMenu` Właściwość określa, czy hostowanej formant może wyświetlić menu kontekstowe.
+Właściwość `AllowContextMenu` określa, czy hostowany formant może wyświetlać własne menu kontekstowe.
 
 ```
 STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
@@ -121,19 +121,19 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 ### <a name="parameters"></a>Parametry
 
 *pbAllowContextMenu*<br/>
-[out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
+[na zewnątrz] Adres zmiennej do odbierania bieżącej wartości tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa VARIANT_TRUE jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa VARIANT_TRUE jako domyślnej wartości tej właściwości.
 
-##  <a name="get_allowshowui"></a>  IAxWinAmbientDispatch::get_AllowShowUI
+## <a name="iaxwinambientdispatchget_allowshowui"></a><a name="get_allowshowui"></a>IAxWinAmbientDispatch::get_AllowShowUI
 
-`AllowShowUI` Właściwość określa, czy hostowanej formant może wyświetlić interfejs użytkownika.
+Właściwość `AllowShowUI` określa, czy hostowany formant może wyświetlać własny interfejs użytkownika.
 
 ```
 STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
@@ -142,19 +142,19 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 ### <a name="parameters"></a>Parametry
 
 *pbAllowShowUI*<br/>
-[out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
+[na zewnątrz] Adres zmiennej do odbierania bieżącej wartości tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa VARIANT_FALSE, jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa VARIANT_FALSE jako domyślnej wartości tej właściwości.
 
-##  <a name="get_allowwindowlessactivation"></a>  IAxWinAmbientDispatch::get_AllowWindowlessActivation
+## <a name="iaxwinambientdispatchget_allowwindowlessactivation"></a><a name="get_allowwindowlessactivation"></a>IAxWinAmbientDispatch::get_AllowWindowlessActivation
 
-`AllowWindowlessActivation` Właściwość określa, czy kontener będzie zezwalał na aktywacji niepowiązanej z oknami.
+Właściwość `AllowWindowlessActivation` określa, czy kontener pozwoli na aktywację bez okien.
 
 ```
 STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
@@ -163,19 +163,19 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 ### <a name="parameters"></a>Parametry
 
 *pbAllowWindowless*<br/>
-[out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
+[na zewnątrz] Adres zmiennej do odbierania bieżącej wartości tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa VARIANT_TRUE jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa VARIANT_TRUE jako domyślnej wartości tej właściwości.
 
-##  <a name="get_backcolor"></a>  IAxWinAmbientDispatch::get_BackColor
+## <a name="iaxwinambientdispatchget_backcolor"></a><a name="get_backcolor"></a>IAxWinAmbientDispatch::get_BackColor
 
-`BackColor` Właściwość określa kolor tła otoczenia kontenera.
+Właściwość `BackColor` określa kolor otoczenia tła kontenera.
 
 ```
 STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
@@ -184,19 +184,19 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 ### <a name="parameters"></a>Parametry
 
 *pclrBackground*<br/>
-[out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
+[na zewnątrz] Adres zmiennej do odbierania bieżącej wartości tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa COLOR_BTNFACE lub COLOR_WINDOW jako wartość domyślna tej właściwości (zależnie od tego, czy element nadrzędny okno hosta jest okno dialogowe, lub nie).
+Implementacja obiektu hosta ATL używa COLOR_BTNFACE lub COLOR_WINDOW jako domyślnej wartości tej właściwości (w zależności od tego, czy element nadrzędny okna hosta jest dialogowym, czy nie).
 
-##  <a name="get_displayasdefault"></a>  IAxWinAmbientDispatch::get_DisplayAsDefault
+## <a name="iaxwinambientdispatchget_displayasdefault"></a><a name="get_displayasdefault"></a>IAxWinAmbientDispatch::get_DisplayAsDefault
 
-`DisplayAsDefault` jest zmieniono właściwość zapewnia kontrolę sprawdzić, czy jest domyślny formant.
+`DisplayAsDefault`jest właściwość otoczenia, która pozwala formantu, aby dowiedzieć się, czy jest to formant domyślny.
 
 ```
 STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
@@ -205,19 +205,19 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 ### <a name="parameters"></a>Parametry
 
 *pbDisplayAsDefault*<br/>
-[out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
+[na zewnątrz] Adres zmiennej do odbierania bieżącej wartości tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa VARIANT_FALSE, jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa VARIANT_FALSE jako domyślnej wartości tej właściwości.
 
-##  <a name="get_dochostdoubleclickflags"></a>  IAxWinAmbientDispatch::get_DocHostDoubleClickFlags
+## <a name="iaxwinambientdispatchget_dochostdoubleclickflags"></a><a name="get_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::get_DocHostDoubleClickFlags
 
-`DocHostDoubleClickFlags` Właściwości określa operację, które powinny zostać wykonane w odpowiedzi na dwukrotne kliknięcie.
+Właściwość `DocHostDoubleClickFlags` określa operację, która powinna mieć miejsce w odpowiedzi na podwójne kliknięcie.
 
 ```
 STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
@@ -226,19 +226,19 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 ### <a name="parameters"></a>Parametry
 
 *pdwDocHostDoubleClickFlags*<br/>
-[out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
+[na zewnątrz] Adres zmiennej do odbierania bieżącej wartości tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa DOCHOSTUIDBLCLK_DEFAULT jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa DOCHOSTUIDBLCLK_DEFAULT jako domyślnej wartości tej właściwości.
 
-##  <a name="get_dochostflags"></a>  IAxWinAmbientDispatch::get_DocHostFlags
+## <a name="iaxwinambientdispatchget_dochostflags"></a><a name="get_dochostflags"></a>IAxWinAmbientDispatch::get_DocHostFlags
 
-`DocHostFlags` Właściwość określa możliwości interfejsu użytkownika obiektu hosta.
+Właściwość `DocHostFlags` określa możliwości interfejsu użytkownika obiektu hosta.
 
 ```
 STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
@@ -246,20 +246,20 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*pdwDocHostFlags*<br/>
-[out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
+*pdwDocHostSlags*<br/>
+[na zewnątrz] Adres zmiennej do odbierania bieżącej wartości tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa DOCHOSTUIFLAG_NO3DBORDER jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa DOCHOSTUIFLAG_NO3DBORDER jako domyślnej wartości tej właściwości.
 
-##  <a name="get_font"></a>  IAxWinAmbientDispatch::get_Font
+## <a name="iaxwinambientdispatchget_font"></a><a name="get_font"></a>IAxWinAmbientDispatch::get_Font
 
-`Font` Właściwości Określa czcionkę otoczenia kontenera.
+Właściwość `Font` określa czcionkę otoczenia kontenera.
 
 ```
 STDMETHOD(get_Font)(IFontDisp** pFont);
@@ -267,20 +267,20 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 
 ### <a name="parameters"></a>Parametry
 
-*pFont*<br/>
-[out] Adres `IFontDisp` wskaźnik interfejsu, używany do odbierania bieżąca wartość tej właściwości.
+*pFont (pFont)*<br/>
+[na zewnątrz] Adres wskaźnika `IFontDisp` interfejsu używanego do odbierania bieżącej wartości tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-W implementacji obiektu hosta ATL jest używana domyślna czcionka graficznego interfejsu użytkownika lub czcionki systemowej jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa domyślnej czcionki GUI lub czcionki systemowej jako domyślnej wartości tej właściwości.
 
-##  <a name="get_forecolor"></a>  IAxWinAmbientDispatch::get_ForeColor
+## <a name="iaxwinambientdispatchget_forecolor"></a><a name="get_forecolor"></a>IAxWinAmbientDispatch::get_ForeColor
 
-`ForeColor` Właściwość określa kolor pierwszego planu otoczenia kontenera.
+Właściwość `ForeColor` określa otaczający kolor pierwszego planu kontenera.
 
 ```
 STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
@@ -289,19 +289,19 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 ### <a name="parameters"></a>Parametry
 
 *pclrForeground*<br/>
-[out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
+[na zewnątrz] Adres zmiennej do odbierania bieżącej wartości tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa kolor tekstu w oknie system jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa koloru tekstu okna systemowego jako domyślnej wartości tej właściwości.
 
-##  <a name="get_localeid"></a>  IAxWinAmbientDispatch::get_LocaleID
+## <a name="iaxwinambientdispatchget_localeid"></a><a name="get_localeid"></a>IAxWinAmbientDispatch::get_LocaleID
 
-`LocaleID` Właściwość określa identyfikator ustawień regionalnych otoczenia kontenera.
+Właściwość `LocaleID` określa identyfikator ustawień regionalnych otoczenia kontenera.
 
 ```
 STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
@@ -310,21 +310,21 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 ### <a name="parameters"></a>Parametry
 
 *plcidLocaleID*<br/>
-[out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
+[na zewnątrz] Adres zmiennej do odbierania bieżącej wartości tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa użytkownika domyślnych ustawień regionalnych jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa domyślnych ustawień regionalnych użytkownika jako domyślnej wartości tej właściwości.
 
-Przy użyciu tej metody można wykryć otoczenia identyfikator LocalID, czyli identyfikator ustawień regionalnych programu formant jest używany w. Znając identyfikator ustawień regionalnych, możesz wywołać kod, aby załadować transkrypcji specyficzne dla ustawień regionalnych, tekst komunikatu o błędzie, i innych elementów z pliku zasobów lub satelitarnej biblioteki DLL.
+Za pomocą tej metody można odnajdyć Ambient LocalID, czyli LocaleID programu, w który jest używany formant. Po poznaniu localeID, można wywołać kod, aby załadować podpisy specyficzne dla ustawień regionalnych, tekst komunikatu o błędzie i tak dalej z pliku zasobów lub biblioteki DLL satelitarnej.
 
-##  <a name="get_messagereflect"></a>  IAxWinAmbientDispatch::get_MessageReflect
+## <a name="iaxwinambientdispatchget_messagereflect"></a><a name="get_messagereflect"></a>IAxWinAmbientDispatch::get_MessageReflect
 
-`MessageReflect` Zmieniono właściwość określa, czy kontener będzie odzwierciedlać wiadomości do obsługiwanego formantu.
+Właściwość otoczenia `MessageReflect` określa, czy kontener będzie odzwierciedlać komunikaty do hostowanego formantu.
 
 ```
 STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
@@ -333,19 +333,19 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 ### <a name="parameters"></a>Parametry
 
 *pbMessageReflect*<br/>
-[out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
+[na zewnątrz] Adres zmiennej do odbierania bieżącej wartości tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa VARIANT_TRUE jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa VARIANT_TRUE jako domyślnej wartości tej właściwości.
 
-##  <a name="get_optionkeypath"></a>  IAxWinAmbientDispatch::get_OptionKeyPath
+## <a name="iaxwinambientdispatchget_optionkeypath"></a><a name="get_optionkeypath"></a>IAxWinAmbientDispatch::get_OptionKeyPath
 
-`OptionKeyPath` Właściwość określa ścieżkę klucza rejestru w celu ustawienia użytkownika.
+Właściwość `OptionKeyPath` określa ścieżkę klucza rejestru do ustawień użytkownika.
 
 ```
 STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
@@ -354,15 +354,15 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 ### <a name="parameters"></a>Parametry
 
 *pbstrOptionKeyPath*<br/>
-[out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
+[na zewnątrz] Adres zmiennej do odbierania bieżącej wartości tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
-##  <a name="get_showgrabhandles"></a>  IAxWinAmbientDispatch::get_ShowGrabHandles
+## <a name="iaxwinambientdispatchget_showgrabhandles"></a><a name="get_showgrabhandles"></a>IAxWinAmbientDispatch::get_ShowGrabHandles
 
-`ShowGrabHandles` Zmieniono właściwość zapewnia kontrolę dowiedzieć się, jeśli jego powinien być rysowany od samego za pomocą uchwytów.
+Właściwość otoczenia `ShowGrabHandles` pozwala formantu, aby dowiedzieć się, czy należy rysować się za pomocą uchwytów.
 
 ```
 STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
@@ -370,20 +370,20 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 
 ### <a name="parameters"></a>Parametry
 
-*pbShowGrabHandles*<br/>
-[out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
+*pbShowGrabHandle*<br/>
+[na zewnątrz] Adres zmiennej do odbierania bieżącej wartości tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL zawsze zwraca wartość VARIANT_FALSE jako wartość tej właściwości.
+Implementacja obiektu hosta ATL zawsze zwraca VARIANT_FALSE jako wartość tej właściwości.
 
-##  <a name="get_showhatching"></a>  IAxWinAmbientDispatch::get_ShowHatching
+## <a name="iaxwinambientdispatchget_showhatching"></a><a name="get_showhatching"></a>IAxWinAmbientDispatch::get_ShowHatching
 
-`ShowHatching` Właściwość otoczenia umożliwia formant Aby dowiedzieć się, jeśli jego powinien być rysowany od samego wyklutych.
+Właściwość otoczenia `ShowHatching` pozwala formantu, aby dowiedzieć się, czy należy narysować się kreskować.
 
 ```
 STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
@@ -392,19 +392,19 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 ### <a name="parameters"></a>Parametry
 
 *pbShowHatching*<br/>
-[out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
+[na zewnątrz] Adres zmiennej do odbierania bieżącej wartości tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL zawsze zwraca wartość VARIANT_FALSE jako wartość tej właściwości.
+Implementacja obiektu hosta ATL zawsze zwraca VARIANT_FALSE jako wartość tej właściwości.
 
-##  <a name="get_usermode"></a>  IAxWinAmbientDispatch::get_UserMode
+## <a name="iaxwinambientdispatchget_usermode"></a><a name="get_usermode"></a>IAxWinAmbientDispatch::get_UserMode
 
-`UserMode` Właściwość określa tryb otoczenia użytkownika kontenera.
+Właściwość `UserMode` określa tryb użytkownika otoczenia kontenera.
 
 ```
 STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
@@ -412,20 +412,20 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 
 ### <a name="parameters"></a>Parametry
 
-*pbUserMode*<br/>
-[out] Adres zmiennej, aby otrzymać bieżąca wartość tej właściwości.
+*pbUżytnikmode*<br/>
+[na zewnątrz] Adres zmiennej do odbierania bieżącej wartości tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa VARIANT_TRUE jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa VARIANT_TRUE jako domyślnej wartości tej właściwości.
 
-##  <a name="put_allowcontextmenu"></a>  IAxWinAmbientDispatch::put_AllowContextMenu
+## <a name="iaxwinambientdispatchput_allowcontextmenu"></a><a name="put_allowcontextmenu"></a>IAxWinAmbientDispatch::put_AllowContextMenu
 
-`AllowContextMenu` Właściwość określa, czy hostowanej formant może wyświetlić menu kontekstowe.
+Właściwość `AllowContextMenu` określa, czy hostowany formant może wyświetlać własne menu kontekstowe.
 
 ```
 STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
@@ -434,19 +434,19 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 ### <a name="parameters"></a>Parametry
 
 *bAllowContextMenu*<br/>
-[in] Nowa wartość tej właściwości.
+[w] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa VARIANT_TRUE jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa VARIANT_TRUE jako domyślnej wartości tej właściwości.
 
-##  <a name="put_allowshowui"></a>  IAxWinAmbientDispatch::put_AllowShowUI
+## <a name="iaxwinambientdispatchput_allowshowui"></a><a name="put_allowshowui"></a>IAxWinAmbientDispatch::put_AllowShowUI
 
-`AllowShowUI` Właściwość określa, czy hostowanej formant może wyświetlić interfejs użytkownika.
+Właściwość `AllowShowUI` określa, czy hostowany formant może wyświetlać własny interfejs użytkownika.
 
 ```
 STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
@@ -455,19 +455,19 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 ### <a name="parameters"></a>Parametry
 
 *bAllowShowUI*<br/>
-[in] Nowa wartość tej właściwości.
+[w] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa VARIANT_FALSE, jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa VARIANT_FALSE jako domyślnej wartości tej właściwości.
 
-##  <a name="put_allowwindowlessactivation"></a>  IAxWinAmbientDispatch::put_AllowWindowlessActivation
+## <a name="iaxwinambientdispatchput_allowwindowlessactivation"></a><a name="put_allowwindowlessactivation"></a>IAxWinAmbientDispatch::put_AllowWindowlessActivation
 
-`AllowWindowlessActivation` Właściwość określa, czy kontener będzie zezwalał na aktywacji niepowiązanej z oknami.
+Właściwość `AllowWindowlessActivation` określa, czy kontener pozwoli na aktywację bez okien.
 
 ```
 STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
@@ -476,19 +476,19 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 ### <a name="parameters"></a>Parametry
 
 *bAllowWindowless*<br/>
-[in] Nowa wartość tej właściwości.
+[w] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa VARIANT_TRUE jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa VARIANT_TRUE jako domyślnej wartości tej właściwości.
 
-##  <a name="put_backcolor"></a>  IAxWinAmbientDispatch::put_BackColor
+## <a name="iaxwinambientdispatchput_backcolor"></a><a name="put_backcolor"></a>IAxWinAmbientDispatch::put_BackColor
 
-`BackColor` Właściwość określa kolor tła otoczenia kontenera.
+Właściwość `BackColor` określa kolor otoczenia tła kontenera.
 
 ```
 STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
@@ -496,20 +496,20 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 
 ### <a name="parameters"></a>Parametry
 
-*clrBackground*<br/>
-[in] Nowa wartość tej właściwości.
+*clrBackground (ziemia powrotna)*<br/>
+[w] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa COLOR_BTNFACE lub COLOR_WINDOW jako wartość domyślna tej właściwości (zależnie od tego, czy element nadrzędny okno hosta jest okno dialogowe, lub nie).
+Implementacja obiektu hosta ATL używa COLOR_BTNFACE lub COLOR_WINDOW jako domyślnej wartości tej właściwości (w zależności od tego, czy element nadrzędny okna hosta jest dialogowym, czy nie).
 
-##  <a name="put_displayasdefault"></a>  IAxWinAmbientDispatch::put_DisplayAsDefault
+## <a name="iaxwinambientdispatchput_displayasdefault"></a><a name="put_displayasdefault"></a>IAxWinAmbientDispatch::put_DisplayAsDefault
 
-`DisplayAsDefault` jest zmieniono właściwość zapewnia kontrolę sprawdzić, czy jest domyślny formant.
+`DisplayAsDefault`jest właściwość otoczenia, która pozwala formantu, aby dowiedzieć się, czy jest to formant domyślny.
 
 ```
 STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
@@ -518,19 +518,19 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 ### <a name="parameters"></a>Parametry
 
 *bDisplayAsDefault*<br/>
-[in] Nowa wartość tej właściwości.
+[w] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa VARIANT_FALSE, jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa VARIANT_FALSE jako domyślnej wartości tej właściwości.
 
-##  <a name="put_dochostdoubleclickflags"></a>  IAxWinAmbientDispatch::put_DocHostDoubleClickFlags
+## <a name="iaxwinambientdispatchput_dochostdoubleclickflags"></a><a name="put_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::put_DocHostDoubleClickFlags
 
-`DocHostDoubleClickFlags` Właściwości określa operację, które powinny zostać wykonane w odpowiedzi na dwukrotne kliknięcie.
+Właściwość `DocHostDoubleClickFlags` określa operację, która powinna mieć miejsce w odpowiedzi na podwójne kliknięcie.
 
 ```
 STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
@@ -538,20 +538,20 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*dwDocHostDoubleClickFlags*<br/>
-[in] Nowa wartość tej właściwości.
+*dwDocHostDoubleClickSlagi*<br/>
+[w] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa DOCHOSTUIDBLCLK_DEFAULT jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa DOCHOSTUIDBLCLK_DEFAULT jako domyślnej wartości tej właściwości.
 
-##  <a name="put_dochostflags"></a>  IAxWinAmbientDispatch::put_DocHostFlags
+## <a name="iaxwinambientdispatchput_dochostflags"></a><a name="put_dochostflags"></a>IAxWinAmbientDispatch::put_DocHostFlags
 
-`DocHostFlags` Właściwość określa możliwości interfejsu użytkownika obiektu hosta.
+Właściwość `DocHostFlags` określa możliwości interfejsu użytkownika obiektu hosta.
 
 ```
 STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
@@ -559,20 +559,20 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*dwDocHostFlags*<br/>
-[in] Nowa wartość tej właściwości.
+*dwDocHostSlags*<br/>
+[w] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa DOCHOSTUIFLAG_NO3DBORDER jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa DOCHOSTUIFLAG_NO3DBORDER jako domyślnej wartości tej właściwości.
 
-##  <a name="put_font"></a>  IAxWinAmbientDispatch::put_Font
+## <a name="iaxwinambientdispatchput_font"></a><a name="put_font"></a>IAxWinAmbientDispatch::put_Font
 
-`Font` Właściwości Określa czcionkę otoczenia kontenera.
+Właściwość `Font` określa czcionkę otoczenia kontenera.
 
 ```
 STDMETHOD(put_Font)(IFontDisp* pFont);
@@ -580,20 +580,20 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Parametry
 
-*pFont*<br/>
-[in] Nowa wartość tej właściwości.
+*pFont (pFont)*<br/>
+[w] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-W implementacji obiektu hosta ATL jest używana domyślna czcionka graficznego interfejsu użytkownika lub czcionki systemowej jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa domyślnej czcionki GUI lub czcionki systemowej jako domyślnej wartości tej właściwości.
 
-##  <a name="put_forecolor"></a>  IAxWinAmbientDispatch::put_ForeColor
+## <a name="iaxwinambientdispatchput_forecolor"></a><a name="put_forecolor"></a>IAxWinAmbientDispatch::put_ForeColor
 
-`ForeColor` Właściwość określa kolor pierwszego planu otoczenia kontenera.
+Właściwość `ForeColor` określa otaczający kolor pierwszego planu kontenera.
 
 ```
 STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
@@ -601,20 +601,20 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 
 ### <a name="parameters"></a>Parametry
 
-*clrForeground*<br/>
-[in] Nowa wartość tej właściwości.
+*clrForeground (na terenie*<br/>
+[w] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa kolor tekstu w oknie system jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa koloru tekstu okna systemowego jako domyślnej wartości tej właściwości.
 
-##  <a name="put_localeid"></a>  IAxWinAmbientDispatch::put_LocaleID
+## <a name="iaxwinambientdispatchput_localeid"></a><a name="put_localeid"></a>IAxWinAmbientDispatch::put_LocaleID
 
-`LocaleID` Właściwość określa identyfikator ustawień regionalnych otoczenia kontenera.
+Właściwość `LocaleID` określa identyfikator ustawień regionalnych otoczenia kontenera.
 
 ```
 STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
@@ -622,20 +622,20 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 
 ### <a name="parameters"></a>Parametry
 
-*lcidLocaleID*<br/>
-[in] Nowa wartość tej właściwości.
+*lcidLocaleID (lcidLocaleID)*<br/>
+[w] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa użytkownika domyślnych ustawień regionalnych jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa domyślnych ustawień regionalnych użytkownika jako domyślnej wartości tej właściwości.
 
-##  <a name="put_messagereflect"></a>  IAxWinAmbientDispatch::put_MessageReflect
+## <a name="iaxwinambientdispatchput_messagereflect"></a><a name="put_messagereflect"></a>IAxWinAmbientDispatch::put_MessageReflect
 
-`MessageReflect` Zmieniono właściwość określa, czy kontener będzie odzwierciedlać wiadomości do obsługiwanego formantu.
+Właściwość otoczenia `MessageReflect` określa, czy kontener będzie odzwierciedlać komunikaty do hostowanego formantu.
 
 ```
 STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
@@ -644,19 +644,19 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 ### <a name="parameters"></a>Parametry
 
 *bMessageReflect*<br/>
-[in] Nowa wartość tej właściwości.
+[w] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa VARIANT_TRUE jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa VARIANT_TRUE jako domyślnej wartości tej właściwości.
 
-##  <a name="put_optionkeypath"></a>  IAxWinAmbientDispatch::put_OptionKeyPath
+## <a name="iaxwinambientdispatchput_optionkeypath"></a><a name="put_optionkeypath"></a>IAxWinAmbientDispatch::put_OptionKeyPath
 
-`OptionKeyPath` Właściwość określa ścieżkę klucza rejestru w celu ustawienia użytkownika.
+Właściwość `OptionKeyPath` określa ścieżkę klucza rejestru do ustawień użytkownika.
 
 ```
 STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
@@ -664,16 +664,16 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 
 ### <a name="parameters"></a>Parametry
 
-*bstrOptionKeyPath*<br/>
-[in] Nowa wartość tej właściwości.
+*ścieżka bstrOptionKeyPath*<br/>
+[w] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
-##  <a name="put_usermode"></a>  IAxWinAmbientDispatch::put_UserMode
+## <a name="iaxwinambientdispatchput_usermode"></a><a name="put_usermode"></a>IAxWinAmbientDispatch::put_UserMode
 
-`UserMode` Właściwość określa tryb otoczenia użytkownika kontenera.
+Właściwość `UserMode` określa tryb użytkownika otoczenia kontenera.
 
 ```
 STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
@@ -681,20 +681,20 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 
 ### <a name="parameters"></a>Parametry
 
-*bUserMode*<br/>
-[in] Nowa wartość tej właściwości.
+*BMode dla typuuser*<br/>
+[w] Nowa wartość tej właściwości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowe wartości HRESULT.
+Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja obiektu hosta ATL używa VARIANT_TRUE jako wartość domyślna tej właściwości.
+Implementacja obiektu hosta ATL używa VARIANT_TRUE jako domyślnej wartości tej właściwości.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Interfejs IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)<br/>
 [Interfejs IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)<br/>
 [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
-[AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
+[AtlAxGetHost (AtlAxGetHost)](composite-control-global-functions.md#atlaxgethost)

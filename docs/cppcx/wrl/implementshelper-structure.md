@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ImplementsHelper::FillArrayWithIid method
 - Microsoft::WRL::Details::ImplementsHelper::IidCount constant
 ms.assetid: b857ba80-81bd-4e53-92b6-210991954243
-ms.openlocfilehash: 250a59152e9b41eb48c453caaa696fdc8ca3d3b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e33842f574df5617fb40c5b3f6bb8324d5ba7c1e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398228"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371396"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper — Struktura
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,20 +35,20 @@ friend struct Details::ImplementsHelper;
 
 ### <a name="parameters"></a>Parametry
 
-*RuntimeClassFlagsT*<br/>
-Pola flagi, które określa co najmniej jeden [RuntimeClassType](runtimeclasstype-enumeration.md) modułów wyliczających.
+*Środowisko uruchomienioweClassFlagsT*<br/>
+Pole flag określające co najmniej jeden wyliczaratorów [RuntimeClassType.](runtimeclasstype-enumeration.md)
 
-*IList*<br/>
+*ILst ( ILst )*<br/>
 Lista identyfikatorów interfejsu.
 
-*IsDelegateToClass*<br/>
-Określ **true** Jeśli bieżące wystąpienie `Implements` będąca klasą bazową identyfikator pierwszego interfejsu w *IList*; w przeciwnym razie **false**.
+*Klasa IsDelegateTo*<br/>
+Określ **wartość true,** jeśli bieżące wystąpienie `Implements` jest klasą podstawową pierwszego identyfikatora interfejsu w *ILst;* w przeciwnym razie **false**.
 
 ## <a name="remarks"></a>Uwagi
 
-Pomaga wdrożyć [implementuje](implements-structure.md) struktury.
+Pomaga zaimplementować [implementuje](implements-structure.md) strukturę.
 
-Ten szablon przechodzi przez listę interfejsów i dodaje je w klasach bazowych, jak i informacje niezbędne do umożliwienia `QueryInterface`.
+Ten szablon przechodzi przez listę interfejsów i dodaje je jako klasy `QueryInterface`podstawowe oraz jako informacje niezbędne do włączenia .
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -56,10 +56,10 @@ Ten szablon przechodzi przez listę interfejsów i dodaje je w klasach bazowych,
 
 Nazwa                                                    | Opis
 ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------
-[ImplementsHelper::CanCastTo](#cancastto)               | Pobiera wskaźnik do określonego interfejsu.
-[ImplementsHelper::CastToUnknown](#casttounknown)       | Pobiera wskaźnik do bazowego `IUnknown` interfejsu dla bieżącego `Implements` struktury.
-[ImplementsHelper::FillArrayWithIid](#fillarraywithiid) | Wstawia identyfikator interfejsu określonego przez bieżący parametr szablonu zerowego do elementu określonej tablicy.
-[ImplementsHelper::IidCount](#iidcount)                 | Przechowuje liczbę zaimplementowanego interfejsu identyfikatorów w bieżącym `Implements` obiektu.
+[ImplementsHelper::CanCastTo](#cancastto)               | Pobiera wskaźnik do określonego identyfikatora interfejsu.
+[ImplementsHelper::CastToUnknown](#casttounknown)       | Pobiera wskaźnik do `IUnknown` interfejsu źródłowego `Implements` dla bieżącej struktury.
+[ImplementsHelper::FillArrayWithIid](#fillarraywithiid) | Wstawia identyfikator interfejsu określony przez bieżący parametr szablonu zerowego do określonego elementu tablicy.
+[ImplementsHelper::IidCount](#iidcount)                 | Przechowuje liczbę zaimplementowanych identyfikatorów `Implements` interfejsu w bieżącym obiekcie.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -69,11 +69,11 @@ Nazwa                                                    | Opis
 
 **Nagłówek:** implements.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obszar nazw:** Microsoft::WRL::Dszczegóły
 
-## <a name="cancastto"></a>ImplementsHelper::CanCastTo
+## <a name="implementshelpercancastto"></a><a name="cancastto"></a>ImplementsHelper::CanCastTo
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 HRESULT CanCastTo(
@@ -89,26 +89,26 @@ HRESULT CanCastTo(
 
 ### <a name="parameters"></a>Parametry
 
-*Parametr riid*<br/>
+*Riid*<br/>
 Odwołanie do identyfikatora interfejsu.
 
-*ppv*<br/>
-Jeśli operacja się powiedzie, wskaźnik do interfejsu określonego przez *riid* lub *iid*.
+*Ppv*<br/>
+Jeśli ta operacja zakończy się pomyślnie, wskaźnik do interfejsu określonego przez *riid* lub *iid*.
 
-*IID*<br/>
+*Iid*<br/>
 Odwołanie do identyfikatora interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.
+S_OK, jeśli się powiedzie; w przeciwnym razie HRESULT, który wskazuje błąd.
 
 ### <a name="remarks"></a>Uwagi
 
-Pobiera wskaźnik do określonego interfejsu.
+Pobiera wskaźnik do określonego identyfikatora interfejsu.
 
-## <a name="casttounknown"></a>ImplementsHelper::CastToUnknown
+## <a name="implementshelpercasttounknown"></a><a name="casttounknown"></a>ImplementsHelper::CastToUnknown
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 IUnknown* CastToUnknown();
@@ -116,15 +116,15 @@ IUnknown* CastToUnknown();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do bazowego `IUnknown` interfejsu.
+Wskaźnik do `IUnknown` interfejsu źródłowego.
 
 ### <a name="remarks"></a>Uwagi
 
-Pobiera wskaźnik do bazowego `IUnknown` interfejsu dla bieżącego `Implements` struktury.
+Pobiera wskaźnik do `IUnknown` interfejsu źródłowego `Implements` dla bieżącej struktury.
 
-## <a name="fillarraywithiid"></a>ImplementsHelper::FillArrayWithIid
+## <a name="implementshelperfillarraywithiid"></a><a name="fillarraywithiid"></a>ImplementsHelper::FillArrayWithIid
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 void FillArrayWithIid(
@@ -134,19 +134,19 @@ void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parametry
 
-*index*<br/>
-Liczony od zera indeks, który wskazuje element początkowy tablicy do wykonania tej operacji. Po zakończeniu tej operacji, *indeksu* jest zwiększana o 1.
+*Indeks*<br/>
+Indeks od zera, który wskazuje początkowy element tablicy dla tej operacji. Po zakończeniu tej operacji *indeks* jest zwiększany o 1.
 
-*IID*<br/>
-Tablica typu IID.
+*iids*<br/>
+Tablica identyfikatorów typu ID.
 
 ### <a name="remarks"></a>Uwagi
 
-Wstawia identyfikator interfejsu określonego przez bieżący parametr szablonu zerowego do elementu określonej tablicy.
+Wstawia identyfikator interfejsu określony przez bieżący parametr szablonu zerowego do określonego elementu tablicy.
 
-## <a name="iidcount"></a>ImplementsHelper::IidCount
+## <a name="implementshelperiidcount"></a><a name="iidcount"></a>ImplementsHelper::IidCount
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 static const unsigned long IidCount;
@@ -154,4 +154,4 @@ static const unsigned long IidCount;
 
 ### <a name="remarks"></a>Uwagi
 
-Przechowuje liczbę zaimplementowanego interfejsu identyfikatorów w bieżącym `Implements` obiektu.
+Przechowuje liczbę zaimplementowanych identyfikatorów `Implements` interfejsu w bieżącym obiekcie.

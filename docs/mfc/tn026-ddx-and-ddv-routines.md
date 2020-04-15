@@ -1,5 +1,5 @@
 ---
-title: 'TN026: DDX i Ddv'
+title: 'TN026: procedury DDX i DDV'
 ms.date: 06/28/2018
 f1_keywords:
 - DDX
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - TN026
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
-ms.openlocfilehash: 89916e60d9677240f2d70e37e9a80e6ad7a76fc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 711d433b51ca09836f372d09a11f86c28b82cce6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305869"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370346"
 ---
-# <a name="tn026-ddx-and-ddv-routines"></a>TN026: DDX i Ddv
+# <a name="tn026-ddx-and-ddv-routines"></a>TN026: procedury DDX i DDV
 
 > [!NOTE]
-> Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
+> Następująca uwaga techniczna nie została zaktualizowana, ponieważ została po raz pierwszy uwzględniona w dokumentacji online. W rezultacie niektóre procedury i tematy mogą być nieaktualne lub nieprawidłowe. Aby uzyskać najnowsze informacje, zaleca się wyszukicie tematu interesującego w indeksie dokumentacji online.
 
-Ta uwaga opisuje wymiana danych okna dialogowego (DDX) i architektura sprawdzania poprawności (DDV) danych okna dialogowego. Opisano również sposób zapisu funkcje DDX_ lub DDV_ procedury i jak można je rozszerzyć ClassWizard do użycia z procedur.
+W tej notatce opisano architekturę wymiany danych dialogowych (DDX) i sprawdzanie poprawności danych okna dialogowego (DDV). Opisano w nim również sposób pisania procedury DDX_ lub DDV_ oraz sposób rozszerzania programu ClassWizard w celu korzystania z procedur.
 
-## <a name="overview-of-dialog-data-exchange"></a>Omówienie wymiana danych okna dialogowego
+## <a name="overview-of-dialog-data-exchange"></a>Omówienie programu Dialog Data Exchange
 
-Wszystkie funkcje danych w oknie dialogowym są wykonywane przy użyciu kodu w języku C++. Nie istnieją żadne specjalne zasoby ani magic makra. Serce mechanizmu to funkcja wirtualna, która została zastąpiona w każdej klasy okien dialogowych, że jest wymiany danych okna dialogowego i sprawdzania poprawności. Zawsze znajduje się w tym formularzu:
+Wszystkie funkcje danych okna dialogowego są wykonywane za pomocą kodu C++. Nie ma specjalnych zasobów ani magicznych makr. Sercem mechanizmu jest funkcja wirtualna, która jest zastępowane w każdej klasie okna dialogowego, która nie wymiany danych okna dialogowego i sprawdzania poprawności. Zawsze znajduje się w tej formie:
 
 ```cpp
 void CMyDialog::DoDataExchange(CDataExchange* pDX)
@@ -39,61 +39,61 @@ void CMyDialog::DoDataExchange(CDataExchange* pDX)
 }
 ```
 
-Komentarze AFX specjalny format umożliwiają ClassWizard zlokalizować i edytować kod w ramach tej funkcji. Kod, który nie jest zgodny z ClassWizard powinna znajdować się poza komentarze specjalny format.
+Specjalny format AFX komentarze pozwalają ClassWizard zlokalizować i edytować kod w ramach tej funkcji. Kod, który nie jest zgodny z ClassWizard powinny być umieszczone poza komentarze formatu specjalnego.
 
-W powyższym przykładzie \<data_exchange_function_call > ma postać:
+W powyższym \<przykładzie data_exchange_function_call> jest w formie:
 
 ```cpp
 DDX_Custom(pDX, nIDC, field);
 ```
 
-i \<data_validation_function_call > jest opcjonalny, a ma postać:
+i \<data_validation_function_call> jest opcjonalna i ma formę:
 
 ```cpp
 DDV_Custom(pDX, field, ...);
 ```
 
-Więcej niż jedną parę funkcje DDX_/DDV_ mogą zostać zawarte w każdej `DoDataExchange` funkcji.
+W każdej `DoDataExchange` funkcji może znajdować się więcej niż jedna para DDX_/DDV_.
 
-Aby uzyskać listę wszystkich procedury wymiany danych okna dialogowego i procedury walidacji danych okna dialogowego wyposażone w MFC, zobacz "afxdd_.h".
+Zobacz "afxdd_.h", aby uzyskać listę wszystkich procedur wymiany danych w oknie dialogowym i procedur sprawdzania poprawności danych okna dialogowego dostarczonych z MFC.
 
-Danych w oknie dialogowym jest po prostu: dane elementów członkowskich w `CMyDialog` klasy. Nie są przechowywane w struktury lub czymkolwiek, które są podobne.
+Dane okna dialogowego jest tylko, że: dane elementu członkowskiego w `CMyDialog` klasie. Nie jest przechowywany w strukturze lub coś podobnego.
 
 ## <a name="notes"></a>Uwagi
 
-Mimo że nazywamy to "dane okna dialogowego", wszystkie funkcje są dostępne w dowolnej klasie pochodnej `CWnd` i nie są ograniczone do kilka okien dialogowych.
+Chociaż nazywamy to "dane okna dialogowego", wszystkie `CWnd` funkcje są dostępne w dowolnej klasie pochodzące z i nie są ograniczone tylko do okien dialogowych.
 
-Początkowe wartości danych są ustawiane w Konstruktorze standard C++, zazwyczaj w bloku z `//{{AFX_DATA_INIT` i `//}}AFX_DATA_INIT` komentarzy.
+Początkowe wartości danych są ustawiane w standardowym konstruktorze C++, zwykle w bloku z `//{{AFX_DATA_INIT` i `//}}AFX_DATA_INIT` komentarze.
 
-`CWnd::UpdateData` Operacja inicjowania i obsługi wokół wywołania błędów `DoDataExchange`.
+`CWnd::UpdateData`jest operacją, która wykonuje inicjowanie `DoDataExchange`i obsługę błędów wokół wywołania .
 
-Możesz wywołać `CWnd::UpdateData` w dowolnym momencie przeprowadzić wymiany danych i sprawdzania poprawności. Domyślnie `UpdateData`(PRAWDA) jest wywoływana w domyślnym `CDialog::OnOK` obsługi i `UpdateData`(FALSE) jest wywoływana w domyślnym `CDialog::OnInitDialog`.
+Można wywołać `CWnd::UpdateData` w dowolnym momencie do wykonywania wymiany danych i sprawdzania poprawności. Domyślnie `UpdateData`(PRAWDA) jest wywoływana w domyślnym `CDialog::OnOK` programie obsługi i `UpdateData`(FALSE) jest wywoływana domyślnie `CDialog::OnInitDialog`.
 
-Procedura DDV_ natychmiast należy wykonać procedury funkcje DDX_ tego *pola*.
+Procedura DDV_ powinna natychmiast postępować zgodnie z DDX_ procedurą dla tego *pola.*
 
 ## <a name="how-does-it-work"></a>Jak to działa
 
-Nie musisz zrozumieć następujące czynności, aby można było używać danych w oknie dialogowym. Jednak zrozumienie, jak to działa w tle są pomocne podczas pisania własnej procedury wymiany lub sprawdzania poprawności.
+Aby użyć danych okna dialogowego, nie trzeba rozumieć następujących elementów. Jednak zrozumienie, jak to działa za kulisami pomoże Ci napisać własną procedurę wymiany lub sprawdzania poprawności.
 
-`DoDataExchange` Funkcja członkowska jest podobne do `Serialize` funkcji składowej — odpowiada za pobieranie lub ustawianie danych, do/z formularza zewnętrznych (w tym przypadku formantów w oknie dialogowym) od i do dane elementu członkowskiego w klasie. *PDX* parametr kontekstu do wykonywania wymiany danych i jest podobna do `CArchive` parametr `CObject::Serialize`. *PDX* ( `CDataExchange` obiekt) ma kierunek z flagą wiele podobnych `CArchive` Flaga kierunku:
+Funkcja `DoDataExchange` elementu członkowskiego jest `Serialize` podobnie jak funkcja elementu członkowskiego — jest odpowiedzialna za pobieranie lub ustawianie danych do/z formularza zewnętrznego (w tym przypadku formantów w oknie dialogowym) z/do danych członkowskich w klasie. Parametr *pDX* jest kontekstem wymiany danych i `CArchive` jest `CObject::Serialize`podobny do parametru do . *PDX* `CDataExchange` (obiekt) ma flagę kierunku `CArchive` podobnie jak ma flagę kierunku:
 
-- Jeśli `!m_bSaveAndValidate`, następnie załadować stan danych do kontrolek.
+- Jeśli `!m_bSaveAndValidate`, a następnie załadować stan danych do formantów.
 
-- Jeśli `m_bSaveAndValidate`, następnie ustawić stan danych w kontrolkach.
+- Jeśli `m_bSaveAndValidate`, a następnie ustawić stan danych z formantów.
 
-Sprawdzanie poprawności występuje tylko wtedy, gdy `m_bSaveAndValidate` jest ustawiona. Wartość `m_bSaveAndValidate` jest określana przez parametr BOOL `CWnd::UpdateData`.
+Sprawdzanie poprawności `m_bSaveAndValidate` występuje tylko wtedy, gdy jest ustawiona. Wartość `m_bSaveAndValidate` jest określana przez parametr `CWnd::UpdateData`BOOL do .
 
-Istnieją trzy inne interesujące `CDataExchange` elementy członkowskie:
+Istnieje trzy inne `CDataExchange` interesujące członków:
 
-- `m_pDlgWnd`: Okno (zazwyczaj okna dialogowego), który zawiera formanty. Ten parametr zapobiega obiektów wywołujących funkcje globalne funkcje DDX_ i DDV_ z konieczności "this" Przekaż do każdej procedury DDX/DDV.
+- `m_pDlgWnd`: Okno (zwykle okno dialogowe zawierające formanty. Ma to zapobiec wywołujących DDX_ i DDV_ funkcje globalne z konieczności przekazywania "to" do każdej procedury DDX /DDV.
 
-- `PrepareCtrl`, a `PrepareEditCtrl`: Przygotowuje formantu w oknie dialogowym wymianę danych. Przechowuje dojście tej kontrolki do ustawiania fokus, jeśli weryfikacja zakończy się niepowodzeniem. `PrepareCtrl` Służy do kontrolek bez edycji i `PrepareEditCtrl` służy do kontrolki edycji.
+- `PrepareCtrl`i `PrepareEditCtrl`: Przygotowuje kontrolkę okna dialogowego do wymiany danych. Przechowuje dojście tego formantu do ustawiania fokusu, jeśli sprawdzanie poprawności nie powiedzie się. `PrepareCtrl`jest używany do formantów nieedytów i `PrepareEditCtrl` jest używany do edycji formantów.
 
-- `Fail`: Wywołuje się po wprowadzeniu okno komunikatu, alerty użytkownikowi błąd danych wejściowych. Ta procedura spowoduje przywrócenie fokus do ostatniej kontroli (ostatnie wywołanie elementu `PrepareCtrl` lub `PrepareEditCtrl`) i zgłosić wyjątek. Ta funkcja elementu członkowskiego, może być wywoływana z funkcje DDX_ i DDV_ procedury.
+- `Fail`: Wywoływane po wywołaniu okna komunikatu ostrzegającego użytkownika o błędzie wejściowym. Ta procedura przywróci fokus do ostatniego `PrepareCtrl` formantu (ostatnie wywołanie lub) `PrepareEditCtrl`i zda wyjątek. Ta funkcja elementu członkowskiego może być wywoływana zarówno z procedur DDX_, jak i DDV_.
 
-## <a name="user-extensions"></a>Rozszerzenia dla użytkowników
+## <a name="user-extensions"></a>Rozszerzenia użytkownika
 
-Istnieje kilka sposobów, aby rozszerzyć domyślnego mechanizmu DDX/DDV. Można:
+Istnieje kilka sposobów rozszerzenia domyślnego mechanizmu DDX/DDV. Możesz:
 
 - Dodaj nowe typy danych.
 
@@ -101,29 +101,29 @@ Istnieje kilka sposobów, aby rozszerzyć domyślnego mechanizmu DDX/DDV. Można
     CTime
     ```
 
-- Dodaj nowe procedury wymiany (funkcje DDX_).
+- Dodaj nowe procedury wymiany (DDX_).
 
     ```cpp
     void PASCAL DDX_Time(CDataExchange* pDX, int nIDC, CTime& tm);
     ```
 
-- Dodaj nowe procedury weryfikacji (DDV_).
+- Dodaj nowe procedury sprawdzania poprawności (DDV_).
 
     ```cpp
     void PASCAL DDV_TimeFuture(CDataExchange* pDX, CTime tm, BOOL bFuture);
     // make sure time is in the future or past
     ```
 
-- Przekaż dowolnego wyrażenia do procedur weryfikacji.
+- Przekazywanie dowolnych wyrażeń do procedur sprawdzania poprawności.
 
     ```cpp
     DDV_MinMax(pDX, age, 0, m_maxAge);
     ```
 
     > [!NOTE]
-    > Takie dowolnego wyrażenia nie może być przez nich edytowane ClassWizard i powinna zostać przeniesiona poza komentarze specjalny format (/ / {{AFX_DATA_MAP(CMyClass)).
+    > Takie dowolne wyrażenia nie mogą być edytowane przez ClassWizard i dlatego powinny zostać przeniesione poza komentarze w formacie specjalnym (//{{AFX_DATA_MAP(CMyClass)).
 
-Masz `DoDialogExchange` funkcja elementu członkowskiego obejmują warunkowych lub jakichkolwiek innych prawidłowe instrukcji języka C++ z mieszany — wymiana i Walidacja wywołania funkcji.
+Czy `DoDialogExchange` funkcja elementu członkowskiego zawiera warunki lub inne prawidłowe instrukcje C++ z wywołaniami funkcji wymiany i sprawdzania poprawności.
 
 ```cpp
 //{{AFX_DATA_MAP(CMyClass)
@@ -137,100 +137,100 @@ else
 ```
 
 > [!NOTE]
-> Jak wspomniano powyżej, taki kod nie może być przez nich edytowane ClassWizard i powinny być używane wyłącznie poza komentarze specjalny format.
+> Jak pokazano powyżej, taki kod nie może być edytowany przez ClassWizard i powinien być używany tylko poza specjalnymi komentarzami formatu.
 
-## <a name="classwizard-support"></a>Obsługa ClassWizard
+## <a name="classwizard-support"></a>Pomoc techniczna w kreatorze
 
-ClassWizard obsługuje podzbiór DDX/DDV dostosowań, umożliwiając Zintegruj swoje własne funkcje DDX_ i DDV_ procedury ClassWizard interfejsu użytkownika. W ten sposób jest jedynym kosztem korzystne, jeśli planujesz ponowne użycie określonej procedury DDX i DDV w projekcie lub w wielu projektach.
+ClassWizard obsługuje podzbiór dostosowań DDX/DDV, umożliwiając zintegrowanie własnych DDX_ i DDV_ procedur z interfejsem użytkownika ClassWizard. W ten sposób jest tylko korzystne koszty, jeśli planujesz ponownie użyć poszczególnych procedur DDX i DDV w projekcie lub w wielu projektach.
 
-W tym celu specjalnego wpisów w DDX. CLW (poprzedniej wersji programu Visual C++ przechowuje te informacje w APSTUDIO. INI) lub w twoim projekcie. Plik CLW. Specjalne wpisy mogą być wprowadzane w [ogólne informacje o] części projektu. Plik CLW lub znajduje się w sekcji [ExtraDDX] DDX. Plik CLW \Program Files\Microsoft Visual Studio\Visual C++katalogu \bin. Może być konieczne utworzenie DDX. Plik CLW, jeśli jeszcze nie istnieje. Jeśli planujesz niestandardowe procedury funkcje DDX_/DDV_ należy używać tylko w niektórych projektów, należy dodać wpisy do [ogólne informacje o] części projektu. Zamiast tego z pliku CLW. Jeśli planujesz użyć procedur na wiele projektów, należy dodać wpisy do sekcji [ExtraDDX] DDX. CLW.
+Aby to zrobić, specjalne wpisy są dokonywane w DDX. CLW (poprzednie wersje programu Visual C++ przechowywali te informacje w programie APSTUDIO. INI) lub w projekcie . clw. Specjalne wpisy można wpisać w sekcji [Informacje ogólne] projektu . clw lub w sekcji [ExtraDDX] ddx. CLW w katalogu \Program Files\Microsoft Visual Studio\Visual C++\bin. Może być konieczne utworzenie DDX. CLW, jeśli jeszcze nie istnieje. Jeśli zamierzasz używać niestandardowych procedur DDX_/DDV_ tylko w określonym projekcie, dodaj je do sekcji [Informacje ogólne] projektu . zamiast tego plik CLW. Jeśli planujesz używać procedur w wielu projektach, dodaj wpisy do sekcji [ExtraDDX] DDX. Clw.
 
-Ogólny format te wpisy specjalne to:
+Ogólny format tych specjalnych wpisów jest:
 
-> ExtraDDXCount=*n*
+> ExtraDDXCount =*n*
 
-gdzie *n* jest liczba ExtraDDX? wiersze z formularza
+gdzie *n* jest liczba ExtraDDX? linii do naśladowania, z formularza
 
-> ExtraDDX? =*klucze*; *klucze vb*; *wiersza*; *typu*; *initValue*; *DDX_Proc* [; *DDV_Proc*; *prompt1*; *arg1* [; *prompt2*; *fmt2*]]
+> ExtraDDX?=*klawisze*; *klawisze vb*; *monit*; *typ;* *initValue*; *DDX_Proc* [; *DDV_Proc*; *prompt1*; *arg1* [; *prompt2*; *fmt2*]]
 
-gdzie? to numer 1 - *n* wskazująca, jakiego typu DDX na liście, który jest definiowany.
+Gdzie? jest liczbą 1 - *n* wskazującą, który typ DDX na liście, która jest definiowana.
 
-Każde pole jest rozdzielone znakiem ";". Pola i ich celem są opisane poniżej.
+Każde pole jest rozdzielone znakiem ";". Pola i ich przeznaczenie są opisane poniżej.
 
 - *keys*
 
-  Lista pojedyncze znaki wskazujące dla formantów okna dialogowego, które ten typ zmiennej jest dozwolone.
+  Lista pojedynczych znaków wskazujących, dla którego okna dialogowego steruje tym typem zmiennej, jest dozwolona.
 
-  |Znak|Dozwolone kontroli|
+  |Znak|Dozwolona kontrola|
   |-|-|
-  E | Edytuj
-  C | pole wyboru dwoma stanami
-  c | pole wyboru trzy-stanowy
+  E | edytuj
+  C | dwustanowe pole wyboru
+  c | pole wyboru trójstanowe
   R | pierwszy przycisk radiowy w grupie
-  L | pole listy nonsorted
-  l | okno w posortowanej listy
+  L | niesortowane pole listy
+  l | posortowane pole listy
   M | pole kombi (z elementem edycji)
-  N | Lista rozwijana nonsorted
-  n | Lista rozwijana posortowany
-  1 | Jeśli wstawianie DDX powinny zostać dodane do głowy listy (domyślny jest dodawany do tail) to jest zazwyczaj używana do procedury DDX, związane z transferem właściwość "Control".
+  Nie | niesortowana lista upuszczania
+  n | posortowana lista upuszczania
+  1 | jeśli wstawić DDX powinny być dodawane do head of list (domyślnie jest dodać do ogona) Jest to zwykle używane dla procedur DDX, które przenoszą "Control" właściwość.
 
-- *vb-keys*
+- *klawisze vb*
 
-  To pole jest używane tylko w produkcie 16-bitowych dla formantów VBX (VBX formanty nie są obsługiwane w 32-bitowy produkt)
+  To pole jest używane tylko w produkcie 16-bitowym dla formantów VBX (kontrolki VBX nie są obsługiwane w produkcie 32-bitowym)
 
-- *wiersz*
+- *Wierszu*
 
-  Ciąg do umieszczenia w polu kombi właściwości (nie cudzysłowu)
+  Ciąg do umieszczenia w polu kombi właściwości (bez cudzysłowów)
 
-- *type*
+- *Typu*
 
-  Pojedynczy identyfikator typu do emitowania w pliku nagłówkowym. W naszym powyższym przykładzie za pomocą DDX_Time to będzie miał ustawienie CTime.
+  Pojedynczy identyfikator typu do emisji w pliku nagłówka. W naszym powyższym przykładzie z DDX_Time, byłoby to ustawione na CTime.
 
-- *vb-keys*
+- *klawisze vb*
 
-  Nie jest używana w tej wersji i powinien zawsze być pusty
+  Nie używane w tej wersji i zawsze powinny być puste
 
-- *initValue*
+- *initValue (initValue)*
 
-  Początkowa wartość — 0 lub puste. Jeśli to pole jest puste, Brak wiersza inicjowania zostanie zapisany w sekcji //{{AFX_DATA_INIT pliku implementacji. Pusty element powinien być używany dla obiektów C++ (takie jak `CString`, `CTime`i tak dalej), które mają konstruktory, które gwarantują poprawne inicjowania.
+  Wartość początkowa — 0 lub pusta. Jeśli jest pusty, w sekcji //{{AFX_DATA_INIT pliku implementacji nie zostanie zapisany żaden wiersz inicjowania. Pusty wpis powinien być używany dla obiektów `CString`Języka `CTime`C++ (takich jak , i tak dalej), które mają konstruktory, które gwarantują poprawne inicjowanie.
 
 - *DDX_Proc*
 
-  Pojedynczy identyfikator procedury funkcje DDX_. C++ Funkcja nazwa musi rozpoczynać się od "Funkcje DDX_", ale nie dołączaj "Funkcje DDX_" \<DDX_Proc > identyfikator. W powyższym przykładzie \<DDX_Proc > Identyfikator byłoby czasu. Gdy ClassWizard zapisuje wywołania funkcji w pliku implementacji w {{sekcji AFX_DATA_MAP go dołącza tę nazwę do funkcje DDX_, w związku z tym otrzymywanych DDX_Time.
+  Pojedynczy identyfikator procedury DDX_. Nazwa funkcji C++ musi zaczynać się od "DDX_", ale nie zawiera "DDX_" w identyfikatorze \<> DDX_Proc. W powyższym przykładzie identyfikatorem \<DDX_Proc> będzie Time. Gdy ClassWizard zapisuje wywołanie funkcji do pliku implementacji w sekcji {{AFX_DATA_MAP, dołącza tę nazwę do DDX_, docierając w ten sposób do DDX_Time.
 
 - *Komentarz*
 
-  Komentarz do wyświetlenia w oknie dialogowym dla zmiennej za pomocą tego DDX. Umieść tutaj i zwykle zapewniają coś, co chcesz tekst, który opisuje operacji wykonywanych przez parę DDX/DDV.
+  Komentarz, aby pokazać w oknie dialogowym dla zmiennej z tym DDX. Umieść w tym miejscu dowolny tekst i zwykle podaj coś opisującego operację wykonanę przez parę DDX/DDV.
 
 - *DDV_Proc*
 
-  DDV część wpis jest opcjonalny. Nie wszystkie procedury DDX mają odpowiednie procedury DDV. Często jest bardziej wygodne do uwzględnienia w fazie weryfikacji w ramach transferu. To sytuacja często dotyczy gdy Twoja procedura DDV nie wymaga żadnych parametrów, ponieważ ClassWizard nie obsługuje procedur DDV bez żadnych parametrów.
+  Część DDV wpisu jest opcjonalna. Nie wszystkie procedury DDX mają odpowiednie procedury DDV. Często wygodniej jest uwzględnić fazę sprawdzania poprawności jako integralną część transferu. Często dzieje się tak, gdy procedura DDV nie wymaga żadnych parametrów, ponieważ ClassWizard nie obsługuje procedur DDV bez żadnych parametrów.
 
-- *ARG*
+- *Arg*
 
-  Pojedynczy identyfikator procedury DDV_. C++ Funkcja nazwa musi rozpoczynać się od "DDV_", ale nie powinno obejmować "Funkcje DDX_" \<DDX_Proc > identyfikator.
+  Pojedynczy identyfikator procedury DDV_. Nazwa funkcji C++ musi zaczynać się od "DDV_", ale nie zawiera \<"DDX_" w identyfikatorze> DDX_Proc.
 
-  *ARG* następuje args DDV 1 lub 2:
+  *arg* następuje 1 lub 2 args DDV:
 
-   - *promptN*
+  - *promptN*
 
-      Ciąg, który można umieścić powyżej edytowanie elementu (& dla akceleratora).
+      Ciąg, aby umieścić nad elementem edycji (z & dla akceleratora).
 
-   - *fmtN*
+  - *fmtN ( fmtN )*
 
-      Formatem znaku typu arg, jeden z:
+      Formatuj znak typu arg, jeden z:
 
       |Znak|Typ|
       |-|-|
       |d | int|
       |u | unsigned int|
-      |D | long int (to znaczy, długi)|
-      |U | czas bez znaku (czyli DWORD)|
-      |f | float|
+      |D | long int (czyli długo)|
+      |U | długo niepodpisany (czyli DWORD)|
+      |k | float|
       |F | double|
-      |s | string|
+      |s | ciąg|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

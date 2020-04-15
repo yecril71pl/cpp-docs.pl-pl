@@ -41,67 +41,67 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-ms.openlocfilehash: 4abc2764abd0f31b83253f37b8cb459be638ae5a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0201e53114b71c02877762f89cc65fc46d17700c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508536"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370527"
 ---
 # <a name="graphic-objects"></a>Obiekty graficzne
 
-System Windows udostępnia różnorodne narzędzia do rysowania, które mogą być używane w kontekstach urządzeń. Udostępnia pióra do rysowania linii, pędzli do wypełnienia wnętrza oraz czcionek do rysowania tekstu. MFC oferuje klasy obiektów graficznych równoważne narzędziom do rysowania w systemie Windows. W poniższej tabeli przedstawiono dostępne klasy i równoważne typy uchwytów interfejsu urządzenia graficznego (GDI) systemu Windows.
+System Windows udostępnia wiele narzędzi do rysowania do użycia w kontekstach urządzeń. Zapewnia pióra do rysowania linii, pędzle do wypełniania wnętrz i czcionki do rysowania tekstu. MFC udostępnia klasy obiektów graficznych równoważne narzędziom do rysowania w systemie Windows. W poniższej tabeli przedstawiono dostępne klasy i równoważne typy uchwytów interfejsu urządzenia graficznego systemu Windows (GDI).
 
 > [!NOTE]
->  Aby uzyskać więcej informacji, zobacz [dokumentację zestawu GDI+ SDK](/windows/win32/gdiplus/-gdiplus-gdi-start).
+> Aby uzyskać więcej informacji, zobacz [dokumentację GDI+ SDK](/windows/win32/gdiplus/-gdiplus-gdi-start).
 
-W tym artykule opisano sposób użycia tych klas obiektów graficznych:
+W tym artykule wyjaśniono użycie tych klas obiektów graficznych:
 
-### <a name="classes-for-windows-gdi-objects"></a>Klasy dla obiektów GDI systemu Windows
+### <a name="classes-for-windows-gdi-objects"></a>Klasy obiektów GDI systemu Windows
 
-|Class|Typ uchwytu systemu Windows|
+|Klasa|Typ uchwytu systemu Windows|
 |-----------|-------------------------|
-|[CPen](../mfc/reference/cpen-class.md)|`HPEN`|
-|[CBrush](../mfc/reference/cbrush-class.md)|`HBRUSH`|
-|[CFont](../mfc/reference/cfont-class.md)|**HFONT**|
-|[CBitmap](../mfc/reference/cbitmap-class.md)|`HBITMAP`|
-|[CPalette](../mfc/reference/cpalette-class.md)|`HPALETTE`|
-|[CRgn](../mfc/reference/crgn-class.md)|**HRGN**|
+|[Cpen](../mfc/reference/cpen-class.md)|`HPEN`|
+|[Cbrush](../mfc/reference/cbrush-class.md)|`HBRUSH`|
+|[Cfont](../mfc/reference/cfont-class.md)|**HFONT ( HFONT )**|
+|[Cbitmap](../mfc/reference/cbitmap-class.md)|`HBITMAP`|
+|[Cpalette](../mfc/reference/cpalette-class.md)|`HPALETTE`|
+|[Crgn](../mfc/reference/crgn-class.md)|**HRGN**|
 
 > [!NOTE]
->  Klasa [funkcji CImage](../atl-mfc-shared/reference/cimage-class.md) zapewnia obsługę ulepszonej mapy bitowej.
+> Klasa [CImage](../atl-mfc-shared/reference/cimage-class.md) zapewnia rozszerzoną obsługę mapy bitowej.
 
-Każda klasa obiektu graficznego w bibliotece klas ma Konstruktor, który umożliwia tworzenie obiektów graficznych tej klasy, które należy następnie zainicjować przy użyciu odpowiedniej funkcji tworzenia, takiej jak `CreatePen`.
+Każda klasa obiektów graficznych w bibliotece klas ma konstruktor, który umożliwia tworzenie obiektów graficznych tej klasy, `CreatePen`które następnie należy zainicjować za pomocą odpowiedniej funkcji tworzenia, takiej jak .
 
-Każda klasa obiektu graficznego w bibliotece klas ma operator rzutowania, który będzie rzutować obiekt MFC do skojarzonego dojścia systemu Windows. Wyniki dojścia są prawidłowe do momentu odłączenia skojarzonego obiektu. Użyj funkcji `Detach` składowej obiektu, aby odłączyć dojście.
+Każda klasa obiektów graficznych w bibliotece klas ma operator rzutowany, który będzie rzutował obiekt MFC do skojarzonego uchwytu systemu Windows. Wynikowy uchwyt jest prawidłowy, dopóki skojarzony obiekt go nie odłączy. Użyj funkcji `Detach` elementu członkowskiego obiektu, aby odłączyć uchwyt.
 
-Poniższy kod rzutuje `CPen` obiekt do dojścia systemu Windows:
+Następujący kod rzutuje `CPen` obiekt do dojścia systemu Windows:
 
 [!code-cpp[NVC_MFCDocViewSDI#5](../mfc/codesnippet/cpp/graphic-objects_1.cpp)]
 
 #### <a name="to-create-a-graphic-object-in-a-device-context"></a>Aby utworzyć obiekt graficzny w kontekście urządzenia
 
-1. Zdefiniuj obiekt graficzny w ramce stosu. Zainicjuj obiekt za pomocą funkcji tworzenia specyficznej dla typu, takiej `CreatePen`jak. Alternatywnie można zainicjować obiekt w konstruktorze. Zapoznaj się z omówieniem [tworzenia jednego etapu i](../mfc/one-stage-and-two-stage-construction-of-objects.md)dwuetapowego, który zawiera przykładowy kod.
+1. Zdefiniuj obiekt graficzny w ramce stosu. Inicjuj obiekt za pomocą funkcji `CreatePen`tworzenia specyficznej dla typu, takiej jak . Alternatywnie zainicjować obiekt w konstruktorze. Zobacz omówienie [jednoetapowego i dwuetapowego tworzenia](../mfc/one-stage-and-two-stage-construction-of-objects.md), który zawiera przykładowy kod.
 
-1. [Zaznacz obiekt w bieżącym kontekście urządzenia](../mfc/selecting-a-graphic-object-into-a-device-context.md)i Zapisz stary obiekt graficzny, który został wybrany wcześniej.
+1. [Zaznacz obiekt w bieżącym kontekście urządzenia](../mfc/selecting-a-graphic-object-into-a-device-context.md), zapisując stary obiekt graficzny, który został wybrany wcześniej.
 
-1. Po zakończeniu z bieżącym obiektem graficznym, wybierz stary obiekt graficzny z powrotem do kontekstu urządzenia, aby przywrócić jego stan.
+1. Po zakończeniu pracy z bieżącym obiektem graficznym zaznacz stary obiekt graficzny z powrotem w kontekście urządzenia, aby przywrócić jego stan.
 
-1. Zezwalaj na automatyczne usuwanie obiektu graficznego przydzieloną ramką po zakończeniu zakresu.
+1. Zezwalaj na automatyczne usunięcie obiektu graficznego przydzielonego ramką po zamknięciu zakresu.
 
 > [!NOTE]
->  Jeśli będziesz używać obiektu graficznego wielokrotnie, możesz przydzielić go raz i wybrać go w kontekście urządzenia zawsze wtedy, gdy jest to potrzebne. Pamiętaj, aby usunąć taki obiekt, gdy nie jest już potrzebny.
+> Jeśli obiekt graficzny będzie wielokrotnie używany, możesz go przydzielić raz i wybrać w kontekście urządzenia za każdym razem, gdy jest potrzebny. Pamiętaj, aby usunąć taki obiekt, gdy nie jest już potrzebny.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz wiedzieć więcej o
 
-- [Jednoetapowa i dwuetapowa konstrukcja obiektów graficznych](../mfc/one-stage-and-two-stage-construction-of-objects.md)
+- [Jedno- i dwuetapowa konstrukcja obiektów graficznych](../mfc/one-stage-and-two-stage-construction-of-objects.md)
 
-- [Przykład konstruowania pióra na jednym i dwóch etapach](../mfc/one-stage-and-two-stage-construction-of-objects.md)
+- [Przykład konstruowania pióra w jednym i dwóch etapach](../mfc/one-stage-and-two-stage-construction-of-objects.md)
 
 - [Wybieranie obiektu graficznego do kontekstu urządzenia](../mfc/selecting-a-graphic-object-into-a-device-context.md)
 
-- [Konteksty urządzenia](../mfc/device-contexts.md)
+- [Konteksty urządzeń](../mfc/device-contexts.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obiekty okna](../mfc/window-objects.md)
+[Obiekty okien](../mfc/window-objects.md)
