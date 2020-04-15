@@ -114,18 +114,18 @@ helpviewer_keywords:
 - CMFCRibbonButton [MFC], SetText
 - CMFCRibbonButton [MFC], OnClick
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
-ms.openlocfilehash: e3c0af8b608afd4effab710479108f1eb07fdaba
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: b0118b47fd1bb1db15916d7deffbaa32dcfc9df7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821294"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375296"
 ---
 # <a name="cmfcribbonbutton-class"></a>Klasa CMFCRibbonButton
 
-`CMFCRibbonButton` Klasa implementuje przyciski, które można umieścić na elementach paska wstążki, takich jak panele, paski narzędzi Szybki dostęp i menu podręczne.
+Klasa `CMFCRibbonButton` implementuje przyciski, które można umieszczać na elementach paska wstążki, takich jak panele, paski narzędzi szybkiego dostępu i menu podręczne.
 
-Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w folderze **VC\\atlmfc\\src\\MFC** instalacji programu Visual Studio.
+Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w folderze **vc\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
 
 ## <a name="syntax"></a>Składnia
 
@@ -145,35 +145,35 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCRibbonButton:: SubItem](#addsubitem)|Dodaje element menu do menu podręcznego, które jest skojarzone z przyciskiem.|
-|[CMFCRibbonButton::CanBeStretched](#canbestretched)|(Przesłania [CMFCRibbonBaseElement:: CanBeStretched](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched).)|
-|[CMFCRibbonButton::CleanUpSizes](#cleanupsizes)|(Przesłania [CMFCRibbonBaseElement:: CleanUpSizes](../../mfc/reference/cmfcribbonbaseelement-class.md#cleanupsizes).)|
-|[CMFCRibbonButton::ClosePopupMenu](#closepopupmenu)|(Przesłania [CMFCRibbonBaseElement:: ClosePopupMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#closepopupmenu).)|
-|[CMFCRibbonButton::D rawBottomText](#drawbottomtext)||
-|[CMFCRibbonButton::D rawImage](#drawimage)|(Przesłania [CMFCRibbonBaseElement::D rawimage](../../mfc/reference/cmfcribbonbaseelement-class.md#drawimage).)|
-|[CMFCRibbonButton::D rawRibbonText](#drawribbontext)||
-|[CMFCRibbonButton::FindSubItemIndexByID](#findsubitemindexbyid)|Zwraca indeks elementu menu podręcznego, który jest skojarzony z określonym IDENTYFIKATORem polecenia.|
+|[CMFCRibbonButton::AddSubItem](#addsubitem)|Dodaje element menu do wyskakującego menu skojarzonego z przyciskiem.|
+|[CMFCRibbonButton::CanBeStretched](#canbestretched)|(Zastępuje [CMFCRibbonBaseElement::CanBeStretched](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched).)|
+|[CMFCRibbonButton::CleanUpSizes](#cleanupsizes)|(Zastępuje [CMFCRibbonBaseElement::CleanUpSizes](../../mfc/reference/cmfcribbonbaseelement-class.md#cleanupsizes).)|
+|[CMFCRibbonButton::ClosePopupMenu](#closepopupmenu)|(Zastępuje [CMFCRibbonBaseElement::ClosePopupMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#closepopupmenu).)|
+|[CMFCRibbonButton::DrawBottomText](#drawbottomtext)||
+|[CMFCRibbonButton::DrawImage](#drawimage)|(Zastępuje [CMFCRibbonBaseElement::DrawImage](../../mfc/reference/cmfcribbonbaseelement-class.md#drawimage).)|
+|[CMFCRibbonButton::DrawRibbonText](#drawribbontext)||
+|[CMFCRibbonButton::FindSubItemIndexByID](#findsubitemindexbyid)|Zwraca indeks wyskakującego elementu menu skojarzonego z określonym identyfikatorem polecenia.|
 |[CMFCRibbonButton::GetCommandRect](#getcommandrect)||
-|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|Zwraca rozmiar kompaktowy elementu wstążki. (Przesłania [CMFCRibbonBaseElement:: GetCompactSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize).)|
-|[CMFCRibbonButton:: GetIcon](#geticon)||
-|[CMFCRibbonButton:: elemencie getimageindex](#getimageindex)|Zwraca indeks obrazu, który jest skojarzony z przyciskiem.|
-|[CMFCRibbonButton::GetImageSize](#getimagesize)|Zwraca rozmiar obrazu elementu wstążki. (Przesłania [CMFCRibbonBaseElement:: GetImageSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|
-|[CMFCRibbonButton::GetIntermediateSize](#getintermediatesize)|Zwraca rozmiar elementu wstążki w stanie pośrednim. (Przesłania [CMFCRibbonBaseElement:: GetIntermediateSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize).)|
-|[CMFCRibbonButton:: GetMenu](#getmenu)|Zwraca uchwyt do menu systemu Windows, które jest przypisane do przycisku wstążki.|
+|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|Zwraca kompaktowy rozmiar elementu wstążki. (Zastępuje [CMFCRibbonBaseElement::GetCompactSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize).)|
+|[CMFCRibbonButton::GetIcon](#geticon)||
+|[CMFCRibbonButton::GetImageIndex](#getimageindex)|Zwraca indeks obrazu skojarzonego z przyciskiem.|
+|[CMFCRibbonButton::GetImageSize](#getimagesize)|Zwraca rozmiar obrazu elementu wstążki. (Zastępuje [CMFCRibbonBaseElement::GetImageSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|
+|[CMFCRibbonButton::GetIntermediateSize](#getintermediatesize)|Zwraca rozmiar elementu wstążki w jego stanie pośrednim. (Zastępuje [CMFCRibbonBaseElement::GetIntermediateSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize).)|
+|[CMFCRibbonButton::GetMenu](#getmenu)|Zwraca uchwyt do menu systemu Windows przypisanego do przycisku wstążki.|
 |[CMFCRibbonButton::GetMenuRect](#getmenurect)||
-|[CMFCRibbonButton::GetRegularSize](#getregularsize)|Zwraca zwykły rozmiar elementu wstążki. (Przesłania [CMFCRibbonBaseElement:: GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
-|[CMFCRibbonButton:: SubItems](#getsubitems)||
+|[CMFCRibbonButton::GetRegularSize](#getregularsize)|Zwraca regularny rozmiar elementu wstążki. (Zastępuje [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
+|[CMFCRibbonButton::GetSubItems](#getsubitems)||
 |[CMFCRibbonButton::GetTextRowHeight](#gettextrowheight)||
-|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|Zwraca tekst etykietki narzędzia elementu wstążki. (Przesłania [CMFCRibbonBaseElement:: GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext).)|
-|[CMFCRibbonButton::HasCompactMode](#hascompactmode)|Określa, czy element wstążki ma tryb kompaktowy. (Przesłania [CMFCRibbonBaseElement:: HasCompactMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode).)|
-|[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|Określa, czy element wstążki ma tryb pośredni. (Przesłania [CMFCRibbonBaseElement:: HasIntermediateMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode).)|
-|[CMFCRibbonButton::HasLargeMode](#haslargemode)|Określa, czy element wstążki ma duży tryb. (Przesłania [CMFCRibbonBaseElement:: HasLargeMode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode).)|
-|[CMFCRibbonButton::HasMenu](#hasmenu)|(Przesłania [CMFCRibbonBaseElement:: HasMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#hasmenu).)|
+|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|Zwraca tekst etykietki narzędzia elementu wstążki. (Zastępuje [CMFCRibbonBaseElement::GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext).)|
+|[CMFCRibbonButton::HasCompactMode](#hascompactmode)|Określa, czy element wstążki ma tryb kompaktowy. (Zastępuje [CMFCRibbonBaseElement::HasCompactMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode).)|
+|[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|Określa, czy element wstążki ma tryb pośredni. (Zastępuje [CMFCRibbonBaseElement::HasIntermediateMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode).)|
+|[CMFCRibbonButton::HasLargeMode](#haslargemode)|Określa, czy element wstążki ma tryb duży. (Zastępuje [CMFCRibbonBaseElement::HasLargeMode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode).)|
+|[CMFCRibbonButton::HasMenu](#hasmenu)|(Zastępuje [CMFCRibbonBaseElement::HasMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#hasmenu).)|
 |[CMFCRibbonButton::IsAlwaysDrawBorder](#isalwaysdrawborder)||
-|[CMFCRibbonButton::IsAlwaysLargeImage](#isalwayslargeimage)|(Przesłania [CMFCRibbonBaseElement:: IsAlwaysLargeImage](../../mfc/reference/cmfcribbonbaseelement-class.md#isalwayslargeimage).)|
+|[CMFCRibbonButton::IsAlwaysLargeImage](#isalwayslargeimage)|(Zastępuje [CMFCRibbonBaseElement::IsAlwaysLargeImage](../../mfc/reference/cmfcribbonbaseelement-class.md#isalwayslargeimage).)|
 |[CMFCRibbonButton::IsApplicationButton](#isapplicationbutton)||
 |[CMFCRibbonButton::IsCommandAreaHighlighted](#iscommandareahighlighted)||
-|[CMFCRibbonButton::IsDefaultCommand](#isdefaultcommand)|Określa, czy dla przycisku wstążki włączono domyślne polecenie.|
+|[CMFCRibbonButton::IsDefaultCommand](#isdefaultcommand)|Określa, czy włączono domyślne polecenie przycisku wstążki.|
 |[CMFCRibbonButton::IsDefaultPanelButton](#isdefaultpanelbutton)||
 |[CMFCRibbonButton::IsDrawTooltipImage](#isdrawtooltipimage)||
 |[CMFCRibbonButton::IsLargeImage](#islargeimage)||
@@ -181,38 +181,38 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |[CMFCRibbonButton::IsMenuOnBottom](#ismenuonbottom)||
 |[CMFCRibbonButton::IsPopupDefaultMenuLook](#ispopupdefaultmenulook)||
 |[CMFCRibbonButton::IsRightAlignMenu](#isrightalignmenu)|Określa, czy menu jest wyrównane do prawej.|
-|[CMFCRibbonButton::IsSingleLineText](#issinglelinetext)||
-|[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|(Przesłania [CMFCRibbonBaseElement:: OnCalcTextSize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize).)|
+|[CMFCRibbonButton::IssingleLineText](#issinglelinetext)||
+|[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|(Zastępuje [CMFCRibbonBaseElement::OnCalcTextSize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize).)|
 |[CMFCRibbonButton::OnDrawBorder](#ondrawborder)||
-|[CMFCRibbonButton:: OnDraw](#ondraw)|Wywoływane przez platformę, by narysować element wstążki. (Przesłania [CMFCRibbonBaseElement:: OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
+|[CMFCRibbonButton::OnDraw](#ondraw)|Wywoływana przez strukturę do rysowania elementu wstążki. (Zastępuje [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
 |[CMFCRibbonButton::OnFillBackground](#onfillbackground)||
-|[CMFCRibbonButton::RemoveAllSubItems](#removeallsubitems)|Usuwa wszystkie elementy menu z menu podręcznego.|
-|[CMFCRibbonButton::RemoveSubItem](#removesubitem)|Usuwa element menu z menu podręcznego.|
-|[CMFCRibbonButton::SetACCData](#setaccdata)|(Przesłania [CMFCRibbonBaseElement:: SetACCData](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata).)|
-|[CMFCRibbonButton::SetAlwaysLargeImage](#setalwayslargeimage)|Określa, czy przycisk wyświetla duży, czy mały obraz, gdy użytkownik zwija przycisk.|
-|[CMFCRibbonButton::SetDefaultCommand](#setdefaultcommand)|Włącza domyślne polecenie dla przycisku wstążki.|
-|[CMFCRibbonButton::SetDescription](#setdescription)|Ustawia opis elementu wstążki. (Przesłania [CMFCRibbonBaseElement:: SetDescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription)).|
+|[CMFCRibbonButton::UsuńAllSubItems](#removeallsubitems)|Usuwa wszystkie elementy menu z wyskakującego menu.|
+|[CMFCRibbonButton::RemoveSubItem](#removesubitem)|Usuwa element menu z wyskakującego menu.|
+|[CMFCRibbonButton::SetACCData](#setaccdata)|(Zastępuje [CMFCRibbonBaseElement::SetACCData](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata).)|
+|[CMFCRibbonButton::SetAlwaysLargeImage](#setalwayslargeimage)|Określa, czy przycisk wyświetla duży czy mały obraz, gdy użytkownik zwija przycisk.|
+|[CMFCRibbonButton::SetDefaultCommand](#setdefaultcommand)|Włącza domyślne polecenie przycisku wstążki.|
+|[CMFCRibbonButton::SetDescription](#setdescription)|Ustawia opis elementu wstążki. (Zastępuje [CMFCRibbonBaseElement::SetDescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription).)|
 |[CMFCRibbonButton::SetImageIndex](#setimageindex)|Przypisuje indeks do obrazu przycisku.|
-|[CMFCRibbonButton:: SetMenu](#setmenu)|Przypisuje menu rozwijane do przycisku wstążki.|
-|[CMFCRibbonButton::SetParentCategory](#setparentcategory)|(Przesłania [CMFCRibbonBaseElement:: SetParentCategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory).)|
-|[CMFCRibbonButton::SetRightAlignMenu](#setrightalignmenu)|Wyrównuje menu rozwijane z prawej strony przycisku.|
-|[CMFCRibbonButton::SetText](#settext)|Ustawia tekst dla elementu wstążki. (Przesłania [CMFCRibbonBaseElement:: SetText](../../mfc/reference/cmfcribbonbaseelement-class.md#settext).)|
+|[CMFCRibbonButton::SetMenu](#setmenu)|Przypisuje menu podręczne do przycisku wstążki.|
+|[CMFCRibbonButton::SetParent Kategoria](#setparentcategory)|(Zastępuje [CMFCRibbonBaseElement::SetParentCategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory).)|
+|[CMFCRibbonButton::SetRightAlignMenu](#setrightalignmenu)|Wyrównuje menu podręczne po prawej stronie przycisku.|
+|[CMFCRibbonButton::SetText](#settext)|Ustawia tekst elementu wstążki. (Zastępuje [CMFCRibbonBaseElement::SetText](../../mfc/reference/cmfcribbonbaseelement-class.md#settext).)|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCRibbonButton:: onkliknięcia](#onclick)|Wywoływane przez platformę, gdy użytkownik kliknie przycisk.|
+|[CMFCRibbonButton::OnClick](#onclick)|Wywoływane przez strukturę, gdy użytkownik kliknie przycisk.|
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób użycia różnych metod w `CMFCRibbonButton` klasie. W przykładzie przedstawiono sposób konstruowania obiektu `CMFCRibbonButton` klasy, przypisywania menu podręcznego do przycisku wstążki, ustawiania opisu przycisku, usuwania elementu menu z menu podręcznego i prawej strony menu podręcznego do krawędzi przycisku.
+W poniższym przykładzie pokazano, jak `CMFCRibbonButton` używać różnych metod w klasie. W przykładzie pokazano, jak `CMFCRibbonButton` skonstruować obiekt klasy, przypisać menu podręczne do przycisku wstążki, ustawić opis przycisku, usunąć element menu z menu podręcznego i wyrównać menu podręczne do krawędzi przycisku.
 
 [!code-cpp[NVC_MFC_RibbonApp#7](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_1.cpp)]
 
 ## <a name="remarks"></a>Uwagi
 
-Aby użyć przycisku wstążki w aplikacji, Skonstruuj obiekt Button i dodaj go do odpowiedniego [panelu](../../mfc/reference/cmfcribbonpanel-class.md)wstążki.
+Aby użyć przycisku wstążki w aplikacji, skonstruuj obiekt przycisku i dodaj go do odpowiedniego [panelu](../../mfc/reference/cmfcribbonpanel-class.md)wstążki .
 
 ```cpp
 CMFCRibbonPanel* pPanel = pCategory->AddPanel (
@@ -236,7 +236,7 @@ pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
@@ -244,11 +244,11 @@ pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxribbonbutton. h
+**Nagłówek:** afxribbonbutton.h
 
-##  <a name="addsubitem"></a>CMFCRibbonButton:: SubItem
+## <a name="cmfcribbonbuttonaddsubitem"></a><a name="addsubitem"></a>CMFCRibbonButton::AddSubItem
 
-Dodaje element menu do menu podręcznego, które jest skojarzone z przyciskiem.
+Dodaje element menu do wyskakującego menu skojarzonego z przyciskiem.
 
 ```
 void AddSubItem(
@@ -258,13 +258,13 @@ void AddSubItem(
 
 ### <a name="parameters"></a>Parametry
 
-*pSubItem*<br/>
-podczas Określa wskaźnik do nowego elementu, który ma zostać dodany.
+*pSubItem (subItem)*<br/>
+[w] Określa wskaźnik do nowego elementu do dodania.
 
-*nIndex*<br/>
-podczas Określa indeks, w którym ma zostać dodany element do tablicy elementów menu przycisku; -1, aby dodać element na końcu tablicy elementów menu.
+*Nindex*<br/>
+[w] Określa indeks, w którym należy dodać element do tablicy elementów menu przycisku; -1, aby dodać element na końcu tablicy elementów menu.
 
-##  <a name="canbestretched"></a>CMFCRibbonButton::CanBeStretched
+## <a name="cmfcribbonbuttoncanbestretched"></a><a name="canbestretched"></a>CMFCRibbonButton::CanBeStretched
 
 ```
 virtual BOOL CanBeStretched();
@@ -274,7 +274,7 @@ virtual BOOL CanBeStretched();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="cleanupsizes"></a>CMFCRibbonButton::CleanUpSizes
+## <a name="cmfcribbonbuttoncleanupsizes"></a><a name="cleanupsizes"></a>CMFCRibbonButton::CleanUpSizes
 
 ```
 virtual void CleanUpSizes();
@@ -282,7 +282,7 @@ virtual void CleanUpSizes();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="closepopupmenu"></a>CMFCRibbonButton::ClosePopupMenu
+## <a name="cmfcribbonbuttonclosepopupmenu"></a><a name="closepopupmenu"></a>CMFCRibbonButton::ClosePopupMenu
 
 ```
 virtual void ClosePopupMenu();
@@ -290,7 +290,7 @@ virtual void ClosePopupMenu();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="cmfcribbonbutton"></a>CMFCRibbonButton::CMFCRibbonButton
+## <a name="cmfcribbonbuttoncmfcribbonbutton"></a><a name="cmfcribbonbutton"></a>CMFCRibbonButton::CMFCRibbonButton
 
 Konstruuje obiekt przycisku wstążki.
 
@@ -314,28 +314,28 @@ CMFCRibbonButton(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-podczas Określa identyfikator polecenia przycisku.
+*Nid*<br/>
+[w] Określa identyfikator polecenia przycisku.
 
-*lpszText*<br/>
-podczas Określa etykietę tekstu przycisku.
+*lpszText (tekst)*<br/>
+[w] Określa etykietę tekstową przycisku.
 
 *nSmallImageIndex*<br/>
-podczas Określa indeks (liczony od zera) małego obrazu przycisku na liście obrazów kategorii nadrzędnej.
+[w] Określa indeks oparty na wartości zero małego obrazu przycisku na liście obrazów kategorii nadrzędnej.
 
 *nLargeImageIndex*<br/>
-podczas Określa indeks (liczony od zera) dużego obrazu przycisku na liście obrazów kategorii nadrzędnej.
+[w] Określa indeks o zerowym rozmiarze dużego obrazu przycisku na liście obrazów kategorii nadrzędnej.
 
-*hIcon*<br/>
-podczas Określa dojście do ikony używanej przez aplikację jako obraz przycisku.
+*hIcon (własówce)*<br/>
+[w] Określa dojście do ikony używanej przez aplikację jako obrazu przycisku.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób konstruowania `CMFCRibbonButton` obiektu.
+W poniższym przykładzie pokazano, jak skonstruować `CMFCRibbonButton` obiekt.
 
 [!code-cpp[NVC_MFC_RibbonApp#6](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_2.cpp)]
 
-##  <a name="drawbottomtext"></a>CMFCRibbonButton::D rawBottomText
+## <a name="cmfcribbonbuttondrawbottomtext"></a><a name="drawbottomtext"></a>CMFCRibbonButton::DrawBottomText
 
 ```
 CSize DrawBottomText(
@@ -345,14 +345,14 @@ CSize DrawBottomText(
 
 ### <a name="parameters"></a>Parametry
 
-podczas *kontroler PDC*<br/>
-podczas *bCalcOnly*<br/>
+[w] *pDC*<br/>
+[w] *bCalcOnly*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="drawimage"></a>CMFCRibbonButton::D rawImage
+## <a name="cmfcribbonbuttondrawimage"></a><a name="drawimage"></a>CMFCRibbonButton::DrawImage
 
 ```
 virtual void DrawImage(
@@ -363,13 +363,13 @@ virtual void DrawImage(
 
 ### <a name="parameters"></a>Parametry
 
-podczas *kontroler PDC*<br/>
-podczas *Typ*<br/>
-podczas *rectImage*<br/>
+[w] *pDC*<br/>
+[w] *typ*<br/>
+[w] *rectImage*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="drawribbontext"></a>CMFCRibbonButton::D rawRibbonText
+## <a name="cmfcribbonbuttondrawribbontext"></a><a name="drawribbontext"></a>CMFCRibbonButton::DrawRibbonText
 
 ```
 virtual int DrawRibbonText(
@@ -382,19 +382,19 @@ virtual int DrawRibbonText(
 
 ### <a name="parameters"></a>Parametry
 
-podczas *kontroler PDC*<br/>
-podczas *strText*<br/>
-podczas *rectText*<br/>
-podczas *uiDTFlags*<br/>
-podczas *clrText*<br/>
+[w] *pDC*<br/>
+[w] *strText (tekst)*<br/>
+[w] *tekst rect*<br/>
+[w] *żużle uiDTFlags*<br/>
+[w] *clrTekst*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="findsubitemindexbyid"></a>CMFCRibbonButton::FindSubItemIndexByID
+## <a name="cmfcribbonbuttonfindsubitemindexbyid"></a><a name="findsubitemindexbyid"></a>CMFCRibbonButton::FindSubItemIndexByID
 
-Zwraca indeks elementu menu podręcznego, który jest skojarzony z określonym IDENTYFIKATORem polecenia.
+Zwraca indeks wyskakującego elementu menu skojarzonego z określonym identyfikatorem polecenia.
 
 ```
 int FindSubItemIndexByID(UINT uiID) const;
@@ -402,14 +402,14 @@ int FindSubItemIndexByID(UINT uiID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*uiID*<br/>
-podczas Określa identyfikator polecenia elementu menu podręcznego.
+*Uiid*<br/>
+[w] Określa identyfikator polecenia elementu menu podręcznego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks (liczony od zera) elementu podrzędnego, który jest skojarzony z *uiID*. -1, jeśli nie ma takiego elementu podrzędnego.
+Indeks od zera podudziału skojarzonego z *identyfikatorem uiID*. -1, jeśli nie ma takiego podpozycji.
 
-##  <a name="getcommandrect"></a>CMFCRibbonButton::GetCommandRect
+## <a name="cmfcribbonbuttongetcommandrect"></a><a name="getcommandrect"></a>CMFCRibbonButton::GetCommandRect
 
 ```
 CRect GetCommandRect() const;
@@ -419,7 +419,7 @@ CRect GetCommandRect() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getcompactsize"></a>CMFCRibbonButton::GetCompactSize
+## <a name="cmfcribbonbuttongetcompactsize"></a><a name="getcompactsize"></a>CMFCRibbonButton::GetCompactSize
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -427,13 +427,13 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *kontroler PDC*<br/>
+[w] *pDC*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="geticon"></a>CMFCRibbonButton:: GetIcon
+## <a name="cmfcribbonbuttongeticon"></a><a name="geticon"></a>CMFCRibbonButton::GetIcon
 
 ```
 HICON GetIcon(BOOL bLargeIcon = TRUE) const;
@@ -441,15 +441,15 @@ HICON GetIcon(BOOL bLargeIcon = TRUE) const;
 
 ### <a name="parameters"></a>Parametry
 
-podczas *bLargeIcon*<br/>
+[w] *bLargeIcon*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getimageindex"></a>CMFCRibbonButton:: elemencie getimageindex
+## <a name="cmfcribbonbuttongetimageindex"></a><a name="getimageindex"></a>CMFCRibbonButton::GetImageIndex
 
-Zwraca indeks obrazu, który jest skojarzony z przyciskiem.
+Zwraca indeks obrazu skojarzonego z przyciskiem.
 
 ```
 int GetImageIndex(BOOL bLargeImage) const;
@@ -457,14 +457,14 @@ int GetImageIndex(BOOL bLargeImage) const;
 
 ### <a name="parameters"></a>Parametry
 
-*bLargeImage*<br/>
-podczas W przypadku wartości TRUE zwraca indeks obrazu na liście obrazów, która zawiera duże obrazy; w przeciwnym razie zwraca indeks obrazu na liście obrazów zawierającej małe obrazy.
+*bDaźnia*<br/>
+[w] Jeśli funkcja TRUE, zwraca indeks obrazu na liście obrazów zawierającą duże obrazy; w przeciwnym razie zwraca indeks obrazu na liście obrazów, który zawiera małe obrazy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Indeks obrazu przycisku na liście skojarzonych obrazów.
 
-##  <a name="getimagesize"></a>CMFCRibbonButton::GetImageSize
+## <a name="cmfcribbonbuttongetimagesize"></a><a name="getimagesize"></a>CMFCRibbonButton::GetImageSize
 
 ```
 virtual CSize GetImageSize(RibbonImageType type) const;
@@ -472,13 +472,13 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 
 ### <a name="parameters"></a>Parametry
 
-podczas *Typ*<br/>
+[w] *typ*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getintermediatesize"></a>CMFCRibbonButton::GetIntermediateSize
+## <a name="cmfcribbonbuttongetintermediatesize"></a><a name="getintermediatesize"></a>CMFCRibbonButton::GetIntermediateSize
 
 ```
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -486,15 +486,15 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *kontroler PDC*<br/>
+[w] *pDC*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getmenu"></a>CMFCRibbonButton:: GetMenu
+## <a name="cmfcribbonbuttongetmenu"></a><a name="getmenu"></a>CMFCRibbonButton::GetMenu
 
-Zwraca uchwyt do menu systemu Windows, które jest przypisane do przycisku wstążki.
+Zwraca uchwyt do menu systemu Windows przypisanego do przycisku wstążki.
 
 ```
 HMENU GetMenu() const;
@@ -502,9 +502,9 @@ HMENU GetMenu() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Uchwyt do menu systemu Windows przypisanego do przycisku; Wartość NULL, jeśli nie przypisano menu.
+Uchwyt do menu systemu Windows przypisany do przycisku; NULL, jeśli nie ma przypisanego menu.
 
-##  <a name="getmenurect"></a>CMFCRibbonButton::GetMenuRect
+## <a name="cmfcribbonbuttongetmenurect"></a><a name="getmenurect"></a>CMFCRibbonButton::GetMenuRect
 
 ```
 CRect GetMenuRect() const;
@@ -514,7 +514,7 @@ CRect GetMenuRect() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getregularsize"></a>CMFCRibbonButton::GetRegularSize
+## <a name="cmfcribbonbuttongetregularsize"></a><a name="getregularsize"></a>CMFCRibbonButton::GetRegularSize
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -522,13 +522,13 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *kontroler PDC*<br/>
+[w] *pDC*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getsubitems"></a>CMFCRibbonButton:: SubItems
+## <a name="cmfcribbonbuttongetsubitems"></a><a name="getsubitems"></a>CMFCRibbonButton::GetSubItems
 
 ```
 const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() const;
@@ -538,7 +538,7 @@ const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() cons
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="gettextrowheight"></a>CMFCRibbonButton::GetTextRowHeight
+## <a name="cmfcribbonbuttongettextrowheight"></a><a name="gettextrowheight"></a>CMFCRibbonButton::GetTextRowHeight
 
 ```
 int GetTextRowHeight() const;
@@ -548,7 +548,7 @@ int GetTextRowHeight() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="gettooltiptext"></a>CMFCRibbonButton::GetToolTipText
+## <a name="cmfcribbonbuttongettooltiptext"></a><a name="gettooltiptext"></a>CMFCRibbonButton::GetToolTipText
 
 ```
 virtual CString GetToolTipText() const;
@@ -558,7 +558,7 @@ virtual CString GetToolTipText() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="hascompactmode"></a>CMFCRibbonButton::HasCompactMode
+## <a name="cmfcribbonbuttonhascompactmode"></a><a name="hascompactmode"></a>CMFCRibbonButton::HasCompactMode
 
 ```
 virtual BOOL HasCompactMode() const;
@@ -568,7 +568,7 @@ virtual BOOL HasCompactMode() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="hasintermediatemode"></a>CMFCRibbonButton::HasIntermediateMode
+## <a name="cmfcribbonbuttonhasintermediatemode"></a><a name="hasintermediatemode"></a>CMFCRibbonButton::HasIntermediateMode
 
 ```
 virtual BOOL HasIntermediateMode() const;
@@ -578,7 +578,7 @@ virtual BOOL HasIntermediateMode() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="haslargemode"></a>CMFCRibbonButton::HasLargeMode
+## <a name="cmfcribbonbuttonhaslargemode"></a><a name="haslargemode"></a>CMFCRibbonButton::HasLargeMode
 
 ```
 virtual BOOL HasLargeMode() const;
@@ -588,7 +588,7 @@ virtual BOOL HasLargeMode() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="hasmenu"></a>CMFCRibbonButton::HasMenu
+## <a name="cmfcribbonbuttonhasmenu"></a><a name="hasmenu"></a>CMFCRibbonButton::HasMenu
 
 ```
 virtual BOOL HasMenu() const;
@@ -598,7 +598,7 @@ virtual BOOL HasMenu() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isalwaysdrawborder"></a>CMFCRibbonButton::IsAlwaysDrawBorder
+## <a name="cmfcribbonbuttonisalwaysdrawborder"></a><a name="isalwaysdrawborder"></a>CMFCRibbonButton::IsAlwaysDrawBorder
 
 ```
 virtual BOOL IsAlwaysDrawBorder() const;
@@ -608,7 +608,7 @@ virtual BOOL IsAlwaysDrawBorder() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isalwayslargeimage"></a>CMFCRibbonButton::IsAlwaysLargeImage
+## <a name="cmfcribbonbuttonisalwayslargeimage"></a><a name="isalwayslargeimage"></a>CMFCRibbonButton::IsAlwaysLargeImage
 
 ```
 virtual BOOL IsAlwaysLargeImage() const;
@@ -618,7 +618,7 @@ virtual BOOL IsAlwaysLargeImage() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isapplicationbutton"></a>CMFCRibbonButton::IsApplicationButton
+## <a name="cmfcribbonbuttonisapplicationbutton"></a><a name="isapplicationbutton"></a>CMFCRibbonButton::IsApplicationButton
 
 ```
 virtual BOOL IsApplicationButton() const;
@@ -628,7 +628,7 @@ virtual BOOL IsApplicationButton() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="iscommandareahighlighted"></a>CMFCRibbonButton::IsCommandAreaHighlighted
+## <a name="cmfcribbonbuttoniscommandareahighlighted"></a><a name="iscommandareahighlighted"></a>CMFCRibbonButton::IsCommandAreaHighlighted
 
 ```
 virtual BOOL IsCommandAreaHighlighted() const;
@@ -638,9 +638,9 @@ virtual BOOL IsCommandAreaHighlighted() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isdefaultcommand"></a>CMFCRibbonButton::IsDefaultCommand
+## <a name="cmfcribbonbuttonisdefaultcommand"></a><a name="isdefaultcommand"></a>CMFCRibbonButton::IsDefaultCommand
 
-Określa, czy polecenie domyślne dla przycisku wstążki jest włączone.
+Określa, czy domyślne polecenie przycisku wstążki jest włączone.
 
 ```
 BOOL IsDefaultCommand() const;
@@ -648,9 +648,9 @@ BOOL IsDefaultCommand() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli włączono domyślne polecenie dla przycisku wstążki; W przeciwnym razie zwraca wartość FALSE.
+PRAWDA, jeśli włączono domyślne polecenie przycisku wstążki; FAŁSZ inaczej.
 
-##  <a name="isdefaultpanelbutton"></a>CMFCRibbonButton::IsDefaultPanelButton
+## <a name="cmfcribbonbuttonisdefaultpanelbutton"></a><a name="isdefaultpanelbutton"></a>CMFCRibbonButton::IsDefaultPanelButton
 
 ```
 virtual BOOL IsDefaultPanelButton() const;
@@ -660,7 +660,7 @@ virtual BOOL IsDefaultPanelButton() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isdrawtooltipimage"></a>CMFCRibbonButton::IsDrawTooltipImage
+## <a name="cmfcribbonbuttonisdrawtooltipimage"></a><a name="isdrawtooltipimage"></a>CMFCRibbonButton::IsDrawTooltipImage
 
 ```
 virtual BOOL IsDrawTooltipImage() const;
@@ -670,7 +670,7 @@ virtual BOOL IsDrawTooltipImage() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="islargeimage"></a>CMFCRibbonButton::IsLargeImage
+## <a name="cmfcribbonbuttonislargeimage"></a><a name="islargeimage"></a>CMFCRibbonButton::IsLargeImage
 
 ```
 BOOL IsLargeImage() const;
@@ -680,7 +680,7 @@ BOOL IsLargeImage() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ismenuareahighlighted"></a>CMFCRibbonButton::IsMenuAreaHighlighted
+## <a name="cmfcribbonbuttonismenuareahighlighted"></a><a name="ismenuareahighlighted"></a>CMFCRibbonButton::IsMenuAreaHighlighted
 
 ```
 virtual BOOL IsMenuAreaHighlighted() const;
@@ -690,7 +690,7 @@ virtual BOOL IsMenuAreaHighlighted() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ismenuonbottom"></a>CMFCRibbonButton::IsMenuOnBottom
+## <a name="cmfcribbonbuttonismenuonbottom"></a><a name="ismenuonbottom"></a>CMFCRibbonButton::IsMenuOnBottom
 
 ```
 BOOL IsMenuOnBottom() const;
@@ -700,7 +700,7 @@ BOOL IsMenuOnBottom() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ispopupdefaultmenulook"></a>CMFCRibbonButton::IsPopupDefaultMenuLook
+## <a name="cmfcribbonbuttonispopupdefaultmenulook"></a><a name="ispopupdefaultmenulook"></a>CMFCRibbonButton::IsPopupDefaultMenuLook
 
 ```
 virtual BOOL IsPopupDefaultMenuLook() const;
@@ -710,7 +710,7 @@ virtual BOOL IsPopupDefaultMenuLook() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isrightalignmenu"></a>CMFCRibbonButton::IsRightAlignMenu
+## <a name="cmfcribbonbuttonisrightalignmenu"></a><a name="isrightalignmenu"></a>CMFCRibbonButton::IsRightAlignMenu
 
 Określa, czy menu jest wyrównane do prawej.
 
@@ -722,7 +722,7 @@ BOOL IsRightAlignMenu() const;
 
 PRAWDA, jeśli menu jest wyrównane do prawej; w przeciwnym razie FALSE.
 
-##  <a name="issinglelinetext"></a>CMFCRibbonButton::IsSingleLineText
+## <a name="cmfcribbonbuttonissinglelinetext"></a><a name="issinglelinetext"></a>CMFCRibbonButton::IssingleLineText
 
 ```
 BOOL IsSingleLineText() const;
@@ -732,7 +732,7 @@ BOOL IsSingleLineText() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="oncalctextsize"></a>CMFCRibbonButton::OnCalcTextSize
+## <a name="cmfcribbonbuttononcalctextsize"></a><a name="oncalctextsize"></a>CMFCRibbonButton::OnCalcTextSize
 
 ```
 virtual void OnCalcTextSize(CDC* pDC);
@@ -740,13 +740,13 @@ virtual void OnCalcTextSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *kontroler PDC*<br/>
+[w] *pDC*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onclick"></a>CMFCRibbonButton:: onkliknięcia
+## <a name="cmfcribbonbuttononclick"></a><a name="onclick"></a>CMFCRibbonButton::OnClick
 
-Wywoływane przez platformę, gdy użytkownik kliknie przycisk.
+Wywoływane przez strukturę, gdy użytkownik kliknie przycisk.
 
 ```
 virtual void OnClick(CPoint point);
@@ -754,14 +754,14 @@ virtual void OnClick(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*moment*<br/>
-podczas Określa położenie kliknięcia myszą.
+*Punkt*<br/>
+[w] Określa położenie kliknięcia myszą.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w klasie pochodnej, jeśli chcesz obsłużyć to zdarzenie.
+Zastąpi tę metodę w klasie pochodnej, jeśli chcesz obsłużyć to zdarzenie.
 
-##  <a name="ondraw"></a>CMFCRibbonButton:: OnDraw
+## <a name="cmfcribbonbuttonondraw"></a><a name="ondraw"></a>CMFCRibbonButton::OnDraw
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -769,11 +769,11 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *kontroler PDC*<br/>
+[w] *pDC*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawborder"></a>CMFCRibbonButton::OnDrawBorder
+## <a name="cmfcribbonbuttonondrawborder"></a><a name="ondrawborder"></a>CMFCRibbonButton::OnDrawBorder
 
 ```
 virtual void OnDrawBorder(CDC* pDC);
@@ -781,11 +781,11 @@ virtual void OnDrawBorder(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *kontroler PDC*<br/>
+[w] *pDC*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onfillbackground"></a>CMFCRibbonButton::OnFillBackground
+## <a name="cmfcribbonbuttononfillbackground"></a><a name="onfillbackground"></a>CMFCRibbonButton::OnFillBackground
 
 ```
 virtual COLORREF OnFillBackground(CDC* pDC);
@@ -793,23 +793,23 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *kontroler PDC*<br/>
+[w] *pDC*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="removeallsubitems"></a>CMFCRibbonButton::RemoveAllSubItems
+## <a name="cmfcribbonbuttonremoveallsubitems"></a><a name="removeallsubitems"></a>CMFCRibbonButton::UsuńAllSubItems
 
-Usuwa wszystkie elementy menu z menu podręcznego.
+Usuwa wszystkie elementy menu z wyskakującego menu.
 
 ```
 void RemoveAllSubItems();
 ```
 
-##  <a name="removesubitem"></a>CMFCRibbonButton::RemoveSubItem
+## <a name="cmfcribbonbuttonremovesubitem"></a><a name="removesubitem"></a>CMFCRibbonButton::RemoveSubItem
 
-Usuwa element menu z menu podręcznego.
+Usuwa element menu z wyskakującego menu.
 
 ```
 BOOL RemoveSubItem(int nIndex);
@@ -817,16 +817,16 @@ BOOL RemoveSubItem(int nIndex);
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*<br/>
-podczas Określa indeks (liczony od zera) elementu menu, który ma zostać usunięty.
+*Nindex*<br/>
+[w] Określa indeks od zera elementu menu, który chcesz usunąć.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli określony element został pomyślnie usunięty; w przeciwnym razie FAŁSZ, jeśli *nIndex* jest ujemna lub przekracza liczbę elementów menu w menu podręcznym.
+PRAWDA, jeśli określony element został pomyślnie usunięty; w przeciwnym razie FAŁsz, jeśli *nIndex* jest ujemny lub przekracza liczbę elementów menu w menu podręcznym.
 
-##  <a name="setaccdata"></a>CMFCRibbonButton::SetACCData
+## <a name="cmfcribbonbuttonsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonButton::SetACCData
 
-Ustawia dane dostępności dla przycisku wstążki.
+Ustawia dane ułatwień dostępu dla przycisku wstążki.
 
 ```
 virtual BOOL SetACCData(
@@ -836,21 +836,21 @@ virtual BOOL SetACCData(
 
 ### <a name="parameters"></a>Parametry
 
-*pParent*<br/>
-Okno nadrzędne dla elementu wstążki.
+*pRoczysz*<br/>
+Okno nadrzędne elementu wstążki.
 
-*Data*<br/>
+*Danych*<br/>
 Dane ułatwień dostępu dla elementu wstążki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli powodzenie; w przeciwnym razie FALSE.
+Zwraca wartość PRAWDA, jeśli zakończy się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setalwayslargeimage"></a>CMFCRibbonButton::SetAlwaysLargeImage
+## <a name="cmfcribbonbuttonsetalwayslargeimage"></a><a name="setalwayslargeimage"></a>CMFCRibbonButton::SetAlwaysLargeImage
 
-Określa, czy przycisk wyświetla duży, czy mały obraz, gdy użytkownik zwija przycisk.
+Określa, czy przycisk wyświetla duży czy mały obraz, gdy użytkownik zwija przycisk.
 
 ```
 void SetAlwaysLargeImage(BOOL bSet=TRUE);
@@ -858,12 +858,12 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bSet*<br/>
-podczas W przypadku wartości TRUE przycisk wyświetla duży obraz. W przeciwnym razie przycisk wyświetla mały obraz.
+*bStaw*<br/>
+[w] Jeśli true, przycisk wyświetla duży obraz. W przeciwnym razie przycisk wyświetla mały obraz.
 
-##  <a name="setdefaultcommand"></a>CMFCRibbonButton::SetDefaultCommand
+## <a name="cmfcribbonbuttonsetdefaultcommand"></a><a name="setdefaultcommand"></a>CMFCRibbonButton::SetDefaultCommand
 
-Włącza domyślne polecenie dla przycisku wstążki.
+Włącza domyślne polecenie przycisku wstążki.
 
 ```
 void SetDefaultCommand(BOOL bSet=TRUE);
@@ -871,14 +871,14 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bSet*<br/>
-podczas W przypadku wartości TRUE przycisk może wykonać jego domyślne polecenie. W przypadku wartości FALSE przycisk nie może wykonać swojego polecenia domyślnego.
+*bStaw*<br/>
+[w] Jeśli true, przycisk można wykonać jego domyślne polecenie. Jeśli FALSE, przycisk nie może wykonać jego domyślne polecenie.
 
 ### <a name="remarks"></a>Uwagi
 
-*bSet* ma zastosowanie tylko wtedy, gdy przycisk ma menu. Jeśli *bSet* ma wartość true, przycisk może wykonać jego domyślne polecenie, a przypisane menu podręczne pojawia się tylko wtedy, gdy użytkownik kliknie strzałkę w prawej krawędzi przycisku. W przeciwnym razie przycisk nie może wykonać swojego polecenia domyślnego i pojawia się menu podręczne, niezależnie od tego, który obszar przycisku jest kliknięty przez użytkownika.
+*bStaw* jest odpowiedni tylko wtedy, gdy przycisk ma menu. Jeśli *bSet* ma wartość TRUE, przycisk może wykonać jego domyślne polecenie, a przypisane menu podręczne pojawia się tylko wtedy, gdy użytkownik kliknie strzałkę na prawej krawędzi przycisku. W przeciwnym razie przycisk nie może wykonać domyślnego polecenia, a menu podręczne jest wyświetlane niezależnie od tego, który obszar przycisku zostanie kliknięty przez użytkownika.
 
-##  <a name="setdescription"></a>CMFCRibbonButton:: SetDescription
+## <a name="cmfcribbonbuttonsetdescription"></a><a name="setdescription"></a>CMFCRibbonButton::SetDescription
 
 ```
 virtual void SetDescription(LPCTSTR lpszText);
@@ -886,11 +886,11 @@ virtual void SetDescription(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *lpszText*<br/>
+[w] *lpszText (tekst)*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setimageindex"></a>CMFCRibbonButton::SetImageIndex
+## <a name="cmfcribbonbuttonsetimageindex"></a><a name="setimageindex"></a>CMFCRibbonButton::SetImageIndex
 
 Przypisuje indeks do obrazu przycisku.
 
@@ -902,15 +902,15 @@ void SetImageIndex(
 
 ### <a name="parameters"></a>Parametry
 
-*nIndex*<br/>
-podczas Określa indeks obrazu.
+*Nindex*<br/>
+[w] Określa indeks obrazu.
 
-*bLargeImage*<br/>
-podczas W przypadku wartości TRUE określony indeks odwołuje się do listy dużych obrazów. W przeciwnym razie indeks odwołuje się do listy małych obrazów.
+*bDaźnia*<br/>
+[w] Jeśli true, określony indeks odwołuje się do listy dużych obrazów. W przeciwnym razie indeks odwołuje się do listy małych obrazów.
 
-##  <a name="setmenu"></a>CMFCRibbonButton:: SetMenu
+## <a name="cmfcribbonbuttonsetmenu"></a><a name="setmenu"></a>CMFCRibbonButton::SetMenu
 
-Przypisuje menu rozwijane do przycisku wstążki.
+Przypisuje menu podręczne do przycisku wstążki.
 
 ```
 void SetMenu(
@@ -926,23 +926,23 @@ void SetMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*hMenu*<br/>
+*Hmenu*<br/>
 Uchwyt do menu systemu Windows.
 
 *bIsDefaultCommand*<br/>
-W przypadku wartości TRUE przycisk może wykonać swoje polecenie domyślne; w przeciwnym razie przycisk wyświetla menu podręczne.
+Jeśli TRUE, przycisk można wykonać jego domyślne polecenie; w przeciwnym razie przycisk wyświetla wyskakujące menu.
 
-*bRightAlign*<br/>
-W przypadku wartości TRUE menu jest wyrównane do prawej strony. W przeciwnym razie menu jest wyrównane do lewej.
+*bPrawaAlign*<br/>
+Jeśli true, menu jest wyrównane do prawej. W przeciwnym razie menu jest wyrównane do lewej.
 
-*uiMenuResID*<br/>
+*interfejs użytkownika uiMenuResID*<br/>
 Identyfikator zasobu menu.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy aplikacja przypisze menu do przycisku, przycisk wyświetla strzałkę po prawej stronie. Jeśli *bIsDefaultCommand* ma wartość true, menu pojawia się tylko wtedy, gdy użytkownik kliknie strzałkę. Jeśli użytkownik kliknie przycisk, jego domyślne polecenie jest wykonywane. Jeśli *bIsDefaultCommand* ma wartość false, menu pojawia się po kliknięciu w dowolnym miejscu przycisku.
+Gdy aplikacja przypisuje menu do przycisku, przycisk wyświetla strzałkę po prawej stronie. Jeśli *bIsDefaultCommand* ma wartość TRUE, menu jest wyświetlane tylko wtedy, gdy użytkownik kliknie strzałkę. Jeśli użytkownik kliknie przycisk, jego domyślne polecenie jest wykonywane. Jeśli *bIsDefaultCommand* jest FALSE, menu pojawia się, klikając dowolne miejsce na przycisku.
 
-##  <a name="setparentcategory"></a>CMFCRibbonButton::SetParentCategory
+## <a name="cmfcribbonbuttonsetparentcategory"></a><a name="setparentcategory"></a>CMFCRibbonButton::SetParent Kategoria
 
 ```
 virtual void SetParentCategory(CMFCRibbonCategory* pParent);
@@ -950,11 +950,11 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *pParent*<br/>
+[w] *pRoczysz*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setrightalignmenu"></a>CMFCRibbonButton::SetRightAlignMenu
+## <a name="cmfcribbonbuttonsetrightalignmenu"></a><a name="setrightalignmenu"></a>CMFCRibbonButton::SetRightAlignMenu
 
 Wyrównuje menu podręczne do krawędzi przycisku.
 
@@ -964,10 +964,10 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bSet*<br/>
-podczas W przypadku wartości TRUE menu jest wyrównane do prawej strony. W przeciwnym razie menu jest wyrównane do lewej
+*bStaw*<br/>
+[w] Jeśli true, menu jest wyrównane do prawej. W przeciwnym razie menu jest wyrównane do lewej
 
-##  <a name="settext"></a>CMFCRibbonButton::SetText
+## <a name="cmfcribbonbuttonsettext"></a><a name="settext"></a>CMFCRibbonButton::SetText
 
 ```
 virtual void SetText(LPCTSTR lpszText);
@@ -975,11 +975,11 @@ virtual void SetText(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Parametry
 
-podczas *lpszText*<br/>
+[w] *lpszText (tekst)*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

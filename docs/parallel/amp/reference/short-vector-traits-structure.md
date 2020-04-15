@@ -7,16 +7,16 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: 7531a57dddcc85392380029afc6edd577bbc5cf3
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d743f74deaea5cb31cd609ece90891c8cfe2258f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126381"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374730"
 ---
 # <a name="short_vector_traits-structure"></a>short_vector_traits — Struktura
 
-short_vector_traits umożliwia pobieranie podstawowej długości wektora i typu skalarnego krótkiego typu wektora lub typu skalarnego
+short_vector_traits umożliwia pobieranie podstawowej długości wektora i typu skalarnego typu krótkiego wektora lub typu skalarnego
 
 ## <a name="syntax"></a>Składnia
 
@@ -79,25 +79,25 @@ struct short_vector_traits<double_4>;
 
 `T`
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne definicje typów
+### <a name="public-typedefs"></a>Publiczne typedefs
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[short_vector_traits:: short_vector_traits, Konstruktor](#ctor)||
+|[short_vector_traits::short_vector_traits Konstruktor](#ctor)||
 
 ### <a name="public-constants"></a>Stałe publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[short_vector_traits:: size — stała](#size)||
+|[short_vector_traits::size Stała](#size)||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -105,17 +105,17 @@ struct short_vector_traits<double_4>;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** amp_short_vectors. h
+**Nagłówek:** amp_short_vectors.h
 
-**Przestrzeń nazw:** Concurrency:: Graphics
+**Obszar nazw:** Współbieżność::grafika
 
-## <a name="ctor"></a>short_vector_traits:: short_vector_traits, Konstruktor
+## <a name="short_vector_traitsshort_vector_traits-constructor"></a><a name="ctor"></a>short_vector_traits::short_vector_traits Konstruktor
 
 ```cpp
 short_vector_traits();
 ```
 
-## <a name="size"></a>short_vector_traits:: size — stała
+## <a name="short_vector_traitssize-constant"></a><a name="size"></a>short_vector_traits::size Stała
 
 ```cpp
 static int const size = 1;
