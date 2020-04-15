@@ -14,12 +14,12 @@ helpviewer_keywords:
 - connection points [C++], implementing
 - IConnectionPointImpl class
 ms.assetid: 27992115-3b86-45dd-bc9e-54f32876c557
-ms.openlocfilehash: bd88fd5d00df0347c0bd2161129b8cfa3ca35406
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c62ac3310a579379674674a7a9a517e3f2fd60e5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496082"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329855"
 ---
 # <a name="iconnectionpointimpl-class"></a>Klasa IConnectionPointImpl
 
@@ -35,13 +35,13 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Klasa, która pochodzi od `IConnectionPointImpl`.
+Twoja klasa, pochodząca od `IConnectionPointImpl`.
 
 *piid*<br/>
-Wskaźnik do IID interfejsu reprezentowanego przez obiekt punktu połączenia.
+Wskaźnik do identyfikatora interfejsu reprezentowanego przez obiekt punktu połączenia.
 
-*CDV*<br/>
-Klasa, która zarządza połączeniami. Wartość domyślna to [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), która umożliwia nieograniczone połączenia. Można również użyć [CComUnkArray](../../atl/reference/ccomunkarray-class.md), który określa stałą liczbę połączeń.
+*Cdv*<br/>
+Klasa, która zarządza połączeniami. Wartością domyślną jest [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), która pozwala na nieograniczone połączenia. Można również użyć [CComUnkArray](../../atl/reference/ccomunkarray-class.md), który określa stałą liczbę połączeń.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -49,25 +49,25 @@ Klasa, która zarządza połączeniami. Wartość domyślna to [CComDynamicUnkAr
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IConnectionPointImpl:: Advise](#advise)|Ustanawia połączenie między punktem połączenia a ujściam.|
-|[IConnectionPointImpl::EnumConnections](#enumconnections)|Tworzy moduł wyliczający do iteracji połączeń dla punktu połączenia.|
-|[IConnectionPointImpl::GetConnectionInterface](#getconnectioninterface)|Pobiera identyfikator IID interfejsu reprezentowanego przez punkt połączenia.|
-|[IConnectionPointImpl::GetConnectionPointContainer](#getconnectionpointcontainer)|Pobiera wskaźnik interfejsu do połączonego obiektu.|
-|[IConnectionPointImpl:: Unadvise](#unadvise)|Kończy połączenie wcześniej ustanowione przez `Advise`.|
+|[IConnectionPointImpl::Doradzić](#advise)|Ustanawia połączenie między punktem połączenia a zatoniem.|
+|[IConnectionPointImpl::EnumConnections](#enumconnections)|Tworzy wyliczacz do iteracji za pośrednictwem połączeń dla punktu połączenia.|
+|[IConnectionPointImpl::GetConnectionInterface](#getconnectioninterface)|Pobiera identyfikator interfejsu reprezentowanego przez punkt połączenia.|
+|[IConnectionPointImpl::GetConnectionPointKontainer](#getconnectionpointcontainer)|Pobiera wskaźnik interfejsu do obiektu podłączanego.|
+|[IConnectionPointImpl::Unadvise](#unadvise)|Kończy połączenie wcześniej nawiązane `Advise`za pośrednictwem .|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IConnectionPointImpl::m_vec](#m_vec)|Zarządza połączeniami punktu połączenia.|
+|[IConnectionPointImpl::m_vec](#m_vec)|Zarządza połączeniami dla punktu połączenia.|
 
 ## <a name="remarks"></a>Uwagi
 
-`IConnectionPointImpl`implementuje punkt połączenia, który umożliwia obiektowi uwidocznienie interfejsu wychodzącego dla klienta. Klient implementuje ten interfejs na obiekcie o nazwie ujścia.
+`IConnectionPointImpl`implementuje punkt połączenia, który umożliwia obiektowi udostępnienie klienta interfejsu wychodzącego. Klient implementuje ten interfejs na obiekcie o nazwie sink.
 
-ATL używa [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) do implementowania połączonego obiektu. Każdy punkt połączenia w połączonym obiekcie reprezentuje interfejs wychodzący identyfikowany przez *piid*. Klasa *CDV* zarządza połączeniami między punktem połączenia a ujściam. Każde połączenie jest jednoznacznie identyfikowane przez "plik cookie".
+ATL używa [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) do zaimplementowania obiektu podłączanego. Każdy punkt połączenia w obrębie obiektu podłączonego reprezentuje interfejs wychodzący, identyfikowany przez *piid*. Klasa *CDV* zarządza połączeniami między punktem połączenia a obiektem sink. Każde połączenie jest jednoznacznie identyfikowane przez "plik cookie".
 
-Aby uzyskać więcej informacji na temat używania punktów połączenia w ATL, zobacz [punkty połączenia](../../atl/atl-connection-points.md)w artykule.
+Aby uzyskać więcej informacji na temat korzystania z punktów połączenia w atl, zobacz artykuł [Punkty połączenia](../../atl/atl-connection-points.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -77,11 +77,11 @@ Aby uzyskać więcej informacji na temat używania punktów połączenia w ATL, 
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom. h
+**Nagłówek:** atlcom.h
 
-##  <a name="advise"></a>IConnectionPointImpl:: Advise
+## <a name="iconnectionpointimpladvise"></a><a name="advise"></a>IConnectionPointImpl::Doradzić
 
-Ustanawia połączenie między punktem połączenia a ujściam.
+Ustanawia połączenie między punktem połączenia a zatoniem.
 
 ```
 STDMETHOD(Advise)(
@@ -91,13 +91,13 @@ STDMETHOD(Advise)(
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj [](#unadvise) funkcji Unadvise, aby przerwać połączenie połączenia.
+Użyj [Unadvise,](#unadvise) aby zakończyć wywołanie połączenia.
 
-Zobacz [IConnectionPoint:: Advise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) w Windows SDK.
+Zobacz [IConnectionPoint::Doradztwo](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) w programie Windows SDK.
 
-##  <a name="enumconnections"></a>IConnectionPointImpl::EnumConnections
+## <a name="iconnectionpointimplenumconnections"></a><a name="enumconnections"></a>IConnectionPointImpl::EnumConnections
 
-Tworzy moduł wyliczający do iteracji połączeń dla punktu połączenia.
+Tworzy wyliczacz do iteracji za pośrednictwem połączeń dla punktu połączenia.
 
 ```
 STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
@@ -105,11 +105,11 @@ STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IConnectionPoint:: EnumConnections](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-enumconnections) w Windows SDK.
+Zobacz [IConnectionPoint::EnumConnections](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-enumconnections) w windows SDK.
 
-##  <a name="getconnectioninterface"></a>IConnectionPointImpl::GetConnectionInterface
+## <a name="iconnectionpointimplgetconnectioninterface"></a><a name="getconnectioninterface"></a>IConnectionPointImpl::GetConnectionInterface
 
-Pobiera identyfikator IID interfejsu reprezentowanego przez punkt połączenia.
+Pobiera identyfikator interfejsu reprezentowanego przez punkt połączenia.
 
 ```
 STDMETHOD(GetConnectionInterface)(IID* piid2);
@@ -117,11 +117,11 @@ STDMETHOD(GetConnectionInterface)(IID* piid2);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IConnectionPoint:: GetConnectionInterface](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-getconnectioninterface) w Windows SDK.
+Zobacz [IConnectionPoint::GetConnectionInterface](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-getconnectioninterface) w windows SDK.
 
-##  <a name="getconnectionpointcontainer"></a>IConnectionPointImpl::GetConnectionPointContainer
+## <a name="iconnectionpointimplgetconnectionpointcontainer"></a><a name="getconnectionpointcontainer"></a>IConnectionPointImpl::GetConnectionPointKontainer
 
-Pobiera wskaźnik interfejsu do połączonego obiektu.
+Pobiera wskaźnik interfejsu do obiektu podłączanego.
 
 ```
 STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
@@ -129,11 +129,11 @@ STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IConnectionPoint:: GetConnectionPointContainer](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-getconnectionpointcontainer) w Windows SDK.
+Zobacz [IConnectionPoint::GetConnectionPointContainer](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-getconnectionpointcontainer) w windows SDK.
 
-##  <a name="m_vec"></a>IConnectionPointImpl::m_vec
+## <a name="iconnectionpointimplm_vec"></a><a name="m_vec"></a>IConnectionPointImpl::m_vec
 
-Zarządza połączeniami między obiektem punktu połączenia i ujściam.
+Zarządza połączeniami między obiektem punktu połączenia a obiektem sink.
 
 ```
 CDV m_vec;
@@ -141,11 +141,11 @@ CDV m_vec;
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie `m_vec` jest to typ [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md).
+Domyślnie `m_vec` jest typu [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md).
 
-##  <a name="unadvise"></a>IConnectionPointImpl:: Unadvise
+## <a name="iconnectionpointimplunadvise"></a><a name="unadvise"></a>IConnectionPointImpl::Unadvise
 
-Kończy połączenie wcześniej ustanowione przy użyciu [porady](#advise).
+Kończy połączenie wcześniej nawiązane za pośrednictwem [advise](#advise).
 
 ```
 STDMETHOD(Unadvise)(DWORD dwCookie);
@@ -153,9 +153,9 @@ STDMETHOD(Unadvise)(DWORD dwCookie);
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IConnectionPoint:: Unadvise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise) w Windows SDK.
+Zobacz [IConnectionPoint::Unadvise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise) w windows SDK.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint)<br/>
+[Iconnectionpoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)

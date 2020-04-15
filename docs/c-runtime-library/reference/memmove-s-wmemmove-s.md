@@ -1,9 +1,10 @@
 ---
 title: memmove_s, wmemmove_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wmemmove_s
 - memmove_s
+- _o_wmemmove_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +30,16 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: baec33046f891f64c04adeccf21f41d3eec7b814
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951781"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333154"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
-Przenosi jeden bufor do innego. Są to wersje [memmove, wmemmove](memmove-wmemmove.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Przenosi jeden bufor do drugiego. Są to wersje [memmove, wmemmove](memmove-wmemmove.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -58,44 +60,46 @@ errno_t wmemmove_s(
 
 ### <a name="parameters"></a>Parametry
 
-*dest*<br/>
+*Dest*<br/>
 Obiekt docelowy.
 
-*numberOfElements*<br/>
+*liczbaOfElements*<br/>
 Rozmiar buforu docelowego.
 
-*SRC*<br/>
+*src*<br/>
 Obiekt źródłowy.
 
-*liczbą*<br/>
-Liczba bajtów (**memmove_s**) lub znaków (**wmemmove_s**) do skopiowania.
+*Liczba*<br/>
+Liczba bajtów (**memmove_s**) lub znaków **(wmemmove_s**) do skopiowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia
+Zero, jeśli się powiedzie; kod błędu w przypadku awarii
 
-### <a name="error-conditions"></a>Warunki błędów
+### <a name="error-conditions"></a>Warunki błędu
 
-|*dest*|*numberOfElements*|*SRC*|Wartość zwracana|Zawartość miejsca *docelowego*|
+|*Dest*|*liczbaOfElements*|*src*|Wartość zwracana|Zawartość *dest*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|Ile|Ile|**EINVAL**|nie zmodyfikowano|
-|Ile|Ile|**NULL**|**EINVAL**|nie zmodyfikowano|
-|Ile|< *liczbą*|Ile|**ERANGE**|nie zmodyfikowano|
+|**Null**|Wszelki|Wszelki|**Einval**|nie zmodyfikowano|
+|Wszelki|Wszelki|**Null**|**Einval**|nie zmodyfikowano|
+|Wszelki|< *Liczba*|Wszelki|**Układ ERANGE**|nie zmodyfikowano|
 
 ## <a name="remarks"></a>Uwagi
 
-Kopiuje *liczbę* bajtów znaków z elementu *src* do miejsca *docelowego*. Jeśli niektóre regiony obszaru źródłowego i miejsca docelowego nakładają się na siebie, **memmove_s** zapewnia, że pierwotne bajty źródłowe w nakładanym regionie są kopiowane przed zastąpieniem.
+Kopie *zliczą* bajty znaków od *src* do *dest*. Jeśli niektóre regiony obszaru źródłowego i miejsce docelowe nakładają się na siebie, **memmove_s** zapewnia, że oryginalne bajty źródłowe w nakładającym się regionie są kopiowane przed nadpisaniem.
 
-Jeśli obiekt *docelowy* lub jeśli *src* jest wskaźnikiem typu null lub jeśli ciąg docelowy jest zbyt mały, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EINVAL** i ustawiają **errno** na **EINVAL**.
+Jeśli *dest* lub jeśli *src* jest wskaźnik null lub jeśli ciąg docelowy jest zbyt mały, te funkcje wywołać nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie jest dozwolone, funkcje te zwracają **EINVAL** i ustawić **errno** do **EINVAL**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**memmove_s**|\<string.h>|
-|**wmemmove_s**|\<WCHAR. h >|
+|**wmemmove_s**|\<wchar.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -133,9 +137,9 @@ Before: 0123456789
 After: 0012345789
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Manipulowanie buforem](../../c-runtime-library/buffer-manipulation.md)<br/>
+[Manipulacja buforem](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>
 [memcpy, wmemcpy](memcpy-wmemcpy.md)<br/>
 [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)<br/>

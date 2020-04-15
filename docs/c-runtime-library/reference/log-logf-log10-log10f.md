@@ -1,6 +1,6 @@
 ---
-title: log, logf —, logl, log10 —, log10f —, log10l
-ms.date: 04/05/2018
+title: log, logf, logl, log10, log10f, log10l
+ms.date: 4/2/2020
 api_name:
 - log10f
 - logf
@@ -8,6 +8,8 @@ api_name:
 - log
 - log10l
 - logl
+- _o_log
+- _o_log10
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: f610ead4d71a877051fdec8df2a1564089141eea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ab6f2654e9e647f140d5c579087b76001b317887
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953229"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341876"
 ---
-# <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf —, logl, log10 —, log10f —, log10l
+# <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
 Oblicza logarytmy.
 
@@ -74,32 +77,34 @@ long double log10( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Wartość, której LOGARYTM ma zostać znaleziony.
+*X*<br/>
+Wartość, której logarytm jest można znaleźć.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcja **log** Zwraca logarytm naturalny (o podstawie *e*) z *x* , jeśli to się powiedzie. Funkcje **log10 —** zwracają logarytm dziesiętny. Jeśli *x* jest ujemna, te funkcje zwracają domyślnie nieokreślony (IND). Jeśli *x* to 0, zwracają nieskończoność (inf).
+Funkcje **dziennika** zwracają logarytm naturalny (base *e)* *x,* jeśli zakończy się pomyślnie. Funkcje **log10** zwracają logarytm base-10. Jeśli *x* jest ujemny, te funkcje zwracają nieokreślony (IND), domyślnie. Jeśli *x* wynosi 0, zwracają nieskończoność (INF).
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|QNAN, IND|brak|_DOMAIN|
-|± 0|ZERODIVIDE|_SING|
-|*x* < 0|NIEPRAWIDŁOWY|_DOMAIN|
+|± QNAN, IND|brak|_DOMAIN|
+|± 0|ZERODYDYWAK|_SING|
+|*x* < 0|Nieprawidłowy|_DOMAIN|
 
-**dzienniki** i **log10 —** mają implementację, która używa Streaming SIMD Extensions 2 (SSE2). Zobacz [_set_SSE2_enable](set-sse2-enable.md) , aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2.
+**log** i **log10** mają implementację, która używa przesyłania strumieniowego rozszerzenia SIMD 2 (SSE2). Zobacz [_set_SSE2_enable,](set-sse2-enable.md) aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2.
 
 ## <a name="remarks"></a>Uwagi
 
-C++umożliwia Przeciążenie, dzięki czemu można wywoływać przeciążenia **dzienników** i **log10 —** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie podwójne** . W programie w języku C **log** i **log10 —** zawsze przyjmują i zwracają **podwójny**.
+C++ umożliwia przeciążenie, dzięki czemu można wywołać przeciążenia **dziennika** i **log10,** które przyjmują i zwracają **float** lub **długie podwójne** wartości. W programie C **log** i **log10** zawsze biorą i zwracają **podwójne**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**log**, **logf —** , **logl**, **log10 —** , **log10f —** , **log10l**|\<math.h>|
+|**log**, **logf**, **logl**, **log10**, **log10f**, **log10l**|\<> math.h|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -130,7 +135,7 @@ log( 9000.00 ) = 9.104980
 log10( 9000.00 ) = 3.954243
 ```
 
-Aby wygenerować logarytmy dla innych baz, Użyj relacji matematycznej: log Base b z = = naturalnym log (a)/log (b).
+Aby wygenerować logarytmy dla innych baz, użyj relacji matematycznej: log base b of a == dziennik naturalny (a) / dziennik naturalny (b).
 
 ```cpp
 // logbase.cpp
@@ -156,9 +161,9 @@ int main()
 Log base 2 of 65536.000000 is 16.000000
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md) <br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>
 [_matherr](matherr.md) <br/>
 [pow, powf, powl](pow-powf-powl.md) <br/>

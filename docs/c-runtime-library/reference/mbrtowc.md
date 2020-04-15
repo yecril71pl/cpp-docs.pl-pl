@@ -1,8 +1,9 @@
 ---
 title: mbrtowc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbrtowc
+- _o_mbrtowc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -24,16 +26,16 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: b4c68ae8df9821d862b9f742d8a8ef7ace19c981
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be46c3f3c728b70c7cbf060572acc24662637a81
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952446"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340930"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
-Konwertowanie znaku wielobajtowego w bieżących ustawieniach regionalnych na równoważny znak szeroki, z możliwością ponownego uruchomienia w środku znaku wielobajtowego.
+Konwertuj znak wielobajtowy w bieżącym ustawieniach regionalnych na równoważny znak szeroki, z możliwością ponownego uruchamiania w środku znaku wielobajtowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,45 +50,47 @@ size_t mbrtowc(
 
 ### <a name="parameters"></a>Parametry
 
-*WCHAR*<br/>
-Adres znaku dwubajtowego, który ma zostać wyświetlony przekonwertowany ciąg znaków dwubajtowych (typ **wchar_t**). Ta wartość może być pustym wskaźnikiem, jeśli nie jest wymagany żaden znak dwubajtowy.
+*Wchar*<br/>
+Adres szerokiego znaku, aby otrzymać przekonwertowany ciąg znaków szerokich (wpisz **wchar_t**). Ta wartość może być wskaźnikiem zerowym, jeśli nie jest wymagany szeroki znak powrotu.
 
 *mbchar*<br/>
 Adres sekwencji bajtów (znak wielobajtowy).
 
-*liczbą*<br/>
+*Liczba*<br/>
 Liczba bajtów do sprawdzenia.
 
 *mbstate*<br/>
-Wskaźnik do obiektu stanu konwersji. Jeśli ta wartość jest wskaźnikiem typu null, funkcja używa statycznego obiektu stanu konwersji wewnętrznego. Ponieważ wewnętrzny obiekt **mbstate_t** nie jest bezpieczny wątkowo, zalecamy, aby zawsze przekazać własny argument *mbstate* .
+Wskaźnik do obiektu stanu konwersji. Jeśli ta wartość jest wskaźnikiem zerowym, funkcja używa statycznego obiektu stanu konwersji wewnętrznej. Ponieważ obiekt **mbstate_t** wewnętrznej nie jest bezpieczny dla wątków, zaleca się, aby zawsze przechodzić własny argument *mbstate.*
 
 ## <a name="return-value"></a>Wartość zwracana
 
 Jedna z następujących wartości:
 
-0 *Liczba* następnych lub mniej bajtów kończy się znakiem wielobajtowym, który reprezentuje znak szerokości zerowej, który jest przechowywany w *WCHAR*, jeśli *WCHAR* nie jest wskaźnikiem o wartości null.
+0 Następna *liczba* lub mniej bajtów zakończy znak wielobajtowy reprezentujący znak o szerokości null, który jest przechowywany w *wchar*, jeśli *wchar* nie jest wskaźnikiem null.
 
-1 do *zliczenia*, włącznie z kolejną *liczbą* lub mniejszą liczbą bajtów, uzupełnij prawidłowy znak wielobajtowy. Zwracana wartość to liczba bajtów zakończonych znakiem wielobajtowym. Odpowiednik znaku dwubajtowego jest przechowywany w *WCHAR*, jeśli *WCHAR* nie jest wskaźnikiem o wartości null.
+1 do *zliczania*, włącznie Następna *liczba* lub mniej bajtów zakończyć prawidłowy znak wielobajtowy. Zwrócona wartość to liczba bajtów, które wypełniają znak wielobajtowy. Odpowiednik znaku szerokiego jest przechowywany w *wchar*, jeśli *wchar* nie jest wskaźnikiem null.
 
-(size_t) (-1) Wystąpił błąd kodowania. Kolejna lub mniejsza *Liczba* bajtów nie przyczyniają się do pełnego i prawidłowego znaku wielobajtowego. W tym przypadku **errno** jest ustawiony na EILSEQ, a stan przesunięcia konwersji w *mbstate* jest nieokreślony.
+(size_t) (-1) Wystąpił błąd kodowania. Następna *liczba* lub mniej bajtów nie przyczyniają się do pełnego i prawidłowego znaku wielobajtowego. W takim przypadku **errno** jest ustawiona na EILSEQ i stan zmiany konwersji w *mbstate* jest nieokreślony.
 
-(size_t) (-2) Następna *Liczba* bajtów przyczynia się do niekompletnego, ale potencjalnie prawidłowego znaku wielobajtowego, a wszystkie bajty *licznika* zostały przetworzone. Żadna wartość nie jest przechowywana w *WCHAR*, ale *mbstate* jest aktualizowana w celu ponownego uruchomienia funkcji.
+(size_t) (-2) Następna *liczba* bajtów przyczyniają się do niekompletnego, ale potencjalnie prawidłowego znaku wielobajtowego, a wszystkie bajty *count* zostały przetworzone. Żadna wartość nie jest przechowywana w *wchar*, ale *mbstate* jest aktualizowana, aby ponownie uruchomić funkcję.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli *mbchar* jest wskaźnikiem typu null, funkcja jest równoważna z wywołaniem:
+Jeśli *mbchar* jest wskaźnikiem null, funkcja jest równoważna wywołaniu:
 
 `mbrtowc(NULL, "", 1, &mbstate)`
 
-W takim przypadku wartość argumentów *WCHAR* i *Count* jest ignorowana.
+W takim przypadku wartość argumentów *wchar* i *count* są ignorowane.
 
-Jeśli *mbchar* nie jest wskaźnikiem o wartości null, funkcja sprawdza *liczbę* bajtów z *mbchar* , aby określić wymaganą liczbę bajtów, które są wymagane do ukończenia następnego znaku wielobajtowego. Jeśli następny znak jest prawidłowy, odpowiedni znak wielobajtowy jest przechowywany w *WCHAR* , jeśli nie jest pustym wskaźnikiem. Jeśli znak jest odpowiednim szerokim znakiem null, wynikiem stanu *mbstate* jest pierwotny stan konwersji.
+Jeśli *mbchar* nie jest wskaźnikiem null, funkcja sprawdza *liczbę* bajtów z *mbchar,* aby określić wymaganą liczbę bajtów, które są wymagane do ukończenia następnego znaku wielobajtowego. Jeśli następny znak jest prawidłowy, odpowiedni znak wielobajtowy jest przechowywany w *wchar,* jeśli nie jest wskaźnikiem null. Jeśli znak jest odpowiadający szeroki znak null, wynikowy stan *mbstate* jest stan konwersji początkowej.
 
-Funkcja **mbrtowc** różni się od [mbtowc, _mbtowc_l,](mbtowc-mbtowc-l.md) dzięki czemu można jej uruchomić. Stan konwersji jest przechowywany w *mbstate* dla kolejnych wywołań do tych samych lub innych funkcji, które można uruchomić ponownie. Wyniki są niezdefiniowane podczas mieszania użycia funkcji ponownego uruchamiania i nieuruchomionych ponownie.  Na przykład aplikacja powinna używać **wcsrlen** zamiast **wcslen** , jeśli podczas kolejnego wywołania **wcsrtombs** zostanie użyta wartość **wcstombs**.
+Funkcja **mbrtowc** różni się od [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md) od możliwości ponownego uruchomienia. Stan konwersji jest przechowywany w *mbstate* dla kolejnych wywołań do tej samej lub innych funkcji, które można ponownie uruchomić. Wyniki są niezdefiniowane podczas mieszania użycia funkcji, które można ponownie uruchomić i niepodważalne.  Na przykład aplikacja powinna używać **wcsrlen** zamiast **wcslen,** jeśli zamiast **wcstombs**jest używane kolejne wywołanie **wcsrtombs.**
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="example"></a>Przykład
 
-Konwertuje znak wielobajtowy na odpowiedni znak większości.
+Konwertuje znak wielobajtowy na jego odpowiednik znaków szerokich.
 
 ```cpp
 // crt_mbrtowc.cpp
@@ -207,10 +211,10 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**mbrtowc**|\<WCHAR. h >|
+|**mbrtowc**|\<wchar.h>|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

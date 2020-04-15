@@ -1,9 +1,11 @@
 ---
 title: _mbsnbcpy, _mbsnbcpy_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcpy
 - _mbsnbcpy_l
+- _o__mbsnbcpy
+- _o__mbsnbcpy_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,19 +38,19 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-ms.openlocfilehash: 9a52f8abb220c840f1b7f71d029efacd4c5206fb
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 130e19fcb1107f27133854f4e379b35969130106
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442856"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340659"
 ---
 # <a name="_mbsnbcpy-_mbsnbcpy_l"></a>_mbsnbcpy, _mbsnbcpy_l
 
-Kopiuje **n** bajtów ciągu do ciągu docelowego. Bardziej bezpieczne wersje tych funkcji są dostępne — zobacz [_mbsnbcpy_s, _mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md).
+Kopiuje **n** bajtów ciągu do ciągu docelowego. Dostępne są bezpieczniejsze wersje tych funkcji — zobacz [_mbsnbcpy_s, _mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md).
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -80,34 +83,36 @@ unsigned char * _mbsnbcpy_l(
 
 ### <a name="parameters"></a>Parametry
 
-*strDest*<br/>
+*strDest (strDest)*<br/>
 Miejsce docelowe dla ciągu znaków, który ma zostać skopiowany.
 
-*strSource*<br/>
-Ciąg znaków, który ma zostać skopiowany.
+*strSource (źródło usług strSource)*<br/>
+Ciąg znaków do skopiowania.
 
-*count*<br/>
+*Liczba*<br/>
 Liczba bajtów do skopiowania.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
-## <a name="return-value"></a>Wartość zwrócona
+## <a name="return-value"></a>Wartość zwracana
 
-**_mbsnbcpy** zwraca wskaźnik do docelowego ciągu znaków. Żadna wartość zwracana nie jest zarezerwowana do wskazania błędu.
+**_mbsnbcpy** zwraca wskaźnik do docelowego ciągu znaków. Żadna wartość zwracana nie jest zarezerwowana, aby wskazać błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_mbsnbcpy** kopiuje *liczbę* bajtów z *strSource* do *strDest*. Jeśli *licznik* przekracza rozmiar *strDest* lub parametry źródłowe i docelowe nakładają się na siebie, zachowanie **_mbsnbcpy** jest niezdefiniowane.
+Funkcja **_mbsnbcpy** kopiuje bajty *z* *zliczania* do *strDest*. Jeśli *liczba* przekracza rozmiar *strDest* lub ciągi źródłowe i docelowe nakładają się, zachowanie **_mbsnbcpy** jest niezdefiniowana.
 
-Jeśli *strSource* lub *strDest* jest wskaźnikiem o wartości null, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **wartość null** i ustawia **errno** na **EINVAL**.
+Jeśli *strSource* lub *strDest* jest wskaźnikiem null, ta funkcja wywołuje nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, funkcja zwraca **wartość NULL** i ustawia **errno** na **Wartość EINVAL**.
 
-Wartość wyjściowa jest zależna od ustawienia ustawienia kategorii **LC_CTYPE** ustawień regionalnych; Aby uzyskać więcej informacji [, zobacz setlocals, _wsetlocale](setlocale-wsetlocale.md) . Wersje tych funkcji są identyczne, z tą różnicą, że te, które nie mają sufiksu **_l** używają bieżących ustawień regionalnych i wersji, które mają sufiks **_l** , zamiast tego używają parametru ustawień regionalnych, który został przesłany. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Na wartość wyjściową ma wpływ ustawienie **LC_CTYPE** kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale aby](setlocale-wsetlocale.md) uzyskać więcej informacji. Wersje tych funkcji są identyczne, z tą różnicą, że te, które nie mają **sufiksu _l,** używają bieżących ustawień regionalnych, a wersje, które mają sufiks **_l** zamiast tego używają parametru ustawień regionalnych, który jest przekazywany. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
-> Te funkcje mogą być narażone na zagrożenia przepełnienia buforu. Przepełnienia buforu mogą służyć do uruchamiania dowolnego kodu osoby atakującej, co może spowodować nieuzasadnione podniesienie uprawnień i naruszyć bezpieczeństwo systemu. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+> Te funkcje mogą być narażone na zagrożenia przepełnienia buforu. Przekroczenia buforu może służyć do wykonywania dowolnego kodu atakującego, co może spowodować nieuzasadnione podniesienie uprawnień i naruszyć system. Aby uzyskać więcej informacji, zobacz [Unikanie przekroczenia buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-W C++programie te funkcje mają przeciążenia szablonu, które wywołują nowsze, bardziej bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczniejsze odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -120,10 +125,10 @@ W C++programie te funkcje mają przeciążenia szablonu, które wywołują nowsz
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnbcpy**|\<mbstring. h >|
-|**_mbsnbcpy_l**|\<mbstring. h >|
+|**_mbsnbcpy**|\<mbstring.h>|
+|**_mbsnbcpy_l**|\<mbstring.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

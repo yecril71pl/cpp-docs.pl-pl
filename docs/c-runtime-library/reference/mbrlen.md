@@ -1,8 +1,9 @@
 ---
 title: mbrlen
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbrlen
+- _o_mbrlen
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -24,16 +26,16 @@ f1_keywords:
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: c9559731f39db35e03f640bb30b9af3fff00cf66
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7503de22a8310335ddd678335916d3e74dab6e70
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952507"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340990"
 ---
 # <a name="mbrlen"></a>mbrlen
 
-Określ liczbę bajtów, które są wymagane do ukończenia znaku wielobajtowego w bieżących ustawieniach regionalnych, z możliwością ponownego uruchomienia w środku znaku wielobajtowego.
+Określ liczbę bajtów wymaganych do ukończenia znaku wielobajtowego w bieżących ustawieniach regionalnych, z możliwością ponownego uruchomienia w środku znaku wielobajtowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,10 +49,10 @@ size_t mbrlen(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Wskaźnik do następnego bajtu do sprawdzenia w ciągu znaków wielobajtowych.
+*Str*<br/>
+Wskaźnik do następnego bajtu, aby sprawdzić w ciągu znaków wielobajtowych.
 
-*liczbą*<br/>
+*Liczba*<br/>
 Maksymalna liczba bajtów do sprawdzenia.
 
 *mbstate*<br/>
@@ -62,36 +64,38 @@ Jedna z następujących wartości:
 
 |||
 |-|-|
-0|Kolejna *Liczba* lub mniejsza liczba bajtów Ukończ znak wielobajtowy, który reprezentuje szeroki znak null.
-1 do *zliczenia*włącznie|Kolejna *Liczba* lub mniejsza liczba bajtów ukończą prawidłowy znak wielobajtowy. Zwracana wartość to liczba bajtów zakończonych znakiem wielobajtowym.
-(size_t)(-2)|Kolejna *Liczba* bajtów przyczynia się do niekompletnego, ale potencjalnie prawidłowego znaku wielobajtowego i wszystkie bajty *licznika* zostały przetworzone.
-(size_t)(-1)|Wystąpił błąd kodowania. Kolejna lub mniejsza *Liczba* bajtów nie przyczyniają się do pełnego i prawidłowego znaku wielobajtowego. W tym przypadku **errno** jest ustawiony na EILSEQ i stan konwersji w *mbstate* jest nieokreślony.
+0|Następna *liczba* lub mniej bajtów zakończyć znak wielobajtowy, który reprezentuje znak o szerokości null.
+1 do *liczenia*, włącznie|Następna *liczba* lub mniej bajtów zakończy prawidłowy znak wielobajtowy. Zwrócona wartość to liczba bajtów, które wypełniają znak wielobajtowy.
+(size_t) (-2)|Następna *liczba* bajtów przyczyniają się do niekompletnego, ale potencjalnie prawidłowego znaku wielobajtowego i wszystkie bajty *liczby* zostały przetworzone.
+(size_t) (-1)|Wystąpił błąd kodowania. Następna *liczba* lub mniej bajtów nie przyczyniają się do pełnego i prawidłowego znaku wielobajtowego. W takim przypadku **errno** jest ustawiona na EILSEQ i stan konwersji w *mbstate* jest nieokreślony.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **mbrlen** sprawdza z największą liczbą bajtów rozpoczynającą się od bajtu wskazywanym przez *str* , aby określić *liczbę bajtów,* które są wymagane do ukończenia następnego znaku wielobajtowego, w tym wszystkie sekwencje przesunięcia. Jest równoważne wywołaniu `mbrtowc(NULL, str, count, &mbstate)` , gdzie *mbstate* jest obiektem **mbstate_t** udostępnionym przez użytkownika lub statycznym obiektem wewnętrznym dostarczonym przez bibliotekę.
+Funkcja **mbrlen** sprawdza co najwyżej *liczbę* bajtów, począwszy od bajtu wskazywania przez *str,* aby określić liczbę bajtów wymaganych do ukończenia następnego znaku wielobajtowego, w tym sekwencje przesunięcia. Jest to równoważne `mbrtowc(NULL, str, count, &mbstate)` wywołanie, gdzie *mbstate* jest obiektem **mbstate_t** dostarczonym przez użytkownika lub statycznym obiektem wewnętrznym dostarczonym przez bibliotekę.
 
-Funkcja **mbrlen** zapisuje i używa stanu przesunięcia niekompletnego znaku wielobajtowego w parametrze *mbstate* . Dzięki temu **mbrlen** możliwość ponownego uruchomienia w środku znaku wielobajtowego, jeśli jest to konieczne, badanie z największą *liczbą* bajtów. Jeśli *mbstate* jest wskaźnikiem typu null, **mbrlen** używa wewnętrznego, statycznego obiektu **mbstate_t** do przechowywania stanu przesunięcia. Ponieważ wewnętrzny obiekt **mbstate_t** nie jest bezpieczny wątkowo, zalecamy, aby zawsze przydzielić i przekazać własny parametr *mbstate* .
+Funkcja **mbrlen** zapisuje i używa stanu zmiany niekompletnego znaku wielobajtowego w parametrze *mbstate.* Daje to **mbrlen** możliwość ponownego uruchamiania w środku znaku wielobajtowego w razie potrzeby, badanie co najwyżej *liczba* bajtów. Jeśli *mbstate* jest wskaźnikiem zerowym, **mbrlen** używa wewnętrznego, statycznego **obiektu mbstate_t** do przechowywania stanu zmiany. Ponieważ obiekt **mbstate_t** wewnętrzny nie jest bezpieczny dla wątków, zaleca się zawsze przydzielić i przekazać własny parametr *mbstate.*
 
-Funkcja **mbrlen** różni się od [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md) według ich ponownego uruchomienia. Stan przesunięcia jest przechowywany w *mbstate* dla kolejnych wywołań do tych samych lub innych funkcji, które można uruchomić ponownie. Wyniki są niezdefiniowane podczas mieszania użycia funkcji ponownego uruchamiania i nieuruchomionych ponownie.  Na przykład aplikacja powinna używać **wcsrlen** zamiast **wcslen** , jeśli podczas kolejnego wywołania **wcsrtombs** zostanie użyta wartość **wcstombs**.
+Funkcja **mbrlen** różni się od [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md) przez jego możliwości ponownego uruchomienia. Stan zmiany jest przechowywany w *mbstate* dla kolejnych wywołań do tej samej lub innych funkcji, które można ponownie uruchomić. Wyniki są niezdefiniowane podczas mieszania użycia funkcji, które można ponownie uruchomić i niepodważalne.  Na przykład aplikacja powinna używać **wcsrlen** zamiast **wcslen,** jeśli zamiast **wcstombs**jest używane kolejne wywołanie **wcsrtombs.**
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|Nie dotyczy|Nie dotyczy|**mbrlen**|Nie dotyczy|
+|nie dotyczy|nie dotyczy|**mbrlen**|nie dotyczy|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**mbrlen**|\<WCHAR. h >|
+|**mbrlen**|\<wchar.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Ten przykład pokazuje, jak interpretacja znaków wielobajtowych zależy od bieżącej strony kodowej i demonstruje możliwości wznawiania **mbrlen**.
+W tym przykładzie pokazano, jak interpretacja znaków wielobajtowych zależy od bieżącej strony kodowej i pokazuje możliwość wznowienia **mbrlen**.
 
 ```C
 // crt_mbrlen.c
@@ -151,7 +155,7 @@ Code page: 932
 Character count: 25
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>

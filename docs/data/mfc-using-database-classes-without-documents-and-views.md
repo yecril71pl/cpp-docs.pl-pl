@@ -17,107 +17,107 @@ helpviewer_keywords:
 - database applications [C++], without documents
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
-ms.openlocfilehash: 57a7abd89bc9bfb465912a35c21f9780668f4466
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c914a449b73e7da876d2e05b894c016b53881c3b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213359"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360670"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: używanie klas baz danych bez dokumentów i widoków
 
-Czasami możesz nie chcieć używać architektury dokumentu/widoku struktury w aplikacjach baz danych. W tym temacie objaśniono:
+Czasami nie można użyć architektury dokumentu/widoku struktury w aplikacjach bazy danych. W tym temacie wyjaśniono:
 
-- [Gdy nie musisz używać dokumentów](#_core_when_you_don.92.t_need_documents) , takich jak Serializacja dokumentu.
+- [Jeśli nie trzeba używać dokumentów,](#_core_when_you_don.92.t_need_documents) takich jak serializacji dokumentów.
 
-- [Opcje Kreatora aplikacji](#_core_appwizard_options_for_documents_and_views) do obsługi aplikacji bez serializacji i poleceń menu **plik** związanych z dokumentem, takich jak **New**, **Open**, **Save**i **Save as**.
+- [Opcje kreatora aplikacji](#_core_appwizard_options_for_documents_and_views) do obsługi aplikacji bez serializacji i bez poleceń menu **plik** związanych z dokumentami, takich jak **Nowy**, **Otwórz,** **Zapisz**i **Zapisz jako**.
 
-- [Jak korzystać z aplikacji używającej minimalnego dokumentu](#_core_applications_with_minimal_documents).
+- [Jak pracować z aplikacją, która używa minimalnego dokumentu](#_core_applications_with_minimal_documents).
 
-- [Jak określić strukturę aplikacji bez dokumentu lub widoku](#_core_applications_with_no_document).
+- [Jak uporządkować aplikację bez dokumentu lub widoku](#_core_applications_with_no_document).
 
-##  <a name="when-you-do-not-need-documents"></a><a name="_core_when_you_don.92.t_need_documents"></a>Gdy dokumenty nie są potrzebne
+## <a name="when-you-do-not-need-documents"></a><a name="_core_when_you_don.92.t_need_documents"></a>Gdy nie potrzebujesz dokumentów
 
-Niektóre aplikacje mają odrębną koncepcję dokumentu. Te aplikacje zwykle ładują wszystkie lub większość plików z magazynu do pamięci za pomocą polecenia **Otwórz plik** . Zapisują zaktualizowany plik z powrotem do magazynu wszystkie naraz przy użyciu **pliku Zapisz** lub **Zapisz jako** polecenie. Użytkownik widzi plik danych.
+Niektóre aplikacje mają odrębną koncepcję dokumentu. Te aplikacje zazwyczaj załadować wszystkie lub większość pliku z magazynu do pamięci za pomocą **polecenia File Open.** Zapisują zaktualizowany plik z powrotem do magazynu na raz za pomocą polecenia **Zapisz plik** lub **Zapisz jako.** To, co widzi użytkownik, to plik danych.
 
-Jednak niektóre kategorie aplikacji nie wymagają dokumentu. Aplikacje bazy danych działają w ramach transakcji. Aplikacja wybiera rekordy z bazy danych i przedstawia je użytkownikowi, często jednocześnie. To, co użytkownik widzi, jest zwykle pojedynczym bieżącym rekordem, który może być jedynym z nich w pamięci.
+Niektóre kategorie aplikacji nie wymagają jednak dokumentu. Aplikacje baz danych działają pod względem transakcji. Aplikacja wybiera rekordy z bazy danych i przedstawia je użytkownikowi, często po jednym na raz. To, co widzi użytkownik, to zwykle pojedynczy bieżący rekord, który może być jedynym w pamięci.
 
-Jeśli aplikacja nie wymaga dokumentu do przechowywania danych, można przystąpić do części lub całości architektury dokumentu/widoku struktury. Ilość miejsca, z której korzystasz, zależy od preferowanej metody. Możesz:
+Jeśli aplikacja nie wymaga dokumentu do przechowywania danych, można zrezygnować z niektórych lub wszystkich struktury architektury dokumentu/widoku. To, z jakiej możesz zrezygnować, zależy od preferowanego podejścia. Możesz:
 
-- Używaj minimalnego dokumentu jako miejsca do przechowywania połączenia ze źródłem danych, ale z użyciem normalnych funkcji dokumentu, takich jak serializacji. Jest to przydatne, gdy potrzebujesz kilku widoków danych i chcesz synchronizować wszystkie widoki, aktualizować je wszystkie jednocześnie i tak dalej.
+- Użyj minimalnego dokumentu jako miejsca do przechowywania połączenia ze źródłem danych, ale zrezygnuj z normalnych funkcji dokumentu, takich jak serializacja. Jest to przydatne, gdy chcesz kilka widoków danych i chcesz zsynchronizować wszystkie widoki, aktualizując je wszystkie naraz i tak dalej.
 
-- Użyj okna ramowego, w którym narysujesz bezpośrednio, zamiast korzystać z widoku. W takim przypadku pomijasz dokument i przechowujesz dane lub połączenia danych w obiekcie ramki okna.
+- Użyj okna ramki, do którego rysowane są bezpośrednio, a nie za pomocą widoku. W takim przypadku należy pominąć dokument i zapisać wszelkie połączenia danych lub danych w obiekcie okna ramki.
 
-##  <a name="application-wizard-options-for-documents-and-views"></a><a name="_core_appwizard_options_for_documents_and_views"></a>Opcje Kreatora aplikacji dla dokumentów i widoków
+## <a name="application-wizard-options-for-documents-and-views"></a><a name="_core_appwizard_options_for_documents_and_views"></a>Opcje kreatora aplikacji dla dokumentów i widoków
 
-Kreator aplikacji MFC zawiera kilka opcji obsługiwanych w ramach **wyboru bazy danych**, które są wymienione w poniższej tabeli. W przypadku tworzenia aplikacji za pomocą Kreatora aplikacji MFC wszystkie te opcje tworzą aplikacje z dokumentami i widokami. Niektóre opcje zapewniają dokumenty i widoki, które pomijają niepotrzebne funkcje dokumentu. Aby uzyskać więcej informacji, zobacz [Obsługa bazy danych, Kreator aplikacji MFC](../mfc/reference/database-support-mfc-application-wizard.md).
+Kreator aplikacji MFC ma kilka opcji w **obsłudze bazy danych Wybierz**, które są wymienione w poniższej tabeli. Jeśli używasz Kreatora aplikacji MFC do utworzenia aplikacji, wszystkie te opcje tworzą aplikacje z dokumentami i widokami. Niektóre opcje zawierają dokumenty i widoki, które pomijają niepotrzebne funkcje dokumentu. Aby uzyskać więcej informacji, zobacz [Obsługa bazy danych, Kreator aplikacji MFC](../mfc/reference/database-support-mfc-application-wizard.md).
 
 |Opcja|Widok|Dokument|
 |------------|----------|--------------|
-|**Dawaj**|Pochodny od `CView`.|Nie zapewnia obsługi bazy danych. Jest to opcja domyślna.<br /><br /> Jeśli wybierzesz opcję **Obsługa architektury dokumentu/widoku** na stronie [Typ aplikacji, Kreator aplikacji MFC](../mfc/reference/application-type-mfc-application-wizard.md) , uzyskasz pełną obsługę dokumentów, w tym serializacji i **nowe**, **otwarte**, **Zapisz**i **Zapisz jako** polecenia w menu **plik** . Zobacz [aplikacje bez dokumentu](#_core_applications_with_no_document).|
-|**Tylko pliki nagłówkowe**|Pochodny od `CView`.|Zapewnia podstawowy poziom obsługi bazy danych dla aplikacji.<br /><br /> Zawiera AFXDB. h. Dodaje biblioteki łączy, ale nie tworzy żadnych klas specyficznych dla bazy danych. Zestawy rekordów można tworzyć później i używać ich do badania i aktualizowania rekordów.|
-|**Widok bazy danych bez obsługi plików**|Pochodny od `CRecordView`|Zapewnia obsługę dokumentów, ale nie obsługuje serializacji. Dokument może przechowywać zestaw rekordów i koordynować wiele widoków; nie obsługuje serializacji ani **nowych**, **otwartych**, **Zapisz**i **Zapisz jako** polecenia. Zobacz [aplikacje o minimalnych dokumentach](#_core_applications_with_minimal_documents). Jeśli dołączysz widok bazy danych, musisz określić źródło danych.<br /><br /> Obejmuje pliki nagłówka bazy danych, biblioteki linków, widok rekordów i zestaw rekordów. (Dostępne tylko w przypadku aplikacji z opcją **Obsługa dokumentu/widoku** wybraną na stronie [Kreator aplikacji MFC](../mfc/reference/application-type-mfc-application-wizard.md) ).|
-|**Widok bazy danych z obsługą plików**|Pochodny od `CRecordView`|Zapewnia obsługę pełnego dokumentu, w tym serializacji i poleceń menu **plików** związanych z dokumentem. Aplikacje bazy danych zwykle działają dla poszczególnych rekordów, a nie na podstawie poszczególnych plików, a więc nie wymagają serializacji. Jednak może istnieć specjalne użycie do serializacji. Zobacz [aplikacje o minimalnych dokumentach](#_core_applications_with_minimal_documents). Jeśli dołączysz widok bazy danych, musisz określić źródło danych.<br /><br /> Obejmuje pliki nagłówka bazy danych, biblioteki linków, widok rekordów i zestaw rekordów. (Dostępne tylko w przypadku aplikacji z opcją **Obsługa dokumentu/widoku** wybraną na stronie [Kreator aplikacji MFC](../mfc/reference/application-type-mfc-application-wizard.md) ).|
+|**Brak**|Pochodzi z `CView`.|Nie zapewnia obsługi bazy danych. Jest to domyślne ustawienie opcji.<br /><br /> Jeśli na stronie [Typ aplikacji, Kreator aplikacji MFC](../mfc/reference/application-type-mfc-application-wizard.md) zostanie wybrana opcja **Obsługa architektury Dokumentu/widoku,** w menu **Plik** zostanie wyświetlona pełna obsługa dokumentów, w tym serializacja i **polecenia Nowy**, **Otwórz**, **Zapisz**i **Zapisz jako.** Zobacz [Aplikacje bez dokumentu](#_core_applications_with_no_document).|
+|**Tylko pliki nagłówkowe**|Pochodzi z `CView`.|Zapewnia podstawowy poziom obsługi bazy danych dla aplikacji.<br /><br /> Zawiera Afxdb.h. Dodaje biblioteki łączy, ale nie tworzy żadnych klas specyficznych dla bazy danych. Zestawy rekordów można tworzyć później i używać ich do sprawdzania i aktualizowania rekordów.|
+|**Widok bazy danych bez obsługi plików**|Pochodzi z`CRecordView`|Zapewnia obsługę dokumentu, ale nie obsługuje serializacji. Dokument może przechowywać zestaw rekordów i koordynować wiele widoków; nie obsługuje serializacji ani poleceń **Nowy**, **Otwórz**, **Zapisz**i **Zapisz jako.** Zobacz [Aplikacje z minimalnymi dokumentami](#_core_applications_with_minimal_documents). Jeśli dodasz widok bazy danych, należy określić źródło danych.<br /><br /> Zawiera pliki nagłówków bazy danych, biblioteki łączy, widok rekordów i zestaw rekordów. (Dostępne tylko dla aplikacji z opcją **obsługi architektury dokumentu/widoku** wybraną na stronie [Typ aplikacji, Kreator aplikacji MFC).](../mfc/reference/application-type-mfc-application-wizard.md)|
+|**Widok bazy danych z obsługą plików**|Pochodzi z`CRecordView`|Zapewnia pełną obsługę dokumentów, w tym serializacji i związanych z dokumentami polecenia menu **plik.** Aplikacje bazy danych zazwyczaj działają na podstawie dla rekordu, a nie na podstawie dla pliku, a więc nie wymagają serializacji. Jednak może mieć specjalne zastosowanie do serializacji. Zobacz [Aplikacje z minimalnymi dokumentami](#_core_applications_with_minimal_documents). Jeśli dodasz widok bazy danych, należy określić źródło danych.<br /><br /> Zawiera pliki nagłówków bazy danych, biblioteki łączy, widok rekordów i zestaw rekordów. (Dostępne tylko dla aplikacji z opcją **obsługi architektury dokumentu/widoku** wybraną na stronie [Typ aplikacji, Kreator aplikacji MFC).](../mfc/reference/application-type-mfc-application-wizard.md)|
 
-Aby zapoznać się z alternatywą dla serializacji i alternatywnych zastosowania serializacji, zobacz [serializacji: serializacji a dane wejściowe/wyjściowe bazy danych](../mfc/serialization-serialization-vs-database-input-output.md).
+Aby zapoznać się z omówieniami alternatyw dla serializacji i alternatywnych zastosowań serializacji, zobacz [Serializacja: Serializacja a dane wejściowe/wyjściowe bazy danych](../mfc/serialization-serialization-vs-database-input-output.md).
 
-##  <a name="applications-with-minimal-documents"></a><a name="_core_applications_with_minimal_documents"></a>Aplikacje z minimalnymi dokumentami
+## <a name="applications-with-minimal-documents"></a><a name="_core_applications_with_minimal_documents"></a>Wnioski z minimalnymi dokumentami
 
-Kreator aplikacji MFC ma dwie opcje, które obsługują aplikacje dostępu do danych oparte na formularzach. Każda opcja tworzy klasę widoku pochodnego `CRecordView`i dokumentu. Różnią się one w porównaniu z dokumentem.
+Kreator aplikacji MFC ma dwie opcje, które obsługują aplikacje dostępu do danych oparte na formularzach. Każda opcja `CRecordView`tworzy klasę widoku pochodnego i dokument. Różnią się one tym, co zostawiają z dokumentu.
 
-###  <a name="document-without-file-support"></a><a name="_core_a_document_without_file_support"></a>Dokument bez obsługi plików
+### <a name="document-without-file-support"></a><a name="_core_a_document_without_file_support"></a>Obsługa dokumentu bez plików
 
-Wybierz opcję bazy danych Kreator aplikacji **Widok bazy danych bez obsługi plików** , jeśli nie potrzebujesz serializacji dokumentu. Dokument ten służy do następujących celów:
+Wybierz opcję bazy danych kreatora aplikacji **Widok bazy danych bez obsługi plików,** jeśli nie potrzebujesz serializacji dokumentów. Dokument służy następującym użytecznym celom:
 
-- Jest to wygodne miejsce do przechowywania `CRecordset` obiektu.
+- Jest to wygodne miejsce `CRecordset` do przechowywania obiektu.
 
-   To użycie powoduje równoległe koncepcje zwykłego dokumentu: dokument przechowuje dane (lub, w tym przypadku zestaw rekordów) i widok to widok dokumentu.
+   To użycie jest równoległe do pojęć zwykłego dokumentu: dokument przechowuje dane (lub, w tym przypadku, zestaw rekordów), a widok jest widokiem dokumentu.
 
-- Jeśli aplikacja wyświetla wiele widoków (takich jak wiele widoków rekordów), dokument obsługuje koordynowanie widoków.
+- Jeśli aplikacja przedstawia wiele widoków (takich jak wiele widoków rekordów), dokument obsługuje koordynowanie widoków.
 
-   Jeśli wiele widoków wyświetla te same dane, można użyć funkcji składowej `CDocument::UpdateAllViews`, aby koordynować aktualizacje do wszystkich widoków, gdy dowolny widok zmieni dane.
+   Jeśli wiele widoków pokazuje te same `CDocument::UpdateAllViews` dane, można użyć funkcji elementu członkowskiego do koordynowania aktualizacji do wszystkich widoków, gdy dowolny widok zmieni dane.
 
-Ta opcja jest zwykle używana w przypadku prostych aplikacji opartych na formularzach. Kreator aplikacji obsługuje wygodną strukturę dla takich aplikacji automatycznie.
+Zazwyczaj używasz tej opcji dla prostych aplikacji opartych na formularzach. Kreator aplikacji obsługuje wygodną strukturę dla takich aplikacji automatycznie.
 
-###  <a name="document-with-file-support"></a><a name="_core_a_document_with_file_support"></a>Dokument z obsługą plików
+### <a name="document-with-file-support"></a><a name="_core_a_document_with_file_support"></a>Dokument z obsługą plików
 
-Wybierz opcję bazy danych Kreator aplikacji **Widok bazy danych z obsługą plików** , gdy istnieje alternatywne użycie poleceń menu **plik** powiązanych z dokumentem i serializacji dokumentu. W przypadku dostępu do danych w programie można użyć dokumentu w taki sam sposób, jak opisano w [dokumencie bez obsługi plików](#_core_a_document_without_file_support). Można użyć możliwości serializacji dokumentu, na przykład w celu odczytania i zapisania serializowanego dokumentu profilu użytkownika, który przechowuje preferencje użytkownika lub inne przydatne informacje. Aby uzyskać więcej sugestii, zobacz [serializacji: serializacji a dane wejściowe/wyjściowe bazy danych](../mfc/serialization-serialization-vs-database-input-output.md).
+Wybierz opcję bazy danych kreatora aplikacji **Widok bazy danych z obsługą plików,** gdy masz alternatywne zastosowanie dla poleceń menu **plik** związanych z dokumentem i serializacji dokumentu. W przypadku części programu dostępu do danych można użyć dokumentu w taki sam sposób, jak opisano w [dokumencie Bez obsługi plików](#_core_a_document_without_file_support). Można użyć możliwości serializacji dokumentu, na przykład do odczytu i zapisu seryjnego dokumentu profilu użytkownika, który przechowuje preferencje użytkownika lub inne przydatne informacje. Aby uzyskać więcej pomysłów, zobacz [Serializacja: Serializacja vs. Wejście/wyjście bazy danych](../mfc/serialization-serialization-vs-database-input-output.md).
 
-Kreator aplikacji obsługuje tę opcję, ale należy napisać kod, który serializować dokument. Przechowaj serializowane informacje w elementach członkowskich danych dokumentu.
+Kreator aplikacji obsługuje tę opcję, ale należy napisać kod, który serializuje dokument. Przechowywanie informacji seryjnych w członkach danych dokumentu.
 
-##  <a name="applications-with-no-document"></a><a name="_core_applications_with_no_document"></a>Aplikacje bez dokumentu
+## <a name="applications-with-no-document"></a><a name="_core_applications_with_no_document"></a>Aplikacje bez dokumentu
 
-Czasami warto napisać aplikację, która nie korzysta z dokumentów lub widoków. Bez dokumentów przechowujesz dane (takie jak `CRecordset` Object) w klasie okna ramki lub klasie aplikacji. Wszelkie dodatkowe wymagania zależą od tego, czy aplikacja prezentuje interfejs użytkownika.
+Czasami warto napisać aplikację, która nie używa dokumentów lub widoków. Bez dokumentów można przechowywać dane `CRecordset` (takie jak obiekt) w klasie okna ramki lub klasy aplikacji. Wszelkie dodatkowe wymagania zależą od tego, czy aplikacja przedstawia interfejs użytkownika.
 
-###  <a name="database-support-with-a-user-interface"></a><a name="_core_database_support_with_a_user_interface"></a>Obsługa bazy danych przy użyciu interfejsu użytkownika
+### <a name="database-support-with-a-user-interface"></a><a name="_core_database_support_with_a_user_interface"></a>Obsługa bazy danych za pomocą interfejsu użytkownika
 
-Jeśli dysponujesz interfejsem użytkownika (innym niż, na przykład w interfejsie wiersza polecenia konsoli), aplikacja rysuje się bezpośrednio w obszarze klienta okna ramki, a nie w widoku. Takie aplikacje nie używają `CRecordView`, `CFormView`ani `CDialog` dla głównego interfejsu użytkownika, ale zazwyczaj używają `CDialog` do zwykłych okien dialogowych.
+Jeśli masz interfejs użytkownika (inny niż na przykład interfejs wiersza polecenia konsoli), aplikacja rysuje bezpośrednio do obszaru klienta okna ramki, a nie do widoku. Taka aplikacja nie `CRecordView`używa `CFormView`, `CDialog` lub dla swojego głównego interfejsu `CDialog` użytkownika, ale zwykle używa do zwykłych okien dialogowych.
 
-###  <a name="writing-applications-without-documents"></a><a name="_core_writing_applications_without_documents"></a>Pisanie aplikacji bez dokumentów
+### <a name="writing-applications-without-documents"></a><a name="_core_writing_applications_without_documents"></a>Pisanie wniosków bez dokumentów
 
-Ponieważ Kreator aplikacji nie obsługuje tworzenia aplikacji bez dokumentów, należy napisać własną klasę pochodną `CWinApp`i, jeśli to konieczne, również utworzyć klasę `CFrameWnd` lub `CMDIFrameWnd`. Zastąp `CWinApp::InitInstance` i Zadeklaruj obiekt aplikacji jako:
+Ponieważ kreator aplikacji nie obsługuje tworzenia aplikacji bez dokumentów, `CWinApp`należy napisać własną klasę pochodną `CFrameWnd` i, w razie potrzeby, również utworzyć lub `CMDIFrameWnd` klasy. Zastąp `CWinApp::InitInstance` i zadeklaruj obiekt aplikacji jako:
 
 ```cpp
 CYourNameApp theApp;
 ```
 
-Struktura nadal dostarcza mechanizm mapowania komunikatów i wiele innych funkcji.
+Struktura nadal dostarcza mechanizm mapy wiadomości i wiele innych funkcji.
 
-###  <a name="database-support-separate-from-the-user-interface"></a><a name="_core_database_support_separate_from_the_user_interface"></a>Obsługa bazy danych oddzielona od interfejsu użytkownika
+### <a name="database-support-separate-from-the-user-interface"></a><a name="_core_database_support_separate_from_the_user_interface"></a>Obsługa bazy danych oddzielona od interfejsu użytkownika
 
-Niektóre aplikacje nie muszą mieć interfejsu użytkownika lub tylko minimalny. Załóżmy na przykład, że piszesz:
+Niektóre aplikacje nie potrzebują interfejsu użytkownika lub tylko minimalny. Załóżmy na przykład, że piszesz:
 
-- Pośredni obiekt dostępu do danych, który umożliwia innym aplikacjom (klientom) wywoływanie specjalnego przetwarzania danych między aplikacją a źródłem danych.
+- Obiekt pośredniego dostępu do danych, który inne aplikacje (klienci) wymagają specjalnego przetwarzania danych między aplikacją a źródłem danych.
 
-- Aplikacja, która przetwarza dane bez interwencji użytkownika, na przykład aplikację, która przenosi dane z jednego formatu bazy danych do innego lub który wykonuje obliczenia w ramach aktualizacji wsadowych.
+- Aplikacja przetwarza dane bez interwencji użytkownika, na przykład aplikacja, która przenosi dane z jednego formatu bazy danych do innego lub taki, który wykonuje obliczenia i wykonuje aktualizacje partii.
 
-Ponieważ żaden dokument nie jest właścicielem obiektu `CRecordset`, prawdopodobnie chcesz go zapisać jako osadzony element członkowski danych w klasie aplikacji pochodnej `CWinApp`. Alternatywy obejmują:
+Ponieważ żaden dokument `CRecordset` nie jest właścicielem obiektu, prawdopodobnie chcesz przechowywać `CWinApp`go jako element członkowski danych osadzonych w klasie aplikacji pochodnej. Alternatywy obejmują:
 
-- Nie zachowuje trwałego `CRecordset` obiektu. Można przekazać wartość NULL do konstruktorów klas zestawu rekordów. W takim przypadku struktura tworzy tymczasowy obiekt `CDatabase` przy użyciu informacji w `GetDefaultConnect` funkcja członkowska zestawu rekordów. Jest to najbardziej prawdopodobną metodę alternatywną.
+- Nie trzymanie `CRecordset` stałego przedmiotu w ogóle. Null można przekazać do konstruktorów klasy recordset. W takim przypadku struktura tworzy `CDatabase` obiekt tymczasowy przy użyciu informacji `GetDefaultConnect` w funkcji elementu członkowskiego pliku recordset. Jest to najbardziej prawdopodobne podejście alternatywne.
 
-- Tworzenie obiektu `CRecordset` jako zmiennej globalnej. Ta zmienna powinna być wskaźnikiem do obiektu zestawu rekordów, który jest tworzony dynamicznie w przesłonięciu `CWinApp::InitInstance`. Pozwala to uniknąć próby konstruowania obiektu przed zainicjowaniem struktury.
+- Uczynienie `CRecordset` obiektu zmienną globalną. Ta zmienna powinna być wskaźnikiem do obiektu recordset, który tworzy się dynamicznie w `CWinApp::InitInstance` zastąpienia. Pozwala to uniknąć próby skonstruowania obiektu przed zainicjowaniem struktury.
 
-- Używanie obiektów zestawu rekordów w ramach kontekstu dokumentu lub widoku. Tworzenie zestawów rekordów w funkcjach składowych obiektów aplikacji lub okien ramowych.
+- Używanie obiektów do zietń, tak jak w kontekście dokumentu lub widoku. Tworzenie zestawy rekordów w funkcjach członkowskich aplikacji lub ramki-okna obiektów.
 
 ## <a name="see-also"></a>Zobacz też
 

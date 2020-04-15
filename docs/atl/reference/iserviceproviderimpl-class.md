@@ -1,5 +1,5 @@
 ---
-title: IServiceProviderImpl Class
+title: Klasa IServiceProviderImpl
 ms.date: 11/04/2016
 f1_keywords:
 - IServiceProviderImpl
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-ms.openlocfilehash: e52c28d528e187713d2d0925fed23bd8cd4493d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef0ee4f77441cb8d19ea2d6dcada1fed9faf2782
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276007"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329429"
 ---
-# <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl Class
+# <a name="iserviceproviderimpl-class"></a>Klasa IServiceProviderImpl
 
-Ta klasa udostępnia domyślną implementację elementu `IServiceProvider` interfejsu.
+Ta klasa zapewnia domyślną `IServiceProvider` implementację interfejsu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,7 +30,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Z klasą pochodną `IServiceProviderImpl`.
+Twoja klasa, pochodząca od `IServiceProviderImpl`.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -38,17 +38,17 @@ Z klasą pochodną `IServiceProviderImpl`.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IServiceProviderImpl::QueryService](#queryservice)|Tworzy lub uzyskuje dostęp do określonej usługi i zwraca wskaźnik interfejsu do określonego interfejsu usługi.|
+|[IServiceProviderImpl::QueryService](#queryservice)|Tworzy lub uzyskuje dostęp do określonej usługi i zwraca wskaźnik interfejsu do określonego interfejsu dla usługi.|
 
 ## <a name="remarks"></a>Uwagi
 
-`IServiceProvider` Interfejsu lokalizuje określony przez jego identyfikator GUID usługi i zwraca wskaźnik interfejsu dla żądanego interfejsu usługi. Klasa `IServiceProviderImpl` udostępnia domyślną implementację tego interfejsu.
+Interfejs `IServiceProvider` lokalizuje usługę określoną przez jego identyfikator GUID i zwraca wskaźnik interfejsu żądanego interfejsu w usłudze. Klasa `IServiceProviderImpl` zapewnia domyślną implementację tego interfejsu.
 
-`IServiceProviderImpl` Określa jedną z metod: [QueryService](#queryservice), który tworzy i uzyskuje dostęp do określonej usługi i zwraca wskaźnik interfejsu do określonego interfejsu usługi.
+`IServiceProviderImpl`określa jedną metodę: [QueryService](#queryservice), która tworzy lub uzyskuje dostęp do określonej usługi i zwraca wskaźnik interfejsu do określonego interfejsu dla usługi.
 
-`IServiceProviderImpl` rozwiązania service map, począwszy od [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) i kończąc [END_SERVICE_MAP](service-map-macros.md#end_service_map).
+`IServiceProviderImpl`korzysta z mapy usług, począwszy od [BEGIN_SERVICE_MAP,](service-map-macros.md#begin_service_map) a kończąc na [END_SERVICE_MAP](service-map-macros.md#end_service_map).
 
-Mapa usługi zawiera dwie pozycje: [SERVICE_ENTRY](service-map-macros.md#service_entry), która wskazuje identyfikator określonej usługi (SID), obsługiwane przez obiekt, i [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), która wywołuje metodę `QueryService` do tworzenia łańcucha innego obiektu.
+Mapa usługi zawiera dwa wpisy: [SERVICE_ENTRY](service-map-macros.md#service_entry), który wskazuje określony identyfikator usługi (SID) obsługiwany przez obiekt i `QueryService` [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), który wywołuje łańcuch do innego obiektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -60,9 +60,9 @@ Mapa usługi zawiera dwie pozycje: [SERVICE_ENTRY](service-map-macros.md#service
 
 **Nagłówek:** atlcom.h
 
-##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService
+## <a name="iserviceproviderimplqueryservice"></a><a name="queryservice"></a>IServiceProviderImpl::QueryService
 
-Tworzy lub uzyskuje dostęp do określonej usługi i zwraca wskaźnik interfejsu do określonego interfejsu usługi.
+Tworzy lub uzyskuje dostęp do określonej usługi i zwraca wskaźnik interfejsu do określonego interfejsu dla usługi.
 
 ```
 STDMETHOD(QueryService)(
@@ -73,43 +73,43 @@ STDMETHOD(QueryService)(
 
 ### <a name="parameters"></a>Parametry
 
-*guidService*<br/>
-[in] Wskaźnik do identyfikator usług (SID).
+*usługa guid*<br/>
+[w] Wskaźnik do identyfikatora usługi (SID).
 
-*Parametr riid*<br/>
-[in] Identyfikator interfejsu, do którego ma dostęp obiekt wywołujący.
+*Riid*<br/>
+[w] Identyfikator interfejsu, do którego jest obiektu wywołującego, aby uzyskać dostęp.
 
-*ppvObj*<br/>
-[out] Pośredni wskaźnik do żądanego interfejsu.
+*ppvObj (polski)*<br/>
+[na zewnątrz] Wskaźnik pośredni do żądanego interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwrócona wartość HRESULT jest jedną z następujących czynności:
+Zwrócona wartość HRESULT jest jedną z następujących wartości:
 
 |Wartość zwracana|Znaczenie|
 |------------------|-------------|
-|S_OK|Usługa została pomyślnie utworzone lub pobrać.|
-|E_INVALIDARG|Co najmniej jeden z argumentów jest nieprawidłowa.|
-|E_OUTOFMEMORY|Pamięć jest za mała, aby utworzyć usługę.|
-|E_UNEXPECTED|Wystąpił nieznany błąd.|
-|E_NOINTERFACE|Żądany interfejs nie jest częścią tej usługi lub usługa jest nieznany.|
+|S_OK|Usługa została pomyślnie utworzona lub pobrana.|
+|E_invalidarg|Co najmniej jeden z argumentów jest nieprawidłowy.|
+|E_outofmemory|Pamięć jest niewystarczająca do utworzenia usługi.|
+|E_unexpected|Wystąpił nieznany błąd.|
+|E_nointerface|Żądany interfejs nie jest częścią tej usługi lub usługa jest nieznana.|
 
 ### <a name="remarks"></a>Uwagi
 
-`QueryService` Zwraca wartość pośredni wskaźnik do żądanego interfejsu w określonej usługi. Obiekt wywołujący jest odpowiedzialny za zwalniając tego wskaźnika, gdy nie jest już wymagany.
+`QueryService`zwraca wskaźnik pośredni do żądanego interfejsu w określonej usłudze. Wywołujący jest odpowiedzialny za zwolnienie tego wskaźnika, gdy nie jest już wymagane.
 
-Gdy wywołujesz `QueryService`, należy przekazać identyfikatorem usługi (*guidService*) i identyfikator interfejsu (*riid*). *GuidService* Określa usługę, do którego mają dostęp, i *riid* identyfikuje interfejs, który jest częścią usługi. W zamian otrzymasz pośredni wskaźnik do interfejsu.
+Podczas wywoływania `QueryService`należy przekazać zarówno identyfikator usługi (*guidService),* jak i identyfikator interfejsu (*riid*). *GuidService* określa usługę, do której chcesz uzyskać dostęp, a *riid* identyfikuje interfejs, który jest częścią usługi. W zamian otrzymasz wskaźnik pośredni do interfejsu.
 
-Obiekt, który implementuje interfejs może także implementować interfejsy, które należą do innych usług. Rozważ następujące opcje:
+Obiekt, który implementuje interfejs może również implementować interfejsy, które są częścią innych usług. Rozważ następujące źródła:
 
-- Niektóre z tych interfejsów, może być opcjonalny. Nie wszystkie interfejsy, zdefiniowane w opisie usługi są zawsze obecne w każdej implementacji usługi lub dla każdego zwróconego obiektu.
+- Niektóre z tych interfejsów mogą być opcjonalne. Nie wszystkie interfejsy zdefiniowane w opisie usługi są koniecznie obecne przy każdej implementacji usługi lub na każdym zwróconym obiekcie.
 
-- W przeciwieństwie do wywołania `QueryInterface`, przekazując identyfikator innej usługi nie musi oznaczać zwróceniem innego obiektu Component Object Model (COM).
+- W przeciwieństwie `QueryInterface`do wywołań , przekazywanie innego identyfikatora usługi nie musi oznaczać, że zwracany jest inny obiekt modelu obiektu komponentu (COM).
 
 - Zwrócony obiekt może mieć dodatkowe interfejsy, które nie są częścią definicji usługi.
 
-Dwa różne usługi, takie jak SID_SMyService i SID_SYourService, zarówno określić korzystanie z tego samego interfejsu, mimo że implementacja interfejsu może być nic wspólnego między obiema usługami. To działa, ponieważ wywołanie `QueryService` (SID_SMyService, IID_IDispatch) może zwrócić obiekt inny niż `QueryService` (SID_SYourService, IID_IDispatch). Tożsamość obiektu nie zakłada, że podczas określania identyfikatora innej usługi.
+Dwie różne usługi, takie jak SID_SMyService i SID_SYourService, można określić użycie tego samego interfejsu, mimo że implementacja interfejsu może mieć nic wspólnego między tymi dwiema usługami. To działa, ponieważ `QueryService` wywołanie (SID_SMyService, IID_IDispatch) może zwrócić inny `QueryService` obiekt niż (SID_SYourService, IID_IDispatch). Tożsamość obiektu nie jest przyjmowana po określeniu innego identyfikatora usługi.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

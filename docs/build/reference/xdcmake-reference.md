@@ -6,53 +6,53 @@ f1_keywords:
 helpviewer_keywords:
 - xdcmake program
 ms.assetid: 14e65747-d000-4343-854b-8393bf01cbac
-ms.openlocfilehash: 097c105e005a3c734ba86139ed3b4b6ecdcf49d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9970470d1feb471f9e0b8c9284a08337dac7ef0f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316395"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335858"
 ---
 # <a name="xdcmake-reference"></a>XDCMake — odwołanie
 
-xdcmake.exe to program, który kompiluje pliki .xdc w pliku XML. Podczas kompilowania kodu źródłowego za pomocą za pomocą kompilatora MSVC dla każdego pliku kodu źródłowego jest tworzony plik .xdc [/doc](doc-process-documentation-comments-c-cpp.md) i kiedy plik kodu źródłowego zawiera komentarze dokumentacji oznaczone tagów XML.
+xdcmake.exe to program, który kompiluje pliki xdc w plik .xml. Plik xdc jest tworzony przez kompilator MSVC dla każdego pliku kodu źródłowego, gdy kod źródłowy jest kompilowany z [/doc](doc-process-documentation-comments-c-cpp.md) i gdy plik kodu źródłowego zawiera komentarze dokumentacji oznaczone tagami XML.
 
-### <a name="to-use-xdcmakeexe-in-the-visual-studio-development-environment"></a>Aby użyć xdcmake.exe w środowisku programowania Visual Studio
+### <a name="to-use-xdcmakeexe-in-the-visual-studio-development-environment"></a>Aby użyć programu xdcmake.exe w środowisku programistycznym Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **Strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora języka C++ i właściwości kompilacji w programie Visual Studio.](../working-with-project-properties.md)
 
-1. Otwórz **właściwości konfiguracji** folderu.
+1. Otwórz folder **Właściwości konfiguracji.**
 
-1. Kliknij przycisk **komentarzy dokumentu XML** stronę właściwości.
+1. Kliknij stronę właściwości **Komentarze dokumentów XML.**
 
 > [!NOTE]
->  Opcje xdcmake.exe w wierszu polecenia różnią się od opcji, gdy xdcmake.exe jest używany w środowisku programistycznym (strony właściwości). Uzyskać informacji na temat używania xdcmake.exe w środowisku programistycznym, zobacz [strony właściwości narzędzia generowania dokumentów XML](xml-document-generator-tool-property-pages.md).
+> Opcje xdcmake.exe w wierszu polecenia różnią się od opcji, gdy xdcmake.exe jest używany w środowisku programistycznym (strony właściwości). Aby uzyskać informacje na temat używania pliku xdcmake.exe w środowisku programistycznym, zobacz [Strony właściwości narzędzia generatora dokumentów XML](xml-document-generator-tool-property-pages.md).
 
 ## <a name="syntax"></a>Składnia
 
-xdcmake — `input_filename options`
+xdcmake ( xdcmake )`input_filename options`
 
 ## <a name="parameters"></a>Parametry
 
 *input_filename*<br/>
-Nazwa pliku plików xdc używany jako dane wejściowe xdcmake.exe. Określ jeden lub więcej plików xdc lub użyj *.xdc wszystkich plików xdc w bieżącym katalogu.
+Nazwa pliku .xdc używana jako dane wejściowe do pliku xdcmake.exe. Określ jeden lub więcej plików xdc lub użyj *.xdc, aby użyć wszystkich plików xdc w bieżącym katalogu.
 
 *Opcje*<br/>
 Zero lub więcej z następujących czynności:
 
 |Opcja|Opis|
 |------------|-----------------|
-|/?, / help|Wyświetla Pomoc dla xdcmake.exe.|
-|/ Assembly:*nazwy pliku*|Umożliwia określenie wartości \<zestawu > tagu w pliku XML.  Domyślnie wartość \<zestawu > tag jest taka sama jak nazwa pliku XML.|
-|/nologo|Pomiń komunikat o prawach autorskich.|
-|/ out:*nazwy pliku*|Pozwala określić nazwę pliku XML.  Domyślnie nazwa pliku XML, który jest nazwa pierwszego pliku .xdc przetwarzane przez xdcmake.exe.|
+|/?, /help|Wyświetl pomoc dla xdcmake.exe.|
+|/assembly:*nazwa pliku*|Umożliwia określenie wartości znacznika \<> złożenia w pliku xml.  Domyślnie wartość \<zestawu> tag jest taka sama jak nazwa pliku xml.|
+|/nologo|Pomiń wiadomości dotyczące praw autorskich.|
+|/out:*nazwa pliku*|Umożliwia określenie nazwy pliku xml.  Domyślnie nazwa pliku xml jest nazwą pliku xdc pierwszego pliku xdc przetwarzanego przez xdcmake.exe.|
 
 ## <a name="remarks"></a>Uwagi
 
-Program Visual Studio będzie automatycznie wywoływać xdcmake.exe podczas kompilowania projektu. Można również wywołać xdcmake.exe w wierszu polecenia.
+Visual Studio wywoła xdcmake.exe automatycznie podczas tworzenia projektu. Można również wywołać xdcmake.exe w wierszu polecenia.
 
-Zobacz [tagi zalecane dla komentarzy do dokumentacji](recommended-tags-for-documentation-comments-visual-cpp.md) Aby uzyskać więcej informacji na temat dodawania komentarzy do dokumentacji do plików kodu źródłowego.
+Aby uzyskać więcej informacji na temat dodawania komentarzy do dokumentacji do plików kodu źródłowego, zobacz [Polecane znaczniki dla komentarzy do dokumentacji.](recommended-tags-for-documentation-comments-visual-cpp.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja XML](xml-documentation-visual-cpp.md)

@@ -1,10 +1,12 @@
 ---
 title: _getcwd, _wgetcwd
-description: Funkcje biblioteki środowiska uruchomieniowego języka C _getcwd, _wgetcwd pobrać bieżący katalog roboczy.
-ms.date: 09/24/2019
+description: C Funkcje biblioteki wykonawczej _getcwd, _wgetcwd uzyskać bieżący katalog roboczy.
+ms.date: 4/2/2020
 api_name:
 - _wgetcwd
 - _getcwd
+- _o__getcwd
+- _o__wgetcwd
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,16 +40,16 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 27cfdc1eb59c2de788bbe5963a6fccffcb62cba0
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: bc19a416ebebeb901e8dbb435971e6d5f33e4067
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274631"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344434"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd, _wgetcwd
 
-Pobiera bieżący katalog roboczy.
+Pobiera bieżącego katalogu roboczego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -63,27 +66,29 @@ wchar_t *_wgetcwd(
 
 ### <a name="parameters"></a>Parametry
 
-*buforu*\
-Lokalizacja przechowywania dla ścieżki.
+*Buforu*\
+Lokalizacja przechowywania ścieżki.
 
-*MaxLen*\
+*maxlen ( maxlen )*\
 Maksymalna długość ścieżki w znakach: **char** dla **_getcwd** i **wchar_t** dla **_wgetcwd**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do *buforu*. Wartość zwracana **null** wskazuje na błąd, a **errno** jest ustawiona na **ENOMEM**, co oznacza, że za mało pamięci do przydzielenia bajtów *MaxLen* (gdy argument o **wartości null** jest podawany jako *bufor*) lub do **ERANGE** , co oznacza, że ścieżka jest dłuższa niż *MaxLen* znaków. Jeśli *MaxLen* jest mniejsza lub równa zero, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md).
+Zwraca wskaźnik do *buforu*. Wartość **zwracana NULL** wskazuje błąd, a **errno** jest ustawiane na **ENOMEM,** co oznacza, że nie ma wystarczającej ilości pamięci do przydzielenia bajtów *maxlen* (gdy argument **NULL** jest podany jako *bufor)* lub **ERANGE**, co wskazuje, że ścieżka jest dłuższa niż znaki *maxlen.* Jeśli *maxlen* jest mniejszy lub równy zero, ta funkcja wywołuje nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md).
 
-Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodów zwrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_getcwd** pobiera pełną ścieżkę bieżącego katalogu roboczego dla dysku domyślnego i zapisuje ją w *buforze*. Argument Integer *MaxLen* określa maksymalną długość ścieżki. Błąd występuje, jeśli długość ścieżki (w tym kończący znak null) przekracza *MaxLen*. Argument *buforu* może mieć **wartość null**; bufor o rozmiarze co najmniej *MaxLen* (tylko w razie potrzeby) jest automatycznie przypisywany przy użyciu opcji **malloc**do przechowywania ścieżki. Bufor ten może zostać później zwolniony przez wywołanie funkcji **Free** i przekazanie jej do **_getcwd** wartości zwracanej (wskaźnik do przydzielonego buforu).
+Funkcja **_getcwd** pobiera pełną ścieżkę bieżącego katalogu roboczego dla dysku domyślnego i przechowuje go w *buforze*. Argument liczby całkowitej *maxlen* określa maksymalną długość ścieżki. Błąd występuje, jeśli długość ścieżki (w tym kończący się znak null) przekracza *maxlen*. Argument *buforu* może mieć **wartość NULL**; bufor o co najmniej *rozmiarze maxlen* (więcej tylko w razie potrzeby) jest automatycznie przydzielany, używając **malloc**, do przechowywania ścieżki. Ten bufor można później zwolnić, wywołując **free** i przekazując go **_getcwd** zwracaną wartość (wskaźnik do przydzielonego buforu).
 
-**_getcwd** zwraca ciąg, który reprezentuje ścieżkę bieżącego katalogu roboczego. Jeśli bieżący katalog roboczy jest katalogiem głównym, ciąg kończący się ukośnikiem odwrotnym`\`(). Jeśli bieżący katalog roboczy jest katalogiem innym niż katalog główny, ciąg kończący się nazwą katalogu, a nie ukośnikiem odwrotnym.
+**_getcwd** zwraca ciąg reprezentujący ścieżkę bieżącego katalogu roboczego. Jeśli bieżący katalog roboczy jest katalogiem głównym, ciąg`\`kończy się ukośnikiem odwrotnym ( ). Jeśli bieżący katalog roboczy jest katalogiem innym niż katalog główny, ciąg kończy się nazwą katalogu, a nie ukośnikiem odwrotnym.
 
-**_wgetcwd** to dwubajtowa wersja **_getcwd**; argument *buforu* i wartość zwracana przez **_wgetcwd** są ciągami znaków dwubajtowych. **_wgetcwd** i **_getcwd** zachowują się identycznie w inny sposób.
+**_wgetcwd** jest szerokoznakową wersją **_getcwd**; argument *buforu* i zwracana wartość **_wgetcwd** są ciągami znaków o szerokich znakach. **_wgetcwd** i **_getcwd** zachowują się identycznie w przeciwnym razie.
 
-Jeśli **_DEBUG** i **_CRTDBG_MAP_ALLOC** są zdefiniowane, wywołania do **_getcwd** i **_wgetcwd** są zastępowane przez wywołania **_getcwd_dbg** i **_wgetcwd_dbg** , aby umożliwić debugowanie alokacji pamięci. Aby uzyskać więcej informacji, zobacz [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md).
+Po **zdefiniowaniu _DEBUG** i **_CRTDBG_MAP_ALLOC** wywołania **_getcwd** i **_wgetcwd** są zastępowane wywołaniami **_getcwd_dbg** i **_wgetcwd_dbg,** aby umożliwić debugowanie alokacji pamięci. Aby uzyskać więcej informacji, zobacz [_getcwd_dbg _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -96,9 +101,9 @@ Jeśli **_DEBUG** i **_CRTDBG_MAP_ALLOC** są zdefiniowane, wywołania do **_get
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_getcwd**|\<direct.h>|
-|**_wgetcwd**|\<Direct. h > lub \<WCHAR. h >|
+|**_wgetcwd**|\<direct.h> lub \<wchar.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -135,9 +140,9 @@ int main( void )
 C:\Code
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Kontrolka katalogu](../../c-runtime-library/directory-control.md)\
+[Kontrola katalogu](../../c-runtime-library/directory-control.md)\
 [_chdir, _wchdir](chdir-wchdir.md)\
 [_mkdir, _wmkdir](mkdir-wmkdir.md)\
 [_rmdir, _wrmdir](rmdir-wrmdir.md)

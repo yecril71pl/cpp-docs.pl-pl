@@ -1,8 +1,9 @@
 ---
 title: _rmtmp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _rmtmp
+- _o__rmtmp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-ms.openlocfilehash: de28768f479df00eae315c99b80103c5319b38af
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1dc95d0f77528c26bad796ab6166998fca20a8ac
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442780"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338031"
 ---
 # <a name="_rmtmp"></a>_rmtmp
 
@@ -49,31 +51,33 @@ int _rmtmp( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_rmtmp** zwraca liczbę plików tymczasowych zamkniętych i usuniętych.
+**_rmtmp** zwraca liczbę zamkniętych i usuniętych plików tymczasowych.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_rmtmp** czyści wszystkie pliki tymczasowe w bieżącym katalogu. Funkcja usuwa tylko te pliki, które zostały utworzone przez **tmpfile**; Użyj go tylko w tym samym katalogu, w którym zostały utworzone pliki tymczasowe.
+Funkcja **_rmtmp** czyści wszystkie pliki tymczasowe w bieżącym katalogu. Funkcja usuwa tylko te pliki utworzone przez **tmpfile**; używać go tylko w tym samym katalogu, w którym utworzono pliki tymczasowe.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_rmtmp**|\<stdio. h >|
+|**_rmtmp**|\<stdio.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład dla [tmpfile](tmpfile.md).
+Zobacz przykład [tmpfile](tmpfile.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_flushall](flushall.md)<br/>
 [tmpfile](tmpfile.md)<br/>
 [_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>

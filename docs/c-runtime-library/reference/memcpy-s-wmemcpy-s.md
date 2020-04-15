@@ -1,9 +1,11 @@
 ---
 title: memcpy_s, wmemcpy_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - memcpy_s
 - wmemcpy_s
+- _o_memcpy_s
+- _o_wmemcpy_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 8078590df6950201ef81356ba6c28173e80572ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dc5e49115b65b6883e55df13d0610231a87c1c55
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952798"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333338"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
-Kopiuje bajty między buforami. Są to wersje [memcpy, wmemcpy](memcpy-wmemcpy.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Kopiuje bajty między buforami. Są to wersje [memcpy, wmemcpy](memcpy-wmemcpy.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcji zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -58,45 +61,47 @@ errno_t wmemcpy_s(
 
 ### <a name="parameters"></a>Parametry
 
-*dest*<br/>
+*Dest*<br/>
 Nowy bufor.
 
-*destSize*<br/>
-Rozmiar buforu docelowego (w bajtach) dla memcpy_s i znaków wide (wchar_t) dla wmemcpy_s.
+*destSize (destSize)*<br/>
+Rozmiar buforu docelowego w bajtach dla memcpy_s i znaków szerokich (wchar_t) dla wmemcpy_s.
 
-*SRC*<br/>
+*src*<br/>
 Bufor do skopiowania.
 
-*liczbą*<br/>
+*Liczba*<br/>
 Liczba znaków do skopiowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia.
+Zero, jeśli się powiedzie; kod błędu w przypadku awarii.
 
-### <a name="error-conditions"></a>Warunki błędów
+### <a name="error-conditions"></a>Warunki błędu
 
-|*dest*|*destSize*|*SRC*|*liczbą*|Wartość zwracana|Zawartość miejsca *docelowego*|
+|*Dest*|*destSize (destSize)*|*src*|*Liczba*|Wartość zwracana|Zawartość *dest*|
 |------------|----------------|-----------|---|------------------|------------------------|
-|Ile|Ile|Ile|0|0|nie zmodyfikowano|
-|**NULL**|Ile|Ile|non-zero|**EINVAL**|nie zmodyfikowano|
-|Ile|Ile|**NULL**|non-zero|**EINVAL**|wartość *docelowy* jest zerowa|
-|Ile|< *liczbą*|Ile|non-zero|**ERANGE**|wartość *docelowy* jest zerowa|
+|Wszelki|Wszelki|Wszelki|0|0|Nie zmodyfikowano|
+|**Null**|Wszelki|Wszelki|niezerowe|**Einval**|Nie zmodyfikowano|
+|Wszelki|Wszelki|**Null**|niezerowe|**Einval**|*dest* jest wyzerowany|
+|Wszelki|< *Liczba*|Wszelki|niezerowe|**Układ ERANGE**|*dest* jest wyzerowany|
 
 ## <a name="remarks"></a>Uwagi
 
-**memcpy_s** kopiuje *liczbę* bajtów z *src* do miejsca *docelowego*; **wmemcpy_s** kopiuje *znaki* szerokie (dwa bajty). Jeśli źródło i miejsce docelowe nakładają się na siebie, zachowanie **memcpy_s** jest niezdefiniowane. Użyj **memmove_s** , aby obsłużyć nakładające się regiony.
+**memcpy_s** kopie *liczą* bajty od *src* do *dest;* **wmemcpy_s** kopie *zliczą* szerokie znaki (dwa bajty). Jeśli źródło i miejsce docelowe nakładają się, zachowanie **memcpy_s** jest niezdefiniowane. Użyj **memmove_s** do obsługi nakładających się regionów.
 
-Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *Liczba* jest różna od zera, a element *docelowy* lub *src* jest wskaźnikiem o wartości null lub *destSize* jest mniejszy niż *Count*, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EINVAL** lub **ERANGE** i ustawiają **errno** na wartość zwracaną.
+Te funkcje sprawdzają ich parametry. Jeśli *count* jest niezerowy, a *dest* lub *src* jest wskaźnikiem zerowym lub *destSize* jest mniejszy niż *count*, te funkcje wywołać nieprawidłowy program obsługi parametrów, zgodnie z opisem w sprawdzanie [poprawności parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, te funkcje zwracają **EINVAL** lub **ERANGE** i ustawić **errno** do wartości zwracanej.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**memcpy_s**|\<> pamięci. h > \<lub String. h|
-|**wmemcpy_s**|\<WCHAR. h >|
+|**memcpy_s**|\<memory.h> lub \<string.h>|
+|**wmemcpy_s**|\<wchar.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -138,9 +143,9 @@ int main()
 0 1 4 9 16 25 36 49 64 81
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Manipulowanie buforem](../../c-runtime-library/buffer-manipulation.md)<br/>
+[Manipulacja buforem](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>
 [memchr, wmemchr](memchr-wmemchr.md)<br/>
 [memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>

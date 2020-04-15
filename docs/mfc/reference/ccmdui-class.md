@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-ms.openlocfilehash: 42aec2937cd81ebbb50482321b8deae001723d3a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5f411890575c07e471b02c423aa42ec5bf51ac0a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418826"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352273"
 ---
 # <a name="ccmdui-class"></a>Klasa CCmdUI
 
-Jest używany tylko w ramach procedury obsługi `ON_UPDATE_COMMAND_UI` w klasie pochodnej `CCmdTarget`.
+Jest używany tylko `ON_UPDATE_COMMAND_UI` w `CCmdTarget`ramach programu obsługi w klasie pochodnej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,49 +43,49 @@ Jest używany tylko w ramach procedury obsługi `ON_UPDATE_COMMAND_UI` w klasie 
 class CCmdUI
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CCmdUI:: ContinueRouting](#continuerouting)|Informuje mechanizm routingu poleceń, aby kontynuować kierowanie bieżącego komunikatu do łańcucha programów obsługi.|
-|[CCmdUI:: Enable](#enable)|Włącza lub wyłącza element interfejsu użytkownika dla tego polecenia.|
-|[CCmdUI:: SetCheck](#setcheck)|Ustawia stan sprawdzania elementu User-Interface dla tego polecenia.|
-|[CCmdUI:: SetRadio](#setradio)|Podobnie jak `SetCheck` funkcja członkowska, ale działa w grupach radiowych.|
-|[CCmdUI:: SetText](#settext)|Ustawia tekst dla elementu interfejsu użytkownika dla tego polecenia.|
+|[CCmdUI::ContinueRouting](#continuerouting)|Informuje mechanizm routingu poleceń, aby kontynuować routing bieżącej wiadomości w dół łańcucha obsługi.|
+|[CCmdUI::Włącz](#enable)|Włącza lub wyłącza element interfejsu użytkownika dla tego polecenia.|
+|[CCmdUI::SetCheck](#setcheck)|Ustawia stan wyboru elementu interfejsu użytkownika dla tego polecenia.|
+|[CCmdUI::SetRadio](#setradio)|Podobnie `SetCheck` jak funkcja członkowna, ale działa na grupach radiowych.|
+|[CCmdUI::SetText](#settext)|Ustawia tekst elementu interfejsu użytkownika dla tego polecenia.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CCmdUI:: m_nID](#m_nid)|Identyfikator obiektu interfejsu użytkownika.|
-|[CCmdUI:: m_nIndex](#m_nindex)|Indeks obiektu interfejsu użytkownika.|
-|[CCmdUI:: m_pMenu](#m_pmenu)|Wskazuje menu reprezentowane przez obiekt `CCmdUI`.|
-|[CCmdUI:: m_pOther](#m_pother)|Wskazuje obiekt okna, który wysłał powiadomienie.|
-|[CCmdUI:: m_pSubMenu](#m_psubmenu)|Wskazuje podmenu reprezentowane przez obiekt `CCmdUI`.|
+|[CCmdUI::m_nID](#m_nid)|Identyfikator obiektu interfejsu użytkownika.|
+|[CCmdUI::m_nIndex](#m_nindex)|Indeks obiektu interfejsu użytkownika.|
+|[CCmdUI::m_pMenu](#m_pmenu)|Wskazuje menu reprezentowane przez `CCmdUI` obiekt.|
+|[CCmdUI::m_pOther](#m_pother)|Wskazuje obiekt okna, który wysłał powiadomienie.|
+|[CCmdUI::m_pSubMenu](#m_psubmenu)|Wskazuje zawarte podmenu reprezentowane przez `CCmdUI` obiekt.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CCmdUI` nie ma klasy bazowej.
+`CCmdUI`nie ma klasy podstawowej.
 
-Gdy użytkownik aplikacji pobiera menu, każdy element menu musi wiedzieć, czy powinien być wyświetlany jako włączony czy wyłączony. Obiekt docelowy polecenia menu dostarcza te informacje poprzez implementację procedury obsługi ON_UPDATE_COMMAND_UI. Dla każdego z poleceń interfejsu użytkownika w aplikacji użyj [kreatora klas](mfc-class-wizard.md) lub okna **właściwości** (w **Widok klasy**), aby utworzyć wpis mapy komunikatów i prototyp funkcji dla każdej procedury obsługi.
+Gdy użytkownik aplikacji ściąga menu, każdy element menu musi wiedzieć, czy powinien być wyświetlany jako włączone lub wyłączone. Miejsce docelowe polecenia menu zawiera te informacje, implementując program obsługi ON_UPDATE_COMMAND_UI. Dla każdego polecenia interfejsu użytkownika obiektów w aplikacji, użyj [Kreatora klas](mfc-class-wizard.md) lub **właściwości** okna (w **widoku klasy),** aby utworzyć wpis mapy wiadomości i prototyp funkcji dla każdego programu obsługi.
 
-Po rozłączeniu menu, struktura wyszukuje i wywołuje każdy program obsługi ON_UPDATE_COMMAND_UI, każdy program obsługi wywołuje `CCmdUI` funkcje składowe, takie jak `Enable` i `Check`, a następnie odpowiednio wyświetla każdy element menu.
+Gdy menu jest ściągane w dół, struktura wyszukuje i wywołuje `CCmdUI` każdego ON_UPDATE_COMMAND_UI `Enable` `Check`obsługi, każdy program obsługi wywołuje funkcje członkowskie, takie jak i , a struktura następnie odpowiednio wyświetla każdy element menu.
 
-Element menu można zastąpić przyciskiem paska kontrolnego lub innym obiektem polecenia User-Interface bez zmiany kodu w ramach programu obsługi `ON_UPDATE_COMMAND_UI`.
+Element menu można zastąpić przyciskiem paska sterowania lub innym obiektem interfejsu `ON_UPDATE_COMMAND_UI` użytkownika polecenia bez zmiany kodu w programie obsługi.
 
-Poniższa tabela zawiera podsumowanie efektów, w których funkcje elementów członkowskich `CCmdUI`mają różne elementy interfejsu użytkownika.
+W poniższej tabeli `CCmdUI`podsumowano wpływ funkcji członkowskich na różne elementy interfejsu użytkownika polecenia.
 
-|Element interfejsu użytkownika|Włączanie|SetCheck|SetRadio|SetText|
+|Element interfejsu użytkownika|Włączanie|Sprawdzanie zestawu|SetRadio ( SetRadio )|Settext|
 |--------------------------|------------|--------------|--------------|-------------|
-|Element menu|Włącza lub wyłącza|Sprawdza lub nie sprawdza|Sprawdza przy użyciu kropki|Ustawia tekst elementu|
-|Przycisk paska narzędzi|Włącza lub wyłącza|Zaznacza, anuluje zaznaczenia lub nieokreślone|Taki sam jak `SetCheck`|(Nie dotyczy)|
-|Okienko pasek stanu|Sprawia, że tekst jest widoczny lub niewidoczny|Ustawia obramowanie wyskakujące lub normalne|Taki sam jak `SetCheck`|Ustawia tekst okienka|
-|Przycisk normalny w `CDialogBar`|Włącza lub wyłącza|Sprawdza lub nie sprawdza pola wyboru|Taki sam jak `SetCheck`|Ustawia tekst przycisku|
-|Normalna kontrolka w `CDialogBar`|Włącza lub wyłącza|(Nie dotyczy)|(Nie dotyczy)|Ustawia tekst okna|
+|Pozycja menu|Włącza lub wyłącza|Sprawdza lub odznacza|Sprawdza przy użyciu kropki|Ustawia tekst elementu|
+|Przycisk paska narzędzi|Włącza lub wyłącza|Zaznacza, nie wybiera lub nieokreślone|Tak samo jak`SetCheck`|(Nie dotyczy)|
+|Okienko paska stanu|Sprawia, że tekst jest widoczny lub niewidoczny|Ustawia wyskakujące lub normalne obramowanie|Tak samo jak`SetCheck`|Ustawia tekst okienka|
+|Przycisk Normalny w`CDialogBar`|Włącza lub wyłącza|Pole wyboru Sprawdza lub odznacza|Tak samo jak`SetCheck`|Ustawia tekst przycisku|
+|Normalna kontrola w`CDialogBar`|Włącza lub wyłącza|(Nie dotyczy)|(Nie dotyczy)|Ustawia tekst okna|
 
-Aby uzyskać więcej informacji na temat używania tej klasy, zobacz [jak zaktualizować obiekty interfejsu użytkownika](../../mfc/how-to-update-user-interface-objects.md).
+Aby uzyskać więcej informacji na temat używania tej klasy, zobacz [Jak zaktualizować obiekty interfejsu użytkownika](../../mfc/how-to-update-user-interface-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -93,11 +93,11 @@ Aby uzyskać więcej informacji na temat używania tej klasy, zobacz [jak zaktua
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwin. h
+**Nagłówek:** afxwin.h
 
-##  <a name="continuerouting"></a>CCmdUI:: ContinueRouting
+## <a name="ccmduicontinuerouting"></a><a name="continuerouting"></a>CCmdUI::ContinueRouting
 
-Wywołaj tę funkcję elementu członkowskiego, aby poinformować mechanizm routingu poleceń, aby kontynuować kierowanie bieżącego komunikatu do łańcucha programów obsługi.
+Wywołanie tej funkcji elementu członkowskiego, aby poinformować mechanizm routingu polecenia, aby kontynuować routing bieżącej wiadomości w dół łańcucha obsługi.
 
 ```
 void ContinueRouting();
@@ -105,11 +105,11 @@ void ContinueRouting();
 
 ### <a name="remarks"></a>Uwagi
 
-Jest to zaawansowana funkcja członkowska, która powinna być używana w połączeniu z obsługą ON_COMMAND_EX, która zwraca wartość FALSE. Aby uzyskać więcej informacji, zobacz [Uwaga techniczna 6](../../mfc/tn006-message-maps.md).
+Jest to funkcja zaawansowanego elementu członkowskiego, która powinna być używana w połączeniu z ON_COMMAND_EX program obsługi, który zwraca FALSE. Aby uzyskać więcej informacji, zobacz [Uwaga techniczna 6](../../mfc/tn006-message-maps.md).
 
-##  <a name="enable"></a>CCmdUI:: Enable
+## <a name="ccmduienable"></a><a name="enable"></a>CCmdUI::Włącz
 
-Wywołaj tę funkcję elementu członkowskiego, aby włączyć lub wyłączyć element interfejsu użytkownika dla tego polecenia.
+Wywołanie tej funkcji elementu członkowskiego, aby włączyć lub wyłączyć element interfejsu użytkownika dla tego polecenia.
 
 ```
 virtual void Enable(BOOL bOn = TRUE);
@@ -117,8 +117,8 @@ virtual void Enable(BOOL bOn = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bOn*<br/>
-Wartość TRUE powoduje włączenie elementu, FAŁSZ, aby go wyłączyć.
+*Bon*<br/>
+PRAWDA, aby włączyć element, FALSE, aby go wyłączyć.
 
 ### <a name="example"></a>Przykład
 
@@ -126,25 +126,25 @@ Wartość TRUE powoduje włączenie elementu, FAŁSZ, aby go wyłączyć.
 
 [!code-cpp[NVC_MFCDocView#47](../../mfc/codesnippet/cpp/ccmdui-class_2.cpp)]
 
-##  <a name="m_nid"></a>CCmdUI:: m_nID
+## <a name="ccmduim_nid"></a><a name="m_nid"></a>CCmdUI::m_nID
 
-Identyfikator elementu menu, przycisku paska narzędzi lub innego obiektu interfejsu użytkownika reprezentowanego przez obiekt `CCmdUI`.
+Identyfikator elementu menu, przycisku paska narzędzi lub innego obiektu interfejsu `CCmdUI` użytkownika reprezentowanego przez obiekt.
 
 ```
 UINT m_nID;
 ```
 
-##  <a name="m_nindex"></a>CCmdUI:: m_nIndex
+## <a name="ccmduim_nindex"></a><a name="m_nindex"></a>CCmdUI::m_nIndex
 
-Indeks elementu menu, przycisku paska narzędzi lub innego obiektu interfejsu użytkownika reprezentowanego przez obiekt `CCmdUI`.
+Indeks elementu menu, przycisku paska narzędzi lub innego obiektu `CCmdUI` interfejsu użytkownika reprezentowanego przez obiekt.
 
 ```
 UINT m_nIndex;
 ```
 
-##  <a name="m_pmenu"></a>CCmdUI:: m_pMenu
+## <a name="ccmduim_pmenu"></a><a name="m_pmenu"></a>CCmdUI::m_pMenu
 
-Wskaźnik (typu `CMenu`) do menu reprezentowanego przez obiekt `CCmdUI`.
+Wskaźnik `CMenu` (typu) do menu reprezentowanego `CCmdUI` przez obiekt.
 
 ```
 CMenu* m_pMenu;
@@ -152,11 +152,11 @@ CMenu* m_pMenu;
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość NULL, jeśli element nie jest menu.
+NULL, jeśli element nie jest menu.
 
-##  <a name="m_psubmenu"></a>CCmdUI:: m_pSubMenu
+## <a name="ccmduim_psubmenu"></a><a name="m_psubmenu"></a>CCmdUI::m_pSubMenu
 
-Wskaźnik (o typie `CMenu`) do podmenu zawartego reprezentowanego przez obiekt `CCmdUI`.
+Wskaźnik `CMenu` (typu) do zamkniętego podmenu reprezentowanego przez `CCmdUI` obiekt.
 
 ```
 CMenu* m_pSubMenu;
@@ -164,11 +164,11 @@ CMenu* m_pSubMenu;
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość NULL, jeśli element nie jest menu. Jeśli podmenu jest wyskakujące okienko, *m_nID* zawiera identyfikator pierwszego elementu w menu podręcznym. Aby uzyskać więcej informacji, zobacz [Uwaga techniczna 21](../../mfc/tn021-command-and-message-routing.md).
+NULL, jeśli element nie jest menu. Jeśli menu podrzędne jest wyskakującym *okienkiem, m_nID* zawiera identyfikator pierwszego elementu w wyskakującym menu. Aby uzyskać więcej informacji, zobacz [uwaga techniczna 21](../../mfc/tn021-command-and-message-routing.md).
 
-##  <a name="m_pother"></a>CCmdUI:: m_pOther
+## <a name="ccmduim_pother"></a><a name="m_pother"></a>CCmdUI::m_pOther
 
-Wskaźnik (typu `CWnd`) do obiektu okna, takiego jak narzędzie lub pasek stanu, który wysłał powiadomienie.
+Wskaźnik (typu) `CWnd`do obiektu okna, takiego jak narzędzie lub pasek stanu, który wysłał powiadomienie.
 
 ```
 CWnd* m_pOther;
@@ -176,11 +176,11 @@ CWnd* m_pOther;
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość NULL, jeśli element jest menu lub obiektem innym niż `CWnd`.
+NULL, jeśli element jest menu `CWnd` lub obiekt nie-.
 
-##  <a name="setcheck"></a>CCmdUI:: SetCheck
+## <a name="ccmduisetcheck"></a><a name="setcheck"></a>CCmdUI::SetCheck
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustawić element interfejsu użytkownika dla tego polecenia do odpowiedniego stanu sprawdzania.
+Wywołanie tej funkcji elementu członkowskiego, aby ustawić element interfejsu użytkownika dla tego polecenia do odpowiedniego stanu wyboru.
 
 ```
 virtual void SetCheck(int nCheck = 1);
@@ -188,16 +188,16 @@ virtual void SetCheck(int nCheck = 1);
 
 ### <a name="parameters"></a>Parametry
 
-*nSprawdź*<br/>
-Określa stan zaznaczenia do ustawienia. Jeśli 0, Wyewidencjonuj; Jeśli 1, sprawdza; a jeśli 2, ustawia nieokreślony.
+*nSprawda*<br/>
+Określa stan sprawdzania do ustawionego. Jeśli 0, odznacza; jeżeli 1, kontrole; a jeśli 2, ustawia nieokreślony.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska działa dla elementów menu i przycisków paska narzędzi. Stan nieokreślony ma zastosowanie tylko do przycisków paska narzędzi.
+Ta funkcja elementu członkowskiego działa w przypadku elementów menu i przycisków paska narzędzi. Stan nieokreślony dotyczy tylko przycisków paska narzędzi.
 
-##  <a name="setradio"></a>CCmdUI:: SetRadio
+## <a name="ccmduisetradio"></a><a name="setradio"></a>CCmdUI::SetRadio
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustawić element interfejsu użytkownika dla tego polecenia do odpowiedniego stanu sprawdzania.
+Wywołanie tej funkcji elementu członkowskiego, aby ustawić element interfejsu użytkownika dla tego polecenia do odpowiedniego stanu wyboru.
 
 ```
 virtual void SetRadio(BOOL bOn = TRUE);
@@ -205,16 +205,16 @@ virtual void SetRadio(BOOL bOn = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bOn*<br/>
-Wartość TRUE powoduje włączenie elementu; w przeciwnym razie FALSE.
+*Bon*<br/>
+PRAWDA, aby włączyć element; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska działa jak `SetCheck`, z tą różnicą, że działa na elementach interfejsu użytkownika działających jako część grupy przycisków. Po usunięciu zaznaczenia innych elementów w grupie nie jest to automatyczne, chyba że same elementy utrzymują zachowanie grupy radia.
+Ta funkcja elementu `SetCheck`członkowskiego działa jak , z tą różnicą, że działa na elementach interfejsu użytkownika działających jako część grupy radiowej. Odznaczanie innych elementów w grupie nie jest automatyczne, chyba że same elementy zachowują zachowanie grupy radiowej.
 
-##  <a name="settext"></a>CCmdUI:: SetText
+## <a name="ccmduisettext"></a><a name="settext"></a>CCmdUI::SetText
 
-Wywołaj tę funkcję elementu członkowskiego, aby ustawić tekst elementu interfejsu użytkownika dla tego polecenia.
+Wywołanie tej funkcji elementu członkowskiego, aby ustawić tekst elementu interfejsu użytkownika dla tego polecenia.
 
 ```
 virtual void SetText(LPCTSTR lpszText);
@@ -222,7 +222,7 @@ virtual void SetText(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszText*<br/>
+*lpszText (tekst)*<br/>
 Wskaźnik do ciągu tekstowego.
 
 ### <a name="example"></a>Przykład
@@ -231,6 +231,6 @@ Wskaźnik do ciągu tekstowego.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykładowy interfejs MDI MFC](../../overview/visual-cpp-samples.md)<br/>
+[Przykładowy MDI MFC](../../overview/visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)

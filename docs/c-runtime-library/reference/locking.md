@@ -1,8 +1,9 @@
 ---
 title: _locking
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _locking
+- _o__locking
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 4450c511b9d98c31b7e6a777f54f3bd8e0affbb7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2c6ee763a1491a744b25cbb517886e9354ca6152
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953269"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342061"
 ---
 # <a name="_locking"></a>_locking
 
@@ -51,55 +53,57 @@ int _locking(
 
 ### <a name="parameters"></a>Parametry
 
-*proces*<br/>
+*Fd*<br/>
 Deskryptor pliku.
 
-*wyst*<br/>
-Akcja blokowania do wykonania.
+*Tryb*<br/>
+Blokowanie akcji do wykonania.
 
-*nbytes*<br/>
+*nbajty*<br/>
 Liczba bajtów do zablokowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_locking** zwraca wartość 0, jeśli powodzenie. Zwracana wartość-1 oznacza niepowodzenie, w tym przypadku [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) jest ustawiony na jedną z następujących wartości.
+**_locking** zwraca wartość 0, jeśli zakończy się pomyślnie. Zwracana wartość -1 wskazuje błąd, w którym to przypadku [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) jest ustawiona na jedną z następujących wartości.
 
-|errno wartość|Warunek|
+|wartość errno|Warunek|
 |-|-|
-| **EACCES** | Naruszenie blokowania (plik jest już zablokowany lub odblokowany). |
+| **EACCES ( EACCES )** | Naruszenie blokowania (plik już zablokowany lub odblokowany). |
 | **EBADF** | Nieprawidłowy deskryptor pliku. |
-| **EDEADLOCK** | Naruszenie zasad blokowania. Zwracany, gdy została określona flaga **_LK_LOCK** lub **_LK_RLCK** , a plik nie może być zablokowany po 10 próbach. |
-| **EINVAL** | Podano nieprawidłowy argument **_locking**. |
+| **EDEADLOCK ( EDEADLOCK )** | Naruszenie blokujące. Zwracany po określeniu **flagi _LK_LOCK** lub **_LK_RLCK** i nie można zablokować pliku po 10 próbach. |
+| **Einval** | Nieważność argument został podany do **_locking**. |
 
-Jeśli błąd jest spowodowany nieprawidłowym parametrem, takim jak nieprawidłowy deskryptor pliku, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md).
+Jeśli błąd jest spowodowany złym parametrem, takim jak nieprawidłowy deskryptor pliku, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [polu Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md)
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_locking** blokuje lub odblokowuje *nBytes* bajty pliku określonego przez *FD*. Zablokowanie bajtów w pliku uniemożliwia dostęp do tych bajtów przez inne procesy. Wszystkie blokady lub odblokowywanie zaczynają się na bieżącym miejscu wskaźnika pliku i przechodzą do następnych *nBytes* bajtów. Istnieje możliwość zablokowania bajtów poza końcem pliku.
+Funkcja **_locking** blokuje lub odblokowuje *bajty nbytes* pliku określonego przez *fd*. Blokowanie bajtów w pliku uniemożliwia dostęp do tych bajtów przez inne procesy. Wszystkie blokowanie lub odblokowywanie rozpoczyna się w bieżącym położeniu wskaźnika pliku i przechodzi do następnego *bajtów nbytes.* Istnieje możliwość zablokowania bajtów przeszłości koniec pliku.
 
-*tryb* musi być jednym z następujących stałych manifestu, które są zdefiniowane w bloku. h.
+*tryb* musi być jedną z następujących stałych manifestu, które są zdefiniowane w Locking.h.
 
 |wartość *trybu*|Efekt|
 |-|-|
-| **_LK_LOCK** | Blokuje określone bajty. Jeśli bajty nie mogą być zablokowane, program natychmiast ponowi próbę po 1 sekundzie. Jeśli po 10 próbach nie będzie można zablokować bajtów, stała zwraca błąd. |
-| **_LK_NBLCK** | Blokuje określone bajty. Jeśli bajty nie mogą być zablokowane, stała zwraca błąd. |
-| **_LK_NBRLCK** | Analogicznie jak **_LK_NBLCK**. |
-| **_LK_RLCK** | Analogicznie jak **_LK_LOCK**. |
+| **_LK_LOCK** | Blokuje określone bajty. Jeśli bajtów nie można zablokować, program natychmiast próbuje ponownie po 1 sekundzie. Jeśli po 10 próbach bajtów nie można zablokować, stała zwraca błąd. |
+| **_LK_NBLCK** | Blokuje określone bajty. Jeśli bajtów nie można zablokować, stała zwraca błąd. |
+| **_LK_NBRLCK** | Tak samo jak **_LK_NBLCK**. |
+| **_LK_RLCK** | Tak samo jak **_LK_LOCK**. |
 | **_LK_UNLCK** | Odblokowuje określone bajty, które muszą być wcześniej zablokowane. |
 
-Nie można zablokować wielu regionów pliku, który nie nakłada się na siebie. Odblokowany region musi być wcześniej zablokowany. **_locking** nie scala sąsiadujących regionów; Jeśli dwa zablokowane regiony są przyległe, należy odblokować każdy region osobno. Regiony powinny być blokowane tylko na krótko i powinny być odblokowane przed zamknięciem pliku lub zamknięciem programu.
+Wiele regionów pliku, które nie nakładają się na siebie, można zablokować. Odblokowany region musi być wcześniej zablokowany. **_locking** nie łączy sąsiednich regionów; Jeśli sąsiadują dwa zablokowane regiony, każdy region musi być odblokowany oddzielnie. Regiony powinny być zablokowane tylko na krótko i powinny zostać odblokowane przed zamknięciem pliku lub zamknięciem programu.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_locking**|\<IO. h > i \<sys/blokowanie. h >|\<errno.h>|
+|**_locking**|\<io.h> i \<sys/locking.h>|\<> errno.h|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -152,7 +156,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_lockingtxt"></a>Dane wejściowe: crt_locking. txt
+### <a name="input-crt_lockingtxt"></a>Dane wejściowe: crt_locking.txt
 
 ```Input
 The first thirty bytes of this file will be locked.
@@ -166,7 +170,7 @@ No one can change these bytes while I'm reading them
 Now I'm done. Do what you will with them
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

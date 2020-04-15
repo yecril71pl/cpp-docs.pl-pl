@@ -1,9 +1,11 @@
 ---
 title: _ismbbkalnum, _ismbbkalnum_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbkalnum
 - _ismbbkalnum_l
+- _o__ismbbkalnum
+- _o__ismbbkalnum_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 2b7f188e38a2d13bf08210d6c2408ab996f18849
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 936a7708a824ac6e9e8a07b34bbdb9a3b9e761ff
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954176"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343663"
 ---
 # <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum, _ismbbkalnum_l
 
-Określa, czy określony znak wielobajtowy jest symbolem tekstu innym niż ASCII.
+Określa, czy określony znak wielobajtowy jest symbolem tekstowym nienawiązanym do ASCII.
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,15 +59,19 @@ int _ismbbkalnum_l(
 
 ### <a name="parameters"></a>Parametry
 
-*c*<br/>
-Liczba całkowita do przetestowania.
+*C*<br/>
+Całkowita ć, która ma zostać przetestowana.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_ismbbkalnum** zwraca wartość różną od zera, jeśli liczba całkowita *c* jest symbolem tekstu innym niż ASCII, lub 0, jeśli nie jest. **_ismbbkalnum** używa bieżących ustawień regionalnych dla informacji o znakach zależnych od ustawień regionalnych. **_ismbbkalnum_l** jest identyczny z **_ismbbkalnum** , z tą różnicą, że przyjmuje ustawienia regionalne jako parametr. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+**_ismbbkalnum** zwraca wartość niezerową, jeśli liczba całkowita *c* jest symbolem tekstowym innym niż ASCII innym niż interpunkcja lub 0, jeśli nie jest. **_ismbbkalnum** używa bieżących ustawień regionalnych dla informacji o znakach zależnych od ustawień regionalnych. **_ismbbkalnum_l** jest identyczna **z _ismbbkalnum** z tą różnicą, że przyjmuje ustawienia regionalne jako parametr. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+
+## <a name="remarks"></a>Uwagi
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -73,9 +80,9 @@ Ustawienia regionalne do użycia.
 |**_ismbbkalnum**|\<mbctype.h>|
 |**_ismbbkalnum_l**|\<mbctype.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasyfikacja bajtów](../../c-runtime-library/byte-classification.md)<br/>
 [_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)<br/>

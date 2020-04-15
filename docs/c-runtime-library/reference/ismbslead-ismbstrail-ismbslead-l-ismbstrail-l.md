@@ -1,11 +1,15 @@
 ---
 title: _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbstrail
 - _ismbslead_l
 - _ismbslead
 - _ismbstrail_l
+- _o__ismbslead
+- _o__ismbslead_l
+- _o__ismbstrail
+- _o__ismbstrail_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -43,19 +48,19 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: 71a5d2a82c01a41f945ef3fa8c7652f846f05103
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d4c9bfcec1deab8c00eb490dc044e62a6124aba3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953781"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342913"
 ---
 # <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 
-Wykonuje testy z uwzględnieniem kontekstu dla ciągu znaków wielobajtowych i bajtów wiodących i końcowych oraz określa, czy dany wskaźnik podciągu wskazuje na bajt wiodący lub końcowy.
+Wykonuje testy kontekstowe dla bajtów potencjalnych potencjalnych ciągów wielobajtowych i bajtów szlaku i określa, czy dany wskaźnik podciągów wskazuje na bajt potencjalnego klienta, czy bajt szlaku.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -82,41 +87,43 @@ int _ismbstrail_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Wskaźnik na początek ciągu lub poprzedniego znanego bajtu potencjalnego klienta.
+*Str*<br/>
+Wskaźnik do początku ciągu lub poprzedniego znanego bajtu potencjalnego klienta.
 
-*obecne*<br/>
+*bieżący*<br/>
 Wskaźnik do pozycji w ciągu, który ma być testowany.
 
-*ustawienie*<br/>
+*Ustawień regionalnych*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_ismbslead** zwraca wartość-1, jeśli znak jest bajtem wiodącym, a **_ismbstrail** zwraca-1, jeśli znak jest bajtem końcowym. Jeśli ciągi wejściowe są prawidłowe, ale nie są bajtem wiodącym lub bajtem końcowym, te funkcje zwracają zero. Jeśli jeden z argumentów ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **wartość null** i ustawiają **errno** na **EINVAL**.
+**_ismbslead** zwraca wartość -1, jeśli znak jest bajtem wiodącym i **_ismbstrail** zwraca wartość -1, jeśli znak jest bajtem szlaku. Jeśli parametry wejściowe są prawidłowe, ale nie są bajtem potencjalnego klienta lub bajtem szlaku, te funkcje zwracają zero. Jeśli którykolwiek z argumentów ma **wartość NULL,** wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w programie [Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, te funkcje zwracają **wartość NULL** i **ustawiają errno** na **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_ismbslead** i **_ismbstrail** są wolniejsze niż wersje **_ismbblead** i **_ismbbtrail** , ponieważ przyjmują kontekst ciągu do konta.
+**_ismbslead** i **_ismbstrail** są wolniejsze niż **wersje _ismbblead** i **_ismbbtrail,** ponieważ biorą pod uwagę kontekst ciągu.
 
-Wersje tych funkcji, które mają sufiks **_l** są identyczne, z tą różnicą, że dla zachowania zależnego od ustawień regionalnych korzystają z przekazaną przez użytkownika ustawień regionalnych zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wersje tych funkcji, które mają sufiks **_l** są identyczne, z tą różnicą, że dla ich zachowania zależne od ustawień regionalnych używają ustawień regionalnych, które są przekazywane w zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_ismbslead**|\<Mbctype. h > lub \<mbstring. h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
-|**_ismbstrail**|\<Mbctype. h > lub \<mbstring. h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
-|**_ismbslead_l**|\<Mbctype. h > lub \<mbstring. h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
-|**_ismbstrail_l**|\<Mbctype. h > lub \<mbstring. h >|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbslead**|\<mbctype.h> lub \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbstrail**|\<mbctype.h> lub \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbslead_l**|\<mbctype.h> lub \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbstrail_l**|\<mbctype.h> lub \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
 
-\*Dla stałych manifestu dla warunków testowych.
+\*Dla stałych manifestu dla warunków badania.
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
-[_ismbc, procedury](../../c-runtime-library/ismbc-routines.md)<br/>
+[Procedury _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
 [is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
 [_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)<br/>

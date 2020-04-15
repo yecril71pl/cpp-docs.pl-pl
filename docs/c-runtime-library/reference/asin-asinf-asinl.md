@@ -1,10 +1,11 @@
 ---
 title: asin, asinf, asinl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - asinf
 - asinl
 - asin
+- _o_asin
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +34,16 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 1e70c9b2187b97d3dea589c1757081da8bf2bd10
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 424fee6995fae4a7f878054ede1bb85d33d1706d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943648"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334127"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
-Oblicza arcus sinus.
+Oblicza łuk.
 
 ## <a name="syntax"></a>Składnia
 
@@ -58,38 +60,40 @@ long double asin( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Wartość, której sinus ma zostać obliczony.
+*X*<br/>
+Wartość, której łuk ma być obliczony.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcja **ASIN** zwraca arcus sinus (funkcja odwrotnej sinus) *x* w zakresie od-π/2 do π/2 radianów.
+Funkcja **asin** zwraca arcsine (odwrotną funkcję sinusoidy) *x* w zakresie -π/2 do π/2 radianów.
 
-Domyślnie, jeśli *x* jest mniejsza niż-1 lub większa niż 1, **ASIN** zwraca nieokreślony czas.
+Domyślnie, jeśli *x* jest mniejsza niż -1 lub większa niż 1, **asin** zwraca nieokreślony.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**NIEPRAWIDŁOWY**|**_DOMAIN**|
-|**QNAN**, **IND**|brak|**_DOMAIN**|
-|&#124;x&#124;>1|**NIEPRAWIDŁOWY**|**_DOMAIN**|
+|± ∞|**Nieprawidłowy**|**_DOMAIN**|
+|± **QNAN**, **IND**|brak|**_DOMAIN**|
+|&#124;x&#124;>1|**Nieprawidłowy**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ASIN** z wartościami **zmiennoprzecinkowymi** i **długimi** **Double** . W programie C **ASIN** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **asin** z **float** i **długie** **podwójne** wartości. W programie C, **asin** zawsze ma i zwraca **podwójne**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------|-|
-|**ASIN**, **asinf —** , **asinl**|\<math.h>|\<cmath > lub \<Math. h >|
+|**asin**, **asinf**, **asinl**|\<> math.h|\<cmath> lub \<math.h>|
 
 ## <a name="example"></a>Przykład
 
-Aby uzyskać więcej informacji, zobacz [acos, acosf —, acosl](acos-acosf-acosl.md).
+Aby uzyskać więcej informacji, zobacz [acos, acosf, acosl](acos-acosf-acosl.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>

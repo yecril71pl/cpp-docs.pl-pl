@@ -1,10 +1,12 @@
 ---
 title: _set_app_type
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _set_app_type
+- _o__set_app_type
 api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -13,16 +15,16 @@ f1_keywords:
 - _set_app_type
 - corecrt_startup/_set_app_type
 ms.assetid: 1e7fe786-b587-4116-8c05-f7d762350100
-ms.openlocfilehash: 7e04d88d9e9981e35b7d4c80c11d27c868219f65
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9791cff55ccd55c32d124ab89cc43ab54c0f9c69
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957925"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360973"
 ---
 # <a name="_set_app_type"></a>_set_app_type
 
-Funkcja wewnętrzna używana podczas uruchamiania, aby określić, czy aplikacja jest aplikacją konsolową, czy z graficznym interfejsem użytkownika.
+Wewnętrzna funkcja używana podczas uruchamiania do informowania CRT, czy aplikacja jest aplikacją konsoli czy aplikacją gui.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,21 +43,23 @@ void __cdecl _set_app_type(
 
 ## <a name="parameters"></a>Parametry
 
-*Typ aplikacji*<br/>
-Wartość wskazująca typ aplikacji. Możliwe wartości to:
+*typ aplikacji*<br/>
+Wartość wskazująca typ aplikacji. Możliwe wartości są następujące:
 
 |Wartość|Opis|
 |----------------|-----------------|
 |_crt_unknown_app|Nieznany typ aplikacji.|
-|_crt_console_app|Aplikacja konsoli (wiersza polecenia).|
-|_crt_gui_app|Graficzny interfejs użytkownika (Windows).|
+|_crt_console_app|Console (wiersz polecenia).|
+|_crt_gui_app|gui (Windows).|
 
 ## <a name="remarks"></a>Uwagi
 
-Zwykle nie trzeba wywoływać tej funkcji. Jest częścią kodu uruchomienia środowiska uruchomieniowego języka C, który `main` jest wykonywany przed wywołaniem w aplikacji.
+Zwykle nie trzeba wywoływać tej funkcji. Jest to część kodu uruchamiania środowiska wykonawczego `main` języka C, który wykonuje przed jest wywoływana w aplikacji.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|_set_app_type|Process. h|
+|_set_app_type|proces.h|

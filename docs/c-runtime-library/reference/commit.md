@@ -1,8 +1,9 @@
 ---
 title: _commit
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _commit
+- _o__commit
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-ms.openlocfilehash: b5a417deef48c89751f56feec480e90444728687
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f8e13e7fc197c66395556d518ecbd1cd20ac1f77
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939049"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348618"
 ---
 # <a name="_commit"></a>_commit
 
@@ -50,30 +52,32 @@ int _commit(
 
 ### <a name="parameters"></a>Parametry
 
-*proces*<br/>
-Deskryptor pliku odwołujący się do otwartego pliku.
+*Fd*<br/>
+Deskryptora pliku odnoszącego się do otwartego pliku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_commit** zwraca wartość 0, jeśli plik został pomyślnie opróżniony na dysk. Zwracana wartość-1 wskazuje na błąd.
+**_commit** zwraca wartość 0, jeśli plik został pomyślnie opróżniony na dysk. Zwracana wartość -1 oznacza błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_commit** wymusza, aby system operacyjny pisał plik skojarzony z *FD* na dysk. To wywołanie gwarantuje, że określony plik jest natychmiast opróżniany, a nie na poziomie uznania systemu operacyjnego.
+Funkcja **_commit** wymusza na systemie operacyjnym zapisanie pliku skojarzonego z *fd* na dysku. To wywołanie gwarantuje, że określony plik jest opróżniany natychmiast, a nie według uznania systemu operacyjnego.
 
-Jeśli *FD* jest nieprawidłowym deskryptorem pliku, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1, a **errno** jest ustawiona na **EBADF**.
+Jeśli *fd* jest nieprawidłowym deskryptorem plików, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w polu [Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, funkcja zwraca -1 i **errno** jest ustawiona na **EBADF**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**_commit**|\<io.h>|\<errno.h>|
+|**_commit**|\<> io.h|\<> errno.h|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
+[We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
 [_read](read.md)<br/>
