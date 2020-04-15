@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: 5942e636809e3758f34d209a3da80f0d903ab708
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: c3742db7475e626b18e9c073a0b7417a8034863f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450357"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373940"
 ---
 # <a name="cexception-class"></a>Klasa CException
 
-Klasa bazowa dla wszystkich wyjątków w bibliotece klas Microsoft Foundation.
+Klasa podstawowa dla wszystkich wyjątków w bibliotece klas Programu Microsoft Foundation.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,48 +35,48 @@ class AFX_NOVTABLE CException : public CObject
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CException::CException](#cexception)|Konstruuje `CException` obiektu.|
+|[CException::CException](#cexception)|Konstruuje `CException` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CException::Delete](#delete)|Usuwa `CException` obiektu.|
-|[CException::ReportError](#reporterror)|Raporty komunikat o błędzie w oknie komunikatu dla użytkownika.|
+|[CException::Delete](#delete)|Usuwa `CException` obiekt.|
+|[CException::ReportError](#reporterror)|Zgłasza użytkownikowi komunikat o błędzie w oknie komunikatu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ `CException` jest abstrakcyjna klasa bazowa nie można utworzyć `CException` obiektów bezpośrednio; musi utworzyć obiekty w klasach pochodnych. Jeśli musisz utworzyć własne `CException`-stylu klasy, należy użyć jednej z klas pochodnych wymienionych powyżej jako model. Upewnij się, że klasy pochodnej używa również `IMPLEMENT_DYNAMIC`.
+Ponieważ `CException` jest abstrakcyjną klasą `CException` podstawową, nie można tworzyć obiektów bezpośrednio; należy utworzyć obiekty klas pochodnych. Jeśli chcesz utworzyć własną `CException`klasę -style, użyj jednej z klas pochodnych wymienionych powyżej jako modelu. Upewnij się, że klasa pochodna również używa `IMPLEMENT_DYNAMIC`.
 
-Klasy pochodne oraz ich opisy znajdują się poniżej:
+Klasy pochodne i ich opisy są wymienione poniżej:
 
 |||
 |-|-|
-|[CSimpleException](../../mfc/reference/csimpleexception-class.md)|Klasa bazowa dla wyjątków MFC ważnych dla zasobów|
-|[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|Wyjątek warunku nieprawidłowego argumentu|
-|[CMemoryException](../../mfc/reference/cmemoryexception-class.md)|Wyjątek braku pamięci|
-|[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|Żądanie nieobsługiwaną operację|
-|[CArchiveException](../../mfc/reference/carchiveexception-class.md)|Wyjątków specyficzne dla archiwum|
-|[CFileException](../../mfc/reference/cfileexception-class.md)|Wyjątek specyficzne dla pliku|
-|[CResourceException](../../mfc/reference/cresourceexception-class.md)|Windows zasób nie został znaleziony lub nie możliwe do utworzenia|
-|[COleException](../../mfc/reference/coleexception-class.md)|Wyjątek OLE|
-|[CDBException](../../mfc/reference/cdbexception-class.md)|Wyjątek bazy danych (czyli warunków wyjątków wynikające dla klas baz danych MFC w oparciu o Open Database Connectivity)|
-|[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)|Wyjątek wysyłania (automatyzacji) OLE|
-|[CUserException](../../mfc/reference/cuserexception-class.md)|Wyjątek, który wskazuje, że nie można odnaleźć zasobu|
-|[CDaoException](../../mfc/reference/cdaoexception-class.md)|Wyjątek do obiektu dostępu do danych (czyli warunków wyjątków wynikające dla klas DAO)|
-|[CInternetException](../../mfc/reference/cinternetexception-class.md)|Wyjątek Internet (czyli warunków wyjątków wynikających dla klasy internetowe).|
+|[Csimpleexception](../../mfc/reference/csimpleexception-class.md)|Klasa podstawowa dla wyjątków MFC o krytycznym znaczeniu dla zasobów|
+|[CInvalidArgWynienie](../../mfc/reference/cinvalidargexception-class.md)|Warunek wyjątku nieprawidłowego argumentu|
+|[Cmemoryexception](../../mfc/reference/cmemoryexception-class.md)|Wyjątek braku pamięci|
+|[Cnotsupportedexception](../../mfc/reference/cnotsupportedexception-class.md)|Żądanie nieobsługiwało operacji|
+|[Carchiveexception](../../mfc/reference/carchiveexception-class.md)|Wyjątek specyficzny dla archiwum|
+|[Cfileexception](../../mfc/reference/cfileexception-class.md)|Wyjątek specyficzny dla pliku|
+|[CResourceException (Nieeksouracja)](../../mfc/reference/cresourceexception-class.md)|Nie znaleziono lub nie można utworzyć zasobu systemu Windows|
+|[Coleexception](../../mfc/reference/coleexception-class.md)|Wyjątek OLE|
+|[Cdbexception](../../mfc/reference/cdbexception-class.md)|Wyjątek bazy danych (czyli warunki wyjątków powstające dla klas bazy danych MFC na podstawie łączności otwartej bazy danych)|
+|[COleDispatchWycję](../../mfc/reference/coledispatchexception-class.md)|Wyjątek (automatyzacja) wysyłki OLE|
+|[CUserException](../../mfc/reference/cuserexception-class.md)|Wyjątek wskazujący, że nie można odnaleźć zasobu|
+|[Cdaoexception](../../mfc/reference/cdaoexception-class.md)|Wyjątek obiektu dostępu do danych (czyli warunki wyjątku powstające dla klas DAO)|
+|[Cinternetexception](../../mfc/reference/cinternetexception-class.md)|Wyjątek internetowy (czyli warunki wyjątku powstające dla klas internetowych).|
 
-Wyjątki te są przeznaczone do użycia z [THROW](exception-processing.md#throw), [THROW_LAST](exception-processing.md#throw_last), [spróbuj](exception-processing.md#try), [catch](exception-processing.md#catch), [and_catch](exception-processing.md#and_catch), i [end_catch](exception-processing.md#end_catch) makra. Aby uzyskać więcej informacji na temat wyjątków, zobacz [przetwarzania wyjątek](exception-processing.md), lub zapoznaj się z artykułem [obsługi wyjątków (MFC)](../exception-handling-in-mfc.md).
+Wyjątki te są przeznaczone do użycia z [makrami THROW](exception-processing.md#throw), [THROW_LAST](exception-processing.md#throw_last), [try](exception-processing.md#try), [catch](exception-processing.md#catch), [and_catch](exception-processing.md#and_catch)i [end_catch.](exception-processing.md#end_catch) Aby uzyskać więcej informacji na temat wyjątków, zobacz [Przetwarzanie wyjątków](exception-processing.md)lub zobacz artykuł [Obsługa wyjątków (MFC)](../exception-handling-in-mfc.md).
 
-Aby przechwycić określony wyjątek, należy użyć odpowiedniej klasy pochodnej. Aby catch, wszystkie rodzaje wyjątków, należy użyć `CException`, a następnie użyj [CObject::IsKindOf](cobject-class.md#iskindof) do rozróżniania między `CException`-klasy pochodne. Należy pamiętać, że `CObject::IsKindOf` działa tylko w przypadku klasy zadeklarowane za pomocą [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) makra, aby można było korzystać z zalet Sprawdzanie typu dynamicznego. Wszelkie `CException`— należy użyć klasy pochodnej, którą tworzysz `IMPLEMENT_DYNAMIC` makro, zbyt.
+Aby złapać określony wyjątek, należy użyć odpowiedniej klasy pochodnej. Aby wychwytywać wszystkie `CException`typy wyjątków, należy użyć , a następnie `CException`użyć [CObject::IsKindOf](cobject-class.md#iskindof) do rozróżniania klas pochodnych. Należy `CObject::IsKindOf` zauważyć, że działa tylko dla klas zadeklarowanych z [makrą IMPLEMENT_DYNAMIC,](run-time-object-model-services.md#implement_dynamic) aby skorzystać z dynamicznego sprawdzania typu. Każda `CException`utworzona klasa pochodna powinna `IMPLEMENT_DYNAMIC` również używać makra.
 
-Możesz zgłosić szczegółowe informacje o wyjątkach do użytkownika, wywołując [GetErrorMessage](cfileexception-class.md#geterrormessage) lub [funkcję ReportError](#reporterror), dwie funkcje Członkowskie, które współpracują z dowolnego z `CException`w klasach pochodnych.
+Można zgłosić szczegóły dotyczące wyjątków dla użytkownika, wywołując [GetErrorMessage](cfileexception-class.md#geterrormessage) lub [ReportError](#reporterror), dwie funkcje członkowskie, które działają z dowolnej `CException`klasy pochodnej.
 
-Jeśli wyjątek zostaje przechwycony przez jedną z makr, `CException` obiekt zostanie automatycznie usunięty; nie należy usuwać je samodzielnie. Jeśli wystąpił wyjątek przy użyciu **catch** — słowo kluczowe, nie zostanie automatycznie usunięta. Zapoznaj się z artykułem [obsługi wyjątków (MFC)](../exception-handling-in-mfc.md) Aby uzyskać więcej informacji o tym, kiedy można usunąć obiektu wyjątku.
+Jeśli wyjątek zostanie przechwycony przez jedno `CException` z makr, obiekt zostanie automatycznie usunięty; nie usuwaj go samodzielnie. Jeśli wyjątek zostanie przechwycony przy użyciu **catch** słowa kluczowego, nie jest automatycznie usuwany. Zobacz artykuł [Obsługa wyjątków (MFC),](../exception-handling-in-mfc.md) aby uzyskać więcej informacji na temat tego, kiedy usunąć obiekt exeption.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](cobject-class.md)
+[Cobject](cobject-class.md)
 
 `CException`
 
@@ -84,9 +84,9 @@ Jeśli wyjątek zostaje przechwycony przez jedną z makr, `CException` obiekt zo
 
 **Nagłówek:** afx.h
 
-##  <a name="cexception"></a>  CException::CException
+## <a name="cexceptioncexception"></a><a name="cexception"></a>CException::CException
 
-Ta funkcja elementu członkowskiego tworzy `CException` obiektu.
+Ta funkcja elementu `CException` członkowskiego konstruuje obiekt.
 
 ```
 explicit CException(BOOL bAutoDelete);
@@ -95,15 +95,15 @@ explicit CException(BOOL bAutoDelete);
 ### <a name="parameters"></a>Parametry
 
 *b_AutoDelete*<br/>
-Określ wartość PRAWDA, jeśli pamięć `CException` obiektów została przydzielona na stosie. Spowoduje to `CException` obiekt do usunięcia podczas `Delete` funkcja członkowska jest wywoływana, aby usunąć wyjątku. Określ wartość FALSE, jeśli `CException` jest na stosie obiektu lub obiektów globalnych. W tym przypadku `CException` obiekt nie będą usuwane, gdy `Delete` funkcja członkowska jest wywoływana.
+Określ wartość PRAWDA, `CException` jeśli pamięć dla obiektu została przydzielona na stercie. Spowoduje to, `CException` że obiekt zostanie `Delete` usunięty, gdy funkcja elementu członkowskiego jest wywoływana, aby usunąć wyjątek. Określ wartość `CException` FAŁSZ, jeśli obiekt znajduje się na stosie lub jest obiektem globalnym. W takim przypadku `CException` obiekt nie zostanie `Delete` usunięty, gdy wywoływana jest funkcja elementu członkowskiego.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwykle nigdy nie należy bezpośrednio wywołania tego konstruktora. Funkcja, która zgłasza wyjątek, należy utworzyć wystąpienie `CException`-klasę pochodną i wywołać jej konstruktora lub jest on powinien użycie MFC zgłosić funkcje, takie jak [afxthrowfileexception —](exception-processing.md#afxthrowfileexception), aby zgłosić wstępnie zdefiniowanego typu. Ta dokumentacja jest dostępna tylko dla informacje były kompletne.
+Zwykle nigdy nie trzeba wywołać tego konstruktora bezpośrednio. Funkcja, która zgłasza wyjątek należy utworzyć `CException`wystąpienie klasy pochodnej i wywołać jego konstruktora lub należy użyć jednej z funkcji MFC throw, takich jak [AfxThrowFileException](exception-processing.md#afxthrowfileexception), aby rzucić wstępnie zdefiniowany typ. Ta dokumentacja jest dostarczana tylko dla kompletności.
 
-##  <a name="delete"></a>  CException::Delete
+## <a name="cexceptiondelete"></a><a name="delete"></a>CException::Delete
 
-Ta funkcja sprawdza, czy `CException` obiekt został utworzony na stercie, a jeśli tak jest, wywołuje metodę **Usuń** operatora w obiekcie.
+Ta funkcja sprawdza, `CException` czy obiekt został utworzony na stercie, a jeśli tak, wywołuje **delete** operator na obiekcie.
 
 ```
 void Delete();
@@ -111,11 +111,11 @@ void Delete();
 
 ### <a name="remarks"></a>Uwagi
 
-Podczas usuwania `CException` obiektu, należy użyć `Delete` funkcja elementu członkowskiego, można usunąć wyjątku. Nie używaj **Usuń** operator bezpośrednio, ponieważ `CException` obiektu może być obiekt globalny, lub zostały utworzone na stosie.
+Podczas usuwania `CException` obiektu należy `Delete` użyć funkcji elementu członkowskiego, aby usunąć wyjątek. Nie należy używać **delete** operator bezpośrednio, ponieważ `CException` obiekt może być obiekt globalny lub zostały utworzone na stosie.
 
-Można określić, czy obiekt powinien zostać usunięty, gdy obiekt jest konstruowany. Aby uzyskać więcej informacji, zobacz [CException::CException](#cexception).
+Można określić, czy obiekt ma zostać usunięty podczas konstruowania obiektu. Aby uzyskać więcej informacji, zobacz [CException::CException](#cexception).
 
-Musisz wywołać `Delete` korzystania z C++ **spróbuj**- **catch** mechanizm. Jeśli używasz makr MFC **SPRÓBUJ** i **CATCH**, te makra automatycznie wywoła tę funkcję, a następnie.
+Wystarczy wywołać `Delete` tylko wtedy, gdy używasz mechanizmu**catch** **try**- języka C++. Jeśli używasz makr MFC **TRY** i **CATCH,** te makra automatycznie wywołają tę funkcję.
 
 ### <a name="example"></a>Przykład
 
@@ -168,9 +168,9 @@ if (pFile != NULL)
 }
 ```
 
-##  <a name="reporterror"></a>  CException::ReportError
+## <a name="cexceptionreporterror"></a><a name="reporterror"></a>CException::ReportError
 
-Wywołaj tę funkcję elementu członkowskiego, aby raport tekst błędu w oknie komunikatu dla użytkownika.
+Wywołanie tej funkcji elementu członkowskiego, aby zgłosić tekst błędu w oknie komunikatu do użytkownika.
 
 ```
 virtual int ReportError(
@@ -180,19 +180,19 @@ virtual int ReportError(
 
 ### <a name="parameters"></a>Parametry
 
-*nType*<br/>
-Określa styl okna komunikatu. Zastosuj dowolną kombinację [Style okna komunikatu](styles-used-by-mfc.md#message-box-styles) do pola. Jeśli ten parametr nie jest określony, wartość domyślna to MB_OK.
+*nTyp*<br/>
+Określa styl okna komunikatu. Zastosuj dowolną kombinację [stylów pola wiadomości](styles-used-by-mfc.md#message-box-styles) do pola. Jeśli ten parametr nie zostanie określony, wartość domyślna to MB_OK.
 
 *nMessageID*<br/>
-Określa identyfikator zasobu (ciąg spisu) komunikat wyświetlany, jeśli obiekt wyjątku nie jest komunikat o błędzie. Jeśli jest to 0, komunikat "bez komunikatu o błędzie jest dostępna" jest wyświetlany.
+Określa identyfikator zasobu (wpis tabeli ciągów) komunikatu do wyświetlenia, jeśli obiekt wyjątku nie ma komunikatu o błędzie. Jeśli 0, zostanie wyświetlony komunikat "Nie jest dostępny komunikat o błędzie".
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`AfxMessageBox` Wartość; w przeciwnym razie 0, jeśli nie ma wystarczającej ilości pamięci, aby wyświetlić okno komunikatu. Zobacz [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox) dla możliwych wartości zwracanych.
+Wartość; `AfxMessageBox` w przeciwnym razie 0, jeśli nie ma wystarczającej ilości pamięci, aby wyświetlić okno komunikatu. Zobacz [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox) dla możliwych wartości zwracanych.
 
 ### <a name="example"></a>Przykład
 
-Oto przykład wykorzystania `CException::ReportError`. Inny przykład, zobacz przykład [CATCH](exception-processing.md#catch).
+Oto przykład użycia `CException::ReportError`. Inny przykład można znaleźć w przykładzie [catch](exception-processing.md#catch).
 
 ```cpp
 CFile fileInput;
@@ -226,9 +226,9 @@ else
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CObject](cobject-class.md)<br/>
 [Wykres hierarchii](../hierarchy-chart.md)<br/>
 [Przetwarzanie wyjątków](exception-processing.md)<br/>
-[Jak mogę Tworzenie własnych klas wyjątków niestandardowych](https://go.microsoft.com/fwlink/p/?linkid=128045)
+[Jak: Tworzenie własnych niestandardowych klas wyjątków](https://go.microsoft.com/fwlink/p/?linkid=128045)

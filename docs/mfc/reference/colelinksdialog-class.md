@@ -12,16 +12,16 @@ helpviewer_keywords:
 - COleLinksDialog [MFC], DoModal
 - COleLinksDialog [MFC], m_el
 ms.assetid: fb2eb638-2809-46db-ac74-392a732affc7
-ms.openlocfilehash: 911108f9a231b752790abfdf86d1b4042d30b149
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f120678c822749c8f27c3c56c95fcdd54647aca3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504122"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374932"
 ---
 # <a name="colelinksdialog-class"></a>Klasa COleLinksDialog
 
-Używane na potrzeby okna dialogowego Edytowanie linków OLE.
+Używane w oknie dialogowym Edycja łącza OLE.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,48 +41,48 @@ class COleLinksDialog : public COleDialog
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleLinksDialog::D oModal](#domodal)|Wyświetla okno dialogowe łącza do edycji OLE.|
+|[COleLinksDialog::DoModal](#domodal)|Wyświetla okno dialogowe Edytowanie łączy OLE.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleLinksDialog::m_el](#m_el)|Struktura typu OLEUIEDITLINKS, która kontroluje zachowanie okna dialogowego.|
+|[COleLinksDialog::m_el](#m_el)|Struktura typu OLEUIEDITLINKS, która steruje zachowaniem okna dialogowego.|
 
 ## <a name="remarks"></a>Uwagi
 
-Utwórz obiekt klasy `COleLinksDialog` , gdy chcesz wywołać to okno dialogowe. Po skonstruowaniu obiektu można użyć struktury m_el, aby zainicjować wartości lub Stany kontrolek w oknie dialogowym. [](#m_el) `COleLinksDialog` `m_el` Struktura jest typu OLEUIEDITLINKS. Aby uzyskać więcej informacji o używaniu tej klasy okna dialogowego, zobacz funkcja członkowska [DoModal](#domodal) .
+Utwórz obiekt `COleLinksDialog` klasy, jeśli chcesz wywołać to okno dialogowe. Po `COleLinksDialog` skonstruowaniu obiektu można użyć [m_el](#m_el) struktury do zainicjowania wartości lub stanów formantów w oknie dialogowym. Struktura `m_el` jest typu OLEUIEDITLINKS. Aby uzyskać więcej informacji na temat korzystania z tej klasy okna dialogowego, zobacz Funkcję elementu członkowskiego [DoModal.](#domodal)
 
 > [!NOTE]
->  Kod kontenera wygenerowany przez Kreatora aplikacji używa tej klasy.
+> Kod kontenera generowany przez Kreatora aplikacji używa tej klasy.
 
-Aby uzyskać więcej informacji, zapoznaj się ze strukturą [OLEUIEDITLINKS](/windows/win32/api/oledlg/ns-oledlg-oleuieditlinksw) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz strukturę [OLEUIEDITLINKS](/windows/win32/api/oledlg/ns-oledlg-oleuieditlinksw) w programie Windows SDK.
 
-Aby uzyskać więcej informacji dotyczących okien dialogowych specyficznych dla OLE, zobacz [okna dialogowe artykułu w OLE](../../mfc/dialog-boxes-in-ole.md).
+Aby uzyskać więcej informacji dotyczących okien dialogowych specyficznych dla ole, zobacz [okna dialogowe](../../mfc/dialog-boxes-in-ole.md)artykułu OLE .
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
-[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
+[CKlogialny](../../mfc/reference/ccommondialog-class.md)
 
-[COleDialog](../../mfc/reference/coledialog-class.md)
+[COleDialog (Polski)](../../mfc/reference/coledialog-class.md)
 
 `COleLinksDialog`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxodlgs. h
+**Nagłówek:** afxodlgs.h
 
-##  <a name="domodal"></a>COleLinksDialog::D oModal
+## <a name="colelinksdialogdomodal"></a><a name="domodal"></a>COleLinksDialog::DoModal
 
-Wyświetla okno dialogowe łącza do edycji OLE.
+Wyświetla okno dialogowe Edytowanie łączy OLE.
 
 ```
 virtual INT_PTR DoModal();
@@ -90,19 +90,19 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Stan ukończenia dla okna dialogowego. Jedna z następujących wartości:
+Stan ukończenia okna dialogowego. Jedna z następujących wartości:
 
-- IDOK, jeśli okno dialogowe zostało wyświetlone pomyślnie.
+- IDOK, jeśli okno dialogowe zostało pomyślnie wyświetlone.
 
 - IDCANCEL, jeśli użytkownik anulował okno dialogowe.
 
-- IDABORT, jeśli wystąpił błąd. Jeśli IDABORT jest zwracany, wywołaj `COleDialog::GetLastError` funkcję członkowską, aby uzyskać więcej informacji na temat typu błędu, który wystąpił. Listę możliwych błędów można znaleźć w funkcji [OLEUIEDITLINKS](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw) w Windows SDK.
+- IDABORT, jeśli wystąpił błąd. Jeśli idabort jest zwracany, wywołać funkcję `COleDialog::GetLastError` elementu członkowskiego, aby uzyskać więcej informacji na temat typu błędu, który wystąpił. Aby uzyskać listę możliwych błędów, zobacz [OleUIEditLinks](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw) funkcji w zestawie Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli chcesz zainicjować różne kontrolki okna dialogowego, ustawiając elementy członkowskie struktury [m_el](#m_el) , należy to zrobić przed wywołaniem `DoModal`, ale po skonstruowaniu obiektu okna dialogowego.
+Jeśli chcesz zainicjować różne formanty okna dialogowego, ustawiając elementy członkowskie [m_el](#m_el) `DoModal`struktury, należy to zrobić przed wywołaniem , ale po skonstruowaniu obiektu okna dialogowego.
 
-##  <a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog
+## <a name="colelinksdialogcolelinksdialog"></a><a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog
 
 Konstruuje `COleLinksDialog` obiekt.
 
@@ -117,24 +117,24 @@ COleLinksDialog (
 ### <a name="parameters"></a>Parametry
 
 *pDoc*<br/>
-Wskazuje dokument OLE zawierający linki do edycji.
+Wskazuje dokument OLE zawierający łącza do edycji.
 
-*pView*<br/>
-Wskazuje bieżący widok w witrynie *PDOC*.
+*pWidok*<br/>
+Wskazuje bieżący widok na *pDoc*.
 
-*flagiDW*<br/>
-Flaga tworzenia, która zawiera wartość 0 lub ELF_SHOWHELP, aby określić, czy przycisk Pomoc będzie wyświetlany po wyświetleniu okna dialogowego.
+*Dwflags*<br/>
+Flaga tworzenia, która zawiera 0 lub ELF_SHOWHELP, aby określić, czy przycisk Pomoc będzie wyświetlany po wyświetleniu okna dialogowego.
 
 *pParentWnd*<br/>
-Wskazuje obiekt nadrzędny lub właściciel (typu `CWnd`), do którego należy obiekt okna dialogowego. Jeśli ma wartość NULL, okno dialogowe nadrzędne okna dialogowego jest ustawione na główne okno aplikacji.
+Wskazuje obiekt okna nadrzędnego lub `CWnd`właściciela (typu), do którego należy obiekt okna dialogowego. Jeśli jest null, okno nadrzędne okna dialogowego jest ustawiona na główne okno aplikacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja tworzy tylko `COleLinksDialog` obiekt. Aby wyświetlić okno dialogowe, wywołaj funkcję [DoModal](#domodal) .
+Ta funkcja konstruuje tylko `COleLinksDialog` obiekt. Aby wyświetlić okno dialogowe, należy wywołać funkcję [DoModal.](#domodal)
 
-##  <a name="m_el"></a>COleLinksDialog::m_el
+## <a name="colelinksdialogm_el"></a><a name="m_el"></a>COleLinksDialog::m_el
 
-Struktura typu OLEUIEDITLINKS używana do sterowania zachowaniem okna dialogowego Edytowanie linków.
+Struktura typu OLEUIEDITLINKS używana do kontrolowania zachowania okna dialogowego Edytowanie łączy.
 
 ```
 OLEUIEDITLINKS m_el;
@@ -142,11 +142,11 @@ OLEUIEDITLINKS m_el;
 
 ### <a name="remarks"></a>Uwagi
 
-Elementy członkowskie tej struktury można modyfikować bezpośrednio lub za pomocą funkcji składowych.
+Elementy członkowskie tej struktury mogą być modyfikowane bezpośrednio lub za pośrednictwem funkcji członkowskich.
 
-Aby uzyskać więcej informacji, zapoznaj się ze strukturą [OLEUIEDITLINKS](/windows/win32/api/oledlg/ns-oledlg-oleuieditlinksw) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz strukturę [OLEUIEDITLINKS](/windows/win32/api/oledlg/ns-oledlg-oleuieditlinksw) w programie Windows SDK.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa COleDialog](../../mfc/reference/coledialog-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

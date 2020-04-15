@@ -6,25 +6,25 @@ helpviewer_keywords:
 - status bars [MFC], tool tips
 - CStatusBarCtrl class [MFC], tool tips
 ms.assetid: a77597a7-43ef-4b8f-87bc-a8ea1dc63dc3
-ms.openlocfilehash: a607a5fb8c9470df42d12c771865b924891b2dac
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 29d326c708743424686d616bbaf172ccd72481ce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442544"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374694"
 ---
 # <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>Używanie etykietek narzędzi w obiekcie CStatusBarCtrl
 
-Aby włączyć etykietki narzędzi dla kontrolki pasek stanu, Utwórz obiekt `CStatusBarCtrl` z stylem SBT_TOOLTIPS.
+Aby włączyć etykietki narzędzi dla formantu paska stanu, utwórz `CStatusBarCtrl` obiekt o SBT_TOOLTIPS stylu.
 
 > [!NOTE]
->  Jeśli używasz obiektu `CStatusBar`, aby zaimplementować swój pasek stanu, użyj funkcji `CStatusBar::CreateEx`. Umożliwia określenie dodatkowych stylów dla osadzonego obiektu `CStatusBarCtrl`.
+> Jeśli używasz `CStatusBar` obiektu do zaimplementowania `CStatusBar::CreateEx` paska stanu, użyj funkcji. Umożliwia określenie dodatkowych stylów dla `CStatusBarCtrl` obiektu osadzonego.
 
-Po pomyślnym utworzeniu obiektu `CStatusBarCtrl` Użyj [CStatusBarCtrl:: SetTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext) i [CStatusBarCtrl:: GetTipText](../mfc/reference/cstatusbarctrl-class.md#gettiptext) , aby ustawić i pobrać tekst porady dla określonego okienka.
+Po `CStatusBarCtrl` pomyślnym utworzeniu obiektu użyj [CStatusBarCtrl::SetTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext) i [CStatusBarCtrl::GetTipText,](../mfc/reference/cstatusbarctrl-class.md#gettiptext) aby ustawić i pobrać tekst końcówki dla określonego okienka.
 
-Po ustawieniu etykietki narzędzia jest wyświetlana tylko wtedy, gdy część ma ikonę i nie ma tekstu, lub jeśli nie można wyświetlić całego tekstu w części. Etykietki narzędzi nie są obsługiwane w trybie prostym.
+Po ustawieniu etykietki narzędzia jest wyświetlana tylko wtedy, gdy część ma ikonę i nie ma tekstu lub jeśli cały tekst nie może być wyświetlany wewnątrz części. Porady dotyczące narzędzi nie są obsługiwane w trybie prostym.
 
 ## <a name="see-also"></a>Zobacz też
 
 [Korzystanie ze CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](../mfc/controls-mfc.md)

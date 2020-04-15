@@ -9,17 +9,17 @@ helpviewer_keywords:
 - modules [C++]
 - modules [C++], import
 - modules [C++], export
-description: Użyj deklaracji importu i eksportu, aby uzyskać dostęp do typów i funkcji, które są zdefiniowane w określonym module, oraz do ich publikowania.
-ms.openlocfilehash: 7406bf75595bef20775ee1b67c27bd62bff1a932
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+description: Użyj deklaracji importu i eksportu, aby uzyskać dostęp i publikować typy i funkcje zdefiniowane w określonym module.
+ms.openlocfilehash: a765e9a406660d3c945ef3d70754178b0648458c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518286"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374118"
 ---
 # <a name="module-import-export"></a>moduł, import, eksport
 
-Deklaracje **modułu**, **importu**i **eksportu** są dostępne w języku c++ 20 i wymagają przełącznika kompilatora [/Experimental: modułu](../build/reference/experimental-module.md) z [/std: C + + Najnowsza](../build/reference/std-specify-language-standard-version.md). Aby uzyskać więcej informacji, zobacz [Omówienie modułów w C++ ](modules-cpp.md)temacie.
+**Moduł**, **import**i deklaracje **eksportowe** są dostępne w języku C++20 i wymagają przełącznika kompilatora [/experimental:module](../build/reference/experimental-module.md) wraz z [/std:c++latest](../build/reference/std-specify-language-standard-version.md). Aby uzyskać więcej informacji, zobacz [Omówienie modułów w języku C++](modules-cpp.md).
 
 ## <a name="module"></a>moduł
 
@@ -31,13 +31,13 @@ module ModuleA;
 
 ## <a name="export"></a>export
 
-Użyj deklaracji **modułu eksportu** dla podstawowego pliku interfejsu modułu, który musi mieć rozszerzenie **. IXX**:
+Użyj deklaracji **modułu eksportu** dla pliku interfejsu podstawowego modułu, który musi mieć rozszerzenie **.ixx:**
 
 ```cpp
 export module ModuleA;
 ```
 
-W pliku interfejsu Użyj modyfikatora **eksportu** dla nazw, które mają być częścią interfejsu publicznego:
+W pliku interfejsu użyj modyfikatora **eksportu** na nazwach, które mają być częścią interfejsu publicznego:
 
 ```cpp
 // ModuleA.ixx
@@ -66,11 +66,11 @@ int main() {
 }
 ```
 
-Słowo kluczowe **Export** może nie pojawić się w pliku implementacji modułu. Po zastosowaniu **eksportu** do nazwy przestrzeni nazw wszystkie nazwy w przestrzeni nazw są eksportowane.
+Słowo kluczowe **eksportu** może nie pojawić się w pliku implementacji modułu. Gdy **eksport** jest stosowany do nazwy obszaru nazw, wszystkie nazwy w obszarze nazw są eksportowane.
 
 ## <a name="import"></a>import
 
-Użyj deklaracji **importu** , aby uczynić nazwy modułów widocznymi w programie. Deklaracja importu musi znajdować się po deklaracji modułu i po każdej #include dyrektywie, ale przed wszelkimi deklaracjami w pliku.
+Użyj deklaracji **importu,** aby nazwy modułu były widoczne w programie. Deklaracja importu musi pojawić się po deklaracji modułu i po wszelkich #include dyrektyw, ale przed wszelkimi deklaracjami w pliku.
 
 ```cpp
 module ModuleA;
@@ -88,7 +88,7 @@ class Baz
 
 ## <a name="remarks"></a>Uwagi
 
-Zarówno **Import** , jak i **moduł** są traktowane jako słowa kluczowe, gdy pojawiają się na początku linii logicznej:
+Zarówno **import,** jak i **moduł** są traktowane jako słowa kluczowe tylko wtedy, gdy pojawiają się na początku wiersza logicznego:
 
 ```cpp
 
@@ -110,9 +110,9 @@ export import module-name
 int i; module ;
 ```
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-W firmie C++Microsoft tokeny **importu** i **modułu** są zawsze identyfikatory i nigdy nie są słowami kluczowymi, gdy są używane jako argumenty do makra.
+W języku Microsoft C++ **import** tokenów i **moduł** są zawsze identyfikatory i nigdy słowa kluczowe, gdy są one używane jako argumenty do makra.
 
 ### <a name="example"></a>Przykład
 
@@ -123,8 +123,8 @@ import // Always an identifier, never a keyword
 )
 ```
 
-**Zakończenie określonych przez firmę Microsoft**
+**Koniec z programem Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przegląd modułów w programieC++](modules-cpp.md)
+[Omówienie modułów w języku C++](modules-cpp.md)

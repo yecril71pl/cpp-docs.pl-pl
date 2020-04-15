@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-ms.openlocfilehash: 70169d2b89d9ea657898f7a96dea27556023d4e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 790ce0f32c2325fa0ea92ca0bda64ddaa4c86c45
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168176"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375693"
 ---
 # <a name="cdcrendertarget-class"></a>Klasa CDCRenderTarget
 
-Otoka ID2D1DCRenderTarget.
+Otoka dla ID2D1DCRenderTarget.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,45 +43,45 @@ class CDCRenderTarget : public CRenderTarget;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|Tworzy obiekt CDCRenderTarget.|
+|[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|Konstruuje obiekt CDCRenderTarget.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDCRenderTarget::Attach](#attach)|Dołącza istniejące renderowania interfejsu docelowego do obiektu|
-|[CDCRenderTarget::BindDC](#binddc)|Powiązania obiektu docelowego renderowania do kontekstu urządzenia, do którego emituje polecenia rysowania|
-|[CDCRenderTarget::Create](#create)|Tworzy CDCRenderTarget.|
+|[CDCRenderTarget::Dołącz](#attach)|Dołącza istniejący interfejs docelowy renderowania do obiektu|
+|[CDCRenderTarget::BindDC](#binddc)|Wiąże obiekt docelowy renderowania z kontekstem urządzenia, do którego wydaje polecenia rysowania|
+|[CDCRenderTarget::Utwórz](#create)|Tworzy CDCRenderTarget.|
 |[CDCRenderTarget::Detach](#detach)|Odłącza interfejs docelowy renderowania z obiektu|
-|[CDCRenderTarget::GetDCRenderTarget](#getdcrendertarget)|Zwraca ID2D1DCRenderTarget interfejsu|
+|[CDCRenderTarget::GetDCRenderTarget](#getdcrendertarget)|Zwraca interfejs ID2D1DCRenderTarget|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|Zwraca ID2D1DCRenderTarget interfejsu|
+|[CDCRenderTarget::operator ID2D1DCRenderTarget*](#operator_id2d1dcrendertarget_star)|Zwraca interfejs ID2D1DCRenderTarget|
 
-### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+### <a name="protected-data-members"></a>Członkowie chronionych danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|Wskaźnik do obiektu ID2D1DCRenderTarget.|
+|[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|Wskaźnik do obiektu ID2DCRenderTarget.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 [CRenderTarget](../../mfc/reference/crendertarget-class.md)
 
-[CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)
+[Cel CDCRender](../../mfc/reference/cdcrendertarget-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** afxrendertarget.h
 
-##  <a name="attach"></a>  CDCRenderTarget::Attach
+## <a name="cdcrendertargetattach"></a><a name="attach"></a>CDCRenderTarget::Dołącz
 
-Dołącza istniejące renderowania interfejsu docelowego do obiektu
+Dołącza istniejący interfejs docelowy renderowania do obiektu
 
 ```
 void Attach(ID2D1DCRenderTarget* pTarget);
@@ -90,11 +90,11 @@ void Attach(ID2D1DCRenderTarget* pTarget);
 ### <a name="parameters"></a>Parametry
 
 *pTarget*<br/>
-Istniejący interfejs docelowego renderowania. Nie może mieć wartości NULL
+Istniejący interfejs docelowy renderowania. Nie może być null
 
-##  <a name="binddc"></a>  CDCRenderTarget::BindDC
+## <a name="cdcrendertargetbinddc"></a><a name="binddc"></a>CDCRenderTarget::BindDC
 
-Powiązania obiektu docelowego renderowania do kontekstu urządzenia, do którego emituje polecenia rysowania
+Wiąże obiekt docelowy renderowania z kontekstem urządzenia, do którego wydaje polecenia rysowania
 
 ```
 BOOL BindDC(
@@ -104,25 +104,25 @@ BOOL BindDC(
 
 ### <a name="parameters"></a>Parametry
 
-*dc*<br/>
-Kontekst urządzenia, do którego obiektu docelowego renderowania wydaje polecenia rysowania
+*Dc*<br/>
+Kontekst urządzenia, do którego obiekt docelowy renderowania wydaje polecenia rysowania
 
 *Rect*<br/>
-Wymiary dojścia do kontekstu urządzenia (elementu HDC), z którym powiązany jest obiektu docelowego renderowania
+Wymiary uchwytu do kontekstu urządzenia (HDC), z którym jest powiązany obiekt docelowy renderowania
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.
+Jeśli metoda powiedzie się, zwraca wartość TRUE. W przeciwnym razie zwraca wartość FAŁSZ.
 
-##  <a name="cdcrendertarget"></a>  CDCRenderTarget::CDCRenderTarget
+## <a name="cdcrendertargetcdcrendertarget"></a><a name="cdcrendertarget"></a>CDCRenderTarget::CDCRenderTarget
 
-Tworzy obiekt CDCRenderTarget.
+Konstruuje obiekt CDCRenderTarget.
 
 ```
 CDCRenderTarget();
 ```
 
-##  <a name="create"></a>  CDCRenderTarget::Create
+## <a name="cdcrendertargetcreate"></a><a name="create"></a>CDCRenderTarget::Utwórz
 
 Tworzy CDCRenderTarget.
 
@@ -132,14 +132,14 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 
 ### <a name="parameters"></a>Parametry
 
-*właściwości*<br/>
-Tryb renderowania, format pikseli, opcji komunikacji zdalnej, informacje o rozdzielczości DPI i minimalna obsługa technologii DirectX, wymagane do renderowania sprzętowego.
+*Rekwizyty*<br/>
+Tryb renderowania, format pikseli, opcje komunikacji zdalnej, informacje DPI i minimalna obsługa DirectX wymagana do renderowania sprzętowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda się powiedzie, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.
+Jeśli metoda powiedzie się, zwraca wartość TRUE. W przeciwnym razie zwraca wartość FAŁSZ.
 
-##  <a name="detach"></a>  CDCRenderTarget::Detach
+## <a name="cdcrendertargetdetach"></a><a name="detach"></a>CDCRenderTarget::Detach
 
 Odłącza interfejs docelowy renderowania z obiektu
 
@@ -149,11 +149,11 @@ ID2D1DCRenderTarget* Detach();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do odłączonego renderowania interfejs docelowy.
+Wskaźnik do odłączony interfejs docelowy renderowania.
 
-##  <a name="getdcrendertarget"></a>  CDCRenderTarget::GetDCRenderTarget
+## <a name="cdcrendertargetgetdcrendertarget"></a><a name="getdcrendertarget"></a>CDCRenderTarget::GetDCRenderTarget
 
-Zwraca ID2D1DCRenderTarget interfejsu
+Zwraca interfejs ID2D1DCRenderTarget
 
 ```
 ID2D1DCRenderTarget* GetDCRenderTarget();
@@ -161,19 +161,19 @@ ID2D1DCRenderTarget* GetDCRenderTarget();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu ID2D1DCRenderTarget lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+Wskaźnik do interfejsu ID2DCRenderTarget lub NULL, jeśli obiekt nie został jeszcze zainicjowany.
 
-##  <a name="m_pdcrendertarget"></a>  CDCRenderTarget::m_pDCRenderTarget
+## <a name="cdcrendertargetm_pdcrendertarget"></a><a name="m_pdcrendertarget"></a>CDCRenderTarget::m_pDCRenderTarget
 
-Wskaźnik do obiektu ID2D1DCRenderTarget.
+Wskaźnik do obiektu ID2DCRenderTarget.
 
 ```
 ID2D1DCRenderTarget* m_pDCRenderTarget;
 ```
 
-##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget *
+## <a name="cdcrendertargetoperator-id2d1dcrendertarget"></a><a name="operator_id2d1dcrendertarget_star"></a>CDCRenderTarget::operator ID2D1DCRenderTarget*
 
-Zwraca ID2D1DCRenderTarget interfejsu
+Zwraca interfejs ID2D1DCRenderTarget
 
 ```
 operator ID2D1DCRenderTarget*();
@@ -181,8 +181,8 @@ operator ID2D1DCRenderTarget*();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu ID2D1DCRenderTarget lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+Wskaźnik do interfejsu ID2DCRenderTarget lub NULL, jeśli obiekt nie został jeszcze zainicjowany.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

@@ -38,16 +38,16 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 8253b2c2fa6b93ec51c7ede983ef710eed039970
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: dbdc889e244b33365756bcbae5b37cf657a6d900
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421094"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374881"
 ---
 # <a name="colepropertypage-class"></a>Klasa COlePropertyPage
 
-Służy do wyświetlania właściwości kontrolki niestandardowej w interfejsie graficznym podobnym do okna dialogowego.
+Służy do wyświetlania właściwości formantu niestandardowego w interfejsie graficznym, podobnie jak w oknie dialogowym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,61 +55,61 @@ Służy do wyświetlania właściwości kontrolki niestandardowej w interfejsie 
 class AFX_NOVTABLE COlePropertyPage : public CDialog
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[COlePropertyPage:: COlePropertyPage](#colepropertypage)|Konstruuje obiekt `COlePropertyPage`.|
+|[Strona COlePropertyPage::COlePropertyPage](#colepropertypage)|Konstruuje `COlePropertyPage` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[COlePropertyPage:: GetControlStatus](#getcontrolstatus)|Wskazuje, czy użytkownik zmodyfikował wartość w kontrolce.|
-|[COlePropertyPage:: GetObjectArray](#getobjectarray)|Zwraca tablicę obiektów, które są edytowane przez stronę właściwości.|
-|[COlePropertyPage:: GetPageSite](#getpagesite)|Zwraca wskaźnik do interfejsu `IPropertyPageSite` strony właściwości.|
-|[COlePropertyPage:: IgnoreApply](#ignoreapply)|Określa, które kontrolki nie włączają przycisku Zastosuj.|
-|[COlePropertyPage:: IsModified](#ismodified)|Wskazuje, czy użytkownik zmodyfikował stronę właściwości.|
-|[COlePropertyPage:: OnEditProperty](#oneditproperty)|Wywoływane przez platformę, gdy użytkownik edytuje właściwość.|
-|[COlePropertyPage:: OnHelp](#onhelp)|Wywoływane przez platformę, gdy użytkownik wywołuje pomoc.|
-|[COlePropertyPage:: OnInitDialog](#oninitdialog)|Wywoływane przez platformę po zainicjowaniu strony właściwości.|
-|[COlePropertyPage:: OnObjectsChanged](#onobjectschanged)|Wywoływane przez platformę, gdy jest wybierana inna kontrolka OLE z nowymi właściwościami.|
-|[COlePropertyPage:: OnSetPageSite](#onsetpagesite)|Wywoływane przez platformę, gdy ramka właściwości udostępnia witrynę strony.|
-|[COlePropertyPage:: SetControlStatus](#setcontrolstatus)|Ustawia flagę wskazującą, czy użytkownik zmodyfikował wartość w kontrolce.|
-|[COlePropertyPage:: SetDialogResource](#setdialogresource)|Ustawia zasób okna dialogowego strony właściwości.|
-|[COlePropertyPage:: SetHelpInfo](#sethelpinfo)|Ustawia krótki tekst pomocy strony właściwości, nazwę pliku pomocy oraz jego kontekst pomocy.|
-|[COlePropertyPage:: SetModifiedFlag](#setmodifiedflag)|Ustawia flagę wskazującą, czy użytkownik zmodyfikował stronę właściwości.|
-|[COlePropertyPage:: SetPageName](#setpagename)|Ustawia nazwę strony właściwości (podpis).|
+|[Strona COlePropertyPage::GetControlStatus](#getcontrolstatus)|Wskazuje, czy użytkownik zmodyfikował wartość w formancie.|
+|[Strona COlePropertyPage::GetObjectArray](#getobjectarray)|Zwraca tablicę obiektów edytowanych przez stronę właściwości.|
+|[Strona COlePropertyPage::GetPageWitsite](#getpagesite)|Zwraca wskaźnik do `IPropertyPageSite` interfejsu strony właściwości.|
+|[Strona COlePropertyPage::IgnoreApply](#ignoreapply)|Określa, które formanty nie włączają przycisku Zastosuj.|
+|[Strona COlePropertyPage::Jestzmodysyfikowana](#ismodified)|Wskazuje, czy użytkownik zmodyfikował stronę właściwości.|
+|[COlePropertyPage::OnEditProperty](#oneditproperty)|Wywoływana przez platformę, gdy użytkownik edytuje właściwość.|
+|[Strona COlePropertyPage::OnHelp](#onhelp)|Wywoływane przez platformę, gdy użytkownik wywołuje pomoc.|
+|[Strona COlePropertyPage::OnInitDialog](#oninitdialog)|Wywoływane przez strukturę, gdy strona właściwości jest inicjowany.|
+|[COlePropertyPage::OnObjectsZmieniane](#onobjectschanged)|Wywoływana przez platformę, gdy zostanie wybrana inna kontrolka OLE z nowymi właściwościami.|
+|[Strona COlePropertyPage::OnSetPageWitosz](#onsetpagesite)|Wywoływana przez strukturę, gdy ramka właściwości udostępnia witrynę strony.|
+|[Strona COlePropertyPage::SetControlStatus](#setcontrolstatus)|Ustawia flagę wskazującą, czy użytkownik zmodyfikował wartość w formancie.|
+|[Strona COlePropertyPage::SetDialogResource](#setdialogresource)|Ustawia zasób okna dialogowego strony właściwości.|
+|[Strona COlePropertyPage::SetHelpInfo](#sethelpinfo)|Ustawia krótki tekst pomocy strony właściwości, nazwę pliku pomocy i kontekst pomocy.|
+|[Strona COlePropertyPage::SetModifiedFlag](#setmodifiedflag)|Ustawia flagę wskazującą, czy użytkownik zmodyfikował stronę właściwości.|
+|[Strona COlePropertyPage::SetPageName](#setpagename)|Ustawia nazwę strony właściwości (podpis).|
 
 ## <a name="remarks"></a>Uwagi
 
-Na przykład strona właściwości może zawierać kontrolkę edycji, która umożliwia użytkownikowi wyświetlanie i modyfikowanie właściwości Caption kontrolki.
+Na przykład strona właściwości może zawierać formant edycji, który umożliwia użytkownikowi wyświetlanie i modyfikowanie właściwości podpisu formantu.
 
-Każda właściwość formantu niestandardowego lub giełdowego może mieć kontrolkę okna dialogowego, która umożliwia użytkownikowi kontrolce wyświetlanie bieżącej wartości właściwości i modyfikowanie tej wartości w razie potrzeby.
+Każda właściwość kontroli niestandardowej lub akcji może mieć kontrolkę okna dialogowego, która umożliwia użytkownikowi formantu wyświetlanie bieżącej wartości właściwości i modyfikowanie tej wartości w razie potrzeby.
 
-Aby uzyskać więcej informacji na temat korzystania z `COlePropertyPage`, zobacz artykuł [formanty ActiveX: strony właściwości](../../mfc/mfc-activex-controls-property-pages.md).
+Aby uzyskać więcej `COlePropertyPage`informacji na temat używania , zobacz artykuł [ActiveX Controls: Property Pages](../../mfc/mfc-activex-controls-property-pages.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
 `COlePropertyPage`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** 'afxctl. h
+**Nagłówek:** afxctl.h
 
-##  <a name="colepropertypage"></a>COlePropertyPage:: COlePropertyPage
+## <a name="colepropertypagecolepropertypage"></a><a name="colepropertypage"></a>Strona COlePropertyPage::COlePropertyPage
 
-Konstruuje obiekt `COlePropertyPage`.
+Konstruuje `COlePropertyPage` obiekt.
 
 ```
 COlePropertyPage(
@@ -119,19 +119,19 @@ COlePropertyPage(
 
 ### <a name="parameters"></a>Parametry
 
-*idDlg*<br/>
+*idDlg ( idDlg )*<br/>
 Identyfikator zasobu szablonu okna dialogowego.
 
-*idCaption*<br/>
-Identyfikator zasobu napisu strony właściwości.
+*idCaption ( idCaption )*<br/>
+Identyfikator zasobu podpisu strony właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku zaimplementowania podklasy `COlePropertyPage`, Konstruktor podklasy powinien używać konstruktora `COlePropertyPage` do identyfikowania zasobu szablonu okna dialogowego, w którym bazuje Strona właściwości i zasób ciągu zawierający jego podpis.
+Podczas implementowania podklasy `COlePropertyPage`, konstruktor podklasy należy użyć `COlePropertyPage` konstruktora do identyfikowania zasobu szablonu okna dialogowego, na którym opiera się strona właściwości i zasób ciąg zawierający jego podpis.
 
-##  <a name="getcontrolstatus"></a>COlePropertyPage:: GetControlStatus
+## <a name="colepropertypagegetcontrolstatus"></a><a name="getcontrolstatus"></a>Strona COlePropertyPage::GetControlStatus
 
-Określa, czy użytkownik zmodyfikował wartość kontrolki strony właściwości z określonym IDENTYFIKATORem zasobu.
+Określa, czy użytkownik zmodyfikował wartość formantu strony właściwości o określonym identyfikatorze zasobu.
 
 ```
 BOOL GetControlStatus(UINT nID);
@@ -139,16 +139,16 @@ BOOL GetControlStatus(UINT nID);
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-Identyfikator zasobu kontrolki strony właściwości.
+*Nid*<br/>
+Identyfikator zasobu formantu strony właściwości.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli wartość kontrolki została zmodyfikowana; w przeciwnym razie FALSE.
+PRAWDA, jeśli wartość kontrolna została zmodyfikowana; w przeciwnym razie FALSE.
 
-##  <a name="getobjectarray"></a>COlePropertyPage:: GetObjectArray
+## <a name="colepropertypagegetobjectarray"></a><a name="getobjectarray"></a>Strona COlePropertyPage::GetObjectArray
 
-Zwraca tablicę obiektów, które są edytowane przez stronę właściwości.
+Zwraca tablicę obiektów edytowanych przez stronę właściwości.
 
 ```
 LPDISPATCH* GetObjectArray(ULONG* pnObjects);
@@ -156,36 +156,36 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 
 ### <a name="parameters"></a>Parametry
 
-*pnObjects*<br/>
-Wskaźnik do bezcyfrowej liczby całkowitej bez znaku, która będzie otrzymywać liczbę obiektów edytowanych przez stronę.
+*pnObiekty*<br/>
+Wskaźnik do niepodpisanej długiej liczby całkowitej, która otrzyma liczbę obiektów edytowanych przez stronę.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do tablicy wskaźników `IDispatch`, które są używane do uzyskiwania dostępu do właściwości każdej kontrolki na stronie właściwości. Obiekt wywołujący nie może zwolnić tych wskaźników interfejsu.
+Wskaźnik do tablicy `IDispatch` wskaźników, które są używane do uzyskiwania dostępu do właściwości każdego formantu na stronie właściwości. Wywołujący nie może zwolnić te wskaźniki interfejsu.
 
 ### <a name="remarks"></a>Uwagi
 
-Każdy obiekt strony właściwości zachowuje tablicę wskaźników do `IDispatch` interfejsów obiektów, które są edytowane przez stronę. Ta funkcja ustawia swój argument *pnObjects* na liczbę elementów w tej tablicy i zwraca wskaźnik do pierwszego elementu tablicy.
+Każdy obiekt strony właściwości zachowuje tablicę `IDispatch` wskaźników do interfejsów obiektów edytowanych przez stronę. Ta funkcja ustawia jego *argument pnObjects* na liczbę elementów w tej tablicy i zwraca wskaźnik do pierwszego elementu tablicy.
 
-##  <a name="getpagesite"></a>COlePropertyPage:: GetPageSite
+## <a name="colepropertypagegetpagesite"></a><a name="getpagesite"></a>Strona COlePropertyPage::GetPageWitsite
 
-Pobiera wskaźnik do interfejsu `IPropertyPageSite` strony właściwości.
+Pobiera wskaźnik do `IPropertyPageSite` interfejsu strony właściwości.
 
 ```
 LPPROPERTYPAGESITE GetPageSite();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wskaźnik do `IPropertyPageSite` interfejsu strony właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-Kontrolki i kontenery współpracują tak, aby użytkownicy mogli przeglądać i edytować właściwości kontrolek. Formant zawiera strony właściwości, z których każdy jest obiektem OLE, który umożliwia użytkownikowi edytowanie powiązanego zestawu właściwości. Kontener zawiera ramkę właściwości, która wyświetla strony właściwości. Dla każdej strony ramka właściwości zawiera witrynę strony, która obsługuje interfejs `IPropertyPageSite`.
+Formanty i kontenery współpracują, dzięki czemu użytkownicy mogą przeglądać i edytować właściwości formantu. Formant udostępnia strony właściwości, z których każdy jest obiektem OLE, który umożliwia użytkownikowi edytowanie powiązanego zestawu właściwości. Kontener zawiera ramkę właściwości, która wyświetla strony właściwości. Dla każdej strony ramka właściwości zawiera witrynę `IPropertyPageSite` strony, która obsługuje interfejs.
 
-##  <a name="ignoreapply"></a>COlePropertyPage:: IgnoreApply
+## <a name="colepropertypageignoreapply"></a><a name="ignoreapply"></a>Strona COlePropertyPage::IgnoreApply
 
-Określa, które kontrolki nie włączają przycisku Zastosuj.
+Określa, które formanty nie włączają przycisku Zastosuj.
 
 ```
 void IgnoreApply(UINT nID);
@@ -193,28 +193,28 @@ void IgnoreApply(UINT nID);
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
+*Nid*<br/>
 Identyfikator formantu, który ma zostać zignorowany.
 
 ### <a name="remarks"></a>Uwagi
 
-Przycisk Zastosuj strony właściwości jest włączony tylko wtedy, gdy zmieniono wartości kontrolek strony właściwości. Użyj tej funkcji, aby określić kontrolki, które nie powodują włączenia przycisku Zastosuj, gdy ich wartości zmienią się.
+Przycisk Zastosuj na stronie właściwości jest włączony tylko wtedy, gdy wartości formantów strony właściwości zostały zmienione. Ta funkcja służy do określania formantów, które nie powodują włączenia przycisku Zastosuj po zmianie ich wartości.
 
-##  <a name="ismodified"></a>COlePropertyPage:: IsModified
+## <a name="colepropertypageismodified"></a><a name="ismodified"></a>Strona COlePropertyPage::Jestzmodysyfikowana
 
-Określa, czy użytkownik zmienił wszystkie wartości na stronie właściwości.
+Określa, czy użytkownik zmienił żadnych wartości na stronie właściwości.
 
 ```
 BOOL IsModified();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli strona właściwości została zmodyfikowana.
+PRAWDA, jeśli strona właściwości została zmodyfikowana.
 
-##  <a name="oneditproperty"></a>COlePropertyPage:: OnEditProperty
+## <a name="colepropertypageoneditproperty"></a><a name="oneditproperty"></a>COlePropertyPage::OnEditProperty
 
-Struktura wywołuje tę funkcję, gdy określona właściwość ma być edytowana.
+Struktura wywołuje tę funkcję, gdy określona właściwość ma być edytowany.
 
 ```
 virtual BOOL OnEditProperty(DISPID dispid);
@@ -222,20 +222,20 @@ virtual BOOL OnEditProperty(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*DISPID*<br/>
-Identyfikator wysyłania edytowanej właściwości.
+*Dispid*<br/>
+Identyfikator wysyłki edytowanej właściwości.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Domyślna implementacja zwraca wartość FALSE. Zastąpienia tej funkcji powinny zwrócić wartość TRUE.
+Domyślna implementacja zwraca WARTOŚĆ FAŁSZ. Zastąpienia tej funkcji powinny zwracać wartość PRAWDA.
 
 ### <a name="remarks"></a>Uwagi
 
-Można zastąpić tę wartość, aby ustawić fokus na odpowiedniej kontrolce na stronie. Domyślna implementacja nie robi niczego i zwraca wartość FALSE.
+Można go zastąpić, aby ustawić fokus na odpowiedni formant na stronie. Domyślna implementacja nic nie robi i zwraca FALSE.
 
-##  <a name="onhelp"></a>COlePropertyPage:: OnHelp
+## <a name="colepropertypageonhelp"></a><a name="onhelp"></a>Strona COlePropertyPage::OnHelp
 
-Struktura wywołuje tę funkcję, gdy użytkownik zażąda pomocy online.
+Struktura wywołuje tę funkcję, gdy użytkownik żąda pomocy online.
 
 ```
 virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
@@ -243,36 +243,36 @@ virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszHelpDir*<br/>
+*lpszHelpDir (lpszHelpDir)*<br/>
 Katalog zawierający plik pomocy strony właściwości.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Domyślna implementacja zwraca wartość FALSE.
+Domyślna implementacja zwraca WARTOŚĆ FAŁSZ.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp go, jeśli strona właściwości musi wykonać wszelkie specjalne akcje, gdy użytkownik uzyskuje dostęp do pomocy. Implementacja domyślna nie robi niczego i zwraca wartość FALSE, co sprawia, że struktura wywołuje polecenie WinHelp.
+Zastąpokaj go, jeśli strona właściwości musi wykonać dowolną akcję specjalną, gdy użytkownik uzyskuje dostęp do pomocy. Domyślna implementacja nic nie robi i zwraca FALSE, który nakazuje platformie do wywołania WinHelp.
 
-##  <a name="oninitdialog"></a>COlePropertyPage:: OnInitDialog
+## <a name="colepropertypageoninitdialog"></a><a name="oninitdialog"></a>Strona COlePropertyPage::OnInitDialog
 
-Struktura wywołuje tę funkcję po zainicjowaniu okna dialogowego strony właściwości.
+Struktura wywołuje tę funkcję, gdy okno dialogowe strony właściwości jest inicjowane.
 
 ```
 virtual BOOL OnInitDialog();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Domyślna implementacja zwraca wartość FALSE.
+Domyślna implementacja zwraca WARTOŚĆ FAŁSZ.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp go, jeśli jakakolwiek akcja specjalna jest wymagana po zainicjowaniu okna dialogowego. Domyślne wywołania implementacji `CDialog::OnInitDialog` i zwracają wartość FALSE.
+Zastąpokaj go, jeśli podczas inicjowania okna dialogowego jest wymagana jakakolwiek akcja specjalna. Domyślna implementacja wywołuje `CDialog::OnInitDialog` i zwraca FALSE.
 
-##  <a name="onobjectschanged"></a>COlePropertyPage:: OnObjectsChanged
+## <a name="colepropertypageonobjectschanged"></a><a name="onobjectschanged"></a>COlePropertyPage::OnObjectsZmieniane
 
-Wywoływane przez platformę, gdy jest wybierana inna kontrolka OLE z nowymi właściwościami.
+Wywoływana przez platformę, gdy zostanie wybrana inna kontrolka OLE z nowymi właściwościami.
 
 ```
 virtual void OnObjectsChanged();
@@ -280,11 +280,11 @@ virtual void OnObjectsChanged();
 
 ### <a name="remarks"></a>Uwagi
 
-Podczas wyświetlania właściwości kontrolki OLE w środowisku deweloperskim, niemodalne okno dialogowe służy do wyświetlania jego stron właściwości. Jeśli wybrana jest inna kontrolka, dla nowego zestawu właściwości muszą być wyświetlane różne zestawy stron właściwości. Struktura wywołuje tę funkcję, aby powiadomić stronę właściwości zmiany.
+Podczas przeglądania właściwości formantu OLE w środowisku deweloperskim, niemodless okno dialogowe jest używany do wyświetlania jego stron właściwości. Jeśli wybrano inny formant, dla nowego zestawu właściwości musi być wyświetlany inny zestaw stron właściwości. Struktura wywołuje tę funkcję, aby powiadomić stronę właściwości o zmianie.
 
-Przesłoń tę funkcję, aby otrzymać powiadomienie o tej akcji i wykonać wszelkie specjalne działania.
+Zastąd w tej funkcji należy otrzymywać powiadomienia o tej akcji i wykonywać wszelkie akcje specjalne.
 
-##  <a name="onsetpagesite"></a>COlePropertyPage:: OnSetPageSite
+## <a name="colepropertypageonsetpagesite"></a><a name="onsetpagesite"></a>Strona COlePropertyPage::OnSetPageWitosz
 
 Struktura wywołuje tę funkcję, gdy ramka właściwości udostępnia witrynę strony właściwości.
 
@@ -294,11 +294,11 @@ virtual void OnSetPageSite();
 
 ### <a name="remarks"></a>Uwagi
 
-Implementacja domyślna ładuje podpis strony i próbuje określić rozmiar strony z zasobu okna dialogowego. Przesłoń tę funkcję, jeśli strona właściwości wymaga dalszych akcji. przesłonięcie powinno wywoływać implementację klasy podstawowej.
+Domyślna implementacja ładuje podpis strony i próbuje określić rozmiar strony z zasobu okna dialogowego. Zastąp tę funkcję, jeśli strona właściwości wymaga dalszych działań; zastąpienie należy wywołać implementacji klasy podstawowej.
 
-##  <a name="setcontrolstatus"></a>COlePropertyPage:: SetControlStatus
+## <a name="colepropertypagesetcontrolstatus"></a><a name="setcontrolstatus"></a>Strona COlePropertyPage::SetControlStatus
 
-Zmienia stan kontrolki strony właściwości.
+Zmienia stan formantu strony właściwości.
 
 ```
 BOOL SetControlStatus(
@@ -308,21 +308,21 @@ BOOL SetControlStatus(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-Zawiera identyfikator kontrolki strony właściwości.
+*Nid*<br/>
+Zawiera identyfikator formantu strony właściwości.
 
 *bDirty*<br/>
-Określa, czy pole strony właściwości zostało zmodyfikowane. Ustaw wartość TRUE, jeśli pole zostało zmodyfikowane, wartość FALSE, jeśli nie została zmodyfikowana.
+Określa, czy pole strony właściwości zostało zmodyfikowane. Ustaw wartość PRAWDA, jeśli pole zostało zmodyfikowane, FALSE, jeśli nie zostało zmodyfikowane.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 PRAWDA, jeśli ustawiono określony formant; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli stan kontrolki strony właściwości jest zanieczyszczony, gdy strona właściwości jest ZAMKNIĘTA lub wybrano przycisk Zastosuj, właściwość kontrolki zostanie zaktualizowana o odpowiednią wartość.
+Jeśli stan formantu strony właściwości jest zabrudzony, gdy strona właściwości jest zamknięta lub wybrano przycisk Zastosuj, właściwość formantu zostanie zaktualizowana o odpowiednią wartość.
 
-##  <a name="setdialogresource"></a>COlePropertyPage:: SetDialogResource
+## <a name="colepropertypagesetdialogresource"></a><a name="setdialogresource"></a>Strona COlePropertyPage::SetDialogResource
 
 Ustawia zasób okna dialogowego strony właściwości.
 
@@ -335,7 +335,7 @@ void SetDialogResource(HGLOBAL hDialog);
 *hDialog*<br/>
 Dojście do zasobu okna dialogowego strony właściwości.
 
-##  <a name="sethelpinfo"></a>COlePropertyPage:: SetHelpInfo
+## <a name="colepropertypagesethelpinfo"></a><a name="sethelpinfo"></a>Strona COlePropertyPage::SetHelpInfo
 
 Określa informacje o etykietce narzędzia, nazwę pliku pomocy i kontekst pomocy dla strony właściwości.
 
@@ -349,15 +349,15 @@ void SetHelpInfo(
 ### <a name="parameters"></a>Parametry
 
 *lpszDocString*<br/>
-Ciąg zawierający krótkie informacje pomocy, które mają być wyświetlane na pasku stanu lub w innej lokalizacji.
+Ciąg zawierający krótkie informacje o pomocy do wyświetlania na pasku stanu lub w innej lokalizacji.
 
 *lpszHelpFile*<br/>
 Nazwa pliku pomocy strony właściwości.
 
-*dwHelpContext*<br/>
+*dwHelpContext (Pomoc kontekst)*<br/>
 Kontekst pomocy dla strony właściwości.
 
-##  <a name="setmodifiedflag"></a>COlePropertyPage:: SetModifiedFlag
+## <a name="colepropertypagesetmodifiedflag"></a><a name="setmodifiedflag"></a>Strona COlePropertyPage::SetModifiedFlag
 
 Wskazuje, czy użytkownik zmodyfikował stronę właściwości.
 
@@ -367,12 +367,12 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bModified*<br/>
-Określa nową wartość flagi modyfikacji strony właściwości.
+*bZmodyfikowany*<br/>
+Określa nową wartość zmodyfikowanej flagi strony właściwości.
 
-##  <a name="setpagename"></a>COlePropertyPage:: SetPageName
+## <a name="colepropertypagesetpagename"></a><a name="setpagename"></a>Strona COlePropertyPage::SetPageName
 
-Ustawia nazwę strony właściwości, która jest zwykle wyświetlana na karcie strony.
+Ustawia nazwę strony właściwości, którą ramka właściwości będzie zazwyczaj wyświetlana na karcie strony.
 
 ```
 void SetPageName(LPCTSTR lpszPageName);
@@ -381,12 +381,12 @@ void SetPageName(LPCTSTR lpszPageName);
 ### <a name="parameters"></a>Parametry
 
 *lpszPageName*<br/>
-Wskaźnik na ciąg zawierający nazwę strony właściwości.
+Wskaźnik do ciągu zawierającego nazwę strony właściwości.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przykład CIRC3 MFC](../../overview/visual-cpp-samples.md)<br/>
-[Przykład TESTHELP MFC](../../overview/visual-cpp-samples.md)<br/>
+[Przykładowy circ3 MFC](../../overview/visual-cpp-samples.md)<br/>
+[Próbka TESTHELP MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CDialog](../../mfc/reference/cdialog-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CDialog](../../mfc/reference/cdialog-class.md)

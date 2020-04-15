@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::WeakReference::~WeakReference, destructor
 - Microsoft::WRL::Details::WeakReference::WeakReference, constructor
 ms.assetid: 3f4c956b-dbbd-49b1-8cfa-9509a9956c97
-ms.openlocfilehash: a3372a176a158dd9c89eb888c8deb0244eef9a84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a80c0ec14da2a955a95ac84dd3975212ef20ae04
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387544"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374219"
 ---
 # <a name="weakreference-class"></a>WeakReference — Klasa
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,13 +38,13 @@ class WeakReference;
 
 ## <a name="remarks"></a>Uwagi
 
-Reprezentuje *słabe odwołanie* które mogą być używane z Windows Runtime lub Klasyczny model COM. Słabe odwołanie reprezentuje obiekt, który może być lub może być niedostępny.
+Reprezentuje *słabe odwołanie,* które mogą być używane ze czasem wykonywania systemu Windows lub klasycznej com. Słabe odwołanie reprezentuje obiekt, który może lub może nie być dostępny.
 
-A `WeakReference` obiekt zachowuje *silne odwołanie*, który jest wskaźnikiem do obiektu, a *liczba silne odwołanie*, czyli liczbę kopii silne odwołanie, które zostały przekazane przez `Resolve()` metody. Podczas gdy liczba silne odwołanie jest różna od zera, silne odwołanie jest prawidłowy, a obiekt jest dostępny. Gdy liczba silne odwołanie staje się zerem, silne odwołanie jest nieprawidłowe i obiektu jest niedostępny.
+Obiekt `WeakReference` zachowuje *silne odniesienie*, który jest wskaźnikiem do obiektu i *silną liczbą odwołań*, która jest liczbą `Resolve()` kopii silnego odwołania, które zostały rozłożone przez metodę. Podczas gdy liczba odwołań silnych jest niezerowa, silne odwołanie jest prawidłowe i obiekt jest dostępny. Gdy liczba silnych odwołań staje się równa zero, silne odwołanie jest nieprawidłowe, a obiekt jest niedostępny.
 
-A `WeakReference` obiekt jest zwykle używana do reprezentowania obiekt, którego istnienie jest kontrolowane przez zewnętrzny wątek lub aplikację. Na przykład, utworzyć `WeakReference` obiektu z odwołaniem do obiektu pliku. Gdy plik jest otwarty, silne odwołanie jest prawidłowy. Ale jeśli ten plik będzie zamknięty, silne odwołanie staje się nieprawidłowy.
+Obiekt `WeakReference` jest zazwyczaj używany do reprezentowania obiektu, którego istnienie jest kontrolowane przez zewnętrzny wątek lub aplikację. Na przykład skonstruować `WeakReference` obiekt z odwołania do obiektu pliku. Gdy plik jest otwarty, silne odwołanie jest prawidłowe. Ale jeśli plik jest zamknięty, silne odwołanie staje się nieprawidłowe.
 
-`WeakReference` Metody są bezpieczne dla wątków.
+Metody `WeakReference` są bezpieczne dla wątków.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -52,17 +52,17 @@ A `WeakReference` obiekt jest zwykle używana do reprezentowania obiekt, któreg
 
 Nazwa                                                  | Opis
 ----------------------------------------------------- | ---------------------------------------------------------------------------
-[Weakreference::weakreference —](#weakreference)        | Inicjuje nowe wystąpienie klasy `WeakReference` klasy.
-[WeakReference:: ~ WeakReference](#tilde-weakreference) | Wyłącza (niszczy) bieżące wystąpienie `WeakReference` klasy.
+[WeakReference::WeakReference](#weakreference)        | Inicjuje nowe wystąpienie klasy `WeakReference`.
+[Słabarefera::~SłabeReferencja](#tilde-weakreference) | Deinitializes (niszczy) bieżące wystąpienie `WeakReference` klasy.
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Nazwa                                                                 | Opis
 -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------
-[WeakReference::DecrementStrongReference](#decrementstrongreference) | Dekrementuje silne odwołanie zliczane bieżącego `WeakReference` obiektu.
-[WeakReference::IncrementStrongReference](#incrementstrongreference) | Zwiększa liczbę silne odwołanie bieżącego `WeakReference` obiektu.
-[Weakreference::Resolve —](#resolve)                                   | Ustawia określony wskaźnik do bieżącej wartości silne odwołanie, jeśli liczba silne odwołanie jest różna od zera.
-[WeakReference::SetUnknown](#setunknown)                             | Ustawia silne odwołanie bieżącego `WeakReference` obiekt określony wskaźnik interfejsu.
+[WeakReference::DecrementStrongReference](#decrementstrongreference) | Zmniejsza liczbę silnych odwołań `WeakReference` bieżącego obiektu.
+[Zdecydowanie słaby::IncrementStrongReference](#incrementstrongreference) | Zwiększa silną liczbę odwołań `WeakReference` bieżącego obiektu.
+[Słabarefera::Rozwiąż](#resolve)                                   | Ustawia określony wskaźnik do bieżącej silnej wartości referencyjnej, jeśli liczba silnych odwołań jest niezerowa.
+[SłabeReferencja::SetUnknown](#setunknown)                             | Ustawia silne odwołanie do `WeakReference` bieżącego obiektu na określony wskaźnik interfejsu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -72,11 +72,11 @@ Nazwa                                                                 | Opis
 
 **Nagłówek:** implements.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obszar nazw:** Microsoft::WRL::Dszczegóły
 
-## <a name="tilde-weakreference"></a>WeakReference:: ~ WeakReference
+## <a name="weakreferenceweakreference"></a><a name="tilde-weakreference"></a>Słabarefera::~SłabeReferencja
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 virtual ~WeakReference();
@@ -86,11 +86,11 @@ virtual ~WeakReference();
 
 ### <a name="remarks"></a>Uwagi
 
-Deinicjuje bieżące wystąpienie `WeakReference` klasy.
+Deinitializes bieżące wystąpienie `WeakReference` klasy.
 
-## <a name="decrementstrongreference"></a>WeakReference::DecrementStrongReference
+## <a name="weakreferencedecrementstrongreference"></a><a name="decrementstrongreference"></a>WeakReference::DecrementStrongReference
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 ULONG DecrementStrongReference();
@@ -98,17 +98,17 @@ ULONG DecrementStrongReference();
 
 ### <a name="remarks"></a>Uwagi
 
-Dekrementuje silne odwołanie zliczane bieżącego `WeakReference` obiektu.
+Zmniejsza liczbę silnych odwołań `WeakReference` bieżącego obiektu.
 
-Gdy liczba silne odwołanie staje się zerem, silne odwołanie jest równa `nullptr`.
+Gdy silna liczba odwołań staje się równa `nullptr`zero, silne odwołanie jest ustawione na .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba wraz z przydzielaniem silne odwołanie.
+Zdemalizowana liczba silnych odwołań.
 
-## <a name="incrementstrongreference"></a>WeakReference::IncrementStrongReference
+## <a name="weakreferenceincrementstrongreference"></a><a name="incrementstrongreference"></a>Zdecydowanie słaby::IncrementStrongReference
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 ULONG IncrementStrongReference();
@@ -116,15 +116,15 @@ ULONG IncrementStrongReference();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba zwiększona silne odwołanie.
+Przyrostowa liczba silnych odwołań.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwiększa liczbę silne odwołanie bieżącego `WeakReference` obiektu.
+Zwiększa silną liczbę odwołań `WeakReference` bieżącego obiektu.
 
-## <a name="resolve"></a>Weakreference::Resolve —
+## <a name="weakreferenceresolve"></a><a name="resolve"></a>Słabarefera::Rozwiąż
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 STDMETHOD(Resolve)
@@ -135,27 +135,27 @@ STDMETHOD(Resolve)
 
 ### <a name="parameters"></a>Parametry
 
-*Parametr riid*<br/>
+*Riid*<br/>
 Identyfikator interfejsu.
 
-*ppvObject*<br/>
-Gdy ta operacja zostanie ukończone, kopię bieżącego silne odwołanie, jeśli liczba silne odwołanie jest różna od zera.
+*ppvObiekt*<br/>
+Po zakończeniu tej operacji, kopię bieżącego silnego odwołania, jeśli liczba odwołania silnego jest niezerowa.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-- S_OK, jeśli operacja zakończy się pomyślnie, a liczba silne odwołanie ma wartość zero. *PpvObject* parametr ma wartość `nullptr`.
+- S_OK, jeśli ta operacja zakończy się pomyślnie, a liczba silnych odwołań wynosi zero. Parametr *ppvObject* jest `nullptr`ustawiony na .
 
-- S_OK, jeśli operacja zakończy się pomyślnie, a liczba silne odwołanie jest różna od zera. *PpvObject* parametr ma wartość silne odwołanie.
+- S_OK, jeśli ta operacja zakończy się pomyślnie, a liczba silnych odwołań jest niezerowa. Parametr *ppvObject* jest ustawiony na silne odwołanie.
 
-- W przeciwnym razie wartość HRESULT, która wskazuje przyczynę tej operacji nie powiodło się.
+- W przeciwnym razie HRESULT, który wskazuje przyczynę tej operacji nie powiodło się.
 
 ### <a name="remarks"></a>Uwagi
 
-Ustawia określony wskaźnik do bieżącej wartości silne odwołanie, jeśli liczba silne odwołanie jest różna od zera.
+Ustawia określony wskaźnik do bieżącej silnej wartości referencyjnej, jeśli liczba silnych odwołań jest niezerowa.
 
-## <a name="setunknown"></a>WeakReference::SetUnknown
+## <a name="weakreferencesetunknown"></a><a name="setunknown"></a>SłabeReferencja::SetUnknown
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 void SetUnknown(
@@ -165,16 +165,16 @@ void SetUnknown(
 
 ### <a name="parameters"></a>Parametry
 
-*UNK*<br/>
-Wskaźnik do `IUnknown` interfejs obiektu.
+*Unk*<br/>
+Wskaźnik do `IUnknown` interfejsu obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ustawia silne odwołanie bieżącego `WeakReference` obiekt określony wskaźnik interfejsu.
+Ustawia silne odwołanie do `WeakReference` bieżącego obiektu na określony wskaźnik interfejsu.
 
-## <a name="weakreference"></a>Weakreference::weakreference —
+## <a name="weakreferenceweakreference"></a><a name="weakreference"></a>WeakReference::WeakReference
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 WeakReference();
@@ -182,6 +182,6 @@ WeakReference();
 
 ### <a name="remarks"></a>Uwagi
 
-Inicjuje nowe wystąpienie klasy `WeakReference` klasy.
+Inicjuje nowe wystąpienie klasy `WeakReference`.
 
-Wskaźnik silne odwołanie dla `WeakReference` obiekt jest inicjowany do `nullptr`, oraz liczba silne odwołanie jest inicjowany do 1.
+Silny wskaźnik odniesienia `WeakReference` dla obiektu jest `nullptr`inicjowany do , a liczba silnych odwołań jest inicjowana do 1.

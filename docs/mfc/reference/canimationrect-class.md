@@ -38,16 +38,16 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 84c4cf92894a9ece2021417445c9d7ab94ee6bdf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ffd1254efd3283a4c5641092aefec8eec0ac22a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378183"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373337"
 ---
 # <a name="canimationrect-class"></a>Klasa CAnimationRect
 
-Implementuje funkcje prostokąta, którego boki mogą być animowane.
+Implementuje funkcjonalność prostokąta, którego boki mogą być animowane.
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,18 +61,18 @@ class CAnimationRect : public CAnimationBaseObject;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationRect::CAnimationRect](#canimationrect)|Przeciążone. Konstruuje obiekt prostokąt animacji.|
+|[CAnimationRect::CAnimationRect](#canimationrect)|Przeciążone. Konstruuje obiekt rekt animacji.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationRect::AddTransition](#addtransition)|Dodaje przejścia dla współrzędnych po lewej stronie, górnej, prawej strony i dolnej.|
-|[CAnimationRect::GetBottom](#getbottom)|Zapewnia dostęp do CAnimationVariable reprezentujący Współrzędna dolnej.|
-|[CAnimationRect::GetDefaultValue](#getdefaultvalue)|Zwraca wartości domyślne dla granice prostokąta.|
-|[CAnimationRect::GetLeft](#getleft)|Zapewnia dostęp do CAnimationVariable reprezentująca współrzędną po lewej stronie.|
-|[CAnimationRect::GetRight](#getright)|Zapewnia dostęp do CAnimationVariable reprezentujący Współrzędna prawej.|
-|[CAnimationRect::GetTop](#gettop)|Zapewnia dostęp do CAnimationVariable reprezentujący górną współrzędną.|
+|[CAnimationRect::AddTransition](#addtransition)|Dodaje przejścia dla współrzędnych lewej, górnej, prawej i dolnej.|
+|[CAnimationRect::GetBottom](#getbottom)|Zapewnia dostęp do CAnimationVariable reprezentujący dolną współrzędną.|
+|[CAnimationRect::GetDefaultValue](#getdefaultvalue)|Zwraca wartości domyślne dla granic prostokąta.|
+|[CAnimationRect::GetLeft](#getleft)|Zapewnia dostęp do CAnimationVariable reprezentujący lewej współrzędnej.|
+|[CAnimationRect::GetRight](#getright)|Zapewnia dostęp do CAnimationVariable reprezentujący prawą współrzędną.|
+|[CAnimationRect::GetTop](#gettop)|Zapewnia dostęp do CAnimationVariable reprezentujący górnej współrzędnej.|
 |[CAnimationRect::GetValue](#getvalue)|Zwraca bieżącą wartość.|
 |[CAnimationRect::SetDefaultValue](#setdefaultvalue)|Ustawia wartość domyślną.|
 
@@ -80,38 +80,38 @@ class CAnimationRect : public CAnimationBaseObject;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationRect::GetAnimationVariableList](#getanimationvariablelist)|Umieszcza zmienne zhermetyzowany animacji z listy. (Przesłania [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
+|[CAnimationRect::GetAnimationVariableList](#getanimationvariablelist)|Umieszcza zhermetyzowane zmienne animacji na liście. (Zastępuje [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationRect::operator RECT](#operator_rect)|Konwertuje CAnimationRect prostokątny|
-|[CAnimationRect::operator =](#operator_eq)|Przypisuje CAnimationRect prostokąt.|
+|[CAnimationRect::operator RECT](#operator_rect)|Konwertuje CAnimationRect do RECT.|
+|[CAnimationRect::operator=](#operator_eq)|Przypisuje rect do CAnimationRect.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationRect::m_bFixedSize](#m_bfixedsize)|Określa, czy prostokąt ma ustalony rozmiar.|
+|[CAnimationRect::m_bFixedSize](#m_bfixedsize)|Określa, czy prostokąt ma stały rozmiar.|
 
-### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+### <a name="protected-data-members"></a>Członkowie chronionych danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationRect::m_bottomValue](#m_bottomvalue)|Powiązana zmienna zhermetyzowany animacji, która reprezentuje dołu prostokąta animacji.|
-|[CAnimationRect::m_leftValue](#m_leftvalue)|Zmienna zhermetyzowany animacji, która reprezentuje po lewej stronie jest powiązana prostokąta animacji.|
-|[CAnimationRect::m_rightValue](#m_rightvalue)|Zmienna zhermetyzowany animacji, która reprezentuje po prawej stronie jest powiązana prostokąta animacji.|
+|[CAnimationRect::m_bottomValue](#m_bottomvalue)|Zhermetyzowana zmienna animacji reprezentująca dolną granicę prostokąta animacji.|
+|[CAnimationRect::m_leftValue](#m_leftvalue)|Zhermetyzowana zmienna animacji reprezentująca lewą oprawę prostokąta animacji.|
+|[CAnimationRect::m_rightValue](#m_rightvalue)|Zhermetyzowana zmienna animacji reprezentująca prawą granicę prostokąta animacji.|
 |[CAnimationRect::m_szInitial](#m_szinitial)|Określa początkowy rozmiar prostokąta animacji.|
-|[CAnimationRect::m_topValue](#m_topvalue)|Zmienna zhermetyzowany animacji, która reprezentuje górnej powiązany prostokąta animacji.|
+|[CAnimationRect::m_topValue](#m_topvalue)|Zhermetyzowana zmienna animacji reprezentująca Górną granicę prostokąta animacji.|
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa CAnimationRect hermetyzuje cztery obiekty CAnimationVariable i może reprezentować w aplikacjach prostokąta. Aby użyć tej klasy w aplikacji, po prostu utworzyć wystąpienie obiektu tej klasy, dodaj go do kontrolera animacji przy użyciu CAnimationController::AddAnimationObject i wywoływać AddTransition dla każdego przejścia, które mają być stosowane do lewy, prawy górny i dolny współrzędnych.
+CAnimationRect Klasa hermetyzuje cztery CAnimationVariable obiektów i może reprezentować w aplikacjach prostokąt. Aby użyć tej klasy w aplikacji, wystarczy utworzyć wystąpienie obiektu tej klasy, dodaj go do kontrolera animacji przy użyciu CAnimationController::AddAnimationObject i wywołać AddTransition dla każdego przejścia, które mają być stosowane do lewej, prawej górnej i dolnej współrzędne.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 [CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)
 
@@ -121,9 +121,9 @@ Klasa CAnimationRect hermetyzuje cztery obiekty CAnimationVariable i może repre
 
 **Nagłówek:** afxanimationcontroller.h
 
-##  <a name="addtransition"></a>  CAnimationRect::AddTransition
+## <a name="canimationrectaddtransition"></a><a name="addtransition"></a>CAnimationRect::AddTransition
 
-Dodaje przejścia dla współrzędnych po lewej stronie, górnej, prawej strony i dolnej.
+Dodaje przejścia dla współrzędnych lewej, górnej, prawej i dolnej.
 
 ```
 void AddTransition(
@@ -135,25 +135,25 @@ void AddTransition(
 
 ### <a name="parameters"></a>Parametry
 
-*pLeftTransition*<br/>
-Określa przeniesienie po lewej stronie.
+*pLeftTransition (Polski)*<br/>
+Określa przejście dla lewej strony.
 
-*pTopTransition*<br/>
-Określa przejścia dla górnej.
+*pTopTransition (Tłumaczenie na wierzchu)*<br/>
+Określa przejście dla górnej strony.
 
-*pRightTransition*<br/>
-Określa przeniesienie po prawej stronie.
+*pRightTransition (Tłumaczenie pRight)*<br/>
+Określa przejście po prawej stronie.
 
-*pBottomTransition*<br/>
-Określa przejścia dla dolnej.
+*pBottomTransition (Tłumaczenie na bottom)*<br/>
+Określa przejście dla dolnej części.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby dodać określonego przejścia do wewnętrznej listy przejścia, które mają być stosowane do zmiennych animacji dla każdej strony prostokąta. Po dodaniu przejść, nie są stosowane natychmiast i przechowywane na liście wewnętrznych. Przejścia są stosowane (dodane do scenorysu dla określonej wartości) podczas wywoływania CAnimationController::AnimateGroup. Jeśli nie ma potrzeby zastosowanie przejścia do jednej strony, prostokąt, można przekazać wartości NULL.
+Wywołanie tej funkcji, aby dodać określone przejścia do wewnętrznej listy przejść, które mają być stosowane do zmiennych animacji dla każdej strony prostokąta. Po dodaniu przejść nie są one stosowane natychmiast i przechowywane na liście wewnętrznej. Przejścia są stosowane (dodawane do serii ujęć dla określonej wartości) podczas wywoływania CAnimationController::AnimateGroup. Jeśli nie trzeba zastosować przejście do jednej z boków prostokąta, można przekazać NULL.
 
-##  <a name="canimationrect"></a>  CAnimationRect::CAnimationRect
+## <a name="canimationrectcanimationrect"></a><a name="canimationrect"></a>CAnimationRect::CAnimationRect
 
-Tworzy obiekt CAnimationRect.
+Konstruuje CAnimationRect obiektu.
 
 ```
 CAnimationRect();
@@ -184,9 +184,9 @@ CAnimationRect(
 ### <a name="parameters"></a>Parametry
 
 *Rect*<br/>
-Określa domyślny prostokąta.
+Określa domyślny prostokąt.
 
-*nGroupID*<br/>
+*nGrupaID*<br/>
 Określa identyfikator grupy.
 
 *nObjectID*<br/>
@@ -195,31 +195,31 @@ Określa identyfikator obiektu.
 *dwUserData*<br/>
 Określa dane zdefiniowane przez użytkownika.
 
-*(czas pacyficzny)*<br/>
-Współrzędna w lewym górnym rogu.
+*Pt*<br/>
+Współrzędna lewego górnego rogu.
 
-*sz*<br/>
+*Sz*<br/>
 Rozmiar prostokąta.
 
-*nLeft*<br/>
-Określa współrzędną lewej granicy.
+*nNaft*<br/>
+Określa współrzędne lewej granicy.
 
-*nTop*<br/>
-Określa współrzędną górnej powiązany.
+*nNa szczycie*<br/>
+Określa współrzędne górnej granicy.
 
-*nRight*<br/>
-Określa współrzędną prawej granicy.
+*nWej*<br/>
+Określa współrzędne prawej granicy.
 
-*nBottom*<br/>
-Określa współrzędną dolnej powiązany.
+*nBottom (właśc.*<br/>
+Określa współrzędne dolnej granicy.
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt jest konstruowany przy użyciu wartości domyślne po lewej stronie, górnej, prawej strony i dolnej, identyfikator grupy, które zostaną ustawione na 0 lub identyfikator obiektu. Można ich zmienić później w czasie wykonywania za pomocą SetDefaultValue i identyfikator zestawu.
+Obiekt jest konstruowany z wartościami domyślnymi dla lewej, górnej, prawej i dolnej, identyfikatora obiektu i identyfikatora grupy, która zostanie ustawiona na 0. Można je zmienić później w czasie wykonywania przy użyciu SetDefaultValue i SetID.
 
-##  <a name="getanimationvariablelist"></a>  CAnimationRect::GetAnimationVariableList
+## <a name="canimationrectgetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationRect::GetAnimationVariableList
 
-Umieszcza zmienne zhermetyzowany animacji z listy.
+Umieszcza zhermetyzowane zmienne animacji na liście.
 
 ```
 virtual void GetAnimationVariableList(
@@ -229,12 +229,12 @@ virtual void GetAnimationVariableList(
 
 ### <a name="parameters"></a>Parametry
 
-*lst*<br/>
-Po powrocie z tej funkcji zawiera wskaźniki do czterech obiektów CAnimationVariable reprezentujący współrzędnych prostokąta.
+*Lst*<br/>
+Po powrocie funkcja zawiera wskaźniki do czterech CAnimationVariable obiektów reprezentujących współrzędne prostokąta.
 
-##  <a name="getbottom"></a>  CAnimationRect::GetBottom
+## <a name="canimationrectgetbottom"></a><a name="getbottom"></a>CAnimationRect::GetBottom
 
-Zapewnia dostęp do CAnimationVariable reprezentujący Współrzędna dolnej.
+Zapewnia dostęp do CAnimationVariable reprezentujący dolną współrzędną.
 
 ```
 CAnimationVariable& GetBottom();
@@ -242,15 +242,15 @@ CAnimationVariable& GetBottom();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do zhermetyzowanego CAnimationVariable reprezentujący Współrzędna dolnej.
+Odwołanie do hermetyzowanych CAnimationVariable reprezentujący dolną współrzędną.
 
 ### <a name="remarks"></a>Uwagi
 
-Możesz wywołać tę metodę, aby uzyskać bezpośredni dostęp do podstawowych CAnimationVariable reprezentujący Współrzędna dolnej.
+Można wywołać tę metodę, aby uzyskać bezpośredni dostęp do podstawowej CAnimationVariable reprezentujący dolnej współrzędnej.
 
-##  <a name="getdefaultvalue"></a>  CAnimationRect::GetDefaultValue
+## <a name="canimationrectgetdefaultvalue"></a><a name="getdefaultvalue"></a>CAnimationRect::GetDefaultValue
 
-Zwraca wartości domyślne dla granice prostokąta.
+Zwraca wartości domyślne dla granic prostokąta.
 
 ```
 CRect GetDefaultValue();
@@ -258,15 +258,15 @@ CRect GetDefaultValue();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-CRect wartość zawierający wartości domyślne dla lewy, prawy, górny i dolny.
+Wartość CRect zawierająca wartości domyślne dla lewej, prawej, górnej i dolnej.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję można pobrać wartości domyślnej, która została wcześniej ustawiona przez konstruktora lub SetDefaultValue.
+Wywołanie tej funkcji, aby pobrać wartość domyślną, która została wcześniej ustawiona przez konstruktora lub SetDefaultValue.
 
-##  <a name="getleft"></a>  CAnimationRect::GetLeft
+## <a name="canimationrectgetleft"></a><a name="getleft"></a>CAnimationRect::GetLeft
 
-Zapewnia dostęp do CAnimationVariable reprezentująca współrzędną po lewej stronie.
+Zapewnia dostęp do CAnimationVariable reprezentujący lewej współrzędnej.
 
 ```
 CAnimationVariable& GetLeft();
@@ -274,15 +274,15 @@ CAnimationVariable& GetLeft();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do zhermetyzowanego CAnimationVariable reprezentujący lewą współrzędną.
+Odwołanie do hermetyzowanych CAnimationVariable reprezentujący lewą współrzędną.
 
 ### <a name="remarks"></a>Uwagi
 
-Możesz wywołać tę metodę, aby uzyskać bezpośredni dostęp do podstawowych CAnimationVariable reprezentujący lewą współrzędną.
+Można wywołać tę metodę, aby uzyskać bezpośredni dostęp do podstawowej CAnimationVariable reprezentujący lewą współrzędną.
 
-##  <a name="getright"></a>  CAnimationRect::GetRight
+## <a name="canimationrectgetright"></a><a name="getright"></a>CAnimationRect::GetRight
 
-Zapewnia dostęp do CAnimationVariable reprezentujący Współrzędna prawej.
+Zapewnia dostęp do CAnimationVariable reprezentujący prawą współrzędną.
 
 ```
 CAnimationVariable& GetRight();
@@ -290,15 +290,15 @@ CAnimationVariable& GetRight();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do zhermetyzowanego CAnimationVariable reprezentujący Współrzędna prawej.
+Odwołanie do hermetyzowanych CAnimationVariable reprezentujący prawą współrzędną.
 
 ### <a name="remarks"></a>Uwagi
 
-Możesz wywołać tę metodę, aby uzyskać bezpośredni dostęp do podstawowych CAnimationVariable reprezentujący Współrzędna prawej.
+Można wywołać tę metodę, aby uzyskać bezpośredni dostęp do podstawowej CAnimationVariable reprezentujący prawą współrzędną.
 
-##  <a name="gettop"></a>  CAnimationRect::GetTop
+## <a name="canimationrectgettop"></a><a name="gettop"></a>CAnimationRect::GetTop
 
-Zapewnia dostęp do CAnimationVariable reprezentujący górną współrzędną.
+Zapewnia dostęp do CAnimationVariable reprezentujący górnej współrzędnej.
 
 ```
 CAnimationVariable& GetTop();
@@ -306,13 +306,13 @@ CAnimationVariable& GetTop();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do zhermetyzowanego CAnimationVariable reprezentujący górną współrzędną.
+Odwołanie do hermetyzowanych CAnimationVariable reprezentujący górnej współrzędnej.
 
 ### <a name="remarks"></a>Uwagi
 
-Możesz wywołać tę metodę, aby uzyskać bezpośredni dostęp do podstawowych CAnimationVariable reprezentujący górną współrzędną.
+Można wywołać tę metodę, aby uzyskać bezpośredni dostęp do podstawowej CAnimationVariable reprezentujący górnej współrzędnej.
 
-##  <a name="getvalue"></a>  CAnimationRect::GetValue
+## <a name="canimationrectgetvalue"></a><a name="getvalue"></a>CAnimationRect::GetValue
 
 Zwraca bieżącą wartość.
 
@@ -323,19 +323,19 @@ BOOL GetValue(CRect& rect);
 ### <a name="parameters"></a>Parametry
 
 *Rect*<br/>
-Dane wyjściowe. Gdy metoda zwróci wartość, zawiera wartość bieżącą.
+Wyjście. Zawiera bieżącą wartość, gdy ta metoda zwraca.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli bieżąca wartość został pomyślnie pobrany; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli bieżąca wartość została pomyślnie pobrana; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby pobrać bieżącą wartość prostokąt animacji. Jeśli ta metoda kończy się niepowodzeniem lub podstawowej COM obiekty do lewej, góra, prawo i w dół nie zostały zainicjowane, prostokąt zawiera wartość domyślną, która została wcześniej ustawiona w konstruktorze lub SetDefaultValue.
+Wywołanie tej funkcji, aby pobrać bieżącą wartość prostokąta animacji. Jeśli ta metoda nie powiedzie się lub podstawowe obiekty COM dla lewej, górnej, prawej i dolnej nie zostały zainicjowane, rect zawiera wartość domyślną, która została wcześniej ustawiona w konstruktorze lub przez SetDefaultValue.
 
-##  <a name="m_bfixedsize"></a>  CAnimationRect::m_bFixedSize
+## <a name="canimationrectm_bfixedsize"></a><a name="m_bfixedsize"></a>CAnimationRect::m_bFixedSize
 
-Określa, czy prostokąt ma ustalony rozmiar.
+Określa, czy prostokąt ma stały rozmiar.
 
 ```
 BOOL m_bFixedSize;
@@ -343,33 +343,33 @@ BOOL m_bFixedSize;
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli ten element członkowski ma wartość true, rozmiar prostokąta jest stały i w prawo, a dolny — wartości są ponownie obliczane, każdym razem, gdy w lewym górnym rogu zostanie przeniesiona zgodnie z ustalonym rozmiarze. Ustaw tę wartość na wartość TRUE, aby łatwo przenieść prostokąt wokół ekranu. W takim przypadku stosowane do prawej i u dołu współrzędnych przejścia są ignorowane. Rozmiar są przechowywane wewnętrznie, podczas konstruowania obiektu i/lub wywołaj SetDefaultValue. Domyślnie ten element członkowski ma wartość FALSE.
+Jeśli ten element członkowski jest true, a następnie rozmiar prostokąta jest stała i prawe i dolne wartości są ponownie obliczane za każdym razem, gdy lewy górny róg jest przenoszony zgodnie ze stałym rozmiarem. Ustaw tę wartość na WARTOŚĆ TRUE, aby łatwo przesuwać prostokąt po ekranie. W tym przypadku przejścia zastosowane do współrzędnych prawej i dolnej są ignorowane. Rozmiar jest przechowywany wewnętrznie podczas konstruowania obiektu i/lub wywołania SetDefaultValue. Domyślnie ten element członkowski jest ustawiony na FAŁSZ.
 
-##  <a name="m_bottomvalue"></a>  CAnimationRect::m_bottomValue
+## <a name="canimationrectm_bottomvalue"></a><a name="m_bottomvalue"></a>CAnimationRect::m_bottomValue
 
-Powiązana zmienna zhermetyzowany animacji, która reprezentuje dołu prostokąta animacji.
+Zhermetyzowana zmienna animacji reprezentująca dolną granicę prostokąta animacji.
 
 ```
 CAnimationVariable m_bottomValue;
 ```
 
-##  <a name="m_leftvalue"></a>  CAnimationRect::m_leftValue
+## <a name="canimationrectm_leftvalue"></a><a name="m_leftvalue"></a>CAnimationRect::m_leftValue
 
-Zmienna zhermetyzowany animacji, która reprezentuje po lewej stronie jest powiązana prostokąta animacji.
+Zhermetyzowana zmienna animacji reprezentująca lewą oprawę prostokąta animacji.
 
 ```
 CAnimationVariable m_leftValue;
 ```
 
-##  <a name="m_rightvalue"></a>  CAnimationRect::m_rightValue
+## <a name="canimationrectm_rightvalue"></a><a name="m_rightvalue"></a>CAnimationRect::m_rightValue
 
-Zmienna zhermetyzowany animacji, która reprezentuje po prawej stronie jest powiązana prostokąta animacji.
+Zhermetyzowana zmienna animacji reprezentująca prawą granicę prostokąta animacji.
 
 ```
 CAnimationVariable m_rightValue;
 ```
 
-##  <a name="m_szinitial"></a>  CAnimationRect::m_szInitial
+## <a name="canimationrectm_szinitial"></a><a name="m_szinitial"></a>CAnimationRect::m_szInitial
 
 Określa początkowy rozmiar prostokąta animacji.
 
@@ -377,17 +377,17 @@ Określa początkowy rozmiar prostokąta animacji.
 CSize m_szInitial;
 ```
 
-##  <a name="m_topvalue"></a>  CAnimationRect::m_topValue
+## <a name="canimationrectm_topvalue"></a><a name="m_topvalue"></a>CAnimationRect::m_topValue
 
-Zmienna zhermetyzowany animacji, która reprezentuje górnej powiązany prostokąta animacji.
+Zhermetyzowana zmienna animacji reprezentująca Górną granicę prostokąta animacji.
 
 ```
 CAnimationVariable m_topValue;
 ```
 
-##  <a name="operator_rect"></a>  CAnimationRect::operator RECT
+## <a name="canimationrectoperator-rect"></a><a name="operator_rect"></a>CAnimationRect::operator RECT
 
-Konwertuje CAnimationRect prostokątny
+Konwertuje CAnimationRect do RECT.
 
 ```
 operator RECT();
@@ -395,15 +395,15 @@ operator RECT();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bieżąca wartość prostokąta animacji jako prostokątny
+Bieżąca wartość prostokąta animacji jako RECT.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja wywołuje wewnętrznie GetValue. Jeśli GetValue jakiegoś powodu nie powiedzie się, zwrócone Prostokąt będzie zawierać wartości domyślne dla wszystkich współrzędnych prostokąta.
+Ta funkcja wewnętrznie wywołuje GetValue. Jeśli GetValue z jakiegoś powodu nie powiedzie się, zwrócone RECT będzie zawierać wartości domyślne dla wszystkich współrzędnych prostokąta.
 
-##  <a name="operator_eq"></a>  CAnimationRect::operator =
+## <a name="canimationrectoperator"></a><a name="operator_eq"></a>CAnimationRect::operator=
 
-Przypisuje CAnimationRect prostokąt.
+Przypisuje rect do CAnimationRect.
 
 ```
 void operator=(const RECT& rect);
@@ -412,13 +412,13 @@ void operator=(const RECT& rect);
 ### <a name="parameters"></a>Parametry
 
 *Rect*<br/>
-Nowa wartość prostokąt animacji.
+Nowa wartość prostokąta animacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Zaleca się to zrobić przed rozpoczęciem animacji, ponieważ ten operator wywołuje SetDefaultValue, która odtwarza obiektów COM dla składników koloru, jeśli zostały utworzone. Jeśli subskrybujesz ten obiekt animacji na zdarzenia (ValueChanged lub IntegerValueChanged), należy ponownie włączyć te zdarzenia.
+Zaleca się, aby to zrobić przed rozpoczęciem animacji, ponieważ ten operator wywołuje SetDefaultValue, który odtwarza podstawowe obiekty COM dla składników kolorów, jeśli zostały utworzone. Jeśli ten obiekt animacji został zasubskrybowany do zdarzeń (ValueChanged lub IntegerValueChanged), należy ponownie włączyć te zdarzenia.
 
-##  <a name="setdefaultvalue"></a>  CAnimationRect::SetDefaultValue
+## <a name="canimationrectsetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationRect::SetDefaultValue
 
 Ustawia wartość domyślną.
 
@@ -429,12 +429,12 @@ void SetDefaultValue(const CRect& rect);
 ### <a name="parameters"></a>Parametry
 
 *Rect*<br/>
-Określa nowe wartości domyślne po lewej stronie, górnej, prawej strony i dolnej.
+Określa nowe wartości domyślne dla lewej, górnej, prawej i dolnej.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby ustawić wartość domyślną obiektu animacji, należy użyć tej funkcji. Ta metoda przypisuje wartości domyślne granice prostokąta. Odtwarza również obiektów COM, jeśli zostały utworzone. Jeśli subskrybujesz ten obiekt animacji na zdarzenia (ValueChanged lub IntegerValueChanged), należy ponownie włączyć te zdarzenia.
+Ta funkcja służy do ustawiania wartości domyślnej na obiekt animacji. Ta metoda przypisuje wartości domyślne do granic prostokąta. Odtwarza również podstawowe obiekty COM, jeśli zostały utworzone. Jeśli ten obiekt animacji został zasubskrybowany do zdarzeń (ValueChanged lub IntegerValueChanged), należy ponownie włączyć te zdarzenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::RuntimeClassBaseT::AsIID method
 - Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS method
 ms.assetid: a62775fb-3359-4f45-9ff1-c07fa8da464b
-ms.openlocfilehash: 5d93b3e86e7ba105a42ccbedbbf44c51ada97bbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06a9f73e00d541b0e5bcbe20c57befe4a67c5132
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403168"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375722"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT — Struktura
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,12 +31,12 @@ friend struct Details::RuntimeClassBaseT;
 
 ### <a name="parameters"></a>Parametry
 
-*RuntimeClassTypeT*<br/>
-Pola flagi, które określa co najmniej jeden [RuntimeClassType](runtimeclasstype-enumeration.md) modułów wyliczających.
+*Typ klasy środowiska uruchomieniowego*<br/>
+Pole flag określające co najmniej jeden wyliczaratorów [RuntimeClassType.](runtimeclasstype-enumeration.md)
 
 ## <a name="remarks"></a>Uwagi
 
-Zapewnia metody pomocnika do `QueryInterface` operacji oraz pobieranie identyfikatorów interfejsu.
+Udostępnia metody pomocnicze dla `QueryInterface` operacji i uzyskiwania identyfikatorów interfejsu.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -44,8 +44,8 @@ Zapewnia metody pomocnika do `QueryInterface` operacji oraz pobieranie identyfik
 
 Nazwa                                                         | Opis
 ------------------------------------------------------------ | -----------------------------------------------------------------------------
-[RuntimeClassBaseT::AsIID](#asiid)                           | Pobiera wskaźnik do określonego interfejsu.
-[RuntimeClassBaseT::GetImplementedIIDS](#getimplementediids) | Pobiera tablicę identyfikatorów, które są implementowane przez określony typ interfejsu.
+[RuntimeClassBaseT::AsiID](#asiid)                           | Pobiera wskaźnik do określonego identyfikatora interfejsu.
+[RuntimeClassBaseT::GetImplementediIDS](#getimplementediids) | Pobiera tablicę identyfikatorów interfejsu, które są implementowane przez określony typ.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -55,11 +55,11 @@ Nazwa                                                         | Opis
 
 **Nagłówek:** implements.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obszar nazw:** Microsoft::WRL::Dszczegóły
 
-## <a name="asiid"></a>RuntimeClassBaseT::AsIID
+## <a name="runtimeclassbasetasiid"></a><a name="asiid"></a>RuntimeClassBaseT::AsiID
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 template<typename T>
@@ -73,28 +73,28 @@ __forceinline static HRESULT AsIID(
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ, który implementuje Identyfikatorem określony przez parametr *riid*.
+Typ, który implementuje identyfikator interfejsu określony przez parametr *riid*.
 
-*implements*<br/>
-Zmiennej o typie określonym przez parametr szablonu *T*.
+*Implementuje*<br/>
+Zmienna typu określonego przez parametr szablonu *T*.
 
-*Parametr riid*<br/>
+*Riid*<br/>
 Identyfikator interfejsu do pobrania.
 
-*ppvObject*<br/>
-Jeśli operacja się powiedzie, wskaźnik do a wskaźnik do interfejsu określony przez parametr *riid*.
+*ppvObiekt*<br/>
+Jeśli ta operacja zakończy się pomyślnie, wskaźnik do wskaźnika do interfejsu określonego przez parametr *riid*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.
+S_OK, jeśli się powiedzie; w przeciwnym razie hresult, który opisuje błąd.
 
 ### <a name="remarks"></a>Uwagi
 
-Pobiera wskaźnik do określonego interfejsu.
+Pobiera wskaźnik do określonego identyfikatora interfejsu.
 
-## <a name="getimplementediids"></a>RuntimeClassBaseT::GetImplementedIIDS
+## <a name="runtimeclassbasetgetimplementediids"></a><a name="getimplementediids"></a>RuntimeClassBaseT::GetImplementediIDS
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 template<typename T>
@@ -108,21 +108,21 @@ __forceinline static HRESULT GetImplementedIIDS(
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ *implementuje* parametru.
+Typ parametru *implements.*
 
-*implements*<br/>
+*Implementuje*<br/>
 Wskaźnik do typu określonego przez parametr *T*.
 
-*iidCount*<br/>
+*iidCount (licz) iidCount*<br/>
 Maksymalna liczba identyfikatorów interfejsu do pobrania.
 
-*IID*<br/>
-Jeśli operacja zakończy się pomyślnie, tablicę identyfikatorów implementowana przez typ interfejsu *T*.
+*iids*<br/>
+Jeśli ta operacja zakończy się pomyślnie, tablica identyfikatorów interfejsu zaimplementowana przez typ *T*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.
+S_OK, jeśli się powiedzie; w przeciwnym razie hresult, który opisuje błąd.
 
 ### <a name="remarks"></a>Uwagi
 
-Pobiera tablicę identyfikatorów, które są implementowane przez określony typ interfejsu.
+Pobiera tablicę identyfikatorów interfejsu, które są implementowane przez określony typ.
