@@ -5,47 +5,47 @@ helpviewer_keywords:
 - IDispatchImpl class, implementing dual interfaces
 - dual interfaces, implementing
 ms.assetid: d1da3633-b445-4dcd-8a0a-3efdafada3ea
-ms.openlocfilehash: ecd6a0cc90ca4175c4ae898f2e9aa8bf00508a3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a85597adad045bee3edb5cc3ed63c72a22fa08fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262232"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319464"
 ---
 # <a name="implementing-a-dual-interface"></a>Implementacja podwójnego interfejsu
 
-Można zaimplementować przy użyciu podwójnego interfejsu [IDispatchImpl](../atl/reference/idispatchimpl-class.md) klasy, która udostępnia domyślną implementację elementu `IDispatch` metody podwójnego interfejsu. Aby uzyskać więcej informacji, zobacz [implementowania interfejsu IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+Można zaimplementować podwójny interfejs przy użyciu [IDispatchImpl](../atl/reference/idispatchimpl-class.md) `IDispatch` klasy, która zapewnia domyślną implementację metod w interfejsie dual. Aby uzyskać więcej informacji, zobacz [Implementowanie interfejsu IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
 Aby użyć tej klasy:
 
-- Zdefiniuj podwójnego interfejsu w bibliotece typów.
+- Zdefiniuj podwójny interfejs w bibliotece typów.
 
-- Dziedziczyć klasy specjalizacją `IDispatchImpl` (przekazać informacje o bibliotece interfejsu i typ jako argumenty szablonu).
+- Wywodź klasę ze `IDispatchImpl` specjalizacji (przekaż informacje o interfejsie i bibliotece typów jako argumenty szablonu).
 
-- Dodaj wpis (lub wpisy) do mapy COM do udostępnienia podwójnego interfejsu za pośrednictwem `QueryInterface`.
+- Dodaj wpis (lub wpisy) do mapy COM, `QueryInterface`aby udostępnić podwójny interfejs za pośrednictwem programu .
 
-- Implementowanie vtable część interfejsu w klasie.
+- Zaimplementuj część interfejsu vtable w klasie.
 
-- Upewnij się, że biblioteki typów z definicją interfejsu dostępne dla obiektów w czasie wykonywania.
+- Upewnij się, że biblioteka typów zawierająca definicję interfejsu jest dostępna dla obiektów w czasie wykonywania.
 
 ## <a name="atl-simple-object-wizard"></a>Kreator prostych obiektów ATL
 
-Jeśli chcesz utworzyć nowy interfejs i nową klasę do jej wdrożenia, możesz użyć [okno dialogowe Dodawanie klasy ATL](../ide/add-class-dialog-box.md), a następnie [proste Kreator obiektu ATL](../atl/reference/atl-simple-object-wizard.md).
+Aby utworzyć nowy interfejs i nową klasę do jego zaimplementowania, można użyć [okna dialogowego Atl Add Class](../ide/add-class-dialog-box.md), a następnie [Kreatora obiektów prostych ATL](../atl/reference/atl-simple-object-wizard.md).
 
 ## <a name="implement-interface-wizard"></a>Kreator implementacji interfejsu
 
-Jeśli masz istniejący interfejs, możesz użyć [Kreator implementacji interfejsu](../atl/reference/adding-a-new-interface-in-an-atl-project.md) dodać niezbędne klasy bazowej, wpisy mapy COM i implementacje metod szkielet do istniejącej klasy.
+Jeśli masz istniejący interfejs, można użyć [Kreatora implementacji interfejsu,](../atl/reference/adding-a-new-interface-in-an-atl-project.md) aby dodać niezbędną klasę podstawową, wpisy mapy COM i implementacje metody szkieletu do istniejącej klasy.
 
 > [!NOTE]
->  Może być konieczne dostosowanie wygenerowanej klasy bazowej, tak, aby numery wersji głównych i pomocniczych biblioteki typów są przekazywane jako argumenty szablonu, aby Twoje `IDispatchImpl` klasy bazowej. Kreator implementacji interfejsu nie Sprawdź numer wersji biblioteki typów.
+> Może być konieczne dostosowanie wygenerowanej klasy podstawowej, tak aby główne i pomocnicze numery `IDispatchImpl` wersji biblioteki typów były przekazywane jako argumenty szablonu do klasy podstawowej. Kreator implementacji interfejsu nie sprawdza numeru wersji biblioteki typów.
 
-## <a name="implementing-idispatch"></a>Implementowanie interfejsu IDispatch
+## <a name="implementing-idispatch"></a>Wdrażanie IDispatch
 
-Możesz użyć `IDispatchImpl` klasy bazowej na dostarczać implementację dispinterface po prostu, określając odpowiedni wpis w mapie com. (przy użyciu [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) lub [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid) — makro) tak długo, jak długo mają bibliotekę typów, opisujący odpowiedniego podwójnego interfejsu. Dość często, aby zaimplementować `IDispatch` interfejsu na przykład w ten sposób. Proste Kreator obiektu ATL i Kreator interfejsu zaimplementować zarówno założono, że zamierzasz wdrożyć `IDispatch` w ten sposób, więc ich będzie dodać odpowiedni wpis do mapy.
+Klasy podstawowej `IDispatchImpl` można użyć, aby zapewnić implementację dispinterface tylko określając odpowiedni wpis na mapie COM (przy użyciu [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) lub [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid) makra), tak długo, jak masz biblioteki typów opisujących odpowiedni interfejs podwójny. Jest to dość powszechne, aby zaimplementować interfejs w `IDispatch` ten sposób, na przykład. Kreator obiektów prostych atl i Kreator interfejsu implementacji `IDispatch` zarówno zakłada, że zamierzasz zaimplementować w ten sposób, więc doda odpowiedni wpis do mapy.
 
 > [!NOTE]
->  ATL udostępnia [IDispEventImpl](../atl/reference/idispeventimpl-class.md) i [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) klasy, aby pomóc w zaimplementowaniu dispinterfaces bez konieczności bibliotekę typów z definicją zgodne podwójnego interfejsu.
+> ATL oferuje [IDispEventImpl](../atl/reference/idispeventimpl-class.md) i [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) klasy, które ułatwiają implementowanie dispinterfaces bez konieczności biblioteki typów zawierającej definicję zgodnego interfejsu dual.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Podwójne interfejsy i ATL](../atl/dual-interfaces-and-atl.md)
+[Dwa interfejsy i ATL](../atl/dual-interfaces-and-atl.md)

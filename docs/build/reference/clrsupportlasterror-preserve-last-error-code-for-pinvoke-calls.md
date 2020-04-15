@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-ms.openlocfilehash: 64948d81759d415245e741bc6152d56bb35480d2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 19930591c2d0406c68b1a408622a49c9e8b1d551
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988352"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322274"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (Zachowaj kod ostatniego błędu dla wywołań PInvoke)
 
-**/CLRSUPPORTLASTERROR**, która jest domyślnie włączona, zachowuje ostatni kod błędu funkcji wywoływanych za pośrednictwem mechanizmu P/Invoke, który umożliwia wywoływanie natywnych funkcji w bibliotekach DLL, z kodu skompilowanego z **/CLR**.
+**/CLRSUPPORTLASTERROR**, który jest domyślnie włączony, zachowuje ostatni kod błędu funkcji wywoływanych za pośrednictwem mechanizmu P/Invoke, który umożliwia wywoływanie funkcji natywnych w DLLS, z kodu skompilowanego z **/clr**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,63 +26,63 @@ ms.locfileid: "74988352"
 
 ## <a name="remarks"></a>Uwagi
 
-Zachowanie ostatniego kodu błędu oznacza spadek wydajności.  Jeśli nie chcesz ponosić wpływu na wydajność, aby zachować kod ostatniego błędu, Połącz się z **/CLRSUPPORTLASTERROR: No**.
+Zachowanie ostatniego kodu błędu oznacza spadek wydajności.  Jeśli nie chcesz ponosić wpływu zachowania ostatniego kodu błędu na wydajność, łącze **z /CLRSUPPORTLASTERROR:NO**.
 
-Możesz zminimalizować wpływ na wydajność przez łączenie z **/CLRSUPPORTLASTERROR: SYSTEMDLL**, która zachowuje tylko kod ostatniego błędu dla funkcji w bibliotekach DLL systemu.  Systemowa biblioteka DLL jest definiowana jako jeden z następujących:
+Wpływ na wydajność można zminimalizować, łącząc się z **/CLRSUPPORTLASTERROR:SYSTEMDLL**, który zachowuje tylko ostatni kod błędu dla funkcji w bibliotekach DLL systemu.  Biblioteka DLL systemu jest zdefiniowana jako jedna z następujących opcji:
 
 |||||
 |-|-|-|-|
-|ACLUI.DLL|ACTIVEDS. BIBLIOTEKI DLL|ADPTIF.DLL|ADVAPI32.DLL|
-|ASYCFILT.DLL|AUTHZ.DLL|AVICAP32.DLL|AVIFIL32.DLL|
-|Typu. BIBLIOTECE|CLUSAPI.DLL|COMCTL32.DLL|COMDLG32.DLL|
-|COMSVCS. BIBLIOTECE|CREDUI.DLL|CRYPT32.DLL|CRYPTNET. BIBLIOTECE|
-|CRYPTUI.DLL|D3D8THK.DLL|DBGENG. BIBLIOTECE|DBGHELP. BIBLIOTECE|
-|DCIMAN32.DLL|DNSAPI.DLL|DSPROP.DLL|DSUIEXT.DLL|
-|GDI32.DLL|GLU32.DLL|Plik. BIBLIOTECE|ICM32.DLL|
-|IMAGEHLP.DLL|IMM32.DLL|IPHLPAPI.DLL|IPROP.DLL|
-|KERNEL32.DLL|KSUSER.DLL|LOADPERF.DLL|LZ32.DLL|
-|MAPI32.DLL|MGMTAPI.DLL|MOBSYNC. BIBLIOTECE|MPR.DLL|
-|MPRAPI.DLL|MQRT.DLL|MSACM32.DLL|MSCMS.DLL|
-|MSI.DLL|MSIMG32.DLL|MSRATING. BIBLIOTECE|MSTASK.DLL|
-|MSVFW32.DLL|MSWSOCK.DLL|MTXEX.DLL|NDDEAPI.DLL|
-|NETAPI32.DLL|NPPTOOLS. BIBLIOTECE|NTDSAPI.DLL|NTDSBCLI. BIBLIOTECE|
-|NTMSAPI.DLL|ODBC32.DLL|ODBCBCP.DLL|OLE32.DLL|
-|OLEACC. BIBLIOTECE|OLEAUT32. BIBLIOTEKI DLL|OLEDLG.DLL|OPENGL32.DLL|
-|PDH.DLL|POWRPROF.DLL|QOSNAME.DLL|Dotyczących. BIBLIOTECE|
-|RASAPI32.DLL|RASDLG.DLL|RASSAPI.DLL|RESUTILS. BIBLIOTECE|
-|RICHED20.DLL|RPCNS4.DLL|RPCRT4.DLL|RTM.DLL|
-|RTUTILS. BIBLIOTECE|SCARDDLG.DLL|SECUR32.DLL|SENSAPI.DLL|
-|SETUPAPI.DLL|SFC.DLL|SHELL32.DLL|SHFOLDER.DLL|
-|SHLWAPI. BIBLIOTEKI DLL|SISBKUP.DLL|SNMPAPI.DLL|SRCLIENT. BIBLIOTECE|
-|STI.DLL|TAPI32.DLL|TRAFFIC.DLL|Adres URL. BIBLIOTECE|
-|Urlmon. BIBLIOTECE|USER32.DLL|USERENV. BIBLIOTEKI DLL|USP10.DLL|
-|UXTHEME. BIBLIOTECE|VDMDBG.DLL|WERSJA. BIBLIOTEKI DLL|WINFAX. BIBLIOTECE|
-|WINHTTP.DLL|Oprogramowanie. BIBLIOTECE|WINMM. BIBLIOTECE|WINSCARD.DLL|
-|WINTRUST.DLL|WLDAP32.DLL|WOW32.DLL|WS2_32.DLL|
-|WSNMP32.DLL|WSOCK32.DLL|WTSAPI32.DLL|XOLEHLP.DLL|
+|ACLUI. Dll|ACTIVEDS. BIBLIOTEKI DLL|ADPTIF. Dll|ADVAPI32. BIBLIOTEKI DLL|
+|ASYCFILT. Dll|AUTHZ. Dll|AVICAP32. Dll|AVIFIL32. Dll|
+|Szafka. Dll|CLUSAPI. Dll|COMCTL32. Dll|COMDLG32. Dll|
+|COMSVCS. Dll|CREDUI. Dll|CRYPT32. Dll|CRYPTNET. Dll|
+|CRYPTUI. Dll|D3D8THK. Dll|DBGENG. Dll|DBGHELP. Dll|
+|DCIMAN32. Dll|DNSAPI. Dll|DSPROP. Dll|DSUIEXT. Dll|
+|GDI32. Dll|GLU32. Dll|HLINK. Dll|ICM32. Dll|
+|IMAGEHLP. Dll|IMM32. Dll|IPHLPAPI. BIBLIOTEKI DLL|IPROP. Dll|
+|KERNEL32. BIBLIOTEKI DLL|KSUSER. Dll|LOADPERF. Dll|LZ32. Dll|
+|MAPI32. Dll|MGMTAPI. Dll|MOBSYNC. Dll|MPR. BIBLIOTEKI DLL|
+|MPRAPI. Dll|MQRT. Dll|MSACM32. Dll|MSCMS. Dll|
+|MSI. BIBLIOTEKI DLL|MSIMG32. Dll|MSRATING. Dll|MSTASK. Dll|
+|MSVFW32. Dll|MSWSOCK. Dll|MTXEX. Dll|NDDEAPI. Dll|
+|NETAPI32. BIBLIOTEKI DLL|NPPTOOLS. Dll|Ntdsapi. Dll|NTDSBCLI. Dll|
+|NTMSAPI. Dll|ODBC32. Dll|ODBCBCP. Dll|OLE32. BIBLIOTEKI DLL|
+|OLEACC. Dll|OLEAUT32. BIBLIOTEKI DLL|OLEDLG. Dll|OPENGL32. Dll|
+|Pdh. Dll|PLIKU POWRPROF. BIBLIOTEKI DLL|QOSNAME. Dll|Kwerendy. Dll|
+|RASAPI32. Dll|RASDLG. Dll|RASSAPI. Dll|RESUTILS. Dll|
+|RICHED20. Dll|RPCNS4. Dll|RPCRT4. BIBLIOTEKI DLL|Rtm. Dll|
+|RTUTILS. Dll|SCARDDLG. Dll|SECUR32. BIBLIOTEKI DLL|SENSAPI. Dll|
+|SETUPAPI. BIBLIOTEKI DLL|Sfc. Dll|SHELL32. BIBLIOTEKI DLL|SHFOLDER. Dll|
+|SHLWAPI. BIBLIOTEKI DLL|SISBKUP. Dll|SNMPAPI. Dll|SRCLIENT. Dll|
+|Sti. Dll|TAPI32. Dll|Ruchu. Dll|Adres url. Dll|
+|Urlmon. Dll|USER32. BIBLIOTEKI DLL|USERENV. BIBLIOTEKI DLL|USP10. Dll|
+|Uxtheme. Dll|VDMDBG. Dll|WERSJA. BIBLIOTEKI DLL|Winfax. Dll|
+|WINHTTP. Dll|Wininet. Dll|WINMM. Dll|karta WINSCARD. Dll|
+|WINTRUST. Dll|WLDAP32. BIBLIOTEKI DLL|WOW32. Dll|WS2_32.DLL|
+|WSNMP32. Dll|WSOCK32.DLL|WTSAPI32. BIBLIOTEKI DLL|XOLEHLP. Dll|
 
 > [!NOTE]
->  Zachowanie ostatniego błędu nie jest obsługiwane dla niezarządzanych funkcji, które są używane przez kod CLR, w tym samym module.
+> Zachowanie ostatniego błędu nie jest obsługiwane dla funkcji niezarządzanych, które są używane przez kod CLR, w tym samym module.
 
-- Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](clr-common-language-runtime-compilation.md).
+- Aby uzyskać więcej informacji, zobacz [/clr (Kompilacja środowiska wykonawczego języka wspólnego)](clr-common-language-runtime-compilation.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **Strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora języka C++ i właściwości kompilacji w programie Visual Studio.](../working-with-project-properties.md)
 
-1. Kliknij folder **konsolidator** .
+1. Kliknij folder **Linker.**
 
-1. Kliknij stronę właściwości **wiersza polecenia** .
+1. Kliknij stronę właściwości **Wiersz polecenia.**
 
-1. Wpisz opcję w polu **dodatkowe opcje** .
+1. Wpisz tę opcję w polu **Opcje dodatkowe.**
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład definiuje natywną bibliotekę DLL z jedną wyeksportowaną funkcją, która modyfikuje ostatni błąd.
+Poniższy przykład definiuje natywną bibliotekę DLL z jedną wyeksportowanymi funkcją, która modyfikuje ostatni błąd.
 
 ```cpp
 // CLRSUPPORTLASTERROR_dll.cpp
@@ -99,7 +99,7 @@ __declspec(dllexport) double MySqrt(__int64 n) {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład korzysta z biblioteki DLL, pokazując, jak używać **/CLRSUPPORTLASTERROR**.
+Poniższy przykład zużywa bibliotekę DLL, demonstrując sposób **używania pliku /CLRSUPPORTLASTERROR**.
 
 ```cpp
 // CLRSUPPORTLASTERROR_client.cpp
@@ -150,7 +150,7 @@ GetLastError for application call failed (127).
 GetLastError for system call succeeded (183).
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
 [Opcje konsolidatora MSVC](linker-options.md)

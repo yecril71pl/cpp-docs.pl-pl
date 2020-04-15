@@ -1,5 +1,5 @@
 ---
-title: Makra obiektu przystawki
+title: Makra obiektów przystawek
 ms.date: 11/04/2016
 f1_keywords:
 - atlsnap/ATL::BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP
@@ -11,35 +11,35 @@ f1_keywords:
 - atlsnap/ATL::SNAPINMENUID
 - atlsnap/ATL::SNAPINTOOLBARID_ENTRY
 ms.assetid: 4e9850c0-e395-4929-86c9-584a81828053
-ms.openlocfilehash: b75dd04bed4895d722939d1bf9c0a6dfff2126e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a57cdb3c9b6a4448bc954ff754ac9b18fa0b393
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276201"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325860"
 ---
-# <a name="snap-in-object-macros"></a>Makra obiektu przystawki
+# <a name="snap-in-object-macros"></a>Makra obiektów przystawek
 
 Te makra zapewniają obsługę rozszerzeń przystawek.
 
 |||
 |-|-|
-|[BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)|Oznacza początek mapowanie rozszerzenia przystawki danych klasy dla obiektu przystawki.|
-|[BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map)|Oznacza początek mapy narzędzi dla obiektu przystawki.|
-|[END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map)|Oznacza koniec mapowanie rozszerzenia przystawki danych klasy dla obiektu przystawki.|
-|[END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map)|Oznacza koniec mapy narzędzi dla obiektu przystawki.|
+|[BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)|Oznacza początek mapy klasy danych rozszerzenia przystawki dla obiektu przystawki.|
+|[BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map)|Oznacza początek mapy paska narzędzi dla obiektu przyciągania.|
+|[END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map)|Oznacza koniec mapy klasy danych rozszerzenia przystawki dla obiektu przystawki.|
+|[END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map)|Oznacza koniec mapy paska narzędzi dla obiektu przyciągania.|
 |[EXTENSION_SNAPIN_DATACLASS](#extension_snapin_dataclass)|Tworzy element członkowski danych dla klasy danych rozszerzenia przystawki.|
-|[EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)|Wprowadza klasy danych rozszerzenia przystawki do mapowania klas danych rozszerzenia przystawki obiektu przystawki.|
-|[SNAPINMENUID](#snapinmenuid)|Deklaruje identyfikator z menu kontekstowego używane przez obiekt przystawki.|
-|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Wprowadza pasek narzędzi w mapie narzędzi obiektu przystawki.|
+|[EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)|Wprowadza klasę danych rozszerzenia przystawki do mapy klasy danych rozszerzenia przystawki obiektu Przystawka.|
+|[PRZYSTAWKAMENUID](#snapinmenuid)|Deklaruje identyfikator menu kontekstowego używanego przez obiekt Przystawki.|
+|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Wprowadza pasek narzędzi na pasku narzędzi obiektu Przystawka.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlsnap.h
 
-##  <a name="begin_extension_snapin_nodeinfo_map"></a>  BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP
+## <a name="begin_extension_snapin_nodeinfo_map"></a><a name="begin_extension_snapin_nodeinfo_map"></a>BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP
 
-Oznacza początek przystawkę rozszerzenia mapowania klasy danych.
+Oznacza początek mapy klasy danych rozszerzenia przystawki.
 
 ```
 BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
@@ -47,20 +47,20 @@ BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
 
 ### <a name="parameters"></a>Parametry
 
-*classname*<br/>
-[in] Nazwa klasy danych rozszerzenia przystawki.
+*Classname*<br/>
+[w] Nazwa klasy danych rozszerzenia przystawki.
 
 ### <a name="remarks"></a>Uwagi
 
-Start mapy przystawkę rozszerzenia za pomocą makra BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP, dodać wpisy dla każdego z typów danych w przystawce rozszerzenia za pomocą [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) makro i wykonaj mapy za pomocą [ END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) makra.
+Rozpocznij mapę rozszerzenia przystawki BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP makra, dodaj wpisy dla każdego z typów danych rozszerzenia przystawki za pomocą [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) makra i uzupełnij mapę [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) makrą.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Windowing#105](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]
 
-##  <a name="begin_snapintoolbarid_map"></a>  BEGIN_SNAPINTOOLBARID_MAP
+## <a name="begin_snapintoolbarid_map"></a><a name="begin_snapintoolbarid_map"></a>BEGIN_SNAPINTOOLBARID_MAP
 
-Deklaruje początku mapy identyfikator narzędzi dla obiektu przystawki.
+Deklaruje początek mapy identyfikatora paska narzędzi dla obiektu Przystawki.
 
 ```
 BEGIN_SNAPINTOOLBARID_MAP(_class)
@@ -69,15 +69,15 @@ BEGIN_SNAPINTOOLBARID_MAP(_class)
 ### <a name="parameters"></a>Parametry
 
 *_class*<br/>
-[in] Określa klasę obiektu przystawki.
+[w] Określa klasę obiektu przystawki.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Windowing#106](../../atl/codesnippet/cpp/snap-in-object-macros_2.h)]
 
-##  <a name="end_extension_snapin_nodeinfo_map"></a>  END_EXTENSION_SNAPIN_NODEINFO_MAP
+## <a name="end_extension_snapin_nodeinfo_map"></a><a name="end_extension_snapin_nodeinfo_map"></a>END_EXTENSION_SNAPIN_NODEINFO_MAP
 
-Oznacza koniec przystawkę rozszerzenia mapowania klasy danych.
+Oznacza koniec mapy klasy danych rozszerzenia przystawki.
 
 ```
 END_EXTENSION_SNAPIN_NODEINFO_MAP()
@@ -85,15 +85,15 @@ END_EXTENSION_SNAPIN_NODEINFO_MAP()
 
 ### <a name="remarks"></a>Uwagi
 
-Uruchom przystawkę rozszerzenia mapy za pomocą [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) makro, dodać wpisy dla wszystkich typów danych przystawki rozszerzenia za pomocą [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) makra i ukończyć mapy za pomocą makra END_EXTENSION_SNAPIN_NODEINFO_MAP.
+Rozpocznij mapę rozszerzenia [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) przystawki BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP makra, dodaj wpisy dla każdego z typów danych przystawek rozszerzenia za pomocą [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) makra i uzupełnij mapę END_EXTENSION_SNAPIN_NODEINFO_MAP makra.
 
 ### <a name="example"></a>Przykład
 
 Zobacz przykład [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).
 
-##  <a name="end_snapintoolbarid_map"></a>  END_SNAPINTOOLBARID_MAP
+## <a name="end_snapintoolbarid_map"></a><a name="end_snapintoolbarid_map"></a>END_SNAPINTOOLBARID_MAP
 
-Deklaruje koniec mapy identyfikator narzędzi dla obiektu przystawki.
+Deklaruje koniec mapy identyfikatora paska narzędzi dla obiektu Przystawki.
 
 ```
 END_SNAPINTOOLBARID_MAP( _class )
@@ -102,15 +102,15 @@ END_SNAPINTOOLBARID_MAP( _class )
 ### <a name="parameters"></a>Parametry
 
 *_class*<br/>
-[in] Określa klasę obiektu przystawki.
+[w] Określa klasę obiektu przystawki.
 
 ### <a name="example"></a>Przykład
 
 Zobacz przykład [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map).
 
-##  <a name="extension_snapin_dataclass"></a>  EXTENSION_SNAPIN_DATACLASS
+## <a name="extension_snapin_dataclass"></a><a name="extension_snapin_dataclass"></a>EXTENSION_SNAPIN_DATACLASS
 
-Dodaje element członkowski danych do rozszerzenia przystawki klasy danych dla **ISnapInItemImpl**-klasy pochodnej.
+Dodaje element członkowski danych do klasy danych rozszerzenia przystawki dla klasy pochodnej **ISnapInItemImpl.**
 
 ```
 EXTENSION_SNAPIN_DATACLASS(dataClass )
@@ -118,20 +118,20 @@ EXTENSION_SNAPIN_DATACLASS(dataClass )
 
 ### <a name="parameters"></a>Parametry
 
-*dataClass*<br/>
-[in] Klasa danych rozszerzenia przystawki.
+*klasa danych*<br/>
+[w] Klasa danych rozszerzenia przystawki.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta klasa stosuje się do mapy klasy przystawki rozszerzenia danych. Uruchom rozszerzenie przystawki mapę klasy danych za pomocą [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) makro, dodać wpisy dla każdego z typów danych w przystawce rozszerzenia za pomocą [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)makro i wykonaj mapy za pomocą [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) makra.
+Ta klasa powinna być również wprowadzona do mapy klasy danych rozszerzenia przystawki. Rozpocznij mapę klasy danych [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) rozszerzenia przystawki BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP makra, dodaj wpisy dla każdego z typów danych rozszerzenia przystawek za pomocą [makra EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) i uzupełnij mapę [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) makrą.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Windowing#105](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]
 
-##  <a name="extension_snapin_nodeinfo_entry"></a>  EXTENSION_SNAPIN_NODEINFO_ENTRY
+## <a name="extension_snapin_nodeinfo_entry"></a><a name="extension_snapin_nodeinfo_entry"></a>EXTENSION_SNAPIN_NODEINFO_ENTRY
 
-Dodaje klasę danych rozszerzenia przystawki do mapowania klas danych rozszerzenia przystawki.
+Dodaje klasę danych rozszerzenia przystawki do mapy klasy danych rozszerzenia przystawki.
 
 ```
 EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
@@ -139,20 +139,20 @@ EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
 
 ### <a name="parameters"></a>Parametry
 
-*dataClass*<br/>
-[in] Klasa danych rozszerzenia przystawki.
+*klasa danych*<br/>
+[w] Klasa danych rozszerzenia przystawki.
 
 ### <a name="remarks"></a>Uwagi
 
-Uruchom rozszerzenie przystawki mapę klasy danych za pomocą [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) makro, dodać wpisy dla każdego z typów danych w przystawce rozszerzenia za pomocą makra EXTENSION_SNAPIN_NODEINFO_ENTRY, a następnie ukończ mapy za pomocą [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) makra.
+Rozpocznij mapę klasy danych [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) rozszerzenia przystawki BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP makra, dodaj wpisy dla każdego z typów danych rozszerzenia przystawek za pomocą makra EXTENSION_SNAPIN_NODEINFO_ENTRY i uzupełnij mapę [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) makrą.
 
 ### <a name="example"></a>Przykład
 
 Zobacz przykład [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).
 
-##  <a name="snapinmenuid"></a>  SNAPINMENUID
+## <a name="snapinmenuid"></a><a name="snapinmenuid"></a>PRZYSTAWKAMENUID
 
-Użyj tego makra, aby zadeklarować zasobów menu kontekstowe obiektu przystawki.
+To makro służy do deklarowania zasobu menu kontekstowego obiektu Przystawka.
 
 ```
 SNAPINMENUID( id )
@@ -160,12 +160,12 @@ SNAPINMENUID( id )
 
 ### <a name="parameters"></a>Parametry
 
-*id*<br/>
-[in] Określa menu kontekstowe obiektu przystawki.
+*Identyfikator*<br/>
+[w] Identyfikuje menu kontekstowe obiektu Przystawka.
 
-##  <a name="snapintoolbarid_entry"></a>  SNAPINTOOLBARID_ENTRY
+## <a name="snapintoolbarid_entry"></a><a name="snapintoolbarid_entry"></a>SNAPINTOOLBARID_ENTRY
 
-Użyj tego makra, aby wprowadzić identyfikator narzędzi do przystawki obiektu narzędzi identyfikator mapy.
+To makro służy do wprowadzania identyfikatora paska narzędzi na mapie identyfikatora paska narzędzi przystawka.
 
 ```
 SNAPINTOOLBARID_ENTRY( id )
@@ -173,17 +173,17 @@ SNAPINTOOLBARID_ENTRY( id )
 
 ### <a name="parameters"></a>Parametry
 
-*id*<br/>
-[in] Identyfikuje formant paska narzędzi.
+*Identyfikator*<br/>
+[w] Identyfikuje formant paska narzędzi.
 
 ### <a name="remarks"></a>Uwagi
 
-[BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map) — makro oznacza początek mapy identyfikator narzędzi; [END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map) — makro oznacza koniec.
+Makro [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map) oznacza początek mapy identyfikatora paska narzędzi; [END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map) makr oznacza koniec.
 
 ### <a name="example"></a>Przykład
 
 Zobacz przykład [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Makra](../../atl/reference/atl-macros.md)

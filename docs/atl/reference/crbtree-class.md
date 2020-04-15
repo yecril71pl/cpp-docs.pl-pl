@@ -27,16 +27,16 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: 59416000eecf4be25746d9dedd86ea2af116087a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56c9db9d1a7bcd7fe2a2647d8b1339d223c4b66b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278075"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331246"
 ---
 # <a name="crbtree-class"></a>Klasa CRBTree
 
-Ta klasa dostarcza metody do tworzenia i przy użyciu drzewa Red czarny.
+Ta klasa zawiera metody tworzenia i korzystania z drzewa czerwono-czarne.
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,33 +51,33 @@ class CRBTree
 #### <a name="parameters"></a>Parametry
 
 *K*<br/>
-Typ klucza elementu.
+Typ elementu klucza.
 
 *V*<br/>
 Typ elementu wartości.
 
-*KTraits*<br/>
-Kod używany, aby skopiować lub przenieść kluczowe elementy. Zobacz [klasa CElementTraits](../../atl/reference/celementtraits-class.md) Aby uzyskać więcej informacji.
+*KTraits ( ktraits )*<br/>
+Kod używany do kopiowania lub przenoszenia elementów klucza. Zobacz [CElementTraits Klasy,](../../atl/reference/celementtraits-class.md) aby uzyskać więcej informacji.
 
-*VTraits*<br/>
+*VTraits (Wyjęto)*<br/>
 Kod używany do kopiowania lub przenoszenia elementów wartości.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne definicje typów
+### <a name="public-typedefs"></a>Publiczne typedefs
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[CRBTree::KINARGTYPE](#kinargtype)|Typ używany, gdy klucz jest przekazywany jako argument wejściowy.|
-|[CRBTree::KOUTARGTYPE](#koutargtype)|Typ używany, gdy klucz jest zwracany jako argument dane wyjściowe.|
-|[CRBTree::VINARGTYPE](#vinargtype)|Typ używany, gdy wartość jest przekazywany jako argument wejściowy.|
-|[CRBTree::VOUTARGTYPE](#voutargtype)|Typ używany, gdy wartość jest przekazywany jako argument danych wyjściowych.|
+|[CRBTree::KOUTARGTYPE](#koutargtype)|Typ używany, gdy klucz jest zwracany jako argument wyjściowy.|
+|[CRBTree::VINARGTYPE](#vinargtype)|Typ używany, gdy wartość jest przekazywana jako argument wejściowy.|
+|[CRBTree::VOUTARGTYPE](#voutargtype)|Typ używany, gdy wartość jest przekazywana jako argument danych wyjściowych.|
 
-### <a name="public-classes"></a>Publiczne klasy
+### <a name="public-classes"></a>Klasy publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Klasa CRBTree::CPair](#cpair_class)|Klasa zawierająca elementy klucza i wartości.|
+|[CRBTree::CPair Klasa](#cpair_class)|Klasa zawierająca elementy klucza i wartości.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -89,36 +89,36 @@ Kod używany do kopiowania lub przenoszenia elementów wartości.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)|Wywołaj tę metodę, aby znaleźć położenie elementu, który używa następny dostępny klucz.|
-|[CRBTree::GetAt](#getat)|Wywołaj tę metodę można pobrać elementu na określonej pozycji w drzewie.|
-|[CRBTree::GetCount](#getcount)|Wywołaj tę metodę, aby uzyskać liczbę elementów w drzewie.|
-|[CRBTree::GetHeadPosition](#getheadposition)|Wywołaj tę metodę, aby uzyskać wartość pozycji dla elementu na główny drzewa.|
-|[CRBTree::GetKeyAt](#getkeyat)|Wywołaj tę metodę, aby uzyskać klucz z danej pozycji w drzewie.|
-|[CRBTree::GetNext](#getnext)|Wywołaj tę metodę, aby uzyskać wskaźnik do elementu przechowywanego w `CRBTree` obiektu, a następnie przejdź położenie do następnego elementu.|
-|[CRBTree::GetNextAssoc](#getnextassoc)|Wywołanie tej metody, aby uzyskać klucz i wartość elementu przechowywanego w mapie, a następnie przejdź położenie do następnego elementu.|
-|[CRBTree::GetNextKey](#getnextkey)|Wywołaj tę metodę, aby pobrać klucz elementu przechowywanego w drzewie, a następnie przejdź położenie do następnego elementu.|
-|[CRBTree::GetNextValue](#getnextvalue)|Wywołaj tę metodę, aby uzyskać wartość elementu przechowywanego w drzewie, a następnie przejdź położenie do następnego elementu.|
-|[CRBTree::GetPrev](#getprev)|Wywołaj tę metodę, aby uzyskać wskaźnik do elementu przechowywanego w `CRBTree` obiektu, a następnie zaktualizować pozycji do poprzedniego elementu.|
-|[CRBTree::GetTailPosition](#gettailposition)|Wywołaj tę metodę, aby uzyskać wartość pozycji elementu w ogon drzewa.|
-|[CRBTree::GetValueAt](#getvalueat)|Wywołaj tę metodę, aby pobrać wartość przechowywaną w określonej pozycji w `CRBTree` obiektu.|
-|[CRBTree::IsEmpty](#isempty)|Wywołaj tę metodę do testowania dla obiektu pusty drzewa.|
-|[CRBTree::RemoveAll](#removeall)|Wywołaj tę metodę, aby usunąć wszystkie elementy z `CRBTree` obiektu.|
-|[CRBTree::RemoveAt](#removeat)|Wywołanie tej metody, aby usunąć element w danej pozycji w `CRBTree` obiektu.|
-|[CRBTree::SetValueAt](#setvalueat)|Wywołaj tę metodę, aby zmienić wartość przechowywaną w określonej pozycji w `CRBTree` obiektu.|
+|[CRBTree::ZnajdźPotwierdzić](#findfirstkeyafter)|Wywołanie tej metody, aby znaleźć położenie elementu, który używa następnego dostępnego klucza.|
+|[CRBTree::GetAt](#getat)|Wywołanie tej metody, aby uzyskać element w danej pozycji w drzewie.|
+|[CRBTree::GetCount](#getcount)|Wywołanie tej metody, aby uzyskać liczbę elementów w drzewie.|
+|[CRBTree::Pozycja nagłówka](#getheadposition)|Wywołanie tej metody, aby uzyskać wartość pozycji dla elementu na czele drzewa.|
+|[CRBTree::GetKeyAt](#getkeyat)|Wywołanie tej metody, aby uzyskać klucz z danej pozycji w drzewie.|
+|[CRBTree::PobierzNastęp](#getnext)|Wywołanie tej metody, aby uzyskać wskaźnik `CRBTree` do elementu przechowywanego w obiekcie i przejść pozycję do następnego elementu.|
+|[CRBTree::GetNextAssoc](#getnextassoc)|Wywołanie tej metody, aby uzyskać klucz i wartość elementu przechowywane na mapie i przejść pozycję do następnego elementu.|
+|[CRBTree::GetNextKey](#getnextkey)|Wywołanie tej metody, aby uzyskać klucz elementu przechowywane w drzewie i przejść do pozycji do następnego elementu.|
+|[CRBTree::GetNextValue](#getnextvalue)|Wywołanie tej metody, aby uzyskać wartość elementu przechowywane w drzewie i przejść do pozycji do następnego elementu.|
+|[CRBTree::GetPrev](#getprev)|Wywołanie tej metody, aby uzyskać wskaźnik `CRBTree` do elementu przechowywanego w obiekcie, a następnie zaktualizować położenie do poprzedniego elementu.|
+|[CRBTree::Pozycja GetTail](#gettailposition)|Wywołanie tej metody, aby uzyskać wartość położenia dla elementu w ogonie drzewa.|
+|[CRBTree::GetValueAt](#getvalueat)|Wywołanie tej metody, aby pobrać wartość przechowywaną w danej pozycji w `CRBTree` obiekcie.|
+|[CRBTree::IsEmpty](#isempty)|Wywołanie tej metody, aby przetestować dla pustego obiektu drzewa.|
+|[CRBTree::Usuńwszywszystki](#removeall)|Wywołanie tej metody, aby `CRBTree` usunąć wszystkie elementy z obiektu.|
+|[CRBTree::Usuń](#removeat)|Wywołanie tej metody, aby usunąć element `CRBTree` w danej pozycji w obiekcie.|
+|[CRBTree::SetValueAt](#setvalueat)|Wywołanie tej metody, aby zmienić wartość `CRBTree` przechowywaną w danej pozycji w obiekcie.|
 
 ## <a name="remarks"></a>Uwagi
 
-Drzewo czarny czerwony jest drzewo binarnego wyszukiwania, który używa dodatkowy informacja na węzeł, aby upewnić się, że pozostaje "zrównoważony," będącego, wysokość drzewa nie rozwój nieproporcjonalnie duży i wpłynąć na wydajność.
+Drzewo czerwono-czarne to binarne drzewo wyszukiwania, które używa dodatkowego bitu informacji na węzeł, aby upewnić się, że pozostaje "zrównoważone", to znaczy, że wysokość drzewa nie rośnie nieproporcjonalnie duża i wpływa na wydajność.
 
-Tej klasy szablonu jest przeznaczona do użycia przez [CRBMap](../../atl/reference/crbmap-class.md) i [CRBMultiMap](../../atl/reference/crbmultimap-class.md). Większość metod, które tworzą te klasy pochodne są dostarczane przez `CRBTree`.
+Ta klasa szablonu jest przeznaczona do użycia przez [CRBMap](../../atl/reference/crbmap-class.md) i [CRBMultiMap](../../atl/reference/crbmultimap-class.md). Większość metod, które składają się na te `CRBTree`klasy pochodne są dostarczane przez .
 
-Pełniejsze omówienie różnych klas kolekcji i ich funkcje i charakterystyk wydajności, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
+Aby uzyskać pełniejszą dyskusję na temat różnych klas kolekcji oraz ich cech i cech wydajności, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlcoll.h
 
-##  <a name="cpair_class"></a>  Klasa CRBTree::CPair
+## <a name="crbtreecpair-class"></a><a name="cpair_class"></a>CRBTree::CPair Klasa
 
 Klasa zawierająca elementy klucza i wartości.
 
@@ -128,16 +128,16 @@ class CPair : public __POSITION
 
 ### <a name="remarks"></a>Uwagi
 
-Ta klasa jest używana przez metody [CRBTree::GetAt](#getat), [CRBTree::GetNext](#getnext), i [CRBTree::GetPrev](#getprev) do uzyskania dostępu do kluczy i wartości elementów przechowywanych w strukturze drzewa.
+Ta klasa jest używana przez metody [CRBTree::GetAt](#getat), [CRBTree::GetNext](#getnext)i [CRBTree::GetPrev,](#getprev) aby uzyskać dostęp do elementów klucza i wartości przechowywanych w strukturze drzewa.
 
-Elementy członkowskie są następujące:
+Członkowie są następujące:
 
 |||
 |-|-|
-|`m_key`|Element członkowski danych, przechowywania klucza elementu.|
-|`m_value`|Element członkowski danych, przechowywania element wartości.|
+|`m_key`|Element członkowski danych przechowujący element klucza.|
+|`m_value`|Element członkowski danych przechowujący element wartości.|
 
-##  <a name="dtor"></a>  CRBTree:: ~ CRBTree
+## <a name="crbtreecrbtree"></a><a name="dtor"></a>CRBTree::~CRBTree
 
 Destruktor.
 
@@ -147,11 +147,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia wszystkie zasoby przydzielone. Wywołania [CRBTree::RemoveAll](#removeall) można usunąć wszystkich elementów.
+Zwalnia wszystkie przydzielone zasoby. Wywołuje [CRBTree::RemoveAll,](#removeall) aby usunąć wszystkie elementy.
 
-##  <a name="findfirstkeyafter"></a>  CRBTree::FindFirstKeyAfter
+## <a name="crbtreefindfirstkeyafter"></a><a name="findfirstkeyafter"></a>CRBTree::ZnajdźPotwierdzić
 
-Wywołaj tę metodę, aby znaleźć położenie elementu, który używa następny dostępny klucz.
+Wywołanie tej metody, aby znaleźć położenie elementu, który używa następnego dostępnego klucza.
 
 ```
 POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
@@ -159,20 +159,20 @@ POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*key*<br/>
 Wartość klucza.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość pozycji elementu, który używa następny dostępny klucz. Jeśli nie ma elementów więcej, zwracana jest wartość NULL.
+Zwraca wartość pozycji elementu, który używa następnego dostępnego klucza. Jeśli nie ma więcej elementów, null jest zwracany.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda ułatwia przenoszenie drzewa bez konieczności wcześniejszego obliczania wartości pozycji.
+Ta metoda ułatwia przechodzenie przez drzewo bez konieczności wcześniejszego obliczania wartości położenia.
 
-##  <a name="getat"></a>  CRBTree::GetAt
+## <a name="crbtreegetat"></a><a name="getat"></a>CRBTree::GetAt
 
-Wywołaj tę metodę można pobrać elementu na określonej pozycji w drzewie.
+Wywołanie tej metody, aby uzyskać element w danej pozycji w drzewie.
 
 ```
 CPair* GetAt(POSITION pos) throw();
@@ -182,28 +182,28 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*<br/>
+*Poz*<br/>
 Wartość pozycji.
 
-*Klucz*<br/>
+*key*<br/>
 Zmienna, która odbiera klucz.
 
 *value*<br/>
-Zmienna, która otrzymuje wartość.
+Zmienna, która odbiera wartość.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsze dwa formularze zwracają wskaźnik do [CPair](#cpair_class). Trzecia formą uzyskuje klucza i wartości dla danego stanowiska.
+Pierwsze dwa formularze zwracają wskaźnik do [CPair](#cpair_class). Trzeci formularz uzyskuje klucz i wartość dla danej pozycji.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość pozycji można wcześniej ustalić przy użyciu wywołania do metody, takie jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::GetTailPosition](#gettailposition).
+Wartość pozycji można wcześniej określić za pomocą wywołania metody, takiej jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::GetTailPosition](#gettailposition).
 
-W kompilacjach do debugowania błędu potwierdzenia wystąpi *pos* jest równa NULL.
+W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli *pos* jest równa NULL.
 
-##  <a name="getcount"></a>  CRBTree::GetCount
+## <a name="crbtreegetcount"></a><a name="getcount"></a>CRBTree::GetCount
 
-Wywołaj tę metodę, aby uzyskać liczbę elementów w drzewie.
+Wywołanie tej metody, aby uzyskać liczbę elementów w drzewie.
 
 ```
 size_t GetCount() const throw();
@@ -211,11 +211,11 @@ size_t GetCount() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca liczbę elementów (każdej pary klucz/wartość jest jeden element) przechowywane w drzewie.
+Zwraca liczbę elementów (każda para klucz/wartość jest jednym elementem) przechowywana w drzewie.
 
-##  <a name="getheadposition"></a>  CRBTree::GetHeadPosition
+## <a name="crbtreegetheadposition"></a><a name="getheadposition"></a>CRBTree::Pozycja nagłówka
 
-Wywołaj tę metodę, aby uzyskać wartość pozycji dla elementu na główny drzewa.
+Wywołanie tej metody, aby uzyskać wartość pozycji dla elementu na czele drzewa.
 
 ```
 POSITION GetHeadPosition() const throw();
@@ -223,15 +223,15 @@ POSITION GetHeadPosition() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość pozycji dla elementu na główny drzewa.
+Zwraca wartość pozycji elementu na czele drzewa.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość zwrócona przez obiekt `GetHeadPosition` mogą być używane z metodami takich jak [CRBTree::GetKeyAt](#getkeyat) lub [CRBTree::GetNext](#getnext) przechodzić przez drzewo i pobierać wartości.
+Wartość zwracana `GetHeadPosition` przez może służyć z metod, takich jak [CRBTree::GetKeyAt](#getkeyat) lub [CRBTree::GetNext](#getnext) do przechodzenia przez drzewo i pobrać wartości.
 
-##  <a name="getkeyat"></a>  CRBTree::GetKeyAt
+## <a name="crbtreegetkeyat"></a><a name="getkeyat"></a>CRBTree::GetKeyAt
 
-Wywołaj tę metodę, aby uzyskać klucz z danej pozycji w drzewie.
+Wywołanie tej metody, aby uzyskać klucz z danej pozycji w drzewie.
 
 ```
 const K& GetKeyAt(POSITION pos) const throw();
@@ -239,20 +239,20 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*<br/>
+*Poz*<br/>
 Wartość pozycji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca klucz przechowywany w położeniu *pos* w drzewie.
+Zwraca klucz przechowywany w pozycji *poz* w drzewie.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *pos* nie jest wartością poprawnej pozycji wyniki są nieprzewidywalne. W kompilacjach do debugowania błędu potwierdzenia wystąpi *pos* jest równa NULL.
+Jeśli *pos* nie jest prawidłową wartością pozycji, wyniki są nieprzewidywalne. W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli *pos* jest równa NULL.
 
-##  <a name="getnext"></a>  CRBTree::GetNext
+## <a name="crbtreegetnext"></a><a name="getnext"></a>CRBTree::PobierzNastęp
 
-Wywołaj tę metodę, aby uzyskać wskaźnik do elementu przechowywanego w `CRBTree` obiektu, a następnie przejdź położenie do następnego elementu.
+Wywołanie tej metody, aby uzyskać wskaźnik `CRBTree` do elementu przechowywanego w obiekcie i przejść pozycję do następnego elementu.
 
 ```
 const CPair* GetNext(POSITION& pos) const throw();
@@ -261,20 +261,20 @@ CPair* GetNext(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*<br/>
-Licznik pozycji, zwrócony przez poprzednie wywołanie metody, takie jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
+*Poz*<br/>
+Licznik pozycji, zwracany przez poprzednie wywołanie metod, takich jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do następnego [CPair](#cpair_class) wartość w drzewie.
+Zwraca wskaźnik do następnej wartości [CPair](#cpair_class) w drzewie.
 
 ### <a name="remarks"></a>Uwagi
 
-*Pos* pozycji licznik jest aktualizowany po każdym wywołaniu. Jeśli pobrano element jest ostatni w drzewie *pos* ma wartość NULL.
+Licznik pozycji *poz* jest aktualizowany po każdym wywołaniu. Jeśli pobrany element jest ostatnim w drzewie, pos jest *ustawiona* na NULL.
 
-##  <a name="getnextassoc"></a>  CRBTree::GetNextAssoc
+## <a name="crbtreegetnextassoc"></a><a name="getnextassoc"></a>CRBTree::GetNextAssoc
 
-Wywołanie tej metody, aby uzyskać klucz i wartość elementu przechowywanego w mapie, a następnie przejdź położenie do następnego elementu.
+Wywołanie tej metody, aby uzyskać klucz i wartość elementu przechowywane na mapie i przejść pozycję do następnego elementu.
 
 ```
 void GetNextAssoc(
@@ -285,10 +285,10 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*<br/>
-Licznik pozycji, zwrócony przez poprzednie wywołanie metody, takie jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
+*Poz*<br/>
+Licznik pozycji, zwracany przez poprzednie wywołanie metod, takich jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
-*Klucz*<br/>
+*key*<br/>
 Parametr szablonu określający typ klucza drzewa.
 
 *value*<br/>
@@ -296,11 +296,11 @@ Parametr szablonu określający typ wartości drzewa.
 
 ### <a name="remarks"></a>Uwagi
 
-*Pos* pozycji licznik jest aktualizowany po każdym wywołaniu. Jeśli pobrano element jest ostatni w drzewie *pos* ma wartość NULL.
+Licznik pozycji *poz* jest aktualizowany po każdym wywołaniu. Jeśli pobrany element jest ostatnim w drzewie, pos jest *ustawiona* na NULL.
 
-##  <a name="getnextkey"></a>  CRBTree::GetNextKey
+## <a name="crbtreegetnextkey"></a><a name="getnextkey"></a>CRBTree::GetNextKey
 
-Wywołaj tę metodę, aby pobrać klucz elementu przechowywanego w drzewie, a następnie przejdź położenie do następnego elementu.
+Wywołanie tej metody, aby uzyskać klucz elementu przechowywane w drzewie i przejść do pozycji do następnego elementu.
 
 ```
 const K& GetNextKey(POSITION& pos) const throw();
@@ -308,20 +308,20 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*<br/>
-Licznik pozycji, zwrócony przez poprzednie wywołanie metody, takie jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
+*Poz*<br/>
+Licznik pozycji, zwracany przez poprzednie wywołanie metod, takich jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwołanie do kluczowi w drzewie.
+Zwraca odwołanie do następnego klucza w drzewie.
 
 ### <a name="remarks"></a>Uwagi
 
-Aktualizuje bieżącej pozycji licznika, *pos*. Jeśli nie ma żadnych więcej wpisów w drzewie, licznik pozycja jest ustawiony na wartość NULL.
+Aktualizuje bieżący licznik pozycji, *poz*. Jeśli w drzewie nie ma więcej wpisów, licznik pozycji jest ustawiony na wartość NULL.
 
-##  <a name="getnextvalue"></a>  CRBTree::GetNextValue
+## <a name="crbtreegetnextvalue"></a><a name="getnextvalue"></a>CRBTree::GetNextValue
 
-Wywołaj tę metodę, aby uzyskać wartość elementu przechowywanego w drzewie, a następnie przejdź położenie do następnego elementu.
+Wywołanie tej metody, aby uzyskać wartość elementu przechowywane w drzewie i przejść do pozycji do następnego elementu.
 
 ```
 const V& GetNextValue(POSITION& pos) const throw();
@@ -330,20 +330,20 @@ V& GetNextValue(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*<br/>
-Licznik pozycji, zwrócony przez poprzednie wywołanie metody, takie jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
+*Poz*<br/>
+Licznik pozycji, zwracany przez poprzednie wywołanie metod, takich jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwołanie do następnej wartości, w drzewie.
+Zwraca odwołanie do następnej wartości w drzewie.
 
 ### <a name="remarks"></a>Uwagi
 
-Aktualizuje bieżącej pozycji licznika, *pos*. Jeśli nie ma żadnych więcej wpisów w drzewie, licznik pozycja jest ustawiony na wartość NULL.
+Aktualizuje bieżący licznik pozycji, *poz*. Jeśli w drzewie nie ma więcej wpisów, licznik pozycji jest ustawiony na wartość NULL.
 
-##  <a name="getprev"></a>  CRBTree::GetPrev
+## <a name="crbtreegetprev"></a><a name="getprev"></a>CRBTree::GetPrev
 
-Wywołaj tę metodę, aby uzyskać wskaźnik do elementu przechowywanego w `CRBTree` obiektu, a następnie zaktualizować pozycji do poprzedniego elementu.
+Wywołanie tej metody, aby uzyskać wskaźnik `CRBTree` do elementu przechowywanego w obiekcie, a następnie zaktualizować położenie do poprzedniego elementu.
 
 ```
 const CPair* GetPrev(POSITION& pos) const throw();
@@ -352,20 +352,20 @@ CPair* GetPrev(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*<br/>
-Licznik pozycji, zwrócony przez poprzednie wywołanie metody, takie jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
+*Poz*<br/>
+Licznik pozycji, zwracany przez poprzednie wywołanie metod, takich jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do poprzedniego [CPair](#cpair_class) wartość przechowywaną w drzewie.
+Zwraca wskaźnik do poprzedniej wartości [CPair](#cpair_class) przechowywanej w drzewie.
 
 ### <a name="remarks"></a>Uwagi
 
-Aktualizuje bieżącej pozycji licznika, *pos*. Jeśli nie ma żadnych więcej wpisów w drzewie, licznik pozycja jest ustawiony na wartość NULL.
+Aktualizuje bieżący licznik pozycji, *poz*. Jeśli w drzewie nie ma więcej wpisów, licznik pozycji jest ustawiony na wartość NULL.
 
-##  <a name="gettailposition"></a>  CRBTree::GetTailPosition
+## <a name="crbtreegettailposition"></a><a name="gettailposition"></a>CRBTree::Pozycja GetTail
 
-Wywołaj tę metodę, aby uzyskać wartość pozycji elementu w ogon drzewa.
+Wywołanie tej metody, aby uzyskać wartość położenia dla elementu w ogonie drzewa.
 
 ```
 POSITION GetTailPosition() const throw();
@@ -373,15 +373,15 @@ POSITION GetTailPosition() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość pozycji elementu w ogon drzewa.
+Zwraca wartość położenia elementu w ogonie drzewa.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość zwrócona przez obiekt `GetTailPosition` mogą być używane z metodami takich jak [CRBTree::GetKeyAt](#getkeyat) lub [CRBTree::GetPrev](#getprev) przechodzić przez drzewo i pobierać wartości.
+Wartość zwracana `GetTailPosition` przez może służyć z metod, takich jak [CRBTree::GetKeyAt](#getkeyat) lub [CRBTree::GetPrev](#getprev) do przechodzenia przez drzewo i pobrać wartości.
 
-##  <a name="getvalueat"></a>  CRBTree::GetValueAt
+## <a name="crbtreegetvalueat"></a><a name="getvalueat"></a>CRBTree::GetValueAt
 
-Wywołaj tę metodę, aby pobrać wartość przechowywaną w określonej pozycji w `CRBTree` obiektu.
+Wywołanie tej metody, aby pobrać wartość przechowywaną w danej pozycji w `CRBTree` obiekcie.
 
 ```
 const V& GetValueAt(POSITION pos) const throw();
@@ -390,16 +390,16 @@ V& GetValueAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*<br/>
-Licznik pozycji, zwrócony przez poprzednie wywołanie metody, takie jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
+*Poz*<br/>
+Licznik pozycji, zwracany przez poprzednie wywołanie metod, takich jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwołanie do wartość przechowywaną w danej pozycji w `CRBTree` obiektu.
+Zwraca odwołanie do wartości przechowywanej w `CRBTree` danej pozycji w obiekcie.
 
-##  <a name="isempty"></a>  CRBTree::IsEmpty
+## <a name="crbtreeisempty"></a><a name="isempty"></a>CRBTree::IsEmpty
 
-Wywołaj tę metodę do testowania dla obiektu pusty drzewa.
+Wywołanie tej metody, aby przetestować dla pustego obiektu drzewa.
 
 ```
 bool IsEmpty() const throw();
@@ -407,9 +407,9 @@ bool IsEmpty() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE, jeśli drzewa jest pusta, wartość FALSE w przeciwnym razie.
+Zwraca wartość PRAWDA, jeśli drzewo jest puste, w przeciwnym razie wartość FAŁSZ.
 
-##  <a name="kinargtype"></a>  CRBTree::KINARGTYPE
+## <a name="crbtreekinargtype"></a><a name="kinargtype"></a>CRBTree::KINARGTYPE
 
 Typ używany, gdy klucz jest przekazywany jako argument wejściowy.
 
@@ -417,17 +417,17 @@ Typ używany, gdy klucz jest przekazywany jako argument wejściowy.
 typedef KTraits::INARGTYPE KINARGTYPE;
 ```
 
-##  <a name="koutargtype"></a>  CRBTree::KOUTARGTYPE
+## <a name="crbtreekoutargtype"></a><a name="koutargtype"></a>CRBTree::KOUTARGTYPE
 
-Typ używany, gdy klucz jest zwracany jako argument dane wyjściowe.
+Typ używany, gdy klucz jest zwracany jako argument wyjściowy.
 
 ```
 typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 ```
 
-##  <a name="removeall"></a>  CRBTree::RemoveAll
+## <a name="crbtreeremoveall"></a><a name="removeall"></a>CRBTree::Usuńwszywszystki
 
-Wywołaj tę metodę, aby usunąć wszystkie elementy z `CRBTree` obiektu.
+Wywołanie tej metody, aby `CRBTree` usunąć wszystkie elementy z obiektu.
 
 ```
 void RemoveAll() throw();
@@ -435,11 +435,11 @@ void RemoveAll() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Czyści `CRBTree` obiektu, pamięć, używany do przechowywania elementów.
+Czyści `CRBTree` obiekt, zwalniając pamięć używaną do przechowywania elementów.
 
-##  <a name="removeat"></a>  CRBTree::RemoveAt
+## <a name="crbtreeremoveat"></a><a name="removeat"></a>CRBTree::Usuń
 
-Wywołanie tej metody, aby usunąć element w danej pozycji w `CRBTree` obiektu.
+Wywołanie tej metody, aby usunąć element `CRBTree` w danej pozycji w obiekcie.
 
 ```
 void RemoveAt(POSITION pos) throw();
@@ -447,16 +447,16 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*<br/>
-Licznik pozycji, zwrócony przez poprzednie wywołanie metody, takie jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
+*Poz*<br/>
+Licznik pozycji, zwracany przez poprzednie wywołanie metod, takich jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="remarks"></a>Uwagi
 
-Usuwa pary klucz/wartość przechowywaną w określonej pozycji. Pamięć używana do przechowywania elementu jest zwalniana. Odwołuje się do niego pozycja *pos* staje się nieprawidłowy, a gdy pozycji innych elementów w drzewie nadal jest ważna, niekoniecznie robią zachować takiej samej kolejności.
+Usuwa parę klucz/wartość przechowywaną w określonym położeniu. Pamięć używana do przechowywania elementu jest zwalniana. Pozycja, do której odwołuje *się poz,* staje się nieprawidłowa i chociaż pozycja innych elementów w drzewie pozostaje prawidłowa, nie muszą one zachowywać tej samej kolejności.
 
-##  <a name="setvalueat"></a>  CRBTree::SetValueAt
+## <a name="crbtreesetvalueat"></a><a name="setvalueat"></a>CRBTree::SetValueAt
 
-Wywołaj tę metodę, aby zmienić wartość przechowywaną w określonej pozycji w `CRBTree` obiektu.
+Wywołanie tej metody, aby zmienić wartość `CRBTree` przechowywaną w danej pozycji w obiekcie.
 
 ```
 void SetValueAt(POSITION pos, VINARGTYPE value);
@@ -464,32 +464,32 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 
 ### <a name="parameters"></a>Parametry
 
-*punktu sprzedaży*<br/>
-Licznik pozycji, zwrócony przez poprzednie wywołanie metody, takie jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
+*Poz*<br/>
+Licznik pozycji, zwracany przez poprzednie wywołanie metod, takich jak [CRBTree::GetHeadPosition](#getheadposition) lub [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 *value*<br/>
-Wartość do dodania `CRBTree` obiektu.
+Wartość dodana do `CRBTree` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Zmienia element wartości przechowywane w danej pozycji w `CRBTree` obiektu.
+Zmienia element wartości przechowywany w danej `CRBTree` pozycji w obiekcie.
 
-##  <a name="vinargtype"></a>  CRBTree::VINARGTYPE
+## <a name="crbtreevinargtype"></a><a name="vinargtype"></a>CRBTree::VINARGTYPE
 
-Typ używany, gdy wartość jest przekazywany jako argument wejściowy.
+Typ używany, gdy wartość jest przekazywana jako argument wejściowy.
 
 ```
 typedef VTraits::INARGTYPE VINARGTYPE;
 ```
 
-##  <a name="voutargtype"></a>  CRBTree::VOUTARGTYPE
+## <a name="crbtreevoutargtype"></a><a name="voutargtype"></a>CRBTree::VOUTARGTYPE
 
-Typ używany, gdy wartość jest przekazywany jako argument danych wyjściowych.
+Typ używany, gdy wartość jest przekazywana jako argument danych wyjściowych.
 
 ```
 typedef VTraits::OUTARGTYPE VOUTARGTYPE;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

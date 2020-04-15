@@ -1,5 +1,5 @@
 ---
-title: CSinusoidalTransitionFromVelocity Class
+title: Klasa CSinusoidalTransitionFromVelocity
 ms.date: 11/04/2016
 f1_keywords:
 - CSinusoidalTransitionFromVelocity
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromVelocity [MFC], m_duration
 - CSinusoidalTransitionFromVelocity [MFC], m_period
 ms.assetid: cc885f17-b84b-45ee-8f1f-36a8bbb7adad
-ms.openlocfilehash: f61effb6dacdd1076784de8e825a3acec192474c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0df9ca6d140cb9e3ec85be3ce32760a66599c5d4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324470"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318246"
 ---
-# <a name="csinusoidaltransitionfromvelocity-class"></a>CSinusoidalTransitionFromVelocity Class
+# <a name="csinusoidaltransitionfromvelocity-class"></a>Klasa CSinusoidalTransitionFromVelocity
 
-Hermetyzuje sinusoidalną prędkość przejścia, które ma amplitudę, która zależy od prędkości początkowej zmiennej animacji.
+Hermetyzuje przejście prędkości sinusoidalnej, które ma amplitudę, która jest określana przez prędkość początkową zmiennej animacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,30 +37,30 @@ class CSinusoidalTransitionFromVelocity : public CBaseTransition;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity](#csinusoidaltransitionfromvelocity)|Tworzy obiekt przejścia.|
+|[CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity](#csinusoidaltransitionfromvelocity)|Konstruuje obiekt przejścia.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSinusoidalTransitionFromVelocity::Create](#create)|Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CSinusoidalTransitionFromVelocity::Tworzenie](#create)|Wywołuje bibliotekę przejściową w celu utworzenia zhermetyzowanego obiektu COM przejścia. (Zastępuje [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[CSinusoidalTransitionFromVelocity::m_duration](#m_duration)|Czas trwania przejścia.|
-|[CSinusoidalTransitionFromVelocity::m_period](#m_period)|Okres oscylacji sinusoidalnego wave w ciągu kilku sekund.|
+|[CSinusoidalTransitionFromVelocity::m_period](#m_period)|Okres oscylacji fali sinusoidalnej w kilka sekund.|
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość zmiennej animacji oscillates wokół wartości początkowej przez cały czas trwania przejście zakresu sinusoidalnego. Amplitudy oscylacji zależy od prędkości zmiennej animacji po rozpoczęciu przejścia. Ponieważ wszystkie przejścia są automatycznie czyszczone, zaleca się ich przydzielone za pomocą nowego operatora. Zhermetyzowanego obiektu IUIAnimationTransition COM przy utworzono CAnimationController::AnimateGroup, aż do, a następnie ma wartość NULL. Zmienianie zmiennych składowych, po tworzenie ten obiekt COM nie ma wpływu.
+Wartość zmiennej animacji oscyluje wokół wartości początkowej przez cały czas trwania przejścia zakresu sinusoidalnego. Amplituda oscylacji zależy od prędkości zmiennej animacji po rozpoczęciu przejścia. Ponieważ wszystkie przejścia są czyszczone automatycznie, zaleca się przydzielenie ich przy użyciu nowego operatora. Zhermetyzowany obiekt COM IUIAnimationTransition jest tworzony przez CAnimationController::AnimateGroup, do tego czasu jest null. Zmiana zmiennych członkowskich po utworzeniu tego obiektu COM nie ma wpływu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[CBaseTransition (Transport baz)](../../mfc/reference/cbasetransition-class.md)
 
 [CSinusoidalTransitionFromVelocity](../../mfc/reference/csinusoidaltransitionfromvelocity-class.md)
 
@@ -68,9 +68,9 @@ Wartość zmiennej animacji oscillates wokół wartości początkowej przez cał
 
 **Nagłówek:** afxanimationcontroller.h
 
-##  <a name="create"></a>  CSinusoidalTransitionFromVelocity::Create
+## <a name="csinusoidaltransitionfromvelocitycreate"></a><a name="create"></a>CSinusoidalTransitionFromVelocity::Tworzenie
 
-Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM.
+Wywołuje bibliotekę przejściową w celu utworzenia zhermetyzowanego obiektu COM przejścia.
 
 ```
 virtual BOOL Create(
@@ -80,16 +80,16 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*pLibrary*<br/>
-Wskaźnik do przejścia biblioteki, która jest odpowiedzialna za tworzenie standardowego przejścia.
+*pBrabrary*<br/>
+Wskaźnik do biblioteki przejścia, który jest odpowiedzialny za tworzenie standardowych przejść.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli przejście został utworzony pomyślnie; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli przejście zostanie utworzone pomyślnie; w przeciwnym razie FALSE.
 
-##  <a name="csinusoidaltransitionfromvelocity"></a>  CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity
+## <a name="csinusoidaltransitionfromvelocitycsinusoidaltransitionfromvelocity"></a><a name="csinusoidaltransitionfromvelocity"></a>CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity
 
-Tworzy obiekt przejścia.
+Konstruuje obiekt przejścia.
 
 ```
 CSinusoidalTransitionFromVelocity(
@@ -99,13 +99,13 @@ CSinusoidalTransitionFromVelocity(
 
 ### <a name="parameters"></a>Parametry
 
-*Czas trwania*<br/>
+*Długość*<br/>
 Czas trwania przejścia.
 
 *Okres*<br/>
-Okres oscylacji sinusoidalnego wave w ciągu kilku sekund.
+Okres oscylacji fali sinusoidalnej w kilka sekund.
 
-##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration
+## <a name="csinusoidaltransitionfromvelocitym_duration"></a><a name="m_duration"></a>CSinusoidalTransitionFromVelocity::m_duration
 
 Czas trwania przejścia.
 
@@ -113,14 +113,14 @@ Czas trwania przejścia.
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_period"></a>  CSinusoidalTransitionFromVelocity::m_period
+## <a name="csinusoidaltransitionfromvelocitym_period"></a><a name="m_period"></a>CSinusoidalTransitionFromVelocity::m_period
 
-Okres oscylacji sinusoidalnego wave w ciągu kilku sekund.
+Okres oscylacji fali sinusoidalnej w kilka sekund.
 
 ```
 UI_ANIMATION_SECONDS m_period;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

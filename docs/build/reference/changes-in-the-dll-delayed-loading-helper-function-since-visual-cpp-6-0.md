@@ -7,18 +7,18 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: cd6e842fd6d35e05f2d5a9f906713f0d85d3b80d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 536729e27c89d068957ea451355957e4a35348ee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294632"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320607"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Zmiany w funkcjach pomocnika opóźnionego załadunku bibliotek DLL po Visual C++ 6.0
 
-Jeśli masz wiele wersji programu Visual C++ na komputerze lub jeśli zdefiniowane własnej funkcji Pomocnik, użytkownik może mieć wpływ zmian wprowadzonych do biblioteki DLL funkcjach pomocnika opóźnionego załadunku. Na przykład:
+Jeśli masz wiele wersji programu Visual C++ na komputerze lub jeśli zdefiniowano własną funkcję pomocnika, mogą mieć wpływ zmiany wprowadzone w funkcji pomocnika opóźnionego ładowania biblioteki DLL. Przykład:
 
-- **__delayloadhelper —** jest teraz **__delayloadhelper2 —**
+- **__delayLoadHelper** jest teraz **__delayLoadHelper2**
 
 - **__pfnDliNotifyHook** jest teraz **__pfnDliNotifyHook2**
 
@@ -27,32 +27,32 @@ Jeśli masz wiele wersji programu Visual C++ na komputerze lub jeśli zdefiniowa
 - **__FUnloadDelayLoadedDLL** jest teraz **__FUnloadDelayLoadedDLL2**
 
 > [!NOTE]
->  Jeśli używasz domyślnej funkcji pomocnika, te zmiany nie wpłynie na Ciebie. Brak zmian dotyczących jak wywołać program łączący.
+> Jeśli używasz domyślnej funkcji pomocnika, te zmiany nie będą miały wpływu na Ciebie. Nie ma żadnych zmian dotyczących sposobu wywoływania konsolidatora.
 
 ## <a name="multiple-versions-of-visual-c"></a>Wiele wersji programu Visual C++
 
-Jeśli masz wiele wersji programu Visual C++ na komputerze, upewnij się, że konsolidator odpowiada delayimp.lib. Jeśli występuje niezgodność, zostanie wyświetlony błąd konsolidatora, raportowanie, albo `___delayLoadHelper2@8` lub `___delayLoadHelper@8` jako nierozpoznany symbol zewnętrzny. Pierwsza oznacza nowe konsolidatora przy użyciu starego delayimp.lib, i jego oznacza stare konsolidator przy użyciu nowego delayimp.lib.
+Jeśli masz wiele wersji programu Visual C++ na komputerze, upewnij się, że konsolidator pasuje delayimp.lib. Jeśli występuje niezgodność, otrzymasz raportowanie błędów konsolidatora `___delayLoadHelper2@8` albo jako `___delayLoadHelper@8` nierozwiązany symbol zewnętrzny. Pierwszy z nich implikuje nowy linker ze starym delayimp.lib, a drugi oznacza stary linker z nowym delayimp.lib.
 
-Jeśli wystąpi błąd konsolidatora nierozwiązane Uruchom [dumpbin /linkermember](linkermember.md): 1 na delayimp.lib, który będzie zawierać funkcji pomocnika, aby zobaczyć funkcji pomocnika, która jest zdefiniowana zamiast tego. Funkcja pomocnika może być także definiowane w pliku obiektu; Uruchom [dumpbin /symbols](symbols.md) i poszukaj `delayLoadHelper(2)`.
+Jeśli pojawi się nierozwiązany błąd konsolidatora, uruchom [dumpbin /linkermember](linkermember.md):1 na delayimp.lib, który ma zawierać funkcję pomocnika, aby zobaczyć, która funkcja pomocnika jest zdefiniowana zamiast. Funkcja pomocnika może być również zdefiniowana w pliku obiektu; uruchom [dumpbin /symbols](symbols.md) `delayLoadHelper(2)`i poszukaj .
 
-Jeśli wiesz, że masz program Visual C++ 6.0 łączący następnie:
+Jeśli wiesz, że masz visual C++ 6.0 konsolidator, a następnie:
 
-- Uruchom dumpbin pomocnika obciążenia opóźnienia plik .lib lub .obj, aby ustalić, czy definiuje **__delayloadhelper2 —**. W przeciwnym razie łącze zakończy się niepowodzeniem.
+- Uruchom plik .lib lub .obj obciążenia obciążenia opóźnienia, aby ustalić, czy definiuje **__delayLoadHelper2**. Jeśli nie, łącze zakończy się niepowodzeniem.
 
-- Zdefiniuj **__delayloadhelper —** opóźnienie załadować pliku .lib lub .obj wyłącza pomocnika.
+- Zdefiniuj **__delayLoadHelper** w pliku .lib lub .obj pomocnika ładowania opóźnienia.
 
-## <a name="user-defined-helper-function"></a>Funkcja pomocnika zdefiniowanych przez użytkownika
+## <a name="user-defined-helper-function"></a>Funkcja pomocnika zdefiniowana przez użytkownika
 
-Jeśli zdefiniowane własnej funkcji Pomocnik i korzystają z bieżącej wersji programu Visual C++, wykonaj następujące czynności:
+Jeśli zdefiniowano własną funkcję pomocnika i używasz bieżącej wersji programu Visual C++, wykonaj następujące czynności:
 
-- Zmiana nazwy funkcji pomocnika **__delayloadhelper2 —**.
+- Zmień nazwę funkcji pomocnika na **__delayLoadHelper2**.
 
-- Ponieważ wskaźniki w deskryptorze opóźnienie (ImgDelayDescr w delayimp.h) zostały zmienione z adresów bezwzględnych (kanalików) na względnych adresów (RVA), aby działać w oczekiwany sposób w programach zarówno 32 - i 64-bitowych, musisz przekonwertować te wstecz do wskaźników. Wprowadzono nową funkcję: Pfromrva — znaleziono w delayhlp.cpp. Tej funkcji na każde z pól w deskryptorze umożliwia przekonwertować z powrotem na obu wskaźniki 32 - lub 64-bitowy. Funkcję pomocnika obciążenia opóźnienia domyślne w dalszym ciągu być dobrym szablon do użycia jako przykład.
+- Ponieważ wskaźniki w deskryptorze opóźnienia (ImgDelayDescr in delayimp.h) zostały zmienione z adresów bezwzględnych (VA) na adresy względne (RVA) do pracy zgodnie z oczekiwaniami w programach 32- i 64-bitowych, należy przekonwertować je z powrotem na wskaźniki. Wprowadzono nową funkcję: PFromRva, znaleziono w delayhlp.cpp. Za pomocą tej funkcji można użyć każdego z pól w deskryptorze, aby przekonwertować je z powrotem na wskaźniki 32- lub 64-bitowe. Domyślna funkcja pomocnika ładowania opóźnienia nadal jest dobrym szablonem do użycia jako przykład.
 
-## <a name="load-all-imports-for-a-delay-loaded-dll"></a>Załaduj wszystkie Importy dla bibliotek DLL ładowanych z opóźnieniem
+## <a name="load-all-imports-for-a-delay-loaded-dll"></a>Załaduj wszystkie importy dla biblioteki DLL z opóźnieniem
 
-Konsolidator może ładować wszystkie Importy z biblioteki DLL, który określiłeś być ładowane z opóźnieniem. Zobacz [ładowania wszystkie Importy dla bibliotek DLL z Delay-Loaded](loading-all-imports-for-a-delay-loaded-dll.md) Aby uzyskać więcej informacji.
+Konsolidator można załadować wszystkie importy z biblioteki DLL, które zostały określone jako opóźnienie załadowany. Aby uzyskać więcej informacji, zobacz [Ładowanie wszystkich importów dla biblioteki DLL z opóźnieniem.](loading-all-imports-for-a-delay-loaded-dll.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Ogólne informacje funkcji Pomocnik](understanding-the-helper-function.md)

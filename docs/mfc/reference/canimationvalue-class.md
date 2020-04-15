@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-ms.openlocfilehash: 86a2caa8946bcafeabf85687a24b2430ecefe790
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0437f0fc66f64ccb99157330154bf5aa4b5666b3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338691"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321978"
 ---
 # <a name="canimationvalue-class"></a>Klasa CAnimationValue
 
-Implementuje funkcje obiektu animacji, które posiada jedną wartość.
+Implementuje funkcjonalność obiektu animacji, który ma jedną wartość.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,44 +43,44 @@ class CAnimationValue : public CAnimationBaseObject;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationValue::CAnimationValue](#canimationvalue)|Przeciążone. Tworzy obiekt CAnimationValue.|
+|[CAnimationValue::CAnimationValue](#canimationvalue)|Przeciążone. Konstruuje CAnimationValue obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationValue::AddTransition](#addtransition)|Dodaje przejście ma być stosowany do wartości.|
+|[CAnimationValue::AddTransition](#addtransition)|Dodaje przejście, które ma zostać zastosowane do wartości.|
 |[CAnimationValue::GetValue](#getvalue)|Przeciążone. Pobiera bieżącą wartość.|
-|[CAnimationValue::GetVariable](#getvariable)|Zapewnia dostęp do zhermetyzowanego animacji zmiennej.|
+|[CAnimationValue::GetVariable](#getvariable)|Zapewnia dostęp do zmiennej animacji zhermetyzowanej.|
 |[CAnimationValue::SetDefaultValue](#setdefaultvalue)|Ustawia wartość domyślną.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationValue::GetAnimationVariableList](#getanimationvariablelist)|Umieszcza zmiennej animacji zhermetyzowany z listy. (Przesłania [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
+|[CAnimationValue::GetAnimationVariableList](#getanimationvariablelist)|Umieszcza zhermetyzowaną zmienną animacji na liście. (Zastępuje [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationValue::operator podwójnej PRECYZJI](#operator_double)|Zapewnia konwersji między CAnimationValue i podwójnej PRECYZJI.|
-|[CAnimationValue::operator INT32](#operator_int32)|Zapewnia konwersji między CAnimationValue i INT32.|
-|[CAnimationValue::operator =](#operator_eq)|Przeciążone. Przypisuje wartość INT32 CAnimationValue.|
+|[CAnimationValue::operator DOUBLE](#operator_double)|Zapewnia konwersję między CAnimationValue i DOUBLE.|
+|[CAnimationValue::operator INT32](#operator_int32)|Zapewnia konwersję między CAnimationValue i INT32.|
+|[CAnimationValue::operator=](#operator_eq)|Przeciążone. Przypisuje wartość INT32 do CAnimationValue.|
 
-### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+### <a name="protected-data-members"></a>Członkowie chronionych danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationValue::m_value](#m_value)|Zmienna zhermetyzowany animacji, która reprezentuje wartość animacji.|
+|[CAnimationValue::m_value](#m_value)|Zhermetyzowana zmienna animacji reprezentująca wartość animacji.|
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa CAnimationValue hermetyzuje pojedynczy obiekt CAnimationVariable i może reprezentować w aplikacjach pojedynczą wartość animowany. Na przykład, można użyć tej klasy, dla przejrzystości animowany (efekt fade), kąt (w celu obracania obiektów), lub dla wszystkich innych przypadkach, gdy trzeba utworzyć animację, w zależności od pojedynczej wartości animowany. Aby użyć tej klasy w aplikacji, po prostu utworzyć wystąpienie obiektu tej klasy, dodaj go do kontrolera animacji przy użyciu CAnimationController::AddAnimationObject i wywoływać AddTransition dla każdego przejścia, które mają być stosowane do wartości.
+CAnimationValue klasa hermetyzuje pojedynczy CAnimationVariable obiektu i może reprezentować w aplikacjach pojedynczą wartość animowaną. Na przykład tej klasy można użyć dla animowanej przezroczystości (efekt zanikania), kąta (obracania obiektów) lub w każdym innym przypadku, gdy trzeba utworzyć animację w zależności od pojedynczej animowanej wartości. Aby użyć tej klasy w aplikacji, wystarczy utworzyć wystąpienie obiektu tej klasy, dodaj go do kontrolera animacji przy użyciu CAnimationController::AddAnimationObject i wywołać AddTransition dla każdego przejścia, które mają być zastosowane do wartości.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 [CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)
 
@@ -90,9 +90,9 @@ Klasa CAnimationValue hermetyzuje pojedynczy obiekt CAnimationVariable i może r
 
 **Nagłówek:** afxanimationcontroller.h
 
-##  <a name="addtransition"></a>  CAnimationValue::AddTransition
+## <a name="canimationvalueaddtransition"></a><a name="addtransition"></a>CAnimationValue::AddTransition
 
-Dodaje przejście ma być stosowany do wartości.
+Dodaje przejście, które ma zostać zastosowane do wartości.
 
 ```
 void AddTransition(CBaseTransition* pTransition);
@@ -100,16 +100,16 @@ void AddTransition(CBaseTransition* pTransition);
 
 ### <a name="parameters"></a>Parametry
 
-*pTransition*<br/>
+*pTransition (tłumaczenie na pTransition)*<br/>
 Wskaźnik do obiektu przejścia.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby dodać przejście do wewnętrznej listy przejścia, które mają być stosowane do zmiennej animacji. Po dodaniu przejść, nie są stosowane natychmiast i przechowywane na liście wewnętrznych. Przejścia są stosowane (dodane do scenorysu dla określonej wartości) podczas wywoływania CAnimationController::AnimateGroup.
+Wywołanie tej funkcji, aby dodać przejście do wewnętrznej listy przejść, które mają być stosowane do zmiennej animacji. Po dodaniu przejść nie są one stosowane natychmiast i przechowywane na liście wewnętrznej. Przejścia są stosowane (dodawane do serii ujęć dla określonej wartości) podczas wywoływania CAnimationController::AnimateGroup.
 
-##  <a name="canimationvalue"></a>  CAnimationValue::CAnimationValue
+## <a name="canimationvaluecanimationvalue"></a><a name="canimationvalue"></a>CAnimationValue::CAnimationValue
 
-Tworzy obiekt CAnimationValue.
+Konstruuje CAnimationValue obiektu.
 
 ```
 CAnimationValue();
@@ -126,22 +126,22 @@ CAnimationValue(
 *dblDefaultValue*<br/>
 Określa wartość domyślną.
 
-*nGroupID*<br/>
+*nGrupaID*<br/>
 Określa identyfikator grupy.
 
 *nObjectID*<br/>
 Określa identyfikator obiektu.
 
 *dwUserData*<br/>
-Określa dane zdefiniowane przez użytkownika.
+określa dane zdefiniowane przez użytkownika.
 
 ### <a name="remarks"></a>Uwagi
 
-Tworzy obiekt CAnimationValue przy użyciu domyślnych właściwości: wartość domyślną, identyfikator grupy i identyfikator obiektu są ustawione na 0.
+Konstrukcje CAnimationValue obiekt z właściwościami domyślnymi: wartość domyślna, Identyfikator grupy i identyfikator obiektu są ustawione na 0.
 
-##  <a name="getanimationvariablelist"></a>  CAnimationValue::GetAnimationVariableList
+## <a name="canimationvaluegetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationValue::GetAnimationVariableList
 
-Umieszcza zmiennej animacji zhermetyzowany z listy.
+Umieszcza zhermetyzowaną zmienną animacji na liście.
 
 ```
 virtual void GetAnimationVariableList(
@@ -151,10 +151,10 @@ virtual void GetAnimationVariableList(
 
 ### <a name="parameters"></a>Parametry
 
-*lst*<br/>
-Po powrocie z tej funkcji zawiera wskaźnik do CAnimationVariable reprezentujący wartość animowany.
+*Lst*<br/>
+Gdy funkcja zwraca, zawiera wskaźnik do CAnimationVariable reprezentujący animowaną wartość.
 
-##  <a name="getvalue"></a>  CAnimationValue::GetValue
+## <a name="canimationvaluegetvalue"></a><a name="getvalue"></a>CAnimationValue::GetValue
 
 Pobiera bieżącą wartość.
 
@@ -165,23 +165,23 @@ BOOL GetValue(INT32& nValue);
 
 ### <a name="parameters"></a>Parametry
 
-*dblValue*<br/>
-Dane wyjściowe. Gdy funkcja zwraca zawiera bieżącą wartość zmiennej animacji.
+*dblValue (wartość dblValue)*<br/>
+Wyjście. Gdy funkcja zwraca zawiera bieżącą wartość zmiennej animacji.
 
-*nWartość:*<br/>
-Dane wyjściowe. Gdy funkcja zwraca zawiera bieżącą wartość zmiennej animacji.
+*wartość nValue*<br/>
+Wyjście. Gdy funkcja zwraca zawiera bieżącą wartość zmiennej animacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli bieżąca wartość został pobrany pomyślnie; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli bieżąca wartość została pobrana pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj tę funkcję, aby pobrać bieżącą wartość. Ta implementacja wywołuje zhermetyzowanego obiektu COM, a jeśli wywołanie zakończy się niepowodzeniem, ta metoda zwraca domyślną wartość, która została wcześniej ustawiona w konstruktorze lub SetDefaultValue.
+Wywołanie tej funkcji, aby pobrać bieżącą wartość. Ta implementacja wywołuje zhermetyzowany obiekt COM, a jeśli wywołanie zakończy się niepowodzeniem, ta metoda zwraca wartość domyślną, która została wcześniej ustawiona w konstruktorze lub z SetDefaultValue.
 
-##  <a name="getvariable"></a>  CAnimationValue::GetVariable
+## <a name="canimationvaluegetvariable"></a><a name="getvariable"></a>CAnimationValue::GetVariable
 
-Zapewnia dostęp do zhermetyzowanego animacji zmiennej.
+Zapewnia dostęp do zmiennej animacji zhermetyzowanej.
 
 ```
 CAnimationVariable& GetVariable();
@@ -189,23 +189,23 @@ CAnimationVariable& GetVariable();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do zmiennej zhermetyzowany animacji.
+Odwołanie do zmiennej animacji zhermetyzowanej.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda umożliwia dostęp do zmiennej zhermetyzowany animacji. Z CAnimationVariable uzyskasz dostęp do bazowego obiektu IUIAnimationVariable, w których wskaźnik może mieć wartość NULL, jeśli nie utworzono zmienną animacji.
+Ta metoda służy do uzyskiwania dostępu do zmiennej animacji zhermetyzowanej. Z CAnimationVariable można uzyskać dostęp do podstawowej IUIAnimationVariable obiektu, którego wskaźnik może być NULL, jeśli zmienna animacji nie została utworzona.
 
-##  <a name="m_value"></a>  CAnimationValue::m_value
+## <a name="canimationvaluem_value"></a><a name="m_value"></a>CAnimationValue::m_value
 
-Zmienna zhermetyzowany animacji, która reprezentuje wartość animacji.
+Zhermetyzowana zmienna animacji reprezentująca wartość animacji.
 
 ```
 CAnimationVariable m_value;
 ```
 
-##  <a name="operator_double"></a>  CAnimationValue::operator podwójnej PRECYZJI
+## <a name="canimationvalueoperator-double"></a><a name="operator_double"></a>CAnimationValue::operator DOUBLE
 
-Zapewnia konwersji między CAnimationValue i podwójnej PRECYZJI.
+Zapewnia konwersję między CAnimationValue i DOUBLE.
 
 ```
 operator DOUBLE();
@@ -213,15 +213,15 @@ operator DOUBLE();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bieżąca wartość animacji.
+Bieżąca wartość wartości animacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Zapewnia konwersji między CAnimationValue i podwójnej PRECYZJI. Wewnętrznie, ta metoda wywołuje metody GetValue i nie sprawdza błędy. Jeśli GetValue zakończy się niepowodzeniem, zwracana wartość będzie zawierać wcześniej ustawione w konstruktorze lub SetDefaultValue wartości domyślnej.
+Zapewnia konwersję między CAnimationValue i DOUBLE. Ta metoda wewnętrznie wywołuje GetValue i nie sprawdza błędów. Jeśli GetValue nie powiedzie się, zwracana wartość będzie zawierać wartość domyślną wcześniej ustawioną w konstruktorze lub z SetDefaultValue.
 
-##  <a name="operator_int32"></a>  CAnimationValue::operator INT32
+## <a name="canimationvalueoperator-int32"></a><a name="operator_int32"></a>CAnimationValue::operator INT32
 
-Zapewnia konwersji między CAnimationValue i INT32.
+Zapewnia konwersję między CAnimationValue i INT32.
 
 ```
 operator INT32();
@@ -229,15 +229,15 @@ operator INT32();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bieżąca wartość wartości animacji w postaci liczby całkowitej.
+Bieżąca wartość wartości animacji jako liczby całkowitej.
 
 ### <a name="remarks"></a>Uwagi
 
-Zapewnia konwersji między CAnimationValue i INT32. Wewnętrznie, ta metoda wywołuje metody GetValue i nie sprawdza błędy. Jeśli GetValue zakończy się niepowodzeniem, zwracana wartość będzie zawierać wcześniej ustawione w konstruktorze lub SetDefaultValue wartości domyślnej.
+Zapewnia konwersję między CAnimationValue i INT32. Ta metoda wewnętrznie wywołuje GetValue i nie sprawdza błędów. Jeśli GetValue nie powiedzie się, zwracana wartość będzie zawierać wartość domyślną wcześniej ustawioną w konstruktorze lub z SetDefaultValue.
 
-##  <a name="operator_eq"></a>  CAnimationValue::operator =
+## <a name="canimationvalueoperator"></a><a name="operator_eq"></a>CAnimationValue::operator=
 
-Przypisuje wartość typu DOUBLE CAnimationValue.
+Przypisuje wartość DOUBLE do CAnimationValue.
 
 ```
 void operator=(DOUBLE dblVal);
@@ -246,17 +246,17 @@ void operator=(INT32 nVal);
 
 ### <a name="parameters"></a>Parametry
 
-*dblVal*<br/>
-Określa wartość do przypisania do wartości animacji.
+*dblVal (właśc.*<br/>
+Określa wartość, która ma być przypisana do wartości animacji.
 
-*nVal*<br/>
-Określa wartość do przypisania do wartości animacji.
+*nVal (Ł.*<br/>
+Określa wartość, która ma być przypisana do wartości animacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Przypisuje wartość typu DOUBLE CAnimationValue. Ta wartość jest ustawiana jako wartości domyślnej dla zmiennej zhermetyzowany animacji. Jeśli subskrybujesz ten obiekt animacji na zdarzenia (ValueChanged lub IntegerValueChanged), należy ponownie włączyć te zdarzenia.
+Przypisuje wartość DOUBLE do CAnimationValue. Ta wartość jest ustawiana jako wartość domyślna dla zmiennej animacji zhermetyzowanej. Jeśli ten obiekt animacji został zasubskrybowany do zdarzeń (ValueChanged lub IntegerValueChanged), należy ponownie włączyć te zdarzenia.
 
-##  <a name="setdefaultvalue"></a>  CAnimationValue::SetDefaultValue
+## <a name="canimationvaluesetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationValue::SetDefaultValue
 
 Ustawia wartość domyślną.
 
@@ -267,12 +267,12 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ### <a name="parameters"></a>Parametry
 
 *dblDefaultValue*<br/>
-Określa domyślną wartość.
+Określa wartość domyślną.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda umożliwia ustawianie wartości domyślnej. Wartość domyślna jest zwracana do aplikacji, gdy animacji nie została uruchomiona i/lub nie został utworzony obiekt COM. Jeśli już utworzono obiekt COM, zhermetyzowanych w ramach CAnimationVarible, ta metoda tworzy go ponownie, dlatego może być konieczne wywoływanie metod EnableValueChanged/EnableIntegerValueChanged ponownie.
+Ta metoda służy do ustawiania wartości domyślnej. Wartość domyślna jest zwracana do aplikacji, gdy animacja nie została uruchomiona i/lub podstawowy obiekt COM nie został utworzony. Jeśli podstawowy obiekt COM zhermetyzowany w CAnimationVarible został już utworzony, ta metoda odtwarza go, dlatego może być konieczne wywołanie EnableValueChanged/EnableIntegerValueZmieniane metody ponownie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

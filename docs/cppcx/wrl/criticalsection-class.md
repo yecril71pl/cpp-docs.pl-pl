@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::CriticalSection::CriticalSection, constructor
 - Microsoft::WRL::Wrappers::CriticalSection::TryLock method
 ms.assetid: f2e0a024-71a3-4f6b-99ea-d93a4a608ac4
-ms.openlocfilehash: dd34206741ba8fee8b283e22b6e8eefb3b3efb0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5deb89e795d1886ca316886ae1ea260ce1f36fd1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398592"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372588"
 ---
 # <a name="criticalsection-class"></a>CriticalSection — Klasa
 
-Reprezentuje obiekt sekcję krytyczną.
+Reprezentuje obiekt sekcji krytycznej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,22 +42,22 @@ class CriticalSection;
 
 Nazwa                                                        | Opis
 ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
-[CriticalSection::CriticalSection](#criticalsection)        | Inicjuje obiekt synchronizacji, który jest podobny do obiektu mutex, ale mogą być używane przez wątki tylko pojedynczego procesu.
-[CriticalSection:: ~ CriticalSection](#tilde-criticalsection) | Wyłącza i niszczy bieżącego `CriticalSection` obiektu.
+[CriticalSekcja::CriticalSekcja](#criticalsection)        | Inicjuje obiekt synchronizacji, który jest podobny do obiektu mutex, ale może być używany tylko przez wątki pojedynczego procesu.
+[CriticalSekcja::~CriticalSekcja](#tilde-criticalsection) | Deinitializes i niszczy `CriticalSection` bieżący obiekt.
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Nazwa                                 | Opis
 ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------
-[CriticalSection::IsValid](#isvalid) | Wskazuje, czy bieżąca sekcja krytycznego jest prawidłowa.
-[CriticalSection::Lock](#lock)       | Czeka na własność obiektu określona sekcja krytycznego. Funkcja zwróci, jeśli wątek wywołujący udzielono prawa własności.
-[CriticalSection::TryLock](#trylock) | Próbuje wprowadzić sekcję krytyczną bez blokowania. Jeśli wywołanie zakończy się pomyślnie, wątek wywołujący przejmuje na własność sekcję krytyczną.
+[CriticalSection::IsValid](#isvalid) | Wskazuje, czy bieżąca sekcja krytyczna jest prawidłowa.
+[CriticalSekcja::Zablokuj](#lock)       | Czeka na własność określonego obiektu sekcji krytycznej. Funkcja zwraca, gdy wątek wywołujący jest przyznawana własność.
+[CriticalSekcja::TryLock](#trylock) | Próbuje wprowadzić sekcję krytyczną bez blokowania. Jeśli wywołanie zakończy się pomyślnie, wątek wywołujący przejmuje odpowiedzialność za sekcję krytyczną.
 
-### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+### <a name="protected-data-members"></a>Członkowie chronionych danych
 
 Nazwa                        | Opis
 --------------------------- | ----------------------------------------
-[CriticalSection::cs_](#cs) | Deklaruje element członkowski danych sekcję krytyczną.
+[CriticalSection::cs_](#cs) | Deklaruje element członkowski danych sekcji krytycznej.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -67,19 +67,19 @@ Nazwa                        | Opis
 
 **Nagłówek:** corewrappers.h
 
-**Namespace:** Microsoft::wrl:: wrappers
+**Obszar nazw:** Microsoft::WRL::Otoki
 
-## <a name="tilde-criticalsection"></a>CriticalSection:: ~ CriticalSection
+## <a name="criticalsectioncriticalsection"></a><a name="tilde-criticalsection"></a>CriticalSekcja::~CriticalSekcja
 
-Wyłącza i niszczy bieżącego `CriticalSection` obiektu.
+Deinitializes i niszczy `CriticalSection` bieżący obiekt.
 
 ```cpp
 WRL_NOTHROW ~CriticalSection();
 ```
 
-## <a name="criticalsection"></a>CriticalSection::CriticalSection
+## <a name="criticalsectioncriticalsection"></a><a name="criticalsection"></a>CriticalSekcja::CriticalSekcja
 
-Inicjuje obiekt synchronizacji, który jest podobny do obiektu mutex, ale mogą być używane przez wątki tylko pojedynczego procesu.
+Inicjuje obiekt synchronizacji, który jest podobny do obiektu mutex, ale może być używany tylko przez wątki pojedynczego procesu.
 
 ```cpp
 explicit CriticalSection(
@@ -90,15 +90,15 @@ explicit CriticalSection(
 ### <a name="parameters"></a>Parametry
 
 *spincount*<br/>
-Liczba obiektów sekcję krytyczną pokrętła. Wartość domyślna to 0.
+Liczba obrotów dla obiektu przekroju krytycznego. Wartość domyślna to 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat sekcje krytyczne i spincounts zobacz `InitializeCriticalSectionAndSpinCount` działa w programach `Synchronization` sekcji zawiera interfejs API Windows.
+Aby uzyskać więcej informacji na temat krytycznych `InitializeCriticalSectionAndSpinCount` sekcji i `Synchronization` spincounts, zobacz funkcję w sekcji documenation interfejsu API systemu Windows.
 
-## <a name="cs"></a>CriticalSection::cs_
+## <a name="criticalsectioncs_"></a><a name="cs"></a>CriticalSection::cs_
 
-Deklaruje element członkowski danych sekcję krytyczną.
+Deklaruje element członkowski danych sekcji krytycznej.
 
 ```cpp
 CRITICAL_SECTION cs_;
@@ -106,11 +106,11 @@ CRITICAL_SECTION cs_;
 
 ### <a name="remarks"></a>Uwagi
 
-Ten element członkowski danych jest chroniona.
+Ten element członkowski danych jest chroniony.
 
-## <a name="isvalid"></a>CriticalSection::IsValid
+## <a name="criticalsectionisvalid"></a><a name="isvalid"></a>CriticalSection::IsValid
 
-Wskazuje, czy bieżąca sekcja krytycznego jest prawidłowa.
+Wskazuje, czy bieżąca sekcja krytyczna jest prawidłowa.
 
 ```cpp
 bool IsValid() const;
@@ -118,11 +118,11 @@ bool IsValid() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Domyślnie zwraca zawsze **true**.
+Domyślnie zawsze zwraca **wartość true**.
 
-## <a name="lock"></a>CriticalSection::Lock
+## <a name="criticalsectionlock"></a><a name="lock"></a>CriticalSekcja::Zablokuj
 
-Czeka na własność obiektu określona sekcja krytycznego. Funkcja zwróci, jeśli wątek wywołujący udzielono prawa własności.
+Czeka na własność określonego obiektu sekcji krytycznej. Funkcja zwraca, gdy wątek wywołujący jest przyznawana własność.
 
 ```cpp
 SyncLock Lock();
@@ -134,20 +134,20 @@ SyncLock Lock();
 
 ### <a name="parameters"></a>Parametry
 
-*CS*<br/>
-Obiekt sekcję krytyczną określonych przez użytkownika.
+*Cs*<br/>
+Obiekt sekcji krytycznej określony przez użytkownika.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt blokady, który może służyć do odblokowania bieżąca sekcja krytycznego.
+Obiekt blokady, który może służyć do odblokowania bieżącej sekcji krytycznej.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy `Lock` funkcji ma wpływ na bieżący obiekt sekcję krytyczną. Drugi `Lock` funkcji ma wpływ na sekcję krytyczną określonych przez użytkownika.
+Pierwsza `Lock` funkcja wpływa na bieżący obiekt sekcji krytycznej. Druga `Lock` funkcja ma wpływ na sekcję krytyczną określoną przez użytkownika.
 
-## <a name="trylock"></a>CriticalSection::TryLock
+## <a name="criticalsectiontrylock"></a><a name="trylock"></a>CriticalSekcja::TryLock
 
-Próbuje wprowadzić sekcję krytyczną bez blokowania. Jeśli wywołanie zakończy się pomyślnie, wątek wywołujący przejmuje na własność sekcję krytyczną.
+Próbuje wprowadzić sekcję krytyczną bez blokowania. Jeśli wywołanie zakończy się pomyślnie, wątek wywołujący przejmuje odpowiedzialność za sekcję krytyczną.
 
 ```cpp
 SyncLock TryLock();
@@ -159,13 +159,13 @@ static SyncLock TryLock(
 
 ### <a name="parameters"></a>Parametry
 
-*CS*<br/>
-Obiekt sekcję krytyczną określonych przez użytkownika.
+*Cs*<br/>
+Obiekt sekcji krytycznej określony przez użytkownika.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli pomyślnie podano sekcję krytyczną lub bieżący wątek jest już właścicielem sekcję krytyczną. Zero, jeśli inny wątek jest już właścicielem sekcję krytyczną.
+Wartość niezerowa, jeśli sekcja krytyczna została pomyślnie wprowadzona lub bieżący wątek jest już właścicielem sekcji krytycznej. Zero, jeśli inny wątek jest już właścicielem sekcji krytycznej.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy `TryLock` funkcji ma wpływ na bieżący obiekt sekcję krytyczną. Drugi `TryLock` funkcji ma wpływ na sekcję krytyczną określonych przez użytkownika.
+Pierwsza `TryLock` funkcja wpływa na bieżący obiekt sekcji krytycznej. Druga `TryLock` funkcja ma wpływ na sekcję krytyczną określoną przez użytkownika.

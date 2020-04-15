@@ -10,53 +10,53 @@ helpviewer_keywords:
 - BEGIN_SINK_MAP macro
 - IDispEventImpl class, declaring
 ms.assetid: b957f930-6a5b-4598-8e4d-8027759957e7
-ms.openlocfilehash: 3652aae2a6c84833ed32e52599d3834d6e66a5ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31beff30a067416f71029c18051f214c8d4429de
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274290"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329323"
 ---
 # <a name="supporting-idispeventimpl"></a>Obsługa interfejsu IDispEventImpl
 
-Klasa szablonu [IDispEventImpl](../atl/reference/idispeventimpl-class.md) może służyć do zapewnienia obsługi ujścia punktu połączenia w klasie ATL. Obiekt sink punktu połączenia umożliwia klasy do obsługi zdarzeń wyzwalanych z zewnętrznych obiektów COM. Te obiekty sink punktu połączenia są mapowane z mapą obiekt sink zdarzenia dostarczane przez klasy.
+Klasa [szablonu IDispEventImpl](../atl/reference/idispeventimpl-class.md) może służyć do zapewnienia obsługi pochłaniaczy punktów połączenia w klasie ATL. Ujście punktu połączenia umożliwia klasie do obsługi zdarzeń uruchamianych z zewnętrznych obiektów COM. Te ujścia punktów połączenia są mapowane z mapą ujścia zdarzeń, dostarczone przez klasę.
 
-Aby prawidłowo zaimplementować ujście punkt połączenia dla swojej klasy, być wykonywane następujące czynności:
+Aby prawidłowo zaimplementować ujście punktu połączenia dla klasy, należy wykonać następujące kroki:
 
-- Importowanie biblioteki typów dla każdego obiektu zewnętrznego
+- Importowanie bibliotek typów dla każdego obiektu zewnętrznego
 
-- Zadeklaruj `IDispEventImpl` interfejsów
+- Deklarowanie `IDispEventImpl` interfejsów
 
-- Zadeklaruj mapę ujścia zdarzeń
+- Deklarowanie mapy ujścia zdarzeń
 
-- Powiadomienia i unadvise punkty połączenia
+- Doradzanie i odłączanie przyłączy
 
-Etapy implementacji ujścia punktu połączenia są realizowane przez zmodyfikowanie tylko pliku nagłówka (.h) klasy.
+Kroki związane z implementacji ujścia punktu połączenia są realizowane przez modyfikowanie tylko pliku nagłówka (.h) klasy.
 
 ## <a name="importing-the-type-libraries"></a>Importowanie bibliotek typów
 
-Dla każdego obiektu zewnętrznego do obsługi zdarzeń należy zaimportować bibliotekę typów. Ten krok określa zdarzenia, które są obsługiwane i zawiera informacje, które jest używane podczas deklarowania Mapa ujścia zdarzeń. [#Import](../preprocessor/hash-import-directive-cpp.md) dyrektywy można to osiągnąć. Dodaj niezbędne `#import` dyrektywy wierszy dla każdego interfejs ekspedycji będzie obsługiwać do pliku nagłówka (.h) klasy.
+Dla każdego obiektu zewnętrznego, którego zdarzenia chcesz obsłużyć, należy zaimportować bibliotekę typów. Ten krok definiuje zdarzenia, które mogą być obsługiwane i zawiera informacje, które są używane podczas deklarowania mapy ujścia zdarzeń. Do osiągnięcia tego celu można wykorzystać [dyrektywę #import.](../preprocessor/hash-import-directive-cpp.md) Dodaj niezbędne `#import` wiersze dyrektywy dla każdego interfejsu wysyłki, który będzie obsługiwany do pliku nagłówka (.h) klasy.
 
-Następujący przykład importuje biblioteki typów z zewnętrznego serwera COM (`MSCAL.Calendar.7`):
+Poniższy przykład importuje bibliotekę typów zewnętrznego`MSCAL.Calendar.7`serwera COM ( ):
 
 [!code-cpp[NVC_ATL_Windowing#141](../atl/codesnippet/cpp/supporting-idispeventimpl_1.h)]
 
 > [!NOTE]
->  Konieczne jest posiadanie oddzielnego `#import` instrukcji dla każdego zewnętrzną bibliotekę typów będzie obsługiwać.
+> Musisz mieć osobną `#import` instrukcję dla każdej biblioteki typów zewnętrznych, które będą obsługiwane.
 
-## <a name="declaring-the-idispeventimpl-interfaces"></a>Deklarowanie interfejsów interfejsu IDispEventImpl
+## <a name="declaring-the-idispeventimpl-interfaces"></a>Deklarowanie interfejsów IDispEventImpl
 
-Po zaimportowaniu type libraries każdy interfejs ekspedycji należy zadeklarować oddzielnych `IDispEventImpl` interfejsy, dla każdego interfejsu, wysyłania zewnętrznych. Zmodyfikuj deklarację klasy, dodając `IDispEventImpl` interfejsu deklarację dla każdego obiektu zewnętrznego. Aby uzyskać więcej informacji na temat parametrów, zobacz [IDispEventImpl](../atl/reference/idispeventimpl-class.md).
+Teraz, gdy zostały zaimportowane biblioteki typów każdego interfejsu `IDispEventImpl` wysyłki, należy zadeklarować oddzielne interfejsy dla każdego zewnętrznego interfejsu wysyłki. Zmodyfikuj deklarację `IDispEventImpl` klasy, dodając deklarację interfejsu dla każdego obiektu zewnętrznego. Aby uzyskać więcej informacji na temat parametrów, zobacz [IDispEventImpl](../atl/reference/idispeventimpl-class.md).
 
-Poniższy kod deklaruje dwie sink punktu połączenia dla `DCalendarEvents` interfejs dla obiektu COM, zaimplementowany przez klasę `CMyCompositCtrl2`:
+Poniższy kod deklaruje dwa ujścia punktu `DCalendarEvents` połączenia dla interfejsu dla obiektu `CMyCompositCtrl2`COM zaimplementowanego przez klasę:
 
 [!code-cpp[NVC_ATL_Windowing#142](../atl/codesnippet/cpp/supporting-idispeventimpl_2.h)]
 
-## <a name="declaring-an-event-sink-map"></a>Deklarowanie mapę ujścia zdarzeń
+## <a name="declaring-an-event-sink-map"></a>Deklarowanie mapy ujścia zdarzeń
 
-Aby powiadomienia o zdarzeniach mają być obsługiwane przez funkcję właściwe klasa musi kierować każdego zdarzenia do jego prawidłowe procedury obsługi. Jest to osiągane przez zadeklarowanie mapę ujścia zdarzeń.
+Aby powiadomienia o zdarzeniach były obsługiwane przez właściwą funkcję, klasa musi kierować każde zdarzenie do jego poprawnego programu obsługi. Osiąga się to poprzez zadeklarowanie mapy ujścia zdarzeń.
 
-ATL udostępnia kilka makra [BEGIN_SINK_MAP](reference/composite-control-macros.md#begin_sink_map), [END_SINK_MAP](reference/composite-control-macros.md#end_sink_map), i [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex), który ułatwić tego mapowania. Standardowy format jest następujący:
+ATL udostępnia kilka makr, [BEGIN_SINK_MAP,](reference/composite-control-macros.md#begin_sink_map) [END_SINK_MAP](reference/composite-control-macros.md#end_sink_map)i [SINK_ENTRY_EX,](reference/composite-control-macros.md#sink_entry_ex)które ułatwiają to mapowanie. Standardowy format jest następujący:
 
 ```cpp
 BEGIN_SINK_MAP(comClass)
@@ -65,20 +65,20 @@ BEGIN_SINK_MAP(comClass)
 END_SINK_MAP()
 ```
 
-Poniższy przykład deklaruje mapę ujścia zdarzeń za pomocą dwóch programów obsługi zdarzeń:
+W poniższym przykładzie deklaruje mapę ujścia zdarzeń z dwoma programami obsługi zdarzeń:
 
 [!code-cpp[NVC_ATL_Windowing#136](../atl/codesnippet/cpp/supporting-idispeventimpl_3.h)]
 
-Implementacja jest prawie gotowy. Ostatni krok dotyczy informacją i unadvising zewnętrznych interfejsów.
+Implementacja jest prawie zakończona. Ostatni krok dotyczy doradztwa i nienadzorowania interfejsów zewnętrznych.
 
-## <a name="advising-and-unadvising-the-idispeventimpl-interfaces"></a>Doradztwa i Unadvising interfejsów interfejsu IDispEventImpl
+## <a name="advising-and-unadvising-the-idispeventimpl-interfaces"></a>Doradztwo i unadvising IDispEventImpl Interfejsy
 
-Ostatnim krokiem jest zaimplementować metodę, która będzie wykonać funkcji advise (lub unadvise) wszystkie punkty połączenia w czasie właściwe. Tego wniosku musi odbywać się przed komunikacji między klientami zewnętrznymi i obiekt może mieć miejsce. Zanim obiekt staje się widoczny, każdy interfejs zewnętrzny wysyłania obsługiwane przez obiekt zostaje przesłane zapytanie wychodzących interfejsów. Połączenie jest nawiązywane i odwołanie do interfejsu wychodzącego jest używana do obsługi zdarzeń z obiektu. Ta procedura jest nazywana "wniosku."
+Ostatnim krokiem jest wdrożenie metody, która będzie doradzać (lub unadvise) wszystkie punkty połączenia w odpowiednim czasie. To doradztwo musi być wykonane przed komunikacją między klientami zewnętrznymi a obiektem. Zanim obiekt stanie się widoczny, każdy interfejs wysyłki zewnętrznej obsługiwany przez obiekt jest wyszukiwany dla interfejsów wychodzących. Połączenie jest ustanawiane i odwołanie do interfejsu wychodzącego jest używany do obsługi zdarzeń z obiektu. Procedura ta jest określana jako "doradztwo".
 
-Po zakończeniu obiektu za pomocą zewnętrzne interfejsy interfejsów wychodzące powiadomienia, czy są one już używane przez klasy. Ten proces jest nazywany "unadvising".
+Po zakończeniu obiektu za pomocą interfejsów zewnętrznych interfejsów wychodzących powinny być powiadamiane, że nie są już używane przez klasę. Proces ten jest określany jako "unadvising".
 
-Ze względu na unikatowy charakter obiektów COM ta procedura różni się w szczegóły i wykonanie, między implementacjami. Te szczegółowe informacje wykraczają poza zakres tego tematu i nie zostały opisane.
+Ze względu na unikatowy charakter obiektów COM ta procedura różni się szczegółowo i wykonanie między implementacjami. Te szczegóły wykraczają poza zakres tego tematu i nie są adresowane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Podstawowe informacje na temat obiektów COM ATL](../atl/fundamentals-of-atl-com-objects.md)
+[Podstawy obiektów ATL COM](../atl/fundamentals-of-atl-com-objects.md)

@@ -15,16 +15,16 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-ms.openlocfilehash: d993a349d38342bda30a83dfdbe25577953799b3
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 43f914a52666788fc0bf394d9d14830b28f5adc7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497535"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321040"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Klasa CComCachedTearOffObject
 
-Ta klasa implementuje interfejs [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) dla interfejsu odrywanego.
+Ta klasa implementuje [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) dla interfejsu odrywane.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,8 +39,8 @@ public CComObjectRootEx<contained
 
 #### <a name="parameters"></a>Parametry
 
-*przechowywany*<br/>
-Klasa odrywania, pochodna `CComTearOffObjectBase` i interfejsy, które mają być obsługiwane przez obiekt.
+*Zawarte*<br/>
+Twoja klasa tear-off, `CComTearOffObjectBase` pochodzące z i interfejsów, które mają twój obiekt odrywane do obsługi.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -55,31 +55,31 @@ Klasa odrywania, pochodna `CComTearOffObjectBase` i interfejsy, które mają by�
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComCachedTearOffObject:: AddRef](#addref)|Zwiększa liczbę odwołań dla `CComCachedTearOffObject` obiektu.|
-|[CComCachedTearOffObject::FinalConstruct](#finalconstruct)|Wywołuje metodę `m_contained::FinalConstruct` (Klasa odrywana).|
-|[CComCachedTearOffObject::FinalRelease](#finalrelease)|Wywołuje metodę `m_contained::FinalRelease` (Klasa odrywana).|
-|[CComCachedTearOffObject::QueryInterface](#queryinterface)|Zwraca wskaźnik do `IUnknown` `CComCachedTearOffObject` obiektu lub do żądanego interfejsu w klasie odrywanej (Klasa `contained`).|
-|[CComCachedTearOffObject:: Release](#release)|Zmniejsza liczbę odwołań dla `CComCachedTearOffObject` obiektu i niszczy go, jeśli liczba odwołań wynosi 0.|
+|[CComCachedTearOffObject::AddRef](#addref)|Zwiększa liczbę odwołań dla `CComCachedTearOffObject` obiektu.|
+|[CComCachedTearOffObject::FinalConstruct CComCachedTearOffObject::FinalConstruct CComCachedTearOffObject::FinalConstruct CCom](#finalconstruct)|Wywołuje `m_contained::FinalConstruct` (metoda klasy odrywu).|
+|[CComCachedTearOffObject::FinalRelease](#finalrelease)|Wywołuje `m_contained::FinalRelease` (metoda klasy odrywu).|
+|[CComCachedTearOffObject::QueryInterface](#queryinterface)|Zwraca wskaźnik do `IUnknown` `CComCachedTearOffObject` obiektu lub do żądanego interfejsu w klasie odrywać `contained`(klasa).|
+|[CComCachedTearOffObject::Release CComCachedTearOffObject::Release CComCachedTearOffObject::Release CCom](#release)|Zmniejsza liczbę odwołań dla `CComCachedTearOffObject` obiektu i niszczy go, jeśli liczba odwołań wynosi 0.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComCachedTearOffObject::m_contained](#m_contained)|Obiekt pochodzący z klasy odrywania (Klasa `contained`). `CComContainedObject`|
+|[CComCachedTearOffObject::m_contained](#m_contained)|Obiekt `CComContainedObject` pochodzący z klasy odrywane (klasa). `contained`|
 
 ## <a name="remarks"></a>Uwagi
 
-`CComCachedTearOffObject`implementuje interfejs [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) dla interfejsu odrywanego. Ta klasa różni się `CComTearOffObject` od elementu `CComCachedTearOffObject` `IUnknown` w, który `IUnknown`ma swoją własną, niezależnie od obiektu będącego właścicielem (właściciel jest obiektem, dla którego jest tworzona wycofanie). `CComCachedTearOffObject`utrzymuje swoją własną liczbę `IUnknown` odwołań i usuwa siebie, gdy jej liczba odwołań wynosi zero. Jednak w przypadku wykonywania zapytań dotyczących dowolnego z jego interfejsów odrywania liczba odwołań obiektu `IUnknown` właściciela zostanie zwiększona.
+`CComCachedTearOffObject`implementuje [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) dla oderwanego interfejsu. Ta klasa różni `CComTearOffObject` się `CComCachedTearOffObject` od `IUnknown`tej ma swój własny `IUnknown` , oddzielony od obiektu właściciela (właściciel jest obiektem, dla którego tworzony jest odrywany). `CComCachedTearOffObject`utrzymuje własną liczbę odwołań `IUnknown` na jego i usuwa się, gdy jego liczba odwołań wynosi zero. Jednak jeśli kwerendy dla któregokolwiek z jego interfejsów odryw, `IUnknown` liczba odwołań obiektu właściciela zostanie przyrostowana.
 
-Jeśli obiekt implementujący rozrywanie jest już skonkretyzowany, a interfejs odrywany jest ponownie używany do oddzielenia zapytania, ten sam `CComCachedTearOffObject` obiekt jest wykorzystany. `CComCachedTearOffObject` Z drugiej strony, jeśli interfejs odrywania zaimplementowany przez `CComTearOffObject` program jest ponownie wysyłany do zapytania za pomocą obiektu Owner, zostanie utworzone wystąpienie innego `CComTearOffObject` elementu.
+Jeśli `CComCachedTearOffObject` obiekt implementujący tear-off jest już wystąpienia, a interfejs odrywane jest `CComCachedTearOffObject` wyszukiwany ponownie, ten sam obiekt jest ponownie. Z drugiej strony, jeśli interfejs odrywa zaimplementowany przez `CComTearOffObject` a `CComTearOffObject` jest ponownie poszukiwany za pośrednictwem obiektu właściciela, inny zostanie skonkrzetowany.
 
-Klasa Owner musi implementować `FinalRelease` i wywoływać `Release` `CComCachedTearOffObject`w pamięci `IUnknown` podręcznej dla, która zmniejszy jej liczbę odwołań. `CComCachedTearOffObject` Spowoduje`FinalRelease` to wywołanie i usunięcie odrywania.
+Klasa właściciela musi `FinalRelease` zaimplementować `IUnknown` i `CComCachedTearOffObject`wywołać `Release` buforowane dla , który zmniejszy jego liczbę odwołań. Spowoduje to, `FinalRelease` że "s być wywołane i usunąć odrywać.This will cause's `CComCachedTearOffObject`to be called and delete the tear-off.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
 `CComObjectRootBase`
 
-[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)
+[Ccomobjectrootex](../../atl/reference/ccomobjectrootex-class.md)
 
 `IUnknown`
 
@@ -87,11 +87,11 @@ Klasa Owner musi implementować `FinalRelease` i wywoływać `Release` `CComCach
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom. h
+**Nagłówek:** atlcom.h
 
-##  <a name="addref"></a>CComCachedTearOffObject:: AddRef
+## <a name="ccomcachedtearoffobjectaddref"></a><a name="addref"></a>CComCachedTearOffObject::AddRef
 
-Zwiększa liczbę `CComCachedTearOffObject` odwołań obiektu o 1.
+Zwiększa liczbę odwołań `CComCachedTearOffObject` obiektu o 1.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -99,9 +99,9 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość, która może być przydatna w przypadku diagnostyki i testowania.
+Wartość, która może być przydatna do diagnostyki i testowania.
 
-##  <a name="ccomcachedtearoffobject"></a>CComCachedTearOffObject::CComCachedTearOffObject
+## <a name="ccomcachedtearoffobjectccomcachedtearoffobject"></a><a name="ccomcachedtearoffobject"></a>CComCachedTearOffObject::CComCachedTearOffObject
 
 Konstruktor.
 
@@ -111,14 +111,14 @@ CComCachedTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*wa*<br/>
-podczas Wskaźnik do `IUnknown` `CComCachedTearOffObject`elementu.
+*Pv*<br/>
+[w] Wskaźnik do `IUnknown` pliku `CComCachedTearOffObject`.
 
 ### <a name="remarks"></a>Uwagi
 
-Inicjuje element członkowski, [m_contained.](#m_contained) `CComContainedObject`
+Inicjuje `CComContainedObject` element członkowski, [m_contained](#m_contained).
 
-##  <a name="dtor"></a>CComCachedTearOffObject:: ~ CComCachedTearOffObject
+## <a name="ccomcachedtearoffobjectccomcachedtearoffobject"></a><a name="dtor"></a>CComCachedTearOffObject::~CComCachedTearOffObject
 
 Destruktor.
 
@@ -128,11 +128,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia wszystkie przydzieloną zasoby i wywołuje [FinalRelease](#finalrelease).
+Zwalnia wszystkie przydzielone zasoby i wywołuje [FinalRelease](#finalrelease).
 
-##  <a name="finalconstruct"></a>CComCachedTearOffObject::FinalConstruct
+## <a name="ccomcachedtearoffobjectfinalconstruct"></a><a name="finalconstruct"></a>CComCachedTearOffObject::FinalConstruct CComCachedTearOffObject::FinalConstruct CComCachedTearOffObject::FinalConstruct CCom
 
-Wywołania `m_contained::FinalConstruct` do tworzenia `m_contained`, `CComContainedObject` Obiekt>używanydouzyskiwaniadostępudointerfejsuimplementowanegoprzezklasęodrywania.<  `contained`
+`m_contained::FinalConstruct` Wywołania, `m_contained`aby `CComContainedObject` <  `contained` utworzyć obiekt> używany do uzyskiwania dostępu do interfejsu zaimplementowanego przez klasę odrywać.
 
 ```
 HRESULT FinalConstruct();
@@ -142,17 +142,17 @@ HRESULT FinalConstruct();
 
 Standardowa wartość HRESULT.
 
-##  <a name="finalrelease"></a>CComCachedTearOffObject::FinalRelease
+## <a name="ccomcachedtearoffobjectfinalrelease"></a><a name="finalrelease"></a>CComCachedTearOffObject::FinalRelease
 
-Wywołania `m_contained::FinalRelease` Free `m_contained`, `CComContainedObject` >obiektu.<  `contained`
+Połączenia `m_contained::FinalRelease` do `m_contained`bezpłatnego `CComContainedObject` <  `contained` ,> obiektu.
 
 ```
 void FinalRelease();
 ```
 
-##  <a name="m_contained"></a>CComCachedTearOffObject::m_contained
+## <a name="ccomcachedtearoffobjectm_contained"></a><a name="m_contained"></a>CComCachedTearOffObject::m_contained
 
-Obiekt [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) pochodzący z klasy odrywanej.
+A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) obiekt pochodzi od odrynia klasy.
 
 ```
 CcomContainedObject <contained> m_contained;
@@ -160,14 +160,14 @@ CcomContainedObject <contained> m_contained;
 
 ### <a name="parameters"></a>Parametry
 
-*przechowywany*<br/>
-podczas Klasa odrywania, pochodna `CComTearOffObjectBase` i interfejsy, które mają być obsługiwane przez obiekt.
+*Zawarte*<br/>
+[w] Twoja klasa tear-off, `CComTearOffObjectBase` pochodzące z i interfejsów, które mają twój obiekt odrywane do obsługi.
 
 ### <a name="remarks"></a>Uwagi
 
-Metody `m_contained` Inherits są używane w celu uzyskania dostępu do interfejsu odrywanego w klasie odrywanej przez zbuforowany `QueryInterface`obiekt, `FinalConstruct`i `FinalRelease`.
+Metody `m_contained` dziedziczenia są używane do uzyskiwania dostępu do interfejsu odrywania w klasie `QueryInterface`odrywania za pośrednictwem buforowanego obiektu odrywania i `FinalConstruct`. `FinalRelease`
 
-##  <a name="queryinterface"></a>CComCachedTearOffObject:: QueryInterface
+## <a name="ccomcachedtearoffobjectqueryinterface"></a><a name="queryinterface"></a>CComCachedTearOffObject::QueryInterface
 
 Pobiera wskaźnik do żądanego interfejsu.
 
@@ -177,11 +177,11 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametry
 
-*IID*<br/>
-podczas Identyfikator GUID żądanego interfejsu.
+*Iid*<br/>
+[w] Identyfikator GUID żądanego interfejsu.
 
-*ppvObject*<br/>
-określoną Wskaźnik do wskaźnika interfejsu identyfikowanego przez *Identyfikator IID*lub wartość null, jeśli nie można odnaleźć interfejsu.
+*ppvObiekt*<br/>
+[na zewnątrz] Wskaźnik do wskaźnika interfejsu identyfikowanego przez *iid*lub NULL, jeśli interfejs nie zostanie znaleziony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -189,11 +189,11 @@ Standardowa wartość HRESULT.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli żądany interfejs to `IUnknown`, zwraca wskaźnik `CComCachedTearOffObject`do siebie `IUnknown` i zwiększa liczbę odwołań. W przeciwnym razie zapytania dotyczące interfejsu w klasie odrywania, przy użyciu metody [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) odziedziczone od `CComObjectRootEx`.
+Jeśli żądany interfejs `IUnknown`jest , zwraca `CComCachedTearOffObject`wskaźnik `IUnknown` do 's własnych i zwiększa liczbę odwołań. W przeciwnym razie kwerendy dla interfejsu w klasie odrywa przy użyciu `CComObjectRootEx` [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) metoda dziedziczona z .
 
-##  <a name="release"></a>CComCachedTearOffObject:: Release
+## <a name="ccomcachedtearoffobjectrelease"></a><a name="release"></a>CComCachedTearOffObject::Release CComCachedTearOffObject::Release CComCachedTearOffObject::Release CCom
 
-Zmniejsza liczbę odwołań o 1 i, jeśli liczba odwołań wynosi 0, usuwa `CComCachedTearOffObject` obiekt.
+Zmniejsza liczbę odwołań o 1, a jeśli liczba odwołań `CComCachedTearOffObject` wynosi 0, usuwa obiekt.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -201,9 +201,9 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-W kompilacjach niedebugowanych zawsze zwraca wartość 0. W kompilacjach debugowania zwraca wartość, która może być przydatna w przypadku diagnostyki lub testowania.
+W kompilacjach innych niż debugowanie zawsze zwraca wartość 0. W kompilacjach debugowania zwraca wartość, która może być przydatna do diagnostyki lub testowania.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CComTearOffObject](../../atl/reference/ccomtearoffobject-class.md)<br/>
 [Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>

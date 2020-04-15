@@ -4,90 +4,90 @@ ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: eaecd0d4e6e2b024ce3312719e7104298d3f9a66
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d5c0c0c8edb6b698d3d8f50736121d987af98492
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075283"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321690"
 ---
 # <a name="atl-com-10-component-wizard"></a>Kreator składników ATL COM+ 1.0
 
 ::: moniker range="vs-2019"
 
-Ten Kreator nie jest dostępny w programie Visual Studio 2019 i nowszych.
+Ten kreator nie jest dostępny w programie Visual Studio 2019 i nowszych.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Użyj tego kreatora, aby dodać obiekt do projektu, który obsługuje usługi modelu COM+ 1,0, w tym transakcje.
+Ten kreator służy do dodawania obiektu do projektu, który obsługuje usługi COM+ 1.0, w tym transakcje.
 
-Można określić, czy obiekt obsługuje podwójne interfejsy i automatyzację. Możesz również wskazać obsługę interfejsu informacji o błędach, ulepszonej kontrolce obiektu, transakcji i asynchronicznej usługi kolejkowania komunikatów.
+Można określić, czy obiekt obsługuje dwa interfejsy i automatyzacji. Można również wskazać obsługę interfejsu informacji o błędzie, ulepszonej kontroli obiektu, transakcji i kolejkowania komunikatów asynchronicznych.
 
 ## <a name="remarks"></a>Uwagi
 
-Począwszy od programu Visual Studio 2008 skrypt rejestracji utworzony przez tego kreatora spowoduje zarejestrowanie jego składników modelu COM w **HKEY_CURRENT_USER** , a nie **HKEY_LOCAL_MACHINE**. Aby zmienić to zachowanie, ustaw opcję **Zarejestruj składnik dla wszystkich użytkowników** w Kreatorze ATL.
+Począwszy od programu Visual Studio 2008, skrypt rejestracji wyprodukowany przez tego kreatora zarejestruje swoje składniki COM w obszarze **HKEY_CURRENT_USER** zamiast **HKEY_LOCAL_MACHINE**. Aby zmodyfikować to zachowanie, należy ustawić **opcję Zarejestruj składnik dla wszystkich użytkowników** Kreatora ATL.
 
 ## <a name="names"></a>Nazwy
 
-Określ nazwy obiektu, interfejsu i klas, które mają zostać dodane do projektu. Z wyjątkiem **krótkiej nazwy**wszystkie inne pola można edytować niezależnie od innych. Jeśli zmienisz tekst **skróconej nazwy**, zmiana zostanie odzwierciedlona w nazwach wszystkich innych pól na tej stronie. Jeśli zmienisz nazwę **klasy coclass** w sekcji com, zmiana zostanie odzwierciedlona w polach **Typ** i **ProgID** , ale nazwa **interfejsu** nie zostanie zmieniona. Takie zachowanie nazewnictwa zostało zaprojektowane, aby wszystkie nazwy były łatwo rozpoznawalne podczas tworzenia kontrolki.
+Określ nazwy obiektu, interfejsu i klas, które mają zostać dodane do projektu. Z wyjątkiem **krótkiej nazwy,** wszystkie inne pola mogą być edytowane niezależnie od innych. Jeśli zmienisz tekst **dla krótkiej nazwy,** zmiana zostanie odzwierciedlona w nazwach wszystkich innych pól na tej stronie. Jeśli zmienisz nazwę **Coclass** w sekcji COM, zmiana zostanie odzwierciedlona w polach **Typ** i **ProgID,** ale nazwa **interfejsu** nie ulegnie zmianie. To zachowanie nazewnictwa jest przeznaczony do wszystkich nazw łatwo rozpoznawalne dla Ciebie podczas rozwijania kontroli.
 
 - **Krótka nazwa**
 
-   Ustawia skróconą nazwę obiektu. Podane przez użytkownika nazwy określają nazwy `Class` i `Coclass`, **plik. cpp** i nazwy plików. **h** , nazwę **interfejsu** , nazwy **typów** i **ProgID**, chyba że te pola są zmieniane pojedynczo.
+   Ustawia skróconą nazwę obiektu. Podana nazwa określa `Class` nazwy `Coclass` i nazwy, **nazwy plików cpp** i **.h,** nazwę **interfejsu,** nazwy **typów** i **identyfikator progid**, chyba że pola te zostaną zmienić indywidualnie.
 
-- **plik h**
+- **.h plik**
 
-   Ustawia nazwę pliku nagłówka dla klasy nowego obiektu. Domyślnie ta nazwa jest oparta na nazwie podanym w polu **krótka nazwa**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji, lub dołączyć deklarację klasy do istniejącego pliku. Jeśli wybierzesz istniejący plik, Kreator nie zapisze go w wybranej lokalizacji, dopóki nie klikniesz przycisku **Zakończ** w kreatorze.
+   Ustawia nazwę pliku nagłówka dla klasy nowego obiektu. Domyślnie ta nazwa jest oparta na nazwie podajona w **skróconej nazwie**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji lub dołączyć deklarację klasy do istniejącego pliku. Jeśli wybierzesz istniejący plik, kreator nie zapisze go w wybranej lokalizacji, dopóki nie klikniesz **przycisku Zakończ** w kreatorze.
 
-   Kreator nie zastępuje pliku. Jeśli wybierzesz nazwę istniejącego pliku, po kliknięciu przycisku **Zakończ**Kreator monituje o wskazanie, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** , aby dołączyć plik; Kliknij przycisk **nie** , aby powrócić do kreatora i określić inną nazwę pliku.
+   Kreator nie zastępuje pliku. Jeśli wybierzesz nazwę istniejącego pliku, po kliknięciu **przycisku Zakończ**kreator wyświetli monit o wskazanie, czy deklaracja klasy powinna być dołączona do zawartości pliku. Kliknij **przycisk Tak,** aby dołączyć plik; Kliknij przycisk **Nie,** aby powrócić do kreatora i określić inną nazwę pliku.
 
-- **Określonej**
+- **Klasa**
 
-   Ustawia nazwę klasy, która ma zostać utworzona. Ta nazwa jest oparta na nazwie podanym w **skrócie nazwa**, poprzedzona znakiem "C", typowym prefiksem dla nazwy klasy.
+   Ustawia nazwę klasy, która ma zostać utworzona. Ta nazwa jest oparta na nazwie podającej w **skróconej nazwie,** poprzedzonej "C", typowym prefiksem nazwy klasy.
 
-- **plik. cpp**
+- **.cpp**
 
-   Ustawia nazwę pliku implementacji dla klasy nowego obiektu. Domyślnie ta nazwa jest oparta na nazwie podanym w polu **krótka nazwa**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji. Plik nie jest zapisywany w wybranej lokalizacji, dopóki nie zostanie kliknięty przycisk **Zakończ** w kreatorze.
+   Ustawia nazwę pliku implementacji dla klasy nowego obiektu. Domyślnie ta nazwa jest oparta na nazwie podajona w **skróconej nazwie**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji. Plik nie zostanie zapisany w wybranej lokalizacji, dopóki nie klikniesz **przycisku Zakończ** w kreatorze.
 
-   Kreator nie zastępuje pliku. W przypadku wybrania nazwy istniejącego pliku po kliknięciu przycisku **Zakończ**Kreator monituje o wskazanie, czy implementacja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** , aby dołączyć plik; Kliknij przycisk **nie** , aby powrócić do kreatora i określić inną nazwę pliku.
+   Kreator nie zastępuje pliku. Jeśli wybierzesz nazwę istniejącego pliku, po kliknięciu **przycisku Zakończ,** kreator wyświetli monit o wskazanie, czy implementacja klasy powinna być dołączona do zawartości pliku. Kliknij **przycisk Tak,** aby dołączyć plik; Kliknij przycisk **Nie,** aby powrócić do kreatora i określić inną nazwę pliku.
 
-- **Przypisanych**
+- **Przypisane**
 
-   Wskazuje, czy obiekt używa atrybutów. Jeśli dodajesz obiekt do projektu ATL z atrybutami, ta opcja jest zaznaczona i nie można jej zmienić. Oznacza to, że można dodawać tylko obiekty z atrybutami do projektu utworzonego za pomocą obsługi atrybutu.
+   Wskazuje, czy obiekt używa atrybutów. Jeśli dodajesz obiekt do przypisanego projektu ATL, ta opcja jest zaznaczona i nie jest dostępna do zmiany. Oznacza to, że można dodać tylko przypisane obiekty do projektu utworzonego za pomocą obsługi atrybutów.
 
-   W przypadku wybrania tej opcji dla projektu ATL, który nie obsługuje atrybutu, Kreator poprosi o określenie, czy chcesz dodać obsługę atrybutu do projektu.
+   Jeśli wybierzesz tę opcję dla projektu ATL, który nie obsługuje atrybutów, kreator monituje o określenie, czy chcesz dodać obsługę atrybutów do projektu.
 
-   Wszystkie obiekty dodane po ustawieniu tej opcji są oznaczone domyślnie jako przypisane do atrybutu (pole wyboru jest zaznaczone). Możesz wyczyścić to pole, aby dodać obiekt, który nie używa atrybutów.
+   Wszystkie obiekty dodane po tym ustawieniu ta opcja są domyślnie oznaczone jako przypisane (pole wyboru jest zaznaczone). To pole można wyczyścić, aby dodać obiekt, który nie używa atrybutów.
 
-   Aby uzyskać więcej informacji [, zobacz Ustawienia aplikacji, Kreator projektu ATL](../../atl/reference/application-settings-atl-project-wizard.md) i [podstawowe Mechanics atrybutów](../../windows/basic-mechanics-of-attributes.md) .
+   Aby uzyskać więcej informacji, zobacz [Ustawienia aplikacji, Kreator projektu ATL](../../atl/reference/application-settings-atl-project-wizard.md) i [podstawowa mechanika atrybutów.](../../windows/basic-mechanics-of-attributes.md)
 
 ### <a name="com"></a>Model COM
 
-Zawiera informacje o funkcji COM dla obiektu.
+Zawiera informacje o funkcjach COM dla obiektu.
 
-- **Klasa coclass**
+- **Coclass**
 
-   Ustawia nazwę klasy składnika, która zawiera listę interfejsów obsługiwanych przez obiekt.
+   Ustawia nazwę klasy składnika zawierającej listę interfejsów obsługiwanych przez obiekt.
 
 > [!NOTE]
->  Jeśli tworzysz projekt przy użyciu atrybutów lub w przypadku wybrania na tej stronie kreatora, że składnik COM+ 1,0 używa atrybutów, nie można zmienić tej opcji, ponieważ ATL nie zawiera atrybutu `coclass`.
+> Jeśli projekt zostanie utworzony przy użyciu atrybutów lub na tej stronie kreatora wskażesz, że składnik COM+ 1.0 używa atrybutów, nie można zmienić tej opcji, ponieważ atl nie zawiera atrybutu. `coclass`
 
 - **Typ**
 
-   Ustawia opis obiektu, który będzie wyświetlany w rejestrze
+   Ustawia opis obiektu, który pojawi się w rejestrze
 
-- **Interfejsu**
+- **Interfejs**
 
-   Ustawia interfejs tworzony dla obiektu. Ten interfejs zawiera własne metody.
+   Ustawia interfejs utworzony dla obiektu. Ten interfejs zawiera metody niestandardowe.
 
-- **ProgID**
+- **Progid**
 
-   Ustawia nazwę, która może być używana przez kontenery zamiast identyfikatora CLSID obiektu.
+   Ustawia nazwę, której kontenery mogą używać zamiast identyfikatora CLSID obiektu.
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Zobacz też
 
-[Składnik ATL COM+ 1,0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
+[Komponent ATL COM+ 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)

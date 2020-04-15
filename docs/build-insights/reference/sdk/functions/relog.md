@@ -1,6 +1,6 @@
 ---
-title: Relog
-description: Odwołanie C++ do funkcji relog usługi Build Insights SDK.
+title: Ponownego zarejestrowania
+description: Odwołanie do funkcji ponownegologowania kompilacji języka C++ Build SDK.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1ce09101deebd957de4b9305762dc37f38b53f4e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 28b290d2bf2880ce2f534fa1cd91750890e2fead
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332692"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323779"
 ---
-# <a name="relog"></a>Relog
+# <a name="relog"></a>Ponownego zarejestrowania
 
 ::: moniker range="<=vs-2015"
 
-Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019.
+C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkcja `Relog` służy do odczytywania zdarzeń MSVC z śladu śledzenia zdarzeń systemu Windows (ETW) i zapisywania ich w nowym, zmodyfikowanym śledzeniu ETW.
+Funkcja `Relog` służy do odczytywania zdarzeń MSVC z śledzenia zdarzeń dla systemu Windows (ETW) śledzenia i zapisu ich w nowym, zmodyfikowanym śladu ETW.
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,38 +55,38 @@ RESULT_CODE Relog(
 
 ### <a name="parameters"></a>Parametry
 
-*TAnalyzerGroupMembers*\
-Ten parametr jest zawsze wywnioskowany.
+*Członkowie grupy TAnalyzer*\
+Ten parametr jest zawsze wydedukowany.
 
-*TReloggerGroupMembers*\
-Ten parametr jest zawsze wywnioskowany.
+*Członkowie grupy TRelogger*\
+Ten parametr jest zawsze wydedukowany.
 
 *inputLogFile*\
-Wejściowy ślad ETW, z którego mają być odczytywane zdarzenia.
+Śledzenia etw wejściowych, które mają być odczytywane zdarzenia z.
 
-*outputLogFile*\
-Plik, w którym mają zostać zapisane nowe zdarzenia.
+*plik danych wyjściowych*\
+Plik, w którym można zapisać nowe zdarzenia.
 
-*numberOfAnalysisPasses*\
-Liczba przebiegów analizy do uruchomienia na danych wejściowych śledzenia. Śledzenie jest przekazywane przez podaną grupę analizatora raz na przebieg analizy.
+*numerOfAnalysisPasses*\
+Liczba przechodzi analizy do uruchomienia na śledzenia wejściowego. Śledzenia pobiera przekazywane przez pod warunkiem grupy analizatorraz na przebieg analizy.
 
-*systemEventsRetentionFlags*\
-Maska bitów określająca, które systemowe zdarzenia ETW należy zachować w rejestrowanym śladzie. Aby uzyskać więcej informacji, zobacz [RELOG_RETENTION_SYSTEM_EVENT_FLAGS](../other-types/relog-retention-system-event-flags-constants.md).
+*systemEventsReentionSlags*\
+Maska bitowa określająca, które zdarzenia ETW systemu należy przechowywać w ponownie zarejestrowanym śladu. Aby uzyskać więcej informacji, zobacz [RELOG_RETENTION_SYSTEM_EVENT_FLAGS](../other-types/relog-retention-system-event-flags-constants.md).
 
-\ka *analizatora*
-Grupa analizatorów używana dla fazy analizy sesji rejestrowania. Wywołaj [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) , aby utworzyć grupę analizatorów. Aby użyć dynamicznej grupy analizatora uzyskanej z [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), należy najpierw hermetyzować ją wewnątrz statycznej grupy analizatorów, przekazując jej adres do `MakeStaticAnalyzerGroup`.
+*grupa analizatorów*\
+Grupa analizatorów używana do fazy analizy sesji ponownego rejestrowania. Wywołanie [MakeStaticAnalyzerGroup,](make-static-analyzer-group.md) aby utworzyć grupę analizatora. Aby użyć grupy analizatorów dynamicznych uzyskanej z [MakeDynamicAnalyzerGroup,](make-dynamic-analyzer-group.md)najpierw hermetyzuj `MakeStaticAnalyzerGroup`ją wewnątrz statycznej grupy analizatorów, przekazując jej adres do .
 
-\ ponownego *rejestrowania*
-Grupa ponownego rejestrowania, która rejestruje zdarzenia do pliku śledzenia określonego w *outputLogFile*. Wywołaj [MakeStaticReloggerGroup](make-static-relogger-group.md) , aby utworzyć grupę modułu rejestrującego. Aby użyć dynamicznej grupy ponownego rejestrowania uzyskanej z [MakeDynamicReloggerGroup](make-dynamic-relogger-group.md), należy najpierw ją hermetyzować wewnątrz statycznej grupy rejestrowania, przekazując jej adres do `MakeStaticReloggerGroup`.
+*grupa relogger*\
+Grupa reloggera, która ponownie zasłania zdarzenia do pliku śledzenia określonego w *pliku outputLogFile*. Wywołanie [MakeStaticReloggerGroup,](make-static-relogger-group.md) aby utworzyć grupę relogger. Aby użyć dynamicznej grupy reloggera uzyskanej z [MakeDynamicReloggerGroup,](make-dynamic-relogger-group.md)najpierw hermetyzuj ją `MakeStaticReloggerGroup`wewnątrz statycznej grupy reloggerów, przekazując jej adres do .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Kod wyniku z wyliczenia [RESULT_CODE](../other-types/result-code-enum.md) .
+Kod wyniku z [RESULT_CODE](../other-types/result-code-enum.md) wyliczenia.
 
-### <a name="remark"></a>Dyskusji
+### <a name="remark"></a>Uwaga
 
-Śledzenie danych wejściowych jest przesyłane przez grupę analizatora *numberOfAnalysisPasses* razy. Nie ma podobnej opcji do rejestrowania przebiegów. Śledzenie jest przekazywane trough grupę rejestratorów tylko raz, po ukończeniu wszystkich przebiegów analizy.
+Śledzenia danych wejściowych jest przekazywana przez numer grupy *analizatoraOfAnalysisPasses* razy. Nie ma podobnej opcji ponownego rejestrowania przebiegów. Śledzenie jest przekazywane koryta grupy relogger tylko raz, po zakończeniu wszystkich przebiegów analizy.
 
-Rejestrowanie zdarzeń systemowych, takich jak przykłady procesora CPU z klasy rerejestratora, nie jest obsługiwane. Użyj parametru *systemEventsRetentionFlags* , aby określić, które zdarzenia systemowe mają być przechowywane w wyniku śledzenia danych wyjściowych.
+Ponowne rejestrowanie zdarzeń systemowych, takich jak próbki procesora CPU z klasy reloggera nie jest obsługiwane. Użyj *parametru systemEventsRetentionFlags,* aby zdecydować, które zdarzenia systemowe mają być utrzymywane w śledzenia danych wyjściowych.
 
 ::: moniker-end

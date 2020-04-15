@@ -1,5 +1,5 @@
 ---
-title: Makra punktów połączenia
+title: Makra punktu połączenia
 ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::BEGIN_CONNECTION_POINT_MAP
@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - connection points [C++], macros
 ms.assetid: cc3a6dd3-5538-45df-b027-1f34963c31e5
-ms.openlocfilehash: cb8d6f696980ef91d7b43c960dc50289ea8500a6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 361cf6ab2c7af142c1d57c002681ccf6e4a87bda
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417734"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331494"
 ---
-# <a name="connection-point-macros"></a>Makra punktów połączenia
+# <a name="connection-point-macros"></a>Makra punktu połączenia
 
-Te makra definiują mapy punktów połączenia i wpisy.
+Te makra definiują mapy i wpisy punktów połączenia.
 
 |||
 |-|-|
 |[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|Oznacza początek wpisów mapy punktu połączenia.|
 |[CONNECTION_POINT_ENTRY](#connection_point_entry)|Wprowadza punkty połączenia do mapy.|
-|[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017) Podobnie jak CONNECTION_POINT_ENTRY, ale Pobiera wskaźnik do IID.|
+|[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017) Podobne do CONNECTION_POINT_ENTRY ale ma wskaźnik do iid.|
 |[END_CONNECTION_POINT_MAP](#end_connection_point_map)|Oznacza koniec wpisów mapy punktu połączenia.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom. h
+**Nagłówek:** atlcom.h
 
-##  <a name="begin_connection_point_map"></a>BEGIN_CONNECTION_POINT_MAP
+## <a name="begin_connection_point_map"></a><a name="begin_connection_point_map"></a>BEGIN_CONNECTION_POINT_MAP
 
 Oznacza początek wpisów mapy punktu połączenia.
 
@@ -39,22 +39,22 @@ BEGIN_CONNECTION_POINT_MAP(x)
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
-podczas Nazwa klasy zawierającej punkty połączenia.
+*X*<br/>
+[w] Nazwa klasy zawierającej punkty połączenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Uruchom mapę punktu połączenia za pomocą makra BEGIN_CONNECTION_POINT_MAP, Dodaj wpisy dla każdego z punktów połączenia z makrem [CONNECTION_POINT_ENTRY](#connection_point_entry) i wypełnij mapę za pomocą makra [END_CONNECTION_POINT_MAP](#end_connection_point_map) .
+Rozpocznij mapę punktu połączenia od makra BEGIN_CONNECTION_POINT_MAP, dodaj wpisy dla każdego punktu połączenia do [makra CONNECTION_POINT_ENTRY](#connection_point_entry) i uzupełnij mapę [END_CONNECTION_POINT_MAP](#end_connection_point_map) makra.
 
-Aby uzyskać więcej informacji na temat punktów połączenia w ATL, zobacz artykuł [punkty połączenia](../../atl/atl-connection-points.md).
+Aby uzyskać więcej informacji o punktach połączenia w atl, zobacz artykuł [Punkty połączenia](../../atl/atl-connection-points.md).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Windowing#101](../../atl/codesnippet/cpp/connection-point-macros_1.h)]
 
-##  <a name="connection_point_entry"></a>CONNECTION_POINT_ENTRY i CONNECTION_POINT_ENTRY_P
+## <a name="connection_point_entry-and-connection_point_entry_p"></a><a name="connection_point_entry"></a>CONNECTION_POINT_ENTRY i CONNECTION_POINT_ENTRY_P
 
-Wprowadza punkt połączenia dla określonego interfejsu do mapy punktów połączenia, aby można było uzyskać do niego dostęp.
+Wprowadza punkt połączenia dla określonego interfejsu do mapy punktu połączenia, dzięki czemu można uzyskać do niego dostęp.
 
 ```
 CONNECTION_POINT_ENTRY(iid)
@@ -63,25 +63,25 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parametry
 
-*IID*<br/>
-podczas Identyfikator GUID interfejsu dodawanego do mapy punktu połączenia.
+*Iid*<br/>
+[w] Identyfikator GUID interfejsu dodawany do mapy punktu połączenia.
 
 *piid*<br/>
-podczas Wskaźnik na identyfikator GUID interfejsu, który jest ADDE.
+[w] Wskaźnik do identyfikatora GUID interfejsu jest adde.
 
 ### <a name="remarks"></a>Uwagi
 
-Wpisy punktu połączenia w mapie są używane przez [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md). Klasa zawierająca mapę punktu połączenia musi dziedziczyć po `IConnectionPointContainerImpl`.
+Wpisy punktu połączenia na mapie są używane przez [iConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md). Klasa zawierająca mapę punktu połączenia `IConnectionPointContainerImpl`musi dziedziczyć z .
 
-Uruchom mapę punktu połączenia za pomocą makra [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) , Dodaj wpisy dla każdego z punktów połączenia z makrem CONNECTION_POINT_ENTRY i wypełnij mapę za pomocą makra [END_CONNECTION_POINT_MAP](#end_connection_point_map) .
+Rozpocznij mapę punktu połączenia od [makra BEGIN_CONNECTION_POINT_MAP,](#begin_connection_point_map) dodaj wpisy dla każdego punktu połączenia do makra CONNECTION_POINT_ENTRY i uzupełnij mapę [END_CONNECTION_POINT_MAP](#end_connection_point_map) makra.
 
-Aby uzyskać więcej informacji na temat punktów połączenia w ATL, zobacz artykuł [punkty połączenia](../../atl/atl-connection-points.md).
+Aby uzyskać więcej informacji o punktach połączenia w atl, zobacz artykuł [Punkty połączenia](../../atl/atl-connection-points.md).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Windowing#120](../../atl/codesnippet/cpp/connection-point-macros_2.h)]
 
-##  <a name="end_connection_point_map"></a>END_CONNECTION_POINT_MAP
+## <a name="end_connection_point_map"></a><a name="end_connection_point_map"></a>END_CONNECTION_POINT_MAP
 
 Oznacza koniec wpisów mapy punktu połączenia.
 
@@ -91,9 +91,9 @@ END_CONNECTION_POINT_MAP()
 
 ### <a name="remarks"></a>Uwagi
 
-Uruchom mapę punktu połączenia za pomocą makra [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) , Dodaj wpisy dla każdego z punktów połączenia z makrem [CONNECTION_POINT_ENTRY](#connection_point_entry) i wypełnij mapę za pomocą makra END_CONNECTION_POINT_MAP.
+Rozpocznij mapę punktu połączenia od [makra BEGIN_CONNECTION_POINT_MAP,](#begin_connection_point_map) dodaj wpisy dla każdego punktu połączenia do [makra CONNECTION_POINT_ENTRY](#connection_point_entry) i uzupełnij mapę END_CONNECTION_POINT_MAP makrą.
 
-Aby uzyskać więcej informacji na temat punktów połączenia w ATL, zobacz artykuł [punkty połączenia](../../atl/atl-connection-points.md).
+Aby uzyskać więcej informacji o punktach połączenia w atl, zobacz artykuł [Punkty połączenia](../../atl/atl-connection-points.md).
 
 ### <a name="example"></a>Przykład
 
@@ -101,5 +101,5 @@ Aby uzyskać więcej informacji na temat punktów połączenia w ATL, zobacz art
 
 ## <a name="see-also"></a>Zobacz też
 
-[Utworze](../../atl/reference/atl-macros.md)<br/>
+[Makra](../../atl/reference/atl-macros.md)<br/>
 [Funkcje globalne punktu połączenia](../../atl/reference/connection-point-global-functions.md)

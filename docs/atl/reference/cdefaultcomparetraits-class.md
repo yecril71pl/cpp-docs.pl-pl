@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultCompareTraits class
 ms.assetid: a17e2740-e7b4-48f2-aeb7-c80ce84b63f7
-ms.openlocfilehash: c5f4ab3737838af11501c4a0f2037b57087939c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8262800ef613424c37c53931d97dd4b1b1a71321
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245923"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327073"
 ---
 # <a name="cdefaultcomparetraits-class"></a>Klasa CDefaultCompareTraits
 
-Ta klasa udostępnia domyślny element porównanie funkcji.
+Ta klasa zawiera domyślne funkcje porównywania elementów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,22 +38,22 @@ Typ danych, które mają być przechowywane w kolekcji.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDefaultCompareTraits::CompareElements](#compareelements)|(Statyczny) Wywołaj tę funkcję, aby porównać dwa elementy pod kątem równości.|
-|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|(Statyczny) Wywołaj tę funkcję, aby określić większe i mniejsze element.|
+|[CDefaultCompareTraits::CompareElements](#compareelements)|(Statyczne) Wywołanie tej funkcji, aby porównać dwa elementy równości.|
+|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|(Statyczne) Wywołanie tej funkcji, aby określić większy i mniejszy element.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa zawiera dwie funkcje statyczne do porównywania elementów przechowywanych w obiekcie klasy kolekcji. Ta klasa jest wykorzystywany przez [klasa CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md).
+Ta klasa zawiera dwie funkcje statyczne do porównywania elementów przechowywanych w obiekcie klasy kolekcji. Ta klasa jest wykorzystywana przez [CDefaultElementTraits Klasy](../../atl/reference/cdefaultelementtraits-class.md).
 
-Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
+Aby uzyskać więcej informacji, zobacz [ATL Collection Classes](../../atl/atl-collection-classes.md).
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlcoll.h
 
-##  <a name="compareelements"></a>  CDefaultCompareTraits::CompareElements
+## <a name="cdefaultcomparetraitscompareelements"></a><a name="compareelements"></a>CDefaultCompareTraits::CompareElements
 
-Wywołaj tę funkcję, aby porównać dwa elementy pod kątem równości.
+Wywołanie tej funkcji, aby porównać dwa elementy równości.
 
 ```
 static bool CompareElements(const T& element1, const T& element2);
@@ -69,15 +69,15 @@ Drugi element.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli elementy są równe, wartość false w przeciwnym razie.
+Zwraca wartość true, jeśli elementy są równe, false inaczej.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja tej funkcji jest równości (**==**) — operator. W przypadku obiektów innych niż proste typy danych ta funkcja może być konieczne można zastąpić.
+Domyślną implementacją tej funkcji**==** jest operator równości ( ). W przypadku obiektów innych niż proste typy danych ta funkcja może wymagać zastąpienia.
 
-##  <a name="compareelementsordered"></a>  CDefaultCompareTraits::CompareElementsOrdered
+## <a name="cdefaultcomparetraitscompareelementsordered"></a><a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered
 
-Wywołaj tę funkcję, aby określić większe i mniejsze element.
+Wywołanie tej funkcji, aby określić większy i mniejszy element.
 
 ```
 static int CompareElementsOrdered(const T& element1, const T& element2);
@@ -103,8 +103,8 @@ Zwraca liczbę całkowitą na podstawie poniższej tabeli:
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja tej funkcji używa **==**, **\<**, i **>** operatorów. W przypadku obiektów innych niż proste typy danych ta funkcja może być konieczne można zastąpić.
+Domyślna implementacja tej funkcji **==** **\<** używa **>** funkcji , i operatorów. W przypadku obiektów innych niż proste typy danych ta funkcja może wymagać zastąpienia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

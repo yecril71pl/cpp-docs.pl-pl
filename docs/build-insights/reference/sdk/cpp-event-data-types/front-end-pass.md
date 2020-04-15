@@ -1,6 +1,6 @@
 ---
 title: Klasa FrontEndPass
-description: Odwołanie C++ do klasy FrontEndPass zestawu SDK usługi Build Insights.
+description: Odwołanie do klasy SDK SDK FrontEndPass w języku C++ Build.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: cc0bf38c46b51d4a49da46be88e23afa64c12cc8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 137f553f1e495b7658ae89e69a48cec6b1988a81
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333273"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324724"
 ---
 # <a name="frontendpass-class"></a>Klasa FrontEndPass
 
 ::: moniker range="<=vs-2015"
 
-Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019.
+C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Klasa `FrontEndPass` jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Użyj go, aby dopasować zdarzenie [FRONT_END_PASS](../event-table.md#front-end-pass) .
+Klasa `FrontEndPass` jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Użyj go, aby dopasować [zdarzenie FRONT_END_PASS.](../event-table.md#front-end-pass)
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Elementy członkowskie
 
-Wraz z dziedziczonymi elementami członkowskimi z klasy bazowej [CompilerPass](compiler-pass.md) , Klasa `FrontEndPass` zawiera następujących członków:
+Wraz z odziedziczonych elementów członkowskich z jego `FrontEndPass` [CompilerPass](compiler-pass.md) klasy podstawowej, klasa zawiera następujące elementy członkowskie:
 
 ### <a name="constructors"></a>Konstruktorów
 
-[FrontEndPass](#front-end-pass)
+[FrontEndPass (Karnet frontu)](#front-end-pass)
 
-## <a name="front-end-pass"></a>FrontEndPass
+## <a name="frontendpass"></a><a name="front-end-pass"></a>FrontEndPass (Karnet frontu)
 
 ```cpp
 FrontEndPass(const RawEvent& event);
@@ -53,7 +53,7 @@ FrontEndPass(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *zdarzeń*
-Zdarzenie [FRONT_END_PASS](../event-table.md#front-end-pass) .
+*Zdarzenie*\
+Wydarzenie [FRONT_END_PASS.](../event-table.md#front-end-pass)
 
 ::: moniker-end

@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: f0b732efdce5cf04349f468363b8d86621d90204
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0b970915aa07fe2d1af2b3a07345d5b19826be69
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496305"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330565"
 ---
 # <a name="cthreadpool-class"></a>Klasa CThreadPool
 
@@ -40,11 +40,11 @@ class CThreadPool : public IThreadPoolConfig
 
 #### <a name="parameters"></a>Parametry
 
-*Odpowiedzialn*<br/>
-Klasa zgodna z [archetypeem procesu roboczego](../../atl/reference/worker-archetype.md) dostarczająca kod używany do przetwarzania elementów roboczych w kolejce w puli wątków.
+*Pracownik*<br/>
+Klasa zgodna z [archetypem procesu roboczego](../../atl/reference/worker-archetype.md) dostarczającym kod używany do przetwarzania elementów roboczych w kolejce w puli wątków.
 
-*ThreadTraits*<br/>
-Klasa dostarczająca funkcję służącą do tworzenia wątków w puli.
+*ThreadTraits (ThreadTraits)*<br/>
+Klasa zapewniająca funkcję używaną do tworzenia wątków w puli.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -52,37 +52,37 @@ Klasa dostarczająca funkcję służącą do tworzenia wątków w puli.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CThreadPool::CThreadPool](#cthreadpool)|Konstruktor dla puli wątków.|
-|[CThreadPool::~CThreadPool](#dtor)|Destruktor dla puli wątków.|
+|[CThreadPool::CThreadPool](#cthreadpool)|Konstruktor puli wątków.|
+|[CThreadPool::~CThreadPool](#dtor)|Destruktor puli wątków.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CThreadPool:: AddRef](#addref)|Implementacja programu `IUnknown::AddRef`.|
-|[CThreadPool::GetNumThreads](#getnumthreads)|Wywołaj tę metodę, aby uzyskać liczbę wątków w puli.|
-|[CThreadPool::GetQueueHandle](#getqueuehandle)|Wywołaj tę metodę, aby uzyskać uchwyt portu ukończenia we/wy używanego do kolejkowania elementów roboczych.|
-|[CThreadPool::GetSize](#getsize)|Wywołaj tę metodę, aby uzyskać liczbę wątków w puli.|
-|[CThreadPool::GetTimeout](#gettimeout)|Wywołaj tę metodę, aby uzyskać maksymalny czas w milisekundach, przez który Pula wątków będzie czekać na zamknięcie wątku.|
-|[CThreadPool:: Initialize](#initialize)|Wywołaj tę metodę, aby zainicjować pulę wątków.|
-|[CThreadPool:: QueryInterface](#queryinterface)|Implementacja programu `IUnknown::QueryInterface`.|
-|[CThreadPool::QueueRequest](#queuerequest)|Wywołaj tę metodę, aby kolejkować element roboczy, który ma być obsługiwany przez wątek w puli.|
-|[CThreadPool:: Release](#release)|Implementacja programu `IUnknown::Release`.|
-|[CThreadPool::SetSize](#setsize)|Wywołaj tę metodę, aby ustawić liczbę wątków w puli.|
-|[CThreadPool::SetTimeout](#settimeout)|Wywołaj tę metodę, aby ustawić maksymalny czas (w milisekundach) oczekiwania puli wątków na zamknięcie wątku.|
-|[CThreadPool::Shutdown](#shutdown)|Wywołaj tę metodę, aby zamknąć pulę wątków.|
+|[CThreadPool::AddRef](#addref)|Wdrożenie `IUnknown::AddRef`programu .|
+|[CThreadPool::GetNumThreads](#getnumthreads)|Wywołanie tej metody, aby uzyskać liczbę wątków w puli.|
+|[CThreadPool::GetQueueHandle](#getqueuehandle)|Wywołanie tej metody, aby uzyskać dojście portu zakończenia we/wy używane do kolejkowania elementów roboczych.|
+|[CThreadPool::GetSize](#getsize)|Wywołanie tej metody, aby uzyskać liczbę wątków w puli.|
+|[CThreadPool::GetTimeout](#gettimeout)|Wywołanie tej metody, aby uzyskać maksymalny czas w milisekundach, że pula wątku będzie czekać na wątek do zamknięcia.|
+|[CThreadPool::Inicjalizuj](#initialize)|Wywołanie tej metody, aby zainicjować puli wątków.|
+|[CThreadPool::QueryInterface](#queryinterface)|Wdrożenie `IUnknown::QueryInterface`programu .|
+|[CThreadPool::QueueRequest](#queuerequest)|Wywołanie tej metody do kolejki elementu pracy, które mają być obsługiwane przez wątek w puli.|
+|[CThreadPool::Zwolnij](#release)|Wdrożenie `IUnknown::Release`programu .|
+|[CThreadPool::SetSize](#setsize)|Wywołanie tej metody, aby ustawić liczbę wątków w puli.|
+|[CThreadPool::SetTimeout](#settimeout)|Wywołanie tej metody, aby ustawić maksymalny czas w milisekundach, że pula wątku będzie czekać na wątek do zamknięcia.|
+|[CThreadPool::Zamknięcie](#shutdown)|Wywołanie tej metody, aby zamknąć pulę wątków.|
 
 ## <a name="remarks"></a>Uwagi
 
-Wątki w puli są tworzone i niszczone po zainicjowaniu puli, zmianie rozmiaru lub zamknięciu. Wystąpienie *procesu roboczego* klasy zostanie utworzone na stosie każdego wątku roboczego w puli. Każde wystąpienie będzie aktywne przez okres istnienia wątku.
+Wątki w puli są tworzone i niszczone, gdy pula jest inicjowana, zmieniana lub zamykana. Wystąpienie klasy *Worker* zostanie utworzony na stosie każdego wątku roboczego w puli. Każde wystąpienie będzie żyć przez cały okres istnienia wątku.
 
-Natychmiast po utworzeniu wątku *proces roboczy*::`Initialize` zostanie wywołany dla obiektu skojarzonego z tym wątkiem. Bezpośrednio przed zniszczeniem wątku *proces roboczy*::`Terminate` zostanie wywołany. Obie metody muszą akceptować argument **void** <strong>\*</strong> . Wartość tego argumentu jest przenoszona do puli wątków za pomocą parametru *PvWorkerParam* [CThreadPool:: Initialize](#initialize).
+Natychmiast po utworzeniu *wątku, Pracownik*::`Initialize` zostanie wywołany na obiekt skojarzony z tym wątku. Bezpośrednio przed zniszczeniem *Worker*wątku,`Terminate` Pracownik :: zostanie wywołany. Obie metody muszą zaakceptować **argument void.** <strong>\*</strong> Wartość tego argumentu jest przekazywana do puli wątków za pośrednictwem parametru *pvWorkerParam* [cThreadPool::Initialize](#initialize).
 
-Gdy istnieją elementy robocze w kolejce i wątki robocze dostępne do pracy, wątek roboczy spowoduje wyciągnięcie elementu z kolejki i wywołanie `Execute` metody obiektu *Worker* dla tego wątku. Trzy elementy są następnie przenoszone do metody: element z kolejki, taki sam `pvWorkerParam` , jak *proces roboczy*:: `Initialize` i *proces roboczy*:: `Terminate`, oraz wskaźnik do [pokrywającej](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) się struktury używanej dla kolejki portu ukończenia we/wy .
+Gdy istnieją elementy robocze w kolejce i wątków roboczych dostępnych do pracy, wątek roboczy będzie pobierać element z kolejki i `Execute` wywołać metodę *Worker* obiektu dla tego wątku. Trzy elementy są następnie przekazywane do metody: element `pvWorkerParam` z kolejki, `Initialize` ten sam przekazany do *pracownika*:: i *Pracownik*:: `Terminate`i wskaźnik do struktury [nakładane nakładane](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) używane dla kolejki portu zakończenia we/wy.
 
-Klasa *Worker* deklaruje typ elementów, które zostaną dodane do kolejki w puli wątków, dostarczając element typedef, *Worker*:: `RequestType`. Ten typ musi być w stanie rzutować do i z ULONG_PTR.
+*Worker* Klasa deklaruje typ elementów, które będą umieszczane w kolejce w puli `RequestType`wątków, zapewniając typedef, *Worker*:: . Ten typ musi być zdolny do rzutu do i z ULONG_PTR.
 
-Przykładem klasy *procesu roboczego* jest [Klasa CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md).
+Przykładem *Worker* klasy jest [CNonStatelessWorker Class](../../atl/reference/cnonstatelessworker-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -94,11 +94,11 @@ Przykładem klasy *procesu roboczego* jest [Klasa CNonStatelessWorker](../../atl
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlutil. h
+**Nagłówek:** atlutil.h
 
-##  <a name="addref"></a>CThreadPool:: AddRef
+## <a name="cthreadpooladdref"></a><a name="addref"></a>CThreadPool::AddRef
 
-Implementacja programu `IUnknown::AddRef`.
+Wdrożenie `IUnknown::AddRef`programu .
 
 ```
 ULONG STDMETHODCALLTYPE AddRef() throw();
@@ -112,9 +112,9 @@ Zawsze zwraca 1.
 
 Ta klasa nie implementuje kontroli okresu istnienia przy użyciu zliczania odwołań.
 
-##  <a name="cthreadpool"></a>CThreadPool::CThreadPool
+## <a name="cthreadpoolcthreadpool"></a><a name="cthreadpool"></a>CThreadPool::CThreadPool
 
-Konstruktor dla puli wątków.
+Konstruktor puli wątków.
 
 ```
 CThreadPool() throw();
@@ -122,11 +122,11 @@ CThreadPool() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Inicjuje wartość limitu czasu ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT. Wartość domyślna to 36 sekund. W razie potrzeby można zdefiniować własną dodatnią wartość całkowitą dla tego symbolu przed uwzględnieniem atlutil. h.
+Inicjuje wartość limitu czasu do ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT. Domyślny czas to 36 sekund. W razie potrzeby można zdefiniować własną dodatnią wartość całkowitą dla tego symbolu przed włączeniem pliku atlutil.h.
 
-##  <a name="dtor"></a>CThreadPool:: ~ CThreadPool
+## <a name="cthreadpoolcthreadpool"></a><a name="dtor"></a>CThreadPool::~CThreadPool
 
-Destruktor dla puli wątków.
+Destruktor puli wątków.
 
 ```
 ~CThreadPool() throw();
@@ -134,11 +134,11 @@ Destruktor dla puli wątków.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania [CThreadPool:: Shutdown](#shutdown).
+Wywołuje [CThreadPool::Shutdown](#shutdown).
 
-##  <a name="getnumthreads"></a>CThreadPool::GetNumThreads
+## <a name="cthreadpoolgetnumthreads"></a><a name="getnumthreads"></a>CThreadPool::GetNumThreads
 
-Wywołaj tę metodę, aby uzyskać liczbę wątków w puli.
+Wywołanie tej metody, aby uzyskać liczbę wątków w puli.
 
 ```
 int GetNumThreads() throw();
@@ -148,9 +148,9 @@ int GetNumThreads() throw();
 
 Zwraca liczbę wątków w puli.
 
-##  <a name="getqueuehandle"></a>CThreadPool::GetQueueHandle
+## <a name="cthreadpoolgetqueuehandle"></a><a name="getqueuehandle"></a>CThreadPool::GetQueueHandle
 
-Wywołaj tę metodę, aby uzyskać uchwyt portu ukończenia we/wy używanego do kolejkowania elementów roboczych.
+Wywołanie tej metody, aby uzyskać dojście portu zakończenia we/wy używane do kolejkowania elementów roboczych.
 
 ```
 HANDLE GetQueueHandle() throw();
@@ -158,11 +158,11 @@ HANDLE GetQueueHandle() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca dojście kolejki lub wartość NULL, jeśli Pula wątków nie została zainicjowana.
+Zwraca dojście kolejki lub wartość NULL, jeśli pula wątków nie została zainicjowana.
 
-##  <a name="getsize"></a>CThreadPool:: GetSize
+## <a name="cthreadpoolgetsize"></a><a name="getsize"></a>CThreadPool::GetSize
 
-Wywołaj tę metodę, aby uzyskać liczbę wątków w puli.
+Wywołanie tej metody, aby uzyskać liczbę wątków w puli.
 
 ```
 HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
@@ -170,16 +170,16 @@ HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pnNumThreads*<br/>
-określoną Adres zmiennej, która po powodzeniu odbiera liczbę wątków w puli.
+*pnNumCięty*<br/>
+[na zewnątrz] Adres zmiennej, która po sukcesie odbiera liczbę wątków w puli.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="gettimeout"></a>  CThreadPool::GetTimeout
+## <a name="cthreadpoolgettimeout"></a><a name="gettimeout"></a>CThreadPool::GetTimeout
 
-Wywołaj tę metodę, aby uzyskać maksymalny czas w milisekundach, przez który Pula wątków będzie czekać na zamknięcie wątku.
+Wywołanie tej metody, aby uzyskać maksymalny czas w milisekundach, że pula wątku będzie czekać na wątek do zamknięcia.
 
 ```
 HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
@@ -188,19 +188,19 @@ HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
 ### <a name="parameters"></a>Parametry
 
 *pdwMaxWait*<br/>
-określoną Adres zmiennej, która po sukcesie odbiera maksymalny czas w milisekundach, przez który Pula wątków czeka na zamknięcie wątku.
+[na zewnątrz] Adres zmiennej, która po powodzenie otrzymuje maksymalny czas w milisekundach, który pula wątków będzie czekać na zamknięcie wątku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta wartość limitu czasu jest używana przez [CThreadPool:: Shutdown](#shutdown) , jeśli żadna inna wartość nie zostanie dostarczona do tej metody.
+Ta wartość limitu czasu jest używana przez [CThreadPool::Shutdown,](#shutdown) jeśli do tej metody nie zostanie dostarczona żadna inna wartość.
 
-##  <a name="initialize"></a>CThreadPool:: Initialize
+## <a name="cthreadpoolinitialize"></a><a name="initialize"></a>CThreadPool::Inicjalizuj
 
-Wywołaj tę metodę, aby zainicjować pulę wątków.
+Wywołanie tej metody, aby zainicjować puli wątków.
 
 ```
 HRESULT Initialize(
@@ -212,29 +212,29 @@ HRESULT Initialize(
 
 ### <a name="parameters"></a>Parametry
 
-*pvWorkerParam*<br/>
-Parametr procesu roboczego `Initialize`, który ma zostać przesłany do metody obiektu wątku `Execute`roboczego, `Terminate` i.
+*pvPracerParam*<br/>
+Parametr roboczy, który ma być przekazywany do obiektu wątku roboczego `Initialize`i `Execute` `Terminate` metod.
 
-*nNumThreads*<br/>
+*nNumThreads (Wyd.*<br/>
 Żądana liczba wątków w puli.
 
-Jeśli *nNumThreads* jest ujemna, jego wartość bezwzględna zostanie pomnożona przez liczbę procesorów w maszynie, aby uzyskać łączną liczbę wątków.
+Jeśli *nNumThreads jest ujemna,* jego wartość bezwzględna zostanie pomnożona przez liczbę procesorów w komputerze, aby uzyskać całkowitą liczbę wątków.
 
-Jeśli *nNumThreads* ma wartość zero, ATLS_DEFAULT_THREADSPERPROC zostanie pomnożona przez liczbę procesorów w maszynie, aby uzyskać łączną liczbę wątków.  Wartość domyślna to 2 wątki na procesor. W razie potrzeby można zdefiniować własną dodatnią wartość całkowitą dla tego symbolu przed uwzględnieniem atlutil. h.
+Jeśli *nNumThreads* wynosi zero, ATLS_DEFAULT_THREADSPERPROC zostanie pomnożona przez liczbę procesorów w komputerze, aby uzyskać całkowitą liczbę wątków.  Wartość domyślna to 2 wątki na procesor. W razie potrzeby można zdefiniować własną dodatnią wartość całkowitą dla tego symbolu przed włączeniem pliku atlutil.h.
 
-*dwStackSize*<br/>
+*rozmiar dwStackSize*<br/>
 Rozmiar stosu dla każdego wątku w puli.
 
-*hCompletion*<br/>
-Dojście obiektu do skojarzenia z portem ukończenia.
+*hUzupełnienie*<br/>
+Dojście obiektu do skojarzenia z portem zakończenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="queryinterface"></a>CThreadPool:: QueryInterface
+## <a name="cthreadpoolqueryinterface"></a><a name="queryinterface"></a>CThreadPool::QueryInterface
 
-Implementacja programu `IUnknown::QueryInterface`.
+Wdrożenie `IUnknown::QueryInterface`programu .
 
 ```
 HRESULT STDMETHODCALLTYPE QueryInterface(REFIID riid, void** ppv) throw();
@@ -242,11 +242,11 @@ HRESULT STDMETHODCALLTYPE QueryInterface(REFIID riid, void** ppv) throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekty tej klasy mogą być pomyślnie zapytania dla `IUnknown` interfejsów i [IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md) .
+Obiekty tej klasy można pomyślnie zbadać `IUnknown` dla interfejsów i [IThreadPoolConfig.](../../atl/reference/ithreadpoolconfig-interface.md)
 
-##  <a name="queuerequest"></a>CThreadPool::QueueRequest
+## <a name="cthreadpoolqueuerequest"></a><a name="queuerequest"></a>CThreadPool::QueueRequest
 
-Wywołaj tę metodę, aby kolejkować element roboczy, który ma być obsługiwany przez wątek w puli.
+Wywołanie tej metody do kolejki elementu pracy, które mają być obsługiwane przez wątek w puli.
 
 ```
 BOOL QueueRequest(Worker::RequestType request) throw();
@@ -254,20 +254,20 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*żądając*<br/>
-Żądanie do umieszczenia w kolejce.
+*Żądanie*<br/>
+Żądanie, które ma zostać umieszczone w kolejce.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
+Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda dodaje element roboczy do kolejki. Wątki w puli wybierają elementy z kolejki w kolejności, w której zostały odebrane.
+Ta metoda dodaje element pracy do kolejki. Wątki w puli odebrać elementy z kolejki w kolejności, w jakiej są odbierane.
 
-##  <a name="release"></a>CThreadPool:: Release
+## <a name="cthreadpoolrelease"></a><a name="release"></a>CThreadPool::Zwolnij
 
-Implementacja programu `IUnknown::Release`.
+Wdrożenie `IUnknown::Release`programu .
 
 ```
 ULONG STDMETHODCALLTYPE Release() throw();
@@ -281,9 +281,9 @@ Zawsze zwraca 1.
 
 Ta klasa nie implementuje kontroli okresu istnienia przy użyciu zliczania odwołań.
 
-##  <a name="setsize"></a>CThreadPool:: setSize
+## <a name="cthreadpoolsetsize"></a><a name="setsize"></a>CThreadPool::SetSize
 
-Wywołaj tę metodę, aby ustawić liczbę wątków w puli.
+Wywołanie tej metody, aby ustawić liczbę wątków w puli.
 
 ```
 HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
@@ -291,24 +291,24 @@ HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nNumThreads*<br/>
+*nNumThreads (Wyd.*<br/>
 Żądana liczba wątków w puli.
 
-Jeśli *nNumThreads* jest ujemna, jego wartość bezwzględna zostanie pomnożona przez liczbę procesorów w maszynie, aby uzyskać łączną liczbę wątków.
+Jeśli *nNumThreads jest ujemna,* jego wartość bezwzględna zostanie pomnożona przez liczbę procesorów w komputerze, aby uzyskać całkowitą liczbę wątków.
 
-Jeśli *nNumThreads* ma wartość zero, ATLS_DEFAULT_THREADSPERPROC zostanie pomnożona przez liczbę procesorów w maszynie, aby uzyskać łączną liczbę wątków. Wartość domyślna to 2 wątki na procesor. W razie potrzeby można zdefiniować własną dodatnią wartość całkowitą dla tego symbolu przed uwzględnieniem atlutil. h.
+Jeśli *nNumThreads* wynosi zero, ATLS_DEFAULT_THREADSPERPROC zostanie pomnożona przez liczbę procesorów w komputerze, aby uzyskać całkowitą liczbę wątków. Wartość domyślna to 2 wątki na procesor. W razie potrzeby można zdefiniować własną dodatnią wartość całkowitą dla tego symbolu przed włączeniem pliku atlutil.h.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli liczba określonych wątków jest mniejsza niż liczba wątków aktualnie w puli, obiekt umieszcza komunikat zamknięcia w kolejce do pobrania przez wątek oczekujący. Gdy oczekujący wątek ściąga komunikat z kolejki, powiadamia pulę wątków i opuszcza procedurę wątku. Ten proces jest powtarzany, dopóki liczba wątków w puli osiągnie określoną liczbę lub do momentu, gdy żaden wątek nie zakończył się w okresie określonym przez GetTimeout [](#gettimeout)/ setTimeout.[](#settimeout) W tej sytuacji metoda zwróci wartość HRESULT odpowiadającą WAIT_TIMEOUT, a oczekujący komunikat zamknięcia zostanie anulowany.
+Jeśli określona liczba wątków jest mniejsza niż liczba wątków aktualnie w puli, obiekt umieszcza komunikat zamknięcia w kolejce do odebrania przez wątek oczekujący. Gdy oczekiwany wątek ściąga wiadomość z kolejki, powiadamia pulę wątków i kończy procedurę wątku. Ten proces jest powtarzany, dopóki liczba wątków w puli nie osiągnie określonej liczby lub dopóki żaden wątek nie zostanie zakończony w okresie określonym przez [GetTimeout](#gettimeout)/ [SetTimeout](#settimeout). W tej sytuacji metoda zwróci HRESULT odpowiadające WAIT_TIMEOUT i oczekujący komunikat zamknięcia zostanie anulowany.
 
-##  <a name="settimeout"></a>CThreadPool:: setTimeout
+## <a name="cthreadpoolsettimeout"></a><a name="settimeout"></a>CThreadPool::SetTimeout
 
-Wywołaj tę metodę, aby ustawić maksymalny czas (w milisekundach) oczekiwania puli wątków na zamknięcie wątku.
+Wywołanie tej metody, aby ustawić maksymalny czas w milisekundach, że pula wątku będzie czekać na wątek do zamknięcia.
 
 ```
 HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
@@ -316,22 +316,22 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwMaxWait*<br/>
-Żądany maksymalny czas (w milisekundach) oczekiwania puli wątków na zamknięcie wątku.
+*dwMaxWait (Polski)*<br/>
+Żądana maksymalna ilość czasu w milisekundach, że pula wątków będzie czekać na zamknięcie wątku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Limit czasu jest zainicjowany do ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT. Wartość domyślna to 36 sekund. W razie potrzeby można zdefiniować własną dodatnią wartość całkowitą dla tego symbolu przed uwzględnieniem atlutil. h.
+Limit czasu jest inicjowany, aby ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT. Domyślny czas to 36 sekund. W razie potrzeby można zdefiniować własną dodatnią wartość całkowitą dla tego symbolu przed włączeniem pliku atlutil.h.
 
-Należy pamiętać, że *dwMaxWait* to czas oczekiwania puli na zamknięcie jednego wątku. Maksymalny czas, jaki można podjąć w celu usunięcia wielu wątków z puli, może być nieco mniejszy niż *dwMaxWait* pomnożony przez liczbę wątków.
+Należy zauważyć, że *dwMaxWait* jest czas, że pula będzie czekać na jeden wątek, aby zamknąć. Maksymalny czas, który można podjąć, aby usunąć wiele wątków z puli może być nieco mniejsza niż *dwMaxWait* pomnożone przez liczbę wątków.
 
-##  <a name="shutdown"></a>CThreadPool:: Shutdown
+## <a name="cthreadpoolshutdown"></a><a name="shutdown"></a>CThreadPool::Zamknięcie
 
-Wywołaj tę metodę, aby zamknąć pulę wątków.
+Wywołanie tej metody, aby zamknąć pulę wątków.
 
 ```
 void Shutdown(DWORD dwMaxWait = 0) throw();
@@ -339,15 +339,15 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*dwMaxWait*<br/>
-Żądany maksymalny czas (w milisekundach) oczekiwania puli wątków na zamknięcie wątku. Jeśli wartość jest równa 0 lub nie podano wartości, ta metoda będzie używać limitu czasu ustawionego przez [CThreadPool:: setTimeout](#settimeout).
+*dwMaxWait (Polski)*<br/>
+Żądana maksymalna ilość czasu w milisekundach, że pula wątków będzie czekać na zamknięcie wątku. Jeśli podano wartość 0 lub nie podano żadnej wartości, ta metoda użyje limitu czasu ustawionego przez [CThreadPool::SetTimeout](#settimeout).
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wysyła żądanie zamknięcia do wszystkich wątków w puli. Jeśli limit czasu wygaśnie, ta metoda wywoła [TerminateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread) na dowolnym wątku, który nie został zakończony. Ta metoda jest wywoływana automatycznie z destruktora klasy.
+Ta metoda księguje żądanie zamknięcia do wszystkich wątków w puli. Jeśli limit czasu wygaśnie, ta metoda wywoła [TerminateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread) w dowolnym wątku, który nie został zakończony. Ta metoda jest wywoływana automatycznie z destruktora klasy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Interfejs IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)<br/>
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
+[DefaultThreadTraits (DefaultThreadTraits)](atl-typedefs.md#defaultthreadtraits)<br/>
 [Klasy](../../atl/reference/atl-classes.md)

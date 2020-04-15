@@ -1,6 +1,6 @@
 ---
-title: Klasa ObjOutput
-description: Odwołanie C++ do klasy ObjOutput zestawu SDK usługi Build Insights.
+title: ObjOutput, klasa
+description: Odwołanie do klasy SDK ObjOutput aplikacji C++ Build SDK ObjOutput.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 26cf110bcd086ab051174ebf0017a73370c0aa5e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 194253e8995401114e2529b868b36c9823510a4f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333133"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324493"
 ---
-# <a name="objoutput-class"></a>Klasa ObjOutput
+# <a name="objoutput-class"></a>ObjOutput, klasa
 
 ::: moniker range="<=vs-2015"
 
-Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019.
+C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Klasa `ObjOutput` jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Użyj go, aby dopasować zdarzenie [OBJ_OUTPUT](../event-table.md#obj-output) .
+Klasa `ObjOutput` jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Użyj go, aby dopasować [zdarzenie OBJ_OUTPUT.](../event-table.md#obj-output)
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Elementy członkowskie
 
-Wraz z dziedziczonymi elementami członkowskimi z klasy bazowej [FileOutput](file-output.md) , Klasa `ObjOutput` zawiera następujących członków:
+Wraz z odziedziczonych elementów członkowskich z jego `ObjOutput` [FileOutput](file-output.md) klasy podstawowej, klasa zawiera następujące elementy członkowskie:
 
 ### <a name="constructors"></a>Konstruktorów
 
-[ObjOutput](#obj-output)
+[ObjOutput (ObjOutput)](#obj-output)
 
-## <a name="obj-output"></a>ObjOutput
+## <a name="objoutput"></a><a name="obj-output"></a>ObjOutput (ObjOutput)
 
 ```cpp
 ObjOutput(const RawEvent& event);
@@ -53,7 +53,7 @@ ObjOutput(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *zdarzeń*
-Zdarzenie [OBJ_OUTPUT](../event-table.md#obj-output) .
+*Zdarzenie*\
+Wydarzenie [OBJ_OUTPUT.](../event-table.md#obj-output)
 
 ::: moniker-end

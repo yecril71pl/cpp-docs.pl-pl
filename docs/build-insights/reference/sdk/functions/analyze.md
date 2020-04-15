@@ -1,6 +1,6 @@
 ---
 title: Analiza
-description: Zestaw C++ SDK usługi Build Insights — informacje o funkcji.
+description: Odwołanie do funkcji analizy sdk analizy kompilacji języka C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 49161641d1cff1c64261d95bb2caace2f802543a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 08b3643270cc785b3fbea36720d192b4a1473104
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332867"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324107"
 ---
 # <a name="analyze"></a>Analiza
 
 ::: moniker range="<=vs-2015"
 
-Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019.
+C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkcja `Analyze` służy do analizowania wyników śledzenia zdarzeń systemu Windows (ETW) uzyskanych z MSVC podczas śledzenia C++ kompilacji. Zdarzenia w śledzeniu ETW są przekazywane sekwencyjnie do grupy analizatorów dostarczonej przez wywołującego. Ta funkcja obsługuje analizy wieloetapowe umożliwiające przekazywanie strumienia zdarzeń do grupy analizatorów wiele razy w wierszu.
+Funkcja `Analyze` jest używana do analizowania śledzenia zdarzeń dla systemu Windows (ETW) śledzenia uzyskanego z MSVC podczas śledzenia kompilacji C++. Zdarzenia w śledzenia ETW są przekazywane sekwencyjnie do grupy analizatora dostarczone przez obiektu wywołującego. Ta funkcja obsługuje analizy wieloprzebiegowe, które umożliwiają przekazywanie strumienia zdarzeń do grupy analizatorów wiele razy z rzędu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,20 +45,20 @@ RESULT_CODE Analyze(
 
 ### <a name="parameters"></a>Parametry
 
-*TAnalyzerGroupMembers*\
-Ten parametr jest zawsze wywnioskowany.
+*Członkowie grupy TAnalyzer*\
+Ten parametr jest zawsze wydedukowany.
 
 *inputLogFile*\
-Wejściowy ślad ETW, z którego mają być odczytywane zdarzenia.
+Śledzenia etw wejściowych, które mają być odczytywane zdarzenia z.
 
 *numberOfPasses*\
-Liczba przebiegów analizy do uruchomienia na danych wejściowych śledzenia. Śledzenie jest przekazywane przez podaną grupę analizatora raz na przebieg analizy.
+Liczba przechodzi analizy do uruchomienia na śledzenia wejściowego. Śledzenia pobiera przekazywane przez pod warunkiem grupy analizatorraz na przebieg analizy.
 
-\ka *analizatora*
-Grupa analizatorów użyta do analizy. Wywołaj [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) , aby utworzyć grupę analizatorów. Aby użyć dynamicznej grupy analizatora uzyskanej z [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), należy najpierw hermetyzować ją wewnątrz statycznej grupy analizatorów, przekazując jej adres do `MakeStaticAnalyzerGroup`.
+*grupa analizatorów*\
+Grupa analizatorów używana do analizy. Wywołanie [MakeStaticAnalyzerGroup,](make-static-analyzer-group.md) aby utworzyć grupę analizatora. Aby użyć grupy analizatorów dynamicznych uzyskanej z [MakeDynamicAnalyzerGroup,](make-dynamic-analyzer-group.md)najpierw hermetyzuj `MakeStaticAnalyzerGroup`ją wewnątrz statycznej grupy analizatorów, przekazując jej adres do .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Kod wyniku z wyliczenia [RESULT_CODE](../other-types/result-code-enum.md) .
+Kod wyniku z [RESULT_CODE](../other-types/result-code-enum.md) wyliczenia.
 
 ::: moniker-end

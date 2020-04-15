@@ -1,56 +1,56 @@
 ---
-title: Identyfikowanie elementów projektu kontrolki DHTML
+title: Identyfikowanie elementów projektu sterowania DHTML
 ms.date: 11/19/2018
 helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-ms.openlocfilehash: 32b1c00e3ad3ed15fa56f7718789fe1a2e3ecbab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fabdc815989c21bdf6b0932b9d6826e28d7012a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261965"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319506"
 ---
-# <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Identyfikowanie elementów projektu kontrolki DHTML
+# <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Identyfikowanie elementów projektu sterowania DHTML
 
-Większość kodu kontrolki DHTML dokładnie Krewny, który jest tworzony dla każdego formantu biblioteki ATL. Aby uzyskać podstawową wiedzę na temat kodzie rodzajowym, pracować za pośrednictwem [ALT — samouczek](../atl/active-template-library-atl-tutorial.md), i przeczytaj sekcje [Tworzenie projektu ATL](../atl/reference/creating-an-atl-project.md) i [podstawy ATL obiektów COM](../atl/fundamentals-of-atl-com-objects.md).
+Większość kodu sterującego DHTML jest dokładnie taka, jak ta utworzona dla dowolnego formantu ATL. Aby uzyskać podstawową wiedzę na temat ogólnego kodu, przejrzyj [samouczek ATL](../atl/active-template-library-atl-tutorial.md)i przeczytaj sekcje [Tworzenie projektu ATL](../atl/reference/creating-an-atl-project.md) i [podstaw obiektów COM ATL](../atl/fundamentals-of-atl-com-objects.md).
 
-Kontrolki DHTML jest podobny do dowolnego formantu biblioteki ATL z wyjątkiem:
+Formant DHTML jest podobny do dowolnego formantu ATL, z wyjątkiem:
 
-- Oprócz regularnych interfejsów, które implementuje kontrolkę implementuje dodatkowe interfejs, który jest używany do komunikacji między kodem C++ i HTML interfejsu użytkownika (UI). Wywołania interfejsu użytkownika HTML do kodu C++ przy użyciu tego interfejsu.
+- Oprócz regularnych interfejsów implementuje formantu, implementuje dodatkowy interfejs, który jest używany do komunikowania się między kodem C++ i interfejsu użytkownika HTML (UI). Interfejs użytkownika HTML wywołuje kod C++ przy użyciu tego interfejsu.
 
-- Tworzy zasób HTML dla kontrolki interfejsu użytkownika.
+- Tworzy zasób HTML dla interfejsu użytkownika sterowania.
 
-- Umożliwia ona dostęp do model obiektowy DHTML za pośrednictwem zmiennej elementu członkowskiego `m_spBrowser`, czyli inteligentnego wskaźnika typu [IWebBrowser2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752127\(v=vs.85\)). Umożliwia dostęp do dowolnej części model obiektowy DHTML ten wskaźnik.
+- Umożliwia dostęp do modelu obiektu DHTML `m_spBrowser`za pośrednictwem zmiennej członkowskiej, która jest inteligentnym wskaźnikiem typu [IWebBrowser2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752127\(v=vs.85\)). Ten wskaźnik służy do uzyskiwania dostępu do dowolnej części modelu obiektu DHTML.
 
-Poniższa ilustracja przedstawia relację między biblioteką DLL, kontrolki DHTML, przeglądarki sieci Web i zasobu HTML.
+Na poniższej ilustracji przedstawiono relację między biblioteką DLL, formantem DHTML, przeglądarką sieci Web i zasobem HTML.
 
-![Elementy projektu kontrolki DHTML](../atl/media/vc52en1.gif "elementów projektu kontrolki DHTML")
+![Elementy projektu sterowania DHTML](../atl/media/vc52en1.gif "Elementy projektu sterowania DHTML")
 
 > [!NOTE]
->  W tym grafiki są symbole zastępcze. Nazwy zasobu HTML i interfejsów udostępnianych na formant są oparte na nazwy, które można przypisać w Kreatorze formantu ATL.
+> Nazwy na tej grafice są symbolami zastępczymi. Nazwy zasobu HTML i interfejsów udostępnianych w formancie są oparte na nazwach przypisanych ich w Kreatorze sterowania ATL.
 
-W tej grafiki dostępne są następujące elementy:
+W tej grafice elementy są:
 
-- **Moje DLL** utworzonych za pomocą Kreatora projektu ATL Biblioteka DLL.
+- **Moja biblioteka DLL** Biblioteka DLL utworzona za pomocą Kreatora projektów ATL.
 
-- **Kontrolki DHTML** (`m_spBrowser`) kontrolki DHTML, utworzonych za pomocą Kreatora obiektu ATL. Ten formant uzyskuje dostęp do obiektu przeglądarki sieci Web i jego metod za pośrednictwem interfejsu obiektu przeglądarki sieci Web `IWebBrowser2`. Sama kontrolka udostępnia następujące dwa interfejsy, oprócz innych standardowe interfejsy wymagane dla formantu.
+- **Kontrola DHTML** (`m_spBrowser`) Formant DHTML utworzony za pomocą Kreatora obiektów ATL. Ten formant uzyskuje dostęp do obiektu przeglądarki sieci Web i `IWebBrowser2`jej metod za pośrednictwem interfejsu obiektu przeglądarki sieci Web. Sam formant udostępnia następujące dwa interfejsy, oprócz innych standardowych interfejsów wymaganych do formantu.
 
-   - `IDHCTL1` Interfejs udostępnianych przez formant do użytku tylko przez kontener.
+  - `IDHCTL1`Interfejs udostępniane przez formant do użytku tylko przez kontener.
 
-   - `IDHCTLUI1` Interfejs ekspedycji dla komunikacji między kodem C++ i interfejsu użytkownika HTML. Przeglądarka sieci Web używa interfejs ekspedycji formantu, aby wyświetlić formant. Możesz wywołać różne metody ten interfejs ekspedycji z kontrolki interfejsu użytkownika, wywołując `window.external`, a następnie nazwę metody, w tym interfejsie wysyłania, którą chcesz wywołać. Dostęp do `window.external` z tagu skryptu w języku HTML, tworzącą interfejsu użytkownika dla tego formantu. Aby uzyskać więcej informacji na temat wywoływania metody zewnętrznej w pliku zasobów, zobacz [wywoływanie kodu C++ z elementu DHTML](../atl/calling-cpp-code-from-dhtml.md).
+  - `IDHCTLUI1`Interfejs wysyłki do komunikacji między kodem C++ a interfejsem użytkownika HTML. Przeglądarka sieci Web używa interfejsu wysyłki formantu do wyświetlania formantu. Można wywołać różne metody tego interfejsu wysyłki z interfejsu `window.external`użytkownika formantu, wywołując , a następnie nazwę metody w tym interfejsie wysyłki, który chcesz wywołać. Dostęp można `window.external` uzyskać z tagu SCRIPT w html, który tworzy interfejs użytkownika dla tego formantu. Aby uzyskać więcej informacji na temat wywoływania metod zewnętrznych w pliku zasobów, zobacz [Wywoływanie kodu C++ z pliku DHTML](../atl/calling-cpp-code-from-dhtml.md).
 
-- **IDR_CTL1** identyfikator zasobu zasobu HTML. Nazwa pliku, w tym przypadku jest DHCTL1UI.htm. Kontrolki DHTML używa zasobu HTML, który zawiera standardowych znaczników HTML i ewnętrznym oknie wysyłania poleceń, które można edytować za pomocą edytora tekstów.
+- **IDR_CTL1** Identyfikator zasobu HTML. Jego nazwa pliku, w tym przypadku, jest DHCTL1UI.htm. Formant DHTML używa zasobu HTML zawierającego standardowe znaczniki HTML i polecenia wysyłania okien zewnętrznych, które można edytować za pomocą edytora tekstu.
 
-- **Przeglądarki sieci Web** przeglądarki sieci Web Wyświetla Interfejsu użytkownika formantu, w oparciu o HTML w zasobie HTML. Wskaźnik do przeglądarki sieci Web `IWebBrowser2` interfejs jest dostępny w kontrolki DHTML, aby umożliwić dostęp do model obiektowy DHTML.
+- **Przeglądarka internetowa** Przeglądarka sieci Web wyświetla interfejs użytkownika formantu na podstawie kodu HTML w zasobie HTML. Wskaźnik do `IWebBrowser2` interfejsu przeglądarki sieci Web jest dostępny w formancie DHTML, aby umożliwić dostęp do modelu obiektu DHTML.
 
-Kreator kontrolki ATL generuje formantu za pomocą domyślnego kodu, zarówno w przypadku zasobu HTML, jak i plik .cpp. Możesz skompilować i uruchomić kontrolki, ponieważ generowane przez kreatora i następnie wyświetlanie kontroli w przeglądarce sieci Web lub kontener testu kontrolki ActiveX. Obraz poniżej przedstawia domyślne kontrolki ATL DHTML z trzy przyciski wyświetlane na kontener testu:
+Kreator sterowania ATL generuje formant z domyślnym kodem zarówno w zasobie HTML, jak i w pliku cpp. Formant można skompilować i uruchomić jako wygenerowany przez kreatora, a następnie wyświetlić formant w przeglądarce sieci Web lub kontenerze testowym kontroli ActiveX. Poniższy obraz przedstawia domyślny kontrolka DHTML ATL z trzema przyciskami wyświetlanymi w kontenerze testowym:
 
-![Kontrolki ATL DHTML](../atl/media/vc52en2.gif "kontrolki ATL DHTML")
+![Sterowanie DHTML ATL](../atl/media/vc52en2.gif "Sterowanie DHTML ATL")
 
-Zobacz [tworzenie kontrolki DHTML ATL](../atl/creating-an-atl-dhtml-control.md) do rozpoczęcia tworzenia kontrolki DHTML. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md) informacji na temat dostępu do kontenera testu.
+Zobacz [Tworzenie formantu DHTML ATL,](../atl/creating-an-atl-dhtml-control.md) aby rozpocząć tworzenie formantu DHTML. Zobacz [testowanie właściwości i zdarzenia z kontenerem testowym,](../mfc/testing-properties-and-events-with-test-container.md) aby uzyskać informacje na temat uzyskiwania dostępu do kontenera testowego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa kontrolki DHTML](../atl/atl-support-for-dhtml-controls.md)
+[Obsługa kontroli DHTML](../atl/atl-support-for-dhtml-controls.md)

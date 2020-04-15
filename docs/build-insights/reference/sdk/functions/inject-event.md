@@ -1,6 +1,6 @@
 ---
-title: InjectEvent
-description: Odwołanie C++ do funkcji InjectEvent zestawu SDK usługi Build Insights.
+title: Wtryskwent
+description: Odwołanie do funkcji SDK InjectEvent w języku C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 7b53eb71cf7a2ae40d04dbc3f8b5829f2737aba4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: c82aad5923eff60e5c72ceccaa39aa136f942665
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332846"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324036"
 ---
-# <a name="injectevent"></a>InjectEvent
+# <a name="injectevent"></a>Wtryskwent
 
 ::: moniker range="<=vs-2015"
 
-Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019.
+C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkcja `InjectEvent` jest wywoływana w ramach ponownego rejestrowania implementującego interfejs [IRelogger](../other-types/irelogger-class.md) . Służy do zapisywania zdarzenia śledzenia zdarzeń systemu Windows (ETW) w wyjściowym pliku śledzenia sesji ponownego rejestrowania.
+Funkcja `InjectEvent` jest wywoływana w relogger implementujących interfejs [IRelogger.](../other-types/irelogger-class.md) Służy do zapisywania zdarzeń śledzenia zdarzeń dla systemu Windows (ETW) w pliku śledzenia wyjściowego sesji ponownego rejestrowania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,35 +44,35 @@ void InjectEvent(
 
 ### <a name="parameters"></a>Parametry
 
-*relogSession*\
-Wskaźnik do sesji rejestrowania. Sesja ponownego rejestrowania jest udostępniana w celu ponownego wyrejestratora implementującego interfejs `IRelogger`. Aby uzyskać więcej informacji, zobacz [IRelogger](../other-types/irelogger-class.md).
+*relogSesja*\
+Wskaźnik do sesji ponownego rejestrowania. Sesja ponownego rejestrowania jest dostarczana do `IRelogger` reloggerów, które implementują interfejs. Aby uzyskać więcej informacji, zobacz [IRelogger](../other-types/irelogger-class.md).
 
-*identyfikatorem*\
-Identyfikator GUID dostawcy śledzenia zdarzeń systemu Windows (ETW), w którym zdarzenie ETW zostanie zarejestrowane.
+*providerId*\
+Identyfikator GUID dostawcy śledzenia zdarzeń dla systemu Windows (ETW), w ramach którego zdarzenie ETW zostanie ponownie zarejestrowane.
 
-*eventDescriptor*\
-Deskryptor zdarzenia ETW dla zdarzenia ETW, które jest rejestrowane.
+*Eventdescriptor*\
+Deskryptor zdarzenia ETW dla zdarzenia ETW, które zostało ponownie zarejestrowane.
 
-\ identyfikatora *procesu*
-Identyfikator procesu (PID) dla zdarzenia ETW, które jest rejestrowane ponownie.
+*Processid*\
+Identyfikator procesu (PID) dla zdarzenia ETW, które jest ponownie rejestrowane.
 
-*threadId*\
-Identyfikator wątku (TID) dla zdarzenia ETW, które jest rejestrowane.
+*Threadid*\
+Identyfikator wątku (TID) dla zdarzenia ETW, który jest ponownie zarejestrowany.
 
-*processorIndex*\
-Indeks procesora dla zdarzenia ETW, które jest rejestrowane ponownie.
+*procesorIndex*\
+Indeks procesora dla zdarzenia ETW, które jest ponownie rejestrowane.
 
-\ *znacznika czasu*
-Sygnatura czasowa zdarzenia ETW, które jest rejestrowane.
+*Sygnatury czasowej*\
+Sygnatura czasowa zdarzenia ETW, które jest ponownie rejestrowane.
 
-\ *danych*
-Wskaźnik do danych, które powinny zostać uwzględnione w rejestrowanym zdarzeniu ETW.
+*Danych*\
+Wskaźnik do danych, które powinny być uwzględnione w relogged zdarzenie ETW.
 
-*byteCount*\
-Rozmiar danych (w bajtach) wskazywanych przez *dane*.
+*Bytecount*\
+Rozmiar danych w bajtach, wskazywu przez *dane*.
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat pojęć ETW, takich jak *Identyfikator GUID dostawcy* i *deskryptor zdarzenia*, zapoznaj się z [dokumentacją ETW](/windows/win32/etw/about-event-tracing). Aby uzyskać szczegółowe informacje na temat rozpoczynania sesji ponownego rejestrowania za C++ pomocą zestawu SDK usługi Build Insights, zobacz [relog](relog.md).
+Aby uzyskać więcej informacji na temat koncepcji ETW, takich jak *identyfikator GUID dostawcy* i *deskryptor zdarzeń,* zobacz [dokumentację ETW](/windows/win32/etw/about-event-tracing). Aby uzyskać szczegółowe informacje na temat uruchamiania sesji ponownego rejestrowania za pomocą sdk języka C++ Build Insights, zobacz [Relog](relog.md).
 
 ::: moniker-end

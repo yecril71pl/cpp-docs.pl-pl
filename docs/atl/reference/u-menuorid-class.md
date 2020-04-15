@@ -9,19 +9,19 @@ helpviewer_keywords:
 - U_MENUorID class
 - _U_MENUorID class
 ms.assetid: cfc8032b-61b4-4a68-ba3a-92b82500ccae
-ms.openlocfilehash: 9388ca1751ee27fb25d6751c961d23e5243f2918
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 419c9e79178db12efe278838ec8630e04ac3c461
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495132"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325838"
 ---
 # <a name="_u_menuorid-class"></a>Klasa _U_MENUorID
 
-Ta klasa udostępnia otoki dla `CreateWindow` i `CreateWindowEx`.
+Ta klasa zawiera `CreateWindow` otoki dla i `CreateWindowEx`.
 
 > [!IMPORTANT]
->  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,27 +45,27 @@ class _U_MENUorID
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa adaptera argument umożliwia przekazywanie identyfikatorów (UINTs) lub uchwytów menu (HMENUs) do funkcji bez konieczności jawnego rzutowania w części obiektu wywołującego.
+Ta klasa karty argumentu umożliwia identyfikatory (UINTs) lub dojścia menu (HMENUs) mają być przekazywane do funkcji bez konieczności jawnego rzutowania ze strony wywołującego.
 
-Ta klasa została zaprojektowana na potrzeby implementowania otok do interfejsu API systemu [](/windows/win32/api/winuser/nf-winuser-createwindoww) Windows, w szczególności funkcji HMENU i [elementu CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) , z których oba przyjmują argument, który może być identyfikatorem okna podrzędnego (uint), a nie uchwytem menu. Na przykład można zobaczyć, że ta klasa jest używana jako parametr do [CWindowImpl:: Create](cwindowimpl-class.md#create).
+Ta klasa jest przeznaczona do implementowania otoki do interfejsu API systemu Windows, w szczególności [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) i [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) funkcje, z których oba akceptują argument HMENU, który może być identyfikator okna podrzędnego (UINT), a nie dojście do menu. Na przykład ta klasa jest używana jako parametr [CWindowImpl::Create](cwindowimpl-class.md#create).
 
-Klasa definiuje dwa przeciążenia konstruktorów: jeden akceptuje argument UINT, a drugi akceptuje argument HMENU. Argument UINT jest właśnie rzutowany na HMENU w konstruktorze, a wynik przechowywany w pojedynczej składowej danych klasy, [m_hMenu](#_u_menuorid__m_hmenu). Argument konstruktora HMENU jest przechowywany bezpośrednio bez konwersji.
+Klasa definiuje dwa przeciążenia konstruktora: jeden akceptuje argument UINT, a drugi akceptuje argument HMENU. Argument UINT jest po prostu rzutowany na HMENU w konstruktorze i wynik przechowywany w pojedynczym weszłomie danych klasy, [m_hMenu](#_u_menuorid__m_hmenu). Argument do konstruktora HMENU jest przechowywany bezpośrednio bez konwersji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlwin. h
+**Nagłówek:** atlwin.h
 
-##  <a name="_u_menuorid__m_hmenu"></a>  _U_MENUorID::m_hMenu
+## <a name="_u_menuoridm_hmenu"></a><a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu
 
-Klasa przechowuje wartość przekazaną do jednego z jego konstruktorów jako element członkowski danych HMENU Public.
+Klasa przechowuje wartość przekazywana do jednego z jego konstruktorów jako publiczny element członkowski danych HMENU.
 
 ```
 HMENU m_hMenu;
 ```
 
-##  <a name="_u_menuorid___u_menuorid"></a>  _U_MENUorID::_U_MENUorID
+## <a name="_u_menuorid_u_menuorid"></a><a name="_u_menuorid___u_menuorid"></a>_U_MENUorID::_U_MENUorID
 
-Argument UINT jest właśnie rzutowany na HMENU w konstruktorze, a wynik przechowywany w pojedynczej składowej danych klasy, [m_hMenu](#_u_menuorid__m_hmenu).
+Argument UINT jest po prostu rzutowany na HMENU w konstruktorze i wynik przechowywany w pojedynczym weszłomie danych klasy, [m_hMenu](#_u_menuorid__m_hmenu).
 
 ```
 _U_MENUorID(UINT nID);
@@ -74,16 +74,16 @@ _U_MENUorID(HMENU hMenu);
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
+*Nid*<br/>
 Identyfikator okna podrzędnego.
 
-*hMenu*<br/>
+*Hmenu*<br/>
 Uchwyt menu.
 
 ### <a name="remarks"></a>Uwagi
 
-Argument konstruktora HMENU jest przechowywany bezpośrednio bez konwersji.
+Argument do konstruktora HMENU jest przechowywany bezpośrednio bez konwersji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przegląd klas](../../atl/atl-class-overview.md)

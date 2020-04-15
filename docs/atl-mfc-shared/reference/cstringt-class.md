@@ -1,5 +1,5 @@
 ---
-title: Klasa CStringT
+title: CStringT, klasa
 ms.date: 03/27/2019
 f1_keywords:
 - CStringT
@@ -80,16 +80,16 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: a411ed54a73a0dee49ebbd9ccacbd7c6f8e69ca5
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 90f63b474f509b4d1a15ad6fe11bda61c343f483
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418210"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317588"
 ---
-# <a name="cstringt-class"></a>Klasa CStringT
+# <a name="cstringt-class"></a>CStringT, klasa
 
-Ta klasa reprezentuje obiekt `CStringT`.
+Ta klasa `CStringT` reprezentuje obiekt.
 
 ## <a name="syntax"></a>Składnia
 
@@ -103,127 +103,127 @@ class CStringT :
 #### <a name="parameters"></a>Parametry
 
 *BaseType*<br/>
-Typ znaku klasy String. Może to być jeden z następujących modyfikatorów dostępu:
+Typ znaku klasy string. Może być jedną z następujących czynności:
 
-- **char** (dla CIĄGÓW znaków ANSI).
+- **char** (dla ciągów znaków ANSI).
 
 - **wchar_t** (dla ciągów znaków Unicode).
 
-- Używanie TCHAR (dla ciągów znaków ANSI i Unicode).
+- TCHAR (dla ciągów znaków ANSI i Unicode).
 
-*StringTraits*<br/>
-Określa, czy Klasa String wymaga obsługi biblioteki środowiska uruchomieniowego C (CRT) i gdzie znajdują się zasoby ciągu. Może to być jeden z następujących modyfikatorów dostępu:
+*StringTraits (StringTraits)*<br/>
+Określa, czy klasa ciągu wymaga obsługi biblioteki c run-time (CRT) i gdzie znajdują się zasoby ciągów. Może być jedną z następujących czynności:
 
-- **StrTraitATL < wchar_t** &#124; **char** &#124; **Używanie TCHAR, ChTraitsCRT < wchar_t** &#124; **char** &#124; **Używanie TCHAR > >**
+- **StrTraitATL< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
-   Klasa wymaga obsługi CRT i wyszukuje ciągi zasobów w module określonym przez `m_hInstResource` (składowa klasy modułu aplikacji).
+   Klasa wymaga obsługi CRT i wyszukuje ciągi zasobów w module określonym przez `m_hInstResource` (element członkowski klasy modułu aplikacji).
 
-- **StrTraitATL < wchar_t** &#124; **char** &#124; **Używanie TCHAR, ChTraitsOS < wchar_t** &#124; **char** &#124; **Używanie TCHAR > >**
+- **StrTraitATL< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
-   Klasa nie wymaga obsługi CRT i wyszukuje ciągi zasobów w module określonym przez `m_hInstResource` (składowa klasy modułu aplikacji).
+   Klasa nie wymaga obsługi CRT i wyszukuje ciągi zasobów w module określonym przez `m_hInstResource` (element członkowski klasy modułu aplikacji).
 
-- **StrTraitMFC < wchar_t** &#124; **char** &#124; **Używanie TCHAR, ChTraitsCRT < wchar_t** &#124; **char** &#124; **Używanie TCHAR > >**
+- **StrTraitMFC< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
    Klasa wymaga obsługi CRT i wyszukuje ciągi zasobów przy użyciu standardowego algorytmu wyszukiwania MFC.
 
-- **StrTraitMFC < wchar_t** &#124; **char** &#124; **Używanie TCHAR, ChTraitsOS < wchar_t** &#124; **char** &#124; **Używanie TCHAR > >**
+- **StrTraitMFC< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS< wchar_t &#124;** **char** &#124; **TCHAR > >**
 
    Klasa nie wymaga obsługi CRT i wyszukuje ciągi zasobów przy użyciu standardowego algorytmu wyszukiwania MFC.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CStringT:: CStringT](#cstringt)|Konstruuje obiekt `CStringT` na różne sposoby.|
-|[CStringT:: ~ CStringT](#_dtorcstringt)|Niszczy obiekt `CStringT`.|
+|[CStringT::CStringT](#cstringt)|Konstruuje `CStringT` obiekt na różne sposoby.|
+|[CStringT::~CStringT](#_dtorcstringt)|Niszczy `CStringT` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CStringT:: AllocSysString](#allocsysstring)|Przypisuje element BSTR z `CStringT` danych.|
-|[CStringT:: AnsiToOem](#ansitooem)|Wprowadza konwersję w miejscu ze znaku ANSI ustawionym na zestaw znaków OEM.|
-|[CStringT:: AppendFormat](#appendformat)|Dołącza dane sformatowane do istniejącego obiektu `CStringT`.|
-|[CStringT:: COLLATE](#collate)|Porównuje dwa ciągi (z uwzględnieniem wielkości liter, używa informacji specyficznych dla ustawień regionalnych).|
-|[CStringT:: CollateNoCase](#collatenocase)|Porównuje dwa ciągi (bez uwzględniania wielkości liter, używa informacji specyficznych dla ustawień regionalnych).|
-|[CStringT:: Compare](#compare)|Porównuje dwa ciągi (z uwzględnieniem wielkości liter).|
-|[CStringT:: CompareNoCase](#comparenocase)|Porównuje dwa ciągi (bez uwzględniania wielkości liter).|
-|[CStringT::D Usuń](#delete)|Usuwa znak lub znaki z ciągu.|
-|[CStringT:: find](#find)|Znajduje znak lub podciąg w większym ciągu.|
-|[CStringT:: FindOneOf](#findoneof)|Znajduje pierwszy pasujący znak z zestawu.|
-|[CStringT:: format](#format)|Formatuje ciąg jako `sprintf`.|
-|[CStringT:: FormatMessage](#formatmessage)|Formatuje ciąg komunikatu.|
-|[CStringT:: FormatMessageV](#formatmessagev)|Formatuje ciąg komunikatu przy użyciu listy zmiennych argumentów.|
-|[CStringT:: FormatV](#formatv)|Formatuje ciąg przy użyciu zmiennej listy argumentów.|
-|[CStringT:: GetEnvironmentVariable](#getenvironmentvariable)|Ustawia ciąg na wartość określonej zmiennej środowiskowej.|
-|[CStringT:: INSERT](#insert)|Wstawia pojedynczy znak lub podciąg w danym indeksie w ciągu.|
-|[CStringT:: Left](#left)|Wyodrębnia lewą część ciągu.|
-|[CStringT:: LoadString](#loadstring)|Ładuje istniejący obiekt `CStringT` z zasobu systemu Windows.|
-|[CStringT:: MakeLower](#makelower)|Konwertuje wszystkie znaki w ciągu do małych liter.|
-|[CStringT:: MakeReverse](#makereverse)|Odwraca ciąg.|
-|[CStringT:: MakeUpper](#makeupper)|Konwertuje wszystkie znaki w tym ciągu na wielkie litery.|
-|[CStringT:: Mid](#mid)|Wyodrębnia środkową część ciągu.|
-|[CStringT:: OemToAnsi](#oemtoansi)|Wprowadza konwersję w miejscu ze znaku OEM ustawionym na zestaw znaków ANSI.|
-|[CStringT:: Remove](#remove)|Usuwa wskazane znaki z ciągu.|
-|[CStringT:: Replace](#replace)|Zastępuje znaki oznaczone innymi znakami.|
-|[CStringT:: ReverseFind](#reversefind)|Znajduje znak w większym ciągu; zaczyna się od końca.|
-|[CStringT:: Right](#right)|Wyodrębnia prawą część ciągu.|
-|[CStringT:: SetSysString](#setsysstring)|Ustawia istniejący obiekt BSTR z danymi z obiektu `CStringT`.|
-|[CStringT:: SpanExcluding](#spanexcluding)|Wyodrębnia znaki z ciągu, zaczynając od pierwszego znaku, które nie znajdują się w zestawie znaków identyfikowanych przez `pszCharSet`.|
-|[CStringT:: SpanIncluding](#spanincluding)|Wyodrębnia podciąg, który zawiera tylko znaki w zestawie.|
-|[CStringT:: tokenize](#tokenize)|Wyodrębnia określone tokeny w ciągu docelowym.|
-|[CStringT:: Trim](#trim)|Przycina wszystkie wiodące i końcowe znaki odstępu z ciągu.|
-|[CStringT:: TrimLeft](#trimleft)|Przycina wiodące znaki odstępu z ciągu.|
-|[CStringT:: TrimRight](#trimright)|Przycina końcowe znaki odstępu z ciągu.|
+|[CStringT::AllocSysString](#allocsysstring)|Przydziela BSTR z `CStringT` danych.|
+|[CStringT::AnsiToOem](#ansitooem)|Dokonuje konwersji w miejscu z zestawu znaków ANSI do zestawu znaków OEM.|
+|[CStringT::Dołączformat](#appendformat)|Dołącza sformatowane dane `CStringT` do istniejącego obiektu.|
+|[CStringT::Sortuj](#collate)|Porównuje dwa ciągi (wielkość liter, używa informacji specyficznych dla ustawień regionalnych).|
+|[CStringT::CollateNoCase](#collatenocase)|Porównuje dwa ciągi (bez uwzględniania wielkości liter, używa informacji specyficznych dla ustawień regionalnych).|
+|[CStringT::Porównaj](#compare)|Porównuje dwa ciągi (z uwzględnieniem wielkości liter).|
+|[CStringT::CompareNoCase](#comparenocase)|Porównuje dwa ciągi (bez uwzględniania wielkości liter).|
+|[CStringT::Delete](#delete)|Usuwa znak lub znaki z ciągu.|
+|[CStringT::Znajdź](#find)|Znajduje znak lub podciąg wewnątrz większego ciągu.|
+|[CStringT::FindOneOf](#findoneof)|Znajduje pierwszy pasujący znak z zestawu.|
+|[CStringT::Format](#format)|Formatuje ciąg `sprintf` tak samo jak ten.|
+|[CStringT::FormatMessage](#formatmessage)|Formatuje ciąg wiadomości.|
+|[CStringT::FormatMessageV](#formatmessagev)|Formatuje ciąg wiadomości przy użyciu listy argumentów zmiennej.|
+|[CStringT::FormatV](#formatv)|Formatuje ciąg przy użyciu listy argumentów zmiennych.|
+|[CStringT::GetEnvironmentVariable](#getenvironmentvariable)|Ustawia ciąg na wartość określonej zmiennej środowiskowej.|
+|[CStringT::Wstaw](#insert)|Wstawia pojedynczy znak lub podciąg w danym indeksie w ciągu.|
+|[CStringT::Po lewej](#left)|Wyodrębnia lewą część ciągu.|
+|[CStringT::LoadString](#loadstring)|Ładuje istniejący `CStringT` obiekt z zasobu systemu Windows.|
+|[CStringT::MakeLower](#makelower)|Konwertuje wszystkie znaki w tym ciągu na małe litery.|
+|[CStringT::MakeReverse](#makereverse)|Odwraca ciąg.|
+|[CStringt::MakeUpper](#makeupper)|Konwertuje wszystkie znaki w tym ciągu na wielkie litery.|
+|[CStringT::Mid](#mid)|Wyodrębnia środkową część ciągu.|
+|[CStringT::OemToAnsi](#oemtoansi)|Dokonuje konwersji w miejscu z zestawu znaków OEM do zestawu znaków ANSI.|
+|[CStringT::Usuń](#remove)|Usuwa wskazane znaki z ciągu.|
+|[CStringT::Zamień](#replace)|Zastępuje wskazane znaki innymi znakami.|
+|[CStringT::ReverseFind](#reversefind)|Znajduje znak wewnątrz większego ciągu; zaczyna się od końca.|
+|[CStringT::Prawy](#right)|Wyodrębnia prawą część ciągu.|
+|[CStringT::SetSysString](#setsysstring)|Ustawia istniejący obiekt BSTR `CStringT` z danymi z obiektu.|
+|[CStringT::SpanExcluding](#spanexcluding)|Wyodrębnia znaki z ciągu, zaczynając od pierwszego znaku, które nie `pszCharSet`znajdują się w zestawie znaków identyfikowanych przez .|
+|[CStringT::SpanWcluding](#spanincluding)|Wyodrębnia podciąg, który zawiera tylko znaki w zestawie.|
+|[CStringT::Tokenize](#tokenize)|Wyodrębnia określone tokeny w ciągu docelowym.|
+|[CStringT::Przytnij](#trim)|Przycina wszystkie znaki odstępu początkowego i końcowego z ciągu.|
+|[CStringT::TrimLeft](#trimleft)|Przycina wiodące znaki odstępu z ciągu.|
+|[CStringT::TrimRight](#trimright)|Przycina końcowe znaki odstępu z ciągu.|
 
 ### <a name="operators"></a>Operatory
 
 |||
 |-|-|
-|[CStringT:: operator =](#operator_eq)|Przypisuje nową wartość do obiektu `CStringT`.|
-|[CStringT:: operator +](#operator_add)|Łączy dwa ciągi lub znak i ciąg.|
-|[CStringT:: operator + =](#operator_add_eq)|Łączy nowy ciąg na końcu istniejącego ciągu.|
-|[CStringT:: operator = =](#operator_eq_eq)|Określa, czy dwa ciągi są logicznie równe.|
-|[CStringT:: operator! =](#operator_neq)|Określa, czy dwa ciągi są logicznie nierówne.|
-|[CStringT:: operator &lt;](#operator_lt)|Określa, czy ciąg po lewej stronie operatora jest mniejszy od ciągu po prawej stronie.|
-|[CStringT:: operator &gt;](#operator_gt)|Określa, czy ciąg po lewej stronie operatora jest większy niż ciąg po prawej stronie.|
-|[CStringT:: operator &lt;=](#operator_lt_eq)|Określa, czy ciąg po lewej stronie operatora jest mniejszy od lub równy ciągowi po prawej stronie.|
-|[CStringT:: operator &gt;=](#operator_gt_eq)|Określa, czy ciąg po lewej stronie operatora jest większy od lub równy ciągowi po prawej stronie.|
+|[CStringT::operator =](#operator_eq)|Przypisuje nową wartość do `CStringT` obiektu.|
+|[CStringT::operator +](#operator_add)|Łączy dwa ciągi znaków lub znak i ciąg.|
+|[CStringT::operator +=](#operator_add_eq)|Łączy nowy ciąg na końcu istniejącego ciągu.|
+|[CStringT::operator ==](#operator_eq_eq)|Określa, czy dwa ciągi są logicznie równe.|
+|[CStringT::operator !=](#operator_neq)|Określa, czy dwa ciągi logicznie nie są równe.|
+|[CStringT::operator&lt;](#operator_lt)|Określa, czy ciąg po lewej stronie operatora jest mniejsza niż ciąg po prawej stronie.|
+|[CStringT::operator&gt;](#operator_gt)|Określa, czy ciąg po lewej stronie operatora jest większy niż ciąg po prawej stronie.|
+|[CStringT::operator&lt;=](#operator_lt_eq)|Określa, czy ciąg po lewej stronie operatora jest mniejsza lub równa ciąg po prawej stronie.|
+|[CStringT::operator&gt;=](#operator_gt_eq)|Określa, czy ciąg po lewej stronie operatora jest większa lub równa ciąg po prawej stronie.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CStringT` dziedziczy z [klasy CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md). Funkcje zaawansowane, takie jak manipulowanie znakami, porządkowanie i wyszukiwanie, są implementowane przez `CStringT`.
+`CStringT`dziedziczy z [klasy CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md). Zaawansowane funkcje, takie jak manipulowanie znakami, porządkowanie i wyszukiwanie, są implementowane przez `CStringT`polecenie .
 
 > [!NOTE]
-> obiekty `CStringT` mogą zgłaszać wyjątki. Dzieje się tak, gdy dla obiektu `CStringT` zabrakło pamięci z dowolnego powodu.
+> `CStringT`obiekty są w stanie zgłaszać wyjątki. Dzieje się `CStringT` tak, gdy obiekt zabraknie pamięci z jakiegokolwiek powodu.
 
-Obiekt `CStringT` składa się z sekwencji o zmiennej długości. `CStringT` udostępnia funkcje i operatory przy użyciu składni podobnej do języka Basic. Operatory łączenia i porównywania, wraz z uproszczonym zarządzaniem pamięcią, ułatwiają używanie `CStringT` obiektów od zwykłych tablic znaków.
-
-> [!NOTE]
->  Chociaż istnieje możliwość tworzenia wystąpień `CStringT` zawierających osadzone znaki o wartości null, zalecamy ich użycie. Wywoływanie metod i operatorów w obiektach `CStringT`, które zawierają osadzone znaki null, może dawać niezamierzone wyniki.
-
-Korzystając z różnych kombinacji parametrów `BaseType` i `StringTraits`, obiekty `CStringT` mogą znajdować się w następujących typach, które zostały wstępnie zdefiniowane przez biblioteki ATL.
-
-Jeśli używasz w aplikacji ATL:
-
-`CString`, `CStringA`i `CStringW` są eksportowane z biblioteki MFC DLL (MFC90. DLL), nigdy nie z bibliotek DLL użytkownika. Dzieje się tak, aby zapobiec pomnożenia `CStringT`.
+Obiekt `CStringT` składa się z sekwencji znaków o zmiennej długości. `CStringT`udostępnia funkcje i operatory używające składni podobnej do podstawowej. Konkadyjnie i porównywanie operatorów, `CStringT` wraz z uproszczonym zarządzaniem pamięcią, sprawiają, że obiekty są łatwiejsze w użyciu niż zwykłe tablice znaków.
 
 > [!NOTE]
->  Jeśli kod zawiera obejście błędów konsolidatora, które opisano w [eksportowaniu klas ciągów przy użyciu CStringT](../../atl-mfc-shared/exporting-string-classes-using-cstringt.md), należy usunąć ten kod. Nie jest już potrzebny.
+> Chociaż istnieje możliwość `CStringT` tworzenia wystąpień, które zawierają osadzone znaki null, zaleca się przeciwko niemu. Wywoływanie metod `CStringT` i operatorów na obiektach zawierających osadzone znaki null może tworzyć niezamierzone wyniki.
 
-Następujące typy ciągów są dostępne w ramach aplikacji opartych na MFC:
+Za pomocą różnych kombinacji `BaseType` `StringTraits` i `CStringT` parametrów, obiekty mogą być dostępne w następujących typach, które zostały wstępnie zdefiniowane przez biblioteki ATL.
 
-|Typ CStringT|Oświadczeń|
+W przypadku korzystania z aplikacji ATL:
+
+`CString`, `CStringA`i `CStringW` są eksportowane z biblioteki DLL MFC (MFC90. DLL), nigdy z bibliotek DLL użytkowników. Odbywa się to, aby zapobiec `CStringT` mnożeniu zdefiniowane.
+
+> [!NOTE]
+> Jeśli kod zawiera obejście błędów konsolidatora, który jest opisany w [eksportowanie klas ciągów przy użyciu CStringT](../../atl-mfc-shared/exporting-string-classes-using-cstringt.md), należy usunąć ten kod. Nie jest już potrzebny.
+
+Następujące typy ciągów są dostępne w aplikacjach opartych na MFC:
+
+|Typ CStringT|Deklaracji|
 |-------------------|-----------------|
-|`CStringA`|Ciąg typu znaków ANSI z obsługą CRT.|
+|`CStringA`|Ciąg typu znaku ANSI z obsługą CRT.|
 |`CStringW`|Ciąg typu znaku Unicode z obsługą CRT.|
-|`CString`|Typy znaków ANSI i Unicode z obsługą CRT.|
+|`CString`|Zarówno typy znaków ANSI, jak i Unicode z obsługą CRT.|
 
 Następujące typy ciągów są dostępne w projektach, w których zdefiniowano ATL_CSTRING_NO_CRT:
 
-|Typ CStringT|Oświadczeń|
+|Typ CStringT|Deklaracji|
 |-------------------|-----------------|
 |`CAtlStringA`|Ciąg typu znaku ANSI bez obsługi CRT.|
 |`CAtlStringW`|Ciąg typu znaku Unicode bez obsługi CRT.|
@@ -231,80 +231,80 @@ Następujące typy ciągów są dostępne w projektach, w których zdefiniowano 
 
 Następujące typy ciągów są dostępne w projektach, w których ATL_CSTRING_NO_CRT nie jest zdefiniowany:
 
-|Typ CStringT|Oświadczeń|
+|Typ CStringT|Deklaracji|
 |-------------------|-----------------|
-|`CAtlStringA`|Ciąg typu znaków ANSI z obsługą CRT.|
+|`CAtlStringA`|Ciąg typu znaku ANSI z obsługą CRT.|
 |`CAtlStringW`|Ciąg typu znaku Unicode z obsługą CRT.|
-|`CAtlString`|Typy znaków ANSI i Unicode z obsługą CRT.|
+|`CAtlString`|Zarówno typy znaków ANSI, jak i Unicode z obsługą CRT.|
 
-`CString` obiekty mają również następujące cechy:
+`CString`obiekty mają również następujące cechy:
 
-- obiekty `CStringT` mogą wzrosnąć w wyniku operacji łączenia.
+- `CStringT`obiekty mogą rosnąć w wyniku operacji łączenia.
 
-- obiekty `CStringT` są zgodne z "semantyką wartości". Zastanów się, `CStringT` obiekt jako rzeczywisty ciąg, nie jako wskaźnik do ciągu.
+- `CStringT`obiekty podążają za "semantyki wartości". Obiekt należy `CStringT` myśleć jako rzeczywisty ciąg, a nie jako wskaźnik do ciągu.
 
-- Można swobodnie zastępować `CStringT` obiektów dla argumentów funkcji `PCXSTR`.
+- Można dowolnie `CStringT` zastępować obiekty argumentami `PCXSTR` funkcji.
 
 - Niestandardowe zarządzanie pamięcią dla buforów ciągów. Aby uzyskać więcej informacji, zobacz [Zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 ## <a name="cstringt-predefined-types"></a>Wstępnie zdefiniowane typy CStringT
 
-Ponieważ `CStringT` używa argumentu szablonu do zdefiniowania typu znaku (obsługiwanego przez [wchar_t](../../c-runtime-library/standard-types.md) lub [char](../../c-runtime-library/standard-types.md)), typy parametrów metody mogą być skomplikowane w czasie. Aby uprościć ten problem, zestaw wstępnie zdefiniowanych typów jest definiowany i używany w całej klasie `CStringT`. W poniższej tabeli wymieniono różne typy:
+Ponieważ `CStringT` używa argumentu szablonu do definiowania typu znaku [(wchar_t](../../c-runtime-library/standard-types.md) lub [char](../../c-runtime-library/standard-types.md)) obsługiwane, typy parametrów metody mogą być skomplikowane czasami. Aby uprościć ten problem, zestaw wstępnie zdefiniowanych typów `CStringT` jest zdefiniowany i używany w całej klasie. W poniższej tabeli wymieniono różne typy:
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|`XCHAR`|Pojedynczy znak (albo **wchar_t** lub **char**) o tym samym typie znaku co obiekt `CStringT`.|
-|`YCHAR`|Pojedynczy znak (albo **wchar_t** lub **char**) z odwrotnym typem znaku jako obiektem `CStringT`.|
-|`PXSTR`|Wskaźnik do ciągu znaków ( **wchar_t** lub **char**) o tym samym typie znaku co obiekt `CStringT`.|
-|`PYSTR`|Wskaźnik do ciągu znaków ( **wchar_t** lub **char**) z odwrotnym typem znaku jako obiektem `CStringT`.|
-|`PCXSTR`|Wskaźnik do ciągu znaku **const** ( **wchar_t** lub **char**) o tym samym typie znaku co obiekt `CStringT`.|
-|`PCYSTR`|Wskaźnik do ciągu znaku **const** ( **wchar_t** lub **char**) z odwrotnym typem znaku jako obiektem `CStringT`.|
+|`XCHAR`|Pojedynczy znak **(wchar_t** lub **char)** o tym samym typie `CStringT` znaku co obiekt.|
+|`YCHAR`|Pojedynczy znak **(wchar_t** lub **char)** z przeciwległym typem `CStringT` znaku jako obiekt.|
+|`PXSTR`|Wskaźnik do ciągu znaków **(wchar_t** lub **char)** o tym samym `CStringT` typie znaku co obiekt.|
+|`PYSTR`|Wskaźnik do ciągu znaków **(wchar_t** lub **char)** z przeciwległym `CStringT` typem znaku jako obiekt.|
+|`PCXSTR`|Wskaźnik do ciągu znaków **const** **(wchar_t** lub **char)** o tym samym `CStringT` typie znaku co obiekt.|
+|`PCYSTR`|Wskaźnik do ciągu znaków **const** **(wchar_t** lub **char)** z przeciwległym `CStringT` typem znaku jako obiekt.|
 
 > [!NOTE]
->  Kod, który wcześniej użył nieudokumentowanych metod `CString` (takich jak `AssignCopy`), musi zostać zastąpiony kodem, który używa następującej udokumentowanej metody `CStringT` (na przykład `GetBuffer` lub `ReleaseBuffer`). Te metody są dziedziczone z `CSimpleStringT`.
+> Kod, który wcześniej używał `CString` nieudokumentowanych `AssignCopy`metod (takich jak) musi zostać zastąpiony `CStringT` kodem, `GetBuffer` `ReleaseBuffer`który używa następujących udokumentowanych metod (takich jak lub ). Metody te są `CSimpleStringT`dziedziczone z .
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)
+[Csimplestringt](../../atl-mfc-shared/reference/csimplestringt-class.md)
 
 `CStringT`
 
 ## <a name="requirements"></a>Wymagania
 
-|Nagłówek|Użyj dla|
+|Nagłówek|Na użytek|
 |------------|-------------|
-|cstringt.h|Tylko MFC — obiekty ciągów|
-|pliku atlstr. h|Obiekty ciągów innych niż MFC|
+|cstringt.h|Obiekty ciągu tylko do MFC|
+|atlstr.h|Obiekty ciągu innych niż MFC|
 
-##  <a name="allocsysstring"></a>CStringT:: AllocSysString
+## <a name="cstringtallocsysstring"></a><a name="allocsysstring"></a>CStringT::AllocSysString
 
-Przypisuje ciąg typu BSTR, który jest zgodny z automatyzacją, i kopiuje do niego zawartość obiektu `CStringT`, łącznie z kończącym znakiem null.
+Przydziela ciąg zgodny z automatyzacją typu BSTR i kopiuje do niego zawartość `CStringT` obiektu, w tym kończący się znak null.
 
 ```
 BSTR AllocSysString() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Nowo przydzielony ciąg.
 
 ### <a name="remarks"></a>Uwagi
 
-W programach MFC [Klasa CMemoryException](../../mfc/reference/cmemoryexception-class.md) jest zgłaszana w przypadku braku wystarczającej ilości pamięci. W programach ATL jest zgłaszany [CAtlException](../../atl/reference/catlexception-class.md) . Ta funkcja jest zwykle używana do zwracania ciągów dla automatyzacji.
+W programach MFC [CMemoryException Klasa](../../mfc/reference/cmemoryexception-class.md) jest zgłaszany, jeśli istnieje niewystarczająca ilość pamięci. W programach ATL [CAtlException](../../atl/reference/catlexception-class.md) jest wyrzucany. Ta funkcja jest zwykle używana do zwracania ciągów dla automatyzacji.
 
-Często, jeśli ten ciąg jest przenoszona do funkcji COM jako parametr [in], to wymaga, aby obiekt wywołujący zwolnił ciąg. Można to zrobić za pomocą [SysFreeString](/windows/win32/api/oleauto/nf-oleauto-sysfreestring), zgodnie z opisem w Windows SDK. Aby uzyskać więcej informacji, zobacz [przydzielanie i zwalnianie pamięci dla typu BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).
+Często, jeśli ten ciąg jest przekazywany do funkcji COM jako parametr [in], wymaga to od wywołującego zwolnienia ciągu. Można to zrobić za pomocą [SysFreeString](/windows/win32/api/oleauto/nf-oleauto-sysfreestring), zgodnie z opisem w windows SDK. Aby uzyskać więcej informacji, zobacz [Przydzielanie i zwalnianie pamięci dla BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).
 
-Aby uzyskać więcej informacji na temat funkcji alokacji OLE w systemie Windows, zobacz [SysAllocString](/windows/win32/api/oleauto/nf-oleauto-sysallocstring) w Windows SDK.
+Aby uzyskać więcej informacji na temat funkcji alokacji OLE w systemie Windows, zobacz [SysAllocString](/windows/win32/api/oleauto/nf-oleauto-sysallocstring) w windows SDK.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje użycie `CStringT::AllocSysString`.
+Poniższy przykład pokazuje użycie `CStringT::AllocSysString`.
 
 [!code-cpp[NVC_ATLMFC_Utilities#105](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_1.cpp)]
 
-##  <a name="ansitooem"></a>CStringT:: AnsiToOem
+## <a name="cstringtansitooem"></a><a name="ansitooem"></a>CStringT::AnsiToOem
 
-Konwertuje wszystkie znaki w tym obiekcie `CStringT` ze znakiem ANSI ustawionym na zestaw znaków OEM.
+Konwertuje wszystkie znaki `CStringT` w tym obiekcie z zestawu znaków ANSI na zestaw znaków OEM.
 
 ```
 void AnsiToOem();
@@ -312,15 +312,15 @@ void AnsiToOem();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja jest niedostępna, jeśli określono _UNICODE.
+Funkcja nie jest dostępna, jeśli zdefiniowano _UNICODE.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#106](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_2.cpp)]
 
-##  <a name="appendformat"></a>CStringT:: AppendFormat
+## <a name="cstringtappendformat"></a><a name="appendformat"></a>CStringT::Dołączformat
 
-Dołącza dane sformatowane do istniejącego obiektu `CStringT`.
+Dołącza sformatowane dane `CStringT` do istniejącego obiektu.
 
 ```
 void __cdecl AppendFormat(PCXSTR pszFormat, [, argument] ...);
@@ -330,25 +330,25 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 ### <a name="parameters"></a>Parametry
 
 *pszFormat*<br/>
-Ciąg kontrolny formatu.
+Ciąg kontroli formatu.
 
 *nFormatID*<br/>
-Identyfikator zasobu ciągu, który zawiera ciąg kontrolny formatu.
+Identyfikator zasobu ciągu zawierający ciąg kontroli formatu.
 
-*argument*<br/>
+*Argument*<br/>
 Argumenty opcjonalne.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja służy do formatowania i dołączania serii znaków i wartości w `CStringT`. Każdy opcjonalny argument (jeśli istnieje) jest konwertowany i dołączany zgodnie z odpowiadającą specyfikacją formatu w *pszFormat* lub z zasobu ciągu identyfikowanego przez *nFormatID*.
+Ta funkcja formatuje i dołącza serię znaków i `CStringT`wartości w pliku . Każdy opcjonalny argument (jeśli istnieje) jest konwertowany i dołączany zgodnie z odpowiednią specyfikacją formatu w *pszFormat* lub z zasobu ciągu identyfikowany przez *nFormatID*.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#107](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_3.cpp)]
 
-##  <a name="collate"></a>CStringT:: COLLATE
+## <a name="cstringtcollate"></a><a name="collate"></a>CStringT::Sortuj
 
-Porównuje dwa ciągi przy użyciu funkcji generycznej tekstu `_tcscoll`.
+Porównuje dwa ciągi przy użyciu `_tcscoll`funkcji tekstu ogólnego .
 
 ```
 int Collate(PCXSTR psz) const throw();
@@ -356,20 +356,20 @@ int Collate(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*psz*<br/>
-Inny ciąg używany do porównania.
+*Psz*<br/>
+Drugi ciąg używany do porównania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli ciągi są identyczne, < 0, jeśli ten obiekt `CStringT` jest mniejszy niż *PSZ*, lub > 0, jeśli ten obiekt `CStringT` jest większy niż *PSZ*.
+Zero, jeśli ciągi są identyczne, < `CStringT` 0, jeśli ten obiekt jest mniejszy niż `CStringT` *psz*, lub > 0, jeśli ten obiekt jest większy niż *psz*.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja tekstu ogólnego `_tcscoll`, która jest zdefiniowana w używanie TCHAR. H mapuje do `strcoll`, `wcscoll`lub `_mbscoll`, w zależności od zestawu znaków, który jest zdefiniowany w czasie kompilacji. Każda funkcja wykonuje porównanie ciągów z uwzględnieniem wielkości liter zgodnie z aktualnie używaną stroną kodową. Aby uzyskać więcej informacji, zobacz [strcoll —, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).
+Funkcja `_tcscoll`tekstu ogólnego , która jest zdefiniowana w TCHAR. H, mapuje `strcoll`na `wcscoll`jeden `_mbscoll`, lub , w zależności od zestawu znaków, który jest zdefiniowany w czasie kompilacji. Każda funkcja wykonuje porównanie ciągów z uwzględnieniem wielkości liter zgodnie ze stroną kodową aktualnie używaną. Aby uzyskać więcej informacji, zobacz [strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).
 
-##  <a name="collatenocase"></a>CStringT:: CollateNoCase
+## <a name="cstringtcollatenocase"></a><a name="collatenocase"></a>CStringT::CollateNoCase
 
-Porównuje dwa ciągi przy użyciu funkcji generycznej tekstu `_tcscoll`.
+Porównuje dwa ciągi przy użyciu `_tcscoll`funkcji tekstu ogólnego .
 
 ```
 int CollateNoCase(PCXSTR psz) const throw();
@@ -377,22 +377,22 @@ int CollateNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*psz*<br/>
-Inny ciąg używany do porównania.
+*Psz*<br/>
+Drugi ciąg używany do porównania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli ciągi są identyczne (w przypadku ignorowania wielkości liter), < 0, jeśli ten obiekt `CStringT` jest mniejszy niż *PSZ* (bez uwzględnienia wielkości liter) lub > 0, jeśli ten obiekt `CStringT` jest większy niż *PSZ* (bez uwzględnienia wielkości liter).
+Zero, jeśli ciągi są identyczne (ignorowanie sprawy), `CStringT` < 0, jeśli ten obiekt jest mniejszy niż *psz* (ignorowanie sprawy) lub > 0, jeśli ten `CStringT` obiekt jest większy niż *psz* (ignorowanie sprawy).
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja tekstu ogólnego `_tcscoll`, która jest zdefiniowana w używanie TCHAR. H mapuje do `stricoll`, `wcsicoll`lub `_mbsicoll`, w zależności od zestawu znaków, który jest zdefiniowany w czasie kompilacji. Każda funkcja wykonuje porównanie ciągów bez uwzględniania wielkości liter, zgodnie z aktualnie używaną stroną kodową. Aby uzyskać więcej informacji, zobacz [strcoll —, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).
+Funkcja `_tcscoll`tekstu ogólnego , która jest zdefiniowana w TCHAR. H, mapuje `stricoll`na `wcsicoll`jeden `_mbsicoll`, lub , w zależności od zestawu znaków, który jest zdefiniowany w czasie kompilacji. Każda funkcja wykonuje porównanie bez uwzględniania wielkości liter ciągów, zgodnie ze stroną kodową aktualnie używaną. Aby uzyskać więcej informacji, zobacz [strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#109](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_4.cpp)]
 
-##  <a name="compare"></a>CStringT:: Compare
+## <a name="cstringtcompare"></a><a name="compare"></a>CStringT::Porównaj
 
 Porównuje dwa ciągi (z uwzględnieniem wielkości liter).
 
@@ -402,26 +402,26 @@ int Compare(PCXSTR psz) const;
 
 ### <a name="parameters"></a>Parametry
 
-*psz*<br/>
-Inny ciąg używany do porównania.
+*Psz*<br/>
+Drugi ciąg używany do porównania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli ciągi są identyczne, < 0, jeśli ten obiekt `CStringT` jest mniejszy niż *PSZ*, lub > 0, jeśli ten obiekt `CStringT` jest większy niż *PSZ*.
+Zero, jeśli ciągi są identyczne, < `CStringT` 0, jeśli ten obiekt jest mniejszy niż `CStringT` *psz*, lub > 0, jeśli ten obiekt jest większy niż *psz*.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja tekstu ogólnego `_tcscmp`, która jest zdefiniowana w używanie TCHAR. H mapuje do `strcmp`, `wcscmp`lub `_mbscmp`, w zależności od zestawu znaków, który jest zdefiniowany w czasie kompilacji. Każda funkcja wykonuje porównanie ciągów z uwzględnieniem wielkości liter i nie wpływa na ustawienia regionalne. Aby uzyskać więcej informacji, zobacz [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md).
+Funkcja `_tcscmp`tekstu ogólnego , która jest zdefiniowana w TCHAR. H, mapuje `strcmp`na `wcscmp`jeden `_mbscmp`, lub , w zależności od zestawu znaków, który jest zdefiniowany w czasie kompilacji. Każda funkcja wykonuje porównanie ciągów z uwzględnieniem wielkości liter i nie ma na nie wpływu ustawienia regionalne. Aby uzyskać więcej informacji, zobacz [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md).
 
-Jeśli ciąg zawiera osadzone wartości null, na potrzeby porównania ciąg jest traktowany jako obcięty przy pierwszym osadzonym znaku null.
+Jeśli ciąg zawiera osadzone wartości null, na potrzeby porównania ciąg jest uważany za obcięty przy pierwszym osadzonym znaku null.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje użycie `CStringT::Compare`.
+Poniższy przykład pokazuje użycie `CStringT::Compare`.
 
 [!code-cpp[NVC_ATLMFC_Utilities#110](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_5.cpp)]
 
-##  <a name="comparenocase"></a>CStringT:: CompareNoCase
+## <a name="cstringtcomparenocase"></a><a name="comparenocase"></a>CStringT::CompareNoCase
 
 Porównuje dwa ciągi (bez uwzględniania wielkości liter).
 
@@ -431,24 +431,24 @@ int CompareNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*psz*<br/>
-Inny ciąg używany do porównania.
+*Psz*<br/>
+Drugi ciąg używany do porównania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli ciągi są identyczne (w przypadku ignorowania wielkości liter), < 0, jeśli ten obiekt `CStringT` jest mniejszy niż *PSZ* (bez uwzględnienia wielkości liter) lub > 0, jeśli ten obiekt `CStringT` jest większy niż *PSZ* (bez uwzględnienia wielkości liter).
+Zero, jeśli ciągi są identyczne (ignorowanie sprawy), `CStringT` <0, jeśli ten obiekt jest mniejszy niż *psz* (ignorowanie sprawy) lub >0, jeśli ten `CStringT` obiekt jest większy niż *psz* (ignorowanie sprawy).
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja tekstu ogólnego `_tcsicmp`, która jest zdefiniowana w używanie TCHAR. H mapuje do `_stricmp`, `_wcsicmp` lub `_mbsicmp`, w zależności od zestawu znaków, który jest zdefiniowany w czasie kompilacji. Każda funkcja wykonuje porównanie ciągów bez uwzględniania wielkości liter. Porównanie jest zależne od LC_CTYPE aspektu ustawień regionalnych, ale nie LC_COLLATE. Aby uzyskać więcej informacji, zobacz [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md).
+Funkcja `_tcsicmp`tekstu ogólnego , która jest zdefiniowana w TCHAR. H, mapuje `_stricmp`do `_wcsicmp` `_mbsicmp`jednego lub , w zależności od zestawu znaków, który jest zdefiniowany w czasie kompilacji. Każda funkcja wykonuje porównanie ciągów bez uwzględniania wielkości liter. Porównanie zależy od LC_CTYPE aspektu ustawień regionalnych, ale nie LC_COLLATE. Aby uzyskać więcej informacji, zobacz [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#111](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_6.cpp)]
 
-##  <a name="cstringt"></a>CStringT:: CStringT
+## <a name="cstringtcstringt"></a><a name="cstringt"></a>CStringT::CStringT
 
-Konstruuje obiekt `CStringT`.
+Konstruuje `CStringT` obiekt.
 
 ```
 CStringT() throw() :
@@ -525,72 +525,72 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 
 ### <a name="parameters"></a>Parametry
 
-*PCH*<br/>
-Wskaźnik do tablicy znaków o długości *nLength*, a nie zakończony znakiem null.
+*Pch*<br/>
+Wskaźnik do tablicy znaków o długości *nLength*, nie zakończonej zerem.
 
-*nLength*<br/>
-Liczba znaków w *PCH*.
+*nLength (nLength)*<br/>
+Liczba znaków w *pch*.
 
-*ch*<br/>
+*Ch*<br/>
 Pojedynczy znak.
 
-*pszSrc*<br/>
-Ciąg zakończony znakiem null, który ma zostać skopiowany do tego obiektu `CStringT`.
+*pszsrc*<br/>
+Ciąg zakończony z wartością null ma `CStringT` zostać skopiowany do tego obiektu.
 
 *pStringMgr*<br/>
-Wskaźnik do Menedżera pamięci dla obiektu `CStringT`. Aby uzyskać więcej informacji na temat `IAtlStringMgr` i zarządzania pamięcią dla `CStringT`, zobacz [Zarządzanie pamięcią za pomocą CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+Wskaźnik do menedżera pamięci `CStringT` dla obiektu. Aby uzyskać `IAtlStringMgr` więcej informacji `CStringT`na temat zarządzania pamięcią i zarządzania pamięcią dla , zobacz [Zarządzanie pamięcią z CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-*strSrc*<br/>
-Istniejący obiekt `CStringT`, który ma zostać skopiowany do tego obiektu `CStringT`. Aby uzyskać więcej informacji na temat `CThisString` i `CThisSimpleString`, zobacz sekcję Uwagi.
+*strSrc ( strSrc )*<br/>
+Istniejący `CStringT` obiekt do skopiowania `CStringT` do tego obiektu. Aby uzyskać `CThisString` więcej `CThisSimpleString`informacji na temat i , zobacz uwagi sekcji.
 
-*varSrc*<br/>
-Obiekt Variant do skopiowania do tego obiektu `CStringT`.
+*varSrc ( varSrc )*<br/>
+Obiekt wariantu, który ma `CStringT` zostać skopiowany do tego obiektu.
 
 *BaseType*<br/>
-Typ znaku klasy String. Może to być jeden z następujących modyfikatorów dostępu:
+Typ znaku klasy string. Może być jedną z następujących czynności:
 
-**char** (dla CIĄGÓW znaków ANSI).
+**char** (dla ciągów znaków ANSI).
 
 **wchar_t** (dla ciągów znaków Unicode).
 
-Używanie TCHAR (dla ciągów znaków ANSI i Unicode).
+TCHAR (dla ciągów znaków ANSI i Unicode).
 
 *bMFCDLL*<br/>
-Wartość logiczna określająca, czy projekt jest biblioteką DLL MFC (TRUE) czy nie (FALSE).
+Wartość logiczna określająca, czy projekt jest biblioteką DLL MFC (PRAWDA), czy nie (FALSE).
 
 *SystemString*<br/>
-Musi być `System::String`, a projekt musi być skompilowany przy użyciu/CLR.
+Musi `System::String`być , a projekt musi być skompilowany z /clr.
 
 *pString*<br/>
-Uchwyt dla obiektu `CStringT`.
+Dojście `CStringT` dla obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ponieważ konstruktory kopiuje dane wejściowe do nowego przydzielonego magazynu, należy pamiętać, że mogą wynikać wyjątki pamięci. Należy zauważyć, że niektóre z tych konstruktorów działają jako funkcje konwersji. Pozwala to na przykład zastąpić LPTSTR, gdzie oczekiwany jest obiekt `CStringT`.
+Ponieważ konstruktory skopiować dane wejściowe do nowego przydzielonego magazynu, należy pamiętać, że wyjątki pamięci może spowodować. Należy zauważyć, że niektóre z tych konstruktorów działają jako funkcje konwersji. Dzięki temu można zastąpić, na przykład, LPTSTR, gdzie `CStringT` oczekuje się obiektu.
 
-- `CStringT`(`LPCSTR` `lpsz`): konstruuje `CStringT` Unicode z ciągu ANSI. Można również użyć tego konstruktora do załadowania zasobu ciągu, jak pokazano w poniższym przykładzie.
+- `CStringT`( `LPCSTR` `lpsz` ): Tworzy Unicode `CStringT` z ciągu ANSI. Można również użyć tego konstruktora, aby załadować zasób ciągu, jak pokazano w poniższym przykładzie.
 
-- `CStringT(` `LPCWSTR` `lpsz`): konstruuje `CStringT` z ciągu Unicode.
+- `CStringT(`): Tworzy `CStringT` ciąg Unicode. `LPCWSTR` `lpsz`
 
-- `CStringT`(`const unsigned char*` `psz`): umożliwia konstruowanie `CStringT` ze wskaźnika do **znaku**nieoznaczonego.
-
-> [!NOTE]
->  Zdefiniuj makro _CSTRING_DISABLE_NARROW_WIDE_CONVERSION, aby wyłączyć niejawną konwersję ciągów między ciągami ANSI i Unicode. Makro wyklucza z konstruktorów kompilacji, które obsługują konwersję.
-
-Należy pamiętać, że parametr *strSrc* może być obiektem `CStringT` lub `CThisSimpleString`. W przypadku `CStringT`Użyj jednego z jego domyślnych wystąpień (`CString`, `CStringA`lub `CStringW`). Aby uzyskać `CThisSimpleString`, użyj **tego** wskaźnika. `CThisSimpleString` deklaruje wystąpienie [klasy CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md), która jest mniejszą klasą ciągu z mniej wbudowaną funkcją niż Klasa `CStringT`.
-
-Operator przeciążenia `CSimpleStringT<>&()` konstruuje obiekt `CStringT` z deklaracji `CSimpleStringT`.
+- `CStringT`( `const unsigned char*` `psz` ): Umożliwia skonstruowanie `CStringT` od wskaźnika do **niepodpisanego znaku**.
 
 > [!NOTE]
->  Chociaż istnieje możliwość tworzenia wystąpień `CStringT` zawierających osadzone znaki o wartości null, zalecamy ich użycie. Wywoływanie metod i operatorów w obiektach `CStringT`, które zawierają osadzone znaki null, może dawać niezamierzone wyniki.
+> Zdefiniuj makro _CSTRING_DISABLE_NARROW_WIDE_CONVERSION, aby wyłączyć niejawną konwersję ciągów między ciągami ANSI i Unicode. Makro wyklucza z konstruktorów kompilacji, które obsługują konwersji.
+
+Należy zauważyć, że parametr *strSrc* `CThisSimpleString` może być albo obiektem. `CStringT` W `CStringT`przypadku , użyj jednego z`CString` `CStringA`jego `CStringW`domyślnych wystąpienia ( , , lub ); for `CThisSimpleString`, użyj **tego** wskaźnika. `CThisSimpleString`deklaruje wystąpienie [CSimpleStringT Class](../../atl-mfc-shared/reference/csimplestringt-class.md), która jest mniejszą klasą ciągu z `CStringT` mniej wbudowaną funkcjonalnością niż klasa.
+
+Operator przeciążenia `CSimpleStringT<>&()` konstruuje `CSimpleStringT` `CStringT` obiekt z deklaracji.
+
+> [!NOTE]
+> Chociaż istnieje możliwość `CStringT` tworzenia wystąpień, które zawierają osadzone znaki null, zaleca się przeciwko niemu. Wywoływanie metod `CStringT` i operatorów na obiektach zawierających osadzone znaki null może tworzyć niezamierzone wyniki.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#112](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_7.cpp)]
 
-##  <a name="_dtorcstringt"></a>CStringT:: ~ CStringT
+## <a name="cstringtcstringt"></a><a name="_dtorcstringt"></a>CStringT::~CStringT
 
-Niszczy obiekt `CStringT`.
+Niszczy `CStringT` obiekt.
 
 ```
 ~CStringT() throw();
@@ -598,11 +598,11 @@ Niszczy obiekt `CStringT`.
 
 ### <a name="remarks"></a>Uwagi
 
-Niszczy obiekt `CStringT`.
+Niszczy `CStringT` obiekt.
 
-##  <a name="delete"></a>CStringT::D Usuń
+## <a name="cstringtdelete"></a><a name="delete"></a>CStringT::Delete
 
-Usuwa znak lub znaki z ciągu, rozpoczynając od znaku w danym indeksie.
+Usuwa znak lub znaki z ciągu, począwszy od znaku w danym indeksie.
 
 ```
 int Delete(int iIndex, int nCount = 1);
@@ -610,19 +610,19 @@ int Delete(int iIndex, int nCount = 1);
 
 ### <a name="parameters"></a>Parametry
 
-*iIndex*<br/>
-Indeks (liczony od zera) pierwszego znaku w obiekcie `CStringT` do usunięcia.
+*Iindex*<br/>
+Indeks od zera pierwszego znaku w `CStringT` obiekcie do usunięcia.
 
-*nCount*<br/>
+*Ncount*<br/>
 Liczba znaków do usunięcia.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Długość zmienionego ciągu.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *nCount* jest dłuższa niż ciąg, pozostała część ciągu zostanie usunięta.
+Jeśli *nCount* jest dłuższy niż ciąg, reszta ciągu zostaną usunięte.
 
 ### <a name="example"></a>Przykład
 
@@ -635,9 +635,9 @@ After: Soccer best,
     but hockey is quicker!
 ```
 
-##  <a name="find"></a>CStringT:: find
+## <a name="cstringtfind"></a><a name="find"></a>CStringT::Znajdź
 
-Wyszukuje w ciągu pierwsze dopasowanie znaku lub podciągu.
+Przeszukuje ten ciąg dla pierwszego dopasowania znaku lub podciągów.
 
 ```
 int Find(PCXSTR pszSub, int iStart=0) const throw();
@@ -647,29 +647,29 @@ int Find(XCHAR ch, int iStart=0) const throw();
 ### <a name="parameters"></a>Parametry
 
 *pszSub*<br/>
-Podciąg, który ma zostać wyszukany.
+Podciąg do wyszukania.
 
-*isrozpoczęcia*<br/>
-Indeks znaku w ciągu, w którym rozpoczyna się wyszukiwanie, lub 0, aby zacząć od początku.
+*Istart*<br/>
+Indeks znaku w ciągu, aby rozpocząć wyszukiwanie z lub 0, aby rozpocząć od początku.
 
-*ch*<br/>
+*Ch*<br/>
 Pojedynczy znak do wyszukania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Indeks (liczony od zera) pierwszego znaku w tym obiekcie `CStringT`, który pasuje do żądanego podciągu lub znaków; -1, jeśli podciąg lub znak nie zostanie znaleziony.
+Indeks od zera pierwszego znaku w `CStringT` tym obiekcie, który pasuje do żądanego podciągu lub znaków; -1, jeśli nie znaleziono podciągu lub znaku.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja jest przeciążona, aby akceptować zarówno pojedyncze znaki (podobne do funkcji Run-Time `strchr`), jak i ciągi (podobne do `strstr`).
+Funkcja jest przeciążona, aby akceptować zarówno pojedyncze `strchr`znaki (podobne do `strstr`funkcji czasu wykonywania) i ciągi (podobne do ).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#114](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_9.cpp)]
 
-##  <a name="findoneof"></a>CStringT:: FindOneOf
+## <a name="cstringtfindoneof"></a><a name="findoneof"></a>CStringT::FindOneOf
 
-Wyszukuje ten ciąg dla pierwszego znaku, który pasuje do dowolnego znaku zawartego w *pszCharSet*.
+Wyszukuje ten ciąg pierwszego znaku, który pasuje do dowolnego znaku zawartego w *pszCharSet*.
 
 ```
 int FindOneOf(PCXSTR pszCharSet) const throw();
@@ -678,11 +678,11 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 ### <a name="parameters"></a>Parametry
 
 *pszCharSet*<br/>
-Ciąg zawierający znaki do dopasowania.
+Ciąg zawierający znaki do dopasowywania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Indeks (liczony od zera) pierwszego znaku w tym ciągu, który jest również w *pszCharSet*; -1, jeśli nie ma żadnego dopasowania.
+Indeks zerowy pierwszego znaku w tym ciągu, który jest również w *pszCharSet*; -1, jeśli nie ma dopasowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -692,9 +692,9 @@ Znajduje pierwsze wystąpienie dowolnego ze znaków w *pszCharSet*.
 
 [!code-cpp[NVC_ATLMFC_Utilities#115](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_10.cpp)]
 
-##  <a name="format"></a>CStringT:: format
+## <a name="cstringtformat"></a><a name="format"></a>CStringT::Format
 
-Zapisuje dane sformatowane do `CStringT` w taki sam sposób, w jaki [sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) formatowanie danych do tablicy znaków w stylu C.
+Zapisuje sformatowane `CStringT` dane w taki sam sposób, w jaki [sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) formatuje dane w tablicę znaków w stylu C.
 
 ```
 void __cdecl Format(UINT nFormatID, [, argument]...);
@@ -704,31 +704,31 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 ### <a name="parameters"></a>Parametry
 
 *nFormatID*<br/>
-Identyfikator zasobu ciągu, który zawiera ciąg kontrolny formatu.
+Identyfikator zasobu ciągu zawierający ciąg kontroli formatu.
 
 *pszFormat*<br/>
-Ciąg kontrolny formatu.
+Ciąg kontroli formatu.
 
-*argument*<br/>
+*Argument*<br/>
 Argumenty opcjonalne.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja formatuje i przechowuje serie znaków i wartości w `CStringT`. Każdy opcjonalny argument (jeśli istnieje) jest konwertowany i wyprowadzany zgodnie ze specyfikacją formatu w *pszFormat* lub z zasobu ciągu identyfikowanego przez *nFormatID*.
+Ta funkcja formatuje i przechowuje serię `CStringT`znaków i wartości w pliku . Każdy opcjonalny argument (jeśli istnieje) jest konwertowany i wyprowadzany zgodnie z odpowiednią specyfikacją formatu w *pszFormat* lub z zasobu ciągu identyfikowany przez *nFormatID*.
 
-Wywołanie zakończy się niepowodzeniem, jeśli obiekt ciągu jest oferowany jako parametr do `Format`. Na przykład poniższy kod spowoduje nieprzewidywalne wyniki:
+Wywołanie zakończy się niepowodzeniem, jeśli sam obiekt `Format`ciągu jest oferowany jako parametr do . Na przykład następujący kod spowoduje nieprzewidywalne wyniki:
 
 [!code-cpp[NVC_ATLMFC_Utilities#116](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_11.cpp)]
 
-Aby uzyskać więcej informacji, zobacz [składnia specyfikacji formatowania: printf i wprintf Functions](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Aby uzyskać więcej informacji, zobacz [Formatowanie składni specyfikacji: printf i wprintf Functions](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#117](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_12.cpp)]
 
-##  <a name="formatmessage"></a>CStringT:: FormatMessage
+## <a name="cstringtformatmessage"></a><a name="formatmessage"></a>CStringT::FormatMessage
 
-Formatuje ciąg komunikatu.
+Formatuje ciąg wiadomości.
 
 ```
 void __cdecl FormatMessage(UINT nFormatID, [, argument]...);
@@ -738,30 +738,30 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 ### <a name="parameters"></a>Parametry
 
 *nFormatID*<br/>
-Identyfikator zasobu ciągu, który zawiera niesformatowany tekst komunikatu.
+Identyfikator zasobu ciągu zawierający niesformatowany tekst wiadomości.
 
 *pszFormat*<br/>
-Wskazuje ciąg kontrolny formatu. Zostanie ona przeskanowana pod kątem wstawiania i sformatowanego odpowiednio. Ciąg formatu jest podobny do *printf*ciągów formatu w funkcji czasu wykonywania, z wyjątkiem tego, że umożliwia wstawianie parametrów w dowolnej kolejności.
+Wskazuje ciąg kontroli formatu. Zostanie on zeskanowany w poszukiwaniu wstawek i odpowiednio sformatowany. Ciąg formatu jest podobny do funkcji *printf*-style ciągów w czasie wykonywania, z tą różnicą, że umożliwia wstawienie parametrów w dowolnej kolejności.
 
-*argument*<br/>
+*Argument*<br/>
 Argumenty opcjonalne.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja wymaga definicji komunikatu jako dane wejściowe. Definicja komunikatu jest określana przez *pszFormat* lub z zasobu ciągu identyfikowanego przez *nFormatID*. Funkcja kopiuje sformatowany tekst komunikatu do obiektu `CStringT`, przetwarzając wszystkie osadzone sekwencje INSERT w razie potrzeby.
+Funkcja wymaga definicji wiadomości jako dane wejściowe. Definicja wiadomości jest określana przez *pszFormat* lub z zasobu ciągu identyfikowane przez *nFormatID*. Funkcja kopiuje sformatowany `CStringT` tekst wiadomości do obiektu, przetwarzając wszystkie osadzone sekwencje wstawiania, jeśli jest to wymagane.
 
 > [!NOTE]
-> `FormatMessage` próbuje przydzielić pamięć systemową dla nowo sformatowanego ciągu. Jeśli ta próba nie powiedzie się, zostanie automatycznie wygenerowany wyjątek pamięci.
+> `FormatMessage`próbuje przydzielić pamięć systemową dla nowo sformatowanego ciągu. Jeśli ta próba nie powiedzie się, wyjątek pamięci jest automatycznie generowany.
 
-Każdy element INSERT musi mieć odpowiadający mu parametr, który jest zgodny z parametrem *pszFormat* lub *nFormatID* . W tekście komunikatu są obsługiwane różne sekwencje unikowe umożliwiające dynamiczne formatowanie wiadomości. Aby uzyskać więcej informacji, zobacz Funkcja [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) systemu Windows w Windows SDK.
+Każda płytka musi mieć odpowiedni parametr zgodnie z parametrem *pszFormat* lub *nFormatID.* W tekście wiadomości kilka sekwencji unikowych jest obsługiwanych w celu dynamicznego formatowania wiadomości. Aby uzyskać więcej informacji, zobacz funkcję Format systemu [WindowsMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) w programie Windows SDK.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#118](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]
 
-##  <a name="formatmessagev"></a>CStringT:: FormatMessageV
+## <a name="cstringtformatmessagev"></a><a name="formatmessagev"></a>CStringT::FormatMessageV
 
-Formatuje ciąg komunikatu przy użyciu listy zmiennych argumentów.
+Formatuje ciąg wiadomości przy użyciu listy argumentów zmiennej.
 
 ```
 void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
@@ -770,23 +770,23 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 ### <a name="parameters"></a>Parametry
 
 *pszFormat*<br/>
-Wskazuje ciąg kontrolny formatu. Zostanie ona przeskanowana pod kątem wstawiania i sformatowanego odpowiednio. Ciąg formatu jest podobny do `printf`ciągów formatu w formacie stylu, z wyjątkiem tego, że umożliwia wstawianie parametrów w dowolnej kolejności.
+Wskazuje ciąg kontroli formatu. Zostanie on zeskanowany w poszukiwaniu wstawek i odpowiednio sformatowany. Ciąg formatu jest podobny do `printf`ciągów formatu funkcji w czasie wykonywania, z tą różnicą, że umożliwia wstawienie parametrów w dowolnej kolejności.
 
-*pArgList*<br/>
-Wskaźnik na listę argumentów.
+*pArgList (Lista PArg)*<br/>
+Wskaźnik do listy argumentów.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja wymaga definicji komunikatu jako dane wejściowe, określonej przez *pszFormat*. Funkcja kopiuje sformatowany tekst komunikatu i zmienną listę argumentów do obiektu `CStringT`, przetwarzając wszystkie osadzone sekwencje wstawiania w razie potrzeby.
+Funkcja wymaga definicji wiadomości jako danych wejściowych, określonej przez *pszFormat*. Funkcja kopiuje sformatowany tekst wiadomości i `CStringT` zmienną listę argumentów do obiektu, przetwarzając wszystkie osadzone sekwencje wstawiania, jeśli jest to wymagane.
 
 > [!NOTE]
-> `FormatMessageV` wywołuje [CStringT:: FormatMessage](#formatmessage), które próbuje przydzielić pamięć systemową dla nowo sformatowanego ciągu. Jeśli ta próba nie powiedzie się, zostanie automatycznie wygenerowany wyjątek pamięci.
+> `FormatMessageV`wywołuje [CStringT::FormatMessage](#formatmessage), który próbuje przydzielić pamięć systemową dla nowo sformatowanego ciągu. Jeśli ta próba nie powiedzie się, wyjątek pamięci jest automatycznie generowany.
 
-Aby uzyskać więcej informacji, zobacz Funkcja [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) systemu Windows w Windows SDK.
+Aby uzyskać więcej informacji, zobacz funkcję Format systemu [WindowsMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) w programie Windows SDK.
 
-##  <a name="formatv"></a>CStringT:: FormatV
+## <a name="cstringtformatv"></a><a name="formatv"></a>CStringT::FormatV
 
-Formatuje ciąg komunikatu przy użyciu listy zmiennych argumentów.
+Formatuje ciąg wiadomości przy użyciu listy argumentów zmiennej.
 
 ```
 void FormatV(PCXSTR pszFormat, va_list args);
@@ -795,14 +795,14 @@ void FormatV(PCXSTR pszFormat, va_list args);
 ### <a name="parameters"></a>Parametry
 
 *pszFormat*<br/>
-Wskazuje ciąg kontrolny formatu. Zostanie ona przeskanowana pod kątem wstawiania i sformatowanego odpowiednio. Ciąg formatu jest podobny do `printf`ciągów formatu w formacie stylu, z wyjątkiem tego, że umożliwia wstawianie parametrów w dowolnej kolejności.
+Wskazuje ciąg kontroli formatu. Zostanie on zeskanowany w poszukiwaniu wstawek i odpowiednio sformatowany. Ciąg formatu jest podobny do `printf`ciągów formatu funkcji w czasie wykonywania, z tą różnicą, że umożliwia wstawienie parametrów w dowolnej kolejności.
 
-*argumentów*<br/>
-Wskaźnik na listę argumentów.
+*Args*<br/>
+Wskaźnik do listy argumentów.
 
 ### <a name="remarks"></a>Uwagi
 
-Zapisuje sformatowany ciąg i zmienną listę argumentów dla ciągu `CStringT` w taki sam sposób, który `vsprintf_s` formatuje dane do tablicy znaków w stylu C.
+Zapisuje sformatowany ciąg i zmienną `CStringT` listę argumentów `vsprintf_s` do ciągu w taki sam sposób, w jaki formatuje dane w tablicy znaków w stylu C.
 
 ### <a name="example"></a>Przykład
 
@@ -810,7 +810,7 @@ Zapisuje sformatowany ciąg i zmienną listę argumentów dla ciągu `CStringT` 
 
 [!code-cpp[NVC_ATLMFC_Utilities#120](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_15.cpp)]
 
-##  <a name="getenvironmentvariable"></a>CStringT:: GetEnvironmentVariable
+## <a name="cstringtgetenvironmentvariable"></a><a name="getenvironmentvariable"></a>CStringT::GetEnvironmentVariable
 
 Ustawia ciąg na wartość określonej zmiennej środowiskowej.
 
@@ -821,21 +821,21 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 ### <a name="parameters"></a>Parametry
 
 *pszVar*<br/>
-Wskaźnik na ciąg zakończony znakiem null, który określa zmienną środowiskową.
+Wskaźnik do ciągu zakończonego zerem, który określa zmienną środowiskową.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Pobiera wartość określonej zmiennej z bloku środowiska procesu wywołującego. Wartość jest w postaci ciągu znaków zakończonych znakiem null.
+Pobiera wartość określonej zmiennej z bloku środowiska procesu wywołującego. Wartość jest w postaci ciągu znaków zakończonych wartością null.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#121](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_16.cpp)]
 
-##  <a name="insert"></a>CStringT:: INSERT
+## <a name="cstringtinsert"></a><a name="insert"></a>CStringT::Wstaw
 
 Wstawia pojedynczy znak lub podciąg w danym indeksie w ciągu.
 
@@ -846,30 +846,30 @@ int Insert(int iIndex, XCHAR ch);
 
 ### <a name="parameters"></a>Parametry
 
-*iIndex*<br/>
-Indeks znaku, przed którym zostanie wykonane Wstawianie.
+*Iindex*<br/>
+Indeks znaku, przed którym nastąpi wstawienie.
 
-*psz*<br/>
-Wskaźnik do znacznika podciągu, który ma zostać wstawiony.
+*Psz*<br/>
+Wskaźnik do podciągów, który ma zostać wstawiony.
 
-*ch*<br/>
+*Ch*<br/>
 Znak, który ma zostać wstawiony.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Długość zmienionego ciągu.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametr *IIndex* określa pierwszy znak, który zostanie przeniesiony, aby zwolnić miejsce na znak lub podciąg. Jeśli *nIndex* ma wartość zero, wstawianie zostanie przeprowadzone przed całym ciągiem. Jeśli wartość *nIndex* jest większa niż długość ciągu, funkcja łączy obecny ciąg i nowy materiał dostarczony przez *ch* lub *PSZ*.
+Parametr *iIndex* identyfikuje pierwszy znak, który zostanie przeniesiony, aby zrobić miejsce dla znaku lub podciągu. Jeśli *nIndex* wynosi zero, wstawienie nastąpi przed całym ciągiem. Jeśli *nIndex* jest wyższa niż długość ciągu, funkcja połączy obecny ciąg i nowy materiał dostarczony przez *ch* lub *psz*.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#122](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_17.cpp)]
 
-##  <a name="left"></a>CStringT:: Left
+## <a name="cstringtleft"></a><a name="left"></a>CStringT::Po lewej
 
-Wyodrębnia skrajne znaki *nCount* z tego obiektu `CStringT` i zwraca kopię wyodrębnionego podciągu.
+Wyodrębnia znaki *nCount* po `CStringT` lewej stronie z tego obiektu i zwraca kopię wyodrębnionego podciągu.
 
 ```
 CStringT Left(int nCount) const;
@@ -877,26 +877,26 @@ CStringT Left(int nCount) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nCount*<br/>
-Liczba znaków do wyodrębnienia z tego obiektu `CStringT`.
+*Ncount*<br/>
+Liczba znaków do wyodrębnienia `CStringT` z tego obiektu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Obiekt `CStringT`, który zawiera kopię określonego zakresu znaków. Zwrócony obiekt `CStringT` może być pusty.
+Obiekt `CStringT` zawierający kopię określonego zakresu znaków. Zwrócony `CStringT` obiekt może być pusty.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *nCount* przekracza długość ciągu, cały ciąg zostanie wyodrębniony. `Left` jest podobna do funkcji Basic `Left`.
+Jeśli *nCount* przekracza długość ciągu, a następnie cały ciąg jest wyodrębniany. `Left`jest podobny do `Left` funkcji Basic.
 
-W przypadku zestawów znaków wielobajtowych (MBCS) *nCount* traktuje każdą 8-bitową sekwencję jako znak, tak że *nCount* zwraca liczbę znaków wielobajtowych pomnożonych przez dwa.
+W przypadku zestawów znaków wielo-bajtowych (MBCS) *nCount* traktuje każdą sekwencję 8-bitową jako znak, dzięki czemu *nCount* zwraca liczbę znaków wielo bajtowych pomnożoną przez dwa.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#123](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_18.cpp)]
 
-##  <a name="loadstring"></a>CStringT:: LoadString
+## <a name="cstringtloadstring"></a><a name="loadstring"></a>CStringT::LoadString
 
-Odczytuje zasób ciągu systemu Windows identyfikowany przez *NID*w istniejącym obiekcie `CStringT`.
+Odczytuje zasób ciągu systemu Windows, identyfikowany przez *nID,* w istniejący `CStringT` obiekt.
 
 ```
 BOOL LoadString(HINSTANCE hInstance, UINT nID, WORD wLanguageID);
@@ -906,70 +906,70 @@ BOOL LoadString(UINT nID);
 
 ### <a name="parameters"></a>Parametry
 
-*hInstance*<br/>
+*hInstance (Nieumieja)*<br/>
 Dojście do wystąpienia modułu.
 
-*nID*<br/>
+*Nid*<br/>
 Identyfikator zasobu ciągu systemu Windows.
 
 *wLanguageID*<br/>
 Język zasobu ciągu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli obciążenie zasobów zakończyło się pomyślnie; w przeciwnym razie 0.
+Niezerowe, jeśli obciążenie zasobu zakończyło się pomyślnie; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ładuje zasób ciągu (*NID*) z określonego modułu (*HINSTANCE*) przy użyciu określonego języka (*wLanguage*).
+Ładuje zasób ciągu *(nID)* z określonego modułu (*hInstance*) przy użyciu określonego języka (*wLanguage*).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#124](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_19.cpp)]
 
-##  <a name="makelower"></a>CStringT:: MakeLower
+## <a name="cstringtmakelower"></a><a name="makelower"></a>CStringT::MakeLower
 
-Konwertuje obiekt `CStringT` na ciąg małymi literami.
+Konwertuje `CStringT` obiekt na ciąg małych liter.
 
 ```
 CStringT& MakeLower();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ciąg z małymi literami.
+Wynikowy ciąg małych liter.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#125](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_20.cpp)]
 
-##  <a name="makereverse"></a>CStringT:: MakeReverse
+## <a name="cstringtmakereverse"></a><a name="makereverse"></a>CStringT::MakeReverse
 
-Odwraca kolejność znaków w obiekcie `CStringT`.
+Odwraca kolejność znaków w `CStringT` obiekcie.
 
 ```
 CStringT& MakeReverse();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ciąg odwrócony.
+Wynikowy odwrócony ciąg.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#126](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_21.cpp)]
 
-##  <a name="makeupper"></a>CStringT:: MakeUpper
+## <a name="cstringtmakeupper"></a><a name="makeupper"></a>CStringt::MakeUpper
 
-Konwertuje obiekt `CStringT` na ciąg pisany wielką literą.
+Konwertuje `CStringT` obiekt na ciąg wielkich liter.
 
 ```
 CStringT& MakeUpper();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ciąg z wielką literą.
+Wynikowy ciąg wielkich liter.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -977,9 +977,9 @@ Ciąg z wielką literą.
 
 [!code-cpp[NVC_ATLMFC_Utilities#127](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_22.cpp)]
 
-##  <a name="mid"></a>CStringT:: Mid
+## <a name="cstringtmid"></a><a name="mid"></a>CStringT::Mid
 
-Wyodrębnia podciąg o długości *nCount* znaków z tego obiektu `CStringT`, zaczynając od pozycji *iFirst* (liczony od zera).
+Wyodrębnia podciąg o długości *nCount* znaków z tego `CStringT` obiektu, począwszy od pozycji *iFirst* (zero-based).
 
 ```
 CStringT Mid(int iFirst, int nCount) const;
@@ -988,29 +988,29 @@ CStringT Mid(int iFirst) const;
 
 ### <a name="parameters"></a>Parametry
 
-*iFirst*<br/>
-Indeks (liczony od zera) pierwszego znaku w tym obiekcie `CStringT`, który ma zostać uwzględniony w wyodrębnionym podciągu.
+*iPierwsz*<br/>
+Indeks oparty na wartości zero pierwszego `CStringT` znaku w tym obiekcie, który ma zostać uwzględniony w wyodrębnianym podciągie.
 
-*nCount*<br/>
-Liczba znaków do wyodrębnienia z tego obiektu `CStringT`. Jeśli ten parametr nie zostanie podany, zostanie wyodrębniona pozostała część ciągu.
+*Ncount*<br/>
+Liczba znaków do wyodrębnienia `CStringT` z tego obiektu. Jeśli ten parametr nie jest dostarczany, a następnie pozostała część ciągu jest wyodrębniana.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Obiekt `CStringT`, który zawiera kopię określonego zakresu znaków. Zwróć uwagę, że zwrócony obiekt `CStringT` może być pusty.
+Obiekt `CStringT` zawierający kopię określonego zakresu znaków. Należy zauważyć, `CStringT` że zwrócony obiekt może być pusty.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja zwraca kopię wyodrębnionego podciągu. `Mid` przypomina podstawową funkcję Mid (z tą różnicą, że indeksy w warstwie Podstawowa są oparte na jednym z nich).
+Funkcja zwraca kopię wyodrębnionego podciągu. `Mid`jest podobny do funkcji Basic Mid (z tą różnicą, że indeksy w języku Basic są oparte na jednej).
 
-Dla zestawów znaków wielobajtowych (MBCS) *nCount* odnosi się do każdego znaku 8-bitowego; oznacza to, że bajty wiodące i końcowe w jednym znaku wielobajtowym są zliczane jako dwa znaki.
+W przypadku zestawów znaków wielobajtowych (MBCS) *nCount* odnosi się do każdego znaku 8-bitowego; oznacza to, że ołów i bajt szlaku w jednym znaku wielobajtowym są liczone jako dwa znaki.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#128](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_23.cpp)]
 
-##  <a name="oemtoansi"></a>CStringT:: OemToAnsi
+## <a name="cstringtoemtoansi"></a><a name="oemtoansi"></a>CStringT::OemToAnsi
 
-Konwertuje wszystkie znaki w tym obiekcie `CStringT` ze znakiem OEM ustawionym na zestaw znaków ANSI.
+Konwertuje wszystkie znaki `CStringT` w tym obiekcie z zestawu znaków OEM na zestaw znaków ANSI.
 
 ```
 void OemToAnsi();
@@ -1018,13 +1018,13 @@ void OemToAnsi();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest niedostępna, jeśli określono _UNICODE.
+Ta funkcja nie jest dostępna, jeśli zdefiniowano _UNICODE.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład dla [CStringT:: AnsiToOem](#ansitooem).
+Zobacz przykład [CStringT::AnsiToOem](#ansitooem).
 
-##  <a name="operator_eq"></a>CStringT:: operator =
+## <a name="cstringtoperator-"></a><a name="operator_eq"></a>CStringT::operator =
 
 Przypisuje nową wartość do ciągu.
 
@@ -1044,39 +1044,39 @@ CStringT& operator=(const VARIANT& var);
 
 ### <a name="parameters"></a>Parametry
 
-*strSrc*<br/>
-`CStringT` do przypisania do tego ciągu.
+*strSrc ( strSrc )*<br/>
+A, `CStringT` aby przypisać do tego ciągu.
 
-*str*<br/>
-Odwołanie do obiektu `CThisSimpleString`.
+*Str*<br/>
+Odwołanie do `CThisSimpleString` obiektu.
 
 *bMFCDLL*<br/>
-Wartość logiczna określająca, czy projekt jest biblioteką MFC DLL, czy nie.
+Wartość logiczna określająca, czy projekt jest biblioteką DLL MFC, czy nie.
 
 *BaseType*<br/>
 Typ podstawowy ciągu.
 
 *var*<br/>
-Obiekt VARIANT, który ma zostać przypisany do tego ciągu.
+Obiekt wariantu do przypisania do tego ciągu.
 
-*ch*<br/>
-Znak ANSI lub Unicode, który ma zostać przypisany do ciągu.
+*Ch*<br/>
+Znak ANSI lub Unicode do przypisania do ciągu.
 
-*pszSrc*<br/>
-Wskaźnik do przydzielonego pierwotnego ciągu.
+*pszsrc*<br/>
+Wskaźnik do przypisanego oryginalnego ciągu.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator przypisania akceptuje inny obiekt `CStringT`, wskaźnik znaku lub pojedynczy znak. Należy pamiętać, że wyjątki pamięci mogą wystąpić przy każdym użyciu tego operatora, ponieważ można przydzielyć nowy magazyn.
+Operator przypisania akceptuje `CStringT` inny obiekt, wskaźnik znaku lub pojedynczy znak. Należy pamiętać, że wyjątki pamięci może wystąpić za każdym razem, gdy używasz tego operatora, ponieważ można przydzielić nowy magazyn.
 
-Aby uzyskać informacje dotyczące `CThisSimpleString`, zobacz sekcję Uwagi [CStringT:: CStringT](#cstringt).
+Aby uzyskać `CThisSimpleString`informacje na temat , zobacz uwagi sekcji [CStringT::CStringT](#cstringt).
 
 > [!NOTE]
-> Chociaż istnieje możliwość tworzenia wystąpień `CStringT` zawierających osadzone znaki o wartości null, zalecamy ich użycie. Wywoływanie metod i operatorów w obiektach `CStringT`, które zawierają osadzone znaki null, może dawać niezamierzone wyniki.
+> Chociaż istnieje możliwość `CStringT` tworzenia wystąpień, które zawierają osadzone znaki null, zaleca się przeciwko niemu. Wywoływanie metod `CStringT` i operatorów na obiektach zawierających osadzone znaki null może tworzyć niezamierzone wyniki.
 
-##  <a name="operator_add"></a>CStringT:: operator +
+## <a name="cstringtoperator-"></a><a name="operator_add"></a>CStringT::operator +
 
-Łączy dwa ciągi lub znak i ciąg.
+Łączy dwa ciągi znaków lub znak i ciąg.
 
 ```
 friend CStringT operator+(const CStringT& str1, const CStringT& str2);
@@ -1090,38 +1090,38 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 
 ### <a name="parameters"></a>Parametry
 
-*CH1*<br/>
+*ch1*<br/>
 Znak ANSI lub Unicode do łączenia z ciągiem.
 
-*CH2*<br/>
+*ch2*<br/>
 Znak ANSI lub Unicode do łączenia z ciągiem.
 
 *str1*<br/>
-`CStringT` do łączenia z ciągiem lub znakiem.
+A `CStringT` do łączenia z ciągiem lub znakiem.
 
 *str2*<br/>
-`CStringT` do łączenia z ciągiem lub znakiem.
+A `CStringT` do łączenia z ciągiem lub znakiem.
 
 *psz1*<br/>
-Wskaźnik do ciągu zakończonego wartością null, który łączy się z ciągiem lub znakiem.
+Wskaźnik do ciągu zakończonego z wartością null, aby połączyć je z ciągiem lub znakiem.
 
 *psz2*<br/>
-Wskaźnik do ciągu, który łączy się z ciągiem lub znakiem.
+Wskaźnik do ciągu do połączenia z ciągiem lub znakiem.
 
 ### <a name="remarks"></a>Uwagi
 
-Istnieją siedem metod przeciążania funkcji `CStringT::operator+`. Pierwsza wersja łączy dwa istniejące `CStringT` obiektów. Następne dwa złączą obiekt `CStringT` i ciąg zakończony wartością null. Kolejne dwa złączą `CStringT` obiektu i znaku ANSI. Ostatnie dwa złączą `CStringT` obiektu i znak Unicode.
+Istnieje siedem form przeciążenia `CStringT::operator+` funkcji. Pierwsza wersja łączy dwa `CStringT` istniejące obiekty. Następne dwa połączyć `CStringT` obiekt i ciąg zakończony z wartością null. Następne dwa łączy obiekt `CStringT` i znak ANSI. Dwa ostatnie łączyć `CStringT` obiekt i znak Unicode.
 
 > [!NOTE]
->  Chociaż istnieje możliwość tworzenia wystąpień `CStringT` zawierających osadzone znaki o wartości null, zalecamy ich użycie. Wywoływanie metod i operatorów w obiektach `CStringT`, które zawierają osadzone znaki null, może dawać niezamierzone wyniki.
+> Chociaż istnieje możliwość `CStringT` tworzenia wystąpień, które zawierają osadzone znaki null, zaleca się przeciwko niemu. Wywoływanie metod `CStringT` i operatorów na obiektach zawierających osadzone znaki null może tworzyć niezamierzone wyniki.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#140](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_24.cpp)]
 
-##  <a name="operator_add_eq"></a>CStringT:: operator + =
+## <a name="cstringtoperator-"></a><a name="operator_add_eq"></a>CStringT::operator +=
 
-Łączy znaki na końcu ciągu.
+Łączy znaki z końcem ciągu.
 
 ```
 CStringT& operator+=(const CThisSimpleString& str);
@@ -1141,41 +1141,41 @@ CStringT& operator+=(const VARIANT& var);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Odwołanie do obiektu `CThisSimpleString`.
+*Str*<br/>
+Odwołanie do `CThisSimpleString` obiektu.
 
 *bMFCDLL*<br/>
-Wartość logiczna określająca, czy projekt jest biblioteką MFC DLL, czy nie.
+Wartość logiczna określająca, czy projekt jest biblioteką DLL MFC, czy nie.
 
 *BaseType*<br/>
 Typ podstawowy ciągu.
 
 *var*<br/>
-Obiekt Variant do łączenia z tym ciągiem.
+Obiekt wariantu do łączenia z tym ciągiem.
 
-*ch*<br/>
+*Ch*<br/>
 Znak ANSI lub Unicode do łączenia z ciągiem.
 
-*pszSrc*<br/>
-Wskaźnik do połączonego ciągu pierwotnego.
+*pszsrc*<br/>
+Wskaźnik do oryginalnego ciągu jest łączony.
 
-*strSrc*<br/>
-`CStringT` do łączenia się z tym ciągiem.
+*strSrc ( strSrc )*<br/>
+A, `CStringT` aby połączyć ten ciąg.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator akceptuje inny obiekt `CStringT`, wskaźnik znaku lub pojedynczy znak. Należy pamiętać, że wyjątki pamięci mogą wystąpić za każdym razem, gdy korzystasz z tego operatora łączenia, ponieważ nowy magazyn może być przydzielony do znaków dodawanych do tego obiektu `CStringT`.
+Operator akceptuje inny `CStringT` obiekt, wskaźnik znaków lub pojedynczy znak. Należy pamiętać, że wyjątki pamięci mogą wystąpić za każdym razem, gdy używasz tego `CStringT` operatora łączenia, ponieważ nowy magazyn może być przydzielony dla znaków dodanych do tego obiektu.
 
-Aby uzyskać informacje dotyczące `CThisSimpleString`, zobacz sekcję Uwagi [CStringT:: CStringT](#cstringt).
+Aby uzyskać `CThisSimpleString`informacje na temat , zobacz uwagi sekcji [CStringT::CStringT](#cstringt).
 
 > [!NOTE]
->  Chociaż istnieje możliwość tworzenia wystąpień `CStringT` zawierających osadzone znaki o wartości null, zalecamy ich użycie. Wywoływanie metod i operatorów w obiektach `CStringT`, które zawierają osadzone znaki null, może dawać niezamierzone wyniki.
+> Chociaż istnieje możliwość `CStringT` tworzenia wystąpień, które zawierają osadzone znaki null, zaleca się przeciwko niemu. Wywoływanie metod `CStringT` i operatorów na obiektach zawierających osadzone znaki null może tworzyć niezamierzone wyniki.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#141](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_25.cpp)]
 
-##  <a name="operator_eq_eq"></a>CStringT:: operator = =
+## <a name="cstringtoperator-"></a><a name="operator_eq_eq"></a>CStringT::operator ==
 
 Określa, czy dwa ciągi są logicznie równe.
 
@@ -1191,35 +1191,35 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*CH1*<br/>
+*ch1*<br/>
 Znak ANSI lub Unicode do porównania.
 
-*CH2*<br/>
+*ch2*<br/>
 Znak ANSI lub Unicode do porównania.
 
 *str1*<br/>
-`CStringT` do porównania.
+A `CStringT` dla porównania.
 
 *str2*<br/>
-`CStringT` do porównania.
+A `CStringT` dla porównania.
 
 *psz1*<br/>
-Wskaźnik do ciągu zakończony wartością null do porównania.
+Wskaźnik do ciągu zakończonego wartością null do porównania.
 
 *psz2*<br/>
-Wskaźnik do ciągu zakończony wartością null do porównania.
+Wskaźnik do ciągu zakończonego wartością null do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Testuje, czy ciąg lub znak po lewej stronie jest równy ciągowi lub znakowi po prawej stronie, i zwraca wartość PRAWDA lub FAŁSZ.
+Sprawdza, czy ciąg lub znak po lewej stronie jest równa ciąg lub znak po prawej stronie i zwraca prawda lub fałsz odpowiednio.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#142](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_26.cpp)]
 
-##  <a name="operator_neq"></a>CStringT:: operator! =
+## <a name="cstringtoperator-"></a><a name="operator_neq"></a>CStringT::operator !=
 
-Określa, czy dwa ciągi są logicznie nierówne.
+Określa, czy dwa ciągi logicznie nie są równe.
 
 ```
 friend bool operator!=(const CStringT& str1, const CStringT& str2) throw();
@@ -1233,35 +1233,35 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*CH1*<br/>
+*ch1*<br/>
 Znak ANSI lub Unicode do łączenia z ciągiem.
 
-*CH2*<br/>
+*ch2*<br/>
 Znak ANSI lub Unicode do łączenia z ciągiem.
 
 *str1*<br/>
-`CStringT` do porównania.
+A `CStringT` dla porównania.
 
 *str2*<br/>
-`CStringT` do porównania.
+A `CStringT` dla porównania.
 
 *psz1*<br/>
-Wskaźnik do ciągu zakończony wartością null do porównania.
+Wskaźnik do ciągu zakończonego wartością null do porównania.
 
 *psz2*<br/>
-Wskaźnik do ciągu zakończony wartością null do porównania.
+Wskaźnik do ciągu zakończonego wartością null do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Testuje, czy ciąg lub znak po lewej stronie nie są równe ciągowi lub znakowi po prawej stronie.
+Sprawdza, czy ciąg lub znak po lewej stronie nie jest równy ciąg lub znak po prawej stronie.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#143](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_27.cpp)]
 
-##  <a name="operator_lt"></a>CStringT:: operator &lt;
+## <a name="cstringtoperator-lt"></a><a name="operator_lt"></a>CStringT::operator&lt;
 
-Określa, czy ciąg po lewej stronie operatora jest mniejszy od ciągu po prawej stronie.
+Określa, czy ciąg po lewej stronie operatora jest mniejsza niż ciąg po prawej stronie.
 
 ```
 friend bool operator<(const CStringT& str1, const CStringT& str2) throw();
@@ -1272,32 +1272,32 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-`CStringT` do porównania.
+A `CStringT` dla porównania.
 
 *str2*<br/>
-`CStringT` do porównania.
+A `CStringT` dla porównania.
 
 *psz1*<br/>
-Wskaźnik do ciągu zakończony wartością null do porównania.
+Wskaźnik do ciągu zakończonego wartością null do porównania.
 
 *psz2*<br/>
-Wskaźnik do ciągu zakończony wartością null do porównania.
+Wskaźnik do ciągu zakończonego wartością null do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie lexicographical między ciągami znaków, znak po znaku do:
+Leksykograficzne porównanie ciągów, znak po znaku, aż:
 
-- Znajduje dwa odpowiednie znaki nierówne, a wynik porównania jest traktowany jako wynik porównania między ciągami.
+- Znajduje dwa odpowiednie znaki nierówne, a wynik ich porównania jest traktowany jako wynik porównania ciągów.
 
-- Nie ma żadnej nierówności, ale jeden ciąg ma więcej znaków niż drugi, a krótszy ciąg jest uznawany za krótszy niż dłuższy ciąg.
+- Nie znajduje żadnych nierówności, ale jeden ciąg ma więcej znaków niż inne, a krótszy ciąg jest uważany za mniej niż dłuższy ciąg.
 
-- Nie ma żadnej nierówności i stwierdza, że ciągi mają taką samą liczbę znaków, dlatego ciągi są równe.
+- Nie znajduje żadnych nierówności i stwierdza, że ciągi mają taką samą liczbę znaków, a więc ciągi są równe.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#144](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_28.cpp)]
 
-##  <a name="operator_gt"></a>CStringT:: operator &gt;
+## <a name="cstringtoperator-gt"></a><a name="operator_gt"></a>CStringT::operator&gt;
 
 Określa, czy ciąg po lewej stronie operatora jest większy niż ciąg po prawej stronie.
 
@@ -1310,34 +1310,34 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-`CStringT` do porównania.
+A `CStringT` dla porównania.
 
 *str2*<br/>
-`CStringT` do porównania.
+A `CStringT` dla porównania.
 
 *psz1*<br/>
-Wskaźnik do ciągu zakończony wartością null do porównania.
+Wskaźnik do ciągu zakończonego wartością null do porównania.
 
 *psz2*<br/>
-Wskaźnik do ciągu zakończony wartością null do porównania.
+Wskaźnik do ciągu zakończonego wartością null do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie lexicographical między ciągami znaków, znak po znaku do:
+Leksykograficzne porównanie ciągów, znak po znaku, aż:
 
-- Znajduje dwa odpowiednie znaki nierówne, a wynik porównania jest traktowany jako wynik porównania między ciągami.
+- Znajduje dwa odpowiednie znaki nierówne, a wynik ich porównania jest traktowany jako wynik porównania ciągów.
 
-- Nie ma żadnej nierówności, ale jeden ciąg ma więcej znaków niż drugi, a krótszy ciąg jest uznawany za krótszy niż dłuższy ciąg.
+- Nie znajduje żadnych nierówności, ale jeden ciąg ma więcej znaków niż inne, a krótszy ciąg jest uważany za mniej niż dłuższy ciąg.
 
-- Nie ma żadnej nierówności i stwierdza, że ciągi mają taką samą liczbę znaków, więc ciągi są równe.
+- Nie znajduje żadnych nierówności i stwierdza, że ciągi mają taką samą liczbę znaków, więc ciągi są równe.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#145](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_29.cpp)]
 
-##  <a name="operator_lt_eq"></a>CStringT:: operator &lt;=
+## <a name="cstringtoperator-lt"></a><a name="operator_lt_eq"></a>CStringT::operator&lt;=
 
-Określa, czy ciąg po lewej stronie operatora jest mniejszy od lub równy ciągowi po prawej stronie.
+Określa, czy ciąg po lewej stronie operatora jest mniejsza lub równa ciąg po prawej stronie.
 
 ```
 friend bool operator<=(const CStringT& str1, const CStringT& str2) throw();
@@ -1348,34 +1348,34 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-`CStringT` do porównania.
+A `CStringT` dla porównania.
 
 *str2*<br/>
-`CStringT` do porównania.
+A `CStringT` dla porównania.
 
 *psz1*<br/>
-Wskaźnik do ciągu zakończony wartością null do porównania.
+Wskaźnik do ciągu zakończonego wartością null do porównania.
 
 *psz2*<br/>
-Wskaźnik do ciągu zakończony wartością null do porównania.
+Wskaźnik do ciągu zakończonego wartością null do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie lexicographical między ciągami znaków, znak po znaku do:
+Leksykograficzne porównanie ciągów, znak po znaku, aż:
 
-- Znajduje dwa odpowiednie znaki nierówne, a wynik porównania jest traktowany jako wynik porównania między ciągami.
+- Znajduje dwa odpowiednie znaki nierówne, a wynik ich porównania jest traktowany jako wynik porównania ciągów.
 
-- Nie ma żadnej nierówności, ale jeden ciąg ma więcej znaków niż drugi, a krótszy ciąg jest uznawany za krótszy niż dłuższy ciąg.
+- Nie znajduje żadnych nierówności, ale jeden ciąg ma więcej znaków niż inne, a krótszy ciąg jest uważany za mniej niż dłuższy ciąg.
 
-- Nie ma żadnej nierówności i stwierdza, że ciągi mają taką samą liczbę znaków, więc ciągi są równe.
+- Nie znajduje żadnych nierówności i stwierdza, że ciągi mają taką samą liczbę znaków, więc ciągi są równe.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#146](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_30.cpp)]
 
-##  <a name="operator_gt_eq"></a>CStringT:: operator &gt;=
+## <a name="cstringtoperator-gt"></a><a name="operator_gt_eq"></a>CStringT::operator&gt;=
 
-Określa, czy ciąg po lewej stronie operatora jest większy od lub równy ciągowi po prawej stronie.
+Określa, czy ciąg po lewej stronie operatora jest większa lub równa ciąg po prawej stronie.
 
 ```
 friend bool operator>=(const CStringT& str1, const CStringT& str2) throw();
@@ -1386,10 +1386,10 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-`CStringT` do porównania.
+A `CStringT` dla porównania.
 
 *str2*<br/>
-`CStringT` do porównania.
+A `CStringT` dla porównania.
 
 *psz1*<br/>
 Wskaźnik do ciągu do porównania.
@@ -1399,19 +1399,19 @@ Wskaźnik do ciągu do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie lexicographical między ciągami znaków, znak po znaku do:
+Leksykograficzne porównanie ciągów, znak po znaku, aż:
 
-- Znajduje dwa odpowiednie znaki nierówne, a wynik porównania jest traktowany jako wynik porównania między ciągami.
+- Znajduje dwa odpowiednie znaki nierówne, a wynik ich porównania jest traktowany jako wynik porównania ciągów.
 
-- Nie ma żadnej nierówności, ale jeden ciąg ma więcej znaków niż drugi, a krótszy ciąg jest uznawany za krótszy niż dłuższy ciąg.
+- Nie znajduje żadnych nierówności, ale jeden ciąg ma więcej znaków niż inne, a krótszy ciąg jest uważany za mniej niż dłuższy ciąg.
 
-- Nie ma żadnej nierówności i stwierdza, że ciągi mają taką samą liczbę znaków, więc ciągi są równe.
+- Nie znajduje żadnych nierówności i stwierdza, że ciągi mają taką samą liczbę znaków, więc ciągi są równe.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#147](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_31.cpp)]
 
-##  <a name="remove"></a>CStringT:: Remove
+## <a name="cstringtremove"></a><a name="remove"></a>CStringT::Usuń
 
 Usuwa wszystkie wystąpienia określonego znaku z ciągu.
 
@@ -1421,24 +1421,24 @@ int Remove(XCHAR chRemove);
 
 ### <a name="parameters"></a>Parametry
 
-*chRemove*<br/>
+*chUsuj*<br/>
 Znak, który ma zostać usunięty z ciągu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Liczba znaków usuniętych z ciągu. Zero, jeśli ciąg nie jest zmieniany.
+Liczba znaków usuniętych z ciągu. Zero, jeśli ciąg nie zostanie zmieniony.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównania dla tego znaku są rozróżniana wielkość liter.
+W porównaniach dla znaku rozróżniana jest wielkość liter.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#129](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_32.cpp)]
 
-##  <a name="replace"></a>CStringT:: Replace
+## <a name="cstringtreplace"></a><a name="replace"></a>CStringT::Zamień
 
-Istnieją dwie wersje `Replace`. Pierwsza wersja zastępuje jedną lub więcej kopii podciągu przy użyciu innego podciągu. Oba podciągi są zakończone wartością null. Druga wersja zastępuje jedną lub więcej kopii znaku przy użyciu innego znaku. Obie wersje działają na danych znakowych przechowywanych w `CStringT`.
+Istnieją dwie wersje `Replace`programu . Pierwsza wersja zastępuje jedną lub więcej kopii podciągu przy użyciu innego podciągu. Oba podciągi są zakończone z wartością null. Druga wersja zastępuje jedną lub więcej kopii znaku przy użyciu innego znaku. Obie wersje działają na danych `CStringT`znaków przechowywanych w programie .
 
 ```
 int Replace(PCXSTR pszOld, PCXSTR pszNew);
@@ -1448,45 +1448,45 @@ int Replace(XCHAR chOld, XCHAR chNew);
 ### <a name="parameters"></a>Parametry
 
 *pszOld*<br/>
-Wskaźnik do ciągu zakończonego wartością null, który ma zostać zastąpiony przez *pszNew*.
+Wskaźnik do ciągu zakończonego zerem, który ma zostać zastąpiony przez *pszNew*.
 
 *pszNew*<br/>
-Wskaźnik do ciągu zakończonego wartością null, który zastępuje *pszOld*.
+Wskaźnik do ciągu zakończonego zerem, który zastępuje *pszOld*.
 
-*chOld*<br/>
+*chStary*<br/>
 Znak, który ma zostać zastąpiony przez *chNew*.
 
-*chNew*<br/>
-Znak zastępujący *chOld*.
+*chNowy*<br/>
+Znak *zastępujący chOld*.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca liczbę zamienionych wystąpień znaku lub podciągu lub zero, jeśli ciąg nie został zmieniony.
+Zwraca liczbę zastąpionych wystąpień znaku lub podciągów lub zero, jeśli ciąg nie zostanie zmieniony.
 
 ### <a name="remarks"></a>Uwagi
 
-`Replace` może zmienić długość ciągu, ponieważ *pszNew* i *pszOld* nie muszą mieć takiej samej długości, a kilka kopii starego podciągu można zmienić na nowe. Funkcja wykonuje dopasowanie uwzględniające wielkość liter.
+`Replace`można zmienić długość napisu bo *pszNew* i *pszOld* nie muszą być tej samej długości, a kilka kopii starego podciągu można zmienić na nowy. Funkcja wykonuje dopasowanie z uwzględnieniem wielkości liter.
 
-Przykłady wystąpień `CStringT` to `CString`, `CStringA`i `CStringW`.
+Przykładami `CStringT` wystąpień `CString`są `CStringA`, `CStringW`i .
 
-W przypadku `CStringA``Replace` współpracuje z znakami ANSI lub wielobajtowymi (MBCS). W przypadku `CStringW``Replace` współpracuje z szeroką literą.
+Dla `CStringA` `Replace` , współpracuje ze znakami ANSI lub wielobajtowymi (MBCS). For `CStringW` `Replace` , działa z szerokimi znakami.
 
-W przypadku `CString`typ danych jest wybierany w czasie kompilacji, na podstawie tego, czy są zdefiniowane stałe w poniższej tabeli.
+Dla `CString`, typ danych znaku jest wybierany w czasie kompilacji, na podstawie tego, czy zdefiniowane są stałe w poniższej tabeli.
 
-|Zdefiniowana stała|Character — typ danych|
+|Stała zdefiniowana|Typ danych znaków|
 |----------------------|-------------------------|
-|_UNICODE|Znaki dwubajtowe|
-|_MBCS|Znaki wielobajtowe|
-|Żadna|Znaki jednobajtowe|
-|Oba|Niezdefiniowany|
+|_unicode|Znaki dwubajtowe|
+|_mbcs|Znaki wielo bajtowe|
+|Żadna|Znaki jedno bajtowe|
+|Obie|Niezdefiniowane|
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#200](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_33.cpp)]
 
-##  <a name="reversefind"></a>CStringT:: ReverseFind
+## <a name="cstringtreversefind"></a><a name="reversefind"></a>CStringT::ReverseFind
 
-Wyszukuje w tym obiekcie `CStringT` ostatnie dopasowanie znaku.
+Przeszukuje ten `CStringT` obiekt pod kątem ostatniego dopasowania znaku.
 
 ```
 int ReverseFind(XCHAR ch) const throw();
@@ -1494,24 +1494,24 @@ int ReverseFind(XCHAR ch) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*ch*<br/>
-Znak, który ma zostać wyszukany.
+*Ch*<br/>
+Znak do wyszukania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Indeks (liczony od zera) ostatniego znaku w tym `CStringT` obiektu, który pasuje do żądanego znaku lub-1, jeśli znak nie zostanie znaleziony.
+Indeks od zera ostatniego znaku `CStringT` w tym obiekcie, który pasuje do żądanego znaku, lub -1, jeśli znak nie zostanie znaleziony.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja jest podobna do funkcji Run-Time `strrchr`.
+Funkcja jest podobna do funkcji `strrchr`czasu wykonywania .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#130](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_34.cpp)]
 
-##  <a name="right"></a>CStringT:: Right
+## <a name="cstringtright"></a><a name="right"></a>CStringT::Prawy
 
-Wyodrębnia ostatnią (czyli po prawej) *nCount* znaków z tego obiektu `CStringT` i zwraca kopię wyodrębnionego podciągu.
+Wyodrębnia ostatnie (czyli prawo) *znaki nCount* `CStringT` z tego obiektu i zwraca kopię wyodrębnione podciąg.
 
 ```
 CStringT Right(int nCount) const;
@@ -1519,26 +1519,26 @@ CStringT Right(int nCount) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nCount*<br/>
-Liczba znaków do wyodrębnienia z tego obiektu `CStringT`.
+*Ncount*<br/>
+Liczba znaków do wyodrębnienia `CStringT` z tego obiektu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Obiekt `CStringT`, który zawiera kopię określonego zakresu znaków. Zwróć uwagę, że zwrócony obiekt `CStringT` może być pusty.
+Obiekt `CStringT` zawierający kopię określonego zakresu znaków. Należy zauważyć, `CStringT` że zwrócony obiekt może być pusty.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *nCount* przekracza długość ciągu, cały ciąg zostanie wyodrębniony. `Right` jest podobna do funkcji Basic `Right` (z tą różnicą, że indeksy w warstwie Podstawowa nie są oparte na zero).
+Jeśli *nCount* przekracza długość ciągu, a następnie cały ciąg jest wyodrębniany. `Right`jest podobny do `Right` basic funkcji (z tą różnicą, że indeksy w basic są oparte na wartości zero).
 
-Dla zestawów znaków wielobajtowych (MBCS) *nCount* odnosi się do każdego znaku 8-bitowego; oznacza to, że bajty wiodące i końcowe w jednym znaku wielobajtowym są zliczane jako dwa znaki.
+W przypadku zestawów znaków wielobajtowych (MBCS) *nCount* odnosi się do każdego znaku 8-bitowego; oznacza to, że ołów i bajt szlaku w jednym znaku wielobajtowym są liczone jako dwa znaki.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#131](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_35.cpp)]
 
-##  <a name="setsysstring"></a>CStringT:: SetSysString
+## <a name="cstringtsetsysstring"></a><a name="setsysstring"></a>CStringT::SetSysString
 
-Ponownie przydzieli element BSTR wskazywany przez *pbstr* i kopiuje do niego zawartość obiektu `CStringT`, łącznie z znakiem null.
+Ponownie przydziela BSTR wskazywala przez *pbstr* `CStringT` i kopiuje do niego zawartość obiektu, w tym znak NULL.
 
 ```
 BSTR SetSysString(BSTR* pbstr) const;
@@ -1546,26 +1546,26 @@ BSTR SetSysString(BSTR* pbstr) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pbstr*<br/>
+*pbstr (pbstr)*<br/>
 Wskaźnik do ciągu znaków.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Nowy ciąg.
 
 ### <a name="remarks"></a>Uwagi
 
-W zależności od zawartości obiektu `CStringT` można zmienić wartość elementu BSTR, do którego odwołuje się *pbstr* . Funkcja zgłasza `CMemoryException`, jeśli istnieje niewystarczająca ilość pamięci.
+W zależności od `CStringT` zawartości obiektu wartość BSTR, do którego odwołuje się *pbstr,* może ulec zmianie. Funkcja `CMemoryException` zgłasza, jeśli istnieje niewystarczająca ilość pamięci.
 
-Ta funkcja jest zwykle używana do zmiany wartości ciągów przekazywania przez odwołanie dla automatyzacji.
+Ta funkcja jest zwykle używana do zmiany wartości ciągów przekazywanych przez odwołanie do automatyzacji.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#132](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_36.cpp)]
 
-##  <a name="spanexcluding"></a>CStringT:: SpanExcluding
+## <a name="cstringtspanexcluding"></a><a name="spanexcluding"></a>CStringT::SpanExcluding
 
-Wyodrębnia znaki z ciągu, zaczynając od pierwszego znaku, które nie znajdują się w zestawie znaków identyfikowanych przez *pszCharSet*.
+Wyodrębnia znaki z ciągu, zaczynając od pierwszego znaku, które nie znajdują się w zestawie znaków zidentyfikowanych przez *pszCharSet*.
 
 ```
 CStringT SpanExcluding(PCXSTR pszCharSet) const;
@@ -1576,21 +1576,21 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 *pszCharSet*<br/>
 Ciąg interpretowany jako zestaw znaków.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Podciąg, który zawiera znaki w ciągu, które nie znajdują się w *pszCharSet*, zaczynając od pierwszego znaku w ciągu i kończąc na pierwszym znaku znalezionym w ciągu, który jest również w *pszCharSet* (to jest, zaczynając od pierwszego znaku w ciągu i aż do wykluczenia pierwszego znaku w ciągu, który został znaleziony *pszCharSet*). Zwraca cały ciąg, jeśli w ciągu nie znaleziono żadnego znaku w *pszCharSet* .
+Podciąg zawierający znaki w ciągu, które nie znajdują się w *pszCharSet*, począwszy od pierwszego znaku w ciągu, a kończąc na pierwszym znaku znalezionym w ciągu, który jest również w *pszCharSet* (czyli począwszy od pierwszego znaku w ciągu i do, ale z wyłączeniem pierwszego znaku w ciągu, który znajduje się *pszCharSet*). Zwraca cały ciąg, jeśli w ciągu nie znaleziono żadnego znaku w *pszCharSet.*
 
 ### <a name="remarks"></a>Uwagi
 
-`SpanExcluding` wyodrębnia i zwraca wszystkie znaki poprzedzające pierwsze wystąpienie znaku z *pszCharSet* (innymi słowy, znak z *pszCharSet* i wszystkie znaki po nim w ciągu, nie są zwracane). Jeśli w ciągu nie zostanie znaleziony żaden znak z *pszCharSet* , `SpanExcluding` zwraca cały ciąg.
+`SpanExcluding`wyodrębnia i zwraca wszystkie znaki poprzedzające pierwsze wystąpienie znaku z *pszCharSet* (innymi słowy, znak z *pszCharSet* i wszystkie znaki następujące po nim w ciągu, nie są zwracane). Jeśli w ciągu nie zostanie znaleziony żaden znak `SpanExcluding` z *pszCharSet,* zwraca cały ciąg.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#133](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_37.cpp)]
 
-##  <a name="spanincluding"></a>CStringT:: SpanIncluding
+## <a name="cstringtspanincluding"></a><a name="spanincluding"></a>CStringT::SpanWcluding
 
-Wyodrębnia znaki z ciągu, zaczynając od pierwszego znaku, które znajdują się w zestawie znaków identyfikowanych przez *pszCharSet*.
+Wyodrębnia znaki z ciągu, począwszy od pierwszego znaku, które znajdują się w zestawie znaków zidentyfikowanych przez *pszCharSet*.
 
 ```
 CStringT SpanIncluding(PCXSTR pszCharSet) const;
@@ -1601,19 +1601,19 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 *pszCharSet*<br/>
 Ciąg interpretowany jako zestaw znaków.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Podciąg zawierający znaki w ciągu, który znajduje się w *pszCharSet*, zaczynając od pierwszego znaku w ciągu i kończąc, gdy znak zostanie znaleziony w ciągu, który nie znajduje się w *pszCharSet*. `SpanIncluding` zwraca pusty ciąg, jeśli pierwszy znak w ciągu nie znajduje się w określonym zestawie.
+Podciąg zawierający znaki w ciągu, które znajdują się w *pszCharSet*, począwszy od pierwszego znaku w ciągu i kończąc, gdy znak znajduje się w ciągu, który nie znajduje się w *pszCharSet*. `SpanIncluding`zwraca pusty podciąg, jeśli pierwszy znak w ciągu nie znajduje się w określonym zestawie.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli pierwszy znak ciągu nie znajduje się w zestawie znaków, `SpanIncluding` zwraca pusty ciąg. W przeciwnym razie zwraca sekwencję kolejnych znaków, które znajdują się w zestawie.
+Jeśli pierwszy znak ciągu nie znajduje się w `SpanIncluding` zestawie znaków, zwraca pusty ciąg. W przeciwnym razie zwraca sekwencję kolejnych znaków, które znajdują się w zestawie.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#134](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_38.cpp)]
 
-##  <a name="tokenize"></a>CStringT:: tokenize
+## <a name="cstringttokenize"></a><a name="tokenize"></a>CStringT::Tokenize
 
 Znajduje następny token w ciągu docelowym
 
@@ -1626,18 +1626,18 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 *pszTokens*<br/>
 Ciąg zawierający ograniczniki tokenu. Kolejność tych ograniczników nie jest ważna.
 
-*isrozpoczęcia*<br/>
-Indeks liczony od zera, aby rozpocząć wyszukiwanie.
+*Istart*<br/>
+Indeks od zera, aby rozpocząć wyszukiwanie.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Obiekt `CStringT` zawierający bieżącą wartość tokenu.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `Tokenize` odnajdzie następny token w ciągu docelowym. Zestaw znaków w *pszTokens* określa możliwe ograniczniki tokenu, który ma zostać znaleziony. Dla każdego wywołania `Tokenize` funkcja rozpoczyna się na isstartu, pomija wiodące ograniczniki i zwraca obiekt `CStringT` zawierający bieżący *token, który*jest ciągiem znaków do następnego znaku ogranicznika. Wartość parametru ispoczątek zostaje zaktualizowana *tak, aby była* pozycją po znaku ogranicznika końcowego, lub-1, jeśli osiągnięto koniec ciągu. Więcej tokenów można rozbić z reszty ciągu docelowego przez serię wywołań do `Tokenize`*przy użyciu funkcji* ISP.m., aby śledzić miejsce w ciągu, w którym ma zostać odczytany następny token. Gdy nie ma więcej tokenów, funkcja zwróci pusty ciąg, a parametr *isrozpoczęcia* zostanie ustawiony na wartość-1.
+Funkcja `Tokenize` znajduje następny token w ciągu docelowym. Zestaw znaków w *pszTokens* określa możliwe ograniczniki tokenu, który ma zostać znaleziony. Przy każdym `Tokenize` wywołaniu funkcji rozpoczyna się od *iStart*, pomija `CStringT` wiodących ograniczników i zwraca obiekt zawierający bieżący token, który jest ciąg znaków do następnego znaku ogranicznika. Wartość *iStart* jest aktualizowana jako pozycja po końcowym znaku ogranicznika lub -1, jeśli osiągnięto koniec ciągu. Więcej tokenów można podzielić z pozostałej części ciągu docelowego `Tokenize`przez serię wywołań do , za pomocą *iStart,* aby śledzić, gdzie w ciągu następny token ma być odczytywany. Gdy nie ma więcej tokenów funkcja zwróci pusty ciąg i *iStart* zostanie ustawiona na -1.
 
-W przeciwieństwie do funkcji CRT tokenize, takich jak [strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s,](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md)_mbstok_s_l, `Tokenize` nie modyfikuje ciągu docelowego.
+W przeciwieństwie do funkcji tokenizacji CRT, takich jak [strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md), `Tokenize` nie modyfikuje ciągu docelowego.
 
 ### <a name="example"></a>Przykład
 
@@ -1653,9 +1653,9 @@ Resulting Token: Second
 Resulting Token: Third
 ```
 
-##  <a name="trim"></a>CStringT:: Trim
+## <a name="cstringttrim"></a><a name="trim"></a>CStringT::Przytnij
 
-Przycina wiodące i końcowe znaki z ciągu.
+Przycina znaki początkowe i końcowe z ciągu.
 
 ```
 CStringT& Trim(XCHAR chTarget);
@@ -1668,20 +1668,20 @@ CStringT& Trim();
 *chTarget*<br/>
 Znak docelowy, który ma zostać przycięty.
 
-*pszTargets*<br/>
-Wskaźnik do ciągu zawierającego znaki docelowe do przycięcia. Wszystkie początkowe i końcowe wystąpienia znaków w *pszTarget* zostaną przycięte z obiektu `CStringT`.
+*pszTargety*<br/>
+Wskaźnik do ciągu zawierającego znaki docelowe, które mają zostać przycięte. Wszystkie wiodące i końcowe wystąpienia znaków w *pszTarget* `CStringT` zostaną przycięte z obiektu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca przycięty ciąg.
 
 ### <a name="remarks"></a>Uwagi
 
-Usuwa wszystkie wystąpienia wiodące i końcowe jednego z następujących elementów:
+Usuwa wszystkie wystąpienia początkowe i końcowe jednego z następujących:
 
 - Znak określony przez *chTarget*.
 
-- Wszystkie znaki Znalezione w ciągu określonym przez *pszTargets*.
+- Wszystkie znaki znalezione w ciągu określonym przez *pszTargets*.
 
 - Odstępu.
 
@@ -1698,7 +1698,7 @@ Before: "******Soccer is best, but liquor is quicker!!!!!"
 After : "Soccer is best, but liquor is quicker"
 ```
 
-##  <a name="trimleft"></a>CStringT:: TrimLeft
+## <a name="cstringttrimleft"></a><a name="trimleft"></a>CStringT::TrimLeft
 
 Przycina znaki wiodące z ciągu.
 
@@ -1713,20 +1713,20 @@ CStringT& TrimLeft();
 *chTarget*<br/>
 Znak docelowy, który ma zostać przycięty.
 
-*pszTargets*<br/>
-Wskaźnik do ciągu zawierającego znaki docelowe do przycięcia. Wszystkie wiodące wystąpienia znaków w *pszTarget* zostaną przycięte z obiektu `CStringT`.
+*pszTargety*<br/>
+Wskaźnik do ciągu zawierającego znaki docelowe, które mają zostać przycięte. Wszystkie wiodące wystąpienia znaków w *pszTarget* zostaną `CStringT` przycięte z obiektu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Otrzymany ciąg, który został usunięty.
+Wynikowy ciąg przycięty.
 
 ### <a name="remarks"></a>Uwagi
 
-Usuwa wszystkie wystąpienia wiodące i końcowe jednego z następujących elementów:
+Usuwa wszystkie wystąpienia początkowe i końcowe jednego z następujących:
 
 - Znak określony przez *chTarget*.
 
-- Wszystkie znaki Znalezione w ciągu określonym przez *pszTargets*.
+- Wszystkie znaki znalezione w ciągu określonym przez *pszTargets*.
 
 - Odstępu.
 
@@ -1734,7 +1734,7 @@ Usuwa wszystkie wystąpienia wiodące i końcowe jednego z następujących eleme
 
 [!code-cpp[NVC_ATLMFC_Utilities#137](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_41.cpp)]
 
-##  <a name="trimright"></a>CStringT:: TrimRight
+## <a name="cstringttrimright"></a><a name="trimright"></a>CStringT::TrimRight
 
 Przycina końcowe znaki z ciągu.
 
@@ -1749,28 +1749,28 @@ CStringT& TrimRight();
 *chTarget*<br/>
 Znak docelowy, który ma zostać przycięty.
 
-*pszTargets*<br/>
-Wskaźnik do ciągu zawierającego znaki docelowe do przycięcia. Wszystkie końcowe wystąpienia znaków w *pszTarget* zostaną przycięte z obiektu `CStringT`.
+*pszTargety*<br/>
+Wskaźnik do ciągu zawierającego znaki docelowe, które mają zostać przycięte. Wszystkie końcowe wystąpienia znaków w *pszTarget* zostaną przycięte z `CStringT` obiektu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca obiekt `CStringT`, który zawiera przycięty ciąg.
+Zwraca `CStringT` obiekt zawierający przycięty ciąg.
 
 ### <a name="remarks"></a>Uwagi
 
-Usuwa końcowe wystąpienia jednego z następujących elementów:
+Usuwa końcowe wystąpienia jednego z następujących objawów:
 
 - Znak określony przez *chTarget*.
 
-- Wszystkie znaki Znalezione w ciągu określonym przez *pszTargets*.
+- Wszystkie znaki znalezione w ciągu określonym przez *pszTargets*.
 
 - Odstępu.
 
-Wersja `CStringT& TrimRight(XCHAR chTarget)` akceptuje jeden parametr znaku i usuwa wszystkie kopie tego znaku z końca `CStringT` danych ciągu. Zaczyna się od końca ciągu i działa ku przodowi. Jest on zatrzymywany po znalezieniu innego znaku lub `CSTringT` wypełniania danych znakowych.
+Wersja `CStringT& TrimRight(XCHAR chTarget)` akceptuje jeden parametr znak i usuwa wszystkie kopie tego `CStringT` znaku z końca danych ciągu. Zaczyna się od końca ciągu i działa w kierunku przodu. Zatrzymuje się, gdy znajdzie inny `CSTringT` znak lub gdy zabraknie danych znakowych.
 
-Wersja `CStringT& TrimRight(PCXSTR pszTargets)` akceptuje ciąg zakończony znakiem null, który zawiera wszystkie różne znaki do wyszukania. Usuwa wszystkie kopie tych znaków w obiekcie `CStringT`. Rozpocznie się na końcu ciągu i działa ku przodowi. Jest ona zatrzymywana, gdy odnajdzie znak, który nie znajduje się w ciągu docelowym, lub gdy `CStringT` zawiera dane znakowe. Nie próbuje dopasować całego ciągu docelowego do podciągu na końcu `CStringT`.
+Wersja `CStringT& TrimRight(PCXSTR pszTargets)` akceptuje ciąg zakończony z wartością null, który zawiera wszystkie różne znaki do wyszukania. Usuwa wszystkie kopie tych znaków w `CStringT` obiekcie. Zaczyna się na końcu ciągu i działa w kierunku przodu. Zatrzymuje się, gdy znajdzie znak, który nie znajduje `CStringT` się w ciągu docelowym lub gdy zabraknie danych znaków. Nie próbuje dopasować całego ciągu docelowego do podciągów na końcu . `CStringT`
 
-Wersja `CStringT& TrimRight()` nie wymaga żadnych parametrów. Obcina końcowe znaki odstępu od końca ciągu `CStringT`. Znaki odstępu mogą być podziałami wierszy, spacjami lub znakami tabulacji.
+Wersja `CStringT& TrimRight()` nie wymaga żadnych parametrów. Przycina wszystkie końcowe znaki odstępu z `CStringT` końca ciągu. Znaki odstępów mogą być podziałami wierszy, spacjami lub kartami.
 
 -
 
@@ -1781,5 +1781,5 @@ Wersja `CStringT& TrimRight()` nie wymaga żadnych parametrów. Obcina końcowe 
 ## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Klasy udostępnione ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
+[Klasy współdzielone ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 [CSimpleStringT, klasa](../../atl-mfc-shared/reference/csimplestringt-class.md)

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::SizeT Struct
 ms.assetid: 0803612c-8ba1-430c-9b7b-1bebae88608d
-ms.openlocfilehash: 7f81cb9e1fc2ef7a74cb3878c369e4d7d14e3d90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5add9212dc2655bc37cd357741073f855b009bde
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330144"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322162"
 ---
 # <a name="platformsizet-value-class"></a>Klasa wartości Platform::SizeT
 
-Reprezentuje rozmiar obiektu. SizeT jest typem danych bez znaku.
+Reprezentuje rozmiar obiektu. SizeT jest niepodpisanym typem danych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,23 +26,23 @@ public ref class SizeT sealed : ValueType
 
 ### <a name="members"></a>Elementy członkowskie
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|[Konstruktor SizeT::SizeT](#ctor)|Inicjuje nowe wystąpienie klasy z określoną wartością.|
+|[SizeT::Konstruktor SizeT](#ctor)|Inicjuje nowe wystąpienie klasy o określonej wartości.|
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** Windows 8
+**Minimalny obsługiwany klient:** Windows 8
 
-**Minimalna obsługiwana serwera:** Windows Server 2012
+**Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Namespace:** Platforma
+**Obszar nazw:** Platformy
 
 **Metadane:** platform.winmd
 
-## <a name="ctor"></a>  Konstruktor SizeT::SizeT
+## <a name="sizetsizet-constructor"></a><a name="ctor"></a>SizeT::Konstruktor SizeT
 
-Inicjuje nowe wystąpienie klasy SizeT z określoną wartością.
+Inicjuje nowe wystąpienie SizeT o określonej wartości.
 
 ### <a name="syntax"></a>Składnia
 
@@ -52,12 +52,12 @@ SizeT( uint32 value1 );   SizeT( void* value2 );
 
 ### <a name="parameters"></a>Parametry
 
-*value1*<br/>
-Wartość nieoznaczona 32-bitowych.
+*wartość 1*<br/>
+Niepodpisana wartość 32-bitowa.
 
-*value2*<br/>
-Wskaźnik na wartość nieoznaczona 32-bitowych.
+*wartość2*<br/>
+Wskaźnik do niepodpisanej wartości 32-bitowej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)

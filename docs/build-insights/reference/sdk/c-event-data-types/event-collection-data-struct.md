@@ -1,6 +1,6 @@
 ---
 title: Struktura EVENT_COLLECTION_DATA
-description: Zestaw C++ SDK usługi Build insights EVENT_COLLECTION_DATA odwołanie do struktury.
+description: C++ Build Insights SDK EVENT_COLLECTION_DATA odwołania do struktury.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1a622a8459b6aa6d9dcbe0faaf90ae545b449466
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 88ba39ede8c86f47c2e6458332ae005eddc06fda
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333812"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325689"
 ---
 # <a name="event_collection_data-structure"></a>Struktura EVENT_COLLECTION_DATA
 
 ::: moniker range="<=vs-2015"
 
-Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019.
+C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `EVENT_COLLECTION_DATA` opisuje tablicę elementów [EVENT_DATA](event-data-struct.md) .
+Struktura `EVENT_COLLECTION_DATA` opisuje tablicę [EVENT_DATA](event-data-struct.md) elementów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,6 +43,6 @@ typedef struct EVENT_COLLECTION_DATA_TAG
 |  |  |
 |--|--|
 | `Count` | Liczba `EVENT_DATA` elementów w tablicy. |
-| `Elements` | Wskaźnik do pierwszego elementu `EVENT_DATA` w tablicy. |
+| `Elements` | Wskaźnik do `EVENT_DATA` pierwszego elementu w tablicy. |
 
 ::: moniker-end

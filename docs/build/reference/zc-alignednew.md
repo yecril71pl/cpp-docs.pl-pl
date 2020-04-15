@@ -1,5 +1,5 @@
 ---
-title: '/ Zc: alignednew (c ++ 17 nadmiernie wyrównana alokacja)'
+title: /Zc:alignedNew (Nadmiernie wyrównana alokacja C++17)
 ms.date: 05/18/2019
 f1_keywords:
 - /Zc:alignedNew
@@ -7,32 +7,32 @@ helpviewer_keywords:
 - /Zc:alignedNew
 - Zc:alignedNew
 - -Zc:alignedNew
-ms.openlocfilehash: dfcc4982e1b5f67b5a01d5a0d09d4fd9279deacf
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.openlocfilehash: 041f62bbbf5f7a2750960d21d1534cf6daf4b874
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934182"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335683"
 ---
-# <a name="zcalignednew-c17-over-aligned-allocation"></a>/ Zc: alignednew (c ++ 17 nadmiernie wyrównana alokacja)
+# <a name="zcalignednew-c17-over-aligned-allocation"></a>/Zc:alignedNew (Nadmiernie wyrównana alokacja C++17)
 
-Włącz obsługę standardu C ++ 17 nadmiernie wyrównanych **nowe**, dynamicznej alokacji pamięci wyrównane na granicach większa niż wartość domyślna o maksymalnym rozmiarze wyrównany standardowej, **max\_wyrównać\_t**.
+Włącz obsługę c++17 przerekcełowanej **nowej,** dynamicznej alokacji pamięci wyrównanej do granic większych niż domyślny dla standardowego typu wyrównanego o maksymalnym rozmiarze, **maksymalnie\_wyrównać\_t**.
 
 ## <a name="syntax"></a>Składnia
 
-> **/ Zc:alignedNew**\[-]
+> **/Zc:alignedNew**\[-]
 
 ## <a name="remarks"></a>Uwagi
 
-Kompilator MSVC i bibliotekę obsługuje C ++ 17 standardowa nadmiernie wyrównanych dynamicznej alokacji pamięci. Gdy **/Zc: alignednew** opcja jest określona, dynamicznej alokacji, takie jak `new Example;` szanuje wyrównanie *przykład* nawet jeśli jest większa niż `max_align_t`, największemu wyrównaniu wymagane dla wszystkich typów podstawowych. Gdy wyrównanie przydzielonego typu nie jest większy niż wyrównanie gwarantowane przez operatora, oryginalnym **nowe**, która jest dostępna jako wartość wstępnie zdefiniowane makro  **\_ \_STDCPP\_ DOMYŚLNE\_NEW\_WYRÓWNANIE\_\_**, instrukcja `new Example;` powoduje wywołanie `::operator new(size_t)` tak jak w języku C ++ 14. Gdy wyrównania jest większa niż  **\_ \_STDCPP\_domyślne\_nowy\_WYRÓWNANIE\_\_**, implementacja zamiast tego uzyskuje pamięć przy użyciu `::operator new(size_t, align_val_t)`. Podobnie, wywołuje usuwania typów nadmiernie wyrównanych `::operator delete(void*, align_val_t)` lub wielkości Usuń podpis `::operator delete(void*, size_t, align_val_t)`.
+Kompilator MSVC i biblioteka obsługują standardową alokację pamięci dynamicznej w języku C++17. Po określeniu **opcji /Zc:alignedNew** alokacja `new Example;` dynamiczna, taka jak wyrównanie *example,* nawet wtedy, gdy jest większa niż `max_align_t`, największe wyrównanie wymagane dla dowolnego typu podstawowego. Gdy wyrównanie przydzielonego typu jest nie więcej niż wyrównanie gwarantowane przez oryginalnego operatora **nowy,** dostępne jako wartość wstępnie `new Example;` zdefiniowanego makra ** \_ \_\_STDCPP DEFAULT\_NEW\_ALIGNMENT\_**, instrukcja powoduje `::operator new(size_t)` wywołanie, jak to miało miejsce w C ++ 14. Gdy wyrównanie jest większe niż `::operator new(size_t, align_val_t)` ** \_ \_WYRÓWNANIE DOMYŚLNE\_\_STDCPP,\_\_** implementacja zamiast tego uzyskuje pamięć za pomocą programu . Podobnie, usunięcie typów przerekłokowanych `::operator delete(void*, align_val_t)` wywołuje lub rozmiar `::operator delete(void*, size_t, align_val_t)`delete podpisu .
 
-**/Zc: alignednew** opcja jest dostępna tylko podczas [/STD: c ++ 17](std-specify-language-standard-version.md) lub [/STD: c ++ najnowsze](std-specify-language-standard-version.md) jest włączona. W obszarze **/STD: c ++ 17** lub **/STD: c ++ najnowsze**, **/Zc: alignednew** jest domyślnie włączona, aby były zgodne z normą ISO w standardzie C ++ 17. Jeśli tylko przyczyny implementuje operatora **nowe** i **Usuń** służy do obsługi alokacje nadmiernie wyrównanych, już nie potrzebujesz tego kodu w trybie C ++ 17. Aby wyłączyć tę opcję i powrócić do języka C ++ 14 zachowanie **nowe** i **Usuń** zastosowania **/std::c ++ 17** lub **/STD: c ++ najnowsze**, Określ **/Zc:alignedNew-**. W przypadku zastosowania operatora **nowe** i **Usuń** , ale których nie jesteś gotowy do zaimplementowania nadmiernie wyrównanych operator **nowe** i **Usuń** przeciążenia, które mają `align_val_t` parametru, użyj **/Zc:alignedNew-** opcję, aby uniemożliwić wygenerowanie przez kompilator i standardową bibliotekę wywołania przeciążenia nadmiernie wyrównana. [/ Permissive-](permissive-standards-conformance.md) opcji nie zmienia domyślne ustawienie **/Zc: alignednew**.
+Opcja **/Zc:alignedNew** jest dostępna tylko wtedy, gdy włączona jest [opcja /std:c++17](std-specify-language-standard-version.md) lub [/std:c++latest.](std-specify-language-standard-version.md) W **obszarze /std:c++17** lub **/std:c++latest** **,/Zc:alignedNew** jest domyślnie włączona, aby była zgodna ze standardem ISO C++17. Jeśli jedynym powodem implementowania operatora **nowy** i **usunąć** jest obsługa alokacji przerekranowane, może nie być już potrzebny ten kod w trybie C++17. Aby wyłączyć tę opcję i przywrócić zachowanie c++14 **nowego** i **usunąć** podczas korzystania **z /std::c++17** lub **/std:c++latest**, specify **/Zc:alignnew-**. Jeśli zaimplementujesz operator **nowy** i **usunąć,** ale nie jesteś gotowy do zaimplementowania operatora przerównane **nowe** i **usunąć** przeciążenia, które mają `align_val_t` parametr, należy użyć **/Zc:alignedNew-** opcja, aby zapobiec kompilator i biblioteka standardowa z generowania wywołań przerekroniowanych przeciążeń. Opcja [/permissive-](permissive-standards-conformance.md) nie zmienia domyślnego ustawienia **/Zc:alignNew**.
 
-Obsługa **/Zc: alignednew** jest dostępna, począwszy od programu Visual Studio 2017 w wersji 15.5.
+Obsługa **/Zc:alignedNew** jest dostępna począwszy od programu Visual Studio 2017 w wersji 15.5.
 
 ## <a name="example"></a>Przykład
 
-Ten przykład pokazuje, jak operator **nowe** i operator **Usuń** zachowywać się, gdy **/Zc: alignednew** ustawiono opcję.
+W tym przykładzie pokazano, jak operator **nowy** i **usunięcie** operatora zachowują się po ustawieniu opcji **/Zc:alignedNew.**
 
 ```cpp
 // alignedNew.cpp
@@ -86,7 +86,7 @@ int main() {
 }
 ```
 
-Te dane wyjściowe są typowe dla 32-bitowych kompilacji. Wskaźnik, które różnią się w wartości na podstawie której działa Twoja aplikacja w pamięci.
+To dane wyjściowe są typowe dla kompilacji 32-bitowych. Wartości wskaźnika różnią się w zależności od tego, gdzie aplikacja działa w pamięci.
 
 ```Output
 unaligned new(4) = 009FD0D0
@@ -95,16 +95,16 @@ aligned new(256, 256) = 009FE800
 aligned sized delete(009FE800, 256, 256)
 ```
 
-Aby uzyskać informacje na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
+Aby uzyskać informacje na temat problemów z zgodnością w programie Visual C++, zobacz [Niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **Strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora języka C++ i właściwości kompilacji w programie Visual Studio.](../working-with-project-properties.md)
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
+1. Wybierz stronę właściwości**wiersza polecenia** **Właściwości** > konfiguracji**C/C++.** > 
 
-1. Modyfikowanie **dodatkowe opcje** właściwości do uwzględnienia **/Zc: alignednew** lub **/Zc:alignedNew-** , a następnie wybierz **OK**.
+1. Zmodyfikuj właściwość **Opcje dodatkowe,** aby uwzględnić **/Zc:alignnew** lub **/Zc:alignedNew-** a następnie wybierz **przycisk OK**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [/Zc (Zgodność)](zc-conformance.md)

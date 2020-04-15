@@ -20,19 +20,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-ms.openlocfilehash: 71c50771889381ad2288637c23930103b5925a2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ccd01bc4d48dc088538f4799b595cce3fb910ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246933"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321368"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Klasa CAtlPreviewCtrlImpl
 
-Ta klasa jest implementacją ATL okna, które jest umieszczone na oknie hosta zapewnionym przez powłokę podglądu sformatowanego.
+Ta klasa jest implementacją ATL okna, które jest umieszczane w oknie hosta dostarczonym przez Shell for Rich Preview.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,27 +46,27 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAtlPreviewCtrlImpl::~CAtlPreviewCtrlImpl](#dtor)|Destructs obiekt formantu (wersja zapoznawcza).|
-|[CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl](#catlpreviewctrlimpl)|Tworzy obiekt formantu (wersja zapoznawcza).|
+|[CAtlPreviewCtrlImpl::~CAtlPreviewCtrlImpl](#dtor)|Niszczy obiekt kontrolny podglądu.|
+|[CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl](#catlpreviewctrlimpl)|Konstruuje obiekt kontrolny podglądu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAtlPreviewCtrlImpl::Create](#create)|Metoda wywoływana przez program obsługi podglądu sformatowanego można utworzyć okna Windows.|
-|[CAtlPreviewCtrlImpl::Destroy](#destroy)|Metoda wywoływana przez program obsługi podglądu sformatowanego kiedy zachodzi potrzeba zniszczyć tej kontrolki.|
-|[CAtlPreviewCtrlImpl::Focus](#focus)|Zestawy danych wejściowych fokus do tego formantu.|
+|[CAtlPreviewCtrlImpl::Tworzenie](#create)|Wywoływane przez program obsługi rich preview, aby utworzyć okno systemu Windows.|
+|[CAtlPreviewCtrlImpl::Destroy](#destroy)|Wywoływany przez program obsługi rich preview, gdy musi zniszczyć ten formant.|
+|[CAtlPreviewCtrlImpl::Focus](#focus)|Ustawia fokus danych wejściowych do tego formantu.|
 |[CAtlPreviewCtrlImpl::OnPaint](#onpaint)|Obsługuje komunikat WM_PAINT.|
-|[CAtlPreviewCtrlImpl::Redraw](#redraw)|Zawiera informacje dla tego formantu, aby odświeżyć.|
+|[CAtlPreviewCtrlImpl::Przerysuj](#redraw)|Mówi tej formancie, aby przerysować.|
 |[CAtlPreviewCtrlImpl::SetHost](#sethost)|Ustawia nowy element nadrzędny dla tego formantu.|
-|[CAtlPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Metoda wywoływana przez program obsługi podglądu sformatowanego kiedy zachodzi potrzeba ustawić wizualizacje podglądu zawartości.|
-|[CAtlPreviewCtrlImpl::SetRect](#setrect)|Ustawia nowy prostokąt otaczający dla tego formantu.|
+|[CAtlPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Wywoływana przez program obsługi rich preview, gdy musi ustawić wizualizacje zawartości rozszerzonego podglądu.|
+|[CAtlPreviewCtrlImpl::SetRect](#setrect)|Ustawia nowy prostokąt ograniczający dla tego formantu.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAtlPreviewCtrlImpl::DoPaint](#dopaint)|Metoda wywoływana przez platformę, by renderować korzystania z wersji zapoznawczej.|
+|[CAtlPreviewCtrlImpl::DoPaint](#dopaint)|Wywoływane przez strukturę do renderowania wersji zapoznawczej.|
 
 ### <a name="protected-constants"></a>Stałe chronione
 
@@ -74,12 +74,12 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 |----------|-----------------|
 |[CAtlPreviewCtrlImpl::m_plf](#m_plf)|Czcionka używana do wyświetlania tekstu w oknie podglądu.|
 
-### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+### <a name="protected-data-members"></a>Członkowie chronionych danych
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAtlPreviewCtrlImpl::m_clrBack](#m_clrback)|Kolor tła okna podglądu.|
-|[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|Kolor tekstu w oknie podglądu.|
+|[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|Kolor tekstu okna podglądu.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -103,9 +103,9 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 **Nagłówek:** atlpreviewctrlimpl.h
 
-##  <a name="catlpreviewctrlimpl"></a>  CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl
+## <a name="catlpreviewctrlimplcatlpreviewctrlimpl"></a><a name="catlpreviewctrlimpl"></a>CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl
 
-Tworzy obiekt formantu (wersja zapoznawcza).
+Konstruuje obiekt kontrolny podglądu.
 
 ```
 CAtlPreviewCtrlImpl(void) : m_clrText(0),
@@ -114,9 +114,9 @@ CAtlPreviewCtrlImpl(void) : m_clrText(0),
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="dtor"></a>  CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl
+## <a name="catlpreviewctrlimplcatlpreviewctrlimpl"></a><a name="dtor"></a>CAtlPreviewCtrlImpl::~CAtlPreviewCtrlImpl
 
-Destructs obiekt formantu (wersja zapoznawcza).
+Niszczy obiekt kontrolny podglądu.
 
 ```
 virtual ~CAtlPreviewCtrlImpl(void);
@@ -124,9 +124,9 @@ virtual ~CAtlPreviewCtrlImpl(void);
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="create"></a>  CAtlPreviewCtrlImpl::Create
+## <a name="catlpreviewctrlimplcreate"></a><a name="create"></a>CAtlPreviewCtrlImpl::Tworzenie
 
-Metoda wywoływana przez program obsługi podglądu sformatowanego można utworzyć okna Windows.
+Wywoływane przez program obsługi rich preview, aby utworzyć okno systemu Windows.
 
 ```
 virtual BOOL Create(HWND hWndParent, const RECT* prc);
@@ -134,21 +134,21 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*<br/>
-Dojście do okna hosta, dostarczone przez powłokę podglądu sformatowanego.
+*hWndRodziciek*<br/>
+Dojście do okna hosta dostarczone przez powłokę dla zaawansowanego podglądu.
 
-*Chińska Republika Ludowa*<br/>
+*Chrl*<br/>
 Określa początkowy rozmiar i położenie okna.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli to się powiedzie; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli się powiedzie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="destroy"></a>  CAtlPreviewCtrlImpl::Destroy
+## <a name="catlpreviewctrlimpldestroy"></a><a name="destroy"></a>CAtlPreviewCtrlImpl::Destroy
 
-Metoda wywoływana przez program obsługi podglądu sformatowanego kiedy zachodzi potrzeba zniszczyć tej kontrolki.
+Wywoływany przez program obsługi rich preview, gdy musi zniszczyć ten formant.
 
 ```
 virtual void Destroy();
@@ -156,9 +156,9 @@ virtual void Destroy();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="dopaint"></a>  CAtlPreviewCtrlImpl::DoPaint
+## <a name="catlpreviewctrlimpldopaint"></a><a name="dopaint"></a>CAtlPreviewCtrlImpl::DoPaint
 
-Metoda wywoływana przez platformę, by renderować korzystania z wersji zapoznawczej.
+Wywoływane przez strukturę do renderowania wersji zapoznawczej.
 
 ```
 virtual void DoPaint(HDC hdc);
@@ -166,14 +166,14 @@ virtual void DoPaint(HDC hdc);
 
 ### <a name="parameters"></a>Parametry
 
-*hdc*<br/>
-Dojście do kontekstu urządzenia dla malowania.
+*Hdc*<br/>
+Dojście do kontekstu urządzenia do malowania.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="focus"></a>  CAtlPreviewCtrlImpl::Focus
+## <a name="catlpreviewctrlimplfocus"></a><a name="focus"></a>CAtlPreviewCtrlImpl::Focus
 
-Zestawy danych wejściowych fokus do tego formantu.
+Ustawia fokus danych wejściowych do tego formantu.
 
 ```
 virtual void Focus();
@@ -181,7 +181,7 @@ virtual void Focus();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="m_clrback"></a>  CAtlPreviewCtrlImpl::m_clrBack
+## <a name="catlpreviewctrlimplm_clrback"></a><a name="m_clrback"></a>CAtlPreviewCtrlImpl::m_clrBack
 
 Kolor tła okna podglądu.
 
@@ -191,9 +191,9 @@ COLORREF m_clrBack;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="m_clrtext"></a>  CAtlPreviewCtrlImpl::m_clrText
+## <a name="catlpreviewctrlimplm_clrtext"></a><a name="m_clrtext"></a>CAtlPreviewCtrlImpl::m_clrText
 
-Kolor tekstu w oknie podglądu.
+Kolor tekstu okna podglądu.
 
 ```
 COLORREF m_clrText;
@@ -201,7 +201,7 @@ COLORREF m_clrText;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="m_plf"></a>  CAtlPreviewCtrlImpl::m_plf
+## <a name="catlpreviewctrlimplm_plf"></a><a name="m_plf"></a>CAtlPreviewCtrlImpl::m_plf
 
 Czcionka używana do wyświetlania tekstu w oknie podglądu.
 
@@ -211,7 +211,7 @@ const LOGFONTW* m_plf;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onpaint"></a>  CAtlPreviewCtrlImpl::OnPaint
+## <a name="catlpreviewctrlimplonpaint"></a><a name="onpaint"></a>CAtlPreviewCtrlImpl::OnPaint
 
 Obsługuje komunikat WM_PAINT.
 
@@ -225,17 +225,17 @@ LRESULT OnPaint(
 
 ### <a name="parameters"></a>Parametry
 
-*nMsg*<br/>
+*Nmsg*<br/>
 Ustaw WM_PAINT.
 
-*wParam*<br/>
+*Wparam*<br/>
 Ten parametr nie jest używany.
 
-*lParam*<br/>
+*Lparam*<br/>
 Ten parametr nie jest używany.
 
-*bHandled*<br/>
-Gdy ta funkcja zwróci wartość, zawiera wartość TRUE.
+*bHandled (Obj.*<br/>
+Gdy ta funkcja zwraca, zawiera wartość PRAWDA.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -243,9 +243,9 @@ Zawsze zwraca wartość 0.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="redraw"></a>  CAtlPreviewCtrlImpl::Redraw
+## <a name="catlpreviewctrlimplredraw"></a><a name="redraw"></a>CAtlPreviewCtrlImpl::Przerysuj
 
-Zawiera informacje dla tego formantu, aby odświeżyć.
+Mówi tej formancie, aby przerysować.
 
 ```
 virtual void Redraw();
@@ -253,7 +253,7 @@ virtual void Redraw();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="sethost"></a>  CAtlPreviewCtrlImpl::SetHost
+## <a name="catlpreviewctrlimplsethost"></a><a name="sethost"></a>CAtlPreviewCtrlImpl::SetHost
 
 Ustawia nowy element nadrzędny dla tego formantu.
 
@@ -263,14 +263,14 @@ virtual void SetHost(HWND hWndParent);
 
 ### <a name="parameters"></a>Parametry
 
-*hWndParent*<br/>
+*hWndRodziciek*<br/>
 Dojście do nowego okna nadrzędnego.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setpreviewvisuals"></a>  CAtlPreviewCtrlImpl::SetPreviewVisuals
+## <a name="catlpreviewctrlimplsetpreviewvisuals"></a><a name="setpreviewvisuals"></a>CAtlPreviewCtrlImpl::SetPreviewVisuals
 
-Metoda wywoływana przez program obsługi podglądu sformatowanego kiedy zachodzi potrzeba ustawić wizualizacje podglądu zawartości.
+Wywoływana przez program obsługi rich preview, gdy musi ustawić wizualizacje zawartości rozszerzonego podglądu.
 
 ```
 virtual void SetPreviewVisuals(
@@ -281,20 +281,20 @@ virtual void SetPreviewVisuals(
 
 ### <a name="parameters"></a>Parametry
 
-*clrBack*<br/>
+*clrBack (włask*<br/>
 Kolor tła okna podglądu.
 
-*clrText*<br/>
-Kolor tekstu w oknie podglądu.
+*clrTekst*<br/>
+Kolor tekstu okna podglądu.
 
-*plf*<br/>
+*Plf*<br/>
 Czcionka używana do wyświetlania tekstu w oknie podglądu.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setrect"></a>  CAtlPreviewCtrlImpl::SetRect
+## <a name="catlpreviewctrlimplsetrect"></a><a name="setrect"></a>CAtlPreviewCtrlImpl::SetRect
 
-Ustawia nowy prostokąt otaczający dla tego formantu.
+Ustawia nowy prostokąt ograniczający dla tego formantu.
 
 ```
 virtual void SetRect(const RECT* prc, BOOL bRedraw);
@@ -302,14 +302,14 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>Parametry
 
-*Chińska Republika Ludowa*<br/>
-Określa nowy rozmiar i położenie formantu w wersji zapoznawczej.
+*Chrl*<br/>
+Określa nowy rozmiar i położenie formantu podglądu.
 
 *bRedraw*<br/>
-Określa, czy formant powinien być narysowany ponownie.
+Określa, czy formant ma zostać ponownie narysowany.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)

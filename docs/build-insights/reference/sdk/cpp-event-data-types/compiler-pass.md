@@ -1,6 +1,6 @@
 ---
-title: Klasa CompilerPass
-description: Odwołanie C++ do klasy CompilerPass zestawu SDK usługi Build Insights.
+title: KompilatorPass, klasa
+description: Odwołanie do klasy SDK CompilerPass kompilacji języka C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3c2fa1c2c4be8aaf5bec77b383f93a4b033ca8e3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 11af981b647d5183f88dad024d90c0ef4f8a28bc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333476"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325043"
 ---
-# <a name="compilerpass-class"></a>Klasa CompilerPass
+# <a name="compilerpass-class"></a>KompilatorPass, klasa
 
 ::: moniker range="<=vs-2015"
 
-Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019.
+C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Klasa `CompilerPass` jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Użyj go, aby dopasować [BACK_END_PASS](../event-table.md#back-end-pass) lub [FRONT_END_PASS](../event-table.md#front-end-pass) zdarzenia.
+Klasa `CompilerPass` jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Użyj go, aby dopasować [zdarzenie BACK_END_PASS](../event-table.md#back-end-pass) lub [FRONT_END_PASS.](../event-table.md#front-end-pass)
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,28 +49,28 @@ public:
 
 ## <a name="members"></a>Elementy członkowskie
 
-Wraz z dziedziczonymi elementami członkowskimi z klasy podstawowej [działania](activity.md) Klasa `CompilerPass` zawiera następujących członków:
+Wraz z odziedziczonych elementów członkowskich z `CompilerPass` jego [działania](activity.md) klasy podstawowej, klasa zawiera następujące elementy członkowskie:
 
 ### <a name="constructors"></a>Konstruktorów
 
-[CompilerPass](#compiler-pass)
+[KompilatorPrzechajnik](#compiler-pass)
 
 ### <a name="enums"></a>Wyliczenia
 
-#### <a name="passcode"></a>Kodem
+#### <a name="passcode"></a>Kod
 
 |||
 |-|-|
-|FRONT_END|Fronton.|
-|BACK_END|Przebieg zaplecza.|
+|FRONT_END|Przełęcz front-end.|
+|BACK_END|Back-end pass.|
 
 ### <a name="functions"></a>Funkcje
 
-[InputSourcePath](#input-source-path)\
-[OutputObjectPath](#output-object-path)\
-[Kod dostępu](#pass-code)\
+[Ścieżka źródła danych wejścia](#input-source-path)\
+[Ścieżka ktorawy](#output-object-path)\
+[Kod](#pass-code)\
 
-## <a name="compiler-pass"></a>CompilerPass
+## <a name="compilerpass"></a><a name="compiler-pass"></a>KompilatorPrzechajnik
 
 ```cpp
 CompilerPass(const RawEvent& event);
@@ -78,10 +78,10 @@ CompilerPass(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *zdarzeń*
-Zdarzenie [BACK_END_PASS](../event-table.md#back-end-pass) lub [FRONT_END_PASS](../event-table.md#front-end-pass) .
+*Zdarzenie*\
+Zdarzenie [BACK_END_PASS](../event-table.md#back-end-pass) lub [FRONT_END_PASS.](../event-table.md#front-end-pass)
 
-## <a name="input-source-path"></a>InputSourcePath
+## <a name="inputsourcepath"></a><a name="input-source-path"></a>Ścieżka źródła danych wejścia
 
 ```cpp
 const wchar_t* InputSourcePath() const;
@@ -89,9 +89,9 @@ const wchar_t* InputSourcePath() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ścieżka bezwzględna do wejściowego pliku źródłowego przetworzonego przez ten przebieg kompilatora.
+Ścieżka bezwzględna do pliku źródłowego danych wejściowych przetwarzane przez ten przebieg kompilatora.
 
-## <a name="output-object-path"></a>OutputObjectPath
+## <a name="outputobjectpath"></a><a name="output-object-path"></a>Ścieżka ktorawy
 
 ```cpp
 const wchar_t* OutputObjectPath() const;
@@ -99,9 +99,9 @@ const wchar_t* OutputObjectPath() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ścieżka bezwzględna do pliku obiektu wyjściowego utworzonego przez ten kompilator.
+Ścieżka bezwzględna do pliku obiektu wyjściowego produkowanego przez ten przebieg kompilatora.
 
-## <a name="pass-code"></a>Kodem
+## <a name="passcode"></a><a name="pass-code"></a>Kod
 
 ```cpp
 PassCode PassCode() const;

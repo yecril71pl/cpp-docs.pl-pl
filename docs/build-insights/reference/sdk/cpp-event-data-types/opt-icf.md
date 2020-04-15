@@ -1,6 +1,6 @@
 ---
 title: Klasa OptICF
-description: Odwołanie C++ do klasy OptICF zestawu SDK usługi Build Insights.
+description: Odwołanie do klasy SDK OptICF aplikacji C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b7594d573a0e4eaf2e19f306b8a109923ba235dc
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: f63fea61f9defc216390fa377b2d1eeace01371b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333112"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324475"
 ---
 # <a name="opticf-class"></a>Klasa OptICF
 
 ::: moniker range="<=vs-2015"
 
-Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019.
+C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Klasa `OptICF` jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Użyj go, aby dopasować zdarzenie [OPT_ICF](../event-table.md#opt-icf) .
+Klasa `OptICF` jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Użyj go, aby dopasować [zdarzenie OPT_ICF.](../event-table.md#opt-icf)
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Elementy członkowskie
 
-Wraz z dziedziczonymi elementami członkowskimi z klasy podstawowej [działania](activity.md) Klasa `OptICF` zawiera następujących członków:
+Wraz z odziedziczonych elementów członkowskich z `OptICF` jego [działania](activity.md) klasy podstawowej, klasa zawiera następujące elementy członkowskie:
 
 ### <a name="constructors"></a>Konstruktorów
 
-[OptICF](#opt-icf)
+[OpticF ( OptICF )](#opt-icf)
 
-## <a name="opt-icf"></a>OptICF
+## <a name="opticf"></a><a name="opt-icf"></a>OpticF ( OptICF )
 
 ```cpp
 OptICF(const RawEvent& event);
@@ -53,7 +53,7 @@ OptICF(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *zdarzeń*
-Zdarzenie [OPT_ICF](../event-table.md#opt-icf) .
+*Zdarzenie*\
+Wydarzenie [OPT_ICF.](../event-table.md#opt-icf)
 
 ::: moniker-end

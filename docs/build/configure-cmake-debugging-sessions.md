@@ -1,47 +1,57 @@
 ---
 title: Konfigurowanie sesji debugowania CMake w programie Visual Studio
-description: Opisuje sposób używania programu Visual Studio do konfigurowania ustawień debugera CMake
-ms.date: 01/13/2020
+description: W tym artykule opisano sposób konfigurowania ustawień debugera CMake za pomocą programu Visual Studio.
+ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 5e627f02b5245baede6e92268cedfc43957f3abc
-ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
+ms.openlocfilehash: 8364e5b3dd3316a4ed7e754a104a14373040aa6e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031325"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328849"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Konfigurowanie sesji debugowania narzędzia CMake
 
 ::: moniker range="vs-2015"
 
-Natywna obsługa CMake jest dostępna w programie Visual Studio 2017 i nowszych.
+Natywna pomoc techniczna CMake jest dostępna w programie Visual Studio 2017 i nowszych. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-Wszystkie elementy wykonywalne CMake są wyświetlane na liście rozwijanej **elementu startowego** na pasku narzędzi **Ogólne** . Aby rozpocząć sesję debugowania, po prostu wybierz jeden z nich i uruchom debuger.
+Wszystkie obiekty docelowe wykonywalne CMake są wyświetlane w rozwijaniu **elementu startowego** na pasku narzędzi **Ogólne.** Wybierz jedną, aby rozpocząć sesję debugowania i uruchomić debuger.
 
-![Lista rozwijana elementu startowego CMake](media/cmake-startup-item-dropdown.png "Lista rozwijana elementu startowego CMake")
+![CKszt elementu startowego rozwijanego](media/cmake-startup-item-dropdown.png "CKszt elementu startowego rozwijanego")
 
-Możesz również uruchomić sesję debugowania z poziomu Eksplorator rozwiązań. Najpierw przejdź do **widoku CMAKE targets** w oknie **Eksplorator rozwiązań** .
+Można również uruchomić sesję debugowania z Eksploratora rozwiązań. Najpierw przełącz się do **widoku obiektów docelowych CMake** w oknie **Eksploratora rozwiązań.**
 
-![Przycisk Widok elementów docelowych CMake](media/cmake-targets-view.png  "Element menu Widok elementów docelowych CMake")
+![CNakładuj widok cele](media/cmake-targets-view.png  "CNajmów elementy menu Widok obiektów")
 
-Następnie kliknij prawym przyciskiem myszy dowolny plik wykonywalny i wybierz polecenie **Debuguj** lub **Debuguj i Uruchom ustawienia**. **Debugowanie** automatycznie rozpocznie debugowanie wybranego elementu docelowego na podstawie aktywnej konfiguracji. **Ustawienia debugowania i uruchamiania** otwierają plik *Launch. vs. JSON* i dodaje nową konfigurację debugowania dla wybranego celu.
+Następnie kliknij prawym przyciskiem myszy plik wykonywalny i wybierz opcję **Debug .** To polecenie automatycznie uruchamia debugowanie wybranego obiektu docelowego na podstawie aktywnej konfiguracji.
 
-## <a name="customize-debugger-settings"></a>Dostosuj ustawienia debugera
+## <a name="customize-debugger-settings"></a>Dostosowywanie ustawień debugera
 
-Możesz dostosować ustawienia debugera dla dowolnego pliku wykonywalnego CMake w projekcie w pliku o nazwie *Launch. vs. JSON*. Istnieją trzy punkty wejścia do tego pliku:
+Można dostosować ustawienia debugera dla dowolnego pliku wykonywalnego CMake cel w projekcie. Znajdują się one w pliku konfiguracyjnym o nazwie *`.vs`* *launch.vs.json*, znajdującym się w folderze w katalogu głównym projektu. Plik konfiguracji uruchamiania jest przydatne w większości scenariuszy debugowania, ponieważ można skonfigurować i zapisać szczegóły konfiguracji debugowania. Istnieją trzy punkty wejścia do tego pliku:
 
-- Wybierz pozycję **debuguj > Debuguj i Uruchom ustawienia dla $ {activeDebugTarget}** z menu głównego, aby edytować konfigurację debugowania specyficzną dla aktywnego elementu docelowego debugowania. Jeśli nie masz wybranego aktywnego elementu docelowego, ta opcja będzie wyszarzona.
+- **Menu debugowania:** Wybierz z menu głównego **pozycję Debugowanie > debugowania i uruchamiania dla ${activeDebugTarget}** w celu dostosowania konfiguracji debugowania specyficznej dla aktywnego obiektu docelowego debugowania. Jeśli nie wybrano celu debugowania, ta opcja jest wyszarzony.
 
-- Przejdź do **widoku obiektów docelowych** w Eksplorator rozwiązań. Następnie kliknij prawym przyciskiem myszy element docelowy debugowania i wybierz polecenie **Debuguj i Uruchom ustawienia** , aby edytować konfigurację debugowania specyficzną dla wybranego obiektu docelowego.
+![Punkt wejścia menu debugowania](media/cmake-debug-menu.png "Punkt wejścia menu debugowania")
 
-- Kliknij prawym przyciskiem myszy główny CMakeLists. txt, a następnie wybierz polecenie **Debuguj i Uruchom ustawienia** , aby otworzyć okno dialogowe **Wybierz debuger** . W oknie dialogowym można dodać dowolną konfigurację debugowania, ale należy ręcznie określić element docelowy CMake, który ma zostać wywołany za pomocą właściwości `projectTarget`.
+- **Widok celów:** Przejdź do **widoku obiektów docelowych** w Eksploratorze rozwiązań. Następnie kliknij prawym przyciskiem myszy cel debugowania i wybierz pozycję **Dodaj konfigurację debugowania,** aby dostosować konfigurację debugowania specyficzną dla wybranego obiektu docelowego.
 
-Aby odwołać się do dowolnego klucza w pliku *pliku cmakesettings. JSON* , należy poprzedzić go `cmake.` w elemencie *Launch. vs. JSON*. W poniższym przykładzie przedstawiono prosty plik *Launch. vs. JSON* , który ściąga wartość klucza `remoteCopySources` w pliku *pliku cmakesettings. JSON* dla aktualnie wybranej konfiguracji:
+![Punkt wejścia widoku obiekty docelowe](media/cmake-targets-add-debug-configuration.png "Punkt wejścia widoku obiekty docelowe")
+
+- **Główny plik CMakeLists.txt:** Kliknij prawym przyciskiem myszy główny plik *CMakeLists.txt* i wybierz pozycję **Dodaj konfigurację debugowania,** aby otworzyć okno dialogowe **Wybieranie debugera.** Okno dialogowe umożliwia dodanie *dowolnego* typu konfiguracji debugowania, ale należy ręcznie określić `projectTarget` CMake cel do wywołania za pośrednictwem właściwości.
+
+![Wybieranie okna dialogowego debugera](media/cmake-select-a-debugger.png "Wybieranie okna dialogowego debugera")
+
+Można edytować plik *launch.vs.json,* aby utworzyć konfiguracje debugowania dla dowolnej liczby obiektów docelowych CMake. Po zapisaniu pliku program Visual Studio tworzy wpis dla każdej nowej konfiguracji w pozycji **startowej.**
+
+## <a name="reference-keys-in-cmakesettingsjson"></a>Klucze referencyjne w CMakeSettings.json
+
+Aby odwołać się do dowolnego klucza w pliku *CMakeSettings.json,* należy dołączyć `cmake.` do niego w pliku *launch.vs.json*. W poniższym przykładzie przedstawiono prosty plik *launch.vs.json,* który pobiera wartość `remoteCopySources` klucza w pliku *CMakeSettings.json* dla aktualnie wybranej konfiguracji:
 
 ```json
 {
@@ -59,56 +69,122 @@ Aby odwołać się do dowolnego klucza w pliku *pliku cmakesettings. JSON* , nal
 }
 ```
 
-Po zapisaniu pliku *Launch. vs. JSON* program Visual Studio tworzy wpis nowej nazwy na liście rozwijanej **elementu startowego** . Można edytować plik *Launch. vs. JSON* , aby utworzyć wiele konfiguracji debugowania dla dowolnej liczby elementów docelowych CMAKE.
+**Zmienne środowiskowe zdefiniowane** w *pliku CMakeSettings.json* mogą być również używane `${env.VARIABLE_NAME}`w pliku launch.vs.json przy użyciu składni . W programie Visual Studio 2019 w wersji 16.4 i nowszych obiekty docelowe debugowania są uruchamiane automatycznie przy użyciu środowiska określonego w *pliku CMakeSettings.json*. Zmienną środowiskową można odsetić, ustawiając ją na **wartość null**.
 
-## <a name="launchvsjson-reference"></a>Dokumentacja uruchamiania. vs. JSON
+## <a name="launchvsjson-reference"></a>Odwołanie do pliku Launch.vs.json
 
-Istnieje wiele właściwości *uruchamiania. vs. JSON* , które obsługują wszystkie scenariusze debugowania. Następujące właściwości są wspólne dla wszystkich konfiguracji debugowania, zarówno zdalnych, jak i lokalnych:
+Istnieje wiele *właściwości launch.vs.json* do obsługi wszystkich scenariuszy debugowania. Następujące właściwości są wspólne dla wszystkich konfiguracji debugowania, zarówno zdalnych, jak i lokalnych:
 
-- `projectTarget`: określa element docelowy CMake, który ma zostać wywołany podczas kompilowania projektu. Program Visual Studio automatycznie wypełnia tę właściwość, jeśli wprowadzasz polecenie *Uruchom. vs. JSON* z **debugowania > Debuguj i Uruchom ustawienia dla widoku $ {ActiveDebugTarget}** lub **elementów docelowych**.
+- `projectTarget`: Określa CMake cel do wywołania podczas tworzenia projektu. Program Visual Studio automatycznie wypełnia tę właściwość po wprowadzeniu *pliku launch.vs.json* z **menu debugowania** lub **widoku obiektów docelowych**. Ta wartość musi być zgodna z nazwą istniejącego obiektu docelowego debugowania wymienionego w liście rozwijanej **Element startowy.**
 
-- `program`: pełna ścieżka do pliku wykonywalnego programu w systemie zdalnym. Możesz użyć makra `${debugInfo.fullTargetPath}` tym miejscu.
-
-- `args`: argumenty wiersza polecenia przekazane do programu w celu debugowania.
-
-## <a name="launchvsjson-reference-for-remote-linux-projects"></a>Dokumentacja uruchamiania. vs. JSON dla zdalnych projektów systemu Linux
-
-Następujące właściwości są specyficzne dla **konfiguracji debugowania zdalnego**. Możesz również [wykonać niestandardowe polecenia GDB](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands) , aby wysyłać polecenia bezpośrednio do źródłowego debugera, i [włączyć rejestrowanie MIEngine](https://github.com/microsoft/MIEngine/wiki/Logging) , aby zobaczyć, jakie polecenia są wysyłane do GDB, jakie dane wyjściowe GDB zwraca i jak długo trwa każde polecenie.
-
-- `cwd`: bieżący katalog roboczy na potrzeby znajdowania zależności i innych plików na maszynie zdalnej. `${debugInfo.defaultWorkingDirectory}` można użyć makra. Wartość domyślna to zdalny element główny obszaru roboczego, chyba że zostanie zastąpiony w *CMakeLists. txt*. Ta właściwość jest używana tylko w przypadku konfiguracji zdalnych; `currentDir` służy do ustawiania bieżącego katalogu uruchamiania aplikacji dla projektu lokalnego.
-
-- `environment`: dodatkowe zmienne środowiskowe do dodania do środowiska dla programu z następującą składnią:
-
-```json
-  "environment": [
-      {
-        "name": "ENV1",
-        "value": "envvalue1"
-      },
-      {
-        "name": "ENV2",
-        "value": "envvalue2"
-      }
-    ]
-```
-
-- `pipeArgs`: argumenty wiersza polecenia przekazane do programu potoku w celu skonfigurowania połączenia. Program potoku służy do przekazywania standardowych danych wejściowych/wyjściowych między programem Visual Studio i GDB. Polecenie `${debuggerCommand}` uruchamia GDB w systemie zdalnym i można je zmodyfikować, aby:
-
-  - Wyeksportuj wartość zmiennej środowiskowej WYŚWIETLAnej w systemie Linux. W poniższym przykładzie ta wartość jest `:1`.
+- `env`: Dodatkowe zmienne środowiskowe do dodania przy użyciu składni:
 
   ```json
-  "pipeArgs": [
-      "/s",
-      "${debugInfo.remoteMachineId}",
-      "/p",
-      "${debugInfo.parentProcessId}",
-      "/c",
-      "export DISPLAY=:1;${debuggerCommand}",
-      "--tty=${debugInfo.tty}"
-    ],
+  "env": {
+        "DEBUG_LOGGING_LEVEL": "trace;info",
+        "ENABLE_TRACING": "true"
+      }
   ```
 
-  - Uruchom skrypt przed wykonaniem GDB. Upewnij się, że w skrypcie są ustawione uprawnienia do wykonywania.
+- `args`: Argumenty wiersza polecenia przekazywane do programu do debugowania.
+
+## <a name="launchvsjson-reference-for-remote-projects-and-wsl"></a>Launch.vs.json — odwołanie do projektów zdalnych i WSL
+
+W programie Visual Studio 2019 w wersji 16.6 `type: cppgdb` dodaliśmy nową konfigurację debugowania, aby uprościć debugowanie w systemach zdalnych i WSL. Stare konfiguracje debugowania `type: cppdbg` są nadal obsługiwane.
+
+### <a name="configuration-type-cppgdb"></a>Typ konfiguracji`cppgdb`
+
+- `name`: Przyjazna nazwa identyfikująca konfigurację z listy rozwijanej **Element startowy.**
+- `project`: Określa względną ścieżkę do pliku projektu. Zwykle nie trzeba zmieniać tej ścieżki podczas debugowania projektu CMake.
+- `projectTarget`: Określa CMake cel do wywołania podczas tworzenia projektu. Program Visual Studio automatycznie wypełnia tę właściwość po wprowadzeniu *pliku launch.vs.json* z **menu debugowania** lub **widoku obiektów docelowych**. Ta wartość docelowa musi być zgodna z nazwą istniejącego obiektu docelowego debugowania wymienionego w liście rozwijanej **Element startowy.**
+- `debuggerConfiguration`: Wskazuje, który zestaw wartości domyślnych debugowania ma być używany. W programie Visual Studio 2019 w wersji 16.6 jedyną prawidłową opcją jest `gdb`. Wcześniejsze wersje `gdbserver`również obsługują .
+- `args`: Argumenty wiersza polecenia przekazywane podczas uruchamiania do debugowanego programu.
+- `env`: Dodatkowe zmienne środowiskowe przekazywane do debugowanego programu. Na przykład `{"DISPLAY": "0.0"}`.
+- `processID`: Identyfikator procesu Linuksa do dołączenia. Używane tylko podczas podłączania do procesu zdalnego. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z dołączaniem do procesów przy użyciu GDB](https://github.com/Microsoft/MIEngine/wiki/Troubleshoot-attaching-to-processes-using-GDB).
+
+#### <a name="additional-options-for-the-gdb-configuration"></a>Dodatkowe opcje `gdb` konfiguracji
+
+- `program`: Domyślnie `"${debugInfo.fullTargetPath}"`wartość . Ścieżka Unix do aplikacji do debugowania. Wymagane tylko wtedy, gdy różni się od docelowego pliku wykonywalnego w lokalizacji kompilacji lub wdrażania.
+- `remoteMachineName`: Domyślnie `"${debugInfo.remoteMachineName}"`wartość . Nazwa systemu zdalnego, który obsługuje program do debugowania. Wymagane tylko wtedy, gdy różni się od systemu kompilacji. Musi mieć istniejący wpis w [Menedżerze połączeń](../linux/connect-to-your-remote-linux-computer.md). Naciśnij **klawisze Ctrl+Spacja,** aby wyświetlić listę wszystkich istniejących połączeń zdalnych.
+- `cwd`: Domyślnie `"${debugInfo.defaultWorkingDirectory}"`wartość . Ścieżka uniksowa do katalogu w `program` systemie zdalnym, w którym jest uruchamiana. Ten katalog musi istnieć.
+- `gdbpath`: Domyślnie `/usr/bin/gdb`wartość . Pełna ścieżka Uniksa `gdb` do używanego do debugowania. Wymagane tylko w przypadku korzystania `gdb`z niestandardowej wersji programu .
+- `preDebugCommand`: Polecenie Linux do uruchomienia `gdb`bezpośrednio przed wywołaniem . `gdb`nie uruchamia się, dopóki polecenie nie zostanie ukończone. Można użyć opcji, aby uruchomić skrypt `gdb`przed wykonaniem programu .
+
+#### <a name="deployment-options"></a>Opcje wdrożenia
+
+Użyj następujących opcji, aby oddzielić komputer kompilacji (zdefiniowane w CMakeSettings.json) od zdalnego komputera debugowania.
+
+- `remoteMachineName`: Zdalne urządzenie debugowania. Wymagane tylko wtedy, gdy różni się od maszyny kompilacji. Musi mieć istniejący wpis w [Menedżerze połączeń](../linux/connect-to-your-remote-linux-computer.md). Naciśnij **klawisze Ctrl+Spacja,** aby wyświetlić listę wszystkich istniejących połączeń zdalnych.
+- `disableDeploy`: Domyślnie `false`wartość . Wskazuje, czy separacja kompilacji/debugowania jest wyłączona. Gdy `false`ta opcja umożliwia tworzenie i debugowanie występuje na dwóch oddzielnych komputerach.
+- `deployDirectory`: Pełna ścieżka Uniksa do `remoteMachineName` katalogu, do który zostanie skopiowany plik wykonywalny.
+- `deploy`: Tablica zaawansowanych ustawień wdrażania. Te ustawienia należy skonfigurować tylko wtedy, gdy ma być bardziej szczegółowa kontrola nad procesem wdrażania. Domyślnie tylko pliki niezbędne do debugowania procesu są wdrażane na komputerze zdalnego debugowania.
+  - `sourceMachine`: komputer, z którego jest kopiowany plik lub katalog. Naciśnij **klawisze Ctrl+Spacja,** aby wyświetlić listę wszystkich połączeń zdalnych przechowywanych w Menedżerze połączeń. Podczas tworzenia natywnie na WSL ta opcja jest ignorowana.
+  - `targetMachine`: komputer, na którym skopiowany jest plik lub katalog. Naciśnij **klawisze Ctrl+Spacja,** aby wyświetlić listę wszystkich połączeń zdalnych przechowywanych w Menedżerze połączeń.
+  - `sourcePath`: Lokalizacja pliku lub `sourceMachine`katalogu w programie .
+  - `targetPath`: Lokalizacja pliku lub `targetMachine`katalogu w programie .
+  - `deploymentType`: Opis typu wdrożenia. `LocalRemote`i `RemoteRemote` są obsługiwane. `LocalRemote`oznacza kopiowanie z lokalnego systemu plików `remoteMachineName` do zdalnego systemu określonego przez *w launch.vs.json*. `RemoteRemote`oznacza kopiowanie z systemu kompilacji zdalnej określonego w *CMakeSettings.json* do innego zdalnego systemu określonego w *launch.vs.json*.
+  - `executable`: Wskazuje, czy wdrożony plik jest plikiem wykonywalnym.
+
+### <a name="execute-custom-gdb-commands"></a>Wykonywanie `gdb` poleceń niestandardowych
+
+Visual Studio obsługuje `gdb` wykonywanie poleceń niestandardowych do bezpośredniej interakcji z bazowym debugerem. Aby uzyskać więcej informacji, zobacz [Wykonywanie niestandardowych `gdb` poleceń lldb](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands).
+
+### <a name="enable-logging"></a>Włącz rejestrowanie
+
+Włącz rejestrowanie miengine, aby zobaczyć, `gdb`jakie `gdb` polecenia są wysyłane do , jakie dane wyjściowe zwraca i jak długo trwa każde polecenie. [Dowiedz się więcej](https://github.com/microsoft/MIEngine/wiki/Logging)
+
+### <a name="configuration-type-cppdbg"></a>Typ konfiguracji`cppdbg`
+
+Następujące opcje mogą być używane podczas debugowania w systemie `cppdbg` zdalnym lub WSL przy użyciu typu konfiguracji. W programie Visual Studio 2019 w wersji 16.6 lub nowszej zalecany jest typ `cppgdb` konfiguracji.
+
+- `name`: Przyjazna nazwa identyfikująca konfigurację z listy rozwijanej **Element startowy.**
+
+- `project`: Określa względną ścieżkę do pliku projektu. Zwykle nie trzeba zmieniać tej wartości podczas debugowania projektu CMake.
+
+- `projectTarget`: Określa CMake cel do wywołania podczas tworzenia projektu. Program Visual Studio automatycznie wypełnia tę właściwość po wprowadzeniu *pliku launch.vs.json* z **menu debugowania** lub **widoku obiektów docelowych**. Ta wartość musi być zgodna z nazwą istniejącego obiektu docelowego debugowania wymienionego w liście rozwijanej **Element startowy.**
+
+- `args`: Argumenty wiersza polecenia przekazywane podczas uruchamiania do debugowanego programu.
+
+- `processID`: Identyfikator procesu Linuksa do dołączenia. Używane tylko podczas podłączania do procesu zdalnego. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z dołączaniem do procesów przy użyciu GDB](https://github.com/Microsoft/MIEngine/wiki/Troubleshoot-attaching-to-processes-using-GDB).
+
+- `program`: Domyślnie `"${debugInfo.fullTargetPath}"`wartość . Ścieżka Unix do aplikacji do debugowania. Wymagane tylko wtedy, gdy różni się od docelowego pliku wykonywalnego w lokalizacji kompilacji lub wdrażania.
+
+- `remoteMachineName`: Domyślnie `"${debugInfo.remoteMachineName}"`wartość . Nazwa systemu zdalnego, który obsługuje program do debugowania. Wymagane tylko wtedy, gdy różni się od systemu kompilacji. Musi mieć istniejący wpis w [Menedżerze połączeń](../linux/connect-to-your-remote-linux-computer.md). Naciśnij **klawisze Ctrl+Spacja,** aby wyświetlić listę wszystkich istniejących połączeń zdalnych.
+
+- `cwd`: Domyślnie `"${debugInfo.defaultWorkingDirectory}"`wartość . Pełna ścieżka Uniksa do katalogu w `program` systemie zdalnym, w którym jest uruchamiana. Ten katalog musi istnieć.
+
+- `environment`: Dodatkowe zmienne środowiskowe przekazywane do debugowanego programu. Na przykład:
+
+  ```json
+    "environment": [
+        {
+          "name": "ENV1",
+          "value": "envvalue1"
+        },
+        {
+          "name": "ENV2",
+          "value": "envvalue2"
+        }
+      ]
+  ```
+
+- `pipeArgs`: Tablica argumentów wiersza polecenia przekazana do programu potoku w celu skonfigurowania połączenia. Program potoku służy do przekazywania standardowych wejść/danych wyjściowych między programem Visual Studio a programem `gdb`. Większość tej **tablicy nie musi być dostosowywana** podczas debugowania projektów CMake. Wyjątkiem jest `${debuggerCommand}`, który `gdb` uruchamia się w systemie zdalnym. Można go zmodyfikować w:
+
+  - Wyeksportuj wartość zmiennej środowiskowej DISPLAY w systemie Linux. W poniższym przykładzie `:1`ta wartość to .
+
+    ```json
+    "pipeArgs": [
+        "/s",
+        "${debugInfo.remoteMachineId}",
+        "/p",
+        "${debugInfo.parentProcessId}",
+        "/c",
+        "export DISPLAY=:1;${debuggerCommand}",
+        "--tty=${debugInfo.tty}"
+      ],
+    ```
+
+  - Uruchom skrypt przed wykonaniem . `gdb` Upewnij się, że uprawnienia do wykonywania są ustawione na skrypcie.
 
     ```json
     "pipeArgs": [
@@ -122,78 +198,34 @@ Następujące właściwości są specyficzne dla **konfiguracji debugowania zdal
       ],
     ```
 
-- `stopOnEntry`: wartość logiczna określająca, czy ma zostać przerwana, gdy tylko proces zostanie uruchomiony. Wartość domyślna to false.
+- `stopOnEntry`: wartość logiczna określająca, czy przerwać się natychmiast po uruchomieniu procesu. Wartością domyślną jest false.
 
-- `visualizerFile`: [plik. Natvis](/visualstudio/debugger/create-custom-views-of-native-objects) do użycia podczas debugowania tego procesu. Ta opcja jest niezgodna z gdbą drukowaniem. Należy również ustawić `showDisplayString` podczas ustawiania tej właściwości.
+- `visualizerFile`: [Plik .natvis](/visualstudio/debugger/create-custom-views-of-native-objects) do użycia podczas debugowania tego procesu. Ta opcja jest `gdb` niezgodna z ładnym drukowaniem. Należy `showDisplayString` również ustawić po ustawieniu tej właściwości.
 
-- `showDisplayString`: wartość logiczna, która włącza ciąg wyświetlania, gdy określono `visualizerFile`. Ustawienie tej opcji na `true` może spowodować wolniejszą wydajność podczas debugowania.
+- `showDisplayString`: wartość logiczna, która włącza `visualizerFile` ciąg wyświetlania po określeniu. Ustawienie tej `true` opcji może spowodować mniejszą wydajność podczas debugowania.
 
-- `setupCommands`: co najmniej jedno polecenie GDB do wykonania, aby skonfigurować podstawowy debuger.
+- `setupCommands`: Co `gdb` najmniej jedno polecenie do wykonania, aby skonfigurować debuger bazowy.
 
-- `externalConsole`: wartość logiczna określająca, czy konsola jest uruchamiana dla debugowanego obiektu.
+- `miDebuggerPath`: Pełna ścieżka `gdb`do . Gdy nie określono, Visual Studio przeszukuje PATH najpierw debugera.
 
-- `miDebuggerPath`: pełna ścieżka do GDB. Gdy nie zostanie określony, program Visual Studio szuka najpierw ścieżki dla debugera.
+- Na koniec wszystkie opcje wdrażania zdefiniowane dla typu `cppgdb` konfiguracji `cppdbg` mogą być również używane przez typ konfiguracji.
 
-::: moniker-end
+### <a name="debug-using-gdbserver"></a>Debugowanie przy użyciu`gdbserver`
 
-::: moniker range="vs-2017"
-
-- `remoteMachineName`: zdalny system Linux, który hostuje GDB i program do debugowania.
-
-::: moniker-end
-
-::: moniker range="vs-2019"
-
-Poniższe właściwości mogą służyć do oddzielenia **zdalnego systemu kompilacji** od **zdalnego systemu debugowania**. Aby uzyskać więcej informacji, zobacz [Określanie różnych maszyn do kompilowania i debugowania](../linux/deploy-run-and-debug-your-linux-project.md#cmake-projects).
-
-- `remoteMachineName`: zdalny system Linux, który hostuje GDB i program do debugowania. Ten wpis nie musi być zgodny z systemem zdalnego systemu Linux używanym do kompilowania określonego w pliku *pliku cmakesettings. JSON*. Naciśnij **klawisze CTRL + SPACJA** , aby wyświetlić listę wszystkich połączeń zdalnych przechowywanych w [Menedżerze połączeń](../linux/connect-to-your-remote-linux-computer.md).
-
-- `disableDeploy`: wskazuje, czy separacja kompilacji/debugowania jest wyłączona. Włączenie tej funkcji umożliwia kompilowanie i debugowanie na dwóch oddzielnych komputerach.
-
-- `deployDirectory`: katalog na zdalnym komputerze debugowania (określony przez `remoteMachineName`), do którego zostanie skopiowany plik wykonywalny.
-
-- `deploy`: tablica zaawansowanych ustawień wdrożenia. Te ustawienia wystarczy skonfigurować tylko wtedy, gdy potrzebujesz bardziej szczegółowej kontroli nad procesem wdrażania. Domyślnie tylko pliki niezbędne do debugowania procesu zostaną wdrożone na maszynie zdalnego debugowania.
-
-  - `sourceMachine`: maszyna, z której zostanie skopiowany plik lub katalog. Naciśnij **klawisze CTRL + SPACJA** , aby wyświetlić listę wszystkich połączeń zdalnych przechowywanych w Menedżerze połączeń.
-
-  - `targetMachine`: komputer, do którego zostanie skopiowany plik lub katalog. Naciśnij **klawisze CTRL + SPACJA** , aby wyświetlić listę wszystkich połączeń zdalnych przechowywanych w Menedżerze połączeń.
-
-  - `sourcePath`: Lokalizacja pliku lub katalogu w `sourceMachine`.
-
-  - `targetPath`: Lokalizacja pliku lub katalogu w `targetMachine`.
-
-  - `deploymentType`: Opis typu wdrożenia. Obsługiwane są `LocalRemote` i `RemoteRemote`. `LocalRemote` oznacza kopiowanie z lokalnego systemu plików do systemu zdalnego określonego przez `remoteMachineName` w pliku *Launch. vs. JSON*. `RemoteRemote` oznacza kopiowanie ze zdalnego systemu kompilacji określonego w pliku *pliku cmakesettings. JSON* do różnych systemów zdalnych określonych w pliku *Launch. vs. JSON*.
-
-  - `executable`: wskazuje, czy wdrożony plik jest plikiem wykonywalnym.
+Konfigurację można `cppdbg` skonfigurować do `gdbserver`debugowania za pomocą programu . Więcej szczegółów i przykładową konfigurację uruchamiania można znaleźć w poście blogu Microsoft C++ Team Blog [Debugowanie `gdbserver`projektów CMake Linux za pomocą programu ](https://devblogs.microsoft.com/cppblog/debugging-linux-cmake-projects-with-gdbserver/).
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-## <a name="attach-to-a-remote-process"></a>Dołącz do procesu zdalnego
+## <a name="see-also"></a>Zobacz też
 
-Możesz dołączyć do procesu uruchomionego w systemie Linux, ustawiając `processId` na identyfikator procesu, aby dołączyć debuger do programu. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z dołączaniem do procesów przy użyciu GDB](https://github.com/Microsoft/MIEngine/wiki/Troubleshoot-attaching-to-processes-using-GDB).
-
-::: moniker-end
-
-::: moniker range="vs-2019"
-
-## <a name="debug-on-linux-using-gdbserver"></a>Debugowanie w systemie Linux przy użyciu serwera gdbserver
-
-Program Visual Studio 2019 w wersji 16,5 Preview 1 lub nowszej obsługuje zdalne debugowanie projektów CMake z serwera gdbserver. Aby uzyskać więcej informacji, zobacz [Debugowanie projektów CMAKE systemu Linux z serwera gdbserver](https://devblogs.microsoft.com/cppblog/debugging-linux-cmake-projects-with-gdbserver/).
-
-::: moniker-end
-
-::: moniker range=">=vs-2017"
-
-## <a name="see-also"></a>Zobacz także
-
-[CMAKE projekty w programie Visual Studio](cmake-projects-in-visual-studio.md)\
-[Konfigurowanie\ projektu systemu Linux CMAKE](../linux/cmake-linux-project.md)
-[Nawiązywanie połączenia ze zdalnym komputerem z systemem Linux](../linux/connect-to-your-remote-linux-computer.md)\
-[Dostosuj ustawienia kompilacji CMake](customize-cmake-settings.md)\
+[CZło projektów w programie Visual Studio](cmake-projects-in-visual-studio.md)\
+[Konfigurowanie projektu CMake systemu Linux](../linux/cmake-linux-project.md)\
+[Połącz się ze zdalnym komputerem z systemem Linux](../linux/connect-to-your-remote-linux-computer.md)\
+[Dostosowywanie ustawień kompilacji CMake](customize-cmake-settings.md)\
 [Konfigurowanie sesji debugowania CMake](configure-cmake-debugging-sessions.md)\
 [Wdrażanie, uruchamianie i debugowanie projektu systemu Linux](../linux/deploy-run-and-debug-your-linux-project.md)\
-[CMake wstępnie zdefiniowanej konfiguracji](cmake-predefined-configuration-reference.md)
+[CZrobe wstępnie zdefiniowane odwołanie do konfiguracji](cmake-predefined-configuration-reference.md)
 
 ::: moniker-end

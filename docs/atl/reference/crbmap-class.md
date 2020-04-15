@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CRBMap class
 ms.assetid: 658e94dc-e835-4356-aed1-1513e1f66969
-ms.openlocfilehash: e5dedb26544bb2755bc74894cf36a622f5141f89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e367ccc875eedf63e4f47018598662af2dfcf7d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278127"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331402"
 ---
 # <a name="crbmap-class"></a>Klasa CRBMap
 
-Ta klasa reprezentuje strukturę mapowania przy użyciu drzewa binarnego Red czarny.
+Ta klasa reprezentuje strukturę mapowania, przy użyciu drzewa binarnego Red-Black.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,15 +35,15 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 #### <a name="parameters"></a>Parametry
 
 *K*<br/>
-Typ klucza elementu.
+Typ elementu klucza.
 
 *V*<br/>
 Typ elementu wartości.
 
-*KTraits*<br/>
-Kod używany, aby skopiować lub przenieść kluczowe elementy. Zobacz [klasa CElementTraits](../../atl/reference/celementtraits-class.md) Aby uzyskać więcej informacji.
+*KTraits ( ktraits )*<br/>
+Kod używany do kopiowania lub przenoszenia elementów klucza. Zobacz [CElementTraits Klasy,](../../atl/reference/celementtraits-class.md) aby uzyskać więcej informacji.
 
-*VTraits*<br/>
+*VTraits (Wyjęto)*<br/>
 Kod używany do kopiowania lub przenoszenia elementów wartości.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -59,27 +59,27 @@ Kod używany do kopiowania lub przenoszenia elementów wartości.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CRBMap::Lookup](#lookup)|Wywołaj tę metodę, aby wyszukać kluczy ani wartości w `CRBMap` obiektu.|
-|[CRBMap::RemoveKey](#removekey)|Wywołaj tę metodę, aby usunąć element z `CRBMap` obiekt, na podstawie klucza.|
-|[CRBMap::SetAt](#setat)|Wywołaj tę metodę, aby wstawić para elementów do mapy.|
+|[CRBMap::Odnośnik](#lookup)|Wywołanie tej metody, aby wyszukać klucze lub wartości w `CRBMap` obiekcie.|
+|[CRBMap::Usuń klucz](#removekey)|Wywołanie tej metody, aby `CRBMap` usunąć element z obiektu, biorąc pod uwagę klucz.|
+|[MAPA CRBMap::SetAt](#setat)|Wywołanie tej metody, aby wstawić parę elementów do mapy.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CRBMap` zapewnia obsługę mapowania tablicę dla dowolnego typu, zarządzanie uporządkowanej tablicy kluczowych elementów i ich skojarzone wartości. Każdy klucz może mieć tylko jedną skojarzoną wartość. Elementów (składające się z klucza i wartości) są przechowywane w drzewie binarnym struktury, za pomocą [CRBMap::SetAt](#setat) metody. Elementy, można je usunąć za pomocą [CRBMap::RemoveKey](#removekey) metody, która usuwa element z danej wartości klucza.
+`CRBMap`zapewnia obsługę tablicy mapowania dowolnego typu, zarządzanie uporządkowaną tablicą kluczowych elementów i skojarzonymi z nimi wartościami. Każdy klucz może mieć tylko jedną skojarzoną wartość. Elementy (składające się z klucza i wartości) są przechowywane w strukturze drzewa binarnego, przy użyciu [metody CRBMap::SetAt.](#setat) Elementy można usunąć za pomocą [METODY CRBMap::RemoveKey,](#removekey) która usuwa element o podanej wartości klucza.
 
-Przechodzenie drzewa jest możliwe za pomocą metod takich jak [CRBTree::GetHeadPosition](../../atl/reference/crbtree-class.md#getheadposition), [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext), i [CRBTree::GetNextValue](../../atl/reference/crbtree-class.md#getnextvalue).
+Przechodzenie przez drzewo jest możliwe dzięki metodom takim jak [CRBTree::GetHeadPosition](../../atl/reference/crbtree-class.md#getheadposition), [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext)i [CRBTree::GetNextValue](../../atl/reference/crbtree-class.md#getnextvalue).
 
-*KTraits* i *VTraits* parametry są traits — klasy, które zawierają dodatkowe wymagane do kopiowania lub przenoszenia elementów kodu.
+*Parametry KTraits* i *VTraits* są klasami cech, które zawierają dowolny kod uzupełniający potrzebny do kopiowania lub przenoszenia elementów.
 
-`CRBMap` jest tworzony na podstawie [CRBTree](../../atl/reference/crbtree-class.md), który implementuje drzewa binarnego przy użyciu algorytmu Red czarny. [CRBMultiMap](../../atl/reference/crbmultimap-class.md) jest odmianą, która zezwala na wiele wartości dla każdego klucza. Zbyt pochodzi z `CRBTree`i dlatego udostępnia wiele funkcji, korzystając z `CRBMap`.
+`CRBMap`pochodzi z [CRBTree](../../atl/reference/crbtree-class.md), który implementuje drzewa binarnego przy użyciu algorytmu Red-Black. [CRBMultiMap](../../atl/reference/crbmultimap-class.md) to odmiana, która pozwala na wiele wartości dla każdego klucza. To też pochodzi `CRBTree`od , a więc `CRBMap`dzieli wiele funkcji z .
 
-Alternatywa dla obu `CRBMap` i `CRBMultiMap` jest oferowany przez [CAtlMap](../../atl/reference/catlmap-class.md) klasy. Gdy tylko niewielka liczba elementów musi być przechowywany, należy wziąć pod uwagę przy użyciu [CSimpleMap](../../atl/reference/csimplemap-class.md) klasy zamiast tego.
+Alternatywa dla `CRBMap` `CRBMultiMap` obu i jest oferowana przez [CAtlMap](../../atl/reference/catlmap-class.md) klasy. Gdy tylko niewielka liczba elementów musi być przechowywana, należy rozważyć użycie [CSimpleMap](../../atl/reference/csimplemap-class.md) klasy zamiast.
 
-Pełniejsze omówienie różnych klas kolekcji i ich funkcje i charakterystyk wydajności, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
+Aby uzyskać pełniejszą dyskusję na temat różnych klas kolekcji oraz ich cech i cech wydajności, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CRBTree](../../atl/reference/crbtree-class.md)
+[Crbtree](../../atl/reference/crbtree-class.md)
 
 `CRBMap`
 
@@ -87,7 +87,7 @@ Pełniejsze omówienie różnych klas kolekcji i ich funkcje i charakterystyk wy
 
 **Nagłówek:** atlcoll.h
 
-##  <a name="crbmap"></a>  CRBMap::CRBMap
+## <a name="crbmapcrbmap"></a><a name="crbmap"></a>CRBMap::CRBMap
 
 Konstruktor.
 
@@ -97,20 +97,20 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nBlockSize*<br/>
+*nBlockSize (Rozmiar)*<br/>
 Rozmiar bloku.
 
 ### <a name="remarks"></a>Uwagi
 
-*NBlockSize* parametr jest miarą ilość pamięci przydzielonej, gdy nowy element jest wymagany. Większe rozmiary bloków zmniejszają liczbę interwencji do procedur alokacji pamięci, ale używa więcej zasobów. Wartość domyślna będzie przydzielić miejsca dla 10 elementów w danym momencie.
+Parametr *nBlockSize* jest miarą ilości przydzielonej pamięci, gdy wymagany jest nowy element. Większe rozmiary bloków zmniejszają liczbę wywołań procedur alokacji pamięci, ale zużywają więcej zasobów. Wartość domyślna będzie przydzielać miejsce dla 10 elementów naraz.
 
-Zobacz dokumentację dla klasy bazowej [CRBTree](../../atl/reference/crbtree-class.md) informacji na temat dostępnych metod.
+Zobacz dokumentację dla klasy podstawowej [CRBTree, aby](../../atl/reference/crbtree-class.md) uzyskać informacje na temat innych dostępnych metod.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#81](../../atl/codesnippet/cpp/crbmap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CRBMap:: ~ CRBMap
+## <a name="crbmapcrbmap"></a><a name="dtor"></a>CRBMap::~CRBMap
 
 Destruktor.
 
@@ -120,13 +120,13 @@ Destruktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia wszystkie zasoby przydzielone.
+Zwalnia wszystkie przydzielone zasoby.
 
-Zobacz dokumentację dla klasy bazowej [CRBTree](../../atl/reference/crbtree-class.md) informacji na temat dostępnych metod.
+Zobacz dokumentację dla klasy podstawowej [CRBTree, aby](../../atl/reference/crbtree-class.md) uzyskać informacje na temat innych dostępnych metod.
 
-##  <a name="lookup"></a>  CRBMap::Lookup
+## <a name="crbmaplookup"></a><a name="lookup"></a>CRBMap::Odnośnik
 
-Wywołaj tę metodę, aby wyszukać kluczy ani wartości w `CRBMap` obiektu.
+Wywołanie tej metody, aby wyszukać klucze lub wartości w `CRBMap` obiekcie.
 
 ```
 bool Lookup(KINARGTYPE key, VOUTARGTYPE value) const throw(...);
@@ -136,27 +136,27 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
-Określa klucz, który identyfikuje elementu, który ma być wyszukiwana.
+*key*<br/>
+Określa klucz identyfikujący element, który ma być wyszukany.
 
 *value*<br/>
-Zmienna, która otrzymuje wartość oglądałem się w górę.
+Zmienna, która odbiera wartość wyszukiwania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwszy formularz metoda zwraca wartość true, jeśli klucz zostanie znaleziony, w przeciwnym razie wartość false. Drugi i trzeci formularzy zwracają wskaźnik do [CPair](crbtree-class.md#cpair_class).
+Pierwsza forma metody zwraca wartość true, jeśli zostanie znaleziony klucz, w przeciwnym razie false. Drugi i trzeci formularz zwracają wskaźnik do [CPair](crbtree-class.md#cpair_class).
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz dokumentację dla klasy bazowej [CRBTree](../../atl/reference/crbtree-class.md) informacji na temat dostępnych metod.
+Zobacz dokumentację dla klasy podstawowej [CRBTree, aby](../../atl/reference/crbtree-class.md) uzyskać informacje na temat innych dostępnych metod.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#82](../../atl/codesnippet/cpp/crbmap-class_2.cpp)]
 
-##  <a name="removekey"></a>  CRBMap::RemoveKey
+## <a name="crbmapremovekey"></a><a name="removekey"></a>CRBMap::Usuń klucz
 
-Wywołaj tę metodę, aby usunąć element z `CRBMap` obiekt, na podstawie klucza.
+Wywołanie tej metody, aby `CRBMap` usunąć element z obiektu, biorąc pod uwagę klucz.
 
 ```
 bool RemoveKey(KINARGTYPE key) throw();
@@ -164,24 +164,24 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
-Klucz odpowiadający para elementów chcesz usunąć.
+*key*<br/>
+Klucz odpowiadający parze elementów, którą chcesz usunąć.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli klucz został znaleziony i usunięte, wartość false w przypadku niepowodzenia.
+Zwraca wartość true, jeśli klucz zostanie znaleziony i usunięty, false na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz dokumentację dla klasy bazowej [CRBTree](../../atl/reference/crbtree-class.md) informacji na temat dostępnych metod.
+Zobacz dokumentację dla klasy podstawowej [CRBTree, aby](../../atl/reference/crbtree-class.md) uzyskać informacje na temat innych dostępnych metod.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#83](../../atl/codesnippet/cpp/crbmap-class_3.cpp)]
 
-##  <a name="setat"></a>  CRBMap::SetAt
+## <a name="crbmapsetat"></a><a name="setat"></a>MAPA CRBMap::SetAt
 
-Wywołaj tę metodę, aby wstawić para elementów do mapy.
+Wywołanie tej metody, aby wstawić parę elementów do mapy.
 
 ```
 POSITION SetAt(
@@ -191,29 +191,29 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
-Wartość klucza do dodania do `CRBMap` obiektu.
+*key*<br/>
+Wartość klucza, aby `CRBMap` dodać do obiektu.
 
 *value*<br/>
-Wartość do dodania `CRBMap` obiektu.
+Wartość dodana do `CRBMap` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca pozycję pary klucz/wartość elementu, w `CRBMap` obiektu.
+Zwraca położenie pary elementu klucz/wartość `CRBMap` w obiekcie.
 
 ### <a name="remarks"></a>Uwagi
 
-`SetAt` zastępuje istniejący element, jeśli dopasowany klucz zostanie znaleziony. Jeśli klucz nie zostanie znaleziony, zostanie utworzony nową parę klucz wartość.
+`SetAt`zastępuje istniejący element, jeśli zostanie znaleziony pasujący klucz. Jeśli klucz nie zostanie znaleziony, zostanie utworzona nowa para klucz/wartość.
 
-Zobacz dokumentację dla klasy bazowej [CRBTree](../../atl/reference/crbtree-class.md) informacji na temat dostępnych metod.
+Zobacz dokumentację dla klasy podstawowej [CRBTree, aby](../../atl/reference/crbtree-class.md) uzyskać informacje na temat innych dostępnych metod.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#84](../../atl/codesnippet/cpp/crbmap-class_4.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CRBTree](../../atl/reference/crbtree-class.md)<br/>
 [Klasa CAtlMap](../../atl/reference/catlmap-class.md)<br/>
 [Klasa CRBMultiMap](../../atl/reference/crbmultimap-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

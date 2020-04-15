@@ -9,30 +9,30 @@ helpviewer_keywords:
 - exception handling, macros
 - C++ exception handling, macros
 ms.assetid: a8385d34-3fb0-4006-a42a-de045cacf0f4
-ms.openlocfilehash: 8afb2019e38f7548467e85d9a2c1c12c538cf744
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2beffbbed0efee799005190bd7fd071a2087e4d9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276263"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330084"
 ---
 # <a name="exception-handling-macros"></a>Makra obsługi wyjątków
 
-Te makra obsługi wyjątków.
+Te makra zapewniają obsługę wyjątków.
 
 |||
 |-|-|
-|[_ATLCATCH](#_atlcatch)|Liczba zapytań: do obsługi błędów występujących w skojarzonym `_ATLTRY`.|
-|[_ATLCATCHALL](#_atlcatchall)|Liczba zapytań: do obsługi błędów występujących w skojarzonym `_ATLTRY`.|
-|[_ATLTRY](#_atltry)|Oznacza sekcji chronionej kodu, gdzie prawdopodobnie może wystąpić błąd.|
+|[_ATLCATCH](#_atlcatch)|Instrukcji do obsługi błędów występujących w `_ATLTRY`skojarzonym .|
+|[_ATLCATCHALL](#_atlcatchall)|Instrukcji do obsługi błędów występujących w `_ATLTRY`skojarzonym .|
+|[_ATLTRY](#_atltry)|Oznacza sekcję kodu strzeżonego, w której może wystąpić błąd.|
 
 ## <a name="requirements"></a>Wymagania:
 
 **Nagłówek:** atldef.h
 
-##  <a name="_atlcatch"></a>  _ATLCATCH
+## <a name="_atlcatch"></a><a name="_atlcatch"></a>_ATLCATCH
 
-Liczba zapytań: do obsługi błędów występujących w skojarzonym `_ATLTRY`.
+Instrukcji do obsługi błędów występujących w `_ATLTRY`skojarzonym .
 
 ```
 _ATLCATCH(e)
@@ -40,16 +40,16 @@ _ATLCATCH(e)
 
 ### <a name="parameters"></a>Parametry
 
-*e*<br/>
-Wyjątek do przechwytywania.
+*E*<br/>
+Wyjątek do połowu.
 
 ### <a name="remarks"></a>Uwagi
 
-Używany w połączeniu z `_ATLTRY`. Jest rozpoznawana jako C++ [catch (CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md) do obsługi danego typu wyjątki C++.
+Używany w `_ATLTRY`połączeniu z . Rozwiązuje [z funkcją catch(CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md) dla obsługi danego typu wyjątków języka C++.
 
-##  <a name="_atlcatchall"></a>  _ATLCATCHALL
+## <a name="_atlcatchall"></a><a name="_atlcatchall"></a>_ATLCATCHALL
 
-Liczba zapytań: do obsługi błędów występujących w skojarzonym `_ATLTRY`.
+Instrukcji do obsługi błędów występujących w `_ATLTRY`skojarzonym .
 
 ```
 _ATLCATCHALL
@@ -57,11 +57,11 @@ _ATLCATCHALL
 
 ### <a name="remarks"></a>Uwagi
 
-Używany w połączeniu z `_ATLTRY`. C++ jest rozpoznawana jako [catch(...) ](../../cpp/try-throw-and-catch-statements-cpp.md) do obsługi wszystkich typów wyjątków języka C++.
+Używany w `_ATLTRY`połączeniu z . Rozwiązuje dla C++ [catch(...)](../../cpp/try-throw-and-catch-statements-cpp.md) do obsługi wszystkich typów wyjątków C++.
 
-##  <a name="_atltry"></a>  _ATLTRY
+## <a name="_atltry"></a><a name="_atltry"></a>_ATLTRY
 
-Oznacza sekcji chronionej kodu, gdzie prawdopodobnie może wystąpić błąd.
+Oznacza sekcję kodu strzeżonego, w której może wystąpić błąd.
 
 ```
 _ATLTRY
@@ -69,8 +69,8 @@ _ATLTRY
 
 ### <a name="remarks"></a>Uwagi
 
-Używany w połączeniu z [_ATLCATCH](#_atlcatch) lub [_ATLCATCHALL](#_atlcatchall). Jest rozpoznawana jako C++ symbol [spróbuj](../../cpp/try-throw-and-catch-statements-cpp.md).
+Używany w połączeniu z [_ATLCATCH](#_atlcatch) lub [_ATLCATCHALL](#_atlcatchall). Rozwiązuje [próbę](../../cpp/try-throw-and-catch-statements-cpp.md)symbolu C++ .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Makra](../../atl/reference/atl-macros.md)

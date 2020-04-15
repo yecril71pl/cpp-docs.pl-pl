@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-ms.openlocfilehash: 74a34ec169868d3e28f78f33da38dbda21ef23b3
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e6a713ac9d9e906ec204d4a52b43ed51c08fd99c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502613"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318432"
 ---
 # <a name="csharedfile-class"></a>Klasa CSharedFile
 
-Klasa pochodna [CMemFile](../../mfc/reference/cmemfile-class.md), która obsługuje pliki pamięci współdzielonej.
+[CMemFile](../../mfc/reference/cmemfile-class.md)-pochodna klasy, która obsługuje pliki pamięci współużytkowanej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,40 +41,40 @@ class CSharedFile : public CMemFile
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSharedFile::Detach](#detach)|Zamyka plik pamięci współużytkowanej i zwraca uchwyt jego bloku pamięci.|
-|[CSharedFile::SetHandle](#sethandle)|Dołącza plik pamięci współdzielonej do bloku pamięci.|
+|[CSharedFile::Detach](#detach)|Zamyka plik pamięci współużytkowanej i zwraca dojście jego bloku pamięci.|
+|[CSharedFile::SetHandle](#sethandle)|Dołącza plik pamięci współużytkowanej do bloku pamięci.|
 
 ## <a name="remarks"></a>Uwagi
 
-Pliki pamięci zachowują się jak pliki dysków. Różnica polega na tym, że plik pamięci jest przechowywany w pamięci RAM, a nie na dysku. Plik pamięci jest przydatny do szybkiego magazynu tymczasowego lub do przesyłania nieprzetworzonych bajtów lub serializowanych obiektów między procesami niezależnymi.
+Pliki pamięci zachowują się jak pliki dysków. Różnica polega na tym, że plik pamięci jest przechowywany w pamięci RAM, a nie na dysku. Plik pamięci jest przydatny do szybkiego przechowywania tymczasowego lub do przesyłania nieprzetworzonych bajtów lub szeregowanych obiektów między niezależnymi procesami.
 
-Pliki pamięci współdzielonej różnią się od innych plików pamięci w tej pamięci do przydzielenia przy użyciu funkcji [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) systemu Windows. Klasa przechowuje dane w globalnie przydzielonym bloku pamięci (utworzonym `GlobalAlloc`za pomocą), a ten blok pamięci może być współużytkowany przy użyciu DDE, Schowka lub innych operacji jednolitego transferu danych OLE/com, na przykład przy `IDataObject`użyciu. `CSharedFile`
+Udostępnione pliki pamięci różnią się od innych plików pamięci w tej pamięci dla nich jest przydzielany z funkcji [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) Windows. Klasa `CSharedFile` przechowuje dane w globalnie przydzielonym bloku pamięci (utworzonym przy użyciu), `GlobalAlloc`a ten blok pamięci może być współużytkowany przy użyciu DDE, Schowka lub innych jednolitych operacji transferu danych OLE/COM, na przykład za pomocą `IDataObject`.
 
-`GlobalAlloc`Zwraca uchwyt HGLOBAL, a nie wskaźnik do pamięci, taki jak wskaźnik zwrócony przez [malloc](../../c-runtime-library/reference/malloc.md). W niektórych aplikacjach jest wymagany uchwyt HGLOBAL. Na przykład, aby umieścić dane w schowku, potrzebujesz uchwytu HGLOBAL.
+`GlobalAlloc`zwraca uchwyt HGLOBAL, a nie wskaźnik do pamięci, takich jak wskaźnik zwrócony przez [malloc](../../c-runtime-library/reference/malloc.md). Uchwyt HGLOBAL jest potrzebny w niektórych zastosowaniach. Na przykład, aby umieścić dane w Schowku, potrzebujesz uchwytu HGLOBAL.
 
-`CSharedFile`nie używa plików mapowanych w pamięci, a dane nie mogą być bezpośrednio udostępniane między procesami.
+`CSharedFile`nie używa plików mapowanych w pamięci, a dane nie mogą być bezpośrednio współużytkowane między procesami.
 
-`CSharedFile`obiekty mogą automatycznie przydzielać własne pamięci. Lub można dołączyć własny blok pamięci do `CSharedFile` obiektu przez wywołanie [CSharedFile:: SetHandle](#sethandle). W obu przypadkach pamięć służąca do zwiększania rozmiaru pliku pamięci jest automatycznie `nGrowBytes`alokowana, jeśli `nGrowBytes` nie jest równa zero.
+`CSharedFile`obiekty mogą automatycznie przydzielać własną pamięć. Można też dołączyć własny blok pamięci `CSharedFile` do obiektu, wywołując [CSharedFile::SetHandle](#sethandle). W obu przypadkach pamięć do powiększania pliku pamięci `nGrowBytes`jest przydzielana `nGrowBytes` w przyrostach o rozmiarze, jeśli nie jest zero.
 
-Aby uzyskać więcej informacji, zobacz [pliki artykułów w MFC](../../mfc/files-in-mfc.md) i [Obsługa plików](../../c-runtime-library/file-handling.md) w *dokumentacji dotyczącej biblioteki wykonawczej*.
+Aby uzyskać więcej informacji, zobacz artykuł [Pliki w MFC](../../mfc/files-in-mfc.md) i [Obsługa plików](../../c-runtime-library/file-handling.md) w *odwołaniu do biblioteki w czasie wykonywania*.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CFile](../../mfc/reference/cfile-class.md)
+[Cfile](../../mfc/reference/cfile-class.md)
 
-[CMemFile](../../mfc/reference/cmemfile-class.md)
+[Cmemfile](../../mfc/reference/cmemfile-class.md)
 
 `CSharedFile`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxadv. h
+**Nagłówek:** afxadv.h
 
-##  <a name="csharedfile"></a>CSharedFile::CSharedFile
+## <a name="csharedfilecsharedfile"></a><a name="csharedfile"></a>CSharedFile::CSharedFile
 
-Konstruuje `CSharedFile` obiekt i przydziela do niego pamięć.
+Konstruuje `CSharedFile` obiekt i przydziela dla niego pamięć.
 
 ```
 CSharedFile(
@@ -85,14 +85,14 @@ CSharedFile(
 ### <a name="parameters"></a>Parametry
 
 *nAllocFlags*<br/>
-Flagi wskazujące sposób przydzielenia pamięci. Zobacz [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) , aby uzyskać listę prawidłowych wartości flag.
+Flagi wskazujące sposób przydzielania pamięci. Zobacz [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) listę prawidłowych wartości flag.
 
-*nGrowBytes*<br/>
+*nGrowBytes ( nGrowBytes )*<br/>
 Przyrost alokacji pamięci w bajtach.
 
-##  <a name="detach"></a>CSharedFile::D etach
+## <a name="csharedfiledetach"></a><a name="detach"></a>CSharedFile::Detach
 
-Wywołaj tę funkcję, aby zamknąć plik pamięci i odłączyć go od bloku pamięci.
+Wywołanie tej funkcji, aby zamknąć plik pamięci i odłączyć go od bloku pamięci.
 
 ```
 HGLOBAL Detach();
@@ -100,15 +100,15 @@ HGLOBAL Detach();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Uchwyt bloku pamięci, który zawiera zawartość pliku pamięci.
+Dojście bloku pamięci zawierającego zawartość pliku pamięci.
 
 ### <a name="remarks"></a>Uwagi
 
-Możesz otworzyć go ponownie, wywołując metodę [SetHandle](#sethandle)przy użyciu dojścia zwróconego przez **Odłącz**.
+Można go ponownie otworzyć, wywołując [SetHandle](#sethandle), używając uchwytu zwróconego przez **Detach**.
 
-##  <a name="sethandle"></a>CSharedFile:: SetHandle
+## <a name="csharedfilesethandle"></a><a name="sethandle"></a>CSharedFile::SetHandle
 
-Wywołaj tę funkcję, aby dołączyć blok pamięci globalnej do `CSharedFile` obiektu.
+Wywołanie tej funkcji, aby dołączyć `CSharedFile` blok pamięci globalnej do obiektu.
 
 ```
 void SetHandle(
@@ -119,16 +119,16 @@ void SetHandle(
 ### <a name="parameters"></a>Parametry
 
 *hGlobalMemory*<br/>
-Dojście do pamięci globalnej, która ma zostać dołączona do programu `CSharedFile`.
+Uchwyt do pamięci globalnej, który `CSharedFile`ma być dołączony do pliku .
 
-*bAllowGrow*<br/>
-Określa, czy blok pamięci może zostać powiększony.
+*bAllowGrow (Niewola)*<br/>
+Określa, czy blok pamięci może rosnąć.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *bAllowGrow* ma wartość różną od zera, rozmiar bloku pamięci jest zwiększany w miarę potrzeb, na przykład w przypadku próby zapisania większej liczby bajtów do pliku niż rozmiar bloku pamięci.
+Jeśli *bAllowGrow* jest niezerowy, rozmiar bloku pamięci jest zwiększany w razie potrzeby, na przykład, jeśli spróbujesz zapisać więcej bajtów do pliku niż rozmiar bloku pamięci.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CMemFile](../../mfc/reference/cmemfile-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

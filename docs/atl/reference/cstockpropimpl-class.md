@@ -1,5 +1,5 @@
 ---
-title: Klasa CStockPropImpl
+title: CStockPropImpl Klasa
 ms.date: 05/06/2019
 f1_keywords:
 - CStockPropImpl
@@ -64,19 +64,19 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: bc349137661d7026e48688f8ef510958de270280
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 0aaeb1b6de0febfd5fc0d41cbcc7bad41c607af4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075219"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330674"
 ---
-# <a name="cstockpropimpl-class"></a>Klasa CStockPropImpl
+# <a name="cstockpropimpl-class"></a>CStockPropImpl Klasa
 
-Ta klasa udostępnia metody obsługi wartości właściwości podstawowych.
+Ta klasa zawiera metody obsługi wartości właściwości magazynie.
 
 > [!IMPORTANT]
-> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -95,17 +95,17 @@ class ATL_NO_VTABLE CStockPropImpl :
 
 #### <a name="parameters"></a>Parametry
 
-*&*<br/>
-Klasa implementująca formant i wynikająca z `CStockPropImpl`.
+*T*<br/>
+Klasa implementująca formant i `CStockPropImpl`wyprowadzająca z .
 
-*InterfaceName*<br/>
-Podwójny interfejs uwidaczniający właściwości giełdowe.
+*Nazwa interfejsu*<br/>
+Podwójny interfejs odsłaniający właściwości zapasów.
 
 *piid*<br/>
-Wskaźnik do IID `InterfaceName`.
+Wskaźnik do identyfikatora `InterfaceName`.
 
-*plibid*<br/>
-Wskaźnik do identyfikatora LIBID biblioteki typów zawierającej definicję `InterfaceName`.
+*plibid ( plibid )*<br/>
+Wskaźnik do LIBID biblioteki typów zawierającej `InterfaceName`definicję .
 
 *wMajor*<br/>
 Główna wersja biblioteki typów. Wartość domyślna to 1.
@@ -113,8 +113,8 @@ Główna wersja biblioteki typów. Wartość domyślna to 1.
 *wMinor*<br/>
 Wersja pomocnicza biblioteki typów. Wartość domyślna to 0.
 
-*tihclass*<br/>
-Klasa używana do zarządzania informacjami o typie dla *T*. Wartość domyślna to `CComTypeInfoHolder`.
+*tihclass (klasa tihclass)*<br/>
+Klasa używana do zarządzania informacjami o typie *dla T*. Wartością domyślną jest `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -122,95 +122,95 @@ Klasa używana do zarządzania informacjami o typie dla *T*. Wartość domyślna
 
 |||
 |-|-|
-|[get_Appearance](#get_appearance)|Wywołaj tę metodę, aby uzyskać styl farby używany przez kontrolkę, na przykład płaski lub 3W.|
-|[get_AutoSize](#get_autosize)|Wywołaj tę metodę, aby uzyskać stan flagi wskazującej, czy kontrolka nie może być żadnym innym rozmiarem.|
-|[get_BackColor](#get_backcolor)|Wywołaj tę metodę, aby uzyskać kolor tła kontrolki.|
-|[get_BackStyle](#get_backstyle)|Wywołaj tę metodę, aby uzyskać styl tła kontrolki, jako przezroczysty lub nieprzezroczysty.|
-|[get_BorderColor](#get_bordercolor)|Wywołaj tę metodę, aby uzyskać kolor obramowania kontrolki.|
-|[get_BorderStyle](#get_borderstyle)|Wywołaj tę metodę, aby uzyskać styl obramowania kontrolki.|
-|[get_BorderVisible](#get_bordervisible)|Wywołaj tę metodę, aby uzyskać stan flagi wskazującej, czy obramowanie kontrolki jest widoczne, czy nie.|
-|[get_BorderWidth](#get_borderwidth)|Wywołaj tę metodę, aby uzyskać szerokość (w pikselach) obramowania kontrolki.|
-|[get_Caption](#get_caption)|Wywołaj tę metodę, aby uzyskać tekst określony w podpisie obiektu.|
-|[get_DrawMode](#get_drawmode)|Wywołaj tę metodę, aby uzyskać tryb rysowania kontrolki, na przykład pióro XOR lub Odwróć kolory.|
-|[get_DrawStyle](#get_drawstyle)|Wywołaj tę metodę, aby uzyskać styl rysowania kontrolki, na przykład Solid, kreskowany lub kropkowany.|
-|[get_DrawWidth](#get_drawwidth)|Wywołaj tę metodę, aby uzyskać szerokość rysunku (w pikselach) używaną przez metody rysowania kontrolki.|
-|[get_Enabled](#get_enabled)|Wywołaj tę metodę, aby uzyskać stan flagi wskazującej, czy kontrolka jest włączona.|
-|[get_FillColor](#get_fillcolor)|Wywołaj tę metodę, aby uzyskać kolor wypełnienia formantu.|
-|[get_FillStyle](#get_fillstyle)|Wywołaj tę metodę, aby uzyskać styl wypełnienia kontrolki, na przykład pełny, przezroczysty lub wylęgowe krzyżowo.|
-|[get_Font](#get_font)|Wywołaj tę metodę, aby uzyskać wskaźnik do właściwości czcionki kontrolki.|
-|[get_ForeColor](#get_forecolor)|Wywołaj tę metodę, aby uzyskać kolor pierwszego planu formantu.|
-|[get_HWND](#get_hwnd)|Wywołaj tę metodę, aby uzyskać uchwyt okna skojarzonego z kontrolką.|
-|[get_MouseIcon](#get_mouseicon)|Wywołaj tę metodę, aby uzyskać właściwości obrazu grafiki (ikona, mapa bitowa lub metaplik), które mają być wyświetlane, gdy wskaźnik myszy znajduje się nad kontrolką.|
-|[get_MousePointer](#get_mousepointer)|Wywołaj tę metodę, aby uzyskać typ wskaźnika myszy wyświetlanego, gdy wskaźnik myszy znajduje się nad kontrolką, na przykład strzałką, krzyżykiem lub klepsydrą.|
-|[get_Picture](#get_picture)|Wywołaj tę metodę, aby uzyskać wskaźnik do właściwości obrazu grafiki (ikona, mapa bitowa lub metaplik), która ma zostać wyświetlona.|
-|[get_ReadyState](#get_readystate)|Wywołaj tę metodę, aby uzyskać stan gotowości kontrolki, na przykład ładowania lub ładowania.|
-|[get_TabStop](#get_tabstop)|Wywołaj tę metodę, aby uzyskać flagę wskazującą, czy kontrolka jest tabulatorem.|
-|[get_Text](#get_text)|Wywołaj tę metodę, aby uzyskać tekst wyświetlany z kontrolką.|
-|[getprawidłowy](#get_valid)|Wywołaj tę metodę, aby uzyskać stan flagi wskazującej, czy formant jest prawidłowy, czy nie.|
-|[get_Window](#get_window)|Wywołaj tę metodę, aby uzyskać uchwyt okna skojarzonego z kontrolką. Identyczny z [CStockPropImpl:: get_HWND](#get_hwnd).|
-|[put_Appearance](#put_appearance)|Wywołaj tę metodę, aby ustawić styl farby używany przez kontrolkę, na przykład płaski lub 3W.|
-|[put_AutoSize](#put_autosize)|Wywołaj tę metodę, aby ustawić wartość flagi wskazującej, czy kontrolka nie może być żadnym innym rozmiarem.|
-|[put_BackColor](#put_backcolor)|Wywołaj tę metodę, aby ustawić kolor tła kontrolki.|
-|[put_BackStyle](#put_backstyle)|Wywołaj tę metodę, aby ustawić styl tła kontrolki.|
-|[put_BorderColor](#put_bordercolor)|Wywołaj tę metodę, aby ustawić kolor obramowania kontrolki.|
-|[put_BorderStyle](#put_borderstyle)|Wywołaj tę metodę, aby ustawić styl obramowania kontrolki.|
-|[put_BorderVisible](#put_bordervisible)|Wywołaj tę metodę, aby ustawić wartość flagi wskazującej, czy obramowanie kontrolki jest widoczne, czy nie.|
-|[put_BorderWidth](#put_borderwidth)|Wywołaj tę metodę, aby ustawić szerokość obramowania kontrolki.|
-|[put_Caption](#put_caption)|Wywołaj tę metodę, aby ustawić tekst, który będzie wyświetlany z kontrolką.|
-|[put_DrawMode](#put_drawmode)|Wywołaj tę metodę, aby ustawić tryb rysowania kontrolki, na przykład pióro XOR lub Odwróć kolory.|
-|[put_DrawStyle](#put_drawstyle)|Wywołaj tę metodę, aby ustawić styl rysowania kontrolki, na przykład Solid, kreskowany lub kropkowany.|
-|[put_DrawWidth](#put_drawwidth)|Wywołaj tę metodę, aby ustawić szerokość (w pikselach) używaną przez metody rysowania kontrolki.|
-|[put_Enabled](#put_enabled)|Wywołaj tę metodę, aby ustawić flagę wskazującą, czy kontrolka jest włączona.|
-|[put_FillColor](#put_fillcolor)|Wywołaj tę metodę, aby ustawić kolor wypełnienia formantu.|
-|[put_FillStyle](#put_fillstyle)|Wywołaj tę metodę, aby ustawić styl wypełnienia kontrolki, na przykład pełny, przezroczysty lub wylęgowe krzyżowo.|
-|[put_Font](#put_font)|Wywołaj tę metodę, aby ustawić właściwości czcionki kontrolki.|
-|[put_ForeColor](#put_forecolor)|Wywołaj tę metodę, aby ustawić kolor pierwszego planu formantu.|
+|[get_Appearance](#get_appearance)|Wywołanie tej metody, aby uzyskać styl malowania używany przez formant, na przykład płaski lub 3D.|
+|[get_AutoSize](#get_autosize)|Wywołanie tej metody, aby uzyskać stan flagi, która wskazuje, czy formant nie może być inny rozmiar.|
+|[get_BackColor](#get_backcolor)|Wywołanie tej metody, aby uzyskać kolor tła formantu.|
+|[get_BackStyle](#get_backstyle)|Wywołanie tej metody, aby uzyskać styl tła formantu, przezroczyste lub nieprzezroczyste.|
+|[get_BorderColor](#get_bordercolor)|Wywołanie tej metody, aby uzyskać kolor obramowania formantu.|
+|[get_BorderStyle](#get_borderstyle)|Wywołanie tej metody, aby uzyskać styl obramowania formantu.|
+|[get_BorderVisible](#get_bordervisible)|Wywołanie tej metody, aby uzyskać stan flagi, która wskazuje, czy obramowanie formantu jest widoczne, czy nie.|
+|[get_BorderWidth](#get_borderwidth)|Wywołanie tej metody, aby uzyskać szerokość (w pikselach) obramowania formantu.|
+|[get_Caption](#get_caption)|Wywołanie tej metody, aby uzyskać tekst określony w podpisie obiektu.|
+|[get_DrawMode](#get_drawmode)|Wywołanie tej metody, aby uzyskać tryb rysowania formantu, na przykład XOR Pióro lub Odwróć kolory.|
+|[get_DrawStyle](#get_drawstyle)|Wywołanie tej metody, aby uzyskać styl rysowania formantu, na przykład bryła, przerywane lub kropkowane.|
+|[get_DrawWidth](#get_drawwidth)|Wywołanie tej metody, aby uzyskać szerokość rysunku (w pikselach) używane przez metody rysowania formantu.|
+|[get_Enabled](#get_enabled)|Wywołanie tej metody, aby uzyskać stan flagi, która wskazuje, czy formant jest włączony.|
+|[get_FillColor](#get_fillcolor)|Wywołanie tej metody, aby uzyskać kolor wypełnienia formantu.|
+|[get_FillStyle](#get_fillstyle)|Wywołanie tej metody, aby uzyskać styl wypełnienia formantu, na przykład bryła, przezroczyste lub kreskowane.|
+|[get_Font](#get_font)|Wywołanie tej metody, aby uzyskać wskaźnik do właściwości czcionki formantu.|
+|[get_ForeColor](#get_forecolor)|Wywołanie tej metody, aby uzyskać kolor pierwszego planu formantu.|
+|[get_HWND](#get_hwnd)|Wywołanie tej metody, aby uzyskać dojście okna skojarzone z formantem.|
+|[get_MouseIcon](#get_mouseicon)|Wywołanie tej metody, aby uzyskać właściwości obrazu grafiki (ikona, bitmapa lub metaplik) mają być wyświetlane, gdy mysz jest nad formantem.|
+|[get_MousePointer](#get_mousepointer)|Wywołanie tej metody, aby uzyskać typ wskaźnika myszy wyświetlane, gdy mysz jest nad formantem, na przykład strzałka, krzyż lub klepsydry.|
+|[get_Picture](#get_picture)|Wywołanie tej metody, aby uzyskać wskaźnik do właściwości obrazu grafiki (ikona, bitmapa lub metaplik), które mają być wyświetlane.|
+|[get_ReadyState](#get_readystate)|Wywołanie tej metody, aby uzyskać stan gotowości formantu, na przykład ładowania lub załadowania.|
+|[get_TabStop](#get_tabstop)|Wywołanie tej metody, aby uzyskać flagę, która wskazuje, czy formant jest tabulatorem, czy nie.|
+|[get_Text](#get_text)|Wywołanie tej metody, aby uzyskać tekst, który jest wyświetlany z formantem.|
+|[getvalid ( getvalid )](#get_valid)|Wywołanie tej metody, aby uzyskać stan flagi, która wskazuje, czy formant jest prawidłowy, czy nie.|
+|[get_Window](#get_window)|Wywołanie tej metody, aby uzyskać dojście okna skojarzone z formantem. Identyczne z [CStockPropImpl::get_HWND](#get_hwnd).|
+|[put_Appearance](#put_appearance)|Wywołanie tej metody, aby ustawić styl malowania używany przez formant, na przykład płaski lub 3D.|
+|[put_AutoSize](#put_autosize)|Wywołanie tej metody, aby ustawić wartość flagi, która wskazuje, jeśli formant nie może być inny rozmiar.|
+|[put_BackColor](#put_backcolor)|Wywołanie tej metody, aby ustawić kolor tła formantu.|
+|[put_BackStyle](#put_backstyle)|Wywołanie tej metody, aby ustawić styl tła formantu.|
+|[put_BorderColor](#put_bordercolor)|Wywołanie tej metody, aby ustawić kolor obramowania formantu.|
+|[put_BorderStyle](#put_borderstyle)|Wywołanie tej metody, aby ustawić styl obramowania formantu.|
+|[put_BorderVisible](#put_bordervisible)|Wywołanie tej metody, aby ustawić wartość flagi, która wskazuje, czy obramowanie formantu jest widoczne, czy nie.|
+|[put_BorderWidth](#put_borderwidth)|Wywołanie tej metody, aby ustawić szerokość obramowania formantu.|
+|[put_Caption](#put_caption)|Wywołanie tej metody, aby ustawić tekst, który ma być wyświetlany z formantem.|
+|[put_DrawMode](#put_drawmode)|Wywołanie tej metody, aby ustawić tryb rysowania formantu, na przykład XOR Pióro lub Odwróć kolory.|
+|[put_DrawStyle](#put_drawstyle)|Wywołanie tej metody, aby ustawić styl rysowania formantu, na przykład bryła, przerywane lub kropkowane.|
+|[put_DrawWidth](#put_drawwidth)|Wywołanie tej metody, aby ustawić szerokość (w pikselach) używane przez metody rysowania formantu.|
+|[put_Enabled](#put_enabled)|Wywołanie tej metody, aby ustawić flagę, która wskazuje, czy formant jest włączony.|
+|[put_FillColor](#put_fillcolor)|Wywołanie tej metody, aby ustawić kolor wypełnienia formantu.|
+|[put_FillStyle](#put_fillstyle)|Wywołanie tej metody, aby ustawić styl wypełnienia formantu, na przykład bryła, przezroczyste lub kreskowane.|
+|[put_Font](#put_font)|Wywołanie tej metody, aby ustawić właściwości czcionki formantu.|
+|[put_ForeColor](#put_forecolor)|Wywołanie tej metody, aby ustawić kolor pierwszego planu formantu.|
 |[put_HWND](#put_hwnd)|Ta metoda zwraca E_FAIL.|
-|[put_MouseIcon](#put_mouseicon)|Wywołaj tę metodę, aby ustawić właściwości obrazu grafiki (ikona, mapa bitowa lub metaplik), które mają być wyświetlane, gdy wskaźnik myszy znajduje się nad kontrolką.|
-|[put_MousePointer](#put_mousepointer)|Wywołaj tę metodę, aby ustawić typ wskaźnika myszy wyświetlanego, gdy wskaźnik myszy znajduje się nad kontrolką, na przykład strzałką, krzyżykiem lub klepsydrą.|
-|[put_Picture](#put_picture)|Wywołaj tę metodę, aby ustawić właściwości obrazu grafiki (ikony, mapy bitowej lub metapliku) do wyświetlenia.|
-|[put_ReadyState](#put_readystate)|Wywołaj tę metodę, aby ustawić stan gotowości kontrolki, na przykład ładowania lub ładowania.|
-|[put_TabStop](#put_tabstop)|Wywołaj tę metodę, aby ustawić wartość flagi wskazującej, czy kontrolka jest tabulatorem.|
-|[put_Text](#put_text)|Wywołaj tę metodę, aby ustawić tekst wyświetlany z kontrolką.|
-|[putvalid](#put_valid)|Wywołaj tę metodę, aby ustawić flagę wskazującą, czy formant jest prawidłowy, czy nie.|
-|[put_Window](#put_window)|Ta metoda wywołuje [CStockPropImpl::p ut_HWND](#put_hwnd), która zwraca E_FAIL.|
-|[putref_Font](#putref_font)|Wywołaj tę metodę, aby ustawić właściwości czcionki kontrolki z liczbą odwołań.|
-|[putref_MouseIcon](#putref_mouseicon)|Wywołaj tę metodę, aby ustawić właściwości obrazu grafiki (ikona, mapa bitowa lub metaplik), które mają być wyświetlane, gdy wskaźnik myszy znajduje się nad kontrolką, z liczbą odwołań.|
-|[putref_Picture](#putref_picture)|Wywołaj tę metodę, aby ustawić właściwości obrazu grafiki (ikony, mapy bitowej lub metapliku), która ma być wyświetlana z liczbą odwołań.|
+|[put_MouseIcon](#put_mouseicon)|Wywołanie tej metody, aby ustawić właściwości obrazu grafiki (ikona, bitmapa lub metaplik) mają być wyświetlane, gdy mysz jest nad formantem.|
+|[put_MousePointer](#put_mousepointer)|Wywołanie tej metody, aby ustawić typ wskaźnika myszy wyświetlany, gdy mysz jest nad formantem, na przykład strzałka, krzyż lub klepsydra.|
+|[put_Picture](#put_picture)|Wywołanie tej metody, aby ustawić właściwości obrazu grafiki (ikona, bitmapa lub metaplik) mają być wyświetlane.|
+|[put_ReadyState](#put_readystate)|Wywołanie tej metody, aby ustawić stan gotowości formantu, na przykład ładowania lub załadowania.|
+|[put_TabStop](#put_tabstop)|Wywołanie tej metody, aby ustawić wartość flagi, która wskazuje, czy formant jest tabulatorem, czy nie.|
+|[put_Text](#put_text)|Wywołanie tej metody, aby ustawić tekst, który jest wyświetlany z formantem.|
+|[putvalid ( putvalid )](#put_valid)|Wywołanie tej metody, aby ustawić flagę, która wskazuje, czy formant jest prawidłowy, czy nie.|
+|[put_Window](#put_window)|Ta metoda wywołuje [CStockPropImpl::put_HWND](#put_hwnd), który zwraca E_FAIL.|
+|[putref_Font](#putref_font)|Wywołanie tej metody, aby ustawić właściwości czcionki formantu, z liczbą odwołań.|
+|[putref_MouseIcon](#putref_mouseicon)|Wywołanie tej metody, aby ustawić właściwości obrazu grafiki (ikona, bitmapa lub metaplik) mają być wyświetlane, gdy mysz jest nad formantem, z liczbą odwołań.|
+|[putref_Picture](#putref_picture)|Wywołanie tej metody, aby ustawić właściwości obrazu grafiki (ikona, bitmapa lub metaplik) mają być wyświetlane, z liczbą odwołań.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CStockPropImpl` udostępnia metody **Put** i **Get** dla każdej właściwości giełdowej. Te metody zapewniają kod niezbędny do ustawienia lub pobrania składowej danych skojarzonej z każdą właściwością oraz do powiadamiania i synchronizowania z kontenerem w przypadku zmiany właściwości.
+`CStockPropImpl`zapewnia **metody put** and **get** dla każdej właściwości magazynowych. Te metody zapewniają kod niezbędny do skonfigurowania lub uzyskania elementu członkowskiego danych skojarzonego z każdą właściwością oraz powiadamiania i synchronizowania z kontenerem, gdy zmieni się jakakolwiek właściwość.
 
-Program Visual Studio zapewnia obsługę właściwości podstawowych za pomocą kreatorów. Aby uzyskać więcej informacji na temat dodawania właściwości podstawowych do kontrolki, zobacz [samouczek ATL](../../atl/active-template-library-atl-tutorial.md).
+Visual Studio zapewnia obsługę właściwości zapasów za pośrednictwem swoich kreatorów. Aby uzyskać więcej informacji na temat dodawania właściwości zapasów do formantu, zobacz [samouczek ATL](../../atl/active-template-library-atl-tutorial.md).
 
-W celu zapewnienia zgodności z poprzednimi wersjami `CStockPropImpl` udostępnia również metody `get_Window` i `put_Window`, które po prostu wywołują odpowiednio `get_HWND` i `put_HWND`. Domyślna implementacja `put_HWND` zwraca E_FAIL, ponieważ właściwość HWND powinna być właściwością tylko do odczytu.
+W celu zapewnienia zgodności `CStockPropImpl` z `get_Window` powrotem, również udostępnia i `put_Window` metody, które po prostu wywołać `get_HWND` i `put_HWND`, odpowiednio. Domyślna implementacja `put_HWND` zwraca E_FAIL ponieważ HWND powinna być właściwością tylko do odczytu.
 
-Następujące właściwości mają również implementację **PUTREF** :
+Następujące właściwości mają również implementację **gniw:**
 
-- Font
+- Czcionka
 
-- MouseIcon
+- MouseIcon ( MouseIcon )
 
 - Obraz
 
-Te same trzy właściwości podstawowe wymagają odpowiedniego elementu członkowskiego danych, aby były typu `CComPtr` lub innej klasy, która udostępnia poprawne zliczanie odwołań do interfejsów za pomocą operatora przypisania.
+Te same trzy właściwości magazynowe wymagają, aby `CComPtr` ich odpowiedni element członkowski danych był typu lub innej klasy, która zapewnia poprawne zliczanie odwołania do interfejsu za pomocą operatora przypisania.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
 `T`
 
-[IDispatchImpl](../../atl/reference/idispatchimpl-class.md)
+[Idispatchimpl](../../atl/reference/idispatchimpl-class.md)
 
 `CStockPropImpl`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlctl. h
+**Nagłówek:** atlctl.h
 
-##  <a name="cstockpropimplget_appearance"></a><a name="get_appearance"></a>CStockPropImpl:: get_Appearance
+## <a name="cstockpropimplget_appearance"></a><a name="get_appearance"></a>CStockPropImpl::get_Appearance
 
-Wywołaj tę metodę, aby uzyskać styl farby używany przez kontrolkę, na przykład płaski lub 3W.
+Wywołanie tej metody, aby uzyskać styl malowania używany przez formant, na przykład płaski lub 3D.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
@@ -218,16 +218,16 @@ HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
 
 ### <a name="parameters"></a>Parametry
 
-*pnAppearance*<br/>
-Zmienna, która otrzymuje styl malowania kontrolki.
+*pnPokaz*<br/>
+Zmienna, która odbiera styl malowania formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_autosize"></a><a name="get_autosize"></a>CStockPropImpl:: get_AutoSize
+## <a name="cstockpropimplget_autosize"></a><a name="get_autosize"></a>CStockPropImpl::get_AutoSize
 
-Wywołaj tę metodę, aby uzyskać stan flagi wskazującej, czy kontrolka nie może być żadnym innym rozmiarem.
+Wywołanie tej metody, aby uzyskać stan flagi, która wskazuje, czy formant nie może być inny rozmiar.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
@@ -235,16 +235,16 @@ HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
 
 ### <a name="parameters"></a>Parametry
 
-*pbAutoSize*<br/>
-Zmienna, która odbiera stan flagi. Wartość TRUE oznacza, że kontrolka nie może być żadnym innym rozmiarem.
+*rozmiar pbAutoSize*<br/>
+Zmienna, która odbiera stan flagi. WARTOŚĆ TRUE wskazuje, że formant nie może mieć innego rozmiaru.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_backcolor"></a><a name="get_backcolor"></a>CStockPropImpl:: get_BackColor
+## <a name="cstockpropimplget_backcolor"></a><a name="get_backcolor"></a>CStockPropImpl::get_BackColor
 
-Wywołaj tę metodę, aby uzyskać kolor tła kontrolki.
+Wywołanie tej metody, aby uzyskać kolor tła formantu.
 
 ```
 HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
@@ -253,15 +253,15 @@ HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
 ### <a name="parameters"></a>Parametry
 
 *pclrBackColor*<br/>
-Zmienna, która otrzymuje kolor tła kontrolki.
+Zmienna, która odbiera kolor tła formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_backstyle"></a><a name="get_backstyle"></a>CStockPropImpl:: get_BackStyle
+## <a name="cstockpropimplget_backstyle"></a><a name="get_backstyle"></a>CStockPropImpl::get_BackStyle
 
-Wywołaj tę metodę, aby uzyskać styl tła kontrolki, jako przezroczysty lub nieprzezroczysty.
+Wywołanie tej metody, aby uzyskać styl tła formantu, przezroczyste lub nieprzezroczyste.
 
 ```
 HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
@@ -269,16 +269,16 @@ HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*pnBackStyle*<br/>
-Zmienna, która otrzymuje styl tła formantu.
+*Styl pnBackstyle*<br/>
+Zmienna, która odbiera styl tła formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_bordercolor"></a><a name="get_bordercolor"></a>CStockPropImpl:: get_BorderColor
+## <a name="cstockpropimplget_bordercolor"></a><a name="get_bordercolor"></a>CStockPropImpl::get_BorderColor
 
-Wywołaj tę metodę, aby uzyskać kolor obramowania kontrolki.
+Wywołanie tej metody, aby uzyskać kolor obramowania formantu.
 
 ```
 HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
@@ -287,15 +287,15 @@ HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
 ### <a name="parameters"></a>Parametry
 
 *pclrBorderColor*<br/>
-Zmienna, która otrzymuje kolor obramowania kontrolki.
+Zmienna, która odbiera kolor obramowania formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_borderstyle"></a><a name="get_borderstyle"></a>CStockPropImpl:: get_BorderStyle
+## <a name="cstockpropimplget_borderstyle"></a><a name="get_borderstyle"></a>CStockPropImpl::get_BorderStyle
 
-Wywołaj tę metodę, aby uzyskać styl obramowania kontrolki.
+Wywołanie tej metody, aby uzyskać styl obramowania formantu.
 
 ```
 HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
@@ -304,15 +304,15 @@ HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
 ### <a name="parameters"></a>Parametry
 
 *pnBorderStyle*<br/>
-Zmienna, która otrzymuje styl obramowania kontrolki.
+Zmienna, która odbiera styl obramowania formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_bordervisible"></a><a name="get_bordervisible"></a>CStockPropImpl:: get_BorderVisible
+## <a name="cstockpropimplget_bordervisible"></a><a name="get_bordervisible"></a>CStockPropImpl::get_BorderVisible
 
-Wywołaj tę metodę, aby uzyskać stan flagi wskazującej, czy obramowanie kontrolki jest widoczne, czy nie.
+Wywołanie tej metody, aby uzyskać stan flagi, która wskazuje, czy obramowanie formantu jest widoczne, czy nie.
 
 ```
 HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
@@ -320,16 +320,16 @@ HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
 
 ### <a name="parameters"></a>Parametry
 
-*pbBorderVisible*<br/>
-Zmienna, która odbiera stan flagi. Wartość TRUE wskazuje, że obramowanie kontrolki jest widoczne.
+*pbBorderVisible (Widoczne)*<br/>
+Zmienna, która odbiera stan flagi. WARTOŚĆ TRUE wskazuje, że obramowanie formantu jest widoczne.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_borderwidth"></a><a name="get_borderwidth"></a>CStockPropImpl:: get_BorderWidth
+## <a name="cstockpropimplget_borderwidth"></a><a name="get_borderwidth"></a>CStockPropImpl::get_BorderWidth
 
-Wywołaj tę metodę, aby uzyskać szerokość obramowania kontrolki.
+Wywołanie tej metody, aby uzyskać szerokość obramowania formantu.
 
 ```
 HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
@@ -338,15 +338,15 @@ HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
 ### <a name="parameters"></a>Parametry
 
 *pnBorderWidth*<br/>
-Zmienna, która otrzymuje szerokość obramowania kontrolki.
+Zmienna, która odbiera szerokość obramowania formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_caption"></a><a name="get_caption"></a>CStockPropImpl:: get_Caption
+## <a name="cstockpropimplget_caption"></a><a name="get_caption"></a>CStockPropImpl::get_Caption
 
-Wywołaj tę metodę, aby uzyskać tekst określony w podpisie obiektu.
+Wywołanie tej metody, aby uzyskać tekst określony w podpisie obiektu.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
@@ -354,16 +354,16 @@ HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
 
 ### <a name="parameters"></a>Parametry
 
-*pbstrCaption*<br/>
-Tekst, który będzie wyświetlany z kontrolką.
+*pbstrCaption (pbstrCaption)*<br/>
+Tekst, który ma być wyświetlany z formantem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_drawmode"></a><a name="get_drawmode"></a>CStockPropImpl:: get_DrawMode
+## <a name="cstockpropimplget_drawmode"></a><a name="get_drawmode"></a>CStockPropImpl::get_DrawMode
 
-Wywołaj tę metodę, aby uzyskać tryb rysowania kontrolki, na przykład pióro XOR lub Odwróć kolory.
+Wywołanie tej metody, aby uzyskać tryb rysowania formantu, na przykład XOR Pióro lub Odwróć kolory.
 
 ```
 HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
@@ -372,15 +372,15 @@ HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
 ### <a name="parameters"></a>Parametry
 
 *pnDrawMode*<br/>
-Zmienna, która odbiera tryb rysowania kontrolki.
+Zmienna odbiera tryb rysowania formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_drawstyle"></a><a name="get_drawstyle"></a>CStockPropImpl:: get_DrawStyle
+## <a name="cstockpropimplget_drawstyle"></a><a name="get_drawstyle"></a>CStockPropImpl::get_DrawStyle
 
-Wywołaj tę metodę, aby uzyskać styl rysowania kontrolki, na przykład Solid, kreskowany lub kropkowany.
+Wywołanie tej metody, aby uzyskać styl rysowania formantu, na przykład bryła, przerywane lub kropkowane.
 
 ```
 HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
@@ -388,16 +388,16 @@ HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*pnDrawStyle*<br/>
-Zmienna, która otrzymuje styl rysowania kontrolki.
+*PnDrawStyle*<br/>
+Zmienna odbiera styl rysowania formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_drawwidth"></a><a name="get_drawwidth"></a>CStockPropImpl:: get_DrawWidth
+## <a name="cstockpropimplget_drawwidth"></a><a name="get_drawwidth"></a>CStockPropImpl::get_DrawWidth
 
-Wywołaj tę metodę, aby uzyskać szerokość rysunku (w pikselach) używaną przez metody rysowania kontrolki.
+Wywołanie tej metody, aby uzyskać szerokość rysunku (w pikselach) używane przez metody rysowania formantu.
 
 ```
 HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
@@ -406,15 +406,15 @@ HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
 ### <a name="parameters"></a>Parametry
 
 *pnDrawWidth*<br/>
-Zmienna, która otrzymuje wartość szerokości kontrolki (w pikselach).
+Zmienna, która odbiera wartość szerokości formantu w pikselach.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_enabled"></a><a name="get_enabled"></a>CStockPropImpl:: get_Enabled
+## <a name="cstockpropimplget_enabled"></a><a name="get_enabled"></a>CStockPropImpl::get_Enabled
 
-Wywołaj tę metodę, aby uzyskać stan flagi wskazującej, czy kontrolka jest włączona.
+Wywołanie tej metody, aby uzyskać stan flagi, która wskazuje, czy formant jest włączony.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
@@ -422,16 +422,16 @@ HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
 
 ### <a name="parameters"></a>Parametry
 
-*pbEnabled*<br/>
-Zmienna, która odbiera stan flagi. Wartość TRUE oznacza, że kontrolka jest włączona.
+*pbWsają*<br/>
+Zmienna, która odbiera stan flagi. FUNKCJA TRUE wskazuje, że formant jest włączony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_fillcolor"></a><a name="get_fillcolor"></a>CStockPropImpl:: get_FillColor
+## <a name="cstockpropimplget_fillcolor"></a><a name="get_fillcolor"></a>CStockPropImpl::get_FillColor
 
-Wywołaj tę metodę, aby uzyskać kolor wypełnienia formantu.
+Wywołanie tej metody, aby uzyskać kolor wypełnienia formantu.
 
 ```
 HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
@@ -440,15 +440,15 @@ HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
 ### <a name="parameters"></a>Parametry
 
 *pclrFillColor*<br/>
-Zmienna, która otrzymuje kolor wypełnienia formantu.
+Zmienna, która odbiera kolor wypełnienia formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_fillstyle"></a><a name="get_fillstyle"></a>CStockPropImpl:: get_FillStyle
+## <a name="cstockpropimplget_fillstyle"></a><a name="get_fillstyle"></a>CStockPropImpl::get_FillStyle
 
-Wywołaj tę metodę, aby uzyskać styl wypełnienia kontrolki, na przykład Solid, transparent lub crosshatched.
+Wywołanie tej metody, aby uzyskać styl wypełnienia formantu, na przykład bryła, przezroczyste lub crosshatched.
 
 ```
 HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
@@ -456,16 +456,16 @@ HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*pnFillStyle*<br/>
-Zmienna, która odbiera styl wypełnienia kontrolki.
+*pnFillStyle (polski)*<br/>
+Zmienna, która odbiera styl wypełnienia formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_font"></a><a name="get_font"></a>CStockPropImpl:: get_Font
+## <a name="cstockpropimplget_font"></a><a name="get_font"></a>CStockPropImpl::get_Font
 
-Wywołaj tę metodę, aby uzyskać wskaźnik do właściwości czcionki kontrolki.
+Wywołanie tej metody, aby uzyskać wskaźnik do właściwości czcionki formantu.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
@@ -473,16 +473,16 @@ HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
 
 ### <a name="parameters"></a>Parametry
 
-*ppFont*<br/>
-Zmienna, która otrzymuje wskaźnik do właściwości czcionki kontrolki.
+*ppFont (polski)*<br/>
+Zmienna, która odbiera wskaźnik do właściwości czcionki formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_forecolor"></a><a name="get_forecolor"></a>CStockPropImpl:: get_ForeColor
+## <a name="cstockpropimplget_forecolor"></a><a name="get_forecolor"></a>CStockPropImpl::get_ForeColor
 
-Wywołaj tę metodę, aby uzyskać kolor pierwszego planu formantu.
+Wywołanie tej metody, aby uzyskać kolor pierwszego planu formantu.
 
 ```
 HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
@@ -490,16 +490,16 @@ HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
 
 ### <a name="parameters"></a>Parametry
 
-*pclrForeColor*<br/>
-Zmienna, która otrzymuje kolor pierwszego planu kontrolek.
+*pclrForeColor (PclrForeColor)*<br/>
+Zmienna odbierana przez formanty kolor pierwszego planu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_hwnd"></a><a name="get_hwnd"></a>CStockPropImpl:: get_HWND
+## <a name="cstockpropimplget_hwnd"></a><a name="get_hwnd"></a>CStockPropImpl::get_HWND
 
-Wywołaj tę metodę, aby uzyskać uchwyt okna skojarzonego z kontrolką.
+Wywołanie tej metody, aby uzyskać dojście okna skojarzone z formantem.
 
 ```
 HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
@@ -507,16 +507,16 @@ HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*phWnd*<br/>
-Uchwyt okna skojarzony z kontrolką.
+*phWnd (właśc.*<br/>
+Uchwyt okna skojarzony z formantem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_mouseicon"></a><a name="get_mouseicon"></a>CStockPropImpl:: get_MouseIcon
+## <a name="cstockpropimplget_mouseicon"></a><a name="get_mouseicon"></a>CStockPropImpl::get_MouseIcon
 
-Wywołaj tę metodę, aby uzyskać właściwości obrazu grafiki (ikona, mapa bitowa lub metaplik), które mają być wyświetlane, gdy wskaźnik myszy znajduje się nad kontrolką.
+Wywołanie tej metody, aby uzyskać właściwości obrazu grafiki (ikona, bitmapa lub metaplik) mają być wyświetlane, gdy mysz jest nad formantem.
 
 ```
 HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
@@ -524,16 +524,16 @@ HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>Parametry
 
-*ppPicture*<br/>
-Zmienna, która otrzymuje wskaźnik do właściwości obrazu grafiki.
+*ppZdjęcie*<br/>
+Zmienna, która odbiera wskaźnik do właściwości obrazu grafiki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_mousepointer"></a><a name="get_mousepointer"></a>CStockPropImpl:: get_MousePointer
+## <a name="cstockpropimplget_mousepointer"></a><a name="get_mousepointer"></a>CStockPropImpl::get_MousePointer
 
-Wywołaj tę metodę, aby uzyskać typ wskaźnika myszy wyświetlanego, gdy wskaźnik myszy znajduje się nad kontrolką, na przykład strzałką, krzyżykiem lub klepsydrą.
+Wywołanie tej metody, aby uzyskać typ wskaźnika myszy wyświetlane, gdy mysz jest nad formantem, na przykład strzałka, krzyż lub klepsydry.
 
 ```
 HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
@@ -541,16 +541,16 @@ HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
 
 ### <a name="parameters"></a>Parametry
 
-*pnMousePointer*<br/>
-Zmienna, która odbiera typ wskaźnika myszy.
+*pnMousePointer (pnMousePointer)*<br/>
+Zmienna odbiera typ wskaźnika myszy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_picture"></a><a name="get_picture"></a>CStockPropImpl:: get_Picture
+## <a name="cstockpropimplget_picture"></a><a name="get_picture"></a>CStockPropImpl::get_Picture
 
-Wywołaj tę metodę, aby uzyskać wskaźnik do właściwości obrazu grafiki (ikona, mapa bitowa lub metaplik), która ma zostać wyświetlona.
+Wywołanie tej metody, aby uzyskać wskaźnik do właściwości obrazu grafiki (ikona, bitmapa lub metaplik), które mają być wyświetlane.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
@@ -558,16 +558,16 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 
 ### <a name="parameters"></a>Parametry
 
-*ppPicture*<br/>
-Zmienna, która otrzymuje wskaźnik do właściwości obrazu. Aby uzyskać więcej informacji, zobacz [IPictureDisp](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp) .
+*ppZdjęcie*<br/>
+Zmienna, która odbiera wskaźnik do właściwości obrazu. Zobacz [IPictureDisp](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp) aby uzyskać więcej informacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_readystate"></a><a name="get_readystate"></a>CStockPropImpl:: get_ReadyState
+## <a name="cstockpropimplget_readystate"></a><a name="get_readystate"></a>CStockPropImpl::get_ReadyState
 
-Wywołaj tę metodę, aby uzyskać stan gotowości kontrolki, na przykład ładowania lub ładowania.
+Wywołanie tej metody, aby uzyskać stan gotowości formantu, na przykład ładowania lub załadowania.
 
 ```
 HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
@@ -580,11 +580,11 @@ Zmienna, która odbiera stan gotowości formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_tabstop"></a><a name="get_tabstop"></a>CStockPropImpl:: get_TabStop
+## <a name="cstockpropimplget_tabstop"></a><a name="get_tabstop"></a>CStockPropImpl::get_TabStop
 
-Wywołaj tę metodę, aby uzyskać stan flagi wskazującej, czy kontrolka jest tabulatorem.
+Wywołanie tej metody, aby uzyskać stan flagi, która wskazuje, czy formant jest tabulatorem, czy nie.
 
 ```
 HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
@@ -593,15 +593,15 @@ HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
 ### <a name="parameters"></a>Parametry
 
 *pbTabStop*<br/>
-Zmienna, która odbiera stan flagi. Wartość TRUE oznacza, że kontrolka jest tabulatorem.
+Zmienna, która odbiera stan flagi. WARTOŚĆ TRUE oznacza, że formant jest tabulatorem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_text"></a><a name="get_text"></a>CStockPropImpl:: get_Text
+## <a name="cstockpropimplget_text"></a><a name="get_text"></a>CStockPropImpl::get_Text
 
-Wywołaj tę metodę, aby uzyskać tekst wyświetlany z kontrolką.
+Wywołanie tej metody, aby uzyskać tekst, który jest wyświetlany z formantem.
 
 ```
 HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
@@ -609,16 +609,16 @@ HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
 
 ### <a name="parameters"></a>Parametry
 
-*pbstrText*<br/>
-Tekst wyświetlany z kontrolką.
+*pbstrText (tekst pbstrText)*<br/>
+Tekst, który jest wyświetlany z formantem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplgetvalid"></a><a name="get_valid"></a>CStockPropImpl:: getważny
+## <a name="cstockpropimplgetvalid"></a><a name="get_valid"></a>CStockPropImpl::getvalid
 
-Wywołaj tę metodę, aby uzyskać stan flagi wskazującej, czy formant jest prawidłowy, czy nie.
+Wywołanie tej metody, aby uzyskać stan flagi, która wskazuje, czy formant jest prawidłowy, czy nie.
 
 ```
 HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
@@ -626,16 +626,16 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
 
 ### <a name="parameters"></a>Parametry
 
-*pbValid*<br/>
-Zmienna, która odbiera stan flagi. Wartość TRUE wskazuje, że formant jest prawidłowy.
+*pbValid (Polski)*<br/>
+Zmienna, która odbiera stan flagi. WARTOŚĆ TRUE wskazuje, że formant jest prawidłowy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplget_window"></a><a name="get_window"></a>CStockPropImpl:: get_Window
+## <a name="cstockpropimplget_window"></a><a name="get_window"></a>CStockPropImpl::get_Window
 
-Wywołaj tę metodę, aby uzyskać uchwyt okna skojarzonego z kontrolką. Identyczny z [CStockPropImpl:: get_HWND](#get_hwnd).
+Wywołanie tej metody, aby uzyskać dojście okna skojarzone z formantem. Identyczne z [CStockPropImpl::get_HWND](#get_hwnd).
 
 ```
 HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
@@ -643,16 +643,16 @@ HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*phWnd*<br/>
-Uchwyt okna skojarzony z kontrolką.
+*phWnd (właśc.*<br/>
+Uchwyt okna skojarzony z formantem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_appearance"></a><a name="put_appearance"></a>CStockPropImpl::p ut_Appearance
+## <a name="cstockpropimplput_appearance"></a><a name="put_appearance"></a>CStockPropImpl::put_Appearance
 
-Wywołaj tę metodę, aby ustawić styl farby używany przez kontrolkę, na przykład płaski lub 3W.
+Wywołanie tej metody, aby ustawić styl malowania używany przez formant, na przykład płaski lub 3D.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
@@ -660,16 +660,16 @@ HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
 
 ### <a name="parameters"></a>Parametry
 
-*nAppearance*<br/>
-Nowy styl malowania, który ma być używany przez formant.
+*nPojatrakcja*<br/>
+Nowy styl malowania do użycia przez formant.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_autosize"></a><a name="put_autosize"></a>CStockPropImpl::p ut_AutoSize
+## <a name="cstockpropimplput_autosize"></a><a name="put_autosize"></a>CStockPropImpl::put_AutoSize
 
-Wywołaj tę metodę, aby ustawić wartość flagi wskazującej, czy kontrolka nie może być żadnym innym rozmiarem.
+Wywołanie tej metody, aby ustawić wartość flagi, która wskazuje, jeśli formant nie może być inny rozmiar.
 
 ```
 HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
@@ -678,15 +678,15 @@ HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
 ### <a name="parameters"></a>Parametry
 
 *bAutoSize*<br/>
-Ma wartość TRUE, Jeśli kontrolka nie może być żadnym innym rozmiarem.
+PRAWDA, jeśli formant nie może mieć innego rozmiaru.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_backcolor"></a><a name="put_backcolor"></a>CStockPropImpl::p ut_BackColor
+## <a name="cstockpropimplput_backcolor"></a><a name="put_backcolor"></a>CStockPropImpl::put_BackColor
 
-Wywołaj tę metodę, aby ustawić kolor tła kontrolki.
+Wywołanie tej metody, aby ustawić kolor tła formantu.
 
 ```
 HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
@@ -694,16 +694,16 @@ HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
 
 ### <a name="parameters"></a>Parametry
 
-*clrBackColor*<br/>
-Nowy kolor tła kontrolki.
+*clrBackColor (clrBackColor)*<br/>
+Nowy kolor tła sterowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_backstyle"></a><a name="put_backstyle"></a>CStockPropImpl::p ut_BackStyle
+## <a name="cstockpropimplput_backstyle"></a><a name="put_backstyle"></a>CStockPropImpl::put_BackStyle
 
-Wywołaj tę metodę, aby ustawić styl tła kontrolki.
+Wywołanie tej metody, aby ustawić styl tła formantu.
 
 ```
 HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
@@ -711,16 +711,16 @@ HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*nBackStyle*<br/>
-Nowy styl tła kontrolki.
+*styl nBack*<br/>
+Nowy styl sterowania tła.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_bordercolor"></a><a name="put_bordercolor"></a>CStockPropImpl::p ut_BorderColor
+## <a name="cstockpropimplput_bordercolor"></a><a name="put_bordercolor"></a>CStockPropImpl::put_BorderColor
 
-Wywołaj tę metodę, aby ustawić kolor obramowania kontrolki.
+Wywołanie tej metody, aby ustawić kolor obramowania formantu.
 
 ```
 HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
@@ -729,15 +729,15 @@ HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
 ### <a name="parameters"></a>Parametry
 
 *clrBorderColor*<br/>
-Nowy kolor obramowania. Typ danych OLE_COLOR jest reprezentowany wewnętrznie jako 32-bitowa Long Integer.
+Nowy kolor obramowania. Typ danych OLE_COLOR jest wewnętrznie reprezentowany jako 32-bitowa liczba całkowita.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_borderstyle"></a><a name="put_borderstyle"></a>CStockPropImpl::p ut_BorderStyle
+## <a name="cstockpropimplput_borderstyle"></a><a name="put_borderstyle"></a>CStockPropImpl::put_BorderStyle
 
-Wywołaj tę metodę, aby ustawić styl obramowania kontrolki.
+Wywołanie tej metody, aby ustawić styl obramowania formantu.
 
 ```
 HRESULT STDMETHODCALLTYPE put_BorderStyle(LONG nBorderStyle);
@@ -750,11 +750,11 @@ Nowy styl obramowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_bordervisible"></a><a name="put_bordervisible"></a>CStockPropImpl::p ut_BorderVisible
+## <a name="cstockpropimplput_bordervisible"></a><a name="put_bordervisible"></a>CStockPropImpl::put_BorderVisible
 
-Wywołaj tę metodę, aby ustawić wartość flagi wskazującej, czy obramowanie kontrolki jest widoczne, czy nie.
+Wywołanie tej metody, aby ustawić wartość flagi, która wskazuje, czy obramowanie formantu jest widoczne, czy nie.
 
 ```
 HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
@@ -762,16 +762,16 @@ HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
 
 ### <a name="parameters"></a>Parametry
 
-*bBorderVisible*<br/>
-Ma wartość TRUE, jeśli obramowanie ma być widoczne.
+*bDojwiększy*<br/>
+PRAWDA, jeśli obramowanie ma być widoczne.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_borderwidth"></a><a name="put_borderwidth"></a>CStockPropImpl::p ut_BorderWidth
+## <a name="cstockpropimplput_borderwidth"></a><a name="put_borderwidth"></a>CStockPropImpl::put_BorderWidth
 
-Wywołaj tę metodę, aby ustawić szerokość obramowania kontrolki.
+Wywołanie tej metody, aby ustawić szerokość obramowania formantu.
 
 ```
 HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
@@ -779,16 +779,16 @@ HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
 
 ### <a name="parameters"></a>Parametry
 
-*nBorderWidth*<br/>
-Nowa szerokość obramowania kontrolki.
+*nBorderWidth (właso)*<br/>
+Nowa szerokość obramowania formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_caption"></a><a name="put_caption"></a>CStockPropImpl::p ut_Caption
+## <a name="cstockpropimplput_caption"></a><a name="put_caption"></a>CStockPropImpl::put_Caption
 
-Wywołaj tę metodę, aby ustawić tekst, który będzie wyświetlany z kontrolką.
+Wywołanie tej metody, aby ustawić tekst, który ma być wyświetlany z formantem.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
@@ -796,16 +796,16 @@ HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
 
 ### <a name="parameters"></a>Parametry
 
-*bstrCaption*<br/>
-Tekst, który będzie wyświetlany z kontrolką.
+*bstrCaption (bstrCaption)*<br/>
+Tekst, który ma być wyświetlany z formantem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_drawmode"></a><a name="put_drawmode"></a>CStockPropImpl::p ut_DrawMode
+## <a name="cstockpropimplput_drawmode"></a><a name="put_drawmode"></a>CStockPropImpl::put_DrawMode
 
-Wywołaj tę metodę, aby ustawić tryb rysowania kontrolki, na przykład pióro XOR lub Odwróć kolory.
+Wywołanie tej metody, aby ustawić tryb rysowania formantu, na przykład XOR Pióro lub Odwróć kolory.
 
 ```
 HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
@@ -813,16 +813,16 @@ HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
 
 ### <a name="parameters"></a>Parametry
 
-*nDrawMode*<br/>
-Nowy tryb rysowania dla kontrolki.
+*nDrawMode (nDrawMode)*<br/>
+Nowy tryb rysowania formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_drawstyle"></a><a name="put_drawstyle"></a>CStockPropImpl::p ut_DrawStyle
+## <a name="cstockpropimplput_drawstyle"></a><a name="put_drawstyle"></a>CStockPropImpl::put_DrawStyle
 
-Wywołaj tę metodę, aby ustawić styl rysowania kontrolki, na przykład Solid, kreskowany lub kropkowany.
+Wywołanie tej metody, aby ustawić styl rysowania formantu, na przykład bryła, przerywane lub kropkowane.
 
 ```
 HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
@@ -830,16 +830,16 @@ HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*nDrawStyle*<br/>
-Nowy styl rysowania dla kontrolki.
+*styl nDrawStyle*<br/>
+Nowy styl rysowania formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_drawwidth"></a><a name="put_drawwidth"></a>CStockPropImpl::p ut_DrawWidth
+## <a name="cstockpropimplput_drawwidth"></a><a name="put_drawwidth"></a>CStockPropImpl::put_DrawWidth
 
-Wywołaj tę metodę, aby ustawić szerokość (w pikselach) używaną przez metody rysowania kontrolki.
+Wywołanie tej metody, aby ustawić szerokość (w pikselach) używane przez metody rysowania formantu.
 
 ```
 HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
@@ -847,16 +847,16 @@ HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
 
 ### <a name="parameters"></a>Parametry
 
-*nDrawWidth*<br/>
-Nowa szerokość, która będzie używana przez metody rysowania kontrolki.
+*nDrawWidth (właswoi)*<br/>
+Nowa szerokość, która ma być używana przez metody rysowania formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_enabled"></a><a name="put_enabled"></a>CStockPropImpl::p ut_Enabled
+## <a name="cstockpropimplput_enabled"></a><a name="put_enabled"></a>CStockPropImpl::put_Enabled
 
-Wywołaj tę metodę, aby ustawić wartość flagi wskazującej, czy kontrolka jest włączona.
+Wywołanie tej metody, aby ustawić wartość flagi, która wskazuje, czy formant jest włączony.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
@@ -864,16 +864,16 @@ HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
 
 ### <a name="parameters"></a>Parametry
 
-*bEnabled*<br/>
-Ma wartość TRUE, Jeśli kontrolka jest włączona.
+*bWłach*<br/>
+PRAWDA, jeśli formant jest włączony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_fillcolor"></a><a name="put_fillcolor"></a>CStockPropImpl::p ut_FillColor
+## <a name="cstockpropimplput_fillcolor"></a><a name="put_fillcolor"></a>CStockPropImpl::put_FillColor
 
-Wywołaj tę metodę, aby ustawić kolor wypełnienia formantu.
+Wywołanie tej metody, aby ustawić kolor wypełnienia formantu.
 
 ```
 HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
@@ -881,16 +881,16 @@ HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
 
 ### <a name="parameters"></a>Parametry
 
-*clrFillColor*<br/>
+*clrFillColor (kolor clrFillColor)*<br/>
 Nowy kolor wypełnienia formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_fillstyle"></a><a name="put_fillstyle"></a>CStockPropImpl::p ut_FillStyle
+## <a name="cstockpropimplput_fillstyle"></a><a name="put_fillstyle"></a>CStockPropImpl::put_FillStyle
 
-Wywołaj tę metodę, aby ustawić styl wypełnienia kontrolki, na przykład pełny, przezroczysty lub wylęgowe krzyżowo.
+Wywołanie tej metody, aby ustawić styl wypełnienia formantu, na przykład bryła, przezroczyste lub kreskowane.
 
 ```
 HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
@@ -898,16 +898,16 @@ HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*nFillStyle*<br/>
-Nowy styl wypełnienia dla kontrolki.
+*styl wypełnienia*<br/>
+Nowy styl wypełnienia formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_font"></a><a name="put_font"></a>CStockPropImpl::p ut_Font
+## <a name="cstockpropimplput_font"></a><a name="put_font"></a>CStockPropImpl::put_Font
 
-Wywołaj tę metodę, aby ustawić właściwości czcionki kontrolki.
+Wywołanie tej metody, aby ustawić właściwości czcionki formantu.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
@@ -915,16 +915,16 @@ HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Parametry
 
-*pFont*<br/>
-Wskaźnik do właściwości czcionki kontrolki.
+*pFont (pFont)*<br/>
+Wskaźnik do właściwości czcionki formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_forecolor"></a><a name="put_forecolor"></a>CStockPropImpl::p ut_ForeColor
+## <a name="cstockpropimplput_forecolor"></a><a name="put_forecolor"></a>CStockPropImpl::put_ForeColor
 
-Wywołaj tę metodę, aby ustawić kolor pierwszego planu formantu.
+Wywołanie tej metody, aby ustawić kolor pierwszego planu formantu.
 
 ```
 HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
@@ -932,14 +932,14 @@ HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
 
 ### <a name="parameters"></a>Parametry
 
-*clrForeColor*<br/>
+*clrForeColor (właso)*<br/>
 Nowy kolor pierwszego planu formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_hwnd"></a><a name="put_hwnd"></a>CStockPropImpl::p ut_HWND
+## <a name="cstockpropimplput_hwnd"></a><a name="put_hwnd"></a>CStockPropImpl::put_HWND
 
 Ta metoda zwraca E_FAIL.
 
@@ -949,8 +949,8 @@ HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
 
 ### <a name="parameters"></a>Parametry
 
-*Właściwość*<br/>
-Rezerwacj.
+*Hwnd*<br/>
+Zarezerwowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -958,11 +958,11 @@ Zwraca E_FAIL.
 
 ### <a name="remarks"></a>Uwagi
 
-Uchwyt okna to wartość tylko do odczytu.
+Uchwyt okna jest wartością tylko do odczytu.
 
-##  <a name="cstockpropimplput_mouseicon"></a><a name="put_mouseicon"></a>CStockPropImpl::p ut_MouseIcon
+## <a name="cstockpropimplput_mouseicon"></a><a name="put_mouseicon"></a>CStockPropImpl::put_MouseIcon
 
-Wywołaj tę metodę, aby ustawić właściwości obrazu grafiki (ikona, mapa bitowa lub metaplik), które mają być wyświetlane, gdy wskaźnik myszy znajduje się nad kontrolką.
+Wywołanie tej metody, aby ustawić właściwości obrazu grafiki (ikona, bitmapa lub metaplik) mają być wyświetlane, gdy mysz jest nad formantem.
 
 ```
 HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
@@ -970,16 +970,16 @@ HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parametry
 
-*pPicture*<br/>
+*pZdaję*<br/>
 Wskaźnik do właściwości obrazu grafiki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_mousepointer"></a><a name="put_mousepointer"></a>CStockPropImpl::p ut_MousePointer
+## <a name="cstockpropimplput_mousepointer"></a><a name="put_mousepointer"></a>CStockPropImpl::put_MousePointer
 
-Wywołaj tę metodę, aby ustawić typ wskaźnika myszy wyświetlanego, gdy wskaźnik myszy znajduje się nad kontrolką, na przykład strzałką, krzyżykiem lub klepsydrą.
+Wywołanie tej metody, aby ustawić typ wskaźnika myszy wyświetlany, gdy mysz jest nad formantem, na przykład strzałka, krzyż lub klepsydra.
 
 ```
 HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
@@ -987,16 +987,16 @@ HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
 
 ### <a name="parameters"></a>Parametry
 
-*nMousePointer*<br/>
+*nMousePointer (Program zmysłami)*<br/>
 Typ wskaźnika myszy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_picture"></a><a name="put_picture"></a>CStockPropImpl::p ut_Picture
+## <a name="cstockpropimplput_picture"></a><a name="put_picture"></a>CStockPropImpl::put_Picture
 
-Wywołaj tę metodę, aby ustawić właściwości obrazu grafiki (ikony, mapy bitowej lub metapliku) do wyświetlenia.
+Wywołanie tej metody, aby ustawić właściwości obrazu grafiki (ikona, bitmapa lub metaplik) mają być wyświetlane.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
@@ -1004,16 +1004,16 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parametry
 
-*pPicture*<br/>
-Wskaźnik do właściwości obrazu. Aby uzyskać więcej informacji, zobacz [IPictureDisp](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp) .
+*pZdaję*<br/>
+Wskaźnik do właściwości obrazu. Zobacz [IPictureDisp](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp) aby uzyskać więcej informacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_readystate"></a><a name="put_readystate"></a>CStockPropImpl::p ut_ReadyState
+## <a name="cstockpropimplput_readystate"></a><a name="put_readystate"></a>CStockPropImpl::put_ReadyState
 
-Wywołaj tę metodę, aby ustawić stan gotowości kontrolki, na przykład ładowania lub ładowania.
+Wywołanie tej metody, aby ustawić stan gotowości formantu, na przykład ładowania lub załadowania.
 
 ```
 HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
@@ -1021,16 +1021,16 @@ HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
 
 ### <a name="parameters"></a>Parametry
 
-*nReadyState*<br/>
+*nWłasny stan*<br/>
 Stan gotowości formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_tabstop"></a><a name="put_tabstop"></a>CStockPropImpl::p ut_TabStop
+## <a name="cstockpropimplput_tabstop"></a><a name="put_tabstop"></a>CStockPropImpl::put_TabStop
 
-Wywołaj tę metodę, aby ustawić flagę, która wskazuje, czy kontrolka jest tabulatorem.
+Wywołanie tej metody, aby ustawić flagę, która wskazuje, czy formant jest tabulatorem, czy nie.
 
 ```
 HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
@@ -1039,15 +1039,15 @@ HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
 ### <a name="parameters"></a>Parametry
 
 *bTabStop*<br/>
-TRUE, Jeśli kontrolka jest tabulatorem.
+PRAWDA, jeśli formant jest tabulatorem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_text"></a><a name="put_text"></a>CStockPropImpl::p ut_Text
+## <a name="cstockpropimplput_text"></a><a name="put_text"></a>CStockPropImpl::put_Text
 
-Wywołaj tę metodę, aby ustawić tekst wyświetlany z kontrolką.
+Wywołanie tej metody, aby ustawić tekst, który jest wyświetlany z formantem.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
@@ -1055,16 +1055,16 @@ HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
 
 ### <a name="parameters"></a>Parametry
 
-*bstrText*<br/>
-Tekst wyświetlany z kontrolką.
+*tekst bstrText*<br/>
+Tekst, który jest wyświetlany z formantem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplputvalid"></a><a name="put_valid"></a>CStockPropImpl::p utvalid
+## <a name="cstockpropimplputvalid"></a><a name="put_valid"></a>CStockPropImpl::putvalid
 
-Wywołaj tę metodę, aby ustawić flagę wskazującą, czy formant jest prawidłowy, czy nie.
+Wywołanie tej metody, aby ustawić flagę, która wskazuje, czy formant jest prawidłowy, czy nie.
 
 ```
 HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
@@ -1072,16 +1072,16 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
 
 ### <a name="parameters"></a>Parametry
 
-*bValid*<br/>
-Ma wartość TRUE, jeśli formant jest prawidłowy.
+*bValid (Niem.*<br/>
+PRAWDA, jeśli formant jest prawidłowy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
-##  <a name="cstockpropimplput_window"></a><a name="put_window"></a>CStockPropImpl::p ut_Window
+## <a name="cstockpropimplput_window"></a><a name="put_window"></a>CStockPropImpl::put_Window
 
-Ta metoda wywołuje [CStockPropImpl::p ut_HWND](#put_hwnd), która zwraca E_FAIL.
+Ta metoda wywołuje [CStockPropImpl::put_HWND](#put_hwnd), który zwraca E_FAIL.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
@@ -1089,7 +1089,7 @@ HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*Właściwość*<br/>
+*Hwnd*<br/>
 Uchwyt okna.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1098,11 +1098,11 @@ Zwraca E_FAIL.
 
 ### <a name="remarks"></a>Uwagi
 
-Uchwyt okna to wartość tylko do odczytu.
+Uchwyt okna jest wartością tylko do odczytu.
 
-##  <a name="cstockpropimplputref_font"></a><a name="putref_font"></a>CStockPropImpl::p utref_Font
+## <a name="cstockpropimplputref_font"></a><a name="putref_font"></a>CStockPropImpl::putref_Font
 
-Wywołaj tę metodę, aby ustawić właściwości czcionki kontrolki z liczbą odwołań.
+Wywołanie tej metody, aby ustawić właściwości czcionki formantu, z liczbą odwołań.
 
 ```
 HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
@@ -1110,20 +1110,20 @@ HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Parametry
 
-*pFont*<br/>
-Wskaźnik do właściwości czcionki kontrolki.
+*pFont (pFont)*<br/>
+Wskaźnik do właściwości czcionki formantu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Taka sama jak [CStockPropImpl::p ut_Font](#put_font), ale z liczbą odwołań.
+Tak samo jak [CStockPropImpl::put_Font](#put_font), ale z liczbą odwołań.
 
-##  <a name="cstockpropimplputref_mouseicon"></a><a name="putref_mouseicon"></a>CStockPropImpl::p utref_MouseIcon
+## <a name="cstockpropimplputref_mouseicon"></a><a name="putref_mouseicon"></a>CStockPropImpl::putref_MouseIcon
 
-Wywołaj tę metodę, aby ustawić właściwości obrazu grafiki (ikona, mapa bitowa lub metaplik), które mają być wyświetlane, gdy wskaźnik myszy znajduje się nad kontrolką, z liczbą odwołań.
+Wywołanie tej metody, aby ustawić właściwości obrazu grafiki (ikona, bitmapa lub metaplik) mają być wyświetlane, gdy mysz jest nad formantem, z liczbą odwołań.
 
 ```
 HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
@@ -1131,20 +1131,20 @@ HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parametry
 
-*pPicture*<br/>
+*pZdaję*<br/>
 Wskaźnik do właściwości obrazu grafiki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Taka sama jak [CStockPropImpl::p ut_MouseIcon](#put_mouseicon), ale z liczbą odwołań.
+Tak samo jak [CStockPropImpl::put_MouseIcon](#put_mouseicon), ale z liczbą odwołań.
 
-##  <a name="cstockpropimplputref_picture"></a><a name="putref_picture"></a>CStockPropImpl::p utref_Picture
+## <a name="cstockpropimplputref_picture"></a><a name="putref_picture"></a>CStockPropImpl::putref_Picture
 
-Wywołaj tę metodę, aby ustawić właściwości obrazu grafiki (ikony, mapy bitowej lub metapliku), która ma być wyświetlana z liczbą odwołań.
+Wywołanie tej metody, aby ustawić właściwości obrazu grafiki (ikona, bitmapa lub metaplik) mają być wyświetlane, z liczbą odwołań.
 
 ```
 HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
@@ -1152,16 +1152,16 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 
 ### <a name="parameters"></a>Parametry
 
-*pPicture*<br/>
-Wskaźnik do właściwości obrazu. Aby uzyskać więcej informacji, zobacz [IPictureDisp](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp) .
+*pZdaję*<br/>
+Wskaźnik do właściwości obrazu. Zobacz [IPictureDisp](/windows/win32/api/ocidl/nn-ocidl-ipicturedisp) aby uzyskać więcej informacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
+Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Taka sama jak [CStockPropImpl::p ut_Picture](#put_picture), ale z liczbą odwołań.
+Tak samo jak [CStockPropImpl::put_Picture](#put_picture), ale z liczbą odwołań.
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - sinks, notifying of changes
 - IPropertyNotifySinkCP class
 ms.assetid: 1b41445e-bc88-4fa6-bb62-d68aacec2bd5
-ms.openlocfilehash: 9838a48b078cbc59a5ae86669ad9f26792d9816e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c6d98bf5a6dfe5566839eb22bcd2bab2a9c28e4d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495624"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329608"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>Klasa IPropertyNotifySinkCP
 
-Ta klasa uwidacznia Interfejs [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) jako interfejs wychodzący w obiekcie połączonym.
+Ta klasa udostępnia [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) interfejs jako interfejs wychodzący na obiekcie connectable.
 
 > [!IMPORTANT]
->  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,26 +34,26 @@ class IPropertyNotifySinkCP
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Klasa, która pochodzi od `IPropertyNotifySinkCP`.
+Twoja klasa, pochodząca od `IPropertyNotifySinkCP`.
 
-*CDV*<br/>
-Klasa, która zarządza połączeniami między punktem połączenia a jego ujściam. Wartość domyślna to [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), która umożliwia nieograniczone połączenia. Można również użyć [CComUnkArray](../../atl/reference/ccomunkarray-class.md), który określa stałą liczbę połączeń.
+*Cdv*<br/>
+Klasa, która zarządza połączeniami między punktem połączenia a jego pochłaniaczami. Wartością domyślną jest [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), która pozwala na nieograniczone połączenia. Można również użyć [CComUnkArray](../../atl/reference/ccomunkarray-class.md), który określa stałą liczbę połączeń.
 
 ## <a name="remarks"></a>Uwagi
 
-`IPropertyNotifySinkCP`dziedziczy wszystkie metody za poorednictwem klasy bazowej, [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).
+`IPropertyNotifySinkCP`dziedziczy wszystkie metody za pośrednictwem swojej klasy podstawowej [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).
 
-Interfejs [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) umożliwia obiektowi ujścia otrzymywanie powiadomień o zmianach właściwości. Klasa `IPropertyNotifySinkCP` uwidacznia ten interfejs jako interfejs wychodzący w obiekcie połączonym. Klient musi zaimplementować `IPropertyNotifySink` metody w zlewie.
+[Interfejs IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) umożliwia obiektowi ujścia do odbierania powiadomień o zmianach właściwości. Klasa `IPropertyNotifySinkCP` udostępnia ten interfejs jako interfejs wychodzący na obiekcie, który można podłączyć. Klient musi zaimplementować `IPropertyNotifySink` metody na zlewie.
 
-Utwórz klasę z `IPropertyNotifySinkCP` , gdy chcesz utworzyć punkt połączenia, który `IPropertyNotifySink` reprezentuje interfejs.
+Wywodź `IPropertyNotifySinkCP` klasę z punktu, w którym `IPropertyNotifySink` chcesz utworzyć punkt połączenia reprezentujący interfejs.
 
-Aby uzyskać więcej informacji na temat używania punktów połączenia w ATL, zobacz [punkty połączenia](../../atl/atl-connection-points.md)w artykule.
+Aby uzyskać więcej informacji na temat korzystania z punktów połączenia w atl, zobacz artykuł [Punkty połączenia](../../atl/atl-connection-points.md).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlctl. h
+**Nagłówek:** atlctl.h
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)<br/>
 [Klasa IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)<br/>

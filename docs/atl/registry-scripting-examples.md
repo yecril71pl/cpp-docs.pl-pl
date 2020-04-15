@@ -7,20 +7,20 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-ms.openlocfilehash: dffdd111d33d6fbd845e1534cdef1d5c8e1749d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bcdb7076982e2f0bd08f4fd82bb45f21e61ef20
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275415"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329327"
 ---
 # <a name="registry-scripting-examples"></a>Przykłady skryptów rejestru
 
-Przykłady skryptów, w tym temacie pokazują, jak dodać klucz do rejestru systemowego, Zarejestruj serwer COM rejestratora i określ wiele drzew analizy.
+Przykłady skryptów w tym temacie pokazują, jak dodać klucz do rejestru systemowego, zarejestrować serwer COM rejestratora i określić wiele drzew analizy.
 
-## <a name="add-a-key-to-hkeycurrentuser"></a>Dodaje klucz do HKEY_CURRENT_USER
+## <a name="add-a-key-to-hkey_current_user"></a>Dodawanie klucza do HKEY_CURRENT_USER
 
-W poniższym drzewie analizy przedstawiono prosty skrypt, który dodaje jeden klucz w rejestrze systemu. W szczególności skrypt ten dodaje klucz, `MyVeryOwnKey`, `HKEY_CURRENT_USER`. Przypisuje także domyślną wartość ciągu `HowGoesIt` do nowego klucza:
+Następujące drzewo analizy ilustruje prosty skrypt, który dodaje pojedynczy klucz do rejestru systemowego. W szczególności skrypt dodaje klucz, `MyVeryOwnKey` `HKEY_CURRENT_USER`do . Przypisuje również domyślną wartość `HowGoesIt` ciągu do nowego klucza:
 
 ```
 HKEY_CURRENT_USER
@@ -29,7 +29,7 @@ HKEY_CURRENT_USER
 }
 ```
 
-Ten skrypt można łatwo rozszerzyć w taki sposób, aby zdefiniować wiele podkluczy w następujący sposób:
+Ten skrypt można łatwo rozszerzyć, aby zdefiniować wiele podkluczów w następujący sposób:
 
 ```
 HKCU
@@ -45,9 +45,9 @@ HKCU
 }
 ```
 
-Teraz, skrypt ten dodaje podklucz `HasASubkey`, `MyVeryOwnKey`. Do tego podklucza dodaje ona zarówno `PrettyCool` podklucz (domyślnie `DWORD` wartość 55) i `ANameValue` nazwanej wartości (przy użyciu wartości ciągu `WithANamedValue`).
+Teraz skrypt dodaje `HasASubkey`podklucz, `MyVeryOwnKey`do . Do tego podklucza `PrettyCool` dodaje zarówno podklucz (z `DWORD` domyślną `ANameValue` wartością 55), `WithANamedValue`jak i nazwaną wartość (z wartością ciągu ).
 
-##  <a name="_atl_register_the_registrar_com_server"></a> Zarejestruj serwer COM rejestratora
+## <a name="register-the-registrar-com-server"></a><a name="_atl_register_the_registrar_com_server"></a>Zarejestruj serwer COM rejestratora
 
 Poniższy skrypt rejestruje sam serwer COM rejestratora.
 
@@ -72,29 +72,29 @@ HKCR
 }
 ```
 
-W czasie wykonywania, dodaje ten drzewo analizy `ATL.Registrar` klucza `HKEY_CLASSES_ROOT`. Do tego nowego klucza następnie it:
+W czasie wykonywania to drzewo analizy `ATL.Registrar` dodaje `HKEY_CLASSES_ROOT`klucz do . Do tego nowego klucza, to następnie:
 
-- Określa `ATL Registrar Class` jako klucz-wartość domyślną w ciągu.
+- Określa `ATL Registrar Class` jako domyślną wartość ciągu klucza.
 
 - Dodaje `CLSID` jako podklucz.
 
-- Określa `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` dla `CLSID`. (Ta wartość jest rejestratora CLSID, do użytku z programem `CoCreateInstance`.)
+- Określa `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` dla `CLSID`. (Ta wartość jest CLSID rejestratora do użytku `CoCreateInstance`z .)
 
-Ponieważ `CLSID` jest udostępniony, go nie należy usuwać w trybie Unregister. Instrukcja `NoRemove CLSID`, wykonuje to zadanie, co oznacza, że `CLSID` powinien być otwarty w trybie rejestrze i w trybie Wyrejestruj ignorowane.
+Ponieważ `CLSID` jest współużytkowana, nie należy go usuwać w trybie wyrejestrowania. Instrukcja `NoRemove CLSID`, robi to, `CLSID` wskazując, że powinny być otwierane w trybie rejestracji i ignorowane w trybie wyrejestrowania.
 
-`ForceRemove` Instrukcja oferuje funkcję celów przez usunięcie klucza i wszystkich jego podkluczy przed następuje ponowne tworzenie klucza. Może to być przydatne, jeśli zmieniły się nazwami podkluczy. W tym przykładzie skryptów `ForceRemove` sprawdza, czy `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` już istnieje. Jeśli tak jest, `ForceRemove`:
+Instrukcja `ForceRemove` zapewnia funkcję sprzątania, usuwając klucz i wszystkie jego podkluczy przed ponownym utworzeniem klucza. Może to być przydatne, jeśli nazwy podkluczów uległy zmianie. W tym przykładzie `ForceRemove` skryptów `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` sprawdza, czy już istnieje. Jeśli tak, `ForceRemove`:
 
-- Rekursywnie usuwa `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` i wszystkich jego podkluczy.
+- Rekursywnie `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` usuwa i wszystkie jego podklucze.
 
-- Ponownie tworzy `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.
+- Odtwarzanie `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`pliku .
 
-- Dodaje `ATL Registrar Class` jako domyślną wartość ciągu dla `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.
+- Dodaje `ATL Registrar Class` jako domyślną `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`wartość ciągu dla .
 
-W drzewie analizy dodano dwa nowe podklucze do `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. Pierwszy klucz `ProgID`, pobiera wartość domyślną ciągu, który jest identyfikator ProgID. Drugi klucz `InprocServer32`, pobiera wartość domyślną ciągu `%MODULE%`, która jest wartością preprocesora opisane w sekcji [przy użyciu zastępowalnych parametrów (Preprocesor rejestratora)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), części tego artykułu. `InprocServer32` zapewnia również nazwanej wartości `ThreadingModel`, z wartością ciągu `Apartment`.
+Drzewo analizy dodaje teraz dwa nowe podklu skróty do `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. Pierwszy klucz `ProgID`, pobiera domyślną wartość ciągu, która jest ProgID. Drugi klucz, `InprocServer32`otrzymuje domyślną wartość `%MODULE%`ciągu, czyli wartość preprocesora wyjaśnioną w sekcji [Korzystanie z wymiennych parametrów (Preprocesor rejestratora)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)tego artykułu. `InprocServer32`również pobiera nazwany `ThreadingModel`wartość, o wartości `Apartment`ciągu .
 
-## <a name="specify-multiple-parse-trees"></a>Określ wiele drzew analizy
+## <a name="specify-multiple-parse-trees"></a>Określanie wielu drzew analizy
 
-Aby określić więcej niż jeden drzewo analizy w skrypcie, po prostu umieść jednym drzewie pod koniec drugiego. Na przykład, poniższy skrypt dodaje klucz, `MyVeryOwnKey`, aby drzew analizy dla obu `HKEY_CLASSES_ROOT` i `HKEY_CURRENT_USER`:
+Aby określić więcej niż jedno drzewo analizy w skrypcie, po prostu umieść jedno drzewo na końcu innego. Na przykład następujący skrypt dodaje `MyVeryOwnKey`klucz, do drzew analizy `HKEY_CLASSES_ROOT` dla `HKEY_CURRENT_USER`obu i:
 
 ```
 HKCR
@@ -108,8 +108,8 @@ HKEY_CURRENT_USER
 ```
 
 > [!NOTE]
-> W przypadku skryptu rejestratora 4K jest maksymalny rozmiar tokenu. (Token jest dowolny element rozpoznawalną w składni). W poprzednim przykładzie skryptów `HKCR`, `HKEY_CURRENT_USER`, `'MyVeryOwnKey'`, i `'HowGoesIt'` są wszystkie tokeny.
+> W skrypcie rejestratora 4K jest maksymalny rozmiar tokenu. (Token jest dowolnym rozpoznawalnym elementem w składni.) W poprzednim przykładzie `HKCR`skryptów `'MyVeryOwnKey'`, `'HowGoesIt'` , `HKEY_CURRENT_USER`i są wszystkie tokeny.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tworzenie skryptów rejestratora](../atl/creating-registrar-scripts.md)

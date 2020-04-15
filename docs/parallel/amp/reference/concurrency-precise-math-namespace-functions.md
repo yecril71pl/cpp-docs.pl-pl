@@ -90,66 +90,66 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-ms.openlocfilehash: 53ebaf8d9cc1bca53b1fe51464668d6df8e08424
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ee6ab2313fbdc288ebba1b3fdacf192b7b578eb6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419246"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321856"
 ---
 # <a name="concurrencyprecise_math-namespace-functions"></a>Concurrency::precise_math, funkcje przestrzeni nazw
 
 ||||
 |-|-|-|
-|[Acos](#acos)|[acosf —](#acosf)|[ACOSH —](#acosh)|
-|[acoshf —](#acoshf)|[Asin](#asin)|[asinf —](#asinf)|
-|[ASINH —](#asinh)|[asinhf —](#asinhf)|[atan](#atan)|
-|[atan2](#atan2)|[atan2f —](#atan2f)|[atanf —](#atanf)|
-|[ATANH —](#atanh)|[atanhf —](#atanhf)|[cbrt —](#cbrt)|
-|[cbrtf —](#cbrtf)|[CEIL —](#ceil)|[ceilf —](#ceilf)|
-|[copysign —](#copysign)|[copysignf —](#copysignf)|[cosinus](#cos)|
-|[cosf —](#cosf)|[cosh —](#cosh)|[coshf —](#coshf)|
-|[cospi —](#cospi)|[cospif —](#cospif)|[Funkcja](#erf)|
-|[ERFC —](#erfc)|[erfcf —](#erfcf)|[erfcinv —](#erfcinv)|
-|[erfcinvf —](#erfcinvf)|[erff —](#erff)|[erfinv —](#erfinv)|
-|[erfinvf](#erfinvf)|[EXP](#exp)|[exp10 —](#exp10)|
-|[exp10f —](#exp10f)|[exp2 —](#exp2)|[exp2f —](#exp2f)|
-|[expf —](#expf)|[expm1 —](#expm1)|[expm1f —](#expm1f)|
-|[fabs —](#fabs)|[fabsf —](#fabsf)|[wykładzin](#floor)|
-|[fdim —](#fdim)|[fdimf —](#fdimf)||
-|[floorf —](#floorf)|[FMA](#fma)|[fmaf —](#fmaf)|
-[Fmax —](#fmax)|[fmaxf —](#fmaxf)||
-|[fmin —](#fmin)|[fminf —](#fminf)|[FMOD —](#fmod)|
-|[fmodf —](#fmodf)|[fpclassify](#fpclassify)|[frexp](#frexp)|
-|[frexpf —](#frexpf)|[hypot —](#hypot)|[hypotf —](#hypotf)|
-|[ilogb —](#ilogb)|[ilogbf —](#ilogbf)|[isFinite](#isfinite)|
-|[isinf](#isinf)|[isNaN](#isnan)|[isnormal](#isnormal)|
-|[ldexp](#ldexp)|[ldexpf —](#ldexpf)|[lgamma —](#lgamma)|
-|[lgammaf —](#lgammaf)|[rejestrowane](#log)|[log10 —](#log10)|
-|[log10f —](#log10f)|[log1p —](#log1p)|[log1pf —](#log1pf)|
-|[log2 —](#log2)|[log2f —](#log2f)|[logb —](#logb)|
-|[logbf —](#logbf)|[logf —](#logf)|[modf —](#modf)|
-|[modff —](#modff)|[NaN](#nan)|[nanf —](#nanf)|
-|[nearbyint —](#nearbyint)|[nearbyintf —](#nearbyintf)|[nextafter —](#nextafter)|
-|[nextafterf —](#nextafterf)|[zdrowiu](#phi)|[phif](#phif)|
-|[pow](#pow)|[powf —](#powf)|[probit](#probit)|
-|[probitf](#probitf)|[rcbrt —](#rcbrt)|[rcbrtf —](#rcbrtf)|
-|[pozostałej części](#remainder)|[remainderf —](#remainderf)|[remquo —](#remquo)|
-|[remquof —](#remquof)|[Nit](#round)|[roundf —](#roundf)|
-|[rsqrt —](#rsqrt)|[rsqrtf —](#rsqrtf)|[scalb —](#scalb)|
-|[scalbf —](#scalbf)|[scalbn —](#scalbn)|[scalbnf —](#scalbnf)|
-|[signbit](#signbit)|[signbitf —](#signbitf)|[sinus](#sin)|
-|[SinCos —](#sincos)|[sincosf —](#sincosf)|[SINF —](#sinf)|
-|[SINH](#sinh)|[sinhf —](#sinhf)|[sinpi —](#sinpi)|
-|[sinpif —](#sinpif)|[sqrt](#sqrt)|[sqrtf —](#sqrtf)|
-|[Tan](#tan)|[TANF —](#tanf)|[TANH —](#tanh)|
-|[tanhf —](#tanhf)|[tanpi —](#tanpi)|[tanpif —](#tanpif)|
-|[tgamma —](#tgamma)|[tgammaf —](#tgammaf)|[TRUNC —](#trunc)|
-|[truncf —](#truncf)|
+|[Acos](#acos)|[acosf ( acosf )](#acosf)|[acosh (acosh)](#acosh)|
+|[acoshf](#acoshf)|[Asin](#asin)|[asinf](#asinf)|
+|[asinh ( asinh )](#asinh)|[asinhf ( asinhf )](#asinhf)|[Atan](#atan)|
+|[atan2 (atan2)](#atan2)|[atan2f](#atan2f)|[atanf ( atanf )](#atanf)|
+|[atanh ( atanh )](#atanh)|[atanhf ( atanhf )](#atanhf)|[cbrt ( cbrt )](#cbrt)|
+|[cbrtf ( cbrtf )](#cbrtf)|[Ceil](#ceil)|[ceilf](#ceilf)|
+|[znak kopiowania](#copysign)|[copysignf (podpis kserokopii)](#copysignf)|[cos](#cos)|
+|[cosf ( cosf )](#cosf)|[Cosh](#cosh)|[coshf ( coshf )](#coshf)|
+|[cospi ( cospi )](#cospi)|[cospif ( cospif )](#cospif)|[Erf](#erf)|
+|[erfc (erfc)](#erfc)|[erfcf (erfcf)](#erfcf)|[erfcinv ( erfcinv )](#erfcinv)|
+|[erfcinvf](#erfcinvf)|[erff (erff)](#erff)|[erfinv ( erfinv )](#erfinv)|
+|[erfinvf ( erfinvf )](#erfinvf)|[Exp](#exp)|[exp10](#exp10)|
+|[exp10f](#exp10f)|[exp2](#exp2)|[exp2f](#exp2f)|
+|[expf (wycho.](#expf)|[expm1](#expm1)|[expm1f](#expm1f)|
+|[Fabs](#fabs)|[fabsf ( fabsf )](#fabsf)|[Podłogi](#floor)|
+|[fdim ( fdim )](#fdim)|[fdimf ( fdimf )](#fdimf)||
+|[podłoga](#floorf)|[Fma](#fma)|[fmaf (fmaf)](#fmaf)|
+[fmax ( fmax )](#fmax)|[fmaxf ( fmaxf )](#fmaxf)||
+|[fmin ( fmin )](#fmin)|[fminf (fminf)](#fminf)|[Fmod](#fmod)|
+|[fmodf ( fmodf )](#fmodf)|[fpclassify](#fpclassify)|[frexp](#frexp)|
+|[frexpf](#frexpf)|[hypot](#hypot)|[hypotf (hipotf)](#hypotf)|
+|[ilogb ( ilogb )](#ilogb)|[ilogbf ( ilogbf )](#ilogbf)|[isfinite](#isfinite)|
+|[isinf](#isinf)|[Isnan (isnan)](#isnan)|[isnormal](#isnormal)|
+|[ldexp](#ldexp)|[ldexpf ( ldexpf )](#ldexpf)|[lgamma](#lgamma)|
+|[lgammaf](#lgammaf)|[Dziennika](#log)|[log10](#log10)|
+|[log10f](#log10f)|[log1p](#log1p)|[log1pf](#log1pf)|
+|[log2](#log2)|[log2f](#log2f)|[logb (logb)](#logb)|
+|[logbf (logbf)](#logbf)|[logf (logf)](#logf)|[modf ( modf )](#modf)|
+|[modff ( modff )](#modff)|[Nan](#nan)|[nanf](#nanf)|
+|[w pobliżu](#nearbyint)|[w pobliżuintf](#nearbyintf)|[następna po](#nextafter)|
+|[następnypo](#nextafterf)|[Phi](#phi)|[phif ( phif )](#phif)|
+|[Pow](#pow)|[powf (powf)](#powf)|[probit](#probit)|
+|[probitf](#probitf)|[rcbrt ( rcbrt )](#rcbrt)|[rcbrtf ( rcbrtf )](#rcbrtf)|
+|[Pozostałą część](#remainder)|[resekt](#remainderf)|[remquo](#remquo)|
+|[remquof](#remquof)|[Okrągłe](#round)|[zaokrąglony](#roundf)|
+|[rsqrt ( rsqrt )](#rsqrt)|[rsqrtf](#rsqrtf)|[scalb](#scalb)|
+|[scalbf (scalbf)](#scalbf)|[scalbn](#scalbn)|[scalbnf](#scalbnf)|
+|[signbit](#signbit)|[signbitf](#signbitf)|[Grzechu](#sin)|
+|[sincos (sincos)](#sincos)|[sincosf ( sincosf )](#sincosf)|[Sinf](#sinf)|
+|[Sinh](#sinh)|[sinhf](#sinhf)|[sinpi (sinpi)](#sinpi)|
+|[sinpif (sinpif)](#sinpif)|[Sqrt](#sqrt)|[sqrtf (](#sqrtf)|
+|[Tan](#tan)|[tanf ( tanf )](#tanf)|[Tanh](#tanh)|
+|[tanhf ( tanhf )](#tanhf)|[tanpi ( tanpi )](#tanpi)|[tanpif ( tanpif )](#tanpif)|
+|[tgamma ( tgamma )](#tgamma)|[tgammaf ( tgammaf )](#tgammaf)|[Trunc](#trunc)|
+|[obcinanie](#truncf)|
 
-## <a name="acos"></a>Acos
+## <a name="acos"></a><a name="acos"></a>Acos
 
-Oblicza arcus cosinus argumentu
+Oblicza arccosine argumentu
 
 ```cpp
 inline float acos(float _X) restrict(amp);
@@ -159,16 +159,16 @@ inline double acos(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość arcus cosinus argumentu
+Zwraca arccosine wartość argumentu
 
-## <a name="acosf"></a>acosf —
+## <a name="acosf"></a><a name="acosf"></a>acosf ( acosf )
 
-Oblicza arcus cosinus argumentu
+Oblicza arccosine argumentu
 
 ```cpp
 inline float acosf(float _X) restrict(amp);
@@ -176,16 +176,16 @@ inline float acosf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość arcus cosinus argumentu
+Zwraca arccosine wartość argumentu
 
-## <a name="acosh"></a>ACOSH —
+## <a name="acosh"></a><a name="acosh"></a>acosh (acosh)
 
-Oblicza odwrotny cosinus hiperboliczny argumentu
+Oblicza odwrotną cosine hiperboliczny argumentu
 
 ```cpp
 inline float acosh(float _X) restrict(amp);
@@ -195,16 +195,16 @@ inline double acosh(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwrotną wartość cosinusa hiperbolicznego argumentu.
+Zwraca odwrotną wartość cosine hiperbolicznej argumentu
 
-## <a name="acoshf"></a>acoshf —
+## <a name="acoshf"></a><a name="acoshf"></a>acoshf
 
-Oblicza odwrotny cosinus hiperboliczny argumentu
+Oblicza odwrotną cosine hiperboliczny argumentu
 
 ```cpp
 inline float acoshf(float _X) restrict(amp);
@@ -212,16 +212,16 @@ inline float acoshf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwrotną wartość cosinusa hiperbolicznego argumentu.
+Zwraca odwrotną wartość cosine hiperbolicznej argumentu
 
-## <a name="asin"></a>Asin
+## <a name="asin"></a><a name="asin"></a>Asin
 
-Oblicza arcus sinus argumentu
+Oblicza łuk argumentu
 
 ```cpp
 inline float asin(float _X) restrict(amp);
@@ -231,16 +231,16 @@ inline double asin(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość arcus sinus argumentu
+Zwraca wartość arcsine argumentu
 
-## <a name="asinf"></a>asinf —
+## <a name="asinf"></a><a name="asinf"></a>asinf
 
-Oblicza arcus sinus argumentu
+Oblicza łuk argumentu
 
 ```cpp
 inline float asinf(float _X) restrict(amp);
@@ -248,16 +248,16 @@ inline float asinf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość arcus sinus argumentu
+Zwraca wartość arcsine argumentu
 
-## <a name="asinh"></a>ASINH —
+## <a name="asinh"></a><a name="asinh"></a>asinh ( asinh )
 
-Oblicza odwrotny sinus hiperboliczny argumentu
+Oblicza odwrotną sinus hiperboliczny argumentu
 
 ```cpp
 inline float asinh(float _X) restrict(amp);
@@ -267,16 +267,16 @@ inline double asinh(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwrotną wartość sinusa hiperbolicznego argumentu
+Zwraca odwrotną wartość sinusoidy hiperbolicznej argumentu
 
-## <a name="asinhf"></a>asinhf —
+## <a name="asinhf"></a><a name="asinhf"></a>asinhf ( asinhf )
 
-Oblicza odwrotny sinus hiperboliczny argumentu
+Oblicza odwrotną sinus hiperboliczny argumentu
 
 ```cpp
 inline float asinhf(float _X) restrict(amp);
@@ -284,16 +284,16 @@ inline float asinhf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwrotną wartość sinusa hiperbolicznego argumentu
+Zwraca odwrotną wartość sinusoidy hiperbolicznej argumentu
 
-## <a name="atan"></a>atan
+## <a name="atan"></a><a name="atan"></a>Atan
 
-Oblicza arcus tangens argumentu
+Oblicza arctangent argumentu
 
 ```cpp
 inline float atan(float _X) restrict(amp);
@@ -303,16 +303,16 @@ inline double atan(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość arcus tangens argumentu
+Zwraca arctangent wartość argumentu
 
-## <a name="atan2"></a>atan2
+## <a name="atan2"></a><a name="atan2"></a>atan2 (atan2)
 
-Oblicza arcus tangens _Y/_X
+Oblicza arctangent _Y/_X
 
 ```cpp
 inline float atan2(
@@ -326,19 +326,19 @@ inline double atan2(
 
 ### <a name="parameters"></a>Parametry
 
-*_Y*<br/>
-Wartość zmiennoprzecinkowa
+*_y*<br/>
+Wartość zmiennoprzecinowa
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość arcus tangens _Y/_X
+Zwraca wartość arctangent _Y/_X
 
-## <a name="atan2f"></a>atan2f —
+## <a name="atan2f"></a><a name="atan2f"></a>atan2f
 
-Oblicza arcus tangens _Y/_X
+Oblicza arctangent _Y/_X
 
 ```cpp
 inline float atan2f(
@@ -348,19 +348,19 @@ inline float atan2f(
 
 ### <a name="parameters"></a>Parametry
 
-*_Y*<br/>
-Wartość zmiennoprzecinkowa
+*_y*<br/>
+Wartość zmiennoprzecinowa
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość arcus tangens _Y/_X
+Zwraca wartość arctangent _Y/_X
 
-## <a name="atanf"></a>atanf —
+## <a name="atanf"></a><a name="atanf"></a>atanf ( atanf )
 
-Oblicza arcus tangens argumentu
+Oblicza arctangent argumentu
 
 ```cpp
 inline float atanf(float _X) restrict(amp);
@@ -368,16 +368,16 @@ inline float atanf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość arcus tangens argumentu
+Zwraca arctangent wartość argumentu
 
-## <a name="atanh"></a>ATANH —
+## <a name="atanh"></a><a name="atanh"></a>atanh ( atanh )
 
-Oblicza odwrotny tangens hiperboliczny argumentu
+Oblicza odwrotną styczną hiperboliczną argumentu
 
 ```cpp
 inline float atanh(float _X) restrict(amp);
@@ -387,16 +387,16 @@ inline double atanh(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwrotną wartość tangens hiperboliczny argumentu
+Zwraca odwrotną wartość hiperboliczną stycznej argumentu
 
-## <a name="atanhf"></a>atanhf —
+## <a name="atanhf"></a><a name="atanhf"></a>atanhf ( atanhf )
 
-Oblicza odwrotny tangens hiperboliczny argumentu
+Oblicza odwrotną styczną hiperboliczną argumentu
 
 ```cpp
 inline float atanhf(float _X) restrict(amp);
@@ -404,16 +404,16 @@ inline float atanhf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwrotną wartość tangens hiperboliczny argumentu
+Zwraca odwrotną wartość hiperboliczną stycznej argumentu
 
-## <a name="cbrt"></a>cbrt —
+## <a name="cbrt"></a><a name="cbrt"></a>cbrt ( cbrt )
 
-Oblicza element główny modułu w rzeczywistym argumencie
+Oblicza prawdziwy katalog główny modułu argumentu
 
 ```cpp
 inline float cbrt(float _X) restrict(amp);
@@ -423,16 +423,16 @@ inline double cbrt(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca element główny modułu w rzeczywistym argumencie
+Zwraca prawdziwy katalog główny modułu argumentu
 
-## <a name="cbrtf"></a>cbrtf —
+## <a name="cbrtf"></a><a name="cbrtf"></a>cbrtf ( cbrtf )
 
-Oblicza element główny modułu w rzeczywistym argumencie
+Oblicza prawdziwy katalog główny modułu argumentu
 
 ```cpp
 inline float cbrtf(float _X) restrict(amp);
@@ -440,16 +440,16 @@ inline float cbrtf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca element główny modułu w rzeczywistym argumencie
+Zwraca prawdziwy katalog główny modułu argumentu
 
-## <a name="ceil"></a>CEIL —
+## <a name="ceil"></a><a name="ceil"></a>Ceil
 
-Oblicza górny limit argumentu
+Oblicza pułap argumentu
 
 ```cpp
 inline float ceil(float _X) restrict(amp);
@@ -459,16 +459,16 @@ inline double ceil(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca górny limit argumentu
+Zwraca pułap argumentu
 
-## <a name="ceilf"></a>ceilf —
+## <a name="ceilf"></a><a name="ceilf"></a>ceilf
 
-Oblicza górny limit argumentu
+Oblicza pułap argumentu
 
 ```cpp
 inline float ceilf(float _X) restrict(amp);
@@ -476,14 +476,14 @@ inline float ceilf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca górny limit argumentu
+Zwraca pułap argumentu
 
-## <a name="copysign"></a>copysign —
+## <a name="copysign"></a><a name="copysign"></a>znak kopiowania
 
 Tworzy wartość o wielkości _X i znaku _Y
 
@@ -499,17 +499,17 @@ inline double copysign(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-*_Y*<br/>
-Wartość zmiennoprzecinkowa
+*_y*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość o wielkości _X i znaku _Y
 
-## <a name="copysignf"></a>copysignf —
+## <a name="copysignf"></a><a name="copysignf"></a>copysignf (podpis kserokopii)
 
 Tworzy wartość o wielkości _X i znaku _Y
 
@@ -521,19 +521,19 @@ inline float copysignf(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-*_Y*<br/>
-Wartość zmiennoprzecinkowa
+*_y*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość o wielkości _X i znaku _Y
 
-## <a name="cos"></a>cosinus
+## <a name="cos"></a><a name="cos"></a>cos
 
-Oblicza cosinus argumentu
+Oblicza cosine argumentu
 
 ```cpp
 inline float cos(float _X) restrict(amp);
@@ -543,16 +543,16 @@ inline double cos(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość cosinusa argumentu
+Zwraca wartość cosine argumentu
 
-## <a name="cosf"></a>cosf —
+## <a name="cosf"></a><a name="cosf"></a>cosf ( cosf )
 
-Oblicza cosinus argumentu
+Oblicza cosine argumentu
 
 ```cpp
 inline float cosf(float _X) restrict(amp);
@@ -560,16 +560,16 @@ inline float cosf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość cosinusa argumentu
+Zwraca wartość cosine argumentu
 
-## <a name="cosh"></a>cosh —
+## <a name="cosh"></a><a name="cosh"></a>Cosh
 
-Oblicza wartość cosinus hiperboliczny argumentu
+Oblicza wartość cosine hiperbolicznej argumentu
 
 ```cpp
 inline float cosh(float _X) restrict(amp);
@@ -579,16 +579,16 @@ inline double cosh(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość cosinus hiperboliczny argumentu
+Zwraca wartość cosine hiperbolicznej argumentu
 
-## <a name="coshf"></a>coshf —
+## <a name="coshf"></a><a name="coshf"></a>coshf ( coshf )
 
-Oblicza wartość cosinus hiperboliczny argumentu
+Oblicza wartość cosine hiperbolicznej argumentu
 
 ```cpp
 inline float coshf(float _X) restrict(amp);
@@ -596,16 +596,16 @@ inline float coshf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość cosinus hiperboliczny argumentu
+Zwraca wartość cosine hiperbolicznej argumentu
 
-## <a name="cospi"></a>cospi —
+## <a name="cospi"></a><a name="cospi"></a>cospi ( cospi )
 
-Oblicza wartość cosinusa liczby pi \* _X
+Oblicza wartość cosine \* pi _X
 
 ```cpp
 inline float cospi(float _X) restrict(amp);
@@ -615,16 +615,16 @@ inline double cospi(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość cosinusa liczby pi \* _X
+Zwraca wartość cosine \* pi _X
 
-## <a name="cospif"></a>cospif —
+## <a name="cospif"></a><a name="cospif"></a>cospif ( cospif )
 
-Oblicza wartość cosinusa liczby pi \* _X
+Oblicza wartość cosine \* pi _X
 
 ```cpp
 inline float cospif(float _X) restrict(amp);
@@ -632,14 +632,14 @@ inline float cospif(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość cosinusa liczby pi \* _X
+Zwraca wartość cosine \* pi _X
 
-## <a name="erf"></a>Funkcja
+## <a name="erf"></a><a name="erf"></a>Erf
 
 Oblicza funkcję błędu _X
 
@@ -651,16 +651,16 @@ inline double erf(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca funkcję błędu _X
 
-## <a name="erfc"></a>ERFC —
+## <a name="erfc"></a><a name="erfc"></a>erfc (erfc)
 
-Oblicza komplementarną funkcję błędu _X
+Oblicza funkcję błędu uzupełniającego _X
 
 ```cpp
 inline float erfc(float _X) restrict(amp);
@@ -670,16 +670,16 @@ inline double erfc(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca uzupełniającą funkcję błędu _X
+Zwraca funkcję błędu uzupełniającego _X
 
-## <a name="erfcf"></a>erfcf —
+## <a name="erfcf"></a><a name="erfcf"></a>erfcf (erfcf)
 
-Oblicza komplementarną funkcję błędu _X
+Oblicza funkcję błędu uzupełniającego _X
 
 ```cpp
 inline float erfcf(float _X) restrict(amp);
@@ -687,16 +687,16 @@ inline float erfcf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca uzupełniającą funkcję błędu _X
+Zwraca funkcję błędu uzupełniającego _X
 
-## <a name="erfcinv"></a>erfcinv —
+## <a name="erfcinv"></a><a name="erfcinv"></a>erfcinv ( erfcinv )
 
-Oblicza odwrotną komplementarną funkcję błędu _X
+Oblicza odwrotną funkcję błędu uzupełniającego _X
 
 ```cpp
 inline float erfcinv(float _X) restrict(amp);
@@ -706,16 +706,16 @@ inline double erfcinv(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwrotną funkcję błędu komplementarnego _X
+Zwraca funkcję błędu uzupełniającego _X
 
-## <a name="erfcinvf"></a>erfcinvf —
+## <a name="erfcinvf"></a><a name="erfcinvf"></a>erfcinvf
 
-Oblicza odwrotną komplementarną funkcję błędu _X
+Oblicza odwrotną funkcję błędu uzupełniającego _X
 
 ```cpp
 inline float erfcinvf(float _X) restrict(amp);
@@ -723,14 +723,14 @@ inline float erfcinvf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwrotną funkcję błędu komplementarnego _X
+Zwraca funkcję błędu uzupełniającego _X
 
-## <a name="erff"></a>erff —
+## <a name="erff"></a><a name="erff"></a>erff (erff)
 
 Oblicza funkcję błędu _X
 
@@ -740,14 +740,14 @@ inline float erff(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca funkcję błędu _X
 
-## <a name="erfinv"></a>erfinv —
+## <a name="erfinv"></a><a name="erfinv"></a>erfinv ( erfinv )
 
 Oblicza funkcję odwrotnego błędu _X
 
@@ -759,14 +759,14 @@ inline double erfinv(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca funkcję odwrotnego błędu _X
 
-## <a name="erfinvf"></a>erfinvf
+## <a name="erfinvf"></a><a name="erfinvf"></a>erfinvf ( erfinvf )
 
 Oblicza funkcję odwrotnego błędu _X
 
@@ -776,16 +776,16 @@ inline float erfinvf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca funkcję odwrotnego błędu _X
 
-## <a name="exp10"></a>exp10 —
+## <a name="exp10"></a><a name="exp10"></a>exp10
 
-Oblicza wartość logarytmu dziesiętnego dla argumentu
+Oblicza wartość podstawową-10 wykładniczą argumentu
 
 ```cpp
 inline float exp10(float _X) restrict(amp);
@@ -795,16 +795,16 @@ inline double exp10(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość liczbową z argumentu Base-10.
+Zwraca wartość wykładnicza base-10 argumentu
 
-## <a name="exp10f"></a>exp10f —
+## <a name="exp10f"></a><a name="exp10f"></a>exp10f
 
-Oblicza wartość logarytmu dziesiętnego dla argumentu
+Oblicza wartość podstawową-10 wykładniczą argumentu
 
 ```cpp
 inline float exp10f(float _X) restrict(amp);
@@ -812,14 +812,14 @@ inline float exp10f(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość liczbową z argumentu Base-10.
+Zwraca wartość wykładnicza base-10 argumentu
 
-## <a name="expm1"></a>expm1 —
+## <a name="expm1"></a><a name="expm1"></a>expm1
 
 Oblicza wartość wykładniczą (podstawa e) argumentu, minus 1
 
@@ -831,14 +831,14 @@ inline double expm1(double exponent) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*zapis*<br/>
-Wykładniczy termin *n* wyrażenia matematycznego `e`<sup>n</sup>, gdzie `e` jest podstawą logarytmu naturalnego.
+*Wykładnik*<br/>
+Wykładniczy termin *n* wyrażenia `e`matematycznego <sup>n</sup> `e` , gdzie jest podstawą logarytmu naturalnego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość wykładniczą (podstawa e) argumentu, minus 1
 
-## <a name="expm1f"></a>expm1f —
+## <a name="expm1f"></a><a name="expm1f"></a>expm1f
 
 Oblicza wartość wykładniczą (podstawa e) argumentu, minus 1
 
@@ -848,16 +848,16 @@ inline float expm1f(float exponent) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*zapis*<br/>
-Wykładniczy termin *n* wyrażenia matematycznego `e`<sup>n</sup>, gdzie `e` jest podstawą logarytmu naturalnego.
+*Wykładnik*<br/>
+Wykładniczy termin *n* wyrażenia `e`matematycznego <sup>n</sup> `e` , gdzie jest podstawą logarytmu naturalnego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wartość wykładniczą (podstawa e) argumentu, minus 1
 
-## <a name="exp"></a>EXP
+## <a name="exp"></a><a name="exp"></a>Exp
 
-Oblicza wykładniczą wartość argumentu
+Oblicza wykładniczą bazę e argumentu
 
 ```cpp
 inline float exp(float _X) restrict(amp);
@@ -867,16 +867,16 @@ inline double exp(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wykładniczą wartość argumentu
+Zwraca wykładniczą bazę e argumentu
 
-## <a name="expf"></a>expf —
+## <a name="expf"></a><a name="expf"></a>expf (wycho.
 
-Oblicza wykładniczą wartość argumentu
+Oblicza wykładniczą bazę e argumentu
 
 ```cpp
 inline float expf(float _X) restrict(amp);
@@ -884,16 +884,16 @@ inline float expf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wykładniczą wartość argumentu
+Zwraca wykładniczą bazę e argumentu
 
-## <a name="exp2"></a>exp2 —
+## <a name="exp2"></a><a name="exp2"></a>exp2
 
-Oblicza wartość typu wykładniczego na podstawie 2 dla argumentu
+Oblicza wykładniczą bazową-2 argumentu
 
 ```cpp
 inline float exp2(float _X) restrict(amp);
@@ -903,16 +903,16 @@ inline double exp2(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość typu wykładniczego 2 dla argumentu
+Zwraca wartość wykładnicza base-2 argumentu
 
-## <a name="exp2f"></a>exp2f —
+## <a name="exp2f"></a><a name="exp2f"></a>exp2f
 
-Oblicza wartość typu wykładniczego na podstawie 2 dla argumentu
+Oblicza wykładniczą bazową-2 argumentu
 
 ```cpp
 inline float exp2f(float _X) restrict(amp);
@@ -920,16 +920,16 @@ inline float exp2f(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość typu wykładniczego 2 dla argumentu
+Zwraca wartość wykładnicza base-2 argumentu
 
-## <a name="fabs"></a>fabs —
+## <a name="fabs"></a><a name="fabs"></a>Fabs
 
-Zwraca wartość bezwzględną argumentu.
+Zwraca wartość bezwzględną argumentu
 
 ```cpp
 inline float fabs(float _X) restrict(amp);
@@ -939,16 +939,16 @@ inline double fabs(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość bezwzględną argumentu.
+Zwraca wartość bezwzględną argumentu
 
-## <a name="fabsf"></a>fabsf —
+## <a name="fabsf"></a><a name="fabsf"></a>fabsf ( fabsf )
 
-Zwraca wartość bezwzględną argumentu.
+Zwraca wartość bezwzględną argumentu
 
 ```cpp
 inline float fabsf(float _X) restrict(amp);
@@ -956,14 +956,14 @@ inline float fabsf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość bezwzględną argumentu.
+Zwraca wartość bezwzględną argumentu
 
-## <a name="fdim"></a>fdim —
+## <a name="fdim"></a><a name="fdim"></a>fdim ( fdim )
 
 Oblicza dodatnią różnicę między argumentami.
 
@@ -980,15 +980,15 @@ inline double fdim(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa *_Y*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+*_Y* wartości zmiennoprzecinowej<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różnica między _X i _Y, jeśli _X jest większa niż _Y; w przeciwnym razie + 0.
+Różnica między _X a _Y, jeśli _X jest większa niż _Y; w przeciwnym razie +0.
 
-## <a name="fdimf"></a>fdimf —
+## <a name="fdimf"></a><a name="fdimf"></a>fdimf ( fdimf )
 
 Oblicza dodatnią różnicę między argumentami.
 
@@ -1001,17 +1001,17 @@ inline float fdimf(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa *_Y*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+*_Y* wartości zmiennoprzecinowej<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Różnica między _X i _Y, jeśli _X jest większa niż _Y; w przeciwnym razie + 0.
+Różnica między _X a _Y, jeśli _X jest większa niż _Y; w przeciwnym razie +0.
 
-## <a name="floor"></a>wykładzin
+## <a name="floor"></a><a name="floor"></a>Podłogi
 
-Oblicza piętro argumentu
+Oblicza podłogę argumentu
 
 ```cpp
 inline float floor(float _X) restrict(amp);
@@ -1021,16 +1021,16 @@ inline double floor(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca podłogę argumentu
 
-## <a name="floorf"></a>floorf —
+## <a name="floorf"></a><a name="floorf"></a>podłoga
 
-Oblicza piętro argumentu
+Oblicza podłogę argumentu
 
 ```cpp
 inline float floorf(float _X) restrict(amp);
@@ -1038,16 +1038,16 @@ inline float floorf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca podłogę argumentu
 
-## <a name="a-namefma-fma"></a><a name="fma"> FMA
+## <a name="a-namefma-fma"></a><a name="fma">Fma
 
-Oblicza iloczyn pierwszego i drugiego określonego argumentu, a następnie dodaje trzeci określony argument do wyniku; całe obliczenie jest wykonywane jako pojedyncza operacja.
+Oblicza iloczyn pierwszego i drugiego określonego argumentu, a następnie dodaje trzeci określony argument do wyniku; całe obliczenia są wykonywane jako pojedyncza operacja.
 
 ```cpp
 inline float fma(
@@ -1065,20 +1065,20 @@ inline double fma(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
+*_x*<br/>
 Pierwszy argument zmiennoprzecinkowy.
-*_Y*<br/>
-Drugi argument zmiennoprzecinkowy.
+*_y*<br/>
+Drugi argument zmiennoprzecinowy.
 *_Z*<br/>
-Trzeci argument zmiennoprzecinkowy.
+Trzeci argument zmiennoprzecinowy.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wynik wyrażenia (_X \* _Y) + _Z. Całe obliczenie jest wykonywane jako pojedyncza operacja; oznacza to, że wyrażenia podrzędne są obliczane z dokładnością nieskończoną i zaokrąglany jest tylko wynik końcowy.
+Wynik wyrażenia (_X \* _Y) + _Z. Całe obliczenia są wykonywane jako pojedyncza operacja; oznacza to, że wyrażenia podrzędne są obliczane na nieskończoną precyzję i tylko wynik końcowy jest zaokrąglany.
 
-## <a name="fmaf"></a>fmaf —
+## <a name="fmaf"></a><a name="fmaf"></a>fmaf (fmaf)
 
-Oblicza iloczyn pierwszego i drugiego określonego argumentu, a następnie dodaje trzeci określony argument do wyniku; całe obliczenie jest wykonywane jako pojedyncza operacja.
+Oblicza iloczyn pierwszego i drugiego określonego argumentu, a następnie dodaje trzeci określony argument do wyniku; całe obliczenia są wykonywane jako pojedyncza operacja.
 
 ```cpp
 inline float fmaf(
@@ -1090,18 +1090,18 @@ inline float fmaf(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
+*_x*<br/>
 Pierwszy argument zmiennoprzecinkowy.
-*_Y*<br/>
-Drugi argument zmiennoprzecinkowy.
+*_y*<br/>
+Drugi argument zmiennoprzecinowy.
 *_Z*<br/>
-Trzeci argument zmiennoprzecinkowy.
+Trzeci argument zmiennoprzecinowy.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wynik wyrażenia (_X \* _Y) + _Z. Całe obliczenie jest wykonywane jako pojedyncza operacja; oznacza to, że wyrażenia podrzędne są obliczane z dokładnością nieskończoną i zaokrąglany jest tylko wynik końcowy.
+Wynik wyrażenia (_X \* _Y) + _Z. Całe obliczenia są wykonywane jako pojedyncza operacja; oznacza to, że wyrażenia podrzędne są obliczane na nieskończoną precyzję i tylko wynik końcowy jest zaokrąglany.
 
-## <a name="fmax"></a>Fmax —
+## <a name="fmax"></a><a name="fmax"></a>fmax ( fmax )
 
 Określanie maksymalnej wartości liczbowej argumentów
 
@@ -1117,17 +1117,17 @@ inline double fmax(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-*_Y*<br/>
-Wartość zmiennoprzecinkowa
+*_y*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca maksymalną wartość liczbową argumentów
 
-## <a name="fmaxf"></a>fmaxf —
+## <a name="fmaxf"></a><a name="fmaxf"></a>fmaxf ( fmaxf )
 
 Określanie maksymalnej wartości liczbowej argumentów
 
@@ -1139,19 +1139,19 @@ inline float fmaxf(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-*_Y*<br/>
-Wartość zmiennoprzecinkowa
+*_y*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca maksymalną wartość liczbową argumentów
 
-## <a name="fmin"></a>fmin —
+## <a name="fmin"></a><a name="fmin"></a>fmin ( fmin )
 
-Określ minimalną wartość liczbową argumentów
+Określanie minimalnej wartości liczbowej argumentów
 
 ```cpp
 inline float fmin(
@@ -1165,19 +1165,19 @@ inline double fmin(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-*_Y*<br/>
-Wartość zmiennoprzecinkowa
+*_y*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwróć minimalną wartość liczbową argumentów
+Zwraca minimalną wartość liczbową argumentów
 
-## <a name="fminf"></a>fminf —
+## <a name="fminf"></a><a name="fminf"></a>fminf (fminf)
 
-Określ minimalną wartość liczbową argumentów
+Określanie minimalnej wartości liczbowej argumentów
 
 ```cpp
 inline float fminf(
@@ -1187,19 +1187,19 @@ inline float fminf(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-*_Y*<br/>
-Wartość zmiennoprzecinkowa
+*_y*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwróć minimalną wartość liczbową argumentów
+Zwraca minimalną wartość liczbową argumentów
 
-## <a name="fmod"></a>Funkcja FMOD — (C++ amp)
+## <a name="fmod-function-c-amp"></a><a name="fmod"></a>Funkcja fmod (C++ AMP)
 
-Oblicza pozostałą część pierwszego określonego argumentu podzieloną przez drugi określony argument.
+Oblicza pozostałą część pierwszego określonego argumentu podzielonego przez drugi określony argument.
 
 ```cpp
 inline float fmod(
@@ -1213,19 +1213,19 @@ inline double fmod(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
+*_x*<br/>
 Pierwszy argument zmiennoprzecinkowy.
 
-*_Y*<br/>
-Drugi argument zmiennoprzecinkowy.
+*_y*<br/>
+Drugi argument zmiennoprzecinowy.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Pozostała część `_X` podzielona przez `_Y`; oznacza to, że wartość `_X` - `_Y`*n*, gdzie *n* jest liczbą całkowitą, tak że rozmiar `_X` - `_Y`*n* jest mniejszy niż rozmiar `_Y`.
+Pozostała część `_X` podzielona `_Y`przez ; oznacza to, że `_X`  -  `_Y`wartość *n*, gdzie *n* jest całkowitą `_X`  -  `_Y`całkowitej takiej, że `_Y`wielkość *n* jest mniejsza niż wielkość .
 
-## <a name="fmodf"></a>fmodf —
+## <a name="fmodf"></a><a name="fmodf"></a>fmodf ( fmodf )
 
-Oblicza pozostałą część pierwszego określonego argumentu podzieloną przez drugi określony argument.
+Oblicza pozostałą część pierwszego określonego argumentu podzielonego przez drugi określony argument.
 
 ```cpp
 inline float fmodf(
@@ -1235,19 +1235,19 @@ inline float fmodf(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
+*_x*<br/>
 Pierwszy argument zmiennoprzecinkowy.
 
-*_Y*<br/>
-Drugi argument zmiennoprzecinkowy.
+*_y*<br/>
+Drugi argument zmiennoprzecinowy.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Pozostała część `_X` podzielona przez `_Y`; oznacza to, że wartość `_X` - `_Y`*n*, gdzie *n* jest liczbą całkowitą, tak że rozmiar `_X` - `_Y`*n* jest mniejszy niż rozmiar `_Y`.
+Pozostała część `_X` podzielona `_Y`przez ; oznacza to, że `_X`  -  `_Y`wartość *n*, gdzie *n* jest całkowitą `_X`  -  `_Y`całkowitej takiej, że `_Y`wielkość *n* jest mniejsza niż wielkość .
 
-## <a name="fpclassify"></a>fpclassify —
+## <a name="fpclassify"></a><a name="fpclassify"></a>fpclassify
 
-Klasyfikuje wartość argumentu jako NaN, nieskończone, normalne, subnormalne, zero
+Klasyfikuje wartość argumentu jako NaN, nieskończony, normalny, subnormal, zero
 
 ```cpp
 inline int fpclassify(float _X) restrict(amp);
@@ -1257,16 +1257,16 @@ inline int fpclassify(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość makra klasyfikacji liczbowej odpowiednie dla wartości argumentu.
+Zwraca wartość makro klasyfikacji liczb odpowiednie do wartości argumentu.
 
-## <a name="frexp"></a>frexp —
+## <a name="frexp"></a><a name="frexp"></a>frexp ( frexp )
 
-Pobiera mantysy i wykładnik _X
+Pobiera mantysi i wykładnika _X
 
 ```cpp
 inline float frexp(
@@ -1280,19 +1280,19 @@ inline double frexp(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
 *_Exp*<br/>
-Zwraca wykładnik całkowity _X w wartości zmiennoprzecinkowej
+Zwraca wykładnik liczby całkowitej _X w wartości zmiennoprzecinkowej
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca _X mantysy
+Zwraca _X modliszki
 
-## <a name="frexpf"></a>frexpf —
+## <a name="frexpf"></a><a name="frexpf"></a>frexpf
 
-Pobiera mantysy i wykładnik _X
+Pobiera mantysi i wykładnika _X
 
 ```cpp
 inline float frexpf(
@@ -1302,17 +1302,17 @@ inline float frexpf(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
 *_Exp*<br/>
-Zwraca wykładnik całkowity _X w wartości zmiennoprzecinkowej
+Zwraca wykładnik liczby całkowitej _X w wartości zmiennoprzecinkowej
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca _X mantysy
+Zwraca _X modliszki
 
-## <a name="hypot"></a>hypot —
+## <a name="hypot"></a><a name="hypot"></a>hypot
 
 Oblicza pierwiastek kwadratowy sumy kwadratów _X i _Y
 
@@ -1328,17 +1328,17 @@ inline double hypot(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-*_Y*<br/>
-Wartość zmiennoprzecinkowa
+*_y*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca pierwiastek kwadratowy sumy kwadratów _X i _Y
 
-## <a name="hypotf"></a>hypotf —
+## <a name="hypotf"></a><a name="hypotf"></a>hypotf (hipotf)
 
 Oblicza pierwiastek kwadratowy sumy kwadratów _X i _Y
 
@@ -1350,19 +1350,19 @@ inline float hypotf(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-*_Y*<br/>
-Wartość zmiennoprzecinkowa
+*_y*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca pierwiastek kwadratowy sumy kwadratów _X i _Y
 
-## <a name="ilogb"></a>ilogb —
+## <a name="ilogb"></a><a name="ilogb"></a>ilogb ( ilogb )
 
-Wyodrębnij wykładnik _X jako podpisaną wartość int
+Wyodrębnianie wykładnika _X jako podpisanej wartości int
 
 ```cpp
 inline int ilogb(float _X) restrict(amp);
@@ -1372,16 +1372,16 @@ inline int ilogb(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wykładnik _X jako podpisaną wartość int
 
-## <a name="ilogbf"></a>ilogbf —
+## <a name="ilogbf"></a><a name="ilogbf"></a>ilogbf ( ilogbf )
 
-Wyodrębnij wykładnik _X jako podpisaną wartość int
+Wyodrębnianie wykładnika _X jako podpisanej wartości int
 
 ```cpp
 inline int ilogbf(float _X) restrict(amp);
@@ -1389,16 +1389,16 @@ inline int ilogbf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca wykładnik _X jako podpisaną wartość int
 
-## <a name="isfinite"></a>isFinite
+## <a name="isfinite"></a><a name="isfinite"></a>isfinite
 
-Określa, czy argument ma skończoną wartość
+Określa, czy argument ma wartość skończoną
 
 ```cpp
 inline int isfinite(float _X) restrict(amp);
@@ -1408,14 +1408,14 @@ inline int isfinite(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy argument ma skończoną wartość
+Zwraca wartość niezerową, jeśli i tylko wtedy, gdy argument ma wartość skończoną
 
-## <a name="isinf"></a>isinf —
+## <a name="isinf"></a><a name="isinf"></a>isinf (isinf)
 
 Określa, czy argument jest nieskończonością
 
@@ -1427,14 +1427,14 @@ inline int isinf(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy argument ma wartość nieskończoną.
+Zwraca wartość niezerową, jeśli i tylko wtedy, gdy argument ma nieskończoną wartość
 
-## <a name="isnan"></a>isNaN
+## <a name="isnan"></a><a name="isnan"></a>Isnan (isnan)
 
 Określa, czy argument jest NaN
 
@@ -1446,14 +1446,14 @@ inline int isnan(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy argument ma wartość NaN
+Zwraca wartość niezerową, jeśli i tylko wtedy, gdy argument ma wartość NaN
 
-## <a name="isnormal"></a>isnormal —
+## <a name="isnormal"></a><a name="isnormal"></a>jestnormalna
 
 Określa, czy argument jest normalny
 
@@ -1465,16 +1465,16 @@ inline int isnormal(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy argument ma wartość normalną.
+Zwraca wartość niezerową, jeśli i tylko wtedy, gdy argument ma wartość normalną
 
-## <a name="ldexp"></a>ldexp —
+## <a name="ldexp"></a><a name="ldexp"></a>ldexp
 
-Oblicza liczbę rzeczywistą z określonego mantysy i wykładnika.
+Oblicza rzeczywistą liczbę z określonej modliszki i wykładnika.
 
 ```cpp
 inline float ldexp(
@@ -1488,19 +1488,19 @@ inline double ldexp(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa, mantysy
+*_x*<br/>
+Wartość zmiennoprzecinku, mantissa
 
 *_Exp*<br/>
 Wartość całkowita, wykładnik
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca _X \* 2 ^ _Exp
+Zwraca _X \* 2^_Exp
 
-## <a name="ldexpf"></a>ldexpf —
+## <a name="ldexpf"></a><a name="ldexpf"></a>ldexpf ( ldexpf )
 
-Oblicza liczbę rzeczywistą z określonego mantysy i wykładnika.
+Oblicza rzeczywistą liczbę z określonej modliszki i wykładnika.
 
 ```cpp
 inline float ldexpf(
@@ -1510,17 +1510,17 @@ inline float ldexpf(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa, mantysy
+*_x*<br/>
+Wartość zmiennoprzecinku, mantissa
 
 *_Exp*<br/>
 Wartość całkowita, wykładnik
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca _X \* 2 ^ _Exp
+Zwraca _X \* 2^_Exp
 
-## <a name="lgamma"></a>lgamma —
+## <a name="lgamma"></a><a name="lgamma"></a>lgamma
 
 Oblicza logarytm naturalny wartości bezwzględnej gamma argumentu
 
@@ -1536,17 +1536,17 @@ inline double lgamma(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
 *_Sign*<br/>
 Zwraca znak
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca logarytm naturalny wartości absolutnej argumentu
+Zwraca logarytm naturalny wartości bezwzględnej gamma argumentu
 
-## <a name="lgammaf"></a>lgammaf —
+## <a name="lgammaf"></a><a name="lgammaf"></a>lgammaf
 
 Oblicza logarytm naturalny wartości bezwzględnej gamma argumentu
 
@@ -1558,19 +1558,19 @@ inline float lgammaf(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
 *_Sign*<br/>
 Zwraca znak
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca logarytm naturalny wartości absolutnej argumentu
+Zwraca logarytm naturalny wartości bezwzględnej gamma argumentu
 
-## <a name="log"></a>rejestrowane
+## <a name="log"></a><a name="log"></a>Dziennika
 
-Oblicza logarytm dziesiętny argumentu
+Oblicza logarytm base-e argumentu
 
 ```cpp
 inline float log(float _X) restrict(amp);
@@ -1580,16 +1580,16 @@ inline double log(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca logarytm dziesiętny argumentu
+Zwraca logarytm base-e argumentu
 
-## <a name="log10"></a>log10 —
+## <a name="log10"></a><a name="log10"></a>log10
 
-Oblicza logarytm dziesiętny argumentu
+Oblicza logarytm base-10 argumentu
 
 ```cpp
 inline float log10(float _X) restrict(amp);
@@ -1599,16 +1599,16 @@ inline double log10(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca logarytm dziesiętny argumentu
+Zwraca logarytm base-10 argumentu
 
-## <a name="log10f"></a>log10f —
+## <a name="log10f"></a><a name="log10f"></a>log10f
 
-Oblicza logarytm dziesiętny argumentu
+Oblicza logarytm base-10 argumentu
 
 ```cpp
 inline float log10f(float _X) restrict(amp);
@@ -1616,16 +1616,16 @@ inline float log10f(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca logarytm dziesiętny argumentu
+Zwraca logarytm base-10 argumentu
 
-## <a name="log1p"></a>log1p —
+## <a name="log1p"></a><a name="log1p"></a>log1p
 
-Oblicza logarytm dziesiętny wartości 1 i argumentu
+Oblicza logarytm base-e 1 plus argument
 
 ```cpp
 inline float log1p(float _X) restrict(amp);
@@ -1635,16 +1635,16 @@ inline double log1p(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość logarytmu podstawowego-e z 1 i argumentu
+Zwraca logarytm base-e 1 plus argument
 
-## <a name="log1pf"></a>log1pf —
+## <a name="log1pf"></a><a name="log1pf"></a>log1pf
 
-Oblicza logarytm dziesiętny wartości 1 i argumentu
+Oblicza logarytm base-e 1 plus argument
 
 ```cpp
 inline float log1pf(float _X) restrict(amp);
@@ -1652,16 +1652,16 @@ inline float log1pf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość logarytmu podstawowego-e z 1 i argumentu
+Zwraca logarytm base-e 1 plus argument
 
-## <a name="log2"></a>log2 —
+## <a name="log2"></a><a name="log2"></a>log2
 
-Oblicza logarytm dziesiętny argumentu
+Oblicza logarytm base-2 argumentu
 
 ```cpp
 inline float log2(float _X) restrict(amp);
@@ -1671,16 +1671,16 @@ inline double log2(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca logarytm dziesiętny argumentu
+Zwraca logarytm base-10 argumentu
 
-## <a name="log2f"></a>log2f —
+## <a name="log2f"></a><a name="log2f"></a>log2f
 
-Oblicza logarytm dziesiętny argumentu
+Oblicza logarytm base-2 argumentu
 
 ```cpp
 inline float log2f(float _X) restrict(amp);
@@ -1688,16 +1688,16 @@ inline float log2f(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca logarytm dziesiętny argumentu
+Zwraca logarytm base-10 argumentu
 
-## <a name="logb"></a>logb —
+## <a name="logb"></a><a name="logb"></a>logb (logb)
 
-Wyodrębnienie wykładnika _X jako wartości całkowitej ze znakiem w formacie liczb zmiennoprzecinkowych
+Wyodrębnia wykładnik _X, jako podpisaną wartość całkowitą w formacie zmiennoprzecinkowym
 
 ```cpp
 inline float logb(float _X) restrict(amp);
@@ -1707,16 +1707,16 @@ inline double logb(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca podpisany wykładnik _X
 
-## <a name="logbf"></a>logbf —
+## <a name="logbf"></a><a name="logbf"></a>logbf (logbf)
 
-Wyodrębnienie wykładnika _X jako wartości całkowitej ze znakiem w formacie liczb zmiennoprzecinkowych
+Wyodrębnia wykładnik _X, jako podpisaną wartość całkowitą w formacie zmiennoprzecinkowym
 
 ```cpp
 inline float logbf(float _X) restrict(amp);
@@ -1724,16 +1724,16 @@ inline float logbf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca podpisany wykładnik _X
 
-## <a name="logf"></a>logf —
+## <a name="logf"></a><a name="logf"></a>logf (logf)
 
-Oblicza logarytm dziesiętny argumentu
+Oblicza logarytm base-e argumentu
 
 ```cpp
 inline float logf(float _X) restrict(amp);
@@ -1741,14 +1741,14 @@ inline float logf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca logarytm dziesiętny argumentu
+Zwraca logarytm base-e argumentu
 
-## <a name="modf"></a>modf —
+## <a name="modf"></a><a name="modf"></a>modf ( modf )
 
 Dzieli określony argument na części ułamkowe i całkowite.
 
@@ -1764,17 +1764,17 @@ inline double modf(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
 *_Iptr*<br/>
-określoną Część całkowita `_X`, jako wartość zmiennoprzecinkowa.
+[na zewnątrz] Część całkowita , `_X`jako wartość zmiennoprzecinkowa.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Podpisana część ułamkowa `_X`.
+Podpisana ułamkowa `_X`część .
 
-## <a name="modff"></a>modff —
+## <a name="modff"></a><a name="modff"></a>modff ( modff )
 
 Dzieli określony argument na części ułamkowe i całkowite.
 
@@ -1786,19 +1786,19 @@ inline float modff(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
 *_Iptr*<br/>
-Część całkowita `_X`, jako wartość zmiennoprzecinkowa.
+Część całkowita , `_X`jako wartość zmiennoprzecinkowa.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca podpisaną część ułamkową `_X`.
+Zwraca podpisaną część `_X`ułamkową .
 
-## <a name="nan"></a>NaN
+## <a name="nan"></a><a name="nan"></a>Nan
 
-Zwraca cichy element NaN
+Zwraca cichą NaN
 
 ```cpp
 inline double nan(int _X) restrict(amp);
@@ -1806,16 +1806,16 @@ inline double nan(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
+*_x*<br/>
 Wartość całkowita
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca cichy NaN, jeśli jest dostępny, z zawartością wskazywaną w _X
+Zwraca cichą sieć NaN, jeśli jest dostępna, z zawartością wskazaną w _X
 
-## <a name="nanf"></a>nanf —
+## <a name="nanf"></a><a name="nanf"></a>nanf
 
-Zwraca cichy element NaN
+Zwraca cichą NaN
 
 ```cpp
 inline float nanf(int _X) restrict(amp);
@@ -1823,16 +1823,16 @@ inline float nanf(int _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
+*_x*<br/>
 Wartość całkowita
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca cichy NaN, jeśli jest dostępny, z zawartością wskazywaną w _X
+Zwraca cichą sieć NaN, jeśli jest dostępna, z zawartością wskazaną w _X
 
-## <a name="nearbyint"></a>nearbyint —
+## <a name="nearbyint"></a><a name="nearbyint"></a>w pobliżu
 
-Zaokrągla argument do wartości całkowitej w formacie zmiennoprzecinkowym przy użyciu bieżącego kierunku zaokrąglenia.
+Zaokrągla argument do wartości całkowitej w formacie zmiennoprzecinkowym, używając bieżącego kierunku zaokrąglania.
 
 ```cpp
 inline float nearbyint(float _X) restrict(amp);
@@ -1842,16 +1842,16 @@ inline double nearbyint(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca zaokrągloną wartość całkowitą.
 
-## <a name="nearbyintf"></a>nearbyintf —
+## <a name="nearbyintf"></a><a name="nearbyintf"></a>w pobliżuintf
 
-Zaokrągla argument do wartości całkowitej w formacie zmiennoprzecinkowym przy użyciu bieżącego kierunku zaokrąglenia.
+Zaokrągla argument do wartości całkowitej w formacie zmiennoprzecinkowym, używając bieżącego kierunku zaokrąglania.
 
 ```cpp
 inline float nearbyintf(float _X) restrict(amp);
@@ -1859,16 +1859,16 @@ inline float nearbyintf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca zaokrągloną wartość całkowitą.
 
-## <a name="nextafter"></a>nextafter —
+## <a name="nextafter"></a><a name="nextafter"></a>następna po
 
-Określ następną reprezentację wartości w typie funkcji po _X w kierunku _Y
+Określ następną wartość reprezentowalną, w typie funkcji, po _X w kierunku _Y
 
 ```cpp
 inline float nextafter(
@@ -1882,19 +1882,19 @@ inline double nextafter(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-*_Y*<br/>
-Wartość zmiennoprzecinkowa
+*_y*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca następną reprezentację wartości w typie funkcji po _X w kierunku _Y
+Zwraca następną wartość reprezentowalną, w typie funkcji, po _X w kierunku _Y
 
-## <a name="nextafterf"></a>nextafterf —
+## <a name="nextafterf"></a><a name="nextafterf"></a>następnypo
 
-Określ następną reprezentację wartości w typie funkcji po _X w kierunku _Y
+Określ następną wartość reprezentowalną, w typie funkcji, po _X w kierunku _Y
 
 ```cpp
 inline float nextafterf(
@@ -1904,19 +1904,19 @@ inline float nextafterf(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-*_Y*<br/>
-Wartość zmiennoprzecinkowa
+*_y*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca następną reprezentację wartości w typie funkcji po _X w kierunku _Y
+Zwraca następną wartość reprezentowalną, w typie funkcji, po _X w kierunku _Y
 
-## <a name="phi"></a>zdrowiu
+## <a name="phi"></a><a name="phi"></a>Phi
 
-Zwraca funkcję rozkładu skumulowanego argumentu
+Zwraca skumulowaną funkcję rozkładu argumentu
 
 ```cpp
 inline float phi(float _X) restrict(amp);
@@ -1926,16 +1926,16 @@ inline double phi(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca funkcję rozkładu skumulowanego argumentu
+Zwraca skumulowaną funkcję rozkładu argumentu
 
-## <a name="phif"></a>phif
+## <a name="phif"></a><a name="phif"></a>phif ( phif )
 
-Zwraca funkcję rozkładu skumulowanego argumentu
+Zwraca skumulowaną funkcję rozkładu argumentu
 
 ```cpp
 inline float phif(float _X) restrict(amp);
@@ -1943,16 +1943,16 @@ inline float phif(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca funkcję rozkładu skumulowanego argumentu
+Zwraca skumulowaną funkcję rozkładu argumentu
 
-## <a name="pow"></a>pow
+## <a name="pow"></a><a name="pow"></a>Pow
 
-Oblicza _X podniesioną do potęgi _Y
+Oblicza _X podniesiony do potęgi _Y
 
 ```cpp
 inline float pow(
@@ -1966,17 +1966,17 @@ inline double pow(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa, podstawa
+*_x*<br/>
+Wartość zmiennoprzecinku, podstawa
 
-*_Y*<br/>
-Wartość zmiennoprzecinkowa, wykładnik
+*_y*<br/>
+Wartość zmiennoprzecinku, wykładnik
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-## <a name="powf"></a>powf —
+## <a name="powf"></a><a name="powf"></a>powf (powf)
 
-Oblicza _X podniesioną do potęgi _Y
+Oblicza _X podniesiony do potęgi _Y
 
 ```cpp
 inline float powf(
@@ -1986,17 +1986,17 @@ inline float powf(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa, podstawa
+*_x*<br/>
+Wartość zmiennoprzecinku, podstawa
 
-*_Y*<br/>
-Wartość zmiennoprzecinkowa, wykładnik
+*_y*<br/>
+Wartość zmiennoprzecinku, wykładnik
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-## <a name="probit"></a>probit
+## <a name="probit"></a><a name="probit"></a>probit
 
-Zwraca odwrotną funkcję rozkładu skumulowanego argumentu
+Zwraca odwrotną funkcję skumulowanego rozkładu argumentu
 
 ```cpp
 inline float probit(float _X) restrict(amp);
@@ -2006,16 +2006,16 @@ inline double probit(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwrotną funkcję rozkładu skumulowanego argumentu
+Zwraca odwrotną funkcję skumulowanego rozkładu argumentu
 
-## <a name="probitf"></a>probitf
+## <a name="probitf"></a><a name="probitf"></a>probitf
 
-Zwraca odwrotną funkcję rozkładu skumulowanego argumentu
+Zwraca odwrotną funkcję skumulowanego rozkładu argumentu
 
 ```cpp
 inline float probitf(float _X) restrict(amp);
@@ -2023,16 +2023,16 @@ inline float probitf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwrotną funkcję rozkładu skumulowanego argumentu
+Zwraca odwrotną funkcję skumulowanego rozkładu argumentu
 
-## <a name="rcbrt"></a>rcbrt —
+## <a name="rcbrt"></a><a name="rcbrt"></a>rcbrt ( rcbrt )
 
-Zwraca odwrotność elementu głównego modułu argumentu
+Zwraca odwrotność katalogu głównego modułu argumentu
 
 ```cpp
 inline float rcbrt(float _X) restrict(amp);
@@ -2042,16 +2042,16 @@ inline double rcbrt(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwrotność elementu głównego modułu argumentu
+Zwraca odwrotność katalogu głównego modułu argumentu
 
-## <a name="rcbrtf"></a>rcbrtf —
+## <a name="rcbrtf"></a><a name="rcbrtf"></a>rcbrtf ( rcbrtf )
 
-Zwraca odwrotność elementu głównego modułu argumentu
+Zwraca odwrotność katalogu głównego modułu argumentu
 
 ```cpp
 inline float rcbrtf(float _X) restrict(amp);
@@ -2059,16 +2059,16 @@ inline float rcbrtf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwrotność elementu głównego modułu argumentu
+Zwraca odwrotność katalogu głównego modułu argumentu
 
-## <a name="remainder"></a>pozostałej części
+## <a name="remainder"></a><a name="remainder"></a>Pozostałą część
 
-Oblicza resztę: _X REM _Y
+Oblicza pozostałą część: _X REM _Y
 
 ```cpp
 inline float remainder(
@@ -2082,19 +2082,19 @@ inline double remainder(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-*_Y*<br/>
-Wartość zmiennoprzecinkowa
+*_y*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca _X REM _Y
 
-## <a name="remainderf"></a>remainderf —
+## <a name="remainderf"></a><a name="remainderf"></a>resekt
 
-Oblicza resztę: _X REM _Y
+Oblicza pozostałą część: _X REM _Y
 
 ```cpp
 inline float remainderf(
@@ -2104,19 +2104,19 @@ inline float remainderf(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-*_Y*<br/>
-Wartość zmiennoprzecinkowa
+*_y*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca _X REM _Y
 
-## <a name="remquo"></a>remquo —
+## <a name="remquo"></a><a name="remquo"></a>remquo
 
-Oblicza pozostałą część pierwszego określonego argumentu podzieloną przez drugi określony argument. Oblicza także iloraz mantysę pierwszego określonego argumentu podzieloną przez mantysę drugiego określonego argumentu i zwraca iloraz przy użyciu lokalizacji określonej w trzecim argumencie.
+Oblicza pozostałą część pierwszego określonego argumentu podzielonego przez drugi określony argument. Oblicza również iloraz significand pierwszego określonego argumentu podzielonego przez oznaczenia i drugiego określonego argumentu i zwraca iloraz przy użyciu lokalizacji określonej w trzecim argum.
 
 ```cpp
 inline float remquo(
@@ -2132,22 +2132,22 @@ inline double remquo(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
+*_x*<br/>
 Pierwszy argument zmiennoprzecinkowy.
 
-*_Y*<br/>
-Drugi argument zmiennoprzecinkowy.
+*_y*<br/>
+Drugi argument zmiennoprzecinowy.
 
 *_Quo*<br/>
-określoną Adres liczby całkowitej, która jest używana do zwrócenia ilorazu ułamków częściowych `_X` podzielona przez ułamkowe bity `_Y`.
+[na zewnątrz] Adres liczby całkowitej, która jest używana do zwracania ilorazu `_X` bitów ułamkowych podzielonych przez ułamkowe bity . `_Y`
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca resztę `_X` podzieloną przez `_Y`.
+Zwraca pozostałą `_X` część `_Y`podzieloną przez .
 
-## <a name="remquof"></a>remquof —
+## <a name="remquof"></a><a name="remquof"></a>remquof
 
-Oblicza pozostałą część pierwszego określonego argumentu podzieloną przez drugi określony argument. Oblicza także iloraz mantysę pierwszego określonego argumentu podzieloną przez mantysę drugiego określonego argumentu i zwraca iloraz przy użyciu lokalizacji określonej w trzecim argumencie.
+Oblicza pozostałą część pierwszego określonego argumentu podzielonego przez drugi określony argument. Oblicza również iloraz significand pierwszego określonego argumentu podzielonego przez oznaczenia i drugiego określonego argumentu i zwraca iloraz przy użyciu lokalizacji określonej w trzecim argum.
 
 ```cpp
 inline float remquof(
@@ -2158,20 +2158,20 @@ inline float remquof(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
+*_x*<br/>
 Pierwszy argument zmiennoprzecinkowy.
 
-*_Y*<br/>
-Drugi argument zmiennoprzecinkowy.
+*_y*<br/>
+Drugi argument zmiennoprzecinowy.
 
 *_Quo*<br/>
-określoną Adres liczby całkowitej, która jest używana do zwrócenia ilorazu ułamków częściowych `_X` podzielona przez ułamkowe bity `_Y`.
+[na zewnątrz] Adres liczby całkowitej, która jest używana do zwracania ilorazu `_X` bitów ułamkowych podzielonych przez ułamkowe bity . `_Y`
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca resztę `_X` podzieloną przez `_Y`.
+Zwraca pozostałą `_X` część `_Y`podzieloną przez .
 
-## <a name="round"></a>Nit
+## <a name="round"></a><a name="round"></a>Okrągłe
 
 Zaokrągla _X do najbliższej liczby całkowitej
 
@@ -2183,14 +2183,14 @@ inline double round(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca najbliższą liczbę całkowitą z _X
+Zwraca najbliższą liczbę całkowitą _X
 
-## <a name="roundf"></a>roundf —
+## <a name="roundf"></a><a name="roundf"></a>zaokrąglony
 
 Zaokrągla _X do najbliższej liczby całkowitej
 
@@ -2200,16 +2200,16 @@ inline float roundf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca najbliższą liczbę całkowitą z _X
+Zwraca najbliższą liczbę całkowitą _X
 
-## <a name="rsqrt"></a>rsqrt —
+## <a name="rsqrt"></a><a name="rsqrt"></a>rsqrt ( rsqrt )
 
-Zwraca odwrotność korzenia kwadratowego argumentu
+Zwraca odwrotność pierwiastek kwadratowy argumentu
 
 ```cpp
 inline float rsqrt(float _X) restrict(amp);
@@ -2219,16 +2219,16 @@ inline double rsqrt(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwrotność korzenia kwadratowego argumentu
+Zwraca odwrotność pierwiastek kwadratowy argumentu
 
-## <a name="rsqrtf"></a>rsqrtf —
+## <a name="rsqrtf"></a><a name="rsqrtf"></a>rsqrtf
 
-Zwraca odwrotność korzenia kwadratowego argumentu
+Zwraca odwrotność pierwiastek kwadratowy argumentu
 
 ```cpp
 inline float rsqrtf(float _X) restrict(amp);
@@ -2236,16 +2236,16 @@ inline float rsqrtf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwrotność korzenia kwadratowego argumentu
+Zwraca odwrotność pierwiastek kwadratowy argumentu
 
-## <a name="scalb"></a>scalb —
+## <a name="scalb"></a><a name="scalb"></a>scalb
 
-Mnoży _X przez FLT_RADIX do _Y potęgi
+Mnoży _X przez FLT_RADIX do _Y mocy
 
 ```cpp
 inline float scalb(
@@ -2259,19 +2259,19 @@ inline double scalb(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-*_Y*<br/>
-Wartość zmiennoprzecinkowa
+*_y*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca \* _X (FLT_RADIX ^ _Y)
+Zwraca _X \* (FLT_RADIX ^ _Y)
 
-## <a name="scalbf"></a>scalbf —
+## <a name="scalbf"></a><a name="scalbf"></a>scalbf (scalbf)
 
-Mnoży _X przez FLT_RADIX do _Y potęgi
+Mnoży _X przez FLT_RADIX do _Y mocy
 
 ```cpp
 inline float scalbf(
@@ -2281,19 +2281,19 @@ inline float scalbf(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-*_Y*<br/>
-Wartość zmiennoprzecinkowa
+*_y*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca \* _X (FLT_RADIX ^ _Y)
+Zwraca _X \* (FLT_RADIX ^ _Y)
 
-## <a name="scalbn"></a>scalbn —
+## <a name="scalbn"></a><a name="scalbn"></a>scalbn
 
-Mnoży _X przez FLT_RADIX do _Y potęgi
+Mnoży _X przez FLT_RADIX do _Y mocy
 
 ```cpp
 inline float scalbn(
@@ -2307,19 +2307,19 @@ inline double scalbn(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-*_Y*<br/>
+*_y*<br/>
 Wartość całkowita
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca \* _X (FLT_RADIX ^ _Y)
+Zwraca _X \* (FLT_RADIX ^ _Y)
 
-## <a name="scalbnf"></a>scalbnf —
+## <a name="scalbnf"></a><a name="scalbnf"></a>scalbnf
 
-Mnoży _X przez FLT_RADIX do _Y potęgi
+Mnoży _X przez FLT_RADIX do _Y mocy
 
 ```cpp
 inline float scalbnf(
@@ -2329,17 +2329,17 @@ inline float scalbnf(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-*_Y*<br/>
+*_y*<br/>
 Wartość całkowita
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca \* _X (FLT_RADIX ^ _Y)
+Zwraca _X \* (FLT_RADIX ^ _Y)
 
-## <a name="signbit"></a>signbit —
+## <a name="signbit"></a><a name="signbit"></a>signbit
 
 Określa, czy znak _X jest ujemny
 
@@ -2351,14 +2351,14 @@ inline int signbit(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy znak _X jest ujemny
+Zwraca wartość niezerową, jeśli i tylko wtedy, gdy znak _X jest ujemny
 
-## <a name="signbitf"></a>signbitf —
+## <a name="signbitf"></a><a name="signbitf"></a>signbitf
 
 Określa, czy znak _X jest ujemny
 
@@ -2368,16 +2368,16 @@ inline int signbitf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy znak _X jest ujemny
+Zwraca wartość niezerową, jeśli i tylko wtedy, gdy znak _X jest ujemny
 
-## <a name="sin"></a>sinus
+## <a name="sin"></a><a name="sin"></a>Grzechu
 
-Oblicza wartość sinusa argumentu
+Oblicza wartość sinusoidy argumentu
 
 ```cpp
 inline float sin(float _X) restrict(amp);
@@ -2387,16 +2387,16 @@ inline double sin(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość sinusa argumentu
+Zwraca wartość sinusoidy argumentu
 
-## <a name="sinf"></a>SINF —
+## <a name="sinf"></a><a name="sinf"></a>Sinf
 
-Oblicza wartość sinusa argumentu
+Oblicza wartość sinusoidy argumentu
 
 ```cpp
 inline float sinf(float _X) restrict(amp);
@@ -2404,16 +2404,16 @@ inline float sinf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość sinusa argumentu
+Zwraca wartość sinusoidy argumentu
 
-## <a name="sincos"></a>SinCos —
+## <a name="sincos"></a><a name="sincos"></a>sincos (sincos)
 
-Oblicza sinus i wartość cosinusa _X
+Oblicza sinusoidę i cosine wartość _X
 
 ```cpp
 inline void sincos(
@@ -2429,18 +2429,18 @@ inline void sincos(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-*_S*<br/>
-Zwraca wartość sinusa _X
+*_s*<br/>
+Zwraca wartość sinusoidy _X
 
 *_C*<br/>
-Zwraca wartość cosinusa _X
+Zwraca wartość cosine _X
 
-## <a name="sincosf"></a>sincosf —
+## <a name="sincosf"></a><a name="sincosf"></a>sincosf ( sincosf )
 
-Oblicza sinus i wartość cosinusa _X
+Oblicza sinusoidę i cosine wartość _X
 
 ```cpp
 inline void sincosf(
@@ -2451,18 +2451,18 @@ inline void sincosf(
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-*_S*<br/>
-Zwraca wartość sinusa _X
+*_s*<br/>
+Zwraca wartość sinusoidy _X
 
 *_C*<br/>
-Zwraca wartość cosinusa _X
+Zwraca wartość cosine _X
 
-## <a name="sinh"></a>SINH
+## <a name="sinh"></a><a name="sinh"></a>Sinh
 
-Oblicza wartość sinus hiperboliczny argumentu
+Oblicza wartość sinusoidy hiperbolicznej argumentu
 
 ```cpp
 inline float sinh(float _X) restrict(amp);
@@ -2472,16 +2472,16 @@ inline double sinh(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość sinus hiperboliczny argumentu
+Zwraca wartość sinusoidy hiperbolicznej argumentu
 
-## <a name="sinhf"></a>sinhf —
+## <a name="sinhf"></a><a name="sinhf"></a>sinhf
 
-Oblicza wartość sinus hiperboliczny argumentu
+Oblicza wartość sinusoidy hiperbolicznej argumentu
 
 ```cpp
 inline float sinhf(float _X) restrict(amp);
@@ -2489,16 +2489,16 @@ inline float sinhf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość sinus hiperboliczny argumentu
+Zwraca wartość sinusoidy hiperbolicznej argumentu
 
-## <a name="sinpi"></a>sinpi —
+## <a name="sinpi"></a><a name="sinpi"></a>sinpi (sinpi)
 
-Oblicza wartość sinusa liczby pi \* _X
+Oblicza wartość sinusoidy pi \* _X
 
 ```cpp
 inline float sinpi(float _X) restrict(amp);
@@ -2508,16 +2508,16 @@ inline double sinpi(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość sinusa liczby pi \* _X
+Zwraca wartość sinusoidy pi \* _X
 
-## <a name="sinpif"></a>sinpif —
+## <a name="sinpif"></a><a name="sinpif"></a>sinpif (sinpif)
 
-Oblicza wartość sinusa liczby pi \* _X
+Oblicza wartość sinusoidy pi \* _X
 
 ```cpp
 inline float sinpif(float _X) restrict(amp);
@@ -2525,16 +2525,16 @@ inline float sinpif(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość sinusa liczby pi \* _X
+Zwraca wartość sinusoidy pi \* _X
 
-## <a name="sqrt"></a>sqrt
+## <a name="sqrt"></a><a name="sqrt"></a>Sqrt
 
-Oblicza korzeń Squre argumentu
+Oblicza pierwiastek squre argumentu
 
 ```cpp
 inline float sqrt(float _X) restrict(amp);
@@ -2544,16 +2544,16 @@ inline double sqrt(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca korzeń Squre argumentu
+Zwraca katalog główny squre argumentu
 
-## <a name="sqrtf"></a>sqrtf —
+## <a name="sqrtf"></a><a name="sqrtf"></a>sqrtf (
 
-Oblicza korzeń Squre argumentu
+Oblicza pierwiastek squre argumentu
 
 ```cpp
 inline float sqrtf(float _X) restrict(amp);
@@ -2561,16 +2561,16 @@ inline float sqrtf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca korzeń Squre argumentu
+Zwraca katalog główny squre argumentu
 
-## <a name="tan"></a>Tan
+## <a name="tan"></a><a name="tan"></a>Tan
 
-Oblicza wartość tangensa argumentu
+Oblicza wartość styczną argumentu
 
 ```cpp
 inline float tan(float _X) restrict(amp);
@@ -2580,16 +2580,16 @@ inline double tan(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość tangensa argumentu
+Zwraca wartość styczną argumentu
 
-## <a name="tanf"></a>TANF —
+## <a name="tanf"></a><a name="tanf"></a>tanf ( tanf )
 
-Oblicza wartość tangensa argumentu
+Oblicza wartość styczną argumentu
 
 ```cpp
 inline float tanf(float _X) restrict(amp);
@@ -2597,16 +2597,16 @@ inline float tanf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość tangensa argumentu
+Zwraca wartość styczną argumentu
 
-## <a name="tanh"></a>TANH —
+## <a name="tanh"></a><a name="tanh"></a>Tanh
 
-Oblicza wartość tangensa hiperbolicznego argumentu
+Oblicza hiperboliczną wartość styczną argumentu
 
 ```cpp
 inline float tanh(float _X) restrict(amp);
@@ -2616,16 +2616,16 @@ inline double tanh(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość tangensa hiperbolicznego argumentu
+Zwraca hiperboliczną wartość styczną argumentu
 
-## <a name="tanhf"></a>tanhf —
+## <a name="tanhf"></a><a name="tanhf"></a>tanhf ( tanhf )
 
-Oblicza wartość tangensa hiperbolicznego argumentu
+Oblicza hiperboliczną wartość styczną argumentu
 
 ```cpp
 inline float tanhf(float _X) restrict(amp);
@@ -2633,16 +2633,16 @@ inline float tanhf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość tangensa hiperbolicznego argumentu
+Zwraca hiperboliczną wartość styczną argumentu
 
-## <a name="tanpi"></a>tanpi —
+## <a name="tanpi"></a><a name="tanpi"></a>tanpi ( tanpi )
 
-Oblicza wartość tangens liczby pi \* _X
+Oblicza wartość styczną \* pi _X
 
 ```cpp
 inline float tanpi(float _X) restrict(amp);
@@ -2652,16 +2652,16 @@ inline double tanpi(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość tangens liczby pi \* _X
+Zwraca wartość styczną \* pi _X
 
-## <a name="tanpif"></a>tanpif —
+## <a name="tanpif"></a><a name="tanpif"></a>tanpif ( tanpif )
 
-Oblicza wartość tangens liczby pi \* _X
+Oblicza wartość styczną \* pi _X
 
 ```cpp
 inline float tanpif(float _X) restrict(amp);
@@ -2669,16 +2669,16 @@ inline float tanpif(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość tangens liczby pi \* _X
+Zwraca wartość styczną \* pi _X
 
-## <a name="tgamma"></a>tgamma —
+## <a name="tgamma"></a><a name="tgamma"></a>tgamma ( tgamma )
 
-Oblicza funkcję gamma elementu _X
+Oblicza funkcję gamma _X
 
 ```cpp
 inline float tgamma(float _X) restrict(amp);
@@ -2688,16 +2688,16 @@ inline double tgamma(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wynik funkcji gamma elementu _X
+Zwraca wynik funkcji gamma _X
 
-## <a name="tgammaf"></a>tgammaf —
+## <a name="tgammaf"></a><a name="tgammaf"></a>tgammaf ( tgammaf )
 
-Oblicza funkcję gamma elementu _X
+Oblicza funkcję gamma _X
 
 ```cpp
 inline float tgammaf(float _X) restrict(amp);
@@ -2705,14 +2705,14 @@ inline float tgammaf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wynik funkcji gamma elementu _X
+Zwraca wynik funkcji gamma _X
 
-## <a name="trunc"></a>TRUNC —
+## <a name="trunc"></a><a name="trunc"></a>Trunc
 
 Obcina argument do składnika liczby całkowitej
 
@@ -2724,14 +2724,14 @@ inline double trunc(double _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca składnik całkowity argumentu
+Zwraca składnik liczby całkowitej argumentu
 
-## <a name="truncf"></a>truncf —
+## <a name="truncf"></a><a name="truncf"></a>obcinanie
 
 Obcina argument do składnika liczby całkowitej
 
@@ -2741,13 +2741,13 @@ inline float truncf(float _X) restrict(amp);
 
 ### <a name="parameters"></a>Parametry
 
-*_X*<br/>
-Wartość zmiennoprzecinkowa
+*_x*<br/>
+Wartość zmiennoprzecinowa
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca składnik całkowity argumentu
+Zwraca składnik liczby całkowitej argumentu
 
 ## <a name="see-also"></a>Zobacz też
 
-[Concurrency::precise_math, przestrzeń nazw](concurrency-precise-math-namespace.md)
+[Współbieżność::prepreise_math Obszar nazw](concurrency-precise-math-namespace.md)

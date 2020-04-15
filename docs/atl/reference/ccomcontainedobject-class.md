@@ -1,5 +1,5 @@
 ---
-title: Klasa CComContainedObject
+title: CComContainedObject, klasa
 ms.date: 11/04/2016
 f1_keywords:
 - CComContainedObject
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComContainedObject class
 ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
-ms.openlocfilehash: c5e2fa64cc0938e632a37eac7dd1d6e9111c3d98
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 72ba27c3be6576621995ffb8c98995c6abc9324c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497320"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320794"
 ---
-# <a name="ccomcontainedobject-class"></a>Klasa CComContainedObject
+# <a name="ccomcontainedobject-class"></a>CComContainedObject, klasa
 
-Ta klasa implementuje [interfejs IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) przez delegowanie do obiektu `IUnknown`właściciela.
+Ta klasa implementuje [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) przez delegowanie `IUnknown`do obiektu właściciela .
 
 > [!IMPORTANT]
->  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,8 +37,8 @@ class CComContainedObject : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*Opiera*<br/>
-Klasa, która pochodzi od [klasy CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).
+*Podstawowej*<br/>
+Twoja klasa, pochodząca z [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -46,21 +46,21 @@ Klasa, która pochodzi od [klasy CComObjectRoot](../../atl/reference/ccomobjectr
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Konstruktor. Inicjuje wskaźnik elementu członkowskiego do obiektu `IUnknown`właściciela.|
-|[CComContainedObject:: ~ CComContainedObject](#dtor)|Destruktor.|
+|[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Konstruktor. Inicjuje wskaźnik elementu członkowskiego do `IUnknown`obiektu właściciela .|
+|[CComContainedObject::~CComContainedObject](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComContainedObject:: AddRef](#addref)|Zwiększa liczbę odwołań do obiektu właściciela.|
-|[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|Pobiera obiekt `IUnknown`Owner.|
-|[CComContainedObject:: QueryInterface](#queryinterface)|Pobiera wskaźnik do interfejsu żądanego w obiekcie Owner.|
-|[CComContainedObject:: Release](#release)|Zmniejsza liczbę odwołań do obiektu właściciela.|
+|[CComContainedObject::AddRef](#addref)|Zwiększa liczbę odwołań na obiekt właściciela.|
+|[CComContainedObject::GetControllingUnknown CComContainedObject::GetControllingUnknown CComContainedObject::GetControllingUnknown CCom](#getcontrollingunknown)|Pobiera obiekt właściciela `IUnknown`.|
+|[CComContainedObject::QueryInterface](#queryinterface)|Pobiera wskaźnik do interfejsu żądanego w obiekcie właściciela.|
+|[CComContainedObject::Release CComContainedObject::Release CComContainedObject::Release CCom](#release)|Zmniejsza liczbę odwołań dla obiektu właściciela.|
 
 ## <a name="remarks"></a>Uwagi
 
-Użycie `CComContainedObject` ATL w klasach [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md)i [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject`implementuje [interfejs IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) przez delegowanie do obiektu `IUnknown`właściciela. (Właściciel jest obiektem zewnętrznym agregacji lub obiektem, dla którego tworzony jest interfejs odrywający). `CComContainedObject` wywołania`CComObjectRootEx`, ,i`OuterRelease`, wszystkie Odziedziczone przez .`Base` `OuterQueryInterface` `OuterAddRef`
+ATL używa `CComContainedObject` w klasach [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md)i [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject`implementuje [IUnknown,](/windows/win32/api/unknwn/nn-unknwn-iunknown) delegując do `IUnknown`obiektu właściciela . (Właściciel jest zewnętrznym obiektem agregacji lub obiektem, dla którego tworzony jest interfejs odrywany). `CComContainedObject` połączenia `CComObjectRootEx`, `OuterQueryInterface` `OuterAddRef`i `OuterRelease`, wszystkie odziedziczone przez `Base`.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -70,11 +70,11 @@ Użycie `CComContainedObject` ATL w klasach [CComAggObject](../../atl/reference/
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcom. h
+**Nagłówek:** atlcom.h
 
-##  <a name="addref"></a>CComContainedObject:: AddRef
+## <a name="ccomcontainedobjectaddref"></a><a name="addref"></a>CComContainedObject::AddRef
 
-Zwiększa liczbę odwołań do obiektu właściciela.
+Zwiększa liczbę odwołań na obiekt właściciela.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -82,9 +82,9 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość, która może być przydatna w przypadku diagnostyki lub testowania.
+Wartość, która może być przydatna do diagnostyki lub testowania.
 
-##  <a name="ccomcontainedobject"></a>CComContainedObject::CComContainedObject
+## <a name="ccomcontainedobjectccomcontainedobject"></a><a name="ccomcontainedobject"></a>CComContainedObject::CComContainedObject
 
 Konstruktor.
 
@@ -94,14 +94,14 @@ CComContainedObject(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*wa*<br/>
-podczas Obiekt `IUnknown`Owner.
+*Pv*<br/>
+[w] Obiekt właściciela `IUnknown`.
 
 ### <a name="remarks"></a>Uwagi
 
-Ustawia wskaźnik `Base` elementu członkowskiego (Dziedziczony przez klasę) na *WB.* `m_pOuterUnknown`
+Ustawia `m_pOuterUnknown` wskaźnik elementu członkowskiego (dziedziczone przez `Base` klasę) do *pv*.
 
-##  <a name="dtor"></a>CComContainedObject:: ~ CComContainedObject
+## <a name="ccomcontainedobjectccomcontainedobject"></a><a name="dtor"></a>CComContainedObject::~CComContainedObject
 
 Destruktor.
 
@@ -111,11 +111,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia wszystkie przydzieloną zasoby.
+Zwalnia wszystkie przydzielone zasoby.
 
-##  <a name="getcontrollingunknown"></a>CComContainedObject::GetControllingUnknown
+## <a name="ccomcontainedobjectgetcontrollingunknown"></a><a name="getcontrollingunknown"></a>CComContainedObject::GetControllingUnknown CComContainedObject::GetControllingUnknown CComContainedObject::GetControllingUnknown CCom
 
-Zwraca wskaźnik `IUnknown`elementu członkowskiego (Dziedziczony przez klasę bazową), który zawiera obiekt Owner. `m_pOuterUnknown`
+Zwraca `m_pOuterUnknown` wskaźnik elementu członkowskiego (dziedziczony przez *klasę Podstawową),* który zawiera obiekt właściciela `IUnknown`.
 
 ```
 IUnknown* GetControllingUnknown();
@@ -123,15 +123,15 @@ IUnknown* GetControllingUnknown();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt `IUnknown`Owner.
+Obiekt właściciela `IUnknown`.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda może być wirtualna, `Base` Jeśli zadeklaruje makro [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) .
+Ta metoda może `Base` być wirtualna, jeśli zadeklarowane [makra DECLARE_GET_CONTROLLING_UNKNOWN.](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown)
 
-##  <a name="queryinterface"></a>CComContainedObject:: QueryInterface
+## <a name="ccomcontainedobjectqueryinterface"></a><a name="queryinterface"></a>CComContainedObject::QueryInterface
 
-Pobiera wskaźnik do interfejsu żądanego w obiekcie Owner.
+Pobiera wskaźnik do interfejsu żądanego w obiekcie właściciela.
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
@@ -141,22 +141,22 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*IID*<br/>
-podczas Identyfikator żądanego interfejsu.
+*Iid*<br/>
+[w] Identyfikator żądanego interfejsu.
 
-*ppvObject*<br/>
-określoną Wskaźnik do wskaźnika interfejsu identyfikowanego przez *Identyfikator IID*. Jeśli obiekt nie obsługuje tego interfejsu, *ppvObject* ma wartość null.
+*ppvObiekt*<br/>
+[na zewnątrz] Wskaźnik do wskaźnika interfejsu identyfikowanego przez *iid*. Jeśli obiekt nie obsługuje tego interfejsu, *ppvObject* jest ustawiona na wartość NULL.
 
-*miesięcznie*<br/>
-określoną Wskaźnik do wskaźnika interfejsu identyfikowanego przez typ `Q`. Jeśli obiekt nie obsługuje tego interfejsu, ma ustawioną wartość NULL.
+*S*<br/>
+[na zewnątrz] Wskaźnik do wskaźnika interfejsu identyfikowany przez typ `Q`. Jeśli obiekt nie obsługuje tego interfejsu, *pp* jest ustawiona na WARTOŚĆ NULL.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Standardowa wartość HRESULT.
 
-##  <a name="release"></a>CComContainedObject:: Release
+## <a name="ccomcontainedobjectrelease"></a><a name="release"></a>CComContainedObject::Release CComContainedObject::Release CComContainedObject::Release CCom
 
-Zmniejsza liczbę odwołań do obiektu właściciela.
+Zmniejsza liczbę odwołań dla obiektu właściciela.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -164,8 +164,8 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-W kompilacjach `Release` debugowania zwraca wartość, która może być przydatna w przypadku diagnostyki lub testowania. W kompilacjach `Release` niedebugowanych zawsze zwraca wartość 0.
+W kompilacjach debugowania zwraca wartość, `Release` która może być przydatna do diagnostyki lub testowania. W kompilacjach innych niż `Release` debugowanie zawsze zwraca wartość 0.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przegląd klas](../../atl/atl-class-overview.md)

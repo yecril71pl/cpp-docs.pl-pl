@@ -1,6 +1,6 @@
 ---
-title: Klasa TraceInfo
-description: Odwołanie C++ do klasy TraceInfo zestawu SDK usługi Build Insights.
+title: TraceInfo, klasa
+description: Odwołanie do klasy SDK TraceInfo kompilacji języka C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 5cf32c8dc954a803a11888231d35b1050ac81cc3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 75d53937e3999f5692dee0ecf419e0ce5f49a274
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332944"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324175"
 ---
-# <a name="traceinfo-class"></a>Klasa TraceInfo
+# <a name="traceinfo-class"></a>TraceInfo, klasa
 
 ::: moniker range="<=vs-2015"
 
-Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019.
+C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Klasa `TraceInfo` jest używana w celu uzyskania dostępu do przydatnych właściwości dotyczących analizowanego lub zarejestrowanego śledzenia.
+Klasa `TraceInfo` jest używana do uzyskiwania dostępu do przydatnych właściwości śledzenia analizowane lub ponownie rejestrowane.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,25 +47,25 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Odejmij `StartTimestamp` od `StopTimestamp`, aby uzyskać liczbę taktów, które upłynęły podczas całego śledzenia. Użyj `TickFrequency`, aby przekonwertować wartość wyniku na jednostkę czasu. Aby zapoznać się z przykładem konwertowania taktów na czas, zobacz [EVENT_DATA](../c-event-data-types/event-data-struct.md).
+Odejmij `StartTimestamp` `StopTimestamp` od uzyskania liczby kleszczy, które upłynęło podczas całego śledzenia. Służy `TickFrequency` do konwertowania wartości wynikowej na jednostkę czasu. Na przykład konwersji znaczników na czas, zobacz [EVENT_DATA](../c-event-data-types/event-data-struct.md).
 
-Jeśli nie chcesz samodzielnie konwertować taktów, Klasa `TraceInfo` udostępnia funkcję członkowską, która zwraca czas trwania śledzenia w nanosekundach. Użyj standardowej C++ biblioteki `chrono`, aby przekonwertować tę wartość na inne jednostki czasu.
+Jeśli nie chcesz konwertować znaczników `TraceInfo` samodzielnie, klasa zapewnia funkcję elementu członkowskiego, która zwraca czas trwania śledzenia w nanosekundach. Użyj standardowej biblioteki C++, `chrono` aby przekonwertować tę wartość na inne jednostki czasu.
 
 ## <a name="members"></a>Elementy członkowskie
 
 ### <a name="constructors"></a>Konstruktorów
 
-[TraceInfo](#trace-info)
+[Traceinfo](#trace-info)
 
 ### <a name="functions"></a>Funkcje
 
-[Duration](#duration)
+[Czas trwania](#duration)
 [LogicalProcessorCount](#logical-processor-count)
 [StartTimestamp](#start-timestamp)
 [StopTimestamp](#stop-timestamp)
 [TickFrequency](#tick-frequency)
 
-## <a name="duration"></a>Trwania
+## <a name="duration"></a><a name="duration"></a>Długość
 
 ```cpp
 std::chrono::nanoseconds Duration() const;
@@ -75,7 +75,7 @@ std::chrono::nanoseconds Duration() const;
 
 Czas trwania działania w nanosekundach.
 
-## <a name="logical-processor-count"></a>LogicalProcessorCount
+## <a name="logicalprocessorcount"></a><a name="logical-processor-count"></a>Licznik logicznyprocesorów
 
 ```cpp
 const unsigned long& LogicalProcessorCount() const;
@@ -83,9 +83,9 @@ const unsigned long& LogicalProcessorCount() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba procesorów logicznych na komputerze, na którym zebrano dane śledzenia.
+Liczba procesorów logicznych na komputerze, na którym zebrano ślad.
 
-## <a name="start-timestamp"></a>StartTimestamp
+## <a name="starttimestamp"></a><a name="start-timestamp"></a>Sygnatura starttimestamp
 
 ```cpp
 const long long& StartTimestamp() const;
@@ -93,9 +93,9 @@ const long long& StartTimestamp() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość taktu przechwycona w momencie rozpoczęcia śledzenia.
+Wartość znacznika przechwycona w momencie rozpoczęcia śledzenia.
 
-## <a name="stop-timestamp"></a>StopTimestamp
+## <a name="stoptimestamp"></a><a name="stop-timestamp"></a>StopTimestamp (StopTimestamp)
 
 ```cpp
 const long long& StopTimestamp() const;
@@ -103,9 +103,9 @@ const long long& StopTimestamp() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość taktu przechwycona w momencie zatrzymania śledzenia.
+Wartość znacznika przechwycona w momencie zatrzymania śledzenia.
 
-## <a name="tick-frequency"></a>TickFrequency
+## <a name="tickfrequency"></a><a name="tick-frequency"></a>Częstotliwość ticków
 
 ```cpp
 const long long& TickFrequency() const;
@@ -113,9 +113,9 @@ const long long& TickFrequency() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba taktów na sekundę do użycia podczas oceniania czasu trwania mierzoną w taktach.
+Liczba znaczników na sekundę do użycia podczas oceny czasu trwania mierzonego w kleszczach.
 
-## <a name="trace-info"></a>TraceInfo
+## <a name="traceinfo"></a><a name="trace-info"></a>Traceinfo
 
 ```cpp
 TraceInfo(const TRACE_INFO_DATA& data);
@@ -123,7 +123,7 @@ TraceInfo(const TRACE_INFO_DATA& data);
 
 ### <a name="parameters"></a>Parametry
 
-\ *danych*
+*Danych*\
 Dane zawierające informacje o śledzeniu.
 
 ::: moniker-end

@@ -1,5 +1,5 @@
 ---
-title: Klasa CPoint
+title: CPoint, klasa
 ms.date: 11/04/2016
 f1_keywords:
 - CPoint
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: b7c13ef8b9656c5c2fa6a90fefca0d9babbe1c84
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a806cfa18119df9beef3e070a65bc238a12580a9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491226"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317721"
 ---
-# <a name="cpoint-class"></a>Klasa CPoint
+# <a name="cpoint-class"></a>CPoint, klasa
 
-Podobne do struktury systemu `POINT` Windows.
+Podobnie jak `POINT` w strukturze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,36 +34,36 @@ class CPoint : public tagPOINT
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CPoint:: CPoint](#cpoint)|Konstruuje `CPoint`a.|
+|[CPoint::CPoint](#cpoint)|Konstruuje `CPoint`plik .|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CPoint::Offset](#offset)|Dodaje wartości do `x` elementów członkowskich `y` `CPoint`i.|
+|[CPoint::Przesunięcie](#offset)|Dodaje wartości `x` do `y` i `CPoint`członków .|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CPoint:: operator-](#operator_-)|Zwraca różnicę `CPoint` między i rozmiarem lub negacją punktu albo różnicą rozmiaru między dwoma punktami lub przesunięciem o wartości ujemnej.|
-|[CPoint:: operator! =](#operator_neq)|Sprawdza pod kątem nierówności między dwoma punktami.|
-|[CPoint:: operator +](#operator_add)|Zwraca sumę `CPoint` a i rozmiar lub punkt `CRect` lub przesunięcie o rozmiarze.|
-|[CPoint:: operator + =](#operator_add_eq)|Przesunięcia `CPoint` przez dodanie rozmiaru lub punktu.|
-|[CPoint:: operator-=](#operator_-_eq)|Przesunięcia `CPoint` przez odjęcie rozmiaru lub punktu.|
-|[CPoint:: operator = =](#operator_eq_eq)|Sprawdza równość między dwoma punktami.|
+|[CPoint::operator -](#operator_-)|Zwraca różnicę a `CPoint` i rozmiar lub negację punktu lub różnicę wielkości między dwoma punktami lub przesunięcie o rozmiar ujemny.|
+|[CPoint::operator !=](#operator_neq)|Sprawdza nierówność między dwoma punktami.|
+|[CPoint::operator +](#operator_add)|Zwraca sumę `CPoint` rozmiaru lub punktu lub `CRect` odsunięcia o rozmiar.|
+|[CPoint::operator +=](#operator_add_eq)|Odsunięcia `CPoint` przez dodanie rozmiaru lub punktu.|
+|[CPoint::operator -=](#operator_-_eq)|Odsunięcia `CPoint` przez odjęcie rozmiaru lub punktu.|
+|[CPoint::operator ==](#operator_eq_eq)|Sprawdza równość między dwoma punktami.|
 
 ## <a name="remarks"></a>Uwagi
 
-Zawiera również funkcje członkowskie do manipulowania `CPoint` i struktur [punktów](/windows/win32/api/windef/ns-windef-point) .
+Zawiera również funkcje elementów członkowskich do manipulowania `CPoint` i [point](/windows/win32/api/windef/ns-windef-point) struktur.
 
-Obiekt może być używany wszędzie tam, `POINT` gdzie jest używana struktura. `CPoint` Operatory tej klasy, które współdziałają z "rozmiarem", akceptują [CSize](../../atl-mfc-shared/reference/csize-class.md) obiekty lub struktury [rozmiaru](/windows/win32/api/windef/ns-windef-size) , ponieważ te dwa są zamienne.
-
-> [!NOTE]
->  Ta klasa jest pochodną `tagPOINT` struktury. (Nazwa `tagPOINT` jest mniej często używanej nazwy `POINT` dla struktury). Oznacza to `POINT` , że składowe danych `x` struktury i `y`, są dostępnymi członkami `CPoint`danych.
+Obiekt `CPoint` może być używany `POINT` wszędzie tam, gdzie używana jest struktura. Operatory tej klasy, które współdziałają z "size" zaakceptować [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektów lub [size](/windows/win32/api/windef/ns-windef-size) struktur, ponieważ dwa są wymienne.
 
 > [!NOTE]
->  Aby uzyskać więcej informacji na temat udostępnionych klas narzędzi `CPoint`(takich jak), zobacz [klasy udostępnione](../../atl-mfc-shared/atl-mfc-shared-classes.md).
+> Ta klasa jest pochodną `tagPOINT` struktury. (Nazwa `tagPOINT` jest rzadziej używaną nazwą `POINT` struktury). `POINT` Oznacza to, `x` że elementy członkowskie `y`danych struktury i `CPoint`, są dostępne elementy członkowskie danych .
+
+> [!NOTE]
+> Aby uzyskać więcej informacji na `CPoint`temat udostępnionych klas narzędziowych (np. [Shared Classes](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -73,9 +73,9 @@ Obiekt może być używany wszędzie tam, `POINT` gdzie jest używana struktura.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atltypes. h
+**Nagłówek:** atltypes.h
 
-##  <a name="cpoint"></a>CPoint:: CPoint
+## <a name="cpointcpoint"></a><a name="cpoint"></a>CPoint::CPoint
 
 Konstruuje `CPoint` obiekt.
 
@@ -90,23 +90,23 @@ CPoint(LPARAM dwPoint) throw();
 ### <a name="parameters"></a>Parametry
 
 *initX*<br/>
-Określa wartość `x` `CPoint`składowej.
+Określa wartość `x` elementu członkowskiego `CPoint`.
 
-*Inicjowanie*<br/>
-Określa wartość `y` `CPoint`składowej.
+*initY*<br/>
+Określa wartość `y` elementu członkowskiego `CPoint`.
 
-*initPt*<br/>
-Struktura [punktu](/windows/win32/api/windef/ns-windef-point) lub `CPoint` , która określa wartości używane do zainicjowania `CPoint`.
+*initpt (initpt)*<br/>
+[point](/windows/win32/api/windef/ns-windef-point) lub `CPoint` określający wartości używane do `CPoint`inicjowania .
 
-*initSize*<br/>
-Struktura [rozmiaru](/windows/win32/api/windef/ns-windef-size) lub [CSize](../../atl-mfc-shared/reference/csize-class.md) , która określa wartości używane do zainicjowania `CPoint`.
+*initSize (rozmiar)*<br/>
+[Struktura SIZE](/windows/win32/api/windef/ns-windef-size) lub [CSize](../../atl-mfc-shared/reference/csize-class.md) określająca wartości `CPoint`używane do inicjowania .
 
-*dwPoint*<br/>
-Ustawia element członkowski `y` dla wyrazu *dwPoint* i elementu członkowskiego na słowo dwPoint o wysokiej kolejności. `x`
+*dwPoint (punkt z punktu widzenia dw*<br/>
+Ustawia `x` członka na słowo niskiej kolejności *dwPoint* i `y` członka do wysokiej kolejności słowo *dwPoint*.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli nie podano argumentów, `x` a `y` elementy członkowskie są ustawione na 0.
+Jeśli nie podano `x` żadnych `y` argumentów, a członkowie są ustawione na 0.
 
 ### <a name="example"></a>Przykład
 
@@ -135,9 +135,9 @@ CPoint ptFromDouble(dwSize);
 ASSERT(ptFromDouble == ptMFCHere);
 ```
 
-##  <a name="offset"></a>CPoint:: offset
+## <a name="cpointoffset"></a><a name="offset"></a>CPoint::Przesunięcie
 
-Dodaje wartości do `x` elementów członkowskich `y` `CPoint`i.
+Dodaje wartości `x` do `y` i `CPoint`członków .
 
 ```
 void Offset(int xOffset, int yOffset) throw();
@@ -147,23 +147,23 @@ void Offset(SIZE size) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*xOffset*<br/>
-Określa kwotę do przesunięcia `x` elementu członkowskiego. `CPoint`
+*xOffset (Zestawoffset)*<br/>
+Określa kwotę do `x` przesunięcia `CPoint`elementu członkowskiego .
 
-*yOffset*<br/>
-Określa kwotę do przesunięcia `y` elementu członkowskiego. `CPoint`
+*yOffset (zestaw)*<br/>
+Określa kwotę do `y` przesunięcia `CPoint`elementu członkowskiego .
 
-*moment*<br/>
-Określa liczbę ( [punkt](/windows/win32/api/windef/ns-windef-point) lub `CPoint` `CPoint`) do przesunięcia.
+*Punkt*<br/>
+Określa kwotę ( [POINT](/windows/win32/api/windef/ns-windef-point) PUNKT `CPoint`lub ) `CPoint`do przesunięcia .
 
-*zmienia*<br/>
-Określa ilość ( [size](/windows/win32/api/windef/ns-windef-size) lub [CSize](../../atl-mfc-shared/reference/csize-class.md)) `CPoint`do przesunięcia.
+*Rozmiar*<br/>
+Określa kwotę [(SIZE](/windows/win32/api/windef/ns-windef-size) lub [CSize),](../../atl-mfc-shared/reference/csize-class.md) `CPoint`aby zrównoważyć .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#28](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_1.cpp)]
 
-##  <a name="operator_eq_eq"></a>CPoint:: operator = =
+## <a name="cpointoperator-"></a><a name="operator_eq_eq"></a>CPoint::operator ==
 
 Sprawdza równość między dwoma punktami.
 
@@ -173,8 +173,8 @@ BOOL operator==(POINT point) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*moment*<br/>
-Zawiera strukturę [](/windows/win32/api/windef/ns-windef-point) lub `CPoint` obiekt punktu.
+*Punkt*<br/>
+Zawiera strukturę `CPoint` lub obiekt [POINT.](/windows/win32/api/windef/ns-windef-point)
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -184,9 +184,9 @@ Niezerowe, jeśli punkty są równe; w przeciwnym razie 0.
 
 [!code-cpp[NVC_ATLMFC_Utilities#29](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_2.cpp)]
 
-##  <a name="operator_neq"></a>CPoint:: operator! =
+## <a name="cpointoperator-"></a><a name="operator_neq"></a>CPoint::operator !=
 
-Sprawdza pod kątem nierówności między dwoma punktami.
+Sprawdza nierówność między dwoma punktami.
 
 ```
 BOOL operator!=(POINT point) const throw();
@@ -194,20 +194,20 @@ BOOL operator!=(POINT point) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*moment*<br/>
-Zawiera strukturę [](/windows/win32/api/windef/ns-windef-point) lub `CPoint` obiekt punktu.
+*Punkt*<br/>
+Zawiera strukturę `CPoint` lub obiekt [POINT.](/windows/win32/api/windef/ns-windef-point)
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Różne od zera, jeśli punkty nie są równe; w przeciwnym razie 0.
+Nonzero, jeśli punkty nie są równe; w przeciwnym razie 0.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#30](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_3.cpp)]
 
-##  <a name="operator_add_eq"></a>CPoint:: operator + =
+## <a name="cpointoperator-"></a><a name="operator_add_eq"></a>CPoint::operator +=
 
-Pierwsze Przeciążenie dodaje rozmiar do `CPoint`.
+Pierwsze przeciążenie dodaje rozmiar `CPoint`do .
 
 ```
 void operator+=(SIZE size) throw();
@@ -216,27 +216,27 @@ void operator+=(POINT point) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zmienia*<br/>
-Zawiera strukturę [rozmiaru](/windows/win32/api/windef/ns-windef-size) lub obiekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+*Rozmiar*<br/>
+Zawiera strukturę [SIZE](/windows/win32/api/windef/ns-windef-size) lub [obiekt CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
-*moment*<br/>
-Zawiera strukturę [punktu](/windows/win32/api/windef/ns-windef-point) lub obiekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+*Punkt*<br/>
+Zawiera strukturę [POINT](/windows/win32/api/windef/ns-windef-point) lub obiekt [CPoint.](../../atl-mfc-shared/reference/cpoint-class.md)
 
 ### <a name="remarks"></a>Uwagi
 
-Drugie Przeciążenie dodaje punkt do `CPoint`.
+Drugie przeciążenie dodaje punkt `CPoint`do .
 
-W obu przypadkach Dodawanie `x` jest wykonywane przez dodanie (lub `cx`) składowej operandu po prawej stronie `CPoint` do `x` elementu członkowskiego i dodanie `y` (lub `cy`) składowej operandu z prawej strony do `y` członek .`CPoint`
+W obu przypadkach dodawanie odbywa `x` się `cx`przez dodanie (lub) członka prawej `x` opery `CPoint` do `y` członka `cy`członka (lub) członka prawej opery `y` do `CPoint`członka .
 
-Na przykład dodanie `CPoint(5, -7)` do zmiennej, która zawiera `CPoint(30, 40)` zmiany zmiennej do `CPoint(35, 33)`.
+Na przykład `CPoint(5, -7)` dodanie do zmiennej, która zawiera `CPoint(30, 40)` zmienia zmienną na `CPoint(35, 33)`.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#31](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_4.cpp)]
 
-##  <a name="operator_-_eq"></a>CPoint:: operator-=
+## <a name="cpointoperator--"></a><a name="operator_-_eq"></a>CPoint::operator -=
 
-Pierwsze Przeciążenie odejmuje rozmiar od `CPoint`.
+Pierwsze przeciążenie odejmuje `CPoint`rozmiar od pliku .
 
 ```
 void operator-=(SIZE size) throw();
@@ -245,27 +245,27 @@ void operator-=(POINT point) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zmienia*<br/>
-Zawiera strukturę [rozmiaru](/windows/win32/api/windef/ns-windef-size) lub obiekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+*Rozmiar*<br/>
+Zawiera strukturę [SIZE](/windows/win32/api/windef/ns-windef-size) lub [obiekt CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
-*moment*<br/>
-Zawiera strukturę [punktu](/windows/win32/api/windef/ns-windef-point) lub obiekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+*Punkt*<br/>
+Zawiera strukturę [POINT](/windows/win32/api/windef/ns-windef-point) lub obiekt [CPoint.](../../atl-mfc-shared/reference/cpoint-class.md)
 
 ### <a name="remarks"></a>Uwagi
 
-Drugie Przeciążenie odejmuje punkt od `CPoint`.
+Drugie przeciążenie odejmuje `CPoint`punkt od pliku .
 
-W `x` obu przypadkach odejmowanie jest wykonywane przez odjęcie (lub `cx`) składowej operandu po prawej stronie `CPoint` od `x` elementu członkowskiego i odjęcie `y` elementu (lub `cy`) z prawej strony operand z `y` elementu członkowskiego `CPoint`.
+W obu przypadkach odejmowanie odbywa się `x` poprzez `cx`odjęcie (lub) członka `x` prawej `CPoint` opery od `y` członka `cy`członka (lub) członka prawej opery `y` od `CPoint`członka .
 
-Na przykład, odejmowanie `CPoint(5, -7)` od zmiennej, która zawiera `CPoint(30, 40)` zmiany zmiennej do `CPoint(25, 47)`.
+Na przykład odejmianie `CPoint(5, -7)` od `CPoint(30, 40)` zmiennej, `CPoint(25, 47)`która zawiera zmienia zmienną na .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#32](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_5.cpp)]
 
-##  <a name="operator_add"></a>CPoint:: operator +
+## <a name="cpointoperator-"></a><a name="operator_add"></a>CPoint::operator +
 
-Użyj tego operatora, aby `CPoint` przesunięciu `CPoint` `CSize` obiektem`CRect` lub, lub przesunięciu a przez. `CPoint`
+Ten operator służy `CPoint` do `CPoint` `CSize` równu przez lub `CRect` obiektu, lub do odsunięcia a przez `CPoint`.
 
 ```
 CPoint operator+(SIZE size) const throw();
@@ -275,32 +275,32 @@ CRect operator+(const RECT* lpRect) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*zmienia*<br/>
-Zawiera strukturę [rozmiaru](/windows/win32/api/windef/ns-windef-size) lub obiekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+*Rozmiar*<br/>
+Zawiera strukturę [SIZE](/windows/win32/api/windef/ns-windef-size) lub [obiekt CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
-*moment*<br/>
-Zawiera strukturę [punktu](/windows/win32/api/windef/ns-windef-point) lub obiekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+*Punkt*<br/>
+Zawiera strukturę [POINT](/windows/win32/api/windef/ns-windef-point) lub obiekt [CPoint.](../../atl-mfc-shared/reference/cpoint-class.md)
 
-*lpRect*<br/>
-Zawiera wskaźnik do struktury [Rect](/windows/win32/api/windef/ns-windef-rect) lub obiektu [CRect](../../atl-mfc-shared/reference/crect-class.md) .
+*Lprect*<br/>
+Zawiera wskaźnik do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-, Który jest przesunięty o rozmiar `CPoint` , który jest przesunięciem przez punkt lub `CRect` przesunięciem przez punkt. `CPoint`
+A, `CPoint` który jest przesunięty przez rozmiar, `CPoint` który `CRect` jest odsunięty przez punkt lub odsunięte przez punkt.
 
 ### <a name="remarks"></a>Uwagi
 
-Na przykład użycie jednego z pierwszych dwóch przeciążeń w celu przesunięcia `CPoint(25, -19)` punktu przez punkt `CPoint(15, 5)` lub rozmiar `CSize(15, 5)` zwraca wartość `CPoint(40, -14)`.
+Na przykład użycie jednego z pierwszych dwóch przeciążeń w celu przesunięcia `CPoint(25, -19)` punktu o punkt `CPoint(15, 5)` lub rozmiar `CSize(15, 5)` zwraca wartość `CPoint(40, -14)`.
 
-Dodanie prostokąta do punktu zwraca prostokąt po przesunięciu przez `x` wartości i `y` określone w punkcie. Na przykład przy użyciu ostatniego przeciążenia do przesuwania prostokąta `CRect(125, 219, 325, 419)` przez punkt `CPoint(25, -19)` wraca `CRect(150, 200, 350, 400)`.
+Dodanie prostokąta do punktu zwraca prostokąt po odsunięciu przez `x` wartości i `y` wartości określone w punkcie. Na przykład za pomocą ostatniego przeciążenia, aby `CPoint(25, -19)` `CRect(150, 200, 350, 400)`odsunąć prostokąt `CRect(125, 219, 325, 419)` o punkt zwraca .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#33](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_6.cpp)]
 
-##  <a name="operator_-"></a>CPoint:: operator-
+## <a name="cpointoperator--"></a><a name="operator_-"></a>CPoint::operator -
 
-Użyj jednego z dwóch pierwszych przeciążeń, aby `CPoint` odjąć `CSize` obiekt lub `CPoint`od.
+Użyj jednego z dwóch pierwszych przeciążeń, `CPoint` `CSize` aby `CPoint`odjąć obiekt lub obiekt od pliku .
 
 ```
 CSize operator-(POINT point) const throw();
@@ -311,39 +311,39 @@ CPoint operator-() const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*moment*<br/>
-Struktura [punktu](/windows/win32/api/windef/ns-windef-point) lub obiekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+*Punkt*<br/>
+Struktura [POINT](/windows/win32/api/windef/ns-windef-point) lub [CPoint.](../../atl-mfc-shared/reference/cpoint-class.md)
 
-*zmienia*<br/>
-Struktura [rozmiaru](/windows/win32/api/windef/ns-windef-size) lub obiekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+*Rozmiar*<br/>
+Struktura [SIZE](/windows/win32/api/windef/ns-windef-size) lub [obiekt CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
-*lpRect*<br/>
-Wskaźnik do struktury [Rect](/windows/win32/api/windef/ns-windef-rect) lub obiektu [CRect](../../atl-mfc-shared/reference/crect-class.md) .
+*Lprect*<br/>
+Wskaźnik do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jest to różnica między dwoma punktami `CPoint` , który jest przesunięty przez negację rozmiaru, `CRect` który jest przesunięty przez `CPoint` negację punktu lub, który jest negacją punktu. `CSize`
+A, `CSize` która jest różnica między `CPoint` dwoma punktami, a, który `CRect` jest przesunięty przez negację rozmiaru, a, który jest przesunięty przez negację punktu `CPoint` lub, który jest negacją punktu.
 
 ### <a name="remarks"></a>Uwagi
 
-Trzecie Przeciążenie przesunięcia a `CRect` przez negację. `CPoint` Na koniec użyj operatora jednoargumentowego do `CPoint`Negate.
+Trzecie przeciążenie przesunie `CRect` a `CPoint`przez negację . Na koniec użyj operatora unary, `CPoint`aby zanegować .
 
-Na przykład przy użyciu pierwszego przeciążenia, aby znaleźć różnicę między dwoma punktami `CPoint(25, -19)` i `CPoint(15, 5)` zwraca `CSize(10, -24)`.
+Na przykład za pomocą pierwszego przeciążenia, `CPoint(25, -19)` aby `CPoint(15, 5)` `CSize(10, -24)`znaleźć różnicę między dwoma punktami i zwraca .
 
-Odjęcie elementu `CSize` od `CPoint` powoduje takie samo obliczenie `CPoint` jak powyżej, ale zwraca obiekt, a nie `CSize` obiekt. Na przykład przy użyciu drugiego przeciążenia, aby znaleźć różnicę między punktem `CPoint(25, -19)` a zwracanym `CPoint(10, -24)`rozmiarem `CSize(15, 5)` .
+Odejmowanie `CSize` `CPoint` od wykonuje te same obliczenia `CPoint` co powyżej, ale zwraca obiekt, a `CSize` nie obiekt. Na przykład za pomocą drugiego przeciążenia, `CPoint(25, -19)` aby znaleźć `CSize(15, 5)` `CPoint(10, -24)`różnicę między punktem a rozmiar zwraca .
 
-Odjęcie prostokąta od punktu zwraca przesunięcie prostokąta przez liczbę `x` ujemnych wartości i `y` określonych w punkcie. Na przykład przy użyciu ostatniego przeciążenia do przesuwania prostokąta `CRect(125, 200, 325, 400)` przez punkt `CPoint(25, -19)` wraca `CRect(100, 219, 300, 419)`.
+Odejmowanie prostokąta od punktu zwraca prostokąt odsunięty przez `x` `y` negatywy i wartości określone w punkcie. Na przykład za pomocą ostatniego przeciążenia, aby `CPoint(25, -19)` `CRect(100, 219, 300, 419)`odsunąć prostokąt `CRect(125, 200, 325, 400)` przez punkt zwraca .
 
-Użyj operatora jednoargumentowego, aby Negate punkt. Na przykład użycie operatora jednoargumentowego z zwracanymi `CPoint(25, -19)` `CPoint(-25, 19)`punktami.
+Operator unary służy do negowania punktu. Na przykład przy użyciu operatora unary z punktem `CPoint(25, -19)` zwraca `CPoint(-25, 19)`.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATLMFC_Utilities#34](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_7.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Przykładowy interfejs MDI MFC](../../overview/visual-cpp-samples.md)<br/>
+[Przykładowy MDI MFC](../../overview/visual-cpp-samples.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Struktura punktów](/windows/win32/api/windef/ns-windef-point)<br/>
+[Struktura POINT](/windows/win32/api/windef/ns-windef-point)<br/>
 [CRect, klasa](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize, klasa](../../atl-mfc-shared/reference/csize-class.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: e37b2371238211033d6a8a0847a41677b4e908a2
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 712c1f1638b954d1580eb527dd9eab7401917517
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688053"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317203"
 ---
 # <a name="freelist-class"></a>freelist — Klasa
 
@@ -32,35 +32,35 @@ class freelist : public Max
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Sz*|Liczba elementów w tablicy, która ma zostać przypisana.|
-|*Maksymalny*|Maksymalna liczba elementów, które mają być przechowywane na liście bezpłatnych. Maksymalną klasą może być [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md)lub [max_variable_size](../standard-library/max-variable-size-class.md).|
+|*Sz*|Liczba elementów w tablicy, które mają zostać przydzielone.|
+|*Max*|Klasa max reprezentująca maksymalną liczbę elementów, które mają być przechowywane na liście wolnych. Klasa max może być [max_none,](../standard-library/max-none-class.md) [max_unbounded,](../standard-library/max-unbounded-class.md) [max_fixed_size](../standard-library/max-fixed-size-class.md)lub [max_variable_size.](../standard-library/max-variable-size-class.md)|
 
 ## <a name="remarks"></a>Uwagi
 
-Ten szablon klasy służy do zarządzania listą bloków pamięci o rozmiarze *sz* z maksymalną długością listy określoną przez maksymalną przekazaną długość klasy *.*
+Ten szablon klasy zarządza listą bloków pamięci o rozmiarze *Sz* z maksymalną długością listy określoną przez klasę max przekazyzoną w *Max*.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[freelist](#freelist)|Konstruuje obiekt typu `freelist`.|
+|[freelist](#freelist)|Konstruuje obiekt `freelist`typu .|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja członkowce|Opis|
 |-|-|
-|[skakując](#pop)|Usuwa pierwszy blok pamięci z listy bezpłatnych.|
-|[push](#push)|Dodaje blok pamięci do listy.|
+|[Pop](#pop)|Usuwa pierwszy blok pamięci z listy wolnych.|
+|[Push](#push)|Dodaje blok pamięci do listy.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<allocators >
+**Nagłówek:** \<alokatory>
 
-**Przestrzeń nazw:** stdext
+**Obszar nazw:** stdext
 
-## <a name="freelist"></a>freelist:: freelist
+## <a name="freelistfreelist"></a><a name="freelist"></a>freelist::freelist
 
-Konstruuje obiekt typu `freelist`.
+Konstruuje obiekt `freelist`typu .
 
 ```cpp
 freelist();
@@ -68,9 +68,9 @@ freelist();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="pop"></a>freelist::p op
+## <a name="freelistpop"></a><a name="pop"></a>freelist::pop
 
-Usuwa pierwszy blok pamięci z listy bezpłatnych.
+Usuwa pierwszy blok pamięci z listy wolnych.
 
 ```cpp
 void *pop();
@@ -78,13 +78,13 @@ void *pop();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do bloku pamięci usunięty z listy.
+Zwraca wskaźnik do bloku pamięci usuniętego z listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca wartość NULL, jeśli lista jest pusta. W przeciwnym razie usuwa pierwszy blok pamięci z listy.
+Funkcja elementu członkowskiego zwraca wartość NULL, jeśli lista jest pusta. W przeciwnym razie usuwa pierwszy blok pamięci z listy.
 
-## <a name="push"></a>freelist::p USH
+## <a name="freelistpush"></a><a name="push"></a>freelist::push
 
 Dodaje blok pamięci do listy.
 
@@ -96,16 +96,16 @@ bool push(void* ptr);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*ptr*|Wskaźnik do bloku pamięci, który ma zostać dodany do listy bezpłatnych.|
+|*Ptr*|Wskaźnik do bloku pamięci, który ma zostać dodany do listy wolnych.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli funkcja `full` klasy Max zwraca **wartość false**; w przeciwnym razie funkcja `push` zwraca **wartość false**.
+**true,** `full` jeśli funkcja klasy max zwraca **false**; w przeciwnym `push` razie funkcja zwraca **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli funkcja `full` klasy Max zwraca **wartość false**, ta funkcja członkowska dodaje blok pamięci wskazywany przez *PTR* do nagłówka listy.
+Jeśli `full` funkcja klasy max zwraca **false,** ta funkcja elementu członkowskiego dodaje blok pamięci wskazywal przez *ptr* do głowy listy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<allocators >](../standard-library/allocators-header.md)
+[\<>alokatorów](../standard-library/allocators-header.md)

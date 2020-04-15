@@ -4,53 +4,33 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - operators [ATL]
 ms.assetid: 58ccd252-2869-45ee-8a5c-3ca40ee7f8a2
-ms.openlocfilehash: 6f1bd4f88b8d3a37f051a208a887c5264f61955a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c15daa1d2b12c58323ef5ef75559a2ab911ad93
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260912"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319233"
 ---
 # <a name="atl-operators"></a>Operatory ATL
 
-Ta sekcja zawiera tematy referencyjne dla operatorów globalnych ATL.
+Ta sekcja zawiera tematy referencyjne dla globalnych operatorów ATL.
 
 |Operator|Opis|
 |--------------|-----------------|
-|[operator ==](#operator_eq_eq)|Porównuje dwa `CSid` obiektów lub `SID` struktury pod kątem równości.|
-|[operator! =](#operator_neq)|Porównuje dwa `CSid` obiektów lub `SID` struktury pod kątem nierówności.|
-|[Operator <](#operator_lt)|Sprawdza, czy `CSid` obiektu lub `SID` struktura po lewej stronie operatora jest mniejszy od `CSid` obiektu lub `SID` struktury z prawej strony (w przypadku zgodności standardowa biblioteka C++).|
-|[operator >](#operator_gt)|Sprawdza, czy `CSid` obiektu lub `SID` struktury po lewej stronie operatora jest większy niż `CSid` obiektu lub `SID` struktury z prawej strony (w przypadku zgodności standardowa biblioteka C++).|
-|[Operator < =](#operator_lt__eq)|Sprawdza, czy `CSid` obiektu lub `SID` struktury po lewej stronie operatora jest mniejszy niż lub równe `CSid` obiektu lub `SID` struktury z prawej strony (w przypadku zgodności standardowa biblioteka C++).|
-|[operator > =](#operator_gt__eq)|Sprawdza, czy `CSid` obiektu lub `SID` struktury po lewej stronie operatora jest większy niż lub równa `CSid` obiektu lub `SID` struktury z prawej strony (w przypadku zgodności standardowa biblioteka C++).|
+|[operator ==](#operator_eq_eq)|Porównuje dwa `CSid` obiekty `SID` lub struktury dla równości.|
+|[operator !=](#operator_neq)|Porównuje dwa `CSid` obiekty `SID` lub struktury dla nierówności.|
+|[<operatora](#operator_lt)|Sprawdza, `CSid` czy `SID` obiekt lub struktura po lewej stronie `CSid` operatora `SID` jest mniejsza niż obiekt lub struktura po prawej stronie (dla zgodności z biblioteką standardową języka C++).|
+|[>operatora](#operator_gt)|Sprawdza, `CSid` czy `SID` obiekt lub struktura po lewej stronie `CSid` operatora `SID` jest większa niż obiekt lub struktura po prawej stronie (dla zgodności z biblioteką standardową języka C++).|
+|[<operatora =](#operator_lt__eq)|Sprawdza, `CSid` czy `SID` obiekt lub struktura po lewej stronie operatora jest `CSid` mniejsza `SID` lub równa obiektowi lub strukturze po prawej stronie (dla zgodności biblioteki standardowej języka C++).|
+|[>operatora =](#operator_gt__eq)|Sprawdza, `CSid` czy `SID` obiekt lub struktura po lewej stronie operatora jest `CSid` większa `SID` lub równa obiektowi lub strukturze po prawej stronie (dla zgodności biblioteki standardowej języka C++).|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlsecurity.h.
 
-##  <a name="operator_eq_eq"></a>  operator ==
+## <a name="operator-"></a><a name="operator_eq_eq"></a>operator ==
 
-Porównuje `CSid` obiektów lub `SID` struktur (identyfikator zabezpieczeń) pod kątem równości.
-
-```
-bool operator==(const CSid& lhs, const CSid& rhs) throw();
-```
-
-### <a name="parameters"></a>Parametry
-
-*Lewa strona reguły przepisywania*<br/>
-Pierwszy `CSid` obiektu lub `SID` struktury do porównania.
-
-*RHS*<br/>
-Drugi `CSid` obiektu lub `SID` struktury do porównania.
-
-### <a name="return-value"></a>Wartość zwracana
-
-Zwraca wartość TRUE, jeśli obiekty są równe, wartość FALSE, jeśli nie są takie same.
-
-##  <a name="operator_neq"></a>  operator! =
-
-Porównuje `CSid` obiektów lub `SID` struktur (identyfikator zabezpieczeń) pod kątem nierówności.
+Porównuje `CSid` obiekty `SID` lub (identyfikator zabezpieczeń) struktury równości.
 
 ```
 bool operator==(const CSid& lhs, const CSid& rhs) throw();
@@ -58,19 +38,39 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Lewa strona reguły przepisywania*<br/>
-Pierwszy `CSid` obiektu lub `SID` struktury do porównania.
+*Lhs*<br/>
+Pierwszy `CSid` obiekt `SID` lub struktura do porównania.
 
-*RHS*<br/>
-Drugi `CSid` obiektu lub `SID` struktury do porównania.
+*Rhs*<br/>
+Drugi `CSid` obiekt `SID` lub struktura do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE, jeśli obiekty nie są równe, wartość FALSE, jeśli są równe.
+Zwraca wartość PRAWDA, jeśli obiekty są równe, WARTOŚĆ FAŁSZ, jeśli nie są równe.
 
-##  <a name="operator_lt"></a>  Operator <
+## <a name="operator-"></a><a name="operator_neq"></a>operator !=
 
-Sprawdza, czy `CSid` obiektu lub `SID` struktura po lewej stronie operatora jest mniejszy od `CSid` obiektu lub `SID` struktury z prawej strony (w przypadku zgodności standardowa biblioteka C++).
+Porównuje `CSid` obiekty `SID` lub struktury (identyfikator zabezpieczeń) dla nierówności.
+
+```
+bool operator==(const CSid& lhs, const CSid& rhs) throw();
+```
+
+### <a name="parameters"></a>Parametry
+
+*Lhs*<br/>
+Pierwszy `CSid` obiekt `SID` lub struktura do porównania.
+
+*Rhs*<br/>
+Drugi `CSid` obiekt `SID` lub struktura do porównania.
+
+### <a name="return-value"></a>Wartość zwracana
+
+Zwraca wartość PRAWDA, jeśli obiekty nie są równe, wartość FAŁsz, jeśli są równe.
+
+## <a name="operator-"></a><a name="operator_lt"></a>< operatora
+
+Sprawdza, `CSid` czy `SID` obiekt lub struktura po lewej stronie `CSid` operatora `SID` jest mniejsza niż obiekt lub struktura po prawej stronie (dla zgodności z biblioteką standardową języka C++).
 
 ```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
@@ -78,23 +78,23 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Lewa strona reguły przepisywania*<br/>
-Pierwszy `CSid` obiektu lub `SID` struktury do porównania.
+*Lhs*<br/>
+Pierwszy `CSid` obiekt `SID` lub struktura do porównania.
 
-*RHS*<br/>
-Drugi `CSid` obiektu lub `SID` struktury do porównania.
+*Rhs*<br/>
+Drugi `CSid` obiekt `SID` lub struktura do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli adres *lhs* obiekt jest mniejszy niż adres *rhs* obiekt, wartość FALSE w przeciwnym razie.
+Zwraca wartość PRAWDA, jeśli adres obiektu *lhs* jest mniejszy niż adres obiektu *rhs,* w przeciwnym razie wartość FAŁSZ.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten operator działa na adres `CSid` obiektu lub `SID` struktury i jest implementowane w celu zapewnienia zgodności z klas kolekcji standardowej biblioteki języka C++.
+Ten operator działa na `CSid` adres `SID` obiektu lub struktury i jest implementowany w celu zapewnienia zgodności z klasami kolekcji biblioteki standardowej języka C++.
 
-##  <a name="operator_gt"></a>  operator >
+## <a name="operator-"></a><a name="operator_gt"></a>> operatora
 
-Sprawdza, czy `CSid` obiektu lub `SID` struktury po lewej stronie operatora jest większy niż `CSid` obiektu lub `SID` struktury z prawej strony (w przypadku zgodności standardowa biblioteka C++).
+Sprawdza, `CSid` czy `SID` obiekt lub struktura po lewej stronie `CSid` operatora `SID` jest większa niż obiekt lub struktura po prawej stronie (dla zgodności z biblioteką standardową języka C++).
 
 ```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
@@ -102,23 +102,23 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Lewa strona reguły przepisywania*<br/>
-Pierwszy `CSid` obiektu lub `SID` struktury do porównania.
+*Lhs*<br/>
+Pierwszy `CSid` obiekt `SID` lub struktura do porównania.
 
-*RHS*<br/>
-Drugi `CSid` obiektu lub `SID` struktury do porównania.
+*Rhs*<br/>
+Drugi `CSid` obiekt `SID` lub struktura do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli adres *lhs* jest większy niż adres *rhs*, wartość FALSE w przeciwnym razie.
+Zwraca wartość PRAWDA, jeśli adres *lhs* jest większy niż adres *rhs*, FALSE w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten operator działa na adres `CSid` obiektu lub `SID` struktury i jest implementowane w celu zapewnienia zgodności z klas kolekcji standardowej biblioteki języka C++.
+Ten operator działa na `CSid` adres `SID` obiektu lub struktury i jest implementowany w celu zapewnienia zgodności z klasami kolekcji biblioteki standardowej języka C++.
 
-##  <a name="operator_lt__eq"></a>  Operator < =
+## <a name="operator-"></a><a name="operator_lt__eq"></a><operatora =
 
-Sprawdza, czy `CSid` obiektu lub `SID` struktury po lewej stronie operatora jest mniejszy niż lub równe `CSid` obiektu lub `SID` struktury z prawej strony (w przypadku zgodności standardowa biblioteka C++).
+Sprawdza, `CSid` czy `SID` obiekt lub struktura po lewej stronie operatora jest `CSid` mniejsza `SID` lub równa obiektowi lub strukturze po prawej stronie (dla zgodności biblioteki standardowej języka C++).
 
 ```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
@@ -126,23 +126,23 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Lewa strona reguły przepisywania*<br/>
-Pierwszy `CSid` obiektu lub `SID` struktury do porównania.
+*Lhs*<br/>
+Pierwszy `CSid` obiekt `SID` lub struktura do porównania.
 
-*RHS*<br/>
-Drugi `CSid` obiektu lub `SID` struktury do porównania.
+*Rhs*<br/>
+Drugi `CSid` obiekt `SID` lub struktura do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli adres *lhs* jest mniejszy niż adres *rhs*, wartość FALSE w przeciwnym razie.
+Zwraca wartość PRAWDA, jeśli adres *lhs* jest mniejszy lub równy adresowi *rhs*, FALSE w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten operator działa na adres `CSid` obiektu lub `SID` struktury i jest implementowane w celu zapewnienia zgodności z klas kolekcji standardowej biblioteki języka C++.
+Ten operator działa na `CSid` adres `SID` obiektu lub struktury i jest implementowany w celu zapewnienia zgodności z klasami kolekcji biblioteki standardowej języka C++.
 
-##  <a name="operator_gt__eq"></a>  operator > =
+## <a name="operator-"></a><a name="operator_gt__eq"></a>>operatora =
 
-Sprawdza, czy `CSid` obiektu lub `SID` struktury po lewej stronie operatora jest większy niż lub równa `CSid` obiektu lub `SID` struktury z prawej strony (w przypadku zgodności standardowa biblioteka C++).
+Sprawdza, `CSid` czy `SID` obiekt lub struktura po lewej stronie operatora jest `CSid` większa `SID` lub równa obiektowi lub strukturze po prawej stronie (dla zgodności biblioteki standardowej języka C++).
 
 ```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
@@ -150,16 +150,16 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Lewa strona reguły przepisywania*<br/>
-Pierwszy `CSid` obiektu lub `SID` struktury do porównania.
+*Lhs*<br/>
+Pierwszy `CSid` obiekt `SID` lub struktura do porównania.
 
-*RHS*<br/>
-Drugi `CSid` obiektu lub `SID` struktury do porównania.
+*Rhs*<br/>
+Drugi `CSid` obiekt `SID` lub struktura do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli adres *lhs* jest większy lub równy adresowi *rhs*, wartość FALSE w przeciwnym razie.
+Zwraca wartość PRAWDA, jeśli adres *lhs* jest większy lub równy adresowi *rhs*, FALSE w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten operator działa na adres `CSid` obiektu lub `SID` struktury i jest implementowane w celu zapewnienia zgodności z klas kolekcji standardowej biblioteki języka C++.
+Ten operator działa na `CSid` adres `SID` obiektu lub struktury i jest implementowany w celu zapewnienia zgodności z klasami kolekcji biblioteki standardowej języka C++.

@@ -1,6 +1,6 @@
 ---
 title: StopAndRelogTracingSessionA
-description: Odwołanie C++ do funkcji StopAndRelogTracingSessionA zestawu SDK usługi Build Insights.
+description: Odwołanie do funkcji SDK StopAndRelogTracingSessiona w języku C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c9fe2ea47b378565d3ce9785b6f4cc3e541ebe80
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: fa70d50ba79a7829adb985ab4d884b5773b5d40f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332706"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323680"
 ---
 # <a name="stopandrelogtracingsessiona"></a>StopAndRelogTracingSessionA
 
 ::: moniker range="<=vs-2015"
 
-Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019.
+C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkcja `StopAndRelogTracingSessionA` przerywa trwającą sesję śledzenia i zapisuje wynikowy ślad w pliku tymczasowym. Sesja ponownej rejestracji jest natychmiast uruchamiana przy użyciu pliku tymczasowego jako dane wejściowe. Ostatni zarejestrowany rejestr utworzony przez sesję rejestrowania jest zapisywany w pliku określonym przez obiekt wywołujący. Pliki wykonywalne wywołujące tę funkcję muszą mieć uprawnienia administratora.
+Funkcja `StopAndRelogTracingSessionA` zatrzymuje trwającą sesję śledzenia i zapisuje wynikowy ślad w pliku tymczasowym. Sesja ponownego rejestrowania jest natychmiast uruchamiana przy użyciu pliku tymczasowego jako danych wejściowych. Końcowy ślad ponownie zarejestrowany wyprodukowany przez sesję ponownego rejestrowania jest zapisywany w pliku określonym przez wywołującego. Pliki wykonywalne wywołujące tę funkcję muszą mieć uprawnienia administratora.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,20 +39,20 @@ enum RESULT_CODE StopAndRelogTracingSessionA(
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa sesji*\
-Nazwa sesji śledzenia, która ma zostać zatrzymana. Użyj tej samej nazwy sesji, która została przeniesiona do [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)lub [StartTracingSessionW](start-tracing-session-w.md).
+*Nazwa_sesji*\
+Nazwa sesji śledzenia, aby zatrzymać. Użyj tej samej nazwy sesji, co nazwa przeniesiona do [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)lub [StartTracingSessionW](start-tracing-session-w.md).
 
-*outputLogFile*\
-Plik, w którym ma zostać zapisany zarejestrowany ponownie ślad utworzony przez sesję ponownego rejestrowania.
+*plik danych wyjściowych*\
+Plik, w którym można zapisać relogged śledzenia produkowane przez sesji ponownego rejestrowania.
 
-\ *statystyk*
-Wskaźnik do obiektu [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) . `StopAndRelogTracingSessionA` zapisuje statystyki kolekcji śledzenia w tym obiekcie przed zwróceniem.
+*Statystyki*\
+Wskaźnik do [obiektu TRACING_SESSION_STATISTICS.](../other-types/tracing-session-statistics-struct.md) `StopAndRelogTracingSessionA`zapisuje statystyki kolekcji śledzenia w tym obiekcie przed zwróceniem.
 
-*analysisDescriptor*\
-Wskaźnik do obiektu [RELOG_DESCRIPTOR](../other-types/analysis-descriptor-struct.md) . Użyj tego obiektu, aby skonfigurować sesję ponownego rejestrowania uruchomioną przez `StopAndRelogTracingSessionA`.
+*analysisDeptor*\
+Wskaźnik do [obiektu RELOG_DESCRIPTOR.](../other-types/analysis-descriptor-struct.md) Użyj tego obiektu, aby skonfigurować sesję ponownego `StopAndRelogTracingSessionA`rejestrowania, która jest uruchamiana przez program .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Kod wyniku z wyliczenia [RESULT_CODE](../other-types/result-code-enum.md) .
+Kod wyniku z [RESULT_CODE](../other-types/result-code-enum.md) wyliczenia.
 
 ::: moniker-end

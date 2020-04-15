@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], OnRenderingTooSlow
 - CAnimationTimerEventHandler [MFC], SetAnimationController
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
-ms.openlocfilehash: e5e6b0a22d438f9c26318129e2d04df96d386cda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72b6e5d8d9d4823795a1fb053c5f2374cb80fba4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391338"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320012"
 ---
 # <a name="canimationtimereventhandler-class"></a>Klasa CAnimationTimerEventHandler
 
-Implementuje wywołanie zwrotne, które jest wywoływane przez interfejs API animacji, po wystąpieniu zdarzenia czasowego.
+Implementuje wywołanie zwrotne, który jest wywoływany przez interfejs API animacji, gdy wystąpią zdarzenia chronometrażu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,14 +40,14 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAnimationTimerEventHandler::CreateInstance](#createinstance)|Tworzy wystąpienie `CAnimationTimerEventHandler` wywołania zwrotnego.|
-|[CAnimationTimerEventHandler::OnPostUpdate](#onpostupdate)|Obsługuje zdarzenia, które wystąpiły po zakończeniu aktualizacji animacji. (Przesłania `CUIAnimationTimerEventHandlerBase::OnPostUpdate`).|
-|[CAnimationTimerEventHandler::OnPreUpdate](#onpreupdate)|Obsługuje zdarzenia występujące przed rozpoczęciem aktualizacji animacji. (Przesłania `CUIAnimationTimerEventHandlerBase::OnPreUpdate`).|
-|[CAnimationTimerEventHandler::OnRenderingTooSlow](#onrenderingtooslow)|Obsługuje zdarzenia, które występują, gdy szybkość renderowania animacji spadnie poniżej minimalna szybkość pożądane. (Przesłania `CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`).|
-|[CAnimationTimerEventHandler::SetAnimationController](#setanimationcontroller)|Przechowuje wskaźnik do kontrolera animacji kierowanie zdarzeń.|
+|[CAnimationTimerEventHandler::OnPostUpdate](#onpostupdate)|Obsługuje zdarzenia, które występują po zakończeniu aktualizacji animacji. (Przesłania `CUIAnimationTimerEventHandlerBase::OnPostUpdate`).|
+|[CAnimationTimerEventHandler::OnPreUpdate](#onpreupdate)|Obsługuje zdarzenia, które występują przed rozpoczęciem aktualizacji animacji. (Przesłania `CUIAnimationTimerEventHandlerBase::OnPreUpdate`).|
+|[CAnimationTimerEventHandler::OnRenderingTooSlow](#onrenderingtooslow)|Obsługuje zdarzenia występujące, gdy liczba klatek na sekundę renderowania animacji spadnie poniżej minimalnej pożądanej liczby klatek na sekundę. (Przesłania `CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`).|
+|[CAnimationTimerEventHandler::SetAnimationController](#setanimationcontroller)|Przechowuje wskaźnik do kontrolera animacji do kierowania zdarzeń.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta procedura obsługi zdarzeń jest tworzony i przekazywany do IUIAnimationTimer::SetTimerEventHandler, gdy wywołujesz CAnimationController::EnableAnimationTimerEventHandler.
+Ten program obsługi zdarzeń jest tworzony i przekazywany do IUIAnimationTimer::SetTimerEventHandler podczas wywoływania CAnimationController::EnableAnimationTimerEventHandler.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -61,9 +61,9 @@ Ta procedura obsługi zdarzeń jest tworzony i przekazywany do IUIAnimationTimer
 
 **Nagłówek:** afxanimationcontroller.h
 
-##  <a name="createinstance"></a>  CAnimationTimerEventHandler::CreateInstance
+## <a name="canimationtimereventhandlercreateinstance"></a><a name="createinstance"></a>CAnimationTimerEventHandler::CreateInstance
 
-Tworzy wystąpienie CAnimationTimerEventHandler wywołania zwrotnego.
+Tworzy wystąpienie wywołania zwrotnego CAnimationTimerEventHandler.
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -73,18 +73,18 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*pAnimationController*<br/>
-Wskaźnik do Kontroler animacji, które zostaną odebrane zdarzenia.
+*pKontroleranimacji*<br/>
+Wskaźnik do kontrolera animacji, który będzie odbierał zdarzenia.
 
 *ppTimerEventHandler*
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda się powiedzie, zwraca wartość S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+Jeśli metoda powiedzie się, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
 
-##  <a name="onpostupdate"></a>  CAnimationTimerEventHandler::OnPostUpdate
+## <a name="canimationtimereventhandleronpostupdate"></a><a name="onpostupdate"></a>CAnimationTimerEventHandler::OnPostUpdate
 
-Obsługuje zdarzenia, które wystąpiły po zakończeniu aktualizacji animacji.
+Obsługuje zdarzenia, które występują po zakończeniu aktualizacji animacji.
 
 ```
 IFACEMETHOD(OnPostUpdate)();
@@ -92,11 +92,11 @@ IFACEMETHOD(OnPostUpdate)();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL.
+S_OK, jeśli metoda powiedzie się; w przeciwnym razie E_FAIL.
 
-##  <a name="onpreupdate"></a>  CAnimationTimerEventHandler::OnPreUpdate
+## <a name="canimationtimereventhandleronpreupdate"></a><a name="onpreupdate"></a>CAnimationTimerEventHandler::OnPreUpdate
 
-Obsługuje zdarzenia występujące przed rozpoczęciem aktualizacji animacji.
+Obsługuje zdarzenia, które występują przed rozpoczęciem aktualizacji animacji.
 
 ```
 IFACEMETHOD(OnPreUpdate)();
@@ -104,11 +104,11 @@ IFACEMETHOD(OnPreUpdate)();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL.
+S_OK, jeśli metoda powiedzie się; w przeciwnym razie E_FAIL.
 
-##  <a name="onrenderingtooslow"></a>  CAnimationTimerEventHandler::OnRenderingTooSlow
+## <a name="canimationtimereventhandleronrenderingtooslow"></a><a name="onrenderingtooslow"></a>CAnimationTimerEventHandler::OnRenderingTooSlow
 
-Obsługuje zdarzenia, które występują, gdy szybkość renderowania animacji spadnie poniżej minimalna szybkość pożądane.
+Obsługuje zdarzenia występujące, gdy liczba klatek na sekundę renderowania animacji spadnie poniżej minimalnej pożądanej liczby klatek na sekundę.
 
 ```
 IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
@@ -116,15 +116,15 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 
 ### <a name="parameters"></a>Parametry
 
-*kl. / s*
+*Fps*
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL.
+S_OK, jeśli metoda powiedzie się; w przeciwnym razie E_FAIL.
 
-##  <a name="setanimationcontroller"></a>  CAnimationTimerEventHandler::SetAnimationController
+## <a name="canimationtimereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationTimerEventHandler::SetAnimationController
 
-Przechowuje wskaźnik do kontrolera animacji kierowanie zdarzeń.
+Przechowuje wskaźnik do kontrolera animacji do kierowania zdarzeń.
 
 ```
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -132,9 +132,9 @@ void SetAnimationController(CAnimationController* pAnimationController);
 
 ### <a name="parameters"></a>Parametry
 
-*pAnimationController*<br/>
-Wskaźnik do Kontroler animacji, które zostaną odebrane zdarzenia.
+*pKontroleranimacji*<br/>
+Wskaźnik do kontrolera animacji, który będzie odbierał zdarzenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

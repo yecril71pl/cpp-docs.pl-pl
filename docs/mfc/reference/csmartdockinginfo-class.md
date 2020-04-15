@@ -1,5 +1,5 @@
 ---
-title: CSmartDockingInfo Class
+title: Klasa CSmartDockingInfo
 ms.date: 11/19/2018
 f1_keywords:
 - CSmartDockingInfo
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: d5f918b591e1db9ff67288a8761f7554698fa761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0ccb9f728add37230cbfd88cc8f6c9b1696fa2e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324008"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318231"
 ---
-# <a name="csmartdockinginfo-class"></a>CSmartDockingInfo Class
+# <a name="csmartdockinginfo-class"></a>Klasa CSmartDockingInfo
 
-Definiuje wygląd znaczników inteligentnego dokowania.
+Definiuje wygląd inteligentnych znaczników dokowania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,49 +55,49 @@ class CSmartDockingInfo : public CObject
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSmartDockingInfo::CopyTo](#copyto)|Kopiuje bieżący inteligentnego dokowania parametrów informacji o do podanych [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) obiektu.|
+|[CSmartDockingInfo::CopyTo](#copyto)|Kopiuje bieżące parametry informacji inteligentnego dokowania do dostarczonego obiektu [CSmartDockingInfo.](../../mfc/reference/csmartdockinginfo-class.md)|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|Określa, czy użyć bieżący kolor motywu, jeśli struktura Wyświetla znaczników inteligentnego dokowania.|
-|[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|Określa kolor tła podstawowy znaczników inteligentnego dokowania.|
-|[CSmartDockingInfo::m_clrToneDest](#m_clrtonedest)|Określa kolor, który zastępuje `m_clrToneSrc` inteligentnego dokowania bitmap znacznika.|
-|[CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)|Określa kolor inteligentnego dokowania mapy bitowe znacznika.|
-|[CSmartDockingInfo::m_clrTransparent](#m_clrtransparent)|Określa kolor inteligentnego dokowania mapy bitowe znacznika, gdy są one niewidoczne.|
-|[CSmartDockingInfo::m_nCentralGroupOffset](#m_ncentralgroupoffset)|Określa przesunięcie grupy centralnej znaczników inteligentnego dokowania z granic prostokąta centralnego grupy.|
+|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|Określa, czy bieżący kolor motywu ma być używany, gdy w ramach wyświetlane są inteligentne znaczniki dokowania.|
+|[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|Określa podstawowy kolor tła znaczników inteligentnego dokowania.|
+|[CSmartDockingInfo::m_clrToneDest](#m_clrtonedest)|Określa kolor, który `m_clrToneSrc` zastępuje w mapach bitowych znacznika inteligentnego dokowania.|
+|[CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)|Określa kolor map bitowych znaczników inteligentnego dokowania.|
+|[CSmartDockingInfo::m_clrTransparent](#m_clrtransparent)|Określa kolor map bitowych znaczników inteligentnego dokowania, gdy są przezroczyste.|
+|[CSmartDockingInfo::m_nCentralGroupOffset](#m_ncentralgroupoffset)|Określa przesunięcie centralnej grupy znaczników inteligentnego dokowania od granic prostokąta grupy centralnej.|
 |[CSmartDockingInfo::m_sizeTotal](#m_sizetotal)|Określa całkowity rozmiar wszystkich znaczników inteligentnego dokowania w grupie.|
-|[CSmartDockingInfo::m_uiMarkerBmpResID](#m_uimarkerbmpresid)|Definiuje zasób identyfikatory mapy bitowe, w ramach używany dla znaczników inteligentnego dokowania, które nie są wyróżnione.|
-|[CSmartDockingInfo::m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|Definiuje zasób identyfikatory mapy bitowe, w ramach używany dla znaczników inteligentnego dokowania, które są wyróżnione.|
+|[CSmartDockingInfo::m_uiMarkerBmpResID](#m_uimarkerbmpresid)|Definiuje identyfikatory zasobów map bitowych, których struktura używa dla znaczników inteligentnego dokowania, które nie są wyróżnione.|
+|[CSmartDockingInfo::m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|Definiuje identyfikatory zasobów map bitowych, których struktura używa dla znaczników inteligentnego dokowania, które są wyróżnione.|
 
 ## <a name="remarks"></a>Uwagi
 
-Uchwyty framework inteligentne znaczniki dokowania wewnętrznie. Poniższa ilustracja przedstawia standardowych znaczników inteligentnego dokowania:
+Struktura obsługuje inteligentne znaczniki dokowania wewnętrznie. Na poniższej ilustracji przedstawiono standardowe inteligentne znaczniki dokowania:
 
-![Standardowa znaczników inteligentnego dokowania](../../mfc/reference/media/nextsdmarkers.png "standardowych znaczników inteligentnego dokowania")
+![Standardowe znaczniki do inteligentnego dokowania](../../mfc/reference/media/nextsdmarkers.png "Standardowe znaczniki do inteligentnego dokowania")
 
-Na tym rysunku obraz po lewej stronie zawiera grupy centralnej inteligentnego dokowania znacznik bez dokowanie karty włączone. Na ilustracji w środku przedstawiono znacznik inteligentnego dokowania prawej krawędzi. Obraz po prawej stronie pokazuje centralna grupa inteligentnego dokowania znacznik mających dokowanie karty włączone. Znacznika inteligentnego dokowania centralna grupa ma głównej mapy bitowej i pięć inteligentnego dokowania bitmap znacznika.
+Na tym rysunku obraz po lewej stronie przedstawia znacznik inteligentnego dokowania grupy centralnej, który nie ma włączonego dokowania do karty. Obraz w środku przedstawia znacznik inteligentnego dokowania prawej krawędzi. Obraz po prawej stronie przedstawia znacznik inteligentnego dokowania grupy centralnej, który ma włączone dokowanie do karty. Znacznik inteligentnego dokowania grupy centralnej ma główną mapę bitową i pięć map bitowych znacznika inteligentnego dokowania.
 
-Można dostosować następujące parametry znaczników inteligentnego dokowania.
+Można dostosować następujące parametry inteligentnych znaczników dokowania:
 
-- Kolor. Na przykład można zastąpić koloru niebieskiego znaczników na rysunku kolorów zdefiniowanych przez użytkownika.
+- Kolor. Na przykład można zastąpić niebieski kolor znaczników na rysunku dowolnym kolorem zdefiniowanym przez użytkownika.
 
-- Przezroczysty kolor.
+- Kolor przezroczystości.
 
-- Przesunięcie znacznika inteligentnego dokowania w grupie centralnej obramowania prostokąta otaczający.
+- Odsunięcie inteligentnego znacznika dokowania w grupie centralnej od granicy prostokąta ograniczającego.
 
-- Głównej mapy bitowej, która reprezentuje grupę centralnej.
+- Główna mapa bitowa reprezentująca grupę centralną.
 
-- Mapy bitowe, które reprezentuje regularne i wyróżnione znaczników inteligentnego dokowania.
+- Mapy bitowe reprezentujące regularne i wyróżnione inteligentne znaczniki dokowania.
 
-Na poniższej ilustracji przedstawiono przykład znaczników inteligentnego dokowania, które zostały dostosowane:
+Na poniższej ilustracji przedstawiono przykład inteligentnych znaczników dokowania, które zostały dostosowane:
 
-![Niestandardowych znaczników inteligentnego dokowania](../../mfc/reference/media/nextsdmarkerscustom.png "niestandardowych znaczników inteligentnego dokowania")
+![Niestandardowe znaczniki inteligentnego dokowania](../../mfc/reference/media/nextsdmarkerscustom.png "Niestandardowe znaczniki inteligentnego dokowania")
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)
 
@@ -105,9 +105,9 @@ Na poniższej ilustracji przedstawiono przykład znaczników inteligentnego doko
 
 **Nagłówek:** afxDockingManager.h
 
-##  <a name="copyto"></a>  CSmartDockingInfo::CopyTo
+## <a name="csmartdockinginfocopyto"></a><a name="copyto"></a>CSmartDockingInfo::CopyTo
 
-Kopiuje bieżącego inteligentnego dokowania parametrów do udostępnionych [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) obiektu.
+Kopiuje bieżące parametry inteligentnego dokowania do dostarczonego obiektu [CSmartDockingInfo.](../../mfc/reference/csmartdockinginfo-class.md)
 
 ```
 void CopyTo(CSmartDockingInfo& params);
@@ -116,11 +116,11 @@ void CopyTo(CSmartDockingInfo& params);
 ### <a name="parameters"></a>Parametry
 
 *params*<br/>
-[out] Obiekt typu `CSmartDockingInfo` , jest wypełniana przy użyciu bieżących parametrów inteligentnego dokowania.
+[na zewnątrz] Obiekt typu, `CSmartDockingInfo` który jest wypełniany bieżącymi parametrami inteligentnego dokowania.
 
-##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading
+## <a name="csmartdockinginfom_busethemecolorinshading"></a><a name="m_busethemecolorinshading"></a>CSmartDockingInfo::m_bUseThemeColorInShading
 
-Określa, czy użyć bieżący kolor motywu, jeśli struktura Wyświetla znaczników inteligentnego dokowania.
+Określa, czy bieżący kolor motywu ma być używany, gdy w ramach wyświetlane są inteligentne znaczniki dokowania.
 
 ```
 BOOL m_bUseThemeColorInShading;
@@ -128,21 +128,21 @@ BOOL m_bUseThemeColorInShading;
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku opcji TRUE znaczniki są wyświetlane przy użyciu bieżący kolor motywu. w przeciwnym razie znaczników są rysowane w jasny kolor niebieski.
+Jeśli prawda, znaczniki są rysowane przy użyciu bieżącego koloru motywu; w przeciwnym razie znaczniki są rysowane w kolorze jasnoniebieskim.
 
-Wartość domyślna to FALSE.
+Wartością domyślną jest FAŁSZ.
 
-##  <a name="m_clrbasebackground"></a>  CSmartDockingInfo::m_clrBaseBackground
+## <a name="csmartdockinginfom_clrbasebackground"></a><a name="m_clrbasebackground"></a>CSmartDockingInfo::m_clrBaseBackground
 
-Określa kolor tła podstawowy znaczników inteligentnego dokowania.
+Określa podstawowy kolor tła znaczników inteligentnego dokowania.
 
 ```
 COLORREF m_clrBaseBackground;
 ```
 
-##  <a name="m_clrtonedest"></a>  CSmartDockingInfo::m_clrToneDest
+## <a name="csmartdockinginfom_clrtonedest"></a><a name="m_clrtonedest"></a>CSmartDockingInfo::m_clrToneDest
 
-Określa kolor, który zastąpi `m_clrToneSrc` inteligentnego dokowania bitmap znacznika.
+Określa kolor, który `m_clrToneSrc` zastąpi w mapach bitowych znacznika inteligentnego dokowania.
 
 ```
 COLORREF m_clrToneDest;
@@ -150,13 +150,13 @@ COLORREF m_clrToneDest;
 
 ### <a name="remarks"></a>Uwagi
 
-Ustaw tę wartość, aby zmienić kolor znacznika map bitowych programowo. Na przykład jeśli chcesz zmienić kolor znaczników standardowe wyposażone w ramach, ta wartość żądany kolor. Domyślnie [CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc) ustawiono RGB (61 123, 241) (kolor niebieskawy).
+Ustaw tę wartość, aby programowo zmieniać kolor znaczników bitmap. Na przykład, jeśli chcesz zmienić kolor standardowych znaczników dostarczonych z platformą, ustaw tę wartość na żądany kolor. Domyślnie [CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc) jest ustawiona na RGB (61, 123, 241) (niebieskawy kolor).
 
-Aby zmienić kolor znaczniki niestandardowe, należy określić zarówno `m_clrToneDest` i `m_clrToneSrc`.
+Aby zmienić kolor znaczników niestandardowych, `m_clrToneDest` `m_clrToneSrc`należy określić zarówno i .
 
-##  <a name="m_clrtonesrc"></a>  CSmartDockingInfo::m_clrToneSrc
+## <a name="csmartdockinginfom_clrtonesrc"></a><a name="m_clrtonesrc"></a>CSmartDockingInfo::m_clrToneSrc
 
-Określa kolor inteligentnego dokowania mapy bitowe znacznika.
+Określa kolor map bitowych znaczników inteligentnego dokowania.
 
 ```
 COLORREF m_clrToneSrc;
@@ -164,13 +164,13 @@ COLORREF m_clrToneSrc;
 
 ### <a name="remarks"></a>Uwagi
 
-Tę wartość można ustawić tylko wtedy, gdy chcesz zastąpić kolor niestandardowej mapy bitowej przy użyciu innego koloru. Nie masz ustawić tę wartość, jeśli zmieniasz kolor standardowy (struktura dostępna) znacznika.
+Tę wartość należy ustawiać tylko wtedy, gdy chcesz zastąpić kolor niestandardowej mapy bitowej innym kolorem. Nie trzeba ustawiać tej wartości, jeśli zmieniasz kolor standardowego znacznika (pod warunkiem framework).
 
-Użyj `(COLORREF)-1` pozostawić puste członkiem inteligentnego dokowania grupy.
+Służy `(COLORREF)-1` do pozostawienia członka inteligentnej grupy dokowania pustego.
 
-##  <a name="m_clrtransparent"></a>  CSmartDockingInfo::m_clrTransparent
+## <a name="csmartdockinginfom_clrtransparent"></a><a name="m_clrtransparent"></a>CSmartDockingInfo::m_clrTransparent
 
-Określa kolor inteligentnego dokowania mapy bitowe znacznika, gdy są one niewidoczne.
+Określa kolor map bitowych znaczników inteligentnego dokowania, gdy są przezroczyste.
 
 ```
 COLORREF m_clrTransparent;
@@ -178,11 +178,11 @@ COLORREF m_clrTransparent;
 
 ### <a name="remarks"></a>Uwagi
 
-Należy ustawić tę wartość podczas wyświetlania niestandardowe znaczniki i niestandardowych map bitowych w grupie dokowania.
+Tę wartość należy ustawić podczas wyświetlania niestandardowych znaczników i niestandardowych map bitowych w grupie dokowania.
 
-##  <a name="m_ncentralgroupoffset"></a>  CSmartDockingInfo::m_nCentralGroupOffset
+## <a name="csmartdockinginfom_ncentralgroupoffset"></a><a name="m_ncentralgroupoffset"></a>CSmartDockingInfo::m_nCentralGroupOffset
 
-Określa przesunięcie między centralna grupa znaczników inteligentnego dokowania i granice prostokąta centralnego grupy.
+Określa przesunięcie między centralną grupą znaczników inteligentnego dokowania a obwiedniami prostokąta grupy centralnej.
 
 ```
 int m_nCentralGroupOffset;
@@ -190,11 +190,11 @@ int m_nCentralGroupOffset;
 
 ### <a name="remarks"></a>Uwagi
 
-Należy określić tę wartość, jeśli chcesz zmienić domyślne przesunięcie niestandardowe znaczniki i granice centralna grupa znaczników inteligentnego dokowania. Przesunięcie domyślna to 5 pikseli.
+Określ tę wartość, jeśli chcesz zmienić domyślne przesunięcie między znacznikami niestandardowymi a granicami centralnej grupy znaczników inteligentnego dokowania. Domyślne przesunięcie wynosi 5 pikseli.
 
-##  <a name="m_sizetotal"></a>  CSmartDockingInfo::m_sizeTotal
+## <a name="csmartdockinginfom_sizetotal"></a><a name="m_sizetotal"></a>CSmartDockingInfo::m_sizeTotal
 
-Określa całkowity rozmiar otaczający prostokąt, który otacza wszystkich znaczników inteligentnego dokowania centralnego grupy.
+Określa całkowity rozmiar prostokąta ograniczającego, który otacza wszystkie inteligentne znaczniki dokowania w grupie centralnej.
 
 ```
 CSize m_sizeTotal;
@@ -202,11 +202,11 @@ CSize m_sizeTotal;
 
 ### <a name="remarks"></a>Uwagi
 
-Ustaw `m_sizeTotal` rozmiarowi prostokąt otaczający znacznika centralnego grupy. Należy określić tę wartość, jeśli używasz niestandardowych map bitowych dla znaczników.
+Ustaw `m_sizeTotal` rozmiar prostokąta ograniczającego znacznika grupy centralnej. Jest wymagane określenie tej wartości, jeśli używasz niestandardowych map bitowych dla znaczników.
 
-##  <a name="m_uimarkerbmpresid"></a>  CSmartDockingInfo::m_uiMarkerBmpResID
+## <a name="csmartdockinginfom_uimarkerbmpresid"></a><a name="m_uimarkerbmpresid"></a>CSmartDockingInfo::m_uiMarkerBmpResID
 
-Definiuje zasób identyfikatory mapy bitowe, które są używane na potrzeby-wyróżnione niestandardowych znaczników inteligentnego dokowania.
+Definiuje identyfikatory zasobów map bitowych, które są używane dla niepodświetlonych niestandardowych znaczników inteligentnego dokowania.
 
 ```
 UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
@@ -214,7 +214,7 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
 
 ### <a name="remarks"></a>Uwagi
 
-Wypełnienie tej tablicy identyfikatory mapy bitowe, reprezentujący znaczników inteligentnego dokowania. AFX_SD_MARKERS_NUM is currently defined as 5. Wypełnienia tablicy w następujący sposób:
+Wypełnij tę tablicę identyfikatorami zasobów map bitowych reprezentujących inteligentne znaczniki dokowania. AFX_SD_MARKERS_NUM jest obecnie zdefiniowany jako 5. Tablicę wypełniasz w następujący sposób:
 
 ```cpp
 params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;
@@ -224,9 +224,9 @@ params.m_uiMarkerBmpResID[3] = IDB_MARKER_BOTTOM;
 params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;
 ```
 
-##  <a name="m_uimarkerlightbmpresid"></a>  CSmartDockingInfo::m_uiMarkerLightBmpResID
+## <a name="csmartdockinginfom_uimarkerlightbmpresid"></a><a name="m_uimarkerlightbmpresid"></a>CSmartDockingInfo::m_uiMarkerLightBmpResID
 
-Definiuje zasób identyfikatory mapy bitowe, które są używane na potrzeby wyróżnione niestandardowe inteligentnego dokowania znaczników.
+Definiuje identyfikatory zasobów map bitowych, które są używane dla wyróżnionych niestandardowych znaczników inteligentnego dokowania.
 
 ```
 UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
@@ -234,7 +234,7 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
 
 ### <a name="remarks"></a>Uwagi
 
-Wypełnienie tej tablicy identyfikatory mapy bitowe, reprezentujący wyróżnione znaczników inteligentnego dokowania. AFX_SD_MARKERS_NUM is currently defined as 5. Wypełnienia tablicy w następujący sposób:
+Wypełnij tę tablicę identyfikatorami zasobów map bitowych reprezentujących wyróżnione znaczniki inteligentnego dokowania. AFX_SD_MARKERS_NUM jest obecnie zdefiniowany jako 5. Tablicę wypełniasz w następujący sposób:
 
 ```cpp
 params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;
@@ -244,7 +244,7 @@ params.m_uiMarkerLightBmpResID[3] = IDB_MARKER_BOTTOM_LIGHT;
 params.m_uiMarkerLightBmpResID[4] = IDB_MARKER_CENTER_LIGHT;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

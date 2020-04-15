@@ -1,6 +1,6 @@
 ---
 title: Klasa C1DLL
-description: Odwołanie C++ do klasy C1DLL zestawu SDK usługi Build Insights.
+description: Odwołanie do klasy C++ Build SDK C1DLL.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f843e7dcd14dc9e9649317933008b575ff4eddf0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 8c45942660a6e1b51dcd261bcf8977125c0d64a0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333532"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325200"
 ---
 # <a name="c1dll-class"></a>Klasa C1DLL
 
 ::: moniker range="<=vs-2015"
 
-Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019.
+C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Klasa `C1DLL` jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Użyj go, aby dopasować zdarzenie [C1_DLL](../event-table.md#c1-dll) .
+Klasa `C1DLL` jest używana z funkcjami [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)i [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Użyj go, aby dopasować [zdarzenie C1_DLL.](../event-table.md#c1-dll)
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Elementy członkowskie
 
-Wraz z dziedziczonymi elementami członkowskimi z klasy podstawowej [działania](activity.md) Klasa `C1DLL` zawiera następujących członków:
+Wraz z odziedziczonych elementów członkowskich z `C1DLL` jego [działania](activity.md) klasy podstawowej, klasa zawiera następujące elementy członkowskie:
 
 ### <a name="constructors"></a>Konstruktorów
 
-[C1DLL](#c1-dll)
+[Biblioteka C1DLL](#c1-dll)
 
-## <a name="c1-dll"></a>C1DLL
+## <a name="c1dll"></a><a name="c1-dll"></a>Biblioteka C1DLL
 
 ```cpp
 C1DLL(const RawEvent& event);
@@ -53,7 +53,7 @@ C1DLL(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *zdarzeń*
-Zdarzenie [C1_DLL](../event-table.md#c1-dll) .
+*Zdarzenie*\
+Wydarzenie [C1_DLL.](../event-table.md#c1-dll)
 
 ::: moniker-end

@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-ms.openlocfilehash: beb0184a9945990b8d92efe03d4f54baa76ca380
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93fc5cfea4ea655e57e785ca234df59fe10d6570
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246814"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318895"
 ---
 # <a name="cautoptrarray-class"></a>Klasa CAutoPtrArray
 
-Ta klasa dostarcza metody przydatne przy konstruowaniu tablicy inteligentnych wskaźników.
+Ta klasa zawiera metody przydatne podczas konstruowania tablicy inteligentnych wskaźników.
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,9 +46,9 @@ Typ wskaźnika.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa zawiera konstruktora i pochodzi z metody z [CAtlArray](../../atl/reference/catlarray-class.md) i [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) ułatwiające tworzenie obiektu klasy kolekcji przechowywania inteligentnych wskaźników.
+Ta klasa udostępnia konstruktora i wyprowadza metody z [CAtlArray](../../atl/reference/catlarray-class.md) i [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) do tworzenia obiektu klasy kolekcji przechowywania inteligentnych wskaźników.
 
-Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
+Aby uzyskać więcej informacji, zobacz [ATL Collection Classes](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -60,7 +60,7 @@ Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-colle
 
 **Nagłówek:** atlcoll.h
 
-##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray
+## <a name="cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a>CAutoPtrArray::CAutoPtrArray
 
 Konstruktor.
 
@@ -70,11 +70,11 @@ CAutoPtrArray() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Inicjuje tablicę inteligentnego wskaźnika.
+Inicjuje tablicę inteligentnych wskaźników.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CAtlArray](../../atl/reference/catlarray-class.md)<br/>
 [Klasa CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)<br/>
 [Klasa CAutoPtrList](../../atl/reference/cautoptrlist-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

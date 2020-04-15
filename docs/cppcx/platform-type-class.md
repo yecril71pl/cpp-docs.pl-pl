@@ -1,5 +1,5 @@
 ---
-title: Platform::type, klasa
+title: Platform::Type, klasa
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: 456dbff652c8f1b800308ff757930b425616a83f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7463a2518e6ec5cc84f59db05cfaf60e43eb9fde
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183006"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322093"
 ---
-# <a name="platformtype-class"></a>Platform::type, klasa
+# <a name="platformtype-class"></a>Platform::Type, klasa
 
-Zawiera informacje środowiska wykonawczego o typie — w szczególności ciągu nazwy i elementu typecode. Można uzyskać przez wywołanie [Object::gettype —](../cppcx/platform-object-class.md#gettype) dowolnego obiektu lub za pomocą [typeid](../extensions/typeid-cpp-component-extensions.md) operatora na nazwę klasy lub struktury.
+Zawiera informacje o czasie wykonywania typu — w szczególności nazwę ciągu i kod typu. Uzyskane przez [wywołanie Object::GetType](../cppcx/platform-object-class.md#gettype) na dowolnym obiekcie lub przy użyciu operatora [typeid](../extensions/typeid-cpp-component-extensions.md) na nazwę klasy lub struktury.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,41 +29,41 @@ public ref class Platform::Type :
 
 ### <a name="remarks"></a>Uwagi
 
-`Type` Klasy jest przydatne w aplikacjach, które musi kierować przetwarzania przy użyciu `if` lub `switch` instrukcję, która gałęzi na podstawie czasu wykonywania typu obiektu. Kod typu, który opisuje kategorii typu jest pobierany za pomocą [Type::GetTypeCode](#gettypecode) funkcja elementu członkowskiego.
+Klasa `Type` jest przydatna w aplikacjach, które `if` `switch` muszą bezpośrednio przetwarzania przy użyciu lub instrukcji, która oddziałów na podstawie typu wykonywania obiektu. Kod typu opisujący kategorię typu jest pobierany przy użyciu funkcji elementu członkowskiego [Type::GetTypeCode.](#gettypecode)
 
 ## <a name="public-methods"></a>Metody publiczne
 
 |||
 |-|-|
-|[Metoda type::GetTypeCode](#gettypecode)|Zwraca [Platform::TypeCode, wyliczenie](../cppcx/platform-typecode-enumeration.md) dla tego obiektu.|
-|[Metoda type::toString](#tostring)|Zwraca nazwę typu, jak to określono w jego metadanych.|
+|[Typ::Metoda GetTypeCode](#gettypecode)|Zwraca [wartość wyliczenia platformy::TypeCode](../cppcx/platform-typecode-enumeration.md) dla obiektu.|
+|[Typ::Metoda ToString](#tostring)|Zwraca nazwę typu określonego w jego metadanych.|
 
 ## <a name="public-properties"></a>Właściwości publiczne
 
 |||
 |-|-|
-|[Type::FullName](#fullname)|Zwraca [Platform::String, klasa](../cppcx/platform-string-class.md)^ reprezentuje w pełni kwalifikowaną nazwę typu i używa. (kropka) jako separatora, nie:: (podwójny dwukropek) — na przykład `MyNamespace.MyClass`.|
+|[Typ::Pełna nazwa](#fullname)|Zwraca [platformę::String Class](../cppcx/platform-string-class.md)^ reprezentującą w pełni kwalifikowaną nazwę typu i używa . (kropka) jako separator, a nie :: (dwukropek) — na przykład `MyNamespace.MyClass`.|
 
 ## <a name="conversion-operators"></a>Operatory konwersji
 
 |||
 |-|-|
-|[Typ operatora ^](../cppcx/operator-type-hat.md)|Umożliwia konwersję z `Windows::UI::Xaml::Interop::TypeName` do `Platform::Type`.|
-|[Operator Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Umożliwia konwersję z `Platform::Type` do `Windows::UI::Xaml::Interop::TypeName`.|
+|[typ operatora^](../cppcx/operator-type-hat.md)|Umożliwia konwersję z `Windows::UI::Xaml::Interop::TypeName` do `Platform::Type`.|
+|[operator Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Umożliwia konwersję z `Platform::Type` do `Windows::UI::Xaml::Interop::TypeName`.|
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** Windows 8
+**Minimalny obsługiwany klient:** Windows 8
 
-**Minimalna obsługiwana serwera:** Windows Server 2012
+**Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Namespace:** Platforma
+**Obszar nazw:** Platformy
 
 **Metadane:** platform.winmd
 
-## <a name="fullname"></a> Właściwość Type::FullName
+## <a name="typefullname-property"></a><a name="fullname"></a>Typ::Właściwość FullName
 
-Pobiera w pełni kwalifikowaną nazwę bieżącego typu w formularzu `Namespace.Type`.
+Pobiera w pełni kwalifikowaną nazwę bieżącego `Namespace.Type`typu w formularzu .
 
 ### <a name="syntax"></a>Składnia
 
@@ -74,10 +74,10 @@ String^ FullName();
 ### <a name="return-value"></a>Wartość zwracana
 
 Nazwa typu.
+
 ### <a name="example"></a>Przykład
 
-```
-
+```cpp
 //  namespace is TestApp
 MainPage::MainPage()
 {
@@ -88,9 +88,9 @@ MainPage::MainPage()
 }
 ```
 
-## <a name="gettypecode"></a> Metoda type::GetTypeCode
+## <a name="typegettypecode-method"></a><a name="gettypecode"></a>Typ::Metoda GetTypeCode
 
-Pobiera kategorię typu liczbowego wbudowanych typów.
+Pobiera wbudowaną kategorię typów numerycznych.
 
 ### <a name="syntax"></a>Składnia
 
@@ -100,13 +100,13 @@ Platform::TypeCode GetTypeCode();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jedną z Platform::TypeCode wyliczonych wartości.
+Jedna z wartości wyliczonych przez platformę::TypeCode.
 
 ### <a name="remarks"></a>Uwagi
 
-Odpowiednik metody elementu członkowskiego GetTypeCode() to `typeid` właściwości.
+Odpowiednik getTypeCode() metoda elementu członkowskiego `typeid` jest właściwość.
 
-## <a name="tostring"></a> Metoda type::toString
+## <a name="typetostring-method"></a><a name="tostring"></a>Typ::Metoda ToString
 
 Pobiera nazwę typu.
 
@@ -118,8 +118,8 @@ Platform::String^ ToString();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nazwa typu, jak to określono w jego metadanych.
+Nazwa typu określonego w jego metadanych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)

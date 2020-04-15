@@ -16,19 +16,19 @@ helpviewer_keywords:
 - controls [ATL], running
 - controls [C++], container running in ATL
 ms.assetid: 305c7c3b-889e-49dd-aca1-34379c1b9931
-ms.openlocfilehash: 6b1af7c21c6f5028ad6d3a228cb22650fa3cef42
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2843c0c25a5c104ffbdff72255ac5d85cf53b1ee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495669"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329443"
 ---
 # <a name="irunnableobjectimpl-class"></a>Klasa IRunnableObjectImpl
 
-Ta klasa implementuje `IUnknown` i udostępnia domyślną implementację interfejsu [IRunnableObject](/windows/win32/api/objidl/nn-objidl-irunnableobject) .
+Ta klasa `IUnknown` implementuje i zapewnia domyślną implementację interfejsu [IRunnableObject.](/windows/win32/api/objidl/nn-objidl-irunnableobject)
 
 > [!IMPORTANT]
->  Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,7 +40,7 @@ class IRunnableObjectImpl
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Klasa, która pochodzi od `IRunnableObjectImpl`.
+Twoja klasa, pochodząca od `IRunnableObjectImpl`.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -48,17 +48,17 @@ Klasa, która pochodzi od `IRunnableObjectImpl`.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|Zwraca identyfikator CLSID uruchomionej kontrolki. Implementacja ATL ustawia identyfikator CLSID na GUID_NULL i zwraca E_UNEXPECTED.|
-|[IRunnableObjectImpl:: IsRunning](#isrunning)|Określa, czy kontrolka jest uruchomiona. Implementacja ATL zwraca wartość TRUE.|
-|[IRunnableObjectImpl::LockRunning](#lockrunning)|Blokuje formant w stanie uruchomienia. Implementacja ATL zwraca S_OK.|
-|[IRunnableObjectImpl:: Run](#run)|Wymusza uruchomienie formantu. Implementacja ATL zwraca S_OK.|
+|[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|Zwraca CLSID uruchomionego formantu. Implementacja ATL ustawia CLSID do GUID_NULL i zwraca E_UNEXPECTED.|
+|[IRunnableObjectImpl::IsRunning](#isrunning)|Określa, czy formant jest uruchomiony. Implementacja ATL zwraca wartość TRUE.|
+|[IRunnableObjectImpl::LockRunning](#lockrunning)|Blokuje formant w stanie uruchomionym. Implementacja ATL zwraca S_OK.|
+|[IRunnableObjectImpl::Uruchom](#run)|Wymusza uruchomienie formantu. Implementacja ATL zwraca S_OK.|
 |[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|Wskazuje, że formant jest osadzony. Implementacja ATL zwraca S_OK.|
 
 ## <a name="remarks"></a>Uwagi
 
-Interfejs [IRunnableObject](/windows/win32/api/objidl/nn-objidl-irunnableobject) umożliwia kontenerowi określenie, czy kontrolka jest uruchomiona, wymuszenie jej uruchomienia lub zablokowanie jej w stanie uruchomionym. Klasa `IRunnableObjectImpl` zapewnia domyślną implementację tego interfejsu i implementuje `IUnknown` przez wysyłanie informacji do urządzenia zrzutu w kompilacjach debugowania.
+Interfejs [IRunnableObject](/windows/win32/api/objidl/nn-objidl-irunnableobject) umożliwia kontenerowi określenie, czy formant jest uruchomiony, wymusić jego uruchomienie lub zablokować go w stanie uruchomionym. Klasa `IRunnableObjectImpl` zapewnia domyślną implementację tego `IUnknown` interfejsu i implementuje przez wysyłanie informacji do urządzenia zrzutu w kompilacjach debugowania.
 
-**Powiązane artykuły** [Samouczek ATL](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)
+**Podobne artykuły** [ATL Tutorial](../../atl/active-template-library-atl-tutorial.md), Tworzenie projektu [ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -68,11 +68,11 @@ Interfejs [IRunnableObject](/windows/win32/api/objidl/nn-objidl-irunnableobject)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlctl. h
+**Nagłówek:** atlctl.h
 
-##  <a name="getrunningclass"></a>IRunnableObjectImpl::GetRunningClass
+## <a name="irunnableobjectimplgetrunningclass"></a><a name="getrunningclass"></a>IRunnableObjectImpl::GetRunningClass
 
-Zwraca identyfikator CLSID uruchomionej kontrolki.
+Zwraca CLSID uruchomionego formantu.
 
 ```
 HRESULT GetRunningClass(LPCLSID lpClsid);
@@ -80,15 +80,15 @@ HRESULT GetRunningClass(LPCLSID lpClsid);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Implementacja ATL ustawia \* *lpClsid* na GUID_NULL i zwraca E_UNEXPECTED.
+Implementacja ATL \* ustawia *lpClsid* do GUID_NULL i zwraca E_UNEXPECTED.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IRunnableObject:: GetRunningClass](/windows/win32/api/objidl/nf-objidl-irunnableobject-getrunningclass) w Windows SDK.
+Zobacz [IRunnableObject::GetRunningClass](/windows/win32/api/objidl/nf-objidl-irunnableobject-getrunningclass) w windows SDK.
 
-##  <a name="isrunning"></a>IRunnableObjectImpl:: IsRunning
+## <a name="irunnableobjectimplisrunning"></a><a name="isrunning"></a>IRunnableObjectImpl::IsRunning
 
-Określa, czy kontrolka jest uruchomiona.
+Określa, czy formant jest uruchomiony.
 
 ```
 virtual BOOL IsRunning();
@@ -100,11 +100,11 @@ Implementacja ATL zwraca wartość TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IRunnableObject::](/windows/win32/api/objidl/nf-objidl-irunnableobject-isrunning) isdziałanie w Windows SDK.
+Zobacz [IRunnableObject::IsRunning](/windows/win32/api/objidl/nf-objidl-irunnableobject-isrunning) w windows SDK.
 
-##  <a name="lockrunning"></a>IRunnableObjectImpl::LockRunning
+## <a name="irunnableobjectimpllockrunning"></a><a name="lockrunning"></a>IRunnableObjectImpl::LockRunning
 
-Blokuje formant w stanie uruchomienia.
+Blokuje formant w stanie uruchomionym.
 
 ```
 HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
@@ -116,9 +116,9 @@ Implementacja ATL zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IRunnableObject:: LockRunning](/windows/win32/api/objidl/nf-objidl-irunnableobject-lockrunning) w Windows SDK.
+Zobacz [IRunnableObject::LockRunning](/windows/win32/api/objidl/nf-objidl-irunnableobject-lockrunning) w windows SDK.
 
-##  <a name="run"></a>IRunnableObjectImpl:: Run
+## <a name="irunnableobjectimplrun"></a><a name="run"></a>IRunnableObjectImpl::Uruchom
 
 Wymusza uruchomienie formantu.
 
@@ -132,9 +132,9 @@ Implementacja ATL zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IRunnableObject:: Run](/windows/win32/api/objidl/nf-objidl-irunnableobject-run) w Windows SDK.
+Zobacz [IRunnableObject::Uruchom](/windows/win32/api/objidl/nf-objidl-irunnableobject-run) w windows SDK.
 
-##  <a name="setcontainedobject"></a>IRunnableObjectImpl:: setzawierałobject
+## <a name="irunnableobjectimplsetcontainedobject"></a><a name="setcontainedobject"></a>IRunnableObjectImpl::SetContainedObject
 
 Wskazuje, że formant jest osadzony.
 
@@ -148,9 +148,9 @@ Implementacja ATL zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zobacz [IRunnableObject::](/windows/win32/api/objidl/nf-objidl-irunnableobject-setcontainedobject) setzawierałobject w Windows SDK.
+Zobacz [IRunnableObject::SetContainedObject](/windows/win32/api/objidl/nf-objidl-irunnableobject-setcontainedobject) w zestawie Windows SDK.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)

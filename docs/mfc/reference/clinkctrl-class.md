@@ -34,16 +34,16 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: 37d9e624c40f0d6aa7f3d3fa1ed3d97ffa478ee7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: aa1f630b448c60a0eeb6a905ed6eef6f84a2ff8c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505699"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372259"
 ---
 # <a name="clinkctrl-class"></a>Klasa CLinkCtrl
 
-Oferuje funkcje typowej kontrolki SysLink systemu Windows.
+Udostępnia funkcje wspólnego formantu SysLink systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -63,43 +63,43 @@ class CLinkCtrl : public CWnd
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CLinkCtrl::Create](#create)|Tworzy formant łącza i dołącza go do `CLinkCtrl` obiektu.|
-|[CLinkCtrl::CreateEx](#createex)|Tworzy formant łącza z rozszerzonymi stylami i dołącza go do `CLinkCtrl` obiektu.|
-|[CLinkCtrl::GetIdealHeight](#getidealheight)|Pobiera idealną wysokość kontrolki łącza.|
-|[CLinkCtrl::GetIdealSize](#getidealsize)|Oblicza preferowaną wysokość tekstu linku dla bieżącego formantu linku, w zależności od określonej szerokości linku.|
-|[CLinkCtrl::GetItem](#getitem)|Pobiera Stany i atrybuty elementu kontrolki link.|
-|[CLinkCtrl:: GetItemID](#getitemid)|Pobiera identyfikator elementu kontrolki łącza.|
-|[CLinkCtrl::GetItemState](#getitemstate)|Pobiera stan elementu kontrolki link.|
-|[CLinkCtrl::GetItemUrl](#getitemurl)|Pobiera adres URL reprezentowany przez element sterowania linkiem.|
+|[CLinkCtrl::Utwórz](#create)|Tworzy formant łącza i dołącza `CLinkCtrl` go do obiektu.|
+|[CLinkCtrl::CreateEx](#createex)|Tworzy formant łącza z rozszerzonymi stylami `CLinkCtrl` i dołącza go do obiektu.|
+|[CLinkCtrl::GetIdealHeight](#getidealheight)|Pobiera idealną wysokość formantu łącza.|
+|[CLinkCtrl::GetIdealSize](#getidealsize)|Oblicza preferowaną wysokość tekstu łącza dla bieżącego formantu łącza, w zależności od określonej szerokości łącza.|
+|[CLinkCtrl::GetItem](#getitem)|Pobiera stany i atrybuty elementu kontroli łącza.|
+|[CLinkCtrl::GetItemID](#getitemid)|Pobiera identyfikator elementu sterującego łącza.|
+|[CLinkCtrl::GetItemState](#getitemstate)|Pobiera stan elementu kontroli łącza.|
+|[CLinkCtrl::GetItemUrl](#getitemurl)|Pobiera adres URL reprezentowany przez element kontroli łącza.|
 |[CLinkCtrl::HitTest](#hittest)|Określa, czy użytkownik kliknął określone łącze.|
-|[CLinkCtrl::SetItem](#setitem)|Ustawia Stany i atrybuty elementu kontrolki link.|
-|[CLinkCtrl::SetItemID](#setitemid)|Ustawia identyfikator elementu kontrolki łącza.|
-|[CLinkCtrl::SetItemState](#setitemstate)|Ustawia stan elementu sterowania linkiem.|
-|[CLinkCtrl::SetItemUrl](#setitemurl)|Ustawia adres URL reprezentowany przez element sterowania linkiem.|
+|[CLinkCtrl::SetItem](#setitem)|Ustawia stany i atrybuty elementu sterującego łącza.|
+|[CLinkCtrl::SetItemID](#setitemid)|Ustawia identyfikator elementu sterującego łącza.|
+|[CLinkCtrl::SetItemState](#setitemstate)|Ustawia stan elementu formantu łącza.|
+|[CLinkCtrl::SetItemUrl](#setitemurl)|Ustawia adres URL reprezentowany przez element kontroli łącza.|
 
 ## <a name="remarks"></a>Uwagi
 
-"Kontrolka łącza" pozwala wygodnie osadzić Linki hipertekstowe w oknie. Rzeczywista kontrolka to okno, które renderuje zaznaczony tekst i uruchamia odpowiednie aplikacje, gdy użytkownik kliknie link osadzony. W jednym formancie obsługiwane są wiele linków i można do nich uzyskać dostęp za pomocą indeksu od zera.
+"Kontrolka łącza" zapewnia wygodny sposób osadzania łączy hipertekstowych w oknie. Rzeczywisty formant jest oknem, które renderuje oznaczony tekst i uruchamia odpowiednie aplikacje, gdy użytkownik kliknie osadzone łącze. Wiele łączy są obsługiwane w ramach jednego formantu i mogą być dostępne za pomocą indeksu opartego na wartości zero.
 
-Ten formant (i w związku `CLinkCtrl` z tym Klasa) jest dostępny tylko dla programów uruchomionych w systemie Windows XP i nowszych.
+Ten formant (i `CLinkCtrl` dlatego klasa) jest dostępny tylko dla programów działających w systemie Windows XP i nowszych.
 
-Aby uzyskać więcej informacji, zobacz [Syslink Control](/windows/win32/Controls/syslink-overview) w Windows SDK.
+Aby uzyskać więcej informacji, zobacz [SysLink Control](/windows/win32/Controls/syslink-overview) w windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 `CLinkCtrl`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxcmn. h
+**Nagłówek:** afxcmn.h
 
-##  <a name="clinkctrl"></a>CLinkCtrl::CLinkCtrl
+## <a name="clinkctrlclinkctrl"></a><a name="clinkctrl"></a>CLinkCtrl::CLinkCtrl
 
 Konstruuje `CLinkCtrl` obiekt.
 
@@ -107,9 +107,9 @@ Konstruuje `CLinkCtrl` obiekt.
 CLinkCtrl();
 ```
 
-##  <a name="create"></a>CLinkCtrl:: Create
+## <a name="clinkctrlcreate"></a><a name="create"></a>CLinkCtrl::Utwórz
 
-Tworzy formant łącza i dołącza go do `CLinkCtrl` obiektu.
+Tworzy formant łącza i dołącza `CLinkCtrl` go do obiektu.
 
 ```
 virtual BOOL Create(
@@ -128,45 +128,45 @@ virtual BOOL Create(DWORD dwStyle,
 ### <a name="parameters"></a>Parametry
 
 *lpszLinkMarkup*<br/>
-Wskaźnik na ciąg zakończony zerem, który zawiera oznaczony tekst do wyświetlenia. Aby uzyskać więcej informacji, zobacz sekcję "znaczniki i dostęp do łącza" w temacie [Omówienie formantów Syslink](/windows/win32/Controls/syslink-overview).
+Wskaźnik do ciągu zakończonego zerem, który zawiera zaznaczony tekst do wyświetlenia. Aby uzyskać więcej informacji, zobacz sekcję "Znaczniki i dostęp do łączy" w temacie [Omówienie kontrolek SysLink](/windows/win32/Controls/syslink-overview).
 
-*dwStyle*<br/>
-Określa styl kontrolki link. Zastosuj dowolną kombinację stylów kontrolek. Aby uzyskać więcej informacji, `Windows SDK` zobacz [typowe style kontrolek](/windows/win32/Controls/common-control-styles) w.
+*Dwstyle*<br/>
+Określa styl formantu łącza. Zastosuj dowolną kombinację stylów sterowania. Aby uzyskać więcej `Windows SDK` informacji, zobacz [typowe style sterowania.](/windows/win32/Controls/common-control-styles)
 
-*cinania*<br/>
-Określa rozmiar i położenie kontrolki łącza. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub struktura. [](/windows/win32/api/windef/ns-windef-rect)
+*Rect*<br/>
+Określa rozmiar i położenie formantu łącza. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
-Określa okno nadrzędne kontrolki link. Nie może mieć wartości NULL.
+Określa okno nadrzędne formantu łącza. Nie może być null.
 
-*nID*<br/>
-Określa identyfikator kontrolki łącza.
+*Nid*<br/>
+Określa identyfikator formantu łącza.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli Inicjalizacja zakończyła się pomyślnie; w przeciwnym razie FALSE.
+PRAWDA, jeśli inicjowanie zakończyło się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-`CLinkCtrl` Obiekt jest konstruowany w dwóch krokach. Najpierw Wywołaj konstruktora, a następnie Wywołaj `Create`, który tworzy formant łącza i dołącza go `CLinkCtrl` do obiektu. Jeśli chcesz użyć rozszerzonych stylów systemu Windows z kontrolką, wywołaj [CLinkCtrl:: CreateEx](#createex) zamiast `Create`.
+Konstruowanie `CLinkCtrl` obiektu w dwóch krokach. Najpierw wywołaj konstruktora, a następnie wywołaj `Create`, co `CLinkCtrl` tworzy formant łącza i dołącza go do obiektu. Jeśli chcesz używać rozszerzonych stylów okien z formantem, zadzwoń do `Create` [CLinkCtrl::CreateEx](#createex) zamiast .
 
-Druga forma `Create` metody jest przestarzała. Użyj pierwszego formularza, który określa parametr *lpszLinkMarkup* .
+Druga forma `Create` metody jest przestarzała. Użyj pierwszego formularza, który określa parametr *lpszLinkMarkup.*
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład kodu definiuje dwie zmienne o nazwie `m_Link1` i `m_Link2`, które są używane w celu uzyskania dostępu do dwóch kontrolek łącza.
+Poniższy przykład kodu definiuje dwie `m_Link1` zmienne, o nazwie i `m_Link2`, które są używane do uzyskiwania dostępu do dwóch formantów łącza.
 
 [!code-cpp[NVC_MFC_CLinkCtrl_s1#2](../../mfc/reference/codesnippet/cpp/clinkctrl-class_1.h)]
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład kodu tworzy jedną kontrolkę linku na podstawie lokalizacji innej kontrolki łącza. Moduł ładujący zasoby tworzy pierwszy formant łącza podczas uruchamiania aplikacji. Gdy aplikacja wprowadza metodę OnInitDialog, należy utworzyć drugą kontrolkę łącza względem pozycji pierwszej kontrolki łącza. Następnie zmień rozmiar drugiej kontrolki linku tak, aby mieściła się w wyświetlonym tekście.
+Poniższy przykład kodu tworzy jeden formant łącza na podstawie lokalizacji innego formantu łącza. Moduł ładujący zasoby tworzy pierwszy formant łącza po uruchomieniu aplikacji. Gdy aplikacja wchodzi OnInitDialog metody, należy utworzyć formant drugiego łącza względem położenia pierwszego formantu łącza. Następnie zmienić rozmiar drugiego formantu łącza, aby dopasować wyświetlany tekst.
 
 [!code-cpp[NVC_MFC_CLinkCtrl_s1#1](../../mfc/reference/codesnippet/cpp/clinkctrl-class_2.cpp)]
 
-##  <a name="createex"></a>CLinkCtrl::CreateEx
+## <a name="clinkctrlcreateex"></a><a name="createex"></a>CLinkCtrl::CreateEx
 
-Tworzy formant łącza z rozszerzonymi stylami i dołącza go do `CLinkCtrl` obiektu.
+Tworzy formant łącza z rozszerzonymi stylami `CLinkCtrl` i dołącza go do obiektu.
 
 ```
 virtual BOOL CreateEx(
@@ -187,36 +187,36 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ### <a name="parameters"></a>Parametry
 
 *lpszLinkMarkup*<br/>
-Wskaźnik na ciąg zakończony zerem, który zawiera oznaczony tekst do wyświetlenia. Aby uzyskać więcej informacji, zobacz sekcję "znaczniki i dostęp do łącza" w temacie [Omówienie formantów Syslink](/windows/win32/Controls/syslink-overview).
+Wskaźnik do ciągu zakończonego zerem, który zawiera zaznaczony tekst do wyświetlenia. Aby uzyskać więcej informacji, zobacz sekcję "Znaczniki i dostęp do łączy" w temacie [Omówienie kontrolek SysLink](/windows/win32/Controls/syslink-overview).
 
-*dwExStyle*<br/>
-Określa rozszerzony styl kontrolki łącza. Aby zapoznać się z listą rozszerzonych stylów systemu Windows, zobacz *dwExStyle* parametru [elementu CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) w Windows SDK.
+*Dwexstyle*<br/>
+Określa rozszerzony styl formantu łącza. Aby uzyskać listę rozszerzonych stylów systemu Windows, zobacz parametr *dwExStyle* dla [createwindowex](/windows/win32/api/winuser/nf-winuser-createwindowexw) w zestawie Windows SDK.
 
-*dwStyle*<br/>
-Określa styl kontrolki link. Zastosuj dowolną kombinację stylów kontrolek. Aby uzyskać więcej informacji, zobacz [typowe style formantów](/windows/win32/Controls/common-control-styles) w Windows SDK.
+*Dwstyle*<br/>
+Określa styl formantu łącza. Zastosuj dowolną kombinację stylów sterowania. Aby uzyskać więcej informacji, zobacz [Typowe style sterowania](/windows/win32/Controls/common-control-styles) w panelu Windows SDK.
 
-*cinania*<br/>
-Określa rozmiar i położenie kontrolki łącza. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub struktura. [](/windows/win32/api/windef/ns-windef-rect)
+*Rect*<br/>
+Określa rozmiar i położenie formantu łącza. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
-Określa okno nadrzędne kontrolki link. Nie może mieć wartości NULL.
+Określa okno nadrzędne formantu łącza. Nie może być null.
 
-*nID*<br/>
-Określa identyfikator kontrolki łącza.
+*Nid*<br/>
+Określa identyfikator formantu łącza.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli Inicjalizacja zakończyła się pomyślnie; w przeciwnym razie FALSE.
+PRAWDA, jeśli inicjowanie zakończyło się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj `CreateEx` zamiast [tworzenia](#create) , aby zastosować rozszerzone stałe stylu systemu Windows.
+Użyj `CreateEx` zamiast [Utwórz,](#create) aby zastosować rozszerzone stałe stylu systemu Windows.
 
-Druga forma `CreateEx` metody jest przestarzała. Użyj pierwszego formularza, który określa parametr *lpszLinkMarkup* .
+Druga forma `CreateEx` metody jest przestarzała. Użyj pierwszego formularza, który określa parametr *lpszLinkMarkup.*
 
-##  <a name="getidealheight"></a>CLinkCtrl::GetIdealHeight
+## <a name="clinkctrlgetidealheight"></a><a name="getidealheight"></a>CLinkCtrl::GetIdealHeight
 
-Pobiera idealną wysokość kontrolki łącza.
+Pobiera idealną wysokość formantu łącza.
 
 ```
 int GetIdealHeight() const;
@@ -224,15 +224,15 @@ int GetIdealHeight() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Idealna wysokość formantu (w pikselach).
+Idealna wysokość formantu w pikselach.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [LM_GETIDEALHEIGHT](/windows/win32/Controls/lm-getidealheight), zgodnie z opisem w Windows SDK.
+Ta funkcja elementu członkowskiego implementuje zachowanie [LM_GETIDEALHEIGHT](/windows/win32/Controls/lm-getidealheight)komunikatu Win32, zgodnie z opisem w windows SDK.
 
-##  <a name="getidealsize"></a>CLinkCtrl::GetIdealSize
+## <a name="clinkctrlgetidealsize"></a><a name="getidealsize"></a>CLinkCtrl::GetIdealSize
 
-Oblicza preferowaną wysokość tekstu linku dla bieżącego formantu linku, w zależności od określonej szerokości linku.
+Oblicza preferowaną wysokość tekstu łącza dla bieżącego formantu łącza, w zależności od określonej szerokości łącza.
 
 ```
 int GetIdealSize(
@@ -244,22 +244,22 @@ int GetIdealSize(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*cxMaxWidth*|podczas Maksymalna szerokość łącza (w pikselach).|
-|określoną \* *psize*|Wskaźnik do struktury [rozmiaru](/windows/win32/api/windef/ns-windef-size) systemu Windows. Gdy ta metoda zwraca, element członkowski `SIZE` w strukturze zawiera idealną wysokość tekstu linku dla szerokości tekstu linku, która jest określona przez *cxMaxWidth*. Element członkowski *CX* struktury zawiera szerokość tekstu linku, która jest faktycznie wymagana.|
+|*cxMaxWidth*|[w] Maksymalna szerokość łącza w pikselach.|
+|[na zewnątrz] \* *pSize (rozmiar)*|Wskaźnik do [struktury](/windows/win32/api/windef/ns-windef-size) rozmiar systemu Windows. Gdy ta metoda zwraca, *cy* element `SIZE` członkowski struktury zawiera idealną wysokość tekstu łącza dla szerokości tekstu łącza, który jest określony przez *cxMaxWidth*. Element *członkowski struktury cx* zawiera szerokość tekstu łącza, która jest rzeczywiście potrzebna.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Preferowana wysokość tekstu łącza (w pikselach). Wartość zwracana jest taka sama jak wartość wartości składowej `SIZE` *cy* struktury.
+Preferowana wysokość tekstu łącza w pikselach. Zwracana wartość jest taka sama jak wartość elementu `SIZE` członkowskiego *cy* struktury.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby zapoznać się z przykładem `GetIdealSize` metody, zobacz przykład w [CLinkCtrl:: Create](#create).
+Na przykład `GetIdealSize` metody, zobacz przykład w [CLinkCtrl::Create](#create).
 
-Ta metoda wysyła komunikat [LM_GETIDEALSIZE](/windows/win32/Controls/lm-getidealsize) , który jest opisany w Windows SDK.
+Ta metoda wysyła komunikat [LM_GETIDEALSIZE,](/windows/win32/Controls/lm-getidealsize) który jest opisany w windows SDK.
 
-##  <a name="getitem"></a>CLinkCtrl:: GetItem
+## <a name="clinkctrlgetitem"></a><a name="getitem"></a>CLinkCtrl::GetItem
 
-Pobiera Stany i atrybuty elementu kontrolki link.
+Pobiera stany i atrybuty elementu kontroli łącza.
 
 ```
 BOOL GetItem(PLITEM pItem) const;
@@ -267,20 +267,20 @@ BOOL GetItem(PLITEM pItem) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pItem*<br/>
-Wskaźnik do struktury [LITEM](/windows/win32/api/commctrl/ns-commctrl-litem) do odbierania informacji o elemencie.
+*pItem (własówce)*<br/>
+Wskaźnik do struktury [LITEM](/windows/win32/api/commctrl/ns-commctrl-litem) do odbierania informacji o towarach.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
+Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [LM_GETITEM](/windows/win32/Controls/lm-getitem), zgodnie z opisem w Windows SDK.
+Ta funkcja elementu członkowskiego implementuje zachowanie [LM_GETITEM](/windows/win32/Controls/lm-getitem)komunikatu Win32, zgodnie z opisem w windows SDK.
 
-##  <a name="getitemid"></a>CLinkCtrl:: GetItemID
+## <a name="clinkctrlgetitemid"></a><a name="getitemid"></a>CLinkCtrl::GetItemID
 
-Pobiera identyfikator elementu kontrolki łącza.
+Pobiera identyfikator elementu sterującego łącza.
 
 ```
 BOOL GetItemID(
@@ -295,32 +295,32 @@ BOOL GetItemID(
 
 ### <a name="parameters"></a>Parametry
 
-*iLink*<br/>
-Indeks elementu kontrolki łącza.
+*Ilink*<br/>
+Indeks elementu sterującego łącza.
 
 *strID*<br/>
 Obiekt [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) zawierający identyfikator określonego elementu.
 
 *szID*<br/>
-Ciąg zakończony znakiem null zawierający identyfikator określonego elementu.
+Ciąg zakończony z wartością null zawierający identyfikator określonego elementu.
 
-*cchID*<br/>
-Rozmiar w znakach w buforze *szID* .
+*cchID ( cchID )*<br/>
+Rozmiar znaków buforu *szID.*
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
+Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
 
 > [!NOTE]
->  Ta funkcja zwraca również wartość FALSE, jeśli bufor *szID lub Strid* jest mniejszy niż MAX_LINKID_TEXT.
+> Ta funkcja zwraca również wartość FAŁSZ, jeśli bufor *szID lub strID* jest mniejszy niż MAX_LINKID_TEXT.
 
 ### <a name="remarks"></a>Uwagi
 
-Pobiera identyfikator określonego elementu sterującego łącza. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_GETITEM](/windows/win32/Controls/lm-getitem) w Windows SDK.
+Pobiera identyfikator określonego elementu kontroli łącza. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_GETITEM](/windows/win32/Controls/lm-getitem) w windows SDK.
 
-##  <a name="getitemstate"></a>CLinkCtrl::GetItemState
+## <a name="clinkctrlgetitemstate"></a><a name="getitemstate"></a>CLinkCtrl::GetItemState
 
-Pobiera stan elementu kontrolki link.
+Pobiera stan elementu kontroli łącza.
 
 ```
 BOOL GetItemState(
@@ -331,26 +331,26 @@ BOOL GetItemState(
 
 ### <a name="parameters"></a>Parametry
 
-*iLink*<br/>
-Indeks elementu kontrolki łącza.
+*Ilink*<br/>
+Indeks elementu sterującego łącza.
 
-*pnState*<br/>
+*pnStan*<br/>
 Wartość określonego elementu stanu.
 
-*stateMask*<br/>
-Kombinacja flag opisujących element stanu do pobrania. Aby uzyskać listę wartości, zobacz Opis `state` elementu członkowskiego w strukturze [LITEM](/windows/win32/api/commctrl/ns-commctrl-litem) . Elementy dozwolone są identyczne z dozwolonymi w programie `state`.
+*StateMask*<br/>
+Kombinacja flag opisujących element stanu, który ma zostać ujmowany. Lista wartości znajduje się w opisie `state` elementu członkowskiego w strukturze [LITEM.](/windows/win32/api/commctrl/ns-commctrl-litem) Dozwolone elementy są identyczne z `state`tymi dozwolonymi w pliku .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
+Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Pobiera wartość określonego stanu elementu określonego elementu sterującego łącza. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_GETITEM](/windows/win32/Controls/lm-getitem) w Windows SDK.
+Pobiera wartość określonego elementu stanu określonego elementu sterującego łącza. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_GETITEM](/windows/win32/Controls/lm-getitem) w windows SDK.
 
-##  <a name="getitemurl"></a>CLinkCtrl::GetItemUrl
+## <a name="clinkctrlgetitemurl"></a><a name="getitemurl"></a>CLinkCtrl::GetItemUrl
 
-Pobiera adres URL reprezentowany przez element sterowania linkiem.
+Pobiera adres URL reprezentowany przez element kontroli łącza.
 
 ```
 BOOL GetItemUrl(
@@ -365,30 +365,30 @@ BOOL GetItemUrl(
 
 ### <a name="parameters"></a>Parametry
 
-*iLink*<br/>
-Indeks elementu kontrolki łącza.
+*Ilink*<br/>
+Indeks elementu sterującego łącza.
 
-*strUrl*<br/>
+*strUrl (strUrl)*<br/>
 Obiekt [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) zawierający adres URL reprezentowany przez określony element
 
-*szUrl*<br/>
-Ciąg zakończony znakiem null zawierający adres URL reprezentowany przez określony element
+*szurl (szurl)*<br/>
+Ciąg zakończony z wartością null zawierający adres URL reprezentowany przez określony element
 
-*cchUrl*<br/>
-Rozmiar w znakach w buforze *szURL* .
+*cchUrl (cchUrl)*<br/>
+Rozmiar znaków buforu *szURL.*
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
+Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
 
 > [!NOTE]
->  Ta funkcja zwraca również wartość FALSE, jeśli bufor *szUrl lub strUrl* jest mniejszy niż MAX_LINKID_TEXT.
+> Ta funkcja zwraca również wartość FAŁSZ, jeśli bufor *szUrl lub strUrl* jest mniejszy niż MAX_LINKID_TEXT.
 
 ### <a name="remarks"></a>Uwagi
 
-Pobiera adres URL reprezentowany przez określony element kontrolki linku. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_GETITEM](/windows/win32/Controls/lm-getitem) w Windows SDK.
+Pobiera adres URL reprezentowany przez określony element kontroli łącza. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_GETITEM](/windows/win32/Controls/lm-getitem) w windows SDK.
 
-##  <a name="hittest"></a>CLinkCtrl::HitTest
+## <a name="clinkctrlhittest"></a><a name="hittest"></a>CLinkCtrl::HitTest
 
 Określa, czy użytkownik kliknął określone łącze.
 
@@ -398,20 +398,20 @@ BOOL HitTest(PLHITTESTINFO phti) const;
 
 ### <a name="parameters"></a>Parametry
 
-*phti*<br/>
-Wskaźnik do `LHITTESTINFO` struktury zawierającej wszystkie informacje o połączeniu klikniętym przez użytkownika.
+*phti ( phti )*<br/>
+Wskaźnik do `LHITTESTINFO` struktury zawierającej wszelkie informacje o łączu klikniętym przez użytkownika.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
+Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [LM_HITTEST](/windows/win32/Controls/lm-hittest), zgodnie z opisem w Windows SDK.
+Ta funkcja elementu członkowskiego implementuje zachowanie [LM_HITTEST](/windows/win32/Controls/lm-hittest)komunikatu Win32, zgodnie z opisem w windows SDK.
 
-##  <a name="setitem"></a>CLinkCtrl:: SetItem
+## <a name="clinkctrlsetitem"></a><a name="setitem"></a>CLinkCtrl::SetItem
 
-Ustawia Stany i atrybuty elementu kontrolki link.
+Ustawia stany i atrybuty elementu sterującego łącza.
 
 ```
 BOOL SetItem(PLITEM pItem);
@@ -419,20 +419,20 @@ BOOL SetItem(PLITEM pItem);
 
 ### <a name="parameters"></a>Parametry
 
-*pItem*<br/>
-Wskaźnik do struktury [LITEM](/windows/win32/api/commctrl/ns-commctrl-litem) zawierającej informacje do ustawienia.
+*pItem (własówce)*<br/>
+Wskaźnik do struktury [LITEM](/windows/win32/api/commctrl/ns-commctrl-litem) zawierający informacje do ustawionego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
+Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [LM_SETITEM](/windows/win32/Controls/lm-setitem), zgodnie z opisem w Windows SDK.
+Ta funkcja elementu członkowskiego implementuje zachowanie [LM_SETITEM](/windows/win32/Controls/lm-setitem)komunikatu Win32, zgodnie z opisem w windows SDK.
 
-##  <a name="setitemid"></a>CLinkCtrl:: setitemid
+## <a name="clinkctrlsetitemid"></a><a name="setitemid"></a>CLinkCtrl::SetItemID
 
-Pobiera identyfikator elementu kontrolki łącza.
+Pobiera identyfikator elementu sterującego łącza.
 
 ```
 BOOL SetItemID(
@@ -442,23 +442,23 @@ BOOL SetItemID(
 
 ### <a name="parameters"></a>Parametry
 
-*iLink*<br/>
-Indeks elementu kontrolki łącza.
+*Ilink*<br/>
+Indeks elementu sterującego łącza.
 
 *szID*<br/>
-Ciąg zakończony znakiem null zawierający identyfikator określonego elementu.
+Ciąg zakończony z wartością null zawierający identyfikator określonego elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
+Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ustawia identyfikator określonego elementu sterowania linkiem. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_SETITEM](/windows/win32/Controls/lm-setitem) w Windows SDK.
+Ustawia identyfikator określonego elementu sterującego łącza. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_SETITEM](/windows/win32/Controls/lm-setitem) w sdk systemu Windows.
 
-##  <a name="setitemstate"></a>CLinkCtrl::SetItemState
+## <a name="clinkctrlsetitemstate"></a><a name="setitemstate"></a>CLinkCtrl::SetItemState
 
-Pobiera stan elementu kontrolki link.
+Pobiera stan elementu kontroli łącza.
 
 ```
 BOOL SetItemState(
@@ -469,26 +469,26 @@ BOOL SetItemState(
 
 ### <a name="parameters"></a>Parametry
 
-*iLink*<br/>
-Indeks elementu kontrolki łącza.
+*Ilink*<br/>
+Indeks elementu sterującego łącza.
 
-*pnState*<br/>
-Wartość określonego elementu stanu.
+*pnStan*<br/>
+Wartość ustawionego określonego elementu stanu.
 
-*stateMask*<br/>
-Kombinacja flag opisujących ustawiany element stanu. Aby uzyskać listę wartości, zobacz Opis `state` elementu członkowskiego w strukturze [LITEM](/windows/win32/api/commctrl/ns-commctrl-litem) . Elementy dozwolone są identyczne z dozwolonymi w programie `state`.
+*StateMask*<br/>
+Kombinacja flag opisujących element stanu, który jest ustawiany. Lista wartości znajduje się w opisie `state` elementu członkowskiego w strukturze [LITEM.](/windows/win32/api/commctrl/ns-commctrl-litem) Dozwolone elementy są identyczne z `state`tymi dozwolonymi w pliku .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
+Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ustawia wartość określonego stanu elementu określonego elementu sterującego łącza. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_SETITEM](/windows/win32/Controls/lm-setitem) w Windows SDK.
+Ustawia wartość określonego elementu stanu określonego elementu sterującego łącza. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_SETITEM](/windows/win32/Controls/lm-setitem) w sdk systemu Windows.
 
-##  <a name="setitemurl"></a>CLinkCtrl::SetItemUrl
+## <a name="clinkctrlsetitemurl"></a><a name="setitemurl"></a>CLinkCtrl::SetItemUrl
 
-Ustawia adres URL reprezentowany przez element sterowania linkiem.
+Ustawia adres URL reprezentowany przez element kontroli łącza.
 
 ```
 BOOL SetItemUrl(
@@ -498,21 +498,21 @@ BOOL SetItemUrl(
 
 ### <a name="parameters"></a>Parametry
 
-*iLink*<br/>
-Indeks elementu kontrolki łącza.
+*Ilink*<br/>
+Indeks elementu sterującego łącza.
 
-*szUrl*<br/>
-Ciąg zakończony znakiem null zawierający adres URL reprezentowany przez określony element
+*szurl (szurl)*<br/>
+Ciąg zakończony z wartością null zawierający adres URL reprezentowany przez określony element
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
+Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
 
 ### <a name="remarks"></a>Uwagi
 
-Ustawia adres URL reprezentowany przez określony element kontrolki linku. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_SETITEM](/windows/win32/Controls/lm-setitem) w Windows SDK.
+Ustawia adres URL reprezentowany przez określony element sterujący łącza. Aby uzyskać więcej informacji, zobacz komunikat Win32 [LM_SETITEM](/windows/win32/Controls/lm-setitem) w sdk systemu Windows.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)

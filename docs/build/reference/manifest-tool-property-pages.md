@@ -24,119 +24,119 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: 20ca118b3aacb02333d49b67d13de30f11dc5d8d
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: e1d0f1ac889cb915216ceb70d48e36efe4ad21bc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079496"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336299"
 ---
 # <a name="manifest-tool-property-pages"></a>Strony właściwości narzędzia manifestu
 
-Te strony służą do określania opcji ogólnych dla programu [Mt. exe](/windows/win32/sbscs/mt-exe). Te strony znajdują się w obszarze **właściwości** > **projektu** > **Właściwości konfiguracji** > **narzędzie manifestu**.
+Użyj tych stron, aby określić opcje ogólne dla [Mt.exe](/windows/win32/sbscs/mt-exe). Te strony znajdują się w obszarze **Narzędzie** > **Properties** > **manifestu****właściwości** > konfiguracji właściwości projektu .
 
-## <a name="general-property-page"></a>Ogólna strona właściwości
+## <a name="general-property-page"></a>Strona właściwości ogólnych
 
-### <a name="suppress-startup-banner"></a>Pomiń transparent startowy
+### <a name="suppress-startup-banner"></a>Pomijanie banera startowego
 
-   **Tak (/nologo)** określa, że standardowe dane dotyczące praw autorskich firmy Microsoft będą ukrywane po uruchomieniu narzędzia manifestu. Użyj tej opcji, aby pominąć niechciane dane wyjściowe w plikach dziennika, gdy uruchamiasz program Mt. exe jako część procesu kompilacji lub ze środowiska kompilacji.
+   **Tak (/nologo)** określa, że standardowe dane praw autorskich firmy Microsoft będą ukryte po uruchomieniu narzędzia manifestu. Ta opcja służy do wygaszanie niepożądanych danych wyjściowych w plikach dziennika, po uruchomieniu mt.exe jako część procesu kompilacji lub ze środowiska kompilacji.
 
 ### <a name="verbose-output"></a>Pełne dane wyjściowe
 
-   **Tak (/verbose)** określa, że podczas generowania manifestu będą wyświetlane dodatkowe informacje o kompilacji.
+   **Tak (/pełne)** określa, że dodatkowe informacje o kompilacji będą wyświetlane podczas generowania manifestu.
 
-### <a name="assembly-identity"></a>Tożsamość zestawu * *
+### <a name="assembly-identity"></a>Tożsamość zestawu
 
-Używa opcji/Identity, aby określić ciąg tożsamości, który składa się z atrybutów [elementu\<assemblyIdentity >](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Ciąg tożsamości rozpoczyna się od wartości atrybutu `name` i następuje po niej para par *wartości* = *Attribute* . Atrybuty w ciągu tożsamości są rozdzielane przecinkami.
+Używa /identity option, aby określić ciąg tożsamości, który składa się z atrybutów [ \<dla assemblyIdentity> Element](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Ciąg tożsamości rozpoczyna się od `name` wartości atrybutu, a następnie par*wartości* *atrybutu.* =  Atrybuty w ciągu tożsamości są rozdzielane przecinkiem.
 
-Jest to przykładowy ciąg tożsamości: `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
+Jest to przykładowy ciąg tożsamości:`Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
 
-## <a name="input-and-output-property-page"></a>Strona właściwości danych wejściowych i wyjściowych
+## <a name="input-and-output-property-page"></a>Strona właściwości wejścia i wyjścia
 
-###  <a name="additional-manifest-files"></a>Dodatkowe pliki manifestu
+### <a name="additional-manifest-files"></a>Dodatkowe pliki manifestów
 
-Używa opcji **/manifest** , aby określić pełne ścieżki dodatkowych plików manifestu, które narzędzie manifestu będzie przetwarzać lub scalać. Pełne ścieżki są rozdzielone średnikami. (-manifest [manifest1] [manifest2]...)
+Używa **/manifest** opcji, aby określić pełne ścieżki dodatkowych plików manifestu, które narzędzie manifestu będzie przetwarzać lub scalać. Pełne ścieżki są rozdzielane średnikiem. (-manifest [manifest1] [manifest2] ...)
 
-###  <a name="input-resource-manifests"></a>Manifesty zasobów wejściowych
+### <a name="input-resource-manifests"></a>Manifesty zasobów wejściowych
 
-Używa opcji **/inputresource** , aby określić pełną ścieżkę zasobu typu RT_MANIFEST, aby wejść do narzędzia manifestu. Po ścieżce może następować określony identyfikator zasobu. Na przykład:
+Używa **/inputresource** opcja, aby określić pełną ścieżkę zasobu typu RT_MANIFEST, do wprowadzania danych do narzędzia manifestu. Ścieżka może być po określonym identyfikatorze zasobu. Przykład:
 
 `dll_with_manifest.dll;#1`
 
-###  <a name="embed-manifest"></a>Osadź manifest
+### <a name="embed-manifest"></a>Osadzanie manifestu
 
-- **Tak** określa, że system projektu osadzi plik manifestu aplikacji w zestawie.
+- **Tak** określa, że system projektu osadza plik manifestu aplikacji do zestawu.
 
-- **Nie** określa, że system projektu utworzy plik manifestu aplikacji jako plik autonomiczny.
+- **Brak** określa, że system projektu utworzy plik manifestu aplikacji jako plik autonomiczny.
 
-###  <a name="output-manifest-file"></a>Wyjściowy plik manifestu
+### <a name="output-manifest-file"></a>Plik manifestu wyjściowego
 
-Określa nazwę pliku manifestu danych wyjściowych. Ta właściwość jest opcjonalna, gdy tylko jeden plik manifestu jest obsługiwany przez narzędzie manifestu. (-out: [plik]; # [identyfikator zasobu])
+Określa nazwę wyjściowego pliku manifestu. Ta właściwość jest opcjonalna, gdy tylko jeden plik manifestu jest obsługiwany przez narzędzie manifestu. (-out:[plik];#[Identyfikator zasobu])
 
-###  <a name="manifest-resource-file"></a>Plik zasobów manifestu
+### <a name="manifest-resource-file"></a>Plik zasobu manifestu
 
-Określa plik zasobów wyjściowych służący do osadzenia manifestu w danych wyjściowych projektu.
+Określa plik zasobów wyjściowych używany do osadzania manifestu w danych wyjściowych projektu.
 
-###  <a name="generate-catalog-files"></a>Generuj pliki katalogu
+### <a name="generate-catalog-files"></a>Generowanie plików wykazu
 
-Używa opcji **/makecdfs** , aby określić, że narzędzie manifestu będzie generować pliki definicji wykazu (pliki. CDF), które są używane do tworzenia wykazów. /makecdfs
+Używa opcji **/makecdfs,** aby określić, że narzędzie manifestu wygeneruje pliki definicji katalogu (pliki cdf), które są używane do tworzenia katalogów. (/makecdfs)
 
-###  <a name="generate-manifest-from-managedassembly"></a>Generuj manifest z ManagedAssembly
+### <a name="generate-manifest-from-managedassembly"></a>Generowanie manifestu z managedassembly
 
-Generuje manifest z zarządzanego zestawu. (-managedassemblyname: [plik])
+Generuje manifest z zestawu zarządzanego. (-zarządzanyaszenazyna:\[plik])
 
-###  <a name="suppress-dependency-element"></a>Pomiń element zależności
+### <a name="suppress-dependency-element"></a>Pomijanie elementu zależności
 
-Używane z-managedassembly. pomija Generowanie elementów zależności w manifeście końcowym. (-nodependency)
+Używany z -managedassembly. pomija generowanie elementów zależności w końcowym manifeście. (-nodependency)
 
-###  <a name="generate-category-tags"></a>Generuj Tagi kategorii
+### <a name="generate-category-tags"></a>Generowanie znaczników kategorii
 
-Używane z-managedassembly. -Category powoduje, że Tagi kategorii mają być generowane. (-Category)
+Używany z -managedassembly. -category powoduje wygenerowanie tagów kategorii. (kategoria)
 
-###  <a name="dpi-awareness"></a>Rozpoznawanie DPI
+### <a name="dpi-awareness"></a>Świadomość DPI
 
-Określa, czy aplikacja obsługuje DPI. Domyślnie ustawienie ma **wartość tak** dla projektów MFC i **nie ma żadnych** innych, ponieważ tylko projekty MFC mają świadomość rozdzielczości DPI. Można zastąpić ustawienie wartości **tak** , jeśli dodasz kod obsługujący różne ustawienia DPI. Twoja aplikacja może wydawać się rozmyte lub małe, jeśli ustawisz ją jako niezależną od rozdzielczości DPI.
+Określa, czy aplikacja jest obsługujących dpi. Domyślnie ustawienie jest **Tak** dla projektów MFC i **nie** w przeciwnym razie, ponieważ tylko projekty MFC zostały wbudowane w świadomości DPI. Można zastąpić ustawienie **tak,** jeśli dodasz kod do obsługi różnych ustawień DPI. Aplikacja może wydawać się rozmyte lub małe, jeśli ustawisz go jako DPI-aware, gdy nie jest.
 
-**Decyzji**
+**Choices**
 
-- **Dawaj**
-- **Duże rozdzielczości DPI**
+- **Brak**
+- **Funkcja wysokiej rozdzielczości DPI**
 - **Na monitor o wysokiej rozdzielczości DPI**
 
-## <a name="isolated-com-property-page"></a>Strona właściwości izolowanego modelu COM
+## <a name="isolated-com-property-page"></a>Strona właściwości Izolowane COM
 
-Aby uzyskać więcej informacji na temat izolowanego modelu COM, zobacz [izolowane aplikacje](/windows/win32/SbsCs/isolated-applications) i [instrukcje: Kompilowanie izolowanych aplikacji do korzystania ze składników com](../how-to-build-isolated-applications-to-consume-com-components.md).
+Aby uzyskać więcej informacji na temat izolowanych com, zobacz [Izolowane aplikacje](/windows/win32/SbsCs/isolated-applications) i [jak: Tworzenie izolowanych aplikacji do korzystania ze składników COM](../how-to-build-isolated-applications-to-consume-com-components.md).
 
-###  <a name="type-library-file"></a>Plik biblioteki typów
+### <a name="type-library-file"></a>Wpisz plik biblioteki
 
-Określa bibliotekę typów, która ma być używana do obsługi manifestu COM nierejestrowanego. (-tlb: [plik])
+Określa bibliotekę typów, która ma być używana do obsługi manifestu regfree COM. (-tlb:[plik])
 
-###  <a name="registrar-script-file"></a>Plik skryptu rejestratora
+### <a name="registrar-script-file"></a>Plik skryptu rejestratora
 
-Określa plik skryptu rejestratora, który ma być używany na potrzeby obsługi manifestu nierejestrowanego COM. (-RGS: [plik])
+Określa plik skryptu rejestratora, który ma być używany do obsługi manifestu regfree COM. (-rgs:[plik])
 
-###  <a name="component-file-name"></a>Nazwa pliku składnika
+### <a name="component-file-name"></a>Nazwa pliku składnika
 
-Określa nazwę pliku składnika skompilowanego na podstawie określonego. tlb lub. RGS. (-dll: [plik])
+Określa nazwę pliku składnika, który jest zbudowany z .tlb lub .rgs określonych. (-dll:[plik])
 
-###  <a name="replacements-file"></a>Plik zamienników
+### <a name="replacements-file"></a>Plik zastępczy
 
-Określa plik, który zawiera wartości dla wymiennych ciągów w pliku RGS. (zamiany: [plik])
+Określa plik zawierający wartości wymiennych ciągów w pliku RGS. (zamienniki:[plik])
 
-## <a name="advanced-property-page"></a>Zaawansowana Strona właściwości
+## <a name="advanced-property-page"></a>Strona właściwości zaawansowanej
 
-###  <a name="update-file-hashes"></a>Zaktualizuj skróty plików
+### <a name="update-file-hashes"></a>Aktualizuj skróty plików
 
-Oblicza wartość skrótu plików określonych w elementach pliku i aktualizuje atrybut hash o tej wartości. (hashupdate: [ścieżka])
+Oblicza skrót plików określonych w elementach plików i aktualizuje atrybut skrótu o tę wartość. (hashupdate:[ścieżka])
 
-###  <a name="update-file-hashes-search-path"></a>Ścieżka wyszukiwania aktualizacji skrótów plików
+### <a name="update-file-hashes-search-path"></a>Ścieżka wyszukiwania skrótów plików aktualizacji
 
-Określa ścieżkę wyszukiwania do użycia podczas aktualizowania skrótów plików.
+Określa ścieżkę wyszukiwania, która ma być używana podczas aktualizowania skrótów plików.
 
-###  <a name="additional-options"></a>Opcje dodatkowe
+### <a name="additional-options"></a>Opcje dodatkowe
 
 Opcje dodatkowe
 
 ## <a name="see-also"></a>Zobacz też
 
-[C++odwołanie do strony właściwości projektu](property-pages-visual-cpp.md)
+[Odwołanie do strony właściwości projektu języka C++](property-pages-visual-cpp.md)
