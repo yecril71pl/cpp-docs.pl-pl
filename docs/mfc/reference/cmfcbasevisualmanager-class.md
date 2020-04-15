@@ -1,5 +1,5 @@
 ---
-title: CMFCBaseVisualManager Class
+title: Klasa CMFCBaseVisualManager
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCBaseVisualManager
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: 0c26c0c9c9026f8312218b2ac15f83a50a67be79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3288949bd4867115c32d2cbffd09cf4f7c6b40b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403857"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367811"
 ---
-# <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager Class
+# <a name="cmfcbasevisualmanager-class"></a>Klasa CMFCBaseVisualManager
 
-Warstwa między pochodnej menedżerów wizualnych oraz interfejsu API Windows motywu.
+Warstwa między pochodnymi menedżerami wizualnymi a interfejsem API motywu systemu Windows.
 
-`CMFCBaseVisualManager` ładuje UxTheme.dll, jeśli jest dostępny i zarządza dostępem do metody interfejsu API programu Windows motywu.
+`CMFCBaseVisualManager`ładuje UxTheme.dll, jeśli jest dostępny, i zarządza dostępem do metod interfejsu API motywu systemu Windows.
 
 Ta klasa jest tylko do użytku wewnętrznego.
 
@@ -56,40 +56,40 @@ class CMFCBaseVisualManager: public CObject
 |||
 |-|-|
 |Nazwa|Opis|
-|[CMFCBaseVisualManager::CMFCBaseVisualManager](#cmfcbasevisualmanager)|Tworzy i inicjuje `CMFCBaseVisualManager` obiektu.|
-|`CMFCBaseVisualManager::~CMFCBaseVisualManager`|Destruktor.|
+|[CMFCBaseVisualManager::CMFCBaseVisualManager](#cmfcbasevisualmanager)|Konstruuje i inicjuje `CMFCBaseVisualManager` obiekt.|
+|`CMFCBaseVisualManager::~CMFCBaseVisualManager`|Destruktora.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |||
 |-|-|
 |Nazwa|Opis|
-|[CMFCBaseVisualManager::DrawCheckBox](#drawcheckbox)|Rysuje kontrolkę pola wyboru przy użyciu bieżącego motywu Windows.|
-|[CMFCBaseVisualManager::DrawComboBorder](#drawcomboborder)|Rysuje obramowanie pola kombi, przy użyciu bieżącego motywu Windows.|
-|[CMFCBaseVisualManager::DrawComboDropButton](#drawcombodropbutton)|Rysuje przycisku rozwijanego pola kombi, przy użyciu bieżącego motywu Windows.|
-|[CMFCBaseVisualManager::DrawPushButton](#drawpushbutton)|Rysuje przycisku polecenia przy użyciu bieżącego motywu Windows.|
-|[CMFCBaseVisualManager::DrawRadioButton](#drawradiobutton)|Rysuje kontrolkę przycisku radiowego za pomocą bieżący motyw Windows.|
-|[CMFCBaseVisualManager::DrawStatusBarProgress](#drawstatusbarprogress)|Rysuje pasek postępu na formant paska stanu ( [klasa CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)) przy użyciu bieżącego motywu Windows.|
-|[CMFCBaseVisualManager::FillReBarPane](#fillrebarpane)|Wypełnia tła formantu paska pomocniczego przy użyciu bieżącego motywu Windows.|
-|[CMFCBaseVisualManager::GetStandardWindowsTheme](#getstandardwindowstheme)|Pobiera bieżący motyw Windows.|
+|[CMFCBaseVisualManager::DrawCheckBox](#drawcheckbox)|Rysuje formant pola wyboru przy użyciu bieżącego motywu systemu Windows.|
+|[CMFCBaseVisualManager::DrawComboBorder](#drawcomboborder)|Rysuje obramowanie pola kombi przy użyciu bieżącej kompozycji systemu Windows.|
+|[CMFCBaseVisualManager::DrawComboDropButton](#drawcombodropbutton)|Rysuje przycisk rozwijany pola kombi przy użyciu bieżącej kompozycji systemu Windows.|
+|[CMFCBaseVisualManager::DrawPushButton](#drawpushbutton)|Rysuje przycisk przy użyciu bieżącej kompozycji systemu Windows.|
+|[CMFCBaseVisualManager::DrawRadioButton](#drawradiobutton)|Rysuje kontrolkę przycisku opcji przy użyciu bieżącej kompozycji systemu Windows.|
+|[CMFCBaseVisualManager::DrawStatusBarProgress](#drawstatusbarprogress)|Rysuje pasek postępu na formancie paska stanu [(CMFCStatusBar Class)](../../mfc/reference/cmfcstatusbar-class.md)przy użyciu bieżącej kompozycji systemu Windows.|
+|[CMFCBaseVisualManager::FillReBarPane](#fillrebarpane)|Wypełnia tło formantu prętów zbrojeniowych przy użyciu bieżącej kompozycji systemu Windows.|
+|[CMFCBaseVisualManager::GetStandardWindowsTheme](#getstandardwindowstheme)|Pobiera bieżącą kompozycję systemu Windows.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |||
 |-|-|
 |Nazwa|Opis|
-|[CMFCBaseVisualManager::CleanUpThemes](#cleanupthemes)|Wywołania `CloseThemeData` wszystkie dojścia otrzymanego w `UpdateSystemColors`.|
-|[CMFCBaseVisualManager::UpdateSystemColors](#updatesystemcolors)|Wywołania `OpenThemeData` można uzyskać dojścia do rysowania różnych formantów: systemu windows, paski narzędzi, przycisków i tak dalej.|
+|[CMFCBaseVisualManager::CleanUpThemes](#cleanupthemes)|Wywołania `CloseThemeData` wszystkich uchwytów `UpdateSystemColors`uzyskanych w pliku .|
+|[CMFCBaseVisualManager::UpdateSystemColors](#updatesystemcolors)|Wywołania, `OpenThemeData` aby uzyskać uchwyty do rysowania różnych formantów: okna, paski narzędzi, przyciski i tak dalej.|
 
 ## <a name="remarks"></a>Uwagi
 
-Nie masz bezpośrednie tworzenie wystąpień obiektów tej klasy.
+Nie trzeba bezpośrednio utworzyć wystąpienia obiektów tej klasy.
 
-Ponieważ klasa bazowa dla wszystkich menedżerów wizualnych, możesz po prostu wywołać [CMFCVisualManager::GetInstance](../../mfc/reference/cmfcvisualmanager-class.md#getinstance), uzyskiwanie wskaźnika do bieżącego Menedżera wizualizacji i dostęp do metody `CMFCBaseVisualManager` przy użyciu tego wskaźnika. Jednak w przypadku wyświetlania kontrolki przy użyciu bieżącego motywu Windows lepiej jest używać `CMFCVisualManagerWindows` interfejsu.
+Ponieważ jest to klasa podstawowa dla wszystkich menedżerów wizualnych, można po prostu wywołać [CMFCVisualManager::GetInstance](../../mfc/reference/cmfcvisualmanager-class.md#getinstance), uzyskać wskaźnik do bieżącego Menedżera wizualnego i uzyskać dostęp do metod `CMFCBaseVisualManager` przy użyciu tego wskaźnika. Jeśli jednak musisz wyświetlić formant przy użyciu bieżącej kompozycji `CMFCVisualManagerWindows` systemu Windows, lepiej jest użyć interfejsu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
@@ -97,9 +97,9 @@ Ponieważ klasa bazowa dla wszystkich menedżerów wizualnych, możesz po prostu
 
 **Nagłówek:** afxvisualmanager.h
 
-##  <a name="cleanupthemes"></a>  CMFCBaseVisualManager::CleanUpThemes
+## <a name="cmfcbasevisualmanagercleanupthemes"></a><a name="cleanupthemes"></a>CMFCBaseVisualManager::CleanUpThemes
 
-Wywołania `CloseThemeData` wszystkie dojścia otrzymanego w `UpdateSystemColors`.
+Wywołania `CloseThemeData` wszystkich uchwytów `UpdateSystemColors`uzyskanych w pliku .
 
 ```
 void CleanUpThemes();
@@ -109,17 +109,17 @@ void CleanUpThemes();
 
 Tylko do użytku wewnętrznego.
 
-##  <a name="cmfcbasevisualmanager"></a>  CMFCBaseVisualManager::CMFCBaseVisualManager
+## <a name="cmfcbasevisualmanagercmfcbasevisualmanager"></a><a name="cmfcbasevisualmanager"></a>CMFCBaseVisualManager::CMFCBaseVisualManager
 
-Tworzy i inicjuje `CMFCBaseVisualManager` obiektu.
+Konstruuje i inicjuje `CMFCBaseVisualManager` obiekt.
 
 ```
 CMFCBaseVisualManager();
 ```
 
-##  <a name="drawcheckbox"></a>  CMFCBaseVisualManager::DrawCheckBox
+## <a name="cmfcbasevisualmanagerdrawcheckbox"></a><a name="drawcheckbox"></a>CMFCBaseVisualManager::DrawCheckBox
 
-Rysuje kontrolkę pola wyboru przy użyciu bieżącego motywu Windows.
+Rysuje formant pola wyboru przy użyciu bieżącego motywu systemu Windows.
 
 ```
 virtual BOOL DrawCheckBox(
@@ -135,43 +135,43 @@ virtual BOOL DrawCheckBox(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Wskaźnik do kontekstu urządzenia
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia
 
 *Rect*<br/>
-[in] Prostokąt otaczający pole wyboru.
+[w] Prostokąt ograniczający pola wyboru.
 
-*bHighlighted*<br/>
-[in] Określa, czy pole wyboru jest wyróżniona.
+*bWyświetlony*<br/>
+[w] Określa, czy pole wyboru jest wyróżnione.
 
-*nState*<br/>
-[in] 0 nie jest zaznaczone, 1 dla zaznaczenia normalny
+*nPaństwo*<br/>
+[in] 0 dla niezaznaczonych, 1 dla
 
-2-mieszane normalny.
+2 dla normalnie mieszanej.
 
-*bWłączony*<br/>
-[in] Określa, czy pole wyboru jest włączone.
+*bWłach*<br/>
+[w] Określa, czy pole wyboru jest włączone.
 
-*bPressed*<br/>
-[in] Określa, czy pole wyboru jest wciśnięty.
+*bPressed (Wciskany)*<br/>
+[w] Określa, czy pole wyboru jest naciśnięte.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli motyw interfejsu API jest włączony; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli interfejs API motywu jest włączony; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartości *nInformacje* odpowiadają poniższym style pól wyboru.
+Wartości *nState* odpowiadają następującym stylom pola wyboru.
 
-|nInformacje|Pole wyboru stylu|
+|nPaństwo|Styl pola wyboru|
 |------------|---------------------|
 |0|CBS_UNCHECKEDNORMAL|
 |1|CBS_CHECKEDNORMAL|
 |2|CBS_MIXEDNORMAL|
 
-##  <a name="drawcomboborder"></a>  CMFCBaseVisualManager::DrawComboBorder
+## <a name="cmfcbasevisualmanagerdrawcomboborder"></a><a name="drawcomboborder"></a>CMFCBaseVisualManager::DrawComboBorder
 
-Rysuje obramowanie pola kombi, przy użyciu bieżącego motywu Windows.
+Rysuje obramowanie pola kombi przy użyciu bieżącej kompozycji systemu Windows.
 
 ```
 virtual BOOL DrawComboBorder(
@@ -184,28 +184,28 @@ virtual BOOL DrawComboBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Wskaźnik do kontekstu urządzenia.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
-[in] Prostokąt otaczający obramowanie pola kombi.
+[w] Prostokąt ograniczający obramowania pola kombi.
 
-*bWyłączone*<br/>
-[in] Określa, czy obramowanie pola kombi jest wyłączona.
+*bWydaj*<br/>
+[w] Określa, czy obramowanie pola kombi jest wyłączone.
 
-*bIsDropped*<br/>
-[in] Określa, czy obramowanie pola kombi jest rozwijana.
+*bIsDropped (Niezmierzony)*<br/>
+[w] Określa, czy obramowanie pola kombi jest odrzucane.
 
-*bIsHighlighted*<br/>
-[in] Określa, czy obramowanie pola kombi jest wyróżniona.
+*bIsSwyżkowany*<br/>
+[w] Określa, czy obramowanie pola kombi jest wyróżnione.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli motyw interfejsu API jest włączony; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli interfejs API motywu jest włączony; w przeciwnym razie FALSE.
 
-##  <a name="drawcombodropbutton"></a>  CMFCBaseVisualManager::DrawComboDropButton
+## <a name="cmfcbasevisualmanagerdrawcombodropbutton"></a><a name="drawcombodropbutton"></a>CMFCBaseVisualManager::DrawComboDropButton
 
-Rysuje przycisku rozwijanego pola kombi, przy użyciu bieżącego motywu Windows.
+Rysuje przycisk rozwijany pola kombi przy użyciu bieżącej kompozycji systemu Windows.
 
 ```
 virtual BOOL DrawComboDropButton(
@@ -220,19 +220,19 @@ virtual BOOL DrawComboDropButton(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*pDC*|[in] Wskaźnik do kontekstu urządzenia.|
-|*Rect*|[in] Prostokąt otaczający przycisku rozwijanego pola kombi.|
-|*bWyłączone*|[in] Określa, czy przycisk listy rozwijanej pola kombi jest wyłączona.|
-|*bIsDropped*|[in] Określa, czy przycisk listy rozwijanej pola kombi jest rozwijana.|
-|*bIsHighlighted*|[in] Określa, czy przycisk listy rozwijanej pola kombi jest wyróżniona.|
+|*Pdc*|[w] Wskaźnik do kontekstu urządzenia.|
+|*Rect*|[w] Prostokąt ograniczający przycisk rozwijany pola kombi.|
+|*bWydaj*|[w] Określa, czy przycisk rozwijany pola kombi jest wyłączony.|
+|*bIsDropped (Niezmierzony)*|[w] Określa, czy przycisk rozwijany pola kombi jest porzucony.|
+|*bIsSwyżkowany*|[w] Określa, czy wyróżniony jest przycisk rozwijany pola kombi.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli motyw interfejsu API jest włączony; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli interfejs API motywu jest włączony; w przeciwnym razie FALSE.
 
-##  <a name="drawpushbutton"></a>  CMFCBaseVisualManager::DrawPushButton
+## <a name="cmfcbasevisualmanagerdrawpushbutton"></a><a name="drawpushbutton"></a>CMFCBaseVisualManager::DrawPushButton
 
-Rysuje przycisku polecenia przy użyciu bieżącego motywu Windows.
+Rysuje przycisk przy użyciu bieżącej kompozycji systemu Windows.
 
 ```
 virtual BOOL DrawPushButton(
@@ -244,25 +244,25 @@ virtual BOOL DrawPushButton(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Wskaźnik do kontekstu urządzenia.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
-[in] Prostokąt otaczający przycisku polecenia.
+[w] Prostokąt ograniczający przycisku.
 
-*pButton*<br/>
-[in] Wskaźnik do [klasa CMFCButton](../../mfc/reference/cmfcbutton-class.md) obiektu do rysowania.
+*pButton (przycisk)*<br/>
+[w] Wskaźnik do [CMFCButton Class](../../mfc/reference/cmfcbutton-class.md) obiektu do rysowania.
 
-*uiState*<br/>
-[in] Ignorowane. Stan jest pobierana z *pButton*.
+*uiStan*<br/>
+[w] Ignorowane. Stan jest pobierany z *pButton*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli motyw interfejsu API jest włączony; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli interfejs API motywu jest włączony; w przeciwnym razie FALSE.
 
-##  <a name="drawradiobutton"></a>  CMFCBaseVisualManager::DrawRadioButton
+## <a name="cmfcbasevisualmanagerdrawradiobutton"></a><a name="drawradiobutton"></a>CMFCBaseVisualManager::DrawRadioButton
 
-Rysuje kontrolkę przycisku radiowego za pomocą bieżący motyw Windows.
+Rysuje kontrolkę przycisku opcji przy użyciu bieżącej kompozycji systemu Windows.
 
 ```
 virtual BOOL DrawRadioButton(
@@ -276,31 +276,31 @@ virtual BOOL DrawRadioButton(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Wskaźnik do kontekstu urządzenia.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia.
 
 *Rect*<br/>
-[in] Prostokąt otaczający przycisku radiowego.
+[w] Prostokąt ograniczający przycisku radiowego.
 
-*bHighlighted*<br/>
-[in] Określa, czy przycisk radiowy zostanie wyróżniona.
+*bWyświetlony*<br/>
+[w] Określa, czy podświetlony jest przycisk radiowy.
 
-*bChecked*<br/>
-[in] Określa, czy zaznaczono opcję przycisku radiowego.
+*bSprawiona*<br/>
+[w] Określa, czy przycisk radiowy jest zaznaczony.
 
-*bWłączony*<br/>
-[in] Określa, czy włączono przycisku radiowego.
+*bWłach*<br/>
+[w] Określa, czy przycisk radiowy jest włączony.
 
-*bPressed*<br/>
-[in] Określa, czy naciśnięciu przycisku radiowego.
+*bPressed (Wciskany)*<br/>
+[w] Określa, czy przycisk radiowy jest naciśnięty.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli motyw interfejsu API jest włączony; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli interfejs API motywu jest włączony; w przeciwnym razie FALSE.
 
-##  <a name="drawstatusbarprogress"></a>  CMFCBaseVisualManager::DrawStatusBarProgress
+## <a name="cmfcbasevisualmanagerdrawstatusbarprogress"></a><a name="drawstatusbarprogress"></a>CMFCBaseVisualManager::DrawStatusBarProgress
 
-Rysuje pasek postępu w formantu paska stanu ( [klasa CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)) przy użyciu bieżącego motywu Windows.
+Rysuje pasek postępu na pasku stanu [(CMFCStatusBar Class)](../../mfc/reference/cmfcstatusbar-class.md)przy użyciu bieżącego motywu systemu Windows.
 
 ```
 virtual BOOL DrawStatusBarProgress(
@@ -317,40 +317,40 @@ virtual BOOL DrawStatusBarProgress(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Wskaźnik do kontekstu urządzenia.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia.
 
-*pStatusBar*<br/>
-[in] Wskaźnik na pasku stanu. Ta wartość jest ignorowana.
+*pStatusBar (pStatusBar)*<br/>
+[w] Wskaźnik do paska stanu. Ta wartość jest ignorowana.
 
-*rectProgress*<br/>
-[in] Prostokąt otaczający pasek postępu w *kontrolera pDC* współrzędnych.
+*spectProgress (proces spectProgress)*<br/>
+[w] Prostokąt ograniczający paska postępu we współrzędnych *pDC.*
 
 *nProgressTotal*<br/>
-[in] Całkowity postęp wartość.
+[w] Całkowita wartość postępu.
 
 *nProgressCurr*<br/>
-[in] Bieżąca wartość postępu.
+[w] Bieżąca wartość postępu.
 
-*clrBar*<br/>
-[in] Kolor początkowy. `CMFCBaseVisualManager` ignoruje to. Klasy pochodne go używać gradientów kolorów.
+*clrBar (clrBar)*<br/>
+[w] Kolor początkowy. `CMFCBaseVisualManager`ignoruje to. Klasy pochodne mogą go używać do gradientów kolorów.
 
 *clrProgressBarDest*<br/>
-[in] Kolor końcowy. `CMFCBaseVisualManager` ignoruje to. Klasy pochodne go używać gradientów kolorów.
+[w] Kolor końcowy. `CMFCBaseVisualManager`ignoruje to. Klasy pochodne mogą go używać do gradientów kolorów.
 
-*clrProgressText*<br/>
-[in] Kolor tekstu w toku. `CMFCBaseVisualManager` ignoruje to. Kolor tekstu jest definiowany przez `afxGlobalData.clrBtnText`.
+*clrProgressTeker*<br/>
+[w] Kolor tekstu postępu. `CMFCBaseVisualManager`ignoruje to. Kolor tekstu jest `afxGlobalData.clrBtnText`definiowany przez program .
 
-*bProgressText*<br/>
-[in] Określa, czy ma być wyświetlany tekst dotyczący postępu.
+*bProgresstext (Tekst)*<br/>
+[w] Określa, czy tekst postępu ma być wyświetlany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli motyw interfejsu API jest włączony; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli interfejs API motywu jest włączony; w przeciwnym razie FALSE.
 
-##  <a name="fillrebarpane"></a>  CMFCBaseVisualManager::FillReBarPane
+## <a name="cmfcbasevisualmanagerfillrebarpane"></a><a name="fillrebarpane"></a>CMFCBaseVisualManager::FillReBarPane
 
-Wypełnia tła formantu paska pomocniczego przy użyciu bieżącego motywu Windows.
+Wypełnia tło formantu prętów zbrojeniowych przy użyciu bieżącej kompozycji systemu Windows.
 
 ```
 virtual void FillReBarPane(
@@ -361,22 +361,22 @@ virtual void FillReBarPane(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Wskaźnik do kontekstu urządzenia.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia.
 
 *pBar*<br/>
-[in] Wskaźnik do okienka, w których tło ma być rysowany.
+[w] Wskaźnik do okienka, którego tło powinno zostać narysowane.
 
 *rectClient*<br/>
-[in] Obszar, który ma zostać wypełniony prostokąt otaczający.
+[w] Prostokąt ograniczający obszaru, który ma zostać wypełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli motyw interfejsu API jest włączony; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli interfejs API motywu jest włączony; w przeciwnym razie FALSE.
 
-##  <a name="getstandardwindowstheme"></a>  CMFCBaseVisualManager::GetStandardWindowsTheme
+## <a name="cmfcbasevisualmanagergetstandardwindowstheme"></a><a name="getstandardwindowstheme"></a>CMFCBaseVisualManager::GetStandardWindowsTheme
 
-Pobiera bieżący motyw Windows.
+Pobiera bieżącą kompozycję systemu Windows.
 
 ```
 virtual WinXpTheme GetStandardWindowsTheme();
@@ -384,21 +384,21 @@ virtual WinXpTheme GetStandardWindowsTheme();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obecnie wybrany kolor motywu Windows. Może to być jeden z poniższych wyliczonych wartości:
+Aktualnie wybrany kolor motywu systemu Windows. Może być jedną z następujących wartości wyliczonych:
 
-- `WinXpTheme_None` — nie ma żadnych motyw włączone.
+- `WinXpTheme_None`- nie ma włączonego tematu.
 
-- `WinXpTheme_NonStandard` -motyw inny niż standardowy jest zaznaczone (tzn. wybrano motyw, ale żaden z poniższej listy).
+- `WinXpTheme_NonStandard`- wybrano niestandardowy motyw (co oznacza, że wybrano motyw, ale żaden z poniższej listy).
 
-- `WinXpTheme_Blue` -motyw niebieski (Luna).
+- `WinXpTheme_Blue`- niebieski motyw (Luna).
 
-- `WinXpTheme_Olive` -oliwek motywu.
+- `WinXpTheme_Olive`- temat oliwy.
 
-- `WinXpTheme_Silver` -silver motywu.
+- `WinXpTheme_Silver`- srebrny motyw.
 
-##  <a name="updatesystemcolors"></a>  CMFCBaseVisualManager::UpdateSystemColors
+## <a name="cmfcbasevisualmanagerupdatesystemcolors"></a><a name="updatesystemcolors"></a>CMFCBaseVisualManager::UpdateSystemColors
 
-Wywołania `OpenThemeData` można uzyskać dojścia do rysowania różnych formantów: systemu windows, paski narzędzi, przycisków i tak dalej.
+Wywołania, `OpenThemeData` aby uzyskać uchwyty do rysowania różnych formantów: okna, paski narzędzi, przyciski i tak dalej.
 
 ```
 void UpdateSystemColors();
@@ -408,7 +408,7 @@ void UpdateSystemColors();
 
 Tylko do użytku wewnętrznego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

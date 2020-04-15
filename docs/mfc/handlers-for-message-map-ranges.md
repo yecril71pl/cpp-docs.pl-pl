@@ -22,46 +22,46 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: d2bc961486d9bc686e1ca0d5feb0fe01d65f9512
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc33df6957beab6e4e8de3093dfc00cf2651780e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358646"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370506"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Programy obsługi dla zakresów map komunikatów
 
-W tym artykule opisano sposób mapowania szeroką gamę komunikatów do funkcji obsługi pojedynczy komunikat (zamiast mapowanie jeden komunikat do tylko jednej funkcji —).
+W tym artykule wyjaśniono, jak mapować zakres wiadomości do funkcji obsługi pojedynczej wiadomości (zamiast mapowania jednej wiadomości tylko do jednej funkcji).
 
-Są potrzebne do przetwarzania więcej niż jedno powiadomienie wiadomości lub formantu w taki sam sposób. W takich przypadkach może chcesz mapować wszystkie wiadomości do funkcji pojedynczy program obsługi. Zakresy map wiadomości pozwalają w tym celu dla ciągłego zakresu wiadomości:
+Istnieją chwile, kiedy trzeba przetworzyć więcej niż jedną wiadomość lub powiadomienie kontroli w dokładnie taki sam sposób. W takich momentach można mapować wszystkie komunikaty do jednej funkcji obsługi. Zakresy mapy wiadomości umożliwiają to w przypadku ciągłego zakresu komunikatów:
 
-- Można mapować zakresy identyfikatorów poleceń do:
+- Zakresy identyfikatorów poleceń można mapować w:
 
-  - Funkcja obsługi polecenia.
+  - Funkcja obsługi poleceń.
 
-  - Funkcja obsługi polecenia update.
+  - Funkcja obsługi aktualizacji polecenia.
 
-- Powiadamianie kontrolki komunikaty w zakresie kontroli identyfikatorów można mapować do funkcji obsługi wiadomości.
+- Można mapować komunikaty powiadomień o kontroli dla zakresu identyfikatorów kontroli do funkcji obsługi wiadomości.
 
 Tematy omówione w tym artykule obejmują:
 
-- [Zapisywanie wpis mapy komunikatów](#_core_writing_the_message.2d.map_entry)
+- [Pisanie wpisu mapy wiadomości](#_core_writing_the_message.2d.map_entry)
 
-- [Deklarowanie funkcji obsługi](#_core_declaring_the_handler_function)
+- [Deklarowanie funkcji programu obsługi](#_core_declaring_the_handler_function)
 
-- [Przykład dla zakresu identyfikatorów poleceń](#_core_example_for_a_range_of_command_ids)
+- [Przykład zakresu identyfikatorów poleceń](#_core_example_for_a_range_of_command_ids)
 
-- [Przykład dla zakresu kontroli identyfikatorów](#_core_example_for_a_range_of_control_ids)
+- [Przykład zakresu identyfikatorów sterowania](#_core_example_for_a_range_of_control_ids)
 
-##  <a name="_core_writing_the_message.2d.map_entry"></a> Zapisywanie wpis mapy komunikatów
+## <a name="writing-the-message-map-entry"></a><a name="_core_writing_the_message.2d.map_entry"></a>Pisanie wpisu mapy wiadomości
 
-W. CPP Dodaj wpis mapy komunikatów, jak pokazano w poniższym przykładzie:
+W. CPP, dodaj wpis mapy wiadomości, jak pokazano w poniższym przykładzie:
 
 [!code-cpp[NVC_MFCMessageHandling#6](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_1.cpp)]
 
-Wpis mapy komunikatów składa się z następujących elementów:
+Wpis mapy wiadomości składa się z następujących elementów:
 
-- Makra mapy komunikatów zakresu:
+- Makro zakresu mapy wiadomości:
 
   - [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)
 
@@ -71,80 +71,80 @@ Wpis mapy komunikatów składa się z następujących elementów:
 
 - Parametry do makra:
 
-  Pierwsze dwa makra nie przyjmują trzy parametry:
+  Pierwsze dwa makra mają trzy parametry:
 
-  - Identyfikator polecenia, który rozpoczyna zakres
+  - Identyfikator polecenia, który uruchamia zakres
 
-  - Identyfikator polecenia kończącym zakres
+  - Identyfikator polecenia, który kończy zakres
 
   - Nazwa funkcji obsługi wiadomości
 
-  Zakres identyfikatorów poleceń muszą być ciągłe.
+  Zakres identyfikatorów poleceń musi być ciągły.
 
-  Trzeci makro `ON_CONTROL_RANGE`, zajmuje dodatkowy parametr pierwszy: komunikat powiadamianie kontrolki, takie jak **EN_CHANGE**.
+  Trzecie makro `ON_CONTROL_RANGE`przyjmuje dodatkowy pierwszy parametr: komunikat z powiadomieniem o kontroli, taki jak **EN_CHANGE**.
 
-##  <a name="_core_declaring_the_handler_function"></a> Deklarowanie funkcji obsługi
+## <a name="declaring-the-handler-function"></a><a name="_core_declaring_the_handler_function"></a>Deklarowanie funkcji obsługi
 
-Dodaj swoje obsługi deklaracji funkcji w. Plik H. Poniższy kod pokazuje, jak to wygląda, jak pokazano poniżej:
+Dodaj deklarację funkcji obsługi w pliku . H. Poniższy kod pokazuje, jak to może wyglądać, jak pokazano poniżej:
 
 [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]
 
-Funkcje programu obsługi dla poleceń pojedynczego zwykle nie mają żadnych parametrów. Z wyjątkiem funkcji obsługi aktualizacji, funkcji obsługi dla zakresów map komunikatów wymagają dodatkowego parametru *nID*, typu **UINT**. Ten parametr jest pierwszym parametrem. Identyfikator polecenia dodatkowe wymagane, aby określić polecenie, które użytkownik faktycznie wybrał jest przystosowana do dodatkowym parametrem.
+Funkcje obsługi dla pojedynczych poleceń zwykle nie przyjmują żadnych parametrów. Z wyjątkiem funkcji obsługi aktualizacji, funkcje obsługi dla zakresów mapy komunikatów wymagają dodatkowego parametru, *nID*, typu **UINT**. Ten parametr jest pierwszym parametrem. Dodatkowy parametr obsługuje dodatkowy identyfikator polecenia potrzebny do określenia, które polecenie użytkownik faktycznie wybrał.
 
-Aby uzyskać więcej informacji o wymaganiach parametrów dla funkcji obsługi aktualizacji, zobacz [przykład dla zakres polecenia identyfikatorów](#_core_example_for_a_range_of_command_ids).
+Aby uzyskać więcej informacji na temat wymagań dotyczących parametrów dotyczących aktualizowania funkcji programu obsługi, zobacz [Przykład zakresu identyfikatorów poleceń](#_core_example_for_a_range_of_command_ids).
 
-##  <a name="_core_example_for_a_range_of_command_ids"></a> Przykład polecenia zakres identyfikatorów
+## <a name="example-for-a-range-of-command-ids"></a><a name="_core_example_for_a_range_of_command_ids"></a>Przykład zakresu identyfikatorów poleceń
 
-Może być zastosowania zakresów przykładem jest obsługi poleceń, takich jak polecenia Powiększenie próbki MFC w [HIERSVR](../overview/visual-cpp-samples.md). To polecenie powiększa widok skalowanie od 25% i % 300 normalne rozmiaru. Klasa widoku HIERSVR firmy używa zakresu do obsługi poleceń powiększenia wpis mapy komunikatów, podobne do tego:
+Kiedy można użyć zakresów Jednym z przykładów jest obsługa poleceń, takich jak polecenie Zoom w przykładzie MFC [HIERSVR](../overview/visual-cpp-samples.md). To polecenie powiększa widok, skalując go między 25% a 300% jego normalnego rozmiaru. Klasa widoku programu HIERSVR używa zakresu do obsługi poleceń Zoom z wpisem mapy wiadomości przypominającym ten:
 
 [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]
 
-Podczas zapisywania wpisu mapy komunikatów, należy określić:
+Podczas pisania wpisu mapy wiadomości należy określić:
 
-- Dwa identyfikatory poleceń, rozpoczęcia i zakończenia ciągły zakres.
+- Dwa identyfikatory poleceń, rozpoczynające i kończące ciągły zakres.
 
-   Poniżej przedstawiono **ID_VIEW_ZOOM25** i **ID_VIEW_ZOOM300**.
+   Tutaj są **ID_VIEW_ZOOM25** i **ID_VIEW_ZOOM300**.
 
 - Nazwa funkcji obsługi dla poleceń.
 
-   W tym miejscu ma `OnZoom`.
+   Oto `OnZoom`.
 
-Deklaracja funkcji będzie wyglądać następująco:
+Deklaracja funkcji będzie przypominać następującą:
 
 [!code-cpp[NVC_MFCMessageHandling#9](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_4.h)]
 
-W przypadku funkcji obsługi aktualizacji jest podobny, które mogą być bardziej przydatne. Dość często, aby zapisać `ON_UPDATE_COMMAND_UI` programy obsługi dla pewną liczbę poleceń i okaże się, że pisanie lub kopiowania, ten sam kod wiele razy. Rozwiązaniem jest mapowanie zakresu identyfikatorów do jednej aktualizacji, funkcję obsługi za pomocą polecenia `ON_UPDATE_COMMAND_UI_RANGE` makra. Identyfikatory poleceń muszą tworzyć ciągły zakres. Aby uzyskać przykład, zobacz `OnUpdateZoom` obsługi i jego `ON_UPDATE_COMMAND_UI_RANGE` wpis mapy komunikatów w klasie widoku przykładowe HIERSVR.
+W przypadku funkcji obsługi aktualizacji jest podobny i może być bardziej przydatne. Jest to dość powszechne, aby napisać `ON_UPDATE_COMMAND_UI` programy obsługi dla wielu poleceń i znaleźć się pisanie lub kopiowanie tego samego kodu w kółko. Rozwiązaniem jest mapowanie zakresu identyfikatorów poleceń na jedną `ON_UPDATE_COMMAND_UI_RANGE` funkcję obsługi aktualizacji przy użyciu makra. Identyfikatory poleceń muszą tworzyć ciągły zakres. Na przykład zobacz `OnUpdateZoom` program obsługi `ON_UPDATE_COMMAND_UI_RANGE` i jego wpis mapy wiadomości w klasie widoku próbki PROGRAMU HIERSVR.
 
-Aktualizuj funkcje programu obsługi dla pojedynczego polecenia zwykle przyjmować jeden parametr, *pCmdUI*, typu `CCmdUI*`. W przeciwieństwie do funkcji obsługi aktualizacji funkcji obsługi dla zakresów map komunikatów nie wymagają dodatkowego parametru *nID*, typu **UINT**. Identyfikator polecenia, który jest potrzebny, aby określić, które polecenie, użytkownik faktycznie wybrał, znajduje się w `CCmdUI` obiektu.
+Funkcje obsługi aktualizacji dla pojedynczych poleceń zwykle przyjmują pojedynczy `CCmdUI*`parametr, *pCmdUI*, typu . W przeciwieństwie do funkcji obsługi, funkcje obsługi aktualizacji dla zakresów mapy wiadomości nie wymagają dodatkowego parametru, *nID*, typu **UINT**. Identyfikator polecenia, który jest potrzebny do określenia, które polecenie użytkownik `CCmdUI` faktycznie wybrał, znajduje się w obiekcie.
 
-##  <a name="_core_example_for_a_range_of_control_ids"></a> Przykład dla identyfikatorów kontrolki zakresu
+## <a name="example-for-a-range-of-control-ids"></a><a name="_core_example_for_a_range_of_control_ids"></a>Przykład zakresu identyfikatorów sterowania
 
-Inny interesujący przypadek jest mapowanie komunikatów powiadamianie kontrolki w zakresie kontroli identyfikatory pojedynczy program obsługi. Załóżmy, że użytkownik może kliknąć dowolny z 10 przycisków. Aby zamapować wszystkie przyciski 10 do jednego programu obsługi, wpis mapy komunikatów będzie wyglądać następująco:
+Innym interesującym przypadkiem jest mapowanie komunikatów powiadomień o kontroli dla zakresu identyfikatorów kontroli do jednego programu obsługi. Załóżmy, że użytkownik może kliknąć dowolny z 10 przycisków. Aby zamapować wszystkie 10 przycisków na jeden program obsługi, wpis mapy wiadomości będzie wyglądał następująco:
 
 [!code-cpp[NVC_MFCMessageHandling#10](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_5.cpp)]
 
-Podczas wpisywania `ON_CONTROL_RANGE` makro w mapie komunikatów, które można określić:
+Podczas pisania `ON_CONTROL_RANGE` makra na mapie wiadomości należy określić:
 
-- Komunikat określonego powiadamianie kontrolki.
+- Określony komunikat z powiadomieniem o kontroli.
 
-   W tym miejscu ma **BN_CLICKED**.
+   Tutaj jest **BN_CLICKED**.
 
-- Wartości Identyfikatora kontrolki skojarzone z ciągły zakres formantów.
+- Wartości identyfikatora formantu skojarzone z ciągłym zakresem formantów.
 
-   W tym miejscu są **IDC_BUTTON1** i **IDC_BUTTON10**.
+   Oto **IDC_BUTTON1** i **IDC_BUTTON10**.
 
 - Nazwa funkcji obsługi wiadomości.
 
-   W tym miejscu ma `OnButtonClicked`.
+   Oto `OnButtonClicked`.
 
-Podczas pisania funkcji obsługi Określ nadmiarowe **UINT** parametru, jak pokazano poniżej:
+Podczas pisania funkcji obsługi należy określić dodatkowy parametr **UINT,** jak pokazano w następujących czynnościach:
 
 [!code-cpp[NVC_MFCMessageHandling#11](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_6.cpp)]
 
-`OnButtonClicked` Obsługi dla pojedynczego **BN_CLICKED** komunikatu nie przyjmuje żadnych parametrów. Tę samą procedurę obsługi szeregu przycisków ma jedną **UINT**. Dodatkowy parametr umożliwia identyfikowanie określonego formantu odpowiedzialnego za wygenerowanie **BN_CLICKED** wiadomości.
+Program `OnButtonClicked` obsługi pojedynczego **BN_CLICKED** wiadomości nie przyjmuje żadnych parametrów. Ten sam program obsługi dla zakresu przycisków ma jeden **UINT**. Dodatkowy parametr umożliwia identyfikację określonego formantu odpowiedzialnego za generowanie **komunikatu BN_CLICKED.**
 
-Kodu pokazany w przykładzie jest typowy: Wartość przekazana do konwertowania `int` w ramach zakresu wiadomości i potwierdzające, że jest to możliwe. Następnie może potrwać kilka różne akcje, w zależności od tego, który został kliknięty przycisk.
+Kod pokazany w przykładzie jest typowy: konwertowanie wartości przekazywane do `int` zakresu komunikatów i twierdząc, że jest to przypadek. Następnie możesz podjąć różne działania w zależności od tego, który przycisk został kliknięty.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklarowanie funkcji obsługi komunikatów](../mfc/declaring-message-handler-functions.md)

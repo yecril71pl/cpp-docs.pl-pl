@@ -8,55 +8,55 @@ helpviewer_keywords:
 - data classes [MFC]
 - simple data type classes [MFC]
 ms.assetid: 0d591d68-0a33-49e9-8a6d-90c90de5c16a
-ms.openlocfilehash: 4e415805301d7d12bd418a3b55509a7732851492
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4038334e35b734370a437d35519498b96c00770
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307421"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365398"
 ---
 # <a name="simple-data-type-classes"></a>Proste klasy typów danych
 
-Następujące klasy hermetyzacji rysowania współrzędne, ciągi znaków i czasu i informacji o dacie, dzięki czemu wygodne użycie składni języka C++. Te obiekty są często używane jako parametry funkcji składowych klas Windows w bibliotece klas. Ponieważ `CPoint`, `CSize`, i `CRect` odpowiadają **punktu**, **rozmiar**, i **Prostokąt** struktury odpowiednio w zestawie Windows SDK Możesz użyć obiektów w ramach tych zajęć C++ wszędzie tam, gdzie możesz użyć tych konstrukcji języka C. Klasy zawierają użyteczne interfejsów za pośrednictwem ich funkcji elementów członkowskich. `CStringT` zawiera ciągi znaków dynamiczne bardzo elastyczny. `CTime`, `COleDateTime`, `CTimeSpan`, i `COleTimeSpan` reprezentują wartości godziny i daty. Aby uzyskać więcej informacji na temat tych klas, zobacz artykuł [daty i godziny](../atl-mfc-shared/date-and-time.md).
+Następujące klasy hermetyzują współrzędne rysunku, ciągi znaków oraz informacje o czasie i dacie, umożliwiając wygodne użycie składni języka C++. Obiekty te są szeroko używane jako parametry do funkcji członkowskich klas systemu Windows w bibliotece klas. Ponieważ `CPoint` `CSize`, `CRect` i odpowiadają **POINT**, **SIZE**i **RECT** struktur, odpowiednio, w Windows SDK, można używać obiektów tych klas C++ wszędzie tam, gdzie można użyć tych struktur języka C. Klasy zapewniają przydatne interfejsy za pośrednictwem ich funkcji członkowskich. `CStringT`zapewnia bardzo elastyczne dynamiczne ciągi znaków. `CTime`, `COleDateTime` `CTimeSpan`, `COleTimeSpan` i reprezentują wartości czasu i daty. Aby uzyskać więcej informacji na temat tych klas, zobacz artykuł [Data i godzina](../atl-mfc-shared/date-and-time.md).
 
-Klasy, które zaczynają się od "`COle`" są encapsulations typów danych dostarczonych przez OLE. Te typy danych może służyć w programach Windows niezależnie od tego, czy są używane inne funkcje OLE.
+Klasy, które zaczynają`COle`się od " " są hermetyzacjami typów danych dostarczanych przez OLE. Te typy danych mogą być używane w programach systemu Windows, niezależnie od tego, czy używane są inne funkcje OLE.
 
 [CStringT, klasa](../atl-mfc-shared/reference/cstringt-class.md)<br/>
-Posiada ciągi znaków.
+Przechowuje ciągi znaków.
 
-[Ctime —](../atl-mfc-shared/reference/ctime-class.md)<br/>
-Przechowuje bezwzględne wartości godziny i daty.
+[Ctime](../atl-mfc-shared/reference/ctime-class.md)<br/>
+Przechowuje bezwzględne wartości czasu i daty.
 
-[COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)<br/>
-Otoka dla typu automatyzacji OLE **data**. Reprezentuje wartości daty i godziny.
+[Coledatetime](../atl-mfc-shared/reference/coledatetime-class.md)<br/>
+Otoka dla typu automatyzacji OLE **DATE**. Reprezentuje wartości daty i godziny.
 
-[CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md)<br/>
-Przechowuje wartości względne datę i godzinę.
+[Ctimespan](../atl-mfc-shared/reference/ctimespan-class.md)<br/>
+Przechowuje względne wartości czasu i daty.
 
-[COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)<br/>
-Posiada względne `COleDateTime` wartości, takich jak różnicę między dwoma `COleDateTime` wartości.
+[Coledatetimespan](../atl-mfc-shared/reference/coledatetimespan-class.md)<br/>
+Przechowuje `COleDateTime` wartości względne, takie `COleDateTime` jak różnica między dwiema wartościami.
 
-[CPoint](../atl-mfc-shared/reference/cpoint-class.md)<br/>
-Przechowują pary współrzędne (x, y).
+[Cpoint](../atl-mfc-shared/reference/cpoint-class.md)<br/>
+Posiada pary współrzędnych (x, y).
 
-[CSize](../atl-mfc-shared/reference/csize-class.md)<br/>
-Przechowuje odległość, położenie względne lub par wartości.
+[Csize](../atl-mfc-shared/reference/csize-class.md)<br/>
+Utrzymuje odległość, względne pozycje lub sparowane wartości.
 
-[CRect](../atl-mfc-shared/reference/crect-class.md)<br/>
-Zawiera współrzędne programu prostokątnych obszarów.
+[Crect](../atl-mfc-shared/reference/crect-class.md)<br/>
+Przechowuje współrzędne obszarów prostokątnych.
 
-[CImageList](../mfc/reference/cimagelist-class.md)<br/>
-Oferuje funkcje Windows listy obrazów. Listy obrazów są używane w kontrolkach listy i kontrolkach drzewa. One może również przechowywanie i archiwizowanie zestaw ten sam rozmiar mapy bitowej.
+[Cimagelist](../mfc/reference/cimagelist-class.md)<br/>
+Udostępnia funkcje listy obrazów systemu Windows. Listy obrazów są używane z formantami listy i formantami drzewa. Mogą być również używane do przechowywania i archiwizowania zestawu map bitowych o tym samym rozmiarze.
 
-[COleVariant](../mfc/reference/colevariant-class.md)<br/>
-Otoka dla typu automatyzacji OLE **VARIANT**. Dane w **VARIANT**s mogą być przechowywane w wielu formatach.
+[Colevariant](../mfc/reference/colevariant-class.md)<br/>
+Otoka dla typu automatyzacji OLE **VARIANT**. Dane w **VARIANT**S mogą być przechowywane w wielu formatach.
 
-[COleCurrency](../mfc/reference/colecurrency-class.md)<br/>
-Otoka dla typu automatyzacji OLE **waluty**, stałoprzecinkowa typ arytmetyczny, z 15 cyfr przed przecinkiem dziesiętnym i 4 cyfr po.
+[Colecurrency](../mfc/reference/colecurrency-class.md)<br/>
+Otoka dla typu automatyzacji OLE **CURRENCY**, typu arytmetycznego o stałym punkcie, z 15 cyframi przed przecinkiem dziesiętnym i 4 cyframi po.
 
 > [!NOTE]
->  `CRect`, `CSize`, i `CPoint` można używać w aplikacjach ATL lub MFC. Ponadto `CStringT` umożliwia niezależną MFC `CString`— takich jak klasy. Aby uzyskać więcej informacji na temat narzędzia udostępnione klas, zobacz [udostępnionego klasy](../atl-mfc-shared/atl-mfc-shared-classes.md).
+> `CRect`, `CSize`i `CPoint` są użyteczne w aplikacjach ATL lub MFC. Ponadto `CStringT` zapewnia klasy -like `CString`niezależne od MFC. Aby uzyskać więcej informacji na temat udostępnionych klas narzędziowych, zobacz [Klasy udostępnione](../atl-mfc-shared/atl-mfc-shared-classes.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../mfc/class-library-overview.md)
+[Przegląd klas](../mfc/class-library-overview.md)

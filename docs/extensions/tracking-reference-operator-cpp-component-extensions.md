@@ -8,36 +8,36 @@ helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-ms.openlocfilehash: ab1b11d3f8d3416a6e9ed345085d63ce86d56010
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ccd31b3e334dc5a4cd2e48b94c9dbe85cf13c16b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181788"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368238"
 ---
 # <a name="tracking-reference-operator-ccli-and-ccx"></a>Operator odwołania śledzenia (C++/CLI i C++/CX)
 
-*Odwołanie śledzące* (`%`) zachowuje się jak zwykłe C++ odwołanie (`&`), z tą różnicą, że gdy obiekt jest przypisany do odwołania śledzącego, licznik odwołań obiektu jest zwiększany.
+*Odwołanie do* `%`śledzenia ( ) zachowuje się jak`&`zwykłe odwołanie C++ ( ), z tą różnicą, że gdy obiekt jest przypisany do odwołania śledzenia, liczba odwołań do obiektu jest zwiększana.
 
 ## <a name="all-platforms"></a>Wszystkie platformy
 
-Odwołanie śledzące ma następujące cechy.
+Odwołanie do śledzenia ma następujące cechy.
 
-- Przypisanie obiektu do odwołania śledzenia powoduje zwiększenie liczby odwołań obiektu.
+- Przypisanie obiektu do odwołania śledzenia powoduje, że liczba odwołań do obiektu ma być zwiększana.
 
-- Odwołanie natywne (`&`) jest wynikiem oddzielenia `*`. Odwołanie śledzące (`%`) jest wynikiem oddzielenia `^`. O ile masz `%` do obiektu, obiekt pozostanie aktywny w pamięci.
+- Odwołanie natywne (`&`) jest wynikiem `*`podczas wyłuskinia . Odwołanie do`%`śledzenia ( ) jest wynikiem `^`wyłuskiwki . Tak długo, jak `%` masz do obiektu, obiekt pozostanie przy życiu w pamięci.
 
-- Operator dostępu do elementu "kropka (`.`)" jest używany w celu uzyskania dostępu do elementu członkowskiego obiektu.
+- Operator dostępu`.`do elementu członkowskiego dot ( ) jest używany do uzyskiwania dostępu do elementu członkowskiego obiektu.
 
-- Odwołania śledzenia są prawidłowe dla typów wartości i uchwytów (na przykład `String^`).
+- Odwołania do śledzenia są prawidłowe dla typów `String^`wartości i uchwytów (na przykład).
 
-- Odwołanie do śledzenia nie może mieć przypisanej wartości null lub **nullptr** . Odwołanie śledzące może zostać ponownie przypisane do innego prawidłowego obiektu tyle razy, ile jest to wymagane.
+- Odwołanie śledzenia nie można przypisać wartości null lub **nullptr.** Odwołanie do śledzenia może zostać ponownie przypisane do innego prawidłowego obiektu tyle razy, ile jest wymagane.
 
-- Nie można użyć odwołania śledzącego jako operatora jednoargumentowego Take-Address.
+- Odwołanie śledzenia nie może służyć jako operator dwuwybierającego adresu.
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-Odwołanie śledzenia zachowuje się jak odwołanie standardowe C++ , z tą różnicą, że procent jest liczony jako odwołanie. Poniższy fragment kodu przedstawia sposób konwersji między typami% i ^:
+Odwołanie śledzenia zachowuje się jak standardowe odwołanie C++, z tą różnicą, że % jest zliczane przez odwołanie. Poniższy fragment kodu pokazuje, jak konwertować między typami % i ^:
 
 ```cpp
 Foo^ spFoo = ref new Foo();
@@ -45,7 +45,7 @@ Foo% srFoo = *spFoo;
 Foo^ spFoo2 = %srFoo;
 ```
 
-Poniższy przykład pokazuje, jak przekazać ^ do funkcji, która pobiera%.
+W poniższym przykładzie pokazano, jak przekazać ^ do funkcji, która przyjmuje %.
 
 ```cpp
 ref class Foo sealed {};
@@ -65,21 +65,21 @@ ref class Foo sealed {};
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
-W C++/CLI można użyć odwołania śledzenia do dojścia w przypadku powiązania z obiektem typu CLR na stertie zebranych elementów bezużytecznych.
+W języku C++/CLI można użyć odwołania śledzenia do dojścia podczas powiązania z obiektem typu CLR na stercie zebranej przez śmieci.
 
-W środowisku CLR wartość zmiennej odwołania śledzenia jest aktualizowana automatycznie za każdym razem, gdy moduł zbierający elementy bezużyteczne przeniesie obiekt, do którego się odwołuje.
+W programie CLR wartość zmiennej referencyjnej śledzenia jest aktualizowana automatycznie za każdym razem, gdy moduł zbierający elementy bezużyteczne przenosi obiekt, do którego istnieje odwołanie.
 
-Odwołanie śledzące można zadeklarować tylko na stosie. Odwołanie śledzące nie może być składową klasy.
+Odwołanie śledzenia można zadeklarować tylko na stosie. Odwołanie śledzenia nie może być członkiem klasy.
 
-Nie jest możliwe posiadanie natywnego C++ odwołania do obiektu na stosie zebranych elementów bezużytecznych.
+Nie jest możliwe, aby mieć natywne odwołanie C++ do obiektu na stercie zebrane przez śmieci.
 
-Aby uzyskać więcej informacji na temat śledzenia C++odwołań w programie/CLI, zobacz:
+Aby uzyskać więcej informacji na temat śledzenia odwołań w języku C++/CLI, zobacz:
 
 - [Instrukcje: korzystanie z odwołań śledzenia w języku C++/interfejsie wiersza polecenia](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
 
 ### <a name="examples"></a>Przykłady
 
-Poniższy przykład dla C++/CLI pokazuje, jak używać odwołania śledzenia z typami natywnymi i zarządzanymi.
+Poniższy przykład dla języka C++/CLI pokazuje, jak używać odwołania śledzenia z typami macierzystymi i zarządzanymi.
 
 ```cpp
 // tracking_reference_1.cpp
@@ -117,7 +117,7 @@ int main() {
 }
 ```
 
-Poniższy przykład dla C++/CLI pokazuje, jak powiązać odwołanie śledzące z tablicą.
+Poniższy przykład dla języka C++/CLI pokazuje, jak powiązać odwołanie śledzenia do tablicy.
 
 ```cpp
 // tracking_reference_2.cpp

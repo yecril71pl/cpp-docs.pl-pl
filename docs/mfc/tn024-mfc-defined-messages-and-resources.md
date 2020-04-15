@@ -1,5 +1,5 @@
 ---
-title: 'TN024: Komunikaty i zasoby zdefiniowane przez MFC'
+title: 'TN024: komunikaty i zasoby zdefiniowane przez MFC'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - resources [MFC]
@@ -7,172 +7,172 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-ms.openlocfilehash: 300819878bd7422dc8f3970493e303aa52346a58
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 24bcacd46b839babe9c9c89facb1cc56d18c0ee5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611435"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370352"
 ---
-# <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: Komunikaty i zasoby zdefiniowane przez MFC
+# <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: komunikaty i zasoby zdefiniowane przez MFC
 
 > [!NOTE]
->  Następująca uwaga techniczna nie został zaktualizowany od pierwszego uwzględnienia jej w dokumentacji online. W rezultacie niektóre procedury i tematy może być nieaktualne lub niepoprawne. Najnowsze informacje zaleca się wyszukać temat w indeksie dokumentacji online.
+> Następująca uwaga techniczna nie została zaktualizowana, ponieważ została po raz pierwszy uwzględniona w dokumentacji online. W rezultacie niektóre procedury i tematy mogą być nieaktualne lub nieprawidłowe. Aby uzyskać najnowsze informacje, zaleca się wyszukicie tematu interesującego w indeksie dokumentacji online.
 
-Ta uwaga opisuje komunikaty wewnętrzne Windows i formatów zasobów używane przez MFC. Tych informacji opisano wdrożenia RAM, a następnie pomoże Ci w debugowaniu aplikacji. Dla żądnemu nawet jeśli te informacje nie jest oficjalnie obsługiwany, można użyć niektóre z tych informacji dla implementacji zaawansowane.
+W tej notatce opisano wewnętrzne komunikaty systemu Windows i formaty zasobów używane przez MFC. Te informacje wyjaśniają implementację struktury i pomogą Ci w debugowaniu aplikacji. Dla przygód, mimo że wszystkie te informacje są oficjalnie nieobsługiwane, można użyć niektórych z tych informacji do zaawansowanych implementacji.
 
-Ta uwaga zawiera szczegółów implementacji prywatnej MFC; Cała zawartość mogą ulec zmianie w przyszłości. Wiadomości Windows MFC mają znaczenie w zakresie tylko jednej aplikacji, ale zmieni się w przyszłości na zawierają komunikaty całego systemu.
+Ta uwaga zawiera szczegóły implementacji prywatnej MFC; wszystkie treści mogą ulec zmianie w przyszłości. Wiadomości mfc prywatnego systemu Windows mają znaczenie tylko w zakresie jednej aplikacji, ale zmieni się w przyszłości, aby zawierać wiadomości całego systemu.
 
-Wiadomości Windows prywatnych zakresu MFC i typów zasobów są w zakresie zastrzeżonych "system" wydzielone Microsoft Windows. Obecnie nie wszystkie liczby w zakresach są używane, a w przyszłości, można użyć nowych numerów w zakresie. Aktualnie używanego numery mogą ulec zmianie.
+Zakres wiadomości i typów zasobów mfc prywatnych systemu Windows znajdują się w zarezerwowanym zakresie "system" odłogowanym przez system Microsoft Windows. Obecnie nie wszystkie liczby w zakresach są używane, a w przyszłości mogą być używane nowe numery w zakresie. Aktualnie używane numery mogą ulec zmianie.
 
-Windows prywatnej MFC, komunikaty są w zakresie 0x360 -> 0x37F.
+Wiadomości mfc prywatnego systemu Windows są w zakresie 0x360->0x37F.
 
-MFC prywatnego zasobu, które typy znajdują się w zakresie 0xF0 -> 0xFF.
+Typy zasobów prywatnych MFC znajdują się w zakresie 0xF0->0xFF.
 
-**Wiadomości Windows prywatne MFC**
+**Prywatne wiadomości systemu Windows MFC**
 
-Te komunikaty Windows są używane zamiast funkcji wirtualnych języka C++, w których jest wymagane stosunkowo luźne powiązanie między obiektami okien i gdy wirtualna funkcja C++ nie jest właściwe.
+Te komunikaty systemu Windows są używane zamiast funkcji wirtualnych języka C++, gdzie stosunkowo luźne sprzężenie jest wymagane między obiektami okna i gdzie funkcja wirtualna języka C++ nie byłaby odpowiednia.
 
-Te wiadomości Windows prywatnych i strukturami skojarzonego parametru są deklarowane w nagłówku prywatnej MFC "AFXPRIV. H ". Wyświetlane ostrzeżenie, znajdujących się w kodzie, który zawiera ten nagłówek może polegać na nieudokumentowane zachowanie i podziału prawdopodobnie będzie w przyszłości wersje biblioteki MFC.
+Te prywatne komunikaty systemu Windows i skojarzone struktury parametrów są deklarowane w prywatnym nagłówku MFC 'AFXPRIV. H'. Ostrzegamy, że dowolny kod, który zawiera ten nagłówek może polegać na nieudokumentowane zachowanie i prawdopodobnie przerwy w przyszłych wersjach MFC.
 
-Rzadkimi przypadkami o konieczności obsługiwać jeden z następujących komunikatów możesz użyć mapy wiadomości ON_MESSAGE — makro i obsłużyć komunikat ogólny format LRESULT/WPARAM/LPARAM.
+W rzadkich przypadkach konieczności obsługi jednego z tych komunikatów, należy użyć makra mapy ON_MESSAGE wiadomości i obsługi wiadomości w ogólnym formacie LRESULT/WPARAM/LPARAM.
 
 **WM_QUERYAFXWNDPROC**
 
-Ten komunikat jest wysyłany do okna, która jest tworzona. To jest wysyłany bardzo wczesnym etapie procesu tworzenia jako sposób określania, czy jest WndProc **AfxWndProc. AfxWndProc** zwraca wartość 1.
+Ta wiadomość jest wysyłana do okna, które jest tworzone. Jest to wysyłane bardzo wcześnie w procesie tworzenia jako metoda określania, czy WndProc jest **AfxWndProc. AfxWndProc** zwraca wartość 1.
 
 |||
 |-|-|
-|wParam|Nieużywane|
-|lParam|Nieużywane|
-|zwraca|1, jeśli przetwarzane przez **AfxWndProc**|
+|Wparam|Nieużywane|
+|Lparam|Nieużywane|
+|zwraca|1 w przypadku przetworzenia przez **AfxWndProc**|
 
 **WM_SIZEPARENT**
 
-Ta wiadomość jest wysyłana przez okno ramek do jego bezpośrednie elementy podrzędne podczas zmiany rozmiaru (`CFrameWnd::OnSize` wywołania `CFrameWnd::RecalcLayout` która wywołuje metodę `CWnd::RepositionBars`) Aby zmienić położenie pasków sterowania całym rogu ramki. Struktura AFX_SIZEPARENTPARAMS zawiera bieżący prostokąt klienta dostępne nadrzędnej i HDWP, (która może być NULL) za pomocą którego można wywołać `DeferWindowPos` zminimalizować odświeżenie.
+Ten komunikat jest wysyłany przez okno ramki do`CFrameWnd::OnSize` `CFrameWnd::RecalcLayout` jego `CWnd::RepositionBars`bezpośrednich obrażeń podczas zmiany rozmiaru (wywołania, które wywołuje), aby zmienić położenie pasków sterowania wokół boku ramki. Struktura AFX_SIZEPARENTPARAMS zawiera bieżący prostokąt klienta dostępnego obiektu nadrzędnego i HDWP (który może `DeferWindowPos` być NULL), z którym można wywołać, aby zminimalizować ponowne malowanie.
 
 |||
 |-|-|
-|wParam|Nieużywane|
-|lParam|Adres struktury AFX_SIZEPARENTPARAMS|
-|zwraca|Nieużywane (0)|
+|Wparam|Nieużywane|
+|Lparam|Adres struktury AFX_SIZEPARENTPARAMS|
+|zwraca|Nieużyno (0)|
 
-Zignorowanie komunikatu wskazuje, czy okno nie uczestniczy w układzie.
+Ignorowanie komunikatu wskazuje, że okno nie bierze udziału w układzie.
 
 **WM_SETMESSAGESTRING**
 
-Ta wiadomość jest wysyłana do okna ramki poprosić, aby zaktualizować wiersz wiadomości w pasku stanu. Identyfikator ciągu lub LPCSTR może być określony (ale nie obu).
+Ta wiadomość jest wysyłana do okna ramki z prośbą o zaktualizowanie wiersza wiadomości na pasku stanu. Można określić identyfikator ciągu lub LPCSTR (ale nie oba).
 
 |||
 |-|-|
-|wParam|Ciąg Identyfikatora (lub zero)|
-|lParam|LPCSTR ciągu (lub wartość NULL)|
-|zwraca|Nieużywane (0)|
+|Wparam|Identyfikator ciągu (lub zero)|
+|Lparam|LPCSTR dla ciągu (lub NULL)|
+|zwraca|Nieużyno (0)|
 
 **WM_IDLEUPDATECMDUI**
 
-Ta wiadomość jest wysyłana w czasie bezczynności do zaimplementowania Aktualizacja czasu bezczynności obsługi interfejsu użytkownika polecenia update. Jeśli okno (zazwyczaj pasek sterowania) obsługuje wiadomości, tworzy `CCmdUI` (lub obiektu klasy pochodnej) i wywołać `CCmdUI::DoUpdate` dla poszczególnych elementów"" w oknie. Z kolei spowoduje to zaewidencjonowanie ON_UPDATE_COMMAND_UI procedury obsługi dla obiektów w łańcuchu program obsługi poleceń.
+Ten komunikat jest wysyłany w czasie bezczynności, aby zaimplementować aktualizację interfejsu użytkownika w czasie bezczynności. Jeśli okno (zwykle pasek sterowania) obsługuje komunikat, `CCmdUI` tworzy obiekt (lub obiekt klasy pochodnej) i wywołać `CCmdUI::DoUpdate` dla każdego z "elementów" w oknie. To z kolei sprawdzić, czy ON_UPDATE_COMMAND_UI obsługi obiektów w łańcuchu obsługi poleceń.
 
 |||
 |-|-|
-|wParam|BOOL bDisableIfNoHandler|
-|lParam|Nieużywane (0)|
-|zwraca|Nieużywane (0)|
+|Wparam|BOOL bDisableIfNoHandler|
+|Lparam|Nieużyno (0)|
+|zwraca|Nieużyno (0)|
 
-*bDisableIfNoHandler* jest różna od zera, można wyłączyć obiektu interfejsu użytkownika w przypadku nieprawidłowego ON_COMMAND ani ON_UPDATE_COMMAND_UI.
+*bDisableIfNoHandler* jest niezerowy, aby wyłączyć obiekt interfejsu użytkownika, jeśli nie ma ani ON_UPDATE_COMMAND_UI ani ON_COMMAND obsługi.
 
 **WM_EXITHELPMODE**
 
-Ta wiadomość zostanie opublikowana do `CFrameWnd` tryb, aby zakończyć działanie kontekstowej pomocy. Odebranie tej wiadomości kończy modalną pętlę uruchomione przez `CFrameWnd::OnContextHelp`.
+Ten komunikat jest `CFrameWnd` publikowany w tym, aby zakończyć kontekstowy tryb pomocy. Odbiór tej wiadomości kończy pętlę modalną rozpoczętą przez `CFrameWnd::OnContextHelp`.
 
 |||
 |-|-|
-|wParam|Nieużywane (0)|
-|lParam|Nieużywane (0)|
+|Wparam|Nieużyno (0)|
+|Lparam|Nieużyno (0)|
 |zwraca|Nieużywane|
 
 **WM_INITIALUPDATE**
 
-Ta wiadomość jest wysyłana przez szablon dokumentu wszystkie elementy podrzędne okna ramki, gdy jest bezpieczne robić ich początkową aktualizacji. Jest on mapowany do wywołania `CView::OnInitialUpdate` , ale mogą być używane w innych `CWnd`-pochodnych klas dla innych jednorazowej aktualizacji.
+Ten komunikat jest wysyłany przez szablon dokumentu do wszystkich elementów podrzędnych okna ramki, gdy jest to bezpieczne dla nich, aby wykonać ich początkowej aktualizacji. Mapuje do wywołania, `CView::OnInitialUpdate` ale może `CWnd`być używany w innych klasy pochodne dla innych aktualizacji one-shot.
 
 |||
 |-|-|
-|wParam|Nieużywane (0)|
-|lParam|Nieużywane (0)|
-|zwraca|Nieużywane (0)|
+|Wparam|Nieużyno (0)|
+|Lparam|Nieużyno (0)|
+|zwraca|Nieużyno (0)|
 
 **WM_RECALCPARENT**
 
-Ta wiadomość jest wysyłana przez widok do okna nadrzędnego (uzyskane za pośrednictwem `GetParent`) aby wymusić ponowne obliczanie układu (zazwyczaj będzie wywoływać nadrzędnego `RecalcLayout`). Służy to w aplikacje serwera OLE gdzie jest to konieczne, dla ramki zwiększanie się rozmiaru, wraz ze wzrostem natężenia łączny rozmiar tego widoku.
+Ta wiadomość jest wysyłana przez widok do `GetParent`okna nadrzędnego (uzyskanego za pośrednictwem), aby `RecalcLayout`wymusić ponowne obliczenie układu (zwykle wywoła to element nadrzędny). Jest to używane w aplikacjach serwera OLE, gdzie jest to konieczne dla ramki do zwiększenia rozmiaru w miarę wzrostu całkowitego rozmiaru widoku.
 
-Jeśli okno nadrzędne przetwarza ten komunikat powinien zwrócić wartość TRUE i wypełnić Prostokąt przekazanej lParam nowy rozmiar obszaru klienckiego. Jest on używany w `CScrollView` kiedy poprawnie obsłużyć paski przewijania (miejsce na zewnątrz okna, gdy zostaną one dodane) obiekt serwera jest aktywowany w miejscu.
+Jeśli okno nadrzędne przetwarza ten komunikat, należy zwrócić wartość TRUE i wypełnić RECT przekazany w lParam nowym rozmiarem obszaru klienta. `CScrollView` Służy do prawidłowego obchodzenia się z paskami przewijania (umieść następnie na zewnątrz okna po dodaniu), gdy obiekt serwera jest aktywowany w miejscu.
 
 |||
 |-|-|
-|wParam|Nieużywane (0)|
-|lParam|RectClient lprect — może mieć wartości NULL|
-|zwraca|Wartość TRUE, jeśli jest to nowy klient prostokąt zwrócone, wartość FALSE w przeciwnym razie|
+|Wparam|Nieużyno (0)|
+|Lparam|LPRECT rectClient, może mieć wartość NULL|
+|zwraca|PRAWDA, jeśli zwrócono nowy prostokąt klienta, FALSE w przeciwnym razie|
 
 **WM_SIZECHILD**
 
-Ta wiadomość jest wysyłana przez `COleResizeBar` do okna właściciela (za pośrednictwem `GetOwner`) po użytkownik zmienia rozmiar pasek z uchwytami zmiany rozmiaru. `COleIPFrameWnd` odpowiada na tę wiadomość, próbując zmienić położenie okno ramowe, ponieważ użytkownik zgłosił żądanie.
+Ten komunikat jest `COleResizeBar` wysyłany przez `GetOwner`do okna właściciela (przez), gdy użytkownik zmienia rozmiar paska zmiany rozmiaru z uchwytami zmiany rozmiaru. `COleIPFrameWnd`odpowiada na ten komunikat, próbując zmienić położenie okna ramki zgodnie z żądaniem użytkownika.
 
-Nowy prostokąt, podane we współrzędnych klienta względem ramki okna, który zawiera pasek zmiany rozmiaru jest wskazywanej przez lParam.
+Nowy prostokąt, podany we współrzędnych klienta względem okna ramki, które zawiera pasek rozmiaru, jest wskazywalny przez lParam.
 
 |||
 |-|-|
-|wParam|Nieużywane (0)|
-|lParam|Lprect — rectNew|
-|zwraca|Nieużywane (0)|
+|Wparam|Nieużyno (0)|
+|Lparam|LPRECT rectNowy|
+|zwraca|Nieużyno (0)|
 
 **WM_DISABLEMODAL**
 
-Ta wiadomość jest wysyłana do wszystkich okien wyskakujących należące do ramki okna, które jest dezaktywowany. Na podstawie wyniku okno ramowe zdecydować, czy należy wyłączyć w oknie podręcznym.
+Ten komunikat jest wysyłany do wszystkich wyskakujących okienek należących do okna ramki, które jest dezaktywowane. Okno ramki używa wyniku, aby określić, czy wyłączyć okno podręczne.
 
-Możesz użyć tego wykonać przetwarzana w specjalny sposób w oknie podręcznym, gdy ramka przechodzi do stanu modalnego lub zapobiec niektórych okien wyskakujących wyłączony. Etykietki narzędzi umożliwiają zniszczyć samodzielnie, gdy okno ramowe przechodzi w stan modalny, na przykład ten komunikat.
+Można użyć tego do wykonywania specjalnego przetwarzania w wyskakującym oknie, gdy ramka wejdzie w stan modalny lub aby niektóre okna podręczne nie zostały wyłączone. Etykietki narzędzi używają tego komunikatu, aby zniszczyć się, gdy okno ramki przechodzi do stanu modalnego, na przykład.
 
 |||
 |-|-|
-|wParam|Nieużywane (0)|
-|lParam|Nieużywane (0)|
-|zwraca|Niezerowa Koniunkcja do **nie** wyłączaj okno, 0 oznacza, zostaną wyłączone okna|
+|Wparam|Nieużyno (0)|
+|Lparam|Nieużyno (0)|
+|zwraca|Non-zero, aby **NIE** wyłączyć okna, 0 wskazuje, że okno zostanie wyłączone|
 
 **WM_FLOATSTATUS**
 
-Ta wiadomość jest wysyłana do wszystkich okien wyskakujących własnością oknem ramki, gdy ramki jest aktywowany lub dezaktywowany przez inne okno ramek najwyższego poziomu. Jest on używany przez implementację MFS_SYNCACTIVE w `CMiniFrameWnd`, aby zachować synchronizację z aktywacji okno ramek najwyższego poziomu aktywacji tych okien wyskakujących.
+Ten komunikat jest wysyłany do wszystkich wyskakujących okienek należących do okna ramki, gdy ramka jest aktywowana lub dezaktywowana przez inne okno ramki najwyższego poziomu. Jest to wykorzystywane przez implementację MFS_SYNCACTIVE `CMiniFrameWnd`w , aby utrzymać aktywację tych wyskakujących okienek zsynchronizowanych z aktywacją okna ramki najwyższego poziomu.
 
 |||
 |-|-|
-|wParam|Jest jednym z następujących wartości:<br /><br /> FS_SHOW<br /><br /> FS_HIDE<br /><br /> FS_ACTIVATE<br /><br /> FS_DEACTIVATE<br /><br /> FS_ENABLEFS_DISABLE<br /><br /> FS_SYNCACTIVE|
-|lParam|Nieużywane (0)|
+|Wparam|Jest jedną z następujących wartości:<br /><br /> FS_SHOW<br /><br /> FS_HIDE<br /><br /> FS_ACTIVATE<br /><br /> FS_DEACTIVATE<br /><br /> FS_ENABLEFS_DISABLE<br /><br /> FS_SYNCACTIVE|
+|Lparam|Nieużyno (0)|
 
-Wartość zwracana powinna być różna od zera jeśli FS_SYNCACTIVE jest ustawiony, synchronizuje okna aktywacji za pomocą nadrzędnej ramki. `CMiniFrameWnd` Zwraca różna od zera, jeśli ustawiono MFS_SYNCACTIVE stylu.
+Zwracana wartość powinna być niezerowa, jeśli jest ustawiona FS_SYNCACTIVE, a okno synchronizuje jego aktywację z ramką nadrzędną. `CMiniFrameWnd`zwraca wartość niezerową, gdy styl jest ustawiony na MFS_SYNCACTIVE.
 
-Aby uzyskać więcej informacji, zobacz wykonania `CMiniFrameWnd`.
+Aby uzyskać więcej informacji, `CMiniFrameWnd`zobacz implementację .
 
-## <a name="wmactivatetoplevel"></a>WM_ACTIVATETOPLEVEL
+## <a name="wm_activatetoplevel"></a>WM_ACTIVATETOPLEVEL
 
-Ten komunikat jest wysyłany do okien najwyższego poziomu, gdy okno w jego "najwyższego poziomu grupy" jest aktywowane lub dezaktywowane. Okno jest częścią grupy najwyższego poziomu jest oknem najwyższego poziomu (nie nadrzędnego lub właściciela), czy jest własnością okno programu. Ten komunikat jest podobnie jak WM_ACTIVATEAPP, ale działa w sytuacjach, w których należących do różnych procesów systemu windows mieszane w jednym oknie hierarchii (często używany w aplikacji OLE).
+Ten komunikat jest wysyłany do okna najwyższego poziomu, gdy okno w "grupie najwyższego poziomu" jest aktywowane lub dezaktywowane. Okno jest częścią grupy najwyższego poziomu, jeśli jest to okno najwyższego poziomu (bez nadrzędnego lub właściciela) lub jest własnością takiego okna. Ten komunikat jest podobny w użyciu do WM_ACTIVATEAPP, ale działa w sytuacjach, gdy okna należące do różnych procesów są mieszane w hierarchii jednego okna (typowe w aplikacjach OLE).
 
-## <a name="wmcommandhelp-wmhelphittest-wmexithelpmode"></a>WM_EXITHELPMODE WM_COMMANDHELP, WM_HELPHITTEST,
+## <a name="wm_commandhelp-wm_helphittest-wm_exithelpmode"></a>WM_COMMANDHELP, WM_HELPHITTEST, WM_EXITHELPMODE
 
-Te komunikaty są używane w implementacji Pomoc kontekstowa. Zapoznaj się [Uwagi techniczne 28](../mfc/tn028-context-sensitive-help-support.md) Aby uzyskać więcej informacji.
+Te komunikaty są używane w implementacji pomocy kontekstowej. Więcej informacji można znaleźć w [notatce technicznej 28.](../mfc/tn028-context-sensitive-help-support.md)
 
-## <a name="mfc-private-resource-formats"></a>Formatów zasobów prywatnych w MFC
+## <a name="mfc-private-resource-formats"></a>Formaty zasobów prywatnych MFC
 
-Obecnie MFC definiuje dwa formaty prywatnego zasobu: Rt_toolbar — i RT_DLGINIT.
+Obecnie MFC definiuje dwa formaty zasobów prywatnych: RT_TOOLBAR i RT_DLGINIT.
 
-## <a name="rttoolbar-resource-format"></a>Rt_toolbar — zasób formatu
+## <a name="rt_toolbar-resource-format"></a>RT_TOOLBAR format zasobu
 
-Pasek narzędzi domyślne, dostarczone przez AppWizard jest oparty na rt_toolbar — zasób niestandardowy, który został wprowadzony w MFC w wersji 4.0. Można edytować tego zasobu za pomocą paska narzędzi edytora.
+Domyślny pasek narzędzi dostarczony przez AppWizard jest oparty na RT_TOOLBAR zasobu niestandardowego, który został wprowadzony w MFC 4.0. Zasób ten można edytować za pomocą edytora paska narzędzi.
 
-## <a name="rtdlginit-resource-format"></a>Format zasobu RT_DLGINIT
+## <a name="rt_dlginit-resource-format"></a>RT_DLGINIT format zasobu
 
-Jednego formatu do prywatnego zasobu MFC jest używane do przechowywania informacji na temat inicjalizacji dodatkowe okna dialogowego. Obejmuje to ciągi początkowej, przechowywane w polu kombi. Format ten zasób nie jest przeznaczony do należy ręcznie edytować, ale są obsługiwane przez Visual C++.
+Jeden format zasobów prywatnych MFC jest używany do przechowywania dodatkowych informacji inicjowania okna dialogowego. Obejmuje to początkowe ciągi przechowywane w polu kombi. Format tego zasobu nie jest przeznaczony do edycji ręcznej, ale jest obsługiwany przez visual C++.
 
-Wizualne C++ i ten zasób RT_DLGINIT nie są wymagane do użycia powiązane funkcje MFC, ponieważ istnieją zamiast interfejsu API, korzystając z informacji w zasobie. Przy użyciu języka Visual C++ sprawia, że jest ona znacznie ułatwia pisanie, obsługa i tłumaczenie aplikację w perspektywie długoterminowej.
+Visual C++ i ten RT_DLGINIT zasób nie są wymagane do korzystania z powiązanych funkcji MFC, ponieważ istnieją alternatywy interfejsu API przy użyciu informacji w zasobie. Za pomocą języka Visual C++ znacznie ułatwia pisanie, obsługa i tłumaczenie aplikacji w dłuższej perspektywie.
 
-Podstawowa struktura zasobów RT_DLGINIT jest następująca:
+Podstawowa struktura zasobu RT_DLGINIT jest następująca:
 
 ```
 +---------------+    \
@@ -189,15 +189,15 @@ Podstawowa struktura zasobów RT_DLGINIT jest następująca:
 +---------------+
 ```
 
-Powtórzony sekcja zawiera identyfikator formantu, który można wysłać komunikatu, komunikat # Wyślij (normalny komunikat Windows) i o zmiennej długości danych. Komunikat Windows są wysyłane w postaci:
+Powtórzona sekcja zawiera identyfikator formantu, do który ma wysłać wiadomość, wiadomość # do wysłania (normalna wiadomość systemu Windows) i zmienną długość danych. Wiadomość systemu Windows jest wysyłana w formularzu:
 
 ```
 SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);
 ```
 
-Jest bardzo ogólny format, dzięki czemu wszystkie Windows wiadomości i zawartość danych. Edytor zasobów Visual C++ i MFC obsługują tylko ograniczonym podzbiorem Windows wiadomości: CB_ADDSTRING dla początkowych opcji lista dla pola kombi (dane to ciąg tekstowy).
+Jest to bardzo ogólny format, umożliwiający wszelkie wiadomości systemu Windows i zawartość danych. Edytor zasobów języka Visual C++ i MFC obsługują tylko ograniczony podzbiór komunikatów systemu Windows: CB_ADDSTRING dla początkowych opcji listy dla pól kombi (dane są ciągiem tekstowym).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

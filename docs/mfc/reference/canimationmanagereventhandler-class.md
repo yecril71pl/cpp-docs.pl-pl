@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CAnimationManagerEventHandler [MFC], OnManagerStatusChanged
 - CAnimationManagerEventHandler [MFC], SetAnimationController
 ms.assetid: 6089ec07-e661-4805-b227-823b4652aade
-ms.openlocfilehash: bd13ba4d0dd60f65372b2c1f51d70d338566301e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: a4e97c2a1188071b5bde0781630d0dfe52e8a72f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916260"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369722"
 ---
 # <a name="canimationmanagereventhandler-class"></a>Klasa CAnimationManagerEventHandler
 
-Implementuje wywołanie zwrotne, które jest wywoływane przez interfejs API animacji, gdy zmieni się stan Menedżera animacji.
+Implementuje wywołanie zwrotne, który jest wywoływany przez interfejs API animacji po zmianie stanu menedżera animacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,13 +43,13 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAnimationManagerEventHandler:: CreateInstance](#createinstance)|Tworzy wystąpienie `CAnimationManagerEventHandler` obiektu.|
-|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|Wywoływana, gdy zmieniono stan Menedżera animacji. (Przesłania `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`).|
-|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Przechowuje wskaźnik do kontrolera animacji, aby skierować zdarzenia.|
+|[CAnimationManagerEventHandler::CreateInstance](#createinstance)|Tworzy wystąpienie `CAnimationManagerEventHandler` obiektu.|
+|[CAnimationManagerEventHandler::OnManagerStatusZmienia](#onmanagerstatuschanged)|Wywoływana po zmianie stanu menedżera animacji. (Przesłania `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`).|
+|[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|Przechowuje wskaźnik do kontrolera animacji do kierowania zdarzeń.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta procedura obsługi zdarzeń jest tworzona i przenoszona do metody IUIAnimationManager:: SetManagerEventHandler, gdy zostanie wywołana CAnimationController:: EnableAnimationManagerEvent.
+Ten program obsługi zdarzeń jest tworzony i przekazywany do metody IUIAnimationManager::SetManagerEventHandler, po wywołaniu CAnimationController::EnableAnimationManagerEvent.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -61,23 +61,23 @@ Ta procedura obsługi zdarzeń jest tworzona i przenoszona do metody IUIAnimatio
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxanimationcontroller. h
+**Nagłówek:** afxanimationcontroller.h
 
-##  <a name="canimationmanagereventhandler"></a>CAnimationManagerEventHandler::CAnimationManagerEventHandler
+## <a name="canimationmanagereventhandlercanimationmanagereventhandler"></a><a name="canimationmanagereventhandler"></a>CAnimationManagerEventHandler::CAnimationManagerEventHandler
 
 Wymagany jest dodatek SP1 dla programu Visual Studio 2010.
 
-Konstruuje obiekt CAnimationManagerEventHandler.
+Konstruuje CAnimationManagerEventHandler obiektu.
 
 ```
 CAnimationManagerEventHandler();
 ```
 
-##  <a name="createinstance"></a>CAnimationManagerEventHandler:: CreateInstance
+## <a name="canimationmanagereventhandlercreateinstance"></a><a name="createinstance"></a>CAnimationManagerEventHandler::CreateInstance
 
 Wymagany jest dodatek SP1 dla programu Visual Studio 2010.
 
-Tworzy wystąpienie obiektu CAnimationManagerEventHandler.
+Tworzy wystąpienie CAnimationManagerEventHandler obiektu.
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -87,21 +87,21 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*pAnimationController*<br/>
-Wskaźnik do kontrolera animacji, który będzie otrzymywał zdarzenia.
+*pKontroleranimacji*<br/>
+Wskaźnik do kontrolera animacji, który będzie odbierał zdarzenia.
 
 *ppManagerEventHandler*<br/>
-Rozdzielczości. Jeśli metoda zakończy się pomyślnie, zawiera wskaźnik do obiektu COM, który będzie obsługiwał aktualizacje stanu do Menedżera animacji.
+Wyjście. Jeśli metoda powiedzie się zawiera wskaźnik do obiektu COM, który będzie obsługiwać aktualizacje stanu do menedżera animacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda się powiedzie, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+Jeśli metoda powiedzie się, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
 
-##  <a name="onmanagerstatuschanged"></a>CAnimationManagerEventHandler::OnManagerStatusChanged
+## <a name="canimationmanagereventhandleronmanagerstatuschanged"></a><a name="onmanagerstatuschanged"></a>CAnimationManagerEventHandler::OnManagerStatusZmienia
 
 Wymagany jest dodatek SP1 dla programu Visual Studio 2010.
 
-Wywoływana, gdy zmieniono stan Menedżera animacji.
+Wywoływana po zmianie stanu menedżera animacji.
 
 ```
 IFACEMETHOD(OnManagerStatusChanged)(
@@ -111,21 +111,21 @@ IFACEMETHOD(OnManagerStatusChanged)(
 
 ### <a name="parameters"></a>Parametry
 
-*newStatus*<br/>
+*nowyStatus*<br/>
 Nowy stan.
 
-*previousStatus*<br/>
+*poprzednistatus*<br/>
 Poprzedni stan.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Bieżąca implementacja zawsze zwraca S_OK;
 
-##  <a name="setanimationcontroller"></a>CAnimationManagerEventHandler::SetAnimationController
+## <a name="canimationmanagereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationManagerEventHandler::SetAnimationController
 
 Wymagany jest dodatek SP1 dla programu Visual Studio 2010.
 
-Przechowuje wskaźnik do kontrolera animacji, aby skierować zdarzenia.
+Przechowuje wskaźnik do kontrolera animacji do kierowania zdarzeń.
 
 ```
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -133,9 +133,9 @@ void SetAnimationController(CAnimationController* pAnimationController);
 
 ### <a name="parameters"></a>Parametry
 
-*pAnimationController*<br/>
-Wskaźnik do kontrolera animacji, który będzie otrzymywał zdarzenia.
+*pKontroleranimacji*<br/>
+Wskaźnik do kontrolera animacji, który będzie odbierał zdarzenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

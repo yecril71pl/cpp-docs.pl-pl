@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonStatusBarPane Class
+title: Klasa CMFCRibbonStatusBarPane
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonStatusBarPane
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-ms.openlocfilehash: 9911672ec139ab1598db8005e9b7b909e85dd33d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 554b9fe364c6a213e038416a605c17cdd4f8e7d9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410079"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368798"
 ---
-# <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane Class
+# <a name="cmfcribbonstatusbarpane-class"></a>Klasa CMFCRibbonStatusBarPane
 
-`CMFCRibbonStatusBarPane` Klasa implementuje element wstążki, który można dodać do paska stanu wstążki.
+Klasa `CMFCRibbonStatusBarPane` implementuje element wstążki, który można dodać do paska stanu wstążki.
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,39 +55,39 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane](#cmfcribbonstatusbarpane)|Tworzy i inicjuje `CMFCRibbonStatusBarPane` obiektu.|
+|[CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane](#cmfcribbonstatusbarpane)|Konstruuje i inicjuje `CMFCRibbonStatusBarPane` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCRibbonStatusBarPane::GetAlmostLargeText](#getalmostlargetext)|Zwraca ciąg, który definiuje najdłuższy ciąg tekstowy, który można wyświetlić w okienku bez obcinania.|
+|[CMFCRibbonStatusBarPane::GetAlmostLargeText](#getalmostlargetext)|Zwraca ciąg definiujący najdłuższy ciąg tekstowy, który może być wyświetlany w okienku bez obcinania.|
 |[CMFCRibbonStatusBarPane::GetTextAlign](#gettextalign)|Zwraca bieżące ustawienie wyrównania tekstu.|
 |[CMFCRibbonStatusBarPane::IsAnimation](#isanimation)|Określa, czy animacja jest w toku.|
-|[CMFCRibbonStatusBarPane::IsExtended](#isextended)|Określa, czy okienka znajduje się w obszarze rozszerzonego paska stanu wstążki.|
-|[CMFCRibbonStatusBarPane::OnDrawBorder](#ondrawborder)|(Przesłania [CMFCRibbonButton::OnDrawBorder](../../mfc/reference/cmfcribbonbutton-class.md#ondrawborder).)|
-|[CMFCRibbonStatusBarPane::OnFillBackground](#onfillbackground)|(Przesłania [CMFCRibbonButton::OnFillBackground](../../mfc/reference/cmfcribbonbutton-class.md#onfillbackground).)|
-|[CMFCRibbonStatusBarPane::SetAlmostLargeText](#setalmostlargetext)|Definiuje najdłuższy ciąg tekstowy, który można wyświetlić w okienku bez obcinania.|
-|[CMFCRibbonStatusBarPane::SetAnimationList](#setanimationlist)|Przypisuje do okienka listy obrazów, który może służyć do animacji.|
-|[CMFCRibbonStatusBarPane::SetTextAlign](#settextalign)|Określa wyrównanie tekstu.|
-|[CMFCRibbonStatusBarPane::StartAnimation](#startanimation)|Powoduje uruchomienie animacji, która jest przypisana do okienka.|
-|[CMFCRibbonStatusBarPane::StopAnimation](#stopanimation)|Zatrzymuje animacji, która jest przypisana do okienka. .|
+|[CMFCRibbonStatusBarPane::Rozszerzenie](#isextended)|Określa, czy okienko znajduje się w rozszerzonym obszarze paska stanu wstążki.|
+|[CMFCRibbonStatusBarPane::OnDrawBorder](#ondrawborder)|(Zastępuje [CMFCRibbonButton::OnDrawBorder](../../mfc/reference/cmfcribbonbutton-class.md#ondrawborder).)|
+|[CMFCRibbonStatusBarPane::OnFillBackground](#onfillbackground)|(Zastępuje [CMFCRibbonButton::OnFillBackground](../../mfc/reference/cmfcribbonbutton-class.md#onfillbackground).)|
+|[CMFCRibbonStatusBarPane::SetAlmostLargeText](#setalmostlargetext)|Definiuje najdłuższy ciąg tekstowy, który może być wyświetlany w okienku bez obcinania.|
+|[CMFCRibbonStatusBarPane::SetAnimationList](#setanimationlist)|Przypisuje do okienka listę obrazów, która może służyć do animacji.|
+|[CMFCRibbonStatusBarPane::SetTextAlign](#settextalign)|Ustawia wyrównanie tekstu.|
+|[CMFCRibbonStatusBarPane::StartAnimation](#startanimation)|Uruchamia animację przypisaną do okienka.|
+|[CMFCRibbonStatusBarPane::StopAnimation](#stopanimation)|Zatrzymuje animację przypisaną do okienka. .|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCRibbonStatusBarPane::OnFinishAnimation](#onfinishanimation)|Wywoływane przez platformę, gdy przestanie animacji, która jest przypisana do okienka.|
+|[CMFCRibbonStatusBarPane::OnFinishAnimation](#onfinishanimation)|Wywoływana przez platformę, gdy animacja, która jest przypisana do okienka zatrzymuje.|
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCRibbonStatusBarPane` klasy. W przykładzie pokazano sposób tworzenia `CMFCRibbonStatusBarPane` obiektu, ustawianie wyrównania tekstu etykiety okienka paska stanu, definiowanie najdłuższy tekstu, które mogą być wyświetlane w okienku paska stanu bez obcinania, Dołącz do okienka paska stanu listy obrazów, który może służyć do każ i rozpoczęcia animacji.
+W poniższym przykładzie pokazano, jak `CMFCRibbonStatusBarPane` używać różnych metod w klasie. W przykładzie pokazano, `CMFCRibbonStatusBarPane` jak skonstruować obiekt, ustawić wyrównanie tekstu etykiety okienka paska stanu, zdefiniować najdłuższy tekst, który może być wyświetlany w okienku paska stanu bez obcinania, dołączyć do paska stanu listę obrazów, które mogą być używane do animacji, i rozpocząć animację.
 
 [!code-cpp[NVC_MFC_RibbonApp#2](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbarpane-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
@@ -99,9 +99,9 @@ Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCRibbonStat
 
 **Nagłówek:** afxribbonstatusbarpane.h
 
-##  <a name="cmfcribbonstatusbarpane"></a>  CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane
+## <a name="cmfcribbonstatusbarpanecmfcribbonstatusbarpane"></a><a name="cmfcribbonstatusbarpane"></a>CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane
 
-Skonstruuj obiekt w okienku paska stanu.
+Konstruuj obiekt okienka na pasku stanu.
 
 ```
 CMFCRibbonStatusBarPane(
@@ -132,36 +132,36 @@ CMFCRibbonStatusBarPane(
 
 ### <a name="parameters"></a>Parametry
 
-*nCmdID*<br/>
-[in] Określa identyfikator polecenia okienka.
+*nCmdID (identyfikator nCmdID)*<br/>
+[w] Określa identyfikator polecenia okienka.
 
-*lpszText*<br/>
-[in] Określa ciąg tekstowy, który będzie wyświetlany w okienku.
+*lpszText (tekst)*<br/>
+[w] Określa ciąg tekstowy, który ma być wyświetlany w okienku.
 
-*bIsStatic*<br/>
-[in] W przypadku opcji TRUE w okienku stanu nie wyróżnione lub wybrane, klikając go.
+*bJsStatic*<br/>
+[w] Jeśli prawda, nie można wyróżnić ani wybrać okienka stanu, klikając go.
 
-*hIcon*<br/>
-[in] Określa dojścia do ikony, który będzie wyświetlany w okienku.
+*hIcon (własówce)*<br/>
+[w] Określa uchwyt do ikony, która ma być wyświetlana w okienku.
 
 *lpszAlmostLargeText*<br/>
-[in] Określa najdłuższy ciąg tekstowy, który można wyświetlić w okienku.
+[w] Określa najdłuższy ciąg tekstowy, który może być wyświetlany w okienku.
 
-*hBmpAnimationList*<br/>
-[in] Określa dojścia do listy obrazów, który jest używany podczas tworzenia animacji.
+*lista zwierząt hBmp*<br/>
+[w] Określa dojście do listy obrazów, która jest używana do animacji.
 
-*cxAnimation*<br/>
-[in] Określa szerokość w pikselach, ikony na liście obrazu, który jest używany podczas tworzenia animacji.
+*cxAnimacja*<br/>
+[w] Określa szerokość w pikselach ikony na liście obrazów używanej do animacji.
 
-*clrTrnsp*<br/>
-[in] Określa przezroczysty kolor obrazów z listy obrazów, które są używane podczas tworzenia animacji.
+*clrTrnsp (clrTrnsp)*<br/>
+[w] Określa przezroczysty kolor obrazów na liście obrazów, które są używane do animacji.
 
 *uiAnimationListResID*<br/>
-[in] Określa identyfikator zasobu, listy obrazów, który jest używany podczas tworzenia animacji.
+[w] Określa identyfikator zasobu listy obrazów, która jest używana do animacji.
 
-##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText
+## <a name="cmfcribbonstatusbarpanegetalmostlargetext"></a><a name="getalmostlargetext"></a>CMFCRibbonStatusBarPane::GetAlmostLargeText
 
-Pobiera najdłuższy ciąg tekstowy, który można wyświetlić w okienku paska stanu.
+Pobiera najdłuższy ciąg tekstowy, który może być wyświetlany w okienku paska stanu.
 
 ```
 LPCTSTR GetAlmostLargeText() const;
@@ -169,11 +169,11 @@ LPCTSTR GetAlmostLargeText() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Najdłuższy ciąg tekstowy, który można wyświetlić w okienku paska stanu.
+Najdłuższy ciąg tekstowy, który może być wyświetlany w okienku paska stanu.
 
-##  <a name="gettextalign"></a>  CMFCRibbonStatusBarPane::GetTextAlign
+## <a name="cmfcribbonstatusbarpanegettextalign"></a><a name="gettextalign"></a>CMFCRibbonStatusBarPane::GetTextAlign
 
-Pobiera bieżące ustawienie wyrównania tekstu etykiety okienka paska stanu.
+Pobiera bieżące ustawienie wyrównanie tekstu etykiety okienka paska stanu.
 
 ```
 int GetTextAlign() const;
@@ -181,7 +181,7 @@ int GetTextAlign() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bieżący wyrównanie tekstu, który może być jednym z następujących czynności:
+Bieżące wyrównanie tekstu, które może być jedną z następujących czynności:
 
 - TA_LEFT
 
@@ -189,7 +189,7 @@ Bieżący wyrównanie tekstu, który może być jednym z następujących czynno�
 
 - TA_RIGHT.
 
-##  <a name="isanimation"></a>  CMFCRibbonStatusBarPane::IsAnimation
+## <a name="cmfcribbonstatusbarpaneisanimation"></a><a name="isanimation"></a>CMFCRibbonStatusBarPane::IsAnimation
 
 Określa, czy animacja jest w toku.
 
@@ -199,11 +199,11 @@ BOOL IsAnimation() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli animacji jest w toku; Wartość FALSE w przeciwnym razie.
+PRAWDA, jeśli animacja jest w toku; FAŁSZ inaczej.
 
-##  <a name="isextended"></a>  CMFCRibbonStatusBarPane::IsExtended
+## <a name="cmfcribbonstatusbarpaneisextended"></a><a name="isextended"></a>CMFCRibbonStatusBarPane::Rozszerzenie
 
-Ustal, czy okienka znajduje się w obszarze rozszerzonego paska stanu wstążki.
+Określ, czy okienko znajduje się w rozszerzonym obszarze paska stanu wstążki.
 
 ```
 BOOL IsExtended() const;
@@ -211,11 +211,11 @@ BOOL IsExtended() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli okienko znajduje się w stanie rozszerzonej powierzchni paska. Wartość FALSE w przeciwnym razie.
+PRAWDA, jeśli okienko znajduje się na pasku stanu rozszerzonym obszarze. FAŁSZ inaczej.
 
-##  <a name="ondrawborder"></a>  CMFCRibbonStatusBarPane::OnDrawBorder
+## <a name="cmfcribbonstatusbarpaneondrawborder"></a><a name="ondrawborder"></a>CMFCRibbonStatusBarPane::OnDrawBorder
 
-Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.
+Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w folderze **vc\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
 
 ```
 virtual void OnDrawBorder(CDC*);
@@ -223,13 +223,13 @@ virtual void OnDrawBorder(CDC*);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *Przechwytywania zmian danych&#42;*<br/>
+[w] *&#42;CDC*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onfillbackground"></a>  CMFCRibbonStatusBarPane::OnFillBackground
+## <a name="cmfcribbonstatusbarpaneonfillbackground"></a><a name="onfillbackground"></a>CMFCRibbonStatusBarPane::OnFillBackground
 
-Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.
+Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w folderze **vc\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
 
 ```
 virtual COLORREF OnFillBackground(CDC* pDC);
@@ -237,15 +237,15 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
+[w] *pDC*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onfinishanimation"></a>  CMFCRibbonStatusBarPane::OnFinishAnimation
+## <a name="cmfcribbonstatusbarpaneonfinishanimation"></a><a name="onfinishanimation"></a>CMFCRibbonStatusBarPane::OnFinishAnimation
 
-Platforma wywołuje tę metodę, po zakończeniu animacji, która jest przypisana do okienka.
+Framework wywołuje tę metodę, gdy animacja, która jest przypisana do okienka kończy.
 
 ```
 virtual void OnFinishAnimation();
@@ -253,11 +253,11 @@ virtual void OnFinishAnimation();
 
 ### <a name="remarks"></a>Uwagi
 
-`StopAnimation` metoda wywołuje metodę `OnFinishAnimation` metody, która służy do czyszczenia danych, po zakończeniu animacji.
+`StopAnimation`metoda wywołuje `OnFinishAnimation` metodę, której można użyć do oczyszczenia danych po zakończeniu animacji.
 
-##  <a name="setalmostlargetext"></a>  CMFCRibbonStatusBarPane::SetAlmostLargeText
+## <a name="cmfcribbonstatusbarpanesetalmostlargetext"></a><a name="setalmostlargetext"></a>CMFCRibbonStatusBarPane::SetAlmostLargeText
 
-Definiowanie najdłuższy tekstu, które mogą być wyświetlane w okienku paska stanu bez obcinania.
+Zdefiniuj najdłuższy tekst, który może być wyświetlany w okienku paska stanu bez obcinania.
 
 ```
 void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
@@ -266,15 +266,15 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ### <a name="parameters"></a>Parametry
 
 *lpszAlmostLargeText*<br/>
-[in] Określa najdłuższy parametry, z których mogą być wyświetlane w okienku paska stanu bez obcinania.
+[w] Określa najdłuższy ciąg, który może być wyświetlany na pasku stanu bez obcinania.
 
 ### <a name="remarks"></a>Uwagi
 
-Biblioteka oblicza rozmiar tekstu, *lpszAlmostLargeText* określa i w związku z tym zmienia rozmiar okienka. Jeśli nadal nie mieszczą się w okienku, tekst zostanie obcięta.
+Biblioteka oblicza rozmiar tekstu, który *lpszAlmostLargeText* określa i odpowiednio rozmiary okienka. Tekst zostanie obcięty, jeśli nadal nie mieści się w okienku.
 
-##  <a name="setanimationlist"></a>  CMFCRibbonStatusBarPane::SetAnimationList
+## <a name="cmfcribbonstatusbarpanesetanimationlist"></a><a name="setanimationlist"></a>CMFCRibbonStatusBarPane::SetAnimationList
 
-Dołącza do okienka paska stanu listy obrazów, który może służyć do animacji.
+Dołącza do okienka paska stanu listę obrazów, która może służyć do animacji.
 
 ```
 void SetAnimationList(
@@ -290,25 +290,25 @@ BOOL SetAnimationList(
 
 ### <a name="parameters"></a>Parametry
 
-*hBmpAnimationList*<br/>
-[in] Określa dojścia do listy obrazów.
+*lista zwierząt hBmp*<br/>
+[w] Określa dojście do listy obrazów.
 
-*cxAnimation*<br/>
-[in] Określa szerokość w pikselach, ramkę z listy obrazów.
+*cxAnimacja*<br/>
+[w] Określa szerokość ramki na liście obrazów w pikselach.
 
-*clrTransp*<br/>
-[in] Określa przezroczysty kolor listy obrazów.
+*clrTransp (tłumaczenie kl./s)*<br/>
+[w] Określa przezroczysty kolor listy obrazów.
 
 *uiAnimationListResID*<br/>
-[in] Określa identyfikator zasobu listy obrazów.
+[w] Określa identyfikator zasobu listy obrazów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli dołączone do okienka paska stanu; listy obrazów Wartość FALSE w przeciwnym razie.
+PRAWDA, jeśli lista obrazów została pomyślnie dołączona do okienka paska stanu; FAŁSZ inaczej.
 
-##  <a name="settextalign"></a>  CMFCRibbonStatusBarPane::SetTextAlign
+## <a name="cmfcribbonstatusbarpanesettextalign"></a><a name="settextalign"></a>CMFCRibbonStatusBarPane::SetTextAlign
 
-Określa wyrównanie tekstu w etykiecie w okienku paska stanu.
+Ustawia wyrównanie tekstu etykiety okienka paska stanu.
 
 ```
 void SetTextAlign(int nAlign);
@@ -316,22 +316,22 @@ void SetTextAlign(int nAlign);
 
 ### <a name="parameters"></a>Parametry
 
-*nAlign*<br/>
-[in] Określa wyrównanie tekstu.
+*nZłańczyć*<br/>
+[w] Określa wyrównanie tekstu.
 
 ### <a name="remarks"></a>Uwagi
 
 *nAlign* może mieć jedną z następujących wartości:
 
-- TA_LEFT: wyrównanie do lewej
+- TA_LEFT: wyrównanie w lewo
 
-- TA_CENTER: wyrównanie do środka
+- TA_CENTER: wyrównanie środka
 
-- TA_RIGHT: wyrównanie do prawej
+- TA_RIGHT: wyrównanie w prawo
 
-##  <a name="startanimation"></a>  CMFCRibbonStatusBarPane::StartAnimation
+## <a name="cmfcribbonstatusbarpanestartanimation"></a><a name="startanimation"></a>CMFCRibbonStatusBarPane::StartAnimation
 
-Uruchamia animacji, które można przypisać do okienka.
+Uruchamia animację przypisaną do okienka.
 
 ```
 void StartAnimation(
@@ -341,25 +341,25 @@ void StartAnimation(
 
 ### <a name="parameters"></a>Parametry
 
-*nFrameDelay*<br/>
-[in] Określa szybkość odtwarzania animacji, w milisekundach.
+*nFrameDelay ( nFrameDelay )*<br/>
+[w] Określa liczbę klatek na sekundę animacji w milisekundach.
 
 *nDuration*<br/>
-[in] Określa, jak długo można odtwarzać animację, w milisekundach. Użyj wartości -1 dla wejścia w nieskończoną pętlę.
+[w] Określa, jak długo animacja ma być odtwarzana w milisekundach. Użyj -1 dla nieskończonej pętli.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy określić dojście do listy obrazów przed wywołaniem `StartAnimation` przy użyciu `SetAnimationList`.
+Przed wywołaniem `StartAnimation` za pomocą programu `SetAnimationList`.
 
-##  <a name="stopanimation"></a>  CMFCRibbonStatusBarPane::StopAnimation
+## <a name="cmfcribbonstatusbarpanestopanimation"></a><a name="stopanimation"></a>CMFCRibbonStatusBarPane::StopAnimation
 
-Zatrzymuje animacji, która została przypisana do okienka paska stanu.
+Zatrzymuje animację przypisaną do okienka paska stanu.
 
 ```
 void StopAnimation();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

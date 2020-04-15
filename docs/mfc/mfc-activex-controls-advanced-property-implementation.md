@@ -1,77 +1,77 @@
 ---
-title: 'Kontrolki ActiveX MFC: Implementacja właściwości zaawansowanych'
+title: 'Kontrolki ActiveX MFC: implementacja właściwości zaawansowanych'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-ms.openlocfilehash: 438c95c56961cc587b64e494678ade191f18ab6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4f1265e6540e9f84bdb680e7948a4e308d31bb0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392807"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364648"
 ---
-# <a name="mfc-activex-controls-advanced-property-implementation"></a>Kontrolki ActiveX MFC: Implementacja właściwości zaawansowanych
+# <a name="mfc-activex-controls-advanced-property-implementation"></a>Kontrolki ActiveX MFC: implementacja właściwości zaawansowanych
 
-W tym artykule opisano tematy związane z implementacją zaawansowane właściwości formantu ActiveX.
+W tym artykule opisano tematy związane z implementowanie właściwości zaawansowanych w formancie ActiveX.
 
 >[!IMPORTANT]
-> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które zastępują ActiveX zobacz [formantów ActiveX](activex-controls.md).
+> ActiveX to starsza technologia, która nie powinna być używana do nowego rozwoju. Aby uzyskać więcej informacji na temat nowoczesnych technologii, które zastępują ActiveX, zobacz [ActiveX Controls](activex-controls.md).
 
 - [Właściwości tylko do odczytu i tylko do zapisu](#_core_read2donly_and_write2donly_properties)
 
-- [Zwracanie kodów błędów z właściwością](#_core_returning_error_codes_from_a_property)
+- [Zwracanie kodów błędów z właściwości](#_core_returning_error_codes_from_a_property)
 
-##  <a name="_core_read2donly_and_write2donly_properties"></a> Właściwości tylko do odczytu i tylko do zapisu
+## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a>Właściwości tylko do odczytu i tylko do zapisu
 
-Kreator dodawania właściwości zapewnia szybki i łatwy sposób zaimplementować właściwości tylko do odczytu lub tylko do zapisu dla formantu.
+Kreator dodawania właściwości zapewnia szybką i łatwą metodę implementowania właściwości tylko do odczytu lub tylko do zapisu dla formantu.
 
-#### <a name="to-implement-a-read-only-or-write-only-property"></a>Aby zaimplementować właściwości tylko do odczytu lub tylko do zapisu
+#### <a name="to-implement-a-read-only-or-write-only-property"></a>Aby zaimplementować właściwość tylko do odczytu lub tylko do zapisu
 
 1. Załaduj projekt formantu.
 
-1. W widoku klas rozwiń węzeł biblioteki kontrolki.
+1. W widoku klasy rozwiń węzeł biblioteki formantu.
 
-1. Kliknij prawym przyciskiem myszy węzeł interfejsu dla kontrolki (drugi węzeł węzła biblioteki), aby otworzyć menu skrótów.
+1. Kliknij prawym przyciskiem myszy węzeł interfejsu formantu (drugi węzeł węzła biblioteki), aby otworzyć menu skrótów.
 
-1. W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodaj właściwość**.
+1. W menu skrótów kliknij polecenie **Dodaj,** a następnie kliknij pozycję **Dodaj właściwość**.
 
-   Spowoduje to otwarcie [Kreator dodawania właściwości](../ide/names-add-property-wizard.md).
+   Spowoduje to otwarcie [Kreatora dodawania właściwości](../ide/names-add-property-wizard.md).
 
-1. W **nazwa właściwości** wpisz nazwę właściwości.
+1. W polu **Nazwa właściwości** wpisz nazwę właściwości.
 
-1. Aby uzyskać **typ implementacji**, kliknij przycisk **metod Get/Set**.
+1. W przypadku **typu implementacji**kliknij pozycję **Pobierz/Ustaw metody**.
 
-1. W **typ właściwości** wybierz odpowiedniego typu właściwości.
+1. W polu **Typ właściwości** wybierz odpowiedni typ właściwości.
 
-1. Jeśli chcesz, aby właściwość tylko do odczytu, wyczyść nazwą zestawu funkcji. Jeśli chcesz, aby właściwość tylko do zapisu, wyczyść nazwę funkcji Get.
+1. Jeśli chcesz właściwość tylko do odczytu, wyczyść nazwę funkcji Ustaw. Jeśli chcesz właściwość tylko do zapisu, wyczyść nazwę funkcji Pobierz.
 
-9. Kliknij przycisk **Zakończ**.
+1. Kliknij przycisk **Zakończ**.
 
-Gdy to zrobisz, Kreator dodawania właściwości Wstawia funkcję `SetNotSupported` lub `GetNotSupported` we wpisie mapy wysyłania zamiast normalnego ustawić lub pobrać funkcji.
+Po wykonaniu tej czynności Kreator dodawania `SetNotSupported` właściwości `GetNotSupported` wstawia funkcję lub wpis mapy wysyłki zamiast normalnej funkcji Set lub Get.
 
-Jeśli chcesz zmienić istniejącą właściwość jako tylko do odczytu lub tylko do zapisu, można ręcznie edytować Mapa wysyłania i usunąć niepotrzebne funkcji Set lub Get z klasy formantu.
+Jeśli chcesz zmienić istniejącą właściwość jako tylko do odczytu lub tylko do zapisu, możesz ręcznie edytować mapę wysyłki i usunąć niepotrzebną funkcję Set lub Get z klasy kontrolnej.
 
-Jeśli chcesz, aby właściwość, która ma być warunkowo tylko do odczytu lub tylko do zapisu (na przykład tylko wtedy, gdy formant działa w określonym trybie), można zapewniają taką funkcję Set lub Get, jak normalne i wywoływać `SetNotSupported` lub `GetNotSupported` funkcji, gdzie jest to odpowiednie. Na przykład:
+Jeśli chcesz, aby właściwość była warunkowo tylko do odczytu lub tylko do zapisu (na przykład tylko wtedy, gdy formant `SetNotSupported` działa `GetNotSupported` w określonym trybie), można podać Set or Get funkcji, jak zwykle i wywołać lub funkcji, w stosownych przypadkach. Przykład:
 
 [!code-cpp[NVC_MFC_AxUI#29](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-property-implementation_1.cpp)]
 
-Ten przykładowy kod wywołuje `SetNotSupported` Jeśli `m_bReadOnlyMode` element członkowski danych jest **TRUE**. Jeśli **FALSE**, a następnie dla właściwości ustawiono nową wartość.
+Ten przykładowy `SetNotSupported` kod `m_bReadOnlyMode` wywołuje, jeśli element członkowski danych ma **wartość PRAWDA**. Jeśli **FALSE**, a następnie właściwość jest ustawiona na nową wartość.
 
-##  <a name="_core_returning_error_codes_from_a_property"></a> Zwracanie kodów błędów z właściwością
+## <a name="returning-error-codes-from-a-property"></a><a name="_core_returning_error_codes_from_a_property"></a>Zwracanie kodów błędów z właściwości
 
-Aby wskazać, że wystąpił błąd podczas próby pobrania lub ustawienia właściwości, należy użyć `COleControl::ThrowError` funkcji, która przyjmuje SCODE (kod stanu), jako parametr. Można użyć wstępnie zdefiniowanych SCODE lub zdefiniować własny. Aby uzyskać listę wstępnie zdefiniowanych SCODEs i instrukcje dotyczące definiowania SCODEs niestandardowych, zobacz [obsługi błędów w tym formancie ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) w kontrolkach ActiveX artykułu: Tematy zaawansowane.
+Aby wskazać, że wystąpił błąd podczas próby uzyskania lub `COleControl::ThrowError` ustawić właściwość, należy użyć funkcji, która przyjmuje SCODE (kod stanu) jako parametr. Można użyć wstępnie zdefiniowanego kodu SCODE lub zdefiniować jeden z własnych. Aby uzyskać listę wstępnie zdefiniowanych scodees i instrukcje dotyczące definiowania niestandardowych SCODEs, zobacz [Obsługi błędów w Formancie ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) w artykule ActiveX kontroli: Tematy zaawansowane.
 
-Funkcje pomocnicze istnieje dla najbardziej typowych predefiniowanymi SCODEs, takimi jak [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), i [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
+Funkcje pomocnika istnieją dla najpopularniejszych wstępnie zdefiniowanych SCODE, takich jak [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported)i [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
 
 > [!NOTE]
->  `ThrowError` jest przeznaczona do użycia wyłącznie jako środek zwróci błąd z w ramach właściwości Get lub Set funkcja lub metoda automatyzacji. Są to tylko razy, które będą znajdować się program obsługi wyjątków odpowiednie znajduje się na stosie.
+> `ThrowError`jest przeznaczony do użycia tylko jako środek zwracania błędu z wewnątrz właściwości Get lub Set funkcji lub metody automatyzacji. Są to tylko razy, że odpowiedni program obsługi wyjątków będzie obecny na stosie.
 
-Aby uzyskać więcej informacji na temat raportowania wyjątków w innych obszarach kodu, zobacz [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) oraz sekcję [obsługi błędów w tym formancie ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) w artykule kontrolek ActiveX: Tematy zaawansowane.
+Aby uzyskać więcej informacji na temat raportowania wyjątków w innych obszarach kodu, zobacz [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) i sekcji [Obsługi błędów w formancie ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) w artykule ActiveX Controls: Advanced Topics.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
 [Kontrolki ActiveX MFC: właściwości](../mfc/mfc-activex-controls-properties.md)<br/>

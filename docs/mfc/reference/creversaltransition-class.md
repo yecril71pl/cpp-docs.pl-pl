@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CReversalTransition [MFC], Create
 - CReversalTransition [MFC], m_duration
 ms.assetid: e89516be-2d07-4885-95a8-fc278f46e3ad
-ms.openlocfilehash: 4bd60ca13ff4a162ddd674e271291a1a3f09a856
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73d12fb6bbaefcfac1437248ebe11f3a5c24c45b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372130"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368316"
 ---
 # <a name="creversaltransition-class"></a>Klasa CReversalTransition
 
-Hermetyzuje odwrotne przejścia.
+Hermetyzuje przejście odwrócenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,13 +35,13 @@ class CReversalTransition : public CBaseTransition;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CReversalTransition::CReversalTransition](#creversaltransition)|Tworzy obiekt odwrotne przejścia i inicjuje jego czas trwania.|
+|[CReversalTransition::CReversalTransition](#creversaltransition)|Konstruuje obiekt przejścia odwrócenia i inicjuje jego czas trwania.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CReversalTransition::Create](#create)|Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM. (Przesłania [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CReversalTransition::Tworzenie](#create)|Wywołuje bibliotekę przejściową w celu utworzenia zhermetyzowanego obiektu COM przejścia. (Zastępuje [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
@@ -51,23 +51,23 @@ class CReversalTransition : public CBaseTransition;
 
 ## <a name="remarks"></a>Uwagi
 
-Odwrotne przejścia płynnie zmiany kierunku w danym czasie trwania. Końcowa wartość będzie taka sama jak wartość początkową i prędkość końcowa jest negacją prędkości początkowej. Ponieważ wszystkie przejścia są automatycznie czyszczone, zaleca się ich przydzielone za pomocą nowego operatora. Zhermetyzowanego obiektu IUIAnimationTransition COM przy utworzono CAnimationController::AnimateGroup, aż do, a następnie ma wartość NULL. Zmienianie zmiennych składowych, po tworzenie ten obiekt COM nie ma wpływu.
+Przejście odwrócenia płynnie zmienia kierunek w danym czasie trwania. Wartość końcowa będzie taka sama jak wartość początkowa, a prędkość końcowa będzie ujemna od prędkości początkowej. Ponieważ wszystkie przejścia są czyszczone automatycznie, zaleca się przydzielenie ich przy użyciu nowego operatora. Zhermetyzowany obiekt COM IUIAnimationTransition jest tworzony przez CAnimationController::AnimateGroup, do tego czasu jest null. Zmiana zmiennych członkowskich po utworzeniu tego obiektu COM nie ma wpływu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[CBaseTransition (Transport baz)](../../mfc/reference/cbasetransition-class.md)
 
-[CReversalTransition](../../mfc/reference/creversaltransition-class.md)
+[CReversalTransition (Polski)](../../mfc/reference/creversaltransition-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** afxanimationcontroller.h
 
-##  <a name="create"></a>  CReversalTransition::Create
+## <a name="creversaltransitioncreate"></a><a name="create"></a>CReversalTransition::Tworzenie
 
-Wywołania biblioteki przejścia do utworzenia obiektu zhermetyzowany przejścia COM.
+Wywołuje bibliotekę przejściową w celu utworzenia zhermetyzowanego obiektu COM przejścia.
 
 ```
 virtual BOOL Create(
@@ -77,16 +77,16 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*pLibrary*<br/>
-Wskaźnik do przejścia biblioteki, która jest odpowiedzialna za tworzenie standardowego przejścia.
+*pBrabrary*<br/>
+Wskaźnik do biblioteki przejścia, który jest odpowiedzialny za tworzenie standardowych przejść.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli przejście został utworzony pomyślnie; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli przejście zostanie utworzone pomyślnie; w przeciwnym razie FALSE.
 
-##  <a name="creversaltransition"></a>  CReversalTransition::CReversalTransition
+## <a name="creversaltransitioncreversaltransition"></a><a name="creversaltransition"></a>CReversalTransition::CReversalTransition
 
-Tworzy obiekt odwrotne przejścia i inicjuje jego czas trwania.
+Konstruuje obiekt przejścia odwrócenia i inicjuje jego czas trwania.
 
 ```
 CReversalTransition(UI_ANIMATION_SECONDS duration);
@@ -94,10 +94,10 @@ CReversalTransition(UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>Parametry
 
-*Czas trwania*<br/>
+*Długość*<br/>
 Czas trwania przejścia.
 
-##  <a name="m_duration"></a>  CReversalTransition::m_duration
+## <a name="creversaltransitionm_duration"></a><a name="m_duration"></a>CReversalTransition::m_duration
 
 Czas trwania przejścia.
 
@@ -105,6 +105,6 @@ Czas trwania przejścia.
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

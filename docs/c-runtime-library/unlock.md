@@ -23,19 +23,19 @@ helpviewer_keywords:
 - unlock function
 - _unlock function
 ms.assetid: 2eda2507-a134-4997-aa12-f2f8cb319e14
-ms.openlocfilehash: 5535b19a2419bf58f22bc39d87fc615c19265cd4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 185cb1e5f582fd5eeb1dbcb337c402319ab78f00
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957261"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365684"
 ---
 # <a name="_unlock"></a>_unlock
 
-Zwalnia blokadę wielowątkowości.
+Zwalnia blokadę wielowątkową.
 
 > [!IMPORTANT]
->  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest on dostępny w CRT.
+> Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest dostępna w CRT.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,14 +47,14 @@ void __cdecl _unlock(
 
 #### <a name="parameters"></a>Parametry
 
-*locknum*<br/>
-podczas Identyfikator blokady do wydania.
+*locknum ( locknum )*<br/>
+[w] Identyfikator blokady do zwolnienia.
 
 ## <a name="requirements"></a>Wymagania
 
-**Źródło:** MLOCK. c
+**Źródło:** mlock.c
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [_lock](../c-runtime-library/lock.md)

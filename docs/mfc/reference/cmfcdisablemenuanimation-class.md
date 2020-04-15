@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-ms.openlocfilehash: bf8c598e9e105569e0a5676267e205b3d3939712
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 990f41d2dfa6491d246797322ee275c9648d52a9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345607"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367568"
 ---
 # <a name="cmfcdisablemenuanimation-class"></a>Klasa CMFCDisableMenuAnimation
 
-Wyłącza menu podręcznego animacji.
+Wyłącza animację menu podręcznego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,15 +32,15 @@ class CMFCDisableMenuAnimation
 |||
 |-|-|
 |Nazwa|Opis|
-|`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|Konstruuje `CMFCDisableMenuAnimation` obiektu.|
-|`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|Destruktor.|
+|`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|Konstruuje `CMFCDisableMenuAnimation` obiekt.|
+|`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|Destruktora.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |||
 |-|-|
 |Nazwa|Opis|
-|[CMFCDisableMenuAnimation::Restore](#restore)|Przywraca poprzedniej animacji, używany w ramach do wyświetlenia menu podręcznego.|
+|[CMFCDisableMenuAnimation::Przywróć](#restore)|Przywraca poprzednią animację, która jest używana przez strukturę do wyświetlania menu podręcznego.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
@@ -51,15 +51,15 @@ class CMFCDisableMenuAnimation
 
 ### <a name="remarks"></a>Uwagi
 
-Aby tymczasowo wyłączyć menu podręcznego animacji (na przykład podczas przetwarzania polecenia za pomocą klawiatury lub myszy), należy użyć tej klasy pomocnika.
+Ta klasa pomocnika służy do tymczasowego wyłączania animacji menu podręcznego (na przykład podczas przetwarzania poleceń myszy lub klawiatury).
 
-Element `CMFCDisableMenuAnimation` obiektu wyłącza menu podręcznego animacji jego okres istnienia. Konstruktor przechowuje bieżącego typu animacji menu podręczne w `m_animType` pola i ustawia typ bieżącego animacji `CMFCPopupMenu::NO_ANIMATION`. Destruktor przywraca poprzedni typ animacji.
+Obiekt `CMFCDisableMenuAnimation` wyłącza animację menu podręcznego w okresie jego istnienia. Konstruktor przechowuje bieżący typ animacji `m_animType` menu podręcznego w `CMFCPopupMenu::NO_ANIMATION`polu i ustawia bieżący typ animacji na . Destruktor przywraca poprzedni typ animacji.
 
-Możesz utworzyć `CMFCDisableMenuAnimation` obiektów na stosie, aby wyłączyć menu podręcznego animacji w jednej funkcji. Jeśli chcesz wyłączyć animację menu podręcznego między funkcjami, Utwórz `CMFCDisableMenuAnimation` obiektów na stercie, a następnie usuń ją, gdy chcesz wykonać przywrócenie menu podręcznego animacji.
+Można utworzyć `CMFCDisableMenuAnimation` obiekt na stosie, aby wyłączyć animację menu podręcznego w jednej funkcji. Jeśli chcesz wyłączyć animację menu podręcznego `CMFCDisableMenuAnimation` między funkcjami, utwórz obiekt na stercie, a następnie usuń go, gdy chcesz przywrócić animację menu podręcznego.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia sposób korzystania ze stosu, aby tymczasowo wyłączyć menu animacji.
+W poniższym przykładzie pokazano, jak za pomocą stosu tymczasowo wyłączyć animację menu.
 
 [!code-cpp[NVC_MFC_Misc#1](../../mfc/reference/codesnippet/cpp/cmfcdisablemenuanimation-class_1.h)]
 
@@ -71,9 +71,9 @@ Poniższy przykład przedstawia sposób korzystania ze stosu, aby tymczasowo wy�
 
 **Nagłówek:** afxpopupmenu.h
 
-##  <a name="restore"></a>  CMFCDisableMenuAnimation::Restore
+## <a name="cmfcdisablemenuanimationrestore"></a><a name="restore"></a>CMFCDisableMenuAnimation::Przywróć
 
-Przywraca poprzedniej animacji, używany w ramach do wyświetlenia menu podręcznego.
+Przywraca poprzednią animację, która jest używana przez strukturę do wyświetlania menu podręcznego.
 
 ```
 void Restore ();
@@ -81,9 +81,9 @@ void Restore ();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana `CMFCDisableMenuAnimation` destruktora, aby przywrócić poprzednią animację, używany w ramach do wyświetlenia menu podręcznego.
+Ta metoda jest `CMFCDisableMenuAnimation` wywoływana przez destruktora, aby przywrócić poprzednią animację, która jest używana do wyświetlania menu podręcznego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

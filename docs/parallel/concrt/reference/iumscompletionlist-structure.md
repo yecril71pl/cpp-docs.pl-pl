@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSCompletionList structure
 ms.assetid: 81b5250e-3065-492c-b20d-2cdabf12271a
-ms.openlocfilehash: 02382ef4606a6e73804fcbd5ce7735ecf2f0dcc7
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c388cc98aedbd35b2d0e00a4653a85a47abcb838
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140046"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368119"
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList — Struktura
 
-Reprezentuje listę uzupełniania UMS. Po zablokowaniu wątku UMS, wyznaczoną w harmonogramie kontekst planowania jest wysyłany w celu podjęcia decyzji o tym, co należy zaplanować na źródłowym głównym procesorze wirtualnym, gdy oryginalny wątek jest zablokowany. Gdy oryginalny wątek zostanie odblokowany, system operacyjny kolejkuje go do listy uzupełniania dostępnej za pomocą tego interfejsu. Harmonogram może wysyłać zapytania do listy uzupełniania w wydzielonym kontekście planowania lub innym miejscu, w którym szuka pracy.
+Reprezentuje listę uzupełnień UMS. Gdy blokuje wątek UMS, kontekst planowania wyznaczonego harmonogramu jest wywoływany w celu podjęcia decyzji, co zaplanować w katalogu głównym procesora wirtualnego, gdy oryginalny wątek jest zablokowany. Gdy oryginalny wątek odblokowuje, system operacyjny kolejkuje go do listy zakończenia, która jest dostępna za pośrednictwem tego interfejsu. Harmonogram może zbadać listę uzupełnień w wyznaczonym kontekście planowania lub w dowolnym innym miejscu, wyszukuje pracę.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,17 +25,17 @@ Reprezentuje listę uzupełniania UMS. Po zablokowaniu wątku UMS, wyznaczoną w
 struct IUMSCompletionList;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[IUMSCompletionList:: GetUnblockNotifications —](#getunblocknotifications)|Pobiera łańcuch interfejsów `IUMSUnblockNotification` reprezentujących konteksty wykonywania, których skojarzone serwery proxy wątków zostały odblokowane od czasu ostatniego wywołania tej metody.|
+|[Lista IUMSCompletion::GetUnblockNotifications](#getunblocknotifications)|Pobiera łańcuch interfejsów `IUMSUnblockNotification` reprezentujących konteksty wykonywania, których skojarzone serwery proxy wątku zostały odblokowane od czasu ostatniego wywołania tej metody.|
 
 ## <a name="remarks"></a>Uwagi
 
-W harmonogramie należy bardzo uważnie informacje o akcjach wykonywanych po użyciu tego interfejsu do usuwania elementów z listy uzupełniania. Elementy powinny być umieszczone na liście kontekstów możliwy do uruchomienia i być ogólnie dostępne tak szybko, jak to możliwe. Jest to w pełni możliwe, że jeden z elementów usuniętych z kolejki uzyskał własność arbitralnej blokady. Harmonogram może nie wprowadzać żadnych dowolnych wywołań funkcji, które mogą blokować między wywołaniem elementu unqueueing a umieszczeniem tych elementów na liście, do której można uzyskać ogólne dostęp z poziomu harmonogramu.
+Harmonogram musi być niezwykle ostrożny, jakie akcje są wykonywane po użyciu tego interfejsu do usuwania elementów z listy zakończenia. Elementy powinny być umieszczone na liście harmonogramu kontekstów runnable i być ogólnie dostępne tak szybko, jak to możliwe. Jest całkowicie możliwe, że jeden z de-ekued elementów został przekazany własności dowolnego zamka. Harmonogram nie można wykonywać żadnych wywołań funkcji dowolnego, które mogą blokować między wywołaniem do usunięcia zowolenia elementów i umieszczenie tych elementów na liście, które są ogólnie dostępne z poziomu harmonogramu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -43,28 +43,28 @@ W harmonogramie należy bardzo uważnie informacje o akcjach wykonywanych po uż
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrtrm. h
+**Nagłówek:** concrtrm.h
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="getunblocknotifications"></a>IUMSCompletionList:: GetUnblockNotifications —, Metoda
+## <a name="iumscompletionlistgetunblocknotifications-method"></a><a name="getunblocknotifications"></a>IUMSCompletionList::Metoda GetUnblockNotifications
 
-Pobiera łańcuch interfejsów `IUMSUnblockNotification` reprezentujących konteksty wykonywania, których skojarzone serwery proxy wątków zostały odblokowane od czasu ostatniego wywołania tej metody.
+Pobiera łańcuch interfejsów `IUMSUnblockNotification` reprezentujących konteksty wykonywania, których skojarzone serwery proxy wątku zostały odblokowane od czasu ostatniego wywołania tej metody.
 
 ```cpp
 virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Łańcuch interfejsów `IUMSUnblockNotification`.
+Łańcuch interfejsów. `IUMSUnblockNotification`
 
 ### <a name="remarks"></a>Uwagi
 
-Zwrócone powiadomienia są nieprawidłowe po przeplanowaniu kontekstów wykonywania.
+Zwrócone powiadomienia są nieprawidłowe po przełożonym kontekstów wykonywania.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
+[współbieżność Obszar nazw](concurrency-namespace.md)<br/>
 [IUMSScheduler, struktura](iumsscheduler-structure.md)<br/>
 [IUMSUnblockNotification, struktura](iumsunblocknotification-structure.md)

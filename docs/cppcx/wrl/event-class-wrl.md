@@ -1,5 +1,5 @@
 ---
-title: Event — klasa (WRL)
+title: Event, Klasa (WRL)
 ms.date: 09/24/2018
 ms.topic: reference
 f1_keywords:
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Event::Event, constructor
 - Microsoft::WRL::Wrappers::Event::operator= operator
 ms.assetid: 55dfc9fc-62d4-4bb2-9d85-5b6dd88569e8
-ms.openlocfilehash: 2d36b4fa3d1824f43e0cfafe55c439a6bdeccb6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85b4c2d1f1a27e90a65e47aa749e079f4aa08739
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398553"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371523"
 ---
-# <a name="event-class-wrl"></a>Event — klasa (WRL)
+# <a name="event-class-wrl"></a>Event, Klasa (WRL)
 
-Przedstawia zdarzenie.
+Reprezentuje zdarzenie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,13 +34,13 @@ class Event : public HandleT<HandleTraits::EventTraits>;
 
 Nazwa                   | Opis
 ---------------------- | ------------------------------------------------
-[Event::Event](#event) | Inicjuje nowe wystąpienie klasy `Event` klasy.
+[Zdarzenie::Zdarzenie](#event) | Inicjuje nowe wystąpienie klasy `Event`.
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 Nazwa                                 | Opis
 ------------------------------------ | ------------------------------------------------------------------------
-[Event::operator =](#operator-assign) | Przypisuje określonego `Event` referencję do bieżącego `Event` wystąpienia.
+[Zdarzenie::operator=](#operator-assign) | Przypisuje określone `Event` odwołanie do `Event` bieżącego wystąpienia.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -52,11 +52,11 @@ Nazwa                                 | Opis
 
 **Nagłówek:** corewrappers.h
 
-**Namespace:** Microsoft::wrl:: wrappers
+**Obszar nazw:** Microsoft::WRL::Otoki
 
-## <a name="event"></a>Event::Event
+## <a name="eventevent"></a><a name="event"></a>Zdarzenie::Zdarzenie
 
-Inicjuje nowe wystąpienie klasy `Event` klasy.
+Inicjuje nowe wystąpienie klasy `Event`.
 
 ```cpp
 explicit Event(
@@ -69,12 +69,12 @@ WRL_NOTHROW Event(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
-Obsłuż to zdarzenie. Domyślnie *h* jest inicjowany do `nullptr`.
+*H*<br/>
+Dojście do zdarzenia. Domyślnie *h* jest inicjowany do `nullptr`.
 
-## <a name="operator-assign"></a>Event::operator =
+## <a name="eventoperator"></a><a name="operator-assign"></a>Zdarzenie::operator=
 
-Przypisuje określonego `Event` referencję do bieżącego `Event` wystąpienia.
+Przypisuje określone `Event` odwołanie do `Event` bieżącego wystąpienia.
 
 ```cpp
 WRL_NOTHROW Event& operator=(
@@ -84,8 +84,8 @@ WRL_NOTHROW Event& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
-Odwołania rvalue do `Event` wystąpienia.
+*H*<br/>
+Odwołanie rvalue do `Event` wystąpienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 

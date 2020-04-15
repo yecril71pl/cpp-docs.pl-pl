@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsSame structure
 - Microsoft::WRL::Details::IsSame::value constant
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
-ms.openlocfilehash: b659f832756b79289181db34fa8d6fc0d974609d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcaf33309521b44163022e0ffa9b1e03e53e2551
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161280"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371346"
 ---
 # <a name="issame-structure"></a>IsSame — Struktura
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,19 +36,19 @@ struct IsSame<T1, T1>;
 Typ.
 
 *T2*<br/>
-Innego typu.
+Inny typ.
 
 ## <a name="remarks"></a>Uwagi
 
-Testy, czy jeden określony typ jest taki sam jak inny określony typ.
+Sprawdza, czy jeden określony typ jest taki sam jak inny określony typ.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-constants"></a>Publiczne stałe
+### <a name="public-constants"></a>Stałe publiczne
 
 Nazwa                    | Opis
 ----------------------- | --------------------------------------------------
-[IsSame::value](#value) | Wskazuje, czy jeden typ jest taki sam jak inny.
+[IsSame::wartość](#value) | Wskazuje, czy jeden typ jest taki sam jak inny.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -58,11 +58,11 @@ Nazwa                    | Opis
 
 **Nagłówek:** internal.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obszar nazw:** Microsoft::WRL::Dszczegóły
 
-## <a name="value"></a>IsSame::value
+## <a name="issamevalue"></a><a name="value"></a>IsSame::wartość
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 template <typename T1, typename T2>
@@ -82,4 +82,4 @@ struct IsSame<T1, T1>
 
 Wskazuje, czy jeden typ jest taki sam jak inny.
 
-`value` jest **true** Jeśli parametry szablonu są takie same, i **false** Jeśli parametry szablonu są różne.
+`value`jest **true,** jeśli parametry szablonu są takie same i **false,** jeśli parametry szablonu są różne.

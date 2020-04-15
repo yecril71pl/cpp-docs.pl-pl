@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue method
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
-ms.openlocfilehash: 4dd2cde62d36c46926e703e6fb649e2ae4ef7811
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 604098cd3289722767117910d6e44e272dcb8b77
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398371"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371447"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits — Struktura
 
-Definiuje typowe cechy dojście.
+Definiuje wspólne cechy uchwytu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,18 +30,18 @@ struct HANDLETraits;
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne definicje typów
+### <a name="public-typedefs"></a>Publiczne typedefs
 
 Nazwa   | Opis
 ------ | ---------------------
-`Type` | Synonim dla dojście.
+`Type` | Synonim handle.
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Nazwa                                              | Opis
 ------------------------------------------------- | -----------------------------
-[HANDLETraits::Close](#close)                     | Zamyka określone dojście.
-[HANDLETraits::GetInvalidValue](#getinvalidvalue) | Reprezentuje nieprawidłowego dojścia.
+[HANDLETraits::Zamknij](#close)                     | Zamyka określony uchwyt.
+[HANDLETraits::GetInvalidValue](#getinvalidvalue) | Reprezentuje nieprawidłowy dojście.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -51,11 +51,11 @@ Nazwa                                              | Opis
 
 **Nagłówek:** corewrappers.h
 
-**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+**Obszar nazw:** Microsoft::WRL::Otoki::HandleTraits
 
-## <a name="close"></a>HANDLETraits::Close
+## <a name="handletraitsclose"></a><a name="close"></a>HANDLETraits::Zamknij
 
-Zamyka określone dojście.
+Zamyka określony uchwyt.
 
 ```cpp
 inline static bool Close(
@@ -65,16 +65,16 @@ inline static bool Close(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
-Dojście do zamknięcia.
+*H*<br/>
+Uchwyt do zamknięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obsługi *h* zamknięta pomyślnie; w przeciwnym razie **false**.
+**true,** jeśli uchwyt *h* zamknięty pomyślnie; w przeciwnym razie **false**.
 
-## <a name="getinvalidvalue"></a>HANDLETraits::GetInvalidValue
+## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLETraits::GetInvalidValue
 
-Reprezentuje nieprawidłowego dojścia.
+Reprezentuje nieprawidłowy dojście.
 
 ```cpp
 inline static HANDLE GetInvalidValue();
@@ -82,4 +82,4 @@ inline static HANDLE GetInvalidValue();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zawsze zwraca INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE jest definiowany przez Windows).
+Zawsze zwraca INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE jest zdefiniowany przez system Windows).

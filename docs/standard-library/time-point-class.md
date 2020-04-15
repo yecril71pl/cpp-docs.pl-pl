@@ -10,16 +10,16 @@ f1_keywords:
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 helpviewer_keywords:
 - std::chrono [C++], time_point
-ms.openlocfilehash: 4511c7b2d8629f1a052137c7997daf5913c976ab
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e1de674d4a13ba465100923bffe6cba76e61ab4a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459985"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368029"
 ---
-# <a name="timepoint-class"></a>time_point — Klasa
+# <a name="time_point-class"></a>time_point — Klasa
 
-`time_point` Opisuje typ, który reprezentuje punkt w czasie. Przechowuje obiekt typu Duration, który przechowuje czas, który upłynął od czasu [trwania](../standard-library/duration-class.md) epoki reprezentowanej przez argument `Clock`szablonu.
+A `time_point` opisuje typ, który reprezentuje punkt w czasie. Posiada obiekt typu [czas trwania,](../standard-library/duration-class.md) który przechowuje czas, który upłynął od epoki, która jest reprezentowana przez argument `Clock`szablonu .
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,14 +31,14 @@ class time_point;
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne definicje typów
+### <a name="public-typedefs"></a>Publiczne typedefs
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`time_point::clock`|Synonim dla parametru `Clock`szablonu.|
-|`time_point::duration`|Synonim dla parametru `Duration`szablonu.|
-|`time_point::period`|Synonim nazwy `duration::period`typu zagnieżdżonego.|
-|`time_point::rep`|Synonim nazwy `duration::rep`typu zagnieżdżonego.|
+|`time_point::clock`|Synonim parametru `Clock`szablonu .|
+|`time_point::duration`|Synonim parametru `Duration`szablonu .|
+|`time_point::period`|Synonim nazwy `duration::period`typu zagnieżdżonego .|
+|`time_point::rep`|Synonim nazwy `duration::rep`typu zagnieżdżonego .|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -50,9 +50,9 @@ class time_point;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[max](#max)|Określa górną granicę `time_point::ref`dla.|
-|[min](#min)|Określa dolny limit dla `time_point::ref`.|
-|[time_since_epoch](#time_since_epoch)|Zwraca przechowywaną `duration` wartość.|
+|[Max](#max)|Określa górną granicę dla `time_point::ref`.|
+|[Min](#min)|Określa dolną granicę dla `time_point::ref`.|
+|[time_since_epoch](#time_since_epoch)|Zwraca wartość `duration` zapisaną.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
@@ -63,13 +63,13 @@ class time_point;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<Chrono >
+**Nagłówek:** \<chrono>
 
-**Przestrzeń nazw:** std:: Chrono
+**Przestrzeń nazw:** std::chrono
 
-## <a name="max"></a>time_point:: max
+## <a name="time_pointmax"></a><a name="max"></a>time_point::maks.
 
-Metoda statyczna zwracająca górną granicę dla wartości `time_point::ref`typu.
+Metoda statyczna, która zwraca górną `time_point::ref`granicę dla wartości typu .
 
 ```cpp
 static constexpr time_point max();
@@ -77,11 +77,11 @@ static constexpr time_point max();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-W efekcie zwraca wartość `time_point(duration::max())`.
+W efekcie `time_point(duration::max())`zwraca .
 
-## <a name="min"></a>time_point:: min
+## <a name="time_pointmin"></a><a name="min"></a>time_point::min
 
-Metoda statyczna zwracająca dolną granicę dla wartości `time_point::ref`typu.
+Metoda statyczna, która zwraca dolną `time_point::ref`granicę dla wartości typu .
 
 ```cpp
 static constexpr time_point min();
@@ -89,11 +89,11 @@ static constexpr time_point min();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-W efekcie zwraca wartość `time_point(duration::min())`.
+W efekcie `time_point(duration::min())`zwraca .
 
-## <a name="op_add_eq"></a>time_point:: operator + =
+## <a name="time_pointoperator"></a><a name="op_add_eq"></a>time_point::operator+=
 
-Dodaje określoną wartość do przechowywanej wartości [czasu trwania](../standard-library/duration-class.md) .
+Dodaje określoną wartość do wartości [przechowywanego czasu trwania.](../standard-library/duration-class.md)
 
 ```cpp
 time_point& operator+=(const duration& Dur);
@@ -101,16 +101,16 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametry
 
-*Trwania*\
-Element `duration` obiektu.
+*Dur (Dur)*\
+Obiekt `duration`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`time_point` Obiekt po dodaniu jest wykonywany.
+Obiekt `time_point` po dodaniu jest wykonywany.
 
-## <a name="operator-_eq"></a>time_point:: operator-=
+## <a name="time_pointoperator-"></a><a name="operator-_eq"></a>time_point::operator-=
 
-Odejmuje określoną wartość z przechowywanej wartości [czasu trwania](../standard-library/duration-class.md) .
+Odejmuje określoną wartość od zapisanej wartości [czasu trwania.](../standard-library/duration-class.md)
 
 ```cpp
 time_point& operator-=(const duration& Dur);
@@ -118,14 +118,14 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametry
 
-*Trwania*\
-Element `duration` obiektu.
+*Dur (Dur)*\
+Obiekt `duration`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`time_point` Obiekt po wykonaniu odejmowania.
+Obiekt `time_point` po wykonaniu odejmowania.
 
-## <a name="time_point"></a>time_point:: time_point — Konstruktor
+## <a name="time_pointtime_point-constructor"></a><a name="time_point"></a>time_point::time_point Konstruktor
 
 Konstruuje `time_point` obiekt.
 
@@ -140,29 +140,29 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>Parametry
 
-*Trwania*\
-Obiekt [czasu trwania](../standard-library/duration-class.md) .
+*Dur (Dur)*\
+Obiekt [czasu trwania.](../standard-library/duration-class.md)
 
-*TP*\
-Element `time_point` obiektu.
+*Tp*\
+Obiekt `time_point`.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `duration` wartość jest równa wartości [Duration:: zero](../standard-library/duration-class.md#zero).
+Pierwszy konstruktor tworzy obiekt, `duration` którego przechowywana wartość jest równa [czas trwania::zero](../standard-library/duration-class.md#zero).
 
-Drugi Konstruktor konstruuje obiekt, którego przechowywana wartość czasu trwania jest równa czasowi *trwania*. O `is_convertible<Duration2, duration>` ile nie ma wartości true, drugi Konstruktor nie uczestniczy w rozpoznawaniu przeciążenia. Aby uzyskać więcej informacji, zobacz [< type_traits >](../standard-library/type-traits.md).
+Drugi konstruktor tworzy obiekt, którego wartość przechowywanego czasu trwania jest równa *Dur*. O `is_convertible<Duration2, duration>` ile nie jest true, drugi konstruktor nie uczestniczy w rozpoznawania przeciążenia. Aby uzyskać więcej informacji, zobacz [<type_traits>](../standard-library/type-traits.md).
 
-Trzeci Konstruktor inicjuje swoją `duration` wartość przy użyciu. `Tp.time_since_epoch()`
+Trzeci konstruktor inicjuje `duration` `Tp.time_since_epoch()`jego wartość przy użyciu programu .
 
-## <a name="time_since_epoch"></a>time_point::time_since_epoch
+## <a name="time_pointtime_since_epoch"></a><a name="time_since_epoch"></a>time_point::time_since_epoch
 
-Pobiera wartość przechowywanego [czasu trwania](../standard-library/duration-class.md) .
+Pobiera wartość przechowywanego [czasu trwania.](../standard-library/duration-class.md)
 
 ```cpp
 constexpr duration time_since_epoch() const;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[\<chrono>](../standard-library/chrono.md)
+[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[\<>chrono](../standard-library/chrono.md)

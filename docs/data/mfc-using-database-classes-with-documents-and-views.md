@@ -14,62 +14,62 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-ms.openlocfilehash: e2b073b20b9518667b43c30e7ee3199a84a3ad38
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9e071e0cc25492073cd74ed517284476b6e49ef8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213385"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368905"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: używanie klas baz danych z dokumentami i widokami
 
-Można użyć klas baz danych MFC z lub bez architektury dokumentu/widoku. Ten temat kładzie nacisk na pracę z dokumentami i widokami. Wyjaśniono:
+Można użyć klas bazy danych MFC z architekturą dokumentu/widoku lub bez niej. W tym temacie podkreślono pracę z dokumentami i widokami. Wyjaśnia:
 
-- [Jak napisać aplikację opartą na formularzu](#_core_writing_a_form.2d.based_application) przy użyciu obiektu `CRecordView` jako głównego widoku dokumentu.
+- [Jak napisać aplikację opartą na formularzach](#_core_writing_a_form.2d.based_application) `CRecordView` przy użyciu obiektu jako widoku głównego w dokumencie.
 
-- [Jak używać obiektów zestawu rekordów w dokumentach i widokach](#_core_using_recordsets_in_documents_and_views).
+- [Jak używać obiektów programu recordset w dokumentach i widokach](#_core_using_recordsets_in_documents_and_views).
 
-- [Inne zagadnienia](#_core_other_factors).
+- [Inne względy](#_core_other_factors).
 
-Aby zapoznać się z alternatywami, zobacz [MFC: używanie klas baz danych bez dokumentów i widoków](../data/mfc-using-database-classes-without-documents-and-views.md).
+Aby uzyskać alternatywy, zobacz [MFC: Using Database Classes Without Documents and Views](../data/mfc-using-database-classes-without-documents-and-views.md).
 
-##  <a name="writing-a-form-based-application"></a><a name="_core_writing_a_form.2d.based_application"></a>Pisanie aplikacji opartej na formularzach
+## <a name="writing-a-form-based-application"></a><a name="_core_writing_a_form.2d.based_application"></a>Pisanie aplikacji opartej na formularzach
 
-Wiele aplikacji dostępu do danych jest opartych na formularzach. Interfejs użytkownika jest formularz zawierający kontrolki, w których użytkownik bada, wprowadza lub edytuje dane. Aby utworzyć aplikację na podstawie, użyj klasy `CRecordView`. Po uruchomieniu Kreatora aplikacji MFC i wybraniu opcji Typ klienta **ODBC** na stronie **Obsługa bazy danych** projekt używa `CRecordView` dla klasy widoku.
+Wiele aplikacji dostępu do danych są oparte na formularzach. Interfejs użytkownika jest formularzem zawierającym formanty, w których użytkownik sprawdza, wprowadza lub edytuje dane. Aby nawiązać formularz zgłoszeniowy, użyj klasy `CRecordView`. Po uruchomieniu Kreatora aplikacji MFC i wybierz typ klienta **ODBC** na `CRecordView` stronie Obsługa bazy **danych,** projekt używa dla klasy widoku.
 
-W aplikacji opartej na formularzach każdy obiekt widoku rekordu przechowuje wskaźnik do obiektu `CRecordset`. Mechanizm wymiany pól rekordów (RFX) struktury wymienia dane między zestawem rekordów a źródłem danych. Mechanizm wymiany danych okna dialogowego (DDX) wymienia dane między elementami członkowskimi danych pola obiektu zestawu rekordów i kontrolkami w formularzu. `CRecordView` udostępnia również domyślne funkcje programu obsługi poleceń umożliwiające przechodzenie z rekordu do rekordu w formularzu.
+W aplikacji opartej na formularzach każdy obiekt `CRecordset` widoku rekordu przechowuje wskaźnik do obiektu. Mechanizm wymiany pól rekordów (RFX) (Framework) wymienia dane między zestawem rekordów a źródłem danych. Mechanizm wymiany danych dialogowych (DDX) wymienia dane między elementami elementów członkowskich pola obiektu zestaw rekordów a formantami w formularzu. `CRecordView`udostępnia również domyślne funkcje obsługi poleceń do nawigowania od rekordu do rekordu w formularzu.
 
-Aby utworzyć aplikację opartą na formularzach za pomocą Kreatora aplikacji, zobacz [Tworzenie aplikacji MFC opartej na formularzach](../mfc/reference/creating-a-forms-based-mfc-application.md) i [bazy danych, Kreatora aplikacji MFC](../mfc/reference/database-support-mfc-application-wizard.md).
+Aby utworzyć aplikację opartą na formularzach za pomocą kreatora aplikacji, zobacz Tworzenie aplikacji MFC i obsługi bazy danych [opartych na formularzach,](../mfc/reference/creating-a-forms-based-mfc-application.md) [Kreator aplikacji MFC](../mfc/reference/database-support-mfc-application-wizard.md).
 
-Aby uzyskać pełną dyskusję na temat formularzy, zobacz [widoki rekordów](../data/record-views-mfc-data-access.md).
+Aby uzyskać pełną dyskusję na temat formularzy, zobacz [Rejestrowanie widoków](../data/record-views-mfc-data-access.md).
 
-##  <a name="using-recordsets-in-documents-and-views"></a><a name="_core_using_recordsets_in_documents_and_views"></a>Używanie zestawów rekordów w dokumentach i widokach
+## <a name="using-recordsets-in-documents-and-views"></a><a name="_core_using_recordsets_in_documents_and_views"></a>Używanie rekordów w dokumentach i widokach
 
-Wiele prostych aplikacji opartych na formularzach nie wymaga dokumentów. Jeśli aplikacja jest bardziej złożona, prawdopodobnie chcesz użyć dokumentu jako serwera proxy dla bazy danych, przechowując `CDatabase` obiektu, który nawiązuje połączenie ze źródłem danych. Aplikacje oparte na formularzach zwykle przechowują wskaźnik do obiektu zestawu rekordów w widoku. Inne rodzaje aplikacji baz danych przechowują zestawy rekordów i `CDatabase` obiektów w dokumencie. Poniżej przedstawiono niektóre możliwości używania dokumentów w aplikacjach baz danych:
+Wiele prostych aplikacji opartych na formularzach nie potrzebuje dokumentów. Jeśli aplikacja jest bardziej złożona, prawdopodobnie chcesz użyć dokumentu jako serwera `CDatabase` proxy dla bazy danych, przechowując obiekt, który łączy się ze źródłem danych. Aplikacje oparte na formularzach zwykle przechowują wskaźnik do obiektu pliku recordset w widoku. Inne rodzaje aplikacji bazy danych `CDatabase` przechowują zestawy rekordów i obiekt w dokumencie. Oto kilka możliwości korzystania z dokumentów w aplikacjach bazy danych:
 
-- Jeśli uzyskujesz dostęp do zestawu rekordów w kontekście lokalnym, Utwórz obiekt `CRecordset` lokalnie w funkcjach członkowskich dokumentu lub widoku, zgodnie z wymaganiami.
+- Jeśli uzyskujesz dostęp do zestawu rekordów `CRecordset` w kontekście lokalnym, utwórz obiekt lokalnie w funkcjach członkowskich dokumentu lub widoku, zgodnie z potrzebami.
 
-   Zadeklaruj obiekt zestawu rekordów jako zmienną lokalną w funkcji. Przekaż wartość NULL do konstruktora, co powoduje, że struktura tworzy i otwiera tymczasowy obiekt `CDatabase`. Alternatywnie Przekaż wskaźnik do `CDatabase` obiektu. Użyj zestawu rekordów w funkcji i pozwól, aby został zniszczony automatycznie po zamknięciu funkcji.
+   Deklarowanie obiektu pliku recordset jako zmiennej lokalnej w funkcji. Przekaż NULL do konstruktora, co powoduje, `CDatabase` że struktura do tworzenia i otwierania obiektu tymczasowego dla Ciebie. Alternatywnie należy przekazać wskaźnik `CDatabase` do obiektu. Użyj pliku recordset w ramach funkcji i niech zostanie on zniszczony automatycznie po zamknięciu funkcji.
 
-   W przypadku przekazania wartości NULL do konstruktora zestawu rekordów, struktura używa informacji zwracanych przez `GetDefaultConnect` funkcji członkowskiej zestawu rekordów, aby utworzyć obiekt `CDatabase` i otworzyć go. Kreatory implementują `GetDefaultConnect`.
+   Po przegłosowaniu null do konstruktora tablicy rekordów, struktura `GetDefaultConnect` używa informacji `CDatabase` zwracanych przez funkcję elementu członkowskiego pliku recordset, aby utworzyć obiekt i otworzyć go. Kreatorzy implementują `GetDefaultConnect` dla Ciebie.
 
-- Jeśli uzyskujesz dostęp do zestawu rekordów w trakcie okresu istnienia dokumentu, Osadź co najmniej jeden `CRecordset` obiektów w dokumencie.
+- Jeśli uzyskujesz dostęp do zestawu rekordów w okresie istnienia `CRecordset` dokumentu, osadź jeden lub więcej obiektów w dokumencie.
 
-   Konstruowanie obiektów zestawu rekordów po zainicjowaniu dokumentu lub w razie potrzeby. Można napisać funkcję, która zwraca wskaźnik do zestawu rekordów, jeśli już istnieje lub konstruuje i otworzy zestaw rekordów, jeśli jeszcze nie istnieje. Zamknij, Usuń i ponownie Utwórz zestaw rekordów w razie potrzeby lub wywołaj jego `Requery` funkcję członkowską, aby odświeżyć rekordy.
+   Konstruuj obiekty pliku recordset podczas inicjowania dokumentu lub w razie potrzeby. Można napisać funkcję, która zwraca wskaźnik do pliku recordset, jeśli już istnieje lub konstrukcje i otwiera plik recordset, jeśli jeszcze nie istnieje. Zamknij, usuń i ponownie stwórz go w `Requery` razie potrzeby lub wywołaj jego funkcję elementu członkowskiego, aby odświeżyć rekordy.
 
-- Jeśli uzyskujesz dostęp do źródła danych w trakcie okresu istnienia dokumentu, Osadź obiekt `CDatabase` lub Zapisz wskaźnik do obiektu `CDatabase`.
+- Jeśli uzyskujesz dostęp do źródła danych w okresie istnienia `CDatabase` dokumentu, osadź obiekt `CDatabase` lub zapisz wskaźnik do obiektu w nim.
 
-   Obiekt `CDatabase` zarządza połączeniem ze źródłem danych. Obiekt jest tworzony automatycznie podczas tworzenia dokumentu i wywołuje jego funkcję członkowską `Open` po zainicjowaniu dokumentu. Podczas konstruowania obiektów zestawu rekordów w funkcjach składowych dokumentu można przekazać wskaźnik do obiektu `CDatabase` dokumentu. Kojarzy każdy zestaw rekordów ze źródłem danych. Obiekt bazy danych jest zwykle niszczony, gdy dokument zostanie zamknięty. Obiekty zestawu rekordów są zwykle niszczone, gdy opuszczają zakres funkcji.
+   Obiekt `CDatabase` zarządza połączeniem ze źródłem danych. Obiekt jest konstruowany automatycznie podczas budowy dokumentu `Open` i wywołanie jego funkcji elementu członkowskiego podczas inicjowania dokumentu. Podczas konstruowania obiektów pliku recordset w funkcjach elementów `CDatabase` członkowskich dokumentu, należy przekazać wskaźnik do obiektu dokumentu. To kojarzy każdy zestaw rekordów z jego źródłem danych. Obiekt bazy danych jest zwykle niszczony po zamknięciu dokumentu. Obiekty pliku recordset są zazwyczaj niszczone po zamknięciu zakresu funkcji.
 
-##  <a name="other-factors"></a><a name="_core_other_factors"></a>Inne czynniki
+## <a name="other-factors"></a><a name="_core_other_factors"></a>Inne czynniki
 
-Aplikacje oparte na formularzach często nie mają zastosowania do mechanizmu serializacji dokumentu struktury, dlatego warto usunąć, wyłączyć lub zastąpić **nowe** i **otwarte** polecenia w menu **plik** . Zobacz serializacji artykułu [: serializacji a dane wejściowe/wyjściowe bazy danych](../mfc/serialization-serialization-vs-database-input-output.md).
+Aplikacje oparte na formularzach często nie mają żadnego zastosowania dla mechanizmu serializacji dokumentów w ramach, więc można usunąć, wyłączyć lub zastąpić polecenia **Nowe** i **Otwórz** w menu **Plik.** Zobacz artykuł [Serializacja: Serializacja a wejście/wyjście bazy danych](../mfc/serialization-serialization-vs-database-input-output.md).
 
-Warto również użyć wielu możliwości interfejsu użytkownika, które mogą być obsługiwane przez platformę. Na przykład można użyć wielu obiektów `CRecordView` w oknie rozdzielacza, otworzyć wiele zestawów rekordów w różnych oknach podrzędnych interfejsu wielu dokumentów (MDI) i tak dalej.
+Można również skorzystać z wielu możliwości interfejsu użytkownika, które mogą obsługiwać struktury. Na przykład można użyć `CRecordView` wielu obiektów w oknie rozdzielacza, otworzyć wiele zestawów rekordów w różnych oknach podrzędnych interfejsu wielu dokumentów (MDI) i tak dalej.
 
-Możesz chcieć zaimplementować drukowanie dowolnego elementu w Twoim widoku, niezależnie od tego, czy jest to formularz zaimplementowany przy użyciu `CRecordView`, czy innego. Ponieważ klasy pochodne `CFormView`, `CRecordView` nie obsługują drukowania, ale można przesłonić funkcję elementu członkowskiego `OnPrint`, aby umożliwić drukowanie. Aby uzyskać więcej informacji, zobacz Klasa [CFormView](../mfc/reference/cformview-class.md).
+Można zaimplementować drukowanie, co jest w twoim widoku, czy jest to formularz zaimplementowany z `CRecordView` lub coś innego. Jako klasy uzyskane `CFormView` `CRecordView` z , nie obsługuje drukowania, `OnPrint` ale można zastąpić funkcję elementu członkowskiego, aby umożliwić drukowanie. Aby uzyskać więcej informacji, zobacz klasę [CFormView](../mfc/reference/cformview-class.md).
 
-Możesz nie chcieć używać dokumentów i widoków. W takim przypadku zobacz [MFC: używanie klas baz danych bez dokumentów i widoków](../data/mfc-using-database-classes-without-documents-and-views.md).
+Nie chcesz w ogóle używać dokumentów i widoków. W takim przypadku zobacz [MFC: Korzystanie z klas bazy danych bez dokumentów i widoków](../data/mfc-using-database-classes-without-documents-and-views.md).
 
 ## <a name="see-also"></a>Zobacz też
 

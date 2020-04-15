@@ -1,5 +1,5 @@
 ---
-title: CD2DSolidColorBrush Class
+title: Klasa CD2DSolidColorBrush
 ms.date: 03/27/2019
 f1_keywords:
 - CD2DSolidColorBrush
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CD2DSolidColorBrush [MFC], m_colorSolid
 - CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
-ms.openlocfilehash: f225198193443c11d0294010a5fb71858514c81e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5aa3d7688046b0c1b04983f2d27fe5579dd7c680
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396226"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369056"
 ---
-# <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush Class
+# <a name="cd2dsolidcolorbrush-class"></a>Klasa CD2DSolidColorBrush
 
-Otoka ID2D1SolidColorBrush.
+Otoka dla ID2D1SolidColorBrush.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,41 +49,41 @@ class CD2DSolidColorBrush : public CD2DBrush;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|Przeciążone. Tworzy obiekt CD2DSolidColorBrush.|
-|[CD2DSolidColorBrush::~CD2DSolidColorBrush](#_dtorcd2dsolidcolorbrush)|Destruktor. Wywołuje się, kiedy niszczony jest obiekt pędzla D2D.|
+|[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|Przeciążone. Konstruuje obiekt CD2DSolidColorBrush.|
+|[CD2DSolidColorBrush::~CD2DSolidColorBrush](#_dtorcd2dsolidcolorbrush)|Destruktor. Wywoływane, gdy obiekt pędzla bryłowego D2D jest niszczony.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DSolidColorBrush::Attach](#attach)|Dołącza istniejących zasobów interfejsu do obiektu|
-|[CD2DSolidColorBrush::Create](#create)|Tworzy CD2DSolidColorBrush. (Przesłania [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DSolidColorBrush::Destroy](#destroy)|Niszczy obiekt CD2DSolidColorBrush. (Przesłania [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
-|[CD2DSolidColorBrush::Detach](#detach)|Odłącza interfejsu zasobów z obiektu|
-|[CD2DSolidColorBrush::Get](#get)|Zwraca ID2D1SolidColorBrush interfejsu|
-|[CD2DSolidColorBrush::GetColor](#getcolor)|Pobiera kolor pędzel pełnego koloru|
-|[CD2DSolidColorBrush::SetColor](#setcolor)|Określa kolor tego pędzel pełnego koloru|
+|[CD2DSolidColorBrush::Dołącz](#attach)|Dołącza istniejący interfejs zasobu do obiektu|
+|[CD2DSolidColorBrush::Tworzenie](#create)|Tworzy cd2DSolidColorBrush. (Zastępuje [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DSolidColorBrush::Destroy](#destroy)|Niszczy CD2DSolidColorBrush obiektu. (Zastępuje [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
+|[CD2DSolidColorBrush::Detach](#detach)|Odłącza interfejs zasobu od obiektu|
+|[CD2DSolidColorBrush::Get](#get)|Zwraca interfejs ID2D1SolidColorBrush|
+|[CD2DSolidColorBrush::GetColor](#getcolor)|Pobiera kolor pędzla jednolitego koloru|
+|[CD2DSolidColorBrush::SetColor](#setcolor)|Określa kolor tego pędzla z jednolitym kolorem|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DSolidColorBrush::operator ID2D1SolidColorBrush *](#operator_id2d1solidcolorbrush_star)|Zwraca ID2D1SolidColorBrush interfejsu|
+|[CD2DSolidColorBrush::operator ID2D1SolidColorBrush*](#operator_id2d1solidcolorbrush_star)|Zwraca interfejs ID2D1SolidColorBrush|
 
-### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+### <a name="protected-data-members"></a>Członkowie chronionych danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DSolidColorBrush::m_colorSolid](#m_colorsolid)|Pełny kolor pędzla.|
-|[CD2DSolidColorBrush::m_pSolidColorBrush](#m_psolidcolorbrush)|Przechowuje wskaźnik do obiektu ID2D1SolidColorBrush.|
+|[CD2DSolidColorBrush::m_colorSolid](#m_colorsolid)|Pędzel jednolity kolor.|
+|[CD2DSolidColorBrush::m_pSolidColorBrush](#m_psolidcolorbrush)|Przechowuje wskaźnik do ID2D1SolidColorBrush obiektu.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2DŹródło](../../mfc/reference/cd2dresource-class.md)
 
-[CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
+[Cd2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
 [CD2DSolidColorBrush](../../mfc/reference/cd2dsolidcolorbrush-class.md)
 
@@ -91,17 +91,17 @@ class CD2DSolidColorBrush : public CD2DBrush;
 
 **Nagłówek:** afxrendertarget.h
 
-##  <a name="_dtorcd2dsolidcolorbrush"></a>  CD2DSolidColorBrush::~CD2DSolidColorBrush
+## <a name="cd2dsolidcolorbrushcd2dsolidcolorbrush"></a><a name="_dtorcd2dsolidcolorbrush"></a>CD2DSolidColorBrush::~CD2DSolidColorBrush
 
-Destruktor. Wywołuje się, kiedy niszczony jest obiekt pędzla D2D.
+Destruktor. Wywoływane, gdy obiekt pędzla bryłowego D2D jest niszczony.
 
 ```
 virtual ~CD2DSolidColorBrush();
 ```
 
-##  <a name="attach"></a>  CD2DSolidColorBrush::attach
+## <a name="cd2dsolidcolorbrushattach"></a><a name="attach"></a>CD2DSolidColorBrush::Dołącz
 
-Dołącza istniejących zasobów interfejsu do obiektu
+Dołącza istniejący interfejs zasobu do obiektu
 
 ```
 void Attach(ID2D1SolidColorBrush* pResource);
@@ -109,12 +109,12 @@ void Attach(ID2D1SolidColorBrush* pResource);
 
 ### <a name="parameters"></a>Parametry
 
-*pResource*<br/>
-Istniejący interfejs zasobów. Nie może mieć wartości NULL
+*pŹródło*<br/>
+Istniejący interfejs zasobów. Nie może być null
 
-##  <a name="cd2dsolidcolorbrush"></a>  CD2DSolidColorBrush::CD2DSolidColorBrush
+## <a name="cd2dsolidcolorbrushcd2dsolidcolorbrush"></a><a name="cd2dsolidcolorbrush"></a>CD2DSolidColorBrush::CD2DSolidColorBrush
 
-Tworzy obiekt CD2DSolidColorBrush.
+Konstruuje obiekt CD2DSolidColorBrush.
 
 ```
 CD2DSolidColorBrush(
@@ -134,23 +134,23 @@ CD2DSolidColorBrush(
 ### <a name="parameters"></a>Parametry
 
 *pParentTarget*<br/>
-Wskaźnik do elementu docelowego renderowania.
+Wskaźnik do obiektu docelowego renderowania.
 
-*Kolor*<br/>
-Wartości czerwony, zielony, niebieski i alfa kolor pędzla.
+*color*<br/>
+Wartości koloru pędzla na czerwono, zielono, niebiesko i alfa.
 
-*pBrushProperties*<br/>
-Wskaźnik do nieprzezroczystość i przekształcanie pędzla.
+*pBrushWłaściwki*<br/>
+Wskaźnik do krycia i przekształcenia pędzla.
 
-*bAutoDestroy*<br/>
-Wskazuje, że obiekt jest niszczony przez właściciela (pParentTarget).
+*bAutoDestroj*<br/>
+Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).
 
-*nAlpha*<br/>
-Nieprzezroczystość kolor pędzla.
+*nAlpha (własówce)*<br/>
+Krycie koloru pędzla.
 
-##  <a name="create"></a>  CD2DSolidColorBrush::Create
+## <a name="cd2dsolidcolorbrushcreate"></a><a name="create"></a>CD2DSolidColorBrush::Tworzenie
 
-Tworzy CD2DSolidColorBrush.
+Tworzy cd2DSolidColorBrush.
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -159,23 +159,23 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="parameters"></a>Parametry
 
 *pRenderTarget*<br/>
-Wskaźnik do elementu docelowego renderowania.
+Wskaźnik do obiektu docelowego renderowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli metoda się powiedzie, zwraca wartość S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
+Jeśli metoda powiedzie się, zwraca S_OK. W przeciwnym razie zwraca kod błędu HRESULT.
 
-##  <a name="destroy"></a>  CD2DSolidColorBrush::Destroy
+## <a name="cd2dsolidcolorbrushdestroy"></a><a name="destroy"></a>CD2DSolidColorBrush::Destroy
 
-Niszczy obiekt CD2DSolidColorBrush.
+Niszczy CD2DSolidColorBrush obiektu.
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DSolidColorBrush::Detach
+## <a name="cd2dsolidcolorbrushdetach"></a><a name="detach"></a>CD2DSolidColorBrush::Detach
 
-Odłącza interfejsu zasobów z obiektu
+Odłącza interfejs zasobu od obiektu
 
 ```
 ID2D1SolidColorBrush* Detach();
@@ -183,11 +183,11 @@ ID2D1SolidColorBrush* Detach();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu odłączyć zasobu.
+Wskaźnik do odłączony interfejs zasobu.
 
-##  <a name="get"></a>  CD2DSolidColorBrush::Get
+## <a name="cd2dsolidcolorbrushget"></a><a name="get"></a>CD2DSolidColorBrush::Get
 
-Zwraca ID2D1SolidColorBrush interfejsu
+Zwraca interfejs ID2D1SolidColorBrush
 
 ```
 ID2D1SolidColorBrush* Get();
@@ -195,11 +195,11 @@ ID2D1SolidColorBrush* Get();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu ID2D1SolidColorBrush lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+Wskaźnik do interfejsu ID2D1SolidColorBrush lub NULL, jeśli obiekt nie został jeszcze zainicjowany.
 
-##  <a name="getcolor"></a>  CD2DSolidColorBrush::GetColor
+## <a name="cd2dsolidcolorbrushgetcolor"></a><a name="getcolor"></a>CD2DSolidColorBrush::GetColor
 
-Pobiera kolor pędzel pełnego koloru
+Pobiera kolor pędzla jednolitego koloru
 
 ```
 D2D1_COLOR_F GetColor() const;
@@ -207,27 +207,27 @@ D2D1_COLOR_F GetColor() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Kolor ten pędzel pełnego koloru
+Kolor tego pędzla jednolitego koloru
 
-##  <a name="m_colorsolid"></a>  CD2DSolidColorBrush::m_colorSolid
+## <a name="cd2dsolidcolorbrushm_colorsolid"></a><a name="m_colorsolid"></a>CD2DSolidColorBrush::m_colorSolid
 
-Pełny kolor pędzla.
+Pędzel jednolity kolor.
 
 ```
 D2D1_COLOR_F m_colorSolid;
 ```
 
-##  <a name="m_psolidcolorbrush"></a>  CD2DSolidColorBrush::m_pSolidColorBrush
+## <a name="cd2dsolidcolorbrushm_psolidcolorbrush"></a><a name="m_psolidcolorbrush"></a>CD2DSolidColorBrush::m_pSolidColorBrush
 
-Przechowuje wskaźnik do obiektu ID2D1SolidColorBrush.
+Przechowuje wskaźnik do ID2D1SolidColorBrush obiektu.
 
 ```
 ID2D1SolidColorBrush* m_pSolidColorBrush;
 ```
 
-##  <a name="operator_id2d1solidcolorbrush_star"></a>  CD2DSolidColorBrush::operator ID2D1SolidColorBrush *
+## <a name="cd2dsolidcolorbrushoperator-id2d1solidcolorbrush"></a><a name="operator_id2d1solidcolorbrush_star"></a>CD2DSolidColorBrush::operator ID2D1SolidColorBrush*
 
-Zwraca ID2D1SolidColorBrush interfejsu
+Zwraca interfejs ID2D1SolidColorBrush
 
 ```
 operator ID2D1SolidColorBrush*();
@@ -235,11 +235,11 @@ operator ID2D1SolidColorBrush*();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do interfejsu ID2D1SolidColorBrush lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.
+Wskaźnik do interfejsu ID2D1SolidColorBrush lub NULL, jeśli obiekt nie został jeszcze zainicjowany.
 
-##  <a name="setcolor"></a>  CD2DSolidColorBrush::SetColor
+## <a name="cd2dsolidcolorbrushsetcolor"></a><a name="setcolor"></a>CD2DSolidColorBrush::SetColor
 
-Określa kolor tego pędzel pełnego koloru
+Określa kolor tego pędzla z jednolitym kolorem
 
 ```
 void SetColor(D2D1_COLOR_F color);
@@ -247,9 +247,9 @@ void SetColor(D2D1_COLOR_F color);
 
 ### <a name="parameters"></a>Parametry
 
-*Kolor*<br/>
-Kolor ten pędzel pełnego koloru
+*color*<br/>
+Kolor tego pędzla jednolitego koloru
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

@@ -1,6 +1,6 @@
 ---
-title: Struktura ANALYSIS_DESCRIPTOR
-description: Zestaw C++ SDK usługi Build insights ANALYSIS_DESCRIPTOR odwołanie do struktury.
+title: struktura ANALYSIS_DESCRIPTOR
+description: C++ Build Insights SDK ANALYSIS_DESCRIPTOR odwołania do struktury.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: fc11ce11e1faaae02edb36aac447c18ea8107e35
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 1de7f2a5bc3f02a327daaecf8c2cebc44687ba43
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332482"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323614"
 ---
-# <a name="analysis_descriptor-structure"></a>Struktura ANALYSIS_DESCRIPTOR
+# <a name="analysis_descriptor-structure"></a>struktura ANALYSIS_DESCRIPTOR
 
 ::: moniker range="<=vs-2015"
 
-Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019.
+C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `ANALYSIS_DESCRIPTOR` jest używana z funkcjami [Analizuj](../functions/analyze-a.md) i [AnalyzeW](../functions/analyze-w.md) . Opisano w nim, jak należy analizować śledzenie zdarzeń systemu Windows (ETW).
+Struktura `ANALYSIS_DESCRIPTOR` jest używana z [funkcjami AnalyzeA](../functions/analyze-a.md) i [AnalyzeW.](../functions/analyze-w.md) Opisano w nim, jak śledzenia zdarzeń dla systemu Windows (ETW) śledzenia powinny być analizowane.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,12 +42,12 @@ typedef struct ANALYSIS_DESCRIPTOR_TAG
 
 |  |  |
 |--|--|
-| `NumberOfPasses` | Liczba przebiegów analizy, które powinny być wykonywane przez śledzenie ETW. |
-| `Callbacks` | Obiekt [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) , który określa funkcje, które mają być wywoływane podczas sesji analizy. |
-| `Context` | Kontekst udostępniony przez użytkownika, który jest przekazywany jako argument do wszystkich funkcji wywołania zwrotnego określonych w `Callbacks` |
+| `NumberOfPasses` | Liczba przebiegów analizy, które powinny być wykonane za połów ETW. |
+| `Callbacks` | [Obiekt ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) określający, które funkcje należy wywołać podczas sesji analizy. |
+| `Context` | Kontekst dostarczony przez użytkownika, który jest przekazywany jako argument do wszystkich funkcji wywołania zwrotnego określonych w`Callbacks` |
 
 ## <a name="remarks"></a>Uwagi
 
-Struktura `Callbacks` akceptuje tylko wskaźniki do funkcji nienależących do elementu członkowskiego. Aby obejść to ograniczenie, należy ustawić `Context` na wskaźnik obiektu. Wskaźnik tego obiektu zostanie przekazaną jako argument do wszystkich funkcji wywołania zwrotnego, które nie są elementami członkowskimi. Ten wskaźnik służy do wywoływania funkcji Członkowskich z poziomu funkcji wywołania zwrotnego, które nie są elementami członkowskimi.
+Struktura `Callbacks` akceptuje tylko wskaźniki do funkcji innych niż elementy członkowskie. Można obejść to ograniczenie, ustawiając `Context` wskaźnik obiektu. Ten wskaźnik obiektu zostanie przekazany jako argument do wszystkich funkcji wywołania zwrotnego niebędących członkami. Ten wskaźnik służy do wywoływania funkcji członkowskich z funkcji wywołania zwrotnego niebędących członkami.
 
 ::: moniker-end

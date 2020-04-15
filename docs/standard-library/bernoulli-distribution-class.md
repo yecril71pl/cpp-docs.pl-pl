@@ -23,16 +23,16 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: faadc99b6351af884331e6658e1e11de8def2195
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6a53707d823ced7316604f75691194dc6e05545e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447771"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364857"
 ---
-# <a name="bernoullidistribution-class"></a>bernoulli_distribution — Klasa
+# <a name="bernoulli_distribution-class"></a>bernoulli_distribution — Klasa
 
-Generuje rozkład Bernoulliego.
+Generuje rozkład Bernoulli.
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,31 +66,31 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*URNG*\
-Jednolity aparat generatora liczb losowych. W przypadku możliwych typów zobacz [ \<losowe >](../standard-library/random.md).
+*Urng*\
+Jednolity silnik generatora liczb losowych. Możliwe typy można znaleźć w [ \<>losowych ](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa opisuje dystrybucję, która produkuje wartości typu **bool**, dystrybuowane zgodnie z funkcją dyskretnej dystrybucji rozkładu Bernoulliego. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
+Klasa opisuje rozkład, który tworzy wartości typu **bool**, rozłożone zgodnie z bernoulli rozkładu dyskretne prawdopodobieństwo funkcji. W poniższej tabeli znajdują się łącza do artykułów dotyczących poszczególnych członków.
 
 ||||
 |-|-|-|
 |[bernoulli_distribution](#bernoulli_distribution)|`bernoulli_distribution::p`|`bernoulli_distribution::param`|
 |`bernoulli_distribution::operator()`||[param_type](#param_type)|
 
-Element członkowski `p()` właściwości zwraca aktualnie przechowywaną wartość `p`parametru dystrybucji.
+Element członkowski `p()` właściwości zwraca aktualnie `p`przechowywaną wartość parametru dystrybucji .
 
-Element członkowski `param()` właściwości ustawia lub `param_type` zwraca przechowywany pakiet parametrów dystrybucji.
+Element członkowski `param()` właściwości `param_type` ustawia lub zwraca pakiet parametrów przechowywanej dystrybucji.
 
-`min()` I`max()` funkcje członkowskie zwracają najmniejszy możliwy wynik i największy możliwy wynik.
+`min()` Funkcje `max()` i element członkowski zwracają odpowiednio najmniejszy możliwy wynik i największy możliwy wynik.
 
-Funkcja członkowska odrzuca wszystkie wartości pamięci podręcznej, dzięki czemu wynik następnego wywołania do `operator()` nie zależy od wartości uzyskanych z aparatu przed wywołaniem. `reset()`
+Funkcja `reset()` elementu członkowskiego odrzuca wszystkie buforowane wartości, dzięki czemu `operator()` wynik następnego wywołania nie zależy od żadnych wartości uzyskanych z aparatu przed wywołaniem.
 
-Funkcje `operator()` Członkowskie zwracają następną wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub z określonym pakietem parametrów.
+Funkcje `operator()` członkowskie zwracają następną wygenerowaną wartość na podstawie aparatu URNG, z bieżącego pakietu parametrów lub określonego pakietu parametrów.
 
-Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [ \<Random >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [ \<losowe>](../standard-library/random.md).
 
-Aby uzyskać szczegółowe informacje na temat funkcji bezdyskretnego rozkładu Bernoulliego, zobacz artykuł Wolfram MathWorld [rozkład Bernoulliego](https://go.microsoft.com/fwlink/p/?linkid=398467).
+Aby uzyskać szczegółowe informacje na temat funkcji dyskretnego prawdopodobieństwa dystrybucji Bernoulli, zobacz artykuł Wolfram MathWorld [Bernoulli Distribution](https://go.microsoft.com/fwlink/p/?linkid=398467).
 
 ## <a name="example"></a>Przykład
 
@@ -154,11 +154,11 @@ true :::::::::::::::::::::::::::::::::::::::::
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<losowe>
 
 **Przestrzeń nazw:** std
 
-## <a name="bernoulli_distribution"></a>bernoulli_distribution::bernoulli_distribution
+## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a>bernoulli_distribution::bernoulli_distribution
 
 Konstruuje dystrybucję.
 
@@ -169,39 +169,39 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*St*\
-Parametr przechowywanej `p` dystrybucji.
+*P*\
+Przechowywany `p` parametr dystrybucji.
 
-*parametr*\
-`param_type` Struktura używana do konstruowania rozkładu.
+*Parm*\
+Struktura `param_type` używana do konstruowania dystrybucji.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 ≤ p ≤ 1.0`
+**Warunek wstępny:**`0.0 ≤ p ≤ 1.0`
 
-Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `p` wartość przechowuje wartość *p*.
+Pierwszy konstruktor tworzy obiekt, `p` którego przechowywana wartość przechowuje wartość *p*.
 
-Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
+Drugi konstruktor tworzy obiekt, którego przechowywane parametry są inicjowane z *parm*. Można uzyskać i ustawić bieżące parametry istniejącej `param()` dystrybucji, wywołując funkcję elementu członkowskiego.
 
-## <a name="param_type"></a>bernoulli_distribution::p aram_type
+## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a>bernoulli_distribution::param_type
 
 Zawiera parametry dystrybucji.
 
-struct param_type {typedef bernoulli_distribution distribution_type; param_type (Double p = 0,5); Double p () const;
+param_type struktury { typedef bernoulli_distribution distribution_type; param_type(double p = 0,5); double p() const;
 
-   operator logiczny = = (const param_type & Right) const; operator logiczny! = (const param_type & Right) const; };
+   bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Parametry
 
-*St*\
-Parametr przechowywanej `p` dystrybucji.
+*P*\
+Przechowywany `p` parametr dystrybucji.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 ≤ p ≤ 1.0`
+**Warunek wstępny:**`0.0 ≤ p ≤ 1.0`
 
-Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, `operator()` a także użyć zamiast przechowywanych parametrów.
+Ta struktura może być przekazywana do konstruktora klasy `param()` dystrybucji w wystąpieniu, do funkcji elementu `operator()` członkowskiego, aby ustawić przechowywane parametry istniejącej dystrybucji i do użycia zamiast przechowywanych parametrów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<random>](../standard-library/random.md)
+[\<losowe>](../standard-library/random.md)

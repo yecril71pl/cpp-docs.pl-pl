@@ -1,5 +1,5 @@
 ---
-title: Klasa obiektu CTaskDialog
+title: Klasa CTaskDialog
 ms.date: 11/19/2018
 f1_keywords:
 - CTaskDialog
@@ -116,16 +116,16 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: e2f77a2eda4397ed368e477165e876f9b8fbf936
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e9aeee31d2952d5362c983934ce85f0332f553fa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502344"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366633"
 ---
-# <a name="ctaskdialog-class"></a>Klasa obiektu CTaskDialog
+# <a name="ctaskdialog-class"></a>Klasa CTaskDialog
 
-Wyskakujące okno dialogowe, które działa jak okno komunikatu, ale może wyświetlić dodatkowe informacje dla użytkownika. Obejmuje `CTaskDialog` również funkcje zbierania informacji od użytkownika.
+Wyskakujące okno dialogowe, które działa jak okno komunikatu, ale może wyświetlać dodatkowe informacje użytkownikowi. Obejmuje `CTaskDialog` również funkcje zbierania informacji od użytkownika.
 
 ## <a name="syntax"></a>Składnia
 
@@ -139,121 +139,121 @@ class CTaskDialog : public CObject
 
 |||
 |-|-|
-|[Obiektu CTaskDialog:: obiektu CTaskDialog](#ctaskdialog)|Konstruuje `CTaskDialog` obiekt.|
+|[CTaskDialog::CTaskDialog](#ctaskdialog)|Konstruuje `CTaskDialog` obiekt.|
 
 ### <a name="methods"></a>Metody
 
 |||
 |-|-|
-|[Obiektu CTaskDialog:: AddCommandControl](#addcommandcontrol)|Dodaje kontrolkę przycisk polecenia do `CTaskDialog`.|
-|[CTaskDialog::AddRadioButton](#addradiobutton)|Dodaje przycisk radiowy do `CTaskDialog`.|
-|[Obiektu CTaskDialog:: ClickCommandControl](#clickcommandcontrol)|Program programowo klika kontrolkę przycisk polecenia lub typowy przycisk.|
-|[Obiektu CTaskDialog:: ClickRadioButton](#clickradiobutton)|Program programowo klika przycisk radiowy.|
-|[Obiektu CTaskDialog::D oModal](#domodal)|`CTaskDialog`Wyświetla.|
-|[Obiektu CTaskDialog:: GetCommonButtonCount](#getcommonbuttoncount)|Pobiera liczbę dostępnych wspólnych przycisków.|
-|[Obiektu CTaskDialog:: GetCommonButtonFlag](#getcommonbuttonflag)|Konwertuje standardowy przycisk systemu Windows na wspólny typ przycisku skojarzony z `CTaskDialog` klasą.|
-|[Obiektu CTaskDialog:: GetCommonButtonId](#getcommonbuttonid)|Konwertuje jeden ze wspólnych typów przycisków skojarzonych z `CTaskDialog` klasą na standardowy przycisk systemu Windows.|
-|[Obiektu CTaskDialog:: GetOptions](#getoptions)|Zwraca flagi opcji dla tego `CTaskDialog`elementu.|
-|[Obiektu CTaskDialog:: GetSelectedCommandControlID](#getselectedcommandcontrolid)|Zwraca wybraną kontrolkę przycisk polecenia.|
-|[Obiektu CTaskDialog:: GetSelectedRadioButtonID](#getselectedradiobuttonid)|Zwraca wybrany przycisk radiowy.|
-|[Obiektu CTaskDialog:: GetVerificationCheckboxState](#getverificationcheckboxstate)|Pobiera stan pola wyboru weryfikacji.|
-|[Obiektu CTaskDialog:: IsCommandControlEnabled](#iscommandcontrolenabled)|Określa, czy kontrolka przycisku polecenia lub typowy przycisk jest włączony.|
+|[CTaskDialog::AddCommandControl](#addcommandcontrol)|Dodaje kontrolkę przycisku polecenia do pliku `CTaskDialog`.|
+|[CTaskDialog::AddRadioButton](#addradiobutton)|Dodaje przycisk radiowy `CTaskDialog`do pliku .|
+|[CTaskDialog::ClickCommandControl](#clickcommandcontrol)|Klika formant przycisku polecenia lub wspólny przycisk programowo.|
+|[CTaskDialog::ClickRadioButton](#clickradiobutton)|Automatycznie klika przycisk radiowy.|
+|[CTaskDialog::DoModal](#domodal)|Wyświetla `CTaskDialog`plik .|
+|[CTaskDialog::GetCommonButtonCount](#getcommonbuttoncount)|Pobiera liczbę dostępnych wspólnych przycisków.|
+|[CTaskDialog::GetCommonButtonFlag](#getcommonbuttonflag)|Konwertuje standardowy przycisk Systemu Windows na `CTaskDialog` typ przycisku wspólnego skojarzonego z klasą.|
+|[CTaskDialog::GetCommonButtonId](#getcommonbuttonid)|Konwertuje jeden z typowych typów `CTaskDialog` przycisków skojarzonych z klasą na standardowy przycisk systemu Windows.|
+|[CTaskDialog::GetOptions](#getoptions)|Zwraca flagi opcji `CTaskDialog`dla tego .|
+|[CTaskDialog::GetSelectedCommandControlID](#getselectedcommandcontrolid)|Zwraca kontrolka wybranego przycisku polecenia.|
+|[CTaskDialog::GetSelectedRadioButtonID](#getselectedradiobuttonid)|Zwraca wybrany przycisk radiowy.|
+|[CTaskDialog::GetVerificationCheckboxState](#getverificationcheckboxstate)|Pobiera stan pola wyboru weryfikacji.|
+|[CTaskDialog::IsCommandControlEnabled](#iscommandcontrolenabled)|Określa, czy jest włączony formant przycisku polecenia, czy wspólny.|
 |[CTaskDialog::IsRadioButtonEnabled](#isradiobuttonenabled)|Określa, czy przycisk radiowy jest włączony.|
-|[Obiektu CTaskDialog:: issupportd](#issupported)|Określa, czy komputer, na którym działa aplikacja, obsługuje `CTaskDialog`program.|
-|[Obiektu CTaskDialog:: LoadCommandControls](#loadcommandcontrols)|Dodaje kontrolki przycisku polecenia przy użyciu danych z tabeli ciągów.|
+|[CTaskDialog::IsSupported](#issupported)|Określa, czy komputer, na który `CTaskDialog`jest uruchomiona aplikacja, obsługuje plik .|
+|[CTaskDialog::LoadCommandControls](#loadcommandcontrols)|Dodaje formanty przycisku polecenia przy użyciu danych z tabeli ciągów.|
 |[CTaskDialog::LoadRadioButtons](#loadradiobuttons)|Dodaje przyciski radiowe przy użyciu danych z tabeli ciągów.|
-|[Obiektu CTaskDialog:: typu NavigateTo](#navigateto)|Przenosi fokus do innego `CTaskDialog`.|
-|[Obiektu CTaskDialog:: OnCommandControlClick](#oncommandcontrolclick)|Struktura wywołuje tę metodę, gdy użytkownik kliknie kontrolkę przycisk polecenia.|
-|[Obiektu CTaskDialog:: OnCreate](#oncreate)|Struktura wywołuje tę metodę po utworzeniu `CTaskDialog`.|
-|[Obiektu CTaskDialog:: OnDestroy](#ondestroy)|Struktura wywołuje tę metodę natychmiast przed zniszczeniem `CTaskDialog`.|
-|[Obiektu CTaskDialog:: OnExpandButtonClick](#onexpandbuttonclick)|Struktura wywołuje tę metodę, gdy użytkownik kliknie przycisk rozwinięcia.|
-|[Obiektu CTaskDialog:: OnHelp](#onhelp)|Struktura wywołuje tę metodę, gdy użytkownik zażąda pomocy.|
-|[Obiektu CTaskDialog:: OnHyperlinkClick](#onhyperlinkclick)|Struktura wywołuje tę metodę, gdy użytkownik kliknie hiperłącze.|
-|[Obiektu CTaskDialog:: OnInit](#oninit)|Struktura wywołuje tę metodę, gdy `CTaskDialog` zostanie zainicjowany.|
-|[Obiektu CTaskDialog:: OnNavigatePage](#onnavigatepage)|Struktura wywołuje tę metodę, gdy użytkownik przesuwa fokus w odniesieniu do kontrolek w `CTaskDialog`.|
-|[Obiektu CTaskDialog:: OnRadioButtonClick](#onradiobuttonclick)|Struktura wywołuje tę metodę, gdy użytkownik wybierze kontrolkę przycisk radiowy.|
-|[Obiektu CTaskDialog:: ontimeer](#ontimer)|Struktura wywołuje tę metodę po wygaśnięciu czasomierza.|
-|[Obiektu CTaskDialog:: OnVerificationCheckboxClick](#onverificationcheckboxclick)|Struktura wywołuje tę metodę, gdy użytkownik kliknie pole wyboru weryfikacja.|
-|[Obiektu CTaskDialog:: RemoveAllCommandControls](#removeallcommandcontrols)|Usuwa wszystkie formanty poleceń z `CTaskDialog`.|
-|[CTaskDialog::RemoveAllRadioButtons](#removeallradiobuttons)|Usuwa wszystkie przyciski radiowe z `CTaskDialog`.|
-|[CTaskDialog::SetCommandControlOptions](#setcommandcontroloptions)|Aktualizuje kontrolkę przycisk polecenia na `CTaskDialog`.|
-|[Obiektu CTaskDialog:: SetCommonButtonOptions](#setcommonbuttonoptions)|Aktualizuje podzestaw wspólnych przycisków do włączenia i wymaga podniesienia uprawnień funkcji kontroli konta użytkownika.|
-|[Obiektu CTaskDialog:: SetCommonButtons](#setcommonbuttons)|Dodaje typowe przyciski do `CTaskDialog`.|
-|[Obiektu CTaskDialog:: SetContent](#setcontent)|Aktualizuje zawartość `CTaskDialog`.|
-|[CTaskDialog::SetDefaultCommandControl](#setdefaultcommandcontrol)|Określa domyślną kontrolkę przycisk polecenia.|
-|[CTaskDialog::SetDefaultRadioButton](#setdefaultradiobutton)|Określa domyślny przycisk radiowy.|
-|[Obiektu CTaskDialog:: SetDialogWidth](#setdialogwidth)|Dostosowuje szerokość `CTaskDialog`.|
-|[CTaskDialog::SetExpansionArea](#setexpansionarea)|Aktualizuje obszar `CTaskDialog`rozwinięcia.|
-|[CTaskDialog::SetFooterIcon](#setfootericon)|Aktualizuje ikonę stopki dla `CTaskDialog`.|
-|[CTaskDialog::SetFooterText](#setfootertext)|Aktualizuje tekst w stopce `CTaskDialog`.|
-|[Obiektu CTaskDialog:: SetMainIcon](#setmainicon)|Aktualizuje główną ikonę `CTaskDialog`.|
-|[Obiektu CTaskDialog:: SetMainInstruction](#setmaininstruction)|Aktualizuje główną instrukcję `CTaskDialog`.|
-|[CTaskDialog::SetOptions](#setoptions)|Konfiguruje opcje dla `CTaskDialog`.|
-|[CTaskDialog::SetProgressBarMarquee](#setprogressbarmarquee)|Konfiguruje pasek Neon dla `CTaskDialog` i dodaje go do okna dialogowego.|
-|[Obiektu CTaskDialog:: SetProgressBarPosition](#setprogressbarposition)|Dostosowuje położenie paska postępu.|
+|[CTaskDialog::NavigateTo](#navigateto)|Przenosi fokus `CTaskDialog`do innego .|
+|[CTaskDialog::OnCommandControlClick](#oncommandcontrolclick)|Struktura wywołuje tę metodę, gdy użytkownik kliknie kontrolkę przycisku polecenia.|
+|[CTaskDialog::OnCreate](#oncreate)|Struktura wywołuje tę metodę po `CTaskDialog`tym, jak tworzy .|
+|[CTaskDialog::OnDestroy](#ondestroy)|Struktura wywołuje tę metodę bezpośrednio przed `CTaskDialog`zniszczeniem .|
+|[CTaskDialog::OnRozwińButtonClick](#onexpandbuttonclick)|Struktura wywołuje tę metodę, gdy użytkownik kliknie przycisk rozszerzenia.|
+|[CTaskDialog::OnHelp](#onhelp)|Struktura wywołuje tę metodę, gdy użytkownik żąda pomocy.|
+|[CTaskDialog::OnHyperlinkClick](#onhyperlinkclick)|Struktura wywołuje tę metodę, gdy użytkownik kliknie hiperłącze.|
+|[CTaskDialog::OnInit](#oninit)|Struktura wywołuje tę metodę, `CTaskDialog` gdy jest inicjowany.|
+|[CTaskDialog::OnNavigatePage](#onnavigatepage)|Struktura wywołuje tę metodę, gdy użytkownik przenosi fokus w odniesieniu do formantów na `CTaskDialog`.|
+|[CTaskDialog::OnRadioButtonClick](#onradiobuttonclick)|Struktura wywołuje tę metodę, gdy użytkownik wybiera kontrolkę przycisku radiowego.|
+|[CTaskDialog::OnTimer](#ontimer)|Struktura wywołuje tę metodę, gdy czasomierz wygasa.|
+|[CTaskDialog::OnVerificationCheckboxClick](#onverificationcheckboxclick)|Struktura wywołuje tę metodę, gdy użytkownik kliknie pole wyboru weryfikacji.|
+|[CTaskDialog::RemoveAllCommandControls](#removeallcommandcontrols)|Usuwa wszystkie kontrolki `CTaskDialog`poleceń z pliku .|
+|[CTaskDialog::RemoveAllRadioButtons](#removeallradiobuttons)|Usuwa wszystkie przyciski radiowe z pliku `CTaskDialog`.|
+|[CTaskDialog::SetCommandControlOptions](#setcommandcontroloptions)|Aktualizuje kontrolkę `CTaskDialog`przycisku polecenia na pliku .|
+|[CTaskDialog::SetCommonButtonOptions](#setcommonbuttonoptions)|Aktualizuje podzbiór typowych przycisków, które mają być włączone i wymagają elewacji funkcji Kontrola konta użytkownika.|
+|[CTaskDialog::SetCommonButtons](#setcommonbuttons)|Dodaje typowe przyciski do pliku `CTaskDialog`.|
+|[CTaskDialog::SetContent](#setcontent)|Aktualizuje zawartość `CTaskDialog`pliku .|
+|[CTaskDialog::SetDefaultCommandControl](#setdefaultcommandcontrol)|Określa domyślny kontrolka przycisku polecenia.|
+|[CTaskDialog::SetDefaultRadioButton](#setdefaultradiobutton)|Określa domyślny przycisk opcji.|
+|[CTaskDialog::SetDialogWidth](#setdialogwidth)|Dostosowuje szerokość pliku `CTaskDialog`.|
+|[CTaskDialog::SetExpansionArea](#setexpansionarea)|Aktualizuje obszar rozbudowy pliku `CTaskDialog`.|
+|[CTaskDialog::SetFooterIcon](#setfootericon)|Aktualizuje ikonę stopki dla pliku `CTaskDialog`.|
+|[CTaskDialog::SetFooterText](#setfootertext)|Aktualizuje tekst na stopce `CTaskDialog`pliku .|
+|[CTaskDialog::SetMainIcon](#setmainicon)|Aktualizuje główną `CTaskDialog`ikonę pliku .|
+|[CTaskDialog::SetMainInstruction](#setmaininstruction)|Aktualizuje główną `CTaskDialog`instrukcję .|
+|[CTaskDialog::SetOptions](#setoptions)|Konfiguruje opcje `CTaskDialog`dla pliku .|
+|[CTaskDialog::SetProgressBarMarquee](#setprogressbarmarquee)|Konfiguruje pasek ramki zaznaczenia dla `CTaskDialog` i dodaje go do okna dialogowego.|
+|[CTaskDialog::SetProgressBarPosition](#setprogressbarposition)|Dostosowuje położenie paska postępu.|
 |[CTaskDialog::SetProgressBarRange](#setprogressbarrange)|Dostosowuje zakres paska postępu.|
-|[CTaskDialog::SetProgressBarState](#setprogressbarstate)|Ustawia stan paska postępu i wyświetla go w `CTaskDialog`.|
+|[CTaskDialog::SetProgressBarState](#setprogressbarstate)|Ustawia stan paska postępu i wyświetla `CTaskDialog`go na pliku .|
 |[CTaskDialog::SetRadioButtonOptions](#setradiobuttonoptions)|Włącza lub wyłącza przycisk radiowy.|
-|[Obiektu CTaskDialog:: SetVerificationCheckbox](#setverificationcheckbox)|Ustawia stan zaznaczenia pola wyboru weryfikacji.|
+|[CTaskDialog::SetVerificationCheckbox](#setverificationcheckbox)|Ustawia sprawdzony stan pola wyboru weryfikacji.|
 |[CTaskDialog::SetVerificationCheckboxText](#setverificationcheckboxtext)|Ustawia tekst po prawej stronie pola wyboru weryfikacji.|
-|[Obiektu CTaskDialog:: SetWindowTitle](#setwindowtitle)|Ustawia tytuł elementu `CTaskDialog`.|
-|[Obiektu CTaskDialog:: ShowDialog](#showdialog)|Tworzy i wyświetla `CTaskDialog`.|
-|[CTaskDialog::TaskDialogCallback](#taskdialogcallback)|Struktura wywołuje ten element w odpowiedzi na różne komunikaty systemu Windows.|
+|[CTaskDialog::SetWindowTitle](#setwindowtitle)|Ustawia tytuł pliku `CTaskDialog`.|
+|[CTaskDialog::ShowDialog](#showdialog)|Tworzy i `CTaskDialog`wyświetla plik .|
+|[CTaskDialog::TaskDialogCallback](#taskdialogcallback)|Struktura wywołuje to w odpowiedzi na różne komunikaty systemu Windows.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
 |||
 |-|-|
-|`m_aButtons`|Tablica kontrolek przycisków poleceń dla `CTaskDialog`.|
-|`m_aRadioButtons`|Tablica kontrolek `CTaskDialog`przycisków radiowych.|
-|`m_bVerified`|`TRUE`wskazuje, że pole wyboru weryfikacji jest zaznaczone; `FALSE` wskazuje, że nie jest.|
-|`m_footerIcon`|Ikona w stopce `CTaskDialog`.|
-|`m_hWnd`|Uchwyt okna dla `CTaskDialog`.|
-|`m_mainIcon`|Ikona `CTaskDialog`główna.|
+|`m_aButtons`|Tablica przycisków poleceń `CTaskDialog`steruje przyciskiem .|
+|`m_aRadioButtons`|Tablica elementów sterujących `CTaskDialog`przyciskiem opcji dla pliku .|
+|`m_bVerified`|`TRUE`wskazuje, że pole wyboru weryfikacji jest zaznaczone; `FALSE` oznacza, że tak nie jest.|
+|`m_footerIcon`|Ikona w stopce `CTaskDialog`pliku .|
+|`m_hWnd`|Uchwyt do okna dla `CTaskDialog`.|
+|`m_mainIcon`|Główna ikona `CTaskDialog`pliku .|
 |`m_nButtonDisabled`|Maska wskazująca, które z typowych przycisków są wyłączone.|
-|`m_nButtonElevation`|Maska wskazująca, które ze wspólnych przycisków wymagają podniesienia uprawnień funkcji Kontrola konta użytkownika.|
-|`m_nButtonId`|Identyfikator wybranego formantu przycisku polecenia.|
-|`m_nCommonButton`|Maska wskazująca, które typowe przyciski są wyświetlane w `CTaskDialog`.|
-|`m_nDefaultCommandControl`|Identyfikator kontrolki przycisku polecenia, która jest wybierana podczas `CTaskDialog` wyświetlania.|
-|`m_nDefaultRadioButton`|Identyfikator kontrolki przycisku radiowego, która jest wybierana podczas `CTaskDialog` wyświetlania.|
-|`m_nFlags`|Maska wskazująca opcje `CTaskDialog`.|
-|`m_nProgressPos`|Bieżąca pozycja paska postępu.  Ta wartość musi należeć `m_nProgressRangeMin` do `m_nProgressRangeMax`zakresu od do.|
+|`m_nButtonElevation`|Maska wskazująca, który z typowych przycisków wymaga podniesienia funkcji Kontrola konta użytkownika.|
+|`m_nButtonId`|Identyfikator wybranego przycisku polecenia.|
+|`m_nCommonButton`|Maska wskazująca, które typowe przyciski `CTaskDialog`są wyświetlane na pliku .|
+|`m_nDefaultCommandControl`|Identyfikator formantu przycisku polecenia, który `CTaskDialog` jest wybrany podczas wyświetlania.|
+|`m_nDefaultRadioButton`|Identyfikator kontrolki przycisku radiowego, `CTaskDialog` który jest wybrany podczas wyświetlania.|
+|`m_nFlags`|Maska wskazująca opcje dla `CTaskDialog`pliku .|
+|`m_nProgressPos`|Bieżąca pozycja paska postępu.  Ta wartość musi `m_nProgressRangeMin` `m_nProgressRangeMax`być między i .|
 |`m_nProgressRangeMax`|Maksymalna wartość paska postępu.|
 |`m_nProgressRangeMin`|Minimalna wartość paska postępu.|
-|`m_nProgressState`|Stan paska postępu. Aby uzyskać więcej informacji, zobacz [obiektu CTaskDialog:: SetProgressBarState](#setprogressbarstate).|
-|`m_nRadioId`|Identyfikator wybranej kontrolki przycisku radiowego.|
+|`m_nProgressState`|Stan paska postępu. Aby uzyskać więcej informacji, zobacz [CTaskDialog::SetProgressBarState](#setprogressbarstate).|
+|`m_nRadioId`|Identyfikator wybranego przycisku radiowego.|
 |`m_nWidth`|Szerokość `CTaskDialog` w pikselach.|
-|`m_strCollapse`|Ciąg `CTaskDialog` wyświetlany po prawej stronie pola rozwijanego, gdy rozwinięte informacje są ukryte.|
-|`m_strContent`|Ciąg `CTaskDialog`zawartości.|
-|`m_strExpand`|Ciąg `CTaskDialog` wyświetlany po prawej stronie pola rozwijanego, gdy wyświetlane są rozwinięte informacje.|
+|`m_strCollapse`|Ciąg wyświetlany `CTaskDialog` po prawej stronie pola rozszerzeń, gdy rozwinięte informacje są ukryte.|
+|`m_strContent`|Ciąg zawartości pliku `CTaskDialog`.|
+|`m_strExpand`|Ciąg wyświetlany `CTaskDialog` po prawej stronie pola rozszerzeń, gdy wyświetlane są rozwinięte informacje.|
 |`m_strFooter`|Stopka `CTaskDialog`.|
-|`m_strInformation`|Rozwinięte informacje dla `CTaskDialog`.|
-|`m_strMainInstruction`|Główna instrukcja `CTaskDialog`.|
-|`m_strTitle`|Tytuł `CTaskDialog`.|
-|`m_strVerification`|Ciąg wyświetlany po `CTaskDialog` prawej stronie pola wyboru weryfikacji.|
+|`m_strInformation`|Rozszerzone informacje `CTaskDialog`dla .|
+|`m_strMainInstruction`|Główną instrukcją `CTaskDialog`.|
+|`m_strTitle`|Tytuł . `CTaskDialog`|
+|`m_strVerification`|Ciąg wyświetlany `CTaskDialog` po prawej stronie pola wyboru weryfikacji.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CTaskDialog` Klasa zastępuje standardowe okno komunikatu systemu Windows i ma dodatkowe funkcje, takie jak nowe kontrolki, aby zebrać informacje od użytkownika. Ta klasa znajduje się w bibliotece MFC w programie Visual Studio 2010 i nowszych. `CTaskDialog` Jest dostępny od systemu Windows Vista. W `CTaskDialog` starszych wersjach systemu Windows nie można wyświetlić obiektu. Użyj `CTaskDialog::IsSupported` , aby określić w czasie wykonywania, czy bieżący użytkownik może wyświetlić okno dialogowe zadania. Standardowe okno komunikatu systemu Windows jest nadal obsługiwane.
+Klasa `CTaskDialog` zastępuje standardowe okno komunikatu systemu Windows i ma dodatkowe funkcje, takie jak nowe formanty do zbierania informacji od użytkownika. Ta klasa znajduje się w bibliotece MFC w programie Visual Studio 2010 i nowszych. Jest `CTaskDialog` dostępny począwszy od systemu Windows Vista. Starsze wersje systemu Windows `CTaskDialog` nie mogą wyświetlać obiektu. Służy `CTaskDialog::IsSupported` do określania w czasie wykonywania, czy bieżący użytkownik może wyświetlić okno dialogowe zadania. Standardowe okno komunikatu systemu Windows jest nadal obsługiwane.
 
-`CTaskDialog` Jest dostępny tylko w przypadku kompilowania aplikacji przy użyciu biblioteki Unicode.
+Jest `CTaskDialog` dostępna tylko podczas tworzenia aplikacji przy użyciu biblioteki Unicode.
 
-`CTaskDialog` Ma dwa różne konstruktory. Jeden konstruktor pozwala określić dwa przyciski poleceń i maksymalnie sześć kontrolek zwykłych przycisków. Można dodać więcej przycisków poleceń po utworzeniu `CTaskDialog`. Drugi Konstruktor nie obsługuje żadnych przycisków poleceń, ale można dodać nieograniczoną liczbę kontrolek zwykłych przycisków. Aby uzyskać więcej informacji na temat konstruktorów, zobacz [obiektu CTaskDialog:: obiektu CTaskDialog](#ctaskdialog).
+Ma `CTaskDialog` dwa różne konstruktory. Jeden konstruktor umożliwia określenie dwóch przycisków poleceń i maksymalnie sześciu zwykłych formantów przycisków. Po utworzeniu `CTaskDialog`pliku . Drugi konstruktor nie obsługuje żadnych przycisków poleceń, ale można dodać nieograniczoną liczbę zwykłych formantów przycisków. Aby uzyskać więcej informacji na temat konstruktorów, zobacz [CTaskDialog::CTaskDialog](#ctaskdialog).
 
-Na poniższej ilustracji przedstawiono przykład `CTaskDialog` ilustrujący lokalizację niektórych kontrolek.
+Na poniższej ilustracji przedstawiono przykład, `CTaskDialog` aby zilustrować lokalizację niektórych formantów.
 
-![Przykład obiektu CTaskDialog](../../mfc/reference/media/ctaskdialogsample.png "Przykład obiektu CTaskDialog") <br/>
-Przykład obiektu CTaskDialog
+![Przykład CTaskDialog](../../mfc/reference/media/ctaskdialogsample.png "Przykład CTaskDialog") <br/>
+Próbka CTaskDialog
 
 ## <a name="requirements"></a>Wymagania
 
 **Minimalny wymagany system operacyjny:** Windows Vista
 
-**Nagłówek:** afxtaskdialog. h
+**Nagłówek:** afxtaskdialog.h
 
-##  <a name="addcommandcontrol"></a>Obiektu CTaskDialog:: AddCommandControl
+## <a name="ctaskdialogaddcommandcontrol"></a><a name="addcommandcontrol"></a>CTaskDialog::AddCommandControl
 
-Dodaje nową kontrolkę przycisk polecenia do `CTaskDialog`.
+Dodaje nowy kontrolka `CTaskDialog`przycisku polecenia do pliku .
 
 ```
 void AddCommandControl(
@@ -265,31 +265,31 @@ void AddCommandControl(
 
 ### <a name="parameters"></a>Parametry
 
-*nCommandControlID*<br/>
-podczas Numer identyfikacyjny kontrolki polecenia.
+*nCommandControlID (Identyfikator kontrolera)*<br/>
+[w] Numer identyfikacyjny sterowania sterowaniem poleceniem.
 
-*strCaption*<br/>
-podczas Ciąg `CTaskDialog` wyświetlany użytkownikowi. Użyj tego ciągu, aby wyjaśnić przeznaczenie polecenia.
+*strCaption (strCaption)*<br/>
+[w] Ciąg, który `CTaskDialog` wyświetla użytkownikowi. Ten ciąg służy do wyjaśniania celu polecenia.
 
-*bEnabled*<br/>
-podczas Parametr logiczny, który wskazuje, czy przycisk Nowy jest włączony, czy wyłączony.
+*bWłach*<br/>
+[w] Parametr logiczny wskazujący, czy nowy przycisk jest włączony czy wyłączony.
 
-*bRequiresElevation*<br/>
-podczas Parametr logiczny, który wskazuje, czy polecenie wymaga podniesienia uprawnień.
+*bWymaganieWychanie*<br/>
+[w] Parametr logiczny, który wskazuje, czy polecenie wymaga podniesienia uprawnień.
 
 ### <a name="remarks"></a>Uwagi
 
-`CTaskDialog Class` Może wyświetlać nieograniczoną liczbę kontrolek przycisków poleceń. Jeśli jednak w `CTaskDialog` formancie zostanie wyświetlony dowolny przycisk polecenia, będzie można wyświetlić maksymalnie sześć przycisków. Jeśli nie `CTaskDialog` ma kontrolek przycisk polecenia, może wyświetlić nieograniczoną liczbę przycisków.
+Może `CTaskDialog Class` wyświetlać nieograniczoną liczbę elementów sterujących przyciskami poleceń. Jeśli jednak `CTaskDialog` zostanie wyświetlony dowolny przycisk polecenia, może wyświetlić maksymalnie sześć przycisków. Jeśli `CTaskDialog` a nie ma elementów sterujących przyciskiem polecenia, może wyświetlać nieograniczoną liczbę przycisków.
 
-Gdy użytkownik wybierze kontrolkę przycisk polecenia, `CTaskDialog` zostanie zamknięta. Jeśli aplikacja wyświetli okno dialogowe przy użyciu [obiektu CTaskDialog::D omodal](#domodal), `DoModal` zwraca *nCommandControlID* zaznaczonej kontrolki przycisk polecenia.
+Gdy użytkownik wybierze kontrolkę `CTaskDialog` przycisku polecenia, zamyka. Jeśli aplikacja wyświetla okno dialogowe przy użyciu [CTaskDialog::DoModal](#domodal), `DoModal` zwraca *nCommandControlID* wybranego przycisku polecenia.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-##  <a name="addradiobutton"></a>Obiektu CTaskDialog:: AddRadioButton
+## <a name="ctaskdialogaddradiobutton"></a><a name="addradiobutton"></a>CTaskDialog::AddRadioButton
 
-Dodaje przycisk radiowy do `CTaskDialog`.
+Dodaje przycisk radiowy `CTaskDialog`do pliku .
 
 ```
 void CTaskDialog::AddRadioButton(
@@ -300,28 +300,28 @@ void CTaskDialog::AddRadioButton(
 
 ### <a name="parameters"></a>Parametry
 
-*nRadioButtonID*<br/>
-podczas Numer identyfikacyjny przycisku radiowego.
+*nRadioButtonid*<br/>
+[w] Numer identyfikacyjny przycisku radiowego.
 
-*strCaption*<br/>
-podczas Ciąg `CTaskDialog` wyświetlany obok przycisku radiowego.
+*strCaption (strCaption)*<br/>
+[w] Ciąg wyświetlany `CTaskDialog` obok przycisku opcji.
 
-*bEnabled*<br/>
-podczas Parametr logiczny, który wskazuje, czy przycisk radiowy jest włączony.
+*bWłach*<br/>
+[w] Parametr logiczny wskazujący, czy przycisk radiowy jest włączony.
 
 ### <a name="remarks"></a>Uwagi
 
-Przyciski radiowe dla [klasy obiektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md) umożliwiają zbieranie informacji od użytkownika. Użyj funkcji [obiektu CTaskDialog:: GetSelectedRadioButtonID](#getselectedradiobuttonid) , aby określić, który przycisk radiowy jest wybrany.
+Przyciski radiowe [dla CTaskDialog Klasy](../../mfc/reference/ctaskdialog-class.md) umożliwiają zbieranie informacji od użytkownika. Użyj funkcji [CTaskDialog::GetSelectedRadioButtonID,](#getselectedradiobuttonid) aby określić, który przycisk opcji jest zaznaczony.
 
-Nie wymaga, aby parametry nRadioButtonID były unikatowe dla każdego przycisku radiowego. `CTaskDialog` Jednak może wystąpić nieoczekiwane zachowanie, jeśli nie zostanie użyty unikatowy identyfikator dla każdego przycisku radiowego.
+Nie `CTaskDialog` wymaga, aby parametry *nRadioButtonID* były unikatowe dla każdego przycisku radiowego. Jednak może wystąpić nieoczekiwane zachowanie, jeśli nie używasz odrębnego identyfikatora dla każdego przycisku radiowego.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-##  <a name="clickcommandcontrol"></a>Obiektu CTaskDialog:: ClickCommandControl
+## <a name="ctaskdialogclickcommandcontrol"></a><a name="clickcommandcontrol"></a>CTaskDialog::ClickCommandControl
 
-Program programowo klika kontrolkę przycisk polecenia lub typowy przycisk.
+Klika formant przycisku polecenia lub wspólny przycisk programowo.
 
 ```
 protected:
@@ -330,16 +330,16 @@ void ClickCommandControl(int nCommandControlID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nCommandControlID*<br/>
-podczas Identyfikator polecenia kontrolki do kliknięcia.
+*nCommandControlID (Identyfikator kontrolera)*<br/>
+[w] Identyfikator polecenia formantu do kliknięcia.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta metoda generuje komunikat systemu Windows TDM_CLICK_BUTTON.
 
-##  <a name="clickradiobutton"></a>Obiektu CTaskDialog:: ClickRadioButton
+## <a name="ctaskdialogclickradiobutton"></a><a name="clickradiobutton"></a>CTaskDialog::ClickRadioButton
 
-Program programowo klika przycisk radiowy.
+Automatycznie klika przycisk radiowy.
 
 ```
 protected:
@@ -348,16 +348,16 @@ void ClickRadioButton(int nRadioButtonID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nRadioButtonID*<br/>
-podczas Identyfikator przycisku radiowego, który ma zostać kliknięty.
+*nRadioButtonid*<br/>
+[w] Identyfikator przycisku radiowego do kliknięcia.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta metoda generuje komunikat systemu Windows TDM_CLICK_RADIO_BUTTON.
 
-##  <a name="ctaskdialog"></a>Obiektu CTaskDialog:: obiektu CTaskDialog
+## <a name="ctaskdialogctaskdialog"></a><a name="ctaskdialog"></a>CTaskDialog::CTaskDialog
 
-Tworzy wystąpienie [klasy obiektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md).
+Tworzy wystąpienie [klasy CTaskDialog](../../mfc/reference/ctaskdialog-class.md).
 
 ```
 CTaskDialog(
@@ -381,45 +381,45 @@ CTaskDialog(
 
 ### <a name="parameters"></a>Parametry
 
-*strContent*<br/>
-podczas Ciąg, który ma być używany dla zawartości `CTaskDialog`.
+*strContent (podtrzymuje)*<br/>
+[w] Ciąg do użycia dla zawartości `CTaskDialog`pliku .
 
-*strMainInstruction*<br/>
-podczas Główna instrukcja `CTaskDialog`.
+*strMainInstrukcja*<br/>
+[w] Główną instrukcją `CTaskDialog`.
 
-*strTitle*<br/>
-podczas Tytuł `CTaskDialog`.
+*strTitle (napis)*<br/>
+[w] Tytuł . `CTaskDialog`
 
-*nCommonButtons*<br/>
-podczas Maska typowych przycisków, które mają zostać dodane do `CTaskDialog`.
+*nKłamiony*<br/>
+[w] Maska wspólnych przycisków, aby `CTaskDialog`dodać do pliku .
 
 *nTaskDialogOptions*<br/>
-podczas Zestaw opcji do użycia dla `CTaskDialog`.
+[w] Zestaw opcji do użycia `CTaskDialog`dla pliku .
 
-*strFooter*<br/>
-podczas Ciąg, który ma być używany jako stopka.
+*strFooter (ul.*<br/>
+[w] Ciąg do użycia jako stopka.
 
 *nIDCommandControlsFirst*<br/>
-podczas Identyfikator ciągu pierwszego polecenia.
+[w] Identyfikator ciągu pierwszego polecenia.
 
 *nIDCommandControlsLast*<br/>
-podczas Identyfikator ciągu ostatniego polecenia.
+[w] Identyfikator ciągu ostatniego polecenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Istnieją dwa sposoby dodawania `CTaskDialog` do aplikacji. Pierwszym sposobem jest użycie jednego z konstruktorów w celu utworzenia `CTaskDialog` i wyświetlenia go przy użyciu [obiektu CTaskDialog::D omodal](#domodal). Drugi sposób polega na użyciu funkcji statycznej [obiektu CTaskDialog:: ShowDialog](#showdialog), która umożliwia wyświetlenie `CTaskDialog` `CTaskDialog` bez jawnego tworzenia obiektu.
+Istnieją dwa sposoby, które `CTaskDialog` można dodać do aplikacji. Pierwszym sposobem jest użycie jednego z konstruktorów do utworzenia `CTaskDialog` i wyświetlenia go za pomocą [CTaskDialog::DoModal](#domodal). Drugim sposobem jest użycie funkcji statycznej [CTaskDialog::ShowDialog](#showdialog), która `CTaskDialog` umożliwia wyświetlanie bez `CTaskDialog` jawnego tworzenia obiektu.
 
-Drugi Konstruktor tworzy kontrolki przycisk polecenia przy użyciu danych z pliku zasobów aplikacji. Tabela ciągów w pliku zasobów zawiera kilka ciągów ze skojarzonymi identyfikatorami ciągów. Ta metoda dodaje kontrolkę przycisk polecenia dla każdego prawidłowego wpisu w tabeli ciągów między *nIDCommandControlsFirst* i *nCommandControlsLast*włącznie. Dla tych kontrolek przycisków poleceń ciąg w tabeli ciągów jest podpisem kontrolki, a IDENTYFIKATORem ciągu jest identyfikator formantu.
+Drugi konstruktor tworzy formanty przycisku polecenia przy użyciu danych z pliku zasobów aplikacji. Tabela ciągów w pliku zasobów zawiera kilka ciągów o skojarzonych identyfikatorach ciągów. Ta metoda dodaje kontrolkę przycisku polecenia dla każdego prawidłowego wpisu w tabeli ciągów między *nIDCommandControlsFirst* i *nCommandControlsLast*, włącznie. Dla tych formantów przycisku polecenia ciąg w tabeli ciągów jest podpis formantu i identyfikator ciągu jest identyfikator formantu.
 
-Aby uzyskać listę prawidłowych opcji, zobacz [obiektu CTaskDialog:: SetOptions](#setoptions) .
+Zobacz [CTaskDialog::SetOptions](#setoptions) listę prawidłowych opcji.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="domodal"></a>Obiektu CTaskDialog::D oModal
+## <a name="ctaskdialogdomodal"></a><a name="domodal"></a>CTaskDialog::DoModal
 
-`CTaskDialog` Pokazuje i sprawia, że jest modalny.
+Pokazuje `CTaskDialog` i sprawia, że modalne.
 
 ```
 INT_PTR DoModal (HWND hParent = ::GetActiveWindow());
@@ -427,24 +427,24 @@ INT_PTR DoModal (HWND hParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>Parametry
 
-*hParent*<br/>
-podczas Okno nadrzędne dla `CTaskDialog`.
+*hRoszt*<br/>
+[w] Okno nadrzędne `CTaskDialog`dla pliku .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba całkowita, która odnosi się do zaznaczenia dokonanego przez użytkownika.
+Liczba całkowita odpowiadająca wyborowi dokonanemu przez użytkownika.
 
 ### <a name="remarks"></a>Uwagi
 
-Wyświetla to wystąpienie [obiektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md). Aplikacja czeka, aż użytkownik zamknie okno dialogowe.
+Wyświetla to wystąpienie [CTaskDialog](../../mfc/reference/ctaskdialog-class.md). Następnie aplikacja czeka na zamknięcie okna dialogowego przez użytkownika.
 
-Zamyka się, gdy użytkownik wybierze wspólny przycisk, formant linku polecenia lub `CTaskDialog`zamknie. `CTaskDialog` Wartość zwracana jest identyfikatorem, który wskazuje, jak użytkownik zamknął okno dialogowe.
+Zamyka `CTaskDialog` się, gdy użytkownik wybierze wspólny przycisk, kontrolkę `CTaskDialog`łącza poleceń lub zamknie plik . Zwracana wartość jest identyfikatorem wskazującym, w jaki sposób użytkownik zamknął okno dialogowe.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="getcommonbuttoncount"></a>Obiektu CTaskDialog:: GetCommonButtonCount
+## <a name="ctaskdialoggetcommonbuttoncount"></a><a name="getcommonbuttoncount"></a>CTaskDialog::GetCommonButtonCount
 
 Pobiera liczbę typowych przycisków.
 
@@ -458,13 +458,13 @@ Liczba dostępnych wspólnych przycisków.
 
 ### <a name="remarks"></a>Uwagi
 
-Typowe przyciski są domyślnymi przyciskami dostarczanymi do [obiektu CTaskDialog:: obiektu CTaskDialog](#ctaskdialog). [Klasa obiektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md) Wyświetla przyciski u dołu okna dialogowego.
+Typowe przyciski są domyślne przyciski, które można podać [do CTaskDialog::CTaskDialog](#ctaskdialog). [Klasa CTaskDialog](../../mfc/reference/ctaskdialog-class.md) wyświetla przyciski wzdłuż dolnej części okna dialogowego.
 
-Lista wyliczonych przycisków jest dostępna w CommCtrl. h.
+Wyliczona lista przycisków znajduje się w pliku CommCtrl.h.
 
-##  <a name="getcommonbuttonflag"></a>Obiektu CTaskDialog:: GetCommonButtonFlag
+## <a name="ctaskdialoggetcommonbuttonflag"></a><a name="getcommonbuttonflag"></a>CTaskDialog::GetCommonButtonFlag
 
-Konwertuje standardowy przycisk systemu Windows na wspólny typ przycisku skojarzony z klasą [obiektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md).
+Konwertuje standardowy przycisk Systemu Windows na typ przycisku wspólnego skojarzonego z [klasą CTaskDialog](../../mfc/reference/ctaskdialog-class.md).
 
 ```
 int GetCommonButtonFlag(int nButtonId) const;
@@ -472,16 +472,16 @@ int GetCommonButtonFlag(int nButtonId) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nButtonId*<br/>
-podczas Wartość standardowego przycisku systemu Windows.
+*nButtonId (PrzyciskId)*<br/>
+[w] Standardowa wartość przycisku Systemu Windows.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość odpowiadającego `CTaskDialog` przycisku wspólnego. Jeśli nie ma odpowiedniego przycisku wspólnego, ta metoda zwraca 0.
+Wartość odpowiedniego `CTaskDialog` wspólnego przycisku. Jeśli nie ma odpowiedniego wspólnego przycisku, ta metoda zwraca wartość 0.
 
-##  <a name="getcommonbuttonid"></a>Obiektu CTaskDialog:: GetCommonButtonId
+## <a name="ctaskdialoggetcommonbuttonid"></a><a name="getcommonbuttonid"></a>CTaskDialog::GetCommonButtonId
 
-Konwertuje jeden ze wspólnych typów przycisków skojarzonych z klasą [obiektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md) na standardowy przycisk systemu Windows.
+Konwertuje jeden z typowych typów przycisków skojarzonych z [klasą CTaskDialog](../../mfc/reference/ctaskdialog-class.md) na standardowy przycisk Systemu Windows.
 
 ```
 int GetCommonButtonId(int nFlag);
@@ -489,16 +489,16 @@ int GetCommonButtonId(int nFlag);
 
 ### <a name="parameters"></a>Parametry
 
-*nFlag*<br/>
-podczas Wspólny typ przycisku skojarzony z `CTaskDialog` klasą.
+*żużel*<br/>
+[w] Typ przycisku typowe skojarzone z klasą. `CTaskDialog`
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość odpowiadającego standardowego przycisku systemu Windows. Jeśli nie ma odpowiedniego przycisku systemu Windows, metoda zwróci wartość 0.
+Wartość odpowiedniego standardowego przycisku Windows. Jeśli nie ma odpowiedniego przycisku systemu Windows, metoda zwraca wartość 0.
 
-##  <a name="getoptions"></a>Obiektu CTaskDialog:: GetOptions
+## <a name="ctaskdialoggetoptions"></a><a name="getoptions"></a>CTaskDialog::GetOptions
 
-Zwraca flagi opcji dla tego `CTaskDialog`elementu.
+Zwraca flagi opcji `CTaskDialog`dla tego .
 
 ```
 int GetOptions() const;
@@ -506,19 +506,19 @@ int GetOptions() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Flagi dla elementu `CTaskDialog`.
+Flagi dla `CTaskDialog`.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji na temat opcji dostępnych dla [klasy obiektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md), zobacz [obiektu CTaskDialog:: SetOptions](#setoptions).
+Aby uzyskać więcej informacji na temat opcji dostępnych dla [klasy CTaskDialog](../../mfc/reference/ctaskdialog-class.md), zobacz [CTaskDialog::SetOptions](#setoptions).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="getselectedcommandcontrolid"></a>Obiektu CTaskDialog:: GetSelectedCommandControlID
+## <a name="ctaskdialoggetselectedcommandcontrolid"></a><a name="getselectedcommandcontrolid"></a>CTaskDialog::GetSelectedCommandControlID
 
-Zwraca wybraną kontrolkę przycisk polecenia.
+Zwraca kontrolka wybranego przycisku polecenia.
 
 ```
 int GetSelectedCommandControlID() const;
@@ -526,17 +526,17 @@ int GetSelectedCommandControlID() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Identyfikator aktualnie zaznaczonej kontrolki przycisku polecenia.
+Identyfikator aktualnie wybranego przycisku polecenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Nie trzeba używać tej metody do pobrania identyfikatora przycisku polecenia wybranego przez użytkownika. Ten identyfikator jest zwracany przez jedną z [obiektu CTaskDialog::D omodal](#domodal) lub [obiektu CTaskDialog:: ShowDialog](#showdialog).
+Nie trzeba używać tej metody, aby pobrać identyfikator przycisku polecenia, który użytkownik wybrał. Ten identyfikator jest zwracany przez [CTaskDialog::DoModal](#domodal) lub [CTaskDialog::ShowDialog](#showdialog).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-##  <a name="getselectedradiobuttonid"></a>Obiektu CTaskDialog:: GetSelectedRadioButtonID
+## <a name="ctaskdialoggetselectedradiobuttonid"></a><a name="getselectedradiobuttonid"></a>CTaskDialog::GetSelectedRadioButtonID
 
 Zwraca wybrany przycisk radiowy.
 
@@ -550,13 +550,13 @@ Identyfikator wybranego przycisku radiowego.
 
 ### <a name="remarks"></a>Uwagi
 
-Możesz użyć tej metody, gdy użytkownik zamknie okno dialogowe, aby pobrać wybrany przycisk radiowy.
+Tej metody można użyć po zamknięciu okna dialogowego przez użytkownika w celu pobrania wybranego przycisku opcji.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-##  <a name="getverificationcheckboxstate"></a>Obiektu CTaskDialog:: GetVerificationCheckboxState
+## <a name="ctaskdialoggetverificationcheckboxstate"></a><a name="getverificationcheckboxstate"></a>CTaskDialog::GetVerificationCheckboxState
 
 Pobiera stan pola wyboru weryfikacji.
 
@@ -566,15 +566,15 @@ BOOL GetVerificationCheckboxState() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli pole wyboru jest zaznaczone, FAŁSZ, jeśli nie jest.
+PRAWDA, jeśli zaznaczone jest pole wyboru, FALSE, jeśli nie jest.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#5](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_4.cpp)]
 
-##  <a name="iscommandcontrolenabled"></a>Obiektu CTaskDialog:: IsCommandControlEnabled
+## <a name="ctaskdialogiscommandcontrolenabled"></a><a name="iscommandcontrolenabled"></a>CTaskDialog::IsCommandControlEnabled
 
-Określa, czy kontrolka przycisku polecenia lub przycisk jest włączony.
+Określa, czy jest włączony przycisk polecenia, czy przycisk.
 
 ```
 BOOL IsCommandControlEnabled(int nCommandControlID) const;
@@ -582,24 +582,24 @@ BOOL IsCommandControlEnabled(int nCommandControlID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nCommandControlID*<br/>
-podczas Identyfikator kontrolki przycisku polecenia lub przycisku do przetestowania.
+*nCommandControlID (Identyfikator kontrolera)*<br/>
+[w] Identyfikator sterowania przyciskiem polecenia lub przycisku do przetestowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-TRUE, Jeśli kontrolka jest włączona, wartość FALSE, jeśli nie jest.
+PRAWDA, jeśli formant jest włączony, FALSE, jeśli nie jest.
 
 ### <a name="remarks"></a>Uwagi
 
-Za pomocą tej metody można określić dostępność obu kontrolek przycisków poleceń i typowych przycisków `CTaskDialog` klasy *.
+Za pomocą tej metody można określić dostępność zarówno formanty `CTaskDialog` przycisku polecenia, jak i typowe przyciski klasy*.
 
-Jeśli *nCommandControlID* nie jest prawidłowym identyfikatorem dla przycisku wspólnego `CTaskDialog` lub kontrolki przycisku polecenia, ta metoda zgłasza wyjątek.
+Jeśli *nCommandControlID* nie jest prawidłowym identyfikatorem `CTaskDialog` dla wspólnego przycisku lub formantu przycisku polecenia, ta metoda zgłasza wyjątek.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-##  <a name="isradiobuttonenabled"></a>Obiektu CTaskDialog:: IsRadioButtonEnabled
+## <a name="ctaskdialogisradiobuttonenabled"></a><a name="isradiobuttonenabled"></a>CTaskDialog::IsRadioButtonEnabled
 
 Określa, czy przycisk radiowy jest włączony.
 
@@ -609,12 +609,12 @@ BOOL IsRadioButtonEnabled(int nRadioButtonID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nRadioButtonID*<br/>
-podczas Identyfikator przycisku radiowego do przetestowania.
+*nRadioButtonid*<br/>
+[w] Identyfikator przycisku radiowego do przetestowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-TRUE, jeśli przycisk radiowy jest włączony, wartość FALSE, jeśli nie jest.
+PRAWDA, jeśli przycisk radiowy jest włączony, FALSE, jeśli nie jest.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -624,9 +624,9 @@ Jeśli *nRadioButtonID* nie jest prawidłowym identyfikatorem przycisku radioweg
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-##  <a name="issupported"></a>Obiektu CTaskDialog:: issupportd
+## <a name="ctaskdialogissupported"></a><a name="issupported"></a>CTaskDialog::IsSupported
 
-Określa, czy komputer, na którym działa aplikacja, obsługuje `CTaskDialog`program.
+Określa, czy komputer, na który `CTaskDialog`jest uruchomiona aplikacja, obsługuje plik .
 
 ```
 static BOOL IsSupported();
@@ -634,19 +634,19 @@ static BOOL IsSupported();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli komputer obsługuje `CTaskDialog`; W przeciwnym razie zwraca wartość FALSE.
+PRAWDA, jeśli komputer `CTaskDialog`obsługuje ; FAŁSZ inaczej.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej funkcji, aby określić w czasie wykonywania, jeśli komputer, na którym działa aplikacja `CTaskDialog` , obsługuje klasę. Jeśli komputer nie obsługuje programu `CTaskDialog`, należy podać inną metodę komunikacji z informacjami dla użytkownika. Aplikacja ulegnie awarii, jeśli podejmie próbę użycia `CTaskDialog` na komputerze, który nie `CTaskDialog` obsługuje klasy.
+Ta funkcja służy do określenia w czasie wykonywania, czy `CTaskDialog` komputer, który jest uruchomiony aplikacji obsługuje klasy. Jeśli komputer nie obsługuje `CTaskDialog`, należy podać inną metodę przekazywania informacji do użytkownika. Aplikacja ugo zostanie upaść, `CTaskDialog` jeśli spróbuje użyć `CTaskDialog` na komputerze, który nie obsługuje klasy.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#1](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_5.cpp)]
 
-##  <a name="loadcommandcontrols"></a>Obiektu CTaskDialog:: LoadCommandControls
+## <a name="ctaskdialogloadcommandcontrols"></a><a name="loadcommandcontrols"></a>CTaskDialog::LoadCommandControls
 
-Dodaje kontrolki przycisku polecenia przy użyciu danych z tabeli ciągów.
+Dodaje formanty przycisku polecenia przy użyciu danych z tabeli ciągów.
 
 ```
 void LoadCommandControls(
@@ -657,24 +657,24 @@ void LoadCommandControls(
 ### <a name="parameters"></a>Parametry
 
 *nIDCommandControlsFirst*<br/>
-podczas Identyfikator ciągu pierwszego polecenia.
+[w] Identyfikator ciągu pierwszego polecenia.
 
 *nIDCommandControlsLast*<br/>
-podczas Identyfikator ciągu ostatniego polecenia.
+[w] Identyfikator ciągu ostatniego polecenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda tworzy formanty przycisków poleceń przy użyciu danych z pliku zasobów aplikacji. Tabela ciągów w pliku zasobów zawiera kilka ciągów ze skojarzonymi identyfikatorami ciągów. Nowe kontrolki przycisków poleceń dodawane za pomocą tej metody Użyj ciągu dla podpisu kontrolki i identyfikatora ciągu dla identyfikatora formantu. Wybrany zakres ciągów jest dostarczany przez *nIDCommandControlsFirst* i *nCommandControlsLast*włącznie. Jeśli w zakresie istnieje pusty wpis, metoda nie dodaje kontrolki przycisk polecenia dla tego wpisu.
+Ta metoda tworzy formanty przycisku polecenia przy użyciu danych z pliku zasobów aplikacji. Tabela ciągów w pliku zasobów zawiera kilka ciągów o skojarzonych identyfikatorach ciągów. Nowe formanty przycisku polecenia dodane przy użyciu tej metody użyć ciągu dla podpisu formantu i identyfikatora ciągu dla identyfikatora formantu. Zakres wybranych ciągów jest dostarczany przez *nIDCommandControlsFirst* i *nCommandControlsLast*, włącznie. Jeśli istnieje pusty wpis w zakresie, metoda nie dodaje formantu przycisku polecenia dla tego wpisu.
 
-Domyślnie nowe formanty przycisków poleceń są włączone i nie wymagają podniesienia uprawnień.
+Domyślnie nowe kontrolki przycisków poleceń są włączone i nie wymagają podniesienia uprawnień.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-##  <a name="loadradiobuttons"></a>Obiektu CTaskDialog:: LoadRadioButtons
+## <a name="ctaskdialogloadradiobuttons"></a><a name="loadradiobuttons"></a>CTaskDialog::LoadRadioButtons
 
-Dodaje kontrolki przycisku radiowego za pomocą danych z tabeli ciągów.
+Dodaje kontrolki przycisku opcji przy użyciu danych z tabeli ciągów.
 
 ```
 void LoadRadioButtons(
@@ -684,15 +684,15 @@ void LoadRadioButtons(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDRadioButtonsFirst*<br/>
-podczas Identyfikator ciągu pierwszego przycisku radiowego.
+*nIDRadioButtonsPierwsz*<br/>
+[w] Identyfikator ciągu pierwszego przycisku radiowego.
 
 *nIDRadioButtonsLast*<br/>
-podczas Identyfikator ciągu ostatniego przycisku radiowego.
+[w] Identyfikator ciągu ostatniego przycisku radiowego.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda tworzy przyciski radiowe przy użyciu danych z pliku zasobów aplikacji. Tabela ciągów w pliku zasobów zawiera kilka ciągów ze skojarzonymi identyfikatorami ciągów. Nowe przyciski radiowe dodane przy użyciu tej metody używają ciągu dla napisu przycisku radiowego i identyfikatora ciągu dla identyfikatora przycisku radiowego. Wybrany zakres ciągów jest dostarczany przez *nIDRadioButtonsFirst* i *nRadioButtonsLast*włącznie. Jeśli w zakresie istnieje pusty wpis, metoda nie dodaje przycisku radiowego dla tego wpisu.
+Ta metoda tworzy przyciski radiowe przy użyciu danych z pliku zasobów aplikacji. Tabela ciągów w pliku zasobów zawiera kilka ciągów o skojarzonych identyfikatorach ciągów. Nowe przyciski radiowe dodane przy użyciu tej metody używają ciągu dla podpisu przycisku radiowego i identyfikatora ciągu dla identyfikatora przycisku radiowego. Zakres wybranych ciągów jest dostarczany przez *nIDRadioButtonsFirst* i *nRadioButtonsLast*, włącznie. Jeśli istnieje pusty wpis w zakresie, metoda nie dodaje przycisku radiowego dla tego wpisu.
 
 Domyślnie nowe przyciski radiowe są włączone.
 
@@ -700,9 +700,9 @@ Domyślnie nowe przyciski radiowe są włączone.
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-##  <a name="navigateto"></a>Obiektu CTaskDialog:: typu NavigateTo
+## <a name="ctaskdialognavigateto"></a><a name="navigateto"></a>CTaskDialog::NavigateTo
 
-Przenosi fokus do innego `CTaskDialog`.
+Przenosi fokus `CTaskDialog`do innego .
 
 ```
 protected:
@@ -712,15 +712,15 @@ void NavigateTo(CTaskDialog& oTaskDialog) const;
 ### <a name="parameters"></a>Parametry
 
 *oTaskDialog*<br/>
-podczas , `CTaskDialog` Który odbiera fokus.
+[w] Ten, `CTaskDialog` który otrzymuje fokus.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda ukrywa bieżącą `CTaskDialog` , gdy wyświetla *oTaskDialog*. *OTaskDialog* jest wyświetlany w tej samej lokalizacji co bieżący `CTaskDialog`.
+Ta metoda ukrywa `CTaskDialog` prąd, gdy wyświetla *oTaskDialog*. *OTaskDialog* jest wyświetlany w tym samym `CTaskDialog`miejscu co bieżący .
 
-##  <a name="oncommandcontrolclick"></a>Obiektu CTaskDialog:: OnCommandControlClick
+## <a name="ctaskdialogoncommandcontrolclick"></a><a name="oncommandcontrolclick"></a>CTaskDialog::OnCommandControlClick
 
-Struktura wywołuje tę metodę, gdy użytkownik kliknie kontrolkę przycisk polecenia.
+Struktura wywołuje tę metodę, gdy użytkownik kliknie kontrolkę przycisku polecenia.
 
 ```
 virtual HRESULT OnCommandControlClick(int nCommandControlID);
@@ -728,8 +728,8 @@ virtual HRESULT OnCommandControlClick(int nCommandControlID);
 
 ### <a name="parameters"></a>Parametry
 
-*nCommandControlID*<br/>
-podczas Identyfikator kontrolki przycisku polecenia, która została wybrana przez użytkownika.
+*nCommandControlID (Identyfikator kontrolera)*<br/>
+[w] Identyfikator formantu przycisku polecenia wybrany przez użytkownika.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -737,11 +737,11 @@ Domyślna implementacja zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
+Zastąpi tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
 
-##  <a name="oncreate"></a>Obiektu CTaskDialog:: OnCreate
+## <a name="ctaskdialogoncreate"></a><a name="oncreate"></a>CTaskDialog::OnCreate
 
-Struktura wywołuje tę metodę po utworzeniu `CTaskDialog`.
+Struktura wywołuje tę metodę po `CTaskDialog`tym, jak tworzy .
 
 ```
 virtual HRESULT OnCreate();
@@ -753,11 +753,11 @@ Domyślna implementacja zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
+Zastąpi tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
 
-##  <a name="ondestroy"></a>Obiektu CTaskDialog:: OnDestroy
+## <a name="ctaskdialogondestroy"></a><a name="ondestroy"></a>CTaskDialog::OnDestroy
 
-Struktura wywołuje tę metodę natychmiast przed zniszczeniem `CTaskDialog`.
+Struktura wywołuje tę metodę bezpośrednio przed `CTaskDialog`zniszczeniem .
 
 ```
 virtual HRESULT OnDestroy();
@@ -769,11 +769,11 @@ Domyślna implementacja zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
+Zastąpi tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
 
-##  <a name="onexpandbuttonclick"></a>Obiektu CTaskDialog:: OnExpandButtonClick
+## <a name="ctaskdialogonexpandbuttonclick"></a><a name="onexpandbuttonclick"></a>CTaskDialog::OnRozwińButtonClick
 
-Struktura wywołuje tę metodę, gdy użytkownik kliknie przycisk rozwinięcia.
+Struktura wywołuje tę metodę, gdy użytkownik kliknie przycisk rozszerzenia.
 
 ```
 virtual HRESULT OnExpandButtonClicked(BOOL bExpanded);
@@ -781,8 +781,8 @@ virtual HRESULT OnExpandButtonClicked(BOOL bExpanded);
 
 ### <a name="parameters"></a>Parametry
 
-*bExpanded*<br/>
-podczas Wartość różna od zera wskazuje dodatkowe informacje, które są wyświetlane. wartość 0 oznacza ukrycie dodatkowych informacji.
+*bRozwiń*<br/>
+[w] Wartość niezerowa wskazuje, że wyświetlane są dodatkowe informacje; 0 oznacza, że dodatkowe informacje są ukryte.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -790,11 +790,11 @@ Domyślna implementacja zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
+Zastąpi tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
 
-##  <a name="onhelp"></a>Obiektu CTaskDialog:: OnHelp
+## <a name="ctaskdialogonhelp"></a><a name="onhelp"></a>CTaskDialog::OnHelp
 
-Struktura wywołuje tę metodę, gdy użytkownik zażąda pomocy.
+Struktura wywołuje tę metodę, gdy użytkownik żąda pomocy.
 
 ```
 virtual HRESULT OnHelp();
@@ -806,9 +806,9 @@ Domyślna implementacja zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
+Zastąpi tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
 
-##  <a name="onhyperlinkclick"></a>Obiektu CTaskDialog:: OnHyperlinkClick
+## <a name="ctaskdialogonhyperlinkclick"></a><a name="onhyperlinkclick"></a>CTaskDialog::OnHyperlinkClick
 
 Struktura wywołuje tę metodę, gdy użytkownik kliknie hiperłącze.
 
@@ -818,8 +818,8 @@ virtual HRESULT OnHyperlinkClick(const CString& strHref);
 
 ### <a name="parameters"></a>Parametry
 
-*strHref*<br/>
-podczas Ciąg, który reprezentuje hiperlink.
+*strHref (strHref)*<br/>
+[w] Ciąg reprezentujący hiperłącze.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -827,13 +827,13 @@ Domyślna implementacja zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wywołuje interfejs [ShellExecute](/windows/win32/api/shellapi/nf-shellapi-shellexecutew) przed zwróceniem S_OK.
+Ta metoda wywołuje [ShellExecute](/windows/win32/api/shellapi/nf-shellapi-shellexecutew) przed zwraca S_OK.
 
-Zastąp tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
+Zastąpi tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
 
-##  <a name="oninit"></a>Obiektu CTaskDialog:: OnInit
+## <a name="ctaskdialogoninit"></a><a name="oninit"></a>CTaskDialog::OnInit
 
-Struktura wywołuje tę metodę, gdy `CTaskDialog` zostanie zainicjowany.
+Struktura wywołuje tę metodę, `CTaskDialog` gdy jest inicjowany.
 
 ```
 virtual HRESULT OnInit();
@@ -845,11 +845,11 @@ Domyślna implementacja zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
+Zastąpi tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
 
-##  <a name="onnavigatepage"></a>Obiektu CTaskDialog:: OnNavigatePage
+## <a name="ctaskdialogonnavigatepage"></a><a name="onnavigatepage"></a>CTaskDialog::OnNavigatePage
 
-Struktura wywołuje tę metodę w odpowiedzi na metodę [obiektu CTaskDialog:: typu NavigateTo](#navigateto) .
+Struktura wywołuje tę metodę w odpowiedzi na [CTaskDialog::NavigateTo](#navigateto) metody.
 
 ```
 virtual HRESULT OnNavigatePage();
@@ -861,11 +861,11 @@ Domyślna implementacja zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
+Zastąpi tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
 
-##  <a name="onradiobuttonclick"></a>Obiektu CTaskDialog:: OnRadioButtonClick
+## <a name="ctaskdialogonradiobuttonclick"></a><a name="onradiobuttonclick"></a>CTaskDialog::OnRadioButtonClick
 
-Struktura wywołuje tę metodę, gdy użytkownik wybierze kontrolkę przycisk radiowy.
+Struktura wywołuje tę metodę, gdy użytkownik wybiera kontrolkę przycisku radiowego.
 
 ```
 virtual HRESULT OnRadioButtonClick(int nRadioButtonID);
@@ -873,8 +873,8 @@ virtual HRESULT OnRadioButtonClick(int nRadioButtonID);
 
 ### <a name="parameters"></a>Parametry
 
-*nRadioButtonID*<br/>
-podczas Identyfikator kontrolki przycisku radiowego klikniętej przez użytkownika.
+*nRadioButtonid*<br/>
+[w] Identyfikator kontrolki przycisku radiowego, który użytkownik kliknął.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -882,11 +882,11 @@ Domyślna implementacja zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
+Zastąpi tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
 
-##  <a name="ontimer"></a>Obiektu CTaskDialog:: ontimeer
+## <a name="ctaskdialogontimer"></a><a name="ontimer"></a>CTaskDialog::OnTimer
 
-Struktura wywołuje tę metodę po wygaśnięciu czasomierza.
+Struktura wywołuje tę metodę, gdy czasomierz wygasa.
 
 ```
 virtual HRESULT OnTimer(long lTime);
@@ -894,8 +894,8 @@ virtual HRESULT OnTimer(long lTime);
 
 ### <a name="parameters"></a>Parametry
 
-*lTime*<br/>
-podczas Czas (w milisekundach `CTaskDialog` ) od utworzenia lub czasomierz został zresetowany.
+*lCzas*<br/>
+[w] Czas w milisekundach `CTaskDialog` od momentu utworzenia lub zresetowania czasomierza.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -903,11 +903,11 @@ Domyślna implementacja zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
+Zastąpi tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
 
-##  <a name="onverificationcheckboxclick"></a>Obiektu CTaskDialog:: OnVerificationCheckboxClick
+## <a name="ctaskdialogonverificationcheckboxclick"></a><a name="onverificationcheckboxclick"></a>CTaskDialog::OnVerificationCheckboxClick
 
-Struktura wywołuje tę metodę, gdy użytkownik kliknie pole wyboru weryfikacja.
+Struktura wywołuje tę metodę, gdy użytkownik kliknie pole wyboru weryfikacji.
 
 ```
 virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
@@ -915,8 +915,8 @@ virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
 
 ### <a name="parameters"></a>Parametry
 
-*bChecked*<br/>
-podczas Wartość TRUE oznacza, że zaznaczone jest pole wyboru weryfikacja; Wartość FALSE wskazuje, że nie jest.
+*bSprawiona*<br/>
+[w] PRAWDA wskazuje, że pole wyboru weryfikacji jest zaznaczone; FALSE oznacza, że nie jest.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -924,11 +924,11 @@ Domyślna implementacja zwraca S_OK.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
+Zastąpi tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestandardowe.
 
-##  <a name="removeallcommandcontrols"></a>Obiektu CTaskDialog:: RemoveAllCommandControls
+## <a name="ctaskdialogremoveallcommandcontrols"></a><a name="removeallcommandcontrols"></a>CTaskDialog::RemoveAllCommandControls
 
-Usuwa wszystkie formanty przycisków poleceń z `CTaskDialog`.
+Usuwa wszystkie kontrolki przycisku polecenia z pliku `CTaskDialog`.
 
 ```
 void RemoveAllCommandControls();
@@ -938,9 +938,9 @@ void RemoveAllCommandControls();
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-##  <a name="removeallradiobuttons"></a>Obiektu CTaskDialog:: RemoveAllRadioButtons
+## <a name="ctaskdialogremoveallradiobuttons"></a><a name="removeallradiobuttons"></a>CTaskDialog::RemoveAllRadioButtons
 
-Usuwa wszystkie przyciski radiowe z `CTaskDialog`.
+Usuwa wszystkie przyciski radiowe z pliku `CTaskDialog`.
 
 ```
 void RemoveAllRadioButtons();
@@ -950,9 +950,9 @@ void RemoveAllRadioButtons();
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-##  <a name="setcommandcontroloptions"></a>Obiektu CTaskDialog:: SetCommandControlOptions
+## <a name="ctaskdialogsetcommandcontroloptions"></a><a name="setcommandcontroloptions"></a>CTaskDialog::SetCommandControlOptions
 
-Aktualizuje kontrolkę przycisk polecenia na `CTaskDialog`.
+Aktualizuje kontrolkę `CTaskDialog`przycisku polecenia na pliku .
 
 ```
 void SetCommandControlOptions(
@@ -963,26 +963,26 @@ void SetCommandControlOptions(
 
 ### <a name="parameters"></a>Parametry
 
-*nCommandControlID*<br/>
-podczas Identyfikator kontrolki polecenia do zaktualizowania.
+*nCommandControlID (Identyfikator kontrolera)*<br/>
+[w] Identyfikator formantu polecenia do aktualizacji.
 
-*bEnabled*<br/>
-podczas Parametr logiczny, który wskazuje, czy określony formant przycisku polecenia jest włączony lub wyłączony.
+*bWłach*<br/>
+[w] Parametr logiczny wskazujący, czy określony kontrolka przycisku polecenia jest włączona czy wyłączona.
 
-*bRequiresElevation*<br/>
-podczas Parametr logiczny, który wskazuje, czy określony formant przycisku polecenia wymaga podniesienia uprawnień.
+*bWymaganieWychanie*<br/>
+[w] Parametr logiczny, który wskazuje, czy określony przycisk polecenia wymaga podniesienia uprawnień.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody, aby zmienić, czy kontrolka przycisku polecenia jest włączona, czy wymaga podniesienia uprawnień po dodaniu do `CTaskDialog` klasy.
+Ta metoda służy do zmiany, czy formant przycisku polecenia jest włączony `CTaskDialog` lub wymaga podniesienia po dodaniu do klasy.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-##  <a name="setcommonbuttonoptions"></a>Obiektu CTaskDialog:: SetCommonButtonOptions
+## <a name="ctaskdialogsetcommonbuttonoptions"></a><a name="setcommonbuttonoptions"></a>CTaskDialog::SetCommonButtonOptions
 
-Aktualizuje podzbiór wspólnych przycisków do włączenia i wymaga podniesienia uprawnień funkcji kontroli konta użytkownika.
+Aktualizuje podzbiór typowych przycisków, które mają być włączone i wymagać elewacji funkcji Kontrola konta użytkownika.
 
 ```
 void SetCommonButtonOptions(
@@ -993,26 +993,26 @@ void SetCommonButtonOptions(
 ### <a name="parameters"></a>Parametry
 
 *nDisabledButtonMask*<br/>
-podczas Maska dla typowych przycisków, które mają zostać wyłączone.
+[w] Maska dla typowych przycisków, aby wyłączyć.
 
 *nElevationButtonMask*<br/>
-podczas Maska dla typowych przycisków, które wymagają podniesienia uprawnień.
+[w] Maska dla typowych przycisków, które wymagają podniesienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Można ustawić typowe przyciski dostępne dla wystąpienia [klasy obiektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md) , używając konstruktora [obiektu CTaskDialog:: obiektu CTaskDialog](#ctaskdialog) i metody [obiektu CTaskDialog:: SetCommonButtons](#setcommonbuttons). `CTaskDialog::SetCommonButtonOptions`nie obsługuje dodawania nowych wspólnych przycisków.
+Wspólne przyciski można ustawić w wystąpieniu [klasy CTaskDialog](../../mfc/reference/ctaskdialog-class.md) przy użyciu konstruktora [CTaskDialog::CTaskDialog](#ctaskdialog) i metody [CTaskDialog::SetCommonButtons](#setcommonbuttons). `CTaskDialog::SetCommonButtonOptions`nie obsługuje dodawania nowych wspólnych przycisków.
 
-W przypadku użycia tej metody w celu wyłączenia lub podniesienia poziomu wspólnego przycisku, który nie jest dostępny `CTaskDialog`dla tego elementu, ta metoda zgłasza wyjątek za [](diagnostic-services.md#ensure) pomocą makra.
+Jeśli ta metoda jest używana do wyłączania lub podnoszenia `CTaskDialog`poziomu wspólnego przycisku, który nie jest dostępny dla tego, ta metoda zgłasza wyjątek przy użyciu makra [ENSURE.](diagnostic-services.md#ensure)
 
-Ta metoda włącza dowolny przycisk, który jest dostępny dla `CTaskDialog` programu, ale nie znajduje się w *nDisabledButtonMask*, nawet jeśli został wcześniej wyłączony. Ta metoda traktuje podniesienie uprawnień w podobny sposób: rejestruje typowe przyciski jako niewymagające podniesienia uprawnień, jeśli wspólny przycisk jest dostępny, ale nie jest uwzględniony w *nElevationButtonMask*.
+Ta metoda włącza dowolny przycisk, `CTaskDialog` który jest dostępny dla, ale nie jest w *nDisabledButtonMask*, nawet jeśli został wcześniej wyłączony. Ta metoda traktuje elewację w podobny sposób: rejestruje typowe przyciski jako nie wymagające podniesienia, jeśli wspólny przycisk jest dostępny, ale nie jest zawarty w *nElevationButtonMask*.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#6](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_6.cpp)]
 
-##  <a name="setcommonbuttons"></a>Obiektu CTaskDialog:: SetCommonButtons
+## <a name="ctaskdialogsetcommonbuttons"></a><a name="setcommonbuttons"></a>CTaskDialog::SetCommonButtons
 
-Dodaje typowe przyciski do `CTaskDialog`.
+Dodaje typowe przyciski do pliku `CTaskDialog`.
 
 ```
 void SetCommonButtons(
@@ -1023,32 +1023,32 @@ void SetCommonButtons(
 
 ### <a name="parameters"></a>Parametry
 
-*nButtonMask*<br/>
-podczas Maska przycisków, które mają zostać dodane do `CTaskDialog`.
+*nButtonMask (Maska dobuttonów)*<br/>
+[w] Maska przycisków, aby `CTaskDialog`dodać do .
 
 *nDisabledButtonMask*<br/>
-podczas Maska przycisków do wyłączenia.
+[w] Maska przycisków do wyłączenia.
 
 *nElevationButtonMask*<br/>
-podczas Maska przycisków, które wymagają podniesienia uprawnień.
+[w] Maska przycisków, które wymagają elewacji.
 
 ### <a name="remarks"></a>Uwagi
 
 Nie można wywołać tej metody po utworzeniu okna wyświetlania dla tego wystąpienia `CTaskDialog` klasy. Jeśli to zrobisz, ta metoda zgłasza wyjątek.
 
-Przyciski wskazywane przez *nButtonMask* zastępują wszystkie typowe przyciski, `CTaskDialog`które zostały wcześniej dodane do. Dostępne są tylko przyciski wskazane w *nButtonMask* .
+Przyciski oznaczone przez *nButtonMask* zastępują wszystkie typowe przyciski wcześniej dodane do pliku `CTaskDialog`. Dostępne są tylko przyciski wskazane w *nButtonMask.*
 
-Jeśli *nDisabledButtonMask* lub *nElevationButtonMask* zawierają przycisk, którego nie ma w *nButtonMask*, ta metoda zgłasza wyjątek przy użyciu makra upewniania [](diagnostic-services.md#ensure) się.
+Jeśli *ani nDisabledButtonMask,* albo *nElevationButtonMask* zawierają przycisk, który nie znajduje się w *nButtonMask,* ta metoda zgłasza wyjątek przy użyciu makra [ENSURE.](diagnostic-services.md#ensure)
 
-Domyślnie wszystkie popularne przyciski są włączone i nie wymagają podniesienia uprawnień.
+Domyślnie wszystkie typowe przyciski są włączone i nie wymagają podniesienia uprawnień.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#6](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_6.cpp)]
 
-##  <a name="setcontent"></a>Obiektu CTaskDialog:: SetContent
+## <a name="ctaskdialogsetcontent"></a><a name="setcontent"></a>CTaskDialog::SetContent
 
-Aktualizuje zawartość `CTaskDialog`.
+Aktualizuje zawartość `CTaskDialog`pliku .
 
 ```
 void SetContent(const CString& strContent);
@@ -1056,20 +1056,20 @@ void SetContent(const CString& strContent);
 
 ### <a name="parameters"></a>Parametry
 
-*strContent*<br/>
-podczas Ciąg, który ma być wyświetlany użytkownikowi.
+*strContent (podtrzymuje)*<br/>
+[w] Ciąg do wyświetlenia użytkownikowi.
 
 ### <a name="remarks"></a>Uwagi
 
-Zawartość `CTaskDialog` klasy jest tekstem wyświetlanym dla użytkownika w sekcji głównej okna dialogowego.
+Zawartość `CTaskDialog` klasy jest tekst, który jest wyświetlany użytkownikowi w sekcji głównej okna dialogowego.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="setdefaultcommandcontrol"></a>Obiektu CTaskDialog:: SetDefaultCommandControl
+## <a name="ctaskdialogsetdefaultcommandcontrol"></a><a name="setdefaultcommandcontrol"></a>CTaskDialog::SetDefaultCommandControl
 
-Określa domyślną kontrolkę przycisk polecenia.
+Określa domyślny kontrolka przycisku polecenia.
 
 ```
 void SetDefaultCommandControl(int nCommandControlID);
@@ -1077,22 +1077,22 @@ void SetDefaultCommandControl(int nCommandControlID);
 
 ### <a name="parameters"></a>Parametry
 
-*nCommandControlID*<br/>
-podczas Identyfikator kontrolki przycisku polecenia, która ma być wartością domyślną.
+*nCommandControlID (Identyfikator kontrolera)*<br/>
+[w] Identyfikator formantu przycisku polecenia ma być wartością domyślną.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnym formantem przycisku polecenia jest formant, który jest wybierany podczas `CTaskDialog` pierwszego wyświetlania użytkownikowi.
+Domyślny przycisk polecenia to formant wybrany, gdy `CTaskDialog` jest wyświetlany po raz pierwszy użytkownikowi.
 
-Ta metoda zgłasza wyjątek, jeśli nie może znaleźć kontrolki przycisku polecenia określonej przez *nCommandControlID*.
+Ta metoda zgłasza wyjątek, jeśli nie można znaleźć formantu przycisku polecenia określonego przez *nCommandControlID*.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#2](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_1.cpp)]
 
-##  <a name="setdefaultradiobutton"></a>Obiektu CTaskDialog:: SetDefaultRadioButton
+## <a name="ctaskdialogsetdefaultradiobutton"></a><a name="setdefaultradiobutton"></a>CTaskDialog::SetDefaultRadioButton
 
-Określa domyślny przycisk radiowy.
+Określa domyślny przycisk opcji.
 
 ```
 void SetDefaultRadioButton(int nRadioButtonID);
@@ -1100,22 +1100,22 @@ void SetDefaultRadioButton(int nRadioButtonID);
 
 ### <a name="parameters"></a>Parametry
 
-*nRadioButtonID*<br/>
-podczas Identyfikator przycisku radiowego, który ma być wartością domyślną.
+*nRadioButtonid*<br/>
+[w] Identyfikator przycisku radiowego ma być domyślny.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślny przycisk radiowy jest przycisk, który jest wybierany podczas `CTaskDialog` pierwszego wyświetlania użytkownikowi.
+Domyślny przycisk opcji to przycisk wybrany, gdy `CTaskDialog` jest wyświetlany po raz pierwszy użytkownikowi.
 
-Ta metoda zgłasza wyjątek, jeśli nie może znaleźć przycisku radiowego określonego przez *nRadioButtonID*.
+Ta metoda zgłasza wyjątek, jeśli nie można znaleźć przycisku opcji określonego przez *nRadioButtonID*.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-##  <a name="setdialogwidth"></a>Obiektu CTaskDialog:: SetDialogWidth
+## <a name="ctaskdialogsetdialogwidth"></a><a name="setdialogwidth"></a>CTaskDialog::SetDialogWidth
 
-Dostosowuje szerokość `CTaskDialog`.
+Dostosowuje szerokość pliku `CTaskDialog`.
 
 ```
 void SetDialogWidth(int nWidth = 0);
@@ -1123,22 +1123,22 @@ void SetDialogWidth(int nWidth = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*nWidth*<br/>
-podczas Szerokość okna dialogowego (w pikselach).
+*nWidth (ww.*<br/>
+[w] Szerokość okna dialogowego w pikselach.
 
 ### <a name="remarks"></a>Uwagi
 
 Parametr *nWidth* musi być większy lub równy 0. W przeciwnym razie ta metoda zgłasza wyjątek.
 
-Jeśli *nWidth* jest ustawiona na 0, ta metoda ustawia domyślny rozmiar okna dialogowego.
+Jeśli *nWidth* jest ustawiona na 0, ta metoda ustawia okno dialogowe na domyślny rozmiar.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="setexpansionarea"></a>Obiektu CTaskDialog:: SetExpansionArea
+## <a name="ctaskdialogsetexpansionarea"></a><a name="setexpansionarea"></a>CTaskDialog::SetExpansionArea
 
-Aktualizuje obszar `CTaskDialog`rozwinięcia.
+Aktualizuje obszar rozbudowy pliku `CTaskDialog`.
 
 ```
 void SetExpansionArea(
@@ -1149,28 +1149,28 @@ void SetExpansionArea(
 
 ### <a name="parameters"></a>Parametry
 
-*strExpandedInformation*<br/>
-podczas Ciąg `CTaskDialog` wyświetlany w głównej treści okna dialogowego, gdy użytkownik kliknie przycisk rozwinięcia.
+*strRozwińInformacja*<br/>
+[w] Ciąg wyświetlany `CTaskDialog` w głównej części okna dialogowego, gdy użytkownik kliknie przycisk rozszerzenia.
 
-*strCollapsedLabel*<br/>
-podczas Ciąg `CTaskDialog` wyświetlany obok przycisku rozwinięcia, gdy rozwinięty obszar jest zwinięty.
+*strCollapsedLabel (Ul.*<br/>
+[w] Ciąg wyświetlany `CTaskDialog` obok przycisku rozszerzeń po zwinięciu rozwiniętego obszaru.
 
-*strExpandedLabel*<br/>
-podczas Ciąg `CTaskDialog` wyświetlany obok przycisku rozwinięcia po wyświetleniu rozwiniętego obszaru.
+*strRozwińLabel*<br/>
+[w] Ciąg wyświetlany `CTaskDialog` obok przycisku rozszerzeń po wyświetleniu rozwiniętego obszaru.
 
 ### <a name="remarks"></a>Uwagi
 
-Obszar rozszerzania `CTaskDialog` klasy umożliwia użytkownikowi podanie dodatkowych informacji. Obszar rozszerzania znajduje się w głównej części `CTaskDialog`, znajdującej się bezpośrednio pod tytułem i ciągiem zawartości.
+Obszar rozwiarzeń `CTaskDialog` klasy umożliwia dostarczenie dodatkowych informacji do użytkownika. Obszar rozwiarzeń znajduje się `CTaskDialog`w głównej części , znajdującej się bezpośrednio pod tytułem i ciągiem zawartości.
 
-Po pierwszym wyświetleniu nie `strCollapsedLabel` sąwyświetlanerozwinięteinformacjeiumieszczaneobokprzyciskurozwinięcia.`CTaskDialog` Gdy użytkownik kliknie przycisk rozwinięcia, `CTaskDialog` wyświetla *strExpandedInformation* i zmienia etykietę na *strExpandedLabel*.
+Gdy `CTaskDialog` jest wyświetlany po raz pierwszy, nie pokazuje `strCollapsedLabel` rozwiniętych informacji i umieszcza obok przycisku rozszerzenia. Gdy użytkownik kliknie przycisk `CTaskDialog` rozszerzenia, wyświetla *strExpandedInformation* i zmienia etykietę na *strExpandedLabel*.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="setfootericon"></a>Obiektu CTaskDialog:: SetFooterIcon
+## <a name="ctaskdialogsetfootericon"></a><a name="setfootericon"></a>CTaskDialog::SetFooterIcon
 
-Aktualizuje ikonę `CTaskDialog`stopki.
+Aktualizuje ikonę stopki pliku `CTaskDialog`.
 
 ```
 void SetFooterIcon(HICON hFooterIcon);
@@ -1179,27 +1179,27 @@ void SetFooterIcon(LPCWSTR lpszFooterIcon);
 
 ### <a name="parameters"></a>Parametry
 
-*hFooterIcon*<br/>
-podczas Nowa ikona dla `CTaskDialog`.
+*hFooterIcon (Właśc.*<br/>
+[w] Nowa ikona `CTaskDialog`pliku .
 
 *lpszFooterIcon*<br/>
-podczas Nowa ikona dla `CTaskDialog`.
+[w] Nowa ikona `CTaskDialog`pliku .
 
 ### <a name="remarks"></a>Uwagi
 
-Ikona stopki jest wyświetlana u dołu [klasy obiektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md). Może mieć skojarzoną stopkę tekstu. Tekst stopki można zmienić za pomocą [obiektu CTaskDialog:: SetFooterText](#setfootertext).
+Ikona stopki jest wyświetlana na spodzie [klasy CTaskDialog](../../mfc/reference/ctaskdialog-class.md). Może mieć skojarzony tekst stopki. Tekst stopki można zmienić za pomocą [CTaskDialog::SetFooterText](#setfootertext).
 
-Ta metoda zgłasza wyjątek z makrem [](diagnostic-services.md#ensure) , jeśli `CTaskDialog` jest wyświetlana lub parametr wejściowy ma wartość null.
+Ta metoda zgłasza wyjątek z makra [ENSURE,](diagnostic-services.md#ensure) jeśli `CTaskDialog` jest wyświetlany lub parametr wejściowy jest NULL.
 
-Może akceptować tylko `LPCWSTR` ikonę lubjakostopkę.`HICON` `CTaskDialog` Jest to konfigurowane przez ustawienie opcji TDF_USE_HICON_FOOTER w konstruktorze lub [obiektu CTaskDialog:: SetOptions](#setoptions). Domyślnie program `CTaskDialog` jest skonfigurowany do używania `LPCWSTR` jako typ danych wejściowych dla ikony stopki. Ta metoda generuje wyjątek, jeśli spróbujesz ustawić ikonę przy użyciu niewłaściwego typu.
+A `CTaskDialog` może akceptować tylko ikonę `HICON` stopki lub `LPCWSTR` jako ikonę stopki. Jest to konfigurowane przez ustawienie opcji TDF_USE_HICON_FOOTER w konstruktorze lub [CTaskDialog::SetOptions](#setoptions). Domyślnie `CTaskDialog` jest skonfigurowany do `LPCWSTR` używania jako typ wejściowy dla ikony stopki. Ta metoda generuje wyjątek, jeśli spróbujesz ustawić ikonę przy użyciu nieodpowiedniego typu.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="setfootertext"></a>Obiektu CTaskDialog:: SetFooterText
+## <a name="ctaskdialogsetfootertext"></a><a name="setfootertext"></a>CTaskDialog::SetFooterText
 
-Aktualizuje tekst w stopce `CTaskDialog`.
+Aktualizuje tekst na stopce `CTaskDialog`pliku .
 
 ```
 void SetFooterText(const CString& strFooterText);
@@ -1207,20 +1207,20 @@ void SetFooterText(const CString& strFooterText);
 
 ### <a name="parameters"></a>Parametry
 
-*strFooterText*<br/>
-podczas Nowy tekst stopki.
+*strFooterTekst*<br/>
+[w] Nowy tekst stopki.
 
 ### <a name="remarks"></a>Uwagi
 
-Ikona stopki pojawia się obok tekstu stopki w dolnej części okna `CTaskDialog`. Ikonę stopki można zmienić za pomocą [obiektu CTaskDialog:: SetFooterIcon](#setfootericon).
+Obok tekstu stopki na spodzie przycisku `CTaskDialog`. Ikonę stopki można zmienić za pomocą [CTaskDialog::SetFooterIcon](#setfootericon).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="setmainicon"></a>Obiektu CTaskDialog:: SetMainIcon
+## <a name="ctaskdialogsetmainicon"></a><a name="setmainicon"></a>CTaskDialog::SetMainIcon
 
-Aktualizuje główną ikonę `CTaskDialog`.
+Aktualizuje główną `CTaskDialog`ikonę pliku .
 
 ```
 void SetMainIcon(HICON hMainIcon);
@@ -1229,25 +1229,25 @@ void SetMainIcon(LPCWSTR lpszMainIcon);
 
 ### <a name="parameters"></a>Parametry
 
-*hMainIcon*<br/>
-podczas Nowa ikona.
+*hMainIcon (Właz n./ Wł.*<br/>
+[w] Nowa ikona.
 
-*lpszMainIcon*<br/>
-podczas Nowa ikona.
+*lpszMainIcon (lpszMainIcon)*<br/>
+[w] Nowa ikona.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zgłasza wyjątek z makrem [](diagnostic-services.md#ensure) , jeśli `CTaskDialog` jest wyświetlana lub parametr wejściowy ma wartość null.
+Ta metoda zgłasza wyjątek z makra [ENSURE,](diagnostic-services.md#ensure) jeśli `CTaskDialog` jest wyświetlany lub parametr wejściowy jest NULL.
 
-Można zaakceptować tylko ikonę `LPCWSTR` lub jako główną. `HICON` `CTaskDialog` Można to skonfigurować przez ustawienie opcji TDF_USE_HICON_MAIN w konstruktorze lub w metodzie [obiektu CTaskDialog:: SetOptions](#setoptions) . Domyślnie program `CTaskDialog` jest skonfigurowany do używania `LPCWSTR` jako typ danych wejściowych dla ikony głównej. Ta metoda generuje wyjątek, jeśli spróbujesz ustawić ikonę przy użyciu niewłaściwego typu.
+A `CTaskDialog` może zaakceptować tylko `HICON` ikonę główną lub `LPCWSTR` jako ikonę główną. Można to skonfigurować, ustawiając opcję TDF_USE_HICON_MAIN w konstruktorze lub w [CTaskDialog::SetOptions](#setoptions) metody. Domyślnie `CTaskDialog` jest skonfigurowany do `LPCWSTR` używania jako typ wejściowy dla ikony głównej. Ta metoda generuje wyjątek, jeśli spróbujesz ustawić ikonę przy użyciu nieodpowiedniego typu.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="setmaininstruction"></a>Obiektu CTaskDialog:: SetMainInstruction
+## <a name="ctaskdialogsetmaininstruction"></a><a name="setmaininstruction"></a>CTaskDialog::SetMainInstruction
 
-Aktualizuje główną instrukcję `CTaskDialog`.
+Aktualizuje główną `CTaskDialog`instrukcję .
 
 ```
 void SetMainInstruction(const CString& strInstructions);
@@ -1255,20 +1255,20 @@ void SetMainInstruction(const CString& strInstructions);
 
 ### <a name="parameters"></a>Parametry
 
-*strInstructions*<br/>
-podczas Nowa główna instrukcja.
+*strInstrukcje*<br/>
+[w] Nowa instrukcja główna.
 
 ### <a name="remarks"></a>Uwagi
 
-Główną instrukcją `CTaskDialog` klasy jest tekst wyświetlany użytkownikowi przy użyciu dużej pogrubionej czcionki. Znajduje się w oknie dialogowym pod paskiem tytułu.
+Główną instrukcją `CTaskDialog` klasy jest tekst wyświetlany użytkownikowi dużą czcionką pogrubioną. Znajduje się w oknie dialogowym pod paskiem tytułu.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="setoptions"></a>Obiektu CTaskDialog:: Set— opcje
+## <a name="ctaskdialogsetoptions"></a><a name="setoptions"></a>CTaskDialog::SetOptions
 
-Konfiguruje opcje dla `CTaskDialog`.
+Konfiguruje opcje `CTaskDialog`dla pliku .
 
 ```
 void SetOptions(int nOptionFlag);
@@ -1276,41 +1276,41 @@ void SetOptions(int nOptionFlag);
 
 ### <a name="parameters"></a>Parametry
 
-*nOptionFlag*<br/>
-podczas Zestaw flag do użycia dla `CTaskDialog`.
+*nOptionPlag*<br/>
+[w] Zestaw flag do użycia `CTaskDialog`dla pliku .
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda czyści wszystkie bieżące opcje dla `CTaskDialog`. Aby zachować bieżące opcje, należy pobrać je najpierw z [obiektu CTaskDialog:: GetOptions](#getoptions) i połączyć je z opcjami, które chcesz ustawić.
+Ta metoda czyści wszystkie bieżące opcje dla . `CTaskDialog` Aby zachować bieżące opcje, należy pobrać je najpierw z [CTaskDialog::GetOptions](#getoptions) i połączyć je z opcjami, które chcesz ustawić.
 
-Poniższa tabela zawiera listę wszystkich prawidłowych opcji.
+W poniższej tabeli wymieniono wszystkie prawidłowe opcje.
 
 |||
 |-|-|
-|TDF_ENABLE_HYPERLINKS|Włącza hiperłącza w `CTaskDialog`.|
-|TDF_USE_HICON_MAIN|Konfiguruje `CTaskDialog` , aby `HICON` używać dla głównej ikony. Alternatywą jest użycie elementu `LPCWSTR`.|
-|TDF_USE_HICON_FOOTER|Konfiguruje `CTaskDialog` , aby `HICON` używać dla ikony stopki. Alternatywą jest użycie elementu `LPCWSTR`.|
-|TDF_ALLOW_DIALOG_CANCELLATION|Umożliwia użytkownikowi zamknięcie `CTaskDialog` programu przy użyciu klawiatury lub ikony w prawym górnym rogu okna dialogowego, nawet jeśli przycisk **Anuluj** nie jest włączony. Jeśli ta flaga nie jest ustawiona i przycisk **Anuluj** nie jest włączony, użytkownik nie może zamknąć okna dialogowego przy użyciu klawiszy Alt + F4, klawisza ucieczki ani przycisku zamknięcia paska tytułu.|
-|TDF_USE_COMMAND_LINKS|Konfiguruje kontrolki przycisków poleceń doużycia.`CTaskDialog`|
-|TDF_USE_COMMAND_LINKS_NO_ICON|Konfiguruje `CTaskDialog` kontrolki do używania przycisków poleceń bez wyświetlania ikony obok formantu. TDF_USE_COMMAND_LINKS przesłania TDF_USE_COMMAND_LINKS_NO_ICON.|
-|TDF_EXPAND_FOOTER_AREA|Wskazuje, że obszar rozszerzania jest obecnie rozwinięty.|
-|TDF_EXPANDED_BY_DEFAULT|Określa, czy obszar rozszerzania jest domyślnie rozwinięty.|
-|TDF_VERIFICATION_FLAG_CHECKED|Wskazuje, że pole wyboru weryfikacja jest aktualnie zaznaczone.|
-|TDF_SHOW_PROGRESS_BAR|`CTaskDialog` Konfiguruje wyświetlanie paska postępu.|
-|TDF_SHOW_MARQUEE_PROGRESS_BAR|Konfiguruje pasek postępu jako pasek postępu neonu. Jeśli włączysz tę opcję, musisz ustawić TDF_SHOW_PROGRESS_BAR tak, aby miało oczekiwane zachowanie.|
+|TDF_ENABLE_HYPERLINKS|Włącza hiperłącza `CTaskDialog`w pliku .|
+|TDF_USE_HICON_MAIN|Konfiguruje `CTaskDialog` do `HICON` używania a dla głównej ikony. Alternatywą jest użycie `LPCWSTR`.|
+|TDF_USE_HICON_FOOTER|Konfiguruje `CTaskDialog` do `HICON` używania ikony stopki. Alternatywą jest użycie `LPCWSTR`.|
+|TDF_ALLOW_DIALOG_CANCELLATION|Umożliwia użytkownikowi zamknięcie `CTaskDialog` za pomocą klawiatury lub za pomocą ikony w prawym górnym rogu okna dialogowego, nawet jeśli przycisk **Anuluj** nie jest włączony. Jeśli ta flaga nie jest ustawiona, a przycisk **Anuluj** nie jest włączony, użytkownik nie może zamknąć okna dialogowego za pomocą klawiszy Alt+F4, klawisza Escape lub przycisku zamknięcia paska tytułu.|
+|TDF_USE_COMMAND_LINKS|Konfiguruje `CTaskDialog` do używania formantów przycisku polecenia.|
+|TDF_USE_COMMAND_LINKS_NO_ICON|Konfiguruje `CTaskDialog` formantów przycisku polecenia bez wyświetlania ikony obok formantu. TDF_USE_COMMAND_LINKS zastępuje TDF_USE_COMMAND_LINKS_NO_ICON.|
+|TDF_EXPAND_FOOTER_AREA|Wskazuje, że obszar rozwiarzeń jest aktualnie rozwinięty.|
+|TDF_EXPANDED_BY_DEFAULT|Określa, czy obszar rozwiarzeń jest domyślnie rozwinięty.|
+|TDF_VERIFICATION_FLAG_CHECKED|Wskazuje, że pole wyboru weryfikacji jest aktualnie zaznaczone.|
+|TDF_SHOW_PROGRESS_BAR|Konfiguruje, `CTaskDialog` aby wyświetlić pasek postępu.|
+|TDF_SHOW_MARQUEE_PROGRESS_BAR|Konfiguruje pasek postępu jako pasek postępu ramki zaznaczenia. Jeśli ta opcja zostanie włączona, należy ustawić TDF_SHOW_PROGRESS_BAR, aby mieć oczekiwane zachowanie.|
 |TDF_CALLBACK_TIMER|Wskazuje, że `CTaskDialog` interwał wywołania zwrotnego jest ustawiony na około 200 milisekund.|
-|TDF_POSITION_RELATIVE_TO_WINDOW|Konfiguruje `CTaskDialog` , aby były wyśrodkowane względem okna nadrzędnego. Jeśli ta flaga nie jest włączona, `CTaskDialog` jest wyśrodkowana względem monitora.|
-|TDF_RTL_LAYOUT|Konfiguruje `CTaskDialog` układ do czytania od prawej do lewej.|
-|TDF_NO_DEFAULT_RADIO_BUTTON|Wskazuje, że przycisk radiowy nie jest zaznaczony `CTaskDialog` , gdy pojawia się.|
-|TDF_CAN_BE_MINIMIZED|Umożliwia użytkownikowi zminimalizowanie `CTaskDialog`. Aby zapewnić obsługę tej opcji, `CTaskDialog` nie może być modalny. MFC nie obsługuje tej opcji, ponieważ MFC nie obsługuje niemodalnych `CTaskDialog`.|
+|TDF_POSITION_RELATIVE_TO_WINDOW|Konfiguruje `CTaskDialog` do wyśrodkowanych względem okna nadrzędnego. Jeśli ta flaga nie `CTaskDialog` jest włączona, jest wyśrodkowany względem monitora.|
+|TDF_RTL_LAYOUT|Konfiguruje `CTaskDialog` dla układu odczytu od prawej do lewej.|
+|TDF_NO_DEFAULT_RADIO_BUTTON|Wskazuje, że po wyświetleniu `CTaskDialog` nie wybrano żadnego przycisku opcji.|
+|TDF_CAN_BE_MINIMIZED|Umożliwia użytkownikowi zminimalizowanie pliku `CTaskDialog`. Aby obsługiwać tę `CTaskDialog` opcję, nie może być modalny. MFC nie obsługuje tej opcji, ponieważ MFC `CTaskDialog`nie obsługuje trybless .|
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="setprogressbarmarquee"></a>Obiektu CTaskDialog:: SetProgressBarMarquee
+## <a name="ctaskdialogsetprogressbarmarquee"></a><a name="setprogressbarmarquee"></a>CTaskDialog::SetProgressBarMarquee
 
-Konfiguruje pasek Neon dla `CTaskDialog` i dodaje go do okna dialogowego.
+Konfiguruje pasek ramki zaznaczenia dla `CTaskDialog` i dodaje go do okna dialogowego.
 
 ```
 void SetProgressBarMarquee(
@@ -1320,25 +1320,25 @@ void SetProgressBarMarquee(
 
 ### <a name="parameters"></a>Parametry
 
-*bEnabled*<br/>
-podczas PRAWDA, aby włączyć pasek neonu; Wartość FALSE powoduje wyłączenie paska neonu i usunięcie go z `CTaskDialog`.
+*bWłach*<br/>
+[w] TRUE, aby włączyć pasek ramki zaznaczenia; FALSE, aby wyłączyć pasek ramki `CTaskDialog`zaznaczenia i usunąć go z pliku .
 
 *nMarqueeSpeed*<br/>
-podczas Liczba całkowita wskazująca szybkość paska neonu.
+[w] Liczba całkowita wskazująca szybkość paska ramki zaznaczenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Pasek neonu jest wyświetlany pod głównym tekstem `CTaskDialog` klasy.
+Pasek ramki zaznaczenia pojawi się `CTaskDialog` pod głównym tekstem klasy.
 
-Użyj *nMarqueeSpeed* , aby ustawić szybkość paska neonu; większe wartości oznaczają wolną szybkość. Wartość 0 dla *nMarqueeSpeed* sprawia, że pasek neonu przesuwa się przy domyślnej szybkości dla systemu Windows.
+Użyj *nMarqueeSpeed,* aby ustawić prędkość paska ramki zaznaczenia; większe wartości wskazują na wolniejsze prędkości. Wartość 0 dla *nMarqueeSpeed* sprawia, że pasek ramki zaznaczenia porusza się z domyślną prędkością dla systemu Windows.
 
-Ta metoda zgłasza wyjątek z warunkiem [](diagnostic-services.md#ensure) zagwarantowania, że wartość *nMarqueeSpeed* jest mniejsza od 0.
+Ta metoda zgłasza wyjątek z makra [ENSURE,](diagnostic-services.md#ensure) jeśli *nMarqueeSpeed* jest mniejsza niż 0.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#4](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]
 
-##  <a name="setprogressbarposition"></a>Obiektu CTaskDialog:: SetProgressBarPosition
+## <a name="ctaskdialogsetprogressbarposition"></a><a name="setprogressbarposition"></a>CTaskDialog::SetProgressBarPosition
 
 Dostosowuje położenie paska postępu.
 
@@ -1349,17 +1349,17 @@ void SetProgressBarPosition(int nProgressPos);
 ### <a name="parameters"></a>Parametry
 
 *nProgressPos*<br/>
-podczas Pozycja paska postępu.
+[w] Pozycja paska postępu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zgłasza wyjątek z makrem [](diagnostic-services.md#ensure) "If", jeśli *nProgressPos* nie znajduje się w zakresie paska postępu. Zakres paska postępu można zmienić za pomocą [obiektu CTaskDialog:: SetProgressBarRange](#setprogressbarrange).
+Ta metoda zgłasza wyjątek z [upewnij](diagnostic-services.md#ensure) makro if *nProgressPos* nie znajduje się w zakresie paska postępu. Zakres paska postępu można zmienić za pomocą [CTaskDialog::SetProgressBarRange](#setprogressbarrange).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#4](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]
 
-##  <a name="setprogressbarrange"></a>Obiektu CTaskDialog:: SetProgressBarRange
+## <a name="ctaskdialogsetprogressbarrange"></a><a name="setprogressbarrange"></a>CTaskDialog::SetProgressBarRange
 
 Dostosowuje zakres paska postępu.
 
@@ -1371,27 +1371,27 @@ void SetProgressBarRange(
 
 ### <a name="parameters"></a>Parametry
 
-*nRangeMin*<br/>
-podczas Dolna granica paska postępu.
+*nRangeMin (nRangeMin)*<br/>
+[w] Dolna granica paska postępu.
 
-*nRangeMax*<br/>
-podczas Górna granica paska postępu.
+*nRangeMax (Polski)*<br/>
+[w] Górna granica paska postępu.
 
 ### <a name="remarks"></a>Uwagi
 
-Pozycja paska postępu jest względna w stosunku do *nRangeMin* i *nRangeMax*. Na przykład jeśli *nRangeMin* jest 50 i *nRangeMax* is 100, pozycja 75 jest w połowie na pasku postępu. Użyj [obiektu CTaskDialog:: SetProgressBarPosition](#setprogressbarposition) , aby ustawić pozycję paska postępu.
+Położenie paska postępu jest względem *nRangeMin* i *nRangeMax*. Na przykład jeśli *nRangeMin* jest 50 i *nRangeMax* jest 100, pozycja 75 jest w połowie drogi przez pasek postępu. Użyj [CTaskDialog::SetProgressBarPosition,](#setprogressbarposition) aby ustawić położenie paska postępu.
 
-Aby wyświetlić pasek postępu, opcja TDF_SHOW_PROGRESS_BAR musi być włączona, a TDF_SHOW_MARQUEE_PROGRESS_BAR nie może być włączona. Ta metoda automatycznie ustawia TDF_SHOW_PROGRESS_BAR i czyści TDF_SHOW_MARQUEE_PROGRESS_BAR. Użyj [obiektu CTaskDialog:: SetOptions](#setoptions) , aby ręcznie zmienić opcje dla tego wystąpienia [klasy obiektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md).
+Aby wyświetlić pasek postępu, należy włączyć opcję TDF_SHOW_PROGRESS_BAR i nie należy włączać TDF_SHOW_MARQUEE_PROGRESS_BAR. Ta metoda automatycznie ustawia TDF_SHOW_PROGRESS_BAR i czyści TDF_SHOW_MARQUEE_PROGRESS_BAR. Użyj [CTaskDialog::SetOptions](#setoptions) ręcznie zmienić opcje dla tego wystąpienia [CTaskDialog Klasy](../../mfc/reference/ctaskdialog-class.md).
 
-Ta metoda zgłasza wyjątek z makrem [](diagnostic-services.md#ensure) "If", jeśli *nRangeMin* nie jest mniejsza niż *nRangeMax*. Ta metoda zgłasza również wyjątek, jeśli `CTaskDialog` jest już wyświetlany i ma pasek postępu neonu.
+Ta metoda zgłasza wyjątek z makra [ENSURE,](diagnostic-services.md#ensure) jeśli *nRangeMin* jest nie mniejsza niż *nRangeMax*. Ta metoda zgłasza również wyjątek, jeśli `CTaskDialog` jest już wyświetlany i ma pasek postępu ramki zaznaczenia.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#4](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]
 
-##  <a name="setprogressbarstate"></a>Obiektu CTaskDialog:: SetProgressBarState
+## <a name="ctaskdialogsetprogressbarstate"></a><a name="setprogressbarstate"></a>CTaskDialog::SetProgressBarState
 
-Ustawia stan paska postępu i wyświetla go w `CTaskDialog`.
+Ustawia stan paska postępu i wyświetla `CTaskDialog`go na pliku .
 
 ```
 void SetProgressBarState(int nState = PBST_NORMAL);
@@ -1399,28 +1399,28 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 
 ### <a name="parameters"></a>Parametry
 
-*nInformacje*<br/>
-podczas Stan paska postępu. Możliwe wartości można znaleźć w sekcji uwagi.
+*nPaństwo*<br/>
+[w] Stan paska postępu. Zobacz uwagi sekcji dla możliwych wartości.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zgłasza wyjątek za pomocą makra [upewnia](diagnostic-services.md#ensure) się, jeśli `CTaskDialog` jest już wyświetlany i ma pasek postępu neonu.
+Ta metoda zgłasza wyjątek z hasłem [ENSURE,](diagnostic-services.md#ensure) jeśli `CTaskDialog` jest już wyświetlany i ma pasek postępu ramki zaznaczenia.
 
-Poniższa tabela zawiera listę możliwych wartości dla *nInformacje*. We wszystkich tych przypadkach pasek postępu będzie wypełniał kolorem regularnym, dopóki nie osiągnie wskazanej pozycji zatrzymania. W tym momencie zmieni kolor na podstawie stanu.
+W poniższej tabeli wymieniono możliwe wartości dla *nState*. We wszystkich tych przypadkach pasek postępu wypełni się zwykłym kolorem, aż osiągnie wyznaczoną pozycję zatrzymania. W tym momencie zmieni kolor na podstawie stanu.
 
 |||
 |-|-|
-|PBST_NORMAL|Po wypełnieniu `CTaskDialog` paska postępu nie zmienia on koloru paska. Domyślnie normalny kolor jest zielony.|
-|PBST_ERROR|Po wypełnieniu `CTaskDialog` paska postępu zmienia kolor paska na kolor błędu. Domyślnie jest to kolor czerwony.|
-|PBST_PAUSED|Po wypełnieniu `CTaskDialog` paska postępu zmienia kolor paska na wstrzymany kolor. Domyślnie jest to kolor żółty.|
+|PBST_NORMAL|Po wypełnieniu `CTaskDialog` paska postępu nie zmienia koloru paska. Domyślnie zwykły kolor jest zielony.|
+|PBST_ERROR|Po wypełnieniu paska `CTaskDialog` postępu kolor paska zmienia kolor błędu. Domyślnie jest to czerwony.|
+|PBST_PAUSED|Po wypełnieniu paska `CTaskDialog` postępu kolor paska zmienia kolor na wstrzymany kolor. Domyślnie jest to żółty.|
 
-Można ustawić, gdzie pasek postępu zostanie zatrzymany z [obiektu CTaskDialog:: SetProgressBarPosition](#setprogressbarposition).
+Można ustawić, gdzie zatrzymuje się pasek postępu za pomocą [CTaskDialog::SetProgressBarPosition](#setprogressbarposition).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#4](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_7.cpp)]
 
-##  <a name="setradiobuttonoptions"></a>Obiektu CTaskDialog:: SetRadioButtonOptions
+## <a name="ctaskdialogsetradiobuttonoptions"></a><a name="setradiobuttonoptions"></a>CTaskDialog::SetRadioButtonOptions
 
 Włącza lub wyłącza przycisk radiowy.
 
@@ -1432,23 +1432,23 @@ void SetRadioButtonOptions(
 
 ### <a name="parameters"></a>Parametry
 
-*nRadioButtonID*<br/>
-podczas Identyfikator kontrolki przycisku radiowego.
+*nRadioButtonid*<br/>
+[w] Identyfikator sterowania przyciskiem radiowym.
 
-*bEnabled*<br/>
-podczas Wartość TRUE powoduje włączenie przycisku radiowego; Wartość FALSE, aby wyłączyć przycisk radiowy.
+*bWłach*<br/>
+[w] PRAWDA, aby włączyć przycisk radiowy; FALSE, aby wyłączyć przycisk radiowy.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zgłasza wyjątek z zagwarantowaniem makro, jeśli *nRadioButtonID* nie jest PRAWIDŁOWYm identyfikatorem przycisku radiowego. [](diagnostic-services.md#ensure)
+Ta metoda zgłasza wyjątek z makra [ENSURE,](diagnostic-services.md#ensure) jeśli *nRadioButtonID* nie jest prawidłowym identyfikatorem przycisku radiowego.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-##  <a name="setverificationcheckbox"></a>Obiektu CTaskDialog:: SetVerificationCheckbox
+## <a name="ctaskdialogsetverificationcheckbox"></a><a name="setverificationcheckbox"></a>CTaskDialog::SetVerificationCheckbox
 
-Ustawia stan zaznaczenia pola wyboru weryfikacji.
+Ustawia sprawdzony stan pola wyboru weryfikacji.
 
 ```
 void SetVerificationCheckbox(BOOL bChecked);
@@ -1456,14 +1456,14 @@ void SetVerificationCheckbox(BOOL bChecked);
 
 ### <a name="parameters"></a>Parametry
 
-*bChecked*<br/>
-podczas Wartość true oznacza, że pole wyboru weryfikacji `CTaskDialog` jest zaznaczone, gdy jest wyświetlany; Jeśli pole wyboru nie jest zaznaczone, gdy jest wyświetlane, `CTaskDialog` wartość false.
+*bSprawiona*<br/>
+[w] PRAWDA, aby pole wyboru weryfikacji `CTaskDialog` było zaznaczone po wyświetleniu; FAŁSZ, aby pole wyboru weryfikacji `CTaskDialog` nie zostało zaznaczone po wyświetleniu.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#5](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_4.cpp)]
 
-##  <a name="setverificationcheckboxtext"></a>Obiektu CTaskDialog:: SetVerificationCheckboxText
+## <a name="ctaskdialogsetverificationcheckboxtext"></a><a name="setverificationcheckboxtext"></a>CTaskDialog::SetVerificationCheckboxText
 
 Ustawia tekst wyświetlany po prawej stronie pola wyboru weryfikacji.
 
@@ -1473,20 +1473,20 @@ void SetVerificationCheckboxText(CString& strVerificationText);
 
 ### <a name="parameters"></a>Parametry
 
-*strVerificationText*<br/>
-podczas Tekst wyświetlany w tej metodzie obok pola wyboru weryfikacji.
+*strVerificationTekt*<br/>
+[w] Tekst wyświetlany przez tę metodę obok pola wyboru weryfikacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zgłasza wyjątek z warunkiem [](diagnostic-services.md#ensure) , że to wystąpienie `CTaskDialog` klasy jest już wyświetlane.
+Ta metoda zgłasza wyjątek z [upewnij](diagnostic-services.md#ensure) makro, `CTaskDialog` jeśli to wystąpienie klasy jest już wyświetlany.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#5](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_4.cpp)]
 
-##  <a name="setwindowtitle"></a>Obiektu CTaskDialog:: SetWindowTitle
+## <a name="ctaskdialogsetwindowtitle"></a><a name="setwindowtitle"></a>CTaskDialog::SetWindowTitle
 
-Ustawia tytuł elementu `CTaskDialog`.
+Ustawia tytuł pliku `CTaskDialog`.
 
 ```
 void SetWindowTitle(CString& strWindowTitle);
@@ -1494,8 +1494,8 @@ void SetWindowTitle(CString& strWindowTitle);
 
 ### <a name="parameters"></a>Parametry
 
-*strWindowTitle*<br/>
-podczas Nowy tytuł dla `CTaskDialog`.
+*strWindowTitle (Tytuł StrWindow)*<br/>
+[w] Nowy tytuł dla `CTaskDialog`.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1503,9 +1503,9 @@ podczas Nowy tytuł dla `CTaskDialog`.
 
 [!code-cpp[NVC_MFC_CTaskDialog#7](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_3.cpp)]
 
-##  <a name="showdialog"></a>Obiektu CTaskDialog:: ShowDialog
+## <a name="ctaskdialogshowdialog"></a><a name="showdialog"></a>CTaskDialog::ShowDialog
 
-Tworzy i wyświetla `CTaskDialog`.
+Tworzy i `CTaskDialog`wyświetla plik .
 
 ```
 static INT_PTR ShowDialog(
@@ -1521,49 +1521,49 @@ static INT_PTR ShowDialog(
 
 ### <a name="parameters"></a>Parametry
 
-*strContent*<br/>
-podczas Ciąg, który ma być używany dla zawartości `CTaskDialog`.
+*strContent (podtrzymuje)*<br/>
+[w] Ciąg do użycia dla zawartości `CTaskDialog`pliku .
 
-*strMainInstruction*<br/>
-podczas Główna instrukcja `CTaskDialog`.
+*strMainInstrukcja*<br/>
+[w] Główną instrukcją `CTaskDialog`.
 
-*strTitle*<br/>
-podczas Tytuł `CTaskDialog`.
+*strTitle (napis)*<br/>
+[w] Tytuł . `CTaskDialog`
 
 *nIDCommandControlsFirst*<br/>
-podczas Identyfikator ciągu pierwszego polecenia.
+[w] Identyfikator ciągu pierwszego polecenia.
 
 *nIDCommandControlsLast*<br/>
-podczas Identyfikator ciągu ostatniego polecenia.
+[w] Identyfikator ciągu ostatniego polecenia.
 
-*nCommonButtons*<br/>
-podczas Maska przycisków, które mają zostać dodane do `CTaskDialog`.
+*nKłamiony*<br/>
+[w] Maska przycisków, aby `CTaskDialog`dodać do .
 
 *nTaskDialogOptions*<br/>
-podczas Zestaw opcji do użycia dla `CTaskDialog`.
+[w] Zestaw opcji do użycia `CTaskDialog`dla pliku .
 
-*strFooter*<br/>
-podczas Ciąg, który ma być używany jako stopka.
+*strFooter (ul.*<br/>
+[w] Ciąg do użycia jako stopka.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba całkowita, która odnosi się do zaznaczenia dokonanego przez użytkownika.
+Liczba całkowita odpowiadająca wyborowi dokonanemu przez użytkownika.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda statyczna umożliwia tworzenie wystąpienia `CTaskDialog` klasy bez jawnego `CTaskDialog` tworzenia obiektu w kodzie. Ponieważ nie ma żadnego `CTaskDialog` obiektu, nie można wywoływać innych metod `CTaskDialog` , jeśli używasz `CTaskDialog` tej metody do wyświetlania użytkownikowi.
+Ta metoda statyczna umożliwia utworzenie wystąpienia `CTaskDialog` klasy bez jawnego `CTaskDialog` tworzenia obiektu w kodzie. Ponieważ nie `CTaskDialog` ma obiektu, nie można wywołać żadnych innych `CTaskDialog` metod, `CTaskDialog` jeśli używasz tej metody, aby pokazać użytkownikowi.
 
-Ta metoda tworzy formanty przycisków poleceń przy użyciu danych z pliku zasobów aplikacji. Tabela ciągów w pliku zasobów zawiera kilka ciągów ze skojarzonymi identyfikatorami ciągów. Ta metoda dodaje kontrolkę przycisk polecenia dla każdego prawidłowego wpisu w tabeli ciągów między *nIDCommandControlsFirst* i *nCommandControlsLast*włącznie. Dla tych kontrolek przycisków poleceń ciąg w tabeli ciągów jest podpisem kontrolki, a IDENTYFIKATORem ciągu jest identyfikator formantu.
+Ta metoda tworzy formanty przycisku polecenia przy użyciu danych z pliku zasobów aplikacji. Tabela ciągów w pliku zasobów zawiera kilka ciągów o skojarzonych identyfikatorach ciągów. Ta metoda dodaje kontrolkę przycisku polecenia dla każdego prawidłowego wpisu w tabeli ciągów między *nIDCommandControlsFirst* i *nCommandControlsLast*, włącznie. Dla tych formantów przycisku polecenia ciąg w tabeli ciągów jest podpis formantu i identyfikator ciągu jest identyfikator formantu.
 
-Aby uzyskać listę prawidłowych opcji, zobacz [obiektu CTaskDialog:: SetOptions](#setoptions) .
+Zobacz [CTaskDialog::SetOptions](#setoptions) listę prawidłowych opcji.
 
-Zamyka się, gdy użytkownik wybierze wspólny przycisk, formant linku polecenia lub `CTaskDialog`zamknie. `CTaskDialog` Wartość zwracana jest identyfikatorem, który wskazuje, jak użytkownik zamknął okno dialogowe.
+Zamyka `CTaskDialog` się, gdy użytkownik wybierze wspólny przycisk, kontrolkę `CTaskDialog`łącza poleceń lub zamknie plik . Zwracana wartość jest identyfikatorem wskazującym, w jaki sposób użytkownik zamknął okno dialogowe.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTaskDialog#1](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_5.cpp)]
 
-##  <a name="taskdialogcallback"></a>Obiektu CTaskDialog:: TaskDialogCallback
+## <a name="ctaskdialogtaskdialogcallback"></a><a name="taskdialogcallback"></a>CTaskDialog::TaskDialogCallback
 
 Struktura wywołuje tę metodę w odpowiedzi na różne komunikaty systemu Windows.
 
@@ -1579,48 +1579,48 @@ HRESULT TaskDialogCallback(
 
 ### <a name="parameters"></a>Parametry
 
-*Właściwość*<br/>
-podczas Dojście do `m_hWnd` struktury `CTaskDialog`.
+*Hwnd*<br/>
+[w] Uchwyt do `m_hWnd` struktury dla `CTaskDialog`.
 
-*uNotification*<br/>
-podczas Kod powiadomienia, który określa wygenerowany komunikat.
+*uNotyfikowanie*<br/>
+[w] Kod powiadomienia określający wygenerowany komunikat.
 
-*wParam*<br/>
-podczas Więcej informacji o komunikacie.
+*Wparam*<br/>
+[w] Więcej informacji o wiadomości.
 
-*lParam*<br/>
-podczas Więcej informacji o komunikacie.
+*Lparam*<br/>
+[w] Więcej informacji o wiadomości.
 
 *dwRefData*<br/>
-podczas Wskaźnik do `CTaskDialog` obiektu, do którego odnosi się komunikat wywołania zwrotnego.
+[w] Wskaźnik do `CTaskDialog` obiektu, który dotyczy wiadomości wywołania zwrotnego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zależy od określonego kodu powiadomienia. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
+Zależy od konkretnego kodu powiadomienia. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja programu `TaskDialogCallback` obsługuje określony komunikat, a następnie wywołuje odpowiednią metodę dla [klasy obiektu CTaskDialog](../../mfc/reference/ctaskdialog-class.md). Na przykład w odpowiedzi na komunikat `TaskDialogCallback` TDN_BUTTON_CLICKED wywołuje [obiektu CTaskDialog:: OnCommandControlClick](#oncommandcontrolclick).
+Domyślna implementacja `TaskDialogCallback` obsługuje określony komunikat, a następnie wywołuje odpowiednią metodę On [klasy CTaskDialog](../../mfc/reference/ctaskdialog-class.md). Na przykład w odpowiedzi na komunikat TDN_BUTTON_CLICKED, `TaskDialogCallback` wywołuje [CTaskDialog::OnCommandControlClick](#oncommandcontrolclick).
 
-Wartości dla *wParam* i *lParam* zależą od konkretnego wygenerowanego komunikatu. Możliwe jest, aby jedna lub obie te wartości były puste. Poniższa tabela zawiera listę domyślnych powiadomień, które są obsługiwane i co reprezentuje wartości *wParam* i *lParam* . Jeśli zastąpisz tę metodę w klasie pochodnej, należy zaimplementować kod wywołania zwrotnego dla każdego komunikatu w poniższej tabeli.
+Wartości dla *wParam* i *lParam* zależą od określonego wygenerowanego komunikatu. Jest możliwe dla jednej lub obu tych wartości, które mają być puste. W poniższej tabeli wymieniono domyślne powiadomienia, które są obsługiwane i jakie reprezentują wartości *wParam* i *lParam.* Jeśli zastąpisz tę metodę w klasie pochodnej, należy zaimplementować kod wywołania zwrotnego dla każdej wiadomości w poniższej tabeli.
 
-|Komunikat powiadomienia|*wParam* Wartościami|*lParam* Wartościami|
+|Komunikat z powiadomieniem|*wParam* Wartość|*lParam* Wartość|
 |--------------------------|--------------------|--------------------|
 |TDN_CREATED|Nie używany.|Nie używany.|
 |TDN_NAVIGATED|Nie używany.|Nie używany.|
-|TDN_BUTTON_CLICKED|Identyfikator kontrolki przycisku polecenia.|Nie używany.|
-|TDN_HYPERLINK_CLICKED|Nie używany.|Struktura [LPCWSTR](/windows/win32/WinProg/windows-data-types) , która zawiera link.|
-|TDN_TIMER|Czas (w milisekundach `CTaskDialog` ) od utworzenia lub czasomierz został zresetowany.|Nie używany.|
+|TDN_BUTTON_CLICKED|Identyfikator sterowania przyciskiem polecenia.|Nie używany.|
+|TDN_HYPERLINK_CLICKED|Nie używany.|Struktura [LPCWSTR](/windows/win32/WinProg/windows-data-types) zawierająca łącze.|
+|TDN_TIMER|Czas w milisekundach `CTaskDialog` od momentu utworzenia lub zresetowania czasomierza.|Nie używany.|
 |TDN_DESTROYED|Nie używany.|Nie używany.|
 |TDN_RADIO_BUTTON_CLICKED|Identyfikator przycisku radiowego.|Nie używany.|
 |TDN_DIALOG_CONSTRUCTED|Nie używany.|Nie używany.|
-|TDN_VERIFICATION_CLICKED|1 Jeśli pole wyboru jest zaznaczone, 0, jeśli nie jest.|Nie używany.|
+|TDN_VERIFICATION_CLICKED|1, jeśli pole wyboru jest zaznaczone, 0, jeśli nie jest.|Nie używany.|
 |TDN_HELP|Nie używany.|Nie używany.|
-|TDN_EXPANDO_BUTTON_CLICKED|0, jeśli obszar rozszerzania jest zwinięty; różne od zera, jeśli wyświetlany jest tekst rozwinięcia.|Nie używany.|
+|TDN_EXPANDO_BUTTON_CLICKED|0, jeśli obszar ekspansji jest zwinięty; niezerowy, jeśli wyświetlany jest tekst rozszerzenia.|Nie używany.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Przewodnik: dodawanie obiektu CTaskDialog do aplikacji](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)
+[Wskazówki: dodawanie obiektu CTaskDialog do aplikacji](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)

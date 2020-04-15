@@ -72,16 +72,16 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: a0ca4cbad48c420250fe39e131de5504b1ae70f3
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7d4a478b560be686e4da6f6dea623d6058626562
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420926"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365965"
 ---
 # <a name="ctabctrl-class"></a>Klasa CTabCtrl
 
-Oferuje funkcje formantu typowej karty systemu Windows.
+Udostępnia funkcje wspólnej kontrolki karty systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -89,76 +89,76 @@ Oferuje funkcje formantu typowej karty systemu Windows.
 class CTabCtrl : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CTabCtrl:: CTabCtrl](#ctabctrl)|Konstruuje obiekt `CTabCtrl`.|
+|[CTabCtrl::CTabCtrl](#ctabctrl)|Konstruuje `CTabCtrl` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CTabCtrl:: AdjustRect](#adjustrect)|Oblicza obszar wyświetlania kontrolki karty przy użyciu prostokąta okna lub oblicza prostokąt okna, który będzie odpowiadał podanemu obszarowi wyświetlania.|
-|[CTabCtrl:: Create](#create)|Tworzy formant karty i dołącza go do wystąpienia obiektu `CTabCtrl`.|
-|[CTabCtrl:: CreateEx](#createex)|Tworzy formant karty z określonymi stylami rozszerzonymi systemu Windows i dołącza go do wystąpienia obiektu `CTabCtrl`.|
-|[CTabCtrl::D eleteAllItems](#deleteallitems)|Usuwa wszystkie elementy z kontrolki karta.|
-|[CTabCtrl::D eleteItem](#deleteitem)|Usuwa element z kontrolki karta.|
-|[CTabCtrl::D eselectAll](#deselectall)|Resetuje elementy w kontrolce karty, czyszcząc wszystkie, które zostały naciśnięte.|
-|[CTabCtrl::D rawItem](#drawitem)|Rysuje określony element kontrolki karta.|
-|[CTabCtrl:: GetCurFocus](#getcurfocus)|Pobiera kartę z bieżącym fokusem kontrolki karta.|
-|[CTabCtrl:: GetCurSel](#getcursel)|Określa aktualnie wybraną kartę w kontrolce karty.|
-|[CTabCtrl:: getextendeds](#getextendedstyle)|Pobiera Style rozszerzone, które są obecnie używane dla kontrolki karta.|
-|[CTabCtrl:: GetImageList](#getimagelist)|Pobiera listę obrazów skojarzoną z kontrolką karty.|
-|[CTabCtrl:: GetItem](#getitem)|Pobiera informacje o karcie w kontrolce karty.|
-|[CTabCtrl:: GetItemCount](#getitemcount)|Pobiera liczbę kart w kontrolce karty.|
-|[CTabCtrl:: GetItemRect](#getitemrect)|Pobiera prostokąt ograniczenia dla karty w kontrolce karty.|
-|[CTabCtrl:: GetItemState](#getitemstate)|Pobiera stan wskazanego elementu kontrolki karta.|
-|[CTabCtrl:: GetRowCount](#getrowcount)|Pobiera bieżącą liczbę wierszy kart w kontrolce karty.|
-|[CTabCtrl:: GetToolTips](#gettooltips)|Pobiera uchwyt kontrolki etykietki narzędzia skojarzonej z kontrolką karty.|
-|[CTabCtrl:: HighlightItem](#highlightitem)|Ustawia stan wyróżniania elementu tabulacji.|
-|[CTabCtrl:: HitTest](#hittest)|Określa, która karta (jeśli istnieje) znajduje się na określonej pozycji ekranu.|
-|[CTabCtrl:: InsertItem](#insertitem)|Wstawia nową kartę w kontrolce karty.|
-|[CTabCtrl:: RemoveImage](#removeimage)|Usuwa obraz z listy obrazów kontrolki karta.|
-|[CTabCtrl:: SetCurFocus](#setcurfocus)|Ustawia fokus na określoną kartę w kontrolce karty.|
-|[CTabCtrl:: SetCurSel](#setcursel)|Wybiera kartę w kontrolce karty.|
-|[CTabCtrl:: setextended](#setextendedstyle)|Ustawia rozszerzone style dla kontrolki karta.|
-|[CTabCtrl:: SetImageList](#setimagelist)|Przypisuje listę obrazów do kontrolki karta.|
-|[CTabCtrl:: SetItem](#setitem)|Ustawia niektóre lub wszystkie atrybuty karty.|
-|[CTabCtrl:: SetItemExtra](#setitemextra)|Ustawia liczbę bajtów na kartę zarezerwowaną dla danych zdefiniowanych przez aplikację w kontrolce karty.|
-|[CTabCtrl:: SetItemSize](#setitemsize)|Ustawia szerokość i wysokość elementu.|
-|[CTabCtrl:: SetItemState](#setitemstate)|Ustawia stan wskazanego elementu kontrolki karta.|
-|[CTabCtrl:: SetMinTabWidth](#setmintabwidth)|Ustawia minimalną szerokość elementów w kontrolce karty.|
-|[CTabCtrl:: setuzupełnienie](#setpadding)|Ustawia ilość miejsca (uzupełnienie) wokół każdej karty i etykiety w kontrolce karty.|
-|[CTabCtrl:: setetykietki narzędzi](#settooltips)|Przypisuje formant etykietki narzędzia do kontrolki karta.|
+|[CTabCtrl::AdjustRect](#adjustrect)|Oblicza obszar wyświetlania formantu karty, biorąc pod uwagę prostokąt okna, lub oblicza prostokąt okna, który odpowiadałby danemu obszarowi wyświetlania.|
+|[CTabCtrl::Utwórz](#create)|Tworzy formant karty i dołącza go `CTabCtrl` do wystąpienia obiektu.|
+|[CTabCtrl::CreateEx](#createex)|Tworzy formant karty z określonymi stylami rozszerzonymi systemu `CTabCtrl` Windows i dołącza go do wystąpienia obiektu.|
+|[CTabCtrl::DeleteWszystkie elementy](#deleteallitems)|Usuwa wszystkie elementy z kontrolki karty.|
+|[CTabCtrl::DeleteItem](#deleteitem)|Usuwa element z kontrolki karty.|
+|[CTabCtrl::DselectAll](#deselectall)|Resetuje elementy w formancie karty, czyszcząc wszystkie, które zostały naciśnięte.|
+|[CTabCtrl::DrawItem](#drawitem)|Rysuje określony element kontrolki karty.|
+|[CTabCtrl::GetCurFocus](#getcurfocus)|Pobiera kartę z bieżącym fokusem kontrolki karty.|
+|[CTabCtrl::GetCurSel](#getcursel)|Określa aktualnie zaznaczoną kartę w formancie karty.|
+|[CTabCtrl::GetExtendedStyle](#getextendedstyle)|Pobiera rozszerzone style, które są obecnie używane dla formantu karty.|
+|[CTabCtrl::Lista GetImage](#getimagelist)|Pobiera listę obrazów skojarzoną z kontrolką kart.|
+|[CTabCtrl::GetItem](#getitem)|Pobiera informacje o karcie w formancie karty.|
+|[CTabCtrl::GetItemCount](#getitemcount)|Pobiera liczbę kart w formancie karty.|
+|[CTabCtrl::GetItemRect](#getitemrect)|Pobiera prostokąt ograniczający dla karty w formancie karty.|
+|[CTabCtrl::GetItemState](#getitemstate)|Pobiera stan wskazanego elementu kontroli karty.|
+|[CTabCtrl::GetRowCount](#getrowcount)|Pobiera bieżącą liczbę wierszy kart w formancie karty.|
+|[CTabCtrl::Porady dotyczące właściwości GetTool](#gettooltips)|Pobiera uchwyt formantu etykietki narzędzia skojarzonej z kontrolką tabulacji.|
+|[CTabCtrl::HighlightItem](#highlightitem)|Ustawia stan podświetlenia elementu karty.|
+|[CTabCtrl::HitTest](#hittest)|Określa, która karta, jeśli istnieje, znajduje się w określonej pozycji ekranu.|
+|[CTabCtrl::InsertItem](#insertitem)|Wstawia nową kartę w formancie kart.|
+|[CTabCtrl::UsuńImage](#removeimage)|Usuwa obraz z listy obrazów formantu karty.|
+|[CTabCtrl::SetCurFocus](#setcurfocus)|Ustawia fokus na określoną kartę w formancie karty.|
+|[CTabCtrl::SetCurSel](#setcursel)|Wybiera kartę w formancie kart.|
+|[CTabCtrl::SetExtendedStyle](#setextendedstyle)|Ustawia rozszerzone style dla kontrolki kart.|
+|[CTabCtrl::SetImageList](#setimagelist)|Przypisuje listę obrazów do kontrolki kart.|
+|[CTabCtrl::SetItem](#setitem)|Ustawia niektóre lub wszystkie atrybuty karty.|
+|[CTabCtrl::SetItemExtra](#setitemextra)|Ustawia liczbę bajtów na kartę zarezerwowaną dla danych zdefiniowanych przez aplikację w formancie karty.|
+|[CTabCtrl::SetItemSize](#setitemsize)|Ustawia szerokość i wysokość elementu.|
+|[CTabCtrl::Stan zestawu](#setitemstate)|Ustawia stan wskazanego elementu kontroli tabulacji.|
+|[CTabCtrl::SetMinTabWidth](#setmintabwidth)|Ustawia minimalną szerokość elementów w formancie karty.|
+|[CTabCtrl::SetPadding](#setpadding)|Ustawia ilość miejsca (dopełnienie) wokół każdej karty ikony i etykiety w kontrolki karty.|
+|[CTabCtrl::SetToolTips](#settooltips)|Przypisuje kontrolkę etykietki narzędzia do kontrolki kart.|
 
 ## <a name="remarks"></a>Uwagi
 
-"Kontrolka karta" jest analogiczna do dzielników w notesie lub etykiet w pliku cabinet. Za pomocą kontrolki karta aplikacja może definiować wiele stron w tym samym obszarze okna lub oknie dialogowym. Każda strona składa się z zestawu informacji lub grupy formantów, które aplikacja wyświetla, gdy użytkownik wybierze odpowiednią kartę. Specjalny typ kontrolki karta wyświetla karty, które wyglądają jak przyciski. Kliknięcie przycisku powinno natychmiast wykonać polecenie zamiast wyświetlania strony.
+"Kontrolka kart" jest analogiczna do dzielników w notesie lub etykiet w szafce plików. Za pomocą kontrolki karty aplikacja może zdefiniować wiele stron dla tego samego obszaru okna lub okna dialogowego. Każda strona składa się z zestawu informacji lub grupy formantów wyświetlanych przez aplikację, gdy użytkownik wybierze odpowiednią kartę. Specjalny typ kontrolki kart wyświetla karty, które wyglądają jak przyciski. Kliknięcie przycisku powinno natychmiast wykonać polecenie zamiast wyświetlania strony.
 
-Ten formant (i w związku z tym Klasa `CTabCtrl`) jest dostępny tylko dla programów uruchomionych w systemach Windows 95/98 i Windows NT w wersji 3,51 lub nowszej.
+Ten formant (i `CTabCtrl` dlatego klasa) jest dostępny tylko dla programów działających w systemach Windows 95/98 i Windows NT w wersji 3.51 lub nowszych.
 
-Aby uzyskać więcej informacji na temat używania `CTabCtrl`, zobacz [Controls](../../mfc/controls-mfc.md) and [using CTabCtrl](../../mfc/using-ctabctrl.md).
+Aby uzyskać więcej `CTabCtrl`informacji na temat używania , zobacz [Formanty](../../mfc/controls-mfc.md) i [Korzystanie z CTabCtrl](../../mfc/using-ctabctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 `CTabCtrl`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxcmn. h
+**Nagłówek:** afxcmn.h
 
-##  <a name="adjustrect"></a>CTabCtrl:: AdjustRect
+## <a name="ctabctrladjustrect"></a><a name="adjustrect"></a>CTabCtrl::AdjustRect
 
-Oblicza obszar wyświetlania kontrolki karty przy użyciu prostokąta okna lub oblicza prostokąt okna, który będzie odpowiadał podanemu obszarowi wyświetlania.
+Oblicza obszar wyświetlania formantu karty, biorąc pod uwagę prostokąt okna, lub oblicza prostokąt okna, który odpowiadałby danemu obszarowi wyświetlania.
 
 ```
 void AdjustRect(BOOL bLarger,   LPRECT lpRect);
@@ -167,18 +167,18 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ### <a name="parameters"></a>Parametry
 
 *bLarger*<br/>
-Wskazuje, którą operację wykonać. Jeśli ten parametr ma wartość TRUE, *lpRect* określa prostokąt wyświetlania i odbiera odpowiadający mu prostokąt okna. Jeśli ten parametr ma wartość FALSE, *lpRect* określa prostokąt okna i odbiera odpowiedni prostokąt wyświetlania.
+Wskazuje, którą operację wykonać. Jeśli ten parametr ma wartość PRAWDA, *lpRect* określa prostokąt wyświetlania i odbiera odpowiedni prostokąt okna. Jeśli ten parametr ma wartość FAŁSZ, *lpRect* określa prostokąt okna i odbiera odpowiedni prostokąt wyświetlania.
 
-*lpRect*<br/>
-Wskaźnik do struktury [prostokąta](/previous-versions/dd162897\(v=vs.85\)) , która określa dany prostokąt i odbiera obliczony prostokąt.
+*Lprect*<br/>
+Wskaźnik do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) która określa dany prostokąt i odbiera obliczony prostokąt.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTabCtrl#1](../../mfc/reference/codesnippet/cpp/ctabctrl-class_1.cpp)]
 
-##  <a name="create"></a>CTabCtrl:: Create
+## <a name="ctabctrlcreate"></a><a name="create"></a>CTabCtrl::Utwórz
 
-Tworzy formant karty i dołącza go do wystąpienia obiektu `CTabCtrl`.
+Tworzy formant karty i dołącza go `CTabCtrl` do wystąpienia obiektu.
 
 ```
 virtual BOOL Create(
@@ -190,47 +190,47 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*dwStyle*<br/>
-Określa styl formantu karty. Zastosuj dowolną kombinację [stylów formantu karty](/windows/win32/Controls/tab-control-styles), opisanej w Windows SDK. Zobacz **uwagi** , aby zapoznać się z listą stylów okna, które można również zastosować do kontrolki.
+*Dwstyle*<br/>
+Określa styl formantu karty. Zastosuj dowolną [kombinację stylów sterowania kartami,](/windows/win32/Controls/tab-control-styles)opisaną w zestawie Windows SDK. Zobacz **Uwagi** dla listy stylów okien, które można również zastosować do formantu.
 
-*cinania*<br/>
-Określa rozmiar i położenie kontrolki karty. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) [lub struktura.](/previous-versions/dd162897\(v=vs.85\))
+*Rect*<br/>
+Określa rozmiar i położenie formantu karty. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/previous-versions/dd162897\(v=vs.85\))
 
 *pParentWnd*<br/>
-Określa okno nadrzędne kontrolki karta, zazwyczaj `CDialog`. Nie może mieć wartości NULL.
+Określa okno nadrzędne formantu karty, zwykle `CDialog`. Nie może być null.
 
-*nID*<br/>
+*Nid*<br/>
 Określa identyfikator formantu karty.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli Inicjalizacja obiektu zakończyła się pomyślnie; w przeciwnym razie FALSE.
+PRAWDA, jeśli inicjowanie obiektu zakończyło się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy skonstruować obiekt `CTabCtrl` w dwóch krokach. Najpierw Wywołaj konstruktora, a następnie Wywołaj `Create`, który tworzy formant karty i dołącza go do obiektu `CTabCtrl`.
+Konstruowanie `CTabCtrl` obiektu w dwóch krokach. Najpierw wywołaj konstruktora, `Create`a następnie wywołaj , co `CTabCtrl` tworzy formant karty i dołącza go do obiektu.
 
-Oprócz stylów kontrolek karta, można zastosować następujące style okna do kontrolki karta:
+Oprócz stylów sterowania tabulatorami do formantu karty można zastosować następujące style okien:
 
-- WS_CHILD tworzy okno podrzędne, które reprezentuje kontrolkę karta. Nie można używać z stylem WS_POPUP.
+- WS_CHILD Tworzy okno podrzędne, które reprezentuje formant karty. Nie można używać ze stylem WS_POPUP.
 
-- WS_VISIBLE tworzy formant karty, który jest początkowo widoczny.
+- WS_VISIBLE Tworzy formant karty, który jest początkowo widoczny.
 
-- WS_DISABLED tworzy okno, które jest początkowo wyłączone.
+- WS_DISABLED Tworzy okno, które jest początkowo wyłączone.
 
-- WS_GROUP Określa pierwszą kontrolkę grupy kontrolek, w której użytkownik może przechodzić z jednej kontrolki do następnej przy użyciu klawiszy strzałek. Wszystkie kontrolki zdefiniowane przy użyciu stylu WS_GROUP po pierwszej kontrolce należy do tej samej grupy. Następna kontrolka z stylem WS_GROUP spowoduje zakończenie grupy stylów i rozpoczęcie następnej grupy (oznacza to, że jedna grupa zostanie zakończona, gdy następny zaczyna).
+- WS_GROUP Określa pierwszy formant grupy formantów, w którym użytkownik może przechodzić z jednego formantu do następnego za pomocą klawiszy strzałek. Wszystkie formanty zdefiniowane za pomocą stylu WS_GROUP po pierwszym formancie należą do tej samej grupy. Następny formant ze stylem WS_GROUP kończy grupę stylów i rozpoczyna następną grupę (oznacza to, że jedna grupa kończy się w miejscu rozpoczęcia następnego).
 
-- WS_TABSTOP określa jedną z dowolnych kontrolek, za pomocą których użytkownik może przechodzić przy użyciu klawisza TAB. Klawisz TAB przenosi użytkownika do następnej kontrolki określonej przez styl WS_TABSTOP.
+- WS_TABSTOP Określa jedną z wielu formantów, za pomocą których użytkownik może się poruszać za pomocą klawisza TAB. Klawisz TAB przenosi użytkownika do następnego formantu określonego przez styl WS_TABSTOP.
 
-Aby utworzyć kontrolkę karta z rozszerzonymi stylami okien, wywołaj [CTabCtrl:: CreateEx](#createex) , a nie `Create`.
+Aby utworzyć kontrolkę karty z rozszerzonymi stylami okien, należy wywołać [CTabCtrl::CreateEx](#createex) zamiast `Create`.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTabCtrl#2](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]
 
-##  <a name="createex"></a>CTabCtrl:: CreateEx
+## <a name="ctabctrlcreateex"></a><a name="createex"></a>CTabCtrl::CreateEx
 
-Tworzy kontrolkę (okno podrzędne) i kojarzy ją z obiektem `CTabCtrl`.
+Tworzy formant (okno podrzędne) i `CTabCtrl` kojarzy go z obiektem.
 
 ```
 virtual BOOL CreateEx(
@@ -243,54 +243,54 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Parametry
 
-*dwExStyle*<br/>
-Określa rozszerzony styl formantu, który jest tworzony. Aby zapoznać się z listą rozszerzonych stylów systemu Windows, zobacz *dwExStyle* parametru [elementu CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) w Windows SDK.
+*Dwexstyle*<br/>
+Określa rozszerzony styl tworzonego formantu. Aby uzyskać listę rozszerzonych stylów systemu Windows, zobacz parametr *dwExStyle* dla [createwindowex](/windows/win32/api/winuser/nf-winuser-createwindowexw) w zestawie Windows SDK.
 
-*dwStyle*<br/>
-Określa styl formantu karty. Zastosuj dowolną kombinację [stylów formantu karty](/windows/win32/Controls/tab-control-styles), opisanej w Windows SDK. Zobacz **uwagi** w temacie [Tworzenie](#create) , aby wyświetlić listę stylów okna, które można również zastosować do kontrolki.
+*Dwstyle*<br/>
+Określa styl formantu karty. Zastosuj dowolną [kombinację stylów sterowania kartami,](/windows/win32/Controls/tab-control-styles)opisaną w zestawie Windows SDK. Zobacz **Uwagi** w [Tworzenie](#create) listy stylów okien, które można również zastosować do formantu.
 
-*cinania*<br/>
-Odwołanie do struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
+*Rect*<br/>
+Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
-Wskaźnik do okna, które jest elementem nadrzędnym formantu.
+Wskaźnik do okna, które jest nadrzędnym formantu.
 
-*nID*<br/>
-Identyfikator okna podrzędnego kontrolki.
+*Nid*<br/>
+Identyfikator okna podrzędnego formantu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli w przeciwnym razie określono wartość 0.
+Nonzero jeśli się powiedzie inaczej 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj `CreateEx` zamiast [tworzyć](#create) , aby zastosować rozszerzone style systemu Windows, określone przez **WS_EX_** prekroju stylu systemu Windows.
+Użyj `CreateEx` zamiast [Create,](#create) aby zastosować rozszerzone style systemu Windows, określone przez przedmową styl rozszerzony systemu Windows **WS_EX_**.
 
-`CreateEx` tworzy formant przy użyciu rozszerzonych stylów systemu Windows określonych przez *dwExStyle*. Ustawianie stylów rozszerzonych specyficznych dla kontrolki przy użyciu [setextended](#setextendedstyle). Na przykład użyj `CreateEx`, aby ustawić takie style jako WS_EX_CONTEXTHELP, ale Użyj `SetExtendedStyle` do ustawienia takich stylów jako TCS_EX_FLATSEPARATORS. Aby uzyskać więcej informacji, zapoznaj się z stylami opisanymi w sekcji [kontrolki karta rozszerzone style](/windows/win32/Controls/tab-control-extended-styles) w Windows SDK.
+`CreateEx`tworzy formant z rozszerzonymi stylami systemu Windows określonymi przez *dwExStyle*. Ustaw rozszerzone style specyficzne dla formantu za pomocą [SetExtendedStyle](#setextendedstyle). Na przykład `CreateEx` można użyć do ustawiania takich `SetExtendedStyle` stylów, jak WS_EX_CONTEXTHELP, ale służy do ustawiania takich stylów, jak TCS_EX_FLATSEPARATORS. Aby uzyskać więcej informacji, zobacz style opisane w [obszarze Rozszerzone style kontroli kart](/windows/win32/Controls/tab-control-extended-styles) w zestawie Windows SDK.
 
-##  <a name="ctabctrl"></a>CTabCtrl:: CTabCtrl
+## <a name="ctabctrlctabctrl"></a><a name="ctabctrl"></a>CTabCtrl::CTabCtrl
 
-Konstruuje obiekt `CTabCtrl`.
+Konstruuje `CTabCtrl` obiekt.
 
 ```
 CTabCtrl();
 ```
 
-##  <a name="deleteallitems"></a>CTabCtrl::D eleteAllItems
+## <a name="ctabctrldeleteallitems"></a><a name="deleteallitems"></a>CTabCtrl::DeleteWszystkie elementy
 
-Usuwa wszystkie elementy z kontrolki karta.
+Usuwa wszystkie elementy z kontrolki karty.
 
 ```
 BOOL DeleteAllItems();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
-##  <a name="deleteitem"></a>CTabCtrl::D eleteItem
+## <a name="ctabctrldeleteitem"></a><a name="deleteitem"></a>CTabCtrl::DeleteItem
 
-Usuwa określony element z kontrolki karta.
+Usuwa określony element z kontrolki karty.
 
 ```
 BOOL DeleteItem(int nItem);
@@ -298,20 +298,20 @@ BOOL DeleteItem(int nItem);
 
 ### <a name="parameters"></a>Parametry
 
-*nItem*<br/>
-Wartość zerowa elementu do usunięcia.
+*nJejsza*<br/>
+Wartość od zera elementu do usunięcia.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTabCtrl#3](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]
 
-##  <a name="deselectall"></a>CTabCtrl::D eselectAll
+## <a name="ctabctrldeselectall"></a><a name="deselectall"></a>CTabCtrl::DselectAll
 
-Resetuje elementy w kontrolce karty, czyszcząc wszystkie, które zostały naciśnięte.
+Resetuje elementy w formancie karty, czyszcząc wszystkie, które zostały naciśnięte.
 
 ```
 void DeselectAll(BOOL fExcludeFocus);
@@ -319,16 +319,16 @@ void DeselectAll(BOOL fExcludeFocus);
 
 ### <a name="parameters"></a>Parametry
 
-*fExcludeFocus*<br/>
-Flaga określająca zakres wyboru elementu. Jeśli ten parametr ma wartość FAŁSZ, wszystkie przyciski karty zostaną zresetowane. Jeśli wartość jest równa TRUE, wówczas wszystkie elementy karty z wyjątkiem tych, które są aktualnie zaznaczone, zostaną zresetowane.
+*fSkusjaFocus*<br/>
+Flaga, która określa zakres deselekcji elementu. Jeśli ten parametr jest ustawiony na FAŁSZ, wszystkie przyciski kart zostaną zresetowane. Jeśli jest ustawiona na WARTOŚĆ PRAWDA, wszystkie elementy karty z wyjątkiem aktualnie wybranego zostaną zresetowane.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska implementuje zachowanie komunikatu Win32, [TCM_DESELECTALL](/windows/win32/Controls/tcm-deselectall), zgodnie z opisem w Windows SDK.
+Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32, [TCM_DESELECTALL](/windows/win32/Controls/tcm-deselectall), zgodnie z opisem w windows SDK.
 
-##  <a name="drawitem"></a>CTabCtrl::D rawItem
+## <a name="ctabctrldrawitem"></a><a name="drawitem"></a>CTabCtrl::DrawItem
 
-Wywoływane przez platformę, gdy wizualny aspekt kontrolki karta rysowania przez właściciela zmienia się.
+Wywoływana przez strukturę, gdy zmienia się wizualny aspekt kontroli karty rysowania właściciela.
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -337,17 +337,17 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpDrawItemStruct*<br/>
-Wskaźnik do struktury [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) opisujący element do narysowania.
+Wskaźnik do [drawitemstruct](/windows/win32/api/winuser/ns-winuser-drawitemstruct) struktury opisujące element, który ma być malowany.
 
 ### <a name="remarks"></a>Uwagi
 
-`itemAction` element członkowski struktury `DRAWITEMSTRUCT` definiuje akcję rysowania, która ma zostać wykonana.
+Element `itemAction` członkowski `DRAWITEMSTRUCT` konstrukcji definiuje akcję rysowania, która ma być wykonana.
 
-Domyślnie ta funkcja członkowska nic nie robi. Przesłoń tę funkcję elementu członkowskiego, aby zaimplementować rysowanie dla obiektu `CTabCtrl` rysowania przez właściciela.
+Domyślnie ta funkcja elementu członkowskiego nic nie robi. Zastąpokaj tę funkcję elementu członkowskiego, aby zaimplementować rysunek dla obiektu rysowania `CTabCtrl` właściciela.
 
-Aplikacja powinna przywrócić wszystkie obiekty interfejsu GDI (Graphics Device Interface) wybrane dla kontekstu wyświetlania dostarczonego w *lpDrawItemStruct* przed zakończeniem tej funkcji elementu członkowskiego.
+Aplikacja powinna przywrócić wszystkie obiekty interfejsu urządzenia graficznego (GDI) wybrane dla kontekstu wyświetlania dostarczonego w *lpDrawItemStruct* przed zakończeniem tej funkcji elementu członkowskiego.
 
-##  <a name="getcurfocus"></a>CTabCtrl:: GetCurFocus
+## <a name="ctabctrlgetcurfocus"></a><a name="getcurfocus"></a>CTabCtrl::GetCurFocus
 
 Pobiera indeks karty z bieżącym fokusem.
 
@@ -355,53 +355,53 @@ Pobiera indeks karty z bieżącym fokusem.
 int GetCurFocus() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Indeks (liczony od zera) karty z bieżącym fokusem.
+Indeks od zera karty z bieżącym fokusem.
 
-##  <a name="getcursel"></a>CTabCtrl:: GetCurSel
+## <a name="ctabctrlgetcursel"></a><a name="getcursel"></a>CTabCtrl::GetCurSel
 
-Pobiera aktualnie wybraną kartę w kontrolce karty.
+Pobiera aktualnie wybraną kartę w formancie karty.
 
 ```
 int GetCurSel() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Indeks (liczony od zera) wybranej karty w przypadku powodzenia lub-1, jeśli żadna karta nie jest zaznaczona.
+Indeks od zera wybranej karty, jeśli zakończy się pomyślnie lub - 1, jeśli nie wybrano żadnej karty.
 
-##  <a name="getextendedstyle"></a>CTabCtrl:: getextendeds
+## <a name="ctabctrlgetextendedstyle"></a><a name="getextendedstyle"></a>CTabCtrl::GetExtendedStyle
 
-Pobiera Style rozszerzone, które są obecnie używane dla kontrolki karta.
+Pobiera rozszerzone style, które są obecnie używane dla formantu karty.
 
 ```
 DWORD GetExtendedStyle();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Reprezentuje style rozszerzone aktualnie używane dla kontrolki karta. Ta wartość jest kombinacją [rozszerzonych stylów kontrolki karta](/windows/win32/Controls/tab-control-extended-styles), zgodnie z opisem w Windows SDK.
+Reprezentuje rozszerzone style obecnie używane dla formantu karty. Ta wartość jest kombinacją [rozszerzonych stylów kontroli kart,](/windows/win32/Controls/tab-control-extended-styles)zgodnie z opisem w zestawie Windows SDK.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska implementuje zachowanie [TCM_GETEXTENDEDSTYLE](/windows/win32/Controls/tcm-getextendedstyle)komunikatu Win32, zgodnie z opisem w Windows SDK.
+Ta funkcja elementu członkowskiego implementuje zachowanie [TCM_GETEXTENDEDSTYLE](/windows/win32/Controls/tcm-getextendedstyle)komunikatu Win32, zgodnie z opisem w windows SDK.
 
-##  <a name="getimagelist"></a>CTabCtrl:: GetImageList
+## <a name="ctabctrlgetimagelist"></a><a name="getimagelist"></a>CTabCtrl::Lista GetImage
 
-Pobiera listę obrazów skojarzoną z kontrolką karty.
+Pobiera listę obrazów skojarzoną z kontrolką kart.
 
 ```
 CImageList* GetImageList() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, wskaźnik do listy obrazów kontrolki karta; w przeciwnym razie wartość NULL.
+Jeśli się powiedzie, wskaźnik do listy obrazów formantu karty; w przeciwnym razie NULL.
 
-##  <a name="getitem"></a>CTabCtrl:: GetItem
+## <a name="ctabctrlgetitem"></a><a name="getitem"></a>CTabCtrl::GetItem
 
-Pobiera informacje o karcie w kontrolce karty.
+Pobiera informacje o karcie w formancie karty.
 
 ```
 BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
@@ -409,71 +409,71 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nItem*<br/>
-Indeks karty (liczony od zera).
+*nJejsza*<br/>
+Indeks od zera karty.
 
 *pTabCtrlItem*<br/>
-Wskaźnik do struktury [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) , służący do określania informacji do pobrania. Służy również do uzyskiwania informacji o karcie. Ta struktura jest używana z funkcjami składowymi `InsertItem`, `GetItem`i `SetItem`.
+Wskaźnik do struktury [TCITEM,](/windows/win32/api/commctrl/ns-commctrl-tcitemw) używany do określania informacji do pobrania. Służy również do odbierania informacji o karcie. Ta struktura jest `InsertItem`używana `GetItem`z `SetItem` funkcjami , i elementami członkowskimi.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli powodzenie; W przeciwnym razie zwraca wartość FALSE.
+Zwraca wartość PRAWDA, jeśli zakończy się pomyślnie; FAŁSZ inaczej.
 
 ### <a name="remarks"></a>Uwagi
 
-Po wysłaniu wiadomości element członkowski `mask` określa, które atrybuty należy zwrócić. Jeśli element członkowski `mask` określa wartość TCIF_TEXT, element członkowski `pszText` musi zawierać adres bufora, który odbiera tekst elementu, a element członkowski `cchTextMax` musi określać rozmiar buforu.
+Po wysłaniu wiadomości `mask` element członkowski określa, które atrybuty mają być zwracane. Jeśli `mask` element członkowski określa wartość TCIF_TEXT, `pszText` element członkowski musi zawierać adres buforu, `cchTextMax` który odbiera tekst elementu, a element członkowski musi określić rozmiar buforu.
 
 - `mask`
 
-   Wartość określająca, które `TCITEM` składowe struktury do pobrania lub ustawienia. Ten element członkowski może mieć wartość zero lub kombinację następujących wartości:
+   Wartość określająca `TCITEM` elementy struktury do pobrania lub ustawionego. Ten element członkowski może być zerowy lub kombinacją następujących wartości:
 
-   - TCIF_TEXT element członkowski `pszText` jest prawidłowy.
+  - TCIF_TEXT Element `pszText` członkowski jest prawidłowy.
 
-   - TCIF_IMAGE element członkowski `iImage` jest prawidłowy.
+  - TCIF_IMAGE Element `iImage` członkowski jest prawidłowy.
 
-   - TCIF_PARAM element członkowski `lParam` jest prawidłowy.
+  - TCIF_PARAM Element `lParam` członkowski jest prawidłowy.
 
-   - TCIF_RTLREADING tekst `pszText` zostanie wyświetlony przy użyciu kolejności odczytywania od prawej do lewej w systemach hebrajskich lub arabskiej.
+  - TCIF_RTLREADING Tekst `pszText` jest wyświetlany przy użyciu kolejności czytania od prawej do lewej w systemach hebrajskich lub arabskich.
 
-   - TCIF_STATE element członkowski `dwState` jest prawidłowy.
+  - TCIF_STATE Element `dwState` członkowski jest prawidłowy.
 
 - `pszText`
 
-   Wskaźnik na ciąg zakończony znakiem null zawierający tekst karty, jeśli struktura zawiera informacje o karcie. Jeśli struktura otrzymuje informacje, ten element członkowski Określa adres buforu, który odbiera tekst tabulacji.
+   Wskaźnik do ciągu zakończonego wartością null zawierającego tekst karty, jeśli struktura zawiera informacje o karcie. Jeśli struktura otrzymuje informacje, ten element członkowski określa adres buforu, który odbiera tekst karty.
 
 - `cchTextMax`
 
-   Rozmiar buforu wskazywany przez `pszText`. Ten element członkowski jest ignorowany, jeśli struktura nie otrzymuje informacji.
+   Wielkość bufora wskazana `pszText`przez . Ten element członkowski jest ignorowany, jeśli struktura nie odbiera informacji.
 
-- `iImage` indeks do listy obrazów kontrolki karty lub-1, jeśli nie ma obrazu dla karty.
+- `iImage`Indeks na liście obrazów formantu karty lub - 1, jeśli nie ma obrazu dla karty.
 
 - `lParam`
 
-   Zdefiniowane przez aplikację dane skojarzone z kartą. Jeśli istnieje więcej niż cztery bajty danych zdefiniowanych przez aplikację na kartę, aplikacja musi zdefiniować strukturę i użyć jej zamiast struktury `TCITEM`. Pierwszy element członkowski struktury zdefiniowanej przez aplikację musi być strukturą [TCITEMHEADER](/windows/win32/api/commctrl/ns-commctrl-tcitemheaderw). Struktura `TCITEMHEADER` jest taka sama jak struktura `TCITEM`, ale bez składowej `lParam`. Różnica między rozmiarem struktury i rozmiarem struktury `TCITEMHEADER` powinna być równa liczbie dodatkowych bajtów na kartę.
+   Dane zdefiniowane przez aplikację skojarzone z kartą. Jeśli na karcie jest więcej niż cztery bajty danych zdefiniowanych przez aplikację, aplikacja `TCITEM` musi zdefiniować strukturę i używać jej zamiast struktury. Pierwszym elementem struktury zdefiniowanej przez aplikację musi być struktura [TCITEMHEADER.](/windows/win32/api/commctrl/ns-commctrl-tcitemheaderw) Struktura `TCITEMHEADER` jest identyczna `TCITEM` ze strukturą, ale bez elementu `lParam` członkowskiego. Różnica między rozmiarem struktury a rozmiarem `TCITEMHEADER` struktury powinna być równa liczbie dodatkowych bajtów na kartę.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]
 
-##  <a name="getitemcount"></a>CTabCtrl:: GetItemCount
+## <a name="ctabctrlgetitemcount"></a><a name="getitemcount"></a>CTabCtrl::GetItemCount
 
-Pobiera liczbę kart w kontrolce karty.
+Pobiera liczbę kart w formancie karty.
 
 ```
 int GetItemCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Liczba elementów w kontrolce karty.
+Liczba elementów w formancie karty.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla [CPropertySheet:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
+  Zobacz przykład [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-##  <a name="getitemrect"></a>CTabCtrl:: GetItemRect
+## <a name="ctabctrlgetitemrect"></a><a name="getitemrect"></a>CTabCtrl::GetItemRect
 
-Pobiera prostokąt ograniczenia dla określonej karty w kontrolce karty.
+Pobiera prostokąt ograniczający dla określonej karty w formancie karty.
 
 ```
 BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
@@ -481,23 +481,23 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nItem*<br/>
-Indeks elementu karty liczony od zera.
+*nJejsza*<br/>
+Indeks od zera elementu karty.
 
-*lpRect*<br/>
-Wskaźnik do struktury [prostokąta](/previous-versions/dd162897\(v=vs.85\)) , która otrzymuje obwiednię tabulacji. Współrzędne te używają bieżącego trybu mapowania okienka ekranu.
+*Lprect*<br/>
+Wskaźnik do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) która odbiera prostokąt ograniczający kartę. Współrzędne te wykorzystują bieżący tryb mapowania rzutni.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla [CPropertySheet:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
+  Zobacz przykład [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-##  <a name="getitemstate"></a>CTabCtrl:: GetItemState
+## <a name="ctabctrlgetitemstate"></a><a name="getitemstate"></a>CTabCtrl::GetItemState
 
-Pobiera stan elementu kontrolki karta identyfikowanego przez *nitem*.
+Pobiera stan elementu kontroli karty identyfikowanego przez *nItem*.
 
 ```
 DWORD GetItemState(
@@ -507,60 +507,60 @@ DWORD GetItemState(
 
 ### <a name="parameters"></a>Parametry
 
-*nItem*<br/>
-Liczony od zera numer indeksu elementu, dla którego mają zostać pobrane informacje o stanie.
+*nJejsza*<br/>
+Numer indeksu od zera elementu, dla którego mają być pobierane informacje o stanie.
 
-*dwMask*<br/>
-Maska określająca, która z flag stanu elementu ma zostać zwrócona. Aby uzyskać listę wartości, zobacz maskowanie składowej struktury [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) , zgodnie z opisem w Windows SDK.
+*Dwmask*<br/>
+Maska określająca, która z flag państwowych elementu ma powrócić. Aby uzyskać listę wartości, zobacz element członkowski maski struktury [TCITEM,](/windows/win32/api/commctrl/ns-commctrl-tcitemw) zgodnie z opisem w zestawie Windows SDK.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do wartości DWORD, która otrzymuje informacje o stanie. Może być jedną z następujących wartości:
+Odwołanie do wartości DWORD odbierającej informacje o stanie. Może być jedną z następujących wartości:
 
 |Wartość|Opis|
 |-----------|-----------------|
-|TCIS_BUTTONPRESSED|Wybrano element kontrolki karta.|
-|TCIS_HIGHLIGHTED|Element kontrolki karta zostanie wyróżniony, a karta i tekst są rysowane przy użyciu bieżącego koloru wyróżnienia. W przypadku korzystania z koloru wyróżnienia będzie to prawdziwa interpolacja, a nie kolorem.|
+|TCIS_BUTTONPRESSED|Zostanie wybrany element formantu karty.|
+|TCIS_HIGHLIGHTED|Element formantu karty zostanie wyróżniony, a karta i tekst są rysowane przy użyciu bieżącego koloru podświetlenia. Podczas korzystania z koloru podświetlenia, będzie to prawdziwa interpolacja, a nie roztrząsany kolor.|
 
 ### <a name="remarks"></a>Uwagi
 
-Stan elementu jest określony przez `dwState` składową struktury `TCITEM`.
+Stan elementu jest określony przez `dwState` element `TCITEM` członkowski struktury.
 
-##  <a name="getrowcount"></a>CTabCtrl:: GetRowCount
+## <a name="ctabctrlgetrowcount"></a><a name="getrowcount"></a>CTabCtrl::GetRowCount
 
-Pobiera bieżącą liczbę wierszy w kontrolce karty.
+Pobiera bieżącą liczbę wierszy w formancie karty.
 
 ```
 int GetRowCount() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Liczba wierszy kart w kontrolce karty.
+Liczba wierszy kart w formancie kart.
 
 ### <a name="remarks"></a>Uwagi
 
-Tylko kontrolki tabulacji mające styl TCS_MULTILINE mogą mieć wiele wierszy kart.
+Tylko kontrolki kart, które mają styl TCS_MULTILINE, mogą mieć wiele wierszy kart.
 
-##  <a name="gettooltips"></a>CTabCtrl:: GetToolTips
+## <a name="ctabctrlgettooltips"></a><a name="gettooltips"></a>CTabCtrl::Porady dotyczące właściwości GetTool
 
-Pobiera uchwyt kontrolki etykietki narzędzia skojarzonej z kontrolką karty.
+Pobiera uchwyt formantu etykietki narzędzia skojarzonej z kontrolką tabulacji.
 
 ```
 CToolTipCtrl* GetToolTips() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Dojście do kontrolki etykietki narzędzia, jeśli się powiedzie; w przeciwnym razie wartość NULL.
+Uchwyt kontrolki narzędzia, jeśli się powiedzie; w przeciwnym razie NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Kontrolka karta tworzy formant etykietki narzędzia, jeśli ma styl TCS_TOOLTIPS. Możesz również przypisać kontrolkę etykietki narzędzia do kontrolki karta przy użyciu funkcji składowej `SetToolTips`.
+Formant tabulacji tworzy kontrolkę etykietki narzędzia, jeśli ma styl TCS_TOOLTIPS. Można również przypisać kontrolkę etykietki narzędzia `SetToolTips` do formantu karty za pomocą funkcji elementu członkowskiego.
 
-##  <a name="highlightitem"></a>CTabCtrl:: HighlightItem
+## <a name="ctabctrlhighlightitem"></a><a name="highlightitem"></a>CTabCtrl::HighlightItem
 
-Ustawia stan wyróżniania elementu tabulacji.
+Ustawia stan podświetlenia elementu karty.
 
 ```
 BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
@@ -569,22 +569,22 @@ BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *idItem*<br/>
-Indeks (liczony od zera) elementu formantu karty.
+Indeks od zera elementu kontroli karty.
 
-*fHighlight*<br/>
-Wartość określająca stan wyróżnienia, który ma zostać ustawiony. Jeśli ta wartość jest RÓWNa TRUE, karta zostanie wyróżniona; Jeśli wartość jest równa FALSE, na karcie jest ustawiany stan domyślny.
+*fWysokiejszy*<br/>
+Wartość określająca stan podświetlenia, który ma zostać ustawiony. Jeśli ta wartość ma wartość PRAWDA, karta jest wyróżniona; jeśli FALSE, karta jest ustawiona na stan domyślny.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
+Nonzero jeśli się powiedzie; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska implementuje komunikat Win32 [TCM_HIGHLIGHTITEM](/windows/win32/Controls/tcm-highlightitem), zgodnie z opisem w Windows SDK.
+Ta funkcja elementu członkowskiego implementuje komunikat Win32 [TCM_HIGHLIGHTITEM](/windows/win32/Controls/tcm-highlightitem), zgodnie z opisem w windows SDK.
 
-##  <a name="hittest"></a>CTabCtrl:: HitTest
+## <a name="ctabctrlhittest"></a><a name="hittest"></a>CTabCtrl::HitTest
 
-Określa, która karta (jeśli istnieje) znajduje się na określonej pozycji ekranu.
+Określa, która karta, jeśli istnieje, znajduje się w określonej pozycji ekranu.
 
 ```
 int HitTest(TCHITTESTINFO* pHitTestInfo) const;
@@ -593,15 +593,15 @@ int HitTest(TCHITTESTINFO* pHitTestInfo) const;
 ### <a name="parameters"></a>Parametry
 
 *pHitTestInfo*<br/>
-Wskaźnik do struktury [TCHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-tchittestinfo) , zgodnie z opisem w Windows SDK, która określa pozycję ekranu do przetestowania.
+Wskaźnik do struktury [TCHITTESTINFO,](/windows/win32/api/commctrl/ns-commctrl-tchittestinfo) zgodnie z opisem w windows SDK, który określa położenie ekranu do testowania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca indeks (liczony od zera) karty lub-1, jeśli żadna karta nie znajduje się na określonej pozycji.
+Zwraca indeks od zera karty lub - 1, jeśli żadna karta nie znajduje się w określonej pozycji.
 
-##  <a name="insertitem"></a>CTabCtrl:: InsertItem
+## <a name="ctabctrlinsertitem"></a><a name="insertitem"></a>CTabCtrl::InsertItem
 
-Wstawia nową kartę w istniejącej kontrolce karty.
+Wstawia nową kartę w istniejącej kontrolki kart.
 
 ```
 LONG InsertItem(
@@ -636,51 +636,51 @@ LONG InsertItem(
 
 ### <a name="parameters"></a>Parametry
 
-*nItem*<br/>
-Indeks nowej karty (liczony od zera).
+*nJejsza*<br/>
+Indeks od zera nowej karty.
 
 *pTabCtrlItem*<br/>
-Wskaźnik na strukturę [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) , która określa atrybuty karty.
+Wskaźnik do struktury [TCITEM,](/windows/win32/api/commctrl/ns-commctrl-tcitemw) który określa atrybuty karty.
 
 *lpszItem*<br/>
-Adres ciągu zakończenia o wartości null, który zawiera tekst karty.
+Adres ciągu zakończonego wartością null, który zawiera tekst karty.
 
-*Nokreślono*<br/>
-Indeks (liczony od zera) obrazu do wstawienia z listy obrazów.
+*nImage (Obraz)*<br/>
+Indeks od zera obrazu do wstawienia z listy obrazów.
 
 *nMask*<br/>
-Określa, które `TCITEM` atrybuty struktury do ustawienia. Może być równa zero lub kombinacja następujących wartości:
+Określa, `TCITEM` które atrybuty struktury mają być ustawione. Może być równa zero lub kombinacja następujących wartości:
 
-- TCIF_TEXT element członkowski `pszText` jest prawidłowy.
+- TCIF_TEXT Element `pszText` członkowski jest prawidłowy.
 
-- TCIF_IMAGE element członkowski `iImage` jest prawidłowy.
+- TCIF_IMAGE Element `iImage` członkowski jest prawidłowy.
 
-- TCIF_PARAM element członkowski *lParam* jest prawidłowy.
+- TCIF_PARAM Element członkowski *lParam* jest ważny.
 
-- TCIF_RTLREADING tekst `pszText` zostanie wyświetlony przy użyciu kolejności odczytywania od prawej do lewej w systemach hebrajskich lub arabskiej.
+- TCIF_RTLREADING Tekst `pszText` jest wyświetlany przy użyciu kolejności czytania od prawej do lewej w systemach hebrajskich lub arabskich.
 
-- TCIF_STATE element członkowski *dwState* jest prawidłowy.
+- TCIF_STATE Element członkowski *dwState* jest prawidłowy.
 
-*lParam*<br/>
-Zdefiniowane przez aplikację dane skojarzone z kartą.
+*Lparam*<br/>
+Dane zdefiniowane przez aplikację skojarzone z kartą.
 
-*dwState*<br/>
-Określa wartości dla Stanów elementu. Aby uzyskać więcej informacji, zobacz [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) w Windows SDK.
+*dwPaństwo*<br/>
+Określa wartości stanów elementu. Aby uzyskać więcej informacji, zobacz [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) w windows SDK.
 
-*dwStateMask*<br/>
-Określa, które Stany mają być ustawione. Aby uzyskać więcej informacji, zobacz [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) w Windows SDK.
+*dwStateMask (Mask)*<br/>
+Określa, które stany mają być ustawione. Aby uzyskać więcej informacji, zobacz [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) w windows SDK.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Indeks (liczony od zera) nowej karty, jeśli powodzenie; w przeciwnym razie-1.
+Indeks od zera nowej karty, jeśli zakończy się pomyślnie; w przeciwnym razie - 1.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CTabCtrl#5](../../mfc/reference/codesnippet/cpp/ctabctrl-class_5.cpp)]
 
-##  <a name="removeimage"></a>CTabCtrl:: RemoveImage
+## <a name="ctabctrlremoveimage"></a><a name="removeimage"></a>CTabCtrl::UsuńImage
 
-Usuwa określony obraz z listy obrazów kontrolki karta.
+Usuwa określony obraz z listy obrazów formantu karty.
 
 ```
 void RemoveImage(int nImage);
@@ -688,16 +688,16 @@ void RemoveImage(int nImage);
 
 ### <a name="parameters"></a>Parametry
 
-*Nokreślono*<br/>
-Indeks (liczony od zera) obrazu do usunięcia.
+*nImage (Obraz)*<br/>
+Indeks oparty na wartości zerowej obrazu do usunięcia.
 
 ### <a name="remarks"></a>Uwagi
 
-Kontrolka karta aktualizuje indeks obrazu każdej karty, tak aby każda karta była skojarzona z tym samym obrazem.
+Formant karty aktualizuje indeks obrazu każdej karty, dzięki czemu każda karta pozostaje skojarzona z tym samym obrazem.
 
-##  <a name="setcurfocus"></a>CTabCtrl:: SetCurFocus
+## <a name="ctabctrlsetcurfocus"></a><a name="setcurfocus"></a>CTabCtrl::SetCurFocus
 
-Ustawia fokus na określoną kartę w kontrolce karty.
+Ustawia fokus na określoną kartę w formancie karty.
 
 ```
 void SetCurFocus(int nItem);
@@ -705,16 +705,16 @@ void SetCurFocus(int nItem);
 
 ### <a name="parameters"></a>Parametry
 
-*nItem*<br/>
+*nJejsza*<br/>
 Określa indeks karty, która pobiera fokus.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska implementuje zachowanie [TCM_SETCURFOCUS](/windows/win32/Controls/tcm-setcurfocus)komunikatu Win32, zgodnie z opisem w Windows SDK.
+Ta funkcja elementu członkowskiego implementuje zachowanie [TCM_SETCURFOCUS](/windows/win32/Controls/tcm-setcurfocus)komunikatu Win32, zgodnie z opisem w windows SDK.
 
-##  <a name="setcursel"></a>CTabCtrl:: SetCurSel
+## <a name="ctabctrlsetcursel"></a><a name="setcursel"></a>CTabCtrl::SetCurSel
 
-Wybiera kartę w kontrolce karty.
+Wybiera kartę w formancie kart.
 
 ```
 int SetCurSel(int nItem);
@@ -722,20 +722,20 @@ int SetCurSel(int nItem);
 
 ### <a name="parameters"></a>Parametry
 
-*nItem*<br/>
-Indeks (liczony od zera) elementu, który ma zostać wybrany.
+*nJejsza*<br/>
+Indeks od zera elementu, który ma zostać wybrany.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Indeks (liczony od zera) wcześniej wybranej karty, jeśli się powiedzie, w przeciwnym razie-1.
+Indeks od zera wcześniej wybranej karty, jeśli zakończy się pomyślnie, w przeciwnym razie - 1.
 
 ### <a name="remarks"></a>Uwagi
 
-Kontrolka karty nie wysyła TCN_SELCHANGING ani TCN_SELCHANGE komunikatu powiadomienia, gdy karta zostanie wybrana przy użyciu tej funkcji. Powiadomienia są wysyłane przy użyciu WM_NOTIFY, gdy użytkownik kliknie lub użyje klawiatury, aby zmienić karty.
+Formant karty nie wysyła komunikatu TCN_SELCHANGING lub powiadomienia TCN_SELCHANGE, gdy karta jest zaznaczona za pomocą tej funkcji. Powiadomienia te są wysyłane, używając WM_NOTIFY, gdy użytkownik kliknie lub użyj klawiatury do zmiany kart.
 
-##  <a name="setextendedstyle"></a>CTabCtrl:: setextended
+## <a name="ctabctrlsetextendedstyle"></a><a name="setextendedstyle"></a>CTabCtrl::SetExtendedStyle
 
-Ustawia rozszerzone style dla kontrolki karta.
+Ustawia rozszerzone style dla kontrolki kart.
 
 ```
 DWORD SetExtendedStyle(DWORD dwNewStyle,   DWORD dwExMask = 0);
@@ -743,23 +743,23 @@ DWORD SetExtendedStyle(DWORD dwNewStyle,   DWORD dwExMask = 0);
 
 ### <a name="parameters"></a>Parametry
 
-*dwNewStyle*<br/>
-Wartość określająca kombinację rozszerzonych stylów kontrolki karta.
+*dwNowstyle*<br/>
+Wartość określająca kombinację rozszerzonych stylów kontroli tabulacji.
 
-*dwExMask*<br/>
-Wartość DWORD wskazująca, których stylów w *dwNewStyle* mają dotyczyć. Tylko style rozszerzone w *dwExMask* zostaną zmienione. Wszystkie inne style będą utrzymywane w postaci, w jakiej jest. Jeśli ten parametr ma wartość zero, wpłynie to na wszystkie style w *dwNewStyle* .
+*dwExMask (maseczka dwEx)*<br/>
+Wartość DWORD, która wskazuje, które style w *dwNewStyle* mają mieć wpływ. Zmienią się tylko rozszerzone style w *dwExMask.* Wszystkie inne style zostaną zachowane w stanie, w jakim jest. Jeśli ten parametr wynosi zero, to wszystkie style w *dwNewStyle* będzie miało wpływ.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość DWORD, która zawiera poprzednie [Style formantu karty](/windows/win32/Controls/tab-control-extended-styles), zgodnie z opisem w Windows SDK.
+Wartość DWORD zawierająca poprzednie [style rozszerzone fortujki karty,](/windows/win32/Controls/tab-control-extended-styles)zgodnie z opisem w zestawie Windows SDK.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ta funkcja członkowska implementuje zachowanie [TCM_SETEXTENDEDSTYLE](/windows/win32/Controls/tcm-setextendedstyle)komunikatu Win32, zgodnie z opisem w Windows SDK.
+Ta funkcja elementu członkowskiego implementuje zachowanie [TCM_SETEXTENDEDSTYLE](/windows/win32/Controls/tcm-setextendedstyle)komunikatu Win32, zgodnie z opisem w windows SDK.
 
-##  <a name="setimagelist"></a>CTabCtrl:: SetImageList
+## <a name="ctabctrlsetimagelist"></a><a name="setimagelist"></a>CTabCtrl::SetImageList
 
-Przypisuje listę obrazów do kontrolki karta.
+Przypisuje listę obrazów do kontrolki kart.
 
 ```
 CImageList* SetImageList(CImageList* pImageList);
@@ -767,14 +767,14 @@ CImageList* SetImageList(CImageList* pImageList);
 
 ### <a name="parameters"></a>Parametry
 
-*pImageList*<br/>
-Wskaźnik na listę obrazów, która ma zostać przypisana do kontrolki karta.
+*pImageList (Lista pImage)*<br/>
+Wskaźnik do listy obrazów, który ma być przypisany do kontrolki karty.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do poprzedniej listy obrazów lub wartość NULL, jeśli nie ma żadnych poprzednich list obrazów.
+Zwraca wskaźnik do poprzedniej listy obrazów lub wartości NULL, jeśli nie ma poprzedniej listy obrazów.
 
-##  <a name="setitem"></a>CTabCtrl:: SetItem
+## <a name="ctabctrlsetitem"></a><a name="setitem"></a>CTabCtrl::SetItem
 
 Ustawia niektóre lub wszystkie atrybuty karty.
 
@@ -784,23 +784,23 @@ BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
 
 ### <a name="parameters"></a>Parametry
 
-*nItem*<br/>
-Indeks elementu (liczony od zera).
+*nJejsza*<br/>
+Indeks od zera towaru.
 
 *pTabCtrlItem*<br/>
-Wskaźnik do struktury [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) , która zawiera atrybuty nowego elementu. Element członkowski `mask` określa, które atrybuty ustawić. Jeśli element członkowski `mask` określa wartość TCIF_TEXT, element członkowski `pszText` jest adresem ciągu zakończonego wartością null, a element członkowski `cchTextMax` jest ignorowany.
+Wskaźnik do struktury [TCITEM,](/windows/win32/api/commctrl/ns-commctrl-tcitemw) która zawiera nowe atrybuty elementu. Element `mask` członkowski określa, które atrybuty mają być ustawione. Jeśli `mask` element członkowski określa wartość TCIF_TEXT, `pszText` element członkowski jest adresem ciągu `cchTextMax` zakończonego zerem, a element członkowski jest ignorowany.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla [GetItem](#getitem).
+  Zobacz przykład [getitem](#getitem).
 
-##  <a name="setitemextra"></a>CTabCtrl:: SetItemExtra
+## <a name="ctabctrlsetitemextra"></a><a name="setitemextra"></a>CTabCtrl::SetItemExtra
 
-Ustawia liczbę bajtów na kartę zarezerwowaną dla danych zdefiniowanych przez aplikację w kontrolce karty.
+Ustawia liczbę bajtów na kartę zarezerwowaną dla danych zdefiniowanych przez aplikację w formancie karty.
 
 ```
 BOOL SetItemExtra(int nBytes);
@@ -808,20 +808,20 @@ BOOL SetItemExtra(int nBytes);
 
 ### <a name="parameters"></a>Parametry
 
-*nBytes*<br/>
-Liczba dodatkowych bajtów do ustawienia.
+*n Bajty*<br/>
+Liczba dodatkowych bajtów do ustawionego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
+Nonzero jeśli się powiedzie; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska implementuje zachowanie [TCM_SETITEMEXTRA](/windows/win32/Controls/tcm-setitemextra)komunikatu Win32, zgodnie z opisem w Windows SDK.
+Ta funkcja elementu członkowskiego implementuje zachowanie [TCM_SETITEMEXTRA](/windows/win32/Controls/tcm-setitemextra)komunikatu Win32, zgodnie z opisem w windows SDK.
 
-##  <a name="setitemsize"></a>CTabCtrl:: SetItemSize
+## <a name="ctabctrlsetitemsize"></a><a name="setitemsize"></a>CTabCtrl::SetItemSize
 
-Ustawia szerokość i wysokość elementów kontrolki karta.
+Ustawia szerokość i wysokość elementów kontrolnych tabulacji.
 
 ```
 CSize SetItemSize(CSize size);
@@ -829,16 +829,16 @@ CSize SetItemSize(CSize size);
 
 ### <a name="parameters"></a>Parametry
 
-*zmienia*<br/>
-Nowa szerokość i wysokość elementów formantu karty w pikselach.
+*Rozmiar*<br/>
+Nowa szerokość i wysokość elementów sterujących kartą w pikselach.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zwraca starą szerokość i wysokość elementów kontrolki karta.
+Zwraca starą szerokość i wysokość elementów kontrolnych tabulacji.
 
-##  <a name="setitemstate"></a>CTabCtrl:: SetItemState
+## <a name="ctabctrlsetitemstate"></a><a name="setitemstate"></a>CTabCtrl::Stan zestawu
 
-Ustawia stan elementu kontrolki karta identyfikowanego przez *nitem*.
+Ustawia stan elementu kontroli karty identyfikowanego przez *nItem*.
 
 ```
 BOOL SetItemState(
@@ -849,27 +849,27 @@ BOOL SetItemState(
 
 ### <a name="parameters"></a>Parametry
 
-*nItem*<br/>
-Liczony od zera numer indeksu elementu, dla którego mają zostać ustawione informacje o stanie.
+*nJejsza*<br/>
+Numer indeksu od zera elementu, dla którego mają być ustawione informacje o stanie.
 
-*dwMask*<br/>
-Maska określająca, która z flag stanu elementu ma zostać ustawiona. Aby uzyskać listę wartości, zobacz maskowanie składowej struktury [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) , zgodnie z opisem w Windows SDK.
+*Dwmask*<br/>
+Maska określająca, którą z flag państwowych elementu należy ustawić. Aby uzyskać listę wartości, zobacz element członkowski maski struktury [TCITEM,](/windows/win32/api/commctrl/ns-commctrl-tcitemw) zgodnie z opisem w zestawie Windows SDK.
 
-*dwState*<br/>
+*dwPaństwo*<br/>
 Odwołanie do wartości DWORD zawierającej informacje o stanie. Może być jedną z następujących wartości:
 
 |Wartość|Opis|
 |-----------|-----------------|
-|TCIS_BUTTONPRESSED|Wybrano element kontrolki karta.|
-|TCIS_HIGHLIGHTED|Element kontrolki karta zostanie wyróżniony, a karta i tekst są rysowane przy użyciu bieżącego koloru wyróżnienia. W przypadku korzystania z koloru wyróżnienia będzie to prawdziwa interpolacja, a nie kolorem.|
+|TCIS_BUTTONPRESSED|Zostanie wybrany element formantu karty.|
+|TCIS_HIGHLIGHTED|Element formantu karty zostanie wyróżniony, a karta i tekst są rysowane przy użyciu bieżącego koloru podświetlenia. Podczas korzystania z koloru podświetlenia, będzie to prawdziwa interpolacja, a nie roztrząsany kolor.|
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
+Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
-##  <a name="setmintabwidth"></a>CTabCtrl:: SetMinTabWidth
+## <a name="ctabctrlsetmintabwidth"></a><a name="setmintabwidth"></a>CTabCtrl::SetMinTabWidth
 
-Ustawia minimalną szerokość elementów w kontrolce karty.
+Ustawia minimalną szerokość elementów w formancie karty.
 
 ```
 int SetMinTabWidth(int cx);
@@ -877,20 +877,20 @@ int SetMinTabWidth(int cx);
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
-Minimalna szerokość ustawiona dla elementu kontrolki karta. Jeśli ten parametr ma wartość-1, formant będzie używać domyślnej szerokości tabulatora.
+*Cx*<br/>
+Minimalna szerokość, która ma być ustawiona dla elementu kontroli tabulacji. Jeśli ten parametr jest ustawiony na -1, formant użyje domyślnej szerokości karty.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Poprzednia minimalna szerokość tabulacji.
+Poprzednia minimalna szerokość karty.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ta funkcja członkowska implementuje zachowanie [TCM_SETMINTABWIDTH](/windows/win32/Controls/tcm-setmintabwidth)komunikatu Win32, zgodnie z opisem w Windows SDK.
+Ta funkcja elementu członkowskiego implementuje zachowanie [TCM_SETMINTABWIDTH](/windows/win32/Controls/tcm-setmintabwidth)komunikatu Win32, zgodnie z opisem w windows SDK.
 
-##  <a name="setpadding"></a>CTabCtrl:: setuzupełnienie
+## <a name="ctabctrlsetpadding"></a><a name="setpadding"></a>CTabCtrl::SetPadding
 
-Ustawia ilość miejsca (uzupełnienie) wokół każdej karty i etykiety w kontrolce karty.
+Ustawia ilość miejsca (dopełnienie) wokół każdej karty ikony i etykiety w kontrolki karty.
 
 ```
 void SetPadding(CSize size);
@@ -898,12 +898,12 @@ void SetPadding(CSize size);
 
 ### <a name="parameters"></a>Parametry
 
-*zmienia*<br/>
-Ustawia ilość miejsca (uzupełnienie) wokół każdej karty i etykiety w kontrolce karty.
+*Rozmiar*<br/>
+Ustawia ilość miejsca (dopełnienie) wokół każdej karty ikony i etykiety w kontrolki karty.
 
-##  <a name="settooltips"></a>CTabCtrl:: setetykietki narzędzi
+## <a name="ctabctrlsettooltips"></a><a name="settooltips"></a>CTabCtrl::SetToolTips
 
-Przypisuje formant etykietki narzędzia do kontrolki karta.
+Przypisuje kontrolkę etykietki narzędzia do kontrolki kart.
 
 ```
 void SetToolTips(CToolTipCtrl* pWndTip);
@@ -911,16 +911,16 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 
 ### <a name="parameters"></a>Parametry
 
-*pWndTip*<br/>
-Uchwyt kontrolki etykietki narzędzia.
+*pWdTip*<br/>
+Uchwyt kontrolki narzędzia.
 
 ### <a name="remarks"></a>Uwagi
 
-Możesz uzyskać kontrolkę etykietki narzędzia skojarzoną z kontrolką karty, wykonując wywołanie do `GetToolTips`.
+Możesz uzyskać kontrolkę etykietki narzędzia skojarzoną z `GetToolTips`kontrolką kart, nawiązując połączenie z programem .
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład dla [CPropertySheet:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
+  Zobacz przykład [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
 ## <a name="see-also"></a>Zobacz też
 

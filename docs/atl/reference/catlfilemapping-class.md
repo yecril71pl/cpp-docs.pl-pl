@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMapping class
 ms.assetid: 899fc058-e05e-48b5-aca9-340403bb9e26
-ms.openlocfilehash: d0a47a6cf0cc86409ceb9ef40d6fc6d738c86aa9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca46ccdacf5ea24f1de26cdc75bf808c4ecfaa40
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247175"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318956"
 ---
 # <a name="catlfilemapping-class"></a>Klasa CAtlFileMapping
 
-Ta klasa reprezentuje plik mapowany w pamięci, dodanie operatora rzutowania do metod [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).
+Ta klasa reprezentuje plik mapowany w pamięci, dodając operator rzutowania do metod [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).
 
 > [!IMPORTANT]
->  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,7 +31,7 @@ class CAtlFileMapping : public CAtlFileMappingBase
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ danych użyte dla operatora rzutowania.
+Typ danych używanych dla operatora rzutu.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -39,15 +39,15 @@ Typ danych użyte dla operatora rzutowania.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAtlFileMapping::operator T *](#operator_t_star)|Umożliwia niejawną konwersję `CAtlFileMapping` obiekty do `T*`.|
+|[CAtlFileMapping::operator T*](#operator_t_star)|Umożliwia niejawną `CAtlFileMapping` `T*`konwersję obiektów do .|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa dodaje operatora rzutowania pojedynczej umożliwia niejawną konwersję `CAtlFileMapping` obiekty do `T*`. Inni członkowie są dostarczane przez klasę bazową [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).
+Ta klasa dodaje pojedynczy operator rzutowania, aby umożliwić niejawną konwersję `CAtlFileMapping` obiektów do `T*`. Inne elementy członkowskie są dostarczane przez klasę podstawową [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)
+[Baza danych CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)
 
 `CAtlFileMapping`
 
@@ -55,9 +55,9 @@ Ta klasa dodaje operatora rzutowania pojedynczej umożliwia niejawną konwersję
 
 **Nagłówek:** atlfile.h
 
-##  <a name="operator_t_star"></a>  CAtlFileMapping::operator T *
+## <a name="catlfilemappingoperator-t"></a><a name="operator_t_star"></a>CAtlFileMapping::operator T*
 
-Umożliwia niejawną konwersję `CAtlFileMapping` obiekty do `T*`.
+Umożliwia niejawną `CAtlFileMapping` `T*`konwersję obiektów do .
 
 ```
 operator T*() const throw();
@@ -65,13 +65,13 @@ operator T*() const throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca `T*` wskaźnik do początku plików mapowanych na pamięć.
+Zwraca `T*` wskaźnik do początku pliku mapowane w pamięci.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania [CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) i reinterpretuje obiekt zwrócony wskaźnik jako `T*` gdzie *T* jest typ używany jako parametr szablonu tej klasy.
+Wywołuje [CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) i reinterpretuje zwrócony wskaźnik jako gdzie `T*` *T* jest typem używanym jako parametr szablonu tej klasy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Przegląd klas](../../atl/atl-class-overview.md)

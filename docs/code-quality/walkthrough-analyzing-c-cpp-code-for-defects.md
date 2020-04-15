@@ -1,128 +1,179 @@
 ---
-title: 'Przewodnik: Analizowanie kodu CC++ /Code dla wad'
-ms.date: 11/04/2016
+title: 'Przewodnik: Analizowanie kodu C/C++ pod kątem wad'
+description: Pokazuje, jak używać analizy kodu z microsoft C++ w programie Visual Studio.
+ms.date: 04/14/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - C/C++, code analysis
 - code analysis, walkthroughs
 - code, analyzing C/C++
 - code analysis tool, walkthroughs
-ms.openlocfilehash: 5fbdf9e223b3c1e1b8664de2018381958c458f45
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: fe9b3775199b2a18cf940b99e87852350f1fbea9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418656"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370218"
 ---
-# <a name="walkthrough-analyzing-cc-code-for-defects"></a>Przewodnik: Analizowanie kodu CC++ /Code dla wad
+# <a name="walkthrough-analyzing-cc-code-for-defects"></a>Przewodnik: Analizowanie kodu C/C++ pod kątem wad
 
-W tym instruktażu pokazano, jak analizowaćC++ kod c/Code pod kątem potencjalnych wad kodu za pomocą narzędzia do analizyC++ kodu dla języka C/Code.
+W tym przewodniku pokazano, jak analizować kod C/C++ dla potencjalnych wad kodu. Używa narzędzi analizy kodu dla kodu C/C++.
 
-- Uruchom analizę kodu w kodzie natywnym.
-- Analizuj ostrzeżenia wady kodu.
-- Traktuj ostrzeżenie jako błąd.
-- Adnotuj kod źródłowy, aby poprawić analizę wad kodu.
+W tym instruktażu:
+
+- Uruchom analizę kodu na kod natywny.
+- Analizowanie ostrzeżeń o wadach kodu.
+- Potraktuj ostrzeżenie jako błąd.
+- Dodawanie adnotacji do kodu źródłowego w celu poprawy analizy wad kodu.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Kopia [przykładu demonstracyjnego](../code-quality/demo-sample.md).
-- Podstawowe informacje o języku CC++/.
+- Kopia próbki [CppDemo](../code-quality/demo-sample.md).
+- Podstawowa wiedza na temat C/C++.
 
-### <a name="to-run-code-defect-analysis-on-native-code"></a>Aby uruchomić analizę wad kodu w kodzie natywnym
+## <a name="run-code-analysis-on-native-code"></a>Uruchamianie analizy kodu na kodzie macierzystym
 
-1. Otwórz rozwiązanie demonstracyjne w programie Visual Studio.
+### <a name="to-run-code-defect-analysis-on-native-code"></a>Aby uruchomić analizę wad kodu na kod natywny
 
-     Rozwiązanie demonstracyjne wypełnia teraz **Eksplorator rozwiązań**.
+::: moniker range=">=vs-2019"
 
-1. W menu **kompilacja** kliknij polecenie **Kompiluj ponownie rozwiązanie**.
+1. Otwórz rozwiązanie CppDemo w programie Visual Studio.
 
-     Rozwiązanie kompiluje się bez błędów lub ostrzeżeń.
+     Rozwiązanie CppDemo wypełnia teraz **Solution Explorer**.
 
-1. W **Eksplorator rozwiązań**wybierz projekt CodeDefects.
+1. W menu **Kompilacja** wybierz polecenie **Odbuduj rozwiązanie**.
 
-1. W menu **projekt** kliknij polecenie **Właściwości**.
+     Rozwiązanie jest budowane bez żadnych błędów lub ostrzeżeń.
 
-     Zostanie wyświetlone okno dialogowe **strony właściwości CodeDefects** .
+1. W **Eksploratorze rozwiązań**wybierz projekt CodeDefects.
 
-1. Kliknij pozycję **Analiza kodu**.
+1. W menu **Projekt** wybierz polecenie **Właściwości**.
 
-1. Kliknij pole wyboru **Włącz analizę kodu dla CC++ /on Build** .
+     Zostanie wyświetlone okno dialogowe **Strony właściwości CodeDefects.**
 
-1. Skompiluj ponownie projekt CodeDefects.
+1. Wybierz stronę właściwości **Analiza kodu.**
 
-     Ostrzeżenia analizy kodu są wyświetlane w **Lista błędów**.
+1. Zmień właściwość **Włącz analizę kodu na kompilacji na** **Tak**. Wybierz **przycisk OK,** aby zapisać zmiany.
 
-### <a name="to-analyze-code-defect-warnings"></a>Aby analizować ostrzeżenia defektu kodu
+1. Odbuduj projekt CodeDefects.
 
-1. W menu **Widok** kliknij **Lista błędów**.
+     Ostrzeżenia dotyczące analizy kodu są wyświetlane w oknie **Lista błędów.**
 
-     W zależności od profilu dewelopera wybranego w programie Visual Studio może zajść potrzeba wskaż **inne okna** w menu **Widok** , a następnie kliknij przycisk **Lista błędów**.
+::: moniker-end
 
-1. W **Lista błędów**kliknij dwukrotnie następujące ostrzeżenie:
+::: moniker range="<=vs-2017"
 
-     Ostrzeżenie C6230: niejawne rzutowanie między różnymi semantycznie typami: użycie HRESULT w kontekście Boolean.
+1. Otwórz rozwiązanie CppDemo w programie Visual Studio.
 
-     W edytorze kodu jest wyświetlany wiersz, który spowodował ostrzeżenie w `bool ProcessDomain()`funkcji. To ostrzeżenie wskazuje, że `HRESULT` jest używana w instrukcji "If", gdzie oczekiwano wyniku logicznego.  Zwykle jest to błąd, ponieważ w przypadku zwrócenia `S_OK` HRESULT z funkcji IT wskazuje powodzenie, ale po przekonwertowaniu na wartość logiczną, która ma być `false`.
+     Rozwiązanie CppDemo wypełnia teraz **Solution Explorer**.
 
-1. Popraw to ostrzeżenie przy użyciu makra `SUCCEEDED`, które jest konwertowane na `true`, gdy wartość zwracana `HRESULT` wskazuje na powodzenie. Kod powinien wyglądać podobnie do następującego kodu:
+1. W menu **Kompilacja** wybierz polecenie **Odbuduj rozwiązanie**.
+
+     Rozwiązanie jest budowane bez żadnych błędów lub ostrzeżeń.
+
+     > [!NOTE]
+     > W programie Visual Studio 2017 może `E1097 unknown attribute "no_init_all"` pojawić się fałszywe ostrzeżenie w silniku IntelliSense. Możesz bezpiecznie zignorować to ostrzeżenie.
+
+1. W **Eksploratorze rozwiązań**wybierz projekt CodeDefects.
+
+1. W menu **Projekt** wybierz polecenie **Właściwości**.
+
+     Zostanie wyświetlone okno dialogowe **Strony właściwości CodeDefects.**
+
+1. Wybierz stronę właściwości **Analiza kodu.**
+
+1. Zaznacz pole wyboru **Włącz analizę kodu na kompilacji.** Wybierz **przycisk OK,** aby zapisać zmiany.
+
+1. Odbuduj projekt CodeDefects.
+
+     Ostrzeżenia dotyczące analizy kodu są wyświetlane w oknie **Lista błędów.**
+
+::: moniker-end
+
+### <a name="to-analyze-code-defect-warnings"></a>Aby przeanalizować ostrzeżenia o wadach kodu
+
+1. W menu **Widok** wybierz polecenie **Lista błędów**.
+
+     Ten element menu może nie być widoczny. To zależy od profilu dewelopera wybranego w programie Visual Studio. Może być trzeba wskazać **inne okna** w menu **Widok,** a następnie wybierz pozycję **Lista błędów**.
+
+1. W oknie **Lista błędów** kliknij dwukrotnie następujące ostrzeżenie:
+
+     C6230: Niejawne rzutowanie między różnymi typami semantycznie: przy użyciu HRESULT w kontekście logicznym.
+
+     Edytor kodu wyświetla wiersz, który spowodował `bool ProcessDomain()`ostrzeżenie wewnątrz funkcji . To ostrzeżenie wskazuje, `HRESULT` że a jest używany w instrukcji "if", w której oczekiwany jest wynik logiczny. Zazwyczaj jest to błąd, ponieważ `S_OK` po powrocie HRESULT z funkcji wskazuje na sukces, ale po przekonwertowaniu na wartość logiczną, na `false`które jest oceniana.
+
+1. Popraw to ostrzeżenie, `SUCCEEDED` używając makra, `true` które `HRESULT` konwertuje na wartość zwracaną wskazującą sukces. Kod powinien przypominać następujący kod:
 
    ```cpp
-   if (SUCCEEDED (ReadUserAccount()) )
+   if (SUCCEEDED(ReadUserAccount()))
    ```
 
-1. W **Lista błędów**kliknij dwukrotnie następujące ostrzeżenie:
+1. Na **liście błędów**kliknij dwukrotnie następujące ostrzeżenie:
 
-     Warning C6282: nieprawidłowy operator: przypisanie do stałej w kontekście testu. Czy = = zamierzony?
+     C6282: Niepoprawny operator: przypisanie stałej w kontekście logicznym. Zamiast tego należy rozważyć użycie '=='.
 
-1. Popraw to ostrzeżenie, sprawdzając pod kątem równości. Kod powinien wyglądać podobnie do następującego kodu:
+1. Popraw to ostrzeżenie, testując równość. Kod powinien wyglądać podobnie do następującego kodu:
 
    ```cpp
-   if ((len == ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != '\\'))
+   if ((len == ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != L'\\'))
    ```
 
-### <a name="to-treat-warning-as-an-error"></a>Aby traktować ostrzeżenie jako błąd
+1. Popraw pozostałe ostrzeżenia C6001 na **liście błędów,** inicjując `i` i `j` do 0.
 
-1. W pliku usterek. cpp Dodaj następującą instrukcję `#pragma` na początku pliku, aby traktować ostrzeżenie C6001 jako błąd:
+1. Odbuduj projekt CodeDefects.
+
+     Projekt tworzy bez żadnych ostrzeżeń lub błędów.
+
+## <a name="correct-source-code-annotation-warnings"></a>Prawidłowe ostrzeżenia o adnotacji kodu źródłowego
+
+### <a name="to-enable-the-source-code-annotation-warnings-in-annotationc"></a>Aby włączyć ostrzeżenia o adnotacji kodu źródłowego w adnotacji.c
+
+::: moniker range=">=vs-2019"
+
+1. W Eksploratorze rozwiązań wybierz projekt Adnotacje.
+
+1. W menu **Projekt** wybierz polecenie **Właściwości**.
+
+     Zostanie wyświetlone okno dialogowe **Strony właściwości adnotacji.**
+
+1. Wybierz stronę właściwości **Analiza kodu.**
+
+1. Zmień właściwość **Włącz analizę kodu na kompilacji na** **Tak**. Wybierz **przycisk OK,** aby zapisać zmiany.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+1. W Eksploratorze rozwiązań wybierz projekt Adnotacje.
+
+1. W menu **Projekt** wybierz polecenie **Właściwości**.
+
+     Zostanie wyświetlone okno dialogowe **Strony właściwości adnotacji.**
+
+1. Wybierz stronę właściwości **Analiza kodu.**
+
+1. Zaznacz pole wyboru **Włącz analizę kodu na kompilacji.** Wybierz **przycisk OK,** aby zapisać zmiany.
+
+::: moniker-end
+
+### <a name="to-correct-the-source-code-annotation-warnings-in-annotationc"></a>Aby poprawić ostrzeżenia o adnotacji kodu źródłowego w adnotacji.c
+
+1. Odbuduj projekt Adnotacje.
+
+1. W menu **Kompilacja** wybierz polecenie **Uruchom analizę kodu w adnotacje**.
+
+1. Na **liście błędów**kliknij dwukrotnie następujące ostrzeżenie:
+
+     C6011: Dereferencing NULL wskaźnik "newNode".
+
+     To ostrzeżenie wskazuje, że błąd wywołującego, aby sprawdzić wartość zwracaną. W takim przypadku wywołanie `AllocateNode` może zwrócić wartość NULL. Zobacz plik nagłówka annotations.h dla `AllocateNode`deklaracji funkcji dla .
+
+1. Kursor znajduje się w lokalizacji w pliku adnotations.cpp, w którym wystąpiło ostrzeżenie.
+
+1. Aby poprawić to ostrzeżenie, należy użyć instrukcji "if", aby przetestować wartość zwracaną. Kod powinien przypominać następujący kod:
 
    ```cpp
-   #pragma warning (error: 6001)
-   ```
-
-1. Skompiluj ponownie projekt CodeDefects.
-
-     W **Lista błędów**, C6001 teraz pojawia się jako błąd.
-
-1. Popraw pozostałe dwa błędy C6001 w **Lista błędów** przez zainicjowanie `i` i `j` na 0.
-
-1. Skompiluj ponownie projekt CodeDefects.
-
-     Projekt kompiluje się bez żadnych ostrzeżeń lub błędów.
-
-### <a name="to-correct-the-source-code-annotation-warnings-in-annotationc"></a>Aby poprawić ostrzeżenia adnotacji kodu źródłowego w adnotacji. c
-
-1. W Eksplorator rozwiązań wybierz projekt adnotacji.
-
-1. W menu **projekt** kliknij polecenie **Właściwości**.
-
-     Zostanie wyświetlone okno dialogowe **strony właściwości adnotacji** .
-
-1. Kliknij pozycję **Analiza kodu**.
-
-1. Zaznacz pole wyboru **Włącz analizę kodu dla CC++ /on Build** .
-
-1. Kompiluj ponownie projekt adnotacji.
-
-1. W **Lista błędów**kliknij dwukrotnie następujące ostrzeżenie:
-
-     Ostrzeżenie C6011: wyłuskanie wskaźnika o wartości NULL "newNode".
-
-     To ostrzeżenie wskazuje, że obiekt wywołujący nie może sprawdzić zwracanej wartości. W takim przypadku wywołanie **AllocateNode** może zwrócić wartość null (zobacz plik nagłówkowy Annotations. h dla deklaracji funkcji dla AllocateNode).
-
-1. Otwórz plik Annotations. cpp.
-
-1. Aby poprawić to ostrzeżenie, należy użyć instrukcji "If" do przetestowania wartości zwracanej. Kod powinien wyglądać podobnie do następującego kodu:
-
-   ```cpp
+   LinkedList* newNode = AllocateNode();
    if (nullptr != newNode)
    {
        newNode->data = value;
@@ -131,27 +182,29 @@ W tym instruktażu pokazano, jak analizowaćC++ kod c/Code pod kątem potencjaln
    }
    ```
 
-1. Kompiluj ponownie projekt adnotacji.
+1. Odbuduj projekt Adnotacje.
 
-     Projekt kompiluje się bez żadnych ostrzeżeń lub błędów.
+     Projekt tworzy bez żadnych ostrzeżeń lub błędów.
+
+## <a name="use-source-code-annotation-to-discover-more-issues"></a>Użyj adnotacji kodu źródłowego, aby wykryć więcej problemów
 
 ### <a name="to-use-source-code-annotation"></a>Aby użyć adnotacji kodu źródłowego
 
-1. Adnotuj parametry formalne i wartość zwracaną funkcji `AddTail`, aby wskazać, że wartości wskaźnika mogą mieć wartość null:
+1. Adnotacje parametry formalne i `AddTail` zwraca wartość funkcji, aby wskazać wartości wskaźnika może być null:
 
    ```cpp
    _Ret_maybenull_ LinkedList* AddTail(_Maybenull_ LinkedList* node, int value)
    ```
 
-1. Kompiluj ponownie projekt adnotacji.
+1. W menu **Kompilacja** wybierz polecenie **Uruchom analizę kodu w programie Solution**.
 
-1. W **Lista błędów**kliknij dwukrotnie następujące ostrzeżenie:
+1. Na **liście błędów**kliknij dwukrotnie następujące ostrzeżenie:
 
-     Ostrzeżenie C6011: wyłuskanie "Node" wskaźnika o wartości NULL.
+     C6011: Dereferencing NULL wskaźnik "węzeł".
 
-     To ostrzeżenie wskazuje, że węzeł przekazano do funkcji może mieć wartość null i wskazuje numer wiersza, w którym zostało zgłoszone ostrzeżenie.
+     To ostrzeżenie wskazuje, że węzeł przekazany do funkcji może mieć wartość null.
 
-1. Aby poprawić to ostrzeżenie, należy użyć instrukcji "If" na początku funkcji, aby przetestować przekazaną wartość. Kod powinien wyglądać podobnie do następującego kodu:
+1. Aby poprawić to ostrzeżenie, należy użyć instrukcji "if" na początku funkcji, aby przetestować wartość zdawana. Kod powinien przypominać następujący kod:
 
    ```cpp
    if (nullptr == node)
@@ -160,11 +213,11 @@ W tym instruktażu pokazano, jak analizowaćC++ kod c/Code pod kątem potencjaln
    }
    ```
 
-1. Kompiluj ponownie projekt adnotacji.
+1. W menu **Kompilacja** wybierz polecenie **Uruchom analizę kodu w programie Solution**.
 
-     Projekt teraz kompiluje się bez żadnych ostrzeżeń lub błędów.
+     Projekt jest teraz budowany bez żadnych ostrzeżeń i błędów.
 
 ## <a name="see-also"></a>Zobacz też
 
 [Przewodnik: Analizowanie kodu zarządzanego pod kątem wad kodu](/visualstudio/code-quality/walkthrough-analyzing-managed-code-for-code-defects)\
-[Analiza kodu dla języka C/C++](../code-quality/code-analysis-for-c-cpp-overview.md)
+[Analiza kodu C/C++](../code-quality/code-analysis-for-c-cpp-overview.md)

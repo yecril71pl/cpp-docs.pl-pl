@@ -1,5 +1,5 @@
 ---
-title: '&lt;type_traits&gt; Typedefs'
+title: '&lt;type_traits&gt; typedefs'
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::false_type
@@ -7,22 +7,22 @@ f1_keywords:
 - type_traits/std::true_type
 - xtr1common/std::true_type
 ms.assetid: 8ac040ca-ed2d-4570-adc9-cb5626530053
-ms.openlocfilehash: eff1a99fb95f15c6377e8a74cca36e718cbd6fd9
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 784bcfa5325e74180d3981a98cda530d839ab9f6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422585"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367975"
 ---
-# <a name="lttype_traitsgt-typedefs"></a>&lt;type_traits&gt; Typedefs
+# <a name="lttype_traitsgt-typedefs"></a>&lt;type_traits&gt; typedefs
 
 |||
 |-|-|
 |[false_type](#false_type)|[true_type](#true_type)|
 
-## <a name="false_type"></a>false_type typedef
+## <a name="false_type-typedef"></a><a name="false_type"></a>false_type Typedef
 
-Przechowuje stałą całkowitą z wartością false.
+Posiada stałą integralną z wartością false.
 
 ```cpp
 typedef integral_constant<bool, false> false_type;
@@ -30,7 +30,7 @@ typedef integral_constant<bool, false> false_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla specjalizacji szablonu `integral_constant`.
+Typ jest synonimem specjalizacji szablonu `integral_constant`.
 
 ### <a name="example"></a>Przykład
 
@@ -53,9 +53,9 @@ false_type == false
 true_type == true
 ```
 
-## <a name="true_type"></a>true_type typedef
+## <a name="true_type-typedef"></a><a name="true_type"></a>true_type Typedef
 
-Zawiera stałą całkowitą o wartości true.
+Posiada stałą integralną z wartością rzeczywistą.
 
 ```cpp
 typedef integral_constant<bool, true> true_type;
@@ -63,7 +63,7 @@ typedef integral_constant<bool, true> true_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla specjalizacji szablonu `integral_constant`.
+Typ jest synonimem specjalizacji szablonu `integral_constant`.
 
 ### <a name="example"></a>Przykład
 

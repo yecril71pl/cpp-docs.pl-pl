@@ -1,8 +1,9 @@
 ---
 title: wctob
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wctob
+- _o_wctob
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 151325b0d66e6d57156cdf94828ca1d4b151d437
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 420071680c3dc273f6df637cf44273f2c24bd64c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944930"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320445"
 ---
 # <a name="wctob"></a>wctob
 
-Określa, czy znak dwubajtowy odnosi się do znaku wieloznacznego i zwraca reprezentację znaku wielobajtowego.
+Określa, czy szeroki znak odpowiada znakowi wielobajtowego i zwraca jego reprezentację wielobajtowych znaków.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,30 +49,32 @@ int wctob(
 
 ### <a name="parameters"></a>Parametry
 
-*WCHAR*<br/>
+*Wchar*<br/>
 Wartość do przetłumaczenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli **wctob** pomyślnie konwertuje znak dwubajtowy, zwraca swoją reprezentację znaku wieloznacznego, tylko wtedy, gdy znak wielobajtowy ma dokładnie jeden bajt Long. Jeśli **wctob** napotka znak dwubajtowy, nie może on zostać skonwertowany na znak wieloznaczny lub znak wielobajtowy nie jest dokładnie jednobajtowy, zwraca wartość-1.
+Jeśli **wctob** pomyślnie konwertuje szeroki znak, zwraca jego wielobajtową reprezentację znaków, tylko wtedy, gdy znak wielobajtowy ma dokładnie jeden bajt. Jeśli **wctob** napotka szeroki znak, nie może przekonwertować na znak wielobajtowy lub znak wielobajtowy nie jest dokładnie jeden bajt długo, zwraca -1.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **wctob** konwertuje szeroką literę zawartą w *WCHAR* do odpowiedniego znaku wielobajtowego przekazaną przez zwracaną wartość **int** , jeśli znak wielobajtowy ma dokładnie jeden bajt Long.
+Funkcja **wctob** konwertuje szeroki znak zawarty w *wchar* na odpowiedni znak wielobajtowy przekazywany przez zwracaną wartość **int,** jeśli znak wielobajtowy ma dokładnie jeden bajt.
 
-Jeśli **wctob** zakończyło się niepowodzeniem i nie znaleziono odpowiedniego znaku wielobajtowego, funkcja ustawia **errno** na **EILSEQ** i zwraca wartość-1.
+Jeśli **wctob** nie powiodło się i nie znaleziono odpowiedniego znaku wielobajtowego, funkcja ustawia **errno** na **EILSEQ** i zwraca -1.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**wctob**|\<WCHAR. h >|
+|**wctob**|\<wchar.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Ten program ilustruje zachowanie funkcji **wcstombs** .
+Ten program ilustruje zachowanie funkcji **wcstombs.**
 
 ```C
 // crt_wctob.c
@@ -102,10 +106,10 @@ int main( void )
 Determined the corresponding multibyte character to be "A".
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

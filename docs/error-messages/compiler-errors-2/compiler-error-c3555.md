@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C3555
 ms.assetid: b4311bd3-851b-479a-9965-d03f39dd8fd4
-ms.openlocfilehash: f5b3ba45d64b23cdfb4d157193e826ac0c90998f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ef4be5cdbee66b72da7a639b0920bd18bb6ebe87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200593"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366666"
 ---
 # <a name="compiler-error-c3555"></a>Błąd kompilatora C3555
 
-> Nieprawidłowy argument dla "decltype"
+> niepoprawny argument do "decltype"
 
-Argument *wyrażenia* `decltype(``)` specyfikator typu nie jest prawidłowym wyrażeniem.
+Argument specyfikatora `decltype(`typu *wyrażenia* `)` nie jest prawidłowym wyrażeniem.
 
 > [!NOTE]
->  C3555 prawdopodobnie nie wystąpi. Jeśli kompilator emituje C3555, prawdopodobnie z powodu wystąpienia wewnętrznego błędu kompilatora.
+> C3555 nie jest prawdopodobne. Jeśli kompilator emituje C3555, prawdopodobnie dlatego, że wystąpił błąd kompilatora wewnętrznego.
 
 ## <a name="see-also"></a>Zobacz też
 

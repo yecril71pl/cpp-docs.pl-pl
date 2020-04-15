@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: Object — Klasa'
+title: Platforma::Klasa obiektu
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 77313f8c4dcc87fa9de852afe2d60e614f8fc3a3
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8300ec484bdb58919ce8e450b706dd07c275ceee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418350"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363684"
 ---
-# <a name="platformobject-class"></a>Platform:: Object — Klasa
+# <a name="platformobject-class"></a>Platforma::Klasa obiektu
 
-Zapewnia typowe zachowanie klas referencyjnych i struktur ref w aplikacjach środowisko wykonawcze systemu Windows. Wszystkie wystąpienia klasy ref i ref struct są niejawnie konwertowane na platformę:: Object ^ i mogą przesłonić swoją wirtualną metodę ToString.
+Zapewnia typowe zachowanie dla klas ref i struktury ref w aplikacjach środowiska wykonawczego systemu Windows. Wszystkie wystąpienia ref klasy i ref struct są niejawnie konwertowane na Platform::Object^ i mogą zastąpić jego wirtualną metodę ToString.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,23 +29,23 @@ Zapewnia typowe zachowanie klas referencyjnych i struktur ref w aplikacjach śro
 public ref class Object : Object
 ```
 
-### <a name="members"></a>Members
+### <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[Object:: Object](#ctor)|Inicjuje nowe wystąpienie klasy Object.|
+|[Obiekt::Obiekt](#ctor)|Inicjuje nowe wystąpienie Object klasy.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[Obiekt:: Equals](#equals)|Określa, czy dany obiekt jest taki sam, jak bieżący obiekt.|
-|[Obiekt:: GetHashCode](#gethashcode)|Zwraca wartość skrótu dla tego wystąpienia.|
-|[Obiekt:: ReferenceEquals](#referenceequals)|Określa, czy określone wystąpienia obiektów są tego samego wystąpienia.|
-|[ToString](#tostring)|Zwraca ciąg reprezentujący bieżący obiekt. Może zostać zastąpiony.|
-|[GetType](#gettype)|Pobiera [platformę:: Type](../cppcx/platform-type-class.md) opisującą bieżące wystąpienie.|
+|[Obiekt::Równa się](#equals)|Określa, czy dany obiekt jest taki sam, jak bieżący obiekt.|
+|[Obiekt::GetHashCode](#gethashcode)|Zwraca wartość skrótu dla tego wystąpienia.|
+|[Obiekt::ReferenceEquals](#referenceequals)|Określa, czy określone wystąpienia object są tym samym wystąpieniem.|
+|[ToString](#tostring)|Zwraca ciąg reprezentujący bieżący obiekt. Można zastąpić.|
+|[GetType](#gettype)|Pobiera [platform::Type,](../cppcx/platform-type-class.md) który opisuje bieżące wystąpienie.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -55,11 +55,11 @@ public ref class Object : Object
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** vccorlib. h
+**Nagłówek:** vccorlib.h
 
-**Przestrzeń nazw:** Platformach
+**Obszar nazw:** Platformy
 
-## <a name="equals"></a>Object:: Equals — Metoda
+## <a name="objectequals-method"></a><a name="equals"></a>Obiekt::Metoda równa się
 
 Określa, czy dany obiekt jest taki sam, jak bieżący obiekt.
 
@@ -73,16 +73,16 @@ bool Equals(
 
 ### <a name="parameters"></a>Parametry
 
-*obiektów*<br/>
+*Obj*<br/>
 Obiekt do porównania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli obiekty są równe, w przeciwnym razie **false**.
+**true,** jeśli obiekty są równe, w przeciwnym razie **false**.
 
-## <a name="gethashcode"></a>Object:: GetHashCode, Metoda
+## <a name="objectgethashcode-method"></a><a name="gethashcode"></a>Obiekt::Metoda GetHashCode
 
-Zwraca `IUnknown`* wartość tożsamości dla tego wystąpienia, jeśli jest to obiekt COM lub obliczona wartość skrótu, jeśli nie jest obiektem COM.
+`IUnknown`Zwraca * wartość tożsamości dla tego wystąpienia, jeśli jest to obiekt COM lub obliczona wartość mieszania, jeśli nie jest obiektem COM.
 
 ### <a name="syntax"></a>Składnia
 
@@ -90,17 +90,17 @@ Zwraca `IUnknown`* wartość tożsamości dla tego wystąpienia, jeśli jest to 
 public:int GetHashCode();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wartość liczbowa, która jednoznacznie identyfikuje ten obiekt.
 
 ### <a name="remarks"></a>Uwagi
 
-Możesz użyć GetHashCode, aby utworzyć klucze dla obiektów w usłudze Maps. Kody skrótów można porównać przy użyciu [obiektu:: Equals](#equals). Jeśli ścieżka kodu jest niezwykle krytyczna i `GetHashCode` i `Equals` nie są wystarczająco szybko, można rozwinąć do źródłowej warstwy modelu COM i wykonać porównania natywnego wskaźnika `IUnknown`.
+Za pomocą GetHashCode można tworzyć klucze dla obiektów na mapach. Kody skrótów można porównać za pomocą [obiektu::Równa się](#equals). Jeśli ścieżka kodu jest `GetHashCode` bardzo `Equals` krytyczna i nie są wystarczająco szybkie, następnie można `IUnknown` rozwijać w dół do podstawowej warstwy COM i zrobić natywne porównania wskaźnika.
 
-## <a name="gettype"></a>Object:: GetType — Metoda
+## <a name="objectgettype-method"></a><a name="gettype"></a>Obiekt::Metoda GetType
 
-Zwraca obiekt [platform:: Type](../cppcx/platform-type-class.md) , który opisuje typ środowiska uruchomieniowego obiektu.
+Zwraca [platformę::Type](../cppcx/platform-type-class.md) obiektu, który opisuje typ środowiska wykonawczego obiektu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -110,23 +110,23 @@ Object::GetType();
 
 ### <a name="property-valuereturn-value"></a>Wartość właściwości/Zwracana wartość
 
-Obiekt [platform:: Type](../cppcx/platform-type-class.md) , który opisuje typ środowiska uruchomieniowego obiektu.
+A [Platform::Type](../cppcx/platform-type-class.md) obiektu, który opisuje typ środowiska wykonawczego obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Typ statyczny [:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) może służyć do uzyskania wartości [wyliczenia platform:: TypeCode](../cppcx/platform-typecode-enumeration.md) , która reprezentuje bieżący typ. Jest to szczególnie przydatne w przypadku typów wbudowanych. Kod typu dla dowolnej klasy ref poza [platformą:: String](../cppcx/platform-string-class.md) jest obiektem (1).
+Typ [statyczny::GetTypeCode](../cppcx/platform-type-class.md#gettypecode) może służyć do uzyskania [platform::TypeCode wartość wyliczenia,](../cppcx/platform-typecode-enumeration.md) która reprezentuje bieżący typ. Jest to głównie przydatne dla typów wbudowanych. Kod typu dla każdej klasy ref oprócz [Platformy::String](../cppcx/platform-string-class.md) jest Object (1).
 
-Klasa [Windows:: UI:: XAML:: Interop:: TypeName](/uwp/api/windows.ui.xaml.interop.typename) jest używana w interfejsach API systemu Windows jako niezależna od języka Metoda przekazywania informacji o typie między składnikami i aplikacjami systemu Windows. Klasa T[platformy:: Type](../cppcx/platform-type-class.md) ma operatory umożliwiające konwersję między `Type` i `TypeName`.
+Klasa [Windows::UI:Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) jest używana w interfejsach API systemu Windows jako niezależny od języka sposób przekazywania informacji o typie między składnikami i aplikacjami systemu Windows. T[Platform::Type Class](../cppcx/platform-type-class.md) ma operatorów `Type` `TypeName`do konwersji między i .
 
-Użyj operatora [typeid](../extensions/typeid-cpp-component-extensions.md) do zwrócenia obiektu `Platform::Type` dla nazwy klasy, na przykład podczas nawigowania między stronami XAML:
+Operator [typeid](../extensions/typeid-cpp-component-extensions.md) służy do `Platform::Type` zwracania nazwy klasy dla obiektu, na przykład podczas nawigowania między stronami XAML:
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
-## <a name="ctor"></a>Object:: Object — Konstruktor
+## <a name="objectobject-constructor"></a><a name="ctor"></a>Obiekt::Konstruktor obiektów
 
-Inicjuje nowe wystąpienie klasy Object.
+Inicjuje nowe wystąpienie Object klasy.
 
 ### <a name="syntax"></a>Składnia
 
@@ -134,9 +134,9 @@ Inicjuje nowe wystąpienie klasy Object.
 public:Object();
 ```
 
-## <a name="referenceequals"></a>Object:: ReferenceEquals, Metoda
+## <a name="objectreferenceequals-method"></a><a name="referenceequals"></a>Obiekt::ReferenceEquals Metoda
 
-Określa, czy określone wystąpienia obiektów są tego samego wystąpienia.
+Określa, czy określone wystąpienia object są tym samym wystąpieniem.
 
 ### <a name="syntax"></a>Składnia
 
@@ -146,17 +146,17 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2);
 
 ### <a name="parameters"></a>Parametry
 
-*obj1*<br/>
+*obj1 (obj1)*<br/>
 Pierwszy obiekt do porównania.
 
-*obj2*<br/>
+*obj2 (obj2)*<br/>
 Drugi obiekt do porównania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli dwa obiekty są takie same; w przeciwnym razie **false**.
+**true,** jeśli dwa obiekty są takie same; w przeciwnym razie **false**.
 
-## <a name="tostring"></a>Object:: ToString — MetodaC++(/CX)
+## <a name="objecttostring-method-ccx"></a><a name="tostring"></a>Obiekt::Metoda ToString (C++/CX)
 
 Zwraca ciąg reprezentujący bieżący obiekt.
 
@@ -167,9 +167,9 @@ public:
 virtual String^ ToString();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ciąg reprezentujący bieżący obiekt. Można zastąpić tę metodę, aby podać niestandardowy komunikat ciągu w klasie lub strukturze ref:
+Ciąg reprezentujący bieżący obiekt. Tę metodę można zastąpić, aby zapewnić niestandardowy komunikat ciągu w klasie ref lub strukturze:
 
 ```cpp
 public ref class Tree sealed
@@ -185,6 +185,6 @@ public:
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przestrzeń nazw platformy](platform-namespace-c-cx.md)<br/>
+[Obszar nazw platformy](platform-namespace-c-cx.md)<br/>
 [Platform::Type, klasa](platform-type-class.md)<br/>
 [System typów](type-system-c-cx.md)

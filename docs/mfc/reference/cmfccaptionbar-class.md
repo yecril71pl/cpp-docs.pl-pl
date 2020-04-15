@@ -66,16 +66,16 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: c6385cb6bd3eec3ce5fefe0475d771c774777820
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a1e8890176fe686b54fe4756dfd578869cbcdfb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403844"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367795"
 ---
 # <a name="cmfccaptionbar-class"></a>Klasa CMFCCaptionBar
 
-A `CMFCCaptionBar` obiekt jest pasek sterowania, który może wyświetlać trzy elementy: przycisk, etykietę tekstową i mapę bitową. Umożliwia wyświetlanie tylko jednego elementu każdego typu w danym momencie. Możesz wyrównać każdy element do lewej lub prawej krawędzi formantu lub do środka. Można również zastosować płaski lub 3-wymiarowy styl do górnej i dolnej krawędzi pasek podpisu.
+Obiekt `CMFCCaptionBar` to pasek sterowania, na który można wyświetlić trzy elementy: przycisk, etykietę tekstową i mapę bitową. Może wyświetlać tylko jeden element każdego typu naraz. Każdy element można wyrównać do lewej lub prawej krawędzi formantu lub do środka. Do górnej i dolnej krawędzi paska podpisu można również zastosować styl płaski lub 3D.
 
 ## <a name="syntax"></a>Składnia
 
@@ -89,38 +89,38 @@ class CMFCCaptionBar : public CPane
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCCaptionBar::Create](#create)|Tworzy kontrolkę paska podpisu i dołącza je do `CMFCCaptionBar` obiektu.|
-|[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Wskazuje, czy innego okienka można dynamicznie wstawione między pasek podpisu i jej nadrzędnej ramki. (Przesłania [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
-|[CMFCCaptionBar::EnableButton](#enablebutton)|Włącza lub wyłącza przycisk na pasku podpisu.|
-|[CMFCCaptionBar::GetAlignment](#getalignment)|Zwraca wyrównanie określony element.|
+|[CMFCCaptionBar::Tworzenie](#create)|Tworzy formant paska podpisu `CMFCCaptionBar` i dołącza go do obiektu.|
+|[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Wskazuje, czy można dynamicznie wstawiać inne okienko między pasem podpisu a ramką nadrzędną. (Zastępuje [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
+|[CMFCCaptionBar::EnableButton](#enablebutton)|Włącza lub wyłącza przycisk na pasku podpisów.|
+|[CMFCCaptionBar::GetAlignment](#getalignment)|Zwraca wyrównanie określonego elementu.|
 |[CMFCCaptionBar::GetBorderSize](#getbordersize)|Zwraca rozmiar obramowania paska podpisu.|
-|[CMFCCaptionBar::GetButtonRect](#getbuttonrect)|Pobiera prostokąt otaczający przycisk na pasku podpisu.|
-|[CMFCCaptionBar::GetMargin](#getmargin)|Zwraca odległość między krawędzi elementów paska podpisu krawędzią formantu paska podpisu.|
-|[CMFCCaptionBar::IsMessageBarMode](#ismessagebarmode)|Określa, czy pasek podpisu jest w trybie pasek komunikatów.|
-|[CMFCCaptionBar::RemoveBitmap](#removebitmap)|Usuwa obraz mapy bitowej z pasek podpisu.|
-|[CMFCCaptionBar::RemoveButton](#removebutton)|Usuwa przycisk na pasku podpisu.|
-|[CMFCCaptionBar::RemoveIcon](#removeicon)|Usuwa ikonę na pasku podpisu.|
-|[CMFCCaptionBar::RemoveText](#removetext)|Usuwa etykietę tekstową z pasek podpisu.|
-|[CMFCCaptionBar::SetBitmap](#setbitmap)|Ustawia obraz mapy bitowej dla pasek podpisu.|
+|[CMFCCaptionBar::GetButtonRect](#getbuttonrect)|Pobiera prostokąt ograniczający przycisku na pasku podpisu.|
+|[CMFCCaptionBar::GetMargin](#getmargin)|Zwraca odległość między krawędzią elementów paska podpisu a krawędzią formantu paska podpisu.|
+|[CMFCCaptionBar::IsMessageBarMode](#ismessagebarmode)|Określa, czy pasek podpisu znajduje się w trybie paska komunikatów.|
+|[CMFCCaptionBar::RemoveBitmap](#removebitmap)|Usuwa obraz mapy bitowej z paska podpisu.|
+|[CMFCCaptionBar::UsuńButton](#removebutton)|Usuwa przycisk z paska podpisu.|
+|[CMFCCaptionBar::RemoveIcon](#removeicon)|Usuwa ikonę z paska podpisu.|
+|[CMFCCaptionBar::Usuń Tekst](#removetext)|Usuwa etykietę tekstową z paska podpisu.|
+|[CMFCCaptionBar::SetBitmap](#setbitmap)|Ustawia obraz bitmapowy dla paska podpisu.|
 |[CMFCCaptionBar::SetBorderSize](#setbordersize)|Ustawia rozmiar obramowania paska podpisu.|
-|[CMFCCaptionBar::SetButton](#setbutton)|Ustawia przycisk na pasku podpisu.|
-|[CMFCCaptionBar::SetButtonPressed](#setbuttonpressed)|Określa, czy przycisk pozostaje po naciśnięciu.|
+|[CMFCCaptionBar::Przycisk seta](#setbutton)|Ustawia przycisk paska podpisu.|
+|[CMFCCaptionBar::SetButtonPressed](#setbuttonpressed)|Określa, czy przycisk pozostaje naciśnięty.|
 |[CMFCCaptionBar::SetButtonToolTip](#setbuttontooltip)|Ustawia etykietkę narzędzia dla przycisku.|
 |[CMFCCaptionBar::SetFlatBorder](#setflatborder)|Ustawia styl obramowania paska podpisu.|
-|[CMFCCaptionBar::SetIcon](#seticon)|Ustawia ikonę pasek podpisu.|
-|[CMFCCaptionBar::SetImageToolTip](#setimagetooltip)|Ustawia etykietkę narzędzia dla obrazu pasek podpisu.|
-|[CMFCCaptionBar::SetMargin](#setmargin)|Ustawia odległość między krawędzią elementu pasek podpisu krawędzią formantu paska podpisu.|
-|[CMFCCaptionBar::SetText](#settext)|Określa tekst etykiety dla pasek podpisu.|
+|[CMFCCaptionBar::SetIcon](#seticon)|Ustawia ikonę paska podpisu.|
+|[CMFCCaptionBar::SetImageToolTip](#setimagetooltip)|Ustawia etykietkę narzędzia dla paska podpisu.|
+|[CMFCCaptionBar::SetMargin](#setmargin)|Ustawia odległość między krawędzią elementu paska podpisu a krawędzią formantu paska podpisu.|
+|[CMFCCaptionBar::SetText](#settext)|Ustawia etykietę tekstową dla paska podpisu.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCCaptionBar::OnDrawBackground](#ondrawbackground)|Metoda wywoływana przez platformę, by wypełnienia tła paska podpisu.|
-|[CMFCCaptionBar::OnDrawBorder](#ondrawborder)|Metoda wywoływana przez platformę, by narysować obramowanie pasek podpisu.|
-|[CMFCCaptionBar::OnDrawButton](#ondrawbutton)|Metoda wywoływana przez platformę, by narysować przycisk paska podpisu.|
-|[CMFCCaptionBar::OnDrawImage](#ondrawimage)|Metoda wywoływana przez platformę, by narysować obraz paska podpisu.|
-|[CMFCCaptionBar::OnDrawText](#ondrawtext)|Metoda wywoływana przez platformę, by narysować tekst pasek podpisu.|
+|[CMFCCaptionBar::OnDrawBackground](#ondrawbackground)|Wywoływana przez strukturę, aby wypełnić tło paska podpisu.|
+|[CMFCCaptionBar::OnDrawBorder](#ondrawborder)|Wywoływana przez ramy, aby narysować obramowanie paska podpisu.|
+|[CMFCCaptionBar::OnDrawButton](#ondrawbutton)|Wywoływane przez strukturę, aby narysować przycisk paska podpisu.|
+|[CMFCCaptionBar::OnDrawImage](#ondrawimage)|Wywoływane przez strukturę, aby narysować obraz paska podpisu.|
+|[CMFCCaptionBar::OnDrawText](#ondrawtext)|Wywoływane przez strukturę, aby narysować tekst paska podpisu.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
@@ -128,52 +128,52 @@ class CMFCCaptionBar : public CPane
 |----------|-----------------|
 |[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|Kolor tła paska podpisu.|
 |[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|Kolor obramowania paska podpisu.|
-|[CMFCCaptionBar::m_clrBarText](#m_clrbartext)|Kolor tekstu pasek podpisu.|
+|[CMFCCaptionBar::m_clrBarText](#m_clrbartext)|Kolor tekstu paska podpisu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby utworzyć pasek podpisu, wykonaj następujące kroki:
+Aby utworzyć pasek podpisu, wykonaj następujące czynności:
 
-1. Konstruowania `CMFCCaptionBar` obiektu. Zazwyczaj należy dodać pasek podpisu na klasę okna ramowego.
+1. Konstruuj `CMFCCaptionBar` obiekt. Zazwyczaj należy dodać pasek podpisu do klasy okna ramki.
 
-1. Wywołaj [CMFCCaptionBar::Create](#create) metodę, aby utworzyć kontrolkę paska podpisu i dołączyć go do `CMFCCaptionBar` obiektu.
+1. Wywołanie [CMFCCaptionBar::Create](#create) metody, aby utworzyć formant `CMFCCaptionBar` paska podpisu i dołączyć go do obiektu.
 
-1. Wywołaj [CMFCCaptionBar::SetButton](#setbutton), [CMFCCaptionBar::SetText](#settext), [CMFCCaptionBar::SetIcon](#seticon), i [CMFCCaptionBar::SetBitmap](#setbitmap)można ustawić elementów paska podpisu.
+1. Wywołanie [CMFCCaptionBar::SetButton](#setbutton), [CMFCCaptionBar::SetText](#settext), [CMFCCaptionBar::SetIcon](#seticon)i [CMFCCaptionBar::SetBitmap,](#setbitmap) aby ustawić elementy paska podpisu.
 
-Po ustawieniu button element, należy przypisać identyfikator polecenia do przycisku. Gdy użytkownik kliknie przycisk, pasek podpisu kieruje wm_command — komunikaty, które mają ten identyfikator do nadrzędnej ramki okna.
+Po ustawieniu elementu przycisku należy przypisać identyfikator polecenia do przycisku. Gdy użytkownik kliknie przycisk, pasek podpisu kieruje WM_COMMAND wiadomości, które mają ten identyfikator, do nadrzędnego okna ramki.
 
-Pasek podpisu mogą również działać w trybie pasek wiadomości, która emuluje pasek komunikatów, która pojawia się w aplikacjach pakietu Office 2007. W trybie pasek komunikatów pasek podpisu Wyświetla mapę bitową, wiadomości i przycisk umożliwiający (zwykle powoduje otwarcie okna dialogowego.) Etykietka narzędzia można przypisać do mapy bitowej.
+Pasek podpisów może również działać w trybie paska komunikatów, który emuluje pasek komunikatów wyświetlany w aplikacjach pakietu Microsoft Office 2007. W trybie paska komunikatów na pasku podpisów jest wyświetlana mapa bitowa, komunikat i przycisk (który zazwyczaj otwiera okno dialogowe). Do mapy bitowej można przypisać etykietkę narzędzia.
 
-Aby włączyć tryb pasek komunikatów, należy wywołać [CMFCCaptionBar::Create](#create) i ustaw czwarty parametr (bIsMessageBarMode) na wartość TRUE.
+Aby włączyć tryb paska komunikatów, zadzwoń do [CMFCCaptionBar::Create](#create) i ustaw czwarty parametr (bIsMessageBarMode) na TRUE.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCCaptionBar` klasy. W przykładzie pokazano, jak utworzyć formant paska podpisu, ustawianie obramowanie 3D paska podpisu, określ odległość w pikselach, między krawędzi podpis paska elementy krawędzią formantu paska podpisu, skonfigurować przycisk na pasku podpisu , ustawić etykietkę narzędzia dla przycisku, Ustaw tekst etykiety dla pasek podpisu, Ustaw obraz mapy bitowej dla pasek podpisu i ustawić etykietkę narzędzia dla obrazu w pasek podpisu. Ten fragment kodu jest częścią [próbka MS Office 2007 Demo](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie pokazano, jak `CMFCCaptionBar` używać różnych metod w klasie. W przykładzie pokazano, jak utworzyć kontrolkę paska podpisu, ustawić obramowanie 3D paska podpisu, ustawić odległość, w pikselach, między krawędzią elementów paska podpisu a krawędzią formantu paska podpisu, ustawić przycisk paska podpisu, ustawić etykietę narzędzia przycisku, ustawić etykietę tekstową dla paska podpisu, ustawić obraz bitmapowy dla paska podpisu i ustaw etykietkę narzędzia obrazu na pasku podpisu. Ten fragment kodu jest częścią [przykładu demo pakietu MS Office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CBasePane](../../mfc/reference/cbasepane-class.md)
+[Panel CBasePane](../../mfc/reference/cbasepane-class.md)
 
-[CPane](../../mfc/reference/cpane-class.md)
+[Cpane](../../mfc/reference/cpane-class.md)
 
-[CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md)
+[Cmfccaptionbar](../../mfc/reference/cmfccaptionbar-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** afxcaptionbar.h
 
-##  <a name="create"></a>  CMFCCaptionBar::Create
+## <a name="cmfccaptionbarcreate"></a><a name="create"></a>CMFCCaptionBar::Tworzenie
 
-Tworzy kontrolkę paska podpisu i dołącza je do `CMFCCaptionBar` obiektu.
+Tworzy formant paska podpisu `CMFCCaptionBar` i dołącza go do obiektu.
 
 ```
 BOOL Create(
@@ -186,32 +186,32 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*dwStyle*<br/>
-Logiczne OR kombinacja Style paska podpisu.
+*Dwstyle*<br/>
+Logiczna kombinacja stylów paska podpisu.
 
 *pParentWnd*<br/>
-Okno nadrzędne kontrolki paska podpisu.
+Okno nadrzędne formantu paska podpisu.
 
-*uID*<br/>
+*Uid*<br/>
 Identyfikator formantu paska podpisu.
 
-*nHeight*<br/>
-Wysokość w pikselach formantu paska podpisu. Jeśli jest to wartość -1, wysokość jest obliczana wysokość ikony, tekst i przycisk, który wyświetla kontrolkę paska podpisu.
+*nFeksja*<br/>
+Wysokość w pikselach formantu paska podpisu. Jeśli jest to -1, wysokość jest obliczana zgodnie z wysokością ikony, tekstem i przyciskiem wyświetlanym przez formant paska podpisu.
 
 *bIsMessageBarMode*<br/>
-Wartość TRUE, jeśli pasek podpisu jest w trybie pasek wiadomości; Wartość FALSE w przeciwnym razie.
+PRAWDA, jeśli pasek podpisu znajduje się w trybie paska komunikatów; FAŁSZ inaczej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli formantu paska podpisu został utworzony pomyślnie; Wartość FALSE w przeciwnym razie.
+PRAWDA, jeśli formant paska podpisu został utworzony pomyślnie; FAŁSZ inaczej.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruowanie `CMFCCaptionBar` obiektu w dwóch krokach. Pierwsze wywołanie konstruktora, a następnie wywołać `Create` metody, która tworzy formant Windows i dołącza je do `CMFCCaptionBar` obiektu.
+Konstruowanie `CMFCCaptionBar` obiektu w dwóch krokach. Najpierw wywołać konstruktora, a `Create` następnie wywołać metodę, która tworzy `CMFCCaptionBar` formant systemu Windows i dołącza go do obiektu.
 
-##  <a name="doesallowdyninsertbefore"></a>  CMFCCaptionBar::DoesAllowDynInsertBefore
+## <a name="cmfccaptionbardoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>CMFCCaptionBar::DoesAllowDynInsertBefore
 
-Wskazuje, czy innego okienka można dynamicznie wstawione między pasek podpisu i jej nadrzędnej ramki.
+Wskazuje, czy można dynamicznie wstawiać inne okienko między pasem podpisu a ramką nadrzędną.
 
 ```
 virtual BOOL DoesAllowDynInsertBefore() const;
@@ -219,13 +219,13 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość FALSE, jeśli zastąpiona.
+Zwraca wartość FAŁSZ, chyba że zostanie zastąpiona.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="enablebutton"></a>  CMFCCaptionBar::EnableButton
+## <a name="cmfccaptionbarenablebutton"></a><a name="enablebutton"></a>CMFCCaptionBar::EnableButton
 
-Włącza lub wyłącza przycisk na pasku podpisu.
+Włącza lub wyłącza przycisk na pasku podpisów.
 
 ```
 void EnableButton(BOOL bEnable=TRUE);
@@ -233,12 +233,12 @@ void EnableButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bWłączenie*<br/>
-[in] Wartość TRUE powoduje włączenie przycisku wartości FALSE spowoduje wyłączenie przycisku.
+*bWłaszą*<br/>
+[w] PRAWDA, aby włączyć przycisk, FALSE, aby wyłączyć przycisk.
 
-##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment
+## <a name="cmfccaptionbargetalignment"></a><a name="getalignment"></a>CMFCCaptionBar::GetAlignment
 
-Zwraca wyrównanie określony element.
+Zwraca wyrównanie określonego elementu.
 
 ```
 BarElementAlignment GetAlignment(BarElement elem);
@@ -246,16 +246,16 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>Parametry
 
-*elem*<br/>
-[in] Element paska podpisu dla której mają zostać pobrane wyrównania.
+*Elem*<br/>
+[w] Element paska podpisu, dla którego ma być pobierana wyrównanie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wyrównanie elementu, takiego jak przycisk, mapy bitowej, tekst lub ikony.
+Wyrównanie elementu, takiego jak przycisk, mapa bitowa, tekst lub ikona.
 
 ### <a name="remarks"></a>Uwagi
 
-Wyrównanie elementu może być jednym z następujących wartości:
+Wyrównanie elementu może być jedną z następujących wartości:
 
 - ALIGN_INVALID
 
@@ -265,7 +265,7 @@ Wyrównanie elementu może być jednym z następujących wartości:
 
 - ALIGN_CENTER
 
-##  <a name="getbordersize"></a>  CMFCCaptionBar::GetBorderSize
+## <a name="cmfccaptionbargetbordersize"></a><a name="getbordersize"></a>CMFCCaptionBar::GetBorderSize
 
 Zwraca rozmiar obramowania paska podpisu.
 
@@ -275,11 +275,11 @@ int GetBorderSize() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Rozmiar w pikselach, obramowania.
+Rozmiar obramowania w pikselach.
 
-##  <a name="getbuttonrect"></a>  CMFCCaptionBar::GetButtonRect
+## <a name="cmfccaptionbargetbuttonrect"></a><a name="getbuttonrect"></a>CMFCCaptionBar::GetButtonRect
 
-Pobiera prostokąt otaczający przycisk na pasku podpisu.
+Pobiera prostokąt ograniczający przycisku na pasku podpisu.
 
 ```
 CRect GetButtonRect() const;
@@ -287,11 +287,11 @@ CRect GetButtonRect() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A `CRect` obiekt, który zawiera współrzędne prostokąt otaczający przycisk na pasku podpisu.
+Obiekt, `CRect` który zawiera współrzędne prostokąta ograniczającego przycisku na pasku podpisu.
 
-##  <a name="getmargin"></a>  CMFCCaptionBar::GetMargin
+## <a name="cmfccaptionbargetmargin"></a><a name="getmargin"></a>CMFCCaptionBar::GetMargin
 
-Zwraca odległość między krawędzi elementów paska podpisu krawędzią formantu paska podpisu.
+Zwraca odległość między krawędzią elementów paska podpisu a krawędzią formantu paska podpisu.
 
 ```
 int GetMargin() const;
@@ -299,11 +299,11 @@ int GetMargin() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odległość w pikselach, między krawędzi elementów paska podpisu krawędzią formantu paska podpisu.
+Odległość w pikselach między krawędzią elementów paska podpisu a krawędzią formantu paska podpisu.
 
-##  <a name="ismessagebarmode"></a>  CMFCCaptionBar::IsMessageBarMode
+## <a name="cmfccaptionbarismessagebarmode"></a><a name="ismessagebarmode"></a>CMFCCaptionBar::IsMessageBarMode
 
-Określa, czy pasek podpisu jest w trybie pasek komunikatów.
+Określa, czy pasek podpisu znajduje się w trybie paska komunikatów.
 
 ```
 BOOL IsMessageBarMode() const;
@@ -311,13 +311,13 @@ BOOL IsMessageBarMode() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli pasek podpisu jest w trybie pasek wiadomości; Wartość FALSE w przeciwnym razie.
+PRAWDA, jeśli pasek podpisu znajduje się w trybie paska komunikatów; FAŁSZ inaczej.
 
 ### <a name="remarks"></a>Uwagi
 
-W trybie pasek komunikatów pasek podpisu Wyświetla obraz z etykietki narzędzia, tekst komunikatu i przycisku.
+W trybie paska komunikatów na pasku podpisów wyświetlany jest obraz z etykietką narzędzia, tekstem wiadomości i przyciskiem.
 
-##  <a name="m_clrbarbackground"></a>  CMFCCaptionBar::m_clrBarBackground
+## <a name="cmfccaptionbarm_clrbarbackground"></a><a name="m_clrbarbackground"></a>CMFCCaptionBar::m_clrBarBackground
 
 Kolor tła paska podpisu.
 
@@ -325,7 +325,7 @@ Kolor tła paska podpisu.
 COLORREF m_clrBarBackground
 ```
 
-##  <a name="m_clrbarborder"></a>  CMFCCaptionBar::m_clrBarBorder
+## <a name="cmfccaptionbarm_clrbarborder"></a><a name="m_clrbarborder"></a>CMFCCaptionBar::m_clrBarBorder
 
 Kolor obramowania paska podpisu.
 
@@ -333,17 +333,17 @@ Kolor obramowania paska podpisu.
 COLORREF m_clrBarBorder
 ```
 
-##  <a name="m_clrbartext"></a>  CMFCCaptionBar::m_clrBarText
+## <a name="cmfccaptionbarm_clrbartext"></a><a name="m_clrbartext"></a>CMFCCaptionBar::m_clrBarText
 
-Kolor tekstu pasek podpisu.
+Kolor tekstu paska podpisu.
 
 ```
 COLORREF m_clrBarText
 ```
 
-##  <a name="ondrawbackground"></a>  CMFCCaptionBar::OnDrawBackground
+## <a name="cmfccaptionbarondrawbackground"></a><a name="ondrawbackground"></a>CMFCCaptionBar::OnDrawBackground
 
-Metoda wywoływana przez platformę, by wypełnienia tła paska podpisu.
+Wywoływana przez strukturę, aby wypełnić tło paska podpisu.
 
 ```
 virtual void OnDrawBackground(
@@ -353,21 +353,21 @@ virtual void OnDrawBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Wskaźnik do kontekstu urządzenia paska podpisu.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia paska podpisu.
 
 *Rect*<br/>
-[in] Prostokąt otaczający do wypełnienia.
+[w] Prostokąt ograniczający do wypełnienia.
 
 ### <a name="remarks"></a>Uwagi
 
-`OnDrawBackground` Metoda jest wywoływana, gdy tło paska podpis ma być wypełnione. Domyślna implementacja wypełnienia tła przy użyciu [CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground) kolorów.
+Metoda `OnDrawBackground` jest wywoływana, gdy tło paska podpisu ma zostać wypełnione. Domyślna implementacja wypełnia tło przy użyciu [CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground) kolor.
 
-Należy przesłonić tę metodę w `CMFCCaptionBar` klasy, aby dostosować wygląd paska podpisu.
+Zastąpi tę `CMFCCaptionBar` metodę w klasie pochodnej, aby dostosować wygląd paska podpisu.
 
-##  <a name="ondrawborder"></a>  CMFCCaptionBar::OnDrawBorder
+## <a name="cmfccaptionbarondrawborder"></a><a name="ondrawborder"></a>CMFCCaptionBar::OnDrawBorder
 
-Metoda wywoływana przez platformę, by narysować obramowanie pasek podpisu.
+Wywoływana przez ramy, aby narysować obramowanie paska podpisu.
 
 ```
 virtual void OnDrawBorder(
@@ -377,21 +377,21 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Kontekst urządzenia, która jest używana do wyświetlania obramowania.
+*Pdc*<br/>
+[w] Kontekst urządzenia, który jest używany do wyświetlania obramowań.
 
 *Rect*<br/>
-[in] Prostokąt otaczający.
+[w] Prostokąt ograniczający.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie obramowanie mają płaski.
+Domyślnie obramowania mają styl płaski.
 
-Należy przesłonić tę metodę w `CMFCCaptionBar` klasy, aby dostosować wygląd obramowania paska podpisu.
+Zastąpi tę `CMFCCaptionBar` metodę w klasie pochodnej, aby dostosować wygląd obramowań paska podpisu.
 
-##  <a name="ondrawbutton"></a>  CMFCCaptionBar::OnDrawButton
+## <a name="cmfccaptionbarondrawbutton"></a><a name="ondrawbutton"></a>CMFCCaptionBar::OnDrawButton
 
-Metoda wywoływana przez platformę, by narysować przycisk paska podpisu.
+Wywoływane przez strukturę, aby narysować przycisk paska podpisu.
 
 ```
 virtual void OnDrawButton(
@@ -403,25 +403,25 @@ virtual void OnDrawButton(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Wskaźnik do kontekstu urządzenia, które służy do wyświetlania przycisku.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia, który jest używany do wyświetlania przycisku.
 
 *Rect*<br/>
-[in] Prostokąt otaczający przycisku.
+[w] Prostokąt ograniczający przycisku.
 
-*strButton*<br/>
-[in] Etykieta tekstowa przycisku.
+*strButton (przycisk strButton)*<br/>
+[w] Etykieta tekstowa przycisku.
 
-*bWłączony*<br/>
-[in] Wartość TRUE, jeśli ten przycisk jest włączony; Wartość FALSE w przeciwnym razie.
+*bWłach*<br/>
+[w] PRAWDA, jeśli przycisk jest włączony; FAŁSZ inaczej.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy przesłonić tę metodę w `CMFCCaptionBar` klasy do dostosowywania wyglądu przycisku paska podpisu.
+Zastąp tę `CMFCCaptionBar` metodę w klasie pochodnej, aby dostosować wygląd przycisku paska podpisu.
 
-##  <a name="ondrawimage"></a>  CMFCCaptionBar::OnDrawImage
+## <a name="cmfccaptionbarondrawimage"></a><a name="ondrawimage"></a>CMFCCaptionBar::OnDrawImage
 
-Metoda wywoływana przez platformę, by narysować obraz paska podpisu.
+Wywoływane przez strukturę, aby narysować obraz paska podpisu.
 
 ```
 virtual void OnDrawImage(
@@ -431,19 +431,19 @@ virtual void OnDrawImage(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Wskaźnik do kontekstu urządzenia, które służy do wyświetlania obrazu.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia, który jest używany do wyświetlania obrazu.
 
 *Rect*<br/>
-[in] Określa prostokąt otaczający obrazu.
+[w] Określa prostokąt ograniczający obrazu.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy przesłonić tę metodę w `CMFCCaptionBar` klasy, aby dostosować wygląd obrazu.
+Zastąpić tę `CMFCCaptionBar` metodę w klasie pochodnej, aby dostosować wygląd obrazu.
 
-##  <a name="ondrawtext"></a>  CMFCCaptionBar::OnDrawText
+## <a name="cmfccaptionbarondrawtext"></a><a name="ondrawtext"></a>CMFCCaptionBar::OnDrawText
 
-Metoda wywoływana przez platformę, by narysować tekst pasek podpisu.
+Wywoływane przez strukturę, aby narysować tekst paska podpisu.
 
 ```
 virtual void OnDrawText(
@@ -454,32 +454,32 @@ virtual void OnDrawText(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Wskaźnik do kontekstu urządzenia, które służy do wyświetlania przycisku.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia, który jest używany do wyświetlania przycisku.
 
 *Rect*<br/>
-[in] Prostokąt otaczający tekstu.
+[w] Prostokąt obwiedniowy tekstu.
 
-*strText*<br/>
-[in] Ciąg tekstowy do wyświetlenia.
+*strText (tekst)*<br/>
+[w] Ciąg tekstowy do wyświetlenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja służy do wyświetlania tekstu przy użyciu `CDC::DrawText` i [CMFCCaptionBar::m_clrBarText](#m_clrbartext) kolorów.
+Domyślna implementacja wyświetla `CDC::DrawText` tekst przy użyciu i [CMFCCaptionBar::m_clrBarText](#m_clrbartext) kolor.
 
-Należy przesłonić tę metodę w `CMFCCaptionBar` klasy, aby dostosować wygląd tekstu pasek podpisu.
+Zastąpić tę `CMFCCaptionBar` metodę w klasie pochodnej, aby dostosować wygląd tekstu paska podpisu.
 
-##  <a name="removebitmap"></a>  CMFCCaptionBar::RemoveBitmap
+## <a name="cmfccaptionbarremovebitmap"></a><a name="removebitmap"></a>CMFCCaptionBar::RemoveBitmap
 
-Usuwa obraz mapy bitowej z pasek podpisu.
+Usuwa obraz mapy bitowej z paska podpisu.
 
 ```
 void RemoveBitmap();
 ```
 
-##  <a name="removebutton"></a>  CMFCCaptionBar::RemoveButton
+## <a name="cmfccaptionbarremovebutton"></a><a name="removebutton"></a>CMFCCaptionBar::UsuńButton
 
-Usuwa przycisk na pasku podpisu.
+Usuwa przycisk z paska podpisu.
 
 ```
 void RemoveButton();
@@ -487,27 +487,27 @@ void RemoveButton();
 
 ### <a name="remarks"></a>Uwagi
 
-Układ elementów paska podpisu zostaną automatycznie dopasowane.
+Układ elementów paska podpisu jest dostosowywany automatycznie.
 
-##  <a name="removeicon"></a>  CMFCCaptionBar::RemoveIcon
+## <a name="cmfccaptionbarremoveicon"></a><a name="removeicon"></a>CMFCCaptionBar::RemoveIcon
 
-Usuwa ikonę na pasku podpisu.
+Usuwa ikonę z paska podpisu.
 
 ```
 void RemoveIcon();
 ```
 
-##  <a name="removetext"></a>  CMFCCaptionBar::RemoveText
+## <a name="cmfccaptionbarremovetext"></a><a name="removetext"></a>CMFCCaptionBar::Usuń Tekst
 
-Usuwa etykietę tekstową z pasek podpisu.
+Usuwa etykietę tekstową z paska podpisu.
 
 ```
 void RemoveText();
 ```
 
-##  <a name="setbitmap"></a>  CMFCCaptionBar::SetBitmap
+## <a name="cmfccaptionbarsetbitmap"></a><a name="setbitmap"></a>CMFCCaptionBar::SetBitmap
 
-Ustawia obraz mapy bitowej dla pasek podpisu.
+Ustawia obraz bitmapowy dla paska podpisu.
 
 ```
 void SetBitmap(
@@ -525,25 +525,25 @@ void SetBitmap(
 
 ### <a name="parameters"></a>Parametry
 
-*hBitmap*<br/>
-[in] Dojście do mapy bitowej do ustawienia.
+*hBitmapa*<br/>
+[w] Uchwyt do mapy bitowej, aby ustawić.
 
-*clrTransparent*<br/>
-[in] Wartości RGB, który określa przezroczysty kolor mapy bitowej.
+*clrPrzezroczysty*<br/>
+[w] Wartość RGB określająca przezroczysty kolor mapy bitowej.
 
-*bStretch*<br/>
-[in] W przypadku opcji TRUE mapy bitowej jest rozciągany tak, jeśli nie mieści się w obrazie prostokąt ograniczający. W przeciwnym razie nie jest rozciągana mapy bitowej.
+*bStieczka*<br/>
+[w] Jeśli true, mapa bitowa jest rozciągnięta, jeśli nie pasuje do prostokąta ograniczającego obraz. W przeciwnym razie mapa bitowa nie jest rozciągnięta.
 
-*bmpAlignment*<br/>
-[in] Wyrównanie mapy bitowej.
+*bmpWserwość*<br/>
+[w] Wyrównanie mapy bitowej.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody można ustawić mapy bitowej na pasku podpisu.
+Ta metoda służy do ustawiania mapy bitowej na pasku podpisu.
 
-Poprzednie mapy bitowej jest niszczony, automatycznie. Jeśli pasek podpisu Wyświetla ikony, ponieważ wywołana [CMFCCaptionBar::SetIcon](#seticon) metody, mapa bitowa nie będą wyświetlane, chyba że usuniesz ikonę przez wywołanie metody [CMFCCaptionBar::RemoveIcon](#removeicon).
+Poprzednia mapa bitowa jest niszczony automatycznie. Jeśli na pasku podpisu jest wyświetlana ikona, ponieważ nazwano metodę [CMFCCaptionBar::SetIcon,](#seticon) mapa bitowa nie będzie wyświetlana, chyba że usuniesz ikonę, wywołując [CMFCCaptionBar::RemoveIcon](#removeicon).
 
-Mapa bitowa jest wyrównany zgodnie z określonym *bmpAlignment* parametru.  Ten parametr może być jedną z następujących `BarElementAlignment` wartości:
+Mapa bitowa jest wyrównana zgodnie z parametrem *bmpAlignment.*  Ten parametr może być `BarElementAlignment` jedną z następujących wartości:
 
 - ALIGN_INVALID
 
@@ -553,7 +553,7 @@ Mapa bitowa jest wyrównany zgodnie z określonym *bmpAlignment* parametru.  Ten
 
 - ALIGN_CENTER
 
-##  <a name="setbordersize"></a>  CMFCCaptionBar::SetBorderSize
+## <a name="cmfccaptionbarsetbordersize"></a><a name="setbordersize"></a>CMFCCaptionBar::SetBorderSize
 
 Ustawia rozmiar obramowania paska podpisu.
 
@@ -563,12 +563,12 @@ void SetBorderSize(int nSize);
 
 ### <a name="parameters"></a>Parametry
 
-*nSize*<br/>
-[in] Nowy rozmiar w pikselach, obramowania paska podpisu.
+*nSize (rozmiar)*<br/>
+[w] Nowy rozmiar obramowania paska podpisu w pikselach.
 
-##  <a name="setbutton"></a>  CMFCCaptionBar::SetButton
+## <a name="cmfccaptionbarsetbutton"></a><a name="setbutton"></a>CMFCCaptionBar::Przycisk seta
 
-Ustawia przycisk na pasku podpisu.
+Ustawia przycisk paska podpisu.
 
 ```
 void SetButton(
@@ -580,21 +580,21 @@ void SetButton(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszLabel*<br/>
+*lpszLabel (lpszLabel)*<br/>
 Etykieta polecenia przycisku.
 
 *uiCmdUI*<br/>
-Identyfikator przycisku polecenia.
+Identyfikator polecenia przycisku.
 
 *btnAlignmnet*<br/>
 Wyrównanie przycisku.
 
 *bHasDropDownArrow*<br/>
-Wartość TRUE, jeśli przycisk powoduje wyświetlenie strzałkę listy rozwijanej, wartość FALSE w przeciwnym razie.
+PRAWDA, jeśli przycisk wyświetla strzałkę rozwijaną, w przeciwnym razie wartość FAŁSZUj.
 
-##  <a name="setbuttonpressed"></a>  CMFCCaptionBar::SetButtonPressed
+## <a name="cmfccaptionbarsetbuttonpressed"></a><a name="setbuttonpressed"></a>CMFCCaptionBar::SetButtonPressed
 
-Określa, czy przycisk pozostaje po naciśnięciu.
+Określa, czy przycisk pozostaje naciśnięty.
 
 ```
 void SetButtonPressed(BOOL bPresed=TRUE);
@@ -602,10 +602,10 @@ void SetButtonPressed(BOOL bPresed=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bPresed*<br/>
-Wartość TRUE, jeśli przycisk śledzi stan naciśnięcia, wartość FALSE w przeciwnym razie.
+*bZdniałe*<br/>
+PRAWDA, jeśli przycisk zachowuje stan naciśnięcia, FALSE w przeciwnym razie.
 
-##  <a name="setbuttontooltip"></a>  CMFCCaptionBar::SetButtonToolTip
+## <a name="cmfccaptionbarsetbuttontooltip"></a><a name="setbuttontooltip"></a>CMFCCaptionBar::SetButtonToolTip
 
 Ustawia etykietkę narzędzia dla przycisku.
 
@@ -618,12 +618,12 @@ void SetButtonToolTip(
 ### <a name="parameters"></a>Parametry
 
 *lpszToolTip*<br/>
-[in] W etykiecie.
+[w] Podpis etykietki narzędzia.
 
 *lpszDescription*<br/>
-[in] Opis etykietki narzędzia.
+[w] Opis etykietki narzędzia.
 
-##  <a name="setflatborder"></a>  CMFCCaptionBar::SetFlatBorder
+## <a name="cmfccaptionbarsetflatborder"></a><a name="setflatborder"></a>CMFCCaptionBar::SetFlatBorder
 
 Ustawia styl obramowania paska podpisu.
 
@@ -633,12 +633,12 @@ void SetFlatBorder(BOOL bFlat=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bFlat*<br/>
-[in] Wartość TRUE, jeśli obramowania paska podpisu jest płaska. Wartość FALSE, jeśli obramowanie 3D.
+*bFlat (ur.*<br/>
+[w] PRAWDA, jeśli obramowanie paska podpisu jest płaskie. FAŁSZ, jeśli obramowanie jest 3D.
 
-##  <a name="seticon"></a>  CMFCCaptionBar::SetIcon
+## <a name="cmfccaptionbarseticon"></a><a name="seticon"></a>CMFCCaptionBar::SetIcon
 
-Ustawia ikonę pasek podpisu.
+Ustawia ikonę paska podpisu.
 
 ```
 void SetIcon(
@@ -648,17 +648,17 @@ void SetIcon(
 
 ### <a name="parameters"></a>Parametry
 
-*hIcon*<br/>
-[in] Dojście do ikony, aby ustawić.
+*hIcon (własówce)*<br/>
+[w] Uchwyt do ikony, aby ustawić.
 
-*iconAlignment*<br/>
-[in] Wyrównanie ikony.
+*iconZdyspodań ws.*<br/>
+[w] Wyrównanie ikony.
 
 ### <a name="remarks"></a>Uwagi
 
-Paski podpis może wyświetlać ikony lub mapy bitowej. Zobacz [CMFCCaptionBar::SetBitmap](#setbitmap) Aby dowiedzieć się, jak wyświetlać mapę bitową. Jeśli ustawisz zarówno ikony, jak i mapy bitowej, jest zawsze wyświetlana jako ikona. Wywołaj [CMFCCaptionBar::RemoveIcon](#removeicon) usuwanie ikony paska podpisu.
+Paski podpisów mogą wyświetlać ikony lub mapy bitowe. Zobacz [CMFCCaptionBar::SetBitmap,](#setbitmap) aby dowiedzieć się, jak wyświetlić mapę bitową. Jeśli ustawisz zarówno ikonę, jak i mapę bitową, ikona jest zawsze wyświetlana. Wywołanie [CMFCCaptionBar::RemoveIcon](#removeicon) usunąć ikonę z paska podpisu.
 
-Ikona jest wyrównany zgodnie z opisem w *iconAlignment* parametru. Może to być jedna z następujących `BarElementAlignment` wartości:
+Ikona jest wyrównana zgodnie z *parametrem iconAlignment.* Może to być jedna `BarElementAlignment` z następujących wartości:
 
 - ALIGN_INVALID
 
@@ -668,9 +668,9 @@ Ikona jest wyrównany zgodnie z opisem w *iconAlignment* parametru. Może to by�
 
 - ALIGN_CENTER
 
-##  <a name="setimagetooltip"></a>  CMFCCaptionBar::SetImageToolTip
+## <a name="cmfccaptionbarsetimagetooltip"></a><a name="setimagetooltip"></a>CMFCCaptionBar::SetImageToolTip
 
-Ustawia etykietkę narzędzia dla obrazu w pasek podpisu.
+Ustawia etykietkę narzędzia obrazu na pasku podpisu.
 
 ```
 void SetImageToolTip(
@@ -681,14 +681,14 @@ void SetImageToolTip(
 ### <a name="parameters"></a>Parametry
 
 *lpszToolTip*<br/>
-[in] Tekst etykietki narzędzia.
+[w] Tekst etykietki narzędzia.
 
 *lpszDescription*<br/>
-[in] Opis etykietki narzędzia.
+[w] Opis etykietki narzędzia.
 
-##  <a name="setmargin"></a>  CMFCCaptionBar::SetMargin
+## <a name="cmfccaptionbarsetmargin"></a><a name="setmargin"></a>CMFCCaptionBar::SetMargin
 
-Ustawia odległość między krawędzią elementu pasek podpisu krawędzią formantu paska podpisu.
+Ustawia odległość między krawędzią elementu paska podpisu a krawędzią formantu paska podpisu.
 
 ```
 void SetMargin(int nMargin);
@@ -696,12 +696,12 @@ void SetMargin(int nMargin);
 
 ### <a name="parameters"></a>Parametry
 
-*nMargin*<br/>
-[in] Odległość w pikselach, między krawędzi elementów paska podpisu krawędzią formantu paska podpisu.
+*nMargin (właso)*<br/>
+[w] Odległość w pikselach między krawędzią elementów paska podpisu a krawędzią formantu paska podpisu.
 
-##  <a name="settext"></a>  CMFCCaptionBar::SetText
+## <a name="cmfccaptionbarsettext"></a><a name="settext"></a>CMFCCaptionBar::SetText
 
-Określa tekst etykiety dla pasek podpisu.
+Ustawia etykietę tekstową dla paska podpisu.
 
 ```
 void SetText(
@@ -711,15 +711,15 @@ void SetText(
 
 ### <a name="parameters"></a>Parametry
 
-*strText*<br/>
-[in] Ciąg tekstowy, który można ustawić.
+*strText (tekst)*<br/>
+[w] Ciąg tekstowy do skonfigurowania.
 
-*TextAlignment to*<br/>
-[in] Wyrównanie tekstu.
+*Textalignment*<br/>
+[w] Wyrównanie tekstu.
 
 ### <a name="remarks"></a>Uwagi
 
-Etykieta tekstowa jest wyrównany zgodnie z określonym *TextAlignment to* parametru. Może to być jedna z następujących `BarElementAlignment` wartości:
+Etykieta tekstowa jest wyrównana zgodnie z parametrem *textAlignment.* Może to być jedna `BarElementAlignment` z następujących wartości:
 
 - ALIGN_INVALID
 
@@ -729,7 +729,7 @@ Etykieta tekstowa jest wyrównany zgodnie z określonym *TextAlignment to* param
 
 - ALIGN_CENTER
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 035e5153b4e4c84743a64bcc9cec24920a6a0336
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d0dd6176a34bd625069511106c491225d1467d08
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688363"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366753"
 ---
 # <a name="cache_chunklist-class"></a>cache_chunklist — Klasa
 
-Definiuje [Alokator bloku](../standard-library/allocators-header.md) , który przydziela i cofa alokacje bloków pamięci o pojedynczym rozmiarze.
+Definiuje [alokator bloków,](../standard-library/allocators-header.md) który przydziela i przydziela bloki pamięci o jednym rozmiarze.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,34 +32,34 @@ class cache_chunklist
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Sz*|Liczba elementów w tablicy, która ma zostać przypisana.|
+|*Sz*|Liczba elementów w tablicy, które mają zostać przydzielone.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ten szablon klasy używa **operatora new** do przydzielania fragmentów pamięci nieprzetworzonej, przydzielenia bloków w celu przydzielania magazynu dla bloku pamięci w razie potrzeby; przechowuje cofnięte alokacje bloków pamięci na oddzielnej liście wolnej dla każdego fragmentu i używa **operatora delete** w celu cofnięcia przydziału fragmentu, gdy żaden z jego bloków pamięci nie jest używany.
+Ten szablon klasy używa **operatora nowy** przydzielić fragmenty pamięci pierwotnej, suballocating bloków przydzielić magazyn dla bloku pamięci w razie potrzeby; przechowuje cofnięte bloki pamięci w osobnej bezpłatnej liście dla każdego fragmentu i używa **usuwania operatora** do usuwania alokacji fragmentu, gdy żaden z jego bloków pamięci nie jest używany.
 
-Każdy blok pamięci zawiera *sz* bajtów użytecznej pamięci i wskaźnik do fragmentu, do którego należy. Każdy fragment zawiera `Nelts` bloków pamięci, trzy wskaźniki, int i dane, które **operator new** i **operator delete** wymagają.
+Każdy blok pamięci zawiera *bajty sz* pamięci użytkowej i wskaźnik do fragmentu, który należy do. Każdy fragment `Nelts` zawiera bloki pamięci, trzy wskaźniki, int i dane, które **operator nowy** i **operator usunąć** wymagają.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[cache_chunklist](#cache_chunklist)|Konstruuje obiekt typu `cache_chunklist`.|
+|[cache_chunklist](#cache_chunklist)|Konstruuje obiekt `cache_chunklist`typu .|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja członkowce|Opis|
 |-|-|
 |[allocate](#allocate)|Przydziela blok pamięci.|
-|[alokowany](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu, zaczynając od określonej pozycji.|
+|[Deallocate](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu, począwszy od określonej pozycji.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<allocators >
+**Nagłówek:** \<alokatory>
 
-**Przestrzeń nazw:** stdext
+**Obszar nazw:** stdext
 
-## <a name="allocate"></a>cache_chunklist:: Allocate
+## <a name="cache_chunklistallocate"></a><a name="allocate"></a>cache_chunklist::przydziel
 
 Przydziela blok pamięci.
 
@@ -71,17 +71,17 @@ void *allocate(std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*liczbą*|Liczba elementów w tablicy, która ma zostać przypisana.|
+|*Liczba*|Liczba elementów w tablicy, które mają zostać przydzielone.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do przydzielony obiekt.
+Wskaźnik do przydzielonego obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="cache_chunklist"></a>cache_chunklist::cache_chunklist
+## <a name="cache_chunklistcache_chunklist"></a><a name="cache_chunklist"></a>cache_chunklist::cache_chunklist
 
-Konstruuje obiekt typu `cache_chunklist`.
+Konstruuje obiekt `cache_chunklist`typu .
 
 ```cpp
 cache_chunklist();
@@ -89,9 +89,9 @@ cache_chunklist();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="deallocate"></a>cache_chunklist::d eallocate
+## <a name="cache_chunklistdeallocate"></a><a name="deallocate"></a>cache_chunklist::dlokalizuj
 
-Zwalnia określoną liczbę obiektów z magazynu, zaczynając od określonej pozycji.
+Zwalnia określoną liczbę obiektów z magazynu, począwszy od określonej pozycji.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -101,11 +101,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*ptr*|Wskaźnik do pierwszego obiektu do cofnięcia przydziału z magazynu.|
-|*liczbą*|Liczba obiektów do cofnięcia przydziału z magazynu.|
+|*Ptr*|Wskaźnik do pierwszego obiektu, który ma zostać cofnięty z magazynu.|
+|*Liczba*|Liczba obiektów, które mają zostać przydzielone z magazynu.|
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<allocators >](../standard-library/allocators-header.md)
+[\<>alokatorów](../standard-library/allocators-header.md)

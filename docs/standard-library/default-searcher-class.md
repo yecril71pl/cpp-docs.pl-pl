@@ -1,20 +1,20 @@
 ---
-title: Klasa default_searcher
+title: klasa default_searcher
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::default_searcher
 helpviewer_keywords:
 - std::default_searcher [C++]
-ms.openlocfilehash: f2b1fe83b5223bbb60e9e32149c101e6379f93c3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2c8b93b83b271f787c993f789e1a68f84a60f016
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "68268001"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368922"
 ---
 # <a name="default_searcher-class"></a>Klasa default_searcher
 
-A `default_searcher` jest typem obiektu funkcji dla operacji, które wyszukują sekwencję określoną w konstruktorze obiektu. Wyszukiwanie jest wykonywane w innej sekwencji dostarczonej do operatora wywołania funkcji obiektu. Wywołanie std [:: Search](algorithm-functions.md#search) w celu przeprowadzenia wyszukiwania. `default_searcher`
+A `default_searcher` jest typem obiektu funkcji dla operacji, które wyszukują sekwencję określoną w konstruktorze obiektu. Wyszukiwanie odbywa się w ramach innej sekwencji dostarczone do operatora wywołania funkcji obiektu. Wywoływania `default_searcher` [std::search,](algorithm-functions.md#search) aby wykonać wyszukiwanie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,12 +38,12 @@ class default_searcher
 
 | | |
 | - | - |
-| **Konstruktora** | |
+| **Konstruktor** | |
 | [default_searcher](#default-searcher-constructor) | |
 | **Operatory** | |
-| [operator()](#operator-call) | |
+| [Operator()](#operator-call) | |
 
-## <a name="default-searcher-constructor"></a>Konstruktor default_searcher
+## <a name="default_searcher-constructor"></a><a name="default-searcher-constructor"></a>default_searcher konstruktor
 
 Konstruuje `default_searcher` obiekt funkcji przy użyciu sekwencji do wyszukiwania i predykatu równości.
 
@@ -68,17 +68,17 @@ Początkowy element sekwencji do wyszukania.
 Koniec sekwencji do wyszukania.
 
 *pred*\
-Opcjonalny predykat porównania równości dla elementów sekwencji. Jeśli typ porównania równości nie jest określony, wartość domyślna to `std::equal_to`.
+Predykat porównania opcjonalnej równości dla elementów sekwencji. Jeśli typ porównania równości nie jest określony, wartością domyślną jest `std::equal_to`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zgłasza każdy wyjątek zgłoszony przez Konstruktor kopiujący typów *BinaryPredicate* lub *ForwardIterator* .
+Zgłasza wyjątek zgłoszony przez konstruktora kopii *binarypredicate* lub *ForwardIterator* typów.
 
-Ta klasa jest nowa w języku C++ 17. C++ 20 wykonał konstruktora `constexpr`.
+Ta klasa jest nowa w języku C++17. C++20 wykonał konstruktor `constexpr`.
 
-## <a name="operator-call"></a>operator ()
+## <a name="operator"></a><a name="operator-call"></a>Operator()
 
-Operator wywołania operatora funkcji. Wyszukuje w sekwencji `[first, last)` argumentów dla sekwencji określonej dla konstruktora.
+Operator wywołania operatora funkcji. Przeszukuje w `[first, last)` sekwencji argumentów sekwencji określonych do konstruktora.
 
 ```cpp
 template <class ForwardIterator2>   // C++17
@@ -94,26 +94,26 @@ constexpr pair<ForwardIterator2, ForwardIterator2> operator()(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszego*\
-Początkowy element sekwencji do przeszukania.
+*Pierwszym*\
+Początkowy element sekwencji do wyszukiwania w obrębie.
 
-*ostatniego*\
-Koniec sekwencji do przeszukania.
+*Ostatnio*\
+Koniec sekwencji do wyszukiwania w obrębie.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca parę iteratorów. Iterator początkowy *i* jest skuteczny wynik:
+Zwraca parę iteratorów. Początkowy iterator *i* jest skutecznym wynikiem:
 
 `std::search( first, last, pat_first, pat_last, pred )`.
 
-Drugi iterator pary jest *ostatni* , jeśli *i** jest *Last*. W przeciwnym razie jest to skuteczny wynik:
+Drugi iterator pary jest *ostatni,* jeśli *** jest *ostatni*. W przeciwnym razie jest to skuteczny wynik:
 
 `std::next( i, std::distance( pat_first, pat_last ))`.
 
-Ta klasa jest nowa w języku C++ 17. C++ 20 wykonał operator `constexpr`wywołania.
+Ta klasa jest nowa w języku C++17. C++20 wykonał operator `constexpr`połączenia .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[\<functional>](functional.md)\
+[\<>funkcjonalne](functional.md)\
 [funkcje algorytmu](algorithm-functions.md)\
-[std:: Search](algorithm-functions.md#search)
+[std::wyszukiwanie](algorithm-functions.md#search)

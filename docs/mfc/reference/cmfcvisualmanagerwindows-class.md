@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerWindows Class
+title: Klasa CMFCVisualManagerWindows
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCVisualManagerWindows
@@ -140,18 +140,18 @@ helpviewer_keywords:
 - CMFCVisualManagerWindows [MFC], SetOfficeStyleMenus
 - CMFCVisualManagerWindows [MFC], m_b3DTabsXPTheme
 ms.assetid: 568b6e9e-8e67-4477-9a3d-2981cbd09861
-ms.openlocfilehash: d26e679135f6e8c8236803bae0343e956000c9e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1231df8fa6287e5983327784283c37c2f0eb6ce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373644"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319856"
 ---
-# <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows Class
+# <a name="cmfcvisualmanagerwindows-class"></a>Klasa CMFCVisualManagerWindows
 
-`CMFCVisualManagerWindows` Naśladuje wygląd systemu Microsoft Windows XP lub Microsoft Vista po wybraniu przez użytkownika, Windows XP lub Vista motywu.
+`CMFCVisualManagerWindows`naśladuje wygląd systemu Microsoft Windows XP lub Microsoft Vista, gdy użytkownik wybierze kompozycję systemu Windows XP lub Vista.
 
-Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.
+Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w folderze **vc\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
 
 ## <a name="syntax"></a>Składnia
 
@@ -171,41 +171,41 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCVisualManagerWindows::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|Struktura wywołuje tę metodę w celu określenia, czy karty 3D zawsze powinien być wyróżniony w aplikacji. (Przesłania [CMFCVisualManager::AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs).)|
+|[CMFCVisualManagerWindows::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|Struktura wywołuje tę metodę, aby ustalić, czy karty 3D powinny być zawsze wyróżnione w aplikacji. (Zastępuje [kartę CMFCVisualManager::AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs).)|
 |[CMFCVisualManagerWindows::DrawComboBorderWinXP](#drawcomboborderwinxp)|(Przesłania `CMFCVisualManager::DrawComboBorderWinXP`).|
-|[CMFCVisualManagerWindows::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|(Przesłania [CMFCVisualManager::DrawComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).)|
-|[CMFCVisualManagerWindows::DrawPushButtonWinXP](#drawpushbuttonwinxp)|(Przesłania [CMFCVisualManager::DrawPushButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp).)|
-|[CMFCVisualManagerWindows::GetButtonExtraBorder](#getbuttonextraborder)|Struktura wywołuje tę metodę, gdy jej rysuje przycisku paska narzędzi. (Przesłania [CMFCVisualManager::GetButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getbuttonextraborder).)|
-|[CMFCVisualManagerWindows::GetCaptionButtonExtraBorder](#getcaptionbuttonextraborder)|(Przesłania [CMFCVisualManager::GetCaptionButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getcaptionbuttonextraborder).)|
+|[CMFCVisualManagerWindows::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|(Zastępuje [CMFCVisualManager::DrawComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).)|
+|[CMFCVisualManagerWindows::DrawPushButtonWinXP](#drawpushbuttonwinxp)|(Zastępuje [CMFCVisualManager::DrawPushButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp).)|
+|[CMFCVisualManagerWindows::GetButtonExtraBorder](#getbuttonextraborder)|Struktura wywołuje tę metodę, gdy rysuje przycisk paska narzędzi. (Zastępuje [CMFCVisualManager::GetButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getbuttonextraborder).)|
+|[CMFCVisualManagerWindows::GetCaptionButtonExtraBorder](#getcaptionbuttonextraborder)|(Zastępuje [cmfcvisualmanager::GetCaptionButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getcaptionbuttonextraborder).)|
 |[CMFCVisualManagerWindows::GetDockingPaneCaptionExtraHeight](#getdockingpanecaptionextraheight)|(Przesłania `CMFCVisualManager::GetDockingPaneCaptionExtraHeight`).|
 |[CMFCVisualManagerWindows::GetHighlightedMenuItemTextColor](#gethighlightedmenuitemtextcolor)|(Przesłania `CMFCVisualManagerOfficeXP::GetHighlightedMenuItemTextColor`).|
 |[CMFCVisualManagerWindows::GetPopupMenuGap](#getpopupmenugap)|(Przesłania `CMFCVisualManagerOfficeXP::GetPopupMenuGap`).|
 |[CMFCVisualManagerWindows::GetToolbarButtonTextColor](#gettoolbarbuttontextcolor)|(Przesłania `CMFCVisualManagerOfficeXP::GetToolbarButtonTextColor`).|
-|[CMFCVisualManagerWindows::IsDefaultWinXPPopupButton](#isdefaultwinxppopupbutton)|(Przesłania [CMFCVisualManager::IsDefaultWinXPPopupButton](../../mfc/reference/cmfcvisualmanager-class.md#isdefaultwinxppopupbutton).)|
+|[CMFCVisualManagerWindows::IsDefaultWinXPPopupButton](#isdefaultwinxppopupbutton)|(Zastępuje [cmfcvisualmanager::IsDefaultWinXPPopupButton](../../mfc/reference/cmfcvisualmanager-class.md#isdefaultwinxppopupbutton).)|
 |[CMFCVisualManagerWindows::IsHighlightWholeMenuItem](#ishighlightwholemenuitem)|(Przesłania `CMFCVisualManagerOfficeXP::IsHighlightWholeMenuItem`).|
 |[CMFCVisualManagerWindows::IsOfficeStyleMenus](#isofficestylemenus)||
-|[CMFCVisualManagerWindows::IsOfficeXPStyleMenus](#isofficexpstylemenus)|Wskazuje, czy Menedżer wizualny implementuje menu stylu XP pakietu Office. (Przesłania [CMFCVisualManager::IsOfficeXPStyleMenus](../../mfc/reference/cmfcvisualmanager-class.md#isofficexpstylemenus).)|
+|[CMFCVisualManagerWindows::IsOfficeXPStyleMenus](#isofficexpstylemenus)|Wskazuje, czy menedżer wizualizacji implementuje menu w stylu pakietu Office XP. (Zastępuje [CMFCVisualManager::IsOfficeXPStyleMenus](../../mfc/reference/cmfcvisualmanager-class.md#isofficexpstylemenus).)|
 |[CMFCVisualManagerWindows::IsWindowsThemingSupported](#iswindowsthemingsupported)|(Przesłania `CMFCVisualManager::IsWindowsThemingSupported`).|
-|[CMFCVisualManagerWindows::IsWinXPThemeAvailable](#iswinxpthemeavailable)|Wskazuje, czy motyw Windows są dostępne.|
+|[CMFCVisualManagerWindows::IsWinXPDokudostępny](#iswinxpthemeavailable)|Wskazuje, czy motyw systemu Windows jest dostępny.|
 |[CMFCVisualManagerWindows::OnDrawBarGripper](#ondrawbargripper)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawBarGripper`).|
 |[CMFCVisualManagerWindows::OnDrawBrowseButton](#ondrawbrowsebutton)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawBrowseButton`).|
 |[CMFCVisualManagerWindows::OnDrawButtonBorder](#ondrawbuttonborder)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawButtonBorder`).|
 |[CMFCVisualManagerWindows::OnDrawButtonSeparator](#ondrawbuttonseparator)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawButtonSeparator`).|
 |[CMFCVisualManagerWindows::OnDrawCaptionButton](#ondrawcaptionbutton)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawCaptionButton`).|
 |[CMFCVisualManagerWindows::OnDrawCaptionButtonIcon](#ondrawcaptionbuttonicon)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawCaptionButtonIcon`).|
-|[CMFCVisualManagerWindows::OnDrawCheckBoxEx](#ondrawcheckboxex)|(Przesłania [CMFCVisualManager::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcheckboxex).)|
+|[CMFCVisualManagerWindows::OnDrawCheckBoxEx](#ondrawcheckboxex)|(Zastępuje [CMFCVisualManager::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcheckboxex).)|
 |[CMFCVisualManagerWindows::OnDrawComboBorder](#ondrawcomboborder)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawComboBorder`).|
 |[CMFCVisualManagerWindows::OnDrawComboDropButton](#ondrawcombodropbutton)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawComboDropButton`).|
-|[CMFCVisualManagerWindows::OnDrawControlBorder](#ondrawcontrolborder)|(Przesłania [CMFCVisualManager::OnDrawControlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcontrolborder).)|
+|[CMFCVisualManagerWindows::OnDrawControlBorder](#ondrawcontrolborder)|(Zastępuje [CMFCVisualManager::OnDrawControlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcontrolborder).)|
 |[CMFCVisualManagerWindows::OnDrawEditBorder](#ondraweditborder)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawEditBorder`).|
-|[CMFCVisualManagerWindows::OnDrawExpandingBox](#ondrawexpandingbox)|(Przesłania [CMFCVisualManager::OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).)|
+|[CMFCVisualManagerWindows::OnDrawExpandingBox](#ondrawexpandingbox)|(Zastępuje [CMFCVisualManager::OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).)|
 |[CMFCVisualManagerWindows::OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawFloatingToolbarBorder`).|
-|[CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie wokół wystąpienie [klasa CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md). (Przesłania [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|
-|[CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|Struktura wywołuje tę funkcję, gdy go Rysuje strzałkę sortowania w formancie nagłówka. (Przesłania [CMFCVisualManager::OnDrawHeaderCtrlSortArrow](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow).)|
+|[CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Struktura wywołuje tę metodę, gdy rysuje obramowanie wokół wystąpienia [CMFCHeaderCtrl Klasy](../../mfc/reference/cmfcheaderctrl-class.md). (Zastępuje [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|
+|[CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|Struktura wywołuje tę funkcję, gdy rysuje strzałkę sortowania formantu nagłówka. (Zastępuje [CMFCVisualManager::OnDrawHeaderCtrlSortArrow](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow).)|
 |[CMFCVisualManagerWindows::OnDrawMenuBorder](#ondrawmenuborder)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`).|
 |[CMFCVisualManagerWindows::OnDrawMenuSystemButton](#ondrawmenusystembutton)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawMenuSystemButton`).|
 |[CMFCVisualManagerWindows::OnDrawMiniFrameBorder](#ondrawminiframeborder)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawMiniFrameBorder`).|
-|[CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Wywoływane przez platformę, gdy go rysuje obramowanie przycisku strony programu Outlook. (Przesłania [CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|
+|[CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Wywoływana przez strukturę, gdy rysuje obramowanie przycisku strony programu Outlook. (Zastępuje [CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|
 |[CMFCVisualManagerWindows::OnDrawPaneBorder](#ondrawpaneborder)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawPaneBorder`).|
 |[CMFCVisualManagerWindows::OnDrawPaneCaption](#ondrawpanecaption)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawPaneCaption`).|
 |[CMFCVisualManagerWindows::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawPopupWindowButtonBorder`).|
@@ -213,8 +213,8 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnDrawSeparator](#ondrawseparator)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawSeparator`).|
 |[CMFCVisualManagerWindows::OnDrawSpinButtons](#ondrawspinbuttons)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawSpinButtons`).|
 |[CMFCVisualManagerWindows::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawStatusBarPaneBorder`).|
-|[CMFCVisualManagerWindows::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|Platforma wywołuje tę metodę, gdy jej rysuje wskaźnika postępu w [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) obiektu. (Przesłania [CMFCVisualManager::OnDrawStatusBarProgress](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress).)|
-|[CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|Platforma wywołuje tę metodę, gdy go rysuje rozmiar pola [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md). (Przesłania [CMFCVisualManager::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox).)|
+|[CMFCVisualManagerWindows::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|Struktura wywołuje tę metodę, gdy rysuje wskaźnik postępu na [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) obiektu. (Zastępuje [menedżera CMFCVisualManager::OnDrawStatusBarProgress](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress).)|
+|[CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|Struktura wywołuje tę metodę, gdy rysuje pole rozmiaru dla [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md). (Zastępuje [CMFCVisualManager::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox).)|
 |[CMFCVisualManagerWindows::OnDrawTab](#ondrawtab)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawTab`).|
 |[CMFCVisualManagerWindows::OnDrawTabCloseButton](#ondrawtabclosebutton)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawTabCloseButton`).|
 |[CMFCVisualManagerWindows::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|(Przesłania `CMFCVisualManagerOfficeXP::OnDrawTabsButtonBorder`).|
@@ -225,14 +225,14 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnErasePopupWindowButton](#onerasepopupwindowbutton)|(Przesłania `CMFCVisualManagerOfficeXP::OnErasePopupWindowButton`).|
 |[CMFCVisualManagerWindows::OnEraseTabsArea](#onerasetabsarea)|(Przesłania `CMFCVisualManagerOfficeXP::OnEraseTabsArea`).|
 |[CMFCVisualManagerWindows::OnEraseTabsButton](#onerasetabsbutton)|(Przesłania `CMFCVisualManagerOfficeXP::OnEraseTabsButton`).|
-|[CMFCVisualManagerWindows::OnEraseTabsFrame](#onerasetabsframe)|Platforma wywołuje tę metodę, gdy go na partycje powoduje usunięcie ramkę na [klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md). (Przesłania [CMFCVisualManager::OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe).)|
+|[CMFCVisualManagerWindows::OnEraseTabsFrame](#onerasetabsframe)|Struktura wywołuje tę metodę, gdy usuwa ramkę na [CMFCBaseTabCtrl Klasy](../../mfc/reference/cmfcbasetabctrl-class.md). (Zastępuje [cmfcvisualmanager::OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe).)|
 |[CMFCVisualManagerWindows::OnFillBarBackground](#onfillbarbackground)|(Przesłania `CMFCVisualManagerOfficeXP::OnFillBarBackground`).|
 |[CMFCVisualManagerWindows::OnFillButtonInterior](#onfillbuttoninterior)|(Przesłania `CMFCVisualManagerOfficeXP::OnFillButtonInterior`).|
 |[CMFCVisualManagerWindows::OnFillCommandsListBackground](#onfillcommandslistbackground)|(Przesłania `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`).|
 |[CMFCVisualManagerWindows::OnFillMiniFrameCaption](#onfillminiframecaption)|(Przesłania `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`).|
-|[CMFCVisualManagerWindows::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Struktura wywołuje tę metodę po zapełnieniu wewnętrznych przycisk Strona programu Outlook. (Przesłania [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|
+|[CMFCVisualManagerWindows::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Struktura wywołuje tę metodę, gdy wypełnia wnętrze przycisku strony programu Outlook. (Zastępuje [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|
 |[CMFCVisualManagerWindows::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|(Przesłania `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`).|
-|[CMFCVisualManagerWindows::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Struktura wywołuje tę metodę podczas jego wypełniania tła [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) kontroli. (Przesłania [CMFCVisualManager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|
+|[CMFCVisualManagerWindows::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Struktura wywołuje tę metodę, gdy wypełnia tło kontrolki [CMFCTasksPane.](../../mfc/reference/cmfctaskspane-class.md) (Zastępuje [cmfcvisualmanager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|
 |[CMFCVisualManagerWindows::OnHighlightMenuItem](#onhighlightmenuitem)|(Przesłania `CMFCVisualManagerOfficeXP::OnHighlightMenuItem`).|
 |[CMFCVisualManagerWindows::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|(Przesłania `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`).|
 |[CMFCVisualManagerWindows::OnUpdateSystemColors](#onupdatesystemcolors)|(Przesłania `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`).|
@@ -242,27 +242,27 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|Określa, czy motyw Windows XP wyświetla karty 3D.|
+|[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|Określa, czy w motywie systemu Windows XP są wyświetlane karty 3D.|
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj `CMFCVisualManagerWindows` klasy, aby zmienić wygląd aplikacji w taki sposób, aby mógł naśladować bieżący motyw na komputerze, na którym działa aplikacja.
+Użyj `CMFCVisualManagerWindows` klasy, aby zmienić wygląd aplikacji, aby naśladować bieżący motyw na komputerze, na którym działa aplikacja.
 
-Jednak motyw Windows może być niedostępna, jeśli aplikacja jest uruchomiona w wersji systemu Windows starszych niż Windows XP lub jeśli motywy są wyłączone, ponieważ użytkownik korzysta z **klasycznego** widoku. Jeśli motyw nie jest dostępny, aplikacja używa domyślnego menedżera visual zdefiniowane w [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).
+Jednak kompozycja systemu Windows może być niedostępna, jeśli aplikacja jest uruchomiona w wersji systemu Windows wcześniej niż Windows XP lub jeśli motywy są wyłączone, ponieważ użytkownik korzysta z widoku **klasycznego.** Jeśli motyw nie jest dostępny, aplikacja używa domyślnego menedżera wizualnego zdefiniowanego w [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `CMFCVisualManagerWindows`. Ten fragment kodu jest częścią [próbka Demo alertu pulpitu](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie `CMFCVisualManagerWindows`pokazano, jak używać . Ten fragment kodu jest częścią [przykładu demo alertów pulpitu](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#10](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerwindows-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
-[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
+[Cmfcvisualmanager](../../mfc/reference/cmfcvisualmanager-class.md)
 
 [CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
 
@@ -272,7 +272,7 @@ Poniższy przykład pokazuje sposób użycia `CMFCVisualManagerWindows`. Ten fra
 
 **Nagłówek:** afxvisualmanagerwindows.h
 
-##  <a name="alwayshighlight3dtabs"></a>  CMFCVisualManagerWindows::AlwaysHighlight3DTabs
+## <a name="cmfcvisualmanagerwindowsalwayshighlight3dtabs"></a><a name="alwayshighlight3dtabs"></a>CMFCVisualManagerWindows::AlwaysHighlight3DTabs
 
 ```
 virtual BOOL AlwaysHighlight3DTabs() const;
@@ -282,7 +282,7 @@ virtual BOOL AlwaysHighlight3DTabs() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="cmfcvisualmanagerwindows"></a>  CMFCVisualManagerWindows::CMFCVisualManagerWindows
+## <a name="cmfcvisualmanagerwindowscmfcvisualmanagerwindows"></a><a name="cmfcvisualmanagerwindows"></a>CMFCVisualManagerWindows::CMFCVisualManagerWindows
 
 ```
 CMFCVisualManagerWindows(BOOL bIsTemporary = FALSE);
@@ -290,11 +290,11 @@ CMFCVisualManagerWindows(BOOL bIsTemporary = FALSE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bIsTemporary*<br/>
+[w] *bIsTemporary*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="drawcomboborderwinxp"></a>  CMFCVisualManagerWindows::DrawComboBorderWinXP
+## <a name="cmfcvisualmanagerwindowsdrawcomboborderwinxp"></a><a name="drawcomboborderwinxp"></a>CMFCVisualManagerWindows::DrawComboBorderWinXP
 
 ```
 virtual BOOL DrawComboBorderWinXP(
@@ -307,17 +307,17 @@ virtual BOOL DrawComboBorderWinXP(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *bWyłączone*<br/>
-[in] *bIsDropped*<br/>
-[in] *bIsHighlighted*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *bWydaj*<br/>
+[w] *bIsDropped (Niezmierzony)*<br/>
+[w] *bIsSwyżkowany*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="drawcombodropbuttonwinxp"></a>  CMFCVisualManagerWindows::DrawComboDropButtonWinXP
+## <a name="cmfcvisualmanagerwindowsdrawcombodropbuttonwinxp"></a><a name="drawcombodropbuttonwinxp"></a>CMFCVisualManagerWindows::DrawComboDropButtonWinXP
 
 ```
 virtual BOOL DrawComboDropButtonWinXP(
@@ -330,17 +330,17 @@ virtual BOOL DrawComboDropButtonWinXP(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *bWyłączone*<br/>
-[in] *bIsDropped*<br/>
-[in] *bIsHighlighted*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *bWydaj*<br/>
+[w] *bIsDropped (Niezmierzony)*<br/>
+[w] *bIsSwyżkowany*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="drawpushbuttonwinxp"></a>  CMFCVisualManagerWindows::DrawPushButtonWinXP
+## <a name="cmfcvisualmanagerwindowsdrawpushbuttonwinxp"></a><a name="drawpushbuttonwinxp"></a>CMFCVisualManagerWindows::DrawPushButtonWinXP
 
 ```
 virtual BOOL DrawPushButtonWinXP(
@@ -352,16 +352,16 @@ virtual BOOL DrawPushButtonWinXP(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *pButton*<br/>
-[in] *uiState*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *pButton (przycisk)*<br/>
+[w] *uiStan*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getbuttonextraborder"></a>  CMFCVisualManagerWindows::GetButtonExtraBorder
+## <a name="cmfcvisualmanagerwindowsgetbuttonextraborder"></a><a name="getbuttonextraborder"></a>CMFCVisualManagerWindows::GetButtonExtraBorder
 
 ```
 virtual CSize GetButtonExtraBorder() const;
@@ -371,7 +371,7 @@ virtual CSize GetButtonExtraBorder() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getcaptionbuttonextraborder"></a>  CMFCVisualManagerWindows::GetCaptionButtonExtraBorder
+## <a name="cmfcvisualmanagerwindowsgetcaptionbuttonextraborder"></a><a name="getcaptionbuttonextraborder"></a>CMFCVisualManagerWindows::GetCaptionButtonExtraBorder
 
 ```
 virtual CSize GetCaptionButtonExtraBorder() const;
@@ -381,7 +381,7 @@ virtual CSize GetCaptionButtonExtraBorder() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getdockingpanecaptionextraheight"></a>  CMFCVisualManagerWindows::GetDockingPaneCaptionExtraHeight
+## <a name="cmfcvisualmanagerwindowsgetdockingpanecaptionextraheight"></a><a name="getdockingpanecaptionextraheight"></a>CMFCVisualManagerWindows::GetDockingPaneCaptionExtraHeight
 
 ```
 virtual int GetDockingPaneCaptionExtraHeight() const;
@@ -391,7 +391,7 @@ virtual int GetDockingPaneCaptionExtraHeight() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="gethighlightedmenuitemtextcolor"></a>  CMFCVisualManagerWindows::GetHighlightedMenuItemTextColor
+## <a name="cmfcvisualmanagerwindowsgethighlightedmenuitemtextcolor"></a><a name="gethighlightedmenuitemtextcolor"></a>CMFCVisualManagerWindows::GetHighlightedMenuItemTextColor
 
 ```
 virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton);
@@ -399,13 +399,13 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pButton*<br/>
+[w] *pButton (przycisk)*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getpopupmenugap"></a>  CMFCVisualManagerWindows::GetPopupMenuGap
+## <a name="cmfcvisualmanagerwindowsgetpopupmenugap"></a><a name="getpopupmenugap"></a>CMFCVisualManagerWindows::GetPopupMenuGap
 
 ```
 virtual int GetPopupMenuGap() const;
@@ -415,7 +415,7 @@ virtual int GetPopupMenuGap() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="gettoolbarbuttontextcolor"></a>  CMFCVisualManagerWindows::GetToolbarButtonTextColor
+## <a name="cmfcvisualmanagerwindowsgettoolbarbuttontextcolor"></a><a name="gettoolbarbuttontextcolor"></a>CMFCVisualManagerWindows::GetToolbarButtonTextColor
 
 ```
 virtual COLORREF GetToolbarButtonTextColor(
@@ -425,14 +425,14 @@ virtual COLORREF GetToolbarButtonTextColor(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pButton*<br/>
-[in] *stanu*<br/>
+[w] *pButton (przycisk)*<br/>
+[w] *stan*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isdefaultwinxppopupbutton"></a>  CMFCVisualManagerWindows::IsDefaultWinXPPopupButton
+## <a name="cmfcvisualmanagerwindowsisdefaultwinxppopupbutton"></a><a name="isdefaultwinxppopupbutton"></a>CMFCVisualManagerWindows::IsDefaultWinXPPopupButton
 
 ```
 virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton* pButton) const;
@@ -440,13 +440,13 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton* pButton) const
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pButton*<br/>
+[w] *pButton (przycisk)*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ishighlightwholemenuitem"></a>  CMFCVisualManagerWindows::IsHighlightWholeMenuItem
+## <a name="cmfcvisualmanagerwindowsishighlightwholemenuitem"></a><a name="ishighlightwholemenuitem"></a>CMFCVisualManagerWindows::IsHighlightWholeMenuItem
 
 ```
 virtual BOOL IsHighlightWholeMenuItem();
@@ -456,7 +456,7 @@ virtual BOOL IsHighlightWholeMenuItem();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isofficestylemenus"></a>  CMFCVisualManagerWindows::IsOfficeStyleMenus
+## <a name="cmfcvisualmanagerwindowsisofficestylemenus"></a><a name="isofficestylemenus"></a>CMFCVisualManagerWindows::IsOfficeStyleMenus
 
 ```
 BOOL IsOfficeStyleMenus() const;
@@ -466,7 +466,7 @@ BOOL IsOfficeStyleMenus() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isofficexpstylemenus"></a>  CMFCVisualManagerWindows::IsOfficeXPStyleMenus
+## <a name="cmfcvisualmanagerwindowsisofficexpstylemenus"></a><a name="isofficexpstylemenus"></a>CMFCVisualManagerWindows::IsOfficeXPStyleMenus
 
 ```
 virtual BOOL IsOfficeXPStyleMenus() const;
@@ -476,7 +476,7 @@ virtual BOOL IsOfficeXPStyleMenus() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="iswindowsthemingsupported"></a>  CMFCVisualManagerWindows::IsWindowsThemingSupported
+## <a name="cmfcvisualmanagerwindowsiswindowsthemingsupported"></a><a name="iswindowsthemingsupported"></a>CMFCVisualManagerWindows::IsWindowsThemingSupported
 
 ```
 virtual BOOL IsWindowsThemingSupported() const;
@@ -486,9 +486,9 @@ virtual BOOL IsWindowsThemingSupported() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="iswinxpthemeavailable"></a>  CMFCVisualManagerWindows::IsWinXPThemeAvailable
+## <a name="cmfcvisualmanagerwindowsiswinxpthemeavailable"></a><a name="iswinxpthemeavailable"></a>CMFCVisualManagerWindows::IsWinXPDokudostępny
 
-Określa, czy motyw Windows są dostępne.
+Określa, czy motyw systemu Windows jest dostępny.
 
 ```
 static BOOL IsWinXPThemeAvailible();
@@ -496,25 +496,25 @@ static BOOL IsWinXPThemeAvailible();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość różną od zera, jeśli motyw jest dostępna; w przeciwnym razie 0.
+Nonzero, jeśli motyw jest dostępny; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest prawidłowa dla wszystkich Windows XP i nowszych motywów.
+Ta metoda jest prawidłowa dla wszystkich systemów Windows XP i nowszych motywów.
 
-`IsWinXPThemeAvailable` jest taka sama jak `CMFCVisualManagerWindows::IsWindowsThemingAvailable` z tą różnicą, że `IsWinXPThemeAvailable` jest metoda statyczna. W związku z tym jeśli nie istnieje zostanie utworzony tymczasowy Menedżer wizualnego.
+`IsWinXPThemeAvailable`jest identyczna `CMFCVisualManagerWindows::IsWindowsThemingAvailable` `IsWinXPThemeAvailable` z tą różnicą, że jest metodą statyczną. W związku z tym utworzy tymczasowego menedżera wizualnego, jeśli nie istnieje.
 
-`IsWinXPThemeAvailable` zawsze zwracają 0s dla wersji systemu Windows starszych niż Windows XP.
+`IsWinXPThemeAvailable`zawsze zwracaj 0s dla wersji systemu Windows wcześniej niż Windows XP.
 
-##  <a name="m_b3dtabsxptheme"></a>  CMFCVisualManagerWindows::m_b3DTabsXPTheme
+## <a name="cmfcvisualmanagerwindowsm_b3dtabsxptheme"></a><a name="m_b3dtabsxptheme"></a>CMFCVisualManagerWindows::m_b3DTabsXPTheme
 
-Parametr logiczny, który określa, czy Menedżer wizualny Wyświetla karty 3D.
+Parametr logiczny określający, czy menedżer wizualny wyświetla karty 3D.
 
 ```
 AFX_IMPORT_DATA static BOOL m_b3DTabsXPTheme;
 ```
 
-##  <a name="ondrawbargripper"></a>  CMFCVisualManagerWindows::OnDrawBarGripper
+## <a name="cmfcvisualmanagerwindowsondrawbargripper"></a><a name="ondrawbargripper"></a>CMFCVisualManagerWindows::OnDrawBarGripper
 
 ```
 virtual void OnDrawBarGripper(
@@ -526,14 +526,14 @@ virtual void OnDrawBarGripper(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rectGripper*<br/>
-[in] *bHorz*<br/>
-[in] *pBar*<br/>
+[w] *pDC*<br/>
+[w] *rectGripper*<br/>
+[w] *bHorz ( bHorz )*<br/>
+[w] *pBar*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawbrowsebutton"></a>  CMFCVisualManagerWindows::OnDrawBrowseButton
+## <a name="cmfcvisualmanagerwindowsondrawbrowsebutton"></a><a name="ondrawbrowsebutton"></a>CMFCVisualManagerWindows::OnDrawBrowseButton
 
 ```
 virtual BOOL OnDrawBrowseButton(
@@ -546,17 +546,17 @@ virtual BOOL OnDrawBrowseButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *pEdit*<br/>
-[in] *stanu*<br/>
-[in] *clrText*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *pEdytuj*<br/>
+[w] *stan*<br/>
+[w] *clrTekst*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawbuttonborder"></a>  CMFCVisualManagerWindows::OnDrawButtonBorder
+## <a name="cmfcvisualmanagerwindowsondrawbuttonborder"></a><a name="ondrawbuttonborder"></a>CMFCVisualManagerWindows::OnDrawButtonBorder
 
 ```
 virtual void OnDrawButtonBorder(
@@ -568,14 +568,14 @@ virtual void OnDrawButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *pButton*<br/>
-[in] *rect*<br/>
-[in] *stanu*<br/>
+[w] *pDC*<br/>
+[w] *pButton (przycisk)*<br/>
+[w] *rect*<br/>
+[w] *stan*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawbuttonseparator"></a>  CMFCVisualManagerWindows::OnDrawButtonSeparator
+## <a name="cmfcvisualmanagerwindowsondrawbuttonseparator"></a><a name="ondrawbuttonseparator"></a>CMFCVisualManagerWindows::OnDrawButtonSeparator
 
 ```
 virtual void OnDrawButtonSeparator(
@@ -588,15 +588,15 @@ virtual void OnDrawButtonSeparator(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *pButton*<br/>
-[in] *rect*<br/>
-[in] *stanu*<br/>
-[in] *bHorz*<br/>
+[w] *pDC*<br/>
+[w] *pButton (przycisk)*<br/>
+[w] *rect*<br/>
+[w] *stan*<br/>
+[w] *bHorz ( bHorz )*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawcaptionbutton"></a>  CMFCVisualManagerWindows::OnDrawCaptionButton
+## <a name="cmfcvisualmanagerwindowsondrawcaptionbutton"></a><a name="ondrawcaptionbutton"></a>CMFCVisualManagerWindows::OnDrawCaptionButton
 
 ```
 virtual void OnDrawCaptionButton(
@@ -611,17 +611,17 @@ virtual void OnDrawCaptionButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *pButton*<br/>
-[in] *bWykonywanie aktywnych*<br/>
-[in] *bHorz*<br/>
-[in] *bMaximized*<br/>
-[in] *bWyłączone*<br/>
-[in] *nImageID*<br/>
+[w] *pDC*<br/>
+[w] *pButton (przycisk)*<br/>
+[w] *bAktywny*<br/>
+[w] *bHorz ( bHorz )*<br/>
+[w] *bMaximized*<br/>
+[w] *bWydaj*<br/>
+[w] *nImageID (obrazek)*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawcaptionbuttonicon"></a>  CMFCVisualManagerWindows::OnDrawCaptionButtonIcon
+## <a name="cmfcvisualmanagerwindowsondrawcaptionbuttonicon"></a><a name="ondrawcaptionbuttonicon"></a>CMFCVisualManagerWindows::OnDrawCaptionButtonIcon
 
 ```
 virtual void OnDrawCaptionButtonIcon(
@@ -635,16 +635,16 @@ virtual void OnDrawCaptionButtonIcon(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *pButton*<br/>
-[in] *identyfikator*<br/>
-[in] *bWykonywanie aktywnych*<br/>
-[in] *bWyłączone*<br/>
-[in] *ptImage*<br/>
+[w] *pDC*<br/>
+[w] *pButton (przycisk)*<br/>
+[w] *identyfikator*<br/>
+[w] *bAktywny*<br/>
+[w] *bWydaj*<br/>
+[w] *ptImage (polski)*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawcheckboxex"></a>  CMFCVisualManagerWindows::OnDrawCheckBoxEx
+## <a name="cmfcvisualmanagerwindowsondrawcheckboxex"></a><a name="ondrawcheckboxex"></a>CMFCVisualManagerWindows::OnDrawCheckBoxEx
 
 ```
 virtual void OnDrawCheckBoxEx(
@@ -658,16 +658,16 @@ virtual void OnDrawCheckBoxEx(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *nInformacje*<br/>
-[in] *bHighlighted*<br/>
-[in] *bPressed*<br/>
-[in] *bWłączony*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *nPaństwo*<br/>
+[w] *bWyświetlony*<br/>
+[w] *bPressed (Wciskany)*<br/>
+[w] *bWłach*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawcomboborder"></a>  CMFCVisualManagerWindows::OnDrawComboBorder
+## <a name="cmfcvisualmanagerwindowsondrawcomboborder"></a><a name="ondrawcomboborder"></a>CMFCVisualManagerWindows::OnDrawComboBorder
 
 ```
 virtual void OnDrawComboBorder(
@@ -681,16 +681,16 @@ virtual void OnDrawComboBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *bWyłączone*<br/>
-[in] *bIsDropped*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *pButton*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *bWydaj*<br/>
+[w] *bIsDropped (Niezmierzony)*<br/>
+[w] *bIsSwyżkowany*<br/>
+[w] *pButton (przycisk)*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManagerWindows::OnDrawComboDropButton
+## <a name="cmfcvisualmanagerwindowsondrawcombodropbutton"></a><a name="ondrawcombodropbutton"></a>CMFCVisualManagerWindows::OnDrawComboDropButton
 
 ```
 virtual void OnDrawComboDropButton(
@@ -704,16 +704,16 @@ virtual void OnDrawComboDropButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *bWyłączone*<br/>
-[in] *bIsDropped*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *pButton*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *bWydaj*<br/>
+[w] *bIsDropped (Niezmierzony)*<br/>
+[w] *bIsSwyżkowany*<br/>
+[w] *pButton (przycisk)*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawcontrolborder"></a>  CMFCVisualManagerWindows::OnDrawControlBorder
+## <a name="cmfcvisualmanagerwindowsondrawcontrolborder"></a><a name="ondrawcontrolborder"></a>CMFCVisualManagerWindows::OnDrawControlBorder
 
 ```
 virtual void OnDrawControlBorder(CWnd* pWndCtrl);
@@ -721,11 +721,11 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pWndCtrl*<br/>
+[w] *pWndCtrl (właśc.*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondraweditborder"></a>  CMFCVisualManagerWindows::OnDrawEditBorder
+## <a name="cmfcvisualmanagerwindowsondraweditborder"></a><a name="ondraweditborder"></a>CMFCVisualManagerWindows::OnDrawEditBorder
 
 ```
 virtual void OnDrawEditBorder(
@@ -738,15 +738,15 @@ virtual void OnDrawEditBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *bWyłączone*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *pButton*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *bWydaj*<br/>
+[w] *bIsSwyżkowany*<br/>
+[w] *pButton (przycisk)*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawexpandingbox"></a>  CMFCVisualManagerWindows::OnDrawExpandingBox
+## <a name="cmfcvisualmanagerwindowsondrawexpandingbox"></a><a name="ondrawexpandingbox"></a>CMFCVisualManagerWindows::OnDrawExpandingBox
 
 ```
 virtual void OnDrawExpandingBox(
@@ -758,14 +758,14 @@ virtual void OnDrawExpandingBox(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *bIsOpened*<br/>
-[in] *colorBox*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *bIsOpened*<br/>
+[w] *skrzynka colorBox*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawfloatingtoolbarborder"></a>  CMFCVisualManagerWindows::OnDrawFloatingToolbarBorder
+## <a name="cmfcvisualmanagerwindowsondrawfloatingtoolbarborder"></a><a name="ondrawfloatingtoolbarborder"></a>CMFCVisualManagerWindows::OnDrawFloatingToolbarBorder
 
 ```
 virtual void OnDrawFloatingToolbarBorder(
@@ -777,14 +777,14 @@ virtual void OnDrawFloatingToolbarBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *pToolBar*<br/>
-[in] *rectBorder*<br/>
-[in] *rectBorderSize*<br/>
+[w] *pDC*<br/>
+[w] *pToolBar (pToolBar)*<br/>
+[w] *rectBorder*<br/>
+[w] *rozmiar rectBorderSize*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder
+## <a name="cmfcvisualmanagerwindowsondrawheaderctrlborder"></a><a name="ondrawheaderctrlborder"></a>CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder
 
 ```
 virtual void OnDrawHeaderCtrlBorder(
@@ -797,15 +797,15 @@ virtual void OnDrawHeaderCtrlBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pCtrl*<br/>
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsHighlighted*<br/>
+[w] *pCtrl (własówce)*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *bIsPressed (Jest onspressed)*<br/>
+[w] *bIsSwyżkowany*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawheaderctrlsortarrow"></a>  CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow
+## <a name="cmfcvisualmanagerwindowsondrawheaderctrlsortarrow"></a><a name="ondrawheaderctrlsortarrow"></a>CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow
 
 ```
 virtual void OnDrawHeaderCtrlSortArrow(
@@ -817,14 +817,14 @@ virtual void OnDrawHeaderCtrlSortArrow(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pCtrl*<br/>
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *bIsUp*<br/>
+[w] *pCtrl (własówce)*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *bIsUp (Nie)*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawmenuborder"></a>  CMFCVisualManagerWindows::OnDrawMenuBorder
+## <a name="cmfcvisualmanagerwindowsondrawmenuborder"></a><a name="ondrawmenuborder"></a>CMFCVisualManagerWindows::OnDrawMenuBorder
 
 ```
 virtual void OnDrawMenuBorder(
@@ -835,13 +835,13 @@ virtual void OnDrawMenuBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *pMenu*<br/>
-[in] *rect*<br/>
+[w] *pDC*<br/>
+[w] *pMenu*<br/>
+[w] *rect*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawmenusystembutton"></a>  CMFCVisualManagerWindows::OnDrawMenuSystemButton
+## <a name="cmfcvisualmanagerwindowsondrawmenusystembutton"></a><a name="ondrawmenusystembutton"></a>CMFCVisualManagerWindows::OnDrawMenuSystemButton
 
 ```
 virtual void OnDrawMenuSystemButton(
@@ -854,15 +854,15 @@ virtual void OnDrawMenuSystemButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *uiSystemCommand*<br/>
-[in] *nStyle*<br/>
-[in] *bHighlight*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *uiSystemCommand*<br/>
+[w] *styl nStyle*<br/>
+[w] *bWyświetlenie*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawminiframeborder"></a>  CMFCVisualManagerWindows::OnDrawMiniFrameBorder
+## <a name="cmfcvisualmanagerwindowsondrawminiframeborder"></a><a name="ondrawminiframeborder"></a>CMFCVisualManagerWindows::OnDrawMiniFrameBorder
 
 ```
 virtual void OnDrawMiniFrameBorder(
@@ -874,14 +874,14 @@ virtual void OnDrawMiniFrameBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *pFrameWnd*<br/>
-[in] *rectBorder*<br/>
-[in] *rectBorderSize*<br/>
+[w] *pDC*<br/>
+[w] *pFrameWnd (pFrameWnd)*<br/>
+[w] *rectBorder*<br/>
+[w] *rozmiar rectBorderSize*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder
+## <a name="cmfcvisualmanagerwindowsondrawoutlookpagebuttonborder"></a><a name="ondrawoutlookpagebuttonborder"></a>CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder
 
 ```
 virtual void OnDrawOutlookPageButtonBorder(
@@ -893,14 +893,14 @@ virtual void OnDrawOutlookPageButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rectBtn*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsPressed*<br/>
+[w] *pDC*<br/>
+[w] *reectBtn*<br/>
+[w] *bIsSwyżkowany*<br/>
+[w] *bIsPressed (Jest onspressed)*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawpaneborder"></a>  CMFCVisualManagerWindows::OnDrawPaneBorder
+## <a name="cmfcvisualmanagerwindowsondrawpaneborder"></a><a name="ondrawpaneborder"></a>CMFCVisualManagerWindows::OnDrawPaneBorder
 
 ```
 virtual void OnDrawPaneBorder(
@@ -911,13 +911,13 @@ virtual void OnDrawPaneBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *pBar*<br/>
-[in] *rect*<br/>
+[w] *pDC*<br/>
+[w] *pBar*<br/>
+[w] *rect*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerWindows::OnDrawPaneCaption
+## <a name="cmfcvisualmanagerwindowsondrawpanecaption"></a><a name="ondrawpanecaption"></a>CMFCVisualManagerWindows::OnDrawPaneCaption
 
 ```
 virtual COLORREF OnDrawPaneCaption(
@@ -930,17 +930,17 @@ virtual COLORREF OnDrawPaneCaption(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *pBar*<br/>
-[in] *bWykonywanie aktywnych*<br/>
-[in] *rectCaption*<br/>
-[in] *rectButtons*<br/>
+[w] *pDC*<br/>
+[w] *pBar*<br/>
+[w] *bAktywny*<br/>
+[w] *rectCaption (rectCaption)*<br/>
+[w] *przyciski rect*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawpopupwindowbuttonborder"></a>  CMFCVisualManagerWindows::OnDrawPopupWindowButtonBorder
+## <a name="cmfcvisualmanagerwindowsondrawpopupwindowbuttonborder"></a><a name="ondrawpopupwindowbuttonborder"></a>CMFCVisualManagerWindows::OnDrawPopupWindowButtonBorder
 
 ```
 virtual void OnDrawPopupWindowButtonBorder(
@@ -951,13 +951,13 @@ virtual void OnDrawPopupWindowButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rectClient*<br/>
-[in] *pButton*<br/>
+[w] *pDC*<br/>
+[w] *rectClient*<br/>
+[w] *pButton (przycisk)*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawscrollbuttons"></a>  CMFCVisualManagerWindows::OnDrawScrollButtons
+## <a name="cmfcvisualmanagerwindowsondrawscrollbuttons"></a><a name="ondrawscrollbuttons"></a>CMFCVisualManagerWindows::OnDrawScrollButtons
 
 ```
 virtual void OnDrawScrollButtons(
@@ -970,15 +970,15 @@ virtual void OnDrawScrollButtons(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *nBorderSize*<br/>
-[in] *iImage*<br/>
-[in] *bHilited*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *nBorderSize (Rozmiar)*<br/>
+[w] *iImage ( iImage )*<br/>
+[w] *bHilited*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawseparator"></a>  CMFCVisualManagerWindows::OnDrawSeparator
+## <a name="cmfcvisualmanagerwindowsondrawseparator"></a><a name="ondrawseparator"></a>CMFCVisualManagerWindows::OnDrawSeparator
 
 ```
 virtual void OnDrawSeparator(
@@ -990,14 +990,14 @@ virtual void OnDrawSeparator(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *pBar*<br/>
-[in] *rect*<br/>
-[in] *bIsHoriz*<br/>
+[w] *pDC*<br/>
+[w] *pBar*<br/>
+[w] *rect*<br/>
+[w] *bIsHoriz (własobie)*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawspinbuttons"></a>  CMFCVisualManagerWindows::OnDrawSpinButtons
+## <a name="cmfcvisualmanagerwindowsondrawspinbuttons"></a><a name="ondrawspinbuttons"></a>CMFCVisualManagerWindows::OnDrawSpinButtons
 
 ```
 virtual void OnDrawSpinButtons(
@@ -1010,15 +1010,15 @@ virtual void OnDrawSpinButtons(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rectSpin*<br/>
-[in] *nInformacje*<br/>
-[in] *bOrientation*<br/>
-[in] *pSpinCtrl*<br/>
+[w] *pDC*<br/>
+[w] *rectSpin*<br/>
+[w] *nPaństwo*<br/>
+[w] *bOrientacja*<br/>
+[w] *pSpinCtrl (właso.*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManagerWindows::OnDrawStatusBarPaneBorder
+## <a name="cmfcvisualmanagerwindowsondrawstatusbarpaneborder"></a><a name="ondrawstatusbarpaneborder"></a>CMFCVisualManagerWindows::OnDrawStatusBarPaneBorder
 
 ```
 virtual void OnDrawStatusBarPaneBorder(
@@ -1031,15 +1031,15 @@ virtual void OnDrawStatusBarPaneBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *pBar*<br/>
-[in] *rectPane*<br/>
-[in] *uiID*<br/>
-[in] *nStyle*<br/>
+[w] *pDC*<br/>
+[w] *pBar*<br/>
+[w] *reectPane (panel)*<br/>
+[w] *uiID*<br/>
+[w] *styl nStyle*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawstatusbarprogress"></a>  CMFCVisualManagerWindows::OnDrawStatusBarProgress
+## <a name="cmfcvisualmanagerwindowsondrawstatusbarprogress"></a><a name="ondrawstatusbarprogress"></a>CMFCVisualManagerWindows::OnDrawStatusBarProgress
 
 ```
 virtual void OnDrawStatusBarProgress(
@@ -1056,19 +1056,19 @@ virtual void OnDrawStatusBarProgress(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *pStatusBar*<br/>
-[in] *rectProgress*<br/>
-[in] *nProgressTotal*<br/>
-[in] *nProgressCurr*<br/>
-[in] *clrBar*<br/>
-[in] *clrProgressBarDest*<br/>
-[in] *clrProgressText*<br/>
-[in] *bProgressText*<br/>
+[w] *pDC*<br/>
+[w] *pStatusBar (pStatusBar)*<br/>
+[w] *spectProgress (proces spectProgress)*<br/>
+[w] *nProgressTotal*<br/>
+[w] *nProgressCurr*<br/>
+[w] *clrBar (clrBar)*<br/>
+[w] *clrProgressBarDest*<br/>
+[w] *clrProgressTeker*<br/>
+[w] *bProgresstext (Tekst)*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawstatusbarsizebox"></a>  CMFCVisualManagerWindows::OnDrawStatusBarSizeBox
+## <a name="cmfcvisualmanagerwindowsondrawstatusbarsizebox"></a><a name="ondrawstatusbarsizebox"></a>CMFCVisualManagerWindows::OnDrawStatusBarSizeBox
 
 ```
 virtual void OnDrawStatusBarSizeBox(
@@ -1079,13 +1079,13 @@ virtual void OnDrawStatusBarSizeBox(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *pStatBar*<br/>
-[in] *rectSizeBox*<br/>
+[w] *pDC*<br/>
+[w] *pStatBar (pStatBar)*<br/>
+[w] *skrzynka z narzędziami do poprawiania rozmiaru*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawtab"></a>  CMFCVisualManagerWindows::OnDrawTab
+## <a name="cmfcvisualmanagerwindowsondrawtab"></a><a name="ondrawtab"></a>CMFCVisualManagerWindows::OnDrawTab
 
 ```
 virtual void OnDrawTab(
@@ -1098,15 +1098,15 @@ virtual void OnDrawTab(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rectTab*<br/>
-[in] *iTab*<br/>
-[in] *bIsActive*<br/>
-[in] *pTabWnd*<br/>
+[w] *pDC*<br/>
+[w] *przytażdnik reect*<br/>
+[w] *iTab*<br/>
+[w] *bIsActive*<br/>
+[w] *pTabWnd*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawtabclosebutton"></a>  CMFCVisualManagerWindows::OnDrawTabCloseButton
+## <a name="cmfcvisualmanagerwindowsondrawtabclosebutton"></a><a name="ondrawtabclosebutton"></a>CMFCVisualManagerWindows::OnDrawTabCloseButton
 
 ```
 virtual void OnDrawTabCloseButton(
@@ -1120,16 +1120,16 @@ virtual void OnDrawTabCloseButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *pTabWnd*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsDisabled*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *pTabWnd*<br/>
+[w] *bIsSwyżkowany*<br/>
+[w] *bIsPressed (Jest onspressed)*<br/>
+[w] *bIsDisabled*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManagerWindows::OnDrawTabsButtonBorder
+## <a name="cmfcvisualmanagerwindowsondrawtabsbuttonborder"></a><a name="ondrawtabsbuttonborder"></a>CMFCVisualManagerWindows::OnDrawTabsButtonBorder
 
 ```
 virtual void OnDrawTabsButtonBorder(
@@ -1142,15 +1142,15 @@ virtual void OnDrawTabsButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *pButton*<br/>
-[in] *uiState*<br/>
-[in] *pWndTab*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *pButton (przycisk)*<br/>
+[w] *uiStan*<br/>
+[w] *pWndTab (Naś.*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawtask"></a>  CMFCVisualManagerWindows::OnDrawTask
+## <a name="cmfcvisualmanagerwindowsondrawtask"></a><a name="ondrawtask"></a>CMFCVisualManagerWindows::OnDrawTask
 
 ```
 virtual void OnDrawTask(
@@ -1163,15 +1163,15 @@ virtual void OnDrawTask(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *pTask*<br/>
-[in] *pIcons*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsSelected*<br/>
+[w] *pDC*<br/>
+[w] *pTask (pTask)*<br/>
+[w] *PIcons ( pIcons )*<br/>
+[w] *bIsSwyżkowany*<br/>
+[w] *bWybrany*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawtasksgroupareaborder"></a>  CMFCVisualManagerWindows::OnDrawTasksGroupAreaBorder
+## <a name="cmfcvisualmanagerwindowsondrawtasksgroupareaborder"></a><a name="ondrawtasksgroupareaborder"></a>CMFCVisualManagerWindows::OnDrawTasksGroupAreaBorder
 
 ```
 virtual void OnDrawTasksGroupAreaBorder(
@@ -1183,14 +1183,14 @@ virtual void OnDrawTasksGroupAreaBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *bOpcje specjalne*<br/>
-[in] *bNoTitle*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *bSpecjalicja*<br/>
+[w] *bTuty wtitle*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawtasksgroupcaption"></a>  CMFCVisualManagerWindows::OnDrawTasksGroupCaption
+## <a name="cmfcvisualmanagerwindowsondrawtasksgroupcaption"></a><a name="ondrawtasksgroupcaption"></a>CMFCVisualManagerWindows::OnDrawTasksGroupCaption
 
 ```
 virtual void OnDrawTasksGroupCaption(
@@ -1203,15 +1203,15 @@ virtual void OnDrawTasksGroupCaption(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *pGroup*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsSelected*<br/>
-[in] *bCanCollapse*<br/>
+[w] *pDC*<br/>
+[w] *pGrupa*<br/>
+[w] *bIsSwyżkowany*<br/>
+[w] *bWybrany*<br/>
+[w] *bCanCollapse*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ondrawtearoffcaption"></a>  CMFCVisualManagerWindows::OnDrawTearOffCaption
+## <a name="cmfcvisualmanagerwindowsondrawtearoffcaption"></a><a name="ondrawtearoffcaption"></a>CMFCVisualManagerWindows::OnDrawTearOffCaption
 
 ```
 virtual void OnDrawTearOffCaption(
@@ -1222,13 +1222,13 @@ virtual void OnDrawTearOffCaption(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *bIsActive*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *bIsActive*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onerasepopupwindowbutton"></a>  CMFCVisualManagerWindows::OnErasePopupWindowButton
+## <a name="cmfcvisualmanagerwindowsonerasepopupwindowbutton"></a><a name="onerasepopupwindowbutton"></a>CMFCVisualManagerWindows::OnErasePopupWindowButton
 
 ```
 virtual void OnErasePopupWindowButton(
@@ -1239,13 +1239,13 @@ virtual void OnErasePopupWindowButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rectClient*<br/>
-[in] *pButton*<br/>
+[w] *pDC*<br/>
+[w] *rectClient*<br/>
+[w] *pButton (przycisk)*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onerasetabsarea"></a>  CMFCVisualManagerWindows::OnEraseTabsArea
+## <a name="cmfcvisualmanagerwindowsonerasetabsarea"></a><a name="onerasetabsarea"></a>CMFCVisualManagerWindows::OnEraseTabsArea
 
 ```
 virtual void OnEraseTabsArea(
@@ -1256,13 +1256,13 @@ virtual void OnEraseTabsArea(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *pTabWnd*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *pTabWnd*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onerasetabsbutton"></a>  CMFCVisualManagerWindows::OnEraseTabsButton
+## <a name="cmfcvisualmanagerwindowsonerasetabsbutton"></a><a name="onerasetabsbutton"></a>CMFCVisualManagerWindows::OnEraseTabsButton
 
 ```
 virtual void OnEraseTabsButton(
@@ -1274,14 +1274,14 @@ virtual void OnEraseTabsButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *pButton*<br/>
-[in] *pWndTab*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *pButton (przycisk)*<br/>
+[w] *pWndTab (Naś.*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onerasetabsframe"></a>  CMFCVisualManagerWindows::OnEraseTabsFrame
+## <a name="cmfcvisualmanagerwindowsonerasetabsframe"></a><a name="onerasetabsframe"></a>CMFCVisualManagerWindows::OnEraseTabsFrame
 
 ```
 virtual BOOL OnEraseTabsFrame(
@@ -1292,15 +1292,15 @@ virtual BOOL OnEraseTabsFrame(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *pTabWnd*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *pTabWnd*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onfillbarbackground"></a>  CMFCVisualManagerWindows::OnFillBarBackground
+## <a name="cmfcvisualmanagerwindowsonfillbarbackground"></a><a name="onfillbarbackground"></a>CMFCVisualManagerWindows::OnFillBarBackground
 
 ```
 virtual void OnFillBarBackground(
@@ -1313,15 +1313,15 @@ virtual void OnFillBarBackground(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *pBar*<br/>
-[in] *rectClient*<br/>
-[in] *rectClip*<br/>
-[in] *bNCArea*<br/>
+[w] *pDC*<br/>
+[w] *pBar*<br/>
+[w] *rectClient*<br/>
+[w] *reectClip*<br/>
+[w] *bOBłas*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onfillbuttoninterior"></a>  CMFCVisualManagerWindows::OnFillButtonInterior
+## <a name="cmfcvisualmanagerwindowsonfillbuttoninterior"></a><a name="onfillbuttoninterior"></a>CMFCVisualManagerWindows::OnFillButtonInterior
 
 ```
 virtual void OnFillButtonInterior(
@@ -1333,14 +1333,14 @@ virtual void OnFillButtonInterior(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *pButton*<br/>
-[in] *rect*<br/>
-[in] *stanu*<br/>
+[w] *pDC*<br/>
+[w] *pButton (przycisk)*<br/>
+[w] *rect*<br/>
+[w] *stan*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onfillcommandslistbackground"></a>  CMFCVisualManagerWindows::OnFillCommandsListBackground
+## <a name="cmfcvisualmanagerwindowsonfillcommandslistbackground"></a><a name="onfillcommandslistbackground"></a>CMFCVisualManagerWindows::OnFillCommandsListBackground
 
 ```
 virtual COLORREF OnFillCommandsListBackground(
@@ -1351,15 +1351,15 @@ virtual COLORREF OnFillCommandsListBackground(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *bIsSelected*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *bWybrany*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onfillminiframecaption"></a>  CMFCVisualManagerWindows::OnFillMiniFrameCaption
+## <a name="cmfcvisualmanagerwindowsonfillminiframecaption"></a><a name="onfillminiframecaption"></a>CMFCVisualManagerWindows::OnFillMiniFrameCaption
 
 ```
 virtual COLORREF OnFillMiniFrameCaption(
@@ -1371,16 +1371,16 @@ virtual COLORREF OnFillMiniFrameCaption(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rectCaption*<br/>
-[in] *pFrameWnd*<br/>
-[in] *bWykonywanie aktywnych*<br/>
+[w] *pDC*<br/>
+[w] *rectCaption (rectCaption)*<br/>
+[w] *pFrameWnd (pFrameWnd)*<br/>
+[w] *bAktywny*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onfilloutlookpagebutton"></a>  CMFCVisualManagerWindows::OnFillOutlookPageButton
+## <a name="cmfcvisualmanagerwindowsonfilloutlookpagebutton"></a><a name="onfilloutlookpagebutton"></a>CMFCVisualManagerWindows::OnFillOutlookPageButton
 
 ```
 virtual void OnFillOutlookPageButton(
@@ -1393,15 +1393,15 @@ virtual void OnFillOutlookPageButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsPressed*<br/>
-[in] *clrText*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *bIsSwyżkowany*<br/>
+[w] *bIsPressed (Jest onspressed)*<br/>
+[w] *clrTekst*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onfilltasksgroupinterior"></a>  CMFCVisualManagerWindows::OnFillTasksGroupInterior
+## <a name="cmfcvisualmanagerwindowsonfilltasksgroupinterior"></a><a name="onfilltasksgroupinterior"></a>CMFCVisualManagerWindows::OnFillTasksGroupInterior
 
 ```
 virtual void OnFillTasksGroupInterior(
@@ -1412,13 +1412,13 @@ virtual void OnFillTasksGroupInterior(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rect*<br/>
-[in] *bOpcje specjalne*<br/>
+[w] *pDC*<br/>
+[w] *rect*<br/>
+[w] *bSpecjalicja*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onfilltaskspanebackground"></a>  CMFCVisualManagerWindows::OnFillTasksPaneBackground
+## <a name="cmfcvisualmanagerwindowsonfilltaskspanebackground"></a><a name="onfilltaskspanebackground"></a>CMFCVisualManagerWindows::OnFillTasksPaneBackground
 
 ```
 virtual void OnFillTasksPaneBackground(
@@ -1428,12 +1428,12 @@ virtual void OnFillTasksPaneBackground(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rectWorkArea*<br/>
+[w] *pDC*<br/>
+[w] *reectObejem pracy*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onhighlightmenuitem"></a>  CMFCVisualManagerWindows::OnHighlightMenuItem
+## <a name="cmfcvisualmanagerwindowsonhighlightmenuitem"></a><a name="onhighlightmenuitem"></a>CMFCVisualManagerWindows::OnHighlightMenuItem
 
 ```
 virtual void OnHighlightMenuItem(
@@ -1445,14 +1445,14 @@ virtual void OnHighlightMenuItem(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *pButton*<br/>
-[in] *rect*<br/>
-[in] *clrText*<br/>
+[w] *pDC*<br/>
+[w] *pButton (przycisk)*<br/>
+[w] *rect*<br/>
+[w] *clrTekst*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManagerWindows::OnHighlightRarelyUsedMenuItems
+## <a name="cmfcvisualmanagerwindowsonhighlightrarelyusedmenuitems"></a><a name="onhighlightrarelyusedmenuitems"></a>CMFCVisualManagerWindows::OnHighlightRarelyUsedMenuItems
 
 ```
 virtual void OnHighlightRarelyUsedMenuItems(
@@ -1462,12 +1462,12 @@ virtual void OnHighlightRarelyUsedMenuItems(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
-[in] *rectRarelyUsed*<br/>
+[w] *pDC*<br/>
+[w] *rectRarelyUżywane*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerWindows::OnUpdateSystemColors
+## <a name="cmfcvisualmanagerwindowsonupdatesystemcolors"></a><a name="onupdatesystemcolors"></a>CMFCVisualManagerWindows::OnUpdateSystemColors
 
 ```
 virtual void OnUpdateSystemColors();
@@ -1475,7 +1475,7 @@ virtual void OnUpdateSystemColors();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setofficestylemenus"></a>  CMFCVisualManagerWindows::SetOfficeStyleMenus
+## <a name="cmfcvisualmanagerwindowssetofficestylemenus"></a><a name="setofficestylemenus"></a>CMFCVisualManagerWindows::SetOfficeStyleMenus
 
 ```
 void SetOfficeStyleMenus(BOOL bOn = TRUE);
@@ -1483,11 +1483,11 @@ void SetOfficeStyleMenus(BOOL bOn = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bOn*<br/>
+[w] *bOn*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

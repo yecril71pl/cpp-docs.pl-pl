@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCRibbonSlider
+title: CMFCRibbonSlider, klasa
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonSlider
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CMFCRibbonSlider [MFC], SetZoomButtons
 - CMFCRibbonSlider [MFC], SetZoomIncrement
 ms.assetid: 9351ac34-f234-4e42-91e2-763f1989c8ff
-ms.openlocfilehash: 85c646e2fa524268e4559b587f90c5e06971b765
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2a05ca1433ca3a44b0459360e3f09fe7a274c68
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374080"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368833"
 ---
-# <a name="cmfcribbonslider-class"></a>Klasa CMFCRibbonSlider
+# <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider, klasa
 
-`CMFCRibbonSlider` Klasa implementuje kontrolkę suwaka, możesz dodać do paska Wstążki lub paska stanu wstążki. Kontrolka suwaka wstążki przypomina suwaki zoomu, które pojawiają się w aplikacjach pakietu Office 2007.
+Klasa `CMFCRibbonSlider` implementuje kontrolkę suwaka, którą można dodać do paska wstążki lub paska stanu wstążki. Suwak wstążki przypomina suwaki powiększenia, które pojawiają się w aplikacjach pakietu Office 2007.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,41 +53,41 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCRibbonSlider::CMFCRibbonSlider](#cmfcribbonslider)|Tworzy i inicjuje kontrolka suwaka wstążki.|
+|[CMFCRibbonSlider::CMFCRibbonSlider](#cmfcribbonslider)|Konstruuje i inicjuje kontrolkę suwaka wstążki.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCRibbonSlider::GetPos](#getpos)|Zwraca bieżące położenie kontrolki suwaka.|
+|[CMFCRibbonSlider::GetPos](#getpos)|Zwraca bieżącą pozycję suwaka.|
 |[CMFCRibbonSlider::GetRangeMax](#getrangemax)|Zwraca maksymalną wartość suwaka.|
 |[CMFCRibbonSlider::GetRangeMin](#getrangemin)|Zwraca minimalną wartość suwaka.|
-|[CMFCRibbonSlider::GetRegularSize](#getregularsize)|Zwraca zwykłego rozmiaru elementu wstążki. (Przesłania [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
-|[CMFCRibbonSlider::GetZoomIncrement](#getzoomincrement)|Zwraca rozmiar zmiany wielkości dla kontrolki suwaka.|
-|[CMFCRibbonSlider::HasZoomButtons](#haszoombuttons)|Określa, czy suwak ma przycisków powiększenia.|
-|[CMFCRibbonSlider::OnDraw](#ondraw)|Metoda wywoływana przez platformę, by narysować elementem wstążki. (Przesłania [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
-|[CMFCRibbonSlider::SetPos](#setpos)|Ustawia bieżące położenie kontrolki suwaka.|
-|[CMFCRibbonSlider::SetRange](#setrange)|Określa zakres kontrolki suwaka, ustawiając wartości minimalne i maksymalne.|
-|[CMFCRibbonSlider::SetZoomButtons](#setzoombuttons)|Wyświetlenie lub ukrycie przycisków powiększenia.|
-|[CMFCRibbonSlider::SetZoomIncrement](#setzoomincrement)|Ustawia rozmiar zmiany wielkości dla kontrolki suwaka.|
+|[CMFCRibbonSlider::GetRegularSize](#getregularsize)|Zwraca regularny rozmiar elementu wstążki. (Zastępuje [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
+|[CMFCRibbonSlider::GetZoomIncrement](#getzoomincrement)|Zwraca rozmiar przyrostu powiększenia dla suwaka.|
+|[CMFCRibbonSlider::HasZoomButtons](#haszoombuttons)|Określa, czy suwak ma przyciski powiększenia.|
+|[CMFCRibbonSlider::OnDraw](#ondraw)|Wywoływana przez strukturę do rysowania elementu wstążki. (Zastępuje [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
+|[CMFCRibbonSlider::SetPos](#setpos)|Ustawia bieżącą pozycję suwaka.|
+|[CMFCRibbonSlider::SetRange](#setrange)|Określa zakres suwaka, ustawiając wartości minimalne i maksymalne.|
+|[CMFCRibbonSlider::SetZoomButtons](#setzoombuttons)|Pokazuje lub ukrywa przyciski powiększenia.|
+|[CMFCRibbonSlider::SetZoomIncrement](#setzoomincrement)|Ustawia rozmiar przyrostu powiększenia dla suwaka.|
 
 ## <a name="remarks"></a>Uwagi
 
-Możesz użyć `SetRange` Metoda konfiguracji zakresu zwiększa powiększenie potrzeby suwaka. Bieżące położenie suwaka można ustawić przy użyciu `SetPos` metody.
+Za pomocą `SetRange` tej metody można skonfigurować zakres przyrostów powiększenia suwaka. Bieżącą pozycję suwaka można ustawić `SetPos` za pomocą metody.
 
-Przycisków powiększenia cykliczne można wyświetlić po lewej i prawej stronie kontrolki suwaka, używając `SetZoomButtons` metody. Domyślnie suwak jest poziomy, przycisku powiększenie po lewej stronie zawiera znak minus i przycisku powiększenie prawo wyświetla znak plus.
+Za pomocą tej metody można wyświetlać okrągłe przyciski powiększenia po lewej i prawej stronie suwaka. `SetZoomButtons` Domyślnie suwak jest poziomy, lewy przycisk powiększenia wyświetla znak minus, a prawy przycisk powiększenia wyświetla znak plus.
 
-`SetZoomIncrement` Metoda Określa przyrost do dodania lub odjęcia od aktualnej pozycji, gdy użytkownik kliknie przycisków powiększenia.
+Metoda `SetZoomIncrement` definiuje przyrost, aby dodać lub odjąć od bieżącej pozycji, gdy użytkownik kliknie przyciski powiększenia.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCRibbonSlider` klasy, aby ustawić właściwości suwaka. W przykładzie pokazano sposób tworzenia `CMFCRibbonSlider` obiektu, wyświetlanie przycisków powiększenia, Ustaw bieżące położenie kontrolki suwaka i ustaw zakres wartości dla kontrolki suwaka.
+W poniższym przykładzie pokazano, jak `CMFCRibbonSlider` używać różnych metod w klasie, aby ustawić właściwości suwaka. W przykładzie pokazano, `CMFCRibbonSlider` jak skonstruować obiekt, wyświetlić przyciski powiększenia, ustawić bieżącą pozycję suwaka i ustawić zakres wartości dla suwaka.
 
 [!code-cpp[NVC_MFC_RibbonApp#12](../../mfc/reference/codesnippet/cpp/cmfcribbonslider-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
@@ -97,9 +97,9 @@ Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCRibbonSlid
 
 **Nagłówek:** afxribbonslider.h
 
-##  <a name="cmfcribbonslider"></a>  CMFCRibbonSlider::CMFCRibbonSlider
+## <a name="cmfcribbonslidercmfcribbonslider"></a><a name="cmfcribbonslider"></a>CMFCRibbonSlider::CMFCRibbonSlider
 
-Skonstruuj suwaka wstążki.
+Skonstruuj suwak wstążki.
 
 ```
 CMFCRibbonSlider(
@@ -109,18 +109,18 @@ CMFCRibbonSlider(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-[in] Identyfikator suwaka.
+*Nid*<br/>
+[w] Identyfikator suwaka.
 
-[in]. *nWidth* suwaka Szerokość w pikselach.
+[w]. *nWidth (ww.* Szerokość suwaka w pikselach.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruuje suwaka wstążki, który jest *nWidth* pikseli w kategorii panelu, w której zostanie dodany suwaka. Domyślnie suwak jest poziomy.
+Tworzy suwak wstążki o szerokości *nWidth* pikseli w kategorii panelu, w którym jest dodawany suwak. Domyślnie suwak jest poziomy.
 
-##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos
+## <a name="cmfcribbonslidergetpos"></a><a name="getpos"></a>CMFCRibbonSlider::GetPos
 
-Zwraca bieżące położenie kontrolki suwaka.
+Zwraca bieżącą pozycję suwaka.
 
 ```
 int GetPos() const;
@@ -128,11 +128,11 @@ int GetPos() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bieżące położenie kontrolki suwaka, która jest względem początku położenie suwaka.
+Bieżąca pozycja suwaka, która jest pozycją względem początku suwaka.
 
-##  <a name="getrangemax"></a>  CMFCRibbonSlider::GetRangeMax
+## <a name="cmfcribbonslidergetrangemax"></a><a name="getrangemax"></a>CMFCRibbonSlider::GetRangeMax
 
-Pobiera maksymalny przyrost suwaka, które mogą być przesyłane przez suwak w kontrolce suwaka.
+Uzyskuje maksymalny przyrost suwaka, który suwak może przesuwać na suwaku.
 
 ```
 int GetRangeMax() const;
@@ -140,11 +140,11 @@ int GetRangeMax() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Maksymalna wartość przyrostu suwaka, które mogą być przesyłane przez suwak w kontrolce suwaka.
+Maksymalny przyrost suwaka, który suwak może przesuwać na suwaku.
 
-##  <a name="getrangemin"></a>  CMFCRibbonSlider::GetRangeMin
+## <a name="cmfcribbonslidergetrangemin"></a><a name="getrangemin"></a>CMFCRibbonSlider::GetRangeMin
 
-Zwraca minimalną inkrementacji, które mogą być przesyłane przez suwak w kontrolce suwaka.
+Zwraca minimalny przyrost, który suwak może przesuwać na suwaku.
 
 ```
 int GetRangeMin() const;
@@ -152,11 +152,11 @@ int GetRangeMin() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Przyrost minimalne suwak mogą być przesyłane w kontrolce suwaka.
+Minimalny przyrost, który suwak może przesuwać na suwaku.
 
-##  <a name="getregularsize"></a>  CMFCRibbonSlider::GetRegularSize
+## <a name="cmfcribbonslidergetregularsize"></a><a name="getregularsize"></a>CMFCRibbonSlider::GetRegularSize
 
-Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.
+Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w folderze **vc\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -164,15 +164,15 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
+[w] *pDC*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getzoomincrement"></a>  CMFCRibbonSlider::GetZoomIncrement
+## <a name="cmfcribbonslidergetzoomincrement"></a><a name="getzoomincrement"></a>CMFCRibbonSlider::GetZoomIncrement
 
-Uzyskaj zmiany wielkości dla kontrolki suwaka.
+Uzyskaj przyrost powiększenia dla suwaka.
 
 ```
 int GetZoomIncrement() const;
@@ -180,11 +180,11 @@ int GetZoomIncrement() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zmiany wielkości kontrolki suwaka.
+Przyrost powiększenia dla suwaka.
 
-##  <a name="haszoombuttons"></a>  CMFCRibbonSlider::HasZoomButtons
+## <a name="cmfcribbonsliderhaszoombuttons"></a><a name="haszoombuttons"></a>CMFCRibbonSlider::HasZoomButtons
 
-Określa, czy suwak ma przycisków powiększenia.
+Określa, czy suwak ma przyciski powiększenia.
 
 ```
 BOOL HasZoomButtons() const;
@@ -192,11 +192,11 @@ BOOL HasZoomButtons() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli suwak przycisków powiększenia; Wartość FALSE w przeciwnym razie.
+PRAWDA, jeśli suwak ma przyciski powiększenia; FAŁSZ inaczej.
 
-##  <a name="ondraw"></a>  CMFCRibbonSlider::OnDraw
+## <a name="cmfcribbonsliderondraw"></a><a name="ondraw"></a>CMFCRibbonSlider::OnDraw
 
-Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.
+Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w folderze **vc\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -204,13 +204,13 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *podstawowego kontrolera domeny*<br/>
+[w] *pDC*<br/>
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setpos"></a>  CMFCRibbonSlider::SetPos
+## <a name="cmfcribbonslidersetpos"></a><a name="setpos"></a>CMFCRibbonSlider::SetPos
 
-Ustaw bieżące położenie kontrolki suwaka.
+Ustaw bieżącą pozycję suwaka.
 
 ```
 void SetPos(
@@ -220,15 +220,15 @@ void SetPos(
 
 ### <a name="parameters"></a>Parametry
 
-*nPos*<br/>
-[in] Określa pozycję, aby ustawić suwak. Pozycja jest określana względem początku suwaka.
+*nPos (właso)*<br/>
+[w] Określa położenie, które ma być ustawione dla suwaka. Pozycja jest względem początku suwaka.
 
 *bRedraw*<br/>
-[in] W przypadku opcji TRUE suwak zostanie narysowany ponownie.
+[w] Jeśli true, suwak zostanie ponownie narysowany.
 
-##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange
+## <a name="cmfcribbonslidersetrange"></a><a name="setrange"></a>CMFCRibbonSlider::SetRange
 
-Ustaw zakres wartości dla kontrolki suwaka.
+Ustaw zakres wartości dla suwaka.
 
 ```
 void SetRange(
@@ -238,19 +238,19 @@ void SetRange(
 
 ### <a name="parameters"></a>Parametry
 
-*nMin*<br/>
-[in] Określa minimalną wartość suwaka.
+*nMin (min.*<br/>
+[w] Określa minimalną wartość suwaka.
 
-*nMax*<br/>
-[in] Określa maksymalną wartość suwaka.
+*Nmax*<br/>
+[w] Określa maksymalną wartość suwaka.
 
 ### <a name="remarks"></a>Uwagi
 
-Określa zakres wartości dla kontrolki suwaka, ustawiając wartości minimalne i maksymalne.
+Określa zakres wartości formantu suwaka, ustawiając wartości minimalne i maksymalne.
 
-##  <a name="setzoombuttons"></a>  CMFCRibbonSlider::SetZoomButtons
+## <a name="cmfcribbonslidersetzoombuttons"></a><a name="setzoombuttons"></a>CMFCRibbonSlider::SetZoomButtons
 
-Wyświetlenie lub ukrycie przycisków powiększenia.
+Wyświetlanie lub ukrywanie przycisków powiększenia.
 
 ```
 void SetZoomButtons(BOOL bSet=TRUE);
@@ -258,11 +258,11 @@ void SetZoomButtons(BOOL bSet=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-[in]. *bUstawienie* true przycisków powiększenia ekranu; Wartość FALSE, aby je ukryć.
+[w]. *bStaw* PRAWDA, aby wyświetlić przyciski powiększenia; FALSE, aby je ukryć.
 
-##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement
+## <a name="cmfcribbonslidersetzoomincrement"></a><a name="setzoomincrement"></a>CMFCRibbonSlider::SetZoomIncrement
 
-Ustaw zmiany wielkości dla kontrolki suwaka.
+Ustaw przyrost powiększenia dla suwaka.
 
 ```
 void SetZoomIncrement(int nZoomIncrement);
@@ -271,9 +271,9 @@ void SetZoomIncrement(int nZoomIncrement);
 ### <a name="parameters"></a>Parametry
 
 *nZoomIncrement*<br/>
-[in] Określa zmiany wielkości kontrolki suwaka.
+[w] Określa przyrost powiększenia suwaka.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

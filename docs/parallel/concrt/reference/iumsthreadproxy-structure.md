@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-ms.openlocfilehash: f4fb43a4223cad8cc63049d2a0f8345e48b90f17
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2e748b1da02394e1f70afd8b92947e1291957c62
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139963"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368081"
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy — Struktura
 
-Abstrakcja wątku wykonania. Jeśli chcesz, aby harmonogram przyznał wątki harmonogramie (UMS), ustaw wartość dla elementu zasad harmonogramu `SchedulerKind` na `UmsThreadDefault`i zaimplementuj interfejs `IUMSScheduler`. Wątki UMS są obsługiwane tylko w 64-bitowych systemach operacyjnych z wersją Windows 7 i nowszą.
+Abstrakcja dla wątku wykonania. Jeśli chcesz, aby harmonogram był przyznawany wątkom w trybie ums (UMS), `SchedulerKind` ustaw `UmsThreadDefault`wartość elementu `IUMSScheduler` zasad harmonogramu na , i zaimplementuj interfejs. Wątki usługi UMS są obsługiwane tylko w 64-bitowych systemach operacyjnych w wersji Windows 7 lub nowszej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,17 +29,17 @@ Abstrakcja wątku wykonania. Jeśli chcesz, aby harmonogram przyznał wątki har
 struct IUMSThreadProxy : public IThreadProxy;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[IUMSThreadProxy:: EnterCriticalRegion —](#entercriticalregion)|Wywoływana w celu wprowadzenia regionu krytycznego. W ramach regionu krytycznego harmonogram nie będzie obserwować asynchronicznych operacji blokowania, które są wykonywane w danym regionie. Oznacza to, że harmonogram nie zostanie ponownie wprowadzony dla błędów strony, zawieszeń wątku, asynchronicznych wywołań procedur jądra (APCs) i tak dalej, dla wątku UMS.|
-|[IUMSThreadProxy:: EnterHyperCriticalRegion —](#enterhypercriticalregion)|Wywoływana w celu wprowadzenia regionu krytycznego dla funkcji Hyper-in. W regionie o krytycznym znaczeniu dla funkcji harmonogram nie będzie obserwować żadnych operacji blokowania, które są wykonywane w danym regionie. Oznacza to, że harmonogram nie zostanie ponownie wprowadzony w celu zablokowania wywołań funkcji, blokady zawieszania, które blokują, błędy stron, zawieszenia wątku, asynchroniczne wywołania procedur jądra (APCs) i tak dalej, dla wątku UMS.|
-|[IUMSThreadProxy:: ExitCriticalRegion —](#exitcriticalregion)|Wywoływana w celu opuszczenia regionu krytycznego.|
-|[IUMSThreadProxy:: ExitHyperCriticalRegion —](#exithypercriticalregion)|Wywołuje się, by wyjść z regionu krytycznego dla funkcji Hyper-krytyczny.|
-|[IUMSThreadProxy:: GetCriticalRegionType —](#getcriticalregiontype)|Zwraca rodzaj regionu krytycznego, w którym znajduje się serwer proxy wątku. Ze względu na to, że regiony krytyczne dla funkcji Hyper są nadzbiorem regionów krytycznych, w przypadku wprowadzenia kodu do regionu krytycznego, a następnie regionu krytycznego dla funkcji Hyper `InsideHyperCriticalRegion` zostaną zwrócone.|
+|[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|Wywoływana w celu wejścia w krytyczny region. W regionie krytycznym harmonogram nie będzie obserwować asynchronicznych operacji blokowania, które mają miejsce w regionie. Oznacza to, że harmonogram nie zostanie ponownie wprowadzony dla błędów strony, zawieszenia wątku, wywołania procedury asynchroniczne jądra (APC) i tak dalej dla wątku UMS.|
+|[IUMSThreadProxy::EnterHyperCriticalRegion](#enterhypercriticalregion)|Wywoływana w celu wprowadzenia regionu hiperkrytycznym. W regionie hiperkrytycznym harmonogram nie będzie obserwować żadnych operacji blokowania, które mają miejsce w regionie. Oznacza to, że harmonogram nie zostanie ponownie wprowadzony do blokowania wywołań funkcji, blokowania prób nabycia, które blokują, błędy strony, zawieszenia wątku, wywołania procedur asynchronicznych jądra (APC) i tak dalej, dla wątku UMS.|
+|[IUMSThreadProxy::ExitCriticalRegion](#exitcriticalregion)|Wywoływane w celu wyjścia z krytycznego regionu.|
+|[IUMSThreadProxy::ExitHyperCriticalRegion](#exithypercriticalregion)|Wywoływane w celu wyjścia z regionu hiperkrytycznym.|
+|[IUMSThreadProxy::GetCriticalRegionType](#getcriticalregiontype)|Zwraca rodzaj regionu krytycznego serwera proxy wątku. Ponieważ regiony o znaczeniu hiperkrytycznym są nadzbiorem regionów krytycznych, jeśli kod `InsideHyperCriticalRegion` wszedł w region krytyczny, a następnie region hiperkrytyczny, zostanie zwrócony.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -49,75 +49,75 @@ struct IUMSThreadProxy : public IThreadProxy;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrtrm. h
+**Nagłówek:** concrtrm.h
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="entercriticalregion"></a>IUMSThreadProxy:: EnterCriticalRegion —, Metoda
+## <a name="iumsthreadproxyentercriticalregion-method"></a><a name="entercriticalregion"></a>IUMSThreadProxy::Metoda EnterCriticalRegion
 
-Wywoływana w celu wprowadzenia regionu krytycznego. W ramach regionu krytycznego harmonogram nie będzie obserwować asynchronicznych operacji blokowania, które są wykonywane w danym regionie. Oznacza to, że harmonogram nie zostanie ponownie wprowadzony dla błędów strony, zawieszeń wątku, asynchronicznych wywołań procedur jądra (APCs) i tak dalej, dla wątku UMS.
+Wywoływana w celu wejścia w krytyczny region. W regionie krytycznym harmonogram nie będzie obserwować asynchronicznych operacji blokowania, które mają miejsce w regionie. Oznacza to, że harmonogram nie zostanie ponownie wprowadzony dla błędów strony, zawieszenia wątku, wywołania procedury asynchroniczne jądra (APC) i tak dalej dla wątku UMS.
 
 ```cpp
 virtual int EnterCriticalRegion() = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Nowa głębokość regionu krytycznego. Obszary krytyczne są współużytkowane.
+Nowa głębokość krytycznego regionu. Regiony krytyczne są reentrant.
 
-## <a name="enterhypercriticalregion"></a>IUMSThreadProxy:: EnterHyperCriticalRegion —, Metoda
+## <a name="iumsthreadproxyenterhypercriticalregion-method"></a><a name="enterhypercriticalregion"></a>IUMSThreadProxy::Metoda EnterHyperCriticalRegion
 
-Wywoływana w celu wprowadzenia regionu krytycznego dla funkcji Hyper-in. W regionie o krytycznym znaczeniu dla funkcji harmonogram nie będzie obserwować żadnych operacji blokowania, które są wykonywane w danym regionie. Oznacza to, że harmonogram nie zostanie ponownie wprowadzony w celu zablokowania wywołań funkcji, blokady zawieszania, które blokują, błędy stron, zawieszenia wątku, asynchroniczne wywołania procedur jądra (APCs) i tak dalej, dla wątku UMS.
+Wywoływana w celu wprowadzenia regionu hiperkrytycznym. W regionie hiperkrytycznym harmonogram nie będzie obserwować żadnych operacji blokowania, które mają miejsce w regionie. Oznacza to, że harmonogram nie zostanie ponownie wprowadzony do blokowania wywołań funkcji, blokowania prób nabycia, które blokują, błędy strony, zawieszenia wątku, wywołania procedur asynchronicznych jądra (APC) i tak dalej, dla wątku UMS.
 
 ```cpp
 virtual int EnterHyperCriticalRegion() = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Nowa głębokość regionu krytycznego dla funkcji Hyper-lokacja. Regiony krytyczne dla funkcji Hyper są współużytkowane.
+Nowa głębokość regionu hiperkrytycznym. Regiony o znaczeniu krytycznym są reentrant.
 
 ### <a name="remarks"></a>Uwagi
 
-Harmonogram musi być bardzo ostrożnie na temat metod wywoływanych przez nią i blokad, które są w tych regionach. Jeśli kod w tym regionie blokuje blokadę, która jest utrzymywana przez coś, że harmonogram jest odpowiedzialny za planowanie, zakleszczenie może nastąpić.
+Harmonogram musi być niezwykle ostrożny, jakie metody wywołuje i jakie blokady nabywa w takich regionach. Jeśli kod w takim regionie blokuje na blokadzie, która jest utrzymywana przez coś, co harmonogram jest odpowiedzialny za planowanie, może wystąpić zakleszczenie.
 
-## <a name="exitcriticalregion"></a>IUMSThreadProxy:: ExitCriticalRegion —, Metoda
+## <a name="iumsthreadproxyexitcriticalregion-method"></a><a name="exitcriticalregion"></a>IUMSThreadProxy::ExitCriticalRegion Metoda
 
-Wywoływana w celu opuszczenia regionu krytycznego.
+Wywoływane w celu wyjścia z krytycznego regionu.
 
 ```cpp
 virtual int ExitCriticalRegion() = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Nowa głębokość regionu krytycznego. Obszary krytyczne są współużytkowane.
+Nowa głębokość krytycznego regionu. Regiony krytyczne są reentrant.
 
-## <a name="exithypercriticalregion"></a>IUMSThreadProxy:: ExitHyperCriticalRegion —, Metoda
+## <a name="iumsthreadproxyexithypercriticalregion-method"></a><a name="exithypercriticalregion"></a>IUMSThreadProxy::ExitHyperCriticalRegion Metoda
 
-Wywołuje się, by wyjść z regionu krytycznego dla funkcji Hyper-krytyczny.
+Wywoływane w celu wyjścia z regionu hiperkrytycznym.
 
 ```cpp
 virtual int ExitHyperCriticalRegion() = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Nowa głębokość regionu krytycznego dla funkcji Hyper-lokacja. Regiony krytyczne dla funkcji Hyper są współużytkowane.
+Nowa głębokość regionu hiperkrytycznym. Regiony o znaczeniu krytycznym są reentrant.
 
-## <a name="getcriticalregiontype"></a>IUMSThreadProxy:: GetCriticalRegionType —, Metoda
+## <a name="iumsthreadproxygetcriticalregiontype-method"></a><a name="getcriticalregiontype"></a>IUMSThreadProxy::Metoda GetCriticalRegionType
 
-Zwraca rodzaj regionu krytycznego, w którym znajduje się serwer proxy wątku. Ze względu na to, że regiony krytyczne dla funkcji Hyper są nadzbiorem regionów krytycznych, w przypadku wprowadzenia kodu do regionu krytycznego, a następnie regionu krytycznego dla funkcji Hyper `InsideHyperCriticalRegion` zostaną zwrócone.
+Zwraca rodzaj regionu krytycznego serwera proxy wątku. Ponieważ regiony o znaczeniu hiperkrytycznym są nadzbiorem regionów krytycznych, jeśli kod `InsideHyperCriticalRegion` wszedł w region krytyczny, a następnie region hiperkrytyczny, zostanie zwrócony.
 
 ```cpp
 virtual CriticalRegionType GetCriticalRegionType() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Typ regionu krytycznego, w którym znajduje się serwer proxy wątku.
+Typ regionu krytycznego serwera proxy wątku znajduje się w obrębie.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
+[współbieżność Obszar nazw](concurrency-namespace.md)<br/>
 [IUMSScheduler, struktura](iumsscheduler-structure.md)

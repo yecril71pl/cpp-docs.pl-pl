@@ -1,5 +1,5 @@
 ---
-title: CHtmlEditCtrl Class
+title: Klasa CHtmlEditCtrl
 ms.date: 11/04/2016
 f1_keywords:
 - CHtmlEditCtrl
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-ms.openlocfilehash: 6f5c465a8ec9c8f54af5545e66fb849a08d241af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05063c62e9f7a5d88d3fecde842f979725200f98
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389414"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366840"
 ---
-# <a name="chtmleditctrl-class"></a>CHtmlEditCtrl Class
+# <a name="chtmleditctrl-class"></a>Klasa CHtmlEditCtrl
 
-Oferuje funkcje formantu WebBrowser ActiveX w oknie programu MFC.
+Zapewnia funkcjonalność WebBrowser ActiveX kontroli w oknie MFC.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,29 +38,29 @@ class CHtmlEditCtrl: public CWnd,
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CHtmlEditCtrl::CHtmlEditCtrl](#chtmleditctrl)|Konstruuje `CHtmlEditCtrl` obiektu.|
+|[CHtmlEditCtrl::CHtmlEditCtrl](#chtmleditctrl)|Konstruuje `CHtmlEditCtrl` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CHtmlEditCtrl::Create](#create)|Tworzy formant WebBrowser ActiveX i dołącza je do `CHtmlEditCtrl` obiektu. Ta funkcja automatycznie umieszcza formantu WebBrowser ActiveX do trybu edycji.|
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Pobiera [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) interfejs dokumentu załadowanych obecnie do formantu WebBrowser w nich zawarte.|
-|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Pobiera adres URL do domyślnego dokumentu do załadowania w kontrolce WebBrowser w nich zawarte.|
+|[CHtmlEditCtrl::Utwórz](#create)|Tworzy formant ActiveX przeglądarki WebBrowser `CHtmlEditCtrl` i dołącza go do obiektu. Ta funkcja automatycznie przełącza kontrolki WebBrowser ActiveX w tryb edycji.|
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Pobiera interfejs [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) w dokumencie aktualnie załadowanym w formancie zawierającego webbrowsera.|
+|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Pobiera adres URL do domyślnego dokumentu, aby załadować w kontrolce zawartej przeglądarki WebBrowser.|
 
 ## <a name="remarks"></a>Uwagi
 
-Hostowanej WebBrowser, które kontrolki są automatycznie umieszczane w trybie edycji, po jego utworzeniu.
+Hostowany formant webbrowser jest automatycznie umieszczany w trybie edycji po jego utworzeniu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CHtmlEditCtrlBase](../../mfc/reference/chtmleditctrlbase-class.md)
+[Baza CHtmlEditCtrlBase](../../mfc/reference/chtmleditctrlbase-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 `CHtmlEditCtrl`
 
@@ -68,17 +68,17 @@ Hostowanej WebBrowser, które kontrolki są automatycznie umieszczane w trybie e
 
 **Nagłówek:** afxhtml.h
 
-##  <a name="chtmleditctrl"></a>  CHtmlEditCtrl::CHtmlEditCtrl
+## <a name="chtmleditctrlchtmleditctrl"></a><a name="chtmleditctrl"></a>CHtmlEditCtrl::CHtmlEditCtrl
 
-Konstruuje `CHtmlEditCtrl` obiektu.
+Konstruuje `CHtmlEditCtrl` obiekt.
 
 ```
 CHtmlEditCtrl();
 ```
 
-##  <a name="create"></a>  CHtmlEditCtrl::Create
+## <a name="chtmleditctrlcreate"></a><a name="create"></a>CHtmlEditCtrl::Utwórz
 
-Tworzy formant WebBrowser ActiveX i dołącza je do `CHtmlEditCtrl` obiektu. WebBrowser ActiveX kontroli automatycznie przejdzie do domyślnego dokumentu i następnie jest umieszczany w z trybu edycji przez tę funkcję.
+Tworzy formant ActiveX przeglądarki WebBrowser `CHtmlEditCtrl` i dołącza go do obiektu. Formant WebBrowser ActiveX automatycznie przechodzi do dokumentu domyślnego, a następnie jest umieszczany w trybie edycji przez tę funkcję.
 
 ```
 virtual BOOL Create(
@@ -93,30 +93,30 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *lpszWindowName*<br/>
-Ten parametr jest nieużywany.
+Ten parametr jest nieużywane.
 
-*dwStyle*<br/>
-Ten parametr jest nieużywany.
+*Dwstyle*<br/>
+Ten parametr jest nieużywane.
 
 *Rect*<br/>
 Określa rozmiar i położenie formantu.
 
 *pParentWnd*<br/>
-Określa okno nadrzędne kontrolki. Nie może być równa NULL.
+Określa okno nadrzędne formantu. Nie może być null.
 
-*nID*<br/>
-Określa identyfikator kontrolki.
+*Nid*<br/>
+Określa identyfikator formantu.
 
-*pContext*<br/>
-Ten parametr jest nieużywany.
+*Pcontext*<br/>
+Ten parametr jest nieużywane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.
+Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
 
-##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument
+## <a name="chtmleditctrlgetdhtmldocument"></a><a name="getdhtmldocument"></a>CHtmlEditCtrl::GetDHtmlDocument
 
-Pobiera [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) interfejs dokumentu załadowanych obecnie do zamkniętego formantu WebBrowser
+Pobiera interfejs [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) w dokumencie aktualnie załadowanym w kontrolce zawartej w uprzeglądarce Sieci Web
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
@@ -124,17 +124,17 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ppDocument*<br/>
+*ppDocument (Dokument ppDocument)*<br/>
 Interfejs dokumentu.
 
-##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument
+## <a name="chtmleditctrlgetstartdocument"></a><a name="getstartdocument"></a>CHtmlEditCtrl::GetStartDocument
 
-Pobiera adres URL do domyślnego dokumentu do załadowania w kontrolce WebBrowser w nich zawarte.
+Pobiera adres URL do domyślnego dokumentu, aby załadować w kontrolce zawartej przeglądarki WebBrowser.
 
 ```
 virtual LPCTSTR GetStartDocument();
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

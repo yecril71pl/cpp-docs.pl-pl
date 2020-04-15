@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::ReleaseNotifier::Release method
 - Microsoft::WRL::Module::ReleaseNotifier::ReleaseNotifier, constructor
 ms.assetid: 17249cd1-4d88-42e3-8146-da9e942d12bd
-ms.openlocfilehash: 5fc1b8965bf8bf2f86dd30f2195fa825f85f6d7e
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f314d09c443d0d284e3a821b5c879bfb74baf812
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418287"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371275"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier — Klasa
 
-Wywołuje program obsługi zdarzeń po wydaniu ostatniego obiektu w module.
+Wywołuje program obsługi zdarzeń po zwolnieniu ostatniego obiektu w module.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,21 +32,21 @@ Wywołuje program obsługi zdarzeń po wydaniu ostatniego obiektu w module.
 class ReleaseNotifier;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-Name (Nazwa)                                                                                | Opis
+Nazwa                                                                                | Opis
 ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------
-[Module:: ReleaseNotifier:: ~ ReleaseNotifier](#releasenotifier-tilde-releasenotifier) | Deinicjalizuje bieżące wystąpienie klasy `Module::ReleaseNotifier`.
-[Module:: ReleaseNotifier:: ReleaseNotifier](#releasenotifier-releasenotifier)        | Inicjuje nowe wystąpienie klasy `Module::ReleaseNotifier`.
+[Moduł::ReleaseNotifier::~ReleaseNotifier](#releasenotifier-tilde-releasenotifier) | Deinitializes bieżące wystąpienie `Module::ReleaseNotifier` klasy.
+[Moduł::ReleaseNotifier::ReleaseNotifier](#releasenotifier-releasenotifier)        | Inicjuje nowe wystąpienie klasy `Module::ReleaseNotifier`.
 
 ### <a name="public-methods"></a>Metody publiczne
 
-Name (Nazwa)                                                         | Opis
+Nazwa                                                         | Opis
 ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------
-[Module:: ReleaseNotifier:: Invoke](#releasenotifier-invoke)   | Po zaimplementowaniu program wywołuje procedurę obsługi zdarzeń, gdy ostatni obiekt w module zostanie wydaną.
-[Module::ReleaseNotifier::Release](#releasenotifier-release) | Usuwa bieżący obiekt `Module::ReleaseNotifier`, jeśli obiekt został skonstruowany przy użyciu parametru o **wartości true**.
+[Moduł::ReleaseNotifier::Wywołaj](#releasenotifier-invoke)   | Po zaimplementowaniu wywołuje program obsługi zdarzeń, gdy ostatni obiekt w module jest zwolniony.
+[Module::ReleaseNotifier::Release](#releasenotifier-release) | Usuwa bieżący `Module::ReleaseNotifier` obiekt, jeśli obiekt został skonstruowany z parametrem **true**.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -54,35 +54,35 @@ Name (Nazwa)                                                         | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** module. h
+**Nagłówek:** module.h
 
-**Przestrzeń nazw:** Microsoft:: WRL
+**Obszar nazw:** Microsoft::WRL
 
-## <a name="releasenotifier-tilde-releasenotifier"></a>Module:: ReleaseNotifier:: ~ ReleaseNotifier
+## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-tilde-releasenotifier"></a>Moduł::ReleaseNotifier::~ReleaseNotifier
 
-Deinicjalizuje bieżące wystąpienie klasy `Module::ReleaseNotifier`.
+Deinitializes bieżące wystąpienie `Module::ReleaseNotifier` klasy.
 
 ```cpp
 WRL_NOTHROW virtual ~ReleaseNotifier();
 ```
 
-## <a name="releasenotifier-invoke"></a>Module:: ReleaseNotifier:: Invoke
+## <a name="modulereleasenotifierinvoke"></a><a name="releasenotifier-invoke"></a>Moduł::ReleaseNotifier::Wywołaj
 
-Po zaimplementowaniu program wywołuje procedurę obsługi zdarzeń, gdy ostatni obiekt w module zostanie wydaną.
+Po zaimplementowaniu wywołuje program obsługi zdarzeń, gdy ostatni obiekt w module jest zwolniony.
 
 ```cpp
 virtual void Invoke() = 0;
 ```
 
-## <a name="releasenotifier-release"></a>Module:: ReleaseNotifier:: Release
+## <a name="modulereleasenotifierrelease"></a><a name="releasenotifier-release"></a>Moduł::ReleaseNotifier::Release
 
-Usuwa bieżący obiekt `Module::ReleaseNotifier`, jeśli obiekt został skonstruowany przy użyciu parametru o **wartości true**.
+Usuwa bieżący `Module::ReleaseNotifier` obiekt, jeśli obiekt został skonstruowany z parametrem **true**.
 
 ```cpp
 void Release() throw();
 ```
 
-## <a name="releasenotifier-releasenotifier"></a>Module:: ReleaseNotifier:: ReleaseNotifier
+## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-releasenotifier"></a>Moduł::ReleaseNotifier::ReleaseNotifier
 
 Inicjuje nowe wystąpienie klasy `Module::ReleaseNotifier`.
 
@@ -92,5 +92,5 @@ ReleaseNotifier(bool release) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Usuwanie*<br/>
-`true`, aby usunąć to wystąpienie, gdy wywoływana jest metoda `Release`; nie `false` usunąć tego wystąpienia.
+*Wydania*<br/>
+`true`, aby usunąć `Release` to wystąpienie, gdy wywoływana jest metoda; `false` , aby nie usuwać tego wystąpienia.

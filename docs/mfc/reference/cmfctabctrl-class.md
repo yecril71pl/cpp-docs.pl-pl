@@ -104,16 +104,16 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 74f5c6e0471682a6b96e82cb2f80cc53155866ca
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7c5e2c0f3ad3b40c5dbff619c45ebcd9573892ca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420247"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367365"
 ---
 # <a name="cmfctabctrl-class"></a>Klasa CMFCTabCtrl
 
-Klasa `CMFCTabCtrl` zapewnia funkcjonalność dla kontrolki karta. Kontrolka karta wyświetla okno było dokować z płaskimi lub trójwymiarowymi kartami w górnej lub dolnej części. Na kartach można wyświetlać tekst i obraz oraz zmieniać kolor, gdy jest aktywny.
+Klasa `CMFCTabCtrl` zapewnia funkcjonalność formantu karty. Kontrolka tabulacji wyświetla okno dokowane z płaskimi lub trójwymiarowymi kartami u góry lub u dołu. Karty mogą wyświetlać tekst i obraz oraz zmieniać kolor, gdy są aktywne.
 
 ## <a name="syntax"></a>Składnia
 
@@ -121,138 +121,138 @@ Klasa `CMFCTabCtrl` zapewnia funkcjonalność dla kontrolki karta. Kontrolka kar
 class CMFCTabCtrl : public CMFCBaseTabCtrl
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|`CMFCTabCtrl::CMFCTabCtrl`|Konstruktor domyślny.|
-|`CMFCTabCtrl::~CMFCTabCtrl`|Destruktor.|
+|`CMFCTabCtrl::CMFCTabCtrl`|Domyślny konstruktor.|
+|`CMFCTabCtrl::~CMFCTabCtrl`|Destruktora.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMFCTabCtrl::ActivateMDITab](#activatemditab)|Wyświetla określoną kartę bieżącej kontrolki karty i ustawia fokus na tej karcie.|
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||
-|[CMFCTabCtrl::AutoSizeWindow](#autosizewindow)|Określa, czy struktura ma zmieniać rozmiar obszaru klienta wszystkich okien kontrolek karty, gdy zmienia się element interfejsu użytkownika kontrolki karta.|
-|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|Umożliwia rozliczanie rozmiaru określonego obszaru kart. (Przesłania `CMFCBaseTabCtrl::CalcRectEdit`).|
-|[CMFCTabCtrl:: Create](#create)|Tworzy formant karty i dołącza go do obiektu `CMFCTabCtrl`.|
-|`CMFCTabCtrl::CreateObject`|Używane przez platformę do tworzenia wystąpienia dynamicznego tego typu klasy.|
-|[CMFCTabCtrl::EnableActiveTabCloseButton](#enableactivetabclosebutton)|Pokazuje lub ukrywa przycisk zamknięcia ( **X**) na aktywnej karcie.|
-|[CMFCTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|Włącza lub wyłącza edytowalne etykiety kart. (Przesłania [CMFCBaseTabCtrl:: EnableInPlaceEdit](../../mfc/reference/cmfcbasetabctrl-class.md#enableinplaceedit).)|
-|[CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu)|Zastępuje dwa przyciski, które przenoszą karty okna z przyciskiem otwierającym menu okien z kartami.|
+|[CMFCTabCtrl::AutoSizeWindow](#autosizewindow)|Określa, czy struktura ma zmienić rozmiar obszaru klienta wszystkich okien kontroli kart, gdy zmieni się element interfejsu użytkownika formantu karty.|
+|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|Opróżnia rozmiar określonego obszaru karty. (Przesłania `CMFCBaseTabCtrl::CalcRectEdit`).|
+|[CMFCTabCtrl::Tworzenie](#create)|Tworzy formant karty i dołącza `CMFCTabCtrl` go do obiektu.|
+|`CMFCTabCtrl::CreateObject`|Używany przez platformę do tworzenia dynamicznego wystąpienia tego typu klasy.|
+|[CMFCTabCtrl::EnableActiveTabCloseButton](#enableactivetabclosebutton)|Pokazuje lub ukrywa przycisk Zamknij ( **X**) na aktywnej karcie.|
+|[CMFCTabCtrl::EnableInPlaCeEdytuj](#enableinplaceedit)|Włącza lub wyłącza edytowalne etykiety kart. (Zastępuje [CMFCBaseTabCtrl::EnableInPlaCeEdit](../../mfc/reference/cmfcbasetabctrl-class.md#enableinplaceedit).)|
+|[CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu)|Zastępuje dwa przyciski przewijanie kart okien przyciskiem otwierającym menu okien z kartami.|
 |[CMFCTabCtrl::EnsureVisible](#ensurevisible)|Zapewnia, że karta jest widoczna.|
-|[CMFCTabCtrl::GetDocumentIcon](#getdocumenticon)|Pobiera symbol skojarzony z kartą w menu podręcznym okna z kartami.|
-|[CMFCTabCtrl::GetFirstVisibleTabNum](#getfirstvisibletabnum)|Pobiera indeks pierwszej karty widocznej w bieżącym formancie tabulacji.|
-|[CMFCTabCtrl:: getresizemode](#getresizemode)|Pobiera wartość określającą, jak można zmienić rozmiar bieżącego formantu karty.|
-|[CMFCTabCtrl:: getscrollbar](#getscrollbar)|Pobiera wskaźnik do obiektu paska przewijania, który jest skojarzony z formantem karty.|
-|[CMFCTabCtrl::GetTabArea](#gettabarea)|Pobiera prostokąt ograniczenia obszaru etykiety karty w górnej lub dolnej części kontrolki karta. (Przesłania [CMFCBaseTabCtrl:: GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea).)|
-|`CMFCTabCtrl::GetTabFromPoint`|Pobiera kartę, która zawiera określony punkt. (Przesłania [CMFCBaseTabCtrl:: GetTabFromPoint](../../mfc/reference/cmfcbasetabctrl-class.md#gettabfrompoint).)|
+|[CMFCTabCtrl::GetDocumentIcon](#getdocumenticon)|Pobiera symbol skojarzony z kartą w menu podręcznym okien z kartami.|
+|[CMFCTabCtrl::GetFirstVisibleTabNum](#getfirstvisibletabnum)|Pobiera indeks pierwszej karty, który jest widoczny w bieżącym formancie karty.|
+|[CMFCTabCtrl::GetResizeMode](#getresizemode)|Pobiera wartość, która określa, jak można zmienić jego numer.|
+|[CMFCTabCtrl::Pasek GetScroll](#getscrollbar)|Pobiera wskaźnik do obiektu paska przewijania skojarzonego z formantem karty.|
+|[CMFCTabCtrl::GetTabArea](#gettabarea)|Pobiera prostokąt ograniczający obszaru etykiety karty u góry lub u dołu kontrolki karty. (Zastępuje [CMFCBaseTabCtrl::GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea).)|
+|`CMFCTabCtrl::GetTabFromPoint`|Pobiera kartę, która zawiera określony punkt. (Zastępuje [CMFCBaseTabCtrl::GetTabFromPoint](../../mfc/reference/cmfcbasetabctrl-class.md#gettabfrompoint).)|
 |[CMFCTabCtrl::GetTabMaxWidth](#gettabmaxwidth)|Pobiera maksymalną szerokość karty.|
-|[CMFCTabCtrl::GetTabsHeight](#gettabsheight)|Pobiera wysokość obszaru karty bieżącej kontrolki karta.|
-|[CMFCTabCtrl::GetTabsRect](#gettabsrect)|Pobiera prostokąt, który jest powiązany z obszarem karty bieżącej kontrolki karta. (Przesłania [CMFCBaseTabCtrl:: GetTabsRect](../../mfc/reference/cmfcbasetabctrl-class.md#gettabsrect).)|
-|`CMFCTabCtrl::GetThisClass`|Używane przez platformę do uzyskania wskaźnika do obiektu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , który jest skojarzony z tym typem klasy.|
-|[CMFCTabCtrl::GetWndArea](#getwndarea)|Pobiera granicę obszaru klienckiego bieżącej kontrolki karta.|
-|[CMFCTabCtrl::HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar)|Ukrywa poziomy pasek przewijania, jeśli istnieje, aktywnego okna.|
-|[CMFCTabCtrl::HideInactiveWindow](#hideinactivewindow)|Określa, czy struktura ma wyświetlać nieaktywne okna kontrolek karta.|
-|[CMFCTabCtrl::HideNoTabs](#hidenotabs)|Włącza lub wyłącza rysowanie obszaru kart, jeśli nie ma żadnych widocznych kart.|
-|[CMFCTabCtrl::HideSingleTab](#hidesingletab)|Włącza lub wyłącza rysowanie karty, gdy istnieje jedno okno z kartami. (Przesłania [CMFCBaseTabCtrl:: HideSingleTab](../../mfc/reference/cmfcbasetabctrl-class.md#hidesingletab).)|
-|[CMFCTabCtrl::IsActiveInMDITabGroup](#isactiveinmditabgroup)|Wskazuje, czy bieżąca karta kontrolki karta jest aktywną kartą w grupie kart interfejsu wielu dokumentów.|
-|[CMFCTabCtrl::IsActiveTabBoldFont](#isactivetabboldfont)|Wskazuje, czy tekst aktywnej karty jest wyświetlany przy użyciu pogrubionej czcionki.|
-|[CMFCTabCtrl::IsActiveTabCloseButton](#isactivetabclosebutton)|Wskazuje, czy przycisk Close ( **X**) jest wyświetlany na aktywnej karcie, czy w prawym górnym rogu obszaru kart.|
+|[CMFCTabCtrl::GetTabsHeight](#gettabsheight)|Pobiera wysokość obszaru karty bieżącej kontrolki karty.|
+|[CMFCTabCtrl::GetTabsRect](#gettabsrect)|Pobiera prostokąt, który ogranicza obszar tabulacji bieżącej kontrolki karty. (Zastępuje [CMFCBaseTabCtrl::GetTabsRect](../../mfc/reference/cmfcbasetabctrl-class.md#gettabsrect).)|
+|`CMFCTabCtrl::GetThisClass`|Używany przez platformę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tego typu klasy.|
+|[CMFCTabCtrl::GetWndArea](#getwndarea)|Pobiera granicę obszaru klienta bieżącej kontrolki karty.|
+|[CMFCTabCtrl::HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar)|Ukrywa poziomy pasek przewijania aktywnego okna, jeśli istnieje.|
+|[CMFCTabCtrl::HideInactiveWindow](#hideinactivewindow)|Określa, czy w ramach mają być wyświetlane nieaktywne okna sterujące kartami.|
+|[CMFCTabCtrl::HideNoTabs](#hidenotabs)|Włącza lub wyłącza rysowanie obszaru karty, jeśli nie ma widocznych kart.|
+|[CMFCTabCtrl::HideSingleTab](#hidesingletab)|Włącza lub wyłącza rysowanie karty, gdy istnieje pojedyncze okno z kartami. (Zastępuje [cmfcbasetabctrl::HideSingleTab](../../mfc/reference/cmfcbasetabctrl-class.md#hidesingletab).)|
+|[CMFCTabCtrl::IsActiveInMDITabGroup](#isactiveinmditabgroup)|Wskazuje, czy bieżąca karta formantu karty jest aktywną kartą w grupie kart interfejsu wielu dokumentów.|
+|[CMFCTabCtrl::IsActiveTabBoldFont](#isactivetabboldfont)|Wskazuje, czy tekst aktywnej karty jest wyświetlany przy użyciu czcionki pogrubionej.|
+|[CMFCTabCtrl::IsActiveTabCloseButton](#isactivetabclosebutton)|Wskazuje, czy przycisk Zamknij ( **X**) jest wyświetlany na aktywnej karcie, czy w prawym górnym rogu obszaru karty.|
 |[CMFCTabCtrl::IsDrawFrame](#isdrawframe)|Wskazuje, czy okno z kartami rysuje prostokąt ramki wokół osadzonych okienek.|
-|[CMFCTabCtrl::IsFlatFrame](#isflatframe)|Wskazuje, czy ramka dookoła obszaru karty jest płaska, czy 3W.|
-|[CMFCTabCtrl::IsFlatTab](#isflattab)|Wskazuje, czy wygląd kart w bieżącym formancie karty jest płaski, czy nie.|
+|[CMFCTabCtrl::IsFlatFrame](#isflatframe)|Wskazuje, czy ramka wokół obszaru karty jest płaska, czy 3D.|
+|[CMFCTabCtrl::IsFlatTab](#isflattab)|Wskazuje, czy wygląd kart w bieżącej kontrolki karty jest płaski, czy nie.|
 |[CMFCTabCtrl::IsLeftRightRounded](#isleftrightrounded)|Wskazuje, czy wygląd lewej i prawej strony karty w bieżącym formancie karty jest zaokrąglony.|
-|[CMFCTabCtrl::IsMDITabGroup](#ismditabgroup)|Wskazuje, czy bieżąca kontrolka karty jest zawarta w obszarze klienta okna interfejsu wielu dokumentów.|
-|[CMFCTabCtrl:: isonenote](#isonenotestyle)|Wskazuje, czy bieżąca kontrolka karty jest wyświetlana w stylu programu Microsoft OneNote.|
-|`CMFCTabCtrl::IsPtInTabArea`|Określa, czy punkt znajduje się w obszarze karty. (Przesłania [CMFCBaseTabCtrl:: IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea).)|
-|[CMFCTabCtrl::IsSharedScroll](#issharedscroll)|Wskazuje, czy bieżąca kontrolka karty ma pasek przewijania, który umożliwia przewijanie kart jako grupy.|
-|[CMFCTabCtrl::IsTabDocumentsMenu](#istabdocumentsmenu)|Wskazuje, czy kontrolka karta wyświetla przyciski przewijania, czy przycisk, który wyświetla menu okna z kartami.|
+|[CMFCTabCtrl::IsMDITabGroup](#ismditabgroup)|Wskazuje, czy bieżąca kontrolka karty znajduje się w obszarze klienta okna interfejsu wielu dokumentów.|
+|[CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle)|Wskazuje, czy bieżąca kontrolka karty jest wyświetlana w stylu programu Microsoft OneNote.|
+|`CMFCTabCtrl::IsPtInTabArea`|Określa, czy punkt znajduje się wewnątrz obszaru karty. (Zastępuje [CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea).)|
+|[CMFCTabCtrl::IsSharedScroll](#issharedscroll)|Wskazuje, czy bieżący formant karty ma pasek przewijania, który może przewijać karty jako grupa.|
+|[CMFCTabCtrl::IsTabDocumentsMenu](#istabdocumentsmenu)|Wskazuje, czy na pasku znajdują się przyciski przewijania, czy przycisk, na który wyświetlane jest menu okien z kartami.|
 |[CMFCTabCtrl::IsVS2005Style](#isvs2005style)|Wskazuje, czy karty są wyświetlane w stylu programu Visual Studio .NET 2005.|
-|[CMFCTabCtrl::ModifyTabStyle](#modifytabstyle)|Określa wygląd kart w bieżącym formancie tabulacji.|
-|`CMFCTabCtrl::MoveTab`|Przenosi kartę do innej pozycji tabulacji. (Przesłania [CMFCBaseTabCtrl:: MoveTab](../../mfc/reference/cmfcbasetabctrl-class.md#movetab).)|
-|[CMFCTabCtrl::OnDragEnter](#ondragenter)|Wywoływane przez platformę po pierwszym przeciągnięciu kursora do okna kontrolki karta.|
-|[CMFCTabCtrl::OnDragOver](#ondragover)|Wywoływane przez platformę w trakcie operacji przeciągania, gdy wskaźnik myszy zostanie przesunięty nad oknem elementu docelowego upuszczania. (Przesłania [CMFCBaseTabCtrl:: OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|
-|[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Wyświetla menu podręczne okna z kartami, czeka, aż użytkownik wybierze kartę, i wybierze kartę aktywne.|
-|`CMFCTabCtrl::PreTranslateMessage`|Tłumaczy komunikaty okna przed ich wysłaniem do funkcji systemu Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Przesłania [CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
-|`CMFCTabCtrl::RecalcLayout`|Ponownie oblicza układ wewnętrzny kontrolki karta. (Przesłania [CMFCBaseTabCtrl:: RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|
-|[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Ustawia bieżącą kartę kontrolki karta jako aktywną kartę w grupie karta interfejs wielu dokumentów.|
-|[CMFCTabCtrl::SetActiveTab](#setactivetab)|Aktywuje kartę. (Zastępuje [CMFCBaseTabCtrl:: SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|
-|[CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont)|Włącza lub wyłącza używanie czcionki pogrubionej na aktywnych kartach.|
+|[CMFCTabCtrl::ModifyTabStyle](#modifytabstyle)|Określa wygląd kart w bieżącym formancie karty.|
+|`CMFCTabCtrl::MoveTab`|Przenosi kartę do innej pozycji karty. (Zastępuje [CMFCBaseTabCtrl::MoveTab](../../mfc/reference/cmfcbasetabctrl-class.md#movetab).)|
+|[CMFCTabCtrl::OnDragEnter](#ondragenter)|Wywoływana przez strukturę, gdy kursor jest przeciągany po raz pierwszy do okna formantu karty.|
+|[CMFCTabCtrl::OnDragOver](#ondragover)|Wywoływana przez strukturę podczas operacji przeciągania, gdy mysz jest przenoszona nad oknem docelowym upuszczania. (Zastępuje [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|
+|[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Wyświetla menu podręczne okien z kartami, czeka, aż użytkownik wybierze kartę, a wybrana karta stanie się aktywną kartą.|
+|`CMFCTabCtrl::PreTranslateMessage`|Tłumaczy komunikaty okna, zanim zostaną wysłane do [funkcji TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) systemu Windows. (Zastępuje [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
+|`CMFCTabCtrl::RecalcLayout`|Ponownie oblicza wewnętrzny układ kontrolki karty. (Zastępuje [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|
+|[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Ustawia bieżącą kartę formantu karty jako aktywną kartę w grupie kart interfejsu wielu dokumentów.|
+|[CMFCTabCtrl::SetActiveTab](#setactivetab)|Aktywuje kartę. (Zastępuje [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|
+|[CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont)|Włącza lub wyłącza użycie czcionki pogrubionej na aktywnych kartach.|
 |[CMFCTabCtrl::SetDrawFrame](#setdrawframe)|Włącza lub wyłącza rysowanie prostokąta ramki wokół osadzonego paska.|
-|[CMFCTabCtrl::SetFlatFrame](#setflatframe)|Określa, czy ma zostać narysowana ramka o płaskim lub 3D wokół obszaru karty.|
-|[CMFCTabCtrl:: SetImageList](#setimagelist)|Określa listę obrazów. (Przesłania [CMFCBaseTabCtrl:: SetImageList](../../mfc/reference/cmfcbasetabctrl-class.md#setimagelist).)|
-|[CMFCTabCtrl:: SetResizeMode](#setresizemode)|Określa, w jaki sposób można zmienić rozmiar bieżącego formantu karty, a następnie ponownie wyświetlić formant.|
+|[CMFCTabCtrl::SetFlatFrame](#setflatframe)|Określa, czy wokół obszaru karty ma być rysowana ramka płaska czy 3D.|
+|[CMFCTabCtrl::SetImageList](#setimagelist)|Określa listę obrazów. (Zastępuje [CMFCBaseTabCtrl::SetImageList](../../mfc/reference/cmfcbasetabctrl-class.md#setimagelist).)|
+|[CMFCTabCtrl::SetResizeMode](#setresizemode)|Określa, w jaki sposób można zmienić jego numer, a następnie ponownie wyświetlić formant.|
 |[CMFCTabCtrl::SetTabMaxWidth](#settabmaxwidth)|Określa maksymalną szerokość karty w oknie z kartami.|
-|[CMFCTabCtrl::StopResize](#stopresize)|Kończy bieżącą operację zmiany rozmiaru w kontrolce karty.|
-|`CMFCTabCtrl::SwapTabs`|Zamienia parę kart. (Przesłania [CMFCBaseTabCtrl:: SwapTabs](../../mfc/reference/cmfcbasetabctrl-class.md#swaptabs).)|
-|[CMFCTabCtrl::SynchronizeScrollBar](#synchronizescrollbar)|Rysuje poziomy pasek przewijania kontrolki karta, która wyświetla karty płaskie.|
+|[CMFCTabCtrl::StopResize](#stopresize)|Kończy bieżącą operację zmiany rozmiaru na formancie karty.|
+|`CMFCTabCtrl::SwapTabs`|Zamienia parę kart. (Zastępuje [CMFCBaseTabCtrl::SwapTabs](../../mfc/reference/cmfcbasetabctrl-class.md#swaptabs).)|
+|[CMFCTabCtrl::SynchronizeScrollBar](#synchronizescrollbar)|Rysuje poziomy pasek przewijania na kontrolce kart, która wyświetla płaskie karty.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CMFCTabCtrl:: m_bEnableActivate](#m_benableactivate)|Uniemożliwia aktywnemu widokowi utratę fokusu, gdy nowa karta jest wstawiona i włączona.|
+|[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|Zapobiega utracie fokusu w widoku aktywnym po wstawieniu i włączeniu nowej karty.|
 
 ## <a name="remarks"></a>Uwagi
 
 Klasa `CMFCTabCtrl` obsługuje:
 
-- Style kontrolek karta, które obejmują 3D, Flat i Flat z udostępnionym poziomym paskiem przewijania.
+- Style sterowania tabulatorami, które zawierają 3D, płaskie i płaskie z udostępnionym poziomym paskiem przewijania.
 
 - Karty znajdujące się u góry lub u dołu okna.
 
-- Karty, na których jest wyświetlany tekst, obrazy lub tekst i obrazy.
+- Karty wyświetlane w tekście, obrazach lub tekście i obrazach.
 
 - Karty, które zmieniają kolor, gdy karta jest aktywna.
 
-- Zmiany rozmiaru obramowania dla kart z możliwością dopasowania.
+- Zmiany rozmiaru obramowania dla regulowanych kart.
 
-- Odłączalne okna z kartami.
+- Odłączane okna z kartami.
 
-Klasy `CMFCTabCtrl` można używać z oknem dialogowym, ale jest przeznaczona dla aplikacji korzystających z dokowania słupków kontrolnych, takich jak program Microsoft Excel i program Visual Studio. Aby uzyskać więcej informacji, zobacz [Klasa CDockablePane](../../mfc/reference/cdockablepane-class.md).
+Klasa `CMFCTabCtrl` może być używana z oksem w oknie dialogowym, ale jest przeznaczona dla aplikacji korzystających z pasków sterowania dokowania, takich jak Microsoft Excel i Visual Studio. Aby uzyskać więcej informacji, zobacz [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).
 
-Wykonaj następujące kroki, aby dodać do aplikacji formant o zmiennym rozmiarze i dokowania:
+Wykonaj następujące kroki, aby dodać kontrolkę karty o zmiennym rozmiarze, dokowania w aplikacji:
 
-1. Utwórz wystąpienie [klasy CTabbedPane](../../mfc/reference/ctabbedpane-class.md).
+1. Utwórz [wystąpienie klasy CTabbedPane](../../mfc/reference/ctabbedpane-class.md).
 
-1. Wywołanie [CDockablePane:: Create](../../mfc/reference/cdockablepane-class.md#create).
+1. Wywołanie [CDockablePane::Create](../../mfc/reference/cdockablepane-class.md#create).
 
-1. Aby dodać nowe karty, użyj [CBaseTabbedPane:: AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) lub [CMFCBaseTabCtrl:: InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) .
+1. Użyj [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) lub [CMFCBaseTabCtrl::InsertTab,](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) aby dodać nowe karty.
 
-1. Wywołaj [CBasePane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) , aby bieżąca kontrolka karta dokująca mogła zostać zadokowany w oknie głównej ramki.
+1. Wywołanie [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) tak, że bieżąca kontrolka karty dokowania może zadokować w oknie ramki głównej.
 
-1. Wywołaj [CFrameWndEx::D ockpane](../../mfc/reference/cframewndex-class.md#dockpane) , aby zadokować okno z kartami w głównej ramce.
+1. Wywołanie [CFrameWndEx::DockPane](../../mfc/reference/cframewndex-class.md#dockpane) do dokowania okna z kartami w ramce głównej.
 
-Aby zapoznać się z przykładem sposobu tworzenia okna z kartami jako dokowania paska sterowania, zobacz [Klasa CTabbedPane](../../mfc/reference/ctabbedpane-class.md). Aby użyć `CMFCTabCtrl` jako kontrolki niedokowanej, Utwórz obiekt `CMFCTabCtrl`, a następnie Wywołaj [CMFCTabCtrl:: Create](#create).
+Na przykład, jak utworzyć okno z kartami jako pasek sterowania dokowania, zobacz [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md). Aby `CMFCTabCtrl` użyć jako formantu niedościskowego, utwórz `CMFCTabCtrl` obiekt, a następnie wywołanie [cmfctabctrl::Create](#create).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)
+[Cmfcbasetabctrl](../../mfc/reference/cmfcbasetabctrl-class.md)
 
-[CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md)
+[Cmfctabctrl](../../mfc/reference/cmfctabctrl-class.md)
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób używania różnych metod w klasie `CMFCTabCtrl` do konfigurowania obiektu `CMFCTabCtrl`. W przykładzie wyjaśniono, jak dodać kartę, wyświetlić przycisk Zamknij na aktywnej karcie, włączyć edytowalne etykiety kart i wyświetlić podręczny menu etykiet okna z kartami. Ten przykład jest częścią [przykładu kolekcji Stanów](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie pokazano, jak `CMFCTabCtrl` używać różnych `CMFCTabCtrl` metod w klasie, aby skonfigurować obiekt. W przykładzie wyjaśniono, jak dodać kartę, wyświetlić przycisk Zamknij na aktywnej karcie, włączyć edytowalne etykiety kart i wyświetlić wyskakujące menu etykiet okien z kartami. W tym przykładzie jest częścią [próbki kolekcji stanu](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#3](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxtabctrl. h
+**Nagłówek:** afxtabctrl.h
 
-##  <a name="activatemditab"></a>CMFCTabCtrl::ActivateMDITab
+## <a name="cmfctabctrlactivatemditab"></a><a name="activatemditab"></a>CMFCTabCtrl::ActivateMDITab
 
 Wyświetla określoną kartę bieżącej kontrolki karty i ustawia fokus na tej karcie.
 
@@ -262,26 +262,26 @@ void ActivateMDITab(int nTab = -1);
 
 ### <a name="parameters"></a>Parametry
 
-*nTab*<br/>
-podczas Indeks (liczony od zera) karty, który ma być wyświetlany, lub-1 w celu określenia aktualnie aktywnej karty.
+*nNata*<br/>
+[w] Indeks od zera karty do wyświetlenia lub -1, aby określić aktualnie aktywną kartę.
 
-##  <a name="allowdestroyemptytabbedpane"></a>CMFCTabCtrl::AllowDestroyEmptyTabbedPane
+## <a name="cmfctabctrlallowdestroyemptytabbedpane"></a><a name="allowdestroyemptytabbedpane"></a>CMFCTabCtrl::AllowDestroyEmptyTabbedPane
 
-Aby uzyskać więcej szczegółów, zobacz kod źródłowy znajdujący się w folderze **VC\\atlmfc\\src\\MFC** w instalacji programu Visual Studio.
+Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w folderze **vc\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
 
 ```
 virtual BOOL AllowDestroyEmptyTabbedPane() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zawsze prawda.
+Zawsze wartość TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="autosizewindow"></a>CMFCTabCtrl::AutoSizeWindow
+## <a name="cmfctabctrlautosizewindow"></a><a name="autosizewindow"></a>CMFCTabCtrl::AutoSizeWindow
 
-Określa, czy struktura ma zmieniać rozmiar obszaru klienta wszystkich okien kontrolek karty, gdy zmienia się element interfejsu użytkownika kontrolki karta.
+Określa, czy struktura ma zmienić rozmiar obszaru klienta wszystkich okien kontroli kart, gdy zmieni się element interfejsu użytkownika formantu karty.
 
 ```
 void AutoSizeWindow(BOOL bAutoSize = TRUE);
@@ -290,13 +290,13 @@ void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bAutoSize*<br/>
-podczas Wartość TRUE, aby automatycznie zmieniać rozmiar okien kontrolek karty; w przeciwnym razie FALSE. Wartość domyślna to TRUE.
+[w] TRUE, aby automatycznie zmienić rozmiar okien kontrolnych kart; w przeciwnym razie FALSE. Wartością domyślną jest PRAWDA.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="create"></a>CMFCTabCtrl:: Create
+## <a name="cmfctabctrlcreate"></a><a name="create"></a>CMFCTabCtrl::Tworzenie
 
-Tworzy formant karty i dołącza go do obiektu `CMFCTabCtrl`.
+Tworzy formant karty i dołącza `CMFCTabCtrl` go do obiektu.
 
 ```
 BOOL Create(
@@ -310,59 +310,59 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*stylów*<br/>
-podczas Styl kontrolki karta. Aby uzyskać więcej informacji, zobacz uwagi.
+* — styl*<br/>
+[w] Styl kontrolki karty. Aby uzyskać więcej informacji zobacz uwagi.
 
-*cinania*<br/>
-podczas Prostokąt, który jest powiązany z kontrolką karty.
+*Rect*<br/>
+[w] Prostokąt, który ogranicza formant karty.
 
 *pParentWnd*<br/>
-podczas Wskaźnik do okna nadrzędnego. Nie może mieć wartości NULL.
+[w] Wskaźnik do okna nadrzędnego. Nie może być null.
 
-*nID*<br/>
-podczas Identyfikator kontrolki karta.
+*Nid*<br/>
+[w] Identyfikator kontrolki karty.
 
-*location*<br/>
-podczas Lokalizacja kart. Wartość domyślna to LOCATION_BOTTOM. Aby uzyskać więcej informacji, zobacz uwagi.
+*Lokalizacji*<br/>
+[w] Lokalizacja kart. Wartość domyślna to LOCATION_BOTTOM. Aby uzyskać więcej informacji zobacz uwagi.
 
 *bCloseBtn*<br/>
-podczas TRUE, aby wyświetlić przycisk Zamknij na karcie; w przeciwnym razie FALSE. Wartość domyślna to FALSE.
+[w] PRAWDA, aby wyświetlić przycisk zamknięcia na karcie; w przeciwnym razie FALSE. Wartością domyślną jest FAŁSZ.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli powodzenie; w przeciwnym razie FALSE.
+PRAWDA, jeśli się powiedzie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-W poniższej tabeli opisano wartości, które można określić dla parametru *Style* .
+W poniższej tabeli opisano wartości, które można określić dla parametru *style.*
 
 |Styl|Opis|
 |-----------|-----------------|
-|STYLE_3D|Tworzy formant karty przy użyciu trójwymiarowego wyglądu.|
-|STYLE_FLAT|Tworzy kontrolkę karta z płaskimi kartami.|
-|STYLE_FLAT_SHARED_HORZ_SCROLL|Tworzy kontrolkę karta z płaskimi kartami i pasek przewijania, który może przewinąć karty, jeśli są przycinane przez okno nadrzędne.|
-|STYLE_3D_ONENOTE|Tworzy kontrolkę karta w stylu programu Microsoft OneNote.|
-|STYLE_3D_VS2005|Tworzy kontrolkę karta w stylu Microsoft Visual Studio 2005.|
-|STYLE_3D_ROUNDED|Tworzy kontrolkę karta z zaokrąglonymi kartami w stylu Microsoft Visual Studio 2005.|
-|STYLE_3D_ROUNDED_SCROLL|Tworzy kontrolkę karta z zaokrąglonymi kartami i przyciskami przewijania w stylu Microsoft Visual Studio 2005.|
+|STYLE_3D|Tworzy kontrolkę kart o wyglądzie trójwymiarowym.|
+|STYLE_FLAT|Tworzy kontrolkę kart z płaskimi kartami.|
+|STYLE_FLAT_SHARED_HORZ_SCROLL|Tworzy kontrolkę tabulacji z płaskimi kartami i pasek przewijania, który może przewijać karty, jeśli są przycinane przez okno nadrzędne.|
+|STYLE_3D_ONENOTE|Tworzy kontrolkę karty w stylu programu Microsoft OneNote.|
+|STYLE_3D_VS2005|Tworzy kontrolkę karty w stylu programu Microsoft Visual Studio 2005.|
+|STYLE_3D_ROUNDED|Tworzy kontrolkę karty z zaokrąglone karty w stylu programu Microsoft Visual Studio 2005.|
+|STYLE_3D_ROUNDED_SCROLL|Tworzy kontrolkę karty z zaokrąglone karty i przyciski przewijania w stylu programu Microsoft Visual Studio 2005.|
 
-W poniższej tabeli wymieniono wartości, które można określić dla parametru *Location* .
+W poniższej tabeli wymieniono wartości, które można określić dla parametru *lokalizacji.*
 
 |Lokalizacja|Opis|
 |--------------|-----------------|
-|LOCATION_BOTTOM|Karty znajdują się u dołu kontrolki karta.|
-|LOCATION_TOP|Karty znajdują się u góry kontrolki karta.|
+|LOCATION_BOTTOM|Karty znajdują się w dolnej części kontrolki kart.|
+|LOCATION_TOP|Karty znajdują się w górnej części kontrolki karty.|
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób używania metody `Create` w klasie `CMFCTabCtrl`. Ten przykład jest częścią [przykładu kolekcji Stanów](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie pokazano, jak używać `Create` metody w `CMFCTabCtrl` klasie. W tym przykładzie jest częścią [próbki kolekcji stanu](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#2](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]
 
-##  <a name="calcrectedit"></a>CMFCTabCtrl::CalcRectEdit
+## <a name="cmfctabctrlcalcrectedit"></a><a name="calcrectedit"></a>CMFCTabCtrl::CalcRectEdit
 
-Umożliwia rozliczanie rozmiaru określonego obszaru kart.
+Opróżnia rozmiar określonego obszaru karty.
 
 ```
 virtual void CalcRectEdit(CRect& rectEdit);
@@ -371,15 +371,15 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ### <a name="parameters"></a>Parametry
 
 *rectEdit*<br/>
-podczas Prostokąt określający obszar karty.
+[w] Prostokąt określający obszar karty.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana, gdy zmienisz etykietę karty. Ta metoda umożliwia rozliczenie lewej i prawej krawędzi określonego prostokąta o jedną połowę bieżącej wysokości karty i rozliczanie górnego i dolnego na jedną jednostkę.
+Ta metoda jest wywoływana po zmianie etykiety karty. Ta metoda opróżnia lewą i prawą stronę określonego prostokąta o połowę bieżącej wysokości karty i opróżnia górną i dolną część o jedną jednostkę.
 
-##  <a name="enableactivetabclosebutton"></a>CMFCTabCtrl::EnableActiveTabCloseButton
+## <a name="cmfctabctrlenableactivetabclosebutton"></a><a name="enableactivetabclosebutton"></a>CMFCTabCtrl::EnableActiveTabCloseButton
 
-Pokazuje lub ukrywa przycisk zamknięcia ( **X**) na aktywnej karcie.
+Pokazuje lub ukrywa przycisk Zamknij ( **X**) na aktywnej karcie.
 
 ```
 void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
@@ -387,10 +387,10 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bEnable*<br/>
-podczas TRUE, aby wyświetlić przycisk Zamknij na aktywnej karcie; Wartość FALSE, aby wyświetlić przycisk Zamknij w prawym górnym rogu obszaru kart. Wartość domyślna to TRUE.
+*bWłaszą*<br/>
+[w] PRAWDA, aby wyświetlić przycisk Zamknij na aktywnej karcie; FAŁSZ, aby wyświetlić przycisk Zamknij w prawym górnym rogu obszaru karty. Wartością domyślną jest PRAWDA.
 
-##  <a name="enableinplaceedit"></a>CMFCTabCtrl::EnableInPlaceEdit
+## <a name="cmfctabctrlenableinplaceedit"></a><a name="enableinplaceedit"></a>CMFCTabCtrl::EnableInPlaCeEdytuj
 
 Włącza lub wyłącza edytowalne etykiety kart.
 
@@ -400,14 +400,14 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Parametry
 
-*bEnable*<br/>
-podczas PRAWDA, aby włączyć edytowalne etykiety kart; Wartość FALSE powoduje wyłączenie etykiet tabulatorów edytowalnych.
+*bWłaszą*<br/>
+[w] PRAWDA, aby włączyć edytowalne etykiety kart; FALSE, aby wyłączyć edytowalne etykiety kart.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="enabletabdocumentsmenu"></a>CMFCTabCtrl::EnableTabDocumentsMenu
+## <a name="cmfctabctrlenabletabdocumentsmenu"></a><a name="enabletabdocumentsmenu"></a>CMFCTabCtrl::EnableTabDocumentsMenu
 
-Przełącza między interfejsem użytkownika, który używa dwóch przycisków do przewijania kart okna i interfejsu, który wyświetla menu podręczne okna z kartami.
+Przełącza między interfejsem użytkownika, który używa dwóch przycisków do przewijania kart okna i interfejsu, który wyświetla wyskakujące menu okien z kartami.
 
 ```
 void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
@@ -415,14 +415,14 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bEnable*<br/>
-podczas TRUE, aby wyświetlić podręczny menu etykiet okna z kartami; Wartość FALSE, aby wyświetlić przyciski przewijania do przodu i do tyłu. Wartość domyślna to TRUE.
+*bWłaszą*<br/>
+[w] PRAWDA, aby wyświetlić wyskakujące menu etykiet okien z kartami; FALSE, aby wyświetlić przyciski przewijania do przodu i do tyłu. Wartością domyślną jest PRAWDA.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy użytkownik kliknie etykietę karty, struktura wyświetli odpowiednie okno z kartami. Jeśli etykieta karty jest widoczna, okno z kartami jest otwierane bez zmiany jego położenia. Jeśli użytkownik wybierze dokument z menu podręcznego, a odpowiednie okno z kartami jest wyłączone, okno z kartami będzie pierwszą kartą.
+Gdy użytkownik kliknie etykietę karty, w ramach zostanie wyświetlone odpowiednie okno z kartami. Jeśli etykieta karty jest widoczna, okno z kartami jest otwierane bez zmiany jego położenia. Jeśli użytkownik wybierze dokument z wyskakującego menu, a odpowiednie okno z kartami jest wyłączone z ekranu, okno z kartami staje się pierwszą kartą.
 
-##  <a name="ensurevisible"></a>CMFCTabCtrl::EnsureVisible
+## <a name="cmfctabctrlensurevisible"></a><a name="ensurevisible"></a>CMFCTabCtrl::EnsureVisible
 
 Zapewnia, że karta jest widoczna.
 
@@ -432,20 +432,20 @@ virtual BOOL EnsureVisible(int iTab);
 
 ### <a name="parameters"></a>Parametry
 
-*iTab*<br/>
-podczas Indeks karty (liczony od zera).
+*Itab*<br/>
+[w] Indeks od zera karty.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli zakończyła się pomyślnie; Wartość FALSE, jeśli indeks parametru *ITAB* jest nieprawidłowy.
+PRAWDA, jeśli się powiedzie; FAŁSZ, jeśli indeks parametru *iTab* jest nieprawidłowy.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody, aby zagwarantować, że określona karta jest widoczna. Kontrolka karta będzie przewinąć w razie potrzeby.
+Ta metoda służy do zagwarantowania, że określona karta jest widoczna. Formant karty przewinie się, jeśli jest to wymagane.
 
-##  <a name="getdocumenticon"></a>CMFCTabCtrl::GetDocumentIcon
+## <a name="cmfctabctrlgetdocumenticon"></a><a name="getdocumenticon"></a>CMFCTabCtrl::GetDocumentIcon
 
-Pobiera obraz skojarzony z kartą w podręcznym menu okna z kartami.
+Pobiera obraz skojarzony z kartą w wyskakującym menu okien z kartami.
 
 ```
 static HICON __stdcall GetDocumentIcon(UINT nCmdID);
@@ -453,60 +453,60 @@ static HICON __stdcall GetDocumentIcon(UINT nCmdID);
 
 ### <a name="parameters"></a>Parametry
 
-*nCmdID*<br/>
-podczas Identyfikator polecenia karty w menu podręcznym okna z kartami.
+*nCmdID (identyfikator nCmdID)*<br/>
+[w] Identyfikator polecenia karty w wyskakującym menu okien z kartami.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Uchwyt obrazu mapy bitowej.
 
-##  <a name="getfirstvisibletabnum"></a>CMFCTabCtrl::GetFirstVisibleTabNum
+## <a name="cmfctabctrlgetfirstvisibletabnum"></a><a name="getfirstvisibletabnum"></a>CMFCTabCtrl::GetFirstVisibleTabNum
 
-Pobiera indeks pierwszej karty widocznej w bieżącym formancie tabulacji.
+Pobiera indeks pierwszej karty, który jest widoczny w bieżącym formancie karty.
 
 ```
 virtual int GetFirstVisibleTabNum() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Indeks (liczony od zera) karty w kontrolce karty.
+Indeks od zera karty w formancie karty.
 
 ### <a name="remarks"></a>Uwagi
 
-Tej metody należy użyć tylko wtedy, gdy kontrolka karta jest wyświetlana w stylu programu Microsoft OneNote. Aby określić styl, użyj metody [CMFCTabCtrl:: isonenote](#isonenotestyle) .
+Tej metody należy używać tylko wtedy, gdy formant karty jest wyświetlany w stylu programu Microsoft OneNote. Użyj [CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle) metody, aby określić styl.
 
-##  <a name="getresizemode"></a>CMFCTabCtrl:: getresizemode
+## <a name="cmfctabctrlgetresizemode"></a><a name="getresizemode"></a>CMFCTabCtrl::GetResizeMode
 
-Pobiera wartość określającą, jak można zmienić rozmiar bieżącego formantu karty.
+Pobiera wartość, która określa, jak można zmienić jego numer.
 
 ```
 ResizeMode GetResizeMode() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Jedna z wartości wyliczenia `CMFCTabCtrl::ResizeMode`, która określa, jak można zmienić rozmiar kontrolki karty. Listę możliwych wartości można znaleźć w sekcji uwagi metody [CMFCTabCtrl:: SetResizeMode](#setresizemode) .
+Jedną z `CMFCTabCtrl::ResizeMode` wartości wyliczenia, która określa, jak formant karty można zmienić. Aby uzyskać listę możliwych wartości, zobacz uwagi sekcji [CMFCTabCtrl::SetResizeMode](#setresizemode) metody.
 
-##  <a name="getscrollbar"></a>CMFCTabCtrl:: getscrollbar
+## <a name="cmfctabctrlgetscrollbar"></a><a name="getscrollbar"></a>CMFCTabCtrl::Pasek GetScroll
 
-Pobiera wskaźnik do obiektu paska przewijania, który jest skojarzony z formantem karty.
+Pobiera wskaźnik do obiektu paska przewijania skojarzonego z formantem karty.
 
 ```
 CScrollBar* GetScrollBar();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do obiektu ScrollBar lub wartość NULL, jeśli formant karty nie został utworzony przy użyciu stylu STYLE_FLAT_SHARED_HORZ_SCROLL.
+Wskaźnik do obiektu paska przewijania lub null, jeśli kontrolka karty nie została utworzona przy użyciu stylu STYLE_FLAT_SHARED_HORZ_SCROLL.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody, aby uzyskać dostęp do osadzonego paska przewijania kontrolki karta. Obiekt paska przewijania jest tworzony tylko wtedy, gdy formant karty ma styl STYLE_FLAT_SHARED_HORZ_SCROLL.
+Ta metoda służy do uzyskiwania dostępu do osadzonego paska przewijania formantu karty. Obiekt paska przewijania jest tworzony tylko wtedy, gdy formant karty ma styl STYLE_FLAT_SHARED_HORZ_SCROLL.
 
-##  <a name="gettabarea"></a>CMFCTabCtrl::GetTabArea
+## <a name="cmfctabctrlgettabarea"></a><a name="gettabarea"></a>CMFCTabCtrl::GetTabArea
 
-Pobiera prostokąt ograniczenia obszaru etykiety karty w górnej lub dolnej części kontrolki karta.
+Pobiera prostokąt ograniczający obszaru etykiety karty u góry lub u dołu kontrolki karty.
 
 ```
 void GetTabArea(
@@ -516,17 +516,17 @@ void GetTabArea(
 
 ### <a name="parameters"></a>Parametry
 
-*rectTabAreaTop*<br/>
-określoną Gdy ta metoda zwraca, to odwołanie zawiera prostokąt, który jest powiązany z górnym obszarem etykiety karty. Prostokąt jest we współrzędnych klienta. To odwołanie jest puste, jeśli nie ma żadnego obszaru etykiety karty w górnej części kontrolki karta.
+*reectTabAreaTop*<br/>
+[na zewnątrz] Gdy ta metoda zwraca, to odwołanie zawiera prostokąt, który ogranicza górny obszar etykiety karty. Prostokąt znajduje się we współrzędnych klienta. To odwołanie jest puste, jeśli w górnej części kontrolki karty nie istnieje żaden obszar etykiety karty.
 
-*rectTabAreaBottom*<br/>
-określoną Gdy ta metoda zwraca, to odwołanie zawiera prostokąt, który jest powiązany z dolnym obszarem etykiety karty. Prostokąt jest we współrzędnych klienta. To odwołanie jest puste, jeśli nie istnieje obszar etykiety karty w dolnej części kontrolki karta.
+*pectTabAreaBottom*<br/>
+[na zewnątrz] Gdy ta metoda zwraca, to odwołanie zawiera prostokąt, który ogranicza dolny obszar etykiety karty. Prostokąt znajduje się we współrzędnych klienta. To odwołanie jest puste, jeśli u dołu formantu karty nie istnieje żaden obszar etykiety karty.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody, aby określić rozmiar i położenie obszaru karty w oknie z kartami.
+Ta metoda służy do określania rozmiaru i położenia obszaru karty w oknie z kartami.
 
-##  <a name="gettabmaxwidth"></a>CMFCTabCtrl::GetTabMaxWidth
+## <a name="cmfctabctrlgettabmaxwidth"></a><a name="gettabmaxwidth"></a>CMFCTabCtrl::GetTabMaxWidth
 
 Pobiera maksymalną szerokość karty.
 
@@ -534,29 +534,29 @@ Pobiera maksymalną szerokość karty.
 int GetTabMaxWidth() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Maksymalna szerokość karty (w pikselach). Jeśli wartość zwracana to 0, Szerokość karty jest nieograniczona.
+Maksymalna szerokość karty w pikselach. Jeśli zwracana wartość wynosi 0, szerokość karty jest nieograniczona.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj metody [CMFCTabCtrl:: SetTabMaxWidth](#settabmaxwidth) , aby ustawić maksymalną szerokość tabulacji.
+Użyj [metody CMFCTabCtrl::SetTabMaxWidth,](#settabmaxwidth) aby ustawić maksymalną szerokość karty.
 
-##  <a name="gettabsheight"></a>CMFCTabCtrl::GetTabsHeight
+## <a name="cmfctabctrlgettabsheight"></a><a name="gettabsheight"></a>CMFCTabCtrl::GetTabsHeight
 
-Pobiera wysokość obszaru karty bieżącej kontrolki karta.
+Pobiera wysokość obszaru karty bieżącej kontrolki karty.
 
 ```
 virtual int GetTabsHeight() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wysokość obszaru karty, jeśli dowolna karta jest widoczna lub zero, jeśli żadna karta nie jest widoczna.
+Wysokość obszaru karty, jeśli widoczna jest dowolna karta, lub zero, jeśli nie jest widoczna żadna karta.
 
-##  <a name="gettabsrect"></a>CMFCTabCtrl::GetTabsRect
+## <a name="cmfctabctrlgettabsrect"></a><a name="gettabsrect"></a>CMFCTabCtrl::GetTabsRect
 
-Pobiera prostokąt, który jest powiązany z obszarem karty bieżącej kontrolki karta.
+Pobiera prostokąt, który ogranicza obszar tabulacji bieżącej kontrolki karty.
 
 ```
 virtual void GetTabsRect(CRect& rect) const;
@@ -564,12 +564,12 @@ virtual void GetTabsRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*cinania*<br/>
-określoną Gdy ta metoda zwraca, parametr *Rect* zawiera prostokąt, który jest powiązany z obszarem karty.
+*Rect*<br/>
+[na zewnątrz] Gdy ta metoda zwraca, parametr *rect* zawiera prostokąt, który ogranicza obszar karty.
 
-##  <a name="getwndarea"></a>CMFCTabCtrl::GetWndArea
+## <a name="cmfctabctrlgetwndarea"></a><a name="getwndarea"></a>CMFCTabCtrl::GetWndArea
 
-Pobiera granicę obszaru klienckiego bieżącej kontrolki karta.
+Pobiera granicę obszaru klienta bieżącej kontrolki karty.
 
 ```
 void GetWndArea(CRect& rect) const;
@@ -577,14 +577,14 @@ void GetWndArea(CRect& rect) const;
 
 ### <a name="parameters"></a>Parametry
 
-*cinania*<br/>
-[in. out] Gdy ta metoda zwraca, ten parametr zawiera prostokąt, który jest powiązany z bieżącą kontrolką karty.
+*Rect*<br/>
+[w, na zewnątrz] Gdy ta metoda zwraca, ten parametr zawiera prostokąt, który ogranicza bieżącą kontrolkę karty.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="hideactivewindowhorzscrollbar"></a>CMFCTabCtrl::HideActiveWindowHorzScrollBar
+## <a name="cmfctabctrlhideactivewindowhorzscrollbar"></a><a name="hideactivewindowhorzscrollbar"></a>CMFCTabCtrl::HideActiveWindowHorzScrollBar
 
-Ukrywa poziomy pasek przewijania, jeśli istnieje, w oknie aktywnym.
+Ukrywa poziomy pasek przewijania, jeśli istnieje, w aktywnym oknie.
 
 ```
 void HideActiveWindowHorzScrollBar();
@@ -592,11 +592,11 @@ void HideActiveWindowHorzScrollBar();
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody, aby zapobiec miganiu formantu karty, gdy użytkownik przełączy się między stronami kontrolki tabulacji.
+Ta metoda umożliwia zapobieganie miganiu kontrolki kart, gdy użytkownik przełącza się między stronami sterującymi kartami.
 
-##  <a name="hideinactivewindow"></a>CMFCTabCtrl::HideInactiveWindow
+## <a name="cmfctabctrlhideinactivewindow"></a><a name="hideinactivewindow"></a>CMFCTabCtrl::HideInactiveWindow
 
-Określa, czy struktura ma wyświetlać nieaktywne okna formantu karty.
+Określa, czy w ramach są wyświetlane nieaktywne okna kontrolne kart.
 
 ```
 void HideInactiveWindow(BOOL bHide = TRUE);
@@ -604,14 +604,14 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bHide*<br/>
-podczas Ma wartość TRUE, aby nie wyświetlać nieaktywnego okna; Wartość FALSE, aby wyświetlić nieaktywne okno. Wartość domyślna to TRUE.
+*bHide (ur.*<br/>
+[w] PRAWDA, aby nie wyświetlać nieaktywnego okna; FAŁSZ, aby wyświetlić nieaktywne okno. Wartością domyślną jest PRAWDA.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="hidenotabs"></a>CMFCTabCtrl::HideNoTabs
+## <a name="cmfctabctrlhidenotabs"></a><a name="hidenotabs"></a>CMFCTabCtrl::HideNoTabs
 
-Włącza lub wyłącza rysowanie obszaru kart, jeśli nie ma żadnych widocznych kart.
+Włącza lub wyłącza rysowanie obszaru karty, jeśli nie ma widocznych kart.
 
 ```
 void HideNoTabs(BOOL bHide=TRUE);
@@ -619,12 +619,12 @@ void HideNoTabs(BOOL bHide=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bHide*<br/>
-podczas Wartość TRUE, aby włączyć rysowanie obszaru kart; Wartość FALSE powoduje wyłączenie rysowania. Wartość domyślna to TRUE.
+*bHide (ur.*<br/>
+[w] PRAWDA, aby włączyć rysowanie obszaru karty; FALSE, aby wyłączyć rysowanie. Wartością domyślną jest PRAWDA.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="hidesingletab"></a>CMFCTabCtrl::HideSingleTab
+## <a name="cmfctabctrlhidesingletab"></a><a name="hidesingletab"></a>CMFCTabCtrl::HideSingleTab
 
 Włącza lub wyłącza rysowanie kart, jeśli istnieje pojedyncze okno z kartami.
 
@@ -634,58 +634,58 @@ virtual void HideSingleTab(BOOL bHide=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bHide*<br/>
-podczas Wartość TRUE, aby nie rysować karty dla jednego okna z kartami; Wartość FALSE, aby narysować jedną kartę. Wartość domyślna to TRUE.
+*bHide (ur.*<br/>
+[w] PRAWDA, aby nie rysować karty dla pojedynczego okna z kartami; FAŁSZ, aby narysować jedną kartę. Wartością domyślną jest PRAWDA.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isactiveinmditabgroup"></a>CMFCTabCtrl::IsActiveInMDITabGroup
+## <a name="cmfctabctrlisactiveinmditabgroup"></a><a name="isactiveinmditabgroup"></a>CMFCTabCtrl::IsActiveInMDITabGroup
 
-Wskazuje, czy bieżąca karta kontrolki karta jest aktywną kartą w grupie kart interfejsu wielu dokumentów.
+Wskazuje, czy bieżąca karta formantu karty jest aktywną kartą w grupie kart interfejsu wielu dokumentów.
 
 ```
 BOOL IsActiveInMDITabGroup() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli bieżąca karta kontrolki karta jest aktywną kartą w grupie kart MDI; w przeciwnym razie FALSE.
+PRAWDA, jeśli bieżąca karta formantu karty jest aktywną kartą w grupie kart MDI; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Możesz zorganizować okna wielu dokumentów w grupy kart pionowych lub poziomych i łatwo rozdzielić dokumenty z jednej grupy kart na inną.
+Można organizować wiele okien dokumentów w pionowe lub poziome grupy kart i łatwo przetasowywać dokumenty z jednej grupy kart do drugiej.
 
-##  <a name="isactivetabboldfont"></a>CMFCTabCtrl::IsActiveTabBoldFont
+## <a name="cmfctabctrlisactivetabboldfont"></a><a name="isactivetabboldfont"></a>CMFCTabCtrl::IsActiveTabBoldFont
 
-Wskazuje, czy tekst aktywnej karty jest wyświetlany przy użyciu pogrubionej czcionki.
+Wskazuje, czy tekst aktywnej karty jest wyświetlany przy użyciu czcionki pogrubionej.
 
 ```
 BOOL IsActiveTabBoldFont() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli aktywna karta jest wyświetlana przy użyciu pogrubionej czcionki; w przeciwnym razie FALSE.
+PRAWDA, jeśli aktywna karta jest wyświetlana przy użyciu czcionki pogrubionej; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj metody [CMFCTabCtrl:: SetActiveTabBoldFont](#setactivetabboldfont) , aby zmienić aktywną czcionkę karty.
+Użyj [metody CMFCTabCtrl::SetActiveTabBoldFont,](#setactivetabboldfont) aby zmienić aktywną czcionkę karty.
 
-##  <a name="isactivetabclosebutton"></a>CMFCTabCtrl::IsActiveTabCloseButton
+## <a name="cmfctabctrlisactivetabclosebutton"></a><a name="isactivetabclosebutton"></a>CMFCTabCtrl::IsActiveTabCloseButton
 
-Wskazuje, czy przycisk zamknięcia ( **X**) jest wyświetlany na aktywnej karcie lub w prawym górnym rogu obszaru kart.
+Wskazuje, czy przycisk Zamknij ( **X**) jest wyświetlany na aktywnej karcie, czy w prawym górnym rogu obszaru karty.
 
 ```
 virtual BOOL IsActiveTabCloseButton() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli przycisk Zamknij jest wyświetlany na aktywnej karcie; FALSE, jeśli przycisk Zamknij jest wyświetlany w prawym górnym rogu obszaru kart.
+PRAWDA, jeśli na aktywnej karcie wyświetlany jest przycisk Zamknij; FAŁSZ, jeśli przycisk Zamknij jest wyświetlany w prawym górnym rogu obszaru karty.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isdrawframe"></a>CMFCTabCtrl::IsDrawFrame
+## <a name="cmfctabctrlisdrawframe"></a><a name="isdrawframe"></a>CMFCTabCtrl::IsDrawFrame
 
 Wskazuje, czy okno z kartami rysuje prostokąt ramki wokół osadzonych okienek.
 
@@ -693,43 +693,43 @@ Wskazuje, czy okno z kartami rysuje prostokąt ramki wokół osadzonych okienek.
 BOOL IsDrawFrame() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli prostokąt ramki jest rysowany; w przeciwnym razie FALSE.
+PRAWDA, jeśli narysowany jest prostokąt ramki; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj metody [CMFCTabCtrl:: SetDrawFrame](#setdrawframe) , aby włączyć lub wyłączyć rysowanie prostokąta ramki.
+Użyj [metody CMFCTabCtrl::SetDrawFrame,](#setdrawframe) aby włączyć lub wyłączyć rysowanie prostokąta ramki.
 
-##  <a name="isflatframe"></a>CMFCTabCtrl::IsFlatFrame
+## <a name="cmfctabctrlisflatframe"></a><a name="isflatframe"></a>CMFCTabCtrl::IsFlatFrame
 
-Wskazuje, czy ramka dookoła obszaru karty jest płaska, czy 3W.
+Wskazuje, czy ramka wokół obszaru karty jest płaska, czy 3D.
 
 ```
 BOOL IsFlatFrame() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli ramka dookoła obszaru karty jest płaska; FAŁSZ, jeśli ramka jest trójwymiarowa.
+PRAWDA, jeśli ramka wokół obszaru karty jest płaska; FAŁSZ, jeśli ramka jest trójwymiarowa.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj metody [CMFCTabCtrl:: SetFlatFrame](#setflatframe) , aby zmienić sposób rysowania ramki.
+Użyj [CMFCTabCtrl::SetFlatFrame](#setflatframe) metoda, aby zmienić sposób rysowania ramki.
 
-##  <a name="isflattab"></a>CMFCTabCtrl::IsFlatTab
+## <a name="cmfctabctrlisflattab"></a><a name="isflattab"></a>CMFCTabCtrl::IsFlatTab
 
-Wskazuje, czy wygląd kart w bieżącym formancie karty jest płaski, czy nie.
+Wskazuje, czy wygląd kart w bieżącej kontrolki karty jest płaski, czy nie.
 
 ```
 virtual BOOL IsFlatTab() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli wygląd kart w bieżącym formancie karty jest płaski; w przeciwnym razie FALSE.
+PRAWDA, jeśli wygląd kart w bieżącej kontrolki karty jest płaski; w przeciwnym razie FALSE.
 
-##  <a name="isleftrightrounded"></a>CMFCTabCtrl::IsLeftRightRounded
+## <a name="cmfctabctrlisleftrightrounded"></a><a name="isleftrightrounded"></a>CMFCTabCtrl::IsLeftRightRounded
 
 Wskazuje, czy wygląd lewej i prawej strony karty w bieżącym formancie karty jest zaokrąglony.
 
@@ -737,23 +737,23 @@ Wskazuje, czy wygląd lewej i prawej strony karty w bieżącym formancie karty j
 virtual BOOL IsLeftRightRounded() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli boki każdej karty są zaokrąglane; w przeciwnym razie FALSE.
+PRAWDA, jeśli boki każdej karty są zaokrąglone; w przeciwnym razie FALSE.
 
-##  <a name="ismditabgroup"></a>CMFCTabCtrl::IsMDITabGroup
+## <a name="cmfctabctrlismditabgroup"></a><a name="ismditabgroup"></a>CMFCTabCtrl::IsMDITabGroup
 
-Wskazuje, czy bieżąca kontrolka karty jest zawarta w obszarze klienta okna interfejsu wielu dokumentów.
+Wskazuje, czy bieżąca kontrolka karty znajduje się w obszarze klienta okna interfejsu wielu dokumentów.
 
 ```
 virtual BOOL IsMDITabGroup() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli bieżąca kontrolka karty znajduje się w oknie klienta MDI; w przeciwnym razie FALSE.
+PRAWDA, jeśli bieżąca kontrolka karty znajduje się w oknie obszaru klienta MDI; w przeciwnym razie FALSE.
 
-##  <a name="isonenotestyle"></a>CMFCTabCtrl:: isonenote
+## <a name="cmfctabctrlisonenotestyle"></a><a name="isonenotestyle"></a>CMFCTabCtrl::IsOneNoteStyle
 
 Wskazuje, czy bieżąca kontrolka karty jest wyświetlana w stylu programu Microsoft OneNote.
 
@@ -761,61 +761,61 @@ Wskazuje, czy bieżąca kontrolka karty jest wyświetlana w stylu programu Micro
 virtual BOOL IsOneNoteStyle() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, Jeśli kontrolka karta jest wyświetlana w stylu programu Microsoft OneNote. w przeciwnym razie FALSE.
+PRAWDA, jeśli kontrolka karty jest wyświetlana w stylu programu Microsoft OneNote; w przeciwnym razie FALSE.
 
-##  <a name="issharedscroll"></a>CMFCTabCtrl::IsSharedScroll
+## <a name="cmfctabctrlissharedscroll"></a><a name="issharedscroll"></a>CMFCTabCtrl::IsSharedScroll
 
-Wskazuje, czy bieżąca kontrolka karty ma pasek przewijania, który umożliwia przewijanie kart jako grupy.
+Wskazuje, czy bieżący formant karty ma pasek przewijania, który może przewijać karty jako grupa.
 
 ```
 BOOL IsSharedScroll() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, Jeśli kontrolka karty ma współużytkowany pasek przewijania; w przeciwnym razie FALSE.
+PRAWDA, jeśli formant karty ma udostępniony pasek przewijania; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zwraca wartość TRUE, jeśli parametr *Style* metody [CMFCTabCtrl:: Create](#create) jest STYLE_FLAT_SHARED_HORZ_SCROLL.
+Ta metoda zwraca wartość TRUE, jeśli parametr *stylu* [CMFCTabCtrl::Create](#create) metoda jest STYLE_FLAT_SHARED_HORZ_SCROLL.
 
-##  <a name="istabdocumentsmenu"></a>CMFCTabCtrl::IsTabDocumentsMenu
+## <a name="cmfctabctrlistabdocumentsmenu"></a><a name="istabdocumentsmenu"></a>CMFCTabCtrl::IsTabDocumentsMenu
 
-Wskazuje, czy kontrolka karta wyświetla przyciski przewijania, czy przycisk, który wyświetla menu okna z kartami.
+Wskazuje, czy na pasku znajdują się przyciski przewijania, czy przycisk, na który wyświetlane jest menu okien z kartami.
 
 ```
 BOOL IsTabDocumentsMenu() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli okna z kartami są przewijane przy użyciu menu podręcznego etykiet okna z kartami; FAŁSZ, jeśli okna z kartami są przewijane przy użyciu przycisków przewijania do przodu i do tyłu.
+PRAWDA, jeśli okna z kartami są przewijane za pomocą menu podręcznego z etykietami okien z kartami; FAŁSZ, jeśli okna z kartami są przewijane za pomocą przycisków przewijania do przodu i do tyłu.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj metody [CMFCTabCtrl:: EnableTabDocumentsMenu](#enabletabdocumentsmenu) , aby określić metodę przewijania okien z kartami.
+Użyj [metody CMFCTabCtrl::EnableTabDocumentsMenu,](#enabletabdocumentsmenu) aby określić metodę przewijania okien z kartami.
 
-##  <a name="isvs2005style"></a>CMFCTabCtrl::IsVS2005Style
+## <a name="cmfctabctrlisvs2005style"></a><a name="isvs2005style"></a>CMFCTabCtrl::IsVS2005Style
 
-Wskazuje, czy karty są rysowane przy użyciu stylu programu Visual Studio 2005.
+Wskazuje, czy karty są rysowane przy użyciu stylu Visual Studio 2005.
 
 ```
 virtual BOOL IsVS2005Style() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli karty są rysowane przy użyciu stylu programu Visual Studio 2005; w przeciwnym razie FALSE.
+PRAWDA, jeśli karty są rysowane przy użyciu stylu Visual Studio 2005; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj parametru *Style* metody [CMFCTabCtrl:: Create](#create) , aby określić sposób rysowania kart.
+Użyj parametru *stylu* [CMFCTabCtrl::Create](#create) metody, aby określić sposób rysowania kart.
 
-##  <a name="m_benableactivate"></a>CMFCTabCtrl:: m_bEnableActivate
+## <a name="cmfctabctrlm_benableactivate"></a><a name="m_benableactivate"></a>CMFCTabCtrl::m_bEnableActivate
 
-Uniemożliwia aktywnemu widokowi utratę fokusu, gdy nowa karta jest wstawiona i włączona.
+Zapobiega utracie fokusu w widoku aktywnym po wstawieniu i włączeniu nowej karty.
 
 ```
 static BOOL m_bEnableActivate;
@@ -823,11 +823,11 @@ static BOOL m_bEnableActivate;
 
 ### <a name="remarks"></a>Uwagi
 
-Fokus jest zwykle tworzony przez nowe okno z kartami, gdy karta jest wstawiona i uaktywniona. Ustaw dla zmiennej składowej `CMFCTabCtrl::m_bEnableActivate` wartość FALSE, aby zachować pierwotny fokus. Wartość domyślna to TRUE.
+Fokus jest zwykle podejmowany przez nowe okno z kartami, gdy karta jest wstawiona i aktywna. Ustaw `CMFCTabCtrl::m_bEnableActivate` zmienną elementu członkowskiego na FAŁSZ, aby zachować oryginalny fokus. Wartością domyślną jest PRAWDA.
 
-##  <a name="modifytabstyle"></a>CMFCTabCtrl::ModifyTabStyle
+## <a name="cmfctabctrlmodifytabstyle"></a><a name="modifytabstyle"></a>CMFCTabCtrl::ModifyTabStyle
 
-Określa wygląd kart w bieżącym formancie tabulacji.
+Określa wygląd kart w bieżącym formancie karty.
 
 ```
 BOOL ModifyTabStyle(Style style);
@@ -835,31 +835,31 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Parametry
 
-*stylów*<br/>
-podczas Jedna z wartości wyliczenia, która określa wygląd kontrolki karta. Aby uzyskać więcej informacji, zobacz tabelę w obszarze uwagi.
+* — styl*<br/>
+[w] Jedna z wartości wyliczenia określająca wygląd formantu karty. Aby uzyskać więcej informacji, zobacz tabelę w uwagach.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zawsze prawda.
+Zawsze wartość TRUE.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość parametru *Style* może być jedną z następujących `CMFCTabCtrl::Style` wyliczeń.
+Wartość parametru *style* może być jednym `CMFCTabCtrl::Style` z następujących wyliczeń.
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|STYLE_3D|Wyświetla trzy wielowymiarowe prostokątne karty, które mają zaokrąglone rogi.|
-|STYLE_3D_ONENOTE|Wyświetla trzy wielowymiarowe karty, które mają jedną stronę pionową i jedną pochyłą i mające Zaokrąglone rogi.|
-|STYLE_3D_ROUNDED|Wyświetla trzy wielowymiarowe karty z pochyłymi krawędziami i zaokrąglonymi narożnikami.|
-|STYLE_3D_ROUNDED_SCROLL|Wyświetla trzy wielowymiarowe karty z pochyłymi krawędziami i zaokrąglonymi narożnikami. Jeśli istnieje więcej kart, niż można wyświetlić w tym samym czasie, w strukturze zostanie wyświetlona strzałka listy rozwijanej i menu z kartami do uaktywnienia.|
-|STYLE_3D_SCROLLED|Wyświetla trójwymiarowe, prostokątne karty. Jeśli istnieje więcej kart, niż można wyświetlić w tym samym czasie, w strukturze zostanie wyświetlona strzałka listy rozwijanej i menu z kartami do uaktywnienia.|
-|STYLE_3D_VS2005|Wyświetla trójwymiarowe, zaokrąglone karty, które mają jedną stronę pochyłą i jedną pionową.|
-|STYLE_FLAT|Wyświetla dwuwymiarowe karty, które mają skośne lewe i prawe strony.|
-|STYLE_FLAT_SHARED_HORZ_SCROLL|Wyświetla dwuwymiarowe karty. Jeśli istnieje więcej kart, niż można wyświetlić w tym samym czasie, struktura wyświetla strzałki przewijania na końcach obszaru kart.|
+|STYLE_3D|Wyświetla trójwymiarowe, prostokątne karty z okrągłymi narożnikami.|
+|STYLE_3D_ONENOTE|Wyświetla trójwymiarowe karty, które mają jedną pionową stronę i jedną pochyłą stronę i które mają zaokrąglone narożniki.|
+|STYLE_3D_ROUNDED|Wyświetla trójwymiarowe zakładki z skośnymi bokami i zaokrąglonymi narożnikami.|
+|STYLE_3D_ROUNDED_SCROLL|Wyświetla trójwymiarowe zakładki z skośnymi bokami i zaokrąglonymi narożnikami. Jeśli istnieje więcej kart niż można wyświetlić w tym samym czasie, ramach wyświetla strzałkę rozwijaną i menu kart, aby uaktywnić.|
+|STYLE_3D_SCROLLED|Wyświetla trójwymiarowe, prostokątne karty. Jeśli istnieje więcej kart niż można wyświetlić w tym samym czasie, ramach wyświetla strzałkę rozwijaną i menu kart, aby uaktywnić.|
+|STYLE_3D_VS2005|Wyświetla trójwymiarowe, zaokrąglone karty, które mają jedną skośną stronę i jedną pionową stronę.|
+|STYLE_FLAT|Wyświetla dwuwymiarowe karty, które mają pochylone lewe i prawe strony.|
+|STYLE_FLAT_SHARED_HORZ_SCROLL|Wyświetla karty dwuwymiarowe. Jeśli jest więcej kart niż można wyświetlić w tym samym czasie, ramach wyświetla strzałki przewijania na końcach obszaru karty.|
 
-##  <a name="ondragenter"></a>CMFCTabCtrl::OnDragEnter
+## <a name="cmfctabctrlondragenter"></a><a name="ondragenter"></a>CMFCTabCtrl::OnDragEnter
 
-Wywoływane przez platformę w trakcie operacji przeciągania i upuszczania, gdy kursor najpierw przejdzie do okna bieżącej kontrolki karta.
+Wywoływana przez platformę podczas operacji przeciągania i upuszczania, gdy kursor po raz pierwszy wchodzi do okna bieżącego formantu karty.
 
 ```
 virtual DROPEFFECT OnDragEnter(
@@ -870,28 +870,28 @@ virtual DROPEFFECT OnDragEnter(
 
 ### <a name="parameters"></a>Parametry
 
-*pDataObject*<br/>
-podczas Wskazuje obiekt danych, który zawiera dane przeciągane przez użytkownika.
+*pDataObject (1000)*<br/>
+[w] Wskazuje obiekt danych zawierający dane, które przeciągają użytkownik.
 
-*dwKeyState*<br/>
-podczas Zawiera stan klawiszy modyfikujących. Ten parametr jest kombinacją bitową (lub) następujących wartości: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON. Aby uzyskać więcej informacji, zobacz sekcję **Parametry komunikatu** [o danych wejściowych myszy](/windows/win32/inputdev/about-mouse-input).
+*dwKeyState (Stan klucza)*<br/>
+[w] Zawiera stan kluczy modyfikatora. Ten parametr jest kombinacją bitową (OR) następujących wartości: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON. Aby uzyskać więcej informacji, zobacz sekcję **Parametry komunikatu** [informacje o wejściu myszy](/windows/win32/inputdev/about-mouse-input).
 
-*moment*<br/>
-podczas Zawiera bieżącą lokalizację kursora we współrzędnych klienta.
+*Punkt*<br/>
+[w] Zawiera bieżącą lokalizację kursora we współrzędnych klienta.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Zawsze DROPEFFECT_NONE, co oznacza, że cel upuszczania nie może akceptować danych.
+Zawsze DROPEFFECT_NONE, co oznacza, że miejsce docelowe upuszczania nie może zaakceptować danych.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody do obsługi operacji przeciągania i upuszczania. Zastąp tę metodę, aby zaimplementować własne zachowanie niestandardowe.
+Ta metoda służy do obsługi operacji przeciągania i upuszczania. Zastąd w tej metodzie należy zaimplementować własne zachowanie niestandardowe.
 
-Domyślnie ta metoda wywołuje tylko `CMFCTabCtrl::OnDragOver`, które zawsze zwraca DROPEFFECT_NONE.
+Domyślnie ta metoda `CMFCTabCtrl::OnDragOver`wywołuje tylko , który zawsze zwraca DROPEFFECT_NONE.
 
-##  <a name="ondragover"></a>CMFCTabCtrl::OnDragOver
+## <a name="cmfctabctrlondragover"></a><a name="ondragover"></a>CMFCTabCtrl::OnDragOver
 
-Wywoływane przez platformę w trakcie operacji przeciągania, gdy wskaźnik myszy zostanie przesunięty nad oknem elementu docelowego upuszczania.
+Wywoływana przez strukturę podczas operacji przeciągania, gdy mysz jest przenoszona nad oknem docelowym upuszczania.
 
 ```
 virtual DROPEFFECT OnDragOver(
@@ -902,26 +902,26 @@ virtual DROPEFFECT OnDragOver(
 
 ### <a name="parameters"></a>Parametry
 
-*pDataObject*<br/>
-podczas Wskaźnik do obiektu [COleDataObject](../../mfc/reference/coledataobject-class.md) , który jest przeciągany nad elementem docelowym upuszczania.
+*pDataObject (1000)*<br/>
+[w] Wskaźnik do [obiektu COleDataObject,](../../mfc/reference/coledataobject-class.md) który jest przeciągany nad miejsce docelowe upuszczania.
 
-*dwKeyState*<br/>
-podczas Stan klawiszy modyfikujących, która jest kombinacją bitową (lub) MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON. Aby uzyskać więcej informacji, zobacz "parametry komunikatu" w temacie [Informacje o danych wejściowych myszy](/windows/win32/inputdev/about-mouse-input).
+*dwKeyState (Stan klucza)*<br/>
+[w] Stan klawiszy modyfikatora, który jest kombinacją bitową (OR) MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON. Aby uzyskać więcej informacji, zobacz "Parametry wiadomości" w [informacje o wprowadzaniu myszy](/windows/win32/inputdev/about-mouse-input).
 
-*moment*<br/>
-podczas Bieżąca pozycja myszy.
+*Punkt*<br/>
+[w] Bieżąca pozycja myszy.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zawsze DROPEFFECT_NONE.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę implementacją niestandardową. Aby uzyskać więcej informacji, zobacz metodę [CView:: OnDragOver](../../mfc/reference/cview-class.md#ondragover) .
+Zastąd w tej metodzie za pomocą implementacji niestandardowej. Aby uzyskać więcej informacji, zobacz [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover) metody.
 
-##  <a name="onshowtabdocumentsmenu"></a>CMFCTabCtrl::OnShowTabDocumentsMenu
+## <a name="cmfctabctrlonshowtabdocumentsmenu"></a><a name="onshowtabdocumentsmenu"></a>CMFCTabCtrl::OnShowTabDocumentsMenu
 
-Wyświetla menu podręczne okna z kartami, czeka, aż użytkownik wybierze kartę, i wybierze kartę aktywne.
+Wyświetla wyskakujące menu okien z kartami, czeka, aż użytkownik wybierze kartę, a wybrana karta stanie się aktywną kartą.
 
 ```
 virtual void OnShowTabDocumentsMenu(CPoint point);
@@ -929,14 +929,14 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*moment*<br/>
-podczas Współrzędne miejsca wyświetlania menu wyskakującego.
+*Punkt*<br/>
+[w] Współrzędne miejsca wyświetlania wyskakującego menu.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setactiveinmditabgroup"></a>CMFCTabCtrl::SetActiveInMDITabGroup
+## <a name="cmfctabctrlsetactiveinmditabgroup"></a><a name="setactiveinmditabgroup"></a>CMFCTabCtrl::SetActiveInMDITabGroup
 
-Ustawia bieżącą kartę kontrolki karta jako aktywną kartę w grupie karta interfejs wielu dokumentów.
+Ustawia bieżącą kartę formantu karty jako aktywną kartę w grupie kart interfejsu wielu dokumentów.
 
 ```
 void SetActiveInMDITabGroup(BOOL bActive);
@@ -944,14 +944,14 @@ void SetActiveInMDITabGroup(BOOL bActive);
 
 ### <a name="parameters"></a>Parametry
 
-*bActive*<br/>
-podczas PRAWDA, aby bieżąca karta była aktywna; Wartość FALSE, aby bieżąca karta była nieaktywna.
+*bAktywny*<br/>
+[w] PRAWDA, aby bieżąca karta była aktywna; FAŁSZ, aby bieżąca karta była nieaktywna.
 
 ### <a name="remarks"></a>Uwagi
 
-Możesz zorganizować okna wielu dokumentów w grupy kart pionowych lub poziomych i łatwo rozdzielić dokumenty z jednej grupy kart na inną.
+Można organizować wiele okien dokumentów w pionowe lub poziome grupy kart i łatwo przetasowywać dokumenty z jednej grupy kart do drugiej.
 
-##  <a name="setactivetab"></a>CMFCTabCtrl::SetActiveTab
+## <a name="cmfctabctrlsetactivetab"></a><a name="setactivetab"></a>CMFCTabCtrl::SetActiveTab
 
 Aktywuje kartę.
 
@@ -961,22 +961,22 @@ virtual BOOL SetActiveTab(int iTab);
 
 ### <a name="parameters"></a>Parametry
 
-*iTab*<br/>
-podczas Określa indeks (liczony od zera) karty, który ma zostać aktywowany.
+*Itab*<br/>
+[w] Określa indeks od zera karty do aktywacji.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli określona karta została uaktywniona; Wartość FALSE, jeśli określona wartość parametru *ITAB* jest nieprawidłowa.
+PRAWDA, jeśli określona karta została aktywna; FAŁSZ, jeśli określona wartość *parametru iTab* jest nieprawidłowa.
 
 ### <a name="remarks"></a>Uwagi
 
-Spowoduje to wysłanie powiadomienia `AFX_WM_CHANGE_ACTIVE_TAB` do okna nadrzędnego i ramki elementu nadrzędnego kontrolki karta.
+Spowoduje to `AFX_WM_CHANGE_ACTIVE_TAB` wysłanie powiadomienia do okna nadrzędnego i ramki nadrzędnego formantu karty.
 
-Metoda `SetActiveTab` automatycznie wywołuje metodę [CMFCTabCtrl:: HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar) , aby zapobiec miganiu ekranu.
+Metoda `SetActiveTab` automatycznie wywołuje [METODĘ CMFCTabCtrl::HideActiveWindowHorzScrollBar,](#hideactivewindowhorzscrollbar) aby zapobiec miganiu ekranu.
 
-##  <a name="setactivetabboldfont"></a>CMFCTabCtrl::SetActiveTabBoldFont
+## <a name="cmfctabctrlsetactivetabboldfont"></a><a name="setactivetabboldfont"></a>CMFCTabCtrl::SetActiveTabBoldFont
 
-Włącza lub wyłącza używanie czcionki pogrubionej na aktywnych kartach.
+Włącza lub wyłącza użycie czcionki pogrubionej na aktywnych kartach.
 
 ```
 void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
@@ -985,11 +985,11 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bIsBold*<br/>
-podczas TRUE, aby użyć pogrubionej czcionki do wyświetlania etykiety aktywnej karty; Wartość FALSE, aby użyć standardowej czcionki do wyświetlania etykiety. Wartość domyślna to TRUE.
+[w] PRAWDA, aby użyć czcionki pogrubionej do wyświetlania etykiety aktywnej karty; FALSE, aby użyć czcionki standardowej do wyświetlenia etykiety. Wartością domyślną jest PRAWDA.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setdrawframe"></a>CMFCTabCtrl::SetDrawFrame
+## <a name="cmfctabctrlsetdrawframe"></a><a name="setdrawframe"></a>CMFCTabCtrl::SetDrawFrame
 
 Określa, czy prostokąt ramki jest rysowany wokół osadzonego paska.
 
@@ -999,14 +999,14 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bDraw*<br/>
-podczas TRUE, aby wyświetlić prostokąt ramki wokół osadzonego paska; w przeciwnym razie FALSE. Wartość domyślna to TRUE.
+*bDraw (losowanie)*<br/>
+[w] PRAWDA, aby wyświetlić prostokąt ramki wokół osadzonego paska; w przeciwnym razie FALSE. Wartością domyślną jest PRAWDA.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setflatframe"></a>CMFCTabCtrl::SetFlatFrame
+## <a name="cmfctabctrlsetflatframe"></a><a name="setflatframe"></a>CMFCTabCtrl::SetFlatFrame
 
-Określa, czy ma zostać narysowana ramka o płaskim lub 3D wokół obszaru karty.
+Określa, czy wokół obszaru karty ma być rysowana ramka płaska czy 3D.
 
 ```
 void SetFlatFrame(
@@ -1016,15 +1016,15 @@ void SetFlatFrame(
 
 ### <a name="parameters"></a>Parametry
 
-*bFlat*<br/>
-podczas TRUE, aby narysować ramkę płaską (2D) wokół obszaru karty; Wartość FALSE, aby narysować trójwymiarową ramkę 3W. Wartość domyślna to TRUE.
+*bFlat (ur.*<br/>
+[w] PRAWDA, aby narysować płaską (2D) ramkę wokół obszaru karty; FAŁSZ, aby narysować trójwymiarową (3D) ramkę. Wartością domyślną jest PRAWDA.
 
-*bRepaint*<br/>
-podczas PRAWDA, aby natychmiast ponownie narysować okno; w przeciwnym razie FALSE. Wartość domyślna to TRUE.
+*bMalusz*<br/>
+[w] PRAWDA, aby natychmiast przerysować okno ; w przeciwnym razie FALSE. Wartością domyślną jest PRAWDA.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setimagelist"></a>CMFCTabCtrl:: SetImageList
+## <a name="cmfctabctrlsetimagelist"></a><a name="setimagelist"></a>CMFCTabCtrl::SetImageList
 
 Określa listę obrazów.
 
@@ -1039,31 +1039,31 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 
 ### <a name="parameters"></a>Parametry
 
-*uiID*<br/>
-podczas Identyfikator zasobu mapy bitowej, który zawiera listę obrazów.
+*Uiid*<br/>
+[w] Identyfikator zasobu mapy bitowej zawierającego listę obrazów.
 
-*CX*<br/>
-podczas Szerokość każdego obrazu (w pikselach). Wartość domyślna to 15.
+*Cx*<br/>
+[w] Szerokość każdego obrazu w pikselach. Wartość domyślna to 15.
 
-*clrTransp*<br/>
-podczas Kolor przezroczystego obrazu. Części obrazu, które są tym kolorem, będą przezroczyste. Wartość domyślna to kolor amarantowy, RGB (255, 0255).
+*clrTransp (tłumaczenie kl./s)*<br/>
+[w] Przezroczysty kolor obrazu. Części obrazu, które są tym kolorem, będą przezroczyste. Wartością domyślną jest kolor amarantowy, RGB(255,0,255).
 
-*hImageList*<br/>
-podczas Uchwyt do listy wstępnie załadowanych obrazów.
+*lista hImage*<br/>
+[w] Dojście do fabrycznie załadowaną listę obrazów.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli ta metoda zakończyła się pomyślnie. FAŁSZ, jeśli formant karty jest tworzony przy użyciu stylu prostego lub jeśli pierwsze Przeciążenie metody nie może załadować mapy bitowej, która jest określona przez parametr *uiID* .
+PRAWDA, jeśli ta metoda zakończy się pomyślnie. FAŁSZ, jeśli formant tabulacji jest tworzony przy użyciu stylu płaskiego lub jeśli przeciążenie pierwszej metody nie może załadować mapy bitowej określonej przez parametr *uiID.*
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody, aby ustawić listę obrazów dla kontrolki karta. Obrazy z listy obrazów są wyświetlane obok etykiety karty. Ta metoda ponownie oblicza wysokość tabulatora, tak aby rozmiar karty zawierał zarówno obraz, jak i tekst.
+Ta metoda służy do ustawiania listy obrazów dla formantu karty. Obrazy z listy obrazów są wyświetlane obok etykiety karty. Ta metoda ponownie oblicza wysokość tabulacji, tak aby rozmiar karty zawierał zarówno obraz, jak i tekst.
 
-Użyj metody [CMFCBaseTabCtrl:: AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) , która jest dziedziczona przez formant karty, aby określić indeks obrazu do wyświetlenia.
+Użyj [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) metoda, która jest dziedziczona przez formant karty, aby określić indeks obrazu do wyświetlenia.
 
-##  <a name="setresizemode"></a>CMFCTabCtrl:: SetResizeMode
+## <a name="cmfctabctrlsetresizemode"></a><a name="setresizemode"></a>CMFCTabCtrl::SetResizeMode
 
-Określa, w jaki sposób można zmienić rozmiar bieżącego formantu karty, a następnie ponownie wyświetlić formant.
+Określa, w jaki sposób można zmienić jego numer, a następnie ponownie wyświetlić formant.
 
 ```
 void SetResizeMode(ResizeMode resizeMode);
@@ -1071,20 +1071,20 @@ void SetResizeMode(ResizeMode resizeMode);
 
 ### <a name="parameters"></a>Parametry
 
-*Zmień rozmiarmode*<br/>
-podczas Jedna z wartości wyliczenia `CMFCTabCtrl::ResizeMode`, która określa, jak można zmienić rozmiar kontrolki karty. Listę możliwych wartości można znaleźć w tabeli w obszarze uwagi.
+*Resizemode*<br/>
+[w] Jedną z `CMFCTabCtrl::ResizeMode` wartości wyliczenia, która określa, jak formant karty można zmienić. Aby uzyskać listę możliwych wartości, zobacz tabelę w uwagach.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametr *SizeMode* może być jedną z następujących `ResizeMode` wartości wyliczenia.
+Parametr *resizeMode* może być jedną `ResizeMode` z następujących wartości wyliczenia.
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|RESIZE_NO|Nie można zmienić rozmiaru formantu karty.|
-|RESIZE_VERT|Rozmiar formantu karty można zmienić w pionie, ale nie w poziomie.|
-|RESIZE_HORIZ|Rozmiar formantu karty można zmienić w poziomie, ale nie w pionie.|
+|RESIZE_NO|Nie można zwymiarować kontrolki karty.|
+|RESIZE_VERT|Formant karty można zmieścić w pionie, ale nie poziomo.|
+|RESIZE_HORIZ|Formant karty można zmieścić w rozmiarze poziomym, ale nie w pionie.|
 
-##  <a name="settabmaxwidth"></a>CMFCTabCtrl::SetTabMaxWidth
+## <a name="cmfctabctrlsettabmaxwidth"></a><a name="settabmaxwidth"></a>CMFCTabCtrl::SetTabMaxWidth
 
 Określa maksymalną szerokość karty w oknie z kartami.
 
@@ -1095,15 +1095,15 @@ void SetTabMaxWidth(int nTabMaxWidth);
 ### <a name="parameters"></a>Parametry
 
 *nTabMaxWidth*<br/>
-podczas Maksymalna szerokość tabulacji (w pikselach).
+[w] Maksymalna szerokość karty w pikselach.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody, aby ograniczyć szerokość każdej karty w oknie z kartami. Ta metoda jest przydatna, jeśli karty mają bardzo długie etykiety. Konstruktor klasy [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md) inicjuje maksymalną szerokość tabulatora na 0, co oznacza, że szerokość nie jest ograniczona.
+Ta metoda służy do ograniczania szerokości każdej karty w oknie z kartami. Ta metoda jest przydatna, jeśli karty mają bardzo długie etykiety. Konstruktor klasy [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md) inicjuje maksymalną szerokość karty do 0, co w rzeczywistości oznacza, że szerokość nie jest ograniczona.
 
-##  <a name="stopresize"></a>CMFCTabCtrl::StopResize
+## <a name="cmfctabctrlstopresize"></a><a name="stopresize"></a>CMFCTabCtrl::StopResize
 
-Kończy bieżącą operację zmiany rozmiaru w kontrolce karty.
+Kończy bieżącą operację zmiany rozmiaru na formancie karty.
 
 ```
 void StopResize(BOOL bCancel);
@@ -1111,12 +1111,12 @@ void StopResize(BOOL bCancel);
 
 ### <a name="parameters"></a>Parametry
 
-*banulowanie*<br/>
-podczas PRAWDA, aby porzucić bieżącą operację zmiany rozmiaru; Wartość FALSE, aby ukończyć bieżącą operację zmiany rozmiaru. W obu przypadkach struktura zatrzyma rysowanie prostokąta zmiany rozmiaru.
+*bCancel*<br/>
+[w] TRUE, aby porzucić bieżącą operację zmiany rozmiaru; FAŁSZ, aby zakończyć bieżącą operację zmiany rozmiaru. W obu przypadkach ramy zatrzymuje rysunek prostokąta zmienić rozmiar.
 
-##  <a name="synchronizescrollbar"></a>CMFCTabCtrl::SynchronizeScrollBar
+## <a name="cmfctabctrlsynchronizescrollbar"></a><a name="synchronizescrollbar"></a>CMFCTabCtrl::SynchronizeScrollBar
 
-Rysuje poziomy pasek przewijania kontrolki karta, która wyświetla karty płaskie.
+Rysuje poziomy pasek przewijania na kontrolce kart, która wyświetla płaskie karty.
 
 ```
 BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
@@ -1125,15 +1125,15 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 ### <a name="parameters"></a>Parametry
 
 *pScrollInfo*<br/>
-określoną Wskaźnik do struktury [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo) lub wartości null. Gdy ta metoda zwraca, a jeśli ten parametr nie ma wartości NULL, struktura zawiera wszystkie parametry paska przewijania. Wartość domyślna to NULL.
+[na zewnątrz] Wskaźnik do struktury [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo) lub NULL. Gdy ta metoda zwraca, a jeśli ten parametr nie jest null, struktura zawiera wszystkie parametry paska przewijania. Wartością domyślną jest NULL.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli ta metoda się powiedzie; w przeciwnym razie FALSE.
+PRAWDA, jeśli ta metoda powiedzie się; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda ma wpływ tylko na formant karty wyświetlający karty płaskie. Pasek przewijania ma wpływ na wszystkie karty w tym samym czasie.
+Ta metoda dotyczy tylko kontrolki kart, która wyświetla płaskie karty. Pasek przewijania wpływa na wszystkie karty w tym samym czasie.
 
 ## <a name="see-also"></a>Zobacz też
 

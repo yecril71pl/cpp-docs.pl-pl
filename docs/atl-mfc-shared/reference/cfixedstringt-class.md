@@ -9,16 +9,16 @@ helpviewer_keywords:
 - CFixedStringT class
 - shared classes, CFixedStringT
 ms.assetid: 6d4171ba-3104-493a-a6cc-d515f4ba9a4b
-ms.openlocfilehash: 6c7649b7131e3b1620112acf89867d0731d7265d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe096185f6f0b71ad45757cd0b75ab13c41e5f5b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235168"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317825"
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT, klasa
 
-Ta klasa reprezentuje obiekt ciągu z buforem stałych znaków.
+Ta klasa reprezentuje obiekt ciąg ze stałym buforem znaków.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,8 +29,8 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 
 #### <a name="parameters"></a>Parametry
 
-*StringType*<br/>
-Używane jako klasa bazowa dla obiektu stały ciąg i może być dowolnym `CStringT`— na podstawie typu. Niektóre przykłady `CString`, `CStringA`, i `CStringW`.
+*Typ ciągu*<br/>
+Używany jako klasa podstawowa dla obiektu stałego ciągu i może być dowolny `CStringT`typ oparty na. Niektóre przykłady `CString` `CStringA`obejmują `CStringW`, i .
 
 *t_nChars*<br/>
 Liczba znaków przechowywanych w buforze.
@@ -41,7 +41,7 @@ Liczba znaków przechowywanych w buforze.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CFixedStringT::CFixedStringT](#cfixedstringt)|Konstruktor z obiektem ciągu.|
+|[CFixedStringT::CFixedStringT](#cfixedstringt)|Konstruktor dla obiektu ciągu.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
@@ -51,15 +51,15 @@ Liczba znaków przechowywanych w buforze.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa jest przykładem klasy niestandardowy ciąg na podstawie `CStringT`. Mimo że jest to podobne, dwie klasy różnią się w celu wykonania. Główne różnice między `CFixedStringT` i `CStringT` są:
+Ta klasa jest przykładem niestandardowej `CStringT`klasy ciągu opartej na programie . Chociaż podobne, dwie klasy różnią się w implementacji. Główne różnice `CFixedStringT` między `CStringT` i są:
 
-- Bufor początkowy znak jest przydzielany w ramach obiektu, a ma rozmiar *t_nChars*. Dzięki temu `CFixedString` obiektu zajmować fragment ciągłej pamięci dla celów wydajności. Jednakże jeśli zawartość `CFixedStringT` przekroczy obiektu *t_nChars*, bufor jest przydzielany dynamicznie.
+- Początkowy bufor znaków jest przydzielany jako część obiektu i ma rozmiar *t_nChars*. Dzięki temu `CFixedString` obiekt zajmuje ciągły fragment pamięci dla celów wydajności. Jeśli jednak zawartość `CFixedStringT` obiektu wzrośnie poza *t_nChars,* bufor jest przydzielany dynamicznie.
 
-- Bufor znaków dla `CFixedStringT` obiektu jest zawsze tę samą długość ( *t_nChars*). Nie ma ograniczeń dotyczących rozmiaru buforu dla `CStringT` obiektów.
+- Bufor znaków dla `CFixedStringT` obiektu ma zawsze taką samą długość ( *t_nChars*). Nie ma ograniczeń co `CStringT` do rozmiaru buforu dla obiektów.
 
-- Menedżer pamięci dla `CFixedStringT` został dostosowany w taki sposób, że udostępnianie [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) obiektu między co najmniej dwóch `CFixedStringT` obiektów jest niedozwolona. `CStringT` obiekty nie mają tego ograniczenia.
+- Menedżer pamięci `CFixedStringT` dla jest dostosowany w taki sposób, że udostępnianie `CFixedStringT` [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) obiektu między dwoma lub więcej obiektów jest niedozwolone. `CStringT`obiekty nie mają tego ograniczenia.
 
-Aby uzyskać więcej informacji na temat dostosowywania `CFixedStringT` i ogólnie rzecz biorąc, zobacz Zarządzanie pamięci dla obiektów w postaci ciągów [zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+Aby uzyskać więcej informacji `CFixedStringT` na temat dostosowywania i zarządzania pamięcią dla obiektów ciągów w ogóle, zobacz [Zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -75,9 +75,9 @@ Aby uzyskać więcej informacji na temat dostosowywania `CFixedStringT` i ogóln
 
 **Nagłówek:** cstringt.h
 
-##  <a name="cfixedstringt"></a>  CFixedStringT::CFixedStringT
+## <a name="cfixedstringtcfixedstringt"></a><a name="cfixedstringt"></a>CFixedStringT::CFixedStringT
 
-Konstruuje `CFixedStringT` obiektu.
+Konstruuje `CFixedStringT` obiekt.
 
 ```
 CFixedStringT() throw();
@@ -91,22 +91,22 @@ explicit CFixedStringT(const unsigned char* pszSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*pszSrc*<br/>
-Ciąg zakończony wartością null do skopiowania do tego `CFixedStringT` obiektu.
+*pszsrc*<br/>
+Ciąg zakończony z wartością null ma `CFixedStringT` zostać skopiowany do tego obiektu.
 
-*strSrc*<br/>
-Istniejące `CFixedStringT` obiektu do skopiowania do tego `CFixedStringT` obiektu.
+*strSrc ( strSrc )*<br/>
+Istniejący `CFixedStringT` obiekt do skopiowania `CFixedStringT` do tego obiektu.
 
 *pStringMgr*<br/>
-Wskaźnik do Menedżera pamięci `CFixedStringT` obiektu. Aby uzyskać więcej informacji na temat `IAtlStringMgr` i zarządzania pamięci dla `CFixedStringT`, zobacz [zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+Wskaźnik do menedżera pamięci `CFixedStringT` obiektu. Aby uzyskać `IAtlStringMgr` więcej informacji `CFixedStringT`na temat zarządzania pamięcią i zarządzania pamięcią dla , zobacz [Zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktory skopiować dane wejściowe do nowego magazynu przydzielone, dlatego należy pamiętać, że pamięć wyjątków może spowodować. Niektóre z tych konstruktorów pełnią funkcje konwersji.
+Ponieważ konstruktory skopiować dane wejściowe do nowego przydzielonego magazynu, należy pamiętać, że wyjątki pamięci może spowodować. Niektóre z tych konstruktorów działają jako funkcje konwersji.
 
-##  <a name="operator_eq"></a>  CFixedStringT::operator =
+## <a name="cfixedstringtoperator-"></a><a name="operator_eq"></a>CFixedStringT::operator =
 
-Ponownie inicjuje istniejące `CFixedStringT` obiektu za pomocą nowych danych.
+Reinityzuje istniejący `CFixedStringT` obiekt z nowymi danymi.
 
 ```
 CFixedStringT<StringType, t_nChars>& operator=(
@@ -119,17 +119,17 @@ CFixedStringT<StringType, t_nChars>& operator=(const StringType& strSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*pszSrc*<br/>
-Ciąg zakończony wartością null do skopiowania do tego `CFixedStringT` obiektu.
+*pszsrc*<br/>
+Ciąg zakończony z wartością null ma `CFixedStringT` zostać skopiowany do tego obiektu.
 
-*strSrc*<br/>
-Istniejące `CFixedStringT` do skopiowania do tego `CFixedStringT` obiektu.
+*strSrc ( strSrc )*<br/>
+Istniejący `CFixedStringT` do skopiowania `CFixedStringT` do tego obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy zwrócić uwagę pamięci wyjątki mogą wystąpić przy każdym użyciu operatora przypisania, ponieważ nowy magazyn często jest przeznaczona do przechowywania, wynikowy `CFixedStringT` obiektu.
+Należy pamiętać, że wyjątki pamięci mogą wystąpić za każdym razem, gdy używasz `CFixedStringT` operatora przypisania, ponieważ nowy magazyn jest często przydzielany do przechowywania wynikowego obiektu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [CStringT, klasa](../../atl-mfc-shared/reference/cstringt-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

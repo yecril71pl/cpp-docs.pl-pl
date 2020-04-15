@@ -7,22 +7,22 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], drag and drop support
 - HDN_ notifications [MFC]
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
-ms.openlocfilehash: f30ad029742a01280abda85cbd1a81104d01d8cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dfaabf3da62c216d3da662f59c57b63e695d9ad
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297037"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371164"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Zapewnianie obsługi przeciągania i upuszczania w przypadku elementów nagłówka
 
-Aby zapewnić obsługi przeciągania i upuszczania w przypadku elementów nagłówka, należy określić hds_dragdrop — styl. Obsługa przeciągania i upuszczania w przypadku elementów nagłówka zapewnia możliwości, aby zmienić kolejność elementów nagłówka kontrolki nagłówka. Domyślne zachowanie zawiera obraz półprzezroczystych przeciągania elementu nagłówka przeciąganie i wizualny wskaźnik informujący o nowe miejsce po przerwaniu elementu nagłówka.
+Aby zapewnić obsługę przeciągania i upuszczania elementów nagłówka, określ styl HDS_DRAGDROP. Obsługa przeciągania i upuszczania elementów nagłówka umożliwia użytkownikowi ponowne kolejność elementów nagłówka formantu nagłówka. Domyślne zachowanie zapewnia półprzezroczysty obraz przeciągania elementu nagłówka i wizualny wskaźnik nowej pozycji, jeśli element nagłówka zostanie upuszczony.
 
-Mającego typową funkcjonalność przeciągania i upuszczania, mogą rozszerzać domyślne zachowanie przeciągnij i upuść dzięki obsłudze HDN_BEGINDRAG i HDN_ENDDRAG powiadomienia. Można również dostosować wygląd obrazu przeciągania przez zastąpienie [CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage) funkcja elementu członkowskiego.
+Podobnie jak w przypadku typowych funkcji przeciągania i upuszczania, można rozszerzyć domyślne zachowanie przeciągania i upuszczania, obsługując powiadomienia HDN_BEGINDRAG i HDN_ENDDRAG. Wygląd przeciągania można również dostosować, zastępując funkcję elementu członkowskiego [CHeaderCtrl::CreateDragImage.](../mfc/reference/cheaderctrl-class.md#createdragimage)
 
 > [!NOTE]
->  Jeśli są Zapewnianie obsługi przeciągania i upuszczania, dla formantu osadzonego nagłówka w formancie listy, zobacz sekcję rozszerzone Style w [Zmienianie stylów kontrolki listy](../mfc/changing-list-control-styles.md) tematu.
+> Jeśli w formancie listy zapewniasz obsługę przeciągania i upuszczania, zobacz sekcję Styl rozszerzony w temacie [Zmienianie stylów sterowania listą.](../mfc/changing-list-control-styles.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)

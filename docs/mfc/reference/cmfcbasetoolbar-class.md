@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMFCBaseToolBar [MFC], GetMinSize
 - CMFCBaseToolBar [MFC], OnAfterChangeParent
 ms.assetid: 5d79206d-55e4-46f8-b1b8-042e34d7f9da
-ms.openlocfilehash: 7a6ccdaf3d78b9973505dd4e90ca76f671fce889
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 027fe8569ff133bb3f348c9d0607f19c6d778c4e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403870"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367827"
 ---
 # <a name="cmfcbasetoolbar-class"></a>Klasa CMFCBaseToolBar
 
-Klasa bazowa dla pasków narzędzi.
+Klasa podstawowa dla pasków narzędzi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,36 +36,36 @@ class CMFCBaseToolBar : public CPane
 |Nazwa|Opis|
 |----------|-----------------|
 |`CMFCBaseToolBar::CMFCBaseToolBar`|Domyślny konstruktor.|
-|`CMFCBaseToolBar::~CMFCBaseToolBar`|Destruktor.|
+|`CMFCBaseToolBar::~CMFCBaseToolBar`|Destruktora.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CMFCBaseToolBar::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|
-|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Zwraca tryb dokowania. (Przesłania [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|
-|[CMFCBaseToolBar::GetMinSize](#getminsize)|Zwraca minimalny rozmiar paska narzędzi. (Przesłania [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|
-|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Wywoływane przez platformę, po wprowadzeniu zmian nadrzędnego tego okienka. (Przesłania [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|
+|`CMFCBaseToolBar::CreateObject`|Używany przez platformę do tworzenia dynamicznego wystąpienia tego typu klasy.|
+|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Zwraca tryb dokowania. (Zastępuje [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|
+|[CMFCBaseToolBar::GetMinSize](#getminsize)|Zwraca minimalny rozmiar paska narzędzi. (Zastępuje [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|
+|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Wywoływane przez strukturę po zmianie nadrzędnego okienka. (Zastępuje [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CBasePane](../../mfc/reference/cbasepane-class.md)
+[Panel CBasePane](../../mfc/reference/cbasepane-class.md)
 
-[CPane](../../mfc/reference/cpane-class.md)
+[Cpane](../../mfc/reference/cpane-class.md)
 
 [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Header:** afxbasetoolbar.h
+**Nagłówek:** afxbasetoolbar.h
 
-##  <a name="getdockingmode"></a>  CMFCBaseToolBar::GetDockingMode
+## <a name="cmfcbasetoolbargetdockingmode"></a><a name="getdockingmode"></a>CMFCBaseToolBar::GetDockingMode
 
 Zwraca tryb dokowania.
 
@@ -77,7 +77,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 
 Tryb dokowania.
 
-##  <a name="getminsize"></a>  CMFCBaseToolBar::GetMinSize
+## <a name="cmfcbasetoolbargetminsize"></a><a name="getminsize"></a>CMFCBaseToolBar::GetMinSize
 
 Zwraca minimalny rozmiar paska narzędzi.
 
@@ -88,11 +88,11 @@ virtual void GetMinSize(CSize& size) const;
 ### <a name="parameters"></a>Parametry
 
 *Rozmiar*<br/>
-[out] Minimalny rozmiar paska narzędzi.
+[na zewnątrz] Minimalny rozmiar paska narzędzi.
 
-##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent
+## <a name="cmfcbasetoolbaronafterchangeparent"></a><a name="onafterchangeparent"></a>CMFCBaseToolBar::OnAfterChangeParent
 
-Wywoływane przez platformę, po wprowadzeniu zmian nadrzędnego tego okienka.
+Wywoływane przez strukturę po zmianie nadrzędnego okienka.
 
 ```
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
@@ -101,9 +101,9 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ### <a name="parameters"></a>Parametry
 
 *pWndOldParent*<br/>
-[in] Wskaźnik do poprzedniego okna nadrzędnego.
+[w] Wskaźnik do poprzedniego okna nadrzędnego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)

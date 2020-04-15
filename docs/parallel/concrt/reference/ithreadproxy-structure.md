@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-ms.openlocfilehash: b87694393af4634ec97d05070aa5513cd132098a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fc2fb2df06225a5c963fe39178c1b4a10f77953d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417160"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368126"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy — Struktura
 
-Abstrakcja wątku wykonania. W zależności od klucza zasad `SchedulerType` utworzonego przez użytkownika harmonogramu Menedżer zasobów przyznaje Ci wątek proxy wątku, który jest obsługiwany przez zwykły wątek Win32 lub wątek harmonogramie (UMS) w trybie użytkownika. Wątki UMS są obsługiwane w 64-bitowych systemach operacyjnych z wersją Windows 7 i nowszą.
+Abstrakcja dla wątku wykonania. W zależności `SchedulerType` od klucza zasad utworzonego harmonogramu Menedżer zasobów przyzna ci serwer proxy wątku, który jest wspierany przez zwykły wątek Win32 lub wątek w trybie UMS (UMS). Wątki UMS są obsługiwane w 64-bitowych systemach operacyjnych w wersji Windows 7 lub nowszej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,20 +28,20 @@ Abstrakcja wątku wykonania. W zależności od klucza zasad `SchedulerType` utwo
 struct IThreadProxy;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[IThreadProxy:: GetId —](#getid)|Zwraca unikatowy identyfikator dla serwera proxy wątku.|
-|[IThreadProxy:: SwitchOut —](#switchout)|Usuwa kontekst z bazowego głównego procesora wirtualnego.|
-|[IThreadProxy:: SwitchTo —](#switchto)|Wykonuje przełączenie kontekstu wspólnego z aktualnie wykonywanego kontekstu do innego.|
-|[IThreadProxy:: YieldToSystem —](#yieldtosystem)|Powoduje, że wątek wywołujący przekazuje wykonywanie do innego wątku, który jest gotowy do uruchomienia na bieżącym procesorze. System operacyjny wybiera następny wątek do wykonania.|
+|[IThreadProxy::GetId](#getid)|Zwraca unikatowy identyfikator serwera proxy wątku.|
+|[IThreadProxy::SwitchOut](#switchout)|Disassociates kontekstu z podstawowego katalogu głównego procesora wirtualnego.|
+|[IThreadProxy::SwitchTo](#switchto)|Wykonuje przełączanie kontekstu współpracy z aktualnie wykonywanego kontekstu do innego.|
+|[IThreadProxy::YieldToSystem](#yieldtosystem)|Powoduje, że wątek wywołujący do wykonania do innego wątku, który jest gotowy do uruchomienia na bieżącym procesorze. System operacyjny wybiera następny wątek do wykonania.|
 
 ## <a name="remarks"></a>Uwagi
 
-Serwery proxy wątków są połączone z kontekstami wykonywania reprezentowanymi przez interfejs `IExecutionContext` jako sposób wysyłania zadań.
+Serwery proxy wątku są powiązane z kontekstami `IExecutionContext` wykonywania reprezentowane przez interfejs jako środek wysyłki pracy.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -49,25 +49,25 @@ Serwery proxy wątków są połączone z kontekstami wykonywania reprezentowanym
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrtrm. h
+**Nagłówek:** concrtrm.h
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="getid"></a>IThreadProxy:: GetId —, Metoda
+## <a name="ithreadproxygetid-method"></a><a name="getid"></a>IThreadProxy::Metoda GetId
 
-Zwraca unikatowy identyfikator dla serwera proxy wątku.
+Zwraca unikatowy identyfikator serwera proxy wątku.
 
 ```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Unikatowy identyfikator liczby całkowitej.
 
-## <a name="switchout"></a>IThreadProxy:: SwitchOut —, Metoda
+## <a name="ithreadproxyswitchout-method"></a><a name="switchout"></a>IThreadProxy::Metoda wyłączenia
 
-Usuwa kontekst z bazowego głównego procesora wirtualnego.
+Disassociates kontekstu z podstawowego katalogu głównego procesora wirtualnego.
 
 ```cpp
 virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
@@ -76,25 +76,25 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ### <a name="parameters"></a>Parametry
 
 *switchState*<br/>
-Wskazuje stan serwera proxy wątku wykonującego przełącznik. Parametr jest typu `SwitchingProxyState`.
+Wskazuje stan serwera proxy wątku, który wykonuje przełącznik. Parametr jest typu `SwitchingProxyState`.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj `SwitchOut`, jeśli chcesz usunąć skojarzenie kontekstu z głównego wirtualnego procesora, który jest wykonywany z dowolnego powodu. W zależności od wartości przekazywanej do parametru `switchState`i bez względu na to, czy jest ona wykonywana w katalogu głównym procesora wirtualnego, wywołanie zwróci natychmiast lub zablokuje serwer proxy wątku skojarzony z kontekstem. Wystąpił błąd podczas wywoływania `SwitchOut` z parametrem ustawionym na `Idle`. Wykonanie tej czynności spowoduje wyjątek [invalid_argument](../../../standard-library/invalid-argument-class.md) .
+Użyj, `SwitchOut` jeśli chcesz odłączyć kontekst od katalogu głównego procesora wirtualnego, na który jest wykonywany, z jakiegokolwiek powodu. W zależności od wartości przekazywania do parametru `switchState`i tego, czy jest on wykonywany w katalogu głównym procesora wirtualnego, wywołanie zwróci natychmiast lub zablokuje serwer proxy wątku skojarzony z kontekstem. Jest to błąd, `SwitchOut` aby wywołać `Idle`z parametrem ustawionym na . Spowoduje to [wyjątek invalid_argument.](../../../standard-library/invalid-argument-class.md)
 
-`SwitchOut` jest przydatne, gdy chcesz zmniejszyć liczbę katalogów głównych wirtualnego procesora, z których korzysta Twój harmonogram, ponieważ Menedżer zasobów zalecił to, lub ponieważ zażądano tymczasowego, nadsubskrybowanego wirtualnego dysku nadrzędnego, i są one gotowe do użycia. W takim przypadku należy wywołać metodę [IVirtualProcessorRoot:: Remove](iexecutionresource-structure.md#remove) w katalogu głównym wirtualnego procesora przed wywołaniem `SwitchOut` z parametrem `switchState` ustawionym na `Blocking`. Spowoduje to zablokowanie serwera proxy wątku, który zostanie wznowiony, gdy będzie dostępny inny wirtualny rdzeń procesora w harmonogramie. Blokowanie serwera proxy wątku można wznowić, wywołując funkcję `SwitchTo`, aby przełączyć się do kontekstu wykonywania tego wątku. Możesz również wznowić serwer proxy wątku przy użyciu skojarzonego z nim kontekstu, aby aktywować rdzeń wirtualnego procesora. Aby uzyskać więcej informacji o tym, jak to zrobić, zobacz [IVirtualProcessorRoot:: Activate](ivirtualprocessorroot-structure.md#activate).
+`SwitchOut`jest to przydatne, gdy chcesz zmniejszyć liczbę katalogów głównych procesora wirtualnego, które ma harmonogram, ponieważ Menedżer zasobów polecił ci to zrobić, lub ponieważ zażądano tymczasowego katalogu głównego procesora wirtualnego z nadmierną subskrypcją i są z nim wykonywane. W takim przypadku należy wywołać metodę [IVirtualProcessorRoot::Usuń](iexecutionresource-structure.md#remove) w katalogu głównym `SwitchOut` procesora `switchState` wirtualnego, przed wywołaniem z parametrem ustawionym na `Blocking`. Spowoduje to zablokowanie serwera proxy wątku i wznowi wykonanie, gdy inny katalog główny procesora wirtualnego w harmonogramie jest dostępny do jego wykonania. Blokowanie serwera proxy wątku można wznowić, wywołując funkcję, `SwitchTo` aby przełączyć się do kontekstu wykonywania tego serwera proxy wątku. Można również wznowić proxy wątku, używając skojarzonego kontekstu, aby aktywować katalog główny procesora wirtualnego. Aby uzyskać więcej informacji na temat tego, zobacz [IVirtualProcessorRoot::Activate](ivirtualprocessorroot-structure.md#activate).
 
-`SwitchOut` można również użyć, jeśli chcesz ponownie zainicjować procesor wirtualny, aby można go było aktywować w przyszłości, jednocześnie blokując serwer proxy wątku lub tymczasowo odłączając go od głównego wirtualnego procesora, w którym jest uruchomiona, i harmonogramu, dla którego jest wysyłana. Użyj `SwitchOut` z parametrem `switchState` ustawionym na `Blocking`, jeśli chcesz zablokować serwer proxy wątku. Można go później wznowić przy użyciu `SwitchTo` lub `IVirtualProcessorRoot::Activate`, jak wspomniano powyżej. Użyj `SwitchOut` z parametrem ustawionym na `Nesting`, gdy chcesz tymczasowo odłączyć ten serwer proxy wątku od wirtualnego procesora, w którym jest uruchomiony, oraz do harmonogramu, z którym jest skojarzony procesor wirtualny. Wywoływanie `SwitchOut` z parametrem `switchState` ustawionym na `Nesting`, gdy jest wykonywane w katalogu głównym procesora wirtualnego, spowoduje ponowne zainicjowanie katalogu głównego i bieżący wątek proxy wątku, aby kontynuować wykonywanie bez potrzeby jednego z nich. Serwer proxy wątku jest uznawany za pozostawiony przez program Scheduler do momentu wywołania metody [IThreadProxy:: SwitchOut —](#switchout) z `Blocking` w późniejszym czasie. Drugie wywołanie `SwitchOut` z parametrem ustawionym na `Blocking` jest przeznaczone do zwrócenia kontekstu do zablokowanego stanu, dzięki czemu może zostać wznowione przez `SwitchTo` lub `IVirtualProcessorRoot::Activate` w harmonogramie odłączonym od. Ponieważ nie został wykonany w katalogu głównym wirtualnego procesora, nie ma żadnego ponownego inicjowania.
+`SwitchOut`może być również używany, gdy chcesz ponownie zainicjować procesor wirtualny, aby mógł zostać aktywowany w przyszłości podczas blokowania serwera proxy wątku lub tymczasowego odłączenia go od katalogu głównego procesora wirtualnego, na którym jest uruchomiony, i harmonogram, dla którego wysyła pracę. Użyj `SwitchOut` z `switchState` parametrem `Blocking` ustawionym na, jeśli chcesz zablokować serwer proxy wątku. Później można go wznowić `SwitchTo` za `IVirtualProcessorRoot::Activate` pomocą jednego lub jak wspomniano powyżej. Użyj `SwitchOut` z parametrem `Nesting` ustawionym na to, kiedy chcesz tymczasowo odłączyć ten serwer proxy wątku od katalogu głównego procesora wirtualnego, na którym jest uruchomiony, i harmonogramu, z którym jest skojarzony procesor wirtualny. Wywołanie `SwitchOut` z `switchState` parametrem ustawionym na `Nesting` podczas wykonywania na głównym procesorze wirtualnym spowoduje ponowne zainicjowanie katalogu głównego i kontynuowanie wykonywania bieżącego serwera proxy wątku bez konieczności ich wykonywania. Serwer proxy wątku jest uważany za opuścił harmonogram, dopóki nie wywołuje [IThreadProxy::SwitchOut](#switchout) metody w `Blocking` późniejszym momencie w czasie. Drugie wywołanie `SwitchOut` z parametrem `Blocking` ustawionym na ma na celu zwrócenie kontekstu do stanu `SwitchTo` zablokowanego, dzięki czemu można go wznowić przez albo lub `IVirtualProcessorRoot::Activate` w harmonogramie, od którego jest odłączony. Ponieważ nie był wykonywany na głównym procesorze wirtualnym, nie ma miejsca ponowne zainicjowanie.
 
-Ponownie zainicjowany katalog główny wirtualnego procesora nie różni się od nowego głównego wirtualnego procesora, który został przyznany przez Menedżer zasobów. Można jej użyć do wykonania, aktywując ją z kontekstem wykonywania przy użyciu `IVirtualProcessorRoot::Activate`.
+Ponownie zainicjowany katalog główny procesora wirtualnego nie różni się od nowego katalogu głównego procesora wirtualnego, który został przyznany przez Menedżera zasobów. Można go użyć do wykonania, aktywując `IVirtualProcessorRoot::Activate`go w kontekście wykonania przy użyciu .
 
-należy wywołać `SwitchOut` w interfejsie `IThreadProxy`, który reprezentuje aktualnie wykonywany wątek lub wyniki są niezdefiniowane.
+`SwitchOut`musi być wywoływana w interfejsie, `IThreadProxy` który reprezentuje aktualnie wykonywany wątek lub wyniki są niezdefiniowane.
 
-W bibliotekach i nagłówkach, które zostały dostarczone z programem Visual Studio 2010, ta metoda nie przyjmuje parametru i nie zainicjowała ponownie głównego wirtualnego procesora. Aby zachować stare zachowanie, zostanie podana domyślna wartość parametru `Blocking`.
+W bibliotekach i nagłówkach dostarczanych z programem Visual Studio 2010 ta metoda nie została uwzględniona i nie zainicjowała ponownie katalogu głównego procesora wirtualnego. Aby zachować stare zachowanie, `Blocking` podana jest domyślna wartość parametru.
 
-## <a name="switchto"></a>IThreadProxy:: SwitchTo —, Metoda
+## <a name="ithreadproxyswitchto-method"></a><a name="switchto"></a>IThreadProxy::SwitchTo Metoda
 
-Wykonuje przełączenie kontekstu wspólnego z aktualnie wykonywanego kontekstu do innego.
+Wykonuje przełączanie kontekstu współpracy z aktualnie wykonywanego kontekstu do innego.
 
 ```cpp
 virtual void SwitchTo(
@@ -104,27 +104,27 @@ virtual void SwitchTo(
 
 ### <a name="parameters"></a>Parametry
 
-*pContext*<br/>
-Kontekst wykonywania, aby wspólnie przełączać się do.
+*Pcontext*<br/>
+Kontekst wykonywania, do który można wspólnie przełączyć.
 
 *switchState*<br/>
-Wskazuje stan serwera proxy wątku wykonującego przełącznik. Parametr jest typu `SwitchingProxyState`.
+Wskazuje stan serwera proxy wątku, który wykonuje przełącznik. Parametr jest typu `SwitchingProxyState`.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody, aby przełączyć się z jednego kontekstu wykonywania na inny, z metody [IExecutionContext::D ispatch](iexecutioncontext-structure.md#dispatch) w pierwszym kontekście wykonania. Metoda kojarzy kontekst wykonywania `pContext` z serwerem proxy wątku, jeśli nie jest już skojarzony z jednym. Własność bieżącego elementu pośredniczącego wątku jest określana przez wartość określoną dla argumentu `switchState`.
+Ta metoda służy do przełączania z jednego kontekstu wykonywania do innego, z [IExecutionContext::Dispatch](iexecutioncontext-structure.md#dispatch) metody pierwszego kontekstu wykonywania. Metoda kojarzy kontekst `pContext` wykonywania z serwerem proxy wątku, jeśli nie jest już skojarzony z jednym. Własność bieżącego serwera proxy wątku jest określana `switchState` przez wartość określoną dla argumentu.
 
-Użyj wartości `Idle`, gdy chcesz zwrócić aktualnie wykonywany serwer proxy wątków do Menedżer zasobów. Wywołanie `SwitchTo` z parametrem `switchState` ustawionym na `Idle` spowoduje, że kontekst wykonywania `pContext` rozpocząć wykonywanie na podstawowym zasobie wykonania. Własność tego serwera proxy wątku jest przekazywana do Menedżer zasobów i oczekuje się, że z metody `Dispatch` kontekstu wykonywania wkrótce po `SwitchTo` zwróci, aby zakończyć transfer. Kontekst wykonywania, który został wysłany przez serwer proxy wątku, jest nieskojarzony z serwerem proxy wątku, a harmonogram jest bezpłatny, aby można go było ponownie wykorzystać lub zniszczyć go zgodnie z oczekiwaniami.
+Użyj tej `Idle` wartości, jeśli chcesz zwrócić aktualnie wykonywany serwer proxy wątku do Menedżera zasobów. Wywołanie `SwitchTo` z `switchState` parametrem ustawionym na `Idle` spowoduje kontekst `pContext` wykonywania, aby rozpocząć wykonywanie na zasób wykonywania podstawowej. Własność tego serwera proxy wątku jest przenoszona do Menedżera zasobów i `Dispatch` oczekuje się, że wkrótce po `SwitchTo` zwrocie z kontekstu wykonania nastąpi powrót z metody kontekstu wykonania, aby zakończyć transfer. Kontekst wykonywania, który wysyłał serwer proxy wątku, jest odłączony od serwera proxy wątku, a harmonogram może go ponownie użyć lub zniszczyć zgodnie z jego potrzebą.
 
-Użyj wartości `Blocking`, jeśli chcesz, aby ten wątek proxy był w stanie zablokowany. Wywołanie `SwitchTo` z parametrem `switchState` ustawionym na `Blocking` spowoduje, że kontekst wykonywania `pContext` rozpocząć wykonywanie i zablokuje bieżący serwer proxy wątku do momentu wznowienia działania. Harmonogram zachowuje własność serwera proxy wątku, gdy serwer proxy wątku jest w stanie `Blocking`. Blokowanie serwera proxy wątku można wznowić, wywołując funkcję `SwitchTo`, aby przełączyć się do kontekstu wykonywania tego wątku. Możesz również wznowić serwer proxy wątku przy użyciu skojarzonego z nim kontekstu, aby aktywować rdzeń wirtualnego procesora. Aby uzyskać więcej informacji o tym, jak to zrobić, zobacz [IVirtualProcessorRoot:: Activate](ivirtualprocessorroot-structure.md#activate).
+Użyj wartości, `Blocking` jeśli ten serwer proxy wątku ma wejść w stan zablokowany. Wywołanie `SwitchTo` z `switchState` parametrem ustawionym na `Blocking` spowoduje kontekst `pContext` wykonywania, aby rozpocząć wykonywanie i zablokować bieżący serwer proxy wątku, dopóki nie zostanie wznowiony. Harmonogram zachowuje własność serwera proxy wątku, gdy serwer `Blocking` proxy wątku jest w stanie. Blokowanie serwera proxy wątku można wznowić, wywołując funkcję, `SwitchTo` aby przełączyć się do kontekstu wykonywania tego serwera proxy wątku. Można również wznowić proxy wątku, używając skojarzonego kontekstu, aby aktywować katalog główny procesora wirtualnego. Aby uzyskać więcej informacji na temat tego, zobacz [IVirtualProcessorRoot::Activate](ivirtualprocessorroot-structure.md#activate).
 
-Użyj wartości `Nesting`, gdy chcesz tymczasowo odłączyć ten serwer proxy wątku od wirtualnego procesora, w którym jest uruchomiona, i harmonogramu, dla którego jest wysyłana. Wywołanie `SwitchTo` z parametrem `switchState` ustawionym na `Nesting` spowoduje, że kontekst wykonywania `pContext` rozpoczyna wykonywanie, a bieżący serwer proxy wątku będzie również kontynuował wykonywanie bez potrzeby wirtualnego procesora. Serwer proxy wątku jest uznawany za pozostawiony przez program Scheduler do momentu wywołania metody [IThreadProxy:: SwitchOut —](#switchout) w późniejszym momencie. Metoda `IThreadProxy::SwitchOut` może zablokować serwer proxy wątku do momentu udostępnienia katalogu głównego wirtualnego procesora, aby go ponownie zaplanować.
+Użyj wartości, `Nesting` gdy chcesz tymczasowo odłączyć ten serwer proxy wątku od katalogu głównego procesora wirtualnego, na którym jest uruchomiony, i harmonogram, dla którego jest wywoływany. Wywołanie `SwitchTo` z `switchState` parametrem ustawionym na `Nesting` spowoduje kontekst `pContext` wykonywania, aby rozpocząć wykonywanie i bieżącego serwera proxy wątku również kontynuuje wykonywanie bez konieczności stosowania katalogu głównego procesora wirtualnego. Serwer proxy wątku jest uważany za opuścił harmonogram, dopóki nie wywoła [IThreadProxy::SwitchOut](#switchout) metody w późniejszym momencie w czasie. Metoda `IThreadProxy::SwitchOut` może zablokować serwer proxy wątku, dopóki katalog główny procesora wirtualnego nie będzie dostępny do ponownego jego przełkowego.
 
-należy wywołać `SwitchTo` w interfejsie `IThreadProxy`, który reprezentuje aktualnie wykonywany wątek lub wyniki są niezdefiniowane. Funkcja zgłasza `invalid_argument`, jeśli parametr `pContext` jest ustawiony na `NULL`.
+`SwitchTo`musi być wywoływana w interfejsie, `IThreadProxy` który reprezentuje aktualnie wykonywany wątek lub wyniki są niezdefiniowane. Funkcja jest `invalid_argument` zgłaszana, `pContext` jeśli `NULL`parametr jest ustawiony na .
 
-## <a name="yieldtosystem"></a>IThreadProxy:: YieldToSystem —, Metoda
+## <a name="ithreadproxyyieldtosystem-method"></a><a name="yieldtosystem"></a>IThreadProxy::YieldToSystem Metoda
 
-Powoduje, że wątek wywołujący przekazuje wykonywanie do innego wątku, który jest gotowy do uruchomienia na bieżącym procesorze. System operacyjny wybiera następny wątek do wykonania.
+Powoduje, że wątek wywołujący do wykonania do innego wątku, który jest gotowy do uruchomienia na bieżącym procesorze. System operacyjny wybiera następny wątek do wykonania.
 
 ```cpp
 virtual void YieldToSystem() = 0;
@@ -132,13 +132,13 @@ virtual void YieldToSystem() = 0;
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy wywoływany przez serwer proxy wątku, którego kopia zapasowa jest regularnym wątkiem systemu Windows, `YieldToSystem` zachowuje się dokładnie tak, jak `SwitchToThread`funkcji systemu Windows. Jednak po wywołaniu z wątków harmonogramie (UMS) w trybie użytkownika funkcja `SwitchToThread` deleguje zadanie wybierania następnego wątku do uruchomienia w harmonogramie trybu użytkownika, a nie w systemie operacyjnym. Aby osiągnąć żądany efekt przełączenia do innego gotowego wątku w systemie, użyj `YieldToSystem`.
+Po wywołaniu przez serwer proxy wątku `YieldToSystem` wspierany przez zwykły wątek systemu Windows, zachowuje się dokładnie tak, jak funkcja `SwitchToThread`systemu Windows . Jednak po wywołaniu z trybie użytkownika schedulable (UMS) wątków, `SwitchToThread` funkcja deleguje zadanie pobrania następnego wątku do uruchomienia do harmonogramu trybu użytkownika, a nie systemu operacyjnego. Aby osiągnąć pożądany efekt przełączania się na inny `YieldToSystem`gotowy wątek w systemie, użyj .
 
-należy wywołać `YieldToSystem` w interfejsie `IThreadProxy`, który reprezentuje aktualnie wykonywany wątek lub wyniki są niezdefiniowane.
+`YieldToSystem`musi być wywoływana w interfejsie, `IThreadProxy` który reprezentuje aktualnie wykonywany wątek lub wyniki są niezdefiniowane.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
+[współbieżność Obszar nazw](concurrency-namespace.md)<br/>
 [IExecutionContext, struktura](iexecutioncontext-structure.md)<br/>
 [IScheduler, struktura](ischeduler-structure.md)<br/>
 [IVirtualProcessorRoot, struktura](ivirtualprocessorroot-structure.md)

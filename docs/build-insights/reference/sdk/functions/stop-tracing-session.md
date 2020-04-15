@@ -1,6 +1,6 @@
 ---
-title: StopTracingSession
-description: Odwołanie C++ do funkcji StopTracingSession zestawu SDK usługi Build Insights.
+title: StopTracingSession (StopTracingSession)
+description: Odwołanie do funkcji StopTracingSession aplikacji kompilacji języka C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a4be229dcfddef0624869b789ee35e51336ac78e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: c6c7a3c6ca47749491774cc3bcd97aae8aa663ea
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332552"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323516"
 ---
-# <a name="stoptracingsession"></a>StopTracingSession
+# <a name="stoptracingsession"></a>StopTracingSession (StopTracingSession)
 
 ::: moniker range="<=vs-2015"
 
-Zestaw C++ SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora wersji programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019.
+C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkcja `StopTracingSession` przerywa trwającą sesję śledzenia i tworzy Nieprzetworzony plik śledzenia. Nieprzetworzone pliki śledzenia można przesłać do funkcji [Analizuj](analyze.md), [AnalzeA](analyze-a.md)i [AnalyzeW](analyze-w.md) , aby rozpocząć sesję analizy. Nieprzetworzone pliki śledzenia można także przesłać do funkcji [relog](relog.md), [RelogA](relog-a.md)i [RelogW](relog-w.md) , aby rozpocząć sesję ponownego rejestrowania. Pliki wykonywalne wywołujące `StopTracingSession` muszą mieć uprawnienia administratora.
+Funkcja `StopTracingSession` zatrzymuje trwającą sesję śledzenia i tworzy plik śledzenia nieprzetworzonego. Nieprzetworzone pliki śledzenia mogą być przekazywane do [funkcji Analiza,](analyze.md) [AnalzeA](analyze-a.md)i [AnalyzeW](analyze-w.md) w celu rozpoczęcia sesji analizy. Nieprzetworzone pliki śledzenia mogą być również przekazywane do [funkcji Relog](relog.md), [RelogA](relog-a.md)i [RelogW,](relog-w.md) aby rozpocząć sesję ponownego rejestrowania. Pliki wykonywalne wywołujące `StopTracingSession` muszą mieć uprawnienia administratora.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,17 +43,17 @@ inline RESULT_CODE StopTracingSession(
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa sesji*\
-Nazwa sesji śledzenia, która ma zostać zatrzymana. Użyj tej samej nazwy sesji, która została przeniesiona do [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)lub [StartTracingSessionW](start-tracing-session-w.md).
+*Nazwa_sesji*\
+Nazwa sesji śledzenia, aby zatrzymać. Użyj tej samej nazwy sesji, co nazwa przeniesiona do [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)lub [StartTracingSessionW](start-tracing-session-w.md).
 
-*outputLogFile*\
-Ścieżka do końcowego pliku dziennika wyjściowego, w którym ma zostać zapisany nieprzetworzony wynik śledzenia.
+*plik danych wyjściowych*\
+Ścieżka do końcowego pliku dziennika wyjściowego, w którym należy zapisać nieprzetworzony ślad.
 
-\ *statystyk*
-Wskaźnik do obiektu [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) . `StopTracingSession` zapisuje statystyki kolekcji śledzenia w tym obiekcie przed zwróceniem.
+*Statystyki*\
+Wskaźnik do [obiektu TRACING_SESSION_STATISTICS.](../other-types/tracing-session-statistics-struct.md) `StopTracingSession`zapisuje statystyki kolekcji śledzenia w tym obiekcie przed zwróceniem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Kod wyniku z wyliczenia [RESULT_CODE](../other-types/result-code-enum.md) .
+Kod wyniku z [RESULT_CODE](../other-types/result-code-enum.md) wyliczenia.
 
 ::: moniker-end

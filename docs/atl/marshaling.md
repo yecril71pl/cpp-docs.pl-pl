@@ -6,21 +6,21 @@ helpviewer_keywords:
 - marshaling
 - COM interfaces, marshaling
 ms.assetid: 40644b0a-1106-4fc8-9dfb-9bee9915d825
-ms.openlocfilehash: 9963e261f26daa57cb58e30ffc404b431d781bfa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 83cf29fb45347b7bfcfc1644546684f074061d25
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492042"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319353"
 ---
 # <a name="marshaling"></a>Marshaling
 
-Technika COM kierująca umożliwia interfejsy uwidocznione przez obiekt w jednym procesie, który ma być używany w innym procesie. W obszarze kierowanie modelu COM udostępnia kod (lub używa kodu dostarczonego przez implementujący interfejs) zarówno do pakowania parametrów metody do formatu, który może być przenoszony między procesami (a także w sieci do procesów uruchomionych na innych maszynach) i rozpakowywania tych parametrów na drugim końcu. Analogicznie, COM musi wykonać te same kroki na zwracaniu z wywołania.
+Technika COM organizowania umożliwia interfejsy udostępniane przez obiekt w jednym procesie, które mają być używane w innym procesie. W kierowaniu COM udostępnia kod (lub używa kodu dostarczonego przez realizatora interfejsu) zarówno do pakowania parametrów metody do formatu, który może być przenoszony między procesami (jak również przez przewod do procesów uruchomionych na innych komputerach) i rozpakować te parametry na drugim końcu. Podobnie COM musi wykonać te same kroki po powrocie z wywołania.
 
 > [!NOTE]
->  Kierowanie nie jest zwykle konieczne, gdy interfejs dostarczony przez obiekt jest używany w tym samym procesie co obiekt. Jednak może być wymagana kierowanie między wątkami.
+> Kierowanie zazwyczaj nie jest konieczne, gdy interfejs dostarczony przez obiekt jest używany w tym samym procesie co obiekt. Jednak kierowanie może być potrzebne między wątkami.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wprowadzenie do modelu COM](../atl/introduction-to-com.md)<br/>
-[Szczegóły organizowania](/windows/win32/com/marshaling-details)
+[Szczegóły dotyczące marshalingu](/windows/win32/com/marshaling-details)

@@ -1,106 +1,106 @@
 ---
-title: Implementowanie kolekcję C++ Standard Library
+title: Implementowanie kolekcji opartej na standardowej bibliotece języka C++
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-ms.openlocfilehash: 609ec2547cf7a8ab93ef757f7a8e460542c9de28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e80ce5e7bbc6b9c6be1615dad1ea43c18e03eb55
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197500"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319444"
 ---
-# <a name="implementing-a-c-standard-library-based-collection"></a>Implementowanie kolekcję C++ Standard Library
+# <a name="implementing-a-c-standard-library-based-collection"></a>Implementowanie kolekcji opartej na standardowej bibliotece języka C++
 
-ATL udostępnia `ICollectionOnSTLImpl` interfejs umożliwia szybkie implementowanie interfejsów kolekcji opartej na standardowej biblioteki języka C++ na obiekty. Aby zrozumieć, jak działa ta klasa, będzie działać, za pośrednictwem stanowi prosty przykład (poniżej) korzysta z tej klasy do zaimplementowania występowaniu klientów automatyzacji kolekcji tylko do odczytu.
+ATL udostępnia `ICollectionOnSTLImpl` interfejs, aby umożliwić szybkie zaimplementowanie interfejsów kolekcji opartych na bibliotece standardowej języka C++ na obiektach. Aby zrozumieć, jak działa ta klasa, będzie działać za pomocą prostego przykładu (poniżej), który używa tej klasy do zaimplementowania kolekcji tylko do odczytu przeznaczone dla klientów automatyzacji.
 
-Przykładowy kod pochodzi z [przykładowe ATLCollections](../overview/visual-cpp-samples.md).
+Przykładowy kod pochodzi z [próbki ATLCollections](../overview/visual-cpp-samples.md).
 
-Aby wykonać tę procedurę, wykonasz następujące czynności:
+Aby wykonać tę procedurę, należy:
 
-- [Generowanie nowego prostego obiektu](#vccongenerating_an_object).
+- [Wygeneruj nowy obiekt prosty](#vccongenerating_an_object).
 
 - [Edytuj plik IDL](#vcconedit_the_idl) dla wygenerowanego interfejsu.
 
-- [Tworzenie definicji pięć typów](#vcconstorage_and_exposure_typedefs) opisujące, jak elementy kolekcji są przechowywane i jak będzie ona widoczna dla klientów za pośrednictwem interfejsów COM.
+- [Utwórz pięć typedefs opisujące,](#vcconstorage_and_exposure_typedefs) jak elementy kolekcji są przechowywane i jak będą one udostępniane klientom za pośrednictwem interfejsów COM.
 
-- [Utwórz dwie definicje typów związanym z kopiowaniem klasy zasad](#vcconcopy_classes).
+- [Utwórz dwie definicje dla klas zasad kopiowania](#vcconcopy_classes).
 
-- [Tworzenie definicji typów dla wdrożenia modułu wyliczającego i kolekcji](#vcconenumeration_and_collection).
+- [Tworzenie typedefs dla wyliczacza i implementacji kolekcji](#vcconenumeration_and_collection).
 
-- [Edytuj kod C++ generowane przez kreatora, aby użyć — zbierania typedef](#vcconedit_the_generated_code).
+- [Edytuj wygenerowany przez kreatora kod C++, aby użyć typedef kolekcji](#vcconedit_the_generated_code).
 
 - [Dodaj kod, aby wypełnić kolekcję](#vcconpopulate_the_collection).
 
-##  <a name="vccongenerating_an_object"></a> Generowanie nowego prostego obiektu
+## <a name="generating-a-new-simple-object"></a><a name="vccongenerating_an_object"></a>Generowanie nowego obiektu prostego
 
-Utwórz nowy projekt, zapewniając, że jest wyczyszczone pole atrybutów, w obszarze Ustawienia aplikacji. Okno dialogowe Dodawanie klasy ATL i prostego obiektu Kreatora dodawania do generowania prostego obiektu o nazwie `Words`. Upewnij się, że wywoływana podwójnego interfejsu `IWords` jest generowany. Obiekty wygenerowanej klasy będzie służyć do reprezentowania zbiór słów (czyli ciągów).
+Utwórz nowy projekt, upewniając się, że pole Atrybuty w obszarze Ustawienia aplikacji jest wyczyszczone. Użyj okna dialogowego Atl Add Class i Dodaj Kreatora obiektów prostych, aby wygenerować prosty obiekt o nazwie `Words`. Upewnij się, że `IWords` generowany jest podwójny interfejs. Obiekty wygenerowanej klasy będą używane do reprezentowania kolekcji słów (czyli ciągów).
 
-##  <a name="vcconedit_the_idl"></a> Edytowanie pliku IDL
+## <a name="editing-the-idl-file"></a><a name="vcconedit_the_idl"></a>Edytowanie pliku IDL
 
-Teraz Otwórz plik IDL i Dodaj trzy właściwości, należy włączyć `IWords` w interfejsie kolekcji tylko do odczytu, jak pokazano poniżej:
+Teraz otwórz plik IDL i dodaj trzy właściwości `IWords` niezbędne do przekształcenia się w interfejs kolekcji tylko do odczytu, jak pokazano poniżej:
 
 [!code-cpp[NVC_ATL_COM#24](../atl/codesnippet/cpp/implementing-an-stl-based-collection_1.idl)]
 
-Jest to standardowy formularz interfejs kolekcji tylko do odczytu, zaprojektowana z klientami usługi Automation należy pamiętać. Ponumerowane komentarze w tej definicji interfejsu odpowiadać na komentarze poniżej:
+Jest to standardowy formularz dla interfejsu kolekcji tylko do odczytu zaprojektowany z myślą o klientach automatyzacji. Ponumerowane komentarze w tej definicji interfejsu odpowiadają poniższym uwagom:
 
-1. Interfejsów kolekcji są zazwyczaj dwa, ponieważ uzyskuje dostęp do klientów automatyzacji `_NewEnum` właściwości, za pośrednictwem `IDispatch::Invoke`. Jednak klienci automatyzacji można uzyskiwać dostęp do pozostałych metod za pośrednictwem vtable, tak podwójna interfejsy są preferowane w porównaniu do dispinterfaces.
+1. Interfejsy kolekcji są zwykle podwójne, `_NewEnum` ponieważ `IDispatch::Invoke`klienci automatyzacji uzyskuje dostęp do właściwości za pośrednictwem . Jednak klienci automatyzacji mogą uzyskać dostęp do pozostałych metod za pośrednictwem vtable, więc dwa interfejsy są lepsze niż dispinterfaces.
 
-1. Jeśli podwójnego interfejsu lub dispinterface nie zostanie rozszerzony w czasie wykonywania (oznacza to, że nie będzie zapewniać dodatkowe metody lub właściwości, za pośrednictwem `IDispatch::Invoke`), należy zastosować **nonextensible** atrybutu do swojej definicji. Ten atrybut umożliwia klientom automatyzacji do przeprowadzenia weryfikacji pełnego kodu w czasie kompilacji. W takim przypadku można rozszerzyć nie interfejsu.
+1. Jeśli podwójny interfejs lub dispinterface nie zostanie przedłużony w czasie wykonywania (oznacza to, `IDispatch::Invoke`że nie zapewni dodatkowych metod lub właściwości za pośrednictwem), należy zastosować **nonextensible** atrybut do definicji. Ten atrybut umożliwia klientom automatyzacji wykonywanie pełnej weryfikacji kodu w czasie kompilacji. W takim przypadku interfejs nie powinien być rozszerzony.
 
-1. Prawidłowy identyfikator DISPID jest ważne, jeśli chcesz, aby klienci automatyzacji, aby można było używać tej właściwości. (Zwróć uwagę, że istnieje tylko jeden znak podkreślenia w DISPID_NEWENUM).
+1. Poprawny identyfikator DISPID jest ważne, jeśli chcesz, aby klienci automatyzacji mogli korzystać z tej właściwości. (Należy zauważyć, że w DISPID_NEWENUM jest tylko jeden podkreślenie).
 
-1. Możesz podać dowolną wartość jako identyfikator DISPID z `Item` właściwości. Jednak `Item` zazwyczaj używa się to domyślna właściwość kolekcji DISPID_VALUE. Dzięki temu klienci automatyzacji do odwoływania się do właściwości bez jawnie nadawania mu nazwy.
+1. Można podać dowolną wartość jako DISPID `Item` właściwości. Jednak `Item` zazwyczaj używa DISPID_VALUE, aby uczynić go domyślną właściwością kolekcji. Dzięki temu klienci automatyzacji odwoływać się do właściwości bez nazewnictwa go jawnie.
 
-1. Typ danych używany dla wartości zwracanej z `Item` właściwość jest typ elementu, przechowywane w kolekcji, o ile dotyczy to klientów modelu COM. Interfejs zwraca ciągi, więc zaleca się użycie standardowego typu string COM, BSTR. Można przechowywać dane w innym formacie wewnętrznie jako pojawi się wkrótce.
+1. Typ danych używany dla wartości `Item` zwracanej właściwości jest typem elementu przechowywanego w kolekcji, jeśli chodzi o klientów COM. Interfejs zwraca ciągi, więc należy użyć standardowego typu ciągu COM, BSTR. Dane można przechowywać wewnętrznie w innym formacie, jak zobaczysz wkrótce.
 
-1. Wartość identyfikator DISPID z `Count` właściwość jest całkowicie dowolnego. Nie ma żadnych standardowych DISPID dla tej właściwości.
+1. Wartość używana dla DISPID `Count` właściwości jest całkowicie dowolny. Nie ma standardowego dispid dla tej właściwości.
 
-##  <a name="vcconstorage_and_exposure_typedefs"></a> Tworzenie definicji typów dla magazynu i zagrożeń
+## <a name="creating-typedefs-for-storage-and-exposure"></a><a name="vcconstorage_and_exposure_typedefs"></a>Tworzenie typedefs dla pamięci masowej i ekspozycji
 
-Po zdefiniowaniu interfejs kolekcji należy zdecydować, jak będą przechowywane dane i jak ujawnianie danych za pośrednictwem modułu wyliczającego.
+Po zdefiniowaniu interfejsu kolekcji należy zdecydować, jak dane będą przechowywane i jak dane będą udostępniane za pośrednictwem modułu wyliczacza.
 
-Odpowiedzi na te pytania można podać w postaci liczby definicji typów, które można dodać w górnej części pliku nagłówka dla nowo utworzonej klasie:
+Odpowiedzi na te pytania można udzielić w postaci wielu typedefs, które można dodać w górnej części pliku nagłówka dla nowo utworzonej klasy:
 
 [!code-cpp[NVC_ATL_COM#25](../atl/codesnippet/cpp/implementing-an-stl-based-collection_2.h)]
 
-W takim przypadku będą przechowywane dane jako **std::vector** z **std::string**s. **STD::Vector** jest klasą kontenera standardowej biblioteki języka C++, który zachowuje się jak tablica zarządzana. **STD::String** jest klasą ciągów biblioteki standardowej języka C++. W ramach tych zajęć ułatwiają do pracy z kolekcji ciągów.
+W takim przypadku dane będą przechowywane jako **std::vector** **std::string**s. **std::vector** jest klasą kontenera biblioteki standardowej języka C++, która zachowuje się jak tablica zarządzana. **std::string** jest klasą ciągu biblioteki standardowej języka C++. Te klasy ułatwiają pracę z kolekcją ciągów.
 
-Obsługa języka Visual Basic jest istotne, aby wskazywał Powodzenie, tego interfejsu, moduł wyliczający zwrócony przez `_NewEnum` właściwość musi obsługiwać `IEnumVARIANT` interfejsu. Jest to interfejs tylko moduł wyliczający zrozumiała dla języka Visual Basic.
+Ponieważ obsługa języka Visual Basic jest niezbędna do powodzenia tego `_NewEnum` interfejsu, moduł `IEnumVARIANT` wyliczający zwrócony przez właściwość musi obsługiwać interfejs. Jest to jedyny interfejs modułu wyliczacza zrozumiały dla języka Visual Basic.
 
-##  <a name="vcconcopy_classes"></a> Tworzenie definicji typów dla klasy zasad kopii
+## <a name="creating-typedefs-for-copy-policy-classes"></a><a name="vcconcopy_classes"></a>Tworzenie typedefs dla klas zasad kopiowania
 
-Definicje typów, które do tej pory utworzono zawierają wszystkie informacje potrzebne do tworzenia dodatkowych definicje typów dla klas kopiowania, które będą używane przez moduł wyliczający i kolekcji:
+Typedefs utworzone do tej pory zapewniają wszystkie informacje potrzebne do tworzenia dalszych typedefs dla klas kopiowania, które będą używane przez wyliczanie i kolekcji:
 
 [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]
 
-W tym przykładzie można użyć niestandardowego `GenericCopy` klasy zdefiniowanej w VCUE_Copy.h i VCUE_CopyString.h z [ATLCollections](../overview/visual-cpp-samples.md) próbki. Możesz użyć tej klasy w innym kodzie, ale może być konieczne dalsze zdefiniuj specjalizacje `GenericCopy` do obsługi typów danych używanych w własne kolekcje. Aby uzyskać więcej informacji, zobacz [klasy zasad kopii ATL](../atl/atl-copy-policy-classes.md).
+W tym przykładzie można `GenericCopy` użyć klasy niestandardowej zdefiniowanej w VCUE_Copy.h i VCUE_CopyString.h z próbki [ATLCollections.](../overview/visual-cpp-samples.md) Tej klasy można użyć w innym kodzie, ale może `GenericCopy` być konieczne zdefiniowanie dalszych specjalizacji do obsługi typów danych używanych w własnych kolekcjach. Aby uzyskać więcej informacji, zobacz [ATL Copy Policy Classes](../atl/atl-copy-policy-classes.md).
 
-##  <a name="vcconenumeration_and_collection"></a> Tworzenie definicji typów dla wyliczenia i kolekcji
+## <a name="creating-typedefs-for-enumeration-and-collection"></a><a name="vcconenumeration_and_collection"></a>Tworzenie typedefs dla wyliczenia i kolekcji
 
-Teraz wszystkie parametry szablonu konieczne specialize `CComEnumOnSTL` i `ICollectionOnSTLImpl` dostarczono klas na potrzeby tej sytuacji, w postaci definicje typów. Aby uprościć używanie specjalizacji, należy utworzyć dwa więcej typedefy, jak pokazano poniżej:
+Teraz wszystkie parametry szablonu `CComEnumOnSTL` niezbędne `ICollectionOnSTLImpl` do specjalizacji i klasy dla tej sytuacji zostały dostarczone w postaci typedefs. Aby uprościć stosowanie specjalizacji, należy utworzyć jeszcze dwa typedefs, jak pokazano poniżej:
 
 [!code-cpp[NVC_ATL_COM#27](../atl/codesnippet/cpp/implementing-an-stl-based-collection_4.h)]
 
-Teraz `CollectionType` jest synonimem dla specjalizacji `ICollectionOnSTLImpl` implementującej `IWords` interfejsu wcześniej zdefiniowaną i dostarcza moduł wyliczający obsługiwanych przez `IEnumVARIANT`.
+Teraz `CollectionType` jest synonimem `ICollectionOnSTLImpl` specjalizacji, która `IWords` implementuje interfejs zdefiniowany wcześniej i `IEnumVARIANT`zapewnia moduł wyliczacza, który obsługuje .
 
-##  <a name="vcconedit_the_generated_code"></a> Edytowanie kodu generowane przez kreatora
+## <a name="editing-the-wizard-generated-code"></a><a name="vcconedit_the_generated_code"></a>Edytowanie kodu wygenerowanego przez kreatora
 
-Teraz należy wywieść `CWords` od implementacji interfejsu, reprezentowane przez `CollectionType` typedef zamiast `IWords`, jak pokazano poniżej:
+Teraz należy wyprowadzić `CWords` z implementacji interfejsu `CollectionType` reprezentowane `IWords`przez typedef, a nie , jak pokazano poniżej:
 
 [!code-cpp[NVC_ATL_COM#28](../atl/codesnippet/cpp/implementing-an-stl-based-collection_5.h)]
 
-##  <a name="vcconpopulate_the_collection"></a> Dodawanie kodu do wypełnienia kolekcji
+## <a name="adding-code-to-populate-the-collection"></a><a name="vcconpopulate_the_collection"></a>Dodawanie kodu do wypełniania kolekcji
 
-Jest jedynym elementem, który pozostaje do wypełnienia wektora z danymi. W tym prostym przykładzie można dodać kilka słów do kolekcji w konstruktorze klasy:
+Jedyną rzeczą, która pozostaje jest wypełnić wektora z danymi. W tym prostym przykładzie można dodać kilka słów do kolekcji w konstruktorze dla klasy:
 
 [!code-cpp[NVC_ATL_COM#29](../atl/codesnippet/cpp/implementing-an-stl-based-collection_6.h)]
 
-Teraz możesz przetestować kod przy użyciu wybranego klienta.
+Teraz możesz przetestować kod z wybranym klientem.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Kolekcje i wyliczenia](../atl/atl-collections-and-enumerators.md)<br/>
-[ATLCollections Sample](../overview/visual-cpp-samples.md)<br/>
-[Klasy zasad kopii ATL](../atl/atl-copy-policy-classes.md)
+[Kolekcje i wyliczacze](../atl/atl-collections-and-enumerators.md)<br/>
+[AtlCollections Przykład](../overview/visual-cpp-samples.md)<br/>
+[Klasy zasad kopiowania ATL](../atl/atl-copy-policy-classes.md)

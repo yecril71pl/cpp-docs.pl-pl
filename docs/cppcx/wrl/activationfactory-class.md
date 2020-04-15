@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Microsoft::WRL::ActivationFactory::QueryInterface method
 - Microsoft::WRL::ActivationFactory::Release method
 ms.assetid: 5faddf1f-43b6-4f8a-97de-8c9d3ae1e1ff
-ms.openlocfilehash: 8e5132f4a8711f6420cd9b52751550a96d10d8fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0655caeb3f49a18e9c57c78f0008901aaaedda4a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303893"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368704"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory — Klasa
 
-Umożliwia co najmniej jedną klasę na uaktywnianie przez środowisko wykonawcze Windows.
+Włącza jedną lub więcej klas, które mają być aktywowane przez środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -57,7 +57,7 @@ class ActivationFactory :
 ### <a name="parameters"></a>Parametry
 
 *I0*<br/>
-Interfejsu zerowego.
+Interfejs zerowy.
 
 *I1*<br/>
 Pierwszy interfejs.
@@ -67,13 +67,13 @@ Drugi interfejs.
 
 ## <a name="remarks"></a>Uwagi
 
-`ActivationFactory` udostępnia metody rejestracji i podstawowe funkcje dla `IActivationFactory` interfejsu. `ActivationFactory` Umożliwia także udostępnić implementację fabrycznej.
+`ActivationFactory`zapewnia metody rejestracji i podstawowe `IActivationFactory` funkcje interfejsu. `ActivationFactory`umożliwia również zapewnienie niestandardowej implementacji fabrycznej.
 
-Poniższy fragment kodu ilustruje symbolicznie sposób użycia activationfactory —.
+Poniższy fragment kodu symbolicznie ilustruje sposób korzystania z ActivationFactory.
 
 [!code-cpp[wrl-microsoft__wrl__activationfactory#1](../codesnippet/CPP/activationfactory-class_1.cpp)]
 
-Poniższy fragment kodu przedstawia sposób użycia [implementuje](implements-structure.md) struktury, aby określić więcej niż trzy identyfikatory interfejsu.
+Poniższy fragment kodu pokazuje, jak używać [Implements](implements-structure.md) struktury, aby określić więcej niż trzy identyfikatory interfejsu.
 
 `struct MyFactory : ActivationFactory<Implements<I1, I2, I3>, I4, I5>;`
 
@@ -83,18 +83,18 @@ Poniższy fragment kodu przedstawia sposób użycia [implementuje](implements-st
 
 Nazwa                                                       | Opis
 ---------------------------------------------------------- | ------------------------------------------
-[ActivationFactory::ActivationFactory](#activationfactory) | Inicjuje `ActivationFactory` klasy.
+[ActivationFactory::ActivationFactory](#activationfactory) | Inicjuje `ActivationFactory` klasę.
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Nazwa                                                           | Opis
 -------------------------------------------------------------- | --------------------------------------------------------------------------------------------
 [ActivationFactory::AddRef](#addref)                           | Zwiększa liczbę odwołań bieżącego `ActivationFactory` obiektu.
-[ActivationFactory::GetIids](#getiids)                         | Pobiera tablicę zaimplementowanego interfejsu identyfikatorów.
-[ActivationFactory::GetRuntimeClassName](#getruntimeclassname) | Pobiera nazwę klasy środowiska uruchomieniowego, obiektu, który bieżącego `ActivationFactory` tworzy wystąpienie.
-[ActivationFactory::GetTrustLevel](#gettrustlevel)             | Pobiera poziom zaufania, obiektu, który bieżącego `ActivationFactory` tworzy wystąpienie.
+[ActivationFactory::GetIids](#getiids)                         | Pobiera tablicę zaimplementowanych identyfikatorów interfejsu.
+[ActivationFactory::GetRuntimeClassName](#getruntimeclassname) | Pobiera nazwę klasy środowiska wykonawczego obiektu, `ActivationFactory` który jest wystąpienia bieżącego.
+[ActivationFactory::GetTrustPoziom](#gettrustlevel)             | Pobiera poziom zaufania obiektu, który `ActivationFactory` jest tworzone w bieżącym.
 [ActivationFactory::QueryInterface](#queryinterface)           | Pobiera wskaźnik do określonego interfejsu.
-[ActivationFactory::Release](#release)                         | Dekrementuje liczbę odwołań bieżącego `ActivationFactory` obiektu.
+[ActivationFactory::Release](#release)                         | Zmniejsza liczbę odwołań bieżącego `ActivationFactory` obiektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -122,17 +122,17 @@ Nazwa                                                           | Opis
 
 **Nagłówek:** module.h
 
-**Namespace:** Microsoft::WRL
+**Obszar nazw:** Microsoft::WRL
 
-## <a name="activationfactory"></a>ActivationFactory::ActivationFactory
+## <a name="activationfactoryactivationfactory"></a><a name="activationfactory"></a>ActivationFactory::ActivationFactory
 
-Inicjuje `ActivationFactory` klasy.
+Inicjuje `ActivationFactory` klasę.
 
 ```cpp
 ActivationFactory();
 ```
 
-## <a name="addref"></a>ActivationFactory::AddRef
+## <a name="activationfactoryaddref"></a><a name="addref"></a>ActivationFactory::AddRef
 
 Zwiększa liczbę odwołań bieżącego `ActivationFactory` obiektu.
 
@@ -145,11 +145,11 @@ STDMETHOD_(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.
+S_OK, jeśli się powiedzie; w przeciwnym razie HRESULT, który opisuje błąd.
 
-## <a name="getiids"></a>ActivationFactory::GetIids
+## <a name="activationfactorygetiids"></a><a name="getiids"></a>ActivationFactory::GetIids
 
-Pobiera tablicę zaimplementowanego interfejsu identyfikatorów.
+Pobiera tablicę zaimplementowanych identyfikatorów interfejsu.
 
 ```cpp
 STDMETHOD(
@@ -159,19 +159,19 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*iidCount*<br/>
-Po zakończeniu tej operacji, liczba identyfikatorów interfejsu w *IID* tablicy.
+*iidCount (licz) iidCount*<br/>
+Po zakończeniu tej operacji liczba identyfikatorów wstawionych w *tablicy iids.*
 
-*IID*<br/>
-Po zakończeniu tej operacji, tablicę implementowane identyfikatorów interfejsu.
+*iids*<br/>
+Po zakończeniu tej operacji tablica zaimplementowanych identyfikatorów interfejsu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd. E_OUTOFMEMORY jest możliwe błąd HRESULT.
+S_OK, jeśli się powiedzie; w przeciwnym razie HRESULT, który opisuje błąd. E_OUTOFMEMORY jest możliwa awaria HRESULT.
 
-## <a name="getruntimeclassname"></a>ActivationFactory::GetRuntimeClassName
+## <a name="activationfactorygetruntimeclassname"></a><a name="getruntimeclassname"></a>ActivationFactory::GetRuntimeClassName
 
-Pobiera nazwę klasy środowiska uruchomieniowego, obiektu, który bieżącego `ActivationFactory` tworzy wystąpienie.
+Pobiera nazwę klasy środowiska wykonawczego obiektu, `ActivationFactory` który jest wystąpienia bieżącego.
 
 ```cpp
 STDMETHOD(
@@ -181,16 +181,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*runtimeName*<br/>
-Po zakończeniu tej operacji, dojścia do ciągu, który zawiera nazwę klasy środowiska uruchomieniowego obiektu, bieżący `ActivationFactory` tworzy wystąpienie.
+*nazwa środowiska wykonawczego*<br/>
+Po zakończeniu tej operacji dojście do ciągu zawierającego nazwę klasy runtime obiektu, który powoduje wystąpienia bieżącego. `ActivationFactory`
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.
+S_OK, jeśli się powiedzie; w przeciwnym razie HRESULT, który opisuje błąd.
 
-## <a name="gettrustlevel"></a>ActivationFactory::GetTrustLevel
+## <a name="activationfactorygettrustlevel"></a><a name="gettrustlevel"></a>ActivationFactory::GetTrustPoziom
 
-Pobiera poziom zaufania, obiektu, który bieżącego `ActivationFactory` tworzy wystąpienie.
+Pobiera poziom zaufania obiektu, który `ActivationFactory` jest tworzone w bieżącym.
 
 ```cpp
 STDMETHOD(
@@ -200,14 +200,14 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*trustLvl*<br/>
-Po zakończeniu tej operacji, poziom zaufania środowiska uruchomieniowego klasy `ActivationFactory` tworzy wystąpienie.
+*trustLvl (włask zaufanie)*<br/>
+Po zakończeniu tej operacji poziom zaufania klasy środowiska `ActivationFactory` wykonawczego, który wystąpienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK w przypadku powodzenia; w przeciwnym razie jest emitowane Błąd asercji i *trustLvl* ustawiono `FullTrust`.
+S_OK, jeśli się powiedzie; w przeciwnym razie błąd potwierdzenia jest emitowany, `FullTrust`a *trustLvl* jest ustawiony na .
 
-## <a name="queryinterface"></a>ActivationFactory::QueryInterface
+## <a name="activationfactoryqueryinterface"></a><a name="queryinterface"></a>ActivationFactory::QueryInterface
 
 Pobiera wskaźnik do określonego interfejsu.
 
@@ -219,19 +219,19 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*Parametr riid*<br/>
+*Riid*<br/>
 Identyfikator interfejsu.
 
-*ppvObject*<br/>
-Po zakończeniu tej operacji, wskaźnik do interfejsu, określony przez parametr *riid*.
+*ppvObiekt*<br/>
+Po zakończeniu tej operacji wskaźnik do interfejsu określony przez parametr *riid*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.
+S_OK, jeśli się powiedzie; w przeciwnym razie HRESULT, który opisuje błąd.
 
-## <a name="release"></a>ActivationFactory::Release
+## <a name="activationfactoryrelease"></a><a name="release"></a>ActivationFactory::Release
 
-Dekrementuje liczbę odwołań bieżącego `ActivationFactory` obiektu.
+Zmniejsza liczbę odwołań bieżącego `ActivationFactory` obiektu.
 
 ```cpp
 STDMETHOD_(
@@ -242,4 +242,4 @@ STDMETHOD_(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, który opisuje błąd.
+S_OK, jeśli się powiedzie; w przeciwnym razie HRESULT, który opisuje błąd.

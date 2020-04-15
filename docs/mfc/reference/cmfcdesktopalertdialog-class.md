@@ -14,18 +14,18 @@ helpviewer_keywords:
 - CMFCDesktopAlertDialog [MFC], HasFocus
 - CMFCDesktopAlertDialog [MFC], PreTranslateMessage
 ms.assetid: a53c60aa-9607-485b-b826-ec64962075f6
-ms.openlocfilehash: 02086e09ca3229fae28359b1ea81e4708c5d1865
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 479959e9b021255e309caf6fee02588a8cd8f1d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403714"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367653"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>Klasa CMFCDesktopAlertDialog
 
-`CMFCDesktopAlertDialog` Klasa jest używana razem z [klasa CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md) można wyświetlić niestandardowy dialog w oknie podręcznym.
+Klasa `CMFCDesktopAlertDialog` jest używana razem z [CMFCDesktopAlertWnd Klasy](../../mfc/reference/cmfcdesktopalertwnd-class.md) do wyświetlania niestandardowego okna dialogowego w oknie podręcznym.
 
-Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.
+Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w folderze **vc\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,27 +46,27 @@ class CMFCDesktopAlertDialog : public CDialogEx
 
 ### <a name="remarks"></a>Uwagi
 
-Wykonaj poniższe kroki, aby wyświetlić niestandardowy dialog w oknie podręcznym:
+Wykonaj następujące czynności, aby wyświetlić niestandardowe okno dialogowe w oknie podręcznym:
 
-1. Wyprowadzić klasę z `CMFCDesktopAlertDialog`.
+1. Wywodź `CMFCDesktopAlertDialog`klasę z pliku .
 
-1. Tworzenie szablonu okna dialogowego podrzędnych w zasobów projektu.
+1. Utwórz szablon podrzędnego okna dialogowego w zasobach projektu.
 
-1. Wywołaj [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) o identyfikatorze zasobu szablonu okna dialogowego i wskaźnik do informacji o klasie czasu wykonywania klasy pochodnej jako parametry.
+1. Wywołanie [CMFCDesktopAlertWnd::Utwórz](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) z identyfikatorem zasobu szablonu okna dialogowego i wskaźnikiem do informacji o klasie wykonawczej klasy pochodnej jako parametry.
 
-1. Program niestandardowy dialog do obsługi wszystkich powiadomień, które pochodzą z formantów hostowanej lub program hostowanej służy do obsługi tych powiadomień bezpośrednio.
+1. Zaprogramuj niestandardowe okno dialogowe do obsługi wszystkich powiadomień pochodzących z hostowanych formantów lub programuj hostowane formanty do obsługi tych powiadomień bezpośrednio.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
-[CDialogEx](../../mfc/reference/cdialogex-class.md)
+[Cdialogex](../../mfc/reference/cdialogex-class.md)
 
 [CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md)
 
@@ -74,7 +74,7 @@ Wykonaj poniższe kroki, aby wyświetlić niestandardowy dialog w oknie podręcz
 
 **Nagłówek:** afxDesktopAlertDialog.h
 
-##  <a name="createfromparams"></a>  CMFCDesktopAlertDialog::CreateFromParams
+## <a name="cmfcdesktopalertdialogcreatefromparams"></a><a name="createfromparams"></a>CMFCDesktopAlertDialog::CreateFromParams
 
 ```
 BOOL CreateFromParams(
@@ -84,15 +84,15 @@ BOOL CreateFromParams(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *params*<br/>
+[w] *params*<br/>
 
-[in] *pParent*<br/>
+[w] *pRoczysz*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="getdlgsize"></a>  CMFCDesktopAlertDialog::GetDlgSize
+## <a name="cmfcdesktopalertdialoggetdlgsize"></a><a name="getdlgsize"></a>CMFCDesktopAlertDialog::GetDlgSize
 
 ```
 CSize GetDlgSize();
@@ -102,7 +102,7 @@ CSize GetDlgSize();
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="hasfocus"></a>  CMFCDesktopAlertDialog::HasFocus
+## <a name="cmfcdesktopalertdialoghasfocus"></a><a name="hasfocus"></a>CMFCDesktopAlertDialog::HasFocus
 
 ```
 BOOL HasFocus() const;
@@ -112,7 +112,7 @@ BOOL HasFocus() const;
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="pretranslatemessage"></a>  CMFCDesktopAlertDialog::PreTranslateMessage
+## <a name="cmfcdesktopalertdialogpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCDesktopAlertDialog::PreTranslateMessage
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -120,13 +120,13 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pMsg*<br/>
+[w] *pMsg*<br/>
 
 ### <a name="return-value"></a>Wartość zwracana
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: e8b88f2722f5a4379276f13c2ef159aa4d120533
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37fcf47b7537e89974a61e6c50c41e164d555678
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323755"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365072"
 ---
 # <a name="ctooltipmanager-class"></a>Klasa CTooltipManager
 
-Przechowuje informacje środowiska wykonawczego o podpowiedziach. `CTooltipManager` Klasy jest utworzona jeden raz w każdej aplikacji.
+Przechowuje informacje o czasie wykonywania etykietek narzędzi. Klasa `CTooltipManager` jest tworzone jeden raz na aplikację.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,29 +39,29 @@ class CTooltipManager : public CObject
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CTooltipManager::CreateToolTip](#createtooltip)|Tworzy formant etykietki narzędzia dla typów formantu Windows.|
-|[CTooltipManager::DeleteToolTip](#deletetooltip)|Usuwa kontrolkę etykiety narzędzia.|
-|[CTooltipManager::SetTooltipParams](#settooltipparams)|Dostosowuje wyglądu formantu etykietki narzędzia dla typów formantu Windows.|
-|[CTooltipManager::SetTooltipText](#settooltiptext)|Ustawia tekst i opis dla kontrolki tooltip.|
+|[CTooltipManager::CreateToolTip](#createtooltip)|Tworzy formant etykietki narzędzia dla określonych typów formantów systemu Windows.|
+|[CTooltipManager::DeleteToolTip](#deletetooltip)|Usuwa formant etykietki narzędzia.|
+|[CTooltipManager::SetTooltipParams](#settooltipparams)|Dostosowuje wygląd formantu etykietki narzędzia dla określonych typów formantów systemu Windows.|
+|[CTooltipManager::SetTooltipText](#settooltiptext)|Ustawia tekst i opis formantu etykietki narzędzia.|
 |[CTooltipManager::UpdateTooltips](#updatetooltips)||
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj [klasa CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo`, i `CTooltipManager` ze sobą, aby implementować niestandardowe etykietki narzędzi w aplikacji. Na przykład dotyczące używania tych klas etykietki narzędzia zobacz [klasa CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md) tematu.
+Użyj [CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md) `CMFCToolTipInfo`Class `CTooltipManager` , i razem, aby zaimplementować dostosowane etykietki narzędzi w aplikacji. Na przykład, jak korzystać z tych klas etykietki narzędzia, zobacz [CMFCToolTipCtrl temat klasy.](../../mfc/reference/cmfctooltipctrl-class.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)
+[Ctooltipmanager](../../mfc/reference/ctooltipmanager-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** afxtooltipmanager.h
 
-##  <a name="createtooltip"></a>  CTooltipManager::CreateToolTip
+## <a name="ctooltipmanagercreatetooltip"></a><a name="createtooltip"></a>CTooltipManager::CreateToolTip
 
-Tworzy kontrolkę tooltip.
+Tworzy formant etykietki narzędzia.
 
 ```
 static BOOL CreateToolTip(
@@ -72,44 +72,44 @@ static BOOL CreateToolTip(
 
 ### <a name="parameters"></a>Parametry
 
-*pToolTip*<br/>
-[out] Odwołanie do wskaźnika etykietki narzędzia. Ustawiana jest punkt do nowo utworzonego etykietki narzędzia, gdy funkcja zwraca.
+*pToolTip (etykietka pToolTip)*<br/>
+[na zewnątrz] Odwołanie do wskaźnika etykietki narzędzia. Jest ustawiona na wskazywę nowo utworzonej etykietki narzędzia, gdy funkcja zwraca.
 
-*pWndParent*<br/>
-[in] Element nadrzędny elementu ToolTip.
+*pWndRodziciela*<br/>
+[w] Element nadrzędny etykietki narzędzia.
 
-*nType*<br/>
-[in] Typ elementu ToolTip.
+*nTyp*<br/>
+[w] Typ etykietki narzędzia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Różna od zera, jeśli etykietka narzędzia został pomyślnie utworzony.
+Niezerowe, jeśli etykietka narzędzia została utworzona pomyślnie.
 
 ### <a name="remarks"></a>Uwagi
 
-Należy wywołać [CTooltipManager::DeleteToolTip](#deletetooltip) do usuwania formantu etykietki narzędzia, który jest przekazywany w *pToolTip*.
+Aby usunąć kontrolkę etykietki narzędzia przekazywana z powrotem w *pToolTip*należy wywołać [CTooltipManager::DeleteToolTip.](#deletetooltip)
 
-[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) zestawów parametrów wizualizacji do wyświetlenia każdego etykietki narzędzia, tworzy oparte na etykietkę narzędzia typu *nNie* określa. Aby zmienić parametry dla jednego lub więcej typów etykietki narzędzia, należy wywołać [CTooltipManager::SetTooltipParams](#settooltipparams).
+[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) ustawia parametry wyświetlania wizualnego każdej tworzonej etykietki narzędzia na podstawie typu etykietki narzędzia, który określa *nType.* Aby zmienić parametry dla jednego lub więcej typów etykietek narzędzi, zadzwoń [do CTooltipManager::SetTooltipParams](#settooltipparams).
 
-Nieprawidłowa etykietka narzędzia typy są wymienione w poniższej tabeli:
+Prawidłowe typy etykietek narzędzi są wymienione w poniższej tabeli:
 
-|Typ etykietki narzędzia|Kategoria kontroli|Przykład typów|
+|Typ etykietki narzędzia|Kategoria sterowania|Przykładowe typy|
 |------------------|----------------------|-------------------|
-|AFX_TOOLTIP_TYPE_BUTTON|Przycisk.|CMFCButton|
-|AFX_TOOLTIP_TYPE_CAPTIONBAR|Pasek podpisu.|CMFCCaptionBar|
-|AFX_TOOLTIP_TYPE_DEFAULT|Formant, który nie mieści się inną kategorię.|Brak.|
-|AFX_TOOLTIP_TYPE_DOCKBAR|Okienko dokowalnych.|CDockablePane|
+|AFX_TOOLTIP_TYPE_BUTTON|Przycisk.|Cmfcbutton|
+|AFX_TOOLTIP_TYPE_CAPTIONBAR|Pasek podpisu.|Cmfccaptionbar|
+|AFX_TOOLTIP_TYPE_DEFAULT|Każdy formant, który nie pasuje do innej kategorii.|Brak.|
+|AFX_TOOLTIP_TYPE_DOCKBAR|Okienko dokowane.|Cdockablepane|
 |AFX_TOOLTIP_TYPE_EDIT|Pole tekstowe.|Brak.|
-|AFX_TOOLTIP_TYPE_MINIFRAME|Pływające.|CPaneFrameWnd|
-|AFX_TOOLTIP_TYPE_PLANNER|Planner.|Brak.|
+|AFX_TOOLTIP_TYPE_MINIFRAME|Miniframe.|Cpaneframewnd|
+|AFX_TOOLTIP_TYPE_PLANNER|Planista.|Brak.|
 |AFX_TOOLTIP_TYPE_RIBBON|Pasek wstążki.|CMFCRibbonBar, CMFCRibbonPanelMenuBar|
-|AFX_TOOLTIP_TYPE_TAB|Formant karty.|CMFCTabCtrl|
+|AFX_TOOLTIP_TYPE_TAB|Kontrolka karty.|Cmfctabctrl|
 |AFX_TOOLTIP_TYPE_TOOLBAR|Pasek narzędzi.|CMFCToolBar, CMFCPopupMenuBar|
-|AFX_TOOLTIP_TYPE_TOOLBOX|Przybornika.|Brak.|
+|AFX_TOOLTIP_TYPE_TOOLBOX|Przybornik.|Brak.|
 
-##  <a name="deletetooltip"></a>  CTooltipManager::DeleteToolTip
+## <a name="ctooltipmanagerdeletetooltip"></a><a name="deletetooltip"></a>CTooltipManager::DeleteToolTip
 
-Usuwa kontrolkę etykiety narzędzia.
+Usuwa formant etykietki narzędzia.
 
 ```
 static void DeleteToolTip(CToolTipCtrl*& pToolTip);
@@ -117,16 +117,16 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 
 ### <a name="parameters"></a>Parametry
 
-*pToolTip*<br/>
-[out w] Odwołanie do wskaźnika do etykietkę narzędzia do zniszczenia.
+*pToolTip (etykietka pToolTip)*<br/>
+[w, na zewnątrz] Odwołanie do wskaźnika do etykietki narzędzia, które mają zostać zniszczone.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie tej metody dla każdego [klasa CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) utworzony przez [CTooltipManager::CreateToolTip](#createtooltip). Kontrolki nadrzędnej powinna wywołać tę metodę z jego `OnDestroy` programu obsługi. Jest to wymagane, aby poprawnie usunąć etykietki narzędzia w ramach. Ta metoda ustawia *pToolTip* na wartość NULL, przed jego zwracaniem.
+Wywołanie tej metody dla każdej [klasy CToolTipCtrl,](../../mfc/reference/ctooltipctrl-class.md) która została utworzona przez [CTooltipManager::CreateToolTip](#createtooltip). Formant nadrzędny należy wywołać tę metodę z jego `OnDestroy` obsługi. Jest to wymagane, aby poprawnie usunąć etykietkę narzędzia z platformy. Ta metoda ustawia *pToolTip* na NULL przed jego zwrotem.
 
-##  <a name="settooltipparams"></a>  CTooltipManager::SetTooltipParams
+## <a name="ctooltipmanagersettooltipparams"></a><a name="settooltipparams"></a>CTooltipManager::SetTooltipParams
 
-Dostosowuje wyglądu formantu etykietki narzędzia dla określonych typów formantu Windows.
+Dostosowuje wygląd formantu etykietki narzędzia dla określonych typów formantów systemu Windows.
 
 ```
 void SetTooltipParams(
@@ -137,30 +137,30 @@ void SetTooltipParams(
 
 ### <a name="parameters"></a>Parametry
 
-*nTypes*<br/>
-[in] Określa typy kontrolek.
+*nTypy*<br/>
+[w] Określa typy formantów.
 
 *pRTC*<br/>
-[in] Klasa środowiska uruchomieniowego niestandardowa etykietka narzędzia.
+[w] Klasa środowiska uruchomieniowego etykietki narzędzia niestandardowego.
 
-*pParams*<br/>
-[in] Parametry etykietki narzędzia.
+*pParams ( pParams )*<br/>
+[w] Parametry etykietki narzędzia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zestawów środowiska uruchomieniowego klasy i parametry początkowe [CToolTipManager](../../mfc/reference/ctooltipmanager-class.md) używa podczas tworzenia etykietek narzędzi. Kiedy wywołuje kontrolki [CTooltipManager::CreateToolTip](#createtooltip) i przebiegów w etykietce narzędzia typ jednego z typów, wskazywanym przez *nTypes*, Menedżer etykietki narzędzia tworzy kontrolkę etykiety narzędzia, który jest wystąpieniem typu środowisko uruchomieniowe klasą określoną przez *pRTC* i przekazuje parametry określone przez *pParams* do nowego etykietki narzędzia.
+Ta metoda ustawia klasę środowiska uruchomieniowego i parametry początkowe używane przez [CToolTipManager](../../mfc/reference/ctooltipmanager-class.md) podczas tworzenia etykietek narzędzi. Gdy formant wywołuje [CTooltipManager::CreateToolTip](#createtooltip) i przekazuje w polup typu, który jest jednym z typów wskazanych przez *nTypes,* menedżer etykietki narzędzia tworzy formant etykietki narzędzia, który jest wystąpieniem klasy środowiska uruchomieniowego określonego przez *pRTC* i przekazuje parametry określone przez *pParams* do nowej etykietki narzędzia.
 
-Ta metoda jest wywoływana, wszystkich istniejących właścicieli etykietka narzędzia pojawia się komunikat o AFX_WM_UPDATETOOLTIPS i ich etykietki narzędzi należy utworzyć ponownie przy użyciu [CTooltipManager::CreateToolTip](#createtooltip).
+Po wywołaniu tej metody wszyscy istniejąci właściciele etykietek narzędzi otrzymują komunikat AFX_WM_UPDATETOOLTIPS i muszą ponownie utworzyć ich etykietki narzędzi za pomocą [CTooltipManager::CreateToolTip](#createtooltip).
 
-*nTypes* może być dowolną kombinacją nieprawidłowa etykietka narzędzia typy, które [CTooltipManager::CreateToolTip](#createtooltip) AFX_TOOLTIP_TYPE_ALL może być używana lub go. W przypadku przekazania AFX_TOOLTIP_TYPE_ALL wpływają na wszystkie typy etykietki narzędzia.
+*nTypes* może być dowolną kombinacją prawidłowych typów etykietki narzędzia, które [CTooltipManager::CreateToolTip](#createtooltip) używa lub może być AFX_TOOLTIP_TYPE_ALL. Jeśli przekażesz AFX_TOOLTIP_TYPE_ALL, dotyczy to wszystkich typów etykietek narzędzi.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób użycia `SetTooltipParams` metody `CTooltipManager` klasy. Ten fragment kodu jest częścią [Rysowanie Client sample](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie pokazano, jak używać `SetTooltipParams` metody `CTooltipManager` klasy. Ten fragment kodu jest częścią [próbki Klienta rysowania](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#11](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]
 
-##  <a name="settooltiptext"></a>  CTooltipManager::SetTooltipText
+## <a name="ctooltipmanagersettooltiptext"></a><a name="settooltiptext"></a>CTooltipManager::SetTooltipText
 
 Ustawia tekst i opis etykietki narzędzia.
 
@@ -175,28 +175,28 @@ static void SetTooltipText(
 
 ### <a name="parameters"></a>Parametry
 
-*pTI*<br/>
-[in] Wskaźnik do obiektu TOOLINFO.
+*Pti*<br/>
+[w] Wskaźnik do obiektu TOOLINFO.
 
-*pToolTip*<br/>
-[out w] Wskaźnik do kontrolki tooltip, dla której chcesz ustawić tekst i opis.
+*pToolTip (etykietka pToolTip)*<br/>
+[w, na zewnątrz] Wskaźnik do formantu etykietki narzędzia, dla którego należy ustawić tekst i opis.
 
-*nType*<br/>
-[in] Określa typ kontrolki, z którą skojarzony jest ten etykietki narzędzia.
+*nTyp*<br/>
+[w] Określa typ formantu, z którym jest skojarzona ta etykietka narzędzia.
 
-*strText*<br/>
-[in] Tekst, który ma być ustawiony jako tekst etykietki narzędzia.
+*strText (tekst)*<br/>
+[w] Tekst, który ma być ustawiony jako tekst etykietki narzędzia.
 
-*lpszDescr*<br/>
-[in] Wskaźnik do opis etykietki narzędzia. Może mieć wartości NULL.
+*lpszdescr*<br/>
+[w] Wskaźnik do opisu etykietki narzędzia. Może mieć wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość *nNie* musi być taka sama wartość jak *nNie* parametru [CTooltipManager::CreateToolTip](#createtooltip) podczas tworzenia etykietki narzędzia.
+Wartość *nType* musi być taka sama wartość jak *nType* parametr [CTooltipManager::CreateToolTip](#createtooltip) podczas tworzenia etykietki narzędzia.
 
-##  <a name="updatetooltips"></a>  CTooltipManager::UpdateTooltips
+## <a name="ctooltipmanagerupdatetooltips"></a><a name="updatetooltips"></a>CTooltipManager::UpdateTooltips
 
-Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w **VC\\atlmfc\\src\\mfc** folder instalacji programu Visual Studio.
+Aby uzyskać więcej informacji, zobacz kod źródłowy znajdujący się w folderze **vc\\\\atlmfc src\\mfc** instalacji programu Visual Studio.
 
 ```
 void UpdateTooltips();
@@ -204,7 +204,7 @@ void UpdateTooltips();
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

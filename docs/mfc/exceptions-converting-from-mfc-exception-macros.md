@@ -1,5 +1,5 @@
 ---
-title: 'Wyjątki: Konwertowanie z makr wyjątków MFC'
+title: 'Wyjątki: konwertowanie z makr wyjątków MFC'
 ms.date: 08/27/2018
 helpviewer_keywords:
 - converting exceptions [MFC]
@@ -14,84 +14,84 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-ms.openlocfilehash: 59b83438d5341fd6a139af64a2f365a739438741
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 330f66b1f46542082637645ad53da016b434d4a2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394510"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372017"
 ---
-# <a name="exceptions-converting-from-mfc-exception-macros"></a>Wyjątki: Konwertowanie z makr wyjątków MFC
+# <a name="exceptions-converting-from-mfc-exception-macros"></a>Wyjątki: konwertowanie z makr wyjątków MFC
 
-Jest to zaawansowane tematu.
+Jest to zaawansowany temat.
 
-W tym artykule opisano sposób konwertowania istniejący kod napisany w języku makr MFC — **SPRÓBUJ**, **CATCH**, **THROW**i tak dalej — aby używać obsługę wyjątków C++ słowa kluczowe **spróbuj**, **catch**, i **throw**. Tematy obejmują:
+W tym artykule wyjaśniono, jak przekonwertować istniejący kod napisany za pomocą makr Microsoft Foundation Class — **TRY,** **CATCH**, **THROW**i tak dalej — aby użyć słów kluczowych obsługi wyjątków C++, **spróbuj**, **złapać**i **wrzucić**. Tematy obejmują:
 
-- [Zalety konwersji](#_core_advantages_of_converting)
+- [Korzyści z konwersji](#_core_advantages_of_converting)
 
-- [Konwersja kodu za pomocą makra wyjątków należy używać wyjątków języka C++](#_core_doing_the_conversion)
+- [Konwertowanie kodu z makrami wyjątków w celu używania wyjątków języka C++](#_core_doing_the_conversion)
 
-##  <a name="_core_advantages_of_converting"></a> Korzyści wynikające z konwersji
+## <a name="advantages-of-converting"></a><a name="_core_advantages_of_converting"></a>Zalety konwersji
 
-Prawdopodobnie nie trzeba przekonwertować istniejącego kodu, ale należy pamiętać różnic między implementacjami makra w MFC w wersji 3.0 i implementacje we wcześniejszych wersjach. Te różnice i kolejne zmiany w zachowaniu kodu, które zostały omówione w [wyjątków: Zmiany w makrach wyjątków w wersji 3.0 lub nowszej](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).
+Prawdopodobnie nie trzeba konwertować istniejącego kodu, chociaż należy pamiętać o różnicach między implementacjami makr w wersji MFC 3.0 i implementacjami we wcześniejszych wersjach. Te różnice i kolejne zmiany w zachowaniu kodu są omówione w [wyjątki: Zmiany makr wyjątków w wersji 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).
 
-Główne zalety konwertowanie są następujące:
+Główne zalety konwersji to:
 
-- Kod, który używa słów kluczowych obsługi wyjątków języka C++ kompiluje, aby nieco mniejsze. Plik EXE lub. BIBLIOTEKI DLL.
+- Kod, który używa słów kluczowych obsługi wyjątków C++ kompiluje się do nieco mniejszego . EXE lub . Dll.
 
-- C++ Słów kluczowych obsługi wyjątków są bardziej wszechstronna: One może obsługiwać wyjątki dowolnego typu danych, który można skopiować (**int**, **float**, **char**i tak dalej), podczas gdy makra obsługi wyjątków tylko klasy `CException` klasy i pochodzić od niego.
+- Słowa kluczowe obsługi wyjątków języka C++ są bardziej wszechstronne: mogą obsługiwać wyjątki dowolnego typu danych, które mogą być kopiowane **(int** `CException` , **float**, **char**i tak dalej), podczas gdy makra obsługują wyjątki tylko klasy i klasy pochodzące z niego.
 
-Główna różnica między makra i słów kluczowych jest, że kod przy użyciu makra "automatycznie" spowoduje usunięcie przechwycony wyjątek gdy wyjątek wykracza poza zakres. Kod za pomocą słów kluczowych nie jest, więc należy je jawnie usunąć przechwycony wyjątek. Aby uzyskać więcej informacji, zobacz artykuł [wyjątków: Przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Główną różnicą między makrami a słowami kluczowymi jest to, że kod przy użyciu makr "automatycznie" usuwa przechwycony wyjątek, gdy wyjątek wykracza poza zakres. Kod przy użyciu słów kluczowych nie, więc należy jawnie usunąć przechwycony wyjątek. Aby uzyskać więcej informacji, zobacz artykuł [Wyjątki: Przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
-Inna różnica polega na składni. Składnia służąca do makr i słów kluczowych różni się w trzech względami:
+Inną różnicą jest składnia. Składnia makr i słów kluczowych różni się pod trzema względami:
 
-1. Argumenty i deklaracji wyjątku:
+1. Argumenty makr i deklaracje wyjątków:
 
-   A **CATCH** wywołanie makra ma następującą składnię:
+   Wywołanie makr **CATCH** ma następującą składnię:
 
-   **CATCH (** *exception_class*, *exception_object_pointer_name* **)**
+   **CATCH(** *exception_class*, *exception_object_pointer_name* **)**
 
-   Zwróć uwagę, przecinka między nazwę klasy i nazwy wskaźnika obiektu.
+   Zwróć uwagę na przecinek między nazwą klasy a nazwą wskaźnika obiektu.
 
-   W deklaracji wyjątku **catch** — słowo kluczowe używa następującej składni:
+   Deklaracja **wyjątku** dla catch słowa kluczowego używa tej składni:
 
-   **CATCH (** *exception_type* *exception_name* **)**
+   **exception_type** *exception_type* *exception_name* **)**
 
-   Tej instrukcji deklaracji wyjątku wskazuje typ wyjątku catch block uchwyty.
+   Ta instrukcja deklaracji wyjątku wskazuje typ wyjątku uchwyty bloku catch.
 
-2. Ogranicznik bloki catch:
+2. Rozgraniczenie bloków połowowych:
 
-   Za pomocą makra **CATCH** — makro (z jej argumentów) rozpoczyna się pierwszego bloku catch; **AND_CATCH** — makro rozpoczyna się bloki catch kolejnych i **END_CATCH** — makro kończy sekwencji bloki catch.
+   W makrach makr **CATCH** (z jego argumentami) rozpoczyna pierwszy blok catch; **makro AND_CATCH** rozpoczyna kolejne bloki catch, a makro **END_CATCH** kończy sekwencję bloków catch.
 
-   Za pomocą słów kluczowych **catch** — słowo kluczowe (z jego deklaracji wyjątku) rozpoczyna się każdy blok catch. Nie ma odpowiednika do **END_CATCH** — makro; catch block kończy się jego zamykającego nawiasu klamrowego.
+   W przypadku słów kluczowych **catch** słowo kluczowe (z jego deklaracją wyjątków) rozpoczyna się każdy blok catch. Nie ma odpowiednika **END_CATCH** makra; blok zaczepu kończy się nawiasem klamrowym zamykającym.
 
 3. Wyrażenie throw:
 
-   Użyj makra **THROW_LAST** można ponownie wygenerować bieżący wyjątek. **Throw** — słowo kluczowe z żadnego argumentu ma taki sam skutek.
+   Makra używają **THROW_LAST** do ponownego zgłaszania bieżącego wyjątku. Słowo kluczowe **throw,** bez argumentu, ma ten sam efekt.
 
-##  <a name="_core_doing_the_conversion"></a> Wykonywania konwersji
+## <a name="doing-the-conversion"></a><a name="_core_doing_the_conversion"></a>Konwersja
 
-#### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>Aby przekonwertować kodu za pomocą makr, aby używać słów kluczowych obsługi wyjątków języka C++
+#### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>Aby przekonwertować kod przy użyciu makr do używania słów kluczowych obsługi wyjątków języka C++
 
-1. Znajdź wszystkie wystąpienia makr MFC **SPRÓBUJ**, **CATCH**, **AND_CATCH**, **END_CATCH**, **THROW**, i **THROW_LAST**.
+1. Zlokalizuj wszystkie wystąpienia makr MFC **TRY**, **CATCH**, **AND_CATCH**, **END_CATCH**, **THROW**i **THROW_LAST**.
 
-2. Zamień lub Usuń wszystkie wystąpienia następujące makra:
+2. Zastąp lub usuń wszystkie wystąpienia następujących makr:
 
-   **SPRÓBUJ** (zastąp go wartością **spróbuj**)
+   **TRY** (Zamień go **na try)**
 
-   **CATCH** (zastąp go wartością **catch**)
+   **CATCH** (Wymień go **na haczyk)**
 
-   **AND_CATCH** (zastąp go wartością **catch**)
+   **AND_CATCH** (Wymień go **na haczyk)**
 
-   **END_CATCH** (usuń jego)
+   **END_CATCH** (Usuń)
 
-   **THROW** (zastąp go wartością **throw**)
+   **THROW** (Wymień go **na throw)**
 
-   **THROW_LAST** (zastąp go wartością **throw**)
+   **THROW_LAST** (Wymień go **na rzut)**
 
-3. Argumenty — makro, dzięki czemu tworzą one deklaracje prawidłowy wyjątek.
+3. Zmodyfikuj argumenty makra, tak aby tworzyły prawidłowe deklaracje wyjątków.
 
-   Na przykład zmienić
+   Na przykład zmień
 
    [!code-cpp[NVC_MFCExceptions#6](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_1.cpp)]
 
@@ -99,18 +99,18 @@ Inna różnica polega na składni. Składnia służąca do makr i słów kluczow
 
    [!code-cpp[NVC_MFCExceptions#7](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_2.cpp)]
 
-4. Zmodyfikuj kod w blokach catch, tak, aby usuwa obiektów wyjątków zgodnie z potrzebami. Aby uzyskać więcej informacji, zobacz artykuł [wyjątków: Przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md).
+4. Zmodyfikuj kod w blokach catch, tak aby usuwał obiekty wyjątków w razie potrzeby. Aby uzyskać więcej informacji, zobacz artykuł [Wyjątki: Przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
-Oto przykład kodu obsługi wyjątków, przy użyciu makr wyjątków MFC. Należy pamiętać, że ponieważ kod w poniższym przykładzie użyto makr, wyjątek `e` zostanie automatycznie usunięte:
+Oto przykład kodu obsługi wyjątków przy użyciu makr wyjątków MFC. Należy zauważyć, że ponieważ kod w poniższym przykładzie używa makr, wyjątek `e` jest usuwany automatycznie:
 
 [!code-cpp[NVC_MFCExceptions#8](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_3.cpp)]
 
-Kod w następnym przykładzie używa słowa kluczowe wyjątków języka C++, więc wyjątek muszą zostać jawnie usunięte:
+Kod w następnym przykładzie używa słów kluczowych wyjątku C++, więc wyjątek musi zostać jawnie usunięty:
 
 [!code-cpp[NVC_MFCExceptions#9](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_4.cpp)]
 
-Aby uzyskać więcej informacji, zobacz [wyjątków: Używanie makr MFC i wyjątków C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
+Aby uzyskać więcej informacji, zobacz [Wyjątki: Używanie makr MFC i wyjątków C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa wyjątków](../mfc/exception-handling-in-mfc.md)<br/>

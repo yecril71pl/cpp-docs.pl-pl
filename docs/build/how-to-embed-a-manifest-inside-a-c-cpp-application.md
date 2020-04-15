@@ -1,27 +1,27 @@
 ---
-title: 'Instrukcje: Osadzanie manifestu w aplikacji C/C++'
+title: 'Porady: osadzanie manifestu w aplikacji C/C++'
 ms.date: 05/06/2019
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: ee60620f2815bb20e2d0f3ecec768d99533437a9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 2f125ee445d4ee9efdf21c37134d4c5adbca256d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220703"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322973"
 ---
-# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Instrukcje: Osadzanie manifestu w aplikacji C/C++
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Porady: osadzanie manifestu w aplikacji C/C++
 
-Zaleca się osadzić manifest aplikacji lub biblioteki w końcowym pliku binarnym, ponieważ gwarantuje to poprawne zachowanie w większości scenariuszy. Domyślnie program Visual Studio podejmie do osadzania manifestu, podczas tworzenia projektu. Aby uzyskać więcej informacji, zobacz [Manifest Generation w programie Visual Studio](manifest-generation-in-visual-studio.md). Jednak jeśli tworzysz aplikację za pomocą nmake należy wprowadzić pewne zmiany w pliku reguł programu make. W tej sekcji pokazano, jak zmienić pliki reguł programu make, tak, aby automatycznie osadza manifestu w końcowym pliku binarnym.
+Zaleca się osadzenie manifestu aplikacji lub biblioteki wewnątrz końcowego pliku binarnego, ponieważ gwarantuje to poprawne zachowanie środowiska uruchomieniowego w większości scenariuszy. Domyślnie Visual Studio próbuje osadzić manifest podczas tworzenia projektu. Aby uzyskać więcej informacji, zobacz [Generowanie manifestów w programie Visual Studio](manifest-generation-in-visual-studio.md). Jednak jeśli tworzysz aplikację przy użyciu nmake, musisz wprowadzić pewne zmiany w pliku makefile. W tej sekcji pokazano, jak zmienić makefiles tak, aby automatycznie osadza manifest wewnątrz końcowego pliku binarnego.
 
-## <a name="two-approaches"></a>Dwie metody
+## <a name="two-approaches"></a>Dwa podejścia
 
-Istnieją dwa sposoby do osadzania manifestu w aplikacji lub biblioteki.
+Istnieją dwa sposoby osadzania manifestu wewnątrz aplikacji lub biblioteki.
 
-- Jeśli nie wykonujesz kompilacji przyrostowej można osadzić bezpośrednio manifest jako krok po kompilacji przy użyciu wiersza polecenia podobnego do następującego:
+- Jeśli nie wykonujesz kompilacji przyrostowej, możesz bezpośrednio osadzić manifest za pomocą wiersza polecenia podobnego do następującego jako krok po kompilacji:
 
    ```cmd
    mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1
@@ -33,21 +33,21 @@ Istnieją dwa sposoby do osadzania manifestu w aplikacji lub biblioteki.
    mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2
    ```
 
-   Użyj wartości 1 dla pliku EXE i 2 dla biblioteki DLL.
+   Użyj 1 dla EXE i 2 dla biblioteki DLL.
 
-- Jeśli przeprowadzasz kompilacji przyrostowej, wykonaj następujące kroki:
+- Jeśli wykonujesz kompilację przyrostową, użyj następujących kroków:
 
-   - Połącz dane binarne, aby wygenerować plik MyApp.exe.manifest.
+  - Połącz plik binarny, aby wygenerować plik MyApp.exe.manifest.
 
-   - Konwertuj manifest do pliku zasobów.
+  - Konwertuj manifest na plik zasobu.
 
-   - Ponowne łączenie (przyrostowo) do osadzania manifestu zasobu w pliku binarnego.
+  - Ponownie łącze (przyrostowo), aby osadzić zasób manifestu w pliku binarnym.
 
-Poniższe przykłady pokazują jak zmienić pliki reguł programu make, aby włączyć obu tych technik.
+Poniższe przykłady pokazują, jak zmienić makefiles, aby uwzględnić obie techniki.
 
-## <a name="makefiles-before"></a>Pliki reguł programu make (przed)
+## <a name="makefiles-before"></a>Pliki makefiles (przed)
 
-Należy wziąć pod uwagę skryptu nmake MyApp.exe, prostej aplikacji, skompilowane z jednego pliku:
+Rozważmy skrypt nmake dla MyApp.exe, prosta aplikacja zbudowana z jednego pliku:
 
 ```
 # build MyApp.exe
@@ -67,9 +67,9 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-Jeżeli ten skrypt jest uruchamiany bez zmian w programie Visual Studio, pomyślnie tworzy MyApp.exe. Tworzy również zewnętrznego pliku manifestu MyApp.exe.manifest, do użytku przez system operacyjny, który można załadować zestawów zależnych w czasie wykonywania.
+Jeśli ten skrypt jest uruchamiany bez zmian w programie Visual Studio, pomyślnie tworzy myapp.exe. Tworzy również plik manifestu zewnętrznego MyApp.exe.manifest, do użycia przez system operacyjny do ładowania zestawów zależnych w czasie wykonywania.
 
-Skrypt nmake MyLibrary.dll wygląda bardzo podobnie:
+Skrypt nmake dla MyLibrary.dll wygląda bardzo podobnie:
 
 ```
 # build MyLibrary.dll
@@ -92,9 +92,9 @@ clean :
     del MyLibrary.obj MyLibrary.dll
 ```
 
-## <a name="makefiles-after"></a>Pliki reguł programu make (po)
+## <a name="makefiles-after"></a>Pliki makefiles (po)
 
-Tworzenie z usługą osadzony manifestów, które należy podjąć cztery niewielkie zmiany na oryginalne pliki reguł programu make. Aby uzyskać MyApp.exe pliku reguł programu make:
+Aby tworzyć z osadzonych manifestów trzeba wprowadzić cztery małe zmiany do oryginalnych makefiles. Dla pliku makefile MyApp.exe:
 
 ```
 # build MyApp.exe
@@ -124,7 +124,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)
 ```
 
-Aby uzyskać MyLibrary.dll pliku reguł programu make:
+Dla pliku makefile MyLibrary.dll:
 
 ```
 # build MyLibrary.dll
@@ -157,9 +157,9 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)
 ```
 
-Pliki reguł programu make obejmują teraz dwa pliki, które wykonują rzeczywistą pracę i makefile.inc makefile.targ.inc.
+Makefiles teraz zawierać dwa pliki, które wykonują prawdziwą pracę, makefile.inc i makefile.targ.inc.
 
-Utwórz makefile.inc i skopiuj następujące tę sytuację:
+Utwórz plik makefile.inc i skopiuj do niego następujące elementy:
 
 ```
 # makefile.inc -- Include this file into existing makefile at the very top.
@@ -230,7 +230,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################
 ```
 
-Teraz Utwórz **makefile.targ.inc** i skopiuj następujące tę sytuację:
+Teraz utwórz **makefile.targ.inc** i skopiuj do niego następujące elementy:
 
 ```
 # makefile.targ.inc - include this at the very bottom of the existing makefile
@@ -257,6 +257,6 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 # end of makefile.targ.inc
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Ogólne informacje o tworzeniu manifestu dla programów C/C++](understanding-manifest-generation-for-c-cpp-programs.md)

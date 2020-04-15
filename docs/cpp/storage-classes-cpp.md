@@ -1,6 +1,6 @@
 ---
 title: Klasy magazynu (C++)
-description: W C++, słowa kluczowe static, extern i thread_local określają okres istnienia, powiązania i lokalizację pamięci dla zmiennej lub funkcji.
+description: W języku C++ słowa kluczowe statyczne, extern i thread_local określają okres istnienia, powiązania i lokalizację pamięci zmiennej lub funkcji.
 ms.date: 12/11/2019
 f1_keywords:
 - thread_local_cpp
@@ -9,44 +9,44 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: d4fe1e7f14ef2a11e5e7ac32b4ffb0247aab3c84
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 75ccb11689b4863d2d0df5edd6d066be6bd3858c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178551"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365345"
 ---
 # <a name="storage-classes"></a>Klasy magazynu
 
-*Klasa magazynu* w kontekście deklaracji C++ zmiennych jest specyfikatorem typu, który zarządza okresem istnienia, powiązaniem i lokalizacją pamięci obiektów. Dany obiekt może mieć tylko jedną klasę magazynu. Zmienne zdefiniowane w bloku mają automatyczny magazyn, chyba że określono inaczej przy użyciu specyfikatorów **extern**, **static**lub **thread_local** . Automatyczne obiekty i zmienne nie mają powiązania; nie są one widoczne w kodzie poza blokiem. Pamięć jest przydzielono automatycznie, gdy wykonanie przejdzie do bloku i zostanie cofnięta alokacja, gdy blok zostanie zakończony.
+*Klasa magazynu* w kontekście deklaracji zmiennych C++ jest specyfikatorem typu, który reguluje okres istnienia, powiązania i lokalizacji pamięci obiektów. Dany obiekt może mieć tylko jedną klasę magazynu. Zmienne zdefiniowane w bloku mają automatyczną pamięć masową, chyba że określono inaczej przy użyciu **specyfikatorów extern,** **static**lub **thread_local.** Automatyczne obiekty i zmienne nie mają powiązania; nie są one widoczne dla kodu poza blokiem. Pamięć jest przydzielana dla nich automatycznie, gdy wykonanie wchodzi do bloku i de-przydzielone po zamknięciu bloku.
 
 **Uwagi**
 
-1. Słowo kluczowe [mutable](../cpp/mutable-data-members-cpp.md) może być uznawane za specyfikator klasy magazynu. Jednak jest ono dostępne tylko na liście składowych definicji klasy.
+1. [Modyfikowalne](../cpp/mutable-data-members-cpp.md) słowo kluczowe może być uznane za specyfikator klasy magazynu. Jednak jest ono dostępne tylko na liście składowych definicji klasy.
 
-1. **Program Visual Studio 2010 lub nowszy:** Słowo **kluczowe** autonie jest już specyfikatorem klasy C++ magazynu, a słowo kluczowe **register** jest przestarzałe. **Visual Studio 2017 w wersji 15,7 lub nowszej:** (dostępne w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): słowo kluczowe **register** jest usuwane z C++ języka.
+1. **Visual Studio 2010 i nowsze:** Auto **auto** słowo kluczowe nie jest już specyfikatorem klasy magazynu języka C++, a słowo kluczowe **register** jest przestarzałe. **Visual Studio 2017 w wersji 15.7 i nowszej:** (dostępne z [/std:c++17):](../build/reference/std-specify-language-standard-version.md)Słowo kluczowe **register** jest usuwany z języka C++.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="static"></a><a name="static"></a>ruchom
+## <a name="static"></a><a name="static"></a>Statyczne
 
-**Statycznego** słowa kluczowego można użyć do deklarowania zmiennych i funkcji w zakresie globalnym, zakresie przestrzeni nazw i zakresu klasy. Zmienne statyczne mogą być również deklarowane w zakresie lokalnym.
+**Statyczne** słowo kluczowe może służyć do deklarowania zmiennych i funkcji w zakresie globalnym, zakres obszaru nazw i zakres klasy. Zmienne statyczne można również zadeklarować w zakresie lokalnym.
 
-Statyczny czas trwania oznacza, że obiekt lub zmienna są przydzielenia podczas uruchamiania programu i zostaje cofnięta alokacja po zakończeniu programu. Połączenie zewnętrzne oznacza, że nazwa zmiennej jest widoczna spoza pliku, w którym jest zadeklarowana zmienna. Z drugiej strony połączenie wewnętrzne oznacza, że nazwa nie jest widoczna poza plikiem, w którym zmienna jest zadeklarowana. Domyślnie obiekt lub zmienna zdefiniowana w globalnej przestrzeni nazw ma statyczny czas trwania i zewnętrzne powiązania. **Statycznego** słowa kluczowego można użyć w poniższych sytuacjach.
+Statyczny czas trwania oznacza, że obiekt lub zmienna jest przydzielana po uruchomieniu programu i jest przydzielana po zakończeniu programu. Powiązanie zewnętrzne oznacza, że nazwa zmiennej jest widoczna spoza pliku, w którym zmienna jest zadeklarowana. Z drugiej strony wewnętrzna powiązanie oznacza, że nazwa nie jest widoczna poza plikiem, w którym zmienna jest zadeklarowana. Domyślnie obiekt lub zmienna zdefiniowana w globalnej przestrzeni nazw ma statyczny czas trwania i powiązanie zewnętrzne. **Statyczne** słowo kluczowe może być używane w następujących sytuacjach.
 
-1. Po zadeklarowaniu zmiennej lub funkcji w zakresie plików (globalnym i/lub zakresie przestrzeni nazw) **static** słowo kluczowe Określa, że zmienna lub funkcja ma wewnętrzny związek. Kiedy deklarujesz zmienną, zmienna ma statyczny czas trwania i kompilator inicjuje ją wartością 0, chyba że określisz inną wartość.
+1. Podczas deklarowania zmiennej lub funkcji w zakresie pliku (zakres globalny i/lub obszar nazw), **statyczne** słowo kluczowe określa, że zmienna lub funkcja ma wewnętrzne powiązanie. Podczas deklarowania zmiennej zmienna ma statyczny czas trwania, a kompilator inicjuje ją do 0, chyba że określisz inną wartość.
 
-1. Po zadeklarowaniu zmiennej w funkcji, **statyczne** słowo kluczowe Określa, że zmienna zachowuje swój stan między wywołaniami tej funkcji.
+1. Podczas deklarowania zmiennej w funkcji **statyczne** słowo kluczowe określa, że zmienna zachowuje swój stan między wywołaniami tej funkcji.
 
-1. W przypadku deklarowania elementu członkowskiego danych w deklaracji klasy **static** słowo kluczowe Określa, że jedna kopia składowej jest współdzielona przez wszystkie wystąpienia klasy. Statyczna składowa danych musi być zdefiniowana w zakresie pliku. Integralna składowa danych zadeklarowana jako **stała statyczna** może mieć inicjator.
+1. Podczas deklarowania elementu członkowskiego danych w deklaracji klasy **statyczne** słowo kluczowe określa, że jedna kopia elementu członkowskiego jest współużytkowana przez wszystkie wystąpienia klasy. Element członkowski danych statycznych musi być zdefiniowany w zakresie pliku. Element członkowski danych integralną, który deklarujesz jako **konsty statyczne** może mieć inicjatora.
 
-1. Gdy deklarujesz funkcję członkowską w deklaracji klasy, słowo kluczowe **static** określa, że funkcja jest współużytkowana przez wszystkie wystąpienia klasy. Statyczna funkcja członkowska nie może uzyskać dostępu do składowej wystąpienia, ponieważ funkcja nie ma **niejawnego** wskaźnika. Aby uzyskać dostęp do elementu członkowskiego wystąpienia, zadeklaruj funkcję za pomocą parametru, który jest wskaźnikiem wystąpienia lub odwołaniem.
+1. Podczas deklarowania funkcji elementu członkowskiego w deklaracji klasy **statyczne** słowo kluczowe określa, że funkcja jest współużytkowana przez wszystkie wystąpienia klasy. Funkcja statycznego elementu członkowskiego nie może uzyskać dostępu do elementu członkowskiego wystąpienia, ponieważ funkcja nie ma niejawnego **tego wskaźnika.** Aby uzyskać dostęp do elementu członkowskiego wystąpienia, zadeklaruj funkcję za pomocą parametru, który jest wskaźnikiem wystąpienia lub odwołaniem.
 
-1. Nie można zadeklarować elementów członkowskich Unii jako static. Jednak globalnie zadeklarowana Unia anonimowa musi być jawnie zadeklarowana jako **statyczna**.
+1. Nie można zadeklarować członków unii jako statyczne. Jednak globalnie zadeklarowana anonimowa unia musi być jawnie zadeklarowana **jako statyczna**.
 
-Ten przykład pokazuje, jak zmienna zadeklarowana **statycznie** w funkcji zachowuje swój stan między wywołaniami tej funkcji.
+W tym przykładzie pokazano, jak zmienna zadeklarowana **statyczna** w funkcji zachowuje swój stan między wywołaniami tej funkcji.
 
 ```cpp
 // static1.cpp
@@ -75,7 +75,7 @@ nStatic is 6
 nStatic is 10
 ```
 
-Ten przykład pokazuje użycie **static** w klasie.
+W tym przykładzie pokazano użycie **statyczne** w klasie.
 
 ```cpp
 // static2.cpp
@@ -121,7 +121,7 @@ int main() {
 3
 ```
 
-Ten przykład pokazuje zmienną lokalną zadeklarowaną jako **statyczną** w funkcji składowej. Zmienna statyczna jest dostępna dla całego programu; wszystkie wystąpienia typu mają tę samą kopię zmiennej statycznej.
+W tym przykładzie pokazano zmienną lokalną zadeklarowaną **jako statyczną** w funkcji elementu członkowskiego. Zmienna statyczna jest dostępna dla całego programu; wszystkie wystąpienia typu współużytkują tę samą kopię zmiennej statycznej.
 
 ```cpp
 // static3.cpp
@@ -153,15 +153,15 @@ var != value
 var == value
 ```
 
-Począwszy od języka C++ 11, inicjowanie statycznej zmiennej lokalnej jest zagwarantowane bezpieczny wątkowo. Ta funkcja jest czasami nazywana *Magic statics*. Jednak w aplikacji wielowątkowej wszystkie kolejne przypisania muszą zostać zsynchronizowane. Funkcję inicjalizacji statycznej z bezpiecznym wątkiem można wyłączyć za pomocą flagi [/Zc: threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) , aby uniknąć tworzenia zależności na CRT.
+Począwszy od C ++ 11, statyczne inicjowanie zmiennej lokalnej jest gwarantowane jako bezpieczne dla wątków. Ta funkcja jest czasami nazywana *magiczną statykami.* Jednak w aplikacji wielowątkowej wszystkie kolejne przydziały muszą być zsynchronizowane. Funkcja inicjowania statycznego bezpieczeństwa wątków można wyłączyć za pomocą [/Zc:threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) flagi, aby uniknąć podejmowania zależności od CRT.
 
-## <a name="extern"></a><a name="extern"></a>modyfikator
+## <a name="extern"></a><a name="extern"></a>Extern
 
-Obiekty i zmienne zadeklarowane jako **extern** deklarują obiekt, który jest zdefiniowany w innej jednostce translacji lub w otaczającym zakresie jako mający połączenie zewnętrzne. Aby uzyskać więcej informacji, [Zobacz](extern-cpp.md) zewnętrzne [jednostki i powiązania](program-and-linkage-cpp.md).
+Obiekty i zmienne zadeklarowane jako **extern** deklarują obiekt zdefiniowany w innej jednostce tłumaczenia lub w otaczającym go zakresie jako posiadający powiązania zewnętrzne. Aby uzyskać więcej informacji, zobacz [jednostki extern](extern-cpp.md) i [translation oraz powiązanie](program-and-linkage-cpp.md).
 
-## <a name="thread_local-c11"></a><a name="thread_local"></a>thread_local (C++ 11)
+## <a name="thread_local-c11"></a><a name="thread_local"></a>thread_local (C++11)
 
-Zmienna zadeklarowana ze specyfikatorem **thread_local** jest dostępna tylko w wątku, w którym został utworzony. Zmienna jest tworzona podczas tworzenia wątku i niszczona, gdy wątek zostanie zniszczony. Każdy wątek ma własną kopię zmiennej. W systemie Windows **thread_local** jest funkcjonalnie równoważny z atrybutem [__declspec (wątek)](../cpp/thread.md) specyficznym dla firmy Microsoft.
+Zmienna zadeklarowana z **specyfikatorem thread_local** jest dostępna tylko w wątku, na którym jest tworzona. Zmienna jest tworzona podczas tworzenia wątku i niszczone, gdy wątek jest niszczony. Każdy wątek ma własną kopię zmiennej. W systemie Windows **thread_local** jest funkcjonalnie równoważne atrybutowi [__declspec(wątek)](../cpp/thread.md) specyficznym dla firmy Microsoft.
 
 ```cpp
 thread_local float f = 42.0; // Global namespace. Not implicitly static.
@@ -180,33 +180,33 @@ void DoSomething()
 }
 ```
 
-Rzeczy do zanotowania dotyczące specyfikatora **thread_local** :
+Co należy zwrócić uwagę na specyfikator **thread_local:**
 
-- Dynamicznie inicjowane zmienne lokalne wątku w bibliotekach DLL mogą nie być poprawnie zainicjowane we wszystkich wątkach wywołań. Aby uzyskać więcej informacji, zobacz [wątek](thread.md).
+- Dynamicznie inicjowane zmienne lokalne wątku w bibliotekach DLL mogą nie być poprawnie zainicjowane we wszystkich wątkach wywołujących. Aby uzyskać więcej informacji, zobacz [wątek](thread.md).
 
-- Specyfikator **thread_local** może być połączony ze **statycznym** lub **extern**.
+- Specyfikator **thread_local** może być łączony ze **statycznym** lub **extern**.
 
-- **Thread_local** można stosować tylko do deklaracji i definicji danych. **thread_local** nie można używać w deklaracjach lub definicjach funkcji.
+- Można zastosować **thread_local** tylko do deklaracji danych i definicji; **thread_local** nie można używać w deklaracjach funkcji lub definicjach.
 
-- Możesz określić **thread_local** tylko dla elementów danych ze statycznym okresem przechowywania. Obejmuje to globalne obiekty danych (zarówno **statyczne** , jak i zewnętrzne), lokalne obiekty **statyczne i statyczne**elementy członkowskie danych klas. Każda zmienna lokalna zadeklarowana **thread_local** jest niejawnie statyczna, jeśli nie podano innej klasy magazynu; Innymi słowy, w zakresie bloku **thread_local** jest równoważne `thread_local static`.
+- Można określić **thread_local** tylko na elementach danych o statycznym czasie przechowywania. Obejmuje to globalne obiekty danych (zarówno **statyczne,** jak i **extern),** lokalne obiekty statyczne i statyczne elementy członkowskie danych klas. Każda zmienna lokalna zadeklarowana **thread_local** jest niejawnie statyczna, jeśli nie podano żadnej innej klasy magazynu; innymi słowy, w zakresie bloku **thread_local** `thread_local static`jest odpowiednikiem .
 
-- Należy określić **thread_local** dla deklaracji i definicji obiektu lokalnego wątku, niezależnie od tego, czy deklaracja i definicja występują w tym samym pliku lub oddzielnych plikach.
+- Należy określić **thread_local** dla deklaracji i definicji obiektu lokalnego wątku, czy deklaracja i definicja występują w tym samym pliku lub oddzielnych plików.
 
-W systemie Windows **thread_local** jest funkcjonalnie odpowiednikiem [__declspec (thread)](../cpp/thread.md) , z wyjątkiem tego, że **__declspec (thread)** można zastosować do definicji typu i jest on prawidłowy w kodzie C. Jeśli to możliwe, użyj **thread_local** , ponieważ jest częścią C++ standardu i dlatego jest bardziej przenośne.
+W systemie Windows **thread_local** jest funkcjonalnie równoważne [__declspec(thread),](../cpp/thread.md) z tą różnicą, że **__declspec(wątek)** mogą być stosowane do definicji typu i jest prawidłowy w kodzie C. Jeśli to możliwe, należy użyć **thread_local,** ponieważ jest częścią standardu C++ i dlatego jest bardziej przenośny.
 
-##  <a name="register"></a><a name="register"></a>zarejestrować
+## <a name="register"></a><a name="register"></a>Zarejestrować
 
-**Visual Studio 2017 w wersji 15,3 lub nowszej** (dostępny w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): słowo kluczowe **register** nie jest już obsługiwaną klasą magazynu. Słowo kluczowe jest nadal zarezerwowane w standardzie do użytku w przyszłości.
+**Visual Studio 2017 w wersji 15.3 i nowszej** (dostępne z [/std:c++17):](../build/reference/std-specify-language-standard-version.md)Słowo kluczowe **register** nie jest już obsługiwaną klasą magazynu. Słowo kluczowe jest nadal zarezerwowane w standardzie do wykorzystania w przyszłości.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="example-automatic-vs-static-initialization"></a>Przykład: automatyczne i statyczne inicjowanie
+## <a name="example-automatic-vs-static-initialization"></a>Przykład: automatyczne inicjowanie statyczne a statyczne
 
-Lokalny automatyczny obiekt lub zmienna jest inicjowana za każdym razem, gdy przepływ sterowania osiągnie swoją definicję. Zostanie zainicjowany lokalny obiekt statyczny lub zmienna, gdy przepływ sterowania osiągnie swoją definicję.
+Lokalny obiekt automatyczny lub zmienna jest inicjowany za każdym razem, gdy przepływ kontroli osiągnie swoją definicję. Lokalny obiekt statyczny lub zmienna jest inicjowany po raz pierwszy przepływ kontroli osiągnie swoją definicję.
 
-Rozważmy poniższy przykład, który definiuje klasę, która rejestruje inicjalizację i zniszczenie obiektów, a następnie definiuje trzy obiekty, `I1`, `I2`i `I3`:
+Rozważmy poniższy przykład, który definiuje klasę, która rejestruje inicjowanie i `I1` `I2`niszczenie `I3`obiektów, a następnie definiuje trzy obiekty, , i:
 
 ```cpp
 // initialization_of_objects.cpp
@@ -275,15 +275,15 @@ Destroying: Auto I1
 Destroying: Static I3
 ```
 
-W tym przykładzie pokazano, jak i kiedy obiekty `I1`, `I2`i `I3` są inicjowane i gdy są niszczone.
+W tym przykładzie pokazano, `I1` `I2`jak `I3` i kiedy obiekty , i są inicjowane i kiedy są niszczone.
 
-Istnieje kilka punktów, dla których należy pamiętać o programie:
+Istnieje kilka punktów, na które należy zwrócić uwagę na temat programu:
 
-- Najpierw `I1` i `I2` są automatycznie niszczone, gdy przepływ sterowania opuszcza blok, w którym są zdefiniowane.
+- Po `I1` pierwsze `I2` i są automatycznie niszczone, gdy przepływ kontroli wychodzi z bloku, w którym są zdefiniowane.
 
-- Po drugie, C++w, nie jest konieczne deklarowanie obiektów lub zmiennych na początku bloku. Ponadto te obiekty są inicjowane tylko wtedy, gdy przepływ sterowania osiągnie swoje definicje. (`I2` i `I3` są przykładami takich definicji). Dane wyjściowe są wyświetlane dokładnie po zainicjowaniu.
+- Po drugie, w języku C++ nie jest konieczne deklarowanie obiektów lub zmiennych na początku bloku. Ponadto obiekty te są inicjowane tylko wtedy, gdy przepływ kontroli osiągnie ich definicje. `I2` (i `I3` są przykładami takich definicji).) Dane wyjściowe pokazuje dokładnie, kiedy są one inicjowane.
 
-- Na koniec statyczne zmienne lokalne, takie jak `I3`, zachowują swoje wartości na czas trwania programu, ale są niszczone podczas kończenia działania programu.
+- Na koniec statyczne zmienne `I3` lokalne, takie jak zachować swoje wartości na czas trwania programu, ale są niszczone w miarę zakończenia programu.
 
 ## <a name="see-also"></a>Zobacz też
 

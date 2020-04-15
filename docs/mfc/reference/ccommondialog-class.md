@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CCommonDialog [MFC], CCommonDialog
 ms.assetid: 1f68d65f-a0fd-4778-be22-ebbe51a95f95
-ms.openlocfilehash: 4fa7aa51d1ce482e00f68365045cd35c3fb7939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853a4756df3b70f4f33deb7159b4d1aee610092c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182270"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369443"
 ---
 # <a name="ccommondialog-class"></a>Klasa CCommonDialog
 
-Klasa bazowa dla klas, które zapewniają funkcjonalność wspólnych okien dialogowych Windows.
+Klasa podstawowa dla klas, które hermetyzują funkcjonalność typowych okien dialogowych systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,37 +31,37 @@ class CCommonDialog : public CDialog
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CCommonDialog::CCommonDialog](#ccommondialog)|Konstruuje `CCommonDialog` obiektu.|
+|[CCommonDialog::CCommonDialog](#ccommondialog)|Konstruuje `CCommonDialog` obiekt.|
 
 ## <a name="remarks"></a>Uwagi
 
-Następujące klasy hermetyzacji wspólnych okien dialogowych Windows funkcji:
+Następujące klasy hermetyzują funkcjonalność typowych okien dialogowych systemu Windows:
 
-- [CFileDialog](../../mfc/reference/cfiledialog-class.md)
+- [Cfiledialog](../../mfc/reference/cfiledialog-class.md)
 
 - [CFontDialog](../../mfc/reference/cfontdialog-class.md)
 
-- [CColorDialog](../../mfc/reference/ccolordialog-class.md)
+- [CColorDialog (Polski)](../../mfc/reference/ccolordialog-class.md)
 
 - [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md)
 
-- [CPrintDialog](../../mfc/reference/cprintdialog-class.md)
+- [Cprintdialog](../../mfc/reference/cprintdialog-class.md)
 
 - [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md)
 
-- [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md)
+- [Cfindreplacedialog](../../mfc/reference/cfindreplacedialog-class.md)
 
-- [COleDialog](../../mfc/reference/coledialog-class.md)
+- [COleDialog (Polski)](../../mfc/reference/coledialog-class.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
 `CCommonDialog`
 
@@ -69,9 +69,9 @@ Następujące klasy hermetyzacji wspólnych okien dialogowych Windows funkcji:
 
 **Nagłówek:** afxdlgs.h
 
-##  <a name="ccommondialog"></a>  CCommonDialog::CCommonDialog
+## <a name="ccommondialogccommondialog"></a><a name="ccommondialog"></a>CCommonDialog::CCommonDialog
 
-Konstruuje `CCommonDialog` obiektu.
+Konstruuje `CCommonDialog` obiekt.
 
 ```
 explicit CCommonDialog(CWnd* pParentWnd);
@@ -80,13 +80,13 @@ explicit CCommonDialog(CWnd* pParentWnd);
 ### <a name="parameters"></a>Parametry
 
 *pParentWnd*<br/>
-Wskazuje na obiekt okna nadrzędnego lub właściciela (typu [CWnd](../../mfc/reference/cwnd-class.md)) do którego należy obiekt okna dialogowego. Jeśli ma wartość NULL, okna nadrzędnego obiektu okna dialogowego jest ustawiony na okna głównego aplikacji.
+Wskazuje obiekt okna nadrzędnego lub właściciela (typu [CWnd),](../../mfc/reference/cwnd-class.md)do którego należy obiekt okna dialogowego. Jeśli jest null, okno nadrzędne obiektu okna dialogowego jest ustawiona na okno aplikacji głównej.
 
 ### <a name="remarks"></a>Uwagi
 
 Zobacz [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) pełne informacje.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CDialog](../../mfc/reference/cdialog-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

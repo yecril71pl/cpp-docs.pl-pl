@@ -80,16 +80,16 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 7628ac353d01c2a6853e35a35bd1f702d3bb041e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5434801969a55387a5b5555c9a4ade22f1969e7d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505861"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367778"
 ---
 # <a name="cmfcbutton-class"></a>Klasa CMFCButton
 
-Klasa dodaje funkcje do klasy CButton, takie jak wyrównywanie tekstu przycisku, łączenie tekstu przycisku i obrazu, wybieranie kursora i określanie etykietki narzędzia. [](../../mfc/reference/cbutton-class.md) `CMFCButton`
+Klasa `CMFCButton` dodaje funkcje do [CButton](../../mfc/reference/cbutton-class.md) klasy, takie jak wyrównywanie tekstu przycisku, łączenie tekstu przycisku i obrazu, zaznaczanie kursora i określanie etykietki narzędzia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -103,54 +103,54 @@ class CMFCButton : public CButton
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`CMFCButton::CMFCButton`|Konstruktor domyślny.|
-|`CMFCButton::~CMFCButton`|Destruktor.|
+|`CMFCButton::CMFCButton`|Domyślny konstruktor.|
+|`CMFCButton::~CMFCButton`|Destruktora.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCButton:: CleanUp](#cleanup)|Resetuje zmienne wewnętrzne i zwalnia przydzieloną zasoby, takie jak obrazy, mapy bitowe i ikony.|
-|`CMFCButton::CreateObject`|Używane przez platformę do tworzenia wystąpienia dynamicznego tego typu klasy.|
-|`CMFCButton::DrawItem`|Wywoływane przez platformę, gdy wizualny aspekt przycisku rysowanego przez właściciela został zmieniony. (Przesłania [CButton::D rawitem](../../mfc/reference/cbutton-class.md#drawitem).)|
-|[CMFCButton::EnableFullTextTooltip](#enablefulltexttooltip)|Określa, czy wyświetlać pełny tekst etykietki narzędzia w oknie dużego etykietki narzędzi lub obcięta wersja tekstu w małym oknie etykietki narzędzia.|
-|[CMFCButton::EnableMenuFont](#enablemenufont)|Określa, czy czcionka tekstu przycisku jest taka sama jak czcionka menu aplikacji.|
-|[CMFCButton::EnableWindowsTheming](#enablewindowstheming)|Określa, czy styl obramowania przycisku odpowiada bieżącemu motywowi systemu Windows.|
-|`CMFCButton::GetThisClass`|Używane przez platformę do uzyskania wskaźnika do obiektu [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , który jest skojarzony z tym typem klasy.|
-|[CMFCButton::GetToolTipCtrl](#gettooltipctrl)|Zwraca odwołanie do źródłowej kontrolki ToolTip.|
-|[CMFCButton::IsAutoCheck](#isautocheck)|Wskazuje, czy pole wyboru lub przycisk radiowy są przyciskiem automatycznym.|
-|[CMFCButton::IsAutorepeatCommandMode](#isautorepeatcommandmode)|Wskazuje, czy przycisk jest ustawiony na tryb autopowtarzania.|
-|[CMFCButton:: ischeckbox](#ischeckbox)|Wskazuje, czy przycisk jest przyciskiem pola wyboru.|
-|[CMFCButton:: IsChecked](#ischecked)|Wskazuje, czy bieżący przycisk jest zaznaczony.|
-|[CMFCButton:: ispodświetlacz](#ishighlighted)|Wskazuje, czy przycisk jest wyróżniony.|
-|[CMFCButton:: ispressd](#ispressed)|Wskazuje, czy przycisk jest wypchnięci i wyróżniony.|
-|[CMFCButton:: ispushd](#ispushed)|Wskazuje, czy przycisk jest wypychany.|
-|[CMFCButton:: isradiobutton](#isradiobutton)|Wskazuje, czy przycisk jest przyciskiem radiowym.|
-|[CMFCButton::IsWindowsThemingEnabled](#iswindowsthemingenabled)|Wskazuje, czy styl obramowania przycisku odpowiada bieżącemu motywowi systemu Windows.|
-|`CMFCButton::OnDrawParentBackground`|Rysuje tło elementu nadrzędnego przycisku w określonym obszarze. (Przesłania [AFX_GLOBAL_DATA::D rawparentbackground](../../mfc/reference/afx-global-data-structure.md)|
-|`CMFCButton::PreTranslateMessage`|Tłumaczy komunikaty okna przed ich wysłaniem do funkcji systemu Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Przesłania [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
-|[CMFCButton::SetAutorepeatMode](#setautorepeatmode)|Ustawia przycisk na tryb autopowtarzania.|
+|[CMFCButton::Oczyszczanie](#cleanup)|Resetuje zmienne wewnętrzne i zwalnia przydzielone zasoby, takie jak obrazy, mapy bitowe i ikony.|
+|`CMFCButton::CreateObject`|Używany przez platformę do tworzenia dynamicznego wystąpienia tego typu klasy.|
+|`CMFCButton::DrawItem`|Wywoływana przez strukturę, gdy zmienił się wizualny aspekt przycisku rysowanego przez właściciela. (Zastępuje [CButton::DrawItem](../../mfc/reference/cbutton-class.md#drawitem).)|
+|[CMFCButton::EnableFullTextTooltip](#enablefulltexttooltip)|Określa, czy pełny tekst etykietki narzędzia ma być wyświetlany w dużym oknie etykietki narzędzia, czy obcięty tekst w małym oknie etykietki narzędzia.|
+|[CMFCButton::EnableMenuFont](#enablemenufont)|Określa, czy czcionka tekstowa przycisku jest taka sama jak czcionka menu aplikacji.|
+|[CMFCButton::EnableWindowsTheming](#enablewindowstheming)|Określa, czy styl obramowania przycisku odpowiada bieżącej kompozycji systemu Windows.|
+|`CMFCButton::GetThisClass`|Używany przez platformę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tego typu klasy.|
+|[CMFCButton::GetToolTipCtrl](#gettooltipctrl)|Zwraca odwołanie do podstawowej etykietki narzędzia.|
+|[CMFCButton::IsAutoCheck](#isautocheck)|Wskazuje, czy pole wyboru lub przycisk opcji to przycisk automatyczny.|
+|[CMFCButton::IsAutorepeatCommandMode](#isautorepeatcommandmode)|Wskazuje, czy przycisk jest ustawiony na tryb automatycznego powtarzania.|
+|[CMFCButton::IsCheckBox](#ischeckbox)|Wskazuje, czy przycisk jest przyciskiem pola wyboru.|
+|[CMFCButton::CzySprawiony](#ischecked)|Wskazuje, czy bieżący przycisk jest zaznaczony.|
+|[CMFCButton::IsHighlighted](#ishighlighted)|Wskazuje, czy przycisk jest wyróżniony.|
+|[CMFCButton::JestPressed](#ispressed)|Wskazuje, czy przycisk jest wciśnięta i wyróżniona.|
+|[CMFCButton::IsPushed](#ispushed)|Wskazuje, czy przycisk jest wciśnięta.|
+|[CMFCButton::IsRadioButton](#isradiobutton)|Wskazuje, czy przycisk jest przyciskiem opcji.|
+|[CMFCButton::IsWindowsThemingEnabled](#iswindowsthemingenabled)|Wskazuje, czy styl obramowania przycisku odpowiada bieżącej kompozycji systemu Windows.|
+|`CMFCButton::OnDrawParentBackground`|Rysuje tło nadrzędnego przycisku w określonym obszarze. (Zastępuje [AFX_GLOBAL_DATA::DrawParentBackground](../../mfc/reference/afx-global-data-structure.md)|
+|`CMFCButton::PreTranslateMessage`|Tłumaczy komunikaty okna, zanim zostaną wysłane do [funkcji TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) i [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) systemu Windows. (Zastępuje [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|[CMFCButton::SetAutorepeatMode](#setautorepeatmode)|Ustawia przycisk na tryb automatycznego powtarzania.|
 |[CMFCButton::SetCheckedImage](#setcheckedimage)|Ustawia obraz dla zaznaczonego przycisku.|
 |[CMFCButton::SetFaceColor](#setfacecolor)|Ustawia kolor tła dla tekstu przycisku.|
-|[CMFCButton::SetImage](#setimage)|Ustawia obraz dla przycisku.|
+|[CMFCButton::SetImage](#setimage)|Ustawia obraz przycisku.|
 |[CMFCButton::SetMouseCursor](#setmousecursor)|Ustawia obraz kursora.|
 |[CMFCButton::SetMouseCursorHand](#setmousecursorhand)|Ustawia kursor na obraz dłoni.|
-|[CMFCButton::SetStdImage](#setstdimage)|`CMenuImages` Używa obiektu do ustawienia obrazu przycisku.|
+|[CMFCButton::SetStdImage](#setstdimage)|Używa `CMenuImages` obiektu do ustawiania obrazu przycisku.|
 |[CMFCButton::SetTextColor](#settextcolor)|Ustawia kolor tekstu przycisku dla przycisku, który nie jest zaznaczony.|
-|[CMFCButton::SetTextHotColor](#settexthotcolor)|Ustawia kolor tekstu przycisku dla wybranego przycisku.|
-|[CMFCButton:: SetToolTip — etykietka narzędzia](#settooltip)|Kojarzy etykietkę narzędzia z przyciskiem.|
-|[CMFCButton::SizeToContent](#sizetocontent)|Zmienia rozmiar przycisku, aby zawierał jego tekst i obraz przycisku.|
+|[CMFCButton::SetTextHotColor](#settexthotcolor)|Ustawia kolor tekstu przycisku dla zaznaczonego przycisku.|
+|[CMFCButton::SetTooltip](#settooltip)|Kojarzy etykietkę narzędzia za pomocą przycisku.|
+|[CMFCButton::SizeToContent](#sizetocontent)|Rozmiar przycisku powoduje, że jest on zawierał tekst i obraz przycisku.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CMFCButton:: OnDraw](#ondraw)|Wywoływane przez platformę, by narysować przycisk.|
-|[CMFCButton::OnDrawBorder](#ondrawborder)|Wywoływane przez platformę, by narysować obramowanie przycisku.|
-|[CMFCButton::OnDrawFocusRect](#ondrawfocusrect)|Wywoływane przez platformę, aby narysować prostokąt fokusu dla przycisku.|
-|[CMFCButton::OnDrawText](#ondrawtext)|Wywoływane przez platformę, by narysować tekst przycisku.|
-|[CMFCButton::OnFillBackground](#onfillbackground)|Wywoływane przez platformę, by narysować tło tekstu przycisku.|
-|[CMFCButton::SelectFont](#selectfont)|Pobiera czcionkę skojarzoną z określonym kontekstem urządzenia.|
+|[CMFCButton::OnDraw](#ondraw)|Wywoływana przez strukturę, aby narysować przycisk.|
+|[CMFCButton::OnDrawBorder](#ondrawborder)|Wywoływana przez ramy, aby narysować obramowanie przycisku.|
+|[CMFCButton::OnDrawFocusRect](#ondrawfocusrect)|Wywoływane przez strukturę, aby narysować prostokąt fokus dla przycisku.|
+|[CMFCButton::OnDrawText](#ondrawtext)|Wywoływane przez ramy, aby narysować tekst przycisku.|
+|[CMFCButton::OnFillBackground](#onfillbackground)|Wywoływane przez ramy, aby narysować tło tekstu przycisku.|
+|[CMFCButton::WybierzFont](#selectfont)|Pobiera czcionkę skojarzoną z określonym kontekstem urządzenia.|
 
 ### <a name="data-members"></a>Elementy członkowskie danych
 
@@ -158,29 +158,29 @@ class CMFCButton : public CButton
 |----------|-----------------|
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|Określa wyrównanie tekstu przycisku.|
 |[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|Określa, czy mają być używane motywy systemu Windows XP.|
-|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Wskazuje, czy prostokąt fokusu ma być rysowany wokół przycisku.|
-|[CMFCButton::m_nFlatStyle](#m_nflatstyle)|Określa styl przycisku, np. bez obramowania, płaski, częściowo płaski lub 3W.|
-|[CMFCButton::m_bGrayDisabled](#m_bGrayDisabled)|Gdy ma wartość TRUE, włącza przycisk wyłączony jako wyszarzony.|
-|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Wskazuje, czy przycisk stylu BS_CHECKBOX ma być wyróżniony po umieszczeniu kursora nad nim kursorem.|
-|[CMFCButton::m_bResponseOnButtonDown](#m_bResponseOnButtonDown)|Wskazuje, czy reagować na zdarzenia przycisku w dół.|
-|[CMFCButton::m_bRightImage](#m_brightimage)|Wskazuje, czy ma być wyświetlany obraz po prawej stronie przycisku.|
-|[CMFCButton::m_bTopImage](#m_bTopImage)| Wskazuje, czy obraz znajduje się w górnej części przycisku.|
+|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Wskazuje, czy wokół przycisku ma być rysowany prostokąt fokusu.|
+|[CMFCButton::m_nFlatStyle](#m_nflatstyle)|Określa styl przycisku, taki jak bez obramowania, płaski, pół-płaski lub 3D.|
+|[CMFCButton::m_bGrayDisabled](#m_bGrayDisabled)|Gdy true, umożliwia wyłączony przycisk, które mają być rysowane jako wyszarzone.|
+|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Wskazuje, czy przycisk BS_CHECKBOX stylu, gdy kursor najedzie nad nim.|
+|[CMFCButton::m_bResponseOnButtonDown](#m_bResponseOnButtonDown)|Wskazuje, czy odpowiedzieć na zdarzenia przycisku w dół.|
+|[CMFCButton::m_bRightImage](#m_brightimage)|Wskazuje, czy obraz ma być wyświetlany po prawej stronie przycisku.|
+|[CMFCButton::m_bTopImage](#m_bTopImage)| Wskazuje, czy obraz znajduje się na górze przycisku.|
 |[CMFCButton::m_bTransparent](#m_btransparent)|Wskazuje, czy przycisk jest przezroczysty.|
-|[CMFCButton::m_bWasDblClk](#m_bWasDblClk)| Wskazuje, czy ostatnie zdarzenie kliknięcia było dwukrotne kliknięciem.|
+|[CMFCButton::m_bWasDblClk](#m_bWasDblClk)| Wskazuje, czy zdarzenie ostatniego kliknięcia było dwukrotnym kliknięciem.|
 
 ## <a name="remarks"></a>Uwagi
 
-Inne typy przycisków są wyprowadzane z `CMFCButton` klasy, takiej jak Klasa [CMFCURLLinkButton](../../mfc/reference/cmfclinkctrl-class.md) , która obsługuje `CMFCColorButton` hiperlinki i Klasa, która obsługuje okno dialogowe selektora kolorów.
+Inne typy przycisków pochodzą `CMFCButton` z klasy, takich jak [CMFCURLLinkButton](../../mfc/reference/cmfclinkctrl-class.md) klasy, która `CMFCColorButton` obsługuje hiperłącza i klasy, która obsługuje okno dialogowe selektora kolorów.
 
-Styl `CMFCButton` obiektu może być trójwymiarowy, *płaski*, *częściowo płaski* lub *bez obramowania*. Tekst przycisku można wyrównać w lewym, górnym lub środkowym przycisku. W czasie wykonywania można kontrolować, czy przycisk wyświetla tekst, obraz, czy tekst i obraz. Możesz również określić, że określony obraz kursora będzie wyświetlany po umieszczeniu kursora na przycisku.
+`CMFCButton` Styl obiektu może być *3D,* *płaski,* *pół-płaski* lub *bez obramowania.* Tekst przycisku można wyrównać po lewej, górnej lub środkowej stronie przycisku. W czasie wykonywania można kontrolować, czy przycisk wyświetla tekst, obraz lub tekst i obraz. Można również określić, że określony obraz kursora ma być wyświetlany, gdy kursor znajduje się nad przyciskiem.
 
-Utwórz kontrolkę przycisku bezpośrednio w kodzie lub przy użyciu narzędzia **kreatora klas MFC** i szablonu okna dialogowego. Jeśli utworzysz kontrolkę przycisk bezpośrednio, Dodaj `CMFCButton` zmienną do aplikacji, a następnie Wywołaj konstruktora i `Create` metody `CMFCButton` obiektu. Jeśli używasz **kreatora klas MFC**, Dodaj `CButton` zmienną do aplikacji, a następnie zmień typ zmiennej z `CButton` na `CMFCButton`.
+Utwórz formant przycisku bezpośrednio w kodzie lub za pomocą narzędzia **Kreatora klas MFC** i szablonu okna dialogowego. Jeśli utworzysz formant przycisku `CMFCButton` bezpośrednio, dodaj zmienną do aplikacji, a następnie wywołaj konstruktor i `Create` metody `CMFCButton` obiektu. Jeśli używasz **Kreatora klas MFC,** dodaj `CButton` zmienną do aplikacji, a `CButton` `CMFCButton`następnie zmień typ zmiennej z na .
 
-Aby obsłużyć komunikaty powiadomień w aplikacji okna dialogowego, Dodaj wpis mapy komunikatów oraz procedurę obsługi zdarzeń dla każdego powiadomienia. Powiadomienia wysyłane przez `CMFCButton` obiekt są takie same jak te wysyłane `CButton` przez obiekt.
+Aby obsłużyć komunikaty powiadomień w aplikacji okna dialogowego, dodaj wpis mapy wiadomości i program obsługi zdarzeń dla każdego powiadomienia. Powiadomienia wysyłane przez `CMFCButton` obiekt są takie same jak `CButton` te wysyłane przez obiekt.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób konfigurowania właściwości przycisku przy użyciu różnych metod w `CMFCButton` klasie. Przykład jest częścią [nowych kontrolek](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie pokazano, jak skonfigurować właściwości przycisku `CMFCButton` przy użyciu różnych metod w klasie. Przykład jest częścią [próbki Nowe formanty](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -189,31 +189,31 @@ Poniższy przykład ilustruje sposób konfigurowania właściwości przycisku pr
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CButton](../../mfc/reference/cbutton-class.md)
+[Cbutton](../../mfc/reference/cbutton-class.md)
 
-[CMFCButton](../../mfc/reference/cmfcbutton-class.md)
+[Cmfcbutton](../../mfc/reference/cmfcbutton-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxbutton. h
+**Nagłówek:** afxbutton.h
 
-##  <a name="cleanup"></a>CMFCButton:: CleanUp
+## <a name="cmfcbuttoncleanup"></a><a name="cleanup"></a>CMFCButton::Oczyszczanie
 
-Resetuje zmienne wewnętrzne i zwalnia przydzieloną zasoby, takie jak obrazy, mapy bitowe i ikony.
+Resetuje zmienne wewnętrzne i zwalnia przydzielone zasoby, takie jak obrazy, mapy bitowe i ikony.
 
 ```
 virtual void CleanUp();
 ```
 
-##  <a name="enablefulltexttooltip"></a>CMFCButton::EnableFullTextTooltip
+## <a name="cmfcbuttonenablefulltexttooltip"></a><a name="enablefulltexttooltip"></a>CMFCButton::EnableFullTextTooltip
 
-Określa, czy wyświetlać pełny tekst etykietki narzędzia w oknie dużego etykietki narzędzi lub obcięta wersja tekstu w małym oknie etykietki narzędzia.
+Określa, czy pełny tekst etykietki narzędzia ma być wyświetlany w dużym oknie etykietki narzędzia, czy obcięty tekst w małym oknie etykietki narzędzia.
 
 ```
 void EnableFullTextTooltip(BOOL bOn=TRUE);
@@ -221,14 +221,14 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bOn*<br/>
-podczas TRUE, aby wyświetlić cały tekst; Wartość FALSE, aby wyświetlić obcięty tekst.
+*Bon*<br/>
+[w] PRAWDA, aby wyświetlić cały tekst; FAŁSZ, aby wyświetlić obcięty tekst.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="enablemenufont"></a>CMFCButton::EnableMenuFont
+## <a name="cmfcbuttonenablemenufont"></a><a name="enablemenufont"></a>CMFCButton::EnableMenuFont
 
-Określa, czy czcionka tekstu przycisku jest taka sama jak czcionka menu aplikacji.
+Określa, czy czcionka tekstowa przycisku jest taka sama jak czcionka menu aplikacji.
 
 ```
 void EnableMenuFont(
@@ -238,19 +238,19 @@ void EnableMenuFont(
 
 ### <a name="parameters"></a>Parametry
 
-*bOn*<br/>
-podczas TRUE, aby użyć czcionki menu aplikacji jako czcionki tekstu przycisku; Wartość FALSE, aby użyć czcionki systemowej. Wartość domyślna to TRUE.
+*Bon*<br/>
+[w] PRAWDA, aby użyć czcionki menu aplikacji jako czcionki tekstowej przycisku; FALSE, aby użyć czcionki systemowej. Wartość domyślna to PRAWDA.
 
 *bRedraw*<br/>
-podczas Wartość TRUE powoduje natychmiastowe odświeżenie ekranu; w przeciwnym razie FALSE. Wartość domyślna to TRUE.
+[w] PRAWDA, aby od razu przerysować ekran ; w przeciwnym razie FALSE. Wartość domyślna to PRAWDA.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli ta metoda nie zostanie użyta do określenia czcionki tekstu przycisku, można określić czcionkę przy użyciu metody [CWnd:: SetFont](../../mfc/reference/cwnd-class.md#setfont) . Jeśli nie określisz czcionki w ogóle, struktura ustawia domyślną czcionkę.
+Jeśli ta metoda nie jest używana do określania czcionki tekstowej przycisku, można określić czcionkę za pomocą metody [CWnd::SetFont.](../../mfc/reference/cwnd-class.md#setfont) Jeśli czcionka nie zostanie określona w ogóle, struktura ustawia czcionkę domyślną.
 
-##  <a name="enablewindowstheming"></a>CMFCButton::EnableWindowsTheming
+## <a name="cmfcbuttonenablewindowstheming"></a><a name="enablewindowstheming"></a>CMFCButton::EnableWindowsTheming
 
-Określa, czy styl obramowania przycisku odpowiada bieżącemu motywowi systemu Windows.
+Określa, czy styl obramowania przycisku odpowiada bieżącej kompozycji systemu Windows.
 
 ```
 static void EnableWindowsTheming(BOOL bEnable = TRUE);
@@ -258,16 +258,16 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bEnable*<br/>
-podczas PRAWDA, aby użyć bieżącego motywu systemu Windows do rysowania obramowań przycisków; Wartość FALSE, aby nie używać motywu systemu Windows. Wartość domyślna to TRUE.
+*bWłaszą*<br/>
+[w] PRAWDA, aby użyć bieżącej kompozycji systemu Windows do rysowania obramowań przycisków; FALSE, aby nie używać motywu systemu Windows. Wartość domyślna to PRAWDA.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda ma wpływ na wszystkie przyciski w aplikacji, które pochodzą z `CMFCButton` klasy.
+Ta metoda ma wpływ na wszystkie przyciski `CMFCButton` w aplikacji, które są pochodną klasy.
 
-##  <a name="gettooltipctrl"></a>CMFCButton::GetToolTipCtrl
+## <a name="cmfcbuttongettooltipctrl"></a><a name="gettooltipctrl"></a>CMFCButton::GetToolTipCtrl
 
-Zwraca odwołanie do źródłowej kontrolki ToolTip.
+Zwraca odwołanie do podstawowej etykietki narzędzia.
 
 ```
 CToolTipCtrl& GetToolTipCtrl();
@@ -275,13 +275,13 @@ CToolTipCtrl& GetToolTipCtrl();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do źródłowej kontrolki ToolTip.
+Odwołanie do podstawowej etykietki narzędzia kontroli.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isautocheck"></a>CMFCButton::IsAutoCheck
+## <a name="cmfcbuttonisautocheck"></a><a name="isautocheck"></a>CMFCButton::IsAutoCheck
 
-Wskazuje, czy pole wyboru lub przycisk radiowy są przyciskiem automatycznym.
+Wskazuje, czy pole wyboru lub przycisk opcji to przycisk automatyczny.
 
 ```
 BOOL IsAutoCheck() const;
@@ -289,13 +289,13 @@ BOOL IsAutoCheck() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-TRUE, jeśli przycisk ma styl BS_AUTOCHECKBOX lub BS_AUTORADIOBUTTON; w przeciwnym razie FALSE.
+PRAWDA, jeśli przycisk ma styl BS_AUTOCHECKBOX lub BS_AUTORADIOBUTTON; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isautorepeatcommandmode"></a>CMFCButton::IsAutorepeatCommandMode
+## <a name="cmfcbuttonisautorepeatcommandmode"></a><a name="isautorepeatcommandmode"></a>CMFCButton::IsAutorepeatCommandMode
 
-Wskazuje, czy przycisk jest ustawiony na tryb autopowtarzania.
+Wskazuje, czy przycisk jest ustawiony na tryb automatycznego powtarzania.
 
 ```
 BOOL IsAutorepeatCommandMode() const;
@@ -303,13 +303,13 @@ BOOL IsAutorepeatCommandMode() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-TRUE, jeśli przycisk jest ustawiony na tryb autopowtarzania; w przeciwnym razie FALSE.
+PRAWDA, jeśli przycisk jest ustawiony na tryb automatycznego powtarzania; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj metody [CMFCButton:: SetAutorepeatMode](#setautorepeatmode) , aby ustawić przycisk na tryb autopowtarzania.
+Użyj [METODY CMFCButton::SetAutorepeatMode,](#setautorepeatmode) aby ustawić przycisk na tryb automatycznego powtarzania.
 
-##  <a name="ischeckbox"></a>CMFCButton:: ischeckbox
+## <a name="cmfcbuttonischeckbox"></a><a name="ischeckbox"></a>CMFCButton::IsCheckBox
 
 Wskazuje, czy przycisk jest przyciskiem pola wyboru.
 
@@ -319,11 +319,11 @@ BOOL IsCheckBox() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli przycisk ma styl BS_CHECKBOX lub BS_AUTOCHECKBOX; w przeciwnym razie FALSE.
+PRAWDA, jeśli przycisk ma styl BS_CHECKBOX lub BS_AUTOCHECKBOX; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ischecked"></a>CMFCButton:: IsChecked
+## <a name="cmfcbuttonischecked"></a><a name="ischecked"></a>CMFCButton::CzySprawiony
 
 Wskazuje, czy bieżący przycisk jest zaznaczony.
 
@@ -333,13 +333,13 @@ BOOL IsChecked() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-PRAWDA, jeśli bieżący przycisk jest zaznaczony; w przeciwnym razie FALSE.
+PRAWDA, jeśli zaznaczony jest bieżący przycisk; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Struktura używa różnych sposobów, aby wskazać, że są zaznaczone różne rodzaje przycisków. Na przykład przycisk radiowy jest sprawdzany, gdy zawiera kropkę; pole wyboru jest zaznaczone, gdy zawiera **symbol X**.
+Struktura używa różnych sposobów, aby wskazać, że różne rodzaje przycisków są sprawdzane. Na przykład przycisk radiowy jest sprawdzany, gdy zawiera kropkę; pole wyboru jest zaznaczone, gdy zawiera **znak X**.
 
-##  <a name="ishighlighted"></a>CMFCButton:: ispodświetlacz
+## <a name="cmfcbuttonishighlighted"></a><a name="ishighlighted"></a>CMFCButton::IsHighlighted
 
 Wskazuje, czy przycisk jest wyróżniony.
 
@@ -349,15 +349,15 @@ BOOL IsHighlighted() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli przycisk jest wyróżniony; w przeciwnym razie FALSE.
+PRAWDA, jeśli przycisk jest wyróżniony; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Przycisk zostanie wyróżniony po umieszczeniu wskaźnika myszy nad przyciskiem.
+Przycisk zostanie podświetlony, gdy mysz najedzie na przycisk.
 
-##  <a name="ispressed"></a>CMFCButton:: ispressd
+## <a name="cmfcbuttonispressed"></a><a name="ispressed"></a>CMFCButton::JestPressed
 
-Wskazuje, czy przycisk jest wypchnięci i wyróżniony.
+Wskazuje, czy przycisk jest wciśnięta i wyróżniona.
 
 ```
 BOOL IsPressed() const;
@@ -365,13 +365,13 @@ BOOL IsPressed() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli przycisk jest wciśnięty; w przeciwnym razie FALSE.
+PRAWDA, jeśli przycisk jest naciśnięty; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="ispushed"></a>CMFCButton:: ispushd
+## <a name="cmfcbuttonispushed"></a><a name="ispushed"></a>CMFCButton::IsPushed
 
-Wskazuje, czy przycisk jest wypychany.
+Wskazuje, czy przycisk jest wciśnięta.
 
 ```
 BOOL IsPushed() const;
@@ -379,13 +379,13 @@ BOOL IsPushed() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość TRUE, jeśli przycisk jest wypchnięci; w przeciwnym razie FALSE.
+PRAWDA, jeśli przycisk jest wciśnięta; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="isradiobutton"></a>CMFCButton:: isradiobutton
+## <a name="cmfcbuttonisradiobutton"></a><a name="isradiobutton"></a>CMFCButton::IsRadioButton
 
-Wskazuje, czy przycisk jest przyciskiem radiowym.
+Wskazuje, czy przycisk jest przyciskiem opcji.
 
 ```
 BOOL IsRadioButton() const;
@@ -393,13 +393,13 @@ BOOL IsRadioButton() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-TRUE, jeśli stylem przycisku jest BS_RADIOBUTTON lub BS_AUTORADIOBUTTON; w przeciwnym razie FALSE.
+PRAWDA, jeśli styl przycisku jest BS_RADIOBUTTON lub BS_AUTORADIOBUTTON; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="iswindowsthemingenabled"></a>CMFCButton::IsWindowsThemingEnabled
+## <a name="cmfcbuttoniswindowsthemingenabled"></a><a name="iswindowsthemingenabled"></a>CMFCButton::IsWindowsThemingEnabled
 
-Wskazuje, czy styl obramowania przycisku odpowiada bieżącemu motywowi systemu Windows.
+Wskazuje, czy styl obramowania przycisku odpowiada bieżącej kompozycji systemu Windows.
 
 ```
 static BOOL IsWindowsThemingEnabled();
@@ -407,19 +407,19 @@ static BOOL IsWindowsThemingEnabled();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-TRUE, jeśli styl obramowania przycisku odpowiada bieżącemu motywowi systemu Windows; w przeciwnym razie FALSE.
+PRAWDA, jeśli styl obramowania przycisku odpowiada bieżącej kompozycji systemu Windows; w przeciwnym razie FALSE.
 
-## <a name="a-namem_bdontusewinxptheme-cmfcbuttonm_bdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/>CMFCButton::m_bDontUseWinXPTheme
+## <a name="cmfcbuttonm_bdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/>CMFCButton::m_bDontUseWinXPTheme
 
-Określa, czy podczas rysowania przycisku mają być używane motywy systemu Windows XP.
+Określa, czy podczas rysowania przycisku ma być używany motywy systemu Windows XP.
 
 ```
 BOOL m_bDontUseWinXPTheme;
 ```
 
-##  <a name="m_bdrawfocus"></a>CMFCButton::m_bDrawFocus
+## <a name="cmfcbuttonm_bdrawfocus"></a><a name="m_bdrawfocus"></a>CMFCButton::m_bDrawFocus
 
-Wskazuje, czy prostokąt fokusu ma być rysowany wokół przycisku.
+Wskazuje, czy wokół przycisku ma być rysowany prostokąt fokusu.
 
 ```
 BOOL m_bDrawFocus;
@@ -427,21 +427,21 @@ BOOL m_bDrawFocus;
 
 ### <a name="remarks"></a>Uwagi
 
-`m_bDrawFocus` Ustaw element członkowski na wartość true, aby określić, że struktura będzie rysować prostokąt fokus wokół tekstu i obrazu przycisku, jeśli przycisk odbierze fokus.
+Ustaw `m_bDrawFocus` element członkowski na TRUE, aby określić, że struktura będzie rysować prostokąt fokusu wokół tekstu i obrazu przycisku, jeśli przycisk otrzyma fokus.
 
-`CMFCButton` Konstruktor inicjuje ten element członkowski jako wartość true.
+Konstruktor `CMFCButton` inicjuje ten element członkowski do TRUE.
 
-##  <a name="m_bGrayDisabled"></a>CMFCButton::m_bGrayDisabled
+## <a name="cmfcbuttonm_bgraydisabled"></a><a name="m_bGrayDisabled"></a>CMFCButton::m_bGrayDisabled
 
-Gdy ma wartość TRUE, włącza przycisk wyłączony jako wyszarzony.
+Gdy true, umożliwia wyłączony przycisk, które mają być rysowane jako wyszarzone.
 
 ```
 BOOL m_bGrayDisabled;
 ```
 
-##  <a name="m_bhighlightchecked"></a>CMFCButton::m_bHighlightChecked
+## <a name="cmfcbuttonm_bhighlightchecked"></a><a name="m_bhighlightchecked"></a>CMFCButton::m_bHighlightChecked
 
-Wskazuje, czy przycisk stylu BS_CHECKBOX ma być wyróżniony po umieszczeniu kursora nad nim kursorem.
+Wskazuje, czy przycisk BS_CHECKBOX stylu, gdy kursor najedzie nad nim.
 
 ```
 BOOL m_bHighlightChecked;
@@ -449,27 +449,27 @@ BOOL m_bHighlightChecked;
 
 ### <a name="remarks"></a>Uwagi
 
-Ustaw dla `m_bHighlightChecked` elementu członkowskiego wartość true, aby określić, że struktura będzie wyróżnić przycisk BS_CHECKBOX, gdy wskaźnik myszy jest przesuwany nad nią.
+Ustaw `m_bHighlightChecked` element członkowski na TRUE, aby określić, że struktura będzie podświetlać przycisk w stylu BS_CHECKBOX, gdy na niego znajduje się wskaźnik myszy.
 
-##  <a name="m_bResponseOnButtonDown"></a>CMFCButton::m_bResponseOnButtonDown
+## <a name="cmfcbuttonm_bresponseonbuttondown"></a><a name="m_bResponseOnButtonDown"></a>CMFCButton::m_bResponseOnButtonDown
 
-Wskazuje, czy reagować na zdarzenia przycisku w dół.
+Wskazuje, czy odpowiedzieć na zdarzenia przycisku w dół.
 
 ```
 BOOL m_bResponseOnButtonDown;
 ```
 
-##  <a name="m_brightimage"></a>CMFCButton::m_bRightImage
+## <a name="cmfcbuttonm_brightimage"></a><a name="m_brightimage"></a>CMFCButton::m_bRightImage
 
-Wskazuje, czy ma być wyświetlany obraz po prawej stronie przycisku.
+Wskazuje, czy obraz ma być wyświetlany po prawej stronie przycisku.
 
 ```
 BOOL m_bRightImage;
 ```
 
-##  <a name="m_bTopImage"></a>CMFCButton:: m_bTopImage] (#m_bTopImage)
+## <a name="cmfcbuttonm_btopimagem_btopimage"></a><a name="m_bTopImage"></a>CMFCButton::m_bTopImage](#m_bTopImage)
 
-Wskazuje, czy obraz znajduje się w górnej części przycisku.
+Wskazuje, czy obraz znajduje się na górze przycisku.
 
 ```
 BOOL m_bTopImage;
@@ -477,9 +477,9 @@ BOOL m_bTopImage;
 
 ### <a name="remarks"></a>Uwagi
 
-`m_bRightImage` Ustaw element członkowski na wartość true, aby określić, że struktura będzie wyświetlać obraz przycisku z prawej strony etykiety tekstowej przycisku.
+Ustaw `m_bRightImage` element członkowski na TRUE, aby określić, że w ramach będzie wyświetlany obraz przycisku po prawej stronie etykiety tekstowej przycisku.
 
-##  <a name="m_btransparent"></a>CMFCButton::m_bTransparent
+## <a name="cmfcbuttonm_btransparent"></a><a name="m_btransparent"></a>CMFCButton::m_bTransparent
 
 Wskazuje, czy przycisk jest przezroczysty.
 
@@ -489,9 +489,9 @@ BOOL m_bTransparent;
 
 ### <a name="remarks"></a>Uwagi
 
-`m_bTransparent` Ustaw element członkowski na wartość true, aby określić, że struktura ma być przezroczysty. `CMFCButton` Konstruktor inicjuje ten element członkowski na wartość false.
+Ustaw `m_bTransparent` element członkowski na TRUE, aby określić, że struktura sprawi, że przycisk będzie przezroczysty. Konstruktor `CMFCButton` inicjuje ten element członkowski do FALSE.
 
-##  <a name="m_nalignstyle"></a>CMFCButton::m_nAlignStyle
+## <a name="cmfcbuttonm_nalignstyle"></a><a name="m_nalignstyle"></a>CMFCButton::m_nAlignStyle
 
 Określa wyrównanie tekstu przycisku.
 
@@ -501,27 +501,27 @@ AlignStyle m_nAlignStyle;
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj jednej z następujących `CMFCButton::AlignStyle` wartości wyliczenia, aby określić wyrównanie tekstu przycisku:
+Użyj jednej z `CMFCButton::AlignStyle` następujących wartości wyliczenia, aby określić wyrównanie tekstu przycisku:
 
 |Wartość|Opis|
 |-----------|-----------------|
-|ALIGN_CENTER|Wartooć Wyrównuje tekst przycisku do środka przycisku.|
-|ALIGN_LEFT|Wyrównuje tekst przycisku po lewej stronie przycisku.|
-|ALIGN_RIGHT|Wyrównuje tekst przycisku po prawej stronie przycisku.|
+|ALIGN_CENTER|(Domyślnie) Wyrównuje tekst przycisku do środka przycisku.|
+|ALIGN_LEFT|Wyrównuje tekst przycisku do lewej strony przycisku.|
+|ALIGN_RIGHT|Wyrównuje tekst przycisku do prawej strony przycisku.|
 
-`CMFCButton` Konstruktor inicjuje ten element członkowski do ALIGN_CENTER.
+Konstruktor `CMFCButton` inicjuje ten element członkowski, aby ALIGN_CENTER.
 
-##  <a name="m_bWasDblClk"></a>CMFCButton:: m_bWasDblClk] (#m_bWasDblClk) |
+## <a name="cmfcbuttonm_bwasdblclkm_bwasdblclk"></a><a name="m_bWasDblClk"></a>CMFCButton::m_bWasDblClk](#m_bWasDblClk)|
 
-Wskazuje, czy ostatnie zdarzenie kliknięcia było dwukrotne kliknięciem. |
+Wskazuje, czy zdarzeniem ostatniego kliknięcia było dwukrotne kliknięcie.|
 
 ```
 BOOL m_bWasDblClk;
 ```
 
-##  <a name="m_nflatstyle"></a>CMFCButton::m_nFlatStyle
+## <a name="cmfcbuttonm_nflatstyle"></a><a name="m_nflatstyle"></a>CMFCButton::m_nFlatStyle
 
-Określa styl przycisku, np. bez obramowania, płaski, częściowo płaski lub 3W.
+Określa styl przycisku, taki jak bez obramowania, płaski, pół-płaski lub 3D.
 
 ```
 FlatStyle  m_nFlatStyle;
@@ -529,27 +529,27 @@ FlatStyle  m_nFlatStyle;
 
 ### <a name="remarks"></a>Uwagi
 
-Poniższa tabela zawiera listę `CMFCButton::m_nFlatStyle` wartości wyliczenia, które określają wygląd przycisku.
+W poniższej `CMFCButton::m_nFlatStyle` tabeli wymieniono wartości wyliczenia określające wygląd przycisku.
 
 |Wartość|Opis|
 |-----------|-----------------|
-|BUTTONSTYLE_3D|Wartooć Przycisk wydaje się mieć wysokie, trójwymiarowe boki. Gdy przycisk zostanie kliknięty, pojawi się przycisk, który zostanie naciśnięty do głębokiego wcięcia.|
-|BUTTONSTYLE_FLAT|Gdy mysz nie zostanie wstrzymana nad przyciskiem, przycisk wydaje się być dwuwymiarowy i nie ma podniesionych boków. Gdy mysz zostanie zatrzymana nad przyciskiem, pojawi się przycisk z niską trójwymiarową krawędzią. Gdy przycisk zostanie kliknięty, pojawi się przycisk, który jest wciśnięty do płytki z wcięciem.|
-|BUTTONSTYLE_SEMIFLAT|Wydaje się, że na przycisku występują małe i trójwymiarowe strony. Gdy przycisk zostanie kliknięty, pojawi się przycisk, który zostanie naciśnięty do głębokiego wcięcia.|
-|BUTTONSTYLE_NOBORDERS|Przycisk nie ma podniesionych boków i zawsze występuje dwuwymiarowy. Po kliknięciu przycisku nie pojawia się on w formie wcięcia.|
+|BUTTONSTYLE_3D|(Domyślnie) Przycisk wydaje się mieć wysokie, trójwymiarowe boki. Po kliknięciu przycisku przycisk wydaje się być wciśnięty w głębokie wcięcie.|
+|BUTTONSTYLE_FLAT|Gdy mysz nie zatrzymuje się nad przyciskiem, przycisk wydaje się być dwuwymiarowy i nie ma podniesionych boków. Gdy mysz zatrzymuje się nad przyciskiem, przycisk wydaje się mieć niskie, trójwymiarowe boki. Po kliknięciu przycisku przycisk wydaje się być wciśnięty w płytkie wcięcie.|
+|BUTTONSTYLE_SEMIFLAT|Przycisk wydaje się mieć niskie, trójwymiarowe boki. Po kliknięciu przycisku przycisk wydaje się być wciśnięty w głębokie wcięcie.|
+|BUTTONSTYLE_NOBORDERS|Przycisk nie ma podniesionych boków i zawsze pojawia się dwuwymiarowy. Przycisk nie wydaje się być wciśnięty do wcięcie po kliknięciu.|
 
-`CMFCButton` Konstruktor inicjuje ten element członkowski do BUTTONSTYLE_3D.
+Konstruktor `CMFCButton` inicjuje ten element członkowski, aby BUTTONSTYLE_3D.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób ustawiania wartości `m_nFlatStyle` zmiennej składowej `CMFCButton` w klasie. Ten przykład jest częścią [nowych kontrolek](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie pokazano, jak `m_nFlatStyle` ustawić wartości `CMFCButton` zmiennej element członkowski w klasie. W tym przykładzie jest częścią [new controls próbki](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#29](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]
 
-##  <a name="ondraw"></a>CMFCButton:: OnDraw
+## <a name="cmfcbuttonondraw"></a><a name="ondraw"></a>CMFCButton::OnDraw
 
-Wywoływane przez platformę, by narysować przycisk.
+Wywoływana przez strukturę, aby narysować przycisk.
 
 ```
 virtual void OnDraw(
@@ -560,22 +560,22 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-podczas Wskaźnik do kontekstu urządzenia.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia.
 
-*cinania*<br/>
-podczas Odwołanie do prostokąta powiązanego z przyciskiem.
+*Rect*<br/>
+[w] Odwołanie do prostokąta, który ogranicza przycisk.
 
-*uiState*<br/>
-podczas Bieżący stan przycisku. Aby uzyskać więcej informacji, zobacz `itemState` element członkowski [struktury DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) .
+*uiStan*<br/>
+[w] Bieżący stan przycisku. Aby uzyskać więcej `itemState` informacji, zobacz element członkowski [drawitemstruct tematu struktury.](/windows/win32/api/winuser/ns-winuser-drawitemstruct)
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę, aby użyć własnego kodu do rysowania przycisku.
+Zastąp tę metodę, aby użyć własnego kodu do narysowania przycisku.
 
-##  <a name="ondrawborder"></a>CMFCButton::OnDrawBorder
+## <a name="cmfcbuttonondrawborder"></a><a name="ondrawborder"></a>CMFCButton::OnDrawBorder
 
-Wywoływane przez platformę, by narysować obramowanie przycisku.
+Wywoływana przez ramy, aby narysować obramowanie przycisku.
 
 ```
 virtual void OnDrawBorder(
@@ -586,22 +586,22 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-podczas Wskaźnik do kontekstu urządzenia.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia.
 
 *rectClient*<br/>
-podczas Odwołanie do prostokąta powiązanego z przyciskiem.
+[w] Odwołanie do prostokąta, który ogranicza przycisk.
 
-*uiState*<br/>
-podczas Bieżący stan przycisku. Aby uzyskać więcej informacji, zobacz `itemState` element członkowski [struktury DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) .
+*uiStan*<br/>
+[w] Bieżący stan przycisku. Aby uzyskać więcej `itemState` informacji, zobacz element członkowski [drawitemstruct tematu struktury.](/windows/win32/api/winuser/ns-winuser-drawitemstruct)
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę, aby użyć własnego kodu do narysowania obramowania.
+Zastąp tę metodę, aby użyć własnego kodu do rysowania obramowania.
 
-##  <a name="ondrawfocusrect"></a>CMFCButton::OnDrawFocusRect
+## <a name="cmfcbuttonondrawfocusrect"></a><a name="ondrawfocusrect"></a>CMFCButton::OnDrawFocusRect
 
-Wywoływane przez platformę, aby narysować prostokąt fokusu dla przycisku.
+Wywoływane przez strukturę, aby narysować prostokąt fokus dla przycisku.
 
 ```
 virtual void OnDrawFocusRect(
@@ -611,19 +611,19 @@ virtual void OnDrawFocusRect(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-podczas Wskaźnik do kontekstu urządzenia.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia.
 
 *rectClient*<br/>
-podczas Odwołanie do prostokąta powiązanego z przyciskiem.
+[w] Odwołanie do prostokąta, który ogranicza przycisk.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę, aby użyć własnego kodu do rysowania prostokąta fokusu.
+Zastąp tę metodę, aby użyć własnego kodu, aby narysować prostokąt fokusu.
 
-##  <a name="ondrawtext"></a>CMFCButton::OnDrawText
+## <a name="cmfcbuttonondrawtext"></a><a name="ondrawtext"></a>CMFCButton::OnDrawText
 
-Wywoływane przez platformę, by narysować tekst przycisku.
+Wywoływane przez ramy, aby narysować tekst przycisku.
 
 ```
 virtual void OnDrawText(
@@ -636,28 +636,28 @@ virtual void OnDrawText(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-podczas Wskaźnik do kontekstu urządzenia.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia.
 
-*cinania*<br/>
-podczas Odwołanie do prostokąta powiązanego z przyciskiem.
+*Rect*<br/>
+[w] Odwołanie do prostokąta, który ogranicza przycisk.
 
-*strText*<br/>
-podczas Tekst do narysowania.
+*strText (tekst)*<br/>
+[w] Tekst do narysowania.
 
-*uiDTFlags*<br/>
-podczas Flagi określające sposób formatowania tekstu. Aby uzyskać więcej informacji, zobacz *nFormat* parametru metody [przechwytywania::D rawtext](../../mfc/reference/cdc-class.md#drawtext) .
+*żużle uiDTFlags*<br/>
+[w] Flagi określające sposób formatowania tekstu. Aby uzyskać więcej informacji, zobacz *parametr nFormat* [metody CDC::DrawText.](../../mfc/reference/cdc-class.md#drawtext)
 
-*uiState*<br/>
-podczas Rezerwacj.
+*uiStan*<br/>
+[w] Zastrzeżone.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę, aby użyć własnego kodu do rysowania tekstu przycisku.
+Zastąp tę metodę, aby użyć własnego kodu do narysowania tekstu przycisku.
 
-##  <a name="onfillbackground"></a>CMFCButton::OnFillBackground
+## <a name="cmfcbuttononfillbackground"></a><a name="onfillbackground"></a>CMFCButton::OnFillBackground
 
-Wywoływane przez platformę, by narysować tło tekstu przycisku.
+Wywoływane przez ramy, aby narysować tło tekstu przycisku.
 
 ```
 virtual void OnFillBackground(
@@ -667,17 +667,17 @@ virtual void OnFillBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-podczas Wskaźnik do kontekstu urządzenia.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia.
 
 *rectClient*<br/>
-podczas Odwołanie do prostokąta powiązanego z przyciskiem.
+[w] Odwołanie do prostokąta, który ogranicza przycisk.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąp tę metodę, aby użyć własnego kodu do rysowania tła przycisku.
+Zastąp tę metodę, aby użyć własnego kodu, aby narysować tło przycisku.
 
-##  <a name="selectfont"></a>CMFCButton::SelectFont
+## <a name="cmfcbuttonselectfont"></a><a name="selectfont"></a>CMFCButton::WybierzFont
 
 Pobiera czcionkę skojarzoną z określonym kontekstem urządzenia.
 
@@ -687,8 +687,8 @@ virtual CFont* SelectFont(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-podczas Wskaźnik do kontekstu urządzenia.
+*Pdc*<br/>
+[w] Wskaźnik do kontekstu urządzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -696,9 +696,9 @@ Zastąp tę metodę, aby użyć własnego kodu do pobrania czcionki.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setautorepeatmode"></a>CMFCButton::SetAutorepeatMode
+## <a name="cmfcbuttonsetautorepeatmode"></a><a name="setautorepeatmode"></a>CMFCButton::SetAutorepeatMode
 
-Ustawia przycisk na tryb autopowtarzania.
+Ustawia przycisk na tryb automatycznego powtarzania.
 
 ```
 void SetAutorepeatMode(int nTimeDelay=500);
@@ -706,14 +706,14 @@ void SetAutorepeatMode(int nTimeDelay=500);
 
 ### <a name="parameters"></a>Parametry
 
-*nTimeDelay*<br/>
-podczas Liczba nieujemna określająca interwał między komunikatami wysyłanymi do okna nadrzędnego. Interwał jest mierzony w milisekundach, a jego wartość domyślna to 500 milisekund. Określ wartość zero, aby wyłączyć tryb monitu o Autopowtarzanie.
+*nCzasdelaj*<br/>
+[w] Liczba nieujemna, która określa interwał między wiadomościami, które są wysyłane do okna nadrzędnego. Interwał jest mierzony w milisekundach, a jego wartość domyślna wynosi 500 milisekund. Określ zero, aby wyłączyć tryb automatycznego powtarzania wiadomości.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda powoduje, że przycisk ma stale wysyłać komunikaty WM_COMMAND do okna nadrzędnego do momentu zwolnienia przycisku lub wartość parametru *nTimeDelay* jest równa zero.
+Ta metoda powoduje, że przycisk stale wysyłać WM_COMMAND wiadomości do okna nadrzędnego, aż przycisk zostanie zwolniony lub *nTimeDelay* parametr jest ustawiony na zero.
 
-##  <a name="setcheckedimage"></a>CMFCButton::SetCheckedImage
+## <a name="cmfcbuttonsetcheckedimage"></a><a name="setcheckedimage"></a>CMFCButton::SetCheckedImage
 
 Ustawia obraz dla zaznaczonego przycisku.
 
@@ -740,45 +740,45 @@ void SetCheckedImage(
 
 ### <a name="parameters"></a>Parametry
 
-*hIcon*<br/>
-podczas Dojście do ikony zawierającej mapę bitową i maskę dla nowego obrazu.
+*hIcon (własówce)*<br/>
+[w] Uchwyt do ikony, która zawiera bitmapę i maskę dla nowego obrazu.
 
-*bAutoDestroy*<br/>
-podczas Wartość TRUE, aby określić, że zasoby mapy bitowej mają być automatycznie niszczone; w przeciwnym razie FALSE. Wartość domyślna to TRUE.
+*bAutoDestroj*<br/>
+[w] PRAWDA, aby określić, że zasoby mapy bitowej są niszczone automatycznie; w przeciwnym razie FALSE. Wartość domyślna to PRAWDA.
 
-*hIconHot*<br/>
-podczas Dojście do ikony zawierającej obraz wybranego stanu.
+*hIconHot (Niem.*<br/>
+[w] Uchwyt do ikony, która zawiera obraz dla wybranego stanu.
 
-*hBitmap*<br/>
-podczas Dojście do mapy bitowej, która zawiera obraz dla niewybranego stanu.
+*hBitmapa*<br/>
+[w] Uchwyt do mapy bitowej, która zawiera obraz dla stanu nie zaznaczonego.
 
-*hBitmapHot*<br/>
-podczas Dojście do mapy bitowej, która zawiera obraz dla wybranego stanu.
+*hBitmapHot (własnik hbitmaphot)*<br/>
+[w] Uchwyt do mapy bitowej zawierającej obraz dla wybranego stanu.
 
-*bMap3dColors*<br/>
-podczas Określa przezroczysty kolor tła przycisku; oznacza to, że jest to pierwszy plan przycisku. TRUE, aby użyć wartości koloru RGB (192, 192, 192); Wartość FALSE, aby użyć wartości Color zdefiniowanej przez `AFX_GLOBAL_DATA::clrBtnFace`.
+*bMap3dKolory*<br/>
+[w] Określa przezroczysty kolor tła przycisku; oznacza to, że twarz przycisku. TRUE używać wartości koloru RGB(192, 192, 192); FAŁSZ, aby użyć `AFX_GLOBAL_DATA::clrBtnFace`wartości koloru zdefiniowanej przez .
 
-*uiBmpResId*<br/>
-podczas Identyfikator zasobu dla niewybranego obrazu.
+*interfejs użytkownika uiBmpResId*<br/>
+[w] Identyfikator zasobu dla niewybranego obrazu.
 
 *uiBmpHotResId*<br/>
-podczas Identyfikator zasobu dla wybranego obrazu.
+[w] Identyfikator zasobu dla wybranego obrazu.
 
-*hIconDisabled*<br/>
-podczas Dojście do ikony dla wyłączonego obrazu.
+*hIconDisabled ( hIconDisabled )*<br/>
+[w] Uchwyt do ikony wyłączonego obrazu.
 
-*hBitmapDisabled*<br/>
-podczas Dojście do mapy bitowej zawierającej wyłączony obraz.
+*hBitmapWydajne*<br/>
+[w] Uchwyt do mapy bitowej, która zawiera wyłączony obraz.
 
-*uiBmpDsblResID*<br/>
-podczas Identyfikator zasobu wyłączonej mapy bitowej.
+*identyfikator uiBmpDsblResID*<br/>
+[w] Identyfikator zasobu wyłączonej mapy bitowej.
 
 *bAlphaBlend*<br/>
-podczas TRUE, aby używać tylko obrazów 32-bitowych, które używają kanału alfa; Wartość FALSE, aby nie używać tylko obrazów kanału alfa. Wartość domyślna to FALSE.
+[w] PRAWDA, aby używać tylko 32-bitowych obrazów, które używają kanału alfa; FALSE, aby nie używać tylko obrazów kanałów alfa. Wartość domyślna to FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="setfacecolor"></a>CMFCButton::SetFaceColor
+## <a name="cmfcbuttonsetfacecolor"></a><a name="setfacecolor"></a>CMFCButton::SetFaceColor
 
 Ustawia kolor tła dla tekstu przycisku.
 
@@ -790,19 +790,19 @@ void SetFaceColor(
 
 ### <a name="parameters"></a>Parametry
 
-*crFace*<br/>
-podczas Wartość koloru RGB.
+*crFace (twarz)*<br/>
+[w] Wartość koloru RGB.
 
 *bRedraw*<br/>
-podczas TRUE, aby natychmiast ponownie narysować ekran; w przeciwnym razie FALSE.
+[w] PRAWDA, aby natychmiast przerysować ekran ; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody, aby zdefiniować nowy kolor wypełnienia tła przycisku (na przykład). Należy zauważyć, że tło nie jest wypełniane, gdy zmienna członkowska [CMFCButton:: m_bTransparent](#m_btransparent) ma wartość true.
+Ta metoda służy do definiowania nowego koloru wypełnienia tła przycisku (twarzy). Należy zauważyć, że tło nie jest wypełnione, gdy [CMFCButton::m_bTransparent](#m_btransparent) zmiennej członkowskiej jest PRAWDA.
 
-##  <a name="setimage"></a>CMFCButton:: SetImage
+## <a name="cmfcbuttonsetimage"></a><a name="setimage"></a>CMFCButton::SetImage
 
-Ustawia obraz dla przycisku.
+Ustawia obraz przycisku.
 
 ```
 void SetImage(
@@ -827,52 +827,52 @@ void SetImage(
 
 ### <a name="parameters"></a>Parametry
 
-*hIcon*<br/>
-podczas Dojście do ikony zawierającej mapę bitową i maskę dla nowego obrazu.
+*hIcon (własówce)*<br/>
+[w] Uchwyt do ikony, która zawiera bitmapę i maskę dla nowego obrazu.
 
-*bAutoDestroy*<br/>
-podczas Wartość TRUE, aby określić, że zasoby mapy bitowej mają być automatycznie niszczone; w przeciwnym razie FALSE. Wartość domyślna to TRUE.
+*bAutoDestroj*<br/>
+[w] PRAWDA, aby określić, że zasoby mapy bitowej są niszczone automatycznie; w przeciwnym razie FALSE. Wartość domyślna to PRAWDA.
 
-*hIconHot*<br/>
-podczas Dojście do ikony zawierającej obraz wybranego stanu.
+*hIconHot (Niem.*<br/>
+[w] Uchwyt do ikony, która zawiera obraz dla wybranego stanu.
 
-*hBitmap*<br/>
-podczas Dojście do mapy bitowej, która zawiera obraz dla niewybranego stanu.
+*hBitmapa*<br/>
+[w] Uchwyt do mapy bitowej, która zawiera obraz dla stanu nie zaznaczonego.
 
-*hBitmapHot*<br/>
-podczas Dojście do mapy bitowej, która zawiera obraz dla wybranego stanu.
+*hBitmapHot (własnik hbitmaphot)*<br/>
+[w] Uchwyt do mapy bitowej zawierającej obraz dla wybranego stanu.
 
-*uiBmpResId*<br/>
-podczas Identyfikator zasobu dla niewybranego obrazu.
+*interfejs użytkownika uiBmpResId*<br/>
+[w] Identyfikator zasobu dla niewybranego obrazu.
 
 *uiBmpHotResId*<br/>
-podczas Identyfikator zasobu dla wybranego obrazu.
+[w] Identyfikator zasobu dla wybranego obrazu.
 
-*bMap3dColors*<br/>
-podczas Określa przezroczysty kolor tła przycisku; oznacza to, że jest to pierwszy plan przycisku. TRUE, aby użyć wartości koloru RGB (192, 192, 192); Wartość FALSE, aby użyć wartości Color zdefiniowanej przez `AFX_GLOBAL_DATA::clrBtnFace`.
+*bMap3dKolory*<br/>
+[w] Określa przezroczysty kolor tła przycisku; oznacza to, że twarz przycisku. TRUE używać wartości koloru RGB(192, 192, 192); FAŁSZ, aby użyć `AFX_GLOBAL_DATA::clrBtnFace`wartości koloru zdefiniowanej przez .
 
-*hIconDisabled*<br/>
-podczas Dojście do ikony dla wyłączonego obrazu.
+*hIconDisabled ( hIconDisabled )*<br/>
+[w] Uchwyt do ikony wyłączonego obrazu.
 
-*hBitmapDisabled*<br/>
-podczas Dojście do mapy bitowej zawierającej wyłączony obraz.
+*hBitmapWydajne*<br/>
+[w] Uchwyt do mapy bitowej, która zawiera wyłączony obraz.
 
-*uiBmpDsblResID*<br/>
-podczas Identyfikator zasobu wyłączonej mapy bitowej.
+*identyfikator uiBmpDsblResID*<br/>
+[w] Identyfikator zasobu wyłączonej mapy bitowej.
 
 *bAlphaBlend*<br/>
-podczas TRUE, aby używać tylko obrazów 32-bitowych, które używają kanału alfa; Wartość FALSE, aby nie używać tylko obrazów kanału alfa. Wartość domyślna to FALSE.
+[w] PRAWDA, aby używać tylko 32-bitowych obrazów, które używają kanału alfa; FALSE, aby nie używać tylko obrazów kanałów alfa. Wartość domyślna to FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, jak używać różnych wersji `SetImage` metody `CMFCButton` w klasie. Przykład jest częścią [nowych kontrolek](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie pokazano, jak `SetImage` używać `CMFCButton` różnych wersji metody w klasie. Przykład jest częścią [próbki Nowe formanty](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
 
-##  <a name="setmousecursor"></a>CMFCButton::SetMouseCursor
+## <a name="cmfcbuttonsetmousecursor"></a><a name="setmousecursor"></a>CMFCButton::SetMouseCursor
 
 Ustawia obraz kursora.
 
@@ -883,20 +883,20 @@ void SetMouseCursor(HCURSOR hcursor);
 ### <a name="parameters"></a>Parametry
 
 *hcursor*<br/>
-podczas Uchwyt kursora.
+[w] Uchwyt kursora.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody, aby skojarzyć obraz kursora, taki jak kursor dłoni z przyciskiem. Kursor jest ładowany z zasobów aplikacji.
+Ta metoda służy do skojarzenia obrazu kursora, takiego jak kursor ręczny, z przyciskiem. Kursor jest ładowany z zasobów aplikacji.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje sposób użycia `SetMouseCursor` metody `CMFCButton` w klasie. Przykład jest częścią kodu w [nowych kontrolkach](../../overview/visual-cpp-samples.md).
+W poniższym przykładzie pokazano, jak używać `SetMouseCursor` metody w `CMFCButton` klasie. Przykład jest częścią kodu w [przykładzie Nowe formanty](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#30](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]
 
-##  <a name="setmousecursorhand"></a>CMFCButton::SetMouseCursorHand
+## <a name="cmfcbuttonsetmousecursorhand"></a><a name="setmousecursorhand"></a>CMFCButton::SetMouseCursorHand
 
 Ustawia kursor na obraz dłoni.
 
@@ -906,11 +906,11 @@ void SetMouseCursorHand();
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tej metody, aby skojarzyć obraz kursora z przyciskiem. Kursor jest ładowany z zasobów aplikacji.
+Ta metoda służy do skojarzenia obrazu kursora dłoni z przyciskiem. Kursor jest ładowany z zasobów aplikacji.
 
-##  <a name="setstdimage"></a>CMFCButton::SetStdImage
+## <a name="cmfcbuttonsetstdimage"></a><a name="setstdimage"></a>CMFCButton::SetStdImage
 
-`CMenuImages` Używa obiektu do ustawienia obrazu przycisku.
+Używa `CMenuImages` obiektu do ustawiania obrazu przycisku.
 
 ```
 void SetStdImage(
@@ -921,18 +921,18 @@ void SetStdImage(
 
 ### <a name="parameters"></a>Parametry
 
-*id*<br/>
-podczas Jeden z identyfikatorów obrazu przycisku, który jest zdefiniowany w `CMenuImage::IMAGES_IDS` wyliczeniu. Wartości obrazu określają obrazy, takie jak strzałki, numery PIN i przyciski radiowe.
+*Identyfikator*<br/>
+[w] Jeden z identyfikatorów obrazu przycisku, `CMenuImage::IMAGES_IDS` który jest zdefiniowany w wyliczeniu. Wartości obrazów określają obrazy, takie jak strzałki, piny i przyciski radiowe.
 
-*state*<br/>
-podczas Jeden z identyfikatorów stanu obrazu przycisku, który jest zdefiniowany w `CMenuImages::IMAGE_STATE` wyliczeniu. Stany obrazu określają kolory przycisków, takie jak czerń, szary, jasnoszary, biały i ciemnoszary. Wartość domyślna to `CMenuImages::ImageBlack`.
+*Państwa*<br/>
+[w] Jeden z identyfikatorów stanu obrazu przycisku, który jest zdefiniowany w wyliczeniu. `CMenuImages::IMAGE_STATE` Stany obrazu określają kolory przycisków, takie jak czarny, szary, jasnoszary, biały i ciemnoszary. Wartością domyślną jest `CMenuImages::ImageBlack`.
 
-*idDisabled*<br/>
-podczas Jeden z identyfikatorów obrazu przycisku, który jest zdefiniowany w `CMenuImage::IMAGES_IDS` wyliczeniu. Obraz wskazuje, że przycisk jest wyłączony. Wartość domyślna to pierwszy obraz przycisku ( `CMenuImages::IdArrowDown`).
+*idDisabled ( idDisabled )*<br/>
+[w] Jeden z identyfikatorów obrazu przycisku, `CMenuImage::IMAGES_IDS` który jest zdefiniowany w wyliczeniu. Obraz wskazuje, że przycisk jest wyłączony. Wartością domyślną jest pierwszy `CMenuImages::IdArrowDown`obraz przycisku ( ).
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="settextcolor"></a>CMFCButton::SetTextColor
+## <a name="cmfcbuttonsettextcolor"></a><a name="settextcolor"></a>CMFCButton::SetTextColor
 
 Ustawia kolor tekstu przycisku dla przycisku, który nie jest zaznaczony.
 
@@ -942,14 +942,14 @@ void SetTextColor(COLORREF clrText);
 
 ### <a name="parameters"></a>Parametry
 
-*clrText*<br/>
-podczas Wartość koloru RGB.
+*clrTekst*<br/>
+[w] Wartość koloru RGB.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="settexthotcolor"></a>CMFCButton::SetTextHotColor
+## <a name="cmfcbuttonsettexthotcolor"></a><a name="settexthotcolor"></a>CMFCButton::SetTextHotColor
 
-Ustawia kolor tekstu przycisku dla wybranego przycisku.
+Ustawia kolor tekstu przycisku dla zaznaczonego przycisku.
 
 ```
 void SetTextHotColor(COLORREF clrTextHot);
@@ -957,14 +957,14 @@ void SetTextHotColor(COLORREF clrTextHot);
 
 ### <a name="parameters"></a>Parametry
 
-*clrTextHot*<br/>
-podczas Wartość koloru RGB.
+*clrTextHot (ClrTextHot)*<br/>
+[w] Wartość koloru RGB.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="settooltip"></a>CMFCButton:: SetToolTip — etykietka narzędzia
+## <a name="cmfcbuttonsettooltip"></a><a name="settooltip"></a>CMFCButton::SetTooltip
 
-Kojarzy etykietkę narzędzia z przyciskiem.
+Kojarzy etykietkę narzędzia za pomocą przycisku.
 
 ```
 void SetTooltip(LPCTSTR lpszToolTipText);
@@ -972,14 +972,14 @@ void SetTooltip(LPCTSTR lpszToolTipText);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszToolTipText*<br/>
-podczas Wskaźnik na tekst etykietki narzędzia. Określ wartość NULL, aby wyłączyć etykietkę narzędzia.
+*tekst lpszToolTipText*<br/>
+[w] Wskaźnik do tekstu etykietki narzędzia. Określ wartość NULL, aby wyłączyć etykietkę narzędzia.
 
 ### <a name="remarks"></a>Uwagi
 
-##  <a name="sizetocontent"></a>CMFCButton::SizeToContent
+## <a name="cmfcbuttonsizetocontent"></a><a name="sizetocontent"></a>CMFCButton::SizeToContent
 
-Zmienia rozmiar przycisku, aby zawierał jego tekst i obraz przycisku.
+Rozmiar przycisku powoduje, że jest on zawierał tekst i obraz przycisku.
 
 ```
 virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
@@ -988,17 +988,17 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ### <a name="parameters"></a>Parametry
 
 *bCalcOnly*<br/>
-podczas Wartość TRUE, aby obliczyć, ale nie zmieniać, nowy rozmiar przycisku; Wartość FALSE, aby zmienić rozmiar przycisku. Wartość domyślna to FALSE.
+[w] PRAWDA, aby obliczyć, ale nie zmienić, nowy rozmiar przycisku; FALSE, aby zmienić rozmiar przycisku. Wartość domyślna to FALSE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`CSize` Obiekt, który zawiera nowy rozmiar przycisku.
+Obiekt, `CSize` który zawiera nowy rozmiar przycisku.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie ta metoda oblicza nowy rozmiar, który obejmuje poziomy margines 10 pikseli i pionowy margines 5 pikseli.
+Domyślnie ta metoda oblicza nowy rozmiar, który zawiera margines poziomy 10 pikseli i pionowy margines 5 pikseli.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasy](../../mfc/reference/mfc-classes.md)<br/>

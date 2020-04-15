@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::packaged_task [C++], reset
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
-ms.openlocfilehash: 5bb04b84b723f239c338c02befa8cd3468cec3f2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: eb171e09451e16e89716dfdc44ed6c611e2d2280
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450083"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372120"
 ---
-# <a name="packagedtask-class"></a>packaged_task — Klasa
+# <a name="packaged_task-class"></a>packaged_task — Klasa
 
-Opisuje *dostawcę asynchronicznego* , który jest otoką wywołania, której sygnatura `Ty(ArgTypes...)`wywołania to. Skojarzony z nim *stan asynchroniczny* zawiera kopię obiektu, który można wywołać, oprócz potencjalnego wyniku.
+W tym artykule opisano *asynchronikę dostawcy,* `Ty(ArgTypes...)`który jest otoką wywołań, której podpis wywołania jest . Jego *skojarzony stan asynchroniczne* posiada kopię jego wywoływany obiekt oprócz potencjalnego wyniku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,35 +45,35 @@ class packaged_task;
 |Nazwa|Opis|
 |----------|-----------------|
 |[packaged_task](#packaged_task)|Konstruuje `packaged_task` obiekt.|
-|[packaged_task:: ~ packaged_task, destruktor](#dtorpackaged_task_destructor)|`packaged_task` Niszczy obiekt.|
+|[packaged_task::~packaged_task Destruktor](#dtorpackaged_task_destructor)|Niszczy `packaged_task` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[get_future](#get_future)|Zwraca [przyszły](../standard-library/future-class.md) obiekt, który ma ten sam stan asynchroniczny.|
-|[make_ready_at_thread_exit](#make_ready_at_thread_exit)|Wywołuje możliwy do wywołania obiekt, który jest przechowywany w skojarzonym stanie asynchronicznym, i niepodzielnie zapisuje zwracaną wartość.|
-|[zresetować](#reset)|Zastępuje skojarzony stan asynchroniczny.|
-|[swap](#swap)|Wymienia skojarzony stan asynchroniczny z określonym obiektem.|
-|[prawidłowa](#valid)|Określa, czy obiekt ma skojarzony stan asynchroniczny.|
+|[get_future](#get_future)|Zwraca [przyszły](../standard-library/future-class.md) obiekt, który ma ten sam skojarzony stan asynchroniczne.|
+|[make_ready_at_thread_exit](#make_ready_at_thread_exit)|Wywołuje wywoływany obiekt, który jest przechowywany w skojarzonym stanie asynchronialnym i niepodzielnie przechowuje zwróconą wartość.|
+|[Zresetować](#reset)|Zastępuje skojarzony stan asynchroniczne.|
+|[Wymiany](#swap)|Wymienia skojarzony stan asynchroniczne z stanem określonego obiektu.|
+|[Prawidłowe](#valid)|Określa, czy obiekt ma skojarzony stan asynchroniczne.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[packaged_task:: operator =](#op_eq)|Przenosi skojarzony stan asynchroniczny z określonego obiektu.|
-|[packaged_task::operator()](#op_call)|Wywołuje możliwy do wywołania obiekt, który jest przechowywany w skojarzonym stanie asynchronicznym, niepodzielnie zapisuje zwracaną wartość i ustawia stan na *gotowe*.|
-|[packaged_task:: operator — bool](#op_bool)|Określa, czy obiekt ma skojarzony stan asynchroniczny.|
+|[packaged_task::operator=](#op_eq)|Przenosi skojarzony stan asynchroniczne z określonego obiektu.|
+|[packaged_task::operator()](#op_call)|Wywołuje wywoływany obiekt, który jest przechowywany w skojarzonym stanie asynchronialnym, niepodzielnie przechowuje zwróconą wartość i ustawia stan *na gotowy.*|
+|[packaged_task::operator bool](#op_bool)|Określa, czy obiekt ma skojarzony stan asynchroniczne.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<przyszłe >
+**Nagłówek:** \<przyszłe>
 
 **Przestrzeń nazw:** std
 
-## <a name="get_future"></a>packaged_task::get_future
+## <a name="packaged_taskget_future"></a><a name="get_future"></a>packaged_task::get_future
 
-Zwraca obiekt typu `future<Ty>` , który ma ten sam *skojarzony stan asynchroniczny*.
+Zwraca obiekt typu, `future<Ty>` który ma ten sam *skojarzony stan asynchroniczne*.
 
 ```cpp
 future<Ty> get_future();
@@ -81,13 +81,13 @@ future<Ty> get_future();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli obiekt nie ma skojarzonego stanu asynchronicznego, ta metoda zgłasza [future_error](../standard-library/future-error-class.md) o kodzie `no_state`błędu. `packaged_task`
+Jeśli `packaged_task` obiekt nie ma skojarzonego stanu asynchronitycznego, ta metoda zgłasza [future_error,](../standard-library/future-error-class.md) który `no_state`ma kod błędu .
 
-Jeśli ta metoda została już wywołana dla `packaged_task` obiektu, który ma ten sam, skojarzony stan asynchroniczny, Metoda `future_error` zgłasza, że `future_already_retrieved`ma kod błędu.
+Jeśli ta metoda została już `packaged_task` wywołana dla obiektu, który ma ten sam skojarzony `future_error` stan asynchroniczne, metoda zgłasza, który ma kod błędu `future_already_retrieved`.
 
-## <a name="make_ready_at_thread_exit"></a>packaged_task::make_ready_at_thread_exit
+## <a name="packaged_taskmake_ready_at_thread_exit"></a><a name="make_ready_at_thread_exit"></a>packaged_task::make_ready_at_thread_exit
 
-Wywołuje możliwy do wywołania obiekt, który jest przechowywany w *skojarzonym stanie asynchronicznym* , i niepodzielnie zapisuje zwracaną wartość.
+Wywołuje wywoływany obiekt, który jest przechowywany w *skojarzonym stanie asynchronialnym* i niepodzielnie przechowuje zwróconą wartość.
 
 ```cpp
 void make_ready_at_thread_exit(ArgTypes... args);
@@ -95,17 +95,17 @@ void make_ready_at_thread_exit(ArgTypes... args);
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli obiekt nie ma skojarzonego stanu asynchronicznego, ta metoda zgłasza [future_error](../standard-library/future-error-class.md) o kodzie `no_state`błędu. `packaged_task`
+Jeśli `packaged_task` obiekt nie ma skojarzonego stanu asynchronitycznego, ta metoda zgłasza [future_error,](../standard-library/future-error-class.md) który ma `no_state`kod błędu .
 
-Jeśli ta metoda lub [make_ready_at_thread_exit](#make_ready_at_thread_exit) została już wywołana dla `packaged_task` obiektu, który ma ten sam, skojarzony stan asynchroniczny, metoda zgłasza `future_error` , że ma kod `promise_already_satisfied`błędu.
+Jeśli ta metoda lub [make_ready_at_thread_exit](#make_ready_at_thread_exit) został już `packaged_task` wywołany dla obiektu, który ma ten sam skojarzony `future_error` stan asynchroniczne, metoda zgłasza, który ma kod błędu `promise_already_satisfied`.
 
-W przeciwnym razie ten operator `INVOKE(fn, args..., Ty)`wywołuje, gdzie *Fn* jest obiektem możliwym do przechowania w skojarzonym stanie asynchronicznym. Zwracana wartość jest przechowywana niepodzielnie jako wynikowy skojarzony stan asynchroniczny.
+W przeciwnym razie `INVOKE(fn, args..., Ty)`ten operator wywołuje , gdzie *fn* jest wywoływany obiekt, który jest przechowywany w stanie asynchroniczne skojarzone. Każda zwracana wartość jest przechowywana niepodzielnie jako zwrócony wynik skojarzonego stanu asynchronicznie.
 
-W przeciwieństwie do [packaged_task:: operator ()](#op_call), skojarzony stan asynchroniczny nie jest ustawiony `ready` na dopóki wszystkie obiekty lokalne wątku w wątku wywołującym zostaną zniszczone. Zazwyczaj wątki, które są blokowane w skojarzonym stanie asynchronicznym, nie są odblokowywane do momentu zakończenia wątku wywołującego.
+W przeciwieństwie do [packaged_task::operator()](#op_call), skojarzony stan asynchroniczne `ready` nie jest ustawiony na dopóki wszystkie obiekty lokalne wątku w wątku wywołującym zostały zniszczone. Zazwyczaj wątki, które są blokowane w skojarzonym stanie asynchroniiowym nie są odblokowane, dopóki wątek wywołujący zakończy działanie.
 
-## <a name="op_eq"></a>packaged_task:: operator =
+## <a name="packaged_taskoperator"></a><a name="op_eq"></a>packaged_task::operator=
 
-Przenosi *skojarzony stan asynchroniczny* z określonego obiektu.
+Przenosi *skojarzony stan asynchroniczne* z określonego obiektu.
 
 ```cpp
 packaged_task& operator=(packaged_task&& Right);
@@ -113,8 +113,8 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknij*\
-Element `packaged_task` obiektu.
+*Prawo*\
+Obiekt `packaged_task`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -122,11 +122,11 @@ Element `packaged_task` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Po *operacji nie ma* już skojarzonego stanu asynchronicznego.
+Po operacji *Right* nie ma już skojarzonego stanu asynchroniowego.
 
-## <a name="op_call"></a>packaged_task:: operator ()
+## <a name="packaged_taskoperator"></a><a name="op_call"></a>packaged_task::operator()
 
-Wywołuje możliwy do wywołania obiekt, który jest przechowywany w *skojarzonym stanie asynchronicznym*, niepodzielnie zapisuje zwracaną wartość i ustawia stan na *gotowe*.
+Wywołuje wywoływany obiekt, który jest przechowywany w *skojarzonym stanie asynchronialnym,* niepodzielnie przechowuje zwróconą wartość i ustawia stan *na gotowy.*
 
 ```cpp
 void operator()(ArgTypes... args);
@@ -134,15 +134,15 @@ void operator()(ArgTypes... args);
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli obiekt nie ma skojarzonego stanu asynchronicznego, ta metoda zgłasza [future_error](../standard-library/future-error-class.md) o kodzie `no_state`błędu. `packaged_task`
+Jeśli `packaged_task` obiekt nie ma skojarzonego stanu asynchronitycznego, ta metoda zgłasza [future_error,](../standard-library/future-error-class.md) który ma `no_state`kod błędu .
 
-Jeśli ta metoda lub [make_ready_at_thread_exit](#make_ready_at_thread_exit) została już wywołana dla `packaged_task` obiektu, który ma ten sam, skojarzony stan asynchroniczny, metoda zgłasza `future_error` , że ma kod `promise_already_satisfied`błędu.
+Jeśli ta metoda lub [make_ready_at_thread_exit](#make_ready_at_thread_exit) został już `packaged_task` wywołany dla obiektu, który ma ten sam skojarzony `future_error` stan asynchroniczne, metoda zgłasza, który ma kod błędu `promise_already_satisfied`.
 
-W przeciwnym razie ten operator `INVOKE(fn, args..., Ty)`wywołuje, gdzie *Fn* jest obiektem możliwym do przechowania w skojarzonym stanie asynchronicznym. Każda zwrócona wartość jest przechowywana niepodzielnie jako wynikowy skojarzony stan asynchroniczny, a stan jest ustawiony na gotowe. W efekcie wszystkie wątki, które są blokowane w skojarzonym stanie asynchronicznym, zostaną odblokowane.
+W przeciwnym razie `INVOKE(fn, args..., Ty)`ten operator wywołuje , gdzie *fn* jest wywoływany obiekt, który jest przechowywany w stanie asynchroniczne skojarzone. Każda zwracana wartość jest przechowywana niepodzielnie jako zwrócony wynik skojarzonego stanu asynchronicznie, a stan jest ustawiony na gotowy. W rezultacie wszystkie wątki, które są zablokowane w skojarzonym stanie asynchronizańskim, zostaną odblokowane.
 
-## <a name="op_bool"></a>packaged_task:: operator — bool
+## <a name="packaged_taskoperator-bool"></a><a name="op_bool"></a>packaged_task::operator bool
 
-Określa, czy obiekt ma `associated asynchronous state`.
+Określa, czy obiekt `associated asynchronous state`ma plik .
 
 ```cpp
 operator bool() const noexcept;
@@ -150,9 +150,9 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-ma **wartość true** , jeśli obiekt ma skojarzony stan asynchroniczny; w przeciwnym razie **false**.
+**true,** jeśli obiekt ma skojarzony stan asynchroniczne; w przeciwnym razie **false**.
 
-## <a name="packaged_task"></a>packaged_task::p Konstruktor ackaged_task
+## <a name="packaged_taskpackaged_task-constructor"></a><a name="packaged_task"></a>packaged_task::packaged_task Konstruktor
 
 Konstruuje `packaged_task` obiekt.
 
@@ -169,28 +169,28 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknij*\
-Element `packaged_task` obiektu.
+*Prawo*\
+Obiekt `packaged_task`.
 
-*alokacj*\
-Alokator pamięci. Aby uzyskać więcej informacji, zobacz [ \<przypisania >](../standard-library/allocators-header.md).
+*Alloc*\
+Alokator pamięci. Aby uzyskać więcej informacji, zobacz [ \<>alokatorów ](../standard-library/allocators-header.md).
 
 *Fn*\
 Obiekt funkcyjny.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor konstruuje `packaged_task` obiekt, który nie ma *skojarzonego stanu asynchronicznego*.
+Pierwszy konstruktor tworzy `packaged_task` obiekt, który nie ma *skojarzonego stanu asynchroniowego.*
 
-Drugi Konstruktor konstruuje `packaged_task` obiekt i transferuje skojarzony stan asynchroniczny z *prawej strony*. Po *operacji nie ma* już skojarzonego stanu asynchronicznego.
+Drugi konstruktor konstruuje `packaged_task` obiekt i przenosi skojarzony stan asynchroniczne z *Right*. Po operacji *Right* nie ma już skojarzonego stanu asynchroniowego.
 
-Trzeci Konstruktor konstruuje `packaged_task` obiekt, który ma kopię *Fn* przechowywaną w skojarzonym stanie asynchronicznym.
+Trzeci konstruktor tworzy `packaged_task` obiekt, który ma kopię *fn* przechowywane w jego skojarzony stan asynchroniczne.
 
-Czwarty Konstruktor konstruuje `packaged_task` obiekt, który ma kopię *Fn* przechowywaną w skojarzonym stanie asynchronicznym, `alloc` i używa dla alokacji pamięci.
+Czwarty konstruktor tworzy `packaged_task` obiekt, który ma kopię *fn* przechowywane w jego skojarzony stan `alloc` asynchroniczne i używa do alokacji pamięci.
 
-## <a name="dtorpackaged_task_destructor"></a>packaged_task:: ~ packaged_task, destruktor
+## <a name="packaged_taskpackaged_task-destructor"></a><a name="dtorpackaged_task_destructor"></a>packaged_task::~packaged_task Destruktor
 
-`packaged_task` Niszczy obiekt.
+Niszczy `packaged_task` obiekt.
 
 ```cpp
 ~packaged_task();
@@ -198,11 +198,11 @@ Czwarty Konstruktor konstruuje `packaged_task` obiekt, który ma kopię *Fn* prz
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli *skojarzony stan asynchroniczny* nie jest *gotowy*, destruktor przechowuje wyjątek [future_error](../standard-library/future-error-class.md) , który `broken_promise` ma kod błędu jako wynik w skojarzonym stanie asynchronicznym, oraz wszystkie wątki, które są blokowane na skojarzony stan asynchroniczny zostaje odblokowany.
+Jeśli *skojarzony stan asynchroniczne* nie jest *gotowy,* destruktor przechowuje wyjątek [future_error,](../standard-library/future-error-class.md) który ma kod błędu `broken_promise` jako wynik w skojarzonym stanie asynchronialnym, a wszystkie wątki, które są blokowane w skojarzonym stanie asynchronialnym, zostają odblokowane.
 
-## <a name="reset"></a>packaged_task:: Reset
+## <a name="packaged_taskreset"></a><a name="reset"></a>packaged_task::reset
 
-Używa nowego *skojarzonego stanu asynchronicznego* w celu zastąpienia istniejącego skojarzonego stanu asynchronicznego.
+Używa nowego *skojarzonego stanu asynchroniowego,* aby zastąpić istniejący skojarzony stan asynchroniczne.
 
 ```cpp
 void reset();
@@ -210,11 +210,11 @@ void reset();
 
 ### <a name="remarks"></a>Uwagi
 
-W efekcie ta metoda jest wykonywana `*this = packaged_task(move(fn))`, gdzie *Fn* jest obiektem funkcji, który jest przechowywany w skojarzonym stanie asynchronicznym dla tego obiektu. W związku z tym, stan obiektu jest wyczyszczony, a [get_future](#get_future), [operator ()](#op_call)i [make_ready_at_thread_exit](#make_ready_at_thread_exit) można wywołać tak jak w przypadku nowo skonstruowanego obiektu.
+W efekcie ta metoda `*this = packaged_task(move(fn))`wykonuje , gdzie *fn* jest obiektem funkcji, który jest przechowywany w skojarzonym stanie asynchronicznego dla tego obiektu. W związku z tym stan obiektu jest czyszczony i [get_future](#get_future), [operator()](#op_call)i [make_ready_at_thread_exit](#make_ready_at_thread_exit) można wywołać tak, jakby na nowo skonstruowany obiekt.
 
-## <a name="swap"></a>packaged_task:: swap
+## <a name="packaged_taskswap"></a><a name="swap"></a>packaged_task::swap
 
-Wymienia skojarzony stan asynchroniczny z określonym obiektem.
+Wymienia skojarzony stan asynchroniczne z stanem określonego obiektu.
 
 ```cpp
 void swap(packaged_task& Right) noexcept;
@@ -222,12 +222,12 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknij*\
-Element `packaged_task` obiektu.
+*Prawo*\
+Obiekt `packaged_task`.
 
-## <a name="valid"></a>packaged_task:: prawidłowe
+## <a name="packaged_taskvalid"></a><a name="valid"></a>packaged_task::prawidłowy
 
-Określa, czy obiekt ma `associated asynchronous state`.
+Określa, czy obiekt `associated asynchronous state`ma plik .
 
 ```cpp
 bool valid() const;
@@ -235,9 +235,9 @@ bool valid() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-ma **wartość true** , jeśli obiekt ma skojarzony stan asynchroniczny; w przeciwnym razie **false**.
+**true,** jeśli obiekt ma skojarzony stan asynchroniczne; w przeciwnym razie **false**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[\<future>](../standard-library/future.md)
+[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[\<przyszłych>](../standard-library/future.md)

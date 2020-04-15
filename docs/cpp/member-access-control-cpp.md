@@ -6,16 +6,16 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: 367ee5183498453b9ce647c8e91ad1194f90fbd2
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e8f62e82ebb7fcc18be5ac7d203df0fb46c9b635
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345028"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369856"
 ---
 # <a name="member-access-control-c"></a>Kontrola dostępu do elementów członkowskich (C++)
 
-Mechanizmy kontroli dostępu umożliwiają oddzielenie [publicznych](../cpp/public-cpp.md) interfejsu klasy z [prywatnej](../cpp/private-cpp.md) szczegółów implementacji i [chronione](../cpp/protected-cpp.md) elementów członkowskich, które służą tylko do użycia przez klasy pochodne. Specyfikator dostępu ma zastosowanie do wszystkich elementów członkowskich zadeklarowanych po nim, dopóki nie zostanie osiągnięty następnego specyfikatora dostępu.
+Formanty dostępu umożliwiają oddzielenie interfejsu [publicznego](../cpp/public-cpp.md) klasy od szczegółów implementacji [prywatnej](../cpp/private-cpp.md) i [chronionych](../cpp/protected-cpp.md) elementów członkowskich, które są tylko do użytku przez klasy pochodne. Specyfikator dostępu ma zastosowanie do wszystkich elementów członkowskich zadeklarowanych po nim, dopóki nie zostanie napotkany specyfikator dostępu następnego.
 
 ```cpp
 class Point
@@ -35,40 +35,40 @@ protected:      // Declare protected function for derived classes only.
 };
 ```
 
-Dostęp do domyślnej jest **prywatnej** w klasie i **publicznych** w strukturze lub Unii. Specyfikatory dostępu w klasie mogą być używane z dowolną liczbę razy w dowolnej kolejności. Alokacja pamięci dla obiektów typów klasy jest zależy od implementacji, ale elementy członkowskie są gwarantowane przypisanie kolejno adresów pamięci między specyfikatory dostępu.
+Domyślny dostęp jest **prywatny** w klasie i **publiczny** w strukturze lub unii. Specyfikatory dostępu w klasie mogą być używane dowolną liczbę razy w dowolnej kolejności. Alokacja magazynu dla obiektów typów klas jest zależna od implementacji, ale członkowie mają gwarancję, że będą przypisywane kolejno wyższe adresy pamięci między specyfikatorami dostępu.
 
 ## <a name="member-access-control"></a>Kontrola dostępu do elementów członkowskich
 
 |Typ dostępu|Znaczenie|
 |--------------------|-------------|
-|[private](../cpp/private-cpp.md)|Składowe klasy zadeklarowane jako **prywatnej** mogą być używane tylko przez funkcje składowe i znajomych (klas lub funkcji) klasy.|
-|[protected](../cpp/protected-cpp.md)|Składowe klasy zadeklarowane jako **chronione** może służyć przez funkcje składowe i znajomych (klas lub funkcji) klasy. Ponadto może być używany przez klasy pochodne klasy.|
-|[public](../cpp/public-cpp.md)|Składowe klasy zadeklarowane jako **publicznych** może być używana przez funkcję.|
+|[private](../cpp/private-cpp.md)|Członkowie klasy zadeklarowane jako **prywatne** mogą być używane tylko przez funkcje członkowskie i znajomych (klasy lub funkcje) klasy.|
+|[protected](../cpp/protected-cpp.md)|Elementy członkowskie klasy **zadeklarowane** jako chronione mogą być używane przez funkcje członkowskie i znajomych (klasy lub funkcje) klasy. Ponadto mogą być używane przez klasy pochodzące z klasy.|
+|[public](../cpp/public-cpp.md)|Elementy członkowskie klasy zadeklarowane jako **publiczne** mogą być używane przez dowolną funkcję.|
 
-Kontrola dostępu ułatwia zapobieganie przy użyciu obiektów w sposób, który nie były przeznaczone do użycia. Ta ochrona jest utracone w przypadku, gdy wykonywane są Konwersje jawne (rzutowania).
+Kontrola dostępu pomaga zapobiec używaniu obiektów w sposób, który nie był przeznaczony do użycia. Ta ochrona jest tracona podczas konwersji typu jawnego (rzuty) są wykonywane.
 
 > [!NOTE]
->  Kontrola dostępu jest równie mające zastosowanie do wszystkich nazw: elementów członkowskich, element członkowski danych, klasy zagnieżdżone i modułów wyliczających.
+> Kontrola dostępu ma również zastosowanie do wszystkich nazw: funkcji członkowskich, danych członkowskich, klas zagnieżdżonych i wyliczaczy.
 
 ## <a name="access-control-in-derived-classes"></a>Kontrola dostępu w klasach pochodnych
 
-Kontrolka dwa czynniki, które elementy członkowskie klasy bazowej są dostępne w klasie pochodnej; tych samych czynników kontroli dostępu do dziedziczone elementy członkowskie klasy pochodnej:
+Dwa czynniki kontrolują, które elementy członkowskie klasy podstawowej są dostępne w klasie pochodnej; te same czynniki kontrolują dostęp do dziedziczonych elementów członkowskich w klasie pochodnej:
 
-- Czy pochodne klasy deklaruje, przy użyciu klasy bazowej **publicznych** specyfikatorze dostępu.
+- Czy klasa pochodna deklaruje klasę podstawową przy użyciu specyfikatora dostępu **publicznego.**
 
-- Dostęp do elementu członkowskiego nowości w klasie bazowej.
+- Co dostęp do elementu członkowskiego jest w klasie podstawowej.
 
-W poniższej tabeli przedstawiono interakcje między te czynniki oraz sposobu określania dostęp do składowej klasy bazowej.
+W poniższej tabeli przedstawiono interakcję między tymi czynnikami i jak określić dostęp do elementów członkowskich klasy podstawowej.
 
-### <a name="member-access-in-base-class"></a>Dostęp do elementu członkowskiego w klasie bazowej
+### <a name="member-access-in-base-class"></a>Dostęp do elementu członkowskiego w klasie podstawowej
 
 |private|protected|Public|
 |-------------|---------------|------------|
-|Zawsze niedostępny, niezależnie od dostępu tworzenie wartości pochodnych|Prywatna w klasie pochodnej, korzystając z prywatnego tworzenie wartości pochodnych|Prywatna w klasie pochodnej, korzystając z prywatnego tworzenie wartości pochodnych|
-||Chronione w klasie pochodnej, jeśli używasz pochodnym chronionych|Chronione w klasie pochodnej, jeśli używasz pochodnym chronionych|
-||Chronione w klasie pochodnej, jeśli używasz pochodnym publiczny|Jest publiczna w klasie pochodnej, jeśli używasz publicznego tworzenie wartości pochodnych|
+|Zawsze niedostępne niezależnie od dostępu do wyprowadzania|Prywatne w klasie pochodnej, jeśli używasz prywatnego wyprowadzania|Prywatne w klasie pochodnej, jeśli używasz prywatnego wyprowadzania|
+||Chronione w klasie pochodnej, jeśli używasz chronionego wyprowadzania|Chronione w klasie pochodnej, jeśli używasz chronionego wyprowadzania|
+||Chronione w klasie pochodnej, jeśli używasz publicznego wyprowadzania|Publiczne w klasie pochodnej, jeśli używasz publicznego wyprowadzania|
 
-Ilustruje to poniższy przykład:
+Zostało to przedstawione w poniższym przykładzie:
 
 ```cpp
 // access_specifiers_for_base_classes.cpp
@@ -112,48 +112,48 @@ int main()
 }
 ```
 
-W `DerivedClass1`, funkcja elementu członkowskiego `PublicFunc` jest elementem członkowskim publicznych i `ProtectedFunc` jest chroniony element członkowski, ponieważ `BaseClass` będąca klasą bazową publicznych. `PrivateFunc` jest oznaczony jako prywatny `BaseClass`, i jest niedostępna dla dowolnej klasy pochodnej.
+W `DerivedClass1`funkcji elementu `PublicFunc` członkowskiego jest `ProtectedFunc` elementem publicznym i `BaseClass` jest chronionym elementem członkowskim, ponieważ jest publiczną klasą podstawową. `PrivateFunc`jest prywatny `BaseClass`do , i jest niedostępny dla wszystkich klas pochodnych.
 
-W `DerivedClass2`, funkcje `PublicFunc` i `ProtectedFunc` są uznawane za prywatne składowe, ponieważ `BaseClass` będąca klasą bazową prywatnych. Ponownie `PrivateFunc` są prywatne `BaseClass`, i jest niedostępna dla dowolnej klasy pochodnej.
+W `DerivedClass2`, `PublicFunc` funkcje i `ProtectedFunc` są `BaseClass` uważane za członków prywatnych, ponieważ jest prywatną klasą podstawową. Ponownie, `PrivateFunc` jest `BaseClass`prywatny do , i jest niedostępny dla wszystkich klas pochodnych.
 
-Można zadeklarować klasy pochodnej bez specyfikatora dostępu do klasy bazowej. W takim przypadku informacje o pochodzeniu jest uznawane za prywatne, jeśli używa deklaracji klasy pochodnej **klasy** — słowo kluczowe. Informacje o pochodzeniu jest uważana za publiczne, jeśli używa deklaracji klasy pochodnej **struktury** — słowo kluczowe. Na przykład poniższy kod:
+Można zadeklarować klasę pochodną bez specyfikatora dostępu klasy podstawowej. W takim przypadku wyprowadzanie jest uważane za prywatne, jeśli deklaracja klasy pochodnej używa słowa kluczowego **class.** Wyprowadzanie jest uważane za publiczne, jeśli deklaracja klasy pochodnej używa słowa kluczowego **struct.** Na przykład następujący kod:
 
 ```cpp
 class Derived : Base
 ...
 ```
 
-jest równoważne:
+odpowiada:
 
 ```cpp
 class Derived : private Base
 ...
 ```
 
-Podobnie poniższy kod:
+Podobnie następujący kod:
 
 ```cpp
 struct Derived : Base
 ...
 ```
 
-jest równoważne:
+odpowiada:
 
 ```cpp
 struct Derived : public Base
 ...
 ```
 
-Należy pamiętać, że składowych zadeklarowanych jako posiadające prywatny dostęp nie są dostępne dla funkcji lub klasy pochodne, chyba że tych funkcji lub klasy są deklarowane przy użyciu **friend** deklaracji w klasie bazowej.
+Należy zauważyć, że elementy członkowskie zadeklarowane jako posiadające dostęp prywatny nie są dostępne dla funkcji lub klas pochodnych, chyba że te funkcje lub klasy są zadeklarowane przy użyciu deklaracji **przyjaciela** w klasie podstawowej.
 
-A **Unii** typ nie może mieć klasy bazowej.
+Typ **unii** nie może mieć klasy podstawowej.
 
 > [!NOTE]
->  Podczas określania prywatnych klasy bazowej, zaleca się jawnie użyć **prywatnej** — słowo kluczowe, aby użytkownicy klasy pochodnej poznanie dostęp do elementu członkowskiego.
+> Podczas określania prywatnej klasy podstawowej, wskazane jest jawne użycie **prywatnego** słowa kluczowego, aby użytkownicy klasy pochodnej rozumieli dostęp do elementu członkowskiego.
 
-## <a name="access-control-and-static-members"></a>Kontrola dostępu i statyczne elementy członkowskie
+## <a name="access-control-and-static-members"></a>Kontrola dostępu i elementy statyczne
 
-Po określeniu klasy bazowej jako **prywatnej**, ma wpływ tylko niestatycznych elementów członkowskich. Publiczne statyczne elementy członkowskie są nadal dostępne w klasach pochodnych. Jednakże uzyskiwania dostępu do członków klasy podstawowej za pomocą wskaźników, odwołań lub obiektów może wymagać konwersji, w tym czasie kontroli dostępu jest ponownie stosowana. Rozważmy następujący przykład:
+Po określeniu klasy podstawowej jako **prywatnej**wpływa ona tylko na elementy członkowskie niestatyczne. Publiczne statyczne elementy członkowskie są nadal dostępne w klasach pochodnych. Jednak dostęp do elementów członkowskich klasy podstawowej przy użyciu wskaźników, odwołań lub obiektów może wymagać konwersji, w którym to czasie kontrola dostępu jest ponownie stosowana. Rozważmy następujący przykład:
 
 ```cpp
 // access_control.cpp
@@ -187,15 +187,15 @@ int Derived2::ShowCount()
 }
 ```
 
-W poprzednim kodzie kontroli dostępu zabrania konwersja ze wskaźnika do `Derived2` na wskaźnik do `Base`. **To** wskaźnik jest niejawnie typu `Derived2 *`. Aby wybrać `CountOf` funkcji **to** musi być konwertowany na typ `Base *`. Taka konwersja nie jest dozwolona, ponieważ `Base` jest prywatny pośrednią klasą bazową do `Derived2`. Konwersja na typ klasy bazowej prywatnego jest dopuszczalne tylko dla wskaźników do natychmiastowego klas pochodnych. W związku z tym, wskaźników typu `Derived1 *` można przekonwertować na typ `Base *`.
+W poprzednim kodzie kontrola dostępu zabrania konwersji `Derived2` ze wskaźnika na wskaźnik do `Base`. **Ten** wskaźnik jest niejawnie typu `Derived2 *`. Aby wybrać `CountOf` funkcję, należy **ją** przekonwertować na typ `Base *`. Taka konwersja nie jest `Base` dozwolona, ponieważ `Derived2`jest prywatną pośrednią klasą podstawową do . Konwersja do prywatnego typu klasy podstawowej jest dopuszczalna tylko dla wskaźników do klas pochodnych natychmiastowych. W związku z tym `Derived1 *` wskaźniki typu można `Base *`przekonwertować na typ .
 
-Należy pamiętać, że wywołanie `CountOf` funkcja jawnie, bez używania wskaźnik, odwołanie lub obiekt, aby go zaznaczyć, oznacza bez konwersji. Wywołanie jest dozwolone.
+Należy zauważyć, `CountOf` że wywołanie funkcji jawnie, bez użycia wskaźnika, odwołania lub obiektu, aby ją zaznaczyć, nie oznacza konwersji. W związku z tym wywołanie jest dozwolone.
 
-Elementy członkowskie i znajomym w klasie pochodnej `T`, można przekonwertować na wskaźnik do `T` na wskaźnik do prywatnej bezpośredniej klasie bazowej `T`.
+Członkowie i przyjaciele klasy `T`pochodnej, można przekonwertować wskaźnik na `T` wskaźnik `T`do prywatnej bezpośredniej klasy podstawowej .
 
 ## <a name="access-to-virtual-functions"></a>Dostęp do funkcji wirtualnych
 
-Kontrola dostępu jest stosowany do [wirtualnego](../cpp/virtual-cpp.md) funkcji jest określana przez typ używany do wywołania funkcji. Przesłanianie deklaracje funkcji nie wpływają na kontroli dostępu dla danego typu. Na przykład:
+Kontrola dostępu stosowana do funkcji [wirtualnych](../cpp/virtual-cpp.md) jest określana przez typ używany do wywołania funkcji. Nadrzędne deklaracje funkcji nie mają wpływu na kontrolę dostępu dla danego typu. Przykład:
 
 ```cpp
 // access_to_virtual_functions.cpp
@@ -225,20 +225,20 @@ int main()
 }
 ```
 
-W poprzednim przykładzie, wywołanie funkcji wirtualnej `GetState` za pomocą wskaźnika do typu `VFuncBase` wywołania `VFuncDerived::GetState`, i `GetState` jest traktowany jako publiczne. Jednak podczas wywoływania `GetState` za pomocą wskaźnika do typu `VFuncDerived` jest naruszenie zasad kontroli dostępu, ponieważ `GetState` jest zadeklarowany jako prywatna w klasie `VFuncDerived`.
+W poprzednim przykładzie wywołanie `GetState` funkcji wirtualnej `VFuncBase` przy `VFuncDerived::GetState`użyciu `GetState` wskaźnika do wpisywania wywołań i jest traktowane jako publiczne. Jednak `GetState` wywołanie przy użyciu `VFuncDerived` wskaźnika do typu `GetState` jest naruszeniem `VFuncDerived`kontroli dostępu, ponieważ jest zadeklarowany jako prywatny w klasie .
 
 > [!CAUTION]
->  Funkcja wirtualna `GetState` można wywoływać za pomocą wskaźnika do klasy bazowej `VFuncBase`. Nie oznacza to, że wywołana funkcja jest klasa bazowa wersję tej funkcji.
+> Funkcję `GetState` wirtualną można wywołać za pomocą `VFuncBase`wskaźnika do klasy podstawowej . Nie oznacza to, że funkcja wywoływana jest wersją klasy podstawowej tej funkcji.
 
-## <a name="access-control-with-multiple-inheritance"></a>Kontrola dostępu za pomocą wielokrotnego dziedziczenia
+## <a name="access-control-with-multiple-inheritance"></a>Kontrola dostępu z wieloma dziedziczeniami
 
-W lattices dziedziczenia wielokrotnego obejmujących wirtualne klasy bazowe Podaj imię można uzyskać dostęp przez więcej niż jedną ścieżkę. Ponieważ może być stosowana kontroli dostępu w różnych wzdłuż tych różnych ścieżek, kompilator wybiera ścieżką, która pozwala na większości dostępu. Zobacz poniższą ilustrację.
+W sieciach dziedziczenia wielokrotnego obejmujących wirtualne klasy podstawowe można uzyskać pod uwagę nazwę za pośrednictwem więcej niż jednej ścieżki. Ponieważ różne kontroli dostępu mogą być stosowane wzdłuż tych różnych ścieżek, kompilator wybiera ścieżkę, która daje najwięcej dostępu. Zobacz poniższą ilustrację.
 
-![Dostęp wzdłuż ścieżek Wykres dziedziczenia](../cpp/media/vc38v91.gif "dostępu wzdłuż ścieżek Wykres dziedziczenia") <br/>
-Dostęp wzdłuż ścieżek Wykres dziedziczenia
+![Dostęp wzdłuż ścieżek wykresu dziedziczenia](../cpp/media/vc38v91.gif "Dostęp wzdłuż ścieżek wykresu dziedziczenia") <br/>
+Dostęp wzdłuż ścieżek wykresu dziedziczenia
 
-Na rysunku, nazwa zadeklarowana w klasie `VBase` zawsze zostanie osiągnięty za pośrednictwem klasy `RightPath`. Właściwym rozwiązaniem jest bardziej dostępny ponieważ `RightPath` deklaruje `VBase` jako publiczne klasy bazowej, natomiast `LeftPath` deklaruje `VBase` jako prywatny.
+Na rysunku nazwa zadeklarowana `VBase` w klasie `RightPath`jest zawsze osiągana za pośrednictwem klasy . Właściwa ścieżka jest `RightPath` bardziej `VBase` dostępna, ponieważ deklaruje jako `LeftPath` publiczną klasę podstawową, podczas gdy deklaruje `VBase` jako prywatny.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja języka C++](../cpp/cpp-language-reference.md)
+[Odwołanie do języka języka C++](../cpp/cpp-language-reference.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DEllipse [MFC], CD2DEllipse
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
-ms.openlocfilehash: 21087682d40dac521cc949a39ef4b1aab23e7d71
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 82ad2fbfb8558486134f85d7ec9bcaa6eb4e7507
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177215"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369259"
 ---
 # <a name="cd2dellipse-class"></a>Klasa CD2DEllipse
 
@@ -31,7 +31,7 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Przeciążone. Konstruuje `D2D1_ELLIPSE` obiekt z obiektu. `CD2DEllipse`|
+|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Przeciążone. Konstruuje `CD2DEllipse` obiekt `D2D1_ELLIPSE` z obiektu.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -41,9 +41,9 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxrendertarget. h
+**Nagłówek:** afxrendertarget.h
 
-##  <a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse
+## <a name="cd2dellipsecd2dellipse"></a><a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse
 
 Konstruuje obiekt CD2DEllipse z obiektu CD2DRectF.
 
@@ -59,18 +59,18 @@ CD2DEllipse(
 
 ### <a name="parameters"></a>Parametry
 
-*cinania*<br/>
+*Rect*<br/>
 prostokąt źródłowy
 
 *ellipse*<br/>
-Elipsa źródłowa
+elipsa źródłona
 
-*ptCenter*<br/>
-Punkt środkowy wielokropka.
+*ptCenter (centrum)*<br/>
+Punkt środkowy elipsy.
 
-*sizeRadius*<br/>
-X-RADIUS i Y-promień wielokropka.
+*rozmiarRadius*<br/>
+Promień X i Promień Y elipsy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DRectU [MFC], CD2DRectU
 - CD2DRectU [MFC], IsNull
 ms.assetid: a62f17d1-011d-4867-8f51-fd7e7c00561d
-ms.openlocfilehash: 4bbf7014fc1b612804289dcb647f85b5e7905aeb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 26e647ae01a498a6ad8ca2d7c866f33b01910881
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244391"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369111"
 ---
 # <a name="cd2drectu-class"></a>Klasa CD2DRectU
 
@@ -33,19 +33,19 @@ class CD2DRectU : public D2D1_RECT_U;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DRectU::CD2DRectU](#cd2drectu)|Przeciążone. Konstruuje `CD2DRectU` obiektu z `D2D1_RECT_U` obiektu.|
+|[CD2Drectu::CD2DRectu](#cd2drectu)|Przeciążone. Konstruuje `CD2DRectU` obiekt `D2D1_RECT_U` z obiektu.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DRectU::IsNull](#isnull)|Zwraca **logiczna** wartość, która wskazuje, czy wyrażenie nie zawiera żadnych prawidłowych danych (NULL).|
+|[CD2Drectu::Isnull](#isnull)|Zwraca wartość **logiczną,** która wskazuje, czy wyrażenie nie zawiera prawidłowych danych (NULL).|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CD2DRectU::operator CRect](#operator_crect)|Konwertuje `CD2DRectU` do `CRect` obiektu.|
+|[CD2DRectU::operator CRect](#operator_crect)|`CD2DRectU` Konwertuje `CRect` na obiekt.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -57,9 +57,9 @@ class CD2DRectU : public D2D1_RECT_U;
 
 **Nagłówek:** afxrendertarget.h
 
-##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU
+## <a name="cd2drectucd2drectu"></a><a name="cd2drectu"></a>CD2Drectu::CD2DRectu
 
-Tworzy obiekt CD2DRectU z CRect obiektu.
+Konstruuje obiekt CD2DRectU z obiektu CRect.
 
 ```
 CD2DRectU(const CRect& rect);
@@ -76,23 +76,23 @@ CD2DRectU(
 ### <a name="parameters"></a>Parametry
 
 *Rect*<br/>
-prostokąta źródłowego
+prostokąt źródłowy
 
-*uLeft*<br/>
-Współrzędna lewej źródła
+*uNaft*<br/>
+źródło lewa współrzędna
 
 *uTop*<br/>
-współrzędne źródła
+współrzędna górna źródła
 
-*uRight*<br/>
-Źródło bezpośrednio współrzędnych
+*u W prawo*<br/>
+współrzędna prawej strony źródła
 
-*uBottom*<br/>
-Współrzędna dolnej źródła
+*uBottom (właśc.*<br/>
+współrzędna dolna źródło
 
-##  <a name="isnull"></a>  CD2DRectU::IsNull
+## <a name="cd2drectuisnull"></a><a name="isnull"></a>CD2Drectu::Isnull
 
-Zwraca wartość logiczną wskazującą, czy wyrażenie nie zawiera żadnych prawidłowych danych (Null).
+Zwraca wartość logiczną, która wskazuje, czy wyrażenie nie zawiera prawidłowych danych (Null).
 
 ```
 BOOL IsNull() const;
@@ -100,11 +100,11 @@ BOOL IsNull() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli góry prostokąta, po lewej stronie, dolnej i odpowiednie wartości są równe 0; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli wartości górne, lewe, dolne i prawe prostokąta są równe wartości 0; w przeciwnym razie FALSE.
 
-##  <a name="operator_crect"></a>  CD2DRectU::operator CRect
+## <a name="cd2drectuoperator-crect"></a><a name="operator_crect"></a>CD2DRectU::operator CRect
 
-Konwertuje CD2DRectU CRect obiektu.
+Konwertuje obiekt CD2DRectU na obiekt CRect.
 
 ```
 operator CRect();
@@ -114,6 +114,6 @@ operator CRect();
 
 Bieżąca wartość prostokąta D2D.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

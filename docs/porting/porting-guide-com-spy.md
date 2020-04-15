@@ -1,41 +1,43 @@
 ---
-title: 'Przewodnik przenoszenia: Narzędzie Spy modelu COM'
+title: 'Przewodnik przenoszenia: narzędzie Spy modelu COM'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: 791b2e88166caae39c3b8e645ca1cc053f0b9379
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: f4fece07b9ea4541d8bf21dd81fd659b44f39718
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451172"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368458"
 ---
-# <a name="porting-guide-com-spy"></a>Przewodnik przenoszenia: Narzędzie Spy modelu COM
+# <a name="porting-guide-com-spy"></a>Przewodnik przenoszenia: narzędzie Spy modelu COM
 
-Ten temat jest drugi w serii artykułów pokazano proces uaktualniania starszej programu Visual Studio C++ projekty do najnowszej wersji programu Visual Studio. Przykładowy kod w tym temacie ostatnio został skompilowany przy użyciu programu Visual Studio 2005.
+Ten temat jest drugim z serii artykułów, który pokazuje proces uaktualniania starszych projektów Visual Studio C++ do najnowszej wersji programu Visual Studio. Przykładowy kod w tym temacie został ostatnio skompilowany z programem Visual Studio 2005.
 
-## <a name="comspy"></a>COMSpy
+## <a name="comspy"></a>COMSpy (włask.)
 
-COMSpy to program, który monitoruje i rejestruje działanie obsługiwanych składników na maszynie. Obsługiwane składniki są składników modelu COM +, które są uruchamiane w systemie i mogą być używane przez komputery w tej samej sieci. Są one zarządzane przez funkcje usługi składowe w Panelu sterowania Windows.
+COMSpy to program, który monitoruje i rejestruje aktywność obsługiwanych składników na komputerze. Obsługiwane składniki to składniki COM+, które działają w systemie i mogą być używane przez komputery w tej samej sieci. Są one zarządzane przez funkcje usług składowych w Panelu sterowania systemu Windows.
 
-### <a name="step-1-converting-the-project-file"></a>Krok 1. Konwertowanie pliku projektu.
-Plik projektu konwertuje łatwo i generuje raport z migracji. Istnieje kilka wpisów w raporcie, który NAS informują o problemach, które być może trzeba będzie dotyczyć. Oto jeden problem, który jest zgłaszany (Zwróć uwagę, że w tym temacie, komunikaty o błędach, czasami są skracane dla czytelności, na przykład aby usunąć pełnych ścieżek):
+### <a name="step-1-converting-the-project-file"></a>Krok 1. Konwertowanie pliku projektu
+
+Plik projektu można łatwo konwertować i tworzy raport migracji. W raporcie znajduje się kilka wpisów, które informują nas o problemach, z którymi być może musimy się uporać. Oto jeden z zgłaszanych problemów (należy pamiętać, że w tym temacie komunikaty o błędach są czasami skracane w celu odczytu, na przykład w celu usunięcia pełnych ścieżek):
 
 ```Output
 ComSpyAudit\ComSpyAudit.vcproj: MSB8012: $(TargetPath) ('C:\Users\UserName\Desktop\spy\spy\ComSpyAudit\.\XP32_DEBUG\ComSpyAudit.dll') does not match the Librarian's OutputFile property value '.\XP32_DEBUG\ComSpyAudit.dll' ('C:\Users\UserName\Desktop\spy\spy\XP32_DEBUG\ComSpyAudit.dll') in project configuration 'Unicode Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).
 ```
 
-Jedną z częstych problemów w Uaktualnianie projektów jest to, że **Plik_wyjściowy konsolidatora** ustawienie w oknie dialogowym właściwości projektu może być konieczne do przeglądu. Dla projektów przed Visual Studio 2010 Plik_wyjściowy jest jedno ustawienie, który Kreator konwersji automatycznej ma problemy z, jeśli jest ustawiona na wartość niestandardową. W tym przypadku ścieżki dla plików wyjściowych zostały ustawione w folderze niestandardowych XP32_DEBUG. Aby dowiedzieć się więcej na temat tego błędu, możemy konsultacji [wpis w blogu](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) związane z uaktualnienia projektu programu Visual Studio 2010, które zostało uaktualnienia z udziałem zmiana program vcbuild msbuild, istotną zmianę. Zgodnie z tych informacji, wartość domyślna **plik wyjściowy** ustawienie podczas tworzenia nowego projektu jest `$(OutDir)$(TargetName)$(TargetExt)`, ale to nie została ustawiona podczas konwersji, ponieważ nie jest możliwe w przypadku projektów przekonwertowany do sprawdzenia, czy wszystko jest poprawna. Jednak Załóżmy spróbuj umieścić w plik_wyjściowy i sprawdzić, czy działa.  Robi, więc możesz teraz przystąpić. Nie ma konkretnego powodu dotyczące korzystania z folderu danych wyjściowych niestandardowych, firma Microsoft zaleca użycie standardowego lokalizacji. W tym przypadku Wybraliśmy pozostaw lokalizację wyjściową jako niestandardowego typu w procesie przenoszenia i uaktualniania; `$(OutDir)` jest rozpoznawana jako folder XP32_DEBUG w **debugowania** konfiguracji i ReleaseU folder **wersji** konfiguracji.
+Jednym z częstych problemów w uaktualnianiu projektów jest to, że ustawienie **Danych wyjściowych konsoli w** oknie dialogowym właściwości projektu może wymagać przejrzenia. W przypadku projektów przed programem Visual Studio 2010 plik output jest jednym z ustawień, z którymi kreator konwersji automatycznej ma problemy, jeśli jest ustawiony na wartość niestandardową. W takim przypadku ścieżki dla plików wyjściowych zostały ustawione na niestandardowy folder, XP32_DEBUG. Aby dowiedzieć się więcej o tym błędzie, skonsultowaliśmy się z [wpisem w blogu](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) związanym z uaktualnieniem projektu programu Visual Studio 2010, które było uaktualnieniem, które obejmowało zmianę z vcbuild na msbuild, istotną zmianę. Zgodnie z tymi informacjami domyślną wartością ustawienia **Plik wyjściowy** podczas tworzenia nowego projektu jest , ale nie jest `$(OutDir)$(TargetName)$(TargetExt)`ustawiona podczas konwersji, ponieważ nie jest możliwe, aby przekonwertowane projekty sprawdzały, czy wszystko jest poprawne. Spróbujmy jednak wprowadzić to dla pliku output i sprawdzić, czy to działa.  Tak, więc możemy iść dalej. Jeśli nie ma żadnego konkretnego powodu używania niestandardowego folderu wyjściowego, zaleca się użycie lokalizacji standardowej. W takim przypadku zdecydowaliśmy się opuścić lokalizację wyjściową jako niestandardową podczas procesu przenoszenia i uaktualniania; `$(OutDir)` jest rozpoznawany w folderze XP32_DEBUG w konfiguracji **debugowania** i w folderze ReleaseU dla konfiguracji **wydania.**
 
-### <a name="step-2-getting-it-to-build"></a>Krok 2. Wprowadzenie do kompilacji
-Liczba błędy i ostrzeżenia kompilowania projektu przenieść, wystąpić.
+### <a name="step-2-getting-it-to-build"></a>Krok 2. Tworzenie go do budowy
 
-`ComSpyCtl` nie kompilacji, jednak ze względu na następujący błąd kompilatora:
+Podczas tworzenia projektu przeniesionego pojawia się szereg błędów i ostrzeżeń.
+
+`ComSpyCtl`nie skompilować jednak z powodu tego błędu kompilatora:
 
 ```Output
 atlcom.h(611): error C2664: 'HRESULT CComSpy::IPersistStreamInit_Save(LPSTREAM,BOOL,ATL::ATL_PROPMAP_ENTRY *)': cannot convert argument 3 from 'const ATL::ATL_PROPMAP_ENTRY *' to 'ATL::ATL_PROPMAP_ENTRY *'atlcom.h(611): note: Conversion loses qualifiersatlcom.h(608): note: while compiling class template member function 'HRESULT ATL::IPersistStreamInitImpl<CComSpy>::Save(LPSTREAM,BOOL)'\spy\spy\comspyctl\ccomspy.h(28): note: see reference to class template instantiation 'ATL::IPersistStreamInitImpl<CComSpy>' being compiled
 ```
 
-Błąd odwołania `Save` metody `IPersistStreamInitImpl` klasy w atlcom.h.
+Błąd odwołuje się `Save` do `IPersistStreamInitImpl` metody w klasie w atlcom.h.
 
 ```cpp
 STDMETHOD(Save)(_Inout_ LPSTREAM pStm, _In_ BOOL fClearDirty)
@@ -46,13 +48,13 @@ STDMETHOD(Save)(_Inout_ LPSTREAM pStm, _In_ BOOL fClearDirty)
 }
 ```
 
-Problem polega na tym, że konwersji, która zaakceptowała starszej wersji kompilatora nie jest już prawidłowy. Aby można było zgodne ze standardem C++, kodu, który wcześniej był dozwolony nie jest już dozwolone. W tym przypadku nie jest bezpieczne przekazywanie wskaźnika niebędącego stałą do funkcji, która oczekuje wskaźnika elementu const.  To rozwiązanie ma na celu znalezienie deklaracji `IPersistStreamInit_Save` na `CComSpy` klasy, a następnie dodaj modyfikator const trzeciego parametru.
+Problem polega na tym, że konwersja, że starsza wersja kompilatora akceptowane nie jest już prawidłowa. Aby zapewnić zgodność ze standardem C++, niektóre kody, które wcześniej były dozwolone, nie są już dozwolone. W takim przypadku nie jest bezpieczne, aby przekazać wskaźnik non-const do funkcji, która oczekuje wskaźnika const.  Rozwiązaniem jest znalezienie deklaracji `IPersistStreamInit_Save` na `CComSpy` klasy i dodać const modyfikator do trzeciego parametru.
 
 ```cpp
 HRESULT CComSpy::IPersistStreamInit_Save(LPSTREAM pStm, BOOL /* fClearDirty */, const ATL_PROPMAP_ENTRY* pMap)
 ```
 
-I podobne zmiany `IPersistStreamInit_Load`.
+I podobna `IPersistStreamInit_Load`zmiana do .
 
 ```cpp
 HRESULT IPersistStreamInit_Load(LPSTREAM pStm, const ATL_PROPMAP_ENTRY* pMap);
@@ -64,18 +66,19 @@ Następny błąd dotyczy rejestracji.
 error MSB3073: The command "regsvr32 /s /c "C:\Users\username\Desktop\spy\spy\ComSpyCtl\.\XP32_DEBUG\ComSpyCtl.lib"error MSB3073: echo regsvr32 exec. time > ".\XP32_DEBUG\regsvr32.trg"error MSB3073:error MSB3073: :VCEnd" exited with code 3.
 ```
 
-Nie potrzebujemy już to polecenie rejestracji po kompilacji. Zamiast tego, możemy po prostu usunąć niestandardowe polecenia kompilacji i określić w **konsolidatora** ustawienia, aby zarejestrować dane wyjściowe.
+Nie potrzebujemy już tego polecenia rejestracji po kompilacji. Zamiast tego po prostu usunąć polecenie kompilacji niestandardowej i określić w ustawieniach **konsolidatora,** aby zarejestrować dane wyjściowe.
 
-### <a name="dealing-with-warnings"></a>Radzenia sobie z ostrzeżeniami
-Projekt zapewnia konsolidator następujące ostrzeżenie.
+### <a name="dealing-with-warnings"></a>Radzenie sobie z ostrzeżeniami
+
+Projekt generuje następujące ostrzeżenie konsolidatora.
 
 ```Output
 warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
 ```
 
-`/SAFESEH` — Opcja kompilatora nie jest użyteczny w trybie debugowania, która jest, gdy `/EDITANDCONTINUE` jest przydatne, więc poprawki w tym miejscu można wyłączyć `/SAFESEH` dla **debugowania** tylko konfiguracje. Aby to zrobić w oknie dialogowym właściwości, możemy otworzyć okno dialogowe właściwości dla projektu, który generuje ten błąd, a następnie wybrać opcję **konfiguracji** do **debugowania** (faktycznie **debugowania Unicode**), a następnie w polu **zaawansowanego konsolidatora** pozycję Resetuj **obraz ma bezpieczną obsługę wyjątków** właściwości **nie** (`/SAFESEH:NO`).
+Opcja `/SAFESEH` kompilatora nie jest przydatna w `/EDITANDCONTINUE` trybie debugowania, który `/SAFESEH` jest przydatny, więc poprawka w tym miejscu jest, aby wyłączyć tylko dla konfiguracji **debugowania.** Aby to zrobić w oknie dialogowym właściwości, otwieramy okno dialogowe właściwości dla projektu, który generuje ten błąd, a najpierw ustawiamy **konfigurację** na **Debug** (faktycznie **Debug Unicode),** a następnie w sekcji **Zaawansowane konsolidator** resetuj właściwość **Image Has Safe Exception Handlers** na **Nie** (`/SAFESEH:NO`).
 
-Kompilator ostrzega NAS, `PROP_ENTRY_EX` jest przestarzała. Nie jest bezpieczny i jest zalecana zastępuje `PROP_ENTRY_TYPE_EX`.
+Kompilator ostrzega `PROP_ENTRY_EX` nas, że jest przestarzałe. To nie jest bezpieczne, a `PROP_ENTRY_TYPE_EX`zalecanym substytutem jest .
 
 ```cpp
 BEGIN_PROPERTY_MAP(CComSpy)
@@ -87,7 +90,7 @@ BEGIN_PROPERTY_MAP(CComSpy)
 END_PROPERTY_MAP()
 ```
 
-Możemy zmienić kod w ccomspy.h w związku z tym dodanie typów modelu COM, zgodnie z potrzebami.
+Odpowiednio zmieniamy kod w ccomspy.h, dodając odpowiednie typy COM.
 
 ```cpp
 BEGIN_PROPERTY_MAP(CComSpy)
@@ -99,7 +102,7 @@ BEGIN_PROPERTY_MAP(CComSpy)
 END_PROPERTY_MAP()
 ```
 
-Pojawiają się w dół do ostatniego kilka ostrzeżeń, które również są spowodowane przez bardziej rygorystyczne kontrole zgodności kompilatora:
+Zbliżamy się do kilku ostatnich ostrzeżeń, które są również spowodowane bardziej rygorystycznymi kontrolami zgodności kompilatora:
 
 ```Output
 \spy\comspyctl\usersub.h(70): warning C4457: declaration of 'var' hides function parameter\spy\comspyctl\usersub.h(48): note: see declaration of 'var'\spy\comspyctl\usersub.h(94): warning C4018: '<': signed/unsigned mismatch  ComSpy.cpp\spy\comspyctl\comspy.cpp(186): warning C4457: declaration of 'bHandled' hides function parameter\spy\spy\comspyctl\comspy.cpp(177): note: see declaration of 'bHandled'
@@ -112,17 +115,18 @@ for (i=0;i<lCount;i++)
     CoTaskMemFree(pKeys[i]);
 ```
 
-Problem jest to, że `i` jest zadeklarowany jako `UINT` i `lCount` jest zadeklarowany jako **długie**, dlatego niezgodność ze znakiem/bez znaku. Jest wygodne, aby zmienić typ `lCount` do `UINT`, ponieważ pobiera ona swoją wartość od `IMtsEventInfo::get_Count`, typ, który używa **długie**i nie jest w kodzie użytkownika. Dlatego dodamy rzutowanie w kodzie. Rzutowania w stylu języka C jak w przypadku wartości liczbowych rzutowania, takich jak ta, ale **static_cast** jest zalecane stylu.
+Problem polega `i` na tym, że jest zadeklarowany jako `UINT` i `lCount` jest zadeklarowany tak **długo,** stąd podpisane/niepodpisane niezgodność. Byłoby niewygodne, aby zmienić typ `lCount` na `UINT`, ponieważ pobiera `IMtsEventInfo::get_Count`jego wartość z , który używa typu **długo**i nie jest w kodzie użytkownika. Więc dodajemy oddanych do kodu. Rzutowania w stylu C zrobi dla oddanych numerycznych, takich jak ten, ale **static_cast** jest zalecany styl.
 
 ```cpp
 for (i=0;i<static_cast<UINT>(lCount);i++)
     CoTaskMemFree(pKeys[i]);
 ```
 
-Tych ostrzeżeń są przypadki, w którym zmienna została zadeklarowana w funkcji, która ma parametr o tej samej nazwie, co prowadzi do potencjalnie mylące kodu. Naprawiliśmy, zmieniając nazwy zmiennych lokalnych.
+Te ostrzeżenia są przypadki, gdy zmienna została zadeklarowana w funkcji, która ma parametr o tej samej nazwie, co prowadzi do potencjalnie mylące kodu. Naprawiliśmy to, zmieniając nazwy zmiennych lokalnych.
 
 ### <a name="step-3-testing-and-debugging"></a>Krok 3. Testowanie i debugowanie
-Firma Microsoft przetestowano aplikację najpierw z za pośrednictwem różnych menu i poleceń, a następnie zamknięcie aplikacji. Problem tylko zauważyć był asercji debugowania, od zamknięcia aplikacji. Problem pojawił się w destruktorze dla `CWindowImpl`, jako klasa bazowa `CSpyCon` obiektu, składnika COM z głównego aplikacji. Wystąpił błąd asercji w poniższym kodzie w atlwin.h.
+
+Przetestowaliśmy aplikację najpierw uruchamiając różne menu i polecenia, a następnie zamykając aplikację. Jedynym odnotowanym problemem było potwierdzenie debugowania po zamknięciu aplikacji. Problem pojawił się w destruktorze dla `CWindowImpl` `CSpyCon` , klasy podstawowej obiektu, głównego składnika COM aplikacji. Wystąpił błąd potwierdzenia w poniższym kodzie w pliku atlwin.h.
 
 ```cpp
 virtual ~CWindowImplRoot()
@@ -137,11 +141,11 @@ virtual ~CWindowImplRoot()
 }
 ```
 
-`hWnd` Zwykle jest równa zero `WindowProc` funkcji, ale nie zostało to, że zamiast domyślnego `WindowProc`, niestandardowy program obsługi zostanie wywołana dla komunikatów Windows (WM_SYSCOMMAND), która umożliwia zamknięcie okna. Niestandardowe procedury obsługi zostało to ustawienie nie zostanie `hWnd` do zera. Przyjrzeć się podobny kod w MFC `CWnd` klasy, pokazuje, że kiedy niszczony jest oknem, `OnNcDestroy` jest wywołana i w MFC, dokumentacja informacją o tym, że podczas zastępowania `CWnd::OnNcDestroy`, base `NcDestroy` powinna być wywoływana, aby upewnić się, że po prawej stronie Oczyszczanie operacje są wykonywane, oddzielając uchwyt okna z poziomu okna, w tym lub innymi słowy, ustawianie `hWnd` do zera. Ta asercja mógł zostać wyzwolony w oryginalną wersję przykładu, ponieważ ten sam kod potwierdzenia znajdował się w starej wersji atlwin.h.
+Jest `hWnd` zwykle ustawiona na `WindowProc` zero w funkcji, ale tak się nie `WindowProc`stało, ponieważ zamiast domyślnego , niestandardowy program obsługi jest wywoływana dla wiadomości systemu Windows (WM_SYSCOMMAND), który zamyka okno. Program obsługi niestandardowej `hWnd` nie ustawiał wartości zero. Spojrzenie na podobny kod w `CWnd` klasie MFC, pokazuje, że gdy `OnNcDestroy` okno jest niszczone, jest wywoływana, a `CWnd::OnNcDestroy`w `NcDestroy` MFC, dokumentacja informuje, że podczas zastępowania , podstawy powinny być wywoływane, aby upewnić się, że występują operacje oczyszczania prawo, w tym oddzielenie dojścia okna z okna lub innymi słowy, ustawienie `hWnd` do zera. To stwierdzenie może być wyzwalane w oryginalnej wersji próbki, jak również, ponieważ ten sam kod potwierdzenia był obecny w starej wersji atlwin.h.
 
-Aby przetestować działanie aplikacji, utworzyliśmy **obsługiwanych składników** przy użyciu szablonu projektu biblioteki ATL, wybrać dodanie obsługi modelu COM + w Kreatorze projektu ATL. Jeśli jeszcze nie znasz obsługiwanych składników przed, nie jest trudne ją utworzyć i Uzyskaj ją zarejestrowane i są dostępne w systemie lub sieci dla innych aplikacji do użycia. Aplikacja narzędzie Spy modelu COM jest przeznaczona do monitorowania aktywności obsługiwanych składników jako diagnostycznej.
+Aby przetestować funkcjonalność aplikacji, utworzyliśmy **serviced component** przy użyciu szablonu projektu ATL, zdecydowaliśmy się dodać obsługę COM+ w kreatorze projektu ATL. Jeśli wcześniej nie pracowałeś z obsługiwanymi składnikami, nie jest trudno je utworzyć i uzyskać jeden zarejestrowany i dostępny w systemie lub sieci, aby inne aplikacje można było używać. Aplikacja COM Spy jest przeznaczona do monitorowania aktywności obsługiwanych komponentów jako pomocy diagnostycznej.
 
-Następnie możemy dodać klasę, wybrany obiekt ATL i określona nazwa obiektu jako `Dog`. Następnie w dog.h i dog.cpp dodaliśmy wdrożenia.
+Następnie dodaliśmy klasę, wybraliśmy obiekt ATL i `Dog`określiliśmy nazwę obiektu jako . Następnie w dog.h i dog.cpp dodaliśmy implementację.
 
 ```cpp
 STDMETHODIMP CDog::Wag(LONG* lDuration)
@@ -152,7 +156,7 @@ STDMETHODIMP CDog::Wag(LONG* lDuration)
 }
 ```
 
-Następnie mamy skompilowane i rejestracji (należy uruchomić program Visual Studio jako Administrator) i aktywować go za pomocą **obsługiwanych składników** aplikacji w Panelu sterowania Windows. Firma Microsoft utworzony projekt C# Windows Forms, przeciągnięte przycisku z przybornika do formularza i który kliknął do obsługi zdarzeń kliknięcia. Dodano następujący kod, aby utworzyć wystąpienie `Dog` składnika.
+Następnie stworzyliśmy go i zarejestrowaliśmy (musisz uruchomić program Visual Studio jako administrator) i aktywowaliśmy go za pomocą aplikacji **Serviced Component** w Panelu sterowania systemu Windows. Utworzyliśmy projekt formularzy windows systemu Windows w języku C#, przeciągnęliśmy przycisk do formularza z przybornika i kliknięliśmy go dwukrotnie, aby program obsługi zdarzeń kliknięć. Dodaliśmy następujący kod do wystąpienia `Dog` składnika.
 
 ```cpp
 private void button1_Click(object sender, EventArgs e)
@@ -162,10 +166,10 @@ private void button1_Click(object sender, EventArgs e)
 }
 ```
 
-To został uruchomiony bez problemów i za pomocą narzędzie Spy modelu COM pracę i skonfigurowany do monitorowania `Dog` składnika dużą ilość danych zostanie wyświetlona działania.
+To działało bez problemów, a z COM Spy `Dog` i działa i skonfigurowany do monitorowania składnika, wiele danych pojawia się pokazano aktywność.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przenoszenie i uaktualnianie: Przykłady i analizy przypadków](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
-[Następny przykład: Spy++](../porting/porting-guide-spy-increment.md)<br/>
-[Poprzedni przykład: MFC Scribble](../porting/porting-guide-mfc-scribble.md)
+[Następny przykład: Szpieg++](../porting/porting-guide-spy-increment.md)<br/>
+[Poprzedni przykład: Bazgroły MFC](../porting/porting-guide-mfc-scribble.md)

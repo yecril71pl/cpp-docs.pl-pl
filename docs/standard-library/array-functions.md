@@ -1,5 +1,5 @@
 ---
-title: '&lt;funkcje&gt; tablicy'
+title: '&lt;funkcje tablicowe&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - array/std::array::get
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d54e430853959c77b4042092409a8640a169e4c8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416915"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364938"
 ---
-# <a name="ltarraygt-functions"></a>&lt;funkcje&gt; tablicy
+# <a name="ltarraygt-functions"></a>&lt;funkcje tablicowe&gt;
 
-Nagłówek \<Array > zawiera dwie funkcje, które nie są elementami członkowskimi, `get` i `swap`, które działają na obiektach **Array** .
+Tablica \<> nagłówek zawiera dwie funkcje `get` niebędące elementami członkowskimi i `swap`, które działają na obiektach **tablicy.**
 
 |||
 |-|-|
-|[get](#get)|[wymiany](#swap)|
+|[get](#get)|[Wymiany](#swap)|
 
-## <a name="get"></a>Pobierz
+## <a name="get"></a><a name="get"></a>Pobierz
 
 Zwraca odwołanie do określonego elementu tablicy.
 
@@ -51,7 +51,7 @@ Typ elementu.
 *N*\
 Liczba elementów w tablicy.
 
-\ *ARR*
+*Arr*\
 Tablica do wyboru.
 
 ### <a name="example"></a>Przykład
@@ -86,9 +86,9 @@ int main()
 1 3
 ```
 
-## <a name="swap"></a>wymiany
+## <a name="swap"></a><a name="swap"></a>Wymiany
 
-Specjalizacja szablonu nieczłonkowskiego `std::swap`, który zamienia dwa obiekty **tablicy** .
+Specjalizacja szablonu `std::swap` niebędącego elementem członkowskim, która zamienia dwa obiekty **tablicy.**
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -97,21 +97,21 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*\
+*Ty (ty)*\
 Typ elementu.
 
 *N*\
 Rozmiar tablicy.
 
-\ *lewo*
-Pierwsza tablica do zamiany.
+*Lewej*\
+Pierwsza tablica do wymiany.
 
-*prawa*\
-Druga tablica do zamiany.
+*Prawo*\
+Druga tablica do wymiany.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja Template wykonuje `left.swap(right)`.
+Funkcja szablonu `left.swap(right)`wykonuje program .
 
 ### <a name="example"></a>Przykład
 
@@ -161,4 +161,4 @@ int main()
 
 ## <a name="see-also"></a>Zobacz też
 
-[\<> tablicy](../standard-library/array.md)
+[\<>tablicowe](../standard-library/array.md)
