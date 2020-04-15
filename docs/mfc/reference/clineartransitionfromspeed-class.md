@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CLinearTransitionFromSpeed [MFC], m_dblFinalValue
 - CLinearTransitionFromSpeed [MFC], m_dblSpeed
 ms.assetid: 8f159a1c-8893-4017-951e-09e5758aba7d
-ms.openlocfilehash: 50c958a092478f4b9ec4e94f9e5e973a74c334c2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 31c04c303e7e253ec4de41bf076130d19232aac0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505709"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372265"
 ---
 # <a name="clineartransitionfromspeed-class"></a>Klasa CLinearTransitionFromSpeed
 
-Hermetyzuje przejście liniowe.
+Hermetyzuje przejście liniowej prędkości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,40 +37,40 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|Konstruuje obiekt przejścia szybkości liniowej i inicjuje go z szybkością i wartością końcową.|
+|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed CLinearTransitionFromSpeed CLinearTransitionFrom](#clineartransitionfromspeed)|Konstruuje obiekt przejścia z prędkością liniową i inicjuje go z szybkością i wartością końcową.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CLinearTransitionFromSpeed:: Create](#create)|Wywołuje bibliotekę przejściową w celu utworzenia hermetyzowanego obiektu COM przejścia. (Przesłania [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CLinearTransitionFromSpeed::Tworzenie](#create)|Wywołuje bibliotekę przejściową w celu utworzenia zhermetyzowanego obiektu COM przejścia. (Zastępuje [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[CLinearTransitionFromSpeed::m_dblFinalValue](#m_dblfinalvalue)|Wartość zmiennej animacji na końcu przejścia.|
-|[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|Wartość bezwzględna szybkości zmiennej.|
+|[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|Wartość bezwzględna prędkości zmiennej.|
 
 ## <a name="remarks"></a>Uwagi
 
-W trakcie przejścia liniowego, wartość zmiennej animacji zmienia się z określoną szybkością. Czas trwania przejścia zależy od różnicy między wartością początkową a określoną wartością końcową. Ponieważ wszystkie przejścia są automatycznie wyczyszczone, zaleca się ich przydzielenie przy użyciu operatora new. Obiekt hermetyzowanych IUIAnimationTransition COM jest tworzony przez CAnimationController:: Animuj, do momentu, aż będzie miał wartość NULL. Zmiana zmiennych Członkowskich po utworzeniu tego obiektu COM nie ma żadnego skutku.
+Podczas przejścia z prędkością liniową wartość zmiennej animacji zmienia się z określoną szybkością. Czas trwania przejścia jest określany przez różnicę między wartością początkową a określoną wartością końcową. Ponieważ wszystkie przejścia są czyszczone automatycznie, zaleca się przydzielenie ich przy użyciu nowego operatora. Zhermetyzowany obiekt COM IUIAnimationTransition jest tworzony przez CAnimationController::AnimateGroup, do tego czasu jest null. Zmiana zmiennych członkowskich po utworzeniu tego obiektu COM nie ma wpływu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[CBaseTransition (Transport baz)](../../mfc/reference/cbasetransition-class.md)
 
-[CLinearTransitionFromSpeed](../../mfc/reference/clineartransitionfromspeed-class.md)
+[CLinearTransitionOdPeed](../../mfc/reference/clineartransitionfromspeed-class.md)
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxanimationcontroller. h
+**Nagłówek:** afxanimationcontroller.h
 
-##  <a name="clineartransitionfromspeed"></a>CLinearTransitionFromSpeed::CLinearTransitionFromSpeed
+## <a name="clineartransitionfromspeedclineartransitionfromspeed"></a><a name="clineartransitionfromspeed"></a>CLinearTransitionFromSpeed::CLinearTransitionFromSpeed CLinearTransitionFromSpeed CLinearTransitionFrom
 
-Konstruuje obiekt przejścia szybkości liniowej i inicjuje go z szybkością i wartością końcową.
+Konstruuje obiekt przejścia z prędkością liniową i inicjuje go z szybkością i wartością końcową.
 
 ```
 CLinearTransitionFromSpeed(
@@ -80,15 +80,15 @@ CLinearTransitionFromSpeed(
 
 ### <a name="parameters"></a>Parametry
 
-*dblSpeed*<br/>
-Wartość bezwzględna szybkości zmiennej.
+*dblSpeed (prędkość)*<br/>
+Wartość bezwzględna prędkości zmiennej.
 
 *dblFinalValue*<br/>
 Wartość zmiennej animacji na końcu przejścia.
 
-##  <a name="create"></a>CLinearTransitionFromSpeed:: Create
+## <a name="clineartransitionfromspeedcreate"></a><a name="create"></a>CLinearTransitionFromSpeed::Tworzenie
 
-Wywołuje bibliotekę przejściową w celu utworzenia hermetyzowanego obiektu COM przejścia.
+Wywołuje bibliotekę przejściową w celu utworzenia zhermetyzowanego obiektu COM przejścia.
 
 ```
 virtual BOOL Create(
@@ -98,14 +98,14 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*pLibrary*<br/>
-Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), który definiuje bibliotekę przejść standardowych.
+*pBrabrary*<br/>
+Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), który definiuje bibliotekę standardowych przejść.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli przejście zostało utworzone pomyślnie; w przeciwnym razie FALSE.
+PRAWDA, jeśli przejście zostanie utworzone pomyślnie; w przeciwnym razie FALSE.
 
-##  <a name="m_dblfinalvalue"></a>CLinearTransitionFromSpeed::m_dblFinalValue
+## <a name="clineartransitionfromspeedm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a>CLinearTransitionFromSpeed::m_dblFinalValue
 
 Wartość zmiennej animacji na końcu przejścia.
 
@@ -113,14 +113,14 @@ Wartość zmiennej animacji na końcu przejścia.
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_dblspeed"></a>CLinearTransitionFromSpeed::m_dblSpeed
+## <a name="clineartransitionfromspeedm_dblspeed"></a><a name="m_dblspeed"></a>CLinearTransitionFromSpeed::m_dblSpeed
 
-Wartość bezwzględna szybkości zmiennej.
+Wartość bezwzględna prędkości zmiennej.
 
 ```
 DOUBLE m_dblSpeed;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

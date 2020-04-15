@@ -4,29 +4,29 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-ms.openlocfilehash: 94177a27a1f99a8c9c37b7fce3f697fd0088b7c6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 45ae414c318376b2c4d787498e9a288a0037af83
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212592"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358093"
 ---
 # <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transakcja: wykonywanie transakcji w zestawie rekordów (ODBC)
 
-W tym temacie wyjaśniono, jak wykonać transakcję w zestawie rekordów.
+W tym temacie wyjaśniono, jak wykonać transakcję w zamówiórie.
 
 > [!NOTE]
->  Obsługiwany jest tylko jeden poziom transakcji; nie można zagnieżdżać transakcji.
+> Obsługiwany jest tylko jeden poziom transakcji; nie można zagnieżdżać transakcji.
 
-#### <a name="to-perform-a-transaction-in-a-recordset"></a>Aby wykonać transakcję w zestawie rekordów
+#### <a name="to-perform-a-transaction-in-a-recordset"></a>Aby wykonać transakcję w ach recordset
 
-1. Wywołaj `BeginTrans`ą funkcję członkowską obiektu `CDatabase`.
+1. Wywołanie `CDatabase` funkcji `BeginTrans` elementu członkowskiego obiektu.
 
-1. Jeśli nie zaimplementowano pobierania wierszy zbiorczych, wywołaj funkcje składowe `AddNew/Update`, `Edit/Update`i `Delete` z co najmniej jednego obiektu zestawu rekordów w tej samej bazie danych tyle razy, ile jest to konieczne. Aby uzyskać więcej informacji, zobacz [zestaw rekordów: Dodawanie, aktualizowanie i usuwanie rekordów (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Jeśli zaimplementowano pobieranie wierszy zbiorczych, należy napisać własne funkcje, aby zaktualizować źródło danych.
+1. Jeśli pobieranie wiersza zbiorczego nie zostało `AddNew/Update`zaimplementowane, należy wywołać funkcje , `Edit/Update`i `Delete` element członkowski jednego lub więcej obiektów ciekawego z tej samej bazy danych tyle razy, ile potrzeba. Aby uzyskać więcej informacji, zobacz [Tablica rekordów: Dodawanie, aktualizowanie i usuwanie rekordów (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Jeśli zaimplementowano pobieranie wiersza zbiorczego, należy napisać własne funkcje, aby zaktualizować źródło danych.
 
-1. Na koniec wywołaj funkcję członkowską `CommitTrans` obiektu `CDatabase`. Jeśli w jednej z aktualizacji wystąpi błąd lub zdecydujesz się anulować zmiany, wywołaj jego `Rollback` funkcję członkowską.
+1. Na koniec wywołać `CDatabase` funkcję `CommitTrans` elementu członkowskiego obiektu. Jeśli wystąpi błąd w jednej z aktualizacji lub zdecydujesz się `Rollback` anulować zmiany, wywołaj jego funkcję członkową.
 
-W poniższym przykładzie zastosowano dwa zestawy rekordów, aby usunąć rejestrację ucznia z bazy danych rejestracji szkoły, usuwając uczniów ze wszystkich klas, w których student jest zarejestrowany. Ponieważ wywołania `Delete` w obu zestawach rekordów muszą się zakończyć pomyślnie, wymagana jest transakcja. W przykładzie przyjęto założenie, że istnieje `m_dbStudentReg`, zmienna członkowska typu `CDatabase` już połączona ze źródłem danych, a klasy zestawu rekordów `CEnrollmentSet` i `CStudentSet`. Zmienna `strStudentID` zawiera wartość uzyskaną od użytkownika.
+W poniższym przykładzie użyto dwóch rekordów, aby usunąć rejestrację ucznia z szkolnej bazy danych rejestracji, usuwając ucznia ze wszystkich klas, w których uczeń jest zapisany. Ponieważ `Delete` wywołania w obu zestawy rekordów musi zakończyć się pomyślnie, transakcja jest wymagana. W przykładzie przyjęto `m_dbStudentReg`założenie istnienia , `CDatabase` zmiennej członkowskiej typu już połączone `CEnrollmentSet` `CStudentSet`ze źródłem danych i recordset klasy i . Zmienna `strStudentID` zawiera wartość uzyskaną od użytkownika.
 
 ```
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
@@ -79,7 +79,7 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ```
 
 > [!NOTE]
->  Wywołanie `BeginTrans` ponownie bez wywoływania `CommitTrans` lub `Rollback` jest błędem.
+> Wywołanie `BeginTrans` ponownie `CommitTrans` `Rollback` bez wywoływania lub jest błędem.
 
 ## <a name="see-also"></a>Zobacz też
 

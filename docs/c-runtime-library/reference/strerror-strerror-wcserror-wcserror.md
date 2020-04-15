@@ -1,12 +1,16 @@
 ---
 title: strerror, _strerror, _wcserror, __wcserror
-description: Opisuje funkcje biblioteki środowiska uruchomieniowego Microsoft C (CRT) strerror, _strerror, _wcserror i __wcserror.
-ms.date: 01/07/2020
+description: W tym artykule opisano funkcje programu Microsoft C Runtime Library (CRT), _strerror, _wcserror i __wcserror.
+ms.date: 4/2/2020
 api_name:
 - strerror
 - _strerror
 - _wcserror
 - __wcserror
+- _o___wcserror
+- _o__strerror
+- _o__wcserror
+- _o_strerror
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +23,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -47,16 +52,16 @@ helpviewer_keywords:
 - __wcserror function
 - error messages, getting
 ms.assetid: 27b72255-f627-43c0-8836-bcda8b003e14
-ms.openlocfilehash: 8c9c6850d6620407897b2a3a1dbf32e61f6719c0
-ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
+ms.openlocfilehash: 9eecb7376cf476f0128dc20c8884746a3b4d47d9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755050"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337328"
 ---
 # <a name="strerror-_strerror-_wcserror-__wcserror"></a>strerror, _strerror, _wcserror, __wcserror
 
-Pobiera ciąg komunikatu o błędzie systemu (**strerror**, **_wcserror**) lub formatuje ciąg komunikatu o błędzie dostarczony przez użytkownika ( **_strerror**, **__wcserror**). Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [strerror_s, _strerror_s, _wcserror_s \__wcserror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md).
+Pobiera ciąg komunikatu o błędzie systemu **(strerror**, **_wcserror**) lub formatuje podany przez użytkownika ciąg komunikatu o błędzie (**_strerror**, **__wcserror**). Dostępne są bezpieczniejsze wersje tych funkcji; [zobacz strerror_s, _strerror_s, \__wcserror_s, _wcserror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,38 +81,40 @@ wchar_t * __wcserror(
 
 ### <a name="parameters"></a>Parametry
 
-*errnum*\
+*errnum ( errnum )*\
 Numer błędu.
 
 *strErrMsg*\
-Wiadomość dostarczona przez użytkownika.
+Komunikat dostarczony przez użytkownika.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wszystkie te funkcje zwracają wskaźnik do ciągu komunikatu o błędzie w buforze magazynu lokalnego wątku należącym do środowiska uruchomieniowego. Późniejsze wywołania w tym samym wątku mogą zastąpić ten ciąg.
+Wszystkie te funkcje zwracają wskaźnik do ciągu komunikatu o błędzie w buforze magazynu lokalnego wątku należącego do środowiska wykonawczego. Później wywołania w tym samym wątku można zastąpić ten ciąg.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **strerror** mapuje *errnum* na ciąg komunikatu o błędzie i zwraca wskaźnik do ciągu. Funkcje **strerror** i **_strerror** nie drukują wiadomości. Aby drukować, wywołaj funkcję wyjściową, taką jak [fprintf —](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+Funkcja **strerror** mapuje *errnum* do ciągu komunikatu o błędzie i zwraca wskaźnik do ciągu. Funkcje **strerror** i **_strerror** nie drukują wiadomości. Aby wydrukować, należy wywołać funkcję wyjścia, taką jak [fprintf:](fprintf-fprintf-l-fwprintf-fwprintf-l.md)
 
 ```C
 if (( _access( "datafile", 2 )) == -1 )
    fprintf( stderr, _strerror(NULL) );
 ```
 
-Jeśli *strErrMsg* jest przenoszona jako **null**, **_strerror** zwraca wskaźnik do ciągu. Zawiera komunikat o błędzie systemu dla ostatniego wywołania biblioteki, które spowodowało wystąpienie błędu. Ciąg komunikatu o błędzie jest zakończony znakiem nowego wiersza ("\n"). Gdy *strErrMsg* nie ma **wartości null**, ciąg zawiera, w kolejności: ciąg *strErrMsg* , dwukropek, spacja, komunikat o błędzie systemowy i znak nowego wiersza. Komunikat ciągu może mieć długość maksymalnie 94 znaków, w wąskich ( **_strerror**) lub szerokich ( **__wcserror**) znakach.
+Jeśli *strErrMsg* jest przekazywana jako **NULL**, **_strerror** zwraca wskaźnik do ciągu. Zawiera komunikat o błędzie systemu dla ostatniego wywołania biblioteki, który spowodował błąd. Ciąg komunikatu o błędzie jest kończony przez znak nowego typu ('\n'). Gdy *strErrMsg* nie jest **null**, ciąg zawiera, w kolejności: *strErrMsg* ciąg, dwukropek, spacja, komunikat o błędzie systemu i znak nowego rzędu. Wiadomość ciągu może mieć co najwyżej 94 znaki, w postaci wąskiej **(_strerror)** lub szerokiej (**__wcserror).**
 
-Rzeczywisty numer błędu dla **_strerror** jest przechowywany w zmiennej [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Aby wygenerować dokładne wyniki, wywołaj **_strerror** natychmiast po procedurze biblioteki zwraca błąd. W przeciwnym razie późniejsze wywołania procedur biblioteki mogą zastąpić wartość **errno** .
+Rzeczywisty numer błędu dla **_strerror** jest przechowywany w zmiennej [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Aby uzyskać dokładne wyniki, wywołaj **_strerror** natychmiast po rutynowych biblioteki zwraca błąd. W przeciwnym razie późniejsze wywołania procedur biblioteki może zastąpić wartość **errno.**
 
-**_wcserror** i **__wcserror** są odpowiednio wersjami **strerror** i **_strerror**.
+**_wcserror** i **__wcserror** są szerokoznakowymi wersjami **strerror** i **_strerror,** odpowiednio.
 
-**_strerror**, **_wcserror**i **__Wcserror** są charakterystyczne dla firmy Microsoft, a nie częścią standardowej biblioteki C. Nie zalecamy korzystania z nich w przypadku, gdy potrzebny jest kod przenośny. W przypadku standardowej zgodności C zamiast tego należy użyć **strerror** .
+**_strerror** **, _wcserror**i **__wcserror** są specyficzne dla firmy Microsoft, a nie są częścią biblioteki Standard C. Nie zalecamy używania ich tam, gdzie chcesz przenośny kod. W przypadku zgodności ze standardem C należy użyć **strerror.**
 
-Aby uzyskać ciągi błędów, zalecamy **strerror** lub **_wcserror** zamiast przestarzałych makr [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) i [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) oraz przestarzałych funkcji wewnętrznych **__sys_errlist** i **__sys_nerr**.
+Aby uzyskać ciągi błędów, zaleca się **strerror** lub **_wcserror** zamiast przestarzałych makr [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) i [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) oraz przestarzałe funkcje wewnętrzne **__sys_errlist** i **__sys_nerr**.
 
-### <a name="generic-text-routine-mappings"></a>Mapowania procedury tekstu ogólnego
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
-|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+### <a name="generic-text-routine-mappings"></a>Mapowania rutynowych tekstu ogólnego
+
+|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcserror**|**strerror**|**strerror**|**_wcserror**|
 
@@ -117,17 +124,17 @@ Aby uzyskać ciągi błędów, zalecamy **strerror** lub **_wcserror** zamiast p
 |-------------|---------------------|
 |**strerror**|\<string.h>|
 |**_strerror**|\<string.h>|
-|**_wcserror**, **__wcserror**|\<string.h>|
+|**_wcserror** **, __wcserror**|\<string.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład dla [pError](perror-wperror.md).
+Zobacz przykład [perror](perror-wperror.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-\ [manipulowania ciągami](../../c-runtime-library/string-manipulation-crt.md)
-[clearerr](clearerr.md)\
-\ [odwołującego](ferror.md)
+[Manipulacja ciągami](../../c-runtime-library/string-manipulation-crt.md)\
+[jaśniejsze](clearerr.md)\
+[ferror](ferror.md)\
 [perror, _wperror](perror-wperror.md)

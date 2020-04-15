@@ -4,55 +4,55 @@ ms.date: 09/12/2018
 helpviewer_keywords:
 - ActiveX control containers [MFC], application support
 ms.assetid: 5ff0bf37-07f4-49aa-ad9c-c63d3756243a
-ms.openlocfilehash: 23cd9e41ee704327728322f869e67d1a2d0c6cd9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57b359d4d78c71ef2b0c8ceefad20c6521307a1b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302198"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81353564"
 ---
 # <a name="containers-for-activex-controls"></a>Kontenery dla formantów ActiveX
 
-Można użyć kontrolek ActiveX opracowane w programie Visual C++ w innych aplikacjach, tak długo, jak obsługują zawierania kontrolek ActiveX. Liczba aplikacji firmy Microsoft, począwszy od wersji na liście, obsługuje zawierania kontrolek ActiveX.
+Formantów ActiveX opracowanych w języku Visual C++ w innych aplikacjach, o ile obsługują one hermetyzacja formantu ActiveX. Wiele aplikacji firmy Microsoft, począwszy od wymienionych wersji, obsługuje hermetyzacja formantu ActiveX.
 
 >[!IMPORTANT]
-> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które zastępują ActiveX zobacz [formantów ActiveX](activex-controls.md).
+> ActiveX to starsza technologia, która nie powinna być używana do nowego rozwoju. Aby uzyskać więcej informacji na temat nowoczesnych technologii, które zastępują ActiveX, zobacz [ActiveX Controls](activex-controls.md).
 
 > [!NOTE]
->  Poniższa lista nie jest pełną listę aplikacji, które obsługuje formanty ActiveX, ale reprezentuje zestaw najczęściej używane do testowania:
+> Poniższa lista nie jest pełną listą aplikacji obsługujących formanty ActiveX, ale reprezentuje zestaw używany najczęściej w testach:
 
-Aplikacje, które obsługują zawierania kontrolek ActiveX obejmują:
+Aplikacje obsługujące hermetyzacja kontroli ActiveX obejmują:
 
-- Program Internet Explorer 3.x lub nowszym
+- Program Internet Explorer 3.x lub większy
 
 - Visual Basic 4.x i więcej
 
 - Visual C++ 4.x i więcej
 
-- Dostęp do 95 lub nowszym
+- Dostęp 95 i więcej
 
-- Programu Excel 97 lub nowszym
+- Excel 97 i większa
 
-- Word 97 lub nowszym
+- Słowo 97 i więcej
 
-- Program Access 97 i większa
+- Dostęp 97 i więcej
 
-- FrontPage 97 lub nowszym
+- Strona FrontPage 97 i większa
 
-- PowerPoint 97 lub nowszym
+- Program PowerPoint 97 i większa
 
-- Visual InterDev 97 lub nowszym
+- Visual InterDev 97 i większe
 
-Poniżej przedstawiono aplikacji firm innych niż Microsoft, które obsługują zawierania kontrolek ActiveX:
+Poniżej przedstawiono aplikacje firmy inne niż Microsoft, które obsługują hermetyzacja formantu ActiveX:
 
 - PowerBuilder
 
 - Delphi
 
-- Konstruktora C++
+- Konstruktor języka C++
 
-- Dodatek dla programu Netscape Navigator NCompass
+- Wtyczka NCompass dla nawigatora Netscape
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)

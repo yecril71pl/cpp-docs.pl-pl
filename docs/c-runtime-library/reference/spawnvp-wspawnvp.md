@@ -1,9 +1,11 @@
 ---
 title: _spawnvp, _wspawnvp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wspawnvp
 - _spawnvp
+- _o__spawnvp
+- _o__wspawnvp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,19 +36,19 @@ helpviewer_keywords:
 - process creation
 - _spawnvp function
 ms.assetid: 8d8774ec-6ad4-4680-a5aa-440cde1e0249
-ms.openlocfilehash: 8c54de21c2bfac693b3555c86eea98a32f132576
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ee6d6155c06bb174a6ffd1e29cda0d73cbd2da32
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958079"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355756"
 ---
 # <a name="_spawnvp-_wspawnvp"></a>_spawnvp, _wspawnvp
 
 Tworzy proces i wykonuje go.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,55 +67,57 @@ intptr_t _wspawnvp(
 
 ### <a name="parameters"></a>Parametry
 
-*wyst*<br/>
-Tryb wykonywania na potrzeby wywoływania procesu.
+*Tryb*<br/>
+Tryb wykonywania do wywoływania procesu.
 
-*cmdname*<br/>
+*nazwa cmd*<br/>
 Ścieżka pliku, który ma zostać wykonany.
 
-*argv*<br/>
-Tablica wskaźników do argumentów. Argument *argv*[0] jest zwykle wskaźnikiem do ścieżki w trybie rzeczywistym lub do nazwy programu w trybie chronionym, a *argv*[1] do *argv*[**n**] są wskaźnikami do ciągów znaków, które tworzą nową listę argumentów. Argument *argv*[**n** + 1] musi być **pustym** wskaźnikiem, aby zaznaczyć koniec listy argumentów.
+*Argv*<br/>
+Tablica wskaźników do argumentów. Argument *argv*[0] jest zwykle wskaźnikiem do ścieżki w trybie rzeczywistym lub do nazwy programu w trybie chronionym, a *argv*[1] przez *argv*[**n**] są wskaźnikami do ciągów znaków, które tworzą nową listę argumentów. Argument *argv*[**n** +1] musi być wskaźnikiem **NULL,** aby oznaczyć koniec listy argumentów.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość zwracana z synchronicznego **_spawnvp** lub **_wspawnvp** ( **_P_WAIT** określona dla *trybu*) jest stanem wyjścia nowego procesu. Wartość zwracana z asynchronicznej **_spawnvp** lub **_wspawnvp** ( **_P_NOWAIT** lub **_P_NOWAITO** określona dla *trybu*) to dojście do procesu. Stan zakończenia to 0, jeśli proces został przerwany normalnie. Można ustawić stan zakończenia na wartość różną od zera, jeśli proces duplikowany używa w pełni niezerowego argumentu do wywołania procedury **wyjściowej** . Jeśli nowy proces nie ustawił jawnie stanu wyjścia pozytywnego, stan wyjścia pozytywnego wskazuje nietypowe wyjście z przerwaniem lub przerwaniem. Zwracana wartość-1 wskazuje błąd (nowy proces nie jest uruchomiony). W tym przypadku **errno** jest ustawiony na jedną z następujących wartości:
+Zwracana wartość z synchroniczowego **_spawnvp** lub **_wspawnvp** (**_P_WAIT** określony dla *trybu)* jest stanem zakończenia nowego procesu. Wartość zwracana z asynchronii **_spawnvp** lub **_wspawnvp** (**_P_NOWAIT** lub **_P_NOWAITO** określony dla *trybu)* jest dojście procesu. Stan zakończenia wynosi 0, jeśli proces został zakończony normalnie. Można ustawić stan zakończenia na wartość niezerową, jeśli zduplikowany proces w szczególności używa argumentu niezerowego do wywołania procedury **zakończenia.** Jeśli nowy proces nie ustawił jawnie dodatniego stanu zakończenia, stan wyjścia dodatniego wskazuje nieprawidłowe wyjście z przerwaniem lub przerwaniem. Zwracana wartość -1 wskazuje błąd (nowy proces nie jest uruchamiany). W takim przypadku **errno** jest ustawiona na jedną z następujących wartości:
 
 |||
 |-|-|
-| **E2BIG** | Lista argumentów przekracza 1024 bajtów. |
-| **EINVAL** | argument *trybu* jest nieprawidłowy. |
-| **ENOENT** | Nie znaleziono pliku lub ścieżki. |
-| **ENOEXEC** | Określony plik nie jest wykonywalny lub ma nieprawidłowy format pliku wykonywalnego. |
-| **ENOMEM** | Za mało dostępnej pamięci, aby wykonać nowy proces. |
+| **E2BIG ( E2BIG )** | Lista argumentów przekracza 1024 bajtów. |
+| **Einval** | argument *mode* jest nieprawidłowy. |
+| **Enoent** | Nie znaleziono pliku lub ścieżki. |
+| **ENOEXEC ( ENOEXEC )** | Określony plik nie jest wykonywalny lub ma nieprawidłowy format pliku wykonywalnego. |
+| **ENOMEM ( ENOMEM )** | Za mało pamięci jest dostępna do wykonania nowego procesu. |
 
-Aby uzyskać więcej informacji na temat tych i innych kodów powrotu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodów zwrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji tworzy nowy proces i wykonuje go oraz przekazuje tablicę wskaźników do argumentów wiersza polecenia i używa zmiennej środowiskowej **Path** , aby znaleźć plik do wykonania.
+Każda z tych funkcji tworzy nowy proces i wykonuje go i przekazuje tablicę wskaźników do argumentów wiersza polecenia i używa zmiennej środowiskowej **PATH,** aby znaleźć plik do wykonania.
 
-Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *cmdname* lub *argv* jest wskaźnikiem typu null lub jeśli *argv* wskazuje na wskaźnik o wartości null lub *argv*[0] jest pustym ciągiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL**i zwracają-1. Nie jest duplikowany żaden nowy proces.
+Te funkcje sprawdzają ich parametry. Jeśli *cmdname* lub *argv* jest wskaźnikiem null lub jeśli *argv* wskazuje na wskaźnik null lub *argv*[0] jest pustym ciągiem, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [programie Sprawdzanie poprawności parametru.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, te funkcje ustawić **errno** na **EINVAL**i zwracać -1. Żaden nowy proces nie jest zrodzony.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_spawnvp**|\<stdio. h > lub \<Process. h >|
-|**_wspawnvp**|\<stdio. h > lub \<WCHAR. h >|
+|**_spawnvp**|\<stdio.h> lub \<process.h>|
+|**_wspawnvp**|\<stdio.h> lub \<wchar.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład w [_spawn, _Wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).
+Zobacz przykład w [_spawn, _wspawn Funkcje](../../c-runtime-library/spawn-wspawn-functions.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Kontrola procesu i środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_spawn, _wspawn, funkcje](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
-[abort](abort.md)<br/>
+[Przerwać](abort.md)<br/>
 [atexit](atexit.md)<br/>
-[_exec, _wexec, funkcje](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, funkcje _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
 [_getmbcp](getmbcp.md)<br/>

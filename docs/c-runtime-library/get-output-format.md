@@ -23,19 +23,19 @@ helpviewer_keywords:
 - get_output_format function
 - _get_output_format function
 ms.assetid: 0ce42f3b-3479-41c4-bcbf-1d21f7ee37e7
-ms.openlocfilehash: 20afa988bc4fdf3bc3a6ff073a48a1cc00ff84c5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 682ab9796942e52ed036193887158ea22b738189
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944366"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349340"
 ---
 # <a name="_get_output_format"></a>_get_output_format
 
-Pobiera bieżącą wartość flagi formatu danych wyjściowych.
+Pobiera bieżącą wartość flagi formatu wyjściowego.
 
 > [!IMPORTANT]
->  Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest on dostępny w CRT.
+> Ta funkcja jest przestarzała. Począwszy od programu Visual Studio 2015, nie jest dostępna w CRT.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,11 +45,11 @@ unsigned int _get_output_format();
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Bieżąca wartość flagi formatu danych wyjściowych.
+Bieżąca wartość flagi formatu wyjściowego.
 
 ## <a name="remarks"></a>Uwagi
 
-Flaga formatu danych wyjściowych kontroluje funkcje sformatowanych operacji we/wy. W obecnym przypadku flaga ma dwie możliwe wartości: 0 i `_TWO_DIGIT_EXPONENT`. Jeśli `_TWO_DIGIT_EXPONENT` jest ustawiona, liczby zmiennoprzecinkowe są drukowane z tylko dwiema cyframi w wykładniku, chyba że trzecia cyfra jest wymagana przez rozmiar wykładnika. Jeśli flaga ma wartość zero, zmiennoprzecinkowe dane wyjściowe wyświetlają trzy cyfry wykładnika, w razie potrzeby w celu uzupełnienia wartości do trzech cyfr.
+Flaga formatu wyjściowego steruje funkcjami sformatowanych operacji we/wy. Obecnie flaga ma dwie możliwe wartości: 0 i `_TWO_DIGIT_EXPONENT`. Jeśli `_TWO_DIGIT_EXPONENT` jest ustawiona, liczby zmiennoprzecinkowe są drukowane tylko z dwiema cyframi w wykładniku, chyba że trzecia cyfra jest wymagana przez rozmiar wykładnika. Jeśli flaga wynosi zero, dane wyjściowe zmiennoprzecinkowe wyświetla trzy cyfry wykładnika, używając zer, jeśli to konieczne, aby przekazać wartość do trzech cyfr.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -57,11 +57,11 @@ Flaga formatu danych wyjściowych kontroluje funkcje sformatowanych operacji we/
 |-------------|---------------------|
 |`_get_output_format`|\<stdio.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz temat [zgodność](../c-runtime-library/compatibility.md) we wprowadzeniu.
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../c-runtime-library/compatibility.md) we wstępie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Składnia specyfikacji formatu: funkcje printf i wprintf](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
+[Składnia specyfikacji formatu: printf i wprintf Functions](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
 [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
 [_set_output_format](../c-runtime-library/set-output-format.md)

@@ -1,8 +1,9 @@
 ---
 title: clearerr_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - clearerr_s
+- _o_clearerr_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-ms.openlocfilehash: 12e76ba5133d99ed2d45d7cf15bada2ad1c5c38b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a8f8978b9d46d8d903f8256424d47c84bec649ec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939150"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350054"
 ---
 # <a name="clearerr_s"></a>clearerr_s
 
-Resetuje wskaźnik błędu dla strumienia. Jest to wersja [clearerr](clearerr.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Resetuje wskaźnik błędu dla strumienia. Jest to wersja [clearerr](clearerr.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcji zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,18 +49,20 @@ errno_t clearerr_s(
 
 ### <a name="parameters"></a>Parametry
 
-*stream*<br/>
-Wskaźnik do struktury **plików**
+*Strumienia*<br/>
+Wskaźnik do struktury **FILE**
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli pomyślne; **EINVAL** , jeśli *strumień* ma **wartość null**.
+Zero, jeśli się powiedzie; **EINVAL,** jeśli *strumień* ma **wartość NULL**.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **clearerr_s** resetuje wskaźnik błędu i wskaźnik końca pliku dla *strumienia*. Wskaźniki błędów nie są automatycznie czyszczone; gdy zostanie ustawiony wskaźnik błędu dla określonego strumienia, operacje w tym strumieniu nadal zwracają wartość błędu do momentu wywołania **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**lub [przewijania do tyłu](rewind.md) .
+Funkcja **clearerr_s** resetuje wskaźnik błędu i wskaźnik końca pliku dla *strumienia*. Wskaźniki błędów nie są automatycznie czyszczone; po ustawieniu wskaźnika błędu dla określonego strumienia operacje na tym strumieniu będą nadal zwracać wartość błędu, dopóki nie zostanie wywołana wartość błędu **clearerr_s ,** **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**lub [przewijanie do tyłu.](rewind.md)
 
-Jeśli *strumień* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca **EINVAL**.
+Jeśli *strumień* ma **wartość NULL**, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [yd.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, ta funkcja ustawia **errno** na **EINVAL** i zwraca **wartość EINVAL**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -66,7 +70,7 @@ Jeśli *strumień* ma **wartość null**, zostanie wywołana procedura obsługi 
 |-------------|---------------------|
 |**clearerr_s**|\<stdio.h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -123,10 +127,10 @@ Write error: Bad file descriptor
 Will input cause an error? n
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa błędów](../../c-runtime-library/error-handling-crt.md)<br/>
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [clearerr](clearerr.md)<br/>
 [_eof](eof.md)<br/>
 [feof](feof.md)<br/>

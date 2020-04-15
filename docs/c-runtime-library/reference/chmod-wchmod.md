@@ -1,9 +1,11 @@
 ---
 title: _chmod, _wchmod
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _chmod
 - _wchmod
+- _o__chmod
+- _o__wchmod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: b224133212f19627a8f975dbbe8c80176e29f112
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: faceb49c921162da042f863abbebbe2ef0a52153
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939207"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350093"
 ---
 # <a name="_chmod-_wchmod"></a>_chmod, _wchmod
 
-Zmienia ustawienia uprawnienia do pliku.
+Zmienia ustawienia uprawnień do plików.
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,7 +55,7 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ### <a name="parameters"></a>Parametry
 
-*Nazwa pliku*<br/>
+*Pod nazwą*<br/>
 Nazwa istniejącego pliku.
 
 *pmode*<br/>
@@ -60,23 +63,25 @@ Ustawienie uprawnień dla pliku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Te funkcje zwracają wartość 0, jeśli ustawienie uprawnienia zostało pomyślnie zmienione. Zwracana wartość-1 oznacza niepowodzenie. Jeśli określony plik nie został znaleziony, **errno** jest ustawiony na **ENOENT**; Jeśli parametr jest nieprawidłowy, **errno** jest ustawiony na **EINVAL**.
+Te funkcje zwracają 0, jeśli ustawienie uprawnień zostanie pomyślnie zmienione. Zwracana wartość -1 oznacza błąd. Jeśli nie można odnaleźć określonego pliku, **errno** jest ustawiony na **ENOENT;** jeśli parametr jest nieprawidłowy, **errno** jest ustawiony na **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_chmod** zmienia ustawienie uprawnień pliku określonego przez *filename*. Ustawienie uprawnienia kontroluje dostęp do odczytu i zapisu do pliku. Wyrażenie Integer *PMODE* zawiera jedną lub obie następujące stałe manifestu zdefiniowane w SYS\Stat.h.
+Funkcja **_chmod** zmienia ustawienie uprawnień pliku określonego przez *nazwę pliku*. Ustawienie uprawnień steruje dostępem do odczytu i zapisu do pliku. *Pmode* wyrażenia liczby całkowitej zawiera jedną lub obie z następujących stałych manifestu, zdefiniowane w SYS\Stat.h.
 
 | *pmode* | Znaczenie |
 |-|-|
-| **\_IREAD\_S** | Dozwolony jest tylko odczyt. |
-| **\_IWRITE\_S** | Dozwolone jest zapisanie. (W efekcie zezwala na odczyt i zapis). |
-| **\_S\_IREAD** &#124; **SIWRITE\_ \_** | Dozwolone odczytywanie i zapisywanie. |
+| **\_S\_IREAD (S IREAD)** | Dozwolone tylko czytanie. |
+| **\_S\_IWRITE** | Pisanie dozwolone. (W efekcie pozwala na czytanie i pisanie). |
+| **\_S\_IREAD** &#124; ** \_S\_IWRITE** | Czytanie i pisanie dozwolone. |
 
-Po otrzymaniu obu stałych są one przyłączone do operatora bitowego or ( **\|** ). Jeśli nie podano uprawnienia do zapisu, plik jest tylko do odczytu. Należy pamiętać, że wszystkie pliki są zawsze do odczytu; nie można udzielić uprawnienia tylko do zapisu. W ten sposób tryby **_S_IWRITE** i **_S_IREAD** \| **_S_IWRITE** są równoważne.
+Po podaniu obu stałych są one połączone z operatorem bitowy lub operatorem (**\|**). Jeśli uprawnienie do zapisu nie jest podane, plik jest tylko do odczytu. Należy pamiętać, że wszystkie pliki są zawsze czytelne; nie można udzielić uprawnień tylko do zapisu. W związku z tym tryby **_S_IWRITE** i **_S_IWRITE** \| **_S_IREAD** są równoważne.
 
-**_wchmod** to dwubajtowa wersja **_chmod**; argumentem *filename* **_wchmod** jest ciąg znaków dwubajtowych. **_wchmod** i **_chmod** zachowują się identycznie w inny sposób.
+**_wchmod** jest szerokoznakową wersją **_chmod**; *argumentnazyt,* który **ma _wchmod** jest ciągiem znaków o szerokim charakterze. **_wchmod** i **_chmod** zachowują się identycznie w przeciwnym razie.
 
-Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *PMODE* nie jest kombinacją jednej z stałych manifestu ani nie zawiera alternatywnego zestawu stałych, funkcja po prostu ignoruje te elementy. Jeśli *Nazwa pliku* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca wartość-1.
+Ta funkcja sprawdza poprawność jego parametrów. Jeśli *pmode* nie jest kombinacją jednej ze stałych manifestu lub zawiera alternatywny zestaw stałych, funkcja po prostu ignoruje te. Jeśli *nazwa pliku* ma wartość **NULL**, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w polu Sprawdzanie [poprawności parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, **errno** jest ustawiona na **Wartość EINVAL** i funkcja zwraca -1.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -88,10 +93,10 @@ Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *PMODE* nie jest kom
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_chmod**|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
-|**_wchmod**|\<IO. h > lub \<WCHAR. h >|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
+|**_chmod**|\<> io.h|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
+|**_wchmod**|\<io.h> lub \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -169,11 +174,11 @@ Access is denied.
 Mode set to read/write
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
-[_stat, _wstat Functions](stat-functions.md)<br/>
+[_stat, funkcje _wstat](stat-functions.md)<br/>

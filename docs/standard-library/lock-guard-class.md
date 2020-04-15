@@ -5,16 +5,16 @@ f1_keywords:
 - mutex/std::lock_guard
 - mutex/std::lock_guard::lock_guard
 ms.assetid: 57121f0d-9c50-481c-b971-54e64df864e0
-ms.openlocfilehash: f59860c3aaa9ef7458fe5e30b85b119dede52c72
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 989c1e368e95fc0009f0c3f1c71af0bdba20609d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453857"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351717"
 ---
-# <a name="lockguard-class"></a>lock_guard — Klasa
+# <a name="lock_guard-class"></a>lock_guard — Klasa
 
-Reprezentuje szablon, który może być skonkretyzowany do utworzenia obiektu, którego destruktor odblokowuje `mutex`.
+Reprezentuje szablon, który można utworzyć w celu utworzenia obiektu, `mutex`którego destruktor odblokowuje plik .
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,30 +25,30 @@ class lock_guard;
 
 ## <a name="remarks"></a>Uwagi
 
-Argument `Mutex` szablonu musi mieć nazwę *typu muteksu*.
+Argument `Mutex` szablonu musi nadać nazwę *typowi obiektu mutex*.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne definicje typów
+### <a name="public-typedefs"></a>Publiczne typedefs
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`lock_guard::mutex_type`|Synonim argumentu `Mutex`szablonu.|
+|`lock_guard::mutex_type`|Synonim argumentu `Mutex`szablonu .|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[lock_guard](#lock_guard)|Konstruuje `lock_guard` obiekt.|
-|[lock_guard:: ~ lock_guard, destruktor](#dtorlock_guard_destructor)|Odblokowuje `mutex` , który został przesłany do konstruktora.|
+|[lock_guard::~lock_guard Destruktor](#dtorlock_guard_destructor)|Odblokowuje `mutex` to, które zostało przekazane do konstruktora.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> mutex
+**Nagłówek:** \<mutex>
 
 **Przestrzeń nazw:** std
 
-## <a name="lock_guard"></a>lock_guard:: lock_guard — Konstruktor
+## <a name="lock_guardlock_guard-constructor"></a><a name="lock_guard"></a>lock_guard::lock_guard konstruktor
 
 Konstruuje `lock_guard` obiekt.
 
@@ -60,18 +60,18 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>Parametry
 
-*MTX*\
-Obiekt *typu mutex* .
+*Mtx*\
+Obiekt *typu mutex.*
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor konstruuje obiekt typu `lock_guard` i blokuje *MTX*. Jeśli *MTX* nie jest cyklicznym obiektem mutex, musi być odblokowany, gdy ten konstruktor jest wywoływany.
+Pierwszy konstruktor konstruuje `lock_guard` obiekt typu i blokuje *Mtx*. Jeśli *Mtx* nie jest cyklicznym mutex, musi być odblokowany, gdy ten konstruktor jest wywoływany.
 
-Drugi Konstruktor nie blokuje *MTX*. *MTX* musi być zablokowany, gdy ten konstruktor jest wywoływany. Konstruktor nie zgłasza wyjątków.
+Drugi konstruktor nie blokuje *Mtx*. *Mtx* musi być zablokowany, gdy ten konstruktor jest wywoływany. Konstruktor zgłasza żadnych wyjątków.
 
-## <a name="dtorlock_guard_destructor"></a>lock_guard:: ~ lock_guard, destruktor
+## <a name="lock_guardlock_guard-destructor"></a><a name="dtorlock_guard_destructor"></a>lock_guard::~lock_guard Destruktor
 
-Odblokowuje `mutex` , który został przesłany do konstruktora.
+Odblokowuje `mutex` to, które zostało przekazane do konstruktora.
 
 ```cpp
 ~lock_guard() noexcept;
@@ -79,9 +79,9 @@ Odblokowuje `mutex` , który został przesłany do konstruktora.
 
 ### <a name="remarks"></a>Uwagi
 
-`mutex` Jeśli nie istnieje w trakcie działania destruktora, zachowanie jest niezdefiniowane.
+Jeśli `mutex` nie istnieje, gdy destruktor działa, zachowanie jest niezdefiniowane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[\<mutex>](../standard-library/mutex.md)
+[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[\<>mutex](../standard-library/mutex.md)

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
-ms.openlocfilehash: d70425f414b998eb67e3937c2c126dd3eda0c00d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41e06cc50f36a077a34d992c416a543e5bf9b593
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398384"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371476"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits — Struktura
 
-Definiuje typowe cechy niezainicjowany uchwyt.
+Definiuje wspólne cechy niezainicjowanego uchwytu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,18 +30,18 @@ struct HANDLENullTraits;
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne definicje typów
+### <a name="public-typedefs"></a>Publiczne typedefs
 
 Nazwa   | Opis
 ------ | ---------------------
-`Type` | Synonim dla dojście.
+`Type` | Synonim handle.
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Nazwa                                                  | Opis
 ----------------------------------------------------- | -----------------------------
-[HANDLENullTraits::Close](#close)                     | Zamyka określone dojście.
-[HANDLENullTraits::GetInvalidValue](#getinvalidvalue) | Reprezentuje nieprawidłowego dojścia.
+[HANDLENullTraits::Zamknij](#close)                     | Zamyka określony uchwyt.
+[HANDLENullTraits::GetInvalidValue](#getinvalidvalue) | Reprezentuje nieprawidłowy dojście.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -51,11 +51,11 @@ Nazwa                                                  | Opis
 
 **Nagłówek:** corewrappers.h
 
-**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+**Obszar nazw:** Microsoft::WRL::Otoki::HandleTraits
 
-## <a name="close"></a>HANDLENullTraits::Close
+## <a name="handlenulltraitsclose"></a><a name="close"></a>HANDLENullTraits::Zamknij
 
-Zamyka określone dojście.
+Zamyka określony uchwyt.
 
 ```cpp
 inline static bool Close(
@@ -65,16 +65,16 @@ inline static bool Close(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
-Dojście do zamknięcia.
+*H*<br/>
+Uchwyt do zamknięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obsługi *h* zamknięta pomyślnie; w przeciwnym razie **false**.
+**true,** jeśli uchwyt *h* zamknięty pomyślnie; w przeciwnym razie **false**.
 
-## <a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
+## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
 
-Reprezentuje nieprawidłowego dojścia.
+Reprezentuje nieprawidłowy dojście.
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -82,4 +82,4 @@ inline static Type GetInvalidValue();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zawsze zwraca `nullptr`.
+Zawsze zwraca wartość `nullptr`.

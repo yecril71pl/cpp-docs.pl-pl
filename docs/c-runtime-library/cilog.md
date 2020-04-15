@@ -1,8 +1,9 @@
 ---
 title: _CIlog
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIlog
+- _o__CIlog
 api_location:
 - msvcr90.dll
 - msvcr120.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr100.dll
 - msvcrt.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - _CIlog intrinsic
 - CIlog intrinsic
 ms.assetid: 23503854-ddaa-4fe0-a4a3-7fbb3a43bdec
-ms.openlocfilehash: edc096680522da50910eb42a95a481b83be8791d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 629a1aa5e6406be896ccac079d61bd39b2fbd7a5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944807"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349579"
 ---
 # <a name="_cilog"></a>_CIlog
 
-Oblicza logarytm naturalny górnej wartości w stosie.
+Oblicza logarytm naturalny najwyższej wartości w stosie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,15 +44,17 @@ void __cdecl _CIlog();
 
 ## <a name="remarks"></a>Uwagi
 
-Ta wersja `log` funkcji ma wyspecjalizowaną konwencję wywoływania, którą rozpoznaje kompilator. Przyspiesza to wykonywanie, ponieważ uniemożliwia generowanie kopii i pomaga w zarejestrowaniu alokacji.
+Ta wersja `log` funkcji ma wyspecjalizowaną konwencję wywoływania, którą kompilator rozumie. Przyspiesza wykonanie, ponieważ zapobiega generowaniu kopii i pomaga w alokacji rejestru.
 
-Wartość wyników jest wypychana na górze stosu.
+Wynikowa wartość jest wypychany na górze stosu.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 **Platforma:** x86
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [log, logf, log10, log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)

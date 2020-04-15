@@ -1,8 +1,9 @@
 ---
 title: _setmode
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _setmode
+- _o__setmode
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 7f14cc9451b93a9077916b8c650645990ba654a3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 36d2130d4039f1f87f7f54fc26ad02cb8d519b4a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948594"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81353833"
 ---
 # <a name="_setmode"></a>_setmode
 
@@ -51,41 +53,43 @@ int _setmode (
 
 ### <a name="parameters"></a>Parametry
 
-*proces*<br/>
+*Fd*<br/>
 Deskryptor pliku.
 
-*wyst*<br/>
+*Tryb*<br/>
 Nowy tryb tłumaczenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, zwraca poprzedni tryb tłumaczenia.
+Jeśli się powiedzie, zwraca poprzedni tryb tłumaczenia.
 
-Jeśli do tej funkcji są przesyłane nieprawidłowe parametry, procedura obsługi nieprawidłowego parametru jest wywoływana, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EBADF**, która wskazuje nieprawidłowy deskryptor pliku lub **EINVAL**, który wskazuje nieprawidłowy argument *trybu* .
+Jeśli nieprawidłowe parametry są przekazywane do tej funkcji, wywoływany jest program obsługi nieprawidłowego parametru, zgodnie z opisem w [obszarze Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, ta funkcja zwraca wartość -1 i ustawia **errno** na **EBADF**, który wskazuje nieprawidłowy deskryptor pliku lub **EINVAL**, który wskazuje nieprawidłowy argument *trybu.*
 
-Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodów zwrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_setmode** ustawia tryb translacji pliku *, który jest* określony przez *FD*. Przekazanie trybu **_O_TEXT** jako *tryb* tekstu (który jest tłumaczony). Kombinacje powrotu karetki liniowej (CR-LF) są tłumaczone na pojedynczy znak wysuwu wiersza na wejściu. Znaki wysuwu wiersza są tłumaczone na kombinacje CR-LF w danych wyjściowych. Przekazywanie zestawów **_O_BINARY** ustawia binarny (nieprzetłumaczony) tryb, w którym te tłumaczenia są pomijane.
+Funkcja **_setmode** ustawia *tryb* tłumaczenia pliku podanego przez *fd*. Przekazywanie **_O_TEXT** jako *tryb* ustawia tekst (czyli przetłumaczony) tryb. Kombinacje kanału informacyjnego wiersza powrotu karetki (CR-LF) są tłumaczone na pojedynczy znak posuwu wiersza na danych wejściowych. Znaki wysuwu wiersza są tłumaczone na kombinacje CR-LF na wyjściu. Przekazywanie **_O_BINARY** ustawia tryb binarny (nieprzetłumaczony), w którym te tłumaczenia są pomijane.
 
-Możesz również przekazać **_O_U16TEXT**, **_O_U8TEXT**lub **_O_WTEXT** , aby włączyć tryb Unicode, jak pokazano w drugim przykładzie w dalszej części tego dokumentu.
-
-> [!CAUTION]
-> Tryb Unicode jest przeznaczony dla szerokiej funkcji drukowania (na `wprintf`przykład) i nie jest obsługiwany w przypadku wąskich funkcji drukowania. Użycie wąskiej funkcji drukowania w strumieniu trybu Unicode wyzwala potwierdzenie.
-
-**_setmode** jest zwykle używany do modyfikacji domyślnego trybu translacji **stdin** i **stdout**, ale można go użyć w dowolnym pliku. Jeśli zastosujesz **_setmode** do deskryptora pliku dla strumienia, wywołaj **_setmode** przed wykonaniem jakichkolwiek operacji wejścia lub wyjścia strumienia.
+Można również przekazać **_O_U16TEXT** **, _O_U8TEXT**lub **_O_WTEXT,** aby włączyć tryb Unicode, jak pokazano w drugim przykładzie w dalszej części tego dokumentu.
 
 > [!CAUTION]
-> Jeśli zapisujesz dane do strumienia plików, jawnie Opróżniaj kod przy użyciu [fflush](fflush.md) przed użyciem **_setmode** do zmiany trybu. Jeśli kod nie zostanie opróżniony, może wystąpić nieoczekiwane zachowanie. Jeśli nie zapisano danych do strumienia, nie ma potrzeby opróżniania kodu.
+> Tryb Unicode jest przeznaczony dla funkcji `wprintf`szerokiego drukowania (na przykład) i nie jest obsługiwany w przypadku funkcji drukowania wąskego. Użycie funkcji drukowania wąskego w strumieniu trybu Unicode wyzwala potwierdzenia.
+
+**_setmode** jest zwykle używany do modyfikowania domyślnego trybu tłumaczenia **stdin** i **stdout**, ale można go używać w dowolnym pliku. Jeśli **zastosujesz _setmode** do deskryptora pliku dla strumienia, wywołaj **_setmode** przed wykonaniem jakichkolwiek operacji wejściowych lub wyjściowych w strumieniu.
+
+> [!CAUTION]
+> Jeśli piszesz dane do strumienia plików, jawnie opróżnić kod za pomocą [fflush](fflush.md) przed użyciem **_setmode,** aby zmienić tryb. Jeśli nie opróżnić kod, może pojawić się nieoczekiwane zachowanie. Jeśli nie zostały zapisane dane do strumienia, nie trzeba opróżniać kod.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**_setmode**|\<io.h>|\<fcntl.h>|
+|**_setmode**|\<> io.h|\<fcntl.h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -135,7 +139,7 @@ int main(void) {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

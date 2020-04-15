@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsBaseOfStrict structure
 - Microsoft::WRL::Details::IsBaseOfStrict::value constant
 ms.assetid: 6fed7366-c8d4-4991-b4fb-43ed93f8e1bf
-ms.openlocfilehash: 85aeb71ceaa162cc6366836dd286f2f9983d34e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71db5a1b52a7d7d5471c15591fb34d954b465d07
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386021"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371350"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict — Struktura
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,7 +32,7 @@ struct IsBaseOfStrict<Base, Base>;
 
 ### <a name="parameters"></a>Parametry
 
-*Base*<br/>
+*Podstawowej*<br/>
 Typ podstawowy.
 
 *Pochodne*<br/>
@@ -40,17 +40,17 @@ Typ pochodny.
 
 ## <a name="remarks"></a>Uwagi
 
-Sprawdza, czy jest jeden typ podstawowy innego.
+Sprawdza, czy jeden typ jest podstawą innego.
 
-Pierwszy szablon sprawdza, czy typ pochodzi od typu podstawowego, który może prowadzić **true** lub **false**. Drugi sprawdza, czy typ jest pochodną, która zawsze daje w wyniku **false**.
+Pierwszy szablon sprawdza, czy typ jest pochodną typu podstawowego, który może przynieść **wartość true** lub **false**. Drugi szablon sprawdza, czy typ jest pochodną samego siebie, co zawsze daje **false**.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-constants"></a>Publiczne stałe
+### <a name="public-constants"></a>Stałe publiczne
 
 Nazwa                            | Opis
 ------------------------------- | --------------------------------------------------
-[IsBaseOfStrict::value](#value) | Wskazuje, czy jeden typ jest podstawą innego.
+[IsBaseOfStrict::wartość](#value) | Wskazuje, czy jeden typ jest podstawą innego.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -60,11 +60,11 @@ Nazwa                            | Opis
 
 **Nagłówek:** internal.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obszar nazw:** Microsoft::WRL::Dszczegóły
 
-## <a name="value"></a>IsBaseOfStrict::value
+## <a name="isbaseofstrictvalue"></a><a name="value"></a>IsBaseOfStrict::wartość
 
-Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
 
 ```cpp
 static const bool value = __is_base_of(Base, Derived);
@@ -74,4 +74,4 @@ static const bool value = __is_base_of(Base, Derived);
 
 Wskazuje, czy jeden typ jest podstawą innego.
 
-`value` jest **true** Jeśli typ `Base` jest klasą bazową typu `Derived`, w przeciwnym razie jest **false**.
+`value`**true,** jeśli `Base` typ jest klasą `Derived`podstawową typu, w przeciwnym razie jest **false**.

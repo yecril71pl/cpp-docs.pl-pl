@@ -4,43 +4,43 @@ ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC, Internet applications
 ms.assetid: da078bf5-53c3-4167-b1ef-509b5a544ad9
-ms.openlocfilehash: 94bc17f59e0d0a7ed5627d0ed20d31e471c22fd9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ba99658dcef92ee36e60d52982dcd9ffc577d03
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152805"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81353085"
 ---
 # <a name="internet-information-by-task"></a>Informacje internetowe według zadań
 
-Zadania wymienione w tym temacie są sortowane w oparciu o zadania, które chcesz osiągnąć.
+Zadania wymienione w tym temacie są sortowane na podstawie zadania, które chcesz wykonać.
 
 >[!IMPORTANT]
-> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które zastępują ActiveX zobacz [formantów ActiveX](activex-controls.md).
+> ActiveX to starsza technologia, która nie powinna być używana do nowego rozwoju. Aby uzyskać więcej informacji na temat nowoczesnych technologii, które zastępują ActiveX, zobacz [ActiveX Controls](activex-controls.md).
 
-Następujące kategorie zadań są wymienione w tym temacie:
+W tym temacie wymieniono następujące kategorie zadań:
 
-- [Kontrolki ActiveX, dokumentów i Moniker asynchroniczne zadania](#_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks)
+- [Formanty ActiveX, dokumenty i zadania asynchroniczne moniker](#_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks)
 
-- [Zadania WinInet](#_core_wininet_tasks)
+- [Zadania wininet](#_core_wininet_tasks)
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić
 
-###  <a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> Kontrolki ActiveX, dokumentów i Moniker asynchroniczne zadania
+### <a name="activex-controls-documents-and-asynchronous-moniker-tasks"></a><a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a>Formanty ActiveX, dokumenty i zadania asynchroniczne moniker
 
-- [Dowiedz się więcej o monikerów asynchronicznych](../mfc/asynchronous-monikers-on-the-internet.md)
+- [Dowiedz się więcej o Asynchronicznych Monikers](../mfc/asynchronous-monikers-on-the-internet.md)
 
-- [Więcej informacji na temat formantów ActiveX w kontekście Internet](../mfc/activex-controls-on-the-internet.md)
+- [Dowiedz się więcej o formantych ActiveX w kontekście Internetu](../mfc/activex-controls-on-the-internet.md)
 
-- [Optymalizowanie formantu ActiveX](../mfc/mfc-activex-controls-optimization.md)
+- [Optymalizacja formantu ActiveX](../mfc/mfc-activex-controls-optimization.md)
 
-###  <a name="_core_wininet_tasks"></a> Zadania WinInet
+### <a name="wininet-tasks"></a><a name="_core_wininet_tasks"></a>Zadania wininet
 
-- [Dowiedz się więcej o WinInet, funkcji Win32 API, aby uzyskać dostęp do Internetu](../mfc/wininet-basics.md)
+- [Dowiedz się więcej o WinInet, funkcji interfejsu API Win32 dla dostępu do Internetu](../mfc/wininet-basics.md)
 
-- [Sprawdź, co jest związane z WinInet programowania](../mfc/win32-internet-extensions-wininet.md)
+- [Sprawdź, co jest związane z programowaniem WinInet](../mfc/win32-internet-extensions-wininet.md)
 
-- [Pisanie klienckich aplikacji internetowych, przy użyciu klas MFC WinInet](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+- [Pisanie aplikacji klienta internetowego przy użyciu klas MFC WinInet](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
 
 - [Pisanie aplikacji klienckiej FTP](../mfc/steps-in-a-typical-ftp-client-application.md)
 
@@ -48,6 +48,6 @@ Następujące kategorie zadań są wymienione w tym temacie:
 
 - [Pisanie aplikacji klienckiej Gopher](../mfc/steps-in-a-typical-gopher-client-application.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)

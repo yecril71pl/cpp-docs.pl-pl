@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-ms.openlocfilehash: 8b4f75b90254c702ecb2afb65108278a59df69ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6090478c3761c477250b6706a350e261b51f2a05
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299208"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81353238"
 ---
 # <a name="linker-tools-error-lnk2005"></a>Błąd narzędzi konsolidatora LNK2005
 
 > *symbol* już zdefiniowany w obiekcie
 
-Symbol *symbol* został zdefiniowany więcej niż raz.
+*Symbol* symbolu został zdefiniowany więcej niż jeden raz.
 
-Ten błąd występuje błąd krytyczny [LNK1169](../../error-messages/tool-errors/linker-tools-error-lnk1169.md).
+Po tym błędzie występuje błąd krytyczny [LNK1169](../../error-messages/tool-errors/linker-tools-error-lnk1169.md).
 
-### <a name="possible-causes-and-solutions"></a>Możliwe przyczyny i potencjalne rozwiązania
+### <a name="possible-causes-and-solutions"></a>Możliwe przyczyny i rozwiązania
 
-Ogólnie rzecz biorąc, ten błąd oznacza, że zostało przerwane *reguły jednej definicji*, tylko jedną definicję używanego szablonu, funkcji, typ lub obiekt w pliku danego obiektu i tylko jedną definicję, co pozwala na cały plik wykonywalny dla widoczne na zewnątrz obiektów lub funkcji.
+Ogólnie rzecz biorąc, ten błąd oznacza, że złamałeś *regułę jednej definicji,* która pozwala na tylko jedną definicję dla dowolnego używanego szablonu, funkcji, typu lub obiektu w danym pliku obiektu i tylko jedną definicję całego pliku wykonywalnego dla zewnętrznych obiektów lub funkcji.
 
-Poniżej przedstawiono niektóre typowe przyczyny tego błędu.
+Oto kilka typowych przyczyn tego błędu.
 
-- Ten błąd może wystąpić, gdy plik nagłówkowy definiuje zmienną. Na przykład jeśli dodasz tego pliku nagłówkowego w więcej niż jeden plik źródłowy w projekcie powoduje błąd:
+- Ten błąd może wystąpić, gdy plik nagłówka definiuje zmienną. Na przykład jeśli ten plik nagłówka zostanie uwzględniny w więcej niż jednym pliku źródłowym w projekcie, spowoduje to błąd:
 
     ```h
     // LNK2005_global.h
@@ -36,13 +36,13 @@ Poniżej przedstawiono niektóre typowe przyczyny tego błędu.
 
    Możliwe rozwiązania obejmują:
 
-   - Zadeklaruj zmienną `extern` w pliku nagłówkowym: `extern int global_int;`, następnie zdefiniuj go i opcjonalnie zainicjować go w jeden i tylko jeden plik źródłowy: `int global_int = 17;`. Ta zmienna jest teraz globalną, można użyć w dowolnym plikiem źródłowym, deklarując ją `extern`, na przykład przez dołączenie pliku nagłówka. Firma Microsoft zaleca tego rozwiązania dla zmiennych, które muszą być globalne, ale dobrym inżynierii oprogramowania rozwiązanie zmniejsza do minimum zmiennych globalnych.
+  - Zadeklaruj `extern` zmienną `extern int global_int;`w pliku nagłówka: , a następnie zdefiniuj ją i opcjonalnie zainicjalizuj w jednym i tylko jednym pliku źródłowym: `int global_int = 17;`. Ta zmienna jest teraz globalną, której można użyć `extern`w dowolnym pliku źródłowym, deklarując ją , na przykład przez dołączenie pliku nagłówka. Zaleca się to rozwiązanie dla zmiennych, które muszą być globalne, ale dobra praktyka inżynierii oprogramowania minimalizuje zmienne globalne.
 
-   - Zadeklaruj zmienną [statyczne](../../cpp/storage-classes-cpp.md#static): `static int static_int = 17;`. Ogranicza zakres definicji do bieżącego pliku obiektu i zezwala na wiele plików obiektu do ich własnych kopię zmiennej. Nie zaleca się że definiowania zmiennych statycznych w plikach nagłówkowych, ze względu na potencjalnych pomyłek ze zmiennymi globalnymi. Chcesz przenieść definicje zmiennych statycznych do plików źródłowych, które z nich korzystają.
+  - Zadeklarować zmienną `static int static_int = 17;` [statyczną](../../cpp/storage-classes-cpp.md#static): . Ogranicza to zakres definicji do bieżącego pliku obiektu i umożliwia wiele plików obiektów, aby mieć własną kopię zmiennej. Nie zaleca się definiowania zmiennych statycznych w plikach nagłówkowych ze względu na możliwość pomylenia ze zmiennymi globalnymi. Wolisz przenosić definicje zmiennych statycznych do plików źródłowych, które ich używają.
 
-   - Zadeklaruj zmienną [selectany](../../cpp/selectany.md): `__declspec(selectany) int global_int = 17;`. To informuje konsolidator, wybierz jedną definicję do użytku przez wszystkie odwołania zewnętrzne i odrzucają pozostałe. To rozwiązanie przydaje się czasami podczas łączenia z bibliotekami importowanymi. W przeciwnym razie nie zalecamy jej jako sposobu uniknięcia błędy konsolidatora.
+  - Zadeklaruj `__declspec(selectany) int global_int = 17;` [zmienną selectany](../../cpp/selectany.md): . To informuje konsolidatora, aby wybrać jedną definicję do użycia przez wszystkie odwołania zewnętrzne i odrzucić resztę. To rozwiązanie jest czasami przydatne podczas łączenia bibliotek importu. W przeciwnym razie nie zaleca się go jako sposób na uniknięcie błędów konsolidatora.
 
-- Ten błąd może wystąpić, gdy plik nagłówkowy definiuje funkcję, która nie jest `inline`. Jeśli dodasz tego pliku nagłówkowego w więcej niż jeden plik źródłowy, uzyskasz wiele definicji funkcji w pliku wykonywalnym.
+- Ten błąd może wystąpić, gdy plik nagłówka `inline`definiuje funkcję, która nie jest . Jeśli ten plik nagłówka zostanie uwzględniny w więcej niż jednym pliku źródłowym, w pliku wykonywalnym zostanie dostępnych wiele definicji funkcji.
 
     ```h
     // LNK2005_func.h
@@ -51,26 +51,26 @@ Poniżej przedstawiono niektóre typowe przyczyny tego błędu.
 
    Możliwe rozwiązania obejmują:
 
-   - Dodaj `inline` słów kluczowych funkcji:
+  - Dodaj `inline` słowo kluczowe do funkcji:
 
-        ```h
-        // LNK2005_func_inline.h
-        inline int sample_function(int k) { return 42 * (k % 167); }
-        ```
+    ```h
+    // LNK2005_func_inline.h
+    inline int sample_function(int k) { return 42 * (k % 167); }
+    ```
 
-   - Usuń treść funkcji z pliku nagłówka i pozostaw tylko deklaracji, a następnie wdrożenie funkcji w jeden i tylko jeden plik źródłowy:
+  - Usuń treść funkcji z pliku nagłówka i pozostaw tylko deklarację, a następnie zaimplementuj funkcję w jednym i tylko jednym pliku źródłowym:
 
-        ```h
-        // LNK2005_func_decl.h
-        int sample_function(int);
-        ```
+    ```h
+    // LNK2005_func_decl.h
+    int sample_function(int);
+    ```
 
-        ```cpp
-        // LNK2005_func_impl.cpp
-        int sample_function(int k) { return 42 * (k % 167); }
-        ```
+    ```cpp
+    // LNK2005_func_impl.cpp
+    int sample_function(int k) { return 42 * (k % 167); }
+    ```
 
-- Ten błąd może również wystąpić, jeśli zdefiniujesz elementów członkowskich poza deklaracją klasy w pliku nagłówkowym:
+- Ten błąd może również wystąpić, jeśli zdefiniowane funkcje elementów członkowskich poza deklaracją klasy w pliku nagłówka:
 
     ```h
     // LNK2005_member_outside.h
@@ -81,7 +81,7 @@ Poniżej przedstawiono niektóre typowe przyczyny tego błędu.
     int Sample::sample_function(int k) { return 42 * (k % 167); }  // LNK2005
     ```
 
-   Aby rozwiązać ten problem, Przenieś definicje funkcji elementów członkowskich wewnątrz klasy. Funkcje Członkowskie zdefiniowane wewnątrz deklaracji klasy są niejawnie śródwierszowych.
+   Aby rozwiązać ten problem, przenieś definicje funkcji elementu członkowskiego wewnątrz klasy. Funkcje elementów członkowskich zdefiniowane wewnątrz deklaracji klasy są niejawnie inlined.
 
     ```h
     // LNK2005_member_inline.h
@@ -91,23 +91,23 @@ Poniżej przedstawiono niektóre typowe przyczyny tego błędu.
     };
     ```
 
-- Ten błąd może wystąpić w przypadku połączenia więcej niż jedna wersja biblioteki standardowej lub CRT. Na przykład Jeśli spróbujesz połączyć zarówno sprzedaży detalicznej i biblioteki CRT debugowania lub statycznych i dynamicznych wersje biblioteki lub dwie różne wersje biblioteki standardowej plik wykonywalny, ten błąd może być zgłaszany wiele razy. Aby rozwiązać ten problem, Usuń wszystkie oprócz jednego kopię wszystkich bibliotek z polecenia łącze. Firma Microsoft nie zaleca się mieszać handlu detalicznego i debugowania bibliotek lub różne wersje biblioteki, w tym samym pliku wykonywalnym.
+- Ten błąd może wystąpić, jeśli łączysz więcej niż jedną wersję biblioteki standardowej lub CRT. Na przykład jeśli spróbujesz połączyć biblioteki CRT zarówno sieci sprzedaży, jak i debugowania lub zarówno statycznych, jak i dynamicznych wersji biblioteki lub dwóch różnych wersji standardowej biblioteki z plikiem wykonywalnym, ten błąd może być zgłaszany wiele razy. Aby rozwiązać ten problem, usuń z polecenia łącza wszystkie z jednej kopii każdej biblioteki z jednej biblioteki. Nie zaleca się mieszania bibliotek sieci sprzedaży i debugowania lub różnych wersji biblioteki w tym samym pliku wykonywalnym.
 
-   Powiedzieć konsolidator, aby korzystać z bibliotek innych niż domyślne, w wierszu polecenia, należy określić biblioteki, a następnie użyć [/nodefaultlib](../../build/reference/nodefaultlib-ignore-libraries.md) opcję, aby wyłączyć domyślne biblioteki. W środowisku IDE, należy dodać odwołania do projektu, aby określić biblioteki, a następnie otwórz **stron właściwości** okno dialogowe dla projektu, a w **konsolidatora**, **dane wejściowe** właściwości Ustaw opcję **Ignoruj wszystkie domyślne biblioteki**, lub **Ignoruj określone biblioteki domyślne** właściwości, aby wyłączyć domyślne biblioteki.
+   Aby poinformować konsolidatora o użyciu bibliotek innych niż domyślne, w wierszu polecenia określ biblioteki do użycia i użyj opcji [/NODEFAULTLIB,](../../build/reference/nodefaultlib-ignore-libraries.md) aby wyłączyć biblioteki domyślne. W ide, dodaj odwołania do projektu, aby określić biblioteki do użycia, a następnie otwórz okno dialogowe **Strony właściwości** dla projektu, a na stronie **Właściwości Konsolidator** **, Input,** ustaw **opcję Ignoruj wszystkie biblioteki domyślne**lub **Ignoruj określone właściwości bibliotek domyślnych,** aby wyłączyć biblioteki domyślne.
 
-- Ten błąd może wystąpić, jeśli mieszanie korzystanie z bibliotek statycznych i dynamicznych, gdy używasz [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) opcji. Na przykład ten błąd może wystąpić, jeśli tworzysz bibliotekę DLL do użytku w plik wykonywalny prowadzący w statycznych CRT. Aby rozwiązać ten problem, użyj tylko bibliotek statycznych lub tylko bibliotekami dynamicznymi dla całego pliku wykonywalnego i wszystkie biblioteki, które tworzysz do użycia w pliku wykonywalnym.
+- Ten błąd może wystąpić, jeśli podczas korzystania z opcji [/clr](../../build/reference/clr-common-language-runtime-compilation.md) jest mieszanie bibliotek statycznych i dynamicznych. Na przykład ten błąd może wystąpić, jeśli tworzysz bibliotekę DLL do użycia w pliku wykonywalnym, który łączy w statycznym CRT. Aby rozwiązać ten problem, należy używać tylko bibliotek statycznych lub tylko bibliotek dynamicznych dla całego pliku wykonywalnego i dla wszystkich bibliotek, które można utworzyć do użycia w pliku wykonywalnym.
 
-- Ten błąd może wystąpić, jeśli symbol jest spakowanych funkcji (utworzone przez kompilowanie za pomocą [/Gy](../../build/reference/gy-enable-function-level-linking.md)) i został dołączony w więcej niż jeden plik, ale został zmieniony między kompilacje. Aby rozwiązać ten problem, ponownie skompilować wszystkie pliki, które zawierają spakowanych funkcji.
+- Ten błąd może wystąpić, jeśli symbol jest funkcją spakowaną (utworzoną przez kompilację z [/Gy](../../build/reference/gy-enable-function-level-linking.md)) i został uwzględniony w więcej niż jednym pliku, ale został zmieniony między kompilacjami. Aby rozwiązać ten problem, ponownie skompiluj wszystkie pliki, które zawierają funkcję spakowaną.
 
-- Ten błąd może wystąpić, jeśli symbol jest zdefiniowany w różny sposób w dwóch obiektów w innych bibliotekach, a oba obiekty Członkowskie są używane. Jednym ze sposobów, aby rozwiązać ten problem, gdy są łączone statycznie biblioteki jest użycie obiektu elementu członkowskiego z tylko jedną bibliotekę i zawierają biblioteki, najpierw w wierszu polecenia konsolidatora. Aby korzystać z obu symbole, należy utworzyć sposób, aby odróżnić je. Na przykład można utworzyć biblioteki ze źródła, można opakować każdej biblioteki w unikatową przestrzeń nazw. Alternatywnie można utworzyć nową bibliotekę otoki, który używa unikatowych nazw opakować odwołania do jednego z oryginalnej biblioteki, połączyć nową bibliotekę oryginalnej biblioteki, a następnie połącz plik wykonywalny do nowej biblioteki zamiast oryginalnej biblioteki.
+- Ten błąd może wystąpić, jeśli symbol jest zdefiniowany inaczej w dwóch obiektach członkowskich w różnych bibliotekach i oba obiekty członkowskie są używane. Jednym ze sposobów rozwiązania tego problemu, gdy biblioteki są statycznie połączone jest użycie obiektu członkowskiego tylko z jednej biblioteki i dołączenie tej biblioteki najpierw w wierszu polecenia konsolidatora. Aby użyć obu symboli, należy utworzyć sposób ich rozróżniania. Na przykład jeśli można tworzyć biblioteki ze źródła, można zawinąć każdej biblioteki w unikatowym obszarze nazw. Alternatywnie można utworzyć nową bibliotekę otoki, która używa unikatowych nazw do zawijania odwołań do jednej z oryginalnych bibliotek, łączenia nowej biblioteki z oryginalną biblioteką, a następnie łączenia pliku wykonywalnego z nową biblioteką zamiast oryginalnej biblioteki.
 
-- Ten błąd może wystąpić, jeśli `extern const` zmienna jest zdefiniowana w dwa razy i ma inną wartość w każdej definicji. Aby rozwiązać ten problem, zdefiniuj stałą tylko raz, lub użyj przestrzeni nazw lub `enum class` definicji w celu odróżnienia stałych.
+- Ten błąd może `extern const` wystąpić, jeśli zmienna jest zdefiniowana dwukrotnie i ma inną wartość w każdej definicji. Aby rozwiązać ten problem, należy zdefiniować stałą `enum class` tylko raz lub użyć obszarów nazw lub definicji do odróżnienia stałych.
 
-- Ten błąd może wystąpić, jeśli używasz uuid.lib w połączeniu z innymi plikami .lib, definiujące identyfikatorów GUID (na przykład oledb.lib i adsiid.lib). Na przykład:
+- Ten błąd może wystąpić, jeśli używasz uuid.lib w połączeniu z innymi plikami lib definiuuujymidy (na przykład oledb.lib i adsiid.lib). Przykład:
 
     ```Output
     oledb.lib(oledb_i.obj) : error LNK2005: _IID_ITransactionObject
     already defined in uuid.lib(go7.obj)
     ```
 
-   Aby rozwiązać ten problem, należy dodać [/FORCE:MULTIPLE](../../build/reference/force-force-file-output.md) opcje wiersza polecenia konsolidatora i upewnij się, że ten uuid.lib jest pierwszy biblioteki, do których odwołuje się.
+   Aby rozwiązać ten problem, dodaj [/FORCE:MULTIPLE](../../build/reference/force-force-file-output.md) do opcji wiersza polecenia konsolidatora i upewnij się, że uuid.lib jest pierwszą biblioteką, do których się odwołuje.

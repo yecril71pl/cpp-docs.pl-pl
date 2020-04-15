@@ -1,5 +1,5 @@
 ---
-title: 'Platform::Collections:: inputiterator, klasa'
+title: Platform::Collections::InputIterator, klasa
 ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: 49b131b01fe3d9cad5f8366fd4cc0c110b5d060c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92f9b15f474a5aa3d063f0ccfb663f56baf8de31
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161800"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354565"
 ---
-# <a name="platformcollectionsinputiterator-class"></a>Platform::Collections:: inputiterator, klasa
+# <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator, klasa
 
-Zawiera standardowe InputIterator biblioteki szablonu dla kolekcji, pochodzące ze środowiska wykonawczego Windows.
+Udostępnia standardowy szablon wejściowy biblioteki dla kolekcji pochodzących ze środowiska wykonawczego systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,19 +28,19 @@ class InputIterator;
 #### <a name="parameters"></a>Parametry
 
 *X*<br/>
-Element typename InputIterator szablonu klasy.
+Nazwa typu klasy szablonu InputIterator.
 
 ### <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne definicje typów
+### <a name="public-typedefs"></a>Publiczne typedefs
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`difference_type`|Różnica wskaźników przy obliczaniu (ptrdiff_t —).|
-|`iterator_category`|Do kategorii iteratora danych wejściowych (:: std::input_iterator_tag).|
-|`pointer`|Wskaźnik do `const X`|
-|`reference`|Odwołanie do `const X`|
-|`value_type`|`X` Typename.|
+|`difference_type`|Różnica wskaźnika (ptrdiff_t).|
+|`iterator_category`|Kategoria iteratora wejściowego (::std::input_iterator_tag).|
+|`pointer`|Wskaźnik do`const X`|
+|`reference`|Odniesienie do`const X`|
+|`value_type`|Nazwa `X` typu.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
@@ -52,11 +52,11 @@ Element typename InputIterator szablonu klasy.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[InputIterator::operator! = — Operator](#operator-inequality)|Wskazuje, czy bieżący InputIterator nie jest równa określonej InputIterator.|
-|[InputIterator::operator * — Operator](#operator-dereference)|Pobiera odwołanie do elementu określonego przez bieżący InputIterator.|
-|[InputIterator::operator ++ — Operator](#operator-increment)|Zwiększa narastająco InputIterator bieżącego.|
-|[InputIterator::operator == — Operator](#operator-equality)|Wskazuje, czy bieżący InputIterator jest równe określonej InputIterator.|
-|[InputIterator::operator -> — Operator](#operator-arrow)|Pobiera adres elementu przywoływane przez bieżący InputIterator.|
+|[InputIterator::operator!= Operator](#operator-inequality)|Wskazuje, czy bieżący InputIterator nie jest równy określonej inputIterator.|
+|[InputIterator::operator* Operator](#operator-dereference)|Pobiera odwołanie do elementu określonego przez bieżący InputIterator.|
+|[InputIterator::operator++ Operator](#operator-increment)|Zwiększa bieżący InputIterator.|
+|[InputIterator::operator== Operator](#operator-equality)|Wskazuje, czy bieżący inputIterator jest równy określonej inputIterator.|
+|[InputIterator::operator-operator > operator](#operator-arrow)|Pobiera adres elementu, do którego odwołuje się bieżący inputIterator.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -66,9 +66,9 @@ Element typename InputIterator szablonu klasy.
 
 **Nagłówek:** collection.h
 
-**Namespace:** Platform::Collections
+**Obszar nazw:** Platforma::Kolekcje
 
-## <a name="ctor"></a>  Konstruktor InputIterator::InputIterator
+## <a name="inputiteratorinputiterator-constructor"></a><a name="ctor"></a>InputIterator::InputIterator Constructor
 
 Inicjuje nowe wystąpienie klasy InputIterator.
 
@@ -81,12 +81,12 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iterator);
 
 ### <a name="parameters"></a>Parametry
 
-*iterator*<br/>
+*Sterująca*<br/>
 Obiekt iteratora.
 
-## <a name="operator-arrow"></a>  InputIterator::operator -&gt; — Operator
+## <a name="inputiteratoroperator-gt-operator"></a><a name="operator-arrow"></a>InputIterator::operator-&gt; Operator
 
-Pobiera adres określony przez InputIterator bieżący element.
+Pobiera adres elementu określonego przez bieżący InputIterator.
 
 ### <a name="syntax"></a>Składnia
 
@@ -96,9 +96,9 @@ pointer operator->() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Adres określony przez InputIterator bieżący element.
+Adres elementu określonego przez bieżący inputIterator.
 
-## <a name="operator-dereference"></a>  InputIterator::operator\* — Operator
+## <a name="inputiteratoroperator-operator"></a><a name="operator-dereference"></a>InputIterator::operator\* Operator
 
 Pobiera odwołanie do elementu określonego przez bieżący InputIterator.
 
@@ -112,9 +112,9 @@ reference operator*() const;
 
 Element określony przez bieżący InputIterator.
 
-## <a name="operator-equality"></a>  InputIterator::operator == — Operator
+## <a name="inputiteratoroperator-operator"></a><a name="operator-equality"></a>InputIterator::operator== Operator
 
-Wskazuje, czy bieżący InputIterator jest równe określonej InputIterator.
+Wskazuje, czy bieżący inputIterator jest równy określonej inputIterator.
 
 ### <a name="syntax"></a>Składnia
 
@@ -124,16 +124,16 @@ bool operator== (const InputIterator& other) const;
 
 ### <a name="parameters"></a>Parametry
 
-*other*<br/>
-InputIterator innego.
+*Innych*<br/>
+Inny Inputiterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli bieżące InputIterator jest równa *innych*; w przeciwnym razie **false**.
+**true,** jeśli bieżący InputIterator jest równy *innemu;* w przeciwnym razie **false**.
 
-## <a name="operator-increment"></a>  InputIterator::operator ++ — Operator
+## <a name="inputiteratoroperator-operator"></a><a name="operator-increment"></a>InputIterator::operator++ Operator
 
-Zwiększa narastająco InputIterator bieżącego.
+Zwiększa bieżący InputIterator.
 
 ### <a name="syntax"></a>Składnia
 
@@ -144,17 +144,17 @@ InputIterator operator++(int);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwszy składni zwiększa, a następnie zwraca bieżący InputIterator. Składnia drugiego zwraca kopię bieżącego InputIterator i następnie zwiększa InputIterator bieżącego.
+Pierwsza składnia zwiększa się, a następnie zwraca bieżący inputIterator. Druga składnia zwraca kopię bieżącego inputIterator, a następnie zwiększa bieżący InputIterator.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy składni InputIterator zwiększa wstępnie InputIterator bieżącego.
+Pierwsza składnia InputIterator wstępnie zwiększa bieżący inputIterator.
 
-Składnia drugiego zwiększa po bieżącym InputIterator. `int` Typu w drugim składni wskazuje operacji po inkrementacji, nie operandu rzeczywistej liczby całkowitej.
+Druga składnia zwiększa przyrost bieżącego inputIterator. Typ `int` w drugiej składni wskazuje operację przyrostową, a nie rzeczywisty argument całkowity.
 
-## <a name="operator-inequality"></a>  InputIterator::operator! = — Operator
+## <a name="inputiteratoroperator-operator"></a><a name="operator-inequality"></a>InputIterator::operator!= Operator
 
-Wskazuje, czy bieżący InputIterator nie jest równa określonej InputIterator.
+Wskazuje, czy bieżący InputIterator nie jest równy określonej inputIterator.
 
 ### <a name="syntax"></a>Składnia
 
@@ -164,13 +164,13 @@ bool operator!=(const InputIterator& other) const;
 
 ### <a name="parameters"></a>Parametry
 
-*other*<br/>
-InputIterator innego.
+*Innych*<br/>
+Inny Inputiterator.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli bieżące InputIterator nie jest równa *innych*; w przeciwnym razie **false**.
+**true,** jeśli bieżący InputIterator nie jest równy *innemu*; w przeciwnym razie **false**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Namespace platformy](platform-namespace-c-cx.md)
+[Obszar nazw platformy](platform-namespace-c-cx.md)

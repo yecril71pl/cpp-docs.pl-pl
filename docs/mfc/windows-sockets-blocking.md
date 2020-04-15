@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: Blokowanie'
+title: 'Windows Sockets: blokowanie'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sockets [MFC], blocking mode
@@ -8,49 +8,49 @@ helpviewer_keywords:
 - sockets [MFC], behavior on different Windows platforms
 - blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
-ms.openlocfilehash: 26a361bc63da5f6e75144cc91fe837498a7f656b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87d4f0eb57f9e26dbf73da06b5d7ca6d61d6c174
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371967"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359996"
 ---
-# <a name="windows-sockets-blocking"></a>Windows Sockets: Blokowanie
+# <a name="windows-sockets-blocking"></a>Windows Sockets: blokowanie
 
-W tym artykule i dwa artykuły pomocnika opisano kilka problemów w programowaniu Windows Sockets. W tym artykule opisano blokowania. Inne problemy zostały omówione w artykułach: [Windows Sockets: Określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md) i [Windows Sockets: Konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md).
+W tym artykule i dwóch artykułach towarzyszących wyjaśniono kilka problemów związanych z programowaniem w systemach Windows Sockets. W tym artykule opisano blokowanie. Inne problemy są omówione w artykułach: [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md) i [Windows Sockets: Converting Strings](../mfc/windows-sockets-converting-strings.md).
 
-Jeśli używasz lub pochodzić od klasy [CAsyncSocket](../mfc/reference/casyncsocket-class.md), musisz samodzielnie zarządzania tymi problemami. Jeśli używasz lub pochodzić od klasy [CSocket](../mfc/reference/csocket-class.md), MFC zarządza je dla Ciebie.
+Jeśli używasz lub pochodzisz z klasy [CAsyncSocket](../mfc/reference/casyncsocket-class.md), musisz samodzielnie zarządzać tymi problemami. Jeśli używasz lub pochodzisz z klasy [CSocket](../mfc/reference/csocket-class.md), MFC zarządza nimi za Ciebie.
 
-## <a name="blocking"></a>Blokowanie
+## <a name="blocking"></a>blokowanie
 
-Gniazda mogą znajdować się w "trybie blokowania" lub "Tryb nieblokujących". Funkcje gniazda w trybie blokowania (lub synchronicznego) nie zwracają do momentu ich zakończeniu ich działania. Jest to, blokowanie, ponieważ nie można nic robić gniazda, w których funkcja została wywołana — jest zablokowany — dopóki to wywołanie zwraca. Wywołanie `Receive` funkcja elementu członkowskiego, na przykład, może potrwać długi czas trwania jako czeka aplikacji wysyłającej wysyłanie (jest to, jeśli używasz `CSocket`, lub za pomocą `CAsyncSocket` z blokowaniem). Jeśli `CAsyncSocket` obiekt jest w trybie nieblokujących (działają asynchronicznie), to wywołanie zwraca niezwłocznie i bieżącego kodu błędu, możliwe do pobierania z [GetLastError](../mfc/reference/casyncsocket-class.md#getlasterror) funkcja członkowska jest **WSAEWOULDBLOCK**, wskazującą, czy zablokowały wywołanie go nie jest zwracana, od razu ze względu na tryb obejmował. (`CSocket` nigdy nie zwraca **WSAEWOULDBLOCK**. Klasa zarządza blokowania dla Ciebie.)
+Gniazdo może być w "trybie blokowania" lub "trybie nieblokujący". Funkcje gniazd w trybie blokowania (lub synchroniczowego) nie wracają, dopóki nie będą mogły wykonać działania. Jest to nazywane blokowaniem, ponieważ gniazdo, którego funkcja została wywołana, nie może nic zrobić — jest zablokowane — dopóki wywołanie nie powróci. Wywołanie funkcji `Receive` elementu członkowskiego, na przykład, może potrwać dowolnie długo, aby zakończyć, ponieważ czeka `CSocket`na wysyłanie `CAsyncSocket` aplikacji do wysłania (jest to, jeśli używasz , lub przy użyciu z blokowaniem). Jeśli `CAsyncSocket` obiekt jest w trybie nonblocking (działa asynchronicznie), wywołanie zwraca natychmiast i bieżący kod błędu, można pobrać z funkcji elementu członkowskiego [GetLastError,](../mfc/reference/casyncsocket-class.md#getlasterror) jest **WSAEWOULDBLOCK**, wskazując, że wywołanie zostałoby zablokowane, gdyby nie zwrócone natychmiast z powodu trybu. (`CSocket` nigdy nie zwraca **WSAEWOULDBLOCK**. Klasa zarządza blokowaniem dla Ciebie.)
 
-Zachowanie sockets różni się w 32-bitowych i 64-bitowych systemach operacyjnych (na przykład Windows 95 lub Windows 98) niż w obszarze 16-bitowych systemach operacyjnych (na przykład Windows 3.1). W przeciwieństwie do 16-bitowych systemach operacyjnych systemy operacyjne 32-bitowych i 64-bitowych Użyj preemptive wielozadaniowość i zapewniają wielowątkowości. W 32-bitowych i 64-bitowych systemach operacyjnych można umieścić swoje gniazda w oddzielnych wątkach roboczych. Gniazda w wątku można zablokować, bez zakłócania innych działań w aplikacji i bez poświęcania czasu obliczeń na blokowanie. Aby uzyskać informacje dotyczące programowania wielowątkowe, zobacz artykuł [wielowątkowość](../parallel/multithreading-support-for-older-code-visual-cpp.md).
+Zachowanie gniazd różni się w 32-bitowych i 64-bitowych systemach operacyjnych (takich jak Windows 95 lub Windows 98) niż w 16-bitowych systemach operacyjnych (takich jak Windows 3.1). W przeciwieństwie do 16-bitowych systemów operacyjnych 32-bitowe i 64-bitowe systemy operacyjne wykorzystują wywłaszczającą wielozadaniowość i zapewniają wielowątkowość. W 32-bitowych i 64-bitowych systemach operacyjnych można umieścić gniazda w oddzielnych wątkach roboczych. Gniazdo w wątku można zablokować bez zakłócania innych działań w aplikacji i bez poświęcania czasu obliczeniowego na blokowanie. Aby uzyskać informacje na temat programowania wielowątkowego, zobacz artykuł [Wielowątkowe](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
 > [!NOTE]
->  W aplikacjach wielowątkowych, można użyć blokowania charakter `CSocket` do uproszczenia projektu programu bez wywierania wpływu na czas odpowiedzi interfejsu użytkownika. Dzięki obsłudze interakcje użytkownika w głównym wątku i `CSocket` przetwarzania alternatywne wątki, można oddzielić te operacje logiczne. W aplikacji, która nie jest wielowątkowych, te dwa działania musi być połączone i obsługiwane jako pojedynczego wątku, co zwykle oznacza przy użyciu `CAsyncSocket` aby można było obsłużyć żądań komunikacji na żądanie lub zastępowanie `CSocket::OnMessagePending` do obsługi akcji użytkownika podczas długich działanie synchroniczne.
+> W aplikacjach wielowątkowych można użyć `CSocket` charakteru blokowania, aby uprościć projekt programu bez wpływu na responsywność interfejsu użytkownika. Obsługując interakcje użytkownika w wątku głównym i `CSocket` przetwarzania w wątkach alternatywnych, można oddzielić te operacje logiczne. W aplikacji, która nie jest wielowątkowa, te dwa działania muszą być połączone i `CAsyncSocket` obsługiwane jako pojedynczy wątek, co `CSocket::OnMessagePending` zwykle oznacza używanie, dzięki czemu można obsługiwać żądania komunikacji na żądanie lub zastępowanie do obsługi akcji użytkownika podczas długich działań synchronicznych.
 
-Pozostała część tej dyskusji, jest dla programistów, przeznaczone dla 16-bitowych systemach operacyjnych:
+Reszta tej dyskusji jest dla programistów skierowanych do 16-bitowych systemów operacyjnych:
 
-Normalnie Jeśli używasz `CAsyncSocket`, należy unikać blokowania operacji i działają asynchronicznie, zamiast tego. W operacji asynchronicznych, od punktu, w którym pojawi się **WSAEWOULDBLOCK** kod błędu: po wywołaniu `Receive`, na przykład czekać do momentu swojej `OnReceive` funkcja członkowska jest wywoływana, aby otrzymywać powiadomienia, że może odczytać ponownie. Wywołania asynchroniczne zostały wprowadzone, wywołując ponownie swoje gniazda odpowiednią funkcję wywołania zwrotnego powiadomień, takie jak [zdarzenia OnReceive](../mfc/reference/casyncsocket-class.md#onreceive).
+Zwykle, jeśli używasz `CAsyncSocket`, należy unikać blokowania operacji i działać asynchronicznie zamiast. W operacjach asynchronicznych, od punktu, w którym otrzymasz kod błędu `Receive` **WSAEWOULDBLOCK** po wywołaniu , na przykład poczekaj, aż funkcja `OnReceive` elementu członkowskiego zostanie wywołana, aby powiadomić, że można odczytać ponownie. Wywołania asynchroniczne są wywoływane przez oddzwanianie odpowiedniej funkcji powiadomień o wywołaniu zwrotnym gniazda, takiej jak [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive).
 
-W obszarze Windows wywołania blokowania są traktowane jako złym zwyczajem. Domyślnie [CAsyncSocket](../mfc/reference/casyncsocket-class.md) obsługuje wywołania asynchroniczne, a musi zarządzać, blokowanie, samodzielnie za pomocą powiadomień wywołania zwrotnego. Klasa [CSocket](../mfc/reference/csocket-class.md), z drugiej strony, jest synchroniczne. On pompy komunikatów Windows i zarządza blokowania dla Ciebie.
+W systemie Windows blokowanie połączeń jest uważane za złą praktykę. Domyślnie [CAsyncSocket](../mfc/reference/casyncsocket-class.md) obsługuje wywołania asynchroniczne i należy zarządzać blokowanie siebie za pomocą powiadomień wywołania zwrotnego. Klasa [CSocket](../mfc/reference/csocket-class.md), z drugiej strony, jest synchroniczowa. Pompuje wiadomości systemu Windows i zarządza blokowaniem dla Ciebie.
 
-Aby uzyskać więcej informacji na temat blokowania zobacz specyfikację Windows Sockets. Aby uzyskać więcej informacji na temat "funkcji włączone", zobacz [Windows Sockets: Gniazda powiadomienia](../mfc/windows-sockets-socket-notifications.md) i [Windows Sockets: Wyprowadzanie z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md).
+Aby uzyskać więcej informacji na temat blokowania, zobacz specyfikację windows sockets. Aby uzyskać więcej informacji na temat funkcji "Włączone", zobacz [Gniazda systemu Windows: Powiadomienia o gniazdach](../mfc/windows-sockets-socket-notifications.md) i [Gniazda systemu Windows: Pochodne z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md).
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Windows Sockets: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Gniazda systemu Windows: używanie klasy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Gniazda systemu Windows: używanie gniazd z archiwami](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets: informacje dodatkowe](../mfc/windows-sockets-background.md)
+- [Gniazda systemu Windows: podstawy](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)
+- [Gniazda systemu Windows: gniazda strumieni](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
+- [Gniazda systemu Windows: gniazda do przesyłania datagramów](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CAsyncSocket::OnSend](../mfc/reference/casyncsocket-class.md#onsend)

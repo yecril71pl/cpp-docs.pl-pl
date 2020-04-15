@@ -1,6 +1,6 @@
 ---
-title: Wewnętrzna Globals i funkcje CRT
-ms.date: 01/22/2019
+title: Wewnętrzne crt globals i funkcje
+ms.date: 4/2/2020
 api_name:
 - __acrt_iob_func
 - __AdjustPointer
@@ -277,6 +277,113 @@ api_name:
 - _wsopen_dispatch
 - _Xbad_alloc
 - _Xlength_error
+- _o__CIacos
+- _o__CIasin
+- _o__CIcosh
+- _o__CIsinh
+- _o__CItanh
+- _o__Getdays
+- _o__Getmonths
+- _o__Gettnames
+- _o__Strftime
+- _o__W_Getdays
+- _o__W_Getmonths
+- _o__Wcsftime
+- _o___acrt_iob_func
+- _o___conio_common_vcprintf
+- _o___conio_common_vcprintf_p
+- _o___conio_common_vcprintf_s
+- _o___conio_common_vcscanf
+- _o___conio_common_vcwprintf
+- _o___conio_common_vcwprintf_p
+- _o___conio_common_vcwprintf_s
+- _o___conio_common_vcwscanf
+- _o___fpe_flt_rounds
+- _o___libm_sse2_acos
+- _o___libm_sse2_acosf
+- _o___libm_sse2_asin
+- _o___libm_sse2_asinf
+- _o___libm_sse2_atan
+- _o___libm_sse2_atan2
+- _o___libm_sse2_atanf
+- _o___libm_sse2_cos
+- _o___libm_sse2_cosf
+- _o___libm_sse2_exp
+- _o___libm_sse2_expf
+- _o___libm_sse2_log
+- _o___libm_sse2_log10
+- _o___libm_sse2_log10f
+- _o___libm_sse2_logf
+- _o___libm_sse2_pow
+- _o___libm_sse2_powf
+- _o___libm_sse2_sin
+- _o___libm_sse2_sinf
+- _o___libm_sse2_tan
+- _o___libm_sse2_tanf
+- _o___p___argc
+- _o___p___argv
+- _o___p___wargv
+- _o___p__acmdln
+- _o___p__environ
+- _o___p__mbcasemap
+- _o___p__mbctype
+- _o___p__pgmptr
+- _o___p__wcmdln
+- _o___p__wenviron
+- _o___p__wpgmptr
+- _o___pwctype_func
+- _o___std_exception_copy
+- _o___std_exception_destroy
+- _o___std_type_info_destroy_list
+- _o___stdio_common_vfprintf
+- _o___stdio_common_vfprintf_p
+- _o___stdio_common_vfprintf_s
+- _o___stdio_common_vfscanf
+- _o___stdio_common_vfwprintf
+- _o___stdio_common_vfwprintf_p
+- _o___stdio_common_vfwprintf_s
+- _o___stdio_common_vfwscanf
+- _o___stdio_common_vsnprintf_s
+- _o___stdio_common_vsnwprintf_s
+- _o___stdio_common_vsprintf
+- _o___stdio_common_vsprintf_p
+- _o___stdio_common_vsprintf_s
+- _o___stdio_common_vsscanf
+- _o___stdio_common_vswprintf
+- _o___stdio_common_vswprintf_p
+- _o___stdio_common_vswprintf_s
+- _o___stdio_common_vswscanf
+- _o___timezone
+- _o___tzname
+- _o__calloc_base
+- _o__configure_narrow_argv
+- _o__configure_wide_argv
+- _o__crt_atexit
+- _o__errno
+- _o__except1
+- _o__free_base
+- _o__get_initial_narrow_environment
+- _o__get_initial_wide_environment
+- _o__get_narrow_winmain_command_line
+- _o__get_stream_buffer_pointers
+- _o__get_wide_winmain_command_line
+- _o__initialize_narrow_environment
+- _o__initialize_wide_environment
+- _o__libm_sse2_acos_precise
+- _o__libm_sse2_asin_precise
+- _o__libm_sse2_atan_precise
+- _o__libm_sse2_cos_precise
+- _o__libm_sse2_exp_precise
+- _o__libm_sse2_log10_precise
+- _o__libm_sse2_log_precise
+- _o__libm_sse2_pow_precise
+- _o__libm_sse2_sin_precise
+- _o__libm_sse2_sqrt_precise
+- _o__libm_sse2_tan_precise
+- _o__malloc_base
+- _o__realloc_base
+- _o__sopen_dispatch
+- _o__wsopen_dispatch
 api_location:
 - api-ms-win-crt-math-l1-1-0.dll
 - api-ms-win-crt-heap-l1-1-0.dll
@@ -294,6 +401,7 @@ api_location:
 - msvcp140_app.dll
 - ntdll.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -822,22 +930,22 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: eb31409de131923f6af86b4ec1c4ba02dbc11028
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 22c38c1ad2cd5dad0a0e58437b441faf4cdb6662
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443198"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351248"
 ---
-# <a name="internal-crt-globals-and-functions"></a>Wewnętrzna Globals i funkcje CRT
+# <a name="internal-crt-globals-and-functions"></a>Wewnętrzne crt globals i funkcje
 
-Biblioteka środowiska uruchomieniowego języka C (CRT) zawiera funkcje i zmienne globalne, które są używane tylko do obsługi interfejsu biblioteki publicznej. Niektóre z nich są ujawniane w publicznych nagłówkach jako szczegóły implementacji. Chociaż te funkcje i zmienne globalne są dostępne za pośrednictwem publicznych eksportów, nie są przeznaczone do użytku w kodzie. Zalecamy zmianę dowolnego kodu, który używa tych funkcji i zmiennych do używania odpowiedników biblioteki publicznej. Te funkcje mogą ulec zmianie z wersji na wersję. Są one wymienione tutaj, aby ułatwić ich identyfikację. Linki są udostępniane, gdy istnieje dodatkowa dokumentacja, ale ogólnie rzecz biorąc, te szczegóły implementacji nie są udokumentowane.
+Biblioteka środowiska wykonawczego C (CRT) zawiera funkcje i zmienne globalne, które są używane tylko do obsługi interfejsu biblioteki publicznej. Niektóre z nich są widoczne w nagłówkach publicznych jako szczegóły implementacji. Mimo że te funkcje i zmienne globalne są dostępne za pośrednictwem eksportu publicznego, nie są przeznaczone do użycia przez kod. Zaleca się zmianę kodu, który używa tych funkcji i zmiennych, aby zamiast tego używać odpowiedników biblioteki publicznej. Te funkcje mogą ulec zmianie z wersji na wersję. Są one wymienione tutaj, aby pomóc ci je zidentyfikować. Łącza są dostarczane, gdy istnieje dodatkowa dokumentacja, ale ogólnie rzecz biorąc, te szczegóły implementacji nie są udokumentowane.
 
-## <a name="internal-crt-globals-and-value-macros"></a>Wewnętrzne Globals i makro CRT
+## <a name="internal-crt-globals-and-value-macros"></a>Wewnętrzne wartości globalne CRT i makra wartości
 
-Te zmienne globalne i definicje makr służą do implementowania CRT.
+Te zmienne globalne i definicje makr są używane do implementacji CRT.
 
-|Name (Nazwa)|
+|Nazwa|
 |----------|
 |__badioinfo|
 |[_acmdln](../c-runtime-library/acmdln-tcmdln-wcmdln.md)|
@@ -854,9 +962,9 @@ Te zmienne globalne i definicje makr służą do implementowania CRT.
 
 ## <a name="internal-crt-functions-and-function-macros"></a>Wewnętrzne funkcje CRT i makra funkcji
 
-Te funkcje i makra funkcji służą do implementowania CRT i C++ standardowej biblioteki.
+Te funkcje i makra funkcji są używane do implementacji CRT i standardowej biblioteki C++.
 
-|Name (Nazwa)|
+|Nazwa|
 |----------|
 |__acrt_iob_func|
 |__AdjustPointer|
@@ -1055,13 +1163,13 @@ Te funkcje i makra funkcji służą do implementowania CRT i C++ standardowej bi
 |_NLG_Dispatch2|
 |_NLG_Return|
 |_NLG_Return2|
-|__p&#95;&#95;_argc|
-|__p&#95;&#95;_argv|
+|&#95;&#95;_argc __p|
+|&#95;&#95;_argv __p|
 |__p&#95;&#95;_initenv|
 |[__p&#95;&#95;_mb_cur_max](../c-runtime-library/mb-cur-max-func-mb-cur-max-l-func-p-mb-cur-max-mb-cur-max.md)|
 |__p&#95;&#95;_wargv|
-|__p&#95;&#95;_winitenv|
-|__p\__acmdln|
+|&#95;&#95;_winitenv __p|
+|_acmdln\___p|
 |[__p\__commode](../c-runtime-library/p-commode.md)|
 |__p\__crtAssertBusy|
 |__p\__crtBreakAlloc|
@@ -1164,4 +1272,4 @@ Te funkcje i makra funkcji służą do implementowania CRT i C++ standardowej bi
 
 ## <a name="see-also"></a>Zobacz też
 
-[Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

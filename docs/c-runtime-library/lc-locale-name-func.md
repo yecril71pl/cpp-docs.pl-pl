@@ -1,8 +1,9 @@
 ---
 title: ___lc_locale_name_func
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - ___lc_locale_name_func
+- _o____lc_locale_name_func
 api_location:
 - msvcrt.dll
 - msvcr110.dll
@@ -11,6 +12,7 @@ api_location:
 - msvcr120.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -20,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_locale_name_func
 ms.assetid: ef858308-872e-43de-95e0-9b1b4084343e
-ms.openlocfilehash: abc1ade393538586ad07f57e6838591833c9948b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f38d4d9b11189a8313b26dd3313a5def800c2410
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944227"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351112"
 ---
 # <a name="___lc_locale_name_func"></a>___lc_locale_name_func
 
@@ -43,9 +45,11 @@ Wskaźnik do ciągu, który zawiera bieżącą nazwę ustawień regionalnych wą
 
 ## <a name="remarks"></a>Uwagi
 
-`___lc_locale_name_func`to wewnętrzna funkcja CRT, która jest używana przez inne funkcje CRT do uzyskiwania bieżącej nazwy ustawień regionalnych z lokalnego magazynu wątków dla danych CRT. Te informacje są również dostępne za pomocą funkcji [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) lub funkcji [setlocaling, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) .
+`___lc_locale_name_func`jest wewnętrzną funkcją CRT, która jest używana przez inne funkcje CRT, aby uzyskać bieżącą nazwę ustawień regionalnych z magazynu lokalnego wątku dla danych CRT. Informacje te są również dostępne za pomocą funkcji [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) lub [funkcji setlocale, _wsetlocale.](../c-runtime-library/reference/setlocale-wsetlocale.md)
 
-Wewnętrzne funkcje CRT są specyficzne dla implementacji i mogą ulec zmianie w każdej wersji. Nie zalecamy ich używania w kodzie.
+Wewnętrzne funkcje CRT są specyficzne dla implementacji i mogą ulec zmianie z każdą wersją. Nie zaleca się ich używania w kodzie.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
@@ -53,7 +57,7 @@ Wewnętrzne funkcje CRT są specyficzne dla implementacji i mogą ulec zmianie w
 |-------------|---------------------|
 |`___lc_locale_name_func`|crt\src\setlocal.h|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>

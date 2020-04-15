@@ -1,10 +1,13 @@
 ---
 title: asinh, asinhf, asinhl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - asinh
 - asinhf
 - asinhl
+- _o_asinh
+- _o_asinhf
+- _o_asinhl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +34,16 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: f4d93f121c0124293a5bdff9041d0adfaab5d83c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 299ee0ff3014dcfd2f6ab712d01766119fab5894
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939640"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350470"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
-Oblicza odwrotny sinus hiperboliczny.
+Oblicza odwrotną sinus hiperboliczny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,28 +60,30 @@ long double asinh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Wartość zmiennoprzecinkowa.
+*X*<br/>
+Wartość zmiennoprzecinku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **ASINH —** zwracają odwrotność hyberbolic sinus (łuk hiperboliczny sinus) *x*. Ta funkcja jest prawidłowa w przypadku domeny zmiennoprzecinkowej. Jeśli *x* to cichy NaN, nieokreślony lub nieskończony, zwracana jest ta sama wartość.
+Funkcje **asinh** zwracają odwrotną sinushiberboliczny (łuk hiperboliczny sinus) *x*. Ta funkcja jest prawidłowa w domenie zmiennoprzecinkowej. Jeśli *x* jest cichym NaN, nieokreślony lub nieskończoności, zwracana jest ta sama wartość.
 
-|Dane wejściowe|Wyjątek SEH|**_matherr** Oprócz|
+|Dane wejściowe|Wyjątek SEH|**_matherr** Wyjątek|
 |-----------|-------------------|--------------------------|
-|QNAN, IND, INF|brak|brak|
+|± QNAN, IND, INF|brak|brak|
 
 ## <a name="remarks"></a>Uwagi
 
-W przypadku korzystania C++z programu można wywoływać przeciążenia **ASINH —** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** o **podwójnej precyzji** . W programie C **ASINH —** zawsze przyjmuje i zwraca wartość **Double**.
+Korzystając z języka C++, można wywołać przeciążenia **asinh,** które biorą i zwracają **float** lub **długie** **podwójne** wartości. W programie C **asinh** zawsze bierze i zwraca **podwójnie**.
+
+Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Wymagany nagłówek C|Wymagany C++ nagłówek|
+|Funkcja|Wymagany nagłówek C|Wymagany nagłówek języka C++|
 |--------------|--------------|------------------|
-|**ASINH —** , **asinhf —** , **asinhl**|\<math.h>|\<cmath > lub \<Math. h <|
+|**asinh**, **asinhf**, **asinhl**|\<> math.h|\<cmath> lub \<math.h<|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -107,9 +113,9 @@ sinh( 0.785398 ) = 0.868671
 asinh( 0.868671 ) = 0.785398
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
 [cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-ms.openlocfilehash: cc75c93d5173ceb7fa12b9722a797499b4225a53
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 7036ebf9fed3877a395e44d8383776002b9afcae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821619"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351687"
 ---
 # <a name="logical_and-struct"></a>logical_and — Struktura
 
-Wstępnie zdefiniowany obiekt funkcji, który wykonuje operację koniunkcji logicznej (`operator&&`) dla jej argumentów.
+Wstępnie zdefiniowany obiekt funkcji, który wykonuje operację`operator&&`logicznego spójnika ( ) na jego argumenty.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template <class Type = void>
 struct logical_and : public binary_function<Type, Type, bool>
 {
@@ -40,21 +40,21 @@ struct logical_and<void>
 ### <a name="parameters"></a>Parametry
 
 *Typ*, *T*, *U*\
-Dowolny typ, który obsługuje `operator&&`, który pobiera operandy dla określonych lub wywnioskowanych typów.
+Każdy typ, `operator&&` który obsługuje, który przyjmuje operands określonych lub wywnioskowane typów.
 
-\ *lewo*
-Lewy operand operacji koniunkcji logicznej. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *T*.
+*Lewej*\
+Lewy operand operacji logicznego spójnika. Szablon bezspecjalisyjny przyjmuje argument odwołania lvalue typu *Typ*. Szablon specjalistyczny doskonale przekazuje argumenty referencyjne lvalue i rvalue wnioskowanych typów *T*.
 
-*Prawa*\
-Prawy operand operacji koniunkcji logicznej. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *U*.
+*Prawo*\
+Prawy operand operacji logicznego spójnika. Szablon bezspecjalisyjny przyjmuje argument odwołania lvalue typu *Typ*. Szablon specjalistyczny doskonale przekazuje argumenty referencyjne lvalue i rvalue wnioskowanych typów *U*.
 
-## <a name="return-value"></a>Wartość zwrócona
+## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left && Right`. Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator&&`.
+Wynik . `Left && Right` Szablon specjalistyczny doskonale przekazuje wynik, który ma typ, który `operator&&`jest zwracany przez program .
 
 ## <a name="remarks"></a>Uwagi
 
-W przypadku typów zdefiniowanych przez użytkownika nie istnieje krótkie obwody oceny operandów. Oba argumenty są oceniane przez `operator&&`.
+W przypadku typów zdefiniowanych przez użytkownika nie ma zwarcia oceny operandu. Oba argumenty są `operator&&`oceniane przez .
 
 ## <a name="example"></a>Przykład
 

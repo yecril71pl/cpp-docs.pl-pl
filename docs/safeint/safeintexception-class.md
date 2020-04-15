@@ -11,19 +11,19 @@ helpviewer_keywords:
 - SafeIntException class
 - SafeIntException, constructor
 ms.assetid: 88bef958-1f48-4d55-ad4f-d1f9581a293a
-ms.openlocfilehash: 2998bbb83fd568d7ff627d6598c32fb5b17c1e40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e118d7e3cce47ebb93cef16319a8fc45aab1118b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179327"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349950"
 ---
 # <a name="safeintexception-class"></a>SafeIntException — Klasa
 
-`SafeInt` Klasy używa `SafeIntException` celu ustaleniu, dlaczego nie można ukończyć operacji matematycznych.
+Klasa `SafeInt` używa `SafeIntException` do określenia, dlaczego nie można ukończyć operacji matematycznej.
 
 > [!NOTE]
-> Najnowszą wersję tej biblioteki znajduje się w [ https://github.com/dcleblanc/SafeInt ](https://github.com/dcleblanc/SafeInt).
+> Najnowsza wersja tej biblioteki [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)znajduje się pod adresem .
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,11 +37,11 @@ class SafeIntException;
 
 Nazwa                                                    | Opis
 ------------------------------------------------------- | ------------------------------------
-[SafeIntException::SafeIntException](#safeintexception) | Tworzy `SafeIntException` obiektu.
+[SafeIntException::SafeIntException](#safeintexception) | Tworzy obiekt `SafeIntException`.
 
 ## <a name="remarks"></a>Uwagi
 
-[Safeint — klasa](../safeint/safeint-class.md) jest to jedyna klasa, która używa `SafeIntException` klasy.
+[SafeInt Klasa](../safeint/safeint-class.md) jest jedyną klasą, `SafeIntException` która używa klasy.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -51,11 +51,11 @@ Nazwa                                                    | Opis
 
 **Nagłówek:** safeint.h
 
-**Namespace:** msl::utilities
+**Obszar nazw:** msl::utilities
 
-## <a name="safeintexception"></a>SafeIntException::SafeIntException
+## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>SafeIntException::SafeIntException
 
-Tworzy `SafeIntException` obiektu.
+Tworzy obiekt `SafeIntException`.
 
 ```cpp
 SafeIntException();
@@ -68,11 +68,11 @@ SafeIntException(
 ### <a name="parameters"></a>Parametry
 
 *Kod*<br/>
-[in] Wartość danych wyliczany, który opisuje błąd, który wystąpił.
+[w] Wyliczona wartość danych opisująca błąd, który wystąpił.
 
 ### <a name="remarks"></a>Uwagi
 
-Możliwe wartości parametru *kodu* są zdefiniowane w pliku Safeint.h. Dla wygody możliwe wartości są również wymienione tutaj.
+Możliwe wartości *kodu* są zdefiniowane w pliku Safeint.h. Dla wygody, możliwe wartości są również wymienione tutaj.
 
 - `SafeIntNoError`
 - `SafeIntArithmeticOverflow`

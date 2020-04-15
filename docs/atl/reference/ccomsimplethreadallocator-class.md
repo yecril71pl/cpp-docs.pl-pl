@@ -11,16 +11,16 @@ helpviewer_keywords:
 - CComSimpleThreadAllocator class
 - ATL threads, allocating
 ms.assetid: 66b2166a-8c50-49fd-b8e4-7f293470327d
-ms.openlocfilehash: ef1f86ca832674ba5710083b08b67f0a775a7a33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a3cce492db4db9f46aeb4efe738ee6a594ddcfc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246156"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327342"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>Klasa CComSimpleThreadAllocator
 
-Ta klasa zarządza wybór wątku dla klasy `CComAutoThreadModule`.
+Ta klasa zarządza wyborem `CComAutoThreadModule`wątku dla klasy .
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,19 +34,19 @@ class CComSimpleThreadAllocator
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CComSimpleThreadAllocator::GetThread](#getthread)|Wybiera wątku.|
+|[CComSimpleLokator:GetThread](#getthread)|Wybiera wątek.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CComSimpleThreadAllocator` zarządza wybór wątku [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread` po prostu przewijać każdego wątku i zwraca kolejny w sekwencji.
+`CComSimpleThreadAllocator`zarządza wyborem [wątku dla CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread`po prostu przechodzi przez każdy wątek i zwraca następny w sekwencji.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** atlbase.h
 
-##  <a name="getthread"></a>  CComSimpleThreadAllocator::GetThread
+## <a name="ccomsimplethreadallocatorgetthread"></a><a name="getthread"></a>CComSimpleLokator:GetThread
 
-Wybiera wątku, określając następny wątek w sekwencji.
+Wybiera wątek, określając następny wątek w sekwencji.
 
 ```
 int GetThread(CComApartment* /* pApt */, int nThreads);
@@ -54,23 +54,23 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
 
 ### <a name="parameters"></a>Parametry
 
-*pApt*<br/>
-Nie używany w ATL domyślną implementację.
+*pApt (pApt)*<br/>
+Nie jest używany w domyślnej implementacji ATL.
 
-*nThreads*<br/>
-Maksymalna liczba wątków w EXE module.
+*nWątki*<br/>
+Maksymalna liczba wątków w module EXE.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba całkowita między 0 a (*nThreads* - 1). Identyfikuje jeden z wątków w EXE module.
+Liczą całkowitą między*nThreads* oder. Identyfikuje jeden z wątków w module EXE.
 
 ### <a name="remarks"></a>Uwagi
 
-Można zastąpić `GetThread` zapewnienie inną metodę wyboru lub aby wprowadzić użytkowania *pApt* parametru.
+Można `GetThread` zastąpić, aby zapewnić inną metodę wyboru lub użyć *pApt* parametru.
 
-`GetThread` jest wywoływana przez [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).
+`GetThread`jest wywoływana przez [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa CComApartment](../../atl/reference/ccomapartment-class.md)<br/>
-[Klasa — Przegląd](../../atl/atl-class-overview.md)
+[Klasa CComapartment](../../atl/reference/ccomapartment-class.md)<br/>
+[Przegląd klas](../../atl/atl-class-overview.md)

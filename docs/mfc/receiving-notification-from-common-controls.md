@@ -11,37 +11,37 @@ helpviewer_keywords:
 - Windows common controls [MFC], notifications
 - WM_NOTIFY message
 ms.assetid: 50194592-d60d-44d0-8ab3-338a2a2c63e7
-ms.openlocfilehash: 73315d4a1107204bc6adc885729fdeeaeb7f98d0
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 9205facb5ec4e2491308020d9667a27ab8deb96b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75298977"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371779"
 ---
 # <a name="receiving-notification-from-common-controls"></a>Odbieranie powiadomienia od formantów wspólnych
 
-Formanty standardowe są oknami podrzędnymi, które wysyłają komunikaty powiadomień do okna nadrzędnego, gdy zdarzenia, takie jak dane wejściowe użytkownika, występują w formancie.
+Typowe formanty są okna podrzędne, które wysyłają komunikaty powiadomień do okna nadrzędnego, gdy zdarzenia, takie jak dane wejściowe od użytkownika, występują w formancie.
 
-Aplikacja korzysta z tych komunikatów powiadomień, aby określić, jakie działania użytkownik chce wykonać. Najczęstsze formanty wysyłają komunikaty powiadomień jako wiadomości WM_NOTIFY. Formanty systemu Windows wysyłają większość komunikatów powiadomień jako wiadomości WM_COMMAND. [CWnd:: Onpowiadamianie](../mfc/reference/cwnd-class.md#onnotify) jest programem obsługi komunikatu WM_NOTIFY. Podobnie jak w przypadku `CWnd::OnCommand`, implementacja `OnNotify` wysyła komunikat powiadomienia do `OnCmdMsg` do obsługi w mapach komunikatów. Wpis mapy komunikatów na potrzeby obsługi powiadomień jest ON_NOTIFY. Aby uzyskać więcej informacji, zobacz [Uwagi techniczne 61: ON_NOTIFY i WM_NOTIFY komunikatów](../mfc/tn061-on-notify-and-wm-notify-messages.md).
+Aplikacja opiera się na tych komunikatów powiadomień, aby określić, jakie działania użytkownik chce go podjąć. Najczęściej formanty wysyłają wiadomości powiadomień jako WM_NOTIFY wiadomości. Formanty systemu Windows wysyłają większość wiadomości powiadomień jako WM_COMMAND wiadomości. [CWnd::OnNotify](../mfc/reference/cwnd-class.md#onnotify) jest program obsługi dla WM_NOTIFY wiadomości. Podobnie `CWnd::OnCommand`jak w `OnNotify` przypadku , implementacja `OnCmdMsg` wysyła komunikat powiadomienia do obsługi w mapach wiadomości. Wpis mapy wiadomości do obsługi powiadomień jest ON_NOTIFY. Aby uzyskać więcej informacji, zobacz [Uwaga techniczna 61: ON_NOTIFY i WM_NOTIFY Wiadomości](../mfc/tn061-on-notify-and-wm-notify-messages.md).
 
-Alternatywnie Klasa pochodna może obsługiwać własne komunikaty powiadomień przy użyciu "odbicie komunikatów". Aby uzyskać więcej informacji, zobacz [Uwaga techniczna 62: odbicie komunikatu dla formantów systemu Windows](../mfc/tn062-message-reflection-for-windows-controls.md).
+Alternatywnie klasa pochodna może obsługiwać własne komunikaty powiadomień za pomocą "odbicia wiadomości". Aby uzyskać więcej informacji, zobacz [Uwaga techniczna 62: Odbicie wiadomości dla formantów systemu Windows](../mfc/tn062-message-reflection-for-windows-controls.md).
 
-## <a name="retrieving-the-cursor-position-in-a-notification-message"></a>Pobieranie pozycji kursora w komunikacie powiadomienia
+## <a name="retrieving-the-cursor-position-in-a-notification-message"></a>Pobieranie pozycji kursora w wiadomości powiadomienia
 
-Czasami warto określić bieżącą pozycję kursora, gdy pewne komunikaty powiadomienia są odbierane przez wspólny formant. Na przykład warto określić bieżącą lokalizację kursora, gdy typowy formant odbierze NM_RCLICK komunikat powiadomienia.
+Czasami warto określić bieżącą pozycję kursora, gdy niektóre komunikaty powiadomień są odbierane przez wspólny formant. Na przykład warto określić bieżącą lokalizację kursora, gdy wspólny formant odbiera komunikat powiadomienia NM_RCLICK.
 
-Istnieje prosty sposób osiągnięcia tego, wywołując `CWnd::GetCurrentMessage`. Jednakże ta metoda pobiera tylko położenie kursora w momencie wysłania komunikatu. Ponieważ kursor mógł zostać przeniesiony od momentu wysłania wiadomości, należy wywołać `CWnd::GetCursorPos`, aby uzyskać bieżącą pozycję kursora.
+Istnieje prosty sposób, aby to `CWnd::GetCurrentMessage`osiągnąć, dzwoniąc . Jednak ta metoda pobiera tylko położenie kursora w momencie wysłania wiadomości. Ponieważ kursor mógł zostać przeniesiony od wysłania wiadomości, należy wywołać, `CWnd::GetCursorPos` aby uzyskać bieżącą pozycję kursora.
 
 > [!NOTE]
->  `CWnd::GetCurrentMessage` powinna być wywoływana tylko w ramach procedury obsługi komunikatów.
+> `CWnd::GetCurrentMessage`powinien być wywoływany tylko w ramach obsługi wiadomości.
 
 Dodaj następujący kod do treści programu obsługi komunikatów powiadomień (w tym przykładzie NM_RCLICK):
 
 [!code-cpp[NVC_MFCControlLadenDialog#4](../mfc/codesnippet/cpp/receiving-notification-from-common-controls_1.cpp)]
 
-W tym momencie Lokalizacja kursora myszy jest przechowywana w obiekcie `cursorPos`.
+W tym momencie lokalizacja kursora myszy `cursorPos` jest przechowywana w obiekcie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tworzenie i używanie kontrolek](../mfc/making-and-using-controls.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](../mfc/controls-mfc.md)

@@ -1,5 +1,5 @@
 ---
-title: CBaseKeyFrame Class
+title: Klasa CBaseKeyFrame
 ms.date: 11/04/2016
 f1_keywords:
 - CBaseKeyFrame
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CBaseKeyFrame [MFC], m_bIsKeyframeAtOffset
 - CBaseKeyFrame [MFC], m_keyframe
 ms.assetid: 285a2eff-e7c4-43be-b5aa-737727e6866d
-ms.openlocfilehash: d36c924d30bd728fcd54b6cdf6805ade25e20b5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fcd55f6a157f4b837090a3608fb509b870aae5d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218409"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352988"
 ---
-# <a name="cbasekeyframe-class"></a>CBaseKeyFrame Class
+# <a name="cbasekeyframe-class"></a>Klasa CBaseKeyFrame
 
-Implementuje podstawowe funkcje ramek kluczowych.
+Implementuje podstawowe funkcje klatki kluczowej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,32 +45,32 @@ class CBaseKeyFrame : public CObject;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CBaseKeyFrame::CBaseKeyFrame](#cbasekeyframe)|Tworzy obiekt klatki kluczowej.|
+|[CBaseKeyFrame::CBaseKeyFrame](#cbasekeyframe)|Konstruuje obiekt klatki kluczowej.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|Dodaje kluczową prezentowania w scenorysach.|
+|[CBaseKeyFrame::Płyta AddToStory](#addtostoryboard)|Dodaje klatkę kluczową do scenorysu.|
 |[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Zwraca podstawową wartość klatki kluczowej.|
-|[CBaseKeyFrame::IsAdded](#isadded)|Informuje, czy kluczową została dodana do scenorysu.|
-|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Określa, czy ramka kluczowa powinny zostać dodane do scenorysu, offset lub po przejściu.|
+|[CBaseKeyFrame::Isadded](#isadded)|Określa, czy klatka kluczowa została dodana do scenorysu.|
+|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Określa, czy klatka kluczowa ma zostać dodana do scenorysu z przesunięciem, czy po przejściu.|
 
-### <a name="protected-data-members"></a>Chronione elementy członkowskie danych
+### <a name="protected-data-members"></a>Członkowie chronionych danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CBaseKeyFrame::m_bAdded](#m_badded)|Określa, czy ta ramka kluczowa zostały dodane do scenorysu.|
-|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Określa, czy ta ramka kluczowa powinny zostać dodane do scenorysu na przesunięcie od innego istniejącego ramki kluczowej lub na końcu niektóre przejścia.|
-|[CBaseKeyFrame::m_keyframe](#m_keyframe)|Reprezentuje ramkę kluczową interfejs API animacji Windows. Gdy ramka kluczowa nie został zainicjowany. ustawiono wstępnie zdefiniowaną wartość UI_ANIMATION_KEYFRAME_STORYBOARD_START.|
+|[CBaseKeyFrame::m_bAdded](#m_badded)|Określa, czy ta klatka kluczowa została dodana do scenorysu.|
+|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Określa, czy ta klatka kluczowa ma zostać dodana do scenorysu z przesunięciem od innej istniejącej klatki kluczowej, czy na końcu niektórych przejść.|
+|[CBaseKeyFrame::m_keyframe](#m_keyframe)|Reprezentuje klatkę kluczową interfejsu API animacji systemu Windows. Gdy klatka kluczowa nie jest inicjowana, jest ustawiona na wstępnie zdefiniowaną wartość UI_ANIMATION_KEYFRAME_STORYBOARD_START.|
 
 ## <a name="remarks"></a>Uwagi
 
-Encapsulates UI_ANIMATION_KEYFRAME variable. Służy jako klasa bazowa dla implementacji klatki kluczowej. Kluczową reprezentuje moment w czasie w ramach scenorysu i może służyć do określenia godziny rozpoczęcia i zakończenia przejść. Istnieją dwa rodzaje ramek kluczowych - klatki kluczowe dodane do scenorysu od określonego przesunięcia (w czasie) lub klatki kluczowe dodane po przejścia. Ponieważ czasów trwania niektóre przejścia nie może być znane, przed uruchomieniem animacji, rzeczywiste wartości niektórych klatki kluczowe są określane w czasie wykonywania tylko. Ponieważ klatki kluczowe może zależeć od przejścia, co ich zależą od ramkami kluczowymi, jest ważne, aby zapobiec nieskończonej rekursje podczas tworzenia łańcuchów klatki kluczowej.
+Hermetyzuje zmienną UI_ANIMATION_KEYFRAME. Służy jako klasa podstawowa dla każdej implementacji klatki kluczowej. Klatka kluczowa reprezentuje moment w czasie w scenorysie i może służyć do określania czasów rozpoczęcia i zakończenia przejść. Istnieją dwa typy klatek kluczowych - klatki kluczowe dodawane do scenorysu z określonym przesunięciem (w czasie) lub klatki kluczowe dodane po określonym przejściu. Ponieważ czas trwania niektórych przejść nie może być znany przed rozpoczęciem animacji, rzeczywiste wartości niektórych klatek kluczowych są określane tylko w czasie wykonywania. Ponieważ klatki kluczowe mogą zależeć od przejść, które z kolei zależą od klatek kluczowych, ważne jest, aby zapobiec nieskończonym powtarzaniom podczas tworzenia łańcuchów klatek kluczowych.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[CObject](../../mfc/reference/cobject-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)
 
 `CBaseKeyFrame`
 
@@ -78,9 +78,9 @@ Encapsulates UI_ANIMATION_KEYFRAME variable. Służy jako klasa bazowa dla imple
 
 **Nagłówek:** afxanimationcontroller.h
 
-##  <a name="addtostoryboard"></a>  CBaseKeyFrame::AddToStoryboard
+## <a name="cbasekeyframeaddtostoryboard"></a><a name="addtostoryboard"></a>CBaseKeyFrame::Płyta AddToStory
 
-Dodaje kluczową prezentowania w scenorysach.
+Dodaje klatkę kluczową do scenorysu.
 
 ```
 virtual BOOL AddToStoryboard(
@@ -94,25 +94,25 @@ virtual BOOL AddToStoryboard(
 Wskaźnik do scenorysu.
 
 *bDeepAdd*<br/>
-Jeśli ten parametr ma wartość TRUE, a ramki kluczowej dodawany zależy od innych ramki kluczowej lub przejścia, ta metoda próbuje dodać tej ramki kluczowej lub przejście do scenorysu najpierw.
+Jeśli ten parametr ma wartość PRAWDA, a dodawana klatka kluczowa zależy od innej klatki kluczowej lub przejścia, ta metoda próbuje najpierw dodać tę klatkę kluczową lub przejście do scenorysu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli ramka kluczowa została dodana do scenorysu pomyślnie; w przeciwnym razie wartość FALSE.
+PRAWDA, jeśli klatka kluczowa została pomyślnie dodana do scenorysu; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana, aby dodać kluczową prezentowania w scenorysach.
+Ta metoda jest wywoływana, aby dodać klatkę kluczową do scenorysu.
 
-##  <a name="cbasekeyframe"></a>  CBaseKeyFrame::CBaseKeyFrame
+## <a name="cbasekeyframecbasekeyframe"></a><a name="cbasekeyframe"></a>CBaseKeyFrame::CBaseKeyFrame
 
-Tworzy obiekt klatki kluczowej.
+Konstruuje obiekt klatki kluczowej.
 
 ```
 CBaseKeyFrame();
 ```
 
-##  <a name="getanimationkeyframe"></a>  CBaseKeyFrame::GetAnimationKeyframe
+## <a name="cbasekeyframegetanimationkeyframe"></a><a name="getanimationkeyframe"></a>CBaseKeyFrame::GetAnimationKeyframe
 
 Zwraca podstawową wartość klatki kluczowej.
 
@@ -122,15 +122,15 @@ UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bieżąca ramka kluczowa. Wartość domyślna to UI_ANIMATION_KEYFRAME_STORYBOARD_START.
+Bieżąca klatka kluczowa. Wartość domyślna jest UI_ANIMATION_KEYFRAME_STORYBOARD_START.
 
 ### <a name="remarks"></a>Uwagi
 
-Jest to metoda dostępu do podstawowej wartości ramki kluczowej.
+Jest to akcesor do podstawowej wartości klatki kluczowej.
 
-##  <a name="isadded"></a>  CBaseKeyFrame::IsAdded
+## <a name="cbasekeyframeisadded"></a><a name="isadded"></a>CBaseKeyFrame::Isadded
 
-Informuje, czy kluczową została dodana do scenorysu.
+Określa, czy klatka kluczowa została dodana do scenorysu.
 
 ```
 BOOL IsAdded() const;
@@ -138,15 +138,15 @@ BOOL IsAdded() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli ramka kluczowa jest dodawany do scenorysu; otehrwise wartość FALSE.
+PRAWDA, jeśli klatka kluczowa zostanie dodana do scenorysu; otehrwise FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-W klasie bazowej IsAdded zawsze zwraca wartość PRAWDA, ale zostanie on przesłonięty w klasach pochodnych.
+W klasie podstawowej IsAdded zawsze zwraca true, ale jest zastępowany w klasach pochodnych.
 
-##  <a name="iskeyframeatoffset"></a>  CBaseKeyFrame::IsKeyframeAtOffset
+## <a name="cbasekeyframeiskeyframeatoffset"></a><a name="iskeyframeatoffset"></a>CBaseKeyFrame::IsKeyframeAtOffset
 
-Określa, czy ramka kluczowa powinny zostać dodane do scenorysu, offset lub po przejściu.
+Określa, czy klatka kluczowa ma zostać dodana do scenorysu z przesunięciem, czy po przejściu.
 
 ```
 BOOL IsKeyframeAtOffset() const;
@@ -154,36 +154,36 @@ BOOL IsKeyframeAtOffset() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość TRUE, jeśli ramka kluczowa powinny zostać dodane do scenorysu w niektórych określonego przesunięcia. Wartość FALSE, jeśli ramka kluczowa powinny zostać dodane do scenorysu po niektórych przejścia.
+PRAWDA, jeśli klatka kluczowa powinna zostać dodana do scenorysu przy określonym przesunięciu. FAŁSZ, jeśli klatka kluczowa powinna zostać dodana do scenorysu po pewnym przejściu.
 
 ### <a name="remarks"></a>Uwagi
 
-Określa, czy ramka kluczowa powinny zostać dodane do scenorysu przy przesunięciu. Przesunięcie lub przejścia należy określić w klasie pochodnej.
+Określa, czy klatka kluczowa ma zostać dodana do scenorysu z przesunięciem. Przesunięcie lub przejście musi być określone w klasie pochodnej.
 
-##  <a name="m_badded"></a>  CBaseKeyFrame::m_bAdded
+## <a name="cbasekeyframem_badded"></a><a name="m_badded"></a>CBaseKeyFrame::m_bAdded
 
-Określa, czy ta ramka kluczowa zostały dodane do scenorysu.
+Określa, czy ta klatka kluczowa została dodana do scenorysu.
 
 ```
 BOOL m_bAdded;
 ```
 
-##  <a name="m_biskeyframeatoffset"></a>  CBaseKeyFrame::m_bIsKeyframeAtOffset
+## <a name="cbasekeyframem_biskeyframeatoffset"></a><a name="m_biskeyframeatoffset"></a>CBaseKeyFrame::m_bIsKeyframeAtOffset
 
-Określa, czy ta ramka kluczowa powinny zostać dodane do scenorysu na przesunięcie od innego istniejącego ramki kluczowej lub na końcu niektóre przejścia.
+Określa, czy ta klatka kluczowa ma zostać dodana do scenorysu z przesunięciem od innej istniejącej klatki kluczowej, czy na końcu niektórych przejść.
 
 ```
 BOOL m_bIsKeyframeAtOffset;
 ```
 
-##  <a name="m_keyframe"></a>  CBaseKeyFrame::m_keyframe
+## <a name="cbasekeyframem_keyframe"></a><a name="m_keyframe"></a>CBaseKeyFrame::m_keyframe
 
-Reprezentuje ramkę kluczową interfejs API animacji Windows. Gdy ramka kluczowa nie został zainicjowany. ustawiono wstępnie zdefiniowaną wartość UI_ANIMATION_KEYFRAME_STORYBOARD_START.
+Reprezentuje klatkę kluczową interfejsu API animacji systemu Windows. Gdy klatka kluczowa nie jest inicjowana, jest ustawiona na wstępnie zdefiniowaną wartość UI_ANIMATION_KEYFRAME_STORYBOARD_START.
 
 ```
 UI_ANIMATION_KEYFRAME m_keyframe;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy](../../mfc/reference/mfc-classes.md)

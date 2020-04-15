@@ -11,42 +11,42 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-ms.openlocfilehash: eab688022c311f3d20fc092736ee4c7d37232a43
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 514251475050e728be1959417ead1dbdf96e4800
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508094"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358194"
 ---
 # <a name="mfc-com"></a>MFC COM
 
-Podzbiór MFC jest przeznaczony do obsługi modelu COM, podczas gdy większość Active Template Library (ATL) jest zaprojektowana do programowania COM. W tej części tematów opisano obsługę modelu COM w programie MFC.
+Podzbiór MFC jest przeznaczony do obsługi com, podczas gdy większość biblioteki aktywnych szablonów (ATL) jest przeznaczony do programowania COM. W tej sekcji tematów opisano obsługę MFC dla modelu COM.
 
-Technologie aktywne (takie jak kontrolki ActiveX, dokumenty aktywne zawiera, OLE i tak dalej) używają Component Object Model (COM), aby umożliwić składnikom oprogramowania współdziałanie ze sobą w środowisku sieciowym, niezależnie od języka, w którym zostały utworzony. Aktywne technologie mogą służyć do tworzenia aplikacji uruchamianych na pulpicie lub w Internecie. Aby uzyskać więcej informacji, zobacz [wprowadzenie do modelu COM](../atl/introduction-to-com.md) lub [Component Object Model](/windows/win32/com/the-component-object-model).
+Aktywne technologie (takie jak formanty ActiveX, Aktywna hermetyzacja dokumentu, OLE itd.) używają modelu COM (Component Object Model), aby umożliwić składnikom oprogramowania interakcję ze sobą w środowisku sieciowym, niezależnie od języka, w którym zostały utworzone. Aktywne technologie mogą być używane do tworzenia aplikacji działających na pulpicie lub w Internecie. Aby uzyskać więcej informacji, zobacz [Wprowadzenie do modelu COM](../atl/introduction-to-com.md) lub Modelu obiektu [komponentu](/windows/win32/com/the-component-object-model).
 
-Technologie aktywne obejmują technologie klienta i serwera, w tym następujące:
+Aktywne technologie obejmują zarówno technologie klienta, jak i serwerów, w tym:
 
-- Formanty ActiveX są obiektami interaktywnymi, które mogą być używane w kontenerach, takich jak witryna sieci Web. Aby uzyskać więcej informacji na temat kontrolek ActiveX, zobacz:
+- Formanty ActiveX są interaktywnymi obiektami, które mogą być używane w kontenerach, takich jak witryna sieci Web. Aby uzyskać więcej informacji na temat formantów ActiveX, zobacz:
 
-   - [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
+  - [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
 
-   - [Kontrolki ActiveX w Internecie](../mfc/activex-controls-on-the-internet.md)
+  - [Kontrolki ActiveX w Internecie](../mfc/activex-controls-on-the-internet.md)
 
-   - [Podsumowanie Internet](../mfc/mfc-internet-programming-basics.md)
+  - [Przegląd: Internet](../mfc/mfc-internet-programming-basics.md)
 
-   - [Uaktualnianie istniejącej kontrolki ActiveX do użycia w Internecie](../mfc/upgrading-an-existing-activex-control.md)
+  - [Uaktualnianie istniejącego formantu ActiveX do użycia w Internecie](../mfc/upgrading-an-existing-activex-control.md)
 
-   - [Debugowanie kontrolki ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)
+  - [Debugowanie formantu ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)
 
-- Aktywne skrypty kontroluje zintegrowane zachowanie co najmniej jednej kontrolki ActiveX z przeglądarki lub serwera. Aby uzyskać więcej informacji na temat aktywnych skryptów, zobacz [aktywną technologię w Internecie](../mfc/active-technology-on-the-internet.md).
+- Aktywne skrypty sterują zintegrowanym zachowaniem jednego lub większej liczby formantów ActiveX z przeglądarki lub serwera. Aby uzyskać więcej informacji na temat aktywnego skryptów, zobacz [Active Technology w Internecie](../mfc/active-technology-on-the-internet.md).
 
-- [Automatyzacja](../mfc/automation.md) (dawniej znana jako Automatyzacja OLE) umożliwia jednej aplikacji manipulowanie obiektami zaimplementowanymi w innej aplikacji lub obiektów "uwidaczniania", dzięki czemu można manipulować nimi.
+- [Automatyzacja](../mfc/automation.md) (wcześniej znany jako automatyzacji OLE) umożliwia jednej aplikacji do manipulowania obiektami zaimplementowanymi w innej aplikacji lub "uwidaczniać" obiekty, dzięki czemu mogą być manipulowane.
 
-   Obiekt zautomatyzowany może być lokalny lub zdalny (na innym komputerze dostępnym w sieci). Automatyzacja jest dostępna zarówno dla obiektów OLE, jak i COM.
+   Obiekt zautomatyzowany może być lokalny lub zdalny (na innym komputerze dostępnym w sieci). Automatyzacja jest dostępna dla obiektów OLE i COM.
 
-- Ta sekcja zawiera również informacje dotyczące sposobu pisania składników COM za pomocą MFC, na przykład w [punktach połączenia](../mfc/connection-points.md).
+- Ta sekcja zawiera również informacje na temat sposobu pisania składników COM przy użyciu MFC, na przykład w [punktach połączenia](../mfc/connection-points.md).
 
-Aby zapoznać się z informacjami o tym, co jest nadal nazywane technologią OLE, a teraz nazywamy technologię Active, zapoznaj się z tematami dotyczącymi [OLE](../mfc/ole-in-mfc.md).
+Aby zapoznać się z omówienia tego, co nadal nazywa się OLE w porównaniu z tym, co jest obecnie nazywane aktywną technologią, zobacz tematy [ole](../mfc/ole-in-mfc.md).
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -58,6 +58,6 @@ Aby zapoznać się z informacjami o tym, co jest nadal nazywane technologią OLE
 
 [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pojęcia](../mfc/mfc-concepts.md)
