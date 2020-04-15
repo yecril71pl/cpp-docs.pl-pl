@@ -1,5 +1,5 @@
 ---
-title: '&lt;funkcje&gt; systemu iOS'
+title: '&lt;funkcje&gt; ios'
 ms.date: 11/04/2016
 f1_keywords:
 - xiosbase/std::defaultfloat
@@ -56,18 +56,18 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: 3ba2ba463bbd59bd8febccb73c37cc3b79a4c75b
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: 67ac9259110abbd03fc054ea4e60ed1715030dcc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150632"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375416"
 ---
-# <a name="ltiosgt-functions"></a>&lt;funkcje&gt; systemu iOS
+# <a name="ltiosgt-functions"></a>&lt;funkcje&gt; ios
 
 ## <a name="boolalpha"></a><a name="boolalpha"></a>boolalpha
 
-Określa, że zmienne typu [bool](../cpp/bool-cpp.md) są wyświetlane jako **true** lub **false** w strumieniu.
+Określa, że zmienne typu [bool](../cpp/bool-cpp.md) są wyświetlane jako **prawdziwe** lub **fałszywe** w strumieniu.
 
 ```cpp
 ios_base& boolalpha(ios_base& str);
@@ -75,20 +75,20 @@ ios_base& boolalpha(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
 Domyślnie zmienne typu **bool** są wyświetlane jako 1 lub 0.
 
-`boolalpha` efektywne wywołania `str.`[setf](../standard-library/ios-base-class.md#setf)(`ios_base::boolalpha`), a następnie zwraca *str*.
+`boolalpha`skutecznie `str.`wywołuje [setf](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`), a następnie zwraca *str*.
 
-[noboolalpha](../standard-library/ios-functions.md#noboolalpha) odwraca efekt `boolalpha`.
+[noboolalpha](../standard-library/ios-functions.md#noboolalpha) odwraca działanie `boolalpha`.
 
 ### <a name="example"></a>Przykład
 
@@ -117,9 +117,9 @@ true
 true
 ```
 
-## <a name="dec"></a><a name="dec"></a>grudzień
+## <a name="dec"></a><a name="dec"></a>Grudnia
 
-Określa, że zmienne całkowite pojawiają się w notacji Base 10.
+Określa, że zmienne całkowite są wyświetlane w notacji podstawowej 10.
 
 ```cpp
 ios_base& dec(ios_base& str);
@@ -127,18 +127,18 @@ ios_base& dec(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie zmienne typu integer są wyświetlane w podstawowym 10.
+Domyślnie zmienne całkowite są wyświetlane w podstawowej 10.
 
-`dec` efektywne wywołania `str.`[setf](../standard-library/ios-base-class.md#setf)(`ios_base::dec`, `ios_base::basefield`), a następnie zwraca *str*.
+`dec`skutecznie `str.`wywołuje [setf](../standard-library/ios-base-class.md#setf)( `ios_base::dec`, `ios_base::basefield`), a następnie zwraca *str*.
 
 ### <a name="example"></a>Przykład
 
@@ -170,9 +170,9 @@ int main( )
 100
 ```
 
-## <a name="ltiosgt-defaultfloat"></a><a name="ios_defaultfloat"></a>&lt;iOS&gt; defaultfloat
+## <a name="ltiosgt-defaultfloat"></a><a name="ios_defaultfloat"></a>&lt;ios&gt; defaultfloat
 
-Konfiguruje flagi obiektu `ios_base`, aby użyć domyślnego formatu wyświetlania wartości zmiennoprzecinkowych.
+Konfiguruje flagi `ios_base` obiektu, aby używać domyślnego formatu wyświetlania dla wartości zmiennoprzec pływakowych.
 
 ```cpp
 ios_base& defaultfloat(ios_base& iosbase);
@@ -185,11 +185,11 @@ Obiekt `ios_base`.
 
 ### <a name="remarks"></a>Uwagi
 
-Manipulator skutecznie wywołuje `iosbase.`[ios_base:: unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`, a następnie zwraca *iosbase*.
+Manipulator skutecznie `iosbase.`wywołuje [ios_base::unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`, a następnie zwraca *iosbase*.
 
-## <a name="fixed"></a><a name="fixed"></a>FIXED
+## <a name="fixed"></a><a name="fixed"></a>Stałe
 
-Określa, że liczba zmiennoprzecinkowa jest wyświetlana w notacji o stałej liczbie dziesiętnej.
+Określa, że liczba zmiennoprzecinkowa jest wyświetlana w notacji o stałym przecinku.
 
 ```cpp
 ios_base& fixed(ios_base& str);
@@ -197,18 +197,18 @@ ios_base& fixed(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-`fixed` jest domyślnym notacją wyświetlania liczb zmiennoprzecinkowych. [naukowe](../standard-library/ios-functions.md#scientific) powoduje, że liczby zmiennoprzecinkowe będą wyświetlane przy użyciu notacji wykładniczej.
+`fixed`jest domyślną notacją wyświetlania dla liczb zmiennoprzecinkowych. [naukowe](../standard-library/ios-functions.md#scientific) powoduje, że liczby zmiennoprzecinkowe mają być wyświetlane przy użyciu notacji naukowej.
 
-Manipulator skutecznie wywołuje *str*. [setf](../standard-library/ios-base-class.md#setf)(`ios_base::fixed`, `ios_base::floatfield`), a następnie zwraca *str*.
+Manipulator skutecznie wywołuje *str*. [setf](../standard-library/ios-base-class.md#setf) `ios_base::fixed`( `ios_base::floatfield` , ), a następnie zwraca *str*.
 
 ### <a name="example"></a>Przykład
 
@@ -235,9 +235,9 @@ int main( )
 1.1
 ```
 
-## <a name="hex"></a><a name="hex"></a>szesnastkowy
+## <a name="hex"></a><a name="hex"></a>Hex
 
-Określa, że zmienne typu integer są wyświetlane w notacji Base 16.
+Określa, że zmienne całkowite pojawiają się w notacji podstawowej 16.
 
 ```cpp
 ios_base& hex(ios_base& str);
@@ -245,24 +245,24 @@ ios_base& hex(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie zmienne typu integer są wyświetlane w notacji Base 10. w [gru](../standard-library/ios-functions.md#dec) i [OCT](../standard-library/ios-functions.md#oct) zmieniono również sposób wyświetlania zmiennych liczb całkowitych.
+Domyślnie zmienne całkowite są wyświetlane w notacji podstawowej 10. [dec](../standard-library/ios-functions.md#dec) i [oct](../standard-library/ios-functions.md#oct) również zmienić sposób pojawiania się zmiennych całkowitych.
 
-Manipulator skutecznie wywołuje `str` **.** [setf](../standard-library/ios-base-class.md#setf)(`ios_base::hex`, `ios_base::basefield`), a następnie zwraca *str*.
+Manipulator skutecznie `str`wywołuje **.** [setf](../standard-library/ios-base-class.md#setf) `ios_base::hex`( `ios_base::basefield`, ), a następnie zwraca *str*.
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj [się](../standard-library/ios-functions.md#dec) z przykładem, jak korzystać z `hex`.
+Zobacz [dec](../standard-library/ios-functions.md#dec) na przykład jak `hex`używać .
 
-## <a name="hexfloat"></a><a name="hexfloat"></a>hexfloat
+## <a name="hexfloat"></a><a name="hexfloat"></a>heksfloat
 
 ```cpp
 ios_base& hexfloat (ios_base& str);
@@ -276,9 +276,9 @@ enum class io_errc {
 };
 ```
 
-## <a name="internal"></a><a name="internal"></a>wewnętrz
+## <a name="internal"></a><a name="internal"></a>Wewnętrznego
 
-Powoduje, że znak liczby jest wyrównany do lewej, a liczba powinna być wyrównana do prawej.
+Powoduje, że znak liczby jest wyjustowany, a numer do prawej.
 
 ```cpp
 ios_base& internal(ios_base& str);
@@ -286,18 +286,18 @@ ios_base& internal(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
 [showpos](../standard-library/ios-functions.md#showpos) powoduje, że znak jest wyświetlany dla liczb dodatnich.
 
-Manipulator skutecznie wywołuje `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: Internal](../standard-library/ios-base-class.md#fmtflags)`,` [ios_base:: adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`, a następnie zwraca *str*.
+Manipulator skutecznie `str.`wywołuje [setf](../standard-library/ios-base-class.md#setf)`(`[ios_base::internal](../standard-library/ios-base-class.md#fmtflags) `,` [ios_base::adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`, a następnie zwraca *str*.
 
 ### <a name="example"></a>Przykład
 
@@ -334,9 +334,9 @@ template <> struct is_error_code_enum<io_errc> : public true_type { };
 const error_category& iostream_category() noexcept;
 ```
 
-## <a name="left"></a><a name="left"></a>lewym
+## <a name="left"></a><a name="left"></a>Lewej
 
-Powoduje, że tekst nie jest tak szeroki, jak szerokość danych wyjściowych, która ma być wyświetlana w strumieniu opróżniania z lewego marginesu.
+Powoduje, że tekst, który nie jest tak szeroki, jak szerokość wyjściowa, aby pojawić się w strumieniu równo z lewym marginesem.
 
 ```cpp
 ios_base& left(ios_base& str);
@@ -344,16 +344,16 @@ ios_base& left(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-Manipulator skutecznie wywołuje `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::left, ios_base::adjustfield)`, a następnie zwraca *str*.
+Manipulator skutecznie `str.`wywołuje [setf](../standard-library/ios-base-class.md#setf)`(ios_base::left, ios_base::adjustfield)`, a następnie zwraca *str*.
 
 ### <a name="example"></a>Przykład
 
@@ -389,7 +389,7 @@ error_code make_error_code(io_errc e) noexcept;
 error_condition make_error_condition(io_errc e) noexcept;
 ```
 
-## <a name="noboolalpha"></a><a name="noboolalpha"></a>noboolalpha
+## <a name="noboolalpha"></a><a name="noboolalpha"></a>noboolalpha ( noboolalpha )
 
 Określa, że zmienne typu [bool](../cpp/bool-cpp.md) są wyświetlane jako 1 lub 0 w strumieniu.
 
@@ -399,28 +399,28 @@ ios_base& noboolalpha(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie `noboolalpha` jest włączona.
+Domyślnie `noboolalpha` obowiązuje.
 
-`noboolalpha` efektywne wywołania `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::boolalpha)`, a następnie zwraca *str*.
+`noboolalpha`skutecznie `str.`wywołuje [unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::boolalpha)`, a następnie zwraca *str*.
 
-[boolalpha](../standard-library/ios-functions.md#boolalpha) odwraca efekt `noboolalpha`.
+[boolalpha](../standard-library/ios-functions.md#boolalpha) odwraca działanie `noboolalpha`.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [boolalpha](../standard-library/ios-functions.md#boolalpha) , aby zapoznać się z przykładem korzystania z `noboolalpha`.
+Zobacz [boolalpha](../standard-library/ios-functions.md#boolalpha) na przykład `noboolalpha`za pomocą .
 
 ## <a name="noshowbase"></a><a name="noshowbase"></a>noshowbase
 
-Wyłącza opcję wskazującą podstawę notacji, w której wyświetlana jest liczba.
+Wyłącza się wskazując bazę notacyjną, w której wyświetlana jest liczba.
 
 ```cpp
 ios_base& noshowbase(ios_base& str);
@@ -428,26 +428,26 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie opcja `noshowbase` jest włączona. Użyj [showbase](../standard-library/ios-functions.md#showbase) , aby wskazać notację z numeracji.
+Domyślnie opcja `noshowbase` jest włączona. Użyj [showbase,](../standard-library/ios-functions.md#showbase) aby wskazać wartość notacyjną liczb.
 
-Manipulator skutecznie wywołuje `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::showbase)`, a następnie zwraca *str*.
+Manipulator skutecznie `str.`wywołuje [unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::showbase)`, a następnie zwraca *str*.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [showbase](../standard-library/ios-functions.md#showbase) , aby zapoznać się z przykładem korzystania z `noshowbase`.
+Zobacz [showbase](../standard-library/ios-functions.md#showbase) na przykład, `noshowbase`jak używać .
 
 ## <a name="noshowpoint"></a><a name="noshowpoint"></a>noshowpoint
 
-Wyświetla tylko liczbę całkowitą części liczb zmiennoprzecinkowych, których część ułamkowa ma wartość zero.
+Wyświetla tylko całą liczbę liczb zmiennoprzecinkowych, których część ułamkowa wynosi zero.
 
 ```cpp
 ios_base& noshowpoint(ios_base& str);
@@ -455,18 +455,18 @@ ios_base& noshowpoint(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-`noshowpoint` jest domyślnie włączona; Użyj [Showpoint](../standard-library/ios-functions.md#showpoint) i [Precision](../standard-library/ios-base-class.md#precision) , aby wyświetlić zera po przecinku dziesiętnym.
+`noshowpoint`jest domyślnie włączony; użyj [punktu pokazowego](../standard-library/ios-functions.md#showpoint) i [precyzji,](../standard-library/ios-base-class.md#precision) aby wyświetlić zera po przecinku.
 
-Manipulator skutecznie wywołuje `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::showpoint)`, a następnie zwraca *str*.
+Manipulator skutecznie `str.`wywołuje [unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::showpoint)`, a następnie zwraca *str*.
 
 ### <a name="example"></a>Przykład
 
@@ -494,7 +494,7 @@ int main( )
 
 ## <a name="noshowpos"></a><a name="noshowpos"></a>noshowpos
 
-Powoduje, że liczby dodatnie nie mogą być podpisywane jawnie.
+Powoduje, że liczby dodatnie nie są jawnie podpisane.
 
 ```cpp
 ios_base& noshowpos(ios_base& str);
@@ -502,26 +502,26 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
 Domyślnie opcja `noshowpos` jest włączona.
 
-Manipulator skutecznie wywołuje `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::showps)`, a następnie zwraca *str*.
+Manipulator skutecznie `str.`wywołuje [unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::showps)`, a następnie zwraca *str*.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [showpos](../standard-library/ios-functions.md#showpos) , aby zapoznać się z przykładem korzystania z `noshowpos`.
+Zobacz [showpos](../standard-library/ios-functions.md#showpos) na przykład `noshowpos`za pomocą .
 
-## <a name="noskipws"></a><a name="noskipws"></a>noskipws
+## <a name="noskipws"></a><a name="noskipws"></a>noskipws (noskipws)
 
-Zapoznaj się z miejscem, w którym znajduje się strumień wejściowy.
+Spowodować spacji do odczytu przez strumień wejściowy.
 
 ```cpp
 ios_base& noskipws(ios_base& str);
@@ -529,18 +529,18 @@ ios_base& noskipws(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie [skipws](../standard-library/ios-functions.md#skipws) jest włączone. Gdy spacja jest odczytywana w strumieniu wejściowym, sygnalizuje koniec buforu.
+Domyślnie [skipws](../standard-library/ios-functions.md#skipws) jest w mocy. Gdy spacja jest odczytywana w strumieniu wejściowym, sygnalizuje koniec buforu.
 
-Manipulator skutecznie wywołuje `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::skipws)`, a następnie zwraca *str*.
+Manipulator skutecznie `str.`wywołuje [unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::skipws)`, a następnie zwraca *str*.
 
 ### <a name="example"></a>Przykład
 
@@ -563,7 +563,7 @@ int main() {
 
 ## <a name="nounitbuf"></a><a name="nounitbuf"></a>nounitbuf
 
-Powoduje, że dane wyjściowe są buforowane i przetwarzane, gdy bufor jest pełny.
+Powoduje, że dane wyjściowe mają być buforowane i przetwarzane na gdy bufor jest pełny.
 
 ```cpp
 ios_base& nounitbuf(ios_base& str);
@@ -571,22 +571,22 @@ ios_base& nounitbuf(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-[unitbuf](../standard-library/ios-functions.md#unitbuf) powoduje, że bufor jest przetwarzany, gdy nie jest pusty.
+[unitbuf](../standard-library/ios-functions.md#unitbuf) powoduje, że bufor ma być przetwarzany, gdy nie jest pusty.
 
-Manipulator skutecznie wywołuje `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::unitbuf)`, a następnie zwraca *str*.
+Manipulator skutecznie `str.`wywołuje [unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::unitbuf)`, a następnie zwraca *str*.
 
-## <a name="nouppercase"></a><a name="nouppercase"></a>nowielkie litery
+## <a name="nouppercase"></a><a name="nouppercase"></a>nouppercase (wask nouppercase)
 
-Określa, że cyfry szesnastkowe i wykładnik w notacji wykładniczej są wyświetlane małymi literami.
+Określa, że cyfry szesnastkowe i wykładnik w notacji naukowej są wyświetlane w małych literach.
 
 ```cpp
 ios_base& nouppercase(ios_base& str);
@@ -594,24 +594,24 @@ ios_base& nouppercase(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-Manipulator skutecznie wywołuje `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::uppercase)`, a następnie zwraca *str*.
+Manipulator skutecznie `str.`wywołuje [unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::uppercase)`, a następnie zwraca *str*.
 
 ### <a name="example"></a>Przykład
 
-Przykład [](../standard-library/ios-functions.md#uppercase) użycia `nouppercase`.
+Zobacz [wielkie litery,](../standard-library/ios-functions.md#uppercase) aby `nouppercase`uzyskać przykład użycia .
 
-## <a name="oct"></a><a name="oct"></a>ósemkow
+## <a name="oct"></a><a name="oct"></a>Października
 
-Określa, że zmienne całkowite pojawiają się w notacji Base 8.
+Określa, że zmienne całkowite są wyświetlane w notacji podstawowej 8.
 
 ```cpp
 ios_base& oct(ios_base& str);
@@ -619,26 +619,26 @@ ios_base& oct(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie zmienne typu integer są wyświetlane w notacji Base 10. w [gru](../standard-library/ios-functions.md#dec) i [szesnastkowy](../standard-library/ios-functions.md#hex) zmieniają się sposób wyświetlania zmiennych liczb całkowitych.
+Domyślnie zmienne całkowite są wyświetlane w notacji podstawowej 10. [dec](../standard-library/ios-functions.md#dec) i [hex](../standard-library/ios-functions.md#hex) również zmienić sposób pojawiania się zmiennych całkowitych.
 
-Manipulator skutecznie wywołuje `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::oct, ios_base::basefield)`, a następnie zwraca *str*.
+Manipulator skutecznie `str.`wywołuje [setf](../standard-library/ios-base-class.md#setf)`(ios_base::oct, ios_base::basefield)`, a następnie zwraca *str*.
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj [się](../standard-library/ios-functions.md#dec) z przykładem, jak korzystać z `oct`.
+Zobacz [dec](../standard-library/ios-functions.md#dec) na przykład jak `oct`używać .
 
-## <a name="right"></a><a name="right"></a>Kliknij
+## <a name="right"></a><a name="right"></a>Prawo
 
-Powoduje, że tekst nie jest tak szeroki, jak szerokość danych wyjściowych, która ma być wyświetlana w strumieniu opróżniania z prawego marginesu.
+Powoduje, że tekst, który nie jest tak szeroki, jak szerokość wyjściowa, aby pojawić się w strumieniu równo z prawym marginesem.
 
 ```cpp
 ios_base& right(ios_base& str);
@@ -646,18 +646,18 @@ ios_base& right(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-[po lewej](../standard-library/ios-functions.md#left) również modyfikuje uzasadnienie tekstu.
+[w lewo](../standard-library/ios-functions.md#left) również modyfikuje uzasadnienie tekstu.
 
-Manipulator skutecznie wywołuje `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::right, ios_base::adjustfield)`, a następnie zwraca *str*.
+Manipulator skutecznie `str.`wywołuje [setf](../standard-library/ios-base-class.md#setf)`(ios_base::right, ios_base::adjustfield)`, a następnie zwraca *str*.
 
 ### <a name="example"></a>Przykład
 
@@ -693,9 +693,9 @@ int main( )
                    5
 ```
 
-## <a name="scientific"></a><a name="scientific"></a>nauk
+## <a name="scientific"></a><a name="scientific"></a>Naukowych
 
-Powoduje wyświetlanie liczb zmiennoprzecinkowych przy użyciu notacji wykładniczej.
+Powoduje, że liczby zmiennoprzecinkowe mają być wyświetlane przy użyciu notacji naukowej.
 
 ```cpp
 ios_base& scientific(ios_base& str);
@@ -703,18 +703,18 @@ ios_base& scientific(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie [stała](../standard-library/ios-functions.md#fixed) notacja jest stosowana dla liczb zmiennoprzecinkowych.
+Domyślnie [stała](../standard-library/ios-functions.md#fixed) notacja obowiązuje dla liczb zmiennoprzecinkowych.
 
-Manipulator skutecznie wywołuje `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::scientific, ios_base::floatfield)`, a następnie zwraca *str*.
+Manipulator skutecznie `str.`wywołuje [setf](../standard-library/ios-base-class.md#setf)`(ios_base::scientific, ios_base::floatfield)`, a następnie zwraca *str*.
 
 ### <a name="example"></a>Przykład
 
@@ -738,9 +738,9 @@ int main( )
 1.002300e+002
 ```
 
-## <a name="showbase"></a><a name="showbase"></a>showbase
+## <a name="showbase"></a><a name="showbase"></a>baza pokazowa
 
-Wskazuje podstawę notacji, w której wyświetlana jest liczba.
+Wskazuje podstawę notacyjną, w której wyświetlana jest liczba.
 
 ```cpp
 ios_base& showbase(ios_base& str);
@@ -748,18 +748,18 @@ ios_base& showbase(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-Podstawą zapisu liczby można zmienić za pomocą [gru](../standard-library/ios-functions.md#dec), [KTZ](../standard-library/ios-functions.md#oct)lub [szesnastkowych](../standard-library/ios-functions.md#hex).
+Bazę notacyjną liczby można zmienić za pomocą [dec,](../standard-library/ios-functions.md#dec) [oct](../standard-library/ios-functions.md#oct)lub [hex](../standard-library/ios-functions.md#hex).
 
-Manipulator skutecznie wywołuje `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::showbase)`, a następnie zwraca *str*.
+Manipulator skutecznie `str.`wywołuje [setf](../standard-library/ios-base-class.md#setf)`(ios_base::showbase)`, a następnie zwraca *str*.
 
 ### <a name="example"></a>Przykład
 
@@ -792,9 +792,9 @@ int main( )
 144
 ```
 
-## <a name="showpoint"></a><a name="showpoint"></a>showpoint
+## <a name="showpoint"></a><a name="showpoint"></a>punkt pokazu
 
-Wyświetla część liczby zmiennoprzecinkowej i cyfr z prawej strony punktu dziesiętnego, nawet jeśli część ułamkowa jest równa zero.
+Wyświetla całą liczbę części liczby zmiennoprzecinkowej i cyfry po prawej stronie przecinka dziesiętnego, nawet jeśli część ułamkowa wynosi zero.
 
 ```cpp
 ios_base& showpoint(ios_base& str);
@@ -802,26 +802,26 @@ ios_base& showpoint(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie [noshowpoint](../standard-library/ios-functions.md#noshowpoint) jest włączone.
+Domyślnie [nieshowpoint](../standard-library/ios-functions.md#noshowpoint) jest w mocy.
 
-Manipulator skutecznie wywołuje `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::showpoint)`, a następnie zwraca *str*.
+Manipulator skutecznie `str.`wywołuje [setf](../standard-library/ios-base-class.md#setf)`(ios_base::showpoint)`, a następnie zwraca *str*.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [noshowpoint](../standard-library/ios-functions.md#noshowpoint) , aby zapoznać się z przykładem korzystania z `showpoint`.
+Zobacz [noshowpoint](../standard-library/ios-functions.md#noshowpoint) na przykład `showpoint`za pomocą .
 
 ## <a name="showpos"></a><a name="showpos"></a>showpos
 
-Powoduje jawne podpisywanie liczb dodatnich.
+Powoduje, że liczby dodatnie mają być jawnie podpisane.
 
 ```cpp
 ios_base& showpos(ios_base& str);
@@ -829,18 +829,18 @@ ios_base& showpos(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-wartość domyślna to [noshowpos](../standard-library/ios-functions.md#noshowpos) .
+[noshowpos](../standard-library/ios-functions.md#noshowpos) jest domyślnym.
 
-Manipulator skutecznie wywołuje `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::showpos)`, a następnie zwraca *str*.
+Manipulator skutecznie `str.`wywołuje [setf](../standard-library/ios-base-class.md#setf)`(ios_base::showpos)`, a następnie zwraca *str*.
 
 ### <a name="example"></a>Przykład
 
@@ -864,9 +864,9 @@ int main( )
 +1
 ```
 
-## <a name="skipws"></a><a name="skipws"></a>skipws
+## <a name="skipws"></a><a name="skipws"></a>skipws (pomijanie)
 
-Nie należy odczytywać spacji w strumieniu wejściowym.
+Spowodować spacje nie są odczytywane przez strumień wejściowy.
 
 ```cpp
 ios_base& skipws(ios_base& str);
@@ -874,18 +874,18 @@ ios_base& skipws(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie `skipws` jest włączona. [noskipws](../standard-library/ios-functions.md#noskipws) spowoduje odczytanie spacji ze strumienia wejściowego.
+Domyślnie `skipws` obowiązuje. [noskipws](../standard-library/ios-functions.md#noskipws) spowoduje spacji do odczytu ze strumienia wejściowego.
 
-Manipulator skutecznie wywołuje `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::skipws)`, a następnie zwraca *str*.
+Manipulator skutecznie `str.`wywołuje [setf](../standard-library/ios-base-class.md#setf)`(ios_base::skipws)`, a następnie zwraca *str*.
 
 ### <a name="example"></a>Przykład
 
@@ -916,9 +916,9 @@ Enter three characters: 1 2 3
 .3.
 ```
 
-## <a name="unitbuf"></a><a name="unitbuf"></a>unitbuf
+## <a name="unitbuf"></a><a name="unitbuf"></a>unitbuf ( unitbuf )
 
-Powoduje, że dane wyjściowe będą przetwarzane, gdy bufor nie jest pusty.
+Powoduje, że dane wyjściowe mają być przetwarzane, gdy bufor nie jest pusty.
 
 ```cpp
 ios_base& unitbuf(ios_base& str);
@@ -926,24 +926,24 @@ ios_base& unitbuf(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-Należy zauważyć, że `endl` opróżnia również bufor.
+Należy `endl` zauważyć, że również opróżnia buforu.
 
-[nounitbuf](../standard-library/ios-functions.md#nounitbuf) jest domyślnie włączona.
+[nounitbuf](../standard-library/ios-functions.md#nounitbuf) jest w mocy domyślnie.
 
-Manipulator skutecznie wywołuje `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: unitbuf](../standard-library/ios-base-class.md#fmtflags)`)`, a następnie zwraca *str*.
+Manipulator skutecznie `str.`wywołuje [setf](../standard-library/ios-base-class.md#setf)`(`[ios_base::unitbuf](../standard-library/ios-base-class.md#fmtflags)`)`, a następnie zwraca *str*.
 
-## <a name="uppercase"></a><a name="uppercase"></a>znaki
+## <a name="uppercase"></a><a name="uppercase"></a>Wielkie
 
-Określa, że cyfry szesnastkowe i wykładnik w notacji wykładniczej są wyświetlane wielką literą.
+Określa, że cyfry szesnastkowe i wykładnik w notacji naukowej są wyświetlane w małych literach.
 
 ```cpp
 ios_base& uppercase(ios_base& str);
@@ -951,18 +951,18 @@ ios_base& uppercase(ios_base& str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*\
-Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który dziedziczy z `ios_base`.
+*Str*\
+Odwołanie do obiektu typu [ios_base](../standard-library/ios-base-class.md)lub do typu, który `ios_base`dziedziczy po .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do obiektu, z którego pochodzi element *str* .
+Odwołanie do obiektu, z którego pochodzi *str.*
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie [wielkie litery](../standard-library/ios-functions.md#nouppercase) obowiązują.
+Domyślnie [nouppercase](../standard-library/ios-functions.md#nouppercase) jest w mocy.
 
-Manipulator skutecznie wywołuje `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: wielkie litery](../standard-library/ios-base-class.md#fmtflags)`)`, a następnie zwraca *str*.
+Manipulator skutecznie `str.`wywołuje [setf](../standard-library/ios-base-class.md#setf)`(`[ios_base::wielkie litery](../standard-library/ios-base-class.md#fmtflags)`)`, a następnie zwraca *str*.
 
 ### <a name="example"></a>Przykład
 
