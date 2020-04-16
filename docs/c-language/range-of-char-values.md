@@ -2,21 +2,21 @@
 title: Zakres wartości char
 ms.date: 11/04/2016
 ms.assetid: 15ae9781-ec21-4333-bba8-6d2383bbf7f1
-ms.openlocfilehash: c188856ab15c18ccd52aa89235d149366d0b316e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8cb2609aca910056b5243fddc868710581e576e7
+ms.sourcegitcommit: 9266fc76ac2e872e35a208b4249660dfdfc87cba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232181"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81480903"
 ---
 # <a name="range-of-char-values"></a>Zakres wartości char
 
-**ANSI 3.2.1.1** czy "zwykły" **char** ma ten sam zakres wartości jako **podpisany char** lub `unsigned char`
+**ANSI 3.2.1.1** Czy "zwykły" **char** ma taki sam zakres wartości jak **znak podpisany** lub **niepodpisany char**
 
-Wszystkie podpisane znak wartości z zakresu od -128 do 127 znaków. Wszystkie niepodpisane znak wartości z zakresu od 0 do 255.
+Wszystkie podpisane wartości znaków wahają się od -128 do 127. Wszystkie niepodpisane wartości znaków wahają się od 0 do 255.
 
-/J — opcja kompilatora zmienia domyślny z **podpisany** do `unsigned`.
+Opcja [`/J`](../build/reference/j-default-char-type-is-unsigned.md) kompilatora zmienia domyślny typ **dla char** z **podpisanego char** na **niepodpisany znak**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Znaki](../c-language/characters.md)
+[Znaków](../c-language/characters.md)
