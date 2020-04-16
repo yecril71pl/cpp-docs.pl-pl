@@ -6577,6 +6577,8 @@
                   href: c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md
                 - name: Inicjalizacja CRT
                   href: c-runtime-library/crt-initialization.md
+                - name: Stan globalny w środowisku CRT
+                  href: c-runtime-library/global-state.md
             - name: Procedury środowiska uruchomieniowego języka Universal C według kategorii
               expanded: false
               items:
@@ -9380,14 +9382,14 @@
                       href: standard-library/stack.md
                     - name: '<stack>, operatory'
                       href: standard-library/stack-operators.md
-                    - name: 'stack, klasa'
+                    - name: stack — Klasa
                       href: standard-library/stack-class.md
                 - name: <stdexcept>
                   expanded: false
                   items:
                     - name: <stdexcept>
                       href: standard-library/stdexcept.md
-                    - name: domain_error — Klasa
+                    - name: 'domain_error, klasa'
                       href: standard-library/domain-error-class.md
                     - name: 'invalid_argument, klasa'
                       href: standard-library/invalid-argument-class.md
@@ -10417,9 +10419,9 @@
                           href: parallel/concrt/reference/concurrency-namespace-enums.md
                         - name: 'affinity_partitioner, klasa'
                           href: parallel/concrt/reference/affinity-partitioner-class.md
-                        - name: 'agent, klasa'
+                        - name: agent — Klasa
                           href: parallel/concrt/reference/agent-class.md
-                        - name: auto_partitioner — klasa
+                        - name: 'auto_partitioner, klasa'
                           href: parallel/concrt/reference/auto-partitioner-class.md
                         - name: 'bad_target, klasa'
                           href: parallel/concrt/reference/bad-target-class.md
