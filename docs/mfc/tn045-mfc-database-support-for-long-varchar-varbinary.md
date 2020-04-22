@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-ms.openlocfilehash: f67d159fb600dcacd8eedd40e672edf18bddee9a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 55a68ba970d0a26163f426d51818c701c13ed051
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365508"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750278"
 ---
 # <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: obsługa MFC/bazy danych pod względem typu danych Varchar/Varbinary
 
@@ -45,7 +45,7 @@ Takie podejście jest proste do zrozumienia i pracujesz ze znanymi klasami. Ramy
 
 Funkcje RFX `CString` `CByteArray` dla i mają dodatkowy argument, który pozwala zastąpić domyślny rozmiar przydzielonej pamięci do przechowywania pobranej wartości dla kolumny danych. Zwróć uwagę na argument nMaxLength w następujących deklaracjach funkcji:
 
-```
+```cpp
 void AFXAPI RFX_Text(CFieldExchange* pFX,
     const char *szName,
     CString& value,

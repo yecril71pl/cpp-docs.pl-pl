@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: b0b32232d7386df0c0f13a1c3af1003369b906e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9ed9b30b94a8debe133bc213c12063750bfb15a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329347"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747346"
 ---
 # <a name="worker-archetype"></a>Archetyp pracownika
 
 Klasy zgodne z archetypem *procesu roboczego* zapewniają kod do przetwarzania elementów pracy w kolejce w puli wątków.
 
-**Wdrażanie**
+**Implementacja**
 
 Aby zaimplementować klasę zgodną z tym archetypem, klasa musi zawierać następujące funkcje:
 
@@ -58,7 +58,7 @@ Te parametry szablonu oczekują, że klasa będzie zgodna z tym archetypem:
 
 Wywoływana do przetwarzania elementu pracy.
 
-```
+```cpp
 void Execute(
     RequestType request,
     void* pvWorkerParam,
@@ -109,7 +109,7 @@ Ten typ musi być używany `WorkerArchetype::Execute` jako pierwszy parametr i m
 
 Wywoływana w celu niezainicjowania obiektu procesu `WorkerArchetype::Execute`roboczego po przekazaniu wszystkich żądań do ).
 
-```
+```cpp
 void Terminate(void* pvParam) throw();
 ```
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CAnimationColor [MFC], m_gValue
 - CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
-ms.openlocfilehash: 5940cce6d55b95d8e1bac103cacc0bc828c213de
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7c1c98d739aa1c17bb30df2d9d4ce8c41558c76d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371108"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750190"
 ---
 # <a name="canimationcolor-class"></a>Klasa CAnimationColor
 
@@ -108,7 +108,7 @@ CAnimationColor Klasa hermetyzuje trzy CAnimationVariable obiektów i może repr
 
 Dodaje przejścia dla komponentów Czerwony, Zielony i Niebieski.
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pRTransition,
     CBaseTransition* pGTransition,
@@ -296,7 +296,7 @@ operator COLORREF();
 
 Przypisuje kolor do CAnimationColor.
 
-```
+```cpp
 void operator=(COLORREF color);
 ```
 
@@ -313,7 +313,7 @@ Zaleca się, aby to zrobić przed rozpoczęciem animacji, ponieważ ten operator
 
 Ustawia wartość domyślną.
 
-```
+```cpp
 void SetDefaultValue(COLORREF color);
 ```
 

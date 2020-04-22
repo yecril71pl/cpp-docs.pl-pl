@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: 87bf903220a584798ea59c5f1c701fc35049e901
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 458f7cd50462a145d005f3f81d87cc06fc7e01b1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321658"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748774"
 ---
 # <a name="cacl-class"></a>Klasa CAcl
 
@@ -186,7 +186,7 @@ Zwraca liczbę wpisów ACE `CAcl` w obiekcie.
 
 Pobiera wpisy listy kontroli dostępu (ACL) `CAcl` z obiektu.
 
-```
+```cpp
 void GetAclEntries(
     CSid::CSidArray* pSids,
     CAccessMaskArray* pAccessMasks = NULL,
@@ -220,7 +220,7 @@ Zobacz [ACE_HEADER,](/windows/win32/api/winnt/ns-winnt-ace_header) aby uzyskać 
 
 Pobiera wszystkie informacje o wpisie na liście kontroli dostępu (ACL).
 
-```
+```cpp
 void GetAclEntry(
     UINT nIndex,
     CSid* pSid,
@@ -341,7 +341,7 @@ Zwraca odwołanie do `CAcl` zaktualizowanego obiektu.
 
 Usuwa określony wpis ACE (wpis kontroli `CAcl` dostępu) z obiektu.
 
-```
+```cpp
 void RemoveAce(UINT nIndex) throw();
 ```
 
@@ -371,7 +371,7 @@ Odwołanie do `CSid` obiektu.
 
 Oznacza `CAcl` obiekt jako pusty.
 
-```
+```cpp
 void SetEmpty() throw();
 ```
 
@@ -383,7 +383,7 @@ Można `CAcl` ustawić na pusty lub null: dwa stany są różne.
 
 Oznacza `CAcl` obiekt jako NULL.
 
-```
+```cpp
 void SetNull() throw();
 ```
 

@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 34a02567bfeb76666cc38ccf05dcc285a1f658f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 489e931c4063e7bf06ace1cb130b9891253c94d4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369752"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750179"
 ---
 # <a name="canimationcontroller-class"></a>Klasa CAnimationController
 
@@ -299,7 +299,7 @@ CAnimationController(void);
 
 Wywoływane przez strukturę, aby oczyścić grupę, gdy animacja została zaplanowana.
 
-```
+```cpp
 void CleanUpGroup(UINT32 nGroupID);
 void CleanUpGroup(CAnimationGroup* pGroup);
 ```
@@ -1010,7 +1010,7 @@ Ta metoda jest wywoływana, jeśli włączysz zdarzenia scenorysu przy użyciu C
 
 Usuwa wszystkie grupy animacji z kontrolera animacji.
 
-```
+```cpp
 void RemoveAllAnimationGroups();
 ```
 
@@ -1022,7 +1022,7 @@ Wszystkie grupy zostaną usunięte, ich wskaźnik, jeśli są przechowywane na p
 
 Usuwa grupę animacji o określonym identyfikatorze z kontrolera animacji.
 
-```
+```cpp
 void RemoveAnimationGroup(UINT32 nGroupID);
 ```
 
@@ -1039,7 +1039,7 @@ Ta metoda usuwa grupę animacji z wewnętrznej listy grup i usuwa ją, dlatego j
 
 Usuwanie obiektu animacji z kontrolera animacji.
 
-```
+```cpp
 void RemoveAnimationObject(
     CAnimationBaseObject* pObject,
     BOOL bNoDelete = FALSE);
@@ -1061,7 +1061,7 @@ Usuwa obiekt animacji z kontrolera animacji i grupy animacji. Wywołanie tej fun
 
 Usuwa przejścia z obiektów animacji należących do określonej grupy.
 
-```
+```cpp
 void RemoveTransitions(UINT32 nGroupID);
 ```
 
@@ -1104,7 +1104,7 @@ Należy wywołać Program AnimateGroup z parametrem bScheduleNow ustawiono warto
 
 Ustanawia relację między kontrolerem animacji a oknem.
 
-```
+```cpp
 void SetRelatedWnd(CWnd* pWnd);
 ```
 

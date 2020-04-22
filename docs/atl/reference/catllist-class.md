@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 91b1841423fe159bb5fdd0f06a112c601b1dbc83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e4ea8eef51431c100f5d3119d7f75e9673e276e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318931"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748737"
 ---
 # <a name="catllist-class"></a>Klasa CAtlList
 
@@ -153,7 +153,7 @@ Jeśli używana jest pierwsza wersja, pusty element jest tworzony przy użyciu j
 
 Wywołanie tej metody, aby dodać istniejącą listę do szefa listy.
 
-```
+```cpp
 void AddHeadList(const CAtlList<E, ETraits>* plNew);
 ```
 
@@ -200,7 +200,7 @@ Jeśli używana jest pierwsza wersja, pusty element jest tworzony przy użyciu j
 
 Wywołanie tej metody, aby dodać istniejącą listę do ogona tej listy.
 
-```
+```cpp
 void AddTailList(const CAtlList<E, ETraits>* plNew);
 ```
 
@@ -221,7 +221,7 @@ Lista wskazywany przez *plNew* jest wstawiana po ostatnim elemencie (jeśli istn
 
 Wywołanie tej metody, aby potwierdzić, że lista jest prawidłowa.
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -599,7 +599,7 @@ Zwraca wartość true, jeśli lista nie zawiera żadnych obiektów, w przeciwnym
 
 Wywołanie tej metody, aby przenieść określony element do głowy listy.
 
-```
+```cpp
 void MoveToHead(POSITION pos) throw();
 ```
 
@@ -620,7 +620,7 @@ Określony element jest przenoszony z bieżącej pozycji do głowy listy. W komp
 
 Wywołanie tej metody, aby przenieść określony element do ogona listy.
 
-```
+```cpp
 void MoveToTail(POSITION pos) throw();
 ```
 
@@ -641,7 +641,7 @@ Zobacz przykład [CAtlList::MoveToHead](#movetohead).
 
 Wywołanie tej metody, aby usunąć wszystkie elementy z listy.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -657,7 +657,7 @@ Zobacz przykład [CAtlList::IsEmpty](#isempty).
 
 Wywołanie tej metody, aby usunąć pojedynczy element z listy.
 
-```
+```cpp
 void RemoveAt(POSITION pos) throw();
 ```
 
@@ -700,7 +700,7 @@ Element head zostanie usunięty z listy, a pamięć zostanie zwolniona. Zwracana
 
 Wywołanie tej metody, aby usunąć element na czele listy bez zwracania wartości.
 
-```
+```cpp
 void RemoveHeadNoReturn() throw();
 ```
 
@@ -736,7 +736,7 @@ Element ogona jest usuwany z listy, a pamięć jest zwalniana. Zwracana jest kop
 
 Wywołanie tej metody, aby usunąć element w ogonie listy bez zwracania wartości.
 
-```
+```cpp
 void RemoveTailNoReturn() throw();
 ```
 
@@ -752,7 +752,7 @@ Zobacz przykład [CAtlList::IsEmpty](#isempty).
 
 Wywołanie tej metody, aby ustawić wartość elementu w danej pozycji na liście.
 
-```
+```cpp
 void SetAt(POSITION pos, INARGTYPE element);
 ```
 
@@ -776,7 +776,7 @@ Zastępuje istniejącą wartość *elementem*. W kompilacjach debugowania błąd
 
 Wywołanie tej metody, aby zamienić elementy na liście.
 
-```
+```cpp
 void SwapElements(POSITION pos1, POSITION pos2) throw();
 ```
 

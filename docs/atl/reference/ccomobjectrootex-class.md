@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: e8db86f6214f95cd9bb08d3b5f6c6c1a38ca475c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 87e2d7dca81221f4fac2a5189ecb0effbdceddc2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327607"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747907"
 ---
 # <a name="ccomobjectrootex-class"></a>Klasa CComObjectRootEx
 
@@ -155,7 +155,7 @@ Oto typowy sposób tworzenia agregacji:
 
 Tę metodę można zastąpić w klasie pochodnej, aby wykonać wszelkie oczyszczanie wymagane dla obiektu.
 
-```
+```cpp
 void FinalRelease();
 ```
 
@@ -235,7 +235,7 @@ Jeśli model wątku jest wielowątkowy, jest używany, `InterlockedDecrement` ab
 
 Jeśli model wątku jest wielowątkowy, ta metoda wywołuje funkcję interfejsu API Win32 [EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection), która czeka, aż wątek może przejąć na własność obiekt sekcji krytycznej uzyskany za pośrednictwem prywatnego elementu członkowskiego danych.
 
-```
+```cpp
 void Lock();
 ```
 
@@ -359,7 +359,7 @@ W kompilacjach innych niż debugowanie zawsze zwraca wartość 0. W kompilacjach
 
 Jeśli model wątku jest wielowątkowy, ta metoda wywołuje funkcję interfejsu API Win32 [LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection), która zwalnia własność obiektu sekcji krytycznej uzyskanej za pośrednictwem prywatnego elementu członkowskiego danych.
 
-```
+```cpp
 void Unlock();
 ```
 

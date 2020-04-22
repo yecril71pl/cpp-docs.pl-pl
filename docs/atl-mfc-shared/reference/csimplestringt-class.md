@@ -36,12 +36,12 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-ms.openlocfilehash: dce33289699b9e7b7484d1feb6335476f93dee9b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76d418c4f063d5787209ea72e7c681013eb37801
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317683"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747035"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT, klasa
 
@@ -133,7 +133,7 @@ Dołącza `CSimpleStringT` obiekt do istniejącego `CSimpleStringT` obiektu.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 void Append(const CSimpleStringT& strSrc);
 void Append(PCXSTR pszSrc, int nLength);
 void Append(PCXSTR pszSrc);
@@ -172,7 +172,7 @@ Dołącza znak do istniejącego `CSimpleStringT` obiektu.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 void AppendChar(XCHAR ch);
 ```
 
@@ -316,7 +316,7 @@ Sprawia, `CSimpleStringT` że ten obiekt pusty ciąg i zwalnia pamięci, zgodnie
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 void Empty() throw();
 ```
 
@@ -339,7 +339,7 @@ Zwalnia wszelkie dodatkowe pamięci wcześniej przydzielone przez ciąg, ale nie
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 void FreeExtra();
 ```
 
@@ -895,7 +895,7 @@ Przydziela określoną ilość bajtów `CSimpleStringT` dla obiektu.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 void Preallocate( int nLength);
 ```
 
@@ -937,7 +937,7 @@ Zwalnia kontrolę nad buforem przydzielonym przez [GetBuffer](#getbuffer).
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 void ReleaseBuffer(int nNewLength = -1);
 ```
 
@@ -978,7 +978,7 @@ Zwalnia kontrolę nad buforem przydzielonym przez [GetBuffer](#getbuffer).
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 void ReleaseBufferSetLength(int nNewLength);
 ```
 
@@ -997,7 +997,7 @@ Ustawia pojedynczy znak `CSimpleStringT` z obiektu.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 void SetAt(int iChar, XCHAR ch);
 ```
 
@@ -1029,7 +1029,7 @@ Określa menedżera pamięci `CSimpleStringT` obiektu.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 void SetManager(IAtlStringMgr* pStringMgr);
 ```
 
@@ -1057,7 +1057,7 @@ Ustawia ciąg `CSimpleStringT` obiektu.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 void SetString(PCXSTR pszSrc, int nLength);
 void SetString(PCXSTR pszSrc);
 ```
@@ -1130,7 +1130,7 @@ Obcina ciąg do nowej długości.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 void Truncate(int nNewLength);
 ```
 
@@ -1165,7 +1165,7 @@ Odblokowuje bufor `CSimpleStringT` obiektu.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 void UnlockBuffer() throw();
 ```
 

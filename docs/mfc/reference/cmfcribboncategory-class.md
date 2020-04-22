@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: a1653242675db0e235b58f2c4865bb838753c484
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c72f70e373699addf952600a8d630bb320fa641
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375267"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749539"
 ---
 # <a name="cmfcribboncategory-class"></a>Klasa CMFCRibbonCategory
 
@@ -260,7 +260,7 @@ Na poniższym diagramie przedstawiono postać kategorii Strona główna z przyk�
 
 Dodaje określony element wstążki do tablicy elementów wstążki, które są wyświetlane w oknie dialogowym dostosowywania.
 
-```
+```cpp
 void AddHidden(CMFCRibbonBaseElement* pElem);
 ```
 
@@ -475,7 +475,7 @@ Wskaźnik do elementu wstążki, jeśli metoda zakończyła się pomyślnie; w p
 
 Pobiera wszystkie elementy wstążki w kategorii wstążki.
 
-```
+```cpp
 void GetElements(
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
@@ -493,7 +493,7 @@ Elementy wstążki, które są przeznaczone do użycia na pasku narzędzi szybki
 
 Pobiera wszystkie elementy wstążki, które są skojarzone z określonym identyfikatorem polecenia.
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -597,7 +597,7 @@ Pobrany rozmiar obejmuje współczynnik skali obrazu globalnego.
 
 Pobiera identyfikatory poleceń dla elementów wstążki, które znajdują się w kategorii wstążki.
 
-```
+```cpp
 void GetItemIDsList(
     CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
@@ -881,7 +881,7 @@ Pionowa lokalizacja tekstu w pikselach na przyciskach wstążki, które wyświet
 
 Pobiera wszystkie widoczne elementy należące do kategorii wstążki.
 
-```
+```cpp
 void GetVisibleElements(
     CArray <CMFCRibbonBaseElement*,
     CMFCRibbonBaseElement*>& arElements);
@@ -1336,7 +1336,7 @@ virtual void ReposPanels(CDC* pDC);
 
 Określa kolejność zwijania paneli wstążki kategorii wstążki.
 
-```
+```cpp
 void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```
 
@@ -1363,7 +1363,7 @@ W poniższym przykładzie pokazano, jak używać `SetCollapseOrder` metody w `CM
 
 Ustawia dane zdefiniowane przez użytkownika, które mają być skojarzone z kategorią wstążki.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1376,7 +1376,7 @@ void SetData(DWORD_PTR dwData);
 
 Przypisuje etykietkę klawisza do kategorii wstążki.
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1393,7 +1393,7 @@ Etykietki klawiszy są wyświetlane, gdy użytkownik naciśnie klawisz Alt lub k
 
 Przypisuje nazwę i etykietkę klawiszy do kategorii wstążki.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -1410,7 +1410,7 @@ Aby ustawić etykietkę klawiszy dla kategorii wstążki, dołącz sekwencję uc
 
 Ustawia kolor kategorii wstążki.
 
-```
+```cpp
 void SetTabColor(AFX_RibbonCategoryColor color);
 ```
 

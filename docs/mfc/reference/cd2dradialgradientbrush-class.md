@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-ms.openlocfilehash: aca9606271040e5c5c9aee81be0a08b64cf2bab7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 450314fdbf8441b0cc345430518d083573659add
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369129"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750306"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>Klasa CD2DRadialGradientBrush
 
@@ -123,7 +123,7 @@ virtual ~CD2DRadialGradientBrush();
 
 Dołącza istniejący interfejs zasobu do obiektu
 
-```
+```cpp
 void Attach(ID2D1RadialGradientBrush* pResource);
 ```
 
@@ -303,7 +303,7 @@ Wskaźnik do interfejsu ID2D1RadialGradientBrush lub NULL, jeśli obiekt nie zos
 
 Określa środek elipsy gradientu w przestrzeni współrzędnych pędzla
 
-```
+```cpp
 void SetCenter(CD2DPointF point);
 ```
 
@@ -316,7 +316,7 @@ void SetCenter(CD2DPointF point);
 
 Określa odsunięcie początku gradientu względem środka elipsy gradientu
 
-```
+```cpp
 void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```
 
@@ -329,7 +329,7 @@ Przesunięcie początku gradientu od środka elipsy gradientu
 
 Określa promień x elipsy gradientu w przestrzeni współrzędnych pędzla
 
-```
+```cpp
 void SetRadiusX(FLOAT radiusX);
 ```
 
@@ -342,7 +342,7 @@ Promień x elipsy gradientu. Ta wartość znajduje się w przestrzeni współrz�
 
 Określa promień y elipsy gradientu w przestrzeni współrzędnych pędzla
 
-```
+```cpp
 void SetRadiusY(FLOAT radiusY);
 ```
 

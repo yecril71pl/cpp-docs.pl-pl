@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-ms.openlocfilehash: 7c72ded75298ed69efe73c1a81abf404545ea9b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4b883bdf3159c40f8d74866f04f655ae73d82a8a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326924"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747698"
 ---
 # <a name="chandle-class"></a>Klasa CHandle
 
@@ -74,7 +74,7 @@ Obiekt `CHandle` może być używany za każdym razem, gdy wymagany `CHandle` je
 
 Wywołanie tej metody, aby dołączyć `CHandle` obiekt do istniejącego dojścia.
 
-```
+```cpp
 void Attach(HANDLE h) throw();
 ```
 
@@ -122,7 +122,7 @@ Zwalnia obiekt, `CHandle` wywołując [CHandle::Close](#close).
 
 Wywołanie tej metody, aby zamknąć `CHandle` obiekt.
 
-```
+```cpp
 void Close() throw();
 ```
 

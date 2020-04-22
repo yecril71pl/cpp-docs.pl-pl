@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: 50dd488d1f59c99b8fee1eb96acf6d0041547df9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f25bff9564eb7a4290f958f0b7810cac8ef7e238
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369683"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749617"
 ---
 # <a name="cmfcmenubar-class"></a>Klasa CMFCMenuBar
 
@@ -430,7 +430,7 @@ Użyj tej metody, jeśli chcesz, aby formant menu miał te same elementy menu co
 
 Włącza pole kombi **Pomocy,** które znajduje się po prawej stronie paska menu.
 
-```
+```cpp
 void EnableHelpCombobox(
     UINT uiID,
     LPCTSTR lpszPrompt = NULL,
@@ -954,7 +954,7 @@ Zapisane informacje obejmują elementy menu, stan stacji dokującej i położeni
 
 Ustawia domyślne menu dla obiektu [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) na podstawie identyfikatora zasobu.
 
-```
+```cpp
 void SetDefaultMenuResId(UINT uiResId);
 ```
 
@@ -971,7 +971,7 @@ Użyj [CMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid) metody, aby pobra
 
 ## <a name="cmfcmenubarsetforcedownarrows"></a><a name="setforcedownarrows"></a>CMFCMenuBar::SetForceDownArrows
 
-```
+```cpp
 void SetForceDownArrows(BOOL bValue);
 ```
 
@@ -985,7 +985,7 @@ void SetForceDownArrows(BOOL bValue);
 
 Struktura wywołuje tę metodę, gdy MDI zmienia tryb wyświetlania i pasek menu musi zostać zaktualizowany.
 
-```
+```cpp
 void SetMaximizeMode(
     BOOL bMax,
     CWnd* pWnd = NULL,
@@ -1011,7 +1011,7 @@ Gdy okno podrzędne MDI jest zmaksymalizowane, pasek menu dołączony do okna ra
 
 Ustawia informacje o klasie środowiska wykonawczego, które jest używana przez platformę podczas tworzenia przez użytkownika przycisków menu.
 
-```
+```cpp
 void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```
 

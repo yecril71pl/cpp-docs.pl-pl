@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 8a89ca7f7dedcd386abdd41e7487f1b838260c83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8954eeae28f13fb50643646b41c032588ecc278f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321443"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748655"
 ---
 # <a name="catlmap-class"></a>Klasa CAtlMap
 
@@ -159,7 +159,7 @@ Aby uzyskać więcej informacji, zobacz [ATL Collection Classes](../../atl/atl-c
 
 Wywołanie tej metody, aby `CAtlMap` spowodować ASSERT, jeśli obiekt jest nieprawidłowy.
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -249,7 +249,7 @@ Ta klasa jest używana przez metody [CAtlMap::GetNext](#getnext) i [CAtlMap::Loo
 
 Wywołanie tej metody, aby wyłączyć `CAtlMap` automatyczne rehashing obiektu.
 
-```
+```cpp
 void DisableAutoRehash() throw();
 ```
 
@@ -263,7 +263,7 @@ Po włączeniu automatycznego ponownego rozsyłania (co jest domyślnie), liczba
 
 Wywołanie tej metody, aby włączyć `CAtlMap` automatyczne rehashing obiektu.
 
-```
+```cpp
 void EnableAutoRehash() throw();
 ```
 
@@ -277,7 +277,7 @@ Po włączeniu automatycznego ponownego rozsyłania (co jest domyślnie), liczba
 
 Wywołanie tej metody, aby zwrócić element w określonej pozycji na mapie.
 
-```
+```cpp
 void GetAt(
     POSITION pos,
     KOUTARGTYPE key,
@@ -376,7 +376,7 @@ Zwraca wskaźnik do następnej pary elementów klucza/wartości przechowywanych 
 
 Pobiera następny element do iteracji.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -597,7 +597,7 @@ Jeśli klucz już istnieje, element jest zastępowany. Jeśli klucz nie istnieje
 
 Wywołanie tej metody, `CAtlMap` aby ponownie zmiksować obiekt.
 
-```
+```cpp
 void Rehash(UINT nBins = 0);
 ```
 
@@ -614,7 +614,7 @@ Jeśli *nBins* wynosi `CAtlMap` 0, oblicza rozsądną liczbę na podstawie liczb
 
 Wywołanie tej metody, aby `CAtlMap` usunąć wszystkie elementy z obiektu.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -626,7 +626,7 @@ Czyści `CAtlMap` obiekt, zwalniając pamięć używaną do przechowywania eleme
 
 Wywołanie tej metody, aby usunąć element `CAtlMap` w danej pozycji w obiekcie.
 
-```
+```cpp
 void RemoveAtPos(POSITION pos) throw();
 ```
 
@@ -690,7 +690,7 @@ Zwraca położenie pary elementu klucz/wartość `CAtlMap` w obiekcie.
 
 Wywołanie tej metody, aby `CAtlMap` ustawić optymalne obciążenie obiektu.
 
-```
+```cpp
 void SetOptimalLoad(
     float fOptimalLoad,
     float fLoThreshold,
@@ -720,7 +720,7 @@ Ta metoda na nowo definiuje `CAtlMap` optymalną wartość obciążenia dla obie
 
 Wywołanie tej metody, aby zmienić wartość `CAtlMap` przechowywaną w danej pozycji w obiekcie.
 
-```
+```cpp
 void SetValueAt(
     POSITION pos,
     VINARGTYPE value);

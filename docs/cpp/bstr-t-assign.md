@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - Assign method [C++]
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
-ms.openlocfilehash: 09af33f4ed246c459d5c78d8d23d5316ad9c07c6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 80f687da75d0160a6955caa7469ac9cc55c2c257
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190645"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749710"
 ---
 # <a name="_bstr_tassign"></a>_bstr_t::Assign
 
 **Specyficzne dla firmy Microsoft**
 
-Kopiuje `BSTR` do `BSTR` opakowany przez`bstr_t` **_** .
+Kopiuje `BSTR` a `BSTR` do zawinięte przez **_**`bstr_t`.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 void Assign(
    BSTR s
 );
@@ -29,12 +29,12 @@ void Assign(
 
 #### <a name="parameters"></a>Parametry
 
-*wolumin*<br/>
-`BSTR`, które mają zostać skopiowane do `BSTR` opakowane `_bstr_t`.
+*S*<br/>
+A `BSTR` do skopiowania `BSTR` do zawiniętego przez plik `_bstr_t`.
 
 ## <a name="remarks"></a>Uwagi
 
-**Przypisanie** wykonuje kopię binarną, co oznacza, że cała długość `BSTR` jest kopiowana niezależnie od zawartości.
+**Assign** wykonuje kopię binarną, co `BSTR` oznacza, że cała długość jest kopiowana, niezależnie od zawartości.
 
 ## <a name="example"></a>Przykład
 
@@ -109,7 +109,7 @@ bstrWrapper = changing BSTR
 bstrWrapper2 = some text
 ```
 
-**ZAKOŃCZENIE określonych przez firmę Microsoft**
+**ZAKOŃCZ Specyficzne dla firmy Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
 

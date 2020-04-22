@@ -29,12 +29,12 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: 6cdac444836574dd4d398571b71bb25363af5d3d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0ae7f4fcdba18be84d99140e395b6f2ac3db792a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321237"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748198"
 ---
 # <a name="cbindstatuscallback-class"></a>Klasa CBindStatusCallback
 
@@ -274,7 +274,7 @@ ATL_PDATAAVAILABLE m_pFunc;
 
 Funkcja wskazywalna przez `m_pFunc` jest członkiem klasy obiektu i ma następującą składnię:
 
-```
+```cpp
 void Function_Name(
    CBindStatusCallback<T>* pbsc,
    BYTE* pBytes,
@@ -521,7 +521,7 @@ Za każdym razem, gdy dane są `OnDataAvailable`dostępne, są wysyłane do obie
 
 Funkcja wskazywalna przez *pFunc* jest członkiem klasy obiektu i ma następującą składnię:
 
-```
+```cpp
 void Function_Name(
     CBindStatusCallback<T>* pbsc,
     BYTE* pBytes,

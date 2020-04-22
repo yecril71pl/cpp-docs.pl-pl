@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: 82d8f1da0640e5b487a06585c72279e7d7ffdf99
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 97c7edde26bdf13e899d823dcf88d143068d86a4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369643"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749609"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Klasa CMFCOutlookBarPane
 
@@ -232,7 +232,7 @@ virtual BOOL CanBeAttached() const;
 
 Zwalnia zasoby używane przez obrazy w okienku paska programu Outlook.
 
-```
+```cpp
 void ClearAll();
 ```
 
@@ -311,7 +311,7 @@ Domyślna implementacja sprawdza tryb dostosowywania ( [CMFCToolBar::IsCustomize
 
 Określa, czy strzałki przewijania w okienku paska programu Outlook przesuwają listę przycisków strona po stronie, czy przycisk po.
 
-```
+```cpp
 void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```
 
@@ -395,7 +395,7 @@ PRAWDA, jeśli przycisk został pomyślnie usunięty; FAŁSZ, jeśli określony 
 
 Ustawia kolor tła paska programu Outlook.
 
-```
+```cpp
 void SetBackColor(COLORREF color);
 ```
 
@@ -412,7 +412,7 @@ Wywołanie tej funkcji, aby ustawić bieżący kolor tła dla paska programu Out
 
 Ustawia obraz tła.
 
-```
+```cpp
 void SetBackImage(UINT uiImageID);
 ```
 
@@ -429,7 +429,7 @@ Wywołanie tej metody, aby ustawić obraz tła paska programu Outlook. Lista obr
 
 Resetuje okienko paska programu Outlook do oryginalnego zestawu przycisków.
 
-```
+```cpp
 void SetDefaultState();
 ```
 
@@ -441,7 +441,7 @@ Ta metoda przywraca przyciski paska programu Outlook do oryginalnego zestawu. Ta
 
 Ustawia liczbę pikseli dopełnienia używanych wokół przycisków w okienku paska programu Outlook.
 
-```
+```cpp
 void SetExtraSpace()
 ```
 
@@ -449,7 +449,7 @@ void SetExtraSpace()
 
 Ustawia kolory zwykłego i wyróżnionego tekstu w okienku paska programu Outlook.
 
-```
+```cpp
 void SetTextColor(
     COLORREF clrRegText,
     COLORREF clrSelText=0);
@@ -467,7 +467,7 @@ void SetTextColor(
 
 Ustawia kolor przezroczysty okienka paska programu Outlook.
 
-```
+```cpp
 void SetTransparentColor(COLORREF color);
 ```
 

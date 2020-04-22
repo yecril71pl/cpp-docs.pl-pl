@@ -188,12 +188,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: cf3cb7a6e4bc4bc6c79265eb5138aca9fb55ce21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51d7ad249d3f3a2556f461aea1a33dd7cbc787eb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361440"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749753"
 ---
 # <a name="cmfcribbonbar-class"></a>Klasa CMFCRibbonBar
 
@@ -581,7 +581,7 @@ Kategoria wstążki paska narzędzi szybkiego dostępu jest używana tylko w okn
 
 Dodaje określony element wstążki do wiersza kart paska wstążki.
 
-```
+```cpp
 void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```
 
@@ -679,7 +679,7 @@ PRAWDA, jeśli okno zostało utworzone; w przeciwnym razie FALSE.
 
 Zamyka wszystkie kontrolki etykietek klawiszy na pasku wstążki.
 
-```
+```cpp
 void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```
 
@@ -732,7 +732,7 @@ virtual void DWMCompositionChanged();
 
 Włącza lub wyłącza funkcję klawiatury paska wstążki.
 
-```
+```cpp
 void EnableKeyTips(BOOL bEnable = TRUE);
 ```
 
@@ -749,7 +749,7 @@ Po włączeniu tej funkcji, najważniejsze wskazówki są wyświetlane, gdy uży
 
 Włącza lub wyłącza funkcję **Podgląd wydruku.**
 
-```
+```cpp
 void EnablePrintPreview(BOOL bEnable = TRUE);
 ```
 
@@ -768,7 +768,7 @@ Domyślnie funkcja **Podgląd wydruku** jest włączona.
 
 Włącza lub wyłącza etykietki narzędzi i opcjonalne opisy etykietek narzędzi na pasku wstążki.
 
-```
+```cpp
 void EnableToolTips(
     BOOL bEnable = TRUE,
     BOOL bEnableDescr = TRUE);
@@ -865,7 +865,7 @@ Indeks od zera kategorii wstążki, jeśli metoda zakończyła się pomyślnie; 
 
 Dostosowuje układ wszystkich elementów na pasku wstążki i oknie nadrzędnym i ponownie rysuje całe okno.
 
-```
+```cpp
 void ForceRecalcLayout();
 ```
 
@@ -1017,7 +1017,7 @@ Element wstążki, który jest obecnie upuszczony w dół; lub NULL, jeśli żad
 
 Pobiera tablicę wskaźników do wszystkich elementów wstążki, które mają określony identyfikator polecenia.
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray<CMFCRibbonBaseElement*,CMFCRibbonBaseElement*>& arButtons);
@@ -1060,7 +1060,7 @@ W poniższej tabeli wymieniono możliwą kombinację flag dla wartości zwracane
 
 Pobiera identyfikatory poleceń dla określonej kolekcji elementów wstążki na pasku wstążki.
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
 ```
@@ -1177,7 +1177,7 @@ Wskaźnik do elementu wstążki na pasku narzędzi szybkiego dostępu, który ma
 
 Pobiera listę identyfikatorów poleceń dla elementów wstążki na pasku narzędzi szybki dostęp.
 
-```
+```cpp
 void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```
 
@@ -1286,7 +1286,7 @@ Jeśli kategoria kontekstu jest aktywna, aktywna kategoria jest resetowana do pi
 
 Ukrywa wszystkie etykietki klawiszy na pasku wstążki.
 
-```
+```cpp
 void HideKeyTips();
 ```
 
@@ -1635,7 +1635,7 @@ PRAWDA, jeśli zdarzenie naciśnięcia klawisza zostało przetworzone; w przeciw
 
 Usuwa etykietkę narzędzia z widoku.
 
-```
+```cpp
 void PopTooltip();
 ```
 
@@ -1676,7 +1676,7 @@ Po dopasowaniu układu ekran paska wstążki zostanie zaktualizowany.
 
 Usuwa wszystkie kategorie wstążki z paska wstążki.
 
-```
+```cpp
 void RemoveAllCategories();
 ```
 
@@ -1688,7 +1688,7 @@ Ta metoda usuwa wszystkie kategorie wstążki z pamięci i z listy kategorii.
 
 Usuwa wszystkie elementy wstążki z obszaru karty.
 
-```
+```cpp
 void RemoveAllFromTabs();
 ```
 
@@ -1749,7 +1749,7 @@ Jeśli kategoria określona przez *p Kategoria* nie jest wyświetlana, nie możn
 
 Kojarzy przyciski systemowe na pasku wstążki, które należą do okna podrzędnego interfejsu wielu dokumentów (MDI) z określonym oknem podrzędnym MDI.
 
-```
+```cpp
 void SetActiveMDIChild(CWnd* pWnd);
 ```
 
@@ -1764,7 +1764,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 
 Przypisuje przycisk wstążki aplikacji do paska wstążki.
 
-```
+```cpp
 void SetApplicationButton(
     CMFCRibbonApplicationButton* pButton,
     CSize sizeButton);
@@ -1822,7 +1822,7 @@ Opcjonalna etykietka menu dotyczy elementów wstążki z przyciskiem podziału, 
 
 Ustawia poziom nawigacji klawiatury, gdy użytkownik naciska etykietki klawiszy znajdujące się na pasku wstążki.
 
-```
+```cpp
 void SetKeyboardNavigationLevel(
     CObject* pLevel,
     BOOL bSetFocus = TRUE);
@@ -1844,7 +1844,7 @@ Nawigacja za pomocą klawiatury paska wstążki rozpoczyna się, gdy użytkownik
 
 Dostosowuje pasek wstążki, gdy rozmiar okna podrzędnego interfejsu wielu dokumentów (MDI) wchodzi lub opuszcza stan zmaksymalizowany.
 
-```
+```cpp
 void SetMaximizeMode(
     BOOL bMax,
     CWnd* pWnd = NULL);
@@ -1866,7 +1866,7 @@ Pasek wstążki wyświetla przyciski systemowe okna podrzędnego MDI w wierszu k
 
 Dodaje jeden lub więcej elementów wstążki do paska narzędzi Szybki dostęp.
 
-```
+```cpp
 void SetQuickAccessCommands(
     const CList<UINT,UINT>& lstCommands,
     BOOL bRecalcLayout=TRUE);
@@ -1890,7 +1890,7 @@ W poniższym przykładzie pokazano, jak używać `SetQuickAccessCommands` metody
 
 Ustawia pasek narzędzi szybki dostęp do stanu domyślnego.
 
-```
+```cpp
 void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& state);
 ```
 
@@ -1913,7 +1913,7 @@ W poniższym przykładzie pokazano, jak używać `SetQuickAccessDefaultState` me
 
 Umieszcza pasek narzędzi szybkiego dostępu nad lub pod paskiem wstążki.
 
-```
+```cpp
 void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```
 
@@ -1926,7 +1926,7 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 
 Ustawia regularne i duże rozmiary etykietek narzędzi stałych szerokości paska wstążki.
 
-```
+```cpp
 void SetTooltipFixedWidth(
     int nWidthRegular,
     int nWidthLargeImage);
@@ -1948,7 +1948,7 @@ Ustawienie parametru na 0 powoduje, że odpowiednia szerokość jest różna.
 
 Pokazuje lub ukrywa określoną kategorię wstążki.
 
-```
+```cpp
 void ShowCategory(
     int nIndex,
     BOOL bShow=TRUE);
@@ -1966,7 +1966,7 @@ void ShowCategory(
 
 Pokazuje lub ukrywa kategorie kontekstu, które mają określony identyfikator.
 
-```
+```cpp
 void ShowContextCategories(
     UINT uiContextID,
     BOOL bShow=TRUE);
@@ -1984,7 +1984,7 @@ void ShowContextCategories(
 
 Pokazuje etykietki klawiszy dla każdego elementu wstążki na pasku wstążki.
 
-```
+```cpp
 void ShowKeyTips();
 ```
 
@@ -1994,7 +1994,7 @@ void ShowKeyTips();
 
 Przełącza pasek wstążki między stanami zminimalizowane i zmaksymalizowane.
 
-```
+```cpp
 void ToggleMimimizeState();
 ```
 
@@ -2131,7 +2131,7 @@ PRAWDA, jeśli się powiedzie; w przeciwnym razie FALSE.
 
 Włącza lub wyłącza wygląd systemu Windows 7 (mały prostokątny przycisk aplikacji) na Wstążce.
 
-```
+```cpp
 void SetWindows7Look(
     BOOL bWindows7Look,
     BOOL bRecalc = TRUE);

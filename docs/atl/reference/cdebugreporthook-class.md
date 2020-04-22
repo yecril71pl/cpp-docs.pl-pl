@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: 621d32a14618327873e6e0cce856c5792e1f8c46
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8380556bbe007326156bf0ec0eefc23052e8e056
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327108"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747718"
 ---
 # <a name="cdebugreporthook-class"></a>Klasa CDebugReportHook
 
@@ -127,7 +127,7 @@ Kod w tej funkcji jest wykonywany w podstawowym kontekście zabezpieczeń wątku
 
 Wywołanie tej metody, aby zatrzymać wysyłanie raportów debugowania do nazwanego potoku i przywrócić poprzedni hak raportu.
 
-```
+```cpp
 void RemoveHook() throw();
 ```
 
@@ -139,7 +139,7 @@ Wywołuje [_CrtSetReportHook2,](../../c-runtime-library/reference/crtsetreportho
 
 Wywołanie tej metody, aby rozpocząć wysyłanie raportów debugowania do nazwanego potoku.
 
-```
+```cpp
 void SetHook() throw();
 ```
 
@@ -173,7 +173,7 @@ Zwraca wartość TRUE na sukces, FALSE na niepowodzenie.
 
 Wywołanie tej metody, aby ustawić czas w milisekundach, że ta klasa będzie czekać na nazwany potok staną się dostępne.
 
-```
+```cpp
 void SetTimeout(DWORD dwTimeout);
 ```
 

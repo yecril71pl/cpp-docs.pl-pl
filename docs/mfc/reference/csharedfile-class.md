@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-ms.openlocfilehash: e6a713ac9d9e906ec204d4a52b43ed51c08fd99c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c715ca1b8a2b647f89ada008f3c6606ca5e58783
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318432"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750391"
 ---
 # <a name="csharedfile-class"></a>Klasa CSharedFile
 
@@ -110,7 +110,7 @@ Można go ponownie otworzyć, wywołując [SetHandle](#sethandle), używając uc
 
 Wywołanie tej funkcji, aby dołączyć `CSharedFile` blok pamięci globalnej do obiektu.
 
-```
+```cpp
 void SetHandle(
     HGLOBAL hGlobalMemory,
     BOOL bAllowGrow = TRUE);

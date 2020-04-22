@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: 85168af654d3d63e06559486b464938b7fd90ad3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 607af2adaa3ef28a768812f3c811eb2ed3169ad9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321571"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748791"
 ---
 # <a name="catlarray-class"></a>Klasa CAtlArray
 
@@ -162,7 +162,7 @@ W kompilacjach debugowania ATLASSERT zostanie `CAtlArray` podniesiona, jeśli ar
 
 Wywołanie tej metody, aby potwierdzić, że obiekt tablicy jest prawidłowy.
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -206,7 +206,7 @@ Zwalnia wszystkie zasoby używane przez obiekt tablicy.
 
 Wywołanie tej metody, aby skopiować elementy jednej tablicy do innej.
 
-```
+```cpp
 void Copy(const CAtlArray<E, ETraits>& aSrc);
 ```
 
@@ -234,7 +234,7 @@ W kompilacjach debugowania ATLASSERT zostanie podniesiona, jeśli istniejący `C
 
 Wywołanie tej metody, aby usunąć wszystkie puste elementy z tablicy.
 
-```
+```cpp
 void FreeExtra() throw();
 ```
 
@@ -319,7 +319,7 @@ typedef ETraits::INARGTYPE INARGTYPE;
 
 Wywołanie tej metody, aby wstawić jedną tablicę do innej.
 
-```
+```cpp
 void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 ```
 
@@ -348,7 +348,7 @@ W kompilacjach debugowania ATLASSERT zostanie `CAtlArray` podniesiony, jeśli ob
 
 Wywołanie tej metody, aby wstawić nowy element (lub wiele kopii elementu) do obiektu tablicy.
 
-```
+```cpp
 void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 ```
 
@@ -429,7 +429,7 @@ typedef ETraits::OUTARGTYPE OUTARGTYPE;
 
 Wywołanie tej metody, aby usunąć wszystkie elementy z obiektu tablicy.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -447,7 +447,7 @@ Zobacz przykład [CAtlArray::IsEmpty](#isempty).
 
 Wywołanie tej metody, aby usunąć jeden lub więcej elementów z tablicy.
 
-```
+```cpp
 void RemoveAt(size_t iElement, size_t nCount = 1);
 ```
 
@@ -473,7 +473,7 @@ W kompilacjach debugowania ATLASSERT zostanie `CAtlArray` podniesiona, jeśli ob
 
 Wywołanie tej metody, aby ustawić wartość elementu w obiekcie tablicy.
 
-```
+```cpp
 void SetAt(size_t iElement, INARGTYPE element);
 ```
 
@@ -527,7 +527,7 @@ Zobacz przykład [CAtlArray::GetData](#getdata).
 
 Wywołanie tej metody, aby ustawić wartość elementu w obiekcie tablicy, rozwiń tablicy zgodnie z wymaganiami.
 
-```
+```cpp
 void SetAtGrow(size_t iElement, INARGTYPE element);
 ```
 

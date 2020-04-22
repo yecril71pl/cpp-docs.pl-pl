@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CD2DSolidColorBrush [MFC], m_colorSolid
 - CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
-ms.openlocfilehash: 5aa3d7688046b0c1b04983f2d27fe5579dd7c680
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d66a92e4801f7a13c62e2d83fdb94411d077ff53
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369056"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750255"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>Klasa CD2DSolidColorBrush
 
@@ -103,7 +103,7 @@ virtual ~CD2DSolidColorBrush();
 
 Dołącza istniejący interfejs zasobu do obiektu
 
-```
+```cpp
 void Attach(ID2D1SolidColorBrush* pResource);
 ```
 
@@ -241,7 +241,7 @@ Wskaźnik do interfejsu ID2D1SolidColorBrush lub NULL, jeśli obiekt nie został
 
 Określa kolor tego pędzla z jednolitym kolorem
 
-```
+```cpp
 void SetColor(D2D1_COLOR_F color);
 ```
 

@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 13f46f549c7dd99852be0f322aef560cb454ed2a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331471"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746596"
 ---
 # <a name="cpatht-class"></a>Klasa CPatht
 
@@ -166,7 +166,7 @@ Klasa ciągu ATL/MFC do użycia dla ścieżki (zobacz [CStringT](../../atl-mfc-s
 
 Wywołanie tej metody, aby dodać ukośnik odwrotny na końcu ciągu, aby utworzyć poprawną składnię ścieżki. Jeśli ścieżka ma już końcowe ukośnik odwrotny, nie zostanie dodane żadne ukośnik odwrotny.
 
-```
+```cpp
 void AddBackslash();
 ```
 
@@ -220,7 +220,7 @@ Aby uzyskać więcej informacji, zobacz [PathAppend](/windows/win32/api/shlwapi/
 
 Wywołanie tej metody, aby utworzyć ścieżkę główną z danego numeru dysku.
 
-```
+```cpp
 void BuildRoot(int iDrive);
 ```
 
@@ -237,7 +237,7 @@ Aby uzyskać więcej informacji, zobacz [PathBuildRoot](/windows/win32/api/shlwa
 
 Wywołanie tej metody, aby przekonwertować ścieżkę do postaci kanonicznej.
 
-```
+```cpp
 void Canonicalize();
 ```
 
@@ -249,7 +249,7 @@ Aby uzyskać więcej informacji, zobacz [PathCanonicalize](/windows/win32/api/sh
 
 Wywołanie tej metody, aby połączyć ciąg reprezentujący nazwę katalogu i ciąg reprezentujący nazwę ścieżki pliku w jednej ścieżce.
 
-```
+```cpp
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 ```
 
@@ -712,7 +712,7 @@ typedef StringType::PXSTR PXSTR;
 
 Wywołanie tej metody, aby ująć ścieżkę w cudzysłów, jeśli zawiera ona spacje.
 
-```
+```cpp
 void QuoteSpaces();
 ```
 
@@ -758,7 +758,7 @@ Aby uzyskać więcej informacji, zobacz [PathRelativePathTo](/windows/win32/api/
 
 Wywołanie tej metody, aby usunąć wszystkie argumenty wiersza polecenia ze ścieżki.
 
-```
+```cpp
 void RemoveArgs();
 ```
 
@@ -770,7 +770,7 @@ Aby uzyskać więcej informacji, zobacz [PathRemoveArgs](/windows/win32/api/shlw
 
 Wywołanie tej metody, aby usunąć końcowe ukośnik odwrotny ze ścieżki.
 
-```
+```cpp
 void RemoveBackslash();
 ```
 
@@ -782,7 +782,7 @@ Aby uzyskać więcej informacji, zobacz [PathRemoveBackslash](/windows/win32/api
 
 Wywołanie tej metody, aby usunąć wszystkie spacje wiodące i końcowe ze ścieżki.
 
-```
+```cpp
 void RemoveBlanks();
 ```
 
@@ -794,7 +794,7 @@ Aby uzyskać więcej informacji, zobacz [PathRemoveBlanks](/windows/win32/api/sh
 
 Wywołanie tej metody, aby usunąć rozszerzenie pliku ze ścieżki, jeśli istnieje.
 
-```
+```cpp
 void RemoveExtension();
 ```
 
@@ -859,7 +859,7 @@ Aby uzyskać więcej informacji, zobacz [PathSkipRoot](/windows/win32/api/shlwap
 
 Wywołanie tej metody, aby usunąć część ścieżki w pełni kwalifikowany ścieżki i nazwy pliku.
 
-```
+```cpp
 void StripPath();
 ```
 
@@ -887,7 +887,7 @@ Aby uzyskać więcej informacji, zobacz [PathStripToRoot](/windows/win32/api/shl
 
 Wywołanie tej metody, aby usunąć znaki cudzysłowu z początku i końca ścieżki.
 
-```
+```cpp
 void UnquoteSpaces();
 ```
 

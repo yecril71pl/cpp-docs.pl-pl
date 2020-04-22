@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: 309b74126f57e76aa6399f57382d88fee4400700
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c5d7d5135c3b207bbf113970deb8cbeb186bcca
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369661"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749564"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>Klasa CMFCOutlookBarTabCtrl
 
@@ -135,7 +135,7 @@ W poniższym przykładzie pokazano, `CMFCOutlookBarTabCtrl` jak zainicjować obi
 
 Dodaje kontrolkę systemu Windows jako nową kartę na pasku programu Outlook.
 
-```
+```cpp
 void AddControl(
     CWnd* pWndCtrl,
     LPCTSTR lpszName,
@@ -277,7 +277,7 @@ Wywołanie tej funkcji, aby włączyć lub wyłączyć edycję w miejscu etykiet
 
 Wywoływane przez strukturę, aby włączyć uchwyty przewijania, które umożliwiają użytkownikowi przewijanie przycisków w okienku paska programu Outlook.
 
-```
+```cpp
 void EnableScrollButtons(
     BOOL bEnable = TRUE,
     BOOL bIsUp = TRUE,
@@ -416,7 +416,7 @@ Efekt wizualny ustawienia aktywnej karty zależy od tego, czy włączono animacj
 
 Ustawia rozmiar obramowania kontrolki karty Outlook.
 
-```
+```cpp
 void SetBorderSize(int nBorderSize);
 ```
 
@@ -433,7 +433,7 @@ Ustawia nowy rozmiar obramowania i ponownie oblicza układ okna programu Outlook
 
 Ustawia wyrównanie etykiet tekstowych na przyciskach kart paska programu Outlook.
 
-```
+```cpp
 void SetPageButtonTextAlign(
     UINT uiAlign,
     BOOL bRedraw=TRUE);
@@ -495,7 +495,7 @@ Ta metoda nie powinna być wywoływana, jeśli nie w trybie pakietu Microsoft Of
 
 ## <a name="cmfcoutlookbartabctrlsetvisiblepagebuttons"></a><a name="setvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl::SetVisiblePageButtons
 
-```
+```cpp
 void SetVisiblePageButtons(int nVisiblePageButtons);
 ```
 

@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: 90a12badc90bfcb74e873180b5f887e37cd47fd5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 474e2707ba1936082bb6abc1be2109a27924f1d5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376204"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745166"
 ---
 # <a name="cmfctoolbarimages-class"></a>Klasa CMFCToolBarImages
 
@@ -270,7 +270,7 @@ W poniższym przykładzie pokazano, `CMFCToolBarImages` jak skonfigurować obiek
 
 ## <a name="cmfctoolbarimagesadaptcolors"></a><a name="adaptcolors"></a>CMFCToolBarImages::AdaptColors
 
-```
+```cpp
 void AdaptColors(
     COLORREF clrBase,
     COLORREF clrTone);
@@ -349,7 +349,7 @@ static void __stdcall CleanUp();
 
 Zwalnia zasoby systemowe, które [CMFCToolbarImages obiekt przydzielony.](../../mfc/reference/cmfctoolbarimages-class.md)
 
-```
+```cpp
 void Clear();
 ```
 
@@ -545,7 +545,7 @@ static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 
 Zwalnia zasoby systemowe, które [CMFCToolBarImages::PrepareDrawImage przydzielone](#preparedrawimage) po narysowaniu obrazu paska narzędzi przez wywołanie [CMFCToolBarImages::Draw](#draw).
 
-```
+```cpp
 void EndDrawImage(CAfxDrawState& ds);
 ```
 
@@ -1068,7 +1068,7 @@ BOOL MirrorVert();
 
 ## <a name="cmfctoolbarimagesonsyscolorchange"></a><a name="onsyscolorchange"></a>CMFCToolBarImages::OnSysColorChange
 
-```
+```cpp
 void OnSysColorChange();
 ```
 
@@ -1161,7 +1161,7 @@ Wywołanie tej metody do przechowywania obrazów zdefiniowanych przez użytkowni
 
 ## <a name="cmfctoolbarimagessetalwayslight"></a><a name="setalwayslight"></a>CMFCToolBarImages::SetAlwaysLight
 
-```
+```cpp
 void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 ```
 
@@ -1204,7 +1204,7 @@ static void __stdcall SetFadedImageAlpha(BYTE nValue);
 
 Ustawia rozmiar każdego obrazu paska narzędzi (rozmiar źródłowy).
 
-```
+```cpp
 void SetImageSize(
     SIZE sizeImage,
     BOOL bUpdateCount=FALSE);
@@ -1221,7 +1221,7 @@ Domyślnie rozmiar obrazu paska narzędzi wynosi 16x15 pikseli. Wywołanie tej m
 
 ## <a name="cmfctoolbarimagessetlightpercentage"></a><a name="setlightpercentage"></a>CMFCToolBarImages::SetLightPercentage
 
-```
+```cpp
 void SetLightPercentage(int nValue);
 ```
 
@@ -1233,7 +1233,7 @@ void SetLightPercentage(int nValue);
 
 ## <a name="cmfctoolbarimagessetmapto3dcolors"></a><a name="setmapto3dcolors"></a>CMFCToolBarImages::SetMapTo3DKolors
 
-```
+```cpp
 void SetMapTo3DColors(BOOL bMapTo3DColors);
 ```
 
@@ -1245,7 +1245,7 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 
 ## <a name="cmfctoolbarimagessetpremultiplyautocheck"></a><a name="setpremultiplyautocheck"></a>CMFCToolBarImages::SetPreMultiplyAutoCheck
 
-```
+```cpp
 void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 ```
 
@@ -1257,7 +1257,7 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 
 ## <a name="cmfctoolbarimagessetsingleimage"></a><a name="setsingleimage"></a>CMFCToolBarImages::SetSingleImage
 
-```
+```cpp
 void SetSingleImage();
 ```
 

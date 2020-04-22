@@ -1,91 +1,92 @@
 ---
 title: Tworzenie projektu aplikacji konsoli w języku C++
-description: Tworzenie aplikacji konsolowej Hello World w języku Visual C++
+description: Utwórz aplikację konsoli Hello World przy użyciu języka Microsoft C++ w programie Visual Studio.
 ms.custom: mvc
-ms.date: 04/02/2019
+ms.date: 04/20/2020
 ms.topic: tutorial
-ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 739da0b6e5400117c0b09a3d4c3335bd44529a25
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07e88da9a8a3712e1d37e319c29fd25aebce8ea7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314951"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749311"
 ---
 # <a name="create-a-c-console-app-project"></a>Tworzenie projektu aplikacji konsoli w języku C++
 
-Zwykle początkowy punkt jest programistą języka C++ "Hello, world!" Aplikacja, która jest uruchamiana w wierszu polecenia. To, co utworzysz w programie Visual Studio w tym kroku.
+Zwykle punktem wyjścia dla programisty C++ jest "Cześć, świat!" aplikacja, która działa w wierszu polecenia. To, co utworzysz w programie Visual Studio w tym kroku.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Program Visual Studio za pomocą programowanie aplikacji klasycznych, z obciążeniem C++ zainstalowany i uruchomiony na komputerze. Jeśli nie jest jeszcze zainstalowany, zobacz [Instalowanie obsługi języka C++ w programie Visual Studio](vscpp-step-0-installation.md).
+- Mieć Visual Studio z pulpitu rozwoju z c++ obciążenia zainstalowanego i uruchomionego na komputerze. Jeśli nie jest jeszcze zainstalowany, zobacz [Instalowanie pomocy technicznej języka C++ w programie Visual Studio](vscpp-step-0-installation.md).
 
-## <a name="create-your-app-project"></a>Utwórz projekt aplikacji
+## <a name="create-your-app-project"></a>Tworzenie projektu aplikacji
 
-Program Visual Studio używa *projektów* organizowania kodu dla aplikacji, a *rozwiązania* do organizowania projektów. Projekt zawiera wszystkie opcje, konfiguracji i reguły używane do tworzenia aplikacji i zarządza relacji między plików wszystkich projektów i plików zewnętrznych. Aby utworzyć aplikację, najpierw należy utworzyć nowy projekt i rozwiązanie.
+Visual Studio używa *projektów* do organizowania kodu dla aplikacji i *rozwiązań* do organizowania projektów. Projekt zawiera wszystkie opcje, konfiguracje i reguły używane do tworzenia aplikacji. Zarządza relacją między wszystkimi plikami projektu a wszelkimi plikami zewnętrznymi. Aby utworzyć aplikację, najpierw utworzysz nowy projekt i rozwiązanie.
 
 ::: moniker range=">=vs-2019"
 
-1. W programie Visual Studio, otwórz **pliku** menu i wybierz polecenie **New** > **projektu** otworzyć **Utwórz nowy projekt** okna dialogowego. Wybierz **aplikacja Konsolowa** szablonu, a następnie wybierz **dalej**.
+1. W programie Visual Studio otwórz menu **Plik** i wybierz polecenie **Nowy > project,** aby otworzyć okno dialogowe **Utwórz nowy projekt.** Wybierz szablon **aplikacji konsoli,** który ma tagi **C++,** **Windows**i **Konsola,** a następnie wybierz pozycję **Dalej**.
 
-   ![Utwórz nowy projekt](media/vs2019-choose-console-app.png "otworzyć tworzenia okna dialogowego Nowy projekt")
+   ![Tworzenie nowego projektu](media/vs2019-choose-console-app.png "Otwieranie okna dialogowego Tworzenie nowego projektu")
 
-1. W **konfigurowania nowego projektu** okno dialogowe, wprowadź *HelloWorld* w **Nazwa projektu** pole edycji. Wybierz **Utwórz** do tworzenia projektu.
+1. W oknie dialogowym **Konfigurowanie nowego projektu** wprowadź *helloworld* w polu edycji **nazwy projektu.** Wybierz **pozycję Utwórz,** aby utworzyć projekt.
 
-   ![Nazwy i Utwórz nowy projekt](media/vs2019-configure-new-project-hello-world.png "nazwy i Utwórz nowy projekt")
+   ![Nazwij i utwórz nowy projekt](media/vs2019-configure-new-project-hello-world.png "Nazwij i utwórz nowy projekt")
 
-   Program Visual Studio tworzy nowy projekt, gotowy do dodawania oraz edytowania kodu źródłowego. Domyślnie szablon Aplikacja konsoli wypełnia kodu źródłowego za pomocą aplikacji "Hello World":
+   Visual Studio tworzy nowy projekt. Jest gotowy do dodania i edycji kodu źródłowego. Domyślnie szablon aplikacji konsoli wypełnia kod źródłowy aplikacją "Hello World":
 
-   ![Witaj świecie projektu w IDE](media/vs2019-hello-world-code.png "projektu Hello World w środowisku IDE")
+   ![Projekt Hello World w idei](media/vs2019-hello-world-code.png "Projekt Hello World w idei")
 
-   Gdy kod wygląda to w edytorze, wszystko będzie gotowe, przejdź do następnego kroku i skompiluj aplikację.
+   Gdy kod wygląda tak w edytorze, możesz przystąpić do następnego kroku i utworzyć aplikację.
+
+[Wpadłem na problem.](#create-your-app-project-issues)
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-1. W programie Visual Studio, otwórz **pliku** menu i wybierz polecenie **nowy > Projekt** otworzyć **nowy projekt** okna dialogowego.
+1. W programie Visual Studio otwórz menu **Plik** i wybierz polecenie **Nowy > project,** aby otworzyć okno dialogowe **Nowy projekt.**
 
-   ![Otwórz okno dialogowe Nowy projekt](media/vscpp-file-new-project.gif "otwarcie okna dialogowego Nowy projekt")
+   ![Otwieranie okna dialogowego Nowy projekt](media/vscpp-file-new-project.gif "Otwieranie okna dialogowego Nowy projekt")
 
-1. W **nowy projekt** okno dialogowe, wybierz opcję **zainstalowane**, **Visual C++** Jeśli jeszcze nie jest zaznaczone, a następnie wybierz **pusty projekt** szablon. W **nazwa** wprowadź *HelloWorld*. Wybierz **OK** do tworzenia projektu.
+1. W oknie dialogowym **Nowy projekt** wybierz pozycję **Zainstalowana > visual c++,** jeśli nie jest jeszcze zaznaczona, a następnie wybierz szablon **Pusty projekt.** W polu **Nazwa** wprowadź *helloworld*. Wybierz **przycisk OK,** aby utworzyć projekt.
 
-   ![Nazwy i Utwórz nowy projekt](media/vscpp-concierge-project-name-callouts.png "nazwy i Utwórz nowy projekt")
+   ![Nazwij i utwórz nowy projekt](media/vscpp-concierge-project-name-callouts.png "Nazwij i utwórz nowy projekt")
 
-Program Visual Studio tworzy nowy, pusty projekt, gotowe do specialize dla rodzaju aplikacji, którą chcesz utworzyć i dodać pliki kodu źródłowego. Należy to zrobić to w następnym kroku.
+Visual Studio tworzy nowy, pusty projekt. Jest gotowy, aby specjalizować się w rodzaju aplikacji, którą chcesz utworzyć i dodać pliki kodu źródłowego. Zrobisz to w następnym kroku.
 
-[Wystąpił problem.](#create-your-app-project-issues)
+[Wpadłem na problem.](#create-your-app-project-issues)
 
-## <a name="make-your-project-a-console-app"></a>Utworzyć projekt aplikacji konsoli
+## <a name="make-your-project-a-console-app"></a>Uczynienie projektu aplikacją konsoli
 
-Program Visual Studio można utworzyć wszelkiego rodzaju aplikacje i składniki dla Windows i innych platform. **Pusty projekt** szablon nie ma informacji na temat tworzy jakiego rodzaju aplikacji. Aby utworzyć *aplikacja konsolowa*, jednego, które jest uruchamiane w konsoli lub w oknie wiersza polecenia, musisz poinformować programu Visual Studio do kompilowania aplikacji do użycia podsystemu konsoli.
+Program Visual Studio może tworzyć wszystkie rodzaje aplikacji i składników dla systemu Windows i innych platform. **Szablon Pusty projekt** nie jest określony w rodzaju tworzonej aplikacji. Aplikacja konsoli to *aplikacja,* która działa w oknie konsoli lub wiersza polecenia. Aby go utworzyć, należy poinformować program Visual Studio, aby utworzyć aplikację, aby korzystać z podsystemu konsoli.
 
-1. W programie Visual Studio, otwórz **projektu** menu i wybierz polecenie **właściwości** otworzyć **stron właściwości HelloWorld** okna dialogowego.
+1. W programie Visual Studio otwórz menu **Projekt** i wybierz polecenie **Właściwości,** aby otworzyć okno dialogowe **Strony właściwości HelloWorld.**
 
-1. W **stron właściwości** okna dialogowego, w obszarze **właściwości konfiguracji**, wybierz opcję **konsolidatora**, **systemu**, a następnie wybierz pole edycji obok pozycji **podsystemu** właściwości. W wyświetlonym menu rozwijanym wybierz **Konsola (/ SUBSYSTEM: CONSOLE)**. Wybierz **OK** Aby zapisać zmiany.
+1. W oknie dialogowym **Strony właściwości** wybierz pozycję Właściwości konfiguracji **> konsolidator > system**, a następnie wybierz pole edycji obok właściwości **Podsystem.** W wyświetlonym menu rozwijanym wybierz **pozycję Konsola (/SUBSYSTEM:KONSOLA)**. Wybierz **przycisk OK,** aby zapisać zmiany.
 
-   ![Otwórz okno dialogowe strony właściwości](media/vscpp-properties-linker-subsystem.gif "Otwórz okno dialogowe strony właściwości")
+   ![Otwieranie okna dialogowego Strony właściwości](media/vscpp-properties-linker-subsystem.gif "Otwieranie okna dialogowego Strony właściwości")
 
-Program Visual Studio teraz wie, aby skompilować projekt, aby uruchomić w oknie konsoli. Następnie dodasz plik kodu źródłowego i wprowadź kod dla aplikacji.
+Visual Studio wie teraz, aby utworzyć projekt do uruchomienia w oknie konsoli. Następnie dodasz plik kodu źródłowego i wprowadzisz kod aplikacji.
 
-[Wystąpił problem.](#make-your-project-a-console-app-issues)
+[Wpadłem na problem.](#make-your-project-a-console-app-issues)
 
-## <a name="add-a-source-code-file"></a>Dodaj plik kodu źródłowego
+## <a name="add-a-source-code-file"></a>Dodawanie pliku kodu źródłowego
 
-1. W **Eksploratora rozwiązań**, wybierz projekt HelloWorld. Na pasku menu wybierz **projektu**, **Dodaj nowy element** otworzyć **Dodaj nowy element** okna dialogowego.
+1. W **Eksploratorze rozwiązań**wybierz projekt HelloWorld. Na pasku menu wybierz pozycję **Projekt**, **Dodaj nowy element,** aby otworzyć okno dialogowe Dodaj nowy **element.**
 
-1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **Visual C++** w obszarze **zainstalowane** Jeśli nie została jeszcze wybrana. W środkowym okienku wybierz **plik C++ (.cpp)**. Zmiana **nazwa** do *HelloWorld.cpp*. Wybierz **Dodaj** aby zamknąć okno dialogowe, a następnie utwórz plik.
+1. W oknie dialogowym **Dodawanie nowego elementu** wybierz pozycję Visual **C++** w obszarze **Zainstalowane,** jeśli nie jest jeszcze zaznaczona. W środkowym okienku wybierz **plik C++ (cpp)**. Zmień **nazwę** na *HelloWorld.cpp*. Wybierz **pozycję Dodaj,** aby zamknąć okno dialogowe i utworzyć plik.
 
-   ![Dodawanie pliku źródłowego dla HelloWorld.cpp](media/vscpp-add-new-item.gif "dodać plik źródłowy dla HelloWorld.cpp")
+   ![Dodawanie pliku źródłowego dla helloworld.cpp](media/vscpp-add-new-item.gif "Dodawanie pliku źródłowego dla helloworld.cpp")
 
-Visual studio tworzy plik kodu źródłowego na nowy, pusty i otwiera go w oknie edytora gotowa do przejścia w kodzie źródłowym.
+Visual Studio tworzy nowy, pusty plik kodu źródłowego i otwiera go w oknie edytora, gotowy do wprowadzenia kodu źródłowego.
 
-[Wystąpił problem.](#add-a-source-code-file-issues)
+[Wpadłem na problem.](#add-a-source-code-file-issues)
 
-## <a name="add-code-to-the-source-file"></a>Dodaj kod do pliku źródłowego
+## <a name="add-code-to-the-source-file"></a>Dodawanie kodu do pliku źródłowego
 
-1. Skopiuj ten kod w oknie edytora HelloWorld.cpp.
+1. Skopiuj ten kod do okna edytora HelloWorld.cpp.
 
    ```cpp
    #include <iostream>
@@ -99,56 +100,72 @@ Visual studio tworzy plik kodu źródłowego na nowy, pusty i otwiera go w oknie
 
    Kod powinien wyglądać następująco w oknie edytora:
 
-   ![Witaj, świecie kodu w edytorze](media/vscpp-hello-world-editor.png "kodu Witaj, świecie w edytorze")
+   ![Hello World kod w edytorze](media/vscpp-hello-world-editor.png "Hello World kod w edytorze")
 
-Gdy kod wygląda to w edytorze, wszystko będzie gotowe, przejdź do następnego kroku i skompiluj aplikację.
+Gdy kod wygląda tak w edytorze, możesz przystąpić do następnego kroku i utworzyć aplikację.
 
-[Wystąpił problem.](#add-a-source-code-file-issues)
+[Wpadłem na problem.](#add-a-source-code-file-issues)
 
 ::: moniker-end
 
 ## <a name="next-steps"></a>Następne kroki
 
 > [!div class="nextstepaction"]
-> [Kompilowanie i uruchamianie projektu w języku C++](vscpp-step-2-build.md)
-
-::: moniker range="<=vs-2017"
+> [Tworzenie i uruchamianie projektu języka C++](vscpp-step-2-build.md)
 
 ## <a name="troubleshooting-guide"></a>Przewodnik rozwiązywania problemów
 
-Tu rozwiązania typowych problemów podczas tworzenia pierwszego projektu C++.
+Przyjdź tutaj, aby uzyskać rozwiązania typowych problemów podczas tworzenia pierwszego projektu C++.
 
-### <a name="create-your-app-project-issues"></a>Tworzenie aplikacji problemy projektu
+### <a name="create-your-app-project-issues"></a>Tworzenie projektu aplikacji: problemy
 
-Jeśli **nowy projekt** nie wyświetla okno dialogowe **Visual C++** wpis w **zainstalowane**, Twoja kopia programu Visual Studio, prawdopodobnie nie masz **pulpitu Programowanie w języku C++** zainstalowanym obciążeniem. Można uruchomić Instalatora z **nowy projekt** okna dialogowego. Wybierz **Otwórz Instalator programu Visual Studio** łącze, aby uruchomić Instalatora ponownie. Jeśli **Kontrola konta użytkownika** okna dialogowego żąda uprawnień, wybierz polecenie **tak**. W oknie Instalatora upewnij się, że **programowanie aplikacji klasycznych w języku C++** obciążenie jest zaznaczone, a następnie wybierz **OK** można zaktualizować instalację programu Visual Studio.
+::: moniker range="vs-2019"
 
-Jeśli inny projekt o takiej samej nazwie już istnieje, wybierz inną nazwę dla projektu, lub usuń istniejący projekt i spróbuj ponownie. Aby usunąć istniejący projekt, należy usunąć folder rozwiązania (folder, który zawiera plik helloworld.sln) w Eksploratorze plików.
+W oknie dialogowym **Nowy projekt** powinien być wyświetlany szablon **aplikacji konsoli** zawierający tagi **C++,** **Windows**i **Konsola.** Jeśli go nie widzisz, istnieją dwie możliwe przyczyny. Może być odfiltrowany z listy lub może nie być zainstalowany. Najpierw sprawdź listy rozwijane filtru u góry listy szablonów. Ustaw je na **C++,** **Windows**i **Konsola**. Powinien pojawić się szablon **aplikacji konsoli** Języka C++; w przeciwnym razie **programowy pulpitu z** obciążeniem języka C++ nie jest zainstalowany.
 
-[Przejdź wstecz](#create-your-app-project).
+Aby zainstalować **programowanie pulpitu w języku C++**, można uruchomić instalator bezpośrednio z okna dialogowego **Nowy projekt.** Wybierz **łącze Zainstaluj więcej narzędzi i funkcji** u dołu listy szablonów, aby uruchomić instalatora. Jeśli okno dialogowe **Kontrola konta użytkownika** żąda uprawnień, wybierz pozycję **Tak**. W instalatorze upewnij się, że **programowanie pulpitu z** obciążeniem języka C++ jest zaznaczone. Następnie wybierz pozycję **Modyfikuj,** aby zaktualizować instalację programu Visual Studio.
 
-### <a name="make-your-project-a-console-app-issues"></a>Wprowadź projektu problemów aplikacji konsoli
+Jeśli inny projekt o tej samej nazwie już istnieje, wybierz inną nazwę dla projektu. Możesz też usunąć istniejący projekt i spróbować ponownie. Aby usunąć istniejący projekt, usuń folder rozwiązania (folder zawierający plik *helloworld.sln)* w Eksploratorze plików.
 
-Jeśli nie widzisz **konsolidatora** obszarze **właściwości konfiguracji**, wybierz **anulować** zamknąć **strony właściwości** okna dialogowego a następnie Upewnij się, że **HelloWorld** projekt jest wybrany w **Eksploratora rozwiązań**, nie rozwiązania lub innego pliku lub folderu, przed ponowną próbą.
+[Wróć](#create-your-app-project).
 
-Kontrolka dropdown nie jest wyświetlana w **podsystemu** właściwość pole edycji, dopóki nie wybierzesz właściwości. Możesz wybrać go za pomocą wskaźnika lub możesz nacisnąć klawisz Tab, aby przechodzić między formantów okna dialogowego aż do **podsystemu** zostanie wyróżniona. Wybierz formant listy rozwijanej lub naciśnij klawisze Alt + Strzałka w dół, aby go otworzyć.
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Jeśli **okno** dialogowe Nowy projekt nie pokazuje wpisu **Visual C++** w obszarze **Zainstalowane**, kopia programu Visual Studio prawdopodobnie nie ma zainstalowanego obciążenia pulpitu z zainstalowanym obciążeniem **języka C++.** Instalatora można uruchomić bezpośrednio w oknie dialogowym **Nowy projekt.** Wybierz **łącze Instalatora programu Visual Visual Studio,** aby ponownie uruchomić instalator. Jeśli okno dialogowe **Kontrola konta użytkownika** żąda uprawnień, wybierz pozycję **Tak**. W razie potrzeby zaktualizuj instalatora. W instalatorze upewnij się, że **programowanie pulpitu z** obciążeniem języka C++ jest zaznaczone i wybierz przycisk **OK,** aby zaktualizować instalację programu Visual Studio.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Jeśli inny projekt o tej samej nazwie już istnieje, wybierz inną nazwę dla projektu. Możesz też usunąć istniejący projekt i spróbować ponownie. Aby usunąć istniejący projekt, usuń folder rozwiązania (folder zawierający plik *helloworld.sln)* w Eksploratorze plików.
+
+[Wróć](#create-your-app-project).
+
+### <a name="make-your-project-a-console-app-issues"></a>Nadaj projektowi aplikację konsoli: problemy
+
+Jeśli nie widzisz **konsolidatora** na liście **właściwości konfiguracji,** wybierz pozycję **Anuluj,** aby zamknąć okno dialogowe **Strony właściwości.** Upewnij się, że projekt **HelloWorld** jest zaznaczony w **Eksploratorze rozwiązań** przed ponowną próbą. Nie wybieraj rozwiązania **HelloWorld** ani innego elementu w **Eksploratorze rozwiązań**.
+
+Kontrolka rozwijana nie pojawia się w polu edycji właściwości **Podsystem,** dopóki nie wybierzesz właściwości. Kliknij pole edycji, aby je zaznaczyć. Można też nacisnąć klawisz **Tab,** aby przełączać się między formantami okna dialogowego, dopóki **podsystem** nie zostanie wyróżniony. Wybierz kontrolka listy rozwijanej lub naciśnij **klawisze Alt+Down,** aby ją otworzyć.
 
 [Przejdź wstecz](#make-your-project-a-console-app)
 
-### <a name="add-a-source-code-file-issues"></a>Dodaj problemy z plików kodu źródłowego
+### <a name="add-a-source-code-file-issues"></a>Dodawanie pliku kodu źródłowego: problemy
 
-Szkodzi, jeśli podać inną nazwę pliku z kodem źródłowym. Jednak nie należy dodawać więcej niż jednego pliku kodu źródłowego, który zawiera ten sam kod do projektu.
+Jest w porządku, jeśli nadasz plikowi kodu źródłowego inną nazwę. Jednak nie należy dodawać więcej niż jeden plik, który zawiera ten sam kod do projektu.
 
-Jeśli typ pliku jest dodawany do projektu, na przykład plik nagłówka, usuń go i spróbuj ponownie. Aby usunąć plik, wybierz go w **Eksploratora rozwiązań** i naciśnij klawisz Delete.
+Jeśli do projektu dodano niewłaściwy typ pliku, taki jak plik nagłówkowy, usuń go i spróbuj ponownie. Aby usunąć plik, zaznacz go w **Eksploratorze rozwiązań**. Następnie naciśnij klawisz **Delete.**
 
-[Przejdź wstecz](#add-a-source-code-file).
+[Wróć](#add-a-source-code-file).
 
-### <a name="add-code-to-the-source-file-issues"></a>Dodaj kod do problemów z plików źródłowych
+### <a name="add-code-to-the-source-file-issues"></a>Dodawanie kodu do pliku źródłowego: problemy
 
-Jeśli przypadkowo zamknięty źródło pliku okna edytora kodu, aby otworzyć go ponownie, kliknij dwukrotnie HelloWorld.cpp w **Eksploratora rozwiązań** okna.
+Jeśli przypadkowo zamknięto okno edytora plików kodu źródłowego, możesz je łatwo otworzyć ponownie. Aby go otworzyć, kliknij dwukrotnie HelloWorld.cpp w oknie **Eksploratora rozwiązań.**
 
-Czerwone symbole są wyświetlane w obszarze dowolne elementy w edytorze kodu źródłowego, sprawdź, czy kod jest zgodna w przykładzie w pisowni, znaki interpunkcyjne i wielkości liter. Sprawa jest istotne w przypadku kodu C++.
+Jeśli czerwone squiggles pojawiają się pod czymkolwiek w edytorze kodu źródłowego, sprawdź, czy kod pasuje do przykładu w pisowni, znaki interpunkcyjne i sprawy. Przypadek jest istotny w kodzie C++.
 
-[Przejdź wstecz](#add-code-to-the-source-file).
+[Wróć](#add-code-to-the-source-file).
 
 ::: moniker-end
 

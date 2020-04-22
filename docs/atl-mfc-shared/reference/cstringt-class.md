@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 90f63b474f509b4d1a15ad6fe11bda61c343f483
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8fcce4c426cd99785d34dc080f238cc78cdfee36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317588"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746710"
 ---
 # <a name="cstringt-class"></a>CStringT, klasa
 
@@ -306,7 +306,7 @@ Poniższy przykład pokazuje użycie `CStringT::AllocSysString`.
 
 Konwertuje wszystkie znaki `CStringT` w tym obiekcie z zestawu znaków ANSI na zestaw znaków OEM.
 
-```
+```cpp
 void AnsiToOem();
 ```
 
@@ -322,7 +322,7 @@ Funkcja nie jest dostępna, jeśli zdefiniowano _UNICODE.
 
 Dołącza sformatowane dane `CStringT` do istniejącego obiektu.
 
-```
+```cpp
 void __cdecl AppendFormat(PCXSTR pszFormat, [, argument] ...);
 void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 ```
@@ -696,7 +696,7 @@ Znajduje pierwsze wystąpienie dowolnego ze znaków w *pszCharSet*.
 
 Zapisuje sformatowane `CStringT` dane w taki sam sposób, w jaki [sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) formatuje dane w tablicę znaków w stylu C.
 
-```
+```cpp
 void __cdecl Format(UINT nFormatID, [, argument]...);
 void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 ```
@@ -730,7 +730,7 @@ Aby uzyskać więcej informacji, zobacz [Formatowanie składni specyfikacji: pri
 
 Formatuje ciąg wiadomości.
 
-```
+```cpp
 void __cdecl FormatMessage(UINT nFormatID, [, argument]...);
 void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 ```
@@ -763,7 +763,7 @@ Każda płytka musi mieć odpowiedni parametr zgodnie z parametrem *pszFormat* l
 
 Formatuje ciąg wiadomości przy użyciu listy argumentów zmiennej.
 
-```
+```cpp
 void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 ```
 
@@ -788,7 +788,7 @@ Aby uzyskać więcej informacji, zobacz funkcję Format systemu [WindowsMessage]
 
 Formatuje ciąg wiadomości przy użyciu listy argumentów zmiennej.
 
-```
+```cpp
 void FormatV(PCXSTR pszFormat, va_list args);
 ```
 
@@ -1012,7 +1012,7 @@ W przypadku zestawów znaków wielobajtowych (MBCS) *nCount* odnosi się do każ
 
 Konwertuje wszystkie znaki `CStringT` w tym obiekcie z zestawu znaków OEM na zestaw znaków ANSI.
 
-```
+```cpp
 void OemToAnsi();
 ```
 

@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 1b165b485e067120477de560d2091c448e02fe44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c0a0d1f578b2f0d186ce0f4ea8c7da07e741b71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368341"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747205"
 ---
 # <a name="crendertarget-class"></a>Klasa CRenderTarget
 
@@ -236,7 +236,7 @@ virtual ~CRenderTarget();
 
 Dołącza istniejący interfejs docelowy renderowania do obiektu
 
-```
+```cpp
 void Attach(ID2D1RenderTarget* pRenderTarget);
 ```
 
@@ -249,7 +249,7 @@ Istniejący interfejs docelowy renderowania. Nie może być null
 
 Inicjuje rysowanie na tym celu renderowania.
 
-```
+```cpp
 void BeginDraw();
 ```
 
@@ -257,7 +257,7 @@ void BeginDraw();
 
 Czyści obszar rysunku do określonego koloru.
 
-```
+```cpp
 void Clear(D2D1_COLOR_F color);
 ```
 
@@ -362,7 +362,7 @@ Wskaźnik do odłączony interfejs docelowy renderowania.
 
 Rysuje sformatowany tekst opisany przez określony obiekt IDWriteTextLayout.
 
-```
+```cpp
 void DrawBitmap(
     CD2DBitmap* pBitmap,
     const CD2DRectF& rectDest,
@@ -392,7 +392,7 @@ Rozmiar i położenie w pikselach niezależnych od urządzenia w przestrzeni wsp
 
 Rysuje kontur określonej elipsy przy użyciu określonego stylu obrysu.
 
-```
+```cpp
 void DrawEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush,
@@ -418,7 +418,7 @@ Styl obrysu, który ma być stosowany do konturu elipsy, lub NULL, aby pomalowa�
 
 Rysuje kontur określonej geometrii przy użyciu określonego stylu obrysu.
 
-```
+```cpp
 void DrawGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -444,7 +444,7 @@ Styl obrysu, który ma być stosowany do konturu geometrii, lub NULL, aby pomalo
 
 Rysuje określone glify.
 
-```
+```cpp
 void DrawGlyphRun(
     const CD2DPointF& ptBaseLineOrigin,
     const DWRITE_GLYPH_RUN& glyphRun,
@@ -470,7 +470,7 @@ Wartość wskazująca, jak metryki glifów są używane do pomiaru tekstu, gdy j
 
 Rysuje linię między określonymi punktami przy użyciu określonego stylu obrysu.
 
-```
+```cpp
 void DrawLine(
     const CD2DPointF& ptFrom,
     const CD2DPointF& ptTo,
@@ -500,7 +500,7 @@ Styl obrysu do malowania lub NULL do malowania linii ciągłej.
 
 Rysuje kontur prostokąta, który ma określone wymiary i styl obrysu.
 
-```
+```cpp
 void DrawRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
@@ -526,7 +526,7 @@ Styl obrysu do malowania lub NULL do malowania jednolitego obrysu.
 
 Rysuje kontur określonego zaokrąglonego prostokąta przy użyciu określonego stylu obrysu.
 
-```
+```cpp
 void DrawRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush,
@@ -552,7 +552,7 @@ Styl obrysu zaokrąglonego prostokąta lub NULL do malowania jednolitego obrysu.
 
 Rysuje określony tekst przy użyciu informacji o formacie dostarczonych przez obiekt IDWriteTextFormat.
 
-```
+```cpp
 void DrawText(
     const CString& strText,
     const CD2DRectF& rectangle,
@@ -586,7 +586,7 @@ Wartość wskazująca, jak metryki glifów są używane do pomiaru tekstu, gdy j
 
 Rysuje sformatowany tekst opisany przez określony obiekt IDWriteTextLayout.
 
-```
+```cpp
 void DrawTextLayout(
     const CD2DPointF& ptOrigin,
     CD2DTextLayout* textLayout,
@@ -624,7 +624,7 @@ Jeśli metoda powiedzie się, zwraca S_OK. W przeciwnym razie zwraca kod błędu
 
 Maluje wnętrze określonej elipsy.
 
-```
+```cpp
 void FillEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush);
@@ -642,7 +642,7 @@ Szczotka używana do malowania wnętrza elipsy.
 
 Maluje wnętrze określonej geometrii.
 
-```
+```cpp
 void FillGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -664,7 +664,7 @@ Maska krycia do zastosowania do geometrii; NULL dla maski bez krycia. Jeśli okr
 
 Maluje wnętrze określonej siatki.
 
-```
+```cpp
 void FillMesh(
     CD2DMesh* pMesh,
     CD2DBrush* pBrush);
@@ -682,7 +682,7 @@ Pędzel używany do malowania siatki.
 
 Stosuje maskę krycia opisaną przez określoną mapę bitową do pędzla i używa tego pędzla do malowania regionu obiektu docelowego renderowania.
 
-```
+```cpp
 void FillOpacityMask(
     CD2DBitmap* pOpacityMask,
     CD2DBrush* pBrush,
@@ -712,7 +712,7 @@ Region mapy bitowej, który ma być używany jako maska krycia, w pikselach niez
 
 Maluje wnętrze określonego prostokąta.
 
-```
+```cpp
 void FillRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
@@ -730,7 +730,7 @@ Szczotka używana do malowania wnętrza prostokąta.
 
 Maluje wnętrze określonego zaokrąglonego prostokąta.
 
-```
+```cpp
 void FillRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush);
@@ -748,7 +748,7 @@ Szczotka używana do malowania wnętrza zaokrąglonego prostokąta.
 
 Wykonuje wszystkie oczekujące polecenia rysowania.
 
-```
+```cpp
 void Flush(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL);
@@ -850,7 +850,7 @@ Bieżący rozmiar obiektu docelowego renderowania w pikselach niezależnych od u
 
 Pobiera etykietę dla kolejnych operacji rysowania.
 
-```
+```cpp
 void GetTags(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL) const;
@@ -880,7 +880,7 @@ Bieżący tryb antyaliasingu dla operacji rysowania tekstu i glifów.
 
 Pobiera opcje renderowania obiektu docelowego bieżącego renderowania tekstu.
 
-```
+```cpp
 void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 ```
 
@@ -893,7 +893,7 @@ Gdy ta metoda zwraca, textRenderingParamszałącza adres wskaźnika do bieżący
 
 Pobiera bieżącego przekształcenia obiektu docelowego renderowania.
 
-```
+```cpp
 void GetTransform(D2D1_MATRIX_3X2_F* transform);
 ```
 
@@ -971,7 +971,7 @@ Wskaźnik do interfejsu ID2D1RenderTarget lub NULL, jeśli obiekt nie został je
 
 Usuwa ostatni klip wyrównany do osi z celu renderowania. Po wywołaniu tej metody klip nie jest już stosowany do kolejnych operacji rysowania.
 
-```
+```cpp
 void PopAxisAlignedClip();
 ```
 
@@ -979,7 +979,7 @@ void PopAxisAlignedClip();
 
 Zatrzymuje przekierowywanie operacji rysowania do warstwy określonej przez ostatnie wywołanie przycisku PushLayer.
 
-```
+```cpp
 void PopLayer();
 ```
 
@@ -987,7 +987,7 @@ void PopLayer();
 
 Usuwa ostatni klip wyrównany do osi z celu renderowania. Po wywołaniu tej metody klip nie jest już stosowany do kolejnych operacji rysowania.
 
-```
+```cpp
 void PushAxisAlignedClip(
     const CD2DRectF& rectClip,
     D2D1_ANTIALIAS_MODE mode = D2D1_ANTIALIAS_MODE_PER_PRIMITIVE);
@@ -1005,7 +1005,7 @@ Tryb antyaliasingu używany do rysowania krawędzi prostokątów klipu, które m
 
 Dodaje określoną warstwę do obiektu docelowego renderowania, tak aby odbierała wszystkie kolejne operacje rysowania, dopóki nie zostanie wywołana poplayer.
 
-```
+```cpp
 void PushLayer(
     const D2D1_LAYER_PARAMETERS& layerParameters,
     CD2DLayer& layer);
@@ -1023,7 +1023,7 @@ Warstwa odbieranach kolejnych operacji rysowania.
 
 Ustawia stan rysowania obiektu docelowego renderowania na stan określony ID2D1DrawingStateBlock.
 
-```
+```cpp
 void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 ```
 
@@ -1036,7 +1036,7 @@ Nowy stan rysowania obiektu docelowego renderowania.
 
 Zapisuje bieżący stan rysunku do określonego ID2D1DrawingStateBlock.
 
-```
+```cpp
 void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 ```
 
@@ -1049,7 +1049,7 @@ Gdy ta metoda zwraca, zawiera bieżący stan rysunku obiektu docelowego renderow
 
 Ustawia tryb antyaliasing obiektu docelowego renderowania. Tryb antyaliasingu ma zastosowanie do wszystkich kolejnych operacji rysowania, z wyłączeniem operacji rysowania tekstu i glifów.
 
-```
+```cpp
 void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 ```
 
@@ -1062,7 +1062,7 @@ Tryb antyaliasing dla przyszłych operacji rysowania.
 
 Ustawia kropki na cal (DPI) obiektu docelowego renderowania.
 
-```
+```cpp
 void SetDpi(const CD2DSizeF& sizeDPI);
 ```
 
@@ -1075,7 +1075,7 @@ Wartość większa lub równa zero, która określa poziome/verticalDPI obiektu 
 
 Określa etykietę dla kolejnych operacji rysowania.
 
-```
+```cpp
 void SetTags(
     D2D1_TAG tag1,
     D2D1_TAG tag2);
@@ -1093,7 +1093,7 @@ Etykieta stosowana do kolejnych operacji rysowania.
 
 Określa tryb antyaliasingu używany do kolejnych operacji rysowania tekstu i glifów.
 
-```
+```cpp
 void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 ```
 
@@ -1106,7 +1106,7 @@ Tryb antyaliasingu używany do kolejnych operacji rysowania tekstu i glifów.
 
 Określa opcje renderowania tekstu, które mają być stosowane do wszystkich kolejnych operacji rysowania tekstu i glifów.
 
-```
+```cpp
 void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 ```
 
@@ -1119,7 +1119,7 @@ Opcje renderowania tekstu, które mają być zastosowane do wszystkich kolejnych
 
 Stosuje określone przekształcenie do obiektu docelowego renderowania, zastępując istniejącą transformację. Wszystkie kolejne operacje rysowania występują w przekształconym miejscu.
 
-```
+```cpp
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 void SetTransform(const D2D1_MATRIX_3X2_F& transform);
 ```

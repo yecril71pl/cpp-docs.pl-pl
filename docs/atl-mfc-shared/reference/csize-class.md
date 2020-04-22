@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: 6d1b82e3f60428e3a778709dc69de983a7f886bf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc876781cca568a332072938bec2cda0afb2ac8b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317672"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746971"
 ---
 # <a name="csize-class"></a>CSize, klasa
 
@@ -139,7 +139,7 @@ Zwraca wartość niezerowa, jeśli rozmiary nie są równe, w przeciwnym razie 0
 
 Dodaje rozmiar do `CSize`tego .
 
-```
+```cpp
 void operator+=(SIZE size) throw();
 ```
 
@@ -151,7 +151,7 @@ void operator+=(SIZE size) throw();
 
 Odejmuje rozmiar `CSize`od tego .
 
-```
+```cpp
 void operator-=(SIZE size) throw();
 ```
 
@@ -179,11 +179,11 @@ Zobacz następujące opisy poszczególnych operatorów:
 
 - **operator +(** *punkt* **)**
 
-  Ta operacja odsuwa (przenosi) wartość [POINT](/previous-versions/dd162805\(v=vs.85\)) `CSize` (lub [CPoint)](../../atl-mfc-shared/reference/cpoint-class.md)o tę wartość. I `cx` `cy` członków tej `CSize` wartości są `x` dodawane do `y` `POINT` i danych członków wartości. Jest analogiczna do wersji [CPoint::operator +,](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) która przyjmuje parametr [SIZE.](/windows/win32/api/windef/ns-windef-size)
+  Ta operacja odsuwa (przenosi) wartość [POINT](/windows/win32/api/windef/ns-windef-point) `CSize` (lub [CPoint)](../../atl-mfc-shared/reference/cpoint-class.md)o tę wartość. I `cx` `cy` członków tej `CSize` wartości są `x` dodawane do `y` `POINT` i danych członków wartości. Jest analogiczna do wersji [CPoint::operator +,](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) która przyjmuje parametr [SIZE.](/windows/win32/api/windef/ns-windef-size)
 
 - **operator +(** *lpRect* **)**
 
-   Ta operacja odsuwa (przenosi) wartość [RECT](/previous-versions/dd162897\(v=vs.85\)) (lub [CRect)](../../atl-mfc-shared/reference/crect-class.md)o tę `CSize` wartość. Elementy `cx` `cy` członkowskie tej `CSize` wartości są `left`dodawane `right`do `bottom` , `top`, `RECT` i elementy członkowskie danych wartości. Jest analogiczna do wersji [CRect::operator +,](../../atl-mfc-shared/reference/crect-class.md#operator_add) która przyjmuje parametr [SIZE.](/windows/win32/api/windef/ns-windef-size)
+   Ta operacja odsuwa (przenosi) wartość [RECT](/windows/win32/api/windef/ns-windef-rect) (lub [CRect)](../../atl-mfc-shared/reference/crect-class.md)o tę `CSize` wartość. Elementy `cx` `cy` członkowskie tej `CSize` wartości są `left`dodawane `right`do `bottom` , `top`, `RECT` i elementy członkowskie danych wartości. Jest analogiczna do wersji [CRect::operator +,](../../atl-mfc-shared/reference/crect-class.md#operator_add) która przyjmuje parametr [SIZE.](/windows/win32/api/windef/ns-windef-size)
 
 ### <a name="example"></a>Przykład
 
@@ -210,11 +210,11 @@ Czwarty operator, unary minus, zmienia znak `CSize` wartości. Zobacz następuj�
 
 - **operator -(** *punkt* **)**
 
-  Ta operacja odsuwa (przenosi) wartość [POINT](/previous-versions/dd162805\(v=vs.85\)) lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) przez odwrotność dodatku tej `CSize` wartości. I `cx` `cy` tej `CSize` wartości są odejmowane od `x` i `POINT` `y` danych elementów członkowskich wartości. Jest analogiczna do wersji [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) która przyjmuje parametr [SIZE.](/windows/win32/api/windef/ns-windef-size)
+  Ta operacja odsuwa (przenosi) wartość [POINT](/windows/win32/api/windef/ns-windef-point) lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) przez odwrotność dodatku tej `CSize` wartości. I `cx` `cy` tej `CSize` wartości są odejmowane od `x` i `POINT` `y` danych elementów członkowskich wartości. Jest analogiczna do wersji [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) która przyjmuje parametr [SIZE.](/windows/win32/api/windef/ns-windef-size)
 
 - **operator -(** *lpRect* **)**
 
-  Ta operacja odsuwa (przenosi) wartość [RECT](/previous-versions/dd162897\(v=vs.85\)) lub [CRect](../../atl-mfc-shared/reference/crect-class.md) przez odwrotność dodatku tej `CSize` wartości. Elementy `cx` `cy` członkowskie tej `CSize` wartości są odejmowane `right`od `bottom` `left` `top`, , `RECT` i elementy członkowskie danych wartości. Jest analogiczna do wersji [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) która przyjmuje parametr [SIZE.](/windows/win32/api/windef/ns-windef-size)
+  Ta operacja odsuwa (przenosi) wartość [RECT](/windows/win32/api/windef/ns-windef-rect) lub [CRect](../../atl-mfc-shared/reference/crect-class.md) przez odwrotność dodatku tej `CSize` wartości. Elementy `cx` `cy` członkowskie tej `CSize` wartości są odejmowane `right`od `bottom` `left` `top`, , `RECT` i elementy członkowskie danych wartości. Jest analogiczna do wersji [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) która przyjmuje parametr [SIZE.](/windows/win32/api/windef/ns-windef-size)
 
 - **operator -()**
 

@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: 418ef29657271010c3a12f0f15a12f45e5351aac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0dffd273b51dd1c71328332f9f7e29e1ac5cd213
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376168"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745148"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Klasa CMFCToolBarMenuButton
 
@@ -328,7 +328,7 @@ Domyślna implementacja po prostu `CMFCPopupMenu` konstruuje i zwraca nowy obiek
 
 Rysuje ikonę dokumentu na przycisku menu.
 
-```
+```cpp
 void DrawDocumentIcon(
     CDC* pDC,
     const CRect& rectImage,
@@ -352,7 +352,7 @@ Ta metoda przyjmuje ikonę dokumentu i rysuje ją na przycisku menu, wyśrodkowa
 
 ## <a name="cmfctoolbarmenubuttonenablequickcustomize"></a><a name="enablequickcustomize"></a>CMFCToolBarMenuButton::EnableQuickCustomize
 
-```
+```cpp
 void EnableQuickCustomize();
 ```
 
@@ -428,7 +428,7 @@ Przycisk menu paska narzędzi może wyświetlać podmenu. Listę poleceń w podm
 
 Pobiera prostokąt ograniczający dla obrazu przycisku.
 
-```
+```cpp
 void GetImageRect(CRect& rectImage);
 ```
 
@@ -794,7 +794,7 @@ Domyślnie ta metoda ustawia dane ułatwień dostępu dla elementu wstążki i z
 
 Określa, czy przycisk jest rysowany jako przycisk menu, czy przycisk podziału, gdy ma zarówno prawidłowy identyfikator polecenia, jak i podmenu.
 
-```
+```cpp
 void SetMenuOnly(BOOL bMenuOnly);
 ```
 
@@ -811,7 +811,7 @@ Zazwyczaj, gdy przycisk menu paska narzędzi ma zarówno podmenu, jak i identyfi
 
 Określa, czy menu rozwijane jest w trybie palety.
 
-```
+```cpp
 void SetMenuPaletteMode(
     BOOL bMenuPaletteMode=TRUE,
     int nPaletteRows=1);
@@ -831,7 +831,7 @@ W trybie palety wszystkie elementy menu są wyświetlane jako paleta wielokolumn
 
 ## <a name="cmfctoolbarmenubuttonsetmessagewnd"></a><a name="setmessagewnd"></a>CMFCToolBarMenuButton::SetMessageWnd
 
-```
+```cpp
 void SetMessageWnd(CWnd* pWndMessage);
 ```
 

@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - Release method [C++]
 ms.assetid: db448b34-0efa-4f02-b701-ad1ca3ae6ca5
-ms.openlocfilehash: f455e855e782a939e79898ee46e445f65d25d37a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 73de3c2d19063f0738b8b0a3c510ea520f58de0b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170595"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745055"
 ---
 # <a name="_com_ptr_trelease"></a>_com_ptr_t::Release
 
 **Specyficzne dla firmy Microsoft**
 
-Wywołuje funkcję składowej **wydania** elementu `IUnknown` na wyhermetyzowanym wskaźniku interfejsu.
+Wywołuje release funkcji **elementu** członkowskiego `IUnknown` na encapsulated wskaźnik interfejsu.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 void Release( );
 ```
 
 ## <a name="remarks"></a>Uwagi
 
-Wywołuje `IUnknown::Release` na hermetyzowanym wskaźniku interfejsu, wywołując błąd `E_POINTER`, jeśli ten wskaźnik interfejsu ma wartość NULL.
+Wywołuje `IUnknown::Release` zhermetyzowany wskaźnik interfejsu, `E_POINTER` wywołując błąd, jeśli ten wskaźnik interfejsu jest NULL.
 
-**ZAKOŃCZENIE określonych przez firmę Microsoft**
+**ZAKOŃCZ Specyficzne dla firmy Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
 
-[_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)
+[_com_ptr_t — Klasa](../cpp/com-ptr-t-class.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: a806cfa18119df9beef3e070a65bc238a12580a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 331b89ff118f727303e887670960ee6078b01fb1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317721"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747084"
 ---
 # <a name="cpoint-class"></a>CPoint, klasa
 
@@ -139,7 +139,7 @@ ASSERT(ptFromDouble == ptMFCHere);
 
 Dodaje wartości `x` do `y` i `CPoint`członków .
 
-```
+```cpp
 void Offset(int xOffset, int yOffset) throw();
 void Offset(POINT point) throw();
 void Offset(SIZE size) throw();
@@ -209,7 +209,7 @@ Nonzero, jeśli punkty nie są równe; w przeciwnym razie 0.
 
 Pierwsze przeciążenie dodaje rozmiar `CPoint`do .
 
-```
+```cpp
 void operator+=(SIZE size) throw();
 void operator+=(POINT point) throw();
 ```
@@ -238,7 +238,7 @@ Na przykład `CPoint(5, -7)` dodanie do zmiennej, która zawiera `CPoint(30, 40)
 
 Pierwsze przeciążenie odejmuje `CPoint`rozmiar od pliku .
 
-```
+```cpp
 void operator-=(SIZE size) throw();
 void operator-=(POINT point) throw();
 ```

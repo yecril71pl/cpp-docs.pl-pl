@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: ceb9aeca6b99e7fc9d08625e11cbdb182fb3dc9e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 75c09f723860540aa54cf3744cde7e61d9202f79
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330543"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747363"
 ---
 # <a name="ctokenprivileges-class"></a>Klasa CTokenPrivileges
 
@@ -166,7 +166,7 @@ Ta metoda jest przydatna jako narzędzie do tworzenia tokenów z ograniczeniami.
 
 Usuwa wszystkie uprawnienia z `CTokenPrivileges` obiektu tokenu dostępu.
 
-```
+```cpp
 void DeleteAll() throw();
 ```
 
@@ -178,7 +178,7 @@ Usuwa wszystkie uprawnienia zawarte w `CTokenPrivileges` obiekcie tokenu dostęp
 
 Pobiera nazwy wyświetlane dla uprawnień zawartych w obiekcie tokenu `CTokenPrivileges` dostępu.
 
-```
+```cpp
 void GetDisplayNames(CNames* pDisplayNames) const throw(...);
 ```
 
@@ -221,7 +221,7 @@ Zwraca liczbę bajtów wymaganych `TOKEN_PRIVILEGES` do przechowywania struktury
 
 Pobiera lokalnie unikatowe identyfikatory (LUID) i flagi `CTokenPrivileges` atrybutów z obiektu.
 
-```
+```cpp
 void GetLuidsAndAttributes(
     CLUIDArray* pPrivileges,
     CAttributes* pAttributes = NULL) const throw(...);
@@ -243,7 +243,7 @@ Ta metoda wyliczy wszystkie uprawnienia zawarte w `CTokenPrivileges` obiekcie to
 
 Pobiera flagi nazwy i atrybutu `CTokenPrivileges` z obiektu.
 
-```
+```cpp
 void GetNamesAndAttributes(
     CNames* pNames,
     CAttributes* pAttributes = NULL) const throw(...);

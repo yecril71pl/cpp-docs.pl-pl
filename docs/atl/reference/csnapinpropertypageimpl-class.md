@@ -25,12 +25,12 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-ms.openlocfilehash: ae64c212520510a443fbb2b8adc99243e8f8843a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3f09e8500eadd36eec53db95f10261834d672101
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330696"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747582"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>Klasa CSnapInPropertyPageImpl
 
@@ -95,7 +95,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 Wywołanie tej funkcji po nieodwracalnej zmiany zostały wprowadzone do danych na stronie arkusza właściwości modalnych.
 
-```
+```cpp
 void CancelToClose();
 ```
 
@@ -176,7 +176,7 @@ Domyślna implementacja `OnApply` zwraca wartość TRUE.
 
 Ta funkcja elementu członkowskiego jest wywoływana, gdy użytkownik kliknie przycisk **Pomoc** dla strony właściwości.
 
-```
+```cpp
 void OnHelp();
 ```
 
@@ -222,7 +222,7 @@ Domyślna implementacja `OnQueryCancel` zwraca wartość TRUE.
 
 Ta funkcja elementu członkowskiego jest wywoływana, gdy użytkownik kliknie przycisk **Anuluj.**
 
-```
+```cpp
 void OnReset();
 ```
 
@@ -334,7 +334,7 @@ Jeśli strona zwraca wartość niezerową, arkusz właściwości nie wysyła wia
 
 Wywołanie tej funkcji elementu członkowskiego, aby włączyć lub wyłączyć przycisk **Zastosuj teraz,** w zależności od tego, czy ustawienia na stronie właściwości powinny być stosowane do odpowiedniego obiektu zewnętrznego.
 
-```
+```cpp
 void SetModified(BOOL bChanged = TRUE);
 ```
 

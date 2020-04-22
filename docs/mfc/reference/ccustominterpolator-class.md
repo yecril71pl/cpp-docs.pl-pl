@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialValue
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
-ms.openlocfilehash: 2342432c7651fc1bd1eda23b3e56fa9306eadf09
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 00ce0661fa3fbde714a7299ecbbd54df7c9bcc36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359268"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749163"
 ---
 # <a name="ccustominterpolator-class"></a>Klasa CCustomInterpolator
 
@@ -184,7 +184,7 @@ Podstawowa implementacja zawsze zwraca wartość TRUE. Zwraca FAŁSZ z implement
 
 Inicjuje czas trwania i wartość końcową.
 
-```
+```cpp
 void Init(
     UI_ANIMATION_SECONDS duration,
     DOUBLE finalValue);

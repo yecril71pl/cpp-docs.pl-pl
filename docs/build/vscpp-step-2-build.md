@@ -1,85 +1,87 @@
 ---
 title: Kompilowanie i uruchamianie projektu aplikacji konsoli w języku C++
-description: Kompilowanie i uruchamianie aplikacji konsolowej Hello World w języku Visual C++
+description: Tworzenie i uruchamianie aplikacji konsoli Hello World w języku Visual C++
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 04/20/2020
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
-ms.openlocfilehash: 59813a553a9034503d8bf432400db31e6e3d9478
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1e92e598b370312730a7c4e208b935a264010bf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314274"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749243"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Kompilowanie i uruchamianie projektu aplikacji konsoli w języku C++
 
-Po utworzeniu projektu aplikacji konsoli w języku C++ i wprowadzić swój kod, kompilacji i uruchom go w programie Visual Studio, a następnie uruchom go jako autonomiczną aplikację z poziomu wiersza polecenia.
+Utworzono projekt aplikacji konsoli Języka C++ i wprowadzono kod. Teraz można go skompilować i uruchomić w programie Visual Studio. Następnie uruchom go jako aplikację autonomiczną z wiersza polecenia.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Program Visual Studio za pomocą programowanie aplikacji klasycznych, z obciążeniem C++ zainstalowany i uruchomiony na komputerze. Jeśli nie jest jeszcze zainstalowany, wykonaj kroki opisane w [Instalowanie obsługi języka C++ w programie Visual Studio](vscpp-step-0-installation.md).
+- Mieć Visual Studio z pulpitu rozwoju z c++ obciążenia zainstalowanego i uruchomionego na komputerze. Jeśli nie jest jeszcze zainstalowany, wykonaj kroki opisane w [programie Zainstaluj obsługę języka C++ w programie Visual Studio](vscpp-step-0-installation.md).
 
-- Tworzenie "Hello, World!" Projekt, a następnie wprowadź jego kod źródłowy. Jeśli nie masz jeszcze ustanowionego jeszcze, wykonaj kroki opisane w [Tworzenie projektu aplikacji konsoli w języku C++](vscpp-step-1-create.md).
+- Stwórz "Cześć, Świat!" projektu i wprowadź jego kod źródłowy. Jeśli ten krok nie został jeszcze wykonany, wykonaj czynności opisane w programie [Utwórz projekt aplikacji konsoli C++.](vscpp-step-1-create.md)
 
-Jeśli program Visual Studio wygląda tak, możesz przystąpić do kompilowania i uruchamiania aplikacji:
+Jeśli program Visual Studio wygląda następująco, możesz przystąpić do tworzenia i uruchamiania aplikacji:
 
-   ![Gotowe do kompilowania nowego projektu](media/vscpp-ready-to-build.png "gotowe do kompilowania nowego projektu")
+   ![Gotowy do zbudowania nowego projektu](media/vscpp-ready-to-build.png "Gotowy do zbudowania nowego projektu")
 
-## <a name="build-and-run-your-code-in-visual-studio"></a>Kompilowanie i uruchamianie kodu w programie Visual Studio
+## <a name="build-and-run-your-code-in-visual-studio"></a>Tworzenie i uruchamianie kodu w programie Visual Studio
 
-1. Aby skompilować projekt, wybierz opcję **Kompiluj rozwiązanie** z **kompilacji** menu. **Dane wyjściowe** okno przedstawia wyniki procesu kompilacji.
+1. Aby utworzyć projekt, wybierz polecenie **Buduj rozwiązanie** z menu **Kompilacja.** Okno **Dane wyjściowe** pokazuje wyniki procesu kompilacji.
 
-   ![Skompiluj projekt](media/vscpp-build-solution.gif "kompilacji projektu")
+   ![Kompilowanie projektu](media/vscpp-build-solution.gif "Kompilowanie projektu")
 
-1. Aby uruchomić kod, na pasku menu, wybierz **debugowania**, **Uruchom bez debugowania**.
+1. Aby uruchomić kod, na pasku menu wybierz polecenie **Debug ,** **Start bez debugowania**.
 
-   ![Rozpocznij projekt](media/vscpp-start-without-debugging.gif "Rozpocznij projekt")
+   ![Rozpoczęcie projektu](media/vscpp-start-without-debugging.gif "Rozpoczęcie projektu")
 
-   Okno konsoli zostanie otwarty, a następnie uruchamia aplikację. Po uruchomieniu aplikacji konsoli w programie Visual Studio działa kod, a następnie drukuje "naciśnij dowolny klawisz, aby kontynuować. . ." daje szansę, aby wyświetlić dane wyjściowe.
+   Zostanie otwarte okno konsoli, a następnie uruchomi aplikację. Po uruchomieniu aplikacji konsoli w programie Visual Studio uruchamia kod, a następnie drukuje "Naciśnij dowolny klawisz, aby kontynuować . . ." aby dać ci szansę zobaczenia wyjścia.
 
-Gratulacje! Utworzono pierwszej "Hello, world!" Aplikacja konsoli w programie Visual Studio! Naciśnij dowolny klawisz, aby zamknąć okno konsoli i powrócić do programu Visual Studio.
+Gratulacje! Stworzyłeś swój pierwszy "Cześć, świat!" aplikacji konsoli w programie Visual Studio! Naciśnij klawisz, aby odrzucić okno konsoli i powrócić do programu Visual Studio.
 
-[Wystąpił problem.](#build-and-run-your-code-in-visual-studio-issues)
+[Wpadłem na problem.](#build-and-run-your-code-in-visual-studio-issues)
 
 ## <a name="run-your-code-in-a-command-window"></a>Uruchamianie kodu w oknie polecenia
 
-Normalnie możesz uruchomić aplikacje konsoli w wierszu polecenia, a nie w programie Visual Studio. Po skompilowaniu aplikacji przez program Visual Studio można uruchomić go z dowolnego okna polecenia. Poniżej przedstawiono sposób znaleźć i uruchomienie nowej aplikacji w oknie wiersza polecenia.
+Zwykle można uruchomić aplikacje konsoli w wierszu polecenia, a nie w programie Visual Studio. Gdy aplikacja jest szesnasty przez program Visual Studio, można uruchomić go z dowolnego okna polecenia. Poniżej opisano, jak znaleźć i uruchomić nową aplikację w oknie wiersza polecenia.
 
-1. W **Eksploratora rozwiązań**kliknij prawym przyciskiem myszy, aby otworzyć menu kontekstowe i wybierz rozwiązanie HelloWorld. Wybierz **Otwórz Folder w Eksploratorze plików** otworzyć **Eksploratora plików** okna w folderze rozwiązania HelloWorld.
+1. W **Eksploratorze rozwiązań**wybierz rozwiązanie HelloWorld (nie projekt HelloWorld) i kliknij prawym przyciskiem myszy, aby otworzyć menu kontekstowe. Wybierz **pozycję Otwórz folder w Eksploratorze plików,** aby otworzyć okno **Eksploratora plików** w folderze rozwiązania HelloWorld.
 
-1. W **Eksploratora plików** okna, otwórz folder debugowania. Zawiera aplikację, HelloWorld.exe i kilka innych plików debugowania. Wybierz HelloWorld.exe, naciśnij i przytrzymaj klawisz Shift i kliknij prawym przyciskiem myszy, aby otworzyć menu kontekstowe. Wybierz **Kopiuj jako ścieżka** skopiować ścieżki do aplikacji do Schowka.
+1. W oknie **Eksplorator plików** otwórz folder Debug. Ten folder zawiera aplikację *HelloWorld.exe*i kilka innych plików debugowania. Przytrzymaj klawisz **Shift** i kliknij prawym przyciskiem myszy *HelloWorld.exe,* aby otworzyć menu kontekstowe. Wybierz **pozycję Kopiuj jako ścieżkę,** aby skopiować ścieżkę do aplikacji do schowka.
 
-1. Aby otworzyć okno wiersza polecenia, naciśnij klawisze Windows-R, aby otworzyć **Uruchom** okna dialogowego. Wprowadź *cmd.exe* w **Otwórz** pola tekstowego, wybierz **OK** Aby uruchomić okno wiersza polecenia.
+1. Aby otworzyć okno wiersza polecenia, naciśnij **klawisze Windows+R,** aby otworzyć okno dialogowe **Uruchom.** Wprowadź *plik cmd.exe* w oknie tekstowym **Otwórz,** a następnie wybierz przycisk **OK,** aby uruchomić okno wiersza polecenia.
 
-1. W oknie wiersza polecenia kliknij prawym przyciskiem myszy w celu Wklej ścieżkę do aplikacji w wierszu polecenia. Naciśnij klawisz Enter, aby uruchomić aplikację.
+1. W oknie wiersza polecenia kliknij prawym przyciskiem myszy, aby wkleić ścieżkę do aplikacji do wiersza polecenia. Naciśnij klawisz Enter, aby uruchomić aplikację.
 
-   ![Uruchamianie aplikacji w wierszu polecenia](media/vscpp-run-in-cmd.gif "uruchomienia aplikacji w wierszu polecenia")
+   ![Uruchamianie aplikacji w wierszu polecenia](media/vscpp-run-in-cmd.gif "Uruchamianie aplikacji w wierszu polecenia")
 
-Gratulacje, udało skompilowane i uruchomisz aplikację konsoli w programie Visual Studio!
+Gratulacje, masz wbudowane i uruchomić aplikację konsoli w programie Visual Studio!
 
-[Wystąpił problem.](#run-your-code-in-a-command-window-issues)
+[Wpadłem na problem.](#run-your-code-in-a-command-window-issues)
 
 ## <a name="next-steps"></a>Następne kroki
 
-Po zostały skompilowane i uruchomić tej prostej aplikacji, możesz przystąpić do bardziej złożonych projektów. Zobacz [przy użyciu programu Visual Studio IDE dla programowanie aplikacji klasycznych w języku C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) bardziej szczegółowe wskazówki, zapoznaj się z możliwościami programu Visual C++ w programie Visual Studio.
+Po zbudowaniu i uruchomieniu tej prostej aplikacji możesz przygotować się do bardziej złożonych projektów. Aby uzyskać więcej informacji, zobacz [Korzystanie z środowiska IDE programu Visual Studio dla środowiska dewelopera pulpitu w języku C++.](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) Ma bardziej szczegółowe wskazówki, które eksplorują możliwości programu Microsoft C++ w programie Visual Studio.
 
 ## <a name="troubleshooting-guide"></a>Przewodnik rozwiązywania problemów
 
-Tu rozwiązania typowych problemów podczas tworzenia pierwszego projektu C++.
+Przyjdź tutaj, aby uzyskać rozwiązania typowych problemów podczas tworzenia pierwszego projektu C++.
 
-### <a name="build-and-run-your-code-in-visual-studio-issues"></a>Kompilowanie i uruchamianie kodu w problemy dotyczące programu Visual Studio
+### <a name="build-and-run-your-code-in-visual-studio-issues"></a>Tworzenie i uruchamianie kodu w programie Visual Studio: problemy
 
-Czerwone symbole są wyświetlane w obszarze dowolne elementy w edytorze kodu źródłowego, kompilacji może być błędy lub ostrzeżenia. Sprawdź, czy kod jest zgodna w przykładzie w pisowni, znaki interpunkcyjne i wielkości liter.
+Jeśli czerwone squiggles pojawiają się pod czymkolwiek w edytorze kodu źródłowego, kompilacja może mieć błędy lub ostrzeżenia. Sprawdź, czy kod pasuje do przykładu pisowni, znaków interpunkcyjnych i sprawy.
 
 [Przejdź wstecz.](#build-and-run-your-code-in-visual-studio)
 
-### <a name="run-your-code-in-a-command-window-issues"></a>Uruchamianie kodu w oknie polecenia problemów
+### <a name="run-your-code-in-a-command-window-issues"></a>Uruchamianie kodu w oknie polecenia: problemy
 
-Możesz także przejść do folderu rozwiązania debugowania w wierszu polecenia, aby uruchomić aplikację. Nie można uruchomić aplikacji z innych katalogów, bez określania ścieżki do aplikacji. Można jednak kopiowanie aplikację do innego katalogu i uruchom go z tego miejsca.
+Jeśli ścieżka pokazana w Eksploratorze plików kończy się w * \\HelloWorld\\HelloWorld,* otwarto *projekt* HelloWorld zamiast *rozwiązania*HelloWorld . Będziesz mylić przez folder debugowania, który nie zawiera aplikacji. Przejdź do poziomu w Eksploratorze plików, aby przejść do folderu rozwiązania, pierwszego *HelloWorld* w ścieżce. Ten folder zawiera również folder debugowania, a znajdziesz tam aplikację.
 
-Jeśli nie widzisz **Kopiuj jako ścieżka** w menu skrótów zamknąć menu, a następnie przytrzymaj naciśnięty klawisz Shift, gdy otworzysz go ponownie. Jest to po prostu dla wygody. Można również skopiować ścieżkę do folderu z paska wyszukiwania Eksploratora plików i wklej go do **Uruchom** okno dialogowe, a następnie wprowadź nazwę plik wykonywalny na końcu. Jest nieco więcej wpisywania, ale ma ona ten sam wynik.
+Można również przejść do folderu debugowania rozwiązania w wierszu polecenia, aby uruchomić aplikację. Aplikacja nie będzie uruchamiana z innych katalogów bez określania ścieżki do aplikacji. Można jednak skopiować aplikację do innego katalogu i uruchomić ją stamtąd. Istnieje również możliwość skopiowania go do katalogu określonego przez zmienną środowiskową PATH, a następnie uruchomić go z dowolnego miejsca.
+
+Jeśli w menu skrótów nie widzisz **opcji Kopiuj jako ścieżka,** odrzuć menu, a następnie przytrzymaj klawisz **Shift** podczas ponownego otwierania. To polecenie jest tylko dla wygody. Ścieżkę do folderu można również skopiować z paska wyszukiwania Eksploratora plików i wkleić ją do okna dialogowego **Uruchom,** a następnie wprowadzić nazwę pliku wykonywalnego na końcu. To tylko trochę więcej pisania, ale ma ten sam wynik.
 
 [Przejdź wstecz.](#run-your-code-in-a-command-window)
 

@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 19939ce7dacc1b826e0a2f067c43fc65db328a54
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4b505912c69ffbb86ad3dae98f99531c477db693
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370163"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749139"
 ---
 # <a name="clistctrl-class"></a>Klasa CListCtrl
 
@@ -584,7 +584,7 @@ Parametr *nCode* określa styl wyrównania.
 
 Anuluje operację edycji tekstu elementu.
 
-```
+```cpp
 void CancelEditLabel();
 ```
 
@@ -618,7 +618,7 @@ virtual BOOL Create(
 Określa styl formantu listy. Zastosuj dowolną kombinację stylów formantu listy do formantu. Aby uzyskać pełną listę tych stylów, zobacz [Style okien widoku listy](/windows/win32/Controls/list-view-window-styles) w zestawie Windows SDK. Ustaw rozszerzone style specyficzne dla formantu za pomocą [SetExtendedStyle](#setextendedstyle).
 
 *Rect*<br/>
-Określa rozmiar i położenie formantu listy. Może to być `CRect` obiekt lub struktura [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Określa rozmiar i położenie formantu listy. Może to być `CRect` obiekt lub struktura [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Określa okno nadrzędne formantu listy, zwykle `CDialog`. Nie może być null.
@@ -666,7 +666,7 @@ Określa rozszerzony styl tworzonego formantu. Aby uzyskać listę rozszerzonych
 Określa styl formantu listy. Zastosuj dowolną kombinację stylów formantu listy do formantu. Aby uzyskać pełną listę tych stylów, zobacz [Listy stylów okien widoku](/windows/win32/Controls/list-view-window-styles) w zestawie Windows SDK.
 
 *Rect*<br/>
-Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
+Odwołanie do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest nadrzędnym formantu.
@@ -700,7 +700,7 @@ CImageList* CreateDragImage(
 Indeks elementu, którego lista obrazów przeciągania ma zostać utworzona.
 
 *lpPoint (punkt z punktu widzenia*<br/>
-Adres struktury [POINT,](/previous-versions/dd162805\(v=vs.85\)) która odbiera początkową lokalizację lewego górnego rogu obrazu, w widoku współrzędnych.
+Adres struktury [POINT,](/windows/win32/api/windef/ns-windef-point) która odbiera początkową lokalizację lewego górnego rogu obrazu, w widoku współrzędnych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1413,7 +1413,7 @@ Poniższy przykład kodu `GetGroupInfoByIndex` pokazuje metodę. We wcześniejsz
 
 Pobiera metryki grupy.
 
-```
+```cpp
 void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 ```
 
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |Parametr|Opis|
 |---------------|-----------------|
 |*identyfikator iGroupId*|[w] Określa grupę.|
-|*Lprect*|[w, na zewnątrz] Wskaźnik do struktury [RECT.](/previous-versions/dd162897\(v=vs.85\)) Jeśli ta metoda zakończy się pomyślnie, struktura odbiera współrzędne prostokąta grupy określonej przez *iGroupId*.|
+|*Lprect*|[w, na zewnątrz] Wskaźnik do struktury [RECT.](/windows/win32/api/windef/ns-windef-rect) Jeśli ta metoda zakończy się pomyślnie, struktura odbiera współrzędne prostokąta grupy określonej przez *iGroupId*.|
 |*iCoords ( iCoords )*|[w] Określa współrzędne prostokąta do pobrania. Użyj jednej z następujących wartości:<br /><br /> - LVGGR_GROUP - (Domyślne) współrzędne całej rozwiniętej grupy.<br />- LVGGR_HEADER — współrzędne tylko nagłówka (zwiniętej grupy).<br />- LVGGR_SUBSETLINK — współrzędne tylko łącza podzbioru (podzbiór znaczników).|
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1451,7 +1451,7 @@ PRAWDA, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie FALSE.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołujący jest odpowiedzialny za przydzielanie [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury wskazywania przez *pRect* parametru.
+Wywołujący jest odpowiedzialny za przydzielanie [RECT](/windows/win32/api/windef/ns-windef-rect) struktury wskazywania przez *pRect* parametru.
 
 Ta metoda wysyła komunikat [LVM_GETGROUPRECT,](/windows/win32/Controls/lvm-getgrouprect) który jest opisany w windows SDK.
 
@@ -1791,7 +1791,7 @@ BOOL GetItemIndexRect(
 |*pItemIndex (ps.*|[w] Wskaźnik do struktury [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) dla elementu nadrzędnego podpozycji.<br /><br /> Osoba dzwoniąca jest odpowiedzialna za przydzielanie i ustawianie członków struktury [LVITEMINDEX.](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) Ten parametr nie może być null.|
 |*Icolumn*|[w] Indeks od zera kolumny w formancie.|
 |*typ rectType*|[w] Część podpokazu widoku listy, dla którego pobierany jest prostokąt ograniczający. Określ jedną z następujących wartości:<br /><br /> LVIR_BOUNDS — zwraca prostokąt ograniczający całego podjednośnego, łącznie z ikoną i etykietą.<br /><br /> LVIR_ICON — zwraca prostokąt ograniczający ikonę lub małą ikonę podjednocznika.<br /><br /> LVIR_LABEL — zwraca prostokąt ograniczający tekstu podrzędnego.|
-|*pRect*|[na zewnątrz] Wskaźnik do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) która odbiera informacje o prostokątokrąt ograniczony podjednak.<br /><br /> Wywołujący jest odpowiedzialny za przydzielanie [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury. Ten parametr nie może być null.|
+|*pRect*|[na zewnątrz] Wskaźnik do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) która odbiera informacje o prostokątokrąt ograniczony podjednak.<br /><br /> Wywołujący jest odpowiedzialny za przydzielanie [RECT](/windows/win32/api/windef/ns-windef-rect) struktury. Ten parametr nie może być null.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1845,7 +1845,7 @@ BOOL GetItemPosition(
 Indeks elementu, którego pozycja ma zostać pobrana.
 
 *lpPoint (punkt z punktu widzenia*<br/>
-Adres struktury [POINT,](/previous-versions/dd162805\(v=vs.85\)) która odbiera położenie lewego górnego rogu elementu, w widoku współrzędnych.
+Adres struktury [POINT,](/windows/win32/api/windef/ns-windef-point) która odbiera położenie lewego górnego rogu elementu, w widoku współrzędnych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1884,7 +1884,7 @@ BOOL GetItemRect(
 Indeks elementu, którego pozycja ma zostać pobrana.
 
 *Lprect*<br/>
-Adres struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) która odbiera prostokąt ograniczający.
+Adres struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) która odbiera prostokąt ograniczający.
 
 *kod n*<br/>
 Część elementu widoku listy, dla którego ma być pobierany prostokąt ograniczający. Może to być jedna z następujących wartości:
@@ -2221,7 +2221,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="parameters"></a>Parametry
 
 *lpPoint (punkt z punktu widzenia*<br/>
-Adres struktury [POINT,](/previous-versions/dd162805\(v=vs.85\)) która odbiera początek widoku.
+Adres struktury [POINT,](/windows/win32/api/windef/ns-windef-point) która odbiera początek widoku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2532,7 +2532,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametry
 
 *Lprect*<br/>
-Adres struktury [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Adres struktury [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2546,7 +2546,7 @@ Widok listy musi znajdować się w widoku ikony lub w widoku małej ikony.
 
 Pobiera bieżące obszary robocze formantu widoku listy.
 
-```
+```cpp
 void GetWorkAreas(
     int nWorkAreas,
     LPRECT pRect) const;
@@ -2835,7 +2835,7 @@ int InsertMarkHitTest(
 ### <a name="parameters"></a>Parametry
 
 *pPunkt*<br/>
-Wskaźnik do [point](/previous-versions/dd162805\(v=vs.85\)) struktury, która zawiera współrzędne testu trafienia, względem obszaru klienta formantu listy.
+Wskaźnik do [point](/windows/win32/api/windef/ns-windef-point) struktury, która zawiera współrzędne testu trafienia, względem obszaru klienta formantu listy.
 
 *plvim ( plvim )*<br/>
 Wskaźnik do struktury [LVINSERTMARK,](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark) który określa punkt wstawiania najbliżej współrzędnych zdefiniowanych przez parametr punktowy.
@@ -3008,7 +3008,7 @@ Ta funkcja elementu członkowskiego emuluje funkcjonalność [komunikatu LVM_MOV
 
 Przenosi określony element do określonej grupy.
 
-```
+```cpp
 void MoveItemToGroup(
     int idItemFrom,
     int idGroupTo);
@@ -3059,7 +3059,7 @@ Określone elementy nie są faktycznie odświeżane, dopóki okno widoku listy n
 
 Usuwa wszystkie grupy z kontrolki widoku listy.
 
-```
+```cpp
 void RemoveAllGroups();
 ```
 
@@ -3387,7 +3387,7 @@ Ta metoda wysyła komunikat [LVM_SETGROUPINFO,](/windows/win32/Controls/lvm-setg
 
 Ustawia metryki grupy formantu widoku listy.
 
-```
+```cpp
 void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 ```
 
@@ -3693,7 +3693,7 @@ Zobacz przykład [CListCtrl::HitTest](#hittest).
 
 Przygotowuje formant widoku listy do dodawania dużej liczby elementów.
 
-```
+```cpp
 void SetItemCount(int nItems);
 ```
 
@@ -3855,7 +3855,7 @@ BOOL SetItemPosition(
 Indeks elementu, którego położenie ma być ustawiony.
 
 *Pt*<br/>
-Struktura [POINT](/previous-versions/dd162805\(v=vs.85\)) określająca nową pozycję, w widoku współrzędnych, lewego górnego rogu elementu.
+Struktura [POINT](/windows/win32/api/windef/ns-windef-point) określająca nową pozycję, w widoku współrzędnych, lewego górnego rogu elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -4156,7 +4156,7 @@ Ta funkcja elementu członkowskiego emuluje funkcjonalność [komunikatu LVM_SET
 
 Ustawia obszar, w którym ikony mogą być wyświetlane w formancie widoku listy.
 
-```
+```cpp
 void SetWorkAreas(
     int nWorkAreas,
     LPRECT lpRect);

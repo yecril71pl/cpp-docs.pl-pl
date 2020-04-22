@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 15460c1c7bb34edde04c2e740c19e488b6dfa83b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4d241107b36b92a53c8647e18f03432294ef0a86
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330318"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746021"
 ---
 # <a name="cwindow-class"></a>Klasa CWindow
 
@@ -394,7 +394,7 @@ Zobacz [ArrangeIconicWindows](/windows/win32/api/winuser/nf-winuser-arrangeiconi
 
 Dołącza okno zidentyfikowane przez *hWndNew* `CWindow` do obiektu.
 
-```
+```cpp
 void Attach(HWND hWndNew) throw();
 ```
 
@@ -536,7 +536,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 Zobacz [ClientToScreen](/windows/win32/api/winuser/nf-winuser-clienttoscreen) w windows SDK.
 
-Druga wersja tej metody umożliwia konwertowanie współrzędnych konstrukcji [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Druga wersja tej metody umożliwia konwertowanie współrzędnych konstrukcji [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 ## <a name="cwindowcreate"></a><a name="create"></a>CWindow::Utwórz
 
@@ -771,7 +771,7 @@ Zobacz [DlgDirSelectComboBoxEx](/windows/win32/api/winuser/nf-winuser-dlgdirsele
 
 Rejestruje, czy okno akceptuje przeciągnięte pliki.
 
-```
+```cpp
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
@@ -823,7 +823,7 @@ Zobacz [EnableWindow](/windows/win32/api/winuser/nf-winuser-enablewindow) w wind
 
 Oznacza koniec malowania.
 
-```
+```cpp
 void EndPaint(LPPAINTSTRUCT lpPaint) throw();
 ```
 
@@ -1504,7 +1504,7 @@ Zobacz [GetWindowLong](/windows/win32/api/winuser/nf-winuser-getwindowlongw) w w
 
 Ustawia fokus klawiatury na kontrolkę w oknie dialogowym.
 
-```
+```cpp
 void GotoDlgCtrl(HWND hWndCtrl) const throw();
 ```
 
@@ -1577,7 +1577,7 @@ Zobacz [InvalidateRect](/windows/win32/api/winuser/nf-winuser-invalidaterect) w 
 
 Unieważnia obszar klienta w określonym regionie.
 
-```
+```cpp
 void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
 ```
 
@@ -1789,7 +1789,7 @@ int MapWindowPoints(
 
 Zobacz [MapWindowPoints](/windows/win32/api/winuser/nf-winuser-mapwindowpoints) w windows SDK.
 
-Druga wersja tej metody umożliwia konwertowanie współrzędnych konstrukcji [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Druga wersja tej metody umożliwia konwertowanie współrzędnych konstrukcji [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 ## <a name="cwindowmessagebox"></a><a name="messagebox"></a>CWindow::MessageBox
 
@@ -1923,13 +1923,13 @@ BOOL MoveWindow(
 
 W przypadku obiektu okna najwyższego poziomu parametry x i y są względem lewego górnego rogu ekranu. W przypadku obiektu okna podrzędnego są one względem lewego górnego rogu obszaru klienta okna nadrzędnego.
 
-Druga wersja tej metody używa [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury do określenia nowego położenia okna, szerokość i wysokość.
+Druga wersja tej metody używa [RECT](/windows/win32/api/windef/ns-windef-rect) struktury do określenia nowego położenia okna, szerokość i wysokość.
 
 ## <a name="cwindownextdlgctrl"></a><a name="nextdlgctrl"></a>CWindow::NextDlgCtrl
 
 Ustawia fokus klawiatury na następny formant w oknie dialogowym.
 
-```
+```cpp
 void NextDlgCtrl() const throw();
 ```
 
@@ -1990,7 +1990,7 @@ Zwraca bez oczekiwania na wątek do przetwarzania wiadomości.
 
 Ustawia fokus klawiatury na poprzedni kontrolkę w oknie dialogowym.
 
-```
+```cpp
 void PrevDlgCtrl() const throw();
 ```
 
@@ -2002,7 +2002,7 @@ Zobacz [WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) w programie Windows 
 
 Wysyła komunikat [WM_PRINT](/windows/win32/gdi/wm-print) do okna, aby zażądać, aby narysować się w określonym kontekście urządzenia.
 
-```
+```cpp
 void Print(HDC hDC, DWORD dwFlags) const throw();
 ```
 
@@ -2030,7 +2030,7 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 Wysyła komunikat [WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient) do okna, aby zażądać, aby narysować swój obszar klienta w określonym kontekście urządzenia.
 
-```
+```cpp
 void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 ```
 
@@ -2134,7 +2134,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 Zobacz [ScreenToClient](/windows/win32/api/winuser/nf-winuser-screentoclient) w windows SDK.
 
-Druga wersja tej metody umożliwia konwertowanie współrzędnych konstrukcji [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Druga wersja tej metody umożliwia konwertowanie współrzędnych konstrukcji [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 ## <a name="cwindowscrollwindow"></a><a name="scrollwindow"></a>CWindow::ScrollWindow
 
@@ -2216,7 +2216,7 @@ Zobacz [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) w window
 
 Wysyła określony komunikat do wszystkich `CWindow` bezpośrednich korgoń obiektu.
 
-```
+```cpp
 void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
@@ -2363,7 +2363,7 @@ Zobacz [SetFocus](/windows/win32/api/winuser/nf-winuser-setfocus) w zestawie Win
 
 Zmienia bieżącą czcionkę okna, wysyłając do okna [WM_SETFONT](/windows/win32/winmsg/wm-setfont) wiadomość.
 
-```
+```cpp
 void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 ```
 
@@ -2451,7 +2451,7 @@ Zobacz [SetParent](/windows/win32/api/winuser/nf-winuser-setparent) w zestawie W
 
 Ustawia lub czyści flagę ponownego rysowania, wysyłając wiadomość [WM_SETREDRAW](/windows/win32/gdi/wm-setredraw) do okna.
 
-```
+```cpp
 void SetRedraw(BOOL bRedraw = TRUE) throw();
 ```
 
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
 
 Zobacz [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) w zestawie Windows SDK.
 
-Druga wersja tej metody używa [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury, aby ustawić nowe położenie okna, szerokość i wysokość.
+Druga wersja tej metody używa [RECT](/windows/win32/api/windef/ns-windef-rect) struktury, aby ustawić nowe położenie okna, szerokość i wysokość.
 
 ## <a name="cwindowsetwindowrgn"></a><a name="setwindowrgn"></a>CWindow::SetWindowRgn
 

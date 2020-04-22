@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CListView [MFC], GetListCtrl
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
-ms.openlocfilehash: ae1a76e4cdd052ff44dcbd69d467c51741bcc2ff
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d7f3b7c43d98c4f2c42d0c27c8e224f33e4b3301
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370151"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749129"
 ---
 # <a name="clistview-class"></a>Klasa CListView
 
@@ -99,7 +99,7 @@ Odwołanie do formantu listy skojarzonego z widokiem.
 
 Usuwa określoną listę obrazów z widoku listy.
 
-```
+```cpp
 void RemoveImageList(int nImageList);
 ```
 

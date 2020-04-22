@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 1e4f98dabd2d27b21dbe3e197f32e27ccca9d2d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 04eeba0239789b9f3220b7bfece3eb41dc7f2826
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330726"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746425"
 ---
 # <a name="csnapinitemimpl-class"></a>Klasa CSnapInItemImpl
 
@@ -382,7 +382,7 @@ QueryPagesFor(DATA_OBJECT_TYPES type);
 
 Wywołanie tej funkcji, aby zmodyfikować flagi wstawiania menu, określone przez *pInsertionAllowed*, dla obiektu przystawki.
 
-```
+```cpp
 void SetMenuInsertionFlags(
     bool bBeforeInsertion,
     long* pInsertionAllowed);
@@ -414,7 +414,7 @@ Nie należy próbować ustawić bity w *pInsertionAllowed,* które zostały pier
 
 Wywołanie tej funkcji, aby zmodyfikować wszystkie style przycisków paska narzędzi, obiektu przystawki, przed utworzeniem paska narzędzi.
 
-```
+```cpp
 void SetToolbarButtonInfo(
     UINT id,
     BYTE* fsState,
@@ -458,7 +458,7 @@ void SetToolbarButtonInfo(
 
 Wywołanie tej funkcji, aby zmodyfikować element menu, zanim zostanie wstawiony do menu kontekstowego obiektu przystawki.
 
-```
+```cpp
 void UpdateMenuState(
     UINT id,
     LPTSTR pBuf,

@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strFilter
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
-ms.openlocfilehash: 264c9eda4860dfbe41d40c9b454ec40a1a274ba5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ab6cde9f478dc6f2e3cb0ba5bb338a3852f083fd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368361"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750506"
 ---
 # <a name="crecordset-class"></a>Klasa CRecordset
 
@@ -331,7 +331,7 @@ Aby uzyskać więcej informacji na temat zakładek i nawigacji na tabliczce reko
 
 Żąda, aby źródło danych anulowało operację asynchroniza w toku lub proces z drugiego wątku.
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -343,7 +343,7 @@ Należy zauważyć, że klasy ODBC MFC nie używają już przetwarzania asynchro
 
 Anuluje wszelkie oczekujące aktualizacje, spowodowane przez operację [Edytuj](#edit) lub [DodajNe,](#addnew) zanim [zostanie wywołana aktualizacja.](#update)
 
-```
+```cpp
 void CancelUpdate();
 ```
 
@@ -643,7 +643,7 @@ Poniższy kod zakłada, `COutParamRecordset` `CRecordset`że jest obiektem pocho
 
 Uzyskuje wartość zakładki dla bieżącego rekordu.
 
-```
+```cpp
 void GetBookmark(CDBVariant& varBookmark);
 ```
 
@@ -711,7 +711,7 @@ Aby uzyskać więcej informacji, zobacz artykuł [Rekord: Deklarowanie klasy dla
 
 Pobiera dane pól w bieżącym rekordzie.
 
-```
+```cpp
 void GetFieldValue(
     LPCTSTR lpszName,
     CDBVariant& varValue,
@@ -805,7 +805,7 @@ Aby uzyskać więcej informacji na temat tworzenia rekordów, zobacz artykuł [T
 
 Uzyskuje informacje o polach w zakuła rekord.
 
-```
+```cpp
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
@@ -931,7 +931,7 @@ Aby uzyskać więcej informacji, zobacz `SQLExtendedFetch` funkcję interfejsu A
 
 Określa indeks bieżącego rekordu w ach i to, czy ostatni rekord został zaobserwowany.
 
-```
+```cpp
 void GetStatus(CRecordsetStatus& rStatus) const;
 ```
 
@@ -1337,7 +1337,7 @@ Aby uzyskać więcej informacji na temat nawigacji w forsach rekordów, zobacz a
 
 Sprawia, że pierwszy rekord w pierwszym wierszuzmieja bieżący rekord.
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1369,7 +1369,7 @@ Aby uzyskać więcej informacji na temat nawigacji w forsach rekordów, zobacz a
 
 Sprawia, że pierwszy rekord w ostatnim pełnym wierszuzmieć bieżący rekord.
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1399,7 +1399,7 @@ Aby uzyskać więcej informacji na temat nawigacji w forsach rekordów, zobacz a
 
 Sprawia, że pierwszy rekord w następnym wierszustawy bieżącego rekordu.
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1429,7 +1429,7 @@ Aby uzyskać więcej informacji na temat nawigacji w forsach rekordów, zobacz a
 
 Sprawia, że pierwszy rekord w poprzednim wierszuzmieja bieżący rekord.
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -1617,7 +1617,7 @@ Poniższe przykłady kodu pokazują `Open` różne formy wywołania.
 
 Aktualizuje dane i stan wiersza w bieżącym zestawie wierszy.
 
-```
+```cpp
 void RefreshRowset(
     WORD wRow,
     WORD wLockType = SQL_LOCK_NO_CHANGE);
@@ -1682,7 +1682,7 @@ W tym przykładzie odbudowuje rekord, aby zastosować inną kolejność sortowan
 
 Umieszcza w rekordzie tablicę rekordów odpowiadającą określonej liczbie rekordów.
 
-```
+```cpp
 void SetAbsolutePosition(long nRows);
 ```
 
@@ -1711,7 +1711,7 @@ Aby uzyskać więcej informacji na temat nawigacji i zakładek na tabliczce reko
 
 Umieszcza w rekordzie rekord zawierający określoną zakładkę.
 
-```
+```cpp
 void SetBookmark(const CDBVariant& varBookmark);
 ```
 
@@ -1738,7 +1738,7 @@ Aby uzyskać więcej informacji na temat zakładek i nawigacji na tabliczce reko
 
 Oznacza element członkowski danych pola w zbiorze rekordów jako zmieniony lub niezmieniony.
 
-```
+```cpp
 void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 ```
 
@@ -1778,7 +1778,7 @@ Oznacza to, że `param` nie można ustawić wszystkich `outputColumn` pól na NU
 
 Oznacza element członkowski danych pól w zbiorze rekordów jako null (w szczególności nie ma wartości) lub jako nie-Null.
 
-```
+```cpp
 void SetFieldNull(void* pv, BOOL bNull = TRUE);
 ```
 
@@ -1823,7 +1823,7 @@ Oznacza to, że `param` nie można ustawić wszystkich `outputColumn` pól na NU
 
 Ustawia tryb blokowania na "optymistyczne" blokowanie (domyślne) lub "pesymistyczne" blokowanie. Określa, jak rekordy są zablokowane dla aktualizacji.
 
-```
+```cpp
 void SetLockingMode(UINT nMode);
 ```
 
@@ -1844,7 +1844,7 @@ Wywołanie tej funkcji elementu członkowskiego, jeśli trzeba określić, któr
 
 Oznacza parametr jako Null (w szczególności nie ma wartości) lub jako nie-Null.
 
-```
+```cpp
 void SetParamNull(
     int nIndex,
     BOOL bNull = TRUE);
@@ -1868,7 +1868,7 @@ W przeciwieństwie do [SetFieldNull](#setfieldnull)można wywołać przed `SetPa
 
 Przenosi kursor do wiersza w bieżącym zestawie wierszy.
 
-```
+```cpp
 void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 ```
 

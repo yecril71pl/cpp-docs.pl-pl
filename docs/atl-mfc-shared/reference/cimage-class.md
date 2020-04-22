@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 5b5ef833a3755b07e42a60b24464b1f260062d16
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a6d20e1bf12f5fe7d1e9b41d88b088ca9fad35ed
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317809"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747183"
 ---
 # <a name="cimage-class"></a>Klasa CImage
 
@@ -258,7 +258,7 @@ Wartość przezroczystości alfa, która ma być używana na całej źródłowej
 Funkcja mieszania alfa dla źródłowych i docelowych map bitowych, globalna wartość alfa, która ma być zastosowana do całej źródłowej mapy bitowej, oraz formatowanie informacji dla źródłowej mapy bitowej. Funkcje mieszania źródła i miejsca docelowego są obecnie ograniczone do AC_SRC_OVER.
 
 *punktDest*<br/>
-Odwołanie do struktury [POINT,](/previous-versions/dd162805\(v=vs.85\)) która identyfikuje lewy górny róg prostokąta docelowego w jednostkach logicznych.
+Odwołanie do struktury [POINT,](/windows/win32/api/windef/ns-windef-point) która identyfikuje lewy górny róg prostokąta docelowego w jednostkach logicznych.
 
 *nDestWidth (nDestWidth)*<br/>
 Szerokość w jednostkach logicznych prostokąta docelowego.
@@ -279,7 +279,7 @@ Szerokość w jednostkach logicznych prostokąta źródłowego.
 Wysokość w jednostkach logicznych prostokąta źródłowego.
 
 *reectDest*<br/>
-Odwołanie do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) identyfikując miejsce docelowe.
+Odwołanie do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) identyfikując miejsce docelowe.
 
 *rectSrc*<br/>
 Odwołanie do `RECT` struktury, identyfikując źródło.
@@ -298,7 +298,7 @@ Gdy *bBlendOp* jest ustawiona na domyślną wartość AC_SRC_OVER, źródłowa m
 
 Dołącza *hBitmap* do `CImage` obiektu.
 
-```
+```cpp
 void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw();
 ```
 
@@ -368,7 +368,7 @@ Logiczna współrzędna y lewego górnego rogu prostokąta docelowego.
 Operacja rastrowa do wykonania. Kody operacji rastrowych definiują dokładnie sposób łączenia bitów źródła, miejsca docelowego i wzorca (zdefiniowanego przez aktualnie zaznaczony pędzel) w celu utworzenia miejsca docelowego. Zobacz [BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt) w zestawie Windows SDK, aby uzyskać listę innych kodów operacji rastrowych i ich opisów.
 
 *punktDest*<br/>
-Struktura [POINT](/previous-versions/dd162805\(v=vs.85\)) wskazująca lewy górny róg prostokąta docelowego.
+Struktura [POINT](/windows/win32/api/windef/ns-windef-point) wskazująca lewy górny róg prostokąta docelowego.
 
 *nDestWidth (nDestWidth)*<br/>
 Szerokość w jednostkach logicznych prostokąta docelowego.
@@ -383,7 +383,7 @@ Logiczna współrzędna x w lewym górnym rogu prostokąta źródłowego.
 Logiczna współrzędna y w lewym górnym rogu prostokąta źródłowego.
 
 *reectDest*<br/>
-Struktura [RECT](/previous-versions/dd162897\(v=vs.85\)) wskazująca prostokąt docelowy.
+Struktura [RECT](/windows/win32/api/windef/ns-windef-rect) wskazująca prostokąt docelowy.
 
 *pktSrc*<br/>
 Struktura `POINT` wskazująca lewy górny róg prostokąta źródłowego.
@@ -480,7 +480,7 @@ Określa typ kompresji skompresowanej mapy bitowej oddolnej (nie można skompres
 - BI_BITFIELDS Format jest nieskompresowany, a tabela kolorów składa się z trzech masek kolorów DWORD, które określają odpowiednio komponenty czerwony, zielony i niebieski każdego piksela. Jest to prawidłowe w przypadku użycia z bitmapami 16- i 32-bpp.
 
 *pdwBitfields*<br/>
-Używane tylko *wtedy, gdy eCompression* jest ustawiona na BI_BITFIELDS, w przeciwnym razie musi być null. Wskaźnik do tablicy trzech masek bitowych DWORD, określający, które bity każdego piksela są używane odpowiednio dla składników koloru czerwonego, zielonego i niebieskiego. Aby uzyskać informacje na temat ograniczeń dla pól bitowych, zobacz [BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) w windows SDK.
+Używane tylko *wtedy, gdy eCompression* jest ustawiona na BI_BITFIELDS, w przeciwnym razie musi być null. Wskaźnik do tablicy trzech masek bitowych DWORD, określający, które bity każdego piksela są używane odpowiednio dla składników koloru czerwonego, zielonego i niebieskiego. Aby uzyskać informacje na temat ograniczeń dla pól bitowych, zobacz [BITMAPINFOHEADER](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) w windows SDK.
 
 *Dwflags*<br/>
 Określa, czy obiekt mapy bitowej ma kanał alfa. Może być kombinacją zero lub więcej z następujących wartości:
@@ -507,7 +507,7 @@ m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 
 Odłącza mapę bitową `CImage` od obiektu i niszczy mapę bitową.
 
-```
+```cpp
 void Destroy() throw();
 ```
 
@@ -595,13 +595,13 @@ Szerokość w jednostkach logicznych prostokąta źródłowego.
 Wysokość w jednostkach logicznych prostokąta źródłowego.
 
 *reectDest*<br/>
-Odwołanie do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) identyfikując miejsce docelowe.
+Odwołanie do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) identyfikując miejsce docelowe.
 
 *rectSrc*<br/>
 Odwołanie do `RECT` struktury, identyfikując źródło.
 
 *punktDest*<br/>
-Odwołanie do struktury [POINT,](/previous-versions/dd162805\(v=vs.85\)) która identyfikuje lewy górny róg prostokąta docelowego w jednostkach logicznych.
+Odwołanie do struktury [POINT,](/windows/win32/api/windef/ns-windef-point) która identyfikuje lewy górny róg prostokąta docelowego w jednostkach logicznych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -617,7 +617,7 @@ W przypadku `Draw` wersji, które nie określają prostokąta źródłowego, dom
 
 Pobiera wskaźnik do rzeczywistych wartości bitowych danego piksela w mapie bitowej.
 
-```
+```cpp
 void* GetBits() throw();
 ```
 
@@ -648,13 +648,13 @@ Liczba bitów na piksel.
 
 Ta wartość określa liczbę bitów definiujących każdy piksel oraz maksymalną liczbę kolorów w mapie bitowej.
 
-Bity na piksel to zwykle 1, 4, 8, 16, 24 lub 32. Zobacz `biBitCount` element członkowski [BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) w usłudze Windows SDK, aby uzyskać więcej informacji na temat tej wartości.
+Bity na piksel to zwykle 1, 4, 8, 16, 24 lub 32. Zobacz `biBitCount` element członkowski [BITMAPINFOHEADER](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) w usłudze Windows SDK, aby uzyskać więcej informacji na temat tej wartości.
 
 ## <a name="cimagegetcolortable"></a><a name="getcolortable"></a>CImage::GetColorTable
 
 Pobiera wartości kolorów czerwony, zielony, niebieski (RGB) z zakresu wpisów w palecie sekcji DIB.
 
-```
+```cpp
 void GetColorTable(
     UINT iFirstColor,
     UINT nColors,
@@ -923,7 +923,7 @@ Wartość piksela jest czerwona, zielona, niebieska (RGB). Jeśli piksel znajduj
 
 Pobiera dokładny adres piksela.
 
-```
+```cpp
 void* GetPixelAddress(int x, int y) throw();
 ```
 
@@ -1076,7 +1076,7 @@ Prawidłowe typy obrazów to BMP, GIF, JPEG, PNG i TIFF.
 
 Ładuje obraz z zasobu BITMAP.
 
-```
+```cpp
 void LoadFromResource(
     HINSTANCE hInstance,
     LPCTSTR pszResourceName) throw();
@@ -1259,10 +1259,10 @@ Współrzędna x lewego górnego rogu monochromatycznej mapy bitowej.
 Współrzędna y w lewym górnym rogu monochromatycznej mapy bitowej.
 
 *rectSrc*<br/>
-Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) określające współrzędne prostokąta źródłowego.
+Odwołanie do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) określające współrzędne prostokąta źródłowego.
 
 *maska punktna*<br/>
-Struktura [POINT](/previous-versions/dd162805\(v=vs.85\)) wskazująca lewy górny róg mapy bitowej maski.
+Struktura [POINT](/windows/win32/api/windef/ns-windef-point) wskazująca lewy górny róg mapy bitowej maski.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1278,7 +1278,7 @@ Ta metoda dotyczy tylko systemu Windows NT w wersji 4.0 i nowszej. Aby uzyskać 
 
 Zwalnia kontekst urządzenia.
 
-```
+```cpp
 void ReleaseDC() const throw();
 ```
 
@@ -1290,7 +1290,7 @@ Ponieważ w kontekście urządzenia można jednocześnie wybrać tylko jedną `R
 
 Zwalnia zasoby używane przez GDI+.
 
-```
+```cpp
 void ReleaseGDIPlus() throw();
 ```
 
@@ -1346,7 +1346,7 @@ Wywołanie tej funkcji, aby zapisać obraz przy użyciu określonej nazwy i typu
 
 Ustawia wartości kolorów czerwony, zielony, niebieski (RGB) dla zakresu wpisów w palecie sekcji DIB.
 
-```
+```cpp
 void SetColorTable(
     UINT iFirstColor,
     UINT nColors,
@@ -1372,7 +1372,7 @@ Ta metoda obsługuje tylko bitmapy sekcji DIB.
 
 Ustawia kolor piksela w danym miejscu na mapie bitowej.
 
-```
+```cpp
 void SetPixel(int x, int y, COLORREF color) throw();
 ```
 
@@ -1395,7 +1395,7 @@ Ta metoda kończy się niepowodzeniem, jeśli współrzędne piksela znajdują s
 
 Ustawia kolor piksela na kolor znajdujący się w pliku *iIndex* w palecie kolorów.
 
-```
+```cpp
 void SetPixelIndexed(int x, int y, int iIndex) throw();
 ```
 
@@ -1414,7 +1414,7 @@ Indeks koloru w palecie kolorów.
 
 Ustawia piksel w miejscach określonych przez *x* i *y* na kolorach wskazanych przez *r*, *g*i *b*, w obrazie czerwonym, zielonym, niebieskim (RGB).
 
-```
+```cpp
 void SetPixelRGB(
     int x,
     int y,
@@ -1519,7 +1519,7 @@ Wysokość w jednostkach logicznych prostokąta docelowego.
 Operacja rastrowa do wykonania. Kody operacji rastrowych definiują dokładnie sposób łączenia bitów źródła, miejsca docelowego i wzorca (zdefiniowanego przez aktualnie zaznaczony pędzel) w celu utworzenia miejsca docelowego. Zobacz [BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt) w zestawie Windows SDK, aby uzyskać listę innych kodów operacji rastrowych i ich opisów.
 
 *reectDest*<br/>
-Odwołanie do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) identyfikując miejsce docelowe.
+Odwołanie do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) identyfikując miejsce docelowe.
 
 *xSrc (ks.*<br/>
 Współrzędna x w jednostkach logicznych w lewym górnym rogu prostokąta źródłowego.
@@ -1602,7 +1602,7 @@ Wysokość w jednostkach logicznych prostokąta docelowego.
 Kolor w źródłowej mapie bitowej, aby traktować jako przezroczysty. Domyślnie CLR_INVALID, wskazując, że należy użyć koloru aktualnie ustawionego jako przezroczysty kolor obrazu.
 
 *reectDest*<br/>
-Odwołanie do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) identyfikując miejsce docelowe.
+Odwołanie do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) identyfikując miejsce docelowe.
 
 *xSrc (ks.*<br/>
 Współrzędna x w jednostkach logicznych w lewym górnym rogu prostokąta źródłowego.

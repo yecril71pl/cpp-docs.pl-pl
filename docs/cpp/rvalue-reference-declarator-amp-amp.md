@@ -1,21 +1,21 @@
 ---
-title: Deklarator odwołania rvalue:&amp;&amp;
+title: Rvalue Reference Declarator:&amp;&amp;
 ms.date: 11/04/2016
 f1_keywords:
 - '&&'
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: d6aa6aa9caed77f92b3b183cc49c63aaaa6c724f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 53729cca7c259bc2d3b792ddc3509d5fc3bd255a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498564"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749828"
 ---
-# <a name="rvalue-reference-declarator-ampamp"></a>Deklarator odwołania rvalue:&amp;&amp;
+# <a name="rvalue-reference-declarator-ampamp"></a>Rvalue Reference Declarator:&amp;&amp;
 
-Przechowuje odwołanie do wyrażenia rvalue.
+Zawiera odwołanie do wyrażenia rvalue.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,17 +25,17 @@ type-id && cast-expression
 
 ## <a name="remarks"></a>Uwagi
 
-Odwołania rvalue umożliwiają odróżnienie lvalue od rvalue. Odwołania lvalue i odwołania rvalue są składniowo i semantycznie podobne, ale są one zgodne z pewnymi różnymi regułami. Aby uzyskać więcej informacji na temat lvalues i rvalues, zobacz [lvalues i rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md). Aby uzyskać więcej informacji o odwołaniach lvalue, zobacz [lvalue Reference deklarator: &](../cpp/lvalue-reference-declarator-amp.md).
+Odwołania do wartości Rwalue umożliwiają odróżnienie wartości lvalue od wartości r. Odwołania lvalue i odwołania do wartości rvalue są syntaktycznie i semantycznie podobne, ale są zgodne z nieco innymi regułami. Aby uzyskać więcej informacji na temat wartości lvalues i rvalues, zobacz [Lvalues i Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md). Aby uzyskać więcej informacji na temat odwołań do lvalue, zobacz [Lvalue Reference Declarator: &](../cpp/lvalue-reference-declarator-amp.md).
 
-W poniższych sekcjach opisano sposób, w jaki odwołania rvalue obsługują implementację *semantyki przenoszenia* i *doskonałe przekazywanie dalej*.
+W poniższych sekcjach opisano, w jaki sposób odwołania do wartości rwalue obsługują implementację *semantyki przenoszenia* i *doskonałego przekazywania*.
 
 ## <a name="move-semantics"></a>Przenoszenie semantyki
 
-Odwołania rvalue obsługują implementację *semantyki przenoszenia*, co może znacząco zwiększyć wydajność aplikacji. Semantyka przenoszenia umożliwia pisanie kodu, który przesyła zasoby (na przykład dynamicznie przydzieloną pamięć) z jednego obiektu do drugiego. Semantyka przenoszenia działa, ponieważ umożliwia przesyłanie zasobów z obiektów tymczasowych, do których nie można się odwoływać w innym miejscu programu.
+Odwołania do rvalue obsługują implementację *semantyki przenoszenia,* co może znacznie zwiększyć wydajność aplikacji. Przenieś semantyka umożliwia pisanie kodu, który przenosi zasoby (takie jak dynamicznie przydzielona pamięć) z jednego obiektu do drugiego. Przenieś semantyka działa, ponieważ umożliwia przenoszenie zasobów z obiektów tymczasowych, do których nie można odwoływać się w innym miejscu programu.
 
-Aby zaimplementować semantykę przenoszenia, zazwyczaj udostępniamy *Konstruktor* przenoszący i opcjonalnie operator przypisania przenoszenia (**operator =** ) do klasy. Operacje kopiowania i przypisywania, których źródła są rvalues, automatycznie wykorzystują semantykę przenoszenia. W przeciwieństwie do domyślnego konstruktora kopiującego, kompilator nie udostępnia domyślnego konstruktora przenoszenia. Aby uzyskać więcej informacji na temat pisania konstruktora przenoszącego i sposobu korzystania z niego w aplikacji, zobacz [przenoszenie konstruktorów i operatory przypisania przenoszeniaC++()](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
+Aby zaimplementować przenieść semantyki, zazwyczaj należy podać *konstruktora przenoszenia* i opcjonalnie przenieść przypisania operatora **(operator=**), do klasy. Operacje kopiowania i przypisywania, których źródła są wartościami r, automatycznie korzystają z semantyki przenoszenia. W przeciwieństwie do domyślnego konstruktora kopii kompilator nie zapewnia domyślnego konstruktora przenoszenia. Aby uzyskać więcej informacji na temat sposobu pisania konstruktora przenoszenia i używania go w aplikacji, zobacz [Przenoszenie konstruktorów i przenoszenie operatorów przydziałów (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
 
-Można również przeciążać zwykłe funkcje i operatory, aby skorzystać z semantyki przenoszenia. W programie Visual Studio 2010 wprowadzono semantykę przenoszenia C++ do biblioteki standardowej. Na przykład `string` Klasa implementuje operacje, które wykonują semantykę przenoszenia. Rozważmy następujący przykład, który łączy kilka ciągów i drukuje wynik:
+Można również przeciążyć zwykłe funkcje i operatory, aby skorzystać z semantyki przenoszenia. Visual Studio 2010 wprowadza semantyki przenoszenia do biblioteki standardowej języka C++. Na przykład `string` klasa implementuje operacje, które wykonują semantykę przenoszenia. Rozważmy następujący przykład, który łączy kilka ciągów i drukuje wynik:
 
 ```cpp
 // string_concatenation.cpp
@@ -51,23 +51,23 @@ int main()
 }
 ```
 
-Przed wystąpieniem programu Visual Studio 2010 każde wywołanie **operatora +** przydzieli i zwróci nowy `string` obiekt tymczasowy (rvalue). **operator +** nie może dołączyć jednego ciągu do drugiego, ponieważ nie wie, czy ciągi źródłowe są lvalues lub rvalues. Jeśli ciągi źródłowe są zarówno lvalues, mogą być przywoływane w innym miejscu w programie i dlatego nie mogą być modyfikowane. Za pomocą odwołań rvalue, **operator +** można modyfikować, aby przyjmować rvalues, do których nie można się odwoływać w innym miejscu programu. W związku z tym **operator +** może teraz dołączyć jeden ciąg do innego. Może to znacznie zmniejszyć liczbę alokacji pamięci dynamicznej, które `string` musi wykonać Klasa. Aby uzyskać więcej informacji na `string` temat klasy, zobacz [basic_string class](../standard-library/basic-string-class.md).
+Przed Visual Studio 2010, każde wywołanie **operator** + `string` przydziela i zwraca nowy obiekt tymczasowy (rvalue). **operator+** nie może dołączyć jednego ciągu do drugiego, ponieważ nie wie, czy ciągi źródłowe są wartościami lvalues lub rvalues. Jeśli ciągi źródłowe są zarówno lvalues, mogą być odwoływane w innym miejscu w programie i dlatego nie mogą być modyfikowane. Za pomocą rvalue odwołania, **operator +** mogą być modyfikowane do podjęcia rvalues, które nie mogą być odwoływane w innym miejscu w programie. W związku z tym **operator +** można teraz dołączyć jeden ciąg do innego. Może to znacznie zmniejszyć liczbę alokacji pamięci `string` dynamicznej, które klasa musi wykonać. Aby uzyskać więcej `string` informacji na temat klasy, zobacz [basic_string Class](../standard-library/basic-string-class.md).
 
-Semantyka przenoszenia również pomaga, gdy kompilator nie może używać optymalizacji wartości zwracanej (RVO) ani optymalizacji wartości zwracanej (NRVO). W takich przypadkach kompilator wywołuje konstruktor przenoszący, jeśli typ go definiuje. Aby uzyskać więcej informacji o nazwie Optymalizacja wartości zwracanej, zobacz " [Optymalizacja wartości zwracanej" w programie Visual Studio 2005](/previous-versions/ms364057(v=vs.80)).
+Semantyka przenoszenia pomaga również, gdy kompilator nie może użyć optymalizacji wartości zwracanej (RVO) lub optymalizacji nazwanych wartości zwracanych (NRVO). W takich przypadkach kompilator wywołuje konstruktora przenoszenia, jeśli typ go definiuje.
 
-Aby lepiej zrozumieć semantykę przenoszenia, rozważmy przykład wstawiania elementu do `vector` obiektu. W przypadku przekroczenia `vector` pojemności obiektu `vector` , obiekt musi ponownie przydzielić pamięć dla elementów, a następnie skopiować każdy element do innej lokalizacji pamięci, aby zwolnić miejsce dla wstawionego elementu. Gdy operacja wstawiania kopiuje element, tworzy nowy element, wywołuje konstruktora kopiującego, aby skopiować dane z poprzedniego elementu do nowego elementu, a następnie niszczy poprzedni element. Semantyka przenoszenia umożliwia przenoszenie obiektów bezpośrednio bez konieczności wykonywania kosztownych alokacji pamięci i operacji kopiowania.
+Aby lepiej zrozumieć semantykę przenoszenia, należy wziąć `vector` pod uwagę przykład wstawiania elementu do obiektu. Jeśli pojemność `vector` obiektu zostanie przekroczona, `vector` obiekt musi ponownie przydzielić pamięć dla swoich elementów, a następnie skopiować każdy element do innej lokalizacji pamięci, aby zrobić miejsce dla wstawionego elementu. Gdy operacja wstawiania kopiuje element, tworzy nowy element, wywołuje konstruktora kopiowania, aby skopiować dane z poprzedniego elementu do nowego elementu, a następnie niszczy poprzedni element. Przenieś semantyka umożliwia bezpośrednie przenoszenie obiektów bez konieczności wykonywania kosztownych operacji alokacji pamięci i kopiowania.
 
-Aby skorzystać z semantyki przenoszenia w `vector` przykładzie, można napisać Konstruktor przenoszący, aby przenieść dane z jednego obiektu do drugiego.
+Aby skorzystać z przenieść semantyki w `vector` przykładzie, można napisać konstruktora przenoszenia, aby przenieść dane z jednego obiektu do drugiego.
 
-Aby uzyskać więcej informacji o wprowadzaniu semantyki przenoszenia do biblioteki C++ standardowej w programie Visual Studio 2010, zobacz [ C++ Biblioteka standardowa](../standard-library/cpp-standard-library-reference.md).
+Aby uzyskać więcej informacji na temat wprowadzania semantyki przenoszenia do standardowej biblioteki języka C++ w programie Visual Studio 2010, zobacz [Standardowa biblioteka języka C++](../standard-library/cpp-standard-library-reference.md).
 
 ## <a name="perfect-forwarding"></a>Doskonałe przekazywanie
 
-Doskonałe przekazywanie ogranicza potrzebę przeciążonych funkcji i pomaga uniknąć problemów z przekazywaniem. *Problem* z przekazywaniem może wystąpić podczas pisania funkcji ogólnej, która pobiera odwołania jako parametry i przekazuje (lub *przesyła dalej*) te parametry do innej funkcji. Jeśli na przykład funkcja generyczna przyjmuje parametr typu `const T&`, wywoływana funkcja nie może modyfikować wartości tego parametru. Jeśli funkcja generyczna przyjmuje parametr typu `T&`, funkcja nie może być wywoływana za pomocą rvalue (na przykład obiektu tymczasowego lub literału liczb całkowitych).
+Doskonałe przekazywanie zmniejsza zapotrzebowanie na przeciążone funkcje i pomaga uniknąć problemu z przekazywaniem. *Problem z przekazywaniem może* wystąpić podczas pisania funkcji ogólnej, która przyjmuje odwołania jako swoje parametry i przekazuje (lub *przekazuje)* te parametry do innej funkcji. Na przykład jeśli funkcja ogólna przyjmuje `const T&`parametr typu , funkcja wywołana nie może zmodyfikować wartości tego parametru. Jeśli funkcja ogólna przyjmuje `T&`parametr typu , funkcja nie może być wywoływana przy użyciu wartości r (takiej jak obiekt tymczasowy lub literał całkowity).
 
-Zwykle aby rozwiązać ten problem, należy zapewnić przeciążone wersje funkcji ogólnej, która przyjmuje oba `T&` parametry i `const T&` dla każdego z nich. W efekcie liczba przeciążonych funkcji rośnie wykładniczo z liczbą parametrów. Odwołania rvalue umożliwiają pisanie jednej wersji funkcji, która akceptuje dowolne argumenty i przekazuje je do innej funkcji, tak jakby inna funkcja została wywołana bezpośrednio.
+Zwykle, aby rozwiązać ten problem, należy podać przeciążone wersje funkcji `T&` rodzajowej, które przyjmują zarówno dla `const T&` każdego z jego parametrów. W rezultacie liczba przeciążonych funkcji wzrasta wykładniczo wraz z liczbą parametrów. Odwołania do wartości Rwalue umożliwiają zapisanie jednej wersji funkcji, która akceptuje dowolne argumenty i przekazuje je do innej funkcji, tak jakby inna funkcja została wywołana bezpośrednio.
 
-Rozważmy następujący przykład, który deklaruje cztery `W`typy `X`, `Y`,, `Z`, i. Konstruktor dla każdego typu przyjmuje inną kombinację wartości **const** i non-**const** lvalue jako parametry.
+Rozważmy poniższy przykład, który `W` `X`deklaruje `Y`cztery `Z`typy, , , i . Konstruktor dla każdego typu przyjmuje inną kombinację **const** i**non-const** lvalue odwołania jako jego parametry.
 
 ```cpp
 struct W
@@ -91,7 +91,7 @@ struct Z
 };
 ```
 
-Załóżmy, że chcesz napisać ogólną funkcję, która generuje obiekty. W poniższym przykładzie pokazano jeden ze sposobów zapisania tej funkcji:
+Załóżmy, że chcesz napisać ogólną funkcję, która generuje obiekty. W poniższym przykładzie pokazano jeden sposób zapisu tej funkcji:
 
 ```cpp
 template <typename T, typename A1, typename A2>
@@ -101,20 +101,20 @@ T* factory(A1& a1, A2& a2)
 }
 ```
 
-W poniższym przykładzie pokazano prawidłowe wywołanie `factory` funkcji:
+W poniższym przykładzie przedstawiono prawidłowe wywołanie `factory` funkcji:
 
 ```cpp
 int a = 4, b = 5;
 W* pw = factory<W>(a, b);
 ```
 
-Jednak Poniższy przykład nie zawiera prawidłowego wywołania `factory` funkcji, ponieważ `factory` pobiera odwołania lvalue, które są modyfikowalne jako parametry, ale są wywoływane za pomocą rvalues:
+Jednak poniższy przykład nie zawiera prawidłowego `factory` wywołania funkcji, ponieważ `factory` przyjmuje odwołania lvalue, które można modyfikować jako jego parametry, ale jest wywoływana przy użyciu wartości rvalues:
 
 ```cpp
 Z* pz = factory<Z>(2, 2);
 ```
 
-Zwykle aby rozwiązać ten problem, należy utworzyć przeciążoną wersję `factory` funkcji dla każdej `A&` kombinacji parametrów i `const A&` . Odwołania rvalue umożliwiają pisanie jednej wersji `factory` funkcji, jak pokazano w następującym przykładzie:
+Zwykle, aby rozwiązać ten problem, należy utworzyć przeciążoną `factory` wersję funkcji `A&` dla `const A&` każdej kombinacji i parametrów. Odwołania do wartości Rwalue umożliwiają zapisanie jednej wersji `factory` funkcji, jak pokazano w poniższym przykładzie:
 
 ```cpp
 template <typename T, typename A1, typename A2>
@@ -124,9 +124,9 @@ T* factory(A1&& a1, A2&& a2)
 }
 ```
 
-W tym przykładzie używa się `factory` odwołań rvalue jako parametrów funkcji. Celem funkcji [std:: Forward](../standard-library/utility-functions.md#forward) jest przekazanie parametrów funkcji fabryki do konstruktora klasy szablonu.
+W tym przykładzie użyto rvalue `factory` odwołania jako parametry funkcji. Celem funkcji [std::forward](../standard-library/utility-functions.md#forward) jest przekazanie parametrów funkcji fabrycznej do konstruktora klasy szablonu.
 
-Poniższy `main` przykład pokazuje funkcję, która używa poprawionej `factory` funkcji `W`do tworzenia wystąpień klas, `X`, `Y`, i `Z` . Poprawiona `factory` funkcja przekazuje swoje parametry (lvalues lub rvalues) do odpowiedniego konstruktora klasy.
+Poniższy przykład `main` przedstawia funkcję, która `factory` używa poprawionej funkcji `W` `X`do `Y`tworzenia `Z` wystąpień , , i klas. Zmieniona `factory` funkcja przekazuje swoje parametry (wartości lvalues lub rvalues) do odpowiedniego konstruktora klasy.
 
 ```cpp
 int main()
@@ -144,11 +144,11 @@ int main()
 }
 ```
 
-## <a name="additional-properties-of-rvalue-references"></a>Dodatkowe właściwości odwołań rvalue
+## <a name="additional-properties-of-rvalue-references"></a>Dodatkowe właściwości odwołań Rvalue
 
-**Można przeciążać funkcję, aby przyjmować odwołanie lvalue i odwołanie rvalue.**
+**Można przeciążyć funkcję, aby wziąć odwołanie lvalue i odwołanie rvalue.**
 
-Przeciążanie funkcji, aby przyjmować **stałe** odwołanie lvalue lub odwołanie rvalue, można napisać kod odróżniający między niemodyfikowalnymi obiektami (lvalues) i modyfikowalnymi wartościami tymczasowymi (rvalues). Można przekazać obiekt do funkcji, która przyjmuje odwołanie rvalue, chyba że obiekt jest oznaczony jako **const**. Poniższy przykład pokazuje funkcję `f`, która jest przeciążona, aby pobrać odwołanie lvalue i odwołanie rvalue. `main` Funkcja wywołuje`f` zarówno lvalues, jak i rvalue.
+Przeciążając funkcję w celu podjęcia odwołania **const** lvalue lub odwołania do wartości rvalue, można napisać kod, który rozróżnia obiekty niemodyfikowalne (wartości lvalues) i modyfikowalne wartości tymczasowe (wartości rceny). Obiekt można przekazać do funkcji, która przyjmuje odwołanie do wartości r, chyba że obiekt jest oznaczony jako **const**. Poniższy przykład przedstawia `f`funkcję , która jest przeciążona do podjęcia odwołania lvalue i odwołania rvalue. Funkcja `main` wywołuje `f` zarówno wartości lvalues i rvalue.
 
 ```cpp
 // reference-overload.cpp
@@ -187,13 +187,13 @@ In f(const MemoryBlock&). This version cannot modify the parameter.
 In f(MemoryBlock&&). This version can modify the parameter.
 ```
 
-W tym przykładzie pierwsze wywołanie do `f` przekazuje zmienną lokalną (lvalue) jako argument. Drugie wywołanie `f` przekazuje tymczasowy obiekt jako argument. Ponieważ obiekt tymczasowy nie może być przywoływany w innym miejscu w programie, wywołanie jest powiązane z przeciążoną `f` wersją, która przyjmuje odwołanie rvalue, które jest bezpłatne do modyfikacji obiektu.
+W tym przykładzie pierwsze `f` wywołanie przekazuje zmienną lokalną (lvalue) jako jej argument. Drugie wywołanie `f` przekazuje obiekt tymczasowy jako jego argument. Ponieważ obiekt tymczasowy nie może odwoływać się w innym miejscu w programie, wywołanie wiąże się z `f` przeciążona wersja, która ma odwołanie rvalue, który jest wolny, aby zmodyfikować obiekt.
 
-**Kompilator traktuje nazwane odwołanie rvalue jako lvalue i nienazwane odwołanie rvalue jako rvalue.**
+**Kompilator traktuje odwołanie o nazwie rvalue jako lvalue i nienazwane odwołanie rvalue jako wartość rvalue.**
 
-Gdy piszesz funkcję, która przyjmuje jako parametr odwołanie rvalue, ten parametr jest traktowany jako lvalue w treści funkcji. Kompilator traktuje nazwane odwołanie rvalue jako lvalue, ponieważ obiekt nazwany może być przywoływany przez kilka części programu; może być niebezpieczne dla wielu części programu, aby modyfikować lub usuwać zasoby z tego obiektu. Na przykład jeśli wiele części programu próbuje przenieść zasoby z tego samego obiektu, tylko pierwsza część pomyślnie przeniesie zasób.
+Podczas pisania funkcji, która przyjmuje odwołanie rvalue jako parametr, ten parametr jest traktowany jako lvalue w treści funkcji. Kompilator traktuje odwołanie o nazwie rvalue jako wartość lvalue, ponieważ nazwany obiekt może odwoływać się do kilku części programu; byłoby niebezpieczne, aby umożliwić wiele części programu do modyfikowania lub usuwania zasobów z tego obiektu. Na przykład jeśli wiele części programu próbuje przenieść zasoby z tego samego obiektu, tylko pierwsza część pomyślnie przeniesie zasób.
 
-Poniższy przykład pokazuje funkcję `g`, która jest przeciążona, aby pobrać odwołanie lvalue i odwołanie rvalue. Funkcja `f` przyjmuje odwołanie rvalue jako parametr (nazwane odwołanie rvalue) i zwraca odwołanie rvalue (nienazwane odwołanie rvalue). W wywołaniu `g` z `f`, Metoda `g` rozpoznawania przeciążenia wybiera wersję, która `f` pobiera odwołanie lvalue, ponieważ treść traktuje swój parametr jako lvalue. W wywołaniu `g` `f` od `main` ,`g` rozpoznawanie przeciążenia wybiera wersję, która pobiera odwołanie rvalue, ponieważ zwraca odwołanie rvalue.
+Poniższy przykład przedstawia `g`funkcję , która jest przeciążona do podjęcia odwołania lvalue i odwołania rvalue. Funkcja `f` przyjmuje odwołanie rvalue jako parametr (odwołanie o nazwie rvalue) i zwraca odwołanie rvalue (nienazwane odwołanie do wartości r. ( W wywołaniu `g` `f`z , przeciążenie rozdzielczość `g` wybiera wersję, która przyjmuje odwołanie `f` lvalue, ponieważ treść traktuje jego parametr jako lvalue. W wywołaniu `g` `main`z , przeciążenie rozdzielczość `g` wybiera wersję, która przyjmuje `f` odwołanie rvalue, ponieważ zwraca odwołanie rvalue.
 
 ```cpp
 // named-reference.cpp
@@ -236,11 +236,11 @@ In g(const MemoryBlock&).
 In g(MemoryBlock&&).
 ```
 
-W tym przykładzie `main` funkcja przekazuje rvalue do `f`. Treść `f` traktuje nazwany parametr jako lvalue. Wywołanie z `f` do `g` powiązania parametru z odwołaniem lvalue (pierwszą przeciążoną wersją `g`).
+W tym przykładzie `main` funkcja przekazuje wartość `f`rvalue do . Treść `f` traktuje jego nazwany parametr jako lvalue. Wywołanie `f` z `g` wiąże parametr z odwołaniem lvalue (pierwsza przeciążona wersja `g`).
 
-- **Można rzutować lvalue na odwołanie rvalue.**
+- **Wartość lvalue można rzutować na odwołanie wartości r.**
 
-Funkcja C++ [std:: Move](../standard-library/utility-functions.md#move) biblioteki standardowej umożliwia konwertowanie obiektu na odwołanie rvalue do tego obiektu. Alternatywnie można użyć słowa kluczowego **static_cast** do rzutowania lvalue na odwołanie rvalue, jak pokazano w następującym przykładzie:
+Funkcja C++ Standard Library [std::move](../standard-library/utility-functions.md#move) umożliwia konwertowanie obiektu na odwołanie do wartości r. do tego obiektu. Alternatywnie można użyć słowa kluczowego **static_cast,** aby rzutować wartość lvalue na odwołanie do wartości r, jak pokazano w poniższym przykładzie:
 
 ```cpp
 // cast-reference.cpp
@@ -279,13 +279,13 @@ In g(const MemoryBlock&).
 In g(MemoryBlock&&).
 ```
 
-**Szablony funkcji ustalają ich typy argumentów szablonu, a następnie używają reguł zwijania odwołań.**
+**Szablony funkcji wywniają ich typy argumentów szablonów, a następnie używają reguł zwijania odwołań.**
 
-Często należy napisać szablon funkcji, który przekazuje (lub *przesyła dalej*) jego parametry do innej funkcji. Ważne jest, aby zrozumieć, w jaki sposób Metoda odejmowania typu szablonu działa dla szablonów funkcji, które pobierają odwołania rvalue.
+Często jest napisać szablon funkcji, który przekazuje (lub *przekazuje)* swoje parametry do innej funkcji. Ważne jest, aby zrozumieć, jak działanie dedukcji typu szablonu dla szablonów funkcji, które przyjmują odwołania do wartości.
 
-Jeśli argument funkcji jest rvalue, kompilator wywnioskuje argument jako odwołanie rvalue. Na przykład, Jeśli przekażesz odwołanie rvalue do `X` obiektu typu do funkcji szablonu, która przyjmuje typ `T&&` jako parametr, odliczanie `T` argumentu szablonu zostanie `X`określone jako. W związku z tym parametr ma `X&&`typ. Jeśli argument funkcji jest lvalue lub **const** lvalue, kompilator określa, że jego typ jest odwołaniem lvalue lub wyrażeniem **const** lvalue tego typu.
+Jeśli argument funkcji jest rvalue, kompilator wydeniuwuje argument jako odwołanie rvalue. Na przykład w przypadku przekazania odwołania rvalue `X` do obiektu typu do `T&&` funkcji szablonu, która przyjmuje typ `T` jako `X`parametr, wywnienie odliczenia argumentu szablonu ma być . W związku z tym `X&&`parametr ma typ . Jeśli argument funkcji jest lvalue lub **const** lvalue, kompilator wydeniuuje jego typ jako odwołanie lvalue lub **odwołanie do rescencji** tego typu.
 
-W poniższym przykładzie zadeklarowano jeden szablon struktury, a następnie jest on wyspecjalizowany dla różnych typów referencyjnych. Funkcja przyjmuje jako parametr odwołanie rvalue i przekazuje go do odpowiedniej wyspecjalizowanej wersji `S::print` metody. `print_type_and_value` Funkcja pokazuje różne sposoby `S::print` wywoływania metody. `main`
+Poniższy przykład deklaruje jeden szablon struktury, a następnie specjalizuje się w różnych typach odwołań. Funkcja `print_type_and_value` przyjmuje odwołanie rvalue jako parametr i przekazuje go do `S::print` odpowiedniej wersji wyspecjalizowanej metody. Funkcja `main` pokazuje różne sposoby wywołania `S::print` metody.
 
 ```cpp
 // template-type-deduction.cpp
@@ -375,40 +375,40 @@ print<T&&>: third
 print<const T&&>: fourth
 ```
 
-Aby rozwiązać każde wywołanie `print_type_and_value` funkcji, kompilator najpierw wykonuje potrącenie argumentu szablonu. Następnie kompilator stosuje reguły zwijające odwołania, gdy zastępuje argumenty szablonu wywnioskowanych dla typów parametrów. Na przykład przekazanie zmiennej `s1` lokalnej `print_type_and_value` do funkcji powoduje, że kompilator wygenerował następującą sygnaturę funkcji:
+Aby rozwiązać każde `print_type_and_value` wywołanie funkcji, kompilator najpierw wykonuje dedukcję argumentu szablonu. Kompilator następnie stosuje reguły zwijania odwołania, gdy zastępuje wywnioskowane argumenty szablonu dla typów parametrów. Na przykład przekazanie zmiennej `s1` `print_type_and_value` lokalnej do funkcji powoduje, że kompilator tworzy następujący podpis funkcji:
 
 ```cpp
 print_type_and_value<string&>(string& && t)
 ```
 
-Kompilator używa reguł zwijania odwołania, aby zmniejszyć sygnaturę do następujących:
+Kompilator używa reguł zwijania odwołań, aby zmniejszyć podpis do następujących:
 
 ```cpp
 print_type_and_value<string&>(string& t)
 ```
 
-Ta wersja `print_type_and_value` funkcji następnie przekazuje jej parametr do odpowiedniej wersji `S::print` wyspecjalizowanej metody.
+Ta wersja `print_type_and_value` funkcji następnie przekazuje jego parametr do poprawnej wersji wyspecjalizowanej `S::print` metody.
 
-Poniższa tabela podsumowuje reguły zwijania odwołań dla typu argumentu szablonu:
+W poniższej tabeli podsumowano reguły zwijania odwołania dla dedukcji typu argumentu szablonu:
 
 |||
 |-|-|
-|Typ rozwinięty|Typ zwinięty|
+|Typ rozszerzony|Typ zwiniętego|
 |`T& &`|`T&`|
 |`T& &&`|`T&`|
 |`T&& &`|`T&`|
 |`T&& &&`|`T&&`|
 
-Potrącenie argumentu szablonu jest ważnym elementem implementującym doskonałe przekazywanie. Sekcja doskonałe przekazywanie, która jest przedstawiona wcześniej w tym temacie, opisuje doskonałe przekazywanie bardziej szczegółowo.
+Odliczenie argumentu szablonu jest ważnym elementem implementacji doskonałego przekazywania. Sekcja Perfect Forwarding, która jest przedstawiona wcześniej w tym temacie, opisuje doskonałe przekazywanie bardziej szczegółowo.
 
 ## <a name="summary"></a>Podsumowanie
 
-Rvalue odwołuje się do odróżnia lvalues od rvalues. Mogą one pomóc zwiększyć wydajność aplikacji, eliminując konieczność niepotrzebnych alokacji pamięci i operacji kopiowania. Umożliwiają one także pisanie jednej wersji funkcji, która akceptuje dowolne argumenty i przekazuje je do innej funkcji, tak jakby inna funkcja została wywołana bezpośrednio.
+Odwołania Rvalue odróżniają wartości lvalues od wartości r. Mogą one pomóc w zwiększeniu wydajności aplikacji, eliminując potrzebę niepotrzebnych alokacji pamięci i operacji kopiowania. Umożliwiają one również zapis jednej wersji funkcji, która akceptuje dowolne argumenty i przekazuje je do innej funkcji, tak jakby inna funkcja została wywołana bezpośrednio.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
 [Deklarator odwołania do wartości L: &](../cpp/lvalue-reference-declarator-amp.md)<br/>
-[Wartości Lvalue i Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
+[Wartości lvalues i wartości r](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
 [Konstruktory przenoszące i przenoszące operatory przypisania (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)<br/>
-[Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)
+[Standardowa biblioteka języka C++](../standard-library/cpp-standard-library-reference.md)
