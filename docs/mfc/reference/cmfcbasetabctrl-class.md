@@ -238,12 +238,12 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: db82a3c9019655fae850002d9e664e5de5407aa6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 92728a1725cc1ceb9569c3c7f44918e56cf2d947
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367816"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754898"
 ---
 # <a name="cmfcbasetabctrl-class"></a>Klasa CMFCBaseTabCtrl
 
@@ -425,7 +425,7 @@ Następujące wskazówki odnoszą `CMFCBaseTabCtrl Class` się do i wszystkie kl
 
 Dodaje ikonę do listy ikon w `CMap m_mapAddedIcons` chronionym człowieku.
 
-```
+```cpp
 void AddIcon(
     HICON hIcon,
     int iIcon);
@@ -494,7 +494,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 
 ## <a name="cmfcbasetabctrlautodestroywindow"></a><a name="autodestroywindow"></a>CMFCBaseTabCtrl::AutoDestroyWindow
 
-```
+```cpp
 void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -598,7 +598,7 @@ Jeśli karta określona przez *nTabNum* nie jest odłączana, ta funkcja kończy
 
 ## <a name="cmfcbasetabctrlenableactivatelastactive"></a><a name="enableactivatelastactive"></a>CMFCBaseTabCtrl::EnableActivateLastActive
 
-```
+```cpp
 void EnableActivateLastActive(BOOL bLastActive = TRUE);
 ```
 
@@ -612,7 +612,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 
 Określa, czy struktura używa automatycznych kolorów tła podczas rysowania karty.
 
-```
+```cpp
 void EnableAutoColor(BOOL bEnable = TRUE);
 ```
 
@@ -695,7 +695,7 @@ PRAWDA, jeśli się powiedzie; w przeciwnym razie FALSE.
 
 Umożliwia użytkownikowi zmianę kolejności tabulacji za pomocą myszy.
 
-```
+```cpp
 void EnableTabSwap(BOOL bEnable);
 ```
 
@@ -733,7 +733,7 @@ Domyślnie ta metoda nie jest `CMFCBaseTabCtrl Class`obsługiwana przez program 
 
 ## <a name="cmfcbasetabctrlenterdragmode"></a><a name="enterdragmode"></a>CMFCBaseTabCtrl::EnterDragMode
 
-```
+```cpp
 void EnterDragMode();
 ```
 
@@ -1409,7 +1409,7 @@ Jeśli obiekt wskazany przez *pNewWnd* nie pochodzi z [klasy CDockablePane](../.
 
 ## <a name="cmfcbasetabctrlinvalidatetab"></a><a name="invalidatetab"></a>CMFCBaseTabCtrl::InvalidateTab
 
-```
+```cpp
 void InvalidateTab(int iTab);
 ```
 
@@ -1944,7 +1944,7 @@ virtual BOOL RenameTab();
 
 Resetuje listę obrazów dla wystąpienia [klasy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).
 
-```
+```cpp
 void ResetImageList();
 ```
 
@@ -2019,7 +2019,7 @@ Domyślnie struktura uzyskuje kolor tekstu z [GetSysColor](/windows/win32/api/wi
 
 Ustawia kolory kontrolki karty używanej przez platformę w trybie automatycznego koloru.
 
-```
+```cpp
 void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```
 
@@ -2038,7 +2038,7 @@ Aby włączyć tryb autokolor, należy użyć [CMFCBaseTabCtrl::EnableAutoColor]
 
 Ustawia klasę otoki, która jest używana dla wszystkich obiektów, które nie są pochodną [klasy CDockablePane](../../mfc/reference/cdockablepane-class.md).
 
-```
+```cpp
 void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```
 
@@ -2055,7 +2055,7 @@ Karty można dodawać do formantu karty przy użyciu metod [CMFCBaseTabCtrl::Add
 
 Włącza i wyłącza przetwarzanie znaków prefiksu w etykietach kart.
 
-```
+```cpp
 void SetDrawNoPrefix(
     BOOL bNoPrefix,
     BOOL bRedraw = TRUE);

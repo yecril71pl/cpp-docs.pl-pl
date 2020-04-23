@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 24e1cb18f979d1144f15cf6ffedc6cace5f5361e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e3572b34f930bb6a7d99b437c01c8aaf970e6c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318212"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751278"
 ---
 # <a name="csliderctrl-class"></a>Klasa CSliderCtrl
 
@@ -169,7 +169,7 @@ Aby uzyskać więcej `CSliderCtrl`informacji na temat używania , zobacz [Forman
 
 Czyści bieżące zaznaczenie w formancie suwaka.
 
-```
+```cpp
 void ClearSel(BOOL bRedraw = FALSE);
 ```
 
@@ -182,7 +182,7 @@ Przerysuj flagę. Jeśli ten parametr ma wartość PRAWDA, suwak jest ponownie r
 
 Usuwa bieżące znaczniki osi z kontrolki suwaka.
 
-```
+```cpp
 void ClearTics(BOOL bRedraw = FALSE);
 ```
 
@@ -209,7 +209,7 @@ virtual BOOL Create(
 Określa styl formantu suwaka. Zastosuj dowolną kombinację [stylów sterowania suwakiem,](/windows/win32/Controls/trackbar-control-styles)opisaną w panelu Windows SDK, do formantu.
 
 *Rect*<br/>
-Określa rozmiar i położenie formantu suwaka. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/previous-versions/dd162897\(v=vs.85\))
+Określa rozmiar i położenie formantu suwaka. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Określa okno nadrzędne formantu suwaka, zwykle `CDialog`. Nie może być null.
@@ -251,7 +251,7 @@ Określa rozszerzony styl tworzonego formantu. Aby uzyskać listę rozszerzonych
 Określa styl formantu suwaka. Zastosuj dowolną kombinację [stylów sterowania suwakiem,](/windows/win32/Controls/trackbar-control-styles)opisaną w panelu Windows SDK, do formantu.
 
 *Rect*<br/>
-Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
+Odwołanie do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest nadrzędnym formantu.
@@ -304,7 +304,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie [TBM_GETBUDDY](/wind
 
 Pobiera rozmiar i położenie prostokąta ograniczającego dla kanału formantu suwaka.
 
-```
+```cpp
 void GetChannelRect(LPRECT lprc) const;
 ```
 
@@ -377,7 +377,7 @@ Bieżąca pozycja.
 
 Pobiera maksymalne i minimalne pozycje suwaka w suwaku.
 
-```
+```cpp
 void GetRange(
     int& nMin,
     int& nMax) const;
@@ -423,7 +423,7 @@ Minimalna pozycja formantu.
 
 Pobiera pozycje początkowe i końcowe bieżącego zaznaczenia w formancie suwaka.
 
-```
+```cpp
 void GetSelection(
     int& nMin,
     int& nMax) const;
@@ -457,7 +457,7 @@ Ta metoda wysyła komunikat [TBM_GETTHUMBLENGTH,](/windows/win32/Controls/tbm-ge
 
 Pobiera rozmiar i położenie prostokąta ograniczającego dla suwaka (kciuka) w formancie suwaka.
 
-```
+```cpp
 void GetThumbRect(LPRECT lprc) const;
 ```
 
@@ -608,7 +608,7 @@ Rozmiar strony wpływa na to, jak bardzo suwak zostanie przeniesiony dla powiado
 
 Ustawia bieżącą pozycję suwaka w suwaku.
 
-```
+```cpp
 void SetPos(int nPos);
 ```
 
@@ -621,7 +621,7 @@ Określa nową pozycję suwaka.
 
 Ustawia zakres (pozycje minimalne i maksymalne) dla suwaka w suwaku.
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax,
@@ -643,7 +643,7 @@ Flaga ponownego rysowania. Jeśli ten parametr ma wartość PRAWDA, suwak jest p
 
 Ustawia maksymalny zakres suwaka w formancie suwaka.
 
-```
+```cpp
 void SetRangeMax(
     int nMax,
     BOOL bRedraw = FALSE);
@@ -661,7 +661,7 @@ Flaga ponownego rysowania. Jeśli ten parametr ma wartość PRAWDA, suwak jest p
 
 Ustawia minimalny zakres suwaka w formancie suwaka.
 
-```
+```cpp
 void SetRangeMin(
     int nMin,
     BOOL bRedraw = FALSE);
@@ -679,7 +679,7 @@ Flaga ponownego rysowania. Jeśli ten parametr ma wartość PRAWDA, suwak jest p
 
 Ustawia pozycje początkowe i końcowe dla bieżącego zaznaczenia w formancie suwaka.
 
-```
+```cpp
 void SetSelection(
     int nMin,
     int nMax);
@@ -697,7 +697,7 @@ Pozycja końcowa suwaka.
 
 Ustawia długość suwaka w bieżącym formancie paska gąsienic.
 
-```
+```cpp
 void SetThumbLength(int nLength);
 ```
 
@@ -746,7 +746,7 @@ Niezerowe, jeśli znacznik osi jest ustawiony; w przeciwnym razie 0.
 
 Ustawia częstotliwość wyświetlania znaczników osi na suwaku.
 
-```
+```cpp
 void SetTicFreq(int nFreq);
 ```
 
@@ -786,7 +786,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie TBM_SETTIPSIDE komun
 
 Przypisuje kontrolkę etykietki narzędzia do formantu suwaka.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 

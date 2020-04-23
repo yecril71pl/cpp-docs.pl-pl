@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 830c6d068a5074d0918107ca601c51d198a8a912
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d25cad720a4e1abb9bca6b3ab22eea0261f24b48
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375714"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753428"
 ---
 # <a name="cdc-class"></a>Klasa CDC
 
@@ -1354,7 +1354,7 @@ Kontekst urządzenia z systemem Windows.
 
 Tej funkcji należy użyć, gdy rozmiary HIMETRIC są naliczane na OLE, konwertując piksele na HIMETRIC.
 
-```
+```cpp
 void DPtoHIMETRIC(LPSIZE lpSize) const;
 ```
 
@@ -1371,7 +1371,7 @@ Jeśli tryb mapowania obiektu kontekstu urządzenia jest MM_LOENGLISH, MM_HIENGL
 
 Konwertuje jednostki urządzenia na jednostki logiczne.
 
-```
+```cpp
 void DPtoLP(
     LPPOINT lpPoints,
     int nCount = 1) const;
@@ -1402,7 +1402,7 @@ Funkcja mapuje współrzędne każdego punktu lub wymiar rozmiaru z układu wsp�
 
 Wywołanie tej funkcji elementu członkowskiego, aby narysować trójwymiarowy prostokąt.
 
-```
+```cpp
 void Draw3dRect(
     LPCRECT lpRect,
     COLORREF clrTopLeft,
@@ -1452,7 +1452,7 @@ Prostokąt zostanie narysowany z górnej i lewej strony w kolorze określonym pr
 
 Wywołanie tej funkcji elementu członkowskiego wielokrotnie, aby ponownie rysować prostokąt przeciągania.
 
-```
+```cpp
 void DrawDragRect(
     LPCRECT lpRect,
     SIZE size,
@@ -1548,7 +1548,7 @@ Gdy aplikacja `DrawEscape`wywołuje , dane zidentyfikowane przez *nInputSize* i 
 
 Rysuje prostokąt w stylu używanym do wskazania, że prostokąt ma fokus.
 
-```
+```cpp
 void DrawFocusRect(LPCRECT lpRect);
 ```
 
@@ -2345,7 +2345,7 @@ Po wypełnieniu jego wnętrza ścieżka jest odrzucana z kontekstu urządzenia.
 
 Wywołanie tej funkcji elementu członkowskiego, aby wypełnić dany prostokąt za pomocą określonego pędzla.
 
-```
+```cpp
 void FillRect(
     LPCRECT lpRect,
     CBrush* pBrush);
@@ -2403,7 +2403,7 @@ Pędzel musi być utworzony `CBrush` przy `CreateHatchBrush`użyciu `CreatePatte
 
 Wywołanie tej funkcji elementu członkowskiego, aby wypełnić dany prostokąt określonym jednolitym kolorem.
 
-```
+```cpp
 void FillSolidRect(
     LPCRECT lpRect,
     COLORREF clr);
@@ -2492,7 +2492,7 @@ Funkcja `ExtFloodFill` zapewnia podobną możliwość, ale większą elastyczno�
 
 Rysuje obramowanie wokół prostokąta określonego przez *lpRect*.
 
-```
+```cpp
 void FrameRect(
     LPCRECT lpRect,
     CBrush* pBrush);
@@ -4123,7 +4123,7 @@ Gdy struktura jest w trybie podglądu, wywołanie `GrayString` funkcji `TextOut`
 
 Tej funkcji należy używać podczas konwertowania rozmiarów HIMETRIC z OLE na piksele.
 
-```
+```cpp
 void HIMETRICtoDP(LPSIZE lpSize) const;
 ```
 
@@ -4140,7 +4140,7 @@ Jeśli tryb mapowania obiektu kontekstu urządzenia jest MM_LOENGLISH, MM_HIENGL
 
 Wywołanie tej funkcji, aby przekonwertować jednostki HIMETRIC na jednostki logiczne.
 
-```
+```cpp
 void HIMETRICtoLP(LPSIZE lpSize) const;
 ```
 
@@ -4206,7 +4206,7 @@ GDI przycina wszystkie kolejne dane wyjściowe, aby zmieścić się w nowej gran
 
 Odwraca zawartość danego prostokąta.
 
-```
+```cpp
 void InvertRect(LPCRECT lpRect);
 ```
 
@@ -4297,7 +4297,7 @@ Linia jest rysowana wybranym piórem. Bieżąca pozycja jest *ustawiona*na x , *
 
 Konwertuje jednostki logiczne na jednostki urządzenia.
 
-```
+```cpp
 void LPtoDP(
     LPPOINT lpPoints,
     int nCount = 1) const;
@@ -4330,7 +4330,7 @@ Współrzędne punktów x- i y są 2-bajtowymi liczbami całkowitymi w zakresie 
 
 Wywołanie tej funkcji w celu konwersji jednostek logicznych na jednostki HIMETRIC.
 
-```
+```cpp
 void LPtoHIMETRIC(LPSIZE lpSize) const;
 ```
 
@@ -7029,7 +7029,7 @@ Aby uzyskać więcej informacji, zobacz [TransparentBlt](/windows/win32/api/wing
 
 Aktualizuje obszar klienta kontekstu urządzenia, dopasowując bieżące kolory w obszarze klienta do palety systemowej w zależności od piksela.
 
-```
+```cpp
 void UpdateColors();
 ```
 

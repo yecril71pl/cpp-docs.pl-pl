@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: f322f40beabeb9a837dda01c95e9f950a07585d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c676355ebf44d6cc02bfa66ac870757627ae5a58
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369425"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754807"
 ---
 # <a name="ccontextmenumanager-class"></a>Klasa CContextMenuManager
 
@@ -187,7 +187,7 @@ Jeśli ta metoda znajdzie menu zgodne z `GetMenuByName` *lpszName,* przechowuje 
 
 Zwraca listę nazw menu dodanych do [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
 
-```
+```cpp
 void GetMenuNames(CStringList& listOfNames) const;
 ```
 
@@ -262,7 +262,7 @@ Użyj metody [CContextMenuManager::LoadState,](#loadstate) aby załadować menu 
 
 Określa, czy [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) zamyka aktywne menu podręczne, gdy wyświetla nowe menu podręczne.
 
-```
+```cpp
 void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```
 

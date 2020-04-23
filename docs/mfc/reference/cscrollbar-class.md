@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 761d7e9db650c6d95e916c85bd7456d9b1c647c5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2079e12eccde42fe8c456a7852a029f44ae3cd77
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318532"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754405"
 ---
 # <a name="cscrollbar-class"></a>Klasa CScrollBar
 
@@ -287,7 +287,7 @@ Bieżąca pozycja jest wartością względną, która zależy od bieżącego zak
 
 Kopiuje bieżące minimalne i maksymalne pozycje paska przewijania dla danego paska przewijania do lokalizacji określonych przez *lpMinPos* i *lpMaxPos*.
 
-```
+```cpp
 void GetScrollRange(
     LPINT lpMinPos,
     LPINT lpMaxPos) const;
@@ -375,7 +375,7 @@ Ustaw *bRedraw* do FALSE, gdy pasek przewijania zostanie ponownie narysowany prz
 
 Ustawia minimalne i maksymalne wartości położenia dla danego paska przewijania.
 
-```
+```cpp
 void SetScrollRange(
     int nMinPos,
     int nMaxPos,
@@ -411,7 +411,7 @@ Różnica między wartościami określonymi przez *nMinPos* i *nMaxPos* nie moż
 
 Pokazuje lub ukrywa pasek przewijania.
 
-```
+```cpp
 void ShowScrollBar(BOOL bShow = TRUE);
 ```
 

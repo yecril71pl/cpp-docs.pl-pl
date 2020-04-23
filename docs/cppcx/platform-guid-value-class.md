@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: f63b2bb4fd5f809861622a4f6b255ee3725564b6
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
-ms.translationtype: MT
+ms.openlocfilehash: 3849074f93424912b1dc5b93883482a6cb55892a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816592"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750657"
 ---
 # <a name="platformguid-value-class"></a>Klasa wartości Platform::Guid
 
-Reprezentuje typ [identyfikatora GUID](/previous-versions/cc317743(v%3dmsdn.10)) w systemie środowisko wykonawcze systemu Windows typu.
+Reprezentuje typ [GUID](/windows/win32/api/guiddef/ns-guiddef-guid w systemie typu Środowiska wykonawczego systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,35 +24,35 @@ Reprezentuje typ [identyfikatora GUID](/previous-versions/cc317743(v%3dmsdn.10))
 public value struct Guid
 ```
 
-### <a name="members"></a>Members
+### <a name="members"></a>Elementy członkowskie
 
-`Platform::Guid` ma metody `Equals()`, `GetHashCode()`i `ToString()` pochodne od [klasy platform:: Object](../cppcx/platform-object-class.md)i metody `GetTypeCode()` pochodnej od [klasy platform:: Type](../cppcx/platform-type-class.md). `Platform::Guid` ma również następujące elementy członkowskie.
+`Platform::Guid`ma `Equals()`, `GetHashCode()`i `ToString()` metody pochodzące z [Platform::Object](../cppcx/platform-object-class.md) `GetTypeCode()` Class , a metoda pochodząca z [Platform::Type Class](../cppcx/platform-type-class.md). `Platform::Guid`ma również następujących członków.
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|[Ident](#ctor)|Inicjuje nowe wystąpienie `Platform::Guid`.|
-|[operator==](#operator-equality)|Equals — operator.|
-|[operator!=](#operator-inequality)|Operator not Equals.|
-|[&lt; operatora](#operator-less)|Operator mniejszości.|
-|[operator()](#operator-call)|Konwertuje `Platform::Guid` na `GUID`.|
+|[Identyfikator guid](#ctor)|Inicjuje nowe wystąpienie `Platform::Guid`pliku .|
+|[operator==](#operator-equality)|Równa się operatorowi.|
+|[operator!=](#operator-inequality)|Nie jest równa operatorowi.|
+|[Operator&lt;](#operator-less)|Mniej niż operator.|
+|[Operator()](#operator-call)|Konwertuje `Platform::Guid` a `GUID`do .|
 
 ### <a name="remarks"></a>Uwagi
 
-Aby wygenerować nowy `Platform::Guid`, użyj metody statycznej [Windows:: Foundation:: GuidHelper:: CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid) .
+Aby wygenerować nowy `Platform::Guid`, użyj [windows::Foundation::GuidHelper::CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid) metody statycznej.
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalny obsługiwany klient:** System Windows 8
+**Minimalny obsługiwany klient:** Windows 8
 
 **Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Przestrzeń nazw:** Platformach
+**Obszar nazw:** Platformy
 
-**Metadane:** obiekt platform. winmd
+**Metadane:** platform.winmd
 
-## <a name="ctor"></a>GUID:: GUID — konstruktory
+## <a name="guidguid-constructors"></a><a name="ctor"></a>Guid::Konstruktory Guid
 
-Inicjuje nowe wystąpienie `Platform::Guid`.
+Inicjuje nowe wystąpienie `Platform::Guid`pliku .
 
 ### <a name="syntax"></a>Składnia
 
@@ -81,48 +81,48 @@ Guid(
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
+*A*<br/>
 Pierwsze 4 bajty `GUID`.
 
-*b*<br/>
+*B*<br/>
 Następne 2 bajty `GUID`.
 
-*c*<br/>
+*C*<br/>
 Następne 2 bajty `GUID`.
 
-*d*<br/>
+*D*<br/>
 Następny bajt `GUID`.
 
-*e*<br/>
+*E*<br/>
 Następny bajt `GUID`.
 
-*f*<br/>
+*F*<br/>
 Następny bajt `GUID`.
 
-*g*<br/>
+*G*<br/>
 Następny bajt `GUID`.
 
-*h*<br/>
+*H*<br/>
 Następny bajt `GUID`.
 
-*i*<br/>
+*I*<br/>
 Następny bajt `GUID`.
 
-*j*<br/>
+*J*<br/>
 Następny bajt `GUID`.
 
-*k*<br/>
+*K*<br/>
 Następny bajt `GUID`.
 
-*m*<br/>
-`GUID` w formie [struktury identyfikatora GUID](/previous-versions/cc317743(v%3dmsdn.10)).
+*M*<br/>
+A `GUID` w formie [struktury GUID](/windows/win32/api/guiddef/ns-guiddef-guid).
 
-*n*<br/>
+*N*<br/>
 Pozostałe 8 bajtów `GUID`.
 
-## <a name="operator-equality"></a>GUID:: operator = = — operator
+## <a name="guidoperator-operator"></a><a name="operator-equality"></a>Guid::operator== Operator
 
-Porównuje dwa wystąpienia `Platform::Guid` dla równości.
+Porównuje dwa `Platform::Guid` wystąpienia dla równości.
 
 ### <a name="syntax"></a>Składnia
 
@@ -135,20 +135,20 @@ static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid
 *guid1*<br/>
 Pierwszy `Platform::Guid` do porównania.
 
-*guid2*<br/>
-Druga `Platform::Guid` do porównania.
+*guid2 ( guid2 )*<br/>
+Drugi `Platform::Guid` do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość true, jeśli dwa wystąpienia `Platform::Guid` są równe.
+True, jeśli `Platform::Guid` dwa wystąpienia są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Preferuj użycie operatora `==` zamiast metody statycznej [Windows:: Foundation:: GuidHelper:: Equals](/uwp/api/windows.foundation.guidhelper.equals) .
+Preferuj `==` użycie operatora zamiast [metody windows::Foundation::GuidHelper::Równa się metodzie](/uwp/api/windows.foundation.guidhelper.equals) statycznej.
 
-## <a name="operator-inequality"></a>GUID:: operator! = — operator
+## <a name="guidoperator-operator"></a><a name="operator-inequality"></a>Guid::operator!= Operator
 
-Porównuje dwa wystąpienia `Platform::Guid` pod kątem nierówności.
+Porównuje dwa `Platform::Guid` wystąpienia nierówności.
 
 ### <a name="syntax"></a>Składnia
 
@@ -161,16 +161,16 @@ static bool Platform::Guid::operator!=(Platform::Guid guid1, Platform::Guid guid
 *guid1*<br/>
 Pierwszy `Platform::Guid` do porównania.
 
-*guid2*<br/>
-Druga `Platform::Guid` do porównania.
+*guid2 ( guid2 )*<br/>
+Drugi `Platform::Guid` do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ma wartość true, jeśli dwa wystąpienia `Platform::Guid` nie są równe.
+True, jeśli `Platform::Guid` dwa wystąpienia nie są równe.
 
-## <a name="operator-less"></a>GUID:: operator&lt; — operator
+## <a name="guidoperatorlt-operator"></a><a name="operator-less"></a>Guid::operator&lt; Operator
 
-Porównuje dwa wystąpienia `Platform::Guid` na potrzeby porządkowania.
+Porównuje dwa `Platform::Guid` wystąpienia do zamawiania.
 
 ### <a name="syntax"></a>Składnia
 
@@ -183,18 +183,18 @@ static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2
 *guid1*<br/>
 Pierwszy `Platform::Guid` do porównania.
 
-*guid2*<br/>
-Druga `Platform::Guid` do porównania.
+*guid2 ( guid2 )*<br/>
+Drugi `Platform::Guid` do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość true, jeśli *guid1* jest uporządkowana przed *guid2*. Porządkowanie jest leksykograficznych po przeprowadzeniu traktowania każdego `Platform::Guid` tak, jakby była tablicą 4 32-bitowych wartości bez znaku. Nie jest to kolejność używana przez SQL Server lub .NET Framework, ani nie jest taka sama jak lexicographical porządkowanie według ciągu.
+Prawda, jeśli *guid1* jest uporządkowany przed *guid2*. Kolejność jest leksykograficzna `Platform::Guid` po traktowaniu każdego tak, jakby była tablicą czterech 32-bitowych niepodpisanych wartości. Nie jest to kolejność używana przez program SQL Server lub .NET Framework ani nie jest taka sama jak kolejność leksykograficzna według reprezentacji ciągów.
 
-Ten operator jest dostarczany w taki sposób, aby obiekty `Guid` mogły być łatwiej wykorzystane C++ przez bibliotekę standardową.
+Ten operator jest `Guid` dostarczany, dzięki czemu obiekty mogą być łatwiej używane przez standardową bibliotekę języka C++.
 
-## <a name="operator-call"></a>GUID:: operator () — operator
+## <a name="guidoperator-operator"></a><a name="operator-call"></a>Guid::operator() Operator
 
-Niejawnie konwertuje `Platform::Guid` na [strukturę GUID](/previous-versions/cc317743(v%3dmsdn.10)).
+Niejawnie konwertuje a `Platform::Guid` do struktury [GUID](/windows/win32/api/guiddef/ns-guiddef-guid).
 
 ### <a name="syntax"></a>Składnia
 
@@ -204,8 +204,8 @@ const GUID& Platform::Guid::operator();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-[Struktura identyfikatora GUID](/previous-versions/cc317743(v%3dmsdn.10)).
+[Struktura guid](/windows/win32/api/guiddef/ns-guiddef-guid).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)

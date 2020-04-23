@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 776892d71e2cb0f5d57512754cd7fa12730eb044
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 930322f1803eba7709505018c77ecea3f816dd15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367446"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750632"
 ---
 # <a name="crebarctrl-class"></a>Klasa CReBarCtrl
 
@@ -223,7 +223,7 @@ Aby uzyskać więcej informacji, zobacz [Korzystanie z CReBarCtrl](../../mfc/usi
 
 Implementuje zachowanie [RB_BEGINDRAG](/windows/win32/Controls/rb-begindrag)komunikatu Win32, zgodnie z opisem w windows SDK.
 
-```
+```cpp
 void BeginDrag(
     UINT uBand,
     DWORD dwPos = (DWORD)-1);
@@ -255,7 +255,7 @@ virtual BOOL Create(
 Określa kombinację stylów sterowania prętami zbrojeniowymi zastosowanych do formantu. Aby uzyskać listę obsługiwanych stylów, zobacz [Style sterowania prętami zbrojenia](/windows/win32/Controls/rebar-control-styles) w zestawie Windows SDK.
 
 *Rect*<br/>
-Odwołanie do obiektu [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury, która jest położenie i rozmiar formantu prętów zbrojeniowych.
+Odwołanie do obiektu [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [RECT](/windows/win32/api/windef/ns-windef-rect) struktury, która jest położenie i rozmiar formantu prętów zbrojeniowych.
 
 *pParentWnd*<br/>
 Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiektu, który jest nadrzędnym oknem zbrojenia. Nie może być null.
@@ -303,7 +303,7 @@ Określa rozszerzony styl tworzonego formantu. Aby uzyskać listę rozszerzonych
 Określa kombinację stylów sterowania prętami zbrojeniowymi zastosowanych do formantu. Aby uzyskać listę obsługiwanych stylów, zobacz [Style sterowania prętami zbrojenia](/windows/win32/Controls/rebar-control-styles) w zestawie Windows SDK.
 
 *Rect*<br/>
-Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
+Odwołanie do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest nadrzędnym formantu.
@@ -356,7 +356,7 @@ Nonzero, jeśli zespół został usunięty pomyślnie; w przeciwnym razie zero.
 
 Implementuje zachowanie [RB_DRAGMOVE](/windows/win32/Controls/rb-dragmove)komunikatu Win32, zgodnie z opisem w windows SDK.
 
-```
+```cpp
 void DragMove(DWORD dwPos = (DWORD)-1);
 ```
 
@@ -369,7 +369,7 @@ Wartość DWORD zawierająca nowe współrzędne myszy. Współrzędna pozioma z
 
 Implementuje zachowanie [RB_ENDDRAG](/windows/win32/Controls/rb-enddrag)komunikatu Win32, zgodnie z opisem w windows SDK.
 
-```
+```cpp
 void EndDrag();
 ```
 
@@ -377,7 +377,7 @@ void EndDrag();
 
 Implementuje zachowanie [RB_GETBANDBORDERS](/windows/win32/Controls/rb-getbandborders)komunikatu Win32, zgodnie z opisem w windows SDK.
 
-```
+```cpp
 void GetBandBorders(
     UINT uBand,
     LPRECT prc) const;
@@ -389,7 +389,7 @@ void GetBandBorders(
 Indeks od zera pasma, dla którego zostaną pobrane obramowania.
 
 *Chrl*<br/>
-Wskaźnik do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) która otrzyma obramowania pasma. Jeśli formant prętów zbrojeniowych ma styl RBS_BANDBORDERS, każdy element członkowski tej struktury otrzyma liczbę pikseli po odpowiedniej stronie pasma, które stanowią obramowanie. Jeśli formant prętów zbrojeniowych nie ma stylu RBS_BANDBORDERS, tylko lewy element członkowski tej struktury otrzymuje prawidłowe informacje. Aby uzyskać opis stylów kontroli prętów zbrojeniowych, zobacz [Style sterowania prętami zbrojenia](/windows/win32/Controls/rebar-control-styles) w zestaw Windows SDK.
+Wskaźnik do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) która otrzyma obramowania pasma. Jeśli formant prętów zbrojeniowych ma styl RBS_BANDBORDERS, każdy element członkowski tej struktury otrzyma liczbę pikseli po odpowiedniej stronie pasma, które stanowią obramowanie. Jeśli formant prętów zbrojeniowych nie ma stylu RBS_BANDBORDERS, tylko lewy element członkowski tej struktury otrzymuje prawidłowe informacje. Aby uzyskać opis stylów kontroli prętów zbrojeniowych, zobacz [Style sterowania prętami zbrojenia](/windows/win32/Controls/rebar-control-styles) w zestaw Windows SDK.
 
 ## <a name="crebarctrlgetbandcount"></a><a name="getbandcount"></a>CReBarCtrl::GetBandCount
 
@@ -429,7 +429,7 @@ Nonzero jeśli się powiedzie; w przeciwnym razie zero.
 
 Pobiera marginesy pasma.
 
-```
+```cpp
 void GetBandMargins(PMARGINS pMargins);
 ```
 
@@ -584,7 +584,7 @@ BOOL GetRect(
 Indeks od zera pasma w formancie prętów zbrojeniowych.
 
 *Chrl*<br/>
-Wskaźnik do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) która otrzyma granice pasma prętów zbrojeniowych.
+Wskaźnik do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) która otrzyma granice pasma prętów zbrojeniowych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -723,7 +723,7 @@ Nonzero jeśli się powiedzie; w przeciwnym razie zero.
 
 Rozmiar pasma jest do największego rozmiaru.
 
-```
+```cpp
 void MaximizeBand(UINT uBand);
 ```
 
@@ -744,7 +744,7 @@ Implementuje zachowanie komunikatu Win32 [RB_MAXIMIZEBAND](/windows/win32/Contro
 
 Rozmiar pasma jest do najmniejszego rozmiaru.
 
-```
+```cpp
 void MinimizeBand(UINT uBand);
 ```
 
@@ -787,7 +787,7 @@ Nonzero jeśli się powiedzie; w przeciwnym razie zero.
 
 Implementuje zachowanie [RB_PUSHCHEVRON](/windows/win32/Controls/rb-pushchevron)komunikatu Win32, zgodnie z opisem w windows SDK.
 
-```
+```cpp
 void PushChevron(
     UINT uBand,
     LPARAM lAppValue);
@@ -805,7 +805,7 @@ Aplikacja zdefiniowała wartość 32-bitową. Zobacz *lAppValue* w [RB_PUSHCHEVR
 
 Rozmiar paska jest dopasowywać do idealnego rozmiaru.
 
-```
+```cpp
 void RestoreBand(UINT uBand);
 ```
 
@@ -931,7 +931,7 @@ Zobacz ten temat, aby uzyskać więcej informacji o tym, kiedy ustawić kolor t�
 
 Ustawia schemat kolorów przycisków na formancie prętów zbrojeniowych.
 
-```
+```cpp
 void SetColorScheme(const COLORSCHEME* lpcs);
 ```
 
@@ -1056,7 +1056,7 @@ Jest on dostarczany do obsługi elastyczności kolorów tekstu w kontroli pręt�
 
 Kojarzy kontrolkę narzędzia z kontrolką prętów zbrojeniowych.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pToolTip);
 ```
 

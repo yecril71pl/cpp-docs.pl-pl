@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 8e931b03dc09926d44fa5cb4125dd2ffa41c5813
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 54138955b0aa61a5e307c64825f3c74fa6f592b1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366195"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753937"
 ---
 # <a name="colecontrol-class"></a>Klasa COleControl
 
@@ -781,7 +781,7 @@ Na przykład kontener może ustawić to na FAŁSZ w trybie projektowania.
 
 Sygnalizuje, że wartość właściwości powiązanej została zmieniona.
 
-```
+```cpp
 void BoundPropertyChanged(DISPID dispid);
 ```
 
@@ -878,7 +878,7 @@ Ta funkcja zwykle nie jest wywoływana bezpośrednio. Zamiast tego formant OLE j
 
 Wywołanie tej funkcji, gdy zestaw mnemonics obsługiwane przez formant uległ zmianie.
 
-```
+```cpp
 void ControlInfoChanged();
 ```
 
@@ -926,7 +926,7 @@ Zastąd w tej funkcji należy dostosować sposób wyświetlania błędów.
 
 Symuluje akcję kliknięcia myszą na formancie.
 
-```
+```cpp
 void DoClick();
 ```
 
@@ -959,7 +959,7 @@ Jeśli Kreator sterowania został użyty do utworzenia projektu sterowania OLE, 
 
 Ponownie rysuje formant OLE, który został podklasyfikowany z formantu systemu Windows.
 
-```
+```cpp
 void DoSuperclassPaint(
     CDC* pDC,
     const CRect& rcBounds);
@@ -983,7 +983,7 @@ Aby uzyskać więcej informacji na temat tej funkcji i podklasyfikowania formant
 
 Wywoływana przez strukturę, gdy wygląd formantu musi zostać zaktualizowany.
 
-```
+```cpp
 void DrawContent(
     CDC* pDC,
     CRect& rc);
@@ -1005,7 +1005,7 @@ Ta funkcja wywołuje bezpośrednio funkcję `OnDraw` nadpisywalną.
 
 Wywoływana przez strukturę, gdy używany jest kontekst urządzenia metaplikowego.
 
-```
+```cpp
 void DrawMetafile(
     CDC* pDC,
     CRect& rc);
@@ -1023,7 +1023,7 @@ Prostokątny obszar, który ma zostać wciągnięty.
 
 Włącza prostą ramkę charakterystyczną dla sterowania OLE.
 
-```
+```cpp
 void EnableSimpleFrame();
 ```
 
@@ -1056,7 +1056,7 @@ Ta funkcja jest zwykle wywoływana `COleControl::DoPropExchange`przez domyślną
 
 Serializuje lub inicjuje stan właściwości zapasów formantu.
 
-```
+```cpp
 void ExchangeStockProps(CPropExchange* pPX);
 ```
 
@@ -1105,7 +1105,7 @@ Aby uzyskać więcej informacji na temat trwałości i przechowywania wersji, zo
 
 Wywoływana przez platformę, gdy mysz jest kliknięta przez aktywną formant.
 
-```
+```cpp
 void FireClick();
 ```
 
@@ -1119,7 +1119,7 @@ Aby automatyczne wypalanie click zdarzenie występuje, na mapie zdarzenia forman
 
 Wywoływana przez platformę, gdy mysz jest dwukrotnie kliknięty przez aktywny formant.
 
-```
+```cpp
 void FireDblClick();
 ```
 
@@ -1133,7 +1133,7 @@ Aby automatyczne wypalanie zdarzenia DblClick występuje, mapa zdarzeń formantu
 
 Uruchamia zdarzenie błąd akcji.
 
-```
+```cpp
 void FireError(
     SCODE scode,
     LPCTSTR lpszDescription,
@@ -1165,7 +1165,7 @@ Aby rozwiązać ten problem, należy ręcznie zmienić parametr SCODE w formanci
 
 Uruchamia zdarzenie zdefiniowane przez użytkownika z formantu z dowolną liczbą opcjonalnych argumentów.
 
-```
+```cpp
 void AFX_CDECL FireEvent(
     DISPID dispid,
     BYTE* pbParams,
@@ -1210,7 +1210,7 @@ Argument *pbParams* jest oddzieloną przestrzenią listą **VTS_**. Jedna lub wi
 
 Wywoływana przez platformę, gdy klawisz jest naciśnięty, gdy formant jest aktywny.
 
-```
+```cpp
 void FireKeyDown(
     USHORT* pnChar,
     short nShiftState);
@@ -1240,7 +1240,7 @@ Aby automatyczne wypalanie zdarzenia KeyDown występuje, mapa zdarzenia formantu
 
 Wywoływana przez platformę, gdy klucz jest naciśnięty i zwolniony, gdy formant niestandardowy jest aktywny w kontenerze.
 
-```
+```cpp
 void FireKeyPress(USHORT* pnChar);
 ```
 
@@ -1261,7 +1261,7 @@ Aby automatyczne wypalanie keypress zdarzenie występuje, mapa zdarzeń formantu
 
 Wywoływana przez platformę, gdy klucz jest zwalniany, gdy formant niestandardowy jest aktywny w kontenerze.
 
-```
+```cpp
 void FireKeyUp(
     USHORT* pnChar,
     short nShiftState);
@@ -1291,7 +1291,7 @@ Aby automatyczne wypalanie zdarzenia KeyUp występuje, mapa zdarzenia formantu m
 
 Wywoływana przez platformę, gdy przycisk myszy jest naciśnięty przez aktywny formant niestandardowy.
 
-```
+```cpp
 void FireMouseDown(
     short nButton,
     short nShiftState,
@@ -1335,7 +1335,7 @@ Aby automatyczne wypalanie mousedown zdarzenie występuje, mapa zdarzenia forman
 
 Wywoływana przez strukturę, gdy kursor jest przenoszony przez aktywną formant niestandardowy.
 
-```
+```cpp
 void FireMouseMove(
     short nButton,
     short nShiftState,
@@ -1379,7 +1379,7 @@ Aby automatyczne wypalanie mousemove zdarzenie występuje, mapa zdarzenia forman
 
 Wywoływane przez platformę, gdy przycisk myszy jest zwolniony za pomocą aktywnego formantu niestandardowego.
 
-```
+```cpp
 void FireMouseUp(
     short nButton,
     short nShiftState,
@@ -1423,7 +1423,7 @@ Aby automatyczne wypalanie mouseup zdarzenie występuje, mapa zdarzenia formantu
 
 Uruchamia zdarzenie o bieżącej wartości gotowego stanu kontroli.
 
-```
+```cpp
 void FireReadyStateChange();
 ```
 
@@ -1696,7 +1696,7 @@ Aby uzyskać `GetControlFlags` więcej informacji na temat i innych optymalizacj
 
 Pobiera rozmiar okna formantu OLE.
 
-```
+```cpp
 void GetControlSize(
     int* pcx,
     int* pcy);
@@ -1814,7 +1814,7 @@ Należy zauważyć, że obiekt wywołujący musi zwolnić obiekt po zakończeniu
 
 Mierzy metryki tekstu dla `CFontHolder` dowolnego obiektu należącego do formantu.
 
-```
+```cpp
 void GetFontTextMetrics(
     LPTEXTMETRIC lptm,
     CFontHolder& fontHolder);
@@ -1884,7 +1884,7 @@ Może to służyć do uzyskania wiadomości do wyświetlenia na pasku stanu, gdy
 
 Uniemożliwia dostęp do wartości właściwości formantu przez użytkownika.
 
-```
+```cpp
 void GetNotSupported();
 ```
 
@@ -1941,7 +1941,7 @@ Prostokąt jest prawidłowy tylko wtedy, gdy formant jest aktywny w miejscu.
 
 Mierzy metryki tekstowe dla właściwości Font magazynu formantu, którą można wybrać za pomocą funkcji [SelectStockFont.](#selectstockfont)
 
-```
+```cpp
 void GetStockTextMetrics(LPTEXTMETRIC lptm);
 ```
 
@@ -1997,7 +1997,7 @@ Normalnie wymagałoby to, aby okno formantu zostało zarejestrowane jako miejsce
 
 Informuje klasę podstawową identyfikatorów IID, których będzie używać formant.
 
-```
+```cpp
 void InitializeIIDs(
     const IID* piidPrimary,
     const IID* piidEvents);
@@ -2043,7 +2043,7 @@ Odwołanie do ciągu tekstowego formantu.
 
 Ustawia stan gotowości formantu.
 
-```
+```cpp
 void InternalSetReadyState(long lNewReadyState);
 ```
 
@@ -2068,7 +2068,7 @@ Najprostsze formanty nigdy nie trzeba rozróżniać między LOADED i INTERACTIVE
 
 Wymusza ponowne rysowanie przez formant.
 
-```
+```cpp
 void InvalidateControl(
     LPCRECT lpRect = NULL,
     BOOL bErase = TRUE);
@@ -2090,7 +2090,7 @@ Jeśli *lpRect* ma wartość NULL, cały formant zostanie ponownie narysowany. J
 
 Unieważnia obszar klienta okna kontenera w danym regionie.
 
-```
+```cpp
 void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
 ```
 
@@ -2202,7 +2202,7 @@ Należy zastąpić tę funkcję i zwrócić wartość PRAWDA, jeśli formant OLE
 
 Resetuje wszystkie poprzednie dane załadowane asynchronicznie i inicjuje nowe ładowanie właściwości asynchronicznie formantu.
 
-```
+```cpp
 void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 ```
 
@@ -2811,7 +2811,7 @@ DWORD opisujący formę lub aspekt obiektu ma być wyświetlany. Prawidłowe war
 - DVASPECT_TRANSPARENT Prostokąt obejmujący wszystkie przezroczyste lub nieregularne części.
 
 *pRect*<br/>
-Wskazuje strukturę [RECTL](/previous-versions/dd162907\(v=vs.85\)) określającą prostokąt, w którym obiekt powinien zostać narysowany. Ten parametr steruje pozycjonowaniem i rozciąganiem obiektu.
+Wskazuje strukturę [RECTL](/windows/win32/api/windef/ns-windef-rectl) określającą prostokąt, w którym obiekt powinien zostać narysowany. Ten parametr steruje pozycjonowaniem i rozciąganiem obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3513,7 +3513,7 @@ Na wejściu *pPoint* jest względem początku macierzystego (lewy górny róg ko
 
 Powiadamia kontener, że modalne okno dialogowe zostało zamknięte.
 
-```
+```cpp
 void PostModalDialog(HWND hWndParent = NULL);
 ```
 
@@ -3530,7 +3530,7 @@ Wywołanie tej funkcji po wyświetleniu dowolnego modalnego okna dialogowego. Na
 
 Powiadamia kontener, że modalne okno dialogowe ma być wyświetlane.
 
-```
+```cpp
 void PreModalDialog(HWND hWndParent = NULL);
 ```
 
@@ -3547,7 +3547,7 @@ Wywołaj tę funkcję przed wyświetleniem dowolnego modalnego okna dialogowego.
 
 Niszczy i ponownie tworzy okno formantu.
 
-```
+```cpp
 void RecreateControlWindow();
 ```
 
@@ -3559,7 +3559,7 @@ Może to być konieczne, jeśli trzeba zmienić bity stylu okna.
 
 Wymusza odświeżanie formantu OLE.
 
-```
+```cpp
 void Refresh();
 ```
 
@@ -3630,7 +3630,7 @@ Wywołanie tej funkcji, aby zresetować element nadrzędny okna sterowania.
 
 Inicjuje stan `COleControl` właściwości magazynowych do ich wartości domyślnych.
 
-```
+```cpp
 void ResetStockProps();
 ```
 
@@ -3648,7 +3648,7 @@ Można poprawić wydajność inicjowania binarnego `ResetVersion` formantu `COle
 
 Inicjuje numer wersji do określonej wartości.
 
-```
+```cpp
 void ResetVersion(DWORD dwVersionDefault);
 ```
 
@@ -3665,7 +3665,7 @@ Można poprawić wydajność inicjowania binarnego `ResetStockProps` formantu `C
 
 Umożliwia obiektowi OLE bez okien przewijanie obszaru w jego aktywnym obrazie w miejscu na ekranie.
 
-```
+```cpp
 void ScrollWindow(
     int xAmount,
     int yAmount,
@@ -3730,7 +3730,7 @@ Wskaźnik do poprzednio `CFont` zaznaczonego obiektu. Należy użyć [CDC::Selec
 
 Serializuje lub inicjuje stan przestrzeni wyświetlania przydzielonej formancie.
 
-```
+```cpp
 void SerializeExtent(CArchive& ar);
 ```
 
@@ -3751,7 +3751,7 @@ Można poprawić wydajność trwałości binarnej `SerializeExtent`formantu `Ser
 
 Serializuje lub inicjuje stan `COleControl` właściwości zapasów: Wygląd, Kolor wsteczny, BorderStyle, Podpis, Włączone, Czcionka, ForeColor i Tekst.
 
-```
+```cpp
 void SerializeStockProps(CArchive& ar);
 ```
 
@@ -3800,7 +3800,7 @@ Można poprawić wydajność trwałości binarnej `SerializeVersion`formantu `Se
 
 Ustawia wartość właściwości wygląd czas formantu.
 
-```
+```cpp
 void SetAppearance (short sAppearance);
 ```
 
@@ -3817,7 +3817,7 @@ Aby uzyskać więcej informacji o właściwościach magazynowych, zobacz [Forman
 
 Ustawia wartość właściwości backcolor zapasów formantu.
 
-```
+```cpp
 void SetBackColor(OLE_COLOR dwBackColor);
 ```
 
@@ -3834,7 +3834,7 @@ Aby uzyskać więcej informacji na temat korzystania z tej właściwości i inny
 
 Ustawia wartość właściwości BorderStyle zapasów formantu.
 
-```
+```cpp
 void SetBorderStyle(short sBorderStyle);
 ```
 
@@ -3893,7 +3893,7 @@ Należy zauważyć, że wszystkie współrzędne okien kontrolnych są względem
 
 Ustawia wartość właściwości czas Włączone formantu.
 
-```
+```cpp
 void SetEnabled(BOOL bEnabled);
 ```
 
@@ -3928,7 +3928,7 @@ Jeśli formant nie jest bez okien, ta funkcja powoduje, że sam `CWnd::SetFocus`
 
 Ustawia właściwość czcionki giełdowej formantu.
 
-```
+```cpp
 void SetFont(LPFONTDISP pFontDisp);
 ```
 
@@ -3941,7 +3941,7 @@ Wskaźnik do interfejsu wysyłania czcionki.
 
 Ustawia wartość właściwości forecolor zapasów forecolor formantu.
 
-```
+```cpp
 void SetForeColor(OLE_COLOR dwForeColor);
 ```
 
@@ -3970,7 +3970,7 @@ Domyślna implementacja określa dwa formaty: CF_METAFILEPICT i zestaw właściw
 
 Ustawia rozmiar formantu OLE, gdy po raz pierwszy wyświetlany w kontenerze.
 
-```
+```cpp
 void SetInitialSize(
     int cx,
     int cy);
@@ -3992,7 +3992,7 @@ Wywołanie tej funkcji w konstruktorze, aby ustawić początkowy rozmiar formant
 
 Zmienia zmodyfikowany stan formantu.
 
-```
+```cpp
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
@@ -4009,7 +4009,7 @@ Wywołanie tej funkcji za każdym razem, gdy wystąpi zmiana, która wpłynie na
 
 Wskazuje, że żądanie edycji nie powiodło się.
 
-```
+```cpp
 void SetNotPermitted();
 ```
 
@@ -4021,7 +4021,7 @@ Wywołanie tej `BoundPropertyRequestEdit` funkcji, gdy nie powiedzie się. Ta fu
 
 Zapobiega modyfikacji wartości właściwości formantu przez użytkownika.
 
-```
+```cpp
 void SetNotSupported();
 ```
 
@@ -4054,7 +4054,7 @@ Jeśli formant jest otwarty, jest zmieniany; w przeciwnym razie `OnPosRectChange
 
 Ustawia wartość właściwości Podpis lub Tekst w formancie.
 
-```
+```cpp
 void SetText(LPCTSTR pszText);
 ```
 
@@ -4071,7 +4071,7 @@ Należy zauważyć, że właściwości podpisu i tekstu są mapowane na tę sam�
 
 Sygnalizuje wystąpienie błędu w formancie.
 
-```
+```cpp
 void ThrowError(
     SCODE sc,
     UINT nDescriptionID,
@@ -4105,7 +4105,7 @@ Ta funkcja powinna być wywoływana tylko z wewnątrz Get lub Set funkcji dla w�
 
 Przekształca wartości współrzędnych między jednostkami HIMETRIC a jednostkami macierzystymi kontenera.
 
-```
+```cpp
 void TransformCoords(
     POINTL* lpptlHimetric,
     POINTF* lpptfContainer,

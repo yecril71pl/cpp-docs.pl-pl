@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b535cc23901ba39e4beeb66d8ca6bb18d4abe2b8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8e75ec5c00c614a225a059a2b3cf97a7a307c61c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376129"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753776"
 ---
 # <a name="coleserverdoc-class"></a>Klasa COleServerDoc
 
@@ -192,7 +192,7 @@ Aby uzyskać więcej informacji na temat serwerów, zobacz artykuł [Serwery: Im
 
 Aktywuje skojarzony dokument DocObject.
 
-```
+```cpp
 void ActivateDocObject();
 ```
 
@@ -359,7 +359,7 @@ Wywołuje [COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem), wirtualną fun
 
 Wywołanie `GetItemClipRect` funkcji elementu członkowskiego, aby uzyskać współrzędne clipping-prostokąt elementu, który jest edytowany w miejscu.
 
-```
+```cpp
 void GetItemClipRect(LPRECT lpClipRect) const;
 ```
 
@@ -378,7 +378,7 @@ Rysunek nie powinien odbywać się poza prostokątem przycinającym. Zwykle rysu
 
 Wywołanie `GetItemPosition` funkcji elementu członkowskiego, aby uzyskać współrzędne elementu edytowane w miejscu.
 
-```
+```cpp
 void GetItemPosition(LPRECT lpPosRect) const;
 ```
 
@@ -469,7 +469,7 @@ Niezerowe, `COleServerDoc` jeśli obiekt jest aktywny na miejscu; w przeciwnym r
 
 Wywołanie tej funkcji, aby powiadomić wszystkie połączone elementy połączone z dokumentem, że dokument został zmieniony.
 
-```
+```cpp
 void NotifyChanged();
 ```
 
@@ -484,7 +484,7 @@ Zazwyczaj ta funkcja jest wywoływana po zmianie przez użytkownika niektórych 
 
 Wywołanie tej funkcji, aby powiadomić kontenery, że dokument został zamknięty.
 
-```
+```cpp
 void NotifyClosed();
 ```
 
@@ -496,7 +496,7 @@ Gdy użytkownik wybierze polecenie Zamknij z `NotifyClosed` menu Plik, jest wywo
 
 Wywołanie tej funkcji po zmianie nazwy dokumentu serwera przez użytkownika.
 
-```
+```cpp
 void NotifyRename(LPCTSTR lpszNewName);
 ```
 
@@ -513,7 +513,7 @@ Gdy użytkownik wybierze polecenie Zapisz jako z `NotifyRename` menu `COleServer
 
 Wywołanie tej funkcji po zapisaniu dokumentu serwera przez użytkownika.
 
-```
+```cpp
 void NotifySaved();
 ```
 
@@ -855,7 +855,7 @@ Domyślna implementacja wywołuje funkcje członkowskie [COleServerDoc::NotifySa
 
 Wywołanie tej funkcji elementu członkowskiego, aby aplikacja kontenera zmienić pozycję elementu.
 
-```
+```cpp
 void RequestPositionChange(LPCRECT lpPosRect);
 ```
 
@@ -872,7 +872,7 @@ Ta funkcja jest zwykle wywoływana (w połączeniu z) `UpdateAllItems`po zmianie
 
 Wywołanie tej funkcji, aby poinformować aplikację kontenera, aby zapisać obiekt osadzony.
 
-```
+```cpp
 void SaveEmbedding();
 ```
 
@@ -905,7 +905,7 @@ Wartości dodatnie wskazują przewijanie w dół i w prawo; wartości ujemne wsk
 
 Wywołanie tej funkcji, aby powiadomić wszystkie połączone elementy połączone z dokumentem, że dokument został zmieniony.
 
-```
+```cpp
 void UpdateAllItems(
     COleServerItem* pSender,
     LPARAM lHint = 0L,

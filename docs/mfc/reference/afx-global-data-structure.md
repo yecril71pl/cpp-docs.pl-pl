@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 60f7513075e8da7e17f2113c01b954af5a690aaf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0361d535a31526c5f7b79fdd4eab046dad0435cc
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363671"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752868"
 ---
 # <a name="afx_global_data-structure"></a>AFX_GLOBAL_DATA — Struktura
 
@@ -170,7 +170,7 @@ WARTOŚĆ TRUE oznacza, że obsługiwane jest mieszanie alfa; w przeciwnym razie
 
 Zwalnia zasoby, które są przydzielane przez platformę, takie jak pędzle, czcionki i biblioteki DLL.
 
-```
+```cpp
 void CleanUp();
 ```
 
@@ -288,7 +288,7 @@ Motyw definiuje styl wizualny aplikacji. Motyw nie jest używany do rysowania te
 
 Włącza lub wyłącza obsługę aktywnego dostępu firmy Microsoft.
 
-```
+```cpp
 void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```
 
@@ -676,7 +676,7 @@ Konstruktor `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` inicjuje ten element członkowski
 
 Wykrywa bieżący stan animacji menu pulpitu i funkcji autohide na pasku zadań.
 
-```
+```cpp
 void OnSettingChange();
 ```
 
@@ -781,7 +781,7 @@ Ta metoda tworzy poziomą czcionkę regularną, podkreśloną czcionkę i pogrub
 
 Reintializes logiczne czcionki, które są używane przez strukturę.
 
-```
+```cpp
 void UpdateFonts();
 ```
 
@@ -793,7 +793,7 @@ Aby uzyskać więcej informacji na `CFont::CreateFontIndirect`temat czcionek log
 
 Inicjuje kolory, głębię kolorów, pędzle, pióra i obrazy, które są używane przez strukturę.
 
-```
+```cpp
 void UpdateSysColors();
 ```
 
@@ -861,7 +861,7 @@ Wartość całkowita z zakodowanymi flagami określającymi pozycje automatyczne
 
 Zwalnia interfejsy uzyskane `GetITaskbarList` `GetITaskbarList3` za pośrednictwem i metod.
 
-```
+```cpp
 void ReleaseTaskBarRefs();
 ```
 

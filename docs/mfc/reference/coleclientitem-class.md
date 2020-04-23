@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: c880b1fb724b533bb049666460948c6df661a03c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ce321c9709b752602a664142f283884f4d17b50b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376285"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753963"
 ---
 # <a name="coleclientitem-class"></a>Klasa COleClientItem
 
@@ -310,7 +310,7 @@ Aby uzyskać więcej informacji na temat korzystania z interfejsu kontenera, zob
 
 Wywołanie tej funkcji, aby wykonać określony zlecenie zamiast [DoVerb,](#doverb) dzięki czemu można wykonać własne przetwarzanie, gdy wyjątek.
 
-```
+```cpp
 void Activate(
     LONG nVerb,
     CView* pView,
@@ -380,7 +380,7 @@ Jest to wywoływane automatycznie przez [COleConvertDialog::DoConvert](../../mfc
 
 Wywołanie tej funkcji, aby zainicjować [COleDataObject](../../mfc/reference/coledataobject-class.md) dostępu do danych w elemencie OLE.
 
-```
+```cpp
 void AttachDataObject(COleDataObject& rDataObject) const;
 ```
 
@@ -493,7 +493,7 @@ Aby uzyskać więcej informacji, zobacz [OleGetClipboard](/windows/win32/api/ole
 
 Wywołanie tej funkcji, aby zmienić stan elementu OLE ze stanu uruchomionego do stanu załadowany, czyli ładowane z jego obsługi w pamięci, ale z serwerem nie jest uruchomiony.
 
-```
+```cpp
 void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
 ```
 
@@ -578,7 +578,7 @@ Jest to wywoływane automatycznie przez [COleConvertDialog](../../mfc/reference/
 
 Wywołanie tej funkcji, aby skopiować element OLE do Schowka.
 
-```
+```cpp
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```
 
@@ -936,7 +936,7 @@ Aby uzyskać więcej informacji, zobacz [OleCreateStaticFromData](/windows/win32
 
 Wywołanie tej funkcji, aby dezaktywować element OLE i zwolnić wszelkie skojarzone zasoby.
 
-```
+```cpp
 void Deactivate();
 ```
 
@@ -952,7 +952,7 @@ Aby uzyskać więcej informacji, zobacz [IOleInPlaceObject::InPlaceDeactivate](/
 
 Wywołanie tej funkcji, gdy użytkownik dezaktywuje element, który został aktywowany w miejscu.
 
-```
+```cpp
 void DeactivateUI();
 ```
 
@@ -968,7 +968,7 @@ Aby uzyskać więcej informacji, zobacz [IOleInPlaceObject::InPlaceDeactivate](/
 
 Wywołanie tej funkcji, aby usunąć element OLE z dokumentu kontenera.
 
-```
+```cpp
 void Delete(BOOL bAutoDelete = TRUE);
 ```
 
@@ -1153,7 +1153,7 @@ Aby uzyskać więcej informacji, zobacz [IViewObject2::GetExtent](/windows/win32
 
 Zwraca identyfikator klasy elementu do pamięci wskazywionej przez *pClassID*.
 
-```
+```cpp
 void GetClassID(CLSID* pClassID) const;
 ```
 
@@ -1172,7 +1172,7 @@ Aby uzyskać więcej informacji, zobacz [IPersist::GetClassID](/windows/win32/ap
 
 Wywołanie tej funkcji, aby uzyskać obiekt zawierający `COleDataSource` wszystkie dane, które zostaną umieszczone w Schowku przez wywołanie [copytoclipboard](#copytoclipboard) funkcji elementu członkowskiego.
 
-```
+```cpp
 void GetClipboardData(
     COleDataSource* pDataSource,
     BOOL bIncludeLink = FALSE,
@@ -1400,7 +1400,7 @@ Niepodpisana liczba całkowita z jedną z następujących wartości:
 
 Wywołanie tej funkcji, aby uzyskać ciąg widoczny dla użytkownika opisujący typ elementu OLE, takich jak "Dokument programu Word".
 
-```
+```cpp
 void GetUserType(
     USERCLASSTYPE nUserClassType,
     CString& rString);
@@ -1977,7 +1977,7 @@ Wywołanie `Reload` funkcji po aktywowaniu elementu jako elementu innego typu pr
 
 Uruchamia aplikację skojarzoną z tym elementem.
 
-```
+```cpp
 void Run();
 ```
 
@@ -2016,7 +2016,7 @@ Ta funkcja jest wywoływana automatycznie przez ikonę zmiany (i inne okna dialo
 
 Wywołanie tej funkcji, aby określić, ile miejsca jest dostępne dla elementu OLE.
 
-```
+```cpp
 void SetExtent(
     const CSize& size,
     DVASPECT nDrawAspect = DVASPECT_CONTENT);
@@ -2040,7 +2040,7 @@ Aby uzyskać więcej informacji, zobacz [IOleObject::SetExtent](/windows/win32/a
 
 Wywołanie tej funkcji, aby określić nazwę aplikacji kontenera i nazwę kontenera dla osadzonego elementu OLE.
 
-```
+```cpp
 void SetHostNames(
     LPCTSTR lpszHost,
     LPCTSTR lpszHostObj);
@@ -2117,7 +2117,7 @@ Aby uzyskać więcej informacji, zobacz [IOleInPlaceObject::SetObjectRects](/win
 
 Wywołanie tej funkcji, aby ustawić opcję aktualizacji łącza dla prezentacji określonego elementu połączonego.
 
-```
+```cpp
 void SetLinkUpdateOptions(OLEUPDATE dwUpdateOpt);
 ```
 

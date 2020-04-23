@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCAcceleratorKey [MFC], Format
 - CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
-ms.openlocfilehash: 7d66e7043325bbbd324f3ac443368787a653ebe1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a814618d3bda27d5b4ace12209dd93343ef2eef9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369928"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751776"
 ---
 # <a name="cmfcacceleratorkey-class"></a>Klasa CMFCAcceleratorKey
 
@@ -88,7 +88,7 @@ Jeśli podczas tworzenia klawisza skrótu `CMFCAccleratorKey`nie jest podasz kla
 
 Tłumaczy strukturę ACCEL na skojarzoną ją wartość ciągu.
 
-```
+```cpp
 void Format(CString& str) const;
 ```
 
@@ -105,7 +105,7 @@ Ta metoda pobiera format ciągu skojarzonego klawisza skrótu. Format ciągu obi
 
 Ustawia klawisz skrótu dla obiektu [CMFCAcceleratorKey.](../../mfc/reference/cmfcacceleratorkey-class.md)
 
-```
+```cpp
 void SetAccelerator(LPACCEL lpAccel);
 ```
 

@@ -1,33 +1,33 @@
 ---
-title: 'Instrukcje: Czy danych DDX / DDV powiązania z Windows Forms'
+title: 'Instrukcje: powiązanie danych DDX/DDV za pomocą interfejsu Windows Forms'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
-ms.openlocfilehash: 558c763fd18cd1569ff23435bf6156b3117f117d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31629a4db2559112ba49f5c069b08de7abdfc2db
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387321"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754352"
 ---
-# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Instrukcje: Czy danych DDX/DDV powiązania z Windows Forms
+# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Porady: powiązanie danych DDX/DDV za pomocą interfejsu Windows Forms
 
-[Ddx_managedcontrol —](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) wywołania [CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) utworzyć kontrolkę dopasowania identyfikatora zasobu formantu. Jeśli używasz `DDX_ManagedControl` dla `CWinFormsControl` formantu (w generowanych przez kreatora kod), nie powinien wywoływać `CreateManagedControl` jawnie dla tej samej kontrolki.
+[DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) wywołuje [CWinFormsControl::CreateManagedControl,](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) aby utworzyć formant pasujący do identyfikatora kontroli zasobów. Jeśli używasz `DDX_ManagedControl` `CWinFormsControl` formantu (w kodzie wygenerowanym `CreateManagedControl` przez kreatora), nie należy wywoływać jawnie dla tego samego formantu.
 
-Wywołaj `DDX_ManagedControl` w [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) do tworzenia kontrolek z identyfikatorów zasobów. Dla danych programu exchange nie musisz funkcje DDX/DDV za pomocą kontrolek formularzy Windows Forms. Zamiast tego można umieścić kod, aby uzyskać dostęp do właściwości zarządzanego formantu w `DoDataExchange` metody klasy okna dialogowego (lub Widok), jak w poniższym przykładzie.
+Wywołanie `DDX_ManagedControl` w [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) do tworzenia formantów z identyfikatorów zasobów. Do wymiany danych nie trzeba używać funkcji DDX/DDV z formantami Windows Forms. Zamiast tego można umieścić kod, aby uzyskać dostęp do `DoDataExchange` właściwości formantu zarządzanego w metodzie klasy okna dialogowego (lub widoku), jak w poniższym przykładzie.
 
-Poniższy przykład pokazuje, jak powiązać formant użytkownika .NET native ciągu języka C++.
+W poniższym przykładzie pokazano, jak powiązać natywnego ciągu C++ z formantem użytkownika platformy .NET.
 
 ## <a name="example"></a>Przykład
 
-Oto przykład powiązanie danych DDX/DDV ciągu MFC `m_str` za pomocą zdefiniowanych przez użytkownika `NameText` właściwości kontrolki użytkownika platformy .NET.
+Poniżej przedstawiono przykład powiązania danych DDX/DDV `m_str` ciągu MFC `NameText` z właściwością zdefiniowaną przez użytkownika formantu użytkownika .NET.
 
-Formant zostanie utworzony, kiedy [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) wywołania `CMyDlg::DoDataExchange` po raz pierwszy, więc każdy kod odwołujący się `m_UserControl` musi przypadać po `DDX_ManagedControl` wywołania.
+Formant jest tworzony, gdy [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) wywołuje `CMyDlg::DoDataExchange` po raz `m_UserControl` pierwszy, więc `DDX_ManagedControl` każdy kod, który odwołuje się musi pochodzić po wywołaniu.
 
-Ten kod można zaimplementować w utworzonej w aplikacji MFC01 [jak: Tworzenie kontrolki użytkownika i hosta w oknie dialogowym](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+Ten kod można zaimplementować w aplikacji MFC01 utworzonej w [aplikacji Jak: Tworzenie formantu użytkownika i hosta w oknie dialogowym](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
 
 Umieść następujący kod w deklaracji CMFC01Dlg:
 
@@ -43,7 +43,7 @@ class CMFC01Dlg : public CDialog
 
 Umieść następujący kod w implementacji CMFC01Dlg:
 
-```
+```cpp
 void CMFC01Dlg::DoDataExchange(CDataExchange* pDX)
 {
    CDialog::DoDataExchange(pDX);
@@ -60,11 +60,11 @@ void CMFC01Dlg::DoDataExchange(CDataExchange* pDX)
 
 ## <a name="example"></a>Przykład
 
-Teraz dodamy metody obsługi dla kliknij przycisk OK. Kliknij przycisk **widok zasobów** kartę. W widoku zasobów, kliknij dwukrotnie `IDD_MFC01_DIALOG`. Zasoby dialogowe pojawiają się w edytorze zasobów. Następnie kliknij dwukrotnie przycisk OK...
+Teraz dodamy metodę obsługi za kliknięcie przycisku OK. Kliknij kartę **Widok zasobów.** W widoku zasobów kliknij `IDD_MFC01_DIALOG`dwukrotnie przycisk . Zasób okna dialogowego pojawi się w Edytorze zasobów. Następnie kliknij dwukrotnie przycisk OK..
 
-Zdefiniuj obsługi w następujący sposób.
+Zdefiniuj program obsługi w następujący sposób.
 
-```
+```cpp
 void CMFC01Dlg::OnBnClickedOk()
 {
    AfxMessageBox(CString(m_MyControl.GetControl()->textBox1->Text));
@@ -74,15 +74,15 @@ void CMFC01Dlg::OnBnClickedOk()
 
 ## <a name="example"></a>Przykład
 
-I Dodaj następujący wiersz do implementacji BOOL CMFC01Dlg::OnInitDialog().
+I dodać następujący wiersz do implementacji BOOL CMFC01Dlg::OnInitDialog().
 
 ```
 m_MyControl.GetControl()->textBox1->Text = "hello";
 ```
 
-Można teraz tworzyć i uruchomić aplikację. Należy zauważyć, że dowolny tekst w polu tekstowym będą wyświetlane w oknie podręcznym komunikatu po zamknięciu aplikacji.
+Teraz możesz skompilować i uruchomić aplikację. Należy zauważyć, że każdy tekst w polu tekstowym będą wyświetlane w wyskakującym oknie komunikatów po zamknięciu aplikacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa CWinFormsControl](../mfc/reference/cwinformscontrol-class.md)<br/>
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)<br/>

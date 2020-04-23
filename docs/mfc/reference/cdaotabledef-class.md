@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: 063d0b795c7e4f6af901f52563295883ef81de7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adc31ccbf2be34aa1df1fa56111d1990701a6329
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377122"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754688"
 ---
 # <a name="cdaotabledef-class"></a>Klasa CDaoTableDef
 
@@ -300,7 +300,7 @@ Aby uzyskać powiązane informacje, zobacz temat "CreateTableDef Method" w Pomoc
 
 Wywołanie tej funkcji elementu członkowskiego, aby dodać pole do tabeli.
 
-```
+```cpp
 void CreateField(
     LPCTSTR lpszName,
     short nType,
@@ -323,7 +323,7 @@ Wartość wskazująca typ danych pola. Ustawienie może być jedną z następuj�
 |`dbBoolean`|1 bajt|Bool|
 |`dbByte`|BYTE|
 |`dbInteger`|2|int|
-|`dbLong`|4|long|
+|`dbLong`|4|długi|
 |`dbCurrency`|8|Waluta ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|
 |`dbSingle`|4|float|
 |`dbDouble`|8|double|
@@ -373,7 +373,7 @@ Aby uzyskać powiązane informacje, zobacz temat "CreateField Method" w Pomocy D
 
 Wywołanie tej funkcji, aby dodać indeks do tabeli.
 
-```
+```cpp
 void CreateIndex(CDaoIndexInfo& indexinfo);
 ```
 
@@ -402,7 +402,7 @@ Pozostałe elementy członkowskie zostaną zignorowane, jeśli ustawiono wartoś
 
 Wywołanie tej funkcji elementu członkowskiego, aby usunąć pole i uczynić go niedostępnym.
 
-```
+```cpp
 void DeleteField(LPCTSTR lpszName);
 void DeleteField(int nIndex);
 ```
@@ -425,7 +425,7 @@ Aby uzyskać powiązane informacje, zobacz temat "Metoda usuwania" w Pomocy DAO.
 
 Wywołanie tej funkcji elementu członkowskiego, aby usunąć indeks w tabeli podstawowej.
 
-```
+```cpp
 void DeleteIndex(LPCTSTR lpszName);
 void DeleteIndex(int nIndex);
 ```
@@ -557,7 +557,7 @@ Aby uzyskać powiązane informacje, zobacz temat "Count Property" w Pomocy DAO.
 
 Wywołanie tej funkcji elementu członkowskiego, aby uzyskać różne rodzaje informacji o polu zdefiniowanym w tabledef.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -619,7 +619,7 @@ Aby uzyskać powiązane informacje, zobacz temat "Count Property" w Pomocy DAO.
 
 Wywołanie tej funkcji elementu członkowskiego, aby uzyskać różne rodzaje informacji o indeksie zdefiniowanym w tabledef.
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -796,7 +796,7 @@ Wskaźnik do ciągu określający nazwę tabeli.
 
 Wywołanie tej funkcji elementu członkowskiego, aby zaktualizować informacje o połączeniu dla dołączonej tabeli.
 
-```
+```cpp
 void RefreshLink();
 ```
 
@@ -812,7 +812,7 @@ Aby uzyskać powiązane informacje, zobacz temat "RefreshLink Method" w Pomocy D
 
 Ustawia wartość, która wskazuje jedną lub `CDaoTableDef` więcej cech obiektu.
 
-```
+```cpp
 void SetAttributes(long lAttributes);
 ```
 
@@ -842,7 +842,7 @@ Aby uzyskać powiązane informacje, zobacz temat "Właściwość atrybutów" w P
 
 Dla `CDaoTableDef` obiektu, który reprezentuje dołączoną tabelę, obiekt ciągu składa się z jednej lub dwóch części (specyfikatora typu bazy danych i ścieżki do bazy danych).
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -894,7 +894,7 @@ Aby uzyskać powiązane informacje, zobacz temat "Połącz właściwość" w Pom
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić nazwę zdefiniowaną przez użytkownika dla tabeli.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -913,7 +913,7 @@ Aby uzyskać powiązane informacje, zobacz temat "Właściwość nazw" w Pomocy 
 
 Wywołanie tej funkcji elementu członkowskiego, aby określić nazwę dołączonej tabeli lub nazwę tabeli bazowej, na której `CDaoTableDef` obiekt jest oparty, ponieważ istnieje w oryginalnym źródle danych.
 
-```
+```cpp
 void SetSourceTableName(LPCTSTR lpszSrcTableName);
 ```
 
@@ -932,7 +932,7 @@ Aby uzyskać powiązane informacje, zobacz temat "SourceTableName Property" w Po
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić regułę sprawdzania poprawności dla tabledef.
 
-```
+```cpp
 void SetValidationRule(LPCTSTR lpszValidationRule);
 ```
 
@@ -957,7 +957,7 @@ Aby uzyskać powiązane informacje, zobacz temat "ValidationRule Property" w Pom
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić `CDaoTableDef` tekst wyjątku reguły sprawdzania poprawności dla obiektu z podstawowej tabeli podstawowej obsługiwane przez aparat bazy danych Microsoft Jet.
 
-```
+```cpp
 void SetValidationText(LPCTSTR lpszValidationText);
 ```
 

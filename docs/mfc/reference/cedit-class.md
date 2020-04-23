@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 3ca2fe4486ae0751f37d046ef28ed11e60e776ac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94769a6fb3c5fceefda96b54cebb35b0533a8afa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373984"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753223"
 ---
 # <a name="cedit-class"></a>Klasa CEdit
 
@@ -299,7 +299,7 @@ Aby uzyskać więcej informacji, zobacz [EM_CHARFROMPOS](/windows/win32/Controls
 
 Wywołanie tej funkcji, aby usunąć (wyczyścić) bieżący wybór (jeśli istnieje) w formancie edycji.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -319,7 +319,7 @@ Aby uzyskać więcej informacji, zobacz [WM_CLEAR](/windows/win32/dataxchg/wm-cl
 
 Wywołanie tej funkcji, aby coy bieżącego zaznaczenia (jeśli istnieje) w formancie edycji do Schowka w formacie CF_TEXT.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -389,7 +389,7 @@ Zastosuj następujące [style okien](styles-used-by-mfc.md#window-styles) do for
 
 Wywołanie tej funkcji, aby usunąć (wyciąć) bieżące zaznaczenie (jeśli istnieje) w formancie edycji i skopiować usunięty tekst do Schowka w formacie CF_TEXT.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -409,7 +409,7 @@ Aby uzyskać więcej informacji, zobacz [WM_CUT](/windows/win32/dataxchg/wm-cut)
 
 Wywołanie tej funkcji, aby zresetować (wyczyść) flagę cofania formantu edycji.
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -720,7 +720,7 @@ Ta metoda wysyła [komunikat EM_GETPASSWORDCHAR,](/windows/win32/Controls/em-get
 
 Wywołanie tej funkcji, aby uzyskać prostokąt formatowania formantu edycji.
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -793,7 +793,7 @@ Ta funkcja wysyła komunikat [EM_HIDEBALLOONTIP,](/windows/win32/Controls/em-hid
 
 Wywołanie tej funkcji, aby ograniczyć długość tekstu, który użytkownik może wprowadzić do formantu edycji.
 
-```
+```cpp
 void LimitText(int nChars = 0);
 ```
 
@@ -910,7 +910,7 @@ Ta metoda jest obsługiwana przez komunikat [EM_LINELENGTH,](/windows/win32/Cont
 
 Wywołanie tej funkcji, aby przewinąć tekst wielowierszowego formantu edycji.
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -942,7 +942,7 @@ Aby uzyskać więcej informacji, zobacz [EM_LINESCROLL](/windows/win32/Controls/
 
 Wywołanie tej funkcji, aby wstawić `CEdit` dane ze Schowka do punktu wstawiania.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -990,7 +990,7 @@ Aby uzyskać więcej informacji, zobacz [EM_POSFROMCHAR](/windows/win32/Controls
 
 Wywołanie tej funkcji, aby zastąpić bieżące zaznaczenie w formancie edycji tekstem określonym przez *lpszNewText*.
 
-```
+```cpp
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```
 
@@ -1056,7 +1056,7 @@ Poniższy przykład pokazuje [CEdit::SetCueBanner](#setcuebanner) metody.
 
 Wywołanie tej funkcji, aby ustawić dojście do pamięci lokalnej, która będzie używana przez kontrolkę edycji wielowierszowej.
 
-```
+```cpp
 void SetHandle(HLOCAL hBuffer);
 ```
 
@@ -1090,7 +1090,7 @@ Aby uzyskać więcej informacji, zobacz [EM_SETHANDLE](/windows/win32/Controls/e
 
 Wyróżnia zakres tekstu wyświetlany w bieżącym formancie edycji.
 
-```
+```cpp
 void SetHighlight(
     int ichStart,
     int ichEnd);
@@ -1111,7 +1111,7 @@ Ta metoda wysyła komunikat [EM_SETHILITE,](/windows/win32/Controls/em-sethilite
 
 Wywołanie tej funkcji elementu członkowskiego, `CEdit` aby ustawić limit tekstu dla tego obiektu.
 
-```
+```cpp
 void SetLimitText(UINT nMax);
 ```
 
@@ -1138,7 +1138,7 @@ Aby uzyskać więcej informacji, zobacz [EM_SETLIMITTEXT](/windows/win32/Control
 
 Wywołanie tej metody, aby ustawić lewy i prawy margines tego formantu edycji.
 
-```
+```cpp
 void SetMargins(
     UINT nLeft,
     UINT nRight);
@@ -1167,7 +1167,7 @@ Aby uzyskać więcej informacji, zobacz [EM_SETMARGINS](/windows/win32/Controls/
 
 Wywołanie tej funkcji, aby ustawić lub wyczyścić zmodyfikowaną flagę dla formantu edycji.
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1190,7 +1190,7 @@ Aby uzyskać więcej informacji, zobacz [EM_SETMODIFY](/windows/win32/Controls/e
 
 Wywołanie tej funkcji, aby ustawić lub usunąć znak hasła wyświetlany w formancie edycji, gdy użytkownik wpisuje tekst.
 
-```
+```cpp
 void SetPasswordChar(TCHAR ch);
 ```
 
@@ -1246,7 +1246,7 @@ Aby uzyskać więcej informacji, zobacz [EM_SETREADONLY](/windows/win32/Controls
 
 Wywołanie tej funkcji, aby ustawić wymiary prostokąta przy użyciu określonych współrzędnych.
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1275,7 +1275,7 @@ Aby uzyskać więcej informacji, zobacz [EM_SETRECT](/windows/win32/Controls/em-
 
 Wywołanie tej funkcji w celu ustawienia prostokąta formatowania wielowierszowego formantu edycji.
 
-```
+```cpp
 void SetRectNP(LPCRECT lpRect);
 ```
 
@@ -1306,7 +1306,7 @@ Aby uzyskać więcej informacji, zobacz [EM_SETRECTNP](/windows/win32/Controls/e
 
 Wywołanie tej funkcji, aby wybrać zakres znaków w formancie edycji.
 
-```
+```cpp
 void SetSel(
     DWORD dwSelection,
     BOOL bNoScroll = FALSE);
@@ -1343,7 +1343,7 @@ Aby uzyskać więcej informacji, zobacz [EM_SETSEL](/windows/win32/Controls/em-s
 
 Wywołanie tej funkcji, aby ustawić tabulatory w wielowierszowym formancie edycji.
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 

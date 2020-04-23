@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 7d4a478b560be686e4da6f6dea623d6058626562
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42d4b24222b1760bc418e904881edb2bb0e5a1f4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365965"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752308"
 ---
 # <a name="ctabctrl-class"></a>Klasa CTabCtrl
 
@@ -160,7 +160,7 @@ Aby uzyskać więcej `CTabCtrl`informacji na temat używania , zobacz [Formanty]
 
 Oblicza obszar wyświetlania formantu karty, biorąc pod uwagę prostokąt okna, lub oblicza prostokąt okna, który odpowiadałby danemu obszarowi wyświetlania.
 
-```
+```cpp
 void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ```
 
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 Wskazuje, którą operację wykonać. Jeśli ten parametr ma wartość PRAWDA, *lpRect* określa prostokąt wyświetlania i odbiera odpowiedni prostokąt okna. Jeśli ten parametr ma wartość FAŁSZ, *lpRect* określa prostokąt okna i odbiera odpowiedni prostokąt wyświetlania.
 
 *Lprect*<br/>
-Wskaźnik do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) która określa dany prostokąt i odbiera obliczony prostokąt.
+Wskaźnik do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) która określa dany prostokąt i odbiera obliczony prostokąt.
 
 ### <a name="example"></a>Przykład
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 Określa styl formantu karty. Zastosuj dowolną [kombinację stylów sterowania kartami,](/windows/win32/Controls/tab-control-styles)opisaną w zestawie Windows SDK. Zobacz **Uwagi** dla listy stylów okien, które można również zastosować do formantu.
 
 *Rect*<br/>
-Określa rozmiar i położenie formantu karty. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/previous-versions/dd162897\(v=vs.85\))
+Określa rozmiar i położenie formantu karty. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Określa okno nadrzędne formantu karty, zwykle `CDialog`. Nie może być null.
@@ -250,7 +250,7 @@ Określa rozszerzony styl tworzonego formantu. Aby uzyskać listę rozszerzonych
 Określa styl formantu karty. Zastosuj dowolną [kombinację stylów sterowania kartami,](/windows/win32/Controls/tab-control-styles)opisaną w zestawie Windows SDK. Zobacz **Uwagi** w [Tworzenie](#create) listy stylów okien, które można również zastosować do formantu.
 
 *Rect*<br/>
-Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
+Odwołanie do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest nadrzędnym formantu.
@@ -313,7 +313,7 @@ Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 Resetuje elementy w formancie karty, czyszcząc wszystkie, które zostały naciśnięte.
 
-```
+```cpp
 void DeselectAll(BOOL fExcludeFocus);
 ```
 
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 Indeks od zera elementu karty.
 
 *Lprect*<br/>
-Wskaźnik do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) która odbiera prostokąt ograniczający kartę. Współrzędne te wykorzystują bieżący tryb mapowania rzutni.
+Wskaźnik do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) która odbiera prostokąt ograniczający kartę. Współrzędne te wykorzystują bieżący tryb mapowania rzutni.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -682,7 +682,7 @@ Indeks od zera nowej karty, jeśli zakończy się pomyślnie; w przeciwnym razie
 
 Usuwa określony obraz z listy obrazów formantu karty.
 
-```
+```cpp
 void RemoveImage(int nImage);
 ```
 
@@ -699,7 +699,7 @@ Formant karty aktualizuje indeks obrazu każdej karty, dzięki czemu każda kart
 
 Ustawia fokus na określoną kartę w formancie karty.
 
-```
+```cpp
 void SetCurFocus(int nItem);
 ```
 
@@ -892,7 +892,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie [TCM_SETMINTABWIDTH]
 
 Ustawia ilość miejsca (dopełnienie) wokół każdej karty ikony i etykiety w kontrolki karty.
 
-```
+```cpp
 void SetPadding(CSize size);
 ```
 
@@ -905,7 +905,7 @@ Ustawia ilość miejsca (dopełnienie) wokół każdej karty ikony i etykiety w 
 
 Przypisuje kontrolkę etykietki narzędzia do kontrolki kart.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 

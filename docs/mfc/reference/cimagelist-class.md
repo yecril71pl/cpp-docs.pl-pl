@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: eff2d0c1de88ebd9d949ebe197563c87c17e5b05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 17cd2a94cb397e59e4622aea8ed7bb6fbe1eee43
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372449"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752685"
 ---
 # <a name="cimagelist-class"></a>Klasa CImageList
 
@@ -691,13 +691,13 @@ Wskaźnik do kontekstu urządzenia docelowego. Należy usunąć ten obiekt [CDC,
 Indeks od zera obrazu, który ma zostać narysowany.
 
 *Pt*<br/>
-Struktura [POINT](/previous-versions/dd162805\(v=vs.85\)) zawierająca współrzędne x i y, w których zostanie narysowany obraz.
+Struktura [POINT](/windows/win32/api/windef/ns-windef-point) zawierająca współrzędne x i y, w których zostanie narysowany obraz.
 
 *Sz*<br/>
 Struktura [SIZE](/windows/win32/api/windef/ns-windef-size) wskazująca rozmiar rysowanego obrazu.
 
 *ptOrigin (polski)*<br/>
-Struktura [POINT](/previous-versions/dd162805\(v=vs.85\)) zawierająca współrzędne x i y określające lewy górny róg operacji rysowania w odniesieniu do samego obrazu. Piksele obrazu, które znajdują się po lewej stronie współrzędnej x i powyżej współrzędnej y, nie są rysowane.
+Struktura [POINT](/windows/win32/api/windef/ns-windef-point) zawierająca współrzędne x i y określające lewy górny róg operacji rysowania w odniesieniu do samego obrazu. Piksele obrazu, które znajdują się po lewej stronie współrzędnej x i powyżej współrzędnej y, nie są rysowane.
 
 *fStyle*<br/>
 Flaga określająca styl rysowania i opcjonalnie obraz nakładki. Zobacz sekcję Uwagi, aby uzyskać informacje na temat obrazu nakładki. Domyślna implementacja MFC, ILD_NORMAL, rysuje obraz przy użyciu koloru tła dla listy obrazów. Jeśli kolor tła jest wartością CLR_NONE, obraz jest rysowany w sposób przezroczysty za pomocą maski.
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>Parametry
 
 *lpPoint (punkt z punktu widzenia*<br/>
-Adres struktury [POINT,](/previous-versions/dd162805\(v=vs.85\)) która odbiera bieżącą pozycję przeciągania.
+Adres struktury [POINT,](/windows/win32/api/windef/ns-windef-point) która odbiera bieżącą pozycję przeciągania.
 
 *lpPointHotSpot*<br/>
 Adres `POINT` struktury, która odbiera odsunięcie obrazu przeciągania względem pozycji przeciągania.

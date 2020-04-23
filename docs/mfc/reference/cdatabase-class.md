@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: 260a4a38fcee8994d804267709c11279266d393c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bc920307e09179dc214710a3b6b19ff27a82749d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376480"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754641"
 ---
 # <a name="cdatabase-class"></a>Klasa CDatabase
 
@@ -186,7 +186,7 @@ W zastąpienie wywołanie `SQLBindParameters` i powiązanych funkcji ODBC do pow
 
 Wywołanie tej funkcji elementu członkowskiego, aby zażądać, aby źródło danych anulowało operację asynchroniza w toku lub proces z drugiego wątku.
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -294,7 +294,7 @@ Aby uzyskać więcej informacji o transakcjach, zobacz artykuł [Transakcja (ODB
 
 Wywołanie tej funkcji elementu członkowskiego, gdy trzeba wykonać polecenie SQL bezpośrednio.
 
-```
+```cpp
 void ExecuteSQL(LPCTSTR lpszSQL);
 ```
 
@@ -606,7 +606,7 @@ Po wycofywaniu rekord, który był aktualny przed wycofaniem pozostaje aktualny.
 
 Wywołanie tej funkcji elementu `OpenEx` `Open` członkowskiego — przed wywołaniem lub — aby zastąpić domyślną liczbę sekund dozwoloną przed przesuniem czasu połączenia ze źródłem danych.
 
-```
+```cpp
 void SetLoginTimeout(DWORD dwSeconds);
 ```
 
@@ -625,7 +625,7 @@ Domyślna wartość limitów czasu logowania wynosi 15 sekund. Nie wszystkie źr
 
 Wywołanie tej funkcji elementu członkowskiego, aby zastąpić domyślną liczbę sekund, aby zezwolić przed kolejnymi operacjami na połączonym źródle danych limit czasu.
 
-```
+```cpp
 void SetQueryTimeout(DWORD dwSeconds);
 ```
 

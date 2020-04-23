@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 5d6b964543a5cbd8a8896fe768e2d57a098ead97
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8e96740ba6755f489be07fbf8996cfa8b049314a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372214"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754027"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Klasa CMFCToolBarButton
 
@@ -1683,7 +1683,7 @@ Domyślna implementacja tej metody nic nie robi. Zastąp tę metodę, aby wykona
 
 Ustawia prostokąt ograniczający przycisku.
 
-```
+```cpp
 void SetRect(const CRect rect);
 ```
 
@@ -1717,7 +1717,7 @@ Domyślna implementacja ustawia [cmfctoolbarbutton::m_nStyle](#m_nstyle) element
 
 Określa, czy przycisk jest widoczny.
 
-```
+```cpp
 void SetVisible(BOOL bShow=TRUE);
 ```
 
@@ -1734,7 +1734,7 @@ Ta funkcja służy do ukrywania lub pokazywalania określonego przycisku paska n
 
 Pokazuje lub ukrywa przycisk.
 
-```
+```cpp
 void Show(BOOL bShow);
 ```
 

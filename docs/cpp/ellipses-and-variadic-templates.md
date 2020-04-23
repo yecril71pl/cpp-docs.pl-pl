@@ -1,15 +1,15 @@
 ---
-title: Wielokropki i szablony wariadyczne
+title: Szablony wielokropek i variadic
 ms.date: 11/04/2016
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
-ms.openlocfilehash: 358cdeeaf6f3e8c7f7841bbc796eca6557ccd145
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8326a6b9e75db6adc37a68aa5d5741b004d27d30
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366336"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031527"
 ---
-# <a name="ellipses-and-variadic-templates"></a>Wielokropki i szablony wariadyczne
+# <a name="ellipsis-and-variadic-templates"></a>Szablony wielokropek i variadic
 
 W tym artykule pokazano, jak`...`używać wielokropek ( ) z szablonami variadic języka C++. Wielokropek miał wiele zastosowań w C i C ++. Obejmują one listy argumentów zmiennych dla funkcji. Funkcja `printf()` z biblioteki wykonawczej C jest jednym z najbardziej znanych przykładów.
 

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: cecbd61ad8862d5046cab9e0b418d5c4d16829d4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7f12c7b926cd8d3d8fc892cff6f2245e7c216219
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363805"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032229"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView, klasa
 
@@ -40,7 +40,7 @@ Określa predykat binarny do testowania `T`równości z wartościami typu . Wart
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa `VectorView` implementuje [interfejs windows::Foundation::Collections::IVectorView\<T>](/uwp/api/Windows.Foundation.Collections.IVectorView_T_) interfejs i obsługę iteratorów biblioteki szablonów standardowych.
+Klasa `VectorView` implementuje [interfejs windows::Foundation::Collections::IVectorView\<T>](/uwp/api/windows.foundation.collections.ivectorview-1) interfejs i obsługę iteratorów biblioteki szablonów standardowych.
 
 ### <a name="members"></a>Elementy członkowskie
 

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: c5eb6a93cd68c2dafb76af3b0e42da8b56566e25
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9e94e334318b32efcf8c9de681a78349ab12151
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364006"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751123"
 ---
 # <a name="cprogressctrl-class"></a>Klasa CProgressCtrl
 
@@ -149,7 +149,7 @@ Określa styl formantu paska postępu. Zastosuj dowolną kombinację stylów oki
 - PBS_SMOOTH Wyświetla stopniowe, płynne wypełnianie kontrolki paska postępu. Bez tej flagi formant wypełni bloki.
 
 *Rect*<br/>
-Określa rozmiar i położenie formantu paska postępu. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/previous-versions/dd162897\(v=vs.85\)) Ponieważ formant musi być oknem podrzędnym, określone współrzędne są względem obszaru klienta *pParentWnd*.
+Określa rozmiar i położenie formantu paska postępu. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/windows/win32/api/windef/ns-windef-rect) Ponieważ formant musi być oknem podrzędnym, określone współrzędne są względem obszaru klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Określa okno nadrzędne formantu paska `CDialog`postępu, zwykle okno . Nie może być null.
@@ -191,7 +191,7 @@ Określa rozszerzony styl tworzonego formantu. Aby uzyskać listę rozszerzonych
 Określa styl formantu paska postępu. Zastosuj dowolną kombinację stylów okien opisanych w [programie CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) w zestaw windows SDK.
 
 *Rect*<br/>
-Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
+Odwołanie do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest nadrzędnym formantu.
@@ -263,7 +263,7 @@ Położenie kontrolki paska postępu nie jest fizyczną lokalizacją na ekranie,
 
 Pobiera bieżące dolne i górne limity lub zakres formantu paska postępu.
 
-```
+```cpp
 void GetRange(
     int& nLower,
     int& nUpper);
@@ -495,7 +495,7 @@ Położenie kontrolki paska postępu nie jest fizyczną lokalizacją na ekranie,
 
 Ustawia górne i dolne granice zakresu formantu paska postępu i ponownie rysuje pasek, aby odzwierciedlić nowe zakresy.
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);

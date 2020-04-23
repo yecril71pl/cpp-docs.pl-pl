@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetMessagePendingDelay
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
-ms.openlocfilehash: f6db5f012aedf08edd87980e304e181295bfb953
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8a6c160a76ae27059238c3e8e26b5bea87a87f7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374914"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753834"
 ---
 # <a name="colemessagefilter-class"></a>Klasa COleMessageFilter
 
@@ -120,7 +120,7 @@ COleMessageFilter();
 
 Włącza i wyłącza zajęte okno dialogowe, które jest wyświetlane po wygaśnięciu opóźnienia oczekującego na wiadomość (zobacz [SetRetryReply](#setretryreply)) podczas wywołania OLE.
 
-```
+```cpp
 void EnableBusyDialog(BOOL bEnableBusy = TRUE);
 ```
 
@@ -133,7 +133,7 @@ Określa, czy okno dialogowe "zajęty" jest włączone czy wyłączone.
 
 Włącza i wyłącza okno dialogowe "nie odpowiada", które jest wyświetlane, jeśli komunikat klawiatury lub myszy jest oczekujący podczas wywołania OLE i nawiążenie czasu połączenia.
 
-```
+```cpp
 void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
 ```
 
@@ -203,7 +203,7 @@ Domyślny filtr wiadomości framework jest automatycznie rejestrowany podczas in
 
 Odwołuje poprzednią rejestrację wykonaną przez wywołanie [rejestracji](#register).
 
-```
+```cpp
 void Revoke();
 ```
 
@@ -217,7 +217,7 @@ Domyślny filtr wiadomości, który jest tworzony i rejestrowany automatycznie p
 
 Ta funkcja ustawia "zajęty odpowiedzi aplikacji".
 
-```
+```cpp
 void SetBusyReply(SERVERCALL nBusyReply);
 ```
 
@@ -244,7 +244,7 @@ Domyślnie zajęta odpowiedź jest SERVERCALL_RETRYLATER. Ta odpowiedź powoduje
 
 Określa, jak długo aplikacja wywołująca czeka na odpowiedź z wywoływanej aplikacji przed podjęciem dalszych działań.
 
-```
+```cpp
 void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```
 
@@ -261,7 +261,7 @@ Ta funkcja działa w porozumieniu z [SetRetryReply](#setretryreply).
 
 Określa akcję aplikacji wywołującej, gdy odbiera ona zajętą odpowiedź z wywoływaną aplikacją.
 
-```
+```cpp
 void SetRetryReply(DWORD nRetryReply = 0);
 ```
 

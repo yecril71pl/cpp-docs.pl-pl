@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: c22097c3a686857a6a5698033b7395c5d15f2570
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b52ed3137a9a515278e018d69751aedaddb0cf1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366082"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753882"
 ---
 # <a name="coledispatchdriver-class"></a>Klasa COleDispatchDriver
 
@@ -103,7 +103,7 @@ Aby uzyskać więcej `COleDispatchDriver`informacji na temat korzystania z progr
 
 Wywołanie `AttachDispatch` funkcji elementu `IDispatch` członkowskiego, `COleDispatchDriver` aby dołączyć wskaźnik do obiektu. Aby uzyskać więcej informacji, zobacz [Implementowanie interfejsu IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
-```
+```cpp
 void AttachDispatch(
     LPDISPATCH lpDispatch,
     BOOL bAutoRelease = TRUE);
@@ -217,7 +217,7 @@ Aby uzyskać więcej informacji na temat typu LPDISPATCH, zobacz [Implementowani
 
 Pobiera właściwość obiektu określoną przez *dwDispID*.
 
-```
+```cpp
 void GetProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -243,7 +243,7 @@ Adres zmiennej, która otrzyma wartość właściwości. Musi być zgodny z type
 
 Wywołuje metodę obiektu lub właściwość określoną przez *dwDispID*, w kontekście określonym przez *wFlags*.
 
-```
+```cpp
 void AFX_CDECL InvokeHelper(
     DISPID dwDispID,
     WORD wFlags,
@@ -282,7 +282,7 @@ Możliwe wartości dla *vtRet* argument są pobierane z wyliczenia VARENUM. Dopu
 |------------|-----------------|
 |Vt_empty|**void**|
 |VT_I2|**short**|
-|VT_I4|**long**|
+|VT_I4|**długi**|
 |VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|**CY**|
@@ -369,7 +369,7 @@ operator LPDISPATCH();
 
 Zwalnia `IDispatch` połączenie. Aby uzyskać więcej informacji, zobacz [Implementowanie interfejsu IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)
 
-```
+```cpp
 void ReleaseDispatch();
 ```
 
@@ -385,7 +385,7 @@ Jeśli dla tego połączenia ustawiono automatyczne `IDispatch::Release` zwolnie
 
 Ustawia właściwość obiektu OLE określoną przez *dwDispID*.
 
-```
+```cpp
 void AFX_CDECL SetProperty(
     DISPID dwDispID,
     VARTYPE vtProp, ...);

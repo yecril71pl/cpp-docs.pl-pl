@@ -6,25 +6,25 @@ helpviewer_keywords:
 - variable argument lists
 - parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-ms.openlocfilehash: dfe40d20fc8bb795b0e530b3288b1c2101bc55ab
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ea4d71bf9a22fc96c794a92ba43bed6548cf5d1
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171882"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032307"
 ---
 # <a name="variable-argument-lists--ccli"></a>Listy zmiennych argumentów (...) (C++/CLI)
 
-Ten przykład pokazuje, jak można użyć składni `...` w C++/CLI, aby zaimplementować funkcje, które mają zmienną liczbę argumentów.
+W tym przykładzie pokazano, jak można użyć `...` składni w języku C++/CLI do zaimplementowania funkcji, które mają zmienną liczbę argumentów.
 
 > [!NOTE]
-> Ten temat dotyczy C++/CLI. Aby uzyskać informacje o używaniu `...` w standardzie C++ISO, zobacz [wielokropek i szablony wariadyczne](../cpp/ellipses-and-variadic-templates.md) oraz wielokropki i argumenty domyślne w [wyrażeniach przyrostkowych](../cpp/postfix-expressions.md).
+> Ten temat dotyczy języka C++/CLI. Aby uzyskać informacje `...` na temat używania w iso standard C ++, zobacz [Wielokropek i szablony variadic](../cpp/ellipses-and-variadic-templates.md) i wielokropek i domyślne argumenty w [postfix wyrażeń](../cpp/postfix-expressions.md).
 
-Parametr, który używa `...` musi być ostatnim parametrem na liście parametrów.
+Parametr, który `...` używa musi być ostatnim parametrem na liście parametrów.
 
 ## <a name="example"></a>Przykład
 
-### <a name="code"></a>Kod
+### <a name="code"></a>Code
 
 ```cpp
 // mcppv2_paramarray.cpp
@@ -51,7 +51,7 @@ int main() {
 
 ## <a name="code-example"></a>Przykład kodu
 
-Poniższy przykład pokazuje, jak wywołać z C# funkcji wizualizacji C++ , która przyjmuje zmienną liczbę argumentów.
+Poniższy przykład pokazuje, jak wywołać z języka C# visual C++ funkcja, która przyjmuje zmienną liczbę argumentów.
 
 ```cpp
 // mcppv2_paramarray2.cpp
@@ -64,9 +64,9 @@ public:
 };
 ```
 
-Funkcja `f` może być wywoływana z C# lub Visual Basic, na przykład, jakby była funkcją, która może przyjmować zmienną liczbę argumentów.
+Funkcja `f` może być wywoływana z języka C# lub Visual Basic, na przykład, jakby była to funkcja, która może przyjmować zmienną liczbę argumentów.
 
-W C#programie argument, który jest przesyłany do `ParamArray` parametru może być wywoływany przez zmienną liczbę argumentów. Poniższy przykład kodu znajduje się w C#.
+W języku C#argument, który `ParamArray` jest przekazywany do parametru może być wywoływana przez zmienną liczbę argumentów. Poniższy przykład kodu jest w języku C#.
 
 ```csharp
 // mcppv2_paramarray3.cs
@@ -83,7 +83,7 @@ public class X {
 }
 ```
 
-Wywołanie `f` w wizualizacji C++ może przekazać zainicjowaną tablicę lub tablicę o zmiennej długości.
+Wywołanie `f` w języku Visual C++ może przekazać zainicjowaną tablicę lub tablicę o zmiennej długości.
 
 ```cpp
 // mcpp_paramarray4.cpp

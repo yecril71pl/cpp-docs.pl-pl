@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 59c34a69b96cc9986db99b5f34bc38cf76f4909a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73c5775c2cb83dea79401615b31f2194094fac8e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374016"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753240"
 ---
 # <a name="cdrawingmanager-class"></a>Klasa CDrawingManager
 
@@ -174,7 +174,7 @@ Aby uzyskać więcej informacji na temat tworzenia mapy bitowej DIB, zobacz [Cre
 
 Wyświetla mapy bitowe, które mają przezroczyste lub półprzezroczyste piksele.
 
-```
+```cpp
 void DrawAlpha(
     CDC* pDstDC,
     const CRect& rectDst,
@@ -204,7 +204,7 @@ Ta metoda wykonuje alfa-mieszania dla dwóch map bitowych. Aby uzyskać więcej 
 
 Rysuje elipsę z podanymi kolorami wypełnienia i obramowania.
 
-```
+```cpp
 void DrawEllipse(
     const CRect& rect,
     COLORREF clrFill,
@@ -276,7 +276,7 @@ Prostokąt zdefiniowany przez *rect* musi mieć co najmniej 5 pikseli szerokośc
 
 Rysuje linię.
 
-```
+```cpp
 void DrawLine(
     int x1,
     int y1,
@@ -311,7 +311,7 @@ Ta metoda kończy się niepowodzeniem, jeśli *clrLine* jest równa -1.
 
 Rysuje prostokąt z dołączonymi kolorami wypełnienia i obramowania.
 
-```
+```cpp
 void DrawRect(
     const CRect& rect,
     COLORREF clrFill,
@@ -397,7 +397,7 @@ W poniższym przykładzie pokazano, jak używać `DrawShadow` metody `CDrawingMa
 
 Wypełnia prostokątny obszar dwoma gradientami kolorów.
 
-```
+```cpp
 void Fill4ColorsGradient(
     CRect rect,
     COLORREF colorStart1,
@@ -441,7 +441,7 @@ Ta metoda generuje błąd potwierdzenia, jeśli *nPercentage* jest mniejsza niż
 
 Wypełnia prostokątny obszar określonym gradientem kolorów.
 
-```
+```cpp
 void FillGradient(
     CRect rect,
     COLORREF colorStart,
@@ -481,7 +481,7 @@ W poniższym przykładzie pokazano, jak używać `FillGradient` metody `CDrawing
 
 Wypełnia prostokątny obszar określonym gradientem kolorów.
 
-```
+```cpp
 void FillGradient2 (
     CRect rect,
     COLORREF colorStart,
@@ -737,7 +737,7 @@ Aby przekonwertować kolor HSV lub HSL na reprezentację RGB, należy wywołać 
 
 Odwraca prostokątny obszar.
 
-```
+```cpp
 void MirrorRect(
     CRect rect,
     BOOL bHorz = TRUE);
@@ -1012,7 +1012,7 @@ Współczynnik ważony oblicza się za pomocą \* następującego wzoru: (kolor 
 
 Obraca źródłową zawartość kontrolera domeny wewnątrz danego prostokąta o 90 stopni.
 
-```
+```cpp
 void DrawRotated(
     CRect rectDest,
     CDC& dcSrc,

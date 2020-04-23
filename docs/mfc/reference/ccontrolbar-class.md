@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: deb95d76e6d68ba5b9fad82bca1d88fd71c5a547
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2f8ea48bf9a1f015928650085b07198b152771a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369393"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754800"
 ---
 # <a name="ccontrolbar-class"></a>Klasa CControlBar
 
@@ -293,7 +293,7 @@ Zastąpozuj tę funkcję, aby dostosować wygląd chwytaka paska sterowania.
 
 Wywołanie tej funkcji, aby włączyć pasek sterowania do zadokowania.
 
-```
+```cpp
 void EnableDocking(DWORD dwDockStyle);
 ```
 
@@ -450,7 +450,7 @@ Aby zaktualizować pojedynczy przycisk lub okienko, użyj makra ON_UPDATE_COMMAN
 
 Wywołanie tej funkcji, aby ustawić żądane style **CBRS_** dla paska sterowania.
 
-```
+```cpp
 void SetBarStyle(DWORD dwStyle);
 ```
 
@@ -493,7 +493,7 @@ Nie wpływa na ustawienia **WS_** (styl okna).
 
 Wywołanie tej funkcji, aby ustawić rozmiar obramowania paska sterowania.
 
-```
+```cpp
 void SetBorders(
     int cxLeft = 0,
     int cyTop = 0,
@@ -530,7 +530,7 @@ Poniższy przykład kodu ustawia górną i dolną obamówcę paska sterowania na
 
 Zmienia lokalnego właściciela paska sterowania.
 
-```
+```cpp
 void SetInPlaceOwner(CWnd* pWnd);
 ```
 

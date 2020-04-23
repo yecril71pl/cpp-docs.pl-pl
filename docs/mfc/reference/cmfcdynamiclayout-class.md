@@ -15,12 +15,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: b70deca78d079c6a95db225814fdc70528e48af9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 77dd3a84a0c76b92495bb062eeb83ff013933087
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367526"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752385"
 ---
 # <a name="cmfcdynamiclayout-class"></a>Klasa CMFCDynamicLayout
 
@@ -123,7 +123,7 @@ Położenie i rozmiar formantu podrzędnego jest zmieniana dynamicznie, gdy zmie
 
 Dodaje okno podrzędne, zazwyczaj formant, do listy okien, które są kontrolowane przez menedżera układu dynamicznego.
 
-```
+```cpp
 void Adjust();
 ```
 
@@ -186,7 +186,7 @@ Położenie i rozmiar formantu podrzędnego jest zmieniana dynamicznie, gdy zmie
 
 Pobiera prostokąt dla bieżącego obszaru klienta okna.
 
-```
+```cpp
 void GetHostWndRect(CRect& rect,);
 ```
 
@@ -383,7 +383,7 @@ Definiuje jako procent, jak daleko formant podrzędny jest przenoszony w pionie,
 
 Ustawia rozmiar okna, poniżej którego układ nie jest dostosowywany.
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 

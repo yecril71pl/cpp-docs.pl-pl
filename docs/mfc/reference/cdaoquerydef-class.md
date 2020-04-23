@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 133746ff1e4a9453f9563347724a47855a8a3228
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ed298c40daa9485683d0b989e47b97fdce9f6562
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368951"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754701"
 ---
 # <a name="cdaoquerydef-class"></a>Klasa CDaoQueryDef
 
@@ -410,7 +410,7 @@ Liczba pól zdefiniowanych w kwerendzie.
 
 Wywołanie tej funkcji elementu członkowskiego, aby uzyskać różne rodzaje informacji o polu zdefiniowanym w querydef.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -503,7 +503,7 @@ Aby uzyskać powiązane informacje, zobacz tematy "Obiekt parametrów", "Zbieran
 
 Wywołanie tej funkcji elementu członkowskiego, aby uzyskać informacje o parametr zdefiniowany w querydef.
 
-```
+```cpp
 void GetParameterInfo(
     int nIndex,
     CDaoParameterInfo& paraminfo,
@@ -714,7 +714,7 @@ Po otwarciu querydef można wywołać jego [execute](#execute) funkcji elementu 
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić ciąg połączenia querydef obiektu.
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -738,7 +738,7 @@ Aby uzyskać więcej informacji na temat struktury ciągu połączenia i przykł
 
 Wywołanie tej funkcji elementu członkowskiego, jeśli chcesz zmienić nazwę querydef, który nie jest tymczasowy.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -755,7 +755,7 @@ Nazwy querydef są unikatowymi nazwami zdefiniowanymi przez użytkownika. Można
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić limit czasu przed kwerendą do źródła danych ODBC limit czasu.
 
-```
+```cpp
 void SetODBCTimeout(short nODBCTimeout);
 ```
 
@@ -805,7 +805,7 @@ Określ wartość ustawioną `COleVariant` jako obiekt. Aby uzyskać informacje 
 
 Wywołanie tej funkcji elementu członkowskiego w ramach procesu konfigurowania kwerendy przekazywania SQL do zewnętrznej bazy danych.
 
-```
+```cpp
 void SetReturnsRecords(BOOL bReturnsRecords);
 ```
 
@@ -822,7 +822,7 @@ W takim przypadku należy utworzyć querydef i ustawić jego `CDaoQueryDef` wła
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić instrukcję SQL, która wykonuje querydef.
 
-```
+```cpp
 void SetSQL(LPCTSTR lpszSQL);
 ```
 

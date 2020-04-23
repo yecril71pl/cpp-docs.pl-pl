@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 14f92e51ecf776aad5312335dade7dfcd154c3eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9956537dbbbc34c69f6f6a6da8174ab594418386
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352035"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752662"
 ---
 # <a name="chtmlview-class"></a>Klasa CHtmlView
 
@@ -390,7 +390,7 @@ Wskazuje ciąg znaków zakończony z wartością null, który reprezentuje nazw�
 Określa atrybuty stylu okna. Domyślnie są ustawione style WS_VISIBLE i WS_CHILD Windows.
 
 *Rect*<br/>
-Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) określające rozmiar i położenie okna. Wartość *rectDefault* umożliwia systemowi Windows określenie rozmiaru i położenia nowego okna.
+Odwołanie do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) określające rozmiar i położenie okna. Wartość *rectDefault* umożliwia systemowi Windows określenie rozmiaru i położenia nowego okna.
 
 *pParentWnd*<br/>
 Wskaźnik do okna nadrzędnego formantu.
@@ -469,7 +469,7 @@ Standardowa wartość HRESULT. Aby uzyskać pełną listę możliwych wartości,
 
 Wywołanie tej funkcji elementu członkowskiego w celu wykonania polecenia w programie WebBrowser lub Internet Explorer.
 
-```
+```cpp
 void ExecWB(
     OLECMDID cmdID,
     OLECMDEXECOPT cmdexecopt,
@@ -960,7 +960,7 @@ Bieżąca szerokość okna w pikselach.
 
 Przechodzi wstecz do jednego elementu na liście historii.
 
-```
+```cpp
 void GoBack();
 ```
 
@@ -972,7 +972,7 @@ Dotyczy programu Internet Explorer i webbrowser.
 
 Przechodzi do przodu jeden element na liście historii.
 
-```
+```cpp
 void GoForward();
 ```
 
@@ -980,7 +980,7 @@ void GoForward();
 
 Przechodzi do bieżącej strony głównej lub początkowej określonej w oknie dialogowym Opcje internetowe programu Internet Explorer lub oknie dialogowym Właściwości internetowe, do które można uzyskać dostęp z Panelu sterowania.
 
-```
+```cpp
 void GoHome();
 ```
 
@@ -992,7 +992,7 @@ Dotyczy programu Internet Explorer i webbrowser.
 
 Przechodzi do bieżącej strony wyszukiwania, zgodnie z definicją w oknie dialogowym Opcje internetowe programu Internet Explorer lub w oknie dialogowym Właściwości internetowe, do które uzyskuje się dostęp z Panelu sterowania.
 
-```
+```cpp
 void GoSearch();
 ```
 
@@ -1029,7 +1029,7 @@ Dotyczy programu Internet Explorer i webbrowser.
 
 Wywołanie tej funkcji elementu członkowskiego, aby przejść do zasobu identyfikowanego przez adres URL.
 
-```
+```cpp
 void Navigate(
     LPCTSTR URL,
     DWORD dwFlags = 0,
@@ -1067,7 +1067,7 @@ Dotyczy programu Internet Explorer i webbrowser.
 
 Wywołanie tej funkcji elementu członkowskiego, aby przejść do zasobu identyfikowanego przez adres URL lub do pliku identyfikowanego przez pełną ścieżkę.
 
-```
+```cpp
 void Navigate2(
     LPITEMIDLIST pIDL,
     DWORD dwFlags = 0,
@@ -1825,7 +1825,7 @@ Dzięki temu okno hosta formantu obiektu zachowuje się tak samo, jak okno progr
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić właściwość skojarzoną z danym obiektem.
 
-```
+```cpp
 void PutProperty(
     LPCTSTR lpszProperty,
     const VARIANT& vtValue);
@@ -1935,7 +1935,7 @@ Dotyczy programu Internet Explorer i webbrowser.
 
 Ponownie ładuje adres URL lub plik, który aktualnie wyświetla przeglądarka internetowa.
 
-```
+```cpp
 void Refresh();
 ```
 
@@ -1949,7 +1949,7 @@ Dotyczy programu Internet Explorer i webbrowser.
 
 Ponownie ładuje plik, który jest obecnie wyświetlany w programie Internet Explorer.
 
-```
+```cpp
 void Refresh2(int nLevel);
 ```
 
@@ -1968,7 +1968,7 @@ Dotyczy programu Internet Explorer i webbrowser.
 
 Wywołanie tej funkcji elementu członkowskiego w celu wyświetlenia lub ukrycia paska adresu obiektu programu Internet Explorer.
 
-```
+```cpp
 void SetAddressBar(BOOL bNewValue);
 ```
 
@@ -1985,7 +1985,7 @@ Dotyczy programu Internet Explorer. Jeśli używasz tego wywołania z kontrolką
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić program Internet Explorer w trybie pełnoekranowym lub normalnym.
 
-```
+```cpp
 void SetFullScreen(BOOL bNewValue);
 ```
 
@@ -2004,7 +2004,7 @@ Dotyczy programu Internet Explorer. Jeśli używasz tego wywołania z kontrolką
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić wysokość okna głównego programu Internet Explorer.
 
-```
+```cpp
 void SetHeight(long nNewValue);
 ```
 
@@ -2021,7 +2021,7 @@ Dotyczy programu Internet Explorer i webbrowser.
 
 Ustawia poziome położenie okna głównego programu Internet Explorer.
 
-```
+```cpp
 void SetLeft(long nNewValue);
 ```
 
@@ -2034,7 +2034,7 @@ Współrzędna ekranu lewej krawędzi okna głównego.
 
 Wywołanie tej funkcji elementu członkowskiego w celu wyświetlenia lub ukrycia paska menu programu Internet Explorer.
 
-```
+```cpp
 void SetMenuBar(BOOL bNewValue);
 ```
 
@@ -2051,7 +2051,7 @@ Dotyczy programu Internet Explorer. Jeśli używasz tego wywołania z kontrolką
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić wartość wskazującą, czy webbrowser kontroli jest obecnie działa w trybie offline.
 
-```
+```cpp
 void SetOffline(BOOL bNewValue);
 ```
 
@@ -2070,7 +2070,7 @@ Dotyczy programu Internet Explorer i webbrowser.
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić wartość wskazującą, czy WebBrowser formant jest zarejestrowany jako przeglądarka najwyższego poziomu dla rozpoznawania nazw docelowych.
 
-```
+```cpp
 void SetRegisterAsBrowser(BOOL bNewValue);
 ```
 
@@ -2089,7 +2089,7 @@ Dotyczy programu Internet Explorer i webbrowser.
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić wartość wskazującą, czy WebBrowser formant jest zarejestrowany jako miejsce docelowe upuszczania dla nawigacji.
 
-```
+```cpp
 void SetRegisterAsDropTarget(BOOL bNewValue);
 ```
 
@@ -2106,7 +2106,7 @@ Dotyczy programu Internet Explorer i webbrowser.
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić wartość wskazującą, czy można wyświetlać dowolne okna dialogowe.
 
-```
+```cpp
 void SetSilent(BOOL bNewValue);
 ```
 
@@ -2123,7 +2123,7 @@ Dotyczy programu Internet Explorer i webbrowser.
 
 Wywołanie tej funkcji elementu członkowskiego, aby wyświetlić pasek stanu.
 
-```
+```cpp
 void SetStatusBar(BOOL bNewValue);
 ```
 
@@ -2140,7 +2140,7 @@ Dotyczy programu Internet Explorer. Jeśli używasz tego wywołania z kontrolką
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić wartość wskazującą, czy WebBrowser kontroli jest w trybie kinowym.
 
-```
+```cpp
 void SetTheaterMode(BOOL bNewValue);
 ```
 
@@ -2159,7 +2159,7 @@ Dotyczy programu Internet Explorer i webbrowser.
 
 Wywołanie tej funkcji elementu członkowskiego w celu wyświetlenia lub ukrycia paska narzędzi programu Internet Explorer.
 
-```
+```cpp
 void SetToolBar(int nNewValue);
 ```
 
@@ -2176,7 +2176,7 @@ Dotyczy programu Internet Explorer. Jeśli używasz tego wywołania z kontrolką
 
 Wywołanie tej funkcji elementu członkowskiego w celu ustawienia odległości między wewnętrzną górną krawędzią kontrolki WebBrowser a górną krawędzią kontenera
 
-```
+```cpp
 void SetTop(long nNewValue);
 ```
 
@@ -2193,7 +2193,7 @@ Dotyczy programu Internet Explorer i webbrowser.
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić stan widoczności WebBrowser kontroli.
 
-```
+```cpp
 void SetVisible(BOOL bNewValue);
 ```
 
@@ -2210,7 +2210,7 @@ Dotyczy programu Internet Explorer i webbrowser.
 
 Ustawia szerokość okna głównego programu Internet Explorer.
 
-```
+```cpp
 void SetWidth(long nNewValue);
 ```
 
@@ -2223,7 +2223,7 @@ Szerokość okna głównego programu Internet Explorer w pikselach.
 
 Wywołanie tej funkcji elementu członkowskiego, aby anulować wszelkie oczekujące nawigacji lub operacji pobierania i zatrzymać wszelkie elementy strony dynamicznej, takich jak dźwięki tła i animacje.
 
-```
+```cpp
 void Stop();
 ```
 

@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 5bc66ab2775ebb9023c65c9decae205604c978c6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 171038ebaaed815aa687c200fe3210bde8000be3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372231"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753590"
 ---
 # <a name="clistbox-class"></a>Klasa CListBox
 
@@ -717,7 +717,7 @@ Doubleword wartość była *dwItemData* parametr [wywołania SetItemData.](#seti
 
 Pobiera dostarczoną przez aplikację wartość 32-bitową skojarzoną z określonym elementem pola listy jako wskaźnik **(void).** <strong>\*</strong>
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1087,7 +1087,7 @@ Zobacz [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) op
 
 Usuwa wszystkie elementy z pola listy.
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1169,7 +1169,7 @@ Tej funkcji elementu członkowskiego należy używać tylko w polach listy wielo
 
 Ustawia zakotwiczenie w polu listy wielokrotnego wyboru, aby rozpocząć wybór rozszerzony.
 
-```
+```cpp
 void SetAnchorIndex(int nIndex);
 ```
 
@@ -1220,7 +1220,7 @@ Jeśli element nie jest widoczny, jest przewijany do widoku.
 
 Ustawia szerokość w pikselach wszystkich kolumn w polu listy wielokolumnowej (utworzonej w stylu [LBS_MULTICOLUMN).](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)
 
-```
+```cpp
 void SetColumnWidth(int cxWidth);
 ```
 
@@ -1266,7 +1266,7 @@ Aby ustawić lub usunąć zaznaczenie w polu listy z wieloma zaznaczeniami, uży
 
 Ustawia szerokość w pikselach, za pomocą której pole listy można przewijać w poziomie.
 
-```
+```cpp
 void SetHorizontalExtent(int cxExtent);
 ```
 
@@ -1434,7 +1434,7 @@ Aby zaznaczyć element z pola listy pojedynczego zaznaczenia, użyj [CListBox::S
 
 Ustawia pozycje tabulatora w polu listy.
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 

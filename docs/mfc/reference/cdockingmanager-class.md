@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 339e5d5e464aacb51d1c4ab8fe3c2957a3afbd4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76fd12b0817c99d0d08327f9d9156eadf3559dc5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375585"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753325"
 ---
 # <a name="cdockingmanager-class"></a>Klasa CDockingManager
 
@@ -332,7 +332,7 @@ PRAWDA, jeśli okienko dokowania zostało pomyślnie utworzone; FAŁSZ inaczej.
 
 Dodaje dojście do okienka paska do listy ukrytych okienek paska z kartami MDI.
 
-```
+```cpp
 void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -455,7 +455,7 @@ Parametr *dwAlignment* może mieć jedną z następujących wartości:
 
 Rozmiar okienka dokowania jest ponownie w trybie automatycznego ukrywania, tak aby obejmował całą szerokość lub wysokość obszaru klienta ramki w otoczeniu lokacji dokowania.
 
-```
+```cpp
 void AlignAutoHidePane(
     CPaneDivider* pDefaultSlider,
     BOOL bIsVisible = TRUE);
@@ -495,7 +495,7 @@ NULL, jeśli pasek narzędzi automatycznego ukrywania nie został utworzony; w p
 
 Przenosi zadokowane pręty, które mają określone wyrównanie do góry.
 
-```
+```cpp
 void BringBarsToTop(
     DWORD dwAlignment = 0,
     BOOL bExcludeDockedBars = TRUE);
@@ -513,7 +513,7 @@ void BringBarsToTop(
 
 Dodaje nazwy okienek dokowania i pasków narzędzi do menu.
 
-```
+```cpp
 void BuildPanesMenu(
     CMenu& menu,
     BOOL bToolbarsOnly);
@@ -531,7 +531,7 @@ void BuildPanesMenu(
 
 Oblicza oczekiwany prostokąt zadokowanego okna.
 
-```
+```cpp
 void CalcExpectedDockedRect(
     CWnd* pWnd,
     CPoint ptMouse,
@@ -631,7 +631,7 @@ Stan dokowania może być jedną z następujących wartości:
 
 Włącza lub wyłącza ładowanie układu dokowania z rejestru.
 
-```
+```cpp
 void DisableRestoreDockState(BOOL bDisable = TRUE);
 ```
 
@@ -648,7 +648,7 @@ Wywołaj tę metodę, gdy należy zachować bieżący układ okienek dokowania i
 
 Dokuje okienko do innego okienka lub do okna ramki.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -753,7 +753,7 @@ Domyślnie to menu nie jest wyświetlane.
 
 Informuje bibliotekę, aby wyświetlić specjalne menu kontekstowe, które ma listę pasków narzędzi aplikacji i okienka dokowania, gdy użytkownik kliknie prawy przycisk myszy, a biblioteka przetwarza komunikat WM_CONTEXTMENU.
 
-```
+```cpp
 void EnablePaneContextMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -973,7 +973,7 @@ Prostokąt zawierający zewnętrzne krawędzie ramki.
 
 Zwraca listę okienek należących do menedżera dokowania. Obejmuje to wszystkie okienka przestawne.
 
-```
+```cpp
 void GetPaneList(
     CObList& lstBars,
     BOOL bIncludeAutohide = FALSE,
@@ -1043,7 +1043,7 @@ Klasa zawierająca parametry inteligentnego dokowania dla bieżącego menedżera
 
 Ukrywa okienko, które jest w trybie autohide.
 
-```
+```cpp
 void HideAutoHidePanes(
     CDockablePane* pBarToExclude = NULL,
     BOOL bImmediately = FALSE);
@@ -1221,7 +1221,7 @@ PRAWDA, jeśli stan menedżera dokowania został pomyślnie załadowany; w przec
 
 Blokuje dane okno.
 
-```
+```cpp
 void LockUpdate(BOOL bLock);
 ```
 
@@ -1311,7 +1311,7 @@ virtual void OnActivateFrame(BOOL bActivate);
 
 Wywoływane przez platformę, gdy aktywne menu podręczne przetwarza komunikat WM_DESTROY.
 
-```
+```cpp
 void OnClosePopupMenu();
 ```
 
@@ -1340,7 +1340,7 @@ PRAWDA, jeśli metoda powiedzie się; w przeciwnym razie FALSE.
 
 Wywoływana przez platformę, gdy tworzy menu, które ma listę okienek.
 
-```
+```cpp
 void OnPaneContextMenu(CPoint point);
 ```
 
@@ -1448,7 +1448,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 Zwalnia puste kontenery okienka.
 
-```
+```cpp
 void ReleaseEmptyPaneContainers();
 ```
 
@@ -1456,7 +1456,7 @@ void ReleaseEmptyPaneContainers();
 
 Usuwa określone ukryte okienko paska.
 
-```
+```cpp
 void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -1486,7 +1486,7 @@ PRAWDA, jeśli określona ramka zostanie usunięta; FAŁSZ inaczej.
 
 Wyrejestrowanie okienka i usuwa go z listy w menedżerze dokowania.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pWnd,
     BOOL bDestroy,
@@ -1538,7 +1538,7 @@ PRAWDA, jeśli okienko zostanie pomyślnie zastąpione; FAŁSZ inaczej.
 
 Ośrodki ramki na liście mini ramek.
 
-```
+```cpp
 void ResortMiniFramesForZOrder();
 ```
 
@@ -1598,7 +1598,7 @@ PRAWDA zawsze.
 
 Zapisuje menedżera dokowania do archiwum.
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -1615,7 +1615,7 @@ Zapisywanie menedżera dokowania w archiwum polega na określeniu liczby pasków
 
 Ustawia rozmiar, szerokość i wysokość pasków sterujących i określonego okienka.
 
-```
+```cpp
 void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ```
 
@@ -1666,7 +1666,7 @@ virtual void SetDockState();
 
 Ustawia tryb podglądu wydruku pasków wyświetlanych w podglądzie wydruku.
 
-```
+```cpp
 void SetPrintPreviewMode(
     BOOL bPreview,
     CPrintPreviewState* pState);
@@ -1703,7 +1703,7 @@ Aby użyć domyślnego wyszukiwania znaczników inteligentnego dokowania, przeka
 
 Pokazuje lub ukrywa okna mini ramek.
 
-```
+```cpp
 void ShowDelayShowMiniFrames(BOOL bshow);
 ```
 
@@ -1733,7 +1733,7 @@ Zawsze FALSE.
 
 Uruchamia inteligentne dokowanie określonego okna zgodnie z wyrównaniem menedżera inteligentnego dokowania.
 
-```
+```cpp
 void StartSDocking(CWnd* pDockingWnd);
 ```
 
@@ -1746,7 +1746,7 @@ void StartSDocking(CWnd* pDockingWnd);
 
 Zatrzymuje inteligentne dokowanie.
 
-```
+```cpp
 void StopSDocking();
 ```
 

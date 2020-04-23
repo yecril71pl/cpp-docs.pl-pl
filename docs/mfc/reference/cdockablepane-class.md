@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: ae8dbed46dbcd7d2bd317c2113b2195d0531bce9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6dc87b36442691eafbfab87ac001df731f0d03b4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375609"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753337"
 ---
 # <a name="cdockablepane-class"></a>Klasa CDockablePane
 
@@ -881,7 +881,7 @@ Zastąpi tę metodę w klasie pochodnej, aby dostosować wygląd podpisu.
 
 Włącza lub wyłącza tryb autohide dla tego okienka i dla innych okienek w kontenerze.
 
-```
+```cpp
 void EnableAutohideAll(BOOL bEnable = TRUE);
 ```
 
@@ -1438,7 +1438,7 @@ Zastąpokaj tę metodę w klasie pochodnej, aby zaimplementować niestandardowe 
 
 Struktura wywołuje tę metodę, gdy okienko jest oddokowany.
 
-```
+```cpp
 void RemoveFromDefaultPaneDividier();
 ```
 
@@ -1476,7 +1476,7 @@ PRAWDA, jeśli wymiana zakończy się pomyślnie; w przeciwnym razie FALSE.
 
 Gdy okienko jest deserializowane, struktura wywołuje tę metodę, aby przywrócić domyślny dzielnik okienka.
 
-```
+```cpp
 void RestoreDefaultPaneDivider();
 ```
 
@@ -1524,7 +1524,7 @@ Wywołanie tej metody, aby przełączyć dokowane okienko do trybu autohide prog
 
 Ustawia przycisk automatycznego ukrywania i automatyczne ukrywanie paska narzędzi dla okienka.
 
-```
+```cpp
 void SetAutoHideParents(
     CMFCAutoHideBar* pToolBar,
     CMFCAutoHideButton* pBtn);
@@ -1542,7 +1542,7 @@ void SetAutoHideParents(
 
 Ustawia procent miejsca zajmowanego przez okienko w kontenerze.
 
-```
+```cpp
 void SetLastPercentInPaneContainer(int n);
 ```
 
@@ -1559,7 +1559,7 @@ Struktura dostosowuje okienka, aby użyć nowej wartości, gdy układ jest ponow
 
 Ustawia przywrócony domyślny dzielnik okienka.
 
-```
+```cpp
 void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```
 
@@ -1576,7 +1576,7 @@ Przywrócony domyślny dzielnik okienka jest uzyskiwany po zdesenializacji okien
 
 Ustawia informacje o klasie środowiska wykonawczego dla okna z kartami, które jest tworzone, gdy dwa okienka dokują razem.
 
-```
+```cpp
 void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```
 

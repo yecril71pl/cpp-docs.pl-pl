@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: e9aeee31d2952d5362c983934ce85f0332f553fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 79f52d275d360cf8447b8977b8196ea5f95eacd8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366633"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752284"
 ---
 # <a name="ctaskdialog-class"></a>Klasa CTaskDialog
 
@@ -255,7 +255,7 @@ Próbka CTaskDialog
 
 Dodaje nowy kontrolka `CTaskDialog`przycisku polecenia do pliku .
 
-```
+```cpp
 void AddCommandControl(
     int nCommandControlID,
     const CString& strCaption,
@@ -291,7 +291,7 @@ Gdy użytkownik wybierze kontrolkę `CTaskDialog` przycisku polecenia, zamyka. J
 
 Dodaje przycisk radiowy `CTaskDialog`do pliku .
 
-```
+```cpp
 void CTaskDialog::AddRadioButton(
     int nRadioButtonID,
     const CString& strCaption,
@@ -648,7 +648,7 @@ Ta funkcja służy do określenia w czasie wykonywania, czy `CTaskDialog` komput
 
 Dodaje formanty przycisku polecenia przy użyciu danych z tabeli ciągów.
 
-```
+```cpp
 void LoadCommandControls(
     int nIDCommandControlsFirst,
     int nIDCommandControlsLast);
@@ -676,7 +676,7 @@ Domyślnie nowe kontrolki przycisków poleceń są włączone i nie wymagają po
 
 Dodaje kontrolki przycisku opcji przy użyciu danych z tabeli ciągów.
 
-```
+```cpp
 void LoadRadioButtons(
     int nIDRadioButtonsFirst,
     int nIDRadioButtonsLast);
@@ -930,7 +930,7 @@ Zastąpi tę metodę w klasie pochodnej, aby zaimplementować zachowanie niestan
 
 Usuwa wszystkie kontrolki przycisku polecenia z pliku `CTaskDialog`.
 
-```
+```cpp
 void RemoveAllCommandControls();
 ```
 
@@ -942,7 +942,7 @@ void RemoveAllCommandControls();
 
 Usuwa wszystkie przyciski radiowe z pliku `CTaskDialog`.
 
-```
+```cpp
 void RemoveAllRadioButtons();
 ```
 
@@ -954,7 +954,7 @@ void RemoveAllRadioButtons();
 
 Aktualizuje kontrolkę `CTaskDialog`przycisku polecenia na pliku .
 
-```
+```cpp
 void SetCommandControlOptions(
     int nCommandControlID,
     BOOL bEnabled,
@@ -984,7 +984,7 @@ Ta metoda służy do zmiany, czy formant przycisku polecenia jest włączony `CT
 
 Aktualizuje podzbiór typowych przycisków, które mają być włączone i wymagać elewacji funkcji Kontrola konta użytkownika.
 
-```
+```cpp
 void SetCommonButtonOptions(
     int nDisabledButtonMask,
     int nElevationButtonMask = 0);
@@ -1014,7 +1014,7 @@ Ta metoda włącza dowolny przycisk, `CTaskDialog` który jest dostępny dla, al
 
 Dodaje typowe przyciski do pliku `CTaskDialog`.
 
-```
+```cpp
 void SetCommonButtons(
     int nButtonMask,
     int nDisabledButtonMask = 0,
@@ -1050,7 +1050,7 @@ Domyślnie wszystkie typowe przyciski są włączone i nie wymagają podniesieni
 
 Aktualizuje zawartość `CTaskDialog`pliku .
 
-```
+```cpp
 void SetContent(const CString& strContent);
 ```
 
@@ -1071,7 +1071,7 @@ Zawartość `CTaskDialog` klasy jest tekst, który jest wyświetlany użytkownik
 
 Określa domyślny kontrolka przycisku polecenia.
 
-```
+```cpp
 void SetDefaultCommandControl(int nCommandControlID);
 ```
 
@@ -1094,7 +1094,7 @@ Ta metoda zgłasza wyjątek, jeśli nie można znaleźć formantu przycisku pole
 
 Określa domyślny przycisk opcji.
 
-```
+```cpp
 void SetDefaultRadioButton(int nRadioButtonID);
 ```
 
@@ -1117,7 +1117,7 @@ Ta metoda zgłasza wyjątek, jeśli nie można znaleźć przycisku opcji określ
 
 Dostosowuje szerokość pliku `CTaskDialog`.
 
-```
+```cpp
 void SetDialogWidth(int nWidth = 0);
 ```
 
@@ -1140,7 +1140,7 @@ Jeśli *nWidth* jest ustawiona na 0, ta metoda ustawia okno dialogowe na domyśl
 
 Aktualizuje obszar rozbudowy pliku `CTaskDialog`.
 
-```
+```cpp
 void SetExpansionArea(
     const CString& strExpandedInformation,
     const CString& strCollapsedLabel = _T(""),
@@ -1172,7 +1172,7 @@ Gdy `CTaskDialog` jest wyświetlany po raz pierwszy, nie pokazuje `strCollapsedL
 
 Aktualizuje ikonę stopki pliku `CTaskDialog`.
 
-```
+```cpp
 void SetFooterIcon(HICON hFooterIcon);
 void SetFooterIcon(LPCWSTR lpszFooterIcon);
 ```
@@ -1201,7 +1201,7 @@ A `CTaskDialog` może akceptować tylko ikonę `HICON` stopki lub `LPCWSTR` jako
 
 Aktualizuje tekst na stopce `CTaskDialog`pliku .
 
-```
+```cpp
 void SetFooterText(const CString& strFooterText);
 ```
 
@@ -1222,7 +1222,7 @@ Obok tekstu stopki na spodzie przycisku `CTaskDialog`. Ikonę stopki można zmie
 
 Aktualizuje główną `CTaskDialog`ikonę pliku .
 
-```
+```cpp
 void SetMainIcon(HICON hMainIcon);
 void SetMainIcon(LPCWSTR lpszMainIcon);
 ```
@@ -1249,7 +1249,7 @@ A `CTaskDialog` może zaakceptować tylko `HICON` ikonę główną lub `LPCWSTR`
 
 Aktualizuje główną `CTaskDialog`instrukcję .
 
-```
+```cpp
 void SetMainInstruction(const CString& strInstructions);
 ```
 
@@ -1270,7 +1270,7 @@ Główną instrukcją `CTaskDialog` klasy jest tekst wyświetlany użytkownikowi
 
 Konfiguruje opcje `CTaskDialog`dla pliku .
 
-```
+```cpp
 void SetOptions(int nOptionFlag);
 ```
 
@@ -1312,7 +1312,7 @@ W poniższej tabeli wymieniono wszystkie prawidłowe opcje.
 
 Konfiguruje pasek ramki zaznaczenia dla `CTaskDialog` i dodaje go do okna dialogowego.
 
-```
+```cpp
 void SetProgressBarMarquee(
     BOOL bEnabled = TRUE,
     int nMarqueeSpeed = 0);
@@ -1342,7 +1342,7 @@ Ta metoda zgłasza wyjątek z makra [ENSURE,](diagnostic-services.md#ensure) je�
 
 Dostosowuje położenie paska postępu.
 
-```
+```cpp
 void SetProgressBarPosition(int nProgressPos);
 ```
 
@@ -1363,7 +1363,7 @@ Ta metoda zgłasza wyjątek z [upewnij](diagnostic-services.md#ensure) makro if 
 
 Dostosowuje zakres paska postępu.
 
-```
+```cpp
 void SetProgressBarRange(
     int nRangeMin,
     int nRangeMax);
@@ -1393,7 +1393,7 @@ Ta metoda zgłasza wyjątek z makra [ENSURE,](diagnostic-services.md#ensure) je�
 
 Ustawia stan paska postępu i wyświetla `CTaskDialog`go na pliku .
 
-```
+```cpp
 void SetProgressBarState(int nState = PBST_NORMAL);
 ```
 
@@ -1424,7 +1424,7 @@ Można ustawić, gdzie zatrzymuje się pasek postępu za pomocą [CTaskDialog::S
 
 Włącza lub wyłącza przycisk radiowy.
 
-```
+```cpp
 void SetRadioButtonOptions(
     int nRadioButtonID,
     BOOL bEnabled);
@@ -1450,7 +1450,7 @@ Ta metoda zgłasza wyjątek z makra [ENSURE,](diagnostic-services.md#ensure) je�
 
 Ustawia sprawdzony stan pola wyboru weryfikacji.
 
-```
+```cpp
 void SetVerificationCheckbox(BOOL bChecked);
 ```
 
@@ -1467,7 +1467,7 @@ void SetVerificationCheckbox(BOOL bChecked);
 
 Ustawia tekst wyświetlany po prawej stronie pola wyboru weryfikacji.
 
-```
+```cpp
 void SetVerificationCheckboxText(CString& strVerificationText);
 ```
 
@@ -1488,7 +1488,7 @@ Ta metoda zgłasza wyjątek z [upewnij](diagnostic-services.md#ensure) makro, `C
 
 Ustawia tytuł pliku `CTaskDialog`.
 
-```
+```cpp
 void SetWindowTitle(CString& strWindowTitle);
 ```
 

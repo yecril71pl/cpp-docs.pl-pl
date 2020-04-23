@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 758fb78fbd4e25a0e2fb8cea300c5371ece04fb4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a79cc0ab2c01633f96430477aa536a60385461e9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366885"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750804"
 ---
 # <a name="chotkeyctrl-class"></a>Klasa CHotKeyCtrl
 
@@ -151,7 +151,7 @@ Określa rozszerzony styl tworzonego formantu. Aby uzyskać listę rozszerzonych
 Określa styl formantu klawisza skrótu. Zastosuj dowolną kombinację stylów sterowania. Aby uzyskać więcej informacji, zobacz [Typowe style sterowania](/windows/win32/Controls/common-control-styles) w panelu Windows SDK.
 
 *Rect*<br/>
-Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
+Odwołanie do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest nadrzędnym formantu.
@@ -254,7 +254,7 @@ Nazwa klawisza zwracana przez tę funkcję pochodzi ze sterownika klawiatury, dz
 
 Ustawia skrót klawiaturowy dla kontrolki klawiszy skrótu.
 
-```
+```cpp
 void SetHotKey(
     WORD wVirtualKeyCode,
     WORD wModifiers);
@@ -285,7 +285,7 @@ Kod klucza wirtualnego i klawisze modyfikatora razem definiują skrót klawiatur
 
 Wywołanie tej funkcji, aby zdefiniować nieprawidłowe kombinacje i domyślną kombinację modyfikatora dla formantu klawisza skrótu.
 
-```
+```cpp
 void SetRules(
     WORD wInvalidComb,
     WORD wModifiers);

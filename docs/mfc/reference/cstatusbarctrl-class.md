@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 7a594fdb2d3a35ce905b7790026f7418b7435f3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57d040a7efd87d384e0aaa6275593bc91f38cc86
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366028"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753034"
 ---
 # <a name="cstatusbarctrl-class"></a>Klasa CStatusBarCtrl
 
@@ -132,7 +132,7 @@ virtual BOOL Create(
 Określa styl formantu paska stanu. Zastosuj dowolną kombinację stylów formantu paska stanu wymienionych w [typowych stylach sterowania](/windows/win32/Controls/common-control-styles) w zestaw windows SDK. Ten parametr musi zawierać styl WS_CHILD. Powinien również zawierać styl WS_VISIBLE.
 
 *Rect*<br/>
-Określa rozmiar i położenie formantu paska stanu. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/previous-versions/dd162897\(v=vs.85\))
+Określa rozmiar i położenie formantu paska stanu. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Określa okno nadrzędne formantu paska `CDialog`stanu, zwykle . Nie może być null.
@@ -178,7 +178,7 @@ Określa rozszerzony styl tworzonego formantu. Aby uzyskać listę rozszerzonych
 Określa styl formantu paska stanu. Zastosuj dowolną kombinację stylów formantu paska stanu wymienionych w [typowych stylach sterowania](/windows/win32/Controls/common-control-styles) w zestaw windows SDK. Ten parametr musi zawierać styl WS_CHILD. Powinien również zawierać styl WS_VISIBLE.
 
 *Rect*<br/>
-Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
+Odwołanie do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest nadrzędnym formantu.
@@ -344,7 +344,7 @@ BOOL GetRect(
 Indeks od zera części, której prostokąt ograniczający ma zostać pobrany.
 
 *Lprect*<br/>
-Adres struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) która odbiera prostokąt ograniczający.
+Adres struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) która odbiera prostokąt ograniczający.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -530,7 +530,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie [SB_SETICON](/window
 
 Ustawia minimalną wysokość obszaru rysunku formantu paska stanu.
 
-```
+```cpp
 void SetMinHeight(int nMin);
 ```
 
@@ -632,7 +632,7 @@ Komunikat unieważnia część formantu, który uległ zmianie, powodując, że 
 
 Ustawia tekst etykietki narzędzia dla okienka na pasku stanu.
 
-```
+```cpp
 void SetTipText(
     int nPane,
     LPCTSTR pszTipText);

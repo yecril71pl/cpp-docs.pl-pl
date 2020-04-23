@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 7b63fb66b800bd758c7f4c89c553e857ad9bbfbc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58fddeef9cb0afe930af84b05e6a87871f729da4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367771"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752573"
 ---
 # <a name="cmfccolorbar-class"></a>Klasa CMFCColorBar
 
@@ -380,7 +380,7 @@ Standardową etykietą dla drugiego przycisku jest **Więcej kolorów...**.
 
 Oblicza pionowe i poziome marginesy, które są wymagane do przechowywania przycisków na pasku kolorów i dostosowuje położenie tych przycisków.
 
-```
+```cpp
 void ContextToSize(
     BOOL bSquareButtons = TRUE,
     BOOL bCenterButtons = TRUE);
@@ -504,7 +504,7 @@ PRAWDA, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie FALSE.
 
 Pokazuje lub ukrywa przycisk automatyczny.
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -532,7 +532,7 @@ Etykieta tekstowa przycisku automatycznego jest usuwana, jeśli parametr *lpszLa
 
 Włącza lub wyłącza wyświetlanie okna dialogowego, które pozwala użytkownikowi wybrać więcej kolorów.
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -802,7 +802,7 @@ Wskaźnik do palety, która jest zastępowana przez paletę przycisku nadrzędne
 
 Ustawia aktualnie zaznaczony kolor.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -837,7 +837,7 @@ Ta metoda zmienia nazwę określonego koloru `CMFCColorBar` we wszystkich obiekt
 
 Ustawia nowy identyfikator polecenia dla kontrolki paska kolorów.
 
-```
+```cpp
 void SetCommandID(UINT nCommandID);
 ```
 
@@ -854,7 +854,7 @@ Wywołanie tej metody, aby zmodyfikować identyfikator polecenia formantu paska 
 
 Ustawia listę kolorów używanych w bieżącym dokumencie.
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszCaption,
     CList<COLORREF,COLORREF>& lstDocColors,
@@ -880,7 +880,7 @@ void SetDocumentColors(
 
 Ustawia margines poziomy, który jest spacją między lewą lub prawą komórką kolorów a granicą obszaru klienta.
 
-```
+```cpp
 void SetHorzMargin(int nHorzMargin);
 ```
 
@@ -897,7 +897,7 @@ Domyślnie [CMFCColorBar::CMFCColorBar](#cmfccolorbar) konstruktor ustawia margi
 
 Ustawia `m_pWndPropList` element członkowski chronionych danych na określony wskaźnik do formantu siatki właściwości.
 
-```
+```cpp
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```
 
@@ -911,7 +911,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 
 Ustawia margines pionowy, czyli odstęp między górną lub dolną komórką kolorów a granicą obszaru klienta.
 
-```
+```cpp
 void SetVertMargin(int nVertMargin);
 ```
 

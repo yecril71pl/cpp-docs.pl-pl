@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: a3288949bd4867115c32d2cbffd09cf4f7c6b40b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ac64a3feac5d124c2bfa67fc857dad5045c2dd28
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367811"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754889"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Klasa CMFCBaseVisualManager
 
@@ -101,7 +101,7 @@ Ponieważ jest to klasa podstawowa dla wszystkich menedżerów wizualnych, możn
 
 Wywołania `CloseThemeData` wszystkich uchwytów `UpdateSystemColors`uzyskanych w pliku .
 
-```
+```cpp
 void CleanUpThemes();
 ```
 
@@ -400,7 +400,7 @@ Aktualnie wybrany kolor motywu systemu Windows. Może być jedną z następując
 
 Wywołania, `OpenThemeData` aby uzyskać uchwyty do rysowania różnych formantów: okna, paski narzędzi, przyciski i tak dalej.
 
-```
+```cpp
 void UpdateSystemColors();
 ```
 

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-ms.openlocfilehash: 554b9fe364c6a213e038416a605c17cdd4f8e7d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bb4e09eabab17061812ed22b2739d06accd57fee
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368798"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753498"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Klasa CMFCRibbonStatusBarPane
 
@@ -259,7 +259,7 @@ virtual void OnFinishAnimation();
 
 Zdefiniuj najdłuższy tekst, który może być wyświetlany w okienku paska stanu bez obcinania.
 
-```
+```cpp
 void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```
 
@@ -276,7 +276,7 @@ Biblioteka oblicza rozmiar tekstu, który *lpszAlmostLargeText* określa i odpow
 
 Dołącza do okienka paska stanu listę obrazów, która może służyć do animacji.
 
-```
+```cpp
 void SetAnimationList(
     HBITMAP hBmpAnimationList,
     int cxAnimation=16,
@@ -310,7 +310,7 @@ PRAWDA, jeśli lista obrazów została pomyślnie dołączona do okienka paska s
 
 Ustawia wyrównanie tekstu etykiety okienka paska stanu.
 
-```
+```cpp
 void SetTextAlign(int nAlign);
 ```
 
@@ -333,7 +333,7 @@ void SetTextAlign(int nAlign);
 
 Uruchamia animację przypisaną do okienka.
 
-```
+```cpp
 void StartAnimation(
     UINT nFrameDelay=500,
     UINT nDuration=-1);
@@ -355,7 +355,7 @@ Przed wywołaniem `StartAnimation` za pomocą programu `SetAnimationList`.
 
 Zatrzymuje animację przypisaną do okienka paska stanu.
 
-```
+```cpp
 void StopAnimation();
 ```
 

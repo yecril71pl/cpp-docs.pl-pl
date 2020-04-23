@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: HT
+ms.openlocfilehash: 76273e7fbfa50e610b437e11859821374413d008
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746596"
+ms.locfileid: "82032137"
 ---
 # <a name="cpatht-class"></a>Klasa CPatht
 
@@ -102,8 +102,8 @@ Klasa ciągu ATL/MFC do użycia dla ścieżki (zobacz [CStringT](../../atl-mfc-s
 |[CPathT::Canonicalize](#canonicalize)|Wywołanie tej metody, aby przekonwertować ścieżkę do postaci kanonicznej.|
 |[CPathT::Kombajn](#combine)|Wywołanie tej metody, aby połączyć ciąg reprezentujący nazwę katalogu i ciąg reprezentujący nazwę ścieżki pliku w jednej ścieżce.|
 |[CPathT::CommonPrefix](#commonprefix)|Wywołanie tej metody, aby ustalić, czy określona ścieżka dzieli wspólny prefiks z bieżącą ścieżką.|
-|[CPathT::CompactPath](#compactpath)|Wywołanie tej metody, aby obciąć ścieżkę pliku, aby zmieścić się w obrębie danej szerokości piksela, zastępując składniki ścieżki elipsami.|
-|[CPathT::CompactPathEx](#compactpathex)|Wywołanie tej metody, aby obciąć ścieżkę pliku, aby zmieścić się w określonej liczbie znaków, zastępując składniki ścieżki elipsami.|
+|[CPathT::CompactPath](#compactpath)|Wywołanie tej metody, aby obciąć ścieżkę pliku, aby zmieścić się w danej szerokości piksela, zastępując składniki ścieżki wielokropkiem.|
+|[CPathT::CompactPathEx](#compactpathex)|Wywołanie tej metody, aby obciąć ścieżkę pliku, aby zmieścić się w określonej liczbie znaków, zastępując składniki ścieżki wielokropkiem.|
 |[CPathT::FileExists](#fileexists)|Wywołanie tej metody, aby sprawdzić, czy plik w tej nazwie ścieżki istnieje.|
 |[CPathT::FindExtension](#findextension)|Wywołanie tej metody, aby znaleźć położenie rozszerzenia pliku w ścieżce.|
 |[CPathT::FindFileName](#findfilename)|Wywołanie tej metody, aby znaleźć położenie nazwy pliku w ścieżce.|
@@ -288,7 +288,7 @@ Prefiks jest jednym z tych\\\\typów: "C: ", ".", "..", ".. \\\\". Aby uzyskać 
 
 ## <a name="cpathtcompactpath"></a><a name="compactpath"></a>CPathT::CompactPath
 
-Wywołanie tej metody, aby obciąć ścieżkę pliku, aby zmieścić się w obrębie danej szerokości piksela, zastępując składniki ścieżki elipsami.
+Wywołanie tej metody, aby obciąć ścieżkę pliku, aby zmieścić się w danej szerokości piksela, zastępując składniki ścieżki wielokropkiem.
 
 ```
 BOOL CompactPath(HDC hDC, UINT nWidth);
@@ -312,7 +312,7 @@ Aby uzyskać więcej informacji, zobacz [PathCompactPath](/windows/win32/api/shl
 
 ## <a name="cpathtcompactpathex"></a><a name="compactpathex"></a>CPathT::CompactPathEx
 
-Wywołanie tej metody, aby obciąć ścieżkę pliku, aby zmieścić się w określonej liczbie znaków, zastępując składniki ścieżki elipsami.
+Wywołanie tej metody, aby obciąć ścieżkę pliku, aby zmieścić się w określonej liczbie znaków, zastępując składniki ścieżki wielokropkiem.
 
 ```
 BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);

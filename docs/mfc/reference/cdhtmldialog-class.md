@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 57ea8f3a1dbbce4fcfa350bd99e4ee628e9675c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e2e4306320c52b8276d915848dfa6e460982c92b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375687"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753375"
 ---
 # <a name="cdhtmldialog-class"></a>Klasa CDHtmlDialog
 
@@ -348,7 +348,7 @@ Można zastąpić tę funkcję elementu członkowskiego, aby zwrócić wystąpie
 
 Wymienia dane między zmienną elementu członkowskiego i wartość właściwości formantu ActiveX na stronie HTML.
 
-```
+```cpp
 void DDX_DHtml_AxControl(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -387,7 +387,7 @@ Element członkowski danych, typu VARIANT, [COleVariant](../../mfc/reference/col
 
 Wymiana danych między zmienną członkowną a polem wyboru na stronie HTML.
 
-```
+```cpp
 void DDX_DHtml_CheckBox(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -413,7 +413,7 @@ Wartość wymieniana.
 
 Wymiana danych między zmienną elementu członkowskiego a dowolną właściwością elementu HTML na stronie HTML.
 
-```
+```cpp
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -475,7 +475,7 @@ Wartość wymieniana.
 
 Wymiana danych między zmienną członkowną a przyciskiem opcji na stronie HTML.
 
-```
+```cpp
 void DDX_DHtml_Radio(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -497,7 +497,7 @@ Wartość wymieniana.
 
 Pobiera lub ustawia indeks pola listy na stronie HTML.
 
-```
+```cpp
 void DDX_DHtml_SelectIndex(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -519,7 +519,7 @@ Wartość wymieniana.
 
 Pobiera lub ustawia tekst wyświetlany wpisu pola listy (na podstawie bieżącego indeksu) na stronie HTML.
 
-```
+```cpp
 void DDX_DHtml_SelectString(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -541,7 +541,7 @@ Wartość wymieniana.
 
 Pobiera lub ustawia wartość wpisu pola listy (na podstawie bieżącego indeksu) na stronie HTML.
 
-```
+```cpp
 void DDX_DHtml_SelectValue(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -567,7 +567,7 @@ Wartość wymieniana.
 
 Odłącza niemodytowe `CDHtmlDialog` okno dialogowe od obiektu i niszczy obiekt.
 
-```
+```cpp
 void DestroyModeless();
 ```
 
@@ -684,7 +684,7 @@ Przeciążenia są wymienione od najmniej wydajnych u góry do najbardziej wydaj
 
 Pobiera jednolity lokalizator zasobów (URL) skojarzony z bieżącym dokumentem.
 
-```
+```cpp
 void GetCurrentUrl(CString& szUrl);
 ```
 
@@ -1066,7 +1066,7 @@ LPTSTR m_szHtmlResID;
 
 Przechodzi do zasobu identyfikowane przez adres URL, który jest określony przez *lpszURL*.
 
-```
+```cpp
 void Navigate(
     LPCTSTR lpszURL,
     DWORD dwFlags = 0,
@@ -1242,7 +1242,7 @@ Zwraca E_NOTIMPL.
 
 Ustawia właściwość formantu ActiveX na nową wartość.
 
-```
+```cpp
 void SetControlProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1280,7 +1280,7 @@ Ciąg zawierający nazwę właściwości do ustawionego.
 
 Ustawia `innerHTML` właściwość elementu HTML.
 
-```
+```cpp
 void SetElementHtml(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1305,7 +1305,7 @@ Wskaźnik `IUnknown` elementu HTML.
 
 Ustawia właściwość elementu HTML.
 
-```
+```cpp
 void SetElementProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1327,7 +1327,7 @@ Nowa wartość właściwości.
 
 Ustawia `innerText` właściwość elementu HTML.
 
-```
+```cpp
 void SetElementText(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1352,7 +1352,7 @@ Wskaźnik `IUnknown` elementu HTML.
 
 Ustawia interfejs hosta. `IDispatch`
 
-```
+```cpp
 void SetExternalDispatch(IDispatch* pdispExternal);
 ```
 
@@ -1365,7 +1365,7 @@ Nowy `IDispatch` interfejs.
 
 Ustawia flagi interfejsu użytkownika hosta.
 
-```
+```cpp
 void SetHostFlags(DWORD dwFlags);
 ```
 

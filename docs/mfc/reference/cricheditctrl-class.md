@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 07c3c864e91d8aebc8d70f54fed4286a24986208
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c601d036d05048bff9b60f837140e8f7a873964
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368272"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754433"
 ---
 # <a name="cricheditctrl-class"></a>Klasa CRichEditCtrl
 
@@ -377,7 +377,7 @@ Aby uzyskać więcej informacji, zobacz [EM_CHARFROMPOS](/windows/win32/Controls
 
 Usuwa (czyści) bieżące zaznaczenie (jeśli istnieje) w formancie edycji bogatej.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -397,7 +397,7 @@ Aby uzyskać więcej informacji, zobacz [WM_CLEAR](/windows/win32/dataxchg/wm-cl
 
 Kopiuje bieżące zaznaczenie (jeśli istnieje) w formancie edycji bogatej do Schowka.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -489,7 +489,7 @@ Określa rozszerzony styl tworzonego formantu. Aby uzyskać listę rozszerzonych
 Określa styl formantu edycji. Stosowanie kombinacji stylów okien wymienionych w sekcji **Uwagi stylów** [formowania i tworzenia](#create) i [edytowania](/windows/win32/Controls/edit-control-styles), opisanych w zestaw windows SDK.
 
 *Rect*<br/>
-Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
+Odwołanie do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest nadrzędnym formantu.
@@ -525,7 +525,7 @@ Użyj [funkcji Utwórz,](#create) aby utworzyć formant edycji bogatej w system 
 
 Usuń (wycina) bieżące zaznaczenie (jeśli istnieje) w formancie edycji bogatej i kopiuje usunięty tekst do Schowka.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -572,7 +572,7 @@ Aby uzyskać więcej informacji, zobacz [EM_DISPLAYBAND](/windows/win32/Controls
 
 Resetuje (wyczyść) flagę cofania tego zaawansowanego formantu edycji.
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -966,7 +966,7 @@ Ta funkcja elementu członkowskiego jest dostępna tylko w wersjach systemu oper
 
 Pobiera prostokąt formatowania dla tego `CRichEditCtrl` obiektu.
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -1005,7 +1005,7 @@ Typy akcji, które można cofnąć lub ponownie ponawiać, obejmują operacje wp
 
 Pobiera granice bieżącego zaznaczenia w `CRichEditCtrl` tym obiekcie.
 
-```
+```cpp
 void GetSel(CHARRANGE& cr) const;
 
 void GetSel(
@@ -1256,7 +1256,7 @@ Ta funkcja elementu członkowskiego jest dostępna tylko dla wersji systemu oper
 
 Zmienia widoczność zaznaczenia.
 
-```
+```cpp
 void HideSelection(
     BOOL bHide,
     BOOL bPerm);
@@ -1284,7 +1284,7 @@ Aby uzyskać więcej informacji, zobacz [EM_HIDESELECTION](/windows/win32/Contro
 
 Ogranicza długość tekstu, który użytkownik może wprowadzić w formancie edycji.
 
-```
+```cpp
 void LimitText(long nChars = 0);
 ```
 
@@ -1391,7 +1391,7 @@ Aby uzyskać więcej informacji, zobacz [EM_LINELENGTH](/windows/win32/Controls/
 
 Przewija tekst wielowierszowego formantu edycji.
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -1421,7 +1421,7 @@ Aby uzyskać więcej informacji, zobacz [EM_LINESCROLL](/windows/win32/Controls/
 
 Wstawia dane ze Schowka do punktu `CRichEditCtrl` wstawiania, położenia cieszy.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1439,7 +1439,7 @@ Aby uzyskać więcej informacji, zobacz [WM_PASTE](/windows/win32/dataxchg/wm-pa
 
 Wkleja dane w określonym formacie `CRichEditCtrl` Schowka do tego obiektu.
 
-```
+```cpp
 void PasteSpecial(
     UINT nClipFormat,
     DWORD dvAspect = 0,
@@ -1508,7 +1508,7 @@ Aby uzyskać więcej informacji, zobacz [EM_REDO](/windows/win32/Controls/em-red
 
 Zastępuje bieżące zaznaczenie `CRichEditCtrl` tego obiektu określonym tekstem.
 
-```
+```cpp
 void ReplaceSel(
     LPCTSTR lpszNewText,
     BOOL bCanUndo = FALSE);
@@ -1540,7 +1540,7 @@ Aby uzyskać więcej informacji, zobacz [EM_REPLACESEL](/windows/win32/Controls/
 
 Wymusza ten `CRichEditCtrl` obiekt do wysyłania EN_REQUESTRESIZE wiadomości powiadomień do okna nadrzędnego.
 
-```
+```cpp
 void RequestResize();
 ```
 
@@ -1667,7 +1667,7 @@ Aby uzyskać więcej informacji, zobacz [EM_SETEVENTMASK](/windows/win32/Control
 
 Ustawia lub czyści zmodyfikowaną flagę dla formantu edycji.
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1713,7 +1713,7 @@ Aby uzyskać więcej informacji, zobacz [EM_SETOLECALLBACK](/windows/win32/Contr
 
 Ustawia opcje dla `CRichEditCtrl` tego obiektu.
 
-```
+```cpp
 void SetOptions(
     WORD wOp,
     DWORD dwFlags);
@@ -1848,7 +1848,7 @@ Aby uzyskać więcej informacji, zobacz [EM_SETREADONLY](/windows/win32/Controls
 
 Ustawia prostokąt formatowania dla `CRichEditCtrl` tego obiektu.
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1871,7 +1871,7 @@ Aby uzyskać więcej informacji, zobacz [EM_SETRECT](/windows/win32/Controls/em-
 
 Ustawia zaznaczenie `CRichEditCtrl` w tym obiekcie.
 
-```
+```cpp
 void SetSel(
     long nStartChar,
     long nEndChar);
@@ -2076,7 +2076,7 @@ Ten komunikat jest dostępny tylko w wersjach systemu operacyjnego w języku azj
 
 Zatrzymuje formant zbierania dodatkowych akcji wpisywania do bieżącej akcji cofania.
 
-```
+```cpp
 void StopGroupTyping();
 ```
 

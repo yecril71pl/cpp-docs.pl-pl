@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: 62015f384fa5f72ceeceed2605cbf9a6b646a1eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 393a871a881aa4bddd786b1d4333e02d5e0dbef1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375316"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751826"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>Klasa CMFCPropertyGridColorProperty
 
@@ -119,7 +119,7 @@ CMFCPropertyGridColorProperty(
 
 Włącza *przycisk automatyczny* w oknie dialogowym wyboru kolorów. (Standardowy przycisk automatyczny jest oznaczony jako **Automatyczny).**
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -143,7 +143,7 @@ void EnableAutomaticButton(
 
 Włącza *drugi* przycisk w oknie dialogowym wyboru kolorów. (Standardowy drugi przycisk jest oznaczony jako **Więcej kolorów).)**
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg = TRUE,
@@ -181,7 +181,7 @@ Wartość koloru RGB.
 
 Ustawia nowy kolor właściwości.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -196,7 +196,7 @@ void SetColor(COLORREF color);
 
 Określa liczbę kolumn w bieżącej siatce właściwości koloru.
 
-```
+```cpp
 void SetColumnsNumber(int nColumnsNumber);
 ```
 

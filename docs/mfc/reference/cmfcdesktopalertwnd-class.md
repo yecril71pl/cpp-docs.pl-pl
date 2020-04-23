@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: f9c59258cf757b5468985a954640ccec1543512b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cf453b6e69f012bedaf0bd91b5eaf11f7caffa12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367632"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752457"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>Klasa CMFCDesktopAlertWnd
 
@@ -391,7 +391,7 @@ BOOL ProcessCommand(HWND hwnd);
 
 Ustawia nową szybkość animacji.
 
-```
+```cpp
 void SetAnimationSpeed(UINT nSpeed);
 ```
 
@@ -408,7 +408,7 @@ Wywołanie tej metody, aby ustawić szybkość animacji dla okna alertu. Domyśl
 
 Ustawia typ animacji.
 
-```
+```cpp
 void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```
 
@@ -435,7 +435,7 @@ Wywołanie tej metody, aby ustawić typ animacji. Można określić jedną z nas
 
 Ustawia limit czasu automatycznego zamykania.
 
-```
+```cpp
 void SetAutoCloseTime(int nTime);
 ```
 
@@ -452,7 +452,7 @@ Okno alertu jest automatycznie zamykane po określonym czasie, jeśli użytkowni
 
 Przełącza między podpisami o małym i regularnym rozmiarze.
 
-```
+```cpp
 void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```
 
@@ -469,7 +469,7 @@ Wywołanie tej metody, aby wyświetlić podpis małych lub regularnych rozmiaró
 
 Ustawia poziom przezroczystości okna podręcznego.
 
-```
+```cpp
 void SetTransparency(BYTE nTransparency);
 ```
 

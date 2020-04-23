@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: b2d08461b4ab57ed8479549c18c35c872d0eb9f1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 60c82a113bc19e9652af8c1ad531e1c479077f20
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354383"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032125"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector, klasa
 
-Reprezentuje sekwencyjnej kolekcji obiektów, które mogą być indywidualnie dostępne przez indeks. Implementuje [system Windows::Foundation::Collections::IObservableVector,](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) aby pomóc w [wiązaniu danych](/windows/uwp/data-binding/data-binding-in-depth)XAML .
+Reprezentuje sekwencyjnej kolekcji obiektów, które mogą być indywidualnie dostępne przez indeks. Implementuje [system Windows::Foundation::Collections::IObservableVector,](/uwp/api/windows.foundation.collections.iobservablevector-1) aby pomóc w [wiązaniu danych](/windows/uwp/data-binding/data-binding-in-depth)XAML .
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,9 +61,9 @@ Dozwolone typy to:
 
 1. klasa wyliczenia publicznego
 
-Klasa **Vector** jest implementacją betonu języka C++ interfejsu [systemu Windows::Foundation::Collections::IVector.](/uwp/api/Windows.Foundation.Collections.IVector_T_)
+Klasa **Vector** jest implementacją betonu języka C++ interfejsu [systemu Windows::Foundation::Collections::IVector.](/uwp/api/windows.foundation.collections.ivector-1)
 
-Jeśli spróbujesz użyć typu **Vector** w publicznej wartości zwracania lub parametru, błąd kompilatora C3986 jest wywoływany. Błąd można naprawić, zmieniając parametr lub zwraca typ wartości do [systemu Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Aby uzyskać więcej informacji, zobacz [Kolekcje (C++/CX)](../cppcx/collections-c-cx.md).
+Jeśli spróbujesz użyć typu **Vector** w publicznej wartości zwracania lub parametru, błąd kompilatora C3986 jest wywoływany. Błąd można naprawić, zmieniając parametr lub zwraca typ wartości do [systemu Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1). Aby uzyskać więcej informacji, zobacz [Kolekcje (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Elementy członkowskie
 
@@ -96,7 +96,7 @@ Jeśli spróbujesz użyć typu **Vector** w publicznej wartości zwracania lub p
 |||
 |-|-|
 |Nazwa|Opis|
-|zdarzenie [Windows::Foundation::Collection::VectorChangedEventHandler\<T>^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Występuje, gdy zmienia się wektor.|
+|zdarzenie [Windows::Foundation::Collection::VectorChangedEventHandler\<T>^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1)|Występuje, gdy zmienia się wektor.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 

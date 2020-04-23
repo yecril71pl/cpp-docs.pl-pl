@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 5434801969a55387a5b5555c9a4ade22f1969e7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e949feaaac3570e1518cfb488cc1c42a471a1c46
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367778"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754872"
 ---
 # <a name="cmfcbutton-class"></a>Klasa CMFCButton
 
@@ -215,7 +215,7 @@ virtual void CleanUp();
 
 Określa, czy pełny tekst etykietki narzędzia ma być wyświetlany w dużym oknie etykietki narzędzia, czy obcięty tekst w małym oknie etykietki narzędzia.
 
-```
+```cpp
 void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```
 
@@ -230,7 +230,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 
 Określa, czy czcionka tekstowa przycisku jest taka sama jak czcionka menu aplikacji.
 
-```
+```cpp
 void EnableMenuFont(
     BOOL bOn=TRUE,
     BOOL bRedraw=TRUE);
@@ -700,7 +700,7 @@ Zastąp tę metodę, aby użyć własnego kodu do pobrania czcionki.
 
 Ustawia przycisk na tryb automatycznego powtarzania.
 
-```
+```cpp
 void SetAutorepeatMode(int nTimeDelay=500);
 ```
 
@@ -717,7 +717,7 @@ Ta metoda powoduje, że przycisk stale wysyłać WM_COMMAND wiadomości do okna 
 
 Ustawia obraz dla zaznaczonego przycisku.
 
-```
+```cpp
 void SetCheckedImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -782,7 +782,7 @@ void SetCheckedImage(
 
 Ustawia kolor tła dla tekstu przycisku.
 
-```
+```cpp
 void SetFaceColor(
     COLORREF crFace,
     BOOL bRedraw=TRUE);
@@ -804,7 +804,7 @@ Ta metoda służy do definiowania nowego koloru wypełnienia tła przycisku (twa
 
 Ustawia obraz przycisku.
 
-```
+```cpp
 void SetImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -876,7 +876,7 @@ W poniższym przykładzie pokazano, jak `SetImage` używać `CMFCButton` różny
 
 Ustawia obraz kursora.
 
-```
+```cpp
 void SetMouseCursor(HCURSOR hcursor);
 ```
 
@@ -900,7 +900,7 @@ W poniższym przykładzie pokazano, jak używać `SetMouseCursor` metody w `CMFC
 
 Ustawia kursor na obraz dłoni.
 
-```
+```cpp
 void SetMouseCursorHand();
 ```
 
@@ -912,7 +912,7 @@ Ta metoda służy do skojarzenia obrazu kursora dłoni z przyciskiem. Kursor jes
 
 Używa `CMenuImages` obiektu do ustawiania obrazu przycisku.
 
-```
+```cpp
 void SetStdImage(
     CMenuImages::IMAGES_IDS id,
     CMenuImages::IMAGE_STATE state=CMenuImages::ImageBlack,
@@ -936,7 +936,7 @@ void SetStdImage(
 
 Ustawia kolor tekstu przycisku dla przycisku, który nie jest zaznaczony.
 
-```
+```cpp
 void SetTextColor(COLORREF clrText);
 ```
 
@@ -951,7 +951,7 @@ void SetTextColor(COLORREF clrText);
 
 Ustawia kolor tekstu przycisku dla zaznaczonego przycisku.
 
-```
+```cpp
 void SetTextHotColor(COLORREF clrTextHot);
 ```
 
@@ -966,7 +966,7 @@ void SetTextHotColor(COLORREF clrTextHot);
 
 Kojarzy etykietkę narzędzia za pomocą przycisku.
 
-```
+```cpp
 void SetTooltip(LPCTSTR lpszToolTipText);
 ```
 

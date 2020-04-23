@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCRibbonQuickAccessToolBarDefaultState [MFC], CopyFrom
 - CMFCRibbonQuickAccessToolBarDefaultState [MFC], RemoveAll
 ms.assetid: eca99200-b87b-47ba-b2e8-2f3f2444b176
-ms.openlocfilehash: 56219e8ed1833f4b448ec6ffd3c16e9db3c66ada
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: eb6b36066f34036ae599a94f4d1c07b2c633e730
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368871"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753524"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>Klasa CMFCRibbonQuickAccessToolBarDefaultState
 
@@ -69,7 +69,7 @@ W poniższym przykładzie pokazano, jak `CMFCRibbonQuickAccessToolbarDefaultStat
 
 Dodaje polecenie do stanu domyślnego paska narzędzi Szybki dostęp.
 
-```
+```cpp
 void AddCommand(
     UINT uiCmd,
     BOOL bIsVisible=TRUE);
@@ -91,7 +91,7 @@ Dodanie polecenia do CMFCRibbonQuickAccessToolBarDefaultState osiąga trzy wynik
 
 Kopiuje właściwości jednego paska narzędzi Szybki dostęp do drugiego.
 
-```
+```cpp
 void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```
 
@@ -120,7 +120,7 @@ Domyślnie lista poleceń, które zawiera nowe wystąpienie [CMFRibbonQuickAcces
 
 Czyści listę poleceń domyślnych na pasku narzędzi Szybki dostęp.
 
-```
+```cpp
 void RemoveAll();
 ```
 

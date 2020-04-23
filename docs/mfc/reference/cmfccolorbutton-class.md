@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 21d05fd8e805467f1a7a77d20c81d5ba0401455e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cf24c162d0eda272f73c69c434589ae6ef3332a4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367735"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752563"
 ---
 # <a name="cmfccolorbutton-class"></a>Klasa CMFCColorButton
 
@@ -147,7 +147,7 @@ CMFCColorButton();
 
 Włącz lub wyłącz przycisk "automatyczny" formantu selektora kolorów i ustaw automatyczny (domyślny) kolor.
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -171,7 +171,7 @@ void EnableAutomaticButton(
 
 Włącz lub wyłącz przycisk "inne", który pojawia się poniżej zwykłych przycisków kolorów.
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -335,7 +335,7 @@ virtual void OnShowColorPopup();
 
 Inicjuje `m_pPalette` chroniony element członkowski danych do określonej palety lub domyślnej palety systemowej.
 
-```
+```cpp
 void RebuildPalette(CPalette* pPal);
 ```
 
@@ -349,7 +349,7 @@ void RebuildPalette(CPalette* pPal);
 
 Określa kolor przycisku.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -386,7 +386,7 @@ Lista nazw kolorów jest globalna dla aplikacji. W związku z tym ta metoda prze
 
 Określa liczbę kolumn wyświetlanych w tabeli kolorów, która jest prezentowana użytkownikowi podczas procesu wyboru kolorów użytkownika.
 
-```
+```cpp
 void SetColumnsNumber(int nColumns);
 ```
 
@@ -403,7 +403,7 @@ Użytkownik może wybrać kolor z paska kolorów podręcznego, na który wyświe
 
 Określa zestaw kolorów i nazwę zestawu. Zestaw kolorów jest wyświetlany przy użyciu [CMFCColorBar Class](../../mfc/reference/cmfccolorbar-class.md) obiektu.
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszLabel,
     CList<COLORREF,COLORREF>& lstColors);
@@ -425,7 +425,7 @@ Obiekt `CMFCColorButton` przechowuje listę wartości RGB, które są przenoszon
 
 Określa kolory standardowe wyświetlane na pasku kolorów wyskakujących okienka.
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 

@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: 2f8ba8d0b35bd72efa8f8d63dbefd689e645d768
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d356ba6b6134221c2fc9595fc6d78f91961c5b7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374051"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753244"
 ---
 # <a name="cdocument-class"></a>Klasa CDocument
 
@@ -260,7 +260,7 @@ Aby uzyskać `CDocument`więcej informacji na temat , zobacz [Serializacja](../.
 
 Wywołanie tej funkcji, aby dołączyć widok do dokumentu.
 
-```
+```cpp
 void AddView(CView* pView);
 ```
 
@@ -372,7 +372,7 @@ virtual POSITION FindChunk(
 
 ### <a name="parameters"></a>Parametry
 
-*Identyfikator guid*<br/>
+*guid*<br/>
 Określa identyfikator GUID fragmentu do znalezienia.
 
 *Pid*<br/>
@@ -765,7 +765,7 @@ Określa prostokąt ograniczający obszaru, w którym ma zostać narysowana mini
 
 Wysyła wiadomość za pośrednictwem hosta poczty rezydenta (jeśli istnieje) z dokumentem jako załącznikiem.
 
-```
+```cpp
 void OnFileSendMail();
 ```
 
@@ -979,7 +979,7 @@ virtual void OnUnloadHandler();
 
 Włącza polecenie ID_FILE_SEND_MAIL, jeśli obsługa poczty (MAPI) jest obecna.
 
-```
+```cpp
 void OnUpdateFileSendMail(CCmdUI* pCmdUI);
 ```
 
@@ -1082,7 +1082,7 @@ Określa identyfikator PID fragmentu do usunięcia.
 
 Wywołanie tej funkcji, aby odłączyć widok od dokumentu.
 
-```
+```cpp
 void RemoveView(CView* pView);
 ```
 
@@ -1224,7 +1224,7 @@ Wywołanie tej funkcji aktualizuje tytuły wszystkich okien ramek, które wyświ
 
 Wywołanie tej funkcji po zmodyfikowaniu dokumentu.
 
-```
+```cpp
 void UpdateAllViews(
     CView* pSender,
     LPARAM lHint = 0L,

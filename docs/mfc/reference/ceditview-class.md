@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: 8fbb2dc569e675ecff4ce04758a4eced40505bf6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 33b5975eea534eeaf308f73b5ca7fca2cd76787f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373971"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753200"
 ---
 # <a name="ceditview-class"></a>Klasa CEditView
 
@@ -259,7 +259,7 @@ Ta funkcja służy do określania bieżącej czcionki drukarki. Jeśli nie jest 
 
 Wywołanie `GetSelectedText` skopiowania zaznaczonego `CString` tekstu do obiektu, do końca zaznaczenia lub znaku poprzedzającego pierwszy znak powrotu karetki w zaznaczeniu.
 
-```
+```cpp
 void GetSelectedText(CString& strResult) const;
 ```
 
@@ -423,7 +423,7 @@ Element `rect.bottom` obiektu *rectLayout* jest zmieniany w taki sposób, że wy
 
 Wywołanie, `SerializeRaw` `CArchive` aby obiekt został odczytany `CEditView` lub wpisany tekst w obiekcie do pliku tekstowego.
 
-```
+```cpp
 void SerializeRaw(CArchive& ar);
 ```
 
@@ -440,7 +440,7 @@ Odwołanie do `CArchive` obiektu, który przechowuje tekst seryjny.
 
 Wywołanie, `SetPrinterFont` aby ustawić czcionkę drukarki do czcionki określonej przez *pFont*.
 
-```
+```cpp
 void SetPrinterFont(CFont* pFont);
 ```
 
@@ -457,7 +457,7 @@ Jeśli chcesz, aby widok zawsze używał określonej czcionki `SetPrinterFont` d
 
 Wywołanie tej funkcji, aby ustawić tabulatory używane do wyświetlania i drukowania.
 
-```
+```cpp
 void SetTabStops(int nTabStops);
 ```
 
@@ -482,7 +482,7 @@ Ten fragment kodu ustawia tabulatora zatrzymuje się w formancie do co czwartego
 
 Wywołanie tej funkcji elementu członkowskiego, aby odblokować bufor.
 
-```
+```cpp
 void UnlockBuffer() const;
 ```
 

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 4230d43bad8bcc15bcb26aaf0357e70216909ba1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cedfe16a6870bc779121e8e864866cfcb711b148
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318126"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753101"
 ---
 # <a name="cspinbuttonctrl-class"></a>Klasa CSpinButtonCtrl
 
@@ -120,7 +120,7 @@ virtual BOOL Create(
 Określa styl formantu przycisku pokrętła. Zastosuj dowolną kombinację stylów sterowania przyciskiem pokrętła do formantu. Style te są opisane w [stylach sterowania w górę iw dół](/windows/win32/Controls/up-down-control-styles) w panelu Windows SDK.
 
 *Rect*<br/>
-Określa rozmiar i położenie formantu przycisku pokrętła. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub struktura [RECT](/previous-versions/dd162897\(v=vs.85\))
+Określa rozmiar i położenie formantu przycisku pokrętła. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub struktura [RECT](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Wskaźnik do okna nadrzędnego formantu przycisku pokrętła, zwykle . `CDialog` Nie może być null.
@@ -160,7 +160,7 @@ Określa rozszerzony styl tworzonego formantu. Aby uzyskać listę rozszerzonych
 Określa styl formantu przycisku pokrętła. Zastosuj dowolną kombinację stylów sterowania przyciskiem pokrętła do formantu. Style te są opisane w [stylach sterowania w górę iw dół](/windows/win32/Controls/up-down-control-styles) w panelu Windows SDK.
 
 *Rect*<br/>
-Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
+Odwołanie do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest nadrzędnym formantu.
@@ -375,7 +375,7 @@ Poprzednia pozycja (16-bitowa precyzja dla `SetPos`, `SetPos32`32-bitowa precyzj
 
 Ustawia górną i dolną granicę (zakres) dla sterowania przyciskiem pokrętła.
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);

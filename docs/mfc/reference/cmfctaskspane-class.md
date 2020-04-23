@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: d5c412b55d9037215f77b165dacb7cfc1a16ef17
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fbcdd6a99375272f440282e76290401ff658d52e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375879"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753421"
 ---
 # <a name="cmfctaskspane-class"></a>KLASA CMFCTasksPane
 
@@ -591,7 +591,7 @@ CMFCTasksPane();
 
 ## <a name="cmfctaskspanecollapseallgroups"></a><a name="collapseallgroups"></a>CMFCTasksPane::CollapseAllGroups
 
-```
+```cpp
 void CollapseAllGroups(BOOL bCollapse = TRUE);
 
 void CollapseAllGroups(
@@ -675,7 +675,7 @@ Menu podręczne tworzone przez tę metodę zawiera listę stron w okienku zadań
 
 Włącza lub wyłącza animację, która występuje, gdy grupa zadań rozwija się lub zwija.
 
-```
+```cpp
 void EnableAnimation(BOOL bEnable = TRUE);
 ```
 
@@ -692,7 +692,7 @@ Domyślnie animacja, która występuje, gdy grupa zadań rozwija się lub zwija,
 
 Określa, czy użytkownik może zwijać grupy zadań.
 
-```
+```cpp
 void EnableGroupCollapse(BOOL bEnable);
 ```
 
@@ -709,7 +709,7 @@ Grupa zadań, która jest zwinięta, wyświetla tylko podpis grupy; lista zadań
 
 Włącza menu rozwijane na przyciskach nawigacyjnych **Dalej** i **Poprzedni.**
 
-```
+```cpp
 void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```
 
@@ -728,7 +728,7 @@ Menu zawierają historię stron zadań używanych przez użytkownika.
 
 Włącza lub wyłącza pasek narzędzi nawigacji.
 
-```
+```cpp
 void EnableNavigationToolbar(
     BOOL bEnable = TRUE,
     UINT uiToolbarBmpRes = 0,
@@ -760,7 +760,7 @@ Domyślnie w ramach nie jest wyświetlany pasek narzędzi nawigacji. Jeśli pase
 
 ## <a name="cmfctaskspaneenableoffsetcustomcontrols"></a><a name="enableoffsetcustomcontrols"></a>CMFCTasksPane::EnableOffsetCustomControls
 
-```
+```cpp
 void EnableOffsetCustomControls(BOOL bEnable);
 ```
 
@@ -774,7 +774,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
 
 Włącza przyciski przewijania zamiast paska przewijania.
 
-```
+```cpp
 void EnableScrollButtons(BOOL bEnable = TRUE);
 ```
 
@@ -791,7 +791,7 @@ Domyślnie w ramach są wyświetlane przyciski przewijania w okienku zadań.
 
 Włącza lub wyłącza zawijanie wyrazów tekstu w etykietach.
 
-```
+```cpp
 void EnableWrapLabels(BOOL bEnable = TRUE);
 ```
 
@@ -808,7 +808,7 @@ Domyślnie struktura nie zawija tekstu w etykiety. Gdy zawijanie wyrazów jest w
 
 Włącza lub wyłącza zawijanie wyrazów dla tekstu w zadaniach.
 
-```
+```cpp
 void EnableWrapTasks(BOOL bEnable = TRUE);
 ```
 
@@ -937,7 +937,7 @@ Domyślne odstępy między okienkiem zadań a krawędzią obszaru klienta to 12 
 
 ## <a name="cmfctaskspanegetnextpages"></a><a name="getnextpages"></a>CMFCTasksPane::GetNextPages
 
-```
+```cpp
 void GetNextPages(CStringList& lstNextPages) const;
 ```
 
@@ -983,7 +983,7 @@ Liczba stron w okienku zadań.
 
 ## <a name="cmfctaskspanegetpreviouspages"></a><a name="getpreviouspages"></a>CMFCTasksPane::GetPreviousPages
 
-```
+```cpp
 void GetPreviousPages(CStringList& lstPrevPages) const;
 ```
 
@@ -1468,7 +1468,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ## <a name="cmfctaskspanerecalclayout"></a><a name="recalclayout"></a>CMFCTasksPane::RecalcLayout
 
-```
+```cpp
 void RecalcLayout(BOOL bRedraw = TRUE);
 ```
 
@@ -1482,7 +1482,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 
 Usuwa wszystkie grupy na określonej stronie.
 
-```
+```cpp
 void RemoveAllGroups(int nPageIdx = 0);
 ```
 
@@ -1499,7 +1499,7 @@ Usuwa wszystkie grupy na stronie określonej przez *nPageIdx*lub wszystkie grupy
 
 Usuwa wszystkie strony z okienka zadań z wyjątkiem domyślnej (pierwszej) strony.
 
-```
+```cpp
 void RemoveAllPages();
 ```
 
@@ -1507,7 +1507,7 @@ void RemoveAllPages();
 
 Usuwa wszystkie zadania z określonej grupy.
 
-```
+```cpp
 void RemoveAllTasks(int nGroup);
 ```
 
@@ -1520,7 +1520,7 @@ void RemoveAllTasks(int nGroup);
 
 Usuwa grupę.
 
-```
+```cpp
 void RemoveGroup(int nGroup);
 ```
 
@@ -1539,7 +1539,7 @@ Gdy struktura usuwa grupę, wszystkie zadania i okna użytkownika skojarzone z n
 
 Usuwa określoną stronę z okienka zadań.
 
-```
+```cpp
 void RemovePage(int nPageIdx);
 ```
 
@@ -1609,7 +1609,7 @@ virtual void Serialize(CArchive& ar);
 
 Powoduje uaktywnienie określonej strony w okienku zadań.
 
-```
+```cpp
 void SetActivePage(int nPageIdx);
 ```
 
@@ -1626,7 +1626,7 @@ Ta metoda potwierdza, jeśli *nPageIdx* jest nieprawidłowy.
 
 Ustawia nazwę podpisu okienka zadań.
 
-```
+```cpp
 void SetCaption(LPCTSTR lpszName);
 ```
 
@@ -1643,7 +1643,7 @@ Jeśli okienko zadań ma wiele stron, strona domyślna ma podpis, który został
 
 Ustawia wysokość podpisu grupy.
 
-```
+```cpp
 void SetGroupCaptionHeight(int n = -1);
 ```
 
@@ -1662,7 +1662,7 @@ Jeśli *n* wynosi -1, struktura określa wartość marginesu `CMFCVisualManager:
 
 Ustawia poziome przesunięcie podpisu grupy.
 
-```
+```cpp
 void SetGroupCaptionHorzOffset(int n = -1);
 ```
 
@@ -1675,7 +1675,7 @@ void SetGroupCaptionHorzOffset(int n = -1);
 
 Ustawia przesunięcie w pionie podpisu grupy.
 
-```
+```cpp
 void SetGroupCaptionVertOffset(int n = -1);
 ```
 
@@ -1736,7 +1736,7 @@ PRAWDA, jeśli kolor tekstu grupy został pomyślnie zmieniony; w przeciwnym raz
 
 Ustawia przesunięcie pionowe dla grupy.
 
-```
+```cpp
 void SetGroupVertOffset(int n = -1);
 ```
 
@@ -1755,7 +1755,7 @@ Wywołanie tej metody, aby dostosować marginesy elementów okienka zadań. Jeś
 
 Ustawia margines poziomy.
 
-```
+```cpp
 void SetHorzMargin(int n = -1);
 ```
 
@@ -1807,7 +1807,7 @@ Ta metoda kojarzy listę obrazów z formantem okienka zadań. Aby ustawić ikon�
 
 Ustawia tekst podpisu dla strony okienka zadań.
 
-```
+```cpp
 void SetPageCaption(
     int nPageIdx,
     LPCTSTR lpszName);
@@ -1855,7 +1855,7 @@ PRAWDA, jeśli nazwa zadania została pomyślnie ustawiona; w przeciwnym razie F
 
 Ustawia przesunięcie poziome dla zadań.
 
-```
+```cpp
 void SetTasksHorzOffset(int n = -1);
 ```
 
@@ -1874,7 +1874,7 @@ Domyślne przesunięcie poziome wynosi 12 pikseli.
 
 ## <a name="cmfctaskspanesettasksiconhorzoffset"></a><a name="settasksiconhorzoffset"></a>CMFCTasksPane::SetTasksIconHorzOffset
 
-```
+```cpp
 void SetTasksIconHorzOffset(int n = -1);
 ```
 
@@ -1886,7 +1886,7 @@ void SetTasksIconHorzOffset(int n = -1);
 
 ## <a name="cmfctaskspanesettasksiconvertoffset"></a><a name="settasksiconvertoffset"></a>CMFCTasksPane::SetTasksIconVertOffset
 
-```
+```cpp
 void SetTasksIconVertOffset(int n = -1);
 ```
 
@@ -1930,7 +1930,7 @@ PRAWDA, jeśli kolor tekstu zadania został pomyślnie ustawiony; w przeciwnym r
 
 Ustawia margines pionowy.
 
-```
+```cpp
 void SetVertMargin(int n = -1);
 ```
 

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: cad762f426012d9d1931b96d54d8a53c9bab465d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 36913cfdd8beda31136176c966890a90077c1b30
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375645"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753363"
 ---
 # <a name="cdialog-class"></a>Klasa CDialog
 
@@ -295,7 +295,7 @@ Jeśli użytkownik kliknie jeden z przycisków w oknie dialogowym, takich jak OK
 
 Wywołanie tej funkcji elementu członkowskiego, aby zakończyć modalne okno dialogowe.
 
-```
+```cpp
 void EndDialog(int nResult);
 ```
 
@@ -338,7 +338,7 @@ Zazwyczaj jest to przycisk OK.
 
 Przenosi fokus do określonego formantu w oknie dialogowym.
 
-```
+```cpp
 void GotoDlgCtrl(CWnd* pWndCtrl);
 ```
 
@@ -398,7 +398,7 @@ Okna dialogowe zawierające formanty ActiveX wymagają dodatkowych informacji po
 
 Wywołanie konwertowania jednostek okna dialogowego prostokąta na jednostki ekranu.
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
@@ -419,7 +419,7 @@ Funkcja `MapDialogRect` elementu członkowskiego zastępuje jednostki okna dialo
 
 Przenosi fokus do następnego formantu w oknie dialogowym.
 
-```
+```cpp
 void NextDlgCtrl() const;
 ```
 
@@ -522,7 +522,7 @@ Edytor okien dialogowych zazwyczaj ustawia czcionkę okna dialogowego jako czę�
 
 Ustawia fokus na poprzedni kontrolkę w oknie dialogowym.
 
-```
+```cpp
 void PrevDlgCtrl() const;
 ```
 
@@ -534,7 +534,7 @@ Jeśli fokus znajduje się przy pierwszym formancie w oknie dialogowym, zostanie
 
 Zmienia domyślny przycisk sterujący okna dialogowego.
 
-```
+```cpp
 void SetDefID(UINT nID);
 ```
 
@@ -547,7 +547,7 @@ Określa identyfikator formantu przycisku, który stanie się wartością domyś
 
 Ustawia kontekstowy identyfikator pomocy dla okna dialogowego.
 
-```
+```cpp
 void SetHelpID(UINT nIDR);
 ```
 

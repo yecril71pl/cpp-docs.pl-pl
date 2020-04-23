@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: dbdc889e244b33365756bcbae5b37cf657a6d900
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 872ade08438e54098da730012f98cdd906483887
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374881"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753790"
 ---
 # <a name="colepropertypage-class"></a>Klasa COlePropertyPage
 
@@ -187,7 +187,7 @@ Formanty i kontenery współpracują, dzięki czemu użytkownicy mogą przegląd
 
 Określa, które formanty nie włączają przycisku Zastosuj.
 
-```
+```cpp
 void IgnoreApply(UINT nID);
 ```
 
@@ -326,7 +326,7 @@ Jeśli stan formantu strony właściwości jest zabrudzony, gdy strona właściw
 
 Ustawia zasób okna dialogowego strony właściwości.
 
-```
+```cpp
 void SetDialogResource(HGLOBAL hDialog);
 ```
 
@@ -339,7 +339,7 @@ Dojście do zasobu okna dialogowego strony właściwości.
 
 Określa informacje o etykietce narzędzia, nazwę pliku pomocy i kontekst pomocy dla strony właściwości.
 
-```
+```cpp
 void SetHelpInfo(
     LPCTSTR lpszDocString,
     LPCTSTR lpszHelpFile = NULL,
@@ -361,7 +361,7 @@ Kontekst pomocy dla strony właściwości.
 
 Wskazuje, czy użytkownik zmodyfikował stronę właściwości.
 
-```
+```cpp
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
@@ -374,7 +374,7 @@ Określa nową wartość zmodyfikowanej flagi strony właściwości.
 
 Ustawia nazwę strony właściwości, którą ramka właściwości będzie zazwyczaj wyświetlana na karcie strony.
 
-```
+```cpp
 void SetPageName(LPCTSTR lpszPageName);
 ```
 

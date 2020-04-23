@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: d47ecf45a7bbfc563be0c05cd15ee84d430f502f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29e2c3d0238ac5a084ea916d95ad953f8c4aedce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377362"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753400"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Klasa CMFCToolBarsCustomizeDialog
 
@@ -120,7 +120,7 @@ W poniższym przykładzie pokazano, jak `CMFCToolBarsCustomizeDialog` używać r
 
 Wstawia przycisk paska narzędzi do listy poleceń na stronie **Polecenia.**
 
-```
+```cpp
 void AddButton(
     UINT uiCategoryId,
     const CMFCToolBarButton& button,
@@ -187,7 +187,7 @@ W wywołaniu `AddMenuCommands`do , *bPopup* jest FALSE. W rezultacie ta metoda n
 
 Dodaje elementy do listy poleceń na stronie **Polecenia,** aby reprezentować wszystkie elementy w określonym menu.
 
-```
+```cpp
 void AddMenuCommands(
     const CMenu* pMenu,
     BOOL bPopup,
@@ -351,7 +351,7 @@ Wywołanie `Create` metody tylko po pełnym zainicjowaniu klasy.
 
 Włącza lub wyłącza tworzenie nowych pasków narzędzi za pomocą okna dialogowego **Dostosowywanie.**
 
-```
+```cpp
 void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 ```
 
@@ -391,7 +391,7 @@ Klasa `CMFCMousePropertyPage` używa tej metody do wypełniania pola listy zdarz
 
 Wypełnia podany `CComboBox` obiekt nazwą każdej kategorii poleceń w oknie dialogowym **Dostosowywanie.**
 
-```
+```cpp
 void FillCategoriesComboBox(
     CComboBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -419,7 +419,7 @@ Klasy `CMFCToolBarsKeyboardPropertyPage` `CMFCKeyMapDialog` i używają tej meto
 
 Wypełnia podany `CListBox` obiekt nazwą każdej kategorii poleceń w oknie dialogowym **Dostosowywanie.**
 
-```
+```cpp
 void FillCategoriesListBox(
     CListBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -705,7 +705,7 @@ Nazwa kategorii musi być unikatowa.
 
 Zastępuje przycisk paska narzędzi w polu listy poleceń na stronie **Polecenia.**
 
-```
+```cpp
 void ReplaceButton(
     UINT uiCmd,
     const CMFCToolBarButton& button);

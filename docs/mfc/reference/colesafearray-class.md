@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: a7be9910b573cb5bc430d6608e75ce6661b71bc2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 10e9975bac776429a38bfc707215a9465ce35c2e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374861"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753769"
 ---
 # <a name="colesafearray-class"></a>Klasa COleSafeArray
 
@@ -144,7 +144,7 @@ class COleSafeArray : public tagVARIANT
 
 Pobiera wskaźnik do danych tablicy.
 
-```
+```cpp
 void AccessData(void** ppvData);
 ```
 
@@ -165,7 +165,7 @@ Na błąd, funkcja rzuca [CMemoryException](../../mfc/reference/cmemoryexception
 
 Przydziela pamięć dla bezpiecznej tablicy.
 
-```
+```cpp
 void AllocData();
 ```
 
@@ -177,7 +177,7 @@ Na błąd, funkcja rzuca [CMemoryException](../../mfc/reference/cmemoryexception
 
 Przydziela pamięć dla deskryptora bezpiecznej tablicy.
 
-```
+```cpp
 void AllocDescriptor(DWORD dwDims);
 ```
 
@@ -194,7 +194,7 @@ Na błąd, funkcja rzuca [CMemoryException](../../mfc/reference/cmemoryexception
 
 Daje kontrolę nad danymi `VARIANT` w istniejącej tablicy `COleSafeArray` do obiektu.
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -215,7 +215,7 @@ Typ `VARIANT`źródła jest ustawiony na VT_EMPTY. Ta funkcja czyści bieżące 
 
 Czyści bezpieczną tablicę.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -271,7 +271,7 @@ Na błąd, funkcja rzuca [CMemoryException](../../mfc/reference/cmemoryexception
 
 Tworzy kopię istniejącej bezpiecznej tablicy.
 
-```
+```cpp
 void Copy(LPSAFEARRAY* ppsa);
 ```
 
@@ -288,7 +288,7 @@ Na błąd, funkcja rzuca [CMemoryException](../../mfc/reference/cmemoryexception
 
 Przydziela i inicjuje dane dla tablicy.
 
-```
+```cpp
 void Create(
     VARTYPE vtSrc,
     DWORD dwDims,
@@ -326,7 +326,7 @@ Ta funkcja wyczyści bieżące dane tablicy, jeśli to konieczne. Na błąd, fun
 
 Tworzy nowy `COleSafeArray` obiekt jednowymiarowy.
 
-```
+```cpp
 void CreateOneDim(
     VARTYPE vtSrc,
     DWORD dwElements,
@@ -362,7 +362,7 @@ Na błąd, funkcja rzuca [CMemoryException](../../mfc/reference/cmemoryexception
 
 Niszczy istniejący deskryptor tablicy i wszystkie dane w tablicy.
 
-```
+```cpp
 void Destroy();
 ```
 
@@ -374,7 +374,7 @@ Jeśli obiekty są przechowywane w tablicy, każdy obiekt jest zwolniony. Na bł
 
 Niszczy wszystkie dane w bezpiecznej tablicy.
 
-```
+```cpp
 void DestroyData();
 ```
 
@@ -386,7 +386,7 @@ Jeśli obiekty są przechowywane w tablicy, każdy obiekt jest zwolniony. Na bł
 
 Niszczy deskryptor bezpiecznej tablicy.
 
-```
+```cpp
 void DestroyDescriptor();
 ```
 
@@ -420,7 +420,7 @@ Na błąd, funkcja rzuca [COleException](../../mfc/reference/coleexception-class
 
 Kopiuje zawartość tablicy bezpiecznej do pliku `CByteArray`.
 
-```
+```cpp
 void GetByteArray(CByteArray& bytes);
 ```
 
@@ -449,7 +449,7 @@ Liczba wymiarów w tablicy bezpiecznej.
 
 Pobiera pojedynczy element tablicy bezpieczne.
 
-```
+```cpp
 void GetElement(
     long* rgIndices,
     void* pvData);
@@ -489,7 +489,7 @@ Rozmiar w bajtach elementów bezpiecznej tablicy.
 
 Zwraca dolną granicę dla `COleSafeArray` dowolnego wymiaru obiektu.
 
-```
+```cpp
 void GetLBound(
     DWORD dwDim,
     long* pLBound);
@@ -531,7 +531,7 @@ Liczba elementów w tablicy jednowymiarowej bezpiecznej.
 
 Zwraca górną granicę dla dowolnego wymiaru bezpiecznej tablicy.
 
-```
+```cpp
 void GetUBound(
     DWORD dwDim,
     long* pUBound);
@@ -557,7 +557,7 @@ Na błąd, funkcja rzuca [COleException](../../mfc/reference/coleexception-class
 
 Zwiększa liczbę blokad tablicy i umieszcza wskaźnik danych tablicy w deskryptorze tablicy.
 
-```
+```cpp
 void Lock();
 ```
 
@@ -640,7 +640,7 @@ CDumpContext& AFXAPI operator<<(
 
 Zwraca wskaźnik do elementu określonego przez wartości indeksu.
 
-```
+```cpp
 void PtrOfIndex(
     long* rgIndices,
     void** ppvData);
@@ -658,7 +658,7 @@ Po zwrocie wskaźnik do elementu identyfikowane przez wartości w *rgIndices*.
 
 Przypisuje pojedynczy element do tablicy.
 
-```
+```cpp
 void PutElement(
     long* rgIndices,
     void* pvData);
@@ -688,7 +688,7 @@ Na błąd, funkcja rzuca [CMemoryException](../../mfc/reference/cmemoryexception
 
 Zmienia najmniej istotne (po prawej) związane z bezpiecznej tablicy.
 
-```
+```cpp
 void Redim(SAFEARRAYBOUND* psaboundNew);
 ```
 
@@ -705,7 +705,7 @@ Na błąd, funkcja rzuca [COleException](../../mfc/reference/coleexception-class
 
 Zmienia liczbę elementów w `COleSafeArray` obiekcie jednowymiarowym.
 
-```
+```cpp
 void ResizeOneDim(DWORD dwElements);
 ```
 
@@ -726,7 +726,7 @@ Na błąd, funkcja rzuca [COleException](../../mfc/reference/coleexception-class
 
 Zmniejsza liczbę blokad tablicy i unieważnia wskaźnik pobrany przez `AccessData`program .
 
-```
+```cpp
 void UnaccessData();
 ```
 
@@ -742,7 +742,7 @@ Na błąd, funkcja rzuca [COleException](../../mfc/reference/coleexception-class
 
 Zmniejsza liczbę blokad tablicy, dzięki czemu można ją zwolniono lub zmieścić.
 
-```
+```cpp
 void Unlock();
 ```
 

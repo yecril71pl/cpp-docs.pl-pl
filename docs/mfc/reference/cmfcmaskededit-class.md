@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-ms.openlocfilehash: de28b308ec235e33e39aabd707677f4e75320b0b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 26617f10605fe2a8a94adcc477cccab7e2ba4919
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365280"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754225"
 ---
 # <a name="cmfcmaskededit-class"></a>Klasa CMFCMaskedEdit
 
@@ -113,7 +113,7 @@ Poniższy przykład pokazuje, jak skonfigurować maskę (na przykład `EnableMas
 
 Wyłącza sprawdzanie poprawności danych wejściowych użytkownika.
 
-```
+```cpp
 void DisableMask();
 ```
 
@@ -125,7 +125,7 @@ Jeśli sprawdzanie poprawności danych wejściowych użytkownika jest wyłączon
 
 Określa, `GetWindowText` czy metoda pobiera tylko zamaskowane znaki.
 
-```
+```cpp
 void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```
 
@@ -142,7 +142,7 @@ Ta metoda umożliwia pobieranie zamaskowanych znaków. Następnie utwórz zamask
 
 Inicjuje zamaskowany formant edycji.
 
-```
+```cpp
 void EnableMask(
     LPCTSTR lpszMask,
     LPCTSTR lpszInputTemplate,
@@ -185,7 +185,7 @@ W poniższej tabeli znajdują się domyślne znaki maski:
 
 Określa, czy zamaskowany formant edycji umożliwia użytkownikowi wybranie danych wejściowych poszczególnych grup, czy wszystkie dane wejściowe.
 
-```
+```cpp
 void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```
 
@@ -219,7 +219,7 @@ Jeśli wybór według grupy jest włączony, użytkownik może pobrać tylko gru
 
 Określa, czy tekst jest sprawdzany tylko względem zamaskowanych znaków, czy dla całej maski.
 
-```
+```cpp
 void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```
 
@@ -291,7 +291,7 @@ Zastąd w tej metodzie należy samodzielnie sprawdzić poprawność znaków wej�
 
 Określa ciąg prawidłowych znaków, który użytkownik może wprowadzić.
 
-```
+```cpp
 void SetValidChars(LPCTSTR lpszValid=NULL);
 ```
 
@@ -321,7 +321,7 @@ m_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindo
 
 Wyświetla monit w zamaskowanym formancie edycji.
 
-```
+```cpp
 void SetWindowText(LPCTSTR lpszString);
 ```
 

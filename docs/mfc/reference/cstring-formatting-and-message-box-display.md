@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-ms.openlocfilehash: d30d26ecf0e72ee33affe3df5b88c438ff83bb6b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fa1fe8826543834872de5257a0f5d56b2ad9fc1c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365996"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752675"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formatowanie obiektu CString i wyświetlanie okna komunikatu
 
@@ -78,7 +78,7 @@ Ta funkcja zwróci FAŁSZ, jeśli *lpszFullString* jest ustawiona na NULL lub fu
 
 Zastępuje ciąg wskazany przez *lpsz1* dla wszelkich wystąpień znaków "%1" w zasobie ciągu szablonu identyfikowanym przez *nIDS*.
 
-```
+```cpp
 void  AfxFormatString1(
     CString& rString,
     UINT nIDS,
@@ -114,7 +114,7 @@ Jeśli znaki formatu "%1" pojawiają się w ciągu więcej niż jeden raz, zosta
 
 Zastępuje ciąg wskazany przez *lpsz1* dla wszelkich wystąpień znaków "%1", a ciąg wskazywał przez *lpsz2* dla wszelkich wystąpień znaków "%2", w zasobie ciągu szablonu identyfikowanym przez *nIDS*.
 
-```
+```cpp
 void AfxFormatString2(
     CString& rString,
     UINT nIDS,

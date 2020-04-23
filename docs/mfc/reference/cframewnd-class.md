@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 0fd104e377300233ef1526f6c453346555dd27d3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3bb93420b39be5d6fb9a6691cec8300fdccb0e73
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373785"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754978"
 ---
 # <a name="cframewnd-class"></a>Klasa CFrameWnd
 
@@ -384,7 +384,7 @@ Ta funkcja elementu członkowskiego służy do `CView`tworzenia "widoków", któ
 
 Powoduje, że pasek sterowania ma być zadokowany do okna ramki.
 
-```
+```cpp
 void DockControlBar(
     CControlBar* pBar,
     UINT nDockBarID = 0,
@@ -420,7 +420,7 @@ Pasek sterowania zostanie zadokowany do jednej z boków okna ramki określonych 
 
 Wywołanie tej funkcji, aby włączyć dokowane paski sterowania w oknie ramki.
 
-```
+```cpp
 void EnableDocking(DWORD dwDockStyle);
 ```
 
@@ -463,7 +463,7 @@ virtual void EndModalState();
 
 Wywołanie tej funkcji, aby spowodować, że pasek sterowania nie być zadokowany do okna ramki.
 
-```
+```cpp
 void FloatControlBar(
     CControlBar* pBar,
     CPoint point,
@@ -570,7 +570,7 @@ Parametr *nID* odnosi się do unikatowego `Create` identyfikatora przekazanego d
 
 Wywołanie tej funkcji elementu członkowskiego do przechowywania informacji o `CDockState` stanie o paskach sterowania okna ramki w obiekcie.
 
-```
+```cpp
 void GetDockState(CDockState& state) const;
 ```
 
@@ -675,7 +675,7 @@ Obiekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) zawierający 
 
 Zadzwoń `IntitialUpdateFrame` po utworzeniu nowej `Create`ramki z .
 
-```
+```cpp
 void InitialUpdateFrame(
     CDocument* pDoc,
     BOOL bMakeVisible);
@@ -748,7 +748,7 @@ Jeśli wywołasz, `LoadFrame` aby utworzyć okno ramki, struktura ładuje tabel�
 
 Wywołanie tej funkcji, aby przywrócić ustawienia każdego paska sterowania należącego do okna ramki.
 
-```
+```cpp
 void LoadBarState(LPCTSTR lpszProfileName);
 ```
 
@@ -1014,7 +1014,7 @@ static AFX_DATA const CRect rectDefault;
 
 Wywołanie tej funkcji do przechowywania informacji o każdym pasku sterowania należącym do okna ramki.
 
-```
+```cpp
 void SaveBarState(LPCTSTR lpszProfileName) const;
 ```
 
@@ -1031,7 +1031,7 @@ Te informacje można odczytać z pliku inicjowania za pomocą [LoadBarState](#lo
 
 Wyznacza określony widok jako aktywny widok dla zaawansowanego podglądu.
 
-```
+```cpp
 void SetActivePreviewView(CView* pViewNew);
 ```
 
@@ -1046,7 +1046,7 @@ Wskaźnik do widoku, który ma zostać aktywowany.
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić widok aktywny.
 
-```
+```cpp
 void SetActiveView(
     CView* pViewNew,
     BOOL bNotify = TRUE);
@@ -1068,7 +1068,7 @@ Struktura wywoła tę funkcję automatycznie, gdy użytkownik zmieni fokus na wi
 
 Wywołanie tej funkcji elementu członkowskiego, `CDockState` aby zastosować informacje o stanie przechowywane w obiekcie do pasków sterowania okna ramki.
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
@@ -1127,7 +1127,7 @@ Ta metoda wpływa na stan menu w aplikacjach napisanych dla systemu Windows Vist
 
 Wywołanie tej funkcji, aby umieścić ciąg w okienku paska stanu, który ma identyfikator 0.
 
-```
+```cpp
 void SetMessageText(LPCTSTR lpszText);
 void SetMessageText(UINT nID);
 ```
@@ -1148,7 +1148,7 @@ Jest to zazwyczaj lewe i najdłuższe okienko paska stanu.
 
 Ustawia bieżącą pozycję paska postępu systemu Windows 7 wyświetlanego na pasku zadań.
 
-```
+```cpp
 void SetProgressBarPosition(int nProgressPos);
 ```
 
@@ -1163,7 +1163,7 @@ Określa położenie do ustawionego. Musi mieszczeć się `SetProgressBarRange`w
 
 Ustawia zakres paska postępu systemu Windows 7 wyświetlanego na pasku zadań.
 
-```
+```cpp
 void SetProgressBarRange(
     int nRangeMin,
     int nRangeMax);
@@ -1183,7 +1183,7 @@ Maksymalna wartość.
 
 Ustawia typ i stan wskaźnika postępu wyświetlanego na przycisku paska zadań.
 
-```
+```cpp
 void SetProgressBarState(TBPFLAG tbpFlags);
 ```
 
@@ -1229,7 +1229,7 @@ PRAWDA, jeśli się powiedzie; FALSE, jeśli wersja systemu operacyjnego jest mn
 
 Ustawia tytuł obiektu okna.
 
-```
+```cpp
 void SetTitle(LPCTSTR lpszTitle);
 ```
 
@@ -1242,7 +1242,7 @@ Wskaźnik do ciągu znaków zawierającego tytuł obiektu okna.
 
 Wywołanie tej funkcji elementu członkowskiego, aby pokazać lub ukryć pasek sterowania.
 
-```
+```cpp
 void ShowControlBar(
     CControlBar* pBar,
     BOOL bShow,
@@ -1264,7 +1264,7 @@ Jeśli wartość TRUE, opóźnienie wyświetlania paska sterowania. Jeśli FAŁD
 
 Wywołanie tej funkcji elementu członkowskiego, aby `CFrameWnd` wyświetlić wszystkie okna, które są elementami podrzędnymi obiektu.
 
-```
+```cpp
 void ShowOwnedWindows(BOOL bShow);
 ```
 

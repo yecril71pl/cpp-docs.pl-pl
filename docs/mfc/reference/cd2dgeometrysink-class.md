@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-ms.openlocfilehash: cb51c7b11f75debece61105bf20a201b6eab80a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bb5d2b53fa5899ac84608dc4ace6a84a3e5a7575
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369240"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754765"
 ---
 # <a name="cd2dgeometrysink-class"></a>Klasa CD2DGeometrySink
 
@@ -115,7 +115,7 @@ virtual ~CD2DGeometrySink();
 
 Dodaje pojedynczy łuk do geometrii ścieżki
 
-```
+```cpp
 void AddArc(const D2D1_ARC_SEGMENT& arc);
 ```
 
@@ -128,7 +128,7 @@ Segment łuku, który ma być dodawany do rysunku
 
 Tworzy sześcienną krzywą Beziera między bieżącym punktem a określonym punktem końcowym.
 
-```
+```cpp
 void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 ```
 
@@ -141,7 +141,7 @@ Struktura opisująca punkty kontrolne i punkt końcowy krzywej Beziera do dodani
 
 Tworzy sekwencję sześciennych krzywych Beziera i dodaje je do zlewu geometrii.
 
-```
+```cpp
 void AddBeziers(
     const CArray<D2D1_BEZIER_SEGMENT,
     D2D1_BEZIER_SEGMENT>& beziers);
@@ -156,7 +156,7 @@ Tablica segmentów Beziera opisująca krzywe Beziera do utworzenia. Krzywa jest 
 
 Tworzy segment linii między bieżącym punktem a określonym punktem końcowym i dodaje go do pochłaniacza geometrii.
 
-```
+```cpp
 void AddLine(CD2DPointF point);
 ```
 
@@ -169,7 +169,7 @@ Punkt końcowy linii do rysowania.
 
 Tworzy sekwencję linii przy użyciu określonych punktów i dodaje je do ujścia geometrii.
 
-```
+```cpp
 void AddLines(
     const CArray<CD2DPointF,
     CD2DPointF>& points);
@@ -184,7 +184,7 @@ Tablica jednego lub więcej punktów, które opisują wiersze do rysowania. Lini
 
 Tworzy krzywą kwadratową Beziera między bieżącym punktem a określonym punktem końcowym.
 
-```
+```cpp
 void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 ```
 
@@ -197,7 +197,7 @@ Struktura opisująca punkt kontrolny i punkt końcowy kwadratowej krzywej Bezier
 
 Dodaje sekwencję kwadratowych segmentów Beziera jako tablicy w jednym wywołaniu.
 
-```
+```cpp
 void AddQuadraticBeziers(
     const CArray<D2D1_QUADRATIC_BEZIER_SEGMENT,
     D2D1_QUADRATIC_BEZIER_SEGMENT>& beziers);
@@ -212,7 +212,7 @@ Tablica sekwencji kwadratowych segmentów Beziera.
 
 Rozpoczyna nową figurę w określonym punkcie.
 
-```
+```cpp
 void BeginFigure(
     CD2DPointF startPoint,
     D2D1_FIGURE_BEGIN figureBegin);
@@ -255,7 +255,7 @@ Nonzero jeśli się powiedzie; w przeciwnym razie FALSE.
 
 Kończy bieżącą liczbę; opcjonalnie zamyka go.
 
-```
+```cpp
 void EndFigure(D2D1_FIGURE_END figureEnd);
 ```
 
@@ -312,7 +312,7 @@ Wskaźnik do interfejsu ID2D1GeometrySink lub NULL, jeśli obiekt nie został je
 
 Określa metodę używaną do określenia, które punkty znajdują się wewnątrz geometrii opisanej przez ten zlew geometrii i które punkty znajdują się na zewnątrz.
 
-```
+```cpp
 void SetFillMode(D2D1_FILL_MODE fillMode);
 ```
 
@@ -325,7 +325,7 @@ Metoda używana do określenia, czy dany punkt jest częścią geometrii.
 
 Określa opcje obrysu i sprzężenia, które mają być zastosowane do nowych segmentów dodanych do pochłaniacza geometrii.
 
-```
+```cpp
 void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 ```
 

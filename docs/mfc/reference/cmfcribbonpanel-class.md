@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: fa07132ace37074effb02802353fc82d3e338be0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d622b5c36729daca81a6093e9f21573ce86940e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368882"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753548"
 ---
 # <a name="cmfcribbonpanel-class"></a>Klasa CMFCRibbonPanel
 
@@ -432,7 +432,7 @@ Prawidłowy wskaźnik do podstawowego elementu wstążki znajdującego się w po
 
 Pobiera wszystkie elementy wstążki, które znajdują się w panelu wstążki.
 
-```
+```cpp
 void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
 
@@ -447,7 +447,7 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 
 Dodaje elementy wstążki, które mają określony identyfikator polecenia do określonej tablicy.
 
-```
+```cpp
 void GetElementsByID(
 UINT uiCmdID,
 CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -502,7 +502,7 @@ Indeks od zera określonego elementu wstążki, jeśli metoda zakończyła się 
 
 Pobiera identyfikatory poleceń dla wszystkich elementów wstążki w panelu wstążki.
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```
 
@@ -891,7 +891,7 @@ Wywołanie tej metody, aby usunąć element z panelu wstążki.
 
 Usuwa wszystkie elementy wstążki z panelu wstążki.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -955,7 +955,7 @@ Aby zastąpić element wstążki na podstawie położenia, zadzwoń [do CMFCRibb
 
 Włącza lub wyłącza wyśrodkowanie pozycji pionowych elementów wstążki w ich prostokącie wyświetlania.
 
-```
+```cpp
 void SetCenterColumnVert(BOOL bSet = TRUE);
 ```
 
@@ -970,7 +970,7 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 
 Kojarzy dane zdefiniowane przez użytkownika z panelem wstążki.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1108,7 +1108,7 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
 
 Włącza lub wyłącza dopasowanie szerokości elementów wstążki w tej samej kolumnie.
 
-```
+```cpp
 void SetJustifyColumns(BOOL bSet = TRUE);
 ```
 
@@ -1125,7 +1125,7 @@ Gdy ta funkcja jest włączona w panelu wstążki, szerokości elementów wstą�
 
 Ustawia etykietkę klawiszy dla domyślnego przycisku panelu wstążki.
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1163,7 +1163,7 @@ Menu podręczne panelu wstążki jest dostępne tylko wtedy, gdy wyświetlanie p
 
 Ustawia fokus na określony element Wstążki.
 
-```
+```cpp
 void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```
 
@@ -1178,7 +1178,7 @@ Wskaźnik do elementu Wstążki, który odbiera fokus.
 
 Przewija galerię, aby określony element Wstążki był widoczny.
 
-```
+```cpp
 void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```
 
@@ -1207,7 +1207,7 @@ PRAWDA, jeśli wstążka nadrzędna ma wygląd systemu Windows 7; w przeciwnym r
 
 Pobiera tablicę widocznych elementów.
 
-```
+```cpp
 void GetVisibleElements(
 CArray<CMFCRibbonBaseElement*,
 CMFCRibbonBaseElement*>& arElements);

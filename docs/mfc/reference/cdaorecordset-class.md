@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 5b4b2919405696c748ce01217ac82afeac316de2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a1475d1b0bc083cfd180ea5a211e752c973e2f8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377149"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754681"
 ---
 # <a name="cdaorecordset-class"></a>Klasa CDaoRecordset
 
@@ -626,7 +626,7 @@ Aby uzyskać powiązane informacje, zobacz tematy "AddNew Method", "Edit Method"
 
 Wywołanie tej funkcji elementu członkowskiego w pamięci podręcznej określonej liczby rekordów z zestawu rekordów.
 
-```
+```cpp
 void FillCache(
     long* pSize = NULL,
     COleVariant* pBookmark = NULL);
@@ -1105,7 +1105,7 @@ Aby uzyskać powiązane informacje, zobacz temat "Count Property" w Pomocy DAO.
 
 Wywołanie tej funkcji elementu członkowskiego, aby uzyskać informacje o polach w ach.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -1212,7 +1212,7 @@ Aby uzyskać powiązane informacje, zobacz temat "Właściwość atrybutów" w P
 
 Wywołanie tej funkcji elementu członkowskiego, aby uzyskać różne rodzaje informacji o indeksie zdefiniowanym w tabeli podstawowej leżącej u podstaw pliku recordset.
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -1802,7 +1802,7 @@ Aby uzyskać powiązane informacje, zobacz tematy "Move Method" i "MoveFirst, Mo
 
 Wywołanie tej funkcji elementu członkowskiego, aby pierwszy rekord w pliku recordset (jeśli istnieje) bieżący rekord.
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1832,7 +1832,7 @@ Aby uzyskać powiązane informacje, zobacz tematy "Move Method" i "MoveFirst, Mo
 
 Wywołanie tej funkcji elementu członkowskiego, aby ostatni rekord (jeśli istnieje) w pliku recordset bieżącego rekordu.
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1858,7 +1858,7 @@ Aby uzyskać powiązane informacje, zobacz tematy "Move Method" i "MoveFirst, Mo
 
 Wywołanie tej funkcji elementu członkowskiego, aby następny rekord w pliku recordset bieżącego rekordu.
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1884,7 +1884,7 @@ Aby uzyskać powiązane informacje, zobacz tematy "Move Method" i "MoveFirst, Mo
 
 Wywołanie tej funkcji elementu członkowskiego, aby poprzedni rekord w pliku recordset bieżącego rekordu.
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -2129,7 +2129,7 @@ Aby uzyskać powiązane informacje, zobacz temat "Szukaj metody" w Pomocy DAO.
 
 Ustawia względną liczbę rekordów bieżącego rekordu obiektu zestawu rekordów.
 
-```
+```cpp
 void SetAbsolutePosition(long lPosition);
 ```
 
@@ -2158,7 +2158,7 @@ Aby uzyskać powiązane informacje, zobacz temat "AbsolutePosition Property" w P
 
 Wywołanie tej funkcji elementu członkowskiego, aby umieścić rekord w rekordzie zawierającym określoną zakładkę.
 
-```
+```cpp
 void SetBookmark(COleVariant varBookmark);
 ```
 
@@ -2182,7 +2182,7 @@ Aby uzyskać powiązane informacje, zobacz tematy "Właściwość zakładek" i W
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić liczbę rekordów, które mają być buforowane.
 
-```
+```cpp
 void SetCacheSize(long lSize);
 ```
 
@@ -2203,7 +2203,7 @@ Aby uzyskać powiązane informacje, zobacz temat "CacheSize, CacheStart Properti
 
 Wywołanie tej funkcji elementu członkowskiego, aby określić zakładkę pierwszego rekordu w zestawrekordu do buforowania.
 
-```
+```cpp
 void SetCacheStart(COleVariant varBookmark);
 ```
 
@@ -2230,7 +2230,7 @@ Aby uzyskać powiązane informacje, zobacz temat CacheSize, CacheStart Propertie
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić indeks na zestawie rekordów typu tabeli.
 
-```
+```cpp
 void SetCurrentIndex(LPCTSTR lpszIndex);
 ```
 
@@ -2253,7 +2253,7 @@ Aby uzyskać powiązane informacje, zobacz temat "Obiekt indeksu" i definicję "
 
 Wywołanie tej funkcji elementu członkowskiego, aby oznaczyć element członkowski danych pola zestaw rekordów jako zmieniony lub niezmieniony.
 
-```
+```cpp
 void SetFieldDirty(
     void* pv,
     BOOL bDirty = TRUE);
@@ -2296,7 +2296,7 @@ Oznacza to, że nie można ustawić wszystkich pól `outputColumn` **param** na 
 
 Wywołanie tej funkcji elementu członkowskiego, aby oznaczyć element członkowski danych pola w zbiorze rekordów jako Null (w szczególności nie posiadające wartości) lub jako nie-Null.
 
-```
+```cpp
 void SetFieldNull(
     void* pv,
     BOOL bNull = TRUE);
@@ -2379,7 +2379,7 @@ Aby uzyskać powiązane informacje, zobacz tematy "Obiekt pola" i "Właściwoś�
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić pole na wartość Null.
 
-```
+```cpp
 void SetFieldValueNull(int nIndex);
 void SetFieldValueNull(LPCTSTR lpszName);
 ```
@@ -2402,7 +2402,7 @@ Aby uzyskać powiązane informacje, zobacz tematy "Obiekt pola" i "Właściwoś�
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić typ blokowania dla zestawu rekordów.
 
-```
+```cpp
 void SetLockingMode(BOOL bPessimistic);
 ```
 
@@ -2458,7 +2458,7 @@ Określ wartość ustawioną `COleVariant` jako obiekt. Aby uzyskać informacje 
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić parametr na wartość Null.
 
-```
+```cpp
 void SetParamValueNull(int nIndex);
 void SetParamValueNull(LPCTSTR lpszName);
 ```
@@ -2479,7 +2479,7 @@ C++ NULL nie jest taki sam jak Null, co w terminologii bazy danych oznacza "bez 
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić wartość, która zmienia przybliżoną lokalizację bieżącego rekordu w obiekcie zestawu rekordów na podstawie procentu rekordów w zestawie rekordów.
 
-```
+```cpp
 void SetPercentPosition(float fPosition);
 ```
 

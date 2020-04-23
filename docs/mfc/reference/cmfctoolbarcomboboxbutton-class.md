@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 0d003bdacf13403ad8dc4be4ec7e6f71ea57d156
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 995d7d0db55889130e1cad9585b8fc87285ffd27
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372190"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754015"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Klasa CMFCToolBarComboBoxButton
 
@@ -1116,7 +1116,7 @@ PRAWDA, jeśli metoda obsługuje zdarzenie; w przeciwnym razie FALSE.
 
 Usuwa wszystkie elementy z listy i edytuj pola.
 
-```
+```cpp
 void RemoveAllItems();
 ```
 
@@ -1255,7 +1255,7 @@ Domyślnie przyciski pola kombi są wyrównane do góry.
 
 Ustawia identyfikator zasobu menu skrótów dla przycisku pola kombi.
 
-```
+```cpp
 void SetContextMenuID(UINT uiResID);
 ```
 
@@ -1268,7 +1268,7 @@ void SetContextMenuID(UINT uiResID);
 
 Ustawia wysokość pola listy po jego upuszczeniu.
 
-```
+```cpp
 void SetDropDownHeight(int nHeight);
 ```
 
@@ -1319,7 +1319,7 @@ Aby uzyskać listę stylów przycisków paska narzędzi, zobacz [Style sterowani
 
 Ustawia tekst w polu edycji przycisku pola kombi.
 
-```
+```cpp
 void SetText(LPCTSTR lpszText);
 ```
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 6c611297353f82e4ec90365cbe33db763d9c9838
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d542af4a87b6f0a33c0344d1d3da76980f8c1a91
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367537"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752381"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Klasa CMFCEditBrowseCtrl
 
@@ -133,7 +133,7 @@ W poniższym przykładzie pokazano, jak `CMFCEditBrowseCtrl` używać `EnableFol
 
 Wyświetla lub nie wyświetla przycisku przeglądania na bieżącym kontrolce przeglądania edycji.
 
-```
+```cpp
 void EnableBrowseButton(
     BOOL bEnable=TRUE,
     LPCTSTR szLabel=_T("..."));
@@ -157,7 +157,7 @@ Jeśli *parametrem bEnable* jest PRAWDA, tryb przeglądania `BrowseMode_Default`
 
 Wyświetla przycisk przeglądania bieżącej kontrolki przeglądania edycji i przełącza formant w tryb *przeglądania plików.*
 
-```
+```cpp
 void EnableFileBrowseButton(
     LPCTSTR lpszDefExt=NULL,
     LPCTSTR lpszFilter=NULL,
@@ -185,7 +185,7 @@ Aby uzyskać pełną listę dostępnych flag, zobacz [OPENFILENAME struktury](/w
 
 Wyświetla przycisk przeglądania bieżącej kontrolki przeglądania edycji i przełącza formant w tryb *przeglądania folderów.*
 
-```
+```cpp
 void EnableFolderBrowseButton();
 ```
 
@@ -288,7 +288,7 @@ Zastąp tę funkcję w klasie pochodnej, aby dostosować wygląd przycisku przeg
 
 Ustawia obraz niestandardowy na przycisku przeglądania kontrolki przeglądania edycji.
 
-```
+```cpp
 void SetBrowseButtonImage(
     HICON hIcon,
     BOOL bAutoDestroy= TRUE);

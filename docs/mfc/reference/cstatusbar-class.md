@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 0549ee10faa15b80b18a0bee2f115425002e1479
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 969edb3b1c87da851d83d390ab9d4e707bd2eb1e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376259"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753055"
 ---
 # <a name="cstatusbar-class"></a>Klasa CStatusBar
 
@@ -271,7 +271,7 @@ Identyfikator wskaźnika określonego przez *nIndex*.
 
 Kopiuje współrzędne wskaźnika określonego przez *nIndex* do struktury wskazanej przez *lpRect*.
 
-```
+```cpp
 void GetItemRect(
     int nIndex,
     LPRECT lpRect) const;
@@ -283,7 +283,7 @@ void GetItemRect(
 Indeks wskaźnika, którego współrzędne prostokąta mają zostać pobrane.
 
 *Lprect*<br/>
-Wskazuje na strukturę [RECT](/previous-versions/dd162897\(v=vs.85\)) lub obiekt [CRect,](../../atl-mfc-shared/reference/crect-class.md) który otrzyma współrzędne wskaźnika określonego przez *nIndex*.
+Wskazuje na strukturę [RECT](/windows/win32/api/windef/ns-windef-rect) lub obiekt [CRect,](../../atl-mfc-shared/reference/crect-class.md) który otrzyma współrzędne wskaźnika określonego przez *nIndex*.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -293,7 +293,7 @@ Współrzędne znajdują się w pikselach względem lewego górnego rogu paska s
 
 Ustawia *nID*, *nStyle*i *cxWidth* na identyfikator, styl i szerokość okienka wskaźnika w miejscu określonym przez *nIndex*.
 
-```
+```cpp
 void GetPaneInfo(
     int nIndex,
     UINT& nID,
@@ -406,7 +406,7 @@ Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 Ustawia określone okienko wskaźnika na nowy identyfikator, styl i szerokość.
 
-```
+```cpp
 void SetPaneInfo(
     int nIndex,
     UINT nID,
@@ -446,7 +446,7 @@ Obsługiwane są następujące style wskaźników:
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić styl okienka paska stanu.
 
-```
+```cpp
 void SetPaneStyle(
     int nIndex,
     UINT nStyle);

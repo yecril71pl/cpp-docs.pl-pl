@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnDrawSortArrow
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
-ms.openlocfilehash: 0a6b0cf39861ba995acff71fc40cf44ae5114642
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5140d02c5acbbc430c3b4d175da1933c79c702b3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367458"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752353"
 ---
 # <a name="cmfcheaderctrl-class"></a>Klasa CMFCHeaderCtrl
 
@@ -130,7 +130,7 @@ Ten konstruktor inicjuje następujące zmienne członkowskie do określonych war
 
 Włącza lub wyłącza tryb *sortowania wielu kolumn* dla bieżącego formantu nagłówka.
 
-```
+```cpp
 void EnableMultipleSort(BOOL bEnable=TRUE);
 ```
 
@@ -295,7 +295,7 @@ virtual void OnFillBackground(CDC* pDC);
 
 Usuwa określoną kolumnę z listy kolumn sortowania.
 
-```
+```cpp
 void RemoveSortColumn(int iColumn);
 ```
 
@@ -308,7 +308,7 @@ void RemoveSortColumn(int iColumn);
 
 Ustawia kolejność sortowania określonej kolumny w formancie nagłówka.
 
-```
+```cpp
 void SetSortColumn(
     int iColumn,
     BOOL bAscending=TRUE,

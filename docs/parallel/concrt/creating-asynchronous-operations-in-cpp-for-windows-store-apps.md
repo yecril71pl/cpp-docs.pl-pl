@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 8e1183464d3ecf9b12fabcc6fb4f1fd99b7b0083
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 635a8c95a3801c6e88feff1cefa3ed27727a8f88
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353405"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032190"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy uniwersalnej systemu Windows
 
@@ -54,13 +54,13 @@ Korzystając ze środowiska wykonawczego systemu Windows, można użyć najlepsz
 [Windows::Fundacja::IAsyncAction](/uwp/api/windows.foundation.iasyncaction)<br/>
 Reprezentuje akcję asynchronizacjową.
 
-[Windows::Foundation::IAsyncActionWithProgress\<TProgress>](/uwp/api/Windows.Foundation.IAsyncActionWithProgress_TProgress_)<br/>
+[Windows::Foundation::IAsyncActionWithProgress\<TProgress>](/uwp/api/windows.foundation.iasyncactionwithprogress-1)<br/>
 Reprezentuje akcję asynchronizacjową, która raportuje postęp.
 
-[Windows::Foundation::IAsyncOperation\<TResult>](/uwp/api/windows.foundation.iasyncoperation_tresult_)<br/>
+[Windows::Foundation::IAsyncOperation\<TResult>](/uwp/api/windows.foundation.iasyncoperation-1)<br/>
 Reprezentuje operację asynchronizacyjną, która zwraca wynik.
 
-[Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress>](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)<br/>
+[Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress>](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)<br/>
 Reprezentuje operację asynchroniza, która zwraca wynik i raportuje postęp.
 
 Pojęcie *akcji* oznacza, że zadanie asynchroniczne nie tworzy wartości (pomyśl o `void`funkcji, która zwraca ). Pojęcie *operacji* oznacza, że zadanie asynchroniczne daje wartość. Pojęcie *postępu* oznacza, że zadanie może zgłaszać komunikaty postępu do wywołującego. JavaScript, .NET Framework i Visual C++ każdy udostępnia swój własny sposób tworzenia wystąpień tych interfejsów do użycia w granicach ABI. Dla języka Visual C++, PPL zapewnia [współbieżność::create_async](reference/concurrency-namespace-functions.md#create_async) funkcji. Ta funkcja tworzy asynchronicznego czasu wykonywania systemu Windows akcji lub operacji, która reprezentuje ukończenie zadania. Funkcja `create_async` przyjmuje funkcję pracy (zazwyczaj wyrażenie lambda), wewnętrznie `task` tworzy obiekt i zawija to zadanie w jednym z czterech asynchronicznych interfejsów środowiska wykonawczego systemu Windows.
@@ -92,7 +92,7 @@ W poniższym przykładzie przedstawiono `IAsyncAction` różne sposoby tworzenia
 
 ## <a name="example-creating-a-c-windows-runtime-component-and-consuming-it-from-c"></a><a name="example-component"></a>Przykład: Tworzenie składnika środowiska wykonawczego systemu Windows w języku C++ i korzystanie z niego z języka C\#
 
-Należy wziąć pod uwagę aplikację, która używa XAML i C# do definiowania interfejsu użytkownika i składnika środowiska wykonawczego systemu Windows W++ do wykonywania operacji intensywnie korzystających z obliczeń. W tym przykładzie składnik C++ oblicza, które liczby w danym zakresie są prime. Aby zilustrować różnice między czterema asynchroniczną interfejsami zadań środowiska wykonawczego systemu Windows, uruchom w `Primes`programie Visual Studio, tworząc puste **rozwiązanie** i nazywając go . Następnie dodaj do rozwiązania projekt **składnika środowiska** `PrimesLibrary`wykonawczego systemu Windows i nadawanie go . Dodaj następujący kod do wygenerowanego pliku nagłówka Języka C++ (w tym przykładzie zmienia nazwę class1.h na Primes.h). Każda `public` metoda definiuje jeden z czterech interfejsów asynchronicznych. Metody zwracające wartość zwracają [windows::Foundation::Collections::IVector\<int>](/uwp/api/Windows.Foundation.Collections.IVector_T_) obiektu. Metody, które raportują postęp, generują `double` wartości definiujące procent ogólnej pracy, która została ukończona.
+Należy wziąć pod uwagę aplikację, która używa XAML i C# do definiowania interfejsu użytkownika i składnika środowiska wykonawczego systemu Windows W++ do wykonywania operacji intensywnie korzystających z obliczeń. W tym przykładzie składnik C++ oblicza, które liczby w danym zakresie są prime. Aby zilustrować różnice między czterema asynchroniczną interfejsami zadań środowiska wykonawczego systemu Windows, uruchom w `Primes`programie Visual Studio, tworząc puste **rozwiązanie** i nazywając go . Następnie dodaj do rozwiązania projekt **składnika środowiska** `PrimesLibrary`wykonawczego systemu Windows i nadawanie go . Dodaj następujący kod do wygenerowanego pliku nagłówka Języka C++ (w tym przykładzie zmienia nazwę class1.h na Primes.h). Każda `public` metoda definiuje jeden z czterech interfejsów asynchronicznych. Metody zwracające wartość zwracają [windows::Foundation::Collections::IVector\<int>](/uwp/api/windows.foundation.collections.ivector-1) obiektu. Metody, które raportują postęp, generują `double` wartości definiujące procent ogólnej pracy, która została ukończona.
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 

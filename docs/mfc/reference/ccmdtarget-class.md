@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 5ee4101302322a5212a80b32f095cdd13d9769e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ef7040f3be1e4c30a6dc19e6093727299c9f1c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352293"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752715"
 ---
 # <a name="ccmdtarget-class"></a>Klasa CCmdTarget
 
@@ -121,7 +121,7 @@ Mapy wysyłki, podobnie jak mapy komunikatów, `IDispatch` są używane do uwida
 
 Wywołanie tej funkcji, aby wyświetlić kursor jako klepsydry, gdy oczekujesz, że polecenie do wykonania zauważalny przedział czasu.
 
-```
+```cpp
 void BeginWaitCursor();
 ```
 
@@ -169,7 +169,7 @@ Wskaźnik do struktury [MSG](/windows/win32/api/winuser/ns-winuser-msg) opisują
 Dojście okna dokumentu zawierającego obiekt.
 
 *Lprect*<br/>
-Wskaźnik do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) zawierającej współrzędne w pikselach, które definiują prostokąt obwiedniowy obiektu w *hwndParent*.
+Wskaźnik do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) zawierającej współrzędne w pikselach, które definiują prostokąt obwiedniowy obiektu w *hwndParent*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -183,7 +183,7 @@ Ta funkcja elementu członkowskiego jest w zasadzie implementacją [IOleObject::
 
 Wywołanie tej funkcji, aby włączyć automatyzację OLE dla obiektu.
 
-```
+```cpp
 void EnableAutomation();
 ```
 
@@ -195,7 +195,7 @@ Ta funkcja jest zazwyczaj wywoływana z konstruktora obiektu i powinny być wywo
 
 Włącza wypalania zdarzeń za połączeniowe.
 
-```
+```cpp
 void EnableConnections();
 ```
 
@@ -207,7 +207,7 @@ Aby włączyć punkty połączenia, wywołać tę funkcję elementu członkowski
 
 Włącza bibliotekę typów obiektu.
 
-```
+```cpp
 void EnableTypeLib();
 ```
 
@@ -219,7 +219,7 @@ Wywołanie tej funkcji elementu członkowskiego `CCmdTarget`w konstruktorze obie
 
 Wywołanie tej funkcji po `BeginWaitCursor` wywołaniu funkcji elementu członkowskiego, aby powrócić z kursora klepsydry do poprzedniego kursora.
 
-```
+```cpp
 void EndWaitCursor();
 ```
 
@@ -284,7 +284,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="parameters"></a>Parametry
 
 *pIID*<br/>
-Wskaźnik do identyfikatora interfejsu [(identyfikator GUID](/previous-versions/cc317743(v%3dmsdn.10)).
+Wskaźnik do identyfikatora interfejsu (a [GUID](/windows/win32/api/guiddef/ns-guiddef-guid.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -349,8 +349,8 @@ HRESULT GetTypeInfoOfGuid(
 *lcid*<br/>
 Identyfikator ustawień regionalnych `LCID`( ).
 
-*Identyfikator guid*<br/>
-Identyfikator [GUID](/previous-versions/cc317743(v%3dmsdn.10)) opisu typu.
+*guid*<br/>
+[GUID](/windows/win32/api/guiddef/ns-guiddef-guid opisu typu.
 
 *ppTypeInfo (Polski)*<br/>
 Wskaźnik do wskaźnika `ITypeInfo` do interfejsu.
@@ -514,7 +514,7 @@ Zastąd w tej funkcji należy zastąpić tę funkcję, aby zapewnić specjalną 
 
 Wywołanie tej funkcji, aby przywrócić odpowiedni kursor klepsydry po zmianie kursora systemowego (na przykład po otwarciu okna komunikatu, a następnie zamknięciu w trakcie długiej operacji).
 
-```
+```cpp
 void RestoreWaitCursor();
 ```
 

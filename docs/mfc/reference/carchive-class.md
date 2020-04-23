@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: 46d30e38674d10aecdfdbf7be91c48063ba9f493
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ef8b6ec9060e8c15dd45f8203dadd2a2aca9e168
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377062"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753118"
 ---
 # <a name="carchive-class"></a>Klasa CArchive
 
@@ -146,7 +146,7 @@ Aby uzyskać `CArchive`więcej informacji na temat , zobacz artykuły [Serializa
 
 Wywołanie tej funkcji, aby zamknąć archiwum bez zgłaszania wyjątku.
 
-```
+```cpp
 void Abort ();
 ```
 
@@ -208,7 +208,7 @@ Nie można `CFile` używać operacji do zmiany stanu pliku, dopóki nie zostanie
 
 Opróżnia wszystkie dane pozostające w buforze, zamyka archiwum i odłącza archiwum od pliku.
 
-```
+```cpp
 void Close();
 ```
 
@@ -226,7 +226,7 @@ Funkcja `Close` elementu członkowskiego zapewnia, że wszystkie dane są przesy
 
 Wymusza zapisanie w pliku wszystkich danych pozostających w buforze archiwum.
 
-```
+```cpp
 void Flush();
 ```
 
@@ -346,7 +346,7 @@ Jeśli `IsStoring` stan archiwum jest niezerowy, `IsLoading` jego stan wynosi 0 
 
 Wywołanie tej funkcji elementu członkowskiego, aby umieścić obiekty na mapie, które nie są tak naprawdę serializowane do pliku, ale które są dostępne dla podobiektów do odwołania.
 
-```
+```cpp
 void MapObject(const CObject* pOb);
 ```
 
@@ -676,7 +676,7 @@ W wersji funkcji elementu członkowskiego z parametrem *nMax* bufor będzie trzy
 
 Wywołanie tej funkcji elementu członkowskiego, gdy chcesz przechowywać i ładować informacje o wersji klasy podstawowej.
 
-```
+```cpp
 void SerializeClass(const CRuntimeClass* pClassRef);
 ```
 
@@ -703,7 +703,7 @@ Użyj [makra RUNTIME_CLASS,](../../mfc/reference/run-time-object-model-services.
 
 Wywołaj, `SetLoadParams` gdy zamierzasz odczytać `CObject`dużą liczbę obiektów pochodnych z archiwum.
 
-```
+```cpp
 void SetLoadParams(UINT nGrowBy = 1024);
 ```
 
@@ -726,7 +726,7 @@ Nie wolno `SetLoadParams` wywoływać po załadowaniu dowolnego obiektu lub po [
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić schemat obiektu przechowywanego w obiekcie archiwum na *nSchema*.
 
-```
+```cpp
 void SetObjectSchema(UINT nSchema);
 ```
 
@@ -749,7 +749,7 @@ Służy `SetObjectSchema` do zaawansowanego przechowywania wersji; na przykład,
 
 Służy `SetStoreParams` do przechowywania dużej `CObject`liczby obiektów pochodnych w archiwum.
 
-```
+```cpp
 void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 ```
 
@@ -775,7 +775,7 @@ Nie można `SetStoreParams` wywołać po żadnych obiektów są przechowywane lu
 
 Zapisuje określoną liczbę bajtów do archiwum.
 
-```
+```cpp
 void Write(const void* lpBuf, INT nMax);
 ```
 
@@ -801,7 +801,7 @@ Funkcji `Write` elementu członkowskiego w `Serialize` ramach funkcji można zap
 
 Służy `WriteClass` do przechowywania informacji o wersji i klasie klasy podstawowej podczas serializacji klasy pochodnej.
 
-```
+```cpp
 void WriteClass(const CRuntimeClass* pClassRef);
 ```
 
@@ -828,7 +828,7 @@ Zamiast `WriteClass`programu SerializeClass można użyć [serializeclass,](#ser
 
 Przechowuje `CObject` określone w archiwum.
 
-```
+```cpp
 void WriteObject(const CObject* pOb);
 ```
 
@@ -858,7 +858,7 @@ Definicja klasy `CAge`można znaleźć w przykładzie [CObList::CObList](../../m
 
 Ta funkcja elementu członkowskiego służy do zapisywania danych `CArchive` z bufora do pliku skojarzonego z obiektem.
 
-```
+```cpp
 void WriteString(LPCTSTR lpsz);
 ```
 

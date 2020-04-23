@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-ms.openlocfilehash: 4e73bd7bc1a28317dbfc452df1f45541dfcbfd21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cd74d2418bb874553fbbafa637f527a7b84b73bf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374435"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754280"
 ---
 # <a name="cmfcimagepaintarea-class"></a>Klasa CMFCImagePaintArea
 
@@ -112,7 +112,7 @@ Wartość [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) o
 
 Ustawia obraz bitmapowy dla obszaru obrazu.
 
-```
+```cpp
 void SetBitmap(CBitmap* pBitmap);
 ```
 
@@ -131,7 +131,7 @@ Jeśli *pBitmap* ma wartość NULL, ta metoda ustawia rozmiar modyfikowalnej pow
 
 Ustawia bieżący kolor rysunku.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -152,7 +152,7 @@ Kolor rysunku jest używany w oknie dialogowym edytora obrazów dla wszystkich t
 
 Ustawia bieżący tryb rysowania.
 
-```
+```cpp
 void SetMode(IMAGE_EDIT_MODE mode);
 ```
 

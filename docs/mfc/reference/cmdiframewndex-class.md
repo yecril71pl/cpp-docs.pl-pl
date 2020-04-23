@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: e5b571ee677dab447075abb632cc013c9cd58d44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 22ea89231487f214b797938e2202c9eed01fcb6e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370047"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754540"
 ---
 # <a name="cmdiframewndex-class"></a>Klasa CMDIFrameWndEx
 
@@ -296,7 +296,7 @@ Poniższy przykład pochodzi z `CMDIFrameWndEx`klasy z . Ten fragment kodu pocho
 
 Ponownie oblicza układ aktywnego elementu.
 
-```
+```cpp
 void ActiveItemRecalcLayout();
 ```
 
@@ -481,7 +481,7 @@ Wskaźnik do nowego okna.
 
 Dokuje określone okienko do okna ramki.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID=0,
@@ -603,7 +603,7 @@ W poniższym przykładzie pokazano, `EnableDocking` jak metoda jest używana w [
 
 Pokazuje lub ukrywa menu główne w trybie pełnoekranowym.
 
-```
+```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
@@ -618,7 +618,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 Włącza tryb pełnoekranowy okna ramki.
 
-```
+```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
@@ -635,7 +635,7 @@ W trybie pełnoekranowym wszystkie paski sterowania dokowania, paski narzędzi i
 
 Włącza lub wyłącza ładowanie stanu dokowania.
 
-```
+```cpp
 void EnableLoadDockState(BOOL bEnable = TRUE);
 ```
 
@@ -650,7 +650,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 Włącza lub wyłącza funkcję grup z kartami MDI dla okna ramki.
 
-```
+```cpp
 void EnableMDITabbedGroups(
     BOOL bEnable,
     const CMDITabInfo& params);
@@ -694,7 +694,7 @@ W poniższym `EnableMDITabbedGroups` przykładzie pokazano, jak jest używany w 
 
 Włącza lub wyłącza funkcję kart MDI dla okna ramki MDI. Po włączeniu okno ramki wyświetla kartę dla każdego okna podrzędnego MDI.
 
-```
+```cpp
 void EnableMDITabs(
     BOOL bEnable=TRUE,
     BOOL bIcons=TRUE,
@@ -746,7 +746,7 @@ W poniższym `EnableMDITabs` przykładzie pokazano, jak jest używany w [przykł
 
 Określa, czy ostatnia aktywna karta ma zostać otwarta po zamknięciu bieżącej karty przez użytkownika.
 
-```
+```cpp
 void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```
 
@@ -771,7 +771,7 @@ Służy `EnableMDITabsLastActiveActivation` do włączania drugiego sposobu akty
 
 Włącza lub wyłącza automatyczne tworzenie i zarządzanie menu okienka podręcznego, w którym wyświetlana jest lista okienek aplikacji.
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -815,7 +815,7 @@ W poniższym `EnablePaneMenu` przykładzie pokazano, jak jest używany w [Przyk�
 
 Wstawia element menu, którego identyfikator polecenia wywołuje okno dialogowe [CMFCWindowsManagerDialog.](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)
 
-```
+```cpp
 void EnableWindowsDialog(
     UINT uiMenuId,
     LPCTSTR lpszMenuText,
@@ -1232,7 +1232,7 @@ W poniższym `LoadMDIState` przykładzie pokazano, jak jest używany w [Przykła
 
 Przenosi aktywną kartę z aktualnie aktywnego okna z kartami do następnej lub poprzedniej grupy z kartami.
 
-```
+```cpp
 void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```
 
@@ -1245,7 +1245,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 Tworzy nową grupę z kartami, która ma jedno okno.
 
-```
+```cpp
 void MDITabNewGroup(BOOL bVert=TRUE);
 ```
 
@@ -1789,7 +1789,7 @@ Ta metoda zastępuje [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-cla
 
 Wyrejestrowanie okienka i usuwa go z menedżera dokowania.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -1864,7 +1864,7 @@ W poniższym `SaveMDIState` przykładzie pokazano, jak jest używany w [Przykła
 
 Ustawia okno ramki podglądu wydruku.
 
-```
+```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
@@ -1879,7 +1879,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 Modyfikuje obiekt paska narzędzi, zastępując elementy manekina elementami zdefiniowanymi przez użytkownika.
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -1901,7 +1901,7 @@ void SetupToolbarMenu(
 
 Przełącza klatkę główną z trybu regularnego na tryb pełnoekranowy.
 
-```
+```cpp
 void ShowFullScreen();
 ```
 
@@ -1911,7 +1911,7 @@ void ShowFullScreen();
 
 Pokazuje lub ukrywa określone okienko.
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -1947,7 +1947,7 @@ W poniższym `ShowPane` przykładzie pokazano, jak jest używany w [Przykładzie
 
 Tworzy [okno CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) i otwiera je.
 
-```
+```cpp
 void ShowWindowsDialog();
 ```
 
@@ -1988,7 +1988,7 @@ W poniższym `TabbedDocumentToControlBar` przykładzie pokazano, jak jest używa
 
 Wywoływana przez strukturę, aby zaktualizować podpis ramki okna.
 
-```
+```cpp
 void UpdateCaption();
 ```
 
@@ -1998,7 +1998,7 @@ void UpdateCaption();
 
 Ustawia ikonę dla każdego okienka z kartami MDI.
 
-```
+```cpp
 void UpdateMDITabbedBarsIcons();
 ```
 

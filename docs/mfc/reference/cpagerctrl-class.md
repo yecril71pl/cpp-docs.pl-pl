@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: b2c4f1ac99735953f4832226b840ced4ea4c509a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cd27a3acf26abe39831089546df317679f2ecab6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376974"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753704"
 ---
 # <a name="cpagerctrl-class"></a>Klasa CPagerCtrl
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 |Parametr|Opis|
 |---------------|-----------------|
 |*Dwstyle*|[w] Kombinacja bitowa (OR) [stylów okien](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [stylów formantu pagera,](/windows/win32/Controls/pager-control-styles) które mają zostać zastosowane do formantu.|
-|*Rect*|[w] Odwołanie do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) która zawiera położenie i rozmiar formantu we współrzędnych klienta.|
+|*Rect*|[w] Odwołanie do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) która zawiera położenie i rozmiar formantu we współrzędnych klienta.|
 |*pParentWnd*|[w] Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiektu, który jest nadrzędnym oknem formantu. Ten parametr nie może być null.|
 |*Nid*|[w] Identyfikator formantu.|
 
@@ -186,7 +186,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*Dwexstyle*|[w] Bitowa kombinacja rozszerzonych stylów, które mają być zastosowane do formantu. Aby uzyskać więcej informacji, zobacz parametr *dwExStyle* funkcji [CreateWindowEx.](/windows/win32/api/winuser/nf-winuser-createwindowexw)|
 |*Dwstyle*|[w] Kombinacja bitowa (OR) [stylów okien](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [stylów formantu pagera,](/windows/win32/Controls/pager-control-styles) które mają zostać zastosowane do formantu.|
-|*Rect*|[w] Odwołanie do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) która zawiera położenie i rozmiar formantu we współrzędnych klienta.|
+|*Rect*|[w] Odwołanie do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) która zawiera położenie i rozmiar formantu we współrzędnych klienta.|
 |*pParentWnd*|[w] Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiektu, który jest nadrzędnym oknem formantu. Ten parametr nie może być null.|
 |*Nid*|[w] Identyfikator formantu.|
 
@@ -202,7 +202,7 @@ Aby utworzyć kontrolkę pagera, zadeklaruj zmienną, `CPagerCtrl` następnie wy
 
 Włącza lub wyłącza przekazywanie [wiadomości WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove) do okna, które jest zawarte w bieżącym formancie pagera.
 
-```
+```cpp
 void ForwardMouse(BOOL bForward);
 ```
 
@@ -462,7 +462,7 @@ Ta metoda wysyła komunikat [PGM_GETBUTTONSTATE,](/windows/win32/Controls/pgm-ge
 
 Powoduje, że bieżący formant pagera ponownie obliczy rozmiar okna zawartego.
 
-```
+```cpp
 void RecalcSize();
 ```
 
@@ -572,7 +572,7 @@ Poniższy przykład tworzy kontrolkę pagera, a następnie używa [CPagerCtrl::S
 
 Ustawia okno zawarte dla bieżącego kontrolki pagera.
 
-```
+```cpp
 void SetChild(HWND hwndChild);
 ```
 
@@ -598,7 +598,7 @@ Poniższy przykład tworzy kontrolkę pagera, a następnie używa [CPagerCtrl::S
 
 Ustawia położenie przewijania bieżącego kontrolki pagera.
 
-```
+```cpp
 void SetScrollPos(int iPos);
 ```
 

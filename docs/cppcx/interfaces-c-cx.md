@@ -2,12 +2,12 @@
 title: Interfejsy (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: b904f041e34bcf5fda78fed11aaad4998ba5208a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 716bf86eddf621244415033dae1b9c93ad1baba5
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366040"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032359"
 ---
 # <a name="interfaces-ccx"></a>Interfejsy (C++/CX)
 
@@ -63,7 +63,7 @@ Gdy klasa ref implementuje wiele interfejsów, a te interfejsy mają metody, kt�
 
 ## <a name="generic-interfaces"></a>Interfejsy ogólne
 
-W języku C++/CX `generic` słowo kluczowe jest używane do reprezentowania typu sparametryzowanego środowiska wykonawczego systemu Windows. Typ sparametryzowany jest emitowany w metadanych i może być zużywany przez kod, który jest napisany w dowolnym języku, który obsługuje parametry typu. Środowisko wykonawcze systemu Windows definiuje niektóre interfejsy ogólne — na przykład [Windows::Foundation::Collections::IVector\<T>](/uwp/api/Windows.Foundation.Collections.IVector_T_)— ale nie obsługuje tworzenia publicznych interfejsów ogólnych zdefiniowanych przez użytkownika w języku C++/CX. Można jednak tworzyć prywatne interfejsy ogólne.
+W języku C++/CX `generic` słowo kluczowe jest używane do reprezentowania typu sparametryzowanego środowiska wykonawczego systemu Windows. Typ sparametryzowany jest emitowany w metadanych i może być zużywany przez kod, który jest napisany w dowolnym języku, który obsługuje parametry typu. Środowisko wykonawcze systemu Windows definiuje niektóre interfejsy ogólne — na przykład [Windows::Foundation::Collections::IVector\<T>](/uwp/api/windows.foundation.collections.ivector-1)— ale nie obsługuje tworzenia publicznych interfejsów ogólnych zdefiniowanych przez użytkownika w języku C++/CX. Można jednak tworzyć prywatne interfejsy ogólne.
 
 Oto jak można użyć typów środowiska wykonawczego systemu Windows do tworzenia ogólnego interfejsu:
 

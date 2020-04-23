@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d819c170f47ea259e776bce6db0a6971e3f54bec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bdf9dee88c29621bdc77c83d2633d93b4b9d10a7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365713"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751612"
 ---
 # <a name="exception-processing"></a>Przetwarzanie wyjątków
 
@@ -307,7 +307,7 @@ Zobacz przykład [CFile::Abort](../../mfc/reference/cfile-class.md#abort).
 
 Zgłasza wyjątek archiwum.
 
-```
+```cpp
 void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ```
 
@@ -327,7 +327,7 @@ Wskazuje ciąg zawierający nazwę `CArchive` obiektu, który spowodował wyjąt
 
 Zgłasza wyjątek pliku.
 
-```
+```cpp
 void AfxThrowFileException(
     int cause,
     LONG lOsError = -1,
@@ -359,7 +359,7 @@ Zgłasza wyjątek nieprawidłowego argumentu.
 
 ### <a name="syntax"></a>Składnia
 
-```
+```cpp
 void AfxThrowInvalidArgException( );
 ```
 
@@ -375,7 +375,7 @@ Ta funkcja jest wywoływana, gdy używane są nieprawidłowe argumenty.
 
 Zgłasza wyjątek pamięci.
 
-```
+```cpp
 void AfxThrowMemoryException();
 ```
 
@@ -391,7 +391,7 @@ Wywołanie tej funkcji, jeśli wywołania podstawowych alokatorów pamięci syst
 
 Zgłasza wyjątek, który jest wynikiem żądania dla nieobsługiconej funkcji.
 
-```
+```cpp
 void AfxThrowNotSupportedException();
 ```
 
@@ -403,7 +403,7 @@ void AfxThrowNotSupportedException();
 
 Zgłasza wyjątek zasobu.
 
-```
+```cpp
 void  AfxThrowResourceException();
 ```
 
@@ -419,7 +419,7 @@ Ta funkcja jest zwykle wywoływana, gdy nie można załadować zasobu systemu Wi
 
 Zgłasza wyjątek, aby zatrzymać operację użytkownika końcowego.
 
-```
+```cpp
 void AfxThrowUserException();
 ```
 
@@ -435,7 +435,7 @@ Ta funkcja jest zwykle `AfxMessageBox` wywoływana natychmiast po zgłoszeniu b�
 
 Ta funkcja służy do zgłaszania wyjątku w ramach funkcji automatyzacji OLE.
 
-```
+```cpp
 void AFXAPI AfxThrowOleDispatchException(
     WORD wCode ,
     LPCSTR lpszDescription,
@@ -477,7 +477,7 @@ Informacje podane do tej funkcji mogą być wyświetlane przez aplikację drivin
 
 Tworzy obiekt typu `COleException` i zgłasza wyjątek.
 
-```
+```cpp
 void AFXAPI AfxThrowOleException(SCODE sc);
 void AFXAPI AfxThrowOleException(HRESULT hr);
 ```
@@ -502,7 +502,7 @@ Wersja, która przyjmuje HRESULT jako argument konwertuje ten kod wyniku do odpo
 
 Wywołanie tej funkcji, aby zgłosić wyjątek typu [CDaoException](../../mfc/reference/cdaoexception-class.md) z własnego kodu.
 
-```
+```cpp
 void AFXAPI AfxThrowDaoException(
     int nAfxDaoError = NO_AFX_DAO_ERROR,
     SCODE scode = S_OK);
@@ -530,7 +530,7 @@ Aby uzyskać informacje na temat wyjątków związanych `CDaoException` z klasam
 
 Wywołanie tej funkcji, aby `CDBException` zgłosić wyjątek typu z własnego kodu.
 
-```
+```cpp
 void AfxThrowDBException(
     RETCODE nRetCode,
     CDatabase* pdb,
@@ -562,7 +562,7 @@ Aby uzyskać informacje na temat wartości RETCODE zdefiniowanych przez ODBC, zo
 
 Domyślna funkcja zakończenia dostarczona przez MFC.
 
-```
+```cpp
 void  AfxAbort();
 ```
 

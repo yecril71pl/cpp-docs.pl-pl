@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-ms.openlocfilehash: 98d6bec3d33c9060ebb741111dff793f64cc7cb0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e45e2e58bd51d36b6412940b7ed01aa119017ed
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372331"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754935"
 ---
 # <a name="cjumplist-class"></a>Klasa CJumpList
 
@@ -99,7 +99,7 @@ Niszczy `CJumpList` obiekt.
 
 Przerywa transakcję budowania listy bez zatwierdzania.
 
-```
+```cpp
 void AbortList();
 ```
 
@@ -256,7 +256,7 @@ Jeśli ten parametr jest FALSE, lista nie jest automatycznie zatwierdzana w dest
 
 Usuwa wszystkie zadania i miejsca docelowe, które `CJumpList` zostały dodane do bieżącego wystąpienia do tej pory.
 
-```
+```cpp
 void ClearAll();
 ```
 
@@ -268,7 +268,7 @@ Ta metoda czyści i zwalnia wszystkie dane i interfejsy wewnętrzne.
 
 Usuwa wszystkie miejsca docelowe, które zostały dodane do bieżącego wystąpienia CJumpList do tej pory.
 
-```
+```cpp
 void ClearAllDestinations();
 ```
 
@@ -350,7 +350,7 @@ Nie trzeba wywoływać tej metody jawnie, chyba że chcesz `ICustomDestinationLi
 
 Ustawia identyfikator modelu użytkownika aplikacji dla listy, która zostanie zbudowana.
 
-```
+```cpp
 void SetAppID(LPCTSTR strAppID);
 ```
 

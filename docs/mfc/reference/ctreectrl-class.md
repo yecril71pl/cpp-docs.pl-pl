@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 6fe7b133fa01285f85dc28dc8d8ca01e027f4a5c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b6c11600010bc9f97ab8c3a531d33c92c94e442
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373304"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752111"
 ---
 # <a name="ctreectrl-class"></a>Klasa CTreeCtrl
 
@@ -315,7 +315,7 @@ virtual BOOL Create(
 Określa styl formantu widoku drzewa. Zastosuj style okien opisane w [programie CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)oraz dowolną kombinację [stylów sterowania widokiem drzewa,](/windows/win32/Controls/tree-view-control-window-styles) zgodnie z opisem w zestaw windows SDK.
 
 *Rect*<br/>
-Określa rozmiar i położenie formantu widoku drzewa. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/previous-versions/dd162897\(v=vs.85\))
+Określa rozmiar i położenie formantu widoku drzewa. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Określa okno nadrzędne formantu widoku `CDialog`drzewa, zwykle . Nie może być null.
@@ -361,7 +361,7 @@ Określa rozszerzony styl tworzonego formantu. Aby uzyskać listę rozszerzonych
 Określa styl formantu widoku drzewa. Zastosuj style okien opisane w [programie CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)oraz dowolną kombinację [stylów sterowania widokiem drzewa,](/windows/win32/Controls/tree-view-control-window-styles) zgodnie z opisem w zestaw windows SDK.
 
 *Rect*<br/>
-Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
+Odwołanie do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest nadrzędnym formantu.
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*hItem (własówce)*|[w] Dojście do elementu sterującego widoku drzewa.|
 |*nPart (część)*|[w] Identyfikator części. Musi być ustawiona na TVGIPR_BUTTON.|
-|*Lprect*|[na zewnątrz] Wskaźnik do struktury [RECT.](/previous-versions/dd162897\(v=vs.85\)) Jeśli ta metoda zakończy się pomyślnie, struktura odbiera współrzędne prostokąta części określonej przez *hItem* i *nPart*.|
+|*Lprect*|[na zewnątrz] Wskaźnik do struktury [RECT.](/windows/win32/api/windef/ns-windef-rect) Jeśli ta metoda zakończy się pomyślnie, struktura odbiera współrzędne prostokąta części określonej przez *hItem* i *nPart*.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 Dojście elementu sterującego widoku drzewa.
 
 *Lprect*<br/>
-Wskaźnik do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) która odbiera prostokąt ograniczający. Współrzędne są względem lewego górnego rogu formantu widoku drzewa.
+Wskaźnik do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) która odbiera prostokąt ograniczający. Współrzędne są względem lewego górnego rogu formantu widoku drzewa.
 
 *bTeksa nie tylko*<br/>
 Jeśli ten parametr jest niezerowy, prostokąt ograniczający zawiera tylko tekst elementu. W przeciwnym razie zawiera cały wiersz, który zajmuje element w formancie widoku drzewa.
@@ -1833,7 +1833,7 @@ Wskaźnik do poprzedniej listy obrazów, jeśli istnieje; w przeciwnym razie NUL
 
 Wywołanie tej funkcji, aby ustawić szerokość wcięcie dla formantu widoku drzewa i przerysować formant, aby odzwierciedlić nową szerokość.
 
-```
+```cpp
 void SetIndent(UINT nIndent);
 ```
 
@@ -2269,7 +2269,7 @@ Aby użyć etykietek narzędzi, podczas tworzenia `CTreeCtrl` obiektu należy ws
 
 Wyświetla informacje dla określonego elementu w bieżącym formancie widoku drzewa.
 
-```
+```cpp
 void ShowInfoTip(HTREEITEM hItem);
 ```
 

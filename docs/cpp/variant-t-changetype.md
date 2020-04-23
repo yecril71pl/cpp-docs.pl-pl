@@ -9,12 +9,12 @@ helpviewer_keywords:
 - VARIANT object [C++], ChangeType
 - VARIANT object
 ms.assetid: 829d2eeb-3338-4a88-9dce-0ca145f47aac
-ms.openlocfilehash: b0692c9befaa6b7e787ada624dcbb56b074c9f9d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c2283158856a6781ab2e12c51f4e2ad0e4f1d531
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160466"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750731"
 ---
 # <a name="_variant_tchangetype"></a>_variant_t::ChangeType
 
@@ -24,7 +24,7 @@ Zmienia typ obiektu `_variant_t` na wskazany `VARTYPE`.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 void ChangeType(
    VARTYPE vartype,
    const _variant_t* pSrc = NULL
@@ -33,18 +33,18 @@ void ChangeType(
 
 #### <a name="parameters"></a>Parametry
 
-*VARTYPE*<br/>
-`VARTYPE` dla tego obiektu `_variant_t`.
+*Vartype*<br/>
+Dla `VARTYPE` tego `_variant_t` obiektu.
 
-*pSrc*<br/>
-Wskaźnik do obiektu `_variant_t` do przekonwertowania. Jeśli ta wartość jest RÓWNa NULL, konwersja jest wykonywana na miejscu.
+*Psrc*<br/>
+Wskaźnik do `_variant_t` obiektu, który ma zostać przekonwertowany. Jeśli ta wartość ma wartość NULL, konwersja odbywa się na miejscu.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska Konwertuje obiekt `_variant_t` na wskazany `VARTYPE`. Jeśli *pSrc* ma wartość null, konwersja jest wykonywana, w przeciwnym razie ten obiekt `_variant_t` jest kopiowany z *pSrc* , a następnie konwertowany.
+Ta funkcja elementu `_variant_t` członkowskiego konwertuje `VARTYPE`obiekt na wskazany . Jeśli *pSrc* ma wartość NULL, konwersja `_variant_t` odbywa się na miejscu, w przeciwnym razie ten obiekt jest kopiowany z *pSrc,* a następnie konwertowany.
 
-**ZAKOŃCZENIE określonych przez firmę Microsoft**
+**ZAKOŃCZ Specyficzne dla firmy Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
 
-[_variant_t, klasa](../cpp/variant-t-class.md)
+[Klasa _variant_t](../cpp/variant-t-class.md)

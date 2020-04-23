@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 946de5768829330f84b826a1fc9b2f6278847357
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4bb1ade4182424cbdcbf0d7ba69af88bbb88abe6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366837"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750673"
 ---
 # <a name="cwinapp-class"></a>Klasa CWinApp
 
@@ -377,7 +377,7 @@ Element `m_hPrevInstance` członkowski danych już nie istnieje. Aby ustalić, c
 
 Wywołanie tej funkcji elementu członkowskiego, aby dodać szablon dokumentu do listy dostępnych szablonów dokumentów, które przechowuje aplikacja.
 
-```
+```cpp
 void AddDocTemplate(CDocTemplate* pTemplate);
 ```
 
@@ -446,7 +446,7 @@ Aby dostosować zachowanie, należy zastąpić tę funkcję w pochodnej [klasie 
 
 Wywołanie tej funkcji elementu członkowskiego, aby zamknąć wszystkie otwarte dokumenty przed zamknięciem.
 
-```
+```cpp
 void CloseAllDocuments(BOOL bEndSession);
 ```
 
@@ -618,7 +618,7 @@ Zwraca wartość PRAWDA, jeśli obsługa D2D została włączona, FALSE - w prze
 
 Wywołanie tej funkcji elementu członkowskiego `CWinApp`z wewnątrz konstruktora klasy pochodnej do korzystania z HTMLHelp dla aplikacji pomocy.
 
-```
+```cpp
 void EnableHtmlHelp();
 ```
 
@@ -628,7 +628,7 @@ void EnableHtmlHelp();
 
 Wywołanie tej funkcji, `InitInstance` zazwyczaj z zastąpienia, aby umożliwić użytkownikom aplikacji, aby otworzyć pliki danych po dwukrotnym kliknięciu plików z poziomu Menedżera plików systemu Windows.
 
-```
+```cpp
 void EnableShellOpen();
 ```
 
@@ -1016,7 +1016,7 @@ Klucz przekroju, jeśli funkcja powiedzie się; w przeciwnym razie NULL.
 
 Wywołanie tej funkcji elementu członkowskiego, aby ukryć aplikację przed zamknięciem otwartych dokumentów.
 
-```
+```cpp
 void HideApplication();
 ```
 
@@ -1266,7 +1266,7 @@ Użyj `LoadStandardIcon` funkcji elementu członkowskiego [LoadOEMIcon,](#loadoe
 
 Wywołanie tej funkcji elementu członkowskiego z wewnątrz [initinstance](#initinstance) funkcji elementu członkowskiego, aby włączyć i załadować listę ostatnio używanych plików (MRU) i stan ostatniego podglądu.
 
-```
+```cpp
 void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 ```
 
@@ -1757,7 +1757,7 @@ Jeśli dokument o tej nazwie jest już otwarty, pierwsze okno ramki zawierające
 
 Wywołanie tej funkcji elementu członkowskiego, aby przeanalizować wiersz polecenia i wysłać parametry, jeden po drugim, do [CCommandLineInfo::ParseParam](../../mfc/reference/ccommandlineinfo-class.md#parseparam).
 
-```
+```cpp
 void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 ```
 
@@ -1920,7 +1920,7 @@ Domyślna implementacja po prostu zwraca wartość TRUE. Zastąd w tej funkcji n
 
 Wywołanie tej funkcji elementu członkowskiego, aby zarejestrować wszystkie typy dokumentów aplikacji w Menedżerze plików systemu Windows.
 
-```
+```cpp
 void RegisterShellFileTypes(BOOL bCompat = FALSE);
 ```
 
@@ -2108,7 +2108,7 @@ Domyślna implementacja tej funkcji elementu członkowskiego wywołuje funkcję 
 
 Wywołanie tej funkcji elementu członkowskiego w celu wybrania określonej drukarki i zwolnij drukarkę, która została wcześniej wybrana w oknie dialogowym Drukowanie.
 
-```
+```cpp
 void SelectPrinter(
     HANDLE hDevNames,
     HANDLE hDevMode,
@@ -2134,7 +2134,7 @@ Jeśli zarówno *hDevMode,* jak i *hDevNames* mają wartość NULL, `SelectPrint
 
 Ustawia typ pomocy aplikacji.
 
-```
+```cpp
 void SetHelpMode(AFX_HELP_TYPE eHelpType);
 ```
 
@@ -2153,7 +2153,7 @@ Aby ustawić typ Pomocy aplikacji na HTMLHelp, można wywołać [EnableHTMLHelp]
 
 Powoduje, że ustawienia aplikacji mają być przechowywane w rejestrze zamiast plików INI.
 
-```
+```cpp
 void SetRegistryKey(LPCTSTR lpszRegistryKey);
 void SetRegistryKey(UINT nIDRegistryKey);
 ```
@@ -2240,7 +2240,7 @@ Zastądnij tę funkcję, aby wykonać niestandardowe kroki wyrejestrowania.
 
 Wywołanie tej funkcji elementu członkowskiego, aby wyrejestrować wszystkie typy dokumentów aplikacji za pomocą Menedżera plików systemu Windows.
 
-```
+```cpp
 void UnregisterShellFileTypes();
 ```
 
@@ -2380,7 +2380,7 @@ Inny przykład można znaleźć w przykładzie [aplikacji CWinApp::GetProfileInt
 
 Jawnie ustawia identyfikator modelu użytkownika aplikacji dla aplikacji. Ta metoda powinna być wywoływana przed każdym interfejsem użytkownika jest przedstawiony użytkownikowi (najlepszym miejscem jest konstruktor aplikacji).
 
-```
+```cpp
 void SetAppID(LPCTSTR lpcszAppID);
 ```
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 1064cd99d1820ae8865fa632c3097441172c78c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6456a192a502a0fcc032eaefc667c90ecec86d42
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372993"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751140"
 ---
 # <a name="property-pages-mfc"></a>Strony właściwości (MFC)
 
@@ -49,7 +49,7 @@ Poniżej znajduje się lista makr używanych do tworzenia stron właściwości i
 
 Wywołanie tej funkcji w `DoDataExchange` funkcji strony właściwości, aby zsynchronizować wartość właściwości całkowitej z indeksem bieżącego zaznaczenia w polu kombi na stronie właściwości.
 
-```
+```cpp
 void AFXAPI DDP_CBIndex(
     CDataExchange* pDX,
     int id,
@@ -83,7 +83,7 @@ Ta funkcja powinna być `DDX_CBIndex` wywoływana przed odpowiednim wywołaniem 
 
 Wywołanie tej funkcji w `DoDataExchange` funkcji strony właściwości, aby zsynchronizować wartość właściwości string z bieżącym zaznaczeniem w polu kombi na stronie właściwości.
 
-```
+```cpp
 void AFXAPI DDP_CBString(
     CDataExchange* pDX,
     int id,
@@ -117,7 +117,7 @@ Ta funkcja powinna być `DDX_CBString` wywoływana przed odpowiednim wywołaniem
 
 Wywołanie tej funkcji w `DoDataExchange` funkcji strony właściwości, aby zsynchronizować wartość właściwości string, która dokładnie pasuje do bieżącego zaznaczenia w polu kombi na stronie właściwości.
 
-```
+```cpp
 void AFXAPI DDP_CBStringExact(
     CDataExchange* pDX,
     int id,
@@ -151,7 +151,7 @@ Ta funkcja powinna być `DDX_CBStringExact` wywoływana przed odpowiednim wywoł
 
 Wywołanie tej funkcji w `DoDataExchange` funkcji strony właściwości, aby zsynchronizować wartość właściwości z formantem pola wyboru strony skojarzonej właściwości.
 
-```
+```cpp
 void AFXAPI DDP_Check(
     CDataExchange* pDX,
     int id,
@@ -185,7 +185,7 @@ Ta funkcja powinna być `DDX_Check` wywoływana przed odpowiednim wywołaniem fu
 
 Wywołanie tej funkcji w `DoDataExchange` funkcji strony właściwości, aby zsynchronizować wartość właściwości całkowitej z indeksem bieżącego zaznaczenia w polu listy na stronie właściwości.
 
-```
+```cpp
 void AFXAPI DDP_LBIndex(
     CDataExchange* pDX,
     int id,
@@ -219,7 +219,7 @@ Ta funkcja powinna być `DDX_LBIndex` wywoływana przed odpowiednim wywołaniem 
 
 Wywołanie tej funkcji w `DoDataExchange` funkcji strony właściwości, aby zsynchronizować wartość właściwości string z bieżącym zaznaczeniem w polu listy na stronie właściwości.
 
-```
+```cpp
 void AFXAPI DDP_LBString(
     CDataExchange* pDX,
     int id,
@@ -253,7 +253,7 @@ Ta funkcja powinna być `DDX_LBString` wywoływana przed odpowiednim wywołaniem
 
 Wywołanie tej funkcji w `DoDataExchange` funkcji strony właściwości, aby zsynchronizować wartość właściwości string, która dokładnie pasuje do bieżącego zaznaczenia w polu listy na stronie właściwości.
 
-```
+```cpp
 void AFXAPI DDP_LBStringExact(
     CDataExchange* pDX,
     int id,
@@ -287,7 +287,7 @@ Ta funkcja powinna być `DDX_LBStringExact` wywoływana przed odpowiednim wywoł
 
 Wywołanie tej funkcji w `DoDataExchange` funkcji strony właściwości, aby zakończyć przenoszenie wartości właściwości ze strony właściwości do formantu, gdy wartości właściwości są zapisywane.
 
-```
+```cpp
 void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ```
 
@@ -310,7 +310,7 @@ Ta funkcja powinna być wywoływana po zakończeniu wszystkich funkcji wymiany d
 
 Wywołanie tej funkcji w `DoPropExchange` funkcji formantu, aby zsynchronizować wartość właściwości z kontrolką przycisku radiowego powiązanej strony właściwości.
 
-```
+```cpp
 void AFXAPI DDP_Radio(
     CDataExchange* pDX,
     int id,
@@ -344,7 +344,7 @@ Ta funkcja powinna być `DDX_Radio` wywoływana przed odpowiednim wywołaniem fu
 
 Wywołanie tej funkcji w `DoDataExchange` funkcji formantu, aby zsynchronizować wartość właściwości z formantu strony skojarzonej właściwości.
 
-```
+```cpp
 void AFXAPI DDP_Text(
     CDataExchange* pDX,
     int id,

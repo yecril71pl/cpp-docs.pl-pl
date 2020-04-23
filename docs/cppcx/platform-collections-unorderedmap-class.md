@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: c6f702850f5bf84b8b1bc857c9d0a744728d0cbd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 80b46cb95f2fdb83922ca22e8aa06a89aca4bfde
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354421"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031501"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap — Klasa
 
@@ -52,7 +52,7 @@ Dozwolone typy to:
 
 - klasa wyliczenia publicznego
 
-**UnorderedMap** jest w zasadzie otoką dla [std::unordered_map,](../standard-library/unordered-map-class.md) która obsługuje przechowywanie typów środowiska wykonawczego systemu Windows. Jest to konkretna implementacja [typów windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) i [IObservableMap,](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) które są przekazywane przez publiczne interfejsy środowiska wykonawczego systemu Windows. Jeśli spróbujesz `Platform::Collections::UnorderedMap` użyć typu w public return wartość lub parametr, błąd kompilatora C3986 jest wywoływana. Błąd można naprawić, zmieniając typ parametru lub zwracając wartość do [systemu Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+**UnorderedMap** jest w zasadzie otoką dla [std::unordered_map,](../standard-library/unordered-map-class.md) która obsługuje przechowywanie typów środowiska wykonawczego systemu Windows. Jest to konkretna implementacja [typów windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2) i [IObservableMap,](/uwp/api/windows.foundation.collections.iobservablemap-2) które są przekazywane przez publiczne interfejsy środowiska wykonawczego systemu Windows. Jeśli spróbujesz `Platform::Collections::UnorderedMap` użyć typu w public return wartość lub parametr, błąd kompilatora C3986 jest wywoływana. Błąd można naprawić, zmieniając typ parametru lub zwracając wartość do [systemu Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2).
 
 Aby uzyskać więcej informacji, zobacz [Kolekcje](../cppcx/collections-c-cx.md).
 
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="unorderedmapfirst-method"></a><a name="first"></a>Nieuiarszonamapa::Pierwsza metoda
 
-Zwraca iterator, który określa pierwszy [windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) element na mapie nieurządzonej.
+Zwraca iterator, który określa pierwszy [windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) element na mapie nieurządzonej.
 
 ### <a name="syntax"></a>Składnia
 
@@ -126,7 +126,7 @@ Wygodnym sposobem przechowywania iteratora zwróconego przez First() jest przypi
 
 ## <a name="unorderedmapgetview-method"></a><a name="getview"></a>Nieuporządkowanamapa::Metoda GetView
 
-Zwraca widok tylko do odczytu bieżącej mapy nieuporządkowanego; oznacza to, że [platforma::Kolekcje::UnorderedMapView Klasa,](../cppcx/platform-collections-unorderedmapview-class.md) która implementuje [Windows::Foundation::Collections::IMapView::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) interfejs.
+Zwraca widok tylko do odczytu bieżącej mapy nieuporządkowanego; oznacza [to, że platforma::Kolekcje::UnorderedMapView Klasa,](../cppcx/platform-collections-unorderedmapview-class.md) która implementuje [windows::Foundation::Collections::IMapView::IMapView](/uwp/api/windows.foundation.collections.imapview-2) interfejsu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Wartość właściwości/Zwracana wartość
 
-[MapChangedEventHandler\<K,V>,](/uwp/api/windows.foundation.collections.mapchangedeventhandler) który zawiera informacje o obiekcie, który wywołał zdarzenie i rodzaj zmiany, która wystąpiła. Zobacz też [IMapChangedEventArgs\<K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) i [CollectionChange Wyliczenie](/uwp/api/windows.foundation.collections.collectionchange).
+[MapChangedEventHandler\<K,V>,](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) który zawiera informacje o obiekcie, który wywołał zdarzenie i rodzaj zmiany, która wystąpiła. Zobacz też [IMapChangedEventArgs\<K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1) i [CollectionChange Wyliczenie](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Odpowiednik w programie .NET Framework
 
@@ -241,7 +241,7 @@ Kluczowa część pary klucz-wartość. Typ *klucza* to nazwa typu *K*.
 
 ## <a name="unorderedmapsize-method"></a><a name="size"></a>Nieuiarszonamapa::Metoda rozmiaru
 
-Zwraca liczbę [elementów systemu Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) w nieuległym zamówićmapie.
+Zwraca liczbę [elementów systemu Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) w nieuległym zamówićmapie.
 
 ### <a name="syntax"></a>Składnia
 

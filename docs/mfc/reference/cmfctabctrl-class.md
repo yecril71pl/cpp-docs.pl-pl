@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 7c5e2c0f3ad3b40c5dbff619c45ebcd9573892ca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: da871679665376342a6d23369a1e34c9a7060ce7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367365"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753452"
 ---
 # <a name="cmfctabctrl-class"></a>Klasa CMFCTabCtrl
 
@@ -256,7 +256,7 @@ W poniższym przykładzie pokazano, jak `CMFCTabCtrl` używać różnych `CMFCTa
 
 Wyświetla określoną kartę bieżącej kontrolki karty i ustawia fokus na tej karcie.
 
-```
+```cpp
 void ActivateMDITab(int nTab = -1);
 ```
 
@@ -283,7 +283,7 @@ Zawsze wartość TRUE.
 
 Określa, czy struktura ma zmienić rozmiar obszaru klienta wszystkich okien kontroli kart, gdy zmieni się element interfejsu użytkownika formantu karty.
 
-```
+```cpp
 void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```
 
@@ -381,7 +381,7 @@ Ta metoda jest wywoływana po zmianie etykiety karty. Ta metoda opróżnia lewą
 
 Pokazuje lub ukrywa przycisk Zamknij ( **X**) na aktywnej karcie.
 
-```
+```cpp
 void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```
 
@@ -409,7 +409,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 Przełącza między interfejsem użytkownika, który używa dwóch przycisków do przewijania kart okna i interfejsu, który wyświetla wyskakujące menu okien z kartami.
 
-```
+```cpp
 void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```
 
@@ -508,7 +508,7 @@ Ta metoda służy do uzyskiwania dostępu do osadzonego paska przewijania forman
 
 Pobiera prostokąt ograniczający obszaru etykiety karty u góry lub u dołu kontrolki karty.
 
-```
+```cpp
 void GetTabArea(
     CRect& rectTabAreaTop,
     CRect& rectTabAreaBottom) const;
@@ -571,7 +571,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 Pobiera granicę obszaru klienta bieżącej kontrolki karty.
 
-```
+```cpp
 void GetWndArea(CRect& rect) const;
 ```
 
@@ -586,7 +586,7 @@ void GetWndArea(CRect& rect) const;
 
 Ukrywa poziomy pasek przewijania, jeśli istnieje, w aktywnym oknie.
 
-```
+```cpp
 void HideActiveWindowHorzScrollBar();
 ```
 
@@ -598,7 +598,7 @@ Ta metoda umożliwia zapobieganie miganiu kontrolki kart, gdy użytkownik przeł
 
 Określa, czy w ramach są wyświetlane nieaktywne okna kontrolne kart.
 
-```
+```cpp
 void HideInactiveWindow(BOOL bHide = TRUE);
 ```
 
@@ -613,7 +613,7 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 
 Włącza lub wyłącza rysowanie obszaru karty, jeśli nie ma widocznych kart.
 
-```
+```cpp
 void HideNoTabs(BOOL bHide=TRUE);
 ```
 
@@ -938,7 +938,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 Ustawia bieżącą kartę formantu karty jako aktywną kartę w grupie kart interfejsu wielu dokumentów.
 
-```
+```cpp
 void SetActiveInMDITabGroup(BOOL bActive);
 ```
 
@@ -978,7 +978,7 @@ Metoda `SetActiveTab` automatycznie wywołuje [METODĘ CMFCTabCtrl::HideActiveWi
 
 Włącza lub wyłącza użycie czcionki pogrubionej na aktywnych kartach.
 
-```
+```cpp
 void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```
 
@@ -993,7 +993,7 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 
 Określa, czy prostokąt ramki jest rysowany wokół osadzonego paska.
 
-```
+```cpp
 void SetDrawFrame(BOOL bDraw=TRUE);
 ```
 
@@ -1008,7 +1008,7 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 
 Określa, czy wokół obszaru karty ma być rysowana ramka płaska czy 3D.
 
-```
+```cpp
 void SetFlatFrame(
     BOOL bFlat=TRUE,
     BOOL bRepaint=TRUE);
@@ -1065,7 +1065,7 @@ Użyj [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#add
 
 Określa, w jaki sposób można zmienić jego numer, a następnie ponownie wyświetlić formant.
 
-```
+```cpp
 void SetResizeMode(ResizeMode resizeMode);
 ```
 
@@ -1088,7 +1088,7 @@ Parametr *resizeMode* może być jedną `ResizeMode` z następujących wartości
 
 Określa maksymalną szerokość karty w oknie z kartami.
 
-```
+```cpp
 void SetTabMaxWidth(int nTabMaxWidth);
 ```
 
@@ -1105,7 +1105,7 @@ Ta metoda służy do ograniczania szerokości każdej karty w oknie z kartami. T
 
 Kończy bieżącą operację zmiany rozmiaru na formancie karty.
 
-```
+```cpp
 void StopResize(BOOL bCancel);
 ```
 

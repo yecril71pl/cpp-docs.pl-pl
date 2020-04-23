@@ -1,19 +1,26 @@
 ---
 title: Nieprzetworzone wskaźniki (C++)
 description: Jak używać surowych wskaźników w języku C++
-ms.date: 11/19/2019
+ms.date: 04/21/2020
 helpviewer_keywords:
 - pointers [C++]
-ms.openlocfilehash: 919447fcab123ce6b838391d3cc295fb8a8fe95e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+no-loc:
+- void
+- nullptr
+- const
+- char
+- new
+- delete
+ms.openlocfilehash: 8ba188154d7395ce7be3878fa9dbee2fde08a130
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374666"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032099"
 ---
 # <a name="raw-pointers-c"></a>Nieprzetworzone wskaźniki (C++)
 
-Wskaźnik jest typem zmiennej, która przechowuje adres obiektu w pamięci i jest używana do uzyskiwania dostępu do tego obiektu. *Nieprzetworzony wskaźnik* jest wskaźnikiem, którego okres istnienia nie jest kontrolowany przez obiekt hermetyzujący, taki jak [inteligentny wskaźnik.](smart-pointers-modern-cpp.md) Nieprzetworzony wskaźnik można przypisać adres innej zmiennej nie wskaźnik lub może być przypisany wartość [nullptr](nullptr.md). Wskaźnik, który nie został przypisany wartość zawiera losowe dane.
+Wskaźnik *pointer* jest typem zmiennej. Przechowuje adres obiektu w pamięci i jest używany do uzyskiwania dostępu do tego obiektu. *Nieprzetworzony wskaźnik* jest wskaźnikiem, którego okres istnienia nie jest kontrolowany przez obiekt hermetyzujący, taki jak [inteligentny wskaźnik](smart-pointers-modern-cpp.md). Nieprzetworzonemu wskaźnikowi można przypisać adres innej zmiennej niebędącej wskaźnikiem [nullptr](nullptr.md)lub można przypisać mu wartość . Wskaźnik, który nie został przypisany wartość zawiera losowe dane.
 
 Wskaźnik może być również *wyłuskiwane,* aby pobrać wartość obiektu, który wskazuje na. *Operator dostępu elementu członkowskiego* zapewnia dostęp do elementów członkowskich obiektu.
 
@@ -23,19 +30,17 @@ Wskaźnik może być również *wyłuskiwane,* aby pobrać wartość obiektu, kt
     int i = 5;
     p = &i; // assign pointer to address of object
     int j = *p; // dereference p to retrieve the value at its address
-
 ```
 
-Wskaźnik może wskazywać na wpisany obiekt lub **unieważnić**. Gdy program przydziela nowy obiekt na [stercie](https://wikipedia.org/wiki/Heap) w pamięci, odbiera adres tego obiektu w postaci wskaźnika. Takie wskaźniki są nazywane *wskaźnikami posiadania;* wskaźnik będący właścicielem (lub jego kopia) musi służyć do jawnego usuwania obiektu przydzielonego stercie, gdy nie jest już potrzebny. Niepowodzenie usunięcia pamięci powoduje *przeciek pamięci* i powoduje, że lokalizacja pamięci jest niedostępna dla innego programu na komputerze. Aby uzyskać więcej informacji, zobacz [nowe i usuń operatory](new-and-delete-operators.md).
+Wskaźnik może wskazywać na wpisany **void** obiekt lub na . Gdy program przydziela obiekt na [stercie](https://wikipedia.org/wiki/Heap) w pamięci, odbiera adres tego obiektu w postaci wskaźnika. Takie wskaźniki są nazywane *wskaźnikami właścicielami*. Wskaźnik będący właścicielem (lub jego kopia) musi służyć do jawnego zwolnienia obiektu przydzielonego stercie, gdy nie jest już potrzebny. Niepowodzenie zwolnienia pamięci powoduje *przeciek pamięci*i powoduje, że lokalizacja pamięci jest niedostępna dla innego programu na komputerze. Pamięć przydzielona przy **new** użyciu **delete** musi zostać zwolniona przy użyciu (lub ** delete \[]**). Aby uzyskać więcej informacji, zobacz [ new delete i operatorów](new-and-delete-operators.md).
 
 ```cpp
-
     MyClass* mc = new MyClass(); // allocate object on the heap
     mc->print(); // access class member
     delete mc; // delete object (please don't forget!)
 ```
 
-Wskaźnik (jeśli nie jest zadeklarowany jako **const)** może być zwiększany lub zmniejszany, tak aby wskazuje nową lokalizację w pamięci. Jest to nazywane *arytmetyki wskaźnika* i jest używany w programowaniu w stylu C do iteracji nad elementami w tablicach lub innych struktur danych. Wskaźnik **const** nie może być wskażąc na inną lokalizację pamięci i w tym sensie jest bardzo podobny do [odwołania](references-cpp.md). Aby uzyskać więcej informacji, zobacz [wskaźniki const i volatile](const-and-volatile-pointers.md).
+Wskaźnik (jeśli nie jest zadeklarowany jako) **const** może być zwiększany lub zmniejszany, aby wskazać inną lokalizację w pamięci. Ta operacja jest nazywana *arytmetyką wskaźnika*. Jest on używany w programowaniu w stylu C do iteracji nad elementami w tablicach lub innych struktur danych. Nie **const** można wskazać innej lokalizacji pamięci i w tym sensie jest podobny do [odwołania.](references-cpp.md) Aby uzyskać więcej informacji, zobacz [ const i wskaźniki nietrwałe](const-and-volatile-pointers.md).
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
@@ -49,13 +54,13 @@ Wskaźnik (jeśli nie jest zadeklarowany jako **const)** może być zwiększany 
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
-W 64-bitowych systemach operacyjnych wskaźnik ma rozmiar 64 bitów; rozmiar wskaźnika systemu określa, ile pamięci adresowalnej może mieć. Wszystkie kopie wskaźnika wskazują tę samą lokalizację pamięci. Wskaźniki (wraz z odwołaniami) są szeroko używane w języku C++ do przekazywania większych obiektów do i z funkcji, ponieważ zwykle jest znacznie bardziej wydajne, aby skopiować adres 64-bitowy obiektu niż skopiować cały obiekt. Podczas definiowania funkcji należy określić parametry wskaźnika jako **const,** chyba że zamierzasz, aby funkcja zmodyfikować obiekt. Ogólnie rzecz biorąc, odwołania **const** są preferowanym sposobem przekazywania obiektów do funkcji, chyba że wartość obiektu może być **nullptr**.
+W 64-bitowych systemach operacyjnych wskaźnik ma rozmiar 64 bitów. Rozmiar wskaźnika systemu określa, ile pamięci adresowalnej może mieć. Wszystkie kopie wskaźnika wskazują tę samą lokalizację pamięci. Wskaźniki (wraz z odwołaniami) są szeroko używane w języku C++ do przekazywania większych obiektów do i z funkcji. To dlatego, że często bardziej efektywne jest kopiowanie adresu obiektu niż kopiowanie całego obiektu. Podczas definiowania funkcji należy określić parametry wskaźnika jako, **const** chyba że funkcja ma zmodyfikować obiekt. Ogólnie rzecz **const** biorąc, odwołania są preferowanym sposobem przekazywania obiektów do **nullptr** funkcji, chyba że wartość obiektu może być ewentualnie .
 
 [Wskaźniki do funkcji](#pointers_to_functions) umożliwiają funkcje, które mają być przekazywane do innych funkcji i są używane do "wywołania zwrotnego" w programowaniu w stylu C. Modern C++ używa [wyrażeń lambda](lambda-expressions-in-cpp.md) w tym celu.
 
 ## <a name="initialization-and-member-access"></a>Inicjowanie i dostęp do członków
 
-W poniższym przykładzie pokazano, jak zadeklarować nieprzetworzony wskaźnik i zainicjować go z obiektem przydzielonym na stercie, a następnie jak go używać. Pokazuje również kilka niebezpieczeństw związanych z surowymi wskaźnikami. (Pamiętaj, że jest to programowanie w stylu C, a nie nowoczesne C ++!)
+W poniższym przykładzie pokazano, jak zadeklarować, zainicjować i użyć nieprzetworzonego wskaźnika. Jest inicjowany **new** przy użyciu wskaż obiekt przydzielony na **delete** stercie, który należy jawnie . W przykładzie pokazano również kilka niebezpieczeństw związanych z surowymi wskaźnikami. (Pamiętaj, że w tym przykładzie jest programowanie w stylu C, a nie nowoczesne C ++!)
 
 ```cpp
 #include <iostream>
@@ -119,13 +124,13 @@ int main()
     pmc2->print(); // "Erika, 108"
 
     // Pass the pointer to a function.
-    func_A(mc);
+    func_A(pmc);
     pmc->print(); // "Erika, 3"
     pmc2->print(); // "Erika, 3"
 
     // Dereference the pointer and pass a copy
     // of the pointed-to object to a function
-    func_B(*mc);
+    func_B(*pmc);
     pmc->print(); // "Erika, 3" (original not modified by function)
 
     delete(pmc); // don't forget to give memory back to operating system!
@@ -166,9 +171,9 @@ int main()
 }
 ```
 
-Niektóre operacje arytmetyczne mogą być wykonywane na wskaźnikach innych niż const, aby wskazać nową lokalizację pamięci. Wskaźnik może być zwiększany i zmniejszany za **++** **+=** pomocą **-=** **--** programu , i operatorów. Ta technika może być używana w tablicach i jest szczególnie przydatna w buforach danych nietypowych. **Void\* ** zwiększa się o rozmiar **char** (1 bajt). Wpisany wskaźnik zwiększa się o rozmiar typu, na który wskazuje.
+Niektóre operacje arytmetyczne mogą byćconst używane na wskaźnikach innych niż wskaźniki, aby wskazać inną lokalizację pamięci. Wskaźniki są zwiększane i zmniejszane przy **++** użyciu **+=** **-=** programu **--** , i operatorów. Ta technika może być używana w tablicach i jest szczególnie przydatna w buforach danych nietypowych. A ** void ** jest zwiększany o rozmiar **char** (1 bajt). Wpisany wskaźnik zostanie wzmocniony o rozmiar typu, na który wskazuje.
 
-W poniższym przykładzie pokazano, jak arytmetyka wskaźnika może służyć do uzyskiwania dostępu do poszczególnych pikseli w mapie bitowej w systemie Windows. Zwróć uwagę na użycie **nowego** i **usuń**, a operator wyłudnika.
+W poniższym przykładzie pokazano, jak arytmetyka wskaźnika może służyć do uzyskiwania dostępu do poszczególnych pikseli w mapie bitowej w systemie Windows. Należy zwrócić **new** uwagę **delete** na użycie i , i operatora wyłudnika.
 
 ```cpp
 #include <Windows.h>
@@ -233,11 +238,11 @@ int main()
 }
 ```
 
-## <a name="void-pointers"></a>wskaźniki void*
+## <a name="opno-locvoid-pointers"></a>void* wskaźniki
 
-Wskaźnik do **void** po prostu wskazuje na lokalizację pamięci nieprzetworzonej. Czasami konieczne jest użycie **wskaźników void,\* ** na przykład podczas przekazywania między kodem C++ i funkcjami C.
+Wskaźnik wskazujący **void** po prostu lokalizację pamięci nieprzetworzonej. Czasami jest konieczne użycie ** void ** wskaźników, na przykład podczas przekazywania między kodem C++ i funkcjami C.
 
-Gdy wpisany wskaźnik jest rzutowany na wskaźnik void, zawartość lokalizacji pamięci nie są zmieniane, ale informacje o typie jest tracona, tak, że nie można wykonywać operacji przyrostu lub dekrementacji. Lokalizacja pamięci może być rzutowany, na przykład, z MyClass* do void* i z powrotem do MyClass*. Takie operacje są z natury podatne na błędy i wymagają dużej starannej starannością, aby uniknąć błędów. Nowoczesne C++ zniechęca do korzystania z wskaźników void, chyba że jest to absolutnie konieczne.
+Gdy wpisany wskaźnik jest void rzutowany na wskaźnik, zawartość lokalizacji pamięci pozostaje niezmieniona. Jednak informacje o typie są tracone, dzięki czemu nie można wykonać operacji przyrostu lub dekrementacji. Lokalizację pamięci można rzutować, na `MyClass*` `void*` przykład, od `MyClass*`do i z powrotem do . Takie operacje są z natury podatne na błędy i wymagają dużej starannej starannością, aby uniknąć błędów. Nowoczesne C++ zniechęca do void korzystania z wskaźników w prawie wszystkich okolicznościach.
 
 ```cpp
 
@@ -293,7 +298,7 @@ int main()
 
 ## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>Wskaźniki do funkcji
 
-W programowaniu w stylu C wskaźniki funkcji są używane przede wszystkim do przekazywania funkcji do innych funkcji. W tym scenariuszu wywołującego można dostosować zachowanie funkcji bez modyfikowania go. W nowoczesnych C++ [wyrażenia lambda](lambda-expressions-in-cpp.md) zapewniają taką samą możliwość z większym bezpieczeństwem typu i innymi zaletami.
+W programowaniu w stylu C wskaźniki funkcji są używane przede wszystkim do przekazywania funkcji do innych funkcji. Ta technika umożliwia wywołującemu dostosować zachowanie funkcji bez modyfikowania go. W nowoczesnych C++ [wyrażenia lambda](lambda-expressions-in-cpp.md) zapewniają taką samą możliwość z większym bezpieczeństwem typu i innymi zaletami.
 
 Deklaracja wskaźnika funkcji określa podpis, który musi mieć funkcja wskazywania:
 
@@ -311,7 +316,7 @@ void (*x)();
 int (*i)(int i, string s, double d);
 ```
 
-Poniższy przykład przedstawia `combine` funkcję, która przyjmuje jako parametr `std::string` dowolną `std::string`funkcję, która akceptuje i zwraca . W zależności od funkcji, `combine` która jest przekazywana do niego będzie prepend lub dołączyć ciąg.
+Poniższy przykład przedstawia `combine` funkcję, która przyjmuje jako parametr `std::string` dowolną `std::string`funkcję, która akceptuje i zwraca . W zależności od funkcji, `combine`która jest przekazywana do , to albo poprzedza lub dołącza ciąg.
 
 ```cpp
 #include <iostream>

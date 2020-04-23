@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 71e3b1a9fde84f96696d26c891ab6688f246d575
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6f391966ef6657363e8f23e5666a57a935b08e1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363314"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752776"
 ---
 # <a name="cnetaddressctrl-class"></a>Klasa CNetAddressCtrl
 
@@ -127,7 +127,7 @@ virtual BOOL Create(
 |Parametr|Opis|
 |---------------|-----------------|
 |*Dwstyle*|[w] Bitowa kombinacja stylów, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz [Edytowanie stylów](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*Rect*|[w] Odwołanie do [struktury RECT,](/previous-versions/dd162897\(v=vs.85\)) która zawiera położenie i rozmiar formantu.|
+|*Rect*|[w] Odwołanie do [struktury RECT,](/windows/win32/api/windef/ns-windef-rect) która zawiera położenie i rozmiar formantu.|
 |*pParentWnd*|[w] Wskaźnik inny niż null do [obiektu CWnd,](../../mfc/reference/cwnd-class.md) który jest nadrzędnym oknem formantu.|
 |*Nid*|[w] Identyfikator formantu.|
 
@@ -154,7 +154,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*Dwexstyle*|[w] Kombinacja bitowa (OR) stylów rozszerzonych, które mają być zastosowane do formantu. Aby uzyskać więcej informacji, zobacz parametr *dwExStyle* funkcji [CreateWindowEx.](/windows/win32/api/winuser/nf-winuser-createwindowexw)|
 |*Dwstyle*|[w] Bitowe połączenie (OR) stylów, które mają być stosowane do formantu. Aby uzyskać więcej informacji, zobacz [Edytowanie stylów](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*Rect*|[w] Odwołanie do [struktury RECT,](/previous-versions/dd162897\(v=vs.85\)) która zawiera położenie i rozmiar formantu.|
+|*Rect*|[w] Odwołanie do [struktury RECT,](/windows/win32/api/windef/ns-windef-rect) która zawiera położenie i rozmiar formantu.|
 |*pParentWnd*|[w] Wskaźnik inny niż null do [obiektu CWnd,](../../mfc/reference/cwnd-class.md) który jest nadrzędnym oknem formantu.|
 |*Nid*|[w] Identyfikator formantu.|
 

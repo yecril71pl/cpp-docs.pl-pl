@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 0fbcb47f3148b72a3155e7c17cc913d652c70c2e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a547a21b96d035f507e749aeb19f891175498d5d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370085"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754574"
 ---
 # <a name="cmdichildwnd-class"></a>Klasa CMDIChildWnd
 
@@ -207,7 +207,7 @@ Zwrócona ramka jest dwa `CMDIChildWnd` nadrzędne usunięte z i jest elementem 
 
 Wywołanie tej funkcji elementu członkowskiego, aby aktywować okno podrzędne MDI niezależnie od okna ramki MDI.
 
-```
+```cpp
 void MDIActivate();
 ```
 
@@ -223,7 +223,7 @@ Gdy ramka stanie się aktywna, zostanie aktywowane okno podrzędne, które zosta
 
 Wywołanie tej funkcji elementu członkowskiego, aby zniszczyć okno podrzędne MDI.
 
-```
+```cpp
 void MDIDestroy();
 ```
 
@@ -239,7 +239,7 @@ Funkcja elementu członkowskiego usuwa tytuł okna podrzędnego z okna ramki i d
 
 Wywołanie tej funkcji elementu członkowskiego, aby zmaksymalizować okno podrzędne MDI.
 
-```
+```cpp
 void MDIMaximize();
 ```
 
@@ -255,7 +255,7 @@ Gdy okno podrzędne jest zmaksymalizowane, system Windows zmienia jego rozmiar, 
 
 Wywołanie tej funkcji elementu członkowskiego, aby przywrócić okno podrzędne MDI z maksymalnego lub zminimalizowanego rozmiaru.
 
-```
+```cpp
 void MDIRestore();
 ```
 
@@ -267,7 +267,7 @@ void MDIRestore();
 
 Ustawia uchwyty dla zasobów menu i akceleratora.
 
-```
+```cpp
 void SetHandles(
     HMENU hMenu,
     HACCEL hAccel);

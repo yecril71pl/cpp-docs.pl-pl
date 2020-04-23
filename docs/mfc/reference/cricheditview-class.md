@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 2d832f3cc07d39ace9e679901c5344a376cea03c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b72daac576411b45908d1e91bd86bbd9aeacf738
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318635"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754455"
 ---
 # <a name="cricheditview-class"></a>Klasa CRichEditView
 
@@ -218,7 +218,7 @@ Na przykład przy użyciu widoku edycji bogatej w aplikacji MFC, zobacz [wordpad
 
 Wywołanie tej funkcji, aby przenieść podane okno dialogowe, tak aby nie zasłaniać bieżącego zaznaczenia.
 
-```
+```cpp
 void AdjustDialogPosition(CDialog* pDlg);
 ```
 
@@ -251,7 +251,7 @@ CRichEditView();
 
 Wywołanie tej funkcji, aby wkleić element OLE w *dataobj* do tego bogatego dokumentu edycji/widoku.
 
-```
+```cpp
 void DoPaste(
     COleDataObject& dataobj,
     CLIPFORMAT cf,
@@ -643,7 +643,7 @@ Liczba znaków lub bajtów w formancie edycji. Jeśli w *dwFlags*ustawiono niezg
 
 Wywołanie tej funkcji, aby wstawić określony plik (jako [obiekt CRichEditCntrItem)](../../mfc/reference/cricheditcntritem-class.md) do widoku edycji bogatej.
 
-```
+```cpp
 void InsertFileAsObject(LPCTSTR lpszFileName);
 ```
 
@@ -745,7 +745,7 @@ Jedna z następujących wartości:
 
 Wywołanie tej funkcji, aby przełączyć efekty formatowania znaków dla bieżącego zaznaczenia.
 
-```
+```cpp
 void OnCharEffect(
     DWORD dwMask,
     DWORD dwEffect);
@@ -844,7 +844,7 @@ Aby uzyskać więcej informacji, zobacz [IStorage](/windows/win32/api/objidl/nn-
 
 Wywołanie tej funkcji w celu zmiany wyrównania akapitu dla zaznaczonych akapitów.
 
-```
+```cpp
 void OnParaAlign(WORD wAlign);
 ```
 
@@ -975,7 +975,7 @@ Aby uzyskać więcej informacji, zobacz [MessageBeep](/windows/win32/api/winuser
 
 Struktura wywołuje tę funkcję, aby zaktualizować interfejs użytkownika polecenia dla poleceń efekt znaków.
 
-```
+```cpp
 void OnUpdateCharEffect(
     CCmdUI* pCmdUI,
     DWORD dwMask,
@@ -1007,7 +1007,7 @@ Aby uzyskać więcej informacji na temat parametrów *dwMask* i *dwEffect* i ich
 
 Struktura wywołuje tę funkcję, aby zaktualizować interfejs użytkownika polecenia dla poleceń efekt akapitu.
 
-```
+```cpp
 void OnUpdateParaAlign(
     CCmdUI* pCmdUI,
     WORD wAlign);
@@ -1153,7 +1153,7 @@ Aby uzyskać więcej informacji `IDataObject`na temat HRESULT i , zobacz [strukt
 
 Wywołanie tej funkcji, aby ustawić atrybuty `CRichEditView` formatowania znaków dla nowego tekstu w tym obiekcie.
 
-```
+```cpp
 void SetCharFormat(CHARFORMAT2 cf);
 ```
 
@@ -1176,7 +1176,7 @@ Aby uzyskać więcej informacji, zobacz [EM_SETCHARFORMAT](/windows/win32/Contro
 
 Wywołanie tej funkcji w celu ustawienia marginesów drukowania dla tego widoku edycji rozszerzonej.
 
-```
+```cpp
 void SetMargins(const CRect& rectMargin);
 ```
 
@@ -1199,7 +1199,7 @@ Należy zauważyć, że marginesy używane przez [PrintPage](#printpage) są wzg
 
 Wywołanie tej funkcji powoduje ustawienie rozmiaru papieru do drukowania tego bogatego widoku edycji.
 
-```
+```cpp
 void SetPaperSize(CSize sizePaper);
 ```
 
@@ -1247,7 +1247,7 @@ Aby uzyskać więcej informacji, zobacz [EM_SETPARAFORMAT](/windows/win32/Contro
 
 Wywołanie tej funkcji, aby zresetować wewnętrzny stan wyszukiwania [cRichEditView](../../mfc/reference/cricheditview-class.md) kontroli po nieudanej wywołaniu [FindText](#findtext).
 
-```
+```cpp
 void TextNotFound(LPCTSTR lpszFind);
 ```
 

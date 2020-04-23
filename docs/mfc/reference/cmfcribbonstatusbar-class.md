@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-ms.openlocfilehash: f76c2014cd3f6ed6e479fb66436224e675c69569
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8d90e01db022c33edd654e83af05e9986799f2b9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368815"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754058"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Klasa CMFCRibbonStatusBar
 
@@ -140,7 +140,7 @@ W poniższym przykładzie pokazano, jak `CMFCRibbonStatusBar` używać różnych
 
 Dodaje element dynamiczny do paska stanu wstążki.
 
-```
+```cpp
 void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```
 
@@ -157,7 +157,7 @@ W przeciwieństwie do zwykłych elementów, elementy dynamiczne nie są konfigur
 
 Dodaje nowy element wstążki do paska stanu wstążki.
 
-```
+```cpp
 void AddElement(
     CMFCRibbonBaseElement* pElement,
     LPCTSTR lpszLabel,
@@ -179,7 +179,7 @@ void AddElement(
 
 Dodaje element wstążki do rozszerzonego obszaru paska stanu wstążki.
 
-```
+```cpp
 void AddExtendedElement(
     CMFCRibbonBaseElement* pElement,
     LPCTSTR lpszLabel,
@@ -205,7 +205,7 @@ Rozszerzony obszar znajduje się po prawej stronie kontrolki paska stanu.
 
 Dodaje separator do paska stanu wstążki.
 
-```
+```cpp
 void AddSeparator();
 ```
 
@@ -477,7 +477,7 @@ virtual void RecalcLayout();
 
 Usuwa wszystkie elementy z paska stanu wstążki.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -502,7 +502,7 @@ PRAWDA, jeśli element o określonym *identyfikatorze użytkownika* zostanie usu
 
 Włącza lub wyłącza tryb informacyjny paska stanu wstążki.
 
-```
+```cpp
 void SetInformation(LPCTSTR lpszInfo);
 ```
 

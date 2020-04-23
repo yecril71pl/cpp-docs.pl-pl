@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: fdf91549fd1b911de3af82bb940b92fe5e220b92
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53a5a5b6871680f9758d140174dcceae6c53f568
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365101"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752197"
 ---
 # <a name="ctooltipctrl-class"></a>Klasa CToolTipCtrl
 
@@ -164,7 +164,7 @@ Aby uzyskać więcej `CToolTipCtrl`informacji na temat używania , zobacz [Forma
 
 Wywołanie tej funkcji, aby włączyć lub wyłączyć kontrolkę etykietki narzędzia.
 
-```
+```cpp
 void Activate(BOOL bActivate);
 ```
 
@@ -210,7 +210,7 @@ Wskaźnik do okna zawierającego narzędzie.
 Identyfikator zasobu ciągu zawierającego tekst narzędzia.
 
 *lpRectTool*<br/>
-Wskaźnik do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) zawierającej współrzędne prostokąta ograniczającego narzędzia. Współrzędne są względem lewego górnego rogu obszaru klienta okna oznaczonego przez *pWnd*.
+Wskaźnik do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) zawierającej współrzędne prostokąta ograniczającego narzędzia. Współrzędne są względem lewego górnego rogu obszaru klienta okna oznaczonego przez *pWnd*.
 
 *nIDTool (nIDTool)*<br/>
 Identyfikator narzędzia.
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>Parametry
 
 *lprc (ł.*<br/>
-Wskaźnik do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) która zawiera prostokąt okna poradki narzędzia lub prostokąt wyświetlania tekstu.
+Wskaźnik do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) która zawiera prostokąt okna poradki narzędzia lub prostokąt wyświetlania tekstu.
 
 *bLarger*<br/>
 Jeśli TRUE, *lprc* jest używany do określenia prostokąta wyświetlania tekstu i odbiera odpowiedni prostokąt okna. Jeśli FALSE, *lprc* jest używany do określenia prostokąta okna i odbiera odpowiedni prostokąt wyświetlania tekstu.
@@ -352,7 +352,7 @@ Należy wywołać `Create` po skonstruowaniu obiektu.
 
 Usuwa narzędzie określone przez *pWnd* i *nIDTool* z kolekcji narzędzi obsługiwanych przez kontrolkę narzędzia.
 
-```
+```cpp
 void DelTool(
     CWnd* pWnd,
     UINT_PTR nIDTool = 0);
@@ -446,14 +446,14 @@ Ta funkcja elementu członkowskiego implementuje zachowanie [TTM_GETDELAYTIME](/
 
 Pobiera górny, lewy, dolny i prawy margines ustawiony dla okna etykietki narzędzia.
 
-```
+```cpp
 void GetMargin(LPRECT lprc) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *lprc (ł.*<br/>
-Adres `RECT` struktury, która otrzyma informacje o marginesie. Elementy członkowskie struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) nie definiują prostokąta ograniczającego. Na potrzeby tego komunikatu członkowie struktury są interpretowane w następujący sposób:
+Adres `RECT` struktury, która otrzyma informacje o marginesie. Elementy członkowskie struktury [RECT](/windows/win32/api/windef/ns-windef-rect) nie definiują prostokąta ograniczającego. Na potrzeby tego komunikatu członkowie struktury są interpretowane w następujący sposób:
 
 |Członek|Reprezentacja|
 |------------|--------------------|
@@ -486,7 +486,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie [TTM_GETMAXTIPWIDTH]
 
 Pobiera tekst, który formant etykietki narzędzia utrzymuje dla narzędzia.
 
-```
+```cpp
 void GetText(
     CString& str,
     CWnd* pWnd,
@@ -544,7 +544,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie [TTM_GETTIPTEXTCOLOR
 
 Pobiera tytuł bieżącej kontrolki etykietki narzędzia.
 
-```
+```cpp
 void GetTitle(PTTGETTITLE pttgt) const;
 ```
 
@@ -656,7 +656,7 @@ typedef struct _TT_HITTESTINFO { // tthti
 
 Usuwa z widoku wyświetlane okno końcówki narzędzia.
 
-```
+```cpp
 void Pop();
 ```
 
@@ -668,7 +668,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie [TTM_POP](/windows/w
 
 Powoduje, że bieżąca kontrolka etykietki narzędzia jest wyświetlana we współrzędnych ostatniego komunikatu myszy.
 
-```
+```cpp
 void Popup();
 ```
 
@@ -686,7 +686,7 @@ W poniższym przykładzie kodu jest wyświetlane okno etykietki narzędzia.
 
 Przekazuje komunikat myszy do formantu etykietki narzędzia w celu przetworzenia.
 
-```
+```cpp
 void RelayEvent(LPMSG lpMsg);
 ```
 
@@ -713,7 +713,7 @@ Kontrola etykietki narzędzia przetwarza tylko następujące komunikaty, `RelayE
 
 Ustawia czas opóźnienia dla kontrolki narzędzia.
 
-```
+```cpp
 void SetDelayTime(UINT nDelay);
 
 void SetDelayTime(
@@ -740,7 +740,7 @@ Czas opóźnienia to czas, przez który kursor musi pozostawać na narzędziu, z
 
 Ustawia górny, lewy, dolny i prawy margines okna etykietki narzędzia.
 
-```
+```cpp
 void SetMargin(LPRECT lprc);
 ```
 
@@ -778,7 +778,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie [TTM_SETMAXTIPWIDTH]
 
 Ustawia kolor tła w oknie etykietki narzędzia.
 
-```
+```cpp
 void SetTipBkColor(COLORREF clr);
 ```
 
@@ -795,7 +795,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie [TTM_SETTIPBKCOLOR](
 
 Ustawia kolor tekstu w oknie etykietki narzędzia.
 
-```
+```cpp
 void SetTipTextColor(COLORREF clr);
 ```
 
@@ -838,7 +838,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie [TTM_SETTITLE](/wind
 
 Ustawia informacje, które etykietka narzędzia przechowuje dla narzędzia.
 
-```
+```cpp
 void SetToolInfo(LPTOOLINFO lpToolInfo);
 ```
 
@@ -851,7 +851,7 @@ Wskaźnik do struktury [TOOLINFO,](/windows/win32/api/commctrl/ns-commctrl-tttoo
 
 Ustawia nowy prostokąt ograniczający dla narzędzia.
 
-```
+```cpp
 void SetToolRect(
     CWnd* pWnd,
     UINT_PTR nIDTool,
@@ -867,7 +867,7 @@ Wskaźnik do okna zawierającego narzędzie.
 Identyfikator narzędzia.
 
 *Lprect*<br/>
-Wskaźnik do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) określającej nowy prostokąt ograniczający.
+Wskaźnik do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) określającej nowy prostokąt ograniczający.
 
 ## <a name="ctooltipctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CToolTipCtrl::SetWindowTheme
 
@@ -894,7 +894,7 @@ Ta funkcja elementu członkowskiego emuluje funkcjonalność [komunikatu TTM_SET
 
 Wymusza ponowne wyrycie bieżącego narzędzia.
 
-```
+```cpp
 void Update();
 ```
 
@@ -902,7 +902,7 @@ void Update();
 
 Aktualizuje tekst etykietki narzędzia dla narzędzi tego formantu.
 
-```
+```cpp
 void UpdateTipText(
     LPCTSTR lpszText,
     CWnd* pWnd,

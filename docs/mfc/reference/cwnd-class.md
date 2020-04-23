@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 12ba4cc28d94cbc2961475944c62d2e942b20c05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2ea240ba736c95026b2b6d2af45296245881bab
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365929"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751714"
 ---
 # <a name="cwnd-class"></a>Klasa CWnd
 
@@ -1576,7 +1576,7 @@ Nie należy `BeginPaint` wywoływać funkcji elementu członkowskiego, z wyjątk
 
 Wiąże domyślną właściwość simple bound obiektu wywołującego (taką jak formant edycji), oznaczoną w bibliotece typów, z kursorem, który jest zdefiniowany przez właściwości DataSource, UserName, Password i SQL formantu źródła danych.
 
-```
+```cpp
 void BindDefaultProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -1612,7 +1612,7 @@ Obiekt, `CWnd` na którym można wywołać tę funkcję, musi być formantem zwi
 
 Wiąże właściwość związaną z kursorem na formancie powiązanym z danymi (takim jak formant siatki) z formantem źródła danych i rejestruje tę relację z menedżerem wiązania MFC.
 
-```
+```cpp
 void BindProperty(
     DISPID dwDispId,
     CWnd* pWndDSC);
@@ -1640,7 +1640,7 @@ Obiekt, `CWnd` na którym można wywołać tę funkcję, musi być formantem zwi
 
 Przenosi `CWnd` na górę stosu nakładających się okien.
 
-```
+```cpp
 void BringWindowToTop();
 ```
 
@@ -1708,7 +1708,7 @@ PRAWDA, aby anulować wskazówki dotyczące narzędzi po naciśnięciu klawisza 
 
 Wyśrodkowuje okno względem jego nadrzędnego.
 
-```
+```cpp
 void CenterWindow(CWnd* pAlternateOwner = NULL);
 ```
 
@@ -1746,7 +1746,7 @@ Nonzero jeśli się powiedzie; w przeciwnym razie 0.
 
 Wybiera (umieszcza znacznik wyboru obok) lub czyści (usuwa znacznik wyboru z) przycisk lub zmienia stan przycisku trójstanowego.
 
-```
+```cpp
 void CheckDlgButton(
     int nIDButton,
     UINT nCheck);
@@ -1772,7 +1772,7 @@ Funkcja `CheckDlgButton` wysyła komunikat [BM_SETCHECK](/windows/win32/Controls
 
 Wybiera (dodaje znacznik wyboru) danego przycisku radiowego w grupie i czyści (usuwa znacznik wyboru) wszystkie inne przyciski radiowe w grupie.
 
-```
+```cpp
 void CheckRadioButton(
     int nIDFirstButton,
     int nIDLastButton,
@@ -1843,7 +1843,7 @@ Więcej niż jedno okno może zawierać dany punkt. Jednak ta funkcja zwraca `CW
 
 Konwertuje współrzędne klienta danego punktu lub prostokąta na ekranie na współrzędne ekranu.
 
-```
+```cpp
 void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) const;
 ```
 
@@ -1869,7 +1869,7 @@ Funkcja `ClientToScreen` elementu członkowskiego zakłada, że dany punkt lub p
 
 Minimalizuje okno.
 
-```
+```cpp
 void CloseWindow();
 ```
 
@@ -1984,7 +1984,7 @@ Tworzy aktywny serwer proxy ułatwień dostępu dla określonego obiektu.
 
 Tworzy nowy kształt dla szycie systemu i roszczeń własności cieczy.
 
-```
+```cpp
 void CreateCaret(CBitmap* pBitmap);
 ```
 
@@ -2207,7 +2207,7 @@ Wymiary okien podrzędnych są względem lewego górnego rogu obszaru klienta ok
 
 Tworzy szary prostokąt dla cieczy systemowej i rości sobie prawo własności do cieszy.
 
-```
+```cpp
 void CreateGrayCaret(
     int nWidth,
     int nHeight);
@@ -2241,7 +2241,7 @@ Funkcja `CreateGrayCaret` elementu członkowskiego automatycznie niszczy poprzed
 
 Tworzy prostokąt bryły dla cieczy systemowej i żąda własności cieczy.
 
-```
+```cpp
 void CreateSolidCaret(
     int nWidth,
     int nHeight);
@@ -2373,7 +2373,7 @@ Jeśli okno jest elementem nadrzędnym dowolnego okna, te okna podrzędne są au
 
 Funkcja `DestroyWindow` elementu członkowskiego niszczy również niemodowe okna dialogowe utworzone przez [CDialog::Create](../../mfc/reference/cdialog-class.md#create).
 
-Jeśli `CWnd` niszczone jest okno podrzędne i nie ma WS_EX_NOPARENTNOTIFY [styl](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) ustawiony, a następnie [WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify) wiadomość jest wysyłana do nadrzędnego.
+Jeśli `CWnd` niszczone jest okno podrzędne i nie ma WS_EX_NOPARENTNOTIFY [styl](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) ustawiony, a następnie [WM_PARENTNOTIFY](/windows/win32/inputmsg/wm-parentnotify) wiadomość jest wysyłana do nadrzędnego.
 
 ### <a name="example"></a>Przykład
 
@@ -2626,7 +2626,7 @@ Aby uzyskać więcej informacji na temat wymiany i sprawdzania poprawności dany
 
 Wywołanie tej funkcji elementu członkowskiego `CWnd` z poziomu okna, za pomocą wskaźnika, w aplikacji [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) funkcji, aby wskazać, że okno akceptuje porzucone pliki z Menedżera plików systemu Windows lub Eksploratora plików.
 
-```
+```cpp
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
@@ -2681,10 +2681,10 @@ BOOL DrawAnimatedRects(
 Określa typ animacji. Jeśli określisz IDANI_CAPTION, podpis okna będzie animować z pozycji określonej przez *lprcFrom* do pozycji określonej przez *lprcTo*. Efekt jest podobny do minimalizacji lub maksymalizacji okna.
 
 *lprcFrom*<br/>
-Wskaźnik do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) określający lokalizację i rozmiar ikony lub zminimalizowanego okna.
+Wskaźnik do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) określający lokalizację i rozmiar ikony lub zminimalizowanego okna.
 
 *lprcTo*<br/>
-Wskaźnik do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) określający lokalizację i rozmiar przywróconego okna
+Wskaźnik do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) określający lokalizację i rozmiar przywróconego okna
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2728,7 +2728,7 @@ Ta funkcja elementu członkowskiego emuluje funkcjonalność funkcji [DrawCaptio
 
 Ponownie rysuje pasek menu.
 
-```
+```cpp
 void DrawMenuBar();
 ```
 
@@ -2744,7 +2744,7 @@ Jeśli pasek menu zostanie zmieniony po utworzeniu okna przez system Windows, wy
 
 Włącza zdefiniowane przez użytkownika funkcje aktywnej ułatwień dostępu.
 
-```
+```cpp
 void EnableActiveAccessibility();
 ```
 
@@ -2756,7 +2756,7 @@ Domyślna obsługa aktywnych ułatwień dostępu MFC jest wystarczająca dla sta
 
 Włącza lub wyłącza menedżera układu dynamicznego. Gdy układ dynamiczny jest włączony, położenie i rozmiar okien podrzędnych mogą być dostosowywane dynamicznie, gdy użytkownik zmienia rozmiar okna.
 
-```
+```cpp
 void EnableDynamicLayout(BOOL bEnable = TRUE);
 ```
 
@@ -2773,7 +2773,7 @@ Jeśli chcesz włączyć układ dynamiczny, musisz zrobić więcej niż tylko wy
 
 Włącza lub wyłącza obsługę okna D2D. Wywołanie tej metody przed zainicjowaniem okna głównego.
 
-```
+```cpp
 void EnableD2DSupport(
     BOOL bEnable = TRUE,
     BOOL bUseDCRenderTarget = FALSE);
@@ -2827,7 +2827,7 @@ Niezerowe, jeśli strzałki są włączone lub wyłączone, jak określono. W pr
 
 Włącza lub wyłącza pasek przewijania dla tego okna.
 
-```
+```cpp
 void EnableScrollBarCtrl(
     int nBar,
     BOOL bEnable = TRUE);
@@ -2966,7 +2966,7 @@ virtual void EndModalState();
 
 Oznacza koniec malowania w danym oknie.
 
-```
+```cpp
 void EndPaint(LPPAINTSTRUCT lpPaint);
 ```
 
@@ -3014,7 +3014,7 @@ PRAWDA, jeśli zasób okna dialogowego jest wykonywany; w przeciwnym razie FALSE
 
 Wywoływane przez strukturę do wyświetlania komunikatów porad narzędzia.
 
-```
+```cpp
 void FilterToolTipMessage(MSG* pMsg);
 ```
 
@@ -3699,7 +3699,7 @@ Identyfikator wybranego przycisku radiowego lub 0, jeśli nie wybrano żadnego.
 
 Kopiuje współrzędne klienta obszaru `CWnd` klienta do struktury wskazanej przez *lpRect*.
 
-```
+```cpp
 void GetClientRect(LPRECT lpRect) const;
 ```
 
@@ -4460,7 +4460,7 @@ Z drugiej strony [GetParent](#getparent) funkcja zwraca wskaźnik do bezpośredn
 
 Wywołanie tej funkcji elementu członkowskiego, aby uzyskać właściwość formantu ActiveX określoną przez *dwDispID*.
 
-```
+```cpp
 void GetProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -4685,7 +4685,7 @@ Bieżąca pozycja jest wartością względną, która zależy od bieżącego zak
 
 Kopiuje bieżące minimalne i maksymalne pozycje paska przewijania dla danego paska przewijania do lokalizacji określonych przez *lpMinPos* i *lpMaxPos*.
 
-```
+```cpp
 void GetScrollRange(
     int nBar,
     LPINT lpMinPos,
@@ -5050,7 +5050,7 @@ Element `flags` członkowski [windowplacement](/windows/win32/api/winuser/ns-win
 
 Kopiuje wymiary prostokąta ograniczającego `CWnd` obiektu do konstrukcji wskazywalnej przez *lpRect*.
 
-```
+```cpp
 void GetWindowRect(LPRECT lpRect) const;
 ```
 
@@ -5160,7 +5160,7 @@ Ta funkcja elementu członkowskiego [powoduje,](/windows/win32/winmsg/wm-gettext
 
 Ukrywa cieszy, usuwając ją z ekranu wyświetlacza.
 
-```
+```cpp
 void HideCaret();
 ```
 
@@ -5234,7 +5234,7 @@ Aby uzyskać więcej informacji, zobacz [CWinApp::HtmlHelp.](../../mfc/reference
 
 Wywoływana przez strukturę do inicjowania układu dynamicznego dla okna.
 
-```
+```cpp
 void InitDynamicLayout();
 ```
 
@@ -5246,7 +5246,7 @@ Nie należy wywoływać tej metody bezpośrednio.
 
 Unieważnia cały obszar `CWnd`klienta .
 
-```
+```cpp
 void Invalidate(BOOL bErase = TRUE);
 ```
 
@@ -5271,7 +5271,7 @@ System Windows wysyła komunikat [WM_PAINT,](#onpaint) `CWnd` gdy region aktuali
 
 Unieważnia obszar klienta w danym prostokącie, dodając ten `CWnd` prostokąt do regionu aktualizacji.
 
-```
+```cpp
 void InvalidateRect(
     LPCRECT lpRect,
     BOOL bErase = TRUE);
@@ -5297,7 +5297,7 @@ System Windows wysyła komunikat [WM_PAINT,](#onpaint) `CWnd` gdy region aktuali
 
 Unieważnia obszar klienta w danym regionie, dodając go `CWnd`do bieżącego regionu aktualizacji .
 
-```
+```cpp
 void InvalidateRgn(
     CRgn* pRgn,
     BOOL bErase = TRUE);
@@ -5325,7 +5325,7 @@ Dany region musi być wcześniej utworzony przez jedną z funkcji regionu.
 
 Wywołanie tej funkcji elementu członkowskiego, aby wywołać ActiveX Control metody lub właściwości określone przez *dwDispID*, w kontekście określonym przez *wFlags*.
 
-```
+```cpp
 void AFX_CDECL InvokeHelper(
     DISPID dwDispID,
     WORD wFlags,
@@ -5623,7 +5623,7 @@ Element `m_hWnd` członkowski danych jest zmienną publiczną typu HWND.
 
 Konwertuje (mapuje) zestaw punktów z `CWnd` przestrzeni współrzędnych do przestrzeni współrzędnych innego okna.
 
-```
+```cpp
 void MapWindowPoints(
     CWnd* pwndTo,
     LPRECT lpRect) const;
@@ -5790,7 +5790,7 @@ Aby zmodyfikować okna przy użyciu zwykłych stylów okien, zobacz [ModifyStyle
 
 Zmienia położenie i wymiary.
 
-```
+```cpp
 void MoveWindow(
     int x,
     int y,
@@ -5837,7 +5837,7 @@ Funkcja `MoveWindow` wysyła komunikat [WM_GETMINMAXINFO.](#ongetminmaxinfo) Obs
 
 Sygnalizuje systemowi, że wystąpiło wstępnie zdefiniowane zdarzenie. Jeśli wszystkie aplikacje klienckie zarejestrowały funkcję haka dla zdarzenia, system wywołuje funkcję haka klienta.
 
-```
+```cpp
 void NotifyWinEvent(
     DWORD event,
     LONG idObjectType,
@@ -8579,7 +8579,7 @@ Ta metoda odbiera powiadomienie [WM_DWMNCRENDERINGCHANGED,](/windows/win32/dwm/w
 
 Struktura wywołuje tę funkcję elementu członkowskiego, gdy użytkownik dwukrotnie kliknie XBUTTON1 lub XBUTTON2, gdy kursor znajduje się w obszarze nonclient okna.
 
-```
+```cpp
 void OnNcXButtonDblClk(
     short nHitTest,
     UINT nButton,
@@ -10601,7 +10601,7 @@ Nonzero, jeśli wiadomość została przetłumaczona i nie powinny być wysyłan
 
 Wywołanie tej funkcji elementu członkowskiego, aby narysować bieżące okno w określonym kontekście urządzenia, który jest najczęściej w kontekście urządzenia drukarki.
 
-```
+```cpp
 void Print(
     CDC* pDC,
     DWORD dwFlags) const;
@@ -10647,7 +10647,7 @@ Określa opcje rysowania. Ten parametr może być jedną lub kilkoma z tych flag
 
 Wywołanie tej funkcji elementu członkowskiego, aby narysować dowolne okno w określonym kontekście urządzenia (zwykle w kontekście urządzenia drukarki).
 
-```
+```cpp
 void PrintClient(
     CDC* pDC,
     DWORD dwFlags) const;
@@ -10852,7 +10852,7 @@ Aplikacja musi wywołać funkcję `ReleaseDC` elementu członkowskiego dla każd
 
 Wywoływany do zmiany położenia i zmiany rozmiaru słupków sterowania w obszarze klienta okna.
 
-```
+```cpp
 void RepositionBars(UINT nIDFirst,
     UINT nIDLast,
     UINT nIDLeftOver,
@@ -10926,7 +10926,7 @@ Domyślnie `ContinueModal` zwraca wartość `EndModalLoop` FAŁSZ po wywołaniu.
 
 Konwertuje współrzędne ekranu danego punktu lub prostokąta na wyświetlaczu na współrzędne klienta.
 
-```
+```cpp
 void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) const;
 ```
 
@@ -10950,7 +10950,7 @@ Funkcja `ScreenToClient` elementu członkowskiego zastępuje współrzędne ekra
 
 Przewija zawartość obszaru klienta bieżącego `CWnd` obiektu.
 
-```
+```cpp
 void ScrollWindow(
     int xAmount,
     int yAmount,
@@ -11143,7 +11143,7 @@ Funkcja `SendMessage` elementu członkowskiego wywołuje procedurę okna bezpoś
 
 Wywołanie tej funkcji elementu członkowskiego, aby wysłać określony komunikat systemu Windows do wszystkich okien podrzędnych.
 
-```
+```cpp
 void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
@@ -11313,7 +11313,7 @@ Okno może być dowolnym oknem podrzędnym, a nie tylko formantem w oknie dialog
 
 Ustawia tekst danego formantu w oknie dialogowym na reprezentację ciągu określonej wartości całkowitej.
 
-```
+```cpp
 void SetDlgItemInt(
     int nID,
     UINT nValue,
@@ -11343,7 +11343,7 @@ Określa, czy wartość całkowita jest podpisana czy niepodpisana. Jeśli ten p
 
 Ustawia podpis lub tekst formantu należącego do okna lub okna dialogowego.
 
-```
+```cpp
 void SetDlgItemText(
     int nID,
     LPCTSTR lpszString);
@@ -11409,7 +11409,7 @@ Jeśli bieżące okno jest aktywne, ale nie ma fokusu (oznacza to, że żadne ok
 
 Wysyła komunikat WM_SETFONT do okna, aby użyć określonej czcionki.
 
-```
+```cpp
 void SetFont(
     CFont* pFont,
     BOOL bRedraw = TRUE);
@@ -11518,7 +11518,7 @@ Powoduje, że okno ma zostać ponownie narysowane, aby odzwierciedlić zmianę m
 
 Ustawia właściciela bieżącego okna na określony obiekt okna.
 
-```
+```cpp
 void SetOwner(CWnd* pOwnerWnd);
 ```
 
@@ -11560,7 +11560,7 @@ Jeśli okno podrzędne jest widoczne, system Windows wykonuje odpowiednie ponown
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić właściwość formantu OLE określoną przez *dwDispID*.
 
-```
+```cpp
 void AFX_CDECL SetProperty(
     DISPID dwDispID,
     VARTYPE vtProp, ...);
@@ -11588,7 +11588,7 @@ Aby uzyskać więcej informacji na temat używania tej funkcji elementu członko
 
 Aplikacja wywołuje, `SetRedraw` aby umożliwić zmiany do ponownego wycofania lub aby zapobiec zmiany są ponownie rysowane.
 
-```
+```cpp
 void SetRedraw(BOOL bRedraw = TRUE);
 ```
 
@@ -11684,7 +11684,7 @@ Ustawienie *bRedraw* do FALSE jest przydatne za każdym razem, gdy pasek przewij
 
 Ustawia minimalne i maksymalne wartości położenia dla danego paska przewijania.
 
-```
+```cpp
 void SetScrollRange(
     int nBar,
     int nMinPos,
@@ -11755,7 +11755,7 @@ Określono wartość interwału i za każdym razem, gdy upłynie interwał, syst
 
 Funkcja wywołania zwrotnego *lpfnTimer* nie musi być nazwana, `TimerProc`ale musi być zadeklarowana jako statyczna i zdefiniowana w następujący sposób.
 
-```
+```cpp
 void CALLBACK TimerProc(
     HWND hWnd,   // handle of CWnd that called SetTimer
     UINT nMsg,   // WM_TIMER
@@ -11949,7 +11949,7 @@ Po pomyślnym `SetWindowRgn`wywołaniu , system operacyjny jest właścicielem r
 
 Ustawia tytuł okna na określony tekst.
 
-```
+```cpp
 void SetWindowText(LPCTSTR lpszString);
 ```
 
@@ -11972,7 +11972,7 @@ Ta funkcja powoduje, że do tego okna ma zostać wysłana wiadomość [WM_SETTEX
 
 Pokazuje cieszę na ekranie w bieżącym położeniu edyty.
 
-```
+```cpp
 void ShowCaret();
 ```
 
@@ -11994,7 +11994,7 @@ Cieszka jest zasobem udostępnionym. Okno powinno być wyświetlane w cieszce ty
 
 Pokazuje lub ukrywa wszystkie okna podręczne należące do tego okna.
 
-```
+```cpp
 void ShowOwnedPopups(BOOL bShow = TRUE);
 ```
 
@@ -12011,7 +12011,7 @@ Określa, czy okna podręczne mają być wyświetlane, czy ukryte. Jeśli ten pa
 
 Pokazuje lub ukrywa pasek przewijania.
 
-```
+```cpp
 void ShowScrollBar(
     UINT nBar,
     BOOL bShow = TRUE);
@@ -12146,7 +12146,7 @@ Ta funkcja elementu członkowskiego dołącza `CWnd` formant systemu Windows do 
 
 Wywołanie tej funkcji elementu członkowskiego, aby `CWnd::LockWindowUpdate`odblokować okno, które zostało zablokowane za pomocą programu .
 
-```
+```cpp
 void UnlockWindowUpdate();
 ```
 
@@ -12195,7 +12195,7 @@ Struktura automatycznie wywołuje `UpdateData` z *bSaveAndValidate* ustawiona na
 
 Wywołanie tej funkcji elementu członkowskiego, aby zaktualizować stan przycisków dialogowych i innych formantów w oknie dialogowym lub oknie, które używa mechanizmu wywołania zwrotnego [ON_UPDATE_COMMAND_UI.](message-map-macros-mfc.md#on_update_command_ui)
 
-```
+```cpp
 void UpdateDialogControls(
     CCmdTarget* pTarget,
     BOOL bDisableIfNoHndler);
@@ -12275,7 +12275,7 @@ Ta funkcja elementu członkowskiego emuluje funkcjonalność funkcji [UpdateLaye
 
 Aktualizuje obszar klienta, wysyłając komunikat [WM_PAINT,](/windows/win32/gdi/wm-paint) jeśli region aktualizacji nie jest pusty.
 
-```
+```cpp
 void UpdateWindow();
 ```
 
@@ -12291,7 +12291,7 @@ Funkcja `UpdateWindow` elementu członkowskiego wysyła wiadomość WM_PAINT bez
 
 Sprawdza poprawność obszaru klienta w danym prostokącie, usuwając prostokąt z obszaru aktualizacji okna.
 
-```
+```cpp
 void ValidateRect(LPCRECT lpRect);
 ```
 
@@ -12310,7 +12310,7 @@ System Windows nadal generuje WM_PAINT wiadomości, dopóki bieżący region akt
 
 Sprawdza poprawność obszaru klienta w danym regionie, usuwając region z bieżącego regionu aktualizacji okna.
 
-```
+```cpp
 void ValidateRgn(CRgn* pRgn);
 ```
 

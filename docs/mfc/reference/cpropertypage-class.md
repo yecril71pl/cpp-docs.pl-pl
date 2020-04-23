@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 816948ea17f674c3cd693331502df33cce62610c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f46566eb562f1515e98aedf938ca68b225ee1b67
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364001"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751104"
 ---
 # <a name="cpropertypage-class"></a>Klasa CPropertyPage
 
@@ -119,7 +119,7 @@ Aby uzyskać więcej informacji na temat ustanawiania arkusza właściwości jak
 
 Wywołanie tej funkcji po nieodwracalnej zmiany zostały wprowadzone do danych na stronie arkusza właściwości modalnych.
 
-```
+```cpp
 void CancelToClose();
 ```
 
@@ -137,7 +137,7 @@ Funkcja `CancelToClose` elementu członkowskiego nie robi nic w arkuszu właści
 
 Wywołanie tej funkcji `CPropertyPage` elementu członkowskiego do konstruowania obiektu.
 
-```
+```cpp
 void Construct(
     UINT nIDTemplate,
     UINT nIDCaption = 0);
@@ -555,7 +555,7 @@ Jeśli strona zwraca wartość niezerową, arkusz właściwości nie wysyła wia
 
 Wywołanie tej funkcji elementu członkowskiego, aby włączyć lub wyłączyć przycisk Zastosuj teraz, w zależności od tego, czy ustawienia na stronie właściwości powinny być stosowane do odpowiedniego obiektu zewnętrznego.
 
-```
+```cpp
 void SetModified(BOOL bChanged = TRUE);
 ```
 

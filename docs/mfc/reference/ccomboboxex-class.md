@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 4151ea17fd3223c126715742c6149f2cf55bcbc7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a948d54be17103fa83848ff5f0e86dd2c522f0a3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369472"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754824"
 ---
 # <a name="ccomboboxex-class"></a>Klasa CComboBoxEx
 
@@ -150,7 +150,7 @@ virtual BOOL Create(
 Określa kombinację stylów pola kombi zastosowanych do pola kombi. Zobacz **Uwagi poniżej,** aby uzyskać więcej informacji na temat stylów.
 
 *Rect*<br/>
-Odwołanie do obiektu [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury, która jest położenie i rozmiar pola kombi.
+Odwołanie do obiektu [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [RECT](/windows/win32/api/windef/ns-windef-rect) struktury, która jest położenie i rozmiar pola kombi.
 
 *pParentWnd*<br/>
 Wskaźnik do [obiektu CWnd,](../../mfc/reference/cwnd-class.md) który jest nadrzędnym oknem `CDialog`pola kombi (zwykle ). Nie może być null.
@@ -210,7 +210,7 @@ Określa rozszerzony styl tworzonego formantu. Aby uzyskać listę rozszerzonych
 Styl kontrolki pola kombi. Zobacz [Tworzenie](#create) listy stylów.
 
 *Rect*<br/>
-Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
+Odwołanie do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest nadrzędnym formantu.

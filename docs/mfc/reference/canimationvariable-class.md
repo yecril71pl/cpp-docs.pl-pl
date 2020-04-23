@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 51cc4732ee8ad5f954e5bd758484cec74cf00fe6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b53a1338566a329fbdf5b91c41d0411a529afe8d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377051"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755073"
 ---
 # <a name="canimationvariable-class"></a>Klasa CAnimationVariable
 
@@ -132,7 +132,7 @@ virtual ~CAnimationVariable();
 
 Dodaje przejście.
 
-```
+```cpp
 void AddTransition(CBaseTransition* pTransition);
 ```
 
@@ -149,7 +149,7 @@ Ta metoda jest wywoływana, aby dodać przejście do wewnętrznej listy przejś�
 
 Dodaje przejścia z listy wewnętrznej do scenorysu.
 
-```
+```cpp
 void ApplyTransitions(
     CAnimationController* pController,
     IUIAnimationStoryboard* pStoryboard,
@@ -192,7 +192,7 @@ Konstruuje obiekt zmiennej animacji i ustawia jego wartość domyślną. Wartoś
 
 Czyści przejścia.
 
-```
+```cpp
 void ClearTransitions(BOOL bAutodestroy);
 ```
 
@@ -253,7 +253,7 @@ Ta metoda jest wywoływana przez platformę, gdy musi utworzyć przejścia, któ
 
 Włącza lub wyłącza zdarzenie IntegerValueChanged.
 
-```
+```cpp
 void EnableIntegerValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -275,7 +275,7 @@ Gdy valueChanged zdarzenie jest włączone, struktura wywołuje metodę wirtualn
 
 Włącza lub wyłącza valuechanged zdarzenia.
 
-```
+```cpp
 void EnableValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -414,7 +414,7 @@ ATL::CComPtr<IUIAnimationVariable> m_variable;
 
 Ustawia wartość domyślną i zwalnia IUIAnimationVariable COM obiektu.
 
-```
+```cpp
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```
 
@@ -431,7 +431,7 @@ Ta metoda służy do resetowania wartości domyślnej. Ta metoda zwalnia wewnęt
 
 Ustawia relację między zmienną animacji a obiektem animacji.
 
-```
+```cpp
 void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```
 

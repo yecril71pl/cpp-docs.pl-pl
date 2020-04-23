@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CUserToolsManager [MFC], SetDefExt
 - CUserToolsManager [MFC], SetFilter
 ms.assetid: bdfa37ae-efca-4616-abb5-9d0dcd2d335b
-ms.openlocfilehash: c1f14657350c08679868299ce4878cca2ae10eec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1e9be5d7cb81f2769b98d9baeae786873f5fa73d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373223"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751984"
 ---
 # <a name="cusertoolsmanager-class"></a>Klasa CUserToolsManager
 
@@ -460,7 +460,7 @@ Zazwyczaj nie trzeba wywoływać tej metody bezpośrednio, [CWinAppEx::SaveState
 
 Określa domyślne rozszerzenie używane przez okno dialogowe **Otwieranie pliku** [(CFileDialog Class)](../../mfc/reference/cfiledialog-class.md)w polu **Polecenie** na karcie **Narzędzia** w oknie dialogowym **Dostosowywanie.**
 
-```
+```cpp
 void SetDefExt(const CString& strDefExt);
 ```
 
@@ -477,7 +477,7 @@ Wywołanie tej metody, aby określić domyślne rozszerzenie nazwy pliku w oknie
 
 Określa filtr plików używany w polu **Polecenie** na karcie **Narzędzia** okna dialogowego Dostosowywanie używane przez okno dialogowe **Otwieranie** **pliku** [(CFileDialog Class).](../../mfc/reference/cfiledialog-class.md)
 
-```
+```cpp
 void SetFilter(const CString& strFilter);
 ```
 

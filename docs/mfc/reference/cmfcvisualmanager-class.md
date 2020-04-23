@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 3ae37f1e7222b996e62490365869782bbf458ee9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: df232fb8ad66dd259a69c4add82f6bcc9b34eeaf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320002"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752851"
 ---
 # <a name="cmfcvisualmanager-class"></a>Klasa CMFCVisualManager
 
@@ -661,7 +661,7 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 
 ## <a name="cmfcvisualmanagerdodrawheadersortarrow"></a><a name="dodrawheadersortarrow"></a>CMFCVisualManager::DoDrawHeaderSortArrow
 
-```
+```cpp
 void DoDrawHeaderSortArrow(
     CDC* pDC,
     CRect rect,
@@ -765,7 +765,7 @@ virtual BOOL DrawTextOnGlass(
 
 ## <a name="cmfcvisualmanagerenabletoolbarbuttonfill"></a><a name="enabletoolbarbuttonfill"></a>CMFCVisualManager::EnableToolbarButtonFill
 
-```
+```cpp
 void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 ```
 
@@ -5011,7 +5011,7 @@ Ta metoda służy do zmiany menedżera wizualnego, który używa aplikacji.
 
 Włącza lub wyłącza tryb wytłaczania dla wyłączonych obrazów paska narzędzi.
 
-```
+```cpp
 void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ```
 
@@ -5028,7 +5028,7 @@ Użyj funkcji [CMFCVisualManager::IsEmbossDisabledImage,](#isembossdisabledimage
 
 Włącza lub wyłącza efekt oświetlenia dla nieaktywnych obrazów w menu lub na pasku narzędzi.
 
-```
+```cpp
 void SetFadeInactiveImage(BOOL bFade = TRUE);
 ```
 
@@ -5045,7 +5045,7 @@ Ta funkcja określa, czy nieaktywne obrazy są wyblakłe w menu lub na pasku nar
 
 Ustawia flagę wskazującą, czy przyciski menu są płaskie. W przeciwnym razie pojawiają się trójwymiarowe.
 
-```
+```cpp
 void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ```
 
@@ -5062,7 +5062,7 @@ Domyślnie ta funkcja nie jest włączona.
 
 Ustawia szerokość i wysokość cienia menu.
 
-```
+```cpp
 void SetMenuShadowDepth(int nDepth);
 ```
 
@@ -5079,7 +5079,7 @@ Wysokość i szerokość cienia menu muszą być identyczne. Wartość domyślna
 
 Ustawia flagę, która wskazuje, czy [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md) wyświetla cienie dla wyróżnionych obrazów.
 
-```
+```cpp
 void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ```
 

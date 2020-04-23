@@ -133,12 +133,12 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 7b2c5db976af832b1f1570dd431374c9e15520ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 95aec648009f6d037081c9b3f54d46e9865ca559
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364166"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753668"
 ---
 # <a name="cpane-class"></a>Klasa CPane
 
@@ -340,7 +340,7 @@ Różnica w szerokości i wysokości między *prostokątem Wymagane* i bieżący
 
 Oblicza wewnętrzny prostokąt okienka, łącznie z obramowaniami i chwytakami.
 
-```
+```cpp
 void CalcInsideRect(
     CRect& rect,
     BOOL bHorz) const;
@@ -362,7 +362,7 @@ Ta metoda jest wywoływana przez platformę, gdy ma ponownie obliczyć układ dl
 
 Oblicza ostatnio zadokowany prostokąt.
 
-```
+```cpp
 void CalcRecentDockedRect();
 ```
 
@@ -890,7 +890,7 @@ Tytuł okienka jest wyświetlany w obszarze podpisu, gdy okienko jest zadokowane
 
 Pobiera *wirtualny prostokąt* okienka.
 
-```
+```cpp
 void GetVirtualRect(CRect& rectVirtual) const;
 ```
 
@@ -1381,7 +1381,7 @@ Jeśli `CMFCAutoHideButton::m_bOverlappingTabs` jest false lub jeśli okienko ni
 
 Ustawia wartości obramowania okienka.
 
-```
+```cpp
 void SetBorders(
     int cxLeft = 0,
     int cyTop = 0,
@@ -1416,7 +1416,7 @@ Wywołanie tej funkcji, aby ustawić rozmiary obramowań okienka.
 
 Ustawia *punkt gorąca* okienka.
 
-```
+```cpp
 void SetClientHotSpot(const CPoint& ptNew);
 ```
 
@@ -1471,7 +1471,7 @@ Domyślnie wszystkie paski narzędzi mają wyłączony tryb wiersza wyłącznego
 
 Ustawia minimalny dozwolony rozmiar okienka.
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 
@@ -1486,7 +1486,7 @@ void SetMinSize(const CSize& size);
 
 Ustawia *wirtualny prostokąt* okienka.
 
-```
+```cpp
 void SetVirtualRect(
     const CRect& rect,
     BOOL bMapToParent = TRUE);
@@ -1510,7 +1510,7 @@ Nie należy wywoływać metod, które są związane z wirtualnych prostokątów,
 
 Ustawia informacje o klasie środowiska wykonawczego dla domyślnego okna mini-ramki.
 
-```
+```cpp
 void SetMiniFrameRTC(CRuntimeClass* pClass);
 ```
 
@@ -1582,7 +1582,7 @@ Ta metoda służy do programowego oddokowania okienka.
 
 Aktualizuje wirtualny prostokąt.
 
-```
+```cpp
 void UpdateVirtualRect();
 void UpdateVirtualRect(CPoint ptOffset);
 void UpdateVirtualRect(CSize sizeNew);

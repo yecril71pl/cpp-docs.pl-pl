@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 6b5088526ad2c1f94fdc95ec3b84ab7cf64b59e1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: de1705d47c5692d3563bc7d9cb2646531819197a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366855"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750922"
 ---
 # <a name="cheaderctrl-class"></a>Klasa CHeaderCtrl
 
@@ -231,7 +231,7 @@ virtual BOOL Create(
 Określa styl formantu nagłówka. Aby uzyskać opis stylów formantu nagłówka, zobacz [Style sterowania nagłówkami](/windows/win32/Controls/header-control-styles) w panelu Windows SDK.
 
 *Rect*<br/>
-Określa rozmiar i położenie formantu nagłówka. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/previous-versions/dd162897\(v=vs.85\))
+Określa rozmiar i położenie formantu nagłówka. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Określa okno nadrzędne formantu nagłówka, zwykle `CDialog`. Nie może być null.
@@ -301,7 +301,7 @@ Określa rozszerzony styl tworzonego formantu. Aby uzyskać listę rozszerzonych
 Styl formantu nagłówka. Aby uzyskać opis stylów formantu nagłówka, zobacz [Style sterowania nagłówkami](/windows/win32/Controls/header-control-styles) w panelu Windows SDK. Zobacz [Tworzenie](#create) listy dodatkowych stylów.
 
 *Rect*<br/>
-Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
+Odwołanie do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest nadrzędnym formantu.
@@ -543,7 +543,7 @@ BOOL GetItemDropDownRect(
 |Parametr|Opis|
 |---------------|-----------------|
 |*Iitem*|[w] Indeks od zera elementu nagłówka, którego styl jest HDF_SPLITBUTTON. Aby uzyskać więcej `fmt` informacji, zobacz element struktury [HDITEM.](/windows/win32/api/commctrl/ns-commctrl-hditemw)|
-|*Lprect*|[na zewnątrz] Wskaźnik do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) aby otrzymać informacje o prostokątze ograniczającym.|
+|*Lprect*|[na zewnątrz] Wskaźnik do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) aby otrzymać informacje o prostokątze ograniczającym.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -581,7 +581,7 @@ BOOL GetItemRect(
 Indeks od zera elementu formantu nagłówka.
 
 *Lprect*<br/>
-Wskaźnik do adresu struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) która odbiera informacje o prostokątze ograniczającym.
+Wskaźnik do adresu struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) która odbiera informacje o prostokątze ograniczającym.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -633,7 +633,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Lprect*|[na zewnątrz] Wskaźnik do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) która odbiera informacje o prostokątze ograniczającym.|
+|*Lprect*|[na zewnątrz] Wskaźnik do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) która odbiera informacje o prostokątze ograniczającym.|
 
 ### <a name="return-value"></a>Wartość zwracana
 

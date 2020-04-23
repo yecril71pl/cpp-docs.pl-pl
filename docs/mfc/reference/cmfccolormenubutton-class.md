@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: 22208aec505033d372f5a80ba2a9641b1bd15874
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c895573c626a890facfef689fce4b516aff5115
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367703"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752519"
 ---
 # <a name="cmfccolormenubutton-class"></a>Klasa CMFCColorMenuButton
 
@@ -193,7 +193,7 @@ Ta metoda jest wywoływana przez platformę, gdy użytkownik naciśnie przycisk 
 
 Włącza i wyłącza przycisk "automatyczny", który znajduje się nad zwykłymi przyciskami kolorów. (Standardowy automatyczny przycisk systemu jest oznaczony jako **Automatyczny).**
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -219,7 +219,7 @@ Przycisk automatyczny powoduje zastosowanie bieżącego koloru domyślnego.
 
 Umożliwia wyświetlanie kolorów specyficznych dla dokumentu zamiast kolorów systemowych.
 
-```
+```cpp
 void EnableDocumentColors(
     LPCTSTR lpszLabel,
     BOOL bEnable=TRUE);
@@ -241,7 +241,7 @@ Ta metoda służy do wyświetlania bieżących kolorów dokumentu lub kolorów p
 
 Włącza i wyłącza przycisk "inne", który znajduje się poniżej zwykłych przycisków kolorów. (Standardowy systemowy przycisk "inne" jest oznaczony jako **Więcej kolorów.)**
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -265,7 +265,7 @@ void EnableOtherButton(
 
 Umożliwia oderwanie okienka kolorów.
 
-```
+```cpp
 void EnableTearOff(
     UINT uiID,
     int nVertDockColumns=-1,
@@ -533,7 +533,7 @@ static void SetColorName(
 
 Ustawia liczbę kolumn wyświetlanych w formancie wyboru kolorów ( [CMFCColorBar).](../../mfc/reference/cmfccolorbar-class.md)
 
-```
+```cpp
 void SetColumnsNumber(int nColumns);
 ```
 

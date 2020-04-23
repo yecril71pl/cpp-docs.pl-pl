@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 7f41a924811be95160b06a2097db6103cde8fc11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ff27f6c543a2326dd4318f66aae51b89092b28e2
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354445"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032450"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map, klasa
 
-Reprezentuje *mapę*, która jest kolekcją par klucz-wartość. Implementuje [system Windows::Foundation::Collections::IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap_k_v_) w celu pomocy w [wiązaniu danych](/windows/uwp/data-binding/data-binding-in-depth)XAML .
+Reprezentuje *mapę*, która jest kolekcją par klucz-wartość. Implementuje [system Windows::Foundation::Collections::IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) w celu pomocy w [wiązaniu danych](/windows/uwp/data-binding/data-binding-in-depth)XAML .
 
 ## <a name="syntax"></a>Składnia
 
@@ -63,7 +63,7 @@ Dozwolone typy to:
 
 - klasa wyliczenia publicznego
 
-Mapa jest w zasadzie otoką dla [std::map](../standard-library/map-class.md). Jest to konkretna implementacja [systemu Windows::Foundation::Collections::IMap<Windows::Foundation::Collections::IKeyValuePair\<K,V>>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) i [IObservableMap,](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) które są przekazywane przez publiczne interfejsy środowiska wykonawczego systemu Windows. Jeśli spróbujesz `Platform::Collections::Map` użyć typu w public return wartość lub parametr, błąd kompilatora C3986 jest wywoływana. Błąd można naprawić, zmieniając typ parametru lub zwracając wartość do [systemu Windows::Foundation::Collections::IMap\<K,V>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+Mapa jest w zasadzie otoką dla [std::map](../standard-library/map-class.md). Jest to konkretna implementacja [systemu Windows::Foundation::Collections::IMap<Windows::Foundation::Collections::IKeyValuePair\<K,V>>](/uwp/api/windows.foundation.collections.imap-2) i [IObservableMap,](/uwp/api/windows.foundation.collections.iobservablemap-2) które są przekazywane przez publiczne interfejsy środowiska wykonawczego systemu Windows. Jeśli spróbujesz `Platform::Collections::Map` użyć typu w public return wartość lub parametr, błąd kompilatora C3986 jest wywoływana. Błąd można naprawić, zmieniając typ parametru lub zwracając wartość do [systemu Windows::Foundation::Collections::IMap\<K,V>](/uwp/api/windows.foundation.collections.imap-2).
 
 Aby uzyskać więcej informacji, zobacz [Kolekcje](../cppcx/collections-c-cx.md).
 
@@ -136,7 +136,7 @@ Wygodnym sposobem przechowywania iteratora zwróconego przez First() jest przypi
 
 ## <a name="mapgetview-method"></a><a name="getview"></a>Mapa::Metoda GetView
 
-Zwraca widok tylko do odczytu bieżącej mapy; oznacza to [Platform::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md), który implementuje interfejs [Windows::Foundation::Collections::IMapView\<K,V>]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_).
+Zwraca widok tylko do odczytu bieżącej mapy; oznacza to [Platform::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md), który implementuje [interfejs systemu Windows::Foundation::Collections::IMapView\<K,V>.](/uwp/api/windows.foundation.collections.imapview-2)
 
 ### <a name="syntax"></a>Składnia
 
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Wartość właściwości/Zwracana wartość
 
-[MapChangedEventHandler\<K,V>,](/uwp/api/windows.foundation.collections.mapchangedeventhandler) który zawiera informacje o obiekcie, który wywołał zdarzenie i rodzaj zmiany, która wystąpiła. Zobacz też [IMapChangedEventArgs\<K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) i [CollectionChange Wyliczenie](/uwp/api/windows.foundation.collections.collectionchange).
+[MapChangedEventHandler\<K,V>,](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) który zawiera informacje o obiekcie, który wywołał zdarzenie i rodzaj zmiany, która wystąpiła. Zobacz też [IMapChangedEventArgs\<K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1) i [CollectionChange Wyliczenie](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Odpowiednik w programie .NET Framework
 
@@ -281,7 +281,7 @@ Kluczowa część pary klucz-wartość. Typ *klucza* to nazwa typu *K*.
 
 ## <a name="mapsize-method"></a><a name="size"></a>Mapa::Metoda rozmiaru
 
-Zwraca liczbę [elementów systemu Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) na mapie.
+Zwraca liczbę [elementów systemu Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) na mapie.
 
 ### <a name="syntax"></a>Składnia
 

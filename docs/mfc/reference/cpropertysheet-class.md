@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 167c99f734e4538ff2704e032a6ca98fb1d82004
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e8ab91b9a6fe76070d79ea2eee2e5765db2e99e3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363948"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750971"
 ---
 # <a name="cpropertysheet-class"></a>Klasa CPropertySheet
 
@@ -165,7 +165,7 @@ Aby uzyskać więcej informacji `CPropertySheet` na temat używania obiektów, z
 
 Dodaje dostarczoną stronę z prawą kartę w arkuszu właściwości.
 
-```
+```cpp
 void AddPage(CPropertyPage* pPage);
 ```
 
@@ -194,7 +194,7 @@ Jeśli wywołasz `AddPage` po wyświetleniu strony właściwości, wiersz karty 
 
 Konstruuje `CPropertySheet` obiekt.
 
-```
+```cpp
 void Construct(
     UINT nIDCaption,
     CWnd* pParentWnd = NULL,
@@ -422,7 +422,7 @@ Zobacz przykład [CPropertySheet::AddPage](#addpage).
 
 Wskazuje, czy wiersze kart mają być ułożone w arkuszu właściwości.
 
-```
+```cpp
 void EnableStackedTabs(BOOL bStacked);
 ```
 
@@ -445,7 +445,7 @@ Należy wywołać `EnableStackedTabs` podczas tworzenia modalnego lub niemodalne
 
 Kończy arkusz właściwości.
 
-```
+```cpp
 void EndDialog(int nEndID);
 ```
 
@@ -600,14 +600,14 @@ Aby uzyskać więcej informacji na temat tej struktury, w tym listę jej członk
 
 Konwertuje jednostki okna dialogowego prostokąta na jednostki ekranu.
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *Lprect*<br/>
-Wskazuje strukturę [RECT](/previous-versions/dd162897\(v=vs.85\)) lub obiekt [CRect,](../../atl-mfc-shared/reference/crect-class.md) który zawiera współrzędne okna dialogowego do przekonwertowania.
+Wskazuje strukturę [RECT](/windows/win32/api/windef/ns-windef-rect) lub obiekt [CRect,](../../atl-mfc-shared/reference/crect-class.md) który zawiera współrzędne okna dialogowego do przekonwertowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -641,7 +641,7 @@ Nie potrzebujesz wpisu mapy wiadomości dla tej funkcji członkowskiej.
 
 Symuluje wybór określonego przycisku w arkuszu właściwości.
 
-```
+```cpp
 void PressButton(int nButton);
 ```
 
@@ -678,7 +678,7 @@ Wywołanie `PressButton` nie wyśle [powiadomienia PSN_APPLY](/windows/win32/Con
 
 Usuwa stronę z arkusza właściwości i niszczy skojarzone okno.
 
-```
+```cpp
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
@@ -728,7 +728,7 @@ Zobacz przykład [CPropertySheet::GetActivePage](#getactivepage).
 
 Ustawia tekst w przycisku polecenia Zakończ.
 
-```
+```cpp
 void SetFinishText(LPCTSTR lpszText);
 ```
 
@@ -749,7 +749,7 @@ Wywołanie, `SetFinishText` aby wyświetlić tekst na przycisku polecenia Zakoń
 
 Określa podpis arkusza właściwości (tekst wyświetlany na pasku tytułu okna ramki).
 
-```
+```cpp
 void SetTitle(
     LPCTSTR lpszText,
     UINT nStyle = 0);
@@ -775,7 +775,7 @@ Domyślnie arkusz właściwości używa parametru caption w konstruktorze arkusz
 
 Włącza lub wyłącza przycisk Wstecz, Dalej lub Zakończ w arkuszu właściwości kreatora.
 
-```
+```cpp
 void SetWizardButtons(DWORD dwFlags);
 ```
 
@@ -812,7 +812,7 @@ A `CPropertySheet` ma trzy strony `CStylePage` `CColorPage`właściwości `CShap
 
 Ustanawia stronę właściwości jako kreatora.
 
-```
+```cpp
 void SetWizardMode();
 ```
 

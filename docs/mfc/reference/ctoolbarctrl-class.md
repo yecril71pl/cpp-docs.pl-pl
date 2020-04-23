@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: c8968e7a516b7ed699517f6557f7ccd4bcb20505
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 50d3174d4569392be72efdad338eeaac3154ec56
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365092"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752223"
 ---
 # <a name="ctoolbarctrl-class"></a>Klasa CToolBarCtrl
 
@@ -523,7 +523,7 @@ Nie należy przekazywać `CString` obiektu do tej funkcji, ponieważ nie jest mo
 
 Rozmiar całego paska narzędzi jest zmienić.
 
-```
+```cpp
 void AutoSize();
 ```
 
@@ -627,7 +627,7 @@ virtual BOOL Create(
 Określa styl formantu paska narzędzi. Paski narzędzi muszą zawsze mieć styl WS_CHILD. Ponadto można określić dowolną kombinację stylów paska narzędzi i stylów okien, zgodnie z opisem w obszarze **Uwagi**.
 
 *Rect*<br/>
-Opcjonalnie określa rozmiar i położenie formantu paska narzędzi. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/previous-versions/dd162897\(v=vs.85\))
+Opcjonalnie określa rozmiar i położenie formantu paska narzędzi. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Określa okno nadrzędne formantu paska narzędzi. Nie może być null.
@@ -681,7 +681,7 @@ Określa rozszerzony styl tworzonego formantu. Aby uzyskać listę rozszerzonych
 Określa styl formantu paska narzędzi. Paski narzędzi muszą zawsze mieć styl WS_CHILD. Ponadto można określić dowolną kombinację stylów paska narzędzi i stylów okien, zgodnie z opisem w sekcji **Uwagi** [w obszarze Utwórz](#create).
 
 *Rect*<br/>
-Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
+Odwołanie do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest nadrzędnym formantu.
@@ -713,7 +713,7 @@ Aby pasek narzędzi był użyteczny, należy [wywołać](#create) create.
 
 Wyświetla okno dialogowe Dostosowywanie paska narzędzi.
 
-```
+```cpp
 void Customize();
 ```
 
@@ -1040,7 +1040,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie [TB_GETIMAGELIST](/w
 
 Pobiera bieżący znacznik wstawiania dla paska narzędzi.
 
-```
+```cpp
 void GetInsertMark(TBINSERTMARK* ptbim) const;
 ```
 
@@ -1085,7 +1085,7 @@ BOOL GetItemRect(
 Indeks oparty na wartości zerowej przycisku, dla którego można pobrać informacje.
 
 *Lprect*<br/>
-Adres struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu, który odbiera współrzędne prostokąta ograniczającego.
+Adres struktury [RECT](/windows/win32/api/windef/ns-windef-rect) lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu, który odbiera współrzędne prostokąta ograniczającego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1132,7 +1132,7 @@ Maksymalna liczba wierszy tekstu wyświetlanych na przycisku paska narzędzi.
 
 Pobiera metryki `CToolBarCtrl` obiektu.
 
-```
+```cpp
 void GetMetrics(LPTBMETRICS ptbm) const;
 ```
 
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 Identyfikator przycisku.
 
 *Lprect*<br/>
-Wskaźnik do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) aby otrzymać informacje o prostokątze ograniczającym.
+Wskaźnik do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) aby otrzymać informacje o prostokątze ograniczającym.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1325,7 +1325,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>Parametry
 
 *Ppt*<br/>
-Wskaźnik do [point](/previous-versions/dd162805\(v=vs.85\)) struktury, która zawiera x-współrzędne testu trafień w członku `x` i współrzędnych y testu trafienia w członku. `y` Współrzędne są względem obszaru klienta paska narzędzi.
+Wskaźnik do [point](/windows/win32/api/windef/ns-windef-point) struktury, która zawiera x-współrzędne testu trafień w członku `x` i współrzędnych y testu trafienia w członku. `y` Współrzędne są względem obszaru klienta paska narzędzi.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1428,7 +1428,7 @@ BOOL InsertMarkHitTest(
 ### <a name="parameters"></a>Parametry
 
 *Ppt*<br/>
-Wskaźnik do [point](/previous-versions/dd162805\(v=vs.85\)) struktury, która zawiera współrzędne testu trafienia, względem obszaru klienta paska narzędzi.
+Wskaźnik do [point](/windows/win32/api/windef/ns-windef-point) struktury, która zawiera współrzędne testu trafienia, względem obszaru klienta paska narzędzi.
 
 *ptbim (polski)*<br/>
 Wskaźnik do struktury [TBINSERTMARK,](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) która odbiera informacje o znaczniku wstawiania.
@@ -1567,7 +1567,7 @@ Należy rozważyć [wywołanie GetState,](#getstate) jeśli chcesz pobrać więc
 
 Ładuje mapy bitowe do listy obrazów formantu paska narzędzi.
 
-```
+```cpp
 void LoadImages(
     int iBitmapID,
     HINSTANCE hinst);
@@ -1730,7 +1730,7 @@ Poniższy przykład kodu zastępuje mapę bitową standardowego paska narzędzi 
 
 Przywraca stan formantu paska narzędzi z lokalizacji w rejestrze określonej przez parametry.
 
-```
+```cpp
 void RestoreState(
     HKEY hKeyRoot,
     LPCTSTR lpszSubKey,
@@ -1760,7 +1760,7 @@ Wskazuje ciąg zawierający nazwę wartości do pobrania. Jeśli wartość o tej
 
 Zapisuje stan formantu paska narzędzi w lokalizacji w rejestrze określonym przez parametry.
 
-```
+```cpp
 void SaveState(
     HKEY hKeyRoot,
     LPCTSTR lpszSubKey,
@@ -1883,7 +1883,7 @@ Rozmiar przycisku musi być zawsze co najmniej tak duży, jak rozmiar mapy bitow
 
 Określa rozmiar `TBBUTTON` struktury.
 
-```
+```cpp
 void SetButtonStructSize(int nSize);
 ```
 
@@ -1950,7 +1950,7 @@ Zwraca wartość niezerowa, jeśli zakończy się pomyślnie; w przeciwnym razie
 
 Ustawia schemat kolorów bieżącej kontrolki paska narzędzi.
 
-```
+```cpp
 void SetColorScheme(const COLORSCHEME* lpColorScheme);
 ```
 
@@ -2128,7 +2128,7 @@ Nonzero jeśli się powiedzie; w przeciwnym razie zero.
 
 Ustawia bieżący znacznik wstawiania paska narzędzi.
 
-```
+```cpp
 void SetInsertMark(TBINSERTMARK* ptbim);
 ```
 
@@ -2183,7 +2183,7 @@ Nonzero jeśli się powiedzie; w przeciwnym razie zero.
 
 Ustawia metryki `CToolBarCtrl` obiektu.
 
-```
+```cpp
 void SetMetrics(LPTBMETRICS ptbm);
 ```
 
@@ -2200,7 +2200,7 @@ Ta funkcja elementu członkowskiego emuluje funkcjonalność [komunikatu TB_SETM
 
 Ustawia okno właściciela dla formantu paska narzędzi.
 
-```
+```cpp
 void SetOwner(CWnd* pWnd);
 ```
 
@@ -2279,7 +2279,7 @@ Poniższy przykład kodu ustawia naciśniętej listy obrazów tak samo jak domy�
 
 Prosi formant paska narzędzi, aby zmienić rozmiar do żądanej liczby wierszy.
 
-```
+```cpp
 void SetRows(
     int nRows,
     BOOL bLarger,
@@ -2295,7 +2295,7 @@ void SetRows(
 Informuje, czy użyć więcej wierszy lub mniej wierszy, jeśli nie można zwymiarować na żądaną liczbę wierszy.
 
 *Lprect*<br/>
-Wskazuje obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub strukturę [RECT,](/previous-versions/dd162897\(v=vs.85\)) która otrzyma nowy prostokąt ograniczający paska narzędzi.
+Wskazuje obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub strukturę [RECT,](/windows/win32/api/windef/ns-windef-rect) która otrzyma nowy prostokąt ograniczający paska narzędzi.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2341,7 +2341,7 @@ Ta funkcja jest szczególnie przydatna, jeśli chcesz ustawić więcej niż jede
 
 Ustawia style dla kontrolki paska narzędzi.
 
-```
+```cpp
 void SetStyle(DWORD dwStyle);
 ```
 
@@ -2354,7 +2354,7 @@ Dword zawierający kombinację [stylów sterowania paska narzędzi,](/windows/wi
 
 Kojarzy kontrolkę etykietki narzędzia z kontrolką paska narzędzi.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pTip);
 ```
 

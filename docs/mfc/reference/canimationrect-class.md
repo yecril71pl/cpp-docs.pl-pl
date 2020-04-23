@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 4ffd1254efd3283a4c5641092aefec8eec0ac22a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 273ea2b548d35722ebf937d2db2b589fef5e69fa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373337"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755137"
 ---
 # <a name="canimationrect-class"></a>Klasa CAnimationRect
 
@@ -125,7 +125,7 @@ CAnimationRect Klasa hermetyzuje cztery CAnimationVariable obiektów i może rep
 
 Dodaje przejścia dla współrzędnych lewej, górnej, prawej i dolnej.
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pLeftTransition,
     CBaseTransition* pTopTransition,
@@ -405,7 +405,7 @@ Ta funkcja wewnętrznie wywołuje GetValue. Jeśli GetValue z jakiegoś powodu n
 
 Przypisuje rect do CAnimationRect.
 
-```
+```cpp
 void operator=(const RECT& rect);
 ```
 
@@ -422,7 +422,7 @@ Zaleca się, aby to zrobić przed rozpoczęciem animacji, ponieważ ten operator
 
 Ustawia wartość domyślną.
 
-```
+```cpp
 void SetDefaultValue(const CRect& rect);
 ```
 

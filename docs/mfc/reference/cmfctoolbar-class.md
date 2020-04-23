@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: dc1a8b1fc852ff1071b20ced64fc8e0686725a83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9a90327bde693b87a53838da35adde21ed48dfbb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375072"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754043"
 ---
 # <a name="cmfctoolbar-class"></a>Klasa CMFCToolBar
 
@@ -652,7 +652,7 @@ Zastąpi tę metodę, aby zapewnić własny układ `CMFCToolbar`dynamiczny w kla
 
 Ponownie oblicza rozmiar paska narzędzi.
 
-```
+```cpp
 void AdjustSize();
 ```
 
@@ -920,7 +920,7 @@ Struktura wywołuje tę metodę, gdy aplikacja zostanie zamknięta.
 
 Zwalnia zasoby systemowe przydzielone do zablokowanych obrazów paska narzędzi.
 
-```
+```cpp
 void CleanUpLockedImages();
 ```
 
@@ -1139,7 +1139,7 @@ Zastąpić tę metodę w klasie pochodną [CMFCToolBar,](../../mfc/reference/cmf
 
 Włącza lub wyłącza przycisk Dostosuj, który pojawia się na pasku narzędzi.
 
-```
+```cpp
 void EnableCustomizeButton(
     BOOL bEnable,
     int iCustomizeCmd,
@@ -1199,7 +1199,7 @@ Ta metoda rozszerza implementacji klasy podstawowej, [CBasePane::EnableDocking](
 
 Włącza lub wyłącza duże ikony na przyciskach paska narzędzi.
 
-```
+```cpp
 void EnableLargeIcons(BOOL bEnable);
 ```
 
@@ -1229,7 +1229,7 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 
 Włącza lub wyłącza odbicie polecenia.
 
-```
+```cpp
 void EnableReflections(BOOL bEnable = TRUE);
 ```
 
@@ -1248,7 +1248,7 @@ Aby uzyskać więcej informacji na temat odbicia poleceń, zobacz [TN062: Odbici
 
 Włącza lub wyłącza etykiety tekstowe w obrazach przycisków paska narzędzi.
 
-```
+```cpp
 void EnableTextLabels(BOOL bEnable=TRUE);
 ```
 
@@ -1343,7 +1343,7 @@ Wskaźnik do przycisku paska narzędzi, jeśli istnieje; lub NULL, jeśli nie ma
 
 Zwraca identyfikator polecenia, styl i indeks obrazu przycisku przy określonym indeksie.
 
-```
+```cpp
 void GetButtonInfo(
     int nIndex,
     UINT& nID,
@@ -3211,7 +3211,7 @@ Zobacz przykład Eksploratora, aby uzyskać przykład, który używa tej metody.
 
 Ustawia identyfikator polecenia, styl i identyfikator obrazu przycisku paska narzędzi.
 
-```
+```cpp
 void SetButtonInfo(
     int nIndex,
     UINT nID,
@@ -3374,7 +3374,7 @@ Ta metoda dostosowuje układ i ponownie rysuje każdy pasek narzędzi w aplikacj
 
 Określa, czy przyciski niedostępne na pasku narzędzi są wyszarzone, czy też używane są obrazy niedostępne dla przycisków.
 
-```
+```cpp
 void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ```
 
@@ -3391,7 +3391,7 @@ Domyślnie niedostępne przyciski są wyszarzone.
 
 Ustawia wysokość paska narzędzi.
 
-```
+```cpp
 void SetHeight(int cyHeight);
 ```
 
@@ -3434,7 +3434,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 Określa, czy przyciski paska narzędzi są śledzone na gorąco.
 
-```
+```cpp
 void SetHotBorder(BOOL bShowHotBorder);
 ```
 
@@ -3468,7 +3468,7 @@ Aby uzyskać więcej informacji na temat przycisków paska narzędzi śledzonego
 
 ## <a name="cmfctoolbarsetignoresettext"></a><a name="setignoresettext"></a>CMFCToolBar::SetIgnoreSetText
 
-```
+```cpp
 void SetIgnoreSetText(BOOL bValue);
 ```
 
@@ -3503,7 +3503,7 @@ Aby uzyskać więcej informacji na temat okna dialogowego **Dostosowywanie,** zo
 
 Ustawia rozmiary zablokowanych przycisków i zablokowanych obrazów na pasku narzędzi.
 
-```
+```cpp
 void SetLockedSizes(
     SIZE sizeButton,
     SIZE sizeImage,
@@ -3529,7 +3529,7 @@ Wywołanie [CMFCToolBar::GetLockedImageSize](#getlockedimagesize) metody, aby po
 
 ## <a name="cmfctoolbarsetmaskmode"></a><a name="setmaskmode"></a>CMFCToolBar::SetMaskMode
 
-```
+```cpp
 void SetMaskMode(BOOL bMasked);
 ```
 
@@ -3588,7 +3588,7 @@ Ta metoda czyści poprzednią listę niedozwolonych poleceń. Domyślnie lista n
 
 Umieszcza pasek narzędzi i jego rodzeństwo w tym samym wierszu.
 
-```
+```cpp
 void SetOneRowWithSibling();
 ```
 
@@ -3602,7 +3602,7 @@ Struktura wywołuje [CMFCToolBar::SetTwoRowsWithSibling](#settworowswithsibling)
 
 ## <a name="cmfctoolbarsetorigbuttons"></a><a name="setorigbuttons"></a>CMFCToolBar::SetOrigButtons
 
-```
+```cpp
 void SetOrigButtons(const CObList& lstOrigButtons);
 ```
 
@@ -3616,7 +3616,7 @@ void SetOrigButtons(const CObList& lstOrigButtons);
 
 Określa, czy użytkownik może zamknąć pasek narzędzi.
 
-```
+```cpp
 void SetPermament(BOOL bPermament=TRUE);
 ```
 
@@ -3635,7 +3635,7 @@ Wywołanie [CMFCToolBar::CanBeClosed](#canbeclosed) metody, aby ustalić, czy u�
 
 Określa, czy ramka nadrzędna lub właściciel wysyła polecenia do paska narzędzi.
 
-```
+```cpp
 void SetRouteCommandsViaFrame(BOOL bValue);
 ```
 
@@ -3671,7 +3671,7 @@ Wywołanie [CMFCToolBar::GetShowTooltips](#getshowtooltips) metody, aby ustalić
 
 Określa poziom równorzędny paska narzędzi.
 
-```
+```cpp
 void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ```
 
@@ -3716,7 +3716,7 @@ Wywołanie [CMFCToolBar::GetImageSize](#getimagesize) metody, aby pobrać rozmia
 
 Określa właściwości przycisku na pasku narzędzi.
 
-```
+```cpp
 void SetToolBarBtnText(
     UINT nBtnIndex,
     LPCTSTR szText=NULL,
@@ -3748,7 +3748,7 @@ W debugowania kompilacji ta metoda generuje błąd potwierdzenia, jeśli *nBtnIn
 
 Umieszcza pasek narzędzi i jego rodzeństwo w oddzielnych wierszach.
 
-```
+```cpp
 void SetTwoRowsWithSibling();
 ```
 
@@ -3840,7 +3840,7 @@ Struktura wywołuje tę metodę, gdy klucz jest wciśnięty razem z klawiszem Al
 
 Aktualizuje stan określonego przycisku.
 
-```
+```cpp
 void UpdateButton(int nIndex);
 ```
 

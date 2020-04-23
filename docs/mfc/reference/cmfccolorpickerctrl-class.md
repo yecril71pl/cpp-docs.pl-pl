@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: c3c11db448ab31324367b7f314cd6bfe44c2e96d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe35ee5d6fc6484788a2636151c386689f4bdd96
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367687"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752533"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Klasa CMFCColorPickerCtrl
 
@@ -184,7 +184,7 @@ Wartość RGB wybranego koloru.
 
 Pobiera wartości barwy, luminancji i nasycenia koloru wybranego przez użytkownika.
 
-```
+```cpp
 void GetHLS(
     double* hue,
     double* luminance,
@@ -250,7 +250,7 @@ Składnik nasycenia wybranego koloru.
 
 Ustawia bieżący kolor na kolor zdefiniowany przez określone składniki koloru RGB lub określony sześciokąt komórki.
 
-```
+```cpp
 void SelectCellHexagon(
     BYTE R,
     BYTE G,
@@ -292,7 +292,7 @@ Drugie przeciążenie tej metody ustawia bieżący kolor na kolor sześciokąta 
 
 Ustawia bieżący kolor na określoną wartość koloru RGB.
 
-```
+```cpp
 void SetColor(COLORREF Color);
 ```
 
@@ -307,7 +307,7 @@ void SetColor(COLORREF Color);
 
 Ustawia bieżący kolor na określoną wartość koloru HLS.
 
-```
+```cpp
 void SetHLS(
     double hue,
     double luminance,
@@ -335,7 +335,7 @@ void SetHLS(
 
 Zmienia barwę aktualnie wybranego koloru.
 
-```
+```cpp
 void SetHue(double Hue);
 ```
 
@@ -350,7 +350,7 @@ void SetHue(double Hue);
 
 Zmienia luminancję aktualnie wybranego koloru.
 
-```
+```cpp
 void SetLuminance(double Luminance);
 ```
 
@@ -365,7 +365,7 @@ void SetLuminance(double Luminance);
 
 Ustawia szerokość paska luminancji w formancie selektora kolorów.
 
-```
+```cpp
 void SetLuminanceBarWidth(int w);
 ```
 
@@ -382,7 +382,7 @@ Ta metoda służy do zmieniania rozmiaru paska luminancji, który znajduje się 
 
 Ustawia początkowy wybrany kolor.
 
-```
+```cpp
 void SetOriginalColor(COLORREF ref);
 ```
 
@@ -399,7 +399,7 @@ Wywołanie tej metody, gdy formant selektora kolorów jest inicjowany.
 
 Ustawia bieżącą paletę kolorów.
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -416,7 +416,7 @@ Paleta kolorów definiuje tablicę kolorów przedstawioną w formancie selektora
 
 Zmienia nasycenie aktualnie zaznaczonego koloru.
 
-```
+```cpp
 void SetSaturation(double Saturation);
 ```
 
@@ -431,7 +431,7 @@ void SetSaturation(double Saturation);
 
 Ustawia typ formantu selektora kolorów do wyświetlenia.
 
-```
+```cpp
 void SetType(COLORTYPE colorType);
 ```
 

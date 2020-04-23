@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 197dec23b4c715b0bca35976f9fa53a055cdd78f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 247072d815b660fcd2cc6c2a1291b618aa6ce2ab
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373904"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753140"
 ---
 # <a name="cfiledialog-class"></a>Klasa CFileDialog
 
@@ -409,7 +409,7 @@ Nazwa menu.
 
 Dodaje folder do listy miejsc dostępnych dla użytkownika do otwierania lub zapisywania elementów.
 
-```
+```cpp
 void AddPlace(
     LPCWSTR lpszFolder,
     FDAP fdap = FDAP_TOP) throw();
@@ -506,13 +506,13 @@ Nazwa tekstu.
 
 Aktualizuje bieżący stan [CFileDialog](../../mfc/reference/cfiledialog-class.md) na podstawie `m_ofn` wartości przechowywanych w strukturze danych.
 
-```
+```cpp
 void ApplyOFNToShellDialog();
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-W wersjach systemu Windows przed systemem Windows Vista struktura danych [OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) `CFileDialog`elementu członkowskiego była stale synchronizowana ze stanem pliku . Wszelkie zmiany [zmiennej m_ofn](#m_ofn) członkowskiej zostały natychmiast odzwierciedlone w stanie okna dialogowego. Ponadto wszelkie zmiany stanu okna dialogowego natychmiast `m_ofn` zaktualizować zmienną elementu członkowskiego.
+W wersjach systemu Windows przed systemem Windows Vista struktura danych [OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) `CFileDialog`elementu członkowskiego była stale synchronizowana ze stanem pliku . Wszelkie zmiany [zmiennej m_ofn](#m_ofn) członkowskiej zostały natychmiast odzwierciedlone w stanie okna dialogowego. Ponadto wszelkie zmiany stanu okna dialogowego natychmiast `m_ofn` zaktualizować zmienną elementu członkowskiego.
 
 W systemie Windows Vista lub `m_ofn` nowszym wartości `CFileDialog` w zmiennej członkowskiej i stanie nie są gwarantowane do synchronizacji. Ta funkcja wymusza `CFileDialog` stan do aktualizacji, aby dopasować strukturę. `m_ofn` System Windows wywołuje tę funkcję automatycznie podczas [CFileDialog::DoModal](#domodal).
 
@@ -1029,7 +1029,7 @@ Wartość POSITION, która może być używana do iteracji; NULL, jeśli lista j
 
 Wywołanie tej funkcji elementu członkowskiego, aby ukryć określony formant w oknie dialogowym Otwórz lub Zapisz jako typowe explorer.
 
-```
+```cpp
 void HideControl(int nID);
 ```
 
@@ -1465,7 +1465,7 @@ Co najmniej jedna wartość z wyliczenia CDCONTROLSTATE, które wskazują bież�
 
 Wywołanie tej metody, aby ustawić tekst dla określonego formantu w stylu Explorer **Otwórz** lub **Zapisz jako** okno dialogowe.
 
-```
+```cpp
 void SetControlText(
     int nID,
     LPCSTR lpsz);
@@ -1493,7 +1493,7 @@ Aby użyć tej metody, należy utworzyć okno dialogowe z OFN_EXPLORER stylu. W 
 
 Wywołanie tej funkcji w celu ustawienia domyślnego rozszerzenia nazwy pliku dla wspólnego okna dialogowego Otwórz lub Zapisz jako typowe w stylu Eksploratora.
 
-```
+```cpp
 void SetDefExt(LPCSTR lpsz);
 ```
 
@@ -1565,7 +1565,7 @@ Identyfikator elementu wybranego przez użytkownika w formancie.
 
 Ustawia szablon okna dialogowego dla obiektu [CFileDialog.](../../mfc/reference/cfiledialog-class.md)
 
-```
+```cpp
 void SetTemplate(
     UINT nWin3ID,
     UINT nWin4ID);
@@ -1620,13 +1620,13 @@ Nazwa grupy.
 
 Aktualizuje `m_ofn` strukturę danych [CFileDialog](../../mfc/reference/cfiledialog-class.md) na podstawie bieżącego stanu obiektu wewnętrznego.
 
-```
+```cpp
 void UpdateOFNFromShellDialog();
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-W wersjach systemu Windows przed systemem Windows Vista struktura danych [OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) `CFileDialog`elementu członkowskiego była stale synchronizowana ze stanem pliku . Wszelkie zmiany [zmiennej m_ofn](#m_ofn) członkowskiej bezpośrednio wpłynęły na stan okna dialogowego. Ponadto wszelkie zmiany stanu okna dialogowego natychmiast zaktualizował zmienną m_ofn elementu członkowskiego.
+W wersjach systemu Windows przed systemem Windows Vista struktura danych [OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) `CFileDialog`elementu członkowskiego była stale synchronizowana ze stanem pliku . Wszelkie zmiany [zmiennej m_ofn](#m_ofn) członkowskiej bezpośrednio wpłynęły na stan okna dialogowego. Ponadto wszelkie zmiany stanu okna dialogowego natychmiast zaktualizował zmienną m_ofn elementu członkowskiego.
 
 W systemie Windows Vista `m_ofn` lub nowszym struktura danych nie jest automatycznie aktualizowana. Aby zagwarantować dokładność danych w `m_ofn` zmiennej członkowskiej, `UpdateOFNFromShellDialog` należy wywołać funkcję przed dostępem do danych. System Windows wywołuje tę funkcję automatycznie podczas przetwarzania [IFileDialog::OnFileOK](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok).
 
