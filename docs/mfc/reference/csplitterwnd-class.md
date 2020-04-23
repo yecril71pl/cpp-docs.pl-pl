@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 8c8ce90f5e36d6cdc2592233588bc3bd7bf2c9d6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a872854af1695b8b2b347b21d73165d259b3a986
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371699"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753063"
 ---
 # <a name="csplitterwnd-class"></a>Klasa CSplitterWnd
 
@@ -619,7 +619,7 @@ Zwraca bieżącą liczbę kolumn w rozdzielaczu. W przypadku rozdzielacza statyc
 
 Zwraca informacje w określonej kolumnie.
 
-```
+```cpp
 void GetColumnInfo(
     int col,
     int& cxCur,
@@ -675,7 +675,7 @@ Zwraca bieżącą liczbę wierszy w oknie rozdzielacza. W przypadku okna podzia�
 
 Zwraca informacje w określonym wierszu.
 
-```
+```cpp
 void GetRowInfo(
     int row,
     int& cyCur,
@@ -896,7 +896,7 @@ Określ okienko, udostępniając wiersz i kolumnę **lub** udostępniając *pole
 
 Wywołanie, aby ustawić określone informacje o kolumnie.
 
-```
+```cpp
 void SetColumnInfo(
     int col,
     int cxIdeal,
@@ -928,7 +928,7 @@ Gdy struktura wyświetla okno rozdzielacza, układa okienka w kolumnach i wiersz
 
 Wywołanie, aby ustawić określone informacje o wierszu.
 
-```
+```cpp
 void SetRowInfo(
     int row,
     int cyIdeal,
@@ -956,7 +956,7 @@ Gdy struktura wyświetla okno rozdzielacza, układa okienka w kolumnach i wiersz
 
 Określa nowy styl przewijania dla udostępnionej obsługi paska przewijania okna rozdzielacza.
 
-```
+```cpp
 void SetScrollStyle(DWORD dwStyle);
 ```
 

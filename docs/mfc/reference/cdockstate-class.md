@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: 1c76bcda6465ca86b8da4778d3653cb23001b78b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9850486407ee7550ee866a10e656d45ad18fc196
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375555"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753262"
 ---
 # <a name="cdockstate-class"></a>Klasa CDockState
 
@@ -74,7 +74,7 @@ Aby uzyskać więcej informacji na temat pasków sterowania dokowania, zobacz ar
 
 Wywołanie tej funkcji, aby wyczyścić `CDockState` wszystkie informacje dokowania przechowywane w obiekcie.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -102,7 +102,7 @@ Obsługa wersji umożliwia poprawiony pasek, aby dodać nowe trwałe właściwo�
 
 Wywołanie tej funkcji, aby pobrać informacje o stanie z rejestru lub . ini.
 
-```
+```cpp
 void LoadState(LPCTSTR lpszProfileName);
 ```
 
@@ -127,7 +127,7 @@ CPtrArray m_arrBarInfo;
 
 Wywołanie tej funkcji, aby zapisać informacje o stanie w rejestrze lub . ini.
 
-```
+```cpp
 void SaveState(LPCTSTR lpszProfileName);
 ```
 

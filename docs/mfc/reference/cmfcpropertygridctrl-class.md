@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: c52550c4b2ed09d97f44e7ed773f2568ec14893f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 844b206b2c34b82930116744bbbfd4d35ecacf15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361928"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754146"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Klasa CMFCPropertyGridCtrl
 
@@ -380,7 +380,7 @@ Ta metoda ponownie oblicza sposób rysowania kontroli siatki całej właściwoś
 
 ## <a name="cmfcpropertygridctrlalwaysshowusertooltip"></a><a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::AlwaysShowUserToolTip
 
-```
+```cpp
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```
 
@@ -552,7 +552,7 @@ PRAWDA, jeśli metoda zakończy się pomyślnie; w przeciwnym razie FALSE.
 
 Włącza lub wyłącza obszar opisu, który jest wyświetlany pod listą właściwości w formancie siatki właściwości.
 
-```
+```cpp
 void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```
 
@@ -569,7 +569,7 @@ Obszar opisu jest wyświetlany w dolnej części formantu siatki właściwości.
 
 Włącza lub wyłącza formant nagłówka w górnej części formantu siatki właściwości.
 
-```
+```cpp
 void EnableHeaderCtrl(
     BOOL bEnable=TRUE,
     LPCTSTR lpszLeftColumn=_T("Property"),
@@ -610,7 +610,7 @@ PRAWDA, jeśli operacja edycji zakończy się pomyślnie; FAŁSZ, jeśli zmodyfi
 
 Przewija formant siatki właściwości i rozwija elementy właściwości, dopóki określona właściwość nie będzie widoczna.
 
-```
+```cpp
 void EnsureVisible(
     CMFCPropertyGridProperty* pProp,
     BOOL bExpandParents=FALSE);
@@ -630,7 +630,7 @@ void EnsureVisible(
 
 Rozwija lub zwija wszystkie węzły kontroli siatki właściwości.
 
-```
+```cpp
 void ExpandAll(BOOL bExpand=TRUE);
 ```
 
@@ -808,7 +808,7 @@ Wskaźnik do obiektu właściwości, który odpowiada wybranemu elementowi w for
 
 Pobiera kolory niestandardowe, które są obecnie zdefiniowane dla elementów kontroli siatki właściwości.
 
-```
+```cpp
 void GetCustomColors(
     COLORREF& clrBackground,
     COLORREF& clrText,
@@ -1225,7 +1225,7 @@ Użyj [METODY CMFCPropertyGridCtrl::SetVSDotNetLook,](#setvsdotnetlook) aby usta
 
 Określa sposób wyświetlania zmodyfikowanych właściwości.
 
-```
+```cpp
 void MarkModifiedProperties(
     BOOL bMark=TRUE,
     BOOL bRedraw=TRUE);
@@ -1376,7 +1376,7 @@ Domyślnie ta metoda wysyła komunikat [AFX_WM_PROPERTY_CHANGED](../../mfc/refer
 
 Wywoływana przez platformę, gdy jest zaznaczona właściwość zawierająca formant pola kombi.
 
-```
+```cpp
 void OnSelectCombo();
 ```
 
@@ -1386,7 +1386,7 @@ void OnSelectCombo();
 
 Usuwa wszystkie obiekty właściwości z formantu siatki właściwości.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -1396,7 +1396,7 @@ void RemoveAll();
 
 Przywraca oryginalne wartości wszystkich właściwości.
 
-```
+```cpp
 void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```
 
@@ -1411,7 +1411,7 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 
 Ustawia lub resetuje tryb alfabetyczny.
 
-```
+```cpp
 void SetAlphabeticMode(BOOL bSet=TRUE);
 ```
 
@@ -1428,7 +1428,7 @@ Gdy formant siatki właściwości jest w trybie alfabetycznym, formant sortuje w
 
 Określa tekst etykiet logicznych.
 
-```
+```cpp
 void SetBoolLabels(
     LPCTSTR lpszTrue,
     LPCTSTR lpszFalse);
@@ -1448,7 +1448,7 @@ void SetBoolLabels(
 
 Wybiera właściwość w formancie siatki właściwości.
 
-```
+```cpp
 void SetCurSel(
     CMFCPropertyGridProperty* pProp,
     BOOL bRedraw=TRUE);
@@ -1470,7 +1470,7 @@ Ta metoda służy do anulowania wyboru bieżącego elementu w formancie siatki w
 
 Określa kolory niestandardowe dla różnych elementów formantu siatki właściwości.
 
-```
+```cpp
 void SetCustomColors(
     COLORREF clrBackground,
     COLORREF clrText,
@@ -1514,7 +1514,7 @@ Aby dostosować wygląd określonej właściwości, wyprowadzić klasę z [cmfcp
 
 Określa liczbę wierszy wyświetlanych w sekcji opisu bieżącej kontroli siatki właściwości.
 
-```
+```cpp
 void SetDescriptionRows(int nDescRows);
 ```
 
@@ -1527,7 +1527,7 @@ void SetDescriptionRows(int nDescRows);
 
 Określa, czy ma być wyświetlana pełna szerokość nazwy kategorii dla grupy właściwości w bieżącym formancie siatki właściwości.
 
-```
+```cpp
 void SetGroupNameFullWidth(
     BOOL bGroupNameFullWidth = TRUE,
     BOOL bRedraw = TRUE);
@@ -1551,7 +1551,7 @@ Terminy *nazwa grupy* i nazwa *kategorii* są używane zamiennie w tej metodzie.
 
 Definiuje znak, który jest używany jako ogranicznik na liście wartości właściwości.
 
-```
+```cpp
 void SetListDelimiter(TCHAR c);
 ```
 
@@ -1570,7 +1570,7 @@ Domyślnie [konstruktor CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropert
 
 Określa, czy struktura ponownie rysuje kolumny nazw i wartości bieżącej kontroli siatki właściwości, gdy użytkownik zmienić rozmiar kolumn.
 
-```
+```cpp
 void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```
 
@@ -1587,7 +1587,7 @@ Użytkownik może zmienić rozmiar kolumn nazw i wartości formantu siatki wła�
 
 Ustawia wygląd formantu siatki właściwości do stylu, który jest używany w programie Visual Studio .NET.
 
-```
+```cpp
 void SetVSDotNetLook(BOOL bSet=TRUE);
 ```
 

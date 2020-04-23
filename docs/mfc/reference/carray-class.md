@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: 2c520a732edf54ebb36c07728ceb19791b351143
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3355e72c58365e97f8f3f8ce09754285f671915a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377023"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753980"
 ---
 # <a name="carray-class"></a>Klasa CArray
 
@@ -209,7 +209,7 @@ Tablica rośnie jeden element naraz.
 
 Ta funkcja elementu członkowskiego służy do kopiowania elementów jednej tablicy do innej.
 
-```
+```cpp
 void Copy(const CArray& src);
 ```
 
@@ -258,7 +258,7 @@ Służy do implementowania operatora przypisania po lewej stronie dla tablic.
 
 Zwalnia wszelkie dodatkowe pamięci, która została przydzielona, gdy tablica została wyhodowana.
 
-```
+```cpp
 void FreeExtra();
 ```
 
@@ -385,7 +385,7 @@ Warunek `GetUpperBound( )` = -1 wskazuje, że tablica nie zawiera żadnych eleme
 
 Pierwsza wersja `InsertAt` wstawia jeden element (lub wiele kopii elementu) w określonym indeksie w tablicy.
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     ARG_TYPE newElement,
@@ -502,7 +502,7 @@ Dla tablic, w których element zawiera wskaźnik do jednego z własnych element�
 
 Usuwa wszystkie elementy z tej tablicy.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -518,7 +518,7 @@ Jeśli tablica jest już pusta, funkcja nadal działa.
 
 Usuwa jeden lub więcej elementów, począwszy od określonego indeksu w tablicy.
 
-```
+```cpp
 void RemoveAt(
     INT_PTR nIndex,
     INT_PTR nCount = 1);
@@ -546,7 +546,7 @@ Jeśli spróbujesz usunąć więcej elementów niż są zawarte w tablicy powyż
 
 Ustawia element tablicy w określonym indeksie.
 
-```
+```cpp
 void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```
 
@@ -575,7 +575,7 @@ Należy upewnić się, że wartość indeksu reprezentuje prawidłową pozycję 
 
 Ustawia element tablicy w określonym indeksie.
 
-```
+```cpp
 void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```
 
@@ -602,7 +602,7 @@ Tablica rośnie automatycznie, jeśli to konieczne (oznacza to, że górna grani
 
 Ustanawia rozmiar pustej lub istniejącej tablicy; przydziela pamięć, jeśli to konieczne.
 
-```
+```cpp
 void SetSize(
     INT_PTR nNewSize,
     INT_PTR nGrowBy = -1);

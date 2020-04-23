@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: da9d588811361d3dfd72d44d5b9ced8460d23936
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c24c638d7006be112a53ec1e4f622ad528e348c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319753"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752821"
 ---
 # <a name="cmonthcalctrl-class"></a>Klasa CMonthCalCtrl
 
@@ -227,10 +227,10 @@ virtual BOOL Create(
 Określa kombinację stylów systemu Windows zastosowanych do formantu kalendarza miesiąca. Aby uzyskać więcej informacji na temat stylów, zobacz [Style sterowania kalendarzem miesiąca](/windows/win32/Controls/month-calendar-control-styles) w programie Windows SDK.
 
 *Rect*<br/>
-Odwołanie do struktury [RECT.](/previous-versions/dd162897\(v=vs.85\)) Zawiera położenie i rozmiar formantu kalendarza miesiąca.
+Odwołanie do struktury [RECT.](/windows/win32/api/windef/ns-windef-rect) Zawiera położenie i rozmiar formantu kalendarza miesiąca.
 
 *Pt*<br/>
-Odwołanie do [point](/previous-versions/dd162805\(v=vs.85\)) struktury, która identyfikuje lokalizację kontrolki kalendarza miesiąca.
+Odwołanie do [point](/windows/win32/api/windef/ns-windef-point) struktury, która identyfikuje lokalizację kontrolki kalendarza miesiąca.
 
 *pParentWnd*<br/>
 Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiektu, który jest nadrzędnym oknie kontrolki kalendarza miesiąca. Nie może być null.
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>Parametry
 
 *pRect*<br/>
-Wskaźnik do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) która otrzyma ograniczone informacje prostokąta. Ten parametr musi być prawidłowym adresem i nie może być null.
+Wskaźnik do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) która otrzyma ograniczone informacje prostokąta. Ten parametr musi być prawidłowym adresem i nie może być null.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -808,7 +808,7 @@ Ta metoda wysyła komunikat [MCM_GETCURRENTVIEW,](/windows/win32/Controls/mcm-ge
 
 Ustawia szerokość obramowania bieżącego kontrolki kalendarza miesiąca.
 
-```
+```cpp
 void SetCalendarBorder(int cxyBorder);
 ```
 
@@ -840,7 +840,7 @@ Poniższy przykład kodu ustawia szerokość obramowania kontrolki kalendarza mi
 
 Ustawia domyślną szerokość obramowania kontrolki kalendarza bieżącego miesiąca.
 
-```
+```cpp
 void SetCalendarBorderDefault();
 ```
 
@@ -1219,7 +1219,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie [MCM_SETSELRANGE](/w
 
 Ustawia kontrolka kalendarza dla bieżącego dnia.
 
-```
+```cpp
 void SetToday(const COleDateTime& refDateTime);
 void SetToday(const CTime* pDateTime);
 void SetToday(const LPSYSTEMTIME pDateTime);
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Lprect*|[w] Wskaźnik do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) która definiuje prostokąt, który zawiera żądaną liczbę kalendarzy.|
+|*Lprect*|[w] Wskaźnik do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) która definiuje prostokąt, który zawiera żądaną liczbę kalendarzy.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do struktury [RECT,](/previous-versions/dd162897\(v=vs.85\)) która definiuje prostokąt, którego rozmiar jest mniejszy lub równy prostokątowi zdefiniowanemu przez parametr *lpRect.*
+Wskaźnik do struktury [RECT,](/windows/win32/api/windef/ns-windef-rect) która definiuje prostokąt, którego rozmiar jest mniejszy lub równy prostokątowi zdefiniowanemu przez parametr *lpRect.*
 
 ### <a name="remarks"></a>Uwagi
 

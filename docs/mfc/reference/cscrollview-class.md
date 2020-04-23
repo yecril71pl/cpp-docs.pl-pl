@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: c22f438623ca1d1c9022ea7c3efc50e0826ad302
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d0eb163fae2aa5fc63470e1c499311ab1a402a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318487"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754421"
 ---
 # <a name="cscrollview-class"></a>Klasa CScrollView
 
@@ -124,7 +124,7 @@ Aby uzyskać więcej `CScrollView`informacji na temat używania , zobacz [Archit
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustalić, czy widok przewijania ma poziome i pionowe paski.
 
-```
+```cpp
 void CheckScrollBars(
     BOOL& bHasHorzBar,
     BOOL& bHasVertBar) const;
@@ -154,7 +154,7 @@ Należy wywołać `SetScrollSizes` albo `SetScaleToFitSize` lub przed widok prze
 
 Wywołanie, `FillOutsideRect` aby wypełnić obszar widoku, który pojawia się poza obszarem przewijania.
 
-```
+```cpp
 void FillOutsideRect(
     CDC* pDC,
     CBrush* pBrush);
@@ -198,7 +198,7 @@ Ta para współrzędnych odpowiada lokalizacji w dokumencie, do której przewija
 
 `GetDeviceScrollSizes`pobiera bieżący tryb mapowania, całkowity rozmiar oraz rozmiary linii i stron widoku z przewijaniem.
 
-```
+```cpp
 void GetDeviceScrollSizes(
     int& nMapMode,
     SIZE& sizeTotal,
@@ -258,7 +258,7 @@ Całkowity rozmiar widoku przewijania w jednostkach logicznych. Rozmiar poziomy 
 
 Wywołanie, `ResizeParentToFit` aby rozmiar widoku dyktował rozmiar okna ramki.
 
-```
+```cpp
 void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ```
 
@@ -279,7 +279,7 @@ Jest to zalecane tylko w przypadku widoków w oknach ramki podrzędnej MDI. Uży
 
 Wywołanie, `ScrollToPosition` aby przewinąć do danego punktu w widoku.
 
-```
+```cpp
 void ScrollToPosition(POINT pt);
 ```
 
@@ -296,7 +296,7 @@ Widok zostanie przewinięty tak, aby ten punkt znajduje się w lewym górnym rog
 
 Zadzwoń, `SetScaleToFitSize` jeśli chcesz automatycznie skalować rozmiar rzutni do bieżącego rozmiaru okna.
 
-```
+```cpp
 void SetScaleToFitSize(SIZE sizeTotal);
 ```
 
@@ -321,7 +321,7 @@ Zazwyczaj można umieścić wywołanie `SetScaleToFitSize` w przesłone funkcji 
 
 Zadzwoń, `SetScrollSizes` gdy widok ma zostać zaktualizowany.
 
-```
+```cpp
 void SetScrollSizes(
     int nMapMode,
     SIZE sizeTotal,

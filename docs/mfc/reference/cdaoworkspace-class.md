@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 52aaa4970ef483988194691eb6b870cbfe51f494
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c492c806d64b1cfe0e4f73b3bb880ec7bd0a7e80
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377115"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754662"
 ---
 # <a name="cdaoworkspace-class"></a>Klasa CDaoWorkspace
 
@@ -213,7 +213,7 @@ Aby uzyskać powiązane informacje, zobacz temat "Dołącz metodę" w Pomocy DAO
 
 Wywołanie tej funkcji elementu członkowskiego, aby zainicjować transakcję.
 
-```
+```cpp
 void BeginTrans();
 ```
 
@@ -272,7 +272,7 @@ Aby uzyskać powiązane informacje, zobacz temat "Zamknij metodę" w Pomocy DAO.
 
 Wywołanie tej funkcji elementu członkowskiego, aby zatwierdzić transakcję — zapisz grupę zmian i aktualizacji do jednej lub więcej baz danych w obszarze roboczym.
 
-```
+```cpp
 void CommitTrans();
 ```
 
@@ -437,7 +437,7 @@ Liczba otwartych baz danych w obszarze roboczym.
 
 Wywołanie tej funkcji elementu członkowskiego, aby uzyskać różne rodzaje informacji o bazie danych otwarte w obszarze roboczym.
 
-```
+```cpp
 void GetDatabaseInfo(
     int nIndex,
     CDaoDatabaseInfo& dbinfo,
@@ -607,7 +607,7 @@ Ta liczba nie obejmuje żadnych otwartych obszarów roboczych, które nie są do
 
 Wywołanie tej funkcji elementu członkowskiego, aby uzyskać różne rodzaje informacji o obszarze roboczym otwartym w sesji.
 
-```
+```cpp
 void GetWorkspaceInfo(
     int nIndex,
     CDaoWorkspaceInfo& wkspcinfo,
@@ -754,7 +754,7 @@ Aby uzyskać więcej informacji na temat naprawy baz danych, zobacz temat "Repai
 
 Wywołanie tej funkcji elementu członkowskiego, aby zakończyć bieżącą transakcję i przywrócić wszystkie bazy danych w obszarze roboczym do ich stanu przed rozpoczęciem transakcji.
 
-```
+```cpp
 void Rollback();
 ```
 
@@ -852,7 +852,7 @@ Za pomocą tego mechanizmu można skonfigurować aparat bazy danych z ustawienia
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustawić wartość właściwości DAO IsolateODBCTrans dla obszaru roboczego.
 
-```
+```cpp
 void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
 ```
 

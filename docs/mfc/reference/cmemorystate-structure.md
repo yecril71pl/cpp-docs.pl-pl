@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-ms.openlocfilehash: 8f49a9faf70673c62167deeaa1bef33e4882378f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94a2fb65a9a3030f9dc683d0eb30f476b9de1cad
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369988"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752613"
 ---
 # <a name="cmemorystate-structure"></a>Struktura CMemoryState
 
@@ -79,7 +79,7 @@ Aby uzyskać więcej informacji `CMemoryState` na temat używania i innych diagn
 
 Wykonuje podsumowanie migawki pamięci i `CMemoryState` przechowuje je w tym obiekcie.
 
-```
+```cpp
 void Checkpoint();
 ```
 
@@ -137,7 +137,7 @@ Niezerowe, jeśli dwa stany pamięci są różne; w przeciwnym razie 0.
 
 Wywołuje `Dump` funkcję dla wszystkich obiektów typu pochodną z klasy, `CObject` które zostały przydzielone (i są nadal przydzielane) od ostatniego wywołania punktu [kontrolnego](#checkpoint) dla tego `CMemoryState` obiektu.
 
-```
+```cpp
 void DumpAllObjectsSince() const;
 ```
 
@@ -153,7 +153,7 @@ Wywołanie `DumpAllObjectsSince` z niezainicjowanym `CMemoryState` obiektem zrzu
 
 Drukuje zwięzły raport `CMemoryState` statystyki pamięci z obiektu, który jest wypełniony przez funkcję elementu członkowskiego [Różnica.](#difference)
 
-```
+```cpp
 void DumpStatistics() const;
 ```
 

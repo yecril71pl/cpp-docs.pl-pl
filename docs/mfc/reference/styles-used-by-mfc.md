@@ -194,12 +194,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: 1fe8e0e167ee1fe6150487dfff436a72a2d55868
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20e3a453fd04f0eead53d8ee985b51c7f534b662
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372918"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032398"
 ---
 # <a name="styles-used-by-mfc"></a>Style używane przez MFC
 
@@ -418,7 +418,7 @@ Style statyczne mają zastosowanie do obiektów [klasy CStatic.](../../mfc/refer
 |SS_BLACKRECT|Określa prostokąt wypełniony kolorem używanym do rysowania ramek okien. Wartość domyślna to czarny.|
 |SS_CENTER|Wyznacza prosty prostokąt i wyświetla dany tekst wyśrodkowany w prostokącie. Tekst jest formatowany przed jego wyświetleniem. Wyrazy, które rozciągałyby się poza koniec wiersza, są automatycznie zawijane do początku następnego linii wyśrodkowanej.|
 |SS_CENTERIMAGE|Określa, że jeśli mapa bitowa lub ikona jest mniejsza niż obszar klienta formantu statycznego, pozostała część obszaru klienta jest wypełniona kolorem piksela w lewym górnym rogu mapy bitowej lub ikony. Jeśli formant statyczny zawiera pojedynczy wiersz tekstu, tekst jest wyśrodkowany pionowo w obszarze klienta formantu.|
-|SS_ENDELLIPSIS|lub SS_PATHELLIPSIS Zastępuje część danego ciągu elipsami, jeśli to konieczne, tak aby wynik mieścił się w określonym prostokącie. <br /><br />Można określić SS_END_ELLIPSIS, aby zastąpić znaki na końcu ciągu lub SS_PATHELLIPSIS, aby zastąpić znaki w środku ciągu. Jeśli ciąg zawiera znaki\\ukośnika odwrotnego ( ), SS_PATHELLIPSIS zachowuje jak najwięcej tekstu po ostatnim ukośniku odwrotnym.|
+|SS_ENDELLIPSIS|lub SS_PATHELLIPSIS W razie potrzeby zastępuje część danego ciągu wielokropkiem, tak aby wynik mieścił się w określonym prostokącie. <br /><br />Można określić SS_END_ELLIPSIS, aby zastąpić znaki na końcu ciągu lub SS_PATHELLIPSIS, aby zastąpić znaki w środku ciągu. Jeśli ciąg zawiera znaki\\ukośnika odwrotnego ( ), SS_PATHELLIPSIS zachowuje jak najwięcej tekstu po ostatnim ukośniku odwrotnym.|
 |SS_ENHMETAFILE|Określa ulepszony metaplik ma być wyświetlany w formancie statycznym. Podany tekst to nazwa metapliku. Ulepszona kontrola statyczna metapliku ma stały rozmiar; metaplik jest skalowany w celu dopasowania do obszaru klienta formantu statycznego.|
 |SS_ETCHEDFRAME|Rysuje ramkę formantu statycznego przy użyciu stylu EDGE_ETCHED krawędzi.|
 |SS_ETCHEDHORZ|Rysuje górną i dolną krawędź formantu statycznego przy użyciu stylu krawędzi EDGE_ETCHED.|
@@ -439,7 +439,7 @@ Style statyczne mają zastosowanie do obiektów [klasy CStatic.](../../mfc/refer
 |SS_USERITEM|Określa element zdefiniowany przez użytkownika.|
 |SS_WHITEFRAME|Określa pole z narysowaną ramką o tym samym kolorze co tło okna. Wartość domyślna to biały.|
 |SS_WHITERECT|Określa prostokąt wypełniony kolorem używanym do wypełnienia tła okna. Wartość domyślna to biały.|
-|SS_WORDELLIPSIS|Obcina tekst, który nie pasuje i dodaje elipsy.|
+|SS_WORDELLIPSIS|Obcina tekst, który nie pasuje i dodaje wielokropek.|
 
 ## <a name="window-styles"></a><a name="window-styles"></a>Style okien
 

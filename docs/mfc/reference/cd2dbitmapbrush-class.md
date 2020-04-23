@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-ms.openlocfilehash: e26202392bf4783598aec0dddfea514fce806a8c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8d0804c094204bc0e8ab420e20c8b6a6a35dc70a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369301"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754290"
 ---
 # <a name="cd2dbitmapbrush-class"></a>Klasa CD2DBitmapBrush
 
@@ -132,7 +132,7 @@ virtual ~CD2DBitmapBrush();
 
 Dołącza istniejący interfejs zasobu do obiektu
 
-```
+```cpp
 void Attach(ID2D1BitmapBrush* pResource);
 ```
 
@@ -200,7 +200,7 @@ Wskaźnik do ciągu zakończonego wartością null, który zawiera nazwę pliku.
 
 Inicjuje obiekt
 
-```
+```cpp
 void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```
 
@@ -346,7 +346,7 @@ Wskaźnik do interfejsu ID2D1BitmapBrush lub NULL, jeśli obiekt nie został jes
 
 Określa źródło mapy bitowej używane przez ten pędzel do malowania
 
-```
+```cpp
 void SetBitmap(CD2DBitmap* pBitmap);
 ```
 
@@ -359,7 +359,7 @@ void SetBitmap(CD2DBitmap* pBitmap);
 
 Określa sposób poziomego układania kafelków przez pędzel tych obszarów, które wykraczają poza mapę bitową
 
-```
+```cpp
 void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```
 
@@ -372,7 +372,7 @@ Wartość określająca sposób, w jaki pędzel jest poziomo kafelkami, które r
 
 Określa sposób pionowego układania kafelków przez pędzel tych obszarów, które wykraczają poza mapę bitową
 
-```
+```cpp
 void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```
 
@@ -385,7 +385,7 @@ Wartość określająca sposób pionowego układania kafelków w pionie tych obs
 
 Określa tryb interpolacji używany podczas skalowania lub obracania mapy bitowej pędzla
 
-```
+```cpp
 void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```
 

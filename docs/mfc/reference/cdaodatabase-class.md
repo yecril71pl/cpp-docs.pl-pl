@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: debba137878da49921df83da7630003a7d62db2f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0fbc4ee3f2033f7507a1ed68493fa7e48bc62c51
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369018"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754744"
 ---
 # <a name="cdaodatabase-class"></a>Klasa CDaoDatabase
 
@@ -315,7 +315,7 @@ Jeśli pominięto stałą szyfrowania, zostanie utworzona niezaszyfrowana baza d
 
 Wywołanie tej funkcji elementu członkowskiego, aby ustanowić relację między jednym lub więcej pól w tabeli podstawowej w bazie danych i co najmniej jedno pole w tabeli obcej (inna tabela w bazie danych).
 
-```
+```cpp
 void CreateRelation(
     LPCTSTR lpszName,
     LPCTSTR lpszTable,
@@ -378,7 +378,7 @@ Aby uzyskać powiązane informacje, zobacz temat "CreateRelation Method" w Pomoc
 
 Wywołanie tej funkcji elementu członkowskiego, aby usunąć `CDaoDatabase` określony querydef — zapisane zapytanie — z kolekcji QueryDefs obiektu.
 
-```
+```cpp
 void DeleteQueryDef(LPCTSTR lpszName);
 ```
 
@@ -397,7 +397,7 @@ Aby uzyskać informacje dotyczące tworzenia obiektów querydef, zobacz klasa [C
 
 Wywołanie tej funkcji elementu członkowskiego, aby usunąć istniejącą relację z kolekcji Relacje obiektu bazy danych.
 
-```
+```cpp
 void DeleteRelation(LPCTSTR lpszName);
 ```
 
@@ -416,7 +416,7 @@ Aby uzyskać powiązane informacje, zobacz temat "Metoda usuwania" w Pomocy DAO.
 
 Wywołanie tej funkcji elementu członkowskiego, aby usunąć `CDaoDatabase` określoną tabelę i wszystkie jego dane z kolekcji TableDefs obiektu.
 
-```
+```cpp
 void DeleteTableDef(LPCTSTR lpszName);
 ```
 
@@ -440,7 +440,7 @@ Aby uzyskać powiązane informacje, zobacz temat "Metoda usuwania" w Pomocy DAO.
 
 Wywołanie tej funkcji elementu członkowskiego, aby uruchomić kwerendę akcji lub wykonać instrukcję SQL w bazie danych.
 
-```
+```cpp
 void Execute(
     LPCTSTR lpszSQL,
     int nOptions = dbFailOnError);
@@ -559,7 +559,7 @@ Liczba zapytań zdefiniowanych w bazie danych.
 
 Wywołanie tej funkcji elementu członkowskiego, aby uzyskać różne rodzaje informacji o kwerendzie zdefiniowane w bazie danych.
 
-```
+```cpp
 void GetQueryDefInfo(
     int nIndex,
     CDaoQueryDefInfo& querydefinfo,
@@ -657,7 +657,7 @@ Aby zilustrować pojęcie relacji, należy wziąć pod uwagę dostawcy tabeli i 
 
 Wywołanie tej funkcji elementu członkowskiego, aby uzyskać informacje o określonej relacji w kolekcji Relacje bazy danych.
 
-```
+```cpp
 void GetRelationInfo(
     int nIndex,
     CDaoRelationInfo& relinfo,
@@ -716,7 +716,7 @@ Liczba tabledefs zdefiniowane w bazie danych.
 
 Wywołanie tej funkcji elementu członkowskiego, aby uzyskać różne rodzaje informacji o tabeli zdefiniowanej w bazie danych.
 
-```
+```cpp
 void GetTableDefInfo(
     int nIndex,
     CDaoTableDefInfo& tabledefinfo,
@@ -873,7 +873,7 @@ Można również użyć ciągu połączenia dla wielu poziomów autoryzacji `CDa
 
 Wywołanie tej funkcji elementu członkowskiego, aby zastąpić domyślną liczbę sekund, aby zezwolić przed kolejnymi operacjami na limit czasu połączonej bazy danych.
 
-```
+```cpp
 void SetQueryTimeout(short nSeconds);
 ```
 

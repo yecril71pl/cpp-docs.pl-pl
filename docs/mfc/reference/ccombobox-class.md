@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: df935bb924c7d8908b1166852dc553a73fc71ff3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc803fb4ce137b256f4197afaec7bc3327e1e85a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369511"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754833"
 ---
 # <a name="ccombobox-class"></a>Klasa CComboBox
 
@@ -308,7 +308,7 @@ CComboBox();
 
 Usuwa (czyści) bieżące zaznaczenie, jeśli istnieje, w formancie edycji pola kombi.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -357,7 +357,7 @@ Domyślnie ta funkcja elementu członkowskiego nic nie robi. Jeśli tworzysz pol
 
 Kopiuje bieżące zaznaczenie( jeśli istnieje) w formancie edycji pola kombi na Schowek w formacie CF_TEXT.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -427,7 +427,7 @@ Zastosuj następujące [style okna](../../mfc/reference/styles-used-by-mfc.md#wi
 
 Usuwa (wycina) bieżące zaznaczenie w formancie edycji pola kombi i kopiuje usunięty tekst do Schowka w formacie CF_TEXT.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -708,7 +708,7 @@ Indeks od zera aktualnie zaznaczonego elementu w polu listy pola kombi lub CB_ER
 
 Wywołanie `GetDroppedControlRect` funkcji elementu członkowskiego, aby pobrać współrzędne ekranu widoczne (porzucone w dół) pole listy rozwijanego pola kombi.
 
-```
+```cpp
 void GetDroppedControlRect(LPRECT lprect) const;
 ```
 
@@ -850,7 +850,7 @@ Wartość 32-bitową można ustawić za pomocą parametru *dwItemData* wywołani
 
 Pobiera dostarczoną przez aplikację wartość 32-bitową skojarzoną z określonym elementem pola kombi jako wskaźnik **(void).** <strong>\*</strong>
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1125,7 +1125,7 @@ Zobacz [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) op
 
 Wstawia dane ze Schowka do formantu edycji pola kombi w bieżącym położeniu kursora.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1141,7 +1141,7 @@ Dane są wstawiane tylko wtedy, gdy Schowek zawiera dane w formacie CF_TEXT.
 
 Usuwa wszystkie elementy z pola listy i edytuj kontrolkę pola kombi.
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1337,7 +1337,7 @@ Przewijanie w formancie statycznym jest wyłączone, gdy lista elementów nie je
 
 Ustawia szerokość w pikselach, za pomocą której część pola listy pola kombi może być przewijana w poziomie.
 
-```
+```cpp
 void SetHorizontalExtent(UINT nExtent);
 ```
 
@@ -1536,7 +1536,7 @@ System przewija pole listy, dopóki element określony przez *nIndex* nie pojawi
 
 Pokazuje lub ukrywa pole listy pola kombi, które ma [styl CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) lub [CBS_DROPDOWNLIST.](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)
 
-```
+```cpp
 void ShowDropDown(BOOL bShowIt = TRUE);
 ```
 

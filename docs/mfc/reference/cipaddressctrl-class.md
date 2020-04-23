@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: 28aa0e7137647bc49406dab1e82b9c2b05ca3538
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0613dea766b022acf140a82bb4b01784793c2589
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372339"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754963"
 ---
 # <a name="cipaddressctrl-class"></a>Klasa CIPAddressCtrl
 
@@ -96,7 +96,7 @@ CIPAddressCtrl();
 
 Czyści zawartość formantu adresu IP.
 
-```
+```cpp
 void ClearAddress();
 ```
 
@@ -122,7 +122,7 @@ virtual BOOL Create(
 Styl formantu adres IP. Stosowanie kombinacji stylów okien. Należy dołączyć styl WS_CHILD, ponieważ formant musi być oknem podrzędnym. Zobacz [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) w zestawie Windows SDK, aby uzyskać listę stylów systemu Windows.
 
 *Rect*<br/>
-Odwołanie do rozmiaru i położenia formantu adresu IP. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/previous-versions/dd162897\(v=vs.85\))
+Odwołanie do rozmiaru i położenia formantu adresu IP. Może to być obiekt [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [struktura RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Wskaźnik do okna nadrzędnego formantu adresu IP. Nie może być null.
@@ -166,7 +166,7 @@ Określa rozszerzony styl tworzonego formantu. Aby uzyskać listę rozszerzonych
 Styl formantu adres IP. Stosowanie kombinacji stylów okien. Należy dołączyć styl WS_CHILD, ponieważ formant musi być oknem podrzędnym. Zobacz [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) w zestawie Windows SDK, aby uzyskać listę stylów systemu Windows.
 
 *Rect*<br/>
-Odwołanie do struktury [RECT](/previous-versions/dd162897\(v=vs.85\)) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
+Odwołanie do struktury [RECT](/windows/win32/api/windef/ns-windef-rect) opisujące rozmiar i położenie okna, które ma zostać utworzone, we współrzędnych klienta *pParentWnd*.
 
 *pParentWnd*<br/>
 Wskaźnik do okna, które jest nadrzędnym formantu.
@@ -248,7 +248,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie [IPM_ISBLANK](/windo
 
 Ustawia wartości adresów dla wszystkich czterech pól w formancie adresu IP.
 
-```
+```cpp
 void SetAddress(
     BYTE nField0,
     BYTE nField1,
@@ -290,7 +290,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie [IPM_SETADDRESS](/wi
 
 Ustawia fokus klawiatury na określone pole w formancie adresu IP.
 
-```
+```cpp
 void SetFieldFocus(WORD nField);
 ```
 
@@ -307,7 +307,7 @@ Ta funkcja elementu członkowskiego implementuje zachowanie [IPM_SETFOCUS](/wind
 
 Ustawia zakres w określonym polu w formancie adresu IP.
 
-```
+```cpp
 void SetFieldRange(
     int nField,
     BYTE nLower,
