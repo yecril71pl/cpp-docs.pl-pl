@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: a6e68f6368a7b45e0a566a7d2d12f23a9cd62b12
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5c9bc12e6c3f0ab4742a940547087c9742caf73
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370057"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754547"
 ---
 # <a name="cmdiframewnd-class"></a>Klasa CMDIFrameWnd
 
@@ -242,7 +242,7 @@ Zastąpokaj tę funkcję elementu członkowskiego, jeśli masz menu Okno, które
 
 Aktywuje inne okno podrzędne MDI.
 
-```
+```cpp
 void MDIActivate(CWnd* pWndActivate);
 ```
 
@@ -268,7 +268,7 @@ Zobacz przykład [dla CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup).
 
 Rozmieszcza wszystkie okna podrzędne MDI w formacie kaskadowym.
 
-```
+```cpp
 void MDICascade();
 void MDICascade(int nType);
 ```
@@ -311,7 +311,7 @@ Zobacz przykład [dla CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwn
 
 Rozmieszcza wszystkie zminimalizowane okna podrzędne dokumentu.
 
-```
+```cpp
 void MDIIconArrange();
 ```
 
@@ -327,7 +327,7 @@ Zobacz przykład [dla CMDIFrameWnd::MDICascade](#mdicascade).
 
 Maksymalizuje określone okno podrzędne MDI.
 
-```
+```cpp
 void MDIMaximize(CWnd* pWnd);
 ```
 
@@ -350,7 +350,7 @@ Zobacz przykład [dla CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwn
 
 Aktywuje okno podrzędne bezpośrednio za aktualnie aktywnym oknem podrzędnym i umieszcza aktualnie aktywne okno podrzędne za wszystkimi innymi oknami podrzędnymi.
 
-```
+```cpp
 void MDINext();
 ```
 
@@ -366,7 +366,7 @@ Jeśli aktualnie aktywne okno podrzędne MDI jest zmaksymalizowane, funkcja elem
 
 Aktywuje poprzednie okno podrzędne i umieszcza aktualnie aktywne okno podrzędne bezpośrednio za nim.
 
-```
+```cpp
 void MDIPrev();
 ```
 
@@ -378,7 +378,7 @@ Jeśli aktualnie aktywne okno podrzędne MDI jest zmaksymalizowane, funkcja elem
 
 Przywraca okno podrzędne MDI z maksymalnego lub zminimalizowanego rozmiaru.
 
-```
+```cpp
 void MDIRestore(CWnd* pWnd);
 ```
 
@@ -433,7 +433,7 @@ Nie należy wywoływać tej funkcji elementu członkowskiego, jeśli używasz st
 
 Rozmieszcza wszystkie okna podrzędne w formacie kafelkowym.
 
-```
+```cpp
 void MDITile();
 void MDITile(int nType);
 ```

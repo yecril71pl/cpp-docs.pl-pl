@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: 5373075cf6dfc54e6e2368e46f48f317fcec64d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bdb91168a7c0ae718ca7d7514448b55965186aa8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376117"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753741"
 ---
 # <a name="coleserveritem-class"></a>Klasa COleServerItem
 
@@ -175,7 +175,7 @@ Aby uzyskać więcej informacji na temat serwerów i powiązanych tematów, zoba
 
 Wywołanie tej funkcji, aby umieścić formaty prezentacji i `COleDataSource` konwersji dla elementu OLE w określonym obiekcie.
 
-```
+```cpp
 void AddOtherClipboardData(COleDataSource* pDataSource);
 ```
 
@@ -210,7 +210,7 @@ Flaga wskazująca, czy obiekt może zostać usunięty po zwolnieniu łącza do n
 
 Wywołanie tej funkcji, aby skopiować element OLE do Schowka.
 
-```
+```cpp
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```
 
@@ -275,7 +275,7 @@ Aby uzyskać więcej informacji o tym, jak informacje o opóźnieniu przeciągan
 
 Wywołanie tej funkcji, aby wypełnić określony obiekt [COleDataSource](../../mfc/reference/coledatasource-class.md) ze wszystkimi danymi, które zostaną skopiowane do Schowka, jeśli nazwano [CopyToClipboard](#copytoclipboard) (te same dane będą również przesyłane, jeśli nazywasz [DoDragDrop](#dodragdrop)).
 
-```
+```cpp
 void GetClipboardData(
     COleDataSource* pDataSource,
     BOOL bIncludeLink = FALSE,
@@ -339,7 +339,7 @@ Dzięki temu dostęp do dokumentu serwera, który `COleServerItem` został przek
 
 Wywołanie tej funkcji, aby uzyskać dane CF_EMBEDSOURCE dla elementu OLE.
 
-```
+```cpp
 void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ```
 
@@ -401,7 +401,7 @@ Aby uzyskać więcej informacji, zobacz [STGMEDIUM](/windows/win32/api/objidl/ns
 
 Wywołanie tej funkcji, aby uzyskać dane CF_OBJECTDESCRIPTOR dla elementu OLE.
 
-```
+```cpp
 void GetObjectDescriptorData(
     LPPOINT lpOffset,
     LPSIZE lpSize,
@@ -475,7 +475,7 @@ Domyślna implementacja [OnSetExtent](#onsetextent) ustawia ten element członko
 
 Wywołanie tej funkcji po zmianie połączonego elementu.
 
-```
+```cpp
 void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```
 
@@ -982,7 +982,7 @@ Domyślna implementacja wywołuje `COleClientItem` [UpdateLink](../../mfc/refere
 
 Wywołanie tej funkcji podczas tworzenia połączonego elementu, aby ustawić jego nazwę.
 
-```
+```cpp
 void SetItemName(LPCTSTR lpszItemName);
 ```
 
