@@ -15,20 +15,20 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlBaseModule class
 ms.assetid: 55ade80c-9b0c-4c51-933e-2158436c1096
-ms.openlocfilehash: a55412eff18fd04ac4e41c0f001991c1cf725b9f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d57d6e631cb287496a4ff5516e97e65ec0152e30
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321507"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168296"
 ---
 # <a name="catlbasemodule-class"></a>Klasa CAtlBaseModule
 
-Ta klasa jest tworzone w każdym projekcie ATL.
+Ta klasa jest tworzona w każdym projekcie ATL.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class CAtlBaseModule : public _ATL_BASE_MODULE
 ```
 
@@ -44,24 +44,24 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAtlBaseModule::AddResourceInstance](#addresourceinstance)|Dodaje wystąpienie zasobu do listy przechowywanych uchwytów.|
+|[CAtlBaseModule::AddResourceInstance](#addresourceinstance)|Dodaje wystąpienie zasobu do listy przechowywanych dojść.|
 |[CAtlBaseModule::GetHInstanceAt](#gethinstanceat)|Zwraca dojście do określonego wystąpienia zasobu.|
-|[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|Zwraca wystąpienie modułu `CAtlBaseModule` z obiektu.|
-|[CAtlBaseModule::GetResourceInstance](#getresourceinstance)|Zwraca wystąpienie zasobu `CAtlBaseModule` z obiektu.|
-|[CAtlBaseModule::UsuńInstrykcję źródła](#removeresourceinstance)|Usuwa wystąpienie zasobu z listy przechowywanych uchwytów.|
+|[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|Zwraca wystąpienie modułu z `CAtlBaseModule` obiektu.|
+|[CAtlBaseModule::GetResourceInstance](#getresourceinstance)|Zwraca wystąpienie zasobu z `CAtlBaseModule` obiektu.|
+|[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|Usuwa wystąpienie zasobu z listy przechowywanych dojść.|
 |[CAtlBaseModule::SetResourceInstance](#setresourceinstance)|Ustawia wystąpienie zasobu `CAtlBaseModule` obiektu.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|Zmienna wskazująca, czy inicjowanie modułu nie powiodło się.|
+|[CAtlBaseModule:: m_bInitFailed](#m_binitfailed)|Zmienna, która wskazuje, czy inicjowanie modułu nie powiodło się.|
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie `CAtlBaseModule` o nazwie _AtlBaseModule jest obecny w każdym projekcie ATL, zawierający dojście do wystąpienia modułu, dojście do modułu zawierającego zasoby (które domyślnie są jednym i tym samym) oraz tablicę dojścia do modułów zapewniających zasoby podstawowe. `CAtlBaseModule`można bezpiecznie uzyskać dostęp z wielu wątków.
+Wystąpienie o `CAtlBaseModule` nazwie _AtlBaseModule jest obecne w każdym projekcie ATL, zawierającym dojście do wystąpienia modułu, dojście do modułu zawierającego zasoby (które domyślnie są takie same) i tablicą dojść do modułów udostępniających zasoby podstawowe. `CAtlBaseModule`można bezpiecznie uzyskać dostęp z wielu wątków.
 
-Ta klasa zastępuje przestarzałe [CComModule](../../atl/reference/ccommodule-class.md) klasy używane we wcześniejszych wersjach ATL.
+Ta klasa zastępuje przestarzałą klasę [CComModule](../../atl/reference/ccommodule-class.md) używaną we wcześniejszych wersjach ATL.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -71,59 +71,59 @@ Ta klasa zastępuje przestarzałe [CComModule](../../atl/reference/ccommodule-cl
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcore.h
+**Nagłówek:** atlcore. h
 
 ## <a name="catlbasemoduleaddresourceinstance"></a><a name="addresourceinstance"></a>CAtlBaseModule::AddResourceInstance
 
-Dodaje wystąpienie zasobu do listy przechowywanych uchwytów.
+Dodaje wystąpienie zasobu do listy przechowywanych dojść.
 
-```
+```cpp
 bool AddResourceInstance(HINSTANCE hInst) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*hInst (WZT)*<br/>
+*hInst*<br/>
 Wystąpienie zasobu do dodania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli zasób został pomyślnie dodany, false w przeciwnym razie.
+Zwraca wartość PRAWDA, jeśli zasób został pomyślnie dodany, w przeciwnym razie false.
 
 ## <a name="catlbasemodulecatlbasemodule"></a><a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule
 
 Konstruktor.
 
-```
+```cpp
 CAtlBaseModule() throw();
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-Tworzy `CAtlBaseModule`plik .
+Tworzy `CAtlBaseModule`.
 
 ## <a name="catlbasemodulegethinstanceat"></a><a name="gethinstanceat"></a>CAtlBaseModule::GetHInstanceAt
 
 Zwraca dojście do określonego wystąpienia zasobu.
 
-```
+```cpp
 HINSTANCE GetHInstanceAt(int i) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*I*<br/>
-Numer wystąpienia zasobu.
+*Mam*<br/>
+Liczba wystąpień zasobów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca dojście do wystąpienia zasobu lub NULL, jeśli nie istnieje żadne odpowiednie wystąpienie zasobu.
+Zwraca dojście do wystąpienia zasobu lub wartość NULL, jeśli nie istnieje odpowiednie wystąpienie zasobu.
 
 ## <a name="catlbasemodulegetmoduleinstance"></a><a name="getmoduleinstance"></a>CAtlBaseModule::GetModuleInstance
 
-Zwraca wystąpienie modułu `CAtlBaseModule` z obiektu.
+Zwraca wystąpienie modułu z `CAtlBaseModule` obiektu.
 
-```
+```cpp
 HINSTANCE GetModuleInstance() throw();
 ```
 
@@ -135,7 +135,7 @@ Zwraca wystąpienie modułu.
 
 Zwraca wystąpienie zasobu.
 
-```
+```cpp
 HINSTANCE GetResourceInstance() throw();
 ```
 
@@ -143,53 +143,53 @@ HINSTANCE GetResourceInstance() throw();
 
 Zwraca wystąpienie zasobu.
 
-## <a name="catlbasemodulem_binitfailed"></a><a name="m_binitfailed"></a>CAtlBaseModule::m_bInitFailed
+## <a name="catlbasemodulem_binitfailed"></a><a name="m_binitfailed"></a>CAtlBaseModule:: m_bInitFailed
 
-Zmienna wskazująca, czy inicjowanie modułu nie powiodło się.
+Zmienna, która wskazuje, czy inicjowanie modułu nie powiodło się.
 
-```
+```cpp
 static bool m_bInitFailed;
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość true, jeśli moduł zainicjowany, false, jeśli nie można zainicjować.
+Ma wartość true, jeśli moduł został zainicjowany, wartość false, jeśli nie można jej zainicjować.
 
-## <a name="catlbasemoduleremoveresourceinstance"></a><a name="removeresourceinstance"></a>CAtlBaseModule::UsuńInstrykcję źródła
+## <a name="catlbasemoduleremoveresourceinstance"></a><a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance
 
-Usuwa wystąpienie zasobu z listy przechowywanych uchwytów.
+Usuwa wystąpienie zasobu z listy przechowywanych dojść.
 
-```
+```cpp
 bool RemoveResourceInstance(HINSTANCE hInst) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*hInst (WZT)*<br/>
+*hInst*<br/>
 Wystąpienie zasobu do usunięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość true, jeśli zasób został pomyślnie usunięty, false w przeciwnym razie.
+Zwraca wartość PRAWDA, jeśli zasób został pomyślnie usunięty, w przeciwnym razie false.
 
 ## <a name="catlbasemodulesetresourceinstance"></a><a name="setresourceinstance"></a>CAtlBaseModule::SetResourceInstance
 
 Ustawia wystąpienie zasobu `CAtlBaseModule` obiektu.
 
-```
+```cpp
 HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*hInst (WZT)*<br/>
+*hInst*<br/>
 Nowe wystąpienie zasobu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Zwraca zaktualizowane wystąpienie zasobu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przegląd klas](../../atl/atl-class-overview.md)<br/>
 [Klasy modułów](../../atl/atl-module-classes.md)

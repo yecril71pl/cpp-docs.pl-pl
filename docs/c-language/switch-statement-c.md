@@ -1,34 +1,39 @@
 ---
-title: switch — instrukcja (C)
-ms.date: 11/04/2016
+title: switchInstrukcja (C)
+ms.date: 04/25/2020
 f1_keywords:
 - switch
 helpviewer_keywords:
 - switch keyword [C]
 ms.assetid: fbede014-23bd-4ab1-8094-c8d9d9cb963a
-ms.openlocfilehash: 0f781147bf4ed020cf925ca29c2ba1b0f601cde1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+no-loc:
+- switch
+- case
+- default
+- break
+ms.openlocfilehash: 12163e85110092e3e372fa496cf42efd7574ea8d
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345087"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167679"
 ---
-# <a name="switch-statement-c"></a>switch — instrukcja (C)
+# <a name="opno-locswitch-statement-c"></a>switchInstrukcja (C)
 
-`switch` i **przypadek** instrukcji pomocy złożonych warunkowe i rozgałęzień operacje kontroli. `switch` Instrukcji przekazuje sterowanie do instrukcji w swojej treści.
+Instrukcje **switch** i **case** ułatwiają kontrolę złożonych operacji warunkowych i rozgałęzień. **switch** Instrukcja przekazuje formant do instrukcji w jej treści.
 
 ## <a name="syntax"></a>Składnia
 
-*Wybór instrukcji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Przełącz (** *wyrażenie* **)** *— instrukcja*
+*wybór — instrukcja*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`switch (`***expression* **`)`** *instrukcja* wyrażenia
 
-*labeled-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**przypadek** *wyrażenie_stałe* **:** *— instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**domyślne:** *— instrukcja*
+*etykieta — instrukcja*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`case`**  *stała —***`:`***instrukcja* wyrażenia    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`default :`**  *Merge*
 
-Kontrola przechodzi do instrukcji, których **przypadek** *wyrażenie_stałe* odpowiada wartości **przełącznika (** *wyrażenie* **)**. `switch` Instrukcji może zawierać dowolną liczbę **przypadek** wystąpień, ale nie dwie stałe wielkości liter, w tym samym `switch` instrukcja może mieć taką samą wartość. Wykonanie treści instrukcji rozpoczyna się od wybranej instrukcji i jest kontynuowane do czasu zakończenia treści lub do momentu **podziału** instrukcji przenosi sterowanie na zewnątrz treści.
+Kontrolka przechodzi do instrukcji, **case** *wyrażenie stałe* dopasowuje wartość ** switch (** *wyrażenie* **)**. **switch** Instrukcja może zawierać dowolną liczbę **case** wystąpień. Jednak żadne dwie case stałe w tej samej **switch** instrukcji nie mogą mieć tej samej wartości. Wykonywanie treści instrukcji rozpoczyna się od wybranej instrukcji. Przechodzi do końca treści lub do momentu, aż **break** instrukcja przeniesie kontrolę z treści.
 
-Korzystanie z `switch` instrukcji zwykle wygląda następująco:
+Użycie **switch** instrukcji zwykle wygląda następująco:
 
 ```C
 switch ( expression )
@@ -45,32 +50,32 @@ switch ( expression )
 }
 ```
 
-Możesz użyć **podziału** instrukcję, aby zakończyć przetwarzanie określonego wielkość liter w obrębie `switch` instrukcji i gałęzi do końca `switch` instrukcji. Bez **podziału**, program przechodzi do następnego wystąpienia case wykonywania instrukcji do momentu **podziału** lub osiągnięty zostanie koniec instrukcji. W niektórych sytuacjach może być pożądane kontynuacji.
+Możesz użyć instrukcji, **break** aby zakończyć przetwarzanie konkretnej instrukcji oznaczonej etykietą w **switch** instrukcji. Oddziały IT do końca **switch** instrukcji. Bez **break**, program przechodzi do następnej instrukcji oznaczonej etykietą, wykonując instrukcje do momentu osiągnięcia **break** lub zakończenia instrukcji. Kontynuacja może być pożądana w niektórych sytuacjach.
 
-**Domyślne** instrukcja jest wykonywana, jeśli nie **przypadek** *wyrażenie_stałe* jest równa wartości **przełącznika (**  *wyrażenie* **)**. Jeśli **domyślne** instrukcji zostanie pominięty i nie **przypadek** zostanie znalezione dopasowanie, żadna z instrukcji w `switch` treści są wykonywane. Może być co najwyżej jeden **domyślne** instrukcji. **Domyślne** deklaracja nie musi pojawić się na końcu; może występować dowolnym miejscu w treści `switch` instrukcji. A **przypadek** lub **domyślne** etykieta może wystąpić tylko wewnątrz `switch` instrukcji.
+Instrukcja **default** jest wykonywana, jeśli żadne **case** *wyrażenie stałe* nie jest równe wartości ** switch (** *wyrażenie* **)**. Jeśli nie ma żadnej **default** instrukcji i nie **case** znaleziono dopasowania, żadna z instrukcji w **switch** treści nie zostanie wykonana. Może istnieć co najwyżej jedna **default** instrukcja. **default** Instrukcja nie musi znajdować się na końcu. Może pojawić się w dowolnym miejscu w treści **switch** instrukcji. Etykieta **case** lub **default** może wystąpić tylko wewnątrz **switch** instrukcji.
 
-Typ `switch` *wyrażenie* i **przypadek** *wyrażenie_stałe* musi być typu całkowitego. Wartość każdego **przypadek** *wyrażenie_stałe* muszą być unikatowe w treści instrukcji.
+Typ **switch** *wyrażenia* i **case** *wyrażenia stałego* musi być liczbą całkowitą. Wartość każdego **case** *wyrażenia stałego* musi być unikatowa w treści instrukcji.
 
-**Przypadek** i **domyślne** etykiety `switch` treść instrukcji są istotne tylko w przypadku testu wstępnego, który określa, gdzie się rozpoczyna wykonywanie w treści instrukcji. Można zagnieździć instrukcji Switch. Wszystkie statyczne zmienne są inicjowane przed wykonaniem w każdym `switch` instrukcji.
+Etykiety **case** i **default** treści **switch** instrukcji są znaczące tylko w teście wstępnym, który określa, gdzie wykonywanie zostanie rozpoczęte w treści instrukcji. **switch** instrukcje mogą być zagnieżdżane. Wszystkie zmienne statyczne są inicjowane przed wykonaniem **switch** w instrukcjach.
 
 > [!NOTE]
-> Deklaracje może znajdować się na czele tworzących instrukcji złożonej `switch` treści, ale inicjalizacje zawarte w deklaracji nie są wykonywane. `switch` Instrukcji przekazuje sterowanie bezpośrednio do instrukcji wykonywalnej w treści, z pominięciem wierszy, które zawierają inicjalizacji.
+> Deklaracje mogą pojawić się w nagłówku złożonej instrukcji tworzącej **switch** treść, ale inicjalizacje zawarte w deklaracjach nie są wykonywane. **switch** Instrukcja przekazuje bezpośrednio formant do instrukcji wykonywalnej w treści, pomijając wiersze zawierające inicjalizacje.
 
-Poniższe przykłady ilustrują `switch` instrukcji:
+W poniższych przykładach przedstawiono **switch** instrukcje:
 
 ```C
 switch( c )
 {
     case 'A':
-        capa++;
+        capital_a++;
     case 'a':
-        lettera++;
+        letter_a++;
     default :
         total++;
 }
 ```
 
-Wszystkie trzy instrukcje `switch` treści, w tym przykładzie są wykonywane, jeśli `c` jest równa `'A'` ponieważ **podziału** przed następujący przypadek nie ma instrukcji. Wykonanie kontrola jest przekazywana do pierwszej instrukcji (`capa++;`) i jest kontynuowane w kolejności przez pozostałą część treści. Jeśli `c` jest równa `'a'`, `lettera` i `total` są zwiększane. Tylko `total` jest zwiększana, gdy `c` nie jest równa `'A'` lub `'a'`.
+Wszystkie trzy **switch** instrukcje treści w tym przykładzie są wykonywane `c` `'A'`, jeśli jest równe, ponieważ instrukcja nie **break** pojawia się przed poniższymi caseinstrukcjami. Sterowanie wykonywaniem jest przenoszone do pierwszej instrukcji`capital_a++;`() i kontynuuje w pozostałej części treści. Jeśli `c` wartość jest `'a'`równa `letter_a` i `total` jest zwiększana. Wartość `total` jest zwiększana tylko `c` wtedy, `'A'` gdy `'a'`nie jest równa lub.
 
 ```C
 switch( i )
@@ -87,29 +92,30 @@ switch( i )
 }
 ```
 
-W tym przykładzie **podziału** instrukcji, następuje po każdej instrukcji z `switch` treści. **Podziału** instrukcji wymusza wyjście z treści instrukcji po wykonaniu jednej instrukcji. Jeśli `i` jest równy -1, tylko `n` jest zwiększany. **Podziału** następującej po instrukcji `n++;` powoduje, że kontrola wykonywania do przekazania poza treści instrukcji z pominięciem pozostałe instrukcje. Podobnie jeśli `i` jest równa 0, tylko `z` jest zwiększany; Jeśli `i` jest równa 1, tylko `p` jest zwiększany. Końcowe **podziału** instrukcja nie jest to niezbędne, ponieważ kontrola przechodzi z treści na końcu instrukcji złożonej, ale jest uwzględniony w celu zachowania spójności.
+W tym przykładzie instrukcja jest **break** zgodna z każdą instrukcją w **switch** treści. **break** Instrukcja wymusza wyjście z treści instrukcji po wykonaniu jednej instrukcji. Jeśli `i` wartość jest równa-1, `n` tylko jest zwiększana. **break** Poniższa instrukcja `n++;` powoduje, że kontrola wykonywania przeszedł z treści instrukcji, pomijając pozostałe instrukcje. Podobnie, jeśli `i` wartość jest równa 0, `z` wartość jest zwiększana tylko; Jeśli `i` wartość jest równa 1, `p` tylko jest zwiększana. Instrukcja Final **break** nie jest absolutnie konieczna, ponieważ kontrolka przechodzi poza treść na końcu złożonej instrukcji. Jest on uwzględniany w celu zapewnienia spójności.
 
-Pojedynczej instrukcji może wykonywać wiele **przypadek** etykiet, jak w poniższym przykładzie pokazano:
+Pojedyncza instrukcja może zawierać wiele **case** etykiet, jak pokazano w poniższym przykładzie:
 
 ```C
-case 'a' :
-case 'b' :
-case 'c' :
-case 'd' :
-case 'e' :
-case 'f' :  hexcvt(c);
+switch( c )
+{
+    case 'a' :
+    case 'b' :
+    case 'c' :
+    case 'd' :
+    case 'e' :
+    case 'f' :  convert_hex(c);
+}
 ```
 
-W tym przykładzie Jeśli *wyrażenie_stałe* jest równa dowolnej litery między `'a'` i `'f'`, `hexcvt` funkcja jest wywoływana.
+W tym przykładzie, jeśli *wyrażenie stałe* jest równe dowolnej literze `'a'` między `'f'`i, `convert_hex` funkcja jest wywoływana.
 
-**Microsoft Specific**
+### <a name="microsoft-specific"></a>specyficzne dla firmy Microsoft
 
-Microsoft C nie ogranicza liczby przypadków wartości w `switch` instrukcji. Liczba jest ograniczona jedynie ilością dostępnej pamięci. ANSI C wymaga co najmniej 257 etykiet wielkości liter jest dozwolone w `switch` instrukcji.
+Microsoft C nie ogranicza liczby case wartości w **switch** instrukcji. Liczba jest ograniczona tylko przez dostępną pamięć. ANSI C wymaga co najmniej 257 case etykiet w **switch** instrukcji.
 
-Wartość domyślna Microsoft C to, że są włączone rozszerzenia Microsoft. Aby wyłączyć te rozszerzenia, należy użyć /Za — opcja kompilatora.
-
-**END specyficzny dla Microsoft**
+W default przypadku oprogramowania Microsoft C są włączone rozszerzenia Microsoft. Aby wyłączyć te rozszerzenia, użyj opcji kompilatora [/za](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="see-also"></a>Zobacz także
 
-[switch, instrukcja (C++)](../cpp/switch-statement-cpp.md)
+[switchInstrukcja (C++)](../cpp/switch-statement-cpp.md)

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - _ATL_COM_MODULE70 structure
 - ATL_COM_MODULE70 structure
 ms.assetid: 5b0b2fd0-bdeb-4c7e-8870-78fa69ace6e6
-ms.openlocfilehash: c6361fc5374ed732cd9ccbfbbd1d3d1c2fc8f1f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2e9e3d6695a7fbbcc87c489edf2e96fcdffb835
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261042"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168634"
 ---
-# <a name="atlcommodule70-structure"></a>Struktura _ATL_COM_MODULE70
+# <a name="_atl_com_module70-structure"></a>Struktura _ATL_COM_MODULE70
 
-Używane przez kod związane z modelu COM w ATL.
+Używany przez kod związany z modelem COM w ATL.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 struct _ATL_COM_MODULE70 {
     UINT cbSize;
     HINSTANCE m_hInstTypeLib;
@@ -35,19 +35,19 @@ struct _ATL_COM_MODULE70 {
 ## <a name="members"></a>Elementy członkowskie
 
 `cbSize`<br/>
-Rozmiar struktury, używane do obsługi wersji.
+Rozmiar struktury używany do przechowywania wersji.
 
 `m_hInstTypeLib`<br/>
-Wystąpienie uchwyt do biblioteki typów dla tego modułu.
+Wystąpienie uchwytu do biblioteki typów dla tego modułu.
 
 `m_ppAutoObjMapFirst`<br/>
-Adres elementu tablicy, wskazując początku wpisy mapy obiektu dla tego modułu.
+Adres elementu tablicy wskazujący początek wpisów mapowania obiektów dla tego modułu.
 
 `m_ppAutoObjMapLast`<br/>
-Adres elementu tablicy, co oznacza koniec wpisy mapy obiektu dla tego modułu.
+Adres elementu tablicy wskazujący koniec wpisów mapowania obiektów dla tego modułu.
 
 `m_csObjMap`<br/>
-Sekcję krytyczną serializować dostęp do wpisy mapy obiektu. Używane wewnętrznie przez ATL.
+Sekcja krytyczna do serializacji dostępu do wpisów mapowania obiektów. Używane wewnętrznie przez ATL.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -55,7 +55,7 @@ Sekcję krytyczną serializować dostęp do wpisy mapy obiektu. Używane wewnęt
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
 ## <a name="see-also"></a>Zobacz także
 

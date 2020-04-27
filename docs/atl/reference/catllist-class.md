@@ -37,121 +37,121 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 0e4ea8eef51431c100f5d3119d7f75e9673e276e
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 2c16713af11a915772085165ed294cba4ae337f2
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81748737"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168049"
 ---
 # <a name="catllist-class"></a>Klasa CAtlList
 
-Ta klasa zawiera metody tworzenia i zarządzania obiektem listy.
+Ta klasa udostępnia metody tworzenia obiektu listy i zarządzania nim.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template<typename E, class ETraits = CElementTraits<E>>
 class CAtlList
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*E*<br/>
+*Adres*<br/>
 Typ elementu.
 
-*ETraits ( eTraits )*<br/>
-Kod używany do kopiowania lub przenoszenia elementów. Zobacz [CElementTraits Klasy,](../../atl/reference/celementtraits-class.md) aby uzyskać więcej informacji.
+*ETraits*<br/>
+Kod używany do kopiowania lub przenoszenia elementów. Aby uzyskać więcej informacji, zobacz [Klasa CElementTraits](../../atl/reference/celementtraits-class.md) .
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne typedefs
+### <a name="public-typedefs"></a>Publiczne definicje typów
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Lista CAtl::INARGTYPE](#inargtype)||
+|[CAtlList::INARGTYPE](#inargtype)||
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Lista CAtlList::CAtlList](#catllist)|Konstruktor.|
-|[Lista CAtlList::~CAtlList](#dtor)|Destruktor.|
+|[CAtlList::CAtlList](#catllist)|Konstruktor.|
+|[CAtlList:: ~ CAtlList](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Lista CAtl::Głowica dodania](#addhead)|Wywołanie tej metody, aby dodać element do głowy listy.|
-|[Lista CAtlList::Dodaj listę nagłówków](#addheadlist)|Wywołanie tej metody, aby dodać istniejącą listę do szefa listy.|
-|[Lista CAtl::Dodajtail](#addtail)|Wywołanie tej metody, aby dodać element do ogona tej listy.|
-|[Lista CAtlList::DodajtailList](#addtaillist)|Wywołanie tej metody, aby dodać istniejącą listę do ogona tej listy.|
-|[Lista CAtl::AssertValid](#assertvalid)|Wywołanie tej metody, aby potwierdzić, że lista jest prawidłowa.|
-|[Lista CAtl::Znajdź](#find)|Wywołanie tej metody, aby wyszukać listę dla określonego elementu.|
-|[Lista CAtlList::FindIndex](#findindex)|Wywołanie tej metody, aby uzyskać położenie elementu, biorąc pod uwagę wartość indeksu.|
-|[Lista CAtl::GetAt](#getat)|Wywołanie tej metody, aby zwrócić element w określonej pozycji na liście.|
-|[Lista CAtlList::GetCount](#getcount)|Wywołanie tej metody, aby zwrócić liczbę obiektów na liście.|
-|[Lista CAtl::GetHead](#gethead)|Wywołanie tej metody, aby zwrócić element na czele listy.|
-|[Lista CAtl::GetHeadPosition](#getheadposition)|Wywołanie tej metody, aby uzyskać pozycję szefa listy.|
-|[Lista CAtl::GetNext](#getnext)|Wywołanie tej metody, aby zwrócić następny element z listy.|
-|[Lista CAtlList::GetPrev](#getprev)|Wywołanie tej metody, aby zwrócić poprzedni element z listy.|
-|[Lista CAtl::GetTail](#gettail)|Wywołanie tej metody, aby zwrócić element w ogonie listy.|
-|[Lista CAtl::GetTailPosition](#gettailposition)|Wywołanie tej metody, aby uzyskać położenie ogona listy.|
-|[Lista CAtl::WstawianiePo](#insertafter)|Wywołanie tej metody, aby wstawić nowy element do listy po określonej pozycji.|
-|[Lista CAtlList::InsertBefore](#insertbefore)|Wywołanie tej metody, aby wstawić nowy element do listy przed określonym pozycją.|
-|[Lista CAtlList::IsEmpty](#isempty)|Wywołanie tej metody, aby ustalić, czy lista jest pusta.|
-|[Lista CAtlList::MoveToHead](#movetohead)|Wywołanie tej metody, aby przenieść określony element do głowy listy.|
-|[Lista CAtlList::MoveToTail](#movetotail)|Wywołanie tej metody, aby przenieść określony element do ogona listy.|
-|[Lista CAtl::Usuńwszywszystki](#removeall)|Wywołanie tej metody, aby usunąć wszystkie elementy z listy.|
-|[Lista CAtl::Usuń](#removeat)|Wywołanie tej metody, aby usunąć pojedynczy element z listy.|
-|[Lista CAtl::Usuńgłowy](#removehead)|Wywołanie tej metody, aby usunąć element na czele listy.|
-|[Lista CAtlList::RemoveHeadNoReturn](#removeheadnoreturn)|Wywołanie tej metody, aby usunąć element na czele listy bez zwracania wartości.|
-|[Lista CAtl::Usuńtail](#removetail)|Wywołanie tej metody, aby usunąć element w ogonie listy.|
-|[Lista CAtlList::RemoveTailNoReturn](#removetailnoreturn)|Wywołanie tej metody, aby usunąć element w ogonie listy bez zwracania wartości.|
-|[Lista CAtl::SetAt](#setat)|Wywołanie tej metody, aby ustawić wartość elementu w danej pozycji na liście.|
-|[Lista CAtlList::SwapElements](#swapelements)|Wywołanie tej metody, aby zamienić elementy na liście.|
+|[CAtlList:: addszef](#addhead)|Wywołaj tę metodę, aby dodać element do nagłówka listy.|
+|[CAtlList::AddHeadList](#addheadlist)|Wywołaj tę metodę, aby dodać istniejącą listę do nagłówka listy.|
+|[CAtlList:: AddTail](#addtail)|Wywołaj tę metodę, aby dodać element do ogona tej listy.|
+|[CAtlList::AddTailList](#addtaillist)|Wywołaj tę metodę, aby dodać istniejącą listę do ogona tej listy.|
+|[CAtlList::AssertValid](#assertvalid)|Wywołaj tę metodę, aby potwierdzić, że lista jest prawidłowa.|
+|[CAtlList:: find](#find)|Wywołaj tę metodę, aby przeszukać listę dla określonego elementu.|
+|[CAtlList:: FindIndex —](#findindex)|Wywołaj tę metodę, aby uzyskać położenie elementu, uwzględniając wartość indeksu.|
+|[CAtlList::GetAt](#getat)|Wywołaj tę metodę, aby zwrócić element w określonej pozycji na liście.|
+|[CAtlList:: GetCount](#getcount)|Wywołaj tę metodę, aby zwrócić liczbę obiektów na liście.|
+|[CAtlList:: getszef](#gethead)|Wywołaj tę metodę, aby zwrócić element na początku listy.|
+|[CAtlList::GetHeadPosition](#getheadposition)|Wywołaj tę metodę, aby uzyskać pozycję nagłówka listy.|
+|[CAtlList:: GetNext](#getnext)|Wywołaj tę metodę, aby zwrócić następny element z listy.|
+|[CAtlList:: getpoprz](#getprev)|Wywołaj tę metodę, aby zwrócić poprzedni element z listy.|
+|[CAtlList:: GetTail](#gettail)|Wywołaj tę metodę, aby zwrócić element na końcu listy.|
+|[CAtlList::GetTailPosition](#gettailposition)|Wywołaj tę metodę, aby uzyskać położenie ogona listy.|
+|[CAtlList::InsertAfter](#insertafter)|Wywołaj tę metodę, aby wstawić nowy element do listy po określonej pozycji.|
+|[CAtlList::InsertBefore](#insertbefore)|Wywołaj tę metodę, aby wstawić nowy element do listy przed określoną pozycją.|
+|[CAtlList:: IsEmpty](#isempty)|Wywołaj tę metodę, aby określić, czy lista jest pusta.|
+|[CAtlList::MoveToHead](#movetohead)|Wywołaj tę metodę, aby przenieść określony element do nagłówka listy.|
+|[CAtlList::MoveToTail](#movetotail)|Wywołaj tę metodę, aby przenieść określony element do ogona listy.|
+|[CAtlList::](#removeall)|Wywołaj tę metodę, aby usunąć wszystkie elementy z listy.|
+|[CAtlList::RemoveAt](#removeat)|Wywołaj tę metodę, aby usunąć pojedynczy element z listy.|
+|[CAtlList::RemoveHead](#removehead)|Wywołaj tę metodę, aby usunąć element znajdujący się na końcu listy.|
+|[CAtlList::RemoveHeadNoReturn](#removeheadnoreturn)|Wywołaj tę metodę, aby usunąć element z nagłówka listy bez zwracania wartości.|
+|[CAtlList::RemoveTail](#removetail)|Wywołaj tę metodę, aby usunąć element na końcu listy.|
+|[CAtlList::RemoveTailNoReturn](#removetailnoreturn)|Wywołaj tę metodę, aby usunąć element na końcu listy bez zwracania wartości.|
+|[CAtlList::SetAt](#setat)|Wywołaj tę metodę, aby ustawić wartość elementu w danej pozycji na liście.|
+|[CAtlList::SwapElements](#swapelements)|Wywołaj tę metodę, aby zamienić elementy na liście.|
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa `CAtlList` obsługuje uporządkowane listy obiektów nieunikalnych dostępnych sekwencyjnie lub według wartości. `CAtlList`listy zachowują się jak listy podwójnie połączone. Każda lista ma głowę i ogon, a nowe elementy (lub listy w niektórych przypadkach) można dodać do końca listy lub wstawić przed lub po określonych elementach.
+`CAtlList` Klasa obsługuje uporządkowane listy nieunikatowych obiektów dostępnych sekwencyjnie lub według wartości. `CAtlList`listy zachowują się jak listy połączone podwójnie. Każda lista ma nagłówek i ogon, a nowe elementy (lub listy w niektórych przypadkach) można dodać do dowolnego końca listy lub wstawić przed lub po określonych elementach.
 
-Większość `CAtlList` metod korzysta z wartości pozycji. Ta wartość jest używana przez metody do odwoływania się do rzeczywistej lokalizacji pamięci, w której elementy są przechowywane i nie powinny być obliczane ani przewidywane bezpośrednio. Jeśli jest to konieczne, aby uzyskać dostęp do *n*th element na liście, metoda [CAtlList::FindIndex](#findindex) zwróci odpowiednią wartość pozycji dla danego indeksu. Metody [CAtlList::GetNext](#getnext) i [CAtlList::GetPrev](#getprev) może służyć do iteracji za pośrednictwem obiektów na liście.
+Większość `CAtlList` metod używa wartości pozycji. Ta wartość jest używana przez metody do odwoływania się do rzeczywistej lokalizacji pamięci, w której są przechowywane elementy, i nie powinna być obliczana ani przewidywalna bezpośrednio. Jeśli konieczne jest uzyskanie dostępu do *n*-tego elementu na liście, Metoda [CAtlList:: FindIndex —](#findindex) zwróci odpowiadającą wartość pozycji dla danego indeksu. Metody [CAtlList:: GetNext](#getnext) i [CAtlList:: getpoprz](#getprev) mogą służyć do iteracji obiektów na liście.
 
-Aby uzyskać więcej informacji na temat klas kolekcji dostępnych w atl, zobacz [ATL Collection Classes](../../atl/atl-collection-classes.md).
+Aby uzyskać więcej informacji na temat klas kolekcji dostępnych w przypadku biblioteki ATL, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcoll.h
+**Nagłówek:** atlcoll. h
 
-## <a name="catllistaddhead"></a><a name="addhead"></a>Lista CAtl::Głowica dodania
+## <a name="catllistaddhead"></a><a name="addhead"></a>CAtlList:: addszef
 
-Wywołanie tej metody, aby dodać element do głowy listy.
+Wywołaj tę metodę, aby dodać element do nagłówka listy.
 
-```
+```cpp
 POSITION AddHead();
 POSITION AddHead(INARGTYPE element);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Element*<br/>
+*postaci*<br/>
 Nowy element.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca położenie nowo dodanego elementu.
+Zwraca pozycję nowo dodanego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli używana jest pierwsza wersja, pusty element jest tworzony przy użyciu jego domyślnego konstruktora, a nie jego konstruktora kopii.
+Jeśli używana jest pierwsza wersja, pusty element jest tworzony przy użyciu jego konstruktora domyślnego, a nie jego konstruktora kopiującego.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#13](../../atl/codesnippet/cpp/catllist-class_1.cpp)]
 
-## <a name="catllistaddheadlist"></a><a name="addheadlist"></a>Lista CAtlList::Dodaj listę nagłówków
+## <a name="catllistaddheadlist"></a><a name="addheadlist"></a>CAtlList::AddHeadList
 
-Wywołanie tej metody, aby dodać istniejącą listę do szefa listy.
+Wywołaj tę metodę, aby dodać istniejącą listę do nagłówka listy.
 
 ```cpp
 void AddHeadList(const CAtlList<E, ETraits>* plNew);
@@ -159,46 +159,46 @@ void AddHeadList(const CAtlList<E, ETraits>* plNew);
 
 ### <a name="parameters"></a>Parametry
 
-*plNowy*<br/>
+*plNew*<br/>
 Lista, która ma zostać dodana.
 
 ### <a name="remarks"></a>Uwagi
 
-Lista wskazana przez *plNew* jest wstawiana na początku istniejącej listy. W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli *plNew* jest równa NULL.
+Lista wskazywana przez *plNew* jest wstawiana na początku istniejącej listy. W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli *plNew* jest równa null.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#14](../../atl/codesnippet/cpp/catllist-class_2.cpp)]
 
-## <a name="catllistaddtail"></a><a name="addtail"></a>Lista CAtl::Dodajtail
+## <a name="catllistaddtail"></a><a name="addtail"></a>CAtlList:: AddTail
 
-Wywołanie tej metody, aby dodać element do ogona tej listy.
+Wywołaj tę metodę, aby dodać element do ogona tej listy.
 
-```
+```cpp
 POSITION AddTail();
 POSITION AddTail(INARGTYPE element);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Element*<br/>
-Element do dodania.
+*postaci*<br/>
+Element, który ma zostać dodany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca położenie nowo dodanego elementu.
+Zwraca pozycję nowo dodanego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli używana jest pierwsza wersja, pusty element jest tworzony przy użyciu jego domyślnego konstruktora, a nie jego konstruktora kopii. Element jest dodawany na końcu listy, a więc teraz staje się ogonem. Ta metoda może być używana z pustą listą.
+Jeśli używana jest pierwsza wersja, pusty element jest tworzony przy użyciu jego konstruktora domyślnego, a nie jego konstruktora kopiującego. Element jest dodawany na końcu listy i dlatego teraz jest ogonem. Ta metoda może być używana z pustą listą.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#15](../../atl/codesnippet/cpp/catllist-class_3.cpp)]
 
-## <a name="catllistaddtaillist"></a><a name="addtaillist"></a>Lista CAtlList::DodajtailList
+## <a name="catllistaddtaillist"></a><a name="addtaillist"></a>CAtlList::AddTailList
 
-Wywołanie tej metody, aby dodać istniejącą listę do ogona tej listy.
+Wywołaj tę metodę, aby dodać istniejącą listę do ogona tej listy.
 
 ```cpp
 void AddTailList(const CAtlList<E, ETraits>* plNew);
@@ -206,20 +206,20 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 
 ### <a name="parameters"></a>Parametry
 
-*plNowy*<br/>
+*plNew*<br/>
 Lista, która ma zostać dodana.
 
 ### <a name="remarks"></a>Uwagi
 
-Lista wskazywany przez *plNew* jest wstawiana po ostatnim elemencie (jeśli istnieje) w obiekcie listy. Ostatnim elementem na *plNowy* lista staje się zatem ogon. W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli *plNew* jest równa NULL.
+Lista wskazywana przez *plNew* jest wstawiana po ostatnim elemencie (jeśli istnieje) w obiekcie list. W związku z tym ostatni element na liście *plNew* zmienia się na ogon. W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli *plNew* jest równa null.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#16](../../atl/codesnippet/cpp/catllist-class_4.cpp)]
 
-## <a name="catllistassertvalid"></a><a name="assertvalid"></a>Lista CAtl::AssertValid
+## <a name="catllistassertvalid"></a><a name="assertvalid"></a>CAtlList::AssertValid
 
-Wywołanie tej metody, aby potwierdzić, że lista jest prawidłowa.
+Wywołaj tę metodę, aby potwierdzić, że lista jest prawidłowa.
 
 ```cpp
 void AssertValid() const;
@@ -227,137 +227,137 @@ void AssertValid() const;
 
 ### <a name="remarks"></a>Uwagi
 
-W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli obiekt listy jest nieprawidłowy. Aby była prawidłowa, pusta lista musi mieć zarówno głowę, jak i ogon wskazujący wartość NULL, a lista, która nie jest pusta, musi mieć zarówno głowę, jak i ogon wskazujący prawidłowe adresy.
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli obiekt listy jest nieprawidłowy. Aby można było korzystać z pustej listy, musi zawierać zarówno nagłówek, jak i zakończenie wskazujące wartość NULL, a lista, która nie jest pusta, musi mieć zarówno nagłówek, jak i ogon wskazujący prawidłowe adresy.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#17](../../atl/codesnippet/cpp/catllist-class_5.cpp)]
 
-## <a name="catllistcatllist"></a><a name="catllist"></a>Lista CAtlList::CAtlList
+## <a name="catllistcatllist"></a><a name="catllist"></a>CAtlList::CAtlList
 
 Konstruktor.
 
-```
+```cpp
 CAtlList(UINT nBlockSize = 10) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nBlockSize (Rozmiar)*<br/>
+*nBlockSize*<br/>
 Rozmiar bloku.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor `CAtlList` dla obiektu. Rozmiar bloku jest miarą ilości pamięci przydzielonej, gdy wymagany jest nowy element. Większe rozmiary bloków zmniejszają liczbę wywołań procedur alokacji pamięci, ale zużywają więcej zasobów.
+Konstruktor dla `CAtlList` obiektu. Rozmiar bloku jest miarą ilości pamięci przydzieloną, gdy wymagany jest nowy element. Większe rozmiary bloków redukują wywołania procedur alokacji pamięci, ale wykorzystują więcej zasobów.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#18](../../atl/codesnippet/cpp/catllist-class_6.cpp)]
 
-## <a name="catllistcatllist"></a><a name="dtor"></a>Lista CAtlList::~CAtlList
+## <a name="catllistcatllist"></a><a name="dtor"></a>CAtlList:: ~ CAtlList
 
 Destruktor.
 
-```
+```cpp
 ~CAtlList() throw();
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia wszystkie przydzielone zasoby, w tym wywołanie [CAtlList::RemoveAll,](#removeall) aby usunąć wszystkie elementy z listy.
+Zwalnia wszystkie przydzieloną zasoby, w tym wywołanie [CAtlList::](#removeall) Usuń wszystkie elementy z listy.
 
-W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli lista nadal `RemoveAll`zawiera pewne elementy po wywołaniu .
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli lista nadal zawiera pewne elementy po wywołaniu `RemoveAll`.
 
-## <a name="catllistfind"></a><a name="find"></a>Lista CAtl::Znajdź
+## <a name="catllistfind"></a><a name="find"></a>CAtlList:: find
 
-Wywołanie tej metody, aby wyszukać listę dla określonego elementu.
+Wywołaj tę metodę, aby przeszukać listę dla określonego elementu.
 
-```
+```cpp
 POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Element*<br/>
-Element, który należy znaleźć na liście.
+*postaci*<br/>
+Element, który ma znajdować się na liście.
 
-*posStartPo*<br/>
-Pozycja początkowa wyszukiwania. Jeśli nie określono żadnej wartości, wyszukiwanie rozpoczyna się od elementu head.
+*posStartAfter*<br/>
+Pozycja początkowa dla wyszukiwania. Jeśli wartość nie jest określona, wyszukiwanie rozpoczyna się od elementu głównego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość POSITION elementu, jeśli zostanie znaleziony, w przeciwnym razie zwraca wartość NULL.
+Zwraca wartość pozycji elementu, jeśli zostanie znaleziona. w przeciwnym razie zwraca wartość NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli obiekt listy jest nieprawidłowy lub jeśli wartość *posStartAfter* jest poza zakresem.
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli obiekt listy jest nieprawidłowy lub wartość *posStartAfter* jest poza zakresem.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#19](../../atl/codesnippet/cpp/catllist-class_7.cpp)]
 
-## <a name="catllistfindindex"></a><a name="findindex"></a>Lista CAtlList::FindIndex
+## <a name="catllistfindindex"></a><a name="findindex"></a>CAtlList:: FindIndex —
 
-Wywołanie tej metody, aby uzyskać położenie elementu, biorąc pod uwagę wartość indeksu.
+Wywołaj tę metodę, aby uzyskać położenie elementu, uwzględniając wartość indeksu.
 
-```
+```cpp
 POSITION FindIndex(size_t iElement) const throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Ielement*<br/>
-Indeks od zera elementu listy wymaganej.
+*iElement*<br/>
+Indeks (liczony od zera) wymaganego elementu listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odpowiednią wartość POSITION lub WARTOŚĆ NULL, jeśli *funkcja iElement* jest poza zakresem.
+Zwraca odpowiadającą wartość pozycji lub wartość NULL, jeśli *IElement* jest poza zakresem.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zwraca position odpowiadające danej wartości indeksu, umożliwiając dostęp do *n*th element na liście.
+Ta metoda zwraca pozycję odpowiadającą danej wartości indeksu, umożliwiając dostęp do *n*-tego elementu na liście.
 
-W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli obiekt listy jest nieprawidłowy.
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli obiekt listy jest nieprawidłowy.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#20](../../atl/codesnippet/cpp/catllist-class_8.cpp)]
 
-## <a name="catllistgetat"></a><a name="getat"></a>Lista CAtl::GetAt
+## <a name="catllistgetat"></a><a name="getat"></a>CAtlList::GetAt
 
-Wywołanie tej metody, aby zwrócić element w określonej pozycji na liście.
+Wywołaj tę metodę, aby zwrócić element w określonej pozycji na liście.
 
-```
+```cpp
 E& GetAt(POSITION pos) throw();
 const E& GetAt(POSITION pos) const throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Poz*<br/>
-Wartość POSITION określająca określony element.
+*Terminal*<br/>
+Wartość pozycji określająca konkretny element.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie lub kopia elementu.
+Odwołanie do elementu lub jego kopię.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli lista jest **const**, `GetAt` zwraca kopię elementu. Dzięki temu metoda ma być używana tylko po prawej stronie instrukcji przypisania i chroni listę przed modyfikacją.
+Jeśli lista jest **stałą**, `GetAt` zwraca kopię elementu. Pozwala to na użycie metody tylko po prawej stronie instrukcji przypisania i ochronę listy przed modyfikacją.
 
-Jeśli lista nie jest `GetAt` **const**, zwraca odwołanie do elementu. Dzięki temu metoda ma być używana po obu stronach instrukcji przypisania, a tym samym umożliwia modyfikowanie wpisów listy.
+Jeśli lista nie jest **stałą**, `GetAt` zwraca odwołanie do elementu. Pozwala to na użycie metody po obu stronach instrukcji przypisania i w ten sposób pozwala na modyfikowanie wpisów listy.
 
-W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli *pos* jest równa NULL.
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli wartość *pos* będzie równa null.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [CAtlList::FindIndex](#findindex).
+Zobacz przykład dla [CAtlList:: FindIndex —](#findindex).
 
-## <a name="catllistgetcount"></a><a name="getcount"></a>Lista CAtlList::GetCount
+## <a name="catllistgetcount"></a><a name="getcount"></a>CAtlList:: GetCount
 
-Wywołanie tej metody, aby zwrócić liczbę obiektów na liście.
+Wywołaj tę metodę, aby zwrócić liczbę obiektów na liście.
 
-```
+```cpp
 size_t GetCount() const throw();
 ```
 
@@ -367,223 +367,223 @@ Zwraca liczbę elementów na liście.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [CAtlList::Find](#find).
+Zobacz przykład dla [CAtlList:: find](#find).
 
-## <a name="catllistgethead"></a><a name="gethead"></a>Lista CAtl::GetHead
+## <a name="catllistgethead"></a><a name="gethead"></a>CAtlList:: getszef
 
-Wywołanie tej metody, aby zwrócić element na czele listy.
+Wywołaj tę metodę, aby zwrócić element na początku listy.
 
-```
+```cpp
 E& GetHead() throw();
 const E& GetHead() const throw();
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwołanie do elementu na czele listy lub jego kopię.
+Zwraca odwołanie do lub kopię elementu na początku listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli lista jest **const**, `GetHead` zwraca kopię elementu na czele listy. Dzięki temu metoda ma być używana tylko po prawej stronie instrukcji przypisania i chroni listę przed modyfikacją.
+Jeśli lista jest **stałą**, `GetHead` zwraca kopię elementu na początku listy. Pozwala to na użycie metody tylko po prawej stronie instrukcji przypisania i ochronę listy przed modyfikacją.
 
-Jeśli lista nie jest `GetHead` **const**, zwraca odwołanie do elementu na czele listy. Dzięki temu metoda ma być używana po obu stronach instrukcji przypisania, a tym samym umożliwia modyfikowanie wpisów listy.
+Jeśli lista nie jest **stałą**, `GetHead` zwraca odwołanie do elementu znajdującego się na końcu listy. Pozwala to na użycie metody po obu stronach instrukcji przypisania i w ten sposób pozwala na modyfikowanie wpisów listy.
 
-W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli szef listy wskazuje wartość NULL.
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli nagłówek listy wskazuje wartość NULL.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [CAtlList::AddHead](#addhead).
+Zobacz przykład dla [CAtlList:: addszef](#addhead).
 
-## <a name="catllistgetheadposition"></a><a name="getheadposition"></a>Lista CAtl::GetHeadPosition
+## <a name="catllistgetheadposition"></a><a name="getheadposition"></a>CAtlList::GetHeadPosition
 
-Wywołanie tej metody, aby uzyskać pozycję szefa listy.
+Wywołaj tę metodę, aby uzyskać pozycję nagłówka listy.
 
-```
+```cpp
 POSITION GetHeadPosition() const throw();
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość POSITION odpowiadającą elementowi na czele listy.
+Zwraca wartość pozycji odpowiadającą elementowi w nagłówku listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli lista jest pusta, zwracaną wartością jest NULL.
+Jeśli lista jest pusta, zwrócona wartość jest RÓWNa NULL.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#21](../../atl/codesnippet/cpp/catllist-class_9.cpp)]
 
-## <a name="catllistgetnext"></a><a name="getnext"></a>Lista CAtl::GetNext
+## <a name="catllistgetnext"></a><a name="getnext"></a>CAtlList:: GetNext
 
-Wywołanie tej metody, aby zwrócić następny element z listy.
+Wywołaj tę metodę, aby zwrócić następny element z listy.
 
-```
+```cpp
 E& GetNext(POSITION& pos) throw();
 const E& GetNext(POSITION& pos) const throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Poz*<br/>
-Wartość POSITION, zwrócona przez `GetNext`poprzednie wywołanie do , [CAtlList::GetHeadPosition](#getheadposition), lub innej `CAtlList` metody.
+*Terminal*<br/>
+Wartość pozycji zwrócona przez poprzednie wywołanie do `GetNext`, [CAtlList:: GetHeadPosition](#getheadposition)lub inną `CAtlList` metodę.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli lista jest **const**, `GetNext` zwraca kopię następnego elementu listy. Dzięki temu metoda ma być używana tylko po prawej stronie instrukcji przypisania i chroni listę przed modyfikacją.
+Jeśli lista jest **stałą**, `GetNext` zwraca kopię następnego elementu listy. Pozwala to na użycie metody tylko po prawej stronie instrukcji przypisania i ochronę listy przed modyfikacją.
 
-Jeśli lista nie jest `GetNext` **const**, zwraca odwołanie do następnego elementu listy. Dzięki temu metoda ma być używana po obu stronach instrukcji przypisania, a tym samym umożliwia modyfikowanie wpisów listy.
+Jeśli lista nie jest **stałą**, `GetNext` zwraca odwołanie do następnego elementu listy. Pozwala to na użycie metody po obu stronach instrukcji przypisania i w ten sposób pozwala na modyfikowanie wpisów listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Licznik POSITION, *poz*, jest aktualizowany w celu wskazanie następnego elementu na liście lub NULL, jeśli nie ma więcej elementów. W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli *pos* jest równa NULL.
+Licznik pozycji, *pos*został zaktualizowany tak, aby wskazywał następny element na liście, lub wartość null, jeśli nie ma więcej elementów. W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli wartość *pos* będzie równa null.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [CAtlList::GetHeadPosition](#getheadposition).
+Zobacz przykład dla [CAtlList:: GetHeadPosition](#getheadposition).
 
-## <a name="catllistgetprev"></a><a name="getprev"></a>Lista CAtlList::GetPrev
+## <a name="catllistgetprev"></a><a name="getprev"></a>CAtlList:: getpoprz
 
-Wywołanie tej metody, aby zwrócić poprzedni element z listy.
+Wywołaj tę metodę, aby zwrócić poprzedni element z listy.
 
-```
+```cpp
 E& GetPrev(POSITION& pos) throw();
 const E& GetPrev(POSITION& pos) const throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Poz*<br/>
-Wartość POSITION, zwrócona przez `GetPrev`poprzednie wywołanie do , [CAtlList::GetTailPosition](#gettailposition), lub innej `CAtlList` metody.
+*Terminal*<br/>
+Wartość pozycji zwrócona przez poprzednie wywołanie do `GetPrev`, [CAtlList:: GetTailPosition](#gettailposition)lub inną `CAtlList` metodę.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli lista jest **const**, `GetPrev` zwraca kopię elementu listy. Dzięki temu metoda ma być używana tylko po prawej stronie instrukcji przypisania i chroni listę przed modyfikacją.
+Jeśli lista jest **stałą**, `GetPrev` zwraca kopię elementu listy. Pozwala to na użycie metody tylko po prawej stronie instrukcji przypisania i ochronę listy przed modyfikacją.
 
-Jeśli lista nie jest `GetPrev` **const**, zwraca odwołanie do elementu listy. Dzięki temu metoda ma być używana po obu stronach instrukcji przypisania, a tym samym umożliwia modyfikowanie wpisów listy.
+Jeśli lista nie jest **stałą**, `GetPrev` zwraca odwołanie do elementu listy. Pozwala to na użycie metody po obu stronach instrukcji przypisania i w ten sposób pozwala na modyfikowanie wpisów listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Licznik POSITION, *poz*, jest aktualizowany w celu wskazanie poprzedniego elementu na liście lub NULL, jeśli nie ma więcej elementów. W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli *pos* jest równa NULL.
+Licznik pozycji, *pos*został zaktualizowany tak, aby wskazywał poprzedni element na liście, lub wartość null, jeśli nie ma więcej elementów. W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli wartość *pos* będzie równa null.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [CAtlList::GetTailPosition](#gettailposition).
+Zobacz przykład dla [CAtlList:: GetTailPosition](#gettailposition).
 
-## <a name="catllistgettail"></a><a name="gettail"></a>Lista CAtl::GetTail
+## <a name="catllistgettail"></a><a name="gettail"></a>CAtlList:: GetTail
 
-Wywołanie tej metody, aby zwrócić element w ogonie listy.
+Wywołaj tę metodę, aby zwrócić element na końcu listy.
 
-```
+```cpp
 E& GetTail() throw();
 const E& GetTail() const throw();
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwołanie do elementu lub kopię elementu na ogonie listy.
+Zwraca odwołanie do lub kopię elementu na końcu listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli lista jest **const**, `GetTail` zwraca kopię elementu na czele listy. Dzięki temu metoda ma być używana tylko po prawej stronie instrukcji przypisania i chroni listę przed modyfikacją.
+Jeśli lista jest **stałą**, `GetTail` zwraca kopię elementu na początku listy. Pozwala to na użycie metody tylko po prawej stronie instrukcji przypisania i ochronę listy przed modyfikacją.
 
-Jeśli lista nie jest `GetTail` **const**, zwraca odwołanie do elementu na czele listy. Dzięki temu metoda ma być używana po obu stronach instrukcji przypisania, a tym samym umożliwia modyfikowanie wpisów listy.
+Jeśli lista nie jest **stałą**, `GetTail` zwraca odwołanie do elementu znajdującego się na końcu listy. Pozwala to na użycie metody po obu stronach instrukcji przypisania i w ten sposób pozwala na modyfikowanie wpisów listy.
 
-W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli ogon listy wskazuje wartość NULL.
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli ogon listy wskazuje wartość NULL.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [CAtlList::AddTail](#addtail).
+Zobacz przykład dla [CAtlList:: AddTail](#addtail).
 
-## <a name="catllistgettailposition"></a><a name="gettailposition"></a>Lista CAtl::GetTailPosition
+## <a name="catllistgettailposition"></a><a name="gettailposition"></a>CAtlList::GetTailPosition
 
-Wywołanie tej metody, aby uzyskać położenie ogona listy.
+Wywołaj tę metodę, aby uzyskać położenie ogona listy.
 
-```
+```cpp
 POSITION GetTailPosition() const throw();
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość POSITION odpowiadającą elementowi w ogonie listy.
+Zwraca wartość pozycji odpowiadającą elementowi na końcu listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli lista jest pusta, zwracaną wartością jest NULL.
+Jeśli lista jest pusta, zwrócona wartość jest RÓWNa NULL.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#22](../../atl/codesnippet/cpp/catllist-class_10.cpp)]
 
-## <a name="catllistinargtype"></a><a name="inargtype"></a>Lista CAtl::INARGTYPE
+## <a name="catllistinargtype"></a><a name="inargtype"></a>CAtlList::INARGTYPE
 
-Typ używany, gdy element jest przekazywany jako argument wejściowy.
+Typ używany, gdy element jest przenoszona jako argument wejściowy.
 
-```
+```cpp
 typedef ETraits::INARGTYPE INARGTYPE;
 ```
 
-## <a name="catllistinsertafter"></a><a name="insertafter"></a>Lista CAtl::WstawianiePo
+## <a name="catllistinsertafter"></a><a name="insertafter"></a>CAtlList::InsertAfter
 
-Wywołanie tej metody, aby wstawić nowy element do listy po określonej pozycji.
+Wywołaj tę metodę, aby wstawić nowy element do listy po określonej pozycji.
 
-```
+```cpp
 POSITION InsertAfter(POSITION pos, INARGTYPE element);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Poz*<br/>
-Wartość POSITION, po której zostanie wstawiony nowy element.
+*Terminal*<br/>
+Wartość pozycji, po której zostanie wstawiony nowy element.
 
-*Element*<br/>
+*postaci*<br/>
 Element, który ma zostać wstawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość POSITION nowego elementu.
+Zwraca wartość pozycji nowego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli lista nie jest prawidłowa, jeśli wstawianie nie powiedzie się lub jeśli zostanie podjęta próba wstawienia elementu po ogonie.
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli lista jest nieprawidłowa, jeśli nie powiedzie się, lub jeśli podjęto próbę wstawienia elementu po stronie ogonowej.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#23](../../atl/codesnippet/cpp/catllist-class_11.cpp)]
 
-## <a name="catllistinsertbefore"></a><a name="insertbefore"></a>Lista CAtlList::InsertBefore
+## <a name="catllistinsertbefore"></a><a name="insertbefore"></a>CAtlList::InsertBefore
 
-Wywołanie tej metody, aby wstawić nowy element do listy przed określonym pozycją.
+Wywołaj tę metodę, aby wstawić nowy element do listy przed określoną pozycją.
 
-```
+```cpp
 POSITION InsertBefore(POSITION pos, INARGTYPE element);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Poz*<br/>
-Nowy element zostanie wstawiony do listy przed tą wartością POSITION.
+*Terminal*<br/>
+Nowy element zostanie wstawiony do listy przed tą wartością pozycji.
 
-*Element*<br/>
+*postaci*<br/>
 Element, który ma zostać wstawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość POSITION nowego elementu.
+Zwraca wartość pozycji nowego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli lista nie jest prawidłowa, jeśli wstawianie nie powiedzie się lub jeśli zostanie podjęta próba wstawienia elementu przed głową.
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli lista jest nieprawidłowa, jeśli nie powiedzie się, lub jeśli podjęto próbę wstawienia elementu przed nagłówkiem.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#24](../../atl/codesnippet/cpp/catllist-class_12.cpp)]
 
-## <a name="catllistisempty"></a><a name="isempty"></a>Lista CAtlList::IsEmpty
+## <a name="catllistisempty"></a><a name="isempty"></a>CAtlList:: IsEmpty
 
-Wywołanie tej metody, aby ustalić, czy lista jest pusta.
+Wywołaj tę metodę, aby określić, czy lista jest pusta.
 
-```
+```cpp
 bool IsEmpty() const throw();
 ```
 
@@ -595,9 +595,9 @@ Zwraca wartość true, jeśli lista nie zawiera żadnych obiektów, w przeciwnym
 
 [!code-cpp[NVC_ATL_Utilities#25](../../atl/codesnippet/cpp/catllist-class_13.cpp)]
 
-## <a name="catllistmovetohead"></a><a name="movetohead"></a>Lista CAtlList::MoveToHead
+## <a name="catllistmovetohead"></a><a name="movetohead"></a>CAtlList::MoveToHead
 
-Wywołanie tej metody, aby przenieść określony element do głowy listy.
+Wywołaj tę metodę, aby przenieść określony element do nagłówka listy.
 
 ```cpp
 void MoveToHead(POSITION pos) throw();
@@ -605,20 +605,20 @@ void MoveToHead(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Poz*<br/>
-Wartość POSITION elementu do przesunienia.
+*Terminal*<br/>
+Wartość pozycji elementu do przeniesienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Określony element jest przenoszony z bieżącej pozycji do głowy listy. W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli *pos* jest równa NULL.
+Określony element jest przenoszony z jego bieżącej pozycji do nagłówka listy. W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli wartość *pos* będzie równa null.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#26](../../atl/codesnippet/cpp/catllist-class_14.cpp)]
 
-## <a name="catllistmovetotail"></a><a name="movetotail"></a>Lista CAtlList::MoveToTail
+## <a name="catllistmovetotail"></a><a name="movetotail"></a>CAtlList::MoveToTail
 
-Wywołanie tej metody, aby przenieść określony element do ogona listy.
+Wywołaj tę metodę, aby przenieść określony element do ogona listy.
 
 ```cpp
 void MoveToTail(POSITION pos) throw();
@@ -626,20 +626,20 @@ void MoveToTail(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Poz*<br/>
-Wartość POSITION elementu do przesunienia.
+*Terminal*<br/>
+Wartość pozycji elementu do przeniesienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Określony element jest przenoszony z jego bieżącej pozycji do ogona listy. W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli *pos* jest równa NULL.
+Określony element jest przenoszony z jego bieżącej pozycji do ogona listy. W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli wartość *pos* będzie równa null.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [CAtlList::MoveToHead](#movetohead).
+Zobacz przykład dla [CAtlList:: MoveToHead](#movetohead).
 
-## <a name="catllistremoveall"></a><a name="removeall"></a>Lista CAtl::Usuńwszywszystki
+## <a name="catllistremoveall"></a><a name="removeall"></a>CAtlList::
 
-Wywołanie tej metody, aby usunąć wszystkie elementy z listy.
+Wywołaj tę metodę, aby usunąć wszystkie elementy z listy.
 
 ```cpp
 void RemoveAll() throw();
@@ -647,15 +647,15 @@ void RemoveAll() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda usuwa wszystkie elementy z listy i zwalnia przydzielonej pamięci. W kompilacjach debugowania atlassert zostanie podniesiona, jeśli wszystkie elementy nie są usuwane lub jeśli struktura listy została uszkodzona.
+Ta metoda usuwa wszystkie elementy z listy i zwalnia przydzieloną pamięć. W kompilacjach debugowania program ATLASSERT zostanie zgłoszony, jeśli wszystkie elementy nie zostaną usunięte lub jeśli struktura listy uległa uszkodzeniu.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [CAtlList::IsEmpty](#isempty).
+Zobacz przykład dla [CAtlList:: IsEmpty](#isempty).
 
-## <a name="catllistremoveat"></a><a name="removeat"></a>Lista CAtl::Usuń
+## <a name="catllistremoveat"></a><a name="removeat"></a>CAtlList::RemoveAt
 
-Wywołanie tej metody, aby usunąć pojedynczy element z listy.
+Wywołaj tę metodę, aby usunąć pojedynczy element z listy.
 
 ```cpp
 void RemoveAt(POSITION pos) throw();
@@ -663,42 +663,42 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Poz*<br/>
-Wartość POSITION elementu do usunięcia.
+*Terminal*<br/>
+Wartość pozycji elementu do usunięcia.
 
 ### <a name="remarks"></a>Uwagi
 
-Element, do którego odwołuje *się poz,* zostanie usunięty, a pamięć zostanie zwolniona. Dopuszczalne jest `RemoveAt` użycie usunięcia głowy lub ogona listy.
+Element, do którego odwołuje się system *pos* , jest usuwany, a pamięć jest zwalniana. Można go użyć `RemoveAt` do usunięcia nagłówka lub ogona listy.
 
-W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli lista jest nieprawidłowa lub jeśli usunięcie elementu powoduje, że lista ma dostęp do pamięci, która nie jest częścią struktury listy.
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli lista jest nieprawidłowa lub jeśli usunięcie elementu powoduje, że lista ma dostęp do pamięci, która nie jest częścią struktury listy.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#27](../../atl/codesnippet/cpp/catllist-class_15.cpp)]
 
-## <a name="catllistremovehead"></a><a name="removehead"></a>Lista CAtl::Usuńgłowy
+## <a name="catllistremovehead"></a><a name="removehead"></a>CAtlList::RemoveHead
 
-Wywołanie tej metody, aby usunąć element na czele listy.
+Wywołaj tę metodę, aby usunąć element znajdujący się na końcu listy.
 
-```
+```cpp
 E RemoveHead();
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca element na czele listy.
+Zwraca element znajdujący się na początku listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Element head zostanie usunięty z listy, a pamięć zostanie zwolniona. Zwracana jest kopia elementu. W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli lista jest pusta.
+Element główny jest usuwany z listy, a pamięć jest zwalniana. Zostanie zwrócona kopia elementu. W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli lista jest pusta.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#28](../../atl/codesnippet/cpp/catllist-class_16.cpp)]
 
-## <a name="catllistremoveheadnoreturn"></a><a name="removeheadnoreturn"></a>Lista CAtlList::RemoveHeadNoReturn
+## <a name="catllistremoveheadnoreturn"></a><a name="removeheadnoreturn"></a>CAtlList::RemoveHeadNoReturn
 
-Wywołanie tej metody, aby usunąć element na czele listy bez zwracania wartości.
+Wywołaj tę metodę, aby usunąć element z nagłówka listy bez zwracania wartości.
 
 ```cpp
 void RemoveHeadNoReturn() throw();
@@ -706,35 +706,35 @@ void RemoveHeadNoReturn() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Element head zostanie usunięty z listy, a pamięć zostanie zwolniona. W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli lista jest pusta.
+Element główny jest usuwany z listy, a pamięć jest zwalniana. W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli lista jest pusta.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [CAtlList::IsEmpty](#isempty).
+Zobacz przykład dla [CAtlList:: IsEmpty](#isempty).
 
-## <a name="catllistremovetail"></a><a name="removetail"></a>Lista CAtl::Usuńtail
+## <a name="catllistremovetail"></a><a name="removetail"></a>CAtlList::RemoveTail
 
-Wywołanie tej metody, aby usunąć element w ogonie listy.
+Wywołaj tę metodę, aby usunąć element na końcu listy.
 
-```
+```cpp
 E RemoveTail();
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca element na ogonie listy.
+Zwraca element na końcu listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Element ogona jest usuwany z listy, a pamięć jest zwalniana. Zwracana jest kopia elementu. W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli lista jest pusta.
+Element tail zostanie usunięty z listy, a pamięć jest zwalniana. Zostanie zwrócona kopia elementu. W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli lista jest pusta.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#29](../../atl/codesnippet/cpp/catllist-class_17.cpp)]
 
-## <a name="catllistremovetailnoreturn"></a><a name="removetailnoreturn"></a>Lista CAtlList::RemoveTailNoReturn
+## <a name="catllistremovetailnoreturn"></a><a name="removetailnoreturn"></a>CAtlList::RemoveTailNoReturn
 
-Wywołanie tej metody, aby usunąć element w ogonie listy bez zwracania wartości.
+Wywołaj tę metodę, aby usunąć element na końcu listy bez zwracania wartości.
 
 ```cpp
 void RemoveTailNoReturn() throw();
@@ -742,15 +742,15 @@ void RemoveTailNoReturn() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Element ogona jest usuwany z listy, a pamięć jest zwalniana. W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli lista jest pusta.
+Element tail zostanie usunięty z listy, a pamięć jest zwalniana. W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli lista jest pusta.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [CAtlList::IsEmpty](#isempty).
+Zobacz przykład dla [CAtlList:: IsEmpty](#isempty).
 
-## <a name="catllistsetat"></a><a name="setat"></a>Lista CAtl::SetAt
+## <a name="catllistsetat"></a><a name="setat"></a>CAtlList::SetAt
 
-Wywołanie tej metody, aby ustawić wartość elementu w danej pozycji na liście.
+Wywołaj tę metodę, aby ustawić wartość elementu w danej pozycji na liście.
 
 ```cpp
 void SetAt(POSITION pos, INARGTYPE element);
@@ -758,23 +758,23 @@ void SetAt(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*Poz*<br/>
-Wartość POSITION odpowiadająca elementowi do zmiany.
+*Terminal*<br/>
+Wartość pozycji odpowiadająca elementowi do zmiany.
 
-*Element*<br/>
+*postaci*<br/>
 Wartość nowego elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastępuje istniejącą wartość *elementem*. W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli *pos* jest równa NULL.
+Zamienia istniejącą wartość na *element*. W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli wartość *pos* będzie równa null.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#30](../../atl/codesnippet/cpp/catllist-class_18.cpp)]
 
-## <a name="catllistswapelements"></a><a name="swapelements"></a>Lista CAtlList::SwapElements
+## <a name="catllistswapelements"></a><a name="swapelements"></a>CAtlList::SwapElements
 
-Wywołanie tej metody, aby zamienić elementy na liście.
+Wywołaj tę metodę, aby zamienić elementy na liście.
 
 ```cpp
 void SwapElements(POSITION pos1, POSITION pos2) throw();
@@ -782,21 +782,21 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*poz1*<br/>
-Pierwsza wartość POSITION.
+*pos1*<br/>
+Wartość pierwszej pozycji.
 
 *pos2*<br/>
-Druga wartość POSITION.
+Wartość drugiego położenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Zamienia elementy w dwóch określonych pozycjach. W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli wartość położenia jest równa null.
+Zamienia elementy na podane dwa położenia. W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli wartość pozycji jest równa NULL.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#31](../../atl/codesnippet/cpp/catllist-class_19.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CList](../../mfc/reference/clist-class.md)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)

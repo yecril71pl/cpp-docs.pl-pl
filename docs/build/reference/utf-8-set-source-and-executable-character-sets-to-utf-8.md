@@ -1,43 +1,51 @@
 ---
-title: /UTF-8 (Ustawianie źródłowych i wykonywalnych zestawów znaków na UTF-8)
-ms.date: 11/04/2016
+title: /UTF-8 (Ustaw źródłowe i wykonywalne zestawy UTF-8znaków na)
+ms.date: 04/26/2020
 f1_keywords:
 - /utf-8
 helpviewer_keywords:
 - /utf-8 compiler option
 ms.assetid: f0e1f3cb-6cae-46eb-9483-04ed13d9b504
-ms.openlocfilehash: 1ff0f23ad0758642c73b1b35d6d4dd1be20899cb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+no-loc:
+- UTF
+- UTF-8
+- UTF-16
+ms.openlocfilehash: c98a30b0ec4b36b8bd87fb0956d9382751975cfd
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498180"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168868"
 ---
-# <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/UTF-8 (Ustawianie źródłowych i wykonywalnych zestawów znaków na UTF-8)
+# <a name="utf-8-set-source-and-executable-character-sets-to-opno-locutf-8"></a>`/utf-8`(Ustaw źródłowe i wykonywalne zestawy UTF-8znaków na)
 
-Określa zestaw znaków źródła i znak wykonywania ustawiony jako UTF-8.
+Określa zestaw znaków źródła i zestaw znaków wykonania jako UTF-8.
 
 ## <a name="syntax"></a>Składnia
 
-```
-/utf-8
-```
+> **`/utf-8`**
 
 ## <a name="remarks"></a>Uwagi
 
-Można użyć opcji **/UTF-8** , aby określić zestaw znaków źródła i wykonania jako zakodowany przy użyciu kodowania UTF-8. Jest równoważne określeniu **określono element/source-charset: UTF-8/Execution-charset: UTF-8** w wierszu polecenia. Każda z tych opcji domyślnie włącza opcję **/Validate-charset** . Aby uzyskać listę obsługiwanych identyfikatorów stron kodowych i nazw zestawów znaków, zobacz [identyfikatory stron kodowych](/windows/win32/Intl/code-page-identifiers).
+Można użyć **`/utf-8`** opcji, aby określić zestaw znaków źródła i wykonania jako zakodowany przy użyciu UTF-8. Jest on równoznaczny z **`/source-charset:utf-8 /execution-charset:utf-8`** określeniem w wierszu polecenia. Każda z tych opcji również domyślnie włącza **`/validate-charset`** opcję. Aby uzyskać listę obsługiwanych identyfikatorów stron kodowych i nazw zestawów znaków, zobacz [identyfikatory stron kodowych](/windows/win32/Intl/code-page-identifiers).
 
-Domyślnie program Visual Studio wykrywa znacznik kolejności bajtów, aby określić, czy plik źródłowy jest w zakodowanym formacie Unicode, na przykład UTF-16 lub UTF-8. Jeśli nie zostanie znaleziony znacznik kolejności bajtów, zakłada, że plik źródłowy jest zakodowany przy użyciu bieżącej strony kodowej użytkownika, o ile nie określono strony kodowej za pomocą **/UTF-8** lub opcji **określono element/source-charset** . Program Visual Studio umożliwia zapisanie kodu C++ źródłowego przy użyciu dowolnego z kilku kodowań znaków. Aby uzyskać informacje o zestawach znaków źródła i wykonania, zobacz [zestawy znaków](../../cpp/character-sets.md) w dokumentacji języka.
+Domyślnie program Visual Studio wykrywa znacznik kolejności bajtów, aby określić, czy plik źródłowy jest w zakodowanym formacie Unicode, na przykład UTF-16 czy. UTF-8 Jeśli nie zostanie znaleziony znacznik kolejności bajtów, zakłada, że plik źródłowy jest zakodowany przy użyciu bieżącej strony kodowej użytkownika, o ile nie określono strony kodowej za **`/utf-8`** pomocą lub **`/source-charset`** opcji. Program Visual Studio umożliwia zapisanie kodu źródłowego C++ przy użyciu dowolnego z kilku kodowania znaków. Aby uzyskać informacje o zestawach znaków źródła i wykonania, zobacz [zestawy znaków](../../cpp/character-sets.md) w dokumentacji języka.
+
+## <a name="set-the-option-in-visual-studio-or-programmatically"></a>Ustawianie opcji w programie Visual Studio lub programowo
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać więcej informacji, [Zobacz C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Rozwiń węzeł **Właściwości konfiguracji**, **C/C++** , **wiersz polecenia** .
+1. Wybierz stronę właściwości **Konfiguracja** > **wiersza polecenia** **C/C++** > .
 
-1. W obszarze **Opcje dodatkowe**Dodaj opcję **/UTF-8** , aby określić preferowane kodowanie.
+1. W obszarze **Opcje dodatkowe**Dodaj **`/utf-8`** opcję, aby określić preferowane kodowanie.
 
 1. Wybierz **przycisk OK** , aby zapisać zmiany.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
+
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Zobacz także
 

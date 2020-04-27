@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
-ms.openlocfilehash: 68fdb48edc9304d9d74df6f36bd208cfd35ff307
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4b8c98630b27c35ed6a7e32318c6ebad8a82a5c5
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321481"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168832"
 ---
 # <a name="catlcommodule-class"></a>Klasa CAtlComModule
 
@@ -25,7 +25,7 @@ Ta klasa implementuje moduł serwera COM.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 class CAtlComModule : public _ATL_COM_MODULE
 ```
 
@@ -36,22 +36,22 @@ class CAtlComModule : public _ATL_COM_MODULE
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAtlComModule::CAtlComModule](#catlcommodule)|Konstruktor.|
-|[CAtlComModule::~CAtlComModule](#dtor)|Destruktor.|
+|[CAtlComModule:: ~ CAtlComModule](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAtlComModule::RegisterServer](#registerserver)|Wywołanie tej metody, aby zaktualizować rejestr systemowy dla każdego obiektu na mapie obiektu.|
-|[CAtlComModule::RegisterTypeLib](#registertypelib)|Wywołanie tej metody, aby zarejestrować bibliotekę typów.|
-|[CAtlComModule::Serwer wyrejestrowania](#unregisterserver)|Wywołanie tej metody, aby wyrejestrować każdy obiekt na mapie obiektu.|
-|[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|Wywołanie tej metody, aby wyrejestrować bibliotekę typów.|
+|[CAtlComModule::RegisterServer](#registerserver)|Wywołaj tę metodę, aby zaktualizować rejestr systemu dla każdego obiektu na mapie obiektów.|
+|[CAtlComModule::RegisterTypeLib](#registertypelib)|Wywołaj tę metodę, aby zarejestrować bibliotekę typów.|
+|[CAtlComModule::UnregisterServer](#unregisterserver)|Wywołaj tę metodę, aby wyrejestrować każdy obiekt na mapie obiektu.|
+|[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|Wywołaj tę metodę, aby wyrejestrować bibliotekę typów.|
 
 ## <a name="remarks"></a>Uwagi
 
 `CAtlComModule`implementuje moduł serwera COM, umożliwiając klientowi dostęp do składników modułu.
 
-Ta klasa zastępuje przestarzałe [CComModule](../../atl/reference/ccommodule-class.md) klasy używane we wcześniejszych wersjach ATL. Zobacz [klasy modułów ATL, aby](../../atl/atl-module-classes.md) uzyskać więcej informacji.
+Ta klasa zastępuje przestarzałą klasę [CComModule](../../atl/reference/ccommodule-class.md) używaną we wcześniejszych wersjach ATL. Zobacz [klasy modułów ATL](../../atl/atl-module-classes.md) , aby uzyskać więcej szczegółów.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -61,13 +61,13 @@ Ta klasa zastępuje przestarzałe [CComModule](../../atl/reference/ccommodule-cl
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
 ## <a name="catlcommodulecatlcommodule"></a><a name="catlcommodule"></a>CAtlComModule::CAtlComModule
 
 Konstruktor.
 
-```
+```cpp
 CAtlComModule() throw();
 ```
 
@@ -75,37 +75,37 @@ CAtlComModule() throw();
 
 Inicjuje moduł.
 
-## <a name="catlcommodulecatlcommodule"></a><a name="dtor"></a>CAtlComModule::~CAtlComModule
+## <a name="catlcommodulecatlcommodule"></a><a name="dtor"></a>CAtlComModule:: ~ CAtlComModule
 
 Destruktor.
 
-```
+```cpp
 ~CAtlComModule();
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-Uwalnia wszystkie fabryki klas.
+Zwalnia wszystkie fabryki klas.
 
 ## <a name="catlcommoduleregisterserver"></a><a name="registerserver"></a>CAtlComModule::RegisterServer
 
-Wywołanie tej metody, aby zaktualizować rejestr systemowy dla każdego obiektu na mapie obiektu.
+Wywołaj tę metodę, aby zaktualizować rejestr systemu dla każdego obiektu na mapie obiektów.
 
-```
+```cpp
 HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *bRegTypeLib*<br/>
-PRAWDA, jeśli biblioteka typów ma być zarejestrowana. Wartością domyślną jest FAŁSZ.
+Ma wartość TRUE, jeśli biblioteka typów ma zostać zarejestrowana. Wartość domyślna to FALSE.
 
-*pCLSID (pCLSID)*<br/>
-Wskazuje identyfikator CLSID obiektu, który ma zostać zarejestrowany. Jeśli wartość NULL (wartość domyślna), wszystkie obiekty na mapie obiektu zostaną zarejestrowane.
+*pCLSID*<br/>
+Wskazuje identyfikator CLSID obiektu, który ma zostać zarejestrowany. W przypadku wartości NULL (wartość domyślna) wszystkie obiekty w mapie obiektów zostaną zarejestrowane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -113,9 +113,9 @@ Wywołuje funkcję globalną [AtlComModuleRegisterServer](server-registration-gl
 
 ## <a name="catlcommoduleregistertypelib"></a><a name="registertypelib"></a>CAtlComModule::RegisterTypeLib
 
-Wywołanie tej metody, aby zarejestrować bibliotekę typów.
+Wywołaj tę metodę, aby zarejestrować bibliotekę typów.
 
-```
+```cpp
 HRESULT RegisterTypeLib(LPCTSTR lpszIndex);
 HRESULT RegisterTypeLib();
 ```
@@ -123,21 +123,21 @@ HRESULT RegisterTypeLib();
 ### <a name="parameters"></a>Parametry
 
 *lpszIndex*<br/>
-Ciąg w formacie\\"\N", gdzie N jest indeksem liczb całkowitych zasobu TYPELIB.
+Ciąg w formacie "\\\n", gdzie N jest indeksem liczb całkowitych zasobu biblioteki typów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
 Dodaje informacje o bibliotece typów do rejestru systemowego. Jeśli wystąpienie modułu zawiera wiele bibliotek typów, użyj pierwszej wersji tej metody, aby określić, która biblioteka typów powinna być używana.
 
-## <a name="catlcommoduleunregisterserver"></a><a name="unregisterserver"></a>CAtlComModule::Serwer wyrejestrowania
+## <a name="catlcommoduleunregisterserver"></a><a name="unregisterserver"></a>CAtlComModule::UnregisterServer
 
-Wywołanie tej metody, aby wyrejestrować każdy obiekt na mapie obiektu.
+Wywołaj tę metodę, aby wyrejestrować każdy obiekt na mapie obiektu.
 
-```
+```cpp
 HRESULT UnregisterServer(
     BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL);
@@ -146,24 +146,24 @@ HRESULT UnregisterServer(
 ### <a name="parameters"></a>Parametry
 
 *bRegTypeLib*<br/>
-PRAWDA, jeśli biblioteka typów ma być wyrejestrowana. Wartością domyślną jest FAŁSZ.
+Ma wartość TRUE, jeśli biblioteka typów ma być wyrejestrowana. Wartość domyślna to FALSE.
 
-*pCLSID (pCLSID)*<br/>
-Wskazuje identyfikator CLSID obiektu, który ma być wyrejestrowany. Jeśli wartość NULL (wartość domyślna), wszystkie obiekty na mapie obiektu zostaną wyrejestrowane.
+*pCLSID*<br/>
+Wskazuje identyfikator CLSID obiektu, który ma zostać wyrejestrowany. W przypadku wartości NULL (wartość domyślna) wszystkie obiekty w mapie obiektów zostaną wyrejestrowane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołuje globalną funkcję [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).
+Wywołuje funkcję globalną [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).
 
 ## <a name="catlcommoduleunregistertypelib"></a><a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib
 
-Wywołanie tej metody, aby wyrejestrować bibliotekę typów.
+Wywołaj tę metodę, aby wyrejestrować bibliotekę typów.
 
-```
+```cpp
 HRESULT UnRegisterTypeLib(LPCTSTR lpszIndex);
 HRESULT UnRegisterTypeLib();
 ```
@@ -171,7 +171,7 @@ HRESULT UnRegisterTypeLib();
 ### <a name="parameters"></a>Parametry
 
 *lpszIndex*<br/>
-Ciąg w formacie\\"\N", gdzie N jest indeksem liczb całkowitych zasobu TYPELIB.
+Ciąg w formacie "\\\n", gdzie N jest indeksem liczb całkowitych zasobu biblioteki typów.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -179,9 +179,9 @@ Usuwa informacje o bibliotece typów z rejestru systemowego. Jeśli wystąpienie
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)

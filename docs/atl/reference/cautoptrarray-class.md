@@ -8,32 +8,32 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-ms.openlocfilehash: 93fc5cfea4ea655e57e785ca234df59fe10d6570
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 11f39eac8b8d080fd840f6454f393e33ebcb9e1c
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318895"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167666"
 ---
 # <a name="cautoptrarray-class"></a>Klasa CAutoPtrArray
 
-Ta klasa zawiera metody przydatne podczas konstruowania tablicy inteligentnych wskaźników.
+Ta klasa zapewnia metody przydatne podczas konstruowania tablicy inteligentnych wskaźników.
 
 > [!IMPORTANT]
-> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template <typename E>
 class CAutoPtrArray : public CAtlArray<
                         ATL::CAutoPtr<E>,
                         CAutoPtrElementTraits<E>>
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
-*E*<br/>
+*Adres*<br/>
 Typ wskaźnika.
 
 ## <a name="members"></a>Elementy członkowskie
@@ -46,9 +46,9 @@ Typ wskaźnika.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa udostępnia konstruktora i wyprowadza metody z [CAtlArray](../../atl/reference/catlarray-class.md) i [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) do tworzenia obiektu klasy kolekcji przechowywania inteligentnych wskaźników.
+Ta klasa udostępnia Konstruktor i dziedziczy metody z [CAtlArray](../../atl/reference/catlarray-class.md) i [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) , aby ułatwić tworzenie obiektów klasy kolekcji przechowujących inteligentne wskaźniki.
 
-Aby uzyskać więcej informacji, zobacz [ATL Collection Classes](../../atl/atl-collection-classes.md).
+Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -58,13 +58,13 @@ Aby uzyskać więcej informacji, zobacz [ATL Collection Classes](../../atl/atl-c
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlcoll.h
+**Nagłówek:** atlcoll. h
 
 ## <a name="cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a>CAutoPtrArray::CAutoPtrArray
 
 Konstruktor.
 
-```
+```cpp
 CAutoPtrArray() throw();
 ```
 
@@ -72,7 +72,7 @@ CAutoPtrArray() throw();
 
 Inicjuje tablicę inteligentnych wskaźników.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CAtlArray](../../atl/reference/catlarray-class.md)<br/>
 [Klasa CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)<br/>

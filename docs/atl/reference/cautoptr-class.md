@@ -12,28 +12,28 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-ms.openlocfilehash: 2fa6eb26c2e2cd569d74c02d8303768b1aeb4f1c
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 7f15e16b075b9a5327723a7f081100313f14ea77
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81748274"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167724"
 ---
 # <a name="cautoptr-class"></a>Klasa CAutoPtr
 
-Ta klasa reprezentuje obiekt wskaźnika inteligentnego.
+Ta klasa reprezentuje obiekt inteligentnego wskaźnika.
 
 > [!IMPORTANT]
-> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w czasie wykonywania systemu Windows.
+> Tej klasy i jej elementów członkowskich nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template <typename T>
 class CAutoPtr
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *T*<br/>
 Typ wskaźnika.
@@ -44,54 +44,54 @@ Typ wskaźnika.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAutoPtr::CAutoPtr](#cautoptr)|Konstruktor.|
-|[CAutoPtr::~CAutoPtr](#dtor)|Destruktor.|
+|[CAutoPtr:: CAutoPtr](#cautoptr)|Konstruktor.|
+|[CAutoPtr:: ~ CAutoPtr](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAutoPtr::Dołącz](#attach)|Wywołanie tej metody, aby przejąć na własność istniejącego wskaźnika.|
-|[CAutoPtr::Detach](#detach)|Wywołanie tej metody, aby zwolnić własność wskaźnika.|
-|[CAutoPtr::Za darmo](#free)|Wywołanie tej metody, aby usunąć `CAutoPtr`obiekt wskazywał przez .|
+|[CAutoPtr:: Attach](#attach)|Wywołaj tę metodę, aby przejąć na własność istniejący wskaźnik.|
+|[CAutoPtr::D etach](#detach)|Wywołaj tę metodę, aby zwolnić własność wskaźnika.|
+|[CAutoPtr:: Free](#free)|Wywołaj tę metodę, aby usunąć obiekt wskazywany przez `CAutoPtr`.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAutoPtr::operator T*](#operator_t_star)|Operator odlewu.|
-|[CAutoPtr::operator =](#operator_eq)|Operator przypisania.|
-|[CAutoPtr::operator ->](#operator_ptr)|Operator wskaźnik-element.|
+|[CAutoPtr:: operator T *](#operator_t_star)|Operator rzutowania.|
+|[CAutoPtr:: operator =](#operator_eq)|Operator przypisania.|
+|[CAutoPtr:: operator->](#operator_ptr)|Operator wskaźnika do składowej.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAutoPtr::m_p](#m_p)|Zmienna elementu członkowskiego danych wskaźnika.|
+|[CAutoPtr:: m_p](#m_p)|Zmienna elementu członkowskiego danych wskaźnika.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa udostępnia metody tworzenia i zarządzania inteligentny wskaźnik, który pomoże chronić przed przeciekami pamięci przez automatyczne zwalnianie zasobów, gdy wypadnie poza zakres.
+Ta klasa zapewnia metody tworzenia inteligentnego wskaźnika i zarządzania nim, co pomoże chronić przed wyciekami pamięci przez Automatyczne zwalnianie zasobów, gdy wykracza poza zakres.
 
-`CAutoPtr`Ponadto konstruktor kopiowania i przypisania operator transferu własności wskaźnika, kopiowanie wskaźnika źródłowego do wskaźnika docelowego i ustawienie wskaźnika źródłowego do NULL. W związku z tym `CAutoPtr` jest niemożliwe, aby mieć dwa obiekty, z których każdy przechowuje ten sam wskaźnik, a to zmniejsza możliwość usuwania tego samego wskaźnika dwa razy.
+Dodatkowo, `CAutoPtr`Konstruktor kopiujący i operator przypisania przenoszą własność wskaźnika, kopiując wskaźnik źródła do wskaźnika docelowego i ustawiając wskaźnik źródła na wartość null. Z tego względu nie można mieć `CAutoPtr` dwóch obiektów, które przechowują ten sam wskaźnik, co zmniejsza możliwość usunięcia tego samego wskaźnika dwa razy.
 
-`CAutoPtr`upraszcza również tworzenie kolekcji wskaźników. Zamiast wyprowadzania klasy kolekcji i zastępowania destruktora, jest prostsze `CAutoPtr` do tworzenia kolekcji obiektów. Po usunięciu kolekcji `CAutoPtr` obiekty wyjdą poza zakres i automatycznie usunie się.
+`CAutoPtr`upraszcza także tworzenie kolekcji wskaźników. Zamiast wyprowadzania klasy kolekcji i zastępowania destruktora, łatwiej jest utworzyć kolekcję `CAutoPtr` obiektów. Po usunięciu kolekcji `CAutoPtr` obiekty wykraczają poza zakres i automatycznie usuwają siebie.
 
-[CHeapPtr](../../atl/reference/cheapptr-class.md) i warianty działają w `CAutoPtr`taki sam sposób jak , z tą różnicą, że przydzielają i zwalniają pamięć przy użyciu różnych funkcji sterty zamiast **operatorów C++ new** i **delete.** [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md) jest `CAutoPtr`podobny do , jedyną różnicą jest to, że używa **wektora new[]** i **wektor delete[]** do przydzielenia i wolnej pamięci.
+[CHeapPtr](../../atl/reference/cheapptr-class.md) i warianty działają w taki sam sposób `CAutoPtr`, jak, z tym wyjątkiem, że przydzielają i zwalniają pamięć przy użyciu różnych funkcji sterty zamiast operatorów **New** i **delete** języka C++. [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md) jest podobny do `CAutoPtr`, jedyną różnicą jest użycie **wektora New []** i **delete Vector []** w celu przydzielenia i zwolnienia pamięci.
 
-Zobacz też [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) i [CAutoPtrList,](../../atl/reference/cautoptrlist-class.md) gdy wymagane są tablice lub listy inteligentnych wskaźników.
+Zobacz także [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) i [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) , gdy wymagane są tablice lub listy inteligentnych wskaźników.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
 ## <a name="example"></a>Przykład
 
 [!code-cpp[NVC_ATL_Utilities#74](../../atl/codesnippet/cpp/cautoptr-class_1.cpp)]
 
-## <a name="cautoptrattach"></a><a name="attach"></a>CAutoPtr::Dołącz
+## <a name="cautoptrattach"></a><a name="attach"></a>CAutoPtr:: Attach
 
-Wywołanie tej metody, aby przejąć na własność istniejącego wskaźnika.
+Wywołaj tę metodę, aby przejąć na własność istniejący wskaźnik.
 
 ```cpp
 void Attach(T* p) throw();
@@ -99,24 +99,24 @@ void Attach(T* p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*P*<br/>
-Obiekt `CAutoPtr` przejmie na własność ten wskaźnik.
+*St*<br/>
+`CAutoPtr` Obiekt przejdzie na własność tego wskaźnika.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy `CAutoPtr` obiekt przejmuje na własność wskaźnik, automatycznie usunie wskaźnik i wszystkie przydzielone dane, gdy wyjdzie poza zakres. Jeśli [CAutoPtr::Detach](#detach) jest wywoływana, programista jest ponownie odpowiedzialny za zwalnianie wszelkich przydzielonych zasobów.
+Gdy `CAutoPtr` obiekt przejmuje własność wskaźnika, automatycznie usunie wskaźnik i wszystkie przydzieloną dane, gdy wykracza poza zakres. Jeśli [CAutoPtr::D etach](#detach) jest wywoływana, programista ponownie otrzymuje odpowiedzialność za zwolnienie wszelkich przyznanych zasobów.
 
-W kompilacjach debugowania błąd potwierdzenia wystąpi, jeśli element członkowski danych [CAutoPtr::m_p](#m_p) aktualnie wskazuje na istniejącą wartość; oznacza to, że nie jest równa NULL.
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli element członkowski danych [CAutoPtr:: m_p](#m_p) aktualnie wskazuje istniejącą wartość; oznacza to, że nie jest równa NULL.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład w [przeglądzie CAutoPtr](../../atl/reference/cautoptr-class.md).
+Zobacz przykład w [omówieniu CAutoPtr](../../atl/reference/cautoptr-class.md).
 
-## <a name="cautoptrcautoptr"></a><a name="cautoptr"></a>CAutoPtr::CAutoPtr
+## <a name="cautoptrcautoptr"></a><a name="cautoptr"></a>CAutoPtr:: CAutoPtr
 
 Konstruktor.
 
-```
+```cpp
 CAutoPtr() throw();
 explicit CAutoPtr(T* p) throw();
 
@@ -129,37 +129,37 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*P*<br/>
+*St*<br/>
 Istniejący wskaźnik.
 
-*Tsrc ( TSRC )*<br/>
-Typ zarządzany przez `CAutoPtr`inny , używany do inicjowania bieżącego obiektu.
+*TSrc*<br/>
+Typ zarządzany przez inny `CAutoPtr`, używany do inicjowania bieżącego obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt `CAutoPtr` można utworzyć za pomocą istniejącego wskaźnika, w którym to przypadku przenosi własność wskaźnika.
+`CAutoPtr` Obiekt można utworzyć przy użyciu istniejącego wskaźnika, w którym to przypadku przenosi własność wskaźnika.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład w [przeglądzie CAutoPtr](../../atl/reference/cautoptr-class.md).
+Zobacz przykład w [omówieniu CAutoPtr](../../atl/reference/cautoptr-class.md).
 
-## <a name="cautoptrcautoptr"></a><a name="dtor"></a>CAutoPtr::~CAutoPtr
+## <a name="cautoptrcautoptr"></a><a name="dtor"></a>CAutoPtr:: ~ CAutoPtr
 
 Destruktor.
 
-```
+```cpp
 ~CAutoPtr() throw();
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia wszystkie przydzielone zasoby. Połączenia [CAutoPtr::Free](#free).
+Zwalnia wszystkie przydzieloną zasoby. Wywołania [CAutoPtr:: Free](#free).
 
-## <a name="cautoptrdetach"></a><a name="detach"></a>CAutoPtr::Detach
+## <a name="cautoptrdetach"></a><a name="detach"></a>CAutoPtr::D etach
 
-Wywołanie tej metody, aby zwolnić własność wskaźnika.
+Wywołaj tę metodę, aby zwolnić własność wskaźnika.
 
-```
+```cpp
 T* Detach() throw();
 ```
 
@@ -169,15 +169,15 @@ Zwraca kopię wskaźnika.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia własność wskaźnika, ustawia zmienną elementu członkowskiego [CAutoPtr::m_p](#m_p) na NULL i zwraca kopię wskaźnika. Po `Detach`wywołaniu program programista musi zwolnić przydzielone zasoby, nad którymi `CAutoPtr` obiekt mógł wcześniej przyjąć odpowiedzialność.
+Zwalnia własność wskaźnika, ustawia zmienną składową danych [CAutoPtr:: m_p](#m_p) na null i zwraca kopię wskaźnika. Po wywołaniu `Detach`, programista może zwolnić wszystkie przydzieloną zasoby, do których `CAutoPtr` obiekt mógł wcześniej przyjąć reponsibility.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład w [przeglądzie CAutoPtr](../../atl/reference/cautoptr-class.md).
+Zobacz przykład w [omówieniu CAutoPtr](../../atl/reference/cautoptr-class.md).
 
-## <a name="cautoptrfree"></a><a name="free"></a>CAutoPtr::Za darmo
+## <a name="cautoptrfree"></a><a name="free"></a>CAutoPtr:: Free
 
-Wywołanie tej metody, aby usunąć `CAutoPtr`obiekt wskazywał przez .
+Wywołaj tę metodę, aby usunąć obiekt wskazywany przez `CAutoPtr`.
 
 ```cpp
 void Free() throw();
@@ -185,25 +185,25 @@ void Free() throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt wskazany przez `CAutoPtr` jest zwalniany, a zmienna elementu członkowskiego [CAutoPtr::m_p](#m_p) danych jest ustawiona na wartość NULL.
+Obiekt wskazywany przez `CAutoPtr` jest zwolniony, a zmienna elementu członkowskiego danych [CAutoPtr:: m_p](#m_p) ma wartość null.
 
-## <a name="cautoptrm_p"></a><a name="m_p"></a>CAutoPtr::m_p
+## <a name="cautoptrm_p"></a><a name="m_p"></a>CAutoPtr:: m_p
 
 Zmienna elementu członkowskiego danych wskaźnika.
 
-```
+```cpp
 T* m_p;
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-Ta zmienna elementu członkowskiego zawiera informacje o wskaźniku.
+Ta zmienna członkowska zawiera informacje o wskaźniku.
 
-## <a name="cautoptroperator-"></a><a name="operator_eq"></a>CAutoPtr::operator =
+## <a name="cautoptroperator-"></a><a name="operator_eq"></a>CAutoPtr:: operator =
 
 Operator przypisania.
 
-```
+```cpp
 template<>
 CAutoPtr<T>& operator= (CAutoPtr<T>& p);
 
@@ -213,49 +213,49 @@ CAutoPtr<T>& operator= (CAutoPtr<TSrc>& p);
 
 ### <a name="parameters"></a>Parametry
 
-*P*<br/>
+*St*<br/>
 Wskaźnik.
 
-*Tsrc ( TSRC )*<br/>
+*TSrc*<br/>
 Typ klasy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwołanie do **>\< CAutoPtr T **.
+Zwraca odwołanie do **\< CAutoPtr >T **.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator przypisania odłącza obiekt od bieżącego `CAutoPtr` wskaźnika i dołącza nowy wskaźnik , *p*, w jego miejsce.
+Operator przypisania odłącza `CAutoPtr` obiekt od dowolnego bieżącego wskaźnika i dołącza nowy wskaźnik, *p*, w swoim miejscu.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład w [przeglądzie CAutoPtr](../../atl/reference/cautoptr-class.md).
+Zobacz przykład w [omówieniu CAutoPtr](../../atl/reference/cautoptr-class.md).
 
-## <a name="cautoptroperator--gt"></a><a name="operator_ptr"></a>CAutoPtr::operator -&gt;
+## <a name="cautoptroperator--gt"></a><a name="operator_ptr"></a>CAutoPtr:: operator-&gt;
 
-Operator wskaźnik-element.
+Operator wskaźnika do składowej.
 
-```
+```cpp
 T* operator->() const throw();
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość zmiennej elementu członkowskiego [CAutoPtr::m_p](#m_p) danych.
+Zwraca wartość zmiennej składowej danych [CAutoPtr:: m_p](#m_p) .
 
 ### <a name="remarks"></a>Uwagi
 
-Ten operator służy do wywoływania metody w `CAutoPtr` klasie wskazywaluj przez obiekt. W kompilacjach debugowania błąd potwierdzenia `CAutoPtr` wystąpi, jeśli wskazuje wartość NULL.
+Użyj tego operatora, aby wywołać metodę w klasie wskazywanej przez `CAutoPtr` obiekt. W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli `CAutoPtr` punkty mają wartość null.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład w [przeglądzie CAutoPtr](../../atl/reference/cautoptr-class.md).
+Zobacz przykład w [omówieniu CAutoPtr](../../atl/reference/cautoptr-class.md).
 
-## <a name="cautoptroperator-t"></a><a name="operator_t_star"></a>CAutoPtr::operator T*
+## <a name="cautoptroperator-t"></a><a name="operator_t_star"></a>CAutoPtr:: operator T *
 
-Operator odlewu.
+Operator rzutowania.
 
-```
+```cpp
 operator T* () const throw();
 ```
 
@@ -265,9 +265,9 @@ Zwraca wskaźnik do typu danych obiektu zdefiniowanego w szablonie klasy.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład w [przeglądzie CAutoPtr](../../atl/reference/cautoptr-class.md).
+Zobacz przykład w [omówieniu CAutoPtr](../../atl/reference/cautoptr-class.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
 [Klasa CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)<br/>

@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModuleT class
 ms.assetid: 9b74d02f-9117-47b1-a05e-c5945f83dd2b
-ms.openlocfilehash: bf64c073249b7426fafb430a708573d9d06d11fd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b07e60265570e66337a2d13007e9ad57c6f369e4
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321411"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167867"
 ---
 # <a name="catlmodulet-class"></a>Klasa CAtlModuleT
 
@@ -27,15 +27,15 @@ Ta klasa implementuje moduł ATL.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 template <class T>
 class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ```
 
-#### <a name="parameters"></a>Parametry
+### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Twoja klasa pochodzi `CAtlModuleT`od .
+Klasa pochodna `CAtlModuleT`.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -50,71 +50,71 @@ Twoja klasa pochodzi `CAtlModuleT`od .
 |Nazwa|Opis|
 |----------|-----------------|
 |[CAtlModuleT::InitLibId](#initlibid)|Inicjuje element członkowski danych zawierający identyfikator GUID bieżącego modułu.|
-|[CAtlModuleT::RegisterAppId](#registerappid)|Dodaje EXE do rejestru.|
+|[CAtlModuleT::RegisterAppId](#registerappid)|Dodaje plik EXE do rejestru.|
 |[CAtlModuleT::RegisterServer](#registerserver)|Dodaje usługę do rejestru.|
-|[CAtlModuleT:: UnregisterAppId](#unregisterappid)|Usuwa EXE z rejestru.|
-|[CAtlModuleT::Wyrejestrowanie serwera](#unregisterserver)|Usuwa usługę z rejestru.|
-|[CAtlModuleT::UpdateRegistryAppId](#updateregistryappid)|Aktualizuje informacje EXE w rejestrze.|
+|[CAtlModuleT::UnregisterAppId](#unregisterappid)|Usuwa plik EXE z rejestru.|
+|[CAtlModuleT::UnregisterServer](#unregisterserver)|Usuwa usługę z rejestru.|
+|[CAtlModuleT::UpdateRegistryAppId](#updateregistryappid)|Aktualizuje informacje o pliku EXE w rejestrze.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CAtlModuleT`, pochodzące z [CAtlModule](../../atl/reference/catlmodule-class.md), implementuje wykonywalny (EXE) lub service (EXE) moduł ATL. Moduł wykonywalny to lokalny serwer poza procesem, podczas gdy moduł usługi jest aplikacją systemu Windows działającą w tle podczas uruchamiania systemu Windows.
+`CAtlModuleT`pochodny from [CAtlModule](../../atl/reference/catlmodule-class.md)implementuje moduł plików wykonywalnych (exe) lub usług (exe) ATL. Moduł wykonywalny jest lokalnym serwerem poza procesem, natomiast moduł usługi jest aplikacją systemu Windows, która jest uruchamiana w tle podczas uruchamiania systemu Windows.
 
-`CAtlModuleT`zapewnia obsługę inicjowania, rejestrowania i wyrejestrowania modułu.
+`CAtlModuleT`zapewnia obsługę inicjowania, rejestrowania i wyrejestrowywania modułu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)
 
-[Catlmodule](../../atl/reference/catlmodule-class.md)
+[CAtlModule](../../atl/reference/catlmodule-class.md)
 
 `CAtlModuleT`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlbase.h
+**Nagłówek:** atlbase. h
 
 ## <a name="catlmoduletcatlmodulet"></a><a name="catlmodulet"></a>CAtlModuleT::CAtlModuleT
 
 Konstruktor.
 
-```
+```cpp
 CAtlModuleT() throw();
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołuje [CAtlModuleT::InitLibId](#initlibid).
+Wywołuje [CAtlModuleT:: InitLibId](#initlibid).
 
 ## <a name="catlmoduletinitlibid"></a><a name="initlibid"></a>CAtlModuleT::InitLibId
 
 Inicjuje element członkowski danych zawierający identyfikator GUID bieżącego modułu.
 
-```
+```cpp
 static void InitLibId() throw();
 ```
 
 ### <a name="remarks"></a>Uwagi
 
-Wywoływany przez [konstruktora CAtlModuleT::CAtlModuleT](#catlmodulet).
+Wywoływane przez konstruktora [CAtlModuleT:: CAtlModuleT](#catlmodulet).
 
 ## <a name="catlmoduletregisterappid"></a><a name="registerappid"></a>CAtlModuleT::RegisterAppId
 
-Dodaje EXE do rejestru.
+Dodaje plik EXE do rejestru.
 
-```
+```cpp
 HRESULT RegisterAppId() throw();
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ## <a name="catlmoduletregisterserver"></a><a name="registerserver"></a>CAtlModuleT::RegisterServer
 
 Dodaje usługę do rejestru.
 
-```
+```cpp
 HRESULT RegisterServer(
     BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL) throw();
@@ -123,32 +123,32 @@ HRESULT RegisterServer(
 ### <a name="parameters"></a>Parametry
 
 *bRegTypeLib*<br/>
-PRAWDA, jeśli biblioteka typów ma być zarejestrowana. Wartością domyślną jest FAŁSZ.
+Ma wartość TRUE, jeśli biblioteka typów ma zostać zarejestrowana. Wartość domyślna to FALSE.
 
-*pCLSID (pCLSID)*<br/>
-Wskazuje identyfikator CLSID obiektu, który ma zostać zarejestrowany. Jeśli wartość NULL (wartość domyślna), wszystkie obiekty na mapie obiektu zostaną zarejestrowane.
+*pCLSID*<br/>
+Wskazuje identyfikator CLSID obiektu, który ma zostać zarejestrowany. W przypadku wartości NULL (wartość domyślna) wszystkie obiekty w mapie obiektów zostaną zarejestrowane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
-## <a name="catlmoduletunregisterappid"></a><a name="unregisterappid"></a>CAtlModuleT:: UnregisterAppId
+## <a name="catlmoduletunregisterappid"></a><a name="unregisterappid"></a>CAtlModuleT::UnregisterAppId
 
-Usuwa EXE z rejestru.
+Usuwa plik EXE z rejestru.
 
-```
+```cpp
 HRESULT UnregisterAppId() throw();
 ```
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
-## <a name="catlmoduletunregisterserver"></a><a name="unregisterserver"></a>CAtlModuleT::Wyrejestrowanie serwera
+## <a name="catlmoduletunregisterserver"></a><a name="unregisterserver"></a>CAtlModuleT::UnregisterServer
 
 Usuwa usługę z rejestru.
 
-```
+```cpp
 HRESULT UnregisterServer(
     BOOL bUnRegTypeLib,
     const CLSID* pCLSID = NULL) throw();
@@ -157,33 +157,33 @@ HRESULT UnregisterServer(
 ### <a name="parameters"></a>Parametry
 
 *bUnRegTypeLib*<br/>
-PRAWDA, jeśli biblioteka typów ma być również wyrejestrowana.
+Ma wartość TRUE, jeśli biblioteka typów jest również wyrejestrowana.
 
-*pCLSID (pCLSID)*<br/>
-Wskazuje identyfikator CLSID obiektu, który ma być wyrejestrowany. Jeśli wartość NULL (wartość domyślna), wszystkie obiekty na mapie obiektu zostaną wyrejestrowane.
+*pCLSID*<br/>
+Wskazuje identyfikator CLSID obiektu, który ma zostać wyrejestrowany. W przypadku wartości NULL (wartość domyślna) wszystkie obiekty w mapie obiektów zostaną wyrejestrowane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
 ## <a name="catlmoduletupdateregistryappid"></a><a name="updateregistryappid"></a>CAtlModuleT::UpdateRegistryAppId
 
-Aktualizuje informacje EXE w rejestrze.
+Aktualizuje informacje o pliku EXE w rejestrze.
 
-```
+```cpp
 static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*Bregister*<br/>
+*bRegister*<br/>
 Zarezerwowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca S_OK na sukces lub błąd HRESULT na niepowodzenie.
+Zwraca S_OK po powodzeniu lub błąd HRESULT w przypadku niepowodzenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CAtlModule](../../atl/reference/catlmodule-class.md)<br/>
 [Przegląd klas](../../atl/atl-class-overview.md)<br/>

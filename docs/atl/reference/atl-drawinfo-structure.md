@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: fb50f49d387e8620f3d5bbb41263738adbd8b437
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 00d93b3dd8b060a21b6ff4083bb9880d8d836a19
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81748805"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168621"
 ---
 # <a name="atl_drawinfo-structure"></a>Struktura ATL_DRAWINFO
 
-Zawiera informacje używane do renderowania do różnych obiektów docelowych, takich jak drukarka, metaplik lub formant ActiveX.
+Zawiera informacje służące do renderowania do różnych elementów docelowych, takich jak drukarka, metaplik lub Kontrolka ActiveX.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 struct ATL_DRAWINFO {
     UINT cbSize;
     DWORD dwDrawAspect;
@@ -45,53 +45,53 @@ struct ATL_DRAWINFO {
 Rozmiar struktury w bajtach.
 
 `dwDrawAspect`<br/>
-Określa sposób reprezentowania obiektu docelowego. Reprezentacje mogą zawierać zawartość, ikonę, miniaturę lub wydrukowany dokument. Aby uzyskać listę możliwych wartości, zobacz [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) i [DVASPECT2](/windows/win32/api/ocidl/ne-ocidl-dvaspect2).
+Określa sposób reprezentowania celu. Reprezentacje mogą zawierać zawartość, ikonę, miniaturę lub dokument drukowany. Aby uzyskać listę możliwych wartości, zobacz [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) i [DVASPECT2](/windows/win32/api/ocidl/ne-ocidl-dvaspect2).
 
 `lindex`<br/>
-Część obiektu docelowego, która jest przedmiotem zainteresowania dla operacji rysowania. Jego interpretacja różni się w `dwDrawAspect` zależności od wartości w wemieć.
+Część elementu docelowego, który jest interesujący dla operacji rysowania. Interpretacja różni się w zależności od wartości `dwDrawAspect` elementu członkowskiego.
 
 `ptd`<br/>
-Wskaźnik do konstrukcji [DVTARGETDEVICE,](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) która umożliwia optymalizację rysowania w zależności od określonego aspektu. Należy zauważyć, że nowsze obiekty i kontenery, które obsługują zoptymalizowane interfejsy rysunku obsługują ten element członkowski. Starsze obiekty i kontenery, które nie obsługują zoptymalizowanych interfejsów rysunku, zawsze określają wartość NULL dla tego elementu członkowskiego.
+Wskaźnik na strukturę [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) , która umożliwia rysowanie optymalizacji w zależności od określonego aspektu. Należy pamiętać, że nowsze obiekty i kontenery obsługujące zoptymalizowane interfejsy rysowania obsługują również ten element członkowski. Starsze obiekty i kontenery, które nie obsługują zoptymalizowanych interfejsów rysowania, zawsze określają wartość NULL dla tego elementu członkowskiego.
 
 `hicTargetDev`<br/>
-Kontekst informacji dla urządzenia docelowego wskazywu, za pomocą `ptd` którego obiekt może wyodrębnić metryki urządzenia i przetestować możliwości urządzenia. Jeśli `ptd` jest null, obiekt powinien zignorować wartość w weszłnew. `hicTargetDev`
+Kontekst informacji dla urządzenia docelowego wskazywanego przez `ptd` , z którego obiekt może wyodrębnić metryki urządzeń i przetestować możliwości urządzenia. Jeśli `ptd` ma wartość null, obiekt powinien zignorować wartość `hicTargetDev` elementu członkowskiego.
 
 `hdcDraw`<br/>
-Kontekst urządzenia, na którym można rysować. W przypadku obiektu bez `hdcDraw` okien element `MM_TEXT` członkowski znajduje się w trybie mapowania ze współrzędnymi logicznymi pasującymi do współrzędnych klienta okna zawierającego. Ponadto kontekst urządzenia powinien być w tym samym stanie, co `WM_PAINT` ten, który zwykle jest przekazywany przez wiadomość.
+Kontekst urządzenia, na którym należy narysować. W przypadku obiektu bez okna `hdcDraw` element członkowski znajduje się w trybie `MM_TEXT` mapowania ze współrzędnymi logicznymi odpowiadającymi współrzędnymi klienta okna zawierającego. Ponadto kontekst urządzenia powinien znajdować się w tym samym stanie co ten, który zwykle jest przesyłany `WM_PAINT` przez komunikat.
 
 `prcBounds`<br/>
-Wskaźnik do struktury [RECTL](/windows/win32/api/windef/ns-windef-rectl) określające prostokąt `hdcDraw` na i w którym obiekt powinien być rysowany. Ten element członkowski steruje pozycjonowaniem i rozciąganiem obiektu. Ten element członkowski powinien być NULL, aby narysować obiekt aktywny bez okien. W każdej innej sytuacji NULL nie jest wartością `E_INVALIDARG` prawną i powinien spowodować kod błędu. Jeśli kontener przekazuje wartość inną niż NULL do obiektu bez okien, obiekt powinien renderować żądany aspekt w określonym kontekście urządzenia i prostokącie. Kontener może zażądać tego z obiektu bez okien, aby renderować drugi, nieaktywny widok obiektu lub wydrukować obiekt.
+Wskaźnik do struktury [Rect](/windows/win32/api/windef/ns-windef-rectl) , który określa prostokąt na `hdcDraw` i, w którym obiekt powinien być rysowany. Ten element członkowski kontroluje pozycjonowanie i rozciąganie obiektu. Ten element członkowski powinien mieć wartość NULL, aby narysować bezokienkowy obiekt aktywny. W każdej innej sytuacji wartość NULL nie jest wartością dozwoloną i powinna powodować kod `E_INVALIDARG` błędu. Jeśli kontener przekaże wartość różną od NULL do obiektu bez okna, obiekt powinien renderować żądany aspekt do określonego kontekstu i prostokąta urządzenia. Kontener może zażądać tego z obiektu bez okna, aby renderować drugi, nieaktywny widok obiektu lub wydrukować obiekt.
 
 `prcWBounds`<br/>
-Jeśli `hdcDraw` jest kontekstem urządzenia metaplikowego (zobacz [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) w windows SDK), jest to wskaźnik do `RECTL` struktury określającej prostokąt ograniczający w podstawowym metapliku. Struktura prostokąta zawiera zakres okna i początek okna. Wartości te są przydatne do rysowania metaplików. Prostokąt wskazany przez `prcBounds` jest zagnieżdżony wewnątrz tego `prcWBounds` prostokąta; znajdują się w tej samej przestrzeni współrzędnych.
+Jeśli `hdcDraw` jest kontekstem urządzenia metapliku (zobacz [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) w Windows SDK), jest to wskaźnik do `RECTL` struktury określającej prostokąt ograniczający w źródłowym metapliku. Struktura prostokąta zawiera zakres okna i pochodzenie okna. Te wartości są przydatne do rysowania plików. Prostokąt wskazywany przez `prcBounds` jest zagnieżdżony wewnątrz `prcWBounds` tego prostokąta. znajdują się one w tej samej przestrzeni współrzędnych.
 
 `bOptimize`<br/>
-Nonzero, jeśli rysunek formantu ma być zoptymalizowany, w przeciwnym razie 0. Jeśli rysunek jest zoptymalizowany, stan kontekstu urządzenia jest automatycznie przywracany po zakończeniu renderowania.
+Różne od zera, Jeśli rysunek kontrolki ma być zoptymalizowany, w przeciwnym razie 0. Jeśli rysunek jest zoptymalizowany, stan kontekstu urządzenia jest automatycznie przywracany po zakończeniu renderowania.
 
 `bZoomed`<br/>
-Niezerowe, jeśli obiekt docelowy ma współczynnik powiększenia, w przeciwnym razie 0. Współczynnik powiększenia jest przechowywany w pliku `ZoomNum`.
+Różne od zera, jeśli element docelowy ma współczynnik powiększenia, w przeciwnym razie 0. Współczynnik powiększenia jest przechowywany w `ZoomNum`.
 
 `bRectInHimetric`<br/>
-Nonzero, jeśli `prcBounds` wymiary są w HIMETRIC, w przeciwnym razie 0.
+Różne od zera, jeśli wymiary `prcBounds` są w HIMETRIC, w przeciwnym razie 0.
 
 `ZoomNum`<br/>
-Szerokość i wysokość prostokąta, do którego renderowany jest obiekt. Współczynnik powiększenia wzdłuż osi x (proporcja naturalnego rozmiaru obiektu do jego aktualnego `ZoomNum.cx` zasięgu) celu `ZoomDen.cx`jest wartością podzieloną przez wartość . Współczynnik powiększenia wzdłuż osi y jest osiągany w podobny sposób.
+Szerokość i wysokość prostokąta, do którego jest renderowany obiekt. Współczynnik powiększenia wzdłuż osi x (proporcja rozmiaru naturalnego obiektu do jego bieżącego zakresu) obiektu docelowego jest wartością `ZoomNum.cx` podzieloną przez wartość. `ZoomDen.cx` Współczynnik powiększenia wzdłuż osi y jest osiągany w podobny sposób.
 
 `ZoomDen`<br/>
-Rzeczywista szerokość i wysokość obiektu docelowego.
+Rzeczywista szerokość i wysokość celu.
 
 ## <a name="remarks"></a>Uwagi
 
-Typowe użycie tej struktury byłoby pobieranie informacji podczas renderowania obiektu docelowego. Na przykład można pobrać wartości z ATL_DRAWINFO wewnątrz przeciążenia [CComControlBase::OnDrawAdvanced](ccomcontrolbase-class.md#ondrawadvanced).
+Typowym użyciem tej struktury będzie pobieranie informacji podczas renderowania obiektu docelowego. Na przykład można pobrać wartości z ATL_DRAWINFO wewnątrz przeciążenia [CComControlBase:: OnDrawAdvanced](ccomcontrolbase-class.md#ondrawadvanced).
 
-Ta struktura przechowuje istotne informacje używane do renderowania wygląd obiektu dla urządzenia docelowego. Podane informacje mogą być używane do rysowania na ekranie, w drukarce, a nawet w metapliku.
+Ta struktura przechowuje odpowiednie informacje używane do renderowania wyglądu obiektu dla urządzenia docelowego. Podane informacje mogą służyć do rysowania na ekranie, drukarce, a nawet w metaplikach.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlctl.h
+**Nagłówek:** atlctl. h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy i struktury](../../atl/reference/atl-classes.md)<br/>
-[IViewObject::Draw](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw)<br/>
+[Widok IViewobject::D RAW](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw)<br/>
 [CComControlBase::OnDrawAdvanced](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)
