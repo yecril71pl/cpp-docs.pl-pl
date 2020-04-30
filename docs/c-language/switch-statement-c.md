@@ -11,29 +11,35 @@ no-loc:
 - case
 - default
 - break
-ms.openlocfilehash: 12163e85110092e3e372fa496cf42efd7574ea8d
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 5858447602a28dcc5573aa3138e869d106b5aa23
+ms.sourcegitcommit: 2f9ff2041d70c406df76c5053151192aad3937ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167679"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587375"
 ---
-# <a name="opno-locswitch-statement-c"></a>switchInstrukcja (C)
+# <a name="switch-statement-c"></a>`switch`Instrukcja (C)
 
-Instrukcje **switch** i **case** ułatwiają kontrolę złożonych operacji warunkowych i rozgałęzień. **switch** Instrukcja przekazuje formant do instrukcji w jej treści.
+Instrukcje __`switch`__ i __`case`__ ułatwiają kontrolę złożonych operacji warunkowych i rozgałęzień. __`switch`__ Instrukcja przekazuje formant do instrukcji w jej treści.
 
 ## <a name="syntax"></a>Składnia
 
-*wybór — instrukcja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`switch (`***expression* **`)`** *instrukcja* wyrażenia
+> *`selection-statement`*:<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp; __`switch (`__&nbsp;*`expression`* &nbsp;__`)`__&nbsp;*`statement`*
 
-*etykieta — instrukcja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`case`**  *stała —***`:`***instrukcja* wyrażenia    <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`default :`**  *Merge*
+> *`labeled-statement`*:<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
 
-Kontrolka przechodzi do instrukcji, **case** *wyrażenie stałe* dopasowuje wartość ** switch (** *wyrażenie* **)**. **switch** Instrukcja może zawierać dowolną liczbę **case** wystąpień. Jednak żadne dwie case stałe w tej samej **switch** instrukcji nie mogą mieć tej samej wartości. Wykonywanie treści instrukcji rozpoczyna się od wybranej instrukcji. Przechodzi do końca treści lub do momentu, aż **break** instrukcja przeniesie kontrolę z treści.
+## <a name="remarks"></a>Uwagi
 
-Użycie **switch** instrukcji zwykle wygląda następująco:
+Instrukcja __`switch`__ powoduje, że kontrolka jest przekazywana do jednego *`labeled-statement`* w jego treści instrukcji, w zależności od *`expression`* wartości.
+
+Wartości i każdego *`expression`* z nich *`constant-expression`* muszą mieć typ całkowity. A *`constant-expression`* musi mieć niejednoznaczną stałą wartość całkowitą w czasie kompilacji.
+
+Kontrolka przechodzi do **`case`** instrukcji, *`constant-expression`* której wartość jest zgodna z *`expression`* wartością. __`switch`__ Instrukcja może zawierać dowolną liczbę __`case`__ wystąpień. Jednak żadne dwie *`constant-expression`* wartości w tej samej __`switch`__ instrukcji nie mogą mieć tej samej wartości. Wykonywanie treści __`switch`__ instrukcji rozpoczyna się od pierwszej instrukcji w lub po dopasowaniu *`labeled-statement`*. Wykonywanie przechodzi do końca treści lub do momentu, aż __`break`__ instrukcja przeniesie kontrolę z treści.
+
+Użycie __`switch`__ instrukcji zwykle wygląda następująco:
 
 ```C
 switch ( expression )
@@ -50,18 +56,18 @@ switch ( expression )
 }
 ```
 
-Możesz użyć instrukcji, **break** aby zakończyć przetwarzanie konkretnej instrukcji oznaczonej etykietą w **switch** instrukcji. Oddziały IT do końca **switch** instrukcji. Bez **break**, program przechodzi do następnej instrukcji oznaczonej etykietą, wykonując instrukcje do momentu osiągnięcia **break** lub zakończenia instrukcji. Kontynuacja może być pożądana w niektórych sytuacjach.
+Możesz użyć instrukcji, __`break`__ aby zakończyć przetwarzanie konkretnej instrukcji oznaczonej etykietą w __`switch`__ instrukcji. Oddziały IT do końca __`switch`__ instrukcji. Bez __`break`__, program przechodzi do następnej instrukcji oznaczonej etykietą, wykonując instrukcje do momentu osiągnięcia __`break`__ lub zakończenia instrukcji. Kontynuacja może być pożądana w niektórych sytuacjach.
 
-Instrukcja **default** jest wykonywana, jeśli żadne **case** *wyrażenie stałe* nie jest równe wartości ** switch (** *wyrażenie* **)**. Jeśli nie ma żadnej **default** instrukcji i nie **case** znaleziono dopasowania, żadna z instrukcji w **switch** treści nie zostanie wykonana. Może istnieć co najwyżej jedna **default** instrukcja. **default** Instrukcja nie musi znajdować się na końcu. Może pojawić się w dowolnym miejscu w treści **switch** instrukcji. Etykieta **case** lub **default** może wystąpić tylko wewnątrz **switch** instrukcji.
+Instrukcja __`default`__ jest wykonywana, jeśli żadna __`case`__ *`constant-expression`* wartość nie jest równa wartości *`expression`*. Jeśli nie ma żadnej __`default`__ instrukcji i nie __`case`__ znaleziono dopasowania, żadna z instrukcji w __`switch`__ treści nie zostanie wykonana. Może istnieć co najwyżej jedna __`default`__ instrukcja. __`default`__ Instrukcja nie musi znajdować się na końcu. Może pojawić się w dowolnym miejscu w treści __`switch`__ instrukcji. Etykieta __`case`__ lub __`default`__ może wystąpić tylko wewnątrz __`switch`__ instrukcji.
 
-Typ **switch** *wyrażenia* i **case** *wyrażenia stałego* musi być liczbą całkowitą. Wartość każdego **case** *wyrażenia stałego* musi być unikatowa w treści instrukcji.
+Typ __`switch`__ *`expression`* __`case`__ i *`constant-expression`* musi być liczbą całkowitą. Wartość każdego z nich __`case`__ *`constant-expression`* musi być unikatowa w treści instrukcji.
 
-Etykiety **case** i **default** treści **switch** instrukcji są znaczące tylko w teście wstępnym, który określa, gdzie wykonywanie zostanie rozpoczęte w treści instrukcji. **switch** instrukcje mogą być zagnieżdżane. Wszystkie zmienne statyczne są inicjowane przed wykonaniem **switch** w instrukcjach.
+Etykiety __`case`__ i __`default`__ treści __`switch`__ instrukcji są znaczące tylko w teście wstępnym, który określa, gdzie wykonywanie zostanie rozpoczęte w treści instrukcji. __`switch`__ instrukcje mogą być zagnieżdżane. Wszystkie zmienne statyczne są inicjowane przed wykonaniem __`switch`__ w instrukcjach.
 
 > [!NOTE]
-> Deklaracje mogą pojawić się w nagłówku złożonej instrukcji tworzącej **switch** treść, ale inicjalizacje zawarte w deklaracjach nie są wykonywane. **switch** Instrukcja przekazuje bezpośrednio formant do instrukcji wykonywalnej w treści, pomijając wiersze zawierające inicjalizacje.
+> Deklaracje mogą pojawić się w nagłówku złożonej instrukcji tworzącej __`switch`__ treść, ale inicjalizacje zawarte w deklaracjach nie są wykonywane. __`switch`__ Instrukcja przekazuje bezpośrednio formant do instrukcji wykonywalnej w treści, pomijając wiersze zawierające inicjalizacje.
 
-W poniższych przykładach przedstawiono **switch** instrukcje:
+W poniższych przykładach przedstawiono __`switch`__ instrukcje:
 
 ```C
 switch( c )
@@ -75,7 +81,7 @@ switch( c )
 }
 ```
 
-Wszystkie trzy **switch** instrukcje treści w tym przykładzie są wykonywane `c` `'A'`, jeśli jest równe, ponieważ instrukcja nie **break** pojawia się przed poniższymi caseinstrukcjami. Sterowanie wykonywaniem jest przenoszone do pierwszej instrukcji`capital_a++;`() i kontynuuje w pozostałej części treści. Jeśli `c` wartość jest `'a'`równa `letter_a` i `total` jest zwiększana. Wartość `total` jest zwiększana tylko `c` wtedy, `'A'` gdy `'a'`nie jest równa lub.
+Wszystkie trzy __`switch`__ instrukcje treści w tym przykładzie są wykonywane `c` `'A'`, jeśli jest równe, ponieważ instrukcja nie __`break`__ pojawia się przed poniższymi __`case`__ instrukcjami. Sterowanie wykonywaniem jest przenoszone do pierwszej instrukcji`capital_a++;`() i kontynuuje w pozostałej części treści. Jeśli `c` wartość jest `'a'`równa `letter_a` i `total` jest zwiększana. Wartość `total` jest zwiększana tylko `c` wtedy, `'A'` gdy `'a'`nie jest równa lub.
 
 ```C
 switch( i )
@@ -92,9 +98,9 @@ switch( i )
 }
 ```
 
-W tym przykładzie instrukcja jest **break** zgodna z każdą instrukcją w **switch** treści. **break** Instrukcja wymusza wyjście z treści instrukcji po wykonaniu jednej instrukcji. Jeśli `i` wartość jest równa-1, `n` tylko jest zwiększana. **break** Poniższa instrukcja `n++;` powoduje, że kontrola wykonywania przeszedł z treści instrukcji, pomijając pozostałe instrukcje. Podobnie, jeśli `i` wartość jest równa 0, `z` wartość jest zwiększana tylko; Jeśli `i` wartość jest równa 1, `p` tylko jest zwiększana. Instrukcja Final **break** nie jest absolutnie konieczna, ponieważ kontrolka przechodzi poza treść na końcu złożonej instrukcji. Jest on uwzględniany w celu zapewnienia spójności.
+W tym przykładzie instrukcja jest __`break`__ zgodna z każdą instrukcją w __`switch`__ treści. __`break`__ Instrukcja wymusza wyjście z treści instrukcji po wykonaniu jednej instrukcji. Jeśli `i` wartość jest równa-1, `n` tylko jest zwiększana. __`break`__ Poniższa instrukcja `n++;` powoduje, że kontrola wykonywania przeszedł z treści instrukcji, pomijając pozostałe instrukcje. Podobnie, jeśli `i` wartość jest równa 0, `z` wartość jest zwiększana tylko; Jeśli `i` wartość jest równa 1, `p` tylko jest zwiększana. Instrukcja Final __`break`__ nie jest absolutnie konieczna, ponieważ kontrolka przechodzi poza treść na końcu złożonej instrukcji. Jest on uwzględniany w celu zapewnienia spójności.
 
-Pojedyncza instrukcja może zawierać wiele **case** etykiet, jak pokazano w poniższym przykładzie:
+Pojedyncza instrukcja może zawierać wiele __`case`__ etykiet, jak pokazano w poniższym przykładzie:
 
 ```C
 switch( c )
@@ -112,7 +118,7 @@ W tym przykładzie, jeśli *wyrażenie stałe* jest równe dowolnej literze `'a'
 
 ### <a name="microsoft-specific"></a>specyficzne dla firmy Microsoft
 
-Microsoft C nie ogranicza liczby case wartości w **switch** instrukcji. Liczba jest ograniczona tylko przez dostępną pamięć. ANSI C wymaga co najmniej 257 case etykiet w **switch** instrukcji.
+Microsoft C nie ogranicza liczby __`case`__ wartości w __`switch`__ instrukcji. Liczba jest ograniczona tylko przez dostępną pamięć. ANSI C wymaga co najmniej 257 __`case`__ etykiet w __`switch`__ instrukcji.
 
 W default przypadku oprogramowania Microsoft C są włączone rozszerzenia Microsoft. Aby wyłączyć te rozszerzenia, użyj opcji kompilatora [/za](../build/reference/za-ze-disable-language-extensions.md) .
 
