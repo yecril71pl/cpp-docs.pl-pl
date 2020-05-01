@@ -1,5 +1,5 @@
 ---
-title: klasa tablicy (standardowa biblioteka C++)| Dokumenty firmy Microsoft
+title: Array — Klasa (standardowa biblioteka C++) | Microsoft Docs
 ms.date: 11/13/2019
 f1_keywords:
 - array/std::array
@@ -96,16 +96,16 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: 90c68d00475a622ec89b81cc86639f63b1190d02
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a6cda0f0c66624158f7c2abfeabb5f54678d21b0
+ms.sourcegitcommit: 7b12cc4a4d3fcb261d67420fc3dd18652730008f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364942"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643648"
 ---
-# <a name="array-class-c-standard-library"></a>klasa tablicowa (standardowa biblioteka C++)
+# <a name="array-class-c-standard-library"></a>Array — Klasa (standardowa biblioteka C++)
 
-W tym artykule opisano `N` obiekt, który `Ty`kontroluje sekwencję długości elementów typu . Sekwencja jest przechowywana `Ty`jako tablica `array<Ty, N>` , zawarta w obiekcie.
+Opisuje obiekt, który kontroluje sekwencję długości `N` elementów typu. `Ty` Sekwencja jest przechowywana w postaci tablicy `Ty`, zawartej w `array<Ty, N>` obiekcie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -128,51 +128,51 @@ class array;
 |[const_iterator](#const_iterator)|Typ iteratora stałego dla kontrolowanej sekwencji.|
 |[const_pointer](#const_pointer)|Typ stałego wskaźnika do elementu.|
 |[const_reference](#const_reference)|Typ stałego odwołania do elementu.|
-|[Const_reverse_iterator](#const_reverse_iterator)|Typ stałego iteratora wstecznego dla kontrolowanej sekwencji.|
+|[const_reverse_iterator](#const_reverse_iterator)|Typ iteratora stałego zwrotnego dla kontrolowanej sekwencji.|
 |[difference_type](#difference_type)|Typ odległości ze znakiem między dwoma elementami.|
-|[Sterująca](#iterator)|Typ iteratora dla kontrolowanej sekwencji.|
+|[Iterator](#iterator)|Typ iteratora dla kontrolowanej sekwencji.|
 |[pointer](#pointer)|Typ wskaźnika do elementu.|
-|[Odwołanie](#reference)|Typ odwołania do elementu.|
-|[Reverse_iterator](#reverse_iterator)|Typ odwrotnego iteratora dla kontrolowanej sekwencji.|
+|[odwoła](#reference)|Typ odwołania do elementu.|
+|[reverse_iterator](#reverse_iterator)|Typ iteratora odwrotnego dla kontrolowanej sekwencji.|
 |[size_type](#size_type)|Typ odległości bez znaku między dwoma elementami.|
 |[value_type](#value_type)|Typ elementu.|
 
 |Funkcja elementów członkowskich|Opis|
 |-|-|
-|[tablica](#array)|Konstruuje obiekt tablicy.|
-|[Przypisać](#assign)|(Przestarzałe. Użyj `fill`.) Zastępuje wszystkie elementy.|
-|[O](#at)|Uzyskuje dostęp do elementu w określonym położeniu.|
+|[tablica](#array)|Konstruuje obiekt Array.|
+|[ponownie](#assign)|Zbędn. Użyj `fill`.) Zamienia wszystkie elementy.|
+|[w](#at)|Uzyskuje dostęp do elementu w określonej pozycji.|
 |[Wstecz](#back)|Uzyskuje dostęp do ostatniego elementu.|
-|[Rozpocząć](#begin)|Określa początek kontrolowanej sekwencji.|
-|[cbegin ( cbegin )](#cbegin)|Zwraca iteratora współrzędnych dostępu losowego do pierwszego elementu w tablicy.|
-|[cend](#cend)|Zwraca iterator const dostępu losowego, który wskazuje tuż za końcem tablicy.|
-|[Crbegin](#crbegin)|Zwraca iteratora konspiratora do pierwszego elementu w odwróconej tablicy.|
-|[Crend](#crend)|Zwraca iteratora konspiratora na końcu odwróconej tablicy.|
-|[Danych](#data)|Pobiera adres pierwszego elementu.|
-|[Pusty](#empty)|Sprawdza, czy elementy są obecne.|
-|[Końcu](#end)|Określa koniec kontrolowanej sekwencji.|
+|[zaczną](#begin)|Określa początek kontrolowanej sekwencji.|
+|[cbegin](#cbegin)|Zwraca iterator const dostępu swobodnego do pierwszego elementu w tablicy.|
+|[cend](#cend)|Zwraca iterator const dostępu swobodnego, który wskazuje tuż poza końcem tablicy.|
+|[crbegin —](#crbegin)|Zwraca iterator const do pierwszego elementu w odwróconej tablicy.|
+|[crend](#crend)|Zwraca iterator const do końca odwróconej tablicy.|
+|[Data](#data)|Pobiera adres pierwszego elementu.|
+|[puste](#empty)|Testuje, czy elementy są obecne.|
+|[punktów](#end)|Określa koniec kontrolowanej sekwencji.|
 |[fill](#fill)|Zastępuje wszystkie elementy określoną wartością.|
-|[Przednie](#front)|Uzyskuje dostęp do pierwszego elementu.|
-|[Max_size](#max_size)|Liczy liczbę elementów.|
-|[rbegin (rbegin)](#rbegin)|Wyznacza początek odwróconej kontrolowanej sekwencji.|
-|[Rend](#rend)|Wyznacza koniec odwróconej kontrolowanej sekwencji.|
-|[Rozmiar](#size)|Liczy liczbę elementów.|
-|[Wymiany](#swap)|Zamienia zawartości dwóch kontenerów.|
+|[FSB](#front)|Uzyskuje dostęp do pierwszego elementu.|
+|[max_size](#max_size)|Liczy liczbę elementów.|
+|[rbegin](#rbegin)|Określa początek odwróconej sekwencji kontrolowanej.|
+|[rend](#rend)|Określa koniec odwróconej kontrolowanej sekwencji.|
+|[size](#size)|Liczy liczbę elementów.|
+|[wymiany](#swap)|Zamienia zawartości dwóch kontenerów.|
 
 |Operator|Opis|
 |-|-|
-|[tablica::operator=](#op_eq)|Zastępuje kontrolowaną sekwencję.|
-|[tablica::operator\[\]](#op_at)|Uzyskuje dostęp do elementu w określonym położeniu.|
+|[Array:: operator =](#op_eq)|Zastępuje kontrolowaną sekwencję.|
+|[Array:: operator\[\]](#op_at)|Uzyskuje dostęp do elementu w określonej pozycji.|
 
 ## <a name="remarks"></a>Uwagi
 
-Typ ma domyślny `array()` konstruktor i `operator=`domyślny operator przypisania i spełnia `aggregate`wymagania dla pliku . W związku z `array<Ty, N>` tym obiekty typu można zainicjować przy użyciu inicjatora agregacji. Na przykład:
+Typ ma konstruktora `array()` domyślnego i domyślnego operatora `operator=`przypisania i spełnia wymagania dla. `aggregate` W związku z tym obiekty `array<Ty, N>` typu mogą być inicjowane za pomocą inicjatora agregacji. Na przykład:
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
 ```
 
-tworzy obiekt, `ai` który zawiera cztery wartości całkowite, inicjuje pierwsze trzy elementy do wartości 1, 2 i 3, odpowiednio, i inicjuje czwarty element do 0.
+Tworzy obiekt `ai` , który przechowuje cztery wartości całkowite, inicjuje pierwsze trzy elementy odpowiednio do wartości 1, 2 i 3, i inicjuje czwarty element do 0.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -180,9 +180,9 @@ tworzy obiekt, `ai` który zawiera cztery wartości całkowite, inicjuje pierwsz
 
 **Przestrzeń nazw:** std
 
-## <a name="arrayarray"></a><a name="array"></a>tablica::tablica
+## <a name="arrayarray"></a><a name="array"></a>Array:: Array
 
-Konstruuje obiekt tablicy.
+Konstruuje obiekt Array.
 
 ```cpp
 array();
@@ -192,14 +192,14 @@ array(const array& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Prawo*\
+*Kliknij*\
 Obiekt lub zakres do wstawienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślny konstruktor `array()` pozostawia kontrolowaną sekwencję niezainicjowaną (lub domyślnie zainicjowana). Służy do określania niezainicjowanej sekwencji kontrolowanej.
+Konstruktor `array()` domyślny pozostawia kontrolowanej sekwencji niezainicjowanej (lub domyślnie zainicjowany). Służy do określania niezainicjowanej kontrolowanej sekwencji.
 
-Konstruktor `array(const array& right)` kopii inicjuje kontrolowaną sekwencję z sekwencją [*prawo*`.begin()`, *prawo*`.end()`). Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej przez obiekt tablicy *po prawej stronie*.
+Konstruktor `array(const array& right)` kopiujący inicjuje kontrolowaną sekwencję z sekwencją [*Right*`.begin()`, *Right*`.end()`). Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej *przez obiekt Array*.
 
 ### <a name="example"></a>Przykład
 
@@ -239,13 +239,13 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arrayassign"></a><a name="assign"></a>tablica::przypisywanie
+## <a name="arrayassign"></a><a name="assign"></a>Array:: Assign
 
-Przestarzałe w C++11, zastąpione [wypełnieniem](#fill). Zastępuje wszystkie elementy.
+Przestarzałe w języku C++ 11, zastąpione przez [wypełnienie](#fill). Zamienia wszystkie elementy.
 
-## <a name="arrayat"></a><a name="at"></a>tablica::w
+## <a name="arrayat"></a><a name="at"></a>Array:: at
 
-Uzyskuje dostęp do elementu w określonym położeniu.
+Uzyskuje dostęp do elementu w określonej pozycji.
 
 ```cpp
 reference at(size_type off);
@@ -255,12 +255,12 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*wył.*\
-Położenie elementu dostępu.
+*Logowanie*\
+Pozycja elementu do uzyskania dostępu.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje elementów członkowskich zwracają odwołanie do elementu kontrolowanej sekwencji przy *wyłączonym*położeniu . Jeśli ta pozycja jest nieprawidłowa, funkcja `out_of_range`zgłasza obiekt klasy .
+Funkcje członkowskie zwracają odwołanie do elementu kontrolowanej sekwencji w pozycji *wyłączone*. Jeśli ta pozycja jest nieprawidłowa, funkcja zgłasza obiekt klasy `out_of_range`.
 
 ### <a name="example"></a>Przykład
 
@@ -289,7 +289,7 @@ int main()
 }
 ```
 
-## <a name="arrayback"></a><a name="back"></a>tablica::powrót
+## <a name="arrayback"></a><a name="back"></a>Array:: Back
 
 Uzyskuje dostęp do ostatniego elementu.
 
@@ -301,7 +301,7 @@ constexpr const_reference back() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje członkowskie zwracają odwołanie do ostatniego elementu kontrolowanej sekwencji, która musi być niepusta.
+Funkcje członkowskie zwracają odwołanie do ostatniego elementu kontrolowanej sekwencji, która nie może być pusta.
 
 ### <a name="example"></a>Przykład
 
@@ -334,7 +334,7 @@ int main()
 3
 ```
 
-## <a name="arraybegin"></a><a name="begin"></a>tablica::begin
+## <a name="arraybegin"></a><a name="begin"></a>Array:: BEGIN
 
 Określa początek kontrolowanej sekwencji.
 
@@ -345,7 +345,7 @@ const_iterator begin() const noexcept;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje członkowskie zwracają iteratora dostępu losowego, który wskazuje na pierwszy element sekwencji (lub po prostu poza koniec pustej sekwencji).
+Funkcje członkowskie zwracają Iterator dostępu swobodnego, który wskazuje na pierwszy element sekwencji (lub tuż poza końcem pustej sekwencji).
 
 ### <a name="example"></a>Przykład
 
@@ -379,9 +379,9 @@ int main()
 0
 ```
 
-## <a name="arraycbegin"></a><a name="cbegin"></a>tablica::cbegin
+## <a name="arraycbegin"></a><a name="cbegin"></a>Array:: cbegin
 
-Zwraca **iterator konspiratora,** który odnosi się do pierwszego elementu w zakresie.
+Zwraca iterator **const** , który dotyczy pierwszego elementu w zakresie.
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -389,13 +389,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator dostępu losowego, który wskazuje pierwszy element zakresu lub lokalizację tuż za końcem pustego zakresu (dla pustego **const** `cbegin() == cend()`zakresu).
+Iterator **stałej** dostępu swobodnego, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Uwagi
 
-Z wartością `cbegin`zwracaną , elementy w zakresie nie mogą być modyfikowane.
+Z wartością `cbegin`zwracaną nie można modyfikować elementów w zakresie.
 
-Tej funkcji elementu członkowskiego można `begin()` użyć zamiast funkcji elementu członkowskiego, aby zagwarantować, że zwracana jest `const_iterator`wartość . Zazwyczaj jest on używany w połączeniu ze słowem kluczowym [auto](../cpp/auto-cpp.md) odliczanie typu, jak pokazano w poniższym przykładzie. W przykładzie `Container` należy wziąć pod uwagę modyfikowalne (non-const) kontener wszelkiego rodzaju, który obsługuje **const** `begin()` i `cbegin()`.
+Można użyć tej funkcji elementu członkowskiego zamiast funkcji `begin()` składowej, aby zagwarantować, że wartość zwracana to `const_iterator`. Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy `Container` , że jest to modyfikowalny kontener **const**dowolnego rodzaju, który obsługuje `begin()` i `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -405,9 +405,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="arraycend"></a><a name="cend"></a>tablica::cend
+## <a name="arraycend"></a><a name="cend"></a>Array:: cend
 
-Zwraca **iterator const,** który odnosi się do lokalizacji tuż poza ostatnim elementem w zakresie.
+Zwraca iterator **const** , który odnosi się do lokalizacji jedynie poza ostatnim elementem w zakresie.
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -419,9 +419,9 @@ Iterator dostępu swobodnego, który wskazuje tuż za koniec zakresu.
 
 ### <a name="remarks"></a>Uwagi
 
-`cend`służy do testowania, czy iterator przeszedł koniec jego zakresu.
+`cend`służy do sprawdzania, czy iterator przeszedł koniec zakresu.
 
-Tej funkcji elementu członkowskiego można `end()` użyć zamiast funkcji elementu członkowskiego, aby zagwarantować, że zwracana jest `const_iterator`wartość . Zazwyczaj jest on używany w połączeniu ze słowem kluczowym [auto](../cpp/auto-cpp.md) odliczanie typu, jak pokazano w poniższym przykładzie. W przykładzie `Container` należy wziąć pod uwagę modyfikowalne (non-const) kontener wszelkiego rodzaju, który obsługuje **const** `end()` i `cend()`.
+Można użyć tej funkcji elementu członkowskiego zamiast funkcji `end()` składowej, aby zagwarantować, że wartość zwracana to `const_iterator`. Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy `Container` , że jest to modyfikowalny kontener **const**dowolnego rodzaju, który obsługuje `end()` i `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -431,9 +431,9 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-Wartość zwrócona `cend` przez nie powinny być wyłuskiwane.
+Nie można usunąć odwołania `cend` do wartości zwracanej przez.
 
-## <a name="arrayconst_iterator"></a><a name="const_iterator"></a>tablica::const_iterator
+## <a name="arrayconst_iterator"></a><a name="const_iterator"></a>Array:: const_iterator
 
 Typ iteratora stałego dla kontrolowanej sekwencji.
 
@@ -443,7 +443,7 @@ typedef implementation-defined const_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako stały iterator dostępu losowego dla kontrolowanej sekwencji.
+Typ opisuje obiekt, który może być używany jako iterator stałego dostępu swobodnego dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -481,7 +481,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="arrayconst_pointer"></a><a name="const_pointer"></a>tablica::const_pointer
+## <a name="arrayconst_pointer"></a><a name="const_pointer"></a>Array:: const_pointer
 
 Typ stałego wskaźnika do elementu.
 
@@ -491,7 +491,7 @@ typedef const Ty *const_pointer;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako stały wskaźnik do elementów sekwencji.
+Typ opisuje obiekt, który może obsłużyć jako stały wskaźnik do elementów sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -525,7 +525,7 @@ int main()
 0
 ```
 
-## <a name="arrayconst_reference"></a><a name="const_reference"></a>tablica::const_reference
+## <a name="arrayconst_reference"></a><a name="const_reference"></a>Array:: const_reference
 
 Typ stałego odwołania do elementu.
 
@@ -535,7 +535,7 @@ typedef const Ty& const_reference;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako stałe odwołanie do elementu kontrolowanej sekwencji.
+Typ opisuje obiekt, który może stanowić stałe odwołanie do elementu kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -569,9 +569,9 @@ int main()
 0
 ```
 
-## <a name="arrayconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>tablica::const_reverse_iterator
+## <a name="arrayconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>Array:: const_reverse_iterator
 
-Typ stałego iteratora wstecznego dla kontrolowanej sekwencji.
+Typ iteratora stałego zwrotnego dla kontrolowanej sekwencji.
 
 ```cpp
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
@@ -579,7 +579,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako stały iterator odwrotny dla kontrolowanej sekwencji.
+Typ opisuje obiekt, który może być używany jako ciągły iterator odwrotny dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -613,9 +613,9 @@ int main()
 3
 ```
 
-## <a name="arraycrbegin"></a><a name="crbegin"></a>tablica::crbegin
+## <a name="arraycrbegin"></a><a name="crbegin"></a>Array:: crbegin —
 
-Zwraca iteratora konspiratora do pierwszego elementu w odwróconej tablicy.
+Zwraca iterator const do pierwszego elementu w odwróconej tablicy.
 
 ```cpp
 const_reverse_iterator crbegin() const;
@@ -623,11 +623,11 @@ const_reverse_iterator crbegin() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Const reverse random-access iterator adresowania pierwszy element w odwróconej tablicy lub adresowania, co było ostatnim elementem w tablicy nieodwrotowej.
+Iterator typu stała odwrotnie dostęp losowy odnoszący się do pierwszego elementu w odwróconej tablicy lub na adres, który był ostatnim elementem w nieodwróconej tablicy.
 
 ### <a name="remarks"></a>Uwagi
 
-Z wartością `crbegin`zwracaną obiektu tablicy nie można modyfikować.
+Z wartością `crbegin`zwracaną nie można zmodyfikować obiektu Array.
 
 ### <a name="example"></a>Przykład
 
@@ -657,9 +657,9 @@ The first element of array is 1.
 The first element of the reversed array is 2.
 ```
 
-## <a name="arraycrend"></a><a name="crend"></a>tablica::crend
+## <a name="arraycrend"></a><a name="crend"></a>Array:: crend
 
-Zwraca iterator konspiratora, który odnosi się do lokalizacji, która zastępuje ostatni element w odwróconej tablicy.
+Zwraca iterator const, który odnosi się do lokalizacji po ostatnim elemencie w odwróconej tablicy.
 
 ```cpp
 const_reverse_iterator crend() const noexcept;
@@ -667,17 +667,17 @@ const_reverse_iterator crend() const noexcept;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Const reverse random-access iterator, który adresuje lokalizację po ostatniej pozycji elementu w odwróconej tablicy (lokalizacja, która poprzedziła pierwszy element w tablicy nieodwrotowej).
+Iterator typu const odwrotnie dostępu swobodnego, który odnosi się do lokalizacji po ostatnim elemencie w odwróconej tablicy (lokalizacja, która poprzedza pierwszy element w nieodwróconej tablicy).
 
 ### <a name="remarks"></a>Uwagi
 
-`crend`jest używany z odwróconą tablicą, tak jak [tablica::cend](#cend) jest używana z tablicą.
+`crend`jest używany z odwróconą tablicą, tak jak [Array:: cend](#cend) jest używany z tablicą.
 
-Z zwracaną `crend` wartością (odpowiednio zduchrzeni), obiekt tablicy nie może być modyfikowany.
+Po wartości zwracanej `crend` (odpowiednio zmniejszonej) obiekt Array nie może być modyfikowany.
 
-`crend`można sprawdzić, czy odwrotnej iterator osiągnął koniec jego tablicy.
+`crend`może służyć do sprawdzenia, czy iterator odwrotny osiągnął koniec tablicy.
 
-Wartość zwrócona `crend` przez nie powinny być wyłuskiwane.
+Nie można usunąć odwołania `crend` do wartości zwracanej przez.
 
 ### <a name="example"></a>Przykład
 
@@ -701,7 +701,7 @@ int main( )
 1
 ```
 
-## <a name="arraydata"></a><a name="data"></a>tablica::data
+## <a name="arraydata"></a><a name="data"></a>Tablica::d ATA
 
 Pobiera adres pierwszego elementu.
 
@@ -747,7 +747,7 @@ int main()
 0
 ```
 
-## <a name="arraydifference_type"></a><a name="difference_type"></a>tablica::dfference_type
+## <a name="arraydifference_type"></a><a name="difference_type"></a>Tablica::d ifference_type
 
 Typ odległości ze znakiem między dwoma elementami.
 
@@ -757,7 +757,7 @@ typedef std::ptrdiff_t difference_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ liczby całkowitej podpisu opisuje obiekt, który może reprezentować różnicę między adresami dowolnych dwóch elementów w kontrolowanej sekwencji. Jest synonimem typu `std::ptrdiff_t`.
+Typ Liczba całkowita ze znakiem opisuje obiekt, który może reprezentować różnicę między adresami wszystkich dwóch elementów w kontrolowanej sekwencji. Jest to synonim dla typu `std::ptrdiff_t`.
 
 ### <a name="example"></a>Przykład
 
@@ -791,7 +791,7 @@ int main()
 -4
 ```
 
-## <a name="arrayempty"></a><a name="empty"></a>tablica::empty
+## <a name="arrayempty"></a><a name="empty"></a>Array:: Empty
 
 Sprawdza, czy nie ma żadnych elementów.
 
@@ -801,7 +801,7 @@ constexpr bool empty() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zwraca `N == 0`wartość true tylko wtedy, gdy .
+Funkcja członkowska zwraca wartość true tylko `N == 0`wtedy, gdy.
 
 ### <a name="example"></a>Przykład
 
@@ -841,7 +841,7 @@ false
 true
 ```
 
-## <a name="arrayend"></a><a name="end"></a>tablica::end
+## <a name="arrayend"></a><a name="end"></a>Array:: end
 
 Określa koniec kontrolowanej sekwencji.
 
@@ -853,7 +853,7 @@ const_reference end() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje członkowskie zwracają iteratora dostępu losowego, który wskazuje tuż za końcem sekwencji.
+Funkcje członkowskie zwracają Iterator dostępu swobodnego, który wskazuje tuż poza końcem sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -887,9 +887,9 @@ int main()
 3
 ```
 
-## <a name="arrayfill"></a><a name="fill"></a>tablica::wypełnienie
+## <a name="arrayfill"></a><a name="fill"></a>Array:: Fill
 
-Wymazywanie tablicy i kopiuje określone elementy do pustej tablicy.
+Wymazuje tablicę i kopiuje określone elementy do pustej tablicy.
 
 ```cpp
 void fill(const Type& val);
@@ -899,11 +899,11 @@ void fill(const Type& val);
 
 |Parametr|Opis|
 |-|-|
-|*Val*|Wartość elementu wstawianego do tablicy.|
+|*użyte*|Wartość wstawianego elementu do tablicy.|
 
 ### <a name="remarks"></a>Uwagi
 
-`fill`zastępuje każdy element tablicy określoną wartością.
+`fill`zamienia każdy element tablicy na określoną wartość.
 
 ### <a name="example"></a>Przykład
 
@@ -925,7 +925,7 @@ int main()
 
     v1.fill(3);
     cout << "v1 = ";
-    for (const auto& it : c0)
+    for (const auto& it : v1)
     {
         std::cout << " " << it;
     }
@@ -933,7 +933,7 @@ int main()
 }
 ```
 
-## <a name="arrayfront"></a><a name="front"></a>tablica::przód
+## <a name="arrayfront"></a><a name="front"></a>Array:: front
 
 Uzyskuje dostęp do pierwszego elementu.
 
@@ -945,7 +945,7 @@ constexpr const_reference front() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje członkowskie zwracają odwołanie do pierwszego elementu kontrolowanej sekwencji, która musi być niepusta.
+Funkcje członkowskie zwracają odwołanie do pierwszego elementu kontrolowanej sekwencji, która nie może być pusta.
 
 ### <a name="example"></a>Przykład
 
@@ -978,7 +978,7 @@ int main()
 0
 ```
 
-## <a name="arrayiterator"></a><a name="iterator"></a>tablica::iterator
+## <a name="arrayiterator"></a><a name="iterator"></a>Array:: iterator
 
 Typ iteratora dla kontrolowanej sekwencji.
 
@@ -988,7 +988,7 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako iterator dostępu losowego dla kontrolowanej sekwencji.
+Typ opisuje obiekt, który może działać jako Iterator dostępu swobodnego dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -1027,7 +1027,7 @@ it1: 0 1 2 3
 it2: 0
 ```
 
-## <a name="arraymax_size"></a><a name="max_size"></a>tablica::max_size
+## <a name="arraymax_size"></a><a name="max_size"></a>Array:: max_size
 
 Liczy liczbę elementów.
 
@@ -1037,7 +1037,7 @@ constexpr size_type max_size() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu `N`członkowskiego zwraca .
+Funkcja członkowska zwraca `N`wartość.
 
 ### <a name="example"></a>Przykład
 
@@ -1070,9 +1070,9 @@ int main()
 4
 ```
 
-## <a name="arrayoperator"></a><a name="op_at"></a>tablica::operator[]
+## <a name="arrayoperator"></a><a name="op_at"></a>Array:: operator []
 
-Uzyskuje dostęp do elementu w określonym położeniu.
+Uzyskuje dostęp do elementu w określonej pozycji.
 
 ```cpp
 reference operator[](size_type off);
@@ -1082,14 +1082,14 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Parametry
 
-*wył.*\
-Położenie elementu dostępu.
+*Logowanie*\
+Pozycja elementu do uzyskania dostępu.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje elementów członkowskich zwracają odwołanie do elementu kontrolowanej sekwencji przy *wyłączonym*położeniu . Jeśli ta pozycja jest nieprawidłowa, zachowanie jest niezdefiniowane.
+Funkcje członkowskie zwracają odwołanie do elementu kontrolowanej sekwencji w pozycji *wyłączone*. Jeśli ta pozycja jest nieprawidłowa, zachowanie jest niezdefiniowane.
 
-Istnieje również non-element [get](array-functions.md#get) funkcja dostępna, aby uzyskać odwołanie do elementu **tablicy**.
+Dostępna jest również funkcja [Get](array-functions.md#get) poza składową, która umożliwia uzyskanie odwołania do elementu **tablicy**.
 
 ### <a name="example"></a>Przykład
 
@@ -1123,7 +1123,7 @@ int main()
 1 3
 ```
 
-## <a name="arrayoperator"></a><a name="op_eq"></a>tablica::operator=
+## <a name="arrayoperator"></a><a name="op_eq"></a>Array:: operator =
 
 Zastępuje kontrolowaną sekwencję.
 
@@ -1133,12 +1133,12 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="parameters"></a>Parametry
 
-*Prawo*\
+*Kliknij*\
 Kontener do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator elementu członkowskiego przypisuje każdy element *prawa* do odpowiedniego elementu `*this`kontrolowanej sekwencji, a następnie zwraca . Można go użyć do zastąpienia kontrolowanej sekwencji kopią kontrolowanej sekwencji *w prawej*.
+Operator członkowski przypisuje każdy element *bezpośrednio* do odpowiadającego elementu kontrolowanej sekwencji, a następnie zwraca `*this`. Służy do zastępowania kontrolowanej sekwencji kopią kontrolowanej sekwencji *po prawej stronie*.
 
 ### <a name="example"></a>Przykład
 
@@ -1178,7 +1178,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arraypointer"></a><a name="pointer"></a>tablica::pointer
+## <a name="arraypointer"></a><a name="pointer"></a>Tablica::p ointer
 
 Typ wskaźnika do elementu.
 
@@ -1188,7 +1188,7 @@ typedef Ty *pointer;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako wskaźnik do elementów sekwencji.
+Typ opisuje obiekt, który może obsłużyć jako wskaźnik do elementów sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -1222,9 +1222,9 @@ int main()
 0
 ```
 
-## <a name="arrayrbegin"></a><a name="rbegin"></a>tablica::rbegin
+## <a name="arrayrbegin"></a><a name="rbegin"></a>Array:: rbegin
 
-Wyznacza początek odwróconej kontrolowanej sekwencji.
+Określa początek odwróconej sekwencji kontrolowanej.
 
 ```cpp
 reverse_iterator rbegin()noexcept;
@@ -1233,7 +1233,7 @@ const_reverse_iterator rbegin() const noexcept;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje członkowskie zwracają odwrotnej iteratora, który wskazuje tuż za koniec kontrolowanej sekwencji. W związku z tym wyznacza początek odwrotnej sekwencji.
+Funkcje członkowskie zwracają iterator odwrotny, który wskazuje tuż poza końcem kontrolowanej sekwencji. W związku z tym określa początek sekwencji odwrotnej.
 
 ### <a name="example"></a>Przykład
 
@@ -1267,7 +1267,7 @@ int main()
 3
 ```
 
-## <a name="arrayreference"></a><a name="reference"></a>tablica::odwołanie
+## <a name="arrayreference"></a><a name="reference"></a>Array:: Reference
 
 Typ odwołania do elementu.
 
@@ -1277,7 +1277,7 @@ typedef Ty& reference;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako odwołanie do elementu kontrolowanej sekwencji.
+Typ opisuje obiekt, który może obsłużyć jako odwołanie do elementu kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -1311,9 +1311,9 @@ int main()
 0
 ```
 
-## <a name="arrayrend"></a><a name="rend"></a>tablica::rend
+## <a name="arrayrend"></a><a name="rend"></a>Array:: rend
 
-Wyznacza koniec odwróconej kontrolowanej sekwencji.
+Określa koniec odwróconej kontrolowanej sekwencji.
 
 ```cpp
 reverse_iterator rend()noexcept;
@@ -1322,7 +1322,7 @@ const_reverse_iterator rend() const noexcept;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje członkowskie zwracają odwrotnej iteratora, który wskazuje na pierwszy element sekwencji (lub po prostu poza koniec pustej sekwencji)). W związku z tym wyznacza koniec sekwencji odwrotnej.
+Funkcje członkowskie zwracają iterator odwrotny, który wskazuje na pierwszy element sekwencji (lub tuż poza końcem pustej sekwencji)). W związku z tym wyznacza koniec sekwencji odwrotnej.
 
 ### <a name="example"></a>Przykład
 
@@ -1356,9 +1356,9 @@ int main()
 0
 ```
 
-## <a name="arrayreverse_iterator"></a><a name="reverse_iterator"></a>tablica::reverse_iterator
+## <a name="arrayreverse_iterator"></a><a name="reverse_iterator"></a>Array:: reverse_iterator
 
-Typ odwrotnego iteratora dla kontrolowanej sekwencji.
+Typ iteratora odwrotnego dla kontrolowanej sekwencji.
 
 ```cpp
 typedef std::reverse_iterator<iterator> reverse_iterator;
@@ -1366,7 +1366,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt, który może służyć jako odwrotnej iterator dla kontrolowanej sekwencji.
+Typ opisuje obiekt, który może obsłużyć iterator odwrotny dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -1400,7 +1400,7 @@ int main()
 3
 ```
 
-## <a name="arraysize"></a><a name="size"></a>tablica::size
+## <a name="arraysize"></a><a name="size"></a>Array:: size
 
 Liczy liczbę elementów.
 
@@ -1410,7 +1410,7 @@ constexpr size_type size() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu `N`członkowskiego zwraca .
+Funkcja członkowska zwraca `N`wartość.
 
 ### <a name="example"></a>Przykład
 
@@ -1443,7 +1443,7 @@ int main()
 4
 ```
 
-## <a name="arraysize_type"></a><a name="size_type"></a>tablica::size_type
+## <a name="arraysize_type"></a><a name="size_type"></a>Array:: size_type
 
 Typ niepodpisanej odległości między dwoma elementami.
 
@@ -1453,7 +1453,7 @@ typedef std::size_t size_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Niepodpisany typ liczby całkowitej opisuje obiekt, który może reprezentować długość dowolnej kontrolowanej sekwencji. Jest synonimem typu `std::size_t`.
+Typ liczby całkowitej bez znaku opisuje obiekt, który może reprezentować długość dowolnej kontrolowanej sekwencji. Jest to synonim dla typu `std::size_t`.
 
 ### <a name="example"></a>Przykład
 
@@ -1487,9 +1487,9 @@ int main()
 4
 ```
 
-## <a name="arrayswap"></a><a name="swap"></a>tablica::swap
+## <a name="arrayswap"></a><a name="swap"></a>Array:: swap
 
-Zamienia zawartość tej tablicy z inną tablicą.
+Zamienia zawartość tej tablicy na inną tablicę.
 
 ```cpp
 void swap(array& right);
@@ -1497,14 +1497,14 @@ void swap(array& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Prawo*\
-Tablica do wymiany zawartości z.
+*Kliknij*\
+Tablica, do której ma zostać zamieniony zawartość.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zamienia kontrolowane `*this` sekwencje między i *po prawej stronie*. Wykonuje szereg przypisań elementów i wywołań `N`konstruktora proporcjonalnie do .
+Funkcja członkowska zamienia kontrolowane sekwencje między `*this` i *po prawej*. Wykonuje wiele przypisań elementów i wywołań konstruktora proporcjonalnie do `N`.
 
-Istnieje również funkcja [wymiany](array-functions.md#swap) niebędącej członkiem dostępna do wymiany dwóch wystąpień **tablicy.**
+Dostępna jest również funkcja [zamiany](array-functions.md#swap) poza składową, która umożliwia zamianę dwóch wystąpień **tablicy** .
 
 ### <a name="example"></a>Przykład
 
@@ -1553,7 +1553,7 @@ int main()
 0 1 2 3
 ```
 
-## <a name="arrayvalue_type"></a><a name="value_type"></a>tablica::value_type
+## <a name="arrayvalue_type"></a><a name="value_type"></a>Array:: value_type
 
 Typ elementu.
 
@@ -1563,7 +1563,7 @@ typedef Ty value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem parametru `Ty`szablonu .
+Typ jest synonimem dla parametru `Ty`szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -1600,6 +1600,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[\<>tablicowe](../standard-library/array.md)
+[\<>tablicy](../standard-library/array.md)
