@@ -1,54 +1,54 @@
 ---
-title: Instalowanie obciążenia systemu Linux w programie Visual Studio w programie Visual Studio
-description: W tym artykule opisano sposób pobierania, instalowania i konfigurowania obciążenia systemu Linux dla języka C++ w programie Visual Studio.
-ms.date: 06/11/2019
+title: Instalowanie obciążenia C++ w systemie Linux w programie Visual Studio
+description: Jak pobrać, zainstalować i skonfigurować obciążenie systemu Linux dla języka C++ w programie Visual Studio.
+ms.date: 05/03/2020
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 8e10521ab35f3d85ced8bffd771b4e101d4d4fe6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bc75610aaefe2a3bdd919cbc4dd81413202794c6
+ms.sourcegitcommit: 8a01ae145bc65f5bc90d6e47b4a1bdf47b073ee7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364341"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765750"
 ---
-# <a name="download-install-and-set-up-the-linux-workload"></a>Pobieranie, instalowanie i konfigurowanie obciążenia systemu Linux
+# <a name="download-install-and-set-up-the-linux-workload"></a>Pobieranie, Instalowanie i Konfigurowanie obciążenia systemu Linux
 
 ::: moniker range="vs-2015"
 
-Projekty systemu Linux są obsługiwane w programie Visual Studio 2017 i nowszych.
+Projekty systemu Linux są obsługiwane w programie Visual Studio 2017 i nowszych. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-Ide programu Visual Studio w systemie Windows służy do tworzenia, edytowania i debugowania projektów C++, które są wykonywane na zdalnym systemie Linux, maszynie wirtualnej lub [podsystemie Windows dla systemu Linux.](/windows/wsl/about)
+Za pomocą środowiska IDE programu Visual Studio w systemie Windows można tworzyć, edytować i debugować projekty w języku C++, które są wykonywane w zdalnym systemie Linux, maszynie wirtualnej lub [podsystemie Windows dla systemu Linux](/windows/wsl/about).
 
-Można pracować na istniejącej bazy kodu, który używa CMake bez konieczności konwertowania go do projektu programu Visual Studio. Jeśli baza kodu jest wieloplatformowa, można kierować zarówno windows i linux z poziomu programu Visual Studio. Na przykład można edytować, tworzyć i debugować kod w systemie Windows za pomocą programu Visual Studio, a następnie szybko przekierować projekt dla systemu Linux do tworzenia i debugowania w środowisku systemu Linux. Pliki nagłówkowe systemu Linux są automatycznie kopiowane na komputerze lokalnym, gdzie visual studio używa ich do zapewnienia pełnej obsługi IntelliSense (zakończenie instrukcji, Przejdź do definicji i tak dalej).
+Możesz korzystać z istniejącej bazy kodu, która używa CMake bez konieczności konwertowania jej na projekt programu Visual Studio. Jeśli baza kodu jest międzyplatformowa, można wskazać zarówno system Windows, jak i Linux z poziomu programu Visual Studio. Na przykład można edytować, kompilować i debugować kod w systemie Windows przy użyciu programu Visual Studio. Następnie szybko Przekieruj projekt dla systemu Linux do kompilowania i debugowania w środowisku systemu Linux. Pliki nagłówkowe systemu Linux są automatycznie kopiowane na komputer lokalny. Program Visual Studio używa ich do zapewnienia pełnej obsługi technologii IntelliSense (uzupełniania instrukcji, przejdź do definicji itd.).
 
-W każdym z tych scenariuszy wymagane jest tworzenie systemu Linux z obciążeniem **języka C++.**
+W przypadku każdego z tych scenariuszy wymagane jest programowanie dla systemu **Linux przy użyciu języka C++** .
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-## <a name="visual-studio-setup"></a>Konfiguracja programu Visual Studio
+## <a name="visual-studio-setup"></a>Instalator programu Visual Studio
 
-1. Wpisz "Instalator programu Visual Studio" w polu wyszukiwania systemu Windows:
+1. W polu wyszukiwania systemu Windows wpisz "Instalator programu Visual Studio":
 
    ![Pole wyszukiwania systemu Windows](media/visual-studio-installer-search.png)
 
-1. Poszukaj instalatora w obszarze Wyniki **aplikacji** i kliknij go dwukrotnie. Po otwarciu instalatora wybierz pozycję **Modyfikuj**, a następnie kliknij kartę **Obciążenia.** Przewiń w dół do **innych zestawów narzędzi** i wybierz programowanie systemu Linux z obciążeniem **języka C++.**
+1. Poszukaj Instalatora w obszarze wyniki **aplikacji** i kliknij go dwukrotnie. Po otwarciu Instalatora wybierz pozycję **Modyfikuj**, a następnie kliknij kartę **obciążenia** . Przewiń w dół do **innych zestawów narzędzi** i wybierz pozycję Programowanie dla systemu **Linux przy użyciu języka C++** .
 
-   ![Obciążenie programu Visual C++ dla programu Linux Development](media/linuxworkload.png)
+   ![Obciążenie Visual C++ for Linux Development](media/linuxworkload.png)
 
-1. Jeśli kierujesz reklamy na IoT lub platformy osadzone, przejdź do okienka **Szczegóły instalacji** po prawej stronie. W obszarze **Rozwoju Linuksa z C++** rozwiń **opcjonalne komponenty**i wybierz składniki, których potrzebujesz. CMake wsparcie dla Linuksa jest zaznaczone domyślnie.
+1. Jeśli chcesz wybrać platformy IoT lub Embedded, przejdź do okienka **szczegóły instalacji** po prawej stronie. W obszarze **Programowanie dla systemu Linux przy użyciu języka C++** rozwiń węzeł **składniki opcjonalne**i wybierz potrzebne składniki. Obsługa CMake dla systemu Linux jest domyślnie zaznaczona.
 
-1. Kliknij **przycisk Modyfikuj,** aby kontynuować instalację.
+1. Kliknij przycisk **Modyfikuj** , aby kontynuować instalację.
 
 ## <a name="options-for-creating-a-linux-environment"></a>Opcje tworzenia środowiska systemu Linux
 
-Jeśli nie masz jeszcze komputera z systemem Linux, możesz utworzyć maszynę wirtualną systemu Linux na platformie Azure. Aby uzyskać więcej informacji, zobacz [Szybki start: Tworzenie maszyny wirtualnej systemu Linux w witrynie Azure portal](/azure/virtual-machines/linux/quick-create-portal).
+Jeśli nie masz jeszcze maszyny z systemem Linux, możesz utworzyć maszynę wirtualną z systemem Linux na platformie Azure. Aby uzyskać więcej informacji, zobacz [Szybki Start: Tworzenie maszyny wirtualnej z systemem Linux w Azure Portal](/azure/virtual-machines/linux/quick-create-portal).
 
-W systemie Windows 10 możesz zainstalować i kierować swoją ulubioną dystrybucję Linuksa na podsystem windowsowy dla systemu Linux (WSL). Aby uzyskać więcej informacji, zobacz [Podręcznik instalacji systemu Windows dla systemu Linux dla systemu Windows 10](/windows/wsl/install-win10). Jeśli nie możesz uzyskać dostępu do Sklepu Windows, możesz [ręcznie pobrać pakiety dystrybucji WSL](/windows/wsl/install-manual). WSL jest wygodnym środowiskiem konsoli, ale nie jest zalecane dla aplikacji graficznych.
+W systemie Windows 10 można zainstalować i wskazać Ulubione dystrybucji z systemem Linux w podsystemie Windows dla systemu Linux (WSL). Aby uzyskać więcej informacji, zobacz [Przewodnik instalacji systemu Windows w systemie Linux dla systemu Windows 10](/windows/wsl/install-win10). Jeśli nie możesz uzyskać dostępu do sklepu Windows, możesz [ręcznie pobrać pakiety WSL dystrybucji](/windows/wsl/install-manual). WSL to wygodne środowisko konsoli, ale nie jest to zalecane w przypadku aplikacji graficznych.
 
 ::: moniker-end
 
@@ -56,15 +56,15 @@ W systemie Windows 10 możesz zainstalować i kierować swoją ulubioną dystryb
 
 Projekty systemu Linux w programie Visual Studio wymagają zainstalowania następujących zależności w zdalnym systemie Linux lub WSL:
 
-- **Kompilator** — Visual Studio 2019 ma nieszablonową obsługę GCC i [Clang](/cpp/build/clang-support-cmake?view=vs-2019).
-- **gdb** — Visual Studio automatycznie uruchamia gdb w systemie Linux i używa front-end debugera Visual Studio, aby zapewnić pełną wierność debugowania środowiska w systemie Linux.
-- **rsync** i **zip** - włączenie rsync i zip pozwala Visual Studio wyodrębnić pliki nagłówkowe z systemu Linux do systemu plików Windows do użytku przez IntelliSense.
+- **Kompilator programu** Visual Studio 2019 ma pełną pomoc techniczną dla programu i [Clang](/cpp/build/clang-support-cmake?view=vs-2019).
+- **GDB** — program Visual Studio automatycznie uruchamia GDB w systemie Linux i używa frontonu debugera programu Visual Studio, aby zapewnić środowisko debugowania pełnej wierności w systemie Linux.
+- **rsync** i **zip** — włączenie funkcji rsync i zip umożliwia programowi Visual Studio wyodrębnienie plików nagłówkowych z systemu Linux do systemu plików Windows w celu użycia przez funkcję IntelliSense.
 - **make**
-- **openssh-server** (tylko zdalne systemy Linux) — Visual Studio łączy się ze zdalnymi systemami Linux za pomocą bezpiecznego połączenia SSH.
-- **CMake** (CMake projektów tylko) - Można zainstalować [statycznie połączone binarki Microsoft CMake dla Linuksa](https://github.com/microsoft/CMake/releases).
-- **ninja-build** (tylko projekty CMake)- [Ninja](https://ninja-build.org/) jest domyślnym generatorem konfiguracji Linuksa i WSL w programie Visual Studio 2019 w wersji 16.6 lub nowszej.
+- **OpenSSH — serwer** (tylko systemy zdalnego systemu Linux) — program Visual Studio nawiązuje połączenie ze zdalnymi systemami Linux za pośrednictwem bezpiecznego połączenia SSH.
+- **CMAKE** (tylko projekty CMAKE) — można zainstalować [statycznie połączone pliki binarne](https://github.com/microsoft/CMake/releases)firmy Microsoft dla systemu Linux.
+- **Ninja-Build** (tylko projekty CMAKE) — [Ninja](https://ninja-build.org/) to domyślny generator dla konfiguracji systemów Linux i WSL w programie Visual Studio 2019 w wersji 16,6 lub nowszej.
 
-Następujące polecenia zakładają, że używasz g++ zamiast clang.
+W poniższych poleceniach przyjęto założenie, że używasz funkcji g + + zamiast Clang.
 
 ::: moniker-end
 
@@ -72,20 +72,20 @@ Następujące polecenia zakładają, że używasz g++ zamiast clang.
 
 Projekty systemu Linux w programie Visual Studio wymagają zainstalowania następujących zależności w zdalnym systemie Linux lub WSL:
 
-- **gcc** — Visual Studio 2017 ma gotowe wsparcie dla GCC.
-- **gdb** — Visual Studio automatycznie uruchamia gdb w systemie Linux i używa front-end debugera Visual Studio, aby zapewnić pełną wierność debugowania środowiska w systemie Linux.
-- **rsync** i **zip** - włączenie rsync i zip pozwala Visual Studio wyodrębnić pliki nagłówkowe z systemu Linux do systemu plików Windows do wykorzystania dla IntelliSense.
+- **z** działem IT — program Visual Studio 2017 zapewnia pełną obsługę programu w zatoce.
+- **GDB** — program Visual Studio automatycznie uruchamia GDB w systemie Linux i używa frontonu debugera programu Visual Studio, aby zapewnić obsługę debugowania w trybie pełnoekranowym w systemie Linux.
+- **rsync** i **zip** — dołączenie rsync i zip umożliwia programowi Visual Studio wyodrębnienie plików nagłówkowych z systemu Linux do systemu plików Windows, aby można było korzystać z funkcji IntelliSense.
 - **make**
-- **openssh-server** — visual studio łączy się ze zdalnymi systemami Linux za pomocą bezpiecznego połączenia SSH.
-- **CMake** (CMake projektów tylko) - Można zainstalować [statycznie połączone binarki Microsoft CMake dla Linuksa](https://github.com/microsoft/CMake/releases).
+- **OpenSSH — serwer** — program Visual Studio nawiązuje połączenie ze zdalnym systemem Linux za pośrednictwem bezpiecznego połączenia SSH.
+- **CMAKE** (tylko projekty CMAKE) — można zainstalować [statycznie połączone pliki binarne](https://github.com/microsoft/CMake/releases)firmy Microsoft dla systemu Linux.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-## <a name="linux-setup-ubuntu-on-wsl"></a>Konfiguracja Linuksa: Ubuntu na WSL
+## <a name="linux-setup-ubuntu-on-wsl"></a>Konfiguracja systemu Linux: Ubuntu on WSL
 
-Podczas kierowania WSL, nie ma potrzeby, aby dodać połączenie zdalne lub skonfigurować SSH w celu tworzenia i debugowania. **zip** i **rsync** są wymagane do automatycznej synchronizacji nagłówków linuksa z programem Visual Studio dla obsługi intellisense. Jeśli wymagane aplikacje nie są jeszcze obecne, można je zainstalować w następujący sposób. **ninja-build** jest wymagany tylko dla projektów CMake.
+Gdy jesteś celem WSL, nie ma potrzeby dodawania połączenia zdalnego ani konfigurowania protokołu SSH do kompilowania i debugowania. Elementy **zip** i **rsync** są wymagane do automatycznej synchronizacji nagłówków systemu Linux z programem Visual Studio na potrzeby obsługi technologii IntelliSense. **Ninja — kompilacja** jest wymagana tylko dla projektów CMAKE. Jeśli wymagane aplikacje nie są jeszcze obecne, można je zainstalować przy użyciu tego polecenia:
 
 ```bash
 sudo apt-get install g++ gdb make ninja-build rsync zip
@@ -95,25 +95,25 @@ sudo apt-get install g++ gdb make ninja-build rsync zip
 
 ::: moniker range=">=vs-2017"
 
-## <a name="ubuntu-on-remote-linux-systems"></a>Ubuntu na zdalnych systemach Linux
+## <a name="ubuntu-on-remote-linux-systems"></a>Ubuntu w zdalnych systemach Linux
 
-Docelowy system Linux musi mieć **openssh-server**, **g++**, **gdb**, **ninja-build** (tylko projekty CMake), i **zrobić** zainstalowany, a demon ssh musi być uruchomiony. **zip** i **rsync** są wymagane do automatycznej synchronizacji zdalnych nagłówków z lokalnym komputerem w celu uzyskania obsługi intellisense. Jeśli te aplikacje nie są jeszcze obecne, można je zainstalować w następujący sposób:
+Docelowy system Linux musi **mieć zainstalowany program** **OpenSSH-Server**, **g + +**, **GDB**i. **Ninja — kompilacja** jest wymagana tylko dla projektów CMAKE. Demon **SSH** musi być uruchomiony. elementy **zip** i **rsync** są wymagane do automatycznej synchronizacji nagłówków zdalnych z maszyną lokalną na potrzeby obsługi technologii IntelliSense. Jeśli te aplikacje nie są jeszcze obecne, można je zainstalować w następujący sposób:
 
-1. W wierszu polecenia powłoki na komputerze z systemem Linux uruchom:
+1. W wierszu polecenia powłoki na komputerze z systemem Linux Uruchom polecenie:
 
    ```bash
    sudo apt-get install openssh-server g++ gdb make ninja-build rsync zip
    ```
 
-   Może zostać wyświetlony monit o podanie hasła głównego z powodu polecenia sudo.  Jeśli tak, wprowadź go i kontynuuj. Po zakończeniu, wymagane usługi i narzędzia są instalowane.
+   Może zostać wyświetlony monit o hasło główne, aby uruchomić polecenie sudo. Jeśli tak, wprowadź ją i Kontynuuj. Po zakończeniu wymagane usługi i narzędzia zostaną zainstalowane.
 
-1. Upewnij się, że usługa ssh jest uruchomiona na komputerze z systemem Linux, uruchamiając:
+1. Upewnij się, że usługa SSH jest uruchomiona na komputerze z systemem Linux, uruchamiając następujące instrukcje:
 
    ```bash
    sudo service ssh start
    ```
 
-   Spowoduje to uruchomienie usługi i uruchomienie jej w tle, gotowe do zaakceptowania połączeń.
+   To polecenie uruchamia usługę i uruchamia ją w tle, gotowy do akceptowania połączeń.
 
 ::: moniker-end
 
@@ -121,45 +121,37 @@ Docelowy system Linux musi mieć **openssh-server**, **g++**, **gdb**, **ninja-b
 
 ## <a name="fedora-on-wsl"></a>Fedora na WSL
 
-Fedora używa instalatora pakietu **dnf.** Aby pobrać **g ++**, **gdb**, **make**, **rsync**, **ninja-build**i **zip**, uruchom:
+Fedora korzysta z Instalatora pakietu **DNF** . Aby pobrać plik **g + +**, **GDB**, **Marka**, **rsync**, **Ninja-Build**i **zip**, uruchom polecenie:
 
    ```bash
    sudo dnf install gcc-g++ gdb rsync ninja-build make zip
    ```
 
-**zip** i **rsync** są wymagane do automatycznej synchronizacji nagłówków linuksa z programem Visual Studio dla obsługi intellisense. **ninja-build** jest wymagany tylko dla projektów CMake.
+Elementy **zip** i **rsync** są wymagane do automatycznej synchronizacji nagłówków systemu Linux z programem Visual Studio na potrzeby obsługi technologii IntelliSense. **Ninja — kompilacja** jest wymagana tylko dla projektów CMAKE.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-## <a name="fedora-on-remote-linux-systems"></a>Fedora na zdalnych systemach Linux
+## <a name="fedora-on-remote-linux-systems"></a>Fedora w zdalnych systemach Linux
 
-Komputer docelowy z uruchomioną Fedorą używa instalatora pakietu **dnf.** Aby pobrać **openssh-server**, **g ++**, **gdb**, **make**, **ninja-build**, **rsync**, i **zip**, i ponownie uruchomić demona ssh, postępuj zgodnie z tymi instrukcjami. **ninja-build** jest wymagany tylko dla projektów CMake.
+Maszyna docelowa z systemem Fedora korzysta z Instalatora pakietu **DNF** . Aby pobrać **OpenSSH-Server**, **g + +**, **GDB**, **Make**, **Ninja-Build**, **rsync**i **zip**, a następnie ponownie uruchomić demona SSH, wykonaj te instrukcje. **Ninja — kompilacja** jest wymagana tylko dla projektów CMAKE.
 
-1. W wierszu polecenia powłoki na komputerze z systemem Linux uruchom:
+1. W wierszu polecenia powłoki na komputerze z systemem Linux Uruchom polecenie:
 
    ```bash
    sudo dnf install openssh-server gcc-g++ gdb ninja-build make rsync zip
    ```
 
-   Może zostać wyświetlony monit o podanie hasła głównego z powodu polecenia sudo.  Jeśli tak, wprowadź go i kontynuuj. Po zakończeniu, wymagane usługi i narzędzia są instalowane.
+   Może zostać wyświetlony monit o hasło główne, aby uruchomić polecenie sudo. Jeśli tak, wprowadź ją i Kontynuuj. Po zakończeniu wymagane usługi i narzędzia zostaną zainstalowane.
 
-1. Upewnij się, że usługa ssh jest uruchomiona na komputerze z systemem Linux, uruchamiając:
+1. Upewnij się, że usługa SSH jest uruchomiona na komputerze z systemem Linux, uruchamiając następujące instrukcje:
 
    ```bash
    sudo systemctl start sshd
    ```
 
-   Spowoduje to uruchomienie usługi i uruchomienie jej w tle, gotowe do zaakceptowania połączeń.
-
-::: moniker-end
-
-::: moniker range="vs-2015"
-
-Obsługa programowania języka C++ dla systemu Linux jest dostępna w programie Visual Studio 2017 i nowszych.
-
-::: moniker-end
+   To polecenie uruchamia usługę i uruchamia ją w tle, gotowy do akceptowania połączeń.
 
 ## <a name="next-steps"></a>Następne kroki
 
@@ -167,3 +159,5 @@ Teraz możesz utworzyć lub otworzyć projekt systemu Linux i skonfigurować go 
 
 - [Tworzenie nowego projektu systemu Linux](create-a-new-linux-project.md)
 - [Konfigurowanie projektu CMake systemu Linux](cmake-linux-project.md)
+
+::: moniker-end
