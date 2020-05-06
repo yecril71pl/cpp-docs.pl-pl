@@ -15,14 +15,14 @@ ms.locfileid: "62345048"
 ---
 # <a name="type-char"></a>Typ char
 
-`char` Typ jest używany do przechowywania elementu członkowskiego zestawu znaków reprezentowanych wartości liczby całkowitej. Wartość całkowita to w kodzie ASCII określonego znaku.
+`char` Typ jest używany do przechowywania wartości całkowitej elementu członkowskiego zestawu znaków, które można reprezentować. Ta wartość całkowita to kod ASCII odpowiadający określonemu znakowi.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Znak wartości typu `unsigned char` ma zakres od 0 do 0xFF szesnastkowe. A **podpisany char** ma zakres od 0x80 do 0x7F. Te zakresy wykonuje translację elementu 0 do 255 dziesiętnego i od -128 do + 127 dziesiętną, odpowiednio. /J — opcja kompilatora zmienia domyślny z **podpisany** do `unsigned`.
+Wartości znakowe typu `unsigned char` mają zakres od 0 do 0xFF szesnastkowy. **Podpisany znak** ma zakres 0X80 do 0x7F. Te zakresy przekładają się na 0 do 255 dziesiętnych i-128 do + 127 dziesiętnego. Opcje kompilatora/J zmieniają wartość domyślną z **zalogowanego** na `unsigned`.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Magazyn typów podstawowych](../c-language/storage-of-basic-types.md)

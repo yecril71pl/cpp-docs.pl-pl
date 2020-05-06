@@ -19,14 +19,14 @@ ms.locfileid: "62312605"
 
 - [Zestawy znaków](../c-language/character-sets1.md)
 
-- [Niemożliwe do przedstawienia stałe znakowe](../c-language/unrepresented-character-constants.md)
+- [Niereprezentowane stałe znakowe](../c-language/unrepresented-character-constants.md)
 
 - [Znaki dwubajtowe](../c-language/wide-characters.md)
 
-- [Konwersja znaków wielobajtowych](../c-language/converting-multibyte-characters.md)
+- [Konwertowanie znaków wielobajtowych](../c-language/converting-multibyte-characters.md)
 
 - [Zakres wartości char](../c-language/range-of-char-values.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)

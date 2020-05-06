@@ -18,35 +18,35 @@ ms.locfileid: "62325683"
 ---
 # <a name="c-floating-point-constants"></a>Stałe zmiennoprzecinkowe języka C
 
-"Stała zmiennoprzecinkowa" to liczba dziesiętna, która reprezentuje podpisaną liczba rzeczywista. Reprezentacja liczbą rzeczywistą podpisem zawiera całkowitą część ułamkowa część i wykładnik. Użyj stałych zmiennoprzecinkowych do reprezentowania wartości zmiennoprzecinkowych, których nie można zmienić.
+"Stała zmiennoprzecinkowa" jest liczbą dziesiętną, która reprezentuje podpisany numer rzeczywisty. Reprezentacja podpisanej liczby rzeczywistej zawiera część całkowitą, część ułamkową i wykładnik. Używaj stałych zmiennoprzecinkowych do reprezentowania wartości zmiennoprzecinkowych, których nie można zmienić.
 
 ## <a name="syntax"></a>Składnia
 
-*Floating point-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ułamkowe — stała* *część wykładnik*<sub>zoptymalizowany pod kątem</sub> *liczb zmiennoprzecinkowych sufiks*<sub>zoptymalizowany pod kątem</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *exponent-part* *floating-suffix*<sub>opt</sub>
+*zmiennoprzecinkowe — stała*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;dwuargumentowy *—* *wykładnik*<sub>opt</sub> stałej —<sub>wybór</sub> *sufiksu zmiennoprzecinkowego*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wykładnik* *sekwencji cyfr* —<sub>wybór</sub> *sufiksu zmiennoprzecinkowego*części
 
-*Stała ułamkowe*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr*<sub>zoptymalizowany pod kątem</sub> **.** *digit-sequence*<br/>
+*stała ułamkowa*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wybór sekwencji cyfr*<sub>opt</sub> **.** *Sekwencja cyfr*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*sekwencja cyfr*  **.**
 
-*wykładnik część*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**e** *logowania*<sub>zoptymalizowany pod kątem</sub> *sekwencję cyfr*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**e** *logowania*<sub>zoptymalizowany pod kątem</sub> *sekwencję cyfr*
+*część wykładnika*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;cyfra za *podpisanie*<sub>opt</sub> **e** *-sekwencji*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Cyfra za *podpisanie*<sub>opt</sub> **E** *-sekwencji*
 
-*znak*: jeden z<br/>
+*znak*: jedno z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**+ -**
 
-*digit-sequence*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *digit*
+*sekwencja cyfr*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*kontrol*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cyfra* *cyfra*
 
-*sufiks liczb zmiennoprzecinkowych*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**f, g F, G**
+*sufiks zmiennoprzecinkowy*: jeden z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**f l l**
 
-Możesz pominąć cyfr przed przecinkiem dziesiętnym (część całkowitą wartość) albo cyfr po punkcie dziesiętnym (część ułamkowa), ale nie oba. Tylko wtedy, gdy zawierają wykładnik, można pozostawić się punktu dziesiętnego. Żadne znaki odstępu, można oddzielić cyfr lub znaków, stałej.
+Możesz pominąć cyfry przed punktem dziesiętnym (część całkowitą wartości) lub cyfry po przecinku dziesiętnym (części ułamkowej), ale nie oba. Możesz opuścić punkt dziesiętny tylko wtedy, gdy dołączysz wykładnik. Znaki odstępu nie mogą oddzielić cyfr ani znaków stałej.
 
-W poniższych przykładach pokazano niektóre formy stałych zmiennoprzecinkowych i wyrażenia:
+Poniższe przykłady ilustrują niektóre formy stałych i wyrażeń zmiennoprzecinkowych:
 
 ```C
 15.75
@@ -56,18 +56,18 @@ W poniższych przykładach pokazano niektóre formy stałych zmiennoprzecinkowyc
 25E-4     /* =  0.0025 */
 ```
 
-Stałe zmiennoprzecinkowe są pozytywne, chyba że są poprzedzone znakiem minus (**-**). W tym przypadku znak minus jest traktowany jako Jednoargumentowy operator arytmetyczny negacji. Stałe zmiennoprzecinkowe mają typ `float`, `double`, lub `long double`.
+Stałe zmiennoprzecinkowe są dodatnie, chyba że są poprzedzone znakiem minus (**-**). W takim przypadku znak minus jest traktowany jako jednoargumentowy operator negacji arytmetycznej. Stałe zmiennoprzecinkowe mają typ `float`, `double`lub. `long double`
 
-Stała zmiennoprzecinkowa bez **f**, **F**, **l**, lub **L** sufiks ma typ `double`. Jeśli litera **f** lub **F** jest sufiksem, stałej ma typ `float`. Jeśli sufiks za pomocą litery **l** lub **L**, ma typ `long double`. Na przykład:
+Stała zmiennoprzecinkowa bez sufiksu **f**, **f**, **l**lub **l** ma typ `double`. Jeśli litera **f** lub **f** jest sufiksem, stała ma typ `float`. Jeśli sufiks jest poprzedzony literą **l** lub **l**, ma typ `long double`. Przykład:
 
 ```C
 10.0L  /* Has type long double  */
 10.0F  /* Has type float        */
 ```
 
-Należy zauważyć, że kompilator Microsoft C: wewnętrznie reprezentuje `long double` taki sam jak typ `double`. Zobacz [magazyn typów podstawowych](../c-language/storage-of-basic-types.md) informacji o typie `double`, `float`, i `long double`.
+Należy zauważyć, że kompilator języka Microsoft C `long double` wewnętrznie reprezentuje ten sam `double`typ. Zobacz [Magazyn typów podstawowych](../c-language/storage-of-basic-types.md) , aby uzyskać informacje o `double`typie `float`, i `long double`.
 
-Jak pokazano w poniższych przykładach, można pominąć część całkowitą stałej zmiennoprzecinkowej. Liczba.75 może być wyrażona w na wiele sposobów, w tym następujące:
+Można pominąć część całkowitą stałej zmiennoprzecinkowej, jak pokazano w poniższych przykładach. Liczba. 75 może być wyrażona na wiele sposobów, w tym:
 
 ```C
 .0075e2
@@ -76,6 +76,6 @@ Jak pokazano w poniższych przykładach, można pominąć część całkowitą s
 75e-2
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Stałe języka C](../c-language/c-constants.md)

@@ -13,10 +13,10 @@ ms.locfileid: "62312586"
 ---
 # <a name="clock-function-c"></a>clock — funkcja (C)
 
-**ANSI 4.12.2.1** ery dla `clock` — funkcja
+**4.12.2.1 ANSI** Era dla `clock` funkcji
 
-`clock` Ery funkcji zaczyna się od (wartość 0) po uruchomieniu programu C do wykonania. Zwraca czas, trwające 1 /**CLOCKS_PER_SEC** (która jest równa 1/1000 dla Microsoft C:).
+Ocena `clock` ekologiczna funkcji rozpoczyna się (o wartości 0), gdy program C zaczyna działać. Zwraca czasy mierzone w 1/**CLOCKS_PER_SEC** (co jest równe 1/1000 dla Microsoft C).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

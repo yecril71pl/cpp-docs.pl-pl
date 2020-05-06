@@ -15,18 +15,18 @@ ms.locfileid: "62313366"
 ---
 # <a name="break-statement-c"></a>break — instrukcja (C)
 
-`break` Instrukcja kończy wykonywanie najbliższej otaczającej `do`, `for`, `switch`, lub `while` instrukcji, w której występuje. Kontrola przechodzi do instrukcji następującej instrukcji zakończone.
+`break` Instrukcja kończy wykonywanie najbliższej `do`otaczającej, `for`, `switch`lub `while` instrukcji, w której występuje. Kontrolka przechodzi do instrukcji, która następuje po instrukcji zakończony.
 
 ## <a name="syntax"></a>Składnia
 
-*Instrukcja skoku*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Przerwij;**
+*skok-instrukcja*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Przerwij**
 
-`break` Instrukcji jest często używany do zakończenia przetwarzania konkretnej wielkość liter w obrębie `switch` instrukcji. Brak otaczającego iteracji lub `switch` instrukcja generuje błąd.
+`break` Instrukcja jest często używana do kończenia przetwarzania określonego przypadku w `switch` instrukcji. Brak otaczającej instrukcji iteracyjnej or `switch` generuje błąd.
 
-W obrębie zagnieżdżonych instrukcji `break` kończy się tylko `do`, `for`, `switch`, lub `while` instrukcji, która bezpośrednio ją obejmuje. Możesz użyć `return` lub `goto` instrukcję, aby przekazać sterowanie w innym miejscu poza struktury zagnieżdżonej.
+W zagnieżdżonych instrukcjach `break` instrukcja kończy tylko instrukcję, `do` `for`, `switch`, lub `while` , która bezpośrednio należy do niej. Możesz użyć instrukcji `return` lub `goto` , aby przenieść kontrolę w innym miejscu poza zagnieżdżoną strukturę.
 
-Ten przykład ilustruje `break` instrukcji:
+Ten przykład ilustruje `break` instrukcję:
 
 ```
 #include <stdio.h>
@@ -43,6 +43,6 @@ int main() {
 } // Loop exits only when 'Q' is pressed
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [break, instrukcja](../cpp/break-statement-cpp.md)

@@ -11,10 +11,10 @@ ms.locfileid: "62325939"
 ---
 # <a name="blank-lines"></a>Puste wiersze
 
-**ANSI 4.9.2** czy znaków spacji, które są zapisywane do strumienia tekstu, bezpośrednio przed znakiem nowego wiersza są wyświetlane podczas odczytu w
+**4.9.2 ANSI** Czy znaki spacji, które są zapisywane do strumienia tekstowego bezpośrednio przed znakiem nowego wiersza pojawiają się podczas odczytu
 
 Spacje są zachowywane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

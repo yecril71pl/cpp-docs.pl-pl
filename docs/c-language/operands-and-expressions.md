@@ -15,16 +15,16 @@ ms.locfileid: "64343236"
 ---
 # <a name="operands-and-expressions"></a>Argumenty i wyrażenia
 
-"Argument" jest jednostką, na którym działa operatora. "Wyrażenie" jest sekwencji operatorów i argumentów operacji, który wykonuje dowolną kombinację tych akcji:
+"Operand" jest jednostką, na której działa operator. "Wyrażenie" to sekwencja operatorów i operandów, które wykonują dowolną kombinację następujących akcji:
 
 - Oblicza wartość
 
-- Określa obiekt lub funkcja
+- Wyznacza obiekt lub funkcję
 
-- Generuje efekty uboczne
+- Generuje skutki uboczne
 
-Argumenty operacji w języku C obejmują stałe, identyfikatory, ciągi, wywołania funkcji, wyrażenia indeksu dolnego, wyrażeń wyboru elementów członkowskich i złożonych wyrażeń sformułowany, łącząc operandy przy użyciu operatorów lub umieszczając operandy w nawiasach. Składnia służąca do tych operandów jest podawany w [wyrażenia podstawowe](../c-language/c-primary-expressions.md).
+Operandy w języku C obejmują stałe, identyfikatory, ciągi, wywołania funkcji, wyrażenia indeksu dolnego, wyrażenia wyboru elementu członkowskiego i złożone wyrażenia utworzone przez połączenie operandów z operatorami lub otaczającymi operandami w nawiasach. Składnia tych argumentów operacji jest podawana w [wyrażeniach podstawowych](../c-language/c-primary-expressions.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia i przydziały](../c-language/expressions-and-assignments.md)

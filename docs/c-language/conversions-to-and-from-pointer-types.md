@@ -32,10 +32,10 @@ I odwrotnie typ całkowity może być konwertowany na typ wskaźnika, zgodnie z 
 
 - Jeśli typ całkowity ma taki sam rozmiar jak typ wskaźnika, konwersja powoduje po prostu traktowanie wartości całkowitej jako wskaźnika (liczba całkowita nieoznaczona).
 
-- Jeśli rozmiar typu całkowitego jest różny od rozmiaru typu wskaźnika, typ całkowity jest najpierw konwertowany na rozmiar wskaźnika, używając ścieżek konwersji podanych w tabelach [konwersja z typów całkowitych oznaczonych](../c-language/conversions-from-signed-integral-types.md) i [ Konwersja z niepodpisanych typów całkowitych](../c-language/conversions-from-unsigned-integral-types.md). Następnie jest ona traktowana jako wartość wskaźnika.
+- Jeśli rozmiar typu całkowitego różni się od rozmiaru typu wskaźnika, typ całkowity jest najpierw konwertowany na rozmiar wskaźnika, przy użyciu ścieżek konwersji podanych w [konwersji tabel z podpisanych typów całkowitych](../c-language/conversions-from-signed-integral-types.md) i [konwersji z niepodpisanych typów całkowitych](../c-language/conversions-from-unsigned-integral-types.md). Następnie jest ona traktowana jako wartość wskaźnika.
 
-Wyrażenie stałej całkowitej o wartości 0 lub Rzutowanie na typ wyrażenia **void** <strong>\*</strong> mogą być konwertowane przez rzutowanie typu, przez przypisanie lub w porównaniu do wskaźnika dowolnego typu. Daje to pusty wskaźnik równy innemu pustemu wskaźnikowi tego samego typu, ale taki pusty wskaźnik nie jest równy żadnemu innemu wskaźnikowi do funkcji lub obiektu. Wartości całkowite inne niż stała 0 można przekonwertować na typ wskaźnika, ale wynik nie jest przenośny.
+Całkowite wyrażenie stałe z wartością 0 lub takie rzutowanie wyrażenia na typ **void** <strong>\*</strong> może być konwertowane przez rzutowanie typu, przez przypisanie lub przez porównanie do wskaźnika dowolnego typu. Daje to pusty wskaźnik równy innemu pustemu wskaźnikowi tego samego typu, ale taki pusty wskaźnik nie jest równy żadnemu innemu wskaźnikowi do funkcji lub obiektu. Wartości całkowite inne niż stała 0 można przekonwertować na typ wskaźnika, ale wynik nie jest przenośny.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersje przypisań](../c-language/assignment-conversions.md)

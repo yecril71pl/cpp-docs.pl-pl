@@ -18,29 +18,29 @@ ms.locfileid: "62344840"
 ---
 # <a name="usual-arithmetic-conversions"></a>Popularne konwersje arytmetyczne
 
-Większość operatory języka C wykonywać konwersje typów, aby wyświetlić operandy wyrażenia do typu wspólnego, albo aby rozszerzyć wartości krótka liczba całkowita określająca rozmiar w operacjach maszyny. Konwersje wykonywane przez operatory języka C zależą od tego, konkretny operator i typ operandu lub argumentów operacji. Jednak wielu operatorów wykonywać podobne konwersje operandów typów całkowitych i zmiennoprzecinkowych. Konwersje te są nazywane "konwersje arytmetyczne". Konwersja wartości argumentu operacji na zgodny typ. powoduje, że nie wprowadzono zmian w jej wartość.
+Większość operatorów języka C wykonuje konwersje typów, aby przenieść operandy wyrażenia do wspólnego typu lub w celu rozdzielenia krótkich wartości do rozmiaru całkowitego używanego w operacjach maszynowych. Konwersje wykonywane przez operatory języka C zależą od określonego operatora i typu operandu lub operandów. Jednak wiele operatorów wykonuje podobne konwersje na operandach typu całkowitego i zmiennoprzecinkowego. Te konwersje są znane jako "konwersje arytmetyczne". Konwersja wartości operandu na typ zgodny nie powoduje zmiany jej wartości.
 
-Konwersje arytmetyczne podsumowano poniżej są nazywane "typowe konwersje arytmetyczne". Te kroki są stosowane tylko w przypadku operatory binarne, które oczekują typu arytmetycznego. Celem jest uzyskanie wspólnego typu, który jest również typ wyniku. Aby ustalić, jakie konwersje faktycznie mieć miejsce, kompilator dotyczy następującego algorytmu do operacji binarnych w wyrażeniu. Poniższe kroki nie są kolejność pierwszeństwa.
+Wymienione poniżej konwersje arytmetyczne są nazywane "typowymi konwersjemi arytmetycznymi". Te kroki są stosowane tylko w przypadku operatorów binarnych, które oczekują typu arytmetycznego. Celem jest uzyskanie wspólnego typu, który jest również typem wyniku. Aby określić, które konwersje rzeczywiście miały miejsce, kompilator stosuje następujący algorytm do operacji binarnych w wyrażeniu. Poniższe kroki nie są kolejnością pierwszeństwa.
 
-1. Jeśli jeden z operandów jest typu `long double`, to drugi operand jest konwertowany na typ `long double`.
+1. Jeśli oba operandy są typu `long double`, drugi operand jest konwertowany na typ `long double`.
 
-1. Jeśli powyższy warunek nie jest spełniony i jeden z operandów jest typu **double**, to drugi operand jest konwertowany na typ **double**.
+1. Jeśli powyższy warunek nie jest spełniony, a oba operandy są typu **Double**, drugi operand jest konwertowany na typ **Double**.
 
-1. Jeśli dwa powyższe warunki nie są spełnione i jeden z operandów jest typu **float**, to drugi operand jest konwertowany na typ **float**.
+1. Jeśli powyższe dwa warunki nie są spełnione, a oba operandy są typu **zmiennoprzecinkowego**, drugi operand jest konwertowany na typ **float**.
 
-1. Jeśli trzy powyższe warunki nie są spełnione (żaden z operandów jest typu zmiennoprzecinkowego), a następnie konwersje wartości całkowitych są wykonywane na operandach w następujący sposób:
+1. Jeśli powyższe trzy warunki nie są spełnione (żaden z operandów nie ma typów zmiennoprzecinkowych), konwersje całkowite są wykonywane na operandach w następujący sposób:
 
-   - Jeśli jeden z operandów jest typu `unsigned long`, to drugi operand jest konwertowany na typ `unsigned long`.
+   - Jeśli oba operandy są typu `unsigned long`, drugi operand jest konwertowany na typ `unsigned long`.
 
-   - Jeśli powyższy warunek nie jest spełniony i jeden z operandów jest typu **długie** i drugą typu `unsigned int`, oba operandy są konwertowane na typ `unsigned long`.
+   - Jeśli powyższy warunek nie jest spełniony, a oba operandy są typu **Long** i innego typu `unsigned int`, oba operandy są konwertowane na typ. `unsigned long`
 
-   - Jeśli dwa powyższe warunki nie są spełnione i jeden z operandów jest typu **długie**, to drugi operand jest konwertowany na typ **długie**.
+   - Jeśli powyższe dwa warunki nie są spełnione, a oba operandy są typu **Long**, drugi operand jest konwertowany na typ **Long**.
 
-   - Jeśli trzy powyższe warunki nie są spełnione i jeden z operandów jest typu `unsigned int`, to drugi operand jest konwertowany na typ `unsigned int`.
+   - Jeśli powyższe trzy warunki nie są spełnione, a oba operandy są typu `unsigned int`, drugi operand jest konwertowany na typ. `unsigned int`
 
-   - Jeśli żaden z powyższych warunków nie jest spełniony, oba operandy są konwertowane na typ `int`.
+   - Jeśli żaden z powyższych warunków nie zostanie spełniony, oba operandy są konwertowane na typ `int`.
 
-Poniższy kod ilustruje te reguły konwersji:
+Poniższy kod ilustruje następujące reguły konwersji:
 
 ```
 float   fVal;
@@ -58,6 +58,6 @@ dVal = ulVal + fVal; /* ulVal converted to float
                       */
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operatory języka C](../c-language/c-operators.md)

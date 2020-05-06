@@ -17,6 +17,6 @@ ms.locfileid: "62313418"
 
 - [Odejmowanie wskaźnika](../c-language/pointer-subtraction.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)

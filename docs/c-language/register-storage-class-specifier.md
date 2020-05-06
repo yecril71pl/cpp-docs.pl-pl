@@ -14,12 +14,12 @@ ms.locfileid: "62325250"
 ---
 # <a name="register-storage-class-specifier"></a>rejestracja specyfikatora klasy magazynowania
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Kompilator Microsoft C/C++ nie uznaje żądania użytkownika, register zmiennych. Jednak do celów przenośności innej semantyki skojarzony **zarejestrować** — słowo kluczowe są uznawane przez kompilator. Na przykład nie można zastosować Jednoargumentowy operator address-of (**&**) obiektu rejestru ani może **zarejestrować** można użyć słowa kluczowego na tablicach.
+Kompilator języka Microsoft C/C++ nie honoruje żądań użytkowników dotyczących zmiennych rejestru. Jednak w przypadku przenoszenia wszystkie inne semantyki skojarzone ze słowem kluczowym **register** są uznawane przez kompilator. Na przykład nie można zastosować jednoargumentowego adresu-operatora (**&**) do obiektu Register ani nie można użyć słowa kluczowego **register** w tablicach.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Specyfikatory klasy magazynowania dla deklaracji na poziomie wewnętrznym](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

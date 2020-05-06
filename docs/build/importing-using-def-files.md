@@ -17,7 +17,7 @@ ms.locfileid: "62273420"
 ---
 # <a name="importing-using-def-files"></a>Importowanie przy użyciu plików DEF
 
-Jeśli zdecydujesz się używać **__declspec(dllimport)** wraz z plikiem .def, należy zmienić plik .def, aby użyć danych zamiast STAŁA Aby zmniejszyć prawdopodobieństwo, że nieprawidłowe kodowanie spowoduje, że problem:
+Jeśli zdecydujesz się używać **__declspec (dllimport)** wraz z plikiem. def, należy zmienić plik. def, aby użyć danych zamiast stałej, aby zmniejszyć prawdopodobieństwo, że niewłaściwe kodowanie spowoduje wystąpienie problemu:
 
 ```
 // project.def
@@ -26,30 +26,30 @@ EXPORTS
    ulDataInDll   DATA
 ```
 
-W poniższej tabeli przedstawiono dlaczego.
+W poniższej tabeli przedstawiono przyczynę.
 
-|Słowo kluczowe|Emituje w bibliotece importu|Eksporty|
+|Słowo kluczowe|Emituje w bibliotece import|Eksportowanie|
 |-------------|---------------------------------|-------------|
 |`CONSTANT`|`_imp_ulDataInDll`, `_ulDataInDll`|`_ulDataInDll`|
 |`DATA`|`_imp_ulDataInDll`|`_ulDataInDll`|
 
-Za pomocą **__declspec(dllimport)** i STAŁA wyświetla zarówno `imp` wersji i nieozdobioną nazwę zawartej w .lib DLL Importuj biblioteki, który jest tworzony umożliwia jawne tworzenie łączy. Za pomocą **__declspec(dllimport)** listy danych i po prostu z `imp` wersja nazwy.
+Używanie **__declspec (dllimport)** i stałych wyświetla zarówno `imp` wersję, jak i niedekoracyjną nazwę w bibliotece importu dll. lib, która została utworzona w celu zezwalania na jawne łączenie. Używanie **__declspec (dllimport)** i danych wyświetla tylko `imp` wersję nazwy.
 
-Jeśli używasz STAŁĄ, jedną z następujących konstrukcji kodu może służyć do dostępu `ulDataInDll`:
+Jeśli używasz stałej, można uzyskać dostęp `ulDataInDll`do następujących konstrukcji kodu:
 
 ```
 __declspec(dllimport) ULONG ulDataInDll; /*prototype*/
 if (ulDataInDll == 0L)   /*sample code fragment*/
 ```
 
-\-lub —
+\-oraz
 
 ```
 ULONG *ulDataInDll;      /*prototype*/
 if (*ulDataInDll == 0L)  /*sample code fragment*/
 ```
 
-Jednak jeśli używasz danych w pliku .def, tylko kod skompilowany przy użyciu następującej definicji mają dostęp do zmiennej `ulDataInDll`:
+Jeśli jednak używasz danych w pliku. def, tylko kod skompilowany przy użyciu następującej definicji może uzyskać dostęp do zmiennej `ulDataInDll`:
 
 ```
 __declspec(dllimport) ULONG ulDataInDll;
@@ -57,10 +57,10 @@ __declspec(dllimport) ULONG ulDataInDll;
 if (ulDataInDll == 0L)   /*sample code fragment*/
 ```
 
-Przy użyciu stałej jest bardziej ryzykowne, ponieważ Jeśli zapomnisz dodatkowy poziom pośredni, użytkownik może potencjalnie uzyskać dostęp do tabeli adresów importowania wskaźnik do zmiennej — nie zmiennej. Tego rodzaju problem można często manifestu jako naruszenie zasad dostępu, ponieważ tabeli adresów importowania jest obecnie tylko do odczytu przez kompilatora i konsolidatora.
+Użycie stałej jest bardziej ryzykowne, ponieważ jeśli zapomnisz użyć dodatkowego poziomu pośredniego, możesz uzyskać dostęp do wskaźnika tabeli adresów importu do zmiennej — a nie do samej zmiennej. Ten typ problemu może często przejawiać się jako naruszenie zasad dostępu, ponieważ tabela adresów importu jest obecnie wykonywana tylko do odczytu przez kompilator i konsolidator.
 
-Bieżący konsolidatora MSVC generuje ostrzeżenie, jeśli STAŁĄ w pliku .def konta dla tej sprawy. Tylko rzeczywistego powód, aby używało — STAŁA jest, jeśli nie można ponownie skompilować niektóre pliku obiektu, gdy plik nagłówkowy nie listy **__declspec(dllimport)** na prototypu.
+Bieżący konsolidator MSVC wyświetla ostrzeżenie, jeśli w pliku. def zostanie wyświetlona stała dla tego przypadku. Jedyną przyczyną użycia stałej jest to, że nie można ponownie skompilować niektórych plików obiektów, gdzie plik nagłówkowy nie zawiera listy **__declspec (dllimport)** w prototypie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Importowanie do aplikacji](importing-into-an-application.md)

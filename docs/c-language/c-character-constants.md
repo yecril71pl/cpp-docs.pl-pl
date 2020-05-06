@@ -16,42 +16,42 @@ ms.locfileid: "62326303"
 ---
 # <a name="c-character-constants"></a>Stałe znakowe języka C
 
-"Stałej znakowej" został utworzony, umieszczając pojedynczy znak z zestawu w pojedynczy cudzysłów znaków reprezentowanych (**""**). Stałe znaków są używane do reprezentowania znaków w [zestaw znaków wykonania](../c-language/execution-character-set.md).
+"Stała znakowa" jest tworzona przez zawrzeć pojedynczy znak z zestawu znaków do zaprezentowania w pojedynczym cudzysłowie (**""**). Stałe znakowe służą do reprezentowania znaków w [zestawie znaków wykonania](../c-language/execution-character-set.md).
 
 ## <a name="syntax"></a>Składnia
 
-*stałej znakowej*: **"** *c char sekwencji* **"**
+*znak — stała*: **"** *c-char-Sequence* **"**
 
-**L "** *c char sekwencji* **"**
+**L "** *c-char-Sequence* **"**
 
-*c char sekwencji*: *c-char*
+*c-char-Sequence*: *c-char*
 
-*c char sekwencji c-char*
+*c-char-Sequence c-char*
 
-*c-char*: Każdy członek znak źródłowy zestawu z wyjątkiem pojedynczego cudzysłowu (**"**), ukośnika odwrotnego (**\\**), lub znak nowego wiersza
+*c-char*: każdy element członkowski zestawu znaków źródłowych z wyjątkiem pojedynczego cudzysłowu (**'**), ukośnika odwrotnego**\\**() lub znaku nowego wiersza
 
-*escape-sequence*
+*Sekwencja ucieczki*
 
-*Sekwencja unikowa*: *sekwencji unikowej prosty*
+*Escape — sekwencja*: *Simple-Escape-Sequence*
 
-*octal-escape-sequence*
+*ósemkowe — sekwencja ucieczki*
 
-*hexadecimal-escape-sequence*
+*szesnastkowe — sekwencja ucieczki*
 
-*proste sekwencje*: jeden z **\a \b \f \n \r \t \v**
+*prosta — sekwencja ucieczki*: jedno z **\a \b/\n/lt \t \v**
 
 **\\' \\" \\\ \\?**
 
-*ósemkowa sekwencja unikowa*: **\\** *cyfrą ósemkową*
+*ósemkowe — sekwencja ucieczki*: **\\** *ósemkowa cyfra*  
 
-**\\**  *cyfrą ósemkową cyfrą ósemkową*
+**\\**  *ósemkowa cyfra ósemkowa*
 
-**\\**  *cyfrą ósemkową cyfrą ósemkową cyfrą systemu ósemkowego*
+**\\**  *ósemkowa cyfra ósemkowa cyfra ósemkowa*
 
-*szesnastkowe sekwencje*: **\x** *cyfry szesnastkowe*
+*szesnastkowe-Escape-Sequence*: **\x**  *szesnastkowe-cyfra*
 
-*hexadecimal-escape-sequence hexadecimal-digit*
+*szesnastkowe — Ucieczka — sekwencja szesnastkowa*
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Stałe języka C](../c-language/c-constants.md)

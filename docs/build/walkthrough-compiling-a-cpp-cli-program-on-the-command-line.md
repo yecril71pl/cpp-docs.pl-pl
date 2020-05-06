@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Kompilowanie C++Program w sposób niezamierzony w wierszu polecenia'
+title: 'Wskazówki: kompilowanie programu w języku C++/CLI w wierszu polecenia'
 ms.date: 04/23/2019
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
 ms.openlocfilehash: 8a5c5659367350a80725b365ef9c431bbec209d1
@@ -9,33 +9,33 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/29/2019
 ms.locfileid: "64877454"
 ---
-# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Przewodnik: Kompilowanie C++Program w sposób niezamierzony w wierszu polecenia
+# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Wskazówki: kompilowanie programu w języku C++/CLI w wierszu polecenia
 
-Tworzenie programów Visual C++, które docelowe środowisko uruchomieniowe języka wspólnego (CLR) i używać programu .NET Framework i utworzyć je w wiersza polecenia. Wizualne C++ obsługuje C++/CLI, język programowania, który ma dodatkowe typy i operatory, pod kątem model programowania .NET. Aby uzyskać ogólne informacje o C++języka w sposób niezamierzony, zobacz [.NET, programowanie za pomocą C++sposób niezamierzony (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+Można utworzyć Visual C++ programów przeznaczonych dla środowiska uruchomieniowego języka wspólnego (CLR) i użyć .NET Framework i skompilować je w wierszu polecenia. Visual C++ obsługuje język programowania C++/CLI, który zawiera dodatkowe typy i operatory przeznaczone dla modelu programowania .NET. Aby uzyskać ogólne informacje na temat języka C++/CLI, zobacz [programowanie .NET przy użyciu języka c++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
-W tym przewodniku, użyj edytora tekstu do utworzenia podstawowego C++sposób niezamierzony program, a następnie skompilować go w wierszu polecenia. (Można użyć własnych C++/programu interfejsu wiersza polecenia zamiast wpisywać taki, który jest wyświetlany, lub użyć C++przykładowy kod w sposób niezamierzony z innego artykułu pomocy. Ta technika jest przydatna do tworzenia i testowania małych modułów, które mają bez elementów interfejsu użytkownika).
+W tym instruktażu należy użyć edytora tekstów do utworzenia podstawowego programu C++/CLI, a następnie skompilowania go w wierszu polecenia. (Możesz użyć własnego programu C++/CLI zamiast wpisywać ten, który jest wyświetlany, lub możesz użyć przykładowego kodu C++/CLI z innego artykułu pomocy. Ta technika jest przydatna do kompilowania i testowania małych modułów, które nie mają elementów interfejsu użytkownika.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Należy zrozumieć podstawy języka C++.
+Rozumiesz podstawy języka C++.
 
-## <a name="compiling-a-ccli-program"></a>Kompilowanie C++Program w sposób niezamierzony
+## <a name="compiling-a-ccli-program"></a>Kompilowanie programu w języku C++/CLI
 
-Poniższe kroki pokazują jak skompilować C++sposób niezamierzony aplikację konsolową, która używa klas .NET Framework.
+Poniższe kroki pokazują, jak skompilować aplikację konsolową C++/CLI, która używa klas .NET Framework.
 
-Aby włączyć kompilowanie C++/interfejsu wiersza polecenia, należy użyć [/CLR](reference/clr-common-language-runtime-compilation.md) — opcja kompilatora. Kompilator MSVC generuje plik .exe, który zawiera kod MSIL — lub mieszanego MSIL i kodu natywnego — i linki do wymaganych bibliotek .NET Framework.
+Aby włączyć kompilację dla/CLI C++, należy użyć opcji kompilatora [/CLR](reference/clr-common-language-runtime-compilation.md) . Kompilator MSVC generuje plik. exe, który zawiera kod MSIL — lub mieszany kod MSIL i natywny, oraz linki do wymaganych bibliotek .NET Framework.
 
-### <a name="to-compile-a-ccli-application-on-the-command-line"></a>Aby skompilować C++aplikacji w sposób niezamierzony w wierszu polecenia
+### <a name="to-compile-a-ccli-application-on-the-command-line"></a>Aby skompilować aplikację C++/CLI w wierszu polecenia
 
-1. Otwórz **wiersz polecenia dla deweloperów** okna. Aby uzyskać szczegółowe instrukcje, zobacz [aby otworzyć okno wiersza polecenia dewelopera](building-on-the-command-line.md#developer_command_prompt).
+1. Otwórz okno **wiersz polecenia dla deweloperów** . Aby uzyskać szczegółowe instrukcje, zobacz, [Aby otworzyć okno wiersza polecenia dla deweloperów](building-on-the-command-line.md#developer_command_prompt).
 
-   Poświadczenia administratora może być konieczne pomyślnie skompilować kod, w zależności od konfiguracji i systemu operacyjnego komputera. Aby uruchomić okno wiersza polecenia jako administrator, kliknij prawym przyciskiem myszy Otwórz menu skrótów dla wiersza polecenia, a następnie wybierz polecenie **więcej** > **Uruchom jako administrator**.
+   Do pomyślnego skompilowania kodu w zależności od systemu operacyjnego i konfiguracji komputera może być wymagane poświadczenie administratora. Aby uruchomić okno wiersza polecenia jako administrator, kliknij prawym przyciskiem myszy, aby otworzyć menu skrótów dla wiersza polecenia, a następnie wybierz polecenie **więcej** > **Uruchom jako administrator**.
 
-1. W wierszu polecenia wprowadź `notepad basicclr.cpp`.
+1. W wierszu polecenia wpisz `notepad basicclr.cpp`polecenie.
 
-   Wybierz **tak** po wyświetleniu monitu, czy można utworzyć pliku.
+   Wybierz opcję **tak** po wyświetleniu monitu o utworzenie pliku.
 
-1. W programie Notatnik wprowadź następujące wiersze:
+1. W Notatniku wprowadź następujące wiersze:
 
    ```cpp
    int main()
@@ -44,21 +44,21 @@ Aby włączyć kompilowanie C++/interfejsu wiersza polecenia, należy użyć [/C
    }
    ```
 
-1. Na pasku menu wybierz **pliku** > **Zapisz**.
+1. Na pasku menu wybierz **plik** > **Zapisz**.
 
-   Utworzono plik źródłowy języka Visual C++, który używa klasy .NET Framework (<xref:System.Console>) w <xref:System> przestrzeni nazw.
+   Utworzono plik źródłowy Visual C++, który używa klasy .NET Framework (<xref:System.Console>) w <xref:System> przestrzeni nazw.
 
-1. W wierszu polecenia wprowadź `cl /clr basicclr.cpp`. Cl.exe — kompilator kompiluje kod źródłowy w pliku .obj, który zawiera MSIL, a następnie uruchamia konsolidator generuje program wykonywalny o nazwie basicclr.exe.
+1. W wierszu polecenia wpisz `cl /clr basicclr.cpp`polecenie. Kompilator CL. exe kompiluje kod źródłowy do pliku. obj, który zawiera MSIL, a następnie uruchamia konsolidator w celu wygenerowania programu wykonywalnego o nazwie basicclr. exe.
 
-1. Aby uruchomić basicclr.exe program w wierszu polecenia, wprowadź `basicclr`.
+1. Aby uruchomić program basicclr. exe, w wierszu polecenia wpisz `basicclr`polecenie.
 
-   Ten program wyświetla ten tekst i kończy działanie:
+   Program wyświetla ten tekst i opuszcza:
 
    ```Output
    This is a C++/CLI program.
    ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)<br/>
 [Projekty i systemy kompilacji](projects-and-build-systems-cpp.md)<br/>

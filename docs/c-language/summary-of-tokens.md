@@ -12,38 +12,38 @@ ms.locfileid: "62345139"
 # <a name="summary-of-tokens"></a>Podsumowanie tokenów
 
 *token*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*keyword*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Stałe*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*kodu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identyfikatora*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*stałego*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*literał ciągu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Operator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*znak interpunkcyjny*
+&nbsp;&nbsp;&nbsp;&nbsp;*zakład*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
 
-*Przetwarzanie wstępne token*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*header-name*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*numer strony*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Stała znakowa*<br/>
+*Przetwarzanie wstępne — token*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Nazwa nagłówka*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identyfikatora*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*PP-Number*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*znak — stała*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*literał ciągu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*znak interpunkcyjny — operator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;każdy znak niebędący odstępem, który nie może być jedną z powyższych
+&nbsp;&nbsp;&nbsp;&nbsp;*punctuator operatora*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Każdy znak niebędący odstępem, który nie może być jednym z powyższych
 
-*header-name*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\<**  *PATH-spec*  **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**"***specyfikacji ścieżki***"**
+*Nazwa nagłówka*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\<**  *ścieżka — Specyfikacja*  **>**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**"**  *Specyfikacja ścieżki*  **"**
 
-*path-spec*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Ścieżka pliku prawne
+*ścieżka — Specyfikacja*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Legalna ścieżka pliku
 
-*numer strony*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**.** *digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pp-number* *digit* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*numer strony* *nie cyfrą*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*numer strony***e***logowania*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*numer strony***E***logowania*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*numer strony* **.**
+*PP-Number*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*kontrol*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**.** *kontrol*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*PP-* *cyfra* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*PP — liczba* *niecyfrowa*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*konto* **e** *-Number*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*konto* **E** *-Number*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*PP-Number*  **.**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Gramatyka leksykalna](../c-language/lexical-grammar.md)

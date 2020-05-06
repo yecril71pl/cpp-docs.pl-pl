@@ -1,5 +1,5 @@
 ---
-title: Przy użyciu bazy danych, OLE i MFC gniazd biblioteki DLL rozszerzeń w zwykłych bibliotekach MFC dll
+title: Korzystanie z bibliotek DLL rozszerzeń MFC w bazie danych, OLE i Sockets w zwykłych bibliotekach DLL MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DLLs [C++], initializing
@@ -13,53 +13,53 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62314692"
 ---
-# <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>Przy użyciu bazy danych, OLE i MFC gniazd biblioteki DLL rozszerzeń w zwykłych bibliotekach MFC dll
+# <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>Korzystanie z bibliotek DLL rozszerzeń MFC w bazie danych, OLE i Sockets w zwykłych bibliotekach DLL MFC
 
-Korzystając z rozszerzenia MFC biblioteki DLL z regularnej biblioteki DLL MFC, jeżeli rozszerzenia MFC biblioteki DLL nie jest dostępna w **CDynLinkLibrary** obiektu łańcucha regularne biblioteki DLL MFC, może wystąpić co najmniej jeden zestaw problemów pokrewnych. Ponieważ obsługuje wersje do debugowania bazy danych MFC, OLE i gniazda biblioteki DLL są implementowane jako biblioteki DLL rozszerzeń MFC, można napotkać podobny problem, jeśli używasz tych MFC funkcji, nawet wtedy, gdy użytkownik nie jawnie korzystania z własnych biblioteki DLL rozszerzeń MFC. Występują pewne objawy:
+W przypadku korzystania z biblioteki MFC DLL z zwykłej biblioteki MFC DLL, jeśli biblioteka DLL rozszerzenia MFC nie jest podłączona do łańcucha obiektów **CDynLinkLibrary** zwykłej biblioteki MFC DLL, można uruchomić co najmniej jeden zestaw pokrewnych problemów. Ponieważ wersje debugowania baz danych MFC, OLE i Sockets obsługują biblioteki DLL rozszerzenia MFC, można zobaczyć podobne problemy, jeśli używasz tych funkcji MFC, nawet jeśli nie korzystasz jawnie z własnych bibliotek DLL rozszerzenia MFC. Niektóre objawy są następujące:
 
-- Podczas próby deserializacji obiektu typu klasy zdefiniowane w rozszerzeń MFC DLL, komunikat "ostrzeżenia: Nie można załadować CYourClass z archiwum. Klasa nie jest zdefiniowany." pojawia się okno debugowania śledzenia i obiekt kończy się niepowodzeniem do serializacji.
+- Podczas próby deserializacji obiektu typu klasy zdefiniowanego w bibliotece DLL rozszerzenia MFC komunikat "Ostrzeżenie: nie można załadować CYourClass z archiwum. Nie zdefiniowano klasy ". pojawia się w oknie debugowanie śledzenia i nie można serializować obiektu.
 
-- Może zostać wygenerowany wyjątek wskazujący zły klasy.
+- Może zostać zgłoszony wyjątek wskazujący na nieprawidłową klasę.
 
-- Zasobów przechowywanych w bibliotece DLL rozszerzenia MFC nie można załadować, ponieważ `AfxFindResourceHandle` zwraca **NULL** lub zasobów nieprawidłowe dojście.
+- Nie można załadować zasobów przechowywanych w bibliotece DLL rozszerzenia MFC, `AfxFindResourceHandle` ponieważ zwraca **wartość null** lub nieprawidłowe dojście do zasobu.
 
-- `DllGetClassObject`, `DllCanUnloadNow`i `UpdateRegistry`, `Revoke`, `RevokeAll`, i `RegisterAll` funkcje elementów członkowskich `COleObjectFactory` z lokalizowaniem fabrykę klas zdefiniowanych w rozszerzenia MFC biblioteki DLL.
+- `DllGetClassObject`, `DllCanUnloadNow` `UpdateRegistry`, i `Revoke` `RevokeAll`funkcje `RegisterAll` elementu członkowskiego `COleObjectFactory` nie mogą znaleźć fabryki klasy zdefiniowanej w bibliotece DLL rozszerzenia MFC.
 
-- `AfxDoForAllClasses` nie działa dla wszystkich klas w bibliotece DLL rozszerzenia MFC.
+- `AfxDoForAllClasses`nie działa dla żadnej klasy z biblioteki DLL rozszerzenia MFC.
 
-- Database w warstwie standardowa MFC gniazd i zasoby OLE nie można załadować. Na przykład **AfxLoadString**(**AFX_IDP_SQL_CONNECT_FAIL**) zwraca pusty ciąg, nawet w przypadku zwykłej biblioteki MFC DLL jest prawidłowo przy użyciu klas MFC baz danych.
+- Nie można załadować standardowej bazy danych MFC, gniazd lub zasobów OLE. Na przykład **AfxLoadString**(**AFX_IDP_SQL_CONNECT_FAIL**) zwraca pusty ciąg, nawet wtedy, gdy zwykła Biblioteka MFC DLL jest prawidłowo używana z klasami baz danych MFC.
 
-Rozwiązanie tych problemów jest utworzenie i eksportowanie funkcji inicjowania rozszerzenia MFC biblioteki DLL, która tworzy **CDynLinkLibrary** obiektu. Wywołaj tę funkcję inicjowania, dokładnie tak, gdy z każdego zwykłej biblioteki MFC DLL używającą biblioteki DLL rozszerzenia MFC.
+Rozwiązaniem tego problemu jest utworzenie i wyeksportowanie funkcji inicjalizacji w bibliotece DLL rozszerzenia MFC, która tworzy obiekt **CDynLinkLibrary** . Wywołaj tę funkcję inicjującą dokładnie raz z każdej zwykłej biblioteki MFC DLL, która używa biblioteki MFC DLL rozszerzenia.
 
-## <a name="mfc-ole-mfc-database-or-dao-or-mfc-sockets-support"></a>OLE w MFC, baza danych MFC (lub DAO), lub MFC gniazd pomocy technicznej
+## <a name="mfc-ole-mfc-database-or-dao-or-mfc-sockets-support"></a>Obsługa MFC OLE, MFC Database (lub DAO) lub MFC Sockets
 
-Jeśli używasz dowolnego MFC OLE, baza danych MFC (lub DAO) lub MFC gniazd pomocy technicznej w swojej zwykłej biblioteki MFC DLL, odpowiednio, MFC debugowania rozszerzenia MFC biblioteki DLL MFCOxxD.dll MFCDxxD.dll i MFCNxxD.dll (gdzie xx jest numer wersji) są automatycznie łączone. Dla każdego z tych bibliotek DLL, które są używane, należy wywołać funkcję inicjowania wstępnie zdefiniowane.
+W przypadku korzystania z obsługi bibliotek MFC OLE, MFC Database (lub DAO) lub MFC Sockets w zwykłej bibliotece MFC DLL, odpowiednio, pliki DLL rozszerzenia MFC debugowania MFC MFCOxxD. dll, MFCDxxD. dll i MFCNxxD. dll (gdzie XX jest numerem wersji) są połączone automatycznie. Musisz wywołać wstępnie zdefiniowaną funkcję inicjującą dla każdej z tych bibliotek DLL, które są używane.
 
-Do obsługi bazy danych, dodaj wywołanie `AfxDbInitModule` do swojej zwykłej biblioteki MFC DLL w `CWinApp::InitInstance` funkcji. Upewnij się, to wywołanie występuje przed wywołaniem dowolnej klasy podstawowej lub wszyscy dodani kod, który uzyskuje dostęp do MFCDxxD.dll. Ta funkcja nie przyjmuje żadnych parametrów i zwraca wartość void.
+Aby zapewnić obsługę bazy danych, należy dodać `AfxDbInitModule` wywołanie do `CWinApp::InitInstance` funkcji regularnej biblioteki DLL MFC. Upewnij się, że to wywołanie występuje przed dowolnymi wywołaniami klasy bazowej lub dodanym kodem, który uzyskuje dostęp do MFCDxxD. dll. Ta funkcja nie przyjmuje parametrów i zwraca wartość void.
 
-Obsługę OLE, dodaj wywołanie `AfxOleInitModule` do swojej zwykłej biblioteki MFC DLL w `CWinApp::InitInstance`. Należy pamiętać, że **COleControlModule InitInstance** wywołaniach funkcji `AfxOleInitModule` , więc jeśli tworzysz kontrolkę OLE i korzystają z `COleControlModule`, to wywołanie nie należy dodawać `AfxOleInitModule`.
+W przypadku obsługi OLE Dodaj wywołanie `AfxOleInitModule` do zwykłych BIBLIOTEK DLL MFC. `CWinApp::InitInstance` Należy zauważyć, że funkcja **COleControlModule InitInstance** wywołuje `AfxOleInitModule` się już, więc jeśli tworzysz kontrolkę OLE i używasz `COleControlModule`, nie należy dodawać tego wywołania do. `AfxOleInitModule`
 
-Obsługę gniazda, dodaj wywołanie `AfxNetInitModule` do swojej zwykłej biblioteki MFC DLL w `CWinApp::InitInstance`.
+W przypadku obsługi gniazd Dodaj wywołanie `AfxNetInitModule` do zwykłych BIBLIOTEK DLL MFC. `CWinApp::InitInstance`
 
-Zauważ, że kompilacji wersji biblioteki MFC DLL a aplikacje nie używają oddzielnych bibliotek DLL dla bazy danych, gniazda, lub obsługuje OLE. Jednak jest bezpieczny do wywołania tych funkcji inicjowania w trybie wydania.
+Zwróć uwagę na to, że kompilacja wydania bibliotek DLL i aplikacji MFC nie korzysta z oddzielnych bibliotek DLL dla obsługi baz danych, gniazd i OLE. Jednak bezpieczne jest wywoływanie tych funkcji inicjujących w trybie wydania.
 
-## <a name="cdynlinklibrary-objects"></a>Obiekty CDynLinkLibrary
+## <a name="cdynlinklibrary-objects"></a>CDynLinkLibrary — obiekty
 
-Podczas każdej operacji, o których wspomniano na początku tego tematu MFC musi Wyszukaj żądaną wartość lub obiektu. Na przykład podczas deserializacji MFC musi przeszukać wszystkie aktualnie dostępne klasy środowiska wykonawczego dopasowania obiektów w warstwie archiwum, przy użyciu ich odpowiednie klasy środowiska wykonawczego.
+Podczas każdej operacji wymienionej na początku tego tematu MFC musi wyszukać żądaną wartość lub obiekt. Na przykład podczas deserializacji MFC musi przeszukiwać wszystkie aktualnie dostępne klasy uruchomieniowe w celu dopasowania obiektów w archiwum przy użyciu ich właściwej klasy czasu wykonywania.
 
-W ramach wyszukiwania, MFC skanuje za pośrednictwem wszystkie rozszerzone dll MFC używane przez zalet łańcuch **CDynLinkLibrary** obiektów. **CDynLinkLibrary** obiekty automatycznie dołączyć łańcuch, podczas ich tworzenia i są tworzone przez każdego rozszerzenia MFC biblioteki DLL z kolei podczas inicjowania. Ponadto każdy moduł (aplikacji lub zwykłej biblioteki MFC DLL) ma swój własny łańcuch **CDynLinkLibrary** obiektów.
+W ramach tych wyszukiwań MFC są skanowane za pomocą wszystkich bibliotek DLL rozszerzeń MFC używanych przez przeciągnięcie łańcucha obiektów **CDynLinkLibrary** . Obiekty **CDynLinkLibrary** są automatycznie dołączane do łańcucha podczas ich konstruowania i są tworzone przez każdą bibliotekę DLL rozszerzenia MFC z kolei podczas inicjacji. Ponadto każdy moduł (aplikacja lub zwykła Biblioteka DLL MFC) ma własny łańcuch obiektów **CDynLinkLibrary** .
 
-Rozszerzenia MFC biblioteki DLL, aby pobrać połączonymi w **CDynLinkLibrary** łańcucha, należy utworzyć **CDynLinkLibrary** obiektu w kontekście każdego modułu, który korzysta z biblioteki DLL rozszerzenia MFC. W związku z tym, jeśli rozszerzenia MFC biblioteki DLL będzie można korzystać w zwykłych bibliotekach MFC dll, musi mieć funkcję inicjowania wyeksportowanej, która tworzy **CDynLinkLibrary** obiektu. Co regularnej biblioteki DLL MFC, który używa rozszerzeń MFC DLL musi wywołać funkcję inicjowania wyeksportowany.
+Aby biblioteka DLL rozszerzenia MFC mogła zostać przełączona do łańcucha **CDynLinkLibrary** , musi utworzyć obiekt **CDynLinkLibrary** w kontekście każdego modułu, który używa biblioteki DLL rozszerzenia MFC. W związku z tym, jeśli biblioteka DLL rozszerzenia MFC ma być używana od zwykłych bibliotek DLL MFC, musi dostarczyć wyeksportowaną funkcję inicjującą, która tworzy obiekt **CDynLinkLibrary** . Każda zwykła Biblioteka DLL MFC, która używa biblioteki DLL rozszerzenia MFC, musi wywoływać wyeksportowaną funkcję inicjującą.
 
-Jeśli rozszerzenia MFC biblioteki DLL ma być używane z aplikacji MFC (.exe) i nigdy nie zwykłej biblioteki MFC DLL, a następnie jest wystarczające, aby utworzyć **CDynLinkLibrary** obiektu w bibliotece MFC DLL rozszerzenia firmy `DllMain`. Jest to, jak działa rozszerzenie biblioteki MFC DLL Kreatora MFC DLL kodu. Podczas ładowania biblioteki DLL rozszerzenia MFC niejawnie `DllMain` ładuje i uruchamia przed uruchomieniem kiedykolwiek aplikacji. Wszelkie **CDynLinkLibrary** tworzenie są połączonymi w łańcuch domyślne czy biblioteki MFC DLL rezerwuje dla aplikacji MFC.
+Jeśli biblioteka DLL rozszerzenia MFC ma być używana tylko z aplikacji MFC (exe) i nigdy nie ze zwykłej biblioteki MFC DLL, wystarczy utworzyć obiekt **CDynLinkLibrary** w bibliotece DLL rozszerzenia MFC `DllMain`. Jest to kod DLL rozszerzenia MFC DLL kreatora MFC. Podczas ładowania biblioteki DLL rozszerzenia MFC niejawnie `DllMain` , ładuje i wykonuje przed uruchomieniem aplikacji. Wszystkie operacje tworzenia **CDynLinkLibrary** są połączone z domyślnym łańcuchem, który Biblioteka MFC DLL rezerwuje dla aplikacji MFC.
 
-Należy pamiętać, że to zły pomysł, aby ustawić wiele **CDynLinkLibrary** obiektów z jednego rozszerzenia MFC biblioteki DLL w jednym łańcucha, zwłaszcza, jeśli biblioteka DLL rozszerzenia MFC będzie dynamicznie zwolniony z pamięci. Nie wywołuj funkcji inicjowania więcej niż jeden raz z dowolnym jeden moduł.
+Należy zauważyć, że nie ma potrzeby posiadania wielu obiektów **CDynLinkLibrary** z jednej biblioteki DLL rozszerzenia MFC w jednym łańcuchu, zwłaszcza jeśli biblioteka DLL rozszerzenia MFC zostanie dynamicznie zwolniona z pamięci. Nie wywołuj funkcji inicjalizacji więcej niż raz z jednego modułu.
 
 ## <a name="sample-code"></a>Przykładowy kod
 
-Ten przykładowy kod zakłada, że zwykłej biblioteki MFC DLL jest niejawnie łączenie z biblioteki DLL rozszerzenia MFC. Jest to realizowane przez połączenie do biblioteki importu (.lib) rozszerzenia MFC biblioteki DLL, podczas kompilowania zwykłej biblioteki MFC DLL.
+W tym przykładowym kodzie przyjęto założenie, że zwykła Biblioteka MFC DLL jest niejawnie łączona z biblioteką DLL rozszerzenia MFC. Jest to realizowane przez połączenie z biblioteką importu (. lib) biblioteki DLL rozszerzenia MFC podczas kompilowania zwykłej biblioteki MFC DLL.
 
-Źródło rozszerzenia MFC biblioteki DLL powinny być następujące wiersze:
+Następujące wiersze powinny znajdować się w źródle biblioteki DLL rozszerzenia MFC:
 
 ```
 // YourExtDLL.cpp:
@@ -92,7 +92,7 @@ extern "C" void WINAPI InitYourExtDLL()
 }
 ```
 
-Pamiętaj wyeksportować **InitYourExtDLL** funkcji. Można to zrobić przy użyciu **__declspec(dllexport)** lub w pliku .def biblioteki DLL w następujący sposób:
+Należy pamiętać, aby wyeksportować funkcję **InitYourExtDLL** . Można to zrobić za pomocą **__declspec (dllexport)** lub w pliku dll. def w następujący sposób:
 
 ```
 // YourExtDLL.Def:
@@ -103,7 +103,7 @@ EXPORTS
     InitYourExtDLL
 ```
 
-Dodaj wywołanie do `InitInstance` członkiem `CWinApp`-pochodzi obiekt w każdym zwykłej biblioteki MFC DLL za pomocą rozszerzenia MFC biblioteki DLL:
+Dodaj wywołanie do `InitInstance` elementu członkowskiego `CWinApp`obiektu pochodnego w każdej zwykłej bibliotece MFC DLL przy użyciu biblioteki DLL rozszerzenia MFC:
 
 ```
 // YourRegularDLL.cpp:
@@ -134,20 +134,20 @@ BOOL CYourRegularDLL::InitInstance()
 
 - [Inicjowanie biblioteki DLL rozszerzenia MFC](run-time-library-behavior.md#initializing-extension-dlls)
 
-- [Zainicjuj regularną bibliotekę DLL MFC](run-time-library-behavior.md#initializing-regular-dlls)
+- [Inicjowanie zwykłych bibliotek DLL MFC](run-time-library-behavior.md#initializing-regular-dlls)
 
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+### <a name="what-do-you-want-to-know-more-about"></a>Jak chcesz dowiedzieć się więcej?
 
 - [Biblioteki DLL rozszerzeń MFC](extension-dlls.md)
 
-- [Zwykłe biblioteki DLL MFC połączone statycznie z MFC](regular-dlls-statically-linked-to-mfc.md)
+- [Regularne biblioteki MFC DLL statycznie połączone z MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [Zwykłe biblioteki DLL MFC połączone dynamicznie z MFC](regular-dlls-dynamically-linked-to-mfc.md)
+- [Regularne biblioteki DLL MFC połączone dynamicznie z MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [Używanie MFC jako części biblioteki DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
-- [Wersja dll biblioteki MFC](../mfc/tn033-dll-version-of-mfc.md)
+- [Wersja biblioteki DLL MFC](../mfc/tn033-dll-version-of-mfc.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Biblioteki DLL rozszerzeń MFC](extension-dlls.md)

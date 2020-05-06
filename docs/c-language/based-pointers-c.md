@@ -16,19 +16,19 @@ ms.locfileid: "62327434"
 ---
 # <a name="based-pointers-c"></a>Wskaźniki bazowe (C)
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-[__based (C++ odwołania)](../cpp/based-pointers-cpp.md)
+[__based (odwołanie w C++)](../cpp/based-pointers-cpp.md)
 
-Kompilatory C Microsoft 32-bitowych i 64-bitowe wskaźnik bazowy jest 32-bitową lub 64-bitowe przesunięcie z 32-bitową lub 64-bitowego wskaźnika podstawowego. Adresowanie na podstawie jest przydatne w przypadku sprawowanie kontroli nad sekcje, w których obiekty są przydzielane, a tym samym zmniejszenie rozmiaru pliku wykonywalnego i zwiększyć szybkość realizacji. Ogólnie rzecz biorąc jest formularz do określania wskaźnik bazowy
+W przypadku kompilatorów Microsoft 32-bit i 64-bitowy C, wskaźnik oparty jest 32-bitowego lub 64-bitowego przesunięcia z bazy wskaźnika "32-bit" lub "64-bit". Adresowanie na podstawie jest przydatne do wykonywania kontroli nad sekcjami, w których obiekty są przydzielane, co zmniejsza rozmiar pliku wykonywalnego i zwiększa szybkość wykonywania. Ogólnie rzecz biorąc, formularz służący do określania wskaźnika wskaźnikowego jest
 
-> *Typ* **__based (** *podstawowy* **)** *deklaratora*
+> *Typ* **__based (** *podstawowy* **)** *deklarator*
 
-"Na podstawie wskaźnika" typ variant adresowania w oparciu o umożliwia specyfikację wskaźnika jako podstawy. Wskaźnik bazowy jest następnie przesunięcie do sekcji pamięci, zaczynając od początku wskaźnik, na którym bazuje. Wskaźniki oparte wskaźnikiem adresów są jedynymi `__based` — słowo kluczowe prawidłowy w kompilacjach kodu 32-bitowych i 64-bitowych. W takich kompilacje są 32-bitową lub 64-bitowych przemieszczanie od podstawy 32-bitową lub 64-bitowych.
+Odmiana "na podstawie wskaźnika" na podstawie adresu umożliwia określenie wskaźnika jako podstawy. Wskaźnik na podstawie jest przesunięty do sekcji pamięci, zaczynając od początku wskaźnika, na którym jest oparta. Wskaźniki oparte na adresach wskaźnika są jedyną formą słowa `__based` kluczowego, które są prawidłowe w 32-bitowych i 64-bitowych kompilacjach. W takich kompilacjach są to 32-bitowe lub 64-bitowe przemieszczenia z bazy 32-bit lub 64-bit.
 
-Jednym z zastosowań wskaźniki oparte na wskaźnikach jest trwały identyfikatorów, które zawierają wskaźniki. Połączonej listy, która składa się z wskaźniki oparte na wskaźnik może można zapisywany na dysku, a następnie ponownie załadowany do innego miejsca w pamięci, za pomocą wskaźników pozostałe prawidłowe.
+Jednym z nich użycia dla wskaźników opartych na wskaźnikach jest dla trwałych identyfikatorów, które zawierają wskaźniki. Lista połączona, która składa się ze wskaźników opartych na wskaźniku, może zostać zapisana na dysku, a następnie ponownie załadowana do innego miejsca w pamięci, przy czym pozostałe wskaźniki są prawidłowe.
 
-Poniższy przykład pokazuje wskaźnika, w oparciu o wskaźnik.
+Poniższy przykład przedstawia wskaźnik na podstawie wskaźnika.
 
 ```C
 void *vpBuffer;
@@ -40,10 +40,10 @@ struct llist_t
 };
 ```
 
-Wskaźnik `vpBuffer` ma przypisany adres pamięci przydzielonej w pewnym momencie później w programie. Połączonej listy jest przenoszony z uwzględnieniem wartości `vpBuffer`.
+Do wskaźnika `vpBuffer` przypisano adres pamięci przydzielonej w późniejszym czasie w programie. Połączona lista zostanie przeniesiona względem wartości `vpBuffer`.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)

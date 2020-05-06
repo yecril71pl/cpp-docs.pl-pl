@@ -17,16 +17,16 @@ ms.locfileid: "62346291"
 ---
 # <a name="type-conversions-c"></a>Konwersje typu (C)
 
-Konwersje typów są zależne od określonego operatora i typu argumentu lub operatorów. Konwersje są wykonywane w następujących przypadkach:
+Konwersje typów zależą od określonego operatora i typu operandu lub operatorów. Konwersje typów są wykonywane w następujących przypadkach:
 
-- Wartości typu jeden jest przypisany do zmiennej innego typu lub operator konwertuje typ jej operand lub operandy przed wykonaniem operacji
+- Gdy wartość jednego typu jest przypisana do zmiennej innego typu lub operator konwertuje typ operandu lub operandów przed wykonaniem operacji
 
-- Kiedy wartości z jednego typu jest jawnie rzutowane na inny typ.
+- Gdy wartość jednego typu jest jawnie rzutowana na inny typ
 
-- Gdy wartość jest przekazywany jako argument do funkcji lub gdy typem jest zwracany przez funkcję
+- Gdy wartość jest przekazana jako argument do funkcji lub gdy typ jest zwracany przez funkcję
 
-Znak, krótka liczba całkowita lub pola bitowe liczba całkowita, wszystkie podpisana lub nie, lub obiekt typu wyliczenia, może być używany w wyrażeniu, wszędzie tam, gdzie można użyć liczby całkowitej. Jeśli `int` może reprezentować wszystkie wartości oryginalnego typu, a następnie wartość jest konwertowana na `int`; w przeciwnym razie jest konwertowany na `unsigned int`. Ten proces jest nazywany "promocją typu całkowitego". Promocje typów całkowitych zachować wartość. Oznacza to, że wartość po promocji może być taka sama, jak na samym podwyższeniu. Zobacz [zwykle konwersje arytmetyczne](../c-language/usual-arithmetic-conversions.md) Aby uzyskać więcej informacji.
+Znak, krótka liczba całkowita lub pole bitowe całkowite, wszystkie podpisane lub Nielub obiekt typu wyliczeniowy, może być używane w wyrażeniu wszędzie tam, gdzie można użyć liczby całkowitej. Jeśli `int` może reprezentować wszystkie wartości oryginalnego typu, wartość zostanie przekonwertowana na `int`; w przeciwnym razie jest konwertowany na `unsigned int`. Ten proces jest nazywany "promocją integralną". Wartość zachowywania całkowitych promocji. Oznacza to, że wartość po podwyższeniu poziomu jest taka sama jak przed podwyższeniem poziomu. Aby uzyskać więcej informacji, zobacz [typowe konwersje arytmetyczne](../c-language/usual-arithmetic-conversions.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia i przydziały](../c-language/expressions-and-assignments.md)

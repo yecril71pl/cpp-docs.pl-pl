@@ -11,22 +11,22 @@ ms.locfileid: "62312690"
 ---
 # <a name="character-sequences"></a>Sekwencje znaków
 
-**ANSI 3.8.2** mapowanie sekwencje znaków pliku źródłowego
+**3.8.2 ANSI** Mapowanie sekwencji znaków pliku źródłowego
 
-Instrukcje preprocesora używają ten sam znak, ustaw jak instrukcje pliku źródłowego z powodu wyjątku, sekwencje unikowe, które nie są obsługiwane.
+Instrukcje preprocesora używają tego samego zestawu znaków jako instrukcji pliku źródłowego z wyjątkiem tego, że sekwencje ucieczki nie są obsługiwane.
 
-W związku z tym aby określić ścieżkę dla pliku dołączanego, należy użyć tylko jednej kreski ułamkowej odwróconej:
+Aby określić ścieżkę do pliku dołączanego, należy użyć tylko jednego ukośnika odwrotnego:
 
 ```
 #include "path1\path2\myfile"
 ```
 
-W kodzie źródłowym niezbędne są dwa ukośniki odwrotne:
+W ramach kodu źródłowego wymagane są dwa ukośniki odwrotne:
 
 ```
 fil = fopen( "path1\\path2\\myfile", "rt" );
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy przetwarzania wstępnego](../c-language/preprocessing-directives.md)

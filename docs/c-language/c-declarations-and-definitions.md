@@ -11,11 +11,11 @@ ms.locfileid: "62326056"
 ---
 # <a name="c-declarations-and-definitions"></a>Deklaracje i definicje języka C
 
-"Deklaracją" ustanawia skojarzenie między określonej zmiennej, funkcji, lub typu i jego atrybuty. [Przegląd deklaracji](../c-language/overview-of-declarations.md) podaje składnię ANSI dla `declaration` nieterminalnych. Deklaracja określa również, gdzie i kiedy identyfikator może być używane ("powiązanie" identyfikatora). Zobacz [okres istnienia, zakres, widoczność i powiązania](../c-language/lifetime-scope-visibility-and-linkage.md) uzyskać informacji na temat połączeń.
+"Deklaracja" ustanawia skojarzenie między określoną zmienną, funkcją lub typem a jej atrybutami. [Przegląd deklaracji](../c-language/overview-of-declarations.md) zawiera składnię ANSI dla `declaration` nieterminalu. Deklaracja określa również, gdzie i kiedy można uzyskać dostęp do identyfikatora ("powiązanie" identyfikatora). Zobacz [okres istnienia, zakres, widoczność i powiązania](../c-language/lifetime-scope-visibility-and-linkage.md) , aby uzyskać informacje dotyczące powiązania.
 
-Ustanawia tego samego powiązania jako deklaracja "definition" zmienną, ale również powoduje, że magazynu do przydzielenia dla zmiennej.
+"Definicja" zmiennej ustanawia te same skojarzenia jak Deklaracja, ale również powoduje przydzielenie magazynu dla zmiennej.
 
-Na przykład `main`, `find`, i `count` funkcje i `var` i `val` zmienne są definiowane w jednym pliku źródłowym, w następującej kolejności:
+Na `main`przykład,, `find`, i `count` zmienne `var` i `val` są zdefiniowane w jednym pliku źródłowym, w następującej kolejności:
 
 ```
 int main() {}
@@ -26,8 +26,8 @@ char find( fileptr ) {}
 int count( double f ) {}
 ```
 
-Zmienne `var` i `val` mogą być używane w `find` i `count` funkcje; są wymagane nie dalsze deklaracji. Jednak te nazwy są niewidoczne (nie są dostępne) `main`.
+Zmienne `var` i `val` mogą być używane w funkcjach `find` i `count` ; dalsze deklaracje nie są zbędne. Ale te nazwy nie są widoczne (nie można uzyskać do nich `main`dostępu) w.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pliki źródłowe i programy źródłowe](../c-language/source-files-and-source-programs.md)

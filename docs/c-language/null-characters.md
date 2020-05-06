@@ -13,10 +13,10 @@ ms.locfileid: "62325458"
 ---
 # <a name="null-characters"></a>Znaki Null
 
-**ANSI 4.9.2** liczbę znaków o wartości null, które można dołączyć do dane zapisywane do strumienia danych binarnych
+**4.9.2 ANSI** Liczba znaków o wartości null, które mogą być dołączane do danych zapisywanych w strumieniu binarnym
 
-Dowolny ciąg znaków o wartości null można dołączać do strumienia danych binarnych.
+Dowolna liczba znaków null może być dołączana do strumienia binarnego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

@@ -15,43 +15,43 @@ ms.locfileid: "62291044"
 ---
 # <a name="union-declarations"></a>Deklaracje złożeń
 
-"Deklaracją złożenia" Określa zestaw wartości zmiennych i, opcjonalnie, tag nazewnictwa Unii. Wartości zmiennych są nazywane "Członkowie" Unii i mogą mieć różne typy. Unie są podobne do "rekordy wariantów" w innych językach.
+"Deklaracja Unii" określa zestaw wartości zmiennych i, opcjonalnie, oznakowanie nazwy Unii. Zmienne wartości są nazywane "składowymi" Unii i mogą mieć różne typy. Unii są podobne do "rekordów wariantów" w innych językach.
 
 ## <a name="syntax"></a>Składnia
 
-*struct-or-union-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struktury lub Unii* *identyfikator*<sub>zoptymalizowany pod kątem</sub> **{** *struktury deklaracji listy* **}**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struktury lub Unii* *identyfikator*
+*specyfikator struct-or-Union*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<sub>wybór</sub> *identyfikatora* *struct-or-Union* **{** *struct-deklaracji-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* *struktury lub Unii*
 
-*struct-or-union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Unia**
+*struct-lub-Union*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**konstrukcja**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Unii**
 
-*struct-declaration-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Struktura deklaracji listy* *deklaracji struktury*
+*Struktura-deklaracja-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Struktura — deklaracja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Struktura *-Deklaracja list* — *Deklaracja*
 
-Złożenia zawartości jest definiowany jako
+Zawartość Union jest definiowana jako
 
-*struct-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *struct-declarator-list*  **;**
+*Deklaracja struktury*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specyfikator-kwalifikator list* - *deklarator-list*  **;**
 
-*specifier-qualifier-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator typu* *specyfikator kwalifikator listy*<sub>zoptymalizowany pod kątem</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Kwalifikator typu* *specyfikator kwalifikator listy*<sub>zoptymalizowany pod kątem</sub>
+*specyfikator — lista kwalifikatorów*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Specyfikator *typu specyfikatora* - *kwalifikator —*<sub>wybór</sub> listy <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Specyfikator *kwalifikatora typu* —<sub>wybór</sub> *listy*
 
-*struct-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Struktura declarator-list* **,** *deklaratora — struktura*
+*struct-deklarator-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Struktura — deklarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-deklarator-list*  **,**  *struct-deklarator*
 
-Zmienna o **Unii** typ przechowuje jedną z wartości zdefiniowanych przez tego typu. Te same zasady określają deklaracje struktur i związków. Unie może również mieć pól bitowych.
+Zmienna z typem **Unii** przechowuje jedną z wartości zdefiniowanych przez ten typ. Te same reguły regulują strukturę i deklaracje Unii. Unie mogą również zawierać pola bitowe.
 
-Elementy członkowskie związków nie może mieć typu niekompletnego typu `void`, lub typu funkcji. W związku z tym członkowie nie może być wystąpieniem elementu Unii, ale może być wskaźniki do typu złożenia, został zadeklarowany.
+Elementy członkowskie Unii nie mogą mieć niekompletnego typu, `void`typu lub typu funkcji. W związku z tym elementy członkowskie nie mogą być wystąpieniem Unii, ale mogą być wskaźnikami do zadeklarowanego typu złożenia.
 
-Deklaracja typu Unii jest tylko szablon. Pamięć nie jest zarezerwowana, dopóki ta zmienna została zgłoszona.
+Deklaracja typu Union jest tylko szablonem. Pamięć nie jest zarezerwowana do momentu zadeklarowania zmiennej.
 
 > [!NOTE]
-> Jeśli zadeklarowano sumę dwóch typów jednej wartości są przechowywane, ale Unii odbywa się przy użyciu innego typu, wyniki są nieprzewidywalne. Na przykład sumę **float** i `int` jest zadeklarowana. A **float** wartości są przechowywane, ale program później dostęp do wartości jako `int`. W takiej sytuacji wartość będzie zależeć od pamięci wewnętrznej **float** wartości. Wartość całkowitą nie być wiarygodne.
+> Jeśli jest zadeklarowana Unia dwóch typów i jest przechowywana jedna wartość, a Unia jest dostępna z innym typem, wyniki są niezawodne. Na przykład Unia **zmiennoprzecinkowa** i `int` jest zadeklarowana. Wartość **zmiennoprzecinkowa** jest przechowywana, ale program później uzyskuje dostęp do wartości jako `int`. W takiej sytuacji wartość będzie zależeć od wewnętrznego magazynu wartości **zmiennoprzecinkowych** . Wartość całkowita nie będzie godna zaufania.
 
 ## <a name="examples"></a>Przykłady
 
@@ -65,7 +65,7 @@ union sign   /* A definition and a declaration */
 } number;
 ```
 
-Ten przykład definiuje zmienną typu Unia z `sign` wpisz i deklaruje zmienną o nazwie `number` zawierający dwa elementy członkowskie: `svar`, liczbą całkowitą ze znakiem i `uvar`, liczbą całkowitą bez znaku. Ta deklaracja umożliwia bieżącą wartość `number` mają być przechowywane jako znakiem czy bez znaku. Tag skojarzone z tego typu Unii jest `sign`.
+W tym przykładzie zdefiniowano zmienną Union `sign` z typem i deklaruje zmienną `number` o nazwie, która ma `svar`dwie składowe:, liczbę `uvar`całkowitą ze znakiem i, liczbę całkowitą bez znaku. Ta deklaracja umożliwia przechowywanie bieżącej wartości `number` jako wartości ze znakiem lub bez znaku. Tag skojarzony z tym typem Unii to `sign`.
 
 ```C
 union               /* Defines a two-dimensional */
@@ -79,11 +79,11 @@ union               /* Defines a two-dimensional */
 } screen[25][80];
 ```
 
-`screen` Tablica zawiera elementy 2000. Każdy element tablicy jest poszczególnych Unii, z dwoma elementami członkowskimi: `window1` i `screenval`. `window1` Elementu członkowskiego jest strukturą za pomocą dwóch członków pola bitowego, `icon` i `color`. `screenval` Element członkowski jest `int`. W dowolnym momencie każdy element złożenia przechowuje albo `int` reprezentowany przez `screenval` lub struktury, reprezentowane przez `window1`.
+`screen` Tablica zawiera 2 000 elementów. Każdy element tablicy jest pojedynczym złożeniem z dwoma elementami członkowskimi `window1` : `screenval`i. `window1` Składowa jest strukturą zawierającą dwa elementy członkowskie pola bitowego `icon` i `color`. `screenval` Element członkowski jest `int`. W danym momencie każdy element Union posiada `int` reprezentowane przez `screenval` lub strukturę reprezentowane przez. `window1`
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Zagnieżdżone Unii mogą być deklarowane anonimowo, gdy należą innej struktury lub Unii. Jest to przykład pustego Unii:
+W przypadku, gdy są elementami członkowskimi innej struktury lub Unii, można zadeklarować je anonimowo. Jest to przykład Unii pustego:
 
 ```C
 struct str
@@ -103,7 +103,7 @@ struct str
 my_str.l == 0L;  /* A reference to a field in the my_str union */
 ```
 
-Unie często są zagnieżdżone w obrębie struktury, która zawiera pole, dzięki czemu typu danych zawartych w Unii w danym momencie. Jest to przykład deklaracji dla takich Unii:
+Unii są często zagnieżdżane w strukturze, która zawiera pole, w którym dane są zawarte w Unii w określonym czasie. Jest to przykład deklaracji dla takiej Unii:
 
 ```C
 struct x
@@ -117,10 +117,10 @@ struct x
 }
 ```
 
-Zobacz [składowe struktury i złożenia](../c-language/structure-and-union-members.md) uzyskać informacji na temat odwołujące się do Unii.
+Zobacz [struktury i składowe Unii,](../c-language/structure-and-union-members.md) Aby uzyskać informacje dotyczące przywołujących się do nich związków.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)

@@ -15,21 +15,21 @@ ms.locfileid: "62326004"
 ---
 # <a name="initializing-strings"></a>inicjowanie ciągów
 
-Można zainicjować tablicy znaków (lub znaków dwubajtowych) za pomocą literału ciągu (lub szeroki literał ciągu). Na przykład:
+Można inicjować tablicę znaków (lub szerokich znaków) za pomocą literału ciągu (lub szerokiego literału ciągu). Przykład:
 
 ```
 char code[ ] = "abc";
 ```
 
-Inicjuje `code` jako 4 elementowej tablicy znaków. Czwarty element jest znakiem zerowym, która kończy się wszystkich literałów ciągów.
+Inicjuje `code` się jako tablicę składającą się z czterech elementów. Czwarty element jest znakiem null, który kończy wszystkie literały ciągu.
 
-Lista identyfikatorów można tylko tak długo, jak liczba identyfikatorów do zainicjowania. Jeśli określisz rozmiar tablicy, która ma mniej niż ciąg, dodatkowe znaki są ignorowane. Na przykład następująca deklaracja inicjuje `code` jako tablicy znaków trzech elementów:
+Lista identyfikatorów może być tylko tak długo, jak liczba identyfikatorów do zainicjowania. Jeśli określisz rozmiar tablicy, który jest krótszy niż ciąg, dodatkowe znaki zostaną zignorowane. Na przykład następująca deklaracja inicjuje `code` się jako tablicę znaków trzech elementów:
 
 ```
 char code[3] = "abcd";
 ```
 
-Pierwsze trzy znaki inicjatora są przypisane do `code`. Znak `d` i znaku null zakończenie ciągu są odrzucane. Należy pamiętać, że spowoduje to utworzenie niezakończony ciąg (czyli jeden bez wartość 0, aby oznaczyć końca) i generuje komunikat diagnostyczny wskazujący tego warunku.
+Tylko trzy pierwsze znaki inicjatora są przypisane do `code`. Znak `d` i znak kończący null są odrzucane. Należy zauważyć, że spowoduje to utworzenie niekończącego ciągu (czyli jednego bez wartości 0 w celu oznaczenia jego końca) i wygenerowanie komunikatu diagnostycznego wskazującego ten warunek.
 
 Deklaracja
 
@@ -44,14 +44,14 @@ char s[]  = {'a', 'b', 'c', '\0'},
      t[3] = {'a', 'b', 'c' };
 ```
 
-Jeśli ciąg jest krótszy niż rozmiar określonej tablicy, pozostałe elementy tablicy są inicjowane na wartość 0.
+Jeśli ciąg jest krótszy niż określony rozmiar tablicy, pozostałe elementy tablicy są inicjowane do wartości 0.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-W Microsoft C literałów ciągów może być maksymalnie 2048 bajtów długości.
+W Microsoft C, literały ciągu mogą mieć długość do 2048 bajtów.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Inicjowanie](../c-language/initialization.md)

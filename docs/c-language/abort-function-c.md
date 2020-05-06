@@ -13,10 +13,10 @@ ms.locfileid: "62313457"
 ---
 # <a name="abort-function-c"></a>abort — funkcja (C)
 
-**ANSI 4.10.4.1** zachowanie **przerwać** funkcji w odniesieniu do otwartego i tymczasowych plików
+**4.10.4.1 ANSI** Zachowanie funkcji **Abort** w odniesieniu do plików otwartych i tymczasowych
 
-**Przerwać** funkcji nie zamyka pliki, które są otwarte lub tymczasowego. Go nie opróżnia buforów strumienia. Aby uzyskać więcej informacji, zobacz [przerwać](../c-runtime-library/reference/abort.md).
+Funkcja **Abort** nie zamyka plików, które są otwarte lub tymczasowe. Nie opróżnia buforów strumieni. Aby uzyskać więcej informacji, zobacz [Abort](../c-runtime-library/reference/abort.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

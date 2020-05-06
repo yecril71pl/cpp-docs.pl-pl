@@ -16,7 +16,7 @@ ms.locfileid: "64343419"
 ---
 # <a name="null-statement-c"></a>Instrukcja o wartości Null (C)
 
-"Instrukcja o wartości null" jest instrukcję, zawierającą tylko średnika; może się pojawić, wszędzie tam, gdzie jest oczekiwany instrukcję. Nic się nie dzieje, gdy jest wykonywana instrukcja o wartości null. Poprawny sposób code instrukcja o wartości null jest:
+"Instrukcja o wartości null" jest instrukcją zawierającą tylko średnik; może pojawić się wszędzie tam, gdzie jest oczekiwana instrukcja. Nic się nie dzieje, gdy zostanie wykonana instrukcja o wartości null. Prawidłowym sposobem kodu instrukcji null jest:
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,19 +24,19 @@ ms.locfileid: "64343419"
 
 ## <a name="remarks"></a>Uwagi
 
-Instrukcje, takie jak **czy**, **dla**, **Jeśli**, i `while` wymagają, że instrukcji wykonywalnej są wyświetlane jako treść instrukcji. Instrukcja o wartości null spełnia wymagania składni w przypadkach, które nie są treść instrukcji merytorycznych.
+Instrukcje, takie **jak** **do**, **Jeśli**i `while` wymagają, aby instrukcja wykonywalna była wyświetlana jako treść instrukcji. Instrukcja o wartości null spełnia wymagania składniowe w przypadkach, w których nie jest wymagana treść instrukcji merytorycznej.
 
-Podobnie jak w przypadku innych instrukcji C, może zawierać etykiety przed instrukcja o wartości null. Oznaczenie elementu, który jest nie instrukcję, takich jak zamykającego nawiasu klamrowego instrukcji złożonej, można oznaczyć instrukcja o wartości null i wstaw go bezpośrednio przed element, aby uzyskać ten sam efekt.
+Podobnie jak w przypadku każdej innej instrukcji języka C, można dołączyć etykietę przed instrukcją o wartości null. Aby oznaczyć element, który nie jest instrukcją, taką jak zamykający nawias klamrowy instrukcji złożonej, można dodać etykietę do instrukcji null i wstawić ją bezpośrednio przed elementem, aby uzyskać ten sam efekt.
 
-Ten przykład ilustruje instrukcja o wartości null:
+Ten przykład ilustruje instrukcję o wartości null:
 
 ```C
 for ( i = 0; i < 10; line[i++] = 0 )
      ;
 ```
 
-W tym przykładzie wyrażenie pętli **dla** instrukcji `line[i++] = 0` inicjuje 10 pierwszych elementów `line` na 0. Treść instrukcji jest instrukcja o wartości null, ponieważ nie dalsze instrukcje są niezbędne.
+W tym przykładzie wyrażenie Loop instrukcji `line[i++] = 0` `line` **for** inicjuje pierwsze 10 elementów z wartości 0. Treść instrukcji jest instrukcją o wartości null, ponieważ dalsze instrukcje nie są wymagane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instrukcje](../c-language/statements-c.md)

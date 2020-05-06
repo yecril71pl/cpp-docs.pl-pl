@@ -14,7 +14,7 @@ ms.locfileid: "62344879"
 ---
 # <a name="using-the-additive-operators"></a>Używanie dodatkowych operatorów
 
-Poniższe przykłady, które ilustrują operatorów dodawania i odejmowania, użyto tych deklaracji:
+Poniższe przykłady, które ilustrują operatory dodawania i odejmowania, wykorzystują następujące deklaracje:
 
 ```
 int i = 4, j;
@@ -29,14 +29,14 @@ px = &x[4 + i];
 px = &x[4] + i;
 ```
 
-Wartość `i` jest mnożony przez długość **float** i dodane do `&x[4]`. Wynikowa wartość wskaźnika jest adresem `x[8]`.
+Wartość `i` jest mnożona przez długość wartości **zmiennoprzecinkowej** i dodana do `&x[4]`. Wartość wskaźnika będącego wynikiem jest adres `x[8]`.
 
 ```
 j = &x[i] - &x[i-2];
 ```
 
-W tym przykładzie adres trzeci element `x` (przez `x[i-2]`) jest odejmowany od adres piąty element `x` (przez `x[i]`). Różnica jest podzielona przez długość **float**; wynik jest wartością całkowitą 2.
+W tym przykładzie `x` adres trzeciego elementu (określony przez `x[i-2]`) jest odejmowany od adresu piątego elementu `x` (podaną przez `x[i]`). Różnica jest dzielona przez długość **zmiennoprzecinkową**; wynik jest wartością całkowitą 2.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operatory dodawania języka C](../c-language/c-additive-operators.md)

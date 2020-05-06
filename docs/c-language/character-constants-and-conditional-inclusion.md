@@ -11,10 +11,10 @@ ms.locfileid: "62312677"
 ---
 # <a name="character-constants-and-conditional-inclusion"></a>Znaki stałej i dołączenie warunkowe
 
-**ANSI 3.8.1** tego, czy wartość stałej znakowej pojedynczych znaków w wyrażeniu stałym, który kontroluje dołączenie warunkowe pasuje do wartości, z tą samą stałą znaku w zestawie znaków wykonywania. Czy stałej znaku mogą mieć wartości ujemnej
+**3.8.1 ANSI** Czy wartość znaku pojedynczego znaku w wyrażeniu stałym kontrolującym dołączenie warunkowe dopasowuje wartość tej samej stałej znakowej w zestawie znaków wykonywania. Czy taka stała znaku może mieć wartość ujemną
 
-Zestaw znaków używanych w instrukcjach preprocesora jest taki sam jak zestaw znaków wykonania. Preprocesor rozpoznaje ujemne wartości.
+Zestaw znaków używany w instrukcjach preprocesora jest taki sam jak zestaw znaków wykonania. Preprocesor rozpoznaje wartości ujemnych znaków.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy przetwarzania wstępnego](../c-language/preprocessing-directives.md)

@@ -13,10 +13,10 @@ ms.locfileid: "62313665"
 ---
 # <a name="addition-"></a>Dodawanie (+)
 
-Operator dodawania (**+**) powoduje, że dwóch argumentów operacji do dodania. Oba operandy może być typu całkowitego lub zmiennoprzecinkowego typy, lub jeden argument może być wskaźnika, a drugi liczbą całkowitą.
+Operator dodawania (**+**) powoduje dodanie dwóch operandów. Oba operandy mogą być typu całkowitego lub zmiennoprzecinkowego lub jeden operand może być wskaźnikiem, a drugą liczbą całkowitą.
 
-Po dodaniu do wskaźnika, wartość całkowitą liczbą całkowitą (*i*) jest konwertowana mnożąc przez rozmiar wartości, odnoszący się do wskaźnika. Po konwersji na wartość całkowitą reprezentuje *i* pozycji pamięci, w którym każdej pozycji ma długość określona przez typ wskaźnika. Gdy wartość przekonwertowana liczba całkowita jest dodawana do wartości wskaźnika, wynik jest wartością wskaźnika reprezentująca adres *i* pozycji z oryginalnego adresu. Nowa wartość wskaźnika adresów wartości tego samego typu jak oryginalna wartość wskaźnika, a w związku z tym jest taka sama jak indeksowanie tablicy (zobacz [tablic One-Dimensional](../c-language/one-dimensional-arrays.md) i [tablic wielowymiarowych](../c-language/multidimensional-arrays-c.md)). Jeżeli wskaźnik Suma punktów spoza tablicy, z wyjątkiem w pierwszej lokalizacji poza najwyższych, wynik jest niezdefiniowany. Aby uzyskać więcej informacji, zobacz [arytmetyki wskaźnika](../c-language/pointer-arithmetic.md).
+Gdy liczba całkowita zostanie dodana do wskaźnika, wartość całkowita (*i*) jest konwertowana przez pomnożenie jej przez rozmiar wartości, która jest adresem wskaźnika. Po konwersji wartość *całkowita reprezentuje położenie* pamięci, gdzie każda pozycja ma długość określoną przez typ wskaźnika. Gdy przekonwertowana wartość całkowita zostanie dodana do wartości wskaźnika, wynik jest nową wartością wskaźnika reprezentującą adres *i* pozycje z oryginalnego adresu. Nowa wartość wskaźnika odnosi się do wartości tego samego typu co oryginalna wartość wskaźnika i dlatego jest taka sama jak indeksowanie tablicy (zobacz [tablice jednowymiarowe](../c-language/one-dimensional-arrays.md) i [tablice wielowymiarowe](../c-language/multidimensional-arrays-c.md)). Jeśli wskaźnik sum wskazuje poza tablicę, z wyjątkiem pierwszej lokalizacji poza górną końcówką, wynik jest niezdefiniowany. Aby uzyskać więcej informacji, zobacz [arytmetyka wskaźnika](../c-language/pointer-arithmetic.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operatory dodawania języka C](../c-language/c-additive-operators.md)

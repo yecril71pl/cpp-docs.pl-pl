@@ -24,36 +24,36 @@ ms.locfileid: "62315238"
 ---
 # <a name="specifying-build-events"></a>Określanie zdarzeń kompilacji
 
-Korzystanie ze zdarzeń kompilacji, aby określić polecenia uruchamiane przed rozpoczęciem kompilacji, zanim proces łącze lub po zakończeniu kompilacji.
+Możesz użyć zdarzeń kompilacji, aby określić polecenia, które są uruchamiane przed rozpoczęciem kompilacji, przed procesem linku lub po zakończeniu kompilacji.
 
-Zdarzenia kompilacji są wykonywane tylko wtedy, gdy kompilacja pomyślnie osiągnie tych punktów w procesie kompilacji. W przypadku wystąpienia błędu w kompilacji, *postkompilacyjnego* zdarzenie nie występuje; Jeśli ten błąd występuje przed fazy połączeń ani *prekonsolidacyjnego* ani *po kompilacji* zdarzeń występuje. Ponadto, jeśli żadne pliki nie muszą być połączone *prekonsolidacyjnego* zdarzenie nie występuje. *Prekonsolidacyjnego* również zdarzenie nie jest dostępne w projektach, które nie zawierają krokiem link.
+Zdarzenia kompilacji są wykonywane tylko wtedy, gdy kompilacja pomyślnie osiągnie te punkty w procesie kompilacji. Jeśli wystąpi błąd w kompilacji, zdarzenie wykonywane *po kompilacji* nie wystąpi. Jeśli błąd występuje przed fazą konsolidacji, nie wystąpi ani *link poprzedzający* , ani zdarzenie *po kompilacji* . Ponadto jeśli żadne pliki nie muszą być połączone, zdarzenie *poprzedzające połączenie* nie zostanie wykonane. Zdarzenie *poprzedzające połączenie* jest również niedostępne w projektach, które nie zawierają kroku linku.
 
-Jeśli żadne pliki nie muszą zostać skompilowane, występować żadne zdarzenia kompilacji.
+Jeśli żadne pliki nie muszą być skompilowane, nie wystąpią żadne zdarzenia kompilacji.
 
-Aby uzyskać ogólne informacje na temat zdarzeń kompilacji, zobacz [kroki tworzenia niestandardowych interpretacji i zdarzenia kompilacji](understanding-custom-build-steps-and-build-events.md).
+Aby uzyskać ogólne informacje na temat zdarzeń kompilacji, zobacz [Opis niestandardowych kroków kompilacji i zdarzeń kompilacji](understanding-custom-build-steps-and-build-events.md).
 
-### <a name="to-specify-a-build-event"></a>Aby określić zdarzenia kompilacji
+### <a name="to-specify-a-build-event"></a>Aby określić zdarzenie kompilacji
 
-1. W **Eksploratora rozwiązań**, wybierz projekt, dla którego chcesz określić zdarzeń kompilacji.
+1. W **Eksplorator rozwiązań**wybierz projekt, dla którego chcesz określić zdarzenie kompilacji.
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](working-with-project-properties.md).
 
-1. W **zdarzenia kompilacji** folderu, wybierz stronę właściwości zdarzenia kompilacji.
+1. W folderze **zdarzenia kompilacji** wybierz stronę właściwości zdarzenia kompilacji.
 
-1. Określ właściwości skojarzonego ze zdarzeniem kompilacji:
+1. Określ właściwości skojarzone ze zdarzeniem kompilacji:
 
-   - W **wiersza polecenia**, określ polecenie tak, jakby były określając ją w wierszu polecenia. Określ Prawidłowe polecenie lub pliku wsadowego i dowolne wymagane dane wejściowe lub wyjściowe pliki. Określ **wywołania** polecenia przed nazwą pliku wsadowego, aby zagwarantować, że wykonywane są wszystkie kolejne polecenia batch.
+   - W **wierszu polecenia**określ polecenie tak, jakby było ono określane w wierszu polecenia. Określ prawidłowe polecenie lub plik wsadowy oraz wszystkie wymagane pliki wejściowe lub wyjściowe. Określ polecenie **call** Batch przed nazwą pliku wsadowego, aby zagwarantować, że wszystkie kolejne polecenia są wykonywane.
 
-      Wiele plików wejściowych i wyjściowych można określić symbolicznie za pomocą makra programu MSBuild. Aby uzyskać informacje na temat sposobu określenia lokalizacji plików lub nazw zestawów plików, zobacz [typowe makra dla kompilacji polecenia i właściwości](reference/common-macros-for-build-commands-and-properties.md).
+      Wiele plików wejściowych i wyjściowych można określić symbolicznie przy użyciu makr MSBuild. Aby uzyskać informacje na temat sposobu określania lokalizacji plików lub nazw zestawów plików, zobacz [Common MACROS for Build Commands and Properties](reference/common-macros-for-build-commands-and-properties.md).
 
-      Ponieważ znak "%" jest zarezerwowany przez program MSBuild, jeśli określisz zmienną środowiskową, Zastąp każde **%** znakiem ucieczki **% 25** szesnastkowa sekwencja unikowa. Na przykład Zastąp ciąg **% WINDIR %** z **25WINDIR % 25**. Program MSBuild zastępuje każdy **% 25** sekwencji z **%** znak przed uzyskuje dostęp do zmiennej środowiskowej.
+      Ponieważ znak "%" jest zastrzeżony przez MSBuild, w przypadku określenia zmiennej środowiskowej Zamień każdy **%** znak ucieczki na **%25** szesnastkową sekwencję ucieczki. Na przykład Zamień **% windir%** na **% 25WINDIR %25**. MSBuild zastępuje każdą sekwencję **%25** **%** znakiem przed uzyskaniem dostępu do zmiennej środowiskowej.
 
-   - W **opis**, wpisz opis tego zdarzenia. Opis zostanie wydrukowany do **dane wyjściowe** okna tego zdarzenia.
+   - W polu **Opis**wpisz opis tego zdarzenia. W przypadku wystąpienia tego zdarzenia opis jest drukowany w oknie **danych wyjściowych** .
 
-   - W **wyłączone z kompilacji**, określ **tak** Jeśli nie chcesz, aby zdarzenia umożliwia uruchamianie.
+   - W obszarze **wykluczone z kompilacji**Określ **wartość tak** , jeśli nie chcesz uruchamiać zdarzenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Ogólne informacje o niestandardowych krokach budowania lub zdarzeniach kompilacji](understanding-custom-build-steps-and-build-events.md)<br>
-[Typowe makra dla właściwości i poleceń kompilacji](reference/common-macros-for-build-commands-and-properties.md)<br>
+[Typowe makra dla poleceń i właściwości kompilacji](reference/common-macros-for-build-commands-and-properties.md)<br>
 [Rozwiązywanie problemów z dostosowaniami kompilacji](troubleshooting-build-customizations.md)

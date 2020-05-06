@@ -13,10 +13,10 @@ ms.locfileid: "62344983"
 ---
 # <a name="time-zone"></a>Strefa czasowa
 
-**ANSI 4.12.1** lokalnej strefy czasowej i czasu letniego
+**4.12.1 ANSI** Lokalna strefa czasowa i czas letni
 
-Lokalnej strefy czasowej to standardowy czas pacyficzny. Microsoft C obsługuje czasu letniego.
+Lokalna strefa czasowa to Pacyfik (czas standardowy). Program Microsoft C obsługuje czas letni.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

@@ -21,12 +21,12 @@ ms.locfileid: "62290693"
 ---
 # <a name="customizing-c-command-line-processing"></a>Dostosowywanie przetwarzania w wierszu polecenia języka C
 
-Jeśli program nie przyjmuje argumentów wiersza polecenia, można zapisać małej ilości miejsca, z pominięciem użyj procedury biblioteki, która wykonuje przetwarzania w wierszu polecenia. Ta procedura jest wywoływana **_setargv —** (lub **_wsetargv** w środowisku znaków dwubajtowych), zgodnie z opisem w [rozszerzanie argumentów z symbolami wieloznacznymi](../c-language/expanding-wildcard-arguments.md). Aby pominąć jego użycia, należy zdefiniować procedurę, która nie wykonuje żadnych działań w pliku zawierającego **głównego** funkcji i nadaj mu nazwę **_setargv —** (lub **_wsetargv** w znaków dwubajtowych Środowisko). Wywołanie **_setargv —** lub **_wsetargv** następnie jest spełniony, definicja **_setargv —** lub **_wsetargv** , i jest w wersji biblioteki Nie załadowano.
+Jeśli program nie przyjmuje argumentów wiersza polecenia, można zaoszczędzić małą ilość miejsca, pomijając użycie procedury biblioteki, która wykonuje przetwarzanie wiersza polecenia. Ta procedura jest nazywana **_setargv** (lub **_wsetargv** w środowisku o szerokim znaku), zgodnie z opisem w [rozwijaniu argumentów z symbolami wieloznacznymi](../c-language/expanding-wildcard-arguments.md). Aby pominąć jego użycie, zdefiniuj procedurę, która nie wykonuje żadnych operacji w pliku zawierającym **główną** funkcję i nadaj jej nazwę **_setargv** (lub **_wsetargv** w środowisku znaków dwubajtowych). Wywołanie **_setargv** lub **_wsetargv** jest następnie spełnione przez definicję **_setargv** lub **_wsetargv** , a wersja biblioteki nie została załadowana.
 
-Podobnie jeśli nigdy nie dostępu do tabeli środowiska za pomocą `envp` argument, możesz podać własne pusty procedura ma być używany zamiast **_setenvp —** (lub **_wsetenvp**), Procedura przetwarzania w środowisku.
+Podobnie, jeśli nie masz dostępu do tabeli środowiska za pomocą `envp` argumentu, możesz podać własną pustą procedurę, która będzie używana zamiast **_setenvp** (lub **_wsetenvp**), procedury przetwarzania środowiska.
 
-Jeśli program wykonywania wywołań do **_spawn** lub **_exec** rodziny procedury biblioteki wykonawczej C, użytkownik powinien pomija procedura przetwarzania w środowisku, ponieważ ta procedura służy do przekazywania środowisko z procesu ikrę do nowego procesu.
+Jeśli program wykonuje wywołania do **_spawn** lub **_exec** z rodziny procedur w bibliotece wykonawczej C, nie należy pomijać procedury przetwarzania środowiska, ponieważ ta procedura służy do przekazywania środowiska z procesu duplikowania do nowego procesu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcja main i wykonywanie programu](../c-language/main-function-and-program-execution.md)

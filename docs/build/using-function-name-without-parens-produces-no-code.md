@@ -13,7 +13,7 @@ ms.locfileid: "62314601"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>Korzystanie z nazwy funkcji bez () nie tworzy kodu
 
-Jeśli nazwy funkcji zadeklarowanych w programie jest używana bez nawiasów, kompilator nie generuje kodu. Dzieje się tak niezależnie od tego, czy funkcja przyjmuje parametry, ponieważ kompilator oblicza adresu funkcji; Jednak ponieważ operator wywołania funkcji (")" nie jest obecny, nie wykonano wywołanie. Ten wynik jest podobny do następującego:
+Gdy nazwa funkcji zadeklarowana w programie jest używana bez nawiasów, kompilator nie tworzy kodu. Dzieje się tak niezależnie od tego, czy funkcja przyjmuje parametry, ponieważ kompilator oblicza adres funkcji; Jednak ze względu na to, że operator wywołania funkcji "()" nie istnieje, wywołanie nie zostało wykonane. Ten wynik jest podobny do następującego:
 
 ```
 // compile with /Wall to generate a warning
@@ -21,9 +21,9 @@ int a;
 a;      // no code generated here either
 ```
 
-W programie Visual C++ nawet przy użyciu poziom ostrzeżeń 4 generuje żadne diagnostyczne dane wyjściowe. Nie ostrzeżenie; żaden kod jest generowany.
+W Visual C++, nawet przy użyciu poziomu ostrzeżeń 4 nie generuje danych wyjściowych. Nie wydano ostrzeżenia; nie jest tworzony żaden kod.
 
-Poniższy przykładowy kod kompiluje (z ostrzeżeniem) i poprawnie łącza bez błędów, ale nie tworzy kodu reference do `funcn( )`. Aby to działało poprawnie Dodaj operator wywołania funkcji (")".
+Przykładowy kod poniżej kompiluje (z ostrzeżeniem) i łączy się prawidłowo bez błędów, ale nie tworzy kodu w odwołaniu do `funcn( )`. Aby to działanie działało prawidłowo, Dodaj operator wywołania funkcji "()".
 
 ```
 #include <stdio.h>
@@ -39,6 +39,6 @@ void funcn() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Optymalizacja kodu](optimizing-your-code.md)

@@ -1,5 +1,5 @@
 ---
-title: Ustalić, jakiej metody eksportu użyć
+title: Wybieranie metody eksportowania do użycia
 ms.date: 11/04/2016
 helpviewer_keywords:
 - __declspec(dllexport) keyword [C++]
@@ -14,52 +14,52 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62273740"
 ---
-# <a name="determine-which-exporting-method-to-use"></a>Ustalić, jakiej metody eksportu użyć
+# <a name="determine-which-exporting-method-to-use"></a>Wybieranie metody eksportowania do użycia
 
-Możesz wyeksportować funkcje na dwa sposoby — plik .def lub `__declspec(dllexport)` — słowo kluczowe. Aby pomóc w podjęciu decyzji, w jaki sposób jest lepszym rozwiązaniem dla biblioteki DLL, należy wziąć pod uwagę następujące pytania:
+Funkcje można eksportować na jeden z dwóch sposobów — plik. def lub `__declspec(dllexport)` słowo kluczowe. Aby ułatwić podjęcie decyzji, która metoda jest lepsza dla biblioteki DLL, należy wziąć pod uwagę następujące pytania:
 
-- Masz zamiar wyeksportować później więcej funkcji?
+- Czy planujesz wyeksportować więcej funkcji później?
 
-- Jest używane tylko przez aplikacje, które można odtworzyć lub jest on używany przez aplikacje, których nie można odbudować biblioteki DLL — na przykład w przypadku aplikacji, które są tworzone przez strony trzecie?
+- Czy biblioteka DLL jest używana tylko przez aplikacje, które można skompilować lub które są używane przez aplikacje, których nie można skompilować ponownie — na przykład aplikacje, które są tworzone przez strony trzecie?
 
-## <a name="pros-and-cons-of-using-def-files"></a>Zalet i wad za pomocą plików .def
+## <a name="pros-and-cons-of-using-def-files"></a>Specjaliści i wady dotyczące korzystania z plików. def
 
-Eksportowanie funkcji daje pliku .def, kontrolować eksportowe liczebniki porządkowe. Po dodaniu eksportowanych funkcji do biblioteki DLL, można przypisać wartości porządkowe większej niż eksportowanych funkcji. Gdy to zrobisz, aplikacje, które używają niejawna Konsolidacja nie trzeba ponownie połączyć z biblioteką importu, który zawiera nową funkcję. Jest to bardzo wygodne w przypadku projektowania DLL do użytku przez wiele aplikacji, ponieważ możesz dodawać nowe funkcje i upewnij się również, że będzie on nadal działać poprawnie z aplikacjami, które już polegać na niej. Na przykład biblioteki MFC DLL są kompilowane za pomocą plików .def.
+Eksportowanie funkcji w pliku. def daje kontrolę nad numerami eksportu. Po dodaniu wyeksportowanej funkcji do biblioteki DLL można przypisać jej wyższą wartość porządkową niż jakakolwiek inna funkcja eksportowana. Po wykonaniu tej czynności aplikacje korzystające z niejawnego łączenia nie muszą ponownie łączyć się z biblioteką importu, która zawiera nową funkcję. Jest to bardzo wygodne, jeśli projektujesz bibliotekę DLL do użytku przez wiele aplikacji, ponieważ możesz dodać nowe funkcje, a także upewnić się, że nadal działają poprawnie z aplikacjami, które są już na nim zależne. Na przykład biblioteki DLL MFC są kompilowane przy użyciu plików. def.
 
-Inną zaletą używania pliku .def jest, że można użyć `NONAME` atrybutu, aby wyeksportować funkcji. Spowoduje to umieszczenie tylko numer porządkowy w tabeli eksportu biblioteki DLL. Dla bibliotek DLL, które mają dużą liczbę eksportowanych funkcji przy użyciu `NONAME` atrybutów można zmniejszyć rozmiar pliku DLL. Aby uzyskać informacje na temat pisania instrukcji definicji modułu, zobacz [zasady dla instrukcji definicji modułu](reference/rules-for-module-definition-statements.md). Aby uzyskać informacji na temat Eksport porządkowej, zobacz [eksportowanie funkcji z biblioteki DLL według liczby porządkowej zamiast nazwy](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
+Inną możliwością użycia pliku. def jest użycie `NONAME` atrybutu do eksportowania funkcji. Spowoduje to umieszczenie tylko liczby porządkowej w tabeli eksportów biblioteki DLL. W przypadku bibliotek DLL, które mają dużą liczbę wyeksportowanych funkcji `NONAME` , użycie atrybutu może zmniejszyć rozmiar pliku dll. Aby uzyskać informacje dotyczące sposobu pisania instrukcji modułu definicji, zobacz [reguły dotyczące instrukcji definicji modułów](reference/rules-for-module-definition-statements.md). Aby uzyskać informacje na temat eksportu porządkowego, zobacz [Eksportowanie funkcji z biblioteki DLL według liczby porządkowej, a nie nazwy](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
 
-Używając pliku .def wadą jest to czy jeśli eksportujesz funkcje w pliku C++, albo musisz umieścić nazwy dekorowane w .def pliku lub zdefiniować eksportowane funkcji za pomocą extern "C", aby uniknąć dekorowania nazwy, która została wykonana za pomocą kompilatora MSVC.
+Wadą użycia pliku. def jest to, że jeśli eksportujesz funkcje w pliku języka C++, musisz umieścić nazwy dekoracyjne w pliku. def lub zdefiniować eksportowane funkcje przy użyciu extern "C", aby uniknąć dekoracji nazw, które jest wykonywane przez kompilator MSVC.
 
-Umieszczenie nazwy dekorowane w pliku .def, możesz je uzyskać, korzystając z [DUMPBIN](reference/dumpbin-reference.md) narzędzia lub przy użyciu konsolidator [/MAP](reference/map-generate-mapfile.md) opcji. Nazwy dekoracyjne, które są produkowane przez kompilator są specyficzne dla kompilatora; w związku z tym, jeśli nazwy dekorowane, które są produkowane przez kompilator w pliku .def, aplikacje, które łącze do biblioteki DLL muszą być także kompilowane przy użyciu tej samej wersji kompilatora, aby nazwy dekorowane w aplikacji wywołującej odpowiadały wyeksportowany nazwy i n pliku .def biblioteki dll.
+Jeśli umieścisz nazwy dekoracyjne w pliku. def, możesz je uzyskać za pomocą narzędzia [polecenia DUMPBIN](reference/dumpbin-reference.md) lub za pomocą opcji konsolidatora [/map](reference/map-generate-mapfile.md) . Nazwy dekoracyjne, które są tworzone przez kompilator, są specyficzne dla kompilatora; w związku z tym, jeśli umieścisz dekoracyjne nazwy, które są tworzone przez kompilator w pliku. def, aplikacje łączące się z biblioteką DLL również muszą być kompilowane przy użyciu tej samej wersji kompilatora, aby nazwy dekoracyjne w aplikacji wywołującej były zgodne z wyeksportowanymi nazwami w pliku. def biblioteki DLL.
 
-## <a name="pros-and-cons-of-using-declspecdllexport"></a>Zalet i wad przy użyciu atrybutu __declspec(dllexport)
+## <a name="pros-and-cons-of-using-__declspecdllexport"></a>Specjaliści i wady korzystania z __declspec (dllexport)
 
-Za pomocą `__declspec(dllexport)` jest wygodne, ponieważ nie masz już martwić się o obsługę pliku .def i uzyskiwanie nazwy dekorowane eksportowanych funkcji. Jednak użyteczności w ten sposób eksportowania jest ograniczona przez liczbę połączonych aplikacji, które chcesz ponownie skompilować. Po odbudowaniu biblioteki DLL za pomocą nowego eksportu należy odbudować aplikacji, ponieważ nazwy dekorowane dla wyeksportowanych funkcji C++ mogą ulec zmianie, jeśli używasz innej wersji kompilatora, aby skompilować go ponownie.
+Korzystanie `__declspec(dllexport)` z programu jest wygodne, ponieważ nie trzeba martwić się o utrzymywanie pliku. def i uzyskanie nazw dekoracyjnych funkcji eksportowanych. Jednak użyteczność tego sposobu eksportowania jest ograniczona przez liczbę połączonych aplikacji, które chcesz ponownie skompilować. W przypadku odbudowywania biblioteki DLL przy użyciu nowych eksportów należy również ponownie skompilować aplikacje, ponieważ nazwy dekoracyjne dla eksportowanych funkcji języka C++ mogą ulec zmianie, jeśli używasz innej wersji kompilatora do jej odbudowania.
 
 ### <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Eksportowanie z biblioteki DLL za pomocą. Pliki DEF](exporting-from-a-dll-using-def-files.md)
+- [Eksportowanie z biblioteki DLL przy użyciu programu. Pliki DEF](exporting-from-a-dll-using-def-files.md)
 
-- [Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Eksportowanie z biblioteki DLL przy użyciu __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Eksportowanie i importowanie przy użyciu makra AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
+- [Eksportowanie i importowanie przy użyciu AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Eksportuj funkcje C++ do użycia w plikach wykonywalnych języka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Eksportowanie funkcji języka C++ do użycia w plikach wykonywalnych języka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Eksportuj funkcje C do użycia w plikach wykonywalnych języka C lub języka C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Eksportowanie funkcji C do użycia w plikach wykonywalnych języka C lub C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
 - [Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Zainicjuj bibliotekę DLL](run-time-library-behavior.md#initializing-a-dll)
+- [Inicjowanie biblioteki DLL](run-time-library-behavior.md#initializing-a-dll)
 
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+### <a name="what-do-you-want-to-know-more-about"></a>Jak chcesz dowiedzieć się więcej?
 
 - [Importowanie i eksportowanie funkcji śródwierszowych](importing-and-exporting-inline-functions.md)
 
 - [Importy wzajemne](mutual-imports.md)
 
-- [Nazwy ozdobione](reference/decorated-names.md)
+- [Nazwy dekoracyjne](reference/decorated-names.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Eksportowanie z biblioteki DLL](exporting-from-a-dll.md)

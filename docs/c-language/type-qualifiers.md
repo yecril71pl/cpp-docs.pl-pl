@@ -19,29 +19,29 @@ ms.locfileid: "62344801"
 ---
 # <a name="type-qualifiers"></a>Kwalifikatory typów
 
-Kwalifikatory typów oferowanie jednej z dwóch właściwości identyfikatora. **Const** kwalifikator typu deklaruje niemodyfikowalnymi obiektu. `volatile` Kwalifikator typu deklaruje element, którego wartość może rzeczywiście zmienić coś poza kontrolą programu, w której występuje, takich jak współbieżnie wykonywanego wątku.
+Kwalifikatory typu dają jedną z dwóch właściwości do identyfikatora. Kwalifikator typu **const** deklaruje obiekt jako niemodyfikowalny. Kwalifikator `volatile` typu deklaruje element, którego wartość może być słusznie zmieniona przez coś poza formantem programu, w którym występuje, na przykład współbieżnie wykonywany wątek.
 
-Kwalifikatory, należy wpisać dwa **const** i `volatile`, może wystąpić tylko raz w deklaracji. Kwalifikatory typów mogą być wyświetlane ze specyfikatorem dowolnego typu; jednak nie może występować po pierwszej przecinkami w wielu deklaracji elementu. Na przykład następujące deklaracje są dopuszczalne:
+Dwa Kwalifikatory typu, **const** i `volatile`, mogą występować tylko raz w deklaracji. Kwalifikatory typu mogą występować z dowolnym specyfikatorem typu; nie mogą jednak występować po pierwszym przecinku w deklaracji wielu elementów. Na przykład następujące deklaracje są dozwolone:
 
 ```
 typedef volatile int VI;
 const int ci;
 ```
 
-Deklaracje te są niedozwolone:
+Te deklaracje nie są dozwolone:
 
 ```
 typedef int *i, volatile *vi;
 float f, const cf;
 ```
 
-Kwalifikatory typów mają zastosowanie tylko wtedy, gdy dostęp do identyfikatorów jako l wartości w wyrażeniach. Zobacz [wyrażenia wartości L i r](../c-language/l-value-and-r-value-expressions.md) informacji dotyczących l wartości i wyrażeń.
+Kwalifikatory typu są istotne tylko podczas uzyskiwania dostępu do identyfikatorów jako wartości l w wyrażeniach. Aby uzyskać informacje na temat wartości l i wyrażeń, zobacz [wyrażenia wartości l i R](../c-language/l-value-and-r-value-expressions.md) .
 
 ## <a name="syntax"></a>Składnia
 
-*Kwalifikator typu*: **constvolatile**
+*kwalifikator typu*: **constvolatile**
 
-Poniżej przedstawiono prawne **const** i `volatile` deklaracje:
+Poniżej przedstawiono prawne elementy **stałe** i `volatile` deklaracje:
 
 ```
 int const *p_ci;       /* Pointer to constant int */
@@ -51,18 +51,18 @@ int (*const cp_i);     /* Constant pointer to int */
 int volatile vint;     /* Volatile integer        */
 ```
 
-Jeśli specyfikacja typu tablicowego zawiera kwalifikatory typów, element jest kwalifikowana, nie typu tablicy. Jeśli specyfikacja typu funkcji zawiera kwalifikatorów, zachowanie jest niezdefiniowane. Ani `volatile` ani **const** ma wpływ na zakres wartości lub arytmetyczne właściwości obiektu.
+Jeśli specyfikacja typu tablicy zawiera kwalifikatory typu, element jest kwalifikowany, a nie typ tablicy. Jeśli specyfikacja typu funkcji zawiera kwalifikatory, zachowanie jest niezdefiniowane. Żadna `volatile` lub **stała** nie ma wpływu na zakres wartości lub właściwości arytmetyczne obiektu.
 
-Poniższa lista opisuje sposób używania **const** i `volatile`.
+Ta lista zawiera opis sposobu używania **const** i `volatile`.
 
-- **Const** — słowo kluczowe może służyć do modyfikowania dowolnego typu podstawowe lub agregacji lub wskaźnik do obiektu dowolnego typu lub `typedef`. Jeśli element jest zadeklarowana za pomocą tylko **const** kwalifikator typu jego typ przyjmuje się **const int**. A **const** zmiennej może być inicjowany lub można umieścić w regionie magazynu tylko do odczytu. **Const** — słowo kluczowe jest przydatne do deklarowania wskaźników do **const** ponieważ wymaga to funkcja, nie należy zmieniać wskaźnika w dowolny sposób.
+- Słowo kluczowe **const** może służyć do modyfikowania dowolnego typu podstawowego lub agregacji lub wskaźnika do obiektu dowolnego typu lub `typedef`. Jeśli element jest zadeklarowany tylko jako kwalifikator typu **const** , jego typ jest traktowany jako **const int**. Zmienną **const** można zainicjować lub można ją umieścić w regionie magazynu tylko do odczytu. Słowo kluczowe **const** jest przydatne do deklarowania wskaźników do **const** , ponieważ wymaga, aby funkcja nie zmieniła wskaźnika w jakikolwiek sposób.
 
-- Kompilator zakłada, że w dowolnym momencie w programie `volatile` zmiennej może zostać oceniony przez nieznany proces, który używa lub modyfikuje jego wartość. W związku z tym, niezależnie od optymalizacji określone w poleceniu wiersza kodu dla każdego przypisania do lub odwołaj się do elementu `volatile` zmienna musi zostać wygenerowany, nawet jeśli wydaje się mieć żadnego wpływu.
+- Kompilator zakłada, że w dowolnym momencie w programie `volatile` zmienna może być dostępna przez nieznany proces, który używa lub modyfikuje jego wartość. Z tego względu, niezależnie od optymalizacji określonych w wierszu polecenia, należy wygenerować kod dla każdego przypisania lub odwołania do `volatile` zmiennej, nawet jeśli wydaje się, że nie ma żadnego wpływu.
 
-   Jeśli `volatile` jest używana samodzielnie, `int` zakłada, że. `volatile` Specyfikator typu może służyć do zapewnienia niezawodny dostęp do lokalizacji pamięci specjalne. Użyj `volatile` z obiektami danych, które mogą być dostępne lub zmieniane przez procedurach obsługi sygnału, jednocześnie wykonywania programów lub specjalnego sprzętu, takich jak mapowane w pamięci operacji We/Wy rejestry sterowania. Można zadeklarować zmienną jako `volatile` dla jego okres istnienia, lub można rzutować jedno odwołanie do być `volatile`.
+   Jeśli `volatile` jest używany samodzielnie, `int` przyjmowana jest wartość. Specyfikatora typu można użyć, `volatile` aby zapewnić niezawodny dostęp do specjalnych lokalizacji pamięci. Używany `volatile` z obiektami danych, które mogą być dostępne lub modyfikowane przez programy obsługi sygnałów przez współbieżnie wykonywane programy lub przez specjalny sprzęt, taki jak rejestry kontroli we/wy mapowane na pamięć. Możesz zadeklarować zmienną jako `volatile` dla swojego okresu istnienia lub można rzutować pojedyncze odwołanie na nie. `volatile`
 
-- Element może być zarówno **const** i `volatile`, w którym to przypadku nie można zmodyfikować rzeczywiście swój własny program element, ale może być modyfikowane przez niektóre procesu asynchronicznego.
+- Element może **być zarówno stały,** jak `volatile`i, w tym przypadku element nie może być słusznie zmodyfikowany przez swój własny program, ale może być modyfikowany przez jakiś proces asynchroniczny.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje i typy](../c-language/declarations-and-types.md)

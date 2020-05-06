@@ -15,23 +15,23 @@ ms.locfileid: "62325497"
 ---
 # <a name="prefix-increment-and-decrement-operators"></a>Operatory prefiksów inkrementacji i dekrementacji
 
-Operatory jednoargumentowe (`++` i **--**) są nazywane "prefiks" przyrostem lub operatory dekrementacji, gdy operatory inkrementacji lub dekrementacji następować przed elementem operandu. Przyrostka inkrementacji i dekrementacji ma wyższy priorytet niż prefiksów inkrementacji i dekrementacji. Argument musi być typu całkowitego, zmiennoprzecinkowego lub wskaźnik i musi być wyrażeniem modyfikowalną l wartością (bez **const** atrybutu). Wynik jest wartością l.
+Operatory jednoargumentowe`++` ( **--** i) są nazywane operatorami przyrostu lub zmniejszania "prefix", gdy operatory przyrostu i zmniejszania są wyświetlane przed argumentem operacji. Przyrosty przyrostkowe i zmniejszania mają wyższy priorytet niż przyrost i zmniejszenie prefiksu. Operand musi mieć typ całkowity, zmiennoprzecinkowy lub wskaźnik i musi być modyfikowalnym wyrażeniem l-wartości (wyrażeniem bez atrybutu **const** ). Wynik jest l-wartością.
 
-Gdy operator pojawia się przed argumentem, argument jest zwiększone lub zmniejszone, a jego nowa wartość jest wynikiem wyrażenia.
+Gdy operator występuje przed jego operandem, operand jest zwiększany lub zmniejszany, a jego nowa wartość jest wynikiem wyrażenia.
 
-Argument operacji typu całkowitego lub zmiennoprzecinkowego jest zwiększone lub zmniejszone wartość całkowita 1. Typ wyniku jest taki sam jak typ operandu. Argument operacji typu wskaźnika jest zwiększone lub zmniejszone rozmiar obiektu, które ona rozwiązuje. Wskazuje zwiększona wskaźnik do następnego obiektu. zmniejszony wskaźnik wskazuje poprzedniego obiektu.
+Operand typu całkowitego lub zmiennoprzecinkowego jest zwiększany lub zmniejszany przez wartość całkowitą 1. Typ wyniku jest taki sam jak typ argumentu operacji. Operand typu wskaźnika jest zwiększany lub zmniejszany o rozmiar obiektu, do którego się odnosi. Przyrostowy wskaźnik wskazuje na następny obiekt; zmniejszający wskaźnik wskazuje na poprzedni obiekt.
 
 ## <a name="example"></a>Przykład
 
-Ten przykład ilustruje operator jednoargumentowy dekrementacja prefiksu:
+Ten przykład ilustruje operator jednoargumentowego zmniejszania prefiksu:
 
 ```
 if( line[--i] != '\n' )
     return;
 ```
 
-W tym przykładzie zmienna `i` zostanie zmniejszony, zanim zostaną one użyte jako indeks dolny, aby `line`.
+W tym przykładzie zmienna `i` jest zmniejszana, zanim zostanie użyta jako indeks dolny do. `line`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operatory jednoargumentowe języka C](../c-language/c-unary-operators.md)

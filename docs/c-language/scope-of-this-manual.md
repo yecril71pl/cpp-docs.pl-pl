@@ -11,10 +11,10 @@ ms.locfileid: "62336182"
 ---
 # <a name="scope-of-this-manual"></a>Zakres tego podręcznika
 
-C jest elastyczne język, który opuszcza wiele decyzji programistycznych do Ciebie. Zgodnie z tym filozofia C nakłada kilka ograniczeń w kwestii, takich jak konwersji typu. Mimo że ta cecha języka może ułatwić zadania programowania, trzeba znać języka również, aby zrozumieć, jak działają programy. Ten podręcznik zawiera informacje dotyczące składników języków C i funkcji implementacja firmy Microsoft. Składnia języka C jest z X3.159 ANSI-1989 r. *American National Standard systemów informacyjnych — język programowania - C* (zwanego standardu ANSI C), chociaż nie jest częścią standardu ANSI C. [Podsumowanie dotyczące składni języka C](../c-language/c-language-syntax-summary.md) zawiera składnie i opis jak odczytywać i wykorzystywać definicje składni.
+C to elastyczny język, który pozostawia wiele decyzji programistycznych. W tym charakterze, C nakładają kilka ograniczeń w kwestiach takich jak konwersja typu. Chociaż ta cecha języka może ułatwić wykonywanie zadań programistycznych, musisz znać język, aby zrozumieć, jak działają programy. Ta książka zawiera informacje dotyczące składników języka C i funkcji implementacji firmy Microsoft. Składnia języka C jest zgodna z ANSI X 3.159-1989, *American National Standard dla systemów informacyjnych — język programowania-C* (zwany dalej wzorcem ANSI c), chociaż nie jest częścią standardu ANSI c. [Podsumowanie składni języka C](../c-language/c-language-syntax-summary.md) zawiera składnię i opis sposobu odczytywania definicji składni i korzystania z nich.
 
-Ten podręcznik nie omówiono w nim programowania w języku C++. Zobacz [C++ Language Reference](../cpp/cpp-language-reference.md) uzyskać informacji na temat języka C++.
+Ta książka nie omawia programowania w języku C++. Aby uzyskać informacje na temat języka C++, zobacz [Dokumentacja języka c++](../cpp/cpp-language-reference.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Organizacja dokumentacji języka C](../c-language/organization-of-the-c-language-reference.md)

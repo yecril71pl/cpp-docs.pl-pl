@@ -16,18 +16,18 @@ ms.locfileid: "62312566"
 ---
 # <a name="continue-statement-c"></a>continue — instrukcja (C)
 
-`continue` Instrukcji przekazuje kontrolę do następnej iteracji najbliższej otaczającej `do`, `for`, lub `while` instrukcji, w której występuje, dowolnej pozostałych instrukcji z pominięciem `do`, `for`, lub `while` treść instrukcji.
+`continue` Instrukcja przekazuje formant `do`do następnej iteracji najbliższej otaczającej, `for`lub `while` instrukcji, w której występuje, pomijając wszystkie pozostałe instrukcje w treści instrukcji `do`, `for`, lub. `while`
 
 ## <a name="syntax"></a>Składnia
 
-*Instrukcja skoku*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Kontynuuj;**
+*skok-instrukcja*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**utrzymać**
 
-Następnej iteracji `do`, `for`, lub `while` instrukcji jest określany w następujący sposób:
+Kolejna iteracja instrukcji `do`, `for`, lub `while` jest określona w następujący sposób:
 
-- W ramach `do` lub `while` instrukcji następnej iteracji należy zacząć od reevaluating wyrażenie `do` lub `while` instrukcji.
+- W `do` `while` instrukcji lub, następna iteracja jest uruchamiana przez ponowną ocenę wyrażenia instrukcji `do` or. `while`
 
-- A `continue` instrukcji w `for` instrukcji powoduje, że wyrażenie pętli `for` instrukcji, które ma zostać obliczone. Następnie kompilator reevaluates wyrażenia warunkowego, w zależności od wyniku albo kończy się i wykonuje iterację w treści instrukcji. Zobacz [dla instrukcji](../c-language/for-statement-c.md) więcej informacji na temat `for` instrukcji i jego symboli nieterminalnych.
+- `continue` Instrukcja w `for` instrukcji powoduje, że wyrażenie pętli `for` instrukcji jest oceniane. Następnie kompilator ponownie oblicza wyrażenie warunkowe i, w zależności od wyniku, kończy lub iteruje treść instrukcji. Zapoznaj [się z instrukcją](../c-language/for-statement-c.md) for, aby `for` uzyskać więcej informacji na temat instrukcji i jej nieterminalu.
 
 Jest to przykład `continue` instrukcji:
 
@@ -41,8 +41,8 @@ while ( i-- > 0 )
 }
 ```
 
-W tym przykładzie zostaje wykonana instrukcja podczas `i` jest większa niż 0. Pierwszy `f(i)` jest przypisany do `x`; a, w przypadku `x` jest równa 1, `continue` instrukcja jest wykonywana. Resztę instrukcji w treści są ignorowane i wykonanie zostanie wznowione u góry pętli z oceną test pętli.
+W tym przykładzie treść instrukcji jest wykonywana, gdy `i` wartość jest większa niż 0. Pierwszy `f(i)` jest przypisany do `x`; następnie, jeśli `x` jest równa 1, `continue` instrukcja zostanie wykonana. Pozostałe instrukcje w treści są ignorowane, a wykonywanie jest wznawiane w górnej części pętli z oceną testu pętli.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[continue, instrukcja](../cpp/continue-statement-cpp.md)
+[Continue — instrukcja](../cpp/continue-statement-cpp.md)

@@ -13,22 +13,22 @@ ms.locfileid: "62326199"
 ---
 # <a name="c-pragmas"></a>Pragma — dyrektywy języka C
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-A *pragma* nakazuje kompilatorowi wykonania określonej akcji w czasie kompilacji. Dyrektywy pragma różnią się kompilatora kompilatora. Na przykład, można użyć **zoptymalizować** pragma można ustawić optymalizacje do wykonywania programu. Dyrektywy pragma Microsoft C są następujące:
+*Pragma* instruuje kompilator, aby wykonał określoną akcję w czasie kompilacji. Dyrektywy pragma różnią się od kompilatora do kompilatora. Na przykład można użyć **optymalizacji** pragma, aby ustawić optymalizacje do wykonania w programie. Pragma języka Microsoft C:
 
 |||||
 |-|-|-|-|
 |**alloc_text**|**data_seg**|**inline_recursion**|**setlocale**|
-|**auto_inline**|**— Funkcja**|**intrinsic**|**ostrzeżenie**|
-|**check_stack**|**hdrstop**|**komunikat**||
-|**code_seg**|**include_alias**|**optymalizuj**||
-|**Komentarz**|**inline_depth**|**pakiet**||
+|**auto_inline**|**funkcyjn**|** — funkcja**|**warning**|
+|**check_stack**|**hdrstop**|**Komunikat**||
+|**code_seg**|**include_alias**|**zoptymalizować**||
+|**komentować**|**inline_depth**|**Pack**||
 
-Zobacz [dyrektywy Pragma i słowo kluczowe __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md) opis dyrektyw pragma kompilator Microsoft C:.
+Zobacz [dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md) , aby uzyskać opis dyrektywy pragma kompilatora języka Microsoft C.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pliki źródłowe i programy źródłowe](../c-language/source-files-and-source-programs.md)

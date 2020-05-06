@@ -13,12 +13,12 @@ ms.locfileid: "62291005"
 ---
 # <a name="wide-characters"></a>Znaki dwubajtowe
 
-**ANSI 3.1.3.4** wartość stałej znakowej liczba całkowita, która zawiera więcej niż jeden znak lub stałą znaku dwubajtowego, który zawiera więcej niż jeden znak wielobajtowy
+**3.1.3.4 ANSI** Wartość stałej znakowej liczby całkowitej, która zawiera więcej niż jeden znak lub stałą znakową, która zawiera więcej niż jeden znak wielobajtowy.
 
-Zwykły znak stałej, "ab" ma wartość całkowitą (int) 0x6162. W przypadku więcej niż jednego bajtu poprzednio odczytać bajtów są przesuwane w lewo przez wartość **CHAR_BIT** i następny bajt jest porównywany z małą ilością za pomocą operatora bitowego OR **CHAR_BIT** usługi bits. Liczba bajtów w stałych znaków wielobajtowych nie może przekraczać sizeof(int), który jest 4-kod docelowy 32-bitowych.
+Zwykła stała znakowa, "AB" ma wartość całkowitą (int) 0x6162. W przypadku więcej niż jednego bajtu poprzednio odczytane bajty są przesunięte w lewo o wartość **CHAR_BIT** a następny bajt jest porównywany przy użyciu operatora bitowego lub z niską **CHAR_BIT** bitów. Liczba bajtów w stałej znakowej wielobajtowej nie może przekroczyć sizeof (int), która jest 4 dla kodu docelowego 32-bitowego.
 
-Zgodnie z powyższym stałych znaków wielobajtowych do odczytu i to jest konwertowana na stałych znaków dwubajtowych za pośrednictwem `mbtowc` funkcji czasu wykonywania. Jeśli wynik nie jest prawidłową stałą znaku dwubajtowego, zgłaszany jest błąd. W każdym przypadku liczba bajtów zbadane przez `mbtowc` funkcja jest ograniczona do wartości `MB_CUR_MAX`.
+Stała znaku wielobajtowego jest odczytywana jak powyżej i jest konwertowana na stałą o szerokim znaku przy `mbtowc` użyciu funkcji run-time. Jeśli wynik nie jest prawidłową stałą znaków dwubajtowych, zostanie wygenerowany błąd. W każdym przypadku liczba bajtów badanych przez `mbtowc` funkcję jest ograniczona do wartości. `MB_CUR_MAX`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Znaki](../c-language/characters.md)
+[Znaków](../c-language/characters.md)

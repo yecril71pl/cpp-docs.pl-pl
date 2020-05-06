@@ -46,48 +46,48 @@ W kompilatorze firmy Microsoft **int** i **Long** są odrębnymi, ale równoważ
 |Z|Do|Metoda|
 |----------|--------|------------|
 |**znak**<sup>1</sup>|**short**|Podjęcie i rozciągnięcie|
-|**char**|**long**|Podjęcie i rozciągnięcie|
-|**char**|**Long Long**|Podjęcie i rozciągnięcie|
-|**char**|**znak bez znaku**|Zachowaj wzorzec; bit o wysokiej kolejności utraci funkcję jako bit znaku|
-|**char**|**bez znaku Short**|Podpisz do **Short**; Konwertuj **krótko** - **unsigned Short**|
-|**char**|**bez znaku**|Podpisz do **Long**; Konwertuj **Long** na **Long bez znaku**|
+|**char**|**długi**|Podjęcie i rozciągnięcie|
+|**char**|**long long**|Podjęcie i rozciągnięcie|
+|**char**|**unsigned char**|Zachowaj wzorzec; bit o wysokiej kolejności utraci funkcję jako bit znaku|
+|**char**|**unsigned short**|Podpisz do **Short**; Konwertuj **krótko** - **unsigned Short**|
+|**char**|**unsigned long**|Podpisz do **Long**; Konwertuj **Long** na **Long bez znaku**|
 |**char**|**bez znaku Long Long**|Podpisz do **Long Long**; Konwertuj **Long** Long na **unsigned** Long Long|
 |**char**|**float**|Podpisz do **Long**; Konwertuj **Long** na **zmiennoprzecinkową**|
 |**char**|**double**|Podpisz do **Long**; Konwertuj **Long** na **Double**|
 |**char**|**Long Double**|Podpisz do **Long**; Konwertuj **Long** na **Double**|
 |**short**|**char**|Zachowaj bajt o niskiej kolejności|
-|**short**|**long**|Podjęcie i rozciągnięcie|
-|**short**|**Long Long**|Podjęcie i rozciągnięcie|
-|**short**|**znak bez znaku**|Zachowaj bajt o niskiej kolejności|
-|**short**|**bez znaku Short**|Zachowaj wzorzec bitowy; bit o wysokiej kolejności utraci funkcję jako bit znaku|
-|**short**|**bez znaku**|Podpisz do **Long**; Konwertuj **Long** na **Long bez znaku**|
+|**short**|**długi**|Podjęcie i rozciągnięcie|
+|**short**|**long long**|Podjęcie i rozciągnięcie|
+|**short**|**unsigned char**|Zachowaj bajt o niskiej kolejności|
+|**short**|**unsigned short**|Zachowaj wzorzec bitowy; bit o wysokiej kolejności utraci funkcję jako bit znaku|
+|**short**|**unsigned long**|Podpisz do **Long**; Konwertuj **Long** na **Long bez znaku**|
 |**short**|**bez znaku Long Long**|Podpisz do **Long Long**; Konwertuj **Long** Long na **unsigned** Long Long|
 |**short**|**float**|Podpisz do **Long**; Konwertuj **Long** na **zmiennoprzecinkową**|
 |**short**|**double**|Podpisz do **Long**; Konwertuj **Long** na **Double**|
 |**short**|**Long Double**|Podpisz do **Long**; Konwertuj **Long** na **Double**|
-|**long**|**char**|Zachowaj bajt o niskiej kolejności|
-|**long**|**short**|Zachowaj wyraz o niskiej kolejności|
-|**long**|**Long Long**|Podjęcie i rozciągnięcie|
-|**long**|**znak bez znaku**|Zachowaj bajt o niskiej kolejności|
-|**long**|**bez znaku Short**|Zachowaj wyraz o niskiej kolejności|
-|**long**|**bez znaku**|Zachowaj wzorzec bitowy; bit o wysokiej kolejności utraci funkcję jako bit znaku|
-|**long**|**bez znaku Long Long**|Podpisz do **Long Long**; Konwertuj **Long** Long na **unsigned** Long Long|
-|**long**|**float**|Reprezentuje jako **zmiennoprzecinkowe**. Jeśli **Long** nie można przedstawić dokładnie, pewna precyzja zostanie utracona.|
-|**long**|**double**|Reprezentuje jako **Double**. Jeśli **Long** nie można reprezentować dokładnie jako **podwójnej**precyzji, pewne są tracone.|
-|**long**|**Long Double**|Reprezentuje jako **Double**. Jeśli **Long** nie można reprezentować dokładnie jako **podwójnej**precyzji, pewne są tracone.|
-|**Long Long**|**char**|Zachowaj bajt o niskiej kolejności|
-|**Long Long**|**short**|Zachowaj wyraz o niskiej kolejności|
-|**Long Long**|**long**|Zachowywanie wartości DWORD z niską kolejnością|
-|**Long Long**|**znak bez znaku**|Zachowaj bajt o niskiej kolejności|
-|**Long Long**|**bez znaku Short**|Zachowaj wyraz o niskiej kolejności|
-|**Long Long**|**bez znaku**|Zachowywanie wartości DWORD z niską kolejnością|
-|**Long Long**|**bez znaku Long Long**|Zachowaj wzorzec bitowy; bit o wysokiej kolejności utraci funkcję jako bit znaku|
-|**Long Long**|**float**|Reprezentuje jako **zmiennoprzecinkowe**. Jeśli **Long Long** nie można dokładnie przedstawić, pewna dokładność zostanie utracona.|
-|**Long Long**|**double**|Reprezentuje jako **Double**. Jeśli **Long Long** nie można reprezentować dokładnie jako **Double**, pewna dokładność zostanie utracona.|
-|**Long Long**|**Long Double**|Reprezentuje jako **Double**. Jeśli **Long Long** nie można reprezentować dokładnie jako **Double**, pewna dokładność zostanie utracona.|
+|**długi**|**char**|Zachowaj bajt o niskiej kolejności|
+|**długi**|**short**|Zachowaj wyraz o niskiej kolejności|
+|**długi**|**long long**|Podjęcie i rozciągnięcie|
+|**długi**|**unsigned char**|Zachowaj bajt o niskiej kolejności|
+|**długi**|**unsigned short**|Zachowaj wyraz o niskiej kolejności|
+|**długi**|**unsigned long**|Zachowaj wzorzec bitowy; bit o wysokiej kolejności utraci funkcję jako bit znaku|
+|**długi**|**bez znaku Long Long**|Podpisz do **Long Long**; Konwertuj **Long** Long na **unsigned** Long Long|
+|**długi**|**float**|Reprezentuje jako **zmiennoprzecinkowe**. Jeśli **Long** nie można przedstawić dokładnie, pewna precyzja zostanie utracona.|
+|**długi**|**double**|Reprezentuje jako **Double**. Jeśli **Long** nie można reprezentować dokładnie jako **podwójnej**precyzji, pewne są tracone.|
+|**długi**|**Long Double**|Reprezentuje jako **Double**. Jeśli **Long** nie można reprezentować dokładnie jako **podwójnej**precyzji, pewne są tracone.|
+|**long long**|**char**|Zachowaj bajt o niskiej kolejności|
+|**long long**|**short**|Zachowaj wyraz o niskiej kolejności|
+|**long long**|**długi**|Zachowywanie wartości DWORD z niską kolejnością|
+|**long long**|**unsigned char**|Zachowaj bajt o niskiej kolejności|
+|**long long**|**unsigned short**|Zachowaj wyraz o niskiej kolejności|
+|**long long**|**unsigned long**|Zachowywanie wartości DWORD z niską kolejnością|
+|**long long**|**bez znaku Long Long**|Zachowaj wzorzec bitowy; bit o wysokiej kolejności utraci funkcję jako bit znaku|
+|**long long**|**float**|Reprezentuje jako **zmiennoprzecinkowe**. Jeśli **Long Long** nie można dokładnie przedstawić, pewna dokładność zostanie utracona.|
+|**long long**|**double**|Reprezentuje jako **Double**. Jeśli **Long Long** nie można reprezentować dokładnie jako **Double**, pewna dokładność zostanie utracona.|
+|**long long**|**Long Double**|Reprezentuje jako **Double**. Jeśli **Long Long** nie można reprezentować dokładnie jako **Double**, pewna dokładność zostanie utracona.|
 
 <sup>1</sup> wszystkie wpisy **znaków** zakładają, że typ **char** jest podpisany domyślnie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersje przypisań](../c-language/assignment-conversions.md)

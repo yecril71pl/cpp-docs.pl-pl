@@ -13,9 +13,9 @@ ms.locfileid: "62290823"
 ---
 # <a name="using-wmain"></a>wmain — korzystanie
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-W modelu programowania Unicode, można zdefiniować wersja znaków dwubajtowych **głównego** funkcji. Użyj **wmain** zamiast **głównego** Jeśli chcesz tworzyć przenośny kod, zgodną Unicode model programowania.
+W modelu programowania Unicode można zdefiniować wersję funkcji **Main** o szerokim znaku. Użyj **wmain** zamiast **Main** , jeśli chcesz napisać kod przenośny, który jest zgodny z modelem programowania Unicode.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,16 +25,16 @@ wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 
 ## <a name="remarks"></a>Uwagi
 
-Możesz deklarować Parametry formalne dla **wmain** formacie podobne do **głównego**. Możesz następnie przekazać argumenty znaków dwubajtowych i, opcjonalnie, wskaźnik znaku dwubajtowego środowiska do programu. `argv` i `envp` parametry **wmain** typu `wchar_t*`. Na przykład:
+Należy zadeklarować formalne parametry do **wmain** przy użyciu podobnego formatu do **głównego**. Następnie można przekazywać argumenty o szerokim znaku oraz, opcjonalnie, wskaźnik środowiska do programu. Parametry `argv` i `envp` do **wmain** są typu `wchar_t*`. Przykład:
 
-Jeśli program używa **głównego** funkcji środowiska znak wielobajtowy jest tworzony przez biblioteki wykonawczej w momencie uruchamiania programu. Tworzona jest kopia znaków dwubajtowych, środowiska, tylko wtedy, gdy jest to wymagane (na przykład przez wywołanie `_wgetenv` lub `_wputenv` funkcji). W pierwszym wywołaniu `_wputenv`, lub na pierwsze wywołanie `_wgetenv` Jeśli istnieje już środowisko MBCS, odpowiednie środowisko ciąg znaków dwubajtowych jest tworzony i następnie jest wskazywany przez `_wenviron` zmiennej globalnej, czyli znaków dwubajtowych Wersja `_environ` zmiennej globalnej. W tym momencie dwie kopie środowiska (MBCS i Unicode) mogły współistnieć i są obsługiwane przez system operacyjny w całym cyklu życia programu.
+Jeśli program używa funkcji **Main** , środowisko znaków wielobajtowych jest tworzone przez bibliotekę wykonawczą podczas uruchamiania programu. Dwubajtowa kopia środowiska jest tworzona tylko wtedy, gdy jest to konieczne (na przykład przez wywołanie funkcji `_wgetenv` lub `_wputenv` ). Podczas pierwszego wywołania `_wputenv`do lub pierwszego wywołania, `_wgetenv` Jeśli środowisko MBCS już istnieje, jest tworzone odpowiednie środowisko ciągu znaków dwubajtowych, a następnie wskazywane przez zmienną `_wenviron` globalną, która jest wersja zmiennej `_environ` globalnej o szerokim znaku. W tym momencie dwie kopie środowiska (MBCS i Unicode) istnieją jednocześnie i są obsługiwane przez system operacyjny przez cały czas trwania programu.
 
-Podobnie jeśli program używa **wmain** funkcji, jest tworzony w momencie uruchamiania programu środowiska szerokich znaków i jest wskazywany przez `_wenviron` zmiennej globalnej. Środowisko MBCS (ASCII) jest tworzona przy pierwszym wywołaniu do `_putenv` lub `getenv`i jest wskazywany przez `_environ` zmiennej globalnej.
+Podobnie, jeśli program używa funkcji **wmain** , środowisko o szerokim znaku jest tworzone przy uruchamianiu programu i jest wskazywane przez zmienną `_wenviron` globalną. Środowisko MBCS (ASCII) jest tworzone podczas pierwszego wywołania do `_putenv` lub `getenv`, i jest wskazywane przez zmienną `_environ` globalną.
 
-Aby uzyskać więcej informacji na temat środowiska MBCS, zobacz [internacjonalizacji](../c-runtime-library/internationalization.md) w *odwołanie do biblioteki wykonawczej.*
+Aby uzyskać więcej informacji [na temat środowiska MBCS, zobacz](../c-runtime-library/internationalization.md) informacje o liczbie *porządkowej w dokumentacji dotyczącej biblioteki wykonawczej.*
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcja main i wykonywanie programu](../c-language/main-function-and-program-execution.md)

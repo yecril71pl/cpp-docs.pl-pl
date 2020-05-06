@@ -11,12 +11,12 @@ ms.locfileid: "62326134"
 ---
 # <a name="improper-access-to-a-union"></a>Niewłaściwy dostęp do złożenia
 
-**ANSI 3.3.2.3** składowej Unii obiektu odbywa się przy użyciu członkiem innego typu
+**3.3.2.3 ANSI** Do elementu członkowskiego obiektu Union uzyskuje się dostęp przy użyciu elementu członkowskiego innego typu
 
-Jeśli zadeklarowano sumę dwóch typów jednej wartości są przechowywane, ale Unii odbywa się przy użyciu innego typu, wyniki są nieprzewidywalne.
+Jeśli jest zadeklarowana Unia dwóch typów i jest przechowywana jedna wartość, a Unia jest dostępna z innym typem, wyniki są niezawodne.
 
-Na przykład sumę **float** i `int` jest zadeklarowana. A **float** wartości są przechowywane, ale program później dostęp do wartości jako `int`. W takiej sytuacji wartość będzie zależeć od pamięci wewnętrznej **float** wartości. Wartość całkowitą nie być wiarygodne.
+Na przykład Unia **zmiennoprzecinkowa** i `int` jest zadeklarowana. Wartość **zmiennoprzecinkowa** jest przechowywana, ale program później uzyskuje dostęp do wartości jako `int`. W takiej sytuacji wartość będzie zależeć od wewnętrznego magazynu wartości **zmiennoprzecinkowych** . Wartość całkowita nie będzie godna zaufania.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Struktury, złożenia, wyliczenia i pola bitowe](../c-language/structures-unions-enumerations-and-bit-fields.md)

@@ -14,10 +14,10 @@ ms.locfileid: "62290654"
 ---
 # <a name="zero-length-files"></a>Pliki o zerowej długości
 
-**ANSI 4.9.3** tego, czy istnieje plik o zerowej długości
+**4.9.3 ANSI** Czy plik o zerowej długości rzeczywiście istnieje
 
-Dozwolone są pliki z długością zero.
+Pliki o długości zero są dozwolone.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

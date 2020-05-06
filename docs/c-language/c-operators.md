@@ -18,38 +18,38 @@ ms.locfileid: "62326381"
 ---
 # <a name="c-operators"></a>Operatory języka C
 
-Operatory języka C stanowią podzestaw [wbudowanych operatorów języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md).
+Operatory języka C są podzbiorem [wbudowanych operatorów C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md).
 
-Istnieją trzy typy operatorów. Wyrażenie jednoargumentowe składa się z jednej dołączony do operand operatora jednoargumentowego lub **sizeof** słowa kluczowego, wraz z wyrażeniem. Wyrażenie może być nazwy zmiennej lub wyrażenia rzutowania. Jeśli wyrażenie jest wyrażeniem rzutowania, muszą być ujęte w nawiasy. Wyrażenia binarnego składa się z dwóch argumentów operacji dołączane za pomocą operatora binarnego. Wyrażenie trójargumentowy składa się z trzech argumentów dołączane za pomocą funkcji operator wyrażenia warunkowego.
+Istnieją trzy typy operatorów. Wyrażenie jednoargumentowe składa się z operatora jednoargumentowego, który został dołączony do operandu lub słowa kluczowego **sizeof** , po którym następuje wyrażenie. Wyrażenie może być nazwą zmiennej lub wyrażeniem rzutowania. Jeśli wyrażenie jest wyrażeniem rzutowania, musi być ujęte w nawiasy. Wyrażenie binarne składa się z dwóch operandów przyłączonych do operatora binarnego. Wyrażenie Trzyelementowy składa się z trzech operandów przyłączonych do operatora wyrażenia warunkowego.
 
-C obejmuje następujące operatory jednoargumentowe:
+C zawiera następujące operatory jednoargumentowe:
 
 |Symbol|Nazwa|
 |------------|----------|
-|**-** **~** **!**|Operatory negacji i dopełnienia|
-|**&#42;** **&**|Operatory pośrednie i adresu|
+|**-** **~** **!**|Operatory negacji i uzupełniania|
+|**&#42;****&**|Operatory pośrednie i „address-of”|
 |**sizeof**|Size — operator|
 |**+**|Jednoargumentowy operator plus|
-|**++** **--**|Jednoargumentowy inkrementacji i dekrementacji operatorów|
+|**++** **--**|Operatory przyrostu i zmniejszania jednoargumentowego|
 
-Operatory dwuargumentowe są skojarzone od lewej do prawej. C, oferuje następujące operatory binarne:
+Operatory binarne są kojarzone od lewej do prawej. C zawiera następujące operatory binarne:
 
 |Symbol|Nazwa|
 |------------|----------|
-|**&#42;** **/** **%**|Operatory multiplikatywne|
+|**&#42;** **/****%**|Operatory multiplikatywne|
 |**+** **-**|Operatory addytywne|
 |**\<\<** **>>**|Operatory przesunięcia|
-|**\<** **>** **\<=** **>=** **==** **!=**|Operatory relacyjne|
-|**&** **&#124;** **^**|Operatory bitowe|
-|**&&** **&#124;&#124;**|Operatory logiczne|
+|**\<****>** **\<** **>=** **==** **!=**|Operatory relacyjne|
+|**&****&#124;****^**|Operatory bitowe|
+|**&&****&#124;&#124;**|Operatory logiczne|
 |**,**|Operator obliczania sekwencyjnego|
 
-Podstawowa — operator (**: >**), obsługiwane przez poprzednie wersje kompilatora C Microsoft 16-bitowych, jest opisana w [podsumowanie dotyczące składni języka C](../c-language/c-language-syntax-summary.md).
+Operator Base (**: >**) obsługiwany przez poprzednie wersje kompilatora 16-bitowego c firmy Microsoft został opisany w artykule [składnia składni języka c](../c-language/c-language-syntax-summary.md).
 
-Operator wyrażenia warunkowego ma niższy priorytet niż wyrażenia binarne i różni się od nich w jest łączność do prawej strony.
+Operator wyrażenia warunkowego ma niższy priorytet niż wyrażenia binarne i różni się od nich w prawidłowym skojarzeniu.
 
-Wyrażenia z operatorami także wyrażeń przypisania, które jednoargumentowe lub operatory binarne przypisania. Jednoargumentowe operatory przypisania są przyrost (**++**) i dekrementacji (**--**) operatory; plik binarny operatory przypisania są operator przypisania prostego (**=**) i operatory przypisania złożone. Każdy operator przypisania złożone składa się z innego operatora binarnego operatora przypisania prostego.
+Wyrażenia z operatorami zawierają również wyrażenia przypisania, które używają jednoargumentowego lub binarnego operatora przypisania. Operatory przypisania jednoargumentowego to operatory przyrostu (**++**) i**--** zmniejszania (). binarne operatory przypisania to operator prostego przypisania (**=**) i operatory przypisania złożonego. Każdy operator przypisania złożonego jest kombinacją innego operatora binarnego z operatorem przypisania prostego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Wyrażenia i przydziały](../c-language/expressions-and-assignments.md)

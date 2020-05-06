@@ -11,10 +11,10 @@ ms.locfileid: "62326043"
 ---
 # <a name="bits-per-character"></a>Bity na znak
 
-**ANSI 2.2.4.2.1** liczbę bitów w znaku
+**2.2.4.2.1 ANSI** Liczba bitów w znaku
 
-Liczba bitów w znaku jest reprezentowane przez stałe manifestu **CHAR_BIT**. LIMITY. Plik H definiuje **CHAR_BIT** jako 8.
+Liczba bitów w znaku jest reprezentowana przez **CHAR_BIT**manifestu. LIMITY. Plik H definiuje **CHAR_BIT** jako 8.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Znaki](../c-language/characters.md)
+[Znaków](../c-language/characters.md)

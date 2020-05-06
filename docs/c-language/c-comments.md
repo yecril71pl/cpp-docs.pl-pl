@@ -17,7 +17,7 @@ ms.locfileid: "62326290"
 ---
 # <a name="c-comments"></a>Komentarze języka C
 
-"Komentarz" to sekwencja znaków, zaczynając od kombinacji ukośnik/gwiazdka (<strong>/\*</strong>), jest traktowany jako pojedynczy znak odstępu przez kompilator i jest ignorowana. Komentarz może zawierać dowolną kombinację znaków z zestawu znaków reprezentowanych, włącznie ze znakami, z wyłączeniem ogranicznika "końca komentarza" (<strong>\*/</strong>). Komentarze mogą zajmować więcej niż jeden wiersz, ale nie mogą być zagnieżdżone.
+"Komentarz" to sekwencja znaków rozpoczynająca się od kombinacji ukośnik/gwiazdka (<strong>/</strong>), która jest traktowana jako pojedynczy znak odstępu przez kompilator i jest ignorowana. Komentarz może zawierać dowolną kombinację znaków z zestawu znaków, w tym znaków nowego wiersza, ale z wyłączeniem ogranicznika końcowego komentarza (<strong>\*</strong>). Komentarze mogą zajmować więcej niż jeden wiersz, ale nie mogą być zagnieżdżone.
 
 Komentarze mogą pojawić się wszędzie tam, gdzie dozwolone są odstępy. Ponieważ kompilator traktuje komentarz jako pojedynczy odstęp, nie można dołączać komentarzy w obrębie tokenów. Kompilator ignoruje znaki w komentarzu.
 
@@ -57,17 +57,17 @@ Ponieważ komentarze nie mogą zawierać zagnieżdżonych komentarzy, ten przyk�
 
 Ten błąd występuje, ponieważ kompilator rozpoznaje pierwsze `*/`, po wyrazach `Open file`, jako koniec komentarza. Próbuje on przetworzyć pozostały tekst i generuje błąd, gdy napotka `*/` poza komentarzem.
 
-Podczas gdy można używać komentarzy do oznaczenia pewnych linii kodu jako nieaktywnych dla celów testowych, dyrektywy preprocesora `#if`, `#endif` i kompilacja warunkowa są przydatną alternatywą dla wykonania tego zadania. Aby uzyskać więcej informacji, zobacz [dyrektywy preprocesora](../preprocessor/preprocessor-directives.md) w *Preprocessor Reference*.
+Podczas gdy można używać komentarzy do oznaczenia pewnych linii kodu jako nieaktywnych dla celów testowych, dyrektywy preprocesora `#if`, `#endif` i kompilacja warunkowa są przydatną alternatywą dla wykonania tego zadania. Aby uzyskać więcej informacji, zobacz [dyrektywy preprocesora](../preprocessor/preprocessor-directives.md) w *dokumentacji preprocesora*.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Kompilator Microsoft obsługuje również Komentarze jednowierszowe poprzedzone dwóch ukośników (__//__). W przypadku kompilacji z użyciem /Za (standard ANSI), te komentarze spowodują wygenerowanie błędów. Nie można rozszerzać komentarzy do drugiego wiersza.
+Kompilator firmy Microsoft obsługuje również Komentarze jednowierszowe poprzedzone dwoma ukośnikami (__//__). W przypadku kompilacji z użyciem /Za (standard ANSI), te komentarze spowodują wygenerowanie błędów. Nie można rozszerzać komentarzy do drugiego wiersza.
 
 ```C
 // This is a valid comment
 ```
 
-Komentarze rozpoczynające się od dwóch ukośników (__//__) są kończone przez następny znak nowego wiersza, który nie jest poprzedzony znakiem ucieczki. W następnym przykładzie znak nowego wiersza jest poprzedzony znakiem ukośnika odwrotnego (**\\**), tworząc "sekwencję ucieczki". Ta sekwencja ucieczki powoduje, że kompilator traktuje następny wiersz jako część poprzedniego wiersza. (Aby uzyskać więcej informacji, zobacz [sekwencje ucieczki](../c-language/escape-sequences.md).)
+Komentarze zaczynające się od dwóch ukośników__//__() są kończone przez następny znak nowego wiersza, który nie jest poprzedzony znakiem ucieczki. W następnym przykładzie znak nowego wiersza jest poprzedzony ukośnikiem odwrotnym (**\\**), tworząc "sekwencję ucieczki". Ta sekwencja ucieczki powoduje, że kompilator traktuje następny wiersz jako część poprzedniego wiersza. (Aby uzyskać więcej informacji, zobacz [Sekwencje ucieczki](../c-language/escape-sequences.md)).
 
 ```C
 // my comment \
@@ -76,10 +76,10 @@ Komentarze rozpoczynające się od dwóch ukośników (__//__) są kończone prz
 
 W związku z tym instrukcja `i++;` jest opatrzona komentarzem.
 
-Wartość domyślna Microsoft C to, że są włączone rozszerzenia Microsoft. Aby wyłączyć te rozszerzenia, użyj /Za.
+Domyślnym ustawieniem dla Microsoft C jest włączenie rozszerzeń Microsoft. Aby wyłączyć te rozszerzenia, użyj /Za.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tokeny języka C](../c-language/c-tokens.md)

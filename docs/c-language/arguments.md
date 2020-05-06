@@ -20,19 +20,19 @@ ms.locfileid: "62313535"
 
 Argumenty w wywołaniu funkcji mają postać:
 
-> *wyrażenie* **(** *lista wyrażeń*<SUB>zoptymalizowany pod kątem</SUB> **)** / * wywołania funkcji * /
+> *wyrażenie* **(** *wybór wyrażenia-list*<SUB>opt</SUB> **)** /* wywołanie funkcji */
 
-W wywołaniu funkcji *lista wyrażeń* znajduje się lista wyrażeń (oddzielonych przecinkami). Wartości tych końcowych wyrażeń są argumentami przekazywanymi do funkcji. Jeśli funkcja nie przyjmuje żadnych argumentów *lista wyrażeń* może zawierać słowa kluczowego `void`.
+W wywołaniu funkcji *Lista wyrażeń* jest listą wyrażeń (rozdzielonych przecinkami). Wartości tych końcowych wyrażeń są argumentami przekazywanymi do funkcji. Jeśli funkcja nie przyjmuje żadnych argumentów, *Lista wyrażeń* powinna zawierać słowo kluczowe `void`.
 
 Argument może być dowolną wartością typu podstawowego, struktury, unii lub wskaźnika. Wszystkie argumenty są przekazywane przez wartość. Oznacza to, że do odpowiedniego parametru przypisywana jest kopia argumentu. Funkcja nie zna rzeczywistej lokalizacji pamięci przekazanego argumentu. Funkcja używa tej kopii, nie naruszając zmiennej, z której została pierwotnie utworzona.
 
 Chociaż nie można przekazać tablic lub funkcji jako argumentów, można przekazać wskaźniki do tych elementów. Wskaźniki umożliwiają funkcji uzyskanie dostępu do wartości przez odwołanie. Ponieważ wskaźnik do zmiennej przechowuje adres zmiennej, funkcja może użyć tego adresu do uzyskania dostępu do wartości zmiennej. Argumenty wskaźnika pozwalają funkcji na uzyskanie dostępu do tablic i funkcji, pomimo tego, że tablice i funkcje nie mogą być przekazywane jako argumenty.
 
-Kolejność, w jakiej argumenty będą obliczane, może różnić się w różnych kompilatorach i różnych poziomach optymalizacji. Jednakże argumenty i wszelkie efekty uboczne są w pełni obliczane przed wprowadzeniem funkcji. Zobacz [efekty uboczne](../c-language/side-effects.md) Aby uzyskać informacje dotyczące efektów ubocznych.
+Kolejność, w jakiej argumenty będą obliczane, może różnić się w różnych kompilatorach i różnych poziomach optymalizacji. Jednakże argumenty i wszelkie efekty uboczne są w pełni obliczane przed wprowadzeniem funkcji. Zobacz [efekty uboczne](../c-language/side-effects.md) , aby uzyskać informacje dotyczące efektów ubocznych.
 
-*Lista wyrażeń* w funkcji jest oceniana wywołania i zwykle konwersje arytmetyczne są wykonywane dla każdego argumentu w wywołaniu funkcji. Jeżeli dostępny jest prototyp, wynikowy typ argumentu jest porównywany z parametrem odpowiadającego prototypu. Jeśli nie są one zgodne, wykonywana jest konwersja lub generowany jest komunikat diagnostyczny. Parametry poddawane są również zwykłym konwersjom arytmetycznym.
+Oceniana jest *Lista wyrażeń* w wywołaniu funkcji, a typowe konwersje arytmetyczne są wykonywane na każdym z argumentów wywołania funkcji. Jeżeli dostępny jest prototyp, wynikowy typ argumentu jest porównywany z parametrem odpowiadającego prototypu. Jeśli nie są one zgodne, wykonywana jest konwersja lub generowany jest komunikat diagnostyczny. Parametry poddawane są również zwykłym konwersjom arytmetycznym.
 
-Liczba wyrażeń w *lista wyrażeń* musi odpowiadać liczbie parametrów, chyba że prototyp funkcji lub definicja jawnie określa zmienną liczbę argumentów. W tym przypadku kompilator sprawdza tyle argumentów, ile jest nazw typów na liście parametrów i w razie konieczności dokonuje ich konwersji, jak opisano powyżej. Zobacz [wywołania ze zmienną liczbą argumentów](../c-language/calls-with-a-variable-number-of-arguments.md) Aby uzyskać więcej informacji.
+Liczba wyrażeń na *liście wyrażeń* musi być zgodna z liczbą parametrów, chyba że prototyp lub definicja funkcji jawnie określa zmienną liczbę argumentów. W tym przypadku kompilator sprawdza tyle argumentów, ile jest nazw typów na liście parametrów i w razie konieczności dokonuje ich konwersji, jak opisano powyżej. Aby uzyskać więcej informacji [, zobacz wywołania o zmiennej liczbie argumentów](../c-language/calls-with-a-variable-number-of-arguments.md) .
 
 Jeśli lista parametrów prototypu zawiera tylko słowo kluczowe `void`, kompilator oczekuje zero argumentów w wywołaniu funkcji i zero parametrów w definicji. W razie napotkania argumentów zgłaszany jest komunikat diagnostyczny.
 
@@ -77,6 +77,6 @@ Adres `x` jest przechowywany w `num1`, a adres `y` jest przechowywany w `num2`. 
 
 Kompilator przeprowadza kontrolę typów dla argumentów `swap`, ponieważ prototyp `swap` zawiera typy argumentów dla każdego parametru. Identyfikatory między nawiasami prototypu i definicji mogą być takie same lub różne. Ważne jest, aby typy tych argumentów odpowiadały tym z list parametrów prototypu i definicji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wywołania funkcji](../c-language/function-calls.md)

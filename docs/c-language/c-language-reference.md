@@ -19,18 +19,18 @@ ms.locfileid: "62326667"
 ---
 # <a name="c-language-reference"></a>Materiały referencyjne dotyczące języka C
 
-*Skorowidz języka c* opisuje języka programowania C zaimplementowanego w Microsoft C. Organizacja książki opiera się na standardzie ANSI C (czasami określane jako C89) z dodatkowymi materiałami na temat rozszerzenia Microsoft do standardu ANSI C.
+*Dokumentacja języka c* zawiera opis języka programowania c zaimplementowanego w Microsoft C. Organizacja książki jest oparta na standardzie ANSI C (czasami określanym jako C89) z dodatkowym materiałem na rozszerzeniach firmy Microsoft do standardu ANSI C.
 
 - [Organizacja dokumentacji języka C](../c-language/organization-of-the-c-language-reference.md)
 
-Aby uzyskać dodatkowe materiały dotyczące języka C++ i preprocesora zobacz:
+Aby uzyskać dodatkowe materiały referencyjne dotyczące języka C++ i preprocesora, zobacz:
 
 - [Dokumentacja języka C++](../cpp/cpp-language-reference.md)
 
-- [Odwołanie preprocesora](../preprocessor/c-cpp-preprocessor-reference.md)
+- [Dokumentacja preprocesora](../preprocessor/c-cpp-preprocessor-reference.md)
 
-Opcje kompilatora i konsolidatora są udokumentowane w artykule [odwołanie kompilacji C/C++](../build/reference/c-cpp-building-reference.md).
+Opcje kompilatora i konsolidatora są udokumentowane w [dokumentacji konstrukcyjnej C/C++](../build/reference/c-cpp-building-reference.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C++](../cpp/cpp-language-reference.md)

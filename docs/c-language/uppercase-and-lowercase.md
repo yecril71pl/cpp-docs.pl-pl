@@ -11,12 +11,12 @@ ms.locfileid: "62290901"
 ---
 # <a name="uppercase-and-lowercase"></a>Wielkie i małe litery
 
-**ANSI 3.1.2** tego, czy są istotne różnice wielkości liter
+**ANSI 3.1.2** Czy różnice wielkości liter są istotne
 
-Microsoft C traktuje identyfikatorów w jednostce kompilacji jako wielkość liter.
+Program Microsoft C traktuje identyfikatory w ramach jednostki kompilacji jako z uwzględnieniem wielkości liter.
 
-Konsolidator firmy Microsoft jest uwzględniana wielkość liter. Należy określić wszystkie identyfikatory spójnie zgodnie z przypadek.
+W konsolidatorze firmy Microsoft jest rozróżniana wielkość liter. Wszystkie identyfikatory należy określić spójnie zgodnie z wielkością liter.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Identyfikatory zachowania](../c-language/behavior-of-identifiers.md)
+[Zachowanie identyfikatorów](../c-language/behavior-of-identifiers.md)

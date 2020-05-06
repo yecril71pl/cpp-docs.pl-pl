@@ -16,14 +16,14 @@ ms.locfileid: "62325783"
 ---
 # <a name="naked-c"></a>Naked (C)
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Atrybut "naked" klasę magazynu jest rozszerzeniem specyficzne dla firmy Microsoft dla języka C. Kompilator generuje kod bez kodu prologu i epilogu funkcji zadeklarowana z atrybutem "naked" klasy magazynowania. Funkcji "naked" są przydatne, gdy trzeba napisać własne sekwencji kodu prologu/epilogu przy użyciu kodu asemblera wbudowanego. Funkcje naked są przydatne przy pisaniu sterowniki urządzeń wirtualnych.
+Atrybut klasy magazynu owies to specyficzne dla firmy Microsoft rozszerzenie języka C. Kompilator generuje kod bez kodu prologu i epilogu dla funkcji zadeklarowanych z atrybutem klasy magazynu owies. Funkcje bez dodatków są przydatne, gdy trzeba napisać własne sekwencje kodu prologu/epilogu przy użyciu kodu asemblera wbudowanego. Funkcje inowies są przydatne do pisania sterowników urządzeń wirtualnych.
 
-Określone informacje o korzystaniu z atrybutem "naked" można wyświetlić [funkcji "naked"](../c-language/naked-functions.md).
+Aby uzyskać szczegółowe informacje na temat korzystania z atrybutu owies, zobacz informowanie [funkcji](../c-language/naked-functions.md).
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzone atrybuty klasy magazynu języka C](../c-language/c-extended-storage-class-attributes.md)

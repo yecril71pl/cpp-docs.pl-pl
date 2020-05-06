@@ -16,14 +16,14 @@ ms.locfileid: "62290736"
 ---
 # <a name="type-double"></a>Typ double
 
-Wartości podwójnej precyzji z typem double muszą 8 bajtów. Format jest podobny do formatu float, z tą różnicą, że ma ona wykładnik 1023 nadmiarowe 11-bitowe i mantysy 52-bitowych, a także dorozumianych 1 bit wyższego rzędu. Format ten zapewnia szeroką gamę około 1.7E-308 do 1.7E + 308 dla typu double.
+Wartości podwójnej precyzji o podwójnym typie mają 8 bajtów. Format jest podobny do formatu zmiennoprzecinkowego, z tą różnicą, że ma 11-bitowy przekroczenie 1023 wykładnika i 52-bitowy mantysy, plus implikowana 1 bit o wysokiej kolejności. Ten format daje zakres około 1.7 E-308 do 1.7 E + 308 dla typu Double.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Typ double zawiera 64-bitowy: 1 znaku, 11 dla wykładnik i 52 dla mantysa. Jej zakres jest +/-1.7E308 z dokładnością co najmniej 15 cyfr.
+Podwójny typ zawiera 64 bitów: 1 dla znaku, 11 dla wykładnika i 52 dla mantysy. Jego zakresem jest +/-1.7E308 z dokładnością co najmniej 15 cyfr.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Magazyn typów podstawowych](../c-language/storage-of-basic-types.md)

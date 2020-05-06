@@ -15,34 +15,34 @@ ms.locfileid: "62325744"
 ---
 # <a name="c-constant-expressions"></a>Wyrażenia stałe języka C
 
-Wyrażenie stałe jest obliczane w czasie kompilacji w czasie wykonywania nie i mogą być używane w dowolnym miejscu, można stałą. Stałe wyrażenia musi być stałą, która znajduje się w zakresie reprezentowanych wartości dla tego typu. Argumenty mogą wyrażenie stałe być stałe będące liczbami całkowitymi, stałe znaków, stałych zmiennoprzecinkowych, stałe wyliczeń typu rzutowania **sizeof** wyrażeń i innych wyrażeń stałych.
+Wyrażenie stałe jest oceniane w czasie kompilacji, a nie w czasie wykonywania i może być używane w dowolnym miejscu, w którym można użyć stałej. Wyrażenie stałe musi obliczyć stałą, która znajduje się w zakresie wartości, które można reprezentować dla tego typu. Operandy wyrażenia stałej mogą być stałymi całkowitymi, stałymi znakami, stałych zmiennoprzecinkowych, stałymi wyliczenia, rzutowania typów, wyrażeniami **sizeof** i innymi wyrażeniami stałymi.
 
 ## <a name="syntax"></a>Składnia
 
-*constant-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*
+*wyrażenie stałe*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie warunkowe*
 
-*conditional-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression* **?** *wyrażenie* **:** *wyrażenia warunkowego*
+*wyrażenie warunkowe*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne OR*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logiczne lub wyrażenie* **?** *wyrażenie* **:** *wyrażenie warunkowe*
 
-*expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie* **,** *wyrażenia przypisania*
+*wyrażenie*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*przypisanie — wyrażenie*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie* **,** *przypisanie — wyrażenie*
 
-*assignment-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
+*przypisanie — wyrażenie*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie warunkowe*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;przypisanie *jednoargumentowe* - *wyrażenie* przypisania *operatora*
 
-*operator przypisania*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**=** **&#42;=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **&#124;=**
+*przypisanie — operator*: jeden z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**=****&#42;** **/=** **%=** = **+=** **-=** **&#124;** = ** \< \< ** **>>=** **&=** **^=**
 
-Zawierać symboli nieterminalnych deklaratora struktury, modułu wyliczającego, bezpośrednie deklaratora, deklaratora abstrakcyjny bezpośrednio i instrukcja labeled *wyrażenie_stałe* nieterminalnych.
+Nieterminale dla struktury deklarator, Enumerator, Direct deklarator, Direct-abstract deklarator i labeld zawierają *wyrażenie stałe* bez terminalu.
 
-Wyrażenie stałe liczby całkowitej musi służyć do określania rozmiaru pola bitowego członka struktury, wartość stałej wyliczenia, rozmiaru tablicy lub wartość **przypadek** stałej.
+Aby określić rozmiar elementu członkowskiego pola bitowego struktury, wartość stałej wyliczenia, rozmiar tablicy lub wartość stałej **wielkości liter** , należy użyć wyrażenia stałej całkowitej ().
 
-Wyrażenia stałe używane w dyrektywy preprocesora mogą ulec dodatkowe ograniczenia. W związku z tym są nazywane "ograniczonych wyrażeń stałych." Ograniczone wyrażenie stałe nie może zawierać **sizeof** wyrażenia stałe wyliczeń typ rzutowania do dowolnego typu lub stałe typu zmiennoprzecinkowego. Może jednak zawierać specjalnych wyrażenie stałe **zdefiniowane (** _identyfikator_ **)**.
+Wyrażenia stałe używane w dyrektywach preprocesora podlegają dodatkowym ograniczeniom. W związku z tym są one znane jako "wyrażenia stałej z ograniczeniami". Wyrażenie stałej z ograniczeniami nie może zawierać wyrażeń **sizeof** , stałych wyliczeniowych, typów rzutowania do dowolnego typu lub typów zmiennoprzecinkowych. Może jednak zawierać specjalne wyrażenie stałe **zdefiniowane (** _Identyfikator_ **)**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Operandy i wyrażenia](../c-language/operands-and-expressions.md)

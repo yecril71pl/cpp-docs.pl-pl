@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie kompilacji wydania'
+title: 'Porady: tworzenie kompilacji wydania'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Win32, release build
@@ -12,14 +12,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62273524"
 ---
-# <a name="how-to-create-a-release-build"></a>Instrukcje: Tworzenie kompilacji wydania
+# <a name="how-to-create-a-release-build"></a>Porady: tworzenie kompilacji wydania
 
 ### <a name="to-generate-a-release-build-of-your-program"></a>Aby wygenerować kompilację wydania programu
 
-1. Wybierz **wersji** z **konfiguracji rozwiązania** listy rozwijanej, która znajduje się na **standardowa** paska narzędzi.
+1. Z listy rozwijanej **Konfiguracja rozwiązania** wybierz pozycję **wersja** , która znajduje się na pasku narzędzi **Standardowy** .
 
-1. Na **kompilacji** menu, kliknij przycisk **kompilacji**.
+1. W menu **kompilacja** kliknij pozycję **Kompiluj**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kompilacje wydania](release-builds.md)

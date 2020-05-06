@@ -18,7 +18,7 @@ ms.locfileid: "62325666"
 ---
 # <a name="c-identifiers"></a>Identyfikatory języka C
 
-"Identyfikatory" lub "symbole" są nazwami których dostarczenie dla zmiennych, typów, funkcji i etykiety w programie. Nazwy identyfikatorów muszą różnić się w pisowni i wielkości liter z dowolnego słowa kluczowego. Słowa kluczowe (C lub Microsoft) nie można używać jako identyfikatorów; są one zarezerwowane do użytku specjalne. Możesz utworzyć identyfikatora, określając je w deklaracji zmiennej, typu lub funkcji. W tym przykładzie `result` jest identyfikatorem zmienną całkowitoliczbową i `main` i `printf` to identyfikator nazwy funkcji.
+"Identyfikatory" lub "symbole" są nazwami dostarczanymi dla zmiennych, typów, funkcji i etykiet w programie. Nazwy identyfikatorów muszą różnić się pisownią i wielkością liter we wszystkich słowach kluczowych. Nie można używać słów kluczowych (C ani Microsoft) jako identyfikatorów; są one zarezerwowane do użytku specjalnego. Można utworzyć identyfikator, określając go w deklaracji zmiennej, typu lub funkcji. W tym przykładzie `result` jest identyfikatorem zmiennej integer i `main` i `printf` są nazwami identyfikatorów dla funkcji.
 
 ```
 #include <stdio.h>
@@ -32,33 +32,33 @@ int main()
 }
 ```
 
-Po zadeklarowaniu służy identyfikator w późniejszym instrukcjach program do odwoływania się do skojarzona wartość.
+Po zadeklarowaniu można użyć identyfikatora w późniejszych instrukcjach programu, aby odwołać się do skojarzonej wartości.
 
-Specjalnym rodzajem identyfikatora, zwanego etykiety instrukcji, mogą być używane w `goto` instrukcji. (Deklaracje są opisane w [deklaracje i typy](../c-language/declarations-and-types.md) etykiety instrukcji są opisane w [goto i Labeled — instrukcje](../c-language/goto-and-labeled-statements-c.md).)
+W `goto` instrukcjach można używać specjalnego rodzaju identyfikatora o nazwie etykieta instrukcji. (Deklaracje są opisane w [deklaracjach i typach](../c-language/declarations-and-types.md) etykiet instrukcji są opisane w [instrukcjach goto i labeled](../c-language/goto-and-labeled-statements-c.md).)
 
 ## <a name="syntax"></a>Składnia
 
 *Identyfikator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nondigit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* *nie cyfrą*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* *cyfra*
+&nbsp;&nbsp;&nbsp;&nbsp;*dowolny*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier* *niecyfrowy* identyfikator<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier* *cyfra* identyfikatora
 
-*inny*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**_ h g b c d e f i "j" k l mn o p q r s t u v w x y z**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**B C D E F G H I "J" K L MN O P Q R S T U V W X Y Z**
+*niecyfrowe*: jedno z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**_ a b c d e f g h i j k l litera p q r s t u w x y z**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F G H I J K L LITERA O P Q R S T U W X Y Z**
 
 *cyfra*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
-Pierwszym znakiem nazwy identyfikatora musi być `nondigit` (oznacza to, że pierwszym znakiem musi być znakiem podkreślenia lub małe i wielkie litery). ANSI umożliwia sześć znaczące znaków w nazwie zewnętrznego identyfikatora do 31. w nazwach identyfikatorów wewnętrzne (w funkcji). Zewnętrzne identyfikatory (te zadeklarowana w zakresie globalnym lub zadeklarowana z klasą magazynu `extern`) może podlegać dodatkowe ograniczenia nazewnictwa, ponieważ identyfikatory te muszą być przetwarzane przez inne oprogramowanie, takie jak wiązania.
+Pierwszym znakiem nazwy identyfikatora musi być `nondigit` (to oznacza, że pierwszy znak musi być podkreśleniem lub wielką lub małą literą). ANSI dopuszcza sześć znaczących znaków w nazwie zewnętrznego identyfikatora i 31 dla nazw wewnętrznych (w ramach funkcji). Identyfikatory zewnętrzne (deklarowane w zakresie globalnym lub zadeklarowane za `extern`pomocą klasy magazynu) mogą podlegać dodatkowym ograniczeniom nazewnictwa, ponieważ te identyfikatory muszą być przetwarzane przez inne oprogramowanie, takie jak linki.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Mimo że ANSI umożliwia 6 znaków znaczących nazw zewnętrznego identyfikatora do 31. w nazwach identyfikatorów wewnętrzne (w funkcji), kompilator Microsoft C: umożliwia 247 znaków w nazwie identyfikatora wewnętrzne lub zewnętrzne. Jeśli nie masz danych dzięki zgodności z ANSI, można zmodyfikować to ustawienie domyślne numer mniejszy lub większy, za pomocą / h (Ograniczaj długość nazw zewnętrznych) opcji.
+Chociaż ANSI dopuszcza 6 znaków znaczących w zewnętrznych nazwach identyfikatorów i 31 dla nazw wewnętrznych (w ramach funkcji), kompilator języka Microsoft C zezwala na 247 znaków w wewnętrznej lub zewnętrznej nazwie identyfikatora. Jeśli nie ma potrzeby zgodności ze standardem ANSI, można zmodyfikować to ustawienie domyślne na mniejszą lub większą liczbę przy użyciu opcji/H (ograniczaj długość nazw zewnętrznych).
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-Kompilator języka C uwzględnia wielkie i małe litery jako różne znaki. Ta funkcja o nazwie "wielkość liter" umożliwia utworzenie unikatowych identyfikatorów, które mają taką samą pisownię ale różnych przypadków dla co najmniej jednej litery. Na przykład każda z następujących identyfikatorów jest unikatowa:
+Kompilator języka C traktuje wielkie i małe litery jako odrębne znaki. Ta funkcja o nazwie "czułość wielkości liter" umożliwia tworzenie odrębnych identyfikatorów, które mają takie same pisownia, ale różne przypadki dla jednej lub kilku liter. Na przykład każdy z następujących identyfikatorów jest unikatowy:
 
 ```
 add
@@ -67,13 +67,13 @@ Add
 aDD
 ```
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Nie należy wybierać nazw identyfikatorów, rozpoczynające się z dwoma podkreśleniami lub znakiem podkreślenia następuje wielką literą. Standard ANSI C umożliwia nazw identyfikatorów, które zaczynają się od kombinacji tych znaków, mają zostać zarezerwowane do użytku kompilatora. Identyfikatorów z zakresem pliku poziomie również nie powinny mieć nazwy za pomocą znaku podkreślenia i małe litery jako dwa pierwsze litery. Nazwy identyfikatorów, które zaczynają się od tych znaków, również są zastrzeżone. Zgodnie z Konwencją firma Microsoft używa znaku podkreślenia i Wielkiej litery umożliwiającą nazw makr i podwójnego podkreślenia dla nazw — słowo kluczowe specyficzne dla firmy Microsoft. Aby uniknąć konfliktów nazw, należy zawsze wybrać nazwy identyfikatorów, które nie zaczynają się od jednego lub dwóch znaków podkreślenia lub nazwy rozpoczynające się od znaku podkreślenia, a następnie wielką literą.
+Nie wybieraj nazw dla identyfikatorów, które zaczynają się od dwóch znaków podkreślenia lub znaku podkreślenia, po którym następuje Wielka litera. Standard ANSI C umożliwia określenie nazw identyfikatorów rozpoczynających się od tych kombinacji znaków, które mają zostać zarezerwowane do użycia przez kompilator. Identyfikatorów z zakresem plików nie należy również nazywać znakiem podkreślenia i małą literą w postaci dwóch pierwszych liter. Nazwy identyfikatorów, które zaczynają się od tych znaków, również są zastrzeżone. Zgodnie z Konwencją firma Microsoft używa znaku podkreślenia i Wielkiej litery, aby rozpocząć nazwy makr i podwójne podkreślenie dla nazw słów kluczowych specyficznych dla firmy Microsoft. Aby uniknąć konfliktów nazw, zawsze wybieraj nazwy identyfikatorów, które nie rozpoczynają się od jednej lub dwóch znaków podkreślenia lub nazwy rozpoczynające się od znaku podkreślenia, po którym następuje Wielka litera.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-Poniżej przedstawiono przykłady prawidłowych identyfikatorów, które są zgodne z ANSI lub Microsoft ograniczenia nazewnictwa:
+Poniżej przedstawiono przykłady prawidłowych identyfikatorów, które są zgodne z ograniczeniami nazewnictwa ANSI lub Microsoft:
 
 ```
 j
@@ -84,18 +84,18 @@ skip12
 LastNum
 ```
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Identyfikatory w plikach źródłowych jest uwzględniana wielkość liter, domyślnie, symboli w plikach obiektowych nie są. Microsoft C traktuje identyfikatorów w jednostce kompilacji jako wielkość liter.
+Chociaż identyfikatory w plikach źródłowych uwzględniają wielkość liter domyślnie, symbole w plikach obiektów nie są. Program Microsoft C traktuje identyfikatory w ramach jednostki kompilacji jako z uwzględnieniem wielkości liter.
 
-Konsolidator firmy Microsoft jest uwzględniana wielkość liter. Należy określić wszystkie identyfikatory spójnie zgodnie z przypadek.
+W konsolidatorze firmy Microsoft jest rozróżniana wielkość liter. Wszystkie identyfikatory należy określić spójnie zgodnie z wielkością liter.
 
-"Źródłowy zestaw znaków" ustawiono prawidłowe znaki, które mogą być wyświetlane w plikach źródłowych. Dla Microsoft C: źródłowy zestaw jest standardowy zestaw znaków ASCII. Zestaw znaków źródła i wykonania zestawu znaków obejmują znaki ASCII, używane jako sekwencje ucieczki. Zobacz [stałe znakowe](../c-language/c-character-constants.md) uzyskać informacji o znaków wykonania zestawu.
+"Źródłowy zestaw znaków" jest zestaw znaków prawnych, które mogą być wyświetlane w plikach źródłowych. W przypadku języka Microsoft C zestaw źródłowy jest standardowym zestawem znaków ASCII. Zbiór znaków źródłowych i zestaw znaków wykonywania zawierają znaki ASCII używane jako sekwencje ucieczki. Zobacz [stałe znakowe](../c-language/c-character-constants.md) , aby uzyskać informacje o zestawie znaków wykonania.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-Identyfikator ma "scope", czyli region programu, w którym jest znany i "powiązanie", który określa, czy tej samej nazwie w innym zakresie odwołuje się do tego samego identyfikatora. Te tematy zostały wyjaśnione w [okres istnienia, zakres, widoczność i powiązania](../c-language/lifetime-scope-visibility-and-linkage.md).
+Identyfikator ma wartość "Scope", czyli region programu, w którym jest znany i "powiązanie", które określa, czy ta sama nazwa w innym zakresie odwołuje się do tego samego identyfikatora. Te tematy zostały wyjaśnione w [okresie istnienia, zakresu, widoczności i powiązania](../c-language/lifetime-scope-visibility-and-linkage.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Elementy języka C](../c-language/elements-of-c.md)

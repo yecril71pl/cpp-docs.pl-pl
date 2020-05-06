@@ -15,28 +15,28 @@ ms.locfileid: "62325549"
 ---
 # <a name="inline-functions"></a>Funkcje śródwierszowe
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-`__inline` — Słowo kluczowe informuje kompilator, aby zastąpić kod w definicji funkcji dla każdego wystąpienia w wywołaniu funkcji. Jednak podstawieniem tylko według uznania kompilatora. Na przykład kompilator wykonuje niewyrównane funkcji adresu jest zajęta lub jest zbyt duży, aby wbudowanego.
+`__inline` Słowo kluczowe instruuje kompilator w celu zastąpienia kodu w definicji funkcji dla każdego wystąpienia wywołania funkcji. Jednak podstawianie następuje tylko według uznania kompilatora. Na przykład kompilator nie tworzy wbudowanej funkcji, jeśli jej adres jest zajęty lub jest zbyt duży do inline.
 
-Dla funkcji, należy uznać kandydatem do wstawienia, zrównoważenia musi używać definicji stylu nowych funkcji.
+Aby funkcja była brana pod uwagę jako kandydat do tworzenia konspektu, musi używać definicji funkcji New-Style.
 
-Ten formularz służy do określania wbudowanej funkcji:
+Użyj tego formularza, aby określić wbudowaną funkcję:
 
-> **__inline** *typu*<sub>zoptymalizowany pod kątem</sub> *definicji funkcji*
+> **__inline** *Typ*__inline funkcja<sub>opt</sub> *-Definicja*
 
-Korzystanie z funkcji śródwierszowych generuje kod szybszy i czasami może generować kod mniejszych niż wywołanie funkcji równoważnej generuje z następujących powodów:
+Użycie funkcji wbudowanych generuje szybszy kod i czasami może generować mniejszy kod niż odpowiednik wywołania funkcji generowane z następujących powodów:
 
-- Można zaoszczędzić czas wymagany do wykonania wywołania funkcji.
+- Zapisuje czas wymagany do wykonania wywołań funkcji.
 
-- Małe wbudowane funkcje, być może trzy wiersze lub mniej, utworzyć mniejszej ilości kodu niż wywołanie funkcji równoważne, ponieważ kompilator nie generuje kod służący do obsługi argumenty i wartość zwracana.
+- Małe wbudowane funkcje, które mogą być trzy lub mniej, tworzą mniej kodu niż równoważne wywołanie funkcji, ponieważ kompilator nie generuje kodu do obsługi argumentów i wartości zwracanej.
 
-- Wbudowane funkcje generowane jest zależna od optymalizacji kodu nie jest dostępna do normalnej pracy, ponieważ kompilator nie wykonuje optymalizacje interprocedural.
+- Funkcje wygenerowane wewnętrznie są uzależnione od optymalizacji kodu, które nie są dostępne dla normalnych funkcji, ponieważ kompilator nie wykonuje optymalizacji międzyproceduralnej.
 
-Funkcje przy użyciu `__inline` nie należy mylić z kodem wbudowanego asemblera. Zobacz [asemblera wbudowanego](../c-language/inline-assembler-c.md) Aby uzyskać więcej informacji.
+Funkcji using `__inline` nie należy mylić z wbudowanym kodem asemblera. Aby uzyskać więcej informacji, zobacz [asembler wbudowany](../c-language/inline-assembler-c.md) .
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[w tekście, __inline, \__forceinline](../cpp/inline-functions-cpp.md)
+[inline, __inline \_, _forceinline](../cpp/inline-functions-cpp.md)

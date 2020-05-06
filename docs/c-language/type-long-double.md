@@ -14,8 +14,8 @@ ms.locfileid: "62344814"
 ---
 # <a name="type-long-double"></a>Typ podwójnej długości
 
-`long double` Typu jest taka sama jak [double](../c-language/type-double.md) typu.
+`long double` Typ jest identyczny z typem [podwójnym](../c-language/type-double.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Magazyn typów podstawowych](../c-language/storage-of-basic-types.md)

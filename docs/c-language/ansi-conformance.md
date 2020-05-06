@@ -14,10 +14,10 @@ ms.locfileid: "62313639"
 ---
 # <a name="ansi-conformance"></a>Zgodność ANSI
 
-Microsoft C jest zgodny ze standardem dla języka C według stawki ustalonej do przodu w wersji 9899:1990 standardu ANSI C.
+Microsoft C jest zgodne ze standardem języka C, zgodnie z opisem w wersji 9899:1990 standardu ANSI C.
 
-Rozszerzenia Microsoft do standardu ANSI C są wymienione w tekst i składnia tej książki, a także jak w dokumentacji online. Ponieważ rozszerzenia nie są częścią standardu ANSI C, ich użycie może ograniczyć możliwość przenoszenia programów między systemami. Domyślnie włączone są rozszerzenia Microsoft. Aby wyłączyć rozszerzenia, określ opcję kompilatora/za. Z opcją/za cały kod ze standardem ANSI generuje błędy lub ostrzeżenia.
+Rozszerzenia Microsoft do standardu ANSI C są zanotowane w tekście i składni tej książki oraz w dokumentacji online. Ponieważ rozszerzenia nie są częścią standardu ANSI C, ich użycie może ograniczyć przenośność programów między systemami. Domyślnie rozszerzenia Microsoft są włączone. Aby wyłączyć rozszerzenia, należy określić opcję kompilatora/za. W przypadku/za, cały kod niezgodny ze standardem ANSI generuje błędy lub ostrzeżenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Organizacja dokumentacji języka C](../c-language/organization-of-the-c-language-reference.md)
