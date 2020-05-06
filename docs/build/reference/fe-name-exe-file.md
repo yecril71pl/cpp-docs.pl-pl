@@ -10,49 +10,50 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-ms.openlocfilehash: 5901ef1997cfea84c97b6d91b30335ff7dbc1d9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0bd8f3a96555cc29d06f74fb44a73bbed32889b
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292618"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825581"
 ---
 # <a name="fe-name-exe-file"></a>/Fe (Nazwij plik EXE)
 
-Określa nazwę i katalog dla pliku .exe lub DLL utworzony przez kompilator.
+Określa nazwę i katalog dla pliku exe lub DLL utworzonego przez kompilator.
 
 ## <a name="syntax"></a>Składnia
 
-> **/Fe**[_pathname_] **/Fe:** _nazwy ścieżki_
+> **/Fe**[_nazwa_ścieżki_] \
+> **/Fe:** _Nazwa ścieżki_
 
 ### <a name="arguments"></a>Argumenty
 
-*Nazwa ścieżki*<br/>
-Względna lub bezwzględna ścieżka i nazwa pliku podstawowego lub względna lub bezwzględna ścieżka do katalogu lub nazwa pliku podstawowego do użycia dla wygenerowanego pliku wykonywalnego.
+*ścieżki*<br/>
+Ścieżka względna lub bezwzględna i podstawowa nazwa pliku albo względna lub bezwzględna ścieżka do katalogu lub podstawowa nazwa pliku do użycia dla wygenerowanego pliku wykonywalnego.
 
 ## <a name="remarks"></a>Uwagi
 
-**/Fe** opcja umożliwia określenie katalogu wyjściowego, danych wyjściowych, nazwę pliku wykonywalnego lub oba for wygenerowany plik wykonywalny. Jeśli *pathname* kończy się separatorem ścieżki (**&#92;**), zakłada się, aby określić do katalogu wyjściowego. W przeciwnym razie ostatni składnik *pathname* jest używana jako nazwa podstawowa pliku danych wyjściowych, a pozostała część *pathname* Określa katalog danych wyjściowych. Jeśli *pathname* nie ma żadnych separatorów ścieżki, zakłada się, aby określić nazwę pliku wyjściowego w bieżącym katalogu. *Pathname* muszą być ujęte w podwójny cudzysłów (**"**) jeśli zawiera on żadnych znaków, które nie mogą znajdować się w krótkich ścieżkę, taką jak spacje, rozszerzone znaki lub składników ścieżki więcej niż 8 znaków długo.
+Opcja **/Fe** umożliwia określenie katalogu wyjściowego, wyjściowej nazwy pliku wykonywalnego lub obu — dla wygenerowanego pliku wykonywalnego. Jeśli *Nazwa ścieżki* zostanie zakończona w separatorze ścieżki (**&#92;**), zakłada się, że jest określony tylko katalog wyjściowy. W przeciwnym razie ostatni składnik nazwy *ścieżki* jest używany jako nazwa podstawowa pliku wyjściowego, a reszta *ścieżki* określa katalog wyjściowy. Jeśli nazwa *ścieżki* nie ma żadnych separatorów ścieżki, zakłada się, że nazwa pliku wyjściowego jest określona w bieżącym katalogu. *Nazwa ścieżki* musi być ujęta w podwójne cudzysłowy (**"**), jeśli zawiera znaki, które nie mogą znajdować się w krótkiej ścieżce, takie jak spacje, znaki rozszerzone lub składniki ścieżki więcej niż osiem znaków.
 
-Gdy **/Fe** nie zostanie podana opcja lub gdy plik podstawowy nie określono nazwy w *pathname*, kompilator nadaje plikowi wyjściowemu domyślną nazwę przy użyciu podstawowej nazwy pierwszego źródła lub obiektu określonego pliku w wierszu polecenia i rozszerzenie .exe lub .dll.
+Jeśli opcja **/Fe** nie została określona lub gdy nazwa podstawowa pliku nie została określona w nazwie *ścieżki*, kompilator nadaje plikowi wyjściowemu nazwę domyślną przy użyciu podstawowej nazwy pierwszego pliku źródłowego lub obiektu określonego w wierszu polecenia i rozszerzenie. exe lub. dll.
 
-Jeśli określisz [/c (Kompiluj bez konsolidacji)](c-compile-without-linking.md) opcji **/Fe** nie ma wpływu.
+W przypadku określenia opcji [/c (Kompiluj bez konsolidacji)](c-compile-without-linking.md) **/Fe** nie ma żadnego wpływu.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Otwórz **właściwości konfiguracji** > **konsolidatora** > **ogólne** stronę właściwości.
+1. Otwórz stronę właściwości**Ogólne**  > **konsolidatora** >  **Właściwości konfiguracji**.
 
-1. Modyfikowanie **plik wyjściowy** właściwości. Wybierz **OK** Aby zapisać zmiany.
+1. Zmodyfikuj właściwość **pliku wyjściowego** . Wybierz **przycisk OK** , aby zapisać zmiany.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>.
 
 ## <a name="example"></a>Przykład
 
-Następujące polecenie w wierszu kompiluje i łączy wszystkie pliki źródłowe C w bieżącym katalogu. Wynikowy plik wykonywalny nosi nazwę PROCESS.exe i jest tworzony w katalogu "C:\Users\User Name\repos\My Project\bin".
+Poniższy wiersz polecenia kompiluje i łączy wszystkie pliki źródłowe C w bieżącym katalogu. Powstały plik wykonywalny nosi nazwę PROCESS. exe i został utworzony w katalogu "C:\Users\User Name\repos\My Project\bin".
 
 ```
 CL /Fe"C:\Users\User Name\repos\My Project\bin\PROCESS" *.C
@@ -60,7 +61,7 @@ CL /Fe"C:\Users\User Name\repos\My Project\bin\PROCESS" *.C
 
 ## <a name="example"></a>Przykład
 
-Następujące polecenie tworzy plik wykonywalny w `C:\BIN` o tej samej nazwie podstawowej jako pierwszego pliku źródłowego w bieżącym katalogu:
+Poniższy wiersz polecenia tworzy plik wykonywalny w programie `C:\BIN` z tą samą nazwą bazową jak pierwszy plik źródłowy w bieżącym katalogu:
 
 ```
 CL /FeC:\BIN\ *.C

@@ -41,20 +41,20 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 03d3df0bae9c2fa3cdd107f3c0de65105077c401
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 3d0342ae94276c7875bcb737b0d1a64aabafd235
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988371"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825931"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>Outp, outpw, _outp, _outpw _outpd
 
-Dane wyjściowe, w porcie, bajt (`outp`, `_outp`), słowo (`outpw`, `_outpw`) lub podwójne słowo (`_outpd`).
+Dane wyjściowe, w porcie,`outp`bajt (, `_outp`), słowo (`outpw`, `_outpw`) lub podwójne słowo (`_outpd`).
 
 > [!IMPORTANT]
-> Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT.  
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT. \
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,31 +75,31 @@ unsigned long _outpd(
 
 ### <a name="parameters"></a>Parametry
 
-\ *portów*
+*przewożąc*\
 Numer portu.
 
-*databyte,\ dataword*
+*databyte, dataword*\
 Wartości wyjściowe.
 
-## <a name="return-value"></a>Wartość zwrócona
+## <a name="return-value"></a>Wartość zwracana
 
-Funkcje zwracają dane wyjściowe. Nie będzie zwrotu błędu.
+Funkcje zwracają dane wyjściowe. Brak powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-`_outp`, `_outpw`, i `_outpd` funkcje zapisują bajt, wyraz i podwójne słowo, odpowiednio, z określonego portu wyjściowego. Argument *portu* może być dowolną liczbą całkowitą bez znaku z zakresu 0 – 65 535; *databyte* może być dowolną liczbą całkowitą z zakresu 0-255; i *dataword* może być dowolną wartością z zakresu liczb całkowitych, niepodpisanej krótkiej liczby całkowitej i niepodpisanej Long Integer.
+`_outp`, `_outpw`, I `_outpd` funkcje zapisują bajt, wyraz i podwójne słowo odpowiednio do określonego portu wyjściowego. Argument *portu* może być dowolną liczbą całkowitą bez znaku z zakresu 0 – 65 535; *databyte* może być dowolną liczbą całkowitą z zakresu 0-255; i *dataword* może być dowolną wartością z zakresu liczb całkowitych, niepodpisanej krótkiej liczby całkowitej i niepodpisanej Long Integer.
 
-Ponieważ te funkcje zapisują bezpośrednio do portu we/wy, nie można ich używać w kodzie użytkownika. Aby uzyskać informacje dotyczące korzystania z portów We/Wy w tych systemach operacyjnych wyszukaj ciąg „Komunikacja szeregowa w Win32” w witrynie MSDN.
+Ponieważ te funkcje zapisują bezpośrednio do portu we/wy, nie można ich używać w kodzie użytkownika. Aby uzyskać informacje o korzystaniu z portów we/wy w tych systemach operacyjnych, wyszukaj frazę "komunikacja szeregowa w systemie Win32" w witrynie MSDN.
 
-Nazwy `outp` i `outpw` są starsze, przestarzałe nazwy dla funkcji `_outp` i `_outpw`. Aby uzyskać więcej informacji, zobacz [nazwy funkcji POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
+Nazwy `outp` i `outpw` są starsze, przestarzałe nazwy dla funkcji `_outp` i. `_outpw` Aby uzyskać więcej informacji, zobacz [nazwy funkcji POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`_outp`|\<conio.h>|
-|`_outpw`|\<conio.h>|
-|`_outpd`|\<conio.h>|
+|`_outp`|\<CONIO. h>|
+|`_outpw`|\<CONIO. h>|
+|`_outpd`|\<CONIO. h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../c-runtime-library/compatibility.md).
 
@@ -109,5 +109,5 @@ Wszystkie wersje [bibliotek uruchomieniowych języka C](../c-runtime-library/crt
 
 ## <a name="see-also"></a>Zobacz także
 
-\ [we/wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)
+[We/wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)\
 [INP, inpw, _inp, _inpw _inpd](../c-runtime-library/inp-inpw-inpd.md)

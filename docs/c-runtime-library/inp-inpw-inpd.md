@@ -36,20 +36,20 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: 48e0e58d2886c5a8bb90a86c81cb785d364666e8
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: f7b822c4b694969407e32ba26026465fb39bd8d6
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988715"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825832"
 ---
 # <a name="inp-_inp-inpw-_inpw-_inpd"></a>INP, _inp, inpw, _inpw, _inpd
 
-Dane wejściowe, z portu, bajtu (`inp`, `_inp`), wyrazu (`inpw`, `_inpw`) lub podwójnego wyrazu (`_inpd`).
+Dane wejściowe, z portu,`inp`bajt (, `_inp`), słowo (`inpw`, `_inpw`) lub podwójne słowo (`_inpd`).
 
 > [!IMPORTANT]
-> Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT.  
-> Tego API nie można używać w aplikacjach korzystających ze środowiska wykonawczego Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Te funkcje są przestarzałe. Począwszy od programu Visual Studio 2015, nie są one dostępne w CRT. \
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,28 +67,28 @@ unsigned long _inpd(
 
 ### <a name="parameters"></a>Parametry
 
-\ *portów*
-Numer portu We/Wy.
+*przewożąc*\
+Numer portu we/wy.
 
-## <a name="return-value"></a>Wartość zwrócona
+## <a name="return-value"></a>Wartość zwracana
 
-Funkcje zwracają wartość bajtu, słowa lub podwójnego słowa odczytanego z `port`. Nie będzie zwrotu błędu.
+Funkcje zwracają bajt, wyraz lub podwójne odczytywanie wyrazów `port`. Brak powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-`_inp`, `_inpw`, i `_inpd` funkcje odczytują bajt, wyraz i podwójne słowo, odpowiednio, z określonego portu wejściowego. Wartością wejściową może być każda nieoznaczona krótka liczba całkowita z zakresu od 0 do 65 535.
+`_inp`, `_inpw`, I `_inpd` funkcje odczytują bajt, wyraz i podwójne słowo, odpowiednio, z określonego portu wejściowego. Wartością wejściową może być każda nieoznaczona krótka liczba całkowita z zakresu od 0 do 65 535.
 
 Ponieważ te funkcje odczytują się bezpośrednio z portu we/wy, nie można ich używać w kodzie użytkownika.
 
-Nazwy `inp` i `inpw` są starsze, przestarzałe nazwy dla funkcji `_inp` i `_inpw`. Aby uzyskać więcej informacji, zobacz [nazwy funkcji POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
+Nazwy `inp` i `inpw` są starsze, przestarzałe nazwy dla funkcji `_inp` i. `_inpw` Aby uzyskać więcej informacji, zobacz [nazwy funkcji POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`_inp`|\<conio.h>|
-|`_inpw`|\<conio.h>|
-|`_inpd`|\<conio.h>|
+|`_inp`|\<CONIO. h>|
+|`_inpw`|\<CONIO. h>|
+|`_inpd`|\<CONIO. h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../c-runtime-library/compatibility.md).
 
@@ -98,5 +98,5 @@ Wszystkie wersje [bibliotek uruchomieniowych języka C](../c-runtime-library/crt
 
 ## <a name="see-also"></a>Zobacz także
 
-\ [we/wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)
+[We/wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)\
 [Outp, outpw, _outp, _outpw _outpd](../c-runtime-library/outp-outpw-outpd.md)
