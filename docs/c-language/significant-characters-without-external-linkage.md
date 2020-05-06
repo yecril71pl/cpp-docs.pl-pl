@@ -11,10 +11,10 @@ ms.locfileid: "62158296"
 ---
 # <a name="significant-characters-without-external-linkage"></a>Znaki znaczące bez zewnętrznego połączenia
 
-**ANSI 3.1.2** liczba znaki znaczące bez zewnętrznego połączenia
+**ANSI 3.1.2** Liczba znaków znaczących bez powiązania zewnętrznego
 
-Identyfikatory są istotne dla 247 znaków. Kompilator nie ogranicza liczbę znaków, których można użyć w identyfikatorze; po prostu ignoruje dowolne znaki poza limit.
+Identyfikatory są znaczące do 247 znaków. Kompilator nie ogranicza liczby znaków, których można użyć w identyfikatorze; po prostu ignoruje wszystkie znaki poza limitem.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)

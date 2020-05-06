@@ -11,12 +11,12 @@ ms.locfileid: "62158214"
 ---
 # <a name="specifying-calling-conventions"></a>Określanie konwencji wywoływania
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Aby uzyskać informacji na temat konwencji wywoływania, zobacz [tematy konwencji wywoływania](../cpp/calling-conventions.md).
+Aby uzyskać informacje na temat konwencji wywoływania, zobacz [Tematy dotyczące konwencji wywoływania](../cpp/calling-conventions.md).
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty funkcji](../c-language/function-attributes.md)

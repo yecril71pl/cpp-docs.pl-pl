@@ -11,10 +11,10 @@ ms.locfileid: "62232047"
 ---
 # <a name="renaming-with-a-name-that-exists"></a>Zmiana nazwy dla tej nazwy już istnieje
 
-**ANSI 4.9.4.2** efektu, jeśli istnieje plik z nową nazwą, przed wywołaniem do **Zmień nazwę** — funkcja
+**4.9.4.2 ANSI** Efekt, jeśli istnieje plik o nowej nazwie przed wywołaniem funkcji **zmiany nazwy**
 
-Jeśli spróbujesz zmienić nazwę pliku przy użyciu nazwy, która istnieje, **Zmień nazwę** funkcja kończy się niepowodzeniem i zwraca kod błędu.
+Próba zmiany nazwy pliku przy użyciu nazwy, która istnieje, nie powiedzie **się i** zwróci kod błędu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

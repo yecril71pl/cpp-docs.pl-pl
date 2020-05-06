@@ -13,10 +13,10 @@ ms.locfileid: "62158537"
 ---
 # <a name="signal-function-c"></a>signal — funkcja
 
-**ANSI 4.7.1.1** zestaw sygnałów do **sygnału** — funkcja
+**4.7.1.1 ANSI** Zestaw sygnałów dla funkcji **sygnału**
 
-Pierwszy argument przekazany do **sygnału** musi być jednym z należy stosować stałe symboliczne opisanego w *odwołanie do biblioteki wykonawczej* dla **sygnału** funkcji. Informacje przedstawione w *odwołanie do biblioteki wykonawczej* zawiera również listę operacyjnych trybu obsługi poszczególnych sygnałów. Stałe są również określone w sygnału. H.
+Pierwszy argument, który został przesłany do **sygnału** musi być jednym ze stałych symbolicznych opisanych w *odwołaniu do biblioteki wykonawczej* dla funkcji **sygnału** . Informacje w dokumentacji dotyczącej *biblioteki wykonawczej* zawiera również listę obsługi trybu operacyjnego dla każdego sygnału. Stałe są również zdefiniowane w SYGNALe. C.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

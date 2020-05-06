@@ -1,5 +1,5 @@
 ---
-title: Limity dla C++ języków C i Integer
+title: Limity liczb całkowitych C i C++
 ms.date: 10/21/2019
 helpviewer_keywords:
 - limits, integer
@@ -13,17 +13,17 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72778374"
 ---
-# <a name="c-and-c-integer-limits"></a>Limity dla C++ języków C i Integer
+# <a name="c-and-c-integer-limits"></a>Limity liczb całkowitych C i C++
 
 **Specyficzne dla firmy Microsoft**
 
-Limity dla typów całkowitych w C i C++ są wymienione w poniższej tabeli. Limity te są zdefiniowane w standardowym pliku nagłówkowym C `<limits.h>`. @No__t_1 C++ nagłówka biblioteki standardowej zawiera `<climits>`, w tym `<limits.h>`.
+Limity dla typów całkowitych w C i C++ są wymienione w poniższej tabeli. Limity te są zdefiniowane w standardowym pliku `<limits.h>`nagłówkowym C. Nagłówek `<limits>` standardowej biblioteki C++ zawiera `<climits>`, który obejmuje. `<limits.h>`
 
 Firma Microsoft C zezwala również na deklarowanie zmiennych liczb całkowitych, które są typami całkowitymi o rozmiarze 8-, 16-, 32-lub 64-bitowym. Aby uzyskać więcej informacji na temat rozmiarów liczb całkowitych w C, zobacz [rozmiar liczb całkowitych](../c-language/c-sized-integer-types.md).
 
 ## <a name="limits-on-integer-constants"></a>Limity dla stałych całkowitych
 
-|**Stałego**|Znaczenie|Wartość|
+|**Stały**|Znaczenie|Wartość|
 |------------------|-------------|-----------|
 |**CHAR_BIT**|Liczba bitów w najmniejszej zmiennej, która nie jest polem bitowym.|8|
 |**SCHAR_MIN**|Minimalna wartość dla zmiennej typu znak ze **znakiem**.|-128|
@@ -49,6 +49,6 @@ Jeśli wartość przekracza największą reprezentację całkowitą, kompilator 
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Stałe całkowite języka C](../c-language/c-integer-constants.md)

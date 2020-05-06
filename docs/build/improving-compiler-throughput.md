@@ -16,12 +16,12 @@ ms.locfileid: "62188762"
 ---
 # <a name="improving-compiler-throughput"></a>Poprawianie wydajności kompilatora
 
-Prekompilowane pliki nagłówka umożliwia szybsze tworzenie projektu. Jest to ważne, jeśli używasz biblioteki ATL, MFC lub pliki nagłówków zestawu Windows SDK.
+Używaj prekompilowanych plików nagłówkowych do szybszego kompilowania projektu. Jest to ważne w przypadku używania ATL, MFC lub Windows SDK plików nagłówkowych.
 
-Zobacz [/Yc](reference/yc-create-precompiled-header-file.md) i [/Yu](reference/yu-use-precompiled-header-file.md).
+Zobacz [/YC](reference/yc-create-precompiled-header-file.md) i [/Yu](reference/yu-use-precompiled-header-file.md).
 
-Aby uzyskać więcej informacji na temat wstępnie skompilowanych nagłówków, zobacz [prekompilowanych plików nagłówka](creating-precompiled-header-files.md).
+Aby uzyskać więcej informacji na temat prekompilowanych nagłówków, zobacz [prekompilowane pliki nagłówkowe](creating-precompiled-header-files.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Optymalizacja kodu](optimizing-your-code.md)

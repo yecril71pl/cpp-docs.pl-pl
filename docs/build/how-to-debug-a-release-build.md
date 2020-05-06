@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Debugowanie kompilacji wydania'
+title: 'Porady: debugowanie kompilacji wydania'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - debugging [C++], release builds
@@ -12,30 +12,30 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62188967"
 ---
-# <a name="how-to-debug-a-release-build"></a>Instrukcje: Debugowanie kompilacji wydania
+# <a name="how-to-debug-a-release-build"></a>Porady: debugowanie kompilacji wydania
 
-Umożliwia debugowanie kompilacji wydania aplikacji.
+Można debugować kompilację wydania aplikacji.
 
-### <a name="to-debug-a-release-build"></a>Debugowanie kompilacji wydania
+### <a name="to-debug-a-release-build"></a>Aby debugować kompilację wydania
 
-1. Otwórz **stron właściwości** okno dialogowe dla projektu. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** dla projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](working-with-project-properties.md).
 
-1. Kliknij przycisk **C/C++** węzła. Ustaw **formatu informacji debugowania** do [zgodne z C7 (/ Z7)](reference/z7-zi-zi-debug-information-format.md) lub **bazy danych programu (/Zi)**.
+1. Kliknij węzeł **C/C++** . Ustaw **Format informacji debugowania** na wartość [C7 Compatible (/Z7)](reference/z7-zi-zi-debug-information-format.md) lub **Program Database (/ZI)**.
 
-1. Rozwiń **konsolidatora** i kliknij przycisk **ogólne** węzła. Ustaw **Włącz konsolidację przyrostową** do [nr (/ INCREMENTAL: NO)](reference/incremental-link-incrementally.md).
+1. Rozwiń węzeł **konsolidator** i kliknij węzeł **Ogólne** . Ustaw **opcję Włącz łączenie przyrostowe** na wartość [nie (/Incremental: No)](reference/incremental-link-incrementally.md).
 
-1. Wybierz **debugowanie** węzła. Ustaw **generowanie informacji o debugowaniu** do [tak (/ DEBUG)](reference/debug-generate-debug-info.md).
+1. Wybierz węzeł **debugowanie** . Ustaw opcję **Generuj informacje o debugowaniu** na [wartość tak (/Debug)](reference/debug-generate-debug-info.md).
 
-1. Wybierz **optymalizacji** węzła. Ustaw **odwołania** do [/OPT: REF](reference/opt-optimizations.md) i **umożliwić składanie COMDAT** do [/OPT: ICF](reference/opt-optimizations.md).
+1. Wybierz węzeł **Optymalizacja** . Ustaw **odwołania** do [/OPT: ref](reference/opt-optimizations.md) i **Włącz COMDAT składania** do [/OPT: ICF](reference/opt-optimizations.md).
 
-1. Można teraz debugować aplikację kompilacji wydania. Aby odnaleźć problem, przejrzyj kod (lub użyj Just-In-Time debugging), aż znajdziesz, gdzie występuje błąd, a następnie sprawdzić niepoprawne parametry lub kodu.
+1. Teraz możesz debugować aplikację do tworzenia wersji. Aby znaleźć problem, Przekrocz kod (lub użyj debugowania just-in-Time) do momentu, w którym wystąpił błąd, a następnie określ nieprawidłowe parametry lub kod.
 
-   Jeśli aplikacja działa w kompilacji debugowania, ale zakończy się niepowodzeniem w kompilacji wydania, jeden optymalizacje kompilatora może udostępnianie wadę w kodzie źródłowym. Aby ustalić przyczynę problemu, należy wyłączyć optymalizacje wybrane dla każdego pliku kodu źródłowego do momentu zlokalizowania pliku i Optymalizacja, który jest przyczyną problemu. (Aby przyspieszyć proces, należy można podzielić pliki na dwie grupy, wyłącz optymalizację na jedną grupę i po znalezieniu problem w grupie, nadal dzielenia aż izolowania pliku problem.)
+   Jeśli aplikacja działa w kompilacji debugowania, ale kończy się niepowodzeniem w kompilacji wydania, jedna z optymalizacji kompilatora może ujawnić wady w kodzie źródłowym. Aby wyizolować ten problem, wyłącz wybrane optymalizacje dla każdego pliku kodu źródłowego do momentu zlokalizowania pliku i optymalizacji, która powoduje problem. (Aby przyspieszyć proces, można podzielić pliki na dwie grupy, wyłączyć optymalizację dla jednej grupy, a po znalezieniu problemu w grupie Kontynuuj podział do momentu wyodrębnienia pliku problemu).
 
-   Możesz użyć [usunęliśmy](reference/rtc-run-time-error-checks.md) próby umożliwiającymi takie błędy w swoich kompilacjach debugowania.
+   Możesz użyć [/RTC](reference/rtc-run-time-error-checks.md) , aby spróbować uwidocznić takie usterki w kompilacjach debugowania.
 
-   Aby uzyskać więcej informacji, zobacz [optymalizacji kodu](optimizing-your-code.md).
+   Aby uzyskać więcej informacji, zobacz [Optymalizacja kodu](optimizing-your-code.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Naprawianie problemów kompilacji wydania](fixing-release-build-problems.md)

@@ -15,13 +15,13 @@ ms.locfileid: "62157945"
 ---
 # <a name="static-storage-class-specifier"></a>Specyfikator statycznej klasy magazynowania
 
-Zmienna zadeklarowana na poziomie wewnętrznym za pomocą **statyczne** Specyfikator klasy magazynowania ma globalny okres istnienia, ale jest widoczny tylko w bloku, w którym jest zdeklarowana. Dla stałych ciągów przy użyciu **statyczne** jest przydatne, ponieważ jego eliminuje koszty związane z częstych inicjowania w funkcjach często nazywane.
+Zmienna zadeklarowana na poziomie wewnętrznym ze specyfikatorem klasy magazynu **static** ma globalny okres istnienia, ale jest widoczna tylko w bloku, w którym jest zadeklarowana. W przypadku ciągów stałych użycie **static** jest przydatne, ponieważ zmniejsza obciążenie częstej inicjalizacji w często wywoływanych funkcjach.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli nie jawnie zainicjować **statyczne** zmiennej, jest on inicjowany 0 domyślnie. Wewnątrz funkcji **statyczne** powoduje, że magazynu do przydzielenia i stanowi definicję. Wewnętrzne zmienne statyczne magazynowanie prywatnych, stałe widoczne dla tylko jednej funkcji.
+Jeśli nie zainicjujesz jawnie zmiennej **statycznej** , domyślnie zostanie ona zainicjowana 0. Wewnątrz funkcji **statyczne** powoduje przydzielenie magazynu i służy jako definicja. Wewnętrzne zmienne statyczne zapewniają prywatny, stały magazyn widoczny tylko dla jednej funkcji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy magazynu w języku C](c-storage-classes.md)<br/>
 [Klasy magazynu (C++)](../cpp/storage-classes-cpp.md)

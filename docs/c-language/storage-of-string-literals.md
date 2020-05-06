@@ -13,16 +13,16 @@ ms.locfileid: "62157867"
 ---
 # <a name="storage-of-string-literals"></a>Magazynowanie literałów ciągu
 
-Znaki literału ciągu są przechowywane w kolejności w lokalizacjach pamięci ciągłej. Sekwencja unikowa (takie jak **\\ \\** lub  **\\"**) w ramach literału ciągu jest liczona jako jeden znak. Znak null (reprezentowane przez **\0** sekwencji unikowej) jest automatycznie dołączany do pisania, a końcu każdego ciągu literału. (Ten problem wystąpi podczas [fazie tłumaczenia](../preprocessor/phases-of-translation.md) 7.) Należy pamiętać, że kompilator nie może przechowywać dwie identyczne ciągi pod dwoma różnymi adresami. [/GF](../build/reference/gf-eliminate-duplicate-strings.md) wymusza na kompilatorze umieszcza pojedynczej kopii identycznych ciągów w pliku wykonywalnego.
+Znaki ciągu literału są przechowywane w kolejności w ciągłej lokalizacji pamięci. Sekwencja ucieczki (taka jak ** \\ ** lub ** \\"**) w literale ciągu liczy jako pojedynczy znak. Znak null (reprezentowany przez sekwencję ucieczki **\ 0** ) jest automatycznie dołączany do i oznacza koniec każdego literału ciągu. (Dzieje się to w [fazie translacji](../preprocessor/phases-of-translation.md) 7). Należy zauważyć, że kompilator może nie przechowywać dwóch identycznych ciągów przy użyciu dwóch różnych adresów. [/GF](../build/reference/gf-eliminate-duplicate-strings.md) wymusza, aby kompilator umieszczał pojedynczą kopię identycznych ciągów w pliku wykonywalnym.
 
 ## <a name="remarks"></a>Uwagi
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Ciągi mają statyczny czas magazynowania. Zobacz [klasy magazynu](../c-language/c-storage-classes.md) informacji o czas trwania przechowywania.
+Ciągi mają statyczny czas przechowywania. Zobacz [klasy magazynu](../c-language/c-storage-classes.md) , aby uzyskać informacje o czasie trwania magazynu.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Literały ciągu języka C](../c-language/c-string-literals.md)

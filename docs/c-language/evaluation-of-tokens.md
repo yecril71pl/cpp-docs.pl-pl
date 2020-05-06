@@ -13,20 +13,20 @@ ms.locfileid: "62234026"
 ---
 # <a name="evaluation-of-tokens"></a>Ocena tokenów
 
-Gdy kompilator interpretuje słowa kluczowe tokenów, zawiera maksymalną liczbę znaków jak to możliwe w pojedynczy token przed przejściem do następnego tokenu. Ze względu na to zachowanie kompilator nie może zinterpretować tokenów poprawnie, jeśli ich nie są poprawnie rozdzielone biały znak. Należy wziąć pod uwagę następujące wyrażenie:
+Gdy kompilator interpretuje tokeny, zawiera dowolną liczbę znaków w ramach jednego tokenu przed przejściem do następnego tokenu. Ze względu na to zachowanie kompilator może nie interpretować tokenów zgodnie z oczekiwaniami, jeśli nie są prawidłowo oddzielone znakami odstępu. Rozważ następujące wyrażenie:
 
 ```
 i+++j
 ```
 
-W tym przykładzie, kompilator najpierw sprawia, że najdłuższy możliwe — operator (`++`) z trzech znak plus, a następnie przetwarza pozostałe znak plus jako operator dodawania (`+`). W związku z tym, wyrażenie jest interpretowany jako `(i++) + (j)`, a nie `(i) + (++j)`. W tym i podobnych przypadków używają biały znak i nawiasy, aby uniknąć niejednoznaczności i zapewnienia prawidłowego wyrażenia.
+W tym przykładzie kompilator najpierw tworzy najdłuższy możliwy operator (`++`) od trzech znaków plus, a następnie przetwarza pozostałe znak plus jako operator dodawania (`+`). W tym celu wyrażenie jest interpretowane `(i++) + (j)`jako, `(i) + (++j)`nie. W tym i podobnym przypadku użyj białych znaków i nawiasów, aby uniknąć niejednoznaczności i zapewnić poprawne obliczanie wyrażeń.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Kompilator języka C traktuje znaku CTRL + Z jako wskaźnik końca pliku. Ignoruje wszelki tekst po CTRL + Z.
+Kompilator języka C traktuje znak CTRL + Z jako wskaźnik końca pliku. Ignoruje dowolny tekst po kombinacji klawiszy CTRL + Z.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tokeny języka C](../c-language/c-tokens.md)

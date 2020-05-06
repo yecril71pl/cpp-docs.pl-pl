@@ -15,18 +15,18 @@ ms.locfileid: "62158023"
 ---
 # <a name="statements-c"></a>Instrukcje (C)
 
-Instrukcje programu w języku C sterowanie przepływem wykonania programu. W języku C tak jak w innych językach programowania kilka rodzajów instrukcje są dostępne do wykonywania pętli, aby wybrać inne instrukcje do wykonania i przekazać sterowanie. Po krótkim [Przegląd — składnia instrukcji](../c-language/overview-of-c-statements.md), w tej sekcji opisano instrukcje języka C w kolejności alfabetycznej:
+Instrukcje programu C sterują przepływem wykonania programu. W języku C, podobnie jak w przypadku innych języków programowania, dostępne są różne rodzaje instrukcji, aby można było wykonać pętle, wybrać inne instrukcje do wykonania i przetransferować kontrolkę. Postępując zgodnie z krótkim [omówieniem składni instrukcji](../c-language/overview-of-c-statements.md), w tej sekcji opisano instrukcje języka C w kolejności alfabetycznej:
 
 |||
 |-|-|
-|[BREAK — instrukcja](../c-language/break-statement-c.md)|[Jeśli instrukcja](../c-language/if-statement-c.md)|
+|[Break, instrukcja](../c-language/break-statement-c.md)|[if — instrukcja](../c-language/if-statement-c.md)|
 |[instrukcja złożona](../c-language/compound-statement-c.md)|[Instrukcja o wartości null](../c-language/null-statement-c.md)|
-|[Continue — instrukcja](../c-language/continue-statement-c.md)|[Return — instrukcja](../c-language/return-statement-c.md)|
-|[czy-while — instrukcja](../c-language/do-while-statement-c.md)|[Switch — instrukcja](../c-language/switch-statement-c.md)|
-|[Instrukcja wyrażeń](../c-language/expression-statement-c.md)|[Spróbuj-except — instrukcja](../c-language/try-except-statement-c.md)|
-|[For — instrukcja](../c-language/for-statement-c.md)|[try-finally — instrukcja](../c-language/try-finally-statement-c.md)|
-|[goto i labeled — instrukcje](../c-language/goto-and-labeled-statements-c.md)|[while — instrukcja](../c-language/while-statement-c.md)|
+|[Continue — instrukcja](../c-language/continue-statement-c.md)|[Return — Instrukcja](../c-language/return-statement-c.md)|
+|[do-While — Instrukcja](../c-language/do-while-statement-c.md)|[Switch, instrukcja](../c-language/switch-statement-c.md)|
+|[Instrukcja wyrażenia](../c-language/expression-statement-c.md)|[try-except — instrukcja](../c-language/try-except-statement-c.md)|
+|[for — instrukcja](../c-language/for-statement-c.md)|[try-finally — instrukcja](../c-language/try-finally-statement-c.md)|
+|[goto i labeled — instrukcje](../c-language/goto-and-labeled-statements-c.md)|[while, instrukcja](../c-language/while-statement-c.md)|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C](../c-language/c-language-reference.md)

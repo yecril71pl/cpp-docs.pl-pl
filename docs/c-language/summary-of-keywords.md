@@ -11,19 +11,19 @@ ms.locfileid: "62157698"
 ---
 # <a name="summary-of-keywords"></a>Podsumowanie dotyczące słów kluczowych
 
-*słowo kluczowe* : jeden z
+*słowo kluczowe* : jedno z
 
 |||||
 |-|-|-|-|
-|**auto**|**double**|**int**|**struct**|
-|**break**|**else**|**long**|**switch**|
-|**case**|**enum**|**register**|**typedef**|
-|**char**|**extern**|**return**|**Unia**|
-|**const**|**float**|**short**|**Bez znaku**|
-|**continue**|**for**|**Podpisany**|**void**|
-|**default**|**goto**|**sizeof**|**volatile**|
+|**Automatycznie**|**double**|**int**|**konstrukcja**|
+|**break**|**else**|**długi**|**przełącznika**|
+|**spraw**|**podstawowe**|**zarejestrować**|**własne**|
+|**char**|**extern**|**return**|**Unii**|
+|**const**|**float**|**short**|**bajt**|
+|**continue**|**for**|**podpisane**|**void**|
+|**wartooć**|**goto**|**sizeof**|**volatile**|
 |**do**|**if**|**static**|**while**|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Gramatyka leksykalna](../c-language/lexical-grammar.md)

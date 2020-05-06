@@ -11,10 +11,10 @@ ms.locfileid: "62158437"
 ---
 # <a name="sign-of-bit-fields"></a>Znaki pól bitowych
 
-**ANSI 3.5.2.1** czy "zwykły" `int` pola jest traktowany jako **podpisany int** bit pola lub jako pole bitowe unsigned int
+**3.5.2.1 ANSI** Czy pole "zwykły" `int` jest traktowane jako pole ze **znakiem** bitowym int lub jako pole bitowe int bez znaku
 
-Pola bitowe mogą być podpisane lub niepodpisane. Pola bitowe zwykły jest traktowany jako podpisany.
+Pola bitowe mogą być podpisane lub niepodpisane. Pola w postaci zwykłego bitu są traktowane jako podpisane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Struktury, złożenia, wyliczenia i pola bitowe](../c-language/structures-unions-enumerations-and-bit-fields.md)

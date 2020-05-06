@@ -14,23 +14,23 @@ ms.locfileid: "62158476"
 ---
 # <a name="side-effects"></a>Efekty uboczne
 
-Kolejność obliczania wyrażeń jest definiowany przez konkretnej implementacji, z wyjątkiem sytuacji, gdy język gwarantuje określonej kolejności obliczania (zgodnie z opisem w [hierarchia i kolejność oceny](../c-language/precedence-and-order-of-evaluation.md)). Na przykład efekty uboczne wystąpić w następujących wywołania funkcji:
+Kolejność obliczania wyrażeń jest definiowana przez określoną implementację, z wyjątkiem sytuacji, gdy język gwarantuje określoną kolejność oceny (zgodnie z [pierwszeństwem i kolejnością oceny](../c-language/precedence-and-order-of-evaluation.md)). Na przykład efekty uboczne występują w następujących wywołaniach funkcji:
 
 ```
 add( i + 1, i = j + 2 );
 myproc( getc(), getc() );
 ```
 
-Argumenty wywołania funkcji może zostać oceniony w dowolnej kolejności. Wyrażenie `i + 1` może zostać ocenione przed `i = j + 2`, lub `i = j + 2` może zostać ocenione przed `i + 1`. Wynik różni się w każdym przypadku. Podobnie nie jest możliwe w celu zagwarantowania, jakie znaki są faktycznie przekazywane do `myproc`. Ponieważ jednoargumentowe inkrementacja i dekrementacja operacje obejmują przypisania, takich operacji może spowodować efekty uboczne, jak pokazano w poniższym przykładzie:
+Argumenty wywołania funkcji można ocenić w dowolnej kolejności. Wyrażenie `i + 1` może być oceniane przed `i = j + 2`, lub `i = j + 2` może być oceniane przed. `i + 1` W każdym przypadku wynik jest różny. Podobnie nie jest możliwe zagwarantowanie, jakie znaki są faktycznie przesyłane do `myproc`. Ponieważ operacje przyrostu jednoargumentowego i zmniejszania obejmują przydziały, operacje te mogą powodować efekty uboczne, jak pokazano w następującym przykładzie:
 
 ```
 x[i] = i++;
 ```
 
-W tym przykładzie wartość `x` to znaczy zmodyfikowany, będzie nieprzewidywalny. Wartość indeksu dolnego może być nowej lub starej wartości `i`. Wynik może różnić się w różnych kompilatorach i różnych poziomach optymalizacji.
+W tym przykładzie wartość `x` modyfikowana jest nieprzewidywalne. Wartość indeksu dolnego może być nową lub starą wartością `i`. Wyniki mogą się różnić w zależności od różnych kompilatorów lub różnych poziomów optymalizacji.
 
-Ponieważ C nie definiuje kolejność oceniania efekty uboczne, obie metody oceny omówione powyżej są poprawne, i albo mogą być wykonywane. Aby upewnić się, że kod jest przenośny i przejrzysty, unikaj instrukcji, które są zależne od określonej kolejności obliczania uzyskać efekty uboczne.
+Ponieważ C nie definiuje kolejności oceny efektów ubocznych, obie metody oceny omówione powyżej są poprawne i mogą być zaimplementowane. Aby upewnić się, że kod jest przenośny i czysty, należy unikać instrukcji, które są zależne od określonej kolejności oceny efektów ubocznych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obliczanie wyrażeń](../c-language/expression-evaluation-c.md)

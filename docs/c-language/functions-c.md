@@ -14,7 +14,7 @@ ms.locfileid: "62233137"
 ---
 # <a name="functions-c"></a>Funkcje (C)
 
-Funkcja jest podstawową jednostką modularną w C. Funkcja jest zwykle przeznaczona do wykonywania określonych zadań, a jej nazwa często odzwierciedla to zadanie. Funkcja zawiera deklaracje i instrukcje. W tej sekcji opisano, jak deklarować, definiować i wywoływać funkcje c. Inne omówione tematy to:
+Funkcja jest podstawową jednostką modularną w C. Funkcja jest zwykle przeznaczona do wykonania określonego zadania, a jego nazwa często odzwierciedla to zadanie. Funkcja zawiera deklaracje i instrukcje. W tej sekcji opisano sposób deklarowania, definiowania i wywoływania funkcji języka C. Inne omówione tematy to:
 
 - [Przegląd funkcji](../c-language/overview-of-functions.md)
 
@@ -24,9 +24,9 @@ Funkcja jest podstawową jednostką modularną w C. Funkcja jest zwykle przeznac
 
 - [Funkcje śródwierszowe](../c-language/inline-functions.md)
 
-- [Biblioteka DLL funkcji importu i eksportu](../c-language/dll-import-and-export-functions.md)
+- [Funkcje eksportu i importu biblioteki DLL](../c-language/dll-import-and-export-functions.md)
 
-- [Funkcji "naked"](../c-language/naked-functions.md)
+- [Funkcje bez nadruku](../c-language/naked-functions.md)
 
 - [Klasa magazynu](../c-language/storage-class.md)
 
@@ -36,6 +36,6 @@ Funkcja jest podstawową jednostką modularną w C. Funkcja jest zwykle przeznac
 
 - [Parametry](../c-language/parameters.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C](../c-language/c-language-reference.md)

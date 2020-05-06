@@ -1,5 +1,5 @@
 ---
-title: Reguły i ograniczenia dotyczące atrybutów dllimport / dllexport
+title: Reguły i ograniczenia dotyczące elementu dllimport-dllexport
 ms.date: 11/04/2016
 helpviewer_keywords:
 - dllexport attribute [C++], limitations and rules
@@ -15,11 +15,11 @@ ms.locfileid: "62158430"
 ---
 # <a name="rules-and-limitations-for-dllimportdllexport"></a>Reguły i ograniczenia dotyczące atrybutów dllimport/dllexport
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-- Jeśli deklarowana jest funkcja bez **dllimport** lub `dllexport` atrybutu, funkcja nie jest uważany za część interfejsu biblioteki DLL. W związku z tym definicji funkcji musi być obecny, w tym module lub w innym module tego samego programu. Aby funkcja częścią interfejsu biblioteki DLL, należy zadeklarować definicji funkcji w module jako `dllexport`. W przeciwnym razie zostanie wygenerowany błąd konsolidatora, gdy klient jest wbudowana.
+- Jeśli deklarujesz funkcję bez atrybutu **dllimport** lub `dllexport` Attribute, funkcja nie jest uważana za część interfejsu dll. W związku z tym definicja funkcji musi być obecna w tym module lub w innym module tego samego programu. Aby uczynić funkcję części interfejsu DLL, należy zadeklarować definicję funkcji w innym module jako `dllexport`. W przeciwnym razie podczas kompilowania klienta zostanie wygenerowany błąd konsolidatora.
 
-- Jeśli zawiera pojedynczy moduł w programie **dllimport** i `dllexport` deklaracje dla tej samej funkcji `dllexport` atrybut ma pierwszeństwo przed **dllimport** atrybutu. Jednak kompilator wygeneruje ostrzeżenie. Na przykład:
+- Jeśli pojedynczy moduł w programie zawiera **dllimport** i `dllexport` deklaracje dla tej samej funkcji, `dllexport` atrybut ma pierwszeństwo przed atrybutem **dllimport** . Jest jednak generowane ostrzeżenie kompilatora. Przykład:
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -31,7 +31,7 @@ ms.locfileid: "62158430"
 
     ```
 
-- Nie można zainicjować wskaźnik danych statycznych przy użyciu adresu obiektu danych zadeklarowane za pomocą **dllimport** atrybutu. Na przykład poniższy kod generuje błędy:
+- Nie można zainicjować statycznego wskaźnika danych przy użyciu adresu obiektu danych zadeklarowanego z atrybutem **dllimport** . Na przykład poniższy kod generuje błędy:
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -50,7 +50,7 @@ ms.locfileid: "62158430"
 
     ```
 
-- Inicjowanie wskaźnik funkcję statyczną przy użyciu adresu funkcji zadeklarowanych za pomocą **dllimport** ustawia wskaźnik adres thunk importu biblioteki DLL (kod odcinek, który przekazuje sterowanie do funkcji), a nie na adres Funkcja. Tego przypisania nie generuje komunikat o błędzie:
+- Inicjowanie wskaźnika funkcji statycznej z adresem funkcji zadeklarowanej za pomocą elementu **dllimport** ustawia wskaźnik na adres biblioteki DLL import thunk (zastępczy kod, który przekazuje kontrolę do funkcji), a nie adres funkcji. To przypisanie nie generuje komunikatu o błędzie:
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -69,7 +69,7 @@ ms.locfileid: "62158430"
 
     ```
 
-- Ponieważ program, który zawiera `dllexport` atrybutu w deklaracji obiektu, należy podać definicję dla tego obiektu, można zainicjować wskaźnik statycznej funkcji globalnych lub lokalnych z adresem `dllexport` funkcji. Podobnie, można zainicjować wskaźnik globalnych lub lokalnych danych statycznych, adresem `dllexport` obiektu danych. Na przykład:
+- Ponieważ program, który zawiera `dllexport` atrybut w deklaracji obiektu, musi podać definicję dla tego obiektu, można zainicjować globalny lub lokalny wskaźnik funkcji statycznej przy użyciu adresu `dllexport` funkcji. Analogicznie, można zainicjować globalny lub lokalny wskaźnik danych statycznych o adresie obiektu `dllexport` danych. Przykład:
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -94,8 +94,8 @@ ms.locfileid: "62158430"
 
     ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Importowanie bibliotek DLL i eksportowanie funkcji](../c-language/dll-import-and-export-functions.md)

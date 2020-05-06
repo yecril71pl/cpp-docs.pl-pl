@@ -15,8 +15,8 @@ ms.locfileid: "62233699"
 
 - [Rzutowanie liczb całkowitych na wartości zmiennoprzecinkowe](../c-language/casting-integers-to-floating-point-values.md)
 
-- [Obcięcie wartości zmiennoprzecinkowych](../c-language/truncation-of-floating-point-values.md)
+- [Obcinanie wartości zmiennoprzecinkowych](../c-language/truncation-of-floating-point-values.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)

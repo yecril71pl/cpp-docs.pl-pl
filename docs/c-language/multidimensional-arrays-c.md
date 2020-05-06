@@ -21,7 +21,7 @@ Wyrażenie indeksu dolnego może mieć wiele indeksów dolnych, jak pokazano pon
 expression1 [ expression2 ] [ expression3 ] ...
 ```
 
-Wyrażenia indeksu dolnego są skojarzone od lewej do prawej. Pierwszy wyrażenie indeksu dolnego, *wyrażenie1* **[** *wyrażenie2* **]** , jest oceniane jako pierwsze. Adres, który wynika z dodania elementu *wyrażenie1* i *wyrażenie2* tworzą wyrażenie wskaźnika; następnie *expression3* jest dodawany do tego wyrażenia wskaźnika, aby utworzyć nowe wyrażenie wskaźnika i tak dalej, aż do ostatniego wyrażenia indeksu dolnego. Operator pośredni (<strong>\*</strong>) jest stosowany po obliczeniu ostatniego wyrażenia indeksu dolnego, chyba że końcowa wartość wskaźnika odnosi się do typu tablicy (Zobacz przykłady poniżej).
+Wyrażenia indeksu dolnego są skojarzone od lewej do prawej. Pierwszy wyrażenie indeksu dolnego, *wyrażenie1* **[** *wyrażenie2* **]**, jest oceniane jako pierwsze. Adres, który wynika z dodania elementu *wyrażenie1* i *wyrażenie2* tworzą wyrażenie wskaźnika; następnie *expression3* jest dodawany do tego wyrażenia wskaźnika, aby utworzyć nowe wyrażenie wskaźnika i tak dalej, aż do ostatniego wyrażenia indeksu dolnego. Operator pośredni (<strong>\*</strong>) jest stosowany po obliczeniu ostatniego wyrażenia indeksu dolnego, chyba że końcowa wartość wskaźnika odnosi się do typu tablicy (Zobacz przykłady poniżej).
 
 Wyrażenia zawierające wiele indeksów dolnych odwołują się do elementów „tablic wielowymiarowych”. Tablica wielowymiarowa jest tablicą, której elementy są tablicami. Na przykład, pierwszy element tablicy trójwymiarowej jest tablicą z dwoma wymiarami.
 
@@ -68,6 +68,6 @@ W pierwszej z tych instrukcji wyrażenie `prop[2][1]` jest prawidłowym odwołan
 
 Podobnie, wynik wyrażenia `prop[2]` w drugiej instrukcji `ipp = prop[2];` jest wartością wskaźnika adresującą tablicę dwuwymiarową.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operator indeksu dolnego:](../cpp/subscript-operator.md)

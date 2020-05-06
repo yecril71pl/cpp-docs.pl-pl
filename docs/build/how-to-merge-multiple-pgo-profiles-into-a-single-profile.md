@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Scalanie wielu profili PGO w jeden profil'
+title: 'Porady: scalanie wielu profili PGO w jeden profil'
 ms.date: 03/14/2018
 helpviewer_keywords:
 - merging profiles
@@ -12,33 +12,33 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62188876"
 ---
-# <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>Instrukcje: Scalanie wielu profili PGO w jeden profil
+# <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>Porady: scalanie wielu profili PGO w jeden profil
 
-Profilowana Optymalizacja (PGO) jest doskonałym narzędziem do tworzenia zoptymalizowanych plików binarnych, oparta na scenariuszu, która jest profilowana. Ale co zrobić, jeśli masz aplikację, która ma kilka ważnych scenariuszy jeszcze distinct? Jak utworzyć jeden profil, który można użyć funkcji optymalizacji PGO z kilku różnych scenariuszy W programie Visual Studio, Menedżer PGO [pgomgr.exe](pgomgr.md), wykonuje to zadanie.
+Optymalizacja oparta na profilach (PGO) to doskonałe narzędzie do tworzenia zoptymalizowanych plików binarnych na podstawie scenariusza, który jest profilowany. Ale co zrobić, jeśli masz aplikację, która ma kilka ważnych, a jeszcze różne scenariusze? Jak utworzyć pojedynczy profil, który PGO może być używany z kilku różnych scenariuszy? W programie Visual Studio, PGO Manager, [Pgomgr. exe](pgomgr.md), robi to zadanie.
 
-Scalanie profili składnia jest następująca:
+Składnia scalania profilów jest następująca:
 
 `pgomgr /merge[:num] [.pgc_files] .pgd_files`
 
-gdzie `num` jest opcjonalny waga do użycia dla plików PGC dodane przez takiego połączenia. Wagi są często używane, jeśli istnieją pewne scenariusze, które są ważniejsze niż inne, lub jeśli istnieją scenariusze, które mają być uruchamiane wielokrotnie.
+gdzie `num` jest opcjonalną wagą do użycia dla plików. PGC dodanych przez ten scalanie. Wagi są często używane, jeśli istnieją pewne scenariusze, które są ważniejsze niż inne, lub jeśli istnieją scenariusze, które mają być uruchamiane wiele razy.
 
 > [!NOTE]
-> Menedżer PGO działa z użyciem danych profilu starych. Aby scalić plik .pgc do pliku .pgd, plik .pgc musi zostać wygenerowany przez plik wykonywalny, który został utworzony przez tego samego wywołania łącza, który wygenerował plik .pgd.
+> Program PGO Manager nie działa w przypadku starych danych profilu. Aby scalić plik. PGC do pliku. pgd, plik. PGC musi być wygenerowany przez plik wykonywalny, który został utworzony przez to samo wywołanie linku, które wygenerowało plik. pgd.
 
 ## <a name="examples"></a>Przykłady
 
-W tym przykładzie Menedżer PGO dodaje pgcFile.pgc do pgdFile.pgd sześć razy:
+W tym przykładzie Menedżer PGO dodaje pgcFile. PGC do pgdFile. PGD sześć razy:
 
 `pgomgr /merge:6 pgcFile.pgc pgdFile.pgd`
 
-W tym przykładzie Menedżer PGO dodaje pgcFile1.pgc i pgcFile2.pgc do pgdFile.pgd dwa razy dla każdego pliku .pgc:
+W tym przykładzie PGO Manager dodaje pgcFile1. PGC i pgcFile2. PGC do pgdFile. pgd, dwa razy dla każdego pliku. PGC:
 
 `pgomgr /merge:2 pgcFile1.pgc pgcFile2.pgc pgdFile.pgd`
 
-Jeśli Menedżer PGO zostanie uruchomione bez żadnych argumentów pliku .pgc, przeszukuje katalog lokalny dla wszystkich plików .pgc, które mają taką samą nazwę jak plik .pgd następuje znak wykrzyknika (!), a następnie co najmniej jeden znak dowolnego. Na przykład, jeśli katalog lokalny ma test.pgd pliki, test!1.pgc, test2.pgc i test!hello.pgc, a polecenie jest uruchamiany z katalogu lokalnego, następnie **pgomgr** scala test.pgd test!1.pgc i test!hello.pgc.
+Jeśli Menedżer PGO jest uruchamiany bez żadnych argumentów pliku. PGC, przeszukuje katalog lokalny dla wszystkich plików. PGC o takiej samej nazwie bazowej jak plik. pgd, po którym następuje znak wykrzyknika (!), a następnie co najmniej jeden dowolny znak. Na przykład, jeśli katalog lokalny zawiera pliki test. pgd, test! 1. PGC, TEST2. PGC i test! Hello. PGC, a poniższe polecenie jest uruchamiane z katalogu lokalnego, a następnie **pgomgr** Scala test! 1. PGC i test! Hello. pgc.
 
 `pgomgr /merge test.pgd`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Optymalizacje sterowane profilem](profile-guided-optimizations.md)

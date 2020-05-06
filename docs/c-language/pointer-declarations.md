@@ -16,66 +16,66 @@ ms.locfileid: "62232155"
 ---
 # <a name="pointer-declarations"></a>Deklaracje wskaźników
 
-A *deklaracji wskaźnika* nazwy zmiennej wskaźnika i określa typ obiektu, na który wskazuje zmienna. Zmienna zadeklarowana jako wskaźnika przechowuje adres pamięci.
+*Deklaracja wskaźnika* nazywa zmienną wskaźnika i określa typ obiektu, do którego należy zmienna. Zmienna zadeklarowana jako wskaźnik przechowuje adres pamięci.
 
 ## <a name="syntax"></a>Składnia
 
 *deklarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wskaźnik*<sub>zoptymalizowany pod kątem</sub> *deklaratora bezpośrednie*
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>wybór</sub> wskaźnika *Direct-deklarator*
 
-*direct-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(** *deklaratora* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **[** *wyrażenie_stałe*<sub>zoptymalizowany pod kątem</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **(** *listy identyfikatorów*<sub>zoptymalizowany pod kątem</sub> **)**
+*deklarator Direct*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identyfikatora*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**(** *deklarator* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator* **[** *wybór wyrażenia stałego*<sub>opt</sub> **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator* **(** *Typ parametru-list* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator* **(** *opt z listą identyfikatorów*<sub>opt</sub> **)**
 
-*pointer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *Lista typów kwalifikator*<sub>zoptymalizowany pod kątem</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *Lista typów kwalifikator*<sub>zoptymalizowany pod kątem</sub> *wskaźnika*
+*wskaźnik*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*Typ kwalifikatora —*<sub>wybór</sub> listy<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*Typ kwalifikatora —*<sub>opt</sub> *wskaźnik* wyboru listy
 
-*Lista typów kwalifikator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Kwalifikator typu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista typów kwalifikator* *kwalifikator typu*
+*kwalifikator typu-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*kwalifikator typu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*kwalifikator typu —* *kwalifikator typu* list
 
-*Specyfikator typu* zapewnia typ obiektu, który może być żadnych podstawowych, struktury lub Unii. Zmienne wskaźnik może też wskazywać funkcji, tablice i inne wskaźniki. (Informacje na temat deklarowanie i interpretowanie bardziej złożonych typów wskaźnika, można znaleźć [interpretowanie Deklaratorów bardziej złożonych](../c-language/interpreting-more-complex-declarators.md).)
+*Specyfikator typu* zwraca typ obiektu, który może być dowolnego typu podstawowego, struktury lub Unii. Zmienne wskaźnika mogą również wskazywać funkcje, tablice i inne wskaźniki. (Aby uzyskać informacje na temat deklarowania i interpretowania bardziej złożonych typów wskaźnikowych, zobacz [Interpretowanie bardziej złożonej Deklaratory](../c-language/interpreting-more-complex-declarators.md)).
 
-Podejmując *Specyfikator typu* **void**, można opóźnić Specyfikacja typu, do którego odwołuje się wskaźnik myszy. Taki element jest określany jako "wskaźnik do **void**" i jest zapisywany jako `void *`. Zmienna zadeklarowana jako wskaźnik do *void* można wskazać obiekt dowolnego typu. Jednak do wykonywania większości operacji na wskaźnik lub obiektu, na który wskazuje, typu, na który wskazuje muszą być jawnie określone dla każdej operacji. (Zmienne typu **char** <strong>\*</strong> i typ **void** <strong>\*</strong> są zgodnego przypisania bez typu Rzutowanie.) Takie Konwersja może się odbywać za pomocą typu rzutowanego (zobacz [konwersje rzutowania typów](../c-language/type-cast-conversions.md) Aby uzyskać więcej informacji).
+Tworząc *specyfikator typu* **void**, można opóźnić specyfikację typu, do którego odwołuje się wskaźnik. Taki element jest określany jako "wskaźnik do **void**" i jest zapisywana jako `void *`. Zmienna zadeklarowana jako wskaźnik do elementu *void* może służyć do wskazywania obiektu dowolnego typu. Jednak aby wykonać większość operacji na wskaźniku lub obiekt, do którego wskazuje, typ, do którego wskazuje punkt, musi być jawnie określony dla każdej operacji. (Zmienne typu **char** <strong>\*</strong> i typu **void** <strong>\*</strong> są zgodne z przypisaniem bez rzutowania typu.) Taką konwersję można wykonać przy użyciu rzutowania typu (zobacz [Konwersje rzutowania typów](../c-language/type-cast-conversions.md) , aby uzyskać więcej informacji).
 
-*Kwalifikator typu* może być **const** lub **volatile**, lub obu. Określają one, odpowiednio, czy wskaźnik nie można zmodyfikować przez sam program (**const**), lub który wskaźnik rzeczywiście może być modyfikowany przez niektóre procesy poza kontrolą programu (**volatile**). (Zobacz [kwalifikatory typów](../c-language/type-qualifiers.md) więcej informacji na temat **const** i **volatile**.)
+*Kwalifikator typu* może być wartością **stałą** lub **nietrwałą**lub obie. Określają one odpowiednio, że wskaźnik nie może być modyfikowany przez sam program (**const**) lub że wskaźnik może być w sposób wiarygodny modyfikowany przez jakiś proces wykraczający poza kontrolę programu (**nietrwały**). (Zobacz [kwalifikatory typów](../c-language/type-qualifiers.md) , aby uzyskać więcej informacji na temat **const** i **volatile**).
 
-*Deklaratora* nazwy zmiennej i może zawierać modyfikatora typu. Na przykład jeśli *deklaratora* reprezentuje tablicę, typ wskaźnika jest modyfikowany jako wskaźnik do tablicy.
+*Deklarator* nazywa zmienną i może zawierać modyfikator typu. Na przykład jeśli *deklarator* reprezentuje tablicę, typ wskaźnika jest modyfikowany jako wskaźnik do tablicy.
 
-Można zadeklarować wskaźnik do struktury, Unii lub typu wyliczeniowego, przed zdefiniowaniem struktury, Unii lub typ wyliczenia. Możesz zadeklarować wskaźnik przy użyciu tagu struktury lub Unii, jak pokazano w poniższych przykładach. Deklaracje te są dozwolone, ponieważ kompilator nie musi wiedzieć, rozmiar struktury lub Unii, można przydzielić obszaru do zmiennej wskaźnika.
+Można zadeklarować wskaźnik do struktury, Unii lub typu wyliczeniowy przed zdefiniowaniem struktury, Unii lub typu wyliczenia. Wskaźnik deklaruje się za pomocą tagu Structure lub Union, jak pokazano w poniższych przykładach. Takie deklaracje są dozwolone, ponieważ kompilator nie musi znać rozmiaru struktury lub Unii, aby przydzielić miejsce dla zmiennej wskaźnikowej.
 
 ## <a name="examples"></a>Przykłady
 
-Poniższe przykłady ilustrują deklaracje wskaźników.
+Poniższe przykłady ilustrują deklaracje wskaźnika.
 
 ```
 char *message; /* Declares a pointer variable named message */
 ```
 
-*Komunikat* wskazuje wskaźnik do zmiennej **char** typu.
+Wskaźnik *komunikatu* wskazuje zmienną typu **char** .
 
 ```
 int *pointers[10];  /* Declares an array of pointers */
 ```
 
-*Wskaźniki* tablica zawiera 10 elementów; każdy element jest wskaźnikiem do zmiennej **int** typu.
+Tablica *wskaźników* ma 10 elementów; Każdy element jest wskaźnikiem do zmiennej o typie **int** .
 
 ```
 int (*pointer)[10]; /* Declares a pointer to an array of 10 elements */
 ```
 
-*Wskaźnik* wskazuje zmienną tablicy o liczbie 10 elementów. Każdy element w tej tablicy ma **int** typu.
+Zmienna *wskaźnik* wskazuje tablicę zawierającą 10 elementów. Każdy element w tej tablicy ma typ **int** .
 
 ```
 int const *x;      /* Declares a pointer variable, x,
                       to a constant value */
 ```
 
-Wskaźnik *x* można modyfikować, aby wskazać inną **int** wartość, ale wartość, na który punktów nie może być modyfikowany.
+Wskaźnik *x* można zmodyfikować tak, aby wskazywał inną wartość **int** , ale wartość, do której punkty IT nie może być modyfikowana.
 
 ```
 const int some_object = 5 ;
@@ -85,13 +85,13 @@ int volatile *const z = &some_object;
 int *const volatile w = &some_object;
 ```
 
-Zmienna *y* w deklaracjach jest zadeklarowany jako stały wskaźnik do **int** wartość. Można zmodyfikować wartość wskazuje, ale sam wskaźnik zawsze musi wskazywać na tej samej lokalizacji: adres *fixed_object*. Podobnie *z* jest stały wskaźnik, ale wskazują także jest zadeklarowany **int** którego wartość nie można zmodyfikować przez program. Specyfikator dodatkowe **volatile** wskazuje, że mimo że wartość **const int** wskazywany przez *z* nie może być modyfikowana przez program, może rzeczywiście być zmodyfikowane przez proces uruchomiony wątkom program. Deklaracja *w* Określa, że program nie można zmienić wartość wskazywana i że program nie można zmodyfikować wskaźnika.
+Zmienna *y* w tych deklaracjach jest zadeklarowana jako stały wskaźnik do wartości **int** . Wartość, która wskazuje na, może być modyfikowana, ale sam wskaźnik musi zawsze wskazywać na tę samą lokalizację: adres *fixed_object*. Analogicznie, *z* jest wskaźnikiem stałym, ale jest również zadeklarowany w celu wskazywania **int** , którego wartość nie może być modyfikowana przez program. Dodatkowy specyfikator **nietrwały** wskazuje, że mimo że wartość typu **const int** wskazywanego przez *z* nie może zostać zmodyfikowana przez program, może być w sposób wiarygodny zmodyfikowany przez proces uruchomiony współbieżnie przy użyciu programu. Deklaracja *w* programie określa, że program nie może zmienić wartości wskazywanej przez program i że nie można zmodyfikować wskaźnika.
 
 ```
 struct list *next, *previous; /* Uses the tag for list */
 ```
 
-Ten przykład deklaruje dwie zmienne wskaźnika, *dalej* i *poprzedniej*, wskazujące na typ struktury *listy*. Ta deklaracja może następować przed elementem definicji *listy* struktury typu (patrz następny przykład), tak długo, jak *listy* definicji typu ma taką samą widoczność jak deklaracja.
+Ten przykład deklaruje dwie zmienne wskaźnikowe, *Next* i *Previous*, które wskazują na *listę*typów struktury. Ta deklaracja może wystąpić przed definicją typu struktury *listy* (patrz następny przykład), o ile definicja typu *listy* ma taki sam wgląd jak Deklaracja.
 
 ```
 struct list
@@ -102,7 +102,7 @@ struct list
 } line;
 ```
 
-Zmienna *wiersza* ma typ struktury o nazwie *listy*. *Listy* typ struktury ma trzy elementy członkowskie: pierwszy element członkowski jest wskaźnikiem do **char** , druga wartość **int** wartości, a trzeci to wskaźnik do innego *listy* struktury.
+*Wiersz* zmiennej ma typ struktury o nazwie *Lista*. Typ struktury *listy* ma trzy składowe: pierwszy element członkowski jest wskaźnikiem do wartości **char** , drugi jest wartością **int** , a trzeci jest wskaźnikiem do innej struktury *listy* .
 
 ```
 struct id
@@ -112,8 +112,8 @@ struct id
 } record;
 ```
 
-Zmienna *rekordu* ma typ struktury *identyfikator*. Należy pamiętać, że *pname* jest zadeklarowany jako wskaźnik do innego typu struktury o nazwie *nazwa*. Ta deklaracja może następować przed elementem *nazwa* typ jest zdefiniowany.
+*Rekord* zmiennej ma *Identyfikator*typu struktury. Należy zauważyć, że *pname* jest zadeklarowany jako wskaźnik do innego typu struktury o nazwie *name*. Ta deklaracja może wystąpić przed zdefiniowaniem typu *nazwy* .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)

@@ -20,12 +20,12 @@ ms.locfileid: "62233115"
 ---
 # <a name="function-declarations-and-definitions"></a>Deklaracje i definicje funkcji
 
-Prototypy funkcji ustanowić nazwę funkcji, jego typ zwracany i typ i liczbę jej parametrów formalnych. Definicja funkcji zawiera treści funkcji.
+Prototypy funkcji określają nazwę funkcji, jej typ zwracany i typ oraz liczbę parametrów formalnych. Definicja funkcji zawiera treść funkcji.
 
 ## <a name="remarks"></a>Uwagi
 
-Deklaracje funkcji i zmiennej może znajdować się wewnątrz lub na zewnątrz definicji funkcji. Każde oświadczenie, w ramach definicji funkcji jest nazywany pojawiają się na poziomie "internal" lub "local". Deklaracja poza wszystkie definicje funkcji jest nazywany pojawiają się na poziomie "file zakresu" lub "zewnętrzne" "globalne,". Definicje zmiennych, takich jak deklaracje, mogą być wyświetlane na poziomie wewnętrznym (w ramach definicji funkcji) lub na poziomie zewnętrznym (poza wszystkie definicje funkcji). Definicje funkcji są zawsze wykonywane na poziomie zewnętrznym. Definicje funkcji są omówione w dalszych [definicje funkcji](../c-language/c-function-definitions.md). Prototypy funkcji są objęte [prototypy funkcji](../c-language/function-prototypes.md).
+Obie deklaracje funkcji i zmiennych mogą znajdować się wewnątrz lub poza definicją funkcji. Każda deklaracja w ramach definicji funkcji jest określana na poziomie "wewnętrzny" lub "lokalny". Deklaracja poza wszystkimi definicjami funkcji jest określana na poziomie "zewnętrzny", "globalny" lub "zakres plików". Definicje zmiennych, podobnie jak deklaracje, mogą być wyświetlane na poziomie wewnętrznym (w ramach definicji funkcji) lub na poziomie zewnętrznym (poza wszystkimi definicjami funkcji). Definicje funkcji zawsze występują na poziomie zewnętrznym. Definicje funkcji są omówione bardziej szczegółowo w [definicjach funkcji](../c-language/c-function-definitions.md). Prototypy funkcji są omówione w [prototypach funkcji](../c-language/function-prototypes.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pliki źródłowe i programy źródłowe](../c-language/source-files-and-source-programs.md)

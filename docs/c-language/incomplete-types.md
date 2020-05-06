@@ -19,23 +19,23 @@ ms.locfileid: "62232899"
 ---
 # <a name="incomplete-types"></a>Niekompletne typy
 
-*Niekompletnego typu* to typ, który opisuje identyfikator, ale nie zawiera informacje potrzebne do określenia rozmiaru identyfikatora. Może być niekompletnym typem:
+*Niekompletny typ* to typ, który opisuje identyfikator, ale nie wymaga informacji wymaganych do określenia rozmiaru identyfikatora. Niekompletny typ może:
 
-- Typ struktury elementów członkowskich, których jeszcze nie określono.
+- Typ struktury, którego elementy członkowskie nie zostały jeszcze określone.
 
-- Typ Unii członków, których jeszcze nie określono.
+- Typ Unii, którego elementy członkowskie nie zostały jeszcze określone.
 
-- Typ tablicy wymiaru, którego jeszcze nie określono.
+- Typ tablicy, którego wymiar nie został jeszcze określony.
 
-**Void** typ jest niekompletnego typu, który nie może zostać zakończona. Aby ukończyć niekompletnego typu, należy określić brakujące informacje. Poniższe przykłady pokazują, jak utworzyć i wykonać niekompletnych typów.
+Typ **void** jest niekompletnym typem, którego nie można ukończyć. Aby ukończyć niekompletny typ, określ brakujące informacje. W poniższych przykładach pokazano, jak utworzyć i zakończyć niekompletne typy.
 
-- Aby utworzyć typ struktury niekompletna, należy zadeklarować typ struktury bez określenia jej członków. W tym przykładzie `ps` punktów wskaźnika do typu niekompletnego struktury o nazwie `student`.
+- Aby utworzyć niekompletny typ struktury, zadeklaruj typ struktury bez określania jej elementów członkowskich. W tym przykładzie `ps` wskaźnik wskazuje niekompletny typ struktury o nazwie `student`.
 
     ```C
     struct student *ps;
     ```
 
-- Aby ukończyć typ struktury niekompletna, należy zadeklarować ten sam typ struktury później w tym samym zakresie z jej elementów członkowskich, które określono w
+- Aby ukończyć niekompletny typ struktury, zadeklaruj ten sam typ struktury w dalszej części tego samego zakresu z określonymi elementami członkowskimi, jak w
 
     ```C
     struct student
@@ -44,18 +44,18 @@ ms.locfileid: "62232899"
     }                   /* student structure now completed */
     ```
 
-- Aby utworzyć niepełny typ tablicy, należy zadeklarować typu tablicowego bez określenia jego licznik powtórzeń. Na przykład:
+- Aby utworzyć niekompletny typ tablicy, zadeklaruj typ tablicy bez określenia jego liczby powtórzeń. Przykład:
 
     ```C
     char a[];  /* a has incomplete type */
     ```
 
-- Ukończenie niepełny typ tablicy, należy zadeklarować z jego licznika powtórzeń, określone w tej samej nazwie w dalszej części tego samego zakresu
+- Aby ukończyć niekompletny typ tablicy, zadeklaruj tę samą nazwę później w tym samym zakresie z określoną liczbą powtórzeń, jak w
 
     ```C
     char a[25]; /* a now has complete type */
     ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje i typy](../c-language/declarations-and-types.md)

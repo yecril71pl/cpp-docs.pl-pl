@@ -16,8 +16,8 @@ ms.locfileid: "62157906"
 ---
 # <a name="storage-of-arrays"></a>Magazynowanie tablic
 
-Magazyn skojarzony z typem tablicy jest magazynu wymaganego dla wszystkich swoich elementów. Elementy tablicy są przechowywane w lokalizacjach ciągłych i zwiększenie pamięci, od pierwszego elementu ostatni.
+Magazyn skojarzony z typem tablicy jest magazynem wymaganym przez wszystkie jego elementy. Elementy tablicy są przechowywane w ciągłej i rosnącej lokalizacji pamięci, od pierwszego elementu do ostatniego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje tablicy](../c-language/array-declarations.md)

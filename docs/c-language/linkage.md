@@ -14,8 +14,8 @@ ms.locfileid: "62232844"
 ---
 # <a name="linkage"></a>Połączenie
 
-Nazwy identyfikatorów mogą odwoływać się do różnych identyfikatorów w różnych zakresach. Identyfikator zadeklarowany w więcej niż raz w różnych zakresach lub w tym samym zakresie możliwe do odwoływania się do tego samego identyfikatora lub funkcji w procesie nazywanym "powiązanie". Powiązania określa części programu, w którym identyfikator może być przywoływany (jego "visibility"). Istnieją trzy typy połączeń: [wewnętrzny](../c-language/internal-linkage.md), [zewnętrznych](../c-language/external-linkage.md), i [bez połączenia](../c-language/no-linkage.md).
+Nazwy identyfikatorów mogą odwoływać się do różnych identyfikatorów w różnych zakresach. Identyfikator zadeklarowany w różnych zakresach lub w tym samym zakresie można odwoływać się do tego samego identyfikatora lub funkcji przez proces o nazwie "powiązania". Powiązanie określa fragmenty programu, w którym można odwoływać się do identyfikatora ("widoczność"). Istnieją trzy rodzaje powiązania: [wewnętrzne](../c-language/internal-linkage.md), [zewnętrzne](../c-language/external-linkage.md)i [bez powiązania](../c-language/no-linkage.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)

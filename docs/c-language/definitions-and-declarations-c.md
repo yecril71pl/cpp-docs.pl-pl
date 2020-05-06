@@ -13,9 +13,9 @@ ms.locfileid: "62234361"
 ---
 # <a name="definitions-and-declarations-c"></a>Definicje i deklaracje (C)
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Interfejsu biblioteki DLL, który odwołuje się do wszystkich elementów (funkcje i dane), które są znane mają zostać wyeksportowane przez program w systemie; oznacza to, że wszystkie elementy, które są zadeklarowane jako **dllimport** lub `dllexport`. Należy określić wszystkie deklaracje objęte interfejsu biblioteki DLL **dllimport** lub `dllexport` atrybutu. Jednak tylko określić definicję `dllexport` atrybutu. Na przykład następująca definicja funkcji generuje błąd kompilatora:
+Interfejs DLL odwołuje się do wszystkich elementów (funkcji i danych), które są znane do wyeksportowania przez jakiś program w systemie. oznacza to, że wszystkie elementy, które są **dllimport** zadeklarowane `dllexport`jako dllimport lub. Wszystkie deklaracje zawarte w interfejsie DLL muszą określać **dllimport** atrybut dllimport `dllexport` lub Attribute. Jednak definicja może określać tylko `dllexport` atrybut. Na przykład następująca definicja funkcji generuje błąd kompilatora:
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -28,7 +28,7 @@ DllImport int func()    /* Error; dllimport prohibited in */
 }
 ```
 
-Ten kod jest również generuje błąd:
+Ten kod również generuje błąd:
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -37,7 +37,7 @@ Ten kod jest również generuje błąd:
 DllImport int i = 10;      /* Error; this is a definition. */
 ```
 
-Jednak jest to prawidłowa składnia:
+Jest to jednak poprawna składnia:
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -46,7 +46,7 @@ Jednak jest to prawidłowa składnia:
 DllExport int i = 10;      /* Okay: this is an export definition. */
 ```
 
-Korzystanie z `dllexport` oznacza definicję, podczas gdy **dllimport** zakłada deklarację. Należy użyć `extern` — słowo kluczowe z `dllexport` Aby wymusić deklarację; w przeciwnym razie jest implikowane definicję.
+Użycie `dllexport` wskazuje definicję, podczas gdy **dllimport** oznacza deklarację. Aby wymusić `extern` deklarację, należy użyć słowa kluczowego. `dllexport` w przeciwnym razie jest implikowana definicja.
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -56,8 +56,8 @@ extern DllImport int k;   /* These are correct and imply */
 Dllimport int j;          /* a declaration. */
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Importowanie bibliotek DLL i eksportowanie funkcji](../c-language/dll-import-and-export-functions.md)

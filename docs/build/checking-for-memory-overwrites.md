@@ -13,21 +13,21 @@ ms.locfileid: "64342256"
 ---
 # <a name="checking-for-memory-overwrites"></a>Sprawdzanie nadpisywania pamięci
 
-Jeśli naruszenie zasad dostępu na wywołanie funkcji manipulowania sterty, jest to możliwe, że program zawiera uszkodzone sterty. Typowym symptomem tej sytuacji mogą być następujące:
+W przypadku naruszenia zasad dostępu w wywołaniu funkcji operowania sterty istnieje możliwość, że program spowodował uszkodzenie sterty. Typowym objawem takiej sytuacji jest:
 
 ```
 Access Violation in _searchseg
 ```
 
-[_Heapchk —](../c-runtime-library/reference/heapchk.md) funkcja jest dostępna w obu debug i release kompilacji (tylko Windows NT) w celu sprawdzenia integralności sterty biblioteki czasu wykonywania. Możesz użyć `_heapchk` w podobny sposób jak `AfxCheckMemory` funkcję, aby odizolować Zastąp sterty, na przykład:
+Funkcja [_heapchk](../c-runtime-library/reference/heapchk.md) jest dostępna zarówno w kompilacjach debugowania, jak i wydań (tylko system Windows NT) na potrzeby weryfikowania integralności sterty biblioteki czasu wykonywania. Można użyć `_heapchk` w ten sam sposób, co `AfxCheckMemory` funkcja do izolowania zastępowania sterty, na przykład:
 
 ```
 if(_heapchk()!=_HEAPOK)
    DebugBreak();
 ```
 
-Jeśli ta funkcja nigdy nie zakończy się niepowodzeniem, należy do izolowania w tym momencie stos został uszkodzony.
+Jeśli ta funkcja kiedykolwiek się nie powiedzie, należy wyizolować, w którym momencie sterta została uszkodzona.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Naprawianie problemów kompilacji wydania](fixing-release-build-problems.md)

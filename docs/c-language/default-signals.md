@@ -14,10 +14,10 @@ ms.locfileid: "62234517"
 ---
 # <a name="default-signals"></a>Sygnały domyślne
 
-**ANSI 4.7.1.1** Jeśli odpowiednik `signal(sig, SIG_DFL)` nie jest wykonywany przed wywołaniem programu obsługi sygnałów, blokuje sygnał, który jest wykonywane
+**4.7.1.1 ANSI** Jeśli odpowiednik nie `signal(sig, SIG_DFL)` jest wykonywany przed wywołaniem obsługi sygnałów, blokowanie sygnału, który jest wykonywany
 
-Sygnały są ustawione na ich domyślny stan, kiedy rozpoczyna się program uruchomiony.
+Sygnały są ustawiane jako domyślne stanu, gdy program zacznie działać.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

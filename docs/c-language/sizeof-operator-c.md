@@ -15,7 +15,7 @@ ms.locfileid: "62158128"
 ---
 # <a name="sizeof-operator-c"></a>sizeof — operator (C)
 
-Operator `sizeof` podaje ilość pamięci w bajtach, wymaganą do przechowywania obiektu typu operand. Ten operator umożliwia Unikaj określania ilości danych zależnych od maszyny w swoich programach.
+Operator `sizeof` podaje ilość pamięci w bajtach, wymaganą do przechowywania obiektu typu operand. Ten operator pozwala uniknąć określania rozmiarów danych zależnych od maszyn w programach.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,7 +26,7 @@ sizeof ( type-name )
 
 ## <a name="remarks"></a>Uwagi
 
-Argument jest albo identyfikatorem, który jest *jednoargumentowe wyrażenie*, lub wyrażeniem rzutowania typu (oznacza to, czyli typem specyfikatora w nawiasach). *Jednoargumentowe wyrażenie* nie może reprezentować obiektu pola bitowego, niekompletnego typu lub oznaczenia funkcji. Wynik jest nieoznaczoną stałą całkowitą. Standardowy nagłówek STDDEF. H definiuje ten typ jako **size_t**.
+Operand jest identyfikatorem, który jest *wyrażeniem jednoargumentowym*lub wyrażeniem rzutowania typu (oznacza to, że specyfikator typu jest ujęty w nawiasy). *Wyrażenie jednoargumentowe* nie może reprezentować obiektu bitowego, niekompletnego typu ani oznaczenia funkcji. Wynik jest nieoznaczoną stałą całkowitą. Standardowy nagłówek STDDEF. H definiuje ten typ jako **size_t**.
 
 Po zastosowaniu operatora `sizeof` do identyfikatora tablicy, wynik jest rozmiarem całej tablicy, a nie rozmiarem wskaźnika reprezentowanego przez identyfikator tablicy.
 
@@ -49,9 +49,9 @@ static char *strings[] = {
 const int string_no = ( sizeof strings ) / ( sizeof strings[0] );
 ```
 
-W tym przykładzie `strings` jest tablicą wskaźników do `char`. Liczbą wskaźników jest liczba elementów w tablicy, ale nie jest ona określona. Łatwo jest określić liczbę wskaźników za pomocą operatora `sizeof`, aby obliczyć liczbę elementów w tablicy. **Const** wartość całkowitą `string_no` jest zainicjowana na ten numer. Ponieważ jest on **const** wartość `string_no` nie może być modyfikowany.
+W tym przykładzie `strings` jest tablicą wskaźników do `char`. Liczbą wskaźników jest liczba elementów w tablicy, ale nie jest ona określona. Łatwo jest określić liczbę wskaźników za pomocą operatora `sizeof`, aby obliczyć liczbę elementów w tablicy. `string_no` Wartość **const** Integer została zainicjowana na ten numer. Ponieważ jest wartością **stałą** , `string_no` nie można jej zmodyfikować.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operatory języka C](c-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

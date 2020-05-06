@@ -14,14 +14,14 @@ ms.locfileid: "62232289"
 ---
 # <a name="overview-of-functions"></a>Przegląd funkcji
 
-Funkcje muszą mieć definicji i powinien mieć deklaracją, mimo że definicję może służyć jako zgłoszenia, jeśli deklaracja pojawia się przed wywołaniem funkcji. Definicja funkcji zawiera treść funkcji — kodu, który jest wykonywany, gdy wywoływana jest funkcja.
+Funkcje muszą mieć definicję i powinny mieć deklarację, chociaż definicja może pełnić rolę deklaracji, jeśli deklaracja jest wyświetlana przed wywołaniem funkcji. Definicja funkcji zawiera treść funkcji — kod, który jest wykonywany po wywołaniu funkcji.
 
-Deklaracja funkcji ustanawia nazwy, zwracany typ i atrybuty funkcja, która jest zdefiniowana w innym miejscu w programie. Deklaracja funkcji musi poprzedzać wywołanie do funkcji. Jest to, dlaczego pliki nagłówkowe, zawierająca deklaracje funkcji wykonawczej są uwzględnione w kodzie przed wywołaniem funkcji wykonawczej. Jeśli deklaracja zawiera informacje o typach i liczbę parametrów, deklaracja jest prototypem. Zobacz [prototypy funkcji](../c-language/function-prototypes.md) Aby uzyskać więcej informacji.
+Deklaracja funkcji określa nazwę, zwracany typ i atrybuty funkcji zdefiniowanej w innym miejscu programu. Deklaracja funkcji musi poprzedzać wywołanie funkcji. To dlatego, że pliki nagłówkowe zawierające deklaracje dla funkcji czasu wykonywania są uwzględniane w kodzie przed wywołaniem funkcji run-time. Jeśli deklaracja zawiera informacje o typach i liczbie parametrów, deklaracja jest prototypem. Aby uzyskać więcej informacji, zobacz [prototypy funkcji](../c-language/function-prototypes.md) .
 
-Kompilator używa prototypu do porównania z typami argumentów w kolejnych wywołaniach funkcji z parametrów funkcji i konwertowania typy argumentów dla typów parametrów, jeśli zajdzie taka potrzeba.
+Kompilator używa prototypu do porównywania typów argumentów w kolejnych wywołaniach funkcji z parametrami funkcji i do konwersji typów argumentów do typów parametrów w miarę potrzeb.
 
-Wywołanie funkcji przekazuje Kontrola wykonywania od funkcji wywołującej wywołanej funkcji. Argumenty, jeśli są przekazywane przez wartość dla wywoływanej funkcji. Wykonywanie `return` instrukcji w wywołanej funkcja zwraca kontroli i ewentualnie wartość do funkcji wywołującej.
+Wywołanie funkcji przekazuje sterowanie wykonywaniem z funkcji wywołującej do wywołanej funkcji. Argumenty, jeśli istnieją, są przekazane przez wartość do wywołanej funkcji. Wykonanie `return` instrukcji w wywołanej funkcji zwraca kontrolę i prawdopodobnie wartość funkcji wywołującej.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje](../c-language/functions-c.md)

@@ -17,19 +17,19 @@ ms.locfileid: "62195289"
 ---
 # <a name="fixing-release-build-problems"></a>Naprawianie problemów kompilacji wydania
 
-Jeśli Twój kod generuje błędy kompilacji, po przełączeniu z kompilacji debugowania do kompilacji wydania, istnieją niektóre obszary, które należy sprawdzić.
+Jeśli kod generuje błędy kompilacji po przełączeniu z kompilacji debugowania do wersji Build, należy sprawdzić pewne obszary.
 
-Może pojawić się ostrzeżenia kompilatora podczas kompilacji zoptymalizowane (wersja), który nie otrzymał podczas kompilacji debugowania.
+Użytkownik może otrzymywać ostrzeżenia kompilatora podczas kompilacji zoptymalizowanej (Release), która nie została odebrana podczas kompilacji debugowania.
 
-- [Sprawdź Assert-instrukcje](using-verify-instead-of-assert.md)
+- [Sprawdzanie instrukcji ASSERT](using-verify-instead-of-assert.md)
 
-- [Użyj kompilacji debugowania do sprawdzania dla zastąpienia w pamięci](using-the-debug-build-to-check-for-memory-overwrite.md)
+- [Użyj kompilacji debugowania do sprawdzania nadpisywania pamięci](using-the-debug-build-to-check-for-memory-overwrite.md)
 
-- [Włącz generowanie informacji debugowania dla kompilacji wydania](how-to-debug-a-release-build.md)
+- [Włącz generowanie informacji o debugowaniu dla kompilacji wydania](how-to-debug-a-release-build.md)
 
-- [Sprawdzanie nadpisywania pamięci](checking-for-memory-overwrites.md)
+- [Sprawdź, czy zastępowanie pamięci](checking-for-memory-overwrites.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Kompilacje wydania](release-builds.md)<br/>
 [Typowe problemy podczas tworzenia kompilacji wydania](common-problems-when-creating-a-release-build.md)<br/>

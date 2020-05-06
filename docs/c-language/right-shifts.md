@@ -11,14 +11,14 @@ ms.locfileid: "62158362"
 ---
 # <a name="right-shifts"></a>Przesunięcia w prawo
 
-Typ całkowitoliczbowy ze znakiem wynik przesunięcia w prawo wartość ujemna
+Wynik prawej zmiany typu całkowitego ze znakiem z wartością ujemną
 
-Przesunięcie wartości ujemnej po prawej stronie daje połowa wartość bezwzględną, zaokrąglona w dół. Na przykład podpisane `short` wartość -253 (0xFF03 szesnastkowych, binarne 00000011 11111111) przesunięte w prawo o jeden bit generuje -127 (0xFF81 szesnastkowych, binarne 10000001 11111111). Dodatnią 253 przesunięte w prawo generuje +126.
+Przesunięcie wartości ujemnej na prawo daje połowę wartość bezwzględną, zaokrągloną w dół. Na przykład podpisana `short` wartość-253 (szesnastkowa 0xFF03, binarne 11111111 00000011) przesunięta w prawo o jeden bit produkuje-127 (szesnastkowo 0xFF81, Binary 11111111 10000001). Dodatnie przesunięcie w prawo 253 produkuje + 126.
 
-Przesunięcia w prawo zachować bitu znaku podpisanych typów całkowitych. Liczba całkowita ze znakiem przenosi bezpośrednio, ustaw pozostaje najbardziej znaczący bit. Na przykład, jeśli 0xF0000000 jest podpisana `int`, przesunięcia bitowego w prawo powoduje 0xF8000000. Przesunięcie ujemnych `int` bezpośrednio 32 godziny tworzy 0xFFFFFFFF.
+Prawy Shift zachowuje bit znaku podpisanych typów całkowitych. Gdy liczba całkowita ze znakiem zostanie przesunięta w prawo, to najbardziej znaczący bit pozostaje ustawiony. Na przykład jeśli 0xF0000000 jest podpisany `int`, przesunięcie w prawo powoduje 0xF8000000. Przesunięcie negatywnego `int` prawa 32 razy tworzy 0xFFFFFFFF.
 
-Gdy liczbą całkowitą bez znaku przenosi bezpośrednio, najbardziej znaczący bit jest wyczyszczone. Na przykład jeśli 0xF000 jest podpisany, wynik jest 0x7800. Przesunięcie `unsigned` lub być liczbami dodatnimi `int` bezpośrednio 32 godziny tworzy 0x00000000.
+Gdy liczba całkowita bez znaku zostaje przesunięta w prawo, najbardziej znaczący bit jest wyczyszczony. Na przykład jeśli 0xF000 jest niepodpisana, wynikiem jest 0x7800. Przesunięcie `unsigned` lub dodatnie `int` prawo 32 razy produkuje.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Liczby całkowite](../c-language/integers.md)

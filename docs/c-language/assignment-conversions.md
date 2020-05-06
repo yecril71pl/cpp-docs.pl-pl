@@ -28,6 +28,6 @@ W operacjach przypisywania typ przypisanej wartości jest konwertowany na typ zm
 
 Kwalifikatory typu nie wpływają na dopuszczanie konwersji, chociaż **stała** l-wartość nie może być używana po lewej stronie przypisania.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersje typów](../c-language/type-conversions-c.md)

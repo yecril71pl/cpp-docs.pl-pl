@@ -11,10 +11,10 @@ ms.locfileid: "62232060"
 ---
 # <a name="reading-pointer-values"></a>Odczytywanie wartości wskaźnika
 
-**ANSI 4.9.6.2** dane wejściowe dla **%p** konwersji w `fscanf` — funkcja
+**4.9.6.2 ANSI** Dane wejściowe dla konwersji **% p** w `fscanf` funkcji
 
-Gdy **%p** formatem znaku jest określony, `fscanf` funkcja konwertuje wskaźników z wartości szesnastkowych ASCII na prawidłowy adres.
+Gdy jest określony znak **% p** format, `fscanf` funkcja konwertuje wskaźniki z szesnastkowych wartości ASCII na prawidłowy adres.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

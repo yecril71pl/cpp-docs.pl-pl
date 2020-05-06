@@ -13,10 +13,10 @@ ms.locfileid: "62312411"
 ---
 # <a name="converting-multibyte-characters"></a>Konwersja znaków wielobajtowych
 
-**ANSI 3.1.3.4** bieżących ustawień regionalnych używany do konwersji znaków wielobajtowych do odpowiedniego znaków dwubajtowych (kody) dla znaków dwubajtowych — stała
+**3.1.3.4 ANSI** Bieżące ustawienia regionalne używane do konwersji znaków wielobajtowych na odpowiadające im szerokie znaki (kody) dla stałej o szerokim znaku
 
-Bieżące ustawienia regionalne są ustawień regionalnych "C", domyślnie. Mogą być zmieniane z [#pragma setlocale](../preprocessor/setlocale.md).
+Bieżące ustawienia regionalne domyślnie są ustawieniami regionalnymi "C". Można ją zmienić za pomocą [#pragma setlocals](../preprocessor/setlocale.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Znaki](../c-language/characters.md)
+[Znaków](../c-language/characters.md)

@@ -13,9 +13,9 @@ ms.locfileid: "62232224"
 ---
 # <a name="punctuators"></a>Separatory
 
-*znak interpunkcyjny*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\[ ] ( ) { } \* , : = ; . #**
+*punctuator*: jeden z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\[] ( ) { } \* , : = ; . #**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Gramatyka leksykalna](../c-language/lexical-grammar.md)

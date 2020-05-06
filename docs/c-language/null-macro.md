@@ -13,10 +13,10 @@ ms.locfileid: "62232457"
 ---
 # <a name="null-macro"></a>NULL — makro
 
-**ANSI 4.1.5** stała wskaźnika pustego, do którego rozszerza makra o wartości NULL
+**ANSI 4.1.5** Stała wskaźnikowa null, do której zostanie rozwinięte makro o wartości NULL.
 
-Niektóre pliki dołączane zdefiniuj makro o wartości NULL jako `((void *)0)`.
+Kilka plików dołączanych definiuje makro o `((void *)0)`wartości null jako.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

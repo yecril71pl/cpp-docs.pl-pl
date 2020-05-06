@@ -15,22 +15,22 @@ ms.locfileid: "62188889"
 ---
 # <a name="importing-into-an-application"></a>Importowanie do aplikacji
 
-Funkcje można zaimportować do aplikacji przy użyciu dwóch metod:
+Funkcje można importować do aplikacji przy użyciu dwóch metod:
 
-- Używać słów kluczowych **__declspec(dllimport)** w definicji funkcji w głównym aplikacji
+- Użyj słów kluczowych **__declspec (dllimport)** w definicji funkcji w aplikacji głównej
 
-- Przy użyciu pliku definicji (.def) moduł wraz z **atrybutu __declspec(dllimport)**
+- Użyj pliku definicji modułu (. def) wraz z **__declspec (dllimport)**
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
+- [Importowanie do aplikacji przy użyciu __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Importowanie wywołań funkcji przy użyciu atrybutu __declspec(dllimport)](importing-function-calls-using-declspec-dllimport.md)
+- [Importuj wywołania funkcji przy użyciu __declspec (dllimport)](importing-function-calls-using-declspec-dllimport.md)
 
-- [Importowanie danych przy użyciu __declspec(dllimport)](importing-data-using-declspec-dllimport.md)
+- [Importowanie danych przy użyciu __declspec (dllimport)](importing-data-using-declspec-dllimport.md)
 
-- [Importowanie przy użyciu plików DEF](importing-using-def-files.md)
+- [Importuj przy użyciu plików DEF](importing-using-def-files.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Importowanie i eksportowanie](importing-and-exporting.md)

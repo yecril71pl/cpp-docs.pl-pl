@@ -13,20 +13,20 @@ ms.locfileid: "62158388"
 ---
 # <a name="return-statement-c"></a>return — instrukcja (C)
 
-`return` Instrukcja kończy wykonywanie funkcji i przekazuje sterowanie do funkcji wywołującej. Wznawia wykonywanie w funkcji wywołującej w punkcie, w następującej natychmiast po wywołaniu. A `return` instrukcji może również zwracać wartość do funkcji wywołującej. Zobacz [typie zwracanym](../c-language/return-type.md) Aby uzyskać więcej informacji.
+`return` Instrukcja kończy wykonywanie funkcji i zwraca kontrolę do funkcji wywołującej. Wykonanie wznowione w funkcji wywołującej w punkcie bezpośrednio po wywołaniu. `return` Instrukcja może również zwracać wartość do funkcji wywołującej. Aby uzyskać więcej informacji, zobacz [zwracany typ](../c-language/return-type.md) .
 
 ## <a name="syntax"></a>Składnia
 
-*Instrukcja skoku*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Zwróć** *wyrażenie*<sub>zoptymalizowany pod kątem</sub> **;**
+*skok-instrukcja*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<sub>wybór</sub> *wyrażenia* **zwrotu** **;**
 
-Wartość *wyrażenie*, jeśli jest obecny, jest zwracana do funkcji wywołującej. Jeśli *wyrażenie* jest pominięty, wartość zwracana funkcji jest niezdefiniowane. Wyrażenie, jeśli jest obecny, jest obliczane i następnie przekonwertować na typ zwracany przez funkcję. Jeśli funkcja została zadeklarowana z typem zwracanym `void`, `return` instrukcji zawierającej wyrażenie generuje ostrzeżenie i wyrażenie nie jest oceniany.
+Wartość *wyrażenia*, jeśli jest obecna, jest zwracana do funkcji wywołującej. Jeśli *wyrażenie* zostanie pominięte, zwracana wartość funkcji jest niezdefiniowana. Wyrażenie, jeśli jest obecny, jest oceniane, a następnie konwertowane na typ zwracany przez funkcję. Jeśli funkcja została zadeklarowana z typem `void`zwracanym, `return` instrukcja zawierająca wyrażenie generuje ostrzeżenie i wyrażenie nie jest oceniane.
 
-Jeśli nie `return` występuje instrukcja w definicji funkcji, sterowanie automatycznie powraca do funkcji wywołującej po wykonaniu ostatnią instrukcję wywołanej funkcji. W tym przypadku wartość zwracaną wywołanej funkcji jest niezdefiniowane. Jeśli wartość zwracana nie jest wymagana, Zadeklaruj funkcję mieć `void` zwracany typ; w przeciwnym razie domyślny typ zwracany jest `int`.
+Jeśli instrukcja `return` nie pojawia się w definicji funkcji, formant automatycznie wraca do wywołania funkcji po wykonaniu ostatniej instrukcji wywołanej funkcji. W takim przypadku zwracana wartość wywoływanej funkcji jest niezdefiniowana. Jeśli zwracana wartość nie jest wymagana, należy zadeklarować funkcję jako typu `void` zwracanego; w przeciwnym razie domyślnym typem zwracanym `int`jest.
 
-Wielu programistów Użyj nawiasów, aby ująć *wyrażenie* argument `return` instrukcji. Jednak C nie wymaga nawiasów.
+Wielu programistów używa nawiasów, aby ująć argument *Expression* `return` instrukcji. Jednakże C nie wymaga nawiasów.
 
-W tym przykładzie przedstawiono `return` instrukcji:
+Ten przykład ilustruje `return` instrukcję:
 
 ```C
 #include <limits.h>
@@ -59,14 +59,14 @@ void draw( int i, long long ll )
 }
 ```
 
-W tym przykładzie `main` funkcja wywołuje dwie funkcje: `sq` i `draw`. `sq` Funkcja zwraca wartość `x * x` do `main`, gdzie wartość zwracana jest przypisywana do `y`. Nawiasy, zwracane wyrażenie w `sq` są oceniane jako część wyrażenia, a nie są wymagane przez instrukcję return. Ponieważ zwracane wyrażenie jest oceniane przed jest konwertowany na typ zwracany `sq` wymusza typ wyrażenia jako zwracany typ z rzutowanie w celu uniknięcia przepełnienia możliwa liczba całkowita, która może prowadzić do nieoczekiwanych wyników. `draw` Funkcja jest zadeklarowana jako `void` funkcji. Wyświetla wartości jego parametrów a następnie pustą instrukcję return kończy się funkcja nie zwraca wartości. Próba przypisania wartość zwracaną przez `draw` spowodowałoby komunikat diagnostyczny zostanie wysłane. `main` Następnie funkcja zwraca wartość `x` systemowi operacyjnemu.
+W tym przykładzie `main` funkcja wywołuje dwie funkcje: `sq` i. `draw` `sq` Funkcja zwraca wartość `x * x` do `main`, gdzie wartość zwracana jest przypisana do `y`. Nawiasy wokół wyrażenia Return w programie `sq` są oceniane jako część wyrażenia i nie są wymagane przez instrukcję return. Ponieważ wyrażenie zwracane jest oceniane przed przekonwertowaniem do typu zwracanego, `sq` wymusza, aby typ wyrażenia był typem zwracanym z rzutowania, aby zapobiec możliwemu przepełnieniu liczby całkowitej, co może prowadzić do nieoczekiwanych wyników. `draw` Funkcja jest zadeklarowana jako `void` funkcja. Drukuje wartości jego parametrów, a następnie pustą instrukcję return zwraca funkcję i nie zwraca wartości. Próba przypisania wartości `draw` zwracanej spowoduje, że zostanie wystawiony komunikat diagnostyczny. `main` Funkcja zwraca wartość `x` do systemu operacyjnego.
 
-Dane wyjściowe z przykładu wygląda następująco:
+Dane wyjściowe przykładu wyglądają następująco:
 
 ```Output
 i = 2147483647, ll = 4611686014132420609
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instrukcje](../c-language/statements-c.md)

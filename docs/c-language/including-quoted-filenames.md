@@ -11,12 +11,12 @@ ms.locfileid: "62232959"
 ---
 # <a name="including-quoted-filenames"></a>Łącznie z nazwami plików w cudzysłowie
 
-**ANSI 3.8.2** obsługę nazw pliki źródłowe do zawarcia w cudzysłowie
+**3.8.2 ANSI** Obsługa nazw ujętych w cudzysłów dla plików źródłowych zawarcia
 
-Jeśli określisz pełną, jednoznaczną specyfikację ścieżki do dołączanego pliku między dwoma zestawami podwójnego cudzysłowu (""), preprocesor przeszukuje tylko tę specyfikację ścieżki i ignoruje katalogi standardowe.
+Jeśli określisz kompletną, jednoznaczną specyfikację ścieżki dla pliku dołączanego między dwoma zestawami podwójnych cudzysłowów (""), preprocesor przeszukuje tylko tę specyfikację ścieżki i ignoruje katalogi standardowe.
 
-Dla plików dołączanych określonych jako [#include](../preprocessor/hash-include-directive-c-cpp.md) "path-spec", katalog wyszukiwanie rozpoczyna się od katalogów pliku nadrzędnego, a następnie przechodzi przez katalogi plików nadrzędnych wobec niego. Tym samym wyszukiwanie rozpoczyna się względem katalogu zawierającego plik źródłowy w danej chwili przetwarzany. Jeśli plik pokolenia nie istnieje, a plik nie został znaleziony, wyszukiwanie jest kontynuowane tak, jakby nazwa pliku została ujęta w nawiasy ostre.
+W przypadku plików dołączanych określonych jako [#include](../preprocessor/hash-include-directive-c-cpp.md) "path-spec" wyszukiwanie w katalogu rozpoczyna się od katalogów pliku nadrzędnego, a następnie przechodzi przez katalogi plików nadrzędnych. W rezultacie wyszukiwanie rozpoczyna się względem katalogu zawierającego plik źródłowy, który jest aktualnie przetwarzany. Jeśli nie ma pliku nadrzędnego i nie znaleziono pliku, wyszukiwanie jest kontynuowane tak, jakby nazwa pliku została ujęta w nawiasy ostre.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy przetwarzania wstępnego](../c-language/preprocessing-directives.md)

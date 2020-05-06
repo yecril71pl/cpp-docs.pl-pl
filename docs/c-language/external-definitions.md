@@ -14,17 +14,17 @@ ms.locfileid: "62233679"
 ---
 # <a name="external-definitions"></a>Definicje zewnętrzne
 
-*jednostki translacji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja zewnętrzne* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
+*Jednostka translation*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklaracja zewnętrzna* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*deklaracja zewnętrzna* *jednostki tłumaczenia*
 
-*Deklaracja zewnętrzne*: /\* dozwolone tylko w zakresie zewnętrzne (plik) \*/<br/>
+*deklaracja zewnętrzna*:/\* dozwolone tylko w zewnętrznym zakresie (pliku)\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Definicja funkcji*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja*
+&nbsp;&nbsp;&nbsp;&nbsp;*oświadczeń*
 
-*Definicja funkcji*: /\* Deklaratora w tym miejscu jest deklaratora funkcji \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji*<sub>zoptymalizowany pod kątem</sub> *deklaratora* *lista deklaracji*<sub>zoptymalizowany pod kątem</sub>  *Compound-statement*
+*definicja funkcji*:/\* deklarator w tym miejscu funkcja deklarator\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;deklaracje *— specyfikatory*<sub>opt</sub> *deklarator* *Deklaracja-list*<sub>opt</sub> *-instrukcja*
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Gramatyka struktury fazy](../c-language/phrase-structure-grammar.md)
+[Gramatyka struktury frazy](../c-language/phrase-structure-grammar.md)

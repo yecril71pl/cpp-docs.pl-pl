@@ -11,10 +11,10 @@ ms.locfileid: "62158310"
 ---
 # <a name="significant-characters-with-external-linkage"></a>Znaki znaczące z zewnętrznym połączeniem
 
-**ANSI 3.1.2** liczba znaki znaczące z zewnętrznym połączeniem
+**ANSI 3.1.2** Liczba znaków znaczących z zewnętrznym powiązaniem
 
-Identyfikatory zadeklarowane `extern` w programach wkompilowane w Microsoft C są istotne dla 247 znaków. Możesz zmodyfikować to ustawienie domyślne mniejszą wartość przy użyciu / h (Ograniczaj długość nazw zewnętrznych) opcji.
+Identyfikatory zadeklarowane `extern` w programach skompilowanych przy użyciu języka Microsoft C są znaczące do 247 znaków. To ustawienie domyślne można zmodyfikować na mniejszą liczbę przy użyciu opcji/H (ograniczaj długość nazw zewnętrznych).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)

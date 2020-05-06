@@ -16,13 +16,13 @@ ms.locfileid: "62232137"
 ---
 # <a name="recursive-functions"></a>Funkcje rekursywne
 
-Można wywołać dowolną funkcję w programie C rekursywnie; oznacza to może wywołać sam. Liczba wywołań rekurencyjnych jest ograniczona do rozmiaru stosu. Zobacz [/STACK (twórz stos z alokacji)](../build/reference/stack-stack-allocations.md) (/ STACK) — opcja konsolidatora uzyskać informacji na temat konsolidatora opcje tego Ustaw rozmiar stosu. Każdym wywołaniu funkcji nowy magazyn jest przydzielany dla parametrów i **automatycznie** i **zarejestrować** zmienne, tak aby ich wartości w wywołaniach poprzedniej, niedokończone nie są zastępowane. Parametry są bezpośrednio dostępne jedynie z wystąpieniem funkcji, w którym są tworzone. Poprzednie parametry nie są dostępne dla następujących wystąpień funkcji.
+Każda funkcja w programie C może być wywoływana cyklicznie; oznacza to, że może wywoływać sam siebie. Liczba wywołań cyklicznych jest ograniczona do rozmiaru stosu. Aby uzyskać informacje na temat opcji konsolidatora, które ustawiają rozmiar stosu, zobacz [/Stack (](../build/reference/stack-stack-allocations.md) /stack) — opcja konsolidatora. Za każdym razem, gdy funkcja jest wywoływana, nowy magazyn jest przypisywany do **parametrów i dla zmiennych autoi** **rejestru** , tak aby ich wartości w poprzednich, nieukończonych wywołaniach nie były zastępowane. Parametry są dostępne tylko bezpośrednio dla wystąpienia funkcji, w której zostały utworzone. Poprzednie parametry nie są bezpośrednio dostępne dla wynikający z tego, wystąpienia funkcji.
 
-Należy pamiętać, że zmienne zadeklarowane za pomocą **statyczne** magazynu nie wymagają nowego magazynu z każde wywołanie cykliczne. Istnieje ich przechowywania przez okres istnienia programu. Każde odwołanie do zmiennej takie uzyskuje dostęp do tego samego obszaru pamięci masowej.
+Należy zauważyć, że zmienne zadeklarowane za pomocą magazynu **statycznego** nie wymagają nowego magazynu przy każdym wywołaniu cyklicznym. Ich magazyn istnieje na okres istnienia programu. Każde odwołanie do tej zmiennej uzyskuje dostęp do tego samego obszaru magazynu.
 
 ## <a name="example"></a>Przykład
 
-Ten przykład ilustruje rekursywne wywołania:
+Ten przykład ilustruje cykliczne wywołania:
 
 ```C
 int factorial( int num );      /* Function prototype */
@@ -46,6 +46,6 @@ int factorial( int num )      /* Function definition */
 }
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wywołania funkcji](../c-language/function-calls.md)

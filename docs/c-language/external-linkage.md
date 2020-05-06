@@ -15,12 +15,12 @@ ms.locfileid: "62233744"
 ---
 # <a name="external-linkage"></a>Połączenie zewnętrzne
 
-Jeśli nie są używane w pierwszej deklaracji na poziomie zakresu pliku dla identyfikatora **statyczne** Specyfikator klasy magazynowania, obiekt ma powiązania zewnętrzne.
+Jeśli pierwsza deklaracja na poziomie zakresu plików dla identyfikatora nie korzysta ze specyfikatora klasy magazynu **static** , obiekt ma połączenie zewnętrzne.
 
-Jeśli nie ma deklarację identyfikatora dla funkcji *storage-class-specifier*, połączenie jest określane dokładnie tak, jakby zostały zgłoszone za pomocą *storage-class-specifier* `extern`. Jeśli deklaracja identyfikatora obiektu ma zakres pliku a nie *storage-class-specifier*, połączenie jest zewnętrzny.
+Jeśli deklaracja identyfikatora dla funkcji nie ma *specyfikatora klasy magazynu*, jego połączenie jest określane dokładnie tak, jakby zostało zadeklarowane za pomocą *specyfikatora klasy magazynu* `extern`. Jeśli deklaracja identyfikatora dla obiektu ma zakres plików i brak *specyfikatora klasy magazynu*, jego powiązanie jest zewnętrzne.
 
-Identyfikator nazwy za pomocą zewnętrznego powiązania wyznacza tej samej funkcji lub obiektu danych jako nie żadnej innej deklaracji dla tej samej nazwie, za pomocą zewnętrznego powiązania. Dwie deklaracje może być w tej samej jednostce translacji, czy w jednostkach różnych tłumaczeń. Jeśli obiekt lub funkcja również ma globalny okres istnienia, obiekt lub funkcja jest współużytkowana przez całego programu.
+Nazwa identyfikatora z zewnętrznym powiązaniem wyznacza tę samą funkcję lub obiekt danych, tak jak każda inna Deklaracja dla tej samej nazwy z zewnętrznym powiązaniem. Dwie deklaracje mogą znajdować się w tej samej jednostce translacji lub w różnych jednostkach tłumaczenia. Jeśli obiekt lub funkcja ma także globalny okres istnienia, obiekt lub funkcja jest współużytkowany przez cały program.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)

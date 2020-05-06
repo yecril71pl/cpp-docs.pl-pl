@@ -13,10 +13,10 @@ ms.locfileid: "62233660"
 ---
 # <a name="file-position-errors"></a>Błędy pozycji w pliku
 
-**ANSI 4.9.9.1, 4.9.9.4** wartości, do którego makro `errno` została ustawiona przez `fgetpos` lub `ftell` funkcji w przypadku niepowodzenia
+**4.9.9.1 ANSI, 4.9.9.4** Wartość, dla której makro `errno` jest ustawiane przez funkcję `fgetpos` lub `ftell` w przypadku niepowodzenia
 
-Gdy `fgetpos` lub `ftell` zakończy się niepowodzeniem, `errno` ustawiono stała manifestu `EINVAL` Jeśli pozycja jest nieprawidłowa lub `EBADF` Jeśli liczba plików jest nieprawidłowy. Stałe są definiowane w numer błędu. H.
+Gdy `fgetpos` lub `ftell` niepowodzenie `errno` , jest ustawiona na stałą `EINVAL` manifestu, jeśli pozycja jest nieprawidłowa lub `EBADF` Jeśli numer pliku jest nieodpowiedni. Stałe są zdefiniowane w ERRNO. C.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

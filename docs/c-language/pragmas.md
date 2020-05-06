@@ -20,11 +20,11 @@ Następujące [pragma c](../c-language/c-pragmas.md) są zdefiniowane dla kompil
 |||||
 |-|-|-|-|
 |[alloc_text](../preprocessor/alloc-text.md)|[data_seg](../preprocessor/data-seg.md)|[include_alias](../preprocessor/include-alias.md)|[setlocale](../preprocessor/setlocale.md)|
-|[auto_inline](../preprocessor/auto-inline.md)|[funkcyjn](../preprocessor/function-c-cpp.md)|[intrinsic](../preprocessor/intrinsic.md)|[ostrzeżenie](../preprocessor/warning.md)|
-|[check_stack](../preprocessor/check-stack.md)|[hdrstop](../preprocessor/hdrstop.md)|[komunikat](../preprocessor/message.md)||
-|[code_seg](../preprocessor/code-seg.md)|[inline_depth](../preprocessor/inline-depth.md)|[optymalizuj](../preprocessor/optimize.md)||
-|[komentować](../preprocessor/comment-c-cpp.md)|[inline_recursion](../preprocessor/inline-recursion.md)|[pakiet](../preprocessor/pack.md)||
+|[auto_inline](../preprocessor/auto-inline.md)|[funkcyjn](../preprocessor/function-c-cpp.md)|[ — funkcja](../preprocessor/intrinsic.md)|[warning](../preprocessor/warning.md)|
+|[check_stack](../preprocessor/check-stack.md)|[hdrstop](../preprocessor/hdrstop.md)|[Komunikat](../preprocessor/message.md)||
+|[code_seg](../preprocessor/code-seg.md)|[inline_depth](../preprocessor/inline-depth.md)|[zoptymalizować](../preprocessor/optimize.md)||
+|[komentować](../preprocessor/comment-c-cpp.md)|[inline_recursion](../preprocessor/inline-recursion.md)|[Pack](../preprocessor/pack.md)||
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy przetwarzania wstępnego](../c-language/preprocessing-directives.md)

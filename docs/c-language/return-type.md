@@ -24,36 +24,36 @@ Zwracany typ funkcji ustala rozmiar i typ wartości zwracanej przez funkcję i o
 ## <a name="syntax"></a>Składnia
 
 *definicja funkcji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;deklarator, *specyfikatory deklaracji*<sub>opt</sub> *-SEQ*<sub>opt</sub> *deklaracji-list*<sub>opt</sub> *złożonej-instrukcja*
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja-specyfikators*<sub>opt</sub> *Attribute-SEQ*<sub>opt</sub> *deklarator* *deklaracji-list*<sub>opt</sub> *złożone-instrukcja*
 
-atrybut \* / *-SEQ* jest \*em specyficznym dla firmy Microsoft /
+/\**atrybut-seq* jest specyficzny dla firmy Microsoft\*/
 
 *specyfikatory deklaracji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<sub></sub> *specyfikatora klasy magazynu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<sub></sub> *specyfikatora typu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<sub></sub> *kwalifikatora typu*
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja* *specyfikatora klasy magazynu* —<sub>wybór</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *specyfikatora typu* *— wybór specyfikatorów*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *kwalifikatora typu* *— wybór specyfikatorów*<sub>opt</sub>
 
 *specyfikator typu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Short**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* \*firmy Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* \*firmy Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* \*firmy Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* \*firmy Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**długa**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**zmiennoprzecinkowe**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**pozycję**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**delikatn**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**wybierak**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**ZAOKR**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int8** / __int8\* specyficzny dla firmy Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int16** / __int16\* specyficzny dla firmy Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int32** / __int32\* specyficzny dla firmy Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int64** / __int64\* specyficzny dla firmy Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**długo**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Double**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**podpisane**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**bez znaku**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**opatrzon**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**bajt**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-lub-Union-specyfikator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Wyliczenie*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*typedef-Name*
+&nbsp;&nbsp;&nbsp;&nbsp;*enum — specyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typedef — nazwa*
 
-*Specyfikator typu* może określać dowolny typ podstawowy, struktura lub związek. Jeśli nie dołączysz *specyfikatora typu*, przyjmuje się typ zwracany `int`.
+*Specyfikator typu* może określać dowolny typ podstawowy, struktura lub związek. Jeśli nie dołączysz *specyfikatora typu*, przyjmuje się typ `int` zwracany.
 
-Zwracany typ określony w definicji funkcji musi być zgodny z typem zwracanym w deklaracjach funkcji w innym miejscu programu. Funkcja zwraca wartość, gdy zostanie wykonana instrukcja `return` zawierająca wyrażenie. Wyrażenie jest oceniane, konwertowane na typ wartości zwracanej w razie potrzeby i zwracane do punktu, w którym funkcja została wywołana. Jeśli funkcja jest zadeklarowana z typem zwracanym `void`, instrukcja return zawierająca wyrażenie generuje ostrzeżenie i wyrażenie nie jest oceniane.
+Zwracany typ określony w definicji funkcji musi być zgodny z typem zwracanym w deklaracjach funkcji w innym miejscu programu. Funkcja zwraca wartość, gdy zostanie wykonana `return` instrukcja zawierająca wyrażenie. Wyrażenie jest oceniane, konwertowane na typ wartości zwracanej w razie potrzeby i zwracane do punktu, w którym funkcja została wywołana. Jeśli funkcja jest zadeklarowana z typem `void`zwracanym, instrukcja return zawierająca wyrażenie generuje ostrzeżenie i wyrażenie nie jest oceniane.
 
 Poniższe przykłady ilustrują wartości zwracane przez funkcję.
 
@@ -73,7 +73,7 @@ STUDENT sortstu( STUDENT a, STUDENT b )
 }
 ```
 
-Ten przykład definiuje typ `STUDENT` za pomocą deklaracji `typedef` i definiuje funkcję `sortstu`, aby `STUDENT` typ zwracany. Funkcja wybiera i zwraca jeden z dwóch argumentów struktury. W kolejnych wywołaniach funkcji kompilator sprawdza, czy typy argumentów są `STUDENT`.
+`STUDENT` Ten przykład definiuje typ `typedef` z deklaracją i definiuje funkcję `sortstu` , która ma być `STUDENT` typem zwracanym. Funkcja wybiera i zwraca jeden z dwóch argumentów struktury. W kolejnych wywołaniach funkcji kompilator sprawdza, czy typy argumentów są `STUDENT`.
 
 > [!NOTE]
 > Wydajność zostałaby ulepszona poprzez przekazanie wskaźników do struktury, a nie całej struktury.
@@ -95,8 +95,8 @@ char *smallstr( char s1[], char s2[] )
 
 Ten przykład definiuje funkcję zwracającą wskaźnik do tablicy znaków. Funkcja przyjmuje dwie tablice znakowe (ciągi) jako argumenty i zwraca wskaźnik do krótszych dwóch ciągów. Wskaźnik do tablicy wskazuje pierwszy element tablicy i ma jego typ; w ten sposób zwracany typ funkcji jest wskaźnikiem do typu `char`.
 
-Nie musisz deklarować funkcji z typem zwracanym `int` przed ich wywołaniem, chociaż prototypy są zalecane, aby sprawdzać poprawność typu dla argumentów i zwracanych wartości.
+Nie musisz deklarować funkcji z `int` typem zwracanym przed wywołaniem ich, chociaż prototypy są zalecane, aby sprawdzać poprawność typu dla argumentów i zwracanych wartości.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Definicje funkcji języka C](../c-language/c-function-definitions.md)

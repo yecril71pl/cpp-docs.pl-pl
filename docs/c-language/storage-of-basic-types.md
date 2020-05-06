@@ -47,6 +47,6 @@ Poniższa tabela zawiera podsumowanie magazynu skojarzonego z każdym typem pods
 
 Typy danych języka C są podzielone na kategorie ogólne. *Typy całkowite* obejmują **int**, **char**, **Short**, **Long**i **Long Long**. Te typy mogą być kwalifikowane ze **znakiem** i **bez znaku** **, ale nie** mogą być używane jako skróty dla **niepodpisanych int**. Typy wyliczeniowe (**enum**) również są traktowane jako typy całkowite w większości celów. *Typy przestawne* obejmują wartości **zmiennoprzecinkowe**, **podwójne**i **Long Double**. *Typy arytmetyczne* obejmują wszystkie typy zmiennoprzecinkowe i całkowite.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje i typy](../c-language/declarations-and-types.md)

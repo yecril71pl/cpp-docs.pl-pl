@@ -18,11 +18,11 @@ Ta sekcja dokumentacji zawiera informacje o sposobach używania narzędzi kompil
 [Omówienie Konwencji ABI ARM](overview-of-arm-abi-conventions.md)\
 Opisuje interfejs binarny aplikacji używany przez system Windows w usłudze ARM do rejestrowania użycia, konwencji wywoływania i obsługi wyjątków.
 
-[Omówienie Konwencji arm64 ABI](arm64-windows-abi-conventions.md)\
+[Omówienie Konwencji ABI ARM64](arm64-windows-abi-conventions.md)\
 Opisuje interfejs binarny aplikacji używany przez system Windows w systemie ARM64 do rejestrowania użycia, konwencji wywoływania i obsługi wyjątków.
 
-[Typowe problemy z migracją w usłudze MSVC ARM](common-visual-cpp-arm-migration-issues.md)\
-Opisuje C++ elementy kodu, które są powszechnie założono, że są przenośne między architekturami, ale które tworzą różne wyniki dla ARM niż w przypadku procesorów x86 i x64.
+[Typowe problemy z migracją ARM MSVC](common-visual-cpp-arm-migration-issues.md)\
+Opisuje elementy kodu C++, które są powszechnie założono, że są przenośne między architekturami, ale które tworzą różne wyniki dla ARM niż w przypadku procesorów x86 i x64.
 
 [Obsługa wyjątków ARM](arm-exception-handling.md)\
 Opisuje schemat kodowania dla rozwinięcia stosu podczas strukturalnej obsługi wyjątków w systemie Windows na platformie ARM.
@@ -32,8 +32,8 @@ Opisuje schemat kodowania dla rozwinięcia stosu podczas obsługi wyjątków str
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-\ [wewnętrzne ARM](../intrinsics/arm-intrinsics.md)
+[Funkcje wewnętrzne ARM](../intrinsics/arm-intrinsics.md)\
 Opisuje funkcje wewnętrzne kompilatora dla procesorów korzystających z architektury ARM.
 
-[Arm64 wewnętrzne](../intrinsics/arm-intrinsics.md)\
+[ARM64 wewnętrzne](../intrinsics/arm-intrinsics.md)\
 Opisuje funkcje wewnętrzne kompilatora dla procesorów korzystających z architektury ARM64.

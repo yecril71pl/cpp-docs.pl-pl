@@ -16,13 +16,13 @@ ms.locfileid: "62232819"
 ---
 # <a name="naked-functions"></a>Funkcje Naked
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-`naked` Atrybuty klasy magazynu jest rozszerzeniem specyficzne dla firmy Microsoft dla języka C. Aby funkcje zadeklarowane za pomocą `naked` atrybuty klasy magazynu, kompilator generuje kod bez konieczności pisania kodu prologu i epilogu. Ta funkcja służy do pisania własnych sekwencji kodu prologu/epilogu przy użyciu kodu asemblera wbudowanego. Funkcji "naked" są szczególnie przydatne w pisaniu sterowniki urządzeń wirtualnych.
+Atrybut `naked` klasy magazynowania to specyficzne dla firmy Microsoft rozszerzenie języka C. W przypadku funkcji zadeklarowanych `naked` z atrybutem klasy magazynowania kompilator generuje kod bez kodu prologu i epilogu. Za pomocą tej funkcji można napisać własne sekwencje kodu prologu/epilogu przy użyciu kodu asemblera wbudowanego. Wbudowane funkcje są szczególnie przydatne podczas pisania sterowników urządzeń wirtualnych.
 
-Ponieważ `naked` atrybutu, dotyczy tylko definicja funkcji i nie jest modyfikatora typu, funkcji "naked" należy użyć składni atrybutów rozszerzonych, opisanego w [rozszerzone atrybuty klasy magazynowania](../c-language/c-extended-storage-class-attributes.md).
+Ponieważ `naked` atrybut ma zastosowanie tylko do definicji funkcji i nie jest modyfikatorem typu, funkcja bezużytecznych użyj składni atrybutów rozszerzonych, opisanej w temacie [rozszerzone atrybuty klasy magazynu](../c-language/c-extended-storage-class-attributes.md).
 
-Poniższy przykład definiuje funkcję za pomocą `naked` atrybutu:
+W poniższym przykładzie zdefiniowano funkcję z `naked` atrybutem:
 
 ```
 __declspec( naked ) int func( formal_parameters )
@@ -31,7 +31,7 @@ __declspec( naked ) int func( formal_parameters )
 }
 ```
 
-Lub też:
+Lub alternatywnie:
 
 ```
 #define Naked   __declspec( naked )
@@ -42,22 +42,22 @@ Naked int func( formal_parameters )
 }
 ```
 
-`naked` Atrybut ma wpływ jedynie charakter generowania kodu kompilator sekwencji prologu i epilogu funkcji. Nie ma wpływu na kod, który jest generowany w przypadku wywołania tych funkcji. W efekcie `naked` atrybut nie jest uważany za część typu funkcji i wskaźników do funkcji nie może mieć `naked` atrybutu. Ponadto `naked` atrybutu nie można zastosować do definicji danych. Na przykład poniższy kod generuje błędy:
+Ten `naked` atrybut ma wpływ tylko na charakter generowania kodu kompilatora dla sekwencji Prolog i epilogu funkcji. Nie ma to wpływu na kod, który jest generowany do wywoływania takich funkcji. W `naked` ten sposób atrybut nie jest uważany za część typu funkcji, a wskaźniki funkcji nie mogą mieć `naked` atrybutu. Ponadto nie można `naked` zastosować atrybutu do definicji danych. Na przykład poniższy kod generuje błędy:
 
 ```
 __declspec( naked ) int i;  /* Error--naked attribute not */
                             /* permitted on data declarations. */
 ```
 
-`naked` Atrybut ma zastosowanie tylko do definicji funkcji i nie można określić w prototypu funkcji. Następująca deklaracja generuje błąd kompilatora:
+`naked` Atrybut jest istotny tylko dla definicji funkcji i nie może być określony w prototypie funkcji. Następująca deklaracja generuje błąd kompilatora:
 
 ```
 __declspec( naked ) int func();   /* Error--naked attribute not */
                      /* permitted on function declarations.    */   \
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Definicje funkcji języka C](../c-language/c-function-definitions.md)

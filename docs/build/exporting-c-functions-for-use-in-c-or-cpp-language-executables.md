@@ -17,9 +17,9 @@ ms.locfileid: "62273576"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>Eksportowanie funkcji języka C do użycia w plikach wykonywalnych języka C lub C++
 
-W przypadku funkcji w bibliotece DLL napisane w języku C, który chcesz uzyskać dostęp z języka C lub C++ modułu języka, należy użyć **__cplusplus** makro preprocesora Aby określić język, który jest kompilowany, a następnie je zadeklarować funkcje z powiązaniem C, jeśli są używane z C++ modułu języka. Jeśli korzystasz z tej techniki i udostępniają pliki nagłówka dla biblioteki DLL, te funkcje można używane przez C i C++ użytkowników bez zmian.
+Jeśli masz funkcje w bibliotece DLL, którą chcesz uzyskać dostęp z poziomu języka C lub modułu języka C++, należy użyć makra preprocesora **__cplusplus** , aby określić, który język jest kompilowany, a następnie zadeklarować te funkcje przy użyciu połączenia C, jeśli są używane z poziomu modułu języka C++. W przypadku użycia tej techniki i udostępnienia plików nagłówkowych dla biblioteki DLL te funkcje mogą być używane przez użytkowników C i C++ bez zmian.
 
-Poniższy kod przedstawia plik nagłówka, które mogą być używane przez aplikacje klienckie C i C++:
+Poniższy kod przedstawia plik nagłówka, który może być używany przez aplikacje klienckie C i C++:
 
 ```h
 // MyCFuncs.h
@@ -36,7 +36,7 @@ __declspec( dllimport ) void AnotherCFunc();
 #endif
 ```
 
-Jeśli musisz utworzyć link funkcji języka C do Twojego pliku wykonywalnego C++ oraz pliki nagłówkowe deklaracji funkcji nie użyto powyższej metody, w pliku źródłowego języka C++, wykonaj następujące polecenie, aby uniemożliwić kompilatorowi dekoracji nazwy funkcji C:
+Jeśli chcesz połączyć funkcje C z plikiem wykonywalnym języka C++, a pliki nagłówka deklaracji funkcji nie używały powyższej techniki, w pliku źródłowym języka C++ wykonaj następujące czynności, aby uniemożliwić kompilatorowi dekorowania nazwy nazw funkcji C:
 
 ```cpp
 extern "C" {
@@ -46,24 +46,24 @@ extern "C" {
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Eksportowanie z biblioteki DLL za pomocą plików .def](exporting-from-a-dll-using-def-files.md)
+- [Eksportowanie z biblioteki DLL za pomocą plików. def](exporting-from-a-dll-using-def-files.md)
 
-- [Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Eksportowanie z biblioteki DLL przy użyciu __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Eksportowanie i importowanie przy użyciu makra AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
+- [Eksportowanie i importowanie przy użyciu AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Określić, której metody eksportowania użyjesz](determining-which-exporting-method-to-use.md)
+- [Określanie, której metody eksportowania użyć](determining-which-exporting-method-to-use.md)
 
 - [Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Zainicjuj bibliotekę DLL](run-time-library-behavior.md#initializing-a-dll)
+- [Inicjowanie biblioteki DLL](run-time-library-behavior.md#initializing-a-dll)
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+## <a name="what-do-you-want-to-know-more-about"></a>Jak chcesz dowiedzieć się więcej?
 
-- [Nazwy ozdobione](reference/decorated-names.md)
+- [Nazwy dekoracyjne](reference/decorated-names.md)
 
 - [Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Eksportowanie z biblioteki DLL](exporting-from-a-dll.md)

@@ -14,10 +14,10 @@ ms.locfileid: "62233850"
 ---
 # <a name="expression-evaluation-c"></a>Szacowanie wyrażeń (C)
 
-Wyrażeniami przypisania, przyrost Jednoelementowy, dekrementacja jednoargumentowe lub wywołanie funkcji może mieć skutki uboczne ich oceny (efekty uboczne). Po osiągnięciu "punktu sekwencji" wszystko, czego poprzedzających punktu sekwencji, w tym wszelkie efekty uboczne, jest gwarantowane poddane ocenie, przed rozpoczęciem oceny sporządzania następującego punktu sekwencji.
+Wyrażenia związane z przypisaniem, przyrostem jednoargumentowym, zmniejszeniem jednoargumentowym lub wywołaniem funkcji mogą mieć konsekwencje przypadkowe do oceny (skutki uboczne). Po osiągnięciu "punktu sekwencji" wszystkie elementy poprzedzające punkt sekwencji, w tym wszystkie efekty uboczne, są gwarantowane przed rozpoczęciem oceny, które zaczynają się od punktu sekwencji.
 
-"Efekty uboczne" zmian spowodowanych wyniku obliczenia wyrażenia. Efekty uboczne występuje po zmianie wartości zmiennej przez Obliczanie wyrażenia. Wszystkie operacje przypisania mają skutki uboczne. Wywołania funkcji można również mieć skutki uboczne w przypadku zmiany wartości elementu widocznego na zewnątrz, przypisania bezpośredniego lub pośredniego przypisania za pomocą wskaźnika.
+"Skutki uboczne" są zmianami spowodowanymi przez oszacowanie wyrażenia. Efekt uboczny występuje zawsze, gdy wartość zmiennej jest zmieniana przez oszacowanie wyrażenia. Wszystkie operacje przypisania mają efekty uboczne. Wywołania funkcji mogą także mieć skutki uboczne, jeśli zmieniają wartość widocznej zewnętrznie elementu przez przypisanie bezpośrednie lub przez przypisanie pośrednie przez wskaźnik.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operandy i wyrażenia](../c-language/operands-and-expressions.md)

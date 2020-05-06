@@ -16,9 +16,9 @@ ms.locfileid: "62195237"
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Eksportowanie funkcji języka C++ do użycia w plikach wykonywalnych języka C
 
-Jeśli masz funkcji w bibliotece DLL napisanego w języku C++, że chcesz uzyskać dostęp z modułu języka C, należy zadeklarować tych funkcji z powiązaniem C zamiast powiązania C++. O ile nie określono inaczej, kompilator języka C++ używa C++ bezpieczny nazewnictwa (nazwij dekorację) i C++, Konwencje wywoływania, które mogą być trudne do wywoływania z C.
+Jeśli masz funkcje w bibliotece DLL zapisaną w języku C++, do której chcesz uzyskać dostęp z modułu języka C, należy zadeklarować te funkcje przy użyciu powiązania C zamiast powiązania C++. O ile nie określono inaczej, kompilator języka C++ używa nazw i konwencji wywoływania języka C++, które mogą być trudne do wywołania z dysku C.
 
-Aby określić powiązanie C, należy określić `extern "C"` dla swojej deklaracji funkcji. Na przykład:
+Aby określić powiązanie C, określ `extern "C"` dla deklaracji funkcji. Przykład:
 
 ```
 extern "C" __declspec( dllexport ) int MyFunc(long parm1);
@@ -26,26 +26,26 @@ extern "C" __declspec( dllexport ) int MyFunc(long parm1);
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Eksportowanie z biblioteki DLL za pomocą plików .def](exporting-from-a-dll-using-def-files.md)
+- [Eksportowanie z biblioteki DLL za pomocą plików. def](exporting-from-a-dll-using-def-files.md)
 
-- [Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Eksportowanie z biblioteki DLL przy użyciu __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Eksportowanie i importowanie przy użyciu makra AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
+- [Eksportowanie i importowanie przy użyciu AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Eksportuj funkcje C do użycia w plikach wykonywalnych języka C lub języka C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Eksportowanie funkcji C do użycia w plikach wykonywalnych języka C lub C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Określić, której metody eksportowania użyjesz](determining-which-exporting-method-to-use.md)
+- [Określanie, której metody eksportowania użyć](determining-which-exporting-method-to-use.md)
 
 - [Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Zainicjuj bibliotekę DLL](run-time-library-behavior.md#initializing-a-dll)
+- [Inicjowanie biblioteki DLL](run-time-library-behavior.md#initializing-a-dll)
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+## <a name="what-do-you-want-to-know-more-about"></a>Jak chcesz dowiedzieć się więcej?
 
-- [Nazwy ozdobione](reference/decorated-names.md)
+- [Nazwy dekoracyjne](reference/decorated-names.md)
 
 - [Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Eksportowanie z biblioteki DLL](exporting-from-a-dll.md)

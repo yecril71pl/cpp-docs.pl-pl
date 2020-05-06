@@ -17,7 +17,7 @@ ms.locfileid: "62233837"
 ---
 # <a name="extern-storage-class-specifier"></a>extern — specyfikator klasy magazynowania
 
-Zmienna zadeklarowana ze **extern** Specyfikator klasy magazynowania jest odwołanie do zmiennej o tej samej nazwie, które są zdefiniowane w innym pliku źródłowym. Jest on używany aby uwidocznić definicję zmiennej poziomu zewnętrznego. Zmienna zadeklarowana jako **extern** nie ma magazyn jest przydzielany dla siebie; jest tylko nazwę.
+Zmienna zadeklarowana ze specyfikatorem klasy magazynu **extern** jest odwołaniem do zmiennej o tej samej nazwie zdefiniowanej w innym pliku źródłowym. Służy do widoczności definicji zmiennej na poziomie zewnętrznym. Zmienna zadeklarowana jako **extern** nie ma magazynu przypisanego do siebie. jest to tylko nazwa.
 
 ## <a name="example"></a>Przykład
 
@@ -59,10 +59,10 @@ void func(void)
 }
 ```
 
-W tym przykładzie zmienna `i` jest zdefiniowany w Source1.c o początkowej wartości 1. **Extern** deklaracji w Source2.c to sprawia, że "i" widoczne w tym pliku.
+W tym przykładzie zmienna `i` jest zdefiniowana w Source1. c z początkową wartością 1. Deklaracja **extern** w SOURCE2. c sprawia, że w tym pliku jest widoczne "i".
 
-W `func` funkcji, adres zmiennej globalnej `i` służy do inicjowania **statyczne** zmiennej wskaźnikowej `external_i`. To działa, ponieważ zmienna globalna ma **statyczne** okres istnienia, co oznacza jego adres nie zmienia się podczas wykonywania programu. Następnie, zmienna `i` jest zdefiniowany w zakresie `func` jako zmienna lokalna o wartości początkowej 16. Ta definicja nie ma wpływu na wartość poziomu zewnętrznego `i`, który jest ukryty przy użyciu jego nazwy zmiennej lokalnej. Wartość globalna `i` jest teraz dostępna wyłącznie za pośrednictwem wskaźnik `external_i`.
+W `func` funkcji adres zmiennej `i` globalnej jest używany do inicjowania zmiennej `external_i`wskaźnika **statycznego** . Dzieje się tak, ponieważ zmienna globalna ma **statyczny** okres istnienia, co oznacza, że jej adres nie zmienia się podczas wykonywania programu. Następnie zmienna `i` jest definiowana w zakresie `func` jako zmienna lokalna z wartością początkową 16. Ta definicja nie wpływa na wartość na poziomie `i`zewnętrznym, która jest ukryta przy użyciu jego nazwy dla zmiennej lokalnej. Wartość globalnego `i` jest teraz dostępna tylko za pomocą wskaźnika `external_i`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Specyfikatory klasy magazynowania dla deklaracji na poziomie wewnętrznym](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

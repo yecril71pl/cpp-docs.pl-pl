@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Kompilowanie komponentów COM bez rejestrowania'
+title: 'Porady: kompilowanie komponentów COM bez rejestrowania'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - COM components, registration-free
@@ -11,22 +11,22 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62188941"
 ---
-# <a name="how-to-build-registration-free-com-components"></a>Instrukcje: Kompilowanie komponentów COM bez rejestrowania
+# <a name="how-to-build-registration-free-com-components"></a>Porady: kompilowanie komponentów COM bez rejestrowania
 
-Bez rejestracji składników COM są składniki COM, które mają manifesty wbudowaną biblioteki dll.
+Składniki COM bez rejestracji to składniki COM, które mają wbudowane manifesty w bibliotekach DLL.
 
-### <a name="to-build-manifests-into-com-components"></a>Aby skompilować manifesty w składników COM
+### <a name="to-build-manifests-into-com-components"></a>Aby skompilować manifesty do składników COM
 
 1. Otwórz strony właściwości projektu dla składnika COM.
 
-1. Rozwiń **właściwości konfiguracji** węzła, a następnie rozwiń węzeł **narzędziu manifestu** węzła.
+1. Rozwiń węzeł **Właściwości konfiguracji** , a następnie rozwiń węzeł **narzędzie manifestu** .
 
-1. Wybierz **danych wejściowych i wyjściowych** strony właściwości, a następnie ustaw **osadzanie manifestu** równa właściwości **tak**.
+1. Wybierz stronę właściwości **dane wejściowe i wyjściowe** , a następnie ustaw właściwość **Osadź manifest** równą **tak**.
 
 1. Kliknij przycisk **OK**.
 
 1. Skompiluj rozwiązanie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Instrukcje: kompilowanie izolowanych aplikacji korzystających ze składników COM](how-to-build-isolated-applications-to-consume-com-components.md)
+[Porady: kompilowanie izolowanych aplikacji korzystających ze składników COM](how-to-build-isolated-applications-to-consume-com-components.md)

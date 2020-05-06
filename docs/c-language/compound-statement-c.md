@@ -14,30 +14,30 @@ ms.locfileid: "62312573"
 ---
 # <a name="compound-statement-c"></a>Instrukcja złożona (C)
 
-Instrukcja złożona (również o nazwie "blok") zwykle jest wyświetlany jako treść innej instrukcji, takich jak **Jeśli** instrukcji. [Deklaracje i typy](../c-language/declarations-and-types.md) opisuje formularza i znaczenie deklaracje, które mogą być wyświetlane na czele instrukcję złożonego.
+Instrukcja złożona (nazywana również "blokiem") jest zwykle wyświetlana jako treść innej instrukcji, takiej jak instrukcja **if** . [Deklaracje i typy](../c-language/declarations-and-types.md) opisują formę i znaczenie deklaracji, które mogą być wyświetlane w nagłówku złożonej instrukcji.
 
 ## <a name="syntax"></a>Składnia
 
-*Compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *lista deklaracji*<sub>zoptymalizowany pod kątem</sub> *listy instrukcji*<sub>zoptymalizowany pod kątem</sub> **}**
+*instrukcja złożona*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *deklaracji*<sub>opt</sub> *instrukcji SELECT-list*<sub>opt</sub> **}**
 
-*Lista deklaracji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista deklaracji* *deklaracji*
+*Deklaracja-lista*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*oświadczeń*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *listy deklaracji* *declaration*
 
 *Lista instrukcji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista instrukcji* *— instrukcja*
+&nbsp;&nbsp;&nbsp;&nbsp;*Merge*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instrukcja-list —* *instrukcja*
 
-W przypadku deklaracji one musi występować przed wszystkimi instrukcjami. Zakres każdego identyfikatora zadeklarowane na początku instrukcji złożonej rozciąga się od punktu jego deklaracji na końcu bloku. Może to być widoczna w bloku, chyba że deklaracja tego samego identyfikatora istnieje w wewnętrzny blok.
+Jeśli istnieją deklaracje, muszą one znajdować się przed wszelkimi instrukcjami. Zakres każdego identyfikatora zadeklarowanego na początku złożonej instrukcji rozciąga się od punktu deklaracji do końca bloku. Jest on widoczny w bloku, chyba że deklaracja tego samego identyfikatora istnieje w bloku wewnętrznym.
 
-Identyfikatory w instrukcji złożonej uznaje za **automatycznie** , chyba że jawnie zadeklarowane w przeciwnym razie z **zarejestrować**, **statyczne**, lub `extern`, z wyjątkiem funkcji, który może zawierać tylko `extern`. Można pozostawić wyłączone `extern` specyfikator w deklaracji funkcji i funkcja będzie nadal `extern`.
+Identyfikatory w instrukcji złożonej są przypuszczalnie **stosowane** , chyba że jawnie zadeklarowano inaczej **static**przy użyciu funkcji `extern` **register**, static lub, Except `extern`. Można opuścić `extern` specyfikator w deklaracjach funkcji, a funkcja nadal będzie `extern`.
 
-Magazyn nie jest przydzielany i inicjowanie nie jest dozwolone, jeśli zmienna lub funkcja jest zadeklarowana w instrukcji złożonej z klasą magazynu `extern`. Deklaracja odnosi się do zewnętrznej zmiennej lub funkcji definiowane w innym miejscu.
+Magazyn nie jest przydzielony i Inicjalizacja jest niedozwolona, jeśli zmienna lub funkcja jest zadeklarowana w instrukcji złożonej z `extern`klasą magazynu. Deklaracja odnosi się do zmiennej zewnętrznej lub funkcji zdefiniowanej w innym miejscu.
 
-Zmienne zadeklarowane w bloku z **automatycznie** lub **zarejestrować** — słowo kluczowe są ponownie przydzielane i, jeśli to konieczne, inicjowany każdorazowo wprowadzono złożone wyrażenie. Te zmienne nie są zdefiniowane, po złożone wyrażenie jest został zakończony. Jeśli zmienna zadeklarowana wewnątrz bloku **statyczne** atrybutu, zmienna jest inicjowana, gdy wykonywanie programu rozpoczyna się i przechowuje wartość w całym programie. Zobacz [klasy magazynu](../c-language/c-storage-classes.md) uzyskać informacji na temat **statyczne**.
+Zmienne zadeklarowane w bloku ze słowem kluczowym **autolub** **register** są ponownie przydzieloną i, w razie potrzeby, inicjowane przy każdym wprowadzeniu złożonej instrukcji. Te zmienne nie są zdefiniowane po zakończeniu złożonej instrukcji. Jeśli zmienna zadeklarowana wewnątrz bloku ma atrybut **static** , zmienna jest inicjowana po rozpoczęciu wykonywania programu i utrzymuje jego wartość w całym programie. Zobacz [klasy magazynu](../c-language/c-storage-classes.md) , aby uzyskać informacje o **statycznym**.
 
-Ten przykład ilustruje złożonej instrukcji:
+Ten przykład ilustruje złożone instrukcje:
 
 ```
 if ( i > 0 )
@@ -48,8 +48,8 @@ if ( i > 0 )
 }
 ```
 
-W tym przykładzie Jeśli `i` jest większa niż 0, wszystkie instrukcje wewnątrz instrukcji złożonej zostały wykonane w porządku.
+W tym przykładzie, jeśli `i` jest większa niż 0, wszystkie instrukcje wewnątrz instrukcji złożonej są wykonywane w kolejności.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instrukcje](../c-language/statements-c.md)

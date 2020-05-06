@@ -65,21 +65,21 @@ Domyślne wyrównanie układu dla Globals i statics:
 | 1 | 1 |
 | 2 - 7 | 4 |
 | 8 - 63 | 8 |
-| > = 64 | 16 |
+| >= 64 | 16 |
 
 ## <a name="integer-registers"></a>Rejestry całkowite
 
 Architektura AArch64 obsługuje rejestry całkowite 32:
 
-| Rejestracja | Volatile? | Rola |
+| Zarejestruj | Volatile? | Rola |
 | - | - | - |
-| x0 | Volatile | Parametr/rejestr wyrejestrowania 1, rejestr wyników |
+| kolumn | Volatile | Parametr/rejestr wyrejestrowania 1, rejestr wyników |
 | x1 — 120 | Volatile | Rejestr/Wyrejestrowanie 2-8 |
 | x8 — x15 | Volatile | Rejestry |
 | x16 — x17 | Volatile | Wewnętrzne rejestry wywołań |
 | x18 | Nietrwały | Rejestracja platformy: w trybie jądra wskazuje KPCR dla bieżącego procesora; w trybie użytkownika wskazuje TEB |
 | x19-x28 | Nietrwały | Rejestry |
-| x29/fp | Nietrwały | Wskaźnik ramki |
+| x29/FP | Nietrwały | Wskaźnik ramki |
 | X30/LR | Nietrwały | Rejestry linków |
 
 Do każdej rejestracji można uzyskać dostęp jako pełna wartość 64-bitowa (za pośrednictwem x0-X30) lub jako wartość 32-bitowa (za pośrednictwem W0-W30). 32-bitowe operacje zero — zwiększają ich wyniki do 64 bitów.
@@ -94,9 +94,9 @@ Wskaźnik ramki (x29) jest wymagany w celu zapewnienia zgodności z szybkim pora
 
 Architektura AArch64 obsługuje również 32 rejestrów zmiennoprzecinkowych/SIMD, podsumowujących poniżej:
 
-| Rejestracja | Volatile? | Rola |
+| Zarejestruj | Volatile? | Rola |
 | - | - | - |
-| v0 | Volatile | Parametr/rejestr wyrejestrowania 1, rejestr wyników |
+| VO | Volatile | Parametr/rejestr wyrejestrowania 1, rejestr wyników |
 | V1 — wersji 7 | Volatile | Rejestry parametrów/rejestrowania 2-8 |
 | V8 — 15 | Nietrwały | Rejestry wstępne (tylko niskie 64 bitów są nietrwałe) |
 | v16-v31 | Volatile | Rejestry |
@@ -108,7 +108,7 @@ Rejestr kontroli zmiennoprzecinkowej (FPCR) ma pewne wymagania dotyczące różn
 | Bity | Znaczenie | Volatile? | Rola |
 | - | - | - | - |
 | 26 | AHP | Nietrwały | Alternatywny formant o połówkowej precyzji. |
-| 25 | NAZWA WYRÓŻNIAJĄCA | Nietrwały | Domyślna kontrolka trybu NaN. |
+| 25 | WYRÓŻNIAJĄC | Nietrwały | Domyślna kontrolka trybu NaN. |
 | 24 | FZ | Nietrwały | Kontrolka trybu opróżniania do zera. |
 | 23-22 | RMode | Nietrwały | Kontrolka tryb zaokrąglania. |
 | 15, 12 – 8 | IDE/IXE/etc | Nietrwały | W przypadku usługi BITS pułapki wyjątków musi być zawsze równa 0. |
@@ -117,9 +117,9 @@ Rejestr kontroli zmiennoprzecinkowej (FPCR) ma pewne wymagania dotyczące różn
 
 Podobnie jak w przypadku AArch32, Specyfikacja AArch64 zawiera trzy rejestry "Identyfikator wątku" sterowane systemem:
 
-| Rejestracja | Rola |
+| Zarejestruj | Rola |
 | - | - |
-| TPIDR_EL0 | Rezerwacj. |
+| TPIDR_EL0 | Zarezerwowany. |
 | TPIDRRO_EL0 | Zawiera liczbę procesorów dla bieżącego procesora. |
 | TPIDR_EL1 | Wskazuje strukturę KPCR dla bieżącego procesora. |
 
@@ -145,7 +145,7 @@ Ten etap jest wykonywany dokładnie raz, przed rozpoczęciem przetwarzania argum
 
 Dla każdego argumentu na liście stosowana jest pierwsza reguła dopasowywania z poniższej listy. Jeśli żadna reguła nie pasuje, argument jest używany niemodyfikowany.
 
-1. Jeśli typ argumentu jest typem złożonym, którego rozmiar nie może być statycznie określony przez obiekt wywołujący i wywoływany, argument jest kopiowany do pamięci, a argument jest zastępowany przez wskaźnik do kopii. (Nie ma takich typów w C/C++ , ale istnieją w innych językach lub w rozszerzeniach języka).
+1. Jeśli typ argumentu jest typem złożonym, którego rozmiar nie może być statycznie określony przez obiekt wywołujący i wywoływany, argument jest kopiowany do pamięci, a argument jest zastępowany przez wskaźnik do kopii. (W języku C/C++ nie ma takich typów, ale istnieją one w innych językach lub rozszerzeniach języka).
 
 1. Jeśli typ argumentu to HFA lub HVA, argument jest używany niemodyfikowany.
 
@@ -225,7 +225,7 @@ Wszystkie inne typy używają tej Konwencji:
 
 Po ABI przez ARM stos musi pozostać 16-bajtowy. AArch64 zawiera funkcję sprzętową, która generuje błędy wyrównania stosu za każdym razem, gdy SP nie jest wyrównany 16-bajtowe i jest wykonywane względnie obciążenie lub przechowywanie zależne od SP. System Windows jest uruchamiany z włączoną tą funkcją przez cały czas.
 
-Funkcje, które przydzielą 4K lub więcej informacji o stosie, muszą mieć pewność, że każda strona przed ostatnią stroną jest w porządku. Ta akcja zapewnia, że żaden kod nie może "przekroczyć" stron ochrony, które są używane przez system Windows do rozszerzenia stosu. Zwykle dotknięcie odbywa się przez pomocnika `__chkstk`, który ma niestandardową konwencję wywoływania, która przekazuje całkowitą alokację stosu podzieloną przez 16 w x15.
+Funkcje, które przydzielą 4K lub więcej informacji o stosie, muszą mieć pewność, że każda strona przed ostatnią stroną jest w porządku. Ta akcja zapewnia, że żaden kod nie może "przekroczyć" stron ochrony, które są używane przez system Windows do rozszerzenia stosu. Zwykle dotknięcie odbywa się przez `__chkstk` pomocnika, który ma niestandardową konwencję wywoływania, która przekazuje całkowitą alokację stosu podzieloną przez 16 w x15.
 
 ## <a name="red-zone"></a>Czerwona strefa
 
@@ -245,15 +245,15 @@ Odwinięcie podczas obsługi wyjątków jest wspomagane za pomocą kodów wyłą
 
 EABI ARM określa również wyjątek, który odwraca model, który używa kodów unwind. Jednakże specyfikacja przedstawiona jest niewystarczająca do odwinięcia w systemie Windows, co musi obsługiwać przypadki, w których komputer znajduje się w środku funkcji prologu lub epilogu.
 
-Dynamicznie generowany kod powinien zostać opisany przy użyciu tabel funkcji dynamicznych za pośrednictwem `RtlAddFunctionTable` i skojarzonych funkcji, tak aby wygenerowany kod mógł uczestniczyć w obsłudze wyjątków.
+Dynamicznie generowany kod powinien zostać opisany przy użyciu tabel funkcji dynamicznych za pomocą `RtlAddFunctionTable` i skojarzonych funkcji, tak aby wygenerowany kod mógł uczestniczyć w obsłudze wyjątków.
 
 ## <a name="cycle-counter"></a>Licznik cyklu
 
-Wszystkie procesory ARMv8 są wymagane do obsługi rejestru licznika cykl, rejestr 64-bitowy, który system Windows konfiguruje do odczytu na dowolnym poziomie wyjątku, w tym w trybie użytkownika. Dostęp do niego można uzyskać za pośrednictwem specjalnego rejestru PMCCNTR_EL0 przy użyciu kodu w kodzie zestawu lub `_ReadStatusReg` wewnętrznej w języku C/C++ Code.
+Wszystkie procesory ARMv8 są wymagane do obsługi rejestru licznika cykl, rejestr 64-bitowy, który system Windows konfiguruje do odczytu na dowolnym poziomie wyjątku, w tym w trybie użytkownika. Dostęp do niego można uzyskać za pośrednictwem specjalnego rejestru PMCCNTR_EL0 przy użyciu kodu w kodzie zestawu lub `_ReadStatusReg` wewnętrznej w kodzie C/C++.
 
-W tym miejscu licznik cyklu jest wartością prawda, a nie zegarem ściany. Częstotliwość zliczania zależy od częstotliwości procesora. Jeśli uważasz, że musisz znać częstotliwość licznika cykl, nie należy używać licznika cykli. Zamiast tego należy mierzyć czas zegara ściany, dla którego należy używać `QueryPerformanceCounter`.
+W tym miejscu licznik cyklu jest wartością prawda, a nie zegarem ściany. Częstotliwość zliczania zależy od częstotliwości procesora. Jeśli uważasz, że musisz znać częstotliwość licznika cykl, nie należy używać licznika cykli. Zamiast tego należy mierzyć czas zegara ściany, którego należy użyć `QueryPerformanceCounter`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Typowe problemy przy migracji Visual C++ ARM](common-visual-cpp-arm-migration-issues.md)<br/>
 [Obsługa wyjątków ARM64](arm64-exception-handling.md)
