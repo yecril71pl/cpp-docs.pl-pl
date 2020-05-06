@@ -1,5 +1,5 @@
 ---
-title: Operatory przesunięcia w lewo i w prawo (&gt; &gt; i &lt; &lt;)
+title: Operatory przesunięcia w lewo i w&gt; &gt; prawo &lt; &lt;(i)
 ms.date: 08/13/2018
 f1_keywords:
 - <<
@@ -13,32 +13,32 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: fd048bedc45b14bdc7b83120ad039296b54aa850
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 2020c2dbbf8ff91ee692366f55c836be0b3dddb0
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222051"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825918"
 ---
-# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operatory przesunięcia w lewo i w prawo (&gt; &gt; i &lt; &lt;)
+# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operatory przesunięcia w lewo i w&gt; &gt; prawo &lt; &lt;(i)
 
-Operatory przesunięcia bitowego to operator przesunięcia w prawo (**&gt;&gt;**), który przesuwa bity *shift-expression* w prawo i operator przesunięcia w lewo (**&lt; &lt;**), który przesuwa bity *shift-expression* po lewej stronie. <sup>1</sup>
+Operatory przesunięcia bitowego to operator przesunięcia w prawo (**&gt;**), który przenosi bity *przesunięcia* w prawo i operator przesunięcia w lewo (**&lt;**), który przenosi bity *przesunięcia* w lewo. <sup>1</sup>
 
 ## <a name="syntax"></a>Składnia
 
-> *SHIFT-expression* `<<` *additive-expression*
-> *shift-expression* `>>` *additive-expression*
+> dodatek *shift-expression* `<<` *-Expression*\
+> dodatek *shift-expression* `>>` *-Expression*
 
 ## <a name="remarks"></a>Uwagi
 
 > [!IMPORTANT]
-> Następujące opisy i przykłady są prawidłowe na Windows dla architektur x86 i x64. Implementacja operatorów przesunięcia w lewo i przesunięcia w prawo różni się znacznie w Windows dla urządzeń ARM. Aby uzyskać więcej informacji, zobacz sekcję "Operatory przesunięcia" [Hello ARM](https://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) wpis w blogu.
+> Poniższe opisy i przykłady są prawidłowe w systemie Windows dla architektury x86 i x64. Implementacja operatorów przesunięcia w lewo i przesunięcia w prawo jest znacznie inna w systemie Windows dla urządzeń ARM. Aby uzyskać więcej informacji, zobacz sekcję "operatory przesunięcia" wpisu w blogu [Hello ARM](https://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) .
 
 ## <a name="left-shifts"></a>Przesunięcia w lewo
 
-Operator przesunięcia w lewo powoduje, że bity w *shift-expression* są przesuwane w lewo o liczbę pozycji określoną przez *additive-expression*. Pozycje bitów, które zostały zwolnione w wyniku operacji przesunięcia, są wypełniane przez zera. Przesunięcie w lewo to przesunięcie logiczne (bity, które zostaną przesunięte poza koniec, są odrzucane, łącznie z bitem znaku). Aby uzyskać więcej informacji o rodzajach przesunięć, zobacz [przesunięć](https://en.wikipedia.org/wiki/Bitwise_shift).
+Operator przesunięcia w lewo powoduje, że bity w *przesunięciu shift-expression* są przesuwane w lewo o liczbę pozycji określoną przez *dodatek*. Pozycje bitów, które zostały zwolnione w wyniku operacji przesunięcia, są wypełniane przez zera. Przesunięcie w lewo to przesunięcie logiczne (bity, które zostaną przesunięte poza koniec, są odrzucane, łącznie z bitem znaku). Aby uzyskać więcej informacji na temat rodzajów przesunięć bitowych, zobacz [bitowe przesunięcia](https://en.wikipedia.org/wiki/Bitwise_shift).
 
-W poniższym przykładzie pokazano operacje przesunięcia w lewo przy użyciu liczb bez znaku. W przykładzie pokazano, co się dzieje z bitami, poprzez reprezentowanie wartości jako zestawu bitów. Aby uzyskać więcej informacji, zobacz [bitset — klasa](../standard-library/bitset-class.md).
+W poniższym przykładzie pokazano operacje przesunięcia w lewo przy użyciu liczb bez znaku. W przykładzie pokazano, co się dzieje z bitami, poprzez reprezentowanie wartości jako zestawu bitów. Aby uzyskać więcej informacji, zobacz [Klasa bitset](../standard-library/bitset-class.md).
 
 ```cpp
 #include <iostream>
@@ -61,7 +61,7 @@ int main() {
 }
 ```
 
-Jeśli przesuniesz liczbę ze znakiem w lewo, tak że bit znaku zostanie objęty zmianą, wynik będzie nieokreślony. Poniższy przykład pokazuje, co się stanie, gdy 1 bit jest przesunięty w lewo do pozycji bitu znaku.
+Jeśli przesuniesz liczbę ze znakiem w lewo, tak że bit znaku zostanie objęty zmianą, wynik będzie nieokreślony. Poniższy przykład pokazuje, co się stanie, gdy 1 bit zostanie przesunięty w dół do pozycji bitu znaku.
 
 ```cpp
 #include <iostream>
@@ -86,10 +86,10 @@ int main() {
 
 ## <a name="right-shifts"></a>Przesunięcia w prawo
 
-Operator przesunięcia w prawo powoduje, że wzorzec bitowy *shift-expression* jest przesuwany w prawo o liczbę pozycji określoną przez *additive-expression*. W przypadku liczb bez znaku, pozycje bitów, które zostały zwolnione w wyniku operacji przesunięcia, są wypełniane przez zera. W przypadku liczb ze znakiem, bit znaku jest używany do wypełniania opuszczonych pozycji bitów. Innymi słowy, jeśli liczba jest dodatnia, używane jest 0, a jeśli liczba jest ujemna, używane jest 1.
+Operator przesunięcia w prawo powoduje, że wzorzec bitowy w *przesunięciu shift-expression* zostanie przesunięty w prawo o liczbę pozycji określoną przez *dodatek*. W przypadku liczb bez znaku, pozycje bitów, które zostały zwolnione w wyniku operacji przesunięcia, są wypełniane przez zera. W przypadku liczb ze znakiem, bit znaku jest używany do wypełniania opuszczonych pozycji bitów. Innymi słowy, jeśli liczba jest dodatnia, używane jest 0, a jeśli liczba jest ujemna, używane jest 1.
 
 > [!IMPORTANT]
-> Wynik przesunięcia w prawo liczby ujemnej ze znakiem zależy od implementacji. Mimo że Microsoft C++ kompilator używa bitu znaku do wypełniania opuszczonych pozycji bitów, nie ma żadnej gwarancji, że inne implementacje działają tak.
+> Wynik przesunięcia w prawo liczby ujemnej ze znakiem zależy od implementacji. Chociaż kompilator języka Microsoft C++ używa bitu znaku do wypełniania pozycji opuszczone bit, nie ma gwarancji, że inne implementacje również są takie same.
 
 W tym przykładzie pokazano operacje przesunięcia w prawo przy użyciu liczb bez znaku:
 
@@ -174,9 +174,9 @@ int main() {
 
 ## <a name="shifts-and-promotions"></a>Przesunięcia i awansowania
 
-Wyrażenia po obu stronach operatora przesunięcia muszą być typami całkowitoliczbowymi. Promocje typów całkowitych są wykonywane zgodnie z zasadami opisanymi w [konwersje standardowe](standard-conversions.md). Typ wyniku jest taki sam jak typ awansowanego *shift-expression*.
+Wyrażenia po obu stronach operatora przesunięcia muszą być typami całkowitoliczbowymi. Promocje integralne są wykonywane zgodnie z zasadami opisanymi w [standardowym konwersji](standard-conversions.md). Typ wyniku jest taki sam jak typ awansowanego *wyrażenia przesunięcia*.
 
-W poniższym przykładzie zmienna typu **char** zostanie podwyższony do **int**.
+W poniższym przykładzie zmienna typu **char** jest podwyższana do liczby **całkowitej**.
 
 ```cpp
 #include <iostream>
@@ -197,7 +197,7 @@ int main() {
 
 ## <a name="additional-details"></a>Dodatkowe szczegóły
 
-Wynik operacji przesunięcia jest niezdefiniowane, jeżeli *additive-expression* jest ujemny lub jeśli *additive-expression* jest większa niż lub równa liczbie bitów w (awansowanym)  *SHIFT-expression*. Operacja przesunięcia nie jest wykonywane, jeśli *additive-expression* wynosi 0.
+Wynik operacji przesunięcia jest nieokreślony, jeśli *dodatek typu "* wartość ujemna" lub " *wyrażenie addytywne"* jest większe lub równe liczbie bitów w *wyrażeniu shift-expression*(promowany). Nie wykonano żadnej operacji przesunięcia, jeśli *dodatek typu wyrażenie* ma wartość 0.
 
 ```cpp
 #include <iostream>
@@ -222,11 +222,11 @@ int main() {
 
 ## <a name="footnotes"></a>Przypisy dolne
 
-<sup>1</sup> poniżej znajduje się opis operatorów przesunięcia w specyfikacji C ++ 11 ISO (Stowarzyszenie INCITS/ISO/IEC 14882-2011[2012]), ppkt 5.8.2 i 5.8.3.
+<sup>1</sup> poniżej znajduje się opis operatorów przesunięcia w specyfikacji ISO języka c++ 11 (INCITS/ISO/IEC 14882-2011 [2012]), sekcje 5.8.2 i 5.8.3.
 
-Wartość `E1 << E2` jest `E1` przesunięte w lewo `E2` ; opuszczone bity są wypełnione przez zera. Jeśli `E1` ma typ bez znaku, wartość wyniku jest **E1, x 2**<sup>**E2**</sup>, zmniejszone modulo o jeden większa niż wartość maksymalna reprezentowana w typie wyniku. W przeciwnym razie, jeśli `E1` ma typ ze znakiem i wartość nieujemną, i **E1, x 2**<sup>**E2** </sup> jest reprezentowanych w odpowiedni typ bez znaku typu wyniku, Ta wartość, konwertowana na typ wyniku jest wartością wynikową; w przeciwnym razie zachowanie jest niezdefiniowane.
+Wartość `E1 << E2` jest `E1` przysuniętą do lewej pozycji `E2` bitów. opuszczone bity są wypełnione zerem. Jeśli `E1` ma typ bez znaku, wartość wyniku jest **E1 × 2**<sup>**E2**</sup>, a zmniejszenie modulo o jeden więcej niż wartość maksymalna, którą można przedstawić w typie wyniku. W przeciwnym razie `E1` , jeśli ma typ ze znakiem i wartość nieujemną, a **E1 × 2**<sup>**E2**</sup> można reprezentować w odpowiadającym typie niepodpisanym typu wyniku, wówczas ta wartość jest konwertowana na typ wyniku, jest wartością wynikową; w przeciwnym razie zachowanie jest niezdefiniowane.
 
-Wartość `E1 >> E2` jest `E1` przesunięte w prawo `E2` pozycje bitów. Jeśli `E1` ma typ bez znaku lub jeśli `E1` ma typ ze znakiem i wartość nieujemną, wartość wyniku jest integralną częścią ilorazu **E1/2**<sup>**E2** </sup>. Jeśli `E1` ma typ ze znakiem i wartość ujemną, wartość wynikowa zależy od implementacji.
+Wartość `E1 >> E2` jest `E1` przysuniętą do prawej pozycji `E2` bitów. Jeśli `E1` ma typ bez znaku lub `E1` ma typ ze znakiem i wartość nieujemną, wartość wyniku jest integralną częścią ilorazu **E1/2**<sup>**E2**</sup>. Jeśli `E1` ma typ ze znakiem i wartość ujemną, wynikowa wartość jest definiowana przez implementację.
 
 ## <a name="see-also"></a>Zobacz także
 

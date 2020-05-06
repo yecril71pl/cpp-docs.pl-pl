@@ -15,54 +15,54 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-ms.openlocfilehash: 0d902b9ebb35bc7f267cb67861b7be0763f378a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71a05df3adc74edfd814bb6dc15121e4a343dc4d
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316707"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825759"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Utwórz prekompilowany plik nagłówka)
 
-Instruuje kompilator, aby utworzyć plik prekompilowanego pliku nagłówkowego (.pch), który reprezentuje stan kompilacji w pewnym momencie.
+Instruuje kompilator, aby utworzył prekompilowany plik nagłówkowy (. pch), który reprezentuje stan kompilacji w określonym punkcie.
 
 ## <a name="syntax"></a>Składnia
 
-> __/Yc__<br/>
-> __/Yc__*nazwy pliku*
+> __/YC__\
+> __/Yc__*Nazwa pliku* /YC
 
 ## <a name="arguments"></a>Argumenty
 
 *Nazwa pliku*<br/>
-Określa plik nagłówka (.h). Jeśli ten argument jest używany, kompilator kompiluje całego kodu, w tym plik .h klasy.
+Określa plik nagłówka (. h). Gdy ten argument jest używany, kompilator kompiluje cały kod do i łącznie z plikiem. h.
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy **/Yc** jest określona bez argumentu, kompilator kompiluje cały kod do końca pliku źródłowego podstawowej lub do punktu w pliku podstawowego gdzie [hdrstop](../../preprocessor/hdrstop.md) występuje dyrektywie. Wynikowy plik .pch ma taką samą nazwę podstawowej jako pliku źródłowego podstawowego, chyba że określono nazwę innego pliku za pomocą **hdrstop** pragma lub **/FP** opcji.
+Gdy **/YC** jest określony bez argumentu, kompilator kompiluje cały kod do końca bazowego pliku źródłowego lub do punktu w pliku bazowym, w którym występuje dyrektywa [hdrstop](../../preprocessor/hdrstop.md) . Utworzony plik PCH ma taką samą nazwę bazową jak podstawowy plik źródłowy, chyba że określono inną nazwę pliku przy użyciu **hdrstop** pragma lub opcji **/FP** .
 
-Wstępnie skompilowany kod jest zapisywany w pliku o nazwie utworzone na podstawie podstawowej nazwy pliku określonego przez **/Yc** opcja i rozszerzeniem .pch. Można również użyć  [ /FP (nazwa. Plik pch)](fp-name-dot-pch-file.md) opcję, aby określić nazwę pliku wstępnie skompilowanego nagłówka.
+Wstępnie skompilowany kod jest zapisywany w pliku o nazwie utworzonej na podstawie podstawowej nazwy pliku określonego za pomocą opcji **/YC** i rozszerzenia PCH. Można również użyć [/FP (Name. Plik PCH)](fp-name-dot-pch-file.md) , aby określić nazwę prekompilowanego pliku nagłówkowego.
 
-Jeśli używasz __/Yc__*filename*, kompilator kompiluje całego kodu, w tym określony plik do późniejszego użytku z [/Yu (Użyj Prekompilowanego pliku nagłówka)](yu-use-precompiled-header-file.md) opcji.
+Jeśli używasz*nazwy pliku* __/YC__, kompilator kompiluje cały kod do i łącznie z określonym plikiem do późniejszego użycia z [/Yu (Użyj prekompilowanego pliku nagłówkowego)](yu-use-precompiled-header-file.md) .
 
-Jeśli opcje __/Yc__*filename* i __/Yu__*filename* odbywa się na tym samym wierszu polecenia, a oba odwołania, lub w sposób sugerujący, taką samą nazwę pliku, __/Yc__*filename* ma pierwszeństwo. Ta funkcja ułatwia zapisywanie plików reguł programu make.
+Jeśli opcje __/YC__*filename* i __/Yu__*filename* są wykonywane w tym samym wierszu polecenia, a oba odwołania lub implikują, pierwszeństwo ma ta sama nazwa pliku, __/YC__*filename* . Ta funkcja upraszcza pisanie plików reguł programu make.
 
-Aby uzyskać więcej informacji na temat wstępnie skompilowanych nagłówków zobacz:
+Aby uzyskać więcej informacji na temat prekompilowanych nagłówków, zobacz:
 
 - [/Y (Prekompilowane nagłówki)](y-precompiled-headers.md)
 
-- [Prekompilowane pliki nagłówka](../creating-precompiled-header-files.md)
+- [Wstępnie skompilowane pliki nagłówkowe](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Wybierz plik .cpp. Plik CPP musi #include plik .h, który zawiera informacje o wstępnie skompilowanego nagłówka. Projekt **/Yc** ustawienie można zastąpić na poziomie plików.
+1. Wybierz plik. cpp. Plik. cpp musi #include pliku h, który zawiera wstępnie skompilowane informacje nagłówka. Ustawienie **/YC** projektu można zastąpić na poziomie pliku.
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Otwórz **właściwości konfiguracji**, **C/C++**, **prekompilowanych nagłówków** stronę właściwości.
+1. Otwórz stronę właściwości **Konfiguracja**, **C/C++**, **prekompilowane nagłówki** .
 
-1. Modyfikowanie **wstępnie skompilowany nagłówek** właściwości.
+1. Zmodyfikuj właściwość **prekompilowanego nagłówka** .
 
-1. Aby ustawić nazwę pliku, należy zmodyfikować **Prekompilowanego pliku nagłówkowego** właściwości.
+1. Aby ustawić nazwę pliku, zmodyfikuj Właściwość **prekompilowanego pliku nagłówkowego** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
@@ -70,7 +70,7 @@ Aby uzyskać więcej informacji na temat wstępnie skompilowanych nagłówków z
 
 ## <a name="example"></a>Przykład
 
-Rozważmy poniższy kod:
+Spójrzmy na poniższy kod:
 
 ```cpp
 // prog.cpp
@@ -81,10 +81,10 @@ Rozważmy poniższy kod:
 // ...
 ```
 
-Kiedy ten kod jest kompilowany przy użyciu polecenia `CL /YcMYAPP.H PROG.CPP`, kompilator zapisuje wszystkie przetwarzania wstępnego dla AFXWIN.h, RESOURCE.h, i MYAPP.h w pliku wstępnie skompilowanego nagłówka o nazwie MYAPP.pch.
+Gdy ten kod jest kompilowany za pomocą polecenia `CL /YcMYAPP.H PROG.CPP`, kompilator zapisuje wszystkie procesy wstępne dla afxwin. h, Resource. h i MojaApl. h w pliku prekompilowanego nagłówka o nazwie MojaApl. PCH.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
-[Prekompilowane pliki nagłówka](../creating-precompiled-header-files.md)
+[Wstępnie skompilowane pliki nagłówkowe](../creating-precompiled-header-files.md)

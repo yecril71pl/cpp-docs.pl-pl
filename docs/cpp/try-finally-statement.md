@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: a463b807d39addfdaa64b829720266bf0502fa7e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 17f7fb415303ab74f588a2205bc9430127091e96
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188080"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825899"
 ---
 # <a name="try-finally-statement"></a>try-finally — instrukcja
 
@@ -33,26 +33,26 @@ ms.locfileid: "80188080"
 
 Następująca składnia opisuje instrukcję **try-finally** :
 
-> **\_\_spróbuj**<br/>
-> {<br/>
-> &nbsp;&nbsp;&nbsp;kod &nbsp;//chroniony<br/>
-> }<br/>
-> **\_\_finally**<br/>
-> {<br/>
-> &nbsp;&nbsp;&nbsp;kod &nbsp;//zakończenia<br/>
+> **\_\_try**<br/>
+> {\
+> &nbsp;&nbsp;&nbsp;&nbsp;chroniony kod \
+> }\
+> **\_\_Ostateczny**\
+> {\
+> &nbsp;&nbsp;&nbsp;&nbsp;kod zakończenia \
 > }
 
 ## <a name="grammar"></a>Gramatyka
 
 *try-finally-Statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **\_\_try** *złożonej instrukcji* **\_\_finally** *złożonej instrukcji*
+&nbsp;&nbsp;&nbsp;&nbsp;Instrukcja try *compound-statement* złożonej *instrukcji* ** \_" \_finally** " ** \_ \_**
 
-Instrukcja **try-finally** to rozszerzenie firmy Microsoft do języków C i C++ , które umożliwiają aplikacjom docelowym wykonywanie kodu czyszczącego w przypadku przerwania wykonywania bloku kodu. Oczyszczanie składa się z takich zadań, jak cofanie alokacji pamięci, zamykanie plików i zwalnianie dojść do plików. Instrukcja **try-finally** jest szczególnie przydatna w przypadku procedur, które mają kilka miejsc, w których wystąpiło sprawdzenie błędu, który może spowodować przedwcześnie powrót z procedury.
+Instrukcja **try-finally** to rozszerzenie firmy Microsoft do języków C i C++, które umożliwiają aplikacjom docelowym wykonywanie kodu czyszczącego w przypadku przerwania wykonywania bloku kodu. Oczyszczanie składa się z takich zadań, jak cofanie alokacji pamięci, zamykanie plików i zwalnianie dojść do plików. Instrukcja **try-finally** jest szczególnie przydatna w przypadku procedur, które mają kilka miejsc, w których wystąpiło sprawdzenie błędu, który może spowodować przedwcześnie powrót z procedury.
 
-Aby uzyskać informacje pokrewne i przykład kodu, zobacz [Instrukcja try-except](../cpp/try-except-statement.md). Aby uzyskać więcej informacji o ogólnym obsłudze wyjątków, zobacz [strukturalna obsługa wyjątków](../cpp/structured-exception-handling-c-cpp.md). Aby uzyskać więcej informacji na temat obsługi wyjątków w zarządzanych C++aplikacjach za pomocą/CLI, zobacz [Obsługa wyjątków w obszarze/CLR](../extensions/exception-handling-cpp-component-extensions.md).
+Aby uzyskać informacje pokrewne i przykład kodu, zobacz [Instrukcja try-except](../cpp/try-except-statement.md). Aby uzyskać więcej informacji o ogólnym obsłudze wyjątków, zobacz [strukturalna obsługa wyjątków](../cpp/structured-exception-handling-c-cpp.md). Aby uzyskać więcej informacji na temat obsługi wyjątków w aplikacjach zarządzanych przy użyciu języka C++/CLI, zobacz [Obsługa wyjątków w obszarze/CLR](../extensions/exception-handling-cpp-component-extensions.md).
 
 > [!NOTE]
-> Strukturalna obsługa wyjątków działa z Win32 dla plików źródłowych C i C++. Jednakże nie jest specjalnie zaprojektowana dla języka C++. Można zapewnić, że kod będzie bardziej przenośny przy użyciu obsługi wyjątków C++. Ponadto, obsługa wyjątków C++ jest bardziej elastyczna, gdyż może obsługiwać wyjątki dowolnego typu. W C++ przypadku programów zaleca się użycie mechanizmu obsługi C++ wyjątków (instrukcje[try, catch i throw](../cpp/try-throw-and-catch-statements-cpp.md) ).
+> Strukturalna obsługa wyjątków działa z Win32 dla plików źródłowych C i C++. Jednakże nie jest specjalnie zaprojektowana dla języka C++. Można zapewnić, że kod będzie bardziej przenośny przy użyciu obsługi wyjątków C++. Ponadto, obsługa wyjątków C++ jest bardziej elastyczna, gdyż może obsługiwać wyjątki dowolnego typu. W przypadku programów C++ zaleca się używanie mechanizmu obsługi wyjątków C++ (instrukcje[try, catch i throw](../cpp/try-throw-and-catch-statements-cpp.md) ).
 
 Instrukcja złożona po klauzuli **__try** jest sekcją chronioną. Instrukcja złożona po klauzuli **__finally** to procedura obsługi zakończenia. Procedura obsługi określa zestaw akcji, które są wykonywane, gdy Sekcja chroniona zostanie zakończona, bez względu na to, czy sekcja chroniona została zakończona przez wyjątek (nietypowe zakończenie), czy przez Standard (normalne zakończenie).
 
@@ -68,13 +68,13 @@ Jeśli wystąpi wyjątek w bloku **__try** , system operacyjny musi znaleźć pr
 
 Załóżmy na przykład, że seria wywołań funkcji łączy funkcję A z funkcją D, jak pokazano na poniższej ilustracji. Każda funkcja ma jedną procedurę obsługi zakończenia. Jeśli wyjątek jest wywoływany w funkcji D i obsługiwany w, programy obsługi zakończenia są wywoływane w tej kolejności, w której system rozwinięcia stosu: D, C, B.
 
-![Kolejność wykonywania procedury&#45;obsługi zakończenia](../cpp/media/vc38cx1.gif "Kolejność wykonywania procedury&#45;obsługi zakończenia") <br/>
+![Kolejność zakończenia wykonywania programu obsługi&#45;](../cpp/media/vc38cx1.gif "Kolejność zakończenia wykonywania programu obsługi&#45;") <br/>
 Kolejność zakończenia — wykonywanie programu obsługi
 
 > [!NOTE]
 > Zachowanie try-finally różni się od innych języków, które obsługują korzystanie z **finally**, takich jak C#.  Pojedynczy **__try** może mieć jeden, ale nie oba **__finally** i **__except**.  Jeśli oba te elementy mają być używane razem, zewnętrzna Instrukcja try-except musi zawierać wewnętrzną instrukcję try-finally.  Reguły określające, kiedy każdy blok wykonuje się również inaczej.
 
-Aby zapewnić zgodność z poprzednimi wersjami, **_try**, **_finally**i **_leave** są synonimami dla **__try**, **__finally**i **__leave** , chyba że opcja kompilatora [/za \(Disable Extensions)](../build/reference/za-ze-disable-language-extensions.md) jest określona.
+Aby zapewnić zgodność z poprzednimi wersjami, **_try**, **_finally**i **_leave** są synonimami dla **__try**, **__finally**i **__leave** , chyba że jest określona opcja kompilatora [/za \(wyłączanie rozszerzeń języka)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="the-__leave-keyword"></a>Słowo kluczowe __leave
 
@@ -92,7 +92,7 @@ Procedura obsługi zakończenia nie jest wywoływana, jeśli proces zostanie zam
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pisanie procedury obsługi zakończenia](../cpp/writing-a-termination-handler.md)<br/>
 [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>

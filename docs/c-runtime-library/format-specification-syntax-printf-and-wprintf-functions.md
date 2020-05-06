@@ -9,27 +9,27 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 781c90414090ff8a21414c72f744ed275e315d56
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: cf2ef152d8c5ae0209a8a5cca85862f2f03a8f70
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032164"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825865"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Składnia specyfikacji formatu: funkcje printf i wprintf
 
-Różne `printf` funkcje `wprintf` przyjmują ciąg formatu i opcjonalne argumenty i tworzą sformatowaną sekwencję znaków dla danych wyjściowych. Ciąg formatu zawiera zero lub więcej dyrektyw , które są *znakami*literału dla danych wyjściowych lub zakodowanych *specyfikacji konwersji,* które opisują sposób formatowania argumentu w danych wyjściowych. Ten artykuł zawiera opis składni używanej do kodowania specyfikacji konwersji w ciągu formatu. Aby uzyskać listę tych funkcji, zobacz [We/Wy strumienia](../c-runtime-library/stream-i-o.md).
+Różne `printf` i `wprintf` funkcje przyjmują ciąg formatu i opcjonalne argumenty i tworzą sformatowaną sekwencję znaków dla danych wyjściowych. Ciąg formatu zawiera zero lub więcej *dyrektyw*, które są znakami literału dla danych wyjściowych lub zakodowanych *specyfikacji konwersji* , które opisują sposób formatowania argumentu w danych wyjściowych. W tym artykule opisano składnię używaną do kodowania specyfikacji konwersji w ciągu formatu. Aby uzyskać listę tych funkcji, zobacz [przesyłanie strumieniowe we/wy](../c-runtime-library/stream-i-o.md).
 
-Specyfikacja konwersji składa się z opcjonalnych i wymaganych pól w tym formularzu:
+Specyfikacja konwersji składa się z pól opcjonalnych i wymaganych w tej postaci:
 
-**%**[[*flagi*](#flags)] [[*szerokość*](#width)] [. [*precyzja*](#precision)] [[*rozmiar*](#size)] [*typ*](#type)
+**%**[[*flagi*](#flags)] [[*Szerokość*](#width)] [. [*precyzja*](#precision)] [[*rozmiar*](#size)] [*Typ*](#type)
 
-Każde pole specyfikacji konwersji jest znakiem lub liczbą, która oznacza określoną opcję formatu lub specyfikator konwersji. Wymagane pole *typu* określa rodzaj konwersji, która ma być zastosowana do argumentu. Opcjonalne *flagi,* *szerokość*i *precyzyjne* pola kontrolują dodatkowe aspekty formatu, takie jak spacje wiodące lub zera, justyny i wyświetlana precyzja. Pole *rozmiar* określa rozmiar argumentu zużytego i przekonwertowanego.
+Każde pole specyfikacji konwersji jest znakiem lub cyfrą, która oznacza określoną opcję formatu lub specyfikator konwersji. Pole wymagany *Typ* określa rodzaj konwersji, która ma zostać zastosowana do argumentu. Opcjonalne *flagi*, *Szerokość*i *precyzja* kontrolują dodatkowe aspekty formatowania, takie jak spacje wiodące lub zera, uzasadnienie i wyświetlana dokładność. Pole *rozmiar* określa rozmiar zużytego i przekonwertowanego argumentu.
 
-Podstawowa specyfikacja konwersji zawiera tylko znak procentu i znak *typu.* Na przykład `%s` określa konwersję ciągów. Aby znak procentu był wyświetlany, należy użyć składni `%%`. Jeśli znak procentu następuje znak, który nie ma znaczenia jako pole formatu, wywoływany jest nieprawidłowy program obsługi parametrów. Aby uzyskać więcej informacji, zobacz [Sprawdzanie poprawności parametrów](../c-runtime-library/parameter-validation.md).
+Podstawowa specyfikacja konwersji zawiera tylko znak procentu i *Typ* . Na przykład `%s` określa konwersję ciągu. Aby znak procentu był wyświetlany, należy użyć składni `%%`. Jeśli po znaku procentu następuje znak, który nie ma znaczenia jako pola formatu, zostanie wywołana procedura obsługi nieprawidłowego parametru. Aby uzyskać więcej informacji, zobacz [Walidacja parametrów](../c-runtime-library/parameter-validation.md).
 
 > [!IMPORTANT]
-> Dla zabezpieczeń i stabilności, upewnij się, że parametry specyfikacji konwersji nie są zdefiniowane przez użytkownika. Rozważmy na przykład program, który monituje użytkownika o wprowadzenie nazwy, a dane wejściowe przechowuje w zmiennej o nazwie `user_name` będącej ciągiem tekstowym. W celu wyświetlenia wartości zmiennej `user_name` nie należy robić tak:
+> W celu zapewnienia bezpieczeństwa i stabilności upewnij się, że ciągi specyfikacji konwersji nie są zdefiniowane przez użytkownika. Rozważmy na przykład program, który monituje użytkownika o wprowadzenie nazwy, a dane wejściowe przechowuje w zmiennej o nazwie `user_name` będącej ciągiem tekstowym. W celu wyświetlenia wartości zmiennej `user_name` nie należy robić tak:
 >
 > `printf( user_name ); /* Danger!  If user_name contains "%s", program will crash */`
 >
@@ -40,173 +40,175 @@ Podstawowa specyfikacja konwersji zawiera tylko znak procentu i znak *typu.* Na 
 <a name="type"></a>
 
 > [!NOTE]
-> W programie Visual Studio 2015 `printf` i `scanf` rodziny funkcji zostały zadeklarowane jako **wbudowane** i przeniesione do `<stdio.h>` i `<conio.h>` nagłówki. Jeśli migrujesz starszy kod, może zostać wyświetlony *LNK2019* w związku z tymi funkcjami. Aby uzyskać więcej informacji, zobacz [Visual C++ change history 2003 - 2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
+> W programie Visual Studio 2015 `printf` i `scanf` Rodzina funkcji zostały zadeklarowane jako **wbudowane** i przenoszone do `<stdio.h>` nagłówków `<conio.h>` i. W przypadku migrowania starszego kodu w połączeniu z tymi funkcjami może być widoczny *LNK2019* . Aby uzyskać więcej informacji, zobacz [Visual C++ historię zmian 2003-2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
-## <a name="type-conversion-specifier"></a>Specyfikator konwersji typu
+## <a name="type-conversion-specifier"></a>Specyfikator konwersji typów
 
-Znak specyfikatora konwersji *typu* określa, czy interpretować odpowiedni argument jako znak, ciąg, wskaźnik, liczbę całkowitą lub liczbę zmiennoprzecinkową. Znak *typu* jest jedynym wymaganym polem specyfikacji konwersji i pojawia się po wszystkich polach opcjonalnych.
+Znak specyfikatora konwersji *typu* określa, czy odpowiedni argument ma być interpretowany jako znak, ciąg, wskaźnik, liczba całkowita, czy liczba zmiennoprzecinkowa. Znak *typu* jest jedynym wymaganym polem specyfikacji konwersji i pojawia się po dowolnych opcjonalnych polach.
 
-Argumenty, które następują po ciągu formatu są interpretowane zgodnie z odpowiednim znakiem *typu* i opcjonalnym prefiksem [rozmiaru.](#size) Konwersje dla `char` typów `wchar_t` znaków i są określane za pomocą **c** lub **C,** a ciągi znaków jedno-bajtowych i wielobędowych lub szerokich są określane za pomocą **s** lub **S**, w zależności od używanej funkcji formatowania. Argumenty znaków i ciągów, które są określone `char` przy `char*` `printf` użyciu **c** i `wchar_t` `wchar_t*` **s** są interpretowane jako i przez funkcje rodzinne lub jako i przez `wprintf` funkcje rodzinne. Argumenty znaków i ciągów, które są określone `wchar_t` przy `wchar_t*` `printf` użyciu **C** i `char` `char*` **S** są interpretowane jako i przez funkcje rodzinne lub jako i przez `wprintf` funkcje rodzinne. To zachowanie jest specyficzne dla firmy Microsoft.
+Argumenty występujące po ciągu formatu są interpretowane według odpowiedniego znaku *typu* i opcjonalnego prefiksu [rozmiaru](#size) . `char` Konwersje dla typów znaków i `wchar_t` są określane przy użyciu języka **c** lub **c**, a ciągi o pojedynczym bajcie i wielu bajtach są określane za pomocą **s** lub **s**, w zależności od tego, która funkcja formatowania jest używana. Argumenty znaków i ciągów, które są określone przy użyciu języka **c** i **s** , `char` są `char*` interpretowane jako i `printf` przez funkcje `wchar_t` rodzinne `wchar_t*` lub `wprintf` jako i przez funkcje rodzinne. Argumenty znaków i ciągów, które są określone przy użyciu języka **C** i **S** , `wchar_t` są `wchar_t*` interpretowane jako i `printf` przez funkcje `char` rodzinne `char*` lub `wprintf` jako i przez funkcje rodzinne. To zachowanie jest zależne od firmy Microsoft.
 
-Typy całkowite, `short`takie `int` `long`jak `long long`, `unsigned` , , i ich warianty, są określane za pomocą **d**, **i**, **o**, **u**, **x**i **X**. Typy zmiennoprzecinowe, `float`takie jak , `double`i `long double`, są określone za pomocą , **A**, **e**, **E**, **f**, **F**, **g**i **G**. **a** Domyślnie, chyba że są one modyfikowane przez prefiks *rozmiaru,* argumenty liczby całkowitej są zmuszane do `int` pisania, a argumenty zmiennoprzecinowe są przymuszone do `double`. W systemach 64-bitowych `int` wartość jest wartością 32-bitową; w związku z tym 64-bitowe liczby całkowite zostaną obcięte, gdy są sformatowane dla danych wyjściowych, chyba że używany jest prefiks *rozmiaru* **ll** lub **I64.** Typy wskaźników, które są określone przez **p** używać domyślnego rozmiaru wskaźnika dla platformy.
+Typy całkowite, takie `short`jak `int`, `long`, `long long`, i ich `unsigned` warianty, są określane przy użyciu **d**, **i**, **o**, **u**, **x**i **x**. Typy zmiennoprzecinkowe, takie jak `float`, `double`, i `long double`, są określane **przy użyciu, a, e** **,** **e** **,** **f**, **f**, **g**i **g**. Domyślnie, chyba że są modyfikowane przez prefiks *rozmiaru* , argumenty całkowite są przekształcane na `int` typ, a argumenty zmiennoprzecinkowe są przekształcane na. `double` W systemach 64-bitowych `int` jest wartością 32-bitową; w związku z tym 64-bitowe liczby całkowite będą obcinane, gdy są sformatowane do danych wyjściowych, chyba że używany jest prefiks *size* **I64** **lub nie** . Typy wskaźników, które są określone przez **p** , używają domyślnego rozmiaru wskaźnika dla platformy.
 
 > [!NOTE]
-> **Specyficzne dla firmy Microsoft:** Znak typu **Z** oraz zachowanie znaków **typu c**, **C**, **s**i `printf` **S,** gdy są używane z funkcjami i funkcjami, `wprintf` są rozszerzeniami firmy Microsoft. Norma ISO C używa **c** i **s** konsekwentnie dla wąskich znaków i ciągów znaków oraz **C** i **S** dla szerokich znaków i ciągów we wszystkich funkcjach formatowania.
+> **Specyficzne dla firmy Microsoft:**\
+> Znak **z typu z** oraz zachowanie symboli **c**, **c**, **s**i **s** , gdy są one używane z funkcjami `printf` i `wprintf` są rozszerzeniami firmy Microsoft. Standard ISO C używa **c** i **s** konsekwentnie dla wąskich znaków i ciągów, a **C** i **s** dla szerokich znaków i ciągów, we wszystkich funkcjach formatowania.
 
-### <a name="type-field-characters"></a>Typy znaków pola
+### <a name="type-field-characters"></a>Znaki pola typu
 
-|Znak typu|Argument|Format wyjściowy|
+|Znak typu|Argument|Format danych wyjściowych|
 |--------------------|--------------|-------------------|
-|**C**|Znak|W przypadku `printf` użycia z funkcjami określa znak jedno bajtowy; gdy jest `wprintf` używany z funkcjami, określa szeroki znak.|
-|**C**|Znak|W przypadku `printf` użycia z funkcjami określa szeroki znak; gdy jest `wprintf` używany z funkcjami, określa znak jedno bajtowy.|
-|**D**|Liczba całkowita|Podpisana dziesiętna ćwięk.|
-|**I**|Liczba całkowita|Podpisana dziesiętna ćwięk.|
-|**o**|Liczba całkowita|Niepodpisana ósemka całkowitej.|
-|**U**|Liczba całkowita|Niepodpisaną dziesiętną całkowitej.|
-|**X**|Liczba całkowita|Niepodpisana szesnastkowa tynekcjowa; używa "abcdef".|
-|**X**|Liczba całkowita|Niepodpisana szesnastkowa tynekcjowa; używa "ABCDEF".|
-|**E**|Zmiennoprzecinkowych|Podpisana wartość, która ma formę [-]*d.dddd*__e±__*dd*\[*d*], gdzie *d* jest jedną cyfrą dziesiętną, *dddd* jest jedną lub więcej cyfr dziesiętnych w zależności od określonej precyzji lub sześć domyślnie, a *dd*\[*d*] to dwie lub trzy cyfry dziesiętne w zależności od [formatu wyjściowego](../c-runtime-library/set-output-format.md) i rozmiaru wykładnika.|
-|**E**|Zmiennoprzecinkowych|Identyczne z formatem **e,** z tą różnicą, że **E** zamiast **e** wprowadza wykładnik.|
-|**F**|Zmiennoprzecinkowych|Podpisana wartość, która ma formularz [-]*dddd*__.__ *dddd*, gdzie *dddd* jest jedną lub więcej cyfr dziesiętnych. Liczba cyfr przed przecinem dziesiętnym zależy od wielkości liczby, a liczba cyfr po przecinku zależy od żądanej precyzji lub domyślnie sześciu.|
-|**F**|Zmiennoprzecinkowych|Identyczne z formatem **f,** z tą różnicą, że dane wyjściowe nieskończoności i nan są kapitalizowane.|
-|**G**|Zmiennoprzecinkowych|Podpisane wartości są wyświetlane w formacie **f** lub **e,** w zależności od tego, która z tych wartości jest bardziej kompaktowa dla danej wartości i precyzji. Format **e** jest używany tylko wtedy, gdy wykładnik wartości jest mniejszy niż -4 lub większy lub równy argumentowi *precyzji.* Końcowe zera są obcinane, a przecinek dziesiętnych pojawia się tylko wtedy, gdy podąża za nim jedna lub więcej cyfr.|
-|**G**|Zmiennoprzecinkowych|Identyczny z formatem **g,** z tą różnicą, że **E**, a nie **e,** wprowadza wykładnik (w stosownych przypadkach).|
-|**A**|Zmiennoprzecinkowych|Podpisana sześciokątna podwójna wartość zmiennoprzecinkowa, która ma formę [-]0x*h.hhhh*__p±__*dd*, gdzie *h.hhhh* są cyframi sześciokątnymi (przy użyciu dolnych liter) mantysi, a *dd* są jedną lub więcej cyfr dla wykładnika. Dokładność określa liczbę cyfr po punkcie.|
-|**A**|Zmiennoprzecinkowych|Podpisana sześciokątna podwójna wartość zmiennoprzecinkowa, która ma formę [-]0X*h.hhhh*__P±__*dd*, gdzie *h.hhhh* są cyframi szesnastkowymi (przy użyciu wielkich liter) mantysi, a *dd* są jedną lub kilkoma cyframi wykładnika. Dokładność określa liczbę cyfr po punkcie.|
-|**N**|Wskaźnik do liczby całkowitej|Liczba znaków, które zostały pomyślnie zapisane do tej pory do strumienia lub buforu. Ta wartość jest przechowywana w całkowitej liczby, której adres jest podany jako argument. Rozmiar liczby całkowitej wskazywalnej może być kontrolowany przez prefiks specyfikacji rozmiaru argumentu. **Specyfikator n** jest domyślnie wyłączony; informacje można znaleźć w ważnej notatce bezpieczeństwa.|
-|**P**|Typ wskaźnika|Wyświetla argument jako adres w cyfrach szesnastowych.|
-|**S**|Ciąg|W przypadku `printf` użycia z funkcjami określa jedno-lub wielo bajtowy ciąg znaków; gdy jest `wprintf` używany z funkcjami, określa ciąg znaków szerokoznakowych. Znaki są wyświetlane do pierwszego znaku null lub do momentu osiągnięcia wartości *precyzji.*|
-|**S**|Ciąg|W przypadku `printf` użycia z funkcjami określa ciąg znaków szerokich; gdy jest `wprintf` używany z funkcjami, określa jedno-bajtowy lub wielo bajtowy ciąg znaków. Znaki są wyświetlane do pierwszego znaku null lub do momentu osiągnięcia wartości *precyzji.*|
-|**Z**|`ANSI_STRING`lub `UNICODE_STRING` struktura|Gdy adres [ANSI_STRING](/windows/win32/api/ntdef/ns-ntdef-string) lub [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) struktury jest przekazywana jako argument, wyświetla ciąg zawarty w buforze `Buffer` wskazywany przez pole struktury. Użyj prefiksu modyfikatora `UNICODE_STRING` *rozmiaru* **w,** aby określić argument , `%wZ`na przykład . Pole `Length` struktury musi być ustawione na długość, w bajtach, ciągu. Pole `MaximumLength` konstrukcji musi być ustawione na długość, w bajtach, buforu.<br /><br /> Zazwyczaj znak typu **Z** jest używany tylko w funkcjach debugowania sterowników, które używają specyfikacji konwersji, takich jak `dbgPrint` i `kdPrint`.|
+|**s**|Znak|Gdy jest używany `printf` z funkcjami, określa znak jednobajtowy; gdy jest używany `wprintf` z funkcjami, określa znak dwubajtowy.|
+|**S**|Znak|Gdy jest używany `printf` z funkcjami, określa znak dwubajtowy; gdy jest używany `wprintf` z funkcjami, określa znak jednobajtowy.|
+|**Wykres**|Liczba całkowita|Cyfra dziesiętna ze znakiem.|
+|**Mam**|Liczba całkowita|Cyfra dziesiętna ze znakiem.|
+|**wyjścia**|Liczba całkowita|Liczba całkowita bez znaku.|
+|**'t**|Liczba całkowita|Liczba całkowita dziesiętna bez znaku.|
+|**y**|Liczba całkowita|Szesnastkowa liczba całkowita bez znaku; używa "abcdef".|
+|**X**|Liczba całkowita|Szesnastkowa liczba całkowita bez znaku; używa "ABCDEF".|
+|**adres**|Liczba zmiennoprzecinkowa|Wartość ze znakiem, która ma postać [-]*d. dddd*__e ±__*DD*\[*d*], gdzie *d* jest jedną cyfrą dziesiętną, *dddd* to co najmniej jedna cyfra dziesiętna w zależności od określonej precyzji lub sześć domyślnie, a *DD*\[*d*] to dwie lub trzy cyfry dziesiętne, w zależności od [formatu wyjściowego](../c-runtime-library/set-output-format.md) i rozmiaru wykładnika.|
+|**E**|Liczba zmiennoprzecinkowa|Identyczny z formatem **e** , z tą różnicą, że **e** zamiast **e** wprowadza wykładnik.|
+|**n**|Liczba zmiennoprzecinkowa|Wartość ze znakiem, która ma postać [-]*dddd*__.__ *dddd*, gdzie *dddd* to co najmniej jedna cyfra dziesiętna. Liczba cyfr przed punktem dziesiętnym zależy od wielkości liczby, a liczba cyfr po przecinku jest zależna od wymaganej precyzji lub sześciu domyślnie.|
+|**N**|Liczba zmiennoprzecinkowa|Identyczny z formatem **f** , z wyjątkiem tego, że nieskończoność i Nan dane wyjściowe są pisane wielkimi literami.|
+|**g**|Liczba zmiennoprzecinkowa|Wartości podpisane są wyświetlane w formacie **f** lub **e** , w zależności od tego, który jest bardziej zwarty dla danej wartości i dokładności. Format **e** jest używany tylko wtedy, gdy wykładnik wartości jest mniejszy niż-4 lub większy lub równy argumentowi *precyzji* . Końcowe zera są obcinane, a punkt dziesiętny pojawia się tylko wtedy, gdy jedna lub więcej cyfr należy do niego.|
+|**G**|Liczba zmiennoprzecinkowa|Identyczny z formatem **g** , z tą różnicą, że **e**, zamiast **e**, wprowadza wykładnik (tam, gdzie to konieczne).|
+|**z**|Liczba zmiennoprzecinkowa|Podpisana szesnastkowa wartość zmiennoprzecinkowa o podwójnej precyzji, która ma postać [-] 0x*h. hhhh*__p ±__*DD*, gdzie *h. hhhh* to cyfry szesnastkowe (przy użyciu małych liter) mantysy, a *DD* to jedna lub więcej cyfr dla wykładnika. Precyzja określa liczbę cyfr po punkcie.|
+|**A**|Liczba zmiennoprzecinkowa|Podpisana szesnastkowa wartość zmiennoprzecinkowa o podwójnej precyzji, która ma postać [-] 0X*h. hhhh*__P ±__*DD*, gdzie *h. hhhh* to cyfry szesnastkowe (przy użyciu wielkich liter) mantysy, a *DD* to jedna lub więcej cyfr dla wykładnika. Precyzja określa liczbę cyfr po punkcie.|
+|**Azotan**|Wskaźnik na liczbę całkowitą|Liczba znaków, które zostały pomyślnie wpisane do strumienia lub buforu. Ta wartość jest przechowywana w postaci liczby całkowitej, której adres jest podawany jako argument. Rozmiar liczby całkowitej wskazywanej w można kontrolować przy użyciu prefiksu specyfikacji rozmiaru argumentu. Specyfikator **n** jest domyślnie wyłączony; Aby uzyskać więcej informacji, zobacz ważne uwagi dotyczące zabezpieczeń.|
+|**St**|Typ wskaźnika|Wyświetla argument jako adres w cyfrach szesnastkowych.|
+|**wolumin**|String|Gdy jest używany `printf` z funkcjami, Określa jednobajtowy lub wielobajtowy ciąg znaków; w przypadku użycia `wprintf` z funkcjami określa ciąg znaków dwubajtowych. Znaki są wyświetlane do pierwszego znaku null lub do czasu osiągnięcia wartości *precyzji* .|
+|**S**|String|Gdy jest używany `printf` z funkcjami, określa ciąg znaków dwubajtowych; gdy jest używany `wprintf` z funkcjami, określa ciąg znaków jednobajtowych lub wielobajtowych. Znaki są wyświetlane do pierwszego znaku null lub do czasu osiągnięcia wartości *precyzji* .|
+|**Z**|`ANSI_STRING`lub `UNICODE_STRING` struktura|Gdy jako argument jest przenoszona adres [ANSI_STRING](/windows/win32/api/ntdef/ns-ntdef-string) lub struktury [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) , program wyświetla ciąg zawarty w buforze wskazywanym przez `Buffer` pole struktury. Użyj prefiksu modyfikatora rozmiaru **w** , aby określić `UNICODE_STRING` argument — na przykład `%wZ`. *size* W `Length` polu struktury musi być ustawiona Długość (w bajtach) ciągu. W `MaximumLength` polu struktury musi być ustawiona Długość (w bajtach) buforu.<br /><br /> Zazwyczaj znak **z typu z** jest używany tylko w funkcjach debugowania sterowników, które używają specyfikacji konwersji, takich jak `dbgPrint` i `kdPrint`.|
 
-Począwszy od programu Visual Studio 2015, jeśli argument odpowiadający specyfikatorowi konwersji zmiennoprzecinkowej ( a , **A**, **e**, **E**, **f**, **F**, **g**, **G**) jest nieskończony, nieokreślony lub NaN, sformatowane dane wyjściowe są zgodne ze**standardem**C99. W tej tabeli wymieniono sformatowane dane wyjściowe:
+Począwszy od programu Visual Studio 2015, jeśli argument, który odpowiada specyfikatorowi konwersji zmiennoprzecinkowej (**a**, **a**, **e**, **e**, **f**, **f**, **g**, **g**) jest nieskończony, nieokreślony lub NaN, sformatowane dane wyjściowe są zgodne ze standardem C99. W tej tabeli wymieniono sformatowane dane wyjściowe:
 
 |Wartość|Dane wyjściowe|
 |-----------|------------|
-|Nieskończoności|`inf`|
+|nieskończoność|`inf`|
 |Cichy NaN|`nan`|
-|Sygnalizacja NaN|`nan(snan)`|
+|Sygnalizowanie NaN|`nan(snan)`|
 |Nieokreślony NaN|`nan(ind)`|
 
-Każda z tych wartości może być poprzedzony znakiem. Jeśli specyfikator konwersji *typu* zmiennoprzecinkowego jest wielkimi literami, dane wyjściowe są również formatowane wielkimi literami. Na przykład, jeśli specyfikator `%F` formatu `%f`jest zamiast , `INF` nieskończoność `inf`jest sformatowany jako zamiast . Funkcje `scanf` można również przeanalizować te ciągi, dzięki czemu `printf` wartości `scanf` te można zrobić w obie strony przez i funkcje.
+Wszystkie te wartości mogą być poprzedzone znakiem. Jeśli znak specyfikatora konwersji *typu* zmiennoprzecinkowego jest wielką literą, dane wyjściowe są również formatowane wielkimi literami. Na przykład jeśli specyfikator formatu `%F` jest zamiast `%f`, nieskończoność jest formatowana jako `INF` zamiast. `inf` `scanf` Funkcje te mogą również analizować te ciągi, dzięki czemu te wartości mogą przekonywać rundy `printf` i `scanf` funkcje.
 
-Przed programem Visual Studio 2015 program CRT używał innego, niestandardowego formatu dla wartości danych wyjściowych nieskończonych, nieokreślonych i NaN:
+Przed uruchomieniem programu Visual Studio 2015 CRT użył innego niestandardowego formatu dla danych wyjściowych nieskończonych, nieokreślonych i NaN:
 
 |Wartość|Dane wyjściowe|
 |-----------|------------|
 |+ nieskończoność|`1.#INF`*cyfry losowe*|
-|- nieskończoność|`-1.#INF`*cyfry losowe*|
-|Nieokreślony (tak samo jak cichy NaN)|*cyfry* `.#IND` *losowe cyfry*|
-|NaN|*cyfry* `.#NAN` *losowe cyfry*|
+|-nieskończoność|`-1.#INF`*cyfry losowe*|
+|Nieokreślony (taki sam jak cichy NaN)|`.#IND` *cyfry losowe* *digit*|
+|NaN|`.#NAN` *cyfry losowe* *digit*|
 
-Każdy z nich mógł być poprzedzony znakiem i mógł być sformatowany nieco inaczej w zależności od szerokości i precyzji pola, czasami z nietypowymi efektami. Na przykład `printf("%.2f\n", INFINITY)` można `1.#J` wydrukować, ponieważ #INF będzie "zaokrąglone" do 2 cyfr precyzji.
-
-> [!NOTE]
-> Jeśli argument, który `%s` odpowiada `%S`lub `Buffer` , lub pole `%Z`argumentu, który odpowiada , jest wskaźnik null, "(null)" jest wyświetlany.
+Dowolne z tych elementów mogło zostać poprzedzone znakiem i być sformatowane nieco inaczej w zależności od szerokości pola i precyzji, czasami z nietypowymi skutkami. Na przykład można `printf("%.2f\n", INFINITY)` wydrukować `1.#J` , ponieważ #INF będzie "zaokrąglona" do 2 cyfr dokładności.
 
 > [!NOTE]
-> We wszystkich formatach wykładniczych minimalna liczba cyfr wykładnika do wyświetlenia wynosi dwa, używając trzech tylko wtedy, gdy jest to konieczne. Za pomocą funkcji [_set_output_format](../c-runtime-library/set-output-format.md) można ustawić liczbę cyfr wyświetlanych na trzy dla zgodności z poprzednimi kodami napisanych dla programu Visual Studio 2013 i wcześniej.
+> Jeśli argument, który odnosi się `%s` do `%S`lub lub `Buffer` pola argumentu, który odpowiada `%Z`, jest wskaźnikiem typu null, zostanie wyświetlony komunikat "(null)".
+
+> [!NOTE]
+> We wszystkich formatach wykładniczych minimalna liczba cyfr do wyświetlenia jest równa 2, przy użyciu trzech tylko w razie potrzeby. Za pomocą funkcji [_set_output_format](../c-runtime-library/set-output-format.md) można ustawić liczbę cyfr wyświetlanych na trzy w celu zachowania zgodności z kodem zapisanym dla Visual Studio 2013 i wcześniej.
 
 > [!IMPORTANT]
-> Ponieważ `%n` format jest z natury niezabezpieczony, jest domyślnie wyłączony. Jeśli `%n` wystąpi w ciągu formatu, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [obszarze Sprawdzanie poprawności parametru.](../c-runtime-library/parameter-validation.md) Aby `%n` włączyć obsługę, zobacz [_set_printf_count_output](../c-runtime-library/reference/set-printf-count-output.md).
+> Ponieważ format `%n` jest z natury niezabezpieczony, jest domyślnie wyłączony. Jeśli `%n` wystąpi w ciągu formatu, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../c-runtime-library/parameter-validation.md). Aby włączyć `%n` obsługę, zobacz [_set_printf_count_output](../c-runtime-library/reference/set-printf-count-output.md).
 
 <a name="flags"></a>
 
-## <a name="flag-directives"></a>Dyrektywy bandery
+## <a name="flag-directives"></a>Dyrektywy flag
 
-Pierwsze opcjonalne pole w specyfikacji konwersji zawiera *dyrektywy flagowe,* zero lub więcej znaków flagi określających wyjściowe uzasadnienie i kontrolę danych wyjściowych znaków, pustych pól, zer wiodących, punktów dziesiętnych oraz przedrostków ósemkowych i szesnastkowych. Więcej niż jedna dyrektywa flagi może pojawić się w specyfikacji konwersji, a znaki flagi mogą być wyświetlane w dowolnej kolejności.
+Pierwsze opcjonalne pole w specyfikacji konwersji zawiera *dyrektywy flag*, zero lub więcej znaków flagi, które określają Justowanie danych wyjściowych i kontrolowanie danych wyjściowych znaków, pustych, wiodących zer, punktów dziesiętnych i szesnastkowych prefiksów. W specyfikacji konwersji może pojawić się więcej niż jedna dyrektywa flag, a znaki flagi mogą pojawiać się w dowolnej kolejności.
 
-### <a name="flag-characters"></a>Oznaczanie znaków
+### <a name="flag-characters"></a>Znaki flagi
 
 |Flaga|Znaczenie|Domyślne|
 |----------|-------------|-------------|
-|**-**|Wyrównanie wyniku do lewej w obrębie danej szerokości pola.|Wyrównanie do prawej.|
-|**+**|Użyj znaku (+ lub -), aby prefiks wartości wyjściowej, jeśli jest typu podpisanego.|Znak jest wyświetlany tylko dla wartości podpisanych ujemnych (-).|
-|**0**|Jeśli *szerokość* jest poprzedzony przez **0**, zera wiodące są dodawane do momentu osiągnięcia minimalnej szerokości. Jeśli zarówno **0,** jak i **-** pojawiają się, **0** jest ignorowana. Jeśli dla formatu liczb całkowitych określony jest **0** (**i**, **u**, **x,** **X**, `%04.d` **o**, **d)** i specyfikacja precyzji jest również dostępna — na przykład — **0** jest ignorowana. Jeśli dla formatu zmiennoprzecinkowego **a** lub **A** określono **0,** zera wiodące `0x` `0X` są dołączane do mantysi, po lub prefiksie.|Bez dopełnienie.|
-|**puste** (' ')|Użyj pustego, aby prefiks wartości wyjściowej, jeśli jest podpisana i dodatnia. Puste jest ignorowane, jeśli pojawią się flagi puste i +.|Nie pojawia się puste.|
-|**#**|Gdy jest używany w formacie **o**, **x** **#** lub **X,** flaga używa 0, 0x lub 0X, odpowiednio, do prefiksu dowolnej wartości wyjściowej niezerowej.|Nie pojawia się puste.|
-||Gdy jest używany w formacie **e**, **E**, **f**, **#** **F**, **a**lub **A,** flaga wymusza wartość wyjściową, aby zawierała przecinek dziesiętnych.|Przecinka dziesiętna jest wyświetlana tylko wtedy, gdy są zgodne z jego danymi.|
-||Gdy jest używany w formacie **g** lub **#** **G,** flaga wymusza wartość wyjściową zawierać dziesiętny punkt i zapobiega obcinaniu końcowych zer.<br /><br /> Ignorowane w przypadku użycia z **c**, **d**, **i**, **u**, lub **s**.|Przecinka dziesiętna jest wyświetlana tylko wtedy, gdy są zgodne z jego danymi. Końcowe zera są obcinane.|
+|**-**|Wyrównaj wynik z lewej strony do pola.|Wyrównaj do prawej.|
+|**+**|Użyj znaku (+ lub-), aby utworzyć prefiks wartości wyjściowej, jeśli jest ona typu ze znakiem.|Znak jest wyświetlany tylko w przypadku ujemnych wartości podpisanych (-).|
+|**0**|Jeśli *Szerokość* jest poprzedzona przez **0**, zera wiodące są dodawane do momentu osiągnięcia minimalnej szerokości. Jeśli wartość **0** i **-** pojawia się, wartość **0** jest ignorowana. Jeśli określono **wartość 0** dla formatu liczb całkowitych **(i**, **u**, **x**, **x**, **o**, **d**), a Specyfikacja precyzji jest również dostępna — na `%04.d`przykład — wartość **0** jest ignorowana. Jeśli **wartość 0** jest określona dla formatu **a** lub zmiennoprzecinkowego, zera wiodące są poprzedzone mantysy po `0x` prefiksie **lub.** `0X`|Brak dopełnienia.|
+|**puste** (' ')|Użyj pustej wartości, aby prefiksować wartość wyjściową, jeśli jest ona podpisana i dodatnia. Wartość pusta jest ignorowana, jeśli są wyświetlane flagi puste i +.|Nie pojawia się żadne puste.|
+|**#**|Gdy jest używany z formatem **o**, **x**lub **x** , **#** flaga używa odpowiednio 0, 0x lub 0x, aby prefiksować dowolną wartość wyjściową różną od zera.|Nie pojawia się żadne puste.|
+||Gdy jest używany z **e**, **e**, **f**, **f**, **a**lub w formacie, **A** **#** flaga wymusza wartość wyjściową, aby zawierała separator dziesiętny.|Punkt dziesiętny jest wyświetlany tylko wtedy, gdy cyfry są zgodne.|
+||Gdy jest używany z formatem **g** lub **g** , **#** flaga wymusza wartość wyjściową, aby zawierała przecinek dziesiętny i uniemożliwia obcinanie końcowych zer.<br /><br /> Ignorowane, gdy jest używany z **c**, **d**, **i**, **u**lub **s**.|Punkt dziesiętny jest wyświetlany tylko wtedy, gdy cyfry są zgodne. Końcowe zera są obcinane.|
 
 <a name="width"></a>
 
 ## <a name="width-specification"></a>Specyfikacja szerokości
 
-W specyfikacji konwersji opcjonalne pole specyfikacji szerokości jest wyświetlane po wszystkich *znakach flag.* Argument *width* jest nienajmową liczbą dziesiętną, która kontroluje minimalną liczbę znaków, które są dane wyjściowe. Jeśli liczba znaków w wartości wyjściowej jest mniejsza niż określona szerokość, puste miejsca są dodawane po lewej lub**-** prawej stronie wartości — w zależności od tego, czy określono flagę wyrównania do lewej ( ) do momentu osiągnięcia minimalnej szerokości. Jeśli *szerokość* jest poprzedzony przez 0, zera wiodące są dodawane do liczby całkowitej lub zmiennoprzecinkowych konwersji, aż do osiągnięcia minimalnej szerokości, z wyjątkiem, gdy konwersja jest nieskończoności lub NaN.
+W specyfikacji konwersji pole opcjonalnej specyfikacji szerokości pojawia się po każdym z *flag* znaków. Argument *Width* jest nieujemną liczbą całkowitą dziesiętną, która określa minimalną liczbę znaków, które są wyprowadzane. Jeśli liczba znaków w wartości wyjściowej jest mniejsza niż określona szerokość, puste wartości są dodawane do lewej lub prawej strony z wartościami — w zależności od tego, czy jest określona flaga wyrównania w lewo (**-**), aż do osiągnięcia minimalnej szerokości. Jeśli *Szerokość* jest poprzedzona przez 0, zera wiodące są dodawane do liczby całkowitej lub konwersji zmiennoprzecinkowej do momentu osiągnięcia minimalnej szerokości, z wyjątkiem sytuacji, gdy konwersja jest nieskończona lub NaN.
 
-Specyfikacja szerokości nigdy nie powoduje, że wartość ma być obcięty. Jeśli liczba znaków w wartości wyjściowej jest większa niż określona szerokość lub jeśli *szerokość* nie jest podana, wszystkie znaki wartości są dane wyjściowe, z zastrzeżeniem *specyfikacji precyzji.*
+Specyfikacja szerokości nigdy nie powoduje obcięcia wartości. Jeśli liczba znaków w wartości wyjściowej jest większa niż określona szerokość lub *Szerokość* nie zostanie podana, wszystkie znaki wartości są wyprowadzane zgodnie ze specyfikacją *precyzji* .
 
-Jeśli specyfikacja szerokości jest gwiazdką`*` `int` ( ), argument z listy argumentów dostarcza wartość. Argument *width* musi poprzedzać wartość sformatowaną na liście argumentów, jak pokazano w tym przykładzie:
+Jeśli Specyfikacja szerokości jest gwiazdką (`*`), `int` argument z listy argumentów dostarcza wartość. Argument *Width* musi poprzedzać wartość, która jest formatowana na liście argumentów, jak pokazano w poniższym przykładzie:
 
 `printf("%0*d", 5, 3);  /* 00003 is output */`
 
-Brakujące lub małe wartości *szerokości* w specyfikacji konwersji nie powoduje obcinania wartości wyjściowej. Jeśli wynik konwersji jest szerszy niż wartość *szerokości,* pole zostanie rozwinięte, aby zawierało wynik konwersji.
+Brakująca lub niewielka wartość *szerokości* w specyfikacji konwersji nie powoduje obcięcia wartości wyjściowej. Jeśli wynik konwersji jest szerszy niż wartość *szerokości* , pole zostanie rozwinięte, aby zawierało wynik konwersji.
 
 <a name="precision"></a>
 
-## <a name="precision-specification"></a>Specyfikacja precyzji
+## <a name="precision-specification"></a>Specyfikacja dokładności
 
-W specyfikacji konwersji trzecim opcjonalnym polem jest specyfikacja precyzji. Składa się z kropki (.), po której następuje nieujemna liczba całkowita dziesiętna, która w zależności od typu konwersji określa liczbę znaków ciągu, liczbę miejsc dziesiętnych lub liczbę cyfr znaczących, które mają być dane wyjściowe.
+W specyfikacji konwersji trzecie pole opcjonalne jest specyfikacją precyzji. Zawiera kropkę (.), a następnie nieujemną liczbę całkowitą dziesiętną, która w zależności od typu konwersji określa liczbę znaków ciągu, liczbę miejsc dziesiętnych lub liczbę cyfr znaczących, które mają być wyprowadzane.
 
-W przeciwieństwie do specyfikacji szerokości, specyfikacja precyzji może spowodować obcięcie wartości wyjściowej lub zaokrąglenie wartości zmiennoprzecinkowej. Jeśli *precyzja* jest określona jako 0, a wartość do konwersji wynosi 0, wynik nie jest wynikiem wyjściowym znaków, jak pokazano w tym przykładzie:
+W przeciwieństwie do specyfikacji szerokości, Specyfikacja dokładności może spowodować Obcinanie wartości wyjściowej lub zaokrąglenie wartości zmiennoprzecinkowej. Jeśli *precyzja* jest określona jako 0, a wartość do przekonwertowania to 0, wynik nie ma znaków wyjściowych, jak pokazano w tym przykładzie:
 
 `printf( "%.0d", 0 );      /* No characters output */`
 
-Jeśli specyfikacja precyzji jest\*gwiazdką `int` ( ), argument z listy argumentów dostarcza wartość. Na liście argumentów argument *precyzji* argument musi poprzedzać wartość, która jest sformatowana, jak pokazano w tym przykładzie:
+Jeśli Specyfikacja dokładności jest gwiazdką (\*), `int` argument z listy argumentów dostarcza wartość. Na liście argumentów argument *dokładności* musi poprzedzać wartość, która jest formatowana, jak pokazano w poniższym przykładzie:
 
 `printf( "%.*f", 3, 3.14159265 );  /* 3.142 output */`
 
-Znak *typu* określa interpretację *precyzji* lub domyślną precyzję po *pominięciu precyzji,* jak pokazano w poniższej tabeli.
+Znak *typu* określa interpretację *dokładności* lub precyzję domyślną, gdy *precyzja* zostanie pominięta, jak pokazano w poniższej tabeli.
 
-### <a name="how-precision-values-affect-type"></a>Jak wartości precyzji wpływają na typ
+### <a name="how-precision-values-affect-type"></a>Jak wartości dokładności mają wpływ na typ
 
 |Typ|Znaczenie|Domyślne|
 |----------|-------------|-------------|
-|**a**, **A**|Dokładność określa liczbę cyfr po punkcie.|Domyślna precyzja to 13. Jeśli dokładność wynosi 0, nie jest drukowany **#** żaden punkt dziesiętny, chyba że używana jest flaga.|
-|**c**, **C**|Precyzja nie ma wpływu.|Znak jest drukowany.|
-|**d**, **i**, **o**, **u**, **x**, **X**|Dokładność określa minimalną liczbę cyfr do wydrukowania. Jeśli liczba cyfr w argumie jest mniejsza niż *dokładność,* wartość wyjściowa jest wyściełana po lewej stronie zerami. Wartość nie jest obcinana, gdy liczba cyfr przekracza *dokładność*.|Domyślna precyzja to 1.|
-|**e**, **E**|Dokładność określa liczbę cyfr, które mają być drukowane po przecinku dziesiętnym. Ostatnia wydrukowana cyfra jest zaokrąglana.|Domyślna precyzja to 6. Jeśli *dokładność* wynosi 0 lub kropka (.) pojawia się bez liczby po niej, nie jest drukowany punkt dziesiętny.|
-|**f**, **F**|Wartość precyzji określa liczbę cyfr po przecinku dziesiętnym. Jeśli pojawi się przecinek dziesiętny, przed nim pojawia się co najmniej jedna cyfra. Wartość jest zaokrąglana do odpowiedniej liczby cyfr.|Domyślna precyzja to 6. Jeśli *dokładność* wynosi 0 lub jeśli kropka (.) pojawia się bez liczby po niej, nie jest drukowany punkt dziesiętny.|
-|**g**, **G**|Dokładność określa maksymalną liczbę drukowanych cyfr znaczących.|Wydrukowano sześć cyfr znaczących, a wszystkie końcowe zera zostaną obcięty.|
-|**s**, **S**|Dokładność określa maksymalną liczbę znaków do wydrukowania. Znaki przekraczające *precyzję* nie są drukowane.|Znaki są drukowane do momentu napotkania znaku zerowego.|
+|**a**, **a**|Precyzja określa liczbę cyfr po punkcie.|Domyślna precyzja to 13. Jeśli precyzja to 0, nie jest drukowany punkt dziesiętny **#** , chyba że flaga jest używana.|
+|**c**, **c**|Precyzja nie ma żadnego wpływu.|Znak jest drukowany.|
+|**d**, **i**, **o**, **u**, **x**, **x**|Precyzja określa minimalną liczbę cyfr do wydrukowania. Jeśli liczba cyfr w argumencie jest mniejsza niż *precyzja*, wartość wyjściowa zostanie uzupełniona o zero. Wartość nie jest obcinana, gdy liczba cyfr przekracza *precyzję*.|Domyślna precyzja to 1.|
+|**e**, **e**|Precyzja określa liczbę cyfr do wydrukowania po przecinku dziesiętnym. Ostatnia wydrukowana cyfra jest zaokrąglana.|Domyślna precyzja to 6. Jeśli *precyzja* to 0 lub kropka (.) pojawia się bez cyfry po niej, nie jest drukowany żaden punkt dziesiętny.|
+|**f**, **f**|Wartość precyzji określa liczbę cyfr po przecinku dziesiętnym. Jeśli zostanie wyświetlony punkt dziesiętny, przed nim zostanie wyświetlona co najmniej jedna cyfra. Wartość jest zaokrąglana do odpowiedniej liczby cyfr.|Domyślna precyzja to 6. Jeśli *precyzja* to 0, lub jeśli kropka (.) pojawia się bez cyfry po niej, nie jest drukowany żaden punkt dziesiętny.|
+|**g**, **g**|Precyzja określa maksymalną liczbę cyfr znaczących.|Drukowane są sześć cyfr znaczących, a końcowe zera są obcinane.|
+|**s**, **s**|Precyzja określa maksymalną liczbę znaków do wydrukowania. Nie są drukowane znaki o przekroczeniu *precyzji* .|Znaki są drukowane, dopóki nie zostanie osiągnięty znak o wartości null.|
 
 <a name="size"></a>
 
 ## <a name="argument-size-specification"></a>Specyfikacja rozmiaru argumentu
 
-W specyfikacji konwersji pole *rozmiaru* jest modyfikatorem długości argumentu dla specyfikatora konwersji *typu.* Prefiksy pola *rozmiaru* do pola *typu:* **hh**, **h**, **j**, **l** (małe litery L), **L**, **ll**, **t**, **w**, **z**, **I** (wielkie litery i), **I32**i **I64**— określają "rozmiar" odpowiedniego argumentu — długi lub krótki, 32-bitowy lub 64-bitowy, jednobędowy lub szeroki znak — w zależności od specyfikatora konwersji, który modyfikują. Te prefiksy rozmiaru są używane `printf` `wprintf` ze znakami *typu* w i rodzin funkcji, aby określić interpretację rozmiarów argumentów, jak pokazano w poniższej tabeli. Pole *rozmiaru* jest opcjonalne dla niektórych typów argumentów. Jeśli prefiks rozmiaru nie jest określony, formater zużywa argumenty całkowite — `char`na `short` `int`przykład `long`podpisane lub niepodpisane , , `int` i `float`typy wyliczenia — jako typy 32-bitowe i , `double`a `long double` argumenty zmiennoprzecinkowe są używane jako typy 64-bitowe. `double` To zachowanie jest zgodne z domyślnymi regułami promocji argumentów dla list argumentów zmiennych. Aby uzyskać więcej informacji na temat promocji argumentów, zobacz Wielokropek i Argumenty domyślne w [wyrażeniach Postfix](../cpp/postfix-expressions.md). Zarówno w systemach 32-bitowych, jak i 64-bitowych specyfikacja konwersji 64-bitowego argumentu liczby całkowitej musi zawierać prefiks rozmiaru **ll** lub **I64**. W przeciwnym razie zachowanie formatera jest niezdefiniowane.
+W specyfikacji konwersji pole *size* jest modyfikatorem długości argumentów dla specyfikatora konwersji *typu* . Prefiks pola *rozmiaru* dla pola *Typ* —**hh**, **h**, **j**, **l** (małe litery l), **l**, **wszystkie**, **t**, z, **w** **z**, **I** (wielkie I), **I32**i **I64**— określa "rozmiar" odpowiadającego argumentu — Long lub Short, 32-bitowy lub 64-bitowy, znak jednobajtowy lub szeroki, w zależności od specyfikatora konwersji, który modyfikuje. Te prefiksy rozmiarów są używane z znakami *typu* w `printf` i `wprintf` rodzinach funkcji, aby określić interpretację rozmiarów argumentów, jak pokazano w poniższej tabeli. Pole *size* jest opcjonalne dla niektórych typów argumentów. Gdy nie określono prefiksu rozmiaru, program `char`formatujący zużywa argumenty całkowite — na przykład, podpisane lub niepodpisane `short`, `int`, `long`, i typy wyliczeniowe — jako 32 `int` -bitowe typy `float`, `double`i, `long double` i argumenty zmiennoprzecinkowe są używane jako 64-bitowe `double` typy. To zachowanie jest zgodne z domyślnymi regułami podwyższania poziomu argumentów dla list argumentów zmiennych. Aby uzyskać więcej informacji na temat promocji argumentów, zobacz wielokropek i argumenty domyślne w [wyrażeniach przyrostkowych](../cpp/postfix-expressions.md). W systemach 32-bitowych i 64-bitowych specyfikacja konwersji argumentu 64-bit Integer musi zawierać prefiks size o wartości **szystkie** lub **I64**. W przeciwnym razie zachowanie programu formatującego nie jest zdefiniowane.
 
-Niektóre typy są różne rozmiary w kodzie 32-bitowym i 64-bitowym. Na przykład `size_t` jest 32 bitów długości w kodzie skompilowanym dla x86 i 64 bitów w kodzie skompilowany dla x64. Aby utworzyć kod formatowania niezależnego od platformy dla typów o zmiennej szerokości, można użyć modyfikatora rozmiaru argumentu o zmiennej szerokości. Alternatywnie należy użyć modyfikatora rozmiaru argumentu 64-bitowego i jawnie podwyższyć wartość typu argumentu o zmiennej szerokości do 64 bitów. Modyfikator rozmiaru argumentu **I** (wielkie litery i) specyficzny dla firmy Microsoft obsługuje argumenty całkowite o zmiennej szerokości, ale zaleca się modyfikatory **j,** **t**i z specyficzne dla typu, i **z.** dla przenośności.
+Niektóre typy mają różne rozmiary w 32-bitowym i 64-bitowym kodzie. Na przykład `size_t` jest 32 bitów Long w kodzie skompilowanym dla x86 i 64 bitów w kodzie skompilowanym dla x64. Aby utworzyć kod formatowania niezależny od na platformie dla typów o zmiennej szerokości, można użyć modyfikatora rozmiaru argumentu o zmiennej szerokości. Alternatywnie można użyć modyfikatora rozmiaru argumentu 64-bitowego i jawnie podnieść typ argumentu o zmiennej szerokości do 64 bitów. Modyfikator rozmiaru **argumentu (wielkie i)** firmy Microsoft obsługuje argumenty całkowite o zmiennej szerokości, ale zaleca się Modyfikatory **j**, **t**i **z** dla różnych typów dla przenośności.
 
-### <a name="size-prefixes-for-printf-and-wprintf-format-type-specifiers"></a>Prefiksy rozmiaru dla printf i wprintf Format-Type Specifiers
+### <a name="size-prefixes-for-printf-and-wprintf-format-type-specifiers"></a>Prefiksy rozmiarów dla specyfikatorów typu printf i wprintf
 
-|Aby określić|Używanie prefiksu|Ze specyfikatorem typu|
+|Aby określić|Użyj prefiksu|Ze specyfikatorem typu|
 |----------------|----------------|-------------------------|
-|`char`<br />`unsigned char`|**hh**|**d**, **i**, **o**, **u**, **x**, lub **X**|
-|`short int`<br />`short unsigned int`|**H**|**d**, **i**, **o**, **u**, **x**, lub **X**|
-|`__int32`<br />`unsigned __int32`|**I32**|**d**, **i**, **o**, **u**, **x**, lub **X**|
-|`__int64`<br />`unsigned __int64`|**I64**|**d**, **i**, **o**, **u**, **x**, lub **X**|
-|`intmax_t`<br />`uintmax_t`|**j** lub **I64**|**d**, **i**, **o**, **u**, **x**, lub **X**|
-|`long double`|**l** (małe litery L) lub **L**|**a**, **A**, **e**, **E**, **f**, **F**, **g**lub **G**|
-|`long int`<br />`long unsigned int`|**l** (małe litery L)|**d**, **i**, **o**, **u**, **x**, lub **X**|
-|`long long int`<br />`unsigned long long int`|**ll** (małe litery LL)|**d**, **i**, **o**, **u**, **x**, lub **X**|
-|`ptrdiff_t`|**t** lub **I** (wielkie litery i)|**d**, **i**, **o**, **u**, **x**, lub **X**|
-|`size_t`|**z** lub **I** (wielkie litery i)|**d**, **i**, **o**, **u**, **x**, lub **X**|
-|Znak jedno bajtowy|**H**|**c** lub **C**|
-|Szeroki znak|**l** (małe litery L) lub **w**|**c** lub **C**|
-|Jedno bajtowy ciąg znaków|**H**|**s**, **S**, lub **Z**|
-|Ciąg znaków szerokoznakowych|**l** (małe litery L) lub **w**|**s**, **S**, lub **Z**|
+|`char`<br />`unsigned char`|**hh**|**d**, **i**, **o**, **u**, **x**lub **x**|
+|`short int`<br />`short unsigned int`|**c**|**d**, **i**, **o**, **u**, **x**lub **x**|
+|`__int32`<br />`unsigned __int32`|**I32**|**d**, **i**, **o**, **u**, **x**lub **x**|
+|`__int64`<br />`unsigned __int64`|**I64**|**d**, **i**, **o**, **u**, **x**lub **x**|
+|`intmax_t`<br />`uintmax_t`|**j** lub **I64**|**d**, **i**, **o**, **u**, **x**lub **x**|
+|`long double`|**l** (mała litera l) lub **l**|**a**, **a**, **e**, **e**, **f**, **f**, **g**lub **g**|
+|`long int`<br />`long unsigned int`|**l** (mała litera l)|**d**, **i**, **o**, **u**, **x**lub **x**|
+|`long long int`<br />`unsigned long long int`|**wszystkie** (małe litery)|**d**, **i**, **o**, **u**, **x**lub **x**|
+|`ptrdiff_t`|**t** lub **I** (wielkie litery I)|**d**, **i**, **o**, **u**, **x**lub **x**|
+|`size_t`|**z** lub **i** (wielkie litery I)|**d**, **i**, **o**, **u**, **x**lub **x**|
+|Znak jednobajtowy|**c**|**c** lub **c**|
+|Znak dwubajtowy|**l** (mała litera l) lub **w**|**c** lub **c**|
+|Jednobajtowy ciąg znaków|**c**|**s**, **s**lub **Z**|
+|Ciąg znaków dwubajtowych|**l** (mała litera l) lub **w**|**s**, **s**lub **Z**|
 
-`ptrdiff_t` Typy `size_t` i `__int32` `unsigned __int32` są na platformach 32-bitowych i lub `__int64` `unsigned __int64` na platformach 64-bitowych. Prefiksy **I** (wielkie litery i), **j**, **t**i **z** rozmiar przyjmują prawidłową szerokość argumentu dla platformy.
+Typy `ptrdiff_t` i `size_t` są `__int32` `unsigned __int32` na platformach 32-bitowych i `__int64` lub `unsigned __int64` na platformach 64-bitowych. Prefiksy **i** (wielkie i), **j**, **t**i **z** mają poprawną szerokość argumentu dla danej platformy.
 
-W języku Visual C++, chociaż `long double` jest to odrębny `double`typ, ma taką samą reprezentację wewnętrzną jak .
+W Visual C++, chociaż `long double` jest typem odrębnym, ma tę samą reprezentację wewnętrzną co `double`.
 
-Specyfikator typu **hc** lub **hC** jest synonimem **funkcji c** w `printf` funkcjach i funkcji **C.** `wprintf` Specyfikator typu **lc**, **lC**, **wc**lub **wC** `printf` jest synonimem funkcji **C** w funkcjach i z funkcjami **c.** `wprintf` Specyfikator typu **hs** lub **hS** jest synonimem **funkcji s** i `printf` **funkcji S.** `wprintf` Specyfikator typu **ls**, **lS**, **ws** lub **wS** jest synonimem `wprintf` funkcji **S** w `printf` funkcjach i **funkcjach s.**
+Specyfikator **typu HC** lub **HC** jest synonimem języka **c** `printf` w funkcjach i z **c** w `wprintf` funkcjach. Specyfikator typu **LC**, LC **,** DBlub **wC** **C** jest synonimem języka **c** w `printf` funkcjach i w **lC** `wprintf` funkcjach. Specyfikator typu **HS** lub **HS** jest synonimem **s** `printf` in Functions i with **s** w `wprintf` Functions. Specyfikator **typu LS**, **ls**, **WS** lub **WS** jest synonimem elementu **s** `printf` in Functions i with **s** w `wprintf` Functions.
 
 > [!NOTE]
-> **Specyficzne dla firmy Microsoft:** I **(wielkie** litery i), **I32**, **I64**i **w** argument size modyfikujące prefiksy są rozszerzeniami firmy Microsoft i nie są zgodne z ISO C. Prefiks **h,** gdy jest używany `char` z danymi typu i **l** (małe litery L) prefiks, gdy jest używany z danymi typu `double` są rozszerzenia firmy Microsoft.
+> **Specyficzne dla firmy Microsoft:**\
+> Prefiksy **i (wielkie i)** , **I32**, **I64**i **w** stosunku do rozmiaru argumentów są rozszerzeniami firmy Microsoft i nie są zgodne ze standardem ISO C. Prefiks **h** , gdy jest używany z danymi typu `char` i prefiks **L** (małymi literami l), gdy jest używany z danymi typu `double` są rozszerzeniami firmy Microsoft.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
 [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
