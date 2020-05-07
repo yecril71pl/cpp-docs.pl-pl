@@ -11,9 +11,9 @@ ms.locfileid: "64343110"
 ---
 # <a name="remainders"></a>Pozostałe części
 
-**ANSI 3.3.5** znak resztę na dzielenie liczby całkowitej
+**3.3.5 ANSI** Znak reszty w oddziale liczb całkowitych
 
-Znak reszta jest taka sama jak znak dzielna. Na przykład
+Znak reszty jest taki sam jak znak dywidendy. Na przykład:
 
 ```
 50 / -6 == -8
@@ -22,6 +22,6 @@ Znak reszta jest taka sama jak znak dzielna. Na przykład
 -50 %  6 == -2
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Liczby całkowite](../c-language/integers.md)

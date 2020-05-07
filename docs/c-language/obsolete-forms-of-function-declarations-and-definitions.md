@@ -13,7 +13,7 @@ ms.locfileid: "81745871"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>Przestarzałe formy deklaracji i definicji funkcji
 
-Deklaracje i definicje funkcji starego stylu używają nieco innych reguł deklarowania parametrów niż składnia zalecana przez normę ANSI C. Po pierwsze, deklaracje starego stylu nie mają listy parametrów. Po drugie, w definicji funkcji parametry są wyświetlane, ale ich typy nie są zadeklarowane na liście parametrów. Deklaracje typu poprzedzają instrukcję złożoną stanowiącą treść funkcji. Składnia starego stylu jest przestarzała i nie powinna być używana w nowym kodzie. Kod przy użyciu składni starego stylu jest nadal obsługiwane, jednak. W tym przykładzie przedstawiono przestarzałe formy deklaracji i definicji:
+Deklaracje i definicje funkcji starego stylu używają nieco różnych reguł deklarujących parametry niż składnia zalecana przez standard ANSI C. Najpierw deklaracje starych stylów nie mają listy parametrów. Po drugie, w definicji funkcji, parametry są wyświetlane, ale ich typy nie są zadeklarowane na liście parametrów. Deklaracje typu poprzedzają złożone instrukcje tworzące treść funkcji. Składnia starego stylu jest przestarzała i nie powinna być używana w nowym kodzie. Kod korzystający ze składni starego stylu jest jednak nadal obsługiwany. Ten przykład ilustruje przestarzałe formy deklaracji i definicji:
 
 ```
 double old_style();           /* Obsolete function declaration */
@@ -26,9 +26,9 @@ double alt_style( a , real )  /* Obsolete function definition */
 }
 ```
 
-Funkcje zwracające całkowitą lub wskaźnik o tym `int` samym rozmiarze co deklaracja nie muszą mieć deklaracji, mimo że deklaracja jest zalecana.
+Funkcje zwracają liczbę całkowitą lub wskaźnik o takim samym rozmiarze, co `int` nie jest wymagane do posiadania deklaracji, chociaż jest zalecana deklaracja.
 
-Aby zapewnić zgodność ze standardem ANSI C, deklaracje funkcji starego stylu przy użyciu wielokropek generują teraz błąd podczas kompilowania z opcją /Za i ostrzeżeniem poziomu 4 podczas kompilowania z /Ze. Przykład:
+Aby zapewnić zgodność ze standardami ANSI C, deklaracje funkcji starego stylu przy użyciu wielokropka teraz generują błąd podczas kompilowania z opcją/za oraz ostrzeżenie poziomu 4 podczas kompilowania z/ze. Przykład:
 
 ```cpp
 void funct1( a, ... )  /* Generates a warning under /Ze or */
@@ -37,7 +37,7 @@ int a;                 /* an error when compiling with /Za */
 }
 ```
 
-Należy przepisać tę deklarację jako prototyp:
+Należy ponownie napisać tę deklarację jako prototyp:
 
 ```cpp
 void funct1( int a, ... )
@@ -45,9 +45,9 @@ void funct1( int a, ... )
 }
 ```
 
-Deklaracje funkcji starego stylu również generować ostrzeżenia, jeśli następnie zadeklarować lub zdefiniować tę samą funkcję z wielokropka lub parametr z typem, który nie jest taki sam jak jego typu promowanego.
+Deklaracje funkcji starego stylu również generują ostrzeżenia, jeśli następnie deklarujesz lub zdefiniujesz tę samą funkcję z wielokropkiem lub parametrem typu, który nie jest taki sam jak jego podwyższony typ.
 
-W następnej sekcji [definicje funkcji C](../c-language/c-function-definitions.md)przedstawiono składnię definicji funkcji, w tym składnię starego stylu. Nieterminowa dla listy parametrów w starej składni jest *lista identyfikatorów*.
+Następna sekcja, [definicje funkcji języka C](../c-language/c-function-definitions.md), pokazuje składnię definicji funkcji, w tym składnię starego stylu. Nieterminali dla listy parametrów w składni starego stylu to *Lista identyfikatorów*.
 
 ## <a name="see-also"></a>Zobacz też
 

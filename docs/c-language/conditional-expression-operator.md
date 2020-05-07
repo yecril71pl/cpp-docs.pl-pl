@@ -15,45 +15,45 @@ ms.locfileid: "81749195"
 ---
 # <a name="conditional-expression-operator"></a>Operator wyrażenia warunkowego
 
-C ma jeden operator trójskładnikowy: operator wyrażenia warunkowego (**? :**).
+C ma jeden operator Trzyelementowy: operator wyrażenia warunkowego (**?:**).
 
 ## <a name="syntax"></a>Składnia
 
-*wyrażenie warunkowe:*<br/>
+*wyrażenie warunkowe*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne OR*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne-OR*  **?**  *wyrażenie*  **:**  *wyrażenie warunkowe*
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne or*  **?**  *wyrażenie*  **:**  *wyrażenie warunkowe*
 
-Wyrażenie *logiczne OR* musi mieć typ integralny, przestawny lub wskaźnik. Jest on oceniany pod względem jego równoważności do 0. Punkt sekwencji następuje *wyrażenie logiczne-OR .* Ocena operandów przebiega w następujący sposób:
+*Wyrażenie logiczne or* musi mieć typ całkowity, zmiennoprzecinkowy lub wskaźnik. Jest on oceniany pod względem równoważności do 0. Punkt sekwencji jest następujący: *logiczny-lub-Expression*. Obliczanie operandów odbywa się w następujący sposób:
 
-- Jeśli *wyrażenie logiczne-OR* nie jest równe 0, *wyrażenie* jest oceniane. Wynik oceny wyrażenia jest podawany przez *wyrażenie*nieterminalne . (Oznacza *to,* że wyrażenie jest oceniane tylko wtedy, *gdy wyrażenie logiczne-OR* jest prawdziwe).)
+- Jeśli *logiczne-lub-Expression* nie jest równe 0, *wyrażenie* jest oceniane. Wynik obliczania wyrażenia jest określony przez *wyrażenie*niebędące terminalem. (Oznacza to, że *wyrażenie* jest oceniane tylko wtedy *, gdy wyrażenie logiczne or* ma wartość true).
 
-- Jeśli *wyrażenie logiczne-OR* jest równe 0, obliczane jest *wyrażenie warunkowe.* Wynikiem wyrażenia jest wartość *wyrażenia warunkowego*. (Oznacza to, że *wyrażenie warunkowe* jest oceniane tylko wtedy, gdy *wyrażenie logiczne-OR* jest fałszywe).
+- Jeśli *wyrażenie logiczne or* jest równe 0, obliczane jest *wyrażenie warunkowe* . Wynikiem wyrażenia jest wartość *wyrażenia warunkowego*. (Oznacza to, że *wyrażenie warunkowe* jest oceniane tylko wtedy *, gdy logiczne-lub-Expression* ma wartość false.)
 
-Należy zauważyć, że *wyrażenie* lub *wyrażenie warunkowe* jest oceniane, ale nie oba.
+Należy zauważyć, że obliczane jest *wyrażenie* lub *wyrażenie warunkowe* , ale nie oba jednocześnie.
 
-Typ wyniku operacji warunkowej zależy od typu *wyrażenia* lub *argumentu wyrażenia warunkowego* w następujący sposób:
+Typ wyniku operacji warunkowej zależy od typu *wyrażenia* lub operand *warunkowego wyrażenia* w następujący sposób:
 
-- Jeśli *wyrażenie* lub *wyrażenie warunkowe* ma typ integralny lub zmiennoprzecinowy (ich typy mogą być różne), operator wykonuje zwykłe konwersje arytmetyczne. Typ wyniku jest typem argumentów po konwersji.
+- Jeśli *wyrażenie* lub *wyrażenie warunkowe* ma typ całkowity lub zmiennoprzecinkowy (ich typy mogą być różne), operator wykonuje typowe konwersje arytmetyczne. Typ wyniku jest typem operandów po konwersji.
 
-- Jeśli zarówno *wyrażenie,* jak i *wyrażenie warunkowe* mają tę samą strukturę, unię lub typ wskaźnika, typem wyniku jest ta sama struktura, unia lub typ wskaźnika.
+- Jeśli wyrażenie *i* *wyrażenie warunkowe* mają tę samą strukturę, Unię lub typ wskaźnika, typ wyniku jest taka sama jak struktura, Unia lub typ wskaźnika.
 
-- Jeśli oba argumenty mają `void`typ, wynik `void`ma typ .
+- Jeśli oba operandy mają typ `void`, wynik ma typ `void`.
 
-- Jeśli którykolwiek z operandów jest wskaźnikiem do obiektu dowolnego typu, `void`a drugi argument jest wskaźnikiem, `void` wskaźnik do obiektu jest `void`konwertowany na wskaźnik, a wynikiem jest wskaźnik do .
+- Jeśli którykolwiek z operandów jest wskaźnikiem do obiektu dowolnego typu, a drugi operand jest wskaźnikiem do `void`, wskaźnik do obiektu jest konwertowany na wskaźnik do `void` , a wynik jest wskaźnikiem do. `void`
 
-- Jeśli *wyrażenie* lub *wyrażenie warunkowe* jest wskaźnikiem, a drugi argument jest wyrażeniem stałym o wartości 0, typem wyniku jest typ wskaźnika.
+- Jeśli wyrażenie *lub* *wyrażenie warunkowe* jest wskaźnikiem, a drugi operand jest wyrażeniem stałym o wartości 0, typ wyniku jest typem wskaźnika.
 
-W porównaniu typów dla wskaźników wszelkie kwalifikatory `volatile`typu **(const** lub) w typie, do którego punkty wskaźnika są nieistotne, ale typ wyniku dziedziczy kwalifikatory z obu składników warunkowego.
+W porównaniu typu dla wskaźników, wszelkie Kwalifikatory typu (**const** lub `volatile`) w typie, do którego punkty wskaźnika są nieznaczące, ale typ wyniku dziedziczy kwalifikatory z obu składników warunku.
 
 ## <a name="examples"></a>Przykłady
 
-Poniższe przykłady pokazują zastosowania operatora warunkowego:
+W poniższych przykładach pokazano użycie operatora warunkowego:
 
 ```
 j = ( i < 0 ) ? ( -i ) : ( i );
 ```
 
-W tym przykładzie przypisuje `i` `j`wartość bezwzględną do . Jeśli `i` jest mniejsza niż `-i` 0, `j`jest przypisany do . Jeśli `i` jest większa lub równa `i` 0, `j`jest przypisana do .
+Ten przykład przypisuje wartość `i` bezwzględną `j`do. Jeśli `i` jest mniejszy niż 0, `-i` jest przypisany do `j`. Jeśli `i` jest większy lub równy 0, `i` jest przypisany do. `j`
 
 ```cpp
 void f1( void );
@@ -66,7 +66,7 @@ int y;
 ( x == y ) ? ( f1() ) : ( f2() );
 ```
 
-W tym przykładzie `f1` dwie `f2`funkcje i `x` , `y`i dwie zmienne i , są zadeklarowane. W dalszej części programu, jeśli dwie zmienne `f1` mają taką samą wartość, funkcja jest wywoływana. W `f2` przeciwnym razie jest wywoływana.
+W tym przykładzie są zadeklarowane dwie `f1` funkcje `f2`, i, dwie zmienne `x` i `y`. W dalszej części programu, jeśli dwie zmienne mają tę samą wartość, funkcja `f1` jest wywoływana. W przeciwnym `f2` razie jest wywoływana.
 
 ## <a name="see-also"></a>Zobacz też
 

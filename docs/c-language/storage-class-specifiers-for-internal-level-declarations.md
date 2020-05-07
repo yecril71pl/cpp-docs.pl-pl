@@ -14,8 +14,8 @@ ms.locfileid: "62345165"
 ---
 # <a name="storage-class-specifiers-for-internal-level-declarations"></a>Specyfikatory klasy magazynowania dla deklaracji na poziomie wewnętrznym
 
-Możesz użyć dowolnego z czterech *storage-class-specifier* przez deklaracje zmiennych na poziomie wewnętrznym. Jeśli pominiesz *storage-class-specifier* z takich deklaracji jest domyślna klasa magazynu **automatycznie**. W związku z tym, słowo kluczowe **automatycznie** rzadko występuje w programie C.
+Dla deklaracji zmiennych na poziomie wewnętrznym można użyć dowolnego z czterech terminali *klasy magazynu specyfikatora* . Jeśli pominięto *specyfikator klasy magazynu* z takiej deklaracji, domyślną klasą **magazynu jest**Auto. W związku z tym słowo kluczowe **automatycznie** jest rzadko widoczne w programie C.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasy magazynu w języku C](../c-language/c-storage-classes.md)

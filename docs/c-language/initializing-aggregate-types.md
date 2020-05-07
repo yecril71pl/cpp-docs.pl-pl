@@ -22,12 +22,12 @@ Typ *zagregowany* jest strukturą, Unią lub typem tablicy. Jeśli typ agregacji
 ## <a name="syntax"></a>Składnia
 
 *inicjator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *listy inicjatorów* **}** / * dla inicjowania agregacji \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{**  *inicjator — lista*  **,}**
+&nbsp;&nbsp;&nbsp;&nbsp;**{**  *inicjator-list*  **}** /* do zainicjowania agregacji\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{**  *inicjator — lista*  **,}**
 
-*initializer-list*:<br/>
+*Lista inicjalizatora*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*skład*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*listy inicjatorów* **,** *inicjatora*
+&nbsp;&nbsp;&nbsp;&nbsp;*inicjator — lista*  **,**  *inicjator*
 
 *Lista inicjalizatora* jest listą inicjatorów rozdzielonych przecinkami. Każdy inicjator na liście jest wyrażeniem stałym lub listą inicjatorów. W związku z tym listy inicjatorów mogą być zagnieżdżane. Ten formularz jest przydatny do inicjowania agregowanych elementów członkowskich typu agregacji, jak pokazano w przykładach w tej sekcji. Jeśli jednak inicjator dla automatycznego identyfikatora jest pojedynczym wyrażeniem, nie musi być wyrażeniem stałym; tylko musi mieć odpowiedni typ do przypisywania do identyfikatora.
 
@@ -35,7 +35,7 @@ Dla każdej listy inicjatora wartości wyrażeń stałych są przypisywane w kol
 
 Jeśli *inicjator-lista* ma mniejszą liczbę wartości niż typ zagregowany, pozostałe elementy członkowskie lub elementy typu agregacji są inicjowane do wartości 0. Początkowa wartość automatycznego identyfikatora, który nie został jawnie zainicjowany jest niezdefiniowana. Jeśli *inicjator — lista* zawiera więcej wartości niż typ zagregowany, wyniki błędu. Te reguły mają zastosowanie do każdej listy osadzonych inicjatorów, a także do agregacji jako całości.
 
-Inicjator struktury jest wyrażeniem tego samego typu lub listą inicjatorów elementów członkowskich ujętych w nawiasy klamrowe ( **{}** ). Nienazwane elementy członkowskie pola bitowego nie są inicjowane.
+Inicjator struktury jest wyrażeniem tego samego typu lub listą inicjatorów elementów członkowskich ujętych w nawiasy klamrowe (**{}**). Nienazwane elementy członkowskie pola bitowego nie są inicjowane.
 
 Gdy Unia zostanie zainicjowana, *Lista inicjatorów* musi być wyrażeniem o pojedynczej stałej. Wartość wyrażenia stałego jest przypisywana do pierwszego elementu członkowskiego Unii.
 
@@ -49,7 +49,7 @@ int x[ ] = { 0, 1, 2 }
 
 Jeśli określisz rozmiar i podasz nieprawidłową liczbę inicjatorów, kompilator generuje błąd.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Maksymalny rozmiar tablicy jest definiowany przez **size_t**. Zdefiniowane w pliku nagłówka STDDEF. H, **size_t** jest `unsigned int` z zakresem od 0x00000000 do 0x7CFFFFFF.
 
@@ -103,7 +103,7 @@ W tym przykładzie `nlist` jest zadeklarowana jako tablica o strukturze 2-by-3, 
 
 1. Drugi lewy nawias klamrowy wskazuje, że inicjalizacja pierwszego zagregowanego elementu `nlist[0]` członkowskiego (czyli struktury w `nlist[0][0]`) zaczyna się.
 
-1. Pierwszy prawy nawias zamykający zakończył inicjalizację struktury `nlist[0][0]`; następny lewy nawias klamrowy zaczyna `nlist[0][1]`inicjalizację.
+1. Pierwszy prawy nawias klamrowy zamyka inicjalizację struktury `nlist[0][0]`; Następny lewy nawias klamrowy zaczyna inicjalizację `nlist[0][1]`.
 
 1. Proces jest kontynuowany do końca wiersza, gdzie zamykający się prawy nawias klamrowy kończy inicjalizację `nlist[0]`.
 
@@ -117,9 +117,9 @@ triplet nlist[2][3] =  /* THIS CAUSES AN ERROR */
 };
 ```
 
-W tej konstrukcji pierwszy lewy nawias klamrowy w wierszu 1 zaczyna inicjalizację `nlist[0]`, która jest tablicą trzech struktur. Wartości 1, 2 i 3 są przypisywane do trzech członków pierwszej struktury. Po napotkaniu następnego prawego nawiasu klamrowego (po wartości 3) Inicjalizacja `nlist[0]` jest zakończona, a dwie pozostałe struktury w tablicy z trzema strukturami są automatycznie inicjowane na wartość 0. Podobnie, `{ 4,5,6 }` inicjuje pierwszą strukturę w drugim `nlist`wierszu. Pozostałe dwie struktury `nlist[1]` są ustawione na 0. Gdy kompilator napotka następną listę inicjatora ( `{ 7,8,9 }` ), próbuje zainicjować. `nlist[2]` Ponieważ `nlist` ma tylko dwa wiersze, ta próba powoduje błąd.
+W tej konstrukcji pierwszy lewy nawias klamrowy w wierszu 1 zaczyna inicjalizację `nlist[0]`, która jest tablicą trzech struktur. Wartości 1, 2 i 3 są przypisywane do trzech członków pierwszej struktury. Po napotkaniu następnego prawego nawiasu klamrowego (po wartości 3) Inicjalizacja `nlist[0]` jest zakończona, a dwie pozostałe struktury w tablicy z trzema strukturami są automatycznie inicjowane na wartość 0. Podobnie, `{ 4,5,6 }` inicjuje pierwszą strukturę w drugim wierszu `nlist`. Pozostałe dwie struktury `nlist[1]` są ustawione na 0. Gdy kompilator napotka następną listę inicjatora ( `{ 7,8,9 }` ), próbuje zainicjować. `nlist[2]` Ponieważ `nlist` ma tylko dwa wiersze, ta próba powoduje błąd.
 
-W tym następnym przykładzie trzy `int` `x` elementy członkowskie są inicjowane odpowiednio do wartości 1, 2 i 3.
+W tym następnym przykładzie trzy `int` elementy członkowskie `x` są inicjowane odpowiednio do wartości 1, 2 i 3.
 
 ```C
 struct list
@@ -134,7 +134,7 @@ struct list
       };
 ```
 
-W powyższej `list` strukturze trzy elementy z pierwszego `m` wiersza są inicjowane do 4,0; elementy pozostałego wiersza `m` są domyślnie inicjowane do 0,0.
+W powyższej `list` strukturze trzy elementy w pierwszym wierszu `m` są inicjowane do 4,0; elementy pozostałego wiersza `m` są domyślnie inicjowane do 0,0.
 
 ```C
 union
@@ -150,6 +150,6 @@ union
 
 W tym przykładzie `y`zmienna Union jest inicjowana. Pierwszy element Unii jest tablicą, więc inicjator jest inicjatorem agregującym. Lista `{'1'}` inicjatora przypisuje wartości do pierwszego wiersza tablicy. Ponieważ na liście jest wyświetlana tylko jedna wartość, element w pierwszej kolumnie jest inicjowany do znaku `1`, a pozostałe dwa elementy w wierszu są domyślnie inicjowane do wartości 0. Podobnie pierwszy element drugiego wiersza `x` jest inicjowany do znaku `4`, a pozostałe dwa elementy w wierszu są inicjowane do wartości 0.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Inicjowanie](../c-language/initialization.md)

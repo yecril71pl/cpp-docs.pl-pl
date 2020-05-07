@@ -20,30 +20,30 @@ ms.locfileid: "62326589"
 ---
 # <a name="c-logical-operators"></a>Operatory logiczne języka C
 
-Operatory logiczne wykonać logiczny — i (**&&**) i logiczne OR (**||**) operacji.
+Operatory logiczne wykonują operacje logiczne-i**&&**() i logiczne-lub**||**().
 
 ## <a name="syntax"></a>Składnia
 
-*logical-AND-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*inclusive-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression*  **&&**  *inclusive-OR-expression*
+*wyrażenie logiczne-and-Expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie włączne-lub-*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie koniunkcji logicznej i wyrażenia***&&***włącznie z* wyrażeniem or    
 
-*logical-OR-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*  **&#124;&#124;**  *logical-AND-expression*
+*wyrażenie logiczne or*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne-AND-Expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;wyrażenie *logiczne-and-* Expression **&#124;&#124;** *logiczne i wyrażenie*    
 
 ## <a name="remarks"></a>Uwagi
 
-Operatory logiczne nie wykonuje zwykle konwersje arytmetyczne. Zamiast tego należy ocenić ich każdy argument pod względem jego odpowiednik na 0. Wynik operacji logicznej jest równa 0 lub 1. Typ wyniku jest **int**.
+Operatory logiczne nie wykonują zwykłych konwersji arytmetycznych. Zamiast tego sprawdzają każdy operand w warunkach równoważności równy 0. Wynikiem operacji logicznej jest 0 lub 1. Typ wyniku to **int**.
 
-Operatory logiczne języka C zostały opisane poniżej:
+Operatory logiczne języka C są opisane poniżej:
 
 |Operator|Opis|
 |--------------|-----------------|
-|**&&**|Logiczny — i operator generuje wartość 1, jeśli oba operandy ma wartość różną od zera wartości. Jeśli jeden z operandów jest równa 0, wynik jest równy 0. Jeśli pierwszy argument logiczny — i operacji jest równa 0, drugi operand nie jest oceniany.|
-|**&#124;&#124;**|Operator logiczny OR wykonuje operację włącznie lub na swoich argumentów. Wynikiem jest 0, jeśli oba operandy wartości 0. Jeśli jeden z operandów ma wartość różną od zera, wynik jest 1. Drugi argument nie jest oceniany, jeśli pierwszy argument operacji operatora logicznego OR ma wartość różną od zera.|
+|**&&**|Operator logiczny AND tworzy wartość 1, jeśli oba operandy mają wartości niezerowe. Jeśli oba operandy są równe 0, wynik wynosi 0. Jeśli pierwszy operand operacji logicznej i jest równy 0, drugi operand nie jest obliczany.|
+|**&#124;&#124;**|Operator logiczny OR wykonuje operację włączania lub dla jego operandów. Wynik jest równy 0, jeśli oba operandy mają 0 wartości. Jeśli każdy operand ma wartość różną od zera, wynikiem jest 1. Jeśli pierwszy operand operacji logicznej OR ma wartość różną od zera, drugi operand nie jest obliczany.|
 
-Argumenty operacji logiczny — i i wyrażenia logiczne OR są obliczane od lewej do prawej. Jeśli wartość pierwszego operandu jest wystarczające, aby ustalić wyniku operacji, drugi argument nie jest oceniany. Jest to tak zwane "zwarcia." Brak punktu sekwencji po pierwszy operand. Zobacz [punktów sekwencji](../c-language/c-sequence-points.md) Aby uzyskać więcej informacji.
+Argumenty operacji logicznej i logicznej są oceniane od lewej do prawej. Jeśli wartość pierwszego operandu jest wystarczająca do określenia wyniku operacji, drugi operand nie jest obliczany. Jest to tzw. "Ocena krótkoterminowa". Po pierwszym operandzie istnieje punkt sekwencji. Zobacz [punkty sekwencji](../c-language/c-sequence-points.md) , aby uzyskać więcej informacji.
 
 ## <a name="examples"></a>Przykłady
 
@@ -56,15 +56,15 @@ if ( x < y && y < z )
     printf( "x is less than z\n" );
 ```
 
-W tym przykładzie **printf** funkcja jest wywoływana, aby wydrukować wiadomość, jeśli `x` jest mniejsza niż `y` i `y` jest mniejsza niż `z`. Jeśli `x` jest większa niż `y`, drugi operand (`y < z`) nie jest oceniany i nic nie zostanie wyświetlone. Należy pamiętać, że może to spowodować problemy w przypadkach, gdy drugi argument operacji ma efekty uboczne, które są trwa skorzystała z innego powodu.
+W tym przykładzie funkcja **printf** jest wywoływana, aby wydrukować komunikat, jeśli `x` jest mniejszy `y` niż i `y` jest mniejszy niż. `z` Jeśli `x` jest większy niż `y`, drugi operand (`y < z`) nie jest szacowany i niczego nie wydrukowane. Należy zauważyć, że może to spowodować problemy w przypadkach, gdy drugi operand ma efekty uboczne, które są używane z jakiegoś innego powodu.
 
 ```C
 printf( "%d" , (x == w || x == y || x == z) );
 ```
 
-W tym przykładzie Jeśli `x` jest równa albo `w`, `y`, lub `z`, drugi argument **printf** funkcja zwraca wartość true, a wartość 1, wydrukowaniu. W przeciwnym razie zwróci wartość false, a wartość 0, wydrukowaniu. Tak szybko, jak jeden z warunków jest spełniony, zakończenie oceny.
+W tym przykładzie, jeśli `x` jest `w`równe albo `y`,, lub `z`, drugi argument funkcji **printf** ma wartość true, a wartość 1 jest drukowana. W przeciwnym razie zostanie wyznaczona wartość false i zostanie wydrukowany wynik 0. Gdy tylko jeden z warunków zwróci wartość true, ocena zostanie przerwana.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Operator logiczny AND: &&](../cpp/logical-and-operator-amp-amp.md)
-- [Logiczne OR — Operator:&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)
+- [Operator logiczny OR:  &#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)

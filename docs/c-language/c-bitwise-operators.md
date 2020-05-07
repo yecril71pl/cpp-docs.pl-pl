@@ -21,15 +21,15 @@ ms.locfileid: "80168776"
 ---
 # <a name="c-bitwise-operators"></a>Operatory bitowe języka C
 
-Operatory bitowe wykonują operacje bitowe-i ( **&** ), bitowe wykluczające lub ( **^** ) i bitowe lub ( **&#124;** ).
+Operatory bitowe wykonują operacje bitowe-i**&**(), bitowe-wykluczające**^** lub () i bitowe (**&#124;**).
 
 ## <a name="syntax"></a>Składnia
 
-*And-Expression*: &nbsp;&nbsp;*wyrażenia równości* &nbsp;&nbsp;*i-Expression* **&** *wyrażenie równości*
+*And-Expression*: &nbsp; &nbsp; *wyrażenie równości* &nbsp; &nbsp; *oraz* **&** wyrażenie *równości* wyrażenia
 
-*wyłączne lub wyrażeniu*: &nbsp;&nbsp;*i-Expression* &nbsp;&nbsp;z *wyłączeniem lub-* Expression **^** *i-Expression*
+*wyłączne lub*wyrażenie: &nbsp; &nbsp; *i* &nbsp; &nbsp; **^** -Expression *bez wyrażenia* *i* -Expression
 
-*włączne lub wyrażeniu*: &nbsp;&nbsp;*wyłączny lub wyrażeniu* &nbsp;&nbsp;*włącznie* &#124; lub-Expression *-lub-* Expression
+*włącznie — lub-* expression: &nbsp; &nbsp; *wyłączne* &nbsp; &nbsp;lub wyrażenie *włączające lub* -Expression &#124; *wykluczające lub* -Expression
 
 Operandy operatorów bitowych muszą mieć typy całkowite, ale ich typy mogą być różne. Operatory te wykonują zwykle konwersje arytmetyczne; Typ wyniku jest typem operandów po konwersji.
 
@@ -53,7 +53,7 @@ short n;
 n = i & j;
 ```
 
-Wynik przypisany do `n` w tym pierwszym przykładzie jest taki sam jak `i` (0xAB00 w formacie szesnastkowym).
+Wynik przypisany do `n` w pierwszym przykładzie jest taki sam jak `i` (0xAB00 szesnastkowo).
 
 ```C
 n = i | j;
@@ -81,5 +81,5 @@ Wynik bitowy i to 96 dziesiętny.
 ## <a name="see-also"></a>Zobacz też
 
 [Bitowy operator AND: &](../cpp/bitwise-and-operator-amp.md)<br/>
-[Operator wyłączny sumy bitowej OR: ^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
-[Operator włączny bitowego or:&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)
+[Operator wyłączny bitowego or: ^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
+[Operator włączny bitowego or: &#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)

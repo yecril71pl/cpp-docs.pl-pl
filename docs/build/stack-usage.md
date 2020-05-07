@@ -11,54 +11,54 @@ ms.locfileid: "81335532"
 ---
 # <a name="x64-stack-usage"></a>Użycie stosu x64
 
-Cała pamięć poza bieżący adres RSP jest uważany za nietrwałe: System operacyjny lub debuger, może zastąpić tę pamięć podczas sesji debugowania użytkownika lub obsługi przerwań. W związku z tym RSP musi być zawsze ustawiona przed próbą odczytu lub zapisu wartości do ramki stosu.
+Cała pamięć poza bieżącym adresem RSP jest uważana za nietrwałą: system operacyjny lub debuger, może zastąpić tę pamięć podczas sesji debugowania użytkownika lub programu obsługi przerwań. W ten sposób żądanie RSP musi być zawsze ustawione przed próbą odczytu lub zapisu wartości w ramce stosu.
 
-W tej sekcji omówiono alokacji miejsca na stosie dla zmiennych lokalnych i **alloca** wewnętrzne.
+W tej sekcji omówiono przydzielanie przestrzeni stosu dla zmiennych lokalnych i wewnętrznej **alokacji** przydziału.
 
 ## <a name="stack-allocation"></a>Alokacja stosu
 
-Prolog funkcji jest odpowiedzialny za przydzielanie miejsca na stos dla zmiennych lokalnych, zapisanych rejestrów, parametrów stosu i parametrów rejestru.
+Prolog funkcji jest odpowiedzialny za przydzielanie przestrzeni stosu dla zmiennych lokalnych, zapisanych rejestrów, parametrów stosu i parametrów rejestru.
 
-Obszar parametru jest zawsze w dolnej `alloca` części stosu (nawet jeśli jest używany), tak, że zawsze będzie przylegał do adresu zwrotnego podczas wywołania funkcji. Zawiera co najmniej cztery wpisy, ale zawsze wystarczająco dużo miejsca, aby pomieścić wszystkie parametry wymagane przez dowolną funkcję, która może być wywoływana. Należy zauważyć, że miejsce jest zawsze przydzielane dla parametrów rejestru, nawet jeśli same parametry nigdy nie są homed do stosu; wywoływany jest gwarantowana, że miejsce zostało przydzielone dla wszystkich jego parametrów. Adresy macierzyste są wymagane dla argumentów rejestru, więc ciągły obszar jest dostępny w przypadku, gdy wywoływana funkcja musi przyjąć adres listy argumentów (va_list) lub indywidualny argument. Ten obszar zapewnia również wygodne miejsce do zapisywania argumentów rejestru podczas wykonywania thunk i jako opcja debugowania (na przykład sprawia, że argumenty są łatwe do znalezienia podczas debugowania, jeśli są one przechowywane pod adresami domowymi w kodzie prologu). Nawet jeśli wywołana funkcja ma mniej niż 4 parametry, te 4 lokalizacje stosu są skutecznie własnością wywoływaną funkcję i mogą być używane przez wywołaną funkcję do innych celów oprócz zapisywania wartości rejestru parametrów.  W związku z tym wywołujący nie może zapisać informacje w tym regionie stosu w wywołaniu funkcji.
+Obszar parametru zawsze znajduje się w dolnej części stosu (nawet jeśli `alloca` jest używany), tak aby zawsze przylegał do adresu zwrotnego w trakcie wywołania funkcji. Zawiera co najmniej cztery wpisy, ale zawsze ma wystarczającą ilość miejsca do przechowywania wszystkich parametrów wymaganych przez każdą funkcję, która może być wywoływana. Należy zauważyć, że spacja jest zawsze przypisana do parametrów rejestru, nawet jeśli same parametry nigdy nie są umieszczone na stosie. wywoływany jest gwarantowanie, że miejsce zostało przydzieloną dla wszystkich jego parametrów. Adresy domowe są wymagane dla argumentów rejestru, aby obszar ciągły był dostępny w przypadku, gdy wywoływana funkcja musi przyjmować adres listy argumentów (va_list) lub pojedynczy argument. Ten obszar zapewnia również wygodne miejsce do zapisywania argumentów rejestru podczas wykonywania thunk oraz jako opcję debugowania (na przykład ułatwia wyszukiwanie argumentów podczas debugowania, jeśli są one przechowywane na ich adresach domowych w kodzie prologu). Nawet jeśli wywołana funkcja ma mniej niż 4 parametry, te 4 lokalizacje stosu są efektywnie własnością wywoływanej funkcji i mogą być używane przez wywołana funkcja do innych celów oprócz zapisywania wartości rejestru parametrów.  W rezultacie obiekt wywołujący nie może zapisywać informacji w tym regionie stosu w wywołaniu funkcji.
 
-Jeśli miejsce jest dynamicznie przydzielane (`alloca`) w funkcji, rejestr nieulotny musi być używany jako wskaźnik ramki, aby oznaczyć podstawę stałej części stosu, a rejestr musi zostać zapisany i zainicjowany w prologu. Należy zauważyć, że gdy `alloca` jest używany, wywołania tego samego wywoływacza z tego samego obiektu wywołującego może mieć różne adresy domowe dla ich parametrów rejestru.
+Jeśli miejsce jest przydzielane dynamicznie`alloca`() w funkcji, należy użyć nietrwałego rejestru jako wskaźnika ramki, aby oznaczyć podstawę stałej części stosu, a rejestr musi być zapisany i zainicjowany w prologu. Należy pamiętać, `alloca` że gdy jest używany, wywołania do tego samego elementu wywoływanego z tego samego obiektu wywołującego mogą mieć różne adresy główne dla parametrów rejestru.
 
-Stos będzie zawsze utrzymywane 16-bajtowy wyrównane, z wyjątkiem w prologu (na przykład po adres zwrotny jest wypychany) i z wyjątkiem przypadków wskazanych w [typy funkcji](#function-types) dla określonej klasy funkcji ramki.
+Stos będzie zawsze utrzymywany przez 16-bajtowe wyrównanie, z wyjątkiem prologu (na przykład po wypchnięciu adresu zwrotnego), z wyjątkiem przypadków wskazanych w [typach funkcji](#function-types) dla określonej klasy funkcji ramek.
 
-Poniżej przedstawiono przykład układu stosu, gdzie funkcja A wywołuje funkcję b. Prolog funkcji A ma już przydzielone miejsce dla wszystkich parametrów rejestru i stosu wymaganych przez B w dolnej części stosu. Wywołanie wypycha adres zwrotny, a prolog B przydziela miejsce dla swoich zmiennych lokalnych, rejestrów nieulotnych i miejsca potrzebnego do wywoływania funkcji. Jeśli B `alloca`używa , miejsce jest przydzielane między zmienną lokalną/nieulotny rejestr zapisz obszar i obszar stosu parametrów.
+Poniżej znajduje się przykład układu stosu, gdzie funkcja A wywołuje funkcję typu innego niż liść B. funkcja prologu jest już przydzielone miejsce dla wszystkich parametrów rejestru i stosu wymaganych przez B w dolnej części stosu. Wywołanie wypchnięcie adresu zwrotnego i prologu B przydziela miejsce dla jego zmiennych lokalnych, rejestrów nietrwałych oraz miejsca wymaganego do wywołania funkcji. Jeśli B używa `alloca`, miejsce jest przydzielono między zmienną lokalną/nielotny obszar zapisywania i obszarem stosu parametrów.
 
 ![Przykład konwersji AMD](../build/media/vcamd_conv_ex_5.png "Przykład konwersji AMD")
 
-Gdy funkcja B wywołuje inną funkcję, adres zwrotny jest wypychany tuż poniżej adresu domowego dla RCX.
+Gdy funkcja B wywołuje kolejną funkcję, adres zwrotny jest wypychany tuż poniżej adresu domowego dla RCX.
 
-## <a name="dynamic-parameter-stack-area-construction"></a>Konstrukcja obszaru stosu parametrów dynamicznych
+## <a name="dynamic-parameter-stack-area-construction"></a>Konstruowanie obszaru stosu parametrów dynamicznych
 
-Jeśli używany jest wskaźnik ramki, istnieje opcja dynamicznego tworzenia obszaru stosu parametrów. Obecnie nie jest to wykonywane w kompilatorze x64.
+Jeśli jest używany wskaźnik ramki, istnieje możliwość dynamicznego tworzenia obszaru stosu parametrów. Nie jest to obecnie wykonywane w kompilatorze x64.
 
 ## <a name="function-types"></a>Typy funkcji
 
-Istnieją w zasadzie dwa rodzaje funkcji. Funkcja wymagająca ramki stosu jest nazywana *funkcją ramki*. Funkcja, która nie wymaga ramki stosu, jest nazywana *funkcją liścia*.
+Istnieją zasadniczo dwa typy funkcji. Funkcja wymagająca ramki stosu jest nazywana *funkcją Frame*. Funkcja, która nie wymaga ramki stosu, jest nazywana *funkcją liścia*.
 
-Funkcja ramki jest funkcją, która przydziela miejsce na stosie, wywołuje inne funkcje, zapisuje rejestry nieulotne lub używa obsługi wyjątków. Wymaga również wpisu tabeli funkcji. Funkcja ramki wymaga prologu i epilogu. Funkcja ramki może dynamicznie przydzielać miejsce na stosie i może stosować wskaźnik ramki. Funkcja ramki ma pełne możliwości tego standardu wywołującego do swojej dyspozycji.
+Funkcja Frame jest funkcją, która przydziela przestrzeń stosu, wywołuje inne funkcje, zapisuje niezalotne rejestry lub używa obsługi wyjątków. Wymaga również wpisu tabeli funkcji. Funkcja Frame wymaga prologu i epilogu. Funkcja Frame może dynamicznie przydzielić przestrzeń stosu i może korzystać ze wskaźnika ramki. Funkcja Frame ma pełne możliwości tego wywołania Standard.
 
-Jeśli funkcja ramki nie wywoła innej funkcji, nie jest wymagane wyrównywanie stosu (odwołuje się do [alokacji stosu](#stack-allocation)sekcji).
+Jeśli funkcja Frame nie wywołuje innej funkcji, nie jest wymagana do wyrównania stosu (przywoływanego w [alokacji stosu](#stack-allocation)sekcji).
 
-Funkcja liścia to taka, która nie wymaga wpisu tabeli funkcji. Nie można wprowadzać zmian w żadnych rejestrach nieulotnych, w tym RSP, co oznacza, że nie można wywołać żadnych funkcji ani przydzielić miejsca na stosie. Dozwolone jest pozostawienie stosu niewyrównane podczas wykonywania.
+Funkcja liścia to taka, która nie wymaga wpisu tabeli funkcji. Nie można wprowadzać zmian do żadnych nietrwałych rejestrów, w tym RSP, co oznacza, że nie może wywołać żadnych funkcji ani przydzielić przestrzeni stosu. Podczas wykonywania nie można pozostawić stosu w niewyrównanym czasie.
 
-## <a name="malloc-alignment"></a>wyrównanie malloc
+## <a name="malloc-alignment"></a>Wyrównanie malloc
 
-[malloc](../c-runtime-library/reference/malloc.md) jest gwarantowane do zwrócenia pamięci, która jest odpowiednio wyrównane do przechowywania dowolnego obiektu, który ma podstawowe wyrównanie i które mogą zmieścić się w ilości pamięci, która jest przydzielona. *Wyrównanie podstawowe* jest wyrównanie, które jest mniej niż lub równa największego wyrównania, który jest obsługiwany przez implementację bez specyfikacji wyrównania. (W języku Visual C++jest to wyrównanie wymagane `double`dla , lub 8 bajtów. W kodzie przeznaczonym dla platform 64-bitowych jest to 16 bajtów.) Na przykład alokacja czterech bajtów zostanie wyrównana do granicy, która obsługuje dowolny obiekt cztero bajtowy lub mniejszy.
+Funkcja [malloc](../c-runtime-library/reference/malloc.md) gwarantuje, że pamięć jest odpowiednio wyrównana do przechowywania dowolnego obiektu, który ma podstawowe wyrównanie i który może pasować do ilości pamięci, która została przypisana. *Podstawowe wyrównanie* to wyrównanie, które jest mniejsze niż lub równe największemu wyrównaniu, które jest obsługiwane przez implementację bez określenia wyrównania. (W Visual C++ jest to wyrównanie wymagane dla `double`lub 8 bajtów. W kodzie, który jest przeznaczony dla platform 64-bitowych, wynosi 16 bajtów. Na przykład alokacja z czterema bajtami byłaby wyrównana na granicy, która obsługuje dowolny z czterech bajtów lub mniejszych obiektów.
 
-Visual C++ zezwala na typy, które mają *wyrównanie rozszerzone*, które są również *nazywane typami przerekułkowanymi.* Na przykład typy [__m128](../cpp/m128.md) SSE __m128 `__m256`i , i typy, które są zadeklarowane przy użyciu `__declspec(align( n ))` gdzie `n` jest większa niż 8, mają rozszerzone wyrównanie. Wyrównanie pamięci na granicy, która jest odpowiednia dla obiektu, `malloc`który wymaga rozszerzonego wyrównania nie jest gwarantowana przez program . Aby przydzielić pamięć dla typów przerekłajnych, należy użyć [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) i powiązanych funkcji.
+Visual C++ zezwala na typy, które mają rozszerzone wyrównanie, które są również *znane jako* *przesunięte*typy. Na przykład typy SSE [__m128](../cpp/m128.md) i `__m256`i typy, które są zadeklarowane za pomocą `__declspec(align( n ))` gdzie `n` jest większy niż 8, mają rozszerzone wyrównanie. Wyrównanie pamięci na granicy, która jest odpowiednia dla obiektu, który wymaga rozszerzonego wyrównania, nie `malloc`jest gwarantowane przez. Aby przydzielić pamięć dla niewyrównanych typów, użyj [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) i powiązanych funkcji.
 
 ## <a name="alloca"></a>alloca
 
-[_alloca](../c-runtime-library/reference/alloca.md) musi być wyrównany o 16 bajtów i dodatkowo wymagany do użycia wskaźnika ramki.
+[_alloca](../c-runtime-library/reference/alloca.md) jest wymagany do 16-bajtowego wyrównania, a dodatkowo wymagane do użycia wskaźnika ramki.
 
-Stos, który jest przydzielany musi zawierać miejsce po nim dla parametrów później nazywanych funkcji, jak omówiono w [alokacji stosu](#stack-allocation).
+Przydzielonego stosu musi zawierać miejsce po nim dla parametrów, które następnie nazywają funkcję, zgodnie z opisem w temacie [Alokacja stosu](#stack-allocation).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Konwencje kodowania x64](../build/x64-software-conventions.md)<br/>
-[Wyrównaj](../cpp/align-cpp.md)<br/>
+[dostosowania](../cpp/align-cpp.md)<br/>
 [__declspec](../cpp/declspec.md)

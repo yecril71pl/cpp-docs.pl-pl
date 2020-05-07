@@ -16,16 +16,16 @@ ms.locfileid: "81328577"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>Eksportowanie funkcji z biblioteki DLL według numeru porządkowego a nie nazwy
 
-Najprostszym sposobem eksportowania funkcji z biblioteki DLL jest wyeksportowanie ich według nazwy. Dzieje się tak na przykład, gdy używasz **__declspec(dllexport).** Ale zamiast tego można eksportować funkcje przez porządkowe. Za pomocą tej techniki należy użyć pliku def zamiast **__declspec(dllexport).** Aby określić wartość porządkową funkcji, należy dołączyć jej porządek porządkowy do nazwy funkcji w pliku def. Aby uzyskać informacje dotyczące określania liczby porządkowej, zobacz [Eksportowanie z biblioteki DLL przy użyciu plików def](exporting-from-a-dll-using-def-files.md).
+Najprostszym sposobem eksportowania funkcji z biblioteki DLL jest eksportowanie ich według nazwy. Dzieje się tak w przypadku używania **__declspec (dllexport)**, na przykład. Ale zamiast tego można eksportować funkcje według liczby porządkowej. W tej metodzie należy użyć pliku. def zamiast **__declspec (dllexport)**. Aby określić wartość porządkową funkcji, Dołącz jej numer porządkowy do nazwy funkcji w pliku. def. Aby uzyskać informacje o określaniu liczby porządkowej, zobacz [Eksportowanie z biblioteki DLL za pomocą plików. def](exporting-from-a-dll-using-def-files.md).
 
 > [!TIP]
-> Jeśli chcesz zoptymalizować rozmiar pliku biblioteki DLL, użyj atrybutu **NONAME** dla każdej wyeksportowanej funkcji. Za pomocą atrybutu **NONAME** liczby porządkowe są przechowywane w tabeli eksportu biblioteki DLL, a nie w nazwach funkcji. Może to być znaczne oszczędności, jeśli eksportujesz wiele funkcji.
+> Jeśli chcesz zoptymalizować rozmiar pliku biblioteki DLL, Użyj atrybutu **NoName** w każdej funkcji wyeksportowanej. W przypadku atrybutu **NoName** liczby porządkowe są przechowywane w tabeli eksportu biblioteki DLL, a nie w nazwach funkcji. Może to być znaczne oszczędności w przypadku eksportowania wielu funkcji.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Użyj pliku def, abym mógł eksportować przez porządki porządkowe](exporting-from-a-dll-using-def-files.md)
+- [Użyj pliku. def, aby można było eksportować według liczby porządkowej](exporting-from-a-dll-using-def-files.md)
 
-- [Użyj __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Użyj __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
 ## <a name="see-also"></a>Zobacz też
 

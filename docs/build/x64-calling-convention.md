@@ -12,66 +12,66 @@ ms.locfileid: "81335130"
 ---
 # <a name="x64-calling-convention"></a>Konwencja wywoływania x64
 
-W tej sekcji opisano standardowe procesy i konwencje, które jedna funkcja (wywołujący) używa do wywołania innej funkcji (wywoływany) w kodzie x64.
+W tej sekcji opisano standardowe procesy i konwencje używane przez jedną funkcję (wywołującą) do wykonywania wywołań do innej funkcji (wywoływanej) w kodzie x64.
 
-## <a name="calling-convention-defaults"></a>Domyślne ustawienia konwencji wywoływania
+## <a name="calling-convention-defaults"></a>Ustawienia domyślne konwencji wywoływania
 
-Interfejs binarny aplikacji x64 (ABI) domyślnie używa czteroestrowej konwencji szybkiego wywoływania. Miejsce jest przydzielane na stosie wywołań jako magazyn cieni dla wywoływanych, aby zapisać te rejestry. Istnieje ścisła korespondencja jeden do jednego między argumentami do wywołania funkcji i rejestrów używanych dla tych argumentów. Każdy argument, który nie mieści się w 8 bajtów lub nie jest 1, 2, 4 lub 8 bajtów, musi być przekazywany przez odwołanie. Pojedynczy argument nigdy nie jest rozłożony na wiele rejestrów. Stos rejestru x87 jest nieużywane i mogą być używane przez wywoływanego, ale muszą być uważane za lotne w wywołaniach funkcji. Wszystkie operacje zmiennoprzecinowe są wykonywane przy użyciu 16 rejestrów XMM. Argumenty liczby całkowitej są przekazywane w rejestrach RCX, RDX, R8 i R9. Argumenty zmiennoprzecinowe są przekazywane w xmm0l, XMM1L, XMM2L i XMM3L. Argumenty 16-bajtowe są przekazywane przez odwołanie. Przekazywanie parametrów jest szczegółowo opisane w [parametr przekazywaniu](#parameter-passing). Oprócz tych rejestrów, RAX, R10, R11, XMM4 i XMM5 są uważane za lotne. Wszystkie inne rejestry nie są zmienne. Użycie rejestru jest szczegółowo udokumentowane w [rejestrze użycia](../build/x64-software-conventions.md#register-usage) i [caller / callee zapisane rejestry](#callercallee-saved-registers).
+Interfejs binarny aplikacji (ABI) dla architektury x64 domyślnie używa konwencji wywoływania funkcji szybkiego wywołania funkcji "4-Register". Miejsce jest przydzielono na stosie wywołań jako magazyn w tle dla wywoływane w celu zapisania tych rejestrów. Istnieje ścisła zgodność jeden-do-jednego między argumentami wywołania funkcji i rejestrami używanymi dla tych argumentów. Każdy argument, który nie mieści się w 8 bajtach lub nie ma 1, 2, 4 lub 8 bajtów, musi być przesyłany przez odwołanie. Pojedynczy argument nigdy nie jest rozłożony na wiele rejestrów. Stos rejestru x87 jest nieużywany i może być używany przez wywoływany, ale musi być traktowany jako nietrwały w wywołaniach funkcji. Wszystkie operacje zmiennoprzecinkowe są wykonywane przy użyciu 16 XMM rejestrów. Argumenty całkowite są przesyłane w rejestrach RCX, RDX, R8 i R9. Argumenty zmiennoprzecinkowe są przekazane w XMM0L, XMM1L, XMM2L i XMM3L. argumenty 16-bajtowe są przesyłane przez odwołanie. Przekazywanie parametrów zostało szczegółowo opisane w [parametrach przekazujących](#parameter-passing). Oprócz tych rejestrów, RAX, R10, R11, XMM4 i XMM5 są uznawane za nietrwałe. Wszystkie inne rejestry są nietrwałe. Użycie rejestru zostało udokumentowane szczegółowo w temacie [Rejestrowanie użycia](../build/x64-software-conventions.md#register-usage) i [wywołujące/wywoływane zapisane rejestry](#callercallee-saved-registers).
 
-W przypadku funkcji prototypowych wszystkie argumenty są konwertowane na typy wywoływane oczekiwane przed przekazaniem. Wywołujący jest odpowiedzialny za przydzielanie miejsca dla parametrów do wywoływane i zawsze musi przydzielić wystarczającą ilość miejsca do przechowywania czterech parametrów rejestru, nawet jeśli wywoływany nie przyjmuje tak wielu parametrów. Ta konwencja upraszcza obsługę nieprototyped funkcji języka C i vararg C/C++ funkcje. W przypadku funkcji vararg lub nieprototyped wszelkie wartości zmiennoprzecinkowe muszą być duplikowane w odpowiednim rejestrze ogólnego przeznaczenia. Wszystkie parametry poza pierwsze cztery muszą być przechowywane na stosie po magazynie cienia przed wywołaniem. Szczegóły funkcji Vararg można znaleźć w [Varargs](#varargs). Informacje o funkcji nieprototyped jest szczegółowo w [funkcji nieprototyped](#unprototyped-functions).
+W przypadku funkcji prototypowych wszystkie argumenty są konwertowane na oczekiwane typy wywoływane przed przekazaniem. Obiekt wywołujący jest odpowiedzialny za przydzielanie miejsca dla parametrów wywoływanej i zawsze musi przydzielić wystarczające miejsce do przechowywania czterech parametrów rejestru, nawet jeśli wywoływany nie przyjmuje wielu parametrów. Ta konwencja upraszcza obsługę nieprototypowych funkcji języka C i funkcji vararg C/C++. W przypadku funkcji vararg lub nieprototypowych wszystkie wartości zmiennoprzecinkowe muszą być zduplikowane w odpowiednim rejestrze ogólnego przeznaczenia. Wszystkie parametry niż pierwsze cztery muszą być przechowywane na stosie po magazynie w tle przed wywołaniem. Szczegóły funkcji vararg można znaleźć w elemencie [VarArgs](#varargs). Informacje o nieprototypowej funkcji są szczegółowo opisane w [funkcjach nieprototypowych](#unprototyped-functions).
 
 ## <a name="alignment"></a>Wyrównanie
 
-Większość struktur jest wyrównana do ich naturalnego wyrównania. Wyjątkiem podstawowym są wskaźnik stosu i `malloc` lub `alloca` pamięci, które są wyrównane do 16 bajtów w celu uzyskania wydajności. Wyrównanie powyżej 16 bajtów musi być wykonane ręcznie, ale ponieważ 16 bajtów jest typowym rozmiarem wyrównania dla operacji XMM, ta wartość powinna działać dla większości kodu. Aby uzyskać więcej informacji na temat układu struktury i wyrównania, zobacz [Typy i Magazyn](../build/x64-software-conventions.md#types-and-storage). Aby uzyskać informacje na temat układu stosu, zobacz [użycie stosu x64](../build/stack-usage.md).
+Większość struktur jest wyrównana do ich naturalnego wyrównania. Podstawowe wyjątki to wskaźnik stosu i `malloc` `alloca` pamięć, które są wyrównane do 16 bajtów w celu uzyskania pomocy. Wyrównanie powyżej 16 bajtów musi być wykonywane ręcznie, ale ponieważ 16 bajtów jest typowym rozmiarem wyrównania dla operacji XMM, ta wartość powinna działać w przypadku większości kodu. Aby uzyskać więcej informacji na temat układu i wyrównania struktury, zobacz [typy i magazynowanie](../build/x64-software-conventions.md#types-and-storage). Aby uzyskać informacje na temat układu stosu, zobacz temat [użycie stosu x64](../build/stack-usage.md).
 
-## <a name="unwindability"></a>Odwijanie
+## <a name="unwindability"></a>Niekontrolowana
 
-Funkcje liścia są funkcje, które nie zmieniają żadnych rejestrów nieulotnych. Funkcja nieskrzydłowa może zmienić nieulotny RSP, na przykład wywołując funkcję lub przydzielając dodatkowe miejsce na stos dla zmiennych lokalnych. Aby odzyskać rejestry nieulotne, gdy wyjątek jest obsługiwany, funkcje nie-liść musi być adnotated z danymi statycznymi, który opisuje, jak prawidłowo odwinąć funkcję w dowolnej instrukcji. Dane te są przechowywane jako *pdata*lub dane procedury, co z kolei odnosi się do *xdata*, dane obsługi wyjątków. Xdata zawiera informacje o odwijaniu i może wskazywać na dodatkowe pdata lub funkcję obsługi wyjątków. Prologi i epilogi są bardzo ograniczone, dzięki czemu można je prawidłowo opisać w xdata. Wskaźnik stosu musi być wyrównany do 16 bajtów w dowolnym regionie kodu, który nie jest częścią epilogu lub prologu, z wyjątkiem funkcji liścia. Funkcje liści można rozwiać po prostu symulując powrót, więc pdata i xdata nie są wymagane. Aby uzyskać szczegółowe informacje na temat prawidłowej struktury prologów funkcji i epilogów, zobacz [x64 prolog i epilog](../build/prolog-and-epilog.md). Aby uzyskać więcej informacji na temat obsługi wyjątków oraz obsługi wyjątków i odwijania pdata i xdata, zobacz [obsługę wyjątków x64](../build/exception-handling-x64.md).
+Funkcje liścia to funkcje, które nie zmieniają żadnych rejestrów nietrwałych. Funkcja, która nie jest elementem liścia, może zmienić nietrwałe żądanie RSP, na przykład przez wywołanie funkcji lub przydzielenie dodatkowej przestrzeni stosu dla zmiennych lokalnych. W celu odzyskania rejestrów nietrwałych, gdy jest obsługiwany wyjątek, do funkcji typu innego niż liść należy dodać adnotację z danymi statycznymi, które opisują sposób prawidłowego odwinięcia funkcji w dowolnej instrukcji. Te dane są przechowywane jako *pData*lub dane procedury, które z kolei odwołują się do *xdata*, danych obsługi wyjątków. Xdata zawiera informacje dotyczące odwinięcia i może wskazywać na dodatkowe pData lub funkcję obsługi wyjątków. Dzienniki i epilogs są wysoce ograniczone, aby można je było prawidłowo opisać w XData. Wskaźnik stosu musi być wyrównany do 16 bajtów w dowolnym regionie kodu, który nie jest częścią epilogu lub prologu, z wyjątkiem funkcji liścia. Funkcje liścia mogą być rozwiązane po prostu poprzez symulowanie powrotu, więc pData i xdata nie są wymagane. Aby uzyskać szczegółowe informacje na temat właściwej struktury funkcji rejestrowania i epilogs, zobacz [x64 Prolog i epilogu](../build/prolog-and-epilog.md). Aby uzyskać więcej informacji na temat obsługi wyjątków oraz obsługi wyjątków i odwinięcia pData i xdata, zobacz [Obsługa wyjątków x64](../build/exception-handling-x64.md).
 
 ## <a name="parameter-passing"></a>Przekazywanie parametrów
 
-Pierwsze cztery argumenty całkowite są przekazywane w rejestrach. Wartości całkowite są przekazywane w kolejności od lewej do prawej odpowiednio w RCX, RDX, R8 i R9. Argumenty pięć i wyższe są przekazywane na stosie. Wszystkie argumenty są prawouprawnie uzasadnione w rejestrach, więc wywoływany może ignorować górne bity rejestru i uzyskać dostęp tylko do części rejestru niezbędne.
+Pierwsze cztery argumenty całkowite są przesyłane do rejestrów. Wartości całkowite są przesyłane w kolejności od lewej do prawej w RCX, RDX, R8 i R9. Argumenty pięć i wyższych są przesyłane na stosie. Wszystkie argumenty są wyrównane do prawej strony rejestrów, więc wywoływany może być ignorowanie górnych bitów rejestru i dostęp tylko do części rejestru.
 
-Wszelkie argumenty zmiennoprzecinowe i podwójnej precyzji w pierwszych czterech parametrach są przekazywane w XMM0 - XMM3, w zależności od położenia. Liczba całkowita rejestruje RCX, RDX, R8 i R9, które normalnie byłyby używane dla tych pozycji są ignorowane, z wyjątkiem argumentów varargs. Aby uzyskać szczegółowe informacje, zobacz [Varargs](#varargs). Podobnie rejestry XMM0 - XMM3 są ignorowane, gdy odpowiedni argument jest typem liczby całkowitej lub wskaźnika.
+Wszystkie argumenty zmiennoprzecinkowe i podwójnej precyzji w pierwszych czterech parametrach są przesyłane w XMM0-XMM3, w zależności od pozycji. Liczba całkowita rejestruje wartości RCX, RDX, R8 i R9, które zwykle są używane dla tych pozycji, z wyjątkiem argumentów VarArgs. Aby uzyskać szczegółowe informacje, zobacz [VarArgs](#varargs). Podobnie rejestry XMM0-XMM3 są ignorowane, gdy odpowiadający argument jest liczbą całkowitą lub wskaźnikiem.
 
-[__m128](../cpp/m128.md) typy, tablice i ciągi nigdy nie są przekazywane przez natychmiastową wartość. Zamiast tego wskaźnik jest przekazywany do pamięci przydzielonej przez wywołującego. Struktury i złącza o rozmiarze 8, 16, 32 lub 64 bitów i typach __m64 są przekazywane tak, jakby były liczbami całkowitymi o tym samym rozmiarze. Struktury lub złącza innych rozmiarów są przekazywane jako wskaźnik do pamięci przydzielonej przez wywołującego. Dla tych typów agregacji \_przekazywane jako wskaźnik, w tym _m128, pamięci tymczasowej przydzielonej przez wywołującego musi być wyrównane 16 bajtów.
+typy [__m128](../cpp/m128.md) , tablice i ciągi nigdy nie są przesyłane przez bezpośrednią wartość. Zamiast tego wskaźnik jest przesyłany do pamięci przydzielonej przez obiekt wywołujący. Struktury i Unii o rozmiarze 8, 16, 32 lub 64 bitów, a __m64 typy, są przesyłane tak, jakby były liczbami całkowitymi o tym samym rozmiarze. Struktury lub złożenia innych rozmiarów są przesyłane jako wskaźnik do pamięci przydzielonej przez obiekt wywołujący. W przypadku tych typów agregacji przenoszone jako wskaźnik \_, w tym _m128, Pamięć tymczasowa przypisana przez obiekt wywołujący musi być równa 16-bajtowa.
 
-Wewnętrzne funkcje, które nie przydzielają miejsca na stosie i nie wywołują innych funkcji, czasami używają innych rejestrów lotnych do przekazywania dodatkowych argumentów rejestru. Ta optymalizacja jest możliwa dzięki ścisłemu wiązaniu między kompilatorem a implementacją funkcji wewnętrznych.
+Funkcje wewnętrzne, które nie przydzielą przestrzeni stosu i nie wywołują innych funkcji, czasami używają innych nietrwałych rejestrów do przekazania dodatkowych argumentów rejestru. Optymalizacja jest możliwa przez ścisłe powiązanie między kompilatorem a implementacją funkcji wewnętrznej.
 
-Wywoływany jest odpowiedzialny za wyrzucenie parametrów rejestru do ich przestrzeni cienia, jeśli to konieczne.
+Wywoływany jest odpowiedzialny za zatopienie parametrów rejestru w ich miejscu w tle, w razie potrzeby.
 
-W poniższej tabeli podsumowano sposób przekazywania parametrów:
+Poniższa tabela zawiera podsumowanie sposobu przekazywania parametrów:
 
-|Typ parametru|Jak minęło|
+|Typ parametru|Jak zakończono|
 |--------------------|----------------|
-|Liczba zmiennoprzecinkowa|Pierwsze 4 parametry - XMM0 do XMM3. Inne przekazywane na stosie.|
-|Liczba całkowita|Pierwsze 4 parametry - RCX, RDX, R8, R9. Inne przekazywane na stosie.|
-|Agregaty (8, 16, 32 lub 64 bity) i __m64|Pierwsze 4 parametry - RCX, RDX, R8, R9. Inne przekazywane na stosie.|
-|Agregaty (inne)|Według wskaźnika. Pierwsze 4 parametry przekazywane jako wskaźniki w RCX, RDX, R8 i R9|
-|__m128|Według wskaźnika. Pierwsze 4 parametry przekazywane jako wskaźniki w RCX, RDX, R8 i R9|
+|Liczba zmiennoprzecinkowa|Pierwsze 4 parametry — XMM0 do XMM3. Inne osoby przechodzą na stos.|
+|Liczba całkowita|Pierwsze 4 parametry — RCX, RDX, R8, R9. Inne osoby przechodzą na stos.|
+|Agregaty (8, 16, 32 lub 64 bitów) i __m64|Pierwsze 4 parametry — RCX, RDX, R8, R9. Inne osoby przechodzą na stos.|
+|Agregaty (inne)|Według wskaźnika. Pierwsze 4 parametry przesłane jako wskaźniki w RCX, RDX, R8 i R9|
+|__m128|Według wskaźnika. Pierwsze 4 parametry przesłane jako wskaźniki w RCX, RDX, R8 i R9|
 
-### <a name="example-of-argument-passing-1---all-integers"></a>Przykład przekazywania argumentu 1 — wszystkie liczby całkowite
+### <a name="example-of-argument-passing-1---all-integers"></a>Przykład przejścia argumentu 1 — wszystkie liczby całkowite
 
 ```cpp
 func1(int a, int b, int c, int d, int e);
 // a in RCX, b in RDX, c in R8, d in R9, e pushed on stack
 ```
 
-### <a name="example-of-argument-passing-2---all-floats"></a>Przykład przekazywania argumentu 2 - wszystkie pływaki
+### <a name="example-of-argument-passing-2---all-floats"></a>Przykład przejścia argumentu 2 — wszystkie wartości zmiennoprzecinkowe
 
 ```cpp
 func2(float a, double b, float c, double d, float e);
 // a in XMM0, b in XMM1, c in XMM2, d in XMM3, e pushed on stack
 ```
 
-### <a name="example-of-argument-passing-3---mixed-ints-and-floats"></a>Przykład przekazywania argumentu 3 - mieszane ints i pływaków
+### <a name="example-of-argument-passing-3---mixed-ints-and-floats"></a>Przykład przejścia argumentu 3 — mieszane liczby całkowite i zmiennoprzecinkowe
 
 ```cpp
 func3(int a, double b, int c, float d);
 // a in RCX, b in XMM1, c in R8, d in XMM3
 ```
 
-### <a name="example-of-argument-passing-4--__m64-__m128-and-aggregates"></a>Przykład przekazywania argumentu 4-__m64, \__m128 i agregatów
+### <a name="example-of-argument-passing-4--__m64-__m128-and-aggregates"></a>Przykład przejścia argumentu 4-__m64, \__m128 i agregacji
 
 ```cpp
 func4(__m64 a, _m128 b, struct c, float d);
@@ -80,11 +80,11 @@ func4(__m64 a, _m128 b, struct c, float d);
 
 ## <a name="varargs"></a>Elementy vararg
 
-Jeśli parametry są przekazywane przez varargs (na przykład argumenty wielokropka), a następnie normalny parametr rejestru przekazywania konwencji stosuje, w tym rozlanie piątego i kolejnych argumentów do stosu. Jest to callee jest odpowiedzialny za zrzut argumentów, które mają ich adres podjęte. Tylko dla wartości zmiennoprzecinkowych zarówno rejestr liczby całkowitej, jak i rejestr zmiennoprzecinowy muszą zawierać wartość, w przypadku gdy wywoływany oczekuje wartości w rejestrach całkowitych.
+Jeśli parametry są przekazywane za pośrednictwem typu VarArgs (na przykład argumenty wielokropka), stosowana jest normalna Konwencja przekazywania parametrów rejestru, w tym rozlewanie piątych i następnych argumentów do stosu. Jest on odpowiedzialny za wywoływanie argumentów, które mają swój adres. Tylko w przypadku wartości zmiennoprzecinkowych zarówno rejestry całkowite, jak i rejestr zmiennoprzecinkowy muszą zawierać wartość, w przypadku gdy wywoływany oczekuje wartość w rejestrach liczb całkowitych.
 
-## <a name="unprototyped-functions"></a>Funkcje nieprototyped
+## <a name="unprototyped-functions"></a>Funkcje nieprototypowe
 
-W przypadku funkcji, które nie są w pełni prototypowe, obiekt wywołujący przekazuje wartości całkowite jako liczby całkowite i wartości zmiennoprzecinkowe jako podwójną precyzję. Tylko dla wartości zmiennoprzecinkowych zarówno rejestr liczby całkowitej, jak i rejestr zmiennoprzecinkowy zawierają wartość zmiennoprzecinkową w przypadku, gdy wywoływany oczekuje wartości w rejestrach liczby całkowitej.
+W przypadku funkcji, które nie są w pełni prototypem, obiekt wywołujący przekazuje wartości całkowite jako liczby całkowite i wartości zmiennoprzecinkowe jako podwójną precyzję. Tylko w przypadku wartości zmiennoprzecinkowych zarówno rejestry całkowite, jak i rejestr zmiennoprzecinkowy zawierają wartość zmiennoprzecinkową w przypadku, gdy obiekt wywołujący oczekuje wartości w rejestrach liczb całkowitych.
 
 ```cpp
 func1();
@@ -95,13 +95,13 @@ func2() {   // RCX = 2, RDX = XMM1 = 1.0, and R8 = 7
 
 ## <a name="return-values"></a>Zwracane wartości
 
-Skalarna wartość zwracana, która może zmieścić się w 64 bitach jest zwracana za pośrednictwem RAX; obejmuje to typy __m64. Typy nieskalowalne, w tym floats, doubles i typy wektorowe, takie jak [__m128](../cpp/m128.md), [__m128i](../cpp/m128i.md), [__m128d](../cpp/m128d.md) są zwracane w xmm0. Stan nieużywanych bitów w wartości zwróconej w RAX lub XMM0 jest niezdefiniowany.
+Skalarna wartość zwracana, która może pasować do 64 bitów, jest zwracana przez RAX; dotyczy to również typów __m64. Typy nieskalarne, w tym wartości zmiennoprzecinkowe, podwajane i typy wektorów, takie jak [__m128](../cpp/m128.md), [__m128i](../cpp/m128i.md) [__m128d](../cpp/m128d.md) są zwracane w XMM0. Stan nieużywanych bitów w wartości zwracanej przez RAX lub XMM0 jest niezdefiniowany.
 
-Typy zdefiniowane przez użytkownika mogą być zwracane przez wartość z funkcji globalnych i statycznych funkcji członkowskich. Aby zwrócić typ zdefiniowany przez użytkownika według wartości w RAX, musi mieć długość 1, 2, 4, 8, 16, 32 lub 64 bitów. Musi również nie mieć zdefiniowanego przez użytkownika konstruktora, destruktora ani operatora przypisania kopii; brak prywatnych lub chronionych niestatycznych elementów członkowskich danych; brak niestatycznych elementów członkowskich danych typu referencyjnego; brak klas podstawowych; brak funkcji wirtualnych; i nie ma elementów członkowskich danych, które również nie spełniają tych wymagań. (Jest to zasadniczo definicja typu C++ 03 POD. Ponieważ definicja została zmieniona w standardzie C++11, nie zaleca się używania `std::is_pod` tego testu.) W przeciwnym razie wywołujący przyjmuje na siebie odpowiedzialność przydzielania pamięci i przekazywania wskaźnika dla zwracanej wartości jako pierwszego argumentu. Kolejne argumenty są następnie przesuwane o jeden argument w prawo. Ten sam wskaźnik musi być zwracany przez wywoływane w RAX.
+Typy zdefiniowane przez użytkownika mogą być zwracane przez wartość z funkcji globalnych i statycznych funkcji składowych. Aby zwrócić typ zdefiniowany przez użytkownika przez wartość w RAX, musi mieć długość 1, 2, 4, 8, 16, 32 lub 64 bitów. Musi on również mieć zdefiniowany przez użytkownika Konstruktor, destruktor lub operator przypisania kopiowania; Brak prywatnych lub chronionych niestatycznych elementów członkowskich danych; Brak niestatycznych elementów członkowskich danych typu referencyjnego; Brak klas bazowych; Brak funkcji wirtualnych; i nie ma żadnych składowych danych, które nie spełniają tych wymagań. (Zasadniczo jest to definicja typu C++ 03 POD. Ze względu na to, że definicja została zmieniona w standardzie C++ 11 `std::is_pod` , nie zalecamy używania dla tego testu.) W przeciwnym razie obiekt wywołujący przyjmuje odpowiedzialność za przydzielenie pamięci i przekazanie wskaźnika dla wartości zwracanej jako pierwszy argument. Kolejne argumenty są następnie przesunięte o jeden argument w prawo. Ten sam wskaźnik musi być zwracany przez obiekt wywoływany w RAX.
 
-Te przykłady pokazują, jak parametry i zwracane wartości są przekazywane dla funkcji z określonymi deklaracjami:
+W poniższych przykładach pokazano, jak parametry i zwracane wartości są przesyłane do funkcji z określonymi deklaracjami:
 
-### <a name="example-of-return-value-1---64-bit-result"></a>Przykład zwracanej wartości 1 - wynik 64-bitowy
+### <a name="example-of-return-value-1---64-bit-result"></a>Przykład zwracanej wartości 1-64-bitowego wyniku
 
 ```Output
 __int64 func1(int a, float b, int c, int d, int e);
@@ -109,7 +109,7 @@ __int64 func1(int a, float b, int c, int d, int e);
 // callee returns __int64 result in RAX.
 ```
 
-### <a name="example-of-return-value-2---128-bit-result"></a>Przykład zwracanej wartości 2 - wynik 128-bitowy
+### <a name="example-of-return-value-2---128-bit-result"></a>Przykład zwracanej wartości 2-128-bitowego wyniku
 
 ```Output
 __m128 func2(float a, double b, int c, __m64 d);
@@ -117,7 +117,7 @@ __m128 func2(float a, double b, int c, __m64 d);
 // callee returns __m128 result in XMM0.
 ```
 
-### <a name="example-of-return-value-3---user-type-result-by-pointer"></a>Przykład zwracanej wartości 3 - wynik typu użytkownika według wskaźnika
+### <a name="example-of-return-value-3---user-type-result-by-pointer"></a>Przykład wartości zwracanej 3 — wynik typu użytkownika według wskaźnika
 
 ```Output
 struct Struct1 {
@@ -129,7 +129,7 @@ Struct1 func3(int a, double b, int c, float d);
 // callee returns pointer to Struct1 result in RAX.
 ```
 
-### <a name="example-of-return-value-4---user-type-result-by-value"></a>Przykład zwracanej wartości 4 - wynik typu użytkownika według wartości
+### <a name="example-of-return-value-4---user-type-result-by-value"></a>Przykład wartości zwracanej 4 — wynik typu użytkownika według wartości
 
 ```Output
 struct Struct2 {
@@ -140,70 +140,70 @@ Struct2 func4(int a, double b, int c, float d);
 // callee returns Struct2 result by value in RAX.
 ```
 
-## <a name="callercallee-saved-registers"></a>Rejestry zapisane przez rozmówcę/rozmówcę
+## <a name="callercallee-saved-registers"></a>Zapisane rejestry wywołującego/wywoływanego
 
-Rejestry RAX, RCX, RDX, R8, R9, R10, R11, XMM0-5 oraz górne części YMM0-15 i ZMM0-15 są uważane za niestabilne i należy je uznać za zniszczone podczas wywołań funkcji (chyba że analiza, taka jak optymalizacja całego programu, może być uznana za zniszczoną (chyba że można je dzić inaczej bezpieczeństwa. Na avx512VL, ZMM, YMM i XMM rejestry 16-31 są lotne.
+Rejestry RAX, RCX, RDX, R8, R9, R10, R11, XMM0-5 i górnych części YMM0-15 i ZMM0-15 są uznawane za nietrwałe i muszą być uznawane za niszczone w wywołaniach funkcji (chyba że w przypadku braku bezpieczeństwa-sprawdzalnych przez analizę, taką jak optymalizacja całego programu). W AVX512VL, ZMM, YMM i XMM rejestry 16-31 są nietrwałe.
 
-Rejestry RBX, RBP, RDI, RSI, RSP, R12, R13, R14, R15 i XMM6-15 są uważane za nieulotne i muszą zostać zapisane i przywrócone przez funkcję, która ich używa.
+Rejestry RBX, RBP, RDI, RSI, RSP, R12, R13, R14, R15 i XMM6-15 są uznawane za nietrwałe i muszą zostać zapisane i przywrócone przez funkcję, która go używa.
 
 ## <a name="function-pointers"></a>Wskaźniki funkcji
 
-Wskaźniki funkcji są po prostu wskaźniki do etykiety odpowiedniej funkcji. Nie ma żadnych wymagań spisu treści (SPISU TREŚCI) dla wskaźników funkcji.
+Wskaźniki funkcji są po prostu wskaźnikami do etykiety odpowiedniej funkcji. Nie ma wymagań dotyczących spisu treści (TOC) dla wskaźników funkcji.
 
-## <a name="floating-point-support-for-older-code"></a>Obsługa zmiennoprzecinkowy starszego kodu
+## <a name="floating-point-support-for-older-code"></a>Obsługa zmiennoprzecinkowa dla starszego kodu
 
-Rejestry MMX i stosów zmiennoprzecinkowych (MM0-MM7/ST0-ST7) są zachowywane w przełącznikach kontekstowych. Nie ma wyraźnej konwencji wzywania dla tych rejestrów. Korzystanie z tych rejestrów jest surowo zabronione w kodzie trybu jądra.
+Rejestry stosu MMX i zmiennoprzecinkowe (MM0-MM7/ST0-ST7) są zachowywane między przełącznikami kontekstowymi. Nie ma żadnej jawnej konwencji wywoływania dla tych rejestrów. Korzystanie z tych rejestrów jest absolutnie zabronione w kodzie trybu jądra.
 
 ## <a name="fpcsr"></a>FpCsr
 
-Stan rejestru zawiera również słowo sterujące fpu x87. Konwencja wywołująca nakazuje, aby ten rejestr był nieulotny.
+Stan rejestru zawiera również słowo x87 FPU Control. Konwencja wywoływania wymusza, aby ta rejestracja była nietrwała.
 
-Rejestr słów sterujących fpu x87 jest ustawiony na następujące wartości standardowe na początku wykonywania programu:
+Rejestracja słowa x87 FPU Control jest ustawiana na następujące wartości standardowe na początku wykonywania programu:
 
-| Zarejestruj\[bity] | Ustawienie |
+| Bity\[rejestru] | Ustawienie |
 |-|-|
-| FPCSR\[0:6] | Maski wyjątków wszystkie 1 (wszystkie wyjątki zamaskowane) |
-| FPCSR\[7] | Zarezerwowane - 0 |
-| FPCSR\[8:9] | Precyzyjna kontrola - 10B (podwójna precyzja) |
-| FPCSR\[10:11] | Kontrola zaokrąglania - 0 (zaokrąglanie do najbliższej) |
-| FPCSR\[12] | Sterowanie nieskończoności - 0 (nie używane) |
+| FPCSR\[0:6] | Maski wyjątków wszystkie 1 (wszystkie wyjątki są maskowane) |
+| FPCSR\[7] | Zarezerwowane — 0 |
+| FPCSR\[8:9] | Precision Control-10B (Podwójna precyzja) |
+| FPCSR\[10:11] | Kontrolka zaokrąglania-0 (Zaokrąglij do najbliższej) |
+| FPCSR\[12] | Nieskończoność — 0 (nieużywane) |
 
-Wywoływany, który modyfikuje dowolne pola w FPCSR należy przywrócić je przed zwróceniem do jego obiektu wywołującego. Ponadto wywołujący, który zmodyfikował dowolne z tych pól, musi przywrócić je do ich standardowych wartości przed wywołaniem wywoływanego, chyba że zgodnie z umową wywoływany oczekuje zmodyfikowanych wartości.
+Wywoływany, który modyfikuje wszystkie pola w FPCSR, musi przywrócić je przed powrotem do obiektu wywołującego. Ponadto obiekt wywołujący, który zmodyfikował dowolne z tych pól, musi przywrócić je do wartości standardowych przed wywołaniem elementu wywoływanego, chyba że jest to polecenie wywoływanej wartości.
 
-Istnieją dwa wyjątki od zasad dotyczących braku zmienności flag kontrolnych:
+Istnieją dwa wyjątki od zasad dotyczących niezmienności flag formantów:
 
-1. W funkcjach, w których udokumentowanym celem danej funkcji jest modyfikowanie nieulotnych flag FPCsr.
+1. W funkcjach, w których cel danej funkcji jest modyfikowany przez nietrwałe flagi FpCsr.
 
-1. Gdy jest provably poprawne, że naruszenie tych reguł powoduje program, który zachowuje się tak samo jak program, w którym te reguły nie są naruszane, na przykład poprzez analizę całego programu.
+1. Provably poprawiają, że naruszenie tych reguł powoduje, że program zachowuje się tak samo jak program, w którym te reguły nie zostały naruszone, na przykład za pomocą analizy całego programu.
 
 ## <a name="mxcsr"></a>MxCsr
 
-Stan rejestru obejmuje również MxCsr. Konwencja wywołująca dzieli ten rejestr na część lotną i część nieulotną. Część lotna składa się z sześciu flag\[stanu, w MXCSR 0:5],\[podczas gdy reszta rejestru, MXCSR 6:15], jest uważana za nieulotną.
+Stan rejestru zawiera również MxCsr. Konwencja wywoływania dzieli ten rejestr na część nietrwałą i nielotną część. Część nietrwała składa się z sześciu flag stanu,\[w MXCSR 0:5], podczas gdy pozostała część\[rejestru MXCSR 6:15] jest uznawana za nietrwałą.
 
-Część nieulotna jest ustawiona na następujące wartości standardowe na początku wykonywania programu:
+Część nietrwała jest ustawiona na następujące wartości standardowe na początku wykonywania programu:
 
-| Zarejestruj\[bity] | Ustawienie |
+| Bity\[rejestru] | Ustawienie |
 |-|-|
-| MXCSR\[6] | Denormals są zera - 0 |
-| MXCSR\[7:12] | Maski wyjątków wszystkie 1 (wszystkie wyjątki zamaskowane) |
-| MXCSR\[13:14] | Kontrola zaokrąglania - 0 (zaokrąglanie do najbliższej) |
-| MXCSR\[15] | Kolor do zera dla zamaskowanego niedopełnienia - 0 (wyłączony) |
+| MXCSR\[6] | Nienormalne wartości są zerami-0 |
+| MXCSR\[7:12] | Maski wyjątków wszystkie 1 (wszystkie wyjątki są maskowane) |
+| MXCSR\[13:14] | Kontrolka zaokrąglania-0 (Zaokrąglij do najbliższej) |
+| MXCSR\[15] | Opróżnianie do zera dla zamaskowanego niedopełnienia-0 (wyłączone) |
 
-Wywoływany, który modyfikuje dowolne pola nieulotne w MXCSR należy przywrócić je przed zwróceniem do jego obiektu wywołującego. Ponadto wywołujący, który zmodyfikował dowolne z tych pól, musi przywrócić je do ich standardowych wartości przed wywołaniem wywoływanego, chyba że zgodnie z umową wywoływany oczekuje zmodyfikowanych wartości.
+Wywoływany, który modyfikuje dowolne z nietrwałych pól w MXCSR, musi przywrócić je przed powrotem do obiektu wywołującego. Ponadto obiekt wywołujący, który zmodyfikował dowolne z tych pól, musi przywrócić je do wartości standardowych przed wywołaniem elementu wywoływanego, chyba że jest to polecenie wywoływanej wartości.
 
-Istnieją dwa wyjątki od zasad dotyczących braku zmienności flag kontrolnych:
+Istnieją dwa wyjątki od zasad dotyczących niezmienności flag formantów:
 
-- W funkcjach, w których udokumentowanym celem danej funkcji jest modyfikowanie nieulotnych flag MxCsr.
+- W funkcjach, w których cel danej funkcji jest modyfikowany przez nietrwałe flagi MxCsr.
 
-- Gdy jest provably poprawne, że naruszenie tych reguł powoduje program, który zachowuje się tak samo jak program, w którym te reguły nie są naruszane, na przykład poprzez analizę całego programu.
+- Provably poprawiają, że naruszenie tych reguł powoduje, że program zachowuje się tak samo jak program, w którym te reguły nie zostały naruszone, na przykład za pomocą analizy całego programu.
 
-Nie można zakładać o stanie lotnej części MXCSR w granicach funkcji, chyba że szczegółowo opisane w dokumentacji funkcji.
+Nie można wykonać żadnych założeń dotyczących stanu nietrwałej części MXCSR na granicy funkcji, chyba że opisano to szczegółowo w dokumentacji funkcji.
 
 ## <a name="setjmplongjmp"></a>setjmp/longjmp
 
-Po dołączeniu setjmpex.h lub setjmp.h, wszystkie wywołania [setjmp](../c-runtime-library/reference/setjmp.md) lub [longjmp](../c-runtime-library/reference/longjmp.md) spowodować `__finally` unwind, który wywołuje destruktorów i wywołań.  Różni się to od x86, gdzie łącznie `__finally` setjmp.h powoduje klauzule i destruktory nie są wywoływane.
+Po dołączeniu SETJMPEX. h lub setjmp. h wszystkie wywołania do [setjmp](../c-runtime-library/reference/setjmp.md) lub [longjmp](../c-runtime-library/reference/longjmp.md) powodują powstanie elementu unwind, który wywołuje destruktory i `__finally` wywołania.  Różni się to od platformy x86, gdzie w `__finally` tym setjmp. h nie są wywoływane klauzule i destruktory.
 
-Wywołanie `setjmp` zachowuje bieżący wskaźnik stosu, rejestry nieulotne i rejestry MxCsr.  Wywołania, aby powrócić do `longjmp` ostatniej `setjmp` witryny wywołania i resetuje wskaźnik stosu, rejestry nieulotne i rejestry MxCsr, z powrotem do stanu zachowanego przez ostatnie `setjmp` wywołanie.
+Wywołanie w celu `setjmp` zachowywania bieżącego wskaźnika stosu, rejestrów nietrwałych i rejestrów MXCSR.  Wywołania do `longjmp` powrotu do najnowszej lokacji `setjmp` wywołania i resetowania wskaźnika stosu, rejestrów nietrwałych i rejestrów MXCSR, z powrotem do stanu zakonserwowanego przez ostatnie `setjmp` wywołanie.
 
 ## <a name="see-also"></a>Zobacz też
 

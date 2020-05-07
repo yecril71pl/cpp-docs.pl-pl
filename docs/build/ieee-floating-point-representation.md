@@ -20,7 +20,7 @@ ms.locfileid: "80169815"
 ---
 # <a name="ieee-floating-point-representation"></a>Odwzorowanie liczby zmiennoprzecinkowej IEEE
 
-Firma C++ Microsoft (MSVC) jest zgodna ze standardami cyfr IEEE. Standard IEEE-754 opisuje formaty zmiennoprzecinkowe w sposób przedstawiający rzeczywiste liczby sprzętu. Istnieje co najmniej pięć formatów wewnętrznych dla liczb zmiennoprzecinkowych, które są możliwe do zaprezentowania na sprzęcie przeznaczonym dla kompilatora MSVC, ale kompilator używa tylko dwóch z nich. Formaty o *pojedynczej precyzji* (4-bajtowe) i *podwójnej precyzji* (8-bajtowe) są używane w MSVC. Pojedyncza precyzja jest zadeklarowana przy użyciu słowa kluczowego **zmiennoprzecinkowego**. Podwójna precyzja jest zadeklarowana przy użyciu słowa kluczowego **Double**. IEEE standard określa również formaty *o połowie dokładności* (2-bajtowe) i *czterokrotnie Precision* (16-bajtowe), a także format *podwójnej precyzji* (10-bajtowe), który jest używany przez niektóre języki C++ C i kompilatory jako dane typu **Long Double** . W kompilatorze MSVC typ danych **Long Double** jest traktowany jako typ odrębny, ale typ magazynu jest mapowany na wartość **Double**. Istnieje jednak obsługa obliczeń w języku wewnętrznym i wielojęzycznym przy użyciu innych formatów, w tym formatu podwójnej precyzji (10-bajtowej), który jest obsługiwany przez sprzęt.
+Język Microsoft C++ (MSVC) jest zgodny ze standardami cyfr IEEE. Standard IEEE-754 opisuje formaty zmiennoprzecinkowe w sposób przedstawiający rzeczywiste liczby sprzętu. Istnieje co najmniej pięć formatów wewnętrznych dla liczb zmiennoprzecinkowych, które są możliwe do zaprezentowania na sprzęcie przeznaczonym dla kompilatora MSVC, ale kompilator używa tylko dwóch z nich. Formaty o *pojedynczej precyzji* (4-bajtowe) i *podwójnej precyzji* (8-bajtowe) są używane w MSVC. Pojedyncza precyzja jest zadeklarowana przy użyciu słowa kluczowego **zmiennoprzecinkowego**. Podwójna precyzja jest zadeklarowana przy użyciu słowa kluczowego **Double**. IEEE standard określa również formaty o *połowie dokładności* (2-bajtowe) i *czterokrotnie Precision* (16-bajtowe), a także format *podwójnej precyzji* (10-bajtowe), który implementuje niektóre kompilatory C i C++ jako **długie podwójne** dane. W kompilatorze MSVC typ danych **Long Double** jest traktowany jako typ odrębny, ale typ magazynu jest mapowany na wartość **Double**. Istnieje jednak obsługa obliczeń w języku wewnętrznym i wielojęzycznym przy użyciu innych formatów, w tym formatu podwójnej precyzji (10-bajtowej), który jest obsługiwany przez sprzęt.
 
 Wartości są przechowywane w następujący sposób:
 
@@ -36,7 +36,7 @@ Wykładniki są rozdzielone połowami możliwych wartości. Oznacza to odjęcie 
 
 Wykładniki są rozłączone w następujący sposób:
 
-|Zapis|Obciążone przez|
+|Wykładnik|Obciążone przez|
 |--------------|---------------|
 |8-bitowa (pojedyncza precyzja)|127|
 |11-bitowa (Podwójna precyzja)|1023|
@@ -48,13 +48,13 @@ Mantysę jest przechowywany jako ułamek binarny formularza 1.XXX... Ten ułamek
 
 Format, a następnie dla różnych rozmiarów jest następujący:
 
-|Format|bajt 1|bajt 2|bajt 3|bajt 4|Przyciski ...|bajt n|
+|Format|bajt 1|bajt 2|bajt 3|bajt 4|...|bajt n|
 |------------|------------|------------|------------|------------|---------|------------|
 |Pojedyncza precyzja| `SXXXXXXX`|`XMMMMMMM`|`MMMMMMMM`|`MMMMMMMM`|||
-|Podwójna precyzja|`SXXXXXXX`|`XXXXMMMM`|`MMMMMMMM`|`MMMMMMMM`|Przyciski ...|`MMMMMMMM`|
-|podwójnie rozszerzona precyzja|`SXXXXXXX`|`XXXXXXXX`|`1MMMMMMM`|`MMMMMMMM`|Przyciski ...|`MMMMMMMM`|
+|Podwójna precyzja|`SXXXXXXX`|`XXXXMMMM`|`MMMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
+|podwójnie rozszerzona precyzja|`SXXXXXXX`|`XXXXXXXX`|`1MMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
 
-`S` reprezentuje bit znaku, `X`jest bitami wykładniczymi, a `M`jest bita mantysę. Należy pamiętać, że bit z lewej strony jest przyjęty w formatach o pojedynczej precyzji i podwójnej precyzji, ale jest obecny jako "1" w bajcie 3 formatu podwójnej precyzji.
+`S`reprezentuje bit znaku, `X`jest to bity wykładnika, a `M`jest to mantysę bity. Należy pamiętać, że bit z lewej strony jest przyjęty w formatach o pojedynczej precyzji i podwójnej precyzji, ale jest obecny jako "1" w bajcie 3 formatu podwójnej precyzji.
 
 Aby prawidłowo przesunąć punkt binarny, najpierw należy rozwiązać ten wykładnik, a następnie przenieść punkt binarny w prawo lub w lewo do odpowiedniej liczby bitów.
 
@@ -116,7 +116,7 @@ Poniżej przedstawiono kilka przykładów w formacie o pojedynczej precyzji:
 
    |Wartość|Formuła|Reprezentacja binarna|Wartość szesnastkowa|
    |-|-|-|-|
-   |0.75|1,5 * 2<sup>-1</sup>|0011 1111 0100 0000 0000 0000 0000 0000|0x3F400000|
+   |0,75|1,5 * 2<sup>-1</sup>|0011 1111 0100 0000 0000 0000 0000 0000|0x3F400000|
 
 - Wartość 2,5. Dokładnie takie same, jak dwa, z wyjątkiem tego, że bit reprezentujący 1/4 jest ustawiony w mantysę.
 

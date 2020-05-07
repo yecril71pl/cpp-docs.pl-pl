@@ -16,22 +16,22 @@ ms.locfileid: "81334570"
 ---
 # <a name="function-calls"></a>Wywołania funkcji
 
-*Wywołanie funkcji* jest wyrażeniem, które przekazuje kontrolę i argumenty (jeśli istnieją) do funkcji i ma formularz:
+*Wywołanie funkcji* jest wyrażeniem, które przekazuje formant i argumenty (jeśli istnieją) do funkcji i ma postać:
 
-*wyrażenie* *(wyrażenie-lista*<sub>opt)</sub>
+*wyrażenie* (<sub>wybór</sub>*wyrażenia-list*)
 
-gdzie *wyrażenie* jest nazwą funkcji lub ocenia adres funkcji, a *lista wyrażeń* jest listą wyrażeń (oddzielonych przecinkami). Wartości tych końcowych wyrażeń są argumentami przekazywanymi do funkcji. Jeśli funkcja nie zwraca wartości, należy zadeklarować, że `void`jest to funkcja zwracająca .
+*wyrażenie* WHERE jest nazwą funkcji lub szacuje *się, że jest to* Lista wyrażeń (rozdzielonych przecinkami). Wartości tych końcowych wyrażeń są argumentami przekazywanymi do funkcji. Jeśli funkcja nie zwraca wartości, deklaruje ją jako funkcję, która zwraca `void`.
 
-Jeśli deklaracja istnieje przed wywołaniem funkcji, ale nie podano żadnych informacji dotyczących parametrów, wszelkie niezadeklarowane argumenty po prostu przechodzą zwykłe konwersje arytmetyczne.
+Jeśli deklaracja istnieje przed wywołaniem funkcji, ale nie podano informacji dotyczących parametrów, wszelkie niezadeklarowane argumenty po prostu poddają się do zwykłych konwersji arytmetycznych.
 
 > [!NOTE]
-> Wyrażenia na liście argumentów funkcji mogą być oceniane w dowolnej kolejności, więc argumenty, których wartości mogą zostać zmienione przez skutki uboczne z innego argumentu mają wartości niezdefiniowane. Punkt sekwencji zdefiniowany przez operator wywołania funkcji gwarantuje tylko, że wszystkie skutki uboczne na liście argumentów są oceniane przed przepuszczenia kontroli do wywoływana funkcja. (Należy zauważyć, że kolejność, w jakiej argumenty są wypychane na stosie jest osobną sprawą.) Zobacz [punkty sekwencji, aby](../c-language/c-sequence-points.md) uzyskać więcej informacji.
+> Wyrażenia na liście argumentów funkcji można ocenić w dowolnej kolejności, dlatego argumenty, których wartości mogą być zmieniane przez skutki uboczne z innego argumentu mają niezdefiniowane wartości. Punkt sekwencji zdefiniowany przez operator wywołania funkcji gwarantuje tylko, że wszystkie efekty uboczne na liście argumentów są oceniane przed przekazaniem sterowania do wywołanej funkcji. (Należy zauważyć, że kolejność, w jakiej argumenty są wypychane na stosie, jest odrębna.) Zobacz [punkty sekwencji](../c-language/c-sequence-points.md) , aby uzyskać więcej informacji.
 
-Jedynym wymaganiem w każdym wywołaniu funkcji jest to, że wyrażenie przed nawiasami musi ocenić adres funkcji. Oznacza to, że funkcja może być wywoływana za pośrednictwem dowolnego wyrażenia wskaźnik funkcji.
+Jedynym wymaganiem w każdym wywołaniu funkcji jest to, że wyrażenie przed nawiasami musi obliczyć do adresu funkcji. Oznacza to, że funkcja może być wywoływana za pośrednictwem dowolnego wyrażenia wskaźnika funkcji.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie przedstawiono `switch` wywołania funkcji wywoływane z instrukcji:
+Ten przykład ilustruje wywołania funkcji wywoływane z `switch` instrukcji:
 
 ```
 int main()
@@ -73,23 +73,23 @@ void work( int number, long (*function)(int i) )
 }
 ```
 
-W tym przykładzie wywołanie funkcji w `main`,
+W tym przykładzie funkcja wywołuje w `main`,
 
 ```
 work( count, lift );
 ```
 
-przekazuje zmienną całkowitą, `count`a adres funkcji `lift` do funkcji `work`. Należy zauważyć, że adres funkcji jest przekazywany po prostu przez podanie identyfikatora funkcji, ponieważ identyfikator funkcji ocenia wyrażenie wskaźnika. Aby w ten sposób użyć identyfikatora funkcji, funkcja musi być zadeklarowana lub zdefiniowana przed użyciem identyfikatora; w przeciwnym razie identyfikator nie zostanie rozpoznany. W takim przypadku prototyp `work` dla jest podany na `main` początku funkcji.
+przekazuje zmienną całkowitą, `count`i adres funkcji `lift` do funkcji. `work` Należy zauważyć, że adres funkcji jest przesyłany po prostu przez podanie identyfikatora funkcji, ponieważ identyfikator funkcji oblicza wyrażenie wskaźnika. Aby użyć identyfikatora funkcji w ten sposób, funkcja musi być zadeklarowana lub zdefiniowana przed użyciem identyfikatora; w przeciwnym razie identyfikator nie jest rozpoznawany. W tym przypadku prototyp dla `work` jest podawany na początku `main` funkcji.
 
-Parametr `function` w `work` jest zadeklarowany jako wskaźnik do `int` funkcji przy jednym argumentie i zwracaniu **wartości długiej.** Nawiasy wokół nazwy parametru są wymagane; bez nich deklaracja określi funkcję zwracającą wskaźnik do wartości **długiej.**
+Parametr `function` w `work` jest zadeklarowany jako wskaźnik do funkcji pobierającej jeden `int` argument i zwracająca wartość **długą** . Nawiasy wokół nazwy parametru są wymagane; bez nich, deklaracja określi funkcję zwracającą wskaźnik do wartości **długiej** .
 
-Funkcja `work` wywołuje wybraną funkcję z wewnątrz pętli **for** za pomocą następującego wywołania funkcji:
+Funkcja `work` wywołuje wybraną funkcję z wewnątrz pętli **for** przy użyciu następującego wywołania funkcji:
 
 ```
 ( *function )( i );
 ```
 
-Jeden argument `i`, jest przekazywany do wywoływana funkcja.
+Jeden argument, `i`, jest przesyłany do wywołanej funkcji.
 
 ## <a name="see-also"></a>Zobacz też
 

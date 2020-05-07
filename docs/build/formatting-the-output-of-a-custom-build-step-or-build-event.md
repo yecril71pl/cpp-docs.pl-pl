@@ -30,17 +30,17 @@ Jeśli dane wyjściowe niestandardowego kroku kompilacji lub zdarzenia kompilacj
 
 Format danych wyjściowych powinien być:
 
-> {<em>filename</em> **(** <em>wiersz #</em> \[ **,** <em>kolumna #</em>] **)** &#124; *ToolName*} **:** \[ <em>dowolny tekst</em> ] {**error** &#124; **Warning**error} <em>Code + Number</em> **:** <em>Lokalizowalny ciąg</em> \[ <em>dowolny tekst</em> ]
+> {<em>filename</em>**(**<em>wiersz #</em> \[ **,** <em>kolumna #</em>]**)** &#124; *ToolName*} **:** \[ <em>dowolny tekst</em> ] {**Error** &#124; **Warning**} <em>Code + Number</em>**:**<em>Lokalizowalny ciąg</em> \[ <em>dowolny tekst</em> ]
 
 Gdzie:
 
 - {*a* &#124; *b*} to wybór *a* lub *b*.
 
-- <em>element</em>\[] jest opcjonalnym ciągiem lub parametrem.
+- \[<em>element</em>] jest opcjonalnym ciągiem lub parametrem.
 
 - **Pogrubienie** reprezentuje literał.
 
-Na przykład:
+Przykład:
 
 > C:\\*SourceFile. cpp*(134): błąd C2143: błąd składniowy: Brak znaku ";" przed "}"
 >

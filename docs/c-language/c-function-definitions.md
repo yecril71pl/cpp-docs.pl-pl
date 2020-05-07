@@ -27,59 +27,59 @@ Definicja funkcji określa nazwę funkcji, typy i liczbę parametrów, które oc
 
 *Jednostka translation*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklaracja zewnętrzna* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;— *deklaracja zewnętrzna* *jednostki tłumaczenia*
+&nbsp;&nbsp;&nbsp;&nbsp;*deklaracja zewnętrzna* *jednostki tłumaczenia*
 
-*deklaracja zewnętrzna*:/\* dozwolone tylko w zewnętrznym zakresie (pliku) \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*funkcji — definicja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*
+*deklaracja zewnętrzna*:/\* dozwolone tylko w zewnętrznym zakresie (pliku)\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Definicja funkcji*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*oświadczeń*
 
 *definicja funkcji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;deklarator, *specyfikatory deklaracji*<sub>opt</sub> *-SEQ*<sub>opt</sub> *deklaracji-list*<sub>opt</sub> *złożonej-instrukcja*
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja-specyfikators*<sub>opt</sub> *Attribute-SEQ*<sub>opt</sub> *deklarator* *deklaracji-list*<sub>opt</sub> *złożone-instrukcja*
 
-atrybut \* / *-SEQ* jest \*em specyficznym dla firmy Microsoft /
+/\**atrybut-seq* jest specyficzny dla firmy Microsoft\*/
 
 Parametry prototypu:
 
 *specyfikatory deklaracji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<sub></sub> *specyfikatora klasy magazynu* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<sub></sub> *specyfikatora typu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<sub></sub> *kwalifikatora typu*
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja* *specyfikatora klasy magazynu* —<sub>wybór</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *specyfikatora typu* *— wybór specyfikatorów*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *kwalifikatora typu* *— wybór specyfikatorów*<sub>opt</sub>
 
 *Deklaracja-lista*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja list*
+&nbsp;&nbsp;&nbsp;&nbsp;*oświadczeń*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *listy deklaracji* *declaration*
 
 *deklarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;deklarator *wskaźnika*"<sub>opt</sub> *Direct-"*
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>wybór</sub> wskaźnika *Direct-deklarator*
 
-*Direct-deklarator*:/\* deklarator funkcji \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **(** *listy parametrów typu* **)**  / \* deklaratora nowy styl \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **(** *listy identyfikatorów*<sub>zoptymalizowany pod kątem</sub> **)**  / \* Obsolete stylu deklarator \*/
+*Direct-deklarator*:/\* A funkcja deklarator\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(***Typ parametru-list***)**  / \* New-Style deklarator      \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(** nieważność*listy identyfikatorów*<sub>opt</sub> **)**  / \* — przestarzałe style deklarator    \*/
 
 Lista parametrów w definicji używa następującej składni:
 
-*Typ parametru-list*:/\* listy parametrów \*/<br/>
+*Typ parametru-list*:/\* lista parametrów\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* **,...**
 
 *Lista parametrów*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-declaration*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parametrów-list* **,** *deklaracji parametru*
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja parametru*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* **,**  *Deklaracja parametru*
 
 *Deklaracja parametru*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specyfikatory deklaracji* *deklarator*<br/>
-&nbsp;&nbsp;&nbsp;*specyfikatora deklaracji*<sub></sub> &nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;abstrakcyjne *specyfikatory deklaracji* *-deklarator*<sub>opt</sub>
 
 Lista parametrów w definicji funkcji starego stylu używa następującej składni:
 
-*identyfikatory-list*:/\* używane w definicjach i deklaracjach funkcji przestarzałego stylu \*/<br/>
-&nbsp;&nbsp;&nbsp;*identyfikator* &nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista identyfikatorów* **,** *identyfikator*
+*Identyfikator-list*:/\* używany w definicjach i deklaracjach funkcji przestarzałego stylu\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identyfikatora*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator — lista* **,**  *Identyfikator*
 
 Składnia dla treści funkcji jest następująca:
 
 *instrukcja złożona*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;instrukcji **{** *Deklaracja-list*<sub>opt</sub> *-list*<sub>opt</sub> **}**
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *deklaracji*<sub>opt</sub> *instrukcji SELECT-list*<sub>opt</sub> **}**
 
 Jedyne specyfikatory klasy magazynu, które mogą modyfikować deklarację funkcji, są **extern** i **statyczne**. Specyfikator **extern** oznacza, że funkcja może być przywoływana z innych plików; oznacza to, że nazwa funkcji jest eksportowana do konsolidatora. Specyfikator **statyczny** oznacza, że funkcji nie można odwoływać się od innych plików; oznacza to, że nazwa nie jest eksportowana przez konsolidator. Jeśli Klasa magazynu nie jest wyświetlana w definicji funkcji, założono **extern** . W każdym przypadku funkcja jest zawsze widoczna z punktu definicji do końca pliku.
 
@@ -93,6 +93,6 @@ Opcjonalne *specyfikatory deklaracji* i obowiązkowe *deklarator* razem określa
 
 Sekcje [atrybutów funkcji](../c-language/function-attributes.md), [klasy magazynu](../c-language/storage-class.md), [typu zwracanego](../c-language/return-type.md), [parametrów](../c-language/parameters.md)i [treści funkcji](../c-language/function-body.md) opisują składniki definicji funkcji szczegółowo.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje](../c-language/functions-c.md)

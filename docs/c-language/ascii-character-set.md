@@ -11,12 +11,12 @@ ms.locfileid: "81335083"
 ---
 # <a name="ascii-character-set"></a>Zestaw znaków ASCII
 
-**ANSI 2.2.1** Elementy zestawów znaków źródłowych i wykonawczych
+**ANSI 2.2.1** Elementy członkowskie zestawów znaków źródła i wykonania
 
-Źródłowy zestaw znaków to zestaw znaków prawnych, które mogą pojawiać się w plikach źródłowych. W przypadku systemu Microsoft C źródłowy zestaw znaków jest standardowym zestawem znaków ASCII.
+Zestaw znaków źródła jest zestawem znaków prawnych, które mogą być wyświetlane w plikach źródłowych. W przypadku języka Microsoft C zestaw znaków źródłowych jest standardowym zestawem znaków ASCII.
 
 > [!NOTE]
-> **Ostrzeżenie** Ponieważ sterowniki klawiatury i konsoli mogą ponownie mapować zestaw znaków, programy przeznaczone do dystrybucji międzynarodowej powinny sprawdzić kod kraju/regionu.
+> **Ostrzeżenie** Ze względu na to, że sterowniki klawiatury i konsoli mogą ponownie mapować zestaw znaków, programy przeznaczone do dystrybucji międzynarodowej powinny sprawdzać kod kraju/regionu.
 
 ## <a name="see-also"></a>Zobacz też
 

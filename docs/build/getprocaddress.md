@@ -19,7 +19,7 @@ ms.locfileid: "69493251"
 
 Procesy jawnie łączące się z wywołaniem DLL wywołania [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) w celu uzyskania adresu eksportowanej funkcji w bibliotece DLL. Aby wywołać funkcję DLL, należy użyć zwróconego wskaźnika funkcji. Funkcja **GetProcAddress** przyjmuje jako parametry obsługę modułu dll (zwracaną przez funkcję **LoadLibrary**lub `AfxLoadLibrary` **GetModuleHandle**) i pobiera nazwę funkcji, która ma zostać wywołana, lub numer porządkowy eksportu funkcji.
 
-Ponieważ wywołujesz funkcję DLL za pomocą wskaźnika i nie ma sprawdzania typu w czasie kompilacji, upewnij się, że parametry funkcji są poprawne, aby nie przekroczyć pamięci przyłożonej na stos i spowodować naruszenie zasad dostępu. Jednym ze sposobów zapewnienia bezpieczeństwa typów jest wyszukanie prototypów funkcji eksportowanych funkcji i utworzenie zgodnych elementów typedef dla wskaźników funkcji. Na przykład:
+Ponieważ wywołujesz funkcję DLL za pomocą wskaźnika i nie ma sprawdzania typu w czasie kompilacji, upewnij się, że parametry funkcji są poprawne, aby nie przekroczyć pamięci przyłożonej na stos i spowodować naruszenie zasad dostępu. Jednym ze sposobów zapewnienia bezpieczeństwa typów jest wyszukanie prototypów funkcji eksportowanych funkcji i utworzenie zgodnych elementów typedef dla wskaźników funkcji. Przykład:
 
 ```
 typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);
@@ -49,9 +49,9 @@ if (hDLL != NULL)
 }
 ```
 
-Sposób określania funkcji, która ma być wywoływana, zależy od tego, jak biblioteka DLL została skompilowana.
+Sposób określania funkcji, która ma **być wywoływana, zależy od tego,** jak biblioteka DLL została skompilowana.
 
-Można uzyskać tylko numer porządkowy eksportu, jeśli biblioteka DLL, z którą tworzysz łącze, jest skompilowana przy użyciu pliku definicji modułu (. def), a liczby porządkowe są wyświetlane z funkcjami w sekcji eksporty pliku dll. def. Wywoływanie funkcji **GetProcAddress** z numerem porządkowym eksportu, w przeciwieństwie do nazwy funkcja, jest nieco szybsze, jeśli biblioteka DLL ma wiele funkcji, ponieważ eksporty mogą pełnić rolę indeksów w tabeli eksportu biblioteki DLL. W przypadku liczby porządkowej eksportu funkcja **GetProcAddress** może zlokalizować funkcję bezpośrednio, zamiast porównywać określoną nazwę z nazwami funkcji w tabeli eksportu biblioteki DLL. Jednak należy wywołać funkcję **GetProcAddress** z numerem porządkowym eksportu tylko wtedy, gdy masz kontrolę nad przypisaniem porządkowych do eksportowanych funkcji w pliku. def.
+Można uzyskać tylko numer porządkowy eksportu, jeśli biblioteka DLL, z którą tworzysz łącze, jest skompilowana przy użyciu pliku definicji modułu (. def), a liczby porządkowe są wyświetlane z funkcjami w sekcji **eksporty** pliku dll. def. Wywoływanie funkcji **GetProcAddress** z numerem porządkowym eksportu, w przeciwieństwie do nazwy funkcja, jest nieco szybsze, jeśli biblioteka DLL ma wiele funkcji, ponieważ eksporty mogą pełnić rolę indeksów w tabeli eksportu biblioteki DLL. W przypadku liczby porządkowej eksportu funkcja **GetProcAddress** może zlokalizować funkcję bezpośrednio, zamiast porównywać określoną nazwę z nazwami funkcji w tabeli eksportu biblioteki DLL. Jednak należy wywołać funkcję **GetProcAddress** z numerem porządkowym eksportu tylko wtedy, gdy masz kontrolę nad przypisaniem porządkowych do eksportowanych funkcji w pliku. def.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
@@ -67,6 +67,6 @@ Można uzyskać tylko numer porządkowy eksportu, jeśli biblioteka DLL, z któr
 
 - [Eksportowanie z biblioteki DLL przy użyciu plików DEF](exporting-from-a-dll-using-def-files.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Tworzenie C/C++ dll w Visual Studio](dlls-in-visual-cpp.md)
+[Tworzenie bibliotek DLL C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)

@@ -21,8 +21,8 @@ ms.locfileid: "64344196"
 
 - [Pozostałe części](../c-language/remainders.md)
 
-- [Przesunięcia w prawo](../c-language/right-shifts.md)
+- [Prawy Shift](../c-language/right-shifts.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)

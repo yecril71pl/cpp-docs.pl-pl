@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Skonfiguruj projekty programu C++ Visual Studio jako docelowe 64-bitowe, platformy x64'
+title: 'Instrukcje: Konfigurowanie projektów programu Visual Studio C++ do docelowych 64-bitowych, platformy x64'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platforms [C++], 64-bit
@@ -13,31 +13,31 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 07/25/2019
 ms.locfileid: "68492241"
 ---
-# <a name="how-to-configure-visual-studio-c-projects-to-target-64-bit-x64-platforms"></a>Instrukcje: Skonfiguruj projekty programu C++ Visual Studio jako docelowe 64-bitowe, platformy x64
+# <a name="how-to-configure-visual-studio-c-projects-to-target-64-bit-x64-platforms"></a>Instrukcje: Konfigurowanie projektów programu Visual Studio C++ do docelowych 64-bitowych, platformy x64
 
-Możesz użyć konfiguracji projektu w środowisku IDE programu Visual Studio, aby skonfigurować C++ aplikacje jako docelowe 64-bitowe i x64 platform. Można również migrować ustawienia projektu Win32 do konfiguracji projektu 64-bitowego.
+Możesz użyć konfiguracji projektu w środowisku IDE programu Visual Studio, aby skonfigurować aplikacje w języku C++ na 64-bitowe i x64 platform. Można również migrować ustawienia projektu Win32 do konfiguracji projektu 64-bitowego.
 
-### <a name="to-set-up-c-applications-to-target-64-bit-platforms"></a>Aby skonfigurować C++ aplikacje jako docelowe platformy 64-bitowe
+### <a name="to-set-up-c-applications-to-target-64-bit-platforms"></a>Aby skonfigurować aplikacje C++ do docelowych platform 64-bitowych
 
-1. Otwórz C++ projekt, który chcesz skonfigurować.
+1. Otwórz projekt w języku C++, który chcesz skonfigurować.
 
-1. Otwórz strony właściwości dla tego projektu. Aby uzyskać więcej informacji, [Zobacz C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](working-with-project-properties.md).
+1. Otwórz strony właściwości dla tego projektu. Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](working-with-project-properties.md).
 
    > [!NOTE]
-   > W przypadku projektów .NET upewnij się, że węzeł **Właściwości konfiguracji** lub jeden z jego węzłów podrzędnych jest zaznaczony w  **\<oknie dialogowym ProjectName > strony właściwości** . w przeciwnym razie przycisk **Configuration Manager** pozostaje niedostępna.
+   > W przypadku projektów .NET upewnij się, że węzeł **Właściwości konfiguracji** lub jeden z jego węzłów podrzędnych jest zaznaczony w oknie dialogowym ** \<> ProjectName strony właściwości** : w przeciwnym razie przycisk **Configuration Manager** pozostaje niedostępny.
 
 1. Wybierz przycisk **Configuration Manager** , aby otworzyć okno dialogowe **Configuration Manager** .
 
-1. Z listy rozwijanej **platforma aktywnego rozwiązania** wybierz pozycję  **\<nowy... >** opcji, aby otworzyć okno dialogowe **Nowa platforma rozwiązania** .
+1. Z listy rozwijanej **platforma aktywnego rozwiązania** wybierz opcję ** \<nowy... >** , aby otworzyć okno dialogowe **Nowa platforma rozwiązania** .
 
 1. Z listy rozwijanej **Typ lub wybierz nową platformę** wybierz 64-bitową platformę docelową.
 
    > [!NOTE]
    > W **nowej platformie rozwiązania** okno dialogowe, można użyć opcji **Kopiuj ustawienia z** , aby skopiować istniejące ustawienia projektu do nowej konfiguracji projektu 64-bitowego.
 
-1. Wybierz **OK** przycisku. Platforma wybrana w poprzednim kroku jest wyświetlana w obszarze **Active Solution platform** w oknie dialogowym **Configuration Manager** .
+1. Wybierz przycisk **OK** . Platforma wybrana w poprzednim kroku jest wyświetlana w obszarze **Active Solution platform** w oknie dialogowym **Configuration Manager** .
 
-1. Wybierz przycisk **Zamknij** w oknie dialogowym **Configuration Manager** , a następnie wybierz przycisk   **\<OK w oknie dialogowym ProjectName > strony właściwości** .
+1. Wybierz przycisk **Zamknij** w oknie dialogowym **Configuration Manager** , a następnie wybierz przycisk **OK** w oknie dialogowym ** \<ProjectName> strony właściwości** .
 
 ### <a name="to-copy-win32-project-settings-into-a-64-bit-project-configuration"></a>Aby skopiować ustawienia projektu Win32 do konfiguracji projektu 64-bitowego
 
@@ -56,7 +56,7 @@ Możesz użyć konfiguracji projektu w środowisku IDE programu Visual Studio, a
   > [!NOTE]
   > Żadna z tych właściwości projektu nie jest zmieniana, jeśli są one zastępowane na poziomie pliku.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Konfigurowanie C++ projektów dla 64-bitowych, docelowych procesorów x64](configuring-programs-for-64-bit-visual-cpp.md)<br/>
-[Debugowanie aplikacji 64-bitowych](/visualstudio/debugger/debug-64-bit-applications)
+[Konfigurowanie projektów C++ dla 64-bitowych, docelowych procesorów x64](configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[Debuguj 64-bitowe aplikacje](/visualstudio/debugger/debug-64-bit-applications)

@@ -43,12 +43,12 @@ Operacja przypisania przypisuje wartość operandu po prawej stronie do lokaliza
 
 ## <a name="syntax"></a>Składnia
 
-*assignment-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*warunkowe wyrażenie*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*przypisanie* *wyrażenia jednoargumentowego* - *operator* przypisania
+*przypisanie — wyrażenie*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie warunkowe*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;przypisanie *jednoargumentowe* - *wyrażenie* przypisania *operatora*
 
 *przypisanie — operator*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
+&nbsp;&nbsp;&nbsp;&nbsp;**=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
 
 Operatory przypisania w języku C mogą przetwarzać i przypisywać wartości w jednej operacji. C udostępnia następujące operatory przypisania:
 
@@ -68,6 +68,6 @@ Operatory przypisania w języku C mogą przetwarzać i przypisywać wartości w 
 
 W obszarze przypisanie typ wartości po prawej stronie jest konwertowany na typ wartości po lewej stronie, a wartość jest przechowywana w lewym operandzie po przypisaniu. Lewy argument operacji nie może być tablicą, funkcją ani stałą. Określona ścieżka konwersji, która zależy od dwóch typów, została szczegółowo zakreślona w [konwersji typów](../c-language/type-conversions-c.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Operatory przypisania](../cpp/assignment-operators.md)

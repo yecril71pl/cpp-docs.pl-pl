@@ -11,13 +11,13 @@ ms.locfileid: "81480866"
 ---
 # <a name="values"></a>Wartości
 
-**ANSI 3.1.2.5** Reprezentacje i zestawy wartości różnych typów liczb zmiennoprzecinkowych
+**3.1.2.5 ANSI** Reprezentacje i zestawy wartości różnych typów liczb zmiennoprzecinkowych
 
-Typ **pływaka** zawiera 32 bity: 1 dla znaku, 8 dla wykładnika i 23 dla modliszki. Jego zakres to +/- 3.4E38 z co najmniej 7 cyframi precyzji.
+Typ **float** zawiera 32 bitów: 1 dla znaku, 8 dla wykładnika i 23 dla mantysy. Jego zakresem jest +/-3.4 E38 z co najmniej 7 cyfr dokładności.
 
-Typ **podwójny** zawiera 64 bity: 1 dla znaku, 11 dla wykładnika i 52 dla modliszki. Jego zakres to +/- 1.7E308 z co najmniej 15 cyframi precyzji.
+**Podwójny** typ zawiera 64 bitów: 1 dla znaku, 11 dla wykładnika i 52 dla mantysy. Jego zakresem jest +/-1.7 E308 z dokładnością co najmniej 15 cyfr.
 
-Długi typ **podwójny** jest odrębny, ale ma taką samą reprezentację jak typ **double** w kompilatorze Microsoft C.
+Typ **Long Double** jest różny, ale ma tę samą reprezentację co typ **Double** w kompilatorze języka Microsoft C.
 
 ## <a name="see-also"></a>Zobacz też
 

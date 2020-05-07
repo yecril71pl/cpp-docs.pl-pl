@@ -17,27 +17,27 @@ ms.locfileid: "75299120"
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto i Labeled — instrukcje (C)
 
-Instrukcja `goto` przenosi formant do etykiety. Dana etykieta musi znajdować się w tej samej funkcji i może występować przed tylko jedną instrukcją w tej samej funkcji.
+`goto` Instrukcja przekazuje formant do etykiety. Dana etykieta musi znajdować się w tej samej funkcji i może występować przed tylko jedną instrukcją w tej samej funkcji.
 
 ## <a name="syntax"></a>Składnia
 
 *instrukcja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*labeled-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*skoku-instrukcja*
+&nbsp;&nbsp;&nbsp;&nbsp;*Etykieta — instrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*skoku — instrukcja*
 
 *skok-instrukcja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Przejdź do** *identyfikator* **;**
+&nbsp;&nbsp;&nbsp;&nbsp;**Przejdź**do*identyfikatora***;**    
 
 *etykieta — instrukcja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* **:** *— instrukcja*
+&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*  **:**  *instrukcja*
 
-Etykieta instrukcji jest istotna tylko dla instrukcji `goto`; w każdym innym kontekście wyrażenie z etykietą jest wykonywane bez względu na etykietę.
+Etykieta instrukcji jest istotna tylko dla `goto` instrukcji; w każdym innym kontekście wyrażenie z etykietą jest wykonywane bez względu na etykietę.
 
 *Instrukcja skoku* musi znajdować się w tej samej funkcji i może wystąpić przed tylko jedną instrukcją w tej samej funkcji. Zestaw nazw *identyfikatorów* po `goto` ma własną przestrzeń nazw, więc nazwy nie zakłócają innych identyfikatorów. Nie można ponownie zadeklarować etykiet. Aby uzyskać więcej informacji, zobacz [spacje nazw](../c-language/name-spaces.md) .
 
-Jest dobrym stylem programowania, aby użyć instrukcji **Break**, **Continue**i `return` w preferencjach, aby `goto`, gdy jest to możliwe. Ponieważ instrukcja **Break** jest zamykana tylko z jednego poziomu pętli, `goto` może być konieczne do wykończenia pętli z głęboko zagnieżdżonej pętli.
+Jest dobrym stylem programowania, aby używać instrukcji **Break**, **Continue**i `return` in z preferencją `goto` do zawsze wtedy, gdy jest to możliwe. Ponieważ instrukcja **Break** jest zamykana tylko z jednego poziomu pętli, `goto` może być konieczne do wykończenia pętli z głęboko zagnieżdżonej pętli.
 
-Ten przykład ilustruje instrukcję `goto`:
+Ten przykład ilustruje `goto` instrukcję:
 
 ```c
 // goto.c
@@ -65,8 +65,8 @@ int main()
 }
 ```
 
-W tym przykładzie instrukcja `goto` przenosi formant do punktu oznaczonego etykietą `stop`, gdy `i` jest równa 5.
+W tym przykładzie `goto` instrukcja przekazuje formant do punktu oznaczonego etykietą, `stop` gdy `i` jest równa 5.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instrukcje](../c-language/statements-c.md)

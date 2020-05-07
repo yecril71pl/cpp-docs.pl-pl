@@ -13,9 +13,9 @@ ms.locfileid: "81480880"
 ---
 # <a name="truncation-of-floating-point-values"></a>Obcięcie wartości zmiennoprzecinkowych
 
-**ANSI 3.2.1.4** Kierunek obcinania lub zaokrąglania, gdy liczba zmiennoprzecinowa jest konwertowana na węższą liczbę zmiennoprzecinkową
+**3.2.1.4 ANSI** Kierunek obcinania lub zaokrąglania, gdy liczba zmiennoprzecinkowa jest konwertowana na węższą liczbę zmiennoprzecinkową
 
-W przypadku niedopełnienia wartość zmiennej zmiennoprzecinkowej jest zaokrąglana do zera. Przepełnienie może spowodować błąd w czasie wykonywania lub może spowodować nieprzewidywalną wartość, w zależności od określonych optymalizacji.
+Gdy występuje niedopełnienie, wartość zmiennej zmiennoprzecinkowej jest zaokrąglana do zera. Przepełnienie może spowodować błąd w czasie wykonywania lub może generować nieprzewidywalne wartości w zależności od określonych optymalizacji.
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -16,13 +16,13 @@ ms.locfileid: "81334556"
 ---
 # <a name="implementation-defined-behavior"></a>Zachowanie zdefiniowane w implementacji
 
-ANSI X3.159-1989, *American National Standard for Information Systems* - *Programming Language* - *C*, zawiera sekcję o nazwie "Problemy z przenośnością". Sekcja ANSI zawiera listę obszarów języka C, które ANSI pozostawia otwarte dla każdej konkretnej implementacji. W tej sekcji opisano, jak microsoft C obsługuje te obszary zdefiniowane w implementacji języka C.
+ANSI x 3.159-1989 - , *American National Standard dla systemów informacyjnych**Język* - programowania*C*, zawiera sekcję o nazwie "problemy z przenośnością". Sekcja ANSI zawiera listę obszarów języka C, które są otwarte w formacie ANSI dla każdej konkretnej implementacji. W tej sekcji opisano, jak program Microsoft C obsługuje te obszary zdefiniowane w implementacji języka C.
 
-Ta sekcja jest zgodna z tą samą kolejnością co sekcja ANSI. Każdy element obejmuje odwołania do ANSI, który wyjaśnia zachowanie zdefiniowane w implementacji.
+Ta sekcja jest zgodna z tą samą kolejnością, w której znajduje się sekcja ANSI. Każdy objęty element zawiera odwołania do ANSI, które objaśnia zachowanie zdefiniowane w implementacji.
 
 > [!NOTE]
-> W tej sekcji opisano tylko amerykańską wersję kompilatora języka angielskiego. Implementacje microsoft c dla innych języków mogą się nieznacznie różnić.
+> W tej sekcji opisano tylko angielską wersję językową języka C. Implementacje języka Microsoft C dla innych języków mogą się nieco różnić.
 
 ## <a name="see-also"></a>Zobacz też
 
-[C Referencje językowe](../c-language/c-language-reference.md)
+[Dokumentacja języka C](../c-language/c-language-reference.md)

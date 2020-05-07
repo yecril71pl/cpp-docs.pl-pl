@@ -16,18 +16,18 @@ ms.locfileid: "81334437"
 ---
 # <a name="type-int"></a>Typ int
 
-Rozmiar oznaczonego lub nieoznaczonego elementu `int` jest standardowym rozmiarem liczby całkowitej na danym komputerze. Na przykład w 16-bitowych systemach operacyjnych, typ `int` ma zazwyczaj 16 bitów lub 2 bajty. W 32-bitowych systemach operacyjnych, typ `int` ma zazwyczaj 32 bity lub 4 bajty. W związku `int` z tym typ `short int` jest odpowiednikiem typu long `unsigned int` int lub **long,** a typ jest `unsigned long` odpowiednikiem **niepodpisanego krótkiego** lub typu, w zależności od środowiska docelowego. Wszystkie typy `int` reprezentują wartości oznaczone, chyba że określono inaczej.
+Rozmiar oznaczonego lub nieoznaczonego elementu `int` jest standardowym rozmiarem liczby całkowitej na danym komputerze. Na przykład w 16-bitowych systemach operacyjnych, typ `int` ma zazwyczaj 16 bitów lub 2 bajty. W 32-bitowych systemach operacyjnych, typ `int` ma zazwyczaj 32 bity lub 4 bajty. `int` W `short int` tym celu typ jest odpowiednikiem albo typu **long int** , a `unsigned int` typ jest odpowiednikiem **niepodpisanego znaku** lub `unsigned long` typu, w zależności od środowiska docelowego. Wszystkie typy `int` reprezentują wartości oznaczone, chyba że określono inaczej.
 
 Specyfikatory typu `int` i `unsigned int` (lub po prostu `unsigned`) definiują pewne funkcje języka C (na przykład typ `enum`). W tych przypadkach definicje `int` i unsigned int dla określonej implementacji określają rzeczywistą pamięć.
 
 **Specyficzne dla firmy Microsoft**
 
-Oznaczone liczby całkowite są zapisywane w kodzie dopełnień do dwóch. Najbardziej znaczący bit utrzymuje znak: 1 dla wartości ujemnych, 0 dla wartości dodatnich i zera. Zakres wartości jest podany w [C i C++ Limity liczby całkowitej](../c-language/cpp-integer-limits.md), który jest pobierany z limitów. H.
+Oznaczone liczby całkowite są zapisywane w kodzie dopełnień do dwóch. Najbardziej znaczący bit utrzymuje znak: 1 dla wartości ujemnych, 0 dla wartości dodatnich i zera. Zakres wartości jest wyrażony w [limitach liczb całkowitych C i C++](../c-language/cpp-integer-limits.md), które są pobierane z limitów. H plik nagłówkowy.
 
-**ZAKOŃCZ Specyficzne dla firmy Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 > [!NOTE]
-> Specyfikatory typu int i unsigned int są szeroko używane w programach języka C, ponieważ umożliwiają obsługę wartości całkowitych przez komputer w najbardziej efektywny sposób. Jednak ponieważ rozmiar int i unsigned int może być różny, programy zależące od konkretnego rozmiaru int mogą nie być przenoszone na inne komputery. Aby programy były bardziej przenośne, można użyć wyrażeń z operatorem sizeof (jak omówiono w [the sizeof Operator](../c-language/sizeof-operator-c.md)) zamiast zakodowanych rozmiarów danych.
+> Specyfikatory typu int i unsigned int są szeroko używane w programach języka C, ponieważ umożliwiają obsługę wartości całkowitych przez komputer w najbardziej efektywny sposób. Jednak ponieważ rozmiar int i unsigned int może być różny, programy zależące od konkretnego rozmiaru int mogą nie być przenoszone na inne komputery. Aby programy były bardziej przenośne, można użyć wyrażeń z operatorem sizeof (jak to opisano w [operatorze sizeof](../c-language/sizeof-operator-c.md)) zamiast zakodowanych rozmiarów danych.
 
 ## <a name="see-also"></a>Zobacz też
 

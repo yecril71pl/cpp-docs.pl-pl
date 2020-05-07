@@ -16,11 +16,11 @@ ms.locfileid: "81335026"
 ---
 # <a name="c-language-syntax-summary"></a>Podsumowanie dotyczące składni języka C
 
-W tej sekcji przedstawiono pełny opis języka C i funkcji języka C specyficznych dla firmy Microsoft. Notacji składniowej w tej sekcji można użyć, aby określić dokładną składnię dowolnego składnika języka. Wyjaśnienie składni pojawia się w sekcji tego podręcznika, w której omawiany jest temat.
+Ta sekcja zawiera pełen opis języka C i funkcje języka C specyficzne dla firmy Microsoft. W tej sekcji można użyć notacji składni, aby określić dokładną składnię dowolnego składnika języka. Wyjaśnienie składni jest wyświetlane w sekcji tego podręcznika, w której omówiono temat.
 
 > [!NOTE]
-> To podsumowanie składni nie jest częścią standardu ANSI C, ale jest uwzględniane tylko w celach informacyjnych. Składnia specyficzna dla firmy Microsoft jest odnotowana w komentarzach po składni.
+> To podsumowanie składni nie jest częścią standardu ANSI C, ale jest uwzględniane tylko w celu uzyskania informacji. Składnia specyficzna dla firmy Microsoft jest zapisywana w komentarzach po składni.
 
 ## <a name="see-also"></a>Zobacz też
 
-[C Referencje językowe](../c-language/c-language-reference.md)
+[Dokumentacja języka C](../c-language/c-language-reference.md)

@@ -14,10 +14,10 @@ ms.locfileid: "62325926"
 ---
 # <a name="internal-linkage"></a>Połączenie wewnętrzne
 
-Jeśli zawiera deklaracji z zakresem pliku identyfikator obiektu lub funkcji *storage-class-specifier* **statyczne**, identyfikator ma powiązania wewnętrznego. W przeciwnym razie identyfikator ma powiązania zewnętrzne. Zobacz [klasy magazynu](../c-language/c-storage-classes.md) dyskusję na temat *storage-class-specifier* nieterminalnych.
+Jeśli deklaracja identyfikatora zakresu plików dla obiektu lub funkcji zawiera **statyczny** *specyfikator klasy Storage* , identyfikator ma połączenie wewnętrzne. W przeciwnym razie identyfikator ma powiązania zewnętrzne. Zobacz [klasy magazynu](../c-language/c-storage-classes.md) , aby zapoznać się z omówieniem nieterminalu *specyfikatora klasy Storage* .
 
-W ramach jednej jednostki translacji każde wystąpienie identyfikatora z wewnętrznym powiązaniem wskazuje ten sam identyfikator lub funkcji. Wewnętrznie połączone identyfikatory są unikatowe dla jednostki translacji.
+W jednej jednostce translacji każde wystąpienie identyfikatora z wewnętrznym powiązaniem oznacza ten sam identyfikator lub funkcję. Wewnętrznie połączone identyfikatory są unikatowe dla jednostki tłumaczenia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)
