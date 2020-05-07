@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-ms.openlocfilehash: 964c465a95d44de9d8a4d399f23ec43f8a3a6692
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 15c818ee6f70d02fb9b63f12deef6b1bf3698322
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332933"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917941"
 ---
 # <a name="realloc"></a>realloc
 
@@ -59,51 +59,51 @@ void *realloc(
 
 ### <a name="parameters"></a>Parametry
 
-*blok memblock*<br/>
-Wskaźnik do wcześniej przydzielonego bloku pamięci.
+*memblock*<br/>
+Wskaźnik do wcześniej przydzielony blok pamięci.
 
-*Rozmiar*<br/>
+*size*<br/>
 Nowy rozmiar w bajtach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**realloc** zwraca wskaźnik **void** do ponownie przydzielonego (i ewentualnie przeniesionego) bloku pamięci.
+Funkcja **realloc** zwraca wskaźnik **void** do ponownie przydzielony blok pamięci (i prawdopodobnie przeniesiony).
 
-Jeśli nie ma wystarczającej ilości dostępnej pamięci, aby rozwinąć blok do danego rozmiaru, oryginalny blok pozostaje niezmieniony, a **null** jest zwracany.
+Jeśli nie ma wystarczającej ilości dostępnej pamięci, aby rozszerzyć blok do danego rozmiaru, oryginalny blok pozostaje niezmieniony i zwracana jest **wartość null** .
 
-Jeśli *rozmiar* wynosi zero, blok wskazywki *przez blok memblock* jest zwalniany; zwracana wartość **null**, a *memblock* jest pozostawiony wskazujący na zwolniony blok.
+Jeśli *rozmiar* wynosi zero, blok wskazywany przez *memblock* jest zwolniony. zwracana wartość ma wartość **null**, a *memblock* pozostawia w bloku zwolnionym.
 
-Zwracana wartość wskazuje miejsce do magazynowania, które jest gwarantowane odpowiednio wyrównane do przechowywania dowolnego typu obiektu. Aby uzyskać wskaźnik do typu innego niż **void**, należy użyć typu rzutu na wartość zwracaną.
+Wartość zwracana wskazuje miejsce do magazynowania, które jest gwarantowane odpowiednio wyrównane do przechowywania dowolnego typu obiektu. Aby uzyskać wskaźnik do typu innego niż **void**, należy użyć rzutowania typu dla zwracanej wartości.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **ponownego przymieszczenia** zmienia rozmiar przydzielonego bloku pamięci. Argument *memblock* wskazuje na początek bloku pamięci. Jeśli *memblock* ma **wartość NULL,** **realloc** zachowuje się tak samo jak **malloc** i przydziela nowy blok *bajtów rozmiaru.* Jeśli *memblock* nie ma **wartości NULL**, powinien to być wskaźnik zwrócony przez poprzednie wywołanie **calloc**, **malloc**lub **realloc**.
+Funkcja **realloc** zmienia rozmiar przydzielony blok pamięci. Argument *memblock* wskazuje początek bloku pamięci. Jeśli *memblock* ma **wartość null**, funkcja ponownej **alokacji** zachowuje się tak samo jak **malloc** i przydziela nowy blok *rozmiaru* bajtów. Jeśli *memblock* nie ma **wartości null**, powinien być wskaźnikiem zwróconym przez poprzednie wywołanie metody **calloc**, **malloc**lub **realloc**.
 
-Argument *size* daje nowy rozmiar bloku w bajtach. Zawartość bloku pozostaje niezmieniona do krótszego rozmiaru nowych i starych, chociaż nowy blok może znajdować się w innym miejscu. Ponieważ nowy blok może znajdować się w nowej lokalizacji pamięci, wskaźnik zwracany przez **realloc** nie jest gwarantowane jako wskaźnik przeszedł przez argument *memblock.* **realokacji** nie zero nowo przydzielonej pamięci w przypadku wzrostu buforu.
+Argument *size* zawiera nowy rozmiar bloku, w bajtach. Zawartość bloku nie zmienia się do krótszej wielkości nowych i starych rozmiarów, chociaż nowy blok może znajdować się w innej lokalizacji. Ponieważ nowy blok może znajdować się w nowej lokalizacji pamięci, wskaźnik zwracany przez proces **realloc** nie gwarantuje, że wskaźnik przeszedł przez argument *memblock* . **realloc** nie ma zerowej nowo przydzieloną pamięci w przypadku wzrostu buforu.
 
-**realloc** ustawia **errno** na **ENOMEM,** jeśli alokacja pamięci nie powiedzie się lub jeśli ilość żądanej pamięci przekracza **_HEAP_MAXREQ**. Aby uzyskać informacje na temat tego i innych kodów błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**reallocing** ustawia **errno** do **ENOMEM** , jeśli alokacja pamięci nie powiedzie się lub jeśli żądana ilość pamięci przekroczy **_HEAP_MAXREQ**. Aby uzyskać informacje na temat tego i innych kodów błędu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**realloc** wywołuje **malloc** w celu użycia funkcji [_set_new_mode C++](set-new-mode.md) do ustawiania nowego trybu obsługi. Nowy tryb obsługi wskazuje, czy w przypadku awarii **malloc** ma wywołać nową procedurę obsługi zgodnie z [_set_new_handler](set-new-handler.md). Domyślnie **malloc** nie wywołać nową procedurę obsługi na niepowodzenie alokacji pamięci. Można zastąpić to domyślne zachowanie, tak aby, gdy **realloc** nie można przydzielić pamięci, **malloc** wywołuje nową procedurę obsługi w taki sam sposób, jak **nowy** operator robi, gdy nie powiedzie się z tego samego powodu. Aby zastąpić wartość domyślną,
+**przeallocj** wywołania **malloc** , aby użyć funkcji [_set_new_mode](set-new-mode.md) C++ do ustawienia nowego trybu obsługi. Nowy tryb obsługi wskazuje, czy w przypadku niepowodzenia, **malloc** ma wywołać nową procedurę obsługi jako ustawioną przez [_set_new_handler](set-new-handler.md). Domyślnie funkcja **malloc** nie wywołuje nowej procedury obsługi w przypadku niepowodzenia przydzielenia pamięci. To zachowanie domyślne można przesłonić, dzięki czemu **w przypadku** niepowodzenia alokacji pamięci przez ponowną alokację funkcja **malloc** wywołuje nową procedurę obsługi w taki sam sposób, w jaki operator **New** wykonuje, gdy nie powiedzie się z tego samego powodu. Aby zastąpić wartość domyślną, Połącz
 
 ```C
 _set_new_mode(1);
 ```
 
-na początku programu lub linku z NEWMODE. OBJ (patrz [Opcje łącza).](../../c-runtime-library/link-options.md)
+Wczesne lub połączone z NEWMODE. OBJ (zobacz [Opcje linku](../../c-runtime-library/link-options.md)).
 
-Gdy aplikacja jest połączona z wersją debugowania bibliotek w czasie wykonywania języka C, **realloc** jest rozpoznawany [jako _realloc_dbg](realloc-dbg.md). Aby uzyskać więcej informacji na temat zarządzania stertą podczas procesu debugowania, zobacz [Sterta debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Gdy aplikacja jest połączona z wersją debugową bibliotek uruchomieniowych C, **realloc** rozwiązuje [_realloc_dbg](realloc-dbg.md). Aby uzyskać więcej informacji na temat sposobu zarządzania sterty podczas procesu debugowania, zobacz [sterta debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**realokacji** `__declspec(noalias)` jest `__declspec(restrict)`oznaczony i , co oznacza, że funkcja jest gwarantowana nie modyfikować zmiennych globalnych i że wskaźnik zwrócony nie jest aliasem. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczyć](../../cpp/restrict.md).
+**realloc** jest oznaczona `__declspec(noalias)` i `__declspec(restrict)`, co oznacza, że funkcja jest gwarantowana, aby nie modyfikować zmiennych globalnych i że zwrócony wskaźnik nie ma aliasu. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczaj](../../cpp/restrict.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**realloc**|\<> i \<malloc.h>|
+|**realloc**|\<STDLIB. h> i \<malloc. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -156,5 +156,5 @@ Size of block after realloc of 1000 more longs: 8000
 
 [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[Wolna](free.md)<br/>
+[zwolniony](free.md)<br/>
 [malloc](malloc.md)<br/>

@@ -1,6 +1,6 @@
 ---
 title: calloc
-description: Funkcja biblioteki wykonawczej C calloc przydziela pamięć zainicjowaną przyuśmiać zero.
+description: Funkcja biblioteki środowiska uruchomieniowego języka C calloc przypisuje pamięć zainicjowaną przez zero.
 ms.date: 4/2/2020
 api_name:
 - calloc
@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: fb4f7d6dc059023d34cb0b811edf5dfb48cb7a34
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76243342233ea895b947d4aa4a246b316aa8f405
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333648"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918722"
 ---
 # <a name="calloc"></a>calloc
 
-Przydziela tablicę w pamięci z elementami zainicjowanymi do 0.
+Alokuje tablicę w pamięci z elementami zainicjowanymi do 0.
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,45 +50,45 @@ void *calloc(
 
 ### <a name="parameters"></a>Parametry
 
-*numer*<br/>
+*Liczba*<br/>
 Liczba elementów.
 
-*Rozmiar*<br/>
+*size*<br/>
 Długość w bajtach każdego elementu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**calloc** zwraca wskaźnik do przydzielonego miejsca. Miejsce do magazynowania wskazane przez wartość zwracaną jest gwarantowane odpowiednio wyrównane do przechowywania dowolnego typu obiektu. Aby uzyskać wskaźnik do typu innego niż **void**, należy użyć typu rzutu na wartość zwracaną.
+**calloc** zwraca wskaźnik do przydzielonych miejsc. Miejsce do magazynowania wskazywane przez wartość zwracaną jest gwarantowane odpowiednio wyrównane do przechowywania dowolnego typu obiektu. Aby uzyskać wskaźnik do typu innego niż **void**, należy użyć rzutowania typu dla zwracanej wartości.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **calloc** przydziela miejsce do magazynowania dla tablicy elementów *liczbowych,* z których każdy ma bajtów *rozmiaru* długości. Każdy element jest inicjowany do 0.
+Funkcja **calloc** przydziela miejsce do magazynowania dla tablicy elementów *liczbowych* , o *długości bajtów.* Każdy element jest inicjowany do wartości 0.
 
-**calloc** ustawia **errno** na **ENOMEM,** jeśli alokacja pamięci nie powiedzie się lub jeśli ilość żądanej pamięci przekracza **_HEAP_MAXREQ**. Aby uzyskać informacje na temat tego i innych kodów błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**calloc** ustawia **errno** na **ENOMEM** , jeśli alokacja pamięci nie powiedzie się lub jeśli żądana ilość pamięci przekroczy **_HEAP_MAXREQ**. Aby uzyskać informacje na temat tego i innych kodów błędu, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-W implementacji firmy Microsoft, jeśli *liczba* lub *rozmiar* wynosi zero, **calloc** zwraca wskaźnik do przydzielonego bloku o rozmiarze zerowym. Próba odczytu lub zapisu za pośrednictwem zwróconego wskaźnika prowadzi do niezdefiniowanego zachowania.
+W implementacji firmy Microsoft, jeśli *Liczba* lub *rozmiar* wynosi zero, **calloc** zwraca wskaźnik do przydzielony blok o rozmiarze innym niż zero. Próba odczytu lub zapisu przez zwrócony wskaźnik prowadzi do niezdefiniowanego zachowania.
 
-**calloc** używa funkcji [_set_new_mode](set-new-mode.md) C++ do ustawiania *nowego trybu obsługi*. Nowy tryb obsługi wskazuje, czy w przypadku awarii **calloc** ma wywołać nową procedurę obsługi zgodnie z [_set_new_handler](set-new-handler.md). Domyślnie **calloc** nie wywołać nową procedurę obsługi na niepowodzenie alokacji pamięci. Można zastąpić to zachowanie domyślne, tak aby, gdy **calloc** nie można przydzielić pamięci, wywołuje nową procedurę obsługi w taki sam sposób, jak **nowy** operator robi, gdy nie powiedzie się z tego samego powodu. Aby zastąpić wartość domyślną,
+**calloc** używa funkcji C++ [_set_new_mode](set-new-mode.md) , aby ustawić *Nowy tryb obsługi*. Nowy tryb obsługi wskazuje, czy w przypadku niepowodzenia **calloc** ma wywołać nową procedurę obsługi jako ustawioną przez [_set_new_handler](set-new-handler.md). Domyślnie **calloc** nie wywołuje nowej procedury obsługi w przypadku niepowodzenia przydzielenia pamięci. To zachowanie domyślne można przesłonić, aby w przypadku niepowodzenia przydzielenia pamięci przez **calloc** program wywołuje nową procedurę obsługi w taki sam sposób, w jaki operator **New** wykonuje, gdy nie powiedzie się z tego samego powodu. Aby zastąpić wartość domyślną, Połącz
 
 ```C
 _set_new_mode(1);
 ```
 
-na początku programu lub link z *NEWMODE. OBJ* (patrz [Opcje łącza).](../../c-runtime-library/link-options.md)
+Wczesne w programie lub łącz z *NEWMODE. OBJ* (zobacz [Opcje linku](../../c-runtime-library/link-options.md)).
 
-Gdy aplikacja jest połączona z wersją debugowania bibliotek w czasie wykonywania języka C, **calloc** rozpoznaje [_calloc_dbg](calloc-dbg.md). Aby uzyskać więcej informacji na temat zarządzania stertą podczas procesu debugowania, zobacz [Sterta debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Gdy aplikacja jest połączona z wersją debugową bibliotek uruchomieniowych C, **calloc** jest rozpoznawana jako [_calloc_dbg](calloc-dbg.md). Aby uzyskać więcej informacji na temat sposobu zarządzania sterty podczas procesu debugowania, zobacz [sterta debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**calloc** jest `__declspec(noalias)` `__declspec(restrict)`oznaczony i , co oznacza, że funkcja jest gwarantowana, aby nie modyfikować zmiennych globalnych i że wskaźnik zwrócony nie jest aliasem. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczyć](../../cpp/restrict.md).
+**calloc** jest oznaczona `__declspec(noalias)` i `__declspec(restrict)`, co oznacza, że funkcja nie modyfikuje zmiennych globalnych i że wskaźnik nie ma aliasu. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczaj](../../cpp/restrict.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**calloc**|\<> i \<malloc.h>|
+|**calloc**|\<STDLIB. h> i \<malloc. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -120,6 +120,6 @@ Allocated 40 long integers
 ## <a name="see-also"></a>Zobacz też
 
 [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)<br/>
-[Wolna](free.md)<br/>
+[zwolniony](free.md)<br/>
 [malloc](malloc.md)<br/>
 [realloc](realloc.md)<br/>

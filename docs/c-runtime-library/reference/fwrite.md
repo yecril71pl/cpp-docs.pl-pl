@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: a5bd6da3c8d16189f7ff0db744901e03513acc21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ab1e172374cd117b07cc62923d291fbd3972882e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345396"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919448"
 ---
 # <a name="fwrite"></a>fwrite
 
-Zapisuje dane do strumienia.
+Zapisuje dane w strumieniu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,43 +51,43 @@ size_t fwrite(
 
 ### <a name="parameters"></a>Parametry
 
-*Buforu*<br/>
-Wskaźnik do danych, które mają zostać zapisane.
+*buforu*<br/>
+Wskaźnik do danych do zapisania.
 
-*Rozmiar*<br/>
-Rozmiar elementu w bajtach.
+*size*<br/>
+Rozmiar elementu, w bajtach.
 
-*Liczba*<br/>
+*liczbą*<br/>
 Maksymalna liczba elementów do zapisania.
 
-*Strumienia*<br/>
-Wskaźnik do struktury **PLIK.**
+*produkcyjne*<br/>
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fwrite** zwraca liczbę pełnych elementów faktycznie napisane, które mogą być mniejsze niż *liczyć,* jeśli wystąpi błąd. Ponadto w przypadku wystąpienia błędu nie można określić wskaźnika położenia pliku. Jeśli *strumień* lub *bufor* jest wskaźnikiem zerowym lub jeśli w trybie Unicode określono nieparzystą liczbę bajtów do zapisania, funkcja wywołuje nieprawidłowy program obsługi parametrów, zgodnie z opisem w polu Sprawdzanie [poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, ta funkcja ustawia **errno** na **EINVAL** i zwraca 0.
+**fwrite** zwraca liczbę pełnych elementów, które faktycznie zapisano, co może być mniejsze niż *Liczba* w przypadku wystąpienia błędu. Ponadto, jeśli wystąpi błąd, nie można określić wskaźnika położenia pliku. Jeśli *strumień* lub *bufor* jest wskaźnikiem typu null lub jeśli w trybie Unicode określono nieparzystą liczbę bajtów do zapisania, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca wartość 0.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **fwrite** zapisuje do *zliczania* elementów o długości *rozmiaru* każdego, od *bufora* do *strumienia*wyjściowego . Wskaźnik pliku skojarzony ze *strumieniem* (jeśli istnieje) jest zwiększany o liczbę bajtów faktycznie zapisanych. Jeśli *strumień* jest otwierany w trybie tekstowym, każdy kanał informacyjny wiersza jest zastępowany parą podajnika wiersza powrotu karetki. Zastąpienie nie ma wpływu na wartość zwracaną.
+Funkcja **fwrite** zapisuje maksymalnie *liczbę* elementów *o długości każdego z* *bufora* do *strumienia*wyjściowego. Wskaźnik pliku skojarzony ze *strumieniem* (jeśli istnieje) jest zwiększany o liczbę bajtów rzeczywiście zapisywana. Jeśli *strumień* jest otwarty w trybie tekstowym, każde źródło wierszy jest zastępowane parą wysuwu wiersza. Zastąpienie nie ma wpływu na wartość zwracaną.
 
-Po *otwarciu strumienia* w trybie tłumaczenia Unicode — na przykład jeśli *strumień* jest otwierany przez wywołanie **fopen** i przy użyciu parametru trybu, który zawiera **ccs=UNICODE**, **ccs=UTF-16LE**lub **ccs=UTF-8**, lub jeśli tryb zostanie zmieniony na tryb tłumaczenia Unicode przy użyciu **_setmode** i parametru trybu, który zawiera **_O_WTEXT**, **_O_U16TEXT**lub **_O_U8TEXT**—*bufor* jest interpretowany jako wskaźnik do tablicy **wchar_t** zawierającej dane UTF-16. Próba zapisania nieparzystej liczby bajtów w tym trybie powoduje błąd sprawdzania poprawności parametru.
+Gdy *strumień* jest otwarty w trybie tłumaczenia Unicode — na przykład jeśli *strumień* jest otwarty przez wywołanie **fopen** i użycie parametru trybu, który zawiera **CCS = Unicode**, **CCS = UTF-16LE**lub **CCS = UTF-8**, lub jeśli tryb zostanie zmieniony na tryb tłumaczenia Unicode przy użyciu **_setmode** i parametru trybu, który zawiera **_O_WTEXT**, **_O_U16TEXT**lub **_O_U8TEXT**—*bufor* jest interpretowany jako wskaźnik do tablicy **wchar_t** zawierającej dane UTF-16. Próba zapisania nieparzystej liczby bajtów w tym trybie powoduje błąd walidacji parametru.
 
-Ponieważ ta funkcja blokuje wątku wywołującego, jest bezpieczne dla wątków. Aby uzyskać wersję niezablokującą, zobacz **_fwrite_nolock**.
+Ponieważ ta funkcja blokuje wątek wywołujący, jest bezpieczny wątkowo. W przypadku wersji, która nie jest blokowana, zobacz **_fwrite_nolock**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fwrite**|\<stdio.h>|
+|**fwrite**|\<stdio. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [fread](fread.md).
+Zobacz przykład dla [fread](fread.md).
 
 ## <a name="see-also"></a>Zobacz też
 

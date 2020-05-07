@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-ms.openlocfilehash: e424ffe3f113e50e318d9198bd5f06aaec96852a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8a5e0bfac2069ed016253de4276e772ea7912605
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347291"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920152"
 ---
 # <a name="ferror"></a>ferror
 
-Testy błędu w strumieniu.
+Testuje błąd w strumieniu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,32 +49,32 @@ int ferror(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumienia*<br/>
-Wskaźnik do struktury **PLIK.**
+*produkcyjne*<br/>
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli w *strumieniu*nie wystąpił żaden błąd, **ferror** zwraca wartość 0. W przeciwnym razie zwraca wartość niezerową. Jeśli strumień ma **wartość NULL**, **ferror** wywołuje nieprawidłowy program obsługi parametrów, zgodnie z opisem w [zatwierdzeniu parametru.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, ta funkcja ustawia **errno** na **EINVAL** i zwraca 0.
+Jeśli w *strumieniu*nie wystąpił błąd **, obiekt** żądający zwróci wartość 0. W przeciwnym razie zwraca wartość różną od zera. Jeśli strumień ma **wartość null**, obiekt wywołujący **wywoła procedurę** obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca wartość 0.
 
-Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr aby](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) uzyskać więcej informacji na temat tych i innych kodów błędów.
+Aby uzyskać więcej informacji na temat tych i innych kodów błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Uwagi
 
-**Ferror** rutynowych (realizowane zarówno jako funkcja, jak i jako makro) testy dla odczytu lub zapisu błędu w pliku skojarzonym ze *strumieniem*. Jeśli wystąpił błąd, wskaźnik błędu dla strumienia pozostaje ustawiony, dopóki strumień nie zostanie zamknięty lub przewinie ponownie lub dopóki nie zostanie **wywołany przez jaśniejsze** go.
+Procedura **odwołująca** (zaimplementowana zarówno jako funkcja, jak i jako makro) testuje błąd odczytu lub zapisu w pliku skojarzonym ze *strumieniem*. Jeśli wystąpił błąd, wskaźnik błędu dla strumienia pozostaje ustawiony do momentu zamknięcia lub przetrwania strumienia lub do momentu wywołania **clearerr** .
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**ferror**|\<stdio.h>|
+|**ferror**|\<stdio. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [feof](feof.md).
+Zobacz przykład dla [feof](feof.md).
 
 ## <a name="see-also"></a>Zobacz też
 

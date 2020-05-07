@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - pgmptr global variable
 - _pgmptr global variable
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
-ms.openlocfilehash: efcac6a64c01bee38a3753bdec378dae625db35e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a4a9bddfa861727e174325dc639868e3529162cd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345022"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918214"
 ---
 # <a name="_get_pgmptr"></a>_get_pgmptr
 
-Pobiera bieżącą wartość **zmiennej globalnej _pgmptr.**
+Pobiera bieżącą wartość **_pgmptr** zmiennej globalnej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,26 +51,26 @@ errno_t _get_pgmptr(
 
 ### <a name="parameters"></a>Parametry
 
-*wartość pValue*<br/>
-Wskaźnik do ciągu, który ma być wypełniony bieżącą wartością **zmiennej _pgmptr.**
+*pValue*<br/>
+Wskaźnik do ciągu, który ma zostać wypełniony bieżącą wartością zmiennej **_pgmptr** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca zero, jeśli zakończy się pomyślnie; kod błędu w przypadku awarii. Jeśli *wartość pValue* ma **wartość NULL,** nieprawidłowy program obsługi parametrów jest wywoływany zgodnie z opisem w [yd.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, ta funkcja ustawia **errno** na **EINVAL** i zwraca **wartość EINVAL**.
+Zwraca zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia. Jeśli *pValue* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-Wywołaj **_get_pgmptr** tylko wtedy, gdy program ma wąski punkt wejścia, taki jak **main()** lub **WinMain()**. **_pgmptr** zmienna globalna zawiera pełną ścieżkę do pliku wykonywalnego skojarzonego z procesem. Aby uzyskać więcej informacji, zobacz [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
+Wywołaj **_get_pgmptr** tylko wtedy, gdy program ma wąski punkt wejścia, taki jak **Main ()** lub **WinMain ()**. **_Pgmptr** zmienna globalna zawiera pełną ścieżkę do pliku wykonywalnego skojarzonego z procesem. Aby uzyskać więcej informacji, zobacz [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_get_pgmptr**|\<>|
+|**_get_pgmptr**|\<STDLIB. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

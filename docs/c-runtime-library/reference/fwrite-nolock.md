@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - streams, writing data to
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
-ms.openlocfilehash: 9623606cb79dc4c0ac988960545faf3d91c42f9d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6856dd2af0536deacfbef6b02c7cdf38d41f9c04
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345453"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919434"
 ---
 # <a name="_fwrite_nolock"></a>_fwrite_nolock
 
-Zapisuje dane do strumienia, bez blokowania wątku.
+Zapisuje dane w strumieniu bez blokowania wątku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,39 +53,39 @@ size_t _fwrite_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*Buforu*<br/>
-Wskaźnik do danych, które mają zostać zapisane.
+*buforu*<br/>
+Wskaźnik na dane, które mają zostać zapisaniu.
 
-*Rozmiar*<br/>
+*size*<br/>
 Rozmiar elementu w bajtach.
 
-*Liczba*<br/>
+*liczbą*<br/>
 Maksymalna liczba elementów do zapisania.
 
-*Strumienia*<br/>
-Wskaźnik do struktury **PLIK.**
+*produkcyjne*<br/>
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Tak samo jak [fwrite](fwrite.md).
+Analogicznie jak [fwrite](fwrite.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest nieblokującą wersją **fwrite**. Jest identyczny **z fwrite,** z tą różnicą, że nie jest chroniony przed zakłóceniami przez inne wątki. Może to być szybsze, ponieważ nie ponosi obciążenie blokowania innych wątków. Tej funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdy zakres wywołujący obsługuje już izolację wątku.
+Ta funkcja jest nieblokującą wersją **fwrite**. Jest on identyczny z **fwrite** , z tą różnicą, że nie jest chroniony przed ingerencją przez inne wątki. Może to być szybsze, ponieważ nie wiąże się z zablokowaniem innych wątków. Tej funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fwrite_nolock**|\<stdio.h>|
+|**_fwrite_nolock**|\<stdio. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [fread](fread.md).
+Zobacz przykład dla [fread](fread.md).
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -13,7 +13,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - CIexp intrinsic
 - _CIexp intrinsic
 ms.assetid: f8a3e3b7-fa57-41a3-9983-6c81914cbb55
-ms.openlocfilehash: a85a9a90ee922c6100649f2aebb9eb4c68696a0d
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 90a8fdac4b3b671853d2274de26040e3bf67def4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745773"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918046"
 ---
 # <a name="_ciexp"></a>_CIexp
 
-Oblicza wykładniczą najwyższą wartość na stosie.
+Oblicza wartość wykładniczą górnej wartości na stosie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,11 +44,11 @@ void __cdecl _CIexp();
 
 ## <a name="remarks"></a>Uwagi
 
-Ta wersja `exp` funkcji ma wyspecjalizowaną konwencję wywoływania, którą kompilator rozumie. Przyspiesza wykonanie, ponieważ zapobiega generowaniu kopii i pomaga w alokacji rejestru.
+Ta wersja `exp` funkcji ma wyspecjalizowaną konwencję wywoływania, którą rozpoznaje kompilator. Przyspiesza to wykonywanie, ponieważ uniemożliwia generowanie kopii i pomaga w zarejestrowaniu alokacji.
 
-Wynikowa wartość jest wypychany na górze stosu.
+Wartość wyników jest wypychana na górze stosu.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 

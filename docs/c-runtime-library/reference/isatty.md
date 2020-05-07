@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: c9611c2bd55ebc1602a73e4c71518716ea100420
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16d67053cd05d567e4c732d4366bd121863d43f9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343902"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919770"
 ---
 # <a name="_isatty"></a>_isatty
 
-Określa, czy deskryptor pliku jest skojarzony z urządzeniem znakowym.
+Określa, czy deskryptor pliku jest skojarzony z urządzeniem znaku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,32 +48,32 @@ int _isatty( int fd );
 
 ### <a name="parameters"></a>Parametry
 
-*Fd*<br/>
-Deskryptor pliku, który odwołuje się do urządzenia, które ma być testowane.
+*proces*<br/>
+Deskryptor pliku odnoszący się do urządzenia, które ma zostać przetestowane.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_isatty** zwraca wartość niezerową, jeśli deskryptor jest skojarzony z urządzeniem znakowym. W przeciwnym razie **_isatty** zwraca wartość 0.
+**_isatty** zwraca wartość różną od zera, jeśli deskryptor jest skojarzony z urządzeniem znaku. W przeciwnym razie **_isatty** zwraca wartość 0.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_isatty** określa, czy *fd* jest skojarzony z urządzeniem znakowym (terminalem, konsolą, drukarką lub portem szeregowym).
+Funkcja **_isatty** określa, czy *FD* jest skojarzony z urządzeniem znakowym (terminalem, konsolą, drukarką lub portem szeregowym).
 
-Ta funkcja sprawdza poprawność parametru *fd.* Jeśli *fd* jest złym wskaźnikiem pliku, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [polu Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, funkcja zwraca 0 i ustawia **errno** na **EBADF**.
+Ta funkcja sprawdza poprawność parametru *FD* . Jeśli *FD* jest nieprawidłowym wskaźnikiem pliku, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość 0 i ustawia **errno** na **EBADF**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_isatty**|\<> io.h|
+|**_isatty**|\<IO. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

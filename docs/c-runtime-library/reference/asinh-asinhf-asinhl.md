@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: 299ee0ff3014dcfd2f6ab712d01766119fab5894
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a200aa6e511ab83866fbf1df2beabb827c611c46
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350470"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919622"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
-Oblicza odwrotną sinus hiperboliczny.
+Oblicza odwrotny sinus hiperboliczny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,30 +60,30 @@ long double asinh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Wartość zmiennoprzecinku.
+*y*<br/>
+Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **asinh** zwracają odwrotną sinushiberboliczny (łuk hiperboliczny sinus) *x*. Ta funkcja jest prawidłowa w domenie zmiennoprzecinkowej. Jeśli *x* jest cichym NaN, nieokreślony lub nieskończoności, zwracana jest ta sama wartość.
+Funkcje **ASINH —** zwracają odwrotność hyberbolic sinus (łuk hiperboliczny sinus) *x*. Ta funkcja jest prawidłowa w przypadku domeny zmiennoprzecinkowej. Jeśli *x* to cichy NaN, nieokreślony lub nieskończony, zwracana jest ta sama wartość.
 
-|Dane wejściowe|Wyjątek SEH|**_matherr** Wyjątek|
+|Dane wejściowe|Wyjątek SEH|**_matherr** Oprócz|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|brak|brak|
+|QNAN, IND, INF|brak|brak|
 
 ## <a name="remarks"></a>Uwagi
 
-Korzystając z języka C++, można wywołać przeciążenia **asinh,** które biorą i zwracają **float** lub **długie** **podwójne** wartości. W programie C **asinh** zawsze bierze i zwraca **podwójnie**.
+Gdy używasz języka C++, możesz wywoływać przeciążenia **ASINH —** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** o **podwójnej precyzji** . W programie C **ASINH —** zawsze przyjmuje i zwraca wartość **Double**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Wymagany nagłówek C|Wymagany nagłówek języka C++|
+|Funkcja|Wymagany nagłówek C|Wymagany nagłówek C++|
 |--------------|--------------|------------------|
-|**asinh**, **asinhf**, **asinhl**|\<> math.h|\<cmath> lub \<math.h<|
+|**ASINH —**, **asinhf —**, **asinhl**|\<> Math. h|\<cmath> lub \<Math. h<|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -115,7 +115,7 @@ asinh( 0.868671 ) = 0.785398
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
 [cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>

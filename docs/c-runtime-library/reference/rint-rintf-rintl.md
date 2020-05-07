@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 6489b7ebed5246738fb660dffd07a0b8f8ed9743
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e2b3d7a571a3005b1c52eacaa85e1ede6d30b77
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332759"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917723"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
-Zaokrągla wartość zmiennoprzecinkową do najbliższej liczby całkowitej w formacie zmiennoprzecinkowym.
+Zaokrągla wartość zmiennoprzecinkową do najbliższej liczby całkowitej w formacie liczb zmiennoprzecinkowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,31 +60,31 @@ long double rint( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
+*y*<br/>
 Wartość zmiennoprzecinkowa do zaokrąglenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **rint** zwracają wartość zmiennoprzecinkową reprezentującą najbliższą liczbę całkowitą do *x*. Wartości w połowie drogi są zaokrąglane zgodnie z bieżącym ustawieniem trybu zaokrąglania zmiennoprzecinkowego, tak samo jak funkcje **nearbyint.** W przeciwieństwie do funkcji **nearbyint,** **rint** funkcje mogą podnieść **FE_INEXACT** zmiennoprzecinkowego wyjątku, jeśli wynik różni się wartością od argumentu. Nie ma zwracania błędów.
+Funkcje **rukuj** zwracają wartość zmiennoprzecinkową, która reprezentuje najbliższą liczbę całkowitą do *x*. Wartości w połowie są zaokrąglane zgodnie z bieżącym ustawieniem trybu zaokrąglania zmiennoprzecinkowego, tak samo jak w przypadku funkcji **nearbyint —** . W przeciwieństwie do funkcji **nearbyint —** , funkcje **rukuj** mogą podnieść **FE_INEXACT** wyjątek zmiennoprzecinkowy, jeśli wynik różni się od argumentu. Brak powrotu błędu.
 
-|Dane wejściowe|Wyjątek SEH|**_matherr** Wyjątek|
+|Dane wejściowe|Wyjątek SEH|**_matherr** Oprócz|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|brak|brak|
-|Denormals ( Denormals )|EXCEPTION_FLT_UNDERFLOW|brak|
+|Denormalne|EXCEPTION_FLT_UNDERFLOW|brak|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **rint,** które biorą i zwracają **float** i **długie** **podwójne** wartości. W programie C **rint** zawsze przyjmuje i zwraca **podwójny**plik .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **rukuj** , które pobierają i zwracają wartości **zmiennoprzecinkowe** i **długie** **Double** . W programie C **rukuj** zawsze przyjmuje i zwraca wartość **Double**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**rint**, **rintf**, **rintl**|\<> math.h|\<> cmath|
+|**rukuj**, **rintf**, **rintl**|\<> Math. h|\<cmath>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -124,11 +124,11 @@ rintl(-2.500000) is -3
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>
 [lrint, lrintf, lrintl, llrint, llrintf, llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)<br/>
 [lround, lroundf, lroundl, llround, llroundf, llroundl](lround-lroundf-lroundl-llround-llroundf-llroundl.md)<br/>
 [nearbyint, nearbyintf, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>
-[rint](rint-rintf-rintl.md)<br/>
+[rukuj](rint-rintf-rintl.md)<br/>

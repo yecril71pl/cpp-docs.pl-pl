@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: 6a3d7ea81b2f6b1a7e87c706ca883394e02dff3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bf3eedaa9c24e7385686e2343857e69171e43090
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338151"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917841"
 ---
 # <a name="remove-_wremove"></a>remove, _wremove
 
-Usuwanie pliku.
+Usuń plik.
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,39 +60,39 @@ int _wremove(
 
 ### <a name="parameters"></a>Parametry
 
-*Ścieżka*<br/>
-Ścieżka pliku do usunięcia.
+*ścieżka*<br/>
+Ścieżka pliku, który ma zostać usunięty.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość 0, jeśli plik został pomyślnie usunięty. W przeciwnym razie zwraca wartość -1 i ustawia **errno** albo do **EACCES,** aby wskazać, że ścieżka określa plik tylko do odczytu, określa katalog lub plik jest otwarty, lub **ENOENT,** aby wskazać, że nazwa pliku lub ścieżka nie została znaleziona.
+Każda z tych funkcji zwraca wartość 0, jeśli plik zostanie pomyślnie usunięty. W przeciwnym razie zwraca wartość-1 i ustawia **errno** do **EACCES** , aby wskazać, że ścieżka Określa plik tylko do odczytu, określa katalog lub plik jest otwarty lub do **ENOENT** , aby wskazać, że nazwa pliku lub ścieżka nie została znaleziona.
 
-Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr,](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) aby uzyskać więcej informacji na temat tych i innych kodów zwrotnych.
+Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **usuwania** usuwa plik określony przez *ścieżkę.* **_wremove** jest szerokoznakową wersją **_remove**; argument *path* do **_wremove** jest ciągiem znaków o szerokim charakterze. **_wremove** i **_remove** zachowują się identycznie w przeciwnym razie. Wszystkie dojścia do pliku muszą zostać zamknięte, zanim będzie można go usunąć.
+Funkcja **Remove** usuwa plik określony przez *ścieżkę.* **_wremove** to dwubajtowa wersja **_remove**; argument *ścieżki* **_wremove** jest ciągiem znaków dwubajtowych. **_wremove** i **_remove** zachowują się identycznie w inny sposób. Wszystkie uchwyty do pliku muszą zostać zamknięte, aby można było je usunąć.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tremove**|**remove**|**remove**|**_wremove**|
+|**_tremove**|**usuwa**|**usuwa**|**_wremove**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**remove**|\<stdio.h> lub \<io.h>|
-|**_wremove**|\<stdio.h> lub \<wchar.h>|
+|**usuwa**|\<stdio. h> lub \<IO. h>|
+|**_wremove**|\<stdio. h> lub \<WCHAR. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -111,7 +111,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_removetxt"></a>Dane wejściowe: crt_remove.txt
+### <a name="input-crt_removetxt"></a>Dane wejściowe: crt_remove. txt
 
 ```Input
 This file will be deleted.

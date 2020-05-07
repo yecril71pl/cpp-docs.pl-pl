@@ -24,7 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -68,19 +68,19 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 5e5ab815e95c1b8ee03cac86d5c3355874f8860b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1a21d9cb06b9459a7f015cd8f2a8fee75a1ab979
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363832"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919278"
 ---
 # <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
-Kopiowanie znaków jednego ciągu do drugiego. Dostępne są bezpieczniejsze wersje tych funkcji; [zobacz strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md).
+Kopiuj znaki jednego ciągu do innego. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsncpy** i **_mbsncpy_l** nie mogą być używane w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncpy** i **_mbsncpy_l** nie mogą być używane w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -161,62 +161,62 @@ unsigned char *_mbsncpy_l(
 
 ### <a name="parameters"></a>Parametry
 
-*strDest (strDest)*<br/>
+*strDest*<br/>
 Ciąg docelowy.
 
-*strSource (źródło usług strSource)*<br/>
+*strSource*<br/>
 Ciąg źródłowy.
 
-*Liczba*<br/>
-Liczba znaków do skopiowania.
+*liczbą*<br/>
+Liczba znaków, które mają zostać skopiowane.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca *strDest*. Żadna wartość zwracana nie jest zarezerwowana, aby wskazać błąd.
+Zwraca *strDest*. Żadna wartość zwracana nie jest zarezerwowana do wskazania błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **strncpy** kopiuje początkowe znaki *zliczania* *strSource* do *strDest* i zwraca *strDest*. Jeśli *liczba* jest mniejsza lub równa długości *strSource*, znak zerowy nie jest dołączany automatycznie do kopiowanego ciągu. Jeśli *liczba* jest większa niż długość *strSource*, ciąg docelowy jest wyściełany znakami null do *liczby*długości . Zachowanie **strncpy** jest niezdefiniowana, jeśli ciągi źródłowe i docelowe nakładają się na siebie.
+Funkcja **strncpy** kopiuje początkową *liczbę* znaków *StrSource* do *strDest* i zwraca *strDest*. Jeśli *Liczba* jest mniejsza lub równa długości *strSource*, znak null nie jest automatycznie dołączany do skopiowanego ciągu. Jeśli *Liczba* jest większa niż długość *strSource*, ciąg docelowy jest uzupełniony znakami o wartości null do *liczby*długości. Zachowanie **strncpy** jest niezdefiniowane, jeśli parametry źródłowe i docelowe nakładają się na siebie.
 
 > [!IMPORTANT]
-> **strncpy** nie sprawdza wystarczającej ilości miejsca w *strDest;* to sprawia, że potencjalną przyczyną przekroczenia buforu. Argument *count* ogranicza liczbę skopiowanych znaków; nie jest to ograniczenie wielkości *strDest*. Zobacz poniższy przykład. Aby uzyskać więcej informacji, zobacz [Unikanie przekroczenia buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
+> **strncpy** nie sprawdza wystarczającej ilości miejsca w *strDest*; stanowi to potencjalną przyczynę przekroczenia buforu. Argument *Count* ogranicza liczbę znaków skopiowanych; nie jest to limit rozmiaru *strDest*. Zobacz poniższy przykład. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Jeśli *strDest* lub *strSource* jest wskaźnikiem **NULL** lub jeśli *liczba* jest mniejsza lub równa zero, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, te funkcje zwracają -1 i ustawić **errno** na **EINVAL**.
+Jeśli *strDest* lub *strSource* jest wskaźnikiem o **wartości null** lub jeśli *Liczba* jest mniejsza lub równa zero, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
 
-**wcsncpy** i **_mbsncpy** są wersjami **strncpy o**szerokich znakach i wielobajtowych znakach. Argumenty i zwracana wartość **wcsncpy** i **_mbsncpy** się odpowiednio różnić. Te sześć funkcji zachowują się identycznie inaczej.
+**wcsncpy** i **_mbsncpy** są wersjami znaków dwubajtowych i znakowymi **strncpy**. Argumenty i wartość zwracana przez **wcsncpy** i **_mbsncpy** różnią się odpowiednio. Te sześć funkcji zachowuje się identycznie w inny sposób.
 
-Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że używają ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych dla ich zachowania zależnego od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że używają ustawień regionalnych przewidzianych zamiast bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-W języku C++ te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsncpy**|**strncpy**|**_mbsnbcpy**|**wcsncpy**|
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l** i **_wcsncpy_l** nie mają zależności od lokalizacji; są one dostarczane tylko dla **_tcsncpy_l** i nie są przeznaczone do wywołania bezpośrednio.
+> **_strncpy_l** i **_wcsncpy_l** nie są zależne od ustawień regionalnych; są one dostępne tylko dla **_tcsncpy_l** i nie są przeznaczone do bezpośredniego wywoływania.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strncpy**|\<string.h>|
-|**wcsncpy**|\<string.h> lub \<wchar.h>|
-|**_mbsncpy**, **_mbsncpy_l**|\<mbstring.h>|
+|**strncpy**|\<> String. h|
+|**wcsncpy**|\<ciąg. h> lub \<WCHAR. h>|
+|**_mbsncpy**, **_mbsncpy_l**|\<mbstring. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności platformy, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności platformy, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano użycie **strncpy** i jak może być nadużywane powodować błędy programu i problemy z zabezpieczeniami. Kompilator generuje ostrzeżenie dla każdego wywołania **strncpy** podobne do **crt_strncpy_x86.c(15) : ostrzeżenie C4996: "strncpy": Ta funkcja lub zmienna może być niebezpieczne. Zamiast tego należy rozważyć użycie strncpy_s. Aby wyłączyć wycofanie, użyj _CRT_SECURE_NO_WARNINGS. Szczegółowe informacje można znaleźć w pomocy online.**
+Poniższy przykład demonstruje użycie **strncpy** i sposób jego niewłaściwego użycia w celu wypróbowania błędów programu i problemów z zabezpieczeniami. Kompilator generuje ostrzeżenie dla każdego wywołania crt_strncpy_x86 **strncpy** **. c (15): ostrzeżenie C4996: "strncpy": Ta funkcja lub zmienna może być niebezpieczna. Zamiast tego Rozważ użycie strncpy_s. Aby wyłączyć przestarzałość, użyj _CRT_SECURE_NO_WARNINGS. Szczegóły można znaleźć w pomocy online.**
 
 ```C
 // crt_strncpy_x86.c
@@ -281,12 +281,12 @@ dogs like to chase cars.
 Buffer overrun: s = 'ars.' (should be 'test')
 ```
 
-Układ zmiennych automatycznych oraz poziom wykrywania błędów i ochrony kodu mogą się różnić w zależności od zmienionych ustawień kompilatora. W tym przykładzie mogą mieć różne wyniki, gdy wbudowane w innych środowiskach kompilacji lub z innymi opcjami kompilatora.
+Układ automatycznych zmiennych i poziom wykrywania błędów oraz ochrony kodu mogą się różnić w zależności od zmienionych ustawień kompilatora. Ten przykład może mieć różne wyniki w przypadku skompilowania w innych środowiskach kompilacji lub z innymi opcjami kompilatora.
 
 ## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

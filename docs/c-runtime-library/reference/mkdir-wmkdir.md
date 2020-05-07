@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: 56e525dd765ff2594eebcfe9a0aed37670b12e3e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f4714e3e763b827772a7d2eb61ae2e14f0aece02
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338782"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919146"
 ---
 # <a name="_mkdir-_wmkdir"></a>_mkdir, _wmkdir
 
@@ -64,26 +64,26 @@ int _wmkdir(
 
 ### <a name="parameters"></a>Parametry
 
-*dirname (dirname)*<br/>
-Ścieżka dla nowego katalogu.
+*dirname*<br/>
+Ścieżka do nowego katalogu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość 0, jeśli utworzono nowy katalog. W razie błędu funkcja zwraca wartość -1 i ustawia **errno** w następujący sposób.
+Każda z tych funkcji zwraca wartość 0, jeśli nowy katalog został utworzony. W przypadku błędu funkcja zwraca wartość-1 i ustawia **errno** w następujący sposób.
 
-**EEXIST (EEXIST)** Katalog nie został utworzony, ponieważ *dirname* jest nazwą istniejącego pliku, katalogu lub urządzenia.
+**EEXIST** Katalog nie został utworzony, ponieważ *dirname* jest nazwą istniejącego pliku, katalogu lub urządzenia.
 
-**ENOENT ( ENOENT )** Nie znaleziono ścieżki.
+**ENOENT** Nie znaleziono ścieżki.
 
-Aby uzyskać więcej informacji na temat tych i innych kodów zwrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_mkdir** tworzy nowy katalog z określonym *dirname.* **_mkdir** można utworzyć tylko jeden nowy katalog na wywołanie, więc tylko ostatni składnik *dirname* może nadać nazwę nowemu katalogowi. **_mkdir** nie tłumaczy ograniczników ścieżki. W systemie Windows NT zarówno \\ukośnik odwrotny ( ) i ukośnik do przodu (/ ) są prawidłowymi ogranicznikami ścieżki w ciągach znaków w procedurach wykonywania.
+Funkcja **_mkdir** tworzy nowy katalog z określonym *dirname.* **_mkdir** może utworzyć tylko jeden nowy katalog dla każdego wywołania, więc tylko ostatni składnik *dirname* może nazywać nowym katalogiem. **_mkdir** nie tłumaczy ograniczników ścieżki. W systemie Windows NT zarówno ukośnik odwrotny ( \\), jak i ukośnik (/) są prawidłowymi ogranicznikami ścieżki w ciągach znaków w procedurach w czasie wykonywania.
 
-**_wmkdir** jest szerokoznakową wersją **_mkdir**; *argumentem dirname* **do _wmkdir** jest ciągiem znaków o szerokim charakterze. **_wmkdir** i **_mkdir** zachowują się identycznie w przeciwnym razie.
+**_wmkdir** to dwubajtowa wersja **_mkdir**; argument *dirname* **_wmkdir** jest ciągiem znaków dwubajtowych. **_wmkdir** i **_mkdir** zachowują się identycznie w inny sposób.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -95,14 +95,14 @@ Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmien
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mkdir**|\<direct.h>|
-|**_wmkdir**|\<direct.h> lub \<wchar.h>|
+|**_mkdir**|\<> Direct. h|
+|**_wmkdir**|\<Direct. h> lub \<WCHAR. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

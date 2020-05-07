@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: 0c50e77863b4b136ac59b6f79d8e529691032609
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 64b9abe6313cc13e1e20f8f66ba486cdeb3e4892
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338531"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919332"
 ---
 # <a name="perror-_wperror"></a>perror, _wperror
 
-Drukowanie komunikatu o błędzie.
+Drukuj komunikat o błędzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,40 +60,40 @@ void _wperror(
 ### <a name="parameters"></a>Parametry
 
 *Komunikat*<br/>
-Komunikat ciąg do wydrukowania.
+Komunikat ciągu do wydrukowania.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **perror** drukuje komunikat o błędzie do **stderr**. **_wperror** jest szerokoznakową wersją **_perror**; argument *message* do **_wperror** jest ciągiem znaków o szerokim charakterze. **_wperror** i **_perror** zachowują się identycznie w przeciwnym razie.
+Funkcja **pError** drukuje komunikat o błędzie do **stderr**. **_wperror** to dwubajtowa wersja **_perror**; argument *komunikatu* do **_wperror** jest ciągiem znaków dwubajtowych. **_wperror** i **_perror** zachowują się identycznie w inny sposób.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tperror**|**Perror**|**Perror**|**_wperror**|
+|**_tperror**|**pError**|**pError**|**_wperror**|
 
-*komunikat* jest drukowany najpierw, a następnie dwukropek, następnie przez komunikat o błędzie systemu dla ostatniego wywołania biblioteki, które spowodowało błąd, a na koniec przez znak nowego linii. Jeśli *wiadomość* jest wskaźnikiem zerowym lub wskaźnikiem do ciągu zerowego, **perror** drukuje tylko komunikat o błędzie systemu.
+*komunikat* jest drukowany po raz pierwszy, po którym następuje dwukropek, następnie komunikat o błędzie systemu dla ostatniego wywołania biblioteki, które wygenerowało błąd, i na koniec przez znak nowego wiersza. Jeśli *komunikat* jest wskaźnikiem typu null lub wskaźnikiem do ciągu o wartości null, **pError** drukuje tylko komunikat o błędzie systemowym.
 
-Numer błędu jest przechowywany w zmiennej [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (zdefiniowanej w ERRNO. H). Komunikaty o błędach systemu są dostępne za pośrednictwem zmiennej [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), która jest tablicą komunikatów uporządkowanych według numeru błędu. **perror** drukuje odpowiedni komunikat o błędzie przy użyciu wartości **errno** jako indeksu do **_sys_errlist**. Wartość [zmiennej _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) jest definiowana jako maksymalna liczba elementów w tablicy **_sys_errlist.**
+Numer błędu jest przechowywany w zmiennej [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (zdefiniowanej w errno. H). Do komunikatów o błędach systemu uzyskuje się dostęp za pomocą zmiennej [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), która jest tablicą komunikatów uporządkowanych według numeru błędu. **pError** drukuje odpowiedni komunikat o błędzie przy użyciu wartości **errno** jako indeksu do **_sys_errlist**. Wartość zmiennej [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) jest definiowana jako maksymalna liczba elementów w tablicy **_sys_errlist** .
 
-Aby uzyskać dokładne wyniki, wywołaj **perror** natychmiast po powrocie rutynowych biblioteki z błędem. W przeciwnym razie kolejne wywołania mogą zastąpić wartość **errno.**
+Aby uzyskać dokładne wyniki, należy wywołać **pError** natychmiast po wykonaniu procedury biblioteki z błędem. W przeciwnym razie kolejne wywołania mogą zastąpić wartość **errno** .
 
-W systemie operacyjnym Windows niektóre wartości **errno** wymienione w ERRNO. H są nieużywane. Te wartości są zarezerwowane do użytku przez system operacyjny UNIX. Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr,](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) aby uzyskać listę wartości **errno** używanych przez system operacyjny Windows. **perror** drukuje pusty ciąg dla dowolnej wartości **errno** nie używanej przez te platformy.
+W systemie operacyjnym Windows niektóre wartości **errno** wymienione w errno. H nie jest używane. Te wartości są zarezerwowane do użytku przez system operacyjny UNIX. Aby uzyskać listę wartości **errno** używanych przez system operacyjny Windows, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) . **pError** drukuje pusty ciąg dla dowolnej wartości **errno** , która nie jest używana przez te platformy.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**Perror**|\<stdio.h> lub \<stdlib.h>|
-|**_wperror**|\<stdio.h> lub \<wchar.h>|
+|**pError**|\<stdio. h> lub \<STDLIB. h>|
+|**_wperror**|\<stdio. h> lub \<WCHAR. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -145,7 +145,7 @@ _strerror says open failed: No such file or directory
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrola procesu i środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
 [clearerr](clearerr.md)<br/>
 [ferror](ferror.md)<br/>
-[_strerror, _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md)<br/>
+[strerror, _strerror, _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md)<br/>

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-ms.openlocfilehash: 969b6d2dfd83a1a136fdfb3d17f8f843337b792c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 845310928ec4707afe15bccc7ff5b979e7da69b6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345227"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919367"
 ---
 # <a name="_get_dstbias"></a>_get_dstbias
 
@@ -52,30 +52,30 @@ error_t _get_dstbias( int* seconds );
 
 ### <a name="parameters"></a>Parametry
 
-*Sekund*<br/>
-Przesunięcie w sekundach czasu letniego.
+*s*<br/>
+Przesunięcie (w sekundach) czasu letniego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli zakończy się pomyślnie lub **errno** wartość, jeśli wystąpi błąd.
+Zero, jeśli wystąpi błąd lub wartość **errno** w przypadku wystąpienia błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_get_dstbias** pobiera liczbę sekund czasu letniego jako liczbę całkowitą. Jeśli obowiązuje czas letni, domyślne przesunięcie wynosi 3600 sekund, co oznacza liczbę sekund w ciągu jednej godziny (choć w kilku regionach obserwuje się przesunięcie dwugodzinne).
+Funkcja **_get_dstbias** Pobiera liczbę sekund w czasie zmiany czasu w postaci liczby całkowitej. Jeśli obowiązuje czas letni, domyślne przesunięcie wynosi 3600 sekund, czyli liczbę sekund w ciągu godziny (chociaż kilka regionów obserwuje przesunięcia dwugodzinne).
 
-Jeśli *wartość NULL* ma wartość **NULL,** nieprawidłowy program obsługi parametrów jest wywoływany zgodnie z opisem w programie Sprawdzanie poprawności [parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, ta funkcja ustawia **errno** na **EINVAL** i zwraca **wartość EINVAL**.
+Jeśli *sekundy* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca **EINVAL**.
 
-Zaleca się użycie tej funkcji zamiast **_dstbias** makra lub przestarzałej funkcji **__dstbias**.
+Zalecamy używanie tej funkcji zamiast makra **_dstbias** lub przestarzałej funkcji **__dstbias**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_get_dstbias**|\<> time.h|
+|**_get_dstbias**|\<> godziny. h|
 
-Aby uzyskać więcej informacji, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

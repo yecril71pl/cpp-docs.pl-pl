@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,19 +36,19 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 3b8f49fc7fbe90d4069a5dfeef9bbba3a7f05335
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 469b39e4e08f13af8d8ac3e679ed55c7afb240d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348370"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917600"
 ---
 # <a name="_cputs-_cputws"></a>_cputs, _cputws
 
-Umieszcza ciąg do konsoli.
+Umieszcza ciąg w konsoli.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -63,20 +63,20 @@ int _cputws(
 
 ### <a name="parameters"></a>Parametry
 
-*Str*<br/>
+*str*<br/>
 Ciąg wyjściowy.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli się powiedzie, **_cputs** zwraca wartość 0. Jeśli funkcja nie powiedzie się, zwraca wartość niezerową.
+Jeśli się powiedzie, **_cputs** zwraca wartość 0. Jeśli funkcja nie powiedzie się, zwraca wartość różną od zera.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_cputs** zapisuje ciąg zakończony z wartością null, który jest wskazywał przez *str* bezpośrednio do konsoli. Kombinacja kanału informacyjnego wiersza powrotu karetki (CR-LF) nie jest automatycznie dołączana do ciągu.
+Funkcja **_cputs** zapisuje ciąg zakończony znakiem null, który jest wskazywany przez *str* , bezpośrednio do konsoli. Kombinacja powrotu karetki liniowej (CR-LF) nie jest automatycznie dołączana do ciągu.
 
-Ta funkcja sprawdza poprawność jego parametru. Jeśli *str* ma **wartość NULL,** wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [yd.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, **errno** jest ustawiona na **EINVAL** i -1 jest zwracany.
+Ta funkcja sprawdza poprawność parametru. Jeśli *str* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** i-1 jest zwracany.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -88,14 +88,14 @@ Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmien
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_cputs**|\<> conio.h|\<> errno.h|
-|**_cputws**|\<> conio.h|\<> errno.h|
+|**_cputs**|\<CONIO. h>|\<errno. h>|
+|**_cputws**|\<CONIO. h>|\<errno. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

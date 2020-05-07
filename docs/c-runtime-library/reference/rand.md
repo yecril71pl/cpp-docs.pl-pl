@@ -17,7 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 944c512d0102b459afc2924ef7515311e46cd43c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8f2a4d00310671e8ba80055e38e479e348562ac2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338160"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919526"
 ---
 # <a name="rand"></a>rand
 
-Generuje numer pseudolosowy przy użyciu dobrze znanego i w pełni powtarzalnego algorytmu. Dostępna jest bardziej programowo bezpieczna wersja tej funkcji; patrz [rand_s](rand-s.md). Liczby generowane przez **rand** nie są zabezpieczone kryptograficznie. Aby uzyskać bardziej kryptograficznie bezpieczne generowanie liczb losowych, użyj [rand_s](rand-s.md) lub funkcji zadeklarowanych w standardowej bibliotece C++ w [ \<losowych>](../../standard-library/random.md).
+Generuje numer pseudolosowych przy użyciu dobrze znanego i w pełni odtwarzalnego algorytmu. Dostępna jest bardziej programowo bezpieczna wersja tej funkcji; Zobacz [rand_s](rand-s.md). Liczby wygenerowane przez **Rand** nie są kryptograficznie zabezpieczone. Aby uzyskać bardziej kryptograficzną kryptograficznie funkcję generowania liczb losowych, użyj [rand_s](rand-s.md) lub funkcji zadeklarowanych w standardowej bibliotece C++ w [ \<>losowych ](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,23 +50,23 @@ int rand( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**rand** zwraca numer pseudolosowy, jak opisano powyżej. Nie ma zwracania błędów.
+Funkcja **Rand** zwraca numer pseudolosowych, zgodnie z powyższym opisem. Brak powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **rand** zwraca liczbę całkowitą pseudolosową w zakresie od 0 do **RAND_MAX** (32767). Użyj funkcji [srand](srand.md) do nasion pseudolosdom-generator liczb przed wywołaniem **rand**.
+Funkcja **Rand** zwraca liczbę całkowitą pseudolosowych z zakresu od 0 do **RAND_MAX** (32767). Użyj funkcji [srand](srand.md) , aby wypełniać generatora numerów pseudolosowych przed wywołaniem funkcji **Rand**.
 
-Funkcja **rand** generuje dobrze znaną sekwencję i nie jest odpowiednia do użycia jako funkcja kryptograficzna. Aby uzyskać bardziej kryptograficznie bezpieczne generowanie liczb losowych, użyj [rand_s](rand-s.md) lub funkcji zadeklarowanych w standardowej bibliotece C++ w [ \<losowych>](../../standard-library/random.md). Aby uzyskać informacje o **rand** tym, \<co jest nie tak z rand i jak losowe> rozwiązuje te niedociągnięcia, zobacz ten film zatytułowany [rand Uważane za szkodliwe](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+Funkcja **Rand** generuje dobrze znaną sekwencję i nie jest odpowiednia do użycia jako funkcja kryptograficzna. Aby uzyskać bardziej kryptograficzną kryptograficznie funkcję generowania liczb losowych, użyj [rand_s](rand-s.md) lub funkcji zadeklarowanych w standardowej bibliotece C++ w [ \<>losowych ](../../standard-library/random.md). Aby uzyskać informacje o tym, co **rand** się stało z \<los i jak losowo> eliminuje te nieprawidłowości, zobacz ten film wideo zatytułowany [Los uważany za szkodliwy](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**Rand**|\<>|
+|**Rand**|\<STDLIB. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -140,6 +140,6 @@ int main( void )
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [srand](srand.md)<br/>
 [rand_s](rand-s.md)<br/>

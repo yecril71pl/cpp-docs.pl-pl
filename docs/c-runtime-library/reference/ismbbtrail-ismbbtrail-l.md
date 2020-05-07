@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-ms.openlocfilehash: 5e8615adf5d17986c1a52658fe5d680cc326976a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 08229b4a35634193810f7c24a3f8749fba034872
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343397"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918675"
 ---
 # <a name="_ismbbtrail-_ismbbtrail_l"></a>_ismbbtrail, _ismbbtrail_l
 
-Określa, czy bajt jest bajtem spływowym znaku wielobajtowego.
+Określa, czy bajt jest bajtem końcowym znaku wielobajtowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,32 +59,32 @@ int _ismbbtrail_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Liczba całkowita do przetestowania.
+*s*<br/>
+Liczba całkowita, która ma zostać przetestowana.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_ismbbtrail** zwraca wartość niezerową, jeśli liczba całkowita *c* jest drugim bajtem znaku wielobajtowego. Na przykład tylko na stronie kodowej 932 prawidłowe zakresy to od 0x40 do 0x7E i od 0x80 do 0xFC.
+**_ismbbtrail** zwraca wartość różną od zera, jeśli liczba całkowita *c* jest drugim bajtem znaku wielobajtowego. Na przykład, na stronie kodowej 932, prawidłowymi zakresami są 0x40 0x7E i 0x80 do 0xFC.
 
 ## <a name="remarks"></a>Uwagi
 
-**_ismbbtrail** używa bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych. **_ismbbtrail_l** jest identyczna, z tą różnicą, że używa ustawień regionalnych, które są przekazywane zamiast. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+**_ismbbtrail** używa bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych. **_ismbbtrail_l** jest identyczny, z tą różnicą, że używa zamiast tego ustawień regionalnych, które zostały przesłane. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_ismbbtrail**|\<mbctype.h> lub \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
-|**_ismbbtrail_l**|\<mbctype.h> lub \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbbtrail**|\<Mbctype. h> lub \<mbstring. h>|\<CType. h>, * \<Limits. h> \<, STDLIB. h>|
+|**_ismbbtrail_l**|\<Mbctype. h> lub \<mbstring. h>|\<CType. h>, * \<Limits. h> \<, STDLIB. h>|
 
-\*Dla stałych manifestu dla warunków badania.
+\*Dla stałych manifestu dla warunków testowych.
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-ms.openlocfilehash: 5c05d7a2743cd0c1e843d6895e8f5574031ab098
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6248dd2287b2f11db72f64df1241affe8deec22d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344840"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919652"
 ---
 # <a name="getc-getwc"></a>getc, getwc
 
-Odczyt znaku ze strumienia.
+Odczytaj znak ze strumienia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,44 +62,44 @@ wint_t getwc(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumienia*<br/>
+*produkcyjne*<br/>
 Strumień wejściowy.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca odczyt znaku. Aby wskazać błąd odczytu lub warunek końca pliku, **getc** zwraca **polecenie EOF,** a **getwc** zwraca **polecenie WEOF**. W przypadku **getc**użyj **ferror** lub **feof,** aby sprawdzić, czy nie ma błędu lub końca pliku. Jeśli *strumień* ma **wartość NULL**, **getc** i **getwc** wywołać nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, te funkcje zwracają **EOF** (lub **WEOF** dla **getwc)** i **ustawiają errno** na **EINVAL**.
+Zwraca odczyt znaku. Aby wskazać błąd odczytu lub stan końca pliku, **getc —** zwraca wartość **EOF**, a **getwc** zwraca **WEOF**. W przypadku **getc —** Użyj obiektu **odwołującego** lub **feof** , aby wyszukać błąd lub koniec pliku. Jeśli *strumień* ma **wartość null**, **getc —** i **getwc** Wywołaj procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **eof** (lub **WEOF** dla **getwc**) i ustawiają **errno** na **EINVAL**.
 
-Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr aby](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) uzyskać więcej informacji na temat tych i innych kodów błędów.
+Aby uzyskać więcej informacji na temat tych i innych kodów błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Uwagi
 
-Każda procedura odczytuje pojedynczy znak z pliku w bieżącej pozycji i zwiększa skojarzony wskaźnik pliku (jeśli jest zdefiniowany), aby wskazywał następny znak. Plik jest skojarzony ze *strumieniem*.
+Każda procedura odczytuje pojedynczy znak z pliku w bieżącym położeniu i zwiększa skojarzony wskaźnik pliku (jeśli jest zdefiniowany), aby wskazywał na następny znak. Plik jest skojarzony ze *strumieniem*.
 
-Te funkcje blokują wątek wywołujący i dlatego są bezpieczne dla wątków. Aby uzyskać wersję niezablokującą, zobacz [_getc_nolock, _getwc_nolock](getc-nolock-getwc-nolock.md).
+Te funkcje blokują wątek wywołujący i dlatego są bezpieczne wątkowo. W przypadku wersji, która nie jest blokowana, zobacz [_getc_nolock, _getwc_nolock](getc-nolock-getwc-nolock.md).
 
-Rutynowe uwagi następują.
+Uwagi dotyczące rutynowych czynności.
 
 |Procedura|Uwagi|
 |-------------|-------------|
-|**getc ( getc )**|Tak samo jak **fgetc**, ale realizowane jako funkcja i jako makro.|
-|**getwc ( getwc )**|Szerokoznakowana wersja **getc**. Odczytuje znak wielobajtowy lub szeroki znak w zależności od tego, czy *strumień* jest otwarty w trybie tekstowym, czy w trybie binarnym.|
+|**getc —**|Analogicznie jak **fgetc**, ale zaimplementowane jako funkcja i jako makro.|
+|**getwc**|Dwubajtowa wersja **getc —**. Odczytuje znak wielobajtowy lub szeroki znak w zależności od tego, czy *strumień* jest otwarty w trybie tekstowym czy w trybie binarnym.|
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_gettc**|**getc ( getc )**|**getc ( getc )**|**getwc ( getwc )**|
+|**_gettc**|**getc —**|**getc —**|**getwc**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**getc ( getc )**|\<stdio.h>|
-|**getwc ( getwc )**|\<stdio.h> lub \<wchar.h>|
+|**getc —**|\<stdio. h>|
+|**getwc**|\<stdio. h> lub \<WCHAR. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -138,7 +138,7 @@ int main()
 }
 ```
 
-### <a name="input-crt_getctxt"></a>Dane wejściowe: crt_getc.txt
+### <a name="input-crt_getctxt"></a>Dane wejściowe: crt_getc. txt
 
 ```Input
 Line one.

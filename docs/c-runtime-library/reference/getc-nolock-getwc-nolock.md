@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +41,12 @@ helpviewer_keywords:
 - gettc_nolock function
 - _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
-ms.openlocfilehash: 5a352338f84c9f5dd7dc52099aed1de9aa26c09e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 26e72783e3188c663ab1e0b8f824a1da43fe3d16
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344800"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919642"
 ---
 # <a name="_getc_nolock-_getwc_nolock"></a>_getc_nolock, _getwc_nolock
 
@@ -65,18 +65,18 @@ wint_t _getwc_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumienia*<br/>
+*produkcyjne*<br/>
 Strumień wejściowy.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zobacz [getc, getwc](getc-getwc.md).
+Zobacz [getc —, getwc](getc-getwc.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje są identyczne **getc** i **getwc** z tą różnicą, że nie blokują wątku wywołującego. Mogą one być szybsze, ponieważ nie ponoszą obciążenie blokowania innych wątków. Użyj tych funkcji tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący obsługuje już izolację wątku.
+Te funkcje są identyczne z **getc —** i **getwc** , z tą różnicą, że nie blokują wątku wywołującego. Mogą one być szybsze, ponieważ nie wiążą się z zablokowaniem innych wątków. Tych funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -88,10 +88,10 @@ Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmien
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**getc_nolock**|\<stdio.h>|
-|**getwc_nolock**|\<stdio.h> lub \<wchar.h>|
+|**getc_nolock**|\<stdio. h>|
+|**getwc_nolock**|\<stdio. h> lub \<WCHAR. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -129,7 +129,7 @@ int main()
 }
 ```
 
-### <a name="input-crt_getc_nolocktxt"></a>Dane wejściowe: crt_getc_nolock.txt
+### <a name="input-crt_getc_nolocktxt"></a>Dane wejściowe: crt_getc_nolock. txt
 
 ```Input
 Line the first.

@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,16 +46,16 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: d0c7f6db7ad6970be85203eef76e5ccb152e2200
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3d450459b4f428e5d5f1f02eaa71a126e4f710df
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332600"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918186"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
-Mnoży liczbę zmiennoprzecinkowe przez integralną moc FLT_RADIX.
+Mnoży liczbę zmiennoprzecinkową przez integralną moc FLT_RADIX.
 
 ## <a name="syntax"></a>Składnia
 
@@ -104,33 +104,33 @@ long double scalblnl(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Wartość zmiennoprzecinku.
+*y*<br/>
+Wartość zmiennoprzecinkowa.
 
-*Exp*<br/>
-Wykładnik liczby całkowitej.
+*EXP*<br/>
+Wykładnik wartości całkowitej.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **scalbn** zwracają wartość *x* \* **FLT_RADIX**<sup>exp</sup> po pomyślnym. Przy przepełnienie (w zależności od znaku *x),* **scalbn** zwraca +/- **HUGE_VAL**; wartość **errno** jest ustawiona na **ERANGE**.
+Funkcja **scalbn —** zwraca wartość *x* \* **FLT_RADIX**<sup>EXP</sup> po pomyślnym wykonaniu. W przypadku przepełnienia (w zależności od znaku *x*) **scalbn —** zwraca +/- **HUGE_VAL**; wartość **errno** jest ustawiona na **ERANGE**.
 
-Aby uzyskać więcej informacji na temat **errno** i możliwych wartości zwracania błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat **errno** i możliwych zwracanych wartości błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**FLT_RADIX** jest zdefiniowany \<w> float.h jako natywny radix zmiennoprzecinkowy; w systemach binarnych, ma wartość 2, a **scalbn** jest odpowiednikiem [ldexp](ldexp.md).
+**FLT_RADIX** jest zdefiniowany w \<tabeli zmiennoprzecinkowej. h> jako natywny podstawy zmiennoprzecinkowy; w systemach binarnych ma wartość 2, a **scalbn —** jest odpowiednikiem [ldexp —](ldexp.md).
 
-Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **scalbn** i **scalbln,** które biorą i zwracają **float** lub **długie** **podwójne** typy. W programie C, **scalbn** zawsze ma **podwójne** i **int** i zwraca **podwójne**, i **scalbln** zawsze ma **podwójne** i **długie** i zwraca **podwójne**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **scalbn —** i **scalbln** , które pobierają i zwracają **zmiennoprzecinkowe** lub **długie** **podwójne** typy. W programie C **scalbn —** zawsze pobiera wartość typu **Double** i **int** oraz zwraca wartość typu **Double**, a **scalbln** zawsze przyjmuje wartość typu **Double** i **Long** i zwraca wartość typu **Double**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**scalbn**, **scalbnf**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<> math.h|\<> cmath|
+|**scalbn —**, **scalbnf —**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<> Math. h|\<cmath>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -158,7 +158,7 @@ int main( void )
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
 [ldexp](ldexp.md)<br/>
 [modf, modff, modfl](modf-modff-modfl.md)<br/>

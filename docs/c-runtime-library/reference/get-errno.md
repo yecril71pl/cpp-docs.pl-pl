@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - errno global variable
 - _get_errno function
 ms.assetid: b3fd5ebc-f41b-4314-a2f4-2f2d79d6e740
-ms.openlocfilehash: f693655ecd1eb0122577446e39d4188703674419
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f1678628685c74519077fb68ca9c810aebe30fdd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345179"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919352"
 ---
 # <a name="_get_errno"></a>_get_errno
 
@@ -49,18 +49,18 @@ errno_t _get_errno(
 
 ### <a name="parameters"></a>Parametry
 
-*wartość pValue*<br/>
-Wskaźnik do liczby całkowitej, która ma być wypełniona bieżącą wartością zmiennej **errno.**
+*pValue*<br/>
+Wskaźnik do liczby całkowitej, która ma zostać wypełniona bieżącą wartością zmiennej **errno** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca zero, jeśli zakończy się pomyślnie; kod błędu w przypadku awarii. Jeśli *wartość pValue* ma **wartość NULL,** nieprawidłowy program obsługi parametrów jest wywoływany zgodnie z opisem w [yd.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, ta funkcja ustawia **errno** na **EINVAL** i zwraca **wartość EINVAL**.
+Zwraca zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia. Jeśli *pValue* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-Możliwe wartości **errno** są zdefiniowane w Errno.h. Zobacz [także: Errno Constants](../../c-runtime-library/errno-constants.md).
+Możliwe wartości **errno** są zdefiniowane w errno. h. Zobacz również [stałe errno](../../c-runtime-library/errno-constants.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="example"></a>Przykład
 
@@ -92,9 +92,9 @@ fyi, ENOENT = 2
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_get_errno**|\<>|\<> errno.h|
+|**_get_errno**|\<STDLIB. h>|\<errno. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

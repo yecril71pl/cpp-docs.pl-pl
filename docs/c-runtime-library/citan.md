@@ -13,7 +13,7 @@ api_location:
 - msvcr90.dll
 - msvcr120.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - CItan intrinsic
 - _CItan intrinsic
 ms.assetid: d1ea3113-50a2-45a6-b6bc-680fcdcc0928
-ms.openlocfilehash: 8c6cc0a51d6ef2132172164306b84f73799da729
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 65cce8b094a1508566e2de7162b9e8e76712742a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349365"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918331"
 ---
 # <a name="_citan"></a>_CItan
 
-Oblicza stycznej wartości górnej na stosie zmiennoprzecinkowym.
+Oblicza tangens górnej wartości na stosie zmiennoprzecinkowym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,11 +44,11 @@ void __cdecl _CItan();
 
 ## <a name="remarks"></a>Uwagi
 
-Ta wersja funkcji [tan](../c-runtime-library/reference/tan-tanf-tanl.md) ma wyspecjalizowaną konwencję wywoływania, którą kompilator rozumie. Funkcja przyspiesza wykonanie, ponieważ zapobiega generowaniu kopii i pomaga w alokacji rejestru.
+Ta wersja funkcji [Tan](../c-runtime-library/reference/tan-tanf-tanl.md) ma wyspecjalizowaną konwencję wywoływania, którą rozpoznaje kompilator. Funkcja przyspiesza wykonywanie, ponieważ uniemożliwia generowanie kopii i pomaga w zarejestrowaniu alokacji.
 
-Wynikowa wartość jest wypychany na górze stosu zmiennoprzecinkowego.
+Wartość wyników jest wypychana na górze stosu zmiennoprzecinkowego.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
