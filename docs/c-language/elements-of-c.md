@@ -34,10 +34,10 @@ Omówiono następujące tematy:
 
 - [Interpunkcja i znaki specjalne](../c-language/punctuation-and-special-characters.md)
 
-Sekcja zawiera również tabele referencyjne dla [trigraphs](../c-language/trigraphs.md), [limity dla stałych zmiennoprzecinkowych](../c-language/limits-on-floating-point-constants.md), [limity C i C++ liczby całkowite](../c-language/cpp-integer-limits.md)oraz [Sekwencje ucieczki](../c-language/escape-sequences.md).
+Sekcja zawiera również tabele referencyjne dla [trigraphs](../c-language/trigraphs.md), [limity dla stałych zmiennoprzecinkowych](../c-language/limits-on-floating-point-constants.md), [limity liczb całkowitych C i C++](../c-language/cpp-integer-limits.md)oraz [Sekwencje ucieczki](../c-language/escape-sequences.md).
 
 Operatory to symbole (znaki pojedyncze i kombinacje znaków) określające sposób manipulowania wartościami. Każdy symbol jest interpretowany jako pojedyncza jednostka, nazywana tokenem. Aby uzyskać więcej informacji, zobacz [Operatory](../c-language/c-operators.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C](../c-language/c-language-reference.md)

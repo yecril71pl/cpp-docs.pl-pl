@@ -74,6 +74,6 @@ Nie istnieje thunk i brak `jmp` instrukcji, więc kod jest mniejszy i krótszy. 
 
 W przypadku wywołań funkcji w bibliotece DLL nie trzeba używać wywołania pośredniego. Konsolidator zna już adres funkcji. Ładowanie i przechowywanie adresu funkcji przed pośrednim wywołaniem zajmuje dodatkowy czas i miejsce. Bezpośrednie wywołanie jest zawsze szybsze i mniejsze. Chcesz użyć **`__declspec(dllimport)`** tylko podczas WYWOŁYWANIA funkcji DLL spoza samego pliku dll. Podczas kompilowania tej biblioteki DLL nie należy używać **`__declspec(dllimport)`** funkcji w ramach biblioteki DLL.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Importowanie do aplikacji](importing-into-an-application.md)

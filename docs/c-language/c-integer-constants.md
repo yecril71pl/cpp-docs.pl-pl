@@ -13,66 +13,66 @@ ms.locfileid: "67400511"
 ---
 # <a name="c-integer-constants"></a>Stałe całkowite języka C
 
-*Stała całkowita* ułamek dziesiętny (podstawa 10), ósemkowym (podstawa 8) lub liczbą szesnastkową (podstawa 16), która reprezentuje wartość całkowitą. Użyj stałych całkowitych do reprezentowania wartości całkowitych, które nie można jej zmienić.
+*Stała całkowita* to dziesiętna (podstawowa 10), ósemkowa (podstawowa 8) lub szesnastkowa (podstawowa 16) Liczba reprezentująca wartość całkowitą. Użyj stałych całkowitych do reprezentowania wartości całkowitych, których nie można zmienić.
 
 ## <a name="syntax"></a>Składnia
 
-*stała całkowita*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *integer-suffix*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *integer-suffix*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *integer-suffix*<sub>opt</sub>
+*Liczba całkowita — stała*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Decimal — stała* *Liczba całkowita sufiksu*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ósemkowe — stała* *Liczba całkowita sufiksu*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*niestandardowa* *Liczba całkowita z sufiksem*<sub>opt</sub> szesnastkowym
 
-*decimal-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nonzero-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *digit*
+*stała dziesiętna*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*niezerowe cyfry*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*dziesiętna —* *cyfra* stała
 
-*stałej ósemkowej*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *octal-digit*
+*ósemkowa — stała*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**2,0**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ósemkowe — stała* *cyfra ósemkowa*
 
-*hexadecimal-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-prefix* *hexadecimal-digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *hexadecimal-digit*
+*stała szesnastkowa*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;szesnastkowe *prefiksy* *szesnastkowe*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*szesnastkowe — stała* *szesnastkowa*
 
-*Prefiks szesnastkowe*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0X**
+*prefiks szesnastkowy*: jedno z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0x**
 
-*cyfry niezerowych*: jeden z<br/>
+*niezerowe cyfry*: jedno z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**1 2 3 4 5 6 7 8 9**
 
-*cyfrą systemu ósemkowego*: jeden z<br/>
+*ósemkowa — cyfra*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7**
 
-*cyfry szesnastkowe*: jeden z<br/>
+*cyfra szesnastkowa*: jedna z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**b c d e f**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**a b c d e f**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F**
 
-*integer-suffix*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-suffix*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-long-suffix*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *64-bit-integer-suffix*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*long-suffix* *unsigned-suffix*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*long-long-suffix* *unsigned-suffix*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*64-bit-integer-suffix*
+*sufiks wartości całkowitej*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<sub>wybór</sub> *długich sufiksów* *bez znaku*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;sufiks *długi-Long-długi* *sufiks*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*niepodpisany sufiks* *64-bit-Integer-sufiks*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<sub>wybór</sub> *długiego* sufiksu *bez sufiksu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<sub>wybór</sub> *długi-długi-* sufiks *bez sufiksu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*64-bit-Integer-sufiks*
 
-*unsigned-suffix*: jeden z<br/>
+*niepodpisany sufiks*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**u U**
 
-*Long-suffix*: jeden z<br/>
+*długi sufiks*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**l L**
 
-*Long — long-suffix*: jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**ll LL**
+*długi-długi-sufiks*: jeden z<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**wszystkie wszystkie**
 
-*64-bit — integer-suffix*: jeden z<br/>
+*64-bit-Integer-sufiks*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**i64 I64**
 
-**I64** i **I64** sufiksy są specyficzne dla firmy Microsoft.
+Sufiksy **I64** i **I64** są specyficzne dla firmy Microsoft.
 
-Stałe całkowite są pozytywne, chyba że są poprzedzone znakiem minus ( **-** ). Znak minus jest interpretowany jako Jednoargumentowy operator arytmetyczny negacji. (Zobacz [jednoargumentowe operatory arytmetyczne](../c-language/unary-arithmetic-operators.md) uzyskać informacji na temat tego operatora.)
+Stałe całkowite są dodatnie, chyba że są poprzedzone znakiem minus**-**(). Znak minus jest interpretowany jako jednoargumentowy operator negacji arytmetycznej. (Zobacz [Jednoargumentowe operatory arytmetyczne](../c-language/unary-arithmetic-operators.md) , aby uzyskać informacje o tym operatorze).
 
-Jeśli zaczyna się stałą całkowitą **0 x** lub **0 X**, jest szesnastkowe. Jeśli zaczyna się od cyfry **0**, jest ósemkową. W przeciwnym razie jest przyjmowana dziesiętną.
+Jeśli stała całkowita zaczyna się od **0x** lub **0x**, jest to wartość szesnastkowa. Jeśli zaczyna się od cyfry **0**, jest to ósemkowy. W przeciwnym razie przyjmuje się, że jest to wartość dziesiętna.
 
 Następujące stałe całkowite są równoważne:
 
@@ -82,7 +82,7 @@ Następujące stałe całkowite są równoważne:
 034    /* = Octal representation for decimal 28 */
 ```
 
-Żadne znaki odstępu, można oddzielić cyfr stałą całkowitą. Te przykłady przedstawiają niektóre z prawidłowych stałych dziesiętną, ósemkowa i szesnastkowa.
+Znaki odstępu nie mogą oddzielić cyfr stałej całkowitej. W poniższych przykładach pokazano kilka prawidłowych stałych dziesiętnych, ósemkowych i szesnastkowych.
 
 ```C
     /* Decimal Constants */
@@ -116,6 +116,6 @@ Następujące stałe całkowite są równoważne:
     unsigned __int64    hex_ui64   = 0x8a44000000000040Ui64;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Stałe języka C](../c-language/c-constants.md)<br/>

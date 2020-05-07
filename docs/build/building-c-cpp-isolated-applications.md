@@ -15,9 +15,9 @@ ms.locfileid: "69493344"
 
 Izolowana aplikacja zależy tylko od zestawów równoległych i wiąże się z jej zależnościami przy użyciu manifestu. Nie jest wymagane, aby aplikacja była całkowicie izolowana w celu prawidłowego działania w systemie Windows; Jednak dzięki zainwestowaniu w aplikację w sposób całkowicie odizolowany, można zaoszczędzić czas, jeśli trzeba będzie obniżyć swoją aplikację w przyszłości. Aby uzyskać więcej informacji na temat zalet tworzenia aplikacji w sposób całkowicie izolowany, zobacz [izolowane aplikacje](/windows/win32/SbsCs/isolated-applications).
 
-Podczas kompilowania natywnej aplikacji CC++ /w programie Visual Studio domyślnie system projektu programu Visual Studio generuje plik manifestu, który opisuje zależności aplikacji w bibliotekach programu Visual Studio. Jeśli są to jedyne zależności aplikacji, to zostanie ona izolowana, gdy tylko zostanie odbudowana przy użyciu programu Visual Studio. Jeśli aplikacja korzysta z innych bibliotek w czasie wykonywania, może być konieczne odbudowanie tych bibliotek jako zestawów równoległych zgodnie z krokami opisanymi w temacie Tworzenie zestawów wykonywanych w języku [C/C++ Side-Side](building-c-cpp-side-by-side-assemblies.md).
+Podczas kompilowania natywnej aplikacji C/C++ przy użyciu programu Visual Studio domyślnie system projektu programu Visual Studio generuje plik manifestu, który opisuje zależności aplikacji w bibliotekach programu Visual Studio. Jeśli są to jedyne zależności aplikacji, to zostanie ona izolowana, gdy tylko zostanie odbudowana przy użyciu programu Visual Studio. Jeśli aplikacja korzysta z innych bibliotek w czasie wykonywania, może być konieczne odbudowanie tych bibliotek jako zestawów równoległych zgodnie z krokami opisanymi w temacie [Tworzenie zestawów równoległych C/C++](building-c-cpp-side-by-side-assemblies.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pojęcia związane z aplikacjami izolowanymi oraz aplikacjami wykonywanymi równocześnie](concepts-of-isolated-applications-and-side-by-side-assemblies.md)<br/>
 [Kompilowanie aplikacji izolowanych C/C++ oraz aplikacji wykonywanych równocześnie](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

@@ -13,10 +13,10 @@ ms.locfileid: "62234086"
 ---
 # <a name="domain-errors"></a>Błędy domeny
 
-**ANSI 4.5.1** wartości zwracanych przez funkcje matematyce na błędy domeny
+**ANSI 4.5.1** Wartości zwracane przez funkcje matematyczne w przypadku błędów domeny
 
-Numer błędu. Plik H definiuje stałą błąd domeny `EDOM` jako 33.  Zobacz temat pomocy dla określonej funkcji, która spowodowała błąd Aby uzyskać informacje o wartości zwracanej.
+ERRNO. Plik H definiuje stałą `EDOM` błędu domeny jako 33.  Aby uzyskać informacje na temat wartości zwracanej, zobacz temat pomocy dotyczący konkretnej funkcji, która spowodowała błąd.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

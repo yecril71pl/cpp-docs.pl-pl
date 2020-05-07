@@ -17,6 +17,6 @@ Specyfikacja pliku może zawierać opcjonalną literę dysku (zawsze dwukropek),
 
 Aby uzyskać więcej informacji, zobacz [nazywanie pliku](/windows/win32/FileIO/naming-a-file) , aby uzyskać więcej informacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

@@ -11,10 +11,10 @@ ms.locfileid: "62233764"
 ---
 # <a name="file-access-limits"></a>Limity dostępu do pliku
 
-**ANSI 4.9.3** tego, czy ten sam plik można otworzyć wiele razy
+**4.9.3 ANSI** Czy ten sam plik może być otwarty wielokrotnie
 
-Otwieranie pliku, który jest już otwarty jest niedozwolone.
+Otwieranie pliku, który jest już otwarty, nie jest dozwolone.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

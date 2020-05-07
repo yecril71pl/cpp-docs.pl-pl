@@ -16,12 +16,12 @@ ms.locfileid: "62233587"
 ---
 # <a name="function-attributes"></a>Atrybuty funkcji
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Opcjonalny *atrybutu seq* nieterminalnych umożliwia wybranie konwencji wywoływania, na podstawie poszczególnych funkcji. Można również określić, że funkcje jako `__fastcall` lub `__inline`.
+Opcjonalny *atrybut-seq* nieterminalu umożliwia wybranie konwencji wywoływania dla poszczególnych funkcji. Możesz również określić funkcje jako `__fastcall` lub. `__inline`
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Definicje funkcji języka C](../c-language/c-function-definitions.md)

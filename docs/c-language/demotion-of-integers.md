@@ -13,26 +13,26 @@ ms.locfileid: "62234408"
 ---
 # <a name="demotion-of-integers"></a>Zwężanie liczb całkowitych
 
-**ANSI 3.2.1.2** wynik konwersji całkowitą liczbę całkowitą ze znakiem krótszy lub wynik konwersji liczbą całkowitą bez znaku na liczbę całkowitą ze znakiem o równej długości, jeśli wartość nie może być przedstawiony
+**3.2.1.2 ANSI** Wynik konwersji liczby całkowitej na krótszą cyfrę całkowitą lub wynik konwersji liczby całkowitej bez znaku do podpisanej liczby całkowitej o równej długości, jeśli wartość nie może być reprezentowana
 
-Gdy **długie** liczba całkowita jest rzutowany na **krótki**, lub **krótki** jest rzutowany na `char`, najmniej znaczący bajtów są zachowywane.
+Gdy liczba **całkowita jest** rzutowana na **krótką**lub **krótka** jest rzutowana na wartość `char`, są zachowywane najmniej znaczące bajty.
 
-Na przykład w tym wierszu
+Na przykład ten wiersz
 
 ```
 short x = (short)0x12345678L;
 ```
 
-przypisuje wartość 0x5678 `x`, a ten wiersz
+przypisuje wartość 0x5678 do `x`, a ten wiersz
 
 ```
 char y = (char)0x1234;
 ```
 
-przypisuje wartość 0x34 `y`.
+przypisuje wartość 0x34 do `y`.
 
-Wzorce bitowe podpisane zmienne są konwertowane na typy bez znaku i na odwrót, pozostają niezmienione. Na przykład rzutowanie -2 (0xFE) do wartości bez znaku daje 254 (również 0xFE).
+Gdy zmienne podpisane są konwertowane na niepodpisane i na odwrót, wzorce bitowe pozostają takie same. Na przykład rzutowanie-2 (0xFE) na wartość bez znaku daje 254 (również 0xFE).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Liczby całkowite](../c-language/integers.md)

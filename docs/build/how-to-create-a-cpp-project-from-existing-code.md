@@ -19,15 +19,15 @@ ms.locfileid: "80078553"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>Porady: tworzenie projektu C++ z istniejącego kodu
 
-W programie Visual Studio można przenieść istniejące pliki kodu do C++ projektu za pomocą kreatora **tworzenia nowego projektu z istniejących plików z kodem** . Ten Kreator tworzy rozwiązanie projektu, które używa systemu MSBuild do zarządzania plikami źródłowymi i konfiguracją kompilacji. Najlepiej sprawdza się w przypadku stosunkowo prostych projektów, które nie mają złożonych hierarchii folderów. Kreator nie jest dostępny w starszych wersjach Express programu Visual Studio.
+W programie Visual Studio można przenieść istniejące pliki kodu do projektu C++ za pomocą kreatora **tworzenia nowego projektu z istniejących plików z kodem** . Ten Kreator tworzy rozwiązanie projektu, które używa systemu MSBuild do zarządzania plikami źródłowymi i konfiguracją kompilacji. Najlepiej sprawdza się w przypadku stosunkowo prostych projektów, które nie mają złożonych hierarchii folderów. Kreator nie jest dostępny w starszych wersjach Express programu Visual Studio.
 
-Przenoszenie istniejących plików kodu do C++ projektu umożliwia korzystanie z natywnych funkcji zarządzania projektami programu MSBuild wbudowanych w środowisko IDE. Jeśli wolisz używać istniejącego systemu kompilacji, takiego jak NMAKE reguł programu make, CMake lub alternatyw, możesz zamiast tego użyć opcji Otwórz folder lub CMake. Aby uzyskać więcej informacji, zobacz [Otwieranie projektów folderu C++ dla](open-folder-projects-cpp.md) lub [CMAKE projektów w programie Visual Studio](cmake-projects-in-visual-studio.md). Obie opcje pozwalają korzystać z funkcji środowiska IDE, takich jak [IntelliSense](/visualstudio/ide/using-intellisense) i [właściwości projektu](working-with-project-properties.md).
+Przenoszenie istniejących plików kodu do projektu C++ umożliwia korzystanie z natywnych funkcji zarządzania projektami programu MSBuild wbudowanych w środowisko IDE. Jeśli wolisz używać istniejącego systemu kompilacji, takiego jak NMAKE reguł programu make, CMake lub alternatyw, możesz zamiast tego użyć opcji Otwórz folder lub CMake. Aby uzyskać więcej informacji, zobacz [Otwieranie projektów folderów dla C++](open-folder-projects-cpp.md) lub [CMAKE projektów w programie Visual Studio](cmake-projects-in-visual-studio.md). Obie opcje pozwalają korzystać z funkcji środowiska IDE, takich jak [IntelliSense](/visualstudio/ide/using-intellisense) i [właściwości projektu](working-with-project-properties.md).
 
 ### <a name="to-create-a-c-project-from-existing-code"></a>Aby utworzyć projekt C++ z istniejącego kodu
 
-1. W menu **plik** wybierz pozycję **Nowy** projekt > **z istniejącego kodu**.
+1. W menu **plik** wybierz pozycję **Nowy** > **projekt z istniejącego kodu**.
 
-1. Określ lokalizację projektu, katalog dla plików źródłowych i rodzaje plików, które Kreator importuje do nowego projektu. Wybierz pozycję **dalej** , aby kontynuować.
+1. Określ lokalizację projektu, katalog dla plików źródłowych i rodzaje plików, które Kreator importuje do nowego projektu. Wybierz pozycję **Dalej**, aby kontynuować.
 
     | Ustawienie | Opis |
     | --- | --- |
@@ -38,11 +38,11 @@ Przenoszenie istniejących plików kodu do C++ projektu umożliwia korzystanie z
 
     ![Lokalizacja projektu](media/location.png)
 
-1. Określ ustawienia projektu, które mają być używane, takie jak środowisko kompilacji dla nowego projektu i ustawienia kompilacji, aby odpowiadały określonemu typowi nowego projektu do wygenerowania. Wybierz pozycję **dalej** , aby kontynuować.
+1. Określ ustawienia projektu, które mają być używane, takie jak środowisko kompilacji dla nowego projektu i ustawienia kompilacji, aby odpowiadały określonemu typowi nowego projektu do wygenerowania. Wybierz pozycję **Dalej**, aby kontynuować.
 
     | Ustawienie | Opis |
     | --- | --- |
-    | **Korzystanie z programu Visual Studio** | Określa, aby użyć narzędzi do kompilacji, które są zawarte w programie Visual Studio do tworzenia nowego projektu. Ta opcja jest domyślnie wybrana.<br/><br/>Wybierz **Typ projektu** , aby określić typ projektu, który zostanie wygenerowany przez kreatora. Wybierz projekt **aplikacji systemu Windows**, projekt **aplikacji konsolowej**, **projekt dynamicznie połączony biblioteki (dll)** lub **projektu Biblioteka statyczna (lib)** .<br/><br/>Zaznacz opcję **Dodaj obsługę biblioteki ATL** , aby dodać obsługę ATL do nowego projektu.<br/><br/>Zaznacz opcję **Dodaj obsługę dla MFC** , aby dodać obsługę MFC do nowego projektu.<br/><br/>Zaznacz opcję **Dodaj obsługę środowiska uruchomieniowego języka wspólnego** , aby dodać obsługę programowania CLR do projektu. Wybierz opcję **Obsługa środowiska uruchomieniowego** CLR dla typu zgodności, na przykład **środowisko uruchomieniowe języka wspólnego (stara składnia)** , aby zapewnić C++ zgodność z rozszerzeniami zarządzanymi dla składni, składnię programowania dla środowiska wykonawczego przed programem Visual Studio 2005. |
+    | **Korzystanie z programu Visual Studio** | Określa, aby użyć narzędzi do kompilacji, które są zawarte w programie Visual Studio do tworzenia nowego projektu. Ta opcja jest domyślnie wybrana.<br/><br/>Wybierz **Typ projektu** , aby określić typ projektu, który zostanie wygenerowany przez kreatora. Wybierz projekt **aplikacji systemu Windows**, projekt **aplikacji konsolowej**, **projekt dynamicznie połączony biblioteki (dll)** lub **projektu Biblioteka statyczna (lib)**.<br/><br/>Zaznacz opcję **Dodaj obsługę biblioteki ATL** , aby dodać obsługę ATL do nowego projektu.<br/><br/>Zaznacz opcję **Dodaj obsługę dla MFC** , aby dodać obsługę MFC do nowego projektu.<br/><br/>Zaznacz opcję **Dodaj obsługę środowiska uruchomieniowego języka wspólnego** , aby dodać obsługę programowania CLR do projektu. Wybierz opcję **Obsługa środowiska uruchomieniowego** CLR dla typu zgodności, na przykład **środowisko uruchomieniowe języka wspólnego (stara składnia)** , aby zapewnić zgodność z składnią Managed Extensions for C++, składnię programowania dla środowiska wykonawczego przed programem Visual Studio 2005. |
     | **Użyj zewnętrznego systemu kompilacji** | Określa, aby używać narzędzi kompilacji, które nie są uwzględnione w programie Visual Studio do tworzenia nowego projektu. Po wybraniu tej opcji można określić wiersze poleceń kompilacji na stronie **Określanie ustawień konfiguracji debugowania** i **Określanie ustawień konfiguracji wydania** . |
 
     ![Ustawienia projektu](media/settings.png)
@@ -50,7 +50,7 @@ Przenoszenie istniejących plików kodu do C++ projektu umożliwia korzystanie z
     > [!NOTE]
     > Gdy zaznaczona jest opcja **Użyj zewnętrznego systemu kompilacji** , IDE nie kompiluje projektu, więc opcje/D,/I,/Fi,/AI lub/Fu nie są wymagane do kompilacji. Jednak te opcje muszą być poprawnie ustawione, aby funkcja IntelliSense działała prawidłowo.
 
-1. Określ ustawienia konfiguracji debugowania do użycia. Wybierz pozycję **dalej** , aby kontynuować.
+1. Określ ustawienia konfiguracji debugowania do użycia. Wybierz pozycję **Dalej**, aby kontynuować.
 
     | Ustawienie | Opis |
     | --- | --- |

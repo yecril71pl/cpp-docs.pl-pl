@@ -16,71 +16,71 @@ ms.locfileid: "67861076"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Hierarchia i kolejność ocen
 
-Pierwszeństwo i kojarzenie operatorów C wpływa na grupowanie i oceny operandu w wyrażeniach. Kolejność ma znaczenie, tylko wtedy, gdy istnieją inne operatory o priorytecie wyższą lub niższą. Wyrażenia z operatorami o wyższym priorytecie są obliczane jako pierwsze. Pierwszeństwo można również opisać za pomocą słowa "wiązanie." Operatory o wyższym priorytecie mówi się, że ma większego powiązania.
+Pierwszeństwo i łączność operatorów języka C wpływają na grupowanie i ocenę operandów w wyrażeniach. Pierwszeństwo operatora ma znaczenie tylko wtedy, gdy obecne są inne operatory o wyższym lub niższym priorytecie. Wyrażenia z operatorami o wyższym priorytecie są oceniane jako pierwsze. Pierwszeństwo można także opisać w wyrazie "Binding". Operatory o wyższym priorytecie są określane jako mające ściślejsze powiązanie.
 
-W poniższej tabeli przedstawiono pierwszeństwo i kojarzenie (kolejność, w której argumenty operacji są obliczane) operatorów języka C, lista je według pierwszeństwa od najwyższego do najniższego. W przypadku, gdy pojawią się ze sobą kilka operatorów, mają równe pierwszeństwo i są obliczane zgodnie z ich łączność. Operatory w tabeli są opisane w sekcjach, począwszy od [przyrostkowe operatory](../c-language/postfix-operators.md). Pozostała część tej sekcji zawiera ogólne informacje o pierwszeństwo i łączność.
+Poniższa tabela podsumowuje pierwszeństwo i łączność (kolejność, w jakiej operandy są oceniane) operatorów języka C, wymieniając je w kolejności pierwszeństwa od najwyższego do najniższego. Gdy kilka operatorów występuje razem, mają one równy priorytet i są oceniane zgodnie z ich łączność. Operatory w tabeli są opisane w sekcjach zaczynających się od [operatorów przyrostkowych](../c-language/postfix-operators.md). Pozostała część tej sekcji zawiera ogólne informacje o pierwszeństwie i łączność.
 
-## <a name="precedence-and-associativity-of-c-operators"></a>Pierwszeństwo i kojarzenie operatorów języka C
+## <a name="precedence-and-associativity-of-c-operators"></a>Pierwszeństwo i łączność operatorów języka C
 
 | Symbol <sup>1</sup> | Typ operacji | Łączność |
 |-------------|-----------------------|-------------------|
-| `[` `]` `(` `)` `.` `->`<br/>`++` `--` (przyrostkowe) | Wyrażenie | Od lewej do prawej |
-| **Operator sizeof** `&` `*` `+` `-` `~` `!`<br/>`++` `--` (prefiks) | Jednoargumentowy | Od prawej do lewej |
-| *rzutowaniach typu* | Jednoargumentowy | Od prawej do lewej |
-| `*` `/` `%` | Mnożeniowy | Od lewej do prawej |
-| `+``-` | Dodatku | Od lewej do prawej |
-| `<<``>>` | Operatory przesunięcia bitowego | Od lewej do prawej |
-| `<` `>` `<=` `>=` | Relacyjne | Od lewej do prawej |
-| `==``!=` | Równości | Od lewej do prawej |
-| `&` | Bitwise-AND | Od lewej do prawej |
-| `^` | Bitwise-exclusive-OR | Od lewej do prawej |
-| `|` | Bitwise-inclusive-OR | Od lewej do prawej |
-| `&&` | Logiczny — i | Od lewej do prawej |
-| `||` | Logiczne OR | Od lewej do prawej |
-| `? :` | Conditional-expression | Od prawej do lewej |
-| `=` `*=` `/=` `%=`<br/>`+=` `-=` `<<=` `>>=` `&=`<br/>`^=``|=` | Przypisanie proste i złożone <sup>2</sup> | Od prawej do lewej |
-| `,` | Kolejne oceny | Od lewej do prawej |
+| `[` `]` `(` `)` `.` `->`<br/>`++``--` (przyrostkowo) | Wyrażenie | Od lewej do prawej |
+| **sizeof** `&` `*` `+` `-` `~` `!`<br/>`++``--` (prefiks) | Jednoargumentowy | Od prawej do lewej |
+| *typecasts* | Jednoargumentowy | Od prawej do lewej |
+| `*` `/` `%` | Mnożenia | Od lewej do prawej |
+| `+` `-` | Dana | Od lewej do prawej |
+| `<<` `>>` | Przesunięcie bitowe | Od lewej do prawej |
+| `<` `>` `<=` `>=` | Używa | Od lewej do prawej |
+| `==` `!=` | Równość | Od lewej do prawej |
+| `&` | Bitowe i | Od lewej do prawej |
+| `^` | Bitowe wykluczające lub | Od lewej do prawej |
+| `|` | Bitowe lub | Od lewej do prawej |
+| `&&` | Koniunkcja logiczna | Od lewej do prawej |
+| `||` | Logiczne-lub | Od lewej do prawej |
+| `? :` | Wyrażenie warunkowe | Od prawej do lewej |
+| `=` `*=` `/=` `%=`<br/>`+=` `-=` `<<=` `>>=` `&=`<br/>`^=` `|=` | Proste i złożone przypisanie <sup>2</sup> | Od prawej do lewej |
+| `,` | Ocena sekwencyjna | Od lewej do prawej |
 
-<sup>1</sup> operatory są wymienione w kolejności malejącej. Jeśli wiele operatorów są wyświetlane w tym samym wierszu lub w grupie, mają równy priorytet.
+<sup>1</sup> operatory są wymienione w kolejności malejącej według pierwszeństwa. Jeśli w tym samym wierszu lub grupie występuje kilka operatorów, mają one równy priorytet.
 
-<sup>2</sup> wszystkie operatory proste i złożone przypisania mają równy priorytet.
+<sup>2</sup> wszystkie operatory proste i złożone przypisanie mają równy priorytet.
 
-Wyrażenie może zawierać kilka operatorów o równy priorytet. Gdy tych operatorów pojawią się na tym samym poziomie w wyrażeniu, ocena będzie kontynuowane zgodnie z łączność operatora od prawej do lewej lub od lewej do prawej. Kierunek oceny nie ma wpływu na wyniki wyrażeń, które zawierają więcej niż jeden mnożenia (`*`), dodanie (`+`), lub dane binarne bitowe (`&`, `|`, lub `^`) operator na tym samym poziomie. Kolejność operacji nie jest zdefiniowany przez język. Kompilator jest bezpłatny do oceny takiego wyrażenia w dowolnej kolejności, kompilator może zagwarantować spójne wyniki.
+Wyrażenie może zawierać kilka operatorów o równym priorytecie. Gdy kilka takich operatorów pojawia się na tym samym poziomie w wyrażeniu, szacowanie postępuje zgodnie z łączność operatora, od prawej do lewej lub od lewej do prawej. Kierunek obliczania nie ma wpływu na wyniki wyrażeń, które zawierają więcej niż jeden`*`operator mnożenia (), dodawanie (`+`) lub binarny bitowy (`&`, `|`lub `^`) na tym samym poziomie. Kolejność operacji nie jest zdefiniowana przez język. Kompilator jest bezpłatny do oszacowania takich wyrażeń w dowolnej kolejności, jeśli kompilator może zagwarantować spójny wynik.
 
-Tylko obliczania sekwencyjnego (`,`), logiczny — i (`&&`), logiczne OR (`||`), wyrażenia warunkowego (`? :`), i operatory wywołania funkcji stanowią punktów sekwencji i w związku z tym gwarantuje określonego kolejność obliczania dla ich argumentów. Operator wywołania funkcji to zestaw nawiasów po identyfikator funkcji. Operator obliczania sekwencyjnego (`,`) jest gwarantowane do oceny swoich argumentów od lewej do prawej. (Operatora przecinka w wywołaniu funkcji nie jest taka sama jak operator obliczania sekwencyjnego i nie zapewnia takiego gwarancji). Aby uzyskać więcej informacji, zobacz [punktami sekwencji](c-sequence-points.md).
+Tylko`,`operatory sekwencyjne (), logiczne-i (`&&`), logiczne-lub (`||`), warunkowego wyrażenia (`? :`) i wywołania funkcji stanowią punkty sekwencji i w związku z tym gwarantują określoną kolejność obliczeń dla argumentów operacji. Operator wywołania funkcji jest zestaw nawiasów po identyfikatorze funkcji. Operator sekwencyjnej oceny (`,`) jest gwarantowany do oceny jego operandów od lewej do prawej. (Operator przecinek w wywołaniu funkcji nie jest taki sam jak operator sekwencyjnej oceny i nie zapewnia takiego zagwarantowania). Aby uzyskać więcej informacji, zobacz [punkty sekwencji](c-sequence-points.md).
 
-Operatory logiczne gwarantuje również oceny operandy od lewej do prawej. Jednak umożliwiają podawanie wartości najmniejszej liczby operandów potrzebne do określenia wynik wyrażenia. Jest to nazywane "ocena zwarcia". W związku z tym niektóre operandy wyrażenia nie może być oceniany. Na przykład w wyrażeniu
+Operatory logiczne gwarantują również ocenę ich operandów od lewej do prawej. Jednak oceńą najmniejszą liczbę operandów, które trzeba wykonać, aby określić wynik wyrażenia. Jest to tzw. Ocena "krótkiego obwodu". W rezultacie niektóre operandy wyrażenia mogą nie zostać ocenione. Na przykład, w wyrażeniu
 
 `x && y++`
 
-drugi operand `y++`, jest oceniane tylko wtedy, gdy `x` ma wartość true (niezerową). W efekcie `y` nie jest zwiększana, gdy `x` ma wartość false (0).
+drugi operand jest oceniany tylko wtedy, `y++`gdy `x` ma wartość true (niezerowa). W tym `y` przypadku nie jest zwiększana `x` , jeśli ma wartość false (0).
 
 ## <a name="examples"></a>Przykłady
 
-Na poniższej liście przedstawiono, jak kompilator automatycznie wiąże kilka przykładowych wyrażeń:
+Na poniższej liście przedstawiono sposób, w jaki kompilator automatycznie wiąże kilka przykładowych wyrażeń:
 
-| Wyrażenie | Powiązanie automatyczne |
+| Wyrażenie | Automatyczne powiązanie |
 |----------------|-----------------------|
 | `a & b || c` | `(a & b) || c` |
 | `a = b || c` | `a = (b || c)` |
 | `q && r || s--` | `(q && r) || s--` |
 
-W pierwszym wyrażeniu operatora testu koniunkcji — i operatora (`&`) mają wyższy priorytet niż operator logiczny OR (`||`), więc `a & b` formularzy pierwszy argument operacji operatora logicznego OR.
+W pierwszym wyrażeniu operator koniunkcji (`&`) ma wyższy priorytet niż operator logiczny or (`||`), więc `a & b` tworzy pierwszy operand operacji logicznej or.
 
-W drugim wyrażeniu operator logiczny OR (`||`) mają wyższy priorytet niż operator przypisania prostego (`=`), więc `b || c` są grupowane jako po prawej stronie operatora przypisania. Należy zauważyć, że wartość przypisana do `a` jest równa 0 lub 1.
+W drugim wyrażeniu operator logiczny OR (`||`) ma wyższy priorytet niż operator przypisywania prostego (`=`), więc `b || c` jest zgrupowany jako argument operacji po prawej stronie w przypisaniu. Należy pamiętać, że wartość przypisana do `a` jest równa 0 lub 1.
 
-Trzeci wyrażenie pokazuje poprawnie sformułowany wyrażenie, które może powodować nieoczekiwany wynik. Logiczny — i operatora (`&&`) mają wyższy priorytet niż operator logiczny OR (`||`), więc `q && r` są grupowane jako argument. Ponieważ operatorów logicznych gwarantuje oceny argumentów od lewej do prawej, `q && r` jest oceniany przed `s--`. Jednak jeśli `q && r` ma wartość różną od zera, `s--` nie jest oceniany i `s` nie zostanie zmniejszona. Jeśli nie zmniejszanie `s` mogłoby spowodować problem w programie `s--` powinny się wyświetlać jako pierwszy argument operacji wyrażenia, lub `s` powinny być wraz z przydzielaniem osobnych operacji.
+Trzecie wyrażenie pokazuje poprawnie sformułowane wyrażenie, które może generować nieoczekiwany wynik. Operator logiczny AND (`&&`) ma wyższy priorytet niż operator logiczny or (`||`), więc `q && r` jest zgrupowany jako operand. Ponieważ operatory logiczne gwarantują ocenę operandów od lewej do prawej, `q && r` są oceniane przed. `s--` Jednakże, jeśli `q && r` ma wartość różną od zera, `s--` nie jest oceniane i `s` nie jest zmniejszany. Jeśli zmniejszenie nie spowoduje `s` zmniejszenia problemu w programie, `s--` powinien pojawić się jako pierwszy operand wyrażenia lub `s` w oddzielnym operacji.
 
-Poniższe wyrażenie jest niedozwolone i tworzy komunikat diagnostyczny w czasie kompilacji:
+Następujące wyrażenie jest niedozwolone i generuje komunikat diagnostyczny w czasie kompilacji:
 
-| Niedozwolone wyrażenie | Domyślnie, grupowanie |
+| Niedozwolone wyrażenie | Grupowanie domyślne |
 |------------------------|----------------------|
 | `p == 0 ? p += 1: p += 2` | `( p == 0 ? p += 1 : p ) += 2` |
 
-W tym wyrażeniu operator równości (`==`) ma najwyższy priorytet, więc `p == 0` są grupowane jako argument. Operator wyrażenia warunkowego (`? :`) następnej najwyższy priorytet. Pierwszy argument operacji jest `p == 0`, a drugim argumentem `p += 1`. Jednak ostatni argument operacji operatora wyrażenia warunkowego jest uważany za `p` zamiast `p += 2`, ponieważ tego wystąpienia `p` dokładniej wiąże operator wyrażenia warunkowego niż jego operator przypisania złożone. Występuje błąd składni, ponieważ `+= 2` nie ma lewostronny operand. Należy użyć nawiasów, aby zapobiegać błędom tego rodzaju i przedstawić bardziej czytelny kod. Na przykład wystarczą nawiasów pokazany poniżej poprawiać i wyjaśnienia w poprzednim przykładzie:
+W tym wyrażeniu operator równości (`==`) ma najwyższy priorytet, więc `p == 0` jest zgrupowany jako operand. Operator wyrażenia warunkowego (`? :`) ma następny najwyższy priorytet. Jego pierwszy operand to `p == 0`, a drugi operand to `p += 1`. Jednak ostatni operand operatora wyrażenia warunkowego jest uznawany za `p` zamiast `p += 2`, ponieważ to wystąpienie `p` wiąże się ściśle z operatorem wyrażenia warunkowego niż do operatora przypisania złożonego. Wystąpił błąd składniowy, `+= 2` ponieważ nie ma operandu po lewej stronie. Należy użyć nawiasów, aby zapobiec błędom tego rodzaju i utworzyć bardziej czytelny kod. Można na przykład użyć nawiasów, jak pokazano poniżej, aby poprawić i wyjaśnić poprzedni przykład:
 
 `( p == 0 ) ? ( p += 1 ) : ( p += 2 )`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operatory języka C](c-operators.md)

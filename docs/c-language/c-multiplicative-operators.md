@@ -20,36 +20,36 @@ ms.locfileid: "81334998"
 ---
 # <a name="c-multiplicative-operators"></a>Operatory mnożenia języka C
 
-Operatory mnożenia wykonują<strong>\*</strong>mnożenie ( ), podział (**/**) i pozostałe (**%**) operacje.
+Operatory mnożenia wykonują operacje mnożenia (<strong>\*</strong>), dzielenia (**/**) i reszty (**%**).
 
 ## <a name="syntax"></a>Składnia
 
-*multiplicative-expression* &nbsp; &nbsp; &nbsp; &nbsp;: *wyrażenie rzutowania* &nbsp; &nbsp; &nbsp; &nbsp; *mnożenie-wyrażenie* <strong>\*</strong> *rzutowania-wyrażenie* &nbsp; &nbsp; &nbsp; &nbsp; *mnożenie-wyrażenie* **/** *rzutowania-wyrażenie* &nbsp; &nbsp; &nbsp; &nbsp; *mnożenie-wyrażenie* **%** *rzutowania*
+*mnożenia-Expression*: &nbsp; &nbsp; &nbsp; &nbsp; *cast-expression* &nbsp; &nbsp; <strong>\*</strong> &nbsp; &nbsp; **%** *cast-expression* *cast-expression* **/** *cast-expression* *multiplicative-expression* &nbsp; &nbsp; *multiplicative-expression* *multiplicative-expression* mnożenia-Expression Cast- &nbsp;Expression mnożenia &nbsp;- &nbsp;Expression cast-expression mnożenia-Expression Cast Expression &nbsp; &nbsp; &nbsp;
 
-Argumenty pozostałego operatora (**%**) muszą być integralną częścią. Operatory mnożenia<strong>\*</strong>(**/**) i podziału ( ) mogą przyjmować operandy typu integralnego lub pływającego; typy operandów mogą być różne.
+Operandy operatora pozostałej części (**%**) muszą być typu całkowitego. Operatory mnożenia (<strong>\*</strong>) i dzielenia (**/**) mogą przyjmować operandy typu całkowitego lub zmiennoprzecinkowego; Typy operandów mogą być różne.
 
-Operatory mnożenia wykonują zwykłe konwersje arytmetyczne na operandach. Typ wyniku jest typem argumentów po konwersji.
+Operatory mnożenia wykonują zwykle konwersje arytmetyczne dla operandów. Typ wyniku jest typem operandów po konwersji.
 
 > [!NOTE]
 > Ponieważ konwersje wykonywane przez operatory multiplikatywne nie przewidują warunków przepełnienia lub niedomiaru, informacje mogą zostać utracone, jeśli wynik operacji multiplikatywnej nie może być przedstawiony w typie operandów po konwersji.
 
-Operatory mnożenia C są opisane poniżej:
+Operatory mnożenia języka C są opisane poniżej:
 
 |Operator|Opis|
 |--------------|-----------------|
-|<strong>\*</strong>|Operator mnożenia powoduje, że jego dwa argumenty mają zostać pomnożone.|
-|**/**|Operator podziału powoduje, że pierwszy operand być podzielone przez drugi. Jeśli dwie liczby całkowite są podzielone, a wynik nie jest całkowitej liczby, jest obcinane zgodnie z następującymi regułami:<br/><br/>- Wynik podziału o 0 jest nieokreślony zgodnie ze standardem ANSI C. Kompilator Microsoft C generuje błąd w czasie kompilacji lub czasie wykonywania.<br/><br/>- Jeśli oba argumenty są dodatnie lub niepodpisane, wynik jest obcinany w kierunku 0.<br/><br/>- Jeśli albo operand jest ujemny, czy wynik operacji jest największą liczeczką całkowitą mniejszą lub równą ilorazowi algebraicznego, czy też jest najmniejszą liczą całkowitą większą lub równą ilorazowi algebraicznego jest zdefiniowana implementacja. (Zobacz sekcję specyficzną dla firmy Microsoft poniżej).|
-|**%**|Wynik pozostałego operatora jest pozostałą częścią, gdy pierwszy operand jest podzielony przez drugi. Gdy podział jest niedokładny, wynik jest określany przez następujące zasady:<br/><br/>- Jeśli prawy operand wynosi zero, wynik jest nieokreślony.<br/><br/>- Jeśli oba argumenty są dodatnie lub niepodpisane, wynik jest pozytywny.<br/><br/>- Jeśli którykolwiek z operand jest ujemny, a wynik jest niedokładny, wynik jest zdefiniowany implementacji. (Zobacz sekcję specyficzną dla firmy Microsoft poniżej).|
+|<strong>\*</strong>|Operator mnożenia powoduje, że dwa operandy są mnożone.|
+|**/**|Operator dzielenia powoduje, że pierwszy operand zostanie podzielony przez drugi. Jeśli dwa operandy całkowite są podzielone, a wynik nie jest liczbą całkowitą, zostanie obcięty zgodnie z następującymi regułami:<br/><br/>-Wynik dzielenia przez 0 jest niezdefiniowany zgodnie ze standardem ANSI C. Kompilator języka Microsoft C generuje błąd w czasie kompilacji lub czasie wykonywania.<br/><br/>— Jeśli oba operandy są dodatnie lub niepodpisane, wynik zostanie obcięty do wartości 0.<br/><br/>-Jeśli jeden z operandów jest ujemny, to wynik operacji jest największą liczbą całkowitą mniejszą lub równą ilorazowi algebraicznych lub jest najmniejszą liczbą całkowitą większą lub równą algebraicznych ilorazu jest zdefiniowana implementacja. (Zobacz poniższą sekcję dotyczącą firmy Microsoft).|
+|**%**|Wynik operatora reszty jest resztą, gdy pierwszy operand jest podzielony przez drugi. Gdy podział jest niedokładny, wynik jest określany na podstawie następujących reguł:<br/><br/>-Jeśli prawy operand ma wartość zero, wynik jest niezdefiniowany.<br/><br/>— Jeśli oba operandy są dodatnie lub niepodpisane, wynik jest dodatni.<br/><br/>-Jeśli oba operandy są ujemne, a wynik jest niedokładny, wynikiem jest zdefiniowana implementacja. (Zobacz poniższą sekcję dotyczącą firmy Microsoft).|
 
 ### <a name="microsoft-specific"></a>specyficzne dla firmy Microsoft
 
-W podziale, gdzie albo operand jest ujemny, kierunek obcinania jest w kierunku 0.
+W przypadku, gdy oba operandy są ujemne, kierunek obcinania zbliża się do 0.
 
-Jeśli którakolwiek z operacji jest ujemna w podziale z operatorem pozostałej, wynik ma ten sam znak co dywidenda (pierwszy argument w wyrażeniu).
+Jeśli każda operacja jest ujemna w oddziale z operatorem reszty, wynik ma taki sam znak jak dzielną (pierwszy operand w wyrażeniu).
 
 ## <a name="examples"></a>Przykłady
 
-Poniższe deklaracje są używane dla następujących przykładów:
+Deklaracje przedstawione poniżej są używane w następujących przykładach:
 
 ```
 int i = 10, j = 3, n;
@@ -62,33 +62,33 @@ Ta instrukcja używa operatora mnożenia:
 y = x * i;
 ```
 
-W takim `x` przypadku jest `i` mnożona przez podać wartość 20,0. Wynik ma **podwójny** typ.
+W tym przypadku jest `x` mnożony przez `i` , aby nadać wartość 20,0. Wynik ma typ **Double** .
 
 ```
 n = i / j;
 ```
 
-W tym przykładzie 10 jest dzielona przez 3. Wynik jest obcinany w kierunku 0, dając wartość całkowitą 3.
+W tym przykładzie 10 jest podzielona przez 3. Wynik zostanie obcięty do wartości 0, co daje liczbę całkowitą 3.
 
 ```
 n = i % j;
 ```
 
-Ta instrukcja `n` przypisuje pozostałą część całkowitą, 1, gdy 10 jest podzielony przez 3.
+Ta instrukcja przypisuje `n` liczbę całkowitą, 1, gdy 10 jest podzielona przez 3.
 
 **Specyficzne dla firmy Microsoft**
 
-Znak pozostałej części jest taki sam jak znak dywidendy. Przykład:
+Znak reszty jest taki sam jak znak dywidendy. Przykład:
 
 ```
 50 % -6 = 2
 -50 % 6 = -2
 ```
 
-W każdym `50` przypadku `2` i mają ten sam znak.
+W każdym przypadku `50` i `2` mają ten sam znak.
 
-**ZAKOŃCZ Specyficzne dla firmy Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
 
-[Operatory mnożenia i operator modułu](../cpp/multiplicative-operators-and-the-modulus-operator.md)
+[Operatory mnożenia i operator modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)

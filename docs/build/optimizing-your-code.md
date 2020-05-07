@@ -21,15 +21,15 @@ Optymalizacja pliku wykonywalnego pozwala uzyskać równowagę między szybkośc
 
 ## <a name="language-features"></a>Funkcje językowe
 
-W poniższych tematach opisano niektóre funkcje optymalizacji w języku C/C++ .
+W poniższych tematach opisano niektóre funkcje optymalizacji w języku C/C++.
 
 [Dyrektywy pragma i słowa kluczowe optymalizacji](optimization-pragmas-and-keywords.md) \
 Lista słów kluczowych i pragm, których można użyć w kodzie w celu zwiększenia wydajności.
 
-[Opcje kompilatora wymienione według kategorii](reference/compiler-options-listed-by-category.md) \
+[Opcje kompilatora na liście według kategorii](reference/compiler-options-listed-by-category.md) \
 Lista **/o** opcji kompilatora, które mają wpływ na szybkość wykonywania lub rozmiar kodu.
 
-[Rvalue Reference deklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md) \
+[Rvalue Reference deklarator:  &&](../cpp/rvalue-reference-declarator-amp-amp.md) \
 Odwołania rvalue obsługują implementację *semantyki przenoszenia*. Jeśli semantyka przenoszenia jest używana do implementowania bibliotek szablonów, wydajność aplikacji korzystających z tych szablonów może znacząco poprawić.
 
 ### <a name="the-optimize-pragma"></a>Optymalizacja dyrektywy pragma
@@ -52,7 +52,7 @@ Paradoxically, Optymalizacja programu w celu przyspieszenia może spowodować wo
 
 W poniższych tematach omówiono dobre praktyki programistyczne.
 
-[Wskazówki dotyczące poprawiania kodu o kluczowym znaczeniu](tips-for-improving-time-critical-code.md) \
+[Wskazówki dotyczące poprawiania kodu krytycznego czasowo](tips-for-improving-time-critical-code.md) \
 Lepsze techniki kodowania mogą przynieść lepszą wydajność. W tym temacie przedstawiono techniki kodowania, które mogą pomóc w upewnieniu się, że krytyczne elementy kodu działają prawidłowo.
 
 [Najlepsze rozwiązania dotyczące optymalizacji](optimization-best-practices.md) \
@@ -66,7 +66,7 @@ W poniższych tematach znajdują się informacje o sposobie debugowania kompilac
 
 - [Debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
 
-- [Instrukcje: debugowanie zoptymalizowanego kodu](/visualstudio/debugger/how-to-debug-optimized-code)
+- [Porady: debugowanie zoptymalizowanego kodu](/visualstudio/debugger/how-to-debug-optimized-code)
 
 - [Dlaczego liczby zmiennoprzecinkowe mogą tracić dokładność](why-floating-point-numbers-may-lose-precision.md)
 
@@ -86,18 +86,18 @@ W poniższych tematach przedstawiono informacje na temat optymalizowania kompilo
 
 [Dyrektywy pragma i słowa kluczowe optymalizacji](optimization-pragmas-and-keywords.md) \
 [Optymalizowanie przepływności kompilatora](improving-compiler-throughput.md) \
-[Dlaczego liczby zmiennoprzecinkowe mogą utracić \ dokładności](why-floating-point-numbers-may-lose-precision.md)
+[Dlaczego liczby zmiennoprzecinkowe mogą utracić dokładnooć](why-floating-point-numbers-may-lose-precision.md) \
 [Reprezentacja zmiennoprzecinkowa IEEE](ieee-floating-point-representation.md) \
-[Wskazówki dotyczące poprawiania kodu o kluczowym znaczeniu](tips-for-improving-time-critical-code.md) \
+[Wskazówki dotyczące poprawiania kodu krytycznego czasowo](tips-for-improving-time-critical-code.md) \
 [Korzystanie z nazwy funkcji bez () nie tworzy kodu](using-function-name-without-parens-produces-no-code.md) \
 [Najlepsze rozwiązania dotyczące optymalizacji](optimization-best-practices.md) \
-[Optymalizacje oparte na profilach](profile-guided-optimizations.md) \
-[Zmienne środowiskowe dla optymalizacji](environment-variables-for-profile-guided-optimizations.md) profilowanych \
+[Optymalizacje profilowane](profile-guided-optimizations.md) \
+[Zmienne środowiskowe dla optymalizacji profilowanych](environment-variables-for-profile-guided-optimizations.md) \
 [PgoAutoSweep](pgoautosweep.md) \
 [pgomgr](pgomgr.md) \
 [pgosweep](pgosweep.md) \
-[Instrukcje: scalanie wielu profili PGO w jeden profil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
+[Porady: scalanie wielu profili PGO w jeden profil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja kompilacji w języku C/C++](reference/c-cpp-building-reference.md)
+[Odwołanie kompilacji C/C++](reference/c-cpp-building-reference.md)

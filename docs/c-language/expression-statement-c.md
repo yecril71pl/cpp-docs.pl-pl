@@ -14,16 +14,16 @@ ms.locfileid: "62233712"
 ---
 # <a name="expression-statement-c"></a>Instrukcja wyrażeń (C)
 
-Po wykonaniu instrukcji wyrażenia wyrażenie jest obliczane zgodnie z regułami przedstawione [wyrażenia i przydziały](../c-language/expressions-and-assignments.md).
+Po wykonaniu instrukcji Expression wyrażenie jest oceniane zgodnie z regułami opisanymi w [wyrażeniach i przypisaniach](../c-language/expressions-and-assignments.md).
 
 ## <a name="syntax"></a>Składnia
 
-*expression-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie*<sub>zoptymalizowany pod kątem</sub> **;**
+*wyrażenie-instrukcja*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expression*<sub>wybór</sub> wyrażenia **;**
 
-Ze wszystkimi efektami ubocznymi oceny wyrażenia są wykonywane przed wykonaniem następnej instrukcji. Instrukcja wyrażenia empty jest wywoływana instrukcja o wartości null. Zobacz [instrukcja o wartości Null](../c-language/null-statement-c.md) Aby uzyskać więcej informacji.
+Wszystkie efekty uboczne z oceny wyrażenia są kończone przed wykonaniem następnej instrukcji. Pusta Instrukcja wyrażenia jest nazywana instrukcją o wartości null. Aby uzyskać więcej informacji [, zobacz instrukcję o wartości null](../c-language/null-statement-c.md) .
 
-Przykłady te pokazują instrukcje wyrażeń.
+W tych przykładach przedstawiono instrukcje wyrażeń.
 
 ```C
 x = ( y + 3 );            /* x is assigned the value of y + 3  */
@@ -33,8 +33,8 @@ proc( arg1, arg2 );       /* Function call returning void      */
 y = z = ( f( x ) + 3 );   /* A function-call expression        */
 ```
 
-W ostatniej instrukcji wyrażenie wywołania funkcji wartości wyrażenia, w tym dowolną wartość zwrócona przez funkcję, jest wzrosła o 3 i przypisywany do obu zmiennych `y` i `z`.
+W ostatniej instrukcji wyrażenie wywołania funkcji, wartość wyrażenia, która zawiera każdą wartość zwracaną przez funkcję, jest zwiększane o 3, a następnie przypisane do zmiennych `y` i. `z`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instrukcje](../c-language/statements-c.md)

@@ -1,5 +1,5 @@
 ---
-title: Uwagi podczas pisania kodu Prolog-Epilog
+title: Zagadnienia dotyczące pisania kodu prologu epilogu
 ms.date: 11/04/2016
 helpviewer_keywords:
 - layouts, stack frame
@@ -18,7 +18,7 @@ ms.locfileid: "81334578"
 
 **Specyficzne dla firmy Microsoft**
 
-Przed napisaniem własnych sekwencji kodu prologu i epilogu, ważne jest, aby zrozumieć, jak ramka stosu jest rozmieszczona. Warto również wiedzieć, jak używać **__LOCAL_SIZE** wstępnie zdefiniowanej stałej.
+Przed zapisaniem własnych sekwencji kodu prologu i epilogu ważne jest, aby zrozumieć, jak Ramka stosu jest rozłożone. Warto również wiedzieć, jak używać wstępnie zdefiniowanej stałej **__LOCAL_SIZE** .
 
 ## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>Układ ramki CStack
 
@@ -42,18 +42,18 @@ ret                          ; Return from function
 
 Stos zawsze powiększa się w dół (od najwyższego do najniższego adresu pamięci). Podstawowy wskaźnik (`ebp`) wskazuje na umieszczoną wartość `ebp`. Obszar zmiennych lokalnych rozpoczyna się od `ebp-2`. Aby uzyskać dostęp do zmiennych lokalnych, należy obliczyć przesunięcie z `ebp` przez odjęcie odpowiedniej wartości od `ebp`.
 
-## <a name="the-__local_size-constant"></a><a name="_clang_the___local_size_constant"></a>Stała __LOCAL_SIZE
+## <a name="the-__local_size-constant"></a><a name="_clang_the___local_size_constant"></a>__LOCAL_SIZE stała
 
-Kompilator zapewnia stałą, **__LOCAL_SIZE**, do użytku w bloku asemblera wbudowanego kodu prologu funkcji. Stała jest używana do alokowania miejsca dla zmiennych lokalnych na ramce stosu w niestandardowym kodzie prologu.
+Kompilator dostarcza stałą, **__LOCAL_SIZE**, do użycia w bloku asemblera wbudowanego kodu prologu funkcji. Stała jest używana do alokowania miejsca dla zmiennych lokalnych na ramce stosu w niestandardowym kodzie prologu.
 
-Kompilator określa wartość **__LOCAL_SIZE**. Wartość to całkowita liczba bajtów wszystkich zmiennych lokalnych zdefiniowanych przez użytkownika i zmiennych tymczasowych wygenerowanych przez kompilator. **__LOCAL_SIZE** może być używany tylko jako natychmiastowy operand; nie można go używać w wyrażeniu. Nie wolno zmieniać lub ponownie definiować wartości tej stałej. Przykład:
+Kompilator określa wartość **__LOCAL_SIZE**. Wartość to całkowita liczba bajtów wszystkich zmiennych lokalnych zdefiniowanych przez użytkownika i zmiennych tymczasowych wygenerowanych przez kompilator. **__LOCAL_SIZE** można używać tylko jako bezpośredniego operandu; nie można jej użyć w wyrażeniu. Nie wolno zmieniać lub ponownie definiować wartości tej stałej. Przykład:
 
 ```
 mov      eax, __LOCAL_SIZE           ;Immediate operand--Okay
 mov      eax, [ebp - __LOCAL_SIZE]   ;Error
 ```
 
-Poniższy przykład nagiej funkcji zawierającej niestandardowe sekwencje prologu i epilogu używa **__LOCAL_SIZE** w sekwencji prologu:
+Poniższy przykład funkcji owies, która zawiera niestandardowe sekwencje prologu i epilogu używa **__LOCAL_SIZE** w sekwencji prologu:
 
 ```
 __declspec ( naked ) func()
@@ -79,7 +79,7 @@ __declspec ( naked ) func()
 }
 ```
 
-**ZAKOŃCZ Specyficzne dla firmy Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
 

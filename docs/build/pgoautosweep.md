@@ -14,7 +14,7 @@ ms.locfileid: "67552242"
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
-`PgoAutoSweep` Zapisuje bieżące informacje o liczniku profilu do pliku, a następnie resetuje liczniki. Użyj funkcji podczas optymalizacji sterowanej profilem, szkolenia zapisać wszystkie dane profilu z uruchomionego programu do `.pgc` pliku do późniejszego użytku w kompilacji o optymalizacji.
+`PgoAutoSweep`zapisuje informacje o bieżącym liczniku profilu do pliku, a następnie resetuje liczniki. Użyj funkcji podczas szkolenia z przewodnikiem po profilowaniu, aby zapisać wszystkie dane profilu z działającego programu do `.pgc` pliku do późniejszego użycia w kompilacji optymalizacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,32 +25,32 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 
 ### <a name="parameters"></a>Parametry
 
-*name*<br/>
+*Nazwij*<br/>
 Ciąg identyfikacyjny dla zapisanego `.pgc` pliku.
 
 ## <a name="remarks"></a>Uwagi
 
-Możesz wywołać `PgoAutoSweep` z aplikacji w taki sposób, aby zapisać i przywrócić dane profilu w dowolnym momencie podczas wykonywania aplikacji. W kompilacji instrumentowanej `PgoAutoSweep` przechwytuje bieżące dane profilowania, zapisuje go w pliku i resetuje liczniki profilu. Jest to równoważne z wywoływaniem [pgosweep](pgosweep.md) polecenia w określonym punkcie w plik wykonywalny. Zoptymalizowane kompilacji `PgoAutoSweep` jest pusta.
+Możesz wywołać `PgoAutoSweep` z aplikacji, aby zapisać i zresetować dane profilu w dowolnym momencie podczas wykonywania aplikacji. W przypadku kompilacji z instrumentacją `PgoAutoSweep` program przechwytuje bieżące dane profilowania, zapisuje je w pliku i resetuje liczniki profilu. Jest to odpowiednik wywołania polecenia [pgosweep](pgosweep.md) w określonym punkcie w pliku wykonywalnym. W zoptymalizowanej kompilacji `PgoAutoSweep` to no-op.
 
-Dane licznika zapisywanego profilu jest umieszczany w pliku o nazwie *base_name*-*nazwa*! *wartość*.pgc, gdzie *base_name* jest nazwa podstawowa pliku wykonywalnego, *nazwa* jest parametr przekazany do `PgoAutoSweep`, i *wartość* jest wartością unikatową, zwykle monotonicznie rosnący numer, aby zapobiec kolizjom nazw plików.
+Zapisane dane licznika profilu są umieszczane w pliku o nazwie *base_name*-*name*! *Value*. PGC, gdzie *base_name* jest podstawową nazwą pliku wykonywalnego, *Nazwa* jest parametrem przesłanym do `PgoAutoSweep`, a *wartość* jest unikatową wartością, zazwyczaj monotonicznie zwiększania liczby, aby zapobiec kolizjom nazw plików.
 
-`.pgc` Pliki tworzone przez `PgoAutoSweep` muszą zostać scalone `.pgd` plik ma być używany do utworzenia zoptymalizowanego pliku wykonywalnego. Możesz użyć [pgomgr](pgomgr.md) polecenie, aby wykonać scalanie.
+`.pgc` Pliki utworzone przez `PgoAutoSweep` program muszą zostać scalone w `.pgd` pliku, który ma zostać użyty do utworzenia zoptymalizowanego pliku wykonywalnego. Aby wykonać scalanie, można użyć polecenia [pgomgr](pgomgr.md) .
 
-Można przekazać nazwę scalonych `.pgd` pliku do konsolidatora podczas kompilacji o optymalizacji przy użyciu **PGD =** _filename_ argument [/USEPROFILE](reference/useprofile.md) konsolidatora Opcja lub za pomocą przestarzałego **/PGD** — opcja konsolidatora. W przypadku scalania `.pgc` plików do pliku o nazwie *base_name*.pgd, nie należy określić nazwę pliku w wierszu polecenia, ponieważ konsolidator przejmuje ta nazwa pliku domyślnie.
+Podczas kompilowania optymalizacji można przekazać nazwę scalonego `.pgd` pliku do konsolidatora przy użyciu argumentu **PGD =**_filename_ do [/USEPROFILE](reference/useprofile.md) opcji konsolidatora lub przy użyciu opcji konsolidatora **/PGD** . W przypadku scalania `.pgc` plików do pliku o nazwie *base_name*. PGD nie trzeba określać nazwy pliku w wierszu polecenia, ponieważ konsolidator domyślnie wybiera tę nazwę pliku.
 
-`PgoAutoSweep` Funkcja obsługuje ustawienie bezpieczeństwo wątków określone, po utworzeniu kompilację instrumentowaną. Jeśli ustawienie domyślne lub określ **NOEXACT** argument [przełączników/genprofile i/fastgenprofile](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) — opcja konsolidatora, wywołania `PgoAutoSweep` nie są wątkowo. **EXACT** argument tworzy ale metodą o bezpiecznych wątkach i bardziej precyzyjne wolniejsze, instrumentowanego pliku wykonywalnego.
+`PgoAutoSweep` Funkcja utrzymuje ustawienie bezpieczeństwa wątku określone podczas tworzenia konstruowanej kompilacji. Jeśli używasz ustawienia domyślnego lub określono argument **noexact** dla opcji konsolidatora [/GENPROFILE lub/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) , wywołania do nie są bezpieczne `PgoAutoSweep` dla wątków. **Dokładny** argument tworzy bezpieczny wątkowo i bardziej precyzyjny, ale wolniejszy, instrumentację pliku wykonywalnego.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`PgoAutoSweep`|\<pgobootrun.h>|
+|`PgoAutoSweep`|\<pgobootrun. h>|
 
-Plik wykonywalny musi zawierać plik pgobootrun.lib łączonych bibliotek. Ten plik znajduje się w instalacji programu Visual Studio w katalogu biblioteki VC dla każdej obsługiwanej architektury.
+Plik wykonywalny musi zawierać pgobootrun. lib w połączonych bibliotekach. Ten plik jest dołączany do instalacji programu Visual Studio w katalogu bibliotek VC dla każdej obsługiwanej architektury.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie użyto `PgoAutoSweep` utworzyć dwa `.pgc` plików w różnych momentach podczas wykonywania. Pierwszy zawiera dane, które określa zachowanie środowiska uruchomieniowego aż do `count` jest równa 3, a drugi zawiera dane zebrane po tym punkcie, dopóki nie tylko przed zakończeniem działania aplikacji.
+Poniższy przykład używa `PgoAutoSweep` do tworzenia dwóch `.pgc` plików w różnych punktach podczas wykonywania. Pierwszy zawiera dane opisujące zachowanie środowiska uruchomieniowego do `count` momentu, gdy wartość jest równa 3, a druga zawiera dane zebrane po tym punkcie do momentu zakończenia działania aplikacji.
 
 ```cpp
 // pgoautosweep.cpp
@@ -97,15 +97,15 @@ int main()
 }
 ```
 
-W wierszu polecenia dla deweloperów należy skompilować kod do pliku obiektu za pomocą tego polecenia:
+W wierszu polecenia dla deweloperów Skompiluj kod do pliku obiektu za pomocą tego polecenia:
 
 `cl /c /GL /W4 /EHsc /O2 pgoautosweep.cpp`
 
-Następnie Generuj kompilację instrumentowaną, szkolenia, za pomocą tego polecenia:
+Następnie Wygeneruj kompilację instrumentacji do szkolenia przy użyciu tego polecenia:
 
 `link /LTCG /genprofile pgobootrun.lib pgoautosweep.obj`
 
-Uruchom zinstrumentowany plik wykonywalny do przechwytywania danych szkoleniowych. Dane wyjściowe przez wywołanie `PgoAutoSweep` jest zapisywany w plikach o nazwie pgoautosweep func1! 1.pgc i pgoautosweep func2! 1.pgc. Dane wyjściowe programu powinien wyglądać następująco podczas jej działania:
+Uruchom instrumentację pliku wykonywalnego, aby przechwycić dane szkoleniowe. Dane wyjściowe przez wywołania `PgoAutoSweep` są zapisywane w plikach o nazwie pgoautosweep-func1! 1. PGC i pgoautosweep-func2! 1. pgc. Dane wyjściowe programu powinny wyglądać następująco:
 
 ```Output
 hello from func1 9
@@ -120,11 +120,11 @@ hello from func2 1
 hello from func2 0
 ```
 
-Scalanie danych zapisanych w profilowej bazie danych szkoleniowych, uruchamiając **pgomgr** polecenia:
+Aby scalić zapisane dane w bazę danych szkoleń profilu, należy uruchomić polecenie **pgomgr** :
 
 `pgoautosweep-func1!1.pgc pgoautosweep-func2!1.pgc`
 
-Dane wyjściowe tego polecenia wygląda następująco:
+Dane wyjściowe tego polecenia wyglądają następująco:
 
 ```Output
 Microsoft (R) Profile Guided Optimization Manager 14.13.26128.0
@@ -136,7 +136,7 @@ Merging pgoautosweep-func2!1.pgc
 pgoautosweep-func2!1.pgc: Used  3.8% (22424 / 589824) of total space reserved.  0.0% of the counts were dropped due to overflow.
 ```
 
-Teraz można użyć tych danych szkoleniowych do generowania optymalizowania kompilacji. To polecenie umożliwia tworzenie zoptymalizowanego pliku wykonywalnego:
+Teraz możesz użyć tych danych szkoleniowych do wygenerowania zoptymalizowanej kompilacji. Użyj tego polecenia, aby skompilować zoptymalizowany plik wykonywalny:
 
 `link /LTCG /useprofile pgobootrun.lib pgoautosweep.obj`
 
@@ -158,7 +158,7 @@ Generating code
 Finished generating code
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Optymalizacje sterowane profilem](profile-guided-optimizations.md)<br/>
 [pgosweep](pgosweep.md)<br/>

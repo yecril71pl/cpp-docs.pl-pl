@@ -14,26 +14,26 @@ ms.locfileid: "81334621"
 ---
 # <a name="c-tokens"></a>Tokeny języka C
 
-W programie źródłowym języka C podstawowym elementem rozpoznawanym przez kompilator jest "token". Token jest tekst programu źródłowego, że kompilator nie rozbić na elementy składnika.
+W programie źródłowym języka C podstawowym elementem rozpoznawanym przez kompilator jest "token". Token jest tekstem w programie źródłowym, który nie jest podzielony na elementy składnika.
 
 ## <a name="syntax"></a>Składnia
 
 *token*: *słowo kluczowe*
 
-*Identyfikator*
+*identyfikatora*
 
-*Stała*
+*stałego*
 
-*literał strunowy*
+*literał ciągu*
 
-*Operator*
+*zakład*
 
-*interpunkcyjny*
+*punctuator*
 
 > [!NOTE]
-> Zobacz wprowadzenie do [podsumowania składni języka C, aby](../c-language/c-language-syntax-summary.md) uzyskać wyjaśnienie konwencji składni ANSI.
+> Zapoznaj się z artykułem wprowadzenie do [podsumowania składni języka C](../c-language/c-language-syntax-summary.md) , aby uzyskać wyjaśnienie Konwencji składni ANSI.
 
-Słowa kluczowe, identyfikatory, stałe, literały ciągów i operatory opisane w tej sekcji są przykładami tokenów. Znaki interpunkcyjne, takie jak nawiasy (**[ ]**), nawiasy (**{ }**), nawiasy ( **( )** i przecinki (**,**) są również tokenami.
+Słowa kluczowe, identyfikatory, stałe, literały ciągów i operatory opisane w tej sekcji są przykładami tokenów. Znaki interpunkcyjne, takie jak nawiasy (**[]**), nawiasy klamrowe (**{}**), nawiasy ( **()** ) i przecinki (**,**) są również tokenami.
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -11,10 +11,10 @@ ms.locfileid: "64343030"
 ---
 # <a name="terminating-newline-characters"></a>Kończenie znakami nowego wiersza
 
-**ANSI 4.9.2** , czy ostatni wiersz w strumieniu tekstu wymaga kończący znak nowego wiersza
+**4.9.2 ANSI** Czy ostatni wiersz strumienia tekstowego wymaga kończącego znaku nowego wiersza
 
-Funkcje Stream rozpoznać nowego wiersza lub koniec pliku jako znak zakończenia wiersza.
+Funkcja Stream rozpoznaje nowy wiersz lub koniec pliku jako znak kończący dla wiersza.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

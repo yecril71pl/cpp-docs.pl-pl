@@ -1,5 +1,5 @@
 ---
-title: Konfigurowanie C++ projektów dla 64-bitowych, docelowych procesorów x64
+title: Konfigurowanie projektów C++ dla 64-bitowych, docelowych procesorów x64
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 64-bit compiler [C++], options
@@ -14,25 +14,25 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69493290"
 ---
-# <a name="configure-c-projects-for-64-bit-x64-targets"></a>Konfigurowanie C++ projektów dla 64-bitowych, docelowych procesorów x64
+# <a name="configure-c-projects-for-64-bit-x64-targets"></a>Konfigurowanie projektów C++ dla 64-bitowych, docelowych procesorów x64
 
-Ta sekcja zawiera tematy dotyczące sprzętu 64-bit x64 ze sprzętem Visual C++ Build Tools.
+Ta sekcja zawiera tematy dotyczące sprzętu 64-bitowego x64 z narzędziami do kompilacji Visual C++.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-- [Instrukcje: konfigurowanie projektów programu Visual C++ dla wersji 64-bitowych, platformy docelowe x64](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+- [Instrukcje: konfigurowanie projektów programu Visual C ++ dla wersji 64-bitowych, platformy docelowe x64](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
 
-- [Instrukcje: Włącz 64-bitowy, oparty na architekturze x64 zestaw narzędzi MSVC w wierszu polecenia](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [Instrukcje: włączanie 64-bitowego, obsługiwanego przez x64 zestawu narzędzi MSVC w wierszu polecenia](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
 - [Typowe problemy przy migracji Visual C++ w wersji 64-bitowej](common-visual-cpp-64-bit-migration-issues.md)
 
-- [Konwencje kodowania x64](x64-software-conventions.md)
+- [Konwencje oprogramowania x64](x64-software-conventions.md)
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 [.NET Framework 64-bitowe aplikacje](/dotnet/framework/64-bit-apps)
 
-[align](../cpp/align-cpp.md)
+[dostosowania](../cpp/align-cpp.md)
 
 [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](reference/clr-common-language-runtime-compilation.md)
 
@@ -44,6 +44,6 @@ Ta sekcja zawiera tematy dotyczące sprzętu 64-bit x64 ze sprzętem Visual C++ 
 
 [Lista funkcji wewnętrznych x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Projekty i systemy kompilacji](projects-and-build-systems-cpp.md)

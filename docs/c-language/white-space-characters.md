@@ -16,6 +16,6 @@ ms.locfileid: "68375817"
 
 Spacja, tabulator, wysuw wiersza (nowy wiersz), powrotu karetki, Wysuw strony i tabulatory pionowe są nazywane "białymi znakami", ponieważ służą do tego samego celu co spacje między wyrazami i liniami na drukowanej stronie — ułatwiają one odczytywanie. Tokeny są rozdzielane (powiązane) znakami odstępu i innymi tokenami, takimi jak operatory i znaki interpunkcyjne. Podczas analizowania kodu kompilator języka C ignoruje znaki odstępu, chyba że są używane jako separatory lub jako składniki stałych znakowych lub literałów ciągów. Aby program był bardziej czytelny, należy użyć znaków odstępu. Należy zauważyć, że kompilator traktuje także komentarze jako biały znak.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tokeny języka C](../c-language/c-tokens.md)

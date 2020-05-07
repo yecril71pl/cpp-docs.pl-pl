@@ -13,8 +13,8 @@ ms.locfileid: "62158501"
 ---
 # <a name="rules-and-limitations-for-using-naked-functions"></a>Reguły i ograniczenia dotyczące używania funkcji Naked
 
-Informacje na temat reguł i ograniczeń dotyczących używania funkcji naked zobacz odpowiedni temat w dokumentacji języka C++: [Reguły i ograniczenia dotyczące używania funkcji Naked](../cpp/rules-and-limitations-for-naked-functions.md).
+Aby uzyskać informacje na temat reguł i ograniczeń dotyczących używania funkcji wywołujące, zobacz odpowiedni temat w dokumentacji języka C++: [reguły i ograniczenia dotyczące funkcji](../cpp/rules-and-limitations-for-naked-functions.md)wykorzystających.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje Naked](../c-language/naked-functions.md)

@@ -14,21 +14,21 @@ ms.locfileid: "62326095"
 ---
 # <a name="c-constants"></a>Stałe języka C
 
-"Stałe" jest liczby, znak lub ciąg znaków, który może służyć jako wartość w programie. Użyj stałych do reprezentowania zmiennoprzecinkowych, liczba całkowita, wyliczenie lub wartości znaków, które nie mogą być modyfikowane.
+"Stała" to liczba, znak lub ciąg znaków, który może być używany jako wartość w programie. Używaj stałych do reprezentowania wartości zmiennoprzecinkowych, liczb całkowitych, wyliczenia lub znaków, których nie można modyfikować.
 
 ## <a name="syntax"></a>Składnia
 
 `constant`:<br/>
-*floating-point-constant*
+*zmiennoprzecinkowe — stała*
 
-*integer-constant*
+*Integer — stała*
 
-*Stała wyliczenia*
+*Wyliczenie — stała*
 
-*character-constant*
+*znak — stała*
 
-Stałe charakteryzują się o wartości i typu. [Zmiennoprzecinkowe](../c-language/c-floating-point-constants.md), [całkowitą](../c-language/c-integer-constants.md), i [stałych znakowych](../c-language/c-character-constants.md) zostały omówione w trzech kolejnych sekcjach. Stałe wyliczeń są opisane w [deklaracje modułów Wyliczających](../c-language/c-enumeration-declarations.md).
+Stałe są scharakteryzowane przez posiadanie wartości i typu. Stałe wartości [zmiennoprzecinkowe](../c-language/c-floating-point-constants.md), [liczby całkowite](../c-language/c-integer-constants.md)i [znaki](../c-language/c-character-constants.md) są omówione w następnych trzech sekcjach. Stałe wyliczania są opisane w [deklaracji wyliczenia](../c-language/c-enumeration-declarations.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Elementy języka C](../c-language/elements-of-c.md)

@@ -15,7 +15,7 @@ ms.locfileid: "62157932"
 ---
 # <a name="storage-of-unions"></a>Magazyn złożeń
 
-Magazyn skojarzony ze zmienną typu Unia jest magazynu wymaganego dla największego elementu Członkowskiego Unii. Gdy członek mniejszych są przechowywane, union zmienna może zawierać miejsca nieużywanej pamięci. Wszystkie elementy członkowskie są przechowywane w tej samej przestrzeni pamięci i rozpoczynają się od tego samego adresu. Wartość przechowywana jest zastąpione każdorazowo, gdy wartość jest przypisywana do innego członka. Na przykład:
+Magazyn skojarzony ze zmienną Union to magazyn wymagany dla największego elementu członkowskiego Unii. Gdy mniejsza składowa jest przechowywana, zmienna Union może zawierać nieużywane miejsce w pamięci. Wszystkie elementy członkowskie są przechowywane w tym samym obszarze pamięci i zaczynają się na tym samym adresie. Wartość przechowywana jest zastępowana za każdym razem, gdy wartość zostanie przypisana do innego elementu członkowskiego. Przykład:
 
 ```
 union         /* Defines a union named x */
@@ -25,8 +25,8 @@ union         /* Defines a union named x */
 } x;
 ```
 
-Elementy członkowskie `x` Unii są w kolejności ich deklaracji, wskaźnik do `char` wartość `char` wartość i tablicę **float** wartości. Magazyn przydzielony do `x` magazynu wymaganych do 20-elementowej tablicy `f`, ponieważ `f` jest najdłuższym składowej Unii. Ponieważ żaden tag jest skojarzony z Unią, jego typ jest bez nazwy i "anonymous".
+Elementy członkowskie `x` Unii są w kolejności ich deklaracji, wskaźnik do `char` wartości, `char` wartość i tablica wartości **zmiennoprzecinkowych** . Magazyn przydzielony do `x` jest magazynem wymaganym dla 20-elementowej `f`tablicy, `f` ponieważ jest najdłuższym członkiem Unii. Ponieważ żaden tag nie jest skojarzony z Unią, jego typ ma wartość unnamed lub "Anonymous".
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje złożeń](../c-language/union-declarations.md)

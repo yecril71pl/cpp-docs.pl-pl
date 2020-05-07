@@ -11,11 +11,11 @@ ms.locfileid: "81480903"
 ---
 # <a name="range-of-char-values"></a>Zakres wartości char
 
-**ANSI 3.2.1.1** Czy "zwykły" **char** ma taki sam zakres wartości jak **znak podpisany** lub **niepodpisany char**
+**3.2.1.1 ANSI** Czy **znak** "zwykły" ma ten sam zakres wartości jako znak **podpisany** lub **znak bez znaku**
 
-Wszystkie podpisane wartości znaków wahają się od -128 do 127. Wszystkie niepodpisane wartości znaków wahają się od 0 do 255.
+Wszystkie podpisane wartości znakowe mieszczą się w zakresie od-128 do 127. Wszystkie wartości znaku bez znaku mieszczą się w zakresie od 0 do 255.
 
-Opcja [`/J`](../build/reference/j-default-char-type-is-unsigned.md) kompilatora zmienia domyślny typ **dla char** z **podpisanego char** na **niepodpisany znak**.
+Opcja [`/J`](../build/reference/j-default-char-type-is-unsigned.md) kompilatora zmienia domyślny typ **znaku** z **podpisanego znaku** na **znak bez znaku**.
 
 ## <a name="see-also"></a>Zobacz też
 

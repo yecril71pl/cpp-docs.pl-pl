@@ -11,11 +11,11 @@ ms.locfileid: "81328432"
 ---
 # <a name="x64-prolog-and-epilog"></a>Prolog i epilog x64
 
-Każda funkcja, która przydziela miejsce na stosie, wywołuje inne funkcje, zapisuje rejestry nieulotne lub używa obsługi wyjątków musi mieć prolog, którego limity adresów są opisane w danych unwind skojarzonych z odpowiednim wpisem tabeli funkcji. Aby uzyskać więcej informacji, zobacz [obsługę wyjątków x64](../build/exception-handling-x64.md). Prolog zapisuje rejestry argumentów w swoich adresach domowych, jeśli to konieczne, wypycha rejestry nieulotne na stosie, przydziela stałą część stosu dla mieszkańców i tymczasowo i opcjonalnie ustanawia wskaźnik ramki. Skojarzone dane unwind musi opisywać działanie prologu i musi dostarczyć informacji niezbędnych do cofnięcia efektu kodu prologu.
+Każda funkcja, która przydziela miejsce na stosie, wywołuje inne funkcje, zapisuje niezalotne rejestry lub używa obsługi wyjątków, musi mieć Prolog, którego limity adresów są opisane w danych unwind skojarzonych z odpowiednim wpisem tabeli funkcji. Aby uzyskać więcej informacji, zobacz [Obsługa wyjątków x64](../build/exception-handling-x64.md). Prolog zapisuje w razie potrzeby rejestry argumentów w ich adresach domowych, wypychaje rejestry nietrwałe na stosie, przydzieli stałą część stosu dla zmiennych lokalnych i obiekty tymczasowe, a także opcjonalnie ustanowi wskaźnik ramki. Skojarzone dane odwinięcia muszą opisywać akcję prologu i muszą podawać informacje niezbędne do cofnięcia efektu kodu prologu.
 
-Jeśli stała alokacja w stosie jest więcej niż jedna strona (czyli większa niż 4096 bajtów), to jest możliwe, że alokacja stosu może obejmować więcej niż jedną stronę pamięci wirtualnej i w związku z tym alokacji należy sprawdzić przed jej przydzieleniem. Specjalna procedura, która jest wywoływana z prologu i która nie niszczy żadnego z rejestrów argumentów, jest w tym celu dostępna.
+Jeśli stała alokacja w stosie ma więcej niż jedną stronę (to znaczy więcej niż 4096 bajtów), możliwe jest, że Alokacja stosu może obejmować więcej niż jedną stronę pamięci wirtualnej, dlatego alokacja musi być sprawdzona przed przydzieleniem. Specjalna procedura, która jest wywoływana z prologu, która nie niszczy żadnego z rejestrów argumentów jest w tym celu dostępna.
 
-Preferowaną metodą zapisywania rejestrów nieulotnych jest przeniesienie ich na stos przed alokacją stosu stałego. Jeśli alokacja stałego stosu jest wykonywana przed zapisaniem rejestrów nieulotnych, najprawdopodobniej do rozwiązania zapisanego obszaru rejestru wymagane jest przemieszczenie 32-bitowe. (Podobno, wypychacze rejestrów są tak szybko, jak ruchy i powinny pozostać tak w dającej się przewidzieć przyszłości, pomimo dorozumianej zależności między wypychaniem.) Rejestry nieulotne można zapisać w dowolnej kolejności. Jednak pierwszym użyciem rejestru nieulotnego w prologu musi być jego zapisanie.
+Preferowaną metodą zapisywania nietrwałych rejestrów jest przeniesienie ich na stos przed stałym alokacją stosu. Jeśli alokacja stałego stosu jest wykonywana przed zapisaniem rejestrów nietrwałych, najprawdopodobniej jest wymagane przemieszczenie 32-bitowe w celu zaadresowania zapisanego obszaru rejestru. (Reportedly, wypchnięcia rejestrów odbywa się tak szybko, jak przesuwają się i powinny pozostać tak, jak w przyszłości, pomimo domniemanej zależności między wypchnięciami.) Rejestry nietrwałe można zapisać w dowolnej kolejności. Jednak pierwsze użycie nietrwałego rejestru w prologu musi mieć na celu jego zapisanie.
 
 ## <a name="prolog-code"></a>Kod prologu
 
@@ -31,9 +31,9 @@ Kod typowego prologu może być:
     ...
 ```
 
-Ten prolog przechowuje rejestr argumentów RCX w lokalizacji głównej, zapisuje rejestry nieulotne R13-R15, przydziela stałą część ramki stosu i ustanawia wskaźnik ramki, który wskazuje 128 bajtów do stałego obszaru alokacji. Użycie przesunięcia umożliwia zajmącej więcej stałych obszarów alokacji za pomocą przesunięć jedno bajtowych.
+W tym prologu jest przechowywany argument Register RCX w lokalizacji głównej, zapisuje nietrwałe rejestry R13-R15, przydziela stałą część ramki stosu i ustanawia wskaźnik ramki, który wskazuje 128 bajtów do obszaru stałego przydziału. Użycie przesunięcia umożliwia rozliczenie większej części stałego obszaru alokacji z przesunięciami jednobajtowymi.
 
-Jeśli stały rozmiar alokacji jest większy lub równy jednej stronie pamięci, należy wywołać funkcję pomocnika przed zmodyfikowaniem RSP. Ten pomocnik, `__chkstk`sonduje zakres stosu, który ma być przydzielony, aby upewnić się, że stos jest prawidłowo rozbudowyowany. W takim przypadku poprzedni przykład prologu będzie zamiast tego:
+Jeśli ustalony rozmiar alokacji jest większy lub równy jednej stronie pamięci, należy wywołać funkcję pomocnika przed modyfikacją funkcji RSP. Ten pomocnik, `__chkstk`, sonduje przydzieloną zakres stosu, aby upewnić się, że stos jest prawidłowo rozszerzony. W takim przypadku poprzedni przykład prologu będzie:
 
 ```MASM
     mov    [RSP + 8], RCX
@@ -47,15 +47,15 @@ Jeśli stały rozmiar alokacji jest większy lub równy jednej stronie pamięci,
     ...
 ```
 
-Pomocnik `__chkstk` nie zmodyfikuje żadnych rejestrów innych niż R10, R11 i kody warunków. W szczególności zwróci RAX bez zmian i pozostawi wszystkie rejestry nieulotne i rejestry kłótliwe bez zmian.
+`__chkstk` Pomocnik nie zmodyfikuje żadnych rejestrów, takich jak R10, R11 i kody warunków. W szczególności zwróci RAX bez zmian i opuszcza wszystkie nietrwałe rejestry i rejestry przekazywania argumentów niemodyfikowane.
 
 ## <a name="epilog-code"></a>Kod epilogu
 
-Kod Epilogu istnieje przy każdym wyjściu z funkcji. Podczas gdy zwykle istnieje tylko jeden prolog, może być wiele epilogów. Kod Epilog przycina stos do jego stałego rozmiaru alokacji (jeśli to konieczne), rozdziela alokację stałego stosu, przywraca rejestry nieulotne, wyskakujący ich zapisane wartości ze stosu i zwraca.
+Kod epilogu istnieje podczas każdego wyjścia do funkcji. Istnieje zwykle tylko jeden Prolog, ale może być wiele epilogs. Kod epilogu przycina stos do jego stałego rozmiaru alokacji (jeśli jest to konieczne), cofa alokację stałego przydziału stosu, przywraca rejestry nietrwałe przez usuwanie ich zapisane wartości ze stosu i zwraca.
 
-Kod epilogu musi być zgodny ze ścisłym zestawem reguł dla kodu unwind, aby niezawodnie odwinąć za pomocą wyjątków i przerwań. Te reguły zmniejszyć ilość danych unwind wymagane, ponieważ nie dodatkowe dane są potrzebne do opisania każdego epilogu. Zamiast tego kod unwind można określić, że epilog jest wykonywany przez skanowanie do przodu za pośrednictwem strumienia kodu w celu zidentyfikowania epilogu.
+Kod epilogu musi być zgodny z ścisłym zestawem reguł dla kodu unwind w celu niezawodnego wyłączania przez wyjątki i przerwania. Te reguły zmniejszają ilość wymaganych danych operacji unwind, ponieważ nie są potrzebne dodatkowe dane do opisania poszczególnych epilogu. Zamiast tego kod unwind może określić, że epilogu jest wykonywany przez skanowanie do przodu przez strumień kodu, aby zidentyfikować epilogu.
 
-Jeśli wskaźnik ramki nie jest używany w funkcji, epilog musi najpierw zdobędyć stałą część stosu, rejestry nieulotne są pojawiały się i kontroli jest zwracany do funkcji wywołującej. Na przykład:
+Jeśli w funkcji nie jest używany żaden wskaźnik ramki, epilogu musi najpierw cofnąć cofnięcie ustalonej części stosu, rejestry nietrwałe są zdjęte, a sterowanie jest zwracane do funkcji wywołującej. Na przykład:
 
 ```MASM
     add      RSP, fixed-allocation-size
@@ -65,7 +65,7 @@ Jeśli wskaźnik ramki nie jest używany w funkcji, epilog musi najpierw zdobęd
     ret
 ```
 
-Jeśli wskaźnik ramki jest używany w funkcji, stos musi być przycięty do jego stałej alokacji przed wykonaniem epilogu. Ta akcja technicznie nie jest częścią epilogu. Na przykład następujące epilog może służyć do cofania prologu wcześniej używane:
+Jeśli wskaźnik ramki jest używany w funkcji, stos musi zostać przycięty do stałej alokacji przed wykonaniem epilogu. Ta akcja nie jest technicznie częścią epilogu. Na przykład następujące epilogu można użyć do cofnięcia wcześniej użytego prologu:
 
 ```MASM
     lea      RSP, -128[R13]
@@ -77,7 +77,7 @@ Jeśli wskaźnik ramki jest używany w funkcji, stos musi być przycięty do jeg
     ret
 ```
 
-W praktyce, gdy wskaźnik ramki jest używany, nie ma powodu, aby dostosować RSP w dwóch krokach, więc zamiast tego zostanie użyty następujący epilog:
+W przypadku użycia wskaźnika ramki nie istnieje dobry powód, aby dostosować żądanie RSP w dwóch krokach, więc zamiast tego zostanie użyty następujący epilogu:
 
 ```MASM
     lea      RSP, fixed-allocation-size - 128[R13]
@@ -87,12 +87,12 @@ W praktyce, gdy wskaźnik ramki jest używany, nie ma powodu, aby dostosować RS
     ret
 ```
 
-Te formy są jedynymi legalne dla epilogu. Musi składać się z `add RSP,constant` `lea RSP,constant[FPReg]`lub , po którym następuje seria zero lub więcej `return` 8-bajtowy rejestr pops i lub `jmp`. (Tylko podzbiór `jmp` instrukcji są dozwolone w epilogu. Podzbiór jest wyłącznie `jmp` klasą instrukcji z odwołaniami do pamięci ModRM, gdzie wartość pola mod ModRM wynosi 00. Użycie `jmp` instrukcji w epilogu o wartości pola mod ModRM 01 lub 10 jest zabronione. Aby uzyskać więcej informacji na temat dopuszczalnych odniesień do modrm, zobacz tabela A-15 w ręcznym tomie 3 programu architektury AMD x86-64: Ogólne przeznaczenie i instrukcje systemowe). Nie może pojawić się żaden inny kod. W szczególności nic nie można zaplanować w epilogu, w tym ładowania wartości zwracanej.
+Te formularze są jedynymi prawami dla epilogu. Musi składać się `add RSP,constant` z lub `lea RSP,constant[FPReg]`, po którym następuje seria zero lub więcej 8-bajtowych punktów obecności rejestru i a `return` lub. `jmp` (Tylko podzestaw `jmp` instrukcji jest dozwolony w epilogu. Podzestaw jest wyłącznie klasą `jmp` instrukcji z odwołaniami do pamięci ModRM, gdzie wartość pola mod ModRM jest równa 00. Użycie `jmp` instrukcji w epilogu z ModRM mod o wartości pola "01 lub 10" jest zabronione. Aby uzyskać więcej informacji na temat dozwolonych ModRM odwołań, zobacz tabelę A-15 w woluminie AMD x86-64 Architecture Ogólnego przeznaczenia. Nie można wyświetlić żadnego innego kodu. W szczególności nic nie może być zaplanowane w ramach epilogu, łącznie z ładowaniem wartości zwracanej.
 
-Gdy wskaźnik ramki nie jest używany, `add RSP,constant` epilog musi służyć do cofniętego alokacji stałej części stosu. Nie może `lea RSP,constant[RSP]` używać zamiast tego. To ograniczenie istnieje, więc kod unwind ma mniej wzorców do rozpoznania podczas wyszukiwania epilogów.
+Gdy wskaźnik ramki nie jest używany, epilogu musi użyć `add RSP,constant` w celu cofnięcia alokacji ustalonej części stosu. Nie może być używana `lea RSP,constant[RSP]` zamiast. To ograniczenie istnieje, aby kod unwind ma mniejszą liczbę wzorców do rozpoznawania podczas wyszukiwania epilogs.
 
-Po tych regułach umożliwia unwind kodu, aby ustalić, że epilog jest obecnie wykonywany i symulować wykonanie pozostałej części epilogu, aby umożliwić odtworzenie kontekstu funkcji wywołującej.
+Zgodnie z tymi regułami kod unwind określa, że element epilogu jest aktualnie wykonywany i symuluje wykonywanie pozostałej części epilogu, aby umożliwić ponowne utworzenie kontekstu funkcji wywołującej.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Konwencje dotyczące oprogramowania x64](x64-software-conventions.md)
+[Konwencje oprogramowania x64](x64-software-conventions.md)

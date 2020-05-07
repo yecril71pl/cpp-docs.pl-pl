@@ -11,7 +11,7 @@ ms.locfileid: "70740099"
 ---
 # <a name="character-testing"></a>Testowanie znaków
 
-**ANSI 4.3.1** Zestawy znaków testowane przez `isalnum`, `isalpha`, `iscntrl` `islower`,,, i`isupper` funkcje `isprint`
+**ANSI 4.3.1** Zestawy `isalnum`znaków testowane przez, `isalpha`, `iscntrl` `islower` `isprint`,,, i funkcje `isupper`
 
 Na poniższej liście opisano te funkcje, które są implementowane przez kompilator języka Microsoft C.
 
@@ -24,6 +24,6 @@ Na poniższej liście opisano te funkcje, które są implementowane przez kompil
 |`isprint`|Znaki A-Z, a-z, 0-9, interpunkcja, spacja ASCII 32-126|
 |`isupper`|Znaki A-Z ASCII 65-90|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

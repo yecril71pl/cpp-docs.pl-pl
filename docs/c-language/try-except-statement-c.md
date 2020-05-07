@@ -21,47 +21,47 @@ ms.locfileid: "81349740"
 
 **Specyficzne dla firmy Microsoft**
 
-**Instrukcja try-except** jest rozszerzeniem firmy Microsoft do języka C, który umożliwia aplikacjom przejęcie kontroli nad programem, gdy wystąpią zdarzenia, które zwykle kończą wykonywanie. Takie zdarzenia nazywane są wyjątkami, a mechanizm, który zajmuje się wyjątkami nazywa się strukturalną obsługą wyjątków.
+Instrukcja **try-except** jest rozszerzeniem firmy Microsoft do języka C, który umożliwia aplikacjom uzyskanie kontroli nad programem, gdy wystąpią zdarzenia, które normalnie kończą wykonywanie. Takie zdarzenia nazywane są wyjątkami, a mechanizm, który zajmuje się wyjątkami nazywa się strukturalną obsługą wyjątków.
 
-Wyjątki mogą być oparte na sprzęcie lub oprogramowaniu. Nawet wtedy, gdy aplikacje nie mogą całkowicie odzyskać sprawności po wystąpieniu wyjątku sprzętowego lub programowego, strukturalna obsługa wyjątków umożliwia wyświetlenie informacji o błędzie i pozwala na przechwycenie wewnętrznego stanu aplikacji, aby pomóc w zdiagnozowaniu problemu. Jest to szczególnie użyteczne w przypadku sporadycznych problemów, których nie można łatwo odtworzyć.
+Wyjątki mogą być zależne od sprzętu lub oprogramowania. Nawet wtedy, gdy aplikacje nie mogą całkowicie odzyskać sprawności po wystąpieniu wyjątku sprzętowego lub programowego, strukturalna obsługa wyjątków umożliwia wyświetlenie informacji o błędzie i pozwala na przechwycenie wewnętrznego stanu aplikacji, aby pomóc w zdiagnozowaniu problemu. Jest to szczególnie użyteczne w przypadku sporadycznych problemów, których nie można łatwo odtworzyć.
 
 ## <a name="syntax"></a>Składnia
 
-*try-except-statement*: **__try**  *zestawienie złożone*
+*try-except-Statement*: **__try**  *złożonej instrukcji*
 
-**__except (**  *wyrażenie*  **)**  *złożona instrukcja*
+*instrukcja złożonej instrukcji* **__except (***Expression***)**      
 
-Instrukcja złożona `__try` po klauzuli jest sekcją chroniona. Złożone wyrażenie po klauzuli `__except` to program obsługi wyjątków. Program obsługi określa zestaw akcji, które należy podjąć, jeśli wyjątek jest zgłaszany podczas wykonywania sekcji strzeżonej. Wykonanie przebiega w następujący sposób:
+Instrukcja złożona po `__try` klauzuli jest sekcją chronioną. Złożone wyrażenie po klauzuli `__except` to program obsługi wyjątków. Program obsługi określa zestaw akcji do wykonania, jeśli wyjątek jest wywoływany podczas wykonywania sekcji chronionej. Wykonanie przebiega w następujący sposób:
 
 1. Sekcja chroniona jest wykonywana.
 
 1. Jeśli podczas wykonywania sekcji chronionej nie wystąpi wyjątek, program kontynuuje wykonywanie instrukcji po klauzuli `__except`.
 
-1. Jeśli wyjątek występuje podczas wykonywania sekcji chronionej lub w dowolnej `__except` procedury wywołania sekcji chronionej, wyrażenie jest oceniane i zwracana wartość określa sposób obsługi wyjątku. Istnieją trzy wartości:
+1. Jeśli wystąpi wyjątek podczas wykonywania sekcji chronionej lub w każdej rutynowych wywołaniach sekcji chronionej, `__except` wyrażenie jest oceniane i zwracana wartość określa sposób obsługi wyjątku. Istnieją trzy wartości:
 
-   `EXCEPTION_CONTINUE_SEARCH`Wyjątek nie jest rozpoznawany. Kontynuuj wyszukiwanie stosu dla programu obsługi, najpierw dla zawierające **try-except** instrukcji, a następnie dla programów obsługi z następnego najwyższego pierwszeństwa.
+   `EXCEPTION_CONTINUE_SEARCH`Wyjątek nie został rozpoznany. Kontynuuj wyszukiwanie stosu dla programu obsługi, najpierw dla zawiera instrukcje **try-except** , a następnie dla programów obsługi przy użyciu następnego najwyższego pierwszeństwa.
 
-   `EXCEPTION_CONTINUE_EXECUTION`Wyjątek jest rozpoznawany, ale odrzucany. Kontynuuj wykonywanie w punkcie, w którym wystąpił wyjątek.
+   `EXCEPTION_CONTINUE_EXECUTION`Wyjątek jest rozpoznawany, ale odrzucony. Kontynuuj wykonywanie w punkcie, w którym wystąpił wyjątek.
 
-   `EXCEPTION_EXECUTE_HANDLER`Wyjątek jest rozpoznawany. Przenieś kontrolę do obsługi wyjątków, wykonując instrukcję złożoną, `__except` a następnie kontynuuj wykonywanie w punkcie, w którego wystąpił wyjątek.
+   `EXCEPTION_EXECUTE_HANDLER`Wyjątek jest rozpoznawany. Przetransferuj formant do programu obsługi wyjątków, `__except` wykonując instrukcję złożoną, a następnie kontynuuj wykonywanie w punkcie, w którym wystąpił wyjątek.
 
-Ponieważ `__except` wyrażenie jest oceniane jako wyrażenie C, jest ograniczone do pojedynczej wartości, operatora wyrażenia warunkowego lub operatora przecinka. Jeśli wymagane jest bardziej rozległe przetwarzanie, wyrażenie może wywołać procedurę, która zwraca jedną z trzech wartości wymienionych powyżej.
-
-> [!NOTE]
-> Obsługa wyjątków strukturalnych działa z plikami źródłowymi języka C i C++. Jednakże nie jest specjalnie zaprojektowana dla języka C++. Można zapewnić, że kod będzie bardziej przenośny przy użyciu obsługi wyjątków C++. Ponadto mechanizm obsługi wyjątków C++ jest znacznie bardziej elastyczny, ponieważ może obsługiwać wyjątki dowolnego typu.
+Ponieważ `__except` wyrażenie jest oceniane jako wyrażenie C, jest ograniczone do pojedynczej wartości, operatora warunkowego wyrażenia lub operatora przecinka. Jeśli wymagane jest bardziej rozległe przetwarzanie, wyrażenie może wywołać procedurę, która zwraca jedną z trzech wartości wymienionych powyżej.
 
 > [!NOTE]
-> W przypadku programów C++ należy używać obsługi wyjątków języka C++ zamiast obsługi wyjątków strukturalnych. Aby uzyskać więcej informacji, zobacz [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md) w *odwołaniu do języka języka języka C++*.
+> Strukturalna obsługa wyjątków współpracuje z plikami źródłowymi C i C++. Jednakże nie jest specjalnie zaprojektowana dla języka C++. Można zapewnić, że kod będzie bardziej przenośny przy użyciu obsługi wyjątków C++. Ponadto mechanizm obsługi wyjątków C++ jest znacznie bardziej elastyczny, dzięki czemu może obsługiwać wyjątki dowolnego typu.
 
-Każda procedura w aplikacji może mieć swój własny program obsługi wyjątków. Wyrażenie `__except` jest wykonywane w zakresie `__try` treści. Oznacza to, że ma dostęp do wszystkich zmiennych lokalnych zadeklarowanych tam.
+> [!NOTE]
+> W przypadku programów C++, obsługa wyjątków C++ powinna być używana zamiast strukturalnej obsługi wyjątków. Aby uzyskać więcej informacji, zobacz [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md) w *dokumentacji języka C++*.
 
-Słowo `__leave` kluczowe jest prawidłowe w bloku instrukcji **try-except.** Efektem `__leave` jest, aby przejść do końca **try-except** bloku. Wykonywanie wznawia po zakończeniu obsługi wyjątków. Chociaż `goto` instrukcja może służyć do osiągnięcia `goto` tego samego wyniku, instrukcja powoduje odwijania stosu. Instrukcja `__leave` jest bardziej wydajne, ponieważ nie obejmuje odwijania stosu.
+Każda procedura w aplikacji może mieć własny program obsługi wyjątków. Wyrażenie `__except` jest wykonywane w zakresie `__try` treści. Oznacza to, że ma dostęp do wszelkich zmiennych lokalnych zadeklarowanych w tym miejscu.
 
-Zamykanie **instrukcji try-except** `longjmp` przy użyciu funkcji czasu wykonywania jest uważane za nieprawidłowe zakończenie. To jest nielegalne, `__try` aby przejść do oświadczenia, ale legalne wyskoczyć z jednego. Program obsługi wyjątków nie jest wywoływana, jeśli proces zostanie zabity w trakcie wykonywania **instrukcji try-except.**
+`__leave` Słowo kluczowe jest prawidłowe w bloku instrukcji **try-except** . Efekt `__leave` ma przeskoczyć do końca bloku **try-except** . Wykonywanie zostało wznowione po zakończeniu obsługi wyjątków. Mimo że `goto` instrukcja może służyć do osiągnięcia tego samego wyniku, `goto` instrukcja powoduje odwinięcie stosu. Instrukcja `__leave` jest wydajniejsza, ponieważ nie obejmuje odwinięcia stosu.
+
+Opuszczanie instrukcji **try-except** przy użyciu funkcji `longjmp` Run-Time jest uznawane za nietypowe zakończenie. Przechodzenie do `__try` instrukcji nie jest dozwolone, ale istnieje możliwość wychodzenia z jednego. Procedura obsługi wyjątków nie jest wywoływana, jeśli proces zostanie zamknięty w trakcie wykonywania instrukcji **try-except** .
 
 ## <a name="example"></a>Przykład
 
-Poniżej przedstawiono przykład obsługi wyjątków i obsługi zakończenia. Zobacz [instrukcja try-finally, aby](../c-language/try-finally-statement-c.md) uzyskać więcej informacji na temat obsługi zakończenia.
+Poniżej znajduje się przykład obsługi wyjątków i procedury obsługi zakończenia. Aby uzyskać więcej informacji na temat programów obsługi zakończenia [, zobacz instrukcję try-finally](../c-language/try-finally-statement-c.md) .
 
 ```
 .
@@ -82,7 +82,7 @@ __try{
 puts("world");
 ```
 
-Jest to wynik z przykładu, z komentarzem dodanym po prawej stronie:
+Jest to wynik z przykładu, z dodaniem komentarza po prawej stronie:
 
 ```
 hello
@@ -94,7 +94,7 @@ in except           /* transfer control to selected handler */
 world               /* flow out of handler                  */
 ```
 
-**ZAKOŃCZ Specyficzne dla firmy Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
 

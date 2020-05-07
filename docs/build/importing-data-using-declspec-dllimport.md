@@ -16,7 +16,7 @@ ms.locfileid: "79440447"
 ---
 # <a name="importing-data-using-__declspecdllimport"></a>Importowanie danych przy użyciu atrybutu __declspec(dllimport)
 
-W przypadku danych korzystanie z **__declspec (dllimport)** to wygodne elementy, które usuwają warstwę operatora pośredniego. W przypadku importowania danych z biblioteki DLL nadal trzeba przejść przez tabelę adresów importu. Przed **__declspec (dllimport)** , należy pamiętać o przepełnieniu dodatkowego poziomu pośredniego podczas uzyskiwania dostępu do danych wyeksportowanych z biblioteki dll:
+W przypadku danych korzystanie z **__declspec (dllimport)** to wygodne elementy, które usuwają warstwę operatora pośredniego. W przypadku importowania danych z biblioteki DLL nadal trzeba przejść przez tabelę adresów importu. Przed **__declspec (dllimport)**, należy pamiętać o przepełnieniu dodatkowego poziomu pośredniego podczas uzyskiwania dostępu do danych wyeksportowanych z biblioteki dll:
 
 ```
 // project.h
@@ -46,7 +46,7 @@ if (*ulDataInDll == 0L)
 }
 ```
 
-Gdy oznaczesz dane jako **__declspec (dllimport)** , kompilator automatycznie generuje kod pośredni. Nie musisz już martwić się o powyższe kroki. Jak wspomniano wcześniej, nie należy używać deklaracji **__declspec (dllimport)** dla danych podczas KOMPILOWANIA biblioteki DLL. Funkcje w bibliotece DLL nie używają tabeli adresów importu do uzyskiwania dostępu do obiektu danych. w związku z tym nie będziesz mieć dodatkowego poziomu pośredniego.
+Gdy oznaczesz dane jako **__declspec (dllimport)**, kompilator automatycznie generuje kod pośredni. Nie musisz już martwić się o powyższe kroki. Jak wspomniano wcześniej, nie należy używać deklaracji **__declspec (dllimport)** dla danych podczas KOMPILOWANIA biblioteki DLL. Funkcje w bibliotece DLL nie używają tabeli adresów importu do uzyskiwania dostępu do obiektu danych. w związku z tym nie będziesz mieć dodatkowego poziomu pośredniego.
 
 Aby wyeksportować dane automatycznie z biblioteki DLL, Użyj tej deklaracji:
 

@@ -13,10 +13,10 @@ ms.locfileid: "62233686"
 ---
 # <a name="file-position-in-append-mode"></a>Położenie pliku w trybie append
 
-**ANSI 4.9.3** tego, czy wskaźnik położenia pliku strumienia w trybie append początkowo jest umieszczony na początku lub na końcu pliku
+**4.9.3 ANSI** Czy wskaźnik położenia pliku strumienia trybu dołączania jest początkowo umieszczony na początku lub na końcu pliku
 
-Gdy plik jest otwarty w trybie append, wskaźnik pozycji pliku jest początkowo wskazuje na końcu pliku.
+Gdy plik zostanie otwarty w trybie dołączania, wskaźnik położenia pliku początkowo wskazuje na koniec pliku.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

@@ -11,12 +11,12 @@ no-loc:
 - case
 - default
 - break
-ms.openlocfilehash: 5858447602a28dcc5573aa3138e869d106b5aa23
-ms.sourcegitcommit: 2f9ff2041d70c406df76c5053151192aad3937ea
+ms.openlocfilehash: eb18b6244318b595e67cc45f99dfcde314866f55
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587375"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825681"
 ---
 # <a name="switch-statement-c"></a>`switch`Instrukcja (C)
 
@@ -24,11 +24,11 @@ Instrukcje __`switch`__ i __`case`__ ułatwiają kontrolę złożonych operacji 
 
 ## <a name="syntax"></a>Składnia
 
-> *`selection-statement`*:<br/>
+> *`selection-statement`*:\
 > &nbsp;&nbsp;&nbsp;&nbsp; __`switch (`__&nbsp;*`expression`* &nbsp;__`)`__&nbsp;*`statement`*
 
-> *`labeled-statement`*:<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*<br/>
+> *`labeled-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*\
 > &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
 
 ## <a name="remarks"></a>Uwagi
@@ -122,6 +122,6 @@ Microsoft C nie ogranicza liczby __`case`__ wartości w __`switch`__ instrukcji.
 
 W default przypadku oprogramowania Microsoft C są włączone rozszerzenia Microsoft. Aby wyłączyć te rozszerzenia, użyj opcji kompilatora [/za](../build/reference/za-ze-disable-language-extensions.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [switchInstrukcja (C++)](../cpp/switch-statement-cpp.md)

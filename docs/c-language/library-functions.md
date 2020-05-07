@@ -11,9 +11,9 @@ ms.locfileid: "62232790"
 ---
 # <a name="library-functions"></a>Funkcje bibliotek
 
-- [NULL, makro](../c-language/null-macro.md)
+- [NULL — makro](../c-language/null-macro.md)
 
-- [Diagnostyka wydrukowana przez funkcję assert](../c-language/diagnostic-printed-by-the-assert-function.md)
+- [Diagnostyka wydrukowana przez funkcję Assert](../c-language/diagnostic-printed-by-the-assert-function.md)
 
 - [Testowanie znaków](../c-language/character-testing.md)
 
@@ -21,9 +21,9 @@ ms.locfileid: "62232790"
 
 - [Niedopełnienie wartości zmiennoprzecinkowych](../c-language/underflow-of-floating-point-values.md)
 
-- [Fmod — funkcja](../c-language/fmod-function.md)
+- [Funkcja FMOD —](../c-language/fmod-function.md)
 
-- [Sygnał — funkcja](../c-language/signal-function-c.md)
+- [Funkcja sygnału](../c-language/signal-function-c.md)
 
 - [Sygnały domyślne](../c-language/default-signals.md)
 
@@ -31,11 +31,11 @@ ms.locfileid: "62232790"
 
 - [Puste wiersze](../c-language/blank-lines.md)
 
-- [Znaki Null](../c-language/null-characters.md)
+- [Znaki null](../c-language/null-characters.md)
 
 - [Położenie pliku w trybie append](../c-language/file-position-in-append-mode.md)
 
-- [Obcięcie plików tekstowych](../c-language/truncation-of-text-files.md)
+- [Obcinanie plików tekstowych](../c-language/truncation-of-text-files.md)
 
 - [Buforowanie plików](../c-language/file-buffering.md)
 
@@ -47,7 +47,7 @@ ms.locfileid: "62232790"
 
 - [Usuwanie otwartych plików](../c-language/deleting-open-files.md)
 
-- [Zmiana nazwy na nazwę już istniejącą](../c-language/renaming-with-a-name-that-exists.md)
+- [Zmiana nazwy na nazwę, która istnieje](../c-language/renaming-with-a-name-that-exists.md)
 
 - [Odczytywanie wartości wskaźnika](../c-language/reading-pointer-values.md)
 
@@ -55,24 +55,24 @@ ms.locfileid: "62232790"
 
 - [Błędy pozycji w pliku](../c-language/file-position-errors.md)
 
-- [Komunikaty generowane przez funkcję perror](../c-language/messages-generated-by-the-perror-function.md)
+- [Komunikaty generowane przez funkcję pError](../c-language/messages-generated-by-the-perror-function.md)
 
 - [Przydzielanie pamięci zerowej](../c-language/allocating-zero-memory.md)
 
-- [Abort — funkcja](../c-language/abort-function-c.md)
+- [Funkcja Abort](../c-language/abort-function-c.md)
 
-- [Atexit — funkcja](../c-language/atexit-function-c.md)
+- [Funkcja atexit —](../c-language/atexit-function-c.md)
 
 - [Nazwy środowiska](../c-language/environment-names.md)
 
 - [Funkcja systemowa](../c-language/system-function.md)
 
-- [Strerror — funkcja](../c-language/strerror-function.md)
+- [Funkcja strerror](../c-language/strerror-function.md)
 
 - [Strefa czasowa](../c-language/time-zone.md)
 
-- [Clock — funkcja](../c-language/clock-function-c.md)
+- [Funkcja Clock](../c-language/clock-function-c.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)

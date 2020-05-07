@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie izolowanych aplikacji do korzystania ze składników COM'
+title: 'Porady: kompilowanie izolowanych aplikacji korzystających ze składników COM'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - isolated applications [C++]
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69493234"
 ---
-# <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Instrukcje: Tworzenie izolowanych aplikacji do korzystania ze składników COM
+# <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Porady: kompilowanie izolowanych aplikacji korzystających ze składników COM
 
 Aplikacje izolowane to aplikacje, które mają wbudowane manifesty w programie. Można tworzyć izolowane aplikacje do korzystania ze składników COM.
 
@@ -37,7 +37,7 @@ Aplikacje izolowane to aplikacje, które mają wbudowane manifesty w programie. 
 
 1. Skompiluj rozwiązanie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Aplikacje izolowane](/windows/win32/SbsCs/isolated-applications)<br/>
 [Informacje o zestawach równoległych](/windows/win32/SbsCs/about-side-by-side-assemblies-)

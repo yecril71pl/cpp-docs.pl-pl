@@ -14,9 +14,9 @@ ms.locfileid: "62232098"
 ---
 # <a name="preprocessing-directives"></a>Dyrektywy przetwarzania wstępnego
 
-- [Znaki stałej i dołączenie warunkowe](../c-language/character-constants-and-conditional-inclusion.md)
+- [Stałe znakowe i dołączanie warunkowe](../c-language/character-constants-and-conditional-inclusion.md)
 
-- [Łącznie z nazwami plików w nawiasach](../c-language/including-bracketed-filenames.md)
+- [Łącznie z nazwami plików w nawiasach klamrowych](../c-language/including-bracketed-filenames.md)
 
 - [Łącznie z nazwami plików w cudzysłowie](../c-language/including-quoted-filenames.md)
 
@@ -24,8 +24,8 @@ ms.locfileid: "62232098"
 
 - [Pragmy](../c-language/pragmas.md)
 
-- [Domyślne data i godzina](../c-language/default-date-and-time.md)
+- [Domyślna Data i godzina](../c-language/default-date-and-time.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)

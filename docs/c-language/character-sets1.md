@@ -28,8 +28,8 @@ Zestaw znaków źródła i zestaw znaków wykonywania zawierają znaki ASCII wym
 |&#92;v|Tabulator pionowy|11|
 |&#92;"|Podwójny cudzysłów|34|
 |&#92;'|Pojedynczy cytat|39|
-|&#92;&#92;|Ukośnik odwrotny|92|
+|&#92;&#92;|Ukośnika odwrotnego|92|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Znaki](../c-language/characters.md)<br/>
+[Znaków](../c-language/characters.md)<br/>

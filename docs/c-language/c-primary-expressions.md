@@ -13,20 +13,20 @@ ms.locfileid: "67400464"
 ---
 # <a name="c-primary-expressions"></a>Wyrażenia podstawowe języka C
 
-Argumenty operacji w wyrażeniach są nazywane "wyrażenia podstawowe".
+Operandy w wyrażeniach są nazywane "wyrażeniami podstawowymi".
 
 ## <a name="syntax"></a>Składnia
 
-*primary-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Stałe*<br/>
+*wyrażenie podstawowe*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identyfikatora*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*stałego*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*literał ciągu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **(** *wyrażenie* **)**
+&nbsp;&nbsp;&nbsp;&nbsp;**(** *wyrażenie* **)**
 
-*expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie* **,** *wyrażenia przypisania*
+*wyrażenie*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*przypisanie — wyrażenie*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie* **,** *przypisanie — wyrażenie*
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operandy i wyrażenia](../c-language/operands-and-expressions.md)

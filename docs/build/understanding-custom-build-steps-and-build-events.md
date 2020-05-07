@@ -20,15 +20,15 @@ ms.locfileid: "70177314"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Ogólne informacje o niestandardowych krokach kompilacji lub zdarzeniach kompilacji
 
-W środowisku deweloperskim C++ wizualizacji istnieją trzy podstawowe sposoby dostosowywania procesu kompilacji:
+W środowisku deweloperskim Visual C++ istnieją trzy podstawowe sposoby dostosowywania procesu kompilacji:
 
 - **Niestandardowe kroki kompilacji**
 
-   Niestandardowy krok kompilacji jest regułą kompilacji skojarzoną z projektem. Niestandardowy krok kompilacji może określać wiersz poleceń do wykonania, wszelkie dodatkowe pliki wejściowe lub wyjściowe oraz komunikat do wyświetlenia. Aby uzyskać więcej informacji, zobacz [jak: Dodaj niestandardowy krok kompilacji do projektów](how-to-add-a-custom-build-step-to-msbuild-projects.md)MSBuild.
+   Niestandardowy krok kompilacji jest regułą kompilacji skojarzoną z projektem. Niestandardowy krok kompilacji może określać wiersz poleceń do wykonania, wszelkie dodatkowe pliki wejściowe lub wyjściowe oraz komunikat do wyświetlenia. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie niestandardowego kroku kompilacji do projektów MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md).
 
 - **Niestandardowe narzędzia kompilacji**
 
-   Niestandardowe narzędzie kompilacji jest regułą kompilacji skojarzoną z co najmniej jednym plikami. Niestandardowy krok kompilacji umożliwia przekazywanie plików wejściowych do niestandardowego narzędzia kompilacji, co powoduje utworzenie co najmniej jednego pliku wyjściowego. Na przykład pliki pomocy w aplikacji MFC są kompilowane za pomocą niestandardowego narzędzia kompilacji. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie niestandardowych narzędzi kompilacji do projektów](how-to-add-custom-build-tools-to-msbuild-projects.md) programu MSBuild i [Określanie niestandardowych narzędzi kompilacji](specifying-custom-build-tools.md).
+   Niestandardowe narzędzie kompilacji jest regułą kompilacji skojarzoną z co najmniej jednym plikami. Niestandardowy krok kompilacji umożliwia przekazywanie plików wejściowych do niestandardowego narzędzia kompilacji, co powoduje utworzenie co najmniej jednego pliku wyjściowego. Na przykład pliki pomocy w aplikacji MFC są kompilowane za pomocą niestandardowego narzędzia kompilacji. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie niestandardowych narzędzi kompilacji do projektów MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md) i [Określanie niestandardowych narzędzi kompilacji](specifying-custom-build-tools.md).
 
 - **Zdarzenia kompilacji**
 
@@ -62,7 +62,7 @@ Dla każdego projektu w rozwiązaniu zdarzenia kompilacji i niestandardowe kroki
 
 11. Zdarzenie po kompilacji
 
-I a a `post-build event` działa sekwencyjnie po zakończeniu wszystkich pozostałych procesów kompilacji. `custom build step on the project`
+`custom build step on the project` I a a `post-build event` działa sekwencyjnie po zakończeniu wszystkich pozostałych procesów kompilacji.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -71,7 +71,7 @@ I a a `post-build event` działa sekwencyjnie po zakończeniu wszystkich pozosta
 [Rozwiązywanie problemów z dostosowaniami kompilacji](troubleshooting-build-customizations.md)<br/>
 [Formatowanie danych wyjściowych niestandardowego kroku kompilacji lub zdarzenia kompilacji](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Projekty programu Visual Studio — C++](creating-and-managing-visual-cpp-projects.md)<br>
-[Typowe makra dla właściwości i poleceń kompilacji](reference/common-macros-for-build-commands-and-properties.md)
+[Typowe makra dla poleceń i właściwości kompilacji](reference/common-macros-for-build-commands-and-properties.md)
