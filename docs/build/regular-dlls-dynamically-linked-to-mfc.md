@@ -1,5 +1,5 @@
 ---
-title: Zwykłe biblioteki DLL MFC połączone dynamicznie z MFC
+title: Regularne biblioteki DLL MFC połączone dynamicznie z MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - regular MFC DLLs [C++], dynamically linked to MFC
@@ -15,86 +15,86 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62315004"
 ---
-# <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>Zwykłe biblioteki DLL MFC połączone dynamicznie z MFC
+# <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>Regularne biblioteki DLL MFC połączone dynamicznie z MFC
 
-Wyrażenie, które biblioteki MFC DLL łączonej dynamicznie z MFC jest biblioteki DLL, która używa wewnętrznie MFC i eksportowanych funkcji w bibliotece DLL może być wywoływany przez pliki wykonywalne MFC lub inne niż MFC. Zgodnie z opisem w nazwę tego rodzaju DLL został skompilowany przy użyciu wersji biblioteki DLL MFC (znany także jako udostępnionej wersja MFC). Funkcje eksportowane są zwykle od zwykłej biblioteki MFC DLL za pomocą standardowego interfejsu C.
+Zwykła Biblioteka MFC dynamicznie połączona z MFC jest biblioteką DLL, która używa wewnętrznie MFC, a eksportowane funkcje w bibliotece DLL mogą być wywoływane przez pliki wykonywalne MFC lub inne niż MFC. Jak opisano w opisie, ten rodzaj biblioteki DLL jest tworzony przy użyciu biblioteki dołączanej dynamicznie MFC (znanej również jako udostępniona wersja MFC). Funkcje są zwykle eksportowane ze zwykłej biblioteki MFC DLL przy użyciu standardowego interfejsu języka C.
 
-Należy dodać `AFX_MANAGE_STATE` — makro na początku wszystkich eksportowanych funkcji w zwykłych bibliotekach MFC dll, która łączy dynamicznie MFC, aby ustawić bieżący stan modułu dla biblioteki DLL. Można to zrobić, dodając następujący wiersz kodu na początku funkcji wyeksportowanych z biblioteki DLL:
+Należy dodać `AFX_MANAGE_STATE` makro na początku wszystkich wyeksportowanych funkcji w zwykłych bibliotekach DLL MFC, które dynamicznie łączą się z MFC w celu ustawienia bieżącego stanu modułu dla biblioteki DLL. W tym celu należy dodać następujący wiersz kodu do początku funkcji wyeksportowanych z biblioteki DLL:
 
 ```
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 ```
 
-Regularne biblioteki MFC DLL łączonej dynamicznie z MFC ma następujące cechy:
+Zwykła Biblioteka MFC DLL, dynamicznie połączona z MFC, ma następujące funkcje:
 
-- Jest to nowy typ biblioteki DLL wprowadzone przez Visual C++ 4.0.
+- Jest to nowy typ biblioteki DLL wprowadzonej przez Visual C++ 4,0.
 
-- Klient wykonywalny mogą być napisane w dowolnym języku, który obsługuje korzystanie z biblioteki dll (C, C++, Pascal, Visual Basic i tak dalej); nie ma być aplikacji MFC.
+- Plik wykonywalny klienta można napisać w dowolnym języku, który obsługuje biblioteki DLL (C, C++, Pascal, Visual Basic itd.); nie musi to być aplikacja MFC.
 
-- W odróżnieniu od statycznie łączonych regularnej biblioteki DLL MFC tego rodzaju DLL dynamicznie połączone z biblioteki MFC DLL (znany także jako udostępnionej biblioteki MFC DLL).
+- W przeciwieństwie do statycznie połączonej, regularnej biblioteki MFC DLL, ten typ biblioteki DLL jest dynamicznie połączony z biblioteką DLL MFC (znaną również jako udostępniona biblioteka MFC DLL).
 
-- Importuj biblioteki MFC, połączone z tego rodzaju DLL jest taka sama, jedną dla bibliotek DLL rozszerzeń MFC lub aplikacji przy użyciu biblioteki MFC DLL: MFCxx(D).lib.
+- Biblioteka importowana MFC połączona z tym typem biblioteki DLL jest taka sama, jak w przypadku bibliotek DLL lub aplikacji rozszerzenia MFC, przy użyciu biblioteki MFC DLL: MFCxx (D). lib.
 
-Regularne biblioteki MFC DLL łączonej dynamicznie z MFC ma następujące wymagania:
+Zwykła Biblioteka MFC DLL, dynamicznie połączona z MFC, ma następujące wymagania:
 
-- Te biblioteki DLL są kompilowane przy użyciu **_AFXDLL** zdefiniowane, podobnie jak w przypadku pliku wykonywalnego, która jest połączona dynamicznie do MFC DLL. Ale **_usrdll —** jest również definiowany, podobnie jak zwykłej biblioteki MFC DLL, które jest połączone statycznie z MFC.
+- Te biblioteki DLL są kompilowane ze zdefiniowanym **_AFXDLL** , podobnie jak plik wykonywalny, który jest dynamicznie połączony z biblioteką DLL MFC. Ale **_USRDLL** jest również zdefiniowana, podobnie jak zwykła Biblioteka DLL MFC, która jest statycznie połączona z MFC.
 
-- Tego rodzaju DLL należy utworzyć wystąpienie `CWinApp`-klasy pochodnej.
+- Ten typ biblioteki DLL musi utworzyć wystąpienie `CWinApp`klasy pochodnej.
 
-- Ten typ korzysta z biblioteki DLL `DllMain` dostarczonych przez MFC. Umieszczenie całego kodu inicjowania biblioteki DLL określonej w `InitInstance` kod funkcji i kończenie działania elementu członkowskiego w `ExitInstance` jak normalna Aplikacja MFC.
+- Ten typ biblioteki DLL używa `DllMain` dostarczone przez MFC. Umieść wszystkie kod inicjalizacji specyficzny dla biblioteki `InitInstance` dll w funkcji członkowskiej i `ExitInstance` kod zakończenia w taki sposób, jak w przypadku normalnej aplikacji MFC.
 
-Ponieważ tego rodzaju DLL korzysta z wersji biblioteki DLL MFC, musisz jawnie ustawić bieżący stan modułu na jeden dla biblioteki DLL. Aby to zrobić, należy użyć [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) — makro na początku każdej funkcji wyeksportowane z biblioteki DLL.
+Ponieważ ten rodzaj biblioteki DLL używa biblioteki MFC z dołączaniem dynamicznym, należy jawnie ustawić bieżący stan modułu dla biblioteki DLL. Aby to zrobić, użyj makra [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) na początku każdej funkcji wyeksportowanej z biblioteki DLL.
 
-regularne biblioteki DLL MFC musi mieć `CWinApp`-pochodne klasy i pojedynczy obiekt tej klasy aplikacji, tak jak w aplikacji MFC. Jednak `CWinApp` obiekt biblioteki DLL nie ma pompa głównego wiadomości, tak jak `CWinApp` obiektu aplikacji.
+regularne biblioteki DLL MFC muszą mieć `CWinApp`klasę pochodną i pojedynczy obiekt tej klasy aplikacji, tak jak aplikacja MFC. Jednak `CWinApp` obiekt biblioteki DLL nie ma głównej pompki komunikatów, ponieważ `CWinApp` obiekt aplikacji.
 
-Należy pamiętać, że `CWinApp::Run` mechanizm nie ma zastosowania do biblioteki DLL, ponieważ aplikacja jest właścicielem pompy komunikatów głównego. Jeśli biblioteka DLL ma główne okno ramowe własnych lub wyświetlenie Niemodalne okna dialogowe, pompy komunikatów główny aplikacji musi wywołać procedurę wyeksportowane biblioteki DLL, która wywołuje `CWinApp::PreTranslateMessage`.
+Należy zauważyć, `CWinApp::Run` że mechanizm nie ma zastosowania do biblioteki DLL, ponieważ aplikacja jest właścicielem głównej pompy komunikatów. Jeśli biblioteka DLL wywołuje Niemodalne okna dialogowe lub ma własne główne okno ramek, główna pompa komunikatów aplikacji musi wywołać procedurę wyeksportowanej biblioteki DLL, która wywołuje `CWinApp::PreTranslateMessage`.
 
-Umieść wszystkie Inicjowanie biblioteki DLL określonej w `CWinApp::InitInstance` funkcja elementu członkowskiego, tak jak normalna Aplikacja MFC. `CWinApp::ExitInstance` Funkcji składowej typu usługi `CWinApp` klasy pochodnej jest wywoływana z MFC, pod warunkiem `DllMain` funkcja biblioteki DLL jest zwalniana.
+Umieść wszystkie inicjalizacje specyficzne dla biblioteki DLL `CWinApp::InitInstance` w funkcji składowej tak jak w przypadku normalnej aplikacji MFC. Funkcja `CWinApp::ExitInstance` członkowska klasy `CWinApp` pochodnej jest wywoływana z funkcji dostarczonej `DllMain` przez MFC, zanim Biblioteka DLL zostanie zwolniona.
 
-Musisz przeprowadzić dystrybucję udostępnionych bibliotek DLL MFCx0.dll i Msvcr*0.dll (lub podobnych plików) z aplikacją.
+W aplikacji należy dystrybuować udostępnione biblioteki DLL MFCx0. dll i pliku MSVCR * 0. dll (lub podobne pliki).
 
-Biblioteka DLL, która jest połączona dynamicznie z MFC również statycznie nie można połączyć z MFC. Link aplikacji do zwykłych bibliotekach MFC DLL łączonej dynamicznie z MFC go tak samo jak inne biblioteki DLL.
+Biblioteka DLL, która jest dynamicznie połączona z MFC, nie może również statycznie łączyć się z MFC. Aplikacje łączą się z regularnymi bibliotekami DLL MFC połączonymi dynamicznie z MFC, podobnie jak w przypadku każdej innej biblioteki DLL.
 
-Symbole zwykle są eksportowane z zwykłej biblioteki MFC DLL za pomocą standardowego interfejsu C. Deklaracja funkcji wyeksportowanej z regularnej biblioteki DLL MFC wygląda następująco:
+Symbole są zwykle eksportowane z zwykłej biblioteki MFC DLL przy użyciu standardowego interfejsu języka C. Deklaracja funkcji eksportowanej ze zwykłej biblioteki MFC DLL wygląda następująco:
 
 ```
 extern "C" __declspec(dllexport) MyExportedFunction( );
 ```
 
-Wszystkie alokacje pamięci w ramach regularnej biblioteki DLL MFC powinno pozostać w bibliotece DLL; biblioteki DLL należy przekazać do lub nie otrzymywać wywoływania pliku wykonywalnego, dowolny z następujących czynności:
+Wszystkie alokacje pamięci w ramach zwykłej biblioteki MFC DLL powinny pozostać w bibliotece DLL; Biblioteka DLL nie powinna przekazać do wywołującego pliku wykonywalnego ani odebrać z niego żadnego z następujących elementów:
 
-- Wskaźniki do obiektów MFC
+- wskaźniki do obiektów MFC
 
-- Wskaźniki do pamięci przydzielonej przez MFC
+- wskaźniki do pamięci przydzielonej przez MFC
 
-Jeśli musisz wykonać żadnej z powyższych lub należy przekazać obiekty pochodzące z MFC między wywoływania pliku wykonywalnego i biblioteki DLL, należy utworzyć rozszerzenia MFC biblioteki DLL.
+Jeśli trzeba wykonać dowolne z powyższych czynności lub w przypadku konieczności przekazania obiektów pochodnych MFC między wywołującym plik wykonywalny a biblioteką DLL, należy utworzyć bibliotekę DLL rozszerzenia MFC.
 
-Jest bezpieczne przekazać wskaźniki do pamięci, która została przydzielona przez biblioteki wykonawczej C między aplikacją a biblioteki DLL tylko wtedy, gdy wykonanie kopii danych. Nie musisz usunąć lub zmienić rozmiar tych wskaźników lub używać ich bez powiększania kopiowania pamięci.
+Można bezpiecznie przekazać wskaźniki do pamięci, która została przypisana przez biblioteki uruchomieniowe C między aplikacją a biblioteką DLL tylko w przypadku wykonywania kopii danych. Nie należy usuwać ani zmieniać rozmiarów tych wskaźników ani ich używać bez tworzenia kopii pamięci.
 
-Gdy kompilowanie regularnej biblioteki MFC DLL, która dynamicznie łączy z MFC, należy użyć makro [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) poprawnie przełączyć stanu modułu MFC. Można to zrobić, dodając następujący wiersz kodu na początku funkcji wyeksportowanych z biblioteki DLL:
+Podczas kompilowania zwykłej biblioteki MFC DLL, która łączy dynamicznie z MFC, należy użyć [AFX_MANAGE_STATE](../mfc/reference/extension-dll-macros.md#afx_manage_state) makro, aby prawidłowo przełączyć stan modułu MFC. W tym celu należy dodać następujący wiersz kodu do początku funkcji wyeksportowanych z biblioteki DLL:
 
 ```
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 ```
 
-**AFX_MANAGE_STATE** — makro nie należy używać w zwykłych bibliotekach MFC dll, która statycznie łączy się z MFC lub biblioteki DLL rozszerzeń MFC. Aby uzyskać więcej informacji, zobacz [Zarządzanie dane stanu modułów MFC](../mfc/managing-the-state-data-of-mfc-modules.md).
+Makro **AFX_MANAGE_STATE** nie powinno być używane w zwykłych bibliotekach DLL MFC, które statycznie łączą się z MFC lub w bibliotekach DLL rozszerzenia MFC. Aby uzyskać więcej informacji, zobacz [Zarządzanie danymi stanu modułów MFC](../mfc/managing-the-state-data-of-mfc-modules.md).
 
-Na przykład sposobu pisania, kompilacji i użyć regularnej biblioteki DLL MFC, zobacz przykład [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap). Aby uzyskać więcej informacji na temat zwykłych bibliotekach MFC dll, która łączy dynamicznie MFC zobacz sekcję pod tytułem "Konwertowanie DLLScreenCap do dynamicznie łączy z biblioteki MFC DLL" w abstrakcyjny dla przykładu.
+Aby zapoznać się z przykładem sposobu pisania, kompilowania i używania zwykłej biblioteki MFC DLL, zobacz przykład [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap). Aby uzyskać więcej informacji na temat zwykłych bibliotek DLL MFC, które dynamicznie łączą się z MFC, zobacz sekcję zatytułowaną "Konwertowanie DLLScreenCap na dynamiczne łączenie z biblioteką MFC DLL" w postaci abstrakcyjnej dla przykładu.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
-- [Zainicjuj regularną bibliotekę DLL MFC](run-time-library-behavior.md#initializing-regular-dlls)
+- [Inicjowanie zwykłych bibliotek DLL MFC](run-time-library-behavior.md#initializing-regular-dlls)
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+## <a name="what-do-you-want-to-know-more-about"></a>Jak chcesz dowiedzieć się więcej?
 
-- [Stany modułu zwykłej biblioteki MFC DLL łączonej dynamicznie z MFC](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
+- [Stany modułu zwykłej biblioteki DLL MFC połączonej dynamicznie z MFC](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
 
 - [Zarządzanie danymi stanu modułów MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
 
-- [Używanie bibliotek DLL baz danych, OLE i rozszerzeń MFC gniazd w zwykłych bibliotekach MFC DLL](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [Korzystanie z bibliotek DLL rozszerzeń MFC w bazie danych, OLE i Sockets w zwykłych bibliotekach DLL MFC](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 - [Używanie MFC jako części biblioteki DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rodzaje bibliotek DLL](kinds-of-dlls.md)

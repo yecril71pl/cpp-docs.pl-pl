@@ -34,9 +34,9 @@ EXPORTS
    Min   @4
 ```
 
-Jeśli użyjesz [kreatora MFC DLL](../mfc/reference/mfc-dll-wizard.md) do utworzenia biblioteki MFC DLL, Kreator tworzy plik szkieletu i automatycznie dodaje go do projektu. Dodaj nazwy funkcji, które mają zostać wyeksportowane do tego pliku. W przypadku bibliotek DLL innych niż MFC Utwórz sam plik DEF i dodaj go do projektu. Następnie przejdź do **właściwości** > **projektu** > **konsolidator** > **plik definicji modułu** **danych wejściowych** > i wprowadź nazwę pliku DEF. Powtórz ten krok dla każdej konfiguracji i platformy lub wykonaj wszystkie czynności jednocześnie, wybierając kolejno pozycje **Konfiguracja = wszystkie konfiguracje**i **platforma = wszystkie platformy**.
+Jeśli użyjesz [kreatora MFC DLL](../mfc/reference/mfc-dll-wizard.md) do utworzenia biblioteki MFC DLL, Kreator tworzy plik szkieletu i automatycznie dodaje go do projektu. Dodaj nazwy funkcji, które mają zostać wyeksportowane do tego pliku. W przypadku bibliotek DLL innych niż MFC Utwórz sam plik DEF i dodaj go do projektu. Następnie przejdź do pozycji**Właściwości** >  **projektu** > **konsolidator** > **wejściowy** > **plik definicji modułu** i wprowadź nazwę pliku DEF. Powtórz ten krok dla każdej konfiguracji i platformy lub wykonaj wszystkie czynności jednocześnie, wybierając kolejno pozycje **Konfiguracja = wszystkie konfiguracje**i **platforma = wszystkie platformy**.
 
-Jeśli eksportujesz funkcje w C++ pliku, musisz umieścić nazwy dekoracyjne w pliku DEF lub zdefiniować funkcje wyeksportowane za pomocą standardowego powiązania c, używając elementu extern "C". Jeśli trzeba umieścić nazwy dekoracyjne w pliku DEF, można je uzyskać za pomocą narzędzia [polecenia DUMPBIN](../build/reference/dumpbin-reference.md) lub za pomocą opcji konsolidatora [/map](../build/reference/map-generate-mapfile.md) . Należy zauważyć, że nazwy dekoracyjne wytwarzane przez kompilator są specyficzne dla kompilatora. Jeśli umieścisz nazwy dekoracyjne wytworzone przez kompilator C++ firmy Microsoft (MSVC) w pliku DEF, aplikacje łączące się z biblioteką DLL również muszą zostać skompilowane przy użyciu tej samej wersji programu MSVC, aby nazwy dekoracyjne w aplikacji wywołującej odpowiadały wyeksportowanym nazwom w pliku dll.
+Jeśli eksportujesz funkcje w pliku języka C++, musisz umieścić nazwy dekoracyjne w pliku DEF lub zdefiniować eksportowane funkcje ze standardowym powiązaniem C przy użyciu elementu extern "C". Jeśli trzeba umieścić nazwy dekoracyjne w pliku DEF, można je uzyskać za pomocą narzędzia [polecenia DUMPBIN](../build/reference/dumpbin-reference.md) lub za pomocą opcji konsolidatora [/map](../build/reference/map-generate-mapfile.md) . Należy zauważyć, że nazwy dekoracyjne wytwarzane przez kompilator są specyficzne dla kompilatora. Jeśli umieścisz dekoracyjne nazwy wytwarzane przez kompilator języka Microsoft C++ (MSVC) w pliku DEF, aplikacje, które łączą się z biblioteką DLL, muszą być również skompilowane przy użyciu tej samej wersji programu MSVC, aby nazwy dekoracyjne w aplikacji wywołującej odpowiadały wyeksportowanym nazwom w pliku DLL.
 
 > [!NOTE]
 > Biblioteka DLL skompilowana za pomocą programu Visual Studio 2015 może być używana przez aplikacje skompilowane z programem Visual Studio 2017 lub Visual Studio 2019.
@@ -51,7 +51,7 @@ W przypadku kompilowania [biblioteki DLL rozszerzenia](../build/extension-dlls-o
 #define AFX_DATA
 ```
 
-Te linie zapewniają, że zmienne MFC używane wewnętrznie lub dodawane do klas zostaną wyeksportowane (lub zaimportowane) z biblioteki DLL rozszerzenia MFC. Na przykład podczas wyprowadzania klasy przy użyciu `DECLARE_DYNAMIC`, makro rozszerza się, aby dodać `CRuntimeClass` zmienną członkowską do klasy. Pozostawienie tych czterech wierszy może spowodować, że biblioteka DLL zostanie skompilowana lub nawiązać nieprawidłowo lub przyczyną błędu, gdy aplikacja kliencka łączy się z biblioteką DLL.
+Te linie zapewniają, że zmienne MFC używane wewnętrznie lub dodawane do klas zostaną wyeksportowane (lub zaimportowane) z biblioteki DLL rozszerzenia MFC. Na przykład podczas wyprowadzania klasy przy użyciu `DECLARE_DYNAMIC`, makro rozszerza się, aby dodać zmienną `CRuntimeClass` członkowską do klasy. Pozostawienie tych czterech wierszy może spowodować, że biblioteka DLL zostanie skompilowana lub nawiązać nieprawidłowo lub przyczyną błędu, gdy aplikacja kliencka łączy się z biblioteką DLL.
 
 Podczas kompilowania biblioteki DLL konsolidator używa pliku DEF do utworzenia pliku eksportu (. EXP) i pliku biblioteki importu (. lib). Konsolidator używa pliku eksportu do skompilowania pliku DLL. Pliki wykonywalne, które niejawnie łączą się z linkiem DLL do biblioteki importu podczas tworzenia.
 
@@ -63,9 +63,9 @@ Należy pamiętać, że MFC używa plików DEF do eksportowania funkcji i klas z
 
 - [Eksportowanie i importowanie przy użyciu AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Funkcje C++ eksportu do użycia w plikach wykonywalnych języka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Eksportowanie funkcji języka C++ do użycia w plikach wykonywalnych języka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Eksportowanie funkcji języka C do użycia w plikach C++wykonywalnych języka c lub](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Eksportowanie funkcji C do użycia w plikach wykonywalnych języka C lub C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
 - [Określanie, której metody eksportowania użyć](determining-which-exporting-method-to-use.md)
 

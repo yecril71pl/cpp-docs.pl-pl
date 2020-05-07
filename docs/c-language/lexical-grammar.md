@@ -27,6 +27,6 @@ ms.locfileid: "62325510"
 
 - [Znaki interpunkcyjne](../c-language/punctuators.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Podsumowanie dotyczące składni języka C](../c-language/c-language-syntax-summary.md)
+[Podsumowanie składni języka C](../c-language/c-language-syntax-summary.md)

@@ -13,12 +13,12 @@ ms.locfileid: "62312651"
 ---
 # <a name="casting-integers-to-floating-point-values"></a>Rzutowanie liczb całkowitych na wartości zmiennoprzecinkowe
 
-**ANSI 3.2.1.3** kierunek obcinania, gdy całkowite liczba jest konwertowana na liczbę zmiennoprzecinkową, która dokładnie nie może reprezentować wartość oryginalną
+**3.2.1.3 ANSI** Kierunek obcinania, gdy numer całkowity jest konwertowany na liczbę zmiennoprzecinkową, która nie może dokładnie reprezentować pierwotnej wartości
 
-Gdy liczbą całkowitą jest rzutowany na wartość zmiennoprzecinkową, która dokładnie nie może reprezentować wartość, wartość jest zaokrąglana (górę lub w dół) do najbliższej odpowiednią wartość.
+Gdy całkowita liczba jest rzutowana na wartość zmiennoprzecinkową, która nie może dokładnie reprezentować wartości, wartość jest zaokrąglana (w górę lub w dół) do najbliższej odpowiedniej wartości.
 
-Na przykład rzutowanie **unsigned long** (z 32-bitowy precyzji) na **float** (których mantysy ma 23 bitów precyzji) Zaokrągla liczbę do najbliższej wielokrotności 256. **Długie** 4,294,966,913 do 4,294,967,167 wartości są zaokrąglane do **float** wartość 4,294,967,040.
+Na przykład rzutowanie nieoznaczonej **długości** (o 32 bitów precyzji) do wartości **zmiennoprzecinkowej** (którego mantysy ma 23 bity precyzji) zaokrągla liczbę do najbliższej wielokrotności 256. Wartości **Long** od 4 294 966 913 do 4 294 967 167 są zaokrąglane do wartości **zmiennoprzecinkowej** 4 294 967 040.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Obliczenia matematyczne na liczbach zmiennoprzecinkowych](../c-language/floating-point-math.md)

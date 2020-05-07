@@ -14,10 +14,10 @@ ms.locfileid: "62313496"
 ---
 # <a name="allocating-zero-memory"></a>Przydzielanie pamięci zerowej
 
-**ANSI 4.10.3** zachowanie `calloc`, `malloc`, lub `realloc` działać, jeśli żądany rozmiar wynosi zero
+**4.10.3 ANSI** Zachowanie funkcji `calloc`,, lub `malloc` `realloc` , jeśli żądany rozmiar wynosi zero
 
-`calloc`, `malloc`, I `realloc` funkcje są akceptowane wartości zerowe jako argument. Nie rzeczywiste pamięć została przydzielona, ale nieprawidłowy wskaźnik jest zwracany i blok pamięci można zmodyfikować później przy realloc.
+Funkcje `calloc`, `malloc`i `realloc` akceptują zero jako argument. Nie przydzielono rzeczywistej pamięci, ale zwracany jest prawidłowy wskaźnik, a blok pamięci może być później modyfikowany przez ponowne alokację.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

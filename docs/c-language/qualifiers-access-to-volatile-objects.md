@@ -1,5 +1,5 @@
 ---
-title: 'Kwalifikatory: Dostęp do obiektów Volatile'
+title: 'Kwalifikatory: dostęp do obiektów Volatile'
 ms.date: 11/04/2016
 ms.assetid: b5644d4a-d93a-4f33-880a-76eb88d5ad7a
 ms.openlocfilehash: 002462cbf436e9f84ead6da821cdf9addb9770f2
@@ -9,12 +9,12 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/24/2019
 ms.locfileid: "64343908"
 ---
-# <a name="qualifiers-access-to-volatile-objects"></a>Kwalifikatory: Dostęp do obiektów Volatile
+# <a name="qualifiers-access-to-volatile-objects"></a>Kwalifikatory: dostęp do obiektów Volatile
 
-**ANSI 3.5.5.3** co stanowi dostęp do obiektu, który ma typ kwalifikowany volatile
+**3.5.5.3 ANSI** Co stanowi dostęp do obiektu, który ma typ kwalifikowany nietrwały
 
-Wszelkie odwołanie do typu kwalifikowanego volatile jest dostęp.
+Każde odwołanie do typu kwalifikowanego nietrwałego jest dostępem.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)

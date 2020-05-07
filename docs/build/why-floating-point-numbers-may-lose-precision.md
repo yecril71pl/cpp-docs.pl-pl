@@ -25,7 +25,7 @@ To zachowanie jest wynikiem jednego z następujących elementów:
 
 Aby rozwiązać ten problem, większość programistów upewnia się, że wartość jest większa lub mniejsza niż to, co jest potrzebne, lub uzyskuje i używa biblioteki binarnej kodowanej dziesiętnej (BCD), która będzie zachować precyzję.
 
-Reprezentacja binarna wartości zmiennoprzecinkowych ma wpływ na precyzję i dokładność obliczeń zmiennoprzecinkowych. Microsoft Visual C++ używa [formatu IEEE zmiennoprzecinkowej](ieee-floating-point-representation.md).
+Reprezentacja binarna wartości zmiennoprzecinkowych ma wpływ na precyzję i dokładność obliczeń zmiennoprzecinkowych. Microsoft Visual C++ używa [formatu IEEE zmiennoprzecinkowego](ieee-floating-point-representation.md).
 
 ## <a name="example"></a>Przykład
 
@@ -62,6 +62,6 @@ They are not equal! The value of c is  2.4679999352 or 2.468000
 
 W przypadku wartości EPSILON można użyć stałych FLT_EPSILON, które są zdefiniowane dla wartości zmiennoprzecinkowych jako 1.192092896 e-07F lub DBL_EPSILON, które są zdefiniowane dla podwójnego 2.2204460492503131 e-016. Musisz dołączyć wartości zmiennoprzecinkowe. h dla tych stałych. Te stałe są definiowane jako najmniejszy dodatnia liczba x, tak że x + 1.0 nie jest równe 1,0. Ponieważ jest to bardzo mała liczba, należy zastosować tolerancję zdefiniowaną przez użytkownika dla obliczeń obejmujących bardzo duże liczby.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Optymalizacja kodu](optimizing-your-code.md)

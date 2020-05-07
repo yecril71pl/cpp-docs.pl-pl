@@ -13,8 +13,8 @@ ms.locfileid: "62157828"
 ---
 # <a name="string-literals-in-primary-expressions"></a>Literał ciągu w wyrażeniach podstawowych
 
-"Literału ciągu" jest znak, znak dwubajtowy lub sekwencji znaków sąsiadujących ujęty w znaki podwójnego cudzysłowu. Ponieważ nie są one zmienne literałów ciągów ani ich elementów może być lewostronny operand w operacji przypisania. Typ literału ciągu jest tablicą `char` (lub tablica `wchar_t` literałów ciągów dwubajtowych). Tablice w wyrażeniach są konwertowane do wskaźników. Zobacz [literałów ciągów](../c-language/c-string-literals.md) Aby uzyskać więcej informacji na temat ciągów.
+"Literał ciągu" jest znakiem, znakiem dwubajtowym lub sekwencją sąsiadujących znaków ujętych w znaki podwójnego cudzysłowu. Ponieważ nie są zmiennymi, literały ciągu ani żaden z ich elementów nie mogą być operandem po lewej stronie w operacji przypisania. Typ literału ciągu jest tablicą `char` (lub tablicą `wchar_t` dla literałów o szerokim ciągu). Tablice w wyrażeniach są konwertowane na wskaźniki. Aby uzyskać więcej informacji na temat ciągów, zobacz [literały ciągu](../c-language/c-string-literals.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia podstawowe języka C](../c-language/c-primary-expressions.md)

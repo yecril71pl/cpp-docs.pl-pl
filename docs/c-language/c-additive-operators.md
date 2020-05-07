@@ -17,22 +17,22 @@ ms.locfileid: "62326914"
 ---
 # <a name="c-additive-operators"></a>Operatory dodawania języka C
 
-Operatory addytywne, przeprowadzić Dodawanie (**+**) i odejmowania (**-**).
+Operatory addytywne wykonują dodawanie (**+**) i odejmowanie (**-**).
 
 ## <a name="syntax"></a>Składnia
 
-*additive-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Additive-expression* **+** *wyrażenia mnożenia*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Additive-expression* **-** *wyrażenia mnożenia*
+*wyrażenie addytywne*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*mnożenia — wyrażenie*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*dodatek-* **+** Expression *mnożenia-Expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*dodatek-* **-** Expression *mnożenia-Expression*
 
 > [!NOTE]
-> Mimo że składnia *additive-expression* obejmuje *wyrażenia mnożenia*, oznacza to, że wyrażenia mnożenia są wymagane. Zapoznać się ze składnią w [podsumowanie dotyczące składni języka C](../c-language/c-language-syntax-summary.md), aby uzyskać *wyrażenia mnożenia*, *wyrażenie cast*, i *jednoargumentowe wyrażenie*.
+> Mimo że składnia *wyrażenia addytywne* zawiera *mnożenia-Expression*, nie oznacza to, że wyrażenia używające mnożenia są wymagane. Zobacz składnię w artykule [składnia składni języka C](../c-language/c-language-syntax-summary.md), dla *mnożenia-Expression*, *Cast-* Expression i *wyrażenie jednoargumentowe*.
 
-Argumenty operacji może być typu całkowitego lub zmiennoprzecinkowego wartości. Niektóre operacje dodawania można również przeprowadzić na wartościach wskaźnika, zgodnie z opisem w obszarze dyskusji każdy operator.
+Operandy mogą być wartości całkowitych lub zmiennoprzecinkowych. Niektóre operacje addytywne można także wykonać na wartościach wskaźnika, jak opisano w omówieniu każdego operatora.
 
-Operatory dodawania przeprowadzania zwykle konwersje arytmetyczne operandów całkowite i zmiennoprzecinkowe. Typ wyniku jest typem operandu po konwersji. Ponieważ konwersje wykonywane przez operatory dodawania są oferowane warunków przepełnienia lub niedomiaru, informacje mogą zostać utracone, jeśli wynik operacji dodawania nie może być przedstawiony w typie operandów po konwersji.
+Operatory addytywne wykonują zwykle konwersje arytmetyczne na całkowitych i zmiennoprzecinkowych operandach. Typ wyniku jest typem operandów po konwersji. Ponieważ konwersje wykonywane przez Operatory addytywne nie zapewniają dla warunków przepełnienia lub niedomiaru, informacje mogą zostać utracone, jeśli wynik operacji addytywnej nie może być reprezentowany w typie operandów po konwersji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Operatory dodawania: + i -](../cpp/additive-operators-plus-and.md)
+[Operatory addytywne: + i-](../cpp/additive-operators-plus-and.md)

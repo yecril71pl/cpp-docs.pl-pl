@@ -15,8 +15,8 @@ ms.locfileid: "62233863"
 ---
 # <a name="execution-character-set"></a>Zestaw znaków wykonania
 
-Ta zawartość dotyczy często "wykonania zestawu znaków". Zestaw znaków wykonania nie jest zawsze taki sam jak źródłowy zestaw znaków używany do pisania programów C. Zestaw znaków wykonania zawiera wszystkie znaki w zestawie oraz znak null znaków źródła, znak nowego wiersza, backspace, tabulator poziomy, tabulator pionowy, znaku powrotu karetki i sekwencje ucieczki. Zestawy znaków źródła i wykonania może różnić się w innych wdrożeniach.
+Ta zawartość często odnosi się do "zestawu znaków wykonywania". Zestaw znaków wykonywania nie musi być taki sam jak źródłowy zestaw znaków używany do pisania programów C. Zestaw znaków wykonywania zawiera wszystkie znaki w zestawie znaków źródłowych, a także znak null, znak nowego wiersza, Backspace, tabulator poziomy, tabulator pionowy, powrotu karetki i sekwencje ucieczki. Zestawy znaków źródła i wykonania mogą się różnić w innych implementacjach.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Stałe znakowe języka C](../c-language/c-character-constants.md)

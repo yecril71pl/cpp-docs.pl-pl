@@ -23,10 +23,10 @@ ms.locfileid: "64343182"
 
 - [Funkcje](../c-language/functions-c.md)
 
-- [Podsumowanie dotyczące składni języka C](../c-language/c-language-syntax-summary.md)
+- [Podsumowanie składni języka C](../c-language/c-language-syntax-summary.md)
 
 - [Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C](../c-language/c-language-reference.md)

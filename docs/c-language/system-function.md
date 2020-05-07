@@ -13,14 +13,14 @@ ms.locfileid: "62345126"
 ---
 # <a name="system-function"></a>Funkcja systemowa
 
-**ANSI 4.10.4.5** zawartości i tryb wykonywania ciąg przez **systemu** — funkcja
+**4.10.4.5 ANSI** Zawartość i tryb wykonywania ciągu przez funkcję **systemową**
 
-**Systemu** funkcja wykonuje polecenia wewnętrznego systemu operacyjnego lub. PLIK EXE, COM (. CMD na Windows NT) lub. Plik BAT z poziomu używanego programu C, a nie z poziomu wiersza polecenia.
+Funkcja **systemowa** wykonuje wewnętrzne polecenie systemu operacyjnego lub. EXE,. COM (. CMD w systemie Windows NT) lub. BAT plik z poziomu programu C, a nie z wiersza polecenia.
 
-Funkcja systemowa znajdzie interpretera poleceń jest zazwyczaj CMD. EXE w systemie operacyjnym Windows NT lub COMMAND.COM w Windows. Funkcja systemowa następnie przekazuje ciąg argumentu do interpretera poleceń.
+Funkcja system odnajduje interpreter poleceń, który jest zazwyczaj CMD. EXE w systemie operacyjnym Windows NT lub COMMAND.COM w systemie Windows. Funkcja system przekazuje ciąg argumentu do interpretera poleceń.
 
-Aby uzyskać więcej informacji, zobacz [systemu, _wsystem —](../c-runtime-library/reference/system-wsystem.md).
+Aby uzyskać więcej informacji, zobacz [system, _wsystem](../c-runtime-library/reference/system-wsystem.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

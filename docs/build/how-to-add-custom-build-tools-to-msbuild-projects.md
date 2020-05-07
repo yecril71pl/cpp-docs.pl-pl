@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie niestandardowych narzędzi kompilacji do projektów MSBuild'
+title: 'Porady: dodawanie niestandardowych narzędzi kompilacji do projektów MSBuild'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 'msbuild (c++), howto: add custom build tools'
@@ -11,19 +11,19 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65220720"
 ---
-# <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Instrukcje: Dodawanie niestandardowych narzędzi kompilacji do projektów MSBuild
+# <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Porady: dodawanie niestandardowych narzędzi kompilacji do projektów MSBuild
 
-Niestandardowego narzędzia kompilacji jest narzędziem zdefiniowanych przez użytkownika, wiersz polecenia, który jest skojarzony z określonego pliku.
+Niestandardowe narzędzie kompilacji to zdefiniowane przez użytkownika narzędzie wiersza polecenia, które jest skojarzone z określonym plikiem.
 
-Dla danego pliku należy określić w pliku projektu (.vcxproj) w wierszu polecenia do wykonania, wszelkie dodatkowe dane wejściowe lub wyjściowe pliki i komunikat do wyświetlenia. Jeśli **MSBuild** Określa, że Twoje pliki wyjściowe są nieaktualne w odniesieniu do plików wejściowych, wyświetla komunikat o i uruchamia narzędzie wiersza polecenia.
+Dla określonego pliku Określ w pliku projektu (. vcxproj) wiersz polecenia do wykonania, wszelkie dodatkowe pliki wejściowe lub wyjściowe oraz komunikat do wyświetlenia. Jeśli program **MSBuild** określi, że pliki wyjściowe są nieaktualne w odniesieniu do plików wejściowych, wyświetla komunikat i wykonuje narzędzie wiersza polecenia.
 
-Aby określić, kiedy wykonuje niestandardowego narzędzia kompilacji, użyj jedną lub obie `CustomBuildBeforeTargets` i `CustomBuildAfterTargets` elementy XML w pliku projektu. Na przykład określić, że Twojego niestandardowego narzędzia kompilacji uruchomienia po kompilator MIDL i przed kompilator C/C++. Określ `CustomBuildBeforeTargets` element do wykonania narzędzie przed uruchomieniem określonego celu; `CustomBuildAfterTargets` elementu do uruchomienia narzędzia po do określonego celu; lub oba te elementy, aby uruchomić narzędzie między wykonaniem dwa obiekty docelowe. Jeśli element nie jest określony, Twojego niestandardowego narzędzia kompilacji wykonuje się w lokalizacji domyślnej, czyli przed **MIDL** docelowej.
+Aby określić, kiedy jest wykonywane narzędzie kompilacji niestandardowej, użyj jednego lub obu elementów `CustomBuildBeforeTargets` języka `CustomBuildAfterTargets` i XML w pliku projektu. Można na przykład określić, że narzędzie kompilacji niestandardowej ma działać po kompilatorze MIDL i przed kompilatorem C/C++. Określ `CustomBuildBeforeTargets` element, aby wykonać narzędzie przed uruchomieniem określonego elementu docelowego; `CustomBuildAfterTargets` element do wykonania narzędzia po określonym miejscu docelowym; lub oba elementy do uruchomienia narzędzia między wykonaniem dwóch elementów docelowych. Jeśli żaden element nie zostanie określony, narzędzie kompilacji niestandardowej wykonuje się w lokalizacji domyślnej, która jest przed elementem docelowym **MIDL** .
 
-Niestandardowych krokach budowania lub niestandardowych narzędzi kompilacji udostępnianie informacji określonych w `CustomBuildBeforeTargets` i `CustomBuildAfterTargets` elementów XML. Określanie elementów docelowych jeden raz w pliku projektu.
+Niestandardowe kroki kompilacji i niestandardowe narzędzia kompilacji udostępniają informacje określone w `CustomBuildBeforeTargets` elementach `CustomBuildAfterTargets` i XML. Określ te cele jeden raz w pliku projektu.
 
-### <a name="to-add-a-custom-build-tool"></a>Aby dodać niestandardowego narzędzia kompilacji
+### <a name="to-add-a-custom-build-tool"></a>Aby dodać niestandardowe narzędzie kompilacji
 
-1. Dodaj grupy elementów do pliku projektu i Dodawanie elementu dla każdego pliku wejściowego. Określ polecenie, dodatkowe dane wejściowe, dane wyjściowe i wiadomość jako metadane elementu, jak pokazano poniżej. W tym przykładzie przyjęto założenie, że plik "faq.txt" istnieje w tym samym katalogu co projekt.
+1. Dodaj grupę elementów do pliku projektu i Dodaj element dla każdego pliku wejściowego. Określ polecenie, dodatkowe dane wejściowe, wyjścia i komunikat jako metadane elementu, jak pokazano poniżej. W tym przykładzie przyjęto założenie, że plik "FAQ. txt" istnieje w tym samym katalogu, co projekt.
 
     ```
     <ItemGroup>
@@ -35,9 +35,9 @@ Niestandardowych krokach budowania lub niestandardowych narzędzi kompilacji udo
     </ItemGroup>
     ```
 
-### <a name="to-define-where-in-the-build-the-custom-build-tools-will-execute"></a>Aby zdefiniować, gdzie w kompilacji niestandardowych narzędzi kompilacji będą wykonywane
+### <a name="to-define-where-in-the-build-the-custom-build-tools-will-execute"></a>Aby określić, gdzie w kompilacji będą wykonywane narzędzia kompilacji niestandardowej
 
-1. Dodaj następujące grupy właściwości do pliku projektu. Należy określić co najmniej jednego obiektu docelowego, ale można pominąć drugi, jeśli interesuje Cię tylko o swojej krok kompilacji, wykonaj przed (lub po) określonego celu. W tym przykładzie przeprowadza się niestandardowy krok po kompilacji, ale przed połączeniem.
+1. Dodaj następującą grupę właściwości do pliku projektu. Musisz określić co najmniej jeden element docelowy, ale możesz pominąć pozostałe, jeśli chcesz, aby krok kompilacji był wykonywany przed (lub po) określonym elementem docelowym. Ten przykład wykonuje krok niestandardowy po skompilowaniu, ale przed połączeniem.
 
     ```
     <PropertyGroup>
@@ -46,8 +46,8 @@ Niestandardowych krokach budowania lub niestandardowych narzędzi kompilacji udo
     </PropertyGroup>
     ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Przewodnik: używanie programu MSBuild do tworzenia projektu w języku C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
-[Instrukcje: korzystanie ze zdarzeń kompilacji w projektach MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
-[Instrukcje: dodawanie niestandardowego kroku kompilacji do projektów MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)
+[Przewodnik: Tworzenie projektu C++ przy użyciu programu MSBuild](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Porady: korzystanie ze zdarzeń kompilacji w projektach MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
+[Porady: dodawanie niestandardowego kroku kompilacji do projektów MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)

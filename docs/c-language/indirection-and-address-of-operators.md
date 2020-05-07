@@ -24,27 +24,27 @@ ms.locfileid: "64343895"
 ---
 # <a name="indirection-and-address-of-operators"></a>Operatory pośrednie i „Address-of”
 
-Jednoargumentowy operator pośredni (__&#42;__) uzyskuje dostęp do wartości pośrednio, za pomocą wskaźnika. Argument musi być typem wskaźnika. Wynik operacji jest wartością adresowaną przez operand; czyli wartość pod adresem, na który wskazuje operand. Typ wyniku jest typem adresowanym przez operand.
+Jednoargumentowy operator pośredni (__&#42;__) uzyskuje dostęp do wartości pośrednio za pośrednictwem wskaźnika. Argument operacji musi być typem wskaźnika. Wynik operacji jest wartością adresowaną przez operand; czyli wartość pod adresem, na który wskazuje operand. Typ wyniku jest typem adresowanym przez operand.
 
-Wynik operatora pośredniego jest *typu* operand jest typu *wskaźnik do typu*. Jeśli operand wskazuje funkcję, wynik jest oznaczeniem funkcji. Jeśli wskazuje on do obiektu, wynik jest wartością lvalue, opisująca obiekt.
+Wynik operatora pośredni jest *typu* , jeśli operand jest typu *wskaźnika do typu*. Jeśli operand wskazuje funkcję, wynik jest oznaczeniem funkcji. Jeśli wskazuje na obiekt, wynik jest lvalue, który wyznacza obiekt.
 
-Jeśli wartość wskaźnika jest nieprawidłowa, wynik operatora pośredniego jest niezdefiniowane. Oto niektóre z najbardziej typowych warunków, które unieważniają wartość wskaźnika:
+Jeśli wartość wskaźnika jest nieprawidłowa, wynik operatora pośredni jest niezdefiniowany. Poniżej przedstawiono niektóre typowe warunki unieważnienia wartości wskaźnika:
 
 - Wskaźnik jest pustym wskaźnikiem.
 
-- Wskaźnik Określa adres obiektu, po zakończeniu jego okres istnienia (np. obiekt, który jest wyjdą poza zakres lub które jest została wycofana) w momencie odwołania.
+- Wskaźnik określa adres obiektu po zakończeniu jego okresu istnienia (na przykład obiekt, który został usunięty z zakresu lub został cofnięty przydziału) w momencie odwołania.
 
 - Wskaźnik określa adres, który jest nieodpowiednio wyrównany dla typu wskazywanego obiektu.
 
 - Wskaźnik określa adres nieużywany przez program wykonujący.
 
-Jednoargumentowy operator address-of (**&**) podaje adres jego operandu. Argument musi być albo lvalue, opisująca obiekt, który nie został zadeklarowany __zarejestrować__ i nie jest polem bitowym ani wynik jednoargumentowy __&#42;__ tablica lub operator wyłuskania (__&#91; &#93;__) — operator lub oznaczenia funkcji. Wynik jest typu *wskaźnik do typu* dla operandę typu *typu*.
+Jednoargumentowy adres operatora (**&**) zawiera adres operandu. Operand musi być elementem lvalue, który określa obiekt, który nie __jest zadeklarowany, i__ nie jest polem bitowym ani wynikiem jednoargumentowego operatora __&#42;__ lub operatora dereferencji tablicy (__&#91;&#93;__) lub funkcji. Wynik jest typu *wskaźnika do wpisania* dla operandu *typu Type.*
 
-Jeśli argument jest wynikiem jednoargumentowy __&#42;__ operatora, żaden operator jest obliczane i wynikiem jest tak, jakby zostały pominięte oba. Wynik nie jest l-wartością i nadal mają zastosowanie ograniczenia dotyczące operatorów. Jeśli argument jest wynikiem __&#91; &#93;__ operatora, ani __&__ , ani operatora jednoargumentowego __&#42;__ też dorozumianych przez __&#91; &#93;__ operator jest oceniany. Wynik ma taki sam skutek jak usuwanie __&__ operatora i zmieniając __&#91; &#93;__ operatora __+__ operatora. W przeciwnym razie wynik jest wskaźnikiem do obiektu lub funkcji wyznaczony przez operand.
+Jeśli operand jest wynikiem jednoargumentowego operatora __&#42;__ , żaden operator nie zostanie oceniony i wynik jest tak, jakby oba zostały pominięte. Wynik nie jest lvalue, a ograniczenia dotyczące operatorów nadal obowiązują. Jeśli operand jest wynikiem operatora __&#91;&#93;__ , nie jest __&__ oceniany operator ani __&#42;__ jednoargumentowy implikowany przez operatora __&#91;&#93;__ . Wynik ma taki sam skutek jak usunięcie __&__ operatora i zmiana operatora __&#91;&#93;__ na __+__ operator. W przeciwnym razie wynik jest wskaźnikiem do obiektu lub funkcji wyznaczono przez operand.
 
 ## <a name="examples"></a>Przykłady
 
-W poniższych przykładach użyto tych deklaracji wspólnego:
+Poniższe przykłady używają tych wspólnych deklaracji:
 
 ```C
 int *pa, x;
@@ -52,25 +52,25 @@ int a[20];
 double d;
 ```
 
-Ta instrukcja używa operatora address-of (**&**) aby pobrać adres szóstego elementu tablicy `a`. Wynik jest przechowywany w zmiennej wskaźnika `pa`:
+Ta instrukcja używa operatora address-of (**&**) w celu uzyskania adresu szóstego elementu tablicy. `a` Wynik jest przechowywany w zmiennej `pa`wskaźnik:
 
 ```C
 pa = &a[5];
 ```
 
-Operator pośredni (__&#42;__) jest używany w tym przykładzie w celu uzyskania dostępu do `int` wartość pod adresem przechowywanym w `pa`. Wartość jest przypisywana do zmiennej całkowitej `x`:
+Operator pośredni (__&#42;__) jest używany w tym przykładzie w celu uzyskania dostępu do `int` wartości pod adresem przechowywanym w. `pa` Wartość jest przypisana do zmiennej `x`całkowitej:
 
 ```C
 x = *pa;
 ```
 
-Ten przykład pokazuje, że wynik zastosowania operatora pośredniego do adresu `x` jest taka sama jak `x`:
+Ten przykład pokazuje, że wynik zastosowania operatora pośredni do adresu `x` jest taki sam jak: `x`
 
 ```C
 assert( x == *&x );
 ```
 
-W tym przykładzie przedstawiono sposoby równoważne zadeklarowaniem wskaźnika do funkcji:
+W tym przykładzie przedstawiono równoważne sposoby deklarowania wskaźnika do funkcji:
 
 ```C
 int roundup( void );     /* Function declaration */
@@ -82,7 +82,7 @@ assert( pround == proundup );
 
 Gdy deklarowana jest funkcja `roundup`, deklarowane i inicjowane są dwa wskaźniki do `roundup`. Pierwszy wskaźnik `proundup` jest inicjowany jedynie za pomocą nazwy funkcji, podczas gdy drugi `pround` używa operatora address-of przy inicjalizacji. Inicjalizacje są równoważne.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Operator bezpośredni:&#42;](../cpp/indirection-operator-star.md)<br/>
+[Operator pośredni: &#42;](../cpp/indirection-operator-star.md)<br/>
 [Operator Address-of: &](../cpp/address-of-operator-amp.md)

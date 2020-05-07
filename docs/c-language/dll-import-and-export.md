@@ -15,12 +15,12 @@ ms.locfileid: "62234156"
 ---
 # <a name="dll-import-and-export"></a>Importowanie i eksportowanie bibliotek DLL
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Modyfikatorów klasy magazynowania dllimport i dllexport są specyficzne dla Microsoft rozszerzenia języka C. Następujące Modyfikatory definiują interfejs DLL dla jego klienta (plik wykonywalny lub innej biblioteki DLL). Aby uzyskać szczegółowe informacje dotyczące tych modyfikatorów, zobacz [dllexport i dllimport](../cpp/dllexport-dllimport.md).
+Modyfikatory klasy magazynu dllimport i dllexport są rozszerzeniami specyficznymi dla firmy Microsoft do języka C. Te Modyfikatory definiują interfejs biblioteki DLL dla klienta (plik wykonywalny lub inna Biblioteka DLL). Aby uzyskać szczegółowe informacje o używaniu tych modyfikatorów, zobacz [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzone atrybuty klasy magazynu języka C](../c-language/c-extended-storage-class-attributes.md)

@@ -20,7 +20,7 @@ ms.locfileid: "82032112"
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>Wywołania z różną liczbą argumentów
 
-Lista parametrów częściowych może zostać zakończona przez notację wielokropek, przecinek, po którym następuje trzy okresy (**, ...**), aby wskazać, że może być więcej argumentów przekazanych do funkcji, ale nie podano więcej informacji na ich temat. Kontrola typów nie jest wykonywana na takich argumentach. Co najmniej jeden parametr musi poprzedzać notację wielokropka, a notacja wielokropka musi stanowić ostatni token na liście parametrów. Bez notacji wielokropka zachowanie funkcji jest niezdefiniowane, jeżeli otrzyma parametry oprócz tych zadeklarowanych na liście parametrów.
+Lista parametrów częściowych może zostać zakończona przez notację wielokropka, przecinek, po którym następuje trzy kropki (**,...**), aby wskazać, że może istnieć więcej argumentów przekazanych do funkcji, ale nie podano więcej informacji o nich. Kontrola typów nie jest wykonywana na takich argumentach. Co najmniej jeden parametr musi poprzedzać notację wielokropka, a notacja wielokropka musi stanowić ostatni token na liście parametrów. Bez notacji wielokropka zachowanie funkcji jest niezdefiniowane, jeżeli otrzyma parametry oprócz tych zadeklarowanych na liście parametrów.
 
 Aby wywołać funkcję o zmiennej liczbie argumentów, wystarczy określić dowolną liczbę argumentów w wywołaniu funkcji. Przykładem jest funkcja `printf` z biblioteki wykonawczej C. Wywołanie funkcji musi zawierać jeden argument dla każdej nazwy typu zadeklarowanej w liście parametrów lub liście typów argumentów.
 

@@ -16,21 +16,21 @@ ms.locfileid: "62233817"
 ---
 # <a name="expanding-wildcard-arguments"></a>Rozszerzanie argumentów z symbolami wieloznacznymi
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Kiedy uruchamiasz C program, można użyć jednej z dwóch symboli wieloznacznych — znak zapytania (?) i gwiazdki (*), aby określić nazwę pliku i ścieżkę argumenty wiersza polecenia.
+Po uruchomieniu programu C można użyć jednego z dwóch symboli wieloznacznych — znaku zapytania (?) i gwiazdki (*), aby określić argumenty filename i Path w wierszu polecenia.
 
-Symbole wieloznaczne nie zostaną domyślnie rozwinięte w argumentach wiersza polecenia. Możesz zastąpić wektor normalne argument `argv` ładowania procedury przy użyciu obowiązującej wersji rozwiń symboli wieloznacznych, łącząc się z plikiem setargv.obj lub wsetargv.obj. Jeśli program używa `main` funkcji, Połącz z biblioteką setargv.obj. Jeśli program używa `wmain` funkcji, Połącz z biblioteką wsetargv.obj. Oba te mają równoważne zachowanie.
+Domyślnie symbole wieloznaczne nie są rozwinięte w argumentach wiersza polecenia. Można zastąpić normalną procedurę ładowania wektora `argv` argumentu z wersją, która rozszerza symbole wieloznaczne, łącząc się z plikiem setargv. obj lub Wsetargv. obj. Jeśli program używa `main` funkcji, Połącz z setargv. obj. Jeśli program używa `wmain` funkcji, Połącz z Wsetargv. obj. Oba te elementy mają równoważne zachowanie.
 
-Aby połączyć z setargv.obj lub wsetargv.obj, użyj **/link** opcji. Na przykład:
+Aby połączyć się z setargv. obj lub Wsetargv. obj, użyj opcji **/link** . Przykład:
 
-**setargv.obj/Link example.c cl**
+**CL przykład. c/link setargv. obj**
 
-Symbole wieloznaczne są rozwijane w taki sam sposób jak poleceń systemu operacyjnego. (Zobacz Podręcznik użytkownika systemu operacyjnego, jeśli nie jesteś zaznajomiony z symbolami wieloznacznymi).
+Symbole wieloznaczne są rozwinięte w taki sam sposób, jak polecenia systemu operacyjnego. (Jeśli nie znasz symboli wieloznacznych, zapoznaj się z podręcznikiem użytkownika systemu operacyjnego).
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Opcje łącz](../c-runtime-library/link-options.md)<br/>
+[Opcje łącza](../c-runtime-library/link-options.md)<br/>
 [Funkcja main i wykonywanie programu](../c-language/main-function-and-program-execution.md)

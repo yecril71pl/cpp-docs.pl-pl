@@ -19,7 +19,7 @@ Instrukcja *do-while* umożliwia powtarzanie instrukcji lub złożonej instrukcj
 
 ## <a name="syntax"></a>Składnia
 
-*iteracja-instrukcja*: &nbsp;&nbsp;&nbsp;&nbsp;**do***instrukcji***while (** *wyrażenie* **);**
+*iteracja-instrukcja*: &nbsp; &nbsp; &nbsp; &nbsp; **do***instrukcji***while (***wyrażenie***);**        
 
 *Wyrażenie* w instrukcji do *-while* jest oceniane po wykonaniu treści pętli. W związku z tym treść pętli jest zawsze wykonywana co najmniej raz.
 
@@ -41,8 +41,8 @@ do
 } while ( x > 0 );
 ```
 
-W tej instrukcji *do-while* są wykonywane dwie instrukcje `y = f( x );` i `x--;`, niezależnie od początkowej wartości `x`. Następnie `x > 0` jest oceniane. Jeśli `x` jest większa niż 0, treść instrukcji jest wykonywana ponownie i `x > 0` zostanie przeszacowana. Treść instrukcji jest wykonywana wielokrotnie, o ile `x` pozostanie większa niż 0. Wykonywanie instrukcji *do-while* kończy się, gdy `x` stanie się 0 lub ujemny. Treść pętli jest wykonywana co najmniej raz.
+W tej instrukcji do *-while* dwie instrukcje `y = f( x );` i `x--;` są wykonywane niezależnie od wartości początkowej. `x` Następnie `x > 0` jest oceniane. Jeśli `x` jest większa niż 0, treść instrukcji jest wykonywana ponownie i `x > 0` zostanie przeszacowana. Treść instrukcji jest wykonywana wielokrotnie, o ile `x` pozostanie większa niż 0. Wykonywanie instrukcji *do-while* kończy się, gdy `x` przyjmie wartość 0 lub ujemną. Treść pętli jest wykonywana co najmniej raz.
 
 ## <a name="see-also"></a>Zobacz też
 
-[do-while, instrukcja (C++)](../cpp/do-while-statement-cpp.md)
+[do-While — Instrukcja (C++)](../cpp/do-while-statement-cpp.md)

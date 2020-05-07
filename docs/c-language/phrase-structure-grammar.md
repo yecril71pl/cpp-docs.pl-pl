@@ -16,12 +16,12 @@ ms.locfileid: "62232379"
 
 - [Wyrażenia](../c-language/summary-of-expressions.md)
 
-- [Deklaracje](../c-language/summary-of-declarations.md)
+- [Oświadczenia](../c-language/summary-of-declarations.md)
 
 - [Instrukcje](../c-language/summary-of-statements.md)
 
 - [Definicje zewnętrzne](../c-language/external-definitions.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Podsumowanie dotyczące składni języka C](../c-language/c-language-syntax-summary.md)
+[Podsumowanie składni języka C](../c-language/c-language-syntax-summary.md)

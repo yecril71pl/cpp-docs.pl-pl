@@ -19,27 +19,27 @@ ms.locfileid: "65221196"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Wywoływanie funkcji DLL z aplikacji języka Visual Basic
 
-Dla aplikacji Visual Basic (lub aplikacje w innych językach, takich jak FORTRAN czy Pascal) mogły wywołać funkcje w bibliotece DLL C/C++ funkcje muszą zostać wyeksportowane z przy użyciu poprawnej konwencji wywoływania, bez dekorowania nazw wykonywanego przez kompilator
+W przypadku aplikacji Visual Basic (lub aplikacji w innych językach, takich jak Pascal lub Pascal) wywoływanie funkcji w bibliotece DLL C/C++, funkcje muszą zostać wyeksportowane przy użyciu poprawnej konwencji wywoływania bez dekoracji nazw wykonanych przez kompilator.
 
-`__stdcall` Tworzy poprawne konwencja wywołania funkcji (wywołana funkcja czyści stos i parametry są przekazywane od prawej do lewej), ale zdobi nazwy funkcji w inny sposób. Więc, gdy **__declspec(dllexport)** jest używany na eksportowanych funkcji w bibliotece DLL, nazwa uzupełniona jest eksportowana.
+`__stdcall`tworzy właściwą konwencję wywoływania dla funkcji (wywoływana funkcja czyści stos, a parametry są przesyłane od prawej do lewej), ale zdobi nazwę funkcji inaczej. Tak więc gdy **__declspec (dllexport)** jest używany w wyeksportowanej funkcji w bibliotece DLL, nazwa dekoracyjna zostanie wyeksportowana.
 
-`__stdcall` Dekorowania nazw prefiksów nazwę symbolu ze znakiem podkreślenia ( **\_** ) i dołącza symbol ze znakiem (**\@**) znakiem następuje liczba Liczba bajtów na liście argumentów (wymagany obszar stosu). W rezultacie, funkcja, gdy zadeklarowana jako:
+Dekoracja `__stdcall` nazwy prefiksu nazwy symbolu z podkreśleniem ( **\_** ) i dołącza symbol ze znakiem znaku (**\@**), po którym następuje liczba bajtów na liście argumentów (wymagana przestrzeń stosu). W związku z tym funkcja jest zadeklarowana jako:
 
 ```C
 int __stdcall func (int a, double b)
 ```
 
-jest urządzony jako `_func@12` w danych wyjściowych.
+ma charakter `_func@12` w danych wyjściowych.
 
-Konwencja wywoływania C (`__cdecl`) rozszerza nazwę jako `_func`.
+Konwencja wywoływania C (`__cdecl`) zdobi nazwę jako. `_func`
 
-Aby uzyskać nazwę z atrybutami, użyj [/MAP](reference/map-generate-mapfile.md). Korzystanie z **__declspec(dllexport)** wykonuje następujące czynności:
+Aby uzyskać nazwę dekoracyjną, użyj [/map](reference/map-generate-mapfile.md). Użycie **__declspec (dllexport)** wykonuje następujące czynności:
 
-- Jeśli funkcja jest eksportowana z Konwencją wywoływania C (`__cdecl`), usuwa wiodący znak podkreślenia ( **\_** ) kiedy nazwa jest eksportowana.
+- Jeśli funkcja zostanie wyeksportowana przy użyciu konwencji wywoływania C`__cdecl`(), nakreśli wiodący znak **\_** podkreślenia (), gdy nazwa zostanie wyeksportowana.
 
-- Jeśli eksportowana funkcja nie korzysta z konwencji wywoływania C (na przykład `__stdcall`), eksportuje ona również nazwę uzupełnioną.
+- Jeśli eksportowana funkcja nie używa konwencji wywoływania C (na przykład `__stdcall`), eksportuje nazwę dekoracyjną.
 
-Ponieważ nie istnieje sposób do przesłonięcia, gdzie występuje Oczyszczanie stosu, należy użyć `__stdcall`. Aby zdjąć atrybuty z nazw `__stdcall`, musisz określić je używając aliasów w sekcji EXPORTS pliku .def. To jest pokazana w poniższej deklaracji funkcji:
+Ponieważ nie ma sposobu, aby przesłonić miejsce, w którym występuje oczyszczanie `__stdcall`stosu, należy użyć. Aby undecorate nazwy z `__stdcall`, należy je określić przy użyciu aliasów w sekcji eksporty pliku. def. Jest to pokazane w następujący sposób dla następującej deklaracji funkcji:
 
 ```C
 int  __stdcall MyFunc (int a, double b);
@@ -54,22 +54,22 @@ EXPORTS
    INITCODE=_InitCode@0
 ```
 
-W przypadku biblioteki DLL były wywołane przez programy napisane w języku Visual Basic w pliku .def potrzeby technikę aliasów, przedstawione w tym temacie. Jeśli alias został wykonany w programie Visual Basic, użycie aliasów w pliku .def nie jest konieczne. Możesz w programie Visual Basic przez dodanie klauzuli aliasu do [Declare](/dotnet/visual-basic/language-reference/statements/declare-statement) instrukcji.
+W przypadku bibliotek DLL, które mają być wywoływane przez programy w Visual Basic, technika aliasu pokazana w tym temacie jest wymagana w pliku. def. Jeśli alias jest wykonywany w programie Visual Basic, użycie aliasu w pliku. def nie jest konieczne. Można to zrobić w programie Visual Basic, dodając klauzulę aliasu do instrukcji [DECLARE](/dotnet/visual-basic/language-reference/statements/declare-statement) .
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+## <a name="what-do-you-want-to-know-more-about"></a>Jak chcesz dowiedzieć się więcej?
 
 - [Eksportowanie z biblioteki DLL](exporting-from-a-dll.md)
 
-- [Eksportowanie z biblioteki DLL za pomocą. Pliki DEF](exporting-from-a-dll-using-def-files.md)
+- [Eksportowanie z biblioteki DLL przy użyciu programu. Pliki DEF](exporting-from-a-dll-using-def-files.md)
 
-- [Eksportowanie z biblioteki DLL przy użyciu atrybutu __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Eksportowanie z biblioteki DLL przy użyciu __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Eksportowanie funkcji C++ do użycia w plikach wykonywalnych języka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Eksportowanie funkcji języka C++ do użycia w plikach wykonywalnych języka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Określić, której metody eksportowania użyjesz](determining-which-exporting-method-to-use.md)
+- [Określanie, której metody eksportowania użyć](determining-which-exporting-method-to-use.md)
 
-- [Nazwy ozdobione](reference/decorated-names.md)
+- [Nazwy dekoracyjne](reference/decorated-names.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Tworzenie bibliotek DLL języka C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)
+[Tworzenie bibliotek DLL C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)

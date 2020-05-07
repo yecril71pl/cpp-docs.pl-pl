@@ -11,23 +11,23 @@ ms.locfileid: "62234130"
 ---
 # <a name="environment-names"></a>Nazwy środowiska
 
-**ANSI 4.10.4.4** zbiór środowiska nazwy i metodę zmieniania lista środowisk, używane przez [getenv](../c-runtime-library/reference/getenv-wgetenv.md) — funkcja
+**4.10.4.4 ANSI** Zestaw nazw środowisk i metody zmiany listy środowiska używanej przez funkcję [getenv](../c-runtime-library/reference/getenv-wgetenv.md)
 
-Zestaw nazw środowiska jest nieograniczona.
+Zbiór nazw środowisk jest nieograniczony.
 
-Aby zmienić zmienne środowiskowe z poziomu używanego programu C, należy wywołać [_putenv](../c-runtime-library/reference/putenv-wputenv.md) funkcji. Aby zmienić zmienne środowiskowe z wiersza polecenia w Windows, należy użyć polecenia SET (na przykład USTAWIĆ LIB = D:\ BIBLIOTEKI).
+Aby zmienić zmienne środowiskowe z poziomu programu w języku C, wywołaj funkcję [_putenv](../c-runtime-library/reference/putenv-wputenv.md) . Aby zmienić zmienne środowiskowe z wiersza polecenia w systemie Windows, użyj polecenia SET (na przykład SET LIB = D:\ LIBS).
 
-Zmienne środowiskowe ustawione z poziomu używanego programu C istnieje tylko tak długo, jak ich host powłoki poleceń systemu operacyjnego jest uruchomiony (CMD. Plik EXE lub COMMAND.COM). Na przykład wiersz
+Zmienne środowiskowe ustawione w ramach programu C istnieją tylko tak długo, jak ich kopia hosta powłoki poleceń systemu operacyjnego jest uruchomiona (CMD. EXE lub COMMAND.COM). Na przykład wiersz
 
 ```
 system( SET LIB = D:\LIBS );
 ```
 
-Uruchom kopię powłoki poleceń (CMD. Z rozszerzeniem EXE), ustawić zmiennej środowiskowej LIB i powrócić do programu C, kończenie dodatkową kopię CMD. PLIK EXE. Kończenie tej kopii CMD. Plik EXE usuwa tymczasowej zmiennej środowiskowej LIB.
+Uruchom kopię powłoki poleceń (CMD. EXE), Ustaw zmienną środowiskową LIB i wróć do programu C, a następnie Zakończ kopię pomocniczą programu CMD. EXE. Kończenie kopiowania programu CMD. EXE usuwa tymczasową zmienną środowiskową LIB.
 
-Podobnie, zmiany wprowadzone przez `_putenv` funkcji ostatnio tylko do momentu zakończenia programu.
+Podobnie zmiany wprowadzane przez funkcję są `_putenv` ostatnie tylko do momentu zakończenia programu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)<br/>
 [_putenv, _wputenv](../c-runtime-library/reference/putenv-wputenv.md)<br/>

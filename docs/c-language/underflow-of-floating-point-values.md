@@ -11,10 +11,10 @@ ms.locfileid: "64344062"
 ---
 # <a name="underflow-of-floating-point-values"></a>Niedopełnienie wartości zmiennoprzecinkowych
 
-**ANSI 4.5.1** ustawionego wyrażenia typu całkowitego funkcje matematyce `errno` wartość makra `ERANGE` na niedopełnienie zakres błędów
+**ANSI 4.5.1** Czy funkcja matematyki ustawia wyrażenie `errno` liczby całkowitej na wartość makra `ERANGE` w przypadku błędów zakresu niedopełnienia
 
-Niedopełnienie zmiennoprzecinkowe nie ustawia wyrażenie `errno` do `ERANGE`. Wartość koloru zbliża się zero, a ostatecznie niedopełnienie, wartość jest równa zero.
+Niedomiarowa zmiennoprzecinkowa nie ustawia wyrażenia `errno` na. `ERANGE` Gdy wartość zbliża się do zera i ostatecznie podpływa, wartość jest równa zero.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

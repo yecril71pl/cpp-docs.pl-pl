@@ -15,43 +15,43 @@ ms.locfileid: "62346109"
 ---
 # <a name="typedef-declarations"></a>Deklaracje typedef
 
-Deklaracji typedef jest deklaracją przy użyciu elementu typedef jako klasa magazynu. Deklarator staje się nowym typem. Deklaracje typedef służy do konstruowania krótszy bardziej znaczących nazw typów już zdefiniowanych przez C lub typy, które zostały zadeklarowane. Nazwy zdefiniowane przez typedef pozwalają na hermetyzację szczegółów implementacji, które mogą się zmieniać.
+Deklaracja typedef jest deklaracją z elementem TypeDef jako klasą magazynu. Deklarator zostanie nowym typem. Za pomocą deklaracji typedef można tworzyć krótsze lub bardziej zrozumiałe nazwy dla typów już zdefiniowanych przez C lub dla zadeklarowanych typów. Nazwy zdefiniowane przez typedef pozwalają na hermetyzację szczegółów implementacji, które mogą się zmieniać.
 
-Deklaracji typedef jest interpretowany w taki sam sposób, jak zmienna lub deklaracji funkcji, ale identyfikator, a nie typu określonego przez deklarację, zakładając, że staje się synonimem typu.
+Deklaracja typedef jest interpretowana w taki sam sposób jak zmienna lub funkcja deklaracji, ale identyfikator, zamiast założeniu, że typ określony przez deklarację, będzie synonimem typu.
 
 ## <a name="syntax"></a>Składnia
 
 *Deklaracja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji init-declarator-list*<sub>zoptymalizowany pod kątem</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;*deklaracje-specyfikatory init-deklarator-list*<sub>opt</sub> **;**
 
-*Specyfikatory deklaracji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji Storage-class-specifier*<sub>zoptymalizowany pod kątem</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji Specyfikator typu*<sub>zoptymalizowany pod kątem</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikatory deklaracji kwalifikator typu*<sub>zoptymalizowany pod kątem</sub>
+*specyfikatory deklaracji*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja specyfikatora klasy magazynu*—<sub>wybór</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja specyfikatora typu — wybór specyfikatorów*<sub>opt</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja kwalifikatora typu — wybór specyfikatorów*<sub>opt</sub>
 
-*storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Element TypeDef**
+*specyfikator klasy magazynu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**własne**
 
-*Specyfikator typu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Void**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**długi**<br/>
+*specyfikator typu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**pozycję**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**delikatn**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**wybierak**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**ZAOKR**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**długo**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Podpisany**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Bez znaku**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator typu wyliczeniowego*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
+&nbsp;&nbsp;&nbsp;&nbsp;**Double**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**opatrzon**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**bajt**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-lub-Union-specyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*enum — specyfikator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*typedef — nazwa*
 
-*Nazwa TypeDef*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*
+*typedef-Name*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identyfikatora*
 
-Należy pamiętać, że deklaracji typedef nie tworzy typy. Tworzy synonimy dla istniejących typów lub nazwy dla typów, które można określić w inny sposób. Gdy nazwa typedef jest używana jako specyfikatora typu, można ją połączyć z niektórych specyfikatory typu, ale innych nie. Modyfikatory dopuszczalne obejmują **const** i `volatile`.
+Należy zauważyć, że deklaracja typedef nie tworzy typów. Tworzy synonimy dla istniejących typów lub nazwy typów, które można określić w inny sposób. Gdy nazwa typedef jest używana jako specyfikator typu, można ją połączyć z pewnymi specyfikatorami typu, ale nie z innymi. Dopuszczalne Modyfikatory to **const** i `volatile`.
 
-Nazwy elementów TypeDef udostępnianie przestrzeń nazw ze zwykłymi identyfikatorami (zobacz [przestrzenie nazw](../c-language/name-spaces.md) Aby uzyskać więcej informacji). Program może mieć więc nazwę typedef i identyfikator o zakresie lokalnym o tej samej nazwie. Na przykład:
+Nazwy typedef współdzielą przestrzeń nazw z identyfikatorami zwykłymi (zobacz [spacje nazw](../c-language/name-spaces.md) , aby uzyskać więcej informacji). Program może mieć więc nazwę typedef i identyfikator o zakresie lokalnym o tej samej nazwie. Przykład:
 
 ```C
 typedef char FlagType;
@@ -66,7 +66,7 @@ int myproc( int )
 }
 ```
 
-Podczas deklarowania identyfikatora o zakresie lokalnym o tej samej nazwie co element typedef lub podczas deklarowania elementu struktury lub unii w tym samym zakresie lub w zakresie wewnętrznym, należy określić specyfikator typu. Ten przykład ilustruje tego ograniczenia:
+Podczas deklarowania identyfikatora o zakresie lokalnym o tej samej nazwie co element typedef lub podczas deklarowania elementu struktury lub unii w tym samym zakresie lub w zakresie wewnętrznym, należy określić specyfikator typu. Ten przykład ilustruje to ograniczenie:
 
 ```C
 typedef char FlagType;
@@ -93,7 +93,7 @@ int;  /* Illegal declaration */
 
 Można zadeklarować dowolny typ z typedef, w tym wskaźnik, funkcję i typy tablic. Można zadeklarować nazwę typedef wskaźnika na strukturę lub unię przed zdefiniowaniem struktury lub unii, tak długo jak definicja ma taką samą widoczność jak deklaracja.
 
-Nazwy elementów TypeDef można zwiększyć czytelność kodu. Wszystkie trzy następujące deklaracje `signal` Określ dokładnie tego samego typu, najpierw bez wprowadzania Użyj dowolnej nazwy elementów typedef.
+Nazwy typedef mogą służyć do poprawienia czytelności kodu. Wszystkie trzy z poniższych deklaracji `signal` określają dokładnie ten sam typ, a pierwszy bez używania nazw typedef.
 
 ```C
 typedef void fv( int ), (*pfv)( int );  /* typedef declarations */
@@ -105,13 +105,13 @@ pfv signal( int, pfv );    /* Uses typedef type */
 
 ## <a name="examples"></a>Przykłady
 
-W poniższych przykładach pokazano deklaracje typedef:
+Poniższe przykłady ilustrują deklaracje typedef:
 
 ```C
 typedef int WHOLE; /* Declares WHOLE to be a synonym for int */
 ```
 
-Należy pamiętać, że `WHOLE` można teraz używać w deklaracji zmiennej takich jak `WHOLE i;` lub `const WHOLE i;`. Jednak deklaracji `long WHOLE i;` będzie niedozwolone.
+Należy pamiętać `WHOLE` , że można teraz użyć w deklaracji zmiennej, takiej `WHOLE i;` jak `const WHOLE i;`lub. Jednakże deklaracja `long WHOLE i;` jest niedozwolona.
 
 ```C
 typedef struct club
@@ -121,31 +121,31 @@ typedef struct club
 } GROUP;
 ```
 
-Ta instrukcja deklaruje `GROUP` jako typ struktury z trzema elementami członkowskimi. Ponieważ tag struktury `club`, również jest określony, nazwa typedef (`GROUP`) lub tag struktury mogą być używane w deklaracjach. Należy użyć struct, słowo kluczowe z tagu, a nazwa typedef nie można używać struct, słowo kluczowe.
+Ta instrukcja deklaruje `GROUP` jako typ struktury z trzema składowymi. Ponieważ tag struktury, `club`,,,, jest również określony, w deklaracjach`GROUP`może być używany element typedef Name () lub tag Structure. Musisz użyć słowa kluczowego struct ze znacznikiem i nie można użyć słowa kluczowego struct z nazwą typedef.
 
 ```C
 typedef GROUP *PG; /* Uses the previous typedef name
                       to declare a pointer            */
 ```
 
-Typ `PG` jest zadeklarowany jako wskaźnik do `GROUP` typ, który z kolei jest zdefiniowana jako typ struktury.
+Typ `PG` jest zadeklarowany jako wskaźnik do `GROUP` typu, który z kolei jest zdefiniowany jako typ struktury.
 
 ```C
 typedef void DRAWF( int, int );
 ```
 
-W poniższym przykładzie przedstawiono typ `DRAWF` dla funkcji niezwracającej wartości i biorąc dwa argumenty typu int. Oznacza to, na przykład, że deklaracja
+Ten przykład zawiera typ `DRAWF` dla funkcji zwracającej brak wartości i pobierającej dwa argumenty int. Oznacza to na przykład, że deklaracja
 
 ```C
 DRAWF box;
 ```
 
-jest równoważna z deklaracją
+jest odpowiednikiem deklaracji
 
 ```C
 void box( int, int );
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje i typy](../c-language/declarations-and-types.md)

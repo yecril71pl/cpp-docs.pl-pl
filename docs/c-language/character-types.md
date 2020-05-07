@@ -14,9 +14,9 @@ ms.locfileid: "62312638"
 ---
 # <a name="character-types"></a>Typy znaku
 
-Stała liczba całkowita znak nie jest poprzedzony przez literę **L** ma typ `int`. Wartość całkowitą wartością stałą znaku zawierający pojedynczy znak jest wartością liczbową znaków interpretowana jako liczba całkowita. Na przykład, wartość liczbową znaków `a` jest 97 w zapisie dziesiętnym i 61 to sekundy w formacie szesnastkowym.
+Stała znaku liczby całkowitej, która nie jest poprzedzona **L** literą L `int`, ma typ. Wartość stałej znakowej liczby całkowitej zawierającej pojedynczy znak jest wartością numeryczną znaku interpretowanego jako liczba całkowita. Na przykład wartość liczbowa znaku `a` jest 97 w postaci dziesiętnej i 61 w formacie szesnastkowym.
 
-Syntaktycznie, "szerokich znaków stała" jest stałą znak poprzedzony literę **L**. Stała dwubajtowego znaku ma typ `wchar_t`, zdefiniowane w STDDEF typ liczby całkowitej. Plik nagłówkowy H. Na przykład:
+Syntaktycznie "stała znakowa" to stała znakowa poprzedzona literą **L**. Stała znaku dwubajtowego ma typ `wchar_t`, a liczba całkowita zdefiniowana w STDDEF. H plik nagłówkowy. Przykład:
 
 ```
 char    schar =  'x';   /* A character constant          */
@@ -24,8 +24,8 @@ wchar_t wchar = L'x';   /* A wide-character constant for
                             the same character           */
 ```
 
-Stałe znaki dwubajtowe są 16 bitów szeroki i określić elementy członkowski rozszerzonego wykonania zestawu znaków. Umożliwiają one express znaków alfabetów, które są zbyt duże, aby mogły być reprezentowane przez typ `char`. Zobacz [wielobajtowe i dwubajtowe znaki](../c-language/multibyte-and-wide-characters.md) Aby uzyskać więcej informacji na temat znaków dwubajtowych.
+Stałe o szerokim znaku są 16-bitowym i określają elementy członkowskie zestawu znaków wykonywania rozszerzonego. Umożliwiają one wyrażanie znaków w alfabecie, które są zbyt duże, aby były reprezentowane przez typ `char`. Zobacz [znaki wielobajtowe i szerokie,](../c-language/multibyte-and-wide-characters.md) Aby uzyskać więcej informacji o szerokich znakach.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Stałe znakowe języka C](../c-language/c-character-constants.md)

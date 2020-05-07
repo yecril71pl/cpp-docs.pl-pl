@@ -15,23 +15,23 @@ ms.locfileid: "62325578"
 ---
 # <a name="c-postfix-increment-and-decrement-operators"></a>Operatory przyrostka inkrementacji i dekrementacji języka C
 
-Zwiększ operandy przyrostkowa i operatory dekrementacji są typami skalarnymi, które są modyfikowane przez l wartościami.
+Operandy przyrostka przyrostkowego i zmniejszania są typami skalarnymi, które są modyfikowane l-wartości.
 
 ## <a name="syntax"></a>Składnia
 
-*postfix-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym*  **++**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym*  **--**
+*wyrażenie przyrostkowe*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie przyrostkowe*  **++**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie przyrostkowe*  **--**
 
-Wynik przyrostka inkrementacji i dekrementacji operacji jest wartość operandu. Po uzyskaniu wyniku wartość operandu jest zwiększone (lub zmniejszone). Poniższy kod ilustruje przyrostkowego operatora inkrementacyjnego.
+Wynikiem operacji przyrostka przyrostkowego lub zmniejszania jest wartość operandu. Po uzyskaniu wyniku wartość operandu jest zwiększana (lub zmniejszana). Poniższy kod ilustruje przyrostowy operator przyrostu.
 
 ```
 if( var++ > 0 )
     *p++ = *q++;
 ```
 
-W tym przykładzie zmienna `var` jest w porównaniu do 0, a następnie zwiększany. Jeśli `var` dodatnią przed jest zwiększany, następna instrukcja jest wykonywana. Po pierwsze, wartość obiektu wskazywanego przez `q` jest przypisany do obiektu wskazywanego przez `p`. Następnie `q` i `p` są zwiększane.
+W tym przykładzie zmienna `var` jest porównywana z wartością 0, a następnie zwiększana. Jeśli `var` była wynikiem dodatnim przed zwiększeniem wartości, następna instrukcja zostanie wykonana. Najpierw wartość obiektu wskazywanego przez `q` jest przypisana do obiektu wskazywanego przez. `p` Następnie `q` i `p` są zwiększane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operatory przyrostka inkrementacji i dekrementacji: ++ i --](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)

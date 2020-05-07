@@ -14,22 +14,22 @@ ms.locfileid: "65220920"
 ---
 # <a name="automation-in-a-dll"></a>Automatyzacja w bibliotece DLL
 
-Po wybraniu opcji automatyzacji w Kreatorze MFC DLL, Kreator umożliwia następujące czynności:
+Po wybraniu opcji Automatyzacja w Kreatorze MFC DLL, Kreator udostępnia następujące informacje:
 
-- Język opisu obiektów starter (. Plik ODL)
+- Język opisu obiektu początkowego (. ODL) — plik
 
-- Dyrektywa include w pliku STDAFX.h Afxole.h
+- Dyrektywa include w pliku STDAFX. h dla Afxole. h
 
-- Implementacja `DllGetClassObject` funkcji, która wywołuje **AfxDllGetClassObject** — funkcja
+- Implementacja `DllGetClassObject` funkcji, która wywołuje funkcję **AfxDllGetClassObject**
 
-- Implementacja `DllCanUnloadNow` funkcji, która wywołuje **AfxDllCanUnloadNow** — funkcja
+- Implementacja `DllCanUnloadNow` funkcji, która wywołuje funkcję **AfxDllCanUnloadNow**
 
-- Implementacja `DllRegisterServer` funkcji, która wywołuje [COleObjectFactory::UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall) — funkcja
+- Implementacja `DllRegisterServer` funkcji, która wywołuje funkcję [COleObjectFactory:: UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall)
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+## <a name="what-do-you-want-to-know-more-about"></a>Jak chcesz dowiedzieć się więcej?
 
 - [Serwery automatyzacji](../mfc/automation-servers.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Tworzenie bibliotek DLL języka C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)
+[Tworzenie bibliotek DLL C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)

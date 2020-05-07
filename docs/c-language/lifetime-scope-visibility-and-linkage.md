@@ -11,7 +11,7 @@ ms.locfileid: "64343494"
 ---
 # <a name="lifetime-scope-visibility-and-linkage"></a>Okres istnienia, zakres, widoczność i połączenie
 
-Aby zrozumieć, jak działa C program, trzeba zrozumieć zasady, które określają, jak zmienne i funkcje mogą być używane w programie. Kilka koncepcji są niezwykle istotne dla zrozumienia, te reguły:
+Aby zrozumieć, jak działa program C, należy zapoznać się z regułami, które określają, jak zmienne i funkcje mogą być używane w programie. Niektóre koncepcje mają kluczowe znaczenie dla zrozumienie następujących zasad:
 
 - [Okres istnienia](../c-language/lifetime.md)
 
@@ -19,6 +19,6 @@ Aby zrozumieć, jak działa C program, trzeba zrozumieć zasady, które określa
 
 - [Połączenie](../c-language/linkage.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Struktura programu](../c-language/program-structure.md)

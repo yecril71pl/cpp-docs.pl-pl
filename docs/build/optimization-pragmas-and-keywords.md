@@ -15,7 +15,7 @@ ms.locfileid: "80169802"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>Optymalizacja pragm i słów kluczowych
 
-Kilka słów kluczowych i pragm, które są używane w języku C C++ lub kodzie, ma wpływ na optymalizację:
+Kilka słów kluczowych i pragm, które są używane w kodzie C lub C++, wpływają na optymalizację:
 
 - [__asm](../assembler/inline/asm.md)
 

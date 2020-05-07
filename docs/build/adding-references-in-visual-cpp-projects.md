@@ -1,5 +1,5 @@
 ---
-title: Zużywanie bibliotek i składników w C++ projektach
+title: Zużywanie bibliotek i składników w projektach C++
 ms.date: 12/10/2018
 f1_keywords:
 - VC.Project.References
@@ -16,17 +16,17 @@ ms.locfileid: "80169958"
 ---
 # <a name="consuming-libraries-and-components"></a>Zużywanie bibliotek i składników
 
-Często C++ projekt musi wywoływać funkcje lub uzyskać dostęp do danych w pliku binarnym, takim jak Biblioteka statyczna (pliki. lib), DLL, składnik środowisko wykonawcze systemu Windows, składnik com lub zestaw .NET. W takich przypadkach trzeba skonfigurować projekt, aby mógł on znaleźć ten plik binarny w czasie kompilacji. Konkretne kroki zależą od typu projektu, typu pliku binarnego oraz tego, czy dane binarne są kompilowane w tym samym rozwiązaniu, co projekt.
+Często projekt języka C++ musi wywoływać funkcje lub uzyskać dostęp do danych w pliku binarnym, takim jak Biblioteka statyczna (pliki lib), DLL, składnik środowisko wykonawcze systemu Windows, składnik COM lub zestaw .NET. W takich przypadkach trzeba skonfigurować projekt, aby mógł on znaleźć ten plik binarny w czasie kompilacji. Konkretne kroki zależą od typu projektu, typu pliku binarnego oraz tego, czy dane binarne są kompilowane w tym samym rozwiązaniu, co projekt.
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Wykorzystywanie bibliotek pobranych za pośrednictwem vcpkg
 
-Aby korzystać z biblioteki pobranej przy użyciu Menedżera pakietów **vcpkg** , można zignorować poniższe instrukcje. Aby uzyskać więcej informacji [, zobacz vcpkg: Menedżer C++ pakietów dla systemów Windows, Linux i MacOS](vcpkg.md#integrate-with-visual-studio-windows) .
+Aby korzystać z biblioteki pobranej przy użyciu Menedżera pakietów **vcpkg** , można zignorować poniższe instrukcje. Aby uzyskać więcej informacji [, zobacz vcpkg: Menedżer pakietów C++ dla systemów Windows, Linux i MacOS](vcpkg.md#integrate-with-visual-studio-windows) .
 
 ## <a name="consuming-static-libraries"></a>Używanie bibliotek statycznych
 
 Jeśli projekt biblioteki statycznej jest kompilowany w tym samym rozwiązaniu:
 
-1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>Uwzględnij pliki nagłówkowe biblioteki statycznej przy użyciu znaków cudzysłowu. W typowym rozwiązaniu ścieżka rozpocznie się z `../<library project name>`. Technologia IntelliSense pomoże jej znaleźć.
+1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>Uwzględnij pliki nagłówkowe biblioteki statycznej przy użyciu znaków cudzysłowu. W typowym rozwiązaniu ścieżka zacznie się od `../<library project name>`. Technologia IntelliSense pomoże jej znaleźć.
 2. Dodaj odwołanie do projektu biblioteki statycznej. Kliknij prawym przyciskiem myszy pozycję **odwołania** w węźle projektu aplikacji w **Eksplorator rozwiązań** i wybierz polecenie **Dodaj odwołanie**.
 
 Jeśli Biblioteka statyczna nie jest częścią rozwiązania:
@@ -46,11 +46,11 @@ Jeśli biblioteka DLL nie jest częścią rozwiązania aplikacji, wymagany jest 
 
 ## <a name="com-objects"></a>obiekty COM
 
-Jeśli aplikacja natywna C++ musi korzystać z obiektu com, a ten obiekt jest *zarejestrowany*, wszystko, co trzeba zrobić, wywołuje funkcję CoCreateInstance i przekazuje identyfikator CLSID obiektu. System znajdzie go w rejestrze systemu Windows i załaduje go. Projekt C++/CLI może zużywać obiekt com w taki sam sposób lub przez dodanie odwołania do niego z listy **Dodaj odwołania > com** i zużywać ją za pośrednictwem oddzielonej [otoki środowiska uruchomieniowego](/dotnet/framework/interop/runtime-callable-wrapper).
+Jeśli Natywna aplikacja C++ wymaga użycia obiektu COM, a ten obiekt jest *zarejestrowany*, wszystko, co trzeba zrobić, wywołuje funkcję CoCreateInstance i przekazuje identyfikator CLSID obiektu. System znajdzie go w rejestrze systemu Windows i załaduje go. Projekt C++/CLI może zużywać obiekt COM w taki sam sposób lub dodając odwołanie do niego z listy **Dodaj odwołania > com** i zużywać ją za pośrednictwem otoki możliwej do [uruchomienia w czasie wykonywania](/dotnet/framework/interop/runtime-callable-wrapper).
 
 ## <a name="net-assemblies-and-windows-runtime-components"></a>Zestawy .NET i składniki środowisko wykonawcze systemu Windows
 
-W projektach platformy UWP C++lub/CLI można używać zestawów .NET lub składników Środowisko wykonawcze systemu Windows przez dodanie *odwołania* do zestawu lub składnika. W węźle **odwołania** w projekcie platformy UWP lub C++/CLI widoczne są odwołania do często używanych składników. Kliknij prawym przyciskiem myszy węzeł **odwołania** w **Eksplorator rozwiązań** , aby wyświetlić **Menedżera odwołań** i przejrzeć dodatkowe składniki, które są znane systemowi. Kliknij przycisk **Przeglądaj** , aby przejść do folderu, w którym znajduje się składnik niestandardowy. Ponieważ zestawy .NET i składniki środowisko wykonawcze systemu Windows zawierają wbudowane informacje o typie, można wyświetlić ich metody i klasy, klikając prawym przyciskiem myszy i wybierając pozycję **Widok w Przeglądarka obiektów**.
+W projektach platformy UWP lub C++/CLI, zestawy .NET lub składniki środowisko wykonawcze systemu Windows są zużywane przez dodanie *odwołania* do zestawu lub składnika. W węźle **odwołania** w projekcie platformy UWP lub C++/CLI są wyświetlane odwołania do często używanych składników. Kliknij prawym przyciskiem myszy węzeł **odwołania** w **Eksplorator rozwiązań** , aby wyświetlić **Menedżera odwołań** i przejrzeć dodatkowe składniki, które są znane systemowi. Kliknij przycisk **Przeglądaj** , aby przejść do folderu, w którym znajduje się składnik niestandardowy. Ponieważ zestawy .NET i składniki środowisko wykonawcze systemu Windows zawierają wbudowane informacje o typie, można wyświetlić ich metody i klasy, klikając prawym przyciskiem myszy i wybierając pozycję **Widok w Przeglądarka obiektów**.
 
 ## <a name="reference-properties"></a>Właściwości odwołania
 
@@ -80,9 +80,9 @@ Właściwości odwołania ActiveX są dostępne tylko w odniesieniu do składnik
 
    Wyświetla narzędzie, które jest używane do kompilowania zestawu międzyoperacyjnego na podstawie przywoływanej biblioteki COM lub kontrolki ActiveX.
 
-### <a name="assembly-reference-properties-ccli"></a>Właściwości odwołania do zestawuC++(/CLI)
+### <a name="assembly-reference-properties-ccli"></a>Właściwości odwołania do zestawu (C++/CLI)
 
-Właściwości odwołania do zestawu są dostępne tylko w odniesieniu do C++zestawów .NET Framework w projektach/CLI. Te właściwości są wyświetlane tylko wtedy, gdy w okienku **odwołania** wybrano zestaw .NET Framework. Nie można zmodyfikować właściwości.
+Właściwości odwołania do zestawu są dostępne tylko w odniesieniu do zestawów .NET Framework w projektach C++/CLI. Te właściwości są wyświetlane tylko wtedy, gdy w okienku **odwołania** wybrano zestaw .NET Framework. Nie można zmodyfikować właściwości.
 
 - **Ścieżka względna**
 
@@ -96,7 +96,7 @@ W przypadku różnych rodzajów odwołań dostępne są następujące właściwo
 
    Określa, czy przywoływany zestaw ma być automatycznie kopiowany do lokalizacji docelowej podczas kompilacji.
 
-- **Kopiuj lokalne zestawy satelickieC++(/CLI)**
+- **Kopiuj lokalne zestawy satelickie (C++/CLI)**
 
    Określa, czy zestawy satelickie przywoływanego zestawu mają być automatycznie kopiowane do lokalizacji docelowej podczas kompilacji. Używane tylko wtedy, gdy **kopia lokalna** ma **wartość true**.
 
@@ -128,7 +128,7 @@ Poniższe właściwości znajdują się w odwołaniach do zestawów COM i .NET i
 
    Wyświetla nazwę zestawu dla przywoływanego zestawu.
 
-- **Dziedzinie**
+- **Kultura**
 
    Wyświetla kulturę wybranego odwołania.
 
@@ -158,7 +158,7 @@ Poniższe właściwości znajdują się w odwołaniach do zestawów COM i .NET i
 
 - **Silna nazwa**
 
-   `true`, jeśli przywoływany zestaw ma silną nazwę. Zestaw o silnej nazwie jest unikatowy.
+   `true`Jeśli przywoływany zestaw ma silną nazwę. Zestaw o silnej nazwie jest unikatowy.
 
 - **Wersja**
 
@@ -166,5 +166,5 @@ Poniższe właściwości znajdują się w odwołaniach do zestawów COM i .NET i
 
 ## <a name="see-also"></a>Zobacz też
 
-[C++odwołanie do strony właściwości projektu](reference/property-pages-visual-cpp.md)<br>
+[Odwołanie do strony właściwości projektu C++](reference/property-pages-visual-cpp.md)<br>
 [Ustawianie właściwości kompilacji i kompilatora języka C++ w programie Visual Studio](working-with-project-properties.md)

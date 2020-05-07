@@ -14,26 +14,26 @@ ms.locfileid: "62326498"
 ---
 # <a name="c-bit-fields"></a>Pola bitowe języka C
 
-Oprócz deklaratorów elementów członkowskich struktury lub Unii deklaratora struktury można też określoną liczbę bitów, o nazwie "pole bitowe". Jego długość jest ustawiona za pomocą dwukropka z deklaratora dla nazwy pola. Pole bitowe są interpretowane jako typ całkowitoliczbowy.
+Oprócz Deklaratory dla elementów członkowskich struktury lub Unii, struktura deklarator może również być określoną liczbą bitów o nazwie "pole bitowe". Jego długość jest ustawiana z deklarator dla nazwy pola za pomocą dwukropka. Pole bitowe jest interpretowane jako typ całkowity.
 
 ## <a name="syntax"></a>Składnia
 
-*struct-declarator*:<br/>
+*Struktura-deklarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Specyfikator typu* *deklaratora*<sub>zoptymalizowany pod kątem</sub> **:** *wyrażenia stałego*
+&nbsp;&nbsp;&nbsp;&nbsp;*Typ-specyfikator* *deklarator*<sub>opt</sub> **:** *wyrażenie stałe*
 
-*Wyrażenie_stałe* Określa szerokość pola w bitach. *Specyfikator typu* dla `declarator` musi być `unsigned int`, **podpisany int**, lub `int`i *wyrażenie_stałe* musi być nieujemna wartość liczby całkowitej. Jeśli wartość wynosi zero, nie ma deklaracji `declarator`. Tablice pól bitowych, wskaźniki do pola bitowe i funkcji zwracających pola bitowe nie są dozwolone. Opcjonalny `declarator` nazwy pola bitowego. Pola bitowe mogą być deklarowane tylko w ramach struktury. Operator address-of (**&**) nie można zastosować do pola bitowego składników.
+*Wyrażenie stałe* Określa szerokość pola w bitach. *Specyfikator typu* dla `declarator` parametru musi być `unsigned int`, ze **znakiem int**lub `int`, a *wyrażenie stałe* musi być nieujemną liczbą całkowitą. Jeśli wartość jest równa zero, deklaracja nie ma `declarator`. Tablice pól bitowych, wskaźników do pól bitowych i funkcji zwracających pola bitowe są niedozwolone. Opcjonalne `declarator` nazwy pola bitowego. Pola bitowe mogą być deklarowane tylko jako część struktury. Nie można zastosować operatora Address-**&** of () do składników pola bitowego.
 
-Nie można odwoływać się do pola bitowe bez nazwy, a ich zawartość w czasie wykonywania są nieprzewidywalne. One może służyć jako pola "fikcyjny" do celów wyrównania. Pole bitowe bez nazwy, w której szerokość jest określone jako 0 gwarantuje, że magazyn dla elementu członkowskiego, postępując w *struktury deklaracji listy* zaczyna się od `int` granic.
+Nie można odwoływać się do pól bitowych bez nazwy i ich zawartości w czasie wykonywania są nieprzewidywalne. Mogą służyć jako pola "fikcyjne" w celach wyrównania. Nienazwane pole bitowe, którego szerokość jest określona jako 0 gwarantuje, że magazyn dla elementu członkowskiego, który następuje po niej na *liście deklaracji struktury* , `int` rozpoczyna się na granicy.
 
-Pola bitowe również musi być wystarczająco długi, by zawierać wzorca bitowego. Na przykład następujące dwie instrukcje są niedozwolone:
+Pola bitowe muszą być również wystarczająco długie, aby można było zawierać wzorzec bitowy. Na przykład te dwie instrukcje są niedozwolone:
 
 ```
 short a:17;        /* Illegal! */
 int long y:33;     /* Illegal! */
 ```
 
-Ten przykład definiuje dwuwymiarową tablicę struktury o nazwie `screen`.
+W tym przykładzie zdefiniowano dwuwymiarową tablicę struktur `screen`o nazwie.
 
 ```
 struct
@@ -45,15 +45,15 @@ struct
 } screen[25][80];
 ```
 
-Tablica zawiera elementy 2000. Każdy element jest struktura poszczególne zawierający cztery pola bitowego elementy członkowskie: `icon`, `color`, `underline`, i `blink`. Rozmiar struktury jest dwubajtowa.
+Tablica zawiera 2 000 elementów. Każdy element jest pojedynczą strukturą zawierającą cztery elementy członkowskie pola `icon`bitowego `color`: `underline`,, `blink`, i. Rozmiar każdej struktury wynosi dwa bajty.
 
-Pola bitowe mieć tą samą semantyką jako typ liczby całkowitej. Oznacza to, że pole bitowe jest używany w wyrażeniach w taki sam sposób, zmienną ten sam typ podstawowy zostałyby użyte, niezależnie od tego, ile bitów znajdują się w pole bitowe.
+Pola bitowe mają tę samą semantykę co typ liczba całkowita. Oznacza to, że pole bitowe jest używane w wyrażeniach w taki sam sposób jak zmienna tego samego typu podstawowego będzie używana, niezależnie od liczby bitów w polu bitowym.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Zdefiniowane jako pola bitowe `int` jest traktowany jako podpisany. Rozszerzenie Microsoft do standardu ANSI C umożliwia `char` i **długie** typów (zarówno **podpisany** i `unsigned`) dla pól bitowych. Nienazwane pola bitowego z typem podstawowym **długie**, **krótki**, lub `char` (**podpisany** lub `unsigned`) wymusić wyrównanie na granicy odpowiednie do typu podstawowego.
+Pola bitowe zdefiniowane jako `int` są traktowane jako podpisane. Rozszerzenie firmy Microsoft do standardu ANSI C zezwala `char` na i **długie** typy ( **podpisane** i `unsigned`) dla pól bitowych. Nienazwane pola bitowe z typem podstawowym **Long**, **Short**lub `char` (**podpisane** lub `unsigned`) Wymuś wyrównanie do granicy odpowiedniej dla typu podstawowego.
 
-Pola bitowe są przydzielane w ramach całkowitą od najmniej znaczącego najbardziej znaczący bit. W poniższym kodzie
+Pola bitowe są przypisywane w postaci liczby całkowitej od najmniej znaczącej do najbardziej znaczącego bitu. W poniższym kodzie
 
 ```
 struct mybitfields
@@ -71,17 +71,17 @@ int main( void );
 }
 ```
 
-bity mogłoby być ułożone w następujący sposób:
+bity można rozmieścić w następujący sposób:
 
 ```
 00000001 11110010
 cccccccb bbbbaaaa
 ```
 
-Ponieważ procesorami z rodziny 8086 przechowuje bajcie liczb całkowitych, przed bajcie liczb całkowitych `0x01F2` powyżej powinny być przechowywane w pamięci fizycznej jako `0xF2` następuje `0x01`.
+Ponieważ rodzina 8086 procesorów przechowuje niską liczbę wartości całkowitych przed bajtem, liczba całkowita `0x01F2` powyżej byłaby przechowywana w pamięci fizycznej, `0xF2` a po niej. `0x01`
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje struktur](../c-language/structure-declarations.md)

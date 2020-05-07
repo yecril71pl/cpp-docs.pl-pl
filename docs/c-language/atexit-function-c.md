@@ -13,10 +13,10 @@ ms.locfileid: "62327915"
 ---
 # <a name="atexit-function-c"></a>atexit — funkcja (C)
 
-**ANSI 4.10.4.3** stanie zwróconym przez `atexit` działać, jeśli wartość argumentu jest inny niż zero, EXIT_SUCCESS lub EXIT_FAILURE
+**4.10.4.3 ANSI** Stan zwracany przez funkcję, `atexit` Jeśli wartość argumentu jest różna od zera, EXIT_SUCCESS lub EXIT_FAILURE
 
-`atexit` Funkcja zwraca zero, jeśli kończy się pomyślnie, lub wartość różną od zera, jeśli nie powiedzie.
+`atexit` Funkcja zwraca zero, jeśli kończy się pomyślnie, lub wartość różną od zera, jeśli nie powiedzie się.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

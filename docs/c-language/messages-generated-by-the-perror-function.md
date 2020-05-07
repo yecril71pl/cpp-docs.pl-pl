@@ -11,7 +11,7 @@ ms.locfileid: "64343444"
 ---
 # <a name="messages-generated-by-the-perror-function"></a>Komunikaty generowane przez funkcję perror
 
-**ANSI 4.9.10.4** komunikaty generowane przez `perror` — funkcja
+**4.9.10.4 ANSI** Komunikaty generowane przez `perror` funkcję
 
 `perror` Funkcja generuje następujące komunikaty:
 
@@ -55,6 +55,6 @@ ms.locfileid: "64343444"
 36 Resource deadlock would occur
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

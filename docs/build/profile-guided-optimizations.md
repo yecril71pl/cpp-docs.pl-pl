@@ -14,84 +14,84 @@ ms.locfileid: "64857326"
 ---
 # <a name="profile-guided-optimizations"></a>Optymalizacje sterowane profilem
 
-Profilowana Optymalizacja (PGO) umożliwia optymalizowanie pliku całego pliku wykonywalnego, że optymalizator używa danych z przebiegów testowych pliku .exe lub .dll. Dane pokazują, prawdopodobnie wydajności programu w środowisku produkcyjnym.
+Optymalizacja oparta na profilach (PGO) pozwala zoptymalizować cały plik wykonywalny, gdzie Optymalizator używa danych z przebiegów testowych pliku exe lub dll. Dane przedstawiają możliwą wydajność programu w środowisku produkcyjnym.
 
-Optymalizacje sterowane profilem są dostępne tylko dla x86 lub x64 natywnych obiektów docelowych. Optymalizacje sterowane profilem są niedostępne dla plików wykonywalnych, które są uruchamiane w środowisku uruchomieniowym języka wspólnego. Nawet w przypadku utworzenia zestawu z mieszanym kodem natywnych i zarządzanych (przy użyciu **/CLR** — opcja kompilatora), nie można używać optymalizacji sterowanej profilem na tylko do kodu macierzystego. Próba skompilowania projektu po ustawieniu tych opcji w środowisku IDE powoduje błąd kompilacji.
+Optymalizacje oparte na profilach są dostępne tylko dla natywnych obiektów docelowych x86 i x64. Optymalizacje oparte na profilach nie są dostępne dla plików wykonywalnych, które są uruchamiane w środowisku uruchomieniowym języka wspólnego. Nawet w przypadku tworzenia zestawu z mieszanym kodem natywnym i zarządzanym (przy użyciu opcji kompilatora **/CLR** ) nie można używać optymalizacji profilowanej tylko w kodzie natywnym. Jeśli podjęto próbę skompilowania projektu z tymi opcjami ustawionymi w środowisku IDE, pojawią się błędy kompilacji.
 
 > [!NOTE]
-> Informacje zebrane w trakcie przebiegów testowych profilowania zastępuje optymalizacje, które normalnie w efekcie w przypadku określenia **/Ob**, **/Os**, lub **/Ot**. Aby uzyskać więcej informacji, zobacz [/Ob (rozszerzenie funkcji wbudowanej)](reference/ob-inline-function-expansion.md) i [/OS, /Ot (Preferuj mały kod, Preferuj szybko kod)](reference/os-ot-favor-small-code-favor-fast-code.md).
+> Informacje zbierane z przebiegów testów profilowania zastępują optymalizacje, które w przeciwnym razie będą obowiązywać w przypadku określenia **/ob**, **/OS**lub **/OT**. Aby uzyskać więcej informacji, zobacz [/ob (rozszerzenie funkcji wbudowanej)](reference/ob-inline-function-expansion.md) i [/OS,/OT (Preferuj mały kod, Preferuj szybki kod)](reference/os-ot-favor-small-code-favor-fast-code.md).
 
-## <a name="steps-to-optimize-your-app"></a>Kroki, aby zoptymalizować aplikację
+## <a name="steps-to-optimize-your-app"></a>Kroki optymalizacji aplikacji
 
-Aby używać optymalizacji sterowanej profilem, wykonaj następujące kroki, aby zoptymalizować aplikację:
+Aby skorzystać z optymalizacji profilowanej, wykonaj następujące kroki, aby zoptymalizować aplikację:
 
-- Skompiluj jeden lub więcej plików kodu źródłowego za pomocą [/GL](reference/gl-whole-program-optimization.md).
+- Kompiluj jeden lub więcej plików kodu źródłowego za pomocą [/GL](reference/gl-whole-program-optimization.md).
 
-   Każdy moduł skompilowany z **/GL** może być badany w trakcie przebiegów testowych optymalizacji sterowanej profilem do przechwytywania zachowania w czasie wykonywania. Każdy moduł kompilacji optymalizacji sterowanej profilem nie muszą być kompilowane przy użyciu **/GL**. Jednak tylko moduły skompilowane z **/GL** są instrumentowane i później dostępne dla optymalizacji sterowanych profilem.
+   Każdy moduł skompilowany za pomocą **/GL** można sprawdzić podczas przebiegu testu optymalizacji z obsługą profilu, aby przechwycić zachowanie w czasie wykonywania. Każdy moduł kompilacji z optymalizacją z przewodnikiem nie musi być kompilowany przy użyciu **/GL**. Jednak tylko te moduły skompilowane za pomocą **/GL** są Instrumentacją i później dostępne dla optymalizacji z przewodnikiem.
 
-- Połącz przy użyciu [opcję/LTCG](reference/ltcg-link-time-code-generation.md) i [przełączników/genprofile i/fastgenprofile](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md).
+- Link przy użyciu [/LTCG](reference/ltcg-link-time-code-generation.md) i [/GENPROFILE lub/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md).
 
-   Przy użyciu zarówno **opcję/LTCG** i **przełączników/genprofile** lub **/fastgenprofile** tworzy `.pgd` plików po uruchomieniu instrumentowanego aplikacji. Po dodaniu danych przebiegu testu do `.pgd` pliku, może służyć jako dane wejściowe do następnego kroku łączenia (tworzenie zoptymalizowanego obrazu). Podczas określania **przełączników/genprofile**, możesz opcjonalnie dodać **PGD =**_filename_ argument określający niedomyślną nazwą lub lokalizację `.pgd` pliku. Kombinacja **opcję/LTCG** i **przełączników/genprofile** lub **/fastgenprofile** opcje konsolidatora zastępuje przestarzałego **pginstrument** — Opcja konsolidatora.
+   Użycie zarówno **/LTCG** , jak i **/GENPROFILE** lub **/FASTGENPROFILE** tworzy `.pgd` plik, gdy aplikacja Instrumentacja jest uruchamiana. Po dodaniu danych do `.pgd` pliku Test-Run może być używany jako dane wejściowe do następnego kroku linku (Tworzenie zoptymalizowanego obrazu). Podczas określania **/GENPROFILE**można opcjonalnie dodać argumentu **PGD =**_filename_ , aby określić niedomyślną nazwę lub lokalizację `.pgd` pliku. Kombinacja opcji **/LTCG** i **/GENPROFILE** lub **/FASTGENPROFILE** konsolidatora zastępuje przestarzałą opcję konsolidatora **/LTCG: PGINSTRUMENT** .
 
 - Wykonaj profilowanie aplikacji.
 
-   Kończy się profilowana sesja pliku EXE w każdym lub profilowana Biblioteka DLL jest zwalniana, `appname!N.pgc` zostanie utworzony plik. A `.pgc` plik zawiera informacje o konkretnym przebiegu testowym aplikacji. *AppName* to nazwa aplikacji, a *N* jest liczba począwszy od 1, która jest zwiększany na podstawie liczby innych `appname!N.pgc` pliki w katalogu. Możesz usunąć `.pgc` plik, jeśli przebieg testu nie reprezentuje scenariusza, którą chcesz zoptymalizować.
+   Za `appname!N.pgc` każdym razem, gdy zostanie zakończona sesja pliku exe lub PROFILOWANA Biblioteka DLL zostaje zwolniona, tworzony jest plik. `.pgc` Plik zawiera informacje o konkretnym przebiegu testu aplikacji. *nazwa_aplikacji* to nazwa aplikacji, a *N* to liczba, która rozpoczyna się od 1, która jest zwiększana na podstawie liczby innych `appname!N.pgc` plików w katalogu. Można usunąć `.pgc` plik, jeśli przebieg testowy nie reprezentuje scenariusza, który ma zostać zoptymalizowany.
 
-   Podczas przebiegu testu, możesz wymusić zamknięcie aktualnie otwartego `.pgc` plików i utworzenia nowego `.pgc` plik z [pgosweep](pgosweep.md) utility (na przykład gdy koniec scenariusza testu nie jest zgodna z aplikacją zamykanie).
+   W trakcie przebiegu testowego można wymusić zamknięcie aktualnie otwartego `.pgc` pliku i utworzenie nowego `.pgc` pliku za pomocą narzędzia [pgosweep](pgosweep.md) (na przykład gdy koniec scenariusza testowego nie pokrywa się z zamknięciem aplikacji).
 
-   Aplikację można także bezpośrednio wywołać funkcją PGO [PgoAutoSweep](pgoautosweep.md), aby przechwycić dane profilu punkcie wywołanie jako `.pgc` pliku. Oferuje bardziej precyzyjną kontrolę nad kodu objętych przechwyconych danych w Twojej `.pgc` plików. Na przykład jak używać tej funkcji, zobacz [PgoAutoSweep](pgoautosweep.md) dokumentacji.
+   Aplikacja może również bezpośrednio wywołać funkcję PGO, [PgoAutoSweep](pgoautosweep.md), aby przechwytywać dane profilu w punkcie wywołania jako `.pgc` plik. Może to dać dokładniejszą kontrolę nad kodem pokrytym przez przechwycone dane w `.pgc` plikach. Przykład korzystania z tej funkcji można znaleźć w dokumentacji [PgoAutoSweep](pgoautosweep.md) .
 
-   Podczas tworzenia kompilacji instrumentowanej, domyślnie, zbieranie danych odbywa się w trybie bez wątkowo, który jest szybszy, ale może być niedokładna. Za pomocą **EXACT** argument **przełączników/genprofile** lub **/fastgenprofile**, zbieranie danych można określić w trybie wątkowo, co jest bardziej precyzyjne, ale wolniej. Ta opcja jest również dostępna, jeśli ustawisz przestarzałego [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md#pogosafemode) zmiennej środowiskowej lub przestarzałego **/POGOSAFEMODE** — opcja konsolidatora, tworząc kompilację instrumentowaną.
+   Podczas tworzenia kompilacji z instrumentacją domyślnie zbieranie danych odbywa się w trybie niebezpiecznym dla wątków, co jest szybsze, ale może być nieprecyzyjne. Używając **dokładnego** argumentu do **/GENPROFILE** lub **/FASTGENPROFILE**, można określić zbieranie danych w trybie bezpiecznym dla wątków, co jest bardziej precyzyjne, ale wolniejsze. Ta opcja jest również dostępna w przypadku ustawienia przestarzałej zmiennej środowiskowej [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md#pogosafemode) lub przestarzałej opcji konsolidatora **/POGOSAFEMODE** podczas tworzenia kompilacji z instrumentacją.
 
-- Połącz przy użyciu **opcję/LTCG** i **/USEPROFILE**.
+- Link przy użyciu **/LTCG** i **/USEPROFILE**.
 
-   Korzystanie z obu **opcję/LTCG** i [/USEPROFILE](reference/useprofile.md) opcje konsolidatora do utworzenia zoptymalizowanego obrazu. Ten krok zajmuje jako danych wejściowych `.pgd` pliku. Po określeniu **/USEPROFILE**, możesz opcjonalnie dodać **PGD =**_filename_ argumentu, aby określić inne niż domyślne nazwy bądź lokalizację dla `.pgd` pliku. Można również określić tę nazwę, za pomocą przestarzałego **/PGD** — opcja konsolidatora. Kombinacja **opcję/LTCG** i **/USEPROFILE** zastępuje przestarzałego **/LTCG:PGOPTIMIZE** i **/LTCG:PGUPDATE** opcje konsolidatora.
+   Użyj opcji konsolidatora **/LTCG** i [/USEPROFILE](reference/useprofile.md) w celu utworzenia zoptymalizowanego obrazu. Ten krok przyjmuje jako `.pgd` plik wejściowy. Po określeniu **/USEPROFILE**można opcjonalnie dodać argumentu **PGD =**_filename_ , aby określić niedomyślną nazwę lub lokalizację `.pgd` pliku. Można również określić tę nazwę przy użyciu przestarzałej opcji konsolidatora **/PGD** . Kombinacja **/LTCG** i **/USEPROFILE** zastępuje przestarzałe Opcje konsolidatora **/LTCG: PGOPTIMIZE** i **/LTCG: PGUPDATE** .
 
-Użytkownik może nawet utworzyć zoptymalizowany plik wykonywalny, a następnie stwierdzić, że się dodatkowe profilowanie przydatne w celu utworzenia bardziej zoptymalizowanego obrazu. Jeśli instrumentowany obraz i jego `.pgd` plików są dostępne, można wykonać dodatkowe przebiegi testowe i ponownie skompilować zoptymalizowany obraz przy użyciu nowszego `.pgd` plik, korzystając z tych samych **opcję/LTCG** i **/USEPROFILE** opcje konsolidatora.
+Można nawet utworzyć zoptymalizowany plik wykonywalny i później określić, że dodatkowe profilowanie byłoby przydatne do tworzenia bardziej zoptymalizowanego obrazu. Jeśli obraz z instrumentacją i jego `.pgd` plik są dostępne, można wykonać dodatkowe przebiegi testowe i skompilować zoptymalizowany obraz przy użyciu nowszego `.pgd` pliku, używając tych samych opcji konsolidatora **/LTCG** i **/USEPROFILE** .
 
 ## <a name="optimizations-performed-by-pgo"></a>Optymalizacje wykonywane przez PGO
 
-Optymalizacje sterowane profilem obejmują te testy i ulepszenia:
+Optymalizacje oparte na profilach obejmują następujące testy i ulepszenia:
 
-- **Wbudowanie** — na przykład, jeśli funkcja A często wywołuję funkcję B, a funkcja B jest stosunkowo mały, a następnie sterowane profilem wbudują funkcję optymalizacji B do funkcji A.
+- **Dekreślenie** — na przykład, jeśli funkcja a często wywołuje funkcję b, a funkcja b jest stosunkowo mała, a następnie Optymalizacja oparta na profilach jest wbudowana funkcja b w funkcji a.
 
-- **Spekulacja wywołania wirtualnego** — Jeśli wywołanie wirtualne lub inne wywołanie za pomocą wskaźnika funkcji jest często jest przeznaczony dla niektórych funkcji, optymalizacji sterowanej profilem może wstawić wykonanych warunkowo bezpośrednie wywołanie funkcji często docelowych, a bezpośrednie wywołanie może być śródwierszowa.
+- **Spekulacja wywołania wirtualnego** — w przypadku wywołania wirtualnego lub innych wywołań przez wskaźnik funkcji, często przeznaczonych dla pewnej funkcji, optymalizacja oparta na profilach może wstawić warunkowo wykonywane bezpośrednie wywołanie do często stosowanej funkcji, a bezpośrednie wywołanie może być wbudowane.
 
-- **Alokacja rejestru** — Optymalizacja oparte na danych profilu powoduje lepsze przydzielanie rejestru.
+- **Rejestrowanie optymalizacji alokacji** na podstawie danych profilowych skutkuje lepszą alokacją rejestru.
 
-- **Optymalizacja podstawowego bloku** — Optymalizacja podstawowego bloku pozwala często wykonywane podstawowe bloki, które są przejściowo wykonywane w podanej ramce można umieścić w tym samym zestawie stron (lokalizacja). Minimalizuje liczbę używanych stron, co minimalizuje obciążenie pamięci.
+- **Optymalizacja bloków podstawowych** — podstawowa Optymalizacja bloków umożliwia wykonywanie często wykonanych, podstawowych bloków, które są wykonywane w ramach danej ramki, które mają być umieszczane w tym samym zestawie stron (lokalizacji lokalnej). Minimalizuje liczbę używanych stron, co minimalizuje obciążenie pamięci.
 
-- **Optymalizacja rozmiaru/prędkości** — funkcje, których program zużywa najwięcej czasu wykonywania może być zoptymalizowany pod kątem szybkości.
+- **Optymalizacja rozmiaru/szybkości** — funkcje, w których program spędza najwięcej czasu wykonywania, można zoptymalizować pod kątem szybkości.
 
-- **Układ funkcji** — oparte na wykresu wywołań i profilowane zachowanie wywołujący/wywoływany funkcje, które przeważnie mają taką samą ścieżkę wykonywania są umieszczane w tej samej sekcji.
+- **Układ funkcji** — na podstawie grafu wywołań i PROFILOWANEGO zachowania wywołującego/wywoływanego, funkcje, które mają być wzdłuż tej samej ścieżki wykonywania, są umieszczane w tej samej sekcji.
 
-- **Warunkowa Optymalizacja rozgałęzień** — wykorzystując sondy wartości profilowanej optymalizacji można znaleźć, jeśli danej wartości w instrukcji switch jest używana częściej niż inne wartości.  Następnie taką wartość można usunąć z instrukcji switch.  Taka sama może odbywać się przy użyciu `if`... `else` instrukcje, w którym Optymalizator może zamówić łączność obejmującą `if`... `else` więc dowolna `if` lub `else` będzie umieszczał, zależności od tego, który blok więcej często jest wartość PRAWDA.
+- **Optymalizacja rozgałęzienia warunkowego** — z sondami wartości, optymalizacje oparte na profilach mogą stwierdzić, czy dana wartość w instrukcji switch jest używana częściej niż inne wartości.  Następnie taką wartość można usunąć z instrukcji switch.  Można to zrobić za pomocą `if`... `else` instrukcje, w których Optymalizator może zamówić `if`... `else` tak, aby blok `if` lub `else` został umieszczony w pierwszej kolejności, w zależności od tego, który blok jest częściej prawdziwy.
 
-- **Separacja martwego kodu** — kod, który nie jest wywoływany podczas profilowania jest przenoszony do specjalnej sekcji dołączanej na końcu zestawu sekcji. Jego wygodny sposób utrzymania tej sekcji poza często używanymi stronami.
+- Niedziałanie **separacji kodu** — kod, który nie jest wywoływany podczas profilowania, jest przenoszony do specjalnej sekcji, która jest dołączana na końcu zestawu sekcji. Efektywnie utrzymujemy tę sekcję na często używanych stronach.
 
-- **Separacja kodu EH** — kod EH ponieważ tylko w wyjątkowych przypadkach jest wykonywana, często można przenieść do osobnej sekcji. Jest on przeniesiony, gdy optymalizacje sterowane profilem można określić, że wyjątki mają następować tylko w wyjątkowych warunkach.
+- **Separacja kodu EH** — ponieważ kod EH jest wykonywany tylko wyjątkowo, można go często przenieść do osobnej sekcji. Jest on przenoszony, gdy optymalizacje oparte na profilach mogą określić, że wyjątki występują tylko w wyjątkowych warunkach.
 
-- **Funkcje wewnętrzne pamięci** — czy rozwiń wewnętrznie, czy nie zależy od tego, czy jest często wywoływana. Funkcję wewnętrzną można również optymalizować na podstawie rozmiaru bloku operacji przenoszenia i kopiowania.
+- Elementy **wewnętrzne pamięci** — określa, czy ma być rozszerzane wewnętrznie, czy nie, zależy od tego, czy jest on często wywoływany. Funkcję wewnętrzną można również optymalizować na podstawie rozmiaru bloku operacji przenoszenia i kopiowania.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Więcej informacji na temat tych zmiennych środowiskowych, funkcje i narzędzia, których można używać w sterowanych profilem:
+Przeczytaj więcej na temat tych zmiennych środowiskowych, funkcji i narzędzi, których można użyć w przypadku optymalizacji z przewodnikiem:
 
-[Zmienne środowiskowe dla optymalizacji sterowanych profilem](environment-variables-for-profile-guided-optimizations.md)<br/>
-Te zmienne były używane do określania zachowania w czasie wykonywania testowania scenariuszy. Teraz jest przestarzały i zastąpiony przez nowe opcje konsolidatora. W tym dokumencie pokazano, jak przenieść ze zmiennych środowiskowych, opcje konsolidatora.
+[Zmienne środowiskowe dla optymalizacji profilowanych](environment-variables-for-profile-guided-optimizations.md)<br/>
+Te zmienne zostały użyte do określenia zachowania w czasie wykonywania scenariuszy testowania. Są one teraz przestarzałe i zastępowane przez nowe Opcje konsolidatora. W tym dokumencie pokazano, jak przenieść zmienne środowiskowe do opcji konsolidatora.
 
 [PgoAutoSweep](pgoautosweep.md)<br/>
-Funkcję można dodać do swojej aplikacji w celu zapewnienia szczegółowych `.pgc` kontroli przechwytywania danych plików.
+Funkcja, którą można dodać do aplikacji w celu zapewnienia precyzyjnej kontroli przechwytywania `.pgc` danych plików.
 
 [pgosweep](pgosweep.md)<br/>
-Narzędzie wiersza polecenia, który zapisuje wszystkie dane profilu do `.pgc` pliku i zamyka `.pgc` pliku i otwiera nową `.pgc` pliku.
+Narzędzie wiersza polecenia, które zapisuje wszystkie dane profilu do `.pgc` pliku, zamyka ten `.pgc` plik i otwiera nowy `.pgc` plik.
 
 [pgomgr](pgomgr.md)<br/>
-Narzędzie wiersza polecenia, dodaje dane profilu z co najmniej jeden `.pgc` plików `.pgd` pliku.
+Narzędzie wiersza polecenia, które dodaje dane profilu z jednego lub więcej `.pgc` plików do `.pgd` pliku.
 
-[Instrukcje: Scalanie wielu profili PGO w jeden profil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
-Przykłady **pgomgr** użycia.
+[Instrukcje: scalanie wielu profili PGO w jeden profil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
+Przykłady użycia **pgomgr** .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dodatkowe narzędzia kompilacji kompilatora MSVC](reference/c-cpp-build-tools.md)

@@ -45,29 +45,29 @@ W poniższej tabeli zestawiono konwersje z typów zmiennoprzecinkowych.
 |**float**|**char**|Konwertuj na **Long**; Konwertuj wartość **Long** na **char**|
 |**float**|**short**|Konwertuj na **Long**; Konwertuj z **Long** na **Short**|
 |**float**|**int**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **int**, wynik jest niezdefiniowany.|
-|**float**|**long**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **Long**, wynik jest niezdefiniowany.|
-|**float**|**Long Long**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **Long Long**, wynik jest niezdefiniowany.|
-|**float**|**znak bez znaku**|Konwertuj na **Long**; Konwertuj **Long** na **znak bez znaku**|
-|**float**|**bez znaku Short**|Konwertuj na **Long**; Konwertuj **Long** na **Short bez znaku**|
+|**float**|**długi**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **Long**, wynik jest niezdefiniowany.|
+|**float**|**long long**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **Long Long**, wynik jest niezdefiniowany.|
+|**float**|**unsigned char**|Konwertuj na **Long**; Konwertuj **Long** na **znak bez znaku**|
+|**float**|**unsigned short**|Konwertuj na **Long**; Konwertuj **Long** na **Short bez znaku**|
 |**float**|**bajt**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **unsigned**, wynik jest niezdefiniowany.|
-|**float**|**bez znaku**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży, aby można go było przedstawić jako **Long unsigned**, wynik jest niezdefiniowany.|
+|**float**|**unsigned long**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży, aby można go było przedstawić jako **Long unsigned**, wynik jest niezdefiniowany.|
 |**float**|**bez znaku Long Long**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **unsigned long long**, wynik jest niezdefiniowany.|
 |**float**|**double**|Reprezentuje jako **Double**.|
 |**float**|**Long Double**|Reprezentuje jako **Long Double**.|
 |**double**|**char**|Konwertuj na **zmiennoprzecinkowe**; Konwertuj wartość **zmiennoprzecinkową** na wartość typu **char**|
 |**double**|**short**|Konwertuj na **zmiennoprzecinkowe**; Konwertuj **zmiennoprzecinkowe** na **krótkie**|
 |**double**|**int**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **int**, wynik jest niezdefiniowany.|
-|**double**|**long**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **Long**, wynik jest niezdefiniowany.|
-|**double**|**znak bez znaku**|Konwertuj na **Long**; Konwertuj **Long** na **znak bez znaku**|
-|**double**|**bez znaku Short**|Konwertuj na **Long**; Konwertuj **Long** na **Short bez znaku**|
+|**double**|**długi**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **Long**, wynik jest niezdefiniowany.|
+|**double**|**unsigned char**|Konwertuj na **Long**; Konwertuj **Long** na **znak bez znaku**|
+|**double**|**unsigned short**|Konwertuj na **Long**; Konwertuj **Long** na **Short bez znaku**|
 |**double**|**bajt**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **unsigned**, wynik jest niezdefiniowany.|
-|**double**|**bez znaku**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży, aby można go było przedstawić jako **Long unsigned**, wynik jest niezdefiniowany.|
+|**double**|**unsigned long**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży, aby można go było przedstawić jako **Long unsigned**, wynik jest niezdefiniowany.|
 |**double**|**bez znaku Long Long**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **unsigned long long**, wynik jest niezdefiniowany.|
 |**double**|**float**|Reprezentuje jako wartość **zmiennoprzecinkową**. Jeśli wartość **podwójnej precyzji** nie może być reprezentowana dokładnie jako **zmiennoprzecinkowa**, nastąpi utrata dokładności. Jeśli wartość jest zbyt duża, aby była reprezentowana jako **zmiennoprzecinkowa**, wynik jest niezdefiniowany.|
 |**double**|**Long Double**|Wartość **Long Double** jest traktowana jako **Double**.|
 
 Konwersje z **Long Double** są takie same jak konwersje z **Double**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersje przypisań](../c-language/assignment-conversions.md)

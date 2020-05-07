@@ -31,9 +31,9 @@ Aby utworzyć bibliotekę DLL tylko do zasobów, należy utworzyć nowy projekt 
 
 1. Utwórz nowy skrypt zasobów zawierający zasoby biblioteki DLL (takie jak ciąg lub menu). Zapisz plik `.rc`.
 
-1. W menu **projekt** wybierz opcję **Dodaj istniejący element**, a następnie Wstaw nowy plik `.rc` do projektu.
+1. W menu **projekt** wybierz opcję **Dodaj istniejący element**, a następnie Wstaw nowy `.rc` plik do projektu.
 
-1. Określ opcję konsolidatora [/NOENTRY](reference/noentry-no-entry-point.md) . `/NOENTRY` uniemożliwia konsolidatorowi łączenie odwołania do `_main` do biblioteki DLL; Ta opcja jest wymagana do utworzenia biblioteki DLL opartej na zasobach.
+1. Określ opcję konsolidatora [/NOENTRY](reference/noentry-no-entry-point.md) . `/NOENTRY`zapobiega łączeniu się odwołania do `_main` biblioteki DLL przez konsolidatora. Ta opcja jest wymagana do utworzenia biblioteki DLL opartej na zasobach.
 
 1. Skompiluj bibliotekę DLL.
 
@@ -46,9 +46,9 @@ Aby utworzyć bibliotekę DLL tylko do zasobów, należy utworzyć nowy projekt 
 
 1. Utwórz nowy skrypt zasobów zawierający zasoby biblioteki DLL (takie jak ciąg lub menu). Zapisz plik `.rc`.
 
-1. W menu **projekt** wybierz opcję **Dodaj istniejący element**, a następnie Wstaw nowy plik `.rc` do projektu.
+1. W menu **projekt** wybierz opcję **Dodaj istniejący element**, a następnie Wstaw nowy `.rc` plik do projektu.
 
-1. Określ opcję konsolidatora [/NOENTRY](reference/noentry-no-entry-point.md) . `/NOENTRY` uniemożliwia konsolidatorowi łączenie odwołania do `_main` do biblioteki DLL; Ta opcja jest wymagana do utworzenia biblioteki DLL opartej na zasobach.
+1. Określ opcję konsolidatora [/NOENTRY](reference/noentry-no-entry-point.md) . `/NOENTRY`zapobiega łączeniu się odwołania do `_main` biblioteki DLL przez konsolidatora. Ta opcja jest wymagana do utworzenia biblioteki DLL opartej na zasobach.
 
 1. Skompiluj bibliotekę DLL.
 
@@ -56,7 +56,7 @@ Aby utworzyć bibliotekę DLL tylko do zasobów, należy utworzyć nowy projekt 
 
 ## <a name="use-a-resource-only-dll"></a>Korzystanie z biblioteki DLL samej zasobów
 
-Aplikacja, która korzysta z biblioteki DLL zawierającej tylko zasoby, powinna wywołać [LoadLibraryEx](loadlibrary-and-afxloadlibrary.md) lub powiązaną funkcję w celu jawnego połączenia z biblioteką DLL. Aby uzyskać dostęp do zasobów, wywołaj funkcje ogólne `FindResource` i `LoadResource`, które działają na dowolnym rodzaju zasobu. Można też wywołać jedną z następujących funkcji specyficznych dla zasobów:
+Aplikacja, która korzysta z biblioteki DLL zawierającej tylko zasoby, powinna wywołać [LoadLibraryEx](loadlibrary-and-afxloadlibrary.md) lub powiązaną funkcję w celu jawnego połączenia z biblioteką DLL. Aby uzyskać dostęp do zasobów, wywołaj funkcje `FindResource` ogólne `LoadResource`i, które pracują nad dowolnym rodzajem zasobów. Można też wywołać jedną z następujących funkcji specyficznych dla zasobów:
 
 - `FormatMessage`
 
@@ -74,7 +74,7 @@ Aplikacja, która korzysta z biblioteki DLL zawierającej tylko zasoby, powinna 
 
 Aplikacja powinna wywołać `FreeLibrary` po zakończeniu korzystania z zasobów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Praca z plikami zasobów](../windows/working-with-resource-files.md)\
-[Tworzenie C/C++ dll w Visual Studio](dlls-in-visual-cpp.md)
+[Tworzenie bibliotek DLL C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)

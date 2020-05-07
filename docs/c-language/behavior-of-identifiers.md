@@ -11,12 +11,12 @@ ms.locfileid: "62313483"
 ---
 # <a name="behavior-of-identifiers"></a>Identyfikatory zachowania
 
-- [Znaki znaczące bez zewnętrznego połączenia](../c-language/significant-characters-without-external-linkage.md)
+- [Znaki znaczące bez powiązania zewnętrznego](../c-language/significant-characters-without-external-linkage.md)
 
 - [Znaki znaczące z zewnętrznym połączeniem](../c-language/significant-characters-with-external-linkage.md)
 
 - [Wielkie i małe litery](../c-language/uppercase-and-lowercase.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)

@@ -11,16 +11,16 @@ ms.locfileid: "64343146"
 ---
 # <a name="reading-ranges"></a>Odczytywanie zakresów
 
-**ANSI 4.9.6.2** interpretacji znak kreski (-), który jest ani pierwszym ani ostatnim znakiem w scanlist dla źródła danych % [konwersji w `fscanf` — funkcja
+**4.9.6.2 ANSI** Interpretacja znaku kreski (-), który nie jest pierwszym ani ostatnim znakiem w scanlist dla% [konwersja w `fscanf` funkcji
 
-Następujący wiersz
+Poniższy wiersz
 
 ```
 fscanf( fileptr, "%[A-Z]", strptr);
 ```
 
-odczytuje dowolną liczbę znaków z zakresu A-Z do ciągu do której `strptr` punktów.
+odczytuje dowolną liczbę znaków z zakresu od A do Z do ciągu, do którego `strptr` punkty.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

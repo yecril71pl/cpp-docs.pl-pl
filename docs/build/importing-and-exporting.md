@@ -17,32 +17,32 @@ ms.locfileid: "65220642"
 ---
 # <a name="importing-and-exporting"></a>Importowanie i eksportowanie
 
-Można zaimportować symboli publicznych do aplikacji lub eksportowania funkcji z biblioteki DLL przy użyciu dwóch metod:
+Można zaimportować symbole publiczne do aplikacji lub wyeksportować funkcje z biblioteki DLL przy użyciu dwóch metod:
 
-- Użyj pliku definicji (.def) moduł podczas kompilowania biblioteki DLL
+- Podczas kompilowania biblioteki DLL Użyj pliku definicji modułu (. def)
 
-- Używać słów kluczowych **__declspec(dllimport)** lub **__declspec(dllexport)** w definicji funkcji w głównym aplikacji
+- Użyj słów kluczowych **__declspec (dllimport)** lub **__declspec (dllexport)** w definicji funkcji w aplikacji głównej
 
-## <a name="using-a-def-file"></a>Używając pliku .def
+## <a name="using-a-def-file"></a>Przy użyciu pliku. def
 
-Plik definicji modułu (.def) jest plikiem tekstowym zawierającym jedną lub więcej instrukcji modułu, które opisują różne atrybuty pliku DLL. Jeśli nie używasz **__declspec(dllimport)** lub **__declspec(dllexport)** do eksportowania funkcji DLL, biblioteka DLL wymaga pliku .def.
+Plik definicji modułu (. def) jest plikiem tekstowym zawierającym jedną lub więcej instrukcji modułu, które opisują różne atrybuty biblioteki DLL. Jeśli nie używasz **__declspec (dllimport)** ani **__declspec (dllexport)** do eksportowania funkcji biblioteki DLL, biblioteka DLL wymaga pliku. def.
 
-Możesz użyć .def — pliki do [importowanie do aplikacji](importing-using-def-files.md) lub [eksportowanie z biblioteki DLL](exporting-from-a-dll-using-def-files.md).
+Pliki. def można użyć do [zaimportowania do aplikacji](importing-using-def-files.md) lub [eksportu z biblioteki DLL](exporting-from-a-dll-using-def-files.md).
 
-## <a name="using-declspec"></a>Za pomocą __declspec
+## <a name="using-__declspec"></a>Używanie __declspec
 
-Nie trzeba używać **__declspec(dllimport)** swój kod, aby skompilować poprawnie, ale to umożliwia kompilatorowi generowanie lepszego kodu. Kompilator jest w stanie generowanie lepszego kodu, ponieważ można określić, czy funkcja istnieje w bibliotece DLL lub nie, co pozwala kompilator generuje kod, z pominięciem poziom pośrednictwa, które zwykle będą obecne w wywołaniu funkcji, która przekroczyła granicę biblioteki DLL. Jednakże, należy użyć **__declspec(dllimport)** do zaimportowania zmiennych używanych w bibliotece DLL.
+Nie trzeba używać **__declspec (dllimport)** do prawidłowego kompilowania kodu, ale dzięki temu kompilator może generować lepszy kod. Kompilator może generować lepszy kod, ponieważ może określić, czy funkcja istnieje w bibliotece DLL, co umożliwia kompilatorowi tworzenie kodu, który pomija poziom pośredni, który zwykle jest obecny w wywołaniu funkcji, która przekroczyła granicę biblioteki DLL. Należy jednak użyć **__declspec (dllimport)** do importowania zmiennych używanych w bibliotece DLL.
 
-Za pomocą sekcji EXPORTS pliku .def odpowiednie **__declspec(dllexport)** nie jest wymagana. **__declspec(dllexport)** została dodana do umożliwiają łatwe do eksportowania funkcji z pliku .exe lub .dll, bez użycia pliku .def.
+W przypadku prawidłowej sekcji EKSPORTy plików. def **__declspec (dllexport)** nie jest wymagana. dodano **__declspec (dllexport)** w celu ułatwienia eksportowania funkcji z pliku exe lub dll bez użycia pliku. def.
 
-Format przenośnym plikiem wykonywalnym środowiska Win32 jest przeznaczony do zminimalizować liczbę stron, które muszą dotknięciu naprawić importów. Aby to zrobić, umieszcza wszystkie adresy importu dla dowolnego programu, w jednym miejscu, o nazwie tabeli adresów importowania. Dzięki temu moduł ładujący zmodyfikować jedną lub dwie strony podczas uzyskiwania dostępu do tych importów.
+Przenośny format wykonywalny Win32 został zaprojektowany w celu zminimalizowania liczby stron, które muszą być naprawione w celu naprawy. W tym celu umieszcza wszystkie adresy importu dla każdego programu w jednym miejscu nazywanym tabelą importu adresów. Pozwala to programowi ładującemu modyfikować tylko jedną lub dwie strony podczas uzyskiwania dostępu do tych importów.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
 - [Importowanie do aplikacji](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Eksportowanie z biblioteki DLL](exporting-from-a-dll.md)
+- [Eksportuj z biblioteki DLL](exporting-from-a-dll.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Tworzenie bibliotek DLL języka C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)
+[Tworzenie bibliotek DLL C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)

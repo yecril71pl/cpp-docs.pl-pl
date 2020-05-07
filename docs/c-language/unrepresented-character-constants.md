@@ -11,10 +11,10 @@ ms.locfileid: "64343072"
 ---
 # <a name="unrepresented-character-constants"></a>Niemożliwe do przedstawienia stałe znakowe
 
-**ANSI 3.1.3.4** wartość stałej znakowej liczba całkowita, która zawiera sekwencję znaków lub ucieczki nie są reprezentowane w zestaw znaków wykonania podstawowego lub znaków rozszerzonych dla stałej znaku dwubajtowego
+**3.1.3.4 ANSI** Wartość stałej znakowej liczby całkowitej, która zawiera znak lub sekwencję ucieczki, która nie jest reprezentowana w podstawowym zestawie znaków wykonywania lub rozszerzonego zestawu znaków dla stałej o szerokim znaku
 
-Wszystkie znaki stałej lub sekwencje ucieczki mogą być reprezentowane w zestawie znaków rozszerzonych.
+Wszystkie stałe znakowe lub sekwencje ucieczki mogą być reprezentowane w rozszerzonym zestawie znaków.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Znaki](../c-language/characters.md)
+[Znaków](../c-language/characters.md)

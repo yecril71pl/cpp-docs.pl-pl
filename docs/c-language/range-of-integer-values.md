@@ -11,17 +11,17 @@ ms.locfileid: "64343123"
 ---
 # <a name="range-of-integer-values"></a>Zakres wartości całkowitych
 
-**ANSI 3.1.2.5** oświadczenia i zestawy wartości różnych typów całkowitych
+**3.1.2.5 ANSI** Reprezentacje i zestawy wartości różnych typów liczb całkowitych
 
-Liczby całkowite zawiera 32-bitowy (czterech bajtach). Oznaczone liczby całkowite są zapisywane w kodzie dopełnień do dwóch. Najbardziej znaczący bit utrzymuje znak: 1 dla wartości ujemnych, 0 dla wartości dodatnich i zera. Wartości są wymienione poniżej:
+Liczby całkowite zawierają 32 bitów (cztery bajty). Oznaczone liczby całkowite są zapisywane w kodzie dopełnień do dwóch. Najbardziej znaczący bit utrzymuje znak: 1 dla wartości ujemnych, 0 dla wartości dodatnich i zera. Wartości są wymienione poniżej:
 
-|Typ|Minimalne i maksymalne|
+|Typ|Minimum i maksimum|
 |----------|-------------------------|
-|**short bez znaku**|od 0 do 65535|
+|**unsigned short**|od 0 do 65535|
 |`signed short`|-32768 do 32767|
-|`unsigned long`|0, 4294967295|
-|**podpisana długo**|-2147483648 do 2147483647|
+|`unsigned long`|od 0 do 4294967295|
+|**długi podpis**|-2147483648 do 2147483647|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Liczby całkowite](../c-language/integers.md)

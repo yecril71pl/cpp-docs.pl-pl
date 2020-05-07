@@ -17,11 +17,11 @@ ms.locfileid: "69500265"
 ---
 # <a name="thread-local-storage"></a>Lokalny magazyn wątków
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Lokalny magazyn wątków (TLS) to mechanizm, za pomocą którego każdy wątek w danym procesie wielowątkowym przydziela magazyn dla danych specyficznych dla wątku. W standardowych programach wielowątkowych, dane są współużytkowane przez wszystkie wątki danego procesu, natomiast pamięć lokalna wątku jest mechanizmem przydzielania danych osobno dla danego wątku. Aby uzyskać pełną dyskusję na temat wątków, zobacz [procesy i wątki](/windows/win32/ProcThread/processes-and-threads) w Windows SDK.
 
-Język Microsoft C zawiera rozszerzony atrybut klasy magazynu, wątek, który jest używany ze słowem kluczowym __declspec do deklarowania zmiennej lokalnej wątku. Na przykład, poniższy kod deklaruje lokalną zmienną całkowitą wątku i inicjuje ją wartością:
+Język języka Microsoft C zawiera rozszerzony atrybut klasy magazynu, wątek, który jest używany z słowem kluczowym __declspec, aby zadeklarować zmienną lokalną wątku. Na przykład, poniższy kod deklaruje lokalną zmienną całkowitą wątku i inicjuje ją wartością:
 
 ```
 __declspec( thread ) int tls_i = 1;
@@ -75,7 +75,7 @@ Te wskazówki muszą być przestrzegane, gdy deklarując statycznie powiązane z
     int *p = &tls_i;      /* Error */
     ```
 
-- C zezwala na inicjowanie zmiennej z wyrażeniem, w którym uczestniczy odwołanie do samego siebie, ale tylko dla obiektów niestatycznych. Na przykład:
+- C zezwala na inicjowanie zmiennej z wyrażeniem, w którym uczestniczy odwołanie do samego siebie, ale tylko dla obiektów niestatycznych. Przykład:
 
     ```C
     #define Thread   __declspec( thread )
@@ -86,12 +86,12 @@ Te wskazówki muszą być przestrzegane, gdy deklarując statycznie powiązane z
 
    Należy zauważyć, że wyrażenie sizeof zawierające zainicjowaną zmienną nie stanowi odwołania do samego siebie i jest dozwolone.
 
-- Korzystanie z [](../build/reference/linker-support-for-delay-loaded-dlls.md)  **\_ declspec(thread)możezakłócaćładowanieimportów\_** dll.
+- Korzystanie z ** \_ \_declspec (thread)** może zakłócać [ładowanie](../build/reference/linker-support-for-delay-loaded-dlls.md) importów dll.
 
 Aby uzyskać więcej informacji o używaniu atrybutu thread, zobacz [temat wielowątkowość](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Rozszerzone atrybuty klasy magazynu języka C](../c-language/c-extended-storage-class-attributes.md)

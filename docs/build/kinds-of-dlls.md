@@ -15,21 +15,21 @@ ms.locfileid: "81328499"
 ---
 # <a name="kinds-of-dlls"></a>Rodzaje bibliotek DLL
 
-Ten temat zawiera informacje ułatwiające określenie rodzaju biblioteki DLL do utworzenia.
+Ten temat zawiera informacje ułatwiające określenie rodzaju biblioteki DLL do skompilowania.
 
-## <a name="different-kinds-of-dlls-available"></a><a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a>Dostępne różne rodzaje bibliotek DLL
+## <a name="different-kinds-of-dlls-available"></a><a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a>Dostępne są różne rodzaje bibliotek DLL
 
-Za pomocą programu Visual Studio można tworzyć biblioteki DLL win32 w języku C lub C++, które nie używają biblioteki Microsoft Foundation Class (MFC). Można utworzyć projekt dll innych niż MFC za pomocą Kreatora aplikacji Win32.
+Za pomocą programu Visual Studio można tworzyć biblioteki Win32 DLL w języku C lub C++, które nie korzystają z biblioteki Microsoft Foundation Class (MFC). Można utworzyć projekt z biblioteką DLL bez MFC za pomocą Kreatora aplikacji Win32.
 
-Sama biblioteka MFC jest dostępna w bibliotekach łączy statycznych lub w wielu bibliotekach DLL za pomocą Kreatora bibliotek DLL MFC. Jeśli biblioteka DLL używa MFC, visual studio obsługuje trzy różne scenariusze rozwoju biblioteki DLL:
+Sama Biblioteka MFC jest dostępna w bibliotekach dołączanych statycznie lub w wielu bibliotekach DLL przy użyciu kreatora MFC DLL. Jeśli biblioteka DLL korzysta z MFC, program Visual Studio obsługuje trzy różne scenariusze tworzenia bibliotek DLL:
 
-- Tworzenie zwykłej biblioteki DLL MFC, która statycznie łączy MFC
+- Tworzenie zwykłej biblioteki MFC DLL, która statycznie łączy MFC
 
-- Tworzenie zwykłej biblioteki DLL MFC, która dynamicznie łączy MFC
+- Tworzenie zwykłej biblioteki MFC DLL, która dynamicznie łączy MFC
 
-- Tworzenie biblioteki DLL rozszerzenia MFC, która zawsze dynamicznie łączy MFC
+- Kompilowanie biblioteki DLL rozszerzenia MFC, która zawsze dynamicznie łączy MFC
 
-### <a name="what-do-you-want-to-know-more-about"></a>O czym chcesz wiedzieć więcej?
+### <a name="what-do-you-want-to-know-more-about"></a>Jak chcesz dowiedzieć się więcej?
 
 - [Biblioteki DLL inne niż MFC: omówienie](non-mfc-dlls-overview.md)
 
@@ -41,21 +41,21 @@ Sama biblioteka MFC jest dostępna w bibliotekach łączy statycznych lub w wiel
 
 - [Jakiego rodzaju biblioteki DLL użyć](#_core_which_kind_of_dll_to_use)
 
-## <a name="deciding-which-kind-of-dll-to-use"></a><a name="_core_which_kind_of_dll_to_use"></a>Decydowanie, jakiego rodzaju biblioteki DLL użyć
+## <a name="deciding-which-kind-of-dll-to-use"></a><a name="_core_which_kind_of_dll_to_use"></a>Wybór rodzaju biblioteki DLL do użycia
 
-Jeśli biblioteka DLL nie używa MFC, użyj programu Visual Studio do tworzenia biblioteki DLL w wersji 32 innych niż MFC. Łączenie biblioteki DLL z MFC (statycznie lub dynamicznie) zajmuje znaczne miejsce na dysku i pamięci. Nie należy łączyć się z MFC, chyba że biblioteka DLL faktycznie używa MFC.
+Jeśli biblioteka DLL nie korzysta z MFC, należy użyć programu Visual Studio do utworzenia biblioteki DLL Win32 innej niż MFC. Łączenie biblioteki DLL z MFC (statycznie lub dynamicznie) zajmuje dużo miejsca na dysku i pamięci. Nie należy łączyć z MFC, chyba że biblioteka DLL rzeczywiście używa MFC.
 
-Jeśli biblioteka DLL będzie używać MFC i będą używane przez aplikacje MFC lub innych niż MFC, należy utworzyć regularne MFC DLL, który dynamicznie łączy się z MFC lub regularne MFC DLL, który statycznie łączy się z MFC. W większości przypadków prawdopodobnie chcesz użyć zwykłej biblioteki DLL MFC, która dynamicznie łączy się z MFC, ponieważ rozmiar pliku biblioteki DLL będzie znacznie mniejszy, a oszczędności w pamięci wynikające z używania udostępnionej wersji MFC mogą być znaczące. Jeśli statycznie łącze do MFC, rozmiar pliku biblioteki DLL będzie większy i potencjalnie zajmie dodatkową pamięć, ponieważ ładuje własną kopię prywatną kodu biblioteki MFC.
+Jeśli biblioteka DLL będzie używać MFC i będzie używana przez aplikacje MFC lub inne niż MFC, należy utworzyć zwykłą bibliotekę MFC DLL, która łączy dynamicznie z MFC lub zwykłą biblioteką DLL MFC, która statycznie łączy się z MFC. W większości przypadków prawdopodobnie chcesz użyć zwykłej biblioteki MFC DLL, która dynamicznie łączy się z MFC, ponieważ rozmiar pliku biblioteki DLL będzie znacznie mniejszy i oszczędności w pamięci z użyciem udostępnionej wersji MFC mogą być istotne. Jeśli statycznie łączy się z MFC, rozmiar pliku biblioteki DLL będzie większy i potencjalnie zajmuje dodatkową pamięć, ponieważ ładuje własną prywatną kopię kodu biblioteki MFC.
 
-Tworzenie biblioteki DLL, która dynamicznie łączy się z MFC jest szybsze niż tworzenie biblioteki DLL, która statycznie łączy się z MFC, ponieważ nie jest konieczne łączenie MFC się. Jest to szczególnie prawdziwe w debugowania kompilacji, gdzie konsolidator musi kompaktowy informacji debugowania. Łącząc się z biblioteką DLL, która już zawiera informacje debugowania, jest mniej informacji debugowania do kompaktowania w ramach biblioteki DLL.
+Kompilowanie biblioteki DLL, która dynamicznie łączy się z MFC jest szybsze niż Kompilowanie biblioteki DLL, która statycznie łączy się z MFC, ponieważ nie jest konieczne łączenie MFC. Jest to szczególnie prawdziwe w kompilacjach debugowania, gdzie konsolidator musi kompaktować informacje debugowania. Łącząc się z biblioteką DLL, która zawiera już informacje o debugowaniu, informacje debugowania są mniejsze do kompaktowania w bibliotece DLL.
 
-Jedną z wad dynamicznego łączenia z MFC jest to, że należy dystrybuować udostępnione biblioteki DLL Mfcx0.dll i Msvcrxx.dll (lub podobne pliki) z biblioteką DLL. Biblioteki DLL MFC są swobodnie redystrybucyjne, ale nadal należy zainstalować biblioteki DLL w programie instalacyjnym. Ponadto należy wysłać plik Msvcrxx.dll, który zawiera bibliotekę czasu wykonywania C, która jest używana zarówno przez program, jak i przez same biblioteki DLL MFC.
+Jedną z wadą dynamicznego łączenia z klasą MFC jest konieczność dystrybucji udostępnionych bibliotek DLL MFCx0. dll i Msvcrxx. dll (lub podobnych plików) z biblioteką DLL. Biblioteki MFC DLL są swobodnie rozpowszechniane, ale nadal trzeba zainstalować biblioteki DLL w programie instalacyjnym. Ponadto należy dostarczyć plik Msvcrxx. dll, który zawiera bibliotekę wykonawczą C, która jest używana zarówno przez program, jak i biblioteki DLL MFC.
 
-Jeśli biblioteka DLL będzie używana tylko przez pliki wykonywalne MFC, masz wybór między tworzeniem zwykłej biblioteki DLL MFC lub biblioteki DLL rozszerzenia MFC. Jeśli biblioteka DLL implementuje klasy wielokrotnego użytku pochodzące z istniejących klas MFC lub trzeba przekazać obiekty pochodne MFC między aplikacją a biblioteką DLL, należy utworzyć bibliotekę DLL rozszerzenia MFC.
+Jeśli biblioteka DLL będzie używana tylko przez pliki wykonywalne MFC, istnieje możliwość utworzenia zwykłej biblioteki MFC DLL lub biblioteki DLL rozszerzenia MFC. Jeśli biblioteka DLL implementuje klasy wielokrotnego użytku pochodzące z istniejących klas MFC lub należy przekazać obiekty pochodne MFC między aplikacją a biblioteką DLL, należy utworzyć bibliotekę DLL rozszerzenia MFC.
 
-Jeśli biblioteka DLL dynamicznie łączy się z MFC, biblioteki DLL MFC mogą być ponownie redystrybuowane z biblioteką DLL. Ta architektura jest szczególnie przydatna do udostępniania biblioteki klas między wieloma plikami wykonywalnymi w celu zaoszczędzenia miejsca na dysku i zminimalizowania użycia pamięci.
+Jeśli biblioteka DLL łączy się dynamicznie z MFC, biblioteki MFC mogą być rozpowszechniane za pomocą biblioteki DLL. Ta architektura jest szczególnie przydatna w przypadku udostępniania biblioteki klas między wieloma plikami wykonywalnymi w celu zaoszczędzenia miejsca na dysku i zminimalizowania użycia pamięci.
 
-### <a name="what-do-you-want-to-know-more-about"></a>O czym chcesz wiedzieć więcej?
+### <a name="what-do-you-want-to-know-more-about"></a>Jak chcesz dowiedzieć się więcej?
 
 - [Biblioteki DLL inne niż MFC: omówienie](non-mfc-dlls-overview.md)
 
@@ -67,4 +67,4 @@ Jeśli biblioteka DLL dynamicznie łączy się z MFC, biblioteki DLL MFC mogą b
 
 ## <a name="see-also"></a>Zobacz też
 
-[Tworzenie bibliotek DLL języka C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)
+[Tworzenie bibliotek DLL C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)
