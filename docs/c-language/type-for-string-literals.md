@@ -14,8 +14,8 @@ ms.locfileid: "62344853"
 ---
 # <a name="type-for-string-literals"></a>Typy literałów ciągów
 
-Literały ciągu być tablicą typu `char` (czyli **char []**). (Ciągi znaków dwubajtowych mają typu tablicy `wchar_t` (czyli **[] wchar_t**).) Oznacza, że ciąg tablicy o liczbie elementów typu `char`. Liczba elementów w tablicy jest równa liczbie znaków w ciągu plus jeden w przypadku końcowego znaku null.
+Literały ciągu mają typ Array of `char` (czyli **Char []**). (Ciągi znaków dwubajtowych mają tablicę `wchar_t` typu (czyli **wchar_t []**).) Oznacza to, że ciąg jest tablicą z elementami typu `char`. Liczba elementów w tablicy jest równa liczbie znaków w ciągu plus jeden dla kończącego znaku null.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Literały ciągu języka C](../c-language/c-string-literals.md)

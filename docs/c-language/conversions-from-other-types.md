@@ -14,18 +14,18 @@ ms.locfileid: "62312469"
 ---
 # <a name="conversions-from-other-types"></a>Konwersje z innych typów
 
-Ponieważ **wyliczenia** wartość **int** wartość zgodnie z definicją, konwersje do i z **wyliczenia** wartości są takie same jak w przypadku **int** typu. Dla kompilatora Microsoft C, liczba całkowita jest taka sama jak **długie**.
+Ponieważ wartość **wyliczenia** jest wartością **int** według definicji, konwersje do i z wartości **wyliczenia** są takie same jak dla typu **int** . Dla kompilatora Microsoft C, liczba całkowita jest taka sama jak **Long**.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Nie konwersji między typami struktury lub Unii są dozwolone.
+Nie można wykonywać konwersji między typami struktury lub Unii.
 
-Każda wartość może zostać przekonwertowana na typ **void**, ale wynik konwersji elementu mogą być używane wyłącznie w kontekście wartości wyrażenia w przypadku odrzuconych, na przykład instrukcja wyrażenia.
+Dowolna wartość może zostać przekonwertowana na typ **void**, ale wynik takiej konwersji może być używany tylko w kontekście, w którym jest odrzucana wartość wyrażenia, na przykład w instrukcji wyrażenia.
 
-**Void** typu nie ma wartości, zgodnie z definicją. Dlatego nie można przekonwertować żadnego innego typu i innych typów, nie można przekonwertować na **void** przez przypisanie. Jednak jawne Rzutowanie wartości na typ **void**, zgodnie z opisem w [konwersje rzutowania typów](../c-language/type-cast-conversions.md).
+Typ **void** nie ma wartości według definicji. W związku z tym nie można go przekonwertować na inny typ, a inne typy nie mogą być konwertowane na typ **void** przez przypisanie. Można jednak jawnie rzutować wartość na typ **void**, jak opisano w [konwersji rzutowania typu](../c-language/type-cast-conversions.md).
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Konwersje przypisań](../c-language/assignment-conversions.md)

@@ -38,13 +38,13 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );
 ```
 
-Ten kod działa doskonale w wersji debugowej aplikacji MFC. Jeśli wywołanie `calloc( )` nie powiedzie się, zostanie wyświetlony komunikat diagnostyczny zawierający plik i numer wiersza. Jednak w przypadku kompilacji detalicznej aplikacji MFC:
+Ten kod działa doskonale w wersji debugowej aplikacji MFC. Jeśli wywołanie `calloc( )` nie powiedzie się, zostanie wyświetlony komunikat diagnostyczny, który zawiera plik i numer wiersza. Jednak w przypadku kompilacji detalicznej aplikacji MFC:
 
-- Wywołanie `calloc( )` nigdy nie następuje, pozostawiając `buf` niezainicjowane lub
+- wywołanie `calloc( )` nigdy nie następuje, pozostawiając `buf` niezainicjowane lub
 
-- `strcpy_s( )` kopiuje "`Hello, World`" do losowej części pamięci, prawdopodobnie ulegnie awarii aplikacji lub powoduje, że system przestanie odpowiadać lub
+- `strcpy_s( )`Kopiuje "`Hello, World`" do losowej części pamięci, prawdopodobnie uległa awarii aplikacji lub powoduje, że system przestanie odpowiadać lub
 
-- `free()` próbuje zwolnić pamięć, która nigdy nie została przyznana.
+- `free()`próbuje zwolnić pamięć, która nigdy nie została przyznana.
 
 Aby użyć poprawnego potwierdzenia, należy zmienić przykład kodu na następujący:
 

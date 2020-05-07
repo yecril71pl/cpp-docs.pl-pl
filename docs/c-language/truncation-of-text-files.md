@@ -14,10 +14,10 @@ ms.locfileid: "62344931"
 ---
 # <a name="truncation-of-text-files"></a>Obcięcie plików tekstowych
 
-**ANSI 4.9.3** czy zapisu w strumieniu tekstu powoduje, że skojarzony plik się być obcięty po przekroczeniu tego punktu
+**4.9.3 ANSI** Czy zapis w strumieniu tekstu powoduje, że skojarzony plik zostanie obcięty poza tym punktem
 
-Zapis w strumieniu tekstu nie obciąć pliku poza ten punkt.
+Zapis w strumieniu tekstowym nie obcina pliku poza tym punktem.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

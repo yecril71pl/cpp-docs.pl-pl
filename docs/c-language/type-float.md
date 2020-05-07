@@ -23,46 +23,46 @@ ms.locfileid: "62346330"
 ---
 # <a name="type-float"></a>Typ float
 
-Liczby zmiennoprzecinkowe, użyj formatu IEEE (Institute of Electrical and Electronics Engineers). Wartości pojedynczej precyzji z typem float mieć 4 bajty, składające się z bitem znaku, wykładnik binarne 127 nadmiarowe 8-bitową i mantysy 23-bitowych. Mantysy reprezentuje liczbą z zakresu od 1.0 i 2.0. Ponieważ bit wyższego rzędu mantysy ma zawsze numer 1, nie są przechowywane w kodzie. Taka reprezentacja oferuje szeroką gamę około 3.4E-38 do 3.4E + 38 dla typu zmiennoprzecinkowego.
+Liczby zmiennoprzecinkowe używają formatu IEEE (Institute of Electrical and Electronics Engineers). Wartości o pojedynczej precyzji z typem zmiennoprzecinkowym mają 4 bajty, składające się z bitu znaku, 8-127 bitowego mantysyego pliku binarnego i 23-bitowego. Mantysy reprezentuje liczbę z zakresu od 1,0 do 2,0. Ponieważ bit wysokiego rzędu mantysy ma zawsze wartość 1, nie jest on przechowywany w liczbie. Ta reprezentacja daje zakres około 3.4 E-38 do 3.4 E + 38 dla typu zmiennoprzecinkowego.
 
-Można zadeklarować zmienne, float lub double, w zależności od potrzeb aplikacji. Główne różnice między tymi dwoma typami to znaczenie, które reprezentują, magazynu, których potrzebują oraz ich zakresu. W poniższej tabeli przedstawiono relację między istotności i wymagania dotyczące magazynu.
+Można zadeklarować zmienne jako zmiennoprzecinkowe lub podwójne, w zależności od potrzeb aplikacji. Główne różnice między tymi dwoma typami są istotnym znaczeniem, które mogą reprezentować, wymaganym przez nich magazynem oraz ich zakresem. W poniższej tabeli przedstawiono relacje między wymaganiami dotyczącymi istotności i magazynu.
 
 ### <a name="floating-point-types"></a>Typy zmiennoprzecinkowe
 
-|Typ|Cyfr znaczących|Liczba bajtów|
+|Typ|Znaczące cyfry|Liczba bajtów|
 |----------|------------------------|---------------------|
 |float|6 - 7|4|
 |double|15 - 16|8|
 
-Zmienne zmiennoprzecinkowe są reprezentowane przez mantysy, zawierającego wartość numer i wykładnik, który zawiera rząd wielkości liczby.
+Zmienne zmiennoprzecinkowe są reprezentowane przez mantysy, który zawiera wartość liczby oraz wykładnik, który zawiera kolejność wielkości liczby.
 
-W poniższej tabeli przedstawiono liczbę bitów przydzielone do mantysy i wykładnika dla każdego typu zmiennoprzecinkowego. Najbardziej znaczący bit wszelkie float lub double jest zawsze bitu znaku. Jeśli ma wartość 1, numer jest traktowany jako ujemna; w przeciwnym razie uważa się liczbą dodatnią.
+W poniższej tabeli przedstawiono liczbę bitów przydzieloną do mantysy oraz wykładnik dla każdego typu zmiennoprzecinkowego. Najbardziej znaczący bit dowolnego typu float lub Double jest zawsze bitem znaku. Jeśli wartość to 1, liczba jest uznawana za negatywną; w przeciwnym razie jest uznawana za liczbę dodatnią.
 
-### <a name="lengths-of-exponents-and-mantissas"></a>Długości Wykładniki i mantysy
+### <a name="lengths-of-exponents-and-mantissas"></a>Długości wykładników i mantysy
 
 |Typ|Długość wykładnika|Długość mantysy|
 |----------|---------------------|---------------------|
-|float|8 bitów|23 usługi bits|
-|double|Usługa bits 11|52 bitów|
+|float|8 bitów|23 bity|
+|double|11 bitów|52 bitów|
 
-Ponieważ wykładniki są przechowywane w formie bez znaku, wykładnik jest obciążona za pół możliwej wartości. Dla typu zmiennoprzecinkowego jest obliczana 127; Typ podwójnej jest 1023. Rzeczywista wartość wykładnika można obliczyć przez odjęcie wartość obciążenia z wartość wykładnika.
+Ponieważ wykładniki są przechowywane w postaci niepodpisanej, wykładnik jest podzielny o połowę możliwej wartości. Dla typu float, odchylenie wynosi 127; dla typu Double jest 1023. Rzeczywistą wartość wykładnika można obliczyć, odejmując wartość bias z wartości wykładnika.
 
-Mantysy jest przechowywana jako ułamek binarne większa lub równa 1 i 2 poniżej. Typy zmiennoprzecinkowe i podwójne dorozumianych 1 wiodących mantysy w jest pozycja najbardziej znaczący bit, dzięki czemu można mantysy rzeczywistości bitów 24 i 53 długo, odpowiednio, nawet najbardziej znaczący bit nigdy nie jest przechowywany w pamięci.
+Mantysy jest przechowywany jako ułamek binarny o wartości większej lub równej 1 i mniejszej niż 2. W przypadku typów zmiennoprzecinkowych i podwójnie jest implikowane wiodące 1 w mantysy w najbardziej znaczących pozycjach w bitach, więc mantysy są odpowiednio 24 i 53 bitów, nawet jeśli najbardziej znaczący bit nigdy nie jest przechowywany w pamięci.
 
-Zamiast metody magazynu właśnie opisanego pakiet zmiennoprzecinkowy można przechowywać binarne liczb zmiennoprzecinkowych jako liczby nieznormalizowany. "Nieznormalizowany liczby" są wartość różną od zera liczb zmiennoprzecinkowych za pomocą zastrzeżonego wartości wykładnika, w których najbardziej znaczący bit mantysy wynosi 0. Przy użyciu formatu nieznormalizowany, można rozszerzyć zakres liczba zmiennoprzecinkowa kosztem dokładności. Nie można kontrolować, czy liczba zmiennoprzecinkowa jest reprezentowany w formie znormalizowane lub nieznormalizowany; Pakiet zmiennoprzecinkowy określa reprezentacji. Pakiet zmiennoprzecinkowy nigdy nie używa nieznormalizowany formy, chyba że wykładnik staje się mniej niż wartość minimalna, którą można przedstawić w znormalizowana postać.
+Zamiast właśnie opisanej metody Storage pakiet zmiennoprzecinkowy może przechowywać binarne liczby zmiennoprzecinkowe jako liczby nieznormalizowane. "Liczby nieznormalizowane" to wartości niezerowe liczb zmiennoprzecinkowych z zastrzeżonymi wartościami wykładnika, w których najbardziej znaczący bit mantysy wynosi 0. Przy użyciu nieznormalizowanego formatu zakres liczby zmiennoprzecinkowej można rozszerzyć o koszt dokładności. Nie można kontrolować, czy liczba zmiennoprzecinkowa jest reprezentowana w znormalizowanym lub nieznormalizowanym formacie; Pakiet zmiennoprzecinkowy określa reprezentację. Pakiet zmiennoprzecinkowy nigdy nie używa nieznormalizowanej formy, chyba że wykładnik stanie się mniejszy niż minimalny, który może być reprezentowany w znormalizowanym formularzu.
 
-W poniższej tabeli przedstawiono minimalne i maksymalne wartości, można przechowywać w zmiennych każdego typu zmiennoprzecinkowego. Wartości wymienione w poniższej tabeli dotyczą tylko w znormalizowanych liczb zmiennoprzecinkowych; liczby zmiennoprzecinkowe nieznormalizowany miał mniejszą wartość minimalna. Uwaga liczb, że zachowana w 80*x*87 rejestrów zawsze są reprezentowane w 80-bitowych znormalizowana postać; numery tylko mogą być reprezentowane w formularzu nieznormalizowany gdy przechowywany w 32-bitową lub 64-bitowych zmienne zmiennoprzecinkowe (zmienne typu zmiennoprzecinkowego i typu long).
+W poniższej tabeli przedstawiono minimalne i maksymalne wartości, które można przechowywać w zmiennych każdego typu zmiennoprzecinkowego. Wartości wymienione w tej tabeli dotyczą tylko znormalizowanych liczb zmiennoprzecinkowych; nieznormalizowane liczby zmiennoprzecinkowe mają mniejszą wartość minimalną. Należy zauważyć, że liczby przechowywane w rejestrach 80*x*87 są zawsze reprezentowane w postaci znormalizowanej 80 w sposób znormalizowany. liczby można reprezentować tylko w nieznormalizowanym formacie, gdy są przechowywane w 32-bitowych lub 64-bitowych zmiennych zmiennoprzecinkowych (zmienne typu float i Type Long).
 
-### <a name="range-of-floating-point-types"></a>Zakres wartości zmiennoprzecinkowych
+### <a name="range-of-floating-point-types"></a>Zakres typów zmiennoprzecinkowych
 
 |Typ|Wartość minimalna|Wartość maksymalna|
 |----------|-------------------|-------------------|
-|float|1.175494351 E - 38|3.402823466 E + 38|
-|double|2.2250738585072014 E - 308|1.7976931348623158 E + 308|
+|float|1,175494351 E-38|3,402823466 E + 38|
+|double|2.2250738585072014 E-308|1.7976931348623158 E + 308|
 
-Jeśli dokładności jest mniej istotna niż w przypadku magazynu, należy rozważyć użycie typu zmiennoprzecinkowego dla zmienne zmiennoprzecinkowe. Z drugiej strony Jeśli dokładności jest najbardziej istotna, użyj typu double.
+Jeśli dokładność nie jest mniejsza niż wartość magazynu, należy rozważyć użycie typu float dla zmiennych zmiennoprzecinkowych. Odwrotnie, jeśli precyzja jest najważniejszym kryterium, użyj typu Double.
 
-Zmienne zmiennoprzecinkowe może być podwyższony do typu większe znaczenie (z typu zmiennoprzecinkowego na typ double). Podwyższanie poziomu często występuje, gdy można wykonać operacji arytmetycznych na zmienne zmiennoprzecinkowe. Ta operacje arytmetyczne zawsze odbywa się w jako wysoki stopień dokładności jako zmienną z najwyższy stopień dokładności. Na przykład należy wziąć pod uwagę następujące deklaracje typu:
+Zmienne zmiennoprzecinkowe mogą być podwyższane do typu większego znaczenia (od typu zmiennoprzecinkowego do typu Double). Promocja często odbywa się po wykonaniu arytmetycznych zmiennych zmiennoprzecinkowych. Ta arytmetyczna jest zawsze wykonywana w miarę jak najwyższego stopnia dokładności jako zmienna o najwyższym stopniu precyzji. Rozważmy na przykład następujące deklaracje typów:
 
 ```
 float f_short;
@@ -72,14 +72,14 @@ long double f_longer;
 f_short = f_short * f_long;
 ```
 
-W poprzednim przykładzie, zmienna `f_short` jest promowany do typu double i pomnożona przez `f_long`; wynik jest zaokrąglany do typu zmiennoprzecinkowego przed przypisaniem do `f_short`.
+W poprzednim przykładzie zmienna `f_short` jest podwyższana do typu Double i pomnożona przez; `f_long` następnie wynik jest zaokrąglany do typu float przed przypisaniem `f_short`do.
 
-W poniższym przykładzie (który używa deklaracji z poprzedniego przykładu), że operacje arytmetyczne odbywa się w dokładności float (32-bitowy) na zmienne; wynik jest następnie podnoszony do typu double:
+W poniższym przykładzie (który używa deklaracji z poprzedniego przykładu) arytmetyczne jest wykonywane w postaci zmiennoprzecinkowej (32-bitowej) precyzji dla zmiennych; następnie wynik zostanie podwyższony do typu Double:
 
 ```
 f_longer = f_short * f_short;
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Magazyn typów podstawowych](../c-language/storage-of-basic-types.md)

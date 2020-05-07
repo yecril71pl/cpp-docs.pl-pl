@@ -13,9 +13,9 @@ ms.locfileid: "62313301"
 ---
 # <a name="c-sized-integer-types"></a>Typy liczb całkowitych o rozmiarze C
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Funkcje C firmy Microsoft obsługuje typy wielkości liczb całkowitych. 8-, 16-, 32- lub 64-bitową liczbę całkowitą zmiennych można zadeklarować za pomocą __int*n* wpisz specyfikator, gdzie *n* rozmiar w bitach zmiennej liczby całkowitej. Wartość *n* może być 8, 16, 32 lub 64. Poniższy przykład deklaruje jedną zmienną dla każdego z czterech typów liczb całkowitych o rozmiarze:
+Funkcje Microsoft C obsługują typy liczb całkowitych. Można zadeklarować 8-, 16-, 32-lub 64-bitowe zmienne całkowite przy użyciu specyfikatora typu __int*n* , gdzie *n* jest rozmiarem zmiennej całkowitej w bitach. Wartość *n* może być 8, 16, 32 lub 64. Poniższy przykład deklaruje jedną zmienną dla każdego z czterech typów liczb całkowitych:
 
 ```
 __int8 nSmall;      // Declares 8-bit integer
@@ -24,10 +24,10 @@ __int32 nLarge;     // Declares 32-bit integer
 __int64 nHuge;      // Declares 64-bit integer
 ```
 
-Pierwsze trzy typy wielkości liczb całkowitych są synonimy dla typów ANSI, które mają taki sam rozmiar i są przydatne w przypadku pisania przenośny kod, który zachowuje się tak samo na wielu platformach. Należy pamiętać, że typ danych __int8 synonimem typu char \__int16 jest synonimem typu short, i \__int32 jest synonimem typu int. \__Int64 typu nie ma odpowiednika równoważne ANSI.
+Pierwsze trzy typy liczb całkowitych są synonimami dla typów ANSI, które mają ten sam rozmiar i są przydatne do pisania kodu przenośnego, który działa identycznie na wielu platformach. Zwróć uwagę, że typ danych __int8 jest synonimem typu char \_, _int16 jest synonimem typu short, \_a _int32 jest synonimem typu int. Typ \__int64 nie ma równoważnego odpowiednika ANSI.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Magazyn typów podstawowych](../c-language/storage-of-basic-types.md)

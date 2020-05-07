@@ -16,34 +16,34 @@ ms.locfileid: "62326030"
 ---
 # <a name="bitwise-shift-operators"></a>Operatory przesunięcia bitowego
 
-Operatory przesunięcia shift ich pierwszego operandu w lewo (**&lt;&lt;**) lub w prawo (**>>**) przez liczbę pozycji określa drugiego operandu.
+Operatory przesunięcia przesuwają swój pierwszy operand w**&lt;** lewo () lub**>>** prawą () o liczbę pozycji określanych przez drugiego operandu.
 
 ## <a name="syntax"></a>Składnia
 
-*shift-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression* **&lt; &lt;** *additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*SHIFT-expression* **>>** *additive-expression*
+*wyrażenie przesunięcia*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie addytywne*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;dodatek *shift-expression* ** &lt; ** *-Expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;dodatek *shift-expression* **>>** *-Expression*
 
-Oba operandy muszą być wartości całkowitych. Te operatory wykonywać popularne konwersje arytmetyczne; Typ wyniku jest typem lewego operandu po konwersji.
+Oba operandy muszą być wartościami całkowitymi. Operatory te wykonują zwykle konwersje arytmetyczne; Typ wyniku jest typem lewego operandu po konwersji.
 
-Dla leftward przesunięcia odpowiednich pozycje opuszczonych bitów są ustawione na 0. Dla rightward przesunięcia pozycje opuszczonych bitów po lewej stronie są wypełnione w zależności od typu pierwszego operandu po konwersji. Jeśli typ jest `unsigned`, są one ustawione na 0. W przeciwnym razie są wypełnione przy użyciu kopii bitu znaku. Dla operatorów przesunięcia w lewo bez przepełnienia, instrukcja
+W przypadku zmian leftward, bity opuszczone w prawo są ustawione na 0. W przypadku rightward Shift opuszczone lewe bity są wypełniane na podstawie typu pierwszego operandu po konwersji. Jeśli typ ma `unsigned`wartość, są ustawione na 0. W przeciwnym razie są wypełniane jako kopie bitu znaku. Dla operatorów przesunięcia w lewo bez przepełnienia, instrukcja
 
 ```C
 expr1 << expr2
 ```
 
-jest odpowiednikiem mnożenia przez wartość 2<sup>Wyr2</sup>. Dla operatorów przesunięcia w prawo
+jest równoznaczne z mnożeniem przez 2<sup>expr2</sup>. Dla operatorów przesunięcia w prawo,
 
 ```C
 expr1 >> expr2
 ```
 
-jest odpowiednikiem dzielenie przez 2<sup>Wyr2</sup> Jeśli `expr1` jest podpisany lub ma wartość nieujemną.
+jest odpowiednikiem dzielenia przez 2<sup>expr2</sup> , `expr1` jeśli jest niepodpisana lub ma nieujemną wartość.
 
-Wynik operacji przesunięcia jest niezdefiniowana, jeśli drugi argument jest ujemna, czy prawy operand jest większa lub równa szerokości w bitach promowanego operandu po lewej stronie.
+Wynik operacji przesunięcia jest nieokreślony, jeśli drugi operand jest ujemny lub jeśli prawy operand jest większy lub równy szerokości w bitach najbardziej wynoszącego lewego operandu.
 
-Ponieważ konwersje wykonywane przez shift operatory nie są oferowane dla przepełnienia lub warunków niedomiaru, informacje mogą zostać utracone, jeśli wynik operacji przesunięcia nie może być przedstawiony w typie pierwszego operandu po konwersji.
+Ponieważ konwersje wykonywane przez operatory przesunięcia nie zapewniają dla warunków przeciążenia lub niedopełnienia, informacje mogą zostać utracone, jeśli wynik operacji przesunięcia nie może być reprezentowany w typie pierwszego operandu po konwersji.
 
 ```C
 unsigned int x, y, z;
@@ -54,12 +54,12 @@ y = 0x5500;
 z = ( x << 8 ) + ( y >> 8 );
 ```
 
-W tym przykładzie `x` zostanie przesunięty w lewo pozycje osiem i `y` jest przesuniętych bezpośrednio osiem pozycji. Przesuniętych wartości są dodawane, dzięki czemu 0xAA55 i przypisane do `z`.
+W tym przykładzie przesuwane `x` są lewe osiem pozycji i `y` przesuwane są odpowiednie osiem pozycji. Przesunięte wartości są dodawane, dające 0xAA55 i przypisane do `z`.
 
-Przesunięcie wartości ujemnej po prawej stronie daje połowa wartość pierwotną, zaokrąglona w dół. Na przykład -253 (binarne 11111111 00000011) przesunięte tworzy odpowiednie jeden bit -127 (binarne 11111111 10000001). Dodatnią 253 przesunięcia w prawo do produkcji +126.
+Przesunięcie wartości ujemnej na prawo daje połowę wartości oryginalnej, zaokrąglonej w dół. Na przykład-253 (binarny 11111111 00000011) przesunięcie w prawo o jeden bit wygeneruje-127 (binarny 11111111 10000001). Pozytywna 253 przesunie się bezpośrednio do produkcji + 126.
 
-Przesunięcia w prawo zachować bitu znaku. Liczba całkowita ze znakiem przenosi bezpośrednio, ustaw pozostaje najbardziej znaczący bit. Gdy liczbą całkowitą bez znaku przenosi bezpośrednio, najbardziej znaczący bit jest wyczyszczone.
+Prawy Shift zachowuje bit znaku. Gdy liczba całkowita ze znakiem zostanie przesunięta w prawo, to najbardziej znaczący bit pozostaje ustawiony. Gdy liczba całkowita bez znaku zostaje przesunięta w prawo, najbardziej znaczący bit jest wyczyszczony.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operatory przesunięcia w lewo i w prawo (>> i <<)](../cpp/left-shift-and-right-shift-operators-input-and-output.md)

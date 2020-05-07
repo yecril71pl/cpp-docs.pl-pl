@@ -28,15 +28,15 @@ main( int argc, char *argv[ ], char *envp[ ] )
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje w kodzie źródłowym programu wykonują co najmniej jedno określone zadanie. Funkcja **Main** może wywoływać te funkcje, aby wykonać odpowiednie zadania. Gdy **Główne** wywołuje inną funkcję, przekazuje sterowanie wykonywaniem do funkcji, tak aby wykonywanie rozpoczyna się od pierwszej instrukcji w funkcji. Funkcja zwraca sterowanie do elementu **głównego** , gdy zostanie wykonana instrukcja `return` lub gdy zostanie osiągnięty koniec funkcji.
+Funkcje w kodzie źródłowym programu wykonują co najmniej jedno określone zadanie. Funkcja **Main** może wywoływać te funkcje, aby wykonać odpowiednie zadania. Gdy **Główne** wywołuje inną funkcję, przekazuje sterowanie wykonywaniem do funkcji, tak aby wykonywanie rozpoczyna się od pierwszej instrukcji w funkcji. Funkcja zwraca kontrolę do wartości **głównej** , gdy `return` instrukcja jest wykonywana lub gdy zostanie osiągnięty koniec funkcji.
 
 Można zadeklarować dowolną funkcję, w tym **Main**, w celu posiadania parametrów. Termin „parametr” lub „parametr formalny” dotyczy identyfikatora, który otrzymuje wartość przekazaną do funkcji. Aby uzyskać informacje na temat przekazywania argumentów do parametrów, zobacz [Parametry](../c-language/parameters.md) . Gdy jedna funkcja wywołuje drugą, wywoływana funkcja otrzymuje wartości swoich parametrów od funkcji wywołującej. Wartości te są nazywane „argumentami”. Można zadeklarować formalne parametry do **Main** , aby można było odbierać argumenty z wiersza polecenia przy użyciu tego formatu:
 
-Gdy chcesz przekazać informacje do funkcji **Main** , parametry są tradycyjnie nazwane `argc` i `argv`, chociaż kompilator języka C nie wymaga tych nazw. Typy dla `argc` i `argv` są zdefiniowane przez język C. Tradycyjnie, jeśli trzeci parametr jest przesyłany do **Main**, ten parametr ma nazwę `envp`. Przykłady w dalszej części sekcji pokazują, w jaki sposób używać tych trzech parametrów, aby uzyskać dostęp do argumentów wiersza polecenia. W poniższych sekcjach opisano te parametry.
+Gdy chcesz przekazać informacje do funkcji **Main** , parametry są tradycyjnie nazwane `argc` i `argv`, chociaż kompilator języka C nie wymaga tych nazw. Typy dla `argc` i `argv` są zdefiniowane przez język C. Tradycyjnie, jeśli trzeci parametr jest przesyłany do **Main**, ten parametr ma `envp`nazwę. Przykłady w dalszej części sekcji pokazują, w jaki sposób używać tych trzech parametrów, aby uzyskać dostęp do argumentów wiersza polecenia. W poniższych sekcjach opisano te parametry.
 
 Aby uzyskać opis szerokiej **wersji programu,** zobacz [using wmain](../c-language/using-wmain.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Funkcja Main i argumenty wiersza poleceniaC++()](../cpp/main-function-command-line-args.md)\
+[Funkcja Main i argumenty wiersza polecenia (C++)](../cpp/main-function-command-line-args.md)\
 [Analizowanie argumentów wiersza polecenia języka C](../c-language/parsing-c-command-line-arguments.md)

@@ -26,9 +26,9 @@ ms.locfileid: "62345319"
 
 Źródłowy zestaw znaków programów źródłowych języka C jest zawarty w 7-bitowym zestawie znaków ASCII, ale jest nadzbiorem niezmiennego zestawu kodów ISO 646-1983. Sekwencje trójznaków pozwalają programom języka C na zapisywanie tylko przy użyciu niezmiennego zestawu kodów ISO (Międzynarodowej Organizacji Normalizacyjnej). Trójznaki są sekwencjami trzech znaków (rozpoczętymi przez dwa kolejne znaki zapytania), które kompilator zamienia na odpowiadający im znak interpunkcyjny. Możesz używać trójznaków w plikach źródłowych języka C z zestawem znaków, który nie zawiera wygodnych reprezentacji graficznych dla niektórych znaków interpunkcyjnych.
 
-C ++ 17 usuwa trójznaków, od języka. Implementacje mogą w dalszym ciągu obsługuje trójznaków w ramach zdefiniowanych w implementacji mapowania z pliku fizycznego źródła, aby *zestaw znaków podstawowego źródła*, chociaż standardowe zachęca implementacji nie Aby to zrobić. Za pomocą języka C ++ 14 trójznaków są obsługiwane w C.
+C++ 17 usuwa trigraphs z języka. Implementacje mogą nadal obsługiwać trigraphs jako część mapowania zdefiniowanego przez implementację z fizycznego pliku źródłowego do *podstawowego zestawu znaków źródła*, chociaż standard zachęca do implementacji. Do języka C++ 14 trigraphs są obsługiwane w języku C.
 
-Visual C++ w dalszym ciągu obsługuje podstawienia trójznaków, ale jest domyślnie wyłączona. Uzyskać informacji o sposobie włączania podstawienia trójznaków, zobacz [/Zc: trigraphs (podstawianie Trigramów)](../build/reference/zc-trigraphs-trigraphs-substitution.md).
+Visual C++ nadal obsługuje podstawianie trójznaków, ale jest domyślnie wyłączone. Aby uzyskać informacje na temat włączania podstawiania trójznaków, zobacz [/Zc: trigraphs (podstawianie trigraphs)](../build/reference/zc-trigraphs-trigraphs-substitution.md).
 
 Poniższa tabela pokazuje dziewięć sekwencji trójznaków. Wszystkie wystąpienia znaków interpunkcyjnych z pierwszej kolumny są zamieniane w pliku źródłowym na odpowiadający znak z drugiej kolumny.
 
@@ -43,18 +43,18 @@ Poniższa tabela pokazuje dziewięć sekwencji trójznaków. Wszystkie wystąpie
 | ??' | ^ |
 | ??\< | { |
 | ??! | &#124; |
-| ??> | } |
+| ?? > | } |
 | ??- | ~ |
 
-Trójznak jest zawsze traktowany jako pojedynczy znak źródłowy. Tłumaczenie trójznaków zachodzi odbywa się w pierwszym [fazie tłumaczenia](../preprocessor/phases-of-translation.md), przed rozpoznawaniem znaków ucieczki w literałach ciągu i stałych znakowych. Rozpoznawane jest tylko dziewięć trójznaków pokazanych w powyższej tabeli. Wszystkie inne sekwencje znaków są pozostawiane nieprzetłumaczone.
+Trójznak jest zawsze traktowany jako pojedynczy znak źródłowy. Tłumaczenie trigraphs odbywa się w pierwszej [fazie tłumaczenia](../preprocessor/phases-of-translation.md)przed rozpoznawaniem znaków ucieczki w literałach ciągów i stałych znakach. Rozpoznawane jest tylko dziewięć trójznaków pokazanych w powyższej tabeli. Wszystkie inne sekwencje znaków są pozostawiane nieprzetłumaczone.
 
-Znak sekwencji ucieczki  **\\?**, zapobiega błędnej interpretacji sekwencji znaków trójznaków. (Aby uzyskać informacje dotyczące sekwencji ucieczki, zobacz [sekwencje ucieczki](../c-language/escape-sequences.md).) Na przykład, jeśli spróbujesz wydrukować ciąg `What??!` za pomocą instrukcji `printf`
+Sekwencja ucieczki znaków, ** \\?**, zapobiega błędnej interpretacji sekwencji znaków trójznaków. (Aby uzyskać informacje na temat sekwencji unikowych, zobacz [Sekwencje ucieczki](../c-language/escape-sequences.md)). Na przykład, jeśli spróbujesz wydrukować ciąg `What??!` za pomocą tej instrukcji `printf`
 
 ```C
 printf( "What??!\n" );
 ```
 
-ciąg zostanie wydrukowany `What|` ponieważ `??!` jest sekwencją trójznaku zamienianą `|` znaków. Napisz instrukcję w następujący sposób, aby poprawnie wydrukować ciąg:
+ciąg jest `What|` drukowany, ponieważ `??!` jest sekwencją trójznaków, która jest zastępowana `|` znakiem. Napisz instrukcję w następujący sposób, aby poprawnie wydrukować ciąg:
 
 ```C
 printf( "What?\?!\n" );
@@ -62,7 +62,7 @@ printf( "What?\?!\n" );
 
 W tej instrukcji `printf`, znak ucieczki ukośnika odwrotnego przed drugim znakiem zapytania zapobiega błędnej interpretacji `??!` jako trójznaku.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [/Zc:trigraphs (Podstawianie trigramów)](../build/reference/zc-trigraphs-trigraphs-substitution.md)<br/>
 [Identyfikatory w języku C](../c-language/c-identifiers.md)

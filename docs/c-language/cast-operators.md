@@ -16,16 +16,16 @@ ms.locfileid: "62312666"
 ---
 # <a name="cast-operators"></a>Operatory rzutowania
 
-Rzutowanie typu udostępnia metodę jawnej konwersji typu obiektu w konkretnej sytuacji.
+Rzutowanie typu zapewnia metodę jawnej konwersji typu obiektu w określonej sytuacji.
 
 ## <a name="syntax"></a>Składnia
 
-*wyrażenie CAST*: *jednoargumentowe wyrażenie*
+*cast-expression*: *jednoargumentowe wyrażenie*
 
-**(** *nazwy typu* **)** *wyrażenie cast*
+*wyrażenie cast* **(***type-name***)**      
 
-Kompilator traktuje *wyrażenie cast* jako typ *nazwy typu* po dokonaniu rzutowanie typu. Rzutowania może służyć do konwersji obiektów o dowolnym typie skalarnym do lub z innych typów skalarnych. Rzutowania jawnego typu są ograniczone przez te same zasady, które określają skutki konwersje niejawne omówione w [konwersje przypisań](../c-language/assignment-conversions.md). Dodatkowe ograniczenia na rzutowania mogą wynikać z rzeczywistych rozmiarów lub reprezentację określonych typów. Zobacz [magazyn typów podstawowych](../c-language/storage-of-basic-types.md) informacji na temat rozmiarów rzeczywistych typów całkowitych. Aby uzyskać więcej informacji na temat rzutowania typów, zobacz [konwersje rzutowania typów](../c-language/type-cast-conversions.md).
+Kompilator traktuje *wyrażenie cast* jako typ *type-name* po wprowadzeniu rzutowania typu. Rzutowania mogą służyć do konwertowania obiektów dowolnego typu skalarnego na lub z dowolnego innego typu skalarnego. Rzutowania typu jawnego są ograniczone przez te same reguły, które określają efekty konwersji niejawnych, omówione w [konwersji przypisania](../c-language/assignment-conversions.md). Dodatkowe ograniczenia dotyczące rzutowania mogą wynikać z rzeczywistych rozmiarów lub reprezentacji określonych typów. Zobacz [Magazyn typów podstawowych,](../c-language/storage-of-basic-types.md) Aby uzyskać informacje o rzeczywistych rozmiarach typów całkowitych. Aby uzyskać więcej informacji na temat rzutowania typu, zobacz [Konwersje rzutowania typów](../c-language/type-cast-conversions.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operator rzutowania: ()](../cpp/cast-operator-parens.md)

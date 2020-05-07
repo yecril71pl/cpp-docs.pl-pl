@@ -1,5 +1,5 @@
 ---
-title: C++kompilacje wydań — Visual Studio
+title: Kompilacje wersji języka C++ — Visual Studio
 ms.date: 12/10/2018
 helpviewer_keywords:
 - debugging [C++], release builds
@@ -29,4 +29,4 @@ Kompilacja wydania używa optymalizacji. W przypadku korzystania z optymalizacji
 
 ## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja kompilacji w języku C/C++](reference/c-cpp-building-reference.md)
+[Odwołanie kompilacji C/C++](reference/c-cpp-building-reference.md)

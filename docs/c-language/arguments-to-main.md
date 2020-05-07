@@ -11,9 +11,9 @@ ms.locfileid: "62313561"
 ---
 # <a name="arguments-to-main"></a>Argumenty dla metody main
 
-**ANSI 2.1.2.2.1** semantykę argumenty dla metody main
+**2.1.2.2.1 ANSI** Semantyka argumentów dla głównej
 
-W Microsoft C jest wywoływana funkcja wywoływana w momencie uruchamiania programu **głównego**. Istnieje bez prototypu zadeklarowany dla **głównego**, i mogą być definiowane za pomocą zero, dwóch lub trzech parametrów:
+W programie Microsoft C funkcja wywoływana przy uruchamianiu programu jest nazywana **Main**. Nie istnieje prototyp zadeklarowany dla elementu **Main**i można go zdefiniować za pomocą wartości zero, dwa lub trzy parametry:
 
 ```
 int main( void )
@@ -21,18 +21,18 @@ int main( int argc, char *argv[] )
 int main( int argc, char *argv[], char *envp[] )
 ```
 
-Trzeci wiersz powyżej, gdzie **głównego** przyjmuje trzy parametry, to rozszerzenie Microsoft do standardu ANSI C. Trzeci parametr **envp**, jest tablicą wskaźników do zmiennych środowiskowych. **Envp** tablica jest zakończona wskaźnikiem typu null. Zobacz [funkcja main i wykonywanie programu](../c-language/main-function-and-program-execution.md) Aby uzyskać więcej informacji na temat **głównego** i **envp**.
+Trzeci wiersz powyżej, gdzie **Main** przyjmuje trzy parametry, to rozszerzenie firmy Microsoft do standardu ANSI C. Trzeci parametr, **envp**, jest tablicą wskaźników do zmiennych środowiskowych. Tablica **envp** jest zakończona przez wskaźnik o wartości null. Zobacz [Główne funkcje i wykonywanie programu](../c-language/main-function-and-program-execution.md) , aby uzyskać więcej informacji na temat **głównych** i **envp**.
 
-Zmienna **argc —** nigdy nie przechowuje wartość ujemną.
+Zmienna **argc** nigdy nie utrzymuje wartości ujemnej.
 
-Tablica ciągów kończy się **argv [argc —]**, który zawiera wskaźnik zerowy.
+Tablica ciągów kończąca się na **argv [argc]**, która zawiera wskaźnik o wartości null.
 
-Wszystkie elementy **argv** tablicy są wskaźnikami do ciągów.
+Wszystkie elementy tablicy **argv** są wskaźnikami do ciągów.
 
-Wywoływane bez argumentów wiersza polecenia programu otrzyma wartość 1 dla **argc —**, jak nazwa pliku wykonywalnego jest umieszczana w **argv [0]**. (W wersjach systemu MS-DOS przed 3.0, nazwa pliku wykonywalnego nie jest dostępna. Litera "C" jest umieszczany w **argv [0]**.) Ciągi wskazywany przez **argv [1]** za pośrednictwem **argv [argc — - 1]** reprezentują parametry programu.
+Program wywoływany bez argumentów wiersza polecenia otrzyma wartość jedną dla **argc**, ponieważ nazwa pliku wykonywalnego jest umieszczana w **argv [0]**. (W wersjach systemu MS-DOS wcześniejszych niż 3,0 nazwa pliku wykonywalnego jest niedostępna. Litera "C" jest umieszczana w **argv [0]**.) Ciągi wskazywane przez **argv [1]** do **argv [argc-1]** przedstawiają parametry programu.
 
-Parametry **argc —** i **argv** można modyfikować i zachowują swoje wartości znajdujących się w ostatniej między programów, uruchamianie i kończenie działania programu.
+Parametry **argc** i **argv** są modyfikowalne i zachowują ostatnio przechowywane wartości między uruchomieniem programu a zakończeniem działania programu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Środowisko](../c-language/environment.md)

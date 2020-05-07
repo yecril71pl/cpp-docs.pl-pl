@@ -14,14 +14,14 @@ ms.locfileid: "62336195"
 ---
 # <a name="storage-of-addresses"></a>Magazynowanie adresów
 
-Ilość miejsca wymaganego dla adresu i znaczenie adres są zależne od implementacji kompilatora. Wskaźniki do różnych typów nie musi mieć tę samą długość. W związku z tym **sizeof (char \*)** nie jest zawsze równa **sizeof (int \*)**.
+Ilość miejsca do magazynowania wymagana dla adresu i znaczenie adresu zależy od implementacji kompilatora. Wskaźniki do różnych typów nie mają takiej samej długości. W związku z tym **sizeof \*(Char)** nie musi być równy **sizeof ( \*int)**.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Dla kompilatora Microsoft C **sizeof (char \*)** jest równa **sizeof (int \*)**.
+W przypadku kompilatora języka Microsoft C wartość **sizeof ( \*Char)** jest równa **sizeof ( \*int)**.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje wskaźników](../c-language/pointer-declarations.md)

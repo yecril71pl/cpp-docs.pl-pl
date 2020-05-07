@@ -13,8 +13,8 @@ ms.locfileid: "62312512"
 ---
 # <a name="constants-in-primary-expressions"></a>Stałe w wyrażeniach podstawowych
 
-Stałe operand ma wartość i typ stałej wartości, którą reprezentuje. Stała znakowa ma `int` typu. Stała liczba całkowita ma `int`, **długie**, `unsigned int`, lub `unsigned long` typu, w zależności od wielkości liczb całkowitych oraz sposobu określona jest wartość. Zobacz [stałe](../c-language/c-constants.md) Aby uzyskać więcej informacji.
+Stały operand ma wartość i typ stałej wartości, która reprezentuje. Stała znakowa ma `int` typ. Stała całkowita ma `int`wartość, **Long**, `unsigned int`lub `unsigned long` Type, w zależności od rozmiaru liczby całkowitej i sposobu określenia wartości. Aby uzyskać więcej informacji, zobacz [stałe](../c-language/c-constants.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia podstawowe języka C](../c-language/c-primary-expressions.md)

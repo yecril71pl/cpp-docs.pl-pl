@@ -14,55 +14,55 @@ ms.locfileid: "62295256"
 ---
 # <a name="pgomgr"></a>pgomgr
 
-Dane profilowe z co najmniej jeden plik .pgc są dodawane do pliku .pgd.
+Dodaje dane profilu z jednego lub więcej plików. PGC do pliku. pgd.
 
 ## <a name="syntax"></a>Składnia
 
-> **pgomgr** [*opcje*] *pgcfiles* *pgdfile*
+> **pgomgr** [*Opcje*] *pgcfiles* *pgdfile*
 
 ### <a name="parameters"></a>Parametry
 
 *Opcje*<br/>
-Można określić następujące opcje w celu **pgomgr**:
+Do **pgomgr**można określić następujące opcje:
 
-- **/ help** lub **/?** Wyświetla dostępne **pgomgr** opcje.
+- **/help** lub **/?** Wyświetla dostępne opcje **pgomgr** .
 
-- **/ clear** powoduje, że plik .pgd do wyczyszczenia wszystkich informacji o profilu. Nie można określić .pgc pliku, kiedy **/clear** jest określony.
+- **/Clear** Powoduje, że plik. PGD ma zostać wyczyszczony ze wszystkich informacji o profilu. Nie można określić pliku. PGC, gdy **/Clear** jest określony.
 
-- **/ detail** Wyświetla szczegółowe statystyki, w tym informacje o pokryciu Wykres przepływu.
+- **/detail** Wyświetla szczegółowe dane statystyczne, w tym informacje o zapotrzebowaniu grafu przepływu.
 
-- **/ summary** Wyświetla poszczególnych funkcji statystyk.
+- **/Summary** Wyświetla statystyki dla poszczególnych funkcji.
 
-- **/ Unikatowy** gdy jest używane z **/summary**, powoduje, że dekorowane nazwy funkcji, aby wyświetlić. Wartość domyślna, gdy **/ unikatowy** nie jest używany, to dla nazw niedekorowanego funkcji, które mają być wyświetlane.
+- **/Unique** Gdy jest używany z **/Summary**, powoduje wyświetlenie nazw funkcji dekoracyjnych. Wartość domyślna, gdy **/Unique** nie jest używana, jest przeznaczony do wyświetlania niedekoracyjnych nazw funkcji.
 
-- **/ merge**\[**:**<em>n</em>] powoduje, że dane w pliku .pgc lub plików, które mają zostać dodane do pliku .pgd. Opcjonalny parametr *n*, pozwala określić, że dane należy dodać *n* razy. Na przykład, jeśli scenariusz będzie najczęściej gotowe sześć razy do uwzględnienia, jak często jest wykonywane przez klientów, można ją wykonać jeden raz w przebiegu testu i dodać go do pliku .pgd sześciokrotnie z **pgomgr /merge:6**.
+- **/Merge**\[**:**<em>n</em>] powoduje dodanie danych z pliku. PGC lub plików do pliku. pgd. Opcjonalny parametr *n*, umożliwia określenie, że dane powinny być dodawane *n* razy. Na przykład, jeśli scenariusz będzie często wykonywany sześć razy, aby odzwierciedlić, jak często jest wykonywane przez klientów, można wykonać tę czynność jeden raz w przebiegu testowym i dodać go do pliku. PGD sześć razy z **pgomgr/MERGE: 6**.
 
 *pgcfiles*<br/>
-Co najmniej jeden .pgc pliki danych profilu, którego chcesz scalić plik .pgd. Można określić plik .pgc jednego lub wielu plików .pgc. Jeśli nie określisz żadnych plików .pgc **pgomgr** scala wszystkie pliki .pgc, których nazwy plików są takie same jak plik .pgd.
+Jeden lub więcej plików. PGC, których dane profilowe mają zostać scalone w pliku. pgd. Można określić pojedynczy plik PGC lub wiele plików. pgc. Jeśli nie określisz żadnych plików PGC, **pgomgr** scala wszystkie pliki. PGC, których nazwy plików są takie same jak plik. pgd.
 
 *pgdfile*<br/>
-Plik .pgd, do którego są scalane dane z pliku .pgc lub plików.
+Plik. pgd, do którego są scalane dane z pliku. PGC lub plików.
 
 ## <a name="remarks"></a>Uwagi
 
 > [!NOTE]
-> To narzędzie można uruchomić tylko z poziomu wiersza polecenia dla deweloperów programu Visual Studio. Nie można uruchomić go z wiersza poleceń systemu lub Eksploratora plików.
+> To narzędzie można uruchomić tylko z poziomu wiersza polecenia programu Visual Studio Developer. Nie można uruchomić go z poziomu wiersza polecenia systemu lub Eksploratora plików.
 
 ## <a name="example"></a>Przykład
 
-To przykładowe polecenie usuwa plik myapp.pgd dane profilu:
+To przykładowe polecenie czyści plik MojaApl. PGD danych profilu:
 
 `pgomgr /clear myapp.pgd`
 
-To przykładowe polecenie dodaje dane profilu w myapp1.pgc do pliku .pgd trzy razy:
+To przykładowe polecenie dodaje dane profilowe w myapp1. PGC do pliku. PGD trzy razy:
 
 `pgomgr /merge:3 myapp1.pgc myapp.pgd`
 
-W tym przykładzie dane profilu ze wszystkich wygenerowanych plików # .pgc myapp jest dodawane do pliku myapp.pgd.
+W tym przykładzie dane profilowe wszystkich plików MojaApl #. pgc są dodawane do pliku Mojaapl. pgd.
 
 `pgomgr -merge myapp1.pgd`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Optymalizacje sterowane profilem](profile-guided-optimizations.md)<br/>
 [PgoAutoSweep](pgoautosweep.md)<br/>

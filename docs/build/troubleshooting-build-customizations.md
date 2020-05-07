@@ -19,22 +19,22 @@ ms.locfileid: "62315251"
 ---
 # <a name="troubleshooting-build-customizations"></a>Rozwiązywanie problemów z dostosowaniami kompilacji
 
-Jeśli niestandardowych kroków kompilacji lub zdarzenia nie zachowują się zgodnie z oczekiwaniami, istnieje kilka rzeczy, które można zrobić, aby zrozumieć, co się dzieje problem.
+Jeśli niestandardowe kroki lub zdarzenia kompilacji nie działają zgodnie z oczekiwaniami, istnieje kilka rzeczy, które można wykonać, aby dowiedzieć się, co się stało.
 
-- Upewnij się, że pliki, które kroków kompilacji niestandardowej generować takie same jak pliki, zadeklarowanej jako dane wyjściowe.
+- Upewnij się, że pliki, które są generowane przez niestandardowe kroki kompilacji, są zgodne z plikami, które deklarujesz jako dane wyjściowe.
 
-- Jeśli Twoje niestandardowych kroków kompilacji wygenerowanie plików, które to dane wejściowe lub innych zależności kompilacji kroki (niestandardowego lub w inny sposób), upewnij się, że te pliki zostaną dodane do projektu. I upewnij się, że narzędzia, które korzystają z tych plików są wykonywane po krok niestandardowej kompilacji.
+- Jeśli niestandardowe kroki kompilacji generują wszystkie pliki, które są danymi wejściowymi lub zależnościami innych kroków kompilacji (niestandardowe lub w inny sposób), należy się upewnić, że te pliki są dodawane do projektu. Upewnij się, że narzędzia, które zużywają te pliki, są wykonywane po kroku kompilacji niestandardowej.
 
-- Aby wyświetlić swoje niestandardowy krok kompilacji faktycznie działania, Dodaj `@echo on` jako pierwsze polecenie. Zdarzenia kompilacji i kroki kompilacji są umieścić w pliku tymczasowego bat i uruchamiany, gdy projekt jest kompilowany. W związku z tym można dodać błąd podczas sprawdzania do zdarzenia kompilacji, lub tworzenia poleceń kroku.
+- Aby wyświetlić informacje o tym, co robi niestandardowy krok kompilacji, `@echo on` Dodaj jako pierwsze polecenie. Zdarzenia kompilacji i kroki kompilacji są umieszczane w tymczasowym pliku. bat i uruchamiane po skompilowaniu projektu. W związku z tym można dodać sprawdzanie błędów do zdarzenia kompilacji lub kroku kompilacji.
 
-- W dzienniku kompilacji w katalogu plików pośrednich, aby zobaczyć, co faktycznie wykonywane. Ścieżka i nazwa dziennika kompilacji jest reprezentowany przez **MSBuild** wyrażeniu makra **$(IntDir)\\.log $(MSBuildProjectName)**.
+- Sprawdź dziennik kompilacji w katalogu plików pośrednich, aby zobaczyć, co faktycznie zostało wykonane. Ścieżka i nazwa dziennika kompilacji są reprezentowane przez wyrażenie makro **MSBuild** **$ (IntDir)\\$ (MSBuildProjectName). log**.
 
-- Zmodyfikuj ustawienia projektu, aby zebrać więcej niż domyślna ilość informacji w dzienniku kompilacji. Na **narzędzia** menu, kliknij przycisk **opcje**. W **opcje** okno dialogowe, kliknij przycisk **projekty i rozwiązania** węzeł, a następnie kliknij przycisk **kompilowanie i uruchamianie** węzła. Następnie w **poziom szczegółowości pliku dziennika MSBuild projektu kompilacji** kliknij **szczegółowe**.
+- Zmodyfikuj ustawienia projektu w taki sposób, aby gromadzić więcej niż domyślną ilość informacji w dzienniku kompilacji. W menu **Tools** (Narzędzia) kliknij pozycję **Options** (Opcje). W oknie dialogowym **Opcje** kliknij węzeł **projekty i rozwiązania** , a następnie kliknij węzeł **kompilacja i uruchomienie** . Następnie w polu **szczegółowości pliku dziennika kompilacji projektu programu MSBuild** kliknij przycisk **szczegóły**.
 
-- Sprawdź, czy wartości dowolnego pliku makra nazwa lub katalogu, którego używasz. Makra można echo osobno lub możesz dodać `copy %0 command.bat` na początku Twojego niestandardowego kroku kompilacji, który skopiuje poleceń Twoje krok niestandardowej kompilacji, aby command.bat z makrami wszystkie rozwinięte.
+- Sprawdź wartości wszystkich używanych nazw plików lub makr katalogów. Makra można echo pojedynczo lub dodać `copy %0 command.bat` do początku niestandardowego kroku kompilacji, który skopiuje polecenia niestandardowego kroku kompilacji do polecenia Command. bat ze wszystkimi rozwiniętymi makrami.
 
-- Uruchomić kroki procesu kompilacji niestandardowej, a zdarzenia pojedynczo, aby sprawdzić ich zachowanie kompilacji.
+- Uruchom niestandardowe kroki kompilacji i twórz zdarzenia indywidualnie, aby sprawdzić ich zachowanie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Ogólne informacje o niestandardowych krokach budowania lub zdarzeniach kompilacji](understanding-custom-build-steps-and-build-events.md)

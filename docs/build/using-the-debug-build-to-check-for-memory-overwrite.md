@@ -13,21 +13,21 @@ ms.locfileid: "62314289"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Korzystanie z kompilacji debugowania do sprawdzania nadpisywania pamięci
 
-Aby użyć kompilacji debugowania do sprawdzania nadpisywania pamięci, należy przebudować projekt do debugowania. Następnie przejdź do początku aplikacji `InitInstance` działać, a następnie dodaj następujący wiersz:
+Aby użyć kompilacji debugowania do sprawdzenia zastąpienia pamięci, należy najpierw skompilować projekt w celu debugowania. Następnie przejdź do początku `InitInstance` funkcji aplikacji i Dodaj następujący wiersz:
 
 ```
 afxMemDF |= checkAlwaysMemDF;
 ```
 
-Debugowanie alokatora pamięci umieszcza wokół wszystkie alokacje pamięci w bajtach guard. Jednak te je przed nieprzewidzianymi bajtów nie wykonuj żadnych dobrze, należy sprawdzić, czy zostały zmienione (co oznaczałoby Zastąp pamięci). W przeciwnym razie po prostu zapewnia buforu, który może w rzeczywistości umożliwiają uzyskanie natychmiast za pomocą zastąpienia pamięci.
+Program przydzielający pamięć programu Debug umieszcza w bajtach ochronę wszystkich alokacji pamięci. Jednak te bajty Guard nie wykonują żadnych dobrych, chyba że sprawdzisz, czy zostały zmienione (co wskazuje na zastępowanie pamięci). W przeciwnym razie jest to tylko bufor, który może w rzeczywistości pozwolić na zastępowanie pamięci.
 
-Dzięki włączeniu `checkAlwaysMemDF`, wymusi MFC, aby wywołać `AfxCheckMemory` funkcji każdym razem, gdy wywołanie **nowe** lub **Usuń** składa się. Zastąp pamięci zostało wykryte, wygeneruje komunikat śledzenia, który wygląda podobnie do następującego:
+Przez włączenie `checkAlwaysMemDF`, wymusimy, aby MFC wykonał wywołanie `AfxCheckMemory` funkcji za każdym razem, gdy zostanie wykonane wywołanie **New** lub **delete** . W przypadku wykrycia zastępowania pamięci zostanie wygenerowany komunikat śledzenia podobny do następującego:
 
 ```
 Damage Occurred! Block=0x5533
 ```
 
-Jeśli zostanie wyświetlony jeden z następujących komunikatów, należy przejrzeć swój kod definiujący, w którym wystąpiło uszkodzenie. Aby wyizolować, bardziej precyzyjne, gdzie chcesz go zastąpić pamięci wystąpiło, może wykonać jawnych wywołań `AfxCheckMemory` samodzielnie. Na przykład:
+Jeśli zobaczysz jeden z tych komunikatów, musisz przejść przez swój kod, aby określić, gdzie wystąpił uszkodzenie. Aby wyizolować dokładniejsze miejsce zastępowania pamięci, można wykonać jawne wywołania do `AfxCheckMemory` siebie. Przykład:
 
 ```
 ASSERT(AfxCheckMemory());
@@ -35,10 +35,10 @@ ASSERT(AfxCheckMemory());
     ASSERT(AfxCheckMemory());
 ```
 
-Jeśli pierwszy ASSERT zakończy się pomyślnie, i drugi kończy się niepowodzeniem, oznacza to, czy chcesz go zastąpić pamięci muszą miały miejsce w funkcji między dwoma połączeniami.
+Jeśli pierwsze potwierdzenie powiedzie się, a druga nie powiedzie się, oznacza to, że zastępowanie pamięci musi wystąpić w funkcji między dwoma wywołaniami.
 
-W zależności od charakteru aplikacji może się okazać, że `afxMemDF` powoduje uruchamianie zbyt wolno, aby przetestować nawet przez program. `afxMemDF` Powoduje, że zmienna `AfxCheckMemory` można wywołać za każde wywołanie do nowego i usuwania. W takim przypadku należy punktowy wywołania względem `AfxCheckMemory`(), jak pokazano powyżej, a następnie spróbuj izolowania pamięć zastąpić w ten sposób.
+W zależności od charakteru aplikacji może się okazać, że program uruchamia `afxMemDF` zbyt wolno, aby testy były nawet niewolniejsze. `afxMemDF` Zmienna powoduje `AfxCheckMemory` wywoływanie dla każdego wywołania do New i DELETE. W takim przypadku należy wyrównać własne wywołania do `AfxCheckMemory`(), jak pokazano powyżej, i spróbować wyizolować zastępowanie pamięci w ten sposób.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Naprawianie problemów kompilacji wydania](fixing-release-build-problems.md)

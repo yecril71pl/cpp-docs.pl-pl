@@ -14,11 +14,11 @@ ms.locfileid: "79417195"
 ---
 # <a name="x64-software-conventions"></a>Konwencje kodowania x64
 
-W tej sekcji opisano C++ metodologię konwencji wywoływania dla architektury x64, 64-bitowego rozszerzenia do architekturze x86.
+W tej sekcji opisano metodologię wywoływania architektury języka C++ dla procesorów x64, 64-bitowe rozszerzenie na architekturę x86.
 
 ## <a name="overview-of-x64-calling-conventions"></a>Omówienie konwencji wywoływania x64
 
-Dwie istotne różnice między procesorami x86 i x64 to 64-bitowe możliwości adresowania i płaski zestaw 16 64-bitowy rejestrów do użytku ogólnego. Z uwzględnieniem rozszerzonego zestawu rejestrów, x64 używa konwencji wywoływania [__fastcall](../cpp/fastcall.md) i modelu obsługi wyjątków opartego na procesorze RISC. Konwencja `__fastcall` używa rejestrów dla pierwszych czterech argumentów i ramki stosu, aby przekazać dodatkowe argumenty. Aby uzyskać szczegółowe informacje na temat konwencji wywoływania x64, w tym rejestrowania użycia, parametrów stosu, wartości zwracanych i rozwinięcia stosu, zobacz [konwencję wywoływania x64](x64-calling-convention.md).
+Dwie istotne różnice między procesorami x86 i x64 to 64-bitowe możliwości adresowania i płaski zestaw 16 64-bitowy rejestrów do użytku ogólnego. Z uwzględnieniem rozszerzonego zestawu rejestrów, x64 używa konwencji wywoływania [__fastcall](../cpp/fastcall.md) i modelu obsługi wyjątków opartego na procesorze RISC. `__fastcall` Konwencja używa rejestrów dla pierwszych czterech argumentów i ramki stosu, aby przekazać dodatkowe argumenty. Aby uzyskać szczegółowe informacje na temat konwencji wywoływania x64, w tym rejestrowania użycia, parametrów stosu, wartości zwracanych i rozwinięcia stosu, zobacz [konwencję wywoływania x64](x64-calling-convention.md).
 
 ## <a name="enable-optimization-for-x64"></a>Włącz optymalizację dla architektury x64
 
@@ -47,10 +47,10 @@ Chociaż jest możliwe uzyskanie dostępu do danych z dowolnymi wyrównaniami, z
 |||||
 |-|-|-|-|
 |Typ skalarny|Typ danych języka C|Rozmiar magazynu (w bajtach)|Zalecane wyrównanie|
-|**INT8**|**char**|1|Bajtów|
-|**UINT8**|**znak bez znaku**|1|Bajtów|
+|**INT8**|**char**|1|Byte|
+|**UINT8**|**unsigned char**|1|Byte|
 |**INT16**|**short**|2|Word|
-|**UINT16**|**bez znaku Short**|2|Word|
+|**UINT16**|**unsigned short**|2|Word|
 |**ELEMENTEM**|**int**, **Long**|4|Doubleword|
 |**RÓWN**|**unsigned int, Long unsigned**|4|Doubleword|
 |**INT64**|**__int64**|8|Quadword|
@@ -82,10 +82,10 @@ W poniższej tabeli przedstawiono silnie sugerowane wyrównanie dla skalarnych e
 ||||
 |-|-|-|
 |Typ skalarny|Typ danych języka C|Wymagane wyrównanie|
-|**INT8**|**char**|Bajtów|
-|**UINT8**|**znak bez znaku**|Bajtów|
+|**INT8**|**char**|Byte|
+|**UINT8**|**unsigned char**|Byte|
 |**INT16**|**short**|Word|
-|**UINT16**|**bez znaku Short**|Word|
+|**UINT16**|**unsigned short**|Word|
 |**ELEMENTEM**|**int**, **Long**|Doubleword|
 |**RÓWN**|**unsigned int, Long unsigned**|Doubleword|
 |**INT64**|**__int64**|Quadword|
@@ -181,7 +181,7 @@ Praca z niewyrównanymi danymi ma dwa konsekwencje.
 
 - Niewyrównane lokalizacje nie mogą być używane w operacjach zablokowanych.
 
-Jeśli potrzebujesz bardziej rygorystycznego wyrównania, użyj `__declspec(align(N))` w deklaracjach zmiennych. Powoduje to, że kompilator dynamicznie dopasowuje stos, aby spełniał Twoje wymagania. Jednak dynamiczne dostosowywanie stosu w czasie wykonywania może spowodować wolniejsze wykonywanie aplikacji.
+Jeśli potrzebujesz bardziej rygorystycznego wyrównania, `__declspec(align(N))` Użyj w deklaracjach zmiennych. Powoduje to, że kompilator dynamicznie dopasowuje stos, aby spełniał Twoje wymagania. Jednak dynamiczne dostosowywanie stosu w czasie wykonywania może spowodować wolniejsze wykonywanie aplikacji.
 
 ## <a name="register-usage"></a>Rejestrowanie użycia
 
@@ -193,7 +193,7 @@ W poniższej tabeli opisano, w jaki sposób każdy rejestr jest używany w ramac
 
 ||||
 |-|-|-|
-|Zarejestruj subskrypcję|Stan|Użycie|
+|Zarejestruj|Stan|Użycie|
 |RAX|Volatile|Rejestr wartości zwracanej|
 |RCX|Volatile|Pierwszy argument liczby całkowitej|
 |RDX|Volatile|Drugi argument liczby całkowitej|
@@ -206,12 +206,12 @@ W poniższej tabeli opisano, w jaki sposób każdy rejestr jest używany w ramac
 |RBX|Nieulotnej swobodnym|Musi być zachowana przez wywoływany|
 |RBP|Nieulotnej swobodnym|Może być używany jako wskaźnik ramki; musi być zachowana przez wywoływany|
 |RSP|Nieulotnej swobodnym|Wskaźnik stosu|
-|XMM0, YMM0|Volatile|Pierwszy argument FP; pierwszy argument typu Vector, gdy `__vectorcall` jest używany|
-|XMM1, YMM1|Volatile|Drugi argument FP; drugi argument typu Vector, gdy zostanie użyta `__vectorcall`|
-|XMM2, YMM2|Volatile|Trzeci argument FP; trzeci argument typu wektorowego, gdy jest używany `__vectorcall`|
-|XMM3, YMM3|Volatile|Czwarty argument FP; czwarty argument typu Vector, gdy `__vectorcall` jest używany|
-|XMM4, YMM4|Volatile|Muszą być zachowywane w razie konieczności przez wywołującego; piąty argument typu Vector w przypadku użycia `__vectorcall`|
-|XMM5, YMM5|Volatile|Muszą być zachowywane w razie konieczności przez wywołującego; Szósty argument typu Vector, gdy zostanie użyta `__vectorcall`|
+|XMM0, YMM0|Volatile|Pierwszy argument FP; pierwszy argument typu Vector-when `__vectorcall` , gdy jest używany|
+|XMM1, YMM1|Volatile|Drugi argument FP; drugi argument typu Vector-when `__vectorcall` , gdy jest używany|
+|XMM2, YMM2|Volatile|Trzeci argument FP; trzeci argument typu wektorowego, `__vectorcall` gdy jest używany|
+|XMM3, YMM3|Volatile|Czwarty argument FP; czwarty argument typu Vector, `__vectorcall` gdy jest używany|
+|XMM4, YMM4|Volatile|Muszą być zachowywane w razie konieczności przez wywołującego; piąty argument typu Vector, `__vectorcall` gdy jest używany|
+|XMM5, YMM5|Volatile|Muszą być zachowywane w razie konieczności przez wywołującego; Szósty argument typu Vector, `__vectorcall` gdy jest używany|
 |XMM6:XMM15, YMM6:YMM15|Nietrwały (XMM), nietrwały (Wielka połowa z YMM)|Musi być zachowana przez wywoływany. Rejestry YMM muszą być zachowywane w razie konieczności przez wywołującego.|
 
 W przypadku wyjścia funkcji i wejścia funkcji do wywołań biblioteki środowiska uruchomieniowego C i wywołań systemu Windows oczekiwana jest flaga kierunku w rejestrze flag procesora.
@@ -222,15 +222,15 @@ Aby uzyskać szczegółowe informacje o alokacji stosu, wyrównaniu, typach funk
 
 ## <a name="prolog-and-epilog"></a>Prolog i epilogu
 
-Każda funkcja, która przydziela przestrzeń stosu, wywołuje inne funkcje, zapisuje niezalotne rejestry lub używa obsługi wyjątków, musi mieć Prolog, którego limity adresów są opisane w danych unwind skojarzonych z odpowiednim wpisem tabeli funkcji, i epilogs na Każde wyjście do funkcji. Aby uzyskać szczegółowe informacje na temat wymaganego kodu prologu i epilogu w x64, zobacz [x64 Prolog i epilogu](prolog-and-epilog.md).
+Każda funkcja, która przydziela miejsce na stosie, wywołuje inne funkcje, zapisuje niezalotne rejestry lub używa obsługi wyjątków, musi mieć Prolog, którego limity adresów są opisane w danych unwind skojarzonych z odpowiednim wpisem tabeli funkcji, i epilogs w każdym wyjściu do funkcji. Aby uzyskać szczegółowe informacje na temat wymaganego kodu prologu i epilogu w x64, zobacz [x64 Prolog i epilogu](prolog-and-epilog.md).
 
 ## <a name="x64-exception-handling"></a>Obsługa wyjątku x64
 
-Aby uzyskać informacje na temat konwencji i struktur danych używanych do implementowania obsługi wyjątków C++ strukturalnych i zachowania obsługi wyjątków na x64, zobacz [Obsługa wyjątków x64](exception-handling-x64.md).
+Aby uzyskać informacje na temat konwencji i struktur danych używanych do implementowania obsługi wyjątków strukturalnych i zachowania obsługi wyjątków C++ na x64, zobacz [Obsługa wyjątków x64](exception-handling-x64.md).
 
 ## <a name="intrinsics-and-inline-assembly"></a>Funkcje wewnętrzne i zestaw wbudowany
 
-Jednym z ograniczeń dla kompilatora x64 nie jest brak obsługi asemblera wbudowanego. Oznacza to, że funkcje, które nie mogą być zapisywane C++ w języku C lub będą musiały być zapisywane jako podprocedury lub jako funkcje wewnętrzne obsługiwane przez kompilator. Niektóre funkcje są wrażliwe na wydajność, a inne nie. Funkcje z uwzględnieniem wydajności należy zaimplementować jako funkcje wewnętrzne.
+Jednym z ograniczeń dla kompilatora x64 nie jest brak obsługi asemblera wbudowanego. Oznacza to, że funkcje, które nie mogą być zapisywane w C lub C++, będą musiały być zapisywane jako podprocedury lub jako funkcje wewnętrzne obsługiwane przez kompilator. Niektóre funkcje są wrażliwe na wydajność, a inne nie. Funkcje z uwzględnieniem wydajności należy zaimplementować jako funkcje wewnętrzne.
 
 Elementy wewnętrzne obsługiwane przez kompilator są opisane w funkcjach [wewnętrznych kompilatora](../intrinsics/compiler-intrinsics.md).
 

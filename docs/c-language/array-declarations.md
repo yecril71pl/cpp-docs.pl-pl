@@ -15,64 +15,64 @@ ms.locfileid: "62313548"
 ---
 # <a name="array-declarations"></a>Deklaracje tablicy
 
-"Array deklaracji" nazwy tablicy i określa typ jej elementów. Można także zdefiniować liczbę elementów w tablicy. Zmienna typu tablicy jest traktowany jako wskaźnik do typu elementów tablicy.
+"Deklaracja tablicowa" nazywa tablicę i określa typ jej elementów. Może również definiować liczbę elementów w tablicy. Zmienna typu Array jest uważana za wskaźnik na typ elementów tablicy.
 
 ## <a name="syntax"></a>Składnia
 
 *Deklaracja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *init-declarator-list*<sub>opt</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;*deklaracje-specyfikatory* *init-deklarator-list*<sub>opt</sub> **;**
 
-*init-declarator-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list*  **,**  *init-declarator*
+*init-deklarator-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-deklarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*init-deklarator-list*  **,**  *init-deklarator*
 
-*init-declarator*:<br/>
+*init-deklarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator* **=** *inicjatora*
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *inicjator* deklarator
 
 *deklarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wskaźnik*<sub>zoptymalizowany pod kątem</sub> *deklaratora bezpośrednie*
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>wybór</sub> wskaźnika *Direct-deklarator*
 
-*deklarator bezpośrednio*: /\* deklaratora funkcji \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **[** *wyrażenie_stałe*<sub>zoptymalizowany pod kątem</sub> **]** 
+*Direct-deklarator*:/\* A funkcja deklarator\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***[***wybór wyrażenia stałego*<sub>opt</sub> **]**    
 
-Ponieważ *wyrażenie_stałe* jest opcjonalne, składnia ma dwie formy:
+Ze względu na to, że *wyrażenie stałe* jest opcjonalne, składnia ma dwa formy:
 
-- Pierwszy formularz definiuje zmienną tablicową. *Wyrażenie_stałe* argument w nawiasach kwadratowych określa liczbę elementów w tablicy. *Wyrażenie_stałe*, jeśli jest obecna, musi mieć typ całkowitoliczbowy i wartość większą od zera. Każdy element ma typu podanego przez *Specyfikator typu*, które mogą być dowolnego typu z wyjątkiem `void`. Do elementu tablicy nie może być typu funkcji.
+- Pierwszy formularz definiuje zmienną tablicową. Argument *stałej wartości* w nawiasach określa liczbę elementów w tablicy. *Wyrażenie stałe*, jeśli istnieje, musi mieć typ całkowity i wartość większą od zera. Każdy element ma typ określony przez *specyfikator typu*, który może być dowolnego typu z wyjątkiem `void`. Element tablicy nie może być typem funkcji.
 
-- Druga forma deklaruje zmienną, która została zdefiniowana w innym miejscu. Pomija *wyrażenie_stałe* argumentu w nawiasy kwadratowe, ale nie nawiasy kwadratowe. Można użyć tego formularza, tylko jeśli wcześniej zainicjowana Tablica zadeklarowana jako parametr, lub zadeklarowana jako odwołanie do tablicy jawnie definiowane w innym miejscu w programie.
+- Druga forma deklaruje zmienną, która została zdefiniowana w innym miejscu. Pomija argument *wyrażenia stałej* w nawiasach, ale nie nawiasów. Tego formularza można używać tylko wtedy, gdy wcześniej zainicjowano tablicę, zadeklarowano ją jako parametr lub zadeklarowano ją jako odwołanie do tablicy jawnie zdefiniowanej w innym miejscu w programie.
 
-W obu formach *deklaratora bezpośrednio* nazwy zmiennej i może modyfikować typ zmiennej. Nawiasy kwadratowe (**[**) następujących *deklaratora bezpośrednio* modyfikowania deklaratorów typ tablicy.
+W obu formularzach, *Direct-deklarator* nazywa zmienną i może modyfikować typ zmiennej. Nawiasy kwadratowe (**[]**) są następujące: *deklarator* Modify deklarator do typu tablicy.
 
-Kwalifikatory typów może występować w deklaracji obiektu typu tablicy, ale kwalifikatory dotyczą elementów, a nie samej tablicy.
+Kwalifikatory typu mogą występować w deklaracji obiektu typu Array, ale kwalifikatory stosują się do elementów, a nie do tablicy.
 
-Można zadeklarować tablicy tablic (tablicy "wielowymiarowej"), postępując zgodnie z deklarator tablicy z listą stałe wyrażenia w nawiasach kwadratowych w tym formularzu:
+Można zadeklarować tablicę tablic (tablicę wielowymiarową), używając tablicy deklarator z listą wyrażeń stałych w nawiasach w tej postaci:
 
-> *Specyfikator typu* *deklaratora* **[** *wyrażenie_stałe* **]** **[** *wyrażenie_stałe* **]** ...
+> *Typ-specyfikator* *deklarator* **[** *wyrażenie stałe* **]** **[** *wyrażenie stałe* **]** ...
 
-Każdy *wyrażenie_stałe* w nawiasach definiuje liczbę elementów w określonym wymiarze: tablice dwuwymiarowe mieć dwóch wyrażeń w nawiasach kwadratowych, mają trzy tablic trójwymiarowych i tak dalej. Możesz pominąć pierwsze wyrażenie stałe, jeśli mają zainicjowany Tablica zadeklarowana jako parametr, lub zadeklarowana jako odwołanie do tablicy jawnie definiowane w innym miejscu w programie.
+Każde *wyrażenie stałe* w nawiasach definiuje liczbę elementów w danym wymiarze: tablice dwuwymiarowe mają dwa wyrażenia z nawiasami, trzy wielowymiarowe tablice mają trzy itd. Możesz pominąć pierwsze wyrażenie stałe, jeśli została zainicjowana tablica, zadeklarowana jako parametr lub zadeklarowana jako odwołanie do tablicy jawnie zdefiniowanej w innym miejscu w programie.
 
-Można zdefiniować tablice wskaźników do różnych typów obiektów przy użyciu deklaratorów złożonych, zgodnie z opisem w [interpretowanie bardziej Deklaratorów złożonych](../c-language/interpreting-more-complex-declarators.md).
+Można definiować tablice wskaźników do różnych typów obiektów przy użyciu złożonych deklaratory, zgodnie z opisem w [interpretacji bardziej złożonej Deklaratory](../c-language/interpreting-more-complex-declarators.md).
 
-Tablice są przechowywane wierszami. Na przykład następującą tablicę składa się z dwóch wierszach z trzech kolumnach:
+Tablice są przechowywane w wierszu. Na przykład następująca tablica składa się z dwóch wierszy z trzema kolumnami:
 
 ```C
 char A[2][3];
 ```
 
-Trzy kolumny pierwszego wiersza są przechowywane najpierw następuje trzy kolumny drugiego wiersza. Oznacza to, że ostatni indeks dolny zmienia się najszybciej.
+Trzy kolumny pierwszego wiersza są przechowywane jako pierwsze, a następnie trzy kolumny drugiego wiersza. Oznacza to, że ostatni indeks dolny różni się najbardziej szybko.
 
-Aby odwołać się do pojedynczego elementu tablicy, należy użyć wyrażenie indeksu dolnego, zgodnie z opisem w [przyrostkowe operatory](../c-language/postfix-operators.md).
+Aby odwołać się do pojedynczego elementu tablicy, użyj wyrażenia indeksu dolnego, zgodnie z opisem w [Operatory przyrostkowe](../c-language/postfix-operators.md).
 
 ## <a name="examples"></a>Przykłady
 
-Te przykłady ilustrują deklaracje tablicy:
+Przykłady ilustrują deklaracje tablic:
 
 ```C
 float matrix[10][15];
 ```
 
-Dwuwymiarową tablicę o nazwie `matrix` 150 elementami, każdy o **float** typu.
+Tablica dwuwymiarowa o nazwie `matrix` zawiera 150 elementów, każdy z typem **zmiennoprzecinkowym** .
 
 ```C
 struct {
@@ -80,20 +80,20 @@ struct {
 } complex[100];
 ```
 
-To jest deklaracją tablicy struktur. Ta tablica ma 100 elementów; Każdy element jest strukturą zawierającą dwa elementy członkowskie.
+Jest to Deklaracja tablicy struktur. Ta tablica zawiera 100 elementów; Każdy element jest strukturą zawierającą dwóch członków.
 
 ```C
 extern char *name[];
 ```
 
-Ta instrukcja deklaruje typ i nazwę tablicę wskaźników do `char`. Rzeczywistą definicją `name` wystąpi w innych miejscach.
+Ta instrukcja deklaruje typ i nazwę tablicy wskaźników do `char`. Rzeczywista definicja `name` występuje w innym miejscu.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Typ liczby całkowitej do przeprowadzenia maksymalny rozmiar tablicy jest rozmiar **size_t**. Zdefiniowane w pliku nagłówkowym STDDEF. Godz., **size_t** jest `unsigned int` z zakresem 0x00000000 do 0x7CFFFFFF.
+Typ liczby całkowitej wymaganej do przechowywania maksymalnego rozmiaru tablicy jest rozmiarem **size_t**. Zdefiniowane w pliku nagłówka STDDEF. H, **size_t** jest `unsigned int` z zakresem od 0x00000000 do 0x7CFFFFFF.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)

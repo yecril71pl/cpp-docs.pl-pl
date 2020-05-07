@@ -12,16 +12,16 @@ ms.locfileid: "62346603"
 # <a name="summary-of-string-literals"></a>Podsumowanie literałów ciągu
 
 *literał ciągu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**"** *s char sekwencji*<sub>zoptymalizowany pod kątem</sub> **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**L"** *s char sekwencji*<sub>zoptymalizowany pod kątem</sub> **"**
+&nbsp;&nbsp;&nbsp;&nbsp;**"** *s-char-Sequence*<sub>opt</sub> **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**L "** *s-char-Sequence*<sub>opt</sub> **"**
 
-*s-char-sequence*:<br/>
+*s-char-Sequence*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*s-char*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*s char sekwencji* *s-char*
+&nbsp;&nbsp;&nbsp;&nbsp;*s-char-Sequence* *s-char*
 
 *s-char*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Każdy członek znak źródłowy zestawu z wyjątkiem znaku podwójnego cudzysłowu ("), ukośnika odwrotnego (\\), lub sekwencje znaków nowego wiersza
+&nbsp;&nbsp;&nbsp;&nbsp;Każdy element członkowski zestawu znaków źródłowych, z wyjątkiem podwójnego cudzysłowu ("), ukośnika odwrotnego (\\) lub znaku ucieczki wiersza
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Gramatyka leksykalna](../c-language/lexical-grammar.md)

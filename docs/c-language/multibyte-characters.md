@@ -11,10 +11,10 @@ ms.locfileid: "62325471"
 ---
 # <a name="multibyte-characters"></a>Znaki wielobajtowe
 
-**ANSI 2.2.1.2** przesunięcia stany znaki wielobajtowe
+**2.2.1.2 ANSI** Stany przesunięcia dla znaków wielobajtowych
 
-Znaki wielobajtowe są używane przez niektóre implementacje, w tym Microsoft C do reprezentowania znaków w obcym języku nie są reprezentowane w podstawowy zestaw znaków. Jednak Microsoft C nie obsługuje żadnych kodowania zależnej od stanu. W związku z tym nie istnieje żadne stanów shift. Zobacz [wielobajtowe i dwubajtowe znaki](../c-language/multibyte-and-wide-characters.md) Aby uzyskać więcej informacji.
+Znaki wielobajtowe są używane przez niektóre implementacje, w tym Microsoft C, reprezentują znaki języka obcego niereprezentowane w podstawowym zestawie znaków. Jednak program Microsoft C nie obsługuje żadnych kodowań zależnych od stanu. W związku z tym nie ma Stanów przesunięcia. Aby uzyskać więcej informacji [, zobacz znaki wielobajtowe i szerokie](../c-language/multibyte-and-wide-characters.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Znaki](../c-language/characters.md)
+[Znaków](../c-language/characters.md)

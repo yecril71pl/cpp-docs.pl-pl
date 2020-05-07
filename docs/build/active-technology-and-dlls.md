@@ -17,14 +17,14 @@ ms.locfileid: "65221000"
 ---
 # <a name="active-technology-and-dlls"></a>Technologia Active i biblioteki DLL
 
-Technologia Active umożliwia serwerów obiektów wewnątrz biblioteki DLL całkowite wdrożenie. Ten typ serwera jest nazywany serwerem w procesie. MFC nie całkowicie obsługuje serwery wewnątrzprocesowe dla wszystkich funkcji edycja wizualna przede wszystkim, ponieważ technologia Active nie zapewnia sposób, aby serwer mógł dołączyć do kontenera główna pętla wiadomości. MFC wymaga dostępu do aplikacji kontenera pętli komunikatów do obsługi klawiszy i przetwarzanie w czasie bezczynności (%).
+Technologia Active umożliwia całkowite wdrożenie serwerów obiektów wewnątrz biblioteki DLL. Ten typ serwera jest nazywany serwerem w procesie. MFC nie obsługuje w pełni skalowalnych serwerów dla wszystkich funkcji edycji wizualizacji, głównie ponieważ technologia Active nie umożliwia serwerowi podłączania do głównej pętli komunikatów kontenera. MFC wymaga dostępu do pętli komunikatów aplikacji kontenera w celu obsługi kluczy akceleratora i przetwarzania w czasie bezczynności.
 
-Jeśli piszesz serwera automatyzacji, a serwer nie ma interfejsu użytkownika, można utworzyć serwera wewnątrz procesowego i umieść je całkowicie biblioteki DLL.
+Jeśli piszesz serwer automatyzacji, a serwer nie ma interfejsu użytkownika, możesz utworzyć serwer na serwerze i umieścić go w całości w bibliotece DLL.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?
+## <a name="what-do-you-want-to-know-more-about"></a>Jak chcesz dowiedzieć się więcej?
 
 - [Serwery automatyzacji](../mfc/automation-servers.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Tworzenie bibliotek DLL języka C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)
+[Tworzenie bibliotek DLL C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)

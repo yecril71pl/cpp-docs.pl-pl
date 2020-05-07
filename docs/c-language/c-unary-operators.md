@@ -14,24 +14,24 @@ ms.locfileid: "62312745"
 ---
 # <a name="c-unary-operators"></a>Operatory jednoargumentowe języka C
 
-Operatory jednoargumentowe są wyświetlane przed ich operand i skojarz od prawej do lewej.
+Operatory jednoargumentowe pojawiają się przed ich operandem i kojarzą od prawej do lewej.
 
 ## <a name="syntax"></a>Składnia
 
-*wyrażenie jednoargumentowe*: *wyrażeniem przyrostkowym*
+*jednoargumentowe — wyrażenie*: *przyrostkowe wyrażenie*
 
 **++**  *wyrażenie jednoargumentowe*
 
 `--`  *wyrażenie jednoargumentowe*
 
-*wyrażenie cast operator jednoargumentowy*
+*wyrażenie jednoargumentowe operatora Cast*
 
-**Operator sizeof** *jednoargumentowe wyrażenie*
+**sizeof**  *— wyrażenie jednoargumentowe*
 
-**Operator sizeof (** *nazwy typu* **)** 
+**sizeof (**  *Nazwa typu*  **)**
 
-*operator jednoargumentowy*: jeden z  **&  \* + -** `~` **!**
+*jednoargumentowy — operator*: jeden z ** &  \* +-** `~` **!**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operatory języka C](../c-language/c-operators.md)

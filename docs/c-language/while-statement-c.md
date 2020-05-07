@@ -16,22 +16,22 @@ ms.locfileid: "62344737"
 ---
 # <a name="while-statement-c"></a>while — instrukcja (C)
 
-`while` Instrukcji umożliwia Powtórz instrukcji, dopóki określone wyrażenie przestaje być prawdziwy.
+`while` Instrukcja pozwala powtórzyć instrukcję do momentu, gdy określone wyrażenie przyjmie wartość false.
 
 ## <a name="syntax"></a>Składnia
 
-*instrukcji iteracji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**gdy (**  *wyrażenie*  **)**  *instrukcja*
+*iteracja — instrukcja*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**while (***wyrażenie***)**—*instrukcja*      
 
-*Wyrażenie* musi mieć typ arytmetyczny lub wskaźnika. Wykonanie działa w następujący sposób:
+*Wyrażenie* musi mieć typ arytmetyczny lub wskaźnikowy. Wykonanie przebiega w następujący sposób:
 
-1. *Wyrażenie* jest oceniany.
+1. *Wyrażenie* jest oceniane.
 
-1. Jeśli *wyrażenie* początkowo wartość false, treść `while` nigdy nie zostaje wykonana instrukcja i kontrola przechodzi z `while` instrukcji do następnej instrukcji w programie.
+1. Jeśli *wyrażenie* jest początkowo fałszywe, treść `while` instrukcji nigdy nie jest wykonywana, a kontrola przebiega z `while` instrukcji do następnej instrukcji w programie.
 
-   Jeśli *wyrażenie* jest wartość true (niezerową), zostaje wykonana instrukcji i proces jest powtarzany, zaczynając od kroku 1.
+   Jeśli *wyrażenie* jest prawdziwe (niezerowe), treść instrukcji jest wykonywana i proces jest powtarzany, rozpoczynając od kroku 1.
 
-`while` Instrukcji można także zakończyć, gdy **podziału**, `goto`, lub `return` w ramach instrukcja zostaje wykonana. Użyj **nadal** instrukcję, aby zakończyć iterację bez zamykania `while` pętli. **Nadal** instrukcji przekazuje kontrolę do następnej iteracji `while` instrukcji.
+Instrukcja może również kończyć się, gdy **break**jest wykonywana `goto`przerwa, `return` lub w obrębie treści instrukcji. `while` Użyj instrukcji **Continue** , aby przerwać iterację bez kończenia `while` pętli. Instrukcja **Continue** przekazuje formant do następnej iteracji `while` instrukcji.
 
 Jest to przykład `while` instrukcji:
 
@@ -43,8 +43,8 @@ while ( i >= 0 )
 }
 ```
 
-W tym przykładzie kopiuje znaków ze zbioru `string2` do `string1`. Jeśli `i` jest większa niż lub równa 0, `string2[i]` jest przypisany do `string1[i]` i `i` zostanie zmniejszony. Gdy `i` osiągnie lub spadnie poniżej 0, wykonywanie `while` kończy się.
+Ten przykład kopiuje znaki z `string2` do `string1`. Jeśli `i` jest większy lub równy 0, `string2[i]` jest przypisywany do `string1[i]` i `i` jest zmniejszany. Gdy `i` osiągnie lub spadnie poniżej 0, wykonywanie `while` instrukcji zostaje przerwane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[while, instrukcja (C++)](../cpp/while-statement-cpp.md)
+[While — Instrukcja (C++)](../cpp/while-statement-cpp.md)

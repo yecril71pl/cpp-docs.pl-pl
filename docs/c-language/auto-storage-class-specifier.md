@@ -11,10 +11,10 @@ ms.locfileid: "62313470"
 ---
 # <a name="auto-storage-class-specifier"></a>Specyfikator automatycznej klasy magazynowania
 
-**Automatycznie** Specyfikator klasy magazynowania deklaruje automatycznej zmiennej, zmienna o lokalne okresy istnienia. **Automatycznie** zmienna jest widoczna tylko w bloku, w którym jest zdeklarowana. Deklaracje **automatycznie** zmiennych, które mogą zawierać inicjatory, zgodnie z opisem w [inicjowania](../c-language/initialization.md). Od zmiennych o **automatycznie** klasę magazynu nie są automatycznie inicjowane, należy albo jawnie zainicjować je zadeklarować je lub przypisać je wartościami początkowymi instrukcje w bloku. Wartości niezainicjowanej **automatycznie** zmienne są niezdefiniowane. (Lokalnej zmiennej **automatycznie** lub **zarejestrować** klasę magazynu jest zawsze zainicjowana podczas chodzi w zakresie, jeśli podano inicjatora.)
+Specyfikator klasy magazynu **automatycznego** deklaruje zmienną automatyczną, zmienną z lokalnym okresem istnienia. Zmienna **auto** autovariable jest widoczna tylko w bloku, w którym jest zadeklarowana. Deklaracje **autozmiennych mogą** zawierać inicjatory, zgodnie z opisem w [inicjalizacji](../c-language/initialization.md). Ze względu na to, że zmienne z klasą **automatycznego** magazynu nie są inicjowane automatycznie, należy je jawnie zainicjować przy deklarowaniu ich lub przypisać do nich wartości początkowe w instrukcjach w bloku. Wartości niezainicjowanych **zmiennych** autonie są zdefiniowane. (Lokalna zmienna klasy magazynu autolub **register** jest inicjowana za każdym **razem, gdy** występuje inicjator.)
 
-Wewnętrznego **statyczne** zmiennej (statycznej zmiennej lokalnej lub zakresie bloku) mogą być inicjowane przy użyciu adresu żadnych zewnętrznych lub **statyczne** elementu, ale nie z adresu innego **automatycznie**  elementu, ponieważ adres **automatycznie** element nie jest stałą.
+Wewnętrzna zmienna **statyczna** (zmienna statyczna z zakresem lokalnym lub blokowym) może zostać zainicjowana przy użyciu adresu dowolnego elementu zewnętrznego lub **statycznego** , ale nie z **adresem innego elementu** **autoitem, ponieważ adres elementu** autoitem nie jest stałą.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Auto, słowo kluczowe](../cpp/auto-keyword.md)
+[Słowo kluczowe "Autouzupełnianie"](../cpp/auto-keyword.md)
