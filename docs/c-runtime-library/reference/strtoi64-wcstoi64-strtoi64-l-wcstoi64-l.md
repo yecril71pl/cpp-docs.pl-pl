@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -47,16 +47,16 @@ helpviewer_keywords:
 - strtoi64 function
 - wcstoi64_l function
 ms.assetid: ea2abc50-7bfe-420e-a46b-703c3153593a
-ms.openlocfilehash: 8dcdff4cf6f3eff191dc126583c1ca8290133e02
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7929f5e7d5971278dfe19a0850ccf660751c2acf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365130"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910894"
 ---
 # <a name="_strtoi64-_wcstoi64-_strtoi64_l-_wcstoi64_l"></a>_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 
-Konwertowanie ciągu na wartość **__int64.**
+Konwertuj ciąg na wartość **__int64** .
 
 ## <a name="syntax"></a>Składnia
 
@@ -87,67 +87,67 @@ __int64 _wcstoi64_l(
 
 ### <a name="parameters"></a>Parametry
 
-*strSource (źródło usług strSource)*<br/>
-Ciąg zakończony wartością null do konwersji.
+*strSource*<br/>
+Ciąg zakończony znakiem null do przekonwertowania.
 
 *endptr*<br/>
-Wskaźnik do znaku, który zatrzymuje skanowanie.
+Wskaźnik do znaku, który powoduje zatrzymanie skanowania.
 
 *base*<br/>
-Podstawa liczbowa do użycia.
+Numer bazowy do użycia.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_strtoi64** zwraca wartość reprezentowaną w ciągu *strSource*, z wyjątkiem sytuacji, gdy reprezentacja spowoduje przepełnienie, w którym to przypadku zwraca **_I64_MAX** lub **_I64_MIN**. Funkcja zwróci wartość 0, jeśli nie można wykonać konwersji. **_wcstoi64** zwraca wartości analogicznie do **strtoi64**.
+**_strtoi64** zwraca wartość reprezentowaną w ciągu *strSource*, z wyjątkiem sytuacji, gdy reprezentacja spowodowałoby przepełnienie, w takim przypadku zwraca **_I64_MAX** lub **_I64_MIN**. Funkcja zwróci wartość 0, jeśli nie można wykonać konwersji. **_wcstoi64** zwraca wartości analogicznie do **strtoi64**.
 
-**_I64_MAX** i **_I64_MIN** są zdefiniowane w limitach. H.
+**_I64_MAX** i **_I64_MIN** są zdefiniowane w limitach. C.
 
-Jeśli *strSource* ma **wartość NULL** lub *podstawa* jest niezerowa i mniejsza niż 2 lub większa niż 36, **errno** jest ustawiona na **wartość EINVAL**.
+Jeśli *strSource* ma **wartość null** lub *podstawa* jest różna od zera i jest mniejsza niż 2 lub większa niż 36, **errno** jest ustawiona na **EINVAL**.
 
-Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr,](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) aby uzyskać więcej informacji na temat tych i innych kodów zwrotnych.
+Aby uzyskać więcej informacji na temat tych i innych kodów powrotu, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_strtoi64** konwertuje *strSource* na **__int64**. Obie funkcje przestają odczytywać ciąg *strSource* przy pierwszym znaku, który nie może rozpoznać jako część liczby. Może to być kończący się znak null lub pierwszy znak numeryczny większy lub równy *podstawie.* **_wcstoi64** jest szerokoznakową wersją **_strtoi64**; jego *argument strSource* jest ciągiem znaków o szerokim charakterze. Te funkcje zachowują się identycznie w przeciwnym razie.
+Funkcja **_strtoi64** konwertuje *strSource* na **__int64**. Obie funkcje przerywają odczytywanie ciągu *strSource* na pierwszym znaku, którego nie mogą rozpoznać jako części liczby. Może to być kończący znak null lub może być pierwszym znakiem numerycznym większym lub równym *Base*. **_wcstoi64** to dwubajtowa wersja **_strtoi64**; jego argument *strSource* jest ciągiem znaków dwubajtowych. Funkcje te zachowują się identycznie w inny sposób.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstoi64**|**_strtoi64**|**_strtoi64**|**_wcstoi64**|
 |**_tcstoi64_l**|**_strtoi64_l**|**_strtoi64_l**|**_wcstoi64_l**|
 
-Ustawienie **kategorii LC_NUMERIC** ustawień regionalnych określa rozpoznawanie znaku radix w *strSource*; aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Funkcje bez sufiksu _l używają bieżących ustawień regionalnych; **_strtoi64_l** i **_wcstoi64_l** są identyczne z odpowiednią funkcją bez sufiksu **_l,** z tą różnicą, że zamiast tego używają ustawień regionalnych przekazanych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Ustawienie kategorii **LC_NUMERIC** ustawień regionalnych określa rozpoznawanie znaku podstawy w *strSource*; Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Funkcje bez sufiksu _l używają bieżących ustawień regionalnych; **_strtoi64_l** i **_wcstoi64_l** są identyczne z odpowiadającą jej funkcją bez sufiksu **_l** , z tą różnicą, że w zamian korzystają z przekazaną ustawieniami regionalnymi. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Jeśli *endptr* nie ma **wartości NULL,** wskaźnik do znaku, który zatrzymał skanowanie jest przechowywany w miejscu wskazanym przez *endptr*. Jeśli nie można przeprowadzić konwersji (nie znaleziono prawidłowych cyfr lub określono nieprawidłową bazę), wartość *strSource* jest przechowywana w lokalizacji wskazanej przez *endptr*.
+Jeśli *endptr* nie ma **wartości null**, wskaźnik do znaku, który zatrzymał skanowanie jest przechowywany w lokalizacji wskazywanej przez *endptr*. Jeśli konwersja nie może być wykonywana (nie znaleziono prawidłowych cyfr lub określono nieprawidłową podstawę), wartość *strSource* jest przechowywana w lokalizacji wskazywanej przez *endptr*.
 
-**_strtoi64** oczekuje *strSource* wskazać ciąg następującego formularza:
+**_strtoi64** oczekuje, że *strSource* wskaże ciąg o następującej postaci:
 
-> [*odstępy*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*cyfry* &#124; *litery*]
+> [*odstęp*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **x** }]] [*cyfry* &#124; *litery*]
 
-*Odstępy* mogą składać się ze znaków spacji i tabulacji, które są ignorowane; *cyfry* są jedną lub kilkoma cyframi dziesiętnymi; *litery* są jedną lub kilkoma literami "a" przez "z" (lub "A" do "Z").  Pierwszy znak, który nie pasuje do tego formularza, zatrzymuje skanowanie. Jeśli *podstawa* znajduje się między 2 a 36, jest używana jako podstawa liczby. Jeśli *podstawa* wynosi 0, początkowe znaki ciągu wskazywowane przez *strSource* są używane do określenia podstawy. Jeśli pierwszy znak ma 0, a drugi znak nie jest "x" lub "X", ciąg jest interpretowany jako ósemkowa liczba całkowita. Jeśli pierwszy znak to "0", a drugi znak to "x" lub "X", ciąg jest interpretowany jako liczba całkowita szesnastkowa. Jeśli pierwszy znak jest od 1 do "9", ciąg jest interpretowany jako liczba całkowita dziesiętna. Literom "a" do "z" (lub "A" do "Z") przypisuje się wartości od 10 do 35; tylko litery, których przypisane wartości są mniejsze niż *podstawy* są dozwolone. Pierwszy znak poza zakresem podstawy zatrzymuje skanowanie. Na przykład, jeśli *podstawa* wynosi 0, a pierwszy zeskanowany znak to "0", zakłada się ósemkową liczę całkowitą, a znak "8" lub "9" zatrzyma skanowanie.
+*Odstępy* mogą składać się ze znaków spacji i tabulatora, które są ignorowane; *cyfry* są jedną lub większą liczbą cyfr dziesiętnych; *litery* są jedną lub większą literą od "a" do "z" (lub od "a" do "z").  Pierwszy znak, który nie pasuje do tego formularza, zatrzyma skanowanie. Jeśli *baza* jest z przedziału od 2 do 36, zostanie użyta jako podstawa liczby. Jeśli *Base* ma wartość 0, początkowe znaki ciągu wskazywane przez *strSource* są używane do określenia podstawy. Jeśli pierwszym znakiem jest 0, a drugi znak nie jest "x" lub "X", ciąg jest interpretowany jako ósemkowa liczba całkowita. Jeśli pierwszy znak to "0", a drugi znak to "x" lub "X", ciąg jest interpretowany jako Szesnastkowa liczba całkowita. Jeśli pierwszym znakiem jest "1" do "9", ciąg jest interpretowany jako dziesiętna liczba całkowita. Litery od "a" do "z" (lub "A" do "z") mają przypisane wartości od 10 do 35; dozwolone są tylko litery, których przypisane wartości są mniejsze niż *podstawowe* . Pierwszy znak poza zakresem podstawy powoduje zatrzymanie skanowania. Na przykład jeśli *Base* ma wartość 0, a pierwszy znak skanowany to "0", zakłada się liczbę całkowitą, a znak "8" lub "9" spowoduje zatrzymanie skanowania.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strtoi64** **, _strtoi64_l**|\<>|
-|**_wcstoi64** **, _wcstoi64_l**|\<> lub \<wchar.h>|
+|**_strtoi64**, **_strtoi64_l**|\<STDLIB. h>|
+|**_wcstoi64**, **_wcstoi64_l**|\<STDLIB. h> lub \<WCHAR. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
-[Ciąg do funkcji wartości liczbowej](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[Funkcje ciągu do wartości numerycznych](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

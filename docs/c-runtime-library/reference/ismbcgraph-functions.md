@@ -34,7 +34,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -70,19 +70,19 @@ helpviewer_keywords:
 - _ismbcgraph_l function
 - _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
-ms.openlocfilehash: eb76b6ebdbe4b27ce5a7368ad1b8c2dd8f858d85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5f2c8b595de323994aa670a8e0fee9e562897e49
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343240"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919760"
 ---
 # <a name="_ismbcgraph-_ismbcgraph_l-_ismbcprint-_ismbcprint_l-_ismbcpunct-_ismbcpunct_l-_ismbcblank-_ismbcblank_l-_ismbcspace-_ismbcspace_l"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 
-Określa, czy znak jest znakiem graficznym, znakiem wyświetlania, znakiem interpunkcyjnym czy znakiem spacji.
+Określa, czy znak jest znakiem graficznym, znakiem wyświetlanym, znakiem interpunkcyjny lub znakiem spacji.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -126,57 +126,57 @@ int _ismbcspace_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Charakter do ustalenia.
+*s*<br/>
+Znak, który ma zostać określony.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca wartość niezerową, jeśli znak spełnia warunek testu lub 0, jeśli nie. Jeśli *c* <= 255 i istnieje **odpowiednia _ismbb** rutynowa (na przykład **_ismbcalnum** odpowiada **_ismbbalnum),** wynikiem jest wartość zwracana odpowiedniej **_ismbb** rutynowej.
+Każda z tych procedur zwraca wartość różną od zera, jeśli znak spełnia warunek testu lub 0, jeśli tak nie jest. Jeśli *c* <= 255 i istnieje odpowiadająca procedura **_ismbb** (na przykład **_ismbcalnum** odnosi się do **_ismbbalnum**), wynik jest wartością zwracaną odpowiedniej procedury **_ismbb** .
 
-Wersje tych funkcji są identyczne, z tą różnicą, że te, które mają sufiks **_l** używają ustawień regionalnych, które są przekazywane dla ich zachowania zależnego od ustawień regionalnych, zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wersje tych funkcji są identyczne, z tą różnicą, że te, które mają sufiks **_l** używają ustawień regionalnych, które są przenoszone dla zachowań zależnych od ustawień regionalnych, zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji testuje dany znak wielobajtowy dla danego warunku.
+Każda z tych funkcji testuje danego znaku wielobajtowego dla danego warunku.
 
-|Procedura|Warunek badania|Strona kodowa 932 przykład|
+|Procedura|Warunek testu|Przykładowa strona kodowa 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcgraph**|Graficzny|Zwraca wartość różną od zera, jeśli i tylko *wtedy,* gdy c jest jedno bajtową reprezentacją dowolnego znaku drukującego ASCII lub katakana z wyjątkiem białego znaku ( ).|
-|**_ismbcprint**|Drukowania|Zwraca wartość różną od zera, jeśli i tylko *wtedy,* gdy c jest jedno bajtową reprezentacją dowolnego znaku drukuJĄCEGO ASCII lub katakana, w tym białego znaku ( ).|
-|**_ismbcpunct**|Znaki interpunkcyjne|Zwraca wartość niezerową, jeśli i tylko *wtedy,* gdy c jest reprezentacją jedno bajtową dowolnego znaku interpunkcyjnego ASCII lub katakana.|
-|**_ismbcblank**|Spacja lub karta pozioma|Zwraca wartość niezerową, jeśli i tylko *wtedy, gdy c* jest spacją lub poziomym znakiem zakładki: *c*=0x20 lub *c*=0x09.|
-|**_ismbcspace**|Odstępu|Zwraca wartość różną od zera, jeśli i tylko *wtedy, gdy c* jest znakiem odstępu: *c*=0x20 lub 0x09<=*c*<=0x0D.|
+|**_ismbcgraph**|Zdjęć|Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy *c* jest jednobajtową reprezentacją dowolnego znaku ASCII lub Katakana drukowalnego, z wyjątkiem odstępu ().|
+|**_ismbcprint**|Drukowalnych|Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy *c* jest jednobajtową reprezentacją dowolnego znaku ASCII lub Katakana drukowalnego, w tym odstępu ().|
+|**_ismbcpunct**|Znaki interpunkcyjne|Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy *c* jest reprezentacją jednobajtowego znaku interpunkcyjny ASCII lub Katakana.|
+|**_ismbcblank**|Spacja lub tabulator poziomy|Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy *c* jest spacją lub tabulatorem poziomym: *c*= 0x20 lub *c*= 0x09.|
+|**_ismbcspace**|Biały znak|Zwraca wartość różną od zera, jeśli i tylko wtedy, gdy *c* jest znakiem odstępu: *c*= 0x20 lub 0x09<=*c*<= 0x0D.|
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ismbcgraph**|\<mbstring.h>|
-|**_ismbcgraph_l**|\<mbstring.h>|
-|**_ismbcprint**|\<mbstring.h>|
-|**_ismbcprint_l**|\<mbstring.h>|
-|**_ismbcpunct**|\<mbstring.h>|
-|**_ismbcpunct_l**|\<mbstring.h>|
-|**_ismbcblank**|\<mbstring.h>|
-|**_ismbcblank_l**|\<mbstring.h>|
-|**_ismbcspace**|\<mbstring.h>|
-|**_ismbcspace_l**|\<mbstring.h>|
+|**_ismbcgraph**|\<mbstring. h>|
+|**_ismbcgraph_l**|\<mbstring. h>|
+|**_ismbcprint**|\<mbstring. h>|
+|**_ismbcprint_l**|\<mbstring. h>|
+|**_ismbcpunct**|\<mbstring. h>|
+|**_ismbcpunct_l**|\<mbstring. h>|
+|**_ismbcblank**|\<mbstring. h>|
+|**_ismbcblank_l**|\<mbstring. h>|
+|**_ismbcspace**|\<mbstring. h>|
+|**_ismbcspace_l**|\<mbstring. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
-[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [Procedury _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
 [is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

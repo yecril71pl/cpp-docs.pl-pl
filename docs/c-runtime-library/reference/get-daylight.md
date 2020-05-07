@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-ms.openlocfilehash: 0abab77b1429b263c7e5d84a6d395f0411ebf8a4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 226242c5dd6c3c204d2449bd14ee7dee4f5fe7b5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345302"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919399"
 ---
 # <a name="_get_daylight"></a>_get_daylight
 
@@ -50,30 +50,30 @@ error_t _get_daylight( int* hours );
 
 ### <a name="parameters"></a>Parametry
 
-*Godzin*<br/>
+*liczb*<br/>
 Przesunięcie w godzinach czasu letniego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli zakończy się pomyślnie lub **errno** wartość, jeśli wystąpi błąd.
+Zero, jeśli wystąpi błąd lub wartość **errno** w przypadku wystąpienia błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_get_daylight** pobiera liczbę godzin czasu letniego jako liczbę całkowitą. Jeśli obowiązuje czas letni, domyślne przesunięcie wynosi jedną godzinę (chociaż w kilku regionach obserwuje się przesunięcie dwóch godzin).
+Funkcja **_get_daylight** Pobiera liczbę godzin w czasie letnim w postaci liczby całkowitej. Jeśli obowiązuje czas letni, domyślne przesunięcie wynosi godzinę (chociaż kilka regionów obserwuje przesunięcie dwugodzinne).
 
-Jeśli *godziny* mają wartość **NULL**, nieprawidłowy program obsługi parametrów jest wywoływany zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, ta funkcja ustawia **errno** na **EINVAL** i zwraca **wartość EINVAL**.
+Jeśli *godziny* mają **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca **EINVAL**.
 
-Zaleca się użycie tej funkcji zamiast **_daylight** makra lub przestarzałej funkcji **__daylight**.
+Zalecamy używanie tej funkcji zamiast makra **_daylight** lub przestarzałej funkcji **__daylight**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_get_daylight**|\<> time.h|
+|**_get_daylight**|\<> godziny. h|
 
-Aby uzyskać więcej informacji, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-ms.openlocfilehash: 061c5647b2c5a5e79b017cf93989f62ad19cfc0a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7834049fe8d28f7294976ac29a3daa663a06cff6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338754"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919142"
 ---
 # <a name="_mktemp_s-_wmktemp_s"></a>_mktemp_s, _wmktemp_s
 
-Tworzy unikatową nazwę pliku. Są to wersje [_mktemp, _wmktemp](mktemp-wmktemp.md) z ulepszeniami zabezpieczeń, jak opisano w [programie Funkcje zabezpieczeń w programie CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Tworzy unikatową nazwę pliku. Są to wersje [_mktemp, _wmktemp](mktemp-wmktemp.md) z ulepszonymi zabezpieczeniami, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,29 +76,29 @@ errno_t _wmktemp_s(
 Wzorzec nazwy pliku.
 
 *sizeInChars*<br/>
-Rozmiar buforu w postaci jedno bajtowej **w _mktemp_s**; szerokich znaków **w _wmktemp_s**, w tym zerowego terminatora.
+Rozmiar buforu w znakach jednobajtowych w **_mktemp_s**; znaki dwubajtowe w **_wmktemp_s**, w tym terminator o wartości null.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obie te funkcje zwracają zero na sukces; kod błędu w przypadku awarii.
+Obie te funkcje zwracają zero po sukcesie; kod błędu w przypadku niepowodzenia.
 
-### <a name="error-conditions"></a>Warunki błędu
+### <a name="error-conditions"></a>Warunki błędów
 
-|*nameTemplate*|*sizeInChars*|Wartość zwracana|Nowa wartość w *nazwieTemplate*|
+|*nameTemplate*|*sizeInChars*|Wartość zwracana|Nowa wartość w *nameTemplate*|
 |----------------|-------------------|----------------------|-------------------------------|
-|**Null**|Wszelki|**Einval**|**Null**|
-|Nieprawidłowy format (zobacz sekcję Uwagi, aby uzyskać poprawny format)|Wszelki|**Einval**|pusty ciąg znaków|
-|Wszelki|<= liczba X|**Einval**|pusty ciąg znaków|
+|**NULL**|ile|**EINVAL**|**NULL**|
+|Niepoprawny format (patrz sekcja uwagi w poszukiwaniu poprawnego formatu)|ile|**EINVAL**|pusty ciąg|
+|ile|<= liczba elementów X|**EINVAL**|pusty ciąg|
 
-Jeśli wystąpi którykolwiek z powyższych warunków błędu, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [obszarze Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, **errno** jest ustawiona na **EINVAL** i funkcje zwraca **EINVAL**.
+Jeśli wystąpi którykolwiek z powyższych warunków błędu, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcje zwracają **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_mktemp_s** tworzy unikatową nazwę pliku, modyfikując argument *nameTemplate,* tak aby po wywołaniu wskaźnik *nameTemplate* wskazuje na ciąg zawierający nową nazwę pliku. **_mktemp_s** automatycznie obsługuje argumenty ciągów wielobajtowych, rozpoznając sekwencje znaków wielobajtowych zgodnie ze stroną kodową wielobajtową aktualnie używaną przez system czasu wykonywania. **_wmktemp_s** jest szerokoznakową wersją **_mktemp_s**; argumentem **_wmktemp_s** jest ciąg znaków o szerokim charakterze. **_wmktemp_s** i **_mktemp_s** zachowywać się identycznie inaczej, z tą różnicą, że **_wmktemp_s** nie obsługuje ciągów znaków wielobajtowych.
+Funkcja **_mktemp_s** tworzy unikatową nazwę pliku, modyfikując argument *nameTemplate* , tak aby po wywołaniu wskaźnik *nameTemplate* wskazywał ciąg zawierający nową nazwę pliku. **_mktemp_s** automatycznie obsługuje argumenty ciągu znaków wielobajtowych, aby rozpoznawać sekwencje znaków wielobajtowych zgodnie ze stroną kodową wielobajtowego aktualnie używaną przez system czasu wykonywania. **_wmktemp_s** to dwubajtowa wersja **_mktemp_s**; argumentem **_wmktemp_s** jest ciąg znaków dwubajtowych. **_wmktemp_s** i **_mktemp_s** zachowują się identycznie, z tą różnicą, że **_wmktemp_s** nie obsługują ciągów znaków wielobajtowych.
 
 Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -106,36 +106,36 @@ Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmien
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp_s**|**_mktemp_s**|**_mktemp_s**|**_wmktemp_s**|
 
-Argument *nameTemplate* ma formę **baseXXXXXX**, gdzie *podstawa* jest częścią nowej nazwy pliku, którą podajesz, a każdy X jest symbolem zastępczym dla znaku dostarczonego przez **_mktemp_s**. Każdy znak zastępczy w *nazwieTemplate* musi być wielką literą X. **_mktemp_s** zachowuje *bazę* i zastępuje pierwszy znak x spływającym znakiem alfabetycznym. **_mktemp_s** zastępuje następujące końcowe X wartością pięciocyfrową; ta wartość jest unikatowy numer identyfikujący proces wywołujący lub w programach wielowątkowych, wątek wywołujący.
+Argument *nameTemplate* ma postać **baseXXXXXX**, gdzie *Base* jest częścią nowej nazwy pliku, która jest dostarczana, a każdy X jest symbolem zastępczym dla znaku dostarczonego przez **_mktemp_s**. Każdy znak zastępczy w *nameTemplate* musi być wielką literą x. **_mktemp_s** zachowuje *podstawową* i zastępuje pierwszy znak x symbolem alfabetycznym. **_mktemp_s** zastępuje następujące znaki końcowe X wartością z pięciu cyfr; Ta wartość jest unikatowym numerem identyfikującym proces wywołujący lub w programach wielowątkowych, wątek wywołujący.
 
-Każde udane wywołanie **_mktemp_s** modyfikuje *nazwęTemplate*. W każdym kolejnym wywołaniu z tego samego procesu lub wątku o tej samej *nazwieTemplate* **argument, _mktemp_s** sprawdza nazwy plików, które pasują do nazw zwracanych przez **_mktemp_s** w poprzednich wywołaniach. Jeśli dla danej nazwy nie istnieje żaden plik, **_mktemp_s** zwraca tę nazwę. Jeśli pliki istnieją dla wszystkich wcześniej zwróconych nazw, **_mktemp_s** tworzy nową nazwę, zastępując znak alfabetyczny używany we wcześniej zwróconej nazwie następną dostępną literą, w kolejności od "a" do "z". Na przykład, jeśli *podstawą* jest:
+Każde pomyślne wywołanie do **_mktemp_s** modyfikuje *nameTemplate*. W każdym kolejnym wywołaniu z tego samego procesu lub wątku z tym samym *nameTemplate* argumentem nameTemplate **_mktemp_s** sprawdza nazwy plików, które są zgodne z nazwami zwracanymi przez **_mktemp_s** w poprzednich wywołaniach. Jeśli plik nie istnieje dla danej nazwy, **_mktemp_s** zwraca tę nazwę. Jeśli istnieją pliki dla wszystkich poprzednio zwróconych nazw, **_mktemp_s** tworzy nową nazwę przez zastąpienie znaku alfabetycznego, który został użyty w wcześniej zwróconej nazwie z następną dostępną małą literą, w kolejności od "a" do "z". Na przykład jeśli *podstawowa* :
 
 > **Fn**
 
-a pięciocyfrowa wartość podana przez **_mktemp_s** wynosi 12345, imię zwrócone jest:
+i pięć cyfr dostarczonych przez **_mktemp_s** to 12345, pierwsza zwrócona nazwa:
 
 > **fna12345**
 
-Jeśli ta nazwa jest używana do tworzenia pliku FNA12345 i ten plik nadal istnieje, następna nazwa zwrócona na wywołanie z tego samego procesu lub wątku o tej samej *podstawie* dla *nameTemplate* jest:
+Jeśli ta nazwa jest używana do tworzenia pliku FNA12345, a ten plik nadal istnieje, następna nazwa zwrócona przez wywołanie z tego samego procesu lub wątku z tą samą *podstawą* dla *nameTemplate* jest:
 
 > **fnb12345**
 
-Jeśli FNA12345 nie istnieje, następna zwrócona nazwa jest ponownie:
+Jeśli FNA12345 nie istnieje, zwracana jest kolejna Nazwa:
 
 > **fna12345**
 
-**_mktemp_s** może utworzyć maksymalnie 26 unikatowych nazw plików dla dowolnej kombinacji wartości *podstawowej* i *nameTemplate.* W związku z tym FNZ12345 jest ostatnią unikatową nazwą **pliku, _mktemp_s** można utworzyć dla *wartości podstawowej* i *nameTemplate* używane w tym przykładzie.
+**_mktemp_s** może utworzyć maksymalnie 26 unikatowych nazw plików dla każdej kombinacji wartości *podstawowych* i *nameTemplate* . W związku z tym FNZ12345 jest ostatnią unikatową nazwą pliku **_mktemp_s** można utworzyć dla wartości *podstawowych* i *nameTemplate* używanych w tym przykładzie.
 
-W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonu; przeciążenia można wywnioskować długość buforu automatycznie (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszych, bezpiecznych odpowiedników. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszymi, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mktemp_s**|\<> io.h|
-|**_wmktemp_s**|\<io.h> lub \<wchar.h>|
+|**_mktemp_s**|\<IO. h>|
+|**_wmktemp_s**|\<IO. h> lub \<WCHAR. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

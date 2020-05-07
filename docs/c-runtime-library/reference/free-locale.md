@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - locales, freeing
 - _free_locale function
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
-ms.openlocfilehash: 568e44d731f384a0503420339d716fdfdc81e13a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8dbc424c00464966605cce5c44118b88eb5335d3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346044"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920436"
 ---
 # <a name="_free_locale"></a>_free_locale
 
@@ -52,24 +52,24 @@ void _free_locale(
 
 ### <a name="parameters"></a>Parametry
 
-*Ustawień regionalnych*<br/>
-Obiekt ustawień regionalnych do bezpłatnego.
+*locale*<br/>
+Obiekt ustawień regionalnych do zwolnienia.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_free_locale** służy do zwalniania obiektu ustawień regionalnych uzyskanego z wywołania **_get_current_locale** lub **_create_locale**.
+Funkcja **_free_locale** służy do zwalniania obiektu ustawień regionalnych uzyskanych z wywołania **_get_current_locale** lub **_create_locale**.
 
-Poprzednia nazwa tej funkcji, **__free_locale** (z dwoma podkreśleniami wiodącymi) została przestarzała.
+Poprzednia nazwa tej funkcji, **__free_locale** (z dwoma znakami wiodącymi), jest przestarzała.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |**Procedura**|Wymagany nagłówek|
 |---------------|---------------------|
-|**_free_locale**|\<>|
+|**_free_locale**|\<locale. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

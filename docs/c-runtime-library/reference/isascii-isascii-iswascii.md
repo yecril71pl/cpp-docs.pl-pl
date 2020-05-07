@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,16 +39,16 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-ms.openlocfilehash: aeb9c27fee4d179cc16caa50c6f0aae521402beb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3e04b85c9ce7519593802c21311315d534dce6a5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343910"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919791"
 ---
 # <a name="isascii-__isascii-iswascii"></a>isascii, __isascii, iswascii
 
-Określa, czy określony znak jest znakiem ASCII.
+Określa, czy konkretny znak jest znakiem ASCII.
 
 ## <a name="syntax"></a>Składnia
 
@@ -65,38 +65,38 @@ int iswascii(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Całkowita ć do przetestowania.
+*s*<br/>
+Liczba całkowita do przetestowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca nonzero, jeśli **c** jest określoną reprezentacją znaku ASCII. **__isascii** zwraca wartość niezerową, jeśli **c** jest znakiem ASCII (w zakresie 0x00 - 0x7F). **iswascii** zwraca wartość różną od zera, jeśli **c** jest szeroką reprezentacją znaku ASCII. Każda z tych procedur zwraca wartość 0, jeśli **c** nie spełnia warunku badania.
+Każda z tych procedur zwraca wartość różną od zera, jeśli **c** jest szczególną reprezentacją znaku ASCII. **__isascii** zwraca wartość różną od zera, jeśli **c** jest znakiem ASCII (w zakresie 0x00-0x7F). **iswascii** zwraca wartość różną od zera, jeśli **c** jest reprezentacją dwubajtowego znaku ASCII. Każda z tych procedur zwraca wartość 0, jeśli **c** nie spełnia warunku testu.
 
 ## <a name="remarks"></a>Uwagi
 
-Zarówno **__isascii,** jak i **iswascii** są implementowane jako makra, chyba że zdefiniowano _CTYPE_DISABLE_MACROS makra preprocesora.
+Zarówno **__isascii** , jak i **iswascii** są zaimplementowane jako makra, chyba że jest zdefiniowane _CTYPE_DISABLE_MACROS makro preprocesora.
 
-W przypadku zgodności z powrotem **isascii** jest implementowane jako makro tylko wtedy, [gdy&#95;&#95;&#95;&#95;STDC](../../preprocessor/predefined-macros.md) nie jest zdefiniowany lub jest zdefiniowany jako 0; w przeciwnym razie jest niezdefiniowany.
+W celu zapewnienia zgodności z poprzednimi wersjami program **isascii** jest implementowany jako makro tylko wtedy, gdy [&#95;&#95;STDC&#95;&#95;](../../preprocessor/predefined-macros.md) nie jest zdefiniowany lub jest zdefiniowany jako 0; w przeciwnym razie jest to niezdefiniowane.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_istascii**|**__isascii**|**__isascii**|**iswascii ( iswascii )**|
+|**_istascii**|**__isascii**|**__isascii**|**iswascii**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**isascii**, **__isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> lub \<ctype.h>|
-|**iswascii ( iswascii )**|C: \<wctype.h>, \<ctype.h> lub \<wchar.h><br /><br /> C++: \<cwctype>, \<cctype>, \<wctype.h>, \<ctype.h> lub \<wchar.h>|
+|**isascii**, **__isascii**|C: \<CType. h><br /><br /> C++: \<cctype> lub \<CType. h>|
+|**iswascii**|C: \<wctype. h>, \<CType. h> lub \<WCHAR. h><br /><br /> C++: \<cwctype>, \<cctype>, \<wctype. h>, \<ctype. h> lub \<WCHAR. h>|
 
-Funkcje **isascii**, **__isascii** i **iswascii** są specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Funkcje **isascii**, **__isascii** i **Iswascii** są specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
-[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

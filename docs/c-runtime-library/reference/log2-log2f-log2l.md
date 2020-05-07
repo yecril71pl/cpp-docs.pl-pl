@@ -20,22 +20,22 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: 29a1a9e2003091944a4587036c62a49d76333080
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58da7790e6fbce915c16a02a1b0d972a6fe1049e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341720"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911417"
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
-Określa logarytm binarny (base-2) określonej wartości.
+Określa LOGARYTM binarny (Base-2) określonej wartości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -63,40 +63,40 @@ long double log2l(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Wartość do określenia logarytmu base-2.
+*y*<br/>
+Wartość określająca logarytm dziesiętny.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Po sukcesie zwraca log2 *x .*
+Po powodzeniu zwraca wartość Return log2 — *x*.
 
-W przeciwnym razie może zwrócić jedną z następujących wartości:
+W przeciwnym razie może zwracać jedną z następujących wartości:
 
-|Problem|Zwraca|
+|Problem|Przesłać|
 |-----------|------------|
 |*x* < 0|NaN|
-|*x* = ±0|-NIESKOŃCZONOŚĆ|
-|*x* = 1|+0|
-|+NIESKOŃCZONOŚĆ|+NIESKOŃCZONOŚĆ|
+|*x* = ± 0|-NIESKOŃCZONość|
+|*x* = 1|+ 0|
+|+ NIESKOŃCZONość|+ NIESKOŃCZONość|
 |NaN|NaN|
 |błąd domeny|NaN|
-|błąd bieguna|-HUGE_VAL, -HUGE_VALF lub -HUGE_VALL|
+|błąd słupka|-HUGE_VAL,-HUGE_VALF lub-HUGE_VALL|
 
-Błędy są zgłaszane w sposób określony w [_matherr](matherr.md).
+Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli x jest liczeniem całkowitym, ta funkcja zasadniczo zwraca indeks od zera najbardziej znaczącego bitu 1 *x*.
+Jeśli x jest liczbą całkowitą, ta funkcja zasadniczo zwraca indeks (liczony od zera) najbardziej znaczącej 1 bit *x*.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**log2**, **log2f**, **log2l**|\<> math.h|\<> cmath|
+|**log2 —**, **log2f —**, **log2l**|\<> Math. h|\<cmath>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

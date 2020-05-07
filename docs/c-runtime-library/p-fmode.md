@@ -13,7 +13,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr100.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,16 +23,16 @@ f1_keywords:
 helpviewer_keywords:
 - __p__fmode
 ms.assetid: 1daa1394-81eb-43aa-a71b-4cc6acf3207b
-ms.openlocfilehash: aecba640099719f90db8bbd5dbe386ea99aae45d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dfd9962c49b03dbb30223d1d7403b791ed6dbec9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349249"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919871"
 ---
 # <a name="__p__fmode"></a>__p__fmode
 
-Wskazuje zmienną globalną, `_fmode` która określa domyślny tryb *translacji plików* dla operacji we/wy pliku.
+Wskazuje na zmienną `_fmode` globalną, która określa domyślny *tryb tłumaczenia plików* dla operacji we/wy pliku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,18 +43,18 @@ int* __p__fmode(
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do `_fmode` zmiennej globalnej.
+Wskaźnik na zmienną `_fmode` globalną.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja `__p__fmode` jest tylko do użytku wewnętrznego i nie powinny być wywoływane z kodu użytkownika.
+`__p__fmode` Funkcja jest tylko do użytku wewnętrznego i nie powinna być wywoływana z kodu użytkownika.
 
-Tryb tłumaczenia plików `binary` określa `text` albo tłumaczenie dla [_open](../c-runtime-library/reference/open-wopen.md) i [_pipe](../c-runtime-library/reference/pipe.md) operacji we/wy. Aby uzyskać więcej informacji, zobacz [_fmode](../c-runtime-library/fmode.md).
+Tryb tłumaczenia plików określa albo `binary` `text` tłumaczenie dla [_open](../c-runtime-library/reference/open-wopen.md) i [_pipe](../c-runtime-library/reference/pipe.md) operacji we/wy. Aby uzyskać więcej informacji, zobacz [_fmode](../c-runtime-library/fmode.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|__p\__fmode|stdlib.h|
+|__p\__fmode|STDLIB. h|

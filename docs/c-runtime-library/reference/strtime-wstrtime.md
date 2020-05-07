@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,16 +39,16 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: 827e5a579d801c12b932440fcbbaa18343ad7ece
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7d9752ff9eb1fd7a4fa08c2a6ab89fefe456dad1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81316879"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910919"
 ---
 # <a name="_strtime-_wstrtime"></a>_strtime, _wstrtime
 
-Skopiuj czas do buforu. Dostępne są bezpieczniejsze wersje tych funkcji; patrz [_strtime_s, _wstrtime_s](strtime-s-wstrtime-s.md).
+Skopiuj czas do buforu. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [_strtime_s, _wstrtime_s](strtime-s-wstrtime-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,21 +76,21 @@ Ciąg czasu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do wynikowego *znaku*string .
+Zwraca wskaźnik do wynikowego ciągu znaków *timestr*.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_strtime** kopiuje bieżący czas lokalny do buforu wskazanego przez *timestr*. Czas jest formatowany jako **hh:mm:ss** gdzie **hh** jest dwiema cyframi reprezentującymi godzinę w notacji 24-godzinnej, **mm** to dwie cyfry reprezentujące minuty po godzinie, a **ss** to dwie cyfry reprezentujące sekundy. Na przykład ciąg **18:23:44** reprezentuje 23 minut i 44 sekundy po 18:00. Bufor musi mieć długość co najmniej 9 bajtów.
+Funkcja **_strtime** Kopiuje bieżący czas lokalny do buforu wskazywanym przez *timestr*. Godzina jest formatowana jako **hh: mm: SS** , gdzie **hh** ma dwie cyfry reprezentujące godzinę w notacji 24-godzinnej, **mm** to dwie cyfry reprezentujące minuty poza godzinę, a **SS** to dwie cyfry reprezentujące sekundy. Na przykład ciąg **18:23:44** reprezentuje 23 minuty i 44 s ostatnich 6 godzin Długość buforu musi wynosić co najmniej 9 bajtów.
 
-**_wstrtime** jest szerokoznakową wersją **_strtime;** argument i zwraca wartość **_wstrtime** są ciągami znaków o szerokich znakach. Te funkcje zachowują się identycznie w przeciwnym razie. Jeśli *timestr* jest wskaźnikiem **NULL** lub jeśli *timestr* jest sformatowany niepoprawnie, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [zatwierdzeniu parametru.](../../c-runtime-library/parameter-validation.md) Jeśli wyjątek może być kontynuowany, te funkcje zwracają **wartość NULL** i **ustawiają errno** na **Wartość EINVAL,** jeśli *timestr* był **null** lub ustawić **errno** na **ERANGE,** jeśli *timestr* jest sformatowany niepoprawnie.
+**_wstrtime** to dwubajtowa wersja **_strtime**; argument i zwracana wartość **_wstrtime** są ciągami znaków dwubajtowych. Funkcje te zachowują się identycznie w inny sposób. Jeśli *timestr* jest wskaźnikiem typu **null** lub jeśli *timestr* jest niepoprawnie sformatowany, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wyjątek może być kontynuowany, te funkcje zwracają **wartość null** i ustawiają **errno** na **EINVAL** , jeśli *timestr* była **wartością null** lub ustawiono **errno** do **ERANGE** , jeśli *timestr* jest niepoprawnie sformatowany.
 
-W języku C++ te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrtime**|**_strtime**|**_strtime**|**_wstrtime**|
 
@@ -98,10 +98,10 @@ Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmien
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strtime**|\<> time.h|
-|**_wstrtime**|\<time.h> lub \<wchar.h>|
+|**_strtime**|\<> godziny. h|
+|**_wstrtime**|\<Time. h> lub \<WCHAR. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

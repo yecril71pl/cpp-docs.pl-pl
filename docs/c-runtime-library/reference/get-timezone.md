@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-ms.openlocfilehash: 94dfae1aaaddf9c545af4309d3ddc62a0bcb33f6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 28838825ab7a15f312f5f75a8ad9166926979690
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344903"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918496"
 ---
 # <a name="_get_timezone"></a>_get_timezone
 
-Pobiera różnicę w sekundach między skoordynowanym czasem uniwersalnym (UTC) a czasem lokalnym.
+Pobiera różnicę sekund między uniwersalnym czasem koordynowanym (UTC) i czasem lokalnym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,28 +50,28 @@ error_t _get_timezone(
 
 ### <a name="parameters"></a>Parametry
 
-*Sekund*<br/>
-Różnica w sekundach między czasem UTC a czasem lokalnym.
+*s*<br/>
+Różnica w sekundach między czasem UTC i czasem lokalnym.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli zakończy się pomyślnie lub **errno** wartość, jeśli wystąpi błąd.
+Zero, jeśli wystąpi błąd lub wartość **errno** w przypadku wystąpienia błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_get_timezone** pobiera różnicę w sekundach między czasem UTC a czasem lokalnym jako liczę całkowitą. Wartość domyślna to 28 800 sekund dla czasu pacyficznego (osiem godzin za UTC).
+Funkcja **_get_timezone** pobiera różnicę w sekundach między czasem UTC a czasem lokalnym jako liczbą całkowitą. Wartość domyślna to 28 800 sekund, czyli czasu pacyficznego (osiem godzin za UTC).
 
-Jeśli *wartość null* ma wartość **NULL,** wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w programie [Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, ta funkcja ustawia **errno** na **EINVAL** i zwraca **wartość EINVAL**.
+Jeśli *sekundy* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca **EINVAL**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_get_timezone**|\<> time.h|
+|**_get_timezone**|\<> godziny. h|
 
-Aby uzyskać więcej informacji, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

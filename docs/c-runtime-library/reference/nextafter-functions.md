@@ -29,7 +29,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -59,16 +59,16 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: 7b1416147ed000dd3dd9a13bd52e41a474a8e9d5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b137fd131536da6b8630b9cadf69238ce48964bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338564"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909336"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
-Zwraca następną reprezentowalną wartość zmiennoprzecinkową.
+Zwraca następną reprezentację wartości zmiennoprzecinkowej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -95,36 +95,36 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Wartość zmiennoprzecinkowa, od aby rozpocząć.
+*y*<br/>
+Wartość zmiennoprzecinkowa do rozpoczęcia.
 
-*Y*<br/>
-Wartość zmiennoprzecinkowa, do w kierunku.
+*t*<br/>
+Wartość zmiennoprzecinkowa do osiągnięcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca następną reprezentowalną wartość zmiennoprzecinkową typu zwracanego po *x* w kierunku *y*. Jeśli *x* i *y* są równe, funkcja zwraca *y*, przekonwertowane na typ zwracany, bez wyjątku wyzwalane. Jeśli *x* nie jest równa *y*, a wynik jest denormal lub zero, **FE_UNDERFLOW** i **FE_INEXACT** stanów wyjątków zmiennoprzecinkowych są ustawiane i zwracany jest poprawny wynik. Jeśli *x* lub *y* jest siecią NAN, wartość zwracana jest jedną z wejściowych sieci NAN. Jeśli *x* jest skończony, a wynik jest nieskończony lub nie można go przedstawić w typie, zwracany jest poprawnie podpisana nieskończoność lub numer NAN, ustawiono **FE_OVERFLOW** i **FE_INEXACT** stanów wyjątków zmiennoprzecinkowych, a **errno** jest ustawione na **ERANGE**.
+Zwraca następną reprezentację wartości zmiennoprzecinkowej zwracanego typu po *x* w kierunku wartości *y*. Jeśli *x* i *y* są równe, funkcja zwraca *y*, przekonwertowane na typ zwracany, bez wyzwolonego wyjątku. Jeśli *x* nie jest równa *y*, a wynik jest nienormalny lub równy zero, ustawiana jest **FE_UNDERFLOW** i **FE_INEXACT** Stany wyjątków zmiennoprzecinkowych i zwracany jest prawidłowy wynik. Jeśli parametr *x* lub *y* jest NaN, wartość zwracana jest jednym z NANs danych wejściowych. Jeśli wartość *x* jest skończona, a wynik jest nieskończony lub nie można go zaprezentować w typie, zostanie zwrócona prawidłowo podpisana nieskończoność lub NAN, **FE_OVERFLOW** i **FE_INEXACT** Stany wyjątków zmiennoprzecinkowych są ustawione, a **errno** jest ustawiony na **ERANGE**.
 
 ## <a name="remarks"></a>Uwagi
 
-Rodziny funkcji **nextafter** i **next do są** równoważne, z wyjątkiem typu parametru *y*. Jeśli *x* i *y* są równe, zwracana wartość *jest* konwertowana na typ zwracany.
+Rodziny funkcji **nextafter —** i **nexttoward** są równoważne, z wyjątkiem typu parametru *y*. Jeśli *x* i *y* są równe, zwrócona wartość to *y* konwertowana na typ zwracany.
 
-Ponieważ C++ umożliwia przeciążenie, \<jeśli dodasz cmath> można wywołać przeciążenia **nextafter** i **nexttoward,** że powrót **float** i **długie** **podwójne** typy. W programie C, **nextafter** i **nexttoward** zawsze **zwracaj podwójnie**.
+Ponieważ C++ pozwala na Przeciążenie, jeśli dołączysz \<cmath> można wywoływać przeciążenia **nextafter —** i **nexttoward** , które zwracają **zmiennoprzecinkowe** i **długie** **podwójne** typy. W programie w języku C **nextafter —** i **nexttoward** zawsze zwracają wartość **Double**.
 
-Funkcje **_nextafter** i **_nextafterf** są specyficzne dla firmy Microsoft. Funkcja **_nextafterf** jest dostępna tylko podczas kompilowania dla x64.
+**_Nextafter** i **_nextafterf** funkcje są specyficzne dla firmy Microsoft. Funkcja **_nextafterf** jest dostępna tylko w przypadku kompilowania dla architektury x64.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------------|-------------------------------|
-|**nextafter**, **nextafterf**, **nextafterl**, **_nextafterf**, **nexttoward**, **nexttowardf**, **nexttowardl**|\<> math.h|\<>> lub \<cmath>|
-|**_nextafter**|\<> float.h|\<> float.h lub \<cfloat>|
+|**nextafter —**, **nextafterf —**, **nextafterl**, **_nextafterf**, **nexttoward**, **nexttowardf**, **nexttowardl**|\<> Math. h|\<Math. h> lub \<cmath>|
+|**_nextafter**|\<Floating. h>|\<float. h> lub \<cfloat>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

@@ -12,7 +12,7 @@ api_location:
 - msvcr90.dll
 - msvcr100.dll
 - msvcr80.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - __pctype_func
 ms.assetid: d52b8add-d07d-4516-a22f-e836cde0c57f
-ms.openlocfilehash: 78562a29c89abe5b649444ae9223cf219488e009
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 67447823b0322e647784cdbe0f3f7228e1c5fb34
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349193"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919243"
 ---
 # <a name="__pctype_func"></a>__pctype_func
 
@@ -46,15 +46,15 @@ Wskaźnik do tablicy informacji o klasyfikacji znaków.
 
 ## <a name="remarks"></a>Uwagi
 
-Informacje w tabeli klasyfikacji znaków są przeznaczone wyłącznie do użytku wewnętrznego i `char`są używane przez różne funkcje klasyfikujce znaków typu . Aby uzyskać więcej `Remarks` informacji, zobacz sekcję [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md).
+Informacje w tabeli klasyfikacji znaków są przeznaczone tylko do użytku wewnętrznego i są używane przez różne funkcje, które klasyfikują znaki typu `char`. Aby uzyskać więcej informacji, zobacz `Remarks` sekcję [_pctype, _pwctype, _wctype _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|__pctype_func|ctype.h|
+|__pctype_func|CType. h|
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 936a7708a824ac6e9e8a07b34bbdb9a3b9e761ff
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25ce3420ec3fb92701c4ed7cd596c2103c33ac54
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343663"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909513"
 ---
 # <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum, _ismbbkalnum_l
 
-Określa, czy określony znak wielobajtowy jest symbolem tekstowym nienawiązanym do ASCII.
+Określa, czy określony znak wielobajtowy jest symbolem tekstu innym niż ASCII.
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,28 +59,28 @@ int _ismbbkalnum_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Całkowita ć, która ma zostać przetestowana.
+*s*<br/>
+Liczba całkowita do przetestowania.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_ismbbkalnum** zwraca wartość niezerową, jeśli liczba całkowita *c* jest symbolem tekstowym innym niż ASCII innym niż interpunkcja lub 0, jeśli nie jest. **_ismbbkalnum** używa bieżących ustawień regionalnych dla informacji o znakach zależnych od ustawień regionalnych. **_ismbbkalnum_l** jest identyczna **z _ismbbkalnum** z tą różnicą, że przyjmuje ustawienia regionalne jako parametr. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+**_ismbbkalnum** zwraca wartość różną od zera, jeśli liczba całkowita *c* jest symbolem tekstu spoza ASCII innym niż interpunkcja lub 0, jeśli nie jest. **_ismbbkalnum** używa bieżących ustawień regionalnych dla informacji o znakach zależnych od ustawień regionalnych. **_ismbbkalnum_l** jest taka sama jak **_ismbbkalnum** , z tą różnicą, że przyjmuje ustawienia regionalne jako parametr. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ismbbkalnum**|\<mbctype.h>|
-|**_ismbbkalnum_l**|\<mbctype.h>|
+|**_ismbbkalnum**|\<Mbctype. h>|
+|**_ismbbkalnum_l**|\<Mbctype. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

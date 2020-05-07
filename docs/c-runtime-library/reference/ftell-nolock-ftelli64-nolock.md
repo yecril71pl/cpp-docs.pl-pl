@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-ms.openlocfilehash: fc6534daaeb3818e28e3c48dbc6d1d9586b6429e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9f1f0018773f8fb5b00f1304011ba8128ce7d9df
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345591"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910003"
 ---
 # <a name="_ftell_nolock-_ftelli64_nolock"></a>_ftell_nolock, _ftelli64_nolock
 
-Pobiera bieżącej pozycji wskaźnika pliku, bez blokowania wątku.
+Pobiera bieżącą pozycję wskaźnika pliku bez blokowania wątku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,27 +59,27 @@ __int64 _ftelli64_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumienia*<br/>
-Kierowanie na strukturę **FILE.**
+*produkcyjne*<br/>
+Docelowa struktura **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Tak samo jak **ftell** i **_ftelli64**. Aby uzyskać więcej informacji, zobacz [ftell, _ftelli64](ftell-ftelli64.md).
+Analogicznie jak **ftell** i **_ftelli64**. Aby uzyskać więcej informacji, zobacz [ftell _ftelli64](ftell-ftelli64.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje te są nieblokujące wersje **ftell** i **_ftelli64,** odpowiednio. Są one identyczne **z ftell** i **_ftelli64** z tą różnicą, że nie są chronione przed zakłóceniami przez inne wątki. Te funkcje mogą być szybsze, ponieważ nie ponoszą narzutu blokowania innych wątków. Użyj tych funkcji tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący obsługuje już izolację wątku.
+Te funkcje nie blokują odpowiednio wersji **ftell** i **_ftelli64**. Są one identyczne z **ftell** i **_ftelli64** , z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Te funkcje mogą być szybsze, ponieważ nie wiążą się z zablokowaniem innych wątków. Tych funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|Opcjonalny nagłówek|
 |--------------|---------------------|---------------------|
-|**ftell_nolock**|\<stdio.h>|\<> errno.h|
-|**_ftelli64_nolock**|\<stdio.h>|\<> errno.h|
+|**ftell_nolock**|\<stdio. h>|\<errno. h>|
+|**_ftelli64_nolock**|\<stdio. h>|\<errno. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

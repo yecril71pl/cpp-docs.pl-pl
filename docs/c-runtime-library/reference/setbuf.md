@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: f96cffb8770cda78ebff8d873b441ddc288bc41f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 40f23db88abf9733eada9e775aacda83cba5829a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332075"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910331"
 ---
 # <a name="setbuf"></a>setbuf
 
-Steruje buforowaniem strumienia. Ta funkcja jest przestarzała; zamiast tego użyj [setvbuf.](setvbuf.md)
+Steruje buforowaniem strumienia. Ta funkcja jest przestarzała; Zamiast tego użyj [setvbuf —](setvbuf.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,27 +49,27 @@ void setbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumienia*<br/>
-Wskaźnik do struktury **PLIK.**
+*produkcyjne*<br/>
+Wskaźnik do struktury **pliku** .
 
-*Buforu*<br/>
+*buforu*<br/>
 Bufor przydzielony przez użytkownika.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **setbuf** steruje buforowaniem *strumienia*. Argument *strumienia* musi odwoływać się do otwartego pliku, który nie został odczytany lub zapisany. Jeśli argument *bufora* ma **wartość NULL**, strumień jest niebuforowany. Jeśli nie, bufor musi wskazywać tablicę znaków o długości **BUFSIZ**, gdzie **BUFSIZ** jest rozmiar buforu, jak zdefiniowano w STDIO. H. Bufor określony przez użytkownika, zamiast domyślnego buforu przydzielonego systemowi dla danego strumienia, jest używany do buforowania we/wy. Strumień **stderr** jest domyślnie niebuforowany, ale można użyć **setbuf,** aby przypisać bufory do **stderr**.
+Funkcja **setbuf** kontroluje buforowanie dla *strumienia*. Argument *Stream* musi odwoływać się do otwartego pliku, który nie został odczytany lub zapisany. Jeśli argument *buforu* ma **wartość null**, strumień zostanie zbuforowany. W przeciwnym razie bufor musi wskazywać tablicę znaków o długości **bufsiz**, gdzie **bufsiz** jest rozmiar buforu, zgodnie z definicją w stdio. C. Bufor określony przez użytkownika, a nie domyślny bufor przypisywany przez system dla danego strumienia, jest używany dla buforowania we/wy. Strumień **stderr** jest domyślnie buforowany, ale do przypisywania buforów do obiektu **stderr**można użyć **setbuf** .
 
-**setbuf** został zastąpiony przez [setvbuf](setvbuf.md), który jest preferowaną procedurą dla nowego kodu. W przeciwieństwie do **setvbuf**, **setbuf** nie ma możliwości zgłaszania błędów. **setvbuf** pozwala również kontrolować zarówno tryb buforowania, jak i rozmiar bufora. **setbuf** istnieje dla zgodności z istniejącym kodem.
+**setbuf** został zastąpiony przez [setvbuf —](setvbuf.md), który jest preferowaną procedurą dla nowego kodu. W przeciwieństwie do **setvbuf —**, **setbuf** nie ma żadnego sposobu raportowania błędów. **setvbuf —** umożliwia również sterowanie zarówno trybem buforowania, jak i rozmiarem buforu. **setbuf** istnieje na potrzeby zgodności z istniejącym kodem.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**setbuf**|\<stdio.h>|
+|**setbuf**|\<stdio. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

@@ -26,7 +26,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -52,12 +52,12 @@ helpviewer_keywords:
 - characters, converting
 - _towlower_l function
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
-ms.openlocfilehash: 560fde4ae2167256acd54856fced15bc6ccecae6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c8b27c4cc618d34d9da9b5884c6db2f525fd2388
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362360"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910009"
 ---
 # <a name="tolower-_tolower-towlower-_tolower_l-_towlower_l"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
 
@@ -87,52 +87,52 @@ int _towlower_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Znak do konwersji.
+*s*<br/>
+Znak do przekonwertowania.
 
-*Ustawień regionalnych*<br/>
-Ustawienia regionalne do użycia w przypadku tłumaczenia specyficznego dla ustawień regionalnych.
+*locale*<br/>
+Ustawienia regionalne do użycia dla tłumaczenia specyficznego dla ustawień regionalnych.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur konwertuje kopię *c* na małe litery, jeśli konwersja jest możliwa, i zwraca wynik. Nie ma wartości zwracanej zarezerwowanej w celu wskazania błędu.
+Każda z tych procedur konwertuje kopię *c* na małe litery, jeśli konwersja jest możliwa i zwraca wynik. Brak wartości zwracanej zastrzeżonej do wskazania błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych procedur konwertuje daną wielką literę na wielką literę, jeśli jest to możliwe i istotne. Konwersja przypadku **towlower** jest specyficzne dla ustawień regionalnych. W przypadku zmiany są zmieniane tylko znaki istotne dla bieżących ustawień regionalnych. Funkcje bez sufiksu **_l** używają aktualnie ustawionych ustawień regionalnych. Wersje tych funkcji, które mają sufiks **_l,** przyjmują ustawienia regionalne jako parametr i używają tego zamiast aktualnie ustawionych ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Każda z tych procedur konwertuje daną wielką literę na małą literę, jeśli jest to możliwe i istotne. Konwersja przypadku **towlower** jest specyficzna dla ustawień regionalnych. W przypadku zmiany tylko znaków istotnych dla bieżących ustawień regionalnych. Funkcje bez sufiksu **_l** używają obecnie ustawionych ustawień regionalnych. Wersje tych funkcji, które mają sufiks **_l** przyjmują ustawienia regionalne jako parametr i używają go zamiast obecnie ustawionych ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Aby **_tolower** dał oczekiwane wyniki, [__isascii](isascii-isascii-iswascii.md) i [isupper](isupper-isupper-l-iswupper-iswupper-l.md) muszą zarówno powrócić nonzero.
+Aby **_tolower** zapewnić oczekiwane wyniki, [__isascii](isascii-isascii-iswascii.md) i [IsUpper](isupper-isupper-l-iswupper-iswupper-l.md) muszą zwracać wartość różną od zera.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_totlower**|**Tolower**|**_mbctolower**|**holownik**|
+|**_totlower**|**ToLower**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l** i **_towlower_l** nie mają zależności od lokalizacji i nie mają być wywoływane bezpośrednio. Są one przeznaczone do użytku wewnętrznego przez **_totlower_l**.
+> **_tolower_l** i **_towlower_l** nie są zależne od ustawień regionalnych i nie są przeznaczone do bezpośredniego wywoływania. Są one przeznaczone do użytku wewnętrznego przez **_totlower_l**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**Tolower**|\<ctype.h>|
-|**_tolower**|\<ctype.h>|
-|**holownik**|\<ctype.h> lub \<wchar.h>|
+|**ToLower**|\<CType. h>|
+|**_tolower**|\<CType. h>|
+|**towlower**|\<CType. h> lub \<WCHAR. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład w [funkcji](../../c-runtime-library/to-functions.md).
+Zapoznaj się z przykładem w [funkcji](../../c-runtime-library/to-functions.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>
 [do funkcji](../../c-runtime-library/to-functions.md)<br/>
-[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

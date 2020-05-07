@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-ms.openlocfilehash: f61aa0edeadd74a254f906dd745e18b059da7f24
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7ff3a8eaa3d9d42a5f1a9a7bf277a847aeccfee
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365147"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910870"
 ---
 # <a name="strtof-_strtof_l-wcstof-_wcstof_l"></a>strtof, _strtof_l, wcstof, _wcstof_l
 
@@ -82,56 +82,56 @@ float wcstof_l(
 
 ## <a name="parameters"></a>Parametry
 
-*strSource (źródło usług strSource)*<br/>
-Ciąg zakończony wartością null do konwersji.
+*strSource*<br/>
+Ciąg zakończony znakiem null do przekonwertowania.
 
 *endptr*<br/>
-Wskaźnik do znaku, który zatrzymuje skanowanie.
+Wskaźnik do znaku, który zatrzyma skanowanie.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**strtof** zwraca wartość liczby zmiennoprzecinkowej, z wyjątkiem sytuacji, gdy reprezentacja spowodowałaby przepełnienie, w którym to przypadku funkcja zwraca +/-**HUGE_VALF**. Znak **HUGE_VALF** odpowiada znak wartości, która nie może być reprezentowana. **strtof** zwraca wartość 0, jeśli nie można wykonać konwersji lub nastąpi niedopełnienie.
+**strtof** zwraca wartość liczby zmiennoprzecinkowej, z wyjątkiem sytuacji, gdy reprezentacja spowodowałoby przepełnienie, w takim przypadku funkcja zwraca wartość +/-**HUGE_VALF**. Znak **HUGE_VALF** jest zgodny ze znakiem wartości, która nie może być reprezentowana. **strtof** zwraca wartość 0, jeśli nie można wykonać konwersji lub występuje niedopełnienie.
 
-**wcstof** zwraca wartości analogicznie do **strtof**. Dla obu funkcji **errno** jest ustawiona na **ERANGE,** jeśli występuje przepełnienie lub niedopełnienie i wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md).
+**wcstof** zwraca wartości analogicznie do **strtof**. W przypadku obu funkcji **errno** jest ustawiony na **ERANGE** , jeśli występuje przepełnienie lub nadmiarowy i zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md).
 
-Aby uzyskać więcej informacji na temat kodów zwrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Każda funkcja konwertuje ciąg wejściowy *strSource* na **float**. Funkcja **strtof** konwertuje *strSource* na wartość pojedynczej precyzji. **strtof** zatrzymuje odczytywanie *strSource* ciąg przy pierwszym znaku nie może rozpoznać jako część liczby. Może to być kończący się znak null. **wcstof** jest szerokoznakową wersją **strtof;** jego *argument strSource* jest ciągiem znaków o szerokim charakterze. W przeciwnym razie te funkcje zachowują się identycznie.
+Każda funkcja konwertuje ciąg wejściowy *strSource* na wartość **zmiennoprzecinkową**. Funkcja **strtof** konwertuje *strSource* na wartość o pojedynczej precyzji. **strtof** przestaje odczytywania ciągu *strSource* przy pierwszym znaku, którego nie może rozpoznać jako części liczby. Może to być kończący znak null. **wcstof** to dwubajtowa wersja **strtof**; jego argument *strSource* jest ciągiem znaków dwubajtowych. W przeciwnym razie funkcje te zachowują się identycznie.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstof**|**strtof**|**strtof**|**wcstof**|
 |**_tcstof_l**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
 
-Ustawienie kategorii **LC_NUMERIC** bieżących ustawień regionalnych określa rozpoznawanie znaku radix w *strSource*; aby uzyskać więcej informacji, zobacz [setlocale, _wsetlocale](setlocale-wsetlocale.md). Funkcje, które nie mają sufiksu **_l,** używają bieżących ustawień regionalnych; te, które mają sufiks są identyczne, z tą różnicą, że używają ustawień regionalnych, które są przekazywane zamiast. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Ustawienie kategorii **LC_NUMERIC** bieżących ustawień regionalnych określa rozpoznawanie znaku podstawy w *strSource*; Aby uzyskać więcej informacji, zobacz [setlocals, _wsetlocale](setlocale-wsetlocale.md). Funkcje, które nie mają sufiksu **_l** używają bieżących ustawień regionalnych; te, które mają przyrostek są identyczne, z tą różnicą, że korzystają z przekazaną w zamian ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Jeśli *endptr* nie jest **null**, wskaźnik do znaku, który zatrzymał skanowanie jest przechowywany w miejscu, które jest wskazywane przez *endptr*. Jeśli nie można przeprowadzić konwersji (nie znaleziono prawidłowych cyfr lub określono nieprawidłową bazę), wartość *strSource* jest przechowywana w lokalizacji wskazanej przez *endptr*.
+Jeśli *endptr* nie ma **wartości null**, wskaźnik do znaku, który zatrzymał skanowanie jest przechowywany w lokalizacji wskazywanej przez *endptr*. Jeśli konwersja nie może być wykonywana (nie znaleziono prawidłowych cyfr lub określono nieprawidłową podstawę), wartość *strSource* jest przechowywana w lokalizacji wskazywanej przez *endptr*.
 
-**strtof** oczekuje *strSource* wskazać ciąg następującej postaci:
+**strtof** oczekuje, że *strSource* wskazuje ciąg o następującej postaci:
 
-[*odstępy*] [*znak*] [*cyfry*] [__.__ *cyfry*] [{**e** &#124; **E**} [*znak*] *cyfry*]
+[*odstęp*] [*Sign*] [*cyfry*] [__.__ *cyfry*] [{**e** &#124; **e**} [*Sign*] *cyfry*]
 
-*Odstępy* mogą składać się ze znaków spacji i tabulacji, które są ignorowane; *znak* jest albo**+** plus (**-**) lub minus ( ); i *cyfry* są jedną lub więcej cyfr dziesiętnych. Jeśli przed znakiem radix nie pojawią się żadne cyfry, po znaku radix musi pojawić się co najmniej jedna cyfra. Po cyfrach dziesiętnych może następować wykładnik, który składa się z litery wprowadzającej **(e** lub **E)** i opcjonalnie podpisanej liczby całkowitej. Jeśli nie pojawi się ani część wykładnicza, ani znak radix, przyjmuje się, że znak radix podąża za ostatnią cyfrą w ciągu. Pierwszy znak, który nie pasuje do tego formularza, zatrzymuje skanowanie.
+*Odstępy* mogą składać się ze znaków spacji i tabulatora, które są ignorowane; *znak* jest znakiem plus**+**() lub minus**-**(); i *cyfry* są jedną lub większą liczbą cyfr dziesiętnych. Jeśli żadne cyfry nie pojawiają się przed znakiem podstawy, co najmniej jeden musi występować po znaku podstawy. Po cyfrach dziesiętnych można stosować wykładnikę, która składa się z litery wprowadzającej (**e** lub **e**) i opcjonalnie cyfry ze znakiem. Jeśli nie zostanie wyświetlona żadna część wykładnika ani znak podstawy, przyjmuje się, że znak podstawy będzie podążać za ostatnią cyfrą w ciągu. Pierwszy znak, który nie pasuje do tego formularza, zatrzyma skanowanie.
 
-Wersje UCRT tych funkcji nie obsługują konwersji liter wykładniczych w stylu Fortran **(d** lub **D).** To niestandardowe rozszerzenie było obsługiwane przez wcześniejsze wersje CRT i może być przełomową zmianą dla kodu.
+Wersje UCRT tych funkcji nie obsługują konwersji liter wykładnika Pascal (**d** lub **d**). To niestandardowe rozszerzenie było obsługiwane przez wcześniejsze wersje CRT i może być istotną zmianą dla kodu.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strtof**, **_strtof_l**|C: \<stdlib.h> C++: &lt;cstdlib> \<lub stdlib.h>|
-|**wcstof**, **_wcstof_l**|C: \< \<> lub wchar.h> C++: &lt;cstdlib>, \<stdlib.h> lub \<wchar.h>|
+|**strtof**, **_strtof_l**|C: \<STDLIB. h> C++: &lt;cstdlib> lub \<STDLIB. h>|
+|**wcstof**, **_wcstof_l**|C: \<STDLIB. h> lub \<WCHAR. h> C++: &lt;cstdlib>, \<stdlib. h> lub \<WCHAR. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -166,10 +166,10 @@ string = 3.14159This stopped it
 ## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
-[Ciąg do funkcji wartości liczbowej](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[Funkcje ciągu do wartości numerycznych](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

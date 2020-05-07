@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: 4311b5b896a5a406ebe14f09e7bb525cb47951b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2073f23583772f71489f1597b0df8e1e6abe2253
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344611"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920329"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
@@ -53,30 +53,30 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca odczyt znaku. Aby wskazać błąd odczytu lub warunek końca pliku, **getchar** zwraca **EOF,** a **getwchar** zwraca **POLECENIE WEOF**. W przypadku **getcharu**użyj **ferror** lub **feof,** aby sprawdzić, czy nie ma błędu lub końca pliku.
+Zwraca odczyt znaku. Aby wskazać błąd odczytu lub stan końca pliku, **GetChar** zwraca **EOF**, a **getwchar** zwraca **WEOF**. Dla elementu **GetChar**Użyj obiektu **odwołującego** lub **feof** , aby wyszukać błąd lub koniec pliku.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda procedura odczytuje pojedynczy znak ze **stdin** i zwiększa skojarzony wskaźnik pliku, aby wskazać następny znak. **getchar** jest taki sam jak [_fgetchar](fgetc-fgetwc.md), ale jest realizowany jako funkcja i jako makro.
+Każda procedura odczytuje pojedynczy znak z **stdin** i zwiększa skojarzony wskaźnik pliku, aby wskazywał na następny znak. **GetChar** jest taka sama jak [_fgetchar](fgetc-fgetwc.md), ale jest zaimplementowana jako funkcja i jako makro.
 
-Te funkcje blokują wątek wywołujący i dlatego są bezpieczne dla wątków. Aby uzyskać wersję niezablokującą, zobacz [_getchar_nolock _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
+Te funkcje blokują wątek wywołujący i dlatego są bezpieczne wątkowo. W przypadku wersji, która nie jest blokowana, zobacz [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_gettchar**|**Getchar**|**Getchar**|**getwchar ( getwchar )**|
+|**_gettchar**|**GetChar**|**GetChar**|**getwchar**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**Getchar**|\<stdio.h>|
-|**getwchar ( getwchar )**|\<stdio.h> lub \<wchar.h>|
+|**GetChar**|\<stdio. h>|
+|**getwchar**|\<stdio. h> lub \<WCHAR. h>|
 
-Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej systemu Windows (UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane, zanim funkcje c w czasie wykonywania mogą z nich korzystać w aplikacjach platformy uniwersalnej systemu Windows. Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

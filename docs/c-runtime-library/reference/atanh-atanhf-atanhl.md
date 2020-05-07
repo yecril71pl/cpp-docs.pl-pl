@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: ef4a37c1ae76a88fd547b76c510097994a160253
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ce40cf25fde12c6413e88519906b807f2ee65faa
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350132"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920062"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
-Oblicza odwrotną styczną hiperboliczną.
+Oblicza odwrotny tangens hiperboliczny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,31 +60,31 @@ long double atanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Wartość zmiennoprzecinku.
+*y*<br/>
+Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **atanh** zwracają odwrotną styczną hipoberboliczną (łuk hiperboliczny styczny) *x*. Jeśli *x* jest większa niż 1 lub mniejsza niż -1, **errno** jest ustawiona na **EDOM,** a wynik jest cichy NaN. Jeśli *x* jest równa 1 lub -1, zwracana jest dodatnia lub ujemna nieskończoność, a **errno** jest ustawiona na **ERANGE**.
+Funkcje **ATANH —** zwracają arcus tangens hyberbolic (łuk hiperboliczny) *x*. Jeśli wartość *x* jest większa niż 1 lub mniejsza niż-1, **errno** jest ustawiona na **Edom** , a wynikiem jest cichy NaN. Jeśli wartość *x* jest równa 1 lub-1, zwracana jest nieskończona lub ujemna Negacja, odpowiednio i **errno** jest ustawiona na **ERANGE**.
 
-|Dane wejściowe|Wyjątek SEH|**Matherr (matherr)** Wyjątek|
+|Dane wejściowe|Wyjątek SEH|**Matherr** Oprócz|
 |-----------|-------------------|-------------------------|
-|± QNAN, IND|brak|brak|
-|*X* ≥ 1; *x* ≤ -1|brak|brak|
+|QNAN, IND|brak|brak|
+|*X* ≥ 1; *x* ≤-1|brak|brak|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **atanh,** które przyjmują i zwracają **float** lub **długie** **podwójne** wartości. W programie **C, atanh** zawsze ma i zwraca **dwukrotnie**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ATANH —** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** o **podwójnej precyzji** . W programie C **ATANH —** zawsze przyjmuje i zwraca wartość **Double**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**atanh**, **atanhf**, **atanhl**|\<> math.h|\<cmath> lub \<math.h>|
+|**ATANH —**, **atanhf —**, **atanhl**|\<> Math. h|\<cmath> lub \<Math. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -116,7 +116,7 @@ atanh( 0.655794 ) = 0.785398
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
 [cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>

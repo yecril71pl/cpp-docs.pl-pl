@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,19 +40,19 @@ helpviewer_keywords:
 - getch_nolock function
 - gettch_nolock function
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
-ms.openlocfilehash: 4ba88ad86b6db892a581b9d94cb36f5ab8240c10
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 81a3b49287902ac0aaa4d635553cbbaac81ac356
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344708"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920347"
 ---
 # <a name="_getch_nolock-_getwch_nolock"></a>_getch_nolock, _getwch_nolock
 
 Pobiera znak z konsoli bez echa i bez blokowania wątku.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -63,13 +63,13 @@ wint_t _getwch_nolock( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca odczyt znaku. Nie ma zwracania błędów.
+Zwraca odczyt znaku. Brak powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-**_getch_nolock** i **_getwch_nolock** są identyczne z **_getch** i **_getchw** z tą różnicą, że nie są chronione przed zakłóceniami przez inne wątki. Mogą one być szybsze, ponieważ nie ponoszą obciążenie blokowania innych wątków. Użyj tych funkcji tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący obsługuje już izolację wątku.
+**_getch_nolock** i **_getwch_nolock** są takie same jak **_getch** i **_getchw** , z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z zablokowaniem innych wątków. Tych funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -81,10 +81,10 @@ Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmien
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_getch_nolock**|\<> conio.h|
-|**_getwch_nolock**|\<conio.h> lub \<wchar.h>|
+|**_getch_nolock**|\<CONIO. h>|
+|**_getwch_nolock**|\<CONIO. h> lub \<WCHAR. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-ms.openlocfilehash: ec4f08e499efe82b0ee35235e6e2d86dbb9bab66
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0ac0a8d2cf4185dab0aa3d335c16cf89da58c7a6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346843"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919478"
 ---
 # <a name="_fileno"></a>_fileno
 
-Pobiera deskryptora pliku skojarzone ze strumieniem.
+Pobiera deskryptor pliku skojarzony ze strumieniem.
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,31 +50,31 @@ int _fileno(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumienia*<br/>
-Wskaźnik do struktury **PLIK.**
+*produkcyjne*<br/>
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_fileno** zwraca deskryptor pliku. Nie ma zwracania błędów. Wynik jest niezdefiniowany, jeśli *strumień* nie określa otwartego pliku. Jeśli strumień ma **wartość NULL**, **_fileno** wywołuje nieprawidłowy program obsługi parametrów, zgodnie z opisem w [zatwierdzeniu parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, ta funkcja zwraca wartość -1 i ustawia **errno** na **EINVAL**.
+**_fileno** zwraca deskryptor pliku. Brak powrotu błędu. Wynik jest niezdefiniowany, jeśli *strumień* nie określa otwartego pliku. Jeśli strumień ma **wartość null**, **_fileno** wywoła procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EINVAL**.
 
-Aby uzyskać więcej informacji na temat tych i innych kodów błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 > [!NOTE]
-> Jeśli **stdout** lub **stderr** nie jest skojarzony ze strumieniem danych wyjściowych (na przykład w aplikacji systemu Windows bez okna konsoli), zwrócony deskryptor pliku wynosi -2. W poprzednich wersjach zwrócony deskryptor pliku wynosił -1. Ta zmiana umożliwia aplikacjom odróżnienie tego warunku od błędu.
+> Jeśli **stdout** lub **stderr** nie jest skojarzony ze strumieniem wyjściowym (na przykład w aplikacji systemu Windows bez okna konsoli), zwracany deskryptor pliku to-2. W poprzednich wersjach zwrócony deskryptor pliku miał wartość-1. Ta zmiana umożliwia aplikacjom odróżnienie tego stanu od błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Procedura **_fileno** zwraca deskryptor pliku aktualnie skojarzony ze *strumieniem*. Ta procedura jest implementowana zarówno jako funkcja, jak i jako makro. Aby uzyskać informacje na temat wybierania jednej z implementacji, zobacz [Wybieranie między funkcjami i makrami](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
+Procedura **_fileno** zwraca deskryptor pliku aktualnie skojarzony ze *strumieniem*. Ta procedura jest zaimplementowana zarówno jako funkcja, jak i jako makro. Aby uzyskać informacje na temat wybierania dowolnej implementacji, zobacz [Wybieranie między funkcjami i makrami](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fileno**|\<stdio.h>|
+|**_fileno**|\<stdio. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

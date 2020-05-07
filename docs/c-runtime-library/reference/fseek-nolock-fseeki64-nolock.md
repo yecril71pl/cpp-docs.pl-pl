@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - _fseeki64_nolock function
 - seek file pointers
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
-ms.openlocfilehash: 3533e7897e9c460d3be73b8907a6bd3c96f6888f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c09f9964416785131c0c928c214a0de5ec6dd859
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345733"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910171"
 ---
 # <a name="_fseek_nolock-_fseeki64_nolock"></a>_fseek_nolock, _fseeki64_nolock
 
-Przenosi wskaźnik pliku w określoną lokalizację.
+Przenosi wskaźnik pliku do określonej lokalizacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,32 +64,32 @@ int _fseeki64_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumienia*<br/>
-Wskaźnik do struktury **PLIK.**
+*produkcyjne*<br/>
+Wskaźnik do struktury **pliku** .
 
 *Przesunięcie*<br/>
-Liczba bajtów od *początku .*
+Liczba bajtów od *początku*.
 
-*Pochodzenia*<br/>
+*źródł*<br/>
 Pozycja początkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Tak samo jak [fseek](fseek-fseeki64.md) i [_fseeki64](fseek-fseeki64.md), odpowiednio.
+Analogicznie jak [fseek](fseek-fseeki64.md) i [_fseeki64](fseek-fseeki64.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje te są nieblokujące wersje [fseek](fseek-fseeki64.md) i [_fseeki64](fseek-fseeki64.md), odpowiednio. Są one [identyczne z fseek](fseek-fseeki64.md) i [_fseeki64](fseek-fseeki64.md) z tą różnicą, że nie są chronione przed zakłóceniami przez inne wątki. Te funkcje mogą być szybsze, ponieważ nie ponoszą narzutu blokowania innych wątków. Użyj tych funkcji tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący obsługuje już izolację wątku.
+Te funkcje są odpowiednio nieblokowanymi wersjami [fseek](fseek-fseeki64.md) i [_fseeki64](fseek-fseeki64.md). Są one takie same jak [fseek](fseek-fseeki64.md) i [_fseeki64](fseek-fseeki64.md) , z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Te funkcje mogą być szybsze, ponieważ nie wiążą się z zablokowaniem innych wątków. Tych funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fseek_nolock** **, _fseeki64_nolock**|\<stdio.h>|
+|**_fseek_nolock**, **_fseeki64_nolock**|\<stdio. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

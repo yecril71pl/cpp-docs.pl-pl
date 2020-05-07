@@ -10,7 +10,7 @@ api_name:
 - _o__invalid_parameter_noinfo_noreturn
 api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -25,16 +25,16 @@ f1_keywords:
 - CORECRT/_invoke_watson
 - _invoke_watson
 ms.assetid: a4d6f1fd-ce56-4783-8719-927151a7a814
-ms.openlocfilehash: 0f0a3ea3e1f2e43d53650b4017905c696269ce20
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7138e9cb7381e4d40911054e1473536b6e639e2d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343942"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919820"
 ---
 # <a name="_invalid_parameter-_invalid_parameter_noinfo-_invalid_parameter_noinfo_noreturn-_invoke_watson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 
-Te funkcje są używane przez bibliotekę środowiska wykonawczego C do obsługi nieprawidłowych parametrów przekazanych do funkcji biblioteki CRT. Kod może również używać tych funkcji do obsługi domyślnej lub konfigurowalnej obsługi nieprawidłowych parametrów.
+Te funkcje są używane przez bibliotekę środowiska uruchomieniowego języka C do obsługi nieprawidłowych parametrów przekazaną do funkcji biblioteki CRT. Kod może również używać tych funkcji do obsługi domyślnej lub dostosowywalnej obsługi nieprawidłowych parametrów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,44 +64,44 @@ _invoke_watson(
 
 ## <a name="parameters"></a>Parametry
 
-*Wyrażenie*<br/>
-Ciąg reprezentujący wyrażenie parametru kodu źródłowego, który jest nieprawidłowy.
+*wyrażenia*<br/>
+Ciąg reprezentujący nieprawidłowe wyrażenie parametru kodu źródłowego.
 
 *function_name*<br/>
-Nazwa funkcji, która wywoływała program obsługi.
+Nazwa funkcji, która wywołała procedurę obsługi.
 
-*Nazwa_pliku*<br/>
-Plik kodu źródłowego, w którym został wywołany program obsługi.
+*file_name*<br/>
+Plik kodu źródłowego, w którym została wywołana procedura obsługi.
 
 *line_number*<br/>
-Numer wiersza w kodzie źródłowym, w którym został wywołany program obsługi.
+Numer wiersza w kodzie źródłowym, w którym została wywołana procedura obsługi.
 
-*Zastrzeżone*<br/>
+*rezerwacj*<br/>
 Nieużywany.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Te funkcje nie zwracają wartości. Funkcje **_invalid_parameter_noinfo_noreturn** i **_invoke_watson** nie zwracają się do wywołującego, a w niektórych przypadkach **_invalid_parameter** i **_invalid_parameter_noinfo** mogą nie powrócić do wywołującego.
+Te funkcje nie zwracają wartości. Funkcje **_invalid_parameter_noinfo_noreturn** i **_invoke_watson** nie zwracają do obiektu wywołującego, a w niektórych przypadkach **_invalid_parameter** i **_invalid_parameter_noinfo** mogą nie zwracać do obiektu wywołującego.
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy funkcje biblioteki wykonawczej języka C są przekazywane nieprawidłowe parametry, funkcje biblioteki wywołać *nieprawidłowy program obsługi parametrów*, funkcja, która może być określona przez programistę, aby wykonać dowolną z kilku rzeczy. Na przykład może zgłosić problem do użytkownika, napisać do dziennika, przerwać debuger, zakończyć program lub nic nie robić. Jeśli programator nie określi żadnej funkcji, wywoływany jest domyślny program obsługi **_invoke_watson**.
+Gdy funkcje biblioteki środowiska uruchomieniowego języka C przechodzą nieprawidłowe parametry, funkcje biblioteki wywołują *procedurę obsługi nieprawidłowego parametru*, czyli funkcję, która może być określona przez programistę, aby wykonać dowolną z kilku rzeczy. Na przykład może zgłosić problem do użytkownika, zapis do dziennika, przerwanie w debugerze, zakończenie działania programu lub nic nie robić. Jeśli funkcja nie zostanie określona przez programistę, wywoływana jest domyślna procedura obsługi **_invoke_watson**.
 
-Domyślnie, gdy w kodzie debugowania zidentyfikowano nieprawidłowy parametr, funkcje biblioteki CRT wywołują funkcję **_invalid_parameter** przy użyciu pełnych parametrów. W kodzie nie debugowania wywoływana jest funkcja **_invalid_parameter_noinfo,** która wywołuje funkcję **_invalid_parameter** przy użyciu pustych parametrów. Jeśli funkcja biblioteki CRT nie debugowania wymaga zakończenia programu, wywoływana jest funkcja **_invalid_parameter_noinfo_noreturn,** która wywołuje funkcję **_invalid_parameter** przy użyciu pustych parametrów, po której następuje wywołanie funkcji **_invoke_watson,** aby wymusić zakończenie programu.
+Domyślnie po zidentyfikowaniu nieprawidłowego parametru w kodzie debugowania funkcje biblioteki CRT wywołują funkcję **_invalid_parameter** przy użyciu parametrów pełnych. W kodzie niedebugowanym jest wywoływana funkcja **_invalid_parameter_noinfo** , która wywołuje funkcję **_invalid_parameter** przy użyciu pustych parametrów. Jeśli funkcja biblioteki CRT niedebugowania wymaga zakończenia programu, wywoływana jest funkcja **_invalid_parameter_noinfo_noreturn** , która wywołuje funkcję **_invalid_parameter** przy użyciu pustych parametrów, a następnie wywołuje funkcję **_invoke_watson** , aby wymusić zakończenie działania programu.
 
-Funkcja **_invalid_parameter** sprawdza, czy zdefiniowany przez użytkownika nieprawidłowy program obsługi parametrów został ustawiony, a jeśli tak, wywołuje go. Na przykład jeśli zdefiniowany przez użytkownika program obsługi lokalnego wątku został ustawiony przez wywołanie [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) w bieżącym wątku, jest wywoływana, a następnie zwraca funkcję. W przeciwnym razie jeśli zdefiniowany przez użytkownika globalny nieprawidłowy program obsługi parametrów został ustawiony przez wywołanie [set_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md), jest wywoływana, funkcja zwraca. W przeciwnym razie wywoływana jest domyślna **_invoke_watson** obsługi. Domyślnym zachowaniem **_invoke_watson** jest zakończenie programu. Programy obsługi zdefiniowane przez użytkownika mogą zakończyć lub zwrócić. Zaleca się, aby programy obsługi zdefiniowane przez użytkownika kończyły program, chyba że odzyskiwanie jest pewne.
+Funkcja **_invalid_parameter** sprawdza, czy ustawiono zdefiniowaną przez użytkownika procedurę obsługi nieprawidłowego parametru i jeśli tak, wywoła ją. Na przykład jeśli zdefiniowana przez użytkownika obsługa oparta na wątku została ustawiona przez wywołanie do [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) w bieżącym wątku, jest wywoływana, a następnie funkcja zwraca wartość. W przeciwnym razie, jeśli zdefiniowana przez użytkownika procedura obsługi nieprawidłowego parametru została ustawiona przez wywołanie [set_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md), zostanie wywołana, a następnie funkcja zwraca. W przeciwnym razie zostanie wywołana domyślna procedura obsługi **_invoke_watson** . Domyślnym zachowaniem **_invoke_watson** jest zakończenie tego programu. Programy obsługi zdefiniowane przez użytkownika mogą kończyć się lub zwracać. Zalecamy, aby programy obsługi zdefiniowane przez użytkownika przerywali działanie, chyba że odzyskiwanie jest określone.
 
-Gdy wywoływana jest domyślna **_invoke_watson** obsługi, jeśli procesor obsługuje operację [__fastfail,](../../intrinsics/fastfail.md) jest wywoływana przy użyciu parametru **FAST_FAIL_INVALID_ARG** i kończy się proces. W przeciwnym razie wyjątek szybki nie jest wywoływany, który może zostać przechwycony przez dołączonego debugera. Jeśli proces jest dozwolony, jest zakończony wywołaniem **funkcji** Zakończenia przetwarzania systemu Windows przy użyciu stanu kodu wyjątku **STATUS_INVALID_CRUNTIME_PARAMETER**.
+Gdy zostanie wywołana domyślna procedura obsługi **_invoke_watson** , jeśli procesor obsługuje operację [__fastfail](../../intrinsics/fastfail.md) , jest wywoływany przy użyciu parametru **FAST_FAIL_INVALID_ARG** , a proces kończy się. W przeciwnym razie zostanie zgłoszony wyjątek szybkiego błędu, który może zostać przechwycony przez dołączony debuger. Jeśli proces może być kontynuowany, zostaje zakończony przez wywołanie funkcji **TerminateProcess** systemu Windows przy użyciu stanu kodu wyjątku **STATUS_INVALID_CRUNTIME_PARAMETER**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|------------------|
-|**_invalid_parameter** **, _invalid_parameter_noinfo,** **_invalid_parameter_noinfo_noreturn**, **_invoke_watson**|\<corecrt.h>|
+|**_invalid_parameter**, **_invalid_parameter_noinfo**, **_invalid_parameter_noinfo_noreturn** **_invoke_watson**|\<corecrt. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -28,7 +28,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -76,19 +76,19 @@ helpviewer_keywords:
 - mbsnicmp function
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
-ms.openlocfilehash: b0bde60a230f1fd428716073471cd85b2728a614
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3be900679dddbbab7cba0982c11d5c75a190d685
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364825"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920082"
 ---
 # <a name="_strnicmp-_wcsnicmp-_mbsnicmp-_strnicmp_l-_wcsnicmp_l-_mbsnicmp_l"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 
-Porównuje określoną liczbę znaków dwóch ciągów bez względu na przypadek.
+Porównuje określoną liczbę znaków dwóch ciągów bez względu na wielkość liter.
 
 > [!IMPORTANT]
-> **_mbsnicmp** i **_mbsnicmp_l** nie mogą być używane w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnicmp** i **_mbsnicmp_l** nie mogą być używane w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -133,39 +133,39 @@ int _mbsnicmp_l(
 *ciąg1*, *ciąg2*<br/>
 Ciągi zakończone wartością null do porównania.
 
-*Liczba*<br/>
+*liczbą*<br/>
 Liczba znaków do porównania.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wskazuje relację między podciągami w następujący sposób.
+Określa relację między podciągami w następujący sposób.
 
 |Wartość zwracana|Opis|
 |------------------|-----------------|
-|< 0|*podciąg string1* jest mniejszy niż podciąg *string2.*|
-|0|*podciąg string1* jest identyczny z podciągiem *string2.*|
-|> 0|*podciąg 1* jest większy niż podciąg *string2.*|
+|< 0|podciąg *ciąg1* jest krótszy niż *ciąg2* podciąg.|
+|0|podciąg *ciąg1* jest identyczny z podciągiem *ciąg2* .|
+|> 0|podciąg *ciąg1* jest dłuższy niż *ciąg2* podciągu.|
 
-W odniesieniu do błędu sprawdzania **_NLSCMPERROR**poprawności parametrów te \<funkcje zwracają _NLSCMPERROR \<, który jest zdefiniowany w> string.h i mbstring.h>.
+W przypadku błędu walidacji parametrów te funkcje zwracają **_NLSCMPERROR**, które są zdefiniowane w \<ciągach String. h \<> i mbstring. h>.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_strnicmp** zwykle porównuje co najwyżej pierwsze znaki *licznika* *string1* i *string2*. Porównanie jest wykonywane bez względu na przypadek, konwertując każdy znak na małe litery. **_strnicmp** jest wersją **strncmp**bez uwzględniania wielkości liter. Porównanie kończy się, jeśli kończący się znak null zostanie osiągnięty w obu ciągach przed porównaniem znaków *zliczania.* Jeśli ciągi są równe, gdy kończący się znak null zostanie osiągnięty w obu ciągów przed *zliczanie* znaków są porównywane, krótszy ciąg jest mniejszy.
+Funkcja **_strnicmp** w liczbie porządkowej porównuje *liczbę pierwszych znaków* wynoszących *ciąg1* i *ciąg2*. Porównanie jest wykonywane bez względu na wielkość liter, konwertując każdy znak na małe litery. **_strnicmp** to wersja **strncmp**bez uwzględniania wielkości liter. Porównanie kończy się, jeśli kończący znak null zostanie osiągnięty w dowolnym ciągu przed porównaniem znaków *Count* . Jeśli ciągi są równe, gdy zostanie osiągnięty kończący znak null w dowolnym ciągu przed porównaniem znaków *Count* , krótszy ciąg jest mniejszy.
 
-Znaki od 91 do 96 w tabeli ASCII\\('[', ' ',', '^', '_' i '\`') są uznawane za mniejsze niż jakikolwiek znak alfabetyczny. To zamówienie jest identyczne z **stricmp**.
+Znaki od 91 do 96 w tabeli ASCII ("[", "\\", "]", "^", "_" i "\`") są oceniane jako mniejsze niż wszystkie znaki alfabetyczne. Ta kolejność jest taka sama jak w przypadku **stricmp**.
 
-**_wcsnicmp** i **_mbsnicmp** są wersjami **_strnicmp**o szerokich i wielobajtowych znakach. Argumenty **_wcsnicmp** są ciągami znaków o szerokich znakach; **_mbsnicmp** są ciągami znaków wielobajtowych. **_mbsnicmp** rozpoznaje sekwencje znaków wielobajtowych zgodnie z bieżącą wielobajtową stroną kodową i zwraca **_NLSCMPERROR** na błąd. Aby uzyskać więcej informacji, zobacz [Strony kodowe](../../c-runtime-library/code-pages.md). Te trzy funkcje zachowują się identycznie inaczej. Na te funkcje ma wpływ ustawienie ustawień regionalnych — wersje, które nie mają **_l** sufiksu, używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje, które mają sufiks **_l** zamiast użyć *ustawień regionalnych,* które są przekazywane w. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+**_wcsnicmp** i **_mbsnicmp** są wersjami znaków dwubajtowych i **_strnicmp**. Argumenty **_wcsnicmp** są ciągami znaków dwubajtowych; te **_mbsnicmp** są ciągami znaków wielobajtowych. **_mbsnicmp** rozpoznaje sekwencje znaków wielobajtowych zgodnie z bieżącą stroną kodową wielobajtowego i zwraca **_NLSCMPERROR** w przypadku błędu. Aby uzyskać więcej informacji, zobacz [stronę kodową](../../c-runtime-library/code-pages.md). Te trzy funkcje zachowują się identycznie w inny sposób. Te funkcje mają wpływ na ustawienia regionalne — wersje, które nie mają sufiksu **_l** używają bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych. wersje, które mają sufiks **_l** , zamiast nich używają *ustawień regionalnych* , które są przesyłane. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Wszystkie te funkcje sprawdzają poprawność ich parametrów. Jeśli *ciąg1* lub *ciąg2* jest wskaźnikiem null, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w programie [Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, funkcje te zwracają **_NLSCMPERROR** i ustawić **errno** na **EINVAL**.
+Wszystkie te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ciąg1* lub *ciąg2* jest wskaźnikiem o wartości null, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **_NLSCMPERROR** i ustawiają **errno** na **EINVAL**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsncicmp**|**_strnicmp**|**_mbsnicmp**|**_wcsnicmp**|
 |**_tcsnicmp**|**_strnicmp**|**_mbsnbicmp**|**_wcsnicmp**|
@@ -175,15 +175,15 @@ Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmien
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strnicmp** **, _strnicmp_l**|\<string.h>|
-|**_wcsnicmp** **, _wcsnicmp_l**|\<string.h> lub \<wchar.h>|
-|**_mbsnicmp** **, _mbsnicmp_l**|\<mbstring.h>|
+|**_strnicmp**, **_strnicmp_l**|\<> String. h|
+|**_wcsnicmp**, **_wcsnicmp_l**|\<ciąg. h> lub \<WCHAR. h>|
+|**_mbsnicmp**, **_mbsnicmp_l**|\<mbstring. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md).
+Zobacz przykład dla [strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md).
 
 ## <a name="see-also"></a>Zobacz też
 

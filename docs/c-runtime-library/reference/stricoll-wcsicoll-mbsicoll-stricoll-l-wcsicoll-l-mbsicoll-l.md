@@ -27,7 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -61,19 +61,19 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-ms.openlocfilehash: d726d2d33f8f775d09e6197dfeda6abb91106a53
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c023405043dea1c0a1d8e6d7f6fcc6505677583
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355325"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919993"
 ---
 # <a name="_stricoll-_wcsicoll-_mbsicoll-_stricoll_l-_wcsicoll_l-_mbsicoll_l"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 
 Porównuje ciągi przy użyciu informacji specyficznych dla ustawień regionalnych.
 
 > [!IMPORTANT]
-> **_mbsicoll** i **_mbsicoll_l** nie mogą być używane w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsicoll** i **_mbsicoll_l** nie mogą być używane w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -112,35 +112,35 @@ int _mbsicoll_l(
 *ciąg1*, *ciąg2*<br/>
 Ciągi zakończone wartością null do porównania.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość wskazującą relację *ciągu1* do *string2*, w następujący sposób.
+Każda z tych funkcji zwraca wartość wskazującą, że jest to relacja *ciąg1* do *ciąg2*, jak pokazano poniżej.
 
-|Wartość zwracana|Relacja ciągu1 do ciągu2|
+|Wartość zwracana|Relacja ciąg1 do ciąg2|
 |------------------|----------------------------------------|
-|< 0|*ciąg1* mniej niż *ciąg2*|
-|0|*string1* identyczny z *string2*|
+|< 0|*ciąg1* mniejszy niż *ciąg2*|
+|0|*ciąg1* identyczny z *ciąg2*|
 |> 0|*ciąg1* większy niż *ciąg2*|
 |**_NLSCMPERROR**|Wystąpił błąd.|
 
-Każda z tych funkcji zwraca **_NLSCMPERROR**. Aby użyć **_NLSCMPERROR,** należy \<dołączyć> string.h \<lub mbstring.h>. **_wcsicoll** może zakończyć się niepowodzeniem, jeśli *ciąg1* lub *string2* zawiera kody znaków szerokich poza domeną sekwencji sortowania. W przypadku wystąpienia błędu **_wcsicoll** może ustawić **errno** na **EINVAL**. Aby sprawdzić, czy nie ma błędu w wywołaniu **_wcsicoll,** ustaw **errno** na 0, a następnie sprawdź **errno** po wywołaniu **_wcsicoll**.
+Każda z tych funkcji zwraca **_NLSCMPERROR**. Aby użyć **_NLSCMPERROR**, Uwzględnij \<zarówno ciąg. h> \<, jak i mbstring. h>. **_wcsicoll** może zakończyć się niepowodzeniem, jeśli *ciąg1* lub *ciąg2* zawiera kody znaków dwubajtowych spoza domeny sekwencji sortowania. Gdy wystąpi błąd, **_wcsicoll** może ustawić **errno** na **EINVAL**. Aby sprawdzić, czy wystąpił błąd w wywołaniu **_wcsicoll**, ustaw wartość **errno** na 0, a następnie sprawdź **errno** po wywołaniu **_wcsicoll**.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji wykonuje porównanie bez uwzględniania wielkości liter *string1* i *string2* zgodnie ze stroną kodową aktualnie używaną. Te funkcje powinny być używane tylko wtedy, gdy istnieje różnica między kolejnością zestawu znaków a kolejnością znaków leksykograficznych na bieżącej stronie kodowej, a ta różnica jest interesująca dla porównania ciągów.
+Każda z tych funkcji wykonuje porównanie wartości typu *ciąg1* i *ciąg2* bez uwzględniania wielkości liter zgodnie z aktualnie używaną stroną kodową. Te funkcje powinny być używane tylko wtedy, gdy istnieje różnica pomiędzy kolejnością zestawu znaków i kolejnością znaków leksykograficznych w bieżącej stronie kodowej, a różnica jest istotna dla porównania ciągów.
 
-**_stricmp** różni się od **_stricoll** tym, że na porównanie **_stricmp** ma wpływ **LC_CTYPE,** podczas gdy porównanie **_stricoll** jest zgodne z **LC_CTYPE** i **LC_COLLATE** kategoriami ustawień regionalnych. Aby uzyskać więcej informacji na temat **kategorii LC_COLLATE,** zobacz [setlocale](setlocale-wsetlocale.md) i [Kategorie ustawień regionalnych](../../c-runtime-library/locale-categories.md). Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych; wersje z sufiksem **_l** są identyczne, z tą różnicą, że zamiast tego używają ustawień regionalnych przekazanych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+**_stricmp** różni się **od _stricoll** , w którym **LC_CTYPE**jest wpływ na porównanie **_stricmp** , podczas gdy porównanie **_stricoll** jest zgodne z kategoriami **LC_CTYPE** i **LC_COLLATE** ustawień regionalnych. Aby uzyskać więcej informacji na temat kategorii **LC_COLLATE** , zobacz sekcję [setlocale](setlocale-wsetlocale.md) i [locale](../../c-runtime-library/locale-categories.md). Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych; wersje z sufiksem **_l** są identyczne, z tą różnicą, że w zamian korzystają z przekazaną ustawieniami regionalnymi. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Wszystkie te funkcje sprawdzają poprawność ich parametrów. Jeśli *ciąg1* lub *ciąg2* są wskaźnikami **NULL,** wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w programie [Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, funkcje te zwracają **_NLSCMPERROR** i ustawić **errno** na **EINVAL**.
+Wszystkie te funkcje sprawdzają poprawność swoich parametrów. Jeśli *ciąg1* lub *ciąg2* ma wskaźniki **null** , zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **_NLSCMPERROR** i ustawiają **errno** na **EINVAL**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsicoll**|**_stricoll**|**_mbsicoll**|**_wcsicoll**|
 
@@ -148,15 +148,15 @@ Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmien
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_stricoll** **, _stricoll_l**|\<string.h>|
-|**_wcsicoll** **, _wcsicoll_l**|\<wchar.h>, \<string.h>|
-|**_mbsicoll**, **_mbsicoll_l**|\<mbstring.h>|
+|**_stricoll**, **_stricoll_l**|\<> String. h|
+|**_wcsicoll**, **_wcsicoll_l**|\<WCHAR. h>, \<String. h>|
+|**_mbsicoll**, **_mbsicoll_l**|\<mbstring. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcoll — Funkcje](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>

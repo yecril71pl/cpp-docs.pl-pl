@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,19 +37,19 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-ms.openlocfilehash: 2334d7755a3eaf3fb973783db17ca398e6b7f0b5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: edba674a0873b1f0a5f37457235c0dc1a8210ded
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340694"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911978"
 ---
 # <a name="_mbsnbcmp-_mbsnbcmp_l"></a>_mbsnbcmp, _mbsnbcmp_l
 
 Porównuje pierwsze **n** bajtów dwóch ciągów znaków wielobajtowych.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -72,51 +72,51 @@ int _mbsnbcmp_l(
 *ciąg1*, *ciąg2*<br/>
 Ciągi do porównania.
 
-*Liczba*<br/>
+*liczbą*<br/>
 Liczba bajtów do porównania.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwracana wartość wskazuje relację porządkową między podciągami *string1* i *string2*.
+Wartość zwracana wskazuje porządkową relację między podciągami wartości *ciąg1* i *ciąg2*.
 
 |Wartość zwracana|Opis|
 |------------------|-----------------|
-|< 0|*podciąg string1* jest mniejszy niż podciąg *string2.*|
-|0|*podciąg string1* jest identyczny z podciągiem *string2.*|
-|> 0|*podciąg 1* jest większy niż podciąg *string2.*|
+|< 0|podciąg *ciąg1* jest krótszy niż *ciąg2* podciąg.|
+|0|podciąg *ciąg1* jest identyczny z podciągiem *ciąg2* .|
+|> 0|podciąg *ciąg1* jest dłuższy niż *ciąg2* podciągu.|
 
-W sprawie błędu sprawdzania poprawności parametrów **_mbsnbcmp** i **_mbsnbcmp_l** zwracają **_NLSCMPERROR**, \<która jest zdefiniowana w \<> string.h i mbstring.h>.
+W przypadku błędu walidacji parametru **_mbsnbcmp** i **_mbsnbcmp_l** zwracają **_NLSCMPERROR**, który jest zdefiniowany w \<> String. h i \<mbstring. h>.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **_mbsnbcmp** porównać co najwyżej pierwsze *bajty liczby* w *string1* i *string2* i zwracać wartość, która wskazuje relację między podciągami. **_mbsnbcmp** jest wersją **_mbsnbicmp**uwzględniającą wielkość liter . W przeciwieństwie do **_mbsnbcoll** **, _mbsnbcmp** nie ma wpływu kolejność sortowania ustawień regionalnych. **_mbsnbcmp** rozpoznaje sekwencje znaków wielobajtowych zgodnie z bieżącą [wielobajtową stroną kodową](../../c-runtime-library/code-pages.md).
+Funkcje **_mbsnbcmp** porównują co najwyżej pierwszą *liczbę* bajtów w *ciąg1* i *ciąg2* i zwracają wartość, która wskazuje relację między podciągami. **_mbsnbcmp** to wersja **_mbsnbicmp**z uwzględnieniem wielkości liter. W przeciwieństwie do **_mbsnbcoll**, kolejność sortowania ustawień regionalnych nie ma na **_mbsnbcmp** . **_mbsnbcmp** rozpoznaje sekwencje znaków wielobajtowych zgodnie z bieżącą [stroną kodową](../../c-runtime-library/code-pages.md)wielobajtowego.
 
-**_mbsnbcmp** przypomina **_mbsncmp**, z tą różnicą, że **_mbsncmp** porównuje ciągi według znaków, a nie bajtów.
+**_mbsnbcmp** przypomina **_mbsncmp**, z tą różnicą, że **_mbsncmp** porównuje ciągi przez znaki zamiast bajtów.
 
-Na wartość danych wyjściowych ma wpływ ustawienie **kategorii LC_CTYPE** ustawień regionalnych, które określa bajty potencjalnego klienta i bajty końcowe znaków wielobajtowych. Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Funkcja **_mbsnbcmp** używa bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. Funkcja **_mbsnbcmp_l** jest identyczna, z tą różnicą, że zamiast tego używa parametru *ustawień regionalnych.* Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia kategorii **LC_CTYPE** ustawień regionalnych, które określa bajty wiodące i końcowe bajtów znaków wielobajtowych. Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Funkcja **_mbsnbcmp** używa bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. Funkcja **_mbsnbcmp_l** jest identyczna, z tą różnicą, że zamiast tego używa parametru *ustawień regionalnych* . Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Jeśli *ciąg1* lub *ciąg2* jest wskaźnikiem null, te funkcje wywołują nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, funkcje zwracają **_NLSCMPERROR** i **errno** jest ustawiona na **EINVAL**.
+Jeśli *ciąg1* lub *ciąg2* jest wskaźnikiem o wartości null, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcje zwracają **_NLSCMPERROR** i **errno** jest ustawiona na **EINVAL**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura tchar.h|_UNICODE i nie _MBCS zdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura tchar.h|Nie zdefiniowano _UNICODE i _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|---------------------------------------|--------------------|-----------------------|
-|**_tcsncmp**|[strncmp (strncmp)](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|**_mbsnbcmp**|[wcsncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|
-|**_tcsncmp_l**|[strncmp (strncmp)](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|**_mbsnbcml**|[wcsncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|
+|**_tcsncmp**|[strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|**_mbsnbcmp**|[wcsncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|
+|**_tcsncmp_l**|[strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|**_mbsnbcml**|[wcsncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnbcmp**|\<mbstring.h>|
-|**_mbsnbcmp_l**|\<mbstring.h>|
+|**_mbsnbcmp**|\<mbstring. h>|
+|**_mbsnbcmp_l**|\<mbstring. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -176,5 +176,5 @@ Result:   String 1 is equal to string 2
 [_mbsnbicmp, _mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
-[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

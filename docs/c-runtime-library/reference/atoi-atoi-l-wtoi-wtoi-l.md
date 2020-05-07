@@ -23,7 +23,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -49,16 +49,16 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: ef65f8986cf02b6385cbce71e5e81fa690b38b2e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b8be8af9fc56eea0011e5b07c1573dfe848b6c7d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348865"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919861"
 ---
 # <a name="atoi-_atoi_l-_wtoi-_wtoi_l"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 
-Konwertuj ciąg na całkowitą.
+Konwertuj ciąg na liczbę całkowitą.
 
 ## <a name="syntax"></a>Składnia
 
@@ -81,49 +81,49 @@ int _wtoi_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Str*<br/>
-Ciąg do konwersji.
+*str*<br/>
+Ciąg do przekonwertowania.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca wartość **int** wyprodukowaną przez interpretację znaków wejściowych jako liczby. Zwracana wartość wynosi 0 dla **atoi** i **_wtoi**, jeśli nie można przekonwertować danych wejściowych na wartość tego typu.
+Każda funkcja zwraca wartość **int** wygenerowanej przez interpretowanie znaków wejściowych jako liczby. Wartość zwracana to 0 dla **atoi** i **_wtoi**, jeśli dane wejściowe nie mogą być konwertowane na wartość tego typu.
 
-W przypadku przepełnienia z dużymi ujemnymi wartościami całkowitymi zwracany jest **LONG_MIN.** **atoi** i **_wtoi** zwracają **INT_MAX** i **INT_MIN** na tych warunkach. We wszystkich przypadkach poza zasięgiem **errno** jest ustawiony na **ERANGE**. Jeśli parametr przekazywany w ma **wartość NULL,** wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [yd.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, te funkcje ustawić **errno** **na EINVAL** i zwracać 0.
+W przypadku przepełnienia z dużymi ujemnymi wartościami całkowitymi **LONG_MIN** jest zwracana. **atoi** i **_wtoi** zwracają **INT_MAX** i **INT_MIN** w tych warunkach. We wszystkich przypadkach poza zakresem **errno** jest ustawiony na **ERANGE**. Jeśli przekazanie parametru ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają 0.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje konwertują ciąg znaków na wartość całkowitą **(atoi** i **_wtoi**). Ciąg wejściowy jest sekwencją znaków, które mogą być interpretowane jako wartość liczbowa określonego typu. Funkcja zatrzymuje odczytywanie ciągu wejściowego przy pierwszym znaku, który nie może rozpoznać jako część liczby. Ten znak może być znakiem zerowym ('\0' lub L'\0') kończącym ciąg.
+Te funkcje konwertują ciąg znaków na wartość całkowitą (**atoi** i **_wtoi**). Ciąg wejściowy jest sekwencją znaków, które mogą być interpretowane jako wartość liczbowa określonego typu. Funkcja przestaje odczytywać ciąg wejściowy przy pierwszym znaku, którego nie może rozpoznać jako część liczby. Ten znak może być znakiem null (' \ 0 ' lub L ' \ 0 '), który kończy ciąg.
 
-Argument *str* **do atoi** i **_wtoi** ma następującą formę:
+Ciąg *str* do **atoi** i **_wtoi** ma następującą postać:
 
-> [*odstępy*] [*znak*] [*cyfry*]]
+> [*odstęp*] [*Sign*] [*cyfry*]]
 
-Odstęp *składa* się ze znaków spacji lub tabulacji, które są ignorowane; *znak* jest plus (+) lub minus (-); i *cyfry* są jedną lub więcej cyfr.
+*Odstęp* składa się ze znaków spacji lub tabulatora, które są ignorowane; *znak* jest znakiem plus (+) lub minus (-); i *cyfry* to jedna lub więcej cyfr.
 
-Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że używają parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tstoi**|**atoi ( atoi )**|**atoi ( atoi )**|**_wtoi**|
-|**_ttoi**|**atoi ( atoi )**|**atoi ( atoi )**|**_wtoi**|
+|**_tstoi**|**atoi**|**atoi**|**_wtoi**|
+|**_ttoi**|**atoi**|**atoi**|**_wtoi**|
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedur|Wymagany nagłówek|
+|Procedury|Wymagany nagłówek|
 |--------------|---------------------|
-|**atoi ( atoi )**|\<>|
-|**_atoi_l** **_wtoi** **_wtoi_l**|\<> lub \<wchar.h>|
+|**atoi**|\<STDLIB. h>|
+|**_atoi_l**, **_wtoi**, **_wtoi_l**|\<STDLIB. h> lub \<WCHAR. h>|
 
 ## <a name="example"></a>Przykład
 
-Ten program pokazuje, jak liczby przechowywane jako ciągi mogą być konwertowane na wartości liczbowe za pomocą funkcji **atoi.**
+Ten program pokazuje, jak liczby przechowywane jako ciągi mogą być konwertowane na wartości liczbowe przy użyciu funkcji **atoi** .
 
 ```C
 // crt_atoi.c
@@ -172,8 +172,8 @@ Overflow condition occurred.
 ## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
-[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

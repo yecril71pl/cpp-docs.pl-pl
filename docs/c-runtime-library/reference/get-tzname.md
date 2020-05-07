@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-ms.openlocfilehash: 50f1f6e4320e3ef905b4eda67ba1d458a5b1df08
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bf63b0ade0adc0a2dfa471bbfbeebc0cb2d04911
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344875"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919684"
 ---
 # <a name="_get_tzname"></a>_get_tzname
 
-Pobiera reprezentację ciągu znaków nazwy strefy czasowej lub nazwy standardowej strefy czasowej (DST).
+Pobiera ciąg znaków reprezentujący nazwę strefy czasowej lub nazwę czasową standardowej strefy czasowej (DST).
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,51 +53,51 @@ errno_t _get_tzname(
 
 ### <a name="parameters"></a>Parametry
 
-*pZawąkaWartość*<br/>
-Długość ciągu *timeZoneName* z terminatorem zerowym.
+*pReturnValue*<br/>
+Długość ciągu dla elementu *timeZoneName* uwzględniającego terminator o wartości null.
 
-*nazwa strefy czasowej*<br/>
-Adres ciągu znaków dla reprezentacji nazwy strefy czasowej lub nazwy standardowej strefy czasowej (DST), w zależności od *indeksu*.
+*Strefa czasowa*<br/>
+Adres ciągu znaków dla reprezentacji nazwy strefy czasowej lub standardowej nazwy strefy czasowej (DST), w zależności od *indeksu*.
 
-*rozmiarWzdjęty*<br/>
+*sizeInBytes*<br/>
 Rozmiar ciągu znaków *timeZoneName* w bajtach.
 
-*Indeks*<br/>
+*indeks*<br/>
 Indeks jednej z dwóch nazw stref czasowych do pobrania.
 
-|*Indeks*|Zawartość *nazwy timeZoneName*|wartość *domyślna timeZoneName*|
+|*indeks*|Zawartość elementu *timeZoneName*|wartość domyślna *timeZoneName*|
 |-|-|-|
-|0|Nazwa strefy czasowej|"PST"|
-|1|Nazwa strefy czasu standardowego w okresie dziennym|"PDT"|
+|0|Nazwa strefy czasowej|KOPIA|
+|1|Nazwa standardowej strefy czasowej|PDT|
 |> 1 lub < 0|**errno** ustawiony na **EINVAL**|nie zmodyfikowano|
 
-Chyba że wartości są jawnie zmienione w czasie wykonywania, wartości domyślne są "PST" i "PDT" odpowiednio.
+O ile wartości nie są jawnie zmieniane w czasie wykonywania, wartości domyślne to "PST" i "PDT".
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli się powiedzie, w przeciwnym razie wartość typu **errno.**
+Zero, jeśli to się powiedzie, w przeciwnym razie wartość typu **errno** .
 
-Jeśli nazwa *systemu timeZoneName* ma **wartość NULL**lub *rozmiarWbajty* są zerowe lub mniejsze niż zero (ale nie oba), wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w programie Sprawdzanie poprawności [parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, ta funkcja ustawia **errno** na **EINVAL** i zwraca **wartość EINVAL**.
+Jeśli wartość *timeZoneName* ma **wartość null**lub *sizeInBytes* jest równa zero lub mniejsza od zera (ale nie obu), wywoływana jest procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca **EINVAL**.
 
-### <a name="error-conditions"></a>Warunki błędu
+### <a name="error-conditions"></a>Warunki błędów
 
-|*pZawąkaWartość*|*nazwa strefy czasowej*|*rozmiarWzdjęty*|*Indeks*|Wartość zwracana|Zawartość *nazwy timeZoneName*|
+|*pReturnValue*|*Strefa czasowa*|*sizeInBytes*|*indeks*|Wartość zwracana|Zawartość elementu *timeZoneName*|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
-|rozmiar nazwy TZ|**Null**|0|0 lub 1|0|nie zmodyfikowano|
-|rozmiar nazwy TZ|Wszelki|> 0|0 lub 1|0|Nazwa TZ|
-|nie zmodyfikowano|**Null**|> 0|Wszelki|**Einval**|nie zmodyfikowano|
-|nie zmodyfikowano|Wszelki|zero|Wszelki|**Einval**|nie zmodyfikowano|
-|nie zmodyfikowano|Wszelki|> 0|> 1|**Einval**|nie zmodyfikowano|
+|rozmiar nazwy programu $|**NULL**|0|0 lub 1|0|nie zmodyfikowano|
+|rozmiar nazwy programu $|ile|> 0|0 lub 1|0|Nazwa $|
+|nie zmodyfikowano|**NULL**|> 0|ile|**EINVAL**|nie zmodyfikowano|
+|nie zmodyfikowano|ile|zero|ile|**EINVAL**|nie zmodyfikowano|
+|nie zmodyfikowano|ile|> 0|> 1|**EINVAL**|nie zmodyfikowano|
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_get_tzname** pobiera reprezentację ciągu znaku bieżącej nazwy strefy czasowej lub nazwy standardowej strefy czasu letniego (DST) na adres *timeZoneName* w zależności od wartości indeksu, wraz z rozmiarem ciągu w *pReturnValue*. Jeśli *nazwa systemu timeZoneName* ma **wartość NULL,** a *rozmiarWbajty* jest zerowy, rozmiar ciągu wymaganego do przechowywania określonej strefy czasowej i kończącej się wartości null w bajtach jest zwracany w *pReturnValue*. Wartości indeksu muszą być 0 dla standardowej strefy czasowej lub 1 dla standardowej strefy czasowej światła dziennego; wszelkie inne wartości *indeksu* mają nieokreślone wyniki.
+Funkcja **_get_tzname** Pobiera reprezentację ciągu znaków bieżącej nazwy strefy czasowej lub standardowej nazwy strefy czasowej (DST) do adresu *strefy* czasowej w zależności od wartości indeksu, wraz z rozmiarem ciągu w *pReturnValue*. Jeśli *timeZoneName* ma **wartość null** , a *sizeInBytes* ma wartość zero, rozmiar ciągu wymaganego do przechowywania określonej strefy czasowej i zakończenie wartości null w bajtach jest zwracany w *pReturnValue*. Wartości indeksu muszą mieć wartość 0 dla standardowej strefy czasowej lub 1 dla standardowej strefy czasowej (letnia). wszystkie inne wartości *indeksu* mają nieokreślony wynik.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie wywołuje **_get_tzname,** aby uzyskać wymagany rozmiar buforu, aby wyświetlić bieżącą nazwę standardowej strefy czasowej, przydziela bufor o tym rozmiarze, wywołuje **_get_tzname** ponownie, aby załadować nazwę w buforze i drukuje go do konsoli.
+Ten przykład wywołuje **_get_tzname** , aby uzyskać wymagany rozmiar buforu, aby wyświetlić bieżącą nazwę czasu standardowego czasu letniego, przydziela bufor tego rozmiaru, wywołuje **_get_tzname** ponownie w celu załadowania nazwy w buforze, a następnie drukuje ją w konsoli programu.
 
 ```C
 // crt_get_tzname.c
@@ -143,9 +143,9 @@ The current Daylight standard time zone name is PDT.
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_get_tzname**|\<> time.h|
+|**_get_tzname**|\<> godziny. h|
 
-Aby uzyskać więcej informacji, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

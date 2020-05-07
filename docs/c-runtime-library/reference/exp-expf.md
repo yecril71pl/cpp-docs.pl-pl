@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: cbf303b2b92afd83a1c3181dc98a1dbdcd639c1b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b6d4906212073ab8cb04a0ab77d1234d444a4c95
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347598"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909656"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
-Oblicza wykładnicze.
+Oblicza wartość wykładniczą.
 
 ## <a name="syntax"></a>Składnia
 
@@ -68,35 +68,35 @@ long double expl(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Wartość zmiennoprzecinkowa do wykładnicy podstawy logarytmu naturalnego *e* przez.
+*y*<br/>
+Wartość zmiennoprzecinkowa do exponentiate logarytmu naturalnego *o podstawie.*
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **exp** zwracają wartość wykładniczą parametru zmiennoprzecinkowego, *x*, jeśli zakończy się pomyślnie. Oznacza to, że wynik jest *e*<sup>*x*</sup>, gdzie *e* jest podstawą logarytmu naturalnego. W przypadku przepełnienia funkcja zwraca INF (nieskończoność) i przy niedopełnionym, **exp** zwraca wartość 0.
+Funkcje **EXP** zwracają wartość wykładniczą parametru zmiennoprzecinkowego *x*, jeśli to się powiedzie. Oznacza to, że wynik to *e*<sup>*x*</sup>, gdzie *e* jest podstawą logarytmu naturalnego. W przypadku przepełnienia funkcja zwraca plik INF (nieskończoność) i **w przypadku niedomiaru zwraca wartość 0** .
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|± Cichy NaN, nieokreślony|Brak|_DOMAIN|
+|+ Cichy NaN, nieokreślony|Brak|_DOMAIN|
 |± Nieskończoność|Nieprawidłowy|_DOMAIN|
-|x ≥ 7,097827e+002|INEXACT+OVERFLOW|Przepełnienie|
-|X ≤ -7,083964e+002|INEXACT+UNDERFLOW|Niedomiar|
+|x ≥ 7.097827 e + 002|niedokładne + przepełnienie|PRZEPŁYW|
+|X ≤-7.083964 e + 002|niedokładny i niedopełnienie|MIAR|
 
-Funkcja **exp** ma implementację, która używa rozszerzenia SIMD przesyłania strumieniowego 2 (SSE2). Zobacz [_set_SSE2_enable,](set-sse2-enable.md) aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2.
+Funkcja **EXP** ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Zobacz [_set_SSE2_enable](set-sse2-enable.md) , aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2.
 
 ## <a name="remarks"></a>Uwagi
 
-C++ umożliwia przeciążenie, dzięki czemu można wywołać przeciążenia **exp,** które przyjmują **float** lub **long double** argument. W programie C **exp** zawsze przyjmuje i zwraca **podwójny**plik .
+Język C++ pozwala na Przeciążenie, dlatego można wywoływać przeciążenia, **które** przyjmują wartość **zmiennoprzecinkową** lub **długą podwójnego** argumentu. W programie C funkcja **EXP** zawsze przyjmuje i zwraca wartość **Double**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Wymagany nagłówek C|Wymagany nagłówek języka C++|
+|Funkcja|Wymagany nagłówek C|Wymagany nagłówek C++|
 |--------------|---------------------|---|
-|**exp**, **expf**, **expl**|\<> math.h|\<cmath> lub \<math.h>|
+|**EXP**, **expf —**, **Expl**|\<> Math. h|\<cmath> lub \<Math. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -121,6 +121,6 @@ exp( 2.302585 ) = 10.000000
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>
 [_CIexp](../../c-runtime-library/ciexp.md)<br/>

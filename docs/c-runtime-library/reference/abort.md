@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,19 +27,19 @@ helpviewer_keywords:
 - aborting current process
 - abort function
 - processes, aborting
-ms.openlocfilehash: 1f70f54783ce6f6d28fdda028af4fd5a205aeb0b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f330d53df5af0efa41f4e3b3bb843bdc95210c70
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350919"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910903"
 ---
 # <a name="abort"></a>przerwij
 
 Przerywa bieżący proces i zwraca kod błędu.
 
 > [!NOTE]
-> Nie należy używać tej metody do zamykania aplikacji ze Sklepu Microsoft lub aplikacji platformy uniwersalnej systemu Windows (UWP), z wyjątkiem scenariuszy testowania lub debugowania. Sposób zamykania aplikacji ze Sklepu jest zabroniony zgodnie z [zasadami sklepu Microsoft Store.](/legal/windows/agreements/store-policies) Aby uzyskać więcej informacji, zobacz [cykl życia aplikacji platformy uniwersalnej](/windows/uwp/launch-resume/app-lifecycle)systemu .
+> Nie należy używać tej metody do zamykania aplikacji Microsoft Store lub platforma uniwersalna systemu Windows (platformy UWP), z wyjątkiem scenariuszy testowania lub debugowania. Sposób programistyczny lub interfejs użytkownika służący do zamykania aplikacji ze sklepu nie są dozwolone zgodnie z [zasadami Microsoft Storeymi](/legal/windows/agreements/store-policies). Aby uzyskać więcej informacji, zobacz [cykl życia aplikacji platformy UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,43 +49,43 @@ void abort( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**abort** nie zwraca kontroli do procesu wywołującego. Domyślnie sprawdza, czy program obsługi sygnału `SIGABRT` przerwania i podnosi, jeśli jeden jest ustawiony. Następnie **przerwania** kończy bieżący proces i zwraca kod zakończenia do procesu nadrzędnego.
+**przerwanie** nie zwraca kontroli do procesu wywołującego. Domyślnie sprawdza obsługę sygnałów przerwania i wywołuje `SIGABRT` , czy jest ustawiona. Następnie **Przerwij przerywa** bieżący proces i zwraca kod zakończenia do procesu nadrzędnego.
 
 ## <a name="remarks"></a>Uwagi
 
 **Specyficzne dla firmy Microsoft**
 
-Domyślnie, gdy aplikacja jest zbudowana z biblioteki wykonawczej debugowania, `SIGABRT` procedura **przerwania** wyświetla komunikat o błędzie przed wywoływaniem. W przypadku aplikacji konsoli działających w trybie konsoli wiadomość jest wysyłana do . `STDERR` Aplikacje klasyczne systemu Windows i aplikacje konsoli działające w trybie okienkowym wyświetlają komunikat w oknie komunikatu. Aby pominąć wiadomość, użyj [_set_abort_behavior,](set-abort-behavior.md) `_WRITE_ABORT_MSG` aby wyczyścić flagę. Wyświetlany komunikat zależy od wersji używanego środowiska wykonawczego. W przypadku aplikacji utworzonych przy użyciu najnowszych wersji programu Visual C++komunikat przypomina następującą następującą:
+Domyślnie, gdy aplikacja jest skompilowana przy użyciu biblioteki środowiska uruchomieniowego debugowania, procedura **Abort** wyświetla komunikat o błędzie przed `SIGABRT` podniesieniem. W przypadku aplikacji konsolowych działających w trybie konsoli komunikat jest wysyłany `STDERR`do. Aplikacje klasyczne systemu Windows i aplikacje konsolowe działające w trybie okienkowym wyświetlają komunikat w oknie komunikatu. Aby pominąć komunikat, użyj [_set_abort_behavior](set-abort-behavior.md) , aby wyczyścić `_WRITE_ABORT_MSG` flagę. Wyświetlany komunikat zależy od używanej wersji środowiska uruchomieniowego. W przypadku aplikacji utworzonych przy użyciu najnowszych wersji Visual C++ komunikat jest podobny do następującego:
 
-> R6010 - abort() został nazwany
+> R6010-Abort () został wywołany
 
-W poprzednich wersjach biblioteki wykonawczej języka C wyświetlany był ten komunikat:
+W poprzednich wersjach biblioteki środowiska uruchomieniowego języka C zostanie wyświetlony następujący komunikat:
 
-> Ta aplikacja zażądała środowiska wykonawczego, aby zakończyć go w nietypowy sposób. Aby uzyskać więcej informacji, skontaktuj się z zespołem pomocy technicznej aplikacji.
+> Ta aplikacja zażądała uruchomienia środowiska uruchomieniowego w nietypowy sposób. Aby uzyskać więcej informacji, skontaktuj się z zespołem pomocy technicznej aplikacji.
 
-Gdy program jest kompilowany w trybie debugowania, w oknie komunikatu są wyświetlane opcje **Przerwania,** **Ponów próbę**lub **Ignoruj**. Jeśli użytkownik wybierze **abort,** program kończy się natychmiast i zwraca kod zakończenia 3. Jeśli użytkownik wybierze **ponów próbę,** debuger jest wywoływany do debugowania just-in-time, jeśli jest dostępny. Jeśli użytkownik wybierze **opcję Ignoruj,** **przerwanie** kontynuuje normalne przetwarzanie.
+Gdy program jest kompilowany w trybie debugowania, w oknie komunikatu są wyświetlane opcje **przerwania**, **ponawiania**lub **ignorowania**. Jeśli użytkownik wybierze przycisk **Przerwij**, program zakończy działanie natychmiast i zwróci kod zakończenia 3. Jeśli użytkownik wybierze pozycję **Ponów próbę**, debuger jest wywoływany dla debugowania just-in-Time, jeśli jest dostępny. Jeśli użytkownik wybierze opcję **Ignoruj**, **przerwanie** kontynuuje normalne przetwarzanie.
 
-W kompilacjach zarówno detalicznych, jak i debugowania **przerwać** następnie sprawdza, czy program obsługi sygnału przerwania jest ustawiony. Jeśli ustawiono nieobe domyślny program `raise(SIGABRT)`obsługi sygnału, **przerwanie** wywołania . Użyj funkcji [sygnału,](signal.md) aby skojarzyć `SIGABRT` funkcję obsługi sygnału przerwania z sygnałem. Można wykonać akcje niestandardowe — na przykład oczyścić zasoby lub informacje dziennika — i zakończyć aplikację za pomocą własnego kodu błędu w funkcji obsługi. Jeśli nie zdefiniowano niestandardowego obsługi sygnału, **przerwanie** nie podnosi sygnału. `SIGABRT`
+W przypadku kompilacji detalicznych i debugowania, **Przerwij** następnie sprawdza, czy ustawiono procedurę obsługi sygnałów przerwania. Jeśli ustawiono program obsługi sygnałów inny niż domyślny, **przerywaj** wywołania `raise(SIGABRT)`. Za pomocą funkcji [sygnału](signal.md) Skojarz funkcję obsługi sygnałów przerwania z `SIGABRT` sygnałem. Możesz wykonywać niestandardowe akcje — na przykład czyścić zasoby lub rejestrować informacje, a także kończyć aplikację przy użyciu własnego kodu błędu w funkcji obsługi. Jeśli nie zdefiniowano niestandardowego programu obsługi sygnałów, Metoda **Abort** nie podnosi `SIGABRT` sygnału.
 
-Domyślnie w kompilacjach innych niż debugowanie aplikacji klasycznych lub konsoli **przerwać** następnie wywołuje mechanizm raportowania błędów systemu Windows (dawniej znany jako Dr Watson) do zgłaszania błędów do firmy Microsoft. To zachowanie można włączyć lub `_set_abort_behavior` wyłączyć, wywołując i `_CALL_REPORTFAULT` ustawiając lub maskując flagę. Gdy flaga jest ustawiona, system Windows wyświetla okno komunikatu z tekstem o treści "Problem spowodował, że program przestał działać poprawnie". Użytkownik może wywołać debuger za pomocą przycisku **debugowania** lub wybrać przycisk **Zamknij program,** aby zakończyć aplikację kodem błędu zdefiniowanym przez system operacyjny.
+Domyślnie, w kompilacjach niedebugowanych aplikacji klasycznych lub konsolowych, **Abort** , a następnie wywołuje mechanizm usługi Raportowanie błędów systemu Windows (wcześniej znany jako Dr Watson), aby zgłosić błędy do firmy Microsoft. To zachowanie można włączyć lub wyłączyć przez wywołanie `_set_abort_behavior` i ustawienie lub maskowanie `_CALL_REPORTFAULT` flagi. Gdy flaga jest ustawiona, system Windows wyświetla okno komunikatu z tekstem podobnym do "A problem spowodował, że program przestanie prawidłowo działać". Użytkownik może wybrać opcję wywołania debugera za pomocą przycisku **Debuguj** lub wybrać przycisk **Zamknij program** , aby zakończyć aplikację z kodem błędu zdefiniowanym przez system operacyjny.
 
-Jeśli program obsługi raportowania błędów systemu Windows nie jest wywoływany, a następnie **przerwać** wywołania [_exit,](exit-exit-exit.md) aby zakończyć proces z kodem zakończenia 3 i zwraca kontrolę do procesu nadrzędnego lub systemu operacyjnego. `_exit`nie opróżnia buforów `atexit` / `_onexit` strumienia ani nie przetwarza.
+Jeśli program obsługi raportowania błędów systemu Windows nie zostanie wywołany, należy **przerwać** wywołania [_exit](exit-exit-exit.md) , aby zakończyć proces z kodem zakończenia 3 i zwraca kontrolę do procesu nadrzędnego lub systemu operacyjnego. `_exit`nie opróżnia buforów strumieni ani nie `atexit` / `_onexit` przetwarza.
 
-Aby uzyskać więcej informacji na temat debugowania CRT, zobacz [Techniki debugowania CRT](/visualstudio/debugger/crt-debugging-techniques).
+Aby uzyskać więcej informacji na temat debugowania CRT, zobacz [techniki debugowania CRT](/visualstudio/debugger/crt-debugging-techniques).
 
-**Koniec z programem Microsoft**
+**Zakończenie określonych przez firmę Microsoft**
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**Przerwać**|\<> lub \<>|
+|**Anuluj**|\<Process. h> lub \<STDLIB. h>|
 
 ## <a name="example"></a>Przykład
 
-Poniższy program próbuje otworzyć plik i przerywa, jeśli próba nie powiedzie się.
+Następujący program próbuje otworzyć plik i przerywa, jeśli próba nie powiedzie się.
 
 ```C
 // crt_abort.c
@@ -122,12 +122,12 @@ File could not be opened: No such file or directory
 ## <a name="see-also"></a>Zobacz też
 
 [Użycie przerywania](../../cpp/using-abort.md)<br/>
-[funkcja przerwania](../../c-language/abort-function-c.md)<br/>
-[Kontrola procesu i środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Abort — funkcja](../../c-language/abort-function-c.md)<br/>
+[Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec, funkcje _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [wywołaj](raise.md)<br/>
 [sygnał](signal.md)<br/>
 [_spawn, _wspawn, funkcje](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
-[_debug](../../c-runtime-library/debug.md)<br/>
+[_DEBUG](../../c-runtime-library/debug.md)<br/>
 [_set_abort_behavior](set-abort-behavior.md)
