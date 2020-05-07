@@ -31,7 +31,7 @@ Istnieją trzy sposoby wdrażania wersji debugowania bibliotek DLL bibliotek Vis
 
 Po zainstalowaniu bibliotek DLL Visual C++ można uruchomić zdalny debuger w udziale sieciowym. Aby uzyskać więcej informacji na temat debugowania zdalnego, zobacz [zdalne debugowanie](/visualstudio/debugger/remote-debugging).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wdrożenie w Visual C++](deployment-in-visual-cpp.md)<br>
 [Opcje wiersza polecenia Instalator Windows](/windows/win32/Msi/command-line-options)<br>
