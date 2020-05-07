@@ -25,7 +25,7 @@ Instrukcje języka C składają się z tokenów, wyrażeń i innych instrukcji. 
 
 [instrukcja złożona](../c-language/compound-statement-c.md)
 
-[expression-statement](../c-language/expression-statement-c.md)
+[Expression — instrukcja](../c-language/expression-statement-c.md)
 
 [SELECT — instrukcja](../c-language/if-statement-c.md)
 
@@ -33,16 +33,16 @@ Instrukcje języka C składają się z tokenów, wyrażeń i innych instrukcji. 
 
 [skoku — instrukcja](../c-language/break-statement-c.md)
 
-[try-except-Statement](../c-language/try-except-statement-c.md) /* \*specyficzne dla firmy Microsoft /
+[try-except-Statement](../c-language/try-except-statement-c.md) /* specyficzne dla firmy Microsoft\*/
 
-[try-finally-statement](../c-language/try-finally-statement-c.md) /\* specyficzne dla firmy Microsoft \*/
+[Wypróbuj instrukcję](../c-language/try-finally-statement-c.md)  / \* finally dla firmy Microsoft\*/
 
-Często treść instrukcji to "złożona instrukcja". Złożona instrukcja składa się z innych instrukcji, które mogą zawierać słowa kluczowe. Złożona instrukcja jest rozdzielana nawiasami klamrowymi ( **{}** ). Wszystkie inne instrukcje języka C kończą się średnikiem ( **;** ). Średnik jest terminatorem instrukcji.
+Często treść instrukcji to "złożona instrukcja". Złożona instrukcja składa się z innych instrukcji, które mogą zawierać słowa kluczowe. Złożona instrukcja jest rozdzielana nawiasami klamrowymi (**{}**). Wszystkie inne instrukcje języka C kończą się średnikiem (**;**). Średnik jest terminatorem instrukcji.
 
 Instrukcja Expression zawiera wyrażenie C, które może zawierać operatory arytmetyczne lub logiczne wprowadzone w [wyrażeniach i przypisaniach](../c-language/expressions-and-assignments.md). Instrukcja o wartości null jest pustą instrukcją.
 
-Każda instrukcja języka C może rozpoczynać się od etykiety identyfikującej składającej się z nazwy i dwukropka. Ponieważ tylko instrukcja `goto` rozpoznaje etykiety instrukcji, etykiety instrukcji są omawiane z `goto`. Aby uzyskać więcej informacji [, zobacz instrukcje goto i labeled](../c-language/goto-and-labeled-statements-c.md) .
+Każda instrukcja języka C może rozpoczynać się od etykiety identyfikującej składającej się z nazwy i dwukropka. Ponieważ tylko `goto` instrukcja rozpoznaje etykiety instrukcji, etykiety instrukcji są omawiane z `goto`. Aby uzyskać więcej informacji [, zobacz instrukcje goto i labeled](../c-language/goto-and-labeled-statements-c.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instrukcje](../c-language/statements-c.md)

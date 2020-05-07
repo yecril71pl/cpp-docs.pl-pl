@@ -21,33 +21,33 @@ ms.locfileid: "62234933"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>Specyfikatory typu danych i odpowiedniki
 
-Ten podręcznik ogólnie używa formy specyfikatory typów wymienionych w poniższej tabeli, a nie długich formularzy, a założono, że `char` typ ma znak domyślnie. W związku z tym, w tym podręczniku `char` jest odpowiednikiem **podpisany char**.
+Ta książka zazwyczaj używa formularzy specyfikatorów typu wymienionych w poniższej tabeli, a nie w postaci długich, i zakłada, że `char` typ jest podpisany domyślnie. W związku z tym, w `char` tej książce, jest równoznaczny z **podpisem znaku**.
 
-### <a name="type-specifiers-and-equivalents"></a>Specyfikatory typu i odpowiedniki
+### <a name="type-specifiers-and-equivalents"></a>Specyfikatory typów i równoważne
 
-|Specyfikator typu|Taryfowego(-ych)|
+|Specyfikator typu|Równoważne|
 |--------------------|---------------------|
-|**podpisany char**1|**char**|
-|**int podpisem**|**podpisana**, **int**|
-|**podpisana krótka wartość całkowita**|**krótki**, **short ze znakiem**|
-|**podpisana long int**|**długi**, **podpisany długo**|
+|**znak znaku**1|**char**|
+|**Liczba cyfr ze znakiem**|ze **znakiem**, **int**|
+|**podpisana krótka liczba całkowita**|**krótkie**, **podpisane krótkie**|
+|**podpisana long int**|**długa**, **niepodpisana** cyfra|
 |**unsigned char**|—|
-|**unsigned int**|**Bez znaku**|
-|**niepodpisane krótka wartość całkowita**|**short bez znaku**|
+|**unsigned int**|**bajt**|
+|**unsigned short int**|**unsigned short**|
 |**unsigned long int**|**unsigned long**|
 |**float**|—|
-|**double**2|—|
+|**Long Double**2|—|
 
-1 po ustawieniu **char** typ bez znaku domyślnie (określając opcję kompilatora/j.), nie można skrócić **podpisany char** jako **char**.
+1 Jeśli typ **znaku** jest domyślnie oznaczony jako niepodpisany (przez określenie opcji kompilatora/j), nie można skrócić znaku **podpisanego char** jako **char**.
 
-2 w 32-bitowych i 64-bitowych systemów operacyjnych, kompilator Microsoft C: mapuje **typu long double** na typ **double**.
+2 w 32-bitowych i 64-bitowych systemach operacyjnych kompilator języka Microsoft C mapuje na **dużą** wartość typu **Double**.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Można określić opcję kompilatora/j., aby zmienić domyślny **char** typu z podpisem do bez znaku. Gdy ta opcja jest aktywna, **char** oznacza taki sam jak **unsigned char**, musisz użyć **podpisany** — słowo kluczowe do deklarowania wartość podpisany znak. Jeśli **char** wartość jest zadeklarowany w sposób jawny podpisem, opcją/j. nie ma wpływu na jego i wartość jest rozszerzona o znak po rozszerzone do **int** typu. **Char** typ to zero rozszerzone podczas rozszerzone do **int** typu.
+Można określić opcje kompilatora/J, aby zmienić domyślny typ **char** z podpisane na unsigned. Gdy ta opcja jest stosowana, **znak** oznacza takie samo jak **znak bez znaku**i należy użyć **podpisanego** słowa kluczowego, aby zadeklarować wartość znaku ze znakiem. Jeśli wartość **char** jest jawnie zadeklarowana jako podpisana, nie ma ona wpływu na tę opcję, a wartość jest podpisywana po rozszerzeniu na typ **int** . Typ **char** jest przedłużony o zero, gdy rozszerzany na typ **int** .
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Specyfikatory typu C](../c-language/c-type-specifiers.md)

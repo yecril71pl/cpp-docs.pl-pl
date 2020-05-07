@@ -1,5 +1,5 @@
 ---
-title: Inicjalizacja
+title: Inicjowanie
 ms.date: 11/04/2016
 helpviewer_keywords:
 - initializers, variable
@@ -14,12 +14,12 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62232908"
 ---
-# <a name="initialization"></a>Inicjalizacja
+# <a name="initialization"></a>Inicjowanie
 
-"Inicjatora" jest wartością lub sekwencja wartości do przypisania do zmiennej deklarowanej. Zmienną można ustawić na wartość początkową, stosując inicjatora specyfikator w deklaracji zmiennej. Wartość lub wartości inicjatora są przypisywane do zmiennej.
+"Inicjator" jest wartością lub sekwencją wartości, które mają być przypisane do zadeklarowanej zmiennej. Można ustawić zmienną na wartość początkową, stosując inicjator do deklarator w deklaracji zmiennej. Wartość lub wartości inicjatora są przypisywane do zmiennej.
 
-W poniższych sekcjach opisano sposób inicjowania zmiennych [skalarne](../c-language/initializing-scalar-types.md), [agregacji](../c-language/initializing-aggregate-types.md), i [ciąg](../c-language/initializing-strings.md) typów. "Typów skalarnych" te obejmują wszystkie typy arytmetyczne oraz wskaźników. "Typy agregacji" to tablice, struktur i Unii.
+W poniższych sekcjach opisano sposób inicjowania zmiennych typów [skalarnych](../c-language/initializing-scalar-types.md), [agregacji](../c-language/initializing-aggregate-types.md)i [ciągów](../c-language/initializing-strings.md) . "Typy skalarne" obejmują wszystkie typy arytmetyczne oraz wskaźniki. "Typy agregacji" obejmują tablice, struktury i związki.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje i typy](../c-language/declarations-and-types.md)

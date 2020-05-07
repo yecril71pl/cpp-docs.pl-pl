@@ -17,14 +17,14 @@ ms.locfileid: "62232276"
 ---
 # <a name="punctuation-and-special-characters"></a>Interpunkcja i znaki specjalne
 
-Interpunkcja i znaki specjalne w zestawie znaków C ma różne przypadki z tekstu do definiowania zadań, które kompilator lub skompilowany program przeprowadza organizowania. Nie należy określać operacji do wykonania. Niektóre znaki interpunkcyjne, są również operatorów (zobacz [operatory](../c-language/c-operators.md)). Kompilator określa ich użycie z kontekstu.
+Znaki interpunkcyjne i specjalne w zestawie znaków C mają różne zastosowania, od porządkowania tekstu programu do definiowania zadań wykonywanych przez kompilator lub skompilowany program. Nie określają operacji do wykonania. Niektóre symbole interpunkcyjne są również operatorami (zobacz [Operatory](../c-language/c-operators.md)). Kompilator określa ich użycie z kontekstu.
 
 ## <a name="syntax"></a>Składnia
 
 `punctuator`: jeden z **() [] {} \* ,: =;   ... #**
 
-Następujące znaki mają specjalne znaczenie w C. W tym podręczniku opisano ich zastosowań. Kratki (**#**) może wystąpić tylko w [dyrektywy przetwarzania wstępnego](../preprocessor/preprocessor-directives.md).
+Te znaki mają specjalne znaczenie w C. Ich zastosowania zostały opisane w tym podręczniku. Znak funta (**#**) może wystąpić tylko w [dyrektywach przetwarzania wstępnego](../preprocessor/preprocessor-directives.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Elementy języka C](../c-language/elements-of-c.md)

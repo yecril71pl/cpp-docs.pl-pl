@@ -11,9 +11,9 @@ ms.locfileid: "62157893"
 ---
 # <a name="storage-of-bit-fields"></a>Magazynowanie pól bitowych
 
-**ANSI 3.5.2.1** kolejność alokacji pól bitowych w ramach int
+**3.5.2.1 ANSI** Kolejność alokacji pól bitowych w ramach int
 
-Pola bitowe są przydzielane w ramach całkowitą od najmniej znaczącego najbardziej znaczący bit. W poniższym kodzie
+Pola bitowe są przypisywane w postaci liczby całkowitej od najmniej znaczącej do najbardziej znaczącego bitu. W poniższym kodzie
 
 ```
 struct mybitfields
@@ -31,15 +31,15 @@ int main( void )
 }
 ```
 
-bity mogłoby być ułożone w następujący sposób:
+bity można rozmieścić w następujący sposób:
 
 ```
 00000001 11110010
 cccccccb bbbbaaaa
 ```
 
-Ponieważ procesorów 80 x 86 przechowywać bajcie liczb całkowitych, przed bajcie, liczba całkowita 0x01F2 powyższych powinny być przechowywane w pamięci fizycznej jako 0xF2 następuje 0x01.
+Ponieważ procesory 80x86 przechowują niską liczbę wartości całkowitych przed bajtem, liczba całkowita 0x01F2 powyżej byłaby przechowywana w pamięci fizycznej jako 0xF2, a po nim 0x01.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Struktury, złożenia, wyliczenia i pola bitowe](../c-language/structures-unions-enumerations-and-bit-fields.md)

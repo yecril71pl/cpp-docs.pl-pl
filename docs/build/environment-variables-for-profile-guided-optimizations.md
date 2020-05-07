@@ -13,62 +13,62 @@ ms.locfileid: "62195276"
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>Zmienne środowiskowe dla optymalizacji sterowanych profilem
 
-Istnieją trzy zmienne środowiskowe, które wpływają na scenariusze testów na obrazie, który został utworzony za pomocą **/LTCG:PGI** dla sterowanych profilem:
+Istnieją trzy zmienne środowiskowe, które mają wpływ na scenariusze testowe w obrazie utworzonym za pomocą **/LTCG: PGI** dla optymalizacji profilowanej:
 
-- **PogoSafeMode** Określa, czy ma być używany tryb szybki czy tryb awaryjny profilowania aplikacji.
+- **PogoSafeMode** określa, czy należy używać trybu szybkiego czy bezpiecznego dla profilowania aplikacji.
 
-- **Vcprofile_alloc_scale —** dodaje dodatkową pamięć do wykorzystania przez profiler.
+- **VCPROFILE_ALLOC_SCALE** dodaje dodatkową pamięć do użycia przez profiler.
 
-- **Vcprofile_path —** umożliwia określenie folderu przeznaczonego dla plików PGC.
+- **VCPROFILE_PATH** umożliwia określenie folderu używanego dla plików. pgc.
 
-**Zmienne środowiskowe PogoSafeMode i vcprofile_alloc_scale — są przestarzałe, począwszy od programu Visual Studio 2015.** Opcje konsolidatora [przełączników/genprofile i/fastgenprofile](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) i [/USEPROFILE](reference/useprofile.md) określają jednakowe zachowanie konsolidatora jako zmienne środowiskowe.
+**Zmienne środowiskowe PogoSafeMode i VCPROFILE_ALLOC_SCALE są przestarzałe, począwszy od programu Visual Studio 2015.** Opcje konsolidatora [/GENPROFILE lub/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) i [/USEPROFILE](reference/useprofile.md) określają takie samo zachowanie konsolidatora jak te zmienne środowiskowe.
 
 ## <a name="pogosafemode"></a>PogoSafeMode
 
-Ta zmienna środowiskowa jest przestarzały. Użyj **EXACT** lub **NOEXACT** argumenty **przełączników/genprofile** lub **/fastgenprofile** do sterowania tym zachowaniem.
+Ta zmienna środowiskowa jest przestarzała. Aby kontrolować to zachowanie, należy użyć argumentów **dokładnie** lub **noexact** do **/GENPROFILE** lub **/FASTGENPROFILE** .
 
-Usuń zaznaczenie lub ustaw **PogoSafeMode** zmiennej środowiskowej, aby określić, czy ma być używany tryb szybki czy tryb awaryjny profilowania aplikacji na x86 systemów.
+Wyczyść lub Ustaw zmienną środowiskową **PogoSafeMode** , aby określić, czy ma być używany tryb szybki czy bezpieczny dla profilowania aplikacji w systemach x86.
 
-Profilowana Optymalizacja (PGO) ma dwa możliwe tryby podczas fazy profilowania: *trybie szybkim* i *tryb awaryjny*. Gdy profilowanie odbywa się w trybie szybkim, wykorzystuje **INC** instrukcji, aby zwiększyć liczniki danych. **INC** instrukcji jest szybsze, ale nie jest metodą o bezpiecznych wątkach. Gdy profilowanie odbywa się w trybie bezpiecznym, wykorzystuje **INC blokady** instrukcji, aby zwiększyć liczniki danych. **INC blokady** instrukcji ma taką samą funkcjonalność jak **INC** instrukcji ma i jest bezpieczna dla wątków, ale wolniejsza niż **INC** instrukcji.
+Optymalizacja oparta na profilach (PGO) ma dwa możliwe tryby w fazie profilowania: *Tryb szybki* i *tryb bezpieczny*. Gdy profilowanie jest w trybie szybkim, używa instrukcji **Inc** , aby zwiększyć liczniki danych. Instrukcje dla programu **Inc** są szybsze, ale nie są bezpieczne dla wątków. Gdy profilowanie odbywa się w trybie awaryjnym, używa instrukcji **Lock Inc** , aby zwiększyć liczniki danych. Instrukcja **Lock Inc** ma takie same funkcje, jak instrukcja **Inc** , i jest bezpieczna wątkowo, ale jest wolniejsza niż instrukcja **Inc** .
 
-Domyślnie profilowanie PGO działa w trybie szybkim. **PogoSafeMode** jest wymagany tylko, jeśli chcesz użyć trybu awaryjnego.
+Domyślnie profilowanie PGO działa w trybie szybkim. **PogoSafeMode** jest wymagany tylko wtedy, gdy chcesz używać trybu awaryjnego.
 
-Aby uruchomić profilowanie PGO w trybie awaryjnym, należy użyć zmiennej środowiskowej **PogoSafeMode** lub przełącznika konsolidatora **/PogoSafeMode**, w zależności od systemu. Jeśli przeprowadzasz profilowanie na x64 komputera, musisz użyć przełącznika konsolidatora. Jeśli przeprowadzasz profilowanie na x86 komputera, możesz użyć konsolidatora przełączyć lub ustaw **PogoSafeMode** zmienną środowiskową na dowolną wartość przed rozpoczęciem procesu optymalizacji.
+Aby uruchomić profilowanie PGO w trybie awaryjnym, należy użyć zmiennej środowiskowej **PogoSafeMode** lub przełącznika konsolidatora **/PogoSafeMode**, w zależności od systemu. Jeśli przeprowadzasz profilowanie na komputerze z architekturą x64, musisz użyć przełącznika konsolidatora. Jeśli przeprowadzasz profilowanie na komputerze z procesorem x86, możesz użyć przełącznika konsolidatora lub ustawić zmienną środowiskową **PogoSafeMode** na dowolną wartość przed rozpoczęciem procesu optymalizacji.
 
 ### <a name="pogosafemode-syntax"></a>Składnia PogoSafeMode
 
-> **set PogoSafeMode**[**=**_value_]
+> **Set PogoSafeMode**[**=**_Value_]
 
-Ustaw **PogoSafeMode** do każdej wartości, aby włączyć tryb awaryjny. Ustaw bez wartości, aby usunąć poprzednią wartość i ponownie włączyć tryb szybki.
+Ustaw **PogoSafeMode** na dowolną wartość, aby włączyć tryb awaryjny. Ustaw bez wartości, aby wyczyścić poprzednią wartość i ponownie włączyć tryb szybki.
 
-## <a name="vcprofileallocscale"></a>VCPROFILE_ALLOC_SCALE
+## <a name="vcprofile_alloc_scale"></a>VCPROFILE_ALLOC_SCALE
 
-Ta zmienna środowiskowa jest przestarzały. Użyj **MEMMIN** i **MEMMAX** argumenty **przełączników/genprofile** lub **/fastgenprofile** do sterowania tym zachowaniem.
+Ta zmienna środowiskowa jest przestarzała. Aby kontrolować to zachowanie, użyj argumentów **MEMMIN** i **MEMMAX** do **/GENPROFILE** lub **/FASTGENPROFILE** .
 
-Modyfikowanie **vcprofile_alloc_scale —** zmiennej środowiskowej, aby zmienić ilość pamięci przydzielona do przechowywania danych profilu. W rzadkich przypadkach, nie będzie wystarczającej ilości pamięci do obsługi zbieranie danych profilu, podczas uruchamiania scenariuszy testowania. W takich przypadkach można zwiększyć ilość pamięci, ustawiając **vcprofile_alloc_scale —**. Jeśli zostanie wyświetlony komunikat o błędzie podczas przebiegu testu, która wskazuje, że masz za mało pamięci, należy przypisać większej wartości do **vcprofile_alloc_scale —**, dopóki test uruchomiony ukończone bez błędów braku pamięci.
+Zmodyfikuj zmienną środowiskową **VCPROFILE_ALLOC_SCALE** , aby zmienić ilość pamięci przydzieloną w celu przechowywania danych profilu. W rzadkich przypadkach nie będzie dostępna wystarczająca ilość pamięci do obsługi gromadzenia danych profilu podczas wykonywania scenariuszy testowych. W takich przypadkach można zwiększyć ilość pamięci przez ustawienie **VCPROFILE_ALLOC_SCALE**. Jeśli podczas przebiegu testowego zostanie wyświetlony komunikat o błędzie informujący o braku wystarczającej ilości pamięci, należy przypisać większą wartość do **VCPROFILE_ALLOC_SCALE**, do momentu zakończenia testu bez błędów braku pamięci.
 
-### <a name="vcprofileallocscale-syntax"></a>Vcprofile_alloc_scale — Składnia
+### <a name="vcprofile_alloc_scale-syntax"></a>Składnia VCPROFILE_ALLOC_SCALE
 
-> **set VCPROFILE_ALLOC_SCALE**[__=__*scale_value*]
+> **Ustawianie VCPROFILE_ALLOC_SCALE**[__=__*scale_value*]
 
-*Scale_value* parametr jest współczynnik skalowania ilości pamięci do uruchamiania scenariuszy testowania.  Domyślnym ustawieniem jest 1. Na przykład ten wiersz polecenia ustawia współczynnik skali do 2:
+Parametr *scale_value* to współczynnik skalowania ilości pamięci, która ma być używana w scenariuszach testowych.  Domyślnym ustawieniem jest 1. Na przykład ten wiersz polecenia ustawia współczynnik skalowania na 2:
 
 `set VCPROFILE_ALLOC_SCALE=2`
 
-## <a name="vcprofilepath"></a>VCPROFILE_PATH
+## <a name="vcprofile_path"></a>VCPROFILE_PATH
 
-Użyj **vcprofile_path jest** zmiennej środowiskowej, aby określić katalog, aby utworzyć pliki .pgc. Domyślnie pliki .pgc są tworzone w tym samym katalogu co plik binarny, poddawanego profilowaniu. Natomiast jeśli ścieżka bezwzględna pliku binarnego nie istnieje, ponieważ może występować w przypadku uruchamiania scenariuszy profilu na innym komputerze, z której został utworzony plik binarny, możesz ustawić **vcprofile_path jest** do ścieżki, która istnieje na komputerze docelowym.
+Użyj zmiennej środowiskowej **VCPROFILE_PATH** , aby określić katalog do tworzenia plików. pgc. Domyślnie pliki. pgc są tworzone w tym samym katalogu co plik binarny, który jest profilowany. Jednakże jeśli ścieżka bezwzględna pliku binarnego nie istnieje, tak jak w przypadku uruchamiania scenariuszy profilu na innym komputerze, na którym został skompilowany plik binarny, można ustawić **VCPROFILE_PATH** na ścieżkę, która istnieje na maszynie docelowej.
 
-### <a name="vcprofilepath-syntax"></a>Vcprofile_path — Składnia
+### <a name="vcprofile_path-syntax"></a>Składnia VCPROFILE_PATH
 
-> **Ustaw vcprofile_path jest**[**=**_ścieżki_]
+> **Ustawianie VCPROFILE_PATH**[**=**_ścieżka_]
 
-Ustaw *ścieżki* parametru, aby ścieżka katalogu, w którym można dodać pliki .pgc. Na przykład ten wiersz polecenia ustawia C:\profile folder:
+Ustaw parametr *Path* na ścieżkę katalogu, w której chcesz dodać pliki. pgc. Na przykład ten wiersz polecenia ustawia folder na C:\Profile:
 
 `set VCPROFILE_PATH=c:\profile`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Optymalizacje sterowane profilem](profile-guided-optimizations.md)<br/>
-[/ GENPROFILE i/fastgenprofile](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
+[/GENPROFILE i/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/USEPROFILE](reference/useprofile.md)<br/>

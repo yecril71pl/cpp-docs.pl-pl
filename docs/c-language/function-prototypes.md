@@ -22,29 +22,29 @@ Deklaracja funkcji poprzedza definicję funkcji i określa nazwę, typ zwracany,
 ## <a name="syntax"></a>Składnia
 
 *Deklaracja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;atrybut *-specyfikatory deklaracji* *-SEQ*<sub>opt</sub> *init-deklarator-list*<sub>opt</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja-specyfikators* *-SEQ*<sub>opt</sub> *init-deklarator-list*<sub>opt</sub> **;**
 
-atrybut \* / *-SEQ*<sub>opt</sub> to specyficzny dla firmy Microsoft \*/
+/\**atrybut-seq*<sub>opt</sub> to specyficzny dla firmy Microsoft\*/
 
 *specyfikatory deklaracji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<sub></sub> *specyfikatora klasy magazynu* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<sub></sub> *specyfikatora typu* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<sub></sub> *kwalifikatora typu*
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja* *specyfikatora klasy magazynu* —<sub>wybór</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *specyfikatora typu* *— wybór specyfikatorów*<sub>opt</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *kwalifikatora typu* *— wybór specyfikatorów*<sub>opt</sub>
 
-*init-declarator-list*:<br/>
+*init-deklarator-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*init-deklarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-deklarator-list* **,** *init-deklarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*init-deklarator-list*  **,**  *init-deklarator*
 
-*init-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator* **=**
+*init-deklarator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Deklarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *inicjator* deklarator
 
 *deklarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;deklarator *wskaźnika*"<sub>opt</sub> *Direct-"*
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>wybór</sub> wskaźnika *Direct-deklarator*
 
-*Direct-deklarator*:/\* deklarator funkcji \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **(** *listy parametrów typu* **)**   / \* deklaratora nowy styl \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **(** *listy identyfikatorów*<sub>zoptymalizowany pod kątem</sub> **)**  / \* Obsolete stylu deklarator \*/
+*Direct-deklarator*:/\* A funkcja deklarator\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(***Typ parametru-list***)**   / \* New-Style deklarator      \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(** nieważność*listy identyfikatorów*<sub>opt</sub> **)**  / \* — przestarzałe style deklarator    \*/
 
 Prototyp ma ten sam formularz, który jest definicją funkcji, z tą różnicą, że jest zakończony średnikiem bezpośrednio po nawiasie zamykającym i w związku z tym nie ma treści. W obu przypadkach typ zwracany musi zgadzać się z typem zwracanym określonym w definicji funkcji.
 
@@ -62,7 +62,7 @@ Przekonwertowany typ każdego parametru określa interpretację argumentów wywo
 
 Prototyp tworzy atrybuty funkcji tak, aby wywołania funkcji, która poprzedza jej definicję (lub wystąpią w innych plikach źródłowych), można sprawdzić pod kątem typu argumentu i niezgodności typów zwracanych. Na przykład, jeśli określisz **statyczny** specyfikator klasy magazynu w prototypie, należy również określić klasę magazynu **statycznego** w definicji funkcji.
 
-Kompletne deklaracje parametrów (`int a`) można mieszać z abstrakcyjną Deklaratory (`int`) w tej samej deklaracji. Na przykład następująca deklaracja ma charakter prawny:
+Kompletne deklaracje parametrów`int a`() mogą być mieszane z abstrakcyjną`int`Deklaratory () w tej samej deklaracji. Na przykład następująca deklaracja ma charakter prawny:
 
 ```C
 int add( int a, int );
@@ -85,6 +85,6 @@ void func1( struct S * );
 
 W obszarze **/ze**tag nadal jest wprowadzany w zakresie globalnym.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje](../c-language/functions-c.md)

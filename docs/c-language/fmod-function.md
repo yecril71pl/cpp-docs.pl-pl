@@ -13,10 +13,10 @@ ms.locfileid: "62233574"
 ---
 # <a name="fmod-function"></a>fmod — funkcja
 
-**ANSI 4.5.6.4** wystąpi błąd domeny czy zwracany jest zero, kiedy `fmod` funkcji jest drugi argument o wartości zero
+**4.5.6.4 ANSI** Określa, czy występuje błąd domeny, czy zwracana jest wartość `fmod` zero, gdy funkcja ma drugi argument zero
 
-Gdy `fmod` funkcji jest drugi argument o wartości zero, funkcja zwraca wartość zero.
+Gdy `fmod` funkcja ma drugi argument zero, funkcja zwraca wartość zero.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

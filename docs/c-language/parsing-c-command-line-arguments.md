@@ -17,23 +17,23 @@ ms.locfileid: "75299094"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analizowanie argumentów wiersza polecenia języka C
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Kod uruchamiania języka Microsoft C używa następujących reguł podczas interpretacji argumentów podanych w wierszu polecenia systemu operacyjnego:
 
 - Argumenty są rozdzielane znakami odstępu, który jest spacją lub tabulatorem.
 
-- Ciąg ujęty w znaki podwójnego cudzysłowu jest interpretowany jako pojedynczy argument, bez względu na biały znak zawarty w. Ciąg w cudzysłowie może być osadzony w argumencie. Należy zauważyć, że karetka ( **^** ) nie jest rozpoznawana jako znak ucieczki ani ogranicznik.
+- Ciąg ujęty w znaki podwójnego cudzysłowu jest interpretowany jako pojedynczy argument, bez względu na biały znak zawarty w. Ciąg w cudzysłowie może być osadzony w argumencie. Należy zauważyć, że karetka (**^**) nie jest rozpoznawana jako znak ucieczki ani ogranicznik.
 
-- Podwójny cudzysłów poprzedzony ukośnikiem odwrotnym, **\\"** , jest interpretowany jako literał podwójnego cudzysłowu ( **"** ).
+- Podwójny cudzysłów poprzedzony ukośnikiem odwrotnym ** \\"**, jest interpretowany jako literał podwójnego cudzysłowu (**"**).
 
 - Ukośniki odwrotne są interpretowane dosłownie, chyba że od razu poprzedzają podwójny cudzysłów.
 
-- Jeśli parzysta liczba kresek ułamkowych jest poprzedzona znakiem podwójnego cudzysłowu, to jeden ukośnik odwrotny ( **\\** ) jest umieszczany w tablicy `argv` dla każdej pary ukośników odwrotnych ( **\\\\** ) i podwójny cudzysłów ( **"** ) jest interpretowany jako ogranicznik ciągu.
+- Jeśli parzysta liczba kresek ułamkowych jest poprzedzona znakiem podwójnego cudzysłowu, to jeden ukośnik**\\**odwrotny () jest `argv` umieszczany w tablicy dla każdej pary ukośników**\\**odwrotnych (), a znak podwójnego cudzysłowu (**"**) jest interpretowany jako ogranicznik ciągu.
 
-- Jeśli po parzystej liczbie ukośników odwrotnych następuje znak podwójnego cudzysłowu, to jeden ukośnik odwrotny ( **\\** ) jest umieszczany w tablicy `argv` dla każdej pary ukośników odwrotnych ( **\\\\** ) i podwójny cudzysłów jest interpretowany jako sekwencja ucieczki przez resztę ukośnika odwrotnego ("), co powoduje umieszczenie literału podwójnego cudzysłowu ( **"** ) w `argv`.
+- Jeśli po parzystej liczbie ukośników odwrotnych następuje znak podwójnego cudzysłowu, to jeden ukośnik**\\**odwrotny () jest umieszczany w `argv` tablicy dla każdej pary ukośników odwrotnych (**\\**), a znak podwójnego cudzysłowu jest interpretowany jako sekwencja ucieczki przez pozostały ukośnik odwrotny, co powoduje umieszczenie literału podwójnego cudzysłowu (**"**). `argv`
 
-Na tej liście przedstawiono reguły opisane powyżej, pokazując interpretowany wynik przekazane do `argv` dla kilku przykładów argumentów wiersza polecenia. Dane wyjściowe wymienione w drugiej, trzeciej i czwartej kolumnie pochodzą z ARGUMENTÓW. Program C, który znajduje się na liście.
+Na tej liście przedstawiono reguły opisane powyżej, pokazując wynik interpretowany przekazane `argv` do kilku przykładów argumentów wiersza polecenia. Dane wyjściowe wymienione w drugiej, trzeciej i czwartej kolumnie pochodzą z ARGUMENTÓW. Program C, który znajduje się na liście.
 
 |Wprowadzanie w wierszu polecenia|argv [1]|argv [2]|argv [3]|
 |-------------------------|---------------|---------------|---------------|
@@ -45,7 +45,7 @@ Na tej liście przedstawiono reguły opisane powyżej, pokazując interpretowany
 
 ## <a name="example"></a>Przykład
 
-### <a name="code"></a>Kod
+### <a name="code"></a>Code
 
 ```c
 // Parsing_C_Commandline_args.c
@@ -97,6 +97,6 @@ Environment variables:
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcja main i wykonywanie programu](../c-language/main-function-and-program-execution.md)

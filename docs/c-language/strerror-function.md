@@ -13,7 +13,7 @@ ms.locfileid: "62157841"
 ---
 # <a name="strerror-function"></a>strerror — funkcja
 
-**ANSI 4.11.6.2** zawartość błąd komunikatów ciągów zwracanych przez `strerror` — funkcja
+**4.11.6.2 ANSI** Zawartość ciągów komunikatów o błędach zwracanych przez `strerror` funkcję
 
 `strerror` Funkcja generuje następujące komunikaty:
 
@@ -57,6 +57,6 @@ ms.locfileid: "62157841"
 36  Resource deadlock would occur
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

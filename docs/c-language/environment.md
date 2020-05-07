@@ -13,8 +13,8 @@ ms.locfileid: "62234039"
 
 - [Argumenty dla metody main](../c-language/arguments-to-main.md)
 
-- [Urządzenia interakcyjne](../c-language/interactive-devices.md)
+- [Urządzenia interaktywne](../c-language/interactive-devices.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)

@@ -14,15 +14,15 @@ ms.locfileid: "62233180"
 ---
 # <a name="inline-assembler-c"></a>Asembler wbudowany (C)
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Asembler wbudowany pozwala osadzić instrukcje języka asemblera bezpośrednio w programach źródłowych C bez dodatkowego zestawu i kroki łącza. Asembler wbudowany jest wbudowany w kompilator — nie ma potrzeby stosowania oddzielnego asemblera takich jak Microsoft Macro Assembler (MASM).
+Wbudowany asembler umożliwia osadzenie instrukcji języka asemblera bezpośrednio w programach źródłowych C bez dodatkowych kroków zestawu i łącza. Wbudowany asembler jest wbudowany w kompilator — nie potrzebujesz oddzielnego asemblera, takiego jak asembler programu Microsoft Macro (MASM).
 
-Ponieważ wbudowanego asemblera nie wymaga osobny zestaw i kroki łącze, jest bardziej wygodne niż stosowania oddzielnego asemblera. Wbudowany kod asemblera, można użyć dowolnego języka C nazwy zmiennej lub funkcji, która znajduje się w zakresie, dzięki czemu można łatwo ją zintegrować z kodu C programu. A ponieważ kodu zestawu mogą być mieszane w instrukcjach języka C, wykonania zadania, które są uciążliwe lub wręcz niemożliwe w języku C samodzielnie.
+Ponieważ wbudowany asembler nie wymaga oddzielnego zestawu i kroków łączy, jest bardziej wygodne niż oddzielny asembler. Wbudowany kod asemblera może używać dowolnej zmiennej języka C lub nazwy funkcji, która znajduje się w zakresie, dzięki czemu można łatwo zintegrować ją z kodem C programu. I ponieważ kod zestawu może być mieszany z instrukcjami języka C, można wykonywać zadania, które są nieskomplikowane lub niemożliwe w języku C.
 
-`__asm` — Słowo kluczowe wywoła asembler wbudowany i może znajdować się wszędzie tam, gdzie instrukcja C jest dozwolony. Nie może występować samodzielnie. Jego musi następować instrukcja zestawu, grupa instrukcji ujęta w nawiasy klamrowe, lub co najmniej, para pustych nawiasów klamrowych. Termin "`__asm` blok" odnosi się tutaj do każdej instrukcji lub grupy instrukcji, czy w nawiasach klamrowych.
+`__asm` Słowo kluczowe wywołuje asembler wbudowany i może występować wszędzie tam, gdzie instrukcja C jest prawna. Nie może być wyświetlana sama przez siebie. Po nim musi następować instrukcja zestawu, Grupa instrukcji ujętych w nawiasy klamrowe lub, co najmniej, pustą parę nawiasów klamrowych. Termin "`__asm` blok" odnosi się do dowolnej instrukcji lub grupy instrukcji, niezależnie od tego, czy znajdują się w nawiasach klamrowych.
 
-Poniższy kod jest prosty `__asm` bloku ujęte w nawiasy klamrowe. (Kod jest funkcję niestandardową sekwencję prologu).
+Poniższy kod to prosty `__asm` blok ujęty w nawiasy klamrowe. (Kod jest sekwencją funkcji niestandardowej.)
 
 ```
 __asm
@@ -33,7 +33,7 @@ __asm
 }
 ```
 
-Alternatywnie, możesz umieścić `__asm` przed każdą instrukcję montażu:
+Alternatywnie możesz umieścić `__asm` przed każdą instrukcją zestawu:
 
 ```
 __asm push ebp
@@ -41,14 +41,14 @@ __asm mov  ebp, esp
 __asm sub  esp, __LOCAL_SIZE
 ```
 
-Ponieważ `__asm` — słowo kluczowe jest separatorem instrukcji, instrukcje zestawu można także umieścić w tym samym wierszu:
+Ponieważ `__asm` słowo kluczowe jest separatorem instrukcji, można również umieścić instrukcje zestawu w tym samym wierszu:
 
 ```
 __asm push ebp   __asm mov  ebp, esp   __asm sub  esp, __LOCAL_SIZE
 ```
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Atrybuty funkcji](../c-language/function-attributes.md)

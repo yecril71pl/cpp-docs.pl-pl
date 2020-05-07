@@ -12,56 +12,56 @@ ms.locfileid: "74856998"
 # <a name="summary-of-statements"></a>Podsumowanie dotyczące instrukcji
 
 *instrukcja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*labeled-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*złożonej instrukcji*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Expression-instrukcji*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyboru — instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*iteracji-instrukcji*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*skoku-instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-except-statement* /\* specyficzne dla firmy Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-Statement* /\* specyficzne dla firmy Microsoft \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*Etykieta — instrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instrukcja złożona*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Expression — instrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*SELECT — instrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*iteracja — instrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*skoku — instrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*try-except-Statement*  / \* -swoisty dla firmy Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Wypróbuj instrukcję*  / \* finally dla firmy Microsoft\*/
 
 *skok-instrukcja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Przejdź do** *identyfikator* **;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Kontynuuj;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**rozbicie;**<br/>
-&nbsp;&nbsp;&nbsp;, &nbsp;zwrócić *wyrażenie*<sub></sub> **zwrotne** **;**
+&nbsp;&nbsp;&nbsp;&nbsp;**Przejdź**do*identyfikatora***;**    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**utrzymać**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Przerwij**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<sub>wybór</sub> *wyrażenia* **zwrotu** **;**
 
 *instrukcja złożona*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;instrukcji **{** *Deklaracja-list*<sub>opt</sub> *-list*<sub>opt</sub> **}**
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *deklaracji*<sub>opt</sub> *instrukcji SELECT-list*<sub>opt</sub> **}**
 
 *Deklaracja-lista*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklaracji*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja list*
+&nbsp;&nbsp;&nbsp;&nbsp;*oświadczeń*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Deklaracja *listy deklaracji* *declaration*
 
 *Lista instrukcji*:<br/>
-&nbsp;&nbsp; *&nbsp;&nbsp;*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrukcji list*
+&nbsp;&nbsp;&nbsp;&nbsp;*Merge*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instrukcja-list —* *instrukcja*
 
 *wyrażenie-instrukcja*:<br/>
-&nbsp;&nbsp;&nbsp;*wyrażenie*<sub></sub> &nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;*expression*<sub>wybór</sub> wyrażenia **;**
 
 *iteracja — instrukcja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**gdy (**  *wyrażenie*  **)**  *instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**czy** *instrukcji* **podczas (** *wyrażenie* **);**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Aby uzyskać (** *wyrażenie*<sub>zoptymalizowany pod kątem</sub> **;** *wyrażenie*<sub>zoptymalizowany pod kątem</sub> **;** *wyrażenie*<sub>zoptymalizowany pod kątem</sub> **)** *— instrukcja*
+&nbsp;&nbsp;&nbsp;&nbsp;**while (***wyrażenie***)**—*instrukcja*      <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Wykonaj**  *instrukcję*  **while (**  *wyrażenie*  **);**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**for (**<sub>opt</sub> **;** *expression*<sub>opt</sub> *SELECT* **;** *wyrażenie zgody* *; wyrażenie*<sub>zgody</sub> **)**  
 
 *wybór — instrukcja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Jeśli (** *wyrażenie* **)** *— instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Jeśli (** *wyrażenie* **)** *instrukcji* **else** *— instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Przełącz (** *wyrażenie* **)** *— instrukcja*
+&nbsp;&nbsp;&nbsp;&nbsp;**if (***Expression***)**—*instrukcja*      <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**if (***wyrażenie***)***instrukcja***else***statement*          <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Switch (***wyrażenie***)**—*instrukcja*      
 
 *etykieta — instrukcja*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* **:** *— instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**przypadek** *wyrażenie_stałe* **:** *— instrukcja*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**domyślne:** *— instrukcja*
+&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*  **:**  *instrukcja*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;stała **przypadku***— wyrażenie***:***instrukcja*      <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**default:**  *instrukcja*
 
-*try-except-Statement*:/\* \*specyficzny dla firmy Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except (** *wyrażenie* **)** *compound-statement*
+*try-except-Statement*:/\* specyficzne dla firmy Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instrukcja złożonej* instrukcji **__try***złożonej* **__except (***Expression***)**        
 
-*try-finally-Statement*:/\* \*specyficznych dla firmy Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__finally** *compound-statement*
+*try-finally-Statement*:/\* specyficzne dla firmy Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__try**  *złożonej instrukcji* **__finally**  *instrukcji złożonej*
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Gramatyka struktury fazy](../c-language/phrase-structure-grammar.md)
+[Gramatyka struktury frazy](../c-language/phrase-structure-grammar.md)

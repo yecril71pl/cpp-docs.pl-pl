@@ -13,12 +13,12 @@ ms.locfileid: "62233089"
 ---
 # <a name="identifiers-in-primary-expressions"></a>Identyfikatory w wyrażeniach podstawowych
 
-Identyfikatory mogą mieć całkowitym, **float**, `enum`, `struct`, **Unii**, tablicy, wskaźnika, lub typu funkcji. Identyfikator jest wyrażeniem podstawowym, pod warunkiem, że został zadeklarowany jako wyznaczanie obiektu (w takim przypadku jest to wartość l) lub funkcji (w takim przypadku jest oznaczeniem funkcji). Zobacz [wyrażenia wartości L i r](../c-language/l-value-and-r-value-expressions.md) definicję l wartością.
+Identyfikatory mogą mieć typ całkowity, **zmiennoprzecinkowy**, `enum`, `struct`, **Union**, Array, Pointer lub Function. Identyfikator jest wyrażeniem podstawowym, pod warunkiem że został zadeklarowany jako wyznaczanie obiektu (w tym przypadku jest to wartość l) lub jako funkcja (w tym przypadku jest to oznaczenie funkcji). Patrz [wyrażenia wartości l i R](../c-language/l-value-and-r-value-expressions.md) dla definicji l-wartości.
 
-Wartość wskaźnika, reprezentowane przez identyfikator tablicy nie jest to zmienna, dzięki czemu identyfikatora tablicy nie formularza lewostronny operand operatora przypisania i dlatego nie jest modyfikowalną l wartością.
+Wartość wskaźnika reprezentowana przez identyfikator tablicy nie jest zmienną, więc identyfikator tablicy nie może tworzyć operandu po lewej stronie przypisania i w związku z tym nie jest to modyfikowalna wartość l.
 
-Identyfikator zadeklarowany jako funkcja reprezentuje wskaźnik, którego wartość jest adres funkcji. Wskaźnik adresów, funkcja zwraca wartość o określonym typie. W związku z tym, funkcja identyfikatorów także nie może być l wartości, w operacji przypisania. Aby uzyskać więcej informacji, zobacz [identyfikatory](../c-language/c-identifiers.md).
+Identyfikator zadeklarowany jako funkcja reprezentuje wskaźnik, którego wartość jest adresem funkcji. Wskaźnik odnosi się do funkcji zwracającej wartość określonego typu. W ten sposób identyfikatory funkcji nie mogą również zawierać wartości l w operacjach przypisywania. Aby uzyskać więcej informacji, zobacz temat [Identyfikatory](../c-language/c-identifiers.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia podstawowe języka C](../c-language/c-primary-expressions.md)

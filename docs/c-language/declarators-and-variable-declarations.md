@@ -15,61 +15,61 @@ ms.locfileid: "62234533"
 ---
 # <a name="declarators-and-variable-declarations"></a>Deklaratory i deklaracje zmiennych
 
-Pozostałej części tej sekcji opisano formularza i znaczenie deklaracje zmiennych typów podsumowywane na tej liście. W szczególności pozostałych sekcjach wyjaśniono, jak zadeklarować następujące czynności:
+W pozostałej części tej sekcji opisano formę i znaczenie deklaracji typów zmiennych podsumowanych na tej liście. W szczególności pozostałe sekcje wyjaśniają, jak zadeklarować następujące elementy:
 
 |Typ zmiennej|Opis|
 |----------------------|-----------------|
-|[Zmienne proste](../c-language/simple-variable-declarations.md)|Zmienne pojedynczą wartość z typu całkowitego lub zmiennoprzecinkowego|
-|[Tablice](../c-language/array-declarations.md)|Zmienne składa się z kolekcją elementów tego samego typu|
-|[Wskaźniki](../c-language/pointer-declarations.md)|Zmienne, które wskazują inne zmienne i zawierać zmienną lokalizacji (w formie adresów) zamiast wartości|
-|[Wyliczenie zmiennych](../c-language/c-enumeration-declarations.md)|Proste zmiennych o całkowitego wpisz jednej wartości z zestawu stałe nazwane całkowite wstrzymanie|
-|[Struktury](../c-language/structure-declarations.md)|Składające się z kolekcji wartości, które mogą mieć różne typy zmiennych|
-|[Unie](../c-language/union-declarations.md)|Zmienne składa się z kilku wartości różnych typów, które zajmują się tego samego miejsca do magazynowania|
+|[Zmienne proste](../c-language/simple-variable-declarations.md)|Zmienne pojedynczej wartości z typem całkowitym lub zmiennoprzecinkowym|
+|[Tablice](../c-language/array-declarations.md)|Zmienne złożone z kolekcji elementów tego samego typu|
+|[Wskaźniki](../c-language/pointer-declarations.md)|Zmienne wskazujące na inne zmienne i zawierają lokalizacje zmiennych (w postaci adresów), a nie wartości|
+|[Zmienne wyliczenia](../c-language/c-enumeration-declarations.md)|Proste zmienne z typem całkowitym zawierającym jedną wartość z zestawu nazwanych stałych całkowitych|
+|[Struktury](../c-language/structure-declarations.md)|Zmienne złożone z kolekcji wartości, które mogą mieć różne typy|
+|[Unie](../c-language/union-declarations.md)|Zmienne złożone z kilku wartości różnych typów, które zajmują to samo miejsce w magazynie|
 
-Deklarator jest częścią deklaracji, która określa nazwę, która ma zostać wprowadzony do programu. Modyfikatory może obejmować takie jak <strong>\*</strong> (wskaźnik-do) oraz wszelkie słowa kluczowe Konwencja wywoływania firmy Microsoft.
+Deklarator jest częścią deklaracji, która określa nazwę, która ma zostać wprowadzona do programu. Może zawierać modyfikatory, takie jak <strong>\*</strong> (wskaźnik do) i dowolne z słów kluczowych konwencji wywoływania firmy Microsoft.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-W deklaratora
+W deklarator
 
 ```C
 __declspec(thread) char *var;
 ```
 
-`char` Specyfikator typu jest `__declspec(thread)` i `*` są modyfikatorami, i `var` jest nazwa identyfikatora.
+`char`jest specyfikatorem typu `__declspec(thread)` i `*` jest modyfikatorem i `var` jest nazwą identyfikatora.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-Deklaratory umożliwia deklarują tablice wartości, wskaźniki do wartości i funkcji zwracających wartości określonego typu. Deklaratory pojawiają się w deklaracji tablicy i wskaźnik opisanym w dalszej części tej sekcji.
+Używasz Deklaratory do deklarowania tablic wartości, wskaźników do wartości, a funkcje zwracają wartości określonego typu. Deklaratory pojawiają się w deklaracjach tablicowych i wskaźnikowych opisanych w dalszej części tej sekcji.
 
 ## <a name="syntax"></a>Składnia
 
 *deklarator*:<br/>
-&nbsp;&nbsp;*wskaźnik*<sub>zoptymalizowany pod kątem</sub> *deklaratora bezpośrednie*
+&nbsp;&nbsp;*pointer*<sub>wybór</sub> wskaźnika *Direct-deklarator*
 
-*direct-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(***deklaratora***)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **[** *wyrażenie_stałe*<sub>zoptymalizowany pod kątem</sub> **]** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarator bezpośrednio* **(** *listy identyfikatorów*<sub>zoptymalizowany pod kątem</sub> **)**
+*deklarator Direct*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identyfikatora*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**(**  *deklarator*  **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***[***wybór wyrażenia stałego*<sub>opt</sub> **]**    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator*  **(**  *Typ parametru-list*  **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(***opt z listą identyfikatorów*<sub>opt</sub> **)**    
 
-*pointer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *Lista typów kwalifikator*<sub>zoptymalizowany pod kątem</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *Lista typów kwalifikator*<sub>zoptymalizowany pod kątem</sub> *wskaźnika*
+*wskaźnik*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*Typ kwalifikatora —*<sub>wybór</sub> listy<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*Typ kwalifikatora —*<sub>opt</sub> *wskaźnik* wyboru listy
 
-*Lista typów kwalifikator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Kwalifikator typu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Kwalifikator typu Lista w przypadku kwalifikator typu*
+*kwalifikator typu-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*kwalifikator typu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*kwalifikator typu — kwalifikator typu list*
 
 > [!NOTE]
-> Wyświetlić składnię *deklaracji* w [Przegląd deklaracji](../c-language/overview-of-declarations.md) lub [podsumowanie dotyczące składni języka C](../c-language/c-language-syntax-summary.md) dla składni, która odwołuje się do *deklaratora*.
+> Zapoznaj się z składnią *deklaracji* w temacie [Omówienie deklaracji](../c-language/overview-of-declarations.md) lub [składni języka C](../c-language/c-language-syntax-summary.md) dla składni odwołującej się do *deklarator*.
 
-Po deklaratorze składa się z identyfikatora zostały zmodyfikowane, element został zadeklarowany ma typ podstawowy. Jeśli znak gwiazdki (<strong>\*</strong>) pojawia się po lewej stronie identyfikator, typ został zmodyfikowany na typ wskaźnika. Jeśli identyfikator następuje nawiasy kwadratowe (**[**), typ został zmodyfikowany typ tablicy. Jeśli identyfikator następuje nawiasy, typ został zmodyfikowany do typu funkcji. Aby uzyskać więcej informacji na temat interpretacji pierwszeństwo w obrębie deklaracji zobacz [interpretowanie Deklaratorów bardziej złożonych](../c-language/interpreting-more-complex-declarators.md).
+Gdy deklarator składa się z niezmodyfikowanego identyfikatora, zadeklarowany element ma typ podstawowy. Jeśli gwiazdka (<strong>\*</strong>) pojawia się po lewej stronie identyfikatora, typ jest modyfikowany do typu wskaźnika. Jeśli po identyfikatorze następuje nawias (**[]**), typ jest modyfikowany do typu tablicy. Jeśli po stronie identyfikatora następuje nawias, typ jest modyfikowany do typu funkcji. Aby uzyskać więcej informacji na temat interpretacji pierwszeństwa w deklaracjach, zobacz [Interpretowanie bardziej złożonej Deklaratory](../c-language/interpreting-more-complex-declarators.md).
 
-Każdy deklarator deklaruje co najmniej jeden identyfikator. Deklarator musi zawierać specyfikatora typu, aby mieć pełną deklarację. Specyfikator typu zawiera typ elementów typu tablicowego, typu obiektu według typu wskaźnika lub zwracany typ funkcji.
+Każdy deklarator deklaruje co najmniej jeden identyfikator. Element Deklarator musi zawierać specyfikator typu jako kompletną deklarację. Specyfikator typu zawiera typ elementów typu tablicy, typ obiektu, do którego odnosi się typ wskaźnika lub typ zwracany funkcji.
 
-[Tablica](../c-language/array-declarations.md) i [wskaźnik](../c-language/pointer-declarations.md) deklaracje zostały omówione bardziej szczegółowo w dalszej części tej sekcji. Poniższe przykłady ilustrują kilka prostych formularzy deklaratorów:
+Deklaracje [tablic](../c-language/array-declarations.md) i [wskaźników](../c-language/pointer-declarations.md) zostały omówione bardziej szczegółowo w dalszej części tej sekcji. Poniższe przykłady ilustrują kilka prostych form Deklaratory:
 
 ```C
 int list[20]; // Declares an array of 20 int values named list
@@ -79,12 +79,12 @@ double func( void ); // Declares a function named func, with no
 int *aptr[10] // Declares an array of 10 pointers
 ```
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Kompilator Microsoft C: nie ogranicza liczby deklaratory, które można modyfikować operacje arytmetyczne, struktury lub Unii. Liczba jest ograniczona jedynie ilością dostępnej pamięci.
+Kompilator języka Microsoft C nie ogranicza liczby deklaratory, która może modyfikować typ arytmetyczny, struktury lub Unii. Liczba jest ograniczona tylko przez dostępną pamięć.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje i typy](../c-language/declarations-and-types.md)

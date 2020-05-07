@@ -15,21 +15,21 @@ ms.locfileid: "62233301"
 ---
 # <a name="function-call-c"></a>Wywołanie funkcji (C)
 
-A *wywołania funkcji* jest wyrażeniem, która zawiera nazwę wywoływanej funkcji lub wartość wskaźnika funkcji i, opcjonalnie, argumenty przekazywane do funkcji.
+*Wywołanie funkcji* jest wyrażeniem, które zawiera nazwę wywoływanej funkcji lub wartość wskaźnika funkcji oraz, opcjonalnie, argumenty, które są przekazane do funkcji.
 
 ## <a name="syntax"></a>Składnia
 
-*postfix-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym* **(** *argument-expression-list*<sub>zoptymalizowany pod kątem</sub> **)**
+*wyrażenie przyrostkowe*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*przyrostkowe wyrażenie***(***opt-expression-list*<sub>opt</sub> **)**    
 
-*argument-expression-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*argument-expression-list* **,** *wyrażenia przypisania*
+*argument-lista wyrażeń*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*przypisanie — wyrażenie*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*argumenty argumentu-list* **,** *przypisanie-wyrażenie*
 
-*Wyrażeniem przyrostkowym* musi zwrócić adresu funkcji (na przykład identyfikator funkcji lub wartość wskaźnika funkcji), a *argument-expression-list* jest listą wyrażeń (oddzielonych przecinkami) których wartości ("arguments") są przekazywane do funkcji. *Argument-expression-list* argument może być pusta.
+*Wyrażenie przyrostkowe* musi być szacowane do adresu funkcji (na przykład identyfikatora funkcji lub wartości wskaźnika funkcji), a *Lista argumentów wyrażenia* jest listą wyrażeń (rozdzielonych przecinkami), których wartości ("argumenty") są przekazane do funkcji. Argument *-Expression-List* może być pusty.
 
-Wyrażenie wywołania funkcji ma wartość i typ wartość zwracaną przez funkcję. Funkcja nie może zwracać obiekt typu tablicy. Jeśli funkcja zwracany typ jest `void` (oznacza to, że funkcja została zadeklarowana nigdy nie zostać zwrócona wartość), ma także wyrażenie wywołania funkcji `void` typu. (Zobacz [wywołania funkcji](../c-language/function-calls.md) Aby uzyskać więcej informacji.)
+Wyrażenie wywołania funkcji ma wartość i typ wartości zwracanej funkcji. Funkcja nie może zwracać obiektu typu Array. Jeśli typem zwracanym funkcji jest `void` (to oznacza, że funkcja została zadeklarowana nigdy do zwrócenia wartości), wyrażenie wywołania funkcji również ma `void` typ. (Zobacz [wywołania funkcji](../c-language/function-calls.md) , aby uzyskać więcej informacji).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operator wywołania funkcji: ()](../cpp/function-call-operator-parens.md)

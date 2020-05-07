@@ -19,16 +19,16 @@ ms.locfileid: "62158348"
 
 Wszystkie identyfikatory z wyjątkiem etykiet mają zakres uzależniony od poziomu, na którym występuje deklaracja. Dla każdego rodzaju zakresu, widocznością identyfikatorów w programie rządzą następujące zasady:
 
-Zakres pliku deklarator lub Specyfikator typu dla identyfikatora z zakresem pliku pojawia się poza każdym blokiem lub listą parametrów i jest dostępny z dowolnego miejsca w jednostce translacji po jej deklaracji. Nazwy identyfikatorów z zakresem pliku są często nazywane „global” lub „external”. Zakres globalnego identyfikatora rozpoczyna się w miejscu jego definicji lub deklaracji i kończy się na końcu jednostki translacji.
+Zakres pliku Deklarator lub specyfikator typu dla identyfikatora z zakresem pliku pojawia się poza dowolnym blokiem lub listą parametrów i jest dostępny z dowolnego miejsca w jednostce tłumaczenia po jego deklaracji. Nazwy identyfikatorów z zakresem pliku są często nazywane „global” lub „external”. Zakres globalnego identyfikatora rozpoczyna się w miejscu jego definicji lub deklaracji i kończy się na końcu jednostki translacji.
 
-Etykieta zakresu A funkcji jest jedynym rodzajem identyfikatora, który ma zakres funkcji. Etykieta jest niejawnie zadeklarowana przez jej użycie w instrukcji. Nazwy etykiet muszą być unikatowe w obrębie danej funkcji. (Aby uzyskać więcej informacji dotyczących etykiet i nazw etykiet, zobacz [goto i Labeled — instrukcje](../c-language/goto-and-labeled-statements-c.md).)
+Zakres funkcji etykieta jest jedynym rodzajem identyfikatora, który ma zakres funkcji. Etykieta jest niejawnie zadeklarowana przez jej użycie w instrukcji. Nazwy etykiet muszą być unikatowe w obrębie danej funkcji. (Aby uzyskać więcej informacji na temat etykiet i nazw etykiet, zobacz [instrukcje goto i labeled](../c-language/goto-and-labeled-statements-c.md).).
 
-Zakres bloku, który deklarator lub Specyfikator typu dla identyfikatora z zakresem bloku pojawia się wewnątrz bloku lub listy deklaracji parametrów formalnych w definicji funkcji. Jest widoczny tylko od punktu jego deklaracji lub definicji do końca bloku, zawierającego jego deklarację lub definicję. Jej zakres jest ograniczony do tego bloku i wszelkich bloków zagnieżdżonych w tym bloku i kończy się nawiasem klamrowym, który zamyka skojarzony blok. Takie identyfikatory są czasami nazywane „zmiennymi lokalnymi”.
+Zakres bloku Deklarator lub specyfikator typu dla identyfikatora z zakresem bloku pojawia się wewnątrz bloku lub wewnątrz listy deklaracji parametrów formalnych w definicji funkcji. Jest widoczny tylko od punktu jego deklaracji lub definicji do końca bloku, zawierającego jego deklarację lub definicję. Jej zakres jest ograniczony do tego bloku i wszelkich bloków zagnieżdżonych w tym bloku i kończy się nawiasem klamrowym, który zamyka skojarzony blok. Takie identyfikatory są czasami nazywane „zmiennymi lokalnymi”.
 
-Zakres prototypu funkcji deklarator lub Specyfikator typu dla identyfikatora z zakresem prototypu funkcji pojawia się w obrębie listy deklaracji parametrów prototypu funkcji (nie jest częścią deklaracji funkcji). Jej zakres kończy się z końcem deklaratora funkcji.
+Zakres prototypu funkcji Deklarator lub specyfikator typu dla identyfikatora z zakresem prototypu funkcji pojawia się na liście deklaracji parametrów w prototypie funkcji (nie jest częścią deklaracji funkcji). Jej zakres kończy się z końcem deklaratora funkcji.
 
-Właściwe deklaracje do tworzenia zmiennych widocznych w innych plikach źródłowych są opisane w [klasy magazynu](../c-language/c-storage-classes.md). Jednakże, zmienne i funkcje zadeklarowane na zewnętrznym poziomie ze **statyczne** Specyfikator klasy magazynowania są widoczne tylko w pliku źródłowym, w której są zdefiniowane. Wszystkie pozostałe funkcje są widoczne globalnie.
+Odpowiednie deklaracje dotyczące tworzenia zmiennych widocznych w innych plikach źródłowych są opisane w [klasach magazynu](../c-language/c-storage-classes.md). Jednak zmienne i funkcje zadeklarowane na poziomie zewnętrznym ze specyfikatorem klasy magazynu **statycznego** są widoczne tylko w pliku źródłowym, w którym są zdefiniowane. Wszystkie pozostałe funkcje są widoczne globalnie.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Okres istnienia, zakres, widoczność i połączenie](../c-language/lifetime-scope-visibility-and-linkage.md)

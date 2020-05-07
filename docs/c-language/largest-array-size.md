@@ -11,10 +11,10 @@ ms.locfileid: "62232751"
 ---
 # <a name="largest-array-size"></a>Największy rozmiar tablicy
 
-**ANSI 3.3.3.4, 4.1.1** typu liczby całkowitej do przeprowadzenia maksymalny rozmiar tablicy — oznacza to, że rozmiar **size_t**
+**3.3.3.4 ANSI, 4.1.1** Typ liczby całkowitej wymaganej do przechowywania maksymalnego rozmiaru tablicy — czyli rozmiaru **size_t**
 
-`size_t` Jest typedef `unsigned int` na x86 32-bitowych platform. Na platformach 64-bitowych `size_t` jest typedef `unsigned __int64`.
+`size_t` Element typedef jest `unsigned int` na 32-bitowej platformie x86. Na platformach 64-bitowych `size_t` element typedef jest. `unsigned __int64`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Tablice i wskaźniki](../c-language/arrays-and-pointers.md)

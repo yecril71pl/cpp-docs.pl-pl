@@ -11,10 +11,10 @@ ms.locfileid: "62232764"
 ---
 # <a name="interactive-devices"></a>Urządzenia interakcyjne
 
-**ANSI 2.1.2.3** co stanowi urządzenia interakcyjne
+**ANSI 2.1.2.3** Co to jest urządzenie interaktywne
 
-Microsoft C definiuje klawiatury i wyświetlanie urządzenia interakcyjne.
+Microsoft C definiuje klawiaturę i wyświetlacz jako urządzenia interaktywne.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Środowisko](../c-language/environment.md)

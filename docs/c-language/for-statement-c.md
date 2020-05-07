@@ -13,36 +13,36 @@ ms.locfileid: "62233647"
 ---
 # <a name="for-statement-c"></a>for — instrukcja (C)
 
-**Dla** instrukcji umożliwia powtarzanie instrukcję lub instrukcja złożona określoną liczbę razy. Treść **dla** instrukcja jest wykonywana na zero lub więcej razy, aż opcjonalny warunek przestaje być prawdziwy. Można użyć wyrażenia opcjonalny w **dla** instrukcję, aby zainicjować i zmień wartości podczas **dla** wykonywania instrukcji.
+Instrukcja **for** umożliwia powtarzanie instrukcji lub złożonej instrukcji określoną liczbę razy. Treść instrukcji **for** jest wykonywana zero lub więcej razy do momentu, gdy opcjonalny warunek stanie się fałszywy. Można użyć opcjonalnych wyrażeń w instrukcji **for** , aby inicjować i zmieniać wartości podczas wykonywania instrukcji **for** .
 
 ## <a name="syntax"></a>Składnia
 
-*instrukcji iteracji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Aby uzyskać** **(** *init-expression*<sub>zoptymalizowany pod kątem</sub> **;** *cond-expression*<sub>zoptymalizowany pod kątem</sub> **;** *loop-expression*<sub>zoptymalizowany pod kątem</sub> **)** *— instrukcja*
+*iteracja — instrukcja*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**for** **(** *instrukcja* *init-Expression*<sub>opt</sub> **;** *cond-expression*<sub>opt</sub> **;** *wyrażenie pętli-Expression*<sub>opt</sub> **)**
 
-Wykonywanie **dla** instrukcji przechodzi w następujący sposób:
+Wykonanie instrukcji **for** zostanie przeprowadzone w następujący sposób:
 
-1. *Init-expression*, jeśli istnieje, jest obliczane. To ustawienie określa inicjowania dla pętli. Nie ma żadnych ograniczeń typu *init-expression*.
+1. *Wyrażenie init-*(jeśli istnieje) jest oceniane. Ta wartość określa inicjalizację pętli. Nie ma ograniczeń dotyczących typu elementu *init-Expression*.
 
-1. *Cond-expression*, jeśli istnieje, jest obliczane. To wyrażenie musi mieć typ arytmetyczny lub wskaźnika. Jest on oceniane przed każdą iteracją. Możliwe są trzy wyniki:
+1. *Wyrażenie cond (* Jeśli istnieje) jest oceniane. To wyrażenie musi mieć typ arytmetyczny lub wskaźnikowy. Jest on oceniany przed każdą iteracją. Możliwe są trzy wyniki:
 
-   - Jeśli *cond-expression* jest **true** (niezerowe), *instrukcji* jest wykonywana; następnie *loop-expression*, jeśli istnieje, jest obliczane. *Loop-expression* jest oceniane po każdej iteracji. Nie ma żadnych ograniczeń dla jego typu. Efekty uboczne będzie wykonywany w kolejności. Następnie rozpocznie się proces ponownie z wersją ewaluacyjną usługi *cond-expression*.
+   - Jeśli *cond-expression* jest **prawdziwe** (niezerowe), *instrukcja* jest wykonywana; następnie jest oceniane *wyrażenie Loop*(jeśli istnieje). *Wyrażenie pętli* jest oceniane po każdej iteracji. Nie ma ograniczeń dla tego typu. Efekty uboczne zostaną wykonane w pożądanej kolejności. Następnie proces rozpoczyna się ponownie z oceną *cond-expression*.
 
-   - Jeśli *cond-expression* zostanie pominięty, *cond-expression* jest traktowane jako PRAWDA, a następnie kontynuowane wykonywanie dokładnie zgodnie z opisem w poprzednim akapicie. A **dla** instrukcję bez *cond-expression* argument kończy się tylko wtedy, gdy **podziału** lub **zwracają** instrukcji wewnątrz instrukcji zawartość jest wykonywana, lub gdy **goto** (do oznaczonej instrukcji poza **dla** treść instrukcji) jest wykonywana.
+   - Jeśli *cond-expression* zostanie pominięte, *wyrażenie cond-expression* jest uznawane za prawdziwe, a wykonywanie jest wykonywane dokładnie zgodnie z opisem w poprzednim akapicie. Instrukcja **for** bez argumentu *cond* kończy się tylko wtedy, gdy jest wykonywana instrukcja **Break** lub **Return** w treści instrukcji lub gdy zostanie wykonane wyrażenie **goto** (do oznaczonej etykietą poza treścią instrukcji **for** ).
 
-   - Jeśli *cond-expression* jest **false** (0), wykonywanie **dla** kończy się i przekazuje kontrolę do następnej instrukcji w programie.
+   - Jeśli *cond-expression* ma **wartość false** (0), wykonanie instrukcji **for** kończy działanie i kontrola przechodzi do następnej instrukcji w programie.
 
-A **dla** również kończy się po **podziału**, **goto**, lub **zwracają** zostaje wykonana instrukcja w treści instrukcji. A **nadal** instrukcji w **dla** powoduje, że w pętli *loop-expression* ma zostać obliczone. Gdy **podziału** instrukcja jest wykonywana wewnątrz **dla** pętli, *loop-expression* nie ocenić lub wykonać. Ta instrukcja
+Instrukcja **for** przerywa również działanie, gdy zostanie wykonana instrukcja **Break**, **goto**lub **Return** w treści instrukcji. Instrukcja **Continue** w pętli **for** powoduje obliczenie *wyrażenia pętli* . Gdy instrukcja **Break** jest wykonywana wewnątrz pętli **for** , *wyrażenie Loop* nie jest oceniane ani wykonywane. Ta instrukcja
 
 ```C
 for( ; ; )
 ```
 
-to zwyczajowy sposób, aby wygenerować wejścia w nieskończoną pętlę, która tylko można zakończył działanie ze **podziału**, **goto**, lub **zwracają** instrukcji.
+jest to niestandardowy sposób tworzenia pętli nieskończonej, która może zostać zakończona tylko za pomocą instrukcji **Break**, **goto**lub **Return** .
 
 ## <a name="example"></a>Przykład
 
-Ten przykład ilustruje **dla** instrukcji:
+Ten przykład ilustruje instrukcję **for** :
 
 ```C
 // c_for.c
@@ -78,6 +78,6 @@ Number of spaces: 4
 Number of tabs: 2
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Instrukcje](../c-language/statements-c.md)

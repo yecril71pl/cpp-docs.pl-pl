@@ -16,9 +16,9 @@ ms.locfileid: "74857154"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Rozszerzone atrybuty klasy magazynu języka C
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Więcej informacji na ten temat można znaleźć w obszarze [__declspec (C++ odwołanie)](../cpp/declspec.md).
+Więcej informacji na ten temat można znaleźć w obszarze [__declspec (odwołanie w C++)](../cpp/declspec.md).
 
 Składnia atrybutu rozszerzonego upraszcza i standaryzacj rozszerzenia specyficzne dla firmy Microsoft w języku C. Atrybuty klasy magazynowania, które używają składni atrybutów rozszerzonych, obejmują Thread, owies, dllimport i dllexport.
 
@@ -26,16 +26,16 @@ Składnia atrybutu rozszerzonego określająca informacje klasy magazynu używa 
 
 ## <a name="syntax"></a>Składnia
 
-*storage-class-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *rozszerzony-decl-modyfikator-SEQ* **)**  /\* \*/
+*specyfikator klasy magazynu*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *rozszerzony-decl-modyfikator-SEQ* **)**  / \* specyficzny dla firmy Microsoft\*/
 
-*Extended-decl-modyfikator-SEQ*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*firmy Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
+*Extended-decl-modyfikator-SEQ*:&nbsp; &nbsp; &nbsp; &nbsp; / \* specyficzny dla firmy Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*rozszerzony-decl-modyfikator*<sub>wyboru</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modyfikator-SEQ* *Extended-decl-modyfikator*
 
-*Extended-decl-modyfikator*:&nbsp;&nbsp;&nbsp;&nbsp;/\* specyficzne dla Microsoft \*/<br/>
-&nbsp;&nbsp;&nbsp;**wątku** &nbsp;<br/>
-&nbsp;&nbsp; **&nbsp;&nbsp;**<br/>
+*Extended-decl-modyfikator*:&nbsp; &nbsp; &nbsp; &nbsp; / \* specyficzny dla firmy Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**nici**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**okiem**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
 
@@ -45,6 +45,6 @@ Atrybuty klasy magazynu "threaded, dllimport" i "dllexport" są właściwością
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje i typy](../c-language/declarations-and-types.md)

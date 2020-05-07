@@ -13,27 +13,27 @@ ms.locfileid: "62234440"
 ---
 # <a name="definitions-and-conventions"></a>Definicje i konwencje
 
-Terminale to punkty końcowe w definicji składni. Możliwe jest inne rozwiązanie. Terminale obejmują zbiór słów zastrzeżonych oraz identyfikatorów zdefiniowanych przez użytkownika.
+Terminale są punktami końcowymi w definicji składni. Inne rozwiązanie nie jest możliwe. Terminale obejmują zestaw słów zarezerwowanych i identyfikatorów zdefiniowanych przez użytkownika.
 
-Symboli nieterminalnych są symbole zastępcze w składni i są definiowane w innych miejscach w tej składni podsumowania. Definicje mogą być cykliczne.
+Nieterminale są symbolami zastępczymi w składni i są zdefiniowane w innym miejscu w tym podsumowaniu składni. Definicje mogą być cykliczne.
 
-Opcjonalny składnik jest wskazywany przez indeksem <sub>zoptymalizowany pod kątem</sub>. Na przykład
+Opcjonalny składnik jest wskazywany przez <sub>wybór</sub>z indeksu. Na przykład:
 
-> **{** *wyrażenie*<sub>zoptymalizowany pod kątem</sub> **}**
+> **{** *wyrażenie*{<sub>opt</sub> **}**
 
-Określa opcjonalne wyrażenie ujęte w nawiasy klamrowe.
+wskazuje opcjonalne wyrażenie ujęte w nawiasy klamrowe.
 
-Konwencje składni Użyj atrybutów czcionkę dla różnych składników składni. Symbole i czcionki są następujące:
+Konwencje składni używają różnych atrybutów czcionki dla różnych składników składni. Symbole i czcionki są następujące:
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|*nieterminalnych*|Kursywa wskazuje symboli nieterminalnych.|
-|**const**|Terminale czcionką pogrubioną są literału wyrazy zastrzeżone i symboli, które należy wprowadzić, jak pokazano. Znaki w tym kontekście są zawsze z uwzględnieniem wielkości liter.|
-|<sub>opt</sub>|Następuje symboli nieterminalnych <sub>zoptymalizowany pod kątem</sub> zawsze są opcjonalne.|
-|krój czcionki domyślnej|Znaków w zestawie opisane lub wymienionych w tej czcionce może służyć jako terminale w instrukcjach języka C.|
+|*nieterminal*|Typ kursywy oznacza nieterminale.|
+|**const**|Terminale w pogrubieniu są literałami zarezerwowanymi i symbolami, które muszą zostać wprowadzone jako pokazane. Znaki w tym kontekście zawsze uwzględniają wielkość liter.|
+|<sub>uszlachetniania</sub>|Nieterminale, po których następuje <sub>wybór</sub> , są zawsze opcjonalne.|
+|domyślny krój czcionki|Znaki w zestawie opisany lub wymieniony w tym kroju pisma mogą być używane jako terminale w instrukcjach języka C.|
 
-Dwukropek (**:**) po nieterminalnych wprowadza jego definicji. Alternatywne definicje są wymienione w osobnych wierszach, z wyjątkiem, gdy poprzedzone znakiem słowa "poszczególnych."
+Jest to dwukropek (**:**) po wprowadzeniu definicji przez nieterminala. Definicje alternatywne są wyświetlane w oddzielnych wierszach, z wyjątkiem przypadków, gdy są poprzedzone wyrazami "one of".
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Podsumowanie dotyczące składni języka C](../c-language/c-language-syntax-summary.md)
+[Podsumowanie składni języka C](../c-language/c-language-syntax-summary.md)

@@ -13,10 +13,10 @@ ms.locfileid: "62234348"
 ---
 # <a name="deleting-open-files"></a>Usuwanie otwartych plików
 
-**ANSI 4.9.4.1** wpływ funkcji usuwania na otwartego pliku
+**4.9.4.1 ANSI** Efekt funkcji usuwania w otwartym pliku
 
-Funkcja usuwania usuwa plik. Jeśli plik jest otwarty, funkcja ta nie powiedzie się i zwraca wartość -1.
+Funkcja Remove usuwa plik. Jeśli plik jest otwarty, ta funkcja kończy się niepowodzeniem i zwraca wartość-1.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

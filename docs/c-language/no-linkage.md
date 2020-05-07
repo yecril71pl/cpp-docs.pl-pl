@@ -14,18 +14,18 @@ ms.locfileid: "62232392"
 ---
 # <a name="no-linkage"></a>Brak połączenia
 
-Jeśli nie ma deklarację dla identyfikatora w bloku `extern` Specyfikator klasy magazynowania, identyfikator ma bez połączenia i jest unikatowy dla funkcji.
+Jeśli deklaracja identyfikatora w bloku nie zawiera specyfikatora klasy `extern` magazynowania, identyfikator nie ma powiązania i jest unikatowy dla funkcji.
 
-Następujące identyfikatory są bez połączenia:
+Następujące identyfikatory nie mają powiązania:
 
-- Identyfikator zadeklarowany za nic innego niż obiekt lub funkcja
+- Identyfikator zadeklarowany jako coś innego niż obiekt lub funkcja
 
 - Identyfikator zadeklarowany jako parametr funkcji
 
-- Identyfikator o zakresie bloku dla obiektu zadeklarowana bez `extern` Specyfikator klasy magazynowania
+- Identyfikator zakresu bloku dla obiektu zadeklarowanego bez specyfikatora klasy `extern` magazynu
 
-Jeśli identyfikator ma bez połączenia, Zadeklarowanie tej samej nazwie ponownie (w deklarator lub Specyfikator typu), w tym samym poziomie zakresu generuje błąd zmiana definicji symbolu.
+Jeśli identyfikator nie ma powiązania, zadeklarowanie tej samej nazwy (w Deklarator lub specyfikatorze typu) na tym samym poziomie zakresu generuje błąd ponownej definicji symbolu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Użycie zewnętrznie w celu określenia powiązania](../cpp/using-extern-to-specify-linkage.md)

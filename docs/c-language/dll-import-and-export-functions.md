@@ -18,13 +18,13 @@ ms.locfileid: "62234250"
 ---
 # <a name="dll-import-and-export-functions"></a>Importowanie bibliotek DLL i eksportowanie funkcji
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Najbardziej kompletne i aktualne informacje na ten temat można znaleźć w [dllexport i dllimport](../cpp/dllexport-dllimport.md).
+Najbardziej kompletne i aktualne informacje na ten temat można znaleźć w [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
-**Dllimport** i `dllexport` modyfikatorów klasy magazynowania są specyficzne dla Microsoft rozszerzenia języka C. Tych modyfikatorów jawnie definiują interfejs DLL dla jego klienta (plik wykonywalny lub innej biblioteki DLL). Deklarowanie funkcji jako `dllexport` eliminuje potrzebę stosowania definicji modułów (. Plik DEF). Można również użyć **dllimport** i `dllexport` Modyfikatory przy użyciu danych i obiektów.
+Modyfikatory klasy `dllexport` **dllimport** i magazynu są rozszerzeniami specyficznymi dla firmy Microsoft do języka C. Te Modyfikatory jawnie definiują interfejs biblioteki DLL dla klienta (plik wykonywalny lub inna Biblioteka DLL). Deklarowanie funkcji `dllexport` jako eliminuje potrzebę definicji modułów (. DEF). Można również użyć elementu **dllimport** i `dllexport` modyfikatorów z danymi i obiektami.
 
-**Dllimport** i `dllexport` modyfikatorów klasy magazynowania, należy użyć za pomocą słowa kluczowego składni atrybutów rozszerzonych, `__declspec`, jak pokazano w poniższym przykładzie:
+Modyfikatory **dllimport** i `dllexport` klasy magazynu muszą być używane z słowem kluczowym `__declspec`składni atrybutów rozszerzonych, jak pokazano w poniższym przykładzie:
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -36,10 +36,10 @@ DllExport int j;
 DllExport int n;
 ```
 
-Aby uzyskać szczegółowe informacje o składni modyfikatorów klasy magazynowania rozszerzonej, zobacz [rozszerzone atrybuty klasy magazynowania](../c-language/c-extended-storage-class-attributes.md).
+Aby uzyskać szczegółowe informacje na temat składni dla rozszerzonych modyfikatorów klasy magazynu, zobacz [rozszerzone atrybuty klasy magazynu](../c-language/c-extended-storage-class-attributes.md).
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Definicje funkcji języka C](../c-language/c-function-definitions.md)

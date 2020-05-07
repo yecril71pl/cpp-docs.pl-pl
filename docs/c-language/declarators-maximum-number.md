@@ -1,5 +1,5 @@
 ---
-title: 'Deklaratory: Maksymalna liczba'
+title: 'Deklaratory: maksymalna liczba'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - declarators, maximum number of
@@ -11,12 +11,12 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62234525"
 ---
-# <a name="declarators-maximum-number"></a>Deklaratory: Maksymalna liczba
+# <a name="declarators-maximum-number"></a>Deklaratory: maksymalna liczba
 
-**ANSI 3.5.4** maksymalną liczbę deklaratory, które można modyfikować operacje arytmetyczne, struktury lub Unii
+**3.5.4 ANSI** Maksymalna liczba deklaratory, które mogą modyfikować typ arytmetyczny, struktury lub Unii
 
-Microsoft C nie ogranicza liczby deklaratorów. Liczba jest ograniczona jedynie ilością dostępnej pamięci.
+Microsoft C nie ogranicza liczby Deklaratory. Liczba jest ograniczona tylko przez dostępną pamięć.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)

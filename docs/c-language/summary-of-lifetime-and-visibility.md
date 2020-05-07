@@ -20,13 +20,13 @@ Poniższa tabela zawiera podsumowanie okresu istnienia i cech charakterystycznyc
 
 |Atrybuty:<br /><br /> Poziom|Element|Storage — Klasa<br /><br /> Specyfikator|Wynik:<br /><br /> Okres istnienia|Widoczność|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
-|Zakres pliku|Definicja zmiennej|**static**|Globalne|Pozostała część pliku źródłowego, w którym występuje|
-||Deklaracja zmiennej|**extern**|Globalne|Pozostała część pliku źródłowego, w którym występuje|
-||Prototyp lub definicja funkcji|**static**|Globalne|Pojedynczy plik źródłowy|
-||Prototyp funkcji|**extern**|Globalne|Pozostała część pliku źródłowego|
-|Zakres bloku|Deklaracja zmiennej|**extern**|Globalne|Blok|
-||Definicja zmiennej|**static**|Globalne|Blok|
-||Definicja zmiennej|**Autofiltr** lub **Rejestruj**|Lokalny|Blok|
+|Zakres pliku|Definicja zmiennej|**static**|Globalny|Pozostała część pliku źródłowego, w którym występuje|
+||Deklaracja zmiennej|**extern**|Globalny|Pozostała część pliku źródłowego, w którym występuje|
+||Prototyp lub definicja funkcji|**static**|Globalny|Pojedynczy plik źródłowy|
+||Prototyp funkcji|**extern**|Globalny|Pozostała część pliku źródłowego|
+|Zakres bloku|Deklaracja zmiennej|**extern**|Globalny|Zablokowanie|
+||Definicja zmiennej|**static**|Globalny|Zablokowanie|
+||Definicja zmiennej|**Autofiltr** lub **Rejestruj**|Lokalny|Zablokowanie|
 
 ## <a name="example"></a>Przykład
 
@@ -34,7 +34,7 @@ Poniższa tabela zawiera podsumowanie okresu istnienia i cech charakterystycznyc
 
 Poniższy przykład ilustruje bloki, zagnieżdżanie i widoczność zmiennych:
 
-### <a name="code"></a>Kod
+### <a name="code"></a>Code
 
 ```c
 // Lifetime_and_Visibility.c
@@ -66,6 +66,6 @@ int main()  // main function defined at external level
 
 W tym przykładzie istnieją cztery poziomy widoczności: poziom zewnętrzny i trzy poziomy blokowania. Wartości są drukowane na ekranie zgodnie z opisem w komentarzach po każdej instrukcji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Okres istnienia, zakres, widoczność i połączenie](../c-language/lifetime-scope-visibility-and-linkage.md)

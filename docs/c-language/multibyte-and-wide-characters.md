@@ -23,18 +23,18 @@ ms.locfileid: "62232920"
 ---
 # <a name="multibyte-and-wide-characters"></a>Znaki wielobajtowe i dwubajtowe
 
-Znak wielobajtowy jest znakiem składa się z sekwencji bajtów jednego lub więcej. Każda sekwencja bajtów reprezentuje pojedynczy znak z zestawu znaków rozszerzonych. Znaki wielobajtowe są używane w zestawach znaków, takich jak Kanji.
+Znak wielobajtowy jest znakiem składającym się z sekwencji z co najmniej jednego bajtu. Każda sekwencja bajtów reprezentuje pojedynczy znak w rozszerzonym zestawie znaków. Znaki wielobajtowe są używane w zestawach znaków, takich jak kanji.
 
-Znaki dwubajtowe są kody znaków wielu języków, które są zawsze szerokiego 16 bitów. Typ dla stałych znaków jest `char`; dla znaków dwubajtowych, typ jest `wchar_t`. Znaki dwubajtowe są zawsze o stałym rozmiarze, przy użyciu znaków dwubajtowych upraszcza programowania, korzystając z zestawów znaków międzynarodowych.
+Znaki dwubajtowe są wielojęzycznymi kodami znaków, które są zawsze o 16 bitów. Typem dla stałych znaków jest `char`; w przypadku znaków dwubajtowych typem `wchar_t`jest. Ze względu na to, że znaki dwubajtowe są zawsze stałym rozmiarem, używanie znaków dwubajtowych upraszcza programowanie przy użyciu międzynarodowych zestawów znaków
 
-Literał ciągów znaków dwubajtowych `L"hello"` staje się tablicy liczb całkowitych sześć typu `wchar_t`.
+Literał `L"hello"` ciągu znaków dwubajtowych jest tablicą sześciu liczb całkowitych typu `wchar_t`.
 
 ```
 {L'h', L'e', L'l', L'l', L'o', 0}
 ```
 
-Specyfikacja Unicode jest specyfikacja dla znaków dwubajtowych. Procedury biblioteki wykonawczej specyficznej dla tłumaczenie między znaki wielobajtowe i dwubajtowe obejmują `mbstowcs`, `mbtowc`, `wcstombs`, i `wctomb`.
+Specyfikacja Unicode jest specyfikacją dla znaków dwubajtowych. Procedury biblioteki wykonawczej do translacji między znakami wielobajtowymi i szerokimi `mbstowcs`obejmują `mbtowc`, `wcstombs`,, `wctomb`i.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Identyfikatory w języku C](../c-language/c-identifiers.md)

@@ -24,7 +24,7 @@ ms.locfileid: "76821554"
 
 Procesy, które jawnie łączą się z biblioteką DLL, wywołują funkcję [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) , gdy moduł dll nie jest już wymagany. Ta funkcja zmniejsza liczbę odwołań modułu. A jeśli licznik odwołań ma wartość zero, nie jest mapowany z przestrzeni adresowej procesu.
 
-W aplikacji MFC Użyj [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) zamiast `FreeLibrary`, aby zwolnić bibliotekę DLL rozszerzenia MFC. Interfejs (prototyp funkcji) dla `AfxFreeLibrary` jest taki sam jak `FreeLibrary`.
+W aplikacji MFC Użyj [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) zamiast, `FreeLibrary` aby zwolnić bibliotekę DLL rozszerzenia MFC. Interfejs (prototyp funkcji) dla `AfxFreeLibrary` jest taki sam jak. `FreeLibrary`
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
@@ -38,8 +38,8 @@ W aplikacji MFC Użyj [AfxFreeLibrary](../mfc/reference/application-information-
 
 - [GetProcAddress](getprocaddress.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Tworzenie C/C++ dll w programie Visual Studio](dlls-in-visual-cpp.md)\
+[Tworzenie bibliotek DLL C/C++ w programie Visual Studio](dlls-in-visual-cpp.md)\
 [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)\
 [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

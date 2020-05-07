@@ -14,19 +14,19 @@ ms.locfileid: "62232868"
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interpretowanie deklaratorów bardziej złożonych
 
-Należy umieścić wszelkie deklaratora w nawiasach, aby określić konkretnego interpretacji "deklaratorów złożonych". Złożone deklaratora jest identyfikatorem kwalifikowana przez więcej niż jednej tablicy, wskaźnika lub modyfikator funkcji. Różne kombinacje tablicy, wskaźnika i funkcja modyfikatorów można zastosować do jednego identyfikatora. Ogólnie `typedef` można uproszczenie deklaracji. Zobacz [deklaracje Typedef](../c-language/typedef-declarations.md).
+Można ująć dowolne deklarator w nawiasach, aby określić konkretną interpretację "złożone deklarator". Złożony deklarator jest identyfikatorem kwalifikowanym przez więcej niż jedną tablicę, wskaźnik lub modyfikator funkcji. Można zastosować różne kombinacje modyfikatorów tablicowych, wskaźników i funkcji do pojedynczego identyfikatora. Zwykle `typedef` może służyć do uproszczenia deklaracji. Zobacz [deklaracje typedef](../c-language/typedef-declarations.md).
 
-W interpretowanie deklaratorów złożonych, nawiasy i nawiasy (czyli Modyfikatory po prawej stronie identyfikatora) pierwszeństwo gwiazdki (czyli Modyfikatory identyfikator po lewej stronie). Jak nawiasy mają takie samo pierwszeństwo i skojarzone od lewej do prawej. Po w pełni interpretowane deklaratora Specyfikator typu zostanie zastosowana jako ostatni krok. Przy użyciu nawiasów można zastąpić domyślną kolejność skojarzenia i wymusić określonego interpretacji. Nigdy nie używaj nawiasów, jednak wokół nazwy identyfikatora samodzielnie. Może to być niemożliwe jako listy parametrów.
+W interpretacji złożonej deklaratory, nawiasy i nawiasy (czyli Modyfikatory z prawej strony identyfikatora) mają pierwszeństwo przed gwiazdkami (czyli modyfikatorami z lewej strony identyfikatora). Nawiasy i nawiasy mają takie samo pierwszeństwo i są kojarzone od lewej do prawej. Po pełnej interpretacji deklarator specyfikator typu jest stosowany jako ostatni krok. Za pomocą nawiasów można zastąpić domyślny porządek kojarzenia i wymusić określoną interpretację. Nigdy nie używaj nawiasów, jednak jednocześnie wokół nazwy identyfikatora. Może to być błędnie interpretowane jako lista parametrów.
 
-Jest to prosty sposób interpretowanie deklaratorów złożonych do ich czytania "od wewnątrz," wykonując następujące cztery kroki:
+Prosty sposób interpretacji złożonych Deklaratory polega na ich odczytaniu "z wnętrza", wykonując następujące cztery kroki:
 
-1. Rozpocznij od identyfikatora i "patrzą" bezpośrednio po prawej stronie dla nawiasów ani nawiasów (jeśli istnieje).
+1. Zacznij od identyfikatora i poszukaj bezpośrednio w prawo dla nawiasów lub nawiasów (jeśli istnieją).
 
-1. Interpretowanie tych nawiasów ani nawiasów, a następnie "patrzą" po lewej stronie, aby uzyskać gwiazdki.
+1. Interpretuj te nawiasy lub nawiasy, a następnie poszukaj w lewej części gwiazdki.
 
-1. Jeśli napotkasz prawy nawias okrągły na każdym etapie, przejdź wstecz i Zastosuj zasady 1 i 2 do wszystkiego w nawiasach.
+1. Jeśli napotkasz prawy nawias na dowolnym etapie, wróć i zastosuj reguły 1 i 2 do wszystkiego w nawiasach.
 
-1. Zastosuj Specyfikator typu.
+1. Zastosuj specyfikator typu.
 
     ```
     char *( *(*var)() )[10];
@@ -34,49 +34,49 @@ Jest to prosty sposób interpretowanie deklaratorów złożonych do ich czytania
      7   6  4 2 1   3    5
     ```
 
-W tym przykładzie kroki są ponumerowane w kolejności i może być interpretowany w następujący sposób:
+W tym przykładzie kroki są numerowane w kolejności i mogą być interpretowane w następujący sposób:
 
 1. Identyfikator `var` jest zadeklarowany jako
 
-1. Wskaźnik do
+1. wskaźnik do
 
 1. funkcja zwracająca
 
-1. Wskaźnik do
+1. wskaźnik do
 
-1. tablicy 10 elementów, które są
+1. Tablica 10 elementów, które są
 
 1. wskaźniki do
 
-1. `char` wartości.
+1. `char`wartością.
 
 ## <a name="examples"></a>Przykłady
 
-Poniższe przykłady ilustrują innych złożonych deklaracji i pokazują, jak nawiasy mogą wpływać na znaczenie deklaracji.
+Poniższe przykłady ilustrują inne złożone deklaracje i pokazują, jak nawiasy mogą wpływać na znaczenie deklaracji.
 
 ```
 int *var[5]; /* Array of pointers to int values */
 ```
 
-Modyfikator tablicy ma wyższy priorytet niż modyfikator wskaźnika, więc `var` jest zadeklarowana w postaci tablicy. Modyfikator wskaźnika odnoszące się do typu elementów tablicy; w związku z tym, elementy tablicy są wskaźnikami do `int` wartości.
+Modyfikator tablicy ma wyższy priorytet niż modyfikator wskaźnika, więc `var` jest zadeklarowany jako tablica. Modyfikator wskaźnika ma zastosowanie do typu elementów tablicy; w związku z tym elementy tablicy są wskaźnikami do `int` wartości.
 
 ```
 int (*var)[5]; /* Pointer to array of int values */
 ```
 
-W tej deklaracji pod kątem `var`, nawiasy nadawały wskaźnika modyfikator wyższy priorytet niż modyfikator tablicy i `var` jest deklarowana jako wskaźnik do tablicy pięć `int` wartości.
+W tej deklaracji dla `var`, nawiasy dają modyfikator wskaźnika wyższy priorytet niż modyfikator tablicy i `var` jest zadeklarowany jako wskaźnik do tablicy pięciu `int` wartości.
 
 ```
 long *var( long, long ); /* Function returning pointer to long */
 ```
 
-Funkcja Modyfikatory również mają wyższy priorytet niż modyfikatorów wskaźników, więc tej deklaracji pod kątem `var` deklaruje `var` do funkcji zwracającej wskaźnik do **długie** wartość. Zadeklarowano funkcję do wykonania dwóch **długie** wartości jako argumenty.
+Modyfikatory funkcji mają również wyższy priorytet niż Modyfikatory wskaźnika, więc ta deklaracja `var` deklaruje `var` jako funkcję zwracającą wskaźnik do wartości **długiej** . Funkcja jest zadeklarowana, aby przyjmować dwie **długie** wartości jako argumenty.
 
 ```
 long (*var)( long, long ); /* Pointer to function returning long */
 ```
 
-Ten przykład jest podobny do poprzedniego. Nawiasy nadawały wskaźnika modyfikator wyższy priorytet niż modyfikator funkcji i `var` jest deklarowana jako wskaźnik do funkcji, która zwraca **długie** wartość. Ponownie funkcja przyjmuje dwa **długie** argumentów.
+Ten przykład jest podobny do poprzedniego. Nawiasy dają modyfikator wskaźnika wyższy priorytet niż modyfikator funkcji i `var` jest zadeklarowany jako wskaźnik do funkcji, która zwraca wartość **długą** . Ponownie funkcja przyjmuje dwa **długie** argumenty.
 
 ```
 struct both       /* Array of pointers to functions */
@@ -86,7 +86,7 @@ struct both       /* Array of pointers to functions */
 } ( *var[5] )( struct both, struct both );
 ```
 
-Elementy tablicy nie może być funkcji, ale ta deklaracja pokazuje, jak zadeklarować tablicę wskaźników do funkcji, zamiast tego. W tym przykładzie `var` jest zadeklarowana w postaci tablicy pięć wskaźników do funkcji, które zwracają struktury za pomocą dwóch członków. Argumenty funkcji są deklarowane jako dwie struktury za pomocą tego samego typu struktury `both`. Należy pamiętać, że nawiasy otaczające `*var[5]` są wymagane. Bez nich deklaracja jest niedozwolona próba jest zadeklarowanie tablicy funkcji, jak pokazano poniżej:
+Elementy tablicy nie mogą być funkcjami, ale ta deklaracja pokazuje, jak zadeklarować tablicę wskaźników do funkcji. W tym przykładzie `var` jest zadeklarowany jako tablica pięciu wskaźników do funkcji, które zwracają struktury z dwoma elementami członkowskimi. Argumenty funkcji są deklarowane jako dwie struktury z tym samym typem struktury, `both`. Należy zauważyć, że nawiasy `*var[5]` otaczające są wymagane. Bez nich, deklaracja jest niedozwoloną próbą zadeklarować tablicę funkcji, jak pokazano poniżej:
 
 ```
 /* ILLEGAL */
@@ -99,15 +99,15 @@ Poniższa instrukcja deklaruje tablicę wskaźników.
 unsigned int *(* const *name[5][10] ) ( void );
 ```
 
-`name` Tablica zawiera elementy 50 zorganizowane w tablicy wielowymiarowej. Elementy są wskaźnikami do wskaźnika, który jest stałą. Stałe wskazuje ten wskaźnik do funkcji, która nie ma parametrów i zwraca wskaźnik do typu bez znaku.
+`name` Tablica zawiera 50 elementów zorganizowanych w tablicę wielowymiarową. Elementy są wskaźnikami do wskaźnika, który jest stałą. Ten stały wskaźnik wskazuje funkcję, która nie ma parametrów i zwraca wskaźnik do niepodpisanego typu.
 
-W tym przykładzie dalej jest funkcji zwracającej wskaźnik do tablicy trzech **double** wartości.
+Ten następny przykład to funkcja zwracająca wskaźnik do tablicy trzech wartości **Double** .
 
 ```
 double ( *var( double (*)[3] ) )[3];
 ```
 
-W tym oświadczeniu funkcja zwraca wskaźnik do tablicy, od funkcji zwracających tablice są niedozwolone. W tym miejscu `var` został zadeklarowany jako funkcji zwracającej wskaźnik do tablicy trzech **double** wartości. Funkcja `var` przyjmuje jeden argument. Argument, takich jak wartość zwracana jest wskaźnikiem do tablicy trzech **double** wartości. Typ argumentu jest nadawana przez złożony *abstrakcyjny declarator*. Nawiasy wokół gwiazdki w typ argumentu są wymagane; bez nich typ argumentu będzie tablica trzy wskaźników do **double** wartości. Dyskusję na temat i przykłady deklaratory abstrakcyjne, zobacz [deklaratory abstrakcyjne](../c-language/c-abstract-declarators.md).
+W tej deklaracji funkcja zwraca wskaźnik do tablicy, ponieważ funkcje zwracające tablice są niedozwolone. W `var` tym miejscu zadeklarowano jako funkcję zwracającą wskaźnik do tablicy trzech wartości **Double** . Funkcja `var` przyjmuje jeden argument. Argument, podobny do wartości zwracanej, jest wskaźnikiem do tablicy trzech wartości **Double** . Typ argumentu jest określony przez złożone *abstrakcyjne-deklarator*. Nawiasy wokół gwiazdki w typie argumentu są wymagane; bez nich typ argumentu będzie tablicą trzech wskaźników do wartości **podwójnej precyzji** . Aby zapoznać się z omówieniem i przykładami abstrakcyjnych deklaratory, zobacz [abstract Deklaratory](../c-language/c-abstract-declarators.md).
 
 ```
 union sign         /* Array of arrays of pointers */
@@ -117,15 +117,15 @@ union sign         /* Array of arrays of pointers */
 } **var[5][5];
 ```
 
-Jak pokazano w powyższym przykładzie, wskaźnik może wskazywać na inny wskaźnik, a Tablica może zawierać tablice jako elementy. W tym miejscu `var` jest tablicą pięć kolejnych elementów. Każdy element jest 5 elementowej tablicy wskaźników do wskaźników do złożenia za pomocą dwóch członków.
+Jak pokazano na powyższym przykładzie, wskaźnik może wskazywać na inny wskaźnik, a tablica może zawierać tablice jako elementy. Poniżej `var` znajduje się tablica pięciu elementów. Każdy element jest tablicą składającą się z pięciu elementów, która jest wskaźnikiem do Unii zawierających dwa elementy członkowskie.
 
 ```
 union sign *(*var[5])[5]; /* Array of pointers to arrays
                              of pointers to unions        */
 ```
 
-Ten przykład pokazuje, jak zmienia się znaczenie deklaracji umieszczania nawiasów. W tym przykładzie `var` jest 5 elementowej tablicy wskaźników do 5 elementowej tablice wskaźników do Unii. Aby uzyskać przykłady sposobów użycia `typedef` Aby uniknąć złożonych deklaracji, zobacz [deklaracje Typedef](../c-language/typedef-declarations.md).
+Ten przykład pokazuje, jak umieszczanie nawiasów zmienia znaczenie deklaracji. W tym przykładzie `var` jest to pięć-elementowa tablica wskaźników do pięciu elementów wskaźników do Unii. Aby zapoznać się z przykładami `typedef` użycia programu w celu uniknięcia złożonych deklaracji, zobacz [deklaracje typedef](../c-language/typedef-declarations.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Deklaracje i typy](../c-language/declarations-and-types.md)

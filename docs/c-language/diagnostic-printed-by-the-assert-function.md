@@ -11,14 +11,14 @@ ms.locfileid: "62234226"
 ---
 # <a name="diagnostic-printed-by-the-assert-function"></a>Diagnostyka wydrukowana przez funkcję assert
 
-**ANSI 4.2** diagnostyczne drukowanymi przez i zachowanie po przerwaniu dla **asercja** — funkcja
+**ANSI 4,2** Diagnostyka wydrukowana przez i zakończenie działania funkcji **Assert**
 
-**Asercja** funkcja drukuje komunikat diagnostyczny i wywołania **przerwać** procedury, jeśli wyrażenie ma wartość false (0). Komunikat diagnostyczny ma postać
+Funkcja **Assert** drukuje komunikat diagnostyczny i wywołuje procedurę **Abort** , jeśli wyrażenie ma wartość false (0). Komunikat diagnostyczny ma postać
 
-> **Nie można potwierdzić**: <em>wyrażenie</em>**, plik** <em>filename</em>**, wiersz** *linenumber*
+> **Potwierdzenie nie powiodło się**: <em>wyrażenie</em>**, plik** <em>filename</em>**, line** *LineNumber*
 
-gdzie *filename* jest nazwa pliku źródłowego i *linenumber* jest numer wiersza potwierdzenie, że nie powiodło się w pliku źródłowym. Jeśli zostanie podjęta żadna akcja *wyrażenie* ma wartość true (niezerową).
+gdzie *filename* jest nazwą pliku źródłowego, a *LineNumber* jest numerem wiersza potwierdzenia, który zakończył się niepowodzeniem w pliku źródłowym. Jeśli *wyrażenie* ma wartość true (niezerowe), nie jest wykonywana żadna akcja.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

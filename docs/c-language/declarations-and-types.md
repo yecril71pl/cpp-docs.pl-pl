@@ -16,7 +16,7 @@ ms.locfileid: "62234593"
 ---
 # <a name="declarations-and-types"></a>Deklaracje i typy
 
-W tej sekcji opisano deklaracji i inicjowania zmiennych, funkcji i typów. Język C zawiera standardowy zestaw podstawowych typów danych. Można również dodać własne typy danych, o nazwie "pochodne typy," przez zadeklarowanie nowe na podstawie typów już zdefiniowanych. Omówiono następujące tematy:
+W tej sekcji opisano deklarację i inicjalizację zmiennych, funkcji i typów. Język C zawiera standardowy zestaw podstawowych typów danych. Możesz również dodać własne typy danych o nazwie "typy pochodne", deklarując nowe na podstawie typów już zdefiniowanych. Omówiono następujące tematy:
 
 - [Przegląd deklaracji](../c-language/overview-of-declarations.md)
 
@@ -36,10 +36,10 @@ W tej sekcji opisano deklaracji i inicjowania zmiennych, funkcji i typów. Języ
 
 - [Niekompletne typy](../c-language/incomplete-types.md)
 
-- [Deklaracje TypeDef](../c-language/typedef-declarations.md)
+- [Deklaracje typedef](../c-language/typedef-declarations.md)
 
-- [Atrybuty rozszerzone klasy magazynowania](../c-language/c-extended-storage-class-attributes.md)
+- [Rozszerzone atrybuty klasy magazynu](../c-language/c-extended-storage-class-attributes.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C](../c-language/c-language-reference.md)

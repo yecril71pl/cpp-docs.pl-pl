@@ -15,37 +15,37 @@ ms.locfileid: "62158524"
 ---
 # <a name="sequential-evaluation-operator"></a>Operator obliczania sekwencyjnego
 
-Operator obliczania sekwencyjnego, nazywany również "operator przecinka," ocenia dwóch argumentów operacji sekwencyjnie od lewej do prawej.
+Operator sekwencyjnej oceny, nazywany także "operatorem przecinkowym", ocenia dwa operandy sekwencyjnie od lewej do prawej.
 
 ## <a name="syntax"></a>Składnia
 
-*expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie* **,** *wyrażenia przypisania*
+*wyrażenie*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*przypisanie — wyrażenie*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie* **,** *przypisanie — wyrażenie*
 
-Lewy operand operator obliczania sekwencyjnego zostało ocenione jako `void` wyrażenia. Wynik operacji ma ten sam wartość i typ jako prawy operand. Każdy argument może być dowolnego typu. Operator obliczania sekwencyjnego nie wykonuje konwersje typów swoich argumentów, a nie przekazuje on l wartością. Po pierwszego operandu, co oznacza, że wszystkie efekty uboczne z oceny lewy operand odbywa się przed rozpoczęciem obliczania prawy operand jest punkt sekwencji. Zobacz [punktów sekwencji](../c-language/c-sequence-points.md) Aby uzyskać więcej informacji.
+Lewy operand operatora sekwencyjnej oceny jest obliczany jako `void` wyrażenie. Wynik operacji ma taką samą wartość i typ jak prawy operand. Każdy operand może być dowolnego typu. Operator sekwencyjnej oceny nie wykonuje konwersji typu między operandami i nie zwraca wartości l. Po pierwszym operandzie istnieje punkt sekwencji, co oznacza, że wszystkie efekty uboczne z obliczenia lewego operandu są kończone przed rozpoczęciem obliczania prawego operandu. Zobacz [punkty sekwencji](../c-language/c-sequence-points.md) , aby uzyskać więcej informacji.
 
-Operator obliczania sekwencyjnego zazwyczaj jest używane do oceny co najmniej dwóch wyrażeń w kontekstach, których jest dozwolone tylko jedno wyrażenie.
+Operator sekwencyjnej oceny jest zazwyczaj używany do oceny dwóch lub więcej wyrażeń w kontekstach, w których dozwolone jest tylko jedno wyrażenie.
 
-Przecinki może służyć jako separatorów w niektórych kontekstach. Jednakże należy zachować ostrożność nie należy mylić użycie przecinka jako separatora przy jego użyciu jako operator; używa dwóch całkowicie różnią się.
+Przecinki mogą być używane jako separatory w niektórych kontekstach. Jednakże należy zachować ostrożność, aby nie mylić użycia przecinka jako separatora przy użyciu jako operatora; te dwa zastosowania są całkowicie różne.
 
 ## <a name="example"></a>Przykład
 
-Ten przykład ilustruje operator obliczania sekwencyjnego:
+Ten przykład ilustruje operator sekwencyjnej oceny:
 
 ```
 for ( i = j = 1; i + j < 20; i += i, j-- );
 ```
 
-W tym przykładzie każdy argument operacji **dla** instrukcji trzeci jest obliczane wyrażenie niezależnie. Lewy operand `i += i` jest pierwszy ocenione, a następnie prawy operand `j--`, jest obliczane.
+W tym przykładzie każdy operand trzeciego wyrażenia **w instrukcji for** jest oceniane niezależnie. Lewy operand `i += i` jest oceniany jako pierwszy; następnie jest oceniany prawy `j--`operand,,.
 
 ```
 func_one( x, y + 2, z );
 func_two( (x--, y + 2), z );
 ```
 
-W funkcji wywołanie `func_one`, trzech argumentów, oddzielając je średnikami, są przekazywane: `x`, `y + 2`, i `z`. W funkcji wywołanie `func_two`, nawiasy wymuszają na kompilatorze interpretowanie przecinkiem jako operator obliczania sekwencyjnego. Wywołanie tej funkcji przekazuje dwa argumenty `func_two`. Pierwszy argument jest wynikiem operacji obliczania sekwencyjnego `(x--, y + 2)`, który ma wartość i typ wyrażenia `y + 2`; drugi argument funkcji jest `z`.
+W wywołaniu funkcji `func_one`do, trzy argumenty, oddzielone przecinkami, są przenoszone: `x`, `y + 2`, i `z`. W wywołaniu funkcji do `func_two`, nawiasy wymuszają, aby kompilator interpretował pierwszy przecinek jako operator oceny sekwencyjnej. To wywołanie funkcji przekazuje dwa argumenty do `func_two`. Pierwszy argument jest wynikiem operacji `(x--, y + 2)`sekwencyjnej oceny, która ma wartość i typ wyrażenia; `y + 2` drugi argument to `z`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Operator przecinkowy: ,](../cpp/comma-operator.md)
+[Operator przecinkowy:,](../cpp/comma-operator.md)

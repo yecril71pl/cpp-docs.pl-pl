@@ -14,9 +14,9 @@ ms.locfileid: "62158322"
 ---
 # <a name="signed-bitwise-operations"></a>Operacje bitowe ze znakiem
 
-**ANSI 3.3** wyniki Operacje bitowe na liczby całkowite ze znakiem
+**ANSI 3,3** Wyniki operacji bitowych w przypadku liczb całkowitych ze znakiem
 
-Operacje bitowe na liczby całkowite ze znakiem działać tak samo, jak operacje bitowe na liczb całkowitych bez znaku. Na przykład `-16 & 99` mogą być wyrażone w danych binarnych jako
+Operacje bitowe w podpisanych liczbach całkowitych działają tak samo jak operacje bitowe w liczbach całkowitych bez znaku. Na przykład `-16 & 99` może być wyrażona jako plik binarny jako
 
 ```
   11111111 11110000
@@ -25,8 +25,8 @@ Operacje bitowe na liczby całkowite ze znakiem działać tak samo, jak operacje
   00000000 01100000
 ```
 
-Bitowe AND powstaje 96.
+Wynik bitowy jest 96.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Liczby całkowite](../c-language/integers.md)

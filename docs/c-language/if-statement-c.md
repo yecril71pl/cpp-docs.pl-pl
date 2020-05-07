@@ -20,19 +20,19 @@ ms.locfileid: "62233063"
 ---
 # <a name="if-statement-c"></a>if — instrukcja (C)
 
-**Jeśli** instrukcji kontroluje rozgałęzień warunkowych. Treść **Jeśli** instrukcja jest wykonywana w przypadku wartości wyrażenia jest różna od zera. Składnia **Jeśli** instrukcji ma dwie formy.
+Instrukcja **if** kontroluje rozgałęzienie warunkowe. Treść instrukcji **if** jest wykonywana, jeśli wartość wyrażenia jest różna od zera. Składnia instrukcji **if** ma dwa formy.
 
 ## <a name="syntax"></a>Składnia
 
-*Wybór instrukcji*: **Jeśli (** *wyrażenie* **)** *— instrukcja*
+SELECT *-Statement*: **if (***wyrażenie***)***instrukcja*      
 
-**Jeśli (** *wyrażenie* **)** *instrukcji* **else** *— instrukcja*
+**if (***wyrażenie***)***instrukcja***else***statement*          
 
-W obu formach **Jeśli** instrukcji i wyrażeń, które mogą mieć dowolną wartość z wyjątkiem struktury, są oceniane, łącznie ze wszystkimi efektami ubocznymi.
+W obu formach instrukcji **if** , wyrażenia, które mogą mieć dowolną wartość z wyjątkiem struktury, są oceniane, łącznie ze wszystkimi efektami ubocznymi.
 
-W pierwszej formie składni Jeśli *wyrażenie* ma wartość true (niezerową), *instrukcji* jest wykonywany. Jeśli *wyrażenie* ma wartość FAŁSZ, *instrukcji* jest ignorowana. W drugim formularzu składni, który używa **else**, drugi *instrukcji* jest wykonywana w przypadku *wyrażenie* ma wartość false. Za pomocą obie formy kontrolować następnie — dostęp próbny od **Jeśli** instrukcji do następnej instrukcji w programie dopóki jedno z oświadczeń zawiera **podziału**, **nadal**, lub `goto`.
+W pierwszej postaci składni, jeśli *wyrażenie* jest prawdziwe (niezerowe), *instrukcja* jest wykonywana. Jeśli *wyrażenie* ma wartość false, *instrukcja* jest ignorowana. W drugiej formie składni, która używa **innych**, druga *instrukcja* jest wykonywana, jeśli *wyrażenie* ma wartość false. W obu formularzach kontrolki są przekazywane z instrukcji **if** do następnej instrukcji w programie, chyba że jedna z instrukcji zawiera **Break**, **Continue**lub `goto`.
 
-Poniżej przedstawiono przykłady **Jeśli** instrukcji:
+Poniżej przedstawiono przykłady instrukcji **if** :
 
 ```
 if ( i > 0 )
@@ -44,9 +44,9 @@ else
 }
 ```
 
-W tym przykładzie instrukcja `y = x/i;` jest wykonywana w przypadku `i` jest większa niż 0. Jeśli `i` jest mniejsza niż lub równe 0, `i` jest przypisany do `x` i `f( x )` jest przypisany do `y`. Należy pamiętać, że instrukcja tworzących **Jeśli** klauzuli kończy się średnikiem.
+W tym przykładzie instrukcja `y = x/i;` jest wykonywana, jeśli `i` jest większa niż 0. Jeśli `i` jest mniejsza lub `i` równa 0, jest przypisana do `x` i `f( x )` jest przypisywana `y`do. Należy zauważyć, że instrukcja tworząca klauzulę **if** kończą się średnikiem.
 
-Podczas zagnieżdżania **Jeśli** instrukcji i **else** klauzule ujmować w nawiasy klamrowe do instrukcji i klauzule w złożonej instrukcji, które Sprecyzuj usługi. Jeśli istnieją nie nawiasów klamrowych, kompilator rozwiązuje niejasności, kojarząc każdego **else** z najbliższą **Jeśli** bez **else**.
+Podczas zagnieżdżania instrukcji **if** i **else** klauzule, należy użyć nawiasów klamrowych, aby zgrupować instrukcje i klauzule do złożonych instrukcji, które wyjaśniają zamiar. Jeśli nie ma żadnych nawiasów klamrowych, kompilator rozpoznaje niejasności, kojarząc każdy **inny** z najbliższy, **Jeśli** nie ma **innych**.
 
 ```
 if ( i > 0 )           /* Without braces */
@@ -56,7 +56,7 @@ if ( i > 0 )           /* Without braces */
         x = i;
 ```
 
-**Else** klauzula jest skojarzony z wewnętrzny **Jeśli** instrukcji w tym przykładzie. Jeśli `i` jest mniejszy niż lub równy 0, zostanie przypisana żadna wartość, aby `x`.
+Klauzula **else** jest skojarzona z wewnętrzną instrukcją **if** w tym przykładzie. Jeśli `i` jest mniejsza lub równa 0, żadna wartość nie jest przypisana `x`do.
 
 ```
 if ( i > 0 )
@@ -68,8 +68,8 @@ else
     x = i;
 ```
 
-Nawiasów klamrowych otaczających wewnętrzny **Jeśli** instrukcji w tym przykładzie wprowadź **else** klauzuli część zewnętrzny **Jeśli** instrukcji. Jeśli `i` jest mniejsza niż lub równe 0, `i` jest przypisany do `x`.
+Nawiasy otaczające wewnętrzną instrukcję **if** w tym przykładzie tworzą klauzulę **else** instrukcji Outer **if** . Jeśli `i` jest mniejsza lub równa 0, `i` jest przypisana do `x`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[if-else, instrukcja (C++)](../cpp/if-else-statement-cpp.md)
+[if-else — instrukcja (C++)](../cpp/if-else-statement-cpp.md)

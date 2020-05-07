@@ -11,10 +11,10 @@ ms.locfileid: "62233102"
 ---
 # <a name="including-bracketed-filenames"></a>Łącznie z nazwami plików w nawiasach
 
-**ANSI 3.8.2** metody lokalizowania pliki źródłowe do zawarcia
+**3.8.2 ANSI** Metoda lokalizowania plików źródłowych zawarcia
 
-Specyfikacji pliku ujęta w nawiasy ostre preprocesor nie wyszukiwania katalogów pliku nadrzędnego. Plik "nadrzędny" znajduje się plik, który ma [#include](../preprocessor/hash-include-directive-c-cpp.md) dyrektywy w nim. Zamiast tego należy go rozpoczyna się od wyszukiwania pliku w określonym następującego wiersza polecenia kompilatora / I. Jeśli opcja /I nie istnieje lub nie powiedzie się, preprocesor wykorzysta zmienną środowiskową INCLUDE, aby znaleźć wszystkie pliki dołączane w nawiasach kątowych. Zmienna środowiskowa INCLUDE może zawierać wiele ścieżek oddzielonych średnikami (**;**). Jeśli więcej niż jeden katalog pojawia się jako część opcji /I lub w ramach zmienną środowiskową INCLUDE, preprocesor przeszukuje je w kolejności, w jakiej są wyświetlane.
+W przypadku specyfikacji plików ujętych w nawiasy ostre preprocesor nie przeszukuje katalogów plików nadrzędnych. Plik "nadrzędny" jest plikiem, który zawiera dyrektywę [#include](../preprocessor/hash-include-directive-c-cpp.md) . Zamiast tego rozpoczyna się od wyszukania pliku w katalogach określonych w wierszu polecenia kompilatora po/I. Jeśli/I opcja nie jest obecna lub kończy się niepowodzeniem, preprocesor używa zmiennej środowiskowej INCLUDE do znajdowania dowolnych plików dołączanych w nawiasach kątowych. Zmienna środowiskowa INCLUDE może zawierać wiele ścieżek oddzielonych średnikami (**;**). Jeśli więcej niż jeden katalog jest wyświetlany jako część opcji/I lub w zmiennej środowiskowej INCLUDE, preprocesor przeszukuje je w kolejności, w jakiej są wyświetlane.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy przetwarzania wstępnego](../c-language/preprocessing-directives.md)

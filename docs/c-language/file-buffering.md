@@ -15,10 +15,10 @@ ms.locfileid: "62233794"
 ---
 # <a name="file-buffering"></a>Buforowanie plików
 
-**ANSI 4.9.3** cechy buforowanie plików
+**4.9.3 ANSI** Charakterystyka buforowania plików
 
-Dostępne za pośrednictwem standardowych funkcji We/Wy plików na dysku w pełni są buforowane. Domyślny rozmiar buforu przechowuje 512 bajtów.
+Pliki dysków dostępne za za poorednictwem standardowych funkcji we/wy są w pełni buforowane. Domyślnie bufor przechowuje 512 bajtów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Funkcje bibliotek](../c-language/library-functions.md)

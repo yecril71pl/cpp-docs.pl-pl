@@ -14,10 +14,10 @@ ms.locfileid: "62234481"
 ---
 # <a name="default-date-and-time"></a>Domyślne data i godzina
 
-**ANSI 3.8.8** definicje `__DATE__` i `__TIME__` when, odpowiednio, datę i godzinę tłumaczenia nie są dostępne
+**3.8.8 ANSI** Definicje dla `__DATE__` i `__TIME__` , w których odpowiednio, Data i godzina tłumaczenia są niedostępne
 
-Gdy system operacyjny nie poda datę i godzinę tłumaczenia, wartości domyślne `__DATE__` i `__TIME__` są `May 03 1957` i `17:00:00`.
+Jeśli system operacyjny nie zawiera daty i godziny tłumaczenia, wartości domyślne `__DATE__` dla i `__TIME__` są `May 03 1957` i. `17:00:00`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dyrektywy przetwarzania wstępnego](../c-language/preprocessing-directives.md)

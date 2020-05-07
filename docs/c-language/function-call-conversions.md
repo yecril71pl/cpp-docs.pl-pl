@@ -15,12 +15,12 @@ ms.locfileid: "62233226"
 ---
 # <a name="function-call-conversions"></a>Konwersje wywołania funkcji
 
-Typ konwersji wykonywane względem argumentów w wywołaniu funkcji zależy od obecności prototypu funkcji (deklaracja) z typami argumentów zadeklarowane dla wywołanej funkcji.
+Typ konwersji wykonywanej na argumentach wywołania funkcji zależy od obecności prototypu funkcji (deklaracji do przodu) z zadeklarowanymi typami argumentów dla wywołanej funkcji.
 
-Jeśli prototyp funkcji jest obecny i zawiera typy argumentów zadeklarowane, kompilator wykonuje sprawdzanie typu (zobacz [funkcje](../c-language/functions-c.md)).
+Jeśli prototyp funkcji jest obecny i zawiera zadeklarowane typy argumentów, kompilator wykonuje sprawdzanie typu (zobacz [funkcje](../c-language/functions-c.md)).
 
-Jeśli nie prototypu funkcji jest obecny, tylko zwykle konwersje arytmetyczne są wykonywane na argumentów w wywołaniu funkcji. Te konwersje są wykonywane niezależnie dla każdego argumentu w wywołaniu. Oznacza to, że **float** wartość jest konwertowana na **double**; `char` lub **krótki** wartość jest konwertowana na `int`; i `unsigned char` lub **typ unsigned short** jest konwertowana na `unsigned int`.
+Jeśli nie ma prototypu funkcji, tylko standardowe konwersje arytmetyczne są wykonywane na argumentach wywołania funkcji. Te konwersje są wykonywane niezależnie od każdego argumentu w wywołaniu. Oznacza to, że wartość **zmiennoprzecinkowa** jest konwertowana na **podwójną**; wartość `char` a lub **krótka** jest konwertowana na `int`; a `unsigned char` lub **bez znaku Short** jest konwertowany na `unsigned int`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Konwersje typów](../c-language/type-conversions-c.md)
+[Konwersje typu](../c-language/type-conversions-c.md)

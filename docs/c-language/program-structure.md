@@ -15,20 +15,20 @@ ms.locfileid: "62232522"
 ---
 # <a name="program-structure"></a>Struktura programu
 
-W tej sekcji przedstawiono omówienie programów C i wykonywania programu. Warunki i funkcje istotne dla zrozumienia, składniki i programy C również zostały wprowadzone. Omówione tematy obejmują:
+Ta sekcja zawiera omówienie programów i wykonywania programu w języku C. Wprowadzono również warunki i funkcje, które są ważne dla zrozumienie programów i składników języka C. Omówione tematy obejmują:
 
 - [Pliki źródłowe i programy źródłowe](../c-language/source-files-and-source-programs.md)
 
-- [Główne wykonanie funkcji i programu](../c-language/main-function-and-program-execution.md)
+- [Funkcja Main i wykonywanie programu](../c-language/main-function-and-program-execution.md)
 
 - [Analizowanie argumentów wiersza polecenia](../c-language/parsing-c-command-line-arguments.md)
 
-- [Okres istnienia, zakres, widoczność i powiązania](../c-language/lifetime-scope-visibility-and-linkage.md)
+- [Okres istnienia, zakres, widoczność i połączenie](../c-language/lifetime-scope-visibility-and-linkage.md)
 
-- [Przestrzenie nazw](../c-language/name-spaces.md)
+- [Spacje nazw](../c-language/name-spaces.md)
 
-Ponieważ w tej sekcji przedstawiono omówienie, omówione tematy zawierają tylko wprowadzające informacje. Zapoznaj się z informacjami odsyłaczy, aby uzyskać bardziej szczegółowe wyjaśnienia.
+Ponieważ ta sekcja jest przeglądem, omówione tematy zawierają jedynie materiał wprowadzający. Zapoznaj się z informacjami dotyczącymi odsyłaczy, aby uzyskać bardziej szczegółowe wyjaśnienia.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C](../c-language/c-language-reference.md)

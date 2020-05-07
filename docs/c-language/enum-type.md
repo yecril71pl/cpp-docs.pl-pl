@@ -11,10 +11,10 @@ ms.locfileid: "62234104"
 ---
 # <a name="enum-type"></a>Typ wyliczenia
 
-**ANSI 3.5.2.2** typ liczby całkowitej, wybrana do reprezentowania wartości typu wyliczeniowego
+**3.5.2.2 ANSI** Typ liczby całkowitej wybranej do reprezentowania wartości typu wyliczenia
 
-Zmienna zadeklarowana jako `enum` jest `int`.
+Zmienna zadeklarowana jako `enum` `int`.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Struktury, złożenia, wyliczenia i pola bitowe](../c-language/structures-unions-enumerations-and-bit-fields.md)

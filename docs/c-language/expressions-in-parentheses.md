@@ -16,29 +16,29 @@ ms.locfileid: "62233751"
 ---
 # <a name="expressions-in-parentheses"></a>Wyrażenia w nawiasach
 
-Wszelkie operand można ująć w nawiasy, bez zmiany typu lub wartości wyrażenie w nawiasach. Na przykład w wyrażeniu:
+Każdy operand można ująć w nawiasy bez zmiany typu lub wartości wyrażenia ujętego. Na przykład w wyrażeniu:
 
 ```
 ( 10 + 5 ) / 5
 ```
 
-nawiasy wokół `10 + 5` oznaczają, że wartość `10 + 5` jest stosowana jako pierwsza i staje się lewy argument operacji podziału (**/**) — operator. Wynik `( 10 + 5 ) / 5` to 3. Bez nawiasów `10 + 5 / 5` używane do oceny do 11.
+nawiasy wokół `10 + 5` oznaczają, że wartość `10 + 5` jest szacowana jako pierwsza, a następnie przechodzi do lewego operandu operatora dzielenia (**/**). Wynik `( 10 + 5 ) / 5` wynosi 3. Bez nawiasów, `10 + 5 / 5` wynikiem będzie 11.
 
-Mimo że nawiasy wpływa na sposób operandy są grupowane w wyrażeniu, ich nie gwarantuje określonej kolejności obliczania we wszystkich przypadkach. Na przykład nawiasów ani grupowanie od lewej do prawej następujące wyrażenie nie gwarantuje, jakie wartości `i` będą znajdować się w jednej z podwyrażenia:
+Chociaż nawiasy mają wpływ na sposób grupowania argumentów operacji w wyrażeniu, nie mogą one zagwarantować określonej kolejności oceny we wszystkich przypadkach. Na przykład ani nawiasy, ani grupowanie od lewej do prawej w następującym wyrażeniu gwarantuje, jakie wartości `i` będą znajdować się w dowolnym z podwyrażeń:
 
 ```
 ( i++ +1 ) * ( 2 + i )
 ```
 
-Kompilator jest bezpłatny do oceny partnerami mnożenia w dowolnej kolejności. Jeśli wartość początkową `i` wynosi zero, całe wyrażenie można go obliczyć jako jedną z tych dwóch instrukcji:
+Kompilator jest bezpłatny, aby oszacować dwie strony mnożenia w dowolnej kolejności. Jeśli wartość początkowa `i` wynosi zero, całe wyrażenie może być oceniane jako jedna z tych dwóch instrukcji:
 
 ```
 ( 0 + 1 + 1 ) * ( 2 + 1 )
 ( 0 + 1 + 1 ) * ( 2 + 0 )
 ```
 
-Wyjątki wynikłe ze efekty uboczne są omówione w [efekty uboczne](../c-language/side-effects.md).
+Wyjątki pochodzące z efektów ubocznych są omawiane w [efektach ubocznych](../c-language/side-effects.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia podstawowe języka C](../c-language/c-primary-expressions.md)

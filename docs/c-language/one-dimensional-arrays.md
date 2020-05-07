@@ -19,7 +19,7 @@ ms.locfileid: "75299107"
 ---
 # <a name="one-dimensional-arrays"></a>Tablice jednowymiarowe
 
-Wyrażenie przyrostkowe, a po nim wyrażenie w nawiasach kwadratowych ( **[]** ) jest reprezentacją indeksu elementu obiektu tablicy. Wyrażenie indeksu dolnego reprezentuje wartość w adresie, który jest pozycjami *wyrażenia* poza *wyrażeniem przyrostkowym* , gdy jest wyrażona jako
+Wyrażenie przyrostkowe, a po nim wyrażenie w nawiasach kwadratowych (**[]**) jest reprezentacją indeksu elementu obiektu tablicy. Wyrażenie indeksu dolnego reprezentuje wartość w adresie, który jest pozycjami *wyrażenia* poza *wyrażeniem przyrostkowym* , gdy jest wyrażona jako
 
 ```
 postfix-expression [ expression ]
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-Wyrażenia indeksu dolnego są zwykle używane do odwoływania się do elementów tablicy, ale można zastosować indeks dolny do dowolnego wskaźnika. Niezależnie od kolejności wartości *wyrażenie* musi być ujęte w nawiasy kwadratowe ( **[]** ).
+Wyrażenia indeksu dolnego są zwykle używane do odwoływania się do elementów tablicy, ale można zastosować indeks dolny do dowolnego wskaźnika. Niezależnie od kolejności wartości *wyrażenie* musi być ujęte w nawiasy kwadratowe (**[]**).
 
-Wyrażenie indeksu dolnego jest oceniane przez dodanie wartości całkowitej do wartości wskaźnika, a następnie zastosowanie operatora pośredniego (<strong>\*</strong>) do wyniku. (Zobacz [Operatory pośrednie i Address-of](../c-language/indirection-and-address-of-operators.md) dla dyskusji operatora operator pośredni). W efekcie dla jednowymiarowej tablicy następujące cztery wyrażenia są równoważne, przy założeniu, że `a` jest wskaźnikiem, a `b` jest liczbą całkowitą:
+Wyrażenie indeksu dolnego jest oceniane przez dodanie wartości całkowitej do wartości wskaźnika, a następnie zastosowanie operatora pośredniego (<strong>\*</strong>) do wyniku. (Zobacz [Operatory pośrednie i Address-of](../c-language/indirection-and-address-of-operators.md) dla dyskusji operatora operator pośredni). W efekcie dla jednowymiarowej tablicy następujące cztery wyrażenia są równoważne, przy założeniu, że `a` jest wskaźnikiem i `b` jest liczbą całkowitą:
 
 ```
 a[b]
@@ -49,16 +49,16 @@ b[a]
 
 Zgodnie z regułami konwersji dla operatora dodawania (biorąc pod uwagę [Operatory addytywne](../c-language/c-additive-operators.md)), wartość całkowita jest konwertowana na przesunięcie adresu przez pomnożenie jej przez długość typu, w którym znajduje się wskaźnik.
 
-Na przykład, Załóżmy, że identyfikator `line` odwołuje się do tablicy wartości `int`. Poniższa procedura służy do obliczania wyrażenia indeksu dolnego `line[ i ]`:
+Załóżmy na przykład, że identyfikator `line` odwołuje się do tablicy `int` wartości. Poniższa procedura służy do obliczania wyrażenia `line[ i ]`indeksu dolnego:
 
-1. Wartość całkowita `i` jest mnożona przez liczbę bajtów zdefiniowaną jako długość elementu `int`. Przekonwertowana wartość `i` reprezentuje pozycje `int` `i`.
+1. Wartość `i` całkowita jest mnożona przez liczbę bajtów zdefiniowanych jako długość `int` elementu. Przekonwertowana wartość `i` reprezentuje `i` `int` pozycje.
 
-1. Ta przekonwertowana wartość jest dodawana do pierwotnej wartości wskaźnika (`line`), aby uzyskać adres, który jest przesunięty `i` `int` pozycji z `line`.
+1. Ta przekonwertowana wartość jest dodawana do pierwotnej wartości`line`wskaźnika () w celu uzyskania adresu, `i` `int` który jest `line`przesunięty.
 
 1. Operator pośredni jest stosowany do nowego adresu. Wynik jest wartością elementu tablicy w tym miejscu (intuicyjnie, `line [ i ]`).
 
-Wyrażenie indeksu dolnego `line[0]` reprezentuje wartość pierwszego elementu wiersza, ponieważ przesunięcie od adresu reprezentowanego przez `line` wynosi 0. Analogicznie, wyrażenie takie jak `line[5]` odnosi się do elementu przesunięte pięć pozycji z wiersza lub szóstego elementu tablicy.
+Wyrażenie `line[0]` indeksu dolnego reprezentuje wartość pierwszego elementu wiersza, ponieważ przesunięcie od adresu reprezentowanego przez `line` wynosi 0. Analogicznie, wyrażenie takie jak `line[5]` odwołuje się do elementu przesunięte pięć pozycji z wiersza lub szóstego elementu tablicy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operator indeksu dolnego:](../cpp/subscript-operator.md)

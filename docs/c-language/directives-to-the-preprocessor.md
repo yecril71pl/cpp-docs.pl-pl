@@ -11,19 +11,19 @@ ms.locfileid: "62234143"
 ---
 # <a name="directives-to-the-preprocessor"></a>Dyrektywy preprocesora
 
-"Dyrektywy" powoduje, że preprocesora C, aby wykonywać konkretną akcję na podstawie tekstu programu przed kompilacją. [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md) opisano szczegółowo w *Preprocessor Reference*. W tym przykładzie użyto dyrektywy preprocesora `#define`:
+"Dyrektywa" powoduje, że preprocesor C wykonuje konkretną akcję dla tekstu programu przed kompilacją. [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md) są w pełni opisane w *dokumentacji preprocesora*. Ten przykład używa dyrektywy `#define`preprocesora:
 
 ```
 #define MAX 100
 ```
 
-Ta instrukcja informuje kompilator, aby zastąpić każde wystąpienie `MAX` przez `100` przed kompilacją. Dyrektywy preprocesora kompilatora C, to:
+Ta instrukcja instruuje kompilator, aby zastąpił każde `MAX` wystąpienie `100` elementu przed kompilacją. Dyrektywy preprocesora kompilatora języka C są następujące:
 
 |#define|#endif|#ifdef|#line|
 |--------------|-------------|-------------|------------|
 |`#elif`|`#error`|**#ifndef**|**#pragma**|
 |`#else`|`#if`|`#include`|`#undef`|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Pliki źródłowe i programy źródłowe](../c-language/source-files-and-source-programs.md)

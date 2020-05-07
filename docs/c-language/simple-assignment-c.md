@@ -18,7 +18,7 @@ ms.locfileid: "62158285"
 ---
 # <a name="simple-assignment-c"></a>Przypisanie proste (C)
 
-Operator przypisania prostego przypisuje jej prawy operand operand po lewej stronie. Wartość prawy operand jest konwertowany na typ wyrażenia przypisania i zastępuje wartość przechowywaną w obiekcie wyznaczonym przez lewy operand. Zastosuj reguły konwersji dla przypisania (zobacz [konwersje przypisań](../c-language/assignment-conversions.md)).
+Operator przypisywania prostego przypisuje jego prawy operand do lewego operandu. Wartość operandu Right jest konwertowana na typ wyrażenia przypisania i zastępuje wartość przechowywaną w obiekcie wydzielonym przez lewy argument operacji. Reguły konwersji dotyczące przypisywania są stosowane (zobacz [konwersje przypisań](../c-language/assignment-conversions.md)).
 
 ```
 double x;
@@ -27,8 +27,8 @@ int y;
 x = y;
 ```
 
-W tym przykładzie wartość `y` jest konwertowany na typ **double** i przypisane do `x`.
+W tym przykładzie wartość `y` jest konwertowana na typ **Double** i przypisany do. `x`
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operatory przypisania w języku C](../c-language/c-assignment-operators.md)

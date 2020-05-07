@@ -13,14 +13,14 @@ ms.locfileid: "62157776"
 
 - [Niewłaściwy dostęp do złożenia](../c-language/improper-access-to-a-union.md)
 
-- [Wypełnienie i wyrównanie składowych struktur](../c-language/padding-and-alignment-of-structure-members.md)
+- [Uzupełnienie i wyrównanie elementów członkowskich struktury](../c-language/padding-and-alignment-of-structure-members.md)
 
-- [Znaki pól bitowych](../c-language/sign-of-bit-fields.md)
+- [Znak pól bitowych](../c-language/sign-of-bit-fields.md)
 
 - [Magazynowanie pól bitowych](../c-language/storage-of-bit-fields.md)
 
 - [Typ wyliczenia](../c-language/enum-type.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Zachowanie zdefiniowane w implementacji](../c-language/implementation-defined-behavior.md)

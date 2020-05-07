@@ -27,7 +27,7 @@ DllImport void func();
 
 Używanie **__declspec (dllimport)** jest opcjonalne w deklaracjach funkcji, ale kompilator tworzy bardziej wydajny kod, jeśli używasz tego słowa kluczowego. Należy jednak użyć **__declspec (dllimport)** do importowania pliku wykonywalnego, aby uzyskać dostęp do publicznych symboli i obiektów danych biblioteki DLL. Należy pamiętać, że użytkownicy biblioteki DLL nadal muszą łączyć się z biblioteką importu.
 
-Można użyć tego samego pliku nagłówka zarówno dla biblioteki DLL, jak i aplikacji klienckiej. W tym celu należy użyć specjalnego symbolu preprocesora, który wskazuje, czy tworzysz bibliotekę DLL, czy kompilujesz aplikację kliencką. Na przykład:
+Można użyć tego samego pliku nagłówka zarówno dla biblioteki DLL, jak i aplikacji klienckiej. W tym celu należy użyć specjalnego symbolu preprocesora, który wskazuje, czy tworzysz bibliotekę DLL, czy kompilujesz aplikację kliencką. Przykład:
 
 ```
 #ifdef _EXPORTING

@@ -20,9 +20,9 @@ ms.locfileid: "62233725"
 ---
 # <a name="expressions-and-assignments"></a>Wyrażenia i przydziały
 
-W tej sekcji opisano, jak formularz wyrażeń i przypisywanie wartości w języku C. Stałe, identyfikatory, ciągi i wywołania funkcji są wszystkich argumentów operacji, które są zmieniane w wyrażeniach. Język C ma wszystkie operatory języka zwykle. W tej sekcji omówiono te operatory, a także operatory, które są unikatowe dla języka C lub Microsoft C. Omówione tematy obejmują:
+W tej sekcji opisano sposób tworzenia wyrażeń i przypisywania wartości w języku C. Stałe, identyfikatory, ciągi i wywołania funkcji to wszystkie operandy, które są manipulowane w wyrażeniach. Język C ma wszystkie normalne operatory języka. Ta sekcja obejmuje te operatory oraz operatory, które są unikatowe dla języka C lub Microsoft C. Omówione tematy obejmują:
 
-- [Wyrażenia wartości L i r-wartości](../c-language/l-value-and-r-value-expressions.md)
+- [Wyrażenia wartości L i r](../c-language/l-value-and-r-value-expressions.md)
 
 - [Wyrażenia stałe](../c-language/c-constant-expressions.md)
 
@@ -38,6 +38,6 @@ W tej sekcji opisano, jak formularz wyrażeń i przypisywanie wartości w język
 
 - [Rzutowania typów](../c-language/type-cast-conversions.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja języka C](../c-language/c-language-reference.md)

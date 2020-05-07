@@ -14,21 +14,21 @@ ms.locfileid: "62232250"
 ---
 # <a name="postfix-operators"></a>Operatory przyrostka
 
-Operatory przyrostkowe ma najwyższy priorytet (najbardziej restrykcyjne metody powiązania) obliczania wyrażeń.
+Operatory przyrostkowe mają najwyższy priorytet (najściślejsze wiązanie) podczas obliczania wyrażenia.
 
 ## <a name="syntax"></a>Składnia
 
-*postfix-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenia podstawowe*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **[**  *expression*  **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym* **(** *argument-expression-list*<sub>zoptymalizowany pod kątem</sub> **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym* **.**  *Identyfikator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym* **->** *identyfikator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym*  **++**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażeniem przyrostkowym*  **--**
+*wyrażenie przyrostkowe*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie podstawowe*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*przyrostk — wyrażenie*  **[**  *wyrażenie*  **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*przyrostkowe wyrażenie***(***opt-expression-list*<sub>opt</sub> **)**    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie przyrostkowe*  **.**  *identyfikatora*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression***->***Identyfikator* wyrażenia przyrostkowego    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie przyrostkowe*  **++**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie przyrostkowe*  **--**
 
-Operatory na tym poziomie pierwszeństwa indeksy dolne tablicy, wywołania funkcji, struktury i Unii członków i zwiększenie przyrostkowe i operatory dekrementacji.
+Operatory na tym poziomie pierwszeństwa są indeksami dolnymi tablicy, wywołaniami funkcji, strukturą i elementami członkowskimi Unii oraz przyrostem przyrostkowym i zmniejszeniem.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Operatory języka C](../c-language/c-operators.md)
