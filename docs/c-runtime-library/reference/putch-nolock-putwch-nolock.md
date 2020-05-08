@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,19 +39,19 @@ helpviewer_keywords:
 - console, writing characters to
 - _putwch_nolock function
 ms.assetid: edbc811d-bac6-47fa-a872-fe4f3a1590b0
-ms.openlocfilehash: 16f01e626f72269286cda045615665152361a887
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: df32b156d8c57d51ee81c4b4893bf11887915672
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338451"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916192"
 ---
 # <a name="_putch_nolock-_putwch_nolock"></a>_putch_nolock, _putwch_nolock
 
 Zapisuje znak do konsoli bez blokowania wątku.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,18 +66,18 @@ wchar_t c
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Znak ma być dane wyjściowe.
+*s*<br/>
+Znak do wyprowadzenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca *c,* jeśli zakończy się pomyślnie. Jeśli **_putch_nolock** nie powiedzie się, zwraca **EOF**; jeśli **_putwch_nolock** nie powiedzie się, zwraca **WEOF**.
+Zwraca *c* , jeśli powodzenie. Jeśli **_putch_nolock** nie powiedzie się, zwróci **znacznik EOF**; Jeśli **_putwch_nolock** nie powiedzie się, zwraca **WEOF**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_putch_nolock** i **_putwch_nolock** są identyczne odpowiednio z **_putch** i **_putwch,** z tą różnicą, że nie są chronione przed zakłóceniami przez inne wątki. Mogą one być szybsze, ponieważ nie ponoszą obciążenie blokowania innych wątków. Użyj tych funkcji tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący obsługuje już izolację wątku.
+**_putch_nolock** i **_putwch_nolock** są takie same jak odpowiednio **_putch** i **_putwch**, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z zablokowaniem innych wątków. Tych funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -89,14 +89,14 @@ Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmien
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_putch_nolock**|\<> conio.h|
-|**_putwch_nolock**|\<> conio.h|
+|**_putch_nolock**|\<CONIO. h>|
+|**_putwch_nolock**|\<CONIO. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz też
 

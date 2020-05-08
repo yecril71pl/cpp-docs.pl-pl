@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: eddb68ae6108c8a66966472cebca60a9969b78d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc1dfcc54259dfe40d2fc37be1e1c0ab63ab7c4a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344160"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916310"
 ---
 # <a name="_getw"></a>_getw
 
-Pobiera liczby całkowitej ze strumienia.
+Pobiera liczbę całkowitą ze strumienia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,26 +49,26 @@ int _getw(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumienia*<br/>
-Wskaźnik do struktury **PLIK.**
+*produkcyjne*<br/>
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_getw** zwraca wartość całkowitą odczytu. Zwracana wartość **EOF** wskazuje błąd lub koniec pliku. Jednak ponieważ wartość **EOF** jest również uzasadnioną wartością całkowitą, użyj **feof** lub **ferror,** aby zweryfikować warunek końca pliku lub błędu. Jeśli *strumień* ma **wartość NULL**, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [yd.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, **errno** jest ustawiona na **EINVAL** i funkcja zwraca **EOF**.
+**_getw** zwraca wartość typu Integer Read. Wartość zwracana przez **znacznik EOF** wskazuje na błąd lub koniec pliku. Jednak ze względu na to, że wartość **eof** jest również wiarygodną wartością całkowitą, użyj **feof** lub obiektu **odwołującego** , aby zweryfikować warunek końca pliku lub błędu. Jeśli *strumień* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcja zwraca **znacznik EOF**.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_getw** odczytuje następną wartość binarną typu **int** z pliku skojarzonego ze *strumieniem* i zwiększa skojarzony wskaźnik pliku (jeśli istnieje), aby wskazać następny nieprzeczytany znak. **_getw** nie zakłada żadnych specjalnych wyrównanie elementów w strumieniu. Problemy z przenoszeniem mogą wystąpić z **_getw,** ponieważ rozmiar typu **int** i kolejność bajtów w typie **int** różnią się w różnych systemach.
+Funkcja **_getw** odczytuje następną wartość binarną typu **int** z pliku skojarzonego ze *strumieniem* i zwiększa skojarzony wskaźnik pliku (jeśli istnieje), aby wskazywała na Następny nieprzeczytany znak. **_getw** nie zakłada żadnego specjalnego wyrównania elementów w strumieniu. Problemy z portami mogą wystąpić w **_getw** , ponieważ rozmiar typu **int** i kolejność bajtów w typie **int** różnią się w różnych systemach.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_getw**|\<stdio.h>|
+|**_getw**|\<stdio. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -105,7 +105,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_getwtxt"></a>Dane wejściowe: crt_getw.txt
+### <a name="input-crt_getwtxt"></a>Dane wejściowe: crt_getw. txt
 
 ```Input
 Line one.

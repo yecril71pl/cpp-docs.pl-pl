@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - ntdll.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 7567e5758e405235bca13bbae8a18c2d42ccbd3b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bca6053b9dc5ecaf83ab8d63566308e3b573614e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333555"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917344"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
-Oblicza pułap wartości.
+Oblicza górny limit wartości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -67,40 +67,40 @@ long double ceill(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Wartość zmiennoprzecinku.
+*y*<br/>
+Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **ceil** zwracają wartość zmiennoprzecinkową, która reprezentuje najmniejszą liczbę całkowitą, która jest większa lub równa *x*. Nie ma zwracania błędów.
+Funkcje **ceil —** zwracają wartość zmiennoprzecinkową, która reprezentuje najmniejszą liczbę całkowitą, która jest większa lub równa *x*. Brak powrotu błędu.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|brak|**_DOMAIN**|
+|**QNAN**, **IND**|brak|**_DOMAIN**|
 
-**ceil** ma implementację, która używa streamingu rozszerzeń SIMD 2 (SSE2). Aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2, zobacz [_set_SSE2_enable](set-sse2-enable.md).
+**ceil —** ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Informacje i ograniczenia dotyczące korzystania z implementacji SSE2 można znaleźć w temacie [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **ceil,** które **przyjmują float** lub **długie** **podwójne** typy. W programie C **ceil** zawsze przyjmuje i zwraca **podwójny**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ceil —** , które mają typ **float** lub **Long** **Double** . W programie C **ceil —** zawsze przyjmuje i zwraca wartość **Double**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**ceil**, **ceilf**, **ceill**|\<> math.h|
+|**ceil —**, **ceilf —**, **ceill**|\<> Math. h|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [podłogi](floor-floorf-floorl.md).
+Zobacz przykład dla [podłogi](floor-floorf-floorl.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>
 [round, roundf, roundl](round-roundf-roundl.md)<br/>

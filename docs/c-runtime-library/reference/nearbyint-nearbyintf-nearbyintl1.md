@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: 92e3a744ef8069d45733c06b7a2681905c3eab55
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d9e7adb321d85c728c5185c1663fd7f945fc4a82
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338589"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914579"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 
@@ -63,40 +63,40 @@ long double nearbyint( long double x ); //C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
+*y*<br/>
 Wartość do zaokrąglenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli się powiedzie, zwraca *x*, zaokrąglone do najbliższej liczby całkowitej, przy użyciu bieżącego formatu zaokrąglania, jak zgłaszane przez [fegetround](fegetround-fesetround2.md). W przeciwnym razie funkcja może zwrócić jedną z następujących wartości:
+Jeśli to się powiedzie, zwraca wartość *x*, zaokrągloną do najbliższej liczby całkowitej, przy użyciu bieżącego formatu zaokrąglania, który jest raportowany przez [fegetround](fegetround-fesetround2.md). W przeciwnym razie funkcja może zwracać jedną z następujących wartości:
 
-|Problem|Zwraca|
+|Problem|Przesłać|
 |-----------|------------|
-|*x* = ±INFINITY|±NIESKOŃCZONOŚĆ, niezmodyfikowana|
-|*x* = ±0|±0, niezmodyfikowane|
+|*x* = ± nieskończoność|NIESKOŃCZONość, niezmodyfikowana|
+|*x* = ± 0|0, niemodyfikowane|
 |*x* = NaN|NaN|
 
-Błędy nie są zgłaszane za pośrednictwem [_matherr;](matherr.md) w szczególności ta funkcja nie zgłasza żadnych **wyjątków FE_INEXACT.**
+Błędy nie są zgłaszane przez [_matherr](matherr.md); Ta funkcja nie zgłasza żadnych wyjątków **FE_INEXACT** .
 
 ## <a name="remarks"></a>Uwagi
 
-Podstawową różnicą między tą funkcją a [rint](rint-rintf-rintl.md) jest to, że ta funkcja nie powoduje podniesienia niedokładnego wyjątku zmiennoprzecinkowego.
+Podstawowa różnica między tą funkcją i [rukuj](rint-rintf-rintl.md) polega na tym, że ta funkcja nie podnosi dokładnego wyjątku zmiennoprzecinkowego.
 
-Ponieważ maksymalne wartości zmiennoprzecinkowy są dokładne liczby całkowite, ta funkcja nigdy nie przepełnienie przez siebie; dane wyjściowe mogą przepełniać wartość zwracaną, w zależności od używanej wersji funkcji.
+Ponieważ maksymalne wartości zmiennoprzecinkowe są dokładnymi liczbami całkowitymi, ta funkcja nigdy nie przejdzie przez siebie. Zamiast tego dane wyjściowe mogą przekroczyć wartość zwracaną, w zależności od używanej wersji funkcji.
 
-C++ umożliwia przeciążenie, dzięki czemu można wywołać przeciążenia **nearbyint,** które przyjmują i zwracają **float** lub **długie** **podwójne** parametry. W programie C **nearbyint** zawsze przyjmuje dwie podwójne wartości i zwraca podwójną wartość.
+Język C++ pozwala na Przeciążenie, dlatego można wywoływać przeciążenia **nearbyint —** , które pobierają i **zwracają parametry** **zmiennoprzecinkowe** lub **długie** . W programie C **nearbyint —** zawsze przyjmuje dwie wartości podwójne i zwraca wartość podwójnej precyzji.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**nearbyint**, **nearbyintf**, **nearbyintl**|\<> math.h|\<cmath> lub \<math.h>|
+|**nearbyint —**, **nearbyintf —**, **nearbyintl**|\<> Math. h|\<cmath> lub \<Math. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
-[Wsparcie matematyczne i zmiennoprzecinkowy](../floating-point-support.md)<br/>
+[Obsługa obliczeń matematycznych i zmiennoprzecinkowych](../floating-point-support.md)<br/>

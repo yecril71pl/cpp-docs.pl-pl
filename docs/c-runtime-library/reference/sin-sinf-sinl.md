@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: d177eeca3d6b8248010ba1e65abf5154f27e19d7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ecd6a03fb7a933391f50de9eb075d8247d60924f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355001"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915770"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -62,33 +62,33 @@ long double sin(long double x);  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
+*y*<br/>
 Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **grzechu** zwracają sinus *x*. Jeśli *x* jest większa lub równa 263 lub mniejsza lub równa -263, występuje utrata istotności w wyniku.
+Funkcje **Sin** zwracają sinus *x*. Jeśli wartość *x* jest większa lub równa 263 lub mniejsza lub równa-263, występuje utrata znaczenia w wyniku.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|Brak|_DOMAIN|
-|∞ (grzech, sinf, sinl)|Nieprawidłowy|_DOMAIN|
+|QNAN, IND|Brak|_DOMAIN|
+|± ∞ (SIN, SINF —, sinl)|Nieprawidłowy|_DOMAIN|
 
-Aby uzyskać więcej informacji na temat kodów zwrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **grzechu,** które biorą i zwracają **float** lub **długie** **podwójne** wartości. W programie **C, grzech** zawsze ma i zwraca **dwukrotnie**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **Sin** , które przyjmują i zwracają wartości **zmiennoprzecinkowe** lub **długie** **podwójne** . W programie C, **Sin** zawsze przyjmuje i zwraca wartość **Double**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-|-|-|
-|**grzech**, **sinf**, **sinl**|\<> math.h|\<cmath> lub \<math.h>|
+|**Sin**, **SINF —**, **sinl**|\<> Math. h|\<cmath> lub \<Math. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -120,7 +120,7 @@ cos( 1.570796 ) = 0.000000
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>

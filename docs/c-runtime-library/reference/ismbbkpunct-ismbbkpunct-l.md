@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - ismbbkpunct function
 - _ismbbkpunct function
 ms.assetid: a04c59cd-5ca7-4296-bec0-2b0d7f04edd0
-ms.openlocfilehash: 24e1676422d913bf406fc4cb5f114c1c025bdb97
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8cf2d0d38466c370d0110b71a302471679e64657
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343585"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915703"
 ---
 # <a name="_ismbbkpunct-_ismbbkpunct_l"></a>_ismbbkpunct, _ismbbkpunct_l
 
-Sprawdza, czy znak wielobajtowy jest znakiem interpunkcyjnym.
+Sprawdza, czy znak wielobajtowy jest znakiem interpunkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,28 +59,28 @@ int _ismbbkpunct_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Całkowita ć, która ma zostać przetestowana.
+*s*<br/>
+Liczba całkowita do przetestowania.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_ismbbkpunct** zwraca wartość niezerową, jeśli liczba całkowita *c* jest symbolem interpunkcyjnym innego niż ASCII lub 0, jeśli nie jest. Na przykład na stronie kodowej 932 tylko **_ismbbkpunct** testy znaków interpunkcyjnych katakana. **_ismbbkpunct** używa bieżących ustawień regionalnych dla wszystkich ustawień znaków zależnych od ustawień regionalnych. **_ismbbkpunct_l** jest identyczna, z tą różnicą, że używa ustawień regionalnych, które są przekazywane. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+**_ismbbkpunct** zwraca wartość różną od zera, jeśli liczba całkowita *c* jest symbolem interpunkcji innym niż ASCII lub 0, jeśli nie jest. Na przykład, na stronie kodowej 932, **_ismbbkpunct** testy dla interpunkcji katakana. **_ismbbkpunct** korzysta z bieżących ustawień regionalnych dla wszelkich ustawień znaków zależnych od ustawień regionalnych. **_ismbbkpunct_l** jest identyczny, z tą różnicą, że używa przekazywania ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ismbbkpunct**|\<mbctype.h>|
-|**_ismbbkpunct_l**|\<mbctype.h>|
+|**_ismbbkpunct**|\<Mbctype. h>|
+|**_ismbbkpunct_l**|\<Mbctype. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

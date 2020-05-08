@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-ms.openlocfilehash: e7ff45c9d43a01d89d7ad2e9bac004ca1dcffd9d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1fa92d8e0f0ed331110666add1015fbdacf20f07
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343705"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917497"
 ---
 # <a name="_ismbbalpha-_ismbbalpha_l"></a>_ismbbalpha, _ismbbalpha_l
 
-Określa, czy określony znak wielobajtowy jest alfa.
+Określa, czy określony znak wielobajtowy jest alfanumeryczny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -58,36 +58,36 @@ int _ismbbalpha_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Całkowita ć, która ma zostać przetestowana.
+*s*<br/>
+Liczba całkowita do przetestowania.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_ismbbalpha** zwraca wartość niezerową, jeśli wyrażenie:
+**_ismbbalpha** zwraca wartość różną od zera, jeśli wyrażenie:
 
 `isalpha(c) || _ismbbkalnum(c)`
 
-jest niezerowy dla *c*lub 0, jeśli nie jest. **_ismbbalpha** używa bieżących ustawień regionalnych dla wszystkich ustawień znaków zależnych od ustawień regionalnych. **_ismbbalpha_l** jest identyczna, z tą różnicą, że używa ustawień regionalnych przekazanych.
+jest różna od zera dla *c*lub 0, jeśli nie jest. **_ismbbalpha** korzysta z bieżących ustawień regionalnych dla wszelkich ustawień znaków zależnych od ustawień regionalnych. **_ismbbalpha_l** jest identyczny, z tą różnicą, że używa przekazaną w ustawieniach regionalnych.
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ismbbalpha**|\<mbctype.h>|
-|**_ismbbalpha_l**|\<mbctype.h>|
+|**_ismbbalpha**|\<Mbctype. h>|
+|**_ismbbalpha_l**|\<Mbctype. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz też
 

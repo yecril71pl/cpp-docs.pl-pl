@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: e2bdfbeac7b995be0b589156437a3ded39114adf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a610b0412b7e10949a810f4e360686292cff9ee3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342163"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916449"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -63,39 +63,39 @@ long double lgamma( long double x ); //C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
+*y*<br/>
 Wartość do obliczenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli się powiedzie, zwróć logarytm naturalny wartości bezwzględnej funkcji gamma *x*.
+W przypadku pomyślnego zwrócenia logarytmu naturalnego wartości bezwzględnej funkcji gamma *x*.
 
-|Problem|Zwraca|
+|Problem|Przesłać|
 |-----------|------------|
 |*x* = NaN|NaN|
-|*x* = ±0|+NIESKOŃCZONOŚĆ|
-|*x*= ujemna liczba całkowita|+NIESKOŃCZONOŚĆ|
-|±NIESKOŃCZONOŚĆ|+NIESKOŃCZONOŚĆ|
-|błąd bieguna|+HUGE_VAL, +HUGE_VALF lub +HUGE_VALL|
-|błąd zakresu przepełnienia|±HUGE_VAL, ±HUGE_VALF lub ±HUGE_VALL|
+|*x* = ± 0|+ NIESKOŃCZONość|
+|*x*= ujemna liczba całkowita|+ NIESKOŃCZONość|
+|± NIESKOŃCZONość|+ NIESKOŃCZONość|
+|błąd słupka|+ HUGE_VAL, + HUGE_VALF lub + HUGE_VALL|
+|błąd przepełnienia zakresu|± HUGE_VAL, ± HUGE_VALF lub ± HUGE_VALL|
 
-Błędy są zgłaszane w sposób określony w [_matherr](matherr.md).
+Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **lgamma,** które biorą i zwracają **float** i **długie** **podwójne** typy. W programie **C, lgamma** zawsze bierze i zwraca **podwójne**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **lgamma —** , które pobierają i zwracają **zmiennoprzecinkowe** i **długie** **podwójne** typy. W programie C **lgamma —** zawsze przyjmuje i zwraca wartość **Double**.
 
-Jeśli x jest liczbą racjonalną, ta funkcja zwraca logarytm czynnika (x - 1).
+Jeśli x jest liczbą racjonalną, funkcja Zwraca logarytm o silności (x-1).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**lgamma**, **lgammaf**, **lgammal**|\<> math.h|\<> cmath|
+|**lgamma —**, **lgammaf —**, **lgammal**|\<> Math. h|\<cmath>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

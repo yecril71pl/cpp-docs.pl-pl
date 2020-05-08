@@ -12,7 +12,7 @@ api_location:
 - msvcr90.dll
 - msvcr110.dll
 - msvcrt.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_codepage_func
 ms.assetid: 6a663bd0-5a63-4a2f-9507-872ec1582aae
-ms.openlocfilehash: 2f3eeb4611a0a41ff1782e0b162cd65d86d3ef65
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea740bc335981ad7e1017ab4026fdc50b8fe8893
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351235"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914137"
 ---
 # <a name="___lc_codepage_func"></a>___lc_codepage_func
 
@@ -46,13 +46,13 @@ Bieżąca strona kodowa wątku.
 
 ## <a name="remarks"></a>Uwagi
 
-`___lc_codepage_func`jest wewnętrzną funkcją CRT, która jest używana przez inne funkcje CRT, aby uzyskać bieżącą stronę kodową z lokalnego magazynu wątku dla danych CRT. Te informacje są również dostępne za pomocą funkcji [_get_current_locale.](../c-runtime-library/reference/get-current-locale.md)
+`___lc_codepage_func`to wewnętrzna funkcja CRT, która jest używana przez inne funkcje CRT do uzyskiwania bieżącej strony kodowej z lokalnego magazynu wątków dla danych CRT. Te informacje są również dostępne za pomocą funkcji [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) .
 
-*Strona kodowa* jest mapowaniem kodów jedno-bajtowych lub dwu bajtowych na poszczególne znaki. Różne strony kodowe zawierają różne znaki specjalne, zazwyczaj dostosowane do języka lub grupy języków. Aby uzyskać więcej informacji na temat stron kodowych, zobacz [Strony kodowe](../c-runtime-library/code-pages.md).
+*Strona kodowa* jest mapowaniem jednobajtowych i dwubajtowych kodów do poszczególnych znaków. Różne strony kodowe zawierają różne znaki specjalne, zwykle dostosowane do języka lub grupy języków. Aby uzyskać więcej informacji na temat stron kodowych, zobacz [strony kodowe](../c-runtime-library/code-pages.md).
 
-Wewnętrzne funkcje CRT są specyficzne dla implementacji i mogą ulec zmianie z każdą wersją. Nie zaleca się ich używania w kodzie.
+Wewnętrzne funkcje CRT są specyficzne dla implementacji i mogą ulec zmianie w każdej wersji. Nie zalecamy ich używania w kodzie.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 

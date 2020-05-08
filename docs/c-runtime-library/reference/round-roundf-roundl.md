@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 7b502a02b540a6d2e659ba0e89263bf521be1d82
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c35972b38f8e440788404b5891a78d16197d739
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337990"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916723"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -67,30 +67,30 @@ long double roundl(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
+*y*<br/>
 Wartość zmiennoprzecinkowa do zaokrąglenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **zaokrąglenia** zwracają wartość zmiennoprzecinkową reprezentującą najbliższą liczbę całkowitą do *x*. Wartości w połowie drogi są zaokrąglane od zera, niezależnie od ustawienia trybu zaokrąglania zmiennoprzecinkowego. Nie ma zwracania błędów.
+Funkcje **okrężne** zwracają wartość zmiennoprzecinkową, która reprezentuje najbliższą liczbę całkowitą do *x*. Połowy wartości są zaokrąglane w kierunku od zera, niezależnie od ustawienia trybu zaokrąglania zmiennoprzecinkowego. Brak powrotu błędu.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|brak|**_DOMAIN**|
+|**QNAN**, **IND**|brak|**_DOMAIN**|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **rundy,** które biorą i zwracają **float** i **długie** **podwójne** wartości. W programie C **runda** zawsze przyjmuje i zwraca **podwójny**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **, które** pobierają i zwracają wartości **zmiennoprzecinkowe** i **długie** **Double** . W programie w języku C funkcja **Round** zawsze przyjmuje i zwraca wartość **Double**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**okrągły**, **roundf**, **roundl**|\<> math.h|
+|**Round**, **roundf —**, **Udziec**|\<> Math. h|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -130,7 +130,7 @@ roundl(-2.500000) is -3
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-ms.openlocfilehash: f18b04cadfa80d7e0be193bbd552efe8486eeeda
-ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
+ms.openlocfilehash: a06191791132784740fa85ca45e23e8aaa56279e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538603"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914911"
 ---
 # <a name="fopen_s-_wfopen_s"></a>fopen_s, _wfopen_s
 
@@ -156,7 +156,7 @@ Oprócz powyższych wartości następujące znaki mogą być zawarte w *trybie* 
 
 |modyfikator *trybu*|Tryb tłumaczenia|
 |-|-|
-| **t** | Otwórz w trybie tekst (przetłumaczony). |
+| **&** | Otwórz w trybie tekst (przetłumaczony). |
 | **b** | Otwórz w trybie binarnym (nieprzetłumaczony); Tłumaczenia obejmujące znaki powrotu karetki i wysuwu wiersza są pomijane. |
 
 W trybie tekstu (tłumaczone) klawisze CTRL + Z są interpretowane jako znak końca pliku na wejściu. W pliku otwartym do odczytu/zapisu z **"a +"** **fopen_s** sprawdza, czy Ctrl + Z na końcu pliku i usuwa go, jeśli jest to możliwe. Dzieje się tak, ponieważ użycie [fseek](fseek-fseeki64.md) i **ftell** do przenoszenia w pliku, który kończy się na Ctrl + z, może spowodować, że [fseek](fseek-fseeki64.md) zachowywać się nieprawidłowo blisko końca pliku.
@@ -189,7 +189,7 @@ Prawidłowe znaki w ciągu *trybu* używane w **fopen_s** i [_fdopen](fdopen-wfd
 |**k**|**_O_WRONLY** (zazwyczaj **_O_WRONLY** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
 |**w +**|**_O_RDWR** (zazwyczaj **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
 |**b**|**_O_BINARY**|
-|**t**|**_O_TEXT**|
+|**&**|**_O_TEXT**|
 |**s**|Brak|
 |**Azotan**|Brak|
 |**S**|**_O_SEQUENTIAL**|
@@ -281,7 +281,7 @@ The file 'data2' was opened
 Number of files closed by _fcloseall: 1
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

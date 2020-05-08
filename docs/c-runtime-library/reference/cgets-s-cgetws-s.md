@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,19 +36,19 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: b4871ff2c362e2c6cbe37be6a31bde4e6e258709
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6e48602eee3d2135d4624b28d88661ac00f65542
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333543"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917096"
 ---
 # <a name="_cgets_s-_cgetws_s"></a>_cgets_s, _cgetws_s
 
-Pobiera ciąg znaków z konsoli. Te wersje [_cgets i _cgetws](../../c-runtime-library/cgets-cgetws.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w funkcji zabezpieczeń w [CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Pobiera ciąg znaków z konsoli. Te wersje [_cgets i _cgetws](../../c-runtime-library/cgets-cgetws.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -77,38 +77,38 @@ errno_t _cgetws_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Buforu*<br/>
-Lokalizacja przechowywania danych.
+*buforu*<br/>
+Lokalizacja magazynu dla danych.
 
-*liczbaOfElements*<br/>
-Rozmiar buforu w postaci jedno bajtowej lub szerokiej, co jest również maksymalną liczbą znaków do odczytu.
+*numberOfElements*<br/>
+Rozmiar buforu w znakach jednobajtowych lub szerokich, który jest również maksymalną liczbą znaków, które mają być odczytywane.
 
-*pSizeCzysz*<br/>
-Liczba znaków faktycznie przeczytanych.
+*pSizeRead*<br/>
+Liczba znaków, które są faktycznie odczytywane.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwracana wartość wynosi zero, jeśli zakończy się pomyślnie; w przeciwnym razie kod błędu, jeśli wystąpi błąd.
+Wartość zwracana wynosi zero, jeśli to się powiedzie; w przeciwnym razie kod błędu w przypadku wystąpienia błędu.
 
-### <a name="error-conditions"></a>Warunki błędu
+### <a name="error-conditions"></a>Warunki błędów
 
-|*Buforu*|*liczbaOfElements*|*pSizeCzysz*|Zwraca|Zawartość *buforu*|
+|*buforu*|*numberOfElements*|*pSizeRead*|Przesłać|Zawartość *buforu*|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**Null**|Wszelki|Wszelki|**Einval**|Nie dotyczy|
-|nie **NULL**|zero|Wszelki|**Einval**|nie zmodyfikowano|
-|nie **NULL**|Wszelki|**Null**|**Einval**|ciąg o zerowej długości|
+|**NULL**|ile|ile|**EINVAL**|n/d|
+|nie **ma wartości null**|zero|ile|**EINVAL**|nie zmodyfikowano|
+|nie **ma wartości null**|ile|**NULL**|**EINVAL**|ciąg o zerowej długości|
 
 ## <a name="remarks"></a>Uwagi
 
-**_cgets_s** i **_cgetws_s** odczytać ciąg z konsoli i skopiować ciąg (z zerowym terminatorem) do *buforu*. **_cgetws_s** jest szeroka wersja znaku funkcji; poza rozmiarem znaku zachowanie tych dwóch funkcji jest identyczne. Maksymalny rozmiar ciągu do odczytu jest przekazywany jako *parametr numberOfElements.* Ten rozmiar powinien zawierać dodatkowy znak dla zakończenia null. Rzeczywista liczba odczytanych znaków jest umieszczana w *pSizeRead*.
+**_cgets_s** i **_cgetws_s** Odczytaj ciąg z konsoli programu i skopiuj ciąg (z terminatorem o wartości null) do *buforu*. **_cgetws_s** jest wersją znaków dwubajtowych funkcji; Oprócz rozmiaru znaku zachowanie tych dwóch funkcji jest identyczne. Maksymalny rozmiar ciągu do odczytu jest przenoszona jako parametr *NumberOfElements* . Ten rozmiar powinien zawierać dodatkowy znak dla kończącego się wartości null. Rzeczywista liczba odczytanych znaków jest umieszczana w *pSizeRead*.
 
-Jeśli podczas operacji lub sprawdzania poprawności parametrów wystąpi błąd, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w obszarze [Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, **errno** jest ustawiona na **EINVAL** i **EINVAL** jest zwracany.
+Jeśli wystąpi błąd podczas operacji lub weryfikacji parametrów, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** i **EINVAL** jest zwracany.
 
-W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonu; przeciążenia można wywnioskować długość buforu automatycznie, eliminując w ten sposób konieczność określenia argumentu rozmiaru i mogą automatycznie zastąpić starsze, mniej bezpieczne funkcje z ich nowszych, bardziej bezpiecznych odpowiedników. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość bufora, eliminując tym samym konieczność określenia argumentu rozmiaru i mogą automatycznie zastąpić starsze, mniej bezpieczne funkcje z ich nowszymi, bardziej bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
 Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -120,10 +120,10 @@ Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmien
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_cgets_s**|\<> conio.h|
-|**_cgetws_s**|\<conio.h> lub \<wchar.h>|
+|**_cgets_s**|\<CONIO. h>|
+|**_cgetws_s**|\<CONIO. h> lub \<WCHAR. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - ismbbkprint function
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
-ms.openlocfilehash: e59d06678b2601375bf3174fa84bc261c350c4dd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 183a883d259fd322c5ecd6712bba676b7ffe080c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343630"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915720"
 ---
 # <a name="_ismbbkprint-_ismbbkprint_l"></a>_ismbbkprint, _ismbbkprint_l
 
-Określa, czy określony znak wielobajtowy jest symbolem interpunkcyjnym.
+Określa, czy określony znak wielobajtowy jest symbolem interpunkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,28 +59,28 @@ int _ismbbkprint_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Całkowita ć, która ma zostać przetestowana.
+*s*<br/>
+Liczba całkowita do przetestowania.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_ismbbkprint** zwraca wartość niezerową, jeśli liczba całkowita *c* jest tekstem nienawiązanym ascii lub symbolem interpunkcyjnym innego niż ASCII lub 0, jeśli nie jest. Na przykład tylko na stronie kodowej 932 **_ismbbkprint** testy znaków interpunkcyjnych katakana alfanumeryczne lub katakana (zakres: 0xA1 - 0xDF). **_ismbbkprint** używa bieżących ustawień ustawień znaków zależnych od ustawień ustawień ustawień regionalnych. **_ismbbkprint_l** jest identyczna, z tą różnicą, że używa ustawień regionalnych przekazanych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+**_ismbbkprint** zwraca wartość różną od zera, jeśli liczba całkowita *c* jest tekstem innym niż ASCII lub symbolem interpunkcji innym niż ASCII lub 0, jeśli nie jest. Na przykład, na stronie kodowej 932, **_ismbbkprint** testy dla interpunkcji alfanumerycznej katakana lub Katakana (zakres: 0XA1-0xDF). **_ismbbkprint** korzysta z bieżących ustawień regionalnych dla ustawień znaków zależnych od ustawień regionalnych. **_ismbbkprint_l** jest identyczny, z tą różnicą, że używa przekazaną w ustawieniach regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ismbbkprint**|\<mbctype.h>|
-|**_ismbbkprint_l**|\<mbctype.h>|
+|**_ismbbkprint**|\<Mbctype. h>|
+|**_ismbbkprint_l**|\<Mbctype. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

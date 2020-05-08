@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-ms.openlocfilehash: ee25b18bfbb86b34e46c8c6776e8ab83157613e8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51985b008565cbe550065b85261b8beb53ed6f89
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328169"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915962"
 ---
 # <a name="wcrtomb_s"></a>wcrtomb_s
 
-Konwertuj szeroki znak na jego wielobajtową reprezentację znaków. Wersja [wcrtomb](wcrtomb.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcji zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konwertuj znak dwubajtowy na swoją reprezentację znaku wieloznacznego. Wersja [wcrtomb](wcrtomb.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,40 +61,40 @@ errno_t wcrtomb_s(
 
 ### <a name="parameters"></a>Parametry
 
-*pZawąkaWartość*<br/>
-Zwraca liczbę bajtów zapisanych lub -1, jeśli wystąpił błąd.
+*pReturnValue*<br/>
+Zwraca liczbę bajtów zapisanych lub-1, jeśli wystąpił błąd.
 
 *mbchar*<br/>
-Wynikowy znak przekonwertowany wielobajtowy.
+Wynikiem konwersji wielobajtowego znaku.
 
-*rozmiarOfmbchar*<br/>
+*sizeOfmbchar*<br/>
 Rozmiar zmiennej *mbchar* w bajtach.
 
-*Wchar*<br/>
-Szeroki znak do konwersji.
+*WCHAR*<br/>
+Znak dwubajtowy do przekonwertowania.
 
 *mbstate*<br/>
-Wskaźnik do **obiektu mbstate_t.**
+Wskaźnik do obiektu **mbstate_t** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość zero lub **errno,** jeśli wystąpi błąd.
+Zwraca zero lub wartość **errno** , jeśli wystąpi błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **wcrtomb_s** konwertuje szeroki znak, zaczynając od określonego stanu konwersji zawartego w *mbstate,* z wartości zawartej w *wchar,* na adres reprezentowany przez *mbchar*. Wartość *pReturnValue* będzie liczbą przekonwertowanych bajtów, ale nie większą niż **MB_CUR_MAX** bajtów lub -1, jeśli wystąpił błąd.
+Funkcja **wcrtomb_s** konwertuje znak dwubajtowy, zaczynając od określonego stanu konwersji zawartego w *mbstate*, z wartości zawartej w *WCHAR*, do adresu reprezentowanego przez *mbchar*. Wartość *pReturnValue* będzie liczbą przekonwertowanych bajtów, ale nie więcej niż **MB_CUR_MAX** bajtów lub wartość-1, jeśli wystąpił błąd.
 
-Jeśli *mbstate* ma wartość null, używany jest wewnętrzny stan konwersji **mbstate_t.** Jeśli znak zawarty w *wchar* nie ma odpowiedniego znaku wielobajtowego, wartość *pReturnValue* będzie -1, a funkcja zwróci wartość **errno** **EILSEQ**.
+Jeśli *mbstate* ma wartość null, używany jest wewnętrzny stan konwersji **mbstate_t** . Jeśli znak zawarty w *WCHAR* nie ma odpowiedniego znaku wielobajtowego, wartość *pReturnValue* będzie równa-1, a funkcja zwróci wartość **errno** **EILSEQ**.
 
-Funkcja **wcrtomb_s** różni się od [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md) możliwością ponownego uruchomienia. Stan konwersji jest przechowywany w *mbstate* dla kolejnych wywołań do tej samej lub innych funkcji, które można ponownie uruchomić. Wyniki są niezdefiniowane podczas mieszania użycia funkcji, które można ponownie uruchomić i niepodważalne. Na przykład aplikacja będzie używać **wcsrlen** zamiast **wcslen**, jeśli kolejne wywołanie **wcsrtombs_s** zostały użyte zamiast **wcstombs_s**.
+Funkcja **wcrtomb_s** różni się od [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md) od jej uruchomienia. Stan konwersji jest przechowywany w *mbstate* dla kolejnych wywołań do tych samych lub innych funkcji, które można uruchomić ponownie. Wyniki są niezdefiniowane podczas mieszania użycia funkcji ponownego uruchamiania i nieuruchomionych ponownie. Na przykład aplikacja będzie używać **wcsrlen** zamiast **wcslen**, jeśli podczas kolejnego wywołania do **wcsrtombs_s** były używane zamiast **wcstombs_s**.
 
-W języku C++ użycie tej funkcji jest uproszczone przez przeciążenia szablonu; przeciążenia można wywnioskować długość buforu automatycznie (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszych, bezpiecznych odpowiedników. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tej funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszymi, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="exceptions"></a>Wyjątki
 
-Funkcja **wcrtomb_s** jest bezpieczna wielowątkowej czynności, o ile żadna funkcja w bieżącym wątku wywołuje **setlocale** podczas wykonywania tej funkcji, a *mbstate* ma wartość null.
+Funkcja **wcrtomb_s** jest bezpiecznie wielowątkowej, dopóki żadna funkcja w bieżącym wątku nie wywołuje metody **setlocaling** , podczas gdy ta funkcja jest wykonywana, a *mbstate* ma wartość null.
 
 ## <a name="example"></a>Przykład
 
@@ -144,11 +144,11 @@ The corresponding wide character "Q" was converted to a the "Q" multibyte charac
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**wcrtomb_s**|\<wchar.h>|
+|**wcrtomb_s**|\<WCHAR. h>|
 
 ## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbsinit](mbsinit.md)<br/>
