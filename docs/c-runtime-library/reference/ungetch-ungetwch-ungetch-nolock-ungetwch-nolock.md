@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,19 +51,19 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 8a6c03c0a17f5c7a4f7fb7088696ba97073af6c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2a7b3b2a71b633eac64ad5ebc5203d70f31626ed
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361323"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909293"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
-Cofa ostatnią postać odczytaną z konsoli.
+Wypchnij ostatni znak, który jest odczytywany z konsoli.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -84,24 +84,24 @@ wint_t _ungetwch_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Postać do pchania.
+*s*<br/>
+Znak do wypchnięcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obie funkcje zwracają znak *c,* jeśli zakończy się pomyślnie. Jeśli występuje błąd, **_ungetch** zwraca wartość **EOF** i **zwraca _ungetwch** **WEOF**.
+Obie funkcje zwracają znak *c* , jeśli to się powiedzie. Jeśli wystąpi błąd, **_ungetch** zwraca wartość **EOF** i **_ungetwch** zwraca **WEOF**.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje te wypychają znak *c* z powrotem do konsoli, powodując, że *c* jest kolejnym znakiem odczytanym przez **_getch** lub **_getche** (lub **_getwch** lub **_getwche**). **_ungetch** i **_ungetwch** nie powiedzie się, jeśli są wywoływane więcej niż jeden raz przed następnym odczytem. Argument *c* nie może być **EOF** (lub **WEOF**).
+Te funkcje wypychają znak *c* z powrotem do konsoli, co powoduje, że *c* będzie następną literą odczytywaną przez **_getch** lub **_getche** (lub **_getwch** lub **_getwche**). **_ungetch** i **_ungetwch** się nie powieść, jeśli są wywoływane więcej niż raz przed następnym odczytem. Argument *c* nie może być znakiem **EOF** (lub **WEOF**).
 
-Wersje z sufiksem **_nolock** są identyczne, z tą różnicą, że nie są chronione przed zakłóceniami przez inne wątki. Mogą one być szybsze, ponieważ nie ponoszą narzutu blokowania innych wątków. Użyj tych funkcji tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywołujący obsługuje już izolację wątku.
+Wersje z sufiksem **_nolock** są identyczne, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z zablokowaniem innych wątków. Tych funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ungettch**|**_ungetch**|**_ungetch**|**_ungetwch**|
 |**_ungettch_nolock**|**_ungetch_nolock**|**_ungetch_nolock**|**_ungetwch_nolock**|
@@ -110,10 +110,10 @@ Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmien
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_ungetch** **, _ungetch_nolock**|\<> conio.h|
-|**_ungetwch** **, _ungetwch_nolock**|\<conio.h> lub \<wchar.h>|
+|**_ungetch**, **_ungetch_nolock**|\<CONIO. h>|
+|**_ungetwch**, **_ungetwch_nolock**|\<CONIO. h> lub \<WCHAR. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

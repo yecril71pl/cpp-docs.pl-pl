@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,19 +29,19 @@ helpviewer_keywords:
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-ms.openlocfilehash: c66a749d6aeb74fdc677b2d6088e1b5093f3570b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6b35b8e3faa2f1a193dce102a6f8a11b9fcbb82b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338527"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910386"
 ---
 # <a name="_pclose"></a>_pclose
 
 Czeka na nowy procesor poleceń i zamyka strumień na skojarzonym potoku.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,35 +53,35 @@ FILE *stream
 
 ### <a name="parameters"></a>Parametry
 
-*Strumienia*<br/>
-Zwraca wartość z poprzedniego wywołania do **_popen**.
+*produkcyjne*<br/>
+Wartość zwracana z poprzedniego wywołania do **_popen**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca stan zakończenia procesora poleceń zakończenia lub -1, jeśli wystąpi błąd. Format zwracanej wartości jest taki sam jak w przypadku **_cwait**, z wyjątkiem bajtów niskiego i wysokiego rzędu. Jeśli strumień ma **wartość NULL**, **_pclose** ustawia **errno** na **Wartość EINVAL** i zwraca wartość -1.
+Zwraca stan zakończenia procesora poleceń kończących lub-1, jeśli wystąpi błąd. Format wartości zwracanej jest taki sam, jak w przypadku **_cwait**, z wyjątkiem tego, że zamienione są małe i wysokie kolejności bajtów. Jeśli strumień ma **wartość null**, **_pclose** ustawia **errno** na **EINVAL** i zwraca wartość-1.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_pclose** wyszukuje identyfikator procesu procesora poleceń (Cmd.exe) rozpoczętego przez skojarzone **wywołanie _popen,** wykonuje [wywołanie _cwait](cwait.md) na nowym procesorze poleceń i zamyka strumień na skojarzonym potoku.
+Funkcja **_pclose** wyszukuje identyfikator procesu procesora poleceń (cmd. exe) uruchamiany przez skojarzone wywołanie **_popen** , wykonuje wywołanie [_cwait](cwait.md) na nowym procesorze poleceń i zamyka strumień w skojarzonym potoku.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_pclose**|\<stdio.h>|
+|**_pclose**|\<stdio. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrola procesu i środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_pipe](pipe.md)<br/>
 [_popen, _wpopen](popen-wpopen.md)<br/>

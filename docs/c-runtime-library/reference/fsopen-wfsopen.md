@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _wfsopen function
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
-ms.openlocfilehash: 49907808729375e3bea18a5f4bbf204852e0072a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7c7f079d8867416ab4f091d7c95a01ab9e40c0e8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345699"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910155"
 ---
 # <a name="_fsopen-_wfsopen"></a>_fsopen, _wfsopen
 
-Otwiera strumień z udostępnianiem plików.
+Otwiera strumień z funkcją udostępniania plików.
 
 ## <a name="syntax"></a>Składnia
 
@@ -69,62 +69,62 @@ FILE *_wfsopen(
 
 ### <a name="parameters"></a>Parametry
 
-*Pod nazwą*<br/>
+*Nazwa pliku*<br/>
 Nazwa pliku do otwarcia.
 
-*Tryb*<br/>
+*wyst*<br/>
 Dozwolony typ dostępu.
 
-*żużel*<br/>
+*shflag*<br/>
 Dozwolony typ udostępniania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wskaźnik do strumienia. Wartość wskaźnika zerowego wskazuje błąd. Jeśli *nazwa pliku* lub *tryb* ma wartość **NULL** lub pusty ciąg, funkcje te wywołują nieprawidłowy program obsługi parametrów, zgodnie z opisem w polu Sprawdzanie [poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, te funkcje zwracają **wartość NULL** i **ustawiają errno** na **EINVAL**.
+Każda z tych funkcji zwraca wskaźnik do strumienia. Wartość wskaźnika o wartości null wskazuje na błąd. Jeśli *Nazwa pliku* lub *tryb* ma **wartość null** lub jest pustym ciągiem, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **wartość null** i ustawiają **errno** na **EINVAL**.
 
-Aby uzyskać więcej informacji na temat tych i innych kodów błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_fsopen** otwiera plik określony przez *nazwę pliku* jako strumień i przygotowuje plik do późniejszego wspólnego odczytu lub zapisu, zgodnie z definicją w trybie i argumentach *żużla.* **_wfsopen** jest szerokoznakową wersją **_fsopen**; argumenty *nazwy pliku* i *trybu* do **_wfsopen** są ciągami znaków o szerokich znakach. **_wfsopen** i **_fsopen** zachowują się identycznie w przeciwnym razie.
+Funkcja **_fsopen** otwiera plik określony przez *filename* jako strumień i przygotowuje plik do późniejszego udostępnionego odczytu lub zapisu zgodnie z definicją w argumentach Mode i *Shflag* . **_wfsopen** to dwubajtowa wersja **_fsopen**; argumenty *filename* i *mode* **_wfsopen** są ciągami znaków dwubajtowych. **_wfsopen** i **_fsopen** zachowują się identycznie w inny sposób.
 
 *Tryb* ciągu znaków określa typ dostępu żądanego dla pliku, jak pokazano w poniższej tabeli.
 
 |Termin|Definicja|
 |----------|----------------|
-|**"r"**|Otwiera się do czytania. Jeśli plik nie istnieje lub nie można go odnaleźć, **wywołanie _fsopen** nie powiedzie się.|
-|**"w"**|Otwiera pusty plik do zapisania. Jeśli dany plik istnieje, jego zawartość zostanie zniszczona.|
-|**"a"**|Otwiera do zapisu na końcu pliku (dołączanie); najpierw tworzy plik, jeśli nie istnieje.|
-|**"r+"**|Otwiera się zarówno do czytania, jak i pisania. (Plik musi istnieć).|
-|**"w+"**|Otwiera pusty plik do odczytu i zapisu. Jeśli dany plik istnieje, jego zawartość zostanie zniszczona.|
-|**"a+"**|Otwiera do czytania i dołączania; najpierw tworzy plik, jeśli nie istnieje.|
+|**®**|Otwiera do odczytu. Jeśli plik nie istnieje lub nie można go znaleźć, wywołanie **_fsopen** nie powiedzie się.|
+|**k**|Otwiera pusty plik do zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona.|
+|**z**|Otwiera do zapisu na końcu pliku (dołączanie); najpierw tworzy plik, jeśli nie istnieje.|
+|**"r +"**|Otwiera zarówno do odczytu, jak i do zapisu. (Plik musi istnieć).|
+|**"w +"**|Otwiera pusty plik do odczytu i zapisu. Jeśli dany plik istnieje, jego zawartość zostaje zniszczona.|
+|**"a +"**|Otwiera do odczytu i dołączania; najpierw tworzy plik, jeśli nie istnieje.|
 
-Użyj typów **"w"** i **"w+"** ostrożnie, ponieważ mogą one zniszczyć istniejące pliki.
+Używaj typów **"w"** i **"w +"** z ostrożnością, ponieważ mogą one zniszczyć istniejące pliki.
 
-Po otwarciu pliku z typem dostępu **"a"** lub **"a+",** wszystkie operacje zapisu występują na końcu pliku. Wskaźnik pliku można zmienić położenie za pomocą [fseek](fseek-fseeki64.md) lub [przewinąć](rewind.md)do tyłu , ale jest zawsze przenoszony z powrotem na koniec pliku przed przeprowadzeniem jakiejkolwiek operacji zapisu. W związku z tym istniejące dane nie mogą być zastąpione. Po określeniu typu dostępu **"r+",** **"w+"** lub **"a+"** dozwolone jest zarówno odczyt, jak i zapis (mówi się, że plik jest otwarty do aktualizacji). Jednak podczas przełączania między odczytem a zapisem musi być interweniująca [operacja fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md)lub [do tyłu.](rewind.md) W razie potrzeby można określić bieżącą pozycję dla operacji [fsetpos](fsetpos.md) lub [fseek.](fseek-fseeki64.md) Oprócz powyższych wartości, jeden z następujących znaków może być uwzględniony w *trybie,* aby określić tryb tłumaczenia dla nowych wierszy i do zarządzania plikami.
+Gdy plik zostanie otwarty z typem dostępu **"a"** lub **"a +"** , wszystkie operacje zapisu są wykonywane na końcu pliku. Wskaźnik pliku można zmienić za pomocą [fseek](fseek-fseeki64.md) lub do [tyłu](rewind.md), ale zawsze jest on przenoszony z powrotem do końca pliku przed przeprowadzeniem operacji zapisu. W rezultacie istniejące dane nie mogą być zastępowane. W przypadku określenia typu dostępu **"r +"**, **"z +"** lub **"a +** " są dozwolone operacje odczytu i zapisu (plik jest otwierany do aktualizacji). Jednak podczas przełączania między operacjami odczytu i zapisu musi istnieć interwencja [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md)lub do [tyłu](rewind.md) . W razie potrzeby można określić bieżącą pozycję dla operacji [fsetpos](fsetpos.md) lub [fseek](fseek-fseeki64.md) . Oprócz powyższych wartości jeden z następujących znaków może zostać uwzględniony w *trybie* do określenia trybu tłumaczenia dla nowych wierszy i zarządzania plikami.
 
 |Termin|Definicja|
 |----------|----------------|
-|**t**|Otwiera plik w trybie tekstowym (przetłumaczonym). W tym trybie kombinacje kanału informacyjnego wiersza powrotu karetki (CR-LF) są tłumaczone na pojedyncze kanały informacyjne (LF) na wejściu, a znaki LF są tłumaczone na kombinacje CR-LF na wyjściu. Ponadto CTRL+Z jest interpretowany jako znak końca pliku na danych wejściowych. W plikach otwartych do odczytu lub odczytu/zapisu **_fsopen** sprawdza, czy na końcu pliku znajduje się ctrl+Z i usuwa go, jeśli to możliwe. Dzieje się tak, ponieważ za pomocą [fseek](fseek-fseeki64.md) i [ftell](ftell-ftelli64.md) przenieść w pliku, który kończy się CTRL + Z może spowodować [fseek](fseek-fseeki64.md) zachowywać się nieprawidłowo na końcu pliku.|
-|**B**|Otwiera plik w trybie binarnym (nieprzetłumaczonym); powyższe tłumaczenia są pomijane.|
-|**S**|Określa, że buforowanie jest zoptymalizowane pod kątem sekwencyjnego dostępu z dysku, ale nie ogranicza się do niego.|
-|**R**|Określa, że buforowanie jest zoptymalizowane pod kątem losowego dostępu z dysku, ale nie ogranicza się do niego.|
-|**T**|Określa plik jako tymczasowy. Jeśli to możliwe, nie jest opróżniany na dysk.|
-|**D**|Określa plik jako tymczasowy. Jest on usuwany po zamknięciu ostatniego wskaźnika pliku.|
+|**&**|Otwiera plik w trybie tekst (przetłumaczony). W tym trybie kombinacje wysuwu wiersza (CR-LF) są tłumaczone na pojedyncze linie informacyjne (LF) na znaki wejściowe i LF są tłumaczone na kombinacje CR-LF w danych wyjściowych. Ponadto CTRL + Z jest interpretowany jako znak końca pliku na wejściu. W plikach otwartych do odczytu lub odczytu/zapisu **_fsopen** sprawdza, czy Ctrl + Z na końcu pliku i usuwa go, jeśli jest to możliwe. Dzieje się tak, ponieważ użycie [fseek](fseek-fseeki64.md) i [ftell](ftell-ftelli64.md) do przenoszenia w pliku, który kończy się na Ctrl + z, może spowodować niewłaściwe zachowanie [fseek](fseek-fseeki64.md) na końcu pliku.|
+|**b**|Otwiera plik w trybie binarnym (nieprzetłumaczonym); Powyższe tłumaczenia są pomijane.|
+|**S**|Określa, że buforowanie jest zoptymalizowane dla, ale nie ograniczone do, dostęp sekwencyjny z dysku.|
+|**R**|Określa, że buforowanie jest zoptymalizowane dla, ale nie ograniczone do, losowy dostęp z dysku.|
+|**T**|Określa plik jako tymczasowy. Jeśli to możliwe, nie jest opróżniony na dysk.|
+|**Wykres**|Określa plik jako tymczasowy. Jest usuwany, gdy ostatni wskaźnik pliku jest zamknięty.|
 
-Jeśli **t** lub **b** nie jest podany w *trybie,* tryb tłumaczenia jest zdefiniowany przez zmienną trybu domyślnego **_fmode**. Jeśli **argument jest** poprzedzony t lub **b,** funkcja kończy się niepowodzeniem i zwraca **wartość NULL**. Aby zapoznać się z omówieniami trybów tekstowych i binarnych, zobacz [We/Wy pliku w trybie tekstowym i binarnym](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Jeśli **t** lub **b** nie jest określony w *trybie*, tryb tłumaczenia jest definiowany przez zmienną trybu domyślnego **_fmode**. Jeśli **t** lub **b** jest poprzedzony argumentem, funkcja kończy się niepowodzeniem i zwraca **wartość null**. Aby zapoznać się z omówieniem trybów tekstowych i binarnych, zobacz [plik tekstowy i tryb binarny we/wy](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-Argument *shflag* jest wyrażeniem stałym składającym się z jednej z następujących stałych manifestu, zdefiniowanej w Share.h.
+Argument *Shflag* jest wyrażeniem stałym składającym się z jednej z następujących stałych manifestu, zdefiniowanych w udziale. h.
 
 |Termin|Definicja|
 |----------|----------------|
 |**_SH_COMPAT**|Ustawia tryb zgodności dla aplikacji 16-bitowych.|
 |**_SH_DENYNO**|Zezwala na dostęp do odczytu i zapisu.|
-|**_SH_DENYRD**|Odmawia dostępu do odczytu do pliku.|
-|**_SH_DENYRW**|Odmawia dostępu do odczytu i zapisu do pliku.|
-|**_SH_DENYWR**|Odmawia dostępu do zapisu do pliku.|
+|**_SH_DENYRD**|Nie zezwala na dostęp do odczytu do pliku.|
+|**_SH_DENYRW**|Nie zezwala na dostęp do odczytu i zapisu do pliku.|
+|**_SH_DENYWR**|Odmawia dostępu do zapisu w pliku.|
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -136,8 +136,8 @@ Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmien
 
 |Funkcja|Wymagany nagłówek|Opcjonalne nagłówki|
 |--------------|---------------------|----------------------|
-|**_fsopen**|\<stdio.h>|\<> akcji.h<br /><br /> Dla stałej manifestu dla *parametru shflag.*|
-|**_wfsopen**|\<stdio.h> lub \<wchar.h>|\<> akcji.h<br /><br /> Dla stałej manifestu dla *parametru shflag.*|
+|**_fsopen**|\<stdio. h>|\<Udostępnianie. h><br /><br /> Dla stałej manifestu dla parametru *Shflag* .|
+|**_wfsopen**|\<stdio. h> lub \<WCHAR. h>|\<Udostępnianie. h><br /><br /> Dla stałej manifestu dla parametru *Shflag* .|
 
 ## <a name="example"></a>Przykład
 

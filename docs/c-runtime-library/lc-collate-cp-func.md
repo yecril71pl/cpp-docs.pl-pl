@@ -12,7 +12,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr90.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_collate_cp_func
 ms.assetid: 46ccc084-7ac9-4e5d-9138-e12cb5845615
-ms.openlocfilehash: 241292f22beea0cbf4e14d1b4480f6621ef6ccca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7247827cb2bfe18c341ce60c2f3d8976f676b138
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351133"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914078"
 ---
 # <a name="___lc_collate_cp_func"></a>___lc_collate_cp_func
 
@@ -45,11 +45,11 @@ Bieżąca strona kodowa sortowania wątku.
 
 ## <a name="remarks"></a>Uwagi
 
-`___lc_collate_cp_func`jest wewnętrzną funkcją CRT, która jest używana przez inne funkcje CRT, aby uzyskać bieżącą stronę kodową sortowania z lokalnego magazynu wątku dla danych CRT. Te informacje są również dostępne za pomocą funkcji [_get_current_locale.](../c-runtime-library/reference/get-current-locale.md)
+`___lc_collate_cp_func`jest wewnętrzną funkcją CRT, która jest używana przez inne funkcje CRT do pobrania bieżącej strony kodowej sortowania z lokalnego magazynu wątków dla danych CRT. Te informacje są również dostępne za pomocą funkcji [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) .
 
-Wewnętrzne funkcje CRT są specyficzne dla implementacji i mogą ulec zmianie z każdą wersją. Nie zaleca się ich używania w kodzie.
+Wewnętrzne funkcje CRT są specyficzne dla implementacji i mogą ulec zmianie w każdej wersji. Nie zalecamy ich używania w kodzie.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 

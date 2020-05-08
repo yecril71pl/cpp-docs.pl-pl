@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: 771dfdb6bd8035fe8683d62d52b3b4980ecda215
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 54828bf894ffc9062125c9680ec087cdf929b1a2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81316935"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910939"
 ---
 # <a name="_strtime_s-_wstrtime_s"></a>_strtime_s, _wstrtime_s
 
-Skopiuj bieżący czas do buforu. Są to wersje [_strtime, _wstrtime](strtime-wstrtime.md) z ulepszeniami zabezpieczeń, jak opisano w [programie Funkcje zabezpieczeń w programie CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Skopiuj bieżący czas do buforu. Są to wersje [_strtime, _wstrtime](strtime-wstrtime.md) z ulepszonymi zabezpieczeniami, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -70,48 +70,48 @@ errno_t _wstrtime_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Buforu*<br/>
-Bufor o długości co najmniej 10 bajtów, w którym zostanie zapisany czas.
+*buforu*<br/>
+Bufor o długości co najmniej 10 bajtów, gdzie zostanie zapisany czas.
 
-*liczbaOfElements*<br/>
+*numberOfElements*<br/>
 Rozmiar buforu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli się powiedzie.
+Zero, jeśli powodzenie.
 
-Jeśli wystąpi warunek błędu, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [obszarze Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Zwracana wartość jest kodem błędu w przypadku wystąpienia błędu. Kody błędów są zdefiniowane w ERRNO. H; zobacz poniższą tabelę dokładnych błędów generowanych przez tę funkcję. Aby uzyskać więcej informacji na temat kodów [błędów, zobacz errno Constants](../../c-runtime-library/errno-constants.md).
+Jeśli wystąpi błąd, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Wartość zwracana jest kodem błędu w przypadku wystąpienia błędu. Kody błędów są zdefiniowane w ERRNO. C w poniższej tabeli przedstawiono dokładne błędy wygenerowane przez tę funkcję. Aby uzyskać więcej informacji na temat kodów błędów, zobacz [errno — stałe](../../c-runtime-library/errno-constants.md).
 
-### <a name="error-conditions"></a>Warunki błędu
+### <a name="error-conditions"></a>Warunki błędów
 
-|*Buforu*|*liczbaOfElements*|Zwraca|Zawartość *buforu*|
+|*buforu*|*numberOfElements*|Przesłać|Zawartość *buforu*|
 |--------------|------------------------|------------|--------------------------|
-|**Null**|(dowolny)|**Einval**|Nie zmodyfikowano|
-|Nie **NULL** (wskażając prawidłowy bufor)|0|**Einval**|Nie zmodyfikowano|
-|Nie **NULL** (wskażając prawidłowy bufor)|0 < rozmiar < 9|**Einval**|Pusty ciąg znaków|
-|Nie **NULL** (wskażając prawidłowy bufor)|Rozmiar > 9|0|Bieżący czas sformatowany zgodnie z uwagami|
+|**NULL**|ile|**EINVAL**|Nie zmodyfikowano|
+|Nie **ma wartości null** (wskazuje na prawidłowy bufor)|0|**EINVAL**|Nie zmodyfikowano|
+|Nie **ma wartości null** (wskazuje na prawidłowy bufor)|0 < rozmiar < 9|**EINVAL**|Pusty ciąg|
+|Nie **ma wartości null** (wskazuje na prawidłowy bufor)|Rozmiar > 9|0|Bieżący czas sformatowany zgodnie z opisem w uwagach|
 
 ## <a name="security-issues"></a>Problemy z zabezpieczeniami
 
-Przekazywanie nieprawidłowej wartości**innej niż NULL** dla buforu spowoduje naruszenie zasad dostępu, jeśli parametr *numberOfElements* jest większy niż 9.
+Przekazanie nieprawidłowej wartości innej niż**null** dla buforu spowoduje naruszenie zasad dostępu, jeśli parametr *NumberOfElements* jest większy niż 9.
 
-Przekazywanie wartości *numberOfElements,* która jest większa niż rzeczywisty rozmiar buforu spowoduje przepełnienie buforu.
+Przekazywanie wartości dla *NumberOfElements* , która jest większa niż rzeczywisty rozmiar buforu, spowoduje przepełnienie buforu.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje te zapewniają bezpieczniejsze wersje [_strtime](strtime-wstrtime.md) i [_wstrtime.](strtime-wstrtime.md) Funkcja **_strtime_s** kopiuje bieżący czas lokalny do buforu wskazanego przez *timestr*. Czas jest formatowany jako **hh:mm:ss** gdzie **hh** jest dwiema cyframi reprezentującymi godzinę w notacji 24-godzinnej, **mm** to dwie cyfry reprezentujące minuty po godzinie, a **ss** to dwie cyfry reprezentujące sekundy. Na przykład ciąg **18:23:44** reprezentuje 23 minut i 44 sekundy po 18:00. Bufor musi mieć długość co najmniej 9 bajtów; rzeczywisty rozmiar jest określony przez drugi parametr.
+Te funkcje zapewniają bezpieczniejsze wersje [_strtime](strtime-wstrtime.md) i [_wstrtime](strtime-wstrtime.md). Funkcja **_strtime_s** Kopiuje bieżący czas lokalny do buforu wskazywanym przez *timestr*. Godzina jest formatowana jako **hh: mm: SS** , gdzie **hh** ma dwie cyfry reprezentujące godzinę w notacji 24-godzinnej, **mm** to dwie cyfry reprezentujące minuty poza godzinę, a **SS** to dwie cyfry reprezentujące sekundy. Na przykład ciąg **18:23:44** reprezentuje 23 minuty i 44 s ostatnich 6 godzin Długość buforu musi wynosić co najmniej 9 bajtów; rzeczywisty rozmiar jest określany przez drugi parametr.
 
-**_wstrtime** jest szerokoznakową wersją **_strtime;** argument i zwraca wartość **_wstrtime** są ciągami znaków o szerokich znakach. Te funkcje zachowują się identycznie w przeciwnym razie.
+**_wstrtime** to dwubajtowa wersja **_strtime**; argument i zwracana wartość **_wstrtime** są ciągami znaków dwubajtowych. Funkcje te zachowują się identycznie w inny sposób.
 
-W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonu; przeciążenia można wywnioskować długość buforu automatycznie (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszych, bezpiecznych odpowiedników. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszymi, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
 Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
-### <a name="generic-text-routine-mapping"></a>Rutynowe mapowanie tekstu ogólnego:
+### <a name="generic-text-routine-mapping"></a>Mapowanie procedury tekstu ogólnego:
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrtime_s**|**_strtime_s**|**_strtime_s**|**_wstrtime_s**|
 
@@ -119,10 +119,10 @@ Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmien
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strtime_s**|\<> time.h|
-|**_wstrtime_s**|\<time.h> lub \<wchar.h>|
+|**_strtime_s**|\<> godziny. h|
+|**_wstrtime_s**|\<Time. h> lub \<WCHAR. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

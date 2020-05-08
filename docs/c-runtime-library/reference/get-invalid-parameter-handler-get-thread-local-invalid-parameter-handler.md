@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - _get_thread_local_invalid_parameter_handler function
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-ms.openlocfilehash: 2465852b7bcc0251f218c68df14ff33930ad2378
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 27e42c9f3f570b24df8fa2a26798b3dc3fa326b3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345074"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909891"
 ---
 # <a name="_get_invalid_parameter_handler-_get_thread_local_invalid_parameter_handler"></a>_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 
-Pobiera funkcję, która jest wywoływana, gdy CRT wykrywa nieprawidłowy argument.
+Pobiera funkcję, która jest wywoływana, gdy CRT wykryje nieprawidłowy argument.
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,13 +52,13 @@ _invalid_parameter_handler _get_thread_local_invalid_parameter_handler(void);
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do aktualnie ustawionej nieprawidłowej funkcji obsługi parametrów lub wskaźnik zerowy, jeśli nie został ustawiony.
+Wskaźnik do obecnie ustawionej nieprawidłowej funkcji obsługi parametrów lub pusty wskaźnik, jeśli żaden nie został ustawiony.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_get_invalid_parameter_handler** pobiera aktualnie ustawioną globalną nieprawidłową obsługę parametrów. Zwraca wskaźnik null, jeśli nie ustawiono nie globalnego nieprawidłowego programu obsługi parametrów. Podobnie **_get_thread_local_invalid_parameter_handler** pobiera bieżący nieprawidłowy program obsługi parametrów nieprawidłowy wątku, który jest wywoływany, lub wskaźnik zerowy, jeśli nie ustawiono obsługi. Aby uzyskać informacje dotyczące ustawiania nieprawidłowych programów obsługi parametrów globalnych i lokalnych w wątku, zobacz [_set_invalid_parameter_handler _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
+Funkcja **_get_invalid_parameter_handler** Pobiera obecnie ustawioną globalną procedurę obsługi nieprawidłowego parametru. Zwraca wskaźnik o wartości null, jeśli nie ustawiono żadnej procedury obsługi nieprawidłowego parametru. Podobnie **_get_thread_local_invalid_parameter_handler** pobiera bieżącą procedurę obsługi nieprawidłowego parametru wątku, w którym jest on wywoływany, lub pusty wskaźnik, jeśli nie ustawiono żadnej procedury obsługi. Aby uzyskać informacje na temat sposobu ustawiania globalnych i lokalnych procedur obsługi parametrów, zobacz [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
-Zwrócony nieprawidłowy wskaźnik funkcji obsługi parametrów ma następujący typ:
+Zwrócony wskaźnik funkcji procedury obsługi nieprawidłowego parametru ma następujący typ:
 
 ```C
 typedef void (__cdecl* _invalid_parameter_handler)(
@@ -70,19 +70,19 @@ typedef void (__cdecl* _invalid_parameter_handler)(
     );
 ```
 
-Aby uzyskać szczegółowe informacje na temat nieprawidłowego programu obsługi parametrów, zobacz prototyp w [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
+Aby uzyskać szczegółowe informacje na temat procedury obsługi nieprawidłowego parametru, zobacz prototyp w [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_get_invalid_parameter_handler** **, _get_thread_local_invalid_parameter_handler**|C: \<> stdlib.h<br /><br /> C++: \<cstdlib> lub \<stdlib.h>|
+|**_get_invalid_parameter_handler**, **_get_thread_local_invalid_parameter_handler**|C: \<STDLIB. h><br /><br /> C++: \<cstdlib> lub \<STDLIB. h>|
 
-Funkcje **_get_invalid_parameter_handler** i **_get_thread_local_invalid_parameter_handler** są specyficzne dla firmy Microsoft. Aby uzyskać informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+**_Get_invalid_parameter_handler** i **_get_thread_local_invalid_parameter_handler** funkcje są specyficzne dla firmy Microsoft. Aby uzyskać informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)<br/>
-[Ulepszone pod względem zabezpieczeń wersje funkcji CRT](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)<br/>
+[Wersje funkcji CRT z rozszerzonymi zabezpieczeniami](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)<br/>

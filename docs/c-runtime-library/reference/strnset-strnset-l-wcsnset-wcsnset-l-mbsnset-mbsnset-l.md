@@ -25,7 +25,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -73,19 +73,19 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: 50b1a5157bd2a60d9819c92103a380ca1005be56
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2bd0c31b025b9a11cbdb10e8607a283d6ae1f84b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364421"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911196"
 ---
 # <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
-Inicjuje znaki ciągu do danego znaku. Istnieją bezpieczniejsze wersje tych funkcji; zobacz [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).
+Inicjuje znaki ciągu do danego znaku. Istnieją bardziej bezpieczne wersje tych funkcji; Zobacz [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsnset** i **_mbsnset_l** nie mogą być używane w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnset** i **_mbsnset_l** nie mogą być używane w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -127,16 +127,16 @@ unsigned char *_mbsnset_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Str*<br/>
-Ciąg do zmiany.
+*str*<br/>
+Ciąg, który ma zostać zmieniony.
 
-*C*<br/>
-Ustawienie znaków.
+*s*<br/>
+Ustawienie znaku.
 
-*Liczba*<br/>
-Liczba znaków do ustawionego.
+*liczbą*<br/>
+Liczba znaków, które mają zostać ustawione.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -145,19 +145,19 @@ Zwraca wskaźnik do zmienionego ciągu.
 
 ## <a name="remarks"></a>Uwagi
 
-**Funkcja _strnset** ustawia co najwyżej pierwsze znaki *zliczania* *od str* do *c* (konwertowane na **znak**). Jeśli *liczba* jest większa niż długość *str*, długość *str* jest używany zamiast *liczyć*.
+Funkcja **_strnset** ustawia najwyżej pierwsze znaki *zliczania* *str* do *c* (konwertowane na **char**). Jeśli *Liczba* jest większa niż długość *str*, używana jest długość *str* zamiast *Count*.
 
-**_wcsnset** i **_mbsnset** są wersjami **_strnset o**szerokich i wielobajtowych znakach. Argumenty ciągu i zwracana wartość **_wcsnset** są ciągami znaków o szerokich znakach; **_mbsnset** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie inaczej.
+**_wcsnset** i **_mbsnset** są wersjami znaków dwubajtowych i **_strnset**. Argumenty ciągów i zwracaną wartość **_wcsnset** są ciągami znaków dwubajtowych; te **_mbsnset** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie w inny sposób.
 
-**_mbsnset** sprawdza poprawność jego parametrów; jeśli *str* jest wskaźnikiem zerowym, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [programie Sprawdzanie poprawności parametru.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, **_mbsnset** zwraca **wartość NULL** i ustawia **errno** na **EINVAL**. **_strnset** i **_wcsnset** nie sprawdzają poprawności swoich parametrów.
+**_mbsnset** sprawdza poprawność swoich parametrów; Jeśli *str* jest pustym wskaźnikiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, **_mbsnset** zwraca **wartość null** i ustawia **errno** na **EINVAL**. **_strnset** i **_wcsnset** nie weryfikują ich parametrów.
 
-Na wartość wyjściową ma wpływ ustawienie **LC_CTYPE** kategorii ustawień regionalnych; zobacz [setlocale,](setlocale-wsetlocale.md) aby uzyskać więcej informacji. Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; wersje z sufiksem **_l** są identyczne, z tą różnicą, że zamiast tego używają parametru ustawień regionalnych przekazanych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia ustawienia kategorii **LC_CTYPE** ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną w zamian parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsnset**|**_strnset**|**_mbsnbset**|**_wcsnset**|
 |**_tcsnset_l**|**_strnset_l**|**_mbsnbset_l**|**_wcsnset_l**|
@@ -166,13 +166,13 @@ Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmien
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strnset**|\<string.h>|
-|**_strnset_l**|\<tchar.h>|
-|**_wcsnset**|\<string.h> lub \<wchar.h>|
-|**_wcsnset_l**|\<tchar.h>|
-|**_mbsnset** **, _mbsnset_l**|\<mbstring.h>|
+|**_strnset**|\<> String. h|
+|**_strnset_l**|\<Używanie TCHAR. h>|
+|**_wcsnset**|\<ciąg. h> lub \<WCHAR. h>|
+|**_wcsnset_l**|\<Używanie TCHAR. h>|
+|**_mbsnset**, **_mbsnset_l**|\<mbstring. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -201,7 +201,7 @@ After:  **** is a test
 ## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

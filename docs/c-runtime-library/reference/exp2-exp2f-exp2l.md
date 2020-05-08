@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,16 +37,16 @@ helpviewer_keywords:
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-ms.openlocfilehash: a5df1a216b4565f013a4c42b4ef4369b5b7f9b04
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3a80efab34b45348ca00f09b2fd6e2ea5077fd86
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347584"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909627"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
-Oblicza 2 podniesione do określonej wartości.
+Oblicza wartość 2 podniesioną do określonej wartości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -74,37 +74,37 @@ long double exp2l(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
+*y*<br/>
 Wartość wykładnika.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli się powiedzie, zwraca wykładnik base-2 *x*, czyli 2<sup>x</sup>. W przeciwnym razie zwraca jedną z następujących wartości:
+Jeśli to się powiedzie, zwraca wykładnik Base-2 *x*, czyli 2<sup>x</sup>. W przeciwnym razie zwraca jedną z następujących wartości:
 
-|Problem|Zwraca|
+|Problem|Przesłać|
 |-----------|------------|
-|*x* = ±0|1|
-|*x* = -NIESKOŃCZONOŚĆ|+0|
-|*x* = +NIESKOŃCZONOŚĆ|+NIESKOŃCZONOŚĆ|
+|*x* = ± 0|1|
+|*x* = — nieskończoność|+ 0|
+|*x* = + nieskończoność|+ NIESKOŃCZONość|
 |*x* = NaN|NaN|
-|Błąd zakresu przepełnienia|+HUGE_VAL, +HUGE_VALF lub +HUGE_VALL|
+|Błąd przepełnienia zakresu|+ HUGE_VAL, + HUGE_VALF lub + HUGE_VALL|
 |Błąd zakresu niedopełnienia|Prawidłowy wynik po zaokrągleniu|
 
-Błędy są zgłaszane w sposób określony w [_matherr](matherr.md).
+Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **exp2,** które przyjmują i zwracają **float** i **długie typy podwójne.** W programie C **exp2** zawsze przyjmuje i zwraca **podwójny**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **exp2 —** , które pobierają i zwracają **zmiennoprzecinkowe** i **długie podwójne** typy. W programie C **exp2 —** zawsze przyjmuje i zwraca wartość **Double**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek C|Nagłówek języka C++|
+|Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
-|**exp**, **expf**, **expl**|\<> math.h|\<> cmath|
+|**EXP**, **expf —**, **Expl**|\<> Math. h|\<cmath>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

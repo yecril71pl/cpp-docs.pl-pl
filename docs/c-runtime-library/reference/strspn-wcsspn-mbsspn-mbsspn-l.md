@@ -22,7 +22,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -47,19 +47,19 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-ms.openlocfilehash: 8bd8837f2e1f6cb92c5b7e2e819da56408273810
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b63ca5f7d22b6522ca3e3c58ea5486d612b671ae
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317032"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911104"
 ---
 # <a name="strspn-wcsspn-_mbsspn-_mbsspn_l"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
 Zwraca indeks pierwszego znaku w ciągu, który nie należy do zestawu znaków.
 
 > [!IMPORTANT]
-> **_mbsspn** i **_mbsspn_l** nie mogą być używane w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspn** i **_mbsspn_l** nie mogą być używane w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -85,45 +85,45 @@ size_t _mbsspn_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Str*<br/>
-Ciąg zakończony wartością null do wyszukiwania.
+*str*<br/>
+Ciąg zakończony znakiem null do wyszukania.
 
-*strCharSet (Zestaw strCharset)*<br/>
-Zestaw znaków zakończony z wartością null.
+*strCharSet*<br/>
+Zestaw znaków zakończony znakiem null.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość całkowitą określającą długość podciągu *w str,* która składa się w całości ze znaków w *strCharSet*. Jeśli *str* zaczyna się od znaku nie w *strCharSet*, funkcja zwraca 0.
+Zwraca liczbę całkowitą określającą długość podciągu w *str* , która składa się w całości ze znaków w *strCharSet*. Jeśli *str* zaczyna się znakiem, który nie znajduje się w *strCharSet*, funkcja zwraca wartość 0.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **strspn** zwraca indeks pierwszego znaku w *str,* który nie należy do zestawu znaków w *strCharSet*. Wyszukiwanie nie obejmuje zakończenia znaków null.
+Funkcja **strspn** zwraca indeks pierwszego znaku w *str* , który nie należy do zestawu znaków w *strCharSet*. Wyszukiwanie nie obejmuje kończących się pustych znaków.
 
-**wcsspn** i **_mbsspn** są wersjami strspn o szerokich i wielobajtowych **znakach.** Argumenty **wcsspn** są ciągi znaków szerokich znaków; **_mbsspn** są ciągami znaków wielobajtowych. **_mbsspn** sprawdza poprawność jego parametrów. Jeśli *str* lub *strCharSet* ma **wartość NULL**, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [zatwierdzeniu parametru.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, **_mbspn** ustawia **errno** na **EINVAL** i zwraca 0. **strspn** i **WCSSPN** nie weryfikują swoich parametrów. Te trzy funkcje zachowują się identycznie inaczej.
+**wcsspn** i **_mbsspn** są wersjami znaków dwubajtowych i znakowymi **strspn**. Argumenty **wcsspn** są ciągami znaków dwubajtowych; te **_mbsspn** są ciągami znaków wielobajtowych. **_mbsspn** sprawdza poprawność swoich parametrów. Jeśli *str* lub *StrCharSet* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, **_mbspn** ustawia **errno** na **EINVAL** i zwraca wartość 0. **strspn** i **wcsspn** nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie w inny sposób.
 
-Na wartość wyjściową ma wpływ ustawienie **LC_CTYPE** kategorii ustawień regionalnych; zobacz [setlocale,](setlocale-wsetlocale.md) aby uzyskać więcej informacji. Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; wersje z sufiksem **_l** są identyczne, z tą różnicą, że zamiast tego używają parametru ustawień regionalnych przekazanych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia ustawienia kategorii **LC_CTYPE** ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną w zamian parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsspn**|**strspn**|**_mbsspn**|**wcsspn**|
-|**N/a**|**N/a**|**_mbsspn_l**|**N/a**|
+|**nie dotyczy**|**nie dotyczy**|**_mbsspn_l**|**nie dotyczy**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strspn**|\<string.h>|
-|**wcsspn**|\<string.h> lub \<wchar.h>|
-|**_mbsspn**, **_mbsspn_l**|\<mbstring.h>|
+|**strspn**|\<> String. h|
+|**wcsspn**|\<ciąg. h> lub \<WCHAR. h>|
+|**_mbsspn**, **_mbsspn_l**|\<mbstring. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -155,7 +155,7 @@ The portion of 'cabbage' containing only a, b, or c is 5 bytes long
 ## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l](strspnp-wcsspnp-mbsspnp-mbsspnp-l.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

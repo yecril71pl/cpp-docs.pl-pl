@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: d35b3db157d4f33e3a8490c6620a08000ff090f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b99793c7d3f16eceec20c90f29824bca8321fb12
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341620"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911304"
 ---
 # <a name="_lseek-_lseeki64"></a>_lseek, _lseeki64
 
-Przenosi wskaźnik pliku w określoną lokalizację.
+Przenosi wskaźnik pliku do określonej lokalizacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -63,47 +63,47 @@ __int64 _lseeki64(
 
 ### <a name="parameters"></a>Parametry
 
-*Fd*<br/>
-Deskryptora pliku odwołującego się do otwartego pliku.
+*proces*<br/>
+Deskryptor pliku odwołujący się do otwartego pliku.
 
 *Przesunięcie*<br/>
-Liczba bajtów od *początku .*
+Liczba bajtów od *początku*.
 
-*Pochodzenia*<br/>
+*źródł*<br/>
 Pozycja początkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_lseek** zwraca przesunięcie w bajtach nowej pozycji od początku pliku. **_lseeki64** zwraca przesunięcie w 64-bitowej całkowitej. Funkcja zwraca wartość -1L, aby wskazać błąd. Jeśli przeszedł nieprawidłowy parametr, taki jak zły deskryptor pliku lub wartość *pochodzenia* jest nieprawidłowa lub pozycja określona przez *przesunięcie* jest przed rozpoczęciem pliku, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [polu Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, te funkcje ustawić **errno** do **EBADF** i zwracać -1L. Na urządzeniach niezdolnych do poszukiwania (takich jak terminale i drukarki) wartość zwracana jest niezdefiniowana.
+**_lseek** zwraca przesunięcie (w bajtach) nowej pozycji od początku pliku. **_lseeki64** zwraca przesunięcie w 64-bitowej liczbie całkowitej. Funkcja zwraca wartość-1L, aby wskazać błąd. Jeśli przeszedł nieprawidłowy parametr, taki jak zły deskryptor pliku lub wartość *pochodzenia* jest nieprawidłowa lub pozycja określona przez *przesunięcie* jest przed początkiem pliku, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EBADF** i Return-1L. Na urządzeniach bez możliwości wyszukiwania (takich jak terminale i drukarki) zwracana wartość jest niezdefiniowana.
 
-Aby uzyskać więcej informacji na temat tych i innych kodów błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać więcej informacji o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_lseek** przenosi wskaźnik pliku skojarzony z *fd* do nowej lokalizacji, która jest *odsunięty* bajtów od *początku .* Następna operacja w pliku występuje w nowej lokalizacji. Argument *pochodzenia* musi być jedną z następujących stałych, które są zdefiniowane w Stdio.h.
+Funkcja **_lseek** przenosi wskaźnik pliku skojarzony z *FD* do nowej lokalizacji, która jest *przesunięta* bajtów od *początku*. Kolejna operacja w pliku występuje w nowej lokalizacji. Argument *Origin* musi być jedną z następujących stałych, które są zdefiniowane w stdio. h.
 
-|wartość *początku*||
+|wartość *pochodzenia*||
 |-|-|
 | **SEEK_SET** | Początek pliku. |
-| **SEEK_CUR** | Bieżące położenie wskaźnika pliku. |
+| **SEEK_CUR** | Bieżąca pozycja wskaźnika pliku. |
 | **SEEK_END** | Koniec pliku. |
 
-Za pomocą **_lseek** można zmienić położenie wskaźnika w dowolnym miejscu w pliku lub poza nim.
+Za pomocą **_lseek** można zmienić położenie wskaźnika w dowolnym miejscu pliku lub poza końcem pliku.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_lseek**|\<> io.h|
-|**_lseeki64**|\<> io.h|
+|**_lseek**|\<IO. h>|
+|**_lseeki64**|\<IO. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
@@ -157,7 +157,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_lseekc_input"></a>Dane wejściowe: crt_lseek.c_input
+### <a name="input-crt_lseekc_input"></a>Dane wejściowe: crt_lseek. c_input
 
 ```Input
 Line one.
@@ -177,6 +177,6 @@ Position for end of file seek = 57
 
 ## <a name="see-also"></a>Zobacz też
 
-[We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
+[We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
 [fseek, _fseeki64](fseek-fseeki64.md)<br/>
 [_tell, _telli64](tell-telli64.md)<br/>
