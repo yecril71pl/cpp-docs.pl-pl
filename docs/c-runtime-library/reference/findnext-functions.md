@@ -34,7 +34,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -114,16 +114,16 @@ helpviewer_keywords:
 - tfindnext32i64 function
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
-ms.openlocfilehash: 38243b48a97c038f36ada85e3ca2cda814f43fa8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: acb680db3b07b0f600b758401f1270deccf03da7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346738"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911666"
 ---
 # <a name="_findnext-_findnext32-_findnext32i64-_findnext64-_findnext64i32-_findnexti64-_wfindnext-_wfindnext32-_wfindnext32i64-_wfindnext64-_wfindnext64i32-_wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 
-Znajdź następną nazwę, jeśli istnieje, która pasuje do argumentu *filespec* w poprzednim wywołaniu [_findfirst](findfirst-functions.md), a następnie odpowiednio zmień zawartość struktury *fileinfo.*
+Znajdź następną nazwę (jeśli istnieje), która dopasowuje argument *Specyfikacja* w poprzednim wywołaniu do [_findfirst](findfirst-functions.md), a następnie odpowiednio zmień zawartość struktury *FileInfo* .
 
 ## <a name="syntax"></a>Składnia
 
@@ -180,48 +180,48 @@ int _wfindnext64i32(
 
 ### <a name="parameters"></a>Parametry
 
-*Obsługi*<br/>
-Uchwyt wyszukiwania zwrócony przez poprzednie wywołanie **_findfirst**.
+*uchwyty*<br/>
+Dojście wyszukiwania zwrócone przez poprzednie wywołanie do **_findfirst**.
 
 *fileinfo*<br/>
-Bufor informacji o pliku.
+Bufor informacji o plikach.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli się powiedzie, zwraca wartość 0. W przeciwnym razie zwraca wartość -1 i ustawia **errno** na wartość wskazującą charakter błędu. Możliwe kody błędów są pokazane w poniższej tabeli.
+Jeśli powiedzie się, zwraca wartość 0. W przeciwnym razie zwraca-1 i ustawia **errno** na wartość wskazującą charakter błędu. W poniższej tabeli przedstawiono możliwe kody błędów.
 
-|wartość errno|Warunek|
+|errno wartość|Warunek|
 |-|-|
-| **Einval** | Nieprawidłowy parametr: *fileinfo* miał **wartość NULL**. Lub system operacyjny zwrócił nieoczekiwany błąd. |
-| **Enoent** | Nie można było znaleźć więcej pasujących plików. |
-| **ENOMEM ( ENOMEM )** | Za mało pamięci lub długość nazwy pliku przekroczyła **MAX_PATH**. |
+| **EINVAL** | Nieprawidłowy parametr: *FileInfo* miał **wartość null**. System operacyjny zwrócił nieoczekiwany błąd. |
+| **ENOENT** | Nie znaleziono więcej pasujących plików. |
+| **ENOMEM** | Za mało pamięci lub długość nazwy pliku została przekroczona **MAX_PATH**. |
 
-Jeśli nieprawidłowy parametr jest przekazywany, te funkcje wywołają nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md).
+Jeśli przeszedł nieprawidłowy parametr, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Należy wywołać [_findclose](findclose.md) po zakończeniu korzystania **z funkcji _findfirst** lub **_findnext** (lub dowolnych wariantów). Zwalnia to zasoby używane przez te funkcje w aplikacji.
+Musisz wywołać [_findclose](findclose.md) po zakończeniu korzystania z funkcji **_findfirst** lub **_findnext** (lub dowolnego wariantu). Spowoduje to zwolnienie zasobów używanych przez te funkcje w aplikacji.
 
-Odmiany tych funkcji z prefiksem **w** są wersjami szerokoznakowymi; w przeciwnym razie są one identyczne z odpowiednimi funkcjami jedno bajtowymi.
+Różnice tych funkcji **z prefiksem** a są wersjami znaków dwubajtowych; w przeciwnym razie są identyczne z odpowiednimi funkcjami jednobajtowymi.
 
-Odmiany tych funkcji obsługują 32-bitowe lub 64-bitowe typy czasu oraz 32-bitowe lub 64-bitowe rozmiary plików. Pierwszy przyrostek numeryczny (**32** lub **64**) wskazuje rozmiar używanego typu czasu; drugi sufiks to **i32** lub **i64**, wskazujący, czy rozmiar pliku jest reprezentowany jako 32-bitowa czy 64-bitowa liczba całkowita. Aby uzyskać informacje o wersjach obsługujących 32-bitowe i 64-bitowe typy i rozmiary plików, zobacz poniższą tabelę. Odmiany, które używają 64-bitowego typu czasu, umożliwiają wyrażenie dat tworzenia plików do 23:59:59, 31 grudnia 3000, UTC; mając na uwadze, że te przy użyciu typów czasu 32-bitowego reprezentują tylko daty do 23:59:59 18 stycznia 2038, UTC. Północ, 1 stycznia 1970 r., jest dolną granicą zakresu dat dla wszystkich tych funkcji.
+Różnice tych funkcji obsługują 32-bitowe lub 64-bitowe typy czasu i 32-bitowe lub 64-bitowe rozmiary plików. Pierwszy sufiks numeryczny (**32** lub **64**) wskazuje rozmiar używanego typu czasu; drugi sufiks jest **I32** lub **I64**, wskazując, czy rozmiar pliku jest reprezentowany jako 32-bitowa czy 64-bitowa liczba całkowita. Aby uzyskać informacje o tym, które wersje obsługują 32-bitowe i 64-bitowe typy czasu i rozmiary plików, zobacz poniższą tabelę. Różnice korzystające z typu czasu 64-bitowego zezwalają na wyrażanie dat tworzenia plików do 23:59:59, 31 grudnia 3000, UTC; te, które używają 32-bitowego typu czasu, reprezentują daty tylko do 23:59:59 stycznia 18, 2038, UTC. Północ, 1 stycznia 1970, to Dolna granica zakresu dat dla wszystkich tych funkcji.
 
-Jeśli nie masz określonego powodu, aby użyć wersji, które określają rozmiar czasu jawnie, użyj **_findnext** lub **_wfindnext** lub, jeśli chcesz obsługiwać rozmiary plików większe niż 3 GB, użyj **_findnexti64** lub **_wfindnexti64**. Wszystkie te funkcje używają typu czasu 64-bitowego. W poprzednich wersjach te funkcje używane typu czasu 32-bitowego. Jeśli jest to zmiana podziału dla aplikacji, można zdefiniować **_USE_32BIT_TIME_T,** aby uzyskać stare zachowanie. Jeśli **zdefiniowano _USE_32BIT_TIME_T,** **_findnext** **, _finnexti64** i odpowiadające im wersje Unicode używają czasu 32-bitowego.
+O ile nie masz konkretnej przyczyny używania wersji, które jawnie określają rozmiar czasu, użyj **_findnext** lub **_wfindnext** lub, jeśli potrzebujesz obsługiwać rozmiary plików większe niż 3 GB, użyj **_findnexti64** lub **_wfindnexti64**. Wszystkie te funkcje korzystają z 64-bitowego typu czasu. W poprzednich wersjach te funkcje używały typu czasu 32-bitowego. Jeśli jest to istotna zmiana dla aplikacji, można zdefiniować **_USE_32BIT_TIME_T** , aby uzyskać stare zachowanie. Jeśli **_USE_32BIT_TIME_T** jest zdefiniowany, **_findnext**, **_finnexti64** i odpowiadające im wersje Unicode używają czasu 32-bitowego.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
-### <a name="time-type-and-file-length-type-variations-of-_findnext"></a>Zmiany typu i długości pliku _findnext
+### <a name="time-type-and-file-length-type-variations-of-_findnext"></a>Typ czasu i typ długości pliku Wariacje _findnext
 
 |Funkcje|**_USE_32BIT_TIME_T** zdefiniowane?|Typ czasu|Typ długości pliku|
 |---------------|----------------------------------|---------------|----------------------|
-|**_findnext**, **_wfindnext**|Nieokreślona|64-bitowy|32-bitowa|
-|**_findnext**, **_wfindnext**|Zdefiniowane|32-bitowa|32-bitowa|
-|**_findnext32** **, _wfindnext32**|Definicja makra nie ma na nie wpływu|32-bitowa|32-bitowa|
-|**_findnext64** **, _wfindnext64**|Definicja makra nie ma na nie wpływu|64-bitowy|64-bitowy|
-|**_findnexti64** **, _wfindnexti64**|Nieokreślona|64-bitowy|64-bitowy|
-|**_findnexti64** **, _wfindnexti64**|Zdefiniowane|32-bitowa|64-bitowy|
-|**_findnext32i64** **, _wfindnext32i64**|Definicja makra nie ma na nie wpływu|32-bitowa|64-bitowy|
-|**_findnext64i32** **, _wfindnext64i32**|Definicja makra nie ma na nie wpływu|64-bitowy|32-bitowa|
+|**_findnext**, **_wfindnext**|Nieokreślona|64-bitowa|32-bitowa|
+|**_findnext**, **_wfindnext**|Określonych|32-bitowa|32-bitowa|
+|**_findnext32**, **_wfindnext32**|Nie dotyczy definicji makra|32-bitowa|32-bitowa|
+|**_findnext64**, **_wfindnext64**|Nie dotyczy definicji makra|64-bitowa|64-bitowa|
+|**_findnexti64**, **_wfindnexti64**|Nieokreślona|64-bitowa|64-bitowa|
+|**_findnexti64**, **_wfindnexti64**|Określonych|32-bitowa|64-bitowa|
+|**_findnext32i64**, **_wfindnext32i64**|Nie dotyczy definicji makra|32-bitowa|64-bitowa|
+|**_findnext64i32**, **_wfindnext64i32**|Nie dotyczy definicji makra|64-bitowa|32-bitowa|
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -238,26 +238,26 @@ Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmien
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_findnext**|\<> io.h|
-|**_findnext32**|\<> io.h|
-|**_findnext64**|\<> io.h|
-|**_findnexti64**|\<> io.h|
-|**_findnext32i64**|\<> io.h|
-|**_findnext64i32**|\<> io.h|
-|**_wfindnext**|\<io.h> lub \<wchar.h>|
-|**_wfindnext32**|\<io.h> lub \<wchar.h>|
-|**_wfindnext64**|\<io.h> lub \<wchar.h>|
-|**_wfindnexti64**|\<io.h> lub \<wchar.h>|
-|**_wfindnext32i64**|\<io.h> lub \<wchar.h>|
-|**_wfindnext64i32**|\<io.h> lub \<wchar.h>|
+|**_findnext**|\<IO. h>|
+|**_findnext32**|\<IO. h>|
+|**_findnext64**|\<IO. h>|
+|**_findnexti64**|\<IO. h>|
+|**_findnext32i64**|\<IO. h>|
+|**_findnext64i32**|\<IO. h>|
+|**_wfindnext**|\<IO. h> lub \<WCHAR. h>|
+|**_wfindnext32**|\<IO. h> lub \<WCHAR. h>|
+|**_wfindnext64**|\<IO. h> lub \<WCHAR. h>|
+|**_wfindnexti64**|\<IO. h> lub \<WCHAR. h>|
+|**_wfindnext32i64**|\<IO. h> lub \<WCHAR. h>|
+|**_wfindnext64i32**|\<IO. h> lub \<WCHAR. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Wywołania systemowe](../../c-runtime-library/system-calls.md)<br/>
-[Funkcje wyszukiwania nazwy plików](../../c-runtime-library/filename-search-functions.md)<br/>
+[Funkcje wyszukiwania nazw plików](../../c-runtime-library/filename-search-functions.md)<br/>
