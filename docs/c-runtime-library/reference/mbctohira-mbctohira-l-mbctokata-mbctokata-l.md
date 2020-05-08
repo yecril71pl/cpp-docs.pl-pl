@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,19 +46,19 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-ms.openlocfilehash: 817f5598f6a7dddfd148b7d7023e260b7bddfa4b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b5af94932fc90e6bcaee584e16f3056ee36dab51
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341090"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914376"
 ---
 # <a name="_mbctohira-_mbctohira_l-_mbctokata-_mbctokata_l"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
-Konwertuje między postaciami hiragana i katakana.
+Konwertuje znaki hiragana i katakana.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -81,41 +81,41 @@ unsigned int _mbctokata_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Znak wielobajtowy do konwersji.
+*s*<br/>
+Znak wielobajtowy do przekonwertowania.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca przekonwertowany znak *c*, jeśli to możliwe. W przeciwnym razie zwraca znak *c* bez zmian.
+Każda z tych funkcji zwraca przekonwertowany znak *c*, jeśli jest to możliwe. W przeciwnym razie zwraca znak *c* niezmieniony.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **_mbctohira** i **_mbctokata** testują znak *c* i, jeśli to możliwe, stosują jedną z następujących konwersji.
+Funkcje **_mbctohira** i **_mbctokata** testują znak *c* i, jeśli to możliwe, zastosuj jedną z następujących konwersji.
 
-|Procedur|Konwertuje|
+|Procedury|Skonwertowane|
 |--------------|--------------|
-|**_mbctohira** **, _mbctohira_l**|Multibyte katakana do wielobajtowej hiragany.|
-|**_mbctokata**, **_mbctokata_l**|Wielobajt hiragana do katakana multibyte.|
+|**_mbctohira**, **_mbctohira_l**|Wielobajtowe znaki katakana do wielobajtowego hiragana.|
+|**_mbctokata**, **_mbctokata_l**|Wielobajtowe Hiragana do wielobajtowego katakana.|
 
-Na wartość wyjściową ma wpływ ustawienie **LC_CTYPE** kategorii ustawień regionalnych; zobacz [setlocale,](setlocale-wsetlocale.md) aby uzyskać więcej informacji. Wersje tych funkcji są identyczne, z tą różnicą, że te, które nie mają **sufiksu _l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych i tych, które mają sufiks **_l** zamiast tego używają parametru ustawień regionalnych, który jest przekazywany. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia ustawienia kategorii **LC_CTYPE** ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersje tych funkcji są identyczne, z tą różnicą, że te, które nie mają sufiksu **_l** używają bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych, a te, które mają sufiks **_l** , zamiast tego używają parametru ustawień regionalnych, który został przesłany. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-We wcześniejszych **wersjach, _mbctohira** został nazwany **jtohira** i **_mbctokata** został nazwany **jtokata**. W przypadku nowego kodu należy użyć nowych nazw.
+We wcześniejszych wersjach **_mbctohira** nosiła nazwę **jtohira** i **_mbctokata** miała nazwę **jtokata**. Dla nowego kodu Użyj nowych nazw.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbctohira**|\<mbstring.h>|
-|**_mbctohira_l**|\<mbstring.h>|
-|**_mbctokata**|\<mbstring.h>|
-|**_mbctokata_l**|\<mbstring.h>|
+|**_mbctohira**|\<mbstring. h>|
+|**_mbctohira_l**|\<mbstring. h>|
+|**_mbctokata**|\<mbstring. h>|
+|**_mbctokata_l**|\<mbstring. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

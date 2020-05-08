@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-ms.openlocfilehash: ed17963dc7331962c3ac0d522db2843822ec5f79
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dffe2ff71f1eecaec78c75867ebb7e34a963ee3a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346783"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911810"
 ---
 # <a name="_findclose"></a>_findclose
 
-Zamyka określony dojście wyszukiwania i zwalnia skojarzone zasoby.
+Zamyka określone dojście wyszukiwania i zwalnia skojarzone zasoby.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,26 +49,26 @@ int _findclose(
 
 ### <a name="parameters"></a>Parametry
 
-*Obsługi*<br/>
-Uchwyt wyszukiwania zwrócony przez poprzednie wywołanie **_findfirst**.
+*uchwyty*<br/>
+Dojście wyszukiwania zwrócone przez poprzednie wywołanie do **_findfirst**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli się powiedzie, **_findclose** zwraca wartość 0. W przeciwnym razie zwraca -1 i ustawia **errno** na **ENOENT**, wskazując, że nie można znaleźć więcej pasujących plików.
+Jeśli się powiedzie, **_findclose** zwraca wartość 0. W przeciwnym razie zwraca wartość-1 i ustawia **errno** na **ENOENT**, co oznacza, że nie można odnaleźć więcej pasujących plików.
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_findclose**|\<> io.h|
+|**_findclose**|\<IO. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Wywołania systemowe](../../c-runtime-library/system-calls.md)<br/>
-[Funkcje wyszukiwania nazwy plików](../../c-runtime-library/filename-search-functions.md)<br/>
+[Funkcje wyszukiwania nazw plików](../../c-runtime-library/filename-search-functions.md)<br/>

@@ -12,7 +12,7 @@ api_location:
 - msvcr120.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_locale_name_func
 ms.assetid: ef858308-872e-43de-95e0-9b1b4084343e
-ms.openlocfilehash: f38d4d9b11189a8313b26dd3313a5def800c2410
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c48041c6c01e22c7771c0b5449de2cc8df1a2df0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351112"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912973"
 ---
 # <a name="___lc_locale_name_func"></a>___lc_locale_name_func
 
@@ -45,11 +45,11 @@ Wskaźnik do ciągu, który zawiera bieżącą nazwę ustawień regionalnych wą
 
 ## <a name="remarks"></a>Uwagi
 
-`___lc_locale_name_func`jest wewnętrzną funkcją CRT, która jest używana przez inne funkcje CRT, aby uzyskać bieżącą nazwę ustawień regionalnych z magazynu lokalnego wątku dla danych CRT. Informacje te są również dostępne za pomocą funkcji [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) lub [funkcji setlocale, _wsetlocale.](../c-runtime-library/reference/setlocale-wsetlocale.md)
+`___lc_locale_name_func`to wewnętrzna funkcja CRT, która jest używana przez inne funkcje CRT do uzyskiwania bieżącej nazwy ustawień regionalnych z lokalnego magazynu wątków dla danych CRT. Te informacje są również dostępne przy użyciu funkcji [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) lub [setlocale _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) Functions.
 
-Wewnętrzne funkcje CRT są specyficzne dla implementacji i mogą ulec zmianie z każdą wersją. Nie zaleca się ich używania w kodzie.
+Wewnętrzne funkcje CRT są specyficzne dla implementacji i mogą ulec zmianie w każdej wersji. Nie zalecamy ich używania w kodzie.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 

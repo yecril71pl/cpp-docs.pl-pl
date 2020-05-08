@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,16 +48,16 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: cdf722c9c6f6055ac918d1bede59345a9ef8d90d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ef914d542d058898cf9b16478fd40ef4b0725674
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348660"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913475"
 ---
 # <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Funkcje Bessela: _j0, _j1, _jn, _y0, _y1, _yn
 
-Oblicza funkcję Bessel pierwszego lub drugiego rodzaju zamówień 0, 1 lub n. Funkcje Bessela są powszechnie stosowane w matematyce teorii fal elektromagnetycznych.
+Oblicza funkcję Bessela pierwszego lub drugiego rodzaju zamówień 0, 1 lub n. Funkcje Bessela są często używane w przypadku matematyki teorii fal elektromagnetycznych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -86,41 +86,41 @@ double _yn(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Wartość zmiennoprzecinku.
+*y*<br/>
+Wartość zmiennoprzecinkowa.
 
-*N*<br/>
-Kolejność całkowita funkcji Bessela.
+*Azotan*<br/>
+Kolejność liczb całkowitych funkcji Bessela.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca funkcję *Bessela x*. Jeśli *x* jest ujemny w **_y0,** **_y1**lub **_yn** funkcji, procedura ustawia **errno** na **EDOM,** drukuje **_DOMAIN** komunikat o błędzie do **stderr**i zwraca **_HUGE_VAL**. Obsługę błędów można modyfikować za pomocą **_matherr**.
+Każda z tych procedur zwraca funkcję Bessela *x*. Jeśli *x* jest wartością ujemną w funkcjach **_y0**, **_y1**lub **_yn** , procedura ustawia **errno** na **Edom**, drukuje **_DOMAIN** komunikat o błędzie do **stderr**i zwraca **_HUGE_VAL**. Obsługę błędów można modyfikować za pomocą **_matherr**.
 
 ## <a name="remarks"></a>Uwagi
 
-**Procedury _j0** **, _j1**i **_jn** zwracają funkcje Bessela pierwszego rodzaju: zamówienia odpowiednio 0, 1 i n.
+Procedury **_j0**, **_j1**i **_jn** zwracają funkcje Bessela pierwszego rodzaju: Orders 0, 1 i n, odpowiednio.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**Nieprawidłowy**|**_DOMAIN**|
+|**QNAN**, **IND**|**Nieprawidłowy**|**_DOMAIN**|
 
-**Procedury _y0** **, _y1**i **_yn** zwracają funkcje Bessela drugiego rodzaju: zamówienia odpowiednio 0, 1 i n.
+Procedury **_y0**, **_y1**i **_yn** zwracają funkcje Bessela drugiego rodzaju: zamówienia 0, 1 i n, odpowiednio.
 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**Nieprawidłowy**|**_DOMAIN**|
-|± 0|**ZERODYDYWAK**|**_SING**|
+|**QNAN**, **IND**|**Nieprawidłowy**|**_DOMAIN**|
+|± 0|**ZERODIVIDE**|**_SING**|
 |&#124;x&#124; < 0,0|**Nieprawidłowy**|**_DOMAIN**|
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_j0** **_j1,** **_jn,** **_y0,** **_y1,** **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
+|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**_yn **_yn**|\<cmath> (C++), \<Math. h> (C, C++)|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -165,5 +165,5 @@ Bessel functions for x = 2.387000:
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [_matherr](matherr.md)<br/>

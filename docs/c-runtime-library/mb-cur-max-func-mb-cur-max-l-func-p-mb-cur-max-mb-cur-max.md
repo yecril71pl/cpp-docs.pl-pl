@@ -16,7 +16,7 @@ api_location:
 - msvcr90.dll
 - msvcr120.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - ___mb_cur_max_l_func
 - __p___mb_cur_max
 ms.assetid: 60d36108-1ca7-45a6-8ce7-68a91f13e3a1
-ms.openlocfilehash: f9b9e2d903bb05f5b1b653b4fb51c57b354d4126
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8287e2e7cab8880d35fef170287713adcc103c7e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351077"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912958"
 ---
 # <a name="___mb_cur_max_func-___mb_cur_max_l_func-__p___mb_cur_max-__mb_cur_max"></a>___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
 
-Wewnętrzna funkcja CRT. Pobiera maksymalną liczbę bajtów w znaku wielobajtowym dla bieżącego lub określonego ustawienia regionalne.
+Wewnętrzna funkcja CRT. Pobiera maksymalną liczbę bajtów w znaku wielobajtowym dla bieżących lub określonych ustawień regionalnych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,7 +54,7 @@ int * __p___mb_cur_max(void);
 
 #### <a name="parameters"></a>Parametry
 
-ustawienia regionalne Struktura ustawień regionalnych, aby pobrać wynik z. Jeśli ta wartość ma wartość null, używane są bieżące ustawienia regionalne wątku.
+Ustawienia regionalne struktury ustawień regionalnych, z których ma zostać pobrany wynik. Jeśli ta wartość jest równa null, używane są bieżące ustawienia regionalne wątku.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -62,19 +62,19 @@ Maksymalna liczba bajtów w znaku wielobajtowym dla bieżących ustawień region
 
 ## <a name="remarks"></a>Uwagi
 
-Jest to funkcja wewnętrzna używana przez CRT do pobierania bieżącej wartości [makra MB_CUR_MAX](../c-runtime-library/mb-cur-max.md) z magazynu lokalnego wątku. Zaleca się użycie `MB_CUR_MAX` makra w kodzie do przenoszenia.
+Jest to wewnętrzna funkcja wykorzystywana przez CRT do pobrania bieżącej wartości makra [MB_CUR_MAX](../c-runtime-library/mb-cur-max.md) z lokalnego magazynu wątków. Zalecamy użycie `MB_CUR_MAX` makra w kodzie do przenośności.
 
-Makro `__mb_cur_max` jest wygodnym sposobem `___mb_cur_max_func()` wywołania funkcji. Funkcja `__p___mb_cur_max` jest zdefiniowana dla zgodności z visual C++ 5.0 i wcześniejszych wersji.
+`__mb_cur_max` Makro jest wygodnym sposobem wywołania `___mb_cur_max_func()` funkcji. `__p___mb_cur_max` Funkcja jest zdefiniowana pod kątem zgodności z Visual C++ 5,0 i wcześniejszymi wersjami.
 
-Wewnętrzne funkcje CRT są specyficzne dla implementacji i mogą ulec zmianie z każdą wersją. Nie zaleca się ich używania w kodzie.
+Wewnętrzne funkcje CRT są specyficzne dla implementacji i mogą ulec zmianie w każdej wersji. Nie zalecamy ich używania w kodzie.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`___mb_cur_max_func`, `___mb_cur_max_l_func`, `__p___mb_cur_max`|\<ctype.h>, \<stdlib.h>|
+|`___mb_cur_max_func`, `___mb_cur_max_l_func`, `__p___mb_cur_max`|\<CType. h>, \<STDLIB. h>|
 
 ## <a name="see-also"></a>Zobacz też
 

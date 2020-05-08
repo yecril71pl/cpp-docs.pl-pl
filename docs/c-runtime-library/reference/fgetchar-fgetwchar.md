@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: b9d805483395d3050a1eb0bc78afef8cd99ca984
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 79b932268f379309d7765d8fa03797a5b8360ccf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346932"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912765"
 ---
 # <a name="_fgetchar-_fgetwchar"></a>_fgetchar, _fgetwchar
 
@@ -58,17 +58,17 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-fgetchar zwraca znak odczytany jako `EOF` **int** lub zwraca, aby wskazać błąd lub koniec pliku. ** \_** fgetwchar zwraca, jako [wint_t,](../../c-runtime-library/standard-types.md)szeroki znak, który odpowiada znakowi `WEOF` odczytanego lub zwraca, aby wskazać błąd lub koniec pliku. ** \_** W przypadku obu funkcji należy użyć **feof** lub **ferror,** aby odróżnić błąd od stanu końca pliku.
+fgetchar zwraca znak odczytywany jako **int** lub Return `EOF` , aby wskazać błąd lub koniec pliku. ** \_** fgetwchar zwraca, jako [wint_t](../../c-runtime-library/standard-types.md), znak dwubajtowy, który odpowiada znakowi odczytywania lub powracania `WEOF` , aby wskazać błąd lub koniec pliku. ** \_** Dla obu funkcji Użyj **feof** lub obiektu **odwołującego** do rozróżnienia między błędem a warunkiem końca pliku.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje odczytywać pojedynczy znak z **stdin**. Następnie funkcja zwiększa wskaźnik skojarzonego pliku (jeśli jest zdefiniowany), aby wskazywał następny znak. Jeśli strumień znajduje się na końcu pliku, ustawiony jest wskaźnik końca pliku dla strumienia.
+Te funkcje odczytują pojedynczy znak z **stdin**. Funkcja następnie zwiększa skojarzony wskaźnik pliku (jeśli jest zdefiniowany), aby wskazywał na następny znak. Jeśli strumień znajduje się na końcu pliku, wskaźnik końca pliku dla strumienia jest ustawiony.
 
-**_fgetchar** jest odpowiednikiem `fgetc( stdin )`. Jest to również równoważne **getchar**, ale realizowane tylko jako funkcja, a nie jako funkcja i makro. **_fgetwchar** jest szerokoznakową wersją **_fgetchar**.
+**_fgetchar** jest równoważne `fgetc( stdin )`. Jest ona również równoważna z **GetChar**, ale implementowana tylko jako funkcja, a nie jako funkcja i makro. **_fgetwchar** to wersja znaku dwubajtowego **_fgetchar**.
 
-Funkcje te nie są zgodne ze standardem ANSI.
+Te funkcje nie są zgodne ze standardem ANSI.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -80,10 +80,10 @@ Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmien
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fgetchar**|\<stdio.h>|
-|**_fgetwchar**|\<stdio.h> lub \<wchar.h>|
+|**_fgetchar**|\<stdio. h>|
+|**_fgetwchar**|\<stdio. h> lub \<WCHAR. h>|
 
-Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej systemu Windows (UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą—**stdin,** **stdout**i **stderr**— muszą zostać przekierowane, zanim funkcje c w czasie wykonywania będą mogły z nich korzystać w aplikacjach platformy uniwersalnej systemu Windows. Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą —**stdin**, **stdout**i **stderr**— muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
