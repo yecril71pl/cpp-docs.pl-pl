@@ -21,7 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,16 +40,16 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-ms.openlocfilehash: f09168e8e010fb59d748c109d4a41c533318e2eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9921164220bc5289a7ae4a211c88107b4dac8e9c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342882"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918506"
 ---
 # <a name="isprint-iswprint-_isprint_l-_iswprint_l"></a>isprint, iswprint, _isprint_l, _iswprint_l
 
-Określa, czy liczba całkowita reprezentuje znak do wydrukowania.
+Określa, czy liczba całkowita reprezentuje Znak drukowalny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -72,43 +72,43 @@ int _iswprint_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Całkowita ć do przetestowania.
+*s*<br/>
+Liczba całkowita do przetestowania.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych procedur zwraca wartość niezerową, jeśli *c* jest określoną reprezentacją znaku drukowalnej. **isprint** zwraca wartość niezerową, jeśli *c* jest znakiem do wydrukowania — obejmuje znak spacji (0x20 - 0x7E). **iswprint** zwraca wartość różną od zera, jeśli *c* jest znakiem szerokiego drukowania — obejmuje to znak szerokiej przestrzeni. Każda z tych procedur zwraca wartość 0, jeśli *c* nie spełnia warunku badania.
+Każda z tych procedur zwraca wartość różną od zera, jeśli *c* jest szczególną reprezentacją znaku drukowalnego. Funkcja **isprint** zwraca wartość różną od zera, jeśli *c* jest znakiem drukowalnym — obejmuje to znak spacji (0x20-0x7E). **iswprint** zwraca wartość różną od zera, jeśli *c* jest znakiem dwubajtowym, co obejmuje znak odstępu. Każda z tych procedur zwraca wartość 0, jeśli *c* nie spełnia warunku testu.
 
-Wynik warunku testu dla tych funkcji zależy od **LC_CTYPE** ustawienie kategorii ustawień regionalnych; zobacz [setlocale, _wsetlocale aby](setlocale-wsetlocale.md) uzyskać więcej informacji. Wersje tych funkcji, które nie mają sufiksu **_l,** używają bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; wersje, które mają **_l** sufiks są identyczne, z tą różnicą, że używają ustawień regionalnych, które są przekazywane zamiast. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wynik warunku testowego dla tych funkcji zależy od ustawienia kategorii **LC_CTYPE** ustawień regionalnych; Aby uzyskać więcej informacji [, zobacz setlocals, _wsetlocale](setlocale-wsetlocale.md) . Wersje tych funkcji, które nie mają sufiksu **_l** używają bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych; wersje, które mają sufiks **_l** są identyczne, z tą różnicą, że korzystają z przekazaną w zamian ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Zachowanie **isprint** i **_isprint_l** jest niezdefiniowana, jeśli *c* nie jest EOF lub w zakresie od 0 do 0xFF włącznie. Gdy biblioteka CRT debugowania jest używana i *c* nie jest jedną z tych wartości, funkcje podnieść potwierdzenia.
+Zachowanie elementu **isprint** i **_isprint_l** jest niezdefiniowane, jeśli *c* nie jest typu EOF lub z zakresu od 0 do 0xFF włącznie. Gdy jest używana Biblioteka CRT debugowania, a *c* nie jest jedną z tych wartości, funkcje zgłaszają potwierdzenie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_unicode zdefiniowane|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|zdefiniowano _unicode|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_** **istprint**|**isprint**|[_ismbcprint](ismbcgraph-functions.md)|**druk iswprint**|
+|**_** **istprint**|**isprint**|[_ismbcprint](ismbcgraph-functions.md)|**iswprint**|
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**isprint**|\<ctype.h>|
-|**druk iswprint**|\<ctype.h> lub \<wchar.h>|
-|**_isprint_l**|\<ctype.h>|
-|**_iswprint_l**|\<ctype.h> lub \<wchar.h>|
+|**isprint**|\<CType. h>|
+|**iswprint**|\<CType. h> lub \<WCHAR. h>|
+|**_isprint_l**|\<CType. h>|
+|**_iswprint_l**|\<CType. h> lub \<WCHAR. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)<br/>
-[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [is, isw, procedury](../../c-runtime-library/is-isw-routines.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: b11a40dd9dc58964df77330767a55aa95a179319
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cad1740e64c7bbda553ac1a6c777d7e2295152ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338201"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919545"
 ---
 # <a name="rand_s"></a>rand_s
 
-Generuje numer pseudolosowy. Jest to bezpieczniejsza wersja [funkcji rand,](rand.md)z ulepszeniami zabezpieczeń, jak opisano w [funkcji zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Generuje numer pseudolosowych. Jest to bezpieczniejsza wersja funkcji [Rand](rand.md)z ulepszeniami zabezpieczeń opisanymi w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,17 +52,17 @@ errno_t rand_s(unsigned int* randomValue);
 ### <a name="parameters"></a>Parametry
 
 *randomValue*<br/>
-Wskaźnik do liczby całkowitej do przechowywania wygenerowanej wartości.
+Wskaźnik do liczby całkowitej, która przechowuje wygenerowaną wartość.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli się powiedzie, w przeciwnym razie kod błędu. Jeśli wskaźnik wejściowy _randomValue_ jest wskaźnikiem null, funkcja wywołuje nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, funkcja zwraca **wartość EINVAL** i ustawia **errno** na **EINVAL**. Jeśli funkcja nie powiedzie się z jakiegokolwiek innego powodu, *_randomValue_ jest ustawiona na 0.
+Zero, jeśli to się powiedzie, w przeciwnym razie, kod błędu. Jeśli wskaźnik wejściowy _randomValue_ jest wskaźnikiem o wartości null, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca **EINVAL** i ustawia **errno** na **EINVAL**. Jeśli funkcja nie powiedzie się z innego powodu, *_randomValue_ jest ustawiona na 0.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **rand_s** zapisuje pseudolosową liczę całkowitą w zakresie od 0 do **UINT_MAX** do wskaźnika wejściowego. Funkcja **rand_s** używa systemu operacyjnego do generowania kryptograficznie bezpiecznych liczb losowych. Nie używa materiału siewnego generowanego przez funkcję [srand,](srand.md) ani nie wpływa na losową sekwencję numerów używaną przez [rand](rand.md).
+Funkcja **rand_s** zapisuje liczbę całkowitą pseudolosowych z zakresu od 0 do **UINT_MAX** na wskaźnik wejściowy. Funkcja **rand_s** używa systemu operacyjnego do generowania kryptograficznie zabezpieczonych liczb losowych. Nie używa inicjatora wygenerowanego przez funkcję [srand](srand.md) ani nie ma wpływu na losową sekwencję liczbową używaną przez [Rand](rand.md).
 
-Funkcja **rand_s** wymaga, aby stała **_CRT_RAND_S** być zdefiniowana przed instrukcją włączenia dla funkcji, która ma być zadeklarowana, jak w poniższym przykładzie:
+Funkcja **rand_s** wymaga, aby stała **_CRT_RAND_S** zdefiniowana przed instrukcją dołączenia dla funkcji, która ma zostać zadeklarowana, tak jak w poniższym przykładzie:
 
 ```C
 By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
@@ -71,15 +71,15 @@ By default, this function's global state is scoped to the application. To change
 #include <stdlib.h>
 ```
 
-**rand_s** zależy od interfejsu API [RtlGenRandom,](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) który jest dostępny tylko w systemie Windows XP i nowszym.
+**rand_s** zależy od interfejsu API [RtlGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) , który jest dostępny tylko w systemie Windows XP i nowszych.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**rand_s**|\<>|
+|**rand_s**|\<STDLIB. h>|
 
-Aby uzyskać więcej informacji, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -159,6 +159,6 @@ int main( void )
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [Rand](rand.md)<br/>
 [srand](srand.md)<br/>

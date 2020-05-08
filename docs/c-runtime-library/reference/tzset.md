@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,19 +28,19 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: b2537a3bbfd2b5cec6bdf149c520aac7e3344b1e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5afc1b05f52d73228abc1a1e102c1578eb2d2dc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362185"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912148"
 ---
 # <a name="_tzset"></a>_tzset
 
 Ustawia zmienne środowiskowe czasu.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,49 +50,49 @@ void _tzset( void );
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_tzset** używa bieżącego ustawienia zmiennej środowiskowej **TZ** do przypisywania wartości do trzech zmiennych globalnych: **_daylight**, **_timezone**i **_tzname**. Zmienne te są używane przez [funkcje _ftime](ftime-ftime32-ftime64.md) i [czasu lokalnego](localtime-localtime32-localtime64.md) do wprowadzania poprawek od skoordynowanego czasu uniwersalnego (UTC) do czasu lokalnego oraz przez funkcję [czasu](time-time32-time64.md) obliczenia czasu UTC z czasu systemowego. Aby ustawić zmienną środowiskową **TZ,** użyj następującej składni:
+Funkcja **_tzset** używa bieżącego ustawienia zmiennej środowiskowej $ do przypisywania **wartości do trzech** zmiennych globalnych: **_daylight**, **_timezone**i **_tzname**. Te zmienne są używane przez funkcje [_ftime](ftime-ftime32-ftime64.md) i [localtime](localtime-localtime32-localtime64.md) w celu wprowadzania poprawek od uniwersalnego czasu koordynowanego (UTC) do czasu lokalnego, a przez funkcję [Time](time-time32-time64.md) do obliczania czasu UTC z godziny systemowej. Aby ustawić **zmienną środowiskową** programu, należy użyć następującej składni:
 
-> **zestaw TZ=**_tzn_ \[ **+**&#124;**-**]*hh*\[**:**_mm_\[**:**_ss_] ][*dzn*]
+> **Set $ =**_tzn_ \[ **+**&#124;**-**]*hh*\[**:**_mm_\[**:**_SS_]] [*dzn*]
 
 |Parametr|Opis|
 |-|-|
-| *tzn* | Trzyliterowa nazwa strefy czasowej, na przykład PST. Należy określić poprawne przesunięcie od czasu lokalnego do czasu UTC. |
-| *hh* | Różnica godzin między czasem UTC a czasem lokalnym. Podpisz (+) opcjonalnie dla wartości dodatnich. |
-| *Mm* | Minut. Oddzielone od *hh* przez dwukropek (**:**). |
-| *Ss* | Sekund. Oddzielony od *mm* dwukropkiem (**:**). |
-| *dzn* | Trzyliterowa strefa czasu letniego, taka jak PDT. Jeśli czas letni nigdy nie obowiązuje w miejscowości, ustaw **TZ** bez wartości *dla dzn*. Biblioteka wykonawcza języka C przyjmuje reguły Stanów Zjednoczonych dotyczące implementowania obliczania czasu letniego (DST). |
+| *tzn* | 3-literowa nazwa strefy czasowej, na przykład PST. Należy określić prawidłowe przesunięcie od czasu lokalnego na UTC. |
+| *hh* | Różnica w godzinach między czasem UTC i czasem lokalnym. Znak (+) opcjonalny dla wartości dodatnich. |
+| *–* | Minut. Oddzielona od *hh* przez dwukropek (**:**). |
+| *RR* | S. Oddzielone od *mm* średnikiem (**:**). |
+| *dzn* | Trzy litery strefy czasowej zmiany czasu, takie jak PDT. Jeśli czas letni nigdy nie obowiązuje **, ustaw wartość** opcji UstawWartość bez wartości dla *dzn*. Biblioteka środowiska uruchomieniowego C przyjmuje reguły Stany Zjednoczone "na potrzeby wykonywania obliczeń czasu letniego (DST). |
 
 > [!NOTE]
-> Należy uważać na obliczenie znaku różnicy czasu. Ponieważ różnica czasu jest przesunięcie od czasu lokalnego do czasu UTC (a nie odwrotnie), jego znak może być przeciwieństwem tego, co można intuicyjnie oczekiwać. W przypadku stref czasowych przed utc różnica czasu jest ujemna; dla osób za UTC, różnica jest dodatnia.
+> Weź pod uwagę obliczanie znaku różnicy czasu. Ze względu na to, że różnica czasu jest przesunięta od czasu lokalnego na UTC (a nie odwrotnie), jego znak może być przeciwieństwem do tego, co można intuicyjnie oczekiwać. Dla stref czasowych przed czasem UTC różnica czasu jest ujemna; różnica jest dodatnia dla tych za czas UTC.
 
-Na przykład, aby ustawić zmienną środowiskową **TZ** odpowiadającą bieżącej strefie czasowej w Niemczech, wprowadź w wierszu polecenia następujące elementy:
+Na przykład, aby ustawić zmienną **środowiskową** , która odpowiada bieżącej strefie czasowej w Niemczech, wprowadź następujące polecenie w wierszu polecenia:
 
-> **zestaw TZ=GST-1GDT**
+> **Set $ = GST (-1GDT**
 
-To polecenie używa podatku GST do wskazania niemieckiego czasu standardowego, zakłada, że utc jest jedną godzinę za Niemcami (lub innymi słowy, że Niemcy jest jedną godzinę przed UTC) i zakłada, że Niemcy przestrzega czasu letniego.
+To polecenie używa GST (do wskazania niemieckiego czasu standardowego, zakłada, że czas UTC jest godzinę za Niemcy (lub innymi słowy, że Niemcy to godzina przed czasem UTC) i zakłada, że Niemcy obserwują czas letni.
 
-Jeśli wartość **TZ** nie jest ustawiona, **_tzset** próbuje użyć informacji o strefie czasowej określonej przez system operacyjny. W systemie operacyjnym Windows te informacje są określone w aplikacji Data/godzina w Panelu sterowania. Jeśli **_tzset** nie może uzyskać tych informacji, domyślnie używa PST8PDT, co oznacza strefę czasową Pacyfiku.
+Jeśli wartość **nie** jest ustawiona, **_tzset** próbuje użyć informacji o strefie czasowej określonych przez system operacyjny. W systemie operacyjnym Windows te informacje są określone w aplikacji Data/godzina w panelu sterowania. Jeśli **_tzset** nie może uzyskać tych informacji, domyślnie używa PST8PDT, co oznacza strefę czasową pacyficznego.
 
-Na podstawie wartości zmiennej środowiskowej **TZ** do zmiennych globalnych przypisane są następujące wartości **_daylight** **, _timezone**i **_tzname,** gdy nazywana jest **_tzset:**
+Na podstawie wartości **zmiennej środowiskowej** $ następujące wartości są przypisywane do zmiennych globalnych **_daylight**, **_timezone**i **_tzname** po wywołaniu **_tzset** :
 
 |Zmienna globalna|Opis|Wartość domyślna|
 |---------------------|-----------------|-------------------|
-|**_daylight**|Wartość niezerowa, jeśli strefa czasu letniego jest określona w ustawieniu **TZ;** w przeciwnym razie 0.|1|
-|**_timezone**|Różnica w sekundach między czasem lokalnym a czasem UTC.|28800 (28800 sekund to 8 godzin)|
-|**_tzname**[0]|Wartość ciągu nazwy strefy czasowej ze zmiennej środowiskowej **TZ;** pusty, jeśli **TZ** nie został ustawiony.|Pst|
-|**_tzname**[1]|Wartość ciągu strefy czasu letniego; puste, jeśli strefa czasu letniego zostanie pominięta w zmiennej środowiskowej **TZ.**|Pdt|
+|**_daylight**|Wartość różna od zera, jeśli **w ustawieniu $** jest określona strefa czasu letniego. w przeciwnym razie 0.|1|
+|**_timezone**|Różnica w sekundach między czasem lokalnym i czasem UTC.|28800 (28800 s = 8 godzin)|
+|**_tzname**[0]|Wartość ciągu nazwy strefy czasowej z zmiennej **w środowisku** . puste, **Jeśli nie ustawiono opcji** $.|KOPIA|
+|**_tzname**[1]|Wartość ciągu strefy czasowej zmiany czasu; puste, jeśli strefa czasowa zmiany czasu jest pomijana z **zmiennej** środowiskowej.|PDT|
 
-Wartości domyślne wyświetlane w powyższej tabeli dla **_daylight** i **tablicy _tzname** odpowiadają "PST8PDT". Jeśli strefa czasu dem gncia nie jest pominięta ze zmiennej środowiskowej **TZ,** wartość **_daylight** wynosi 0, a [_ftime](ftime-ftime32-ftime64.md), [gmtime](gmtime-gmtime32-gmtime64.md)i funkcje [czasu lokalnego](localtime-localtime32-localtime64.md) zwracają 0 dla swoich flag czasu du lokalnego.
+Wartości domyślne pokazane w powyższej tabeli dla **_daylight** , a tablica **_tznamea** odpowiada "PST8PDT". Jeśli strefa czasowa została pominięta ze zmiennej **środowiskowej** $, wartość **_daylight** jest równa 0, a funkcje [_ftime](ftime-ftime32-ftime64.md), [gmtime](gmtime-gmtime32-gmtime64.md)i [localtime](localtime-localtime32-localtime64.md) zwracają wartość 0 dla ich flag DST.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_tzset**|\<> time.h|
+|**_tzset**|\<> godziny. h|
 
-Funkcja **_tzset** jest specyficzna dla firmy Microsoft. Aby uzyskać więcej informacji, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Funkcja **_tzset** jest specyficzna dla firmy Microsoft. Aby uzyskać więcej informacji, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: c3f1b9bd8bf2a4404e2239858e4c3c59b755bacd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 06da25fb38d18691f78973f4e63a8b7b48d98ce1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332373"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913958"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
-Przenosi kontrolę do mechanizmu obsługi błędów, jeśli **nowy** operator nie może przydzielić pamięci.
+Przenosi kontrolę do mechanizmu obsługi błędów, jeśli **Nowy** operator nie może przydzielić pamięci.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,22 +49,22 @@ _PNH _set_new_handler( _PNH pNewHandler );
 
 ### <a name="parameters"></a>Parametry
 
-*pNewHandler (ręczny)*<br/>
-Wskaźnik do funkcji obsługi pamięci dostarczonej przez aplikację. Argument 0 powoduje, że nowy program obsługi do usunięcia.
+*pNewHandler*<br/>
+Wskaźnik do funkcji obsługi pamięci dostarczonej przez aplikację. Argument 0 powoduje usunięcie nowej procedury obsługi.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do poprzedniej funkcji obsługi wyjątków zarejestrowanej przez **_set_new_handler**, dzięki czemu poprzednia funkcja może zostać przywrócona później. Jeśli nie ustawiono poprzedniej funkcji, wartość zwracana może służyć do przywracania domyślnego zachowania; ta wartość może być **NULL**.
+Zwraca wskaźnik do poprzedniej funkcji obsługi wyjątków zarejestrowanej przez **_set_new_handler**, aby można było przywrócić poprzednią funkcję. Jeśli żadna Poprzednia funkcja nie została ustawiona, wartość zwracana może zostać użyta do przywrócenia zachowania domyślnego. Ta wartość może być **równa null**.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_set_new_handler** języka C++ określa funkcję obsługi wyjątków, która zyskuje kontrolę, jeśli **nowy** operator nie może przydzielić pamięci. Jeśli **nowy** nie powiedzie się, system czasu wykonywania automatycznie wywołuje funkcję obsługi wyjątków, która została przekazana jako argument do **_set_new_handler**. **_PNH**, zdefiniowane w New.h, jest wskaźnikiem do funkcji, która zwraca typ **int** i przyjmuje argument typu **size_t**. Użyj **size_t,** aby określić ilość miejsca do przydzielenia.
+Funkcja C++ **_set_new_handler** określa funkcję obsługi wyjątków, która uzyskuje kontrolę w przypadku niepowodzenia alokacji pamięci przez operatora **New** . Jeśli **nowe** nie powiodło się, system czasu wykonywania automatycznie wywoła funkcję obsługi wyjątków, która została przeniesiona jako argument do **_set_new_handler**. **_PNH**, zdefiniowany w nowym. h, jest wskaźnikiem do funkcji, która zwraca typ **int** i przyjmuje argument typu **size_t**. Użyj **size_t** , aby określić ilość miejsca do przydzielenia.
 
-Nie ma domyślnego programu obsługi.
+Brak domyślnej procedury obsługi.
 
-**_set_new_handler** jest zasadniczo schemat wyrzucania elementów bezużytecznych. System wykonywania ponawia alokację za każdym razem, gdy funkcja zwraca wartość niezerową i kończy się niepowodzeniem, jeśli funkcja zwraca wartość 0.
+**_set_new_handler** jest zasadniczo schematem odzyskiwania pamięci. System czasu wykonywania ponawia próbę przydzielania za każdym razem, gdy funkcja zwraca wartość różną od zera i kończy się niepowodzeniem, jeśli funkcja zwraca 0.
 
-Wystąpienie funkcji **_set_new_handler** w programie rejestruje funkcję obsługi wyjątków określoną na liście argumentów za pomocą systemu czasu wykonywania:
+Wystąpienie funkcji **_set_new_handler** w programie rejestruje funkcję obsługi wyjątków określoną na liście argumentów z systemem w czasie wykonywania:
 
 ```cpp
 // set_new_handler1.cpp
@@ -84,7 +84,7 @@ int main( void )
 }
 ```
 
-Można zapisać adres funkcji, który został ostatnio przekazany do funkcji **_set_new_handler** i przywrócić go później:
+Można zapisać adres funkcji, który został ostatnio przesłany do funkcji **_set_new_handler** i przywrócić go później:
 
 ```cpp
    _PNH old_handler = _set_new_handler( my_handler );
@@ -95,31 +95,31 @@ Można zapisać adres funkcji, który został ostatnio przekazany do funkcji **_
    // . . .
 ```
 
-Funkcja [_set_new_mode](set-new-mode.md) C++ ustawia nowy tryb obsługi dla [malloc](malloc.md). Nowy tryb obsługi wskazuje, czy w przypadku awarii **malloc** ma wywołać nową procedurę obsługi zgodnie z **_set_new_handler**. Domyślnie **malloc** nie wywołać nową procedurę obsługi na niepowodzenie alokacji pamięci. Można zastąpić to domyślne zachowanie, tak aby, gdy **malloc** nie można przydzielić pamięci, **malloc** wywołuje nową procedurę obsługi w taki sam sposób, jak **nowy** operator robi, gdy nie powiedzie się z tego samego powodu. Aby zastąpić wartość domyślną, zadzwoń:
+Funkcja C++ [_set_new_mode](set-new-mode.md) ustawia nowy tryb obsługi dla opcji [malloc](malloc.md). Nowy tryb obsługi wskazuje, czy w przypadku niepowodzenia, **malloc** ma wywołać nową procedurę obsługi jako ustawioną przez **_set_new_handler**. Domyślnie funkcja **malloc** nie wywołuje nowej procedury obsługi w przypadku niepowodzenia przydzielenia pamięci. Można zastąpić to zachowanie domyślne, tak aby w przypadku niepowodzenia przydzielenia pamięci przez funkcję **malloc** wywołuje nową procedurę obsługi w taki sam **sposób, w** jaki operator **New** wykonuje, gdy nie powiedzie się z tego samego powodu. Aby zastąpić wartość domyślną, należy wywołać:
 
 ```cpp
 _set_new_mode(1);
 ```
 
-na początku programu lub link z Newmode.obj.
+Wczesne w programie lub Połącz z NewMode. obj.
 
-Jeśli zostanie podany `operator new` zdefiniowany przez użytkownika, nowe funkcje obsługi nie są automatycznie wywoływane w przypadku awarii.
+Jeśli zostanie podany zdefiniowany `operator new` przez użytkownika, nowe funkcje obsługi nie są automatycznie wywoływane w przypadku niepowodzenia.
 
-Aby uzyskać więcej informacji, zobacz [nowe](../../cpp/new-operator-cpp.md) i [usuń](../../cpp/delete-operator-cpp.md) w *odwołaniu do języka języka C++*.
+Aby uzyskać więcej informacji, zobacz [Nowość](../../cpp/new-operator-cpp.md) i [delete](../../cpp/delete-operator-cpp.md) w *dokumentacji języka C++*.
 
-Istnieje jeden **_set_new_handler** obsługi dla wszystkich dynamicznie połączonych bibliotek DLL lub plików wykonywalnych; nawet jeśli wywołasz **_set_new_handler** program obsługi może zostać zastąpiony przez inny lub który zastępuje program obsługi ustawiony przez inną bibliotekę DLL lub plik wykonywalny.
+Istnieje jedna procedura obsługi **_set_new_handler** dla wszystkich dynamicznie połączonych bibliotek DLL lub plików wykonywalnych; nawet w przypadku wywołania **_set_new_handler** program obsługi może być zastępowany przez inny lub zastępujący moduł obsługi ustawiony przez inną bibliotekę DLL lub plik wykonywalny.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_set_new_handler**|\<> new.h|
+|**_set_new_handler**|\<Nowy. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie, gdy alokacja nie powiedzie się, kontrola jest przenoszona do MyNewHandler. Argument przekazany do MyNewHandler jest liczba bajtów żądane. Wartość zwrócona z MyNewHandler jest flagą wskazującą, czy alokacja powinna zostać ponowiona: wartość niezerowa wskazuje, że alokacja powinna zostać ponowiona, a wartość zero wskazuje, że alokacja nie powiodła się.
+W tym przykładzie, gdy alokacja nie powiedzie się, formant jest transferowany do MyNewHandler. Argument przesłany do MyNewHandler jest liczbą żądanych bajtów. Wartość zwrócona przez MyNewHandler to Flaga wskazująca, czy należy ponowić próbę alokacji: wartość niezerowa wskazuje, że alokacja powinna zostać ponowiona, a wartość zerowa wskazuje, że alokacja nie powiodła się.
 
 ```cpp
 // crt_set_new_handler.cpp
@@ -171,5 +171,5 @@ Please contact the application's support team for more information.
 
 [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[Wolna](free.md)<br/>
+[zwolniony](free.md)<br/>
 [realloc](realloc.md)<br/>

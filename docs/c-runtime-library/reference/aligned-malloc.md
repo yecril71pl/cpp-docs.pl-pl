@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-ms.openlocfilehash: b7d7f29f50b28ff713de94cc3304014e96d45b70
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3caf2e8a3160c5533dfdb5bb387b373daf16b6e7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350613"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912923"
 ---
 # <a name="_aligned_malloc"></a>_aligned_malloc
 
@@ -50,33 +50,33 @@ void * _aligned_malloc(
 
 ### <a name="parameters"></a>Parametry
 
-*Rozmiar*<br/>
-Rozmiar żądanej alokacji pamięci.
+*size*<br/>
+Rozmiar żądanego przydziału pamięci.
 
-*Wyrównanie*<br/>
+*struktury*<br/>
 Wartość wyrównania, która musi być całkowitą potęgą liczby 2.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do bloku pamięci, który został przydzielony lub NULL, jeśli operacja nie powiodła się. Wskaźnik jest wielokrotnością *wyrównania*.
+Wskaźnik do bloku pamięci, który został przydzielony lub ma wartość NULL, jeśli operacja nie powiodła się. Wskaźnik jest wielokrotnością *wyrównania*.
 
 ## <a name="remarks"></a>Uwagi
 
-**_aligned_malloc** opiera się na [malloc](malloc.md).
+**_aligned_malloc** jest oparty na [malloc](malloc.md).
 
-**_aligned_malloc** jest oznaczony `__declspec(noalias)` `__declspec(restrict)`i , co oznacza, że funkcja jest gwarantowana nie modyfikować zmiennych globalnych i że wskaźnik zwrócony nie jest aliasem. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczyć](../../cpp/restrict.md).
+**_aligned_malloc** jest oznaczona `__declspec(noalias)` i `__declspec(restrict)`, co oznacza, że funkcja nie modyfikuje zmiennych globalnych i że zwrócony wskaźnik nie ma aliasu. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczaj](../../cpp/restrict.md).
 
-Ta funkcja ustawia `errno` na `ENOMEM` jeśli alokacja pamięci nie powiodła się lub jeśli żądany rozmiar był większy niż `_HEAP_MAXREQ`. Aby uzyskać `errno`więcej informacji na temat , zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Ponadto **_aligned_malloc** sprawdza poprawność jego parametrów. Jeśli *wyrównanie* nie jest potęgą 2 lub *rozmiar* wynosi zero, ta funkcja wywołuje nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, ta funkcja zwraca `errno` `EINVAL`wartość NULL i ustawia wartość .
+Ta funkcja ustawia `errno` na `ENOMEM` jeśli alokacja pamięci nie powiodła się lub jeśli żądany rozmiar był większy niż `_HEAP_MAXREQ`. Aby uzyskać więcej informacji `errno`na temat, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Ponadto **_aligned_malloc** sprawdza poprawność jego parametrów. Jeśli *wyrównanie* *nie jest potęgą 2 lub ma* wartość zero, ta funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja zwraca wartość NULL i `errno` ustawia `EINVAL`jako.
 
-Użyj [_aligned_free,](aligned-free.md) aby zlokalizować pamięć uzyskaną zarówno `_aligned_offset_malloc`przez **_aligned_malloc,** jak i . Nie używaj `free`, który nie odzyskuje wyrównanej pamięci poprawnie i może prowadzić do trudnych do zdiagnozowania błędów.
+Użyj [_aligned_free](aligned-free.md) , aby cofnąć alokację pamięci **_aligned_malloc** uzyskaną `_aligned_offset_malloc`przez oba _aligned_malloc i. Nie używaj `free`, która nie odzyska prawidłowo wyrównanej pamięci i może prowadzić do wypróbowania błędów.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_aligned_malloc**|\<> malloc.h|
+|**_aligned_malloc**|\<malloc. h>|
 
 ## <a name="example"></a>Przykład
 

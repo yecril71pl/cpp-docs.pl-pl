@@ -10,7 +10,7 @@ api_name:
 - _o__register_onexit_function
 api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-ms.openlocfilehash: a1e35d9e86a43e48849373a1cf1aa07febcd0e33
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 051961f049109b4fa6a2881e442e621036cb279c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351653"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913835"
 ---
 # <a name="_execute_onexit_table-_initialize_onexit_table-_register_onexit_function"></a>_execute_onexit_table, _initialize_onexit_table, _register_onexit_function
 
@@ -57,35 +57,35 @@ int _execute_onexit_table(
 
 #### <a name="parameters"></a>Parametry
 
-*table*<br/>
-[w, na zewnątrz] Wskaźnik do tabeli funkcji onexit.
+*tabele*<br/>
+[in. out] Wskaźnik do tabeli funkcji OnExit.
 
-*Funkcja*<br/>
-[w] Wskaźnik do funkcji, aby dodać do tabeli funkcji onexit.
+*funkcyjn*<br/>
+podczas Wskaźnik do funkcji, która ma zostać dodana do tabeli funkcji OnExit.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli się powiedzie, zwraca wartość 0. W przeciwnym razie zwraca wartość ujemną.
+Jeśli powiedzie się, zwraca wartość 0. W przeciwnym razie zwraca wartość ujemną.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje są szczegóły implementacji infrastruktury używane do obsługi środowiska wykonawczego języka C i nie powinny być wywoływane bezpośrednio z kodu. Środowisko wykonawcze C używa *tabeli funkcji onexit* do reprezentowania `atexit` `at_quick_exit`sekwencji `_onexit`funkcji zarejestrowanych przez wywołania , i . Struktura danych tabeli funkcji onexit jest nieprzezroczyste szczegóły implementacji środowiska wykonawczego C; kolejność i znaczenie jego danych mogą ulec zmianie. Nie powinny one być kontrolowane przez kod zewnętrzny.
+Te funkcje są szczegółami implementacji infrastruktury używanymi do obsługi środowiska uruchomieniowego języka C i nie powinny być wywoływane bezpośrednio z kodu. Środowisko uruchomieniowe języka C używa *tabeli funkcji OnExit* do reprezentowania sekwencji funkcji zarejestrowanych przez wywołania do `atexit`, `at_quick_exit`, i. `_onexit` Struktura danych tabeli funkcji OnExit to nieprzezroczysta implementacja szczegółów środowiska uruchomieniowego języka C. kolejność i znaczenie jego składowych danych mogą ulec zmianie. Nie powinny być sprawdzane przez kod zewnętrzny.
 
-Funkcja `_initialize_onexit_table` inicjuje tabelę funkcji onexit do jej wartości początkowej.  Ta funkcja musi zostać wywołana przed przekazaniem tabeli funkcji onexit do jednego `_register_onexit_function` lub `_execute_onexit_table`.
+`_initialize_onexit_table` Funkcja inicjuje tabelę funkcji OnExit do jej początkowej wartości.  Ta funkcja musi zostać wywołana przed przekazaniem tabeli funkcji OnExit do elementu `_register_onexit_function` lub `_execute_onexit_table`.
 
-Funkcja `_register_onexit_function` dołącza funkcję na końcu tabeli funkcji onexit.
+`_register_onexit_function` Funkcja dołącza funkcję do końca tabeli funkcji OnExit.
 
-Funkcja `_execute_onexit_table` wykonuje wszystkie funkcje w tabeli funkcji onexit, czyści tabelę, a następnie zwraca. Po wywołaniu `_execute_onexit_table`tabela jest w stanie nierozerwalnym; musi być ponownie zainicjowany przez `_initialize_onexit_table` wywołanie, zanim zostanie użyty ponownie.
+`_execute_onexit_table` Funkcja wykonuje wszystkie funkcje w tabeli funkcji OnExit, czyści tabelę, a następnie zwraca. Po wywołaniu `_execute_onexit_table`, tabela jest w stanie nieprawidłowym; należy zainicjowana ponownie przez wywołanie `_initialize_onexit_table` przed jego użyciem.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<process.h>|
+|`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<Process. h>|
 
-Program `_initialize_onexit_table` `_register_onexit_function`, `_execute_onexit_table` i funkcje są specyficzne dla firmy Microsoft. Aby uzyskać informacje o zgodności, zobacz [Zgodność](../c-runtime-library/compatibility.md).
+Funkcje `_initialize_onexit_table`, `_register_onexit_function`i `_execute_onexit_table` są specyficzne dla firmy Microsoft. Aby uzyskać informacje o zgodności, zobacz [zgodność](../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-ms.openlocfilehash: e8f6021a0b770f6b435653c190d5968f9ac50a57
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9bfc9a575504d890d0021937713c720c4557441
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345766"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910195"
 ---
 # <a name="fseek-_fseeki64"></a>fseek, _fseeki64
 
-Przenosi wskaźnik pliku w określoną lokalizację.
+Przenosi wskaźnik pliku do określonej lokalizacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,55 +62,55 @@ int _fseeki64(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumienia*<br/>
-Wskaźnik do struktury **PLIK.**
+*produkcyjne*<br/>
+Wskaźnik do struktury **pliku** .
 
 *Przesunięcie*<br/>
-Liczba bajtów od *początku .*
+Liczba bajtów od *początku*.
 
-*Pochodzenia*<br/>
+*źródł*<br/>
 Pozycja początkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli się powiedzie, **fseek** i **_fseeki64** zwraca 0. W przeciwnym razie zwraca wartość niezerową. Na urządzeniach, których nie można szukać, zwracana wartość jest niezdefiniowana. Jeśli *strumień* jest wskaźnikiem zerowym lub jeśli *pochodzenie* nie jest jedną z dozwolonych wartości opisanych poniżej, **fseek** i **_fseeki64** wywołać nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, te funkcje ustawić **errno** na **EINVAL** i zwracać -1.
+Jeśli to się powiedzie, **fseek** i **_fseeki64** zwraca 0. W przeciwnym razie zwraca wartość różną od zera. Na urządzeniach, które nie mogą przeszukiwania, wartość zwracana jest niezdefiniowana. Jeśli *strumień* jest wskaźnikiem typu null lub jeśli *Źródło* nie jest jedną z dozwolonych wartości opisanych poniżej, **fseek** i **_fseeki64** wywołać procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i Return-1.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **fseek** i **_fseeki64** przenosi wskaźnik pliku (jeśli istnieje) skojarzony ze *strumieniem* do nowej lokalizacji, która jest *odsunięty* bajtami od *początku .* Następna operacja na strumieniu odbywa się w nowej lokalizacji. W strumieniu otwartym do aktualizacji następna operacja może być odczytem lub zapisem. Początek *argumentu* musi być jedną z następujących stałych, zdefiniowanych w STDIO. H:
+Funkcje **fseek** i **_fseeki64** przesuwają wskaźnik pliku (jeśli istnieje) skojarzony ze *strumieniem* do nowej lokalizacji, która jest *przesunięta* o bajty od *początku*. Kolejna operacja w strumieniu odbywa się w nowej lokalizacji. W przypadku otwartego strumienia na potrzeby aktualizacji kolejną operacją może być odczyt lub zapis. Pochodzenie *origin* argumentu musi być jedną z następujących stałych zdefiniowanych w stdio. C
 
-|wartość początku|Znaczenie|
+|wartość pochodzenia|Znaczenie|
 |-|-|
 | **SEEK_CUR** | Bieżąca pozycja wskaźnika pliku. |
 | **SEEK_END** | Koniec pliku. |
 | **SEEK_SET** | Początek pliku. |
 
-Można użyć **fseek** i **_fseeki64,** aby zmienić położenie wskaźnika w dowolnym miejscu w pliku. Wskaźnik można również umieścić poza końcem pliku. **fseek** i **_fseeki64** czyści wskaźnik końca pliku i neguje efekt wszelkich wcześniejszych [wywołań ungetc](ungetc-ungetwc.md) przeciwko *strumieniu*.
+Możesz użyć **fseek** i **_fseeki64** , aby zmienić położenie wskaźnika w dowolnym miejscu w pliku. Wskaźnik może być również umieszczony poza końcem pliku. **fseek** i **_fseeki64** czyści wskaźnik końca pliku i wyklucza efekt wszystkich wcześniejszych wywołań [ungetc —](ungetc-ungetwc.md) do *strumienia*.
 
-Po otwarciu pliku do dołączania danych bieżąca pozycja pliku jest określana przez ostatnią operację we/wy, a nie przez to, gdzie nastąpi następny zapis. Jeśli w pliku otwartym do dołączenia nie wystąpiła żadna operacja we/wy, pozycja pliku jest początkiem pliku.
+Gdy plik jest otwierany do dołączania danych, bieżąca pozycja w pliku jest określana przez ostatnią operację we/wy, a nie przez miejsce wystąpienia następnego zapisu. Jeśli nie wykonano jeszcze operacji we/wy na pliku otwartym do dołączenia, pozycja w pliku jest początkiem pliku.
 
-W przypadku strumieni otwieranych w trybie tekstowym **fseek** i **_fseeki64** mają ograniczone zastosowanie, ponieważ tłumaczenia wiersza powrotu karetki mogą **powodować, że fseek** i **_fseeki64** dają nieoczekiwane wyniki. Jedynymi **operacjami fseek** i **_fseeki64** gwarantowanymi do pracy na strumieniach otwieranych w trybie tekstowym są:
+W przypadku strumieni otwartych w trybie tekstowym **fseek** i **_fseeki64** mają ograniczone użycie, ponieważ translacja kanałów powrotu karetki z wiersza może spowodować, że **fseek** i **_fseeki64** generują nieoczekiwane wyniki. Jedyne operacje **fseek** i **_fseeki64** , które gwarantują działanie na strumieniach otwartych w trybie tekstowym, to:
 
-- Poszukiwanie z przesunięciem równym 0 względem dowolnej wartości pochodzenia.
+- Wyszukiwanie z przesunięciem równym 0 względem którejkolwiek z wartości pochodzenia.
 
-- Szukam od początku pliku z wartością przesunięcia zwróconą z wywołania [ftell](ftell-ftelli64.md) podczas korzystania **z fseek** lub [_ftelli64](ftell-ftelli64.md) podczas korzystania **z _fseeki64**.
+- Wyszukiwanie od początku pliku z wartością przesunięcia zwracaną z wywołania do [ftell](ftell-ftelli64.md) podczas korzystania z **fseek** lub [_ftelli64](ftell-ftelli64.md) przy użyciu **_fseeki64**.
 
-Również w trybie tekstowym ctrl+Z jest interpretowany jako znak końca pliku na danych wejściowych. W plikach otwartych do odczytu / zapisu, [fopen](fopen-wfopen.md) i wszystkie powiązane procedury sprawdzić CTRL + Z na końcu pliku i usunąć go, jeśli to możliwe. Odbywa się to, ponieważ za pomocą kombinacji **fseek** i [ftell](ftell-ftelli64.md) lub **_fseeki64** i [_ftelli64](ftell-ftelli64.md), aby przejść w pliku, który kończy się CTRL + Z może spowodować **fseek** lub **_fseeki64** zachowywać się nieprawidłowo na końcu pliku.
+Ponadto w trybie tekstowym klawisze CTRL + Z są interpretowane jako znak końca pliku na wejściu. W plikach otwartych do odczytu/zapisu, [fopen](fopen-wfopen.md) i wszystkie powiązane procedury sprawdź, czy Ctrl + Z na końcu pliku i usuń go, jeśli to możliwe. Dzieje się tak, ponieważ używanie kombinacji **fseek** i [ftell](ftell-ftelli64.md) lub **_fseeki64** i [_ftelli64](ftell-ftelli64.md)do przenoszenia w pliku, który kończy się za pomocą kombinacji klawiszy Ctrl + Z, może spowodować, że **fseek** lub **_fseeki64** zachowują się nieprawidłowo blisko końca pliku.
 
-Gdy CRT otwiera plik rozpoczynający się od znaku BOM, wskaźnik pliku jest umieszczany za BOM (czyli na początku rzeczywistej zawartości pliku). Jeśli musisz **fseek** do początku pliku, użyj [ftell,](ftell-ftelli64.md) aby uzyskać początkową pozycję i **fseek** do niego, a nie do pozycji 0.
+Gdy CRT otwiera plik zaczynający się od znaku kolejności bajtów (BOM), wskaźnik pliku jest umieszczony po BOM (czyli na początku rzeczywistej zawartości pliku). Jeśli musisz **fseek** na początku pliku, użyj [ftell](ftell-ftelli64.md) , aby pobrać początkową pozycję i **fseek** do niej, a nie pozycję 0.
 
-Ta funkcja blokuje inne wątki podczas wykonywania i dlatego jest bezpieczne dla wątków. Aby uzyskać wersję niezablokującą, zobacz [_fseek_nolock, _fseeki64_nolock](fseek-nolock-fseeki64-nolock.md).
+Ta funkcja blokuje inne wątki podczas wykonywania i dlatego jest bezpieczna wątkowo. W przypadku wersji, która nie jest blokowana, zobacz [_fseek_nolock, _fseeki64_nolock](fseek-nolock-fseeki64-nolock.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**Fseek**|\<stdio.h>|
-|**_fseeki64**|\<stdio.h>|
+|**fseek**|\<stdio. h>|
+|**_fseeki64**|\<stdio. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

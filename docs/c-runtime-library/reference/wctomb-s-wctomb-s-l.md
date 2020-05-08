@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-ms.openlocfilehash: 1ddc9a991f28c4a2ea491f3ddd04d78f6345e255
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 63839f70fa334fadd961eb173343d1b406268cfd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367247"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910442"
 ---
 # <a name="wctomb_s-_wctomb_s_l"></a>wctomb_s, _wctomb_s_l
 
-Konwertuje szeroki znak na odpowiedni znak wielobajtowy. Wersja [wctomb, _wctomb_l](wctomb-wctomb-l.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcji zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konwertuje znak szeroki do odpowiadającego mu znaku wielobajtowego. Wersja [wctomb, _wctomb_l](wctomb-wctomb-l.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -66,57 +66,57 @@ errno_t _wctomb_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*wartość pRetValue*<br/>
+*pRetValue*<br/>
 Liczba bajtów lub kod wskazujący wynik.
 
 *mbchar*<br/>
 Adres znaku wielobajtowego.
 
-*rozmiarWzdjęty*<br/>
-Rozmiar buforu *mbchar*.
+*sizeInBytes*<br/>
+Rozmiar bufora *mbchar*.
 
-*Wchar*<br/>
-Szeroki charakter.
+*WCHAR*<br/>
+Znak dwubajtowy.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli się powiedzie, kod błędu w przypadku awarii.
+Zero, jeśli to się powiedzie, kod błędu w przypadku niepowodzenia.
 
-Warunki błędu
+Warunki błędów
 
-|*mbchar*|*rozmiarWzdjęty*|Wartość zwracana|*wartość pRetValue*|
+|*mbchar*|*sizeInBytes*|Wartość zwracana|*pRetValue*|
 |--------------|-------------------|------------------|-----------------|
-|**Null**|>0|**Einval**|nie zmodyfikowano|
-|Wszelki|>**Int_max**|**Einval**|nie zmodyfikowano|
-|Wszelki|za mały|**Einval**|nie zmodyfikowano|
+|**NULL**|>0|**EINVAL**|nie zmodyfikowano|
+|ile|>**INT_MAX**|**EINVAL**|nie zmodyfikowano|
+|ile|za mały|**EINVAL**|nie zmodyfikowano|
 
-Jeśli wystąpi którykolwiek z powyższych warunków błędu, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [obszarze Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, **wctomb** zwraca **wartość EINVAL** i ustawia **errno** na **EINVAL**.
+Jeśli wystąpi którykolwiek z powyższych warunków błędu, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja **wctomb** zwraca **EINVAL** i ustawia **errno** na **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **wctomb_s** konwertuje jego argument *wchar* na odpowiedni znak wielobajtowy i przechowuje wynik w *mbchar*. Funkcję można wywołać z dowolnego punktu w dowolnym programie.
+Funkcja **wctomb_s** konwertuje swój argument *WCHAR* na odpowiedni znak wielobajtowy i zapisuje wynik w *mbchar*. Można wywołać funkcję z dowolnego punktu w dowolnym programie.
 
-Jeśli **wctomb_s** konwertuje szeroki znak na znak wielobajtowy, umieszcza liczbę bajtów (która nigdy nie jest większa niż **MB_CUR_MAX)** w szerokim znaku do liczby całkowitej wskazywalnej przez *pRetValue*. Jeśli *wchar* jest znakiem zerowym o szerokim znaku (L'\0'), **wctomb_s** wypełnia *pRetValue* 1. Jeśli wskaźnik *docelowy mbchar* ma **wartość NULL**, **wctomb_s** umieszcza 0 w *pRetValue*. Jeśli konwersja nie jest możliwa w bieżących ustawieniach regionalnych, **wctomb_s** umieszcza -1 w *pRetValue*.
+Jeśli **wctomb_s** konwertuje znak szeroki do znaku wielobajtowego, umieszcza liczbę bajtów (która nigdy nie jest większa niż **MB_CUR_MAX**) w znaku szerokiego do liczby całkowitej wskazywanej przez *pRetValue*. Jeśli *WCHAR* jest znakiem dwubajtowym znaku null (L ' \ 0 '), **wctomb_s** wypełnia *pRetValue* z 1. Jeśli docelowy wskaźnik *mbchar* ma **wartość null**, **wctomb_s** umieszcza 0 w *pRetValue*. Jeśli konwersja nie jest możliwa w bieżących ustawieniach regionalnych, **wctomb_s** Put-1 w *pRetValue*.
 
-**wctomb_s** używa bieżących ustawień regionalnych dla informacji zależnych od ustawień regionalnych; **_wctomb_s_l** jest identyczna, z tą różnicą, że używa ustawień regionalnych przekazanych zamiast. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+**wctomb_s** używa bieżących ustawień regionalnych dla informacji zależnych od ustawień regionalnych; **_wctomb_s_l** jest identyczny, z tą różnicą, że w zamian korzysta z przekazaną ustawieniami regionalnymi. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**wctomb_s**|\<>|
-|**_wctomb_s_l**|\<>|
+|**wctomb_s**|\<STDLIB. h>|
+|**_wctomb_s_l**|\<STDLIB. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Program ten ilustruje zachowanie funkcji **wctomb.**
+Ten program ilustruje zachowanie funkcji **wctomb** .
 
 ```cpp
 // crt_wctomb_s.cpp
@@ -145,7 +145,7 @@ Convert a wide character:
 ## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
