@@ -1,5 +1,5 @@
 ---
-title: Wewnętrzne crt globals i funkcje
+title: Wewnętrzna Globals i funkcje CRT
 ms.date: 4/2/2020
 api_name:
 - __acrt_iob_func
@@ -394,14 +394,14 @@ api_location:
 - api-ms-win-crt-time-l1-1-0.dll
 - api-ms-win-crt-process-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0.dll.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - api-ms-win-crt-conio-l1-1-0.dll
 - vcruntime140_app.dll
 - msvcp140_app.dll
 - ntdll.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -930,20 +930,20 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: 22c38c1ad2cd5dad0a0e58437b441faf4cdb6662
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe9b466ca839cb09011dc7cc38650b8b85037e86
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351248"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914172"
 ---
-# <a name="internal-crt-globals-and-functions"></a>Wewnętrzne crt globals i funkcje
+# <a name="internal-crt-globals-and-functions"></a>Wewnętrzna Globals i funkcje CRT
 
-Biblioteka środowiska wykonawczego C (CRT) zawiera funkcje i zmienne globalne, które są używane tylko do obsługi interfejsu biblioteki publicznej. Niektóre z nich są widoczne w nagłówkach publicznych jako szczegóły implementacji. Mimo że te funkcje i zmienne globalne są dostępne za pośrednictwem eksportu publicznego, nie są przeznaczone do użycia przez kod. Zaleca się zmianę kodu, który używa tych funkcji i zmiennych, aby zamiast tego używać odpowiedników biblioteki publicznej. Te funkcje mogą ulec zmianie z wersji na wersję. Są one wymienione tutaj, aby pomóc ci je zidentyfikować. Łącza są dostarczane, gdy istnieje dodatkowa dokumentacja, ale ogólnie rzecz biorąc, te szczegóły implementacji nie są udokumentowane.
+Biblioteka środowiska uruchomieniowego języka C (CRT) zawiera funkcje i zmienne globalne, które są używane tylko do obsługi interfejsu biblioteki publicznej. Niektóre z nich są ujawniane w publicznych nagłówkach jako szczegóły implementacji. Chociaż te funkcje i zmienne globalne są dostępne za pośrednictwem publicznych eksportów, nie są przeznaczone do użytku w kodzie. Zalecamy zmianę dowolnego kodu, który używa tych funkcji i zmiennych do używania odpowiedników biblioteki publicznej. Te funkcje mogą ulec zmianie z wersji na wersję. Są one wymienione tutaj, aby ułatwić ich identyfikację. Linki są udostępniane, gdy istnieje dodatkowa dokumentacja, ale ogólnie rzecz biorąc, te szczegóły implementacji nie są udokumentowane.
 
-## <a name="internal-crt-globals-and-value-macros"></a>Wewnętrzne wartości globalne CRT i makra wartości
+## <a name="internal-crt-globals-and-value-macros"></a>Wewnętrzne Globals i makro CRT
 
-Te zmienne globalne i definicje makr są używane do implementacji CRT.
+Te zmienne globalne i definicje makr służą do implementowania CRT.
 
 |Nazwa|
 |----------|
@@ -962,7 +962,7 @@ Te zmienne globalne i definicje makr są używane do implementacji CRT.
 
 ## <a name="internal-crt-functions-and-function-macros"></a>Wewnętrzne funkcje CRT i makra funkcji
 
-Te funkcje i makra funkcji są używane do implementacji CRT i standardowej biblioteki C++.
+Te funkcje i makra funkcji służą do implementowania CRT i standardowej biblioteki języka C++.
 
 |Nazwa|
 |----------|
@@ -1163,13 +1163,13 @@ Te funkcje i makra funkcji są używane do implementacji CRT i standardowej bibl
 |_NLG_Dispatch2|
 |_NLG_Return|
 |_NLG_Return2|
-|&#95;&#95;_argc __p|
-|&#95;&#95;_argv __p|
+|__p&#95;&#95;_argc|
+|__p&#95;&#95;_argv|
 |__p&#95;&#95;_initenv|
 |[__p&#95;&#95;_mb_cur_max](../c-runtime-library/mb-cur-max-func-mb-cur-max-l-func-p-mb-cur-max-mb-cur-max.md)|
 |__p&#95;&#95;_wargv|
-|&#95;&#95;_winitenv __p|
-|_acmdln\___p|
+|__p&#95;&#95;_winitenv|
+|__p\__acmdln|
 |[__p\__commode](../c-runtime-library/p-commode.md)|
 |__p\__crtAssertBusy|
 |__p\__crtBreakAlloc|

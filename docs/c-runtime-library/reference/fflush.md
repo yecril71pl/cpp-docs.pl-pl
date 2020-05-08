@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: 401f715e99e6304f0726c8b9c96a71d9582dbc1d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c5208c86484e1d9478f3879d91b32d57ba7c4a3a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347165"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912897"
 ---
 # <a name="fflush"></a>fflush
 
@@ -49,37 +49,37 @@ int fflush(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumienia*<br/>
-Wskaźnik do struktury **PLIK.**
+*produkcyjne*<br/>
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fflush** zwraca wartość 0, jeśli bufor został pomyślnie opróżniony. Wartość 0 jest również zwracana w przypadkach, w których określony strumień nie ma buforu lub jest otwarty tylko do odczytu. Zwracana wartość **EOF** wskazuje błąd.
+**fflush** zwraca wartość 0, jeśli bufor został pomyślnie opróżniony. Wartość 0 jest również zwracana w przypadkach, w których określony strumień nie ma buforu lub jest otwarty tylko do odczytu. Wartość zwracana przez **znacznik EOF** wskazuje na błąd.
 
 > [!NOTE]
-> Jeśli **fflush** zwraca **EOF**, dane mogły zostać utracone z powodu błędu zapisu. Podczas konfigurowania programu obsługi błędów krytycznych najbezpieczniej jest wyłączanie buforowania za pomocą funkcji **setvbuf** lub używanie procedur we/wy niskiego poziomu, takich jak **_open**, **_close**i **_write** zamiast funkcji we/wy strumienia.
+> Jeśli **fflush** zwraca **znacznik EOF**, dane mogły zostać utracone z powodu błędu zapisu. Podczas konfigurowania programu obsługi błędów krytycznych najbezpieczniejszym sposobem jest wyłączenie buforowania przy użyciu funkcji **setvbuf —** lub użycie procedur we/wy niskiego poziomu, takich jak **_open**, **_close**i **_write** zamiast funkcji we/wy strumienia.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **fflush** opróżnia *strumień*strumienia . Jeśli strumień został otwarty w trybie zapisu lub został otwarty w trybie aktualizacji, a ostatnią operacją był zapis, zawartość buforu strumienia jest zapisywana w podstawowym pliku lub urządzeniu, a bufor jest odrzucany. Jeśli strumień został otwarty w trybie odczytu lub jeśli strumień nie ma buforu, **wywołanie fflush** nie ma wpływu, a każdy bufor jest zachowywany. Wywołanie **fflush** neguje efekt wcześniejszego wywołania **ungetc** dla strumienia. Strumień pozostaje otwarty po wywołaniu.
+Funkcja **fflush** opróżnia *strumień*strumienia. Jeśli strumień został otwarty w trybie zapisu lub został otwarty w trybie aktualizacji, a Ostatnia operacja była zapisu, zawartość buforu strumienia jest zapisywana w źródłowym pliku lub urządzeniu i bufor jest odrzucany. Jeśli strumień został otwarty w trybie odczytu lub strumień nie ma buforu, wywołanie do **fflush** nie ma żadnego efektu i wszystkie bufory są zachowywane. Wywołanie **fflush** powoduje negację efektu dowolnego wcześniejszego wywołania **ungetc —** strumienia. Strumień pozostaje otwarty po wywołaniu.
 
-Jeśli *strumień* ma **wartość NULL**, zachowanie jest takie samo jak wywołanie **fflush** na każdym otwartym strumieniu. Wszystkie strumienie otwarte w trybie zapisu i wszystkie strumienie otwarte w trybie aktualizacji, gdzie ostatnia operacja była zapisu są opróżniane. Wywołanie nie ma wpływu na inne strumienie.
+Jeśli *strumień* ma **wartość null**, zachowanie jest takie samo jak wywołanie **fflush** w każdym otwartym strumieniu. Wszystkie strumienie otwarte w trybie zapisu i wszystkie strumienie otwarte w trybie aktualizacji, w których Ostatnia operacja była zapisu, są opróżniane. Wywołanie nie ma wpływu na inne strumienie.
 
-Bufory są zwykle obsługiwane przez system operacyjny, który określa optymalny czas automatycznego zapisywania danych na dysku: gdy bufor jest zapełniony, gdy strumień jest zamknięty lub gdy program kończy się normalnie bez zamykania strumienia. Funkcja zatwierdzania na dysku biblioteki w czasie wykonywania pozwala upewnić się, że dane krytyczne są zapisywane bezpośrednio na dysku, a nie do buforów systemu operacyjnego. Bez przepisywania istniejącego programu, można włączyć tę funkcję, łącząc pliki obiektów programu z COMMODE.OBJ. W wynikowym pliku wykonywalnym wywołania **_flushall** zapisu zawartości wszystkich buforów na dysku. Commode.OBJ dotyczy tylko **_flushall** i **fflush.**
+Bufory są zwykle obsługiwane przez system operacyjny, który określa optymalny czas zapisywania danych na dysku: gdy bufor jest zapełniony, gdy strumień jest zamknięty lub gdy program kończy normalne działanie bez zamykania strumienia. Funkcja zatwierdzania na dysku w bibliotece wykonawczej pozwala zagwarantować, że krytyczne dane są zapisywane bezpośrednio na dysku, a nie w buforach systemu operacyjnego. Bez ponownego zapisywania istniejącego programu można włączyć tę funkcję, łącząc pliki obiektów programu z TOWARami. OBJ. W utworzonym pliku wykonywalnym program wywołuje **_flushall** zapisać zawartość wszystkich buforów na dysku. Tylko **_flushall** i **fflush** mają wpływ na towary. obj.
 
-Aby uzyskać informacje dotyczące sterowania funkcją zatwierdzania na dysku, zobacz [Stream we/wy](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md)i [_fdopen](fdopen-wfdopen.md).
+Aby uzyskać informacje o kontrolowaniu funkcji "Commit-to-Disk", zobacz [przesyłanie strumieniowe we/wy](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md)i [_fdopen](fdopen-wfdopen.md).
 
-Ta funkcja blokuje wątek wywołujący i dlatego jest bezpieczny dla wątków. Aby uzyskać wersję niezablokującą, zobacz **_fflush_nolock**.
+Ta funkcja blokuje wątek wywołujący i dlatego jest bezpieczna wątkowo. W przypadku wersji, która nie jest blokowana, zobacz **_fflush_nolock**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fflush**|\<stdio.h>|
+|**fflush**|\<stdio. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

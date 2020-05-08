@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: b509da5f18ea1f606b8a3b47ab66a78e4f595558
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: def04602cdeb0ad180bd4c51c02f570c94809784
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338694"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914638"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -62,33 +62,33 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Wartość zmiennoprzecinku.
+*y*<br/>
+Wartość zmiennoprzecinkowa.
 
-*Intptr*<br/>
+*IntPtr*<br/>
 Wskaźnik do przechowywanej części całkowitej.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Ta funkcja zwraca podpisaną ułamkową część *x*. Nie ma zwracania błędów.
+Ta funkcja zwraca podpisaną część ułamkową *x*. Brak powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **modf** rozkładają wartość zmiennoprzecinkową *x* na części ułamkowe i całkowite, z których każda ma ten sam znak co *x*. Zwracana jest podpisana ułamkowa część *x.* Część całkowita jest przechowywana jako wartość zmiennoprzecinkowa *w intptr*.
+Funkcja **modf —** dzieli wartość zmiennoprzecinkową *x* na części ułamkowe i całkowite, z których każdy ma ten sam znak jako *x*. Zwracana jest podpisana część ułamkowa *x* . Część całkowita jest przechowywana jako wartość zmiennoprzecinkowa w *IntPtr*.
 
-**modf** ma implementację, która używa streamingu rozszerzeń SIMD 2 (SSE2). Zobacz [_set_SSE2_enable,](set-sse2-enable.md) aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2.
+**modf —** ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Zobacz [_set_SSE2_enable](set-sse2-enable.md) , aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2.
 
-C++ umożliwia przeciążenie, dzięki czemu można wywołać przeciążenia **modf,** które biorą i zwracają **float** lub **długie** **podwójne** parametry. W programie C **modf** zawsze przyjmuje dwie podwójne wartości i zwraca podwójną wartość.
+Język C++ pozwala na Przeciążenie, dlatego można wywoływać przeciążenia **modf —** , które pobierają i **zwracają parametry** **zmiennoprzecinkowe** lub **długie** . W programie C **modf —** zawsze przyjmuje dwie wartości podwójne i zwraca wartość podwójnej precyzji.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**modf**, **modff**, **modfl**|C: \<> math.h<br /><br /> C++: \<, cmath> \<lub math.h>|
+|**modf —**, **modff —**, **modfl**|C: \<Math. h><br /><br /> C++:, \<cmath> lub \<Math. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -116,6 +116,6 @@ For -14.876543, the fraction is -0.876543 and the integer is -14
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
 [ldexp](ldexp.md)<br/>

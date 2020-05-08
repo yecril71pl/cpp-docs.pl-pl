@@ -17,7 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-ms.openlocfilehash: 9eb856efca054423465aa7d30092edaf83a65eeb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 78675ef91c2ab68e18f6111b4908886017ae1f79
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333532"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917147"
 ---
 # <a name="_cexit-_c_exit"></a>_cexit, _c_exit
 
-Wykonuje operacje oczyszczania i zwraca bez zakończenia procesu.
+Wykonuje operacje czyszczenia i zwraca bez zakończenia procesu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,36 +54,36 @@ void _c_exit( void );
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_cexit** wywołuje, w kolejności last-in, first-out (LIFO), funkcje zarejestrowane przez **atexit** i **_onexit**. Następnie **_cexit** opróżnia wszystkie bufory we/wy i zamyka wszystkie otwarte strumienie przed zwróceniem. **_c_exit** jest taka sama jak **_exit,** ale powraca do procesu wywołującego bez przetwarzania **atexit** lub **_onexit** lub opróżniania buforów strumienia. Zachowanie **wyjścia**, **_exit** **, _cexit**i **_c_exit** jest pokazane w poniższej tabeli.
+Funkcja **_cexit** wywołuje, w kolejności ostatniej-w, pierwszy-out (LIFO), funkcje zarejestrowane przez **atexit —** i **_onexit**. Następnie **_cexit** opróżnia wszystkie bufory we/wy i zamyka wszystkie otwarte strumienie przed zwróceniem. **_c_exit** jest taka sama jak **_exit** , ale powraca do procesu wywołującego bez przetwarzania buforów strumieni **atexit —** lub **_onexit** ani opróżniania. W poniższej tabeli przedstawiono zachowanie funkcji **Exit**, **_exit**, **_cexit**i **_c_exit** .
 
 |Funkcja|Zachowanie|
 |--------------|--------------|
-|**Wyjścia**|Wykonuje pełne procedury zakończenia biblioteki C, kończy proces i kończy pracę z podanym kodem stanu.|
-|**_exit**|Wykonuje szybkie procedury zakończenia biblioteki C, kończy proces i kończy pracę z podanym kodem stanu.|
-|**_cexit**|Wykonuje pełne procedury zakończenia biblioteki C i zwraca do obiektu wywołującego, ale nie kończy procesu.|
-|**_c_exit**|Wykonuje szybkie procedury zakończenia biblioteki C i zwraca do obiektu wywołującego, ale nie kończy procesu.|
+|**Opuść**|Wykonuje kompletne procedury kończenia biblioteki C, kończy proces i kończy pracę z dostarczonym kodem stanu.|
+|**_exit**|Wykonuje szybkie procedury kończenia biblioteki C, kończy proces i kończy pracę z dostarczonym kodem stanu.|
+|**_cexit**|Wykonuje kompletne procedury kończenia biblioteki C i powraca do obiektu wywołującego, ale nie kończy procesu.|
+|**_c_exit**|Wykonuje szybkie procedury kończenia biblioteki C i powraca do obiektu wywołującego, ale nie kończy procesu.|
 
-Po wywołaniu **funkcji _cexit** lub **_c_exit** destruktory dla wszystkich obiektów tymczasowych lub automatycznych, które istnieją w czasie wywołania, nie są wywoływane. Obiekt automatyczny jest obiektem zdefiniowanym w funkcji, w której obiekt nie jest zadeklarowany jako statyczny. Obiekt tymczasowy jest obiektem utworzonym przez kompilator. Aby zniszczyć obiekt automatyczny przed wywołaniem **_cexit** lub **_c_exit,** jawnie wywołać destruktora dla obiektu, w następujący sposób:
+Po wywołaniu funkcji **_cexit** lub **_c_exit** , destruktory dla wszelkich obiektów tymczasowych lub automatycznych, które istnieją w czasie wywołania nie są wywoływane. Obiekt automatyczny jest obiektem, który jest zdefiniowany w funkcji, w której obiekt nie został zadeklarowany jako statyczny. Obiekt tymczasowy jest obiektem utworzonym przez kompilator. Aby zniszczyć obiekt automatyczny przed wywołaniem **_cexit** lub **_c_exit**, jawnie Wywołaj destruktor dla obiektu w następujący sposób:
 
 ```cpp
 myObject.myClass::~myClass( );
 ```
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_cexit**|\<> proces.h|
-|**_c_exit**|\<> proces.h|
+|**_cexit**|\<proces. h>|
+|**_c_exit**|\<proces. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrola procesu i środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
-[Przerwać](abort.md)<br/>
+[Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Anuluj](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [_exec, funkcje _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>

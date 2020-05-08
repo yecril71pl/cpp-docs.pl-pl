@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -50,19 +50,19 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: 49915a4017040200afca950cee5e1ac31184c589
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3a3adb32b8620a49110e887788e9f3c4893b6a1a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341057"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914291"
 ---
 # <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
-Testuje i konwertuje przypadek znaku wielobajtowego.
+Testuje i konwertuje wielkość liter znaku wielobajtowego.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -85,48 +85,48 @@ unsigned int _mbctoupper_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Znak wielobajtowy do konwersji.
+*s*<br/>
+Znak wielobajtowy do przekonwertowania.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca przekonwertowany znak *c*, jeśli to możliwe. W przeciwnym razie zwraca znak *c* bez zmian.
+Każda z tych funkcji zwraca przekonwertowany znak *c*, jeśli jest to możliwe. W przeciwnym razie zwraca znak *c* niezmieniony.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje testują znak *c* i, jeśli to możliwe, stosują jedną z następujących konwersji.
+Funkcje testują znak *c* i, jeśli to możliwe, zastosuj jedną z następujących konwersji.
 
-|Procedur|Konwertuje|
+|Procedury|Skonwertowane|
 |--------------|--------------|
-|**_mbctolower** **, _mbctolower_l**|Wielkie litery do małych liter.|
-|**_mbctoupper** **, _mbctoupper_l**|Znak małych liter do znaku wielkich liter.|
+|**_mbctolower**, **_mbctolower_l**|Znak pisany wielką literą.|
+|**_mbctoupper**, **_mbctoupper_l**|Znak małymi literami.|
 
-Na wartość wyjściową ma wpływ ustawienie **LC_CTYPE** kategorii ustawień regionalnych; zobacz [setlocale,](setlocale-wsetlocale.md) aby uzyskać więcej informacji. Wersja tej funkcji bez sufiksu **_l** używa bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; wersja z sufiksem **_l** jest identyczna, z tą różnicą, że używa parametru ustawień regionalnych przekazanych zamiast. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia ustawienia kategorii **LC_CTYPE** ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersja tej funkcji bez sufiksu **_l** używa bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersja z sufiksem **_l** jest identyczna, z tą różnicą, że używa zamiast tego parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-W poprzednich wersjach **_mbctolower** nazywano **jtolower,** a **_mbctoupper** nazywano **jtoupper.** W przypadku nowego kodu należy użyć nowych nazw.
+W poprzednich wersjach **_mbctolower** nosiła **jtolower**, a **_mbctoupper** została wywołana jako **jtoupper**. W przypadku nowego kodu Użyj zamiast nich nowych nazw.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_totlower**|**Tolower**|**_mbctolower**|**holownik**|
+|**_totlower**|**ToLower**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_t**|
-|**_totupper**|**Toupper**|**_mbctoupper**|**holowniczy**|
+|**_totupper**|**ToUpper**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedur|Wymagany nagłówek|
+|Procedury|Wymagany nagłówek|
 |--------------|---------------------|
-|**_mbctolower** **, _mbctolower_l**|\<mbstring.h>|
-|**_mbctoupper** **, _mbctoupper_l**|\<mbstring.h>|
+|**_mbctolower**, **_mbctolower_l**|\<mbstring. h>|
+|**_mbctoupper**, **_mbctoupper_l**|\<mbstring. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

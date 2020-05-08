@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-ms.openlocfilehash: 484af7b72f860a8a9d12cf0b62444871caad4675
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 406ce7d8befd1d9e9e6a065f2549bacf46d2fd6e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361294"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915979"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 
-Wypycha znak z powrotem do strumienia.
+Wypchnięcie znaku z powrotem do strumienia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,46 +60,46 @@ wint_t ungetwc(
 
 ### <a name="parameters"></a>Parametry
 
-*C*<br/>
-Postać do pchania.
+*s*<br/>
+Znak do wypchnięcia.
 
-*Strumienia*<br/>
-Wskaźnik do struktury **PLIK.**
+*produkcyjne*<br/>
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli powiedzie się, każda z tych funkcji zwraca argument znaku *c*. Jeśli *c* nie może zostać odepchnięty lub jeśli nie odczytano żadnego znaku, strumień wejściowy pozostaje niezmieniony, a **ungetc** zwraca **EOF;** **ungetwc** zwraca **WEOF**. Jeśli *strumień* ma **wartość NULL**, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [yd.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, **EOF** lub **WEOF** jest zwracany i **errno** jest ustawiona na **EINVAL**.
+Jeśli to się powiedzie, każda z tych funkcji zwraca argument znaku *c*. Jeśli nie można wypchnąć *dysku c* lub nie odczytano żadnego znaku, strumień wejściowy jest niezmieniony i **ungetc —** zwraca **EOF**; **ungetwc** zwraca **WEOF**. Jeśli *strumień* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, zwracany jest **znacznik EOF** lub **WEOF** , a **errno** jest ustawiony na **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **ungetc** wypycha znak *c* z powrotem do *strumienia* i czyści wskaźnik końca pliku. Strumień musi być otwarty do odczytu. Kolejna operacja odczytu na *strumieniu* rozpoczyna się *od c*. Próba wypchnięcia **EOF** do strumienia przy użyciu **ungetc** jest ignorowana.
+Funkcja **ungetc —** wypchnięcie znaku *c* z powrotem do *strumienia* i czyści wskaźnik końca pliku. Strumień musi być otwarty do odczytu. Kolejna operacja odczytu *strumienia* zaczyna się od *c*. Próba wypychania **eof** do strumienia przy użyciu **ungetc —** jest ignorowana.
 
-Znaki umieszczone w strumieniu przez **ungetc** mogą zostać usunięte, jeśli **fflush**, [fseek](fseek-fseeki64.md), **fsetpos**, lub [przewinąć](rewind.md) do tyłu jest wywoływana przed odczytywaniem znaku ze strumienia. Wskaźnik położenia pliku będzie miał wartość, którą miał przed przesunięciu znaków. Zewnętrzna pamięć odpowiadająca strumieniu pozostaje niezmieniona. W przypadku pomyślnego wywołania **ungetc** względem strumienia tekstu wskaźnik położenia pliku jest nieokreślony, dopóki wszystkie odepchnięte znaki nie zostaną odczytane lub odrzucone. Na każdym pomyślnym wywołaniu **ungetc** względem strumienia binarnego wskaźnik położenia pliku jest zmniejszany; jeśli jego wartość wynosiła 0 przed wywołaniem, wartość jest niezdefiniowana po wywołaniu.
+Znaki umieszczone w strumieniu przez **ungetc —** mogą zostać wymazane, jeśli **fflush**, [fseek](fseek-fseeki64.md), **fsetpos**lub [przewijania do tyłu](rewind.md) jest wywoływana przed odczytaniem znaku ze strumienia. Wskaźnik położenia pliku będzie miał wartość, która miała przed wypchnięciem znaków. Zewnętrzne magazyny odpowiadające strumieniu nie są zmieniane. W przypadku pomyślnego wywołania **ungetc —** na strumień tekstowy wskaźnik położenia pliku jest nieokreślony do momentu odczytania wszystkich znaków push lub odrzuconych. Dla każdego pomyślnego wywołania **ungetc —** względem strumienia binarnego wskaźnik położenia pliku jest zmniejszany; Jeśli wartość była równa 0 przed wywołaniem, wartość jest niezdefiniowana po wywołaniu.
 
-Wyniki są nieprzewidywalne, jeśli **ungetc** jest wywoływana dwa razy bez operacji odczytu lub pozycjonowania plików między dwoma wywołaniami. Po wywołaniu **fscanf**wywołanie **ungetc** może zakończyć się niepowodzeniem, chyba że została wykonana inna operacja odczytu (na przykład **getc).** To **dlatego, że fscanf** się nazywa **ungetc**.
+Wyniki są nieprzewidywalne, jeśli **ungetc —** jest wywoływana dwukrotnie bez operacji odczytu lub położenia pliku między dwoma wywołaniami. Po wywołaniu **fscanf**wywołanie **ungetc —** może zakończyć się niepowodzeniem, chyba że została wykonana inna operacja odczytu (na przykład **getc —**). Wynika to z faktu, że **fscanf** same wywołuje **ungetc —**.
 
-**ungetwc** jest szerokoznakową wersją **ungetc**. Jednak w każdym pomyślnym **wywołaniu ungetwc** względem strumienia tekstowego lub binarnego wartość wskaźnika położenia pliku jest nieokreślona, dopóki wszystkie odepchnięte znaki nie zostaną odczytane lub odrzucone.
+**ungetwc** to dwubajtowa wersja **ungetc —**. Jednak dla każdego pomyślnego wywołania **ungetwc** na strumień tekstowy lub binarny wartość wskaźnika położenia pliku jest nieokreślona do momentu odczytania lub odrzucenia wszystkich znaków wypchnięcia.
 
-Funkcje te są bezpieczne dla wątków i zablokować poufne dane podczas wykonywania. Aby uzyskać wersję niezablokującą, zobacz [_ungetc_nolock _ungetwc_nolock](ungetc-nolock-ungetwc-nolock.md).
+Te funkcje są bezpieczne dla wątków i blokują dane poufne podczas wykonywania. W przypadku wersji, która nie jest blokowana, zobacz [_ungetc_nolock, _ungetwc_nolock](ungetc-nolock-ungetwc-nolock.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_ungettc**|**ungetc (ungetc)**|**ungetc (ungetc)**|**ungetwc (ungetwc)**|
+|**_ungettc**|**ungetc —**|**ungetc —**|**ungetwc**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**ungetc (ungetc)**|\<stdio.h>|
-|**ungetwc (ungetwc)**|\<stdio.h> lub \<wchar.h>|
+|**ungetc —**|\<stdio. h>|
+|**ungetwc**|\<stdio. h> lub \<WCHAR. h>|
 
-Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej systemu Windows (UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane, zanim funkcje c w czasie wykonywania mogą z nich korzystać w aplikacjach platformy uniwersalnej systemu Windows. Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

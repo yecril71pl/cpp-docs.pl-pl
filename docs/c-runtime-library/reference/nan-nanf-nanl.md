@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-ms.openlocfilehash: d8f0db5020f274de27f7f1bbf3a76659eae568e4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 77e933b971312097ec9eddd342b3b4dc2df34204
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338640"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914587"
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
 
@@ -55,31 +55,31 @@ long double nanl( const char* input );
 
 ### <a name="parameters"></a>Parametry
 
-*Wejście*<br/>
+*klawiatur*<br/>
 Wartość ciągu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje **nan** zwracają cichą wartość NaN.
+Funkcje **NaN** zwracają cichą wartość NaN.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **nan** zwracają wartość zmiennoprzecinkową, która odpowiada cichej (niesygnalizacyjnej) NaN. Wartość *wejściowa* jest ignorowana. Aby uzyskać informacje o tym, jak nan jest reprezentowany dla danych wyjściowych, zobacz [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+Funkcje **NaN** zwracają wartość zmiennoprzecinkową, która odnosi się do cichej (niesygnalizującej) NaN. Wartość *wejściowa* jest ignorowana. Aby uzyskać informacje o sposobie reprezentowania elementu NaN dla danych wyjściowych, zobacz [printf, _printf_l, wprintf _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**nan**, **nanf**, **nanl**|\<> math.h|\<cmath> lub \<math.h>|
+|**NaN**, **nanf —**, **nanl**|\<> Math. h|\<cmath> lub \<Math. h>|
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
-[isinf](isinf.md)<br/>
+[isinf —](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>
