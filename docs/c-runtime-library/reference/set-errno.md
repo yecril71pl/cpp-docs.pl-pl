@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - set_errno function
 - _set_errno function
 ms.assetid: d338914a-1894-4cf3-ae45-f2c4eb26590b
-ms.openlocfilehash: acc54e209d1a09e72196d2a7881ebd6c4ff8f6fc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e889f8e2dabfffbcc69ff796fb21570b66b57fb0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337715"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913058"
 ---
 # <a name="_set_errno"></a>_set_errno
 
-Ustaw wartość zmiennej globalnej **errno.**
+Ustaw wartość zmiennej globalnej **errno** .
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,13 +53,13 @@ Nowa wartość **errno**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca zero, jeśli zakończy się pomyślnie.
+Zwraca zero, jeśli powodzenie.
 
 ## <a name="remarks"></a>Uwagi
 
-Możliwe wartości są zdefiniowane w errno.h. Zobacz [także: Errno Constants](../../c-runtime-library/errno-constants.md).
+Możliwe wartości są zdefiniowane w errno. h. Zobacz również [stałe errno](../../c-runtime-library/errno-constants.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="example"></a>Przykład
 
@@ -83,9 +83,9 @@ Oops: Illegal byte sequence
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_set_errno**|\<>|\<> errno.h|
+|**_set_errno**|\<STDLIB. h>|\<errno. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
