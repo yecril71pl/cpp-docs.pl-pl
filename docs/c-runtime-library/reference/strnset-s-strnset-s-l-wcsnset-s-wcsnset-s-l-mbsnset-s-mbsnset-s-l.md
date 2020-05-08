@@ -26,7 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -63,19 +63,19 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-ms.openlocfilehash: 62b0ecdc7d9e1afb93c4b15c37016ac687dc80d6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 123f8c4945d98ccf3dd94a48dbbb0fef3b35a8e5
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364452"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911220"
 ---
 # <a name="_strnset_s-_strnset_s_l-_wcsnset_s-_wcsnset_s_l-_mbsnset_s-_mbsnset_s_l"></a>_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 
-Inicjuje znaki ciągu do danego znaku. Te wersje [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w funkcji [zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Inicjuje znaki ciągu do danego znaku. Te wersje [_strnset, _strnset_l, _wcsnset _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) zawierają udoskonalenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsnset_s** i **_mbsnset_s_l** nie mogą być używane w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnset_s** i **_mbsnset_s_l** nie mogą być używane w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -123,42 +123,42 @@ errno_t _mbsnset_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Str*<br/>
-Ciąg do zmiany.
+*str*<br/>
+Ciąg, który ma zostać zmieniony.
 
-*liczbaOfElements*<br/>
-Rozmiar bufora *str.*
+*numberOfElements*<br/>
+Rozmiar buforu *str* .
 
-*C*<br/>
-Ustawienie znaków.
+*s*<br/>
+Ustawienie znaku.
 
-*Liczba*<br/>
-Liczba znaków do ustawionego.
+*liczbą*<br/>
+Liczba znaków, które mają zostać ustawione.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
 Zero, jeśli się powiedzie, w przeciwnym razie kod błędu.
 
-Te funkcje sprawdzają poprawność ich argumentów. Jeśli *str* nie jest prawidłowym ciągiem zakończonym zerem lub argument size jest mniejszy lub równy 0, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [programie Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, te funkcje zwracają kod błędu i ustawić **errno** do tego kodu błędu. Domyślny kod błędu to **EINVAL,** jeśli bardziej szczegółowa wartość nie ma zastosowania.
+Te funkcje weryfikują ich argumenty. Jeśli *str* nie jest prawidłowym ciągiem zakończonym wartością null lub wartość argumentu size jest mniejsza lub równa 0, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają kod błędu i ustawiają **errno** na tym kodzie błędu. Domyślny kod błędu to **EINVAL** , jeśli bardziej konkretna wartość nie ma zastosowania.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje ustawiają co najwyżej pierwsze znaki *zliczania* *znaków od str* do *c*. Jeśli *liczba* jest większa niż rozmiar *str*, rozmiar *str* jest używany zamiast *liczyć*. Błąd występuje, jeśli *liczba* jest większa niż *liczbaOfElements* i oba te parametry są większe niż rozmiar *str*.
+Te funkcje są ustawiane jako pierwsze w pierwszej *liczbie* znaków od *str* do *c*. Jeśli *Liczba* jest większa niż rozmiar *str*, zamiast *Count*jest używany rozmiar *str* . Występuje błąd, jeśli *Liczba* jest większa niż *NumberOfElements* i oba te parametry są większe niż rozmiar *str*.
 
-**_wcsnset_s** i **_mbsnset_s** są wersjami **_strnset_s**o szerokich i wielobajtowych znakach. Argument ciągu **_wcsnset_s** jest ciągiem znaków o szerokim charakterze; **_mbsnset_s** jest ciągiem znaków amultibyte. Te trzy funkcje zachowują się identycznie inaczej.
+**_wcsnset_s** i **_mbsnset_s** są wersjami znaków dwubajtowych i **_strnset_s**. Argument ciągu **_wcsnset_s** jest ciągiem znaków dwubajtowych; **_mbsnset_s** jest ciągiem znaków amultibyte. Te trzy funkcje zachowują się identycznie w inny sposób.
 
-Na wartość wyjściową ma wpływ ustawienie **LC_CTYPE** kategorii ustawień regionalnych; zobacz [setlocale,](setlocale-wsetlocale.md) aby uzyskać więcej informacji. Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; wersje z sufiksem **_l** są identyczne, z tą różnicą, że zamiast tego używają parametru ustawień regionalnych przekazanych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia ustawienia kategorii **LC_CTYPE** ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną w zamian parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsnset_s**|**_strnset_s**|**_mbsnbset_s**|**_wcsnset_s**|
 |**_tcsnset_s_l**|**_strnset_s_l**|**_mbsnbset_s_l**|**_wcsnset_s_l**|
@@ -167,13 +167,13 @@ Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmien
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strnset_s**|\<string.h>|
-|**_strnset_s_l**|\<tchar.h>|
-|**_wcsnset_s**|\<string.h> lub \<wchar.h>|
-|**_wcsnset_s_l**|\<tchar.h>|
-|**_mbsnset_s** **, _mbsnset_s_l**|\<mbstring.h>|
+|**_strnset_s**|\<> String. h|
+|**_strnset_s_l**|\<Używanie TCHAR. h>|
+|**_wcsnset_s**|\<ciąg. h> lub \<WCHAR. h>|
+|**_wcsnset_s_l**|\<Używanie TCHAR. h>|
+|**_mbsnset_s**, **_mbsnset_s_l**|\<mbstring. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -200,7 +200,7 @@ After:  **** is a test
 ## <a name="see-also"></a>Zobacz też
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

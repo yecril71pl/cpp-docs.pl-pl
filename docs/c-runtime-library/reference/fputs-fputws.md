@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-ms.openlocfilehash: 0a6ac7770e88975a60e1e4aef522dddf901206fb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 718bcd227e5821c85517ff7c0a1f195bd24d230b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346219"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912740"
 ---
 # <a name="fputs-fputws"></a>fputs, fputws
 
-Zapisuje ciąg do strumienia.
+Zapisuje ciąg w strumieniu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,40 +60,40 @@ int fputws(
 
 ### <a name="parameters"></a>Parametry
 
-*Str*<br/>
+*str*<br/>
 Ciąg wyjściowy.
 
-*Strumienia*<br/>
-Wskaźnik do struktury **PLIK.**
+*produkcyjne*<br/>
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda z tych funkcji zwraca wartość nieujemną, jeśli zakończy się pomyślnie. W sprawie błędu **fputs** i **fputws** zwracają **EOF**. Jeśli *str* lub *strumień* jest wskaźnikiem null, te funkcje wywołać nieprawidłowy program obsługi parametrów, zgodnie z opisem w sprawdzanie [poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, te funkcje **ustawiają errno** na **EINVAL,** a następnie **fputs** zwraca **EOF**, a **fputws** zwraca **WEOF**.
+Każda z tych funkcji zwraca wartość nieujemną, jeśli zakończy się pomyślnie. W przypadku błędu, **fputs** i **fputws** zwracają **znacznik EOF**. Jeśli *str* lub *Stream* jest wskaźnikiem o wartości null, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** , a następnie **fputs** zwraca **EOF**, a **fputws** zwraca **WEOF**.
 
-Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr aby](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) uzyskać więcej informacji na temat tych i innych kodów błędów.
+Aby uzyskać więcej informacji na temat tych i innych kodów błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji kopiuje *str* do *strumienia* wyjściowego w bieżącej pozycji. **fputws** kopiuje argument *szerokoznakowy str* do *strumienia* jako ciąg wieloznakowy lub ciąg znaków szerokoznakowych zgodnie z tym, czy *strumień* jest otwierany odpowiednio w trybie tekstowym, czy binarnym. Żadna z tych funkcji nie kopiuje kończącego się znaku null.
+Każda z tych funkcji kopiuje *str* do *strumienia* wyjściowego w bieżącym położeniu. **fputws** kopiuje ciąg znaków dwubajtowych, aby *przesyłać strumieniowo* w postaci ciągu znaków wielowymiarowych lub dwubajtowego *ciągu w zależności* od tego, czy *strumień* jest otwarty odpowiednio w trybie tekstowym czy w trybie binarnym. Żadna funkcja nie kopiuje kończącego znaku null.
 
-Te dwie funkcje zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **fputs** obecnie nie obsługuje danych wyjściowych do strumienia UNICODE.
+Dwie funkcje zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **fputs** obecnie nie obsługuje danych wyjściowych w strumieniu Unicode.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_fputts**|**fputs ( fputs )**|**fputs ( fputs )**|**fputws ( fputws )**|
+|**_fputts**|**fputs**|**fputs**|**fputws**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fputs ( fputs )**|\<stdio.h>|
-|**fputws ( fputws )**|\<stdio.h> lub \<wchar.h>|
+|**fputs**|\<stdio. h>|
+|**fputws**|\<stdio. h> lub \<WCHAR. h>|
 
-Konsola nie jest obsługiwana w aplikacjach platformy uniwersalnej systemu Windows (UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą—**stdin,** **stdout**i **stderr**— muszą zostać przekierowane, zanim funkcje c w czasie wykonywania będą mogły z nich korzystać w aplikacjach platformy uniwersalnej systemu Windows. Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą —**stdin**, **stdout**i **stderr**— muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

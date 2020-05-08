@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: c1589c64127b47f4dd2a1147f2b4d549601db4fc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a9c064582e22e267b0c597ecd89df8a43ef0bbc4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347011"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912868"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
-Odczyt znaku ze strumienia.
+Odczytaj znak ze strumienia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,41 +60,41 @@ wint_t fgetwc(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumienia*<br/>
-Wskaźnik do struktury **PLIK.**
+*produkcyjne*<br/>
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fgetc** zwraca znak odczytany jako **int** lub zwraca **EOF,** aby wskazać błąd lub koniec pliku. **fgetwc** zwraca, jako [wint_t,](../../c-runtime-library/standard-types.md)szeroki znak odpowiadający odczytowi lub zwraca **WEOF,** aby wskazać błąd lub koniec pliku. W przypadku obu funkcji należy użyć **feof** lub **ferror,** aby odróżnić błąd od stanu końca pliku. Jeśli wystąpi błąd odczytu, zostanie ustawiony wskaźnik błędu dla strumienia. Jeśli *strumień* ma **wartość NULL**, **fgetc** i **fgetwc** wywołać nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, te funkcje ustawić **errno** na **EINVAL** i zwrócić **EOF**.
+**fgetc** zwraca znak odczytywany jako **int** lub zwraca **znacznik EOF** , aby wskazać błąd lub koniec pliku. **fgetwc** zwraca, jako [wint_t](../../c-runtime-library/standard-types.md), znak dwubajtowy, który odpowiada znakowi odczytu lub zwraca **WEOF** , aby wskazać błąd lub koniec pliku. Dla obu funkcji Użyj **feof** lub obiektu **odwołującego** do rozróżnienia między błędem a warunkiem końca pliku. Jeśli wystąpi błąd odczytu, zostanie ustawiony wskaźnik błędu dla strumienia. Jeśli *strumień* ma **wartość null**, **fgetc** i **fgetwc** Wywołaj procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają **znacznik EOF**.
 
 ## <a name="remarks"></a>Uwagi
 
-Każda z tych funkcji odczytuje pojedynczy znak z bieżącej pozycji pliku skojarzonego ze *strumieniem*. Następnie funkcja zwiększa wskaźnik skojarzonego pliku (jeśli jest zdefiniowany), aby wskazywał następny znak. Jeśli strumień znajduje się na końcu pliku, ustawiony jest wskaźnik końca pliku dla strumienia.
+Każda z tych funkcji odczytuje pojedynczy znak z bieżącego położenia pliku skojarzonego ze *strumieniem*. Funkcja następnie zwiększa skojarzony wskaźnik pliku (jeśli jest zdefiniowany), aby wskazywał na następny znak. Jeśli strumień znajduje się na końcu pliku, wskaźnik końca pliku dla strumienia jest ustawiony.
 
-**fgetc** jest odpowiednikiem **getc**, ale jest realizowany tylko jako funkcja, a nie jako funkcja i makro.
+**fgetc** jest odpowiednikiem **getc —**, ale jest zaimplementowana tylko jako funkcja, a nie jako funkcja i makro.
 
-**fgetwc** jest szerokoznakową wersją **fgetc**; odczytuje **c** jako znak wielobajtowy lub szeroki znak w zależności od tego, czy *strumień* jest otwarty w trybie tekstowym, czy w trybie binarnym.
+**fgetwc** to dwubajtowa wersja **fgetc**; Odczytuje **c** jako znak wielobajtowy lub szeroki znak w zależności od tego, czy *strumień* jest otwarty w trybie tekstowym czy w trybie binarnym.
 
-Wersje z sufiksem **_nolock** są identyczne, z tą różnicą, że nie są chronione przed zakłóceniami przez inne wątki.
+Wersje z sufiksem **_nolock** są identyczne, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki.
 
-Aby uzyskać więcej informacji na temat przetwarzania znaków szerokich i znaków wielobajtowych w trybach tekstowych i binarnych, zobacz [Unicode Stream We/Wy w trybach tekstowych i binarnych](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+Aby uzyskać więcej informacji o przetwarzaniu szerokich znaków i znaków wielobajtowych w trybach tekstowych i binarnych, zobacz [we/wy strumienia Unicode w trybach tekstowych i binarnych](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_fgettc**|**fgetc ( fgetc )**|**fgetc ( fgetc )**|**fgetwc ( fgetwc )**|
+|**_fgettc**|**fgetc**|**fgetc**|**fgetwc**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fgetc ( fgetc )**|\<stdio.h>|
-|**fgetwc ( fgetwc )**|\<stdio.h> lub \<wchar.h>|
+|**fgetc**|\<stdio. h>|
+|**fgetwc**|\<stdio. h> lub \<WCHAR. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -133,7 +133,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crt_fgetctxt"></a>Dane wejściowe: crt_fgetc.txt
+## <a name="input-crt_fgetctxt"></a>Dane wejściowe: crt_fgetc. txt
 
 ```Input
 Line one.

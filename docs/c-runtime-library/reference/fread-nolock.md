@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - _fread_nolock function
 - streams [C++], reading data from
 ms.assetid: 60e4958b-1097-46f5-a77b-94af5e7dba40
-ms.openlocfilehash: 97b37b4fee85a827faa4b309741afe56d8d0cbb9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7d18d32c25a3026e54742fb3d936ac52d80e7d2e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346093"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914105"
 ---
 # <a name="_fread_nolock"></a>_fread_nolock
 
-Odczytuje dane ze strumienia, bez blokowania innych wątków.
+Odczytuje dane ze strumienia bez blokowania innych wątków.
 
 ## <a name="syntax"></a>Składnia
 
@@ -55,17 +55,17 @@ size_t _fread_nolock(
 
 ### <a name="parameters"></a>Parametry
 
-*Buforu*<br/>
-Lokalizacja przechowywania danych.
+*buforu*<br/>
+Lokalizacja magazynu dla danych.
 
-*Rozmiar*<br/>
+*size*<br/>
 Rozmiar elementu w bajtach.
 
-*Liczba*<br/>
-Maksymalna liczba elementów do odczytania.
+*liczbą*<br/>
+Maksymalna liczba elementów, które mają zostać odczytane.
 
-*Strumienia*<br/>
-Wskaźnik do struktury **PLIK.**
+*produkcyjne*<br/>
+Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -73,17 +73,17 @@ Zobacz [fread](fread.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest nieblokującą wersją **fread**. Jest identyczny **z fread,** z tą różnicą, że nie jest chroniony przed zakłóceniami przez inne wątki. Może to być szybsze, ponieważ nie ponosi obciążenie blokowania innych wątków. Tej funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdy zakres wywołujący obsługuje już izolację wątku.
+Ta funkcja jest nieblokującą wersją **fread**. Jest on identyczny z **fread** , z tą różnicą, że nie jest chroniony przed ingerencją przez inne wątki. Może to być szybsze, ponieważ nie wiąże się z zablokowaniem innych wątków. Tej funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fread_nolock**|\<stdio.h>|
+|**_fread_nolock**|\<stdio. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - umask_s function
 - files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
-ms.openlocfilehash: d590910d5f5092a78ad64c8f9ef0aa259211e226
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 712313314c67d15987326e3e3a920cd5f1039239
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362177"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913887"
 ---
 # <a name="_umask_s"></a>_umask_s
 
-Ustawia domyślną maskę uprawnień do plików. Wersja [_umask](umask.md) z ulepszeniami zabezpieczeń, jak opisano w [obszarze Funkcje zabezpieczeń w crt](../../c-runtime-library/security-features-in-the-crt.md).
+Ustawia domyślną maskę dostępu do pliku. Wersja [_umask](umask.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,50 +54,50 @@ errno_t _umask_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Tryb*<br/>
+*wyst*<br/>
 Domyślne ustawienie uprawnień.
 
-*pOldMode (Tryb pOld)*<br/>
-Poprzednia wartość ustawienia uprawnień.
+*pOldMode*<br/>
+Poprzednia wartość ustawienia uprawnienia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca kod błędu, jeśli *tryb* nie określa prawidłowego trybu lub wskaźnik *pOldMode* ma **wartość NULL**.
+Zwraca kod błędu, jeśli w *trybie* nie określono prawidłowego trybu lub wskaźnik *POldMode* ma **wartość null**.
 
-### <a name="error-conditions"></a>Warunki błędu
+### <a name="error-conditions"></a>Warunki błędów
 
-|*Tryb*|*pOldMode (Tryb pOld)*|Wartość zwracana|Zawartość *pOldMode*|
+|*wyst*|*pOldMode*|Wartość zwracana|Zawartość *pOldMode*|
 |------------|----------------|----------------------|--------------------------------|
-|Wszelki|**Null**|**Einval**|nie zmodyfikowano|
-|nieprawidłowy tryb|Wszelki|**Einval**|nie zmodyfikowano|
+|ile|**NULL**|**EINVAL**|nie zmodyfikowano|
+|Nieprawidłowy tryb|ile|**EINVAL**|nie zmodyfikowano|
 
-Jeśli wystąpi jeden z powyższych warunków, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [zatwierdzeniu parametru.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, **_umask_s** zwraca **wartość EINVAL** i ustawia **errno** na **EINVAL**.
+Jeśli wystąpi jeden z powyższych warunków, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **_umask_s** zwraca **EINVAL** i ustawia **errno** na **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_umask_s** ustawia maskę uprawnień do pliku bieżącego procesu na tryb określony przez *tryb*. Maska uprawnień do plików modyfikuje ustawienie uprawnień nowych plików utworzonych przez **_creat** **, _open**lub **_sopen**. Jeśli bit w masce wynosi 1, odpowiedni bit w żądanej wartości uprawnień pliku jest ustawiony na 0 (niedozwolone). Jeśli nieco w masce wynosi 0, odpowiedni bit pozostaje niezmieniony. Ustawienie uprawnień dla nowego pliku nie jest ustawiane, dopóki plik nie zostanie zamknięty po raz pierwszy.
+Funkcja **_umask_s** Ustawia maskę uprawnień pliku bieżącego procesu do trybu określonego przez *tryb*. Maska uprawnień plików modyfikuje ustawienie uprawnień nowych plików utworzonych przez **_creat**, **_open**lub **_sopen**. Jeśli bit w masce wynosi 1, odpowiadający mu bit w wartości żądanego uprawnienia pliku jest ustawiony na 0 (niedozwolone). Jeśli bit w masce ma wartość 0, odpowiedni bit pozostaje niezmieniony. Ustawienie uprawnienia dla nowego pliku nie jest ustawione do momentu zamknięcia pliku po raz pierwszy.
 
-*Pmode* wyrażenia liczby całkowitej zawiera jedną lub obie z następujących stałych manifestu, zdefiniowane w SYS\STAT. H:
+Wyrażenie Integer *PMODE* zawiera jedną lub obie następujące stałe manifestu zdefiniowane w SYS\STAT. C
 
 |*pmode*||
 |-|-|
-|**_S_IWRITE**|Pisanie dozwolone.|
-|**_S_IREAD**|Odczyt dozwolony.|
-|\| **_S_IREAD** **_S_IWRITE**|Czytanie i pisanie dozwolone.|
+|**_S_IWRITE**|Dozwolone jest zapisanie.|
+|**_S_IREAD**|Odczytywanie dozwolone.|
+|**_S_IREAD** \| **_S_IWRITE**|Dozwolone odczytywanie i zapisywanie.|
 
-Gdy obie stałe są podane, są one połączone z **|** operatorem bitowym OR ( ). Jeśli argument *trybu* jest **_S_IREAD,** odczyt jest niedozwolony (plik jest tylko do zapisu). Jeśli argument *trybu* jest **_S_IWRITE,** zapisywanie jest niedozwolone (plik jest tylko do odczytu). Na przykład jeśli bit zapisu jest ustawiony w masce, wszystkie nowe pliki będą tylko do odczytu. Należy pamiętać, że w systemach MS-DOS i systemach operacyjnych Windows wszystkie pliki są czytelne; nie można udzielić uprawnień tylko do zapisu. W związku z tym ustawienie bitu odczytu z **_umask_s** nie ma wpływu na tryby pliku.
+Po otrzymaniu obu stałych są one przyłączone do operatora bitowego lub ( **|** ). Jeśli argument *mode* jest **_S_IREAD**, odczytywanie jest niedozwolone (plik jest tylko do zapisu). Jeśli argument *mode* jest **_S_IWRITE**, pisanie nie jest dozwolone (plik jest tylko do odczytu). Na przykład jeśli bit zapisu jest ustawiony w masce, wszystkie nowe pliki będą tylko do odczytu. Należy pamiętać, że w systemach operacyjnych MS-DOS i Windows wszystkie pliki są odczytywane; nie można udzielić uprawnienia tylko do zapisu. W związku z tym ustawienie bitu odczytu z **_umask_s** nie ma wpływu na tryby pliku.
 
-Jeśli *pmode* nie jest kombinacją jednej ze stałych manifestu lub zawiera alternatywny zestaw stałych, funkcja po prostu je zignoruje.
+Jeśli *PMODE* nie jest kombinacją jednej z stałych manifestu ani nie zawiera alternatywnego zestawu stałych, funkcja zignoruje te elementy.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_umask_s**|\<io.h> i \<sys/stat.h> i \<sys/types.h>|
+|**_umask_s**|\<IO. h> i \<sys/stat. h> i \<sys/Types. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -136,7 +136,7 @@ Oldmask = 0x0000
 ## <a name="see-also"></a>Zobacz też
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
-[We/Wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
+[We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>

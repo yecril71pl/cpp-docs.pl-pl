@@ -1,5 +1,5 @@
 ---
-title: frexp, frexpf, frexpl
+title: frexp —, frexpf —, frexpl
 ms.date: 4/2/2020
 api_name:
 - frexp
@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: 79fe70341f0d6fef1dc7fe00f872456a11972876
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d539a9ebb4042b18e6ec1ef8ed204a61cc7bb8cc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345797"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911605"
 ---
-# <a name="frexp-frexpf-frexpl"></a>frexp, frexpf, frexpl
+# <a name="frexp-frexpf-frexpl"></a>frexp —, frexpf —, frexpl
 
-Pobiera mantysi i wykładnik liczby zmiennoprzecinkowej.
+Pobiera mantysy i wykładnik liczby zmiennoprzecinkowej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -70,31 +70,31 @@ long double frexp(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Wartość zmiennoprzecinku.
+*y*<br/>
+Wartość zmiennoprzecinkowa.
 
-*expptr (np.*<br/>
-Wskaźnik do przechowywanego wykładnika liczby całkowitej.
+*expptr*<br/>
+Wskaźnik do przechowywanego wykładniku liczb całkowitych.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**frexp** zwraca mantysi. Jeśli *x* wynosi 0, funkcja zwraca wartość 0 zarówno dla modliszki, jak i wykładnika. Jeśli *wartość null* jest **null,** nieprawidłowy program obsługi parametrów jest wywoływany zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, ta funkcja ustawia **errno** na **EINVAL** i zwraca 0.
+**frexp —** zwraca mantysy. Jeśli *x* to 0, funkcja zwraca 0 dla mantysy i wykładnika. Jeśli *expptr* ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca wartość 0.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **frexp** dzieli wartość zmiennoprzecinkową (*x*) na modlisę (*m)* i wykładnik (*n*), tak, że wartość bezwzględna *m* jest większa lub równa 0,5 i mniejszej niż 1,0, oraz *x* = *m* * 2<sup>*n*</sup>. Wykładnik liczby całkowitej *n* jest przechowywany w miejscu wskazanym przez *expptr*.
+Funkcja **frexp —** dzieli wartość zmiennoprzecinkową (*x*) na mantysy (*m*) i wykładnik (*n*), tak że wartość bezwzględna *m* jest większa lub równa 0,5 i mniejsza niż 1,0 i *x* = *m* * 2<sup>*n*</sup>. Wykładnik całkowity *n* jest przechowywany w lokalizacji wskazywanej przez *expptr*.
 
-C++ umożliwia przeciążenie, dzięki czemu można wywołać przeciążenia **frexp**. W programie C **frexp** zawsze przyjmuje **podwójny** i **int** wskaźnik i zwraca **podwójny**.
+Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **frexp —**. W programie C **frexp —** zawsze Pobiera wskaźnik **Double** i **int** i zwraca wartość **Double**.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**frexp**, **frexpf**, **frexpl**|\<> math.h|
+|**frexp —**, **frexpf —**, **frexpl**|\<> Math. h|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -123,6 +123,6 @@ frexp( 16.400000, &n ) = 0.512500, n = 5
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [ldexp](ldexp.md)<br/>
 [modf, modff, modfl](modf-modff-modfl.md)<br/>

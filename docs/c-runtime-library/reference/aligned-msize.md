@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - aligned_msize function
 - _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
-ms.openlocfilehash: 21ae07c90bbf9a729a212a97b7de3e0916f8e2c6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e3ff243ba9a135cf660d09fc5b3690f531702aab
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350600"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912914"
 ---
 # <a name="_aligned_msize"></a>_aligned_msize
 
-Zwraca rozmiar bloku pamięci przydzielonego w stercie.
+Zwraca rozmiar bloku pamięci przydzieloną w stercie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,10 +51,10 @@ size_t _msize(
 
 ### <a name="parameters"></a>Parametry
 
-*blok memblock*<br/>
+*memblock*<br/>
 Wskaźnik do bloku pamięci.
 
-*Wyrównanie*<br/>
+*struktury*<br/>
 Wartość wyrównania, która musi być całkowitą potęgą liczby 2.
 
 *Przesunięcie*<br/>
@@ -62,29 +62,29 @@ Przesunięcie alokacji pamięci, aby wymusić wyrównanie.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca rozmiar (w bajtach) jako niepodpisaną liczbę całkowitą.
+Zwraca rozmiar (w bajtach) jako liczbę całkowitą bez znaku.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_aligned_msize** zwraca rozmiar w bajtach bloku pamięci przydzielonego przez wywołanie [_aligned_malloc](aligned-malloc.md) lub [_aligned_realloc](aligned-realloc.md). *Wyrównanie* i *przesunięcie* wartości muszą być takie same jak wartości przekazywane do funkcji, która alokowała blok.
+Funkcja **_aligned_msize** zwraca rozmiar (w bajtach) bloku pamięci przydzielonego przez wywołanie do [_aligned_malloc](aligned-malloc.md) lub [_aligned_realloc](aligned-realloc.md). Wartości *wyrównania* i *przesunięcia* muszą być takie same jak wartości przesyłane do funkcji, która przydzieliła blok.
 
-Gdy aplikacja jest połączona z wersją debugowania bibliotek w czasie wykonywania języka C, **_aligned_msize** jest _aligned_msize_dbg [.](aligned-msize-dbg.md) Aby uzyskać więcej informacji na temat zarządzania stertą podczas procesu debugowania, zobacz [Sterta debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Gdy aplikacja jest połączona z wersją debugową bibliotek uruchomieniowych C, **_aligned_msize** jest rozpoznawana jako [_aligned_msize_dbg](aligned-msize-dbg.md). Aby uzyskać więcej informacji na temat sposobu zarządzania sterty podczas procesu debugowania, zobacz [sterta debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Ta funkcja sprawdza poprawność jego parametru. Jeśli *memblock* jest wskaźnikiem zerowym lub *wyrównanie* nie jest potęgą 2, **_msize** wywołuje nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli błąd jest obsługiwany, funkcja ustawia **errno** na **EINVAL** i zwraca -1.
+Ta funkcja sprawdza poprawność parametru. Jeśli *memblock* jest wskaźnikiem wartości null lub *wyrównaniem* nie jest potęgą liczby 2, **_msize** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli błąd jest obsługiwany, funkcja ustawia **errno** na **EINVAL** i zwraca wartość-1.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_msize**|\<> malloc.h|
+|**_msize**|\<malloc. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Zobacz też
 

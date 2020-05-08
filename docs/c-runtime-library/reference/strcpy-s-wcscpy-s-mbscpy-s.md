@@ -24,7 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -45,19 +45,19 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: ac68d2fb86a43d7114b3b0e7651f5ae4367aa44b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d2d13939f0edde278b96a9d82fcbe82b6abe5d0a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358708"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911847"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
-Kopiuje ciąg. Te wersje [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w [funkcji zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Kopiuje ciąg. Te wersje [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscpy_s** i **_mbscpy_s_l** nie mogą być używane w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy_s** i **_mbscpy_s_l** nie mogą być używane w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -112,65 +112,65 @@ errno_t _mbscpy_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Dest*<br/>
-Lokalizacja docelowego buforu ciągu.
+*dest*<br/>
+Lokalizacja buforu ciągu docelowego.
 
 *dest_size*<br/>
-Rozmiar docelowego buforu ciągu w jednostkach **char** dla funkcji wąskich i wielo bajtowych oraz **wchar_t** jednostek dla szerokich funkcji. Ta wartość musi być większa od zera i nie większa niż **RSIZE_MAX**.
+Rozmiar buforu ciągu docelowego w jednostkach **char** dla funkcji wąskich i wielobajtowych oraz **wchar_t** jednostek dla szerokich funkcji. Ta wartość musi być większa od zera i nie większa niż **RSIZE_MAX**.
 
 *src*<br/>
-Bufor ciągu źródłowego zakończony z wartością null.
+Bufor ciągu źródła zakończony znakiem null.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli się powiedzie; w przeciwnym razie wystąpił błąd.
+Zero, jeśli pomyślne; w przeciwnym razie wystąpi błąd.
 
-### <a name="error-conditions"></a>Warunki błędu
+### <a name="error-conditions"></a>Warunki błędów
 
-|*Dest*|*dest_size*|*src*|Wartość zwracana|Zawartość *dest*|
+|*dest*|*dest_size*|*src*|Wartość zwracana|Zawartość miejsca *docelowego*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Null**|Wszelki|Wszelki|**Einval**|nie zmodyfikowano|
-|Wszelki|Wszelki|**Null**|**Einval**|*dest*[0] ustawiona na 0|
-|Wszelki|0 lub za mała|Wszelki|**Układ ERANGE**|*dest*[0] ustawiona na 0|
+|**NULL**|ile|ile|**EINVAL**|nie zmodyfikowano|
+|ile|ile|**NULL**|**EINVAL**|*cel*[0] ustawiony na 0|
+|ile|0 lub za mały|ile|**ERANGE**|*cel*[0] ustawiony na 0|
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **strcpy_s** kopiuje zawartość adresu *src*, w tym kończący się znak null, do lokalizacji określonej przez *dest*. Ciąg docelowy musi być wystarczająco duży, aby pomieścić ciąg źródłowy i jego kończący znak null. Zachowanie **strcpy_s** jest niezdefiniowana, jeśli ciągi źródłowe i docelowe nakładają się na siebie.
+Funkcja **strcpy_s** kopiuje zawartość w adresie *src*, łącznie z kończącym znakiem null, do lokalizacji określonej przez obiekt *docelowy*. Ciąg docelowy musi być wystarczająco duży, aby pomieścić ciąg źródłowy i jego kończący znak null. Zachowanie **strcpy_s** jest niezdefiniowane, jeśli parametry źródłowe i docelowe nakładają się na siebie.
 
-**wcscpy_s** jest szerokoznakową wersją **strcpy_s,** a **_mbscpy_s** jest wersją wielobajtową. Argumenty **wcscpy_s** są ciągami znaków o szerokich znakach; **_mbscpy_s** i **_mbscpy_s_l** są ciągami znaków wielobajtowych. Te funkcje zachowują się identycznie w przeciwnym razie. **_mbscpy_s_l** jest identyczna **z _mbscpy_s** z tą różnicą, że używa parametru ustawień regionalnych przekazanych zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+**wcscpy_s** jest wersją znaku **strcpy_s**, a **_mbscpy_s** jest wersją znaku wielobajtowego. Argumenty **wcscpy_s** są ciągami znaków dwubajtowych; te **_mbscpy_s** i **_mbscpy_s_l** są ciągami znaków wielobajtowych. Funkcje te zachowują się identycznie w inny sposób. **_mbscpy_s_l** jest taka sama jak **_mbscpy_s** , z tą różnicą, że używa parametru ustawień regionalnych przekazaną zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Jeśli *dest* lub *src* jest wskaźnikiem null lub jeśli docelowy rozmiar ciągu *dest_size* jest zbyt mały, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [programie Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, te funkcje zwracają **EINVAL** i ustawić **errno** do **EINVAL,** gdy *dest* lub *src* jest wskaźnik null i zwracają **ERANGE** i ustawić **errno** do **ERANGE,** gdy ciąg docelowy jest zbyt mały.
+Jeśli *docelowy* lub *src* jest wskaźnikiem o wartości null lub jeśli rozmiar ciągu docelowego *dest_size* jest zbyt mały, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **EINVAL** i ustawiają **errno** na **EINVAL** , gdy element *docelowy* lub *src* jest wskaźnikiem o wartości null i zwracają **ERANGE** i ustawia **errno** na **ERANGE** , gdy ciąg docelowy jest zbyt mały.
 
-Po pomyślnym wykonaniu ciąg docelowy jest zawsze zakończony zerem.
+Po pomyślnym wykonaniu ciąg docelowy jest zawsze zakończony wartością null.
 
-W języku C++ użycie tych funkcji jest uproszczone przez przeciążenia szablonu, które można automatycznie wywnioskować długość buforu, dzięki czemu nie trzeba określać argumentu rozmiaru i mogą automatycznie zastąpić starsze, mniej bezpieczne funkcje ich nowszymi, bezpieczniejszymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonu, które mogą automatycznie wywnioskować długość buforu, aby nie trzeba było określać argumentu rozmiaru i można automatycznie zastąpić starsze, mniej bezpieczne funkcje z ich nowszymi, bardziej bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
 Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_UNICODE nie zdefiniowano & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcscpy_s**|**Strcpy_s**|**_mbscpy_s**|**wcscpy_s**|
+|**_tcscpy_s**|**strcpy_s**|**_mbscpy_s**|**wcscpy_s**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**Strcpy_s**|\<string.h>|
-|**wcscpy_s**|\<string.h> lub \<wchar.h>|
-|**_mbscpy_s**|\<mbstring.h>|
+|**strcpy_s**|\<> String. h|
+|**wcscpy_s**|\<ciąg. h> lub \<WCHAR. h>|
+|**_mbscpy_s**|\<mbstring. h>|
 
-Te funkcje są specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Te funkcje są specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-W przeciwieństwie do kodu jakości produkcji, ten przykład wywołuje funkcje bezpiecznego ciągu bez sprawdzania błędów:
+W przeciwieństwie do kodu jakości produkcyjnej, ten przykład wywołuje funkcje bezpiecznego ciągu bez sprawdzania pod kątem błędów:
 
 ```C
 // crt_strcpy_s.c
@@ -200,7 +200,7 @@ int main(void)
 String = Hello world from strcpy_s and strcat_s!
 ```
 
-Podczas tworzenia kodu C++ wersje szablonu mogą być łatwiejsze w użyciu.
+W przypadku kompilowania kodu w języku C++ wersje szablonów mogą być łatwiejsze w użyciu.
 
 ```cpp
 // crt_wcscpy_s.cpp

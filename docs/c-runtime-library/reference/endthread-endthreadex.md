@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: c76f479255080400e07678ef5dbde572b7a9dffc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a3889adcc90bd62e766102b72aae68577915e55b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348035"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915083"
 ---
 # <a name="_endthread-_endthreadex"></a>_endthread, _endthreadex
 
-Kończy wątek; **_endthread** kończy wątek utworzony przez **_beginthread** i **_endthreadex** kończy wątek utworzony przez **_beginthreadex**.
+Kończy wątek; **_endthread** przerywa wątek tworzony przez **_beginthread** i **_endthreadex** kończy wątek tworzony przez **_beginthreadex**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -63,38 +63,38 @@ Kod zakończenia wątku.
 
 ## <a name="remarks"></a>Uwagi
 
-Można wywołać **_endthread** lub **_endthreadex** jawnie, aby zakończyć wątek; jednak **_endthread** lub **_endthreadex** jest wywoływana automatycznie, gdy wątek zwraca z procedury przekazywane jako parametr do **_beginthread** lub **_beginthreadex**. Zakończenie wątku z wywołaniem **endthread** lub **_endthreadex** pomaga zapewnić prawidłowe odzyskiwanie zasobów przydzielonych dla wątku.
+Możesz wywołać **_endthread** lub **_endthreadex** jawnie, aby zakończyć wątek. Jednakże **_endthread** lub **_endthreadex** jest wywoływana automatycznie, gdy wątek zwraca z procedury przekazywanej jako parametr do **_beginthread** lub **_beginthreadex**. Zakończenie wątku z wywołaniem **endthread** lub **_endthreadex** pomaga zapewnić poprawne odzyskiwanie zasobów przyznanych dla wątku.
 
 > [!NOTE]
-> W przypadku pliku wykonywalnego połączonego z libcmt.lib nie należy wywoływać interfejsu API [Win32 ExitThread;](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) zapobiega to systemowi czasu wykonywania odzyskiwania przydzielonych zasobów. **_endthread** i **_endthreadex** odzyskać przydzielone zasoby wątku, a następnie **wywołać ExitThread**.
+> Dla pliku wykonywalnego połączonego z libcmt. lib nie wywołuj interfejsu API Win32 [ExitThread —](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) ; Zapobiega to odzyskiwaniu przyznanych zasobów przez system czasu wykonywania. **_endthread** i **_endthreadex** odzyskiwanie przydzieloną zasobów wątków, a następnie Wywołaj **ExitThread —**.
 
-**_endthread** automatycznie zamyka uchwyt gwintu. (To zachowanie różni się od interfejsu API **Win32 ExitThread.)** W związku z tym podczas korzystania **z _beginthread** i **_endthread**, nie jawnie zamknąć dojście wątku, wywołując Win32 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) INTERFEJSU API.
+**_endthread** automatycznie zamyka dojście wątku. (To zachowanie różni się od interfejsu API Win32 **ExitThread —** ). W związku z tym, gdy używasz **_beginthread** i **_endthread**, nie zamykaj jawnie uchwytu wątku, wywołując interfejs API [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) Win32.
 
-Podobnie jak win32 **ExitThread** interfejsu API, **_endthreadex** nie zamyka uchwyt wątku. W związku z tym podczas korzystania **z _beginthreadex** i **_endthreadex,** należy zamknąć dojście wątku, wywołując win32 **CloseHandle** INTERFEJSU API.
+Podobnie jak w przypadku interfejsu API Win32 **ExitThread —** , **_endthreadex** nie zamyka dojścia wątku. W związku z tym, jeśli używasz **_beginthreadex** i **_endthreadex**, musisz zamknąć uchwyt wątku, wywołując interfejs API **CloseHandle** Win32.
 
 > [!NOTE]
-> **_endthread** i **_endthreadex** spowodować, że destruktory języka C++ oczekujące w wątku nie zostanie wywołana.
+> **_endthread** i **_endthreadex** powodują, że destruktory języka C++ oczekujące w wątku nie zostaną wywołane.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_endthread**|\<> proces.h|
-|**_endthreadex**|\<> proces.h|
+|**_endthread**|\<proces. h>|
+|**_endthreadex**|\<proces. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wielowątkowe wersje [tylko bibliotek w czasie wykonywania języka C.](../../c-runtime-library/crt-library-features.md)
+Wielowątkowe wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [_beginthread](beginthread-beginthreadex.md).
+Zapoznaj się z przykładem [_beginthread](beginthread-beginthreadex.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrola procesu i środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_beginthread, _beginthreadex](beginthread-beginthreadex.md)<br/>

@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-ms.openlocfilehash: 07d694a7430f23e2f9600a5d2b147bcee2ef0e09
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4a6e86e1122a7392862fa34a59042c32560fd69d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338809"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915454"
 ---
 # <a name="mbstowcs_s-_mbstowcs_s_l"></a>mbstowcs_s, _mbstowcs_s_l
 
-Konwertuje sekwencję znaków wielobajtowych na odpowiednią sekwencję znaków szerokich. Wersje [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcji zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konwertuje sekwencję znaków wielobajtowych na odpowiadającą sekwencję szerokich znaków. Wersje programu [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -80,80 +80,80 @@ errno_t _mbstowcs_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*pZawąkaWartość*<br/>
-Liczba przekonwertowanych znaków.
+*pReturnValue*<br/>
+Liczba konwertowanych znaków.
 
 *wcstr*<br/>
-Adres buforu dla wynikowego przekonwertowanego szerokiego ciągu znaków.
+Adres buforu dla obliczonego ciągu znaków dwubajtowych.
 
-*rozmiarWłasna*<br/>
+*sizeInWords*<br/>
 Rozmiar buforu *wcstr* w słowach.
 
 *mbstr*<br/>
-Adres sekwencji znaków wielobajtowych zakończonych wartościami null.
+Adres sekwencji znaków wielobajtowych zakończony wartością null.
 
-*Liczba*<br/>
-Maksymalna liczba znaków szerokich do przechowywania w buforze *wcstr,* z wyłączeniem kończącej się wartości null lub [_TRUNCATE](../../c-runtime-library/truncate.md).
+*liczbą*<br/>
+Maksymalna liczba znaków dwubajtowych do przechowywania w buforze *wcstr* , bez uwzględnienia kończących wartości null lub [_TRUNCATE](../../c-runtime-library/truncate.md).
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli się powiedzie, kod błędu w przypadku awarii.
+Zero, jeśli to się powiedzie, kod błędu w przypadku niepowodzenia.
 
-|Błąd|Zwracana wartość i **errno**|
+|Błąd|Wartość zwracana i **errno**|
 |---------------------|------------------------------|
-|*wcstr* jest **NULL** i *sizeInWords* > 0|**Einval**|
-|*mbstr* ma **wartość NULL**|**Einval**|
-|Bufor docelowy jest zbyt mały, aby zawierał przekonwertowany ciąg (chyba że *liczba* jest **_TRUNCATE**; patrz Uwagi poniżej)|**Układ ERANGE**|
-|*wcstr* nie jest **NULL** i *sizeInWords* == 0|**Einval**|
+|*wcstr* ma **wartość NULL** i *sizeInWords* > 0|**EINVAL**|
+|*mbstr* ma **wartość null**|**EINVAL**|
+|Bufor docelowy jest zbyt mały, aby zawierał przekonwertowany ciąg (chyba że *licznik* jest **_TRUNCATE**; Zobacz uwagi poniżej)|**ERANGE**|
+|*wcstr* nie ma **wartości null** i *sizeInWords* = = 0|**EINVAL**|
 
-Jeśli wystąpi którykolwiek z tych warunków, nieprawidłowy wyjątek parametru jest wywoływany zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie jest dozwolone, funkcja zwraca kod błędu i ustawia **errno** jak wskazano w tabeli.
+Jeśli wystąpi którykolwiek z tych warunków, wyjątek nieprawidłowego parametru jest wywoływany zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, funkcja zwraca kod błędu i ustawia **errno** , jak wskazano w tabeli.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **mbstowcs_s** konwertuje ciąg znaków wielobajtowych wskazywalnych przez *mbstr* na szerokie znaki przechowywane w buforze wskazywowym przez *wcstr*. Konwersja będzie kontynuowana dla każdego znaku, dopóki nie zostanie spełniony jeden z następujących warunków:
+Funkcja **mbstowcs_s** konwertuje ciąg znaków wielobajtowych wskazanych przez *mbstr* na znaki szerokie przechowywane w buforze wskazywanym przez *wcstr*. Konwersja będzie kontynuowana dla każdego znaku do momentu spełnienia jednego z następujących warunków:
 
-- Napotkany znak null wielobajtowy
+- Napotkano znak wielobajtowy o wartości null
 
-- Napotkany nieprawidłowy znak wielobajtowy
+- Napotkano nieprawidłowy znak wielobajtowy
 
-- Liczba szerokich znaków przechowywanych w buforze *wcstr* jest równa *liczbie*.
+- Liczba znaków dwubajtowych przechowywanych w buforze *wcstr* jest równa *Count*.
 
-Ciąg docelowy jest zawsze zakończony zerem (nawet w przypadku błędu).
+Ciąg docelowy jest zawsze zakończony wartością null (nawet w przypadku błędu).
 
-Jeśli *count* jest specjalną wartością [_TRUNCATE](../../c-runtime-library/truncate.md), następnie **mbstowcs_s** konwertuje tyle ciągu, ile zmieści się w buforze docelowym, pozostawiając jednocześnie miejsce na zerowy terminator.
+Jeśli *Liczba* jest wartością specjalną [_TRUNCATE](../../c-runtime-library/truncate.md), wówczas **mbstowcs_s** konwertuje tyle ciągu jako ciąg, jak zmieści się w buforze docelowym, pozostawiając nadal miejsce na terminator o wartości null.
 
-Jeśli **mbstowcs_s** pomyślnie konwertuje ciąg źródłowy, umieszcza rozmiar w szerokich znakach przekonwertowanego ciągu, w tym terminatora zerowego, na *&#42;pReturnValue* (pod warunkiem, że *wartość zwrotu* nie jest **null).** Dzieje się tak, nawet jeśli *argument wcstr* jest **NULL** i zapewnia sposób określenia rozmiaru buforu wymagane. Należy zauważyć, że jeśli *wcstr* jest **NULL**, *liczba* jest ignorowana, a *sizeInWords* musi być 0.
+Jeśli **mbstowcs_s** pomyślnie przekonwertuje ciąg źródłowy, umieści rozmiar w postaci dwubajtowej przekonwertowanego ciągu, łącznie z terminatorem null, na *&#42;PReturnValue* (podany *pReturnValue* nie ma **wartości null**). Dzieje się tak nawet wtedy, gdy argument *wcstr* ma **wartość null** i umożliwia określenie wymaganego rozmiaru buforu. Należy pamiętać, że jeśli *wcstr* ma **wartość null**, *Count* jest ignorowany, a *sizeInWords* musi mieć wartość 0.
 
 Jeśli **mbstowcs_s** napotka nieprawidłowy znak wielobajtowy, umieszcza 0 w *&#42;pReturnValue*, ustawia bufor docelowy na pusty ciąg, ustawia **errno** na **EILSEQ**i zwraca **EILSEQ**.
 
-Jeśli sekwencje wskazane przez *mbstr* i *wcstr* pokrywają się, zachowanie **mbstowcs_s** jest niezdefiniowana.
+Jeśli sekwencje wskazywane przez *mbstr* i *wcstr* nakładają się na siebie, zachowanie **mbstowcs_s** jest niezdefiniowane.
 
 > [!IMPORTANT]
-> Upewnij się, że *wcstr* i *mbstr* nie nakładają się na siebie, a *liczba ta* poprawnie odzwierciedla liczbę znaków wielobajtowych do konwersji.
+> Upewnij się, że *wcstr* i *mbstr* nie nakładają się na siebie, i że *licznik* poprawnie odzwierciedla liczbę znaków wielobajtowych do przekonwertowania.
 
-**mbstowcs_s** używa bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; **_mbstowcs_s_l** jest identyczna, z tą różnicą, że używa ustawień regionalnych przekazanych zamiast. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+**mbstowcs_s** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych; **_mbstowcs_s_l** jest identyczny, z tą różnicą, że w zamian korzysta z przekazaną ustawieniami regionalnymi. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonu; przeciążenia można wywnioskować długość buforu automatycznie (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszych, bezpiecznych odpowiedników. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszymi, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**mbstowcs_s**|\<>|
-|**_mbstowcs_s_l**|\<>|
+|**mbstowcs_s**|\<STDLIB. h>|
+|**_mbstowcs_s_l**|\<STDLIB. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
-[Multibytetowidechar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

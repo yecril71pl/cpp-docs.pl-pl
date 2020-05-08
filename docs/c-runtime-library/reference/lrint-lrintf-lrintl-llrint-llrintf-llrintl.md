@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -52,16 +52,16 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 6283cffaa094af4484d48781b5bb92d0339d38d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: effb146cac201a21651f21e3e5c040fbb68819a6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341664"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911371"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
-Zaokrągla określoną wartość zmiennoprzecinkową do najbliższej wartości integralnej, używając bieżącego trybu zaokrąglania i kierunku.
+Zaokrągla określoną wartość zmiennoprzecinkową do najbliższej wartości całkowitej przy użyciu bieżącego trybu zaokrąglania i kierunku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -109,34 +109,34 @@ long long int llrintl(
 
 ### <a name="parameters"></a>Parametry
 
-*X*<br/>
+*y*<br/>
 wartość do zaokrąglenia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli się powiedzie, zwraca zaokrągloną wartość całkowitą *x*.
+Jeśli to się powiedzie, zwraca zaokrągloną wartość całkowitą z *x*.
 
-|Problem|Zwraca|
+|Problem|Przesłać|
 |-----------|------------|
-|*x* znajduje się poza zakresem typu zwrotu<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|Podnosi **FE_INVALID** i zwraca zero (0).|
+|*x* jest poza zakresem typu zwracanego<br /><br /> *x* = ± ∞<br /><br /> *x* = NaN|Podnosi **FE_INVALID** i zwraca zero (0).|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ umożliwia przeciążenie, można wywołać przeciążenia **lrint** i **llrint,** które zajmują **float** i **długie** **podwójne** typy. W programie C, **lrint** i **llrint** zawsze wziąć **podwójne**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **lrint** i **llrint** , które mają typ **float** i **Long** **Double** . W programie w języku C **lrint** i **llrint** zawsze przyjmują wartość **podwójną**.
 
-Jeśli *x* nie reprezentuje zmiennoprzecinkowego odpowiednika wartości integralnej, funkcje te zwiększają **FE_INEXACT**.
+Jeśli *x* nie reprezentuje równoważnej wartości całkowitej, te funkcje zgłaszają **FE_INEXACT**.
 
-**Specyficzne dla firmy Microsoft:** Gdy wynik znajduje się poza zakresem typu zwracanego lub gdy parametr jest NaN lub nieskończoności, wartość zwracana jest zdefiniowana. Kompilator firmy Microsoft zwraca wartość zero (0).
+**Specyficzne dla firmy Microsoft**: kiedy wynik znajduje się poza zakresem typu zwracanego lub gdy parametr jest NaN lub nieskończoności, wartość zwracana jest zdefiniowana przez implementację. Kompilator firmy Microsoft zwraca wartość zero (0).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek C|Nagłówek języka C++|
+|Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<> math.h|\<> cmath|
+|**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<> Math. h|\<cmath>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 3a44651cb9ff8be806c45c6b6c5f41f810319a85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8eb3cf338d7486d7e7893090a1390e5d2d16a438
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341601"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914478"
 ---
 # <a name="_makepath_s-_wmakepath_s"></a>_makepath_s, _wmakepath_s
 
-Tworzy nazwę ścieżki ze składników. Są to wersje [_makepath, _wmakepath](makepath-wmakepath.md) z ulepszeniami zabezpieczeń, jak opisano w [programie Funkcje zabezpieczeń w programie CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Tworzy nazwę ścieżki ze składników. Są to wersje [_makepath, _wmakepath](makepath-wmakepath.md) z ulepszonymi zabezpieczeniami, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -86,45 +86,45 @@ errno_t _wmakepath_s(
 
 ### <a name="parameters"></a>Parametry
 
-*Ścieżka*<br/>
-Pełny bufor ścieżki.
+*ścieżka*<br/>
+Bufor pełnej ścieżki.
 
-*rozmiarWłasna*<br/>
+*sizeInWords*<br/>
 Rozmiar buforu w słowach.
 
-*rozmiarWzdjęty*<br/>
+*sizeInBytes*<br/>
 Rozmiar buforu w bajtach.
 
-*Dysku*<br/>
-Zawiera literę (A, B itd.) odpowiadającą żądanemu dyskowi i opcjonalnie końcowemu dwukropkiem. **_makepath_s** automatycznie wstawia dwukropek do ścieżki złożonej, jeśli jej brakuje. Jeśli *dysk* ma **wartość NULL** lub wskazuje pusty ciąg, w ciągu *ścieżki* złożonej nie jest wyświetlana żadna litera dysku.
+*litera*<br/>
+Zawiera literę (A, B i tak dalej) odpowiadającą żądanym dyskowi i opcjonalnym dwukropkiem. **_makepath_s** automatycznie wstawia dwukropek w ścieżce złożonej, jeśli nie istnieje. Jeśli *dysk* ma **wartość null** lub wskazuje pusty ciąg, w ciągu *ścieżki* złożonej nie zostanie wyświetlona litera dysku.
 
-*Dir*<br/>
-Zawiera ścieżkę katalogów, z wyłączeniem projektora dysku lub rzeczywistej nazwy pliku. Ukośnik końcowy jest opcjonalny i w pojedynczym argumie\\ *dir* można użyć ukośnika do przodu (/) lub ukośnika odwrotnego ( ) lub oba. Jeśli nie określono przecięciowego (/ lub), \\zostanie on wstawiony automatycznie. Jeśli *dir* ma **wartość NULL** lub wskazuje pusty ciąg, w ciągu *ścieżki* złożonej nie jest wstawiana żadna ścieżka katalogu.
+*katalogów*<br/>
+Zawiera ścieżkę katalogów, w tym oznaczenie dysku lub rzeczywistą nazwę pliku. Końcowy ukośnik jest opcjonalny, a ukośnik (/) lub ukośnik odwrotny (\\) mogą być używane w pojedynczym argumencie *dir* . Jeśli nie zostanie określony końcowy ukośnik (/ \\lub), zostanie on wstawiony automatycznie. Jeśli *dir* ma **wartość null** lub wskazuje na pusty ciąg, w ciągu *ścieżki* złożonej nie zostanie wstawiona ścieżka katalogu.
 
-*Fname*<br/>
-Zawiera podstawową nazwę pliku bez rozszerzeń nazw plików. Jeśli *nazwa fname* ma **wartość NULL** lub wskazuje pusty ciąg, w ciągu *ścieżki* złożonej nie jest wstawiana żadna nazwa pliku.
+*fname*<br/>
+Zawiera podstawową nazwę pliku bez rozszerzeń nazw plików. Jeśli *fname* ma **wartość null** lub wskazuje na pusty ciąg, w ciągu *ścieżki* złożonej nie zostanie wstawiona nazwa pliku.
 
-*Ext*<br/>
-Zawiera rzeczywiste rozszerzenie nazwy pliku z kropką wiodącą lub bez niego (.). **_makepath_s** wstawia okres automatycznie, jeśli nie pojawia się *wew*. Jeśli *ext* jest **NULL** lub wskazuje na pusty ciąg, żadne rozszerzenie nie jest wstawiany w ciągu *ścieżki* złożonej.
+*EXT*<br/>
+Zawiera rzeczywiste rozszerzenie nazwy pliku z lub bez kropki wiodącej (.). **_makepath_s** wstawia okres automatycznie, jeśli nie jest wyświetlany w *EXT*. Jeśli parametr *EXT* ma **wartość null** lub wskazuje pusty ciąg, w ciągu *ścieżki* złożonej nie zostanie wstawiony żaden rozszerzenie.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli się powiedzie; kod błędu w przypadku awarii.
+Zero, jeśli pomyślne; kod błędu w przypadku niepowodzenia.
 
-### <a name="error-conditions"></a>Warunki błędu
+### <a name="error-conditions"></a>Warunki błędów
 
-|*Ścieżka*|*rozmiarInWords* / *rozmiarWzszty*|Zwraca|Zawartość *ścieżki*|
+|*ścieżka*|*sizeInWords* / *sizeInBytes*|Przesłać|Zawartość *ścieżki*|
 |------------|------------------------------------|------------|------------------------|
-|**Null**|Wszelki|**Einval**|nie zmodyfikowano|
-|Wszelki|<= 0|**Einval**|nie zmodyfikowano|
+|**NULL**|ile|**EINVAL**|nie zmodyfikowano|
+|ile|<= 0|**EINVAL**|nie zmodyfikowano|
 
-Jeśli wystąpi którykolwiek z powyższych warunków błędu, te funkcje wywołają nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, **errno** jest ustawiona na **EINVAL** i funkcje zwraca **EINVAL**. **Null** jest dozwolony dla parametrów *drive*, *fname*i *ext*. Aby uzyskać informacje na temat zachowania, gdy te parametry są wskaźniki null lub puste ciągi, zobacz uwagi sekcji.
+Jeśli wystąpi którykolwiek z powyższych warunków błędu, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** , a funkcje zwracają **EINVAL**. Dla parametrów *Drive*, *fname*i *EXT*jest dozwolona **wartość null** . Aby uzyskać informacje o zachowaniu, gdy te parametry mają wskaźniki o wartości null lub puste ciągi, zobacz sekcję Uwagi.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_makepath_s** tworzy ciąg ścieżki złożonej z poszczególnych komponentów, przechowując wynik w *ścieżce*. *Ścieżka* może zawierać literę dysku, ścieżkę katalogu, nazwę pliku i rozszerzenie nazwy pliku. **_wmakepath_s** jest szerokoznakową wersją **_makepath_s**; argumenty, które **mają _wmakepath_s,** to ciągi znaków o szerokich znakach. **_wmakepath_s** i **_makepath_s** zachowują się identycznie w przeciwnym razie.
+Funkcja **_makepath_s** tworzy ciąg ścieżki złożonej z poszczególnych składników, przechowując wynik w *ścieżce*. *Ścieżka* może zawierać literę dysku, ścieżkę katalogu, nazwę pliku i rozszerzenie nazwy pliku. **_wmakepath_s** to dwubajtowa wersja **_makepath_s**; argumenty do **_wmakepath_s** są ciągami znaków dwubajtowych. **_wmakepath_s** i **_makepath_s** zachowują się identycznie w inny sposób.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -132,11 +132,11 @@ Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmien
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath_s**|**_makepath_s**|**_makepath_s**|**_wmakepath_s**|
 
-Argument *ścieżki* musi wskazywać pusty bufor wystarczająco duży, aby pomieścić pełną ścieżkę. *Ścieżka* złożona nie może być większa niż stała **_MAX_PATH,** zdefiniowana w stdlib.h.
+Argument *Path* musi wskazywać na pusty bufor wystarczająco duży, aby pomieścić pełną ścieżkę. *Ścieżka* złożona nie może być większa niż wartość **_MAX_PATH** stała określona w STDLIB. h.
 
-Jeśli ścieżka ma **wartość NULL**, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [yd.](../../c-runtime-library/parameter-validation.md) Ponadto, **errno** jest ustawiony na **EINVAL**. **Wartości NULL** są dozwolone dla wszystkich innych parametrów.
+Jeśli ścieżka ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Ponadto **errno** jest ustawiony na **EINVAL**. Wartości **null** są dozwolone dla wszystkich innych parametrów.
 
-W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonu; przeciążenia można wywnioskować długość buforu automatycznie (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszych, bezpiecznych odpowiedników. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia szablonów; przeciążenia mogą automatycznie wywnioskować długość buforu (eliminując konieczność określenia argumentu rozmiaru) i mogą automatycznie zastąpić starsze, niezabezpieczone funkcje z ich nowszymi, bezpiecznymi odpowiednikami. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
 Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby wyłączyć to zachowanie, użyj [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
@@ -144,10 +144,10 @@ Wersje biblioteki debugowania tych funkcji najpierw wypełniają bufor 0xFE. Aby
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_makepath_s**|\<>|
-|**_wmakepath_s**|\<> lub \<wchar.h>|
+|**_makepath_s**|\<STDLIB. h>|
+|**_wmakepath_s**|\<STDLIB. h> lub \<WCHAR. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 

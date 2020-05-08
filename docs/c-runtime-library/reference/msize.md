@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-ms.openlocfilehash: 7d5f62bd6111a305c18b0ee19bb6d3e90f2ddb49
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cc8eef0d28f649340715edbf4b1ebdfea85c2ff2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338664"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914608"
 ---
 # <a name="_msize"></a>_msize
 
-Zwraca rozmiar bloku pamięci przydzielonego w stercie.
+Zwraca rozmiar bloku pamięci przydzieloną w stercie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,34 +50,34 @@ size_t _msize(
 
 ### <a name="parameters"></a>Parametry
 
-*blok memblock*<br/>
+*memblock*<br/>
 Wskaźnik do bloku pamięci.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_msize** zwraca rozmiar (w bajtach) jako niepodpisaną liczbę całkowitą.
+**_msize** zwraca rozmiar (w bajtach) jako liczbę całkowitą bez znaku.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_msize** zwraca rozmiar w bajtach bloku pamięci przydzielonego przez wywołanie **calloc,** **malloc**lub **realloc**.
+Funkcja **_msize** zwraca rozmiar (w bajtach) bloku pamięci przydzielonego przez wywołanie **calloc**, **malloc**lub **realloc**.
 
-Gdy aplikacja jest połączona z wersją debugowania bibliotek w czasie wykonywania języka C, **_msize** jest _msize_dbg [.](msize-dbg.md) Aby uzyskać więcej informacji na temat zarządzania stertą podczas procesu debugowania, zobacz [Sterta debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
+Gdy aplikacja jest połączona z wersją debugową bibliotek uruchomieniowych C, **_msize** jest rozpoznawana jako [_msize_dbg](msize-dbg.md). Aby uzyskać więcej informacji na temat sposobu zarządzania sterty podczas procesu debugowania, zobacz [sterta debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Ta funkcja sprawdza poprawność jego parametru. Jeśli *memblock* jest wskaźnikiem zerowym, **_msize** wywołuje nieprawidłowy program obsługi parametrów, zgodnie z opisem w [weryfikacji parametrów](../../c-runtime-library/parameter-validation.md). Jeśli błąd jest obsługiwany, funkcja ustawia **errno** na **EINVAL** i zwraca -1.
+Ta funkcja sprawdza poprawność parametru. Jeśli *memblock* jest wskaźnikiem o wartości null, **_msize** wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli błąd jest obsługiwany, funkcja ustawia **errno** na **EINVAL** i zwraca wartość-1.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_msize**|\<> malloc.h|
+|**_msize**|\<malloc. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 

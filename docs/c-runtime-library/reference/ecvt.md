@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 5e1760d5c68e650f6fbf44866d4e368b9d6233b6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9e02be690b257842c49166e18cf551c540190388
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348022"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915094"
 ---
 # <a name="_ecvt"></a>_ecvt
 
-Konwertuje **podwójną** liczbę na ciąg. Dostępna jest bezpieczniejsza wersja tej funkcji; patrz [_ecvt_s](ecvt-s.md).
+Konwertuje liczbę **podwójną** na ciąg. Dostępna jest bezpieczniejsza wersja tej funkcji; Zobacz [_ecvt_s](ecvt-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,45 +53,45 @@ char *_ecvt(
 
 ### <a name="parameters"></a>Parametry
 
-*value*<br/>
-Liczba do konwersji.
+*wartościami*<br/>
+Liczba do przekonwertowania.
 
-*Liczba*<br/>
-Liczba zapisanych cyfr.
+*liczbą*<br/>
+Liczba przechowywanych cyfr.
 
 *dec*<br/>
-Przechowywana pozycja dziesiętna.
+Przechowywana pozycja punktu dziesiętnego.
 
-*Znak*<br/>
+*zapis*<br/>
 Znak przekonwertowanego numeru.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_ecvt** zwraca wskaźnik do ciągu cyfr; **NULL,** jeśli wystąpił błąd.
+**_ecvt** zwraca wskaźnik do ciągu cyfr; **Wartość null** , jeśli wystąpił błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_ecvt** konwertuje liczbę zmiennoprzecinkową na ciąg znaków. Parametr *value* jest numerem zmiennoprzecinkowym, który ma zostać przekonwertowany. Ta funkcja przechowuje się, aby *zliczać* cyfry *wartości* jako ciąg i dołącza znak null ('\0'). Jeśli liczba cyfr w *wartości* przekracza *liczbę,* cyfra niskiego rzędu jest zaokrąglana. Jeśli jest mniej niż *cyfry,* ciąg jest wyściełane zerami.
+Funkcja **_ecvt** konwertuje liczbę zmiennoprzecinkową na ciąg znaków. Parametr *Value* jest liczbą zmiennoprzecinkową do przekonwertowania. Ta funkcja przechowuje maksymalnie *liczbę* cyfr *wartości* jako ciąg i dołącza znak null (' \ 0 '). Jeśli liczba cyfr w *wartości* przekracza *liczbę*, zaokrąglana jest mała kolejność. Jeśli jest mniej niż *Liczba* cyfr, ciąg jest dopełniany zerami.
 
-Całkowita liczba cyfr zwróconych przez **_ecvt** nie przekroczy **_CVTBUFSIZE**.
+Łączna liczba cyfr zwracanych przez **_ecvt** nie przekracza **_CVTBUFSIZE**.
 
-Tylko cyfry są przechowywane w ciągu. Położenie przecinka dziesiętnego i znak *wartości* można uzyskać od *dec* i *znak* po wywołaniu. Parametr *dec* wskazuje wartość całkowitą, podając pozycję przecinka dziesiętnego względem początku ciągu. Wartość całkowita 0 lub ujemna wskazuje, że przecinek dziesiętny znajduje się po lewej stronie pierwszej cyfry. Parametr *sign* wskazuje liczbę całkowitą, która wskazuje znak przekonwertowanego numeru. Jeśli wartość całkowita wynosi 0, liczba ta jest dodatnia. W przeciwnym razie liczba jest ujemna.
+W ciągu są przechowywane tylko cyfry. Pozycja punktu dziesiętnego i znak *wartości* można uzyskać od *gru* i *podpisywać* po wywołaniu. Parametr *gru* wskazuje liczbę całkowitą określającą położenie przecinka dziesiętnego w odniesieniu do początku ciągu. Wartość 0 lub ujemna liczba całkowita wskazuje, że punkt dziesiętny znajduje się po lewej stronie pierwszej cyfry. Parametr *Sign* wskazuje liczbę całkowitą wskazującą znak przekonwertowanego numeru. Jeśli wartość całkowita to 0, liczba jest dodatnia. W przeciwnym razie liczba jest ujemna.
 
-Różnica między **_ecvt** a **_fcvt** polega na interpretacji parametru *count.* **_ecvt** interpretuje *liczą* się jako całkowita liczba cyfr w ciągu wyjściowym, podczas gdy **_fcvt** interpretuje *liczyć* jako liczbę cyfr po przecinku.
+Różnica między **_ecvt** i **_fcvt** jest interpretowana parametru *Count* . **_ecvt** interpretuje *liczbę* jako łączną liczbę cyfr w ciągu danych wyjściowych, podczas gdy **_fcvt** interpretuje *licznik* jako liczbę cyfr po przecinku dziesiętnym.
 
-**_ecvt** i **_fcvt** użyć pojedynczego buforu statycznie przydzielonego do konwersji. Każde wywołanie jednej z tych procedur niszczy wynik poprzedniego wywołania.
+**_ecvt** i **_fcvt** do konwersji Użyj jednego buforu przydzielenia statycznie. Każde wywołanie jednej z tych procedur niszczy wynik poprzedniego wywołania.
 
-Ta funkcja sprawdza poprawność jego parametrów. Jeśli *dec* lub *znak* ma **wartość NULL**lub *liczba* wynosi 0, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w programie Sprawdzanie [poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, **errno** jest ustawiona na **EINVAL** i **NULL** jest zwracany.
+Ta funkcja sprawdza poprawność swoich parametrów. Jeśli *gru* lub *Sign* ma **wartość null**lub *licznik* ma wartość 0, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** jest ustawiona na **EINVAL** i zwracana jest **wartość null** .
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_ecvt**|\<>|
+|**_ecvt**|\<STDLIB. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -125,7 +125,7 @@ source: 3.1415926535   buffer: '3141592654'  decimal: 1  sign: 0
 ## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

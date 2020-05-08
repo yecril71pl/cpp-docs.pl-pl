@@ -20,7 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: 11ff6920ea5f1dad2925a8010c9202e012fad87a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 23dd4f2c98f99c0c526cb29553793574f2b7f7d3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338847"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915471"
 ---
 # <a name="mbstowcs-_mbstowcs_l"></a>mbstowcs, _mbstowcs_l
 
-Konwertuje sekwencję znaków wielobajtowych na odpowiednią sekwencję znaków szerokich. Dostępne są bezpieczniejsze wersje tych funkcji; patrz [mbstowcs_s, _mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md).
+Konwertuje sekwencję znaków wielobajtowych na odpowiadającą sekwencję szerokich znaków. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [mbstowcs_s, _mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,46 +75,46 @@ size_t _mbstowcs_l(
 ### <a name="parameters"></a>Parametry
 
 *wcstr*<br/>
-Adres sekwencji szerokich znaków.
+Adres sekwencji znaków dwubajtowych.
 
 *mbstr*<br/>
-Adres sekwencji znaków wielobajtowych zakończonych wartościami null.
+Adres sekwencji znaków wielobajtowych zakończony wartością null.
 
-*Liczba*<br/>
-Maksymalna liczba znaków wielobajtowych do konwersji.
+*liczbą*<br/>
+Maksymalna liczba znaków wielobajtowych do przekonwertowania.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli **mbstowcs** pomyślnie konwertuje ciąg źródłowy, zwraca liczbę przekonwertowanych znaków wielobajtowych. Jeśli argument *wcstr* ma **wartość NULL**, funkcja zwraca wymagany rozmiar (w postaci szerokich) ciągu docelowego. Jeśli **mbstowcs** napotka nieprawidłowy znak wielobajtowy, zwraca wartość -1. Jeśli wartość zwracana jest *liczona,* ciąg szerokoznakowy nie jest zakończony zerem.
+Jeśli **mbstowcs** pomyślnie konwertuje ciąg źródłowy, zwraca liczbę przekonwertowanych znaków wielobajtowych. Jeśli argument *wcstr* ma **wartość null**, funkcja zwraca wymagany rozmiar (w postaci szerokich znaków) ciągu docelowego. Jeśli **mbstowcs** napotka nieprawidłowy znak wielobajtowy, zwraca-1. Jeśli zwracana wartość to *Count*, ciąg znaków dwubajtowych nie jest zakończony znakiem null.
 
 > [!IMPORTANT]
-> Upewnij się, że *wcstr* i *mbstr* nie nakładają się na siebie, a *liczba ta* poprawnie odzwierciedla liczbę znaków wielobajtowych do konwersji.
+> Upewnij się, że *wcstr* i *mbstr* nie nakładają się na siebie, i że *licznik* poprawnie odzwierciedla liczbę znaków wielobajtowych do przekonwertowania.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **mbstowcs** konwertuje maksymalnie do *maksymalnej* liczby znaków wielobajtowych wskazywalonych przez *mbstr* na ciąg odpowiadających im znaków szerokich, które są określane przez bieżące ustawienia regionalne. Przechowuje wynikowy ciąg znaków szerokich pod adresem reprezentowanym przez *wcstr*. Wynik jest podobny do serii wywołań [mbtowc](mbtowc-mbtowc-l.md). Jeśli **mbstowcs** napotka pojedynczy znak null ('\0') przed lub po wystąpieniu *zliczania,* konwertuje znak null na znak null o szerokim znaku znaków (L'\0') i zatrzymuje. W związku z tym ciąg szerokoznakowy w *wcstr* jest zakończony zerem tylko wtedy, gdy znak null zostanie napotkany podczas konwersji. Jeśli sekwencje wskazane przez *wcstr* i *mbstr* nakładają się, zachowanie jest niezdefiniowane.
+Funkcja **mbstowcs** konwertuje do *maksymalnej liczby znaków wielobajtowych* wskazywanych przez *mbstr* do ciągu znaków, które są określone przez bieżące ustawienia regionalne. Przechowuje on ciąg znaków dwubajtowych pod adresem reprezentowanym przez *wcstr*. Wynik jest podobny do serii wywołań [mbtowc](mbtowc-mbtowc-l.md). Jeśli **mbstowcs** napotkała jednobajtowy znak null (' \ 0 ') albo przed lub *w czasie* występowania, konwertuje znak null na znak o szerokim znaku null (L ' \ 0 ') i zostaje zatrzymany. W ten sposób ciąg znaków dwubajtowych w *wcstr* jest zakończony znakiem null tylko w przypadku, gdy podczas konwersji zostanie napotkany błąd o wartości null. Jeśli sekwencje wskazywane przez *wcstr* i *mbstr* nakładają się na siebie, zachowanie jest niezdefiniowane.
 
-Jeśli argument *wcstr* ma **wartość NULL**, **mbstowcs** zwraca liczbę znaków szerokich, które mogłyby wynikać z konwersji, z wyłączeniem terminatora zerowego. Ciąg źródłowy musi być zakończony z wartością null, aby zwracana została poprawna wartość. Jeśli potrzebujesz wynikowego ciągu znaków szerokiego, który ma zostać zakończony zerem, dodaj jeden do zwracanych wartości.
+Jeśli argument *wcstr* ma **wartość null**, funkcja **mbstowcs** zwraca liczbę znaków dwubajtowych, które byłyby wynikiem konwersji, nie uwzględniając terminatora o wartości null. Ciąg źródłowy musi być zakończony znakiem null, aby można było zwrócić poprawną wartość. Jeśli chcesz, aby wynikowy ciąg znaków był zakończony wartością null, Dodaj go do zwracanej wartości.
 
-Jeśli argument *mbstr* ma **wartość NULL**lub jeśli *liczba* jest > **INT_MAX,** wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [programie Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, errno jest ustawiona na **Wartość EINVAL** i funkcja zwraca -1.
+Jeśli argument *mbstr* ma **wartość null**lub jeśli *licznik* jest > **INT_MAX**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, errno jest ustawiona na **EINVAL** , a funkcja zwraca wartość-1.
 
-**mbstowcs** używa bieżących ustawień regionalnych dla zachowania zależnego od ustawień regionalnych; **_mbstowcs_l** jest identyczna, z tą różnicą, że używa ustawień regionalnych przekazanych zamiast. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+**mbstowcs** używa bieżących ustawień regionalnych dla wszelkich zachowań zależnych od ustawień regionalnych; **_mbstowcs_l** jest identyczny, z tą różnicą, że w zamian korzysta z przekazaną ustawieniami regionalnymi. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-W języku C++ te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [Bezpieczne przeciążenia szablonu](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**mbstowcs**|\<>|
-|**_mbstowcs_l**|\<>|
+|**mbstowcs**|\<STDLIB. h>|
+|**_mbstowcs_l**|\<STDLIB. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -214,10 +214,10 @@ Convert back to wide-character string:
 ## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[Multibytetowidechar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>

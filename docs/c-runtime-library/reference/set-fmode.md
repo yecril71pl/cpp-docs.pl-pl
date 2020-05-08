@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-ms.openlocfilehash: ba8a4b3867eb0a18d4a14cb2f5480bc5800303c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d72baeecefb117f0d7b8258728ec299a31f710a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337704"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913038"
 ---
 # <a name="_set_fmode"></a>_set_fmode
 
-Ustawia domyślny tryb tłumaczenia plików dla operacji we/wy pliku.
+Ustawia domyślny tryb tłumaczenia plików dla operacji we/wy na plikach.
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,28 +51,28 @@ errno_t _set_fmode(
 
 ### <a name="parameters"></a>Parametry
 
-*Tryb*<br/>
-Tryb tłumaczenia plików pożądany: **_O_TEXT** lub **_O_BINARY**.
+*wyst*<br/>
+Żądany tryb tłumaczenia plików: **_O_TEXT** lub **_O_BINARY**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca zero, jeśli się powiedzie, kod błędu w przypadku awarii. Jeśli *tryb* nie jest **_O_TEXT,** **_O_BINARY** lub **_O_WTEXT,** wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w [programie Sprawdzanie poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, ta funkcja ustawia **errno** na **EINVAL** i zwraca **wartość EINVAL**.
+Zwraca zero, jeśli to się powiedzie, kod błędu w przypadku niepowodzenia. Jeśli *tryb* nie jest **_O_TEXT** ani **_O_BINARY** lub **_O_WTEXT**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, ta funkcja ustawia **errno** na **EINVAL** i zwraca **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
 Funkcja ustawia [_fmode](../../c-runtime-library/fmode.md) zmienną globalną. Ta zmienna określa domyślny tryb tłumaczenia plików dla operacji we/wy pliku **_open** i **_pipe**.
 
-**_O_TEXT** i **_O_BINARY** są zdefiniowane w fcntl.h. **EINVAL** jest zdefiniowany w errno.h.
+**_O_TEXT** i **_O_BINARY** są zdefiniowane w fcntl. h. **EINVAL** jest zdefiniowany w errno. h.
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_set_fmode**|\<>|\<fcntl.h>, \<errno.h>|
+|**_set_fmode**|\<STDLIB. h>|\<fcntl. h>, \<errno. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -142,4 +142,4 @@ A   B   C   D   E   F   G   H   I   J   K   L
 [_fmode](../../c-runtime-library/fmode.md)<br/>
 [_get_fmode](get-fmode.md)<br/>
 [_setmode](setmode.md)<br/>
-[We/Wy pliku w trybie tekstowym i binarnym](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
+[We/wy pliku w trybie tekstowym i binarnym](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>

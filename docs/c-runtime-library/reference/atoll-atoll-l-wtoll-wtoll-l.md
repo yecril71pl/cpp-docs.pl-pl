@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 34b7d0fdedb55241452f9a7f9937b64c58f7772c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 89a4d94a98e58f4ef5489554e02866a8471ade20
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348716"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913523"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
-Konwertuje ciąg na **długą** **długą** liczę całkowitą.
+Konwertuje ciąg na **długą** **długą liczbę całkowitą** .
 
 ## <a name="syntax"></a>Składnia
 
@@ -73,56 +73,56 @@ long long _wtoll_l(
 
 ### <a name="parameters"></a>Parametry
 
-*Str*<br/>
-Ciąg do konwersji.
+*str*<br/>
+Ciąg do przekonwertowania.
 
-*Ustawień regionalnych*<br/>
+*locale*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca **długą** **wartość,** która jest wytwarzana przez interpretację znaków wejściowych jako liczby. Zwracana wartość **atolu** wynosi 0, jeśli nie można przekonwertować danych wejściowych na wartość tego typu.
+Każda funkcja zwraca **długą** **wartość,** która jest generowana przez interpretowanie znaków wejściowych jako liczby. Wartość zwracana dla **Atoll** jest równa 0, jeśli dane wejściowe nie mogą być konwertowane na wartość tego typu.
 
-W przypadku przepełnienia dużymi dodatnimi wartościami całkowitymi **atol** zwraca **LLONG_MAX**, a w przypadku przepełnienia dużymi ujemnymi wartościami całkowitymi zwraca **LLONG_MIN**.
+W przypadku przepełnienia z dużymi dodatnimi wartościami całkowitymi funkcja **Atoll** zwraca **LLONG_MAX**i w przypadku przepełnienia z dużymi negatywnymi wartościami całkowitymi zwraca **LLONG_MIN**.
 
-We wszystkich przypadkach poza zasięgiem **errno** jest ustawiony na **ERANGE**. Jeśli parametr, który jest przekazywany w jest **NULL**, nieprawidłowy program obsługi parametrów jest wywoływany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie jest dozwolone, te funkcje ustawić **errno** **na EINVAL** i zwracać 0.
+We wszystkich przypadkach poza zakresem **errno** jest ustawiony na **ERANGE**. Jeśli parametr, który jest przesyłany, ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają 0.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje konwertują ciąg znaków na **długą** **długą** wartość całkowitą.
+Te funkcje konwertują ciąg znaków na wartość **Long** **Long** Integer.
 
-Ciąg wejściowy jest sekwencją znaków, które mogą być interpretowane jako wartość liczbowa określonego typu. Funkcja zatrzymuje odczytywanie ciągu wejściowego przy pierwszym znaku, który nie może rozpoznać jako część liczby. Ten znak może być znakiem zerowym ('\0' lub L'\0'), który kończy ciąg.
+Ciąg wejściowy jest sekwencją znaków, które mogą być interpretowane jako wartość liczbowa określonego typu. Funkcja przestaje odczytywać ciąg wejściowy przy pierwszym znaku, którego nie może rozpoznać jako część liczby. Ten znak może być znakiem null (' \ 0 ' lub L ' \ 0 '), który kończy ciąg.
 
-Argument *str* do **atolu** ma następującą formę:
+Argument *str* **Atoll** ma następującą postać:
 
-> [*odstępy*] [*znak*] [*cyfry*]
+> [*odstęp*] [*Sign*] [*cyfry*]
 
-Odstęp *składa* się ze znaków spacji lub tabulacji, które są ignorowane; *znak* jest plus (+) lub minus (-); i *cyfry* są jedną lub więcej cyfr.
+*Odstęp* składa się ze znaków spacji lub tabulatora, które są ignorowane; *znak* jest znakiem plus (+) lub minus (-); i *cyfry* to jedna lub więcej cyfr.
 
-**_wtoll** jest identyczna **z atolem,** z tą różnicą, że przyjmuje szeroki ciąg znaków jako parametr.
+**_wtoll** jest taka sama jak **Atoll** , z tą różnicą, że pobiera ciąg znaków dwubajtowych jako parametr.
 
-Wersje tych funkcji, które mają sufiks **_l** są identyczne z wersjami, które go nie mają, z tą różnicą, że używają parametru ustawień regionalnych, który jest przekazywany zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wersje tych funkcji, które mają sufiks **_l** są identyczne z wersjami, które go nie posiadają, z tą różnicą, że używają parametru ustawień regionalnych, który został przekazaną, zamiast bieżących ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tstoll**|**Atoll**|**Atoll**|**_wtoll**|
+|**_tstoll**|**atoll**|**atoll**|**_wtoll**|
 |**_tstoll_l**|**_atoll_l**|**_atoll_l**|**_wtoll_l**|
 |**_ttoll**|**_atoll**|**_atoll**|**_wtoll**|
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedur|Wymagany nagłówek|
+|Procedury|Wymagany nagłówek|
 |--------------|---------------------|
-|**atol**, **_atoll_l**|\<>|
-|**_wtoll**, **_wtoll_l**|\<> lub \<wchar.h>|
+|**Atoll**, **_atoll_l**|\<STDLIB. h>|
+|**_wtoll**, **_wtoll_l**|\<STDLIB. h> lub \<WCHAR. h>|
 
 ## <a name="example"></a>Przykład
 
-Ten program pokazuje, jak korzystać z funkcji **atolu** do konwersji liczb przechowywanych jako ciągi do wartości liczbowych.
+Ten program pokazuje, jak używać funkcji **Atoll** do konwertowania liczb przechowywanych jako ciągi na wartości liczbowe.
 
 ```C
 // crt_atoll.c
@@ -173,8 +173,8 @@ Overflow condition occurred.
 ## <a name="see-also"></a>Zobacz też
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Obsługa zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)<br/>
-[Ustawienia regionalne](../../c-runtime-library/locale.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
+[Ustawienie](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

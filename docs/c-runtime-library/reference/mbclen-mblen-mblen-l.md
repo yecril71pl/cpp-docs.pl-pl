@@ -1,6 +1,6 @@
 ---
 title: _mbclen, mblen, _mblen_l, _mbclen_l
-description: W tym artykule opisano _mbclen, mblen, _mblen_l i _mbclen_l.
+description: Opisuje funkcje _mbclen, mblen, _mblen_l i _mbclen_l w bibliotece środowiska uruchomieniowego Microsoft C (CRT).
 ms.date: 4/2/2020
 api_name:
 - _mbclen
@@ -24,7 +24,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,19 +48,19 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: 76e8771898d8baa65f275304a9aefdcaeeb5b3bd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b004babc9e7c82d25cd52ec036c3061c99b5f367
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341120"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914370"
 ---
 # <a name="_mbclen-mblen-_mblen_l-_mbclen_l"></a>_mbclen, mblen, _mblen_l, _mbclen_l
 
 Pobiera długość i określa ważność znaku wielobajtowego.
 
 > [!IMPORTANT]
-> Tego interfejsu API nie można używać w aplikacjach wykonywanych w czasie wykonywania systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobjęte w aplikacjach platformy uniwersalnej systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -85,51 +85,51 @@ int _mblen_l(
 
 ### <a name="parameters"></a>Parametry
 
-*C*\
+*s*\
 Znak wielobajtowy.
 
 *mbstr*\
-Adres sekwencji bajtów wielobajtowych.
+Adres sekwencji bajtów znaków wielobajtowych.
 
-*Liczba*\
+*liczbą*\
 Liczba bajtów do sprawdzenia.
 
-*Ustawień regionalnych*\
+*ustawienie*\
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_mbclen** i **_mbclen_l** zwracają 1 lub 2, w zależności od długości znaku wielobajtowego *c*. Funkcje zawsze zwracają 1 dla UTF-8, czy *c* jest wielobajtowy, czy nie. Nie ma zwrotu błędu dla **_mbclen**.
+**_mbclen** i **_mbclen_l** zwracać 1 lub 2, zgodnie z długością znaku wielobajtowego *c*. Funkcje zawsze zwracają wartość 1 dla UTF-8, niezależnie od tego, czy *c* jest wielobajtowy, czy nie. Nie ma żadnego powrotu błędu dla **_mbclen**.
 
-Jeśli *mbstr* nie jest **null**, **mblen** i **_mblen_l** zwracać długość w bajtach znaku wielobajtowego. **Mblen** i **_mblen_l** funkcje działają poprawnie na UTF-8 i może zwrócić wartość między 1 i 3. Gdy *mbstr* ma **wartość NULL** (lub wskazuje znak null o szerokim znaku), **mblen** i **_mblen_l** zwracają 0. Obiekt, który *mbstr* wskazuje, musi tworzyć prawidłowy znak wielobajtowy w obrębie pierwszych znaków *zliczania* lub **mblen** i **_mblen_l** zwracać -1.
+Jeśli *mbstr* nie ma **wartości null**, **mblen** i **_mblen_l** zwracają Długość (w bajtach) znaku wielobajtowego. Funkcje **mblen** i **_mblen_l** działają poprawnie w kodowaniu UTF-8 i mogą zwracać wartość z zakresu od 1 do 3. Gdy *mbstr* ma **wartość null** (lub wskazuje znak dwubajtowy o wartości null), **mblen** i **_mblen_l** zwracają 0. Obiekt, który *mbstr* wskazuje, musi tworzyć prawidłowy znak wielobajtowy w obrębie pierwszych znaków *Count* , lub **mblen** i **_mblen_l** zwracać-1.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_mbclen** zwraca długość znaku wielobajtowego *c*w bajtach . Jeśli *c* nie wskazuje na bajt wiodący znaku wielobajtowego (określonego przez niejawne wywołanie [_ismbblead,](ismbblead-ismbblead-l.md)wynik **_mbclen** jest nieprzewidywalny.
+Funkcja **_mbclen** zwraca długość w bajtach znaku wielobajtowego *c*. Jeśli *c* nie wskazuje bajtu wiodącego znaku wielobajtowego (zgodnie z niejawnym wywołaniem [_ismbblead](ismbblead-ismbblead-l.md), wynik **_mbclen** jest nieprzewidywalny.
 
-**mblen** zwraca długość w bajtach *mbstr,* jeśli jest to prawidłowy znak wielobajtowy. Określa również ważność wielobajtowych znaków skojarzonych ze stroną kodową. **mblen** sprawdza *liczbę* lub mniejszą liczbę bajtów zawartych w *mbstr*, ale nie więcej niż **MB_CUR_MAX** bajtów.
+**mblen** zwraca długość w bajtach *mbstr* , jeśli jest prawidłowym znakiem wielobajtowym. Określa również ważność znaków wielobajtowych skojarzonych ze stroną kodową. **mblen** bada *liczbę* lub mniejszą liczbę bajtów zawartych w *mbstr*, ale nie więcej niż **MB_CUR_MAX** bajtów.
 
-Na wartość danych wyjściowych ma wpływ ustawienie **kategorii LC_CTYPE** ustawień regionalnych. Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. Wersje sufiksów **_l** zachowują się tak samo, ale zamiast tego używają parametru ustawień regionalnych przekazanych. Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md) i [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Wartość wyjściowa jest zależna od ustawienia kategorii **LC_CTYPE** ustawień regionalnych. Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. **_L** wersje sufiksów zachowują się tak samo, ale w zamian używają parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz sekcję [setlocale](setlocale-wsetlocale.md) i [locale](../../c-runtime-library/locale.md).
 
-**_mbclen**, **_mblen_l**i **_mbclen_l** są specyficzne dla firmy Microsoft, a nie są częścią biblioteki Standard C. Nie zalecamy używania ich tam, gdzie chcesz przenośny kod. W przypadku zgodności ze standardem C należy użyć **mblen** lub **mbrlen.**
+**_mbclen**, **_mblen_l**i **_Mbclen_l** są charakterystyczne dla firmy Microsoft, a nie częścią standardowej biblioteki C. Nie zalecamy korzystania z nich w przypadku, gdy potrzebny jest kod przenośny. W przypadku standardowej zgodności C zamiast tego należy użyć **mblen** lub **mbrlen** .
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
 |Procedura tchar.h|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tclen**|Mapowanie do funkcji makra lub wbudowanej|**_mbclen**|Mapowanie do funkcji makra lub wbudowanej|
+|**_tclen**|Mapuje na makro lub funkcję wbudowaną|**_mbclen**|Mapuje na makro lub funkcję wbudowaną|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbclen**|\<mbstring.h>|
-|**mblen ( mblen )**|\<>|
-|**_mblen_l**|\<>|
+|**_mbclen**|\<mbstring. h>|
+|**mblen**|\<STDLIB. h>|
+|**_mblen_l**|\<STDLIB. h>|
 
-Aby uzyskać więcej informacji o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
@@ -173,8 +173,8 @@ Length in bytes of NULL multibyte character 0: 0
 ## <a name="see-also"></a>Zobacz też
 
 [Klasyfikacja znaków](../../c-runtime-library/character-classification.md)\
-[Ustawień regionalnych](../../c-runtime-library/locale.md)\
+[Ustawienie](../../c-runtime-library/locale.md)\
 [Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)\
 [_mbccpy, _mbccpy_l](mbccpy-mbccpy-l.md)\
-[mbrlen (mbrlen)](mbrlen.md)\
+[mbrlen](mbrlen.md)\
 [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: 203265a8dd85854bcedd737359b856fdc4cce04d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 907d02e94c79acf09dfa99a8b42e9f448d32dcfa
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81316266"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915753"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -52,51 +52,51 @@ int setvbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*Strumienia*<br/>
-Wskaźnik do struktury **PLIK.**
+*produkcyjne*<br/>
+Wskaźnik do struktury **pliku** .
 
-*Buforu*<br/>
+*buforu*<br/>
 Bufor przydzielony przez użytkownika.
 
-*Tryb*<br/>
+*wyst*<br/>
 Tryb buforowania.
 
-*Rozmiar*<br/>
-Rozmiar buforu w bajtach. Dopuszczalny zakres: 2 <= *rozmiar* <= INT_MAX (2147483647). Wewnętrznie wartość podana dla *rozmiaru* jest zaokrąglana w dół do najbliższej wielokrotności 2.
+*size*<br/>
+Rozmiar buforu w bajtach. Dozwolony zakres: 2 <= *rozmiar* <= INT_MAX (2147483647). Wewnętrznie wartość podana dla *rozmiaru* jest zaokrąglana w dół do najbliższej wielokrotności 2.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość 0, jeśli zakończy się pomyślnie.
+Zwraca wartość 0, jeśli powodzenie.
 
-Jeśli *strumień* ma **wartość NULL**lub jeśli *tryb* lub *rozmiar* nie mieści się w prawidłowej zmianie, wywoływany jest nieprawidłowy program obsługi parametrów, zgodnie z opisem w programie Sprawdzanie [poprawności parametrów.](../../c-runtime-library/parameter-validation.md) Jeśli wykonanie jest dozwolone, ta funkcja zwraca wartość -1 i ustawia **errno** na **EINVAL**.
+Jeśli *strumień* ma **wartość null**lub jeśli *tryb* lub *rozmiar* nie znajduje się w prawidłowej zmianie, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, funkcja zwraca wartość-1 i ustawia **errno** na **EINVAL**.
 
-Aby uzyskać informacje na temat tych i innych kodów błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **setvbuf** pozwala programowi kontrolować zarówno buforowanie, jak i rozmiar bufora dla *strumienia.* *stream* musi odnosić się do otwartego pliku, który nie został poddany operacji we/wy od momentu otwarcia. Tablica wskazywane przez *bufor* jest używana jako bufor, chyba że jest **null**, w którym to \* przypadku **setvbuf** używa automatycznie przydzielonego buforu *o rozmiarze*długości /2 2 bajtów.
+Funkcja **setvbuf —** pozwala programowi kontrolować zarówno buforowanie, jak i rozmiar buforu dla *strumienia*. *strumień* musi odwoływać się do otwartego pliku, który nie został poddany operacji we/wy, ponieważ został otwarty. Tablica wskazywana przez *bufor* jest używana jako bufor, chyba że ma **wartość null**, w takim przypadku **setvbuf —** używa automatycznie przydzielonego buforu *o długości lub*2 \* 2 bajtów.
 
-Tryb musi być **_IOFBF,** **_IOLBF**lub **_IONBF**. Jeśli *tryb* jest **_IOFBF** lub **_IOLBF**, *rozmiar* jest używany jako rozmiar buforu. Jeśli *tryb* jest **_IONBF,** strumień jest niebuforowany, a *rozmiar* i *bufor* są ignorowane. Wartości *dla trybu* i ich znaczenia to:
+Tryb musi być **_IOFBF**, **_IOLBF**lub **_IONBF**. Jeśli *tryb* jest **_IOFBF** lub **_IOLBF**, *rozmiar* jest używany jako rozmiar buforu. Jeśli *tryb* jest **_IONBF**, strumień jest odbuforowany, a *rozmiar* i *bufor* zostaną zignorowane. Wartości *trybu* i ich znaczenia są następujące:
 
 |wartość *trybu*|Znaczenie|
 |-|-|
-| **_IOFBF** | Pełne buforowanie; oznacza to, że *bufor* jest używany jako bufor i *rozmiar* jest używany jako rozmiar buforu. Jeśli *bufor* ma **wartość NULL,** zostanie użyty automatycznie przydzielony *rozmiar* buforu o długości. |
-| **_IOLBF** | W przypadku niektórych systemów zapewnia to buforowanie linii. Jednak dla Win32 zachowanie jest taka sama jak **_IOFBF** — pełne buforowanie. |
-| **_IONBF** | Bufor nie jest używany, niezależnie od *bufora* lub *rozmiaru*. |
+| **_IOFBF** | Pełny buforowanie; oznacza to, że *bufor* jest używany jako bufor i *rozmiar* jest używany jako rozmiar buforu. Jeśli *bufor* ma **wartość null**, używana jest automatycznie przydzielony *rozmiar* bufora w bajtach. |
+| **_IOLBF** | W przypadku niektórych systemów zapewnia to buforowanie wierszy. Jednak w przypadku systemu Win32 zachowanie jest takie samo jak w przypadku **_IOFBF** -pełnego buforowania. |
+| **_IONBF** | Nie jest używany żaden bufor, niezależnie od *buforu* lub *rozmiaru*. |
 
-Domyślnie stan globalny tej funkcji jest ograniczony do aplikacji. Aby to zmienić, zobacz [Stan globalny w crt](../global-state.md).
+Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**setvbuf**|\<stdio.h>|
+|**setvbuf**|\<stdio. h>|
 
-Aby uzyskać dodatkowe informacje o zgodności, zobacz [Zgodność](../../c-runtime-library/compatibility.md).
+Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Biblioteki
 
-Wszystkie wersje [bibliotek wyładowywowych języka C](../../c-runtime-library/crt-library-features.md).
+Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Przykład
 
