@@ -1,7 +1,7 @@
 ---
-title: switchwyciąg (C++)
-description: Odwołanie do standardowej switch instrukcji C++ w programie Microsoft Visual Studio C++.
-ms.date: 04/15/2020
+title: switchInstrukcja (C++)
+description: Odwołanie do standardowej instrukcji C++ switch w Microsoft Visual Studio C++.
+ms.date: 04/25/2020
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -16,43 +16,55 @@ no-loc:
 - default
 - break
 - while
+- opt
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 1f65d4699423d74be9c75a9be47e543a9a1256e2
-ms.sourcegitcommit: 9266fc76ac2e872e35a208b4249660dfdfc87cba
+ms.openlocfilehash: d43a7a64b5a74f00833093ae8999d73edd7f5753
+ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81480820"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83204164"
 ---
-# <a name="opno-locswitch-statement-c"></a>switchwyciąg (C++)
+# <a name="switch-statement-c"></a>`switch`Instrukcja (C++)
 
-Umożliwia wybór między wieloma sekcjami kodu, w zależności od wartości wyrażenia integralnego.
+Zezwala na wybór między wieloma sekcjami kodu, w zależności od wartości wyrażenia całkowitego.
 
 ## <a name="syntax"></a>Składnia
 
-> **`switch (`**\[ *inicjowanie* **`;`**] *wyrażenie***`)`**\
-> **`{`**\
-> &nbsp;&nbsp;&nbsp;&nbsp;**`case`***constant-expression* **`:`** *instrukcja* wyrażenia stałego\
-> &nbsp;&nbsp;&nbsp;&nbsp;\[**`default :`***oświadczenie*] \
-> **`}`**
+> *`selection-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp;__`switch`__&nbsp;__`(`__&nbsp;*`init-statement`*<sub>opt</sub> <sup>C++ 17</sup>&nbsp;*`condition`*&nbsp;__`)`__&nbsp;*`statement`*
+
+> *`init-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`expression-statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`simple-declaration`*
+
+> *`condition`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`expression`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; *`attribute-specifier-seq`*<sub>opt</sub>&nbsp;*`decl-specifier-seq`*&nbsp;*`declarator`*&nbsp;*`brace-or-equal-initializer`*
+
+> *`labeled-statement`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*\
+> &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
 
 ## <a name="remarks"></a>Uwagi
 
-*Wyrażenie* musi mieć typ integralny lub typ klasy, który ma jednoznaczną konwersję do typu integralnego. Integralna promocja odbywa się zgodnie z opisem w [standardowych konwersjach.](standard-conversions.md)
+__`switch`__ Instrukcja powoduje, że kontrolka jest przekazywana do jednego *`labeled-statement`* w jego treści instrukcji, w zależności od wartości *`condition`* .
 
-Treść **switch** instrukcji składa się **case** z serii **default** etykiet i etykiety opcjonalnej. Zbiorczo instrukcje, które następują po etykietach są *nazywane instrukcjami etykietowanymi.* Instrukcje oznaczone etykietą nie są wymaganiami składni, ale instrukcja **switch** jest bez znaczenia bez nich. Żadne dwa wyrażenia **case** stałe w instrukcjach mogą oceniać tę samą wartość. Etykieta **default** może pojawić się tylko raz. Instrukcja **default** jest często umieszczana na końcu, ale może **switch** pojawić się w dowolnym miejscu w treści instrukcji. **case** Etykieta **default** lub etykieta **switch** może pojawić się tylko wewnątrz instrukcji.
+Typ *`condition`* musi być typem całkowitym lub być typem klasy, który ma niejednoznaczną konwersję na typ całkowity. Promocja całkowa odbywa się zgodnie z opisem w temacie [Konwersje standardowe](standard-conversions.md).
 
-Wyrażenie *stałe* w **case** każdej etykiecie jest konwertowane na typ *wyrażenia*. Następnie jest porównywany z *wyrażeniem* równości. Formant przekazuje do **case** instrukcji, której *wyrażenie stałe* odpowiada wartości *wyrażenia*. Wynikowe zachowanie jest pokazane w poniższej tabeli.
+__`switch`__ Treść instrukcji składa się z serii __`case`__ etykiet i opcjonalnej __`default`__ etykiety. A *`labeled-statement`* to jedna z tych etykiet i instrukcji, które obserwują. Instrukcje oznaczone etykietami nie są wymaganiami dotyczącymi składni, ale __`switch`__ instrukcja nie ma znaczenia. *`constant-expression`* W __`case`__ instrukcjach nie mogą być oceniane dwie wartości o tej samej wartości. __`default`__ Etykieta może wystąpić tylko raz. __`default`__ Instrukcja jest często umieszczana na końcu, ale może występować w dowolnym miejscu w __`switch`__ treści instrukcji. __`case`__ Etykieta lub __`default`__ może wystąpić tylko wewnątrz __`switch`__ instrukcji.
 
-### <a name="switch-statement-behavior"></a>Przełączanie zachowania instrukcji
+*`constant-expression`* W każdej __`case`__ etykiecie jest konwertowana na wartość stałą, która jest tego samego typu co *`condition`* . Następnie jest porównywany ze *`condition`* względu na równość. Kontrolka przechodzi do pierwszej instrukcji po __`case`__ *`constant-expression`* wartości, która pasuje do wartości *`condition`* . Wynikowe zachowanie jest pokazane w poniższej tabeli.
+
+### <a name="switch-statement-behavior"></a>`switch`zachowanie instrukcji
 
 | Warunek | Akcja |
 |--|--|
-| Przekonwertowana wartość odpowiada wartości promowanego wyrażenia sterującego. | Formant jest przenoszony do instrukcji następującej po tej etykiecie. |
-| Żadna ze stałych nie odpowiada **case** stałym w etykietach; etykieta **default** jest obecna. | Formant jest przenoszony na etykietę. **default** |
-| Żadna ze stałych nie odpowiada **case** stałym w etykietach; nie **default** ma etykiety. | Kontrola jest przekazywana do **switch** instrukcji po instrukcji. |
+| Przekonwertowana wartość jest zgodna z wyróżnionym wyrażeniem kontroli. | Kontrolka jest przenoszona do instrukcji następującej po etykiecie. |
+| Żadna ze stałych nie pasuje do stałych w __`case`__ etykietach; __`default`__ etykieta jest obecna. | Kontrolka jest przenoszona do __`default`__ etykiety. |
+| Żadna ze stałych nie pasuje do stałych w __`case`__ etykietach; __`default`__ etykieta nie jest obecna. | Kontrolka jest przenoszona do instrukcji po __`switch`__ instrukcji. |
 
-Jeśli zostanie znalezione pasujące wyrażenie, **case** wykonanie **default** można kontynuować za pośrednictwem później lub etykiety. Instrukcja [`break`](../cpp/break-statement-cpp.md) jest używana do zatrzymania wykonywania i **switch** przenoszenia kontroli do instrukcji po instrukcji. Bez **break** instrukcji wykonywana jest każda **case** instrukcja od dopasowanej etykiety do końca **switch**, w tym **default** do . Przykład:
+Jeśli zostanie znalezione pasujące wyrażenie, wykonanie może być kontynuowane przez późniejsze __`case`__ lub __`default`__ etykiety. [`break`](../cpp/break-statement-cpp.md)Instrukcja jest używana, aby zatrzymać wykonywanie i transfer kontroli do instrukcji po __`switch`__ instrukcji. Bez __`break`__ instrukcji, każda instrukcja z dopasowanej __`case`__ etykiety na końcu __`switch`__ , łącznie z __`default`__ , jest wykonywana. Przykład:
 
 ```cpp
 // switch_statement1.cpp
@@ -83,9 +95,9 @@ int main() {
 }
 ```
 
-W powyższym `uppercase_A` przykładzie jest zwiększany, jeśli `c` `'A'`jest wielką literą . Instrukcja **break** `uppercase_A++` po zakończeniu wykonywania **switch** treści instrukcji i **while** kontroli przechodzi do pętli. Bez **break** instrukcji wykonanie "przejdzie" do następnej etykiety instrukcji, `lowercase_a` `other` tak aby i również były zwiększane. Podobny cel służy oświadczeniu **break** dla `case 'a'`. Jeśli `c` jest mała `'a'`litera , `lowercase_a` jest zwiększana i instrukcja **break** kończy treść **switch** instrukcji. Jeśli `c` instrukcja `'a'` nie `'A'`jest **default** lub , jest wykonywana.
+W powyższym przykładzie `uppercase_A` jest zwiększana, jeśli `c` jest wielką literą `'A'` . __`break`__ Instrukcja po `uppercase_A++` zakończeniu wykonywania __`switch`__ treści instrukcji i kontroli przebiega do __`while`__ pętli. Bez __`break`__ instrukcji wykonywanie "przechodzenie" do następnej instrukcji oznaczonej etykietą, tak aby `lowercase_a` i `other` również było zwiększane. Podobny cel jest obsługiwany przez __`break`__ instrukcję dla `case 'a'` . Jeśli `c` jest małymi literami `'a'` , `lowercase_a` jest zwiększana, a __`break`__ instrukcja kończy __`switch`__ treść instrukcji. Jeśli `c` nie jest `'a'` lub `'A'` , __`default`__ instrukcja jest wykonywana.
 
-**Visual Studio 2017 i nowsze:** (dostępne z [/std:c++17](../build/reference/std-specify-language-standard-version.md)) Atrybut `[[fallthrough]]` jest określony w standardzie C++ 17. Można go użyć **switch** w instrukcji. Jest to wskazówka do kompilatora lub ktokolwiek, kto czyta kod, że zachowanie fall-through jest zamierzone. Kompilator Microsoft C++ obecnie nie ostrzega o zachowaniu fallthrough, więc ten atrybut nie ma wpływu na zachowanie kompilatora. W tym przykładzie atrybut zostanie zastosowany do pustej instrukcji w instrukcji nieokreślonej etykiety. Innymi słowy, średnik jest konieczny.
+**Visual Studio 2017 i nowsze:** (dostępne w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` atrybut jest określony w standardzie c++ 17. Można go użyć w __`switch`__ instrukcji. Jest to Wskazówka dla kompilatora lub każda osoba, która odczytuje kod, że działanie wykraczające jest zamierzone. Kompilator języka Microsoft C++ aktualnie nie ostrzega o zachowania fallthrough, więc ten atrybut nie ma wpływu na zachowanie kompilatora. W tym przykładzie atrybut jest stosowany do pustej instrukcji w niezakończonej instrukcji oznaczonej etykietą. Innymi słowy, średnik jest niezbędny.
 
 ```cpp
 int main()
@@ -113,7 +125,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 w wersji 15.3 i nowszej** (dostępne z [/std:c++17](../build/reference/std-specify-language-standard-version.md)). Instrukcja switch może mieć klauzulę *inicjowania.* Wprowadza i inicjuje zmienną, której zakres jest switch ograniczony do bloku instrukcji:
+**Visual Studio 2017 w wersji 15,3 lub nowszej** (dostępny w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)). __`switch`__ Instrukcja może zawierać *`init-statement`* klauzulę kończącą się średnikiem. Wprowadza i inicjuje zmienną, której zakres jest ograniczony do bloku __`switch`__ instrukcji:
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -126,7 +138,7 @@ int main()
     };
 ```
 
-Wewnętrzny blok **switch** instrukcji może zawierać definicje z inicjalizowania tak długo, jak są one *osiągalne*, to znaczy, nie pomijane przez wszystkie możliwe ścieżki wykonywania. Nazwy wprowadzone przy użyciu tych deklaracji mają zakres lokalny. Przykład:
+Wewnętrzny blok __`switch`__ instrukcji może zawierać definicje z inicjatorami o ile są one *osiągalne*, czyli nie są pomijane przez wszystkie możliwe ścieżki wykonywania. Nazwy wprowadzone przy użyciu tych deklaracji mają zakres lokalny. Przykład:
 
 ```cpp
 // switch_statement2.cpp
@@ -161,13 +173,11 @@ int main(int argc, char *argv[])
 }
 ```
 
-Instrukcja **switch** może być zagnieżdżona. Gdy **case** zagnieżdżone, lub **default** **switch** etykiety skojarzyć z najbliższej instrukcji, która je otacza.
+__`switch`__ Instrukcja może być zagnieżdżona. Gdy jest zagnieżdżony __`case`__ , __`default`__ etykiety lub są kojarzone z najbliższą __`switch`__ instrukcją, która je obejmuje.
 
 ### <a name="microsoft-specific-behavior"></a>Zachowanie specyficzne dla firmy Microsoft
 
-Microsoft C nie ogranicza liczby **case** wartości **switch** w instrukcji. Liczba jest ograniczona tylko przez dostępną pamięć. ANSI C wymaga, aby **case** co najmniej 257 etykiet było dozwolonych w oświadczeniu. **switch**
-
-Dla default microsoft c jest to, że rozszerzenia firmy Microsoft są włączone. Użyj opcji kompilatora [/Za,](../build/reference/za-ze-disable-language-extensions.md) aby wyłączyć te rozszerzenia.
+Program Microsoft C++ nie ogranicza liczby __`case`__ wartości w __`switch`__ instrukcji. Liczba jest ograniczona tylko przez dostępną pamięć.
 
 ## <a name="see-also"></a>Zobacz też
 
