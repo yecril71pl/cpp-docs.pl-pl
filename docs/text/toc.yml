@@ -1,0 +1,61 @@
+- name: Tekst i ciągi w programie MSVC
+  href: ../text/text-and-strings-in-visual-cpp.md
+- name: Unicode i MBCS
+  expanded: false
+  items:
+    - name: Unicode i MBCS
+      href: ../text/unicode-and-mbcs.md
+    - name: Włączanie internacjonalizacji
+      href: ../text/international-enabling.md
+    - name: Strategie internacjonalizacji
+      href: ../text/internationalization-strategies.md
+    - name: Ustawienia regionalne i strony kodowe
+      href: ../text/locales-and-code-pages.md
+    - name: Zalety przenośności zestawu znaków
+      href: ../text/benefits-of-character-set-portability.md
+- name: Obsługa formatu Unicode
+  expanded: false
+  items:
+    - name: Obsługa formatu Unicode
+      href: ../text/support-for-unicode.md
+    - name: Obsługa używania funkcji wmain
+      href: ../text/support-for-using-wmain.md
+    - name: Podsumowanie programowania Unicode
+      href: ../text/unicode-programming-summary.md
+- name: Obsługa zestawów znaków wielobajtowych (zestawy MBCS)
+  expanded: false
+  items:
+    - name: Obsługa zestawów znaków wielobajtowych (zestawy MBCS)
+      href: ../text/support-for-multibyte-character-sets-mbcss.md
+    - name: Obsługa MBCS w programie MSVC
+      href: ../text/mbcs-support-in-visual-cpp.md
+    - name: Porady dotyczące programowania MBCS
+      expanded: false
+      items:
+        - name: Porady dotyczące programowania MBCS
+          href: ../text/mbcs-programming-tips.md
+        - name: Ogólne porady dotyczące programowania MBSC
+          href: ../text/general-mbcs-programming-advice.md
+        - name: Inkrementacja i dekrementacja wskaźników
+          href: ../text/incrementing-and-decrementing-pointers.md
+        - name: Indeksy bajtowe
+          href: ../text/byte-indices.md
+        - name: Ostatni znak w ciągu
+          href: ../text/last-character-in-a-string.md
+        - name: Przypisanie znaku
+          href: ../text/character-assignment.md
+        - name: Porównywanie znaków
+          href: ../text/character-comparison.md
+        - name: Przepełnienie buforu
+          href: ../text/buffer-overflow.md
+- name: Obsługa standardu ANSI
+  href: ../text/support-for-ansi.md
+- name: Mapowania typu ogólny-tekst w pliku tchar.h
+  expanded: false
+  items:
+    - name: Mapowania typu ogólny-tekst w pliku tchar.h
+      href: ../text/generic-text-mappings-in-tchar-h.md
+    - name: Używanie typów danych TCHAR.H z kodem _MBCS
+      href: ../text/using-tchar-h-data-types-with-mbcs-code.md
+- name: 'Instrukcje: Konwertowanie między różnymi typami ciągów'
+  href: ../text/how-to-convert-between-various-string-types.md
