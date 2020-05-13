@@ -1,0 +1,73 @@
+- name: Czytanie i pisanie kodu C++ w programie Visual Studio
+  expanded: true
+  items:
+    - name: Czytanie i interpretacja kodu w języku C++
+      href: ../ide/read-and-understand-code-cpp.md
+    - name: Edycja i refaktoryzacja kodu w języku C++
+      href: ../ide/writing-and-refactoring-code-cpp.md
+    - name: Nawigowanie po kodzie w języku C++
+      href: ../ide/navigate-code-cpp.md
+    - name: Ustawianie preferencji pisania kodu w języku C++
+      href: ../ide/how-to-set-preferences.md
+    - name: Współpraca przy użyciu rozszerzenia Live Share dla języka C++
+      href: ../ide/live-share-cpp.md
+    - name: Zmienianie podpisu
+      href: ../ide/refactoring/change-signature.md
+    - name: Konwertowanie na literał nieprzetworzonego ciągu
+      href: ../ide/refactoring/convert-to-raw-string-literal.md
+    - name: Tworzenie deklaracji/definicji
+      href: ../ide/refactoring/create-declaration-definition.md
+    - name: Wyodrębnianie funkcji
+      href: ../ide/refactoring/extract-function.md
+    - name: Implementowanie czystych elementów wirtualnych
+      href: ../ide/refactoring/implement-pure-virtuals.md
+    - name: Przenoszenie definicji funkcji
+      href: ../ide/refactoring/move-definition-location.md
+    - name: Zmień nazwę
+      href: ../ide/refactoring/rename.md
+- name: Projektowanie aplikacji w języku C++ w środowisku IDE programu Visual Studio
+  expanded: true
+  items:
+    - name: Projektowanie aplikacji w języku C++ w środowisku IDE programu Visual Studio
+      href: ../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md
+    - name: 'Przewodnik: Praca z projektami i rozwiązaniami (C++)'
+      href: ../ide/walkthrough-working-with-projects-and-solutions-cpp.md
+    - name: 'Przewodnik: Kompilowanie projektu (C++)'
+      href: ../ide/walkthrough-building-a-project-cpp.md
+    - name: 'Przewodnik: Testowanie projektu (C++)'
+      href: ../ide/walkthrough-testing-a-project-cpp.md
+    - name: 'Przewodnik: Debugowanie projektu (C++)'
+      href: ../ide/walkthrough-debugging-a-project-cpp.md
+    - name: 'Przewodnik: Wdrażanie programu (C++)'
+      href: ../ide/walkthrough-deploying-your-program-cpp.md
+- name: Dodawanie funkcji za pomocą kreatorów kodu
+  expanded: true
+  items:
+    - name: Dodawanie funkcji za pomocą kreatorów kodu
+      href: ../ide/adding-functionality-with-code-wizards-cpp.md
+    - name: Dodawanie klasy
+      href: ../ide/adding-a-class-visual-cpp.md
+    - name: Dodawanie klasy z kontrolki ActiveX
+      href: ../ide/adding-a-class-from-an-activex-control-visual-cpp.md
+    - name: Dodawanie klasy ogólnej C++
+      href: ../ide/adding-a-generic-cpp-class.md
+    - name: Dodawanie funkcji składowej
+      href: ../ide/adding-a-member-function-visual-cpp.md
+    - name: Dodawanie zmiennej składowej
+      href: ../ide/adding-a-member-variable-visual-cpp.md
+    - name: Dodawanie metody
+      href: ../ide/adding-a-method-visual-cpp.md
+    - name: Dodawanie właściwości
+      href: ../ide/adding-a-property-visual-cpp.md
+    - name: Dodawanie zdarzenia
+      href: ../ide/adding-an-event-visual-cpp.md
+    - name: Dodawanie procedury obsługi zdarzeń
+      href: ../ide/adding-an-event-handler-visual-cpp.md
+    - name: Tworzenie interfejsu COM
+      href: ../ide/creating-a-com-interface-visual-cpp.md
+    - name: Implementowanie punktu połączenia
+      href: ../ide/implementing-a-connection-point-visual-cpp.md
+    - name: Implementowanie interfejsu
+      href: ../ide/implementing-an-interface-visual-cpp.md
+    - name: Przesłanianie funkcji wirtualnej
+      href: ../ide/overriding-a-virtual-function-visual-cpp.md
