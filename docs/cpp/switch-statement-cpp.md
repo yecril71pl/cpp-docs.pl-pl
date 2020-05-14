@@ -22,8 +22,8 @@ ms.openlocfilehash: d43a7a64b5a74f00833093ae8999d73edd7f5753
 ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83204164"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83389704"
 ---
 # <a name="switch-statement-c"></a>`switch`Instrukcja (C++)
 
@@ -179,7 +179,7 @@ __`switch`__ Instrukcja może być zagnieżdżona. Gdy jest zagnieżdżony __`ca
 
 Program Microsoft C++ nie ogranicza liczby __`case`__ wartości w __`switch`__ instrukcji. Liczba jest ograniczona tylko przez dostępną pamięć.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Instrukcje wyboru](../cpp/selection-statements-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)
