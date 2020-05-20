@@ -24,8 +24,8 @@ Poniższa tabela podsumowuje pierwszeństwo i łączność (kolejność, w jakie
 
 | Symbol <sup>1</sup> | Typ operacji | Łączność |
 |-------------|-----------------------|-------------------|
-| `[` `]` `(` `)` `.` `->`<br/>`++``--` (przyrostkowo) | Wyrażenie | Od lewej do prawej |
-| **sizeof** `&` `*` `+` `-` `~` `!`<br/>`++``--` (prefiks) | Jednoargumentowy | Od prawej do lewej |
+| `[` `]` `(` `)` `.` `->`<br/>`++``--`(przyrostkowo) | Wyrażenie | Od lewej do prawej |
+| **sizeof** `&` `*` `+` `-` `~` `!`<br/>`++``--`(prefiks) | Jednoargumentowy | Od prawej do lewej |
 | *typecasts* | Jednoargumentowy | Od prawej do lewej |
 | `*` `/` `%` | Mnożenia | Od lewej do prawej |
 | `+` `-` | Dana | Od lewej do prawej |
@@ -45,15 +45,15 @@ Poniższa tabela podsumowuje pierwszeństwo i łączność (kolejność, w jakie
 
 <sup>2</sup> wszystkie operatory proste i złożone przypisanie mają równy priorytet.
 
-Wyrażenie może zawierać kilka operatorów o równym priorytecie. Gdy kilka takich operatorów pojawia się na tym samym poziomie w wyrażeniu, szacowanie postępuje zgodnie z łączność operatora, od prawej do lewej lub od lewej do prawej. Kierunek obliczania nie ma wpływu na wyniki wyrażeń, które zawierają więcej niż jeden`*`operator mnożenia (), dodawanie (`+`) lub binarny bitowy (`&`, `|`lub `^`) na tym samym poziomie. Kolejność operacji nie jest zdefiniowana przez język. Kompilator jest bezpłatny do oszacowania takich wyrażeń w dowolnej kolejności, jeśli kompilator może zagwarantować spójny wynik.
+Wyrażenie może zawierać kilka operatorów o równym priorytecie. Gdy kilka takich operatorów pojawia się na tym samym poziomie w wyrażeniu, szacowanie postępuje zgodnie z łączność operatora, od prawej do lewej lub od lewej do prawej. Kierunek obliczania nie ma wpływu na wyniki wyrażeń, które zawierają więcej niż jeden operator mnożenia ( `*` ), dodawanie ( `+` ) lub binarny bitowy ( `&` , `|` lub `^` ) na tym samym poziomie. Kolejność operacji nie jest zdefiniowana przez język. Kompilator jest bezpłatny do oszacowania takich wyrażeń w dowolnej kolejności, jeśli kompilator może zagwarantować spójny wynik.
 
-Tylko`,`operatory sekwencyjne (), logiczne-i (`&&`), logiczne-lub (`||`), warunkowego wyrażenia (`? :`) i wywołania funkcji stanowią punkty sekwencji i w związku z tym gwarantują określoną kolejność obliczeń dla argumentów operacji. Operator wywołania funkcji jest zestaw nawiasów po identyfikatorze funkcji. Operator sekwencyjnej oceny (`,`) jest gwarantowany do oceny jego operandów od lewej do prawej. (Operator przecinek w wywołaniu funkcji nie jest taki sam jak operator sekwencyjnej oceny i nie zapewnia takiego zagwarantowania). Aby uzyskać więcej informacji, zobacz [punkty sekwencji](c-sequence-points.md).
+Tylko operatory sekwencyjne ( `,` ), logiczne-i (), logiczne- `&&` lub () `||` , warunkowego wyrażenia ( `? :` ) i wywołania funkcji stanowią punkty sekwencji i w związku z tym gwarantują określoną kolejność obliczeń dla argumentów operacji. Operator wywołania funkcji jest zestaw nawiasów po identyfikatorze funkcji. Operator sekwencyjnej oceny ( `,` ) jest gwarantowany do oceny jego operandów od lewej do prawej. (Operator przecinek w wywołaniu funkcji nie jest taki sam jak operator sekwencyjnej oceny i nie zapewnia takiego zagwarantowania). Aby uzyskać więcej informacji, zobacz [punkty sekwencji](c-sequence-points.md).
 
 Operatory logiczne gwarantują również ocenę ich operandów od lewej do prawej. Jednak oceńą najmniejszą liczbę operandów, które trzeba wykonać, aby określić wynik wyrażenia. Jest to tzw. Ocena "krótkiego obwodu". W rezultacie niektóre operandy wyrażenia mogą nie zostać ocenione. Na przykład, w wyrażeniu
 
 `x && y++`
 
-drugi operand jest oceniany tylko wtedy, `y++`gdy `x` ma wartość true (niezerowa). W tym `y` przypadku nie jest zwiększana `x` , jeśli ma wartość false (0).
+drugi operand `y++` jest oceniany tylko wtedy, gdy `x` ma wartość true (niezerowa). W tym `y` przypadku nie jest zwiększana, jeśli `x` ma wartość false (0).
 
 ## <a name="examples"></a>Przykłady
 
@@ -65,11 +65,11 @@ Na poniższej liście przedstawiono sposób, w jaki kompilator automatycznie wi�
 | `a = b || c` | `a = (b || c)` |
 | `q && r || s--` | `(q && r) || s--` |
 
-W pierwszym wyrażeniu operator koniunkcji (`&`) ma wyższy priorytet niż operator logiczny or (`||`), więc `a & b` tworzy pierwszy operand operacji logicznej or.
+W pierwszym wyrażeniu operator koniunkcji ( `&` ) ma wyższy priorytet niż operator logiczny or ( `||` ), więc `a & b` tworzy pierwszy operand operacji logicznej or.
 
-W drugim wyrażeniu operator logiczny OR (`||`) ma wyższy priorytet niż operator przypisywania prostego (`=`), więc `b || c` jest zgrupowany jako argument operacji po prawej stronie w przypisaniu. Należy pamiętać, że wartość przypisana do `a` jest równa 0 lub 1.
+W drugim wyrażeniu operator logiczny OR ( `||` ) ma wyższy priorytet niż operator przypisywania prostego ( `=` ), więc `b || c` jest zgrupowany jako argument operacji po prawej stronie w przypisaniu. Należy pamiętać, że wartość przypisana do `a` jest równa 0 lub 1.
 
-Trzecie wyrażenie pokazuje poprawnie sformułowane wyrażenie, które może generować nieoczekiwany wynik. Operator logiczny AND (`&&`) ma wyższy priorytet niż operator logiczny or (`||`), więc `q && r` jest zgrupowany jako operand. Ponieważ operatory logiczne gwarantują ocenę operandów od lewej do prawej, `q && r` są oceniane przed. `s--` Jednakże, jeśli `q && r` ma wartość różną od zera, `s--` nie jest oceniane i `s` nie jest zmniejszany. Jeśli zmniejszenie nie spowoduje `s` zmniejszenia problemu w programie, `s--` powinien pojawić się jako pierwszy operand wyrażenia lub `s` w oddzielnym operacji.
+Trzecie wyrażenie pokazuje poprawnie sformułowane wyrażenie, które może generować nieoczekiwany wynik. Operator logiczny AND ( `&&` ) ma wyższy priorytet niż operator logiczny or ( `||` ), więc `q && r` jest zgrupowany jako operand. Ponieważ operatory logiczne gwarantują ocenę operandów od lewej do prawej, `q && r` są oceniane przed `s--` . Jednakże, jeśli ma `q && r` wartość różną od zera, `s--` nie jest oceniane i `s` nie jest zmniejszany. Jeśli zmniejszenie nie spowoduje zmniejszenia `s` problemu w programie, `s--` powinien pojawić się jako pierwszy operand wyrażenia lub `s` w oddzielnym operacji.
 
 Następujące wyrażenie jest niedozwolone i generuje komunikat diagnostyczny w czasie kompilacji:
 
@@ -77,10 +77,10 @@ Następujące wyrażenie jest niedozwolone i generuje komunikat diagnostyczny w 
 |------------------------|----------------------|
 | `p == 0 ? p += 1: p += 2` | `( p == 0 ? p += 1 : p ) += 2` |
 
-W tym wyrażeniu operator równości (`==`) ma najwyższy priorytet, więc `p == 0` jest zgrupowany jako operand. Operator wyrażenia warunkowego (`? :`) ma następny najwyższy priorytet. Jego pierwszy operand to `p == 0`, a drugi operand to `p += 1`. Jednak ostatni operand operatora wyrażenia warunkowego jest uznawany za `p` zamiast `p += 2`, ponieważ to wystąpienie `p` wiąże się ściśle z operatorem wyrażenia warunkowego niż do operatora przypisania złożonego. Wystąpił błąd składniowy, `+= 2` ponieważ nie ma operandu po lewej stronie. Należy użyć nawiasów, aby zapobiec błędom tego rodzaju i utworzyć bardziej czytelny kod. Można na przykład użyć nawiasów, jak pokazano poniżej, aby poprawić i wyjaśnić poprzedni przykład:
+W tym wyrażeniu operator równości ( `==` ) ma najwyższy priorytet, więc `p == 0` jest zgrupowany jako operand. Operator wyrażenia warunkowego ( `? :` ) ma następny najwyższy priorytet. Jego pierwszy operand to `p == 0` , a drugi operand to `p += 1` . Jednak ostatni operand operatora wyrażenia warunkowego jest uznawany za `p` zamiast `p += 2` , ponieważ to wystąpienie `p` wiąże się ściśle z operatorem wyrażenia warunkowego niż do operatora przypisania złożonego. Wystąpił błąd składniowy, ponieważ nie `+= 2` ma operandu po lewej stronie. Należy użyć nawiasów, aby zapobiec błędom tego rodzaju i utworzyć bardziej czytelny kod. Można na przykład użyć nawiasów, jak pokazano poniżej, aby poprawić i wyjaśnić poprzedni przykład:
 
 `( p == 0 ) ? ( p += 1 ) : ( p += 2 )`
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operatory języka C](c-operators.md)

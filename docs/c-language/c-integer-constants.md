@@ -70,7 +70,7 @@ ms.locfileid: "67400511"
 
 Sufiksy **I64** i **I64** są specyficzne dla firmy Microsoft.
 
-Stałe całkowite są dodatnie, chyba że są poprzedzone znakiem minus**-**(). Znak minus jest interpretowany jako jednoargumentowy operator negacji arytmetycznej. (Zobacz [Jednoargumentowe operatory arytmetyczne](../c-language/unary-arithmetic-operators.md) , aby uzyskać informacje o tym operatorze).
+Stałe całkowite są dodatnie, chyba że są poprzedzone znakiem minus ( **-** ). Znak minus jest interpretowany jako jednoargumentowy operator negacji arytmetycznej. (Zobacz [Jednoargumentowe operatory arytmetyczne](../c-language/unary-arithmetic-operators.md) , aby uzyskać informacje o tym operatorze).
 
 Jeśli stała całkowita zaczyna się od **0x** lub **0x**, jest to wartość szesnastkowa. Jeśli zaczyna się od cyfry **0**, jest to ósemkowy. W przeciwnym razie przyjmuje się, że jest to wartość dziesiętna.
 
@@ -116,6 +116,6 @@ Znaki odstępu nie mogą oddzielić cyfr stałej całkowitej. W poniższych przy
     unsigned __int64    hex_ui64   = 0x8a44000000000040Ui64;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Stałe języka C](../c-language/c-constants.md)<br/>

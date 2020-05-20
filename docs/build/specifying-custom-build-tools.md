@@ -68,17 +68,17 @@ Załóżmy, że chcesz dołączyć plik o nazwie parser. l do projektu. W ście�
 
 Najpierw Dodaj parser. l i parser. c do projektu. Jeśli pliki jeszcze nie istnieją, Dodaj odwołanie do tych plików. Utwórz niestandardowe narzędzie kompilacji dla parsera. l i wprowadź następujące polecenie we właściwości **Commands** :
 
-> **Analizator leksykalny% (FullPath). \%(Filename). c**
+> **Analizator leksykalny% (FullPath). \% (Filename). c**
 
 To polecenie powoduje uruchomienie analizatora leksykalnego na analizatorze. l i wyjście parser. c do katalogu projektu.
 
 We właściwości **Outputs** Outputs wprowadź następujące polecenie:
 
-> **. \%(Filename). c**
+> **.\% (Filename). c**
 
 Podczas kompilowania projektu, system kompilacji porównuje sygnatury czasowe analizatora składni. l i parser. c. Jeśli parser. l jest nowszy lub jeśli parser. c nie istnieje, system kompilacji uruchamia wartość właściwości **wiersza polecenia** , aby uzyskać analizator składni. c. Ponieważ parser. c został również dodany do projektu, system kompilacji kompiluje parser. c.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Typowe makra dla poleceń i właściwości kompilacji](reference/common-macros-for-build-commands-and-properties.md)<br>
+[Typowe makra dla właściwości i poleceń kompilacji](reference/common-macros-for-build-commands-and-properties.md)<br>
 [Rozwiązywanie problemów z dostosowaniami kompilacji](troubleshooting-build-customizations.md)

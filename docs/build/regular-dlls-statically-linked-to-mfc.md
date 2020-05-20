@@ -32,15 +32,15 @@ Zwykła Biblioteka MFC DLL, statycznie połączona z MFC, ma następujące funkc
 
 Zwykła Biblioteka MFC DLL, statycznie połączona z MFC, ma następujące wymagania:
 
-- Ten typ biblioteki DLL musi utworzyć wystąpienie klasy pochodnej `CWinApp`.
+- Ten typ biblioteki DLL musi utworzyć wystąpienie klasy pochodnej `CWinApp` .
 
-- Ten typ biblioteki DLL używa `DllMain` dostarczone przez MFC. Umieść wszystkie kod inicjalizacji specyficzny dla biblioteki `InitInstance` dll w funkcji członkowskiej i `ExitInstance` kod zakończenia w taki sposób, jak w przypadku normalnej aplikacji MFC.
+- Ten typ biblioteki DLL używa `DllMain` dostarczone przez MFC. Umieść wszystkie kod inicjalizacji specyficzny dla biblioteki DLL w `InitInstance` funkcji członkowskiej i kod zakończenia w `ExitInstance` taki sposób, jak w przypadku normalnej aplikacji MFC.
 
 - Mimo że termin USRDLL jest przestarzały, nadal trzeba zdefiniować "**_USRDLL**" w wierszu polecenia kompilatora. Ta definicja określa, które deklaracje są ściągane z plików nagłówkowych MFC.
 
-regularne biblioteki DLL MFC muszą mieć `CWinApp`klasę pochodną i pojedynczy obiekt tej klasy aplikacji, tak jak aplikacja MFC. Jednak `CWinApp` obiekt biblioteki DLL nie ma głównej pompki komunikatów, ponieważ `CWinApp` obiekt aplikacji.
+regularne biblioteki DLL MFC muszą mieć `CWinApp` klasę pochodną i pojedynczy obiekt tej klasy aplikacji, tak jak aplikacja MFC. Jednak `CWinApp` obiekt biblioteki DLL nie ma głównej pompki komunikatów, ponieważ `CWinApp` obiekt aplikacji.
 
-Należy zauważyć, `CWinApp::Run` że mechanizm nie ma zastosowania do biblioteki DLL, ponieważ aplikacja jest właścicielem głównej pompy komunikatów. Jeśli biblioteka DLL otwiera Niemodalne okna dialogowe lub ma własne główne okno ramek, główna pompa komunikatów aplikacji musi wywołać procedurę wyeksportowaną przez bibliotekę DLL, która z kolei wywołuje funkcję `CWinApp::PreTranslateMessage` członkowską obiektu aplikacji DLL.
+Należy zauważyć, że mechanizm nie ma `CWinApp::Run` zastosowania do biblioteki DLL, ponieważ aplikacja jest właścicielem głównej pompy komunikatów. Jeśli biblioteka DLL otwiera Niemodalne okna dialogowe lub ma własne główne okno ramek, główna pompa komunikatów aplikacji musi wywołać procedurę wyeksportowaną przez bibliotekę DLL, która z kolei wywołuje `CWinApp::PreTranslateMessage` funkcję członkowską obiektu aplikacji DLL.
 
 Aby zapoznać się z przykładem tej funkcji, zobacz przykład DLLScreenCap.
 
@@ -62,7 +62,7 @@ Można bezpiecznie przekazać wskaźniki do pamięci, która została przypisana
 
 Biblioteka DLL statycznie połączona z MFC nie może również dynamicznie łączyć się z udostępnionymi bibliotekami DLL MFC. Biblioteka DLL, która jest statycznie połączona z MFC, jest dynamicznie powiązana z aplikacją tak samo jak inna Biblioteka DLL; aplikacje mają do nich połączenie, podobnie jak każda inna Biblioteka DLL.
 
-Standardowe biblioteki statyczne DLL MFC są nazywane zgodnie z Konwencją opisaną w [konwencjach nazewnictwa dla bibliotek DLL MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Jednak w przypadku MFC w wersji 3,0 i nowszych nie jest już konieczne ręczne określenie konsolidatora wersji biblioteki MFC, która ma zostać połączona. Zamiast tego pliki nagłówkowe MFC automatycznie określają poprawną wersję biblioteki MFC do łączenia w oparciu o zdefiniowane Definicje preprocesora, takie jak ** \_Debug** lub **_UNICODE**. Pliki nagłówkowe MFC dodają dyrektywy/DEFAULTLIB, które nakazuje konsolidatorowi łączenie się z określoną wersją biblioteki MFC.
+Standardowe biblioteki statyczne DLL MFC są nazywane zgodnie z Konwencją opisaną w [konwencjach nazewnictwa dla bibliotek DLL MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Jednak w przypadku MFC w wersji 3,0 i nowszych nie jest już konieczne ręczne określenie konsolidatora wersji biblioteki MFC, która ma zostać połączona. Zamiast tego pliki nagłówkowe MFC automatycznie określają poprawną wersję biblioteki MFC do łączenia w oparciu o zdefiniowane Definicje preprocesora, takie jak ** \_ DEBUG** lub **_UNICODE**. Pliki nagłówkowe MFC dodają dyrektywy/DEFAULTLIB, które nakazuje konsolidatorowi łączenie się z określoną wersją biblioteki MFC.
 
 ## <a name="what-do-you-want-to-do"></a>Co chcesz zrobić?
 
@@ -80,6 +80,6 @@ Standardowe biblioteki statyczne DLL MFC są nazywane zgodnie z Konwencją opisa
 
 - [Biblioteki DLL rozszerzeń MFC](extension-dlls-overview.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Rodzaje bibliotek DLL](kinds-of-dlls.md)

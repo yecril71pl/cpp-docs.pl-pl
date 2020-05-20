@@ -1,21 +1,21 @@
 ---
-title: Instalowanie obsługi języka C++ w programie Visual Studio
+title: Instalowanie obsługi języków C i C++ w programie Visual Studio
 description: Zainstaluj obsługę programu Visual Studio dla Visual C++
 ms.custom: mvc
 ms.date: 04/02/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: d3018bef9254a8eab557057c035cde84310a2452
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a850803b8804c2463cd3388ec2bcf0ad9f4f3610
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335363"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550813"
 ---
-# <a name="install-c-support-in-visual-studio"></a>Instalowanie obsługi języka C++ w programie Visual Studio
+# <a name="install-c-and-c-support-in-visual-studio"></a>Instalowanie obsługi języków C i C++ w programie Visual Studio
 
-Jeśli jeszcze nie pobrano i nie zainstalowano programu Visual Studio i narzędzi Visual C++, poniżej przedstawiono sposób rozpoczynania pracy.
+Jeśli jeszcze nie pobrano i nie zainstalowano programu Visual Studio oraz narzędzi Microsoft C/C++, Oto jak rozpocząć pracę.
 
 ::: moniker range="vs-2019"
 
@@ -73,9 +73,9 @@ Po zainstalowaniu Instalatora można go użyć do dostosowania instalacji, wybie
 
    ![Visual Studio 2019: Instalowanie obciążenia](../get-started/media/vs-installer-workloads.png)
 
-   W przypadku podstawowej obsługi języka C++ wybierz obciążenie "Programowanie aplikacji klasycznych w języku C++". Jest on dostarczany z domyślnym edytorem podstawowym, który obejmuje podstawową obsługę edycji kodu dla ponad 20 języków, możliwość otwierania i edytowania kodu z dowolnego folderu bez konieczności stosowania projektu i zintegrowanej kontroli kodu źródłowego.
+   W przypadku podstawowych obsługi języków C i C++ wybierz obciążenie "Programowanie aplikacji klasycznych w języku C++". Jest on dostarczany z domyślnym edytorem podstawowym, który obejmuje podstawową obsługę edycji kodu dla ponad 20 języków, możliwość otwierania i edytowania kodu z dowolnego folderu bez konieczności stosowania projektu i zintegrowanej kontroli kodu źródłowego.
 
-   Dodatkowe obciążenia obsługują inne rodzaje programowania w języku C++. Na przykład wybierz obciążenie "platforma uniwersalna systemu Windows Development", aby utworzyć aplikacje używające środowisko wykonawcze systemu Windows do Microsoft Store. Wybierz pozycję "Programowanie gier w języku C++", aby utworzyć gry korzystające z technologii DirectX, Unreal i Cocos2d. Wybierz pozycję "Programowanie dla systemu Linux w języku C++", aby wskazać platformy dla systemu Linux, w tym rozwój IoT.
+   Dodatkowe obciążenia obsługują inne rodzaje opracowywania. Na przykład wybierz obciążenie "platforma uniwersalna systemu Windows Development", aby utworzyć aplikacje używające środowisko wykonawcze systemu Windows do Microsoft Store. Wybierz pozycję "Programowanie gier w języku C++", aby utworzyć gry korzystające z technologii DirectX, Unreal i Cocos2d. Wybierz pozycję "Programowanie dla systemu Linux w języku C++", aby wskazać platformy dla systemu Linux, w tym rozwój IoT.
 
    Okienko **szczegóły instalacji** zawiera listę składników dołączonych i opcjonalnych zainstalowanych przez każde obciążenie. Możesz wybrać lub usunąć zaznaczenie składników opcjonalnych na tej liście. Na przykład aby obsługiwać Programowanie przy użyciu zestawu narzędzi kompilatora programu Visual Studio 2017 lub 2015, wybierz składniki opcjonalne MSVC najnowsze 141 lub MSVC wersji 140. Można dodać obsługę MFC, rozszerzenie języka dla modułów eksperymentalnych, IncrediBuild i inne.
 
@@ -84,7 +84,7 @@ Po zainstalowaniu Instalatora można go użyć do dostosowania instalacji, wybie
    Następnie wyświetlane są ekrany stanu pokazujące postęp instalacji programu Visual Studio.
 
 > [!TIP]
-> W dowolnym momencie po zakończeniu instalacji można zainstalować obciążenia lub składniki, które nie zostały wcześniej zainstalowane. Jeśli masz otwarty program Visual Studio, przejdź do pozycji **Narzędzia** > **Pobierz narzędzia i funkcje...** , co spowoduje otwarcie Instalator programu Visual Studio. Lub Otwórz **Instalator programu Visual Studio** z menu Start. W tym miejscu możesz wybrać obciążenia lub składniki, które chcesz zainstalować. Następnie wybierz **Modyfikuj**.
+> W dowolnym momencie po zakończeniu instalacji można zainstalować obciążenia lub składniki, które nie zostały wcześniej zainstalowane. Jeśli masz otwarty program Visual Studio, przejdź do pozycji **Narzędzia**  >  **Pobierz narzędzia i funkcje...** , co spowoduje otwarcie Instalator programu Visual Studio. Lub Otwórz **Instalator programu Visual Studio** z menu Start. W tym miejscu możesz wybrać obciążenia lub składniki, które chcesz zainstalować. Następnie wybierz **Modyfikuj**.
 
 ### <a name="step-5---choose-individual-components-optional"></a>Krok 5. Wybierz poszczególne składniki (opcjonalnie)
 
@@ -100,7 +100,7 @@ Domyślnie program instalacyjny próbuje dopasować język systemu operacyjnego,
 
 #### <a name="change-the-installer-language-from-the-command-line"></a>Zmiana języka Instalatora z wiersza polecenia
 
-Innym sposobem zmiany języka domyślnego jest uruchomienie Instalatora z wiersza polecenia. Na przykład można wymusić uruchomienie Instalatora w języku angielskim przy użyciu następującego polecenia: `vs_installer.exe --locale en-US`. Instalator zapamiętaje to ustawienie, gdy zostanie uruchomione następnym razem. Instalator obsługuje następujące tokeny języka: zh-CN, zh-TW, CS-Czechy, en-us, es-ES, fr-fr, de-de, IT-JP, ko-kr, pl-pl, pt-br, ru-RU i TR-tr.
+Innym sposobem zmiany języka domyślnego jest uruchomienie Instalatora z wiersza polecenia. Na przykład można wymusić uruchomienie Instalatora w języku angielskim przy użyciu następującego polecenia: `vs_installer.exe --locale en-US` . Instalator zapamiętaje to ustawienie, gdy zostanie uruchomione następnym razem. Instalator obsługuje następujące tokeny języka: zh-CN, zh-TW, CS-Czechy, en-us, es-ES, fr-fr, de-de, IT-JP, ko-kr, pl-pl, pt-br, ru-RU i TR-tr.
 
 ### <a name="step-7---change-the-installation-location-optional"></a>Krok 7. zmiana lokalizacji instalacji (opcjonalnie)
 
@@ -125,7 +125,7 @@ Możesz zmniejszyć zasięg instalacji programu Visual Studio na dysku systemowy
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="vs-2017"
 
 ## <a name="visual-studio-2017-installation"></a>Instalacja programu Visual Studio 2017
 
@@ -159,7 +159,7 @@ Aby uzyskać szczegółowe informacje o wymaganiach dotyczących miejsca na dysk
 
    ![Programowanie aplikacji klasycznych w języku C++](media/desktop-development-with-cpp.png "Programowanie aplikacji klasycznych w języku C++")
 
-   W przypadku języka C++ wybierz pozycję **Programowanie aplikacji klasycznych w języku c++** , a następnie wybierz pozycję **Zainstaluj**.
+   W przypadku języków C i C++ wybierz pozycję **Programowanie aplikacji klasycznych w języku C++** , a następnie wybierz pozycję **Zainstaluj**.
 
    ![Instalowanie programu Desktop Development przy użyciu obciążenia C++](media/vscpp-concierge-choose-workload.gif "Instalowanie programu Desktop Development przy użyciu obciążenia C++")
 
@@ -185,9 +185,9 @@ Aby uzyskać szczegółowe informacje o wymaganiach dotyczących miejsca na dysk
 
 ## <a name="visual-studio-2015-installation"></a>Instalacja programu Visual Studio 2015
 
-Aby zainstalować program Visual Studio 2015, przejdź do [pozycji Pobierz starsze wersje programu Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Uruchom program instalacyjny i wybierz pozycję **Instalacja niestandardowa** , a następnie wybierz składnik C++. Aby dodać obsługę języka C++ do istniejącej instalacji programu Visual Studio 2015, kliknij przycisk Start systemu Windows i wpisz polecenie **Dodaj Usuń programy**. Otwórz program z listy wyników, a następnie Znajdź instalację programu Visual Studio 2015 na liście zainstalowanych programów. Kliknij go dwukrotnie, a następnie wybierz polecenie **Modyfikuj** i wybierz składniki Visual C++, które mają zostać zainstalowane.
+Aby zainstalować program Visual Studio 2015, przejdź do [pozycji Pobierz starsze wersje programu Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Uruchom program instalacyjny i wybierz pozycję **Instalacja niestandardowa** , a następnie wybierz składnik C++. Aby dodać obsługę C i C++ do istniejącej instalacji programu Visual Studio 2015, kliknij przycisk Start systemu Windows i wpisz polecenie **Dodaj Usuń programy**. Otwórz program z listy wyników, a następnie Znajdź instalację programu Visual Studio 2015 na liście zainstalowanych programów. Kliknij go dwukrotnie, a następnie wybierz polecenie **Modyfikuj** i wybierz składniki Visual C++, które mają zostać zainstalowane.
 
-Ogólnie rzecz biorąc, zdecydowanie zalecamy użycie programu Visual Studio 2017, nawet jeśli trzeba skompilować kod przy użyciu kompilatora programu Visual Studio 2015. Aby uzyskać więcej informacji, zobacz [Używanie natywnego wielu elementów docelowych w programie Visual Studio do kompilowania starych projektów](../porting/use-native-multi-targeting.md).
+Ogólnie rzecz biorąc, zdecydowanie zalecamy użycie najnowszej wersji programu Visual Studio, nawet jeśli trzeba skompilować kod przy użyciu kompilatora programu Visual Studio 2015. Aby uzyskać więcej informacji, zobacz [Używanie natywnego wielu elementów docelowych w programie Visual Studio do kompilowania starych projektów](../porting/use-native-multi-targeting.md).
 
 ::: moniker-end
 

@@ -29,7 +29,7 @@ Definicja funkcji określa nazwę funkcji, typy i liczbę parametrów, które oc
 &nbsp;&nbsp;&nbsp;&nbsp;*deklaracja zewnętrzna* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklaracja zewnętrzna* *jednostki tłumaczenia*
 
-*deklaracja zewnętrzna*:/\* dozwolone tylko w zewnętrznym zakresie (pliku)\*/<br/>
+*deklaracja zewnętrzna*:/ \* dozwolone tylko w zewnętrznym zakresie (pliku)\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Definicja funkcji*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*oświadczeń*
 
@@ -52,13 +52,13 @@ Parametry prototypu:
 *deklarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>wybór</sub> wskaźnika *Direct-deklarator*
 
-*Direct-deklarator*:/\* A funkcja deklarator\*/<br/>
+*Direct-deklarator*:/ \* A funkcja deklarator\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(***Typ parametru-list***)**  / \* New-Style deklarator      \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(** nieważność*listy identyfikatorów*<sub>opt</sub> **)**  / \* — przestarzałe style deklarator    \*/
 
 Lista parametrów w definicji używa następującej składni:
 
-*Typ parametru-list*:/\* lista parametrów\*/<br/>
+*Typ parametru-list*:/ \* Lista parametrów\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* **,...**
 
@@ -72,7 +72,7 @@ Lista parametrów w definicji używa następującej składni:
 
 Lista parametrów w definicji funkcji starego stylu używa następującej składni:
 
-*Identyfikator-list*:/\* używany w definicjach i deklaracjach funkcji przestarzałego stylu\*/<br/>
+*Identyfikator-list*:/ \* używany w definicjach i deklaracjach funkcji przestarzałego stylu\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identyfikatora*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator — lista* **,**  *Identyfikator*
 
@@ -93,6 +93,6 @@ Opcjonalne *specyfikatory deklaracji* i obowiązkowe *deklarator* razem określa
 
 Sekcje [atrybutów funkcji](../c-language/function-attributes.md), [klasy magazynu](../c-language/storage-class.md), [typu zwracanego](../c-language/return-type.md), [parametrów](../c-language/parameters.md)i [treści funkcji](../c-language/function-body.md) opisują składniki definicji funkcji szczegółowo.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje](../c-language/functions-c.md)

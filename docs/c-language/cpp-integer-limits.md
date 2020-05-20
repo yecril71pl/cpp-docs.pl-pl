@@ -17,7 +17,7 @@ ms.locfileid: "72778374"
 
 **Specyficzne dla firmy Microsoft**
 
-Limity dla typów całkowitych w C i C++ są wymienione w poniższej tabeli. Limity te są zdefiniowane w standardowym pliku `<limits.h>`nagłówkowym C. Nagłówek `<limits>` standardowej biblioteki C++ zawiera `<climits>`, który obejmuje. `<limits.h>`
+Limity dla typów całkowitych w C i C++ są wymienione w poniższej tabeli. Limity te są zdefiniowane w standardowym pliku nagłówkowym C `<limits.h>` . Nagłówek standardowej biblioteki C++ `<limits>` zawiera `<climits>` , który obejmuje `<limits.h>` .
 
 Firma Microsoft C zezwala również na deklarowanie zmiennych liczb całkowitych, które są typami całkowitymi o rozmiarze 8-, 16-, 32-lub 64-bitowym. Aby uzyskać więcej informacji na temat rozmiarów liczb całkowitych w C, zobacz [rozmiar liczb całkowitych](../c-language/c-sized-integer-types.md).
 
@@ -49,6 +49,6 @@ Jeśli wartość przekracza największą reprezentację całkowitą, kompilator 
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Stałe całkowite języka C](../c-language/c-integer-constants.md)

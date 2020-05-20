@@ -15,7 +15,7 @@ ms.locfileid: "75556659"
 
 Aby poinformować program Visual Studio o sposobie tworzenia kodu źródłowego w projekcie otwartego folderu, Dodaj plik *Tasks. vs. JSON* . Możesz zdefiniować dowolne dowolne zadanie w tym miejscu, a następnie wywołać je z menu kontekstowego **Eksplorator rozwiązań** . Projekty CMake nie korzystają z tego pliku, ponieważ wszystkie polecenia kompilacji są określone w pliku *CMakeLists. txt*. W przypadku systemów kompilacji innych niż CMake, *Tasks. vs. JSON* to miejsce, w którym można określić polecenia kompilacji i wywołać skrypty kompilacji. Aby uzyskać ogólne informacje na temat korzystania z *zadań. vs. JSON*, zobacz [Dostosowywanie kompilacji i debugowania dla tworzenia aplikacji "Otwórz folder"](/visualstudio/ide/customize-build-and-debug-tasks-in-visual-studio).
 
-`type` Zadanie ma właściwość, która może mieć jedną z czterech wartości: `default`, `launch`, `remote`lub. `msbuild` Większość zadań powinna zostać `launch` użyta, chyba że jest wymagane połączenie zdalne.
+Zadanie ma `type` Właściwość, która może mieć jedną z czterech wartości: `default` , `launch` , `remote` lub `msbuild` . Większość zadań powinna zostać użyta `launch` , chyba że jest wymagane połączenie zdalne.
 
 ## <a name="default-properties"></a>Właściwości domyślne
 
@@ -29,11 +29,11 @@ Właściwości domyślne są dostępne dla wszystkich typów zadań:
 |`contextType`|ciąg| Dozwolone wartości: "Custom", "build", "Clean", "Rebuild". Określa, gdzie w menu kontekstowym zostanie wyświetlone zadanie. Wartość domyślna to "Custom".|
 |`output`|ciąg| Określa tag danych wyjściowych zadania.|
 |`inheritEnvironments`|tablica| Określa zestaw zmiennych środowiskowych dziedziczonych z wielu źródeł. Można definiować zmienne w plikach, takich jak *pliku cmakesettings. JSON* lub *pliku cppproperties. JSON* , a następnie udostępniać je kontekstowi zadania. **Visual Studio 16,4:**: Określanie zmiennych środowiskowych dla poszczególnych zadań przy użyciu `env.VARIABLE_NAME` składni. Aby cofnąć ustawienie zmiennej, ustaw ją na wartość "null".|
-|`passEnvVars`|wartość logiczna| Określa, czy dołączać dodatkowe zmienne środowiskowe do kontekstu zadania. Te zmienne różnią się od tych, które zostały `envVars` zdefiniowane przy użyciu właściwości. Wartość domyślna to "true".|
+|`passEnvVars`|wartość logiczna| Określa, czy dołączać dodatkowe zmienne środowiskowe do kontekstu zadania. Te zmienne różnią się od tych, które zostały zdefiniowane przy użyciu `envVars` właściwości. Wartość domyślna to "true".|
 
 ## <a name="launch-properties"></a>Właściwości uruchamiania
 
-Gdy typ zadania to `launch`, te właściwości są dostępne:
+Gdy typ zadania to `launch` , te właściwości są dostępne:
 
 ||||
 |-|-|-|
@@ -43,13 +43,13 @@ Gdy typ zadania to `launch`, te właściwości są dostępne:
 |`launchOption`|ciąg| Dozwolone wartości: "none", "ContinueOnError", "IgnoreError". Określa, jak kontynuować polecenie w przypadku wystąpienia błędów.|
 |`workingDirectory`|ciąg| Określa katalog, w którym zostanie uruchomione polecenie. Domyślnie jest bieżącym katalogiem roboczym projektu.|
 |`customLaunchCommand`|ciąg| Określa globalne dostosowanie zakresu do zastosowania przed wykonaniem polecenia. Przydatne do ustawiania zmiennych środowiskowych, takich jak% PATH%.|
-|`customLaunchCommandArgs`|ciąg| Określa argumenty do customLaunchCommand. (Wymagane `customLaunchCommand`).|
+|`customLaunchCommandArgs`|ciąg| Określa argumenty do customLaunchCommand. (Wymagane `customLaunchCommand` ).|
  `env`| Określa listę klucz-wartość niestandardowych zmiennych środowiskowych. Na przykład "myEnv": "myVal"|
 |`commands`|tablica| Określa listę poleceń do wywołania w kolejności.|
 
 ### <a name="example"></a>Przykład
 
-Następujące zadania wywołują program make *. exe* , gdy plik reguł programu make jest dostępny w `Mingw64` folderze, a środowisko zostało zdefiniowane w pliku *pliku cppproperties. JSON*, jak pokazano w [dokumentacji schematu pliku cppproperties. JSON](cppproperties-schema-reference.md#user_defined_environments):
+Następujące zadania wywołują program make *. exe* , gdy plik reguł programu make jest dostępny w folderze, a `Mingw64` środowisko zostało zdefiniowane w pliku *pliku cppproperties. JSON*, jak pokazano w [dokumentacji schematu pliku cppproperties. JSON](cppproperties-schema-reference.md#user_defined_environments):
 
 ```json
  {
@@ -86,7 +86,7 @@ Te zadania mogą być wywoływane z menu kontekstowego po kliknięciu prawym prz
 
 Zadania zdalne są włączane podczas instalowania środowiska wdrażania systemu Linux przy użyciu obciążenia C++ i dodawania połączenia z komputerem zdalnym za pomocą Menedżera połączeń programu Visual Studio. Zadanie zdalne uruchamia polecenia w systemie zdalnym i może również kopiować do niego pliki.
 
-Gdy typ zadania to `remote`, te właściwości są dostępne:
+Gdy typ zadania to `remote` , te właściwości są dostępne:
 
 ||||
 |-|-|-|
@@ -127,13 +127,13 @@ Następujące zadanie zostanie wyświetlone w menu kontekstowym po kliknięciu p
 
 ## <a name="msbuild-properties"></a>właściwości programu MSBuild
 
-Gdy typ zadania to `msbuild`, te właściwości są dostępne:
+Gdy typ zadania to `msbuild` , te właściwości są dostępne:
 
 ||||
 |-|-|-|
 |**Właściwość**|**Typ**|**Opis**|
 |`verbosity`|ciąg| Określa wartość verbosityAllowed danych wyjściowych kompilacji projektu programu MSBuild: "quiet", "minimalny", "normalny", "szczegółowy", "Diagnostyka".|
 |`toolsVersion`|ciąg| Określa wersję zestawu narzędzi do kompilowania projektu, na przykład "2,0", "3,5", "4,0", "Current". Wartość domyślna to "Current".|
-|`globalProperties`|obiekt|Określa listę klucz-wartość właściwości globalnych do przekazania do projektu, na przykład "Konfiguracja": "wersja"|
-|`properties`|obiekt| Określa listę klucz-wartość dodatkowych właściwości tylko dla projektu.|
+|`globalProperties`|object|Określa listę klucz-wartość właściwości globalnych do przekazania do projektu, na przykład "Konfiguracja": "wersja"|
+|`properties`|object| Określa listę klucz-wartość dodatkowych właściwości tylko dla projektu.|
 |`targets`|tablica| Określa listę elementów docelowych do wywołania, w kolejności, w projekcie. Domyślny element docelowy projektu jest używany, jeśli nie określono żadnego z nich.|

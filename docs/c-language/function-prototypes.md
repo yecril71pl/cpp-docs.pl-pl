@@ -37,12 +37,12 @@ Deklaracja funkcji poprzedza definicję funkcji i określa nazwę, typ zwracany,
 
 *init-deklarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *inicjator* deklarator
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarator* **=** *inicjator*
 
 *deklarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>wybór</sub> wskaźnika *Direct-deklarator*
 
-*Direct-deklarator*:/\* A funkcja deklarator\*/<br/>
+*Direct-deklarator*:/ \* A funkcja deklarator\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(***Typ parametru-list***)**   / \* New-Style deklarator      \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(** nieważność*listy identyfikatorów*<sub>opt</sub> **)**  / \* — przestarzałe style deklarator    \*/
 
@@ -62,7 +62,7 @@ Przekonwertowany typ każdego parametru określa interpretację argumentów wywo
 
 Prototyp tworzy atrybuty funkcji tak, aby wywołania funkcji, która poprzedza jej definicję (lub wystąpią w innych plikach źródłowych), można sprawdzić pod kątem typu argumentu i niezgodności typów zwracanych. Na przykład, jeśli określisz **statyczny** specyfikator klasy magazynu w prototypie, należy również określić klasę magazynu **statycznego** w definicji funkcji.
 
-Kompletne deklaracje parametrów`int a`() mogą być mieszane z abstrakcyjną`int`Deklaratory () w tej samej deklaracji. Na przykład następująca deklaracja ma charakter prawny:
+Kompletne deklaracje parametrów ( `int a` ) mogą być mieszane z abstrakcyjną Deklaratory ( `int` ) w tej samej deklaracji. Na przykład następująca deklaracja ma charakter prawny:
 
 ```C
 int add( int a, int );
@@ -85,6 +85,6 @@ void func1( struct S * );
 
 W obszarze **/ze**tag nadal jest wprowadzany w zakresie globalnym.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcje](../c-language/functions-c.md)
