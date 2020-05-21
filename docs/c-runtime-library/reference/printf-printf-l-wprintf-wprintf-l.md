@@ -41,16 +41,16 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 7992649a13c2e103077c6311e1987fad80a99837
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
+ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950206"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83759241"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf, _printf_l, wprintf, _wprintf_l
 
-Drukuje sformatowane dane wyjściowe w standardowym strumieniu wyjściowym. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](printf-s-printf-s-l-wprintf-s-wprintf-s-l.md).
+Drukuje sformatowane dane wyjściowe w standardowym strumieniu wyjściowym. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [printf_s, _printf_s_l, wprintf_s _wprintf_s_l](printf-s-printf-s-l-wprintf-s-wprintf-s-l.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -77,7 +77,7 @@ int _wprintf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*format*<br/>
+*Formatowanie*<br/>
 Kontrolka formatu.
 
 *argument*<br/>
@@ -102,7 +102,7 @@ Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korz
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowany|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|zdefiniowano _unicode|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tprintf**|**printf**|**printf**|**wprintf**|
 
@@ -135,8 +135,8 @@ Line one
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**printf**, **_printf_l**|\<stdio.h>|
-|**wprintf**, **_wprintf_l**|\<stdio. h > lub \<WCHAR. h >|
+|**printf**, **_printf_l**|\<stdio. h>|
+|**wprintf**, **_wprintf_l**|\<stdio. h> lub \< WCHAR. h>|
 
 Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -226,14 +226,15 @@ Real numbers:
 Address as:   0012FF3C
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Składnia specyfikacji formatu: funkcje printf i wprintf](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
-[vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)<br/>
+[sprintf —, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[Funkcje vprintf —](../../c-runtime-library/vprintf-functions.md)<br/>
 [_set_output_format](../../c-runtime-library/set-output-format.md)<br/>
