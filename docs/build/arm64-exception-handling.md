@@ -2,12 +2,12 @@
 title: Obsługa wyjątków ARM64
 description: Opisuje konwencje obsługi wyjątków i dane używane przez system Windows w systemie ARM64.
 ms.date: 11/19/2018
-ms.openlocfilehash: 2304c04c5e9be31299e30bb48771f7c9777d1cd5
-ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
+ms.openlocfilehash: abc77aa683e73a2740c71ffbd7ddead07f91ff7d
+ms.sourcegitcommit: 5bb421fdf61d290cac93a03e16a6a80959accf6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504481"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83854830"
 ---
 # <a name="arm64-exception-handling"></a>Obsługa wyjątków ARM64
 
@@ -55,9 +55,9 @@ Te założenia są wprowadzane w opisie obsługi wyjątków:
 
 ![Układ ramki stosu](media/arm64-exception-handling-stack-frame.png "Układ ramki stosu")
 
-W przypadku funkcji łańcucha ramek FP i LR można zapisać w dowolnym miejscu w obszarze zmiennej lokalnej, w zależności od kwestii optymalizacji. Celem jest maksymalizacja liczby miejsc, do których można uzyskać dostęp za pomocą jednej instrukcji na podstawie wskaźnika ramki (x29) lub wskaźnika stosu (SP). Jednak w przypadku `alloca` funkcji musi być łańcuchem, a x29 musi wskazywać na dół stosu. Aby umożliwić lepsze pokrycie w trybie par rejestracji, nielotne obszary zapisywania są umieszczane w górnej części stosu lokalnego. Poniżej przedstawiono przykłady ilustrujące kilka najbardziej wydajnych sekwencji prologu. W celu zapewnienia przejrzystości i lepszej lokalizacji pamięci podręcznej kolejność przechowywania zapisywanych rejestrów we wszystkich kanonicznych dziennikach jest w kolejności "rosnąco". `#framesz`poniżej przedstawia rozmiar całego stosu (z wyłączeniem obszaru alloca). `#localsz`i `#outsz` należy zauważyć, że rozmiar lokalnego obszaru (w tym obszar zapisu \<dla pary x29, LR>) i wyjściowy rozmiar parametru jest odpowiednio.
+W przypadku funkcji łańcucha ramek FP i LR można zapisać w dowolnym miejscu w obszarze zmiennej lokalnej, w zależności od kwestii optymalizacji. Celem jest maksymalizacja liczby miejsc, do których można uzyskać dostęp za pomocą jednej instrukcji na podstawie wskaźnika ramki (x29) lub wskaźnika stosu (SP). Jednak w przypadku `alloca` funkcji musi być łańcuchem, a x29 musi wskazywać na dół stosu. Aby umożliwić lepsze pokrycie w trybie par rejestracji, nielotne obszary zapisywania są umieszczane w górnej części stosu lokalnego. Poniżej przedstawiono przykłady ilustrujące kilka najbardziej wydajnych sekwencji prologu. W celu zapewnienia przejrzystości i lepszej lokalizacji pamięci podręcznej kolejność przechowywania zapisywanych rejestrów we wszystkich kanonicznych dziennikach jest w kolejności "rosnąco". `#framesz`poniżej przedstawia rozmiar całego stosu (z wyłączeniem obszaru alloca). `#localsz`i `#outsz` należy zauważyć, że rozmiar lokalnego obszaru (w tym obszar zapisu dla \< pary x29, LR>) i wyjściowy rozmiar parametru jest odpowiednio.
 
-1. Łańcuchy, #localsz \<= 512
+1. Łańcuchy, #localsz \< = 512
 
     ```asm
         stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -96,7 +96,7 @@ W przypadku funkcji łańcucha ramek FP i LR można zapisać w dowolnym miejscu 
         sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   Wszystkie elementy lokalne są dostępne w oparciu o SP. \<x29, LR> wskazuje na poprzednią ramkę. Dla ramki size \<= 512, "Sub SP,..." można je zoptymalizować w przypadku przeniesienia zapisanego obszaru REGS na dół stosu. Minusem polega na tym, że nie jest on spójny z innymi układami powyżej, i zapisano REGS wziąć część zakresu dla trybu parowania z funkcją para-regs i indeksem wstępnym i indeksowanym.
+   Wszystkie elementy lokalne są dostępne w oparciu o SP. \<x29, LR> wskazuje na poprzednią ramkę. Dla ramki size \< = 512, "Sub SP,..." można je zoptymalizować w przypadku przeniesienia zapisanego obszaru REGS na dół stosu. Minusem polega na tym, że nie jest on spójny z innymi układami powyżej, i zapisano REGS wziąć część zakresu dla trybu parowania z funkcją para-regs i indeksem wstępnym i indeksowanym.
 
 1. Niełańcuchowe funkcje, które nie są typu liść (LR są zapisywane w obszarze zapisanym int)
 
@@ -132,7 +132,7 @@ W przypadku funkcji łańcucha ramek FP i LR można zapisać w dowolnym miejscu 
 
    Wszystkie elementy lokalne są dostępne w oparciu o SP. \<x29> wskazuje na poprzednią ramkę.
 
-1. Łańcuchy, #framesz \<= 512, #outsz = 0
+1. Łańcuchy, #framesz \< = 512, #outsz = 0
 
     ```asm
         stp    x29,lr,[sp,#-framesz]!       // pre-indexed, save <x29,lr>
@@ -286,33 +286,28 @@ Kody operacji unwind są kodowane zgodnie z poniższą tabelą. Wszystkie kody o
 
 |Kod unwind|Bity i interpretacja|
 |-|-|
-|`alloc_s`|000XXXXX: Przydziel mały stos z \< rozmiarem 512 (2 ^ 5 * 16).|
-|`save_r19r20_x`|    001zzzzz: Zapisz \<parę x19, x20> w `[sp-#Z*8]!`, wstępnie indeksowanym przesunięciu >=-248 |
-|`save_fplr`|        01zzzzzz: Save \<x29, LR> par w `[sp+#Z*8]`, offset \<= 504. |
-|`save_fplr_x`|        10zzzzzz: Zapisz \<parę x29, LR> w `[sp-(#Z+1)*8]!`, wstępnie indeksowanym przesunięciu >=-512 |
-|`alloc_m`|        11000xxx'xxxxxxxx: Przydziel duży stos o \< rozmiarze 16 KB (2 ^ 11 * 16). |
-|`save_regp`|        110010xx'xxzzzzzz: Zapisz parę x (19 + #X) w `[sp+#Z*8]`, offset \<= 504 |
-|`save_regp_x`|        110011xx'xxzzzzzz: Zapisz parę x (19 + #X) w `[sp-(#Z+1)*8]!`, wstępnie indeksowanym przesunięciu >=-512 |
-|`save_reg`|        110100xx'xxzzzzzz: Zapisz reg x (19 + #X) o `[sp+#Z*8]`, offset \<= 504 |
-|`save_reg_x`|        1101010x'xxxzzzzz: Zapisz reg x (19 + #X) w `[sp-(#Z+1)*8]!`, wstępnie indeksowanym przesunięciu >=-256 |
-|`save_lrpair`|         1101011x'xxzzzzzz: Zapisz parę \<x (19 + 2 * #X), LR> o `[sp+#Z*8]`, offset \<= 504 |
-|`save_fregp`|        1101100x'xxzzzzzz: Zapisz parę d (8 + #X) o `[sp+#Z*8]`, offset \<= 504 |
-|`save_fregp_x`|        1101101x'xxzzzzzz: Zapisz parę d (8 + #X) w `[sp-(#Z+1)*8]!`, wstępnie indeksowanym przesunięciu >=-512 |
-|`save_freg`|        1101110x'xxzzzzzz: Zapisz reg d (8 + #X) o `[sp+#Z*8]`, offset \<= 504 |
-|`save_freg_x`|        11011110 ' xxxzzzzz: Zapisz reg d (8 + #X) o `[sp-(#Z+1)*8]!`, wstępnie indeksowanym przesunięciu >=-256 |
-|`alloc_l`|         11100000 "xxxxxxxx'xxxxxxxx'xxxxxxxx: Przydziel duży stos o \< rozmiarze 256M (2 ^ 24 * 16) |
+|`alloc_s`|000XXXXX: Przydziel mały stos z rozmiarem \< 512 (2 ^ 5 * 16).|
+|`save_r19r20_x`|    001zzzzz: Zapisz \< parę x19, x20> w `[sp-#Z*8]!` , wstępnie indeksowanym przesunięciu >=-248 |
+|`save_fplr`|        01zzzzzz: Save \< x29, lr> par w `[sp+#Z*8]` , offset \< = 504. |
+|`save_fplr_x`|        10zzzzzz: Zapisz \< parę x29, lr> w `[sp-(#Z+1)*8]!` , wstępnie indeksowanym przesunięciu >=-512 |
+|`alloc_m`|        11000xxx'xxxxxxxx: Przydziel duży stos o rozmiarze \< 16 KB (2 ^ 11 * 16). |
+|`save_regp`|        110010xx'xxzzzzzz: Zapisz parę x (19 + #X) w `[sp+#Z*8]` , offset \< = 504 |
+|`save_regp_x`|        110011xx'xxzzzzzz: Zapisz parę x (19 + #X) w `[sp-(#Z+1)*8]!` , wstępnie indeksowanym przesunięciu >=-512 |
+|`save_reg`|        110100xx'xxzzzzzz: Zapisz reg x (19 + #X) o `[sp+#Z*8]` , offset \< = 504 |
+|`save_reg_x`|        1101010x'xxxzzzzz: Zapisz reg x (19 + #X) w `[sp-(#Z+1)*8]!` , wstępnie indeksowanym przesunięciu >=-256 |
+|`save_lrpair`|         1101011x'xxzzzzzz: Zapisz parę \< x (19 + 2 * #X), lr> o `[sp+#Z*8]` , offset \< = 504 |
+|`save_fregp`|        1101100x'xxzzzzzz: Zapisz parę d (8 + #X) o `[sp+#Z*8]` , offset \< = 504 |
+|`save_fregp_x`|        1101101x'xxzzzzzz: Zapisz parę d (8 + #X) w `[sp-(#Z+1)*8]!` , wstępnie indeksowanym przesunięciu >=-512 |
+|`save_freg`|        1101110x'xxzzzzzz: Zapisz reg d (8 + #X) o `[sp+#Z*8]` , offset \< = 504 |
+|`save_freg_x`|        11011110 ' xxxzzzzz: Zapisz reg d (8 + #X) o `[sp-(#Z+1)*8]!` , wstępnie indeksowanym przesunięciu >=-256 |
+|`alloc_l`|         11100000 "xxxxxxxx'xxxxxxxx'xxxxxxxx: Przydziel duży stos o rozmiarze \< 256M (2 ^ 24 * 16) |
 |`set_fp`|        11100001: Skonfiguruj x29: w:`mov x29,sp` |
 |`add_fp`|        11100010 ' XXXXXXXX: Skonfiguruj x29 przy użyciu:`add x29,sp,#x*8` |
 |`nop`|            11100011: nie jest wymagana żadna operacja operacji unwind. |
 |`end`|            11100100: koniec kodu unwind. Oznacza RET w epilogu. |
 |`end_c`|        11100101: koniec kodu unwind w bieżącym zakresie łańcucha. |
 |`save_next`|        11100110: Zapisz następną parę rejestrów int lub FP. |
-|`arithmetic(add)`|    11100111 ' 000zxxxx: Dodaj plik cookie reg (z) do LR (0 = x28, 1 = SP);`add lr, lr, reg(z)` |
-|`arithmetic(sub)`|    11100111 ' 001zxxxx: subcookie reg (z) z LR (0 = x28, 1 = SP);`sub lr, lr, reg(z)` |
-|`arithmetic(eor)`|    11100111 ' 010zxxxx: EOR LR with cookie reg (z) (0 = x28, 1 = SP);`eor lr, lr, reg(z)` |
-|`arithmetic(rol)`|    11100111 ' 0110xxxx: symulowane roli of LR z plikiem cookie reg (x28); xip0 = minus x28;`ror lr, xip0` |
-|`arithmetic(ror)`|    11100111 ' 100zxxxx: ROR LR with cookie reg (z) (0 = x28, 1 = SP);`ror lr, lr, reg(z)` |
-| |            11100111: xxxz----:----zarezerwowane |
+| |            11100111: zarezerwowane |
 | |              11101xxx: zarezerwowane dla niestandardowych przypadków sterty poniżej wygenerowane tylko dla procedur ASM |
 | |              11101000: niestandardowy stos dla MSFT_OP_TRAP_FRAME |
 | |              11101001: niestandardowy stos dla MSFT_OP_MACHINE_FRAME |
@@ -322,13 +317,13 @@ Kody operacji unwind są kodowane zgodnie z poniższą tabelą. Wszystkie kody o
 
 W instrukcji z dużymi wartościami obejmującymi wiele bajtów, najbardziej znaczące bity są przechowywane jako pierwsze. Ten projekt umożliwia znalezienie łącznego rozmiaru w bajtach kodu unwind przez wyszukanie tylko pierwszego bajtu kodu. Ponieważ każdy kod operacji unwind jest dokładnie mapowany do instrukcji w prologu lub epilogu, można obliczyć rozmiar prologu lub epilogu. Możesz sprawdzić od początku sekwencji do końca i użyć tabeli odnośników lub podobnego urządzenia, aby określić, jak długo jest odpowiedni opcode.
 
-Adresowanie przesunięcia indeksowanego po indeksie nie jest dozwolone w prologu. Wszystkie zakresy przesunięcia (#Z) pasują do kodowania wartości STP/STR `save_r19r20_x`Addressing, z wyjątkiem, w których 248 jest wystarczająca dla wszystkich obszarów zapisu (10 int rejestrów + 8 FP rejestrów wejściowych + 8).
+Adresowanie przesunięcia indeksowanego po indeksie nie jest dozwolone w prologu. Wszystkie zakresy przesunięcia (#Z) pasują do kodowania wartości STP/STR Addressing, z wyjątkiem `save_r19r20_x` , w których 248 jest wystarczająca dla wszystkich obszarów zapisu (10 int rejestrów + 8 FP rejestrów wejściowych + 8).
 
-`save_next`należy przestrzegać pary rejestrowania nietrwałej int `save_regp`lub FP:, `save_regp_x`, `save_fregp` `save_fregp_x` `save_r19r20_x`,, lub innej. `save_next` Zapisuje następną parę rejestru w następnym 16-bajtowym gnieździe w kolejności "rosnąco". A `save_next` odnosi się do pierwszej pary REJESTRów FP, gdy `save-next` następuje po tej wartości, która wskazuje ostatnią parę rejestrów int.
+`save_next`należy przestrzegać pary rejestrowania nietrwałej int lub FP: `save_regp` ,,,, `save_regp_x` `save_fregp` `save_fregp_x` `save_r19r20_x` lub innej `save_next` . Zapisuje następną parę rejestru w następnym 16-bajtowym gnieździe w kolejności "rosnąco". A `save_next` odnosi się do pierwszej pary rejestrów FP, gdy następuje po `save-next` tej wartości, która wskazuje ostatnią parę rejestrów int.
 
 Ponieważ rozmiar i instrukcje regularnego powrotu i przeskoku są takie same, nie ma potrzeby rozdzielnego `end` kodu unwind dla scenariuszy wywołania tail.
 
-`end_c`jest przeznaczony do obsługi fragmentów funkcji niesąsiadujących na potrzeby optymalizacji. `end_c` A wskazujące na zakończenie kodów operacji unwind w bieżącym zakresie musi następować inna seria kodu operacji unwind z rzeczywistą `end`. Kody operacji unwind `end_c` między `end` i reprezentują operacje prologu w regionie nadrzędnym (prologu).  Więcej szczegółów i przykładów opisano w sekcji poniżej.
+`end_c`jest przeznaczony do obsługi fragmentów funkcji niesąsiadujących na potrzeby optymalizacji. `end_c`A wskazujące na zakończenie kodów operacji unwind w bieżącym zakresie musi następować inna seria kodu operacji unwind z rzeczywistą `end` . Kody operacji unwind między `end_c` i `end` reprezentują operacje prologu w regionie nadrzędnym (prologu).  Więcej szczegółów i przykładów opisano w sekcji poniżej.
 
 ### <a name="packed-unwind-data"></a>Spakowane dane operacji unwind
 
@@ -349,15 +344,15 @@ Pola są następujące:
 - **Długość funkcji** jest polem 11-bitowym dostarczającym długość całej funkcji w bajtach podzieloną przez 4. Jeśli funkcja jest większa niż 8k, zamiast tego należy użyć pełnego rekordu. xdata.
 - **Rozmiar ramki** to pole 9-bitowe wskazujące liczbę bajtów stosu przydzielonego dla tej funkcji, podzieloną przez 16. Funkcje, które przydzielą większe niż (8k-16) bajty stosu, muszą używać pełnego rekordu. xdata. Obejmuje obszar zmiennych lokalnych, obszar parametrów wychodzących, zapisywany obszar int i FP oraz obszar parametrów macierzystych, ale wyklucza obszar alokacji dynamicznej.
 - **CR** jest flagą 2-bitową wskazującą, czy funkcja zawiera dodatkowe instrukcje dotyczące konfigurowania łańcucha ramek i łącza zwrotnego:
-  - 00 = Funkcja, \<x29, LR> para nie jest zapisywana w stosie.
-  - 01 = funkcja niełańcuchowa, \<LR> jest zapisywana w stosie
+  - 00 = Funkcja, \< x29, LR> para nie jest zapisywana w stosie.
+  - 01 = funkcja niełańcuchowa, \< lr> jest zapisywana w stosie
   - 10 = zarezerwowane;
-  - 11 = funkcja łańcuchowa, instrukcja magazynu/pary ładowania jest używana w prologu/epilogu \<x29, LR>
+  - 11 = funkcja łańcuchowa, instrukcja magazynu/pary ładowania jest używana w prologu/epilogu \< x29, lr>
 - **H** jest flagą 1-bitową wskazującą, czy funkcja jest domachowa do rejestrów parametrów liczb całkowitych (x0-120) przez przechowywanie ich na bardzo rozpoczęciu funkcji. (0 = nie zawiera rejestrów domowych, 1 = Rejestr domy).
 - **RegI** to pole 4-bitowe wskazujące liczbę rejestrów nietrwałych int (x19-x28) zapisanych w lokalizacji stosu kanonicznego.
 - **RegF** to pole 3-bitowe wskazujące liczbę rejestrów nietrwałych FP (D8-D15) zapisanych w lokalizacji stosu kanonicznego. (RegF = 0: nie zapisano żadnego rejestru FP; RegF>0: rejestry RegF + 1 FP są zapisywane). Spakowane dane unwind nie mogą być używane dla funkcji, która zapisuje tylko jeden rejestr FP.
 
-Dzienniki kanoniczne, które znajdują się w kategoriach 1, 2 (bez wychodzącego obszaru parametrów), 3 i 4 w powyższej sekcji mogą być reprezentowane przez spakowany format unwind.  Epilogs dla funkcji kanonicznych podążają za podobnym formularzem, z wyjątkiem **H** nie `set_fp` ma wpływu, instrukcja zostanie pominięta, a porządek kroków i instrukcje w każdym kroku są odwrócone w epilogu. Algorytm spakowanej. xdata wykonuje następujące kroki, szczegółowo w poniższej tabeli:
+Dzienniki kanoniczne, które znajdują się w kategoriach 1, 2 (bez wychodzącego obszaru parametrów), 3 i 4 w powyższej sekcji mogą być reprezentowane przez spakowany format unwind.  Epilogs dla funkcji kanonicznych podążają za podobnym formularzem, z wyjątkiem **H** nie ma wpływu, `set_fp` instrukcja zostanie pominięta, a porządek kroków i instrukcje w każdym kroku są odwrócone w epilogu. Algorytm spakowanej. xdata wykonuje następujące kroki, szczegółowo w poniższej tabeli:
 
 Krok 0: wstępne Obliczanie rozmiaru każdego obszaru.
 
@@ -369,7 +364,7 @@ Krok 3. zapisywanie zapisywanych rejestrów FP.
 
 Krok 4. zapisywanie argumentów wejściowych w obszarze parametru macierzystego.
 
-Krok 5. przydzielanie pozostałych stosów, w tym \<obszaru lokalnego, x29, LR> i wychodzącego obszaru parametrów. 5a odnosi się do typu kanonicznego 1. 5B i 5c są dla typu kanonicznego 2. 5D i 5e są dla obu typów 3 i 4.
+Krok 5. przydzielanie pozostałych stosów, w tym obszaru lokalnego, \< x29, lr> i wychodzącego obszaru parametrów. 5a odnosi się do typu kanonicznego 1. 5B i 5c są dla typu kanonicznego 2. 5D i 5e są dla obu typów 3 i 4.
 
 Czynności #|Oflaguj wartości|Liczba instrukcji|Kod operacji|Kod unwind
 -|-|-|-|-
@@ -386,7 +381,7 @@ Czynności #|Oflaguj wartości|Liczba instrukcji|Kod operacji|Kod unwind
 
 \*Jeśli **CR** = = 01 i **RegI** jest liczbą nieparzystą, krok 2 i ostatni save_rep w kroku 1 są scalone w jeden save_regp.
 
-\*\*Jeśli **RegI** == **CR** = = 0, a **RegF** ! = 0, pierwsza wartość STP dla zmiennoprzecinkowego wykonuje wstępne zmniejszenie.
+\*\*Jeśli **RegI**  ==  **CR** = = 0, a **RegF** ! = 0, pierwsza wartość STP dla zmiennoprzecinkowego wykonuje wstępne zmniejszenie.
 
 \*\*\*Żadne instrukcje nie `mov x29,sp` są obecne w epilogu. Nie można użyć spakowanych danych operacji unwind, jeśli funkcja wymaga przywrócenia elementu Sp z x29.
 
@@ -476,17 +471,17 @@ Typowym przypadkiem fragmentów funkcji jest "separacja kodu" z tym kompilatorem
 
    Należy opisać tylko Prolog. Nie można go przedstawić w formacie Compact. pdata. W pełnej xdata przypadku może być reprezentowane przez ustawienie epilogu Count = 0. Zobacz region 1 w powyższym przykładzie.
 
-   Kody operacji unwind `save_regp 0,240`: `save_fplr_x_256` `set_fp`, `end`,,.
+   Kody operacji unwind: `set_fp` , `save_regp 0,240` , `save_fplr_x_256` , `end` .
 
 1. Tylko epilogs (region 2: Prolog znajduje się w regionie hosta)
 
-   Przyjmuje się, że przez kontrolkę czas przeskoczy do tego regionu, wszystkie kody prologu zostały wykonane. Częściowe odwinięcie może wystąpić w epilogs w taki sam sposób jak w przypadku normalnej funkcji. Tego typu regionu nie można reprezentować przez Compact. pdata. W pełnym rekordzie. xdata może być zakodowana przy użyciu prologu "fantomu", który jest `end_c` poddany przez parę kodu i `end` .  Interlinia `end_c` wskazuje rozmiar prologu równy zero. Epilogu początkowy indeks pojedynczych punktów epilogu do `set_fp`.
+   Przyjmuje się, że przez kontrolkę czas przeskoczy do tego regionu, wszystkie kody prologu zostały wykonane. Częściowe odwinięcie może wystąpić w epilogs w taki sam sposób jak w przypadku normalnej funkcji. Tego typu regionu nie można reprezentować przez Compact. pdata. W pełnym rekordzie. xdata może być zakodowana przy użyciu prologu "fantomu", który jest poddany przez `end_c` `end` parę kodu i.  Interlinia `end_c` wskazuje rozmiar prologu równy zero. Epilogu początkowy indeks pojedynczych punktów epilogu do `set_fp` .
 
-   Kod unwind dla regionu 2 `end_c`: `set_fp`, `save_regp 0,240` `save_fplr_x_256`,, `end`,.
+   Kod unwind dla regionu 2:,,,, `end_c` `set_fp` `save_regp 0,240` `save_fplr_x_256` `end` .
 
 1. Brak dzienników lub epilogs (region 3: zarejestrowanie i wszystkie epilogs znajdują się w innych fragmentach):
 
-   Format Compact. pdata można zastosować za pośrednictwem flagi ustawień = 10. W przypadku pełnego rekordu. xdata liczba epilogu = 1. Kod unwind jest taki sam jak kod dla regionu 2, ale indeks początkowy epilogu wskazuje również na `end_c`. Częściowe odwinięcie nie będzie nigdy wykonywane w tym regionie kodu.
+   Format Compact. pdata można zastosować za pośrednictwem flagi ustawień = 10. W przypadku pełnego rekordu. xdata liczba epilogu = 1. Kod unwind jest taki sam jak kod dla regionu 2, ale indeks początkowy epilogu wskazuje również na `end_c` . Częściowe odwinięcie nie będzie nigdy wykonywane w tym regionie kodu.
 
 Innym bardziej skomplikowanym przypadkiem fragmentów funkcji jest "Zmniejsz Zawijanie". Kompilator może zdecydować się na opóźnienie zapisywania niedozwolonych, zapisywanych rejestrów, aż poza funkcją prologu wejścia funkcji.
 
@@ -521,9 +516,9 @@ Innym bardziej skomplikowanym przypadkiem fragmentów funkcji jest "Zmniejsz Zaw
 
 W prologu regionu 1 przestrzeń stosu jest wstępnie przypisana. Zobaczysz, że region 2 będzie miał ten sam kod operacji unwindy nawet wtedy, gdy jego funkcja hosta została przeniesiona.
 
-Region 1: `set_fp`, `save_regp 0,240` `save_fplr_x_256`,, `end` z indeksem początkowym epilogu `set_fp` , wskazuje na jak zwykle.
+Region 1: `set_fp` ,,, `save_regp 0,240` `save_fplr_x_256` `end` z indeksem początkowym epilogu, wskazuje na `set_fp` jak zwykle.
 
-Region 2: `save_regp 2, 224`, `end_c` `set_fp` `save_regp 0,240` `save_fplr_x_256`,,, `end`. Epilogu początkowy Indeks wskazuje na pierwszy kod `save_regp 2, 224`operacji unwind.
+Region 2:,,,, `save_regp 2, 224` `end_c` `set_fp` `save_regp 0,240` `save_fplr_x_256` `end` . Epilogu początkowy Indeks wskazuje na pierwszy kod operacji unwind `save_regp 2, 224` .
 
 ### <a name="large-functions"></a>Duże funkcje
 
@@ -628,7 +623,7 @@ Indeks początkowy epilogu [0] wskazuje tę samą sekwencję kodu unwindy prolog
 
 Indeks początkowy epilogu (4) wskazuje na środek kodu unwindy prologu (częściowo ponownie używany tablicę operacji unwind).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Omówienie Konwencji ABI ARM64](arm64-windows-abi-conventions.md)<br/>
+[Przegląd konwencji ABI ARM64](arm64-windows-abi-conventions.md)<br/>
 [Obsługa wyjątków ARM](arm-exception-handling.md)
