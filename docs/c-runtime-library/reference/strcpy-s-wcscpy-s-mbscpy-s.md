@@ -1,6 +1,6 @@
 ---
 title: strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
-ms.date: 4/2/2020
+ms.date: 5/28/2020
 api_name:
 - wcscpy_s
 - _mbscpy_s
@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: d2d13939f0edde278b96a9d82fcbe82b6abe5d0a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d8cfbc97f6c2a6d865a1436a276641a4d8f93713
+ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911847"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206196"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
@@ -116,12 +116,12 @@ errno_t _mbscpy_s_l(
 Lokalizacja buforu ciągu docelowego.
 
 *dest_size*<br/>
-Rozmiar buforu ciągu docelowego w jednostkach **char** dla funkcji wąskich i wielobajtowych oraz **wchar_t** jednostek dla szerokich funkcji. Ta wartość musi być większa od zera i nie większa niż **RSIZE_MAX**.
+Rozmiar buforu ciągu docelowego w jednostkach **char** dla funkcji wąskich i wielobajtowych oraz **wchar_t** jednostek dla szerokich funkcji. Ta wartość musi być większa od zera i nie większa niż **RSIZE_MAX**. Upewnij się, że w tym rozmiarze są używane konta kończące się `NULL` po ciągu.
 
 *src*<br/>
 Bufor ciągu źródła zakończony znakiem null.
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -132,9 +132,9 @@ Zero, jeśli pomyślne; w przeciwnym razie wystąpi błąd.
 
 |*dest*|*dest_size*|*src*|Wartość zwracana|Zawartość miejsca *docelowego*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL**|ile|ile|**EINVAL**|nie zmodyfikowano|
-|ile|ile|**NULL**|**EINVAL**|*cel*[0] ustawiony na 0|
-|ile|0 lub za mały|ile|**ERANGE**|*cel*[0] ustawiony na 0|
+|**NULL**|dowolny|dowolny|**EINVAL**|nie zmodyfikowano|
+|dowolny|dowolny|**NULL**|**EINVAL**|*cel*[0] ustawiony na 0|
+|dowolny|0 lub za mały|dowolny|**ERANGE**|*cel*[0] ustawiony na 0|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -162,9 +162,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strcpy_s**|\<> String. h|
-|**wcscpy_s**|\<ciąg. h> lub \<WCHAR. h>|
-|**_mbscpy_s**|\<mbstring. h>|
+|**strcpy_s**|\<string.h>|
+|**wcscpy_s**|\<string.h> lub \<wchar.h>|
+|**_mbscpy_s**|\<mbstring.h>|
 
 Te funkcje są specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -231,7 +231,7 @@ int main(void)
 String = Hello world from wcscpy_s and wcscat_s!
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [strcat, wcscat, _mbscat, _mbscat_l](strcat-wcscat-mbscat.md) <br/>
