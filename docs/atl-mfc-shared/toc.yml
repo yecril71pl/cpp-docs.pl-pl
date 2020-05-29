@@ -6,7 +6,6 @@
     - name: Pojęcia związane z ATL-MFC
       href: ../atl-mfc-shared/atl-mfc-concepts.md
     - name: Data i godzina
-      expanded: false
       items:
         - name: Data i godzina — przegląd
           href: ../atl-mfc-shared/date-and-time.md
@@ -18,12 +17,10 @@
         - name: Ciągi (ATL-MFC)
           href: ../atl-mfc-shared/strings-atl-mfc.md
         - name: Użycie CStringT
-          expanded: false
           items:
             - name: Użycie CStringT
               href: ../atl-mfc-shared/using-cstringt.md
             - name: Zarządzanie pamięcią za pomocą CStringT
-              expanded: false
               items:
                 - name: Zarządzanie pamięcią za pomocą CStringT
                   href: ../atl-mfc-shared/memory-management-with-cstringt.md
@@ -38,7 +35,6 @@
             - name: Eksportowanie klas ciągów przy użyciu CStringT
               href: ../atl-mfc-shared/exporting-string-classes-using-cstringt.md
         - name: Użycie CString
-          expanded: false
           items:
             - name: Użycie CString
               href: ../atl-mfc-shared/using-cstring.md
@@ -59,8 +55,9 @@
             - name: Obsługa Unicode i Multibyte Character Set (MBCS)
               href: ../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md
 - name: Tematy pomocy
-  expanded: false
   items:
+    - name: Klasy współdzielone MFC i ATL
+      href: ../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md
     - name: 'CSize, klasa'
       href: ../atl-mfc-shared/reference/csize-class.md
     - name: 'CTimeSpan, klasa'
@@ -69,16 +66,12 @@
       href: ../atl-mfc-shared/reference/coledatetime-class.md
     - name: 'CRect, klasa'
       href: ../atl-mfc-shared/reference/crect-class.md
-    - name: Klasy współdzielone MFC i ATL
-      href: ../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md
     - name: 'CPoint, klasa'
       href: ../atl-mfc-shared/reference/cpoint-class.md
     - name: 'CStringT, klasa'
       href: ../atl-mfc-shared/reference/cstringt-class.md
     - name: 'COleDateTimeSpan, klasa'
       href: ../atl-mfc-shared/reference/coledatetimespan-class.md
-    - name: 'IAtlStringMgr, klasa'
-      href: ../atl-mfc-shared/reference/iatlstringmgr-class.md
     - name: 'CFixedStringT, klasa'
       href: ../atl-mfc-shared/reference/cfixedstringt-class.md
     - name: 'CStrBufT, klasa'
@@ -95,3 +88,5 @@
       href: ../atl-mfc-shared/reference/csimplestringt-class.md
     - name: 'CTime, klasa'
       href: ../atl-mfc-shared/reference/ctime-class.md
+    - name: 'IAtlStringMgr, klasa'
+      href: ../atl-mfc-shared/reference/iatlstringmgr-class.md

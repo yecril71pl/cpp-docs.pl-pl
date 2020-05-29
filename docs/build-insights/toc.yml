@@ -1,28 +1,27 @@
+- name: Szczegółowe informacji o kompilowaniu w języku C++
+  href: ../build-insights/index.yml
 - name: Wprowadzenie do szczegółowych informacji o kompilowaniu w języku C++
   href: ../build-insights/get-started-with-cpp-build-insights.md
 - name: Samouczki
-  expanded: false
+  expanded: true
   items:
     - name: Narzędzia vcperf i Windows Performance Analyzer
       href: ../build-insights/tutorials/vcperf-and-wpa.md
     - name: Podstawowe informacje dotyczące narzędzia Windows Performance Analyzer
       href: ../build-insights/tutorials/wpa-basics.md
 - name: Tematy pomocy
-  expanded: false
   items:
     - name: Polecenia narzędzia vcperf
       href: ../build-insights/reference/vcperf-commands.md
     - name: Widoki narzędzia Windows Performance Analyzer
       href: ../build-insights/reference/wpa-views.md
     - name: Zestaw SDK ze szczegółowymi informacjami o kompilowaniu w języku C++
-      expanded: false
       items:
         - name: Omówienie
           href: ../build-insights/reference/sdk/overview.md
         - name: Tabela zdarzeń
           href: ../build-insights/reference/sdk/event-table.md
         - name: Funkcje
-          expanded: false
           items:
             - name: Analiza
               href: ../build-insights/reference/sdk/functions/analyze.md
@@ -79,7 +78,6 @@
             - name: StopTracingSessionW
               href: ../build-insights/reference/sdk/functions/stop-tracing-session-w.md
         - name: Typy danych zdarzeń (C++)
-          expanded: false
           items:
             - name: Działanie
               href: ../build-insights/reference/sdk/cpp-event-data-types/activity.md
@@ -174,7 +172,6 @@
             - name: WholeProgramAnalysis
               href: ../build-insights/reference/sdk/cpp-event-data-types/whole-program-analysis.md
         - name: Typy danych zdarzeń (C)
-          expanded: false
           items:
             - name: CL_PASS_DATA
               href: ../build-insights/reference/sdk/c-event-data-types/cl-pass-data-struct.md
@@ -213,7 +210,6 @@
             - name: TRANSLATION_UNIT_PASS_CODE
               href: ../build-insights/reference/sdk/c-event-data-types/translation-unit-pass-code-enum.md
         - name: Inne typy
-          expanded: false
           items:
             - name: ANALYSIS_CALLBACKS
               href: ../build-insights/reference/sdk/other-types/analysis-callbacks-struct.md
