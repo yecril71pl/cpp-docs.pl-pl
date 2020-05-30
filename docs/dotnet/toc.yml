@@ -3,7 +3,6 @@
 - name: 'Przewodnik: Kompilowanie programu języka C++/interfejsu wiersza polecenia przeznaczonego dla środowiska CLR'
   href: ../dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
 - name: Zadania C++/CLI
-  expanded: false
   items:
     - name: Zadania C++/CLI
       href: ../dotnet/cpp-cli-tasks.md
@@ -50,14 +49,12 @@
     - name: Dostęp do danych za pomocą platformy ADO.NET
       href: ../dotnet/data-access-using-adonet-cpp-cli.md
 - name: Współdziałanie natywne i .NET
-  expanded: false
   items:
     - name: Współdziałanie natywne i .NET
       href: ../dotnet/native-and-dotnet-interoperability.md
     - name: Współdziałanie z innymi językami .NET
       href: ../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md
     - name: Zestawy mieszane (natywne i zarządzane)
-      expanded: false
       items:
         - name: Zestawy mieszane (natywne i zarządzane)
           href: ../dotnet/mixed-native-and-managed-assemblies.md
@@ -80,14 +77,12 @@
         - name: 'Instrukcje: Tworzenie aplikacji częściowo zaufanej przez usunięcie zależności od biblioteki DLL środowiska CRT'
           href: ../dotnet/create-a-partially-trusted-application.md
     - name: Używanie kontrolki użytkownika formularza systemu Windows w MFC
-      expanded: false
       items:
         - name: Używanie kontrolki użytkownika formularza systemu Windows w MFC
           href: ../dotnet/using-a-windows-form-user-control-in-mfc.md
         - name: Różnice w programowaniu Windows Forms-MFC
           href: ../dotnet/windows-forms-mfc-programming-differences.md
         - name: Hostowanie kontrolki użytkownika formularza systemu Windows w oknie dialogowym MFC
-          expanded: false
           items:
             - name: Hostowanie kontrolki użytkownika formularza systemu Windows w oknie dialogowym MFC
               href: ../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md
@@ -98,7 +93,6 @@
             - name: 'Instrukcje: Wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++'
               href: ../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md
         - name: Hostowanie formantu użytkownika interfejsu Windows Forms jako widoku MFC
-          expanded: false
           items:
             - name: Hostowanie formantu użytkownika interfejsu Windows Forms jako widoku MFC
               href: ../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md
@@ -111,12 +105,10 @@
         - name: Hostowanie kontrolki użytkownika formularza systemu Windows jako okna dialogowego MFC
           href: ../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md
     - name: Wywoływanie funkcji natywnych z kodu zarządzanego
-      expanded: false
       items:
         - name: Wywoływanie funkcji natywnych z kodu zarządzanego
           href: ../dotnet/calling-native-functions-from-managed-code.md
         - name: Używanie jawnej funkcji PInvoke w języku C++ (atrybut DllImport)
-          expanded: false
           items:
             - name: Używanie jawnej funkcji PInvoke w języku C++ (atrybut DllImport)
               href: ../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md
@@ -133,7 +125,6 @@
             - name: 'Instrukcje: Przeprowadzanie marshalingu wskaźników osadzonych za pomocą funkcji PInvoke'
               href: ../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md
         - name: Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)
-          expanded: false
           items:
             - name: Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)
               href: ../dotnet/using-cpp-interop-implicit-pinvoke.md
@@ -190,7 +181,6 @@
             - name: 'Instrukcje: Opakowywanie klasy natywnej do użycia w języku C#'
               href: ../dotnet/how-to-wrap-native-class-for-use-by-csharp.md
 - name: Kod czysty i weryfikowalny
-  expanded: false
   items:
     - name: Kod czysty i weryfikowalny
       href: ../dotnet/pure-and-verifiable-code-cpp-cli.md
@@ -213,7 +203,6 @@
 - name: Klasa debugowania
   href: ../dotnet/debug-class-cpp-cli.md
 - name: Dokumentacja biblioteki STL/CLR
-  expanded: false
   items:
     - name: Dokumentacja biblioteki STL/CLR
       href: ../dotnet/stl-clr-library-reference.md
@@ -270,12 +259,10 @@
     - name: vector (STL/CLR)
       href: ../dotnet/vector-stl-clr.md
 - name: Biblioteka obsługi języka C++
-  expanded: false
   items:
     - name: Biblioteka obsługi języka C++
       href: ../dotnet/cpp-support-library.md
     - name: Przegląd marshalingu w języku C++
-      expanded: false
       items:
         - name: Przegląd marshalingu w języku C++
           href: ../dotnet/overview-of-marshaling-in-cpp.md
@@ -286,12 +273,10 @@
     - name: Przestrzeń nazw msclr
       href: ../dotnet/msclr-namespace.md
     - name: Klasy zarządzania zasobami
-      expanded: false
       items:
         - name: Klasy zarządzania zasobami
           href: ../dotnet/resource-management-classes.md
         - name: auto_gcroot
-          expanded: false
           items:
             - name: auto_gcroot
               href: ../dotnet/auto-gcroot.md
@@ -300,7 +285,6 @@
             - name: 'swap, funkcja (auto_gcroot)'
               href: ../dotnet/swap-function-auto-gcroot.md
         - name: auto_handle
-          href: ../dotnet/auto-handle.md
           items:
             - name: auto_handle
               href: ../dotnet/auto-handle.md
@@ -309,12 +293,10 @@
             - name: 'swap, funkcja (auto_handle)'
               href: ../dotnet/swap-function-auto-handle.md
     - name: Synchronizacja (klasa lock)
-      expanded: false
       items:
         - name: Synchronizacja (klasa lock)
           href: ../dotnet/synchronization-lock-class.md
         - name: lock
-          expanded: false
           items:
             - name: lock
               href: ../dotnet/lock.md
@@ -323,21 +305,18 @@
             - name: Wyliczenie lock_when
               href: ../dotnet/lock-when-enum.md
     - name: Wywoływanie funkcji w określonej domenie aplikacji
-      expanded: false
       items:
         - name: Wywoływanie funkcji w określonej domenie aplikacji
           href: ../dotnet/calling-functions-in-a-specific-application-domain.md
         - name: call_in_appdomain — Funkcja
           href: ../dotnet/call-in-appdomain-function.md
     - name: 'com::ptr'
-      expanded: false
       items:
         - name: 'com::ptr'
           href: ../dotnet/com-ptr.md
         - name: 'com::ptr, klasa'
           href: ../dotnet/com-ptr-class.md
 - name: Wyjątki w języku C++/CLI
-  expanded: false
   items:
     - name: Wyjątki w języku C++/CLI
       href: ../dotnet/exceptions-in-cpp-cli.md
@@ -352,7 +331,6 @@
     - name: 'Instrukcje: Definiowanie i instalowanie globalnego programu obsługi wyjątków'
       href: ../dotnet/how-to-define-and-install-a-global-exception-handler.md
 - name: Boxing
-  expanded: false
   items:
     - name: Boxing
       href: ../dotnet/boxing-cpp-cli.md
