@@ -3,7 +3,6 @@
 - name: 'Pobieranie, instalowanie i konfigurowanie obciążenia Projektowanie systemu Linux'
   href: ../linux/download-install-and-setup-the-linux-development-workload.md
 - name: Nawiązywanie połączenia ze zdalnym komputerem z systemem Linux
-  expanded: true
   items:
     - name: Nawiązywanie połączenia ze zdalnym komputerem z systemem Linux
       href: ../linux/connect-to-your-remote-linux-computer.md
@@ -11,40 +10,43 @@
       href: ../linux/set-up-fips-compliant-secure-remote-linux-development.md
     - name: ConnectionManager — dokumentacja
       href: ../linux/connectionmanager-reference.md
-- name: Tworzenie nowego projektu systemu Linux
-  href: ../linux/create-a-new-linux-project.md
-- name: Konfigurowanie projektu systemu Linux
-  href: ../linux/configure-a-linux-project.md
-- name: Tworzenie i konfigurowanie projektu CMake systemu Linux
-  href: ../linux/cmake-linux-project.md
+- name: Kompilowanie projektów systemu Linux przy użyciu narzędzia MSBuild w programie Visual Studio
+  items:
+    - name: Tworzenie nowego projektu systemu Linux
+      href: ../linux/create-a-new-linux-project.md
+    - name: Konfigurowanie projektu systemu Linux
+      href: ../linux/configure-a-linux-project.md
+    - name: 'Wdrażanie, uruchamianie i debugowanie projektu systemu Linux'
+      href: ../linux/deploy-run-and-debug-your-linux-project.md
+    - name: Dokumentacja strony właściwości projektu systemu Linux
+      items:
+        - name: Dokumentacja strony właściwości projektu systemu Linux
+          href: ../linux/prop-pages-linux.md
+        - name: Właściwości ogólne (Linux)
+          href: ../linux/prop-pages/general-linux.md
+        - name: Właściwości debugowania (Linux)
+          href: ../linux/prop-pages/debugging-linux.md
+        - name: Właściwości katalogów VC++ (Linux)
+          href: ../linux/prop-pages/directories-linux.md
+        - name: Właściwości kopiowania źródeł (Linux)
+          href: ../linux/prop-pages/copy-sources-project.md
+        - name: Właściwości języka C/C++ (Linux)
+          href: ../linux/prop-pages/c-cpp-linux.md
+        - name: Właściwości konsolidatora (Linux)
+          href: ../linux/prop-pages/linker-linux.md
+        - name: Właściwości zdarzenia kompilacji (Linux)
+          href: ../linux/prop-pages/build-events-linux.md
+        - name: Właściwości niestandardowego kroku kompilacji (Linux)
+          href: ../linux/prop-pages/custom-build-step-linux.md
+        - name: Właściwości projektu pliku reguł programu make (Linux)
+          href: ../linux/prop-pages/makefile-linux.md
+        - name: Właściwości archiwum zdalnego (Linux)
+          href: ../linux/prop-pages/remote-ar-linux.md
+- name: Kompilowanie projektów systemu Linux przy użyciu programu CMake w programie Visual Studio
+  items:
+    - name: Tworzenie i konfigurowanie projektu CMake systemu Linux
+      href: ../linux/cmake-linux-project.md
+    - name: 'Samouczek: Tworzenie międzyplatformowych projektów w języku C++ w programie Visual Studio'
+      href: ../build/get-started-linux-cmake.md
 - name: Konfigurowanie projektów systemu Linux do używania narzędzia Address Sanitizer
   href: ../linux/linux-asan-configuration.md
-- name: 'Wdrażanie, uruchamianie i debugowanie projektu systemu Linux'
-  href: ../linux/deploy-run-and-debug-your-linux-project.md
-- name: 'Samouczek: Tworzenie międzyplatformowych projektów w języku C++ w programie Visual Studio'
-  href: ../build/get-started-linux-cmake.md
-- name: Dokumentacja strony właściwości projektu systemu Linux
-  expanded: false
-  items:
-    - name: Dokumentacja strony właściwości projektu systemu Linux
-      href: ../linux/prop-pages-linux.md
-    - name: Właściwości ogólne (Linux)
-      href: ../linux/prop-pages/general-linux.md
-    - name: Właściwości debugowania (Linux)
-      href: ../linux/prop-pages/debugging-linux.md
-    - name: Właściwości katalogów VC++ (Linux)
-      href: ../linux/prop-pages/directories-linux.md
-    - name: Właściwości kopiowania źródeł (Linux)
-      href: ../linux/prop-pages/copy-sources-project.md
-    - name: Właściwości języka C/C++ (Linux)
-      href: ../linux/prop-pages/c-cpp-linux.md
-    - name: Właściwości konsolidatora (Linux)
-      href: ../linux/prop-pages/linker-linux.md
-    - name: Właściwości zdarzenia kompilacji (Linux)
-      href: ../linux/prop-pages/build-events-linux.md
-    - name: Właściwości niestandardowego kroku kompilacji (Linux)
-      href: ../linux/prop-pages/custom-build-step-linux.md
-    - name: Właściwości projektu pliku reguł programu make (Linux)
-      href: ../linux/prop-pages/makefile-linux.md
-    - name: Właściwości archiwum zdalnego (Linux)
-      href: ../linux/prop-pages/remote-ar-linux.md
