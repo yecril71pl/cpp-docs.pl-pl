@@ -1,4 +1,4 @@
-- name: Dokumentacja biblioteki środowiska uruchomieniowego języka C (CRT)
+- name: Informacje o bibliotece środowiska uruchomieniowego języka C (CRT)
   href: ../c-runtime-library/c-run-time-library-reference.md
 - name: Funkcje biblioteki CRT
   expanded: false
