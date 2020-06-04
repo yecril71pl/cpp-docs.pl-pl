@@ -1,16 +1,16 @@
 ---
 title: Opcje kompilatora w rozbiciu na kategorie
-description: Lista odwołań według kategorii opcji wiersza polecenia języka MicrosoftC++ C/kompilatora.
-ms.date: 02/09/2020
+description: Lista odwołań według kategorii opcji wiersza polecenia kompilatora Microsoft C/C++.
+ms.date: 06/03/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: d29076e6eae4bcbd15a4bc50bb48477e3f93152d
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0275e6e5459f01d6ab8428274cc5e2313ab3066d
+ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417307"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84421341"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opcje kompilatora w rozbiciu na kategorie
 
@@ -39,32 +39,33 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby zapoznać się z li
 |[/Arch](arch-x86.md)|Użyj instrukcji SSE lub SSE2 w przypadku generowania kodu. (tylko x86)|
 |[/CLR](clr-common-language-runtime-compilation.md)|Tworzy plik wyjściowy do uruchomienia w środowisku uruchomieniowym języka wspólnego.|
 |[/EH](eh-exception-handling-model.md)|Określa model obsługi wyjątków.|
-|[/FP](fp-specify-floating-point-behavior.md)|Określa zachowanie zmiennoprzecinkowe.|
+|[/ FP](fp-specify-floating-point-behavior.md)|Określa zachowanie zmiennoprzecinkowe.|
 |[/GA](ga-optimize-for-windows-application.md)|Optymalizuje dla aplikacji systemu Windows.|
-|[/GD](gd-gr-gv-gz-calling-convention.md)|Używa konwencji wywoływania `__cdecl`. (tylko x86)|
+|[/GD](gd-gr-gv-gz-calling-convention.md)|Używa `__cdecl` konwencji wywoływania. (tylko x86)|
 |[/GE](ge-enable-stack-probes.md)|Przestarzałe. Aktywuje sondy stosu.|
 |[/GF](gf-eliminate-duplicate-strings.md)|Włącza buforowanie ciągów.|
-|[/GH](gh-enable-penter-hook-function.md)|Wywołuje funkcję Hook `_penter`.|
-|[/GH](gh-enable-pexit-hook-function.md)|Wywołuje funkcję Hook `_pexit`.|
+|[/GH](gh-enable-penter-hook-function.md)|Wywołuje funkcję haka `_penter` .|
+|[/GH](gh-enable-pexit-hook-function.md)|Wywołuje funkcję haka `_pexit` .|
 |[/GL](gl-whole-program-optimization.md)|Włącza optymalizację całego programu.|
 |[/GM](gm-enable-minimal-rebuild.md)|Przestarzałe. Włącza minimalną ponowną kompilację.|
 |[/GR](gr-enable-run-time-type-information.md)|Włącza informacje o typach w czasie wykonywania (RTTI).|
-|[/Gr](gd-gr-gv-gz-calling-convention.md)|Używa konwencji wywoływania `__fastcall`. (tylko x86)|
+|[/Gr](gd-gr-gv-gz-calling-convention.md)|Używa `__fastcall` konwencji wywoływania. (tylko x86)|
 |[/GS](gs-buffer-security-check.md)|Sprawdza zabezpieczenia bufora.|
 |[/GS](gs-control-stack-checking-calls.md)|Kontroluje sondy stosu.|
 |[/GT](gt-support-fiber-safe-thread-local-storage.md)|Obsługuje zabezpieczenia włókna danych przydzielone przy użyciu statycznego magazynu wątków lokalnych.|
 |[/Guard: CF](guard-enable-control-flow-guard.md)|Dodaje testy zabezpieczeń funkcji Ochrona przepływu sterowania.|
-|[/GV](gd-gr-gv-gz-calling-convention.md)|Używa konwencji wywoływania `__vectorcall`. (tylko x86 i x64)|
+|[/Guard: ehcont](guard-enable-eh-continuation-metadata.md)|Włącza metadane kontynuacji EH.|
+|[/GV](gd-gr-gv-gz-calling-convention.md)|Używa `__vectorcall` konwencji wywoływania. (tylko x86 i x64)|
 |[/GW](gw-optimize-global-data.md)|Włącza optymalizację danych globalnych całego programu.|
 |[/GX](gx-enable-exception-handling.md)|Przestarzałe. Włącza synchroniczną obsługę wyjątków. Zamiast tego użyj [/EH](eh-exception-handling-model.md) .|
 |[/Gy](gy-enable-function-level-linking.md)|Włącza łączenie na poziomie funkcji.|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Przestarzałe. Umożliwia szybkie sprawdzanie. (Analogicznie jak [/RTC1](rtc-run-time-error-checks.md))|
-|[/GZ](gd-gr-gv-gz-calling-convention.md)|Używa konwencji wywoływania `__stdcall`. (tylko x86)|
+|[/GZ](gd-gr-gv-gz-calling-convention.md)|Używa `__stdcall` konwencji wywoływania. (tylko x86)|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Wymusza, aby parametry przesyłane w rejestrach były zapisywane do ich lokalizacji na stosie przy wejściu do funkcji. Ta opcja kompilatora jest tylko dla kompilatorów x64 (kompilacja natywna i krzyżowa).|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Tworzy obraz możliwy do poprawiania.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Generuje szybki transcendentals.|
-|[/QIfist](qifist-suppress-ftol.md)|Przestarzałe. Pomija wywołanie funkcji pomocnika `_ftol`, gdy wymagana jest konwersja z typu zmiennoprzecinkowego na typ całkowity. (tylko x86)|
-|[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Usuwa `fwait` polecenia w blokach `try`.|
+|[/QIfist](qifist-suppress-ftol.md)|Przestarzałe. Pomija wywołanie funkcji pomocnika, `_ftol` gdy wymagana jest konwersja z typu zmiennoprzecinkowego na typ całkowity. (tylko x86)|
+|[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Usuwa `fwait` polecenia wewnątrz `try` bloków.|
 |[/QIntel-jcc-erratum](qintel-jcc-erratum.md)|Zmniejsza wpływ na wydajność aktualizacji włączenia mikrokodu firmy Intel JCC sprawdzenia erraty.|
 |[/Qpar](qpar-auto-parallelizer.md)|Włącza automatyczne przetwarzanie równoległe pętli.|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|Włącza poziomy raportowania dla automatycznej przetwarzanie równoległe.|
@@ -115,7 +116,7 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby zapoznać się z li
 |------------|-------------|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Kontrolowanie wartości wyrażenia **constexpr** w czasie kompilacji.|
 |[/OpenMP](openmp-enable-openmp-2-0-support.md)|Włącza [#pragma OMP](../../preprocessor/omp.md) w kodzie źródłowym.|
-|[/VD](vd-disable-construction-displacements.md)|Pomija lub włącza ukryte elementy członkowskie klasy `vtordisp`.|
+|[/VD](vd-disable-construction-displacements.md)|Pomija lub włącza ukryte `vtordisp` elementy członkowskie klasy.|
 |[/VMB](vmb-vmg-representation-method.md)|Używa najlepszych podstaw dla wskaźników do elementów członkowskich.|
 |[/VMG](vmb-vmg-representation-method.md)|Używa pełnej ogólnej wskaźników do elementów członkowskich.|
 |[/VMM](vmm-vms-vmv-general-purpose-representation.md)|Deklaruje wielokrotne dziedziczenie.|
@@ -129,7 +130,7 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby zapoznać się z li
 |[/ZH](zh.md)|Określa MD5, SHA-1 lub SHA-256 dla sum kontrolnych w informacjach debugowania.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Zawiera informacje o debugowaniu w programie bazy danych programu zgodne z funkcją Edytuj i Kontynuuj. (tylko x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Generuje pełne informacje o debugowaniu.|
-|[/Zl](zl-omit-default-library-name.md)|Usuwa domyślną nazwę biblioteki z pliku *`.obj`* .|
+|[/Zl](zl-omit-default-library-name.md)|Usuwa domyślną nazwę biblioteki z *`.obj`* pliku.|
 |[/ZP](zp-struct-member-alignment.md) *n*|Elementy członkowskie struktury pakietów.|
 |[/ZS](zs-syntax-check-only.md)|Sprawdza tylko składnię.|
 |[/ZW](zw-windows-runtime-compilation.md)|Tworzy plik wyjściowy do uruchomienia na środowisko wykonawcze systemu Windows.|
@@ -141,7 +142,7 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby zapoznać się z li
 |[Opcją](f-set-stack-size.md)|Ustawia rozmiar stosu.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Tworzy bibliotekę dołączaną dynamicznie.|
 |[/LDd](md-mt-ld-use-run-time-library.md)|Tworzy bibliotekę dołączaną dynamicznie do debugowania.|
-|[/link](link-pass-options-to-linker.md)|Przekazuje określoną opcję do LINKu.|
+|[/Link](link-pass-options-to-linker.md)|Przekazuje określoną opcję do LINKu.|
 |[/LN](ln-create-msil-module.md)|Tworzy moduł MSIL.|
 |[/MD](md-mt-ld-use-run-time-library.md)|Kompiluje, aby utworzyć wielowątkową bibliotekę DLL, za pomocą *msvcrt. lib*.|
 |[/MDd](md-mt-ld-use-run-time-library.md)|Kompiluje, aby utworzyć wielowątkową bibliotekę DLL debugowania za pomocą *msvcrtd. lib*.|
@@ -163,8 +164,8 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby zapoznać się z li
 |[/FS](fs-force-synchronous-pdb-writes.md)|Wymusza, aby operacje zapisu w pliku PDB były serializowane za pomocą *mspdbsrv. Plik EXE*.|
 |[/H](h-restrict-length-of-external-names.md)|Przestarzałe. Ogranicza długość nazw zewnętrznych (publicznych).|
 |[/HELP](help-compiler-command-line-help.md)|Wyświetla listę opcji kompilatora.|
-|[/J](j-default-char-type-is-unsigned.md)|Zmienia domyślny typ `char`.|
-|[/JMC](jmc.md)|Obsługuje natywne C++ debugowanie tylko mój kod.|
+|[/J](j-default-char-type-is-unsigned.md)|Zmienia typ domyślny `char` .|
+|[/JMC](jmc.md)|Obsługuje natywne debugowanie Tylko mój kod języka C++.|
 |[/Kernel](kernel-create-kernel-mode-binary.md)|Kompilator i konsolidator utworzy plik binarny, który może być wykonywany w jądrze systemu Windows.|
 |[/MP](mp-build-with-multiple-processes.md)|Kompiluje jednocześnie wiele plików źródłowych.|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|Pomija wyświetlanie transparentu logowania.|
@@ -172,8 +173,8 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby zapoznać się z li
 |[/showIncludes](showincludes-list-include-files.md)|Wyświetla listę wszystkich plików dołączanych podczas kompilacji.|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Określa plik źródłowy w języku C.|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Określa wszystkie pliki źródłowe to C.|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Określa plik C++ źródłowy.|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Określa wszystkie pliki źródłowe C++.|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Określa plik źródłowy języka C++.|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Określa wszystkie pliki źródłowe w języku C++.|
 |[Przełącznika](v-version-number.md)|Przestarzałe. Ustawia ciąg wersji.|
 |[/w](compiler-option-warning-level.md)|Wyłącza wszystkie ostrzeżenia.|
 |[/W0,/W1,/W2,/W3,/W4](compiler-option-warning-level.md)|Ustawia poziom ostrzeżeń wyjściowych.|
@@ -181,11 +182,11 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby zapoznać się z li
 |[/Wall](compiler-option-warning-level.md)|Włącza wszystkie ostrzeżenia, w tym ostrzeżenia, które są domyślnie wyłączone.|
 |[/WD](compiler-option-warning-level.md)|Wyłącza określone ostrzeżenie.|
 |[/we](compiler-option-warning-level.md)|Traktuje określone ostrzeżenie jako błąd.|
-|[/WL](wl-enable-one-line-diagnostics.md)|Włącza diagnostykę jednowierszową dla komunikatów o błędach i C++ ostrzeżeniach podczas kompilowania kodu źródłowego z wiersza polecenia.|
+|[/WL](wl-enable-one-line-diagnostics.md)|Włącza diagnostykę jednowierszową dla komunikatów o błędach i ostrzeżeniach podczas kompilowania kodu źródłowego języka C++ z wiersza polecenia.|
 |[/wo](compiler-option-warning-level.md)|Wyświetla określone ostrzeżenie tylko raz.|
 |[/WV](compiler-option-warning-level.md)|Wyłącza ostrzeżenia wprowadzone przez nowsze wersje kompilatora.|
 |[/WX](compiler-option-warning-level.md)|Traktuje ostrzeżenia jako błędy.|
-|[/YC](yc-create-precompiled-header-file.md)|Utwórz plik *`.PCH`* .|
+|[/YC](yc-create-precompiled-header-file.md)|Utwórz *`.PCH`* plik.|
 |[/YD](yd-place-debug-information-in-object-file.md)|Przestarzałe. Umieszcza pełne informacje o debugowaniu we wszystkich plikach obiektów. Zamiast tego użyj [/Zi](z7-zi-zi-debug-information-format.md) .|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|Wstawia odwołanie do PCH podczas tworzenia biblioteki debugowania.|
 |[/Yu](yu-use-precompiled-header-file.md)|Używa prekompilowanego pliku nagłówkowego podczas kompilowania.|
@@ -198,16 +199,16 @@ Ten artykuł zawiera listę kategorii opcji kompilatora. Aby zapoznać się z li
 |[/Validate-charset](validate-charset-validate-for-compatible-characters.md)|Weryfikowanie plików UTF-8 tylko pod kątem zgodnych znaków.|
 |[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Kontroluje Format komunikatów diagnostycznych.|
 |[/permissive-](permissive-standards-conformance.md)|Ustaw tryb zgodności ze standardem.|
-|[/STD](std-specify-language-standard-version.md)|C++Selektor zgodności wersji standardowej.|
+|[/STD](std-specify-language-standard-version.md)|Selektor zgodności wersji standardowej języka C++.|
 
 ## <a name="experimental-options"></a>Opcje eksperymentalne
 
-Opcje eksperymentalne mogą być obsługiwane tylko przez niektóre wersje kompilatora. Mogą również zachowywać się inaczej w różnych wersjach kompilatora. Często Najlepsza lub tylko dokumentacja opcji eksperymentalnych znajduje się w [blogu zespołu firmy Microsoft C++ ](https://devblogs.microsoft.com/cppblog/).
+Opcje eksperymentalne mogą być obsługiwane tylko przez niektóre wersje kompilatora. Mogą również zachowywać się inaczej w różnych wersjach kompilatora. Często Najlepsza lub tylko dokumentacja opcji eksperymentalnych znajduje się w [blogu zespołu Microsoft C++](https://devblogs.microsoft.com/cppblog/).
 
 |Opcja|Przeznaczenie|
 |------------|-------------|
-|[/Experimental: moduł](experimental-module.md)|Umożliwia obsługę modułów eksperymentalnych.|
-|[/Experimental: preprocesor](experimental-preprocessor.md)|Włącza eksperymentalną obsługę preprocesora.|
+|[/experimental:module](experimental-module.md)|Umożliwia obsługę modułów eksperymentalnych.|
+|[/experimental:preprocessor](experimental-preprocessor.md)|Włącza eksperymentalną obsługę preprocesora.|
 
 ## <a name="deprecated-and-removed-compiler-options"></a>Przestarzałe i usunięte opcje kompilatora
 
@@ -223,7 +224,7 @@ Opcje eksperymentalne mogą być obsługiwane tylko przez niektóre wersje kompi
 |[/H](h-restrict-length-of-external-names.md)|Przestarzałe. Ogranicza długość nazw zewnętrznych (publicznych).|
 |[/Og](og-global-optimizations.md)|Przestarzałe. Używa globalnych optymalizacji.|
 |[/QIfist](qifist-suppress-ftol.md)|Przestarzałe. Po użyciu, aby określić sposób konwersji z typu zmiennoprzecinkowego na typ całkowity.|
-|[Przełącznika](v-version-number.md)|Przestarzałe. Ustawia ciąg wersji pliku *`.obj`* .|
+|[Przełącznika](v-version-number.md)|Przestarzałe. Ustawia *`.obj`* ciąg wersji pliku.|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|Nieaktualne. Wykrywa 64-bitowe problemy z przenośnością.|
 |[/YD](yd-place-debug-information-in-object-file.md)|Przestarzałe. Umieszcza pełne informacje o debugowaniu we wszystkich plikach obiektów. Zamiast tego użyj [/Zi](z7-zi-zi-debug-information-format.md) .|
 |[/Zc: forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|Przestarzałe. Wyłącza zgodność w zakresie pętli for.|
@@ -232,6 +233,6 @@ Opcje eksperymentalne mogą być obsługiwane tylko przez niektóre wersje kompi
 
 ## <a name="see-also"></a>Zobacz też
 
-\ [odwołaniaC++ w języku C/Building](c-cpp-building-reference.md)
+[Dokumentacja konstrukcyjna języka C/C++](c-cpp-building-reference.md)\
 [Opcje kompilatora MSVC](compiler-options.md)\
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

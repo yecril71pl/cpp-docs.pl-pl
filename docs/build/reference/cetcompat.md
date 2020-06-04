@@ -1,51 +1,54 @@
 ---
-title: / CETCOMPAT (zgodny z CET cień stosu)
+title: /CETCOMPAT (zgodny ze stosem w tle)
 ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 0ed5d9d4f9f4f4dc5cd4fc19df4179e86e430187
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c807d91d69b967fd62e01a077711dede5f55c44
+ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273251"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84421304"
 ---
-# <a name="cetcompat-cet-shadow-stack-compatible"></a>/ CETCOMPAT (zgodny z CET cień stosu)
+# <a name="cetcompat-cet-shadow-stack-compatible"></a>/CETCOMPAT (zgodny ze stosem w tle)
 
-Określa, czy należy oznaczyć obrazu wykonywalnego jako niezgodny z stos cieni technologia wymuszania (CET) przepływ sterowania.
+Określa, czy obraz wykonywalny ma być oznaczany jako zgodny z technologią wymuszania przepływu sterowania (CET).
 
 ## <a name="syntax"></a>Składnia
 
-> **/ CETCOMPAT**\[**: NO**]
+> **/CETCOMPAT** \[ **: Nie**]
 
 ## <a name="arguments"></a>Argumenty
 
-**BRAK**<br/>
-Określa, że plik wykonywalny nie powinien być oznaczony zgodny z CET cień stosu.
+**ZNALEZIONO**<br/>
+Określa, że plik wykonywalny nie powinien być oznaczony jako zgodny z atrybutem "CET Shadow Stack".
 
 ## <a name="remarks"></a>Uwagi
 
-Stos cieni technologia wymuszania (CET) przepływu sterowania jest funkcją procesora komputera, która zapewnia możliwości do obrony przed zwracanym programowanie zorientowane na obiekty (w prawym GÓRNYM) na podstawie atakami złośliwego oprogramowania. Aby uzyskać więcej informacji, zobacz [Intel przepływ sterowania wymuszania Technology Preview](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
+Stos kontroli sterowania przepływem (CET) to funkcja procesora komputerowego, która zapewnia możliwość obrony przed atakami polegającymi na programowaniu opartym na oprogramowaniu ROP. Aby uzyskać więcej informacji, zobacz temat [Technologia wymuszania przepływu sterowania przez firmę Intel](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
 
-**/CETCOMPAT** — opcja konsolidatora informuje konsolidator, aby oznaczyć danych binarnych jako zgodnego z CET cień stosu. **/CETCOMPAT:No** oznacza plik binarny, co nie jest zgodna z CET cień stosu. Jeśli obie opcje są określone w wierszu polecenia, określony ostatni z nich jest używany. Ten przełącznik dotyczy aktualnie tylko x86 i x64 architektury.
+Opcja konsolidatora **/CETCOMPAT** nakazuje konsolidatorowi oznaczenie plików binarnych jako niezgodnych ze stosem w tle. **/CETCOMPAT: nie** oznacza elementów binarnych jako niezgodnych z stosem w tle w trybie CET. Jeśli obie opcje są określone w wierszu polecenia, zostanie użyta Ostatnia z nich. Ten przełącznik jest obecnie stosowany tylko do architektur x86 i x64.
 
-**/CETCOMPAT** opcja jest dostępna, począwszy od zestawu narzędzi Visual Studio 3 (wersja zapoznawcza) 2019 r.
+Opcja **/CETCOMPAT** jest dostępna, zaczynając od zestawu narzędzi Visual Studio 2019 Preview 3.
 
-### <a name="to-set-the-cetcompat-linker-option-in-visual-studio"></a>Aby ustawić opcję konsolidatora /CETCOMPAT w programie Visual Studio
+### <a name="to-set-the-cetcompat-linker-option-in-visual-studio"></a>Aby ustawić opcję konsolidatora/CETCOMPAT w programie Visual Studio
 
-1. Otwórz **stron właściwości** okno dialogowe dla projektu. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** dla projektu. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
+1. Wybierz stronę właściwości **Konfiguracja**  >  **konsolidator**  >  **Zaawansowane** właściwości.
 
-1. W **dodatkowe opcje** Dodaj **/CETCOMPAT** lub **/CETCOMPAT:NO** , a następnie wybierz **OK** lub **Zastosuj**Aby zapisać zmiany.
+1. Wybierz właściwość CET, która jest **zgodna ze stosem** .
+
+1. W kontrolce menu rozwijanego wybierz pozycję **tak (/CETCOMPAT)** , aby włączyć metadane kontynuacji eh, lub pozycję **nie (/CETCOMPAT: No)** , aby ją wyłączyć.
+
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-Ta opcja nie ma programowy odpowiednik.
+Ta opcja nie ma programowego odpowiednika.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje konsolidatora](linker-options.md)

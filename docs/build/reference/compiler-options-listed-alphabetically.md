@@ -1,15 +1,15 @@
 ---
 title: Opcje kompilatora w porządku alfabetycznym
-description: Lista odwołań w kolejności alfabetycznej opcji wiersza polecenia języka MicrosoftC++ C/kompilatora.
-ms.date: 02/09/2020
+description: Lista odwołań w kolejności alfabetycznej opcji wiersza polecenia kompilatora Microsoft C/C++.
+ms.date: 06/03/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 6b3412378aa4bb36ea861a81758d2227df3432c6
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: e07b41d77daf4960d43146c29eb1613e122d414f
+ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257744"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84421354"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opcje kompilatora w porządku alfabetycznym
 
@@ -39,8 +39,8 @@ Ta tabela zawiera alfabetyczną listę opcji kompilatora. Aby zapoznać się z l
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Kopiuje dane wyjściowe preprocesora do wyjścia standardowego.|
 |[/errorReport](errorreport-report-internal-compiler-errors.md)| Przestarzałe. Raportowanie błędów jest kontrolowane przez ustawienia [raportowanie błędów systemu Windows (wer)](/windows/win32/wer/windows-error-reporting) . |
 |[/Execution-charset](execution-charset-set-execution-character-set.md)|Ustaw zestaw znaków wykonania.|
-|[/Experimental: moduł](experimental-module.md)|Umożliwia obsługę modułów eksperymentalnych.|
-|[/Experimental: preprocesor](experimental-preprocessor.md)|Włącza eksperymentalną obsługę preprocesora.|
+|[/experimental:module](experimental-module.md)|Umożliwia obsługę modułów eksperymentalnych.|
+|[/experimental:preprocessor](experimental-preprocessor.md)|Włącza eksperymentalną obsługę preprocesora.|
 |[Opcją](f-set-stack-size.md)|Ustawia rozmiar stosu.|
 |[/Favor](favor-optimize-for-architecture-specifics.md)|Tworzy kod zoptymalizowany pod kątem określonej architektury x64. Lub dla określonych mikroarchitektur w architekturze AMD64 i EM64T.|
 |[/FA](fa-fa-listing-file.md)|Tworzy plik listy.|
@@ -52,43 +52,44 @@ Ta tabela zawiera alfabetyczną listę opcji kompilatora. Aby zapoznać się z l
 |[/Fi](fi-preprocess-output-file-name.md)|Ustawia nazwę wstępnie przetworzonego pliku wyjściowego.|
 |[/FM](fm-name-mapfile.md)|Tworzy plik mapy.|
 |[/FO](fo-object-file-name.md)|Tworzy plik obiektu.|
-|[/FP](fp-specify-floating-point-behavior.md)|Określ zachowanie zmiennoprzecinkowe.|
+|[/ FP](fp-specify-floating-point-behavior.md)|Określ zachowanie zmiennoprzecinkowe.|
 |[/FP](fp-name-dot-pch-file.md)|Określa nazwę prekompilowanego pliku nagłówkowego.|
 |[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|Generuje pliki przeglądarki. **/Fr** jest przestarzała.|
 |[/FS](fs-force-synchronous-pdb-writes.md)|Wymusza serializację wszystkich zapisów do pliku bazy danych programu (PDB) za pomocą MSPDBSRV. EXE.|
 |[/FU](fu-name-forced-hash-using-file.md)|Wymusza użycie nazwy pliku, tak jakby została przeniesiona do dyrektywy [#using](../../preprocessor/hash-using-directive-cpp.md) .|
 |[/FX](fx-merge-injected-code.md)|Scala wprowadzony kod z plikiem źródłowym.|
 |[/GA](ga-optimize-for-windows-application.md)|Optymalizuje kod dla aplikacji systemu Windows.|
-|[/GD](gd-gr-gv-gz-calling-convention.md)|Używa konwencji wywoływania `__cdecl` (tylko x86).|
+|[/GD](gd-gr-gv-gz-calling-convention.md)|Używa `__cdecl` konwencji wywoływania (tylko x86).|
 |[/GE](ge-enable-stack-probes.md)|Przestarzałe. Aktywuje sondy stosu.|
 |[/GF](gf-eliminate-duplicate-strings.md)|Włącza buforowanie ciągów.|
-|[/GH](gh-enable-pexit-hook-function.md)|Wywołuje funkcję Hook `_pexit`.|
-|[/GH](gh-enable-penter-hook-function.md)|Wywołuje funkcję Hook `_penter`.|
+|[/GH](gh-enable-pexit-hook-function.md)|Wywołuje funkcję haka `_pexit` .|
+|[/GH](gh-enable-penter-hook-function.md)|Wywołuje funkcję haka `_penter` .|
 |[/GL](gl-whole-program-optimization.md)|Włącza optymalizację całego programu.|
 |[/GM](gm-enable-minimal-rebuild.md)|Przestarzałe. Włącza minimalną ponowną kompilację.|
 |[/GR](gr-enable-run-time-type-information.md)|Włącza informacje o typach w czasie wykonywania (RTTI).|
-|[/Gr](gd-gr-gv-gz-calling-convention.md)|Używa konwencji wywoływania `__fastcall` (tylko x86).|
+|[/Gr](gd-gr-gv-gz-calling-convention.md)|Używa `__fastcall` konwencji wywoływania (tylko x86).|
 |[/GS](gs-buffer-security-check.md)|Bufory kontroli zabezpieczeń.|
 |[/GS](gs-control-stack-checking-calls.md)|Kontroluje sondy stosu.|
 |[/GT](gt-support-fiber-safe-thread-local-storage.md)|Obsługuje zabezpieczenia włókna danych przydzielonych przy użyciu statycznego magazynu wątków lokalnych.|
 |[/Guard: CF](guard-enable-control-flow-guard.md)|Dodaje testy zabezpieczeń funkcji Ochrona przepływu sterowania.|
-|[/GV](gd-gr-gv-gz-calling-convention.md)|Używa konwencji wywoływania `__vectorcall`. (tylko x86 i x64)|
+|[/Guard: ehcont](guard-enable-eh-continuation-metadata.md)|Włącza metadane kontynuacji EH.|
+|[/GV](gd-gr-gv-gz-calling-convention.md)|Używa `__vectorcall` konwencji wywoływania. (tylko x86 i x64)|
 |[/GW](gw-optimize-global-data.md)|Włącza optymalizację danych globalnych całego programu.|
 |[/GX](gx-enable-exception-handling.md)|Przestarzałe. Włącza synchroniczną obsługę wyjątków. Zamiast tego użyj [/EH](eh-exception-handling-model.md) .|
 |[/Gy](gy-enable-function-level-linking.md)|Włącza łączenie na poziomie funkcji.|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Przestarzałe. Analogicznie jak [/RTC1](rtc-run-time-error-checks.md).|
-|[/GZ](gd-gr-gv-gz-calling-convention.md)|Używa konwencji wywoływania `__stdcall` (tylko x86).|
+|[/GZ](gd-gr-gv-gz-calling-convention.md)|Używa `__stdcall` konwencji wywoływania (tylko x86).|
 |[/H](h-restrict-length-of-external-names.md)|Przestarzałe. Ogranicza długość nazw zewnętrznych (publicznych).|
 |[/HELP](help-compiler-command-line-help.md)|Wyświetla listę opcji kompilatora.|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Wymusza, aby parametry przesyłane w rejestrach były zapisywane do ich lokalizacji na stosie przy wejściu do funkcji. Ta opcja kompilatora jest tylko dla kompilatorów x64 (kompilacja natywna i krzyżowa).|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Tworzy obraz z poprawkami na gorąco.|
 |[/I](i-additional-include-directories.md)|Wyszukuje pliki dołączane w katalogu.|
-|[/J](j-default-char-type-is-unsigned.md)|Zmienia domyślny typ `char`.|
-|[/JMC](jmc.md)|Obsługuje natywne C++ debugowanie tylko mój kod.|
+|[/J](j-default-char-type-is-unsigned.md)|Zmienia typ domyślny `char` .|
+|[/JMC](jmc.md)|Obsługuje natywne debugowanie Tylko mój kod języka C++.|
 |[/Kernel](kernel-create-kernel-mode-binary.md)|Kompilator i konsolidator utworzy plik binarny, który może być wykonywany w jądrze systemu Windows.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Tworzy bibliotekę dołączaną dynamicznie.|
 |[/LDd](md-mt-ld-use-run-time-library.md)|Tworzy bibliotekę dołączaną dynamicznie do debugowania.|
-|[/link](link-pass-options-to-linker.md)|Przekazuje określoną opcję do LINKu.|
+|[/Link](link-pass-options-to-linker.md)|Przekazuje określoną opcję do LINKu.|
 |[/LN](ln-create-msil-module.md)|Tworzy moduł MSIL.|
 |[/MD](md-mt-ld-use-run-time-library.md)|Tworzy wielowątkową bibliotekę DLL przy użyciu MSVCRT. lib.|
 |[/MDd](md-mt-ld-use-run-time-library.md)|Utworzenie wielowątkowej biblioteki DLL debugowania za pomocą MSVCRTD. lib.|
@@ -102,7 +103,7 @@ Ta tabela zawiera alfabetyczną listę opcji kompilatora. Aby zapoznać się z l
 |[/Od](od-disable-debug.md)|Wyłącza optymalizację.|
 |[/Og](og-global-optimizations.md)|Przestarzałe. Używa globalnych optymalizacji.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Generuje funkcje wewnętrzne.|
-|[/OpenMP](openmp-enable-openmp-2-0-support.md)|Włącza dyrektywę [`#pragma omp`](../../preprocessor/omp.md) w kodzie źródłowym.|
+|[/OpenMP](openmp-enable-openmp-2-0-support.md)|Włącza [`#pragma omp`](../../preprocessor/omp.md) dyrektywę w kodzie źródłowym.|
 |[/OS](os-ot-favor-small-code-favor-fast-code.md)|Preferuje mały kod.|
 |[/OT](os-ot-favor-small-code-favor-fast-code.md)|Preferuje szybki kod.|
 |[/OX](ox-full-optimization.md)|Podzbiór elementu/O2, który nie zawiera/GF lub/Gy.|
@@ -110,24 +111,24 @@ Ta tabela zawiera alfabetyczną listę opcji kompilatora. Aby zapoznać się z l
 |[/P](p-preprocess-to-a-file.md)|Zapisuje dane wyjściowe preprocesora do pliku.|
 |[/permissive-](permissive-standards-conformance.md)|Ustaw tryb zgodności ze standardem.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Generuje szybki transcendentals.|
-|[/QIfist](qifist-suppress-ftol.md)|Przestarzałe. Pomija `_ftol`, gdy wymagana jest konwersja typu zmiennoprzecinkowego na typ całkowity (tylko x86).|
-|[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Usuwa `fwait` polecenia w blokach `try`.|
+|[/QIfist](qifist-suppress-ftol.md)|Przestarzałe. Pomija `_ftol` , gdy wymagana jest konwersja z typu zmiennoprzecinkowego na typ całkowity (tylko x86).|
+|[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Usuwa `fwait` polecenia wewnątrz `try` bloków.|
 |[/QIntel-jcc-erratum](qintel-jcc-erratum.md)|Zmniejsza wpływ na wydajność aktualizacji włączenia mikrokodu firmy Intel JCC sprawdzenia erraty.|
-|[/Qpar (Automatyczny paralelizator)](qpar-auto-parallelizer.md)|Włącza automatyczne przetwarzanie równoległe pętle, które są oznaczone za pomocą dyrektywy [pętli #pragma ()](../../preprocessor/loop.md) .|
+|[/Qpar (autoparalelizacji)](qpar-auto-parallelizer.md)|Włącza automatyczne przetwarzanie równoległe pętle, które są oznaczone za pomocą dyrektywy [pętli #pragma ()](../../preprocessor/loop.md) .|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Używa instrukcji przenoszenia liczb całkowitych dla wartości zmiennoprzecinkowych i wyłącza pewne optymalizacje ładowania zmiennoprzecinkowego.|
 |[/Qspectre](qspectre.md)|Określa generowanie kompilatora instrukcji w celu ograniczenia niektórych luk w zabezpieczeniach Spectre Variant 1.|
 |[/Qspectre-load](qspectre-load.md)|Określa generowanie kompilatora serializacji instrukcji, aby ograniczyć Spectre luki w zabezpieczeniach na podstawie instrukcji ładowania.|
 |[/Qspectre-load-cf](qspectre-load-cf.md)|Określa generowanie kompilatora serializacji instrukcji, aby wyeliminować luki w zabezpieczeniach Spectre w oparciu o instrukcje przepływu sterowania, które ładują pamięć.|
-|[/Qvec-report (Poziom raportowania automatycznej wektoryzacji)](qvec-report-auto-vectorizer-reporting-level.md)|Włącza poziomy raportowania dla automatycznej wektoryzacji.|
+|[/Qvec-Report (poziom raportowania autowektoryzator)](qvec-report-auto-vectorizer-reporting-level.md)|Włącza poziomy raportowania dla automatycznej wektoryzacji.|
 |[/RTC](rtc-run-time-error-checks.md)|Włącza sprawdzanie błędów czasu wykonywania.|
 |[/SDL](sdl-enable-additional-security-checks.md)|Umożliwia korzystanie z dodatkowych funkcji zabezpieczeń i ostrzeżeń.|
 |[/showIncludes](showincludes-list-include-files.md)|Wyświetla listę plików dołączanych podczas kompilacji.|
 |[określono element/source-charset](source-charset-set-source-character-set.md)|Ustaw zestaw znaków źródła.|
-|[/STD](std-specify-language-standard-version.md)|C++Selektor zgodności wersji standardowej.|
+|[/STD](std-specify-language-standard-version.md)|Selektor zgodności wersji standardowej języka C++.|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Określa plik źródłowy w języku C.|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Określa wszystkie pliki źródłowe to C.|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Określa plik C++ źródłowy.|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Określa wszystkie pliki źródłowe C++.|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Określa plik źródłowy języka C++.|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Określa wszystkie pliki źródłowe w języku C++.|
 |[Określ](u-u-undefine-symbols.md)|Usuwa wstępnie zdefiniowane makro.|
 |[Określ](u-u-undefine-symbols.md)|Usuwa wszystkie wstępnie zdefiniowane makra.|
 |[/UTF-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Ustaw zestaw znaków źródła i wykonania na UTF-8.|
@@ -146,7 +147,7 @@ Ta tabela zawiera alfabetyczną listę opcji kompilatora. Aby zapoznać się z l
 |[/Wall](compiler-option-warning-level.md)|Włącza wszystkie ostrzeżenia, w tym ostrzeżenia, które są domyślnie wyłączone.|
 |[/WD](compiler-option-warning-level.md)|Wyłącza określone ostrzeżenie.|
 |[/we](compiler-option-warning-level.md)|Traktuje określone ostrzeżenie jako błąd.|
-|[/WL](wl-enable-one-line-diagnostics.md)|Włącza diagnostykę jednowierszową dla komunikatów o błędach i C++ ostrzeżeniach podczas kompilowania kodu źródłowego z wiersza polecenia.|
+|[/WL](wl-enable-one-line-diagnostics.md)|Włącza diagnostykę jednowierszową dla komunikatów o błędach i ostrzeżeniach podczas kompilowania kodu źródłowego języka C++ z wiersza polecenia.|
 |[/wo](compiler-option-warning-level.md)|Wyświetla określone ostrzeżenie tylko raz.|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|Nieaktualne. Wykrywa 64-bitowe problemy z przenośnością.|
 |[/WV](compiler-option-warning-level.md)|Nie zawiera żadnych ostrzeżeń wprowadzonych po określonej wersji kompilatora.|

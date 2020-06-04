@@ -41,12 +41,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
-ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
+ms.openlocfilehash: 431c27a26fb549705abde28b08654ce47498e239
+ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83759241"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84421328"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -135,10 +135,13 @@ Line one
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**printf**, **_printf_l**|\<stdio. h>|
-|**wprintf**, **_wprintf_l**|\<stdio. h> lub \< WCHAR. h>|
+|**printf**, **_printf_l**|\<stdio.h>|
+|**wprintf**, **_wprintf_l**|\<stdio.h> lub \<wchar.h>|
 
 Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+
+> [!IMPORTANT]
+> Począwszy od systemu Windows 10 w wersji 2004 (kompilacja 19041), `printf` Rodzina funkcji drukuje dokładne, reprezentacja liczb zmiennoprzecinkowych zgodnie z regułami IEEE 754 do zaokrąglania. W poprzednich wersjach systemu Windows, dokładnie zaprezentowane liczby zmiennoprzecinkowe kończące się znakiem "5", zawsze są zaokrąglane w górę. IEEE 754 stwierdza, że muszą zaokrąglić do najbliższej parzystej cyfry (znanej również jako "zaokrąglenie w banku"). Na przykład zarówno 1,5, jak i 2,5 powinny zaokrąglić do 2. Wcześniej 1,5 byłyby zaokrąglane do 2 i 2,5, do 3. Ta zmiana ma wpływ tylko na dokładnie zaprezentowane numery. Na przykład 2,35 (które, gdy reprezentowane w pamięci, jest bliżej 2.35000000000000008), w dalszym ciągu zaokrągla się do 2,4. Zaokrąglanie wykonane przez te funkcje teraz uwzględnia również tryb zaokrąglania zmiennoprzecinkowego ustawiony przez [fesetenv](fesetenv1.md). Wcześniej zaokrąglanie zawsze wybiera FE_TONEAREST zachowanie. Ta zmiana dotyczy tylko programów utworzonych przy użyciu programu Visual Studio 2019 w wersji 16,2 lub nowszej. Aby użyć starszego zachowania zaokrąglania zmiennoprzecinkowego, Połącz z [legacy_stdio_float_rounding. obj](../link-options.md).
 
 ## <a name="example"></a>Przykład
 
