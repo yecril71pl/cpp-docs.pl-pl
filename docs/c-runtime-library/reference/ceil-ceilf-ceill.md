@@ -1,11 +1,12 @@
 ---
 title: ceil, ceilf, ceill
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - ceilf
 - ceil
 - ceill
 - _o_ceil
+- _o_ceilf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: bca6053b9dc5ecaf83ab8d63566308e3b573614e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 284443f511217be7873a7d7b02562484b32cefca
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917344"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507082"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -67,7 +68,7 @@ long double ceill(
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -90,7 +91,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**ceil —**, **ceilf —**, **ceill**|\<> Math. h|
+|**ceil —**, **ceilf —**, **ceill**|\<math.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -98,7 +99,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 Zobacz przykład dla [podłogi](floor-floorf-floorl.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>

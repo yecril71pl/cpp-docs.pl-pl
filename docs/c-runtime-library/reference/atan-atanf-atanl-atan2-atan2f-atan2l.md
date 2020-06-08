@@ -1,6 +1,6 @@
 ---
 title: atan, atanf, atanl, atan2, atan2f, atan2l
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - atan2f
 - atan2l
@@ -10,6 +10,7 @@ api_name:
 - atanl
 - _o_atan
 - _o_atan2
+- _o_atan2f
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -44,16 +45,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 34c4b124840572628c3e7cb10382e05b236e6292
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 41007e08884da6ccac09c7dc98cef12381e4b45a
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920072"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506783"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Oblicza arcus tangens liczby **x** (**atan**, **atanf —** i **atanl**) lub arcus tangens liczby **y**/**x** (**atan2**, **atan2f —** i **atan2l**).
+Oblicza arcus tangens liczby **x** (**atan**, **atanf —** i **atanl**) lub arcus tangens liczby **y** / **x** (**atan2**, **atan2f —** i **atan2l**).
 
 ## <a name="syntax"></a>Składnia
 
@@ -82,7 +83,7 @@ Wszystkie liczby.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**atan** zwraca arcus tangens *x* w zakresie od π/2 do π/2 radianów. Funkcja **atan2** zwraca arcus tangens liczby *y*/*x* w zakresie od π do π radianów. Jeśli *x* to 0, **atan** zwraca 0. Jeśli oba parametry **atan2** mają wartość 0, funkcja zwraca wartość 0. Wszystkie wyniki są w radianach.
+**atan** zwraca arcus tangens *x* w zakresie od π/2 do π/2 radianów. Funkcja **atan2** zwraca arcus tangens liczby *y* / *x* w zakresie od π do π radianów. Jeśli *x* to 0, **atan** zwraca 0. Jeśli oba parametry **atan2** mają wartość 0, funkcja zwraca wartość 0. Wszystkie wyniki są w radianach.
 
 Funkcja **atan2** używa znaków obu parametrów, aby określić ćwiartkę zwracanej wartości.
 
@@ -92,7 +93,7 @@ Funkcja **atan2** używa znaków obu parametrów, aby określić ćwiartkę zwra
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **atan** Oblicza arcus tangens (funkcja odwrotnej styczności) *x*. Funkcja **atan2** Oblicza arcus tangens liczby *y*/*x* (Jeśli *x* jest równa 0, **atan2** zwraca π/2, jeśli *y* jest dodatnia,-π/2, jeśli *y* jest ujemna, lub 0, jeśli *y* jest równa 0).
+Funkcja **atan** Oblicza arcus tangens (funkcja odwrotnej styczności) *x*. Funkcja **atan2** Oblicza arcus tangens *liczby y* / *x* (Jeśli *x* jest równa 0, **atan2** zwraca π/2, jeśli *y* jest dodatnia,-π/2, jeśli *y* jest ujemna, lub 0, jeśli *y* jest równa 0).
 
 **atan** ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Informacje i ograniczenia dotyczące korzystania z implementacji SSE2 można znaleźć w temacie [_set_SSE2_enable](set-sse2-enable.md).
 
@@ -104,7 +105,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------|-|
-|**atan**, **atan2**, **atanf —**, **atan2f —**, **atanl**, **atan2l**|\<> Math. h|\<cmath> lub \<Math. h>|
+|**atan**, **atan2**, **atanf —**, **atan2f —**, **atanl**, **atan2l**|\<math.h>|\<cmath> lub \<math.h>|
 
 ## <a name="example"></a>Przykład
 
@@ -137,7 +138,7 @@ Arctangent of 5.000000: 1.373401
 Arctangent of 0.500000 / 5.000000: 0.099669
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
