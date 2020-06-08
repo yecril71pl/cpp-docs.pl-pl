@@ -567,8 +567,10 @@
                   href: ../build/reference/gs-buffer-security-check.md
                 - name: /Gs (Kontroluj wywołania sprawdzania stosu)
                   href: ../build/reference/gs-control-stack-checking-calls.md
-                - name: /guard (włącz ochronę przepływu sterowania)
+                - name: '/guard:cf (Włącz ochronę przepływu sterowania)'
                   href: ../build/reference/guard-enable-control-flow-guard.md
+                - name: '/guard:ehcont (Włącz metadane kontynuacji EH)'
+                  href: ../build/reference/guard-enable-eh-continuation-metadata.md
                 - name: /GT (Obsługa bezpieczeństwa włókien magazynu wątków lokalnych)
                   href: ../build/reference/gt-support-fiber-safe-thread-local-storage.md
                 - name: /Gw (Optymalizuj dane globalne)
