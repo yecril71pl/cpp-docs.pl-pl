@@ -14,58 +14,58 @@ helpviewer_keywords:
 - CToolBar class [MFC], control bars
 - CStatusBar class [MFC], control bars
 ms.assetid: 31831910-3d23-4d70-9e71-03cc02f01ec4
-ms.openlocfilehash: ceae20c89d9a6d3f4393f838b3594938107785f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a2d3683b744493bb5566456b9e1358c1ddc418d4
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353569"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615976"
 ---
 # <a name="control-bars"></a>Paski sterowania
 
-"Pasek sterowania" to ogólna nazwa pasków narzędzi, pasków stanu i pasków dialogowych. Klasy `CToolBar`MFC `CStatusBar` `CDialogBar`, `COleResizeBar`, `CReBar` i pochodzą z klasy [CControlBar](../mfc/reference/ccontrolbar-class.md), który implementuje ich wspólne funkcje.
+"Pasek sterowania" to ogólna nazwa pasków narzędzi, pasków stanu i pasków dialogowych. Klasy MFC `CToolBar` ,,, `CStatusBar` `CDialogBar` `COleResizeBar` i `CReBar` dziedziczyją z klasy [CControlBar](reference/ccontrolbar-class.md), która implementuje ich wspólne funkcje.
 
-Paski sterowania to okna, które wyświetlają wiersze formantów, za pomocą których użytkownicy mogą wybierać opcje, wykonywać polecenia lub uzyskiwać informacje o programie. Typy pasków sterowania obejmują paski narzędzi, paski dialogowe i paski stanu.
+Paski sterowania to okna, w których są wyświetlane wiersze formantów, z których użytkownicy mogą wybierać opcje, wykonywać polecenia lub uzyskiwać informacje o programie. Typy pasków sterowania obejmują paski narzędzi, paski okien dialogowych i paski stanu.
 
-- Paski narzędzi, w klasie [CToolBar](../mfc/reference/ctoolbar-class.md)
+- Paski narzędzi w klasie [CToolBar](reference/ctoolbar-class.md)
 
-- Paski stanu, w klasie [CStatusBar](../mfc/reference/cstatusbar-class.md)
+- Słupki stanu, w klasie [CStatusBar](reference/cstatusbar-class.md)
 
-- Paski okiennia, w klasie [CDialogBar](../mfc/reference/cdialogbar-class.md)
+- Paski okna dialogowego w klasie [CDialogBar](reference/cdialogbar-class.md)
 
-- Pręty zbrojeniowe klasy [CReBar](../mfc/reference/crebar-class.md)
+- Paski w klasie [CReBar](reference/crebar-class.md)
 
 > [!IMPORTANT]
-> Od wersji MFC 4.0 paski narzędzi, paski stanu i porady dotyczące narzędzi są implementowane przy użyciu funkcji systemu zaimplementowanych w *pliku comctl32.dll* zamiast poprzedniej implementacji specyficznej dla MFC. W wersji MFC 6.0, `CReBar`który również zawija funkcje comctl32.dll, został dodany.
+> Począwszy od wersji 4,0, paski narzędzi, paski stanu i wskazówki dotyczące narzędzi są implementowane przy użyciu funkcji systemu wdrożonej w *comctl32. dll* zamiast poprzedniej implementacji specyficznej dla MFC. W bibliotece MFC w wersji 6,0, `CReBar` która również otacza funkcję comctl32. dll, została dodana.
 
-Krótkie wprowadzenie do typów paska sterowania następują. Aby uzyskać więcej informacji, zobacz poniższe linki.
+Krótkie wprowadzenie do typów pasków kontrolek. Aby uzyskać więcej informacji, zobacz poniższe linki.
 
 ## <a name="control-bars"></a>Paski sterowania
 
-Paski sterowania znacznie zwiększają użyteczność programu, zapewniając szybkie, jednoetapowe akcje poleceń. Klasa `CControlBar` zapewnia wspólne funkcje wszystkich pasków narzędzi, pasków stanu i pasków dialogowych. `CControlBar`zapewnia funkcje pozycjonowania paska sterowania w oknie ramki nadrzędnej. Ponieważ pasek sterowania jest zwykle okno podrzędne okna ramki nadrzędnej, jest "elementem równorzędnym" do widoku klienta lub klienta MDI okna ramki. Obiekt paska sterowania używa informacji o jego prostokąt klienta okna nadrzędnego do położenia się. Następnie zmienia prostokąt pozostałych okna klienta nadrzędnego, tak aby widok klienta lub okno klienta MDI wypełnia pozostałą część okna klienta.
+Paski sterowania znacznie rozszerzają użyteczność programu, dostarczając szybkie, jednoetapowe akcje poleceń. Klasa `CControlBar` udostępnia typowe funkcje wszystkich pasków narzędzi, pasków stanu i pasków dialogowych. `CControlBar`oferuje funkcje do pozycjonowania paska sterowania w oknie ramki nadrzędnej. Ponieważ pasek sterowania jest zwykle oknem podrzędnym okna ramki nadrzędnej, jest to "równorzędne" do widoku klienta lub klienta MDI okna ramki. Obiekt paska sterowania używa informacji o prostokącie klienta okna nadrzędnego, aby pomieścić siebie. Następnie zmienia pozostały prostokąt okna klienta elementu nadrzędnego, aby widok klienta lub okno klienta MDI wypełnił resztę okna klienta.
 
 > [!NOTE]
-> Jeśli przycisk na pasku sterowania nie ma **polecenia** lub **UPDATE_COMMAND_UI** obsługi, struktura automatycznie wyłącza przycisk.
+> Jeśli przycisk na pasku sterowania nie ma procedury obsługi **polecenia** lub **UPDATE_COMMAND_UI** , struktura automatycznie wyłącza przycisk.
 
 ## <a name="toolbars"></a>Paski narzędzi
 
-Pasek narzędzi to pasek sterowania, który wyświetla wiersz przycisków bitmapowych, które wykonują polecenia. Naciśnięcie przycisku paska narzędzi jest równoznaczne z wybraniem elementu menu; wywołuje ten sam program obsługi mapowany do elementu menu, jeśli ten element menu ma ten sam identyfikator co przycisk paska narzędzi. Przyciski można skonfigurować tak, aby były wyświetlane i zachowywały się jak przyciski, przyciski radiowe lub pola wyboru. Pasek narzędzi jest zwykle wyrównany do górnej części okna ramki, ale pasek narzędzi MFC może "dokować" do dowolnej strony okna nadrzędnego lub unosić się w swoim własnym oknie mini-ramki. Pasek narzędzi może również "float" i można zmienić jego rozmiar i przeciągnąć go za pomocą myszy. Pasek narzędzi może również wyświetlać wskazówki dotyczące narzędzi, gdy użytkownik przesuwa kursor myszy nad przyciskami paska narzędzi. Etykietka narzędzia to małe okno podręczne, które pokrótce opisuje cel przycisku.
+Pasek narzędzi to pasek sterowania, który wyświetla wiersz przycisków mapy bitowej, które wykonują polecenia. Naciśnięcie przycisku paska narzędzi jest równoznaczne z wybraniem elementu menu; wywołuje tę samą procedurę obsługi zamapowana na element menu, jeśli ten element menu ma ten sam identyfikator jak przycisk paska narzędzi. Przyciski można skonfigurować tak, aby były wyświetlane i zachowywały się jak przyciski radiowe lub pola wyboru. Pasek narzędzi jest zwykle wyrównany do górnej części okna ramki, ale pasek narzędzi MFC może być "Dock" po każdej stronie jego okna nadrzędnego lub zmiennoprzecinkowej w osobnym oknie mini-frame. Pasek narzędzi może być również "float" i można zmienić jego rozmiar i przeciągnąć go za pomocą myszy. Na pasku narzędzi można także wyświetlić wskazówki dotyczące narzędzi, gdy użytkownik przesuwa wskaźnik myszy nad przyciskami paska narzędzi. Etykietka narzędzia to małe okno podręczne, które zwięźle opisuje przeznaczenie przycisku.
 
 > [!NOTE]
-> W wersji MFC 4.0, klasa [CToolBar](../mfc/reference/ctoolbar-class.md) używa wspólnego formantu paska narzędzi systemu Windows. A `CToolBar` zawiera [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md). Starsze paski narzędzi są jednak nadal obsługiwane. Zobacz artykuł [Paski narzędziowe](../mfc/mfc-toolbar-implementation.md).
+> Począwszy od biblioteki MFC w wersji 4,0, Klasa [CToolBar](reference/ctoolbar-class.md) używa typowej kontrolki paska narzędzi systemu Windows. A `CToolBar` zawiera element [CToolBarCtrl](reference/ctoolbarctrl-class.md). Starsze paski narzędzi są jednak nadal obsługiwane. Zobacz [paski narzędzi](mfc-toolbar-implementation.md)artykułów.
 
 ## <a name="status-bars"></a>Paski stanu
 
-Pasek stanu to pasek sterowania zawierający okienka tekstowo-wyjściowe lub "wskaźniki". Okienka danych wyjściowych są powszechnie używane jako linie komunikatów i jako wskaźniki stanu. Przykłady wierszy komunikatów obejmują wiersze pomocy polecenia, które krótko wyjaśniają wybrane menu lub polecenie paska narzędzi w lewym okienku domyślnego paska stanu utworzonego przez Kreatora aplikacji MFC. Przykłady wskaźników stanu obejmują SCROLL LOCK, NUM LOCK i inne klucze. Paski stanu są zwykle wyrównane do dolnej części okna ramki. Zobacz klasę [CStatusBar](../mfc/reference/cstatusbar-class.md) i klasę [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md).
+Pasek stanu jest paskiem sterowania, który zawiera okienka tekstu wyjściowego lub "wskaźniki". Okienka danych wyjściowych są często używane jako wiersze komunikatów i jako wskaźniki stanu. Przykłady wierszy komunikatów zawierają pomoc polecenia — wiersze komunikatów, które krótko objaśniają wybrane menu lub polecenia paska narzędzi w okienku po lewej stronie domyślnego paska stanu utworzonego przez Kreatora aplikacji MFC. Przykłady wskaźników stanu obejmują BLOKADę przewijania, NUM LOCK i inne klucze. Słupki stanu są zazwyczaj wyrównane do dołu okna ramki. Zobacz klasy [CStatusBar](reference/cstatusbar-class.md) i Klasa [CStatusBarCtrl](reference/cstatusbarctrl-class.md).
 
 ## <a name="dialog-bars"></a>Paski dialogowe
 
-Pasek dialogowy to pasek sterowania oparty na zasobie szablonu okna dialogowego z funkcją niemodytowego okna dialogowego. Paski dialogowe mogą zawierać formanty systemu Windows, niestandardowe lub ActiveX. Podobnie jak w oknie dialogowym, użytkownik może tabulator wśród formantów. Paski dialogowe można wyrównać do górnej, dolnej, lewej lub prawej strony okna ramki i mogą być również unoszone we własnym oknie ramki. Zobacz klasę [CDialogBar](../mfc/reference/cdialogbar-class.md).
+Pasek okna dialogowego to pasek sterowania oparty na zasobie szablonu okna dialogowego z funkcją niemodalnego okna dialogowego. Paski okna dialogowego mogą zawierać kontrolki Windows, niestandardowe lub ActiveX. Podobnie jak w oknie dialogowym, użytkownik może przełączać się między kontrolkami. Paski okna dialogowego mogą być wyrównane do górnego, dolnego, lewego lub prawego boku okna ramki i mogą być również przepływane w osobnym oknie ramek. Zobacz Klasa [CDialogBar](reference/cdialogbar-class.md).
 
-## <a name="rebars"></a>Pręty zbrojeniowe
+## <a name="rebars"></a>Paski
 
-Pręt [zbrojeniowy](../mfc/using-crebarctrl.md) to pasek sterowania, który zapewnia informacje o dokowaniu, układzie, stanie i trwałości dla formantów prętów zbrojeniowych. Obiekt prętów zbrojeniowych może zawierać różne okna podrzędne, zazwyczaj inne formanty, w tym pola edycji, paski narzędzi i pola listy. Obiekt prętów zbrojeniowych może wyświetlać swoje okna podrzędne na określonej mapie bitowej. Można go automatycznie lub ręcznie zmielidzić, klikając lub przeciągając pasek chwytaka. Zobacz klasę [CReBar](../mfc/reference/crebar-class.md).
+[Paska pomocniczego](using-crebarctrl.md) to pasek sterowania, który udostępnia informacje dotyczące dokowania, układu, stanu i trwałości dla formantów paska pomocniczego. Obiekt paska pomocniczego może zawierać różne okna podrzędne, zwykle inne kontrolki, takie jak pola edycji, paski narzędzi i pola listy. Obiekt paska pomocniczego może wyświetlać jego okna podrzędne przez określoną mapę bitową. Rozmiar można zmienić automatycznie lub ręcznie, klikając lub przeciągając jego pasek uchwytu. Zobacz Klasa [CReBar](reference/crebar-class.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)
+[Elementy interfejsu użytkownika](user-interface-elements-mfc.md)

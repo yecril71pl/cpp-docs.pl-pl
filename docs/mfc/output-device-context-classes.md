@@ -11,60 +11,60 @@ helpviewer_keywords:
 - painting classes [MFC]
 - output classes [MFC]
 ms.assetid: 35fd6435-a38e-42c6-a3fa-cd6f39370fc3
-ms.openlocfilehash: 1d76570e7bfd4ce587b3803235394ec5406d30b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b15f5034604f9d6b67574288140b79b144692478
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410203"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615361"
 ---
 # <a name="output-device-context-classes"></a>Klasy wyjściowe (kontekst urządzenia)
 
-W ramach tych zajęć Hermetyzowanie różnych rodzajów konteksty urządzenia dostępne w Windows.
+Klasy te hermetyzują różne typy kontekstów urządzeń dostępne w systemie Windows.
 
-Większość następujące klasy hermetyzować dojścia do kontekstu urządzenia Windows. Kontekst urządzenia jest obiektem Windows, który zawiera informacje o atrybuty rysowania urządzenia, takie jak drukarka lub wyświetlania. Wszystkie wywołania rysowania są wykonywane za pośrednictwem obiektów kontekstu urządzenia. Dodatkowe klasy pochodne `CDC` hermetyzacji funkcje specjalne kontekstu urządzenia, w tym obsługa metapliki Windows.
+Większość następujących klas hermetyzuje dojście do kontekstu urządzenia z systemem Windows. Kontekst urządzenia to obiekt systemu Windows, który zawiera informacje o atrybutach rysowania urządzenia, takich jak wyświetlacz lub drukarka. Wszystkie wywołania rysowania są wykonywane za pomocą obiektu kontekstu urządzenia. Dodatkowe klasy pochodzące od `CDC` hermetyzacji wyspecjalizowanych funkcji kontekstu urządzenia, w tym obsługa plików Windows.
 
-[CDC](../mfc/reference/cdc-class.md)<br/>
-Klasa bazowa konteksty urządzenia. Używane bezpośrednio do uzyskania dostępu do całego ekranu oraz do uzyskiwania dostępu do nondisplay kontekstach, takich jak drukarki.
+[CDC](reference/cdc-class.md)<br/>
+Klasa bazowa dla kontekstów urządzenia. Używane bezpośrednio do uzyskiwania dostępu do całego ekranu oraz do uzyskiwania dostępu do niewyświetlanych kontekstów, takich jak drukarki.
 
-[CPaintDC](../mfc/reference/cpaintdc-class.md)<br/>
-Używane w kontekście wyświetlania `OnPaint` funkcji elementów członkowskich systemu windows. Automatycznie wywołuje `BeginPaint` w konstrukcji i `EndPaint` w chwili zniszczenia.
+[CPaintDC](reference/cpaintdc-class.md)<br/>
+Kontekst wyświetlania używany w `OnPaint` funkcjach składowych systemu Windows. Automatycznie wywołuje `BeginPaint` podczas tworzenia i `EndPaint` niszczenia.
 
-[CClientDC](../mfc/reference/cclientdc-class.md)<br/>
-Kontekst wyświetlania obszarów klienckich systemu windows. Używany, na przykład, aby narysować w natychmiastowej reakcji na zdarzenia myszy.
+[CClientDC —](reference/cclientdc-class.md)<br/>
+Kontekst wyświetlania dla obszarów klienta systemu Windows. Używane na przykład do narysowania natychmiastowej odpowiedzi na zdarzenia myszy.
 
-[CWindowDC](../mfc/reference/cwindowdc-class.md)<br/>
-Kontekst wyświetlania dla całego systemu windows, w tym obszary zarówno klient, jak i nieklienckie.
+[CWindowDC](reference/cwindowdc-class.md)<br/>
+Kontekst wyświetlania dla całego systemu Windows, w tym obszary klienta i nieklienckiego.
 
-[CMetaFileDC](../mfc/reference/cmetafiledc-class.md)<br/>
-Kontekst urządzenia dla metapliki Windows. Metaplik Windows zawiera sekwencję poleceń interface (GDI) urządzenia grafiki, które można odtworzyć do utworzenia obrazu. Wywołania funkcji składowych `CMetaFileDC` są rejestrowane w metaplik.
+[CMetaFileDC](reference/cmetafiledc-class.md)<br/>
+Kontekst urządzenia dla plików Windows. Metaplik systemu Windows zawiera sekwencję poleceń GDI (Graphics Device Interface), które mogą być odtwarzane w celu utworzenia obrazu. Wywołania wykonane do funkcji składowych a `CMetaFileDC` są rejestrowane w metapliku.
 
-## <a name="related-classes"></a>Klasy pokrewne
+## <a name="related-classes"></a>Powiązane klasy
 
 [CPoint](../atl-mfc-shared/reference/cpoint-class.md)<br/>
-Przechowują pary współrzędne (x, y).
+Przechowuje pary współrzędnych (x, y).
 
 [CSize](../atl-mfc-shared/reference/csize-class.md)<br/>
-Przechowuje odległość, położenie względne lub par wartości.
+Utrzymuje odległość, położenie względne lub sparowane wartości.
 
 [CRect](../atl-mfc-shared/reference/crect-class.md)<br/>
-Zawiera współrzędne programu prostokątnych obszarów.
+Utrzymuje współrzędne obszarów prostokątów.
 
-[CRgn](../mfc/reference/crgn-class.md)<br/>
-Hermetyzuje region GDI do manipulowania obszar elipsy, wielokątne lub nieprawidłowo, w tym oknie. Używane w połączeniu z wycinka funkcje elementów członkowskich w klasie `CDC`.
+[CRgn](reference/crgn-class.md)<br/>
+Hermetyzuje region GDI na potrzeby manipulowania obszarem eliptycznym, wielobokówowym lub nieregularnym w oknie. Używane w połączeniu z przyciętymi elementami członkowskimi w klasie `CDC` .
 
-[CRectTracker](../mfc/reference/crecttracker-class.md)<br/>
-Wyświetla i obsługuje interfejs użytkownika, zmienianie rozmiaru i przenoszenie obiektów prostokątny.
+[CRectTracker](reference/crecttracker-class.md)<br/>
+Wyświetla i obsługuje interfejs użytkownika służący do zmiany rozmiarów i przesuwania prostokątnych obiektów.
 
-[CColorDialog](../mfc/reference/ccolordialog-class.md)<br/>
-W tym temacie przedstawiono standardowe okno dialogowe wybierania kolorów.
+[CColorDialog](reference/ccolordialog-class.md)<br/>
+Udostępnia standardowe okno dialogowe do wybierania koloru.
 
-[CFontDialog](../mfc/reference/cfontdialog-class.md)<br/>
-W tym temacie przedstawiono standardowe okno dialogowe wybierania czcionki.
+[CFontDialog](reference/cfontdialog-class.md)<br/>
+Udostępnia standardowe okno dialogowe do wybierania czcionki.
 
-[CPrintDialog](../mfc/reference/cprintdialog-class.md)<br/>
-Zawiera standardowe okno dialogowe drukowania pliku.
+[CPrintDialog](reference/cprintdialog-class.md)<br/>
+Udostępnia standardowe okno dialogowe do drukowania pliku.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../mfc/class-library-overview.md)
+[Przegląd klas](class-library-overview.md)

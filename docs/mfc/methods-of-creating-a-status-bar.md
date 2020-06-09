@@ -9,28 +9,28 @@ helpviewer_keywords:
 - methods [MFC]
 - status bars [MFC], creating
 ms.assetid: 9aeaf290-7099-4762-a5ba-9c26705333c9
-ms.openlocfilehash: a2301301d0012bd93ffedd0452dec140174402e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bdaa76dc68467dce1021d9b5f54eaafa248c529
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383897"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624272"
 ---
 # <a name="methods-of-creating-a-status-bar"></a>Metody tworzenia paska stanu
 
-Biblioteka MFC zawiera dwie klasy do utworzenia pasków stanu: [CStatusBar](../mfc/reference/cstatusbar-class.md) i [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) (która opakowuje interfejs API sterowania wspólnej Windows). `CStatusBar` zapewnia wszystkie funkcje stanu paska formantu typowego automatycznie współpracuje z usługą menu i paski narzędzi i obsługuje wiele wymagane typowe ustawienia kontroli i struktury dla Ciebie; Jednak wynikowy plik wykonywalny zazwyczaj będzie większy niż utworzony za pomocą `CStatusBarCtrl`.
+MFC udostępnia dwie klasy do tworzenia pasków stanu: [CStatusBar](reference/cstatusbar-class.md) i [CStatusBarCtrl](reference/cstatusbarctrl-class.md) (które zawijają interfejs API usługi Common Control systemu Windows). `CStatusBar`oferuje wszystkie funkcje typowej kontrolki pasek stanu, która automatycznie współdziała z menu i paskami narzędzi, a także obsługuje wiele wymaganych wspólnych ustawień i struktur kontrolek. jednak utworzony plik wykonywalny zwykle będzie większy niż ten, który został utworzony za pomocą programu `CStatusBarCtrl` .
 
-`CStatusBarCtrl` zwykle powoduje mniejsze pliku wykonywalnego, a może chcieć użyć `CStatusBarCtrl` Jeśli nie zamierzasz przeprowadzić integrację na pasku stanu w architekturę MFC. Jeśli planujesz używać `CStatusBarCtrl` i zintegruj pasek stanu architektury MFC, należy zwrócić uwagę dodatkowe do przedstawiania stanu paska sterowania manipulacje z MFC. Ta informacja nie jest trudne; jest jednak dodatkowej pracy, który jest zbędny w przypadku używania `CStatusBar`.
+`CStatusBarCtrl`zwykle wynikiem jest mniejszy plik wykonywalny i warto użyć, `CStatusBarCtrl` Jeśli nie zamierzasz zintegrować paska stanu z architekturą MFC. Jeśli planujesz użyć `CStatusBarCtrl` i zintegrować pasek stanu z architekturą MFC, musisz zadbać o to, aby przekazywać manipulowanie formantami paska stanu do MFC. Ta komunikacja nie jest trudna. Jednak w przypadku korzystania z programu jest to dodatkowa niepotrzebna `CStatusBar` .
 
-Visual C++ zapewnia dwa sposoby, aby móc korzystać z formantu typowego paska stanu.
+Visual C++ zapewnia dwa sposoby skorzystania z zalet typowej kontroli nad paskiem stanu.
 
-- Utwórz pasek przy użyciu stanu `CStatusBar`, a następnie wywołać [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl) uzyskać dostęp do `CStatusBarCtrl` funkcji elementów członkowskich.
+- Utwórz pasek stanu za pomocą polecenia `CStatusBar` , a następnie Wywołaj [CStatusBar:: GetStatusBarCtrl](reference/cstatusbar-class.md#getstatusbarctrl) , aby uzyskać dostęp do `CStatusBarCtrl` funkcji składowych.
 
-- Utwórz pasek przy użyciu stanu [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)przez Konstruktor.
+- Utwórz pasek stanu przy użyciu konstruktora [CStatusBarCtrl](reference/cstatusbarctrl-class.md).
 
-Każda z tych metod zapewni Ci dostęp do funkcji Członkowskich formantu paska stanu. Gdy wywołujesz `CStatusBar::GetStatusBarCtrl`, zwraca odwołanie do `CStatusBarCtrl` obiektu, aby można było używać któryś zbiór elementów członkowskich. Zobacz [CStatusBar](../mfc/reference/cstatusbar-class.md) informacji na temat tworzenia i stan paska za pomocą tworzenia `CStatusBar`.
+Każda z tych metod zapewni dostęp do funkcji Członkowskich kontrolki pasek stanu. Po wywołaniu `CStatusBar::GetStatusBarCtrl` , zwraca odwołanie do `CStatusBarCtrl` obiektu, aby można było użyć dowolnego zestawu funkcji Członkowskich. Zobacz [CStatusBar](reference/cstatusbar-class.md) , aby uzyskać informacje dotyczące konstruowania i tworzenia paska stanu przy użyciu `CStatusBar` .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Korzystanie ze CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Korzystanie ze CStatusBarCtrl](using-cstatusbarctrl.md)<br/>
+[Formanty](controls-mfc.md)

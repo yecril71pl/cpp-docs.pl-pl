@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aligned_union
 ms.assetid: 9931a44d-3a67-4f29-a0f6-d47a7cf560ac
-ms.openlocfilehash: ae03802549f7791e51dccf1ea98a7b18929a4a4b
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ae6ef629535238b9406216afd9f680a5c1e1afe0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690105"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623793"
 ---
 # <a name="aligned_union-class"></a>aligned_union — klasa
 
@@ -29,19 +29,19 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*Len* \
+*Funkcja*\
 Wartość wyrównania dla największego typu w Unii.
 
-*Typy* \
+*Typ*\
 Różne typy w podstawowym związku.
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj szablonu klasy, aby uzyskać wyrównanie i rozmiar wymagany do przechowywania Unii w niezainicjowanym magazynie. Element typedef składowej `type` nazwy typu POD odpowiednie do przechowywania dowolnego typu wymienionego w *typach*; minimalny rozmiar to *len*. Statyczny element członkowski `alignment_value` typu `std::size_t` zawiera najdokładniejsze wyrównanie wymagane przez wszystkie typy wymienione w *typach*.
+Użyj szablonu klasy, aby uzyskać wyrównanie i rozmiar wymagany do przechowywania Unii w niezainicjowanym magazynie. Element typedef składa `type` nazwy typu pod odpowiednie do przechowywania dowolnego typu wymienionego w *typach*; minimalny rozmiar to *len*. Statyczny element członkowski `alignment_value` typu `std::size_t` zawiera najdokładniejsze wyrównanie wymagane przez wszystkie typy wymienione w *typach*.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak używać `aligned_union` do przydzielenia wyrównanego buforu stosu do złożenia.
+Poniższy przykład pokazuje, jak użyć `aligned_union` do przydzielenia wyrównanego buforu stosu, aby umieścić Unię.
 
 ```cpp
 // std__type_traits__aligned_union.cpp
@@ -79,11 +79,11 @@ value of u->i is 1065353216
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md) \
-[alignment_of, klasa](../standard-library/alignment-of-class.md)
+[<type_traits>](type-traits.md)\
+[Klasa alignment_of](alignment-of-class.md)

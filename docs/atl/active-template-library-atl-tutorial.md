@@ -1,6 +1,6 @@
 ---
 title: Biblioteka Active Template Library (ATL) — Samouczek
-description: Tworzenie formantu ActiveX, za pomocą programu Microsoft C++ i biblioteki Active Template Library.
+description: Utwórz kontrolkę ActiveX przy użyciu języka Microsoft C++ i Active Template Library.
 ms.custom: get-started-article
 ms.date: 05/03/2019
 helpviewer_keywords:
@@ -10,35 +10,35 @@ helpviewer_keywords:
 - tutorials [ATL]
 - ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
-ms.openlocfilehash: ae336c0192214261d61792715353fc54b8b37fba
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: ea94cf061a3222ed03d1efcc3bb12d1ad027c26b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221311"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616669"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Biblioteka Active Template Library (ATL) — Samouczek
 
-ATL zaprojektowano w celu uproszczenia procesu tworzenia formantów, wydajny, elastyczne i uproszczone. Ten samouczek poprowadzi Cię przez tworzenie formantu ActiveX, demonstrując wiele podstawy ATL i COM.
+ATL zaprojektowano w celu uproszczenia procesu tworzenia wydajnych, elastycznych, lekkich formantów. Ten samouczek przeprowadzi Cię przez proces tworzenia kontrolki ActiveX, pokazując wiele podstawowych elementów ATL i COM.
 
-Korzystając z tego samouczka, dowiesz się, jak dodać kontrolki do projektu ATL, który rysuje okrąg i wypełniony wielokąt. Następnie dodasz właściwość, aby wskazać liczbę boków wielokąta będzie mieć i utworzyć kod rysowania aktualizowania kontrolki, gdy właściwość. Formant zostanie wyświetlony na stronie sieci Web, aby stał się reagowania na zdarzenia przy użyciu niektórych VBScript.
+Postępując zgodnie z tym samouczkiem, dowiesz się, jak dodać kontrolkę do projektu ATL, który rysuje okrąg i wypełniony wielokąt. Następnie dodasz właściwość, aby wskazać, ile boków ma Wielokąt, i utworzyć kod rysowania do aktualizowania kontrolki, gdy właściwość zostanie zmieniona. Kontrolka zostanie następnie wyświetlona na stronie sieci Web przy użyciu skryptu VBScript w celu reagowania na zdarzenia.
 
-Samouczek jest podzielone na siedem kroków. Należy wykonać każdy krok w kolejności, ponieważ dalszych krokach zależą od poprzednio wykonanych zadań. Przed rozpoczęciem należy się upewnić, że masz uprawnienia wymagane do zarejestrowania składnik ActiveX na określonym komputerze. Zazwyczaj jest tylko problemem, jeśli używasz programu Visual Studio .NET przy użyciu połączenia usług terminalowych.
+Samouczek jest podzielony na siedem kroków. Należy wykonać każdy krok w kolejności, w jakiej późniejsze kroki zależą od wcześniej ukończonych zadań. Przed rozpoczęciem należy upewnić się, że masz uprawnienia wymagane do zarejestrowania składnika ActiveX na określonym komputerze. Jest to zazwyczaj problemem tylko w przypadku korzystania z programu Visual Studio .NET za pośrednictwem połączenia usług terminalowych.
 
-- [Krok 1. Tworzenie projektu](../atl/creating-the-project-atl-tutorial-part-1.md)
+- [Krok 1. Tworzenie projektu](creating-the-project-atl-tutorial-part-1.md)
 
-- [Krok 2. Dodawanie kontrolki do projektu](../atl/adding-a-control-atl-tutorial-part-2.md)
+- [Krok 2. Dodawanie kontrolki do projektu](adding-a-control-atl-tutorial-part-2.md)
 
-- [Krok 3. Dodawanie właściwości do kontrolki](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)
+- [Krok 3. Dodawanie właściwości do kontrolki](adding-a-property-to-the-control-atl-tutorial-part-3.md)
 
-- [Krok 4. Zmiana kodu rysującego kontroli nad](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
+- [Krok 4. zmiana kodu rysowania kontrolki](changing-the-drawing-code-atl-tutorial-part-4.md)
 
-- [Krok 5. Dodawanie zdarzenia](../atl/adding-an-event-atl-tutorial-part-5.md)
+- [Krok 5. Dodawanie zdarzenia](adding-an-event-atl-tutorial-part-5.md)
 
-- [Krok 6. Dodawanie strony właściwości](../atl/adding-a-property-page-atl-tutorial-part-6.md)
+- [Krok 6. Dodawanie strony właściwości](adding-a-property-page-atl-tutorial-part-6.md)
 
-- [Krok 7. Umieszczanie kontrolki na stronie sieci Web](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
+- [Krok 7. Umieszczanie kontrolki na stronie sieci Web](putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Pojęcia](../atl/active-template-library-atl-concepts.md)
+[Pojęcia](active-template-library-atl-concepts.md)

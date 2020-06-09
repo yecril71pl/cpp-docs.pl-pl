@@ -6,24 +6,24 @@ helpviewer_keywords:
 - tool tips [MFC], tool tip controls
 - tool tips [MFC], creating
 ms.assetid: b015e9f4-ddfb-49a4-a5a6-fa2d45e4d328
-ms.openlocfilehash: 2ba935f52f24f62dded3b89df1563454cf7e0335
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26f31705068df009e906d50451efa9ea6572d7e6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383915"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625457"
 ---
 # <a name="methods-of-creating-tool-tips"></a>Metody tworzenia etykietek narzędzi
 
-Biblioteka MFC zawiera trzy klasy, aby utworzyć i zarządzać formantem etykietki narzędzia: [CWnd](../mfc/reference/cwnd-class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) i [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md). Funkcje elementów członkowskich Porada narzędzia w ramach tych zajęć opakować Windows formantu typowego interfejsu API. Klasa `CToolBarCtrl` i klasa `CToolTipCtrl` pochodzą z klasy `CWnd`.
+MFC oferuje trzy klasy do tworzenia kontrolki etykietki narzędzia i zarządzania nią: [CWnd](reference/cwnd-class.md), [CToolBarCtrl](reference/ctoolbarctrl-class.md), [CToolTipCtrl](reference/ctooltipctrl-class.md) i [CMFCToolTipCtrl](reference/cmfctooltipctrl-class.md). Funkcje składowe etykietki narzędzia w tych klasach otaczają interfejs API wspólnego sterowania systemu Windows. Klasa `CToolBarCtrl` i Klasa pochodzą `CToolTipCtrl` od klasy `CWnd` .
 
-`CWnd` udostępnia cztery funkcji elementów członkowskich do tworzenia i zarządzania nimi etykietek narzędzi: [EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips), [CancelToolTips](../mfc/reference/cwnd-class.md#canceltooltips), [FilterToolTipMessage](../mfc/reference/cwnd-class.md#filtertooltipmessage), i [ontoolhittest —](../mfc/reference/cwnd-class.md#ontoolhittest). Zobacz te funkcje poszczególnych elementów członkowskich, aby uzyskać więcej informacji na temat sposobu wdrażania etykietek narzędzi.
+`CWnd`Program udostępnia cztery funkcje składowe umożliwiające tworzenie etykietek narzędzi i zarządzanie nimi: [EnableToolTips](reference/cwnd-class.md#enabletooltips), [CancelToolTips](reference/cwnd-class.md#canceltooltips), [FilterToolTipMessage](reference/cwnd-class.md#filtertooltipmessage)i [OnToolHitTest](reference/cwnd-class.md#ontoolhittest). Zobacz te pojedyncze funkcje członkowskie, aby uzyskać więcej informacji na temat implementowania etykietek narzędzi.
 
-Jeśli utworzysz przy użyciu narzędzi `CToolBarCtrl`, można zaimplementować etykietki narzędzia dla tego paska narzędzi bezpośrednio przy użyciu następujących funkcji elementów członkowskich: [GetToolTips](../mfc/reference/ctoolbarctrl-class.md#gettooltips) i [SetToolTips](../mfc/reference/ctoolbarctrl-class.md#settooltips). Zobacz te funkcje poszczególnych elementów członkowskich i [Obsługa powiadomień dotyczących Porada narzędzi](../mfc/handling-tool-tip-notifications.md) Aby uzyskać więcej informacji na temat sposobu wdrażania etykietek narzędzi.
+Jeśli tworzysz pasek narzędzi przy użyciu `CToolBarCtrl` , możesz zaimplementować wskazówki dotyczące narzędzia dla tego paska narzędzi bezpośrednio przy użyciu następujących funkcji składowych: [GetToolTips](reference/ctoolbarctrl-class.md#gettooltips) i [SetToolTips](reference/ctoolbarctrl-class.md#settooltips). Aby uzyskać więcej informacji na temat sposobu implementowania etykietek narzędzi, zobacz te pojedyncze funkcje członkowskie i [Obsługa powiadomień etykietki narzędzi](handling-tool-tip-notifications.md) .
 
-`CToolTipCtrl` Klasa oferuje funkcje wspólne formantem etykietki narzędzia Windows. Pojedynczy firmant narzędzia wskazówki może dostarczyć informacji dla więcej niż jednego narzędzia. To narzędzie jest albo okien, na przykład okno podrzędne lub kontroli lub zdefiniowanych przez aplikację prostokątny obszar w obrębie obszaru klienckiego okna. [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md) klasa pochodzi od `CToolTipCtrl` i udostępnia dodatkowe style wizualne i funkcje.
+`CToolTipCtrl`Klasa oferuje funkcje formantu etykietki narzędzia typowego dla systemu Windows. Pojedyncza kontrolka etykietka narzędzia zawiera informacje dla więcej niż jednego narzędzia. Narzędzie to okno, takie jak okno podrzędne lub kontrolka, lub prostokątny obszar zdefiniowany przez aplikację w obszarze klienta okna. Klasa [CMFCToolTipCtrl](reference/cmfctooltipctrl-class.md) dziedziczy z `CToolTipCtrl` i udostępnia dodatkowe style i funkcje wizualne.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Korzystanie z CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Korzystanie z CToolTipCtrl](using-ctooltipctrl.md)<br/>
+[Formanty](controls-mfc.md)

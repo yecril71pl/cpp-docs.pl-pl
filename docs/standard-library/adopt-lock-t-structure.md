@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::adopt_lock_t
 ms.assetid: 549972fb-e2e9-4415-8657-c159b09aa3f4
-ms.openlocfilehash: 703f741241209401d1b63f9409c13cd1117a2e63
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f613aeda7b92d7d452af9449bfbf47419cb45470
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456516"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623907"
 ---
-# <a name="adoptlockt-structure"></a>adopt_lock_t — Struktura
+# <a name="adopt_lock_t-structure"></a>adopt_lock_t — Struktura
 
-Reprezentuje typ, który jest używany do definiowania [adopt_lock](../standard-library/mutex-functions.md#adopt_lock).
+Reprezentuje typ, który jest używany do definiowania [adopt_lock](mutex-functions.md#adopt_lock).
 
 ## <a name="syntax"></a>Składnia
 
@@ -23,11 +23,11 @@ struct adopt_lock_t;
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> mutex
+**Nagłówek:**\<mutex>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[\<mutex>](../standard-library/mutex.md)
+[Dokumentacja plików nagłówkowych](cpp-standard-library-header-files.md)\
+[\<mutex>](mutex.md)

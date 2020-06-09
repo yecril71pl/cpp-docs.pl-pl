@@ -9,20 +9,20 @@ helpviewer_keywords:
 - blocks [MFC], memory allocation
 - resizable memory blocks [MFC]
 ms.assetid: f0efe6f4-a3ed-4541-9195-51ec1291967a
-ms.openlocfilehash: b048b60a5512ecc54750cb980ca67e2373e2c837
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 74ae94146b1ec711b586ea1fecbbc89a47b40b5e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364776"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626277"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>Zarządzanie pamięcią: bloki pamięci o zmiennych rozmiarach
 
-**Nowe** i **usuń** operatorów, opisane w artykule [Zarządzanie pamięcią: Przykłady](../mfc/memory-management-examples.md), są dobre do przydzielania i usuwania bloków pamięci o stałym rozmiarze i obiektów. Od czasu do czasu aplikacja może wymagać bloków pamięci o zmiennym rozmiarze. Aby zarządzać blokami pamięci o zmiennym rozmiarze na stercie, należy użyć standardowych funkcji biblioteki wyłowionej c [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md)i [wolnych](../c-runtime-library/reference/free.md) do zarządzania blokami pamięci o zmiennym rozmiarze.
+Operatory **New** i **delete** , opisane w artykule [Zarządzanie pamięcią artykułu: przykłady](memory-management-examples.md), są przydatne do przydzielania i cofania przydziału bloków pamięci o ustalonym rozmiarze i obiektów. Czasami aplikacja może potrzebować bloków pamięci o zmiennym rozmiarze. Aby zarządzać blokami pamięci o zmiennym rozmiarze na stercie, należy użyć standardowej biblioteki wykonawczej C funkcji [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md)i [Free](../c-runtime-library/reference/free.md) .
 
 > [!IMPORTANT]
-> Mieszanie **nowych** i **usuń** operatorów z funkcji alokacji pamięci o zmiennym rozmiarze w tym samym bloku pamięci spowoduje uszkodzenie pamięci w wersji debugowania MFC. Nie należy używać **ponownego lokowania** w bloku pamięci przydzielonym z **nowym**programem . Podobnie nie należy przydzielić bloku pamięci z **nowym** operatorem i usunąć go **za pomocą bezpłatnego**, lub użyć operatora **usuwania** na bloku pamięci przydzielonym **z malloc**.
+> Mieszanie **nowych** i **usuwających** operatorów przy użyciu funkcji alokacji pamięci o zmiennym rozmiarze w tym samym bloku pamięci spowoduje uszkodzenie pamięci w debugowanej wersji biblioteki MFC. Nie należy używać **realloc** w bloku pamięci przydzielonym przez **Nowy**. Podobnie nie należy przydzielić bloku pamięci z operatorem **New** i usunąć go z opcją **Free**lub użyć operatora **delete** w bloku pamięci przydzielonej za pomocą funkcji **malloc**.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Zarządzanie pamięcią: alokacja sterty](../mfc/memory-management-heap-allocation.md)
+[Zarządzanie pamięcią: alokacja sterty](memory-management-heap-allocation.md)

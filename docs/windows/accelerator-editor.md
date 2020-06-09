@@ -1,5 +1,5 @@
 ---
-title: Edytor akceleratorówC++()
+title: Edytor akceleratorów (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator.F1
@@ -33,23 +33,23 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 80ef6cc9ec956d0041c4aa3fb6a6211868cc9d73
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fdd8a4be8830dc4b2ac1a559194828a4d2f56ab0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167566"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623483"
 ---
-# <a name="accelerator-editor-c"></a>Edytor akceleratorówC++()
+# <a name="accelerator-editor-c"></a>Edytor akceleratorów (C++)
 
-Tabela akceleratorów jest zasobem C++ systemu Windows, który zawiera listę klawiszy skrótów, nazywanych skrótami klawiaturowymi, oraz skojarzonych z nimi identyfikatorów poleceń. Program może mieć więcej niż jedną tabelę akceleratorów.
+Tabela akceleratorów to zasób systemu Windows w języku C++, który zawiera listę klawiszy skrótów, nazywanych skrótami klawiaturowymi oraz identyfikatory poleceń, które są z nimi skojarzone. Program może mieć więcej niż jedną tabelę akceleratorów.
 
 Zwykle akceleratory są używane jako skróty klawiaturowe poleceń programu, które są również dostępne w menu lub pasku narzędzi. Można jednak użyć tabeli akceleratora do definiowania kombinacji klawiszy dla poleceń, do których nie jest skojarzony obiekt użytkownika-interfejs.
 
 > [!TIP]
 > Korzystając z **edytora akceleratorów**, kliknij prawym przyciskiem myszy, aby wyświetlić menu skrótów często używanych poleceń. Dostępne polecenia zależą od elementów wskazywanych przez wskaźnik.
 
-Za pomocą [Widok klasy](/visualstudio/ide/viewing-the-structure-of-code) można podpiąć polecenia klawiszy skrótów do kodu. Aby zapoznać się z listą wstępnie zdefiniowanych klawiszy skrótów, zobacz [klawisze skrótów](../windows/predefined-accelerator-keys.md).
+Za pomocą [Widok klasy](/visualstudio/ide/viewing-the-structure-of-code) można podpiąć polecenia klawiszy skrótów do kodu. Aby zapoznać się z listą wstępnie zdefiniowanych klawiszy skrótów, zobacz [klawisze skrótów](predefined-accelerator-keys.md).
 
 > [!NOTE]
 > System Windows nie pozwala na tworzenie pustych tabel akceleratorów. Jeśli utworzysz tabelę akceleratora bez wpisów, zostanie ona automatycznie usunięta podczas zapisywania tabeli.
@@ -71,10 +71,10 @@ Poniżej przedstawiono wpisy prawne dla właściwości **modyfikator** w tabeli 
 
    |Wartość|Opis|
    |-----------|-----------------|
-   |**Dawaj**|Użytkownik naciska tylko wartość **klucza** .<br/><br/>Ta wartość jest najbardziej efektywnie używana z wartościami ASCII/ANSI 001 i 026, które są interpretowane jako ^ A przez ^ Z (**Ctrl + A** przez **Ctrl + z**).|
+   |**Brak**|Użytkownik naciska tylko wartość **klucza** .<br/><br/>Ta wartość jest najbardziej efektywnie używana z wartościami ASCII/ANSI 001 i 026, które są interpretowane jako ^ A przez ^ Z (**Ctrl + A** przez **Ctrl + z**).|
    |**+**|Użytkownik musi nacisnąć klawisz **Alt** przed wartością **klucza** .|
    |**Przytrzymaj**|Użytkownik musi nacisnąć klawisz **Ctrl** przed wartością **klucza** , która nie jest prawidłowa z typem ASCII.|
-   |**Nocn**|Użytkownik musi nacisnąć klawisz **SHIFT** przed wartością **klucza** .|
+   |**Przesunięcia**|Użytkownik musi nacisnąć klawisz **SHIFT** przed wartością **klucza** .|
    |**Ctrl + Alt**|Użytkownik musi nacisnąć **klawisze CTRL** i **Alt** przed wartością **klucza** , która nie jest prawidłowa z typem ASCII.|
    |**Ctrl + Shift**|Użytkownik musi nacisnąć **klawisze CTRL** i **SHIFT** przed wartością **klucza** , która nie jest prawidłowa z typem ASCII.|
    |**Alt + Shift**|Użytkownik musi nacisnąć klawisze **Alt** i **SHIFT** przed wartością **klucza** , która nie jest prawidłowa z typem ASCII.|
@@ -101,7 +101,7 @@ Poniżej znajdują się wpisy prawne dla właściwości **Key** w tabeli akceler
 
 Właściwość **Type** określa, czy kombinacja klawiszy skrótu skojarzona z **identyfikatorem** akceleratora jest interpretowana jako wartość klucza ASCII/ANSI lub kombinacja klucza wirtualnego (standardowym VIRTKEY).
 
-- Jeśli właściwość **Type** ma wartość **ASCII**, właściwość **modyfikator** może być tylko `None` lub `Alt`lub może mieć akcelerator, który używa klawisza **Ctrl** , jak określono przez poprzedzający klucz za pomocą `^`.
+- Jeśli właściwość **Type** ma wartość **ASCII**, właściwość **modyfikująca** może być `None` lub lub `Alt` może mieć akcelerator, który używa klawisza **Ctrl** , jak określono powyżej klawisza z `^` .
 
 - Jeśli właściwość **Type** ma wartość **standardowym VIRTKEY**, dowolna kombinacja **modyfikatora** i wartości **klucza** jest prawidłowa.
 
@@ -110,7 +110,7 @@ Właściwość **Type** określa, czy kombinacja klawiszy skrótu skojarzona z *
 
 ## <a name="accelerator-tables"></a>Tabele akceleratora
 
-W C++ projekcie można edytować tabelę akceleratora bezpośrednio z edycją w miejscu w **Edytorze akceleratorów**.
+W projekcie języka C++ można edytować tabelę akceleratora bezpośrednio z edycją w miejscu w **Edytorze akceleratorów**.
 
 Poniższe procedury odnoszą się do używania standardowych stron właściwości, jednak zarówno Edycja w miejscu, jak i Metoda strony właściwości mają ten sam wynik. Zmiany wprowadzone przy użyciu stron właściwości lub edycji w miejscu są natychmiast odzwierciedlane w tabeli akceleratorów.
 
@@ -146,12 +146,12 @@ Poniższe procedury odnoszą się do używania standardowych stron właściwośc
 
 1. Wybierz **Identyfikator** z listy rozwijanej w polu **ID** lub wpisz nowy *Identyfikator* w polu **ID** .
 
-1. Wpisz *klucz* , który ma być używany jako akcelerator, lub kliknij prawym przyciskiem myszy i wybierz polecenie **Następny wpisany klucz** , aby ustawić kombinację klawiszy, lub przejdź do menu **Edytuj** > **następnym kluczowym typem**.
+1. Wpisz *klucz* , który ma być używany jako akcelerator, lub kliknij prawym przyciskiem myszy i wybierz polecenie **Następny wpisany klucz** , aby ustawić kombinację klawiszy, lub przejdź do menu **Edytuj**  >  **Następny typ klucza**.
 
 1. W razie potrzeby zmień **modyfikator** i **Typ**, a następnie naciśnij klawisz **Enter**.
 
 > [!NOTE]
-> Upewnij się, że wszystkie zdefiniowane akceleratory są unikatowe. Do ID_PRINT można przypisać kilka kombinacji klawiszy przypisanych do tego samego identyfikatora bez żadnego niewłaściwego efektu, na przykład **Ctrl**+**P** i **F8** . Jednak posiadanie kombinacji klawiszy przypisanej do więcej niż jednego identyfikatora nie będzie działało prawidłowo, na przykład **Ctrl**+**Z** przypisane do obu ID_SPELL_CHECK i ID_THESAURUS.
+> Upewnij się, że wszystkie zdefiniowane akceleratory są unikatowe. Do ID_PRINT można przypisać kilka klawiszy przypisanych do tego samego identyfikatora bez żadnego niewłaściwego efektu, na przykład **Ctrl** + **P** i **F8** . Jednak posiadanie kombinacji klawiszy przypisanej do więcej niż jednego identyfikatora nie będzie działało prawidłowo, na przykład **Ctrl** + **Z** przypisano do obu ID_SPELL_CHECK i ID_THESAURUS.
 
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>Aby usunąć wpis z tabeli akceleratora
 
@@ -159,7 +159,7 @@ Poniższe procedury odnoszą się do używania standardowych stron właściwośc
 
 1. Wybierz wpis, który chcesz usunąć, lub przytrzymaj klawisz **Ctrl** lub **SHIFT** podczas zaznaczania, aby wybrać wiele wpisów.
 
-1. Kliknij prawym przyciskiem myszy i wybierz polecenie **Usuń**lub przejdź do menu **Edytuj** > **Usuń**.
+1. Kliknij prawym przyciskiem myszy i wybierz polecenie **Usuń**lub przejdź do menu **Edycja**  >  **Usuń**.
 
 > [!TIP]
 > Możesz również nacisnąć klawisz **delete** , aby usunąć.
@@ -192,5 +192,5 @@ Win32
 
 ## <a name="see-also"></a>Zobacz też
 
-[Edytory zasobów](../windows/resource-editors.md)<br/>
-[Klawisze skrótów](../windows/predefined-accelerator-keys.md)<br/>
+[Edytory zasobów](resource-editors.md)<br/>
+[Klawisze skrótów](predefined-accelerator-keys.md)<br/>

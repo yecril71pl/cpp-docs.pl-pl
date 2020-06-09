@@ -1,5 +1,5 @@
 ---
-title: Architektury dokumentu widoku
+title: Architektura dokumentu-widoku
 ms.date: 11/19/2018
 helpviewer_keywords:
 - CView class [MFC], view architecture
@@ -12,81 +12,81 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: d1b1f80f44fdc66a3174ea75c15e139f98a4520b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a74aeba651d385cf3a5386e94ec20e4e56b7cd57
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389688"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624788"
 ---
 # <a name="documentview-architecture"></a>Architektura dokument/widok
 
-Domyślnie Kreator aplikacji MFC tworzy szkielet aplikacji za pomocą klasy dokumentów i klasa widoku. MFC oddziela zarządzania danymi na te dwie klasy. Dokument przechowuje dane i zarządza drukowanie danych i służy do koordynowania aktualizowanie wielu widoków danych. Widok przedstawia dane i zarządza nimi interakcji użytkownika z nim, w tym wybór i edytowania.
+Domyślnie Kreator aplikacji MFC tworzy szkielet aplikacji z klasą dokumentu i klasą widoku. MFC oddziela zarządzanie danymi do tych dwóch klas. Dokument przechowuje dane i zarządza drukowaniem danych i koordynuje aktualizację wielu widoków danych. Widok wyświetla dane i zarządza interakcją z użytkownikiem, z uwzględnieniem zaznaczania i edytowania.
 
-W tym modelu obiektu dokumentu MFC odczytuje i zapisuje dane w magazynie trwałym. Dokument mogą również zawierać interfejs z danymi, wszędzie tam, gdzie znajduje się on (na przykład w bazie danych). Obiekt osobny widok zarządza wyświetlania danych z renderowania danych w oknie na wybór użytkownika i edytowanie danych. Widok, uzyskuje dostęp do wyświetlania danych z dokumentu i komunikuje się w dokumencie wszelkie zmiany danych.
+W tym modelu obiekt dokumentu MFC odczytuje i zapisuje dane w magazynie trwałym. Dokument może również dostarczyć interfejs do danych w dowolnym miejscu, w którym się znajduje (na przykład w bazie danych). Oddzielny obiekt widoku zarządza wyświetlaniem danych, ponieważ renderuje dane w oknie do wybranych przez użytkownika i edytowania danych. Widok pobiera dane z dokumentu i powiadamia z powrotem do dokumentu o wszelkich zmianach danych.
 
-Chociaż można łatwo zastąpić lub zignorować separacji dokument/widok, istnieją istotnych powodów do wykonania tego modelu w większości przypadków. Jest jednym z najlepszych, gdy będziesz potrzebować wielu widoków tego samego dokumentu, takie jak arkusz kalkulacyjny i widoku wykresu. Model dokument/widok umożliwia obiekt osobny widok reprezentują każdego widoku danych, podczas wspólnego kodu do wszystkich widoków (takich jak aparat obliczeń) może znajdować się w dokumencie. Dokument również przejmuje zadania aktualizowania wszystkich widoków zmianie danych.
+Mimo że można łatwo przesłonić lub zignorować separację dokumentów/widoków, istnieją atrakcyjne przyczyny tego modelu w większości przypadków. Jednym z najlepszych jest, gdy potrzebujesz wielu widoków tego samego dokumentu, takich jak arkusz kalkulacyjny i widok wykresu. Model dokumentu/widoku umożliwia osobny obiekt widoku reprezentujący każdy widok danych, podczas gdy kod wspólnych dla wszystkich widoków (takich jak aparat obliczeniowy) może znajdować się w dokumencie. Dokument pobiera również zadania aktualizowania wszystkich widoków za każdym razem, gdy zmieniają się dane.
 
-Architektury dokument/widok MFC sprawia, że łatwo jest obsługiwać wiele widoków, wiele typów dokumentów, okna podziału i inne funkcje przydatne interfejsu użytkownika.
+Architektura dokumentu/widoku MFC ułatwia obsługę wielu widoków, wielu typów dokumentów, okien rozdzielacza i innych cennych funkcji interfejsu użytkownika.
 
-Części najbardziej widoczne, zarówno dla użytkownika, jak i dla Ciebie programisty, struktura MFC są dokument i widok. Większość pracy w opracowywaniu aplikacji z architekturą przechodzi do zapisywania dokumentów i wyświetlanie klas. Rodzina tego artykułu opisano:
+Części platformy MFC, które są najbardziej widoczne zarówno dla użytkownika, jak i dla Ciebie, programista, to dokument i widok. Większość pracy w tworzeniu aplikacji za pomocą struktury polega na pisaniu dokumentów i klas widoków. W tym artykule opisano:
 
-- Celów dokumentów i widoków oraz sposobu interakcji w ramach.
+- Cele dokumentów i widoków oraz sposób ich działania w strukturze.
 
-- Co należy zrobić, aby ich wykonania.
+- Co należy zrobić, aby je wdrożyć.
 
-Serce dokument/widok przedstawiono cztery klucza klasy:
+Na początku dokumentu/widoku są cztery kluczowe klasy:
 
-[CDocument](../mfc/reference/cdocument-class.md) (lub [COleDocument](../mfc/reference/coledocument-class.md)) klasa obsługuje obiekty używane do przechowywania lub kontroli programu danych i zapewnia podstawowe funkcje dla klas dokumentów zdefiniowanych przez programistę. Dokument reprezentuje jednostkę danych użytkownik zwykle zostanie otwarty przy użyciu polecenia Otwórz menu Plik i zapisuje za pomocą polecenia Zapisz w menu Plik.
+Klasa [CDocument](reference/cdocument-class.md) (lub [COleDocument](reference/coledocument-class.md)) obsługuje obiekty używane do przechowywania i kontrolowania danych programu i zapewnia podstawowe funkcje dla klas dokumentów zdefiniowanych przez programistę. Dokument reprezentuje jednostkę danych, którą użytkownik zazwyczaj otwiera, za pomocą polecenia Otwórz w menu plik i zapisuje przy użyciu polecenia Zapisz w menu plik.
 
-[CView](../mfc/reference/cview-class.md) (lub jeden z wielu klas pochodnych) udostępnia podstawowe funkcje dla klas widoków zdefiniowanych przez programistę. Widok jest dołączony do dokumentu i działa jako pośrednik między dokumentem i użytkownikiem: widok renderuje obraz dokumentu na ekranie i interpretuje dane wejściowe użytkownika jako operacje na dokumencie. Widok Ponadto renderuje obraz dla zarówno drukowania i podglądu wydruku.
+[CView](reference/cview-class.md) (lub jedna z wielu klas pochodnych) oferuje podstawowe funkcje dla klas widoków zdefiniowanych przez programistę. Widok jest dołączony do dokumentu i działa jako pośrednik między dokumentem a użytkownikiem: widok renderuje obraz dokumentu na ekranie i interpretuje dane wejściowe użytkownika jako operacje na dokumencie. Widok służy również do renderowania obrazu dla drukowania i podglądu wydruku.
 
-[CFrameWnd](../mfc/reference/cframewnd-class.md) (lub jeden z jego odmiany) obsługuje obiekty, które zapewnia ramkę wokół jednego lub wielu widoków dokumentu.
+[Obiektu CFrameWnd](reference/cframewnd-class.md) (lub jedna z jej odmian) obsługuje obiekty, które udostępniają ramkę wokół jednego lub kilku widoków dokumentu.
 
-[CDocTemplate](../mfc/reference/cdoctemplate-class.md) (lub [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) lub [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)) obsługuje obiekt, który koordynuje jeden lub więcej istniejących dokumentów danego typu i zarządza, tworząc poprawny dokument, widoku i ramki okna obiektów dla tego typu.
+[CDocTemplate](reference/cdoctemplate-class.md) (lub [CSingleDocTemplate](reference/csingledoctemplate-class.md) lub [CMultiDocTemplate](reference/cmultidoctemplate-class.md)) obsługuje obiekt, który koordynuje jeden lub więcej istniejących dokumentów danego typu i zarządza tworzeniem poprawnych obiektów dokumentów, widoków i okien ramowych dla tego typu.
 
-Na poniższej ilustracji przedstawiono relację między dokumentem i jej widok.
+Poniższy rysunek przedstawia relację między dokumentem a jego widokiem.
 
-![Widok jest częścią dokumentu, który jest wyświetlany](../mfc/media/vc379n1.gif "widok jest częścią dokumentu, który jest wyświetlany") <br/>
+![Widok jest częścią wyświetlanego dokumentu](../mfc/media/vc379n1.gif "Widok jest częścią wyświetlanego dokumentu") <br/>
 Dokument i widok
 
-Implementacja dokument/widok w bibliotece klas oddziela dane z jego wyświetlania i użytkownika operacje na danych. Wszystkie zmiany danych są zarządzane za pośrednictwem klasy dokumentu. Widok wywołuje dostępu i zaktualizować dane w tym interfejsie.
+Implementacja dokumentu/widoku w bibliotece klas oddziela same dane od ich wyświetlania i od operacji użytkownika na danych. Wszystkie zmiany danych są zarządzane za pomocą klasy dokumentu. Widok wywołuje ten interfejs, aby uzyskać dostęp do danych i je zaktualizować.
 
-Dokumenty, ich skojarzone widoków i ramki okna widoki są tworzone przez szablon dokumentu. Szablon dokumentu, który jest odpowiedzialny za tworzenie i zarządzanie nimi wszystkich dokumentów typu dokumentu.
+Dokumenty, skojarzone z nimi widoki i okna ramowe, które są tworzone przez tę ramkę przez szablon dokumentu. Szablon dokumentu jest odpowiedzialny za tworzenie i zarządzanie wszystkimi dokumentami jednego typu dokumentu.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-- [Portret architektury dokument/widok](../mfc/a-portrait-of-the-document-view-architecture.md)
+- [Pionowa architektura dokumentu/widoku](a-portrait-of-the-document-view-architecture.md)
 
-- [Zalety architektury dokument/widok](../mfc/advantages-of-the-document-view-architecture.md)
+- [Zalety architektury dokument/widok](advantages-of-the-document-view-architecture.md)
 
-- [Dokument i Widok klas tworzone przez Kreatora aplikacji](../mfc/document-and-view-classes-created-by-the-mfc-application-wizard.md)
+- [Klasy dokumentów i widoków tworzone przez Kreatora aplikacji](document-and-view-classes-created-by-the-mfc-application-wizard.md)
 
-- [Alternatywy dla architektury dokument/widok](../mfc/alternatives-to-the-document-view-architecture.md)
+- [Alternatywy dla architektury dokumentu/widoku](alternatives-to-the-document-view-architecture.md)
 
-- [Dodawanie wielu widoków do pojedynczego dokumentu](../mfc/adding-multiple-views-to-a-single-document.md)
+- [Dodawanie wielu widoków do pojedynczego dokumentu](adding-multiple-views-to-a-single-document.md)
 
-- [Używanie dokumentów](../mfc/using-documents.md)
+- [Używanie dokumentów](using-documents.md)
 
-- [Używanie widoków](../mfc/using-views.md)
+- [Używanie widoków](using-views.md)
 
-- [Wiele typów dokumentów, widoków i okien ramowych](../mfc/multiple-document-types-views-and-frame-windows.md)
+- [Wiele typów dokumentów, widoków i okien ramowych](multiple-document-types-views-and-frame-windows.md)
 
-- [Inicjowanie i oczyszczanie dokumentów i widoków](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+- [Inicjowanie i oczyszczanie dokumentów i widoków](initializing-and-cleaning-up-documents-and-views.md)
 
-- [Inicjowanie własne dodatki do dokumentu i Widok klas](../mfc/creating-new-documents-windows-and-views.md)
+- [Inicjowanie własnych dodatków do & Documents View Classes](creating-new-documents-windows-and-views.md)
 
 - [Używanie klas baz danych z dokumentami i widokami](../data/mfc-using-database-classes-with-documents-and-views.md)
 
 - [Używanie klas baz danych bez dokumentów i widoków](../data/mfc-using-database-classes-without-documents-and-views.md)
 
-- [Przykłady](../overview/visual-cpp-samples.md)
+- [Samples](../overview/visual-cpp-samples.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)<br/>
-[Windows](../mfc/windows.md)<br/>
-[Okna ramowe](../mfc/frame-windows.md)<br/>
-[Szablony dokumentów i proces tworzenia dokumentu/widoku](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
-[Tworzenie dokumentu/widoku](../mfc/document-view-creation.md)<br/>
-[Tworzenie nowych dokumentów, okien i widoków](../mfc/creating-new-documents-windows-and-views.md)
+[Elementy interfejsu użytkownika](user-interface-elements-mfc.md)<br/>
+[Windows](windows.md)<br/>
+[Okna ramowe](frame-windows.md)<br/>
+[Szablony dokumentów i proces tworzenia dokumentu/widoku](document-templates-and-the-document-view-creation-process.md)<br/>
+[Tworzenie dokumentu/widoku](document-view-creation.md)<br/>
+[Tworzenie nowych dokumentów, okien i widoków](creating-new-documents-windows-and-views.md)

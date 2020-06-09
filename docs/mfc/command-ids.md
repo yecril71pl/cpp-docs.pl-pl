@@ -5,21 +5,21 @@ helpviewer_keywords:
 - command IDs, MFC
 - command IDs
 ms.assetid: e0171a2b-45b9-41fa-945d-ec2f7602ded0
-ms.openlocfilehash: 76071105e72f1ca4a851b9cdb76d5f1a96f44edb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7d675891904301b16aafe3acb2c294eede6d8d8
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219902"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619040"
 ---
 # <a name="command-ids"></a>Identyfikatory poleceń
 
-Polecenie opisano szczegółowo za pomocą jego Identyfikatora polecenia samodzielnie (zakodowany w **WM_COMMAND** komunikat). Ten identyfikator jest przypisany do obiektu interfejsu użytkownika, który generuje polecenia. Zazwyczaj identyfikatory są nazywane funkcji obiektu interfejsu użytkownika, które są przypisane.
+Polecenie jest w pełni opisane za pomocą samego identyfikatora polecenia (zakodowane w wiadomości **WM_COMMAND** ). Ten identyfikator jest przypisany do obiektu interfejsu użytkownika, który generuje polecenie. Zwykle identyfikatory są nazywane dla funkcji obiektu interfejsu użytkownika, do którego są przypisane.
 
-Na przykład, usuń zaznaczenie wszystkich elementów w menu Edycja może zostać przypisana Identyfikatora takich jak **id_edit_clear_all —**. Biblioteka klas powoduje wstępne definiowanie niektóre identyfikatory, szczególnie w przypadku poleceń w ramach obsługi przez siebie, takie jak **id_edit_clear_all —** lub **id_file_open —**. Utwórz inne identyfikatory poleceń będzie samodzielnie.
+Na przykład Wyczyść wszystkie elementy w menu Edycja mogą mieć przypisany identyfikator, taki jak **ID_EDIT_CLEAR_ALL**. Biblioteka klas wstępnie definiuje niektóre identyfikatory, szczególnie dla poleceń obsługiwanych przez platformę, takich jak **ID_EDIT_CLEAR_ALL** lub **ID_FILE_OPEN**. Inne identyfikatory poleceń utworzysz samodzielnie.
 
-Podczas tworzenia własnych menu wizualizacji C++ Edytor menu jest dobrym rozwiązaniem postępuj zgodnie z biblioteki klas w konwencji nazewnictwa zgodnie z przedstawionymi **id_file_open —**. [Polecenia standardowe](../mfc/standard-commands.md) opisano standardowe polecenia, które są definiowane przez bibliotekę klas.
+Gdy tworzysz własne menu w edytorze menu Visual C++, dobrym pomysłem jest przestrzeganie konwencji nazewnictwa biblioteki klas, jak pokazano na **ID_FILE_OPEN**. [Standardowe polecenia](standard-commands.md) objaśniają standardowe polecenia zdefiniowane przez bibliotekę klas.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obiekty interfejsu użytkownika i identyfikatory poleceń](../mfc/user-interface-objects-and-command-ids.md)
+[Obiekty interfejsu użytkownika i identyfikatory poleceń](user-interface-objects-and-command-ids.md)

@@ -7,43 +7,43 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: ddb93b5f-2e4f-4537-8053-3453c86e2bbb
-ms.openlocfilehash: 079dc26fdd355c5b5e3f89f28219902e5fd74a79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41e3dbfc2269f5fbf3c12dc00c19f8a2253fd16a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240240"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626445"
 ---
 # <a name="handling-tool-tip-notifications"></a>Obsługa powiadomień dotyczących etykietek narzędzi
 
-Po określeniu **TBSTYLE_TOOLTIPS** styl, na pasku narzędzi, tworzy i którymi zarządza formantem etykietki narzędzia. Etykietka narzędzia jest niewielkie okno podręczne zawiera wiersz tekstu opisującego przycisku paska narzędzi. Etykietka narzędzia która jest ukryta, pojawiają się tylko po użytkownik umieszcza kursor na przycisku paska narzędzi i pozostawi je istnieje dla około połowie drugi. Etykietka narzędzia która jest wyświetlana obok kursora.
+Po określeniu stylu **TBSTYLE_TOOLTIPS** pasek narzędzi tworzy formant etykietki narzędzia i zarządza nim. Etykietka narzędzia jest małym okienkiem podręcznym zawierającym wiersz tekstu opisujący przycisk paska narzędzi. Etykietka narzędzia jest ukryta, pojawia się tylko wtedy, gdy użytkownik umieści kursor na przycisku paska narzędzi i pozostawia go na około pół sekundy. Zostanie wyświetlona etykietka narzędzia obok kursora.
 
-Przed wyświetleniem etykietka narzędzia która **TTN_NEEDTEXT** komunikatu powiadomienia są wysyłane do okna właściciela paska narzędzi można pobrać opisowy tekst dla przycisku. Jeśli okno właściciela paska narzędzi jest `CFrameWnd` okna narzędzia wskazówki są wyświetlane bez wykonywania dodatkowych działań, ponieważ `CFrameWnd` ma domyślny program obsługi dla **TTN_NEEDTEXT** powiadomień. Jeśli okno właściciela paska narzędzi nie pochodzi od `CFrameWnd`, takie jak widoku okna dialogowego pole lub formularza, należy dodać wpis do okna właściciela mapy komunikatów i zapewniają obsługę powiadamiania w mapie wiadomości. Wpis do okna właściciela mapy wiadomości jest następująca:
+Przed wyświetleniem etykietki narzędzia do okna właściciela paska narzędzi zostanie wysłany komunikat z powiadomieniem o **TTN_NEEDTEXT** . Jeśli okno właściciela paska narzędzi jest `CFrameWnd` oknem, etykietki narzędzi są wyświetlane bez dodatkowych nakładów pracy, ponieważ `CFrameWnd` program ma domyślną procedurę obsługi dla powiadomienia **TTN_NEEDTEXT** . Jeśli okno właściciela paska narzędzi nie pochodzi od elementu `CFrameWnd` , takiego jak okno dialogowe lub widok formularza, należy dodać wpis do mapy komunikatów okna właściciela i udostępnić program obsługi powiadomień w mapie wiadomości. Wpis w mapie komunikatów Twojego okna właściciela jest następujący:
 
-[!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-tool-tip-notifications_1.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#40](codesnippet/cpp/handling-tool-tip-notifications_1.cpp)]
 
 ## <a name="remarks"></a>Uwagi
 
 *memberFxn*<br/>
-Funkcja elementu członkowskiego, wywoływana, gdy tekst jest wymagany w przypadku tego przycisku.
+Funkcja członkowska, która ma być wywoływana, gdy dla tego przycisku jest wymagany tekst.
 
-Należy zauważyć, że identyfikator etykietki narzędzia jest zawsze 0.
+Należy pamiętać, że identyfikator etykietki narzędzia ma zawsze wartość 0.
 
-Oprócz **TTN_NEEDTEXT** powiadomienia formantem etykietki narzędzia można wysyłanie powiadomień do formantu paska narzędzi:
+Oprócz powiadomienia **TTN_NEEDTEXT** , formant etykietki narzędzia może wysyłać następujące powiadomienia do kontrolki paska narzędzi:
 
-|Powiadomienia|Znaczenie|
+|Powiadomienie|Znaczenie|
 |------------------|-------------|
-|**TTN_NEEDTEXTA**|Formantem etykietki narzędzia wymaga tekst w formacie ASCII (tylko Windows 95)|
-|**TTN_NEEDTEXTW**|Formantem etykietki narzędzia wymaga tekst UNICODE (tylko Windows NT)|
-|**TBN_HOTITEMCHANGE**|Wskazuje, że gorąca (wyróżniony) element został zmieniony.|
-|**NM_RCLICK —**|Wskazuje, że użytkownik ma kliknięto prawym przyciskiem myszy przycisk.|
-|**TBN_DRAGOUT**|Wskazuje, użytkownik kliknął element button i przeciągnąć kursor poza przycisk. Umożliwia aplikacji do wdrożenia przeciągnij i upuść na przycisku paska narzędzi. Po odebraniu tego powiadomienia, aplikacji będzie rozpocząć przeciąganie i upuszczanie operacji.|
-|**TBN_DROPDOWN —**|Wskazuje, po kliknięciu przycisku, który używa **TBSTYLE_DROPDOWN** stylu.|
-|**TBN_GETOBJECT**|Wskazuje, użytkownik przenieść wskaźnik na przycisku, który używa **TBSTYLE_DROPPABLE** stylu.|
+|**TTN_NEEDTEXTA**|Kontrolka etykietki narzędzia wymaga tekstu ASCII (tylko system Windows 95)|
+|**TTN_NEEDTEXTW**|Kontrolka etykietki narzędzia wymaga tekstu UNICODE (tylko system Windows NT)|
+|**TBN_HOTITEMCHANGE**|Wskazuje, że element gorąca (wyróżniony) został zmieniony.|
+|**NM_RCLICK**|Oznacza, że użytkownik kliknął przycisk prawym przyciskiem myszy.|
+|**TBN_DRAGOUT**|Oznacza, że użytkownik kliknął przycisk i przeciąga wskaźnik poza przycisk. Dzięki temu aplikacja może zaimplementować przeciąganie i upuszczanie z przycisku paska narzędzi. Po odebraniu tego powiadomienia aplikacja rozpocznie operację przeciągania i upuszczania.|
+|**TBN_DROPDOWN**|Oznacza, że użytkownik kliknął przycisk, który używa stylu **TBSTYLE_DROPDOWN** .|
+|**TBN_GETOBJECT**|Oznacza, że użytkownik przeniósł wskaźnik myszy nad przyciskiem, który używa stylu **TBSTYLE_DROPPABLE** .|
 
-Przykład funkcji obsługi i dowiedzieć się więcej o Włączanie etykietek narzędzi, zobacz [etykietek narzędzi](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).
+Aby zapoznać się z przykładową funkcją obsługi i uzyskać więcej informacji na temat włączania etykietek narzędzi, zobacz [porady dotyczące narzędzi](tool-tips-in-windows-not-derived-from-cframewnd.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Korzystanie z CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Korzystanie z CToolBarCtrl](using-ctoolbarctrl.md)<br/>
+[Formanty](controls-mfc.md)

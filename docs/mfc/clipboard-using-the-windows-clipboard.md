@@ -1,5 +1,5 @@
 ---
-title: 'Schowek: Korzystanie ze Schowka Windows'
+title: 'Schowek: korzystanie ze schowka systemu Windows'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Clipboard commands
@@ -11,35 +11,35 @@ helpviewer_keywords:
 - Windows Clipboard [MFC]
 - Clipboard [MFC], Windows Clipboard API
 ms.assetid: 24415b42-9301-4a70-b69a-44c97918319f
-ms.openlocfilehash: 49111e4efd2a12264d61030fe038d80b974514c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b11bfe18443858de0dd7032f72fecadb1d6ebdd
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326992"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626036"
 ---
-# <a name="clipboard-using-the-windows-clipboard"></a>Schowek: Korzystanie ze Schowka Windows
+# <a name="clipboard-using-the-windows-clipboard"></a>Schowek: korzystanie ze schowka systemu Windows
 
-W tym temacie opisano sposób używania standardowych Windows Schowka interfejsu API w aplikacji MFC.
+W tym temacie opisano sposób używania standardowego interfejsu API Schowka systemu Windows w aplikacji MFC.
 
-Większość aplikacji dla Windows obsługuje wycinanie i kopiowanie danych do Schowka Windows i wklejanie danych ze Schowka. Formaty danych schowka różnią się między aplikacjami. Platforma obsługuje tylko ograniczoną liczbę formaty Schowka dla ograniczonej liczby klas. Zwykle wdroży polecenia związane z Schowka — wycinania, kopiowania i wklejania — menu Edycja widoku. Biblioteka klas definiuje identyfikatory poleceń dla tych poleceń: **Id_edit_cut —**, **id_edit_copy —**, i **id_edit_paste —**. Monity o ich wiersz wiadomości są również określone.
+Większość aplikacji dla systemu Windows obsługuje wycinanie lub kopiowanie danych do Schowka systemu Windows i wklejanie danych ze schowka. Formaty danych schowka różnią się w zależności od aplikacji. Platforma obsługuje tylko ograniczoną liczbę formatów Schowka dla ograniczonej liczby klas. Zwykle wdrażane są polecenia dotyczące schowka — wycinanie, kopiowanie i wklejanie — w menu Edycja widoku. Biblioteka klas definiuje identyfikatory poleceń następujących poleceń: **ID_EDIT_CUT**, **ID_EDIT_COPY**i **ID_EDIT_PASTE**. Są również zdefiniowane monity wiersza wiadomości.
 
-[Komunikaty i polecenia w ramach](../mfc/messages-and-commands-in-the-framework.md) wyjaśnia sposób obsługi polecenia menu w aplikacji przez mapowanie polecenie menu do funkcji obsługi. Tak długo, jak aplikacja nie definiuje funkcji obsługi dla poleceń Schowka w menu Edycja, pozostaną one wyłączone. Do pisania funkcji obsługi poleceń Wytnij i Kopiuj, należy zaimplementować zaznaczenia w aplikacji. Do pisania funkcji procedury obsługi polecenia wklejania, Wyślij zapytanie do Schowka, aby zobaczyć, czy zawiera on dane w formacie, które aplikacja może akceptować. Na przykład aby włączyć polecenia Kopiuj, można napisać program obsługi podobny do poniższego:
+[Komunikaty i polecenia w strukturze](messages-and-commands-in-the-framework.md) wyjaśniają, jak obsłużyć polecenia menu w aplikacji, mapując polecenie menu do funkcji obsługi. Tak długo, jak aplikacja nie definiuje funkcji obsługi dla poleceń Schowka w menu Edycja, pozostaną wyłączone. Aby napisać funkcje obsługi dla poleceń wycinania i kopiowania, zaimplementuj wybór w aplikacji. Aby napisać funkcję procedury obsługi dla polecenia Wklej, zbadaj schowek, aby zobaczyć, czy zawiera on dane w formacie, który aplikacja może zaakceptować. Na przykład, aby włączyć polecenie copy, można napisać procedurę obsługi podobną do następującej:
 
 [!code-cpp[NVC_MFCListView#2](../atl/reference/codesnippet/cpp/clipboard-using-the-windows-clipboard_1.cpp)]
 
-Polecenia wycinanie, kopiowanie i wklejanie tylko są istotne w określonych kontekstach. Polecenia Wytnij i Kopiuj powinno być włączone, tylko wtedy, gdy coś jest zaznaczone, a polecenie Paste tylko wtedy, gdy coś jest w Schowku. To zachowanie można podać, definiując funkcje programu obsługi aktualizacji, które włączać lub wyłączać tych poleceń, w zależności od kontekstu. Aby uzyskać więcej informacji, zobacz [jak obiektów interfejsu użytkownika aktualizacji](../mfc/how-to-update-user-interface-objects.md).
+Polecenia wycinania, kopiowania i wklejania są zrozumiałe tylko w niektórych kontekstach. Polecenia wycinania i kopiowania powinny być włączone tylko wtedy, gdy coś jest zaznaczone, a polecenie Wklej tylko wtedy, gdy coś znajduje się w Schowku. To zachowanie można zapewnić, definiując funkcje programu obsługi aktualizacji, które włączają lub wyłączają te polecenia w zależności od kontekstu. Aby uzyskać więcej informacji, zobacz [jak zaktualizować obiekty interfejsu użytkownika](how-to-update-user-interface-objects.md).
 
-Bibliotekę Microsoft Foundation Class obsługi schowka do edycji tekstu za pomocą `CEdit` i `CEditView` klasy. Klasy OLE również uprościć implementującej operacje na schowku obejmujące elementów OLE. Aby uzyskać więcej informacji na temat klasy OLE, zobacz [Schowka: Korzystanie z mechanizmu Schowka OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).
+Biblioteka MFC zapewnia obsługę Schowka na potrzeby edycji tekstu przy użyciu `CEdit` klas i `CEditView` . Klasy OLE upraszczają także implementowanie operacji schowka, które obejmują elementy OLE. Aby uzyskać więcej informacji na temat klas OLE, zobacz [schowek: korzystanie z mechanizmu Schowka OLE](clipboard-using-the-ole-clipboard-mechanism.md).
 
-Implementowanie innych edytować polecenia menu, takie jak cofanie (**id_edit_undo —**) i wykonaj ponownie (**id_edit_redo —**), również pozostało do Ciebie. Jeśli aplikacja nie obsługuje tych poleceń, można łatwo usuwać je z pliku zasobów za pomocą edytory zasobów Visual C++.
+Zaimplementowanie innych poleceń menu edycji, takich jak Cofnij (**ID_EDIT_UNDO**) i wykonaj ponownie (**ID_EDIT_REDO**), również pozostało do Ciebie. Jeśli aplikacja nie obsługuje tych poleceń, można je łatwo usunąć z pliku zasobów przy użyciu edytorów zasobów Visual C++.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-- [Kopiowanie i wklejanie danych](../mfc/clipboard-copying-and-pasting-data.md)
+- [kopiowanie i wklejanie danych](clipboard-copying-and-pasting-data.md)
 
-- [Korzystanie z mechanizmu Schowka OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+- [Korzystanie z mechanizmu Schowka OLE](clipboard-using-the-ole-clipboard-mechanism.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Schowek](../mfc/clipboard.md)
+[Schowek](clipboard.md)

@@ -2,12 +2,12 @@
 title: Układ dynamiczny
 ms.date: 09/09/2019
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
-ms.openlocfilehash: 1b0d035d3c551fd309d515ccb8b22159218c1b0a
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 3108e7bae0be216dfb877d03c87fdc17ef7d69f2
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "70907552"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624753"
 ---
 # <a name="dynamic-layout"></a>Układ dynamiczny
 
@@ -23,7 +23,7 @@ Po zmianie rozmiaru obszar ListBox zostanie powiększony, aby pokazać więcej e
 
 ![Po zmianie rozmiaru okna dialogowego.](../mfc/media/mfcdynamiclayout5.png "Po zmianie rozmiaru okna dialogowego.")
 
-Układ dynamiczny można kontrolować, określając szczegóły dla każdej kontrolki w edytorze zasobów w środowisku IDE, lub można to zrobić programowo, uzyskując dostęp do obiektu `CMFCDynamicLayout` dla konkretnej kontrolki i ustawiając właściwości.
+Układ dynamiczny można kontrolować, określając szczegóły dla każdej kontrolki w edytorze zasobów w środowisku IDE, lub można to zrobić programowo, uzyskując dostęp do `CMFCDynamicLayout` obiektu dla konkretnej kontrolki i ustawiając właściwości.
 
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>Ustawianie właściwości układu dynamicznego w edytorze zasobów
 
@@ -35,7 +35,7 @@ Można ustawić zachowanie układu dynamicznego dla okna dialogowego bez koniecz
 
    ![Otwórz okno dialogowe w edytorze zasobów.](../mfc/media/mfcdynamiclayout3.png "Otwórz okno dialogowe w edytorze zasobów.")
 
-1. Zaznacz formant i w oknie **Właściwości** (w **Widok klasy**) ustaw jego właściwości układu dynamicznego. Sekcja **układ dynamiczny** w oknie **Właściwości** zawiera właściwości **przenoszenia typu**, **Typ zmiany**i, w zależności od wartości wybranych dla tych właściwości, określonych właściwości, które definiują przenoszenie lub Zmień rozmiar. **Typ przenoszenia** określa sposób przenoszenia kontrolki, gdy zmienia się rozmiar okna dialogowego; **Typ rozmiaru** określa sposób zmiany rozmiaru kontrolki, ponieważ rozmiar okna dialogowego został zmieniony. Typ **przenoszonego** typu i **typu zmiany** mogą być **poziome**, **pionowe**, **oba**lub **nie** , w zależności od wymiarów, które mają być dynamicznie zmieniane. Pozioma to wymiar X; Pionowa to kierunek Y.
+1. Zaznacz formant i w oknie **Właściwości** (w **Widok klasy**) ustaw jego właściwości układu dynamicznego. Sekcja **układ dynamiczny** w oknie **Właściwości** zawiera właściwości **przenoszenia typu**, **Typ zmiany**i, w zależności od wartości wybranych dla tych właściwości, określonych właściwości, które definiują szybkość przenoszenia lub zmiany rozmiaru. **Typ przenoszenia** określa sposób przenoszenia kontrolki, gdy zmienia się rozmiar okna dialogowego; **Typ rozmiaru** określa sposób zmiany rozmiaru kontrolki, ponieważ rozmiar okna dialogowego został zmieniony. Typ **przenoszonego** typu i **typu zmiany** mogą być **poziome**, **pionowe**, **oba**lub **nie** , w zależności od wymiarów, które mają być dynamicznie zmieniane. Pozioma to wymiar X; Pionowa to kierunek Y.
 
 1. Jeśli chcesz, aby kontrolka, taka jak przycisk, ma stały rozmiar i pozostać w miejscu w prawym dolnym rogu, tak jak w przypadku przycisków **OK** lub **Anuluj** , ustaw **Typ zmiany** na **Brak**i ustaw **Typ przesunięcia** na **oba**. Dla **przesuwanych wartości X** i **przeniesień Y** w obszarze **Typ przeniesienia**Ustaw 100%, aby formant miał stałą odległość od prawego dolnego rogu.
 
@@ -55,13 +55,13 @@ Poprzednia procedura jest przydatna do określania właściwości układu dynami
 
 1. Znajdź lub Utwórz miejsce w kodzie implementacji klasy okna dialogowego, w którym chcesz określić układ dynamiczny okna dialogowego. Na przykład możesz chcieć dodać metodę, taką jak `AdjustLayout` w oknie dialogowym, i wywoływać ją z miejsc, w których układ musi zostać zmieniony. Użytkownik może najpierw wywołać ten program z konstruktora lub po wprowadzeniu zmian w oknie dialogowym.
 
-1. Dla okna dialogowego Wywołaj [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), metodę klasy `CWnd`. `GetDynamicLayout` zwraca wskaźnik do obiektu `CMFCDynamicLayout`.
+1. Dla okna dialogowego Wywołaj [GetDynamicLayout](reference/cwnd-class.md#getdynamiclayout), metodę `CWnd` klasy. `GetDynamicLayout`Zwraca wskaźnik do `CMFCDynamicLayout` obiektu.
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. W przypadku pierwszej kontrolki, do której ma zostać dodane dynamiczne zachowanie, użyj metod statycznych klasy układu dynamicznego, aby utworzyć strukturę [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) , która koduje sposób, w jaki formant powinien zostać dostosowany. W tym celu należy najpierw wybrać odpowiednią metodę statyczną: [CMFCDynamicLayout:: MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout:: MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout:: MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)lub [CMFCDynamicLayout:: MoveHorizontalAndVertical ](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Należy przekazać wartość procentową dla aspektów poziomych i/lub pionowych przenoszenia. Wszystkie te metody statyczne zwracają nowo utworzony obiekt MoveSettings, którego można użyć do określenia zachowania przenoszenia kontrolki.
+1. W przypadku pierwszej kontrolki, do której ma zostać dodane dynamiczne zachowanie, użyj metod statycznych klasy układu dynamicznego, aby utworzyć strukturę [MoveSettings](reference/cmfcdynamiclayout-class.md#movesettings_structure) , która koduje sposób, w jaki formant powinien zostać dostosowany. W tym celu należy najpierw wybrać odpowiednią metodę statyczną: [CMFCDynamicLayout:: MoveHorizontal](reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout:: MoveVertical](reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout:: MoveNone](reference/cmfcdynamiclayout-class.md#movenone)lub [CMFCDynamicLayout:: MoveHorizontalAndVertical](reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Należy przekazać wartość procentową dla aspektów poziomych i/lub pionowych przenoszenia. Wszystkie te metody statyczne zwracają nowo utworzony obiekt MoveSettings, którego można użyć do określenia zachowania przenoszenia kontrolki.
 
    Należy pamiętać, że 100 oznacza przeniesieniu dokładnie tak, jak zmienia się rozmiar okna dialogowego, co powoduje, że krawędź kontrolki pozostaje stała odległość od nowego obramowania.
 
@@ -69,13 +69,13 @@ Poprzednia procedura jest przydatna do określania właściwości układu dynami
     MoveSettings moveSettings = CMFCDynamicLayout::MoveHorizontal(100);
     ```
 
-1. Wykonaj tę samą czynność dla zachowania rozmiaru, który używa typu [SizeSettings —](../mfc/reference/cmfcdynamiclayout-class.md#sizesettings_structure) . Na przykład, aby określić, że formant nie zmienia rozmiaru w przypadku zmiany rozmiaru okna dialogowego, użyj następującego kodu:
+1. Wykonaj tę samą czynność dla zachowania rozmiaru, który używa typu [SizeSettings —](reference/cmfcdynamiclayout-class.md#sizesettings_structure) . Na przykład, aby określić, że formant nie zmienia rozmiaru w przypadku zmiany rozmiaru okna dialogowego, użyj następującego kodu:
 
     ```cpp
     SizeSettings sizeSettings = CMFCDynamicLayout::SizeNone();
     ```
 
-1. Dodaj formant do dynamicznego Menedżera układu przy użyciu metody [CMFCDynamicLayout:: AddItem](../mfc/reference/cmfcdynamiclayout-class.md#additem) . Istnieją dwa przeciążenia dla różnych sposobów określania żądanego formantu. Jeden przyjmuje uchwyt okna kontrolki (HWND), a drugi Pobiera identyfikator formantu.
+1. Dodaj formant do dynamicznego Menedżera układu przy użyciu metody [CMFCDynamicLayout:: AddItem](reference/cmfcdynamiclayout-class.md#additem) . Istnieją dwa przeciążenia dla różnych sposobów określania żądanego formantu. Jeden przyjmuje uchwyt okna kontrolki (HWND), a drugi Pobiera identyfikator formantu.
 
     ```cpp
     dynamicLayout->AddItem(hWndControl,
@@ -85,17 +85,17 @@ Poprzednia procedura jest przydatna do określania właściwości układu dynami
 
 1. Powtórz tę czynność dla każdej kontrolki, która musi zostać przeniesiona lub zmieniono jej rozmiar.
 
-1. W razie potrzeby można użyć metody [CMFCDynamicLayout:: HasItem](../mfc/reference/cmfcdynamiclayout-class.md#hasitem) , aby określić, czy kontrolka znajduje się już na liście formantów podlegających zmianom układu dynamicznego, czy też [CMFCDynamicLayout:: IsEmpty](../mfc/reference/cmfcdynamiclayout-class.md#isempty) , aby określić, czy istnieją jakieś kontrolki, które mogą ulec zmianom.
+1. W razie potrzeby można użyć metody [CMFCDynamicLayout:: HasItem](reference/cmfcdynamiclayout-class.md#hasitem) , aby określić, czy kontrolka znajduje się już na liście formantów podlegających zmianom układu dynamicznego, czy też [CMFCDynamicLayout:: IsEmpty](reference/cmfcdynamiclayout-class.md#isempty) , aby określić, czy istnieją jakiekolwiek kontrolki, które podlegają zmianom.
 
-1. Aby włączyć układ okna dialogowego, wywołaj metodę [CWnd:: EnableDynamicLayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) .
+1. Aby włączyć układ okna dialogowego, wywołaj metodę [CWnd:: EnableDynamicLayout](reference/cwnd-class.md#enabledynamiclayout) .
 
     ```cpp
     pDialog->EnableDynamicLayout(TRUE);
     ```
 
-1. Gdy następnym razem użytkownik zmieni rozmiar okna dialogowego, wywoływana jest metoda [CMFCDynamicLayout:: Dostosowywanie](../mfc/reference/cmfcdynamiclayout-class.md#adjust) , która rzeczywiście stosuje ustawienia.
+1. Gdy następnym razem użytkownik zmieni rozmiar okna dialogowego, wywoływana jest metoda [CMFCDynamicLayout:: Dostosowywanie](reference/cmfcdynamiclayout-class.md#adjust) , która rzeczywiście stosuje ustawienia.
 
-1. Jeśli chcesz wyłączyć układ dynamiczny, wywołaj [CWnd:: EnableDynamicLayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) z **wartością false** jako dla parametru *bEnabled* .
+1. Jeśli chcesz wyłączyć układ dynamiczny, wywołaj [CWnd:: EnableDynamicLayout](reference/cwnd-class.md#enabledynamiclayout) z **wartością false** jako dla parametru *bEnabled* .
 
     ```cpp
     pDialog->EnableDynamicLayout(FALSE);
@@ -103,7 +103,7 @@ Poprzednia procedura jest przydatna do określania właściwości układu dynami
 
 #### <a name="to-set-the-dynamic-layout-programmatically-from-a-resource-file"></a>Aby programowo ustawić układ dynamiczny z pliku zasobów
 
-1. Użyj metody [CMFCDynamicLayout:: MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical) , aby określić nazwę zasobu w odpowiednim pliku skryptu zasobu (plik. RC), który określa dynamiczne informacje o układzie, jak w poniższym przykładzie:
+1. Użyj metody [CMFCDynamicLayout:: MoveHorizontalAndVertical](reference/cmfcdynamiclayout-class.md#movehorizontalandvertical) , aby określić nazwę zasobu w odpowiednim pliku skryptu zasobu (plik. RC), który określa dynamiczne informacje o układzie, jak w poniższym przykładzie:
 
     ```cpp
     dynamicLayout->LoadResource("IDD_DIALOG1");
@@ -141,10 +141,10 @@ Poprzednia procedura jest przydatna do określania właściwości układu dynami
     END
     ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa CMFCDynamicLayout](../mfc/reference/cmfcdynamiclayout-class.md)<br/>
-[Klasy kontrolek](../mfc/control-classes.md)<br/>
-[Klasy okien dialogowych](../mfc/dialog-box-classes.md)<br/>
+[Klasa CMFCDynamicLayout](reference/cmfcdynamiclayout-class.md)<br/>
+[Klasy formantów](control-classes.md)<br/>
+[Klasy okien dialogowych](dialog-box-classes.md)<br/>
 [Edytor okien dialogowych](../windows/dialog-editor.md)<br/>
 [Dynamiczny układ okien dla MFC w Visual C++ 2015](https://mariusbancila.ro/blog/2015/07/27/dynamic-dialog-layout-for-mfc-in-visual-c-2015/)

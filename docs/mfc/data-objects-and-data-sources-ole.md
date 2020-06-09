@@ -10,35 +10,35 @@ helpviewer_keywords:
 - OLE [MFC], data objects
 - OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
-ms.openlocfilehash: 485fa5c62aafa4c116a76547238325d2979bfdc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfe400dddfecce3e52337f7f449e975dff2ca83e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241213"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616220"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Obiekty danych i źródła danych (OLE)
 
-Podczas przeprowadzania transferu danych za pomocą Schowka lub przeciągnij i upuść danych ma źródło i miejsce docelowe. Jedna aplikacja dostarcza dane do kopiowania i inna aplikacja akceptuje on wklejania. Każdej stronie transferu potrzebuje do wykonywania różnych operacji na tych samych danych w celu wykonania transferu zakończyło się sukcesem. Biblioteka Microsoft Foundation Class (MFC) zapewnia dwie klasy, które reprezentują na każdej stronie tego przeniesienia:
+Gdy wykonujesz transfer danych przy użyciu Schowka lub przeciągając i upuść, dane mają źródło i miejsce docelowe. Jedna aplikacja udostępnia dane do skopiowania, a inna aplikacja akceptuje ją podczas wklejania. Po każdej stronie transferu trzeba wykonać różne operacje na tych samych danych, aby przeniesienie zakończyło się pomyślnie. Biblioteka Microsoft Foundation Class (MFC) zawiera dwie klasy, które reprezentują każdą ze stron tego transferu:
 
-- Źródła danych (jako implementowany przez `COleDataSource` obiektów) reprezentują po stronie źródła transferu danych. Są one tworzone przez aplikację źródła, gdy dane, które ma zostać skopiowany do Schowka, lub gdy dane są dostarczane dla operacji przeciągania i upuszczania.
+- Źródła danych (zgodnie z implementacją `COleDataSource` obiektów) reprezentują Źródło transferu danych. Są one tworzone przez aplikację źródłową, gdy dane mają zostać skopiowane do schowka, lub gdy dane są dostarczane dla operacji przeciągania i upuszczania.
 
-- Obiekty danych (jako implementowany przez `COleDataObject` obiektów) reprezentują po stronie docelowej transferu danych. Są one tworzone, gdy docelowa aplikacja ma danych porzucić tę sytuację, lub po otrzymaniu żądania do wykonywania operacji wklejania ze Schowka.
+- Obiekty danych (zgodnie z implementacją `COleDataObject` obiektów) reprezentują miejsce docelowe transferu danych. Są one tworzone, gdy do aplikacji docelowej znajdują się dane, lub gdy zostanie wyświetlony monit o wykonanie operacji wklejenia ze schowka.
 
-W poniższych artykułach opisano sposób użycia obiekty danych i źródeł danych w aplikacjach. Te informacje dotyczą zarówno kontenera, jak i serwera aplikacji, ponieważ oba może zostać wywołana podczas kopiowania i wklejania danych.
+W poniższych artykułach wyjaśniono, jak używać obiektów danych i źródeł danych w aplikacjach. Te informacje dotyczą zarówno aplikacji kontenera, jak i serwera, ponieważ obie mogą być wywoływane z chwilą w celu kopiowania i wklejania danych.
 
-- [Obiekty danych i źródeł danych: Tworzenie i likwidacja](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
+- [Obiekty danych i źródła danych: tworzenie i likwidacja](data-objects-and-data-sources-creation-and-destruction.md)
 
-- [Obiekty danych i źródeł danych: Manipulowanie](../mfc/data-objects-and-data-sources-manipulation.md)
+- [Obiekty danych i źródła danych: operowanie](data-objects-and-data-sources-manipulation.md)
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Przeciąganie i upuszczanie](../mfc/drag-and-drop-ole.md)
+[Przeciągnij i opuść](drag-and-drop-ole.md)
 
-[Schowek](../mfc/clipboard.md)
+[Schowek](clipboard.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[OLE](../mfc/ole-in-mfc.md)<br/>
-[Klasa COleDataObject](../mfc/reference/coledataobject-class.md)<br/>
-[Klasa COleDataSource](../mfc/reference/coledatasource-class.md)
+[OLE](ole-in-mfc.md)<br/>
+[Klasa COleDataObject](reference/coledataobject-class.md)<br/>
+[Klasa COleDataSource](reference/coledatasource-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Portret architektury dokumentu widoku
+title: Portret architektury dokumentu-widoku
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [MFC], views
@@ -14,37 +14,37 @@ helpviewer_keywords:
 - document/view architecture [MFC], about document/view architecture
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
-ms.openlocfilehash: 51f963acf5aacdfe4050a076d3bb0e651a92d021
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0e71c42004b5409eeb6f5e2ddabd33296cf5f49
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392978"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623448"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Portret architektury dokument/widok
 
-Dokumentów i widoków zostaną skojarzone w typowej aplikacji MFC. Dane są przechowywane w dokumencie, ale widoku ma uprzywilejowany dostęp do danych. Rozdzielenie dokumentu z widoku oddziela zasoby magazynowe od obsługi danych z jego wyświetlania.
+Dokumenty i widoki są sparowane w typowej aplikacji MFC. Dane są przechowywane w dokumencie, ale widok ma uprzywilejowany dostęp do danych. Rozdzielenie dokumentu z widoku oddziela magazyn i konserwację danych z jego wyświetlania.
 
-## <a name="gaining-access-to-document-data-from-the-view"></a>Uzyskiwanie dostępu do danych z widoku dokumentów
+## <a name="gaining-access-to-document-data-from-the-view"></a>Uzyskiwanie dostępu do danych dokumentu z widoku
 
-Widok uzyskuje dostęp do swoich dokumentów danych za pomocą [GetDocument](../mfc/reference/cview-class.md#getdocument) funkcja, która zwraca wskaźnik do dokumentu lub przez dokonywanie widoku klasy C++ `friend` klasy dokumentu. Widoku jest używana jego dostęp do danych w celu uzyskania danych, gdy wszystko będzie gotowe narysować lub w przeciwnym razie manipulowania nimi.
+Widok uzyskuje dostęp do danych dokumentu przy użyciu funkcji [GetDocument](reference/cview-class.md#getdocument) , która zwraca wskaźnik do dokumentu lub przez utworzenie klasy widoku w języku C++ `friend` klasy dokumentu. W widoku zostanie następnie użyty dostęp do danych w celu uzyskania danych, gdy wszystko jest gotowe do rysowania lub manipulowania nimi.
 
-Na przykład z tego widoku [OnDraw](../mfc/reference/cview-class.md#ondraw) funkcji składowej, jest używany w widoku `GetDocument` uzyskać wskaźnikiem dokumentu. Następnie używa tego wskaźnika do dostępu `CString` element członkowski danych w dokumencie. Widok przekazuje ciąg `TextOut` funkcji. Aby wyświetlić kod dla tego przykładu, zobacz [Rysowanie w widoku](../mfc/drawing-in-a-view.md).
+Na przykład, w funkcji składowej [OnDraw](reference/cview-class.md#ondraw) widoku, widok używa `GetDocument` do uzyskania wskaźnika dokumentu. Następnie używa tego wskaźnika, aby uzyskać dostęp do `CString` elementu członkowskiego danych w dokumencie. Widok przekazuje ciąg do `TextOut` funkcji. Aby wyświetlić kod dla tego przykładu, zobacz [Rysowanie w widoku](drawing-in-a-view.md).
 
 ## <a name="user-input-to-the-view"></a>Dane wejściowe użytkownika do widoku
 
-Widok mogą również interpretować kliknięcia w sobie wybór lub edytowanie danych. Podobnie może go zinterpretować naciśnięć klawiszy jako wprowadzania danych lub edycji. Załóżmy, że użytkownik wpisze ciąg w widoku, który zarządza tekstu. Widok uzyskuje wskaźnik do dokumentu i używa wskaźnika do przekazania nowe dane do dokumentu, który zapisuje je w niektórych elementów struktury danych.
+Widok może również interpretować mysz w ramach zaznaczenia lub edycji danych. Podobnie można interpretować naciśnięcia klawiszy jako wprowadzania danych lub edytowania. Załóżmy, że użytkownik wpisze ciąg w widoku, który zarządza tekstem. Widok uzyskuje wskaźnik do dokumentu i używa wskaźnika, aby przekazać nowe dane do dokumentu, który przechowuje go w pewnej strukturze danych.
 
 ## <a name="updating-multiple-views-of-the-same-document"></a>Aktualizowanie wielu widoków tego samego dokumentu
 
-W aplikacji z wielu widoków tego samego dokumentu — takich jak okna rozdzielacza w edytorze tekstów — widok najpierw przekazuje nowe dane do dokumentu. Następnie wywołuje dokumentu [funkcji UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) funkcja elementu członkowskiego, która informuje o tym wszystkich widoków dokumentu, aby zaktualizować, aby odzwierciedlić nowe dane. Synchronizacja widoków.
+W aplikacji z wieloma widokami tego samego dokumentu — na przykład okna rozdzielacza w edytorze tekstu — widok najpierw przekazuje nowe dane do dokumentu. Następnie wywołuje funkcję członkowską [funkcji UpdateAllViews](reference/cdocument-class.md#updateallviews) dokumentu, która informuje, że wszystkie widoki dokumentu zostaną zaktualizowane, odzwierciedlając nowe dane. Spowoduje to zsynchronizowanie widoków.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-- [Zalety architektury dokument/widok](../mfc/advantages-of-the-document-view-architecture.md)
+- [Zalety architektury dokument/widok](advantages-of-the-document-view-architecture.md)
 
-- [Alternatywy dla architektury dokument/widok](../mfc/alternatives-to-the-document-view-architecture.md)
+- [Alternatywy dla architektury dokumentu/widoku](alternatives-to-the-document-view-architecture.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Architektura dokument/widok](../mfc/document-view-architecture.md)
+[Architektura dokumentu/widoku](document-view-architecture.md)

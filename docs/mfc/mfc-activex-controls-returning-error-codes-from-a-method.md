@@ -10,28 +10,28 @@ helpviewer_keywords:
 - SCODE, MFC ActiveX controls
 - ThrowError method [MFC]
 ms.assetid: 771fb9c9-2413-4dcc-b386-7bc4c4adeafd
-ms.openlocfilehash: 5314545a3a903158362dbfa65c4a9a1b2143e86b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1f7564d750b476ac3f57656f3392e0801652e5d5
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364559"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615514"
 ---
 # <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>Formanty MFC ActiveX: zwracanie kodów błędów z metody
 
-W tym artykule opisano sposób zwracania kodów błędów z metody kontroli ActiveX.
+W tym artykule opisano, jak zwrócić kody błędów z metody kontrolki ActiveX.
 
-Aby wskazać, że wystąpił błąd w ramach metody, należy użyć [COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror) funkcji elementu członkowskiego, który przyjmuje SCODE (kod stanu) jako parametr. Można użyć wstępnie zdefiniowanego kodu SCODE lub zdefiniować jeden z własnych.
+Aby wskazać, że wystąpił błąd w metodzie, należy użyć funkcji składowej [COleControl:: ThrowError](reference/colecontrol-class.md#throwerror) , która przyjmuje jako parametr SCODE (kod stanu). Możesz użyć wstępnie zdefiniowanego SCODE lub zdefiniować jeden z nich.
 
 > [!NOTE]
-> `ThrowError`jest przeznaczony do użycia tylko jako środek zwracania błędu z wewnątrz właściwości Get lub Set funkcji lub metody automatyzacji. Są to tylko razy, że odpowiedni program obsługi wyjątków będzie obecny na stosie.
+> `ThrowError`ma być używany tylko jako środek zwrócenia błędu z funkcji get lub set właściwości lub metody automatyzacji. Są to jedyne sytuacje, w których na stosie będzie obecny odpowiedni program obsługi wyjątków.
 
-Funkcje pomocnika istnieją dla najpopularniejszych wstępnie zdefiniowanych SCODE, takich jak [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported)i [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
+Istnieją funkcje pomocnika dla najpopularniejszych wstępnie zdefiniowanych SCODEs, takich jak [COleControl:: SetNotSupported](reference/colecontrol-class.md#setnotsupported), [COleControl:: GetNotSupported](reference/colecontrol-class.md#getnotsupported)i [COleControl:: SetNotPermitted](reference/colecontrol-class.md#setnotpermitted).
 
-Aby uzyskać listę wstępnie zdefiniowanych scodees i instrukcje dotyczące definiowania niestandardowych SCODEs, zobacz [sekcję Obsługa błędów w formancie ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) w ActiveX Controls: Advanced Topics.
+Aby zapoznać się z listą wstępnie zdefiniowanych SCODEs i instrukcji dotyczących definiowania niestandardowych SCODEs, zobacz sekcję [Obsługa błędów w kontrolce ActiveX](mfc-activex-controls-advanced-topics.md) w kontrolkach ActiveX: Tematy zaawansowane.
 
-Aby uzyskać więcej informacji na temat raportowania wyjątków w innych obszarach kodu, zobacz [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) i sekcji [Obsługi błędów w formancie ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) w ActiveX Formanty: Zaawansowane tematy.
+Aby uzyskać więcej informacji na temat raportowania wyjątków w innych obszarach kodu, zobacz [COleControl:: FireError —](reference/colecontrol-class.md#fireerror) i sekcja [Obsługa błędów w kontrolce ActiveX](mfc-activex-controls-advanced-topics.md) w kontrolkach ActiveX: Tematy zaawansowane.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
+[Kontrolki ActiveX MFC](mfc-activex-controls.md)

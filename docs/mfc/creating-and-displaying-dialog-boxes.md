@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], displaying
 ms.assetid: 1c5219ee-8b46-44bc-9708-83705d4f248b
-ms.openlocfilehash: 6d23e4d2c9249ce248eb8092963036f2ba5cacac
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 649d64f8e8b894027b9d6850b62d357d79c1dafa
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685746"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616274"
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>Tworzenie i wyświetlanie okien dialogowych
 
@@ -23,11 +23,11 @@ Tworzenie obiektu okna dialogowego jest operacją dwuetapową. Najpierw należy 
 
 |Typ okna dialogowego|Jak go utworzyć|
 |-----------------|----------------------|
-|[Formularz](../mfc/creating-modeless-dialog-boxes.md)|Skonstruuj `CDialog`, a następnie wywołaj funkcję członkowską `Create`.|
-|[Modal](../mfc/creating-modal-dialog-boxes.md)|Skonstruuj `CDialog`, a następnie wywołaj funkcję członkowską `DoModal`.|
+|[Formularz](creating-modeless-dialog-boxes.md)|Utwórz `CDialog` , a następnie Wywołaj `Create` funkcję członkowską.|
+|[Modal](creating-modal-dialog-boxes.md)|Utwórz `CDialog` , a następnie Wywołaj `DoModal` funkcję członkowską.|
 
-W razie potrzeby możesz utworzyć okno dialogowe z [szablonu okna dialogowego w pamięci](../mfc/using-a-dialog-template-in-memory.md) , który został skonstruowany, a nie z zasobu szablon okna dialogowego. Jest to jednak zaawansowana sekcja.
+W razie potrzeby możesz utworzyć okno dialogowe z [szablonu okna dialogowego w pamięci](using-a-dialog-template-in-memory.md) , który został skonstruowany, a nie z zasobu szablon okna dialogowego. Jest to jednak zaawansowana sekcja.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Praca z polami okna dialogowego w MFC](../mfc/life-cycle-of-a-dialog-box.md)
+[Praca z oknami dialogowymi w MFC](life-cycle-of-a-dialog-box.md)

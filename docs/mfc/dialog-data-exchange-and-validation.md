@@ -15,12 +15,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-ms.openlocfilehash: 651ec5779e3fe1190ff1a3f0f807fb0187e348f8
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 1aaeea11dd7916332ab0c281561550039ee03498
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685760"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616776"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Wymiana i walidacja danych w oknie dialogowym
 
@@ -28,11 +28,11 @@ Wymiana danych w oknie dialogowym (DDX) to prosty sposób na zainicjowanie kontr
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-- [Wymiana danych w oknie dialogowym](../mfc/dialog-data-exchange.md)
+- [Wymiana danych w oknie dialogowym](dialog-data-exchange.md)
 
-- [Walidacja danych okna dialogowego](../mfc/dialog-data-validation.md)
+- [Walidacja danych okna dialogowego](dialog-data-validation.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Okna dialogowe](../mfc/dialog-boxes.md)<br/>
-[Praca z polami okna dialogowego w MFC](../mfc/life-cycle-of-a-dialog-box.md)
+[Okna dialogowe](dialog-boxes.md)<br/>
+[Praca z oknami dialogowymi w MFC](life-cycle-of-a-dialog-box.md)

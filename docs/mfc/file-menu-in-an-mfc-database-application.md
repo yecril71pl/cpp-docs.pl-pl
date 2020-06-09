@@ -5,33 +5,33 @@ helpviewer_keywords:
 - File menu
 - database applications [MFC], File menu commands
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
-ms.openlocfilehash: 6c9a195a81423417809b65b5edce32027071ad2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbbb4382749278708e8e758f79a618d5cad0549e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405784"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615703"
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>Menu Plik w aplikacji bazy danych MFC
 
-Jeśli tworzenie aplikacji bazy danych MFC i nie należy używać serializacji, jak należy interpretować otwarte, Zamknij, Zapisz i Zapisz jako polecenia w menu Plik podczas nie wskazówki dotyczące stylu na to pytanie, poniżej przedstawiono kilka propozycji:
+W przypadku tworzenia aplikacji bazy danych MFC i nie używania serializacji, jak należy interpretować polecenia Otwórz, Zamknij, Zapisz i Zapisz jako w menu plik, gdy nie ma żadnych wytycznych dotyczących stylu dla tego pytania, poniżej przedstawiono kilka sugestii:
 
-- Całkowicie wyeliminować polecenia Otwórz menu Plik.
+- Usuń całkowicie polecenie otwarcia menu plik.
 
-- Interpretować polecenia Otwórz jako "otwarte bazy danych" i wyświetlanie listy źródeł danych, które rozpoznaje aplikacji użytkownika.
+- Interpretuj polecenie Otwórz jako "Otwórz bazę danych" i Pokaż użytkownikowi listę źródeł danych rozpoznawanych przez aplikację.
 
-- Interpretowanie polecenie Otwórz, być może, "otwarte profilu." Zachowaj Otwórz plik Otwieranie pliku serializacji, ale służy do przechowywania Zserializowany dokument zawierający informacje "profil użytkownika", takie jak preferencje użytkownika, w tym jego lub jej identyfikator logowania (opcjonalnie bez hasła) i danych źródłowych on w najbardziej ostatnio pracowano.
+- Interpretuj polecenie Open jako, prawdopodobnie "Otwórz profil". Zachowaj otwarte, aby otworzyć serializowany plik, ale Użyj pliku do przechowywania zserializowanego dokumentu zawierającego informacje o profilu użytkownika, takie jak preferencje użytkownika, w tym jego identyfikator logowania (opcjonalnie z wyłączeniem hasła) i źródło danych, które ostatnio pracował.
 
-Kreator aplikacji MFC obsługuje tworzenie aplikacji z nie polecenia menu Plik związanych z dokumentami. Wybierz **bazy danych w widoku bez obsługi plików** opcja **baza danych obsługuje** strony.
+Kreator aplikacji MFC obsługuje tworzenie aplikacji bez poleceń menu plik związanych z dokumentem. Wybierz opcję **Widok bazy danych bez obsługi plików** na stronie **Obsługa bazy danych** .
 
-Interpretowanie polecenia menu Plik w specjalny sposób, konieczne jest przesłonięcie co najmniej jeden programy obsługi poleceń, przede wszystkim w Twojej `CWinApp`-klasy pochodnej. Na przykład, jeśli zastąpienie całkowicie `OnFileOpen` (który implementuje `ID_FILE_OPEN` polecenie) oznacza "otwartej bazy danych:"
+Aby interpretować polecenie menu plik w specjalny sposób, należy zastąpić jeden lub więcej programów obsługi poleceń, głównie w `CWinApp` klasie pochodnej. Jeśli na przykład całkowicie przesłonisz `OnFileOpen` (implementując `ID_FILE_OPEN` polecenie), oznacza to, że "Open Database:"
 
-- Nie wywołuj klasy bazowej wersję `OnFileOpen`, ponieważ całkowicie wymianie struktury Domyślna implementacja polecenia.
+- Nie wywołuj wersji klasy bazowej `OnFileOpen` , ponieważ jest całkowicie zastępowana domyślna implementacja struktury polecenia.
 
-- Zamiast tego użyj programu obsługi, aby wyświetlić okno dialogowe, wyświetlanie listy źródeł danych. Można wyświetlić okna dialogowego, wywołując `CDatabase::OpenEx` lub `CDatabase::Open` z parametrem **NULL**. Zostanie otwarte okno dialogowe ODBC, który wyświetla wszystkie dostępne źródła danych na komputerze użytkownika.
+- Użyj zamiast tego programu obsługi, aby wyświetlić okno dialogowe z listą źródeł danych. Możesz wyświetlić takie okno dialogowe, wywołując `CDatabase::OpenEx` lub `CDatabase::Open` z parametrem **null**. Spowoduje to otwarcie okna dialogowego ODBC, w którym są wyświetlane wszystkie dostępne źródła danych na komputerze użytkownika.
 
-- Ponieważ aplikacje baz danych zwykle nie zapisuj cały dokument, prawdopodobnie należy usunąć zapisywania i Zapisz jako implementacji, chyba że używasz Dokument zserializowany do przechowywania informacji o profilu. W przeciwnym razie może zaimplementować polecenia Zapisz jako, na przykład "commit transakcji." Zobacz [techniczne 22 Uwaga](../mfc/tn022-standard-commands-implementation.md) Aby uzyskać więcej informacji o zastępowanie tych poleceń.
+- Ponieważ aplikacje bazy danych zazwyczaj nie zapisują całego dokumentu, prawdopodobnie zechcesz usunąć implementacje Zapisz i Zapisz jako, chyba że używasz serializowanego dokumentu do przechowywania informacji o profilu. W przeciwnym razie można zaimplementować polecenie Zapisz jako, na przykład "Zatwierdź transakcję". Aby uzyskać więcej informacji na temat przesłaniania tych poleceń, zobacz [Uwaga techniczna 22](tn022-standard-commands-implementation.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Serializacja: serializacja a Dane wejściowe/wyjściowe bazy danych](../mfc/serialization-serialization-vs-database-input-output.md)
+[Serializacja: serializacja a dane wejściowe/wyjściowe bazy danych](serialization-serialization-vs-database-input-output.md)

@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, ANSI deprecated methods
 ms.assetid: c7c5a6fd-95e4-4bee-b3d5-d3826c30947d
-ms.openlocfilehash: 88fb249e053a88a93510cb8f6f9b3092d41a0113
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbcae085b76e2dbce79265c0695c2b4e933553e2
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153557"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616996"
 ---
 # <a name="deprecated-ansi-apis"></a>Przestarzałe interfejsy API ANSI
 
-Biblioteka Microsoft Foundation Class (MFC) przeprowadza migrację do klas i metod, które są oparte na zestawie znaków Unicode. W związku z tym wersje ANSI kilka metod MFC są przestarzałe. Użyj wersji standardu Unicode tych metod w Twojej aplikacji tworzonych w przyszłości.
+Biblioteka Microsoft Foundation Class (MFC) jest migrowana do klas i metod, które są oparte na zestawie znaków Unicode. W związku z tym wersje ANSI kilku metod MFC są przestarzałe. Używaj wersji Unicode tych metod w przyszłych aplikacjach.
 
-Począwszy od wersji wspólnych formantów Windows 6.1, który jest dostarczany w Windows Vista, następujące metody ANSI są przestarzałe.
+Począwszy od wspólnych kontrolek systemu Windows w wersji 6,1, która jest dostarczana w systemie Windows Vista, następujące metody ANSI są przestarzałe.
 
-## <a name="cbutton-class"></a>Klasa CButton
+## <a name="cbutton-class"></a>CButton, klasa
 
 ```
 AFX_ANSI_DEPRECATED BOOL GetIdealSize(LPSIZE psize) const;
@@ -37,7 +37,7 @@ AFX_ANSI_DEPRECATED BOOL SetTextMargin(LPRECT pmargin);
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```
 
-## <a name="cedit-class"></a>Klasa CEdit
+## <a name="cedit-class"></a>CEdit, klasa
 
 ```
 AFX_ANSI_DEPRECATED BOOL GetCueBanner(LPWSTR lpszText,
@@ -47,9 +47,9 @@ AFX_ANSI_DEPRECATED BOOL SetCueBanner(LPCWSTR lpszText,
     BOOL fDrawIfFocused = FALSE);
 ```
 
-## <a name="clinkctrl-class"></a>Klasa CLinkCtrl
+## <a name="clinkctrl-class"></a>CLinkCtrl, klasa
 
-Cała klasa jest przestarzały.
+Cała klasa jest przestarzała.
 
 ## <a name="clistctrl-class"></a>CListCtrl — klasa
 
@@ -150,6 +150,6 @@ AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Wymagania kontrolek standardowych systemu Windows Vista dotyczące kompilacji](../mfc/build-requirements-for-windows-vista-common-controls.md)
+[Wymagania kontrolek standardowych systemu Windows Vista dotyczące kompilacji](build-requirements-for-windows-vista-common-controls.md)

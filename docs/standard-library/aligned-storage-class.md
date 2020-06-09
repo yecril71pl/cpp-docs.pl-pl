@@ -7,14 +7,14 @@ helpviewer_keywords:
 - aligned_storage class
 - aligned_storage
 ms.assetid: f255e345-1f05-4d07-81e4-017f420839fb
-ms.openlocfilehash: 8a4e907faa6175b9e03f5367d09501aaea388bce
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 741106888cdab63a75e090e860269f125c35efa6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456478"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623831"
 ---
-# <a name="alignedstorage-class"></a>aligned_storage — Klasa
+# <a name="aligned_storage-class"></a>aligned_storage — Klasa
 
 Tworzy odpowiednio wyrównany typ.
 
@@ -38,7 +38,7 @@ Wyrównanie obiektu.
 
 ## <a name="remarks"></a>Uwagi
 
-Element członkowski szablonu typedef `type` jest synonimem typu pod z wyrównaniem *wyrównanym* i rozmiarem *len*. *Wyrównanie* musi być równe `alignment_of<T>::value` dla pewnego typu `T`lub domyślnego wyrównania.
+Element członkowski szablonu typedef `type` jest synonimem typu pod z wyrównaniem *wyrównanym* i rozmiarem *len*. *Wyrównanie* musi być równe `alignment_of<T>::value` dla pewnego typu `T` lub domyślnego wyrównania.
 
 ## <a name="example"></a>Przykład
 
@@ -66,11 +66,11 @@ aligned to double == 8
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
-[alignment_of, klasa](../standard-library/alignment-of-class.md)
+[<type_traits>](type-traits.md)\
+[Klasa alignment_of](alignment-of-class.md)

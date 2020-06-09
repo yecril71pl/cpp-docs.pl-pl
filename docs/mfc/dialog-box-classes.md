@@ -10,125 +10,125 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-ms.openlocfilehash: 5747e4450816b803f97ad5ff6338b9e01ad41bca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2399b27fc081dcc810277079729b0e62ef80d603
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394614"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616942"
 ---
 # <a name="dialog-box-classes"></a>Klasy okien dialogowych
 
-Klasa `CDialog` i jej klasy pochodne hermetyzacji funkcji okno dialogowe. Ponieważ jest specjalnym rodzajem okna, okno dialogowe `CDialog` jest tworzony na podstawie `CWnd`. Pochodzi z klasy okien dialogowych z `CDialog` lub użyj jednego z klasy wspólnych okien dialogowych dla okien dialogowych standardowego, takich jak otwieranie lub zapisywanie pliku, drukowanie, zaznaczając, czcionek i kolorów, Inicjowanie operacji wyszukiwania i zamieniania lub wykonywanie różnych związane z mechanizmem OLE operacje.
+Klasa `CDialog` i jej klasy pochodne hermetyzują funkcję okna dialogowego. Ponieważ okno dialogowe jest specjalnym rodzajem okna, pochodzi `CDialog` od `CWnd` . Utwórz klasy okien dialogowych z `CDialog` lub użyj jednej z wspólnych klas okna dialogowego dla standardowych okien dialogowych, takich jak otwieranie lub zapisywanie pliku, drukowanie, wybieranie czcionki lub koloru, inicjowanie operacji wyszukiwania i zamieniania lub wykonywanie różnych operacji związanych z OLE.
 
-[CDialog](../mfc/reference/cdialog-class.md)<br/>
-Klasa bazowa dla wszystkich okien dialogowych, zarówno modalne i niemodalne.
+[CDialog](reference/cdialog-class.md)<br/>
+Klasa bazowa dla wszystkich okien dialogowych, zarówno modalne, jak i niemodalne.
 
-[CDataExchange](../mfc/reference/cdataexchange-class.md)<br/>
-Dostarcza informacje o wymiana i Walidacja danych dla okien dialogowych.
+[CDataExchange](reference/cdataexchange-class.md)<br/>
+Dostarcza informacje o wymianie danych i weryfikacji dla okien dialogowych.
 
 ## <a name="common-dialogs"></a>Wspólne okna dialogowe
 
-Te klasy okien dialogowych hermetyzować wspólne okna dialogowe Windows. Zapewniają one łatwe w użyciu implementacji okna dialogowe skomplikowane.
+Te klasy okna dialogowego hermetyzują wspólne okna dialogowe systemu Windows. Zapewniają one łatwą w użyciu implementacje skomplikowanych okien dialogowych.
 
-[CCommonDialog](../mfc/reference/ccommondialog-class.md)<br/>
-Klasa bazowa dla wszystkich wspólne okna dialogowe.
+[CCommonDialog](reference/ccommondialog-class.md)<br/>
+Klasa bazowa dla wszystkich wspólnych okien dialogowych.
 
-[CFileDialog](../mfc/reference/cfiledialog-class.md)<br/>
-Zawiera standardowe okno dialogowe Otwieranie lub zapisywanie pliku.
+[CFileDialog](reference/cfiledialog-class.md)<br/>
+Zawiera standardowe okno dialogowe umożliwiające otwarcie lub zapisanie pliku.
 
-[CColorDialog](../mfc/reference/ccolordialog-class.md)<br/>
-W tym temacie przedstawiono standardowe okno dialogowe wybierania kolorów.
+[CColorDialog](reference/ccolordialog-class.md)<br/>
+Udostępnia standardowe okno dialogowe do wybierania koloru.
 
-[CFontDialog](../mfc/reference/cfontdialog-class.md)<br/>
-W tym temacie przedstawiono standardowe okno dialogowe wybierania czcionki.
+[CFontDialog](reference/cfontdialog-class.md)<br/>
+Udostępnia standardowe okno dialogowe do wybierania czcionki.
 
-[CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)<br/>
-Zawiera standardowe okno dialogowe dla operacji wyszukiwania i zamieniania.
+[Okno CFindReplaceDialog](reference/cfindreplacedialog-class.md)<br/>
+Udostępnia standardowe okno dialogowe dla operacji wyszukiwania i zamieniania.
 
-[CPrintDialog](../mfc/reference/cprintdialog-class.md)<br/>
-Zawiera standardowe okno dialogowe drukowania pliku.
+[CPrintDialog](reference/cprintdialog-class.md)<br/>
+Udostępnia standardowe okno dialogowe do drukowania pliku.
 
-[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)<br/>
-Udostępnia arkusz własności drukowania Windows.
+[CPrintDialogEx](reference/cprintdialogex-class.md)<br/>
+Udostępnia arkusz właściwości drukowania systemu Windows.
 
-[CPageSetupDialog](../mfc/reference/cpagesetupdialog-class.md)<br/>
-Hermetyzuje usługi świadczone przez wspólne okno dialogowe Ustawienia strony Windows z obsługą dodatkowgoe ustawienie i modyfikowania marginesów wydruku.
+[CPageSetupDialog](reference/cpagesetupdialog-class.md)<br/>
+Hermetyzuje usługi zapewniane przez okno dialogowe Ustawienia typowej strony systemu Windows z dodatkową obsługą ustawiania i modyfikowania marginesów wydruku.
 
 ## <a name="ole-common-dialogs"></a>Wspólne okna dialogowe OLE
 
-OLE dodaje kilka typowych okien dialogowych Windows. W ramach tych zajęć hermetyzować wspólne okna dialogowe OLE.
+OLE dodaje kilka wspólnych okien dialogowych do systemu Windows. Te klasy hermetyzują wspólne okna dialogowe OLE.
 
-[COleDialog](../mfc/reference/coledialog-class.md)<br/>
-Używane przez architekturę, aby zawierała najczęściej występujące implementacje dla wszystkich okien dialogowych OLE. Wszystkie klasy okien dialogowych w kategorii interfejsu użytkownika są uzyskiwane z tej klasy bazowej. `COleDialog` Nie można używać bezpośrednio.
+[COleDialog](reference/coledialog-class.md)<br/>
+Używane przez platformę do przechowywania wspólnych implementacji dla wszystkich okien dialogowych OLE. Wszystkie klasy okien dialogowych w kategorii interfejs użytkownika są wyprowadzane z tej klasy bazowej. `COleDialog`nie można używać bezpośrednio.
 
-[COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)<br/>
-Wyświetla okno dialogowe Wstawianie obiektu standardowy interfejs użytkownika, wstawianie nowych OLE połączone lub osadzone elementy.
+[COleInsertDialog](reference/coleinsertdialog-class.md)<br/>
+Wyświetla okno dialogowe Wstawianie obiektu, standardowy interfejs użytkownika służący do wstawiania nowych połączonych lub osadzonych elementów OLE.
 
-[COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)<br/>
-Wyświetla okno dialogowe Wklej specjalne standardowy interfejs użytkownika wykonywania polecenia Edytuj Wklej specjalne.
+[COlePasteSpecialDialog](reference/colepastespecialdialog-class.md)<br/>
+Wyświetla okno dialogowe wklejanie specjalne, standardowy interfejs użytkownika do implementowania polecenia Edytuj Wklej specjalnie.
 
-[COleLinksDialog](../mfc/reference/colelinksdialog-class.md)<br/>
-Wyświetla okno dialogowe Edytuj linki standardowy interfejs użytkownika do modyfikowania informacji na temat połączone elementy.
+[COleLinksDialog](reference/colelinksdialog-class.md)<br/>
+Wyświetla okno dialogowe Edytowanie linków, standardowy interfejs użytkownika służący do modyfikowania informacji o połączonych elementach.
 
-[COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)<br/>
-Wyświetla okno dialogowe Zmienianie ikony, standardowy interfejs użytkownika dla zmiany, które osadzone ikon skojarzonych z OLE lub połączony element.
+[COleChangeIconDialog](reference/colechangeicondialog-class.md)<br/>
+Wyświetla okno dialogowe Zmień ikonę, standardowy interfejs użytkownika służący do zmiany ikony skojarzonej z elementem OLE osadzonym lub połączonym.
 
-[COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)<br/>
-Wyświetla okno dialogowe Konwertowanie standardowy interfejs użytkownika do konwertowania jeden typ elementów OLE.
+[COleConvertDialog](reference/coleconvertdialog-class.md)<br/>
+Wyświetla okno dialogowe Konwersja, standardowy interfejs użytkownika służący do konwertowania elementów OLE z jednego typu na drugi.
 
-[COlePropertiesDialog](../mfc/reference/colepropertiesdialog-class.md)<br/>
-Hermetyzuje wspólne okno dialogowe właściwości OLE Windows. Wspólne okna dialogowe OLE właściwości zapewniają prosty sposób wyświetlania i modyfikacji właściwości elementu dokumentu OLE w sposób zgodny ze standardami Windows.
+[COlePropertiesDialog](reference/colepropertiesdialog-class.md)<br/>
+Hermetyzuje okno dialogowe właściwości typowego interfejsu OLE systemu Windows. Okna dialogowe wspólne właściwości OLE zapewniają łatwy sposób wyświetlania i modyfikowania właściwości elementu dokumentu OLE w sposób zgodny ze standardami systemu Windows.
 
-[COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)<br/>
-Wyświetla okno dialogowe aktualizacji standardowy interfejs użytkownika aktualizacji wszystkie linki w dokumencie. Okno dialogowe zawiera wskaźnik postępu, aby wskazać, jak blisko procedura aktualizacji zostanie ukończone.
+[COleUpdateDialog](reference/coleupdatedialog-class.md)<br/>
+Wyświetla okno dialogowe Aktualizacja, standardowy interfejs użytkownika do aktualizowania wszystkich linków w dokumencie. Okno dialogowe zawiera wskaźnik postępu, aby wskazać, w jaki sposób zamykana jest procedura aktualizacji.
 
-[COleChangeSourceDialog](../mfc/reference/colechangesourcedialog-class.md)<br/>
-Wyświetla okno dialogowe Zmień źródło standardowy interfejs użytkownika do zmiany przeznaczenia lub źródłem linku.
+[COleChangeSourceDialog](reference/colechangesourcedialog-class.md)<br/>
+Wyświetla okno dialogowe Zmień źródło, standardowy interfejs użytkownika służący do zmiany miejsca docelowego lub źródła łącza.
 
-[COleBusyDialog](../mfc/reference/colebusydialog-class.md)<br/>
-Wyświetla oknach dialogowych serwer jest zajęty i serwer nie odpowiada, standardowy interfejs użytkownika do obsługi wywołań zajęty aplikacji. Zwykle jest wyświetlany automatycznie przez [COleMessageFilter](../mfc/reference/colemessagefilter-class.md) implementacji.
+[COleBusyDialog](reference/colebusydialog-class.md)<br/>
+Wyświetla okna dialogowe zajęty serwer i serwer nie odpowiada, standardowy interfejs użytkownika do obsługi wywołań do zajętych aplikacji. Zwykle jest automatycznie wyświetlana przez implementację [COleMessageFilter](reference/colemessagefilter-class.md) .
 
 ## <a name="property-sheet-classes"></a>Klasy arkuszy właściwości
 
-Klasy arkuszy właściwości umożliwia aplikacjom korzystać arkuszy właściwości, nazywane również z kartami w oknach dialogowych. Arkusze właściwości są wydajny sposób organizowania wielu formantów w oknie dialogowym pojedynczego.
+Klasy arkuszy właściwości umożliwiają aplikacjom korzystanie z arkuszy właściwości, znanych również jako okna dialogowe z kartami. Arkusze właściwości to wydajny sposób organizowania dużej liczby kontrolek w jednym oknie dialogowym.
 
-[CPropertyPage](../mfc/reference/cpropertypage-class.md)<br/>
-Udostępnia poszczególnych stron w arkuszu właściwości. Wyprowadzić klasę z `CPropertyPage` dla każdej strony, które mają zostać dodane do Twojego arkusza właściwości.
+[CPropertyPage](reference/cpropertypage-class.md)<br/>
+Udostępnia poszczególne strony w arkuszu właściwości. Utwórz klasę z `CPropertyPage` dla każdej strony, która ma zostać dodana do arkusza właściwości.
 
-[CPropertySheet](../mfc/reference/cpropertysheet-class.md)<br/>
-Zawiera wiele stron właściwości ramki. Pochodzi z klasy arkusza właściwości `CPropertySheet` szybko wdrożyć arkuszy właściwości.
+[CPropertySheet](reference/cpropertysheet-class.md)<br/>
+Udostępnia ramkę dla wielu stron właściwości. Utwórz klasę arkusza właściwości z `CPropertySheet` , aby szybko zaimplementować arkusze właściwości.
 
-[COlePropertyPage](../mfc/reference/colepropertypage-class.md)<br/>
-Wyświetla właściwości OLE control w interfejsie graficznym, zbliżonym do okna dialogowego.
+[COlePropertyPage](reference/colepropertypage-class.md)<br/>
+Wyświetla właściwości kontrolki OLE w interfejsie graficznym podobnym do okna dialogowego.
 
-## <a name="html-based-dialog-classes"></a>Klasy oparte na języku HTML okien dialogowych
+## <a name="html-based-dialog-classes"></a>Klasy okien dialogowych opartych na języku HTML
 
-[CDHtmlDialog](../mfc/reference/cdhtmldialog-class.md)<br/>
-Używane do utworzenia okien dialogowych, które implementują interfejsu użytkownika za pomocą kodu HTML, a nie w oknie dialogowym zasobów.
+[CDHtmlDialog](reference/cdhtmldialog-class.md)<br/>
+Służy do tworzenia okien dialogowych, które implementują interfejs użytkownika przy użyciu języka HTML, a nie zasobów okna dialogowego.
 
-[CMultiPageDHtmlDialog](../mfc/reference/cmultipagedhtmldialog-class.md)<br/>
-Kolejno wyświetla wiele stron HTML i obsługuje zdarzenia z każdej strony.
+[CMultiPageDHtmlDialog](reference/cmultipagedhtmldialog-class.md)<br/>
+Wyświetla wiele stron HTML sekwencyjnie i obsługuje zdarzenia z poszczególnych stron.
 
-## <a name="related-classes"></a>Klasy pokrewne
+## <a name="related-classes"></a>Powiązane klasy
 
-Te klasy nie są okna dialogowe per se, ale korzystanie z szablonów okno dialogowe i mają wiele zachowanie okien dialogowych.
+Te klasy nie są okna dialogowe na SE, ale używają szablonów okien dialogowych i ma wiele zachowań okien dialogowych.
 
-[CDialogBar](../mfc/reference/cdialogbar-class.md)<br/>
-Pasek sterowania, który jest oparty na szablonu okna dialogowego.
+[CDialogBar](reference/cdialogbar-class.md)<br/>
+Pasek sterowania, który jest oparty na szablonie okna dialogowego.
 
-[CFormView](../mfc/reference/cformview-class.md)<br/>
-Widok przewijania, którego układ jest definiowany w szablonu okna dialogowego. Wyprowadzić klasę z `CFormView` do zaimplementowania interfejsu użytkownika, w oparciu o szablonu okna dialogowego.
+[CFormView](reference/cformview-class.md)<br/>
+Widok przewijania, którego układ jest zdefiniowany w szablonie okna dialogowego. Utwórz klasę z `CFormView` , aby zaimplementować interfejs użytkownika w oparciu o szablon okna dialogowego.
 
-[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-Formularz zawiera widok podłączone bezpośrednio do obiektu recordset obiekt DAO (Data Access). Wszystkich widokach formularza, takie jak `CDaoRecordView` opiera się na szablonu okna dialogowego.
+[CDaoRecordView](reference/cdaorecordview-class.md)<br/>
+Udostępnia widok formularza bezpośrednio połączony z obiektem zestawu rekordów obiektu dostępu do danych (DAO). Podobnie jak w przypadku wszystkich widoków formularzy, `CDaoRecordView` jest oparty na szablonie okna dialogowego.
 
-[CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Formularz zawiera widok podłączone bezpośrednio do obiektu zestawu rekordów Open Database Connectivity (ODBC). Wszystkich widokach formularza, takie jak `CRecordView` opiera się na szablonu okna dialogowego.
+[Formularzy CRecordView](reference/crecordview-class.md)<br/>
+Udostępnia widok formularza połączony bezpośrednio z obiektem zestawu rekordów Open Database Connectivity (ODBC). Podobnie jak w przypadku wszystkich widoków formularzy, `CRecordView` jest oparty na szablonie okna dialogowego.
 
-[CPrintInfo](../mfc/reference/cprintinfo-structure.md)<br/>
-Struktury zawierającej informacje o zadaniu drukowania lub drukowania (wersja zapoznawcza). Używane przez architekturę drukowania [CView](../mfc/reference/cview-class.md).
+[CPrintInfo](reference/cprintinfo-structure.md)<br/>
+Struktura zawierająca informacje o zadaniu drukowania lub podglądu wydruku. Używany przez architekturę drukowania [CView](reference/cview-class.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../mfc/class-library-overview.md)
+[Przegląd klas](class-library-overview.md)

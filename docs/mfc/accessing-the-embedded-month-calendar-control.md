@@ -9,35 +9,35 @@ helpviewer_keywords:
 - month calendar controls [MFC], changing the font
 - DateTimePicker control [MFC]
 ms.assetid: 355e97ed-cf81-4df3-a2f8-9ddbbde93227
-ms.openlocfilehash: 69270cc5663406f2c5d38ffccdbd35f39298a3d5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66a9ef7fd49ea81ddac4779aa6d1c3f12fbe4c55
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354183"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617375"
 ---
 # <a name="accessing-the-embedded-month-calendar-control"></a>Uzyskiwanie dostępu do osadzonego formantu kalendarza miesięcznego
 
-Obiekt sterujący osadzonego kalendarza miesiąca `CDateTimeCtrl` jest dostępny z obiektu za pomocą wywołania funkcji elementu członkowskiego [GetMonthCalCtrl.](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl)
+Dostęp do obiektu formantu kalendarza z osadzonym miesiącem można uzyskać z `CDateTimeCtrl` obiektu z wywołaniem funkcji składowej [GetMonthCalCtrl](reference/cdatetimectrl-class.md#getmonthcalctrl) .
 
 > [!NOTE]
-> Formant osadzonego kalendarza miesiąca jest używany tylko wtedy, gdy formant selektora daty i godziny nie ma ustawionego stylu **DTS_UPDOWN.**
+> Formant kalendarza z osadzonym miesiącem jest używany tylko wtedy, gdy kontrolka selektora daty i godziny nie ma ustawionego stylu **DTS_UPDOWN** .
 
-Jest to przydatne, jeśli chcesz zmodyfikować niektóre atrybuty przed wyświetleniem formantu osadzonego. Aby to osiągnąć, obsłużyć powiadomienie **DTN_DROPDOWN,** pobrać formant kalendarza miesiąca (przy użyciu [CDateTimeCtrl::GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl)) i dokonać zmian. Niestety kontrola kalendarza miesiąca nie jest trwała.
+Jest to przydatne, jeśli chcesz zmodyfikować pewne atrybuty przed wyświetleniem osadzonego formantu. Aby to osiągnąć, należy obsłużyć powiadomienie **DTN_DROPDOWN** , pobrać formant kalendarza miesięcznego (przy użyciu [Korzystanie CDateTimeCtrl:: GetMonthCalCtrl](reference/cdatetimectrl-class.md#getmonthcalctrl)) i wprowadzić modyfikacje. Niestety, formant kalendarza miesięcznego nie jest trwały.
 
-Innymi słowy, gdy użytkownik żąda wyświetlania formantu kalendarza miesiąca, tworzony jest kontrolka kalendarza nowego miesiąca (przed **powiadomieniem DTN_DROPDOWN).** Formant jest niszczony (po **powiadomieniu DTN_CLOSEUP)** po odrzuceniu przez użytkownika. Oznacza to, że wszystkie atrybuty, które można zmodyfikować, przed wyświetlaniem formantu osadzonego są tracone, gdy osadzony formant jest odrzucany.
+Innymi słowy, gdy użytkownik zażąda wyświetlania kontrolki kalendarza miesięcznego, zostanie utworzony nowy, dwumiesięczny formant kalendarza (przed powiadomieniem **DTN_DROPDOWN** ). Formant jest niszczony (po **DTN_CLOSEUP** powiadomienia), gdy zostanie odrzucony przez użytkownika. Oznacza to, że wszelkie modyfikowane atrybuty przed wyświetleniem osadzonego formantu są tracone, gdy osadzony formant zostanie odrzucony.
 
-W poniższym przykładzie przedstawiono tę procedurę, przy użyciu programu obsługi dla **powiadomienia DTN_DROPDOWN.** Kod zmienia kolor tła kontrolki kalendarza miesiąca, z wywołaniem [SetMonthCalColor](../mfc/reference/cdatetimectrl-class.md#setmonthcalcolor), na szary. Kod jest następujący:
+Poniższy przykład ilustruje tę procedurę przy użyciu programu obsługi powiadomienia **DTN_DROPDOWN** . Kod zmienia kolor tła kontrolki kalendarza miesięcznego z wywołaniem do [SetMonthCalColor](reference/cdatetimectrl-class.md#setmonthcalcolor), szarym. Kod jest następujący:
 
-[!code-cpp[NVC_MFCControlLadenDialog#5](../mfc/codesnippet/cpp/accessing-the-embedded-month-calendar-control_1.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#5](codesnippet/cpp/accessing-the-embedded-month-calendar-control_1.cpp)]
 
-Jak wspomniano wcześniej, wszystkie modyfikacje właściwości formantu kalendarza miesiąca zostaną utracone, z dwoma wyjątkami, gdy osadzony formant zostanie odrzucony. Pierwszy wyjątek, kolory kontroli kalendarza miesiąca, został już omówiony. Drugi wyjątek to czcionka używana przez formant kalendarza miesiąca. Czcionkę domyślną można zmodyfikować, wywołując [polecenie CDateTimeCtrl::SetMonthCalFont](../mfc/reference/cdatetimectrl-class.md#setmonthcalfont), przekazując uchwyt istniejącej czcionki. Poniższy przykład `m_dtPicker` (gdzie jest obiekt kontroli daty i godziny) pokazuje jedną możliwą metodę:
+Jak wspomniano wcześniej, wszystkie modyfikacje właściwości kontrolki kalendarza miesięcznego są tracone z dwoma wyjątkami, gdy osadzony formant zostanie odrzucony. Pierwszy wyjątek, kolory kontrolki kalendarza miesięcznego, został już omówiony. Drugi wyjątek jest czcionką używaną przez formant kalendarza miesięcznego. Możesz zmodyfikować domyślną czcionkę, wykonując wywołanie [Korzystanie CDateTimeCtrl:: SetMonthCalFont](reference/cdatetimectrl-class.md#setmonthcalfont), przekazując uchwyt istniejącej czcionki. Poniższy przykład (gdzie `m_dtPicker` jest obiektem sterowania datą i godziną) ilustruje jedną z możliwych metod:
 
-[!code-cpp[NVC_MFCControlLadenDialog#6](../mfc/codesnippet/cpp/accessing-the-embedded-month-calendar-control_2.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#6](codesnippet/cpp/accessing-the-embedded-month-calendar-control_2.cpp)]
 
-Po zmianie czcionki, z `CDateTimeCtrl::SetMonthCalFont`wywołaniem, nowa czcionka jest przechowywana i używana następnym razem, gdy kalendarz miesiąca ma być wyświetlany.
+Po zmianie czcionki z wywołaniem `CDateTimeCtrl::SetMonthCalFont` nowej czcionki jest zachowywana i używana przy następnym wyświetleniu kalendarza miesiąca.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Korzystanie z CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
-[Formanty](../mfc/controls-mfc.md)
+[Korzystanie z CDateTimeCtrl](using-cdatetimectrl.md)<br/>
+[Formanty](controls-mfc.md)

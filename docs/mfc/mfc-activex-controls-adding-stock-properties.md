@@ -9,100 +9,100 @@ helpviewer_keywords:
 - foreground colors, ActiveX controls
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
-ms.openlocfilehash: 16bdfddf0c028bc6a312767844b38c58c942d56e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 13e8af5ddb3dd5130c864e42383e3bb9ff23b87b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364665"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625425"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Formanty MFC ActiveX: dodawanie właściwości standardowych
 
-Właściwości magazynowe różnią się od właściwości niestandardowych tym, `COleControl`że są już zaimplementowane przez klasę . `COleControl`zawiera wstępnie zdefiniowane funkcje członkowskie, które obsługują typowe właściwości formantu. Niektóre typowe właściwości obejmują podpis formantu i kolory pierwszego planu i tła. Aby uzyskać informacje na temat innych właściwości zapasów, zobacz [Właściwości zapasów obsługiwane przez Kreatora dodawania właściwości](#_core_stock_properties_supported_by_classwizard) w dalszej części tego artykułu. Wpisy mapy wysyłki dla właściwości magazynowych są zawsze poprzedzone DISP_STOCKPROP.
+Właściwości giełdowe różnią się od właściwości niestandardowych w tym, że są już zaimplementowane przez klasę `COleControl` . `COleControl`zawiera wstępnie zdefiniowane funkcje członkowskie, które obsługują wspólne właściwości formantu. Niektóre typowe właściwości obejmują podpis kontrolki i kolor pierwszego planu i tła. Aby uzyskać informacje dotyczące innych właściwości podstawowych, zobacz temat [właściwości podstawowe obsługiwane przez Kreatora dodawania właściwości](#_core_stock_properties_supported_by_classwizard) w dalszej części tego artykułu. Wpisy mapy wysyłania dla właściwości podstawowych są zawsze poprzedzone DISP_STOCKPROP.
 
-W tym artykule opisano sposób dodawania właściwości magazynu (w tym przypadku caption) do formantu ActiveX za pomocą Kreatora dodawania właściwości i wyjaśniono wynikające z tego modyfikacje kodu. Tematy obejmują:
+W tym artykule opisano, jak dodać właściwość giełdową (w tym przypadku podpis) do kontrolki ActiveX przy użyciu Kreatora dodawania właściwości i objaśniające modyfikacje kodu. Tematy obejmują:
 
-- [Dodawanie właściwości magazynu za pomocą Kreatora dodawania właściwości](#_core_using_classwizard_to_add_a_stock_property)
+- [Za pomocą Kreatora dodawania właściwości, aby dodać właściwość giełdową](#_core_using_classwizard_to_add_a_stock_property)
 
-- [Dodawanie zmian Kreatora właściwości dla właściwości magazynowych](#_core_classwizard_changes_for_stock_properties)
+- [Dodawanie zmian w Kreatorze właściwości dla właściwości podstawowych](#_core_classwizard_changes_for_stock_properties)
 
-- [Właściwości magazynowe obsługiwane przez Kreatora dodawania właściwości](#_core_stock_properties_supported_by_classwizard)
+- [Właściwości podstawowe obsługiwane przez Kreatora dodawania właściwości](#_core_stock_properties_supported_by_classwizard)
 
-- [Właściwości magazynowe i powiadomienia](#_core_stock_properties_and_notification)
+- [Właściwości i powiadomienia dotyczące akcji](#_core_stock_properties_and_notification)
 
-- [Właściwości kolorów](#_core_color_properties)
+- [Właściwości koloru](#_core_color_properties)
 
     > [!NOTE]
-    >  Formanty niestandardowe języka Visual Basic zazwyczaj mają właściwości, takie jak Góra, Lewy, Szerokość, Wysokość, Wyrównaj, Tag, Nazwa, TabIndex, TabStop i Nadrzędny. Kontenery kontroli ActiveX są jednak odpowiedzialne za implementowanie tych właściwości formantu i dlatego formanty ActiveX nie powinny obsługiwać tych właściwości.
+    >  Visual Basic kontrolki niestandardowe mają zazwyczaj właściwości takie jak Top, Left, Width, Height, align, tag, Name, TabIndex, TabStop i Parent. Kontenery kontrolek ActiveX są jednak odpowiedzialne za implementację tych właściwości kontroli, dlatego kontrolki ActiveX nie powinny obsługiwać tych właściwości.
 
-## <a name="using-the-add-property-wizard-to-add-a-stock-property"></a><a name="_core_using_classwizard_to_add_a_stock_property"></a>Dodawanie właściwości magazynu za pomocą Kreatora dodawania właściwości
+## <a name="using-the-add-property-wizard-to-add-a-stock-property"></a><a name="_core_using_classwizard_to_add_a_stock_property"></a>Za pomocą Kreatora dodawania właściwości, aby dodać właściwość giełdową
 
-Dodawanie właściwości magazynu wymaga mniej kodu niż dodawanie właściwości niestandardowych, ponieważ `COleControl`obsługa właściwości jest obsługiwana automatycznie przez program . Poniższa procedura pokazuje dodanie akcji Caption właściwości do struktury kontroli ActiveX i może również służyć do dodawania innych właściwości magazynu. Zastąp nazwę wybranej właściwości magazynu caption.
+Dodawanie właściwości podstawowych wymaga mniejszej ilości kodu niż Dodawanie właściwości niestandardowych, ponieważ obsługa właściwości jest obsługiwana automatycznie przez `COleControl` . Poniższa procedura pokazuje dodanie właściwości spisu do struktury formantów ActiveX i może również służyć do dodawania innych właściwości podstawowych. Zastąp wybraną nazwę właściwości giełdy dla podpisu.
 
-#### <a name="to-add-the-stock-caption-property-using-the-add-property-wizard"></a>Aby dodać właściwość Podpis zapasów za pomocą Kreatora dodawania właściwości
+#### <a name="to-add-the-stock-caption-property-using-the-add-property-wizard"></a>Aby dodać właściwość Caption giełdowy przy użyciu Kreatora dodawania właściwości
 
-1. Załaduj projekt formantu.
+1. Załaduj projekt kontrolki.
 
-1. W widoku klasy rozwiń węzeł biblioteki formantu.
+1. W Widok klasy rozwiń węzeł Biblioteka formantu.
 
-1. Kliknij prawym przyciskiem myszy węzeł interfejsu formantu (drugi węzeł węzła biblioteki), aby otworzyć menu skrótów.
+1. Kliknij prawym przyciskiem myszy węzeł interfejsu dla formantu (drugi węzeł węzła biblioteki), aby otworzyć menu skrótów.
 
-1. W menu skrótów kliknij polecenie **Dodaj,** a następnie kliknij pozycję **Dodaj właściwość**.
+1. W menu skrótów kliknij polecenie **Dodaj** , a następnie kliknij przycisk **Dodaj właściwość**.
 
    Spowoduje to otwarcie [Kreatora dodawania właściwości](../ide/names-add-property-wizard.md).
 
-1. W polu **Nazwa właściwości** kliknij pozycję **Podpis**.
+1. W polu **Nazwa właściwości** kliknij pozycję **podpis**.
 
 1. Kliknij przycisk **Zakończ**.
 
-## <a name="add-property-wizard-changes-for-stock-properties"></a><a name="_core_classwizard_changes_for_stock_properties"></a>Dodawanie zmian kreatora właściwości dla właściwości magazynowych
+## <a name="add-property-wizard-changes-for-stock-properties"></a><a name="_core_classwizard_changes_for_stock_properties"></a>Dodawanie zmian w Kreatorze właściwości dla właściwości podstawowych
 
-Ponieważ `COleControl` obsługuje właściwości zapasów, Kreator dodawania właściwości nie zmienia deklaracji klasy w żaden sposób; dodaje właściwość do mapy wysyłki. Kreator dodawania właściwości dodaje następujący wiersz do mapy wysyłki formantu, który znajduje się w implementacji (. CPP):
+Ponieważ `COleControl` obsługuje właściwości podstawowe, Kreator dodawania właściwości nie zmienia deklaracji klasy w jakikolwiek sposób; dodaje właściwość do mapy wysyłania. Kreator dodawania właściwości dodaje następujący wiersz do mapy wysyłania kontrolki, która znajduje się w implementacji (. CPP):
 
-[!code-cpp[NVC_MFC_AxUI#22](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_1.cpp)]
+[!code-cpp[NVC_MFC_AxUI#22](codesnippet/cpp/mfc-activex-controls-adding-stock-properties_1.cpp)]
 
-Następujący wiersz jest dodawany do opisu interfejsu formantu (. idl) plik:
+Następujący wiersz jest dodawany do opisu interfejsu formantu (. IDL):
 
-[!code-cpp[NVC_MFC_AxUI#23](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_2.idl)]
+[!code-cpp[NVC_MFC_AxUI#23](codesnippet/cpp/mfc-activex-controls-adding-stock-properties_2.idl)]
 
-Ten wiersz przypisuje caption właściwości określonego identyfikatora. Należy zauważyć, że właściwość jest powiązana i zażąda uprawnień z bazy danych przed zmodyfikowaniem wartości.
+Ten wiersz przypisuje Właściwość Caption o określonym IDENTYFIKATORze. Należy zauważyć, że właściwość jest powiązana i będzie żądać uprawnień z bazy danych przed zmodyfikowaniem wartości.
 
-Dzięki temu caption właściwość dostępna dla użytkowników formantu. Aby użyć wartości właściwości magazynu, należy uzyskać dostęp do `COleControl` zmiennej elementu członkowskiego lub funkcji elementu członkowskiego klasy podstawowej. Aby uzyskać więcej informacji na temat tych zmiennych członkowskich i funkcji członkowskich, zobacz następną sekcję Właściwości zapasów obsługiwane przez Kreatora dodawania właściwości.
+Spowoduje to udostępnienie właściwości Caption użytkownikom formantu. Aby użyć wartości właściwości giełdowej, uzyskaj dostęp do zmiennej składowej lub funkcji członkowskiej `COleControl` klasy bazowej. Aby uzyskać więcej informacji na temat tych zmiennych składowych i funkcji Członkowskich, zobacz następną sekcję, właściwości giełdowe obsługiwane przez Kreatora dodawania właściwości.
 
-## <a name="stock-properties-supported-by-the-add-property-wizard"></a><a name="_core_stock_properties_supported_by_classwizard"></a>Właściwości zapasów obsługiwane przez Kreatora dodawania właściwości
+## <a name="stock-properties-supported-by-the-add-property-wizard"></a><a name="_core_stock_properties_supported_by_classwizard"></a>Właściwości podstawowe obsługiwane przez Kreatora dodawania właściwości
 
-Klasa `COleControl` zawiera dziewięć właściwości magazynowych. Właściwości można dodać za pomocą Kreatora dodawania właściwości.
+`COleControl`Klasa zawiera dziewięć właściwości podstawowych. Możesz dodać odpowiednie właściwości przy użyciu Kreatora dodawania właściwości.
 
-|Właściwość|Wpis mapy wysyłki|Jak uzyskać dostęp do wartości|
+|Właściwość|Wpis mapy wysyłania|Jak uzyskać dostęp do wartości|
 |--------------|------------------------|-------------------------|
-|`Appearance`|DISP_STOCKPROP_APPEARANCE( )|Wartość dostępna `m_sAppearance`jako .|
-|`BackColor`|DISP_STOCKPROP_BACKCOLOR( )|Wartość dostępna `GetBackColor`za pomocą połączenia .|
-|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE( )|Wartość dostępna `m_sBorderStyle`jako .|
-|`Caption`|DISP_STOCKPROP_CAPTION( )|Wartość dostępna `InternalGetText`za pomocą połączenia .|
-|`Enabled`|DISP_STOCKPROP_ENABLED( )|Wartość dostępna `m_bEnabled`jako .|
-|`Font`|DISP_STOCKPROP_FONT( )|Zobacz artykuł [MFC ActiveX Formanty: Korzystanie z czcionek](../mfc/mfc-activex-controls-using-fonts.md) do użycia.|
-|`ForeColor`|DISP_STOCKPROP_FORECOLOR( )|Wartość dostępna `GetForeColor`za pomocą połączenia .|
-|`hWnd`|DISP_STOCKPROP_HWND( )|Wartość dostępna `m_hWnd`jako .|
-|`Text`|DISP_STOCKPROP_TEXT( )|Wartość dostępna `InternalGetText`za pomocą połączenia . Ta właściwość jest `Caption`taka sama jak , z wyjątkiem nazwy właściwości.|
-|`ReadyState`|DISP_STOCKPROP_READYSTATE()|Wartość dostępna `m_lReadyState` jako lub`GetReadyState`|
+|`Appearance`|DISP_STOCKPROP_APPEARANCE ()|Wartość dostępna jako `m_sAppearance` .|
+|`BackColor`|DISP_STOCKPROP_BACKCOLOR ()|Wartość dostępna poprzez wywołanie `GetBackColor` .|
+|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE ()|Wartość dostępna jako `m_sBorderStyle` .|
+|`Caption`|DISP_STOCKPROP_CAPTION ()|Wartość dostępna poprzez wywołanie `InternalGetText` .|
+|`Enabled`|DISP_STOCKPROP_ENABLED ()|Wartość dostępna jako `m_bEnabled` .|
+|`Font`|DISP_STOCKPROP_FONT ()|Zobacz [kontrolki ActiveX MFC w artykule: Używanie czcionek](mfc-activex-controls-using-fonts.md) do użycia.|
+|`ForeColor`|DISP_STOCKPROP_FORECOLOR ()|Wartość dostępna poprzez wywołanie `GetForeColor` .|
+|`hWnd`|DISP_STOCKPROP_HWND ()|Wartość dostępna jako `m_hWnd` .|
+|`Text`|DISP_STOCKPROP_TEXT ()|Wartość dostępna poprzez wywołanie `InternalGetText` . Ta właściwość jest taka sama jak `Caption` , z wyjątkiem nazwy właściwości.|
+|`ReadyState`|DISP_STOCKPROP_READYSTATE ()|Wartość dostępna jako `m_lReadyState` lub`GetReadyState`|
 
-## <a name="stock-properties-and-notification"></a><a name="_core_stock_properties_and_notification"></a>Właściwości magazynowe i powiadomienia
+## <a name="stock-properties-and-notification"></a><a name="_core_stock_properties_and_notification"></a>Właściwości i powiadomienia dotyczące akcji
 
-Większość właściwości zapasów mają funkcje powiadomień, które mogą być zastąpione. Na przykład po `BackColor` każdej zmianie właściwości `OnBackColorChanged` wywoływana jest funkcja (funkcja elementu członkowskiego klasy kontrolnej). Domyślna implementacja `COleControl`(w) wywołuje `InvalidateControl`. Zastąd w tej funkcji należy zastąpić, jeśli w odpowiedzi na tę sytuację należy podjąć dodatkowe działania.
+Większość właściwości podstawowych ma funkcje powiadomień, które mogą zostać zastąpione. Na przykład za każdym razem, gdy `BackColor` Właściwość zostanie zmieniona, `OnBackColorChanged` wywoływana jest funkcja (funkcja członkowska klasy kontrolki). Domyślne implementacje (in `COleControl` ) `InvalidateControl` . Zastąp tę funkcję, jeśli chcesz podjąć dodatkowe działania w odpowiedzi na tę sytuację.
 
 ## <a name="color-properties"></a><a name="_core_color_properties"></a>Właściwości koloru
 
-Podczas malowania `ForeColor` formantu można używać zapasów i `BackColor` właściwości lub własnych niestandardowych właściwości kolorów. Aby użyć właściwości color, należy wywołać [COleControl::TranslateColor](../mfc/reference/colecontrol-class.md#translatecolor) funkcji elementu członkowskiego. Parametry tej funkcji są wartością właściwości color i opcjonalnym uchwytem palety. Zwracana wartość jest wartością **COLORREF,** która może być `SetTextColor` przekazywana do funkcji GDI, takich jak i `CreateSolidBrush`.
+`ForeColor` `BackColor` Podczas malowania kontrolki można użyć zasobów i właściwości lub własnych właściwości kolorów niestandardowych. Aby użyć właściwości Color, wywołaj funkcję członkowską [COleControl:: TranslateColor](reference/colecontrol-class.md#translatecolor) . Parametry tej funkcji to wartość właściwości Color i opcjonalnego dojścia do palety. Wartość zwracana jest wartością **COLORREF** , która może być przenoszona do funkcji GDI, takich jak `SetTextColor` i `CreateSolidBrush` .
 
-Wartości kolorów dla `ForeColor` zapasów i `BackColor` właściwości są dostępne `GetForeColor` przez `GetBackColor` wywołanie albo funkcji, odpowiednio.
+Wartości koloru dla zasobów `ForeColor` i `BackColor` właściwości są dostępne przez wywołanie `GetForeColor` albo lub `GetBackColor` funkcji.
 
-Poniższy przykład pokazuje przy użyciu tych dwóch właściwości koloru podczas malowania formantu. Inicjuje tymczasową zmienną `CBrush` **COLORREF** i `TranslateColor`obiekt z `ForeColor` wywołaniami: `BackColor` jeden przy użyciu właściwości, a drugi przy użyciu właściwości. Obiekt `CBrush` tymczasowy jest następnie używany do malowania prostokąta formantu, a `ForeColor` kolor tekstu jest ustawiany przy użyciu właściwości.
+Poniższy przykład demonstruje użycie tych dwóch właściwości koloru podczas malowania kontrolki. Inicjuje chwilową zmienną **COLORREF** i `CBrush` obiekt z wywołaniami do `TranslateColor` : jeden przy użyciu `ForeColor` właściwości, a drugi przy użyciu `BackColor` właściwości. Obiekt tymczasowy `CBrush` jest następnie używany do malowania prostokąta kontrolki, a kolor tekstu jest ustawiany przy użyciu `ForeColor` właściwości.
 
-[!code-cpp[NVC_MFC_AxUI#24](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_3.cpp)]
+[!code-cpp[NVC_MFC_AxUI#24](codesnippet/cpp/mfc-activex-controls-adding-stock-properties_3.cpp)]
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Kontrolki ActiveX MFC: właściwości](../mfc/mfc-activex-controls-properties.md)<br/>
-[Kontrolki ActiveX MFC: metody](../mfc/mfc-activex-controls-methods.md)<br/>
-[Klasa COleControl](../mfc/reference/colecontrol-class.md)
+[Kontrolki ActiveX MFC](mfc-activex-controls.md)<br/>
+[Kontrolki ActiveX MFC: właściwości](mfc-activex-controls-properties.md)<br/>
+[Kontrolki ActiveX MFC: metody](mfc-activex-controls-methods.md)<br/>
+[Klasa COleControl](reference/colecontrol-class.md)

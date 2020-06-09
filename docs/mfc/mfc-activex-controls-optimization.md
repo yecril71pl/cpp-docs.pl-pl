@@ -1,5 +1,5 @@
 ---
-title: 'Kontrolki ActiveX MFC: Optymalizacja'
+title: 'Kontrolki ActiveX MFC: optymalizacja'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], windowless
@@ -14,57 +14,57 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], active/inactive state
 - optimizing performance, ActiveX controls
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
-ms.openlocfilehash: 08cbb5ab0ff9b8c165e549bc2b250daebc1ce177
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4e12889ca1bb5f4bb423a1f1ede1c396f8d60b5
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186895"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615402"
 ---
-# <a name="mfc-activex-controls-optimization"></a>Kontrolki ActiveX MFC: Optymalizacja
+# <a name="mfc-activex-controls-optimization"></a>Kontrolki ActiveX MFC: optymalizacja
 
-W tym artykule opisano techniki, które można użyć, aby zoptymalizować swoje kontrolek ActiveX w celu zapewnienia lepszej wydajności.
+W tym artykule opisano techniki, których można użyć w celu zoptymalizowania formantów ActiveX w celu uzyskania lepszej wydajności.
 
 >[!IMPORTANT]
-> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji na temat nowych technologii, które zastępują ActiveX zobacz [formantów ActiveX](activex-controls.md).
+> Kontrolka ActiveX to Starsza technologia, która nie powinna być używana do nowych celów programistycznych. Aby uzyskać więcej informacji na temat nowoczesnych technologii, które zastępują ActiveX, zobacz [kontrolki ActiveX](activex-controls.md).
 
-Tematy [włączenie wyłączanie opcji aktywacji w przypadku widoczne](../mfc/turning-off-the-activate-when-visible-option.md) i [dostarczanie myszy interakcji podczas nieaktywne](../mfc/providing-mouse-interaction-while-inactive.md) omówienia formantów, które nie należy tworzyć okna do momentu aktywowania. Temat [zapewnianie aktywacji niepowiązanej z oknami](../mfc/providing-windowless-activation.md) w tym artykule omówiono formantów, które nigdy nie twórz oknie, nawet wtedy, gdy są one aktywowane.
+W tych tematach można [wyłączyć opcję Uaktywnij, gdy widoczna](turning-off-the-activate-when-visible-option.md) i [zapewnić interakcję z myszą podczas nieaktywnej](providing-mouse-interaction-while-inactive.md) kontroli dyskusji, która nie tworzy okna do momentu aktywowania. W temacie [zapewniającym bezokienkową aktywację](providing-windowless-activation.md) omówiono kontrolki, które nigdy nie tworzą okna nawet po aktywowaniu.
 
-Windows ma dwie główne wady dla obiektów OLE: one uniemożliwić obiekty obszarów przezroczystych lub nieprostokątne, gdy jest ona aktywna i dodać duże obciążenie podczas tworzenia wystąpienia i wyświetlania kontrolki. Trwa tworzenie okna zazwyczaj, 60% w czasie tworzenia kontrolki. Za pomocą jednego okna udostępnionego (zazwyczaj kontenera) i wysyłający kodu kontrolki odbiera tych samych usług okna zazwyczaj bez utraty wydajności. Okno to przede wszystkim niepotrzebne koszty dla obiektu.
+System Windows ma dwa główne wady obiektów OLE: uniemożliwiają one przezroczyste lub nieprostokątne, gdy aktywne, i dodają duże obciążenie do tworzenia wystąpień i wyświetlania kontrolek. Zwykle tworzenie okna trwa 60% czasu utworzenia kontrolki. Za pomocą jednego udostępnionego okna (zazwyczaj kontenera) i pewnego kodu, formant otrzymuje te same usługi okna, zazwyczaj bez utraty wydajności. Posiadanie okna jest w większości niepotrzebnych nakładów dla obiektu.
 
-Niektóre optymalizacje nie zawsze poprawić wydajność, gdy formant jest używany w określonych kontenerach. Na przykład kontenery wydanego przed 1996 roku nie obsługiwał aktywacji niepowiązanej z oknami, więc wdrażanie tej funkcji, nie będą umożliwiać korzyści w kontenerach starsze. Jednak prawie w każdym kontenerze obsługuje trwałość, dzięki czemu Optymalizacja kodu trwałości kontroli nad prawdopodobnie zwiększenia wydajności w dowolnym kontenerze. Jeśli formant jest przeznaczony specjalnie do użycia z jednego określonego typu kontenera, warto zbadać które z tych optymalizacjach jest obsługiwana przez tego kontenera. Ogólnie rzecz biorąc należy jednak zaimplementować wiele z tych metod, ponieważ mają zastosowanie do określonego formantu do upewnij się, że formant wykonuje oraz jego prawdopodobnie mogą w szerokiej gamy kontenerów.
+Niektóre optymalizacje nie muszą zwiększyć wydajności, gdy kontrolka jest używana w niektórych kontenerach. Na przykład kontenery wydane przed 1996 nie obsługują aktywacji bez okien, więc wdrożenie tej funkcji nie będzie miało zalet w starszych kontenerach. Natomiast niemal każdy kontener obsługuje trwałość, dlatego Optymalizacja kodu trwałości kontrolki prawdopodobnie poprawi swoją wydajność w dowolnym kontenerze. Jeśli formant jest przeznaczony głównie do użycia z jednym określonym typem kontenera, warto zbadać, które z tych optymalizacji są obsługiwane przez ten kontener. Ogólnie rzecz biorąc, należy podjąć próbę wdrożenia jak wiele z tych technik, które mają zastosowanie do danej kontrolki, aby upewnić się, że kontrolka wykonuje, a także może być w szerokim zakresie tablicy kontenerów.
 
-Możesz zaimplementować wiele z tych optymalizacji za pośrednictwem [Kreator kontrolek ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md)na [ustawienia kontroli](../mfc/reference/control-settings-mfc-activex-control-wizard.md) strony.
+Wiele z tych optymalizacji można zaimplementować za pomocą [Kreatora kontrolek ActiveX MFC](reference/mfc-activex-control-wizard.md)na stronie [Ustawienia kontrolek](reference/control-settings-mfc-activex-control-wizard.md) .
 
-### <a name="mfc-activex-control-wizard-ole-optimization-options"></a>Opcje optymalizacji OLE Kreator kontrolek ActiveX MFC
+### <a name="mfc-activex-control-wizard-ole-optimization-options"></a>Opcje optymalizacji OLE w Kreatorze formantów ActiveX MFC
 
-|Ustawienia formantu w Kreator kontrolek ActiveX MFC|Akcja|Więcej informacji|
+|Ustawienie kontrolki w Kreatorze kontrolek ActiveX MFC|Akcja|Więcej informacji|
 |-------------------------------------------------------|------------|----------------------|
-|**Uaktywnij, gdy jest to widoczne** pola wyboru|Clear|[Wyłączanie aktywacji, gdy opcji widoczności](../mfc/turning-off-the-activate-when-visible-option.md)|
-|**Aktywacji niepowiązanej z oknami** pola wyboru|Wybierz|[Zapewnianie aktywacji niepowiązanej z oknami](../mfc/providing-windowless-activation.md)|
-|**Nieobcinanego kontekstu urządzenia** pola wyboru|Wybierz|[Używanie nieobcinanego kontekstu urządzenia](../mfc/using-an-unclipped-device-context.md)|
-|**Migotania aktywacji** pola wyboru|Wybierz|[Zapewnianie aktywacji pozbawionej migotania](../mfc/providing-flicker-free-activation.md)|
-|**Powiadomienia wskaźnika, gdy nieaktywna myszy** pola wyboru|Wybierz|[Zapewnianie interakcji z myszą przy braku aktywności](../mfc/providing-mouse-interaction-while-inactive.md)|
-|**Zoptymalizowane pod kątem kodu rysowania** pola wyboru|Wybierz|[Optymalizacja rysowania kontrolek](../mfc/optimizing-control-drawing.md)|
+|**Aktywuj, gdy** pole wyboru jest widoczne|Clear|[Wyłączanie opcji Aktywuj, gdy widoczna](turning-off-the-activate-when-visible-option.md)|
+|Pole wyboru **Aktywacja bez okien**|Wybierz pozycję|[Zapewnianie aktywacji niepowiązanej z oknami](providing-windowless-activation.md)|
+|Pole wyboru **odciętego kontekstu urządzenia**|Wybierz pozycję|[Używanie nieobcinanego kontekstu urządzenia](using-an-unclipped-device-context.md)|
+|Pole wyboru **Aktywacja bez migotania**|Wybierz pozycję|[Zapewnianie aktywacji pozbawionej migotania](providing-flicker-free-activation.md)|
+|**Powiadomienia wskaźnika myszy, gdy pole wyboru nieaktywne**|Wybierz pozycję|[Zapewnianie interakcji z myszą przy braku aktywności](providing-mouse-interaction-while-inactive.md)|
+|Pole wyboru **zoptymalizowanego kodu rysowania**|Wybierz pozycję|[Optymalizacja rysowania kontrolek](optimizing-control-drawing.md)|
 
-Aby uzyskać szczegółowe informacje dotyczące funkcji elementów członkowskich, które implementują te optymalizacje, zobacz [COleControl](../mfc/reference/colecontrol-class.md).
+Aby uzyskać szczegółowe informacje na temat funkcji Członkowskich implementujących te optymalizacje, zobacz [COleControl](reference/colecontrol-class.md).
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Optymalizacja stanu trwałego i inicjalizacji](../mfc/optimizing-persistence-and-initialization.md)
+- [Optymalizacja stanu trwałego i inicjalizacji](optimizing-persistence-and-initialization.md)
 
-- [Zapewnianie aktywacji niepowiązanej z oknami](../mfc/providing-windowless-activation.md)
+- [Zapewnianie aktywacji niepowiązanej z oknami](providing-windowless-activation.md)
 
-- [Wyłączanie aktywacji, gdy opcji widoczności](../mfc/turning-off-the-activate-when-visible-option.md)
+- [Wyłączanie opcji Aktywuj, gdy widoczna](turning-off-the-activate-when-visible-option.md)
 
-- [Zapewnianie interakcji z myszą przy braku aktywności](../mfc/providing-mouse-interaction-while-inactive.md)
+- [Zapewnianie interakcji z myszą przy braku aktywności](providing-mouse-interaction-while-inactive.md)
 
-- [Zapewnianie aktywacji pozbawionej migotania](../mfc/providing-flicker-free-activation.md)
+- [Zapewnianie aktywacji pozbawionej migotania](providing-flicker-free-activation.md)
 
-- [Używanie nieobcinanego kontekstu urządzenia](../mfc/using-an-unclipped-device-context.md)
+- [Używanie nieobcinanego kontekstu urządzenia](using-an-unclipped-device-context.md)
 
-- [Optymalizacja rysowania kontrolek](../mfc/optimizing-control-drawing.md)
+- [Optymalizacja rysowania kontrolek](optimizing-control-drawing.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
+[Kontrolki ActiveX MFC](mfc-activex-controls.md)

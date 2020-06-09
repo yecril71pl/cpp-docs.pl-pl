@@ -1,21 +1,21 @@
 ---
-title: Dostosowywanie wyglądu elementu&#39;nagłówka
+title: Dostosowywanie wyglądu elementu nagłówka&#39;s
 ms.date: 11/04/2016
 helpviewer_keywords:
 - header controls [MFC], customization of items
 - CHeaderCtrl class [MFC], customizing the items
 - HDS_ styles
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
-ms.openlocfilehash: 6ce676695d717fcc5d418fe4ed5df91b4f9bca95
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8bf1bdad6a0408746b50b6b0dcbecbce308f5ede
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508718"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617089"
 ---
-# <a name="customizing-the-header-item39s-appearance"></a>Dostosowywanie wyglądu elementu&#39;nagłówka
+# <a name="customizing-the-header-item39s-appearance"></a>Dostosowywanie wyglądu elementu nagłówka&#39;s
 
-Ustawiając parametr *dwStyle* podczas pierwszego tworzenia kontrolki nagłówka ([CHeaderCtrl:: Create](../mfc/reference/cheaderctrl-class.md#create)), można zdefiniować wygląd i zachowanie elementów nagłówka lub samego formantu nagłówka.
+Ustawiając parametr *dwStyle* podczas pierwszego tworzenia kontrolki nagłówka ([CHeaderCtrl:: Create](reference/cheaderctrl-class.md#create)), można zdefiniować wygląd i zachowanie elementów nagłówka lub samego formantu nagłówka.
 
 Poniżej znajduje się próbkowanie stylów, które można ustawić, i ich przeznaczenie:
 
@@ -29,11 +29,11 @@ Poniżej znajduje się próbkowanie stylów, które można ustawić, i ich przez
 
 - Aby wskazać, że formant nagłówka powinien być ukryty, użyj stylu **HDS_HIDDEN** .
 
-   Styl **HDS_HIDDEN** wskazuje, że formant nagłówka jest przeznaczony do użycia jako kontener danych, a nie do kontrolki wizualnej. Ten styl nie ukrywa automatycznie formantu, ale zamiast tego wpływa na zachowanie `CHeaderCtrl::Layout`. Wartość zwrócona przez element członkowski `WINDOWPOS` cy struktury będzie równa zero, co oznacza, że formant nie powinien być widoczny dla użytkownika.
+   Styl **HDS_HIDDEN** wskazuje, że formant nagłówka jest przeznaczony do użycia jako kontener danych, a nie do kontrolki wizualnej. Ten styl nie ukrywa automatycznie formantu, ale zamiast tego wpływa na zachowanie `CHeaderCtrl::Layout` . Wartość zwrócona przez element członkowski *cy* `WINDOWPOS` struktury będzie równa zero, co oznacza, że formant nie powinien być widoczny dla użytkownika.
 
-Aby uzyskać więcej informacji o tych właściwościach, zobacz [elementy](/windows/win32/Controls/header-controls) w Windows SDK. Aby uzyskać informacje o dodawaniu elementów do kontrolki nagłówka, zobacz [Dodawanie elementów do formantu nagłówka](../mfc/adding-items-to-the-header-control.md).
+Aby uzyskać więcej informacji o tych właściwościach, zobacz [elementy](/windows/win32/Controls/header-controls) w Windows SDK. Aby uzyskać informacje o dodawaniu elementów do kontrolki nagłówka, zobacz [Dodawanie elementów do formantu nagłówka](adding-items-to-the-header-control.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Korzystanie z CHeaderCtrl](using-cheaderctrl.md)<br/>
+[Formanty](controls-mfc.md)
