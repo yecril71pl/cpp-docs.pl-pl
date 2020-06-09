@@ -4,48 +4,48 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 29ff985d-9bf5-4678-b62d-aad12def75fb
-ms.openlocfilehash: 354ec1678747be57d387673f2611d526df8dfb47
-ms.sourcegitcommit: 0ad35b26e405bbde17dc0bd0141e72f78f0a38fb
+ms.openlocfilehash: 17cb7318e667fe4e16416d51e7e7fba02553cfe6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194735"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621013"
 ---
 # <a name="optimizing-control-drawing"></a>Optymalizacja rysowania formantów
 
-Gdy formant jest zobowiązany do rysowania się do kontekstu urządzenia dostarczonych kontenerów, zwykle wybiera obiekty GDI (na przykład pióra, pędzli i czcionki) do kontekstu urządzenia, przeprowadza jego operacji rysowania i przywraca poprzednie obiekty GDI. Jeśli kontener ma wiele formantów, które mają być tworzone w tym samym kontekście urządzenia i każdej kontrolki wybiera obiekty GDI, który wymaga, można zapisać czasu, jeśli kontrolki nie należy przywracać indywidualnie wcześniej wybrane obiekty. Po rysowania wszystkie kontrolki kontenera automatycznie można przywrócić oryginalnych obiektów.
+Gdy kontrolka zostanie narysowana w kontekście urządzenia dostarczonego przez kontener, zwykle wybiera obiekty GDI (takie jak pióra, pędzle i czcionki) do kontekstu urządzenia, wykonuje operacje rysowania i przywraca poprzednie obiekty GDI. Jeśli kontener ma wiele kontrolek, które mają być narysowane w tym samym kontekście urządzenia, a każda kontrolka wybierze wymagane obiekty GDI, można zapisać czas, jeśli kontrolki nie odnoszą indywidualnie wszystkich wybranych obiektów. Po narysowaniu wszystkich kontrolek kontener może automatycznie przywrócić oryginalne obiekty.
 
-Aby wykryć, czy kontener obsługuje tej techniki, można wywołać kontrolki [COleControl::IsOptimizedDraw](../mfc/reference/colecontrol-class.md#isoptimizeddraw) funkcja elementu członkowskiego. Jeśli ta funkcja zwróci **TRUE**, formant pominąć krok normalne przywracania wcześniej wybrane obiekty.
+Aby wykryć, czy kontener obsługuje tę technikę, formant może wywołać funkcję członkowską [COleControl:: IsOptimizedDraw](reference/colecontrol-class.md#isoptimizeddraw) . Jeśli ta funkcja zwraca **wartość true**, formant może pominąć normalny krok przywracania wcześniej wybranych obiektów.
 
-Należy wziąć pod uwagę formant, który ma (niezoptymalizowane) `OnDraw` funkcji:
+Rozważmy kontrolkę, która ma następującą funkcję (niezoptymalizowaną) `OnDraw` :
 
-[!code-cpp[NVC_MFC_AxOpt#15](../mfc/codesnippet/cpp/optimizing-control-drawing_1.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#15](codesnippet/cpp/optimizing-control-drawing_1.cpp)]
 
-Pióro i pędzla, w tym przykładzie są zmiennych lokalnych, co oznacza, destruktory zostanie wywołana, gdy wykraczają poza zakres (gdy `OnDraw` funkcja kończy się). Destruktory podejmie próbę usunięcia odpowiednie obiekty GDI. Ale one nie powinny być usuwane Jeśli planujesz opuścić je zaznaczone w kontekście urządzenia po powrocie z `OnDraw`.
+Pióro i pędzel w tym przykładzie są zmiennymi lokalnymi, co oznacza, że ich destruktory będą wywoływane, gdy wykraczają poza zakres (gdy `OnDraw` Funkcja zostanie zakończona). Destruktory spróbują usunąć odpowiednie obiekty GDI. Ale nie należy ich usuwać, jeśli planujesz pozostawić je wybrane do kontekstu urządzenia podczas powrotu z `OnDraw` .
 
-Aby zapobiec [CPen](../mfc/reference/cpen-class.md) i [CBrush](../mfc/reference/cbrush-class.md) obiekty są niszczone, gdy `OnDraw` zostanie zakończone, przechowywać je w zmiennych elementu członkowskiego zamiast zmiennych lokalnych. W deklaracji klasy formantu Dodaj deklaracje dwóch nowych zmiennych elementu członkowskiego:
+Aby zapobiec zniszczeniu obiektów [CPen](reference/cpen-class.md) i [CBrush](reference/cbrush-class.md) po `OnDraw` zakończeniu, Zapisz je w zmiennych składowych zamiast zmiennych lokalnych. W deklaracji klasy kontrolki Dodaj deklaracje dla dwóch nowych zmiennych składowych:
 
-[!code-cpp[NVC_MFC_AxOpt#16](../mfc/codesnippet/cpp/optimizing-control-drawing_2.h)]
-[!code-cpp[NVC_MFC_AxOpt#17](../mfc/codesnippet/cpp/optimizing-control-drawing_3.h)]
+[!code-cpp[NVC_MFC_AxOpt#16](codesnippet/cpp/optimizing-control-drawing_2.h)]
+[!code-cpp[NVC_MFC_AxOpt#17](codesnippet/cpp/optimizing-control-drawing_3.h)]
 
-Następnie `OnDraw` funkcja może zostać przepisane, w następujący sposób:
+Następnie `OnDraw` funkcję można napisać ponownie w następujący sposób:
 
-[!code-cpp[NVC_MFC_AxOpt#18](../mfc/codesnippet/cpp/optimizing-control-drawing_4.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#18](codesnippet/cpp/optimizing-control-drawing_4.cpp)]
 
-W tym podejściu unika pióra i pędzla co godzina utworzenia `OnDraw` jest wywoływana. Poprawa prędkości pochodzi kosztem obsługi danych dodatkowego wystąpienia.
+To podejście pozwala uniknąć tworzenia pióra i pędzla za każdym razem, gdy `OnDraw` jest wywoływana. Przyspieszenie zwiększa się w kosztach utrzymania dodatkowych danych wystąpienia.
 
-Zmiana właściwości ForeColor lub BackColor pióra lub pędzla należy utworzyć ponownie. Aby to zrobić, należy zastąpić [OnForeColorChanged](../mfc/reference/colecontrol-class.md#onforecolorchanged) i [OnBackColorChanged](../mfc/reference/colecontrol-class.md#onbackcolorchanged) elementów członkowskich:
+Jeśli właściwość ForeColor lub BackColor zostanie zmieniona, należy ponownie utworzyć pióro lub pędzel. Aby to zrobić, Zastąp funkcje składowe [OnForeColorChanged](reference/colecontrol-class.md#onforecolorchanged) i [OnBackColorChanged](reference/colecontrol-class.md#onbackcolorchanged) :
 
-[!code-cpp[NVC_MFC_AxOpt#19](../mfc/codesnippet/cpp/optimizing-control-drawing_5.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#19](codesnippet/cpp/optimizing-control-drawing_5.cpp)]
 
-Na koniec wyeliminowanie niepotrzebnych `SelectObject` wywołań, zmodyfikuj `OnDraw` w następujący sposób:
+Na koniec aby wyeliminować niepotrzebne `SelectObject` wywołania, należy zmodyfikować `OnDraw` w następujący sposób:
 
-[!code-cpp[NVC_MFC_AxOpt#20](../mfc/codesnippet/cpp/optimizing-control-drawing_6.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#20](codesnippet/cpp/optimizing-control-drawing_6.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Kontrolki ActiveX MFC: optymalizacja](../mfc/mfc-activex-controls-optimization.md)<br/>
-[Klasa COleControl](../mfc/reference/colecontrol-class.md)<br/>
-[Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Kreator kontrolek ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md)<br/>
-[Kontrolki ActiveX MFC: debugowanie kontrolki ActiveX](../mfc/mfc-activex-controls-painting-an-activex-control.md)
+[Kontrolki ActiveX MFC: optymalizacja](mfc-activex-controls-optimization.md)<br/>
+[Klasa COleControl](reference/colecontrol-class.md)<br/>
+[Kontrolki ActiveX MFC](mfc-activex-controls.md)<br/>
+[Kreator kontrolek ActiveX MFC](reference/mfc-activex-control-wizard.md)<br/>
+[Kontrolki ActiveX MFC: malowanie kontrolki ActiveX](mfc-activex-controls-painting-an-activex-control.md)

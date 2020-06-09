@@ -5,33 +5,33 @@ helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: 30ee549a334a684deeb4a845f2fc49ee8bbe11db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd1254a31491e713513f0db0d4cf87baddd9bb23
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240590"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618615"
 ---
 # <a name="handling-the-apply-button"></a>Obsługa przycisku Zastosuj
 
-Arkusze właściwości mają pola standardowe okno dialogowe nie obsługują funkcji: Umożliwiają one użytkownika zastosować zmiany wprowadzone przed zamknięciem arkusza właściwości. Odbywa się przy użyciu przycisku Zastosuj. W tym artykule omówiono metody, których można użyć, aby prawidłowo zaimplementować tę funkcję.
+Arkusze właściwości mają możliwość, że standardowe okna dialogowe nie są: umożliwiają użytkownikowi zastosowanie zmian wprowadzonych przed zamknięciem arkusza właściwości. W tym celu należy użyć przycisku Zastosuj. W tym artykule omówiono metody, których można użyć w celu poprawnego zaimplementowania tej funkcji.
 
-Modalne okna dialogowe zwykle dotyczą ustawienia obiektu zewnętrznego, gdy użytkownik kliknie przycisk OK, aby zamknąć okno dialogowe. Dotyczy to także dla arkusza właściwości: Gdy użytkownik kliknie przycisk OK, nowe ustawienia w arkuszu właściwości zaczęły obowiązywać.
+Modalne okna dialogowe zwykle stosują ustawienia do obiektu zewnętrznego, gdy użytkownik kliknie przycisk OK, aby zamknąć okno dialogowe. Ta sama wartość dotyczy arkusza właściwości: gdy użytkownik kliknie przycisk OK, nowe ustawienia w arkuszu właściwości zostaną zastosowane.
 
-Jednak można zezwolić użytkownikowi, który można zapisać ustawień bez konieczności zamknąć okno dialogowe arkusza właściwości. To jest funkcja przycisku Zastosuj. Przycisk Zastosuj stosuje bieżące ustawienia we wszystkich stron właściwości do obiektu zewnętrznego w przeciwieństwie do stosowania tylko bieżące ustawienia aktualnie aktywnej strony.
+Można jednak zezwolić użytkownikowi na zapisywanie ustawień bez konieczności zamykania okna dialogowego arkusza właściwości. Jest to funkcja przycisku Zastosuj. Przycisk Zastosuj stosuje bieżące ustawienia we wszystkich stronach właściwości do obiektu zewnętrznego, w przeciwieństwie do zastosowania tylko bieżących ustawień aktualnie aktywnej strony.
 
-Domyślnie jest zawsze wyłączona przycisku Zastosuj. Należy napisać kod, aby włączyć przycisk Zastosuj w odpowiednim czasie, a następnie należy napisać kod, aby zaimplementować efekt Zastosuj, co zostało opisane poniżej.
+Domyślnie przycisk Zastosuj jest zawsze wyłączony. Musisz napisać kod, aby włączyć przycisk Zastosuj w odpowiednim czasie, i musisz napisać kod, aby zaimplementować efekt zastosowania, jak wyjaśniono poniżej.
 
-Jeśli użytkownik nie chce oferują funkcje Zastosuj do użytkownika, nie jest potrzebne do usunięcia przycisku Zastosuj. Możesz pozostawić ją wyłączoną, ponieważ będą wspólne dla aplikacji, które używają standardowych właściwości arkusza pomocy technicznej dostępne w kolejnych wersjach systemu Windows.
+Jeśli nie chcesz oferować funkcji Zastosuj użytkownikowi, nie musisz usuwać przycisku Zastosuj. Można pozostawić ją wyłączoną, ponieważ będzie ona wspólna dla aplikacji, które używają standardowej obsługi arkusza właściwości dostępnych w przyszłych wersjach systemu Windows.
 
-Na stronie jako zmodyfikowane raportu i włączyć przycisk Zastosuj, należy wywołać `CPropertyPage::SetModified( TRUE )`. Ewentualnej stron raportu jest modyfikowany, przycisk Zastosuj pozostanie włączony, niezależnie od tego, czy aktualnie aktywnej strony została zmodyfikowana.
+Aby zgłosić stronę jako modyfikowaną i włączyć przycisk Zastosuj, wywołaj polecenie `CPropertyPage::SetModified( TRUE )` . Jeśli dowolna ze stron raportu zostanie zmodyfikowana, przycisk Zastosuj pozostanie włączony, bez względu na to, czy aktualnie aktywna strona została zmodyfikowana.
 
-Należy wywołać [CPropertyPage::SetModified](../mfc/reference/cpropertypage-class.md#setmodified) zawsze, gdy użytkownik zmienia wszelkie ustawienia na stronie. Jednym ze sposobów, aby wykryć, gdy użytkownik zmieni ustawienie na stronie jest do zaimplementowania programy obsługi powiadomień dotyczących zmian dla każdej kontrolki na stronie właściwości, takie jak **EN_CHANGE** lub **BN_CLICKED**.
+Należy wywołać [CPropertyPage:: SetModified](reference/cpropertypage-class.md#setmodified) za każdym razem, gdy użytkownik zmieni wszystkie ustawienia na stronie. Jednym ze sposobów na wykrycie zmiany ustawienia na stronie jest zaimplementowanie programów obsługi powiadomień o zmianach dla każdej kontrolki na stronie właściwości, takiej jak **EN_CHANGE** lub **BN_CLICKED**.
 
-Aby zaimplementować efekt przycisk Zastosuj, arkusz właściwości musisz poinformować jego właściciela lub innych zewnętrznych obiektów w aplikacji, aby zastosować bieżące ustawienia na stronach właściwości. W tym samym czasie arkusza właściwości należy wyłączyć przycisk Zastosuj, wywołując `CPropertyPage::SetModified( FALSE )` dla wszystkich stron, które stosowane ich modyfikacji obiektu zewnętrznego.
+Aby zaimplementować efekt przycisku Zastosuj, arkusz właściwości musi poinformować jego właściciela lub inny obiekt zewnętrzny w aplikacji, aby zastosować bieżące ustawienia na stronach właściwości. W tym samym czasie arkusz właściwości powinien wyłączyć przycisk Zastosuj, wywołując `CPropertyPage::SetModified( FALSE )` dla wszystkich stron, które stosowały modyfikacje do obiektu zewnętrznego.
 
-Na przykład ten proces Zobacz próbki MFC-ogólne [PROPDLG](../overview/visual-cpp-samples.md).
+Aby zapoznać się z przykładem tego procesu, zobacz Ogólne przykładowe [PROPDLG](../overview/visual-cpp-samples.md)MFC.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Arkusze właściwości](../mfc/property-sheets-mfc.md)
+[Arkusze właściwości](property-sheets-mfc.md)

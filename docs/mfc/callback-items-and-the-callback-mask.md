@@ -5,18 +5,18 @@ helpviewer_keywords:
 - callback items in CListCtrl class [MFC]
 - CListCtrl class [MFC], callback item and callback mask
 ms.assetid: 67c1f76f-6144-453e-9376-6712f89430ae
-ms.openlocfilehash: 5c326d8498ea297936254a8650f666103ea3c772
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1c46f6edb44e4898c0245209ca837cd0eb716304
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509138"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624972"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>Elementy wywołania zwrotnego i maska wywołania zwrotnego
 
 Dla każdego elementu, kontrolka widoku listy zazwyczaj przechowuje tekst etykiety, indeks listy obrazów ikon elementu oraz zestaw flag bitowych dla stanu elementu. Można definiować poszczególne elementy jako elementy wywołania zwrotnego, które są przydatne, jeśli aplikacja przechowuje już niektóre informacje dla elementu.
 
-Element można zdefiniować jako element `pszText` wywołania zwrotnego, określając odpowiednie wartości dla i `iImage` elementów członkowskich `LVITEM` struktury (zobacz [CListCtrl:: GetItem](../mfc/reference/clistctrl-class.md#getitem)). Jeśli aplikacja zachowuje tekst elementu lub podelementu, określ wartość **LPSTR_TEXTCALLBACK** dla `pszText` elementu członkowskiego. Jeśli aplikacja śledzi ikonę elementu, określ wartość `iImage` **I_IMAGECALLBACK** elementu członkowskiego.
+Element można zdefiniować jako element wywołania zwrotnego, określając odpowiednie wartości dla `pszText` i `iImage` elementów członkowskich `LVITEM` struktury (zobacz [CListCtrl:: GetItem](reference/clistctrl-class.md#getitem)). Jeśli aplikacja zachowuje tekst elementu lub podelementu, określ **LPSTR_TEXTCALLBACK** wartość `pszText` elementu członkowskiego. Jeśli aplikacja śledzi ikonę elementu, określ **I_IMAGECALLBACK** wartość `iImage` elementu członkowskiego.
 
 Oprócz definiowania elementów wywołania zwrotnego można także zmodyfikować maskę wywołania zwrotnego kontrolki. Ta maska jest zestawem flag bitowych, które określają Stany elementów, dla których aplikacja, a nie kontrolka, przechowuje bieżące dane. Maska wywołania zwrotnego ma zastosowanie do wszystkich elementów kontrolki, w przeciwieństwie do oznaczenia elementu wywołania zwrotnego, który ma zastosowanie do określonego elementu. Domyślnie Maska wywołania zwrotnego jest równa zero, co oznacza, że kontrolka śledzi wszystkie Stany elementów. Aby zmienić to zachowanie domyślne, zainicjuj maskę do dowolnej kombinacji następujących wartości:
 
@@ -32,9 +32,9 @@ Oprócz definiowania elementów wywołania zwrotnego można także zmodyfikować
 
 - **LVIS_STATEIMAGEMASK** Aplikacja przechowuje indeks listy obrazów bieżącego stanu dla każdego elementu.
 
-Aby uzyskać więcej informacji na temat pobierania i ustawiania tej maski, zobacz [CListCtrl:: GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask) i [CListCtrl:: SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask).
+Aby uzyskać więcej informacji na temat pobierania i ustawiania tej maski, zobacz [CListCtrl:: GetCallbackMask](reference/clistctrl-class.md#getcallbackmask) i [CListCtrl:: SetCallbackMask](reference/clistctrl-class.md#setcallbackmask).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Korzystanie z CListCtrl](../mfc/using-clistctrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Korzystanie z CListCtrl](using-clistctrl.md)<br/>
+[Formanty](controls-mfc.md)

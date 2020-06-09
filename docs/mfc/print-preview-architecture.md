@@ -8,56 +8,56 @@ helpviewer_keywords:
 - printing [MFC], print preview
 - print preview [MFC], modifications to MFC
 ms.assetid: 0efc87e6-ff8d-43c5-9d72-9b729a169115
-ms.openlocfilehash: 5943edc22cd48ed10d152f72624467ff87104b96
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1956313d4e904255ba59e79690fe3d7144669a29
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375944"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623937"
 ---
 # <a name="print-preview-architecture"></a>Architektura podglądu wydruku
 
-W tym artykule wyjaśniono, jak struktura MFC implementuje funkcje podglądu wydruku. Omawiane tematy to m.in.:
+W tym artykule wyjaśniono, jak platforma MFC implementuje funkcję podglądu wydruku. Omawiane tematy to m.in.:
 
 - [Proces podglądu wydruku](#_core_the_print_preview_process)
 
 - [Modyfikowanie podglądu wydruku](#_core_modifying_print_preview)
 
-Podgląd wydruku różni się nieco od wyświetlania ekranu i drukowania, ponieważ zamiast bezpośrednio rysować obraz na urządzeniu, aplikacja musi symulować drukarkę za pomocą ekranu. Aby to uwzględnić, biblioteka klas Programu Microsoft Foundation definiuje specjalną (nieudokumentowaną) klasę pochodzącą z [klasy CDC](../mfc/reference/cdc-class.md), o nazwie `CPreviewDC`. Wszystkie `CDC` obiekty zawierają dwa konteksty urządzenia, ale zazwyczaj są identyczne. W `CPreviewDC` obiekcie są one różne: pierwszy reprezentuje symulowaną drukarkę, a drugi reprezentuje ekran, na którym faktycznie jest wyświetlany wynik.
+Podgląd wydruku jest nieco różny od wyświetlania ekranu i drukowania, ponieważ zamiast bezpośredniego rysowania obrazu na urządzeniu aplikacja musi symulować drukarkę przy użyciu ekranu. Aby to umożliwić, biblioteka MFC definiuje specjalną (nieudokumentowaną) klasę pochodną [klasy przechwytywania](reference/cdc-class.md)o nazwie `CPreviewDC` . Wszystkie `CDC` obiekty zawierają dwa konteksty urządzenia, ale zazwyczaj są identyczne. W `CPreviewDC` obiekcie są różne: pierwszy reprezentuje symulowaną drukarkę, a drugi reprezentuje ekran, na którym są wyświetlane dane wyjściowe.
 
 ## <a name="the-print-preview-process"></a><a name="_core_the_print_preview_process"></a>Proces podglądu wydruku
 
-Gdy użytkownik wybierze polecenie Podgląd wydruku z menu `CPreviewDC` **Plik,** struktura tworzy obiekt. Za każdym razem, gdy aplikacja wykonuje operację, która ustawia charakterystykę kontekstu urządzenia drukarki, struktura wykonuje również podobną operację w kontekście urządzenia ekranu. Jeśli na przykład aplikacja wybierze czcionkę do drukowania, w ramach zostanie wybrana czcionka do wyświetlania na ekranie, która symuluje czcionkę drukarki. Za każdym razem, gdy aplikacja będzie wysyłać dane wyjściowe do drukarki, struktura zamiast wysyła dane wyjściowe na ekranie.
+Gdy użytkownik wybierze polecenie Drukuj podgląd z menu **plik** , struktura utworzy `CPreviewDC` obiekt. Za każdym razem, gdy aplikacja wykonuje operację, która ustawia charakterystykę kontekstu urządzenia drukarki, struktura wykonuje także podobną operację w kontekście urządzenia ekranu. Na przykład jeśli aplikacja wybierze czcionkę do drukowania, struktura wybiera czcionkę na potrzeby wyświetlania ekranu, która symuluje czcionkę drukarki. Za każdym razem, gdy aplikacja wyśle dane wyjściowe do drukarki, struktura wysyła dane wyjściowe do ekranu.
 
-Podgląd wydruku różni się również od drukowania w kolejności, w. Podczas drukowania struktura kontynuuje pętlę drukowania, dopóki nie zostanie renderowany określony zakres stron. Podczas podglądu wydruku jedna lub dwie strony są wyświetlane w dowolnym momencie, a następnie aplikacja czeka; nie są wyświetlane żadne dalsze strony, dopóki użytkownik nie odpowie. Podczas podglądu wydruku aplikacja musi również odpowiadać na WM_PAINT wiadomości, tak jak podczas zwykłego wyświetlania ekranu.
+Podgląd wydruku różni się także od drukowania w kolejności, w której każda rysuje strony dokumentu. Podczas drukowania środowisko kontynuuje pętlę drukowania do momentu renderowania określonego zakresu stron. W podglądzie wydruku w dowolnym momencie jest wyświetlana jedna lub dwie strony, a następnie aplikacja czeka; żadne dalsze strony nie są wyświetlane, dopóki użytkownik nie odpowie. W podglądzie wydruku aplikacja musi również odpowiadać na WM_PAINT komunikatów, tak jak podczas normalnego wyświetlania ekranu.
 
-[Funkcja CView::OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) jest wywoływana podczas wywoływania trybu podglądu, tak jak na początku zadania drukowania. [Struktura CPrintInfo](../mfc/reference/cprintinfo-structure.md) przeniesiona do funkcji zawiera kilka elementów członkowskich, których wartości można ustawić, aby dostosować niektóre cechy operacji podglądu wydruku. Na przykład można ustawić *m_nNumPreviewPages* element członkowski, aby określić, czy chcesz wyświetlić podgląd dokumentu w trybie jednostronicowym czy dwustronicowym.
+Funkcja [CView:: OnPreparePrinting](reference/cview-class.md#onprepareprinting) jest wywoływana w przypadku wywołania trybu podglądu, podobnie jak na początku zadania drukowania. Struktura [struktury CPrintInfo](reference/cprintinfo-structure.md) przeniesiona do funkcji zawiera kilka elementów członkowskich, których wartości można ustawić w celu dostosowania określonych cech operacji podglądu wydruku. Na przykład można ustawić składową *m_nNumPreviewPages* , aby określić, czy dokument ma być wyświetlany w trybie jednej strony, czy na dwie strony.
 
 ## <a name="modifying-print-preview"></a><a name="_core_modifying_print_preview"></a>Modyfikowanie podglądu wydruku
 
-Zachowanie i wygląd podglądu wydruku można dość łatwo zmodyfikować na wiele sposobów. Na przykład, można, między innymi:
+Możesz łatwo modyfikować zachowanie i wygląd podglądu wydruku na wiele sposobów. Można na przykład, między innymi:
 
-- W oknie podglądu wydruku pojawi się pasek przewijania, który ułatwia dostęp do dowolnej strony dokumentu.
+- Wyświetlenie okna podglądu wydruku w celu uzyskania łatwego dostępu do dowolnej strony dokumentu.
 
-- Przyczyna podglądu wydruku, aby utrzymać pozycję użytkownika w dokumencie, rozpoczynając jego wyświetlanie na bieżącej stronie.
+- Powoduje, że Podgląd wydruku zachowuje położenie użytkownika w dokumencie, rozpoczynając jego wyświetlanie na bieżącej stronie.
 
-- W celu podglądu i drukowania należy wykonać inną inicjalizację.
+- Należy wykonać inne inicjalizacje dla podglądu wydruku i drukowania.
 
-- Spowoduje to, że podgląd wydruku będzie wyświetlał numery stron we własnych formatach.
+- Wyświetl podgląd wydruku, aby wyświetlić numery stron we własnych formatach.
 
-Jeśli wiesz, jak długo jest `SetMaxPage` dokument i wywołać z odpowiednią wartością, ramach można użyć tych informacji w trybie podglądu, jak również podczas drukowania. Gdy struktura zna długość dokumentu, może zapewnić okno podglądu z paskiem przewijania, dzięki czemu użytkownik może przeglądać dokument w trybie podglądu. Jeśli nie ustawiono długości dokumentu, struktura nie może umieścić pole przewijania, aby wskazać bieżącą pozycję, więc struktura nie dodaje paska przewijania. W takim przypadku użytkownik musi użyć przycisków Następna strona i Poprzednia strona na pasku sterowania okna podglądu, aby przeglądać dokument.
+Jeśli wiesz, jak długo dokument jest i wywołuje `SetMaxPage` odpowiednią wartość, struktura może używać tych informacji w trybie podglądu oraz podczas drukowania. Gdy struktura zna długość dokumentu, może udostępnić okno podglądu z paskiem przewijania, umożliwiając użytkownikowi przechodzenie do tyłu i do przodu dokumentu w trybie podglądu. Jeśli nie ustawiono długości dokumentu, struktura nie może umieścić pola przewijania, aby wskazać bieżącą pozycję, więc struktura nie dodaje paska przewijania. W takim przypadku użytkownik musi użyć przycisków Następna strona i Poprzednia strona na pasku sterowania okna podglądu, aby wyświetlić stronę w dokumencie.
 
-W przypadku podglądu wydruku przydatne może okazać *m_nCurPage* się przypisanie `CPrintInfo`wartości do m_nCurPage elementu członkowskiego , nawet jeśli nigdy nie zrobisz tego w przypadku zwykłego drukowania. Podczas zwykłego drukowania ten element członkowski przenosi informacje z struktury do klasy widoku. W ten sposób struktura informuje widok, która strona powinna być drukowana.
+W przypadku wersji zapoznawczej drukowania przydatne może być przypisanie wartości do *m_nCurPage* elementu członkowskiego `CPrintInfo` , nawet mimo tego, że w przypadku zwykłego drukowania nie trzeba tego robić. Podczas zwykłego drukowania ten element członkowski przenosi informacje z struktury do klasy widoku. Jest to sposób, w jaki struktura informuje widok, która strona powinna zostać wydrukowana.
 
-Natomiast po uruchomieniu trybu podglądu wydruku *m_nCurPage* element członkowski przenosi informacje w przeciwnym kierunku: z widoku do struktury. Struktura używa wartości tego elementu członkowskiego, aby określić, która strona powinna być najpierw wyświetlona w podglądzie. Domyślną wartością tego elementu członkowskiego jest 1, więc pierwsza strona dokumentu jest wyświetlana początkowo. Można zastąpić, `OnPreparePrinting` aby ustawić ten element członkowski na numer strony wyświetlanej w momencie wywoływania polecenia Podgląd wydruku. W ten sposób aplikacja zachowuje bieżącą pozycję użytkownika podczas przechodzenia z normalnego trybu wyświetlania do trybu podglądu wydruku.
+Z drugiej strony, gdy zostanie uruchomiony tryb Podgląd wydruku, element członkowski *m_nCurPage* przenosi informacje w odwrotnym kierunku: od widoku do struktury. Struktura używa wartości tego elementu członkowskiego, aby określić, która strona powinna być wyświetlana w pierwszej kolejności. Wartość domyślna tego elementu członkowskiego to 1, więc pierwsza strona dokumentu jest wyświetlana na początku. Można przesłonić, `OnPreparePrinting` Aby ustawić dla tego elementu członkowskiego liczbę wyświetlanej strony w momencie wywołania polecenia Podgląd wydruku. W ten sposób aplikacja zachowuje bieżącą pozycję użytkownika podczas przechodzenia z trybu wyświetlania normalnego do trybu podglądu wydruku.
 
-Czasami można `OnPreparePrinting` wykonać różne inicjowanie w zależności od tego, czy jest to wywoływane dla zadania drukowania lub podglądu wydruku. Można to określić, badając *zmienną m_bPreview* elementu `CPrintInfo` członkowskiego w strukturze. Ten element członkowski jest ustawiony na **WARTOŚĆ PRAWDA** podczas wywoływania podglądu wydruku.
+Czasami możesz chcieć `OnPreparePrinting` wykonać inne inicjalizacje w zależności od tego, czy jest wywoływana dla zadania drukowania czy w podglądzie wydruku. Można to ustalić, sprawdzając zmienną elementu członkowskiego *m_bPreview* w `CPrintInfo` strukturze. Ten element członkowski ma **wartość true** , gdy zostanie wywołana wersja zapoznawcza wydruku.
 
-Struktura `CPrintInfo` zawiera również element członkowski o nazwie *m_strPageDesc*, który służy do formatowania ciągów wyświetlanych u dołu ekranu w trybie jednostronicowym i wielostronicowym. Domyślnie te ciągi są w formie "Page *n"* i "Pages *n* - *m*", ale można zmodyfikować *m_strPageDesc* od wewnątrz `OnPreparePrinting` i ustawić ciągi na coś bardziej skomplikowane. Zobacz [CPrintInfo struktury](../mfc/reference/cprintinfo-structure.md) w *odwołaniu MFC, aby* uzyskać więcej informacji.
+`CPrintInfo`Struktura zawiera również element członkowski o nazwie *m_strPageDesc*, który służy do formatowania ciągów wyświetlanych w dolnej części ekranu w trybach jednostronicowych i wielostronicowych. Domyślnie te ciągi mają postać "Strona *n*" i "strony *n*  -  *m*", ale można modyfikować *m_strPageDesc* z poziomu `OnPreparePrinting` i ustawiać ciągi na bardziej rozbudowane. Aby uzyskać więcej informacji, zobacz [CPrintInfo Structure](reference/cprintinfo-structure.md) w *dokumentacji MFC* .
 
 ## <a name="see-also"></a>Zobacz też
 
-[Drukowanie i podgląd wydruku](../mfc/printing-and-print-preview.md)<br/>
-[Drukowanie](../mfc/printing.md)<br/>
-[Klasa CView](../mfc/reference/cview-class.md)<br/>
-[Klasa CDC](../mfc/reference/cdc-class.md)
+[Drukowanie i podgląd wydruku](printing-and-print-preview.md)<br/>
+[Drukowanie](printing.md)<br/>
+[Klasa CView](reference/cview-class.md)<br/>
+[Klasa CDC](reference/cdc-class.md)

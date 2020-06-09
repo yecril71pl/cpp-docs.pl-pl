@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CWinApp class [MFC], ExitInstance
 - ExitInstance method [MFC]
 ms.assetid: 5bb597bd-8dab-4d49-8bcf-9c45aa8be4a2
-ms.openlocfilehash: c76f588b22ad8ffd1d3dae954c5113feffb62a3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58546d26293ad48a39a36b98ba4bfdabb68385ee
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405823"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622695"
 ---
 # <a name="exitinstance-member-function"></a>ExitInstance — Funkcja członkowska
 
-[ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) funkcji składowej klasy typu [CWinApp](../mfc/reference/cwinapp-class.md) jest wywoływana za każdym razem kopii aplikacji, kończy działanie, zwykle po wysłaniu przez użytkownika, zamykanie aplikacji.
+Funkcja członkowska [ExitInstance](reference/cwinapp-class.md#exitinstance) klasy [CWinApp](reference/cwinapp-class.md) jest wywoływana za każdym razem, gdy kopia aplikacji zostanie zakończona, zazwyczaj w wyniku zamknięcia aplikacji.
 
-Zastąp `ExitInstance` Jeżeli potrzebujesz specjalnej operacji czyszczenia przetwarzania, takich jak zwalnianie zasobów interface (GDI) urządzenia grafiki lub cofnięcie przydziału pamięci używanej podczas wykonywania programu. Wyczyść elementy standardowe, takich jak dokumenty i widoki, jednak znajduje się przez platformę, z innymi funkcjami możliwym do zastąpienia do wykonywania specjalnej operacji czyszczenia specyficzne dla tych obiektów.
+Zastąp `ExitInstance` , jeśli wymagane jest specjalne oczyszczanie, np. zwalnianie zasobów interfejsu urządzenia graficznego (GDI) lub cofanie alokacji pamięci używanej podczas wykonywania programu. Oczyszczanie elementów standardowych, takich jak dokumenty i widoki, jest jednak dostarczane przez platformę z innymi funkcjami zaszeregowania służącymi do wykonywania specjalnych czynności czyszczących specyficznych dla tych obiektów.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)
+[CWinApp: klasa aplikacji](cwinapp-the-application-class.md)

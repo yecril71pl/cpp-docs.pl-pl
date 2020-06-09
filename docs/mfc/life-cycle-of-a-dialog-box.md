@@ -1,5 +1,5 @@
 ---
-title: Praca z polami okna dialogowego w MFC
+title: Praca z oknami dialogowymi w MFC
 ms.date: 09/27/2019
 helpviewer_keywords:
 - dialog boxes [MFC], life cycle
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], life cycle
 - life cycle of dialog boxes [MFC]
 ms.assetid: e16fd78e-238d-4f31-8c9d-8564f3953bd9
-ms.openlocfilehash: ad15250cf9a8dd663072cf9423263260bbb40a0e
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: d365be21ef19a6779df649e9368fdc0cda4851df
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685733"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621447"
 ---
-# <a name="working-with-dialog-boxes-in-mfc"></a>Praca z polami okna dialogowego w MFC
+# <a name="working-with-dialog-boxes-in-mfc"></a>Praca z oknami dialogowymi w MFC
 
 Podczas cyklu życia okna dialogowego użytkownik wywołuje okno dialogowe, zwykle wewnątrz procedury obsługi poleceń, która tworzy i inicjuje obiekt okna dialogowego, użytkownik współdziała z oknem dialogowym, a następnie okno dialogowe zostanie zamknięte.
 
@@ -25,30 +25,30 @@ W przypadku niemodalnych okien dialogowych można często wyodrębnić dane z ob
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-- [Tworzenie i wyświetlanie okien dialogowych](../mfc/creating-and-displaying-dialog-boxes.md)
+- [Tworzenie i wyświetlanie okien dialogowych](creating-and-displaying-dialog-boxes.md)
 
-- [Tworzenie modalnych okien dialogowych](../mfc/creating-modal-dialog-boxes.md)
+- [Tworzenie modalnych okien dialogowych](creating-modal-dialog-boxes.md)
 
-- [Tworzenie niemodalnych okien dialogowych](../mfc/creating-modeless-dialog-boxes.md)
+- [Tworzenie niemodalnych okien dialogowych](creating-modeless-dialog-boxes.md)
 
-- [Używanie szablonu okna dialogowego w pamięci](../mfc/using-a-dialog-template-in-memory.md)
+- [Używanie szablonu okna dialogowego w pamięci](using-a-dialog-template-in-memory.md)
 
-- [Ustawianie koloru tła okna dialogowego](../mfc/setting-the-dialog-boxs-background-color.md)
+- [Ustawianie koloru tła okna dialogowego](setting-the-dialog-boxs-background-color.md)
 
-- [Inicjowanie okna dialogowego](../mfc/initializing-the-dialog-box.md)
+- [Inicjowanie okna dialogowego](initializing-the-dialog-box.md)
 
-- [Obsługa komunikatów systemu Windows w oknie dialogowym](../mfc/handling-windows-messages-in-your-dialog-box.md)
+- [Obsługa komunikatów systemu Windows w oknie dialogowym](handling-windows-messages-in-your-dialog-box.md)
 
-- [Pobieranie danych z obiektu okna dialogowego](../mfc/retrieving-data-from-the-dialog-object.md)
+- [Pobieranie danych z obiektu okna dialogowego](retrieving-data-from-the-dialog-object.md)
 
-- [Zamykanie okna dialogowego](../mfc/closing-the-dialog-box.md)
+- [Zamykanie okna dialogowego](closing-the-dialog-box.md)
 
-- [Niszczenie okna dialogowego](../mfc/destroying-the-dialog-box.md)
+- [Niszczenie okna dialogowego](destroying-the-dialog-box.md)
 
-- [Wymiana danych okna dialogowego (DDX) i walidacja (DDV)](../mfc/dialog-data-exchange-and-validation.md)
+- [Wymiana danych okna dialogowego (DDX) i walidacja (DDV)](dialog-data-exchange-and-validation.md)
 
-- [Okna dialogowe arkusza właściwości](../mfc/property-sheets-and-property-pages-mfc.md)
+- [Okna dialogowe arkusza właściwości](property-sheets-and-property-pages-mfc.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Okna dialogowe](../mfc/dialog-boxes.md)
+[Okna dialogowe](dialog-boxes.md)

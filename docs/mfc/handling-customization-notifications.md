@@ -47,60 +47,60 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-ms.openlocfilehash: 67f40d0dc50a853a39cb9b60a938d8eafe8293c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d88e1efe12fd5b31a9f78b8fe439ba1aefa72d1e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370486"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625727"
 ---
 # <a name="handling-customization-notifications"></a>Obsługa powiadomień dotyczących dostosowania
 
-Wspólny kontrolka paska narzędzi systemu Windows zawiera wbudowane funkcje dostosowywania, w tym okno dialogowe dostosowywania zdefiniowane przez system, które umożliwia użytkownikowi wstawianie, usuwanie lub zmienianie rozmieszczenia przycisków paska narzędzi. Aplikacja określa, czy funkcje dostosowywania są dostępne i kontroluje stopień, w jakim użytkownik może dostosować pasek narzędzi.
+Typowy formant paska narzędzi systemu Windows ma wbudowane funkcje dostosowywania, w tym okno dialogowe dostosowywania zdefiniowane przez system, które umożliwia użytkownikowi Wstawianie, usuwanie lub zmienianie rozmieszczenia przycisków paska narzędzi. Aplikacja określa, czy funkcje dostosowywania są dostępne, oraz określa zakres, do którego użytkownik może dostosować pasek narzędzi.
 
-Te funkcje dostosowywania można udostępnić użytkownikowi, nadając pasowi narzędzi **styl CCS_ADJUSTABLE.** Funkcje dostosowywania umożliwiają użytkownikowi przeciąganie przycisku w nowe miejsce lub usunięcie przycisku przez przeciągnięcie go poza pasek narzędzi. Ponadto użytkownik może kliknąć dwukrotnie pasek narzędzi, aby wyświetlić okno dialogowe **Dostosowywanie paska narzędzi,** które umożliwia użytkownikowi dodawanie, usuwanie i zmienianie rozmieszczenia przycisków paska narzędzi. Aplikacja może wyświetlać okno dialogowe za pomocą funkcji Dostosuj element [członkowski.](../mfc/reference/ctoolbarctrl-class.md#customize)
+Te funkcje dostosowywania można udostępnić użytkownikowi, podając pasek narzędzi styl **CCS_ADJUSTABLE** . Funkcje dostosowywania umożliwiają użytkownikowi przeciąganie przycisku w nowe położenie lub usuwanie przycisku, przeciągając go poza pasek narzędzi. Ponadto użytkownik może kliknąć dwukrotnie pasek narzędzi, aby wyświetlić okno dialogowe **Dostosowywanie paska narzędzi** , które pozwala użytkownikowi dodawać, usuwać i zmieniać rozmieszczenie przycisków paska narzędzi. Aplikacja może wyświetlić okno dialogowe przy użyciu funkcji [dostosowywania](reference/ctoolbarctrl-class.md#customize) elementu członkowskiego.
 
-Formant paska narzędzi wysyła komunikaty powiadomień do okna nadrzędnego na każdym kroku w procesie dostosowywania. Jeśli użytkownik przytrzymuje klawisz SHIFT w dół i zaczyna przeciągać przycisk, pasek narzędzi automatycznie obsługuje operację przeciągania. Pasek narzędzi wysyła komunikat powiadomienia **TBN_QUERYDELETE** do okna nadrzędnego, aby ustalić, czy przycisk może zostać usunięty. Operacja przeciągania kończy się, jeśli okno nadrzędne zwraca **wartość FAŁSZ**. W przeciwnym razie pasek narzędzi przechwytuje dane wejściowe myszy i czeka na zwolnienie przycisku myszy przez użytkownika.
+Kontrolka paska narzędzi wysyła komunikaty powiadomień do okna nadrzędnego w każdym kroku w procesie dostosowywania. Jeśli użytkownik utrzymuje klawisz SHIFT i rozpocznie przeciąganie przycisku, pasek narzędzi automatycznie obsługuje operację przeciągania. Pasek narzędzi wysyła komunikat powiadomienia o **TBN_QUERYDELETE** do okna nadrzędnego, aby określić, czy przycisk może zostać usunięty. Operacja przeciągania zostaje zakończona, jeśli okno nadrzędne zwróci **wartość false**. W przeciwnym razie pasek narzędzi przechwytuje dane wejściowe myszy i czeka, aż użytkownik zwolni przycisk myszy.
 
-Gdy użytkownik zwalnia przycisk myszy, formant paska narzędzi określa położenie kursora myszy. Jeśli kursor znajduje się poza paskiem narzędzi, przycisk zostanie usunięty. Jeśli kursor znajduje się na innym przycisku paska narzędzi, pasek narzędzi wysyła komunikat powiadomienia **TBN_QUERYINSERT** do okna nadrzędnego, aby ustalić, czy przycisk może zostać wstawiony po lewej stronie danego przycisku. Przycisk zostanie wstawiony, jeśli okno nadrzędne zwraca **wartość PRAWDA**; w przeciwnym razie tak nie jest. Pasek narzędzi wysyła komunikat powiadomienia **TBN_TOOLBARCHANGE,** aby zasygnalizować koniec operacji przeciągania.
+Gdy użytkownik zwolni przycisk myszy, formant Toolbar określa lokalizację kursora myszy. Jeśli kursor znajduje się poza paskiem narzędzi, przycisk jest usuwany. Jeśli kursor znajduje się na innym przycisku paska narzędzi, pasek narzędzi wysyła komunikat powiadomienia o **TBN_QUERYINSERT** do okna nadrzędnego, aby określić, czy przycisk może zostać wstawiony po lewej stronie danego przycisku. Przycisk zostanie wstawiony, jeśli okno nadrzędne zwróci **wartość PRAWDA**; w przeciwnym razie nie jest. Pasek narzędzi wysyła **TBN_TOOLBARCHANGE** komunikat powiadomienia, aby sygnalizować koniec operacji przeciągania.
 
-Jeśli użytkownik rozpocznie operację przeciągania bez przytrzymywalania klawisza SHIFT, kontrolka paska narzędzi wysyła komunikat powiadomienia **TBN_BEGINDRAG** do okna właściciela. Aplikacja, która implementuje swój własny kod przeciągania przycisków można użyć tego komunikatu jako sygnał, aby rozpocząć operację przeciągania. Pasek narzędzi wysyła komunikat powiadomienia **TBN_ENDDRAG,** aby zasygnalizować koniec operacji przeciągania.
+Jeśli użytkownik rozpocznie operację przeciągania bez przytrzymywania klawisza SHIFT, formant Toolbar wyśle **TBN_BEGINDRAG** komunikat powiadomienia do okna właściciela. Aplikacja, która implementuje własny kod do przeciągania, może używać tego komunikatu jako sygnału do rozpoczęcia operacji przeciągania. Pasek narzędzi wysyła **TBN_ENDDRAG** komunikat powiadomienia, aby sygnalizować koniec operacji przeciągania.
 
-Formant paska narzędzi wysyła komunikaty powiadomień, gdy użytkownik dostosowuje pasek narzędzi za pomocą okna dialogowego **Dostosowywanie paska narzędzi.** Pasek narzędzi wysyła komunikat powiadomienia **TBN_BEGINADJUST** po dwukrotnym kliknięciu paska narzędzi, ale przed utworzeniem okna dialogowego. Następnie pasek narzędzi rozpoczyna wysyłanie serii komunikatów powiadomień **TBN_QUERYINSERT,** aby ustalić, czy pasek narzędzi umożliwia wstawienie przycisków. Gdy okno nadrzędne zwraca **wartość PRAWDA,** pasek narzędzi przestaje wysyłać **TBN_QUERYINSERT** komunikaty powiadomień. Jeśli okno nadrzędne nie zwraca **funkcji PRAWDA** dla dowolnego przycisku, pasek narzędzi spowoduje zniszczenie okna dialogowego.
+Kontrolka paska narzędzi wysyła komunikaty powiadomień, gdy użytkownik dostosowuje pasek narzędzi przy użyciu okna dialogowego **Dostosuj pasek narzędzi** . Pasek narzędzi wysyła **TBN_BEGINADJUST** komunikat powiadomienia po dwukrotnym kliknięciu paska narzędzi przez użytkownika, ale przed utworzeniem okna dialogowego. Następnie na pasku narzędzi rozpocznie się wysyłanie serii **TBN_QUERYINSERT** komunikatów powiadomień, aby określić, czy pasek narzędzi umożliwia wstawianie przycisków. Gdy okno nadrzędne zwróci **wartość true**, pasek narzędzi przestaje wysyłać **TBN_QUERYINSERT** komunikaty powiadomień. Jeśli okno nadrzędne nie zwraca **wartości true** dla dowolnego przycisku, pasek narzędzi niszczy okno dialogowe.
 
-Następnie formant paska narzędzi określa, czy przyciski mogą zostać usunięte z paska narzędzi, wysyłając jeden komunikat powiadomienia **TBN_QUERYDELETE** dla każdego przycisku na pasku narzędzi. Okno nadrzędne zwraca **wartość PRAWDA,** aby wskazać, że przycisk może zostać usunięty; w przeciwnym razie zwraca **wartość FAŁSZ**. Pasek narzędzi dodaje wszystkie przyciski paska narzędzi do okna dialogowego, ale zaszywa te, które nie mogą zostać usunięte.
+Następnie formant Toolbar określa, czy dowolne przyciski mogą zostać usunięte z paska narzędzi, wysyłając jeden **TBN_QUERYDELETE** komunikat powiadomienia dla każdego przycisku na pasku narzędzi. Okno nadrzędne zwraca **wartość true** , aby wskazać, że przycisk może zostać usunięty; w przeciwnym razie zwraca **wartość false**. Pasek narzędzi dodaje wszystkie przyciski paska narzędzi do okna dialogowego, ale szare, które nie mogą zostać usunięte.
 
-Za każdym razem, gdy formant paska narzędzi potrzebuje informacji o przycisku w oknie dialogowym Dostosuj pasek narzędzi, wysyła komunikat powiadomienia **TBN_GETBUTTONINFO,** określając indeks przycisku, dla którego potrzebuje informacji i adres struktury **TBNOTIFY.** Okno nadrzędne musi wypełnić strukturę odpowiednimi informacjami.
+Za każdym razem, gdy kontrolka Toolbar wymaga informacji o przycisku w oknie dialogowym Dostosuj pasek narzędzi, wysyła komunikat powiadomienia **TBN_GETBUTTONINFO** , określając indeks przycisku, dla którego są potrzebne informacje, oraz adres struktury **TBNOTIFY** . Okno nadrzędne musi wypełnić strukturę odpowiednimi informacjami.
 
-Okno dialogowe **Dostosowywanie paska narzędzi** zawiera przycisk Pomocy i przycisk Resetuj. Gdy użytkownik wybierze przycisk Pomoc, kontrolka paska narzędzi wysyła komunikat powiadomienia **TBN_CUSTHELP.** Okno nadrzędne powinno odpowiadać, wyświetlając informacje pomocy. Okno dialogowe wysyła komunikat powiadomienia **TBN_RESET,** gdy użytkownik wybierze przycisk Resetuj. Ten komunikat sygnalizuje, że pasek narzędzi ma zamiar ponownie zainicjować okno dialogowe.
+Okno dialogowe **Dostosowywanie paska narzędzi** zawiera przycisk Pomoc i przycisk Resetuj. Gdy użytkownik wybierze przycisk Pomoc, formant Toolbar wyśle **TBN_CUSTHELP** komunikat powiadomienia. Okno nadrzędne powinno odpowiadać przez wyświetlanie informacji pomocy. Okno dialogowe wysyła **TBN_RESET** komunikat powiadomienia, gdy użytkownik wybierze przycisk Resetuj. Ten komunikat sygnalizuje, że pasek narzędzi zostanie ponownie zainicjowany okno dialogowe.
 
-Te wiadomości są **WM_NOTIFY** wiadomości i mogą być obsługiwane w oknie właściciela, dodając wpisy mapy wiadomości w następującym formularzu do mapy wiadomości okna właściciela:
+Te komunikaty to wszystkie **WM_NOTIFY** komunikaty i mogą być obsługiwane w oknie właściciela przez dodanie wpisów mapy komunikatów z następującej postaci do mapy komunikatów Twojego okna właściciela:
 
 ```cpp
 ON_NOTIFY( wNotifyCode, idControl, memberFxn )
 ```
 
-- **wNotifyCode**
+- **Włącz wNotifyCode**
 
-   Kod identyfikatora wiadomości powiadomień, taki jak **TBN_BEGINADJUST**.
+   Kod identyfikatora komunikatu powiadomienia, taki jak **TBN_BEGINADJUST**.
 
-- **kontrola id**
+- **idControl**
 
-   Identyfikator formantu wysyłającego powiadomienie.
+   Identyfikator kontrolki wysyłającej powiadomienie.
 
-- **członekFxn**
+- **memberFxn**
 
-   Funkcja elementu członkowskiego, która ma zostać wywołana po otrzymaniu tego powiadomienia.
+   Funkcja członkowska, która ma zostać wywołana w przypadku otrzymania tego powiadomienia.
 
-Funkcja członka zostanie zadeklarowana za pomocą następującego prototypu:
+Funkcja członkowska zostałaby zadeklarowana przy użyciu następującego prototypu:
 
 ```cpp
 afx_msg void memberFxn( NMHDR * pNotifyStruct, LRESULT * result );
 ```
 
-Jeśli program obsługi komunikatów powiadomień zwraca wartość, należy umieścić ją w **LRESULT** wskazywał przez *wynik*.
+Jeśli program obsługi komunikatów powiadomień zwraca wartość, powinna ona zostać umieszczona w **LRESULT** wskazywanym przez *wynik*.
 
-Dla każdej `pNotifyStruct` wiadomości wskazuje strukturę **NMHDR** lub **TBNOTIFY.** Struktury te są opisane poniżej:
+Dla każdego komunikatu `pNotifyStruct` wskazuje strukturę **NMHDR** lub strukturę **TBNOTIFY** . Te struktury są opisane poniżej:
 
 Struktura **NMHDR** zawiera następujące elementy członkowskie:
 
@@ -112,33 +112,33 @@ typedef struct tagNMHDR {
 } NMHDR;
 ```
 
-- **hwndOd**
+- **hwndFrom**
 
-   Dojście okna formantu, który wysyła powiadomienie. Aby przekonwertować `CWnd` ten uchwyt na wskaźnik, użyj [CWnd::FromHandle](../mfc/reference/cwnd-class.md#fromhandle).
+   Uchwyt okna kontrolki wysyłającej powiadomienie. Aby przekonwertować ten uchwyt na `CWnd` wskaźnik, użyj [CWnd:: FromHandle](reference/cwnd-class.md#fromhandle).
 
 - **idFrom**
 
-   Identyfikator formantu wysyłającego powiadomienie.
+   Identyfikator kontrolki wysyłającej powiadomienie.
 
-- **Kod**
+- **kodu**
 
-   Kod powiadomienia. Ten element członkowski może być wartością specyficzną dla typu formantu, taką jak **TBN_BEGINADJUST** lub **TTN_NEEDTEXT,** lub może być jedną ze wspólnych wartości powiadomień wymienionych poniżej:
+   Kod powiadomienia. Ten element członkowski może być wartością specyficzną dla typu formantu, takiego jak **TBN_BEGINADJUST** lub **TTN_NEEDTEXT**, lub może być jedną z typowych wartości powiadomień wymienionych poniżej:
 
-  - **NM_CLICK** Użytkownik kliknął lewy przycisk myszy w formancie.
+  - **NM_CLICK** Użytkownik kliknął lewym przyciskiem myszy w kontrolce.
 
-  - **NM_DBLCLK** Użytkownik dwukrotnie kliknął lewy przycisk myszy w formancie.
+  - **NM_DBLCLK** Użytkownik podwójnie kliknął lewym przyciskiem myszy w kontrolce.
 
-  - **NM_KILLFOCUS** Formant utracił fokus wejściowy.
+  - **NM_KILLFOCUS** Kontrolka utraciła fokus wprowadzania.
 
-  - **NM_OUTOFMEMORY** Formant nie może ukończyć operację, ponieważ nie ma wystarczającej ilości pamięci.
+  - **NM_OUTOFMEMORY** Kontrolka nie mogła ukończyć operacji, ponieważ nie jest dostępna wystarczająca ilość pamięci.
 
-  - **NM_RCLICK** Użytkownik kliknął prawy przycisk myszy w formancie.
+  - **NM_RCLICK** Użytkownik kliknął prawy przycisk myszy w kontrolce.
 
-  - **NM_RDBLCLK** Użytkownik dwukrotnie kliknął prawy przycisk myszy w formancie.
+  - **NM_RDBLCLK** Użytkownik dwukrotnie kliknął prawy przycisk myszy w kontrolce.
 
-  - **NM_RETURN** Formant ma fokus wejściowy, a użytkownik nacisnął klawisz ENTER.
+  - **NM_RETURN** Kontrolka ma fokus wprowadzania, a użytkownik nacisnął klawisz ENTER.
 
-  - **NM_SETFOCUS** Formant otrzymał fokus wejściowy.
+  - **NM_SETFOCUS** Formant otrzymał fokus wprowadzania.
 
 Struktura **TBNOTIFY** zawiera następujące elementy członkowskie:
 
@@ -152,69 +152,69 @@ typedef struct {
 } TBNOTIFY, FAR* LPTBNOTIFY;
 ```
 
-- **Hdr**
+- **nagłówka**
 
-   Informacje wspólne dla wszystkich **wiadomości WM_NOTIFY.**
+   Informacje wspólne dla wszystkich **WM_NOTIFY** komunikatów.
 
-- **Iitem**
+- **iItem**
 
-   Indeks przycisku skojarzony z powiadomieniem.
+   Indeks przycisku skojarzonego z powiadomieniem.
 
-- **tbButton (przycisk)**
+- **tbButton**
 
-   **Struktura TBBUTTON,** która zawiera informacje o przycisku paska narzędzi skojarzonego z powiadomieniem.
+   Struktura **TBBUTTON** , która zawiera informacje o przycisku paska narzędzi skojarzonym z powiadomieniem.
 
-- **cchTekst**
+- **cchText**
 
    Liczba znaków w tekście przycisku.
 
-- **lpszText (tekst)**
+- **lpszText**
 
    Wskaźnik do tekstu przycisku.
 
-Powiadomienia wysyłane przez pasek narzędzi są następujące:
+Powiadomienia wysyłane przez ten pasek narzędzi są następujące:
 
 - **TBN_BEGINADJUST**
 
-   Wysyłane, gdy użytkownik rozpoczyna dostosowywanie kontrolki paska narzędzi. Wskaźnik wskazuje strukturę **NMHDR,** która zawiera informacje o powiadomieniu. Program obsługi nie musi zwracać żadnej określonej wartości.
+   Wysyłany, gdy użytkownik rozpocznie dostosowywanie kontrolki paska narzędzi. Wskaźnik wskazuje na strukturę **NMHDR** , która zawiera informacje o powiadomieniu. Procedura obsługi nie musi zwracać żadnej określonej wartości.
 
 - **TBN_BEGINDRAG**
 
-   Wysyłane, gdy użytkownik zaczyna przeciągać przycisk w formancie paska narzędzi. Wskaźnik wskazuje na **tbnotify** struktury. Element członkowski **iItem** zawiera indeks oparty na wartości zerowej przeciąganego przycisku. Program obsługi nie musi zwracać żadnej określonej wartości.
+   Wysyłany, gdy użytkownik rozpoczyna przeciąganie przycisku w kontrolce paska narzędzi. Wskaźnik wskazuje na strukturę **TBNOTIFY** . Element członkowski **iItem** zawiera indeks (liczony od zera) przycisku, który jest przeciągany. Procedura obsługi nie musi zwracać żadnej określonej wartości.
 
 - **TBN_CUSTHELP**
 
-   Wysyłane, gdy użytkownik wybierze przycisk Pomoc w oknie dialogowym Dostosowywanie paska narzędzi. Brak wartości zwracanej. Wskaźnik wskazuje strukturę **NMHDR,** która zawiera informacje o komunikacie o powiadomieniu. Program obsługi nie musi zwracać żadnej określonej wartości.
+   Wysyłany, gdy użytkownik wybierze przycisk Pomoc w oknie dialogowym Dostosuj pasek narzędzi. Brak wartości zwracanej. Wskaźnik wskazuje na strukturę **NMHDR** , która zawiera informacje o komunikacie powiadomienia. Procedura obsługi nie musi zwracać żadnej określonej wartości.
 
 - **TBN_ENDADJUST**
 
-   Wysyłane, gdy użytkownik przestaje dostosowywać kontrolkę paska narzędzi. Wskaźnik wskazuje strukturę **NMHDR,** która zawiera informacje o komunikacie o powiadomieniu. Program obsługi nie musi zwracać żadnej określonej wartości.
+   Wysyłany, gdy użytkownik zatrzyma Dostosowywanie kontrolki paska narzędzi. Wskaźnik wskazuje na strukturę **NMHDR** , która zawiera informacje o komunikacie powiadomienia. Procedura obsługi nie musi zwracać żadnej określonej wartości.
 
 - **TBN_ENDDRAG**
 
-   Wysyłane, gdy użytkownik przestaje przeciągać przycisk w formancie paska narzędzi. Wskaźnik wskazuje na **tbnotify** struktury. Element członkowski **iItem** zawiera indeks oparty na wartości zerowej przeciąganego przycisku. Program obsługi nie musi zwracać żadnej określonej wartości.
+   Wysyłany, gdy użytkownik zatrzyma przeciąganie przycisku w kontrolce paska narzędzi. Wskaźnik wskazuje na strukturę **TBNOTIFY** . Element członkowski **iItem** zawiera indeks (liczony od zera) przycisku, który jest przeciągany. Procedura obsługi nie musi zwracać żadnej określonej wartości.
 
 - **TBN_GETBUTTONINFO**
 
-   Wysyłane, gdy użytkownik dostosowuje kontrolkę paska narzędzi. Pasek narzędzi używa tego komunikatu powiadomienia do pobierania informacji potrzebnych w oknie dialogowym Dostosowywanie paska narzędzi. Wskaźnik wskazuje na **tbnotify** struktury. Element **członkowski iItem** określa indeks oparty na wartości zerowej przycisku. Członkowie **pszText** i **cchText** określają adres i długość, w znakach, bieżącego tekstu przycisku. Aplikacja powinna wypełnić strukturę informacjami o przycisku. Zwraca **wartość TRUE,** jeśli informacje o przyciskach zostały skopiowane do struktury lub **FAŁSZ w** inny sposób.
+   Wysyłany, gdy użytkownik dostosowuje formant paska narzędzi. Ten komunikat z powiadomieniem służy do pobierania informacji wymaganych przez okno dialogowe Dostosowywanie paska narzędzi. Wskaźnik wskazuje na strukturę **TBNOTIFY** . Element członkowski **iItem** Określa indeks (liczony od zera) przycisku. Elementy członkowskie **pszText** i **cchText** określają adres i długość bieżącego tekstu przycisku. Aplikacja powinna wypełnić strukturę informacjami o przycisku. Zwraca **wartość true** , jeśli informacje o przycisku zostały skopiowane do struktury lub w przeciwnym razie ma **wartość false** .
 
 - **TBN_QUERYDELETE**
 
-   Wysyłane, gdy użytkownik dostosowuje pasek narzędzi, aby ustalić, czy przycisk może zostać usunięty z kontrolki paska narzędzi. Wskaźnik wskazuje na **tbnotify** struktury. Element **członkowski iItem** zawiera indeks oparty na wartości zero przycisku do usunięcia. Wróć **TRUE,** aby zezwolić na usunięcie przycisku lub **fałsz,** aby zapobiec usunięciu przycisku.
+   Wysyłany, gdy użytkownik dostosowuje pasek narzędzi, aby określić, czy przycisk może zostać usunięty z kontrolki paska narzędzi. Wskaźnik wskazuje na strukturę **TBNOTIFY** . Element członkowski **iItem** zawiera indeks (liczony od zera) przycisku, który ma zostać usunięty. Zwróć **wartość true** , aby zezwolić na usunięcie przycisku lub **Fałsz** , aby zapobiec usunięciu przycisku.
 
 - **TBN_QUERYINSERT**
 
-   Wysyłane, gdy użytkownik dostosowuje formant paska narzędzi, aby ustalić, czy przycisk może być włożony po lewej stronie danego przycisku. Wskaźnik wskazuje na **tbnotify** struktury. Element członkowski **iItem** zawiera indeks oparty na wartości zerowej przycisku, który ma zostać wstawiony. Powrót **TRUE,** aby umożliwić wstawienie przycisku przed danym przyciskiem lub **FALSE,** aby zapobiec włożeniu przycisku.
+   Wysyłany, gdy użytkownik dostosowuje formant paska narzędzi, aby określić, czy przycisk może zostać wstawiony po lewej stronie danego przycisku. Wskaźnik wskazuje na strukturę **TBNOTIFY** . Element członkowski **iItem** zawiera indeks (liczony od zera) przycisku, który ma zostać wstawiony. Zwróć **wartość true** , aby zezwolić na Wstawianie przycisku przed danym przyciskiem lub **false** , aby uniemożliwić Wstawianie przycisku.
 
 - **TBN_RESET**
 
-   Wysyłane, gdy użytkownik resetuje zawartość okna dialogowego Dostosowywanie paska narzędzi. Wskaźnik wskazuje strukturę **NMHDR,** która zawiera informacje o komunikacie o powiadomieniu. Program obsługi nie musi zwracać żadnej określonej wartości.
+   Wysyłany, gdy użytkownik resetuje zawartość okna dialogowego Dostosuj pasek narzędzi. Wskaźnik wskazuje na strukturę **NMHDR** , która zawiera informacje o komunikacie powiadomienia. Procedura obsługi nie musi zwracać żadnej określonej wartości.
 
 - **TBN_TOOLBARCHANGE**
 
-   Wysyłane po dostosowaniu kontrolki paska narzędzi przez użytkownika. Wskaźnik wskazuje strukturę **NMHDR,** która zawiera informacje o komunikacie o powiadomieniu. Program obsługi nie musi zwracać żadnej określonej wartości.
+   Wysyłany, gdy użytkownik dostosował formant paska narzędzi. Wskaźnik wskazuje na strukturę **NMHDR** , która zawiera informacje o komunikacie powiadomienia. Procedura obsługi nie musi zwracać żadnej określonej wartości.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Korzystanie z CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
-[Formanty](../mfc/controls-mfc.md)
+[Korzystanie z CToolBarCtrl](using-ctoolbarctrl.md)<br/>
+[Formanty](controls-mfc.md)

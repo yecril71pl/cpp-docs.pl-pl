@@ -6,41 +6,41 @@ helpviewer_keywords:
 - Windows common controls [MFC], about common controls
 - common controls [MFC], about common controls
 ms.assetid: a252acad-3cc0-440e-bbc6-43eaaf8cb7bb
-ms.openlocfilehash: 6a31c783e19603eadb90fd0e6be99ff55f4eaeb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5fcb15a0cb7e336f6c818eb39b271f5f6e74af5
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352180"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621353"
 ---
 # <a name="making-and-using-controls"></a>Tworzenie i używanie formantów
 
-Upewnij się większość formantów dla okien dialogowych w programie Visual C++ [Edytor okien dialogowych](../windows/dialog-editor.md). Ale można też utworzyć formanty w dowolnym lub oknie dialogowym.
+W [edytorze okien dialogowych](../windows/dialog-editor.md)Visual C++ można wykonywać większość formantów dla okien dialogowych. Ale można również tworzyć kontrolki w dowolnym oknie dialogowym lub w dowolnym oknach.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-- [Używanie formantów wspólnych w oknie dialogowym](../mfc/using-common-controls-in-a-dialog-box.md)
+- [Używanie formantów wspólnych w oknie dialogowym](using-common-controls-in-a-dialog-box.md)
 
-- [Używanie edytora okien dialogowych do dodawania formantów](../mfc/using-the-dialog-editor-to-add-controls.md)
+- [Używanie edytora okien dialogowych do dodawania kontrolek](using-the-dialog-editor-to-add-controls.md)
 
-- [Ręczne dodawanie formantów](../mfc/adding-controls-by-hand.md) (bez Edytor okien dialogowych)
+- [Ręczne dodawanie formantów](adding-controls-by-hand.md) (bez edytora okien dialogowych)
 
-- [Wyprowadzanie formantów z formantu standardowego](../mfc/deriving-controls-from-a-standard-control.md)
+- [Wyprowadzanie formantów z formantu standardowego](deriving-controls-from-a-standard-control.md)
 
-- [Używanie formantu wspólnego jako okna podrzędnego](../mfc/using-a-common-control-as-a-child-window.md)
+- [Używanie formantu wspólnego jako okna podrzędnego](using-a-common-control-as-a-child-window.md)
 
-- [Odbieranie powiadomienia od formantów wspólnych](../mfc/receiving-notification-from-common-controls.md)
+- [Otrzymywanie powiadomienia od typowych kontrolek](receiving-notification-from-common-controls.md)
 
-- [Wymiana i walidacja danych w oknie dialogowym](../mfc/dialog-data-exchange-and-validation.md)
+- [Wymiana i walidacja danych w oknie dialogowym](dialog-data-exchange-and-validation.md)
 
-- [Bezpieczny dostęp do kontrolek z użyciem kreatorów kodu](../mfc/type-safe-access-to-controls-with-code-wizards.md)
+- [Bezpieczny dostęp do kontrolek z użyciem kreatorów kodu](type-safe-access-to-controls-with-code-wizards.md)
 
-- Pojedynczych formantów: zobacz [formantów](../mfc/controls-mfc.md) linki do wszystkich formantów wspólnych
+- Poszczególne kontrolki: zobacz [kontrolki](controls-mfc.md) dla linków do wszystkich formantów standardowych
 
-- [Okna dialogowe](../mfc/dialog-boxes.md)
+- [Okna dialogowe](dialog-boxes.md)
 
-- [Paski dialogowe](../mfc/dialog-bars.md)
+- [Paski dialogowe](dialog-bars.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Kontrolki](../mfc/controls-mfc.md)
+[Formanty](controls-mfc.md)

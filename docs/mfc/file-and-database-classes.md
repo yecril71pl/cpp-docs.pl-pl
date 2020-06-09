@@ -6,12 +6,12 @@ helpviewer_keywords:
 - database classes [MFC]
 - file classes [MFC]
 ms.assetid: 580b169c-e26e-4395-b128-5408d08c98fe
-ms.openlocfilehash: 0996810a2af835c5c98a4f3311d2411466d43583
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8874b9f99d3a5756b4ce66e2f5732f856bdd7078
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442402"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622629"
 ---
 # <a name="file-and-database-classes"></a>Klasy plików i baz danych
 
@@ -19,14 +19,14 @@ Te klasy umożliwiają przechowywanie informacji w bazie danych lub pliku dysku.
 
 Następujące kategorie klas obsługują trwałość danych.
 
-- [Klasy we/wy plików](../mfc/file-i-o-classes.md)
+- [Klasy we/wy plików](file-i-o-classes.md)
 
-- [Klasy OLE DB](../mfc/ole-db-classes.md)
+- [Klasy OLE DB](ole-db-classes.md)
 
-- [Klasy DAO](../mfc/dao-classes.md)
+- [Klasy DAO](dao-classes.md)
 
-- [Klasy ODBC](../mfc/odbc-classes.md)
+- [Klasy ODBC](odbc-classes.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przegląd klas](../mfc/class-library-overview.md)
+[Przegląd klas](class-library-overview.md)

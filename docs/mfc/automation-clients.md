@@ -7,39 +7,39 @@ helpviewer_keywords:
 - type libraries, Automation clients
 - clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
-ms.openlocfilehash: 098c41ea981d9d0069130d5439632aa7b0d6cbbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c34f6fccd06635dfb686e6eb1f2cf895bb86989
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254365"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626086"
 ---
 # <a name="automation-clients"></a>Klienci automatyzacji
 
-Automatyzacja sprawiają, że aplikacja do manipulowania obiektami implementowane w innej aplikacji lub do udostępnienia obiektów, dzięki czemu można manipulować. Klienta automatyzacji to aplikacja, który będzie obsługiwał widocznych obiektów należących do innej aplikacji. Aplikacja, która udostępnia obiekty nosi nazwę serwera automatyzacji. Klient obsługuje obiekty aplikacji serwera, uzyskując dostęp do właściwości te obiekty i funkcje.
+Automatyzacja pozwala aplikacji na manipulowanie obiektami zaimplementowanymi w innej aplikacji lub Uwidacznianie obiektów, aby można było manipulować nimi. Klient usługi Automation to aplikacja, która może manipulować uwidocznionymi obiektami należącymi do innej aplikacji. Aplikacja, która uwidacznia obiekty, jest nazywana serwerem automatyzacji. Klient manipuluje obiektami aplikacji serwera, uzyskując dostęp do tych obiektów i właściwości.
 
 ### <a name="types-of-automation-clients"></a>Typy klientów automatyzacji
 
 Istnieją dwa typy klientów automatyzacji:
 
-- Klienci, którzy dynamicznie (w czasie wykonywania) uzyskiwanie informacji na temat właściwości i operacji serwera.
+- Klienci, którzy dynamicznie (w czasie wykonywania) uzyskują informacje o właściwościach i operacjach serwera.
 
-- Klienci, którzy posiadają dostarczonymi informacjami statycznymi (w czasie kompilacji) określający, właściwości i operacji serwera.
+- Klienci, którzy posiadają informacje statyczne (dostarczane w czasie kompilacji), które określają właściwości i operacje serwera.
 
-Klienci pierwszy rodzaj uzyskania informacji na temat metod i właściwości serwera, badając OLE system `IDispatch` mechanizm. Mimo że jest odpowiedni do użycia dla klientów dynamicznych `IDispatch` jest trudny do użycia na potrzeby klientów statycznych, których obiekty są oparte na musi być znane, na czas kompilacji. Statyczna powiązana klientów, Microsoft Foundation classes zapewnianych [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md) klasy.
+Klienci pierwszego rodzaju uzyskują informacje o metodach i właściwościach serwera, wykonując zapytania o mechanizm systemu OLE `IDispatch` . Chociaż jest to wystarczające do użycia w przypadku klientów dynamicznych, `IDispatch` trudno jest używać w przypadku klientów statycznych, w których obiekty muszą być znane w czasie kompilacji. W przypadku klientów z ograniczeniami statycznymi klasy programu Microsoft Foundation dostarczają klasy [COleDispatchDriver](reference/coledispatchdriver-class.md) .
 
-Statyczne powiązanej klienci używają klasy serwera proxy, statycznie połączoną z aplikacją klienta. Ta klasa udostępnia bezpieczny hermetyzacji C++, właściwości i operacji aplikacji serwera.
+Klienci z granicami statycznymi używają klasy proxy, która jest statycznie połączona z aplikacją kliencką. Ta klasa zapewnia bezpieczny typ hermetyzacji języka C++ właściwości i operacji aplikacji serwera.
 
-Klasa `COleDispatchDriver` zapewnia obsługę jednostki po stronie klienta automatyzacji. Za pomocą **Dodaj nowy element** okno dialogowe, należy utworzyć klasę pochodną `COleDispatchDriver`.
+Klasa `COleDispatchDriver` zapewnia główną pomoc techniczną po stronie klienta automatyzacji. Za pomocą okna dialogowego **Dodawanie nowego elementu** utworzysz klasę pochodną `COleDispatchDriver` .
 
-Następnie możesz określić plik biblioteki typów, opisujący właściwości i funkcje obiektu aplikacji serwera. Okno dialogowe Dodaj element odczytuje ten plik i tworzy `COleDispatchDriver`-klasy za pomocą funkcji Członkowskich, które aplikacja może wywołać dostępu do aplikacji serwera obiektów w języku C++ w sposób bezpieczny. Dodatkowe funkcje odziedziczone `COleDispatchDriver` upraszcza proces wywoływania właściwego serwera automatyzacji.
+Następnie należy określić plik biblioteki typów opisujący właściwości i funkcje obiektu aplikacji serwera. Okno dialogowe Dodawanie elementu odczytuje ten plik i tworzy `COleDispatchDriver` klasę pochodną, z funkcjami składowymi, które aplikacja może wywołać, aby uzyskać dostęp do obiektów aplikacji serwera w języku C++ w sposób bezpieczny dla typów. Dodatkowe funkcje dziedziczone przez `COleDispatchDriver` upraszczają proces wywoływania odpowiedniego serwera automatyzacji.
 
 ### <a name="handling-events-in-automation-clients"></a>Obsługa zdarzeń w klientach automatyzacji
 
-Do obsługi zdarzeń w kliencie usługi automation, musisz dodać interfejs ujścia. MFC obsługuje kreatora Dodaj interfejsy ujścia dla kontrolek ActiveX, ale nie dla innych serwerów COM.
+Jeśli chcesz obsługiwać zdarzenia w kliencie usługi Automation, musisz dodać interfejs ujścia. MFC zapewnia obsługę kreatora, aby dodać interfejsy ujścia dla formantów ActiveX, ale nie obsługuje innych serwerów COM.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klienci automatyzacji: Korzystanie z bibliotek typów](../mfc/automation-clients-using-type-libraries.md)<br/>
-[Automatyzacja](../mfc/automation.md)<br/>
-[Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md)
+[Klienci automatyzacji: korzystanie z bibliotek typów](automation-clients-using-type-libraries.md)<br/>
+[Automatyzacja](automation.md)<br/>
+[Kreator aplikacji MFC](reference/mfc-application-wizard.md)

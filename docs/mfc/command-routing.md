@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: 8d1e1e59c56439c01655a1416df645ccc6922411
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: e47ffd38b342301da32abae9690738ef83c0426b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907621"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620692"
 ---
 # <a name="command-routing"></a>Routing poleceń
 
@@ -31,18 +31,18 @@ Różne klasy docelowe poleceń sprawdzają własne mapy komunikatów w różnyc
 
 Jak drogie jest ten mechanizm routingu w porównaniu do tego, co program obsługi w odpowiedzi na polecenie, koszt routingu jest niski. Należy pamiętać, że struktura generuje polecenia tylko wtedy, gdy użytkownik współdziała z obiektem interfejsu użytkownika.
 
-### <a name="_core_standard_command_route"></a>Standardowa trasa polecenia
+### <a name="standard-command-route"></a><a name="_core_standard_command_route"></a>Standardowa trasa polecenia
 
 |Gdy obiekt tego typu otrzymuje polecenie. . .|Nadaje sobie i innym obiektom docelowym polecenia możliwość obsługi polecenia w następującej kolejności:|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|Okno ramek MDI (`CMDIFrameWnd`)|1.  Wyprzedzeni`CMDIChildWnd`<br />2.  To okno ramowe<br />3.  Aplikacja (`CWinApp` obiekt)|
-|Okno ramki dokumentu (`CFrameWnd`, `CMDIChildWnd`)|1.  Widok aktywny<br />2.  To okno ramowe<br />3.  Aplikacja (`CWinApp` obiekt)|
-|Widok|1.  Ten widok<br />2.  Dokument dołączony do widoku|
-|dokument|1.  Ten dokument<br />2.  Szablon dokumentu dołączony do dokumentu|
-|Okno dialogowe|1.  To okno dialogowe<br />2.  Okno, które jest właścicielem okna dialogowego<br />3.  Aplikacja (`CWinApp` obiekt)|
+|Okno ramek MDI ( `CMDIFrameWnd` )|1. aktywne`CMDIChildWnd`<br />2. to okno ramowe<br />3. aplikacja ( `CWinApp` obiekt)|
+|Okno ramki dokumentu ( `CFrameWnd` , `CMDIChildWnd` )|1. widok aktywny<br />2. to okno ramowe<br />3. aplikacja ( `CWinApp` obiekt)|
+|Widok|1. ten widok<br />2. dokument dołączony do widoku|
+|Dokument|1. ten dokument<br />2. szablon dokumentu dołączony do dokumentu|
+|Okno dialogowe|1. to okno dialogowe<br />2. okno, do którego należy okno dialogowe<br />3. aplikacja ( `CWinApp` obiekt)|
 
 Gdzie numerowane wpisy w drugiej kolumnie powyższej tabeli wskazują inne obiekty, takie jak dokument, zobacz odpowiadające im elementy w pierwszej kolumnie. Na przykład podczas odczytywania w drugiej kolumnie, w której widok przekazuje polecenie do dokumentu, zobacz wpis "Document" w pierwszej kolumnie, aby dalej postępować zgodnie z routingiem.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Jak struktura wywołuje programy obsługi](../mfc/how-the-framework-calls-a-handler.md)
+[Jak struktura wywołuje program obsługi](how-the-framework-calls-a-handler.md)

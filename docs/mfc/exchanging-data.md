@@ -6,25 +6,25 @@ helpviewer_keywords:
 - exchanging data with property sheets [MFC]
 - DDX (dialog data exchange) [MFC], property sheets
 ms.assetid: 689f02d0-51a9-455b-8ffb-5b44f0aefa28
-ms.openlocfilehash: de82a337f19b7b2ac6039fd3f3c16ab67aa1dc99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5be82567e02fd5e935d42f9eff5bdee20fa0d5a8
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405849"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622706"
 ---
 # <a name="exchanging-data"></a>Wymiana danych
 
-Podobnie jak w przypadku większości okien dialogowych, wymianę danych między arkusza właściwości, a aplikacja jest jedną z najważniejszych funkcji arkusza właściwości. W tym artykule opisano sposób wykonania tego zadania.
+Podobnie jak w przypadku większości okien dialogowych, wymiana danych między arkuszem właściwości a aplikacją jest jedną z najważniejszych funkcji arkusza właściwości. W tym artykule opisano, jak wykonać to zadanie.
 
-Wymiana danych z arkusza właściwości jest faktycznie kwestią wymiana danych z na stronach właściwości indywidualnych arkusza właściwości. Procedury wymiany danych za pomocą strony właściwości jest taka sama, jak w przypadku wymiany danych okna dialogowego, ponieważ [CPropertyPage](../mfc/reference/cpropertypage-class.md) obiekt jest szczególnymi rodzajami [CDialog](../mfc/reference/cdialog-class.md) obiektu. Procedura wykorzystuje instrumentu struktury okna dialogowego dane programu exchange (DDX), który wymienia dane między kontrolkami w zmiennych okna dialogowego pole i elementów członkowskich obiektu okno dialogowe.
+Wymiana danych z arkuszem właściwości jest w rzeczywistości kwestią wymiany danych przy użyciu poszczególnych stron właściwości arkusza właściwości. Procedura wymiany danych ze stroną właściwości jest taka sama jak w przypadku wymiany danych przy użyciu okna dialogowego, ponieważ obiekt [CPropertyPage](reference/cpropertypage-class.md) jest tylko wyspecjalizowanym obiektem [CDialog](reference/cdialog-class.md) . Procedura korzysta z funkcji wymiany danych okna dialogowego (DDX) struktury, która wymienia dane między kontrolkami w oknie dialogowym a zmiennymi składowymi obiektu okna dialogowego.
 
-Istotną różnicą między wymiana danych z arkusza właściwości i okno dialogowe normalnego to, że arkusz właściwości zawiera wiele stron, dlatego konieczna jest wymiana danych ze wszystkich stron w arkuszu właściwości. Aby uzyskać więcej informacji na temat DDX, zobacz [wymiana danych okna dialogowego i sprawdzanie poprawności](../mfc/dialog-data-exchange-and-validation.md).
+Istotną różnicą między wymianą danych a arkuszem właściwości i normalnym oknem dialogowym jest to, że arkusz właściwości ma wiele stron, dlatego należy wymienić dane ze wszystkimi stronami w arkuszu właściwości. Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja danych w oknie dialogowym](dialog-data-exchange-and-validation.md).
 
-Poniższy przykład ilustruje wymianie danych między widokiem i dwie strony arkusza właściwości:
+Poniższy przykład ilustruje wymianę danych między widokiem a dwiema stronami arkusza właściwości:
 
-[!code-cpp[NVC_MFCDocView#4](../mfc/codesnippet/cpp/exchanging-data_1.cpp)]
+[!code-cpp[NVC_MFCDocView#4](codesnippet/cpp/exchanging-data_1.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Arkusze właściwości](../mfc/property-sheets-mfc.md)
+[Arkusze właściwości](property-sheets-mfc.md)

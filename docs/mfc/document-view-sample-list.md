@@ -1,40 +1,40 @@
 ---
-title: Lista przykładów dokumentu widoku
+title: Lista przykładów dokumentów-widoków
 ms.date: 11/04/2016
 ms.assetid: 6f087ce8-2f46-433c-b674-4c110743b289
-ms.openlocfilehash: ae7104478fb643701c1f659136a33dd3cd69f6e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89098381e20e91d3e1653d01a4f4ee749442cd0d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240650"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624746"
 ---
 # <a name="documentview-sample-list"></a>Lista przykładów dokumentów/widoków
 
-Zobacz następujące przykładowe programy, które ilustrują, przy użyciu architektury dokument/widok MFC w różny sposób:
+Zapoznaj się z następującymi przykładowymi programami, które ilustrują korzystanie z architektury dokumentu/widoku MFC w interesujące sposoby:
 
-*Różnice między dokument/widok*
+*Odmiany dokumentu/widoku*
 
 - [MDI](../overview/visual-cpp-samples.md)
 
-- [SCRIBBLE](../overview/visual-cpp-samples.md)
+- [BAZGROŁ](../overview/visual-cpp-samples.md)
 
 - [VIEWEX](../overview/visual-cpp-samples.md)
 
-*Okno dialogowe interfejsu zastępuje dokument/widok*
+*Interfejs okna dialogowego zastępuje dokument/widok*
 
 - [CMNCTRL1](../overview/visual-cpp-samples.md)
 
 - [CMNCTRL2](../overview/visual-cpp-samples.md)
 
-*Za pomocą COleDocument i jej klasy pochodne*
+*Korzystanie z COleDocument i jego klas pochodnych*
 
-- [KONTENER](../overview/visual-cpp-samples.md)
+- [WBUDOWANE](../overview/visual-cpp-samples.md)
 
 - [HIERSVR](../overview/visual-cpp-samples.md)
 
 - [OCLIENT](../overview/visual-cpp-samples.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Architektura dokument/widok](../mfc/document-view-architecture.md)
+[Architektura dokumentu/widoku](document-view-architecture.md)

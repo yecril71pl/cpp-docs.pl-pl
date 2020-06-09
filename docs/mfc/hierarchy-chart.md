@@ -6,30 +6,30 @@ helpviewer_keywords:
 - classes [MFC], MFC hierarchy
 - MFC, object model
 ms.assetid: 19d70341-e391-4a72-94c6-35755ce975d4
-ms.openlocfilehash: 703008b78994a9400bd5dfa1dfa64072fea949bd
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: f49580610b247605f1c3ca030c0927acab29db89
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611949"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618723"
 ---
 # <a name="hierarchy-chart"></a>Diagram hierarchii
 
-Następująca ilustracja przedstawia klasy MFC wyprowadzone z `CObject`:
+Poniższa ilustracja przedstawia klasy MFC pochodne z `CObject` :
 
-![Klasy pochodzące z obiektu CObject](../mfc/media/mfc_hierarchy_chart1of3.png  "klasy pochodzące z obiektu CObject")
+![Klasy pochodne od CObject](../mfc/media/mfc_hierarchy_chart1of3.png  "Klasy pochodne od CObject")
 
-Następująca ilustracja przedstawia klasy MFC wyprowadzone z `CWnd` i `CCmdTarget`:
+Poniższa ilustracja przedstawia klasy MFC pochodne od `CWnd` i `CCmdTarget` :
 
-![Klasy pochodne klasy CCmdTarget lub CWnd](../mfc/media/mfc_hierarchy_chart2of3.png "klasy pochodne klasy CCmdTarget lub CWnd")
+![Klasy pochodzące z CCmdTarget lub CWnd](../mfc/media/mfc_hierarchy_chart2of3.png "Klasy pochodzące z CCmdTarget lub CWnd")
 
-Poniższa ilustracja przedstawia klasy MFC niewyprowadzone z `CObject`:
+Poniższa ilustracja przedstawia klasy MFC niepochodzące z `CObject` :
 
-![Klasy nie pochodzi z obiektu CObject](../mfc/media/mfc_hierarchy_chart3of3.png "klasy nie pochodzi z obiektu CObject")
+![Klasy niepochodzące od CObject](../mfc/media/mfc_hierarchy_chart3of3.png "Klasy niepochodzące od CObject")
 
-Możesz pobrać kompletny wykres z następującej lokalizacji: [MFC — hierarchia wykresy pobierania](https://aka.ms/hxgg8e).
+Kompletny wykres można pobrać z następującej lokalizacji: [pobieranie wykresów hierarchii MFC](https://aka.ms/hxgg8e).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Kategorie wykresów hierarchii](../mfc/hierarchy-chart-categories.md)<br/>
-[Klasa — Przegląd](../mfc/class-library-overview.md)
+[Kategorie diagramów hierarchii](hierarchy-chart-categories.md)<br/>
+[Przegląd klas](class-library-overview.md)

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - messages, MFC
 - messages [MFC]
 ms.assetid: b1476310-a135-42ca-817c-444fb3675491
-ms.openlocfilehash: 8e1bfd1baa8ffef76ba31912fc619c4217696683
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f36dab679a2e41910b2445a7dab36f5786081563
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384130"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624278"
 ---
 # <a name="messages"></a>Komunikaty
 
-Pętli komunikatów w `Run` funkcji składowej klasy typu `CWinApp` pobiera komunikaty generowane przez różne zdarzenia w kolejce. Na przykład gdy użytkownik kliknie przycisk myszy, Windows wysyła kilka myszy komunikatów, takie jak WM_LBUTTONDOWN po naciśnięciu lewego przycisku myszy i WM_LBUTTONUP po zwolnieniu lewego przycisku myszy. Implementacja struktury pętli komunikatów dla aplikacji wysyła komunikat do odpowiedniego okna.
+Pętla komunikatów w `Run` funkcji składowej klasy `CWinApp` Pobiera komunikaty w kolejce wygenerowane przez różne zdarzenia. Na przykład gdy użytkownik kliknie mysz, system Windows wyśle kilka komunikatów związanych z myszą, takich jak WM_LBUTTONDOWN po naciśnięciu lewego przycisku myszy i WM_LBUTTONUP po wydaniu lewego przycisku myszy. Implementacja platformy w pętli komunikatów aplikacji wysyła komunikat do odpowiedniego okna.
 
-Kategorie ważne wiadomości są opisane w [kategorie komunikatów](../mfc/message-categories.md).
+Ważne kategorie komunikatów są opisane w [kategorii komunikatów](message-categories.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Komunikaty i polecenia w strukturze](../mfc/messages-and-commands-in-the-framework.md)
+[Komunikaty i polecenia w strukturze](messages-and-commands-in-the-framework.md)

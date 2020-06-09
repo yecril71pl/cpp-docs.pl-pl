@@ -1,5 +1,5 @@
 ---
-title: 'Zarządzanie pamięcią: Alokacja ramek'
+title: 'Zarządzanie pamięcią: alokacja ramek'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory leaks [MFC], frame allocation
@@ -18,27 +18,27 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-ms.openlocfilehash: 1acf2ce89e18dd64c166103b59b5eb7007214efd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ecf1c08164d1a760fce62457a6019e767ed2605
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352130"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626300"
 ---
-# <a name="memory-management-frame-allocation"></a>Zarządzanie pamięcią: Alokacja ramek
+# <a name="memory-management-frame-allocation"></a>Zarządzanie pamięcią: alokacja ramek
 
-Alokacji na ramce przyjmuje jego nazwę z "ramki stosu", o które ustawiono zawsze, gdy funkcja jest wywoływana. Ramka stosu jest to obszar pamięci, który tymczasowo przechowuje argumenty do funkcji, jak również wszelkie zmienne, które są zdefiniowane lokalne do funkcji. Zmienne ramek są często nazywane zmiennymi "Automatyczny", ponieważ kompilator automatycznie przydziela miejsce dla nich.
+Alokacja w ramce przyjmuje swoją nazwę z "ramki stosu", która jest ustawiana za każdym razem, gdy wywoływana jest funkcja. Ramka stosu jest obszarem pamięci, który tymczasowo przechowuje argumenty do funkcji, a także wszelkie zmienne, które są zdefiniowane lokalnie dla funkcji. Zmienne ramek są często nazywane zmiennymi "automatycznymi", ponieważ kompilator automatycznie przydziela miejsce dla nich.
 
-Istnieją dwa główne cechy ramkę alokacji. Najpierw podczas definiowania zmiennej lokalnej, wystarczająca ilość miejsca jest przydzielany na ramce stosu, aby pomieścić całą zmiennej, nawet jeśli jest on dużą tablicę lub struktury danych. Po drugie zmienne ramek są automatycznie usuwane po przejściu poza zakresem:
+Istnieją dwie kluczowe cechy alokacji ramek. Najpierw podczas definiowania zmiennej lokalnej w ramce stosu jest przypisywany wystarczająco dużo miejsca, aby pomieścić całą zmienną, nawet jeśli jest to duża tablica lub struktura danych. Po drugie, zmienne ramki są automatycznie usuwane, gdy wykraczają poza zakres:
 
-[!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]
+[!code-cpp[NVC_MFC_Utilities#10](codesnippet/cpp/memory-management-frame-allocation_1.cpp)]
 
-Dla zmiennych lokalnych funkcji to przejście zakresu występuje, gdy wyjścia funkcji, ale zakres zmiennej ramki może być mniejszy niż funkcja, jeśli używane są zagnieżdżonych nawiasów klamrowych. Bardzo ważne jest to automatyczne wykrywanie zmienne ramek. W przypadku prostych typów pierwotnych (takie jak **int** lub **bajtów**), tablic lub struktur danych, automatyczne wykrywanie po prostu odzyskuje pamięć używaną przez zmienną. Ponieważ zmienna stała się poza zakresem, nie są dostępne w mimo to. W przypadku obiektów języka C++ jednak proces automatycznego usuwania jest nieco bardziej skomplikowane.
+W przypadku zmiennych funkcji lokalnych to przejście zakresu odbywa się po zakończeniu funkcji, ale zakres zmiennej ramki może być mniejszy niż funkcja, jeśli są używane zagnieżdżone nawiasy klamrowe. To automatyczne usuwanie zmiennych ramek jest bardzo ważne. W przypadku prostych typów pierwotnych (takich jak **int** lub **Byte**), tablic lub struktur danych automatyczne usuwanie po prostu ponownie przejmuje pamięć używaną przez zmienną. Ponieważ zmienna została wypada poza zakresem, nie można do niej uzyskać dostępu. Jednak w przypadku obiektów C++ proces automatycznego usuwania jest nieco bardziej skomplikowany.
 
-Gdy obiekt jest zdefiniowany jako zmienna ramki, jego konstruktor jest wywoływana automatycznie w momencie, w którym występuje definicja. Gdy obiekt wykracza poza zakres, jego destruktor jest wywoływana automatycznie, zanim pamięci dla obiektu są odzyskiwane. To automatyczne konstrukcje i zniszczenie ruchu może być bardzo przydatne, ale należy pamiętać, automatyczne wywołań, szczególnie w celu destruktor.
+Gdy obiekt jest zdefiniowany jako zmienna ramki, jego Konstruktor jest automatycznie wywoływany w punkcie, w którym znajduje się definicja. Gdy obiekt wykracza poza zakres, jego destruktor jest automatycznie wywoływany przed odzyskiwaniem pamięci dla obiektu. Ta automatyczna konstrukcja i niszczenie może być bardzo przydatne, ale należy pamiętać o automatycznym wykorzystaniu, szczególnie dla destruktora.
 
-Zaletą alokowania obiektów w ramce jest, że są automatycznie usuwane. Podczas alokowania obiektów na ramce, nie trzeba martwić się o obiektach zapomniane, powodując przecieków pamięci. (Aby uzyskać szczegółowe informacje dotyczące przecieki pamięci, zobacz artykuł [wykrywania przecieków pamięci w MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476(v=vs.100)).) Alokacja ramek niedogodność polega na tym, że zmienne ramek nie można używać poza ich zakresem. Innym czynnikiem w wyborze ramkę alokacji i Alokacja sterty dla dużych struktur i obiektów, jest często lepiej używać sterty zamiast stosu magazynu, ponieważ obszar stosu często jest ograniczona.
+Główną zaletą alokowania obiektów w ramce jest to, że są one automatycznie usuwane. Po przydzieleniu obiektów do ramki nie trzeba martwić się o zapomniane obiekty powodujące przecieki pamięci. (Szczegółowe informacje o przeciekach pamięci znajdują się [w artykule Wykrywanie przecieków pamięci w MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476(v=vs.100))). Wadą alokacji ramki jest to, że zmienne ramek nie mogą być używane poza ich zakresem. Innym czynnikiem podczas wybierania alokacji ramek i alokacji sterty jest to, że w przypadku dużych struktur i obiektów często lepiej jest używać sterty zamiast stosu dla magazynu, ponieważ przestrzeń stosu jest często ograniczona.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Zarządzanie pamięcią](../mfc/memory-management.md)
+[Zarządzanie pamięcią](memory-management.md)

@@ -7,27 +7,27 @@ helpviewer_keywords:
 - CWnd objects [MFC]
 - CWnd objects [MFC], creating
 ms.assetid: f5ff91a6-4069-47d7-9177-1e6c80d3792c
-ms.openlocfilehash: 606593e3700f04972e031ef43eba0a7e8c134e79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbaad1b973ce944d94dd61bcd368f13e85d73261
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241951"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626507"
 ---
 # <a name="creating-windows"></a>Tworzenie okien
 
-Struktura automatycznie tworzy większość systemu windows, które są potrzebne w ramach programu. [Tworzenie dokumentu/widoku](../mfc/document-view-creation.md) pokazuje, jak szablon tworzy okien ramowych związane z dokumentami i widokami. Ale do specjalnych celów, możesz utworzyć własne okna — w tym własne okna podrzędnego okna ramowe lub widoków — oprócz systemu windows, dostarczone przez platformę.
+Struktura automatycznie tworzy większość potrzebnych okien w programie ramowym. [Tworzenie dokumentu/widoku](document-view-creation.md) pokazuje, jak struktura tworzy okna ramek skojarzone z dokumentami i widokami. Jednak w specjalnych celach można utworzyć własne okna — w tym własne okna z ramkami systemu Windows lub widoki — oprócz systemu Windows dostarczonego przez platformę.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-- [Rejestrowanie klas"okien"](../mfc/registering-window-classes.md) (w przeciwieństwie do obiekty okna C++)
+- [Rejestrowanie okna "Classes](registering-window-classes.md) " (w przeciwieństwie do obiektów okien C++)
 
-- [Sekwencja tworzenia okna ogólne](../mfc/general-window-creation-sequence.md)
+- [Ogólna Sekwencja tworzenia okna](general-window-creation-sequence.md)
 
-- [Niszczenie obiektów okien](../mfc/destroying-window-objects.md)
+- [Niszczenie obiektów okien](destroying-window-objects.md)
 
-- [Praca z obiektami okien](../mfc/working-with-window-objects.md)
+- [Praca z obiektami okien](working-with-window-objects.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obiekty okna](../mfc/window-objects.md)
+[Obiekty okien](window-objects.md)

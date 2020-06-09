@@ -6,25 +6,25 @@ helpviewer_keywords:
 - image lists [MFC], creating for CListCtrl
 - lists [MFC], image
 ms.assetid: c2768515-deba-49e8-a6f3-5be6482afb19
-ms.openlocfilehash: 440ab6fdfe7663557f6c6a6607e617c793d26674
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bbba01a6a8e08ea53e164656733aa06e03dd87a7
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371573"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625949"
 ---
 # <a name="creating-the-image-lists"></a>Tworzenie list obrazów
 
-Tworzenie list obrazów jest takie samo, niezależnie od tego, czy używasz [CListView](../mfc/reference/clistview-class.md) lub [CListCtrl](../mfc/reference/clistctrl-class.md).
+Tworzenie list obrazów jest takie samo, jak w przypadku używania [CListView](reference/clistview-class.md) lub [CListCtrl](reference/clistctrl-class.md).
 
 > [!NOTE]
-> Listy obrazów są potrzebne tylko wtedy, gdy formant listy zawiera `LVS_ICON` styl.
+> Tylko listy obrazów są potrzebne, Jeśli kontrolka listy zawiera `LVS_ICON` styl.
 
-Klasa `CImageList` służy do tworzenia jednej lub więcej list obrazów (w przypadku pełnowymiarowych ikon, małych ikon i stanów). Zobacz [CImageList](../mfc/reference/cimagelist-class.md)i zobacz [Listy obrazów widoku listy](/windows/win32/Controls/using-list-view-controls) w zestawie Windows SDK.
+Użyj klasy `CImageList` , aby utworzyć co najmniej jedną listę obrazów (dla ikon o pełnym rozmiarze, małych ikon i Stanów). Zobacz [Korzystanie CImageList](reference/cimagelist-class.md)i zobacz [listę obrazów widoku listy](/windows/win32/Controls/using-list-view-controls) w Windows SDK.
 
-Wywołaj [CListCtrl::SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) dla każdej listy obrazów; przekazać wskaźnik do `CImageList` odpowiedniego obiektu.
+Wywołaj [CListCtrl:: SetImageList](reference/clistctrl-class.md#setimagelist) dla każdej listy obrazów; Przekaż wskaźnik do odpowiedniego `CImageList` obiektu.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Korzystanie z CListCtrl](../mfc/using-clistctrl.md)<br/>
-[Formanty](../mfc/controls-mfc.md)
+[Korzystanie z CListCtrl](using-clistctrl.md)<br/>
+[Formanty](controls-mfc.md)

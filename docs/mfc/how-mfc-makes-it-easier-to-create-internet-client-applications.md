@@ -6,32 +6,32 @@ helpviewer_keywords:
 - Internet applications [MFC], MFC
 - MFC, Internet applications
 ms.assetid: 94437b3f-f15c-437d-b5fd-264a2efec9ab
-ms.openlocfilehash: ffeed3a844fb86acf1bf8c5181c59529824c27f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71b72a3079cd0d0c87289c1813c09a24d9f75c89
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405758"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618558"
 ---
 # <a name="how-mfc-makes-it-easier-to-create-internet-client-applications"></a>Jak MFC ułatwia tworzenie klienckich aplikacji internetowych
 
-Microsoft Foundation Classes hermetyzacji funkcji rozszerzenia internetowe Win32 (WinInet) w taki sposób, który zapewnia znanych kontekst dla programistów MFC. Biblioteka MFC zawiera trzy klasy pliku Internet ([CInternetFile](../mfc/reference/cinternetfile-class.md), [CHttpFile](../mfc/reference/chttpfile-class.md), i [CGopherFile](../mfc/reference/cgopherfile-class.md)) pochodzące z [CStdioFile](../mfc/reference/cstdiofile-class.md) klasy . Nie tylko tych klas należy podczas pobierania danych i manipulowania nimi Internet znanych dla programistów, którzy korzystali z `CStdioFile` plików lokalnych, ale z tych klas w sposób spójny, przejrzyste może obsługiwać lokalnych plików i plików internetowych.
+Microsoft Foundation Classes hermetyzuje funkcje rozszerzenia internetowego Win32 (WinInet) w sposób, który zapewnia znany kontekst dla programistów MFC. MFC udostępnia trzy klasy internetowych plików ([CInternetFile](reference/cinternetfile-class.md), [CHttpFile](reference/chttpfile-class.md)i [CGopherFile](reference/cgopherfile-class.md)) pochodzące z klasy [CStdioFile](reference/cstdiofile-class.md) . Te klasy nie tylko umożliwiają pobieranie i manipulowanie danymi internetowymi, które są znane dla programistów, którzy używali `CStdioFile` plików lokalnych, ale z tymi klasami można obsługiwać lokalne pliki i pliki internetowe w spójny, przejrzysty sposób.
 
-Klas MFC WinInet zapewniają taką samą funkcjonalność jak `CStdioFile` dla danych przesyłanych przez Internet. Te klasy abstrakcyjnej protokołów internetowych dla protokołu HTTP, FTP i gopher do aplikacji wysokiego poziomu interfejs programowania, zapewniając szybki i prosty ścieżki do tworzenia aplikacji obsługujących Internet. Na przykład nadal połączenie z serwerem FTP wymaga podjęcia kilku czynności na niskim poziomie, ale jako deweloper w MFC, wystarczy utworzyć jedno wywołanie `CInternetSession::GetFTPConnection` do utworzenia tego połączenia.
+Klasy MFC WinInet zapewniają takie same funkcje jak `CStdioFile` w przypadku danych przesyłanych przez Internet. Klasy te stanowią abstrakcyjne protokoły internetowe dla protokołów HTTP, FTP i gopher w interfejsie programowania aplikacji wysokiego poziomu, zapewniając szybką i prostą ścieżkę do tworzenia aplikacji internetowych. Na przykład połączenie z serwerem FTP nadal wymaga kilku kroków na niskim poziomie, ale jako deweloper MFC wystarczy wykonać jedno wywołanie, aby `CInternetSession::GetFTPConnection` utworzyć połączenie.
 
-Ponadto klas MFC WinInet zapewniają następujące korzyści:
+Ponadto klasy MFC WinInet zapewniają następujące korzyści:
 
-- Buforowanego wejścia/wyjścia
+- Buforowane we/wy
 
-- Bezpieczne dojścia dla swoich danych
+- Bezpieczne dla typu uchwyty dla danych
 
 - Domyślne parametry dla wielu funkcji
 
-- Obsługa dla typowych błędów Internet wyjątków
+- Obsługa wyjątków typowych błędów internetowych
 
-- Automatyczne oczyszczanie otwarte dojścia i połączeń
+- Automatyczne czyszczenie otwartych dojść i połączeń
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Rozszerzenia internetowe Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
-[Jak WinInet ułatwia tworzenie klienckich aplikacji internetowych](../mfc/how-wininet-makes-it-easier-to-create-internet-client-applications.md)
+[Rozszerzenia internetowe Win32 (WinInet)](win32-internet-extensions-wininet.md)<br/>
+[Jak WinInet ułatwia tworzenie klienckich aplikacji internetowych](how-wininet-makes-it-easier-to-create-internet-client-applications.md)

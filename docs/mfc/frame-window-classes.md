@@ -12,33 +12,33 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - classes [MFC], window
 ms.assetid: c27e43a7-8ad0-4759-b1b7-43f4725f4132
-ms.openlocfilehash: d42fa475fca7c92e4ba46b164a9beda9869231c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffa5b966ee042120213896dc7ad9d81c048ef928
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219785"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625811"
 ---
 # <a name="frame-window-classes"></a>Klasy okien ramowych
 
-Każda aplikacja ma jeden "ramką głównego okna," oknem pulpitu, które zazwyczaj ma nazwę aplikacji w jego podpisu. Każdy dokument ma zwykle jedną "okna ramki dokumentu." Okna ramki dokumentu zawiera co najmniej jeden widok, który przedstawia dane dokumentu.
+Każda aplikacja ma jedno "główne okno ramowe", czyli okno pulpitu, które zwykle zawiera nazwę aplikacji w jej podpisie. Każdy dokument ma zwykle jedno "okno ramki dokumentu". Okno ramki dokumentu zawiera co najmniej jeden widok, który przedstawia dane dokumentu.
 
-## <a name="frame-windows-in-sdi-and-mdi-applications"></a>Windows ramek SDI i MDI aplikacji
+## <a name="frame-windows-in-sdi-and-mdi-applications"></a>Okna ramowe w aplikacjach SDI i MDI
 
-Dla aplikacji interfejsu SDI istnieje jedno okno ramki pochodzi od klasy [CFrameWnd](../mfc/reference/cframewnd-class.md). To okno jest głównej ramki okna i okna ramki dokumentu. Dla aplikacji MDI ramki głównego okna jest pochodną klasy [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), i okien ramowych dokumentu, które są podrzędne MDI, pochodzą z klasy [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md).
+W przypadku aplikacji SDI istnieje jedno okno ramowe pochodzące z klasy [obiektu CFrameWnd](reference/cframewnd-class.md). To okno jest zarówno głównym oknem ramki, jak i oknem ramki dokumentu. W przypadku aplikacji MDI okno głównej ramki pochodzi od klasy [CMDIFrameWnd](reference/cmdiframewnd-class.md), a okna ramki dokumentu, które są oknami podrzędnymi MDI, pochodzą z klasy [CMDIChildWnd](reference/cmdichildwnd-class.md).
 
-## <a name="use-the-frame-window-class-or-derive-from-it"></a>Korzystanie z klasy okien ramowych lub pochodzić od niego
+## <a name="use-the-frame-window-class-or-derive-from-it"></a>Użyj klasy okien ramowych lub pochodnej
 
-Te klasy oferują najbardziej funkcje ramki okna, które należy używać w aplikacjach. W normalnych warunkach domyślnego zachowania i wyglądu, jakie zapewniają będzie odpowiadać Twoim potrzebom. Jeśli potrzebujesz dodatkowych funkcji, pochodzi z tych klas.
+Te klasy zapewniają większość funkcji okna ramki, które są potrzebne dla aplikacji. W normalnych warunkach zachowanie domyślne i ich wygląd będą odpowiadały Twoim potrzebom. Jeśli potrzebujesz dodatkowych funkcji, pochodne od tych klas.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-- [Klasy okien ramowych tworzone przez Kreatora aplikacji](../mfc/frame-window-classes-created-by-the-application-wizard.md)
+- [Klasy okien ramowych tworzone przez Kreatora aplikacji](frame-window-classes-created-by-the-application-wizard.md)
 
-- [Style okna ramki](../mfc/frame-window-styles-cpp.md)
+- [Style okna ramowego](frame-window-styles-cpp.md)
 
-- [Zmienianie stylów okna utworzonego przez MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
+- [Zmienianie stylów okna utworzonego przez MFC](changing-the-styles-of-a-window-created-by-mfc.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Okna ramowe](../mfc/frame-windows.md)
+[Okna ramowe](frame-windows.md)

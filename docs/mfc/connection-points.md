@@ -15,55 +15,55 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: 6f934c4a5a24c5d54805a60e81cb0afdcdc2c14a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a8fc4742b8bf686edf75f3b98cc283b9bf9881b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153316"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620728"
 ---
 # <a name="connection-points"></a>Punkty połączenia
 
-W tym artykule wyjaśniono, jak zaimplementować punktów połączenia (wcześniej znane jako punkty połączenia OLE) przy użyciu klas MFC `CCmdTarget` i `CConnectionPoint`.
+W tym artykule wyjaśniono, jak zaimplementować punkty połączenia (znane wcześniej jako punkty połączenia OLE) przy użyciu klas MFC `CCmdTarget` i `CConnectionPoint` .
 
-W przeszłości Component Object Model (COM) zdefiniowany mechanizm ogólnego (`IUnknown::QueryInterface`*), mogą obiekty do wdrożenia i ujawniać funkcjonalność w interfejsach. Odpowiedni mechanizm, który może obiekty do udostępnienia możliwość wywołania określonych interfejsów nie została zdefiniowana. Oznacza to, COM zdefiniowane przychodzącymi wskaźników do obiektów zostały obsłużone (wskaźników do tego obiektu interfejsów), ale nie miał jawnego modelu dla wychodzących interfejsów (obiekt przechowuje inne obiekty interfejsy wskaźników). COM ma teraz modelu o nazwie punktów połączenia, która obsługuje tę funkcję.
+W przeszłości Component Object Model (COM) zdefiniował ogólny mechanizm ( `IUnknown::QueryInterface` *), który zezwala obiektom na implementowanie i Uwidacznianie funkcji w interfejsach. Jednak odpowiedni mechanizm, który zezwala obiektom na ujawnienie ich możliwości wywołania określonych interfejsów, nie został zdefiniowany. Oznacza to, że model COM definiuje sposób obsługi wskaźników przychodzących do obiektów (wskaźników do interfejsów tego obiektu), ale nie miał jawnie modelu dla interfejsów wychodzących (wskaźniki, które obiekt przechowuje do innych interfejsów obiektów). COM ma teraz model o nazwie punkty połączenia, który obsługuje tę funkcję.
 
-Połączenie ma dwie części: obiekt wywołujący interfejs o nazwie źródło i obiekt implementujący interfejs o nazwie ujścia. Punkt połączenia jest interfejs udostępnianych przez źródło. Dzięki uwidocznieniu działania punktu połączenia, źródłem umożliwia ujścia do nawiązywania połączeń z samym sobą (źródło). Przez połączenie punktu mechanizm ( `IConnectionPoint` interface), wskaźnik do interfejsu ujścia jest przekazywany do obiektu źródłowego. This, wskaźnik zawiera źródła dzięki dostępowi do implementacji obiektu sink zestaw elementów członkowskich. Na przykład aby wyzwolić zdarzenie implementowany przez obiekt sink, źródła można wywołać odpowiedniej metody wdrożenia ujścia. Na poniższym rysunku pokazano połączenie punktu właśnie opisanego.
+Połączenie ma dwie części: obiekt wywołujący interfejs, nazywany źródłem, i obiekt implementujący interfejs, nazywany ujściam. Punkt połączenia jest interfejsem udostępnianym przez źródło. Udostępnienie punktu połączenia umożliwia ujściam nawiązywanie połączeń z samym sobą (Źródło). Za pomocą mechanizmu punktu połączenia ( `IConnectionPoint` interfejsu) wskaźnik do interfejsu ujścia jest przesyłany do obiektu źródłowego. Ten wskaźnik zapewnia źródło z dostępem do implementacji ujścia zestawu funkcji Członkowskich. Na przykład aby uruchomić zdarzenie zaimplementowane przez ujścia, źródło może wywołać odpowiednią metodę implementacji ujścia. Na poniższej ilustracji przedstawiono właśnie opisany punkt połączenia.
 
-![Zaimplementowane punktu połączenia](../mfc/media/vc37lh1.gif "zaimplementowane punktu połączenia") <br/>
-Punkt połączenia z zaimplementowaną
+![Zaimplementowany punkt połączenia](../mfc/media/vc37lh1.gif "Zaimplementowany punkt połączenia") <br/>
+Zaimplementowany punkt połączenia
 
-MFC implementuje ten model w [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md) i [CCmdTarget](../mfc/reference/ccmdtarget-class.md) klasy. Klasy pochodne `CConnectionPoint` zaimplementować `IConnectionPoint` interfejsu, używany do udostępnienia punkty połączenia do innych obiektów. Klasy pochodne `CCmdTarget` zaimplementować `IConnectionPointContainer` interfejs, który można wymieniać wszystkich obiektów dostępnych punktów połączenia lub znajdowania punktu określonego połączenia.
+MFC implementuje ten model w klasach [CConnectionPoint](reference/cconnectionpoint-class.md) i [CCmdTarget](reference/ccmdtarget-class.md) . Klasy pochodzące od `CConnectionPoint` implementacji `IConnectionPoint` interfejsu, używane do udostępniania punktów połączenia do innych obiektów. Klasy pochodzące od `CCmdTarget` implementacji `IConnectionPointContainer` interfejsu, które mogą wyliczyć wszystkie dostępne punkty połączenia obiektu lub znaleźć konkretny punkt połączenia.
 
-Dla każdego punktu połączenia jest zaimplementowana w klasie należy zadeklarować części połączenia, który implementuje punkt połączenia. W przypadku zastosowania jednego lub więcej punktów połączenia, musi również zadeklarować mapę jednego połączenia w klasie. Mapy połączeń znajduje się tabela punktów połączenia obsługiwane przez kontrolkę ActiveX.
+Dla każdego punktu połączenia zaimplementowanego w klasie należy zadeklarować część połączenia implementującą punkt połączenia. W przypadku zaimplementowania co najmniej jednego punktu połączenia należy również zadeklarować pojedyncze mapowanie połączenia w klasie. Mapa połączenia to tabela punktów połączenia obsługiwanych przez formant ActiveX.
 
-W poniższych przykładach pokazano mapy prostego połączenia i jedno połączenie punkt. Pierwszy przykład deklaruje mapie połączenia, a punkt; drugi przykład implementuje mapy i punkt. Należy pamiętać, że `CMyClass` musi być `CCmdTarget`-klasy pochodnej. W pierwszym przykładzie kod jest wstawiany w deklaracji klasy, w obszarze **chronione** sekcji:
+W poniższych przykładach pokazano prostą mapę połączeń i jeden punkt połączenia. Pierwszy przykład deklaruje mapę połączenia i punkt; Drugi przykład implementuje mapę i punkt. Należy pamiętać, że `CMyClass` musi być `CCmdTarget` klasą pochodną. W pierwszym przykładzie kod jest wstawiany w deklaracji klasy, w sekcji **chronionej** :
 
-[!code-cpp[NVC_MFCConnectionPoints#1](../mfc/codesnippet/cpp/connection-points_1.h)]
+[!code-cpp[NVC_MFCConnectionPoints#1](codesnippet/cpp/connection-points_1.h)]
 
-**BEGIN_CONNECTION_PART** i **END_CONNECTION_PART** makra, Zadeklaruj klasę osadzone `XSampleConnPt` (pochodną `CConnectionPoint`), że implementacja tego konkretnego połączenia punktu. Jeśli chcesz przesłonić `CConnectionPoint` funkcji składowych lub Dodaj funkcje Członkowskie samodzielnie, zadeklarować je między te dwa makra. Na przykład `CONNECTION_IID` zastępuje — makro `CConnectionPoint::GetIID` funkcja elementu członkowskiego umieszczone między te dwa makra.
+Makra **BEGIN_CONNECTION_PART** i **END_CONNECTION_PART** deklarują klasę osadzoną `XSampleConnPt` (pochodną od `CConnectionPoint` ), która implementuje ten konkretny punkt połączenia. Jeśli chcesz przesłonić dowolne `CConnectionPoint` funkcje Członkowskie lub dodać własne funkcje członkowskie, zadeklaruj te dwa makra. Na przykład `CONNECTION_IID` makro zastępuje `CConnectionPoint::GetIID` funkcję członkowską po umieszczeniu między tymi dwoma makrami.
 
-W drugim przykładzie kod jest wstawiany w pliku implementacji formantu (plik .cpp). Ten kod implementuje mapy połączenia, który zawiera punkt połączenia, `SampleConnPt`:
+W drugim przykładzie kod jest wstawiany do pliku implementacji kontrolki (plik. cpp). Ten kod implementuje mapę połączeń, która obejmuje punkt połączenia `SampleConnPt` :
 
-[!code-cpp[NVC_MFCConnectionPoints#2](../mfc/codesnippet/cpp/connection-points_2.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#2](codesnippet/cpp/connection-points_2.cpp)]
 
-Jeśli klasa ma więcej niż jedno połączenie punkt, wstawić dodatkowe **CONNECTION_PART** makra między **BEGIN_CONNECTION_MAP** i **END_CONNECTION_MAP** makra.
+Jeśli klasa ma więcej niż jeden punkt połączenia, Wstaw dodatkowe makra **CONNECTION_PART** między makrami **BEGIN_CONNECTION_MAP** i **END_CONNECTION_MAP** .
 
-Na koniec należy dodać wywołanie `EnableConnections` w konstruktorze klasy. Na przykład:
+Na koniec Dodaj wywołanie do `EnableConnections` w konstruktorze klasy. Przykład:
 
-[!code-cpp[NVC_MFCConnectionPoints#3](../mfc/codesnippet/cpp/connection-points_3.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#3](codesnippet/cpp/connection-points_3.cpp)]
 
-Po wstawieniu ten kod swojej `CCmdTarget`-klasy pochodnej udostępnia punkt połączenia dla `ISampleSink` interfejsu. Na poniższym rysunku przedstawiono w tym przykładzie.
+Po wstawieniu tego kodu `CCmdTarget` Klasa pochodna uwidacznia punkt połączenia dla `ISampleSink` interfejsu. Poniższy rysunek ilustruje ten przykład.
 
-![Punkt połączenia z implementowane za pomocą MFC](../mfc/media/vc37lh2.gif "punktu połączenia implementowane za pomocą MFC") <br/>
-Punkt połączenia implementowane za pomocą MFC
+![Punkt połączenia zaimplementowany przy użyciu MFC](../mfc/media/vc37lh2.gif "Punkt połączenia zaimplementowany przy użyciu MFC") <br/>
+Punkt połączenia zaimplementowany z MFC
 
-Zazwyczaj punkty połączenia obsługi "multiemisji" — możliwość emisji do wielu ujść podłączone do tego samego interfejsu. Poniższy fragment przykład pokazuje, jak do obsługi multiemisji przez iterację każdy obiekt sink dla punktu połączenia:
+Zazwyczaj punkty połączenia obsługują "multiemisję" — możliwość emisji do wielu obiektów ujścia podłączonych do tego samego interfejsu. Poniższy przykładowy fragment ilustruje sposób multiemisji poprzez iterację w każdym ujścia w punkcie połączenia:
 
-[!code-cpp[NVC_MFCConnectionPoints#4](../mfc/codesnippet/cpp/connection-points_4.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#4](codesnippet/cpp/connection-points_4.cpp)]
 
-W tym przykładzie pobiera bieżący zestaw połączeń na `SampleConnPt` punkt połączenia z wywołaniem `CConnectionPoint::GetConnections`. Następnie wykonuje iterację przez połączenia i wywołania `ISampleSink::SinkFunc` dla każdego aktywnego połączenia.
+Ten przykład pobiera bieżący zestaw połączeń w `SampleConnPt` punkcie połączenia z wywołaniem do `CConnectionPoint::GetConnections` . Następnie wykonuje iterację połączeń i wywołań `ISampleSink::SinkFunc` na każdym aktywnym połączeniu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[MFC COM](../mfc/mfc-com.md)
+[MFC COM](mfc-com.md)
