@@ -7,19 +7,19 @@ helpviewer_keywords:
 - messages, command [MFC]
 - command routing [MFC], command targets
 ms.assetid: b0f784e5-c6dc-4391-9e71-aa7b7dcbe9f0
-ms.openlocfilehash: ed3d6a68967dc7f4244f887ae34760fdb99fa7f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59ba197174e95e42cd237c875f39f07801cb3dbe
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388517"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619311"
 ---
 # <a name="command-targets"></a>Obiekty docelowe poleceń
 
-Rysunek [polecenia w strukturze](../mfc/user-interface-objects-and-command-ids.md) Pokazuje połączenia między obiekt interfejsu użytkownika, na przykład element menu, a funkcja obsługi, który struktura wywołuje do przeprowadzania wynikowy polecenia, po kliknięciu obiektu.
+Polecenia rysunek [w strukturze](user-interface-objects-and-command-ids.md) przedstawiają połączenie między obiektem interfejsu użytkownika, takim jak element menu, a funkcją obsługi, którą struktura wywołuje w celu przeprowadzenia wyniku polecenia po kliknięciu obiektu.
 
-Windows wysyła komunikaty, które nie są komunikaty poleceń, bezpośrednio do okna, którego program obsługi wiadomości jest następnie wywoływana. Jednak struktura kieruje polecenia do liczby obiektów Release candidate — o nazwie "obiekty docelowe poleceń" — jeden z nich zwykle wywołuje program obsługi dla polecenia. Funkcje obsługi działają tak samo dla poleceń i standardowe komunikaty Windows, ale mechanizmy, według których są one nazywane różnią się, jak wyjaśniono w [jak struktura wywołuje program obsługi](../mfc/how-the-framework-calls-a-handler.md).
+System Windows wysyła komunikaty, które nie są komunikatami poleceń bezpośrednio do okna, którego program obsługi wiadomości jest wywoływany. Jednak struktura kieruje polecenia do kilku obiektów kandydujących — nazywanych "obiektami docelowymi poleceń" — jednym z, które zwykle wywołuje procedurę obsługi dla polecenia. Funkcje obsługi działają w taki sam sposób dla obu poleceń i standardowych komunikatów systemu Windows, ale mechanizmy, za pomocą których są wywoływane, są inne, zgodnie z opisem w temacie [jak struktura wywołuje procedurę obsługi](how-the-framework-calls-a-handler.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Komunikaty i polecenia w strukturze](../mfc/messages-and-commands-in-the-framework.md)
+[Komunikaty i polecenia w strukturze](messages-and-commands-in-the-framework.md)

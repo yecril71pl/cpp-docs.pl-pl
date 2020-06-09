@@ -31,46 +31,46 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: c1c5593aee19254d4348d4e8658ffe9c3f0cf1b2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 585fd30715ff3520245210badc0fde2e2f87ae13
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368250"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622065"
 ---
 # <a name="safeint-functions"></a>SafeInt — Funkcje
 
-Biblioteka SafeInt udostępnia kilka funkcji, których można używać bez tworzenia wystąpienia [klasy SafeInt.](../safeint/safeint-class.md) Jeśli chcesz chronić pojedynczą operację matematyczną przed przepełnieniem liczby całkowitej, możesz użyć tych funkcji. Jeśli chcesz chronić wiele operacji matematycznych, należy utworzyć `SafeInt` obiekty. Jest bardziej wydajne `SafeInt` do tworzenia obiektów niż do korzystania z tych funkcji wiele razy.
+Biblioteka SafeInt zawiera kilka funkcji, których można użyć bez tworzenia wystąpienia [klasy SafeInt](safeint-class.md). Jeśli chcesz chronić pojedynczą operację matematyczną z przepełnienia liczby całkowitej, możesz użyć tych funkcji. Jeśli chcesz chronić wiele operacji matematycznych, należy utworzyć `SafeInt` obiekty. Tworzenie obiektów jest bardziej wydajne `SafeInt` niż używanie tych funkcji wiele razy.
 
-Te funkcje umożliwiają porównywanie lub wykonywanie operacji matematycznych na dwóch różnych typach parametrów bez konieczności konwersji ich na ten sam typ.
+Te funkcje umożliwiają porównywanie lub wykonywanie operacji matematycznych na dwóch różnych typach parametrów bez konieczności konwertowania ich na ten sam typ.
 
-Każda z tych funkcji ma `T` `U`dwa typy szablonów: i . Każdy z tych typów może być typu logicznego, znakowego lub integralnego. Typy zintegrowane mogą być podpisane lub niepodpisane i dowolny rozmiar od 8 bitów do 64 bitów.
+Każda z tych funkcji ma dwa typy szablonów: `T` i `U` . Każdy z tych typów może być wartością logiczną, znakiem lub typem całkowitym. Typy całkowite mogą być podpisane lub niepodpisane oraz mieć dowolny rozmiar z 8 bitów do 64 bitów.
 
 > [!NOTE]
-> Najnowsza wersja tej biblioteki [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)znajduje się pod adresem .
+> Najnowsza wersja tej biblioteki znajduje się w lokalizacji [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) .
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 Funkcja                      | Opis
 ----------------------------- | --------------------------------------------------------------
 [SafeAdd](#safeadd)           | Dodaje dwie liczby i chroni przed przepełnieniem.
-[Safecast](#safecast)         | Rzutuje jeden typ parametru na inny typ.
-[SafeDivide](#safedivide)     | Dzieli dwie liczby i chroni przed dzieleniem przez zero.
-[SafeEquals](#safeequals), [SafeGreaterThan](#safegreaterthan), [SafeGreaterThanEquals](#safegreaterthanequals), [SafeLessThan](#safelessthan), [SafeLessThanEquals](#safelessthanequals), [SafeNotEquals](#safenotequals) | Porównuje dwie liczby. Te funkcje umożliwiają porównywanie dwóch różnych typów liczb bez zmiany ich typów.
-[SafeModulus](#safemodulus)   | Wykonuje operację modułu na dwóch liczbach.
-[SafeMultiply](#safemultiply) | Mnoży dwie liczby razem i chroni przed przepełnieniem.
+[SafeCast](#safecast)         | Rzutuje jeden typ parametru na inny typ.
+[SafeDivide](#safedivide)     | Dzieli dwie liczby i chroni przed podziałem przez zero.
+[SafeEquals](#safeequals), [SafeGreaterThan](#safegreaterthan), [SafeGreaterThanEquals](#safegreaterthanequals), [SafeLessThan](#safelessthan), [SafeLessThanEquals](#safelessthanequals), [SafeNotEquals](#safenotequals) | Porównuje dwie liczby. Te funkcje pozwalają porównać dwa różne typy liczb bez zmiany ich typów.
+[SafeModulus](#safemodulus)   | Wykonuje operację modułu dla dwóch liczb.
+[SafeMultiply](#safemultiply) | Mnoży dwie liczby jednocześnie i chroni przed przepełnieniem.
 [SafeSubtract](#safesubtract) | Odejmuje dwie liczby i chroni przed przepełnieniem.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 Sekcja                                                  | Opis
 -------------------------------------------------------- | ----------------------------------------------------
-[Safeint](../safeint/safeint-class.md)                   | `SafeInt` Klasa.
-[SafeIntException (SafeIntException)](../safeint/safeintexception-class.md) | Klasa wyjątku specyficzne dla biblioteki SafeInt.
+[SafeInt](safeint-class.md)                   | `SafeInt`Klasa.
+[SafeIntException](safeintexception-class.md) | Klasa wyjątku określona dla biblioteki SafeInt.
 
-## <a name="safeadd"></a><a name="safeadd"></a>SafeAdd ( SafeAdd )
+## <a name="safeadd"></a><a name="safeadd"></a>SafeAdd
 
-Dodaje dwie liczby w sposób, który chroni przed przepełnieniem.
+Dodaje dwie liczby w sposób chroniący przed przepełnieniem.
 
 ```cpp
 template<typename T, typename U>
@@ -83,20 +83,20 @@ inline bool SafeAdd (
 
 ### <a name="parameters"></a>Parametry
 
-*t*<br/>
-[w] Pierwszy numer do dodania. Musi to być typ T.
+*&*<br/>
+podczas Pierwsza liczba do dodania. Musi to być typ T.
 
-*U*<br/>
-[w] Drugi numer do dodania. Musi to być typu U.
+*'t*<br/>
+podczas Druga liczba, która ma zostać dodana. Musi to być typ U.
 
-*Wynik*<br/>
-[na zewnątrz] Parametr, `SafeAdd` w którym przechowuje wynik.
+*result*<br/>
+określoną Parametr, w którym `SafeAdd` jest przechowywany wynik.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli nie wystąpi żaden błąd; **false,** jeśli wystąpi błąd.
+**wartość true** , jeśli nie wystąpi błąd; **wartość false** , jeśli wystąpi błąd.
 
-## <a name="safecast"></a><a name="safecast"></a>Safecast
+## <a name="safecast"></a><a name="safecast"></a>SafeCast
 
 Rzutuje jeden typ liczby na inny typ.
 
@@ -110,17 +110,17 @@ inline bool SafeCast (
 
 ### <a name="parameters"></a>Parametry
 
-*Z*<br/>
-[w] Numer źródłowy do konwersji. Musi to być `T`typu .
+*Wniosek*<br/>
+podczas Numer źródłowy do przekonwertowania. Musi to być typ `T` .
 
 *Do*<br/>
-[na zewnątrz] Odwołanie do nowego typu numeru. Musi to być `U`typu .
+określoną Odwołanie do nowego typu numeru. Musi to być typ `U` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli nie wystąpi żaden błąd; **false,** jeśli wystąpi błąd.
+**wartość true** , jeśli nie wystąpi błąd; **wartość false** , jeśli wystąpi błąd.
 
-## <a name="safedivide"></a><a name="safedivide"></a>SafeDivide (Bezpieczny podział)
+## <a name="safedivide"></a><a name="safedivide"></a>SafeDivide
 
 Dzieli dwie liczby w sposób chroniący przed dzieleniem przez zero.
 
@@ -135,20 +135,20 @@ inline bool SafeDivide (
 
 ### <a name="parameters"></a>Parametry
 
-*t*<br/>
-[w] Dzielnik. Musi to być typ T.
+*&*<br/>
+podczas Dzielnik. Musi to być typ T.
 
-*U*<br/>
-[w] Dywidenda. Musi to być typu U.
+*'t*<br/>
+podczas Dywidenda. Musi to być typ U.
 
-*Wynik*<br/>
-[na zewnątrz] Parametr, `SafeDivide` w którym przechowuje wynik.
+*result*<br/>
+określoną Parametr, w którym `SafeDivide` jest przechowywany wynik.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli nie wystąpi żaden błąd; **false,** jeśli wystąpi błąd.
+**wartość true** , jeśli nie wystąpi błąd; **wartość false** , jeśli wystąpi błąd.
 
-## <a name="safeequals"></a><a name="safeequals"></a>SafeEquals ( SafeEquals )
+## <a name="safeequals"></a><a name="safeequals"></a>SafeEquals
 
 Porównuje dwie liczby, aby określić, czy są równe.
 
@@ -162,19 +162,19 @@ inline bool SafeEquals (
 
 ### <a name="parameters"></a>Parametry
 
-*t*<br/>
-[w] Pierwszy numer do porównania. Musi to być typ T.
+*&*<br/>
+podczas Pierwsza liczba do porównania. Musi to być typ T.
 
-*U*<br/>
-[w] Druga liczba do porównania. Musi to być typu U.
+*'t*<br/>
+podczas Druga liczba do porównania. Musi to być typ U.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli *t* i *u* są równe; w przeciwnym razie **false**.
+**prawda** , jeśli *t* i *u* są równe; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Metoda zwiększa, `==` `SafeEquals` ponieważ umożliwia porównanie dwóch różnych typów liczb.
+Metoda jest ulepszona, `==` ponieważ `SafeEquals` umożliwia porównanie dwóch różnych typów liczb.
 
 ## <a name="safegreaterthan"></a><a name="safegreaterthan"></a>SafeGreaterThan
 
@@ -190,15 +190,15 @@ inline bool SafeGreaterThan (
 
 ### <a name="parameters"></a>Parametry
 
-*t*<br/>
-[w] Pierwszy numer do porównania. Musi to być `T`typu .
+*&*<br/>
+podczas Pierwsza liczba do porównania. Musi to być typ `T` .
 
-*U*<br/>
-[w] Druga liczba do porównania. Musi to być `U`typu .
+*'t*<br/>
+podczas Druga liczba do porównania. Musi to być typ `U` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli *t* jest większa niż *u*; w przeciwnym razie **false**.
+**prawda** , jeśli *t* jest większy niż *u*; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -218,23 +218,23 @@ inline bool SafeGreaterThanEquals (
 
 ### <a name="parameters"></a>Parametry
 
-*t*<br/>
-[w] Pierwszy numer do porównania. Musi to być `T`typu .
+*&*<br/>
+podczas Pierwsza liczba do porównania. Musi to być typ `T` .
 
-*U*<br/>
-[w] Druga liczba do porównania. Musi to być `U`typu .
+*'t*<br/>
+podczas Druga liczba do porównania. Musi to być typ `U` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**prawda,** jeśli *t* jest większa lub równa *u*; w przeciwnym razie **false**.
+**prawda** , jeśli *t* jest większy lub równy *u*; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
 `SafeGreaterThanEquals`zwiększa standardowy operator porównania, ponieważ umożliwia porównanie dwóch różnych typów liczb.
 
-## <a name="safelessthan"></a><a name="safelessthan"></a>SafeLessDziej
+## <a name="safelessthan"></a><a name="safelessthan"></a>SafeLessThan
 
-Określa, czy jedna liczba jest mniejsza niż inna.
+Określa, czy jedna liczba jest mniejsza od innej.
 
 ```cpp
 template<typename T, typename U>
@@ -246,21 +246,21 @@ inline bool SafeLessThan (
 
 ### <a name="parameters"></a>Parametry
 
-*t*<br/>
-[w] Pierwszy numer. Musi to być `T`typu .
+*&*<br/>
+podczas Numer pierwszej. Musi to być typ `T` .
 
-*U*<br/>
-[w] Drugi numer. Musi to być `U`typu .
+*'t*<br/>
+podczas Drugi numer. Musi to być typ `U` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli *t* jest mniejsza niż *u*; w przeciwnym razie **false**.
+**prawda** , jeśli *t* jest mniejszy niż *u*; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zwiększa standardowy `SafeLessThan` operator porównania, ponieważ umożliwia porównanie dwóch różnych typów liczb.
+Ta metoda podnosi standardowy operator porównania, ponieważ `SafeLessThan` umożliwia porównanie dwóch różnych typów liczby.
 
-## <a name="safelessthanequals"></a><a name="safelessthanequals"></a>SafeLessThanequals
+## <a name="safelessthanequals"></a><a name="safelessthanequals"></a>SafeLessThanEquals
 
 Porównuje dwie liczby.
 
@@ -274,23 +274,23 @@ inline bool SafeLessThanEquals (
 
 ### <a name="parameters"></a>Parametry
 
-*t*<br/>
-[w] Pierwszy numer do porównania. Musi to być `T`typu .
+*&*<br/>
+podczas Pierwsza liczba do porównania. Musi to być typ `T` .
 
-*U*<br/>
-[w] Druga liczba do porównania. Musi to być `U`typu .
+*'t*<br/>
+podczas Druga liczba do porównania. Musi to być typ `U` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**prawda,** jeśli *t* jest mniejsza lub równa *u*; w przeciwnym razie **false**.
+**prawda** , jeśli *t* jest mniejsze lub równe *u*; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
 `SafeLessThanEquals`rozszerza operator porównania regularnego, umożliwiając porównanie dwóch różnych typów liczb.
 
-## <a name="safemodulus"></a><a name="safemodulus"></a>SafeModulus ( SafeModulus )
+## <a name="safemodulus"></a><a name="safemodulus"></a>SafeModulus
 
-Wykonuje operację modułu na dwóch liczbach.
+Wykonuje operację modułu dla dwóch liczb.
 
 ```cpp
 template<typename T, typename U>
@@ -303,22 +303,22 @@ inline bool SafeModulus (
 
 ### <a name="parameters"></a>Parametry
 
-*t*<br/>
-[w] Dzielnik. Musi to być `T`typu .
+*&*<br/>
+podczas Dzielnik. Musi to być typ `T` .
 
-*U*<br/>
-[w] Dywidenda. Musi to być `U`typu .
+*'t*<br/>
+podczas Dywidenda. Musi to być typ `U` .
 
-*Wynik*<br/>
-[na zewnątrz] Parametr, `SafeModulus` w którym przechowuje wynik.
+*result*<br/>
+określoną Parametr, w którym `SafeModulus` jest przechowywany wynik.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli nie wystąpi żaden błąd; **false,** jeśli wystąpi błąd.
+**wartość true** , jeśli nie wystąpi błąd; **wartość false** , jeśli wystąpi błąd.
 
-## <a name="safemultiply"></a><a name="safemultiply"></a>SafeMultiply (Bezpiecznemuwciem
+## <a name="safemultiply"></a><a name="safemultiply"></a>SafeMultiply
 
-Mnoży dwie liczby razem w sposób, który chroni przed przepełnieniem.
+Mnoży dwie liczby jednocześnie w sposób chroniący przed przepełnieniem.
 
 ```cpp
 template<typename T, typename U>
@@ -331,20 +331,20 @@ inline bool SafeMultiply (
 
 ### <a name="parameters"></a>Parametry
 
-*t*<br/>
-[w] Pierwsza liczba do pomnożenia. Musi to być `T`typu .
+*&*<br/>
+podczas Pierwsza liczba do pomnożenia. Musi to być typ `T` .
 
-*U*<br/>
-[w] Druga liczba do pomnożenia. Musi to być `U`typu .
+*'t*<br/>
+podczas Druga liczba do pomnożenia. Musi to być typ `U` .
 
-*Wynik*<br/>
-[na zewnątrz] Parametr, `SafeMultiply` w którym przechowuje wynik.
+*result*<br/>
+określoną Parametr, w którym `SafeMultiply` jest przechowywany wynik.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true`jeśli nie wystąpi żaden błąd; `false` jeśli wystąpi błąd.
+`true`Jeśli błąd nie wystąpi; `false`Jeśli wystąpi błąd.
 
-## <a name="safenotequals"></a><a name="safenotequals"></a>SafeNotEquals (SafeNotEquals)
+## <a name="safenotequals"></a><a name="safenotequals"></a>SafeNotEquals
 
 Określa, czy dwie liczby nie są równe.
 
@@ -358,21 +358,21 @@ inline bool SafeNotEquals (
 
 ### <a name="parameters"></a>Parametry
 
-*t*<br/>
-[w] Pierwszy numer do porównania. Musi to być `T`typu .
+*&*<br/>
+podczas Pierwsza liczba do porównania. Musi to być typ `T` .
 
-*U*<br/>
-[w] Druga liczba do porównania. Musi to być `U`typu .
+*'t*<br/>
+podczas Druga liczba do porównania. Musi to być typ `U` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli *t* i *u* nie są równe; w przeciwnym razie **false**.
+**prawda** , jeśli *t* i *u* nie są równe; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Metoda zwiększa, `!=` `SafeNotEquals` ponieważ umożliwia porównanie dwóch różnych typów liczb.
+Metoda jest ulepszona, `!=` ponieważ `SafeNotEquals` umożliwia porównanie dwóch różnych typów liczb.
 
-## <a name="safesubtract"></a><a name="safesubtract"></a>SafeSubtract (SafeSubtract)
+## <a name="safesubtract"></a><a name="safesubtract"></a>SafeSubtract
 
 Odejmuje dwie liczby w sposób chroniący przed przepełnieniem.
 
@@ -387,15 +387,15 @@ inline bool SafeSubtract (
 
 ### <a name="parameters"></a>Parametry
 
-*t*<br/>
-[w] Pierwszy numer w odejmowanie. Musi to być `T`typu .
+*&*<br/>
+podczas Pierwszy numer odejmowania. Musi to być typ `T` .
 
-*U*<br/>
-[w] Liczba do odjęcie od *t*. Musi to być `U`typu .
+*'t*<br/>
+podczas Liczba, która ma zostać odjęta od *t*. Musi to być typ `U` .
 
-*Wynik*<br/>
-[na zewnątrz] Parametr, `SafeSubtract` w którym przechowuje wynik.
+*result*<br/>
+określoną Parametr, w którym `SafeSubtract` jest przechowywany wynik.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli nie wystąpi żaden błąd; **false,** jeśli wystąpi błąd.
+**wartość true** , jeśli nie wystąpi błąd; **wartość false** , jeśli wystąpi błąd.

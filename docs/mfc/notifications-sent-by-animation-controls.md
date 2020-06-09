@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [MFC], animation
 - animation controls [MFC], notifications
 ms.assetid: 584f5824-446b-4a1a-85f7-ef61842c8186
-ms.openlocfilehash: 68ede3bc55669a29eef192d38b29b8c1ab433e4b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e9e5b94736de44d5cfeef81f5b78a759df3b8aa0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508015"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619908"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>Powiadomienia wysyłane przez formanty animacji
 
-Kontrolka animacji ([Korzystanie CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) wysyła dwa różne typy komunikatów powiadomień. Powiadomienia są wysyłane w formie komunikatów [WM_COMMAND](/windows/win32/menurc/wm-command) .
+Kontrolka animacji ([Korzystanie CAnimateCtrl](reference/canimatectrl-class.md)) wysyła dwa różne typy komunikatów powiadomień. Powiadomienia są wysyłane w formie [WM_COMMAND](/windows/win32/menurc/wm-command) komunikatów.
 
 Komunikat [ACN_START](/windows/win32/Controls/acn-start) jest wysyłany po rozpoczęciu odtwarzania klipu przez kontrolkę animacji. Komunikat [ACN_STOP](/windows/win32/Controls/acn-stop) jest wysyłany po zakończeniu lub zatrzymaniu odtwarzania klipu przez kontrolkę animacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Korzystanie z CAnimateCtrl](../mfc/using-canimatectrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Korzystanie z CAnimateCtrl](using-canimatectrl.md)<br/>
+[Formanty](controls-mfc.md)

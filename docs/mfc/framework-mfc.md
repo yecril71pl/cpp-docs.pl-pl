@@ -12,43 +12,43 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: 387f53e3123b6863fcf218da39c7c5e356eb8219
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: b02d5a1862a278f46591895f20f58a97367b5ab2
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303413"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618796"
 ---
 # <a name="framework-mfc"></a>Struktura (MFC)
 
-Twoja współpraca z platformą Microsoft Foundation Class (MFC) jest oparta na kilku najważniejszych klasach i kilku narzędziach wizualnych C++ . Niektóre klasy hermetyzowają znaczną część interfejsu programowania aplikacji Win32 (API). Inne klasy hermetyzowają koncepcje aplikacji, takie jak dokumenty, widoki i sama aplikacja. Inne funkcje OLE i ODBC oraz funkcje dostępu do danych DAO są nadal inne.  (Obiekt DAO jest obsługiwany przez pakiet Office 2013. Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały.
+Twoja współpraca z platformą Microsoft Foundation Class (MFC) jest oparta na kilku najważniejszych klasach i kilku Visual C++ narzędziach. Niektóre klasy hermetyzowają znaczną część interfejsu programowania aplikacji Win32 (API). Inne klasy hermetyzowają koncepcje aplikacji, takie jak dokumenty, widoki i sama aplikacja. Inne funkcje OLE i ODBC oraz funkcje dostępu do danych DAO są nadal inne.  (Obiekt DAO jest obsługiwany przez pakiet Office 2013. Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały.
 
-Na przykład Win32's koncepcji okna jest hermetyzowane przez klasę MFC `CWnd`. Oznacza to, że C++ Klasa o nazwie `CWnd` hermetyzuje lub "zawija" uchwyt `HWND`, który reprezentuje okno systemu Windows. Podobnie Klasa `CDialog` hermetyzuje okna dialogowe Win32.
+Na przykład Win32's koncepcji okna jest hermetyzowane przez klasę MFC `CWnd` . Oznacza to, że Klasa języka C++ nazywa się `CWnd` hermetyzacją lub "zawija" `HWND` uchwyt, który reprezentuje okno systemu Windows. Podobnie Klasa `CDialog` hermetyzuje okna dialogowe Win32.
 
-Hermetyzacja oznacza, że C++ Klasa `CWnd`, na przykład, zawiera zmienną składową typu `HWND`, a funkcje składowe klasy hermetyzują wywołania do funkcji Win32, które pobierają `HWND` jako parametr. Funkcje składowe klasy zazwyczaj mają taką samą nazwę jak funkcja Win32, która hermetyzuje.
+Hermetyzacja oznacza, że Klasa C++ `CWnd` , na przykład, zawiera zmienną elementu członkowskiego typu `HWND` , i funkcje składowe klasy hermetyzują wywołania do funkcji Win32, które przyjmują `HWND` jako parametr. Funkcje składowe klasy zazwyczaj mają taką samą nazwę jak funkcja Win32, która hermetyzuje.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[SDI i MDI](../mfc/sdi-and-mdi.md)
+[SDI i MDI](sdi-and-mdi.md)
 
-[Dokumenty, widoki i struktura](../mfc/documents-views-and-the-framework.md)
+[Dokumenty, widoki i struktura](documents-views-and-the-framework.md)
 
-[Kreatorzy i edytory zasobów](../mfc/wizards-and-the-resource-editors.md)
+[Kreatorzy i edytory zasobów](wizards-and-the-resource-editors.md)
 
 ## <a name="in-related-sections"></a>W sekcjach pokrewnych
 
-[Opieranie się na strukturze](../mfc/building-on-the-framework.md)
+[Opieranie się na strukturze](building-on-the-framework.md)
 
-[Jak struktura wywołuje kod](../mfc/how-the-framework-calls-your-code.md)
+[Jak struktura wywołuje kod](how-the-framework-calls-your-code.md)
 
-[CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)
+[CWinApp: klasa aplikacji](cwinapp-the-application-class.md)
 
-[Szablony dokumentów i proces tworzenia dokumentu/widoku](../mfc/document-templates-and-the-document-view-creation-process.md)
+[Szablony dokumentów i proces tworzenia dokumentu/widoku](document-templates-and-the-document-view-creation-process.md)
 
-[Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)
+[Obsługa i mapowanie komunikatów](message-handling-and-mapping.md)
 
-[Obiekty okna](../mfc/window-objects.md)
+[Obiekty okien](window-objects.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Używanie klas do pisania aplikacji dla systemu Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+[Używanie klas do pisania aplikacji dla systemu Windows](using-the-classes-to-write-applications-for-windows.md)

@@ -5,52 +5,52 @@ helpviewer_keywords:
 - ActiveX control containers [MFC]
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
-ms.openlocfilehash: e8340acafc81447052fcb8d90df8997e81dc4117
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42fa18c41ebd960aa8de080df00556ad5c909d40
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394861"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620756"
 ---
 # <a name="activex-control-containers"></a>Kontenery formantów ActiveX
 
-Kontener formantu ActiveX jest kontenerem, który w pełni obsługuje formanty ActiveX i zastosować je do swoich własnych systemu windows lub w oknach dialogowych. Kontrolki ActiveX jest element oprogramowania wielokrotnego użytku, który można użyć w wielu projektach deweloperskich. Formanty umożliwiają użytkownikowi aplikacji bazy danych programu access, monitorować dane i różne opcje w aplikacjach. Aby uzyskać więcej informacji na temat formantów ActiveX, zobacz artykuł [kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md).
+Kontener formantów ActiveX jest kontenerem, który w pełni obsługuje kontrolki ActiveX i może zawierać je w swoich własnych oknach lub oknach dialogowych. Kontrolka ActiveX to element oprogramowania wielokrotnego użytku, którego można użyć w wielu projektach programistycznych. Kontrolki umożliwiają użytkownikowi aplikacji dostęp do baz danych, monitorowanie danych i wybór różnych opcji w aplikacjach. Aby uzyskać więcej informacji na temat kontrolek ActiveX, zobacz artykuł [kontrolki ActiveX MFC](mfc-activex-controls.md).
 
 >[!IMPORTANT]
-> ActiveX jest technologią starszą, która nie powinny być używane w przypadku nowych wdrożeń. Aby uzyskać więcej informacji, zobacz [formantów ActiveX](activex-controls.md).
+> Kontrolka ActiveX to Starsza technologia, która nie powinna być używana do nowych celów programistycznych. Aby uzyskać więcej informacji, zobacz [kontrolki ActiveX](activex-controls.md).
 
-Kontenery kontrolek zwykle wykonać dwa formularze w projekcie:
+Kontenery formantów zazwyczaj przyjmują dwa formularze w projekcie:
 
-- Okna dialogowe i systemu windows okno dialogowe przypominające takich jak widoki formularzy, gdzie formantu ActiveX jest używany gdzieś w oknie dialogowym.
+- Okna dialogowe i okna dialogowe, takie jak widoki formularzy, gdzie Kontrolka ActiveX jest używana gdzieś w oknie dialogowym.
 
-- Windows w aplikacji, gdy formant ActiveX jest używana w pasku narzędzi lub innej lokalizacji, w oknie użytkownika.
+- System Windows w aplikacji, gdzie Kontrolka ActiveX jest używana na pasku narzędzi lub w innej lokalizacji w oknie użytkownika.
 
-Udostępniane ActiveX kontener formantu interakcję z kontrolką za pośrednictwem [metody](../mfc/mfc-activex-controls-methods.md) i [właściwości](../mfc/mfc-activex-controls-properties.md). Te metody i właściwości, które mogą być dostępne i zmodyfikowane przez kontener formantu, są dostępne za pośrednictwem klasy otoki w projekcie kontener formantu ActiveX. Osadzony formant ActiveX mogą również wchodzić w interakcje z kontenerem przez wyzwalanie (wysyłającym) [zdarzenia](../mfc/mfc-activex-controls-events.md) do kontenera, w którym wystąpiło akcji powiadamiania. Kontener formantu mogą być wykonywane działania tych powiadomień lub nie.
+Kontener formantów ActiveX współdziała z kontrolką za pośrednictwem uwidocznionych [metod](mfc-activex-controls-methods.md) i [Właściwości](mfc-activex-controls-properties.md). Te metody i właściwości, które mogą być dostępne i modyfikowane przez kontener sterowania, są dostępne za pomocą klasy otoki w projekcie kontenera kontrolek ActiveX. Osadzony formant ActiveX może również współdziałać z kontenerem przez wyzwolenie (wysłanie) [zdarzeń](mfc-activex-controls-events.md) w celu powiadomienia kontenera o wystąpieniu akcji. Kontener sterowania może zdecydować się na działanie tych powiadomień.
 
-Dodatkowe artykuły omówiono kilku tematach, od tworzenia projektu kontener formantu ActiveX na podstawową implementację problemy związane z kontenerami formantu ActiveX utworzona za pomocą języka Visual C++:
+Dodatkowe artykuły omawiają kilka tematów, od tworzenia projektu kontenera kontrolek ActiveX do podstawowych problemów implementacji związanych z kontenerami formantów ActiveX skompilowanymi przy użyciu Visual C++:
 
-- [Tworzenie kontenera kontrolek ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control-container.md)
+- [Tworzenie kontenera kontrolek ActiveX MFC](reference/creating-an-mfc-activex-control-container.md)
 
-- [Kontenery dla kontrolek ActiveX](../mfc/containers-for-activex-controls.md)
+- [Kontenery dla kontrolek ActiveX](containers-for-activex-controls.md)
 
-- [Kontenery kontrolek ActiveX: ręczne włączanie zawierania kontrolek ActiveX](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)
+- [Kontenery kontrolek ActiveX: ręczne włączanie zawierania kontrolek ActiveX](activex-control-containers-manually-enabling-activex-control-containment.md)
 
-- [Kontenery kontrolek ActiveX: wstawianie kontrolki do aplikacji kontenera kontrolek](../mfc/inserting-a-control-into-a-control-container-application.md)
+- [Kontenery kontrolek ActiveX: wstawianie kontrolki do aplikacji kontenera kontrolek](inserting-a-control-into-a-control-container-application.md)
 
-- [Kontenery kontrolek ActiveX: łączenie kontrolki ActiveX ze zmienną składową](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)
+- [Kontenery kontrolek ActiveX: łączenie kontrolki ActiveX ze zmienną składową](activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)
 
-- [Kontenery kontrolek ActiveX: Obsługa zdarzeń z kontrolki ActiveX](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)
+- [Kontenery kontrolek ActiveX: obsługa zdarzeń z kontrolki ActiveX](activex-control-containers-handling-events-from-an-activex-control.md)
 
-- [Kontenery kontrolek ActiveX: wyświetlanie i modyfikowanie właściwości kontrolki](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)
+- [Kontenery kontrolek ActiveX: wyświetlanie i modyfikowanie właściwości kontrolki](activex-control-containers-viewing-and-modifying-control-properties.md)
 
-- [Kontenery kontrolek ActiveX: programowanie kontrolek ActiveX w kontenerze kontrolek ActiveX](../mfc/programming-activex-controls-in-a-activex-control-container.md)
+- [Kontenery kontrolek ActiveX: programowanie kontrolek ActiveX w kontenerze kontrolek ActiveX](programming-activex-controls-in-a-activex-control-container.md)
 
-- [Kontenery kontrolek ActiveX: używanie kontrolek w kontenerze innym niż okno dialogowe](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)
+- [Kontenery kontrolek ActiveX: używanie kontrolek w kontenerze innym niż okno dialogowe](activex-control-containers-using-controls-in-a-non-dialog-container.md)
 
-Aby uzyskać więcej informacji o używaniu kontrolki ActiveX w oknie dialogowym, zobacz [Edytor okien dialogowych](../windows/dialog-editor.md) tematów.
+Aby uzyskać więcej informacji na temat używania kontrolek ActiveX w oknie dialogowym, zobacz tematy [edytora okien dialogowych](../windows/dialog-editor.md) .
 
-Aby uzyskać listę artykułów wyjaśniających szczegółów związanych z tworzeniem kontrolek ActiveX przy użyciu języka Visual C++ i klasy kontrolek MFC ActiveX, zobacz [kontrolki MFC ActiveX](../mfc/mfc-activex-controls.md). Artykuły są pogrupowane według kategorii funkcjonalności.
+Aby zapoznać się z listą artykułów, które objaśniają szczegóły opracowywania formantów ActiveX przy użyciu Visual C++ i klas formantów ActiveX MFC, zobacz [kontrolki ActiveX MFC](mfc-activex-controls.md). Artykuły są pogrupowane według kategorii funkcjonalnych.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
+[Kontrolki ActiveX MFC](mfc-activex-controls.md)

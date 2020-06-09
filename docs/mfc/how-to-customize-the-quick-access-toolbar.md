@@ -1,17 +1,17 @@
 ---
-title: 'Instrukcje: Dostosowywanie paska narzędzi Szybki dostęp'
+title: 'Porady: dostosowywanie paska narzędzi Szybki dostęp'
 ms.date: 09/07/2019
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: 8b2eb6f7c80c77f69e2bbb65b7bb31a385014c8c
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 5d168fc395e27eea3705fc8e69c88569ecb0f7ee
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907777"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620033"
 ---
-# <a name="how-to-customize-the-quick-access-toolbar"></a>Instrukcje: Dostosowywanie paska narzędzi Szybki dostęp
+# <a name="how-to-customize-the-quick-access-toolbar"></a>Porady: dostosowywanie paska narzędzi Szybki dostęp
 
 Pasek narzędzi Szybki dostęp (QAT) to dostosowywalny pasek narzędzi zawierający zestaw poleceń, które są wyświetlane obok przycisku aplikacji lub na kartach kategorie. Na poniższej ilustracji przedstawiono typowy pasek narzędzi Szybki dostęp.
 
@@ -38,7 +38,7 @@ Poniższa tabela zawiera definicje właściwości paska narzędzi Szybki dostęp
 
 #### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>Aby dodać lub usunąć polecenia na pasku narzędzi Szybki dostęp
 
-1. W oknie **Właściwości** kliknij pozycję **QAT elementy**, a następnie kliknij przycisk wielokropka **(...)** .
+1. W oknie **Właściwości** kliknij pozycję **QAT elementy**, a następnie kliknij przycisk wielokropka **(...)**.
 
 1. W oknie dialogowym **Edytor elementów QAT** Użyj przycisków **Dodaj** i **Usuń** , aby zmodyfikować listę poleceń na pasku narzędzi Szybki dostęp.
 
@@ -52,6 +52,6 @@ Polecenia paska narzędzi Szybki dostęp nie są wyświetlane na powierzchni pro
 
 - Na **pasku narzędzi edytora wstążki**kliknij pozycję **Testuj wstążka**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Projektant wstążki (MFC)](../mfc/ribbon-designer-mfc.md)
+[Projektant wstążki (MFC)](ribbon-designer-mfc.md)

@@ -8,27 +8,27 @@ helpviewer_keywords:
 - file status [MFC]
 - status of files [MFC]
 ms.assetid: 1b8891d6-eb0f-4037-a837-4928fe595222
-ms.openlocfilehash: 26c263b2d7e4e0243444925cb9416cb337dcd79d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23c626940e700d3e9827ef6a7cf849d970e40d5d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392963"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619777"
 ---
 # <a name="accessing-file-status"></a>Uzyskiwanie dostępu do stanu pliku
 
-`CFile` również obsługuje pobieranie stanu pliku, w tym, czy plik istnieje, tworzenie i modyfikowanie daty i godziny, rozmiar logiczny i ścieżki.
+`CFile`Program obsługuje również pobieranie stanu pliku, w tym tego, czy plik istnieje, Data utworzenia i modyfikacji oraz godziny, rozmiar logiczny i ścieżkę.
 
-### <a name="to-get-file-status"></a>Aby uzyskać stan pliku
+### <a name="to-get-file-status"></a>Aby pobrać stan pliku
 
-1. Użyj [CFile](../mfc/reference/cfile-class.md) klasy do pobierania i ustawiania informacji o pliku. Jedna aplikacja przydatne jest użycie `CFile` funkcja statycznej składowej **GetStatus** do ustalenia, czy plik istnieje. **GetStatus** zwraca wartość 0, jeśli określony plik nie istnieje.
+1. Użyj klasy [CFile](reference/cfile-class.md) , aby pobrać i ustawić informacje o pliku. Jedną z przydatnych aplikacji jest użycie `CFile` statycznej funkcji składowej **GetStatus** , aby określić, czy plik istnieje. **GetStatus** zwraca wartość 0, jeśli określony plik nie istnieje.
 
-W związku z tym, można użyć wyniku **GetStatus** do ustalenia, czy należy użyć **CFile::modeCreate** Flaga podczas otwierania pliku, jak pokazano na poniższym przykładzie:
+W związku z tym możesz użyć wyniku **GetStatus** , aby określić, czy podczas otwierania pliku ma być używana flaga **CFile:: modeCreate** , jak pokazano w następującym przykładzie:
 
 [!code-cpp[NVC_MFCFiles#3](../atl-mfc-shared/reference/codesnippet/cpp/accessing-file-status_1.cpp)]
 
-Aby uzyskać powiązane informacje, zobacz [serializacji](../mfc/serialization-in-mfc.md).
+Aby uzyskać powiązane informacje, zobacz [serializacji](serialization-in-mfc.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Pliki](../mfc/files-in-mfc.md)
+[Files](files-in-mfc.md)

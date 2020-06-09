@@ -10,19 +10,19 @@ helpviewer_keywords:
 - frame windows [MFC], dragging and dropping files in
 - drag and drop [MFC], Windows Explorer
 ms.assetid: 85560fe9-121b-4105-bd7b-216b966e19fa
-ms.openlocfilehash: 0129b939e0fe2afd5dd29623bb44418bfd16c20d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42f21e2441f8ba3d2c6a13503c928880fe100f04
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240663"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623158"
 ---
 # <a name="dragging-and-dropping-files-in-a-frame-window"></a>Przeciąganie i upuszczanie plików w oknie ramowym
 
-Okno ramowe zarządza ustanowioną relację z Eksploratora plików lub Menedżer plików.
+Okno ramy zarządza relacją z Eksploratorem plików lub menedżerem plików.
 
-Przez dodanie kilku inicjowanie wywołań w zastąpienie metody `CWinApp` funkcja elementu członkowskiego `InitInstance`, zgodnie z opisem w [CWinApp: Klasa aplikacji](../mfc/cwinapp-the-application-class.md), może mieć pośrednio otwieranie plików przeciągnięty z Eksploratora plików lub Menedżer plików i porzucić w oknie ramki okna ramki. Zobacz [Menedżer plików — przeciąganie i upuszczanie](../mfc/special-cwinapp-services.md).
+Po dodaniu kilku inicjacji wywołań w przesłonięciu `CWinApp` funkcji składowej `InitInstance` , zgodnie z opisem w [CWinApp: Klasa aplikacji](cwinapp-the-application-class.md), okno ramki może być poprzedzone otwarciem plików przeciąganych z Eksploratora plików lub Menedżera plików i porzucone w oknie ramka. Zobacz [Przeciąganie i upuszczanie Menedżera plików](special-cwinapp-services.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Używanie okien ramowych](../mfc/using-frame-windows.md)
+[Używanie okien ramowych](using-frame-windows.md)

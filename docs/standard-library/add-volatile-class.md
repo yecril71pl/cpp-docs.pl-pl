@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_volatile class
 - add_volatile
 ms.assetid: cde57277-d764-402d-841e-97611ebaab14
-ms.openlocfilehash: becea4ff52342a79d0b87ffe0022e2cf84c47949
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1a4ad8a86b88cdfa98f043bb49ba6eeff8b090c9
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456529"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619206"
 ---
-# <a name="addvolatile-class"></a>add_volatile — Klasa
+# <a name="add_volatile-class"></a>add_volatile — Klasa
 
-Tworzy typ  nietrwały z określonego typu.
+Tworzy typ **nietrwały** z określonego typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,12 +30,12 @@ using add_volatile_t = typename add_volatile<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*&* \
+*&*\
 Typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie `add_volatile<T>` ma element członkowski **typedef** `type` , który jest *t* if *t* jest odwołaniem, funkcją lub typem kwalifikowanym niestabilnym, w przeciwnym razie **volatile** *t*. Alias `add_volatile_t` jest skrótem umożliwiającym dostęp do elementu członkowskiego **typedef** `type`.
+Wystąpienie ma element `add_volatile<T>` członkowski **typedef** `type` , który jest *t* if *t* jest odwołaniem, funkcją lub typem kwalifikowanym niestabilnym, w przeciwnym razie **volatile** *t*. Alias `add_volatile_t` jest skrótem umożliwiającym dostęp do elementu członkowskiego **typedef** `type` .
 
 ## <a name="example"></a>Przykład
 
@@ -61,11 +61,11 @@ add_volatile<int> == int
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[< type_traits >](../standard-library/type-traits.md)\
-[remove_volatile, klasa](../standard-library/remove-volatile-class.md)
+[<type_traits>](type-traits.md)\
+[Klasa remove_volatile](remove-volatile-class.md)

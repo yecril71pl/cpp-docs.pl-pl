@@ -9,25 +9,25 @@ helpviewer_keywords:
 - Office Binder [MFC]
 - MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
-ms.openlocfilehash: b06bc0f22ee71c8afbbc8feadca68895fc24a50b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe9ccb5b78d9a60c5b8b2a19fe0818a8e1682f00
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358867"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623122"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Przykład zawierania dokumentów aktywnych: Office Binder
 
-Microsoft Office Binder jest przykładem kontener aktywnego dokumentu. Office Binder zawiera dwa okienka podstawowego, jak kontenery zwykle. W okienku po lewej stronie zawiera ikony, które odpowiadają dokumenty aktywne w obiekt wiążący. Każdy dokument jest nazywany *sekcji* w ramach obiektu wiążącego. Na przykład obiekt wiążący może zawierać dokumentów programu Word, pliki programu PowerPoint, arkusze kalkulacyjne programu Excel i tak dalej.
+Microsoft Office spinaczem jest przykładem aktywnego kontenera dokumentów. Program Office Binder zawiera dwa podstawowe okienka, jak zwykle kontenery. Okienko po lewej stronie zawiera ikony, które odpowiadają aktywnym dokumentom w spinaczu. Każdy dokument jest nazywany *sekcją* w spinaczu. Na przykład spinacz może zawierać dokumenty programu Word, pliki programu PowerPoint, arkusze kalkulacyjne programu Excel itd.
 
-Klikając ikonę w okienku po lewej stronie aktywuje odpowiedniego aktywnego dokumentu. Prawe okienko integratora następnie wyświetla zawartość aktualnie zaznaczonego aktywnego dokumentu.
+Kliknięcie ikony w lewym okienku aktywuje odpowiadający jej aktywny dokument. W prawym okienku spinacza zostanie wyświetlona zawartość aktualnie wybranego aktywnego dokumentu.
 
-Jeśli otworzysz i Aktywuj dokument programu Word w integratora Word pasek menu i paski narzędzi są wyświetlane w górnej ramce widoku, a następnie edytować zawartość dokumentu przy użyciu dowolnego polecenia programu Word lub narzędzia. Jednak na pasku menu jest kombinacją paski menu zarówno obiekt wiążący firmy, jak i programu Word. Ponieważ integratorów modeli i program Word ma **pomocy** scalania menu i zawartość odpowiednich menu. Kontenery dokumentów aktywnych, takich jak Office Binder automatycznie udostępniają **pomocy** menu scalanie; Aby uzyskać więcej informacji, zobacz [scalanie Menu Pomoc](../mfc/help-menu-merging.md).
+W przypadku otwarcia i aktywowania dokumentu programu Word w spinaczu pasek menu programu Word i paski narzędzi są wyświetlane w górnej części ramki widoku i można edytować zawartość dokumentu przy użyciu dowolnego polecenia programu Word lub narzędzia. Jednak pasek menu jest kombinacją pasków menu spinacza i programu Word. Ponieważ zarówno spinacz, jak i Word mają menu **Pomoc** , zawartość odpowiednich menu jest scalana. Kontenery dokumentów aktywnych, takie jak Office Binder, automatycznie udostępniają scalanie menu **Pomoc** . Aby uzyskać więcej informacji, zobacz [scalanie menu Pomoc](help-menu-merging.md).
 
-Po wybraniu aktywnego dokumentu innego typu aplikacji, zmiany w interfejsie integratorów modeli do obsługi z typem aplikacji aktywnego dokumentu. Na przykład jeśli obiekt wiążący zawiera arkusz kalkulacyjny programu Excel, można zauważyć że menu w obiekt wiążący zmienić po wybraniu sekcji arkusz kalkulacyjny programu Excel.
+Po wybraniu aktywnego dokumentu innego typu aplikacji, interfejs spinacza zmienia się w celu uwzględnienia tego typu aplikacji aktywnego dokumentu. Na przykład, jeśli spinacz zawiera arkusz kalkulacyjny programu Excel, zobaczysz, że menu w spinaczu zmienią się po zaznaczeniu sekcji arkusza kalkulacyjnego programu Excel.
 
-Istnieją oczywiście innych możliwych typów kontenery obok wiążących. Eksplorator plików używa typowej interfejsu podwójne okienka, w którym okienka po lewej stronie używa formantu drzewa do wyświetlania hierarchiczną listę katalogów w dysku lub w sieci, a w okienku po prawej stronie wyświetla pliki znajdujące się w aktualnie wybranego katalogu. Internet — typ przeglądarki kontenera (na przykład program Microsoft Internet Explorer), a nie przy użyciu interfejsu podwójne okienka zwykle ma jedną klatkę i zapewnia nawigacji za pomocą hiperlinków.
+Istnieją oczywiście inne możliwe typy kontenerów obok powiązań. Eksplorator plików używa typowego interfejsu dwuokienkowego, w którym lewe okienko używa kontrolki drzewa do wyświetlania hierarchicznej listy katalogów w stacji lub sieci, podczas gdy w okienku po prawej stronie są wyświetlane pliki zawarte w aktualnie wybranym katalogu. Przeglądarka internetowa — typ kontenera (na przykład Microsoft Internet Explorer), a nie za pomocą interfejsu dwuokienkowego, zazwyczaj ma jedną ramkę i udostępnia nawigację przy użyciu hiperłączy.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Zawieranie dokumentów aktywnych](../mfc/active-document-containment.md)
+[Zawieranie dokumentów aktywnych](active-document-containment.md)

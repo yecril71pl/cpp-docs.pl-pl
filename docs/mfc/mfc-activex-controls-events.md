@@ -1,5 +1,5 @@
 ---
-title: 'Kontrolki ActiveX MFC: Zdarzenia'
+title: 'Formanty MFC ActiveX: zdarzenia'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], events
@@ -13,42 +13,42 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - OLE events [MFC]
 ms.assetid: e1e57e0c-206b-4923-a0b5-682c26564f74
-ms.openlocfilehash: 0d8a881d07a3e48673c6dc3298816d165273be0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 129b805379fa68cb4f50ee1f8e3ac7d1b725d9ec
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392677"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622326"
 ---
-# <a name="mfc-activex-controls-events"></a>Kontrolki ActiveX MFC: Zdarzenia
+# <a name="mfc-activex-controls-events"></a>Formanty MFC ActiveX: zdarzenia
 
-Kontrolki ActiveX użyć zdarzenia, aby powiadomić kontener, który ma zdarzyło się coś do formantu. Typowe przykłady zdarzenia obejmują kliknięcia w kontrolce dane wprowadzane przy użyciu klawiatury i zmiany w stanie formantu. Gdy są wykonywane następujące akcje, formant uruchamia zdarzenie do wyzwalania alertu kontenera.
+Kontrolki ActiveX używają zdarzeń do powiadamiania kontenera, że coś się stało z kontrolką. Typowe przykłady zdarzeń obejmują kliknięcia kontrolki, dane wprowadzone przy użyciu klawiatury oraz zmiany stanu formantu. Gdy te akcje wystąpią, formant uruchamia zdarzenie, aby ostrzec kontener.
 
-Zdarzenia są również nazywane wiadomości.
+Zdarzenia są również nazywane komunikatami.
 
-Biblioteka MFC obsługuje dwa rodzaje zdarzeń: standardowych i niestandardowych. Podstawowe zdarzenia są te zdarzenia, które klasy [COleControl](../mfc/reference/colecontrol-class.md) obsługuje automatycznie. Aby uzyskać pełną listę zdarzeń standardowych, zobacz artykuł [kontrolki ActiveX MFC: Dodawanie zdarzeń standardowych](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md). Zdarzenia niestandardowe umożliwiają kontrolki możliwość powiadamianie kontenera, które występuje, specyficzne dla tej kontrolki akcji. Niektóre przykłady będą zmiany wewnętrzny stan formantu lub odebranie komunikatu okna.
+MFC obsługuje dwa rodzaje zdarzeń: giełdowe i niestandardowe. Zdarzenia giełdowe to zdarzenia, które Klasa [COleControl](reference/colecontrol-class.md) obsługuje automatycznie. Aby uzyskać pełną listę zdarzeń giełdowych, zobacz artykuł [kontrolki ActiveX MFC: Dodawanie zdarzeń giełdowych](mfc-activex-controls-adding-stock-events-to-an-activex-control.md). Zdarzenia niestandardowe umożliwiają kontrolce powiadomienie kontenera o wystąpieniu akcji specyficznej dla tej kontrolki. Niektóre przykłady to zmiana stanu wewnętrznego kontrolki lub otrzymania określonego komunikatu w oknie.
 
-Kontrolki prawidłowo wyzwolenie zdarzenia klasy kontrolki musi być mapowane do funkcji składowej, która powinna być wywoływana, gdy wystąpi zdarzenie powiązane każdego zdarzenia formantu. Ten mechanizm mapowanie (nazywane mapę zdarzeń) umożliwia scentralizowanie informacje o zdarzeniu i zezwala programowi Visual Studio do łatwego dostępu i manipulowania zdarzenia obiektu Controls. Ta mapa zdarzeń jest deklarowana przez następujące makra, znajduje się w nagłówku (. H) pliku deklaracji klasy kontrolki:
+Aby formant uruchamiał zdarzenia prawidłowo, Klasa formantów musi mapować każde zdarzenie formantu do funkcji członkowskiej, która powinna być wywoływana w przypadku wystąpienia zdarzenia powiązanego. Ten mechanizm mapowania (nazywany mapą zdarzeń) służy do scentralizowania informacji o zdarzeniu i umożliwia programowi Visual Studio łatwe uzyskiwanie dostępu do zdarzeń kontrolki i manipulowanie nimi. Ta mapa zdarzeń jest zadeklarowana przez następujące makro znajdujące się w nagłówku (. H) plik deklaracji klasy kontroli:
 
-[!code-cpp[NVC_MFC_AxUI#2](../mfc/codesnippet/cpp/mfc-activex-controls-events_1.h)]
+[!code-cpp[NVC_MFC_AxUI#2](codesnippet/cpp/mfc-activex-controls-events_1.h)]
 
-Po Mapa zdarzeń została zadeklarowana, muszą być zdefiniowane w implementacji kontroli nad (. Plik CPP). Następujące wiersze kodu, zdefiniuj Mapa zdarzeń, umożliwiając kontroli nad ognia określonych zdarzeń:
+Po zadeklarowaniu mapy zdarzeń musi ona być zdefiniowana w implementacji kontrolki (. CPP). Następujące wiersze kodu definiują mapę zdarzeń, umożliwiając formantowi uruchomienie określonych zdarzeń:
 
-[!code-cpp[NVC_MFC_AxUI#3](../mfc/codesnippet/cpp/mfc-activex-controls-events_2.cpp)]
-[!code-cpp[NVC_MFC_AxUI#4](../mfc/codesnippet/cpp/mfc-activex-controls-events_3.cpp)]
+[!code-cpp[NVC_MFC_AxUI#3](codesnippet/cpp/mfc-activex-controls-events_2.cpp)]
+[!code-cpp[NVC_MFC_AxUI#4](codesnippet/cpp/mfc-activex-controls-events_3.cpp)]
 
-Jeśli używasz kreatora kontrolek ActiveX MFC do tworzenia projektu, automatycznie dodaje następujące wiersze. Jeśli nie używasz, Kreator kontrolek ActiveX MFC, należy ręcznie dodać następujące wiersze.
+W przypadku utworzenia projektu przy użyciu kreatora kontrolek ActiveX MFC program automatycznie dodaje te wiersze. Jeśli nie używasz Kreatora kontrolek ActiveX MFC, musisz dodać te wiersze ręcznie.
 
-Za pomocą widoku klas można dodać podstawowe zdarzenia obsługiwane przez klasę `COleControl` lub zdarzeń niestandardowych, zdefiniowanych przez użytkownika. Dla każdego nowego zdarzenia w widoku klas automatycznie dodaje prawidłowego wpisu mapy zdarzeń formantów i kontrolki. Plik IDL.
+Za pomocą Widok klasy można dodawać zdarzenia giełdowe obsługiwane przez `COleControl` zdefiniowane przez siebie zdarzenia dotyczące klasy lub niestandardowych. Dla każdego nowego zdarzenia Widok klasy automatycznie dodaje właściwy wpis do mapy zdarzeń kontrolki i kontrolki. Plik IDL.
 
-Dwie inne artykuły omówiono zdarzenia szczegółowo:
+W dwóch innych artykułach szczegółowo omówiono zdarzenia:
 
-- [Kontrolki ActiveX MFC: Dodawanie zdarzeń standardowych](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)
+- [Kontrolki ActiveX MFC: Dodawanie zdarzeń giełdowych](mfc-activex-controls-adding-stock-events-to-an-activex-control.md)
 
-- [Kontrolki ActiveX MFC: dodawanie zdarzeń niestandardowych](../mfc/mfc-activex-controls-adding-custom-events.md)
+- [Kontrolki ActiveX MFC: dodawanie zdarzeń niestandardowych](mfc-activex-controls-adding-custom-events.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Kontrolki ActiveX MFC: metody](../mfc/mfc-activex-controls-methods.md)<br/>
-[Klasa COleControl](../mfc/reference/colecontrol-class.md)
+[Kontrolki ActiveX MFC](mfc-activex-controls.md)<br/>
+[Kontrolki ActiveX MFC: metody](mfc-activex-controls-methods.md)<br/>
+[Klasa COleControl](reference/colecontrol-class.md)

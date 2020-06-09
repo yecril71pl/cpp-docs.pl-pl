@@ -6,29 +6,29 @@ helpviewer_keywords:
 - command handling [MFC], routing commands
 - command routing [MFC], OnCmdMsg handler
 ms.assetid: 4b7b4741-565f-4878-b076-fd85c670f87f
-ms.openlocfilehash: 56d131151f2284f12a3b46a9acd3cfbd3c8b0f47
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d362cfe54a9b5a562237c7bb9632edae6e58228b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164881"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622908"
 ---
 # <a name="command-routing-illustration"></a>Ilustracja routingu poleceń
 
-Aby zilustrować, należy wziąć pod uwagę komunikatem polecenia Wyczyść wszystko elementu menu, w menu Edycja aplikacji MDI. Załóżmy, że funkcja obsługi dla tego polecenia stanie się być funkcją składową klasy dokumentu aplikacji. Poniżej przedstawiono, jak polecenie osiągnie jej obsługi po użytkownik wybierze element menu:
+Aby zilustrować, rozważ komunikat polecenia z menu Wyczyść wszystko w menu Edycja aplikacji MDI. Załóżmy, że funkcja obsługi dla tego polecenia jest funkcją członkowską klasy dokumentu aplikacji. Oto jak to polecenie dociera do programu obsługi po wybraniu elementu menu przez użytkownika:
 
-1. W oknie głównym ramki odbiera komunikat polecenia najpierw.
+1. Okno głównej ramki otrzymuje najpierw komunikat polecenia.
 
-1. Główne okno ramek MDI daje aktualnie aktywne okno podrzędne MDI możliwość obsługi polecenia.
+1. Główne okno ramek MDI udostępnia obecnie aktywne okno podrzędne MDI szansa do obsłużenia polecenia.
 
-1. Standardowy routing oknem ramki podrzędnego MDI zapewnia jej widok szansę w wierszu polecenia przed sprawdzeniem jego własnej mapy wiadomości.
+1. Standardowe Routing okna ramki podrzędnej MDI udostępnia swojemu widokowi szansę na polecenie przed sprawdzeniem własnej mapy komunikatów.
 
-1. Widok najpierw sprawdza jego własnej mapy wiadomości i następnie znajdowanie żadna procedura obsługi kieruje polecenia do jego skojarzonego dokumentu.
+1. Widok sprawdza swoją własną mapę wiadomości, a nie wyszuka żadnej procedury obsługi, a następnie kieruje polecenie do skojarzonego z nim dokumentu.
 
-1. Dokument sprawdza jego mapy wiadomości i wyszukuje program obsługi. Ten dokument funkcja członkowska jest wywoływana i zatrzymuje routingu.
+1. Dokument sprawdza swoją mapę komunikatów i odnajduje procedurę obsługi. Ta funkcja członkowska dokumentu jest wywoływana i Routing zostaje zatrzymany.
 
-Jeśli dokument nie ma program obsługi, go polecenie będzie następnie kierować do jego szablonu dokumentu. A następnie polecenie zwróci się do widoku, a następnie w oknie ramki. Na koniec okno ramowe będzie sprawdź jego mapie komunikatów. Jeśli sprawdzanie również nie powiodło się, polecenia będą kierowane do główne okno ramek MDI, a następnie do obiektu aplikacji — ultimate docelowego nieobsługiwanych poleceń.
+Jeśli dokument nie ma procedury obsługi, następnie zostanie dalej rozesłane polecenie do szablonu dokumentu. Następnie polecenie zwróci do widoku, a następnie okno ramki. Na koniec okno ramki sprawdzi swoją mapę komunikatów. Jeśli to sprawdzenie nie powiodło się, polecenie zostanie skierowane z powrotem do głównego okna ramki MDI, a następnie do obiektu aplikacji — ostatecznego miejsca docelowego nieobsługiwanych poleceń.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Jak struktura wywołuje programy obsługi](../mfc/how-the-framework-calls-a-handler.md)
+[Jak struktura wywołuje program obsługi](how-the-framework-calls-a-handler.md)
