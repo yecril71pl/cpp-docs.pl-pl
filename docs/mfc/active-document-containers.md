@@ -7,60 +7,60 @@ helpviewer_keywords:
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-ms.openlocfilehash: e2005ffed592fa1de278e0f6339d94687a20fd06
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc7017a205bedd716e5c87aa23ac96b257af2e16
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377384"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626025"
 ---
 # <a name="active-document-containers"></a>Kontenery dokumentów aktywnych
 
-Aktywny kontener dokumentów, taki jak Microsoft Office Binder lub Internet Explorer, umożliwia pracę z kilkoma dokumentami różnych typów aplikacji w ramach jednej ramki (zamiast wymuszać tworzenie i używanie wielu ramek aplikacji dla każdego typu dokumentu).
+Kontener aktywnego dokumentu, taki jak Microsoft Office Binder lub Internet Explorer, umożliwia współdziałanie z kilkoma dokumentami różnych typów aplikacji w ramach jednej ramki (zamiast wymuszania tworzenia i używania wielu ramek aplikacji dla każdego typu dokumentu).
 
-MFC zapewnia pełną obsługę kontenerów `COleDocObjectItem` aktywnych dokumentów w klasie. Za pomocą Kreatora aplikacji MFC można utworzyć aktywny kontener dokumentów, zaznaczając pole wyboru **Aktywny kontener dokumentów** na stronie Obsługa dokumentów **złożonych** Kreatora aplikacji MFC. Aby uzyskać więcej informacji, zobacz [Tworzenie aktywnej aplikacji kontenera dokumentów](../mfc/creating-an-active-document-container-application.md).
+MFC zapewnia pełną obsługę kontenerów dokumentów aktywnych w `COleDocObjectItem` klasie. Za pomocą Kreatora aplikacji MFC można utworzyć kontener aktywnego dokumentu, zaznaczając pole wyboru **kontener aktywnego dokumentu** na stronie **Obsługa dokumentu złożonego** w Kreatorze aplikacji MFC. Aby uzyskać więcej informacji, zobacz [Tworzenie aplikacji kontenera dokumentów aktywnych](creating-an-active-document-container-application.md).
 
-Aby uzyskać więcej informacji na temat kontenerów aktywnych dokumentów, zobacz:
+Aby uzyskać więcej informacji na temat kontenerów dokumentów aktywnych, zobacz:
 
-- [Wymagania dotyczące kontenerów](#container_requirements)
+- [Wymagania dotyczące kontenera](#container_requirements)
 
-- [Obiekty witryny dokumentu](#document_site_objects)
+- [Obiekty witryny dokumentów](#document_site_objects)
 
-- [Wyświetlanie obiektów witryny](#view_site_objects)
+- [Wyświetlanie obiektów lokacji](#view_site_objects)
 
-- [Obiekt ramki](#frame_object)
+- [Frame — obiekt](#frame_object)
 
-- [Scalanie menu Pomoc](../mfc/help-menu-merging.md)
+- [Scalanie menu Pomoc](help-menu-merging.md)
 
-- [Drukowanie programowe](../mfc/programmatic-printing.md)
+- [Drukowanie programowe](programmatic-printing.md)
 
-- [Obiekty docelowe poleceń](../mfc/message-handling-and-command-targets.md)
+- [Obiekty docelowe poleceń](message-handling-and-command-targets.md)
 
-## <a name="container-requirements"></a><a name="container_requirements"></a>Wymagania dotyczące kontenerów
+## <a name="container-requirements"></a><a name="container_requirements"></a>Wymagania dotyczące kontenera
 
-Obsługa aktywnych dokumentów w kontenerze aktywnego dokumentu oznacza więcej niż tylko implementacje interfejsu: wymaga również wiedzy na temat korzystania z interfejsów obiektu zawartego. To samo dotyczy aktywnych rozszerzeń dokumentów, gdzie kontener musi również wiedzieć, jak używać tych interfejsów rozszerzenia w samych aktywnych dokumentach.
+Obsługa aktywnego dokumentu w kontenerze aktywnego dokumentu oznacza więcej niż tylko implementacje interfejsu: wymaga również znajomości używania interfejsów zawartego obiektu. To samo dotyczy rozszerzeń dokumentów aktywnych, w których kontener musi również wiedzieć, jak korzystać z tych interfejsów rozszerzeń w aktywnych dokumentach.
 
-Aktywny kontener dokumentów, który integruje aktywne dokumenty, musi:
+Kontener aktywnego dokumentu, który integruje aktywne dokumenty, musi:
 
-- Być w stanie obsługi `IPersistStorage` magazynu obiektów za pośrednictwem interfejsu, oznacza to, że musi dostarczyć wystąpienie `IStorage` do każdego aktywnego dokumentu.
+- Możliwość obsługi magazynu obiektów za pomocą `IPersistStorage` interfejsu, czyli musi zawierać `IStorage` wystąpienie dla każdego aktywnego dokumentu.
 
-- Obsługa podstawowych funkcji osadzania dokumentów OLE, co wymaga obiektów "lokacji" `IOleClientSite` `IAdviseSink`(po jednym na dokument lub osadzanie), które implementują i .
+- Obsługa podstawowych funkcji osadzania dokumentów OLE, co wymaga "lokacji" (jeden na dokument lub osadzanie), które implementują `IOleClientSite` i `IAdviseSink` .
 
-- Obsługa aktywacji w miejscu osadzonych obiektów lub aktywnych dokumentów. Obiekty lokacji kontenera `IOleInPlaceSite` muszą zostać zaimplementować, a obiekt ramki kontenera musi zawierać . `IOleInPlaceFrame`
+- Obsługa aktywacji w miejscu obiektów osadzonych lub aktywnych dokumentów. Obiekty lokacji kontenera muszą być zaimplementowane `IOleInPlaceSite` i obiekt ramki kontenera musi dostarczyć `IOleInPlaceFrame` .
 
-- Obsługa rozszerzenia aktywnych dokumentów przez `IOleDocumentSite` wdrożenie w celu zapewnienia mechanizmu kontenera, aby porozmawiać z dokumentem. Opcjonalnie kontener może zaimplementować `IOleCommandTarget` `IContinueCallback` aktywne interfejsy dokumentu i odebrać proste polecenia, takie jak drukowanie lub zapisywanie.
+- Obsługa rozszerzeń dokumentów aktywnych przez implementację `IOleDocumentSite` programu w celu zapewnienia mechanizmowi odkomunikowania się kontenera z dokumentem. Opcjonalnie kontener może zaimplementować interfejsy aktywnego dokumentu `IOleCommandTarget` i `IContinueCallback` pobrać proste polecenia, takie jak drukowanie lub zapisywanie.
 
-Obiekt ramki, obiekty widoku i obiekt kontenera `IOleCommandTarget` mogą opcjonalnie zaimplementować w celu obsługi wysyłania niektórych poleceń, jak omówiono w [artykule Cele polecenia](../mfc/message-handling-and-command-targets.md). Obiekty widoku i kontenera `IPrint` mogą `IContinueCallback`również opcjonalnie implementować i obsługiwać drukowanie programowe, jak omówiono w [artykule Drukowanie programowe.](../mfc/programmatic-printing.md)
+Obiekt Frame, obiekty widoku i obiekt kontenera mogą opcjonalnie zaimplementować `IOleCommandTarget` do obsługi wysyłania niektórych poleceń, zgodnie z opisem w obiekcie [docelowym polecenia](message-handling-and-command-targets.md). Obiekty widoku i kontenera można także opcjonalnie zaimplementować `IPrint` i `IContinueCallback` , aby umożliwić obsługę drukowania programistycznego, jak opisano w temacie [Drukowanie programistyczne](programmatic-printing.md).
 
-Na poniższej ilustracji przedstawiono relacje koncepcyjne między kontenerem i jego składnikami (po lewej) i aktywnym dokumentem i jego widokami (po prawej). Aktywny dokument zarządza magazynem i danymi, a w widoku są wyświetlane lub opcjonalnie drukowane te dane. Interfejsy pogrubione są interfejsy wymagane do aktywnego udziału w dokumencie; te pogrubione i kursywą są opcjonalne. Wszystkie inne interfejsy są wymagane.
+Na poniższej ilustracji przedstawiono relacje koncepcyjne między kontenerem i jego składnikami (po lewej) i aktywnym dokumencie i jego widokami (po prawej stronie). Aktywny dokument zarządza magazynem i danymi, a widok wyświetla lub opcjonalnie drukuje dane. Interfejsy pogrubione są wymagane do współdziałania z dokumentem aktywnym. te pogrubione i kursywy są opcjonalne. Wszystkie inne interfejsy są wymagane.
 
-![Aktywne interfejsy kontenerów dokumentów](../mfc/media/vc37gj1.gif "Aktywne interfejsy kontenerów dokumentów")
+![Interfejsy kontenera dokumentów aktywnych](../mfc/media/vc37gj1.gif "Interfejsy kontenera dokumentów aktywnych")
 
-Dokument, który obsługuje tylko jeden widok można zaimplementować zarówno widok i składniki dokumentu (czyli ich odpowiednich interfejsów) w jednej konkretnej klasy. Ponadto lokacja kontenera, która obsługuje tylko jeden widok naraz, może łączyć witrynę dokumentu i witrynę widoku w jedną konkretną klasę lokacji. Obiekt ramki kontenera musi jednak pozostać odrębny, a składnik dokumentu kontenera jest tylko uwzględniony w tym miejscu, aby uzyskać pełny obraz architektury; nie ma na nią wpływu architektura zamknięcia aktywnego dokumentu.
+Dokument obsługujący tylko jeden widok może zaimplementować zarówno składniki widoku, jak i dokumentu (to oznacza, że odpowiadające im interfejsy) w pojedynczej klasie konkretnej. Ponadto lokacja kontenera, która obsługuje tylko jeden widok jednocześnie, może łączyć lokację dokumentu i widok z jedną klasą konkretnej lokacji. Obiekt ramki kontenera, jednak musi pozostać odrębny, a składnik dokumentu kontenera jest zawarty tutaj tylko w celu uzyskania pełnego obrazu architektury; nie ma to wpływ na architekturę zawierania dokumentów aktywnych.
 
-## <a name="document-site-objects"></a><a name="document_site_objects"></a>Obiekty witryny dokumentu
+## <a name="document-site-objects"></a><a name="document_site_objects"></a>Obiekty witryny dokumentów
 
-W architekturze bezpieczeństwa aktywnego dokumentu witryna dokumentu jest taka sama jak obiekt `IOleDocument` lokacji klienta w dokumentach OLE z dodatkiem interfejsu:
+W przypadku architektury zawierania aktywnego dokumentu witryna dokumentu jest taka sama jak obiekt lokacji klienta w dokumentach OLE z dodaniem `IOleDocument` interfejsu:
 
 ```cpp
 interface IOleDocumentSite : IUnknown
@@ -69,20 +69,20 @@ interface IOleDocumentSite : IUnknown
 }
 ```
 
-Witryna dokumentu jest koncepcyjnie kontenerem dla jednego lub więcej obiektów "view site". Każdy obiekt witryny widoku jest skojarzony z poszczególnymi obiektami widoku dokumentu zarządzanego przez witrynę dokumentu. Jeśli kontener obsługuje tylko jeden widok na witrynę dokumentu, można zaimplementować witrynę dokumentu i witrynę widoku z jedną klasą konkretów.
+Witryna dokumentu jest koncepcyjnie kontenerem dla co najmniej jednego obiektu "View Site". Każdy obiekt witryny widoku jest skojarzony z pojedynczymi obiektami widoku dokumentu zarządzanego przez witrynę dokumentu. Jeśli kontener obsługuje tylko jeden widok na każdą witrynę dokumentu, można zaimplementować witrynę dokumentu i witrynę widoku przy użyciu pojedynczej konkretnej klasy.
 
-## <a name="view-site-objects"></a><a name="view_site_objects"></a>Wyświetlanie obiektów witryny
+## <a name="view-site-objects"></a><a name="view_site_objects"></a>Wyświetlanie obiektów lokacji
 
-Obiekt witryny widoku kontenera zarządza przestrzenią wyświetlania dla określonego widoku dokumentu. Oprócz obsługi standardowego `IOleInPlaceSite` interfejsu, witryna widoku jest `IContinueCallback` również ogólnie implementuje dla sterowania drukowaniem programowym. (Należy zauważyć, że obiekt `IContinueCallback` widoku nigdy nie wysyła zapytań, więc faktycznie można go zaimplementować na dowolnym obiekcie, którego dotyczy kontener).
+Obiekt witryny widoku kontenera zarządza obszarem wyświetlania dla określonego widoku dokumentu. Oprócz obsługi standardowego `IOleInPlaceSite` interfejsu, witryna widoku również zazwyczaj implementuje program `IContinueCallback` programistyczny kontroli drukowania. (Należy zauważyć, że obiekt widoku nigdy nie wykonuje zapytania `IContinueCallback` , aby można go było zaimplementować na dowolnym obiekcie, do którego się odniesie kontener).
 
-Kontener obsługujący wiele widoków musi mieć możliwość tworzenia wielu obiektów witryny widoku w witrynie dokumentu. Zapewnia to każdemu widokowi oddzielne usługi aktywacji i dezaktywacji, które są świadczone za pośrednictwem . `IOleInPlaceSite`
+Kontener obsługujący wiele widoków musi mieć możliwość tworzenia wielu obiektów widoku w obrębie witryny dokumentów. Zapewnia to każdy widok z oddzielnymi usługami aktywacji i dezaktywacji zgodnie z oczekiwaniami `IOleInPlaceSite` .
 
-## <a name="frame-object"></a><a name="frame_object"></a>Obiekt ramki
+## <a name="frame-object"></a><a name="frame_object"></a>Frame — obiekt
 
-Obiekt ramki kontenera jest w przeważającej części tą samą ramką, która jest używana do aktywacji w miejscu w dokumentach OLE, czyli tej, która obsługuje negocjacje menu i paska narzędzi. Obiekt widoku ma dostęp do `IOleInPlaceSite::GetWindowContext`tego obiektu ramki za pośrednictwem , który zapewnia również dostęp do obiektu kontenera reprezentującego dokument kontenera (który może obsługiwać negocjacji na poziomie paska narzędzi i zawarte wyliczenie obiektu).
+Obiekt ramki kontenera to, w większości, ta sama ramka, która jest używana do aktywacji w miejscu w dokumentach OLE, czyli, która obsługuje negocjowanie menu i paska narzędzi. Obiekt widoku ma dostęp do tego obiektu ramki przez `IOleInPlaceSite::GetWindowContext` , który również zapewnia dostęp do obiektu kontenera reprezentującego dokument kontenera (który może obsłużyć negocjację paska narzędzi na poziomie okienka i Wyliczenie zawartego obiektu).
 
-Aktywny kontener dokumentu może rozszerzyć ramkę, dodając `IOleCommandTarget`program . Dzięki temu może odbierać polecenia pochodzące z interfejsu użytkownika aktywnego dokumentu w taki sam sposób, w jaki ten interfejs może zezwolić kontenerowi na wysyłanie tych samych poleceń (takich jak **File New**, **Open**, **Save As**, **Print**; **Edytuj kopię,** **wklej,** **Cofnij**i inne) do aktywnego dokumentu. Aby uzyskać więcej informacji, zobacz [Cele poleceń](../mfc/message-handling-and-command-targets.md).
+Kontener aktywnego dokumentu może rozszerzyć ramkę przez dodanie `IOleCommandTarget` . Dzięki temu można odbierać polecenia pochodzące z interfejsu użytkownika aktywnego dokumentu w taki sam sposób, w jaki ten interfejs może zezwalać kontenerowi na wysyłanie tych samych poleceń (takich jak **plik New**, **Open**, **Save as**, **Print**; **Edytuj kopię**, **Wklej**, **Cofnij**i inne) do aktywnego dokumentu. Aby uzyskać więcej informacji, zobacz [cele poleceń](message-handling-and-command-targets.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Zawieranie dokumentów aktywnych](../mfc/active-document-containment.md)
+[Zawieranie dokumentów aktywnych](active-document-containment.md)

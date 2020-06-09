@@ -1,34 +1,34 @@
 ---
-title: 'Kontenery: Elementy klienckie'
+title: 'Kontenery: elementy klienckie'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE containers [MFC], client items
 - client items and OLE containers
 ms.assetid: 231528b5-0744-4f83-8897-083bf55ed087
-ms.openlocfilehash: 0c7f4a63cb9a31b52be2d3574ddad29313df6a4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad347c78fb6aa7af94b306a3edb538b9f740c305
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153362"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619019"
 ---
-# <a name="containers-client-items"></a>Kontenery: Elementy klienckie
+# <a name="containers-client-items"></a>Kontenery: elementy klienckie
 
-W tym artykule opisano, co to są elementy klienckie i z klasy aplikacji powinien pochodzić elementy klienta.
+W tym artykule wyjaśniono, czym są elementy klienta i od jakich klas aplikacja powinna dziedziczyć elementy klienta.
 
-Elementy klienckie są elementami danych należących do innej aplikacji, która są zawarte w albo odwołuje się dokument aplikacji kontenera OLE. Elementy klienckie, których dane są zawarte w dokumencie są osadzone; te, których dane są przechowywane w innej lokalizacji przywoływanej przez dokument kontenera są połączone.
+Elementy klienta to elementy danych należące do innej aplikacji, które są zawarte w dokumencie lub do którego odwołuje się aplikacja kontenera OLE. Elementy klienta, których dane znajdują się w dokumencie, są osadzone; te, których dane są przechowywane w innej lokalizacji, do której odwołuje się dokument kontenera, są połączone.
 
-Klasa dokumentu w aplikacji OLE pochodzi od klasy [COleDocument](../mfc/reference/coledocument-class.md) , a nie z `CDocument`. `COleDocument` Klasa dziedziczy `CDocument` wszystkie funkcje niezbędne do przy użyciu architektury dokument/widok na MFC, które aplikacje są oparte. `COleDocument` definiuje również interfejs, który traktuje dokumentu jako zbiór `CDocItem` obiektów. Kilka `COleDocument` funkcji elementów członkowskich są dostarczane na dodawanie, pobieranie i usuwanie elementów tej kolekcji.
+Klasa dokumentu w aplikacji OLE pochodzi od klasy [COleDocument](reference/coledocument-class.md) , a nie z `CDocument` . `COleDocument`Klasa dziedziczy ze `CDocument` wszystkich funkcji niezbędnych do korzystania z architektury dokumentu/widoku, na których oparto aplikacje MFC. `COleDocument`definiuje również interfejs, który traktuje dokument jako kolekcję `CDocItem` obiektów. `COleDocument`Do dodawania, pobierania i usuwania elementów tej kolekcji są udostępniane kilka funkcji Członkowskich.
 
-Każda aplikacja kontenera powinien pochodzić z co najmniej jedną klasę z `COleClientItem`. Obiekty tej klasy reprezentują elementy, osadzony lub połączony w dokumencie OLE. Dla cyklu życia dokumentu zawierającego je, istnieją tych obiektów, chyba że zostaną one usunięte z dokumentu.
+Każda aplikacja kontenera powinna dziedziczyć co najmniej jedną klasę od `COleClientItem` . Obiekty tej klasy reprezentują elementy, osadzone lub połączone, w dokumencie OLE. Te obiekty istnieją w okresie istnienia dokumentu zawierającego je, chyba że zostaną usunięte z dokumentu.
 
-`CDocItem` jest klasą bazową dla `COleClientItem` i `COleServerItem`. Obiekty klasy pochodzące z tych dwóch pełnią rolę pośredników pomiędzy elementu OLE i aplikacje klienckie i serwerowe, odpowiednio. Każdym dodaniu nowego elementu OLE w dokumencie programu MFC framework dodaje nowy obiekt aplikację kliencką `COleClientItem`-klasy pochodnej do kolekcji dokument `CDocItem` obiektów.
+`CDocItem`jest klasą bazową dla `COleClientItem` i `COleServerItem` . Obiekty klas pochodzących od tych dwóch działań jako pośredników między elementem OLE a aplikacjami klienta i serwera. Za każdym razem, gdy nowy element OLE zostanie dodany do dokumentu, struktura MFC dodaje nowy obiekt klasy pochodnej aplikacji klienckiej `COleClientItem` do kolekcji `CDocItem` obiektów dokumentu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Kontenery](../mfc/containers.md)<br/>
-[Kontenery: Pliki złożone](../mfc/containers-compound-files.md)<br/>
-[Kontenery: Problemy z interfejsem użytkownika](../mfc/containers-user-interface-issues.md)<br/>
-[Kontenery: Funkcje zaawansowane](../mfc/containers-advanced-features.md)<br/>
-[Klasa COleClientItem](../mfc/reference/coleclientitem-class.md)<br/>
-[Klasa COleServerItem](../mfc/reference/coleserveritem-class.md)
+[Containers](containers.md)<br/>
+[Kontenery: pliki złożone](containers-compound-files.md)<br/>
+[Kontenery: kwestie dotyczące interfejsu użytkownika](containers-user-interface-issues.md)<br/>
+[Kontenery: funkcje zaawansowane](containers-advanced-features.md)<br/>
+[Klasa COleClientItem](reference/coleclientitem-class.md)<br/>
+[Klasa COleServerItem](reference/coleserveritem-class.md)

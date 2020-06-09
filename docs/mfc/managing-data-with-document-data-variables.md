@@ -11,25 +11,25 @@ helpviewer_keywords:
 - document data [MFC]
 - member variables [MFC], document class [MFC]
 ms.assetid: e70b87f4-8c30-49e5-8986-521c2ff91704
-ms.openlocfilehash: dc21bd4b3dbe7609a33af4b4f93f15a3f5c9a64e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d845b0fc3d00369d44c21c04a3fb7e3b8d6189e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151998"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618322"
 ---
 # <a name="managing-data-with-document-data-variables"></a>Zarządzanie danymi za pomocą zmiennych danych dokumentu
 
-Implementowanie danych dokumentu jako zmienne Członkowskie klasy dokumentu. Na przykład program bazgrołów deklaruje element członkowski danych typu `CObList` — połączonej listy, która przechowuje wskaźniki do `CObject` obiektów. Ta lista jest używana do przechowywania tablic punkty, które tworzą freehand Rysowanie linii.
+Zaimplementuj dane dokumentu jako zmienne składowe klasy dokumentu. Na przykład program Bazgrołs deklaruje składową danych typu `CObList` — połączoną listę, która przechowuje wskaźniki do `CObject` obiektów. Ta lista służy do przechowywania tablic punktów tworzących rysowanie linii odręcznej.
 
-Sposób implementacji dokumentu element członkowski danych zależy od charakteru aplikacji. Aby okazać się pomocny, MFC dostarcza grupę "klasy kolekcji" — tablic, list i map (słowniki), łącznie z kolekcjami, na podstawie szablonów języka C++ — wraz z klas, które zapewniają różne typy danych, takich jak `CString`, `CRect`, `CPoint`, `CSize`, i `CTime`. Aby uzyskać więcej informacji na temat tych klas, zobacz [Przegląd biblioteki klas](../mfc/class-library-overview.md) w *odwołanie MFC*.
+Sposób implementacji danych elementu członkowskiego dokumentu zależy od charakteru aplikacji. Aby ułatwić Ci, MFC dostarcza grupę "klasy kolekcji" — tablice, listy i mapy (słowniki), w tym kolekcje oparte na szablonach języka C++ — oraz klasy, które hermetyzują różne typy danych, takie jak,, `CString` , `CRect` `CPoint` `CSize` i `CTime` . Aby uzyskać więcej informacji na temat tych klas, zobacz [Omówienie biblioteki klas](class-library-overview.md) w *dokumentacji MFC*.
 
-Podczas definiowania dokumentu element członkowski danych zazwyczaj dodasz funkcji składowych do klasy dokumentu, aby ustawić i pobieranie elementów danych i wykonywać na nich inne przydatne operacje.
+Gdy definiujesz dane elementu członkowskiego dokumentu, zazwyczaj dodasz funkcje członkowskie do klasy dokumentu, aby ustawić i pobrać elementy danych i wykonać inne użyteczne operacje na nich.
 
-Widoków dostęp do obiektu dokumentu przy użyciu widoku wskaźnik do dokumentu, zainstalowane w widoku w czasie jego tworzenia. Możesz pobrać ten wskaźnik w widoku elementów członkowskich, wywołując `CView` funkcja elementu członkowskiego `GetDocument`. Pamiętaj rzutować wskaźnik do typu dokumentu. Tak powstały dokumenty publiczne elementy członkowskie za pomocą wskaźnika.
+Twoje widoki uzyskują dostęp do obiektu dokumentu przy użyciu wskaźnika widoku do dokumentu, który jest instalowany w widoku podczas tworzenia. Możesz pobrać ten wskaźnik w funkcjach składowych widoku, wywołując `CView` funkcję członkowską `GetDocument` . Upewnij się, że ten wskaźnik jest rzutowany na własny typ dokumentu. Następnie można uzyskać dostęp do członków dokumentu publicznego za pomocą wskaźnika.
 
-Transfer danych często wymaga bezpośredniego dostępu lub chcesz użyć niepubliczne składowe klasy dokumentu, można utworzyć widoku klasy friend (w warunkach C++), klasy dokumentu.
+Jeśli częste przesyłanie danych wymaga bezpośredniego dostępu lub chcesz użyć niepublicznych elementów członkowskich klasy dokumentu, możesz chcieć, aby Twoja Klasa widoku była znajoma (w warunkach C++) klasy dokumentu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Używanie dokumentów](../mfc/using-documents.md)
+[Używanie dokumentów](using-documents.md)

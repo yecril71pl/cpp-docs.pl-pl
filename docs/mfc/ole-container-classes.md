@@ -9,43 +9,43 @@ helpviewer_keywords:
 - OLE [MFC], classes
 - containers [MFC], OLE container applications
 ms.assetid: 1e27e1ab-4c22-41eb-8547-6915c72668ae
-ms.openlocfilehash: 61db5310637d13da2d2cc183f12f8f62aa60e328
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 596b94e7fdbb5d9dc1862867001f6c01c1aea7b2
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447657"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617810"
 ---
 # <a name="ole-container-classes"></a>Klasy kontenerów OLE
 
-Te klasy są używane przez aplikacje kontenera. Zarówno `COleLinkingDoc`, jak i `COleDocument` zarządzać kolekcjami obiektów `COleClientItem`. Zamiast wypełniania klasy dokumentu od `CDocument`, można utworzyć ją od `COleLinkingDoc` lub `COleDocument`, w zależności od tego, czy chcesz obsługiwać linki do obiektów osadzonych w dokumencie.
+Te klasy są używane przez aplikacje kontenera. Zarówno `COleLinkingDoc` kolekcje obiektów, jak i `COleDocument` zarządzanie nimi `COleClientItem` . Zamiast wypełniania klasy dokumentu z programu `CDocument` , należy utworzyć ją od `COleLinkingDoc` lub, w zależności od tego `COleDocument` , czy chcesz obsługiwać linki do obiektów osadzonych w dokumencie.
 
-Użyj obiektu `COleClientItem`, aby reprezentować każdy element OLE w dokumencie osadzonym z innego dokumentu lub link do innego dokumentu.
+Użyj `COleClientItem` obiektu do reprezentowania każdego elementu OLE w dokumencie, który jest osadzony z innego dokumentu lub link do innego dokumentu.
 
-[Metody COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)<br/>
+[Metody COleDocObjectItem](reference/coledocobjectitem-class.md)<br/>
 Obsługuje zawieranie dokumentów aktywnych.
 
-[COleDocument](../mfc/reference/coledocument-class.md)<br/>
-Używany do implementacji dokumentu złożonego, a także podstawowej obsługi kontenerów. Służy jako kontener dla klas pochodnych z `CDocItem`. Ta klasa może być używana jako klasa bazowa dla dokumentów kontenera i jest klasą bazową dla `COleServerDoc`.
+[COleDocument](reference/coledocument-class.md)<br/>
+Używany do implementacji dokumentu złożonego, a także podstawowej obsługi kontenerów. Służy jako kontener dla klas pochodzących od `CDocItem` . Ta klasa może być używana jako klasa bazowa dla dokumentów kontenera i jest klasą bazową dla `COleServerDoc` .
 
-[COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)<br/>
-Klasa pochodna `COleDocument`, która udostępnia infrastrukturę do łączenia. Klasy dokumentów dla aplikacji kontenera należy utworzyć na podstawie tej klasy zamiast z `COleDocument`, jeśli chcesz, aby obsługiwały linki do obiektów osadzonych.
+[COleLinkingDoc](reference/colelinkingdoc-class.md)<br/>
+Klasa pochodna `COleDocument` , która zapewnia infrastrukturę do łączenia. Klasy dokumentów dla aplikacji kontenera należy dziedziczyć z tej klasy zamiast z, `COleDocument` Jeśli chcesz, aby obsługiwały linki do obiektów osadzonych.
 
-[CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
-Zachowuje listę elementów klienta OLE, które znajdują się w kontrolce edycji wzbogaconej. Używany z [CRichEditView](../mfc/reference/cricheditview-class.md) i [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md).
+[CRichEditDoc](reference/cricheditdoc-class.md)<br/>
+Zachowuje listę elementów klienta OLE, które znajdują się w kontrolce edycji wzbogaconej. Używany z [CRichEditView](reference/cricheditview-class.md) i [CRichEditCntrItem](reference/cricheditcntritem-class.md).
 
-[CDocItem](../mfc/reference/cdocitem-class.md)<br/>
-Abstrakcyjna klasa bazowa `COleClientItem` i `COleServerItem`. Obiekty klas pochodzących od `CDocItem` reprezentują części dokumentów.
+[CDocItem](reference/cdocitem-class.md)<br/>
+Abstrakcyjna klasa bazowa `COleClientItem` i `COleServerItem` . Obiekty klas pochodzących od `CDocItem` reprezentowania części dokumentów.
 
-[COleClientItem](../mfc/reference/coleclientitem-class.md)<br/>
+[COleClientItem](reference/coleclientitem-class.md)<br/>
 Klasa elementu klienta, która reprezentuje po stronie klienta połączenie z osadzonym lub połączonym elementem OLE. Utwórz elementy klienckie z tej klasy.
 
-[CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)<br/>
-Zapewnia dostęp po stronie klienta do elementu OLE przechowywanego w kontrolce edycji wzbogaconej, gdy jest używany z `CRichEditView` i `CRichEditDoc`.
+[CRichEditCntrItem](reference/cricheditcntritem-class.md)<br/>
+Zapewnia dostęp po stronie klienta do elementu OLE przechowywanego w kontrolce edycji wzbogaconej, gdy jest używany z `CRichEditView` i `CRichEditDoc` .
 
-[COleException](../mfc/reference/coleexception-class.md)<br/>
+[COleException](reference/coleexception-class.md)<br/>
 Wyjątek wynikający z błędu przetwarzania OLE. Ta klasa jest używana przez kontenery i serwery.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przegląd klas](../mfc/class-library-overview.md)
+[Przegląd klas](class-library-overview.md)

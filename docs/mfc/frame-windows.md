@@ -15,74 +15,74 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 939230753f25db38e6ba2f26340f40ddf74d23bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39c0b4b866fa123d8bcae639342c925570d96e1b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219838"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625821"
 ---
 # <a name="frame-windows"></a>Okna ramowe
 
-Po uruchomieniu aplikacji w obszarze Windows, użytkownik wchodzi w interakcję z wyświetlana w oknach ramowych dokumentów. Okna ramki dokumentu ma dwa główne składniki: ramki i zawartość, która go ramek. Okna ramki dokumentu może być [interfejsu pojedynczego dokumentu](../mfc/sdi-and-mdi.md) okno ramowe (SDI) lub [interfejsu wielu dokumentów](../mfc/sdi-and-mdi.md) okna podrzędnego (MDI). Windows zarządza większość interakcji użytkownika z oknem ramki: przenoszenie i zmienia rozmiar okna, zamknięcie, minimalizowanie i jego zmaksymalizowaniu. Możesz zarządzać zawartość wewnątrz ramki.
+Gdy aplikacja działa w systemie Windows, użytkownik współdziała z dokumentami wyświetlanymi w oknach ramowych. Okno ramki dokumentu ma dwa główne składniki: ramkę i zawartość, którą zawiera ramka. Okno ramki dokumentu może być oknem ramki [interfejsu pojedynczego dokumentu](sdi-and-mdi.md) (SDI) lub oknem podrzędnym [wielu dokumentów](sdi-and-mdi.md) (MDI). System Windows zarządza większością interakcji użytkownika z oknem ramki: przeniesienie i zmiana rozmiarów okna, jego zamknięcie i zminimalizowanie i zmaksymalizowanie. Zawartość wewnątrz ramki jest zarządzana.
 
-## <a name="frame-windows-and-views"></a>Windows ramek i widokami
+## <a name="frame-windows-and-views"></a>Okna ramowe i widoki
 
-Struktura MFC używa okien ramowych do zawierają widoki. Dwa składniki — ramki i zawartości — są reprezentowane i zarządza dwoma różnymi klasami w MFC. Klasy okien ramowych zarządza ramki, a klasa widoku zarządza zawartość. Okno Widok jest elementem podrzędnym ramki okna. Rysowanie i innych interakcji użytkownika z dokumentem miejsce w obszar klienta tego widoku, nie obszaru klienckiego okna ramki. Okno ramowe zawiera widoczne ramkę wokół widoku, wraz z pasek podpisu i standardowego okna kontrolek, takich jak kontrolki menu, przyciski, aby zminimalizować i zmaksymalizuj okno i kontroluje do zmiany rozmiaru okna. "Zawartość" składają się z obszaru klienckiego okna, w pełni jest zajęta przez okno podrzędne — widok. Na poniższej ilustracji przedstawiono relację między oknem ramki i widokiem.
+Struktura MFC używa okien ramowych do znajdowania widoków. Dwa składniki — Frame i Contents — są reprezentowane i zarządzane przez dwie różne klasy w MFC. Klasa okien ramowych zarządza ramką, a Klasa widoku zarządza zawartością. Okno widok jest elementem podrzędnym okna ramki. Rysowanie i inne interakcje użytkownika z dokumentem odbywają się w obszarze klienta widoku, a nie w obszarze klienta okna ramki. Okno ramki zawiera widoczną ramkę dookoła widoku, kompletną z paskiem podpisu i formantami okna standardowego, takimi jak menu kontrolki, przyciski umożliwiające minimalizowanie i Maksymalizowanie okna oraz kontrolki zmiany rozmiarów okna. "Zawartość" składa się z obszaru klienta okna, który jest w pełni zajęty oknem podrzędnym — widok. Poniższy rysunek przedstawia relację między oknem ramki a widokiem.
 
-![Ramka okna widoku](../mfc/media/vc37fx1.gif "ramki okna widoku") <br/>
-Okno ramek i widoku
+![Widok okna ramowego](../mfc/media/vc37fx1.gif "Widok okna ramowego") <br/>
+Okno i widok ramki
 
-## <a name="frame-windows-and-splitter-windows"></a>Ramka Windows i Windows rozdzielacza
+## <a name="frame-windows-and-splitter-windows"></a>Okna ramowe i okna rozdzielacza
 
-Inny układ wspólnej dotyczy ramki okna ramki wiele widoków, zwykle za pomocą [okno rozdzielacza](../mfc/multiple-document-types-views-and-frame-windows.md). W oknie rozdzielacza obszaru klienckiego okna ramki jest zajęta przez okna dzielącego, która z kolei ma wiele okien podrzędnych o nazwie okienek, które są widoki.
+Innym typowym rozmieszczeniem jest to, aby okno ramki było ramką wielu widoków, zwykle przy użyciu [okna rozdzielacza](multiple-document-types-views-and-frame-windows.md). W oknie rozdzielacza obszar klienta okna ramki jest zajmowany przez okno rozdzielacza, które z kolei ma wiele okien podrzędnych o nazwie okienka, które są widokami.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-**Tematy ogólne, okno ramowe**
+**Ogólne tematy dotyczące okien ramowych**
 
-- [Obiekty okna](../mfc/window-objects.md)
+- [Obiekty okna](window-objects.md)
 
-- [Klasy okien ramowych](../mfc/frame-window-classes.md)
+- [Klasy okien ramowych](frame-window-classes.md)
 
-- [Klasy okien ramowych tworzone przez Kreatora aplikacji](../mfc/frame-window-classes-created-by-the-application-wizard.md)
+- [Klasy okien ramowych tworzone przez Kreatora aplikacji](frame-window-classes-created-by-the-application-wizard.md)
 
-- [Style okna ramki](../mfc/frame-window-styles-cpp.md)
+- [Style okna ramowego](frame-window-styles-cpp.md)
 
-- [Co robią okna ramowe](../mfc/what-frame-windows-do.md)
+- [Co robią okna ramowe](what-frame-windows-do.md)
 
-**Tematy dotyczące używania Windows ramki**
+**Tematy dotyczące korzystania z okien ramowych**
 
-- [Używanie okien ramowych](../mfc/using-frame-windows.md)
+- [Korzystanie z okien ramowych](using-frame-windows.md)
 
-- [Tworzenie okien ramowych dokumentu](../mfc/creating-document-frame-windows.md)
+- [Tworzenie okien ramowych dokumentu](creating-document-frame-windows.md)
 
-- [Niszczenie okien ramowych](../mfc/destroying-frame-windows.md)
+- [Niszczenie okien ramowych](destroying-frame-windows.md)
 
-- [Zarządzanie oknami podrzędnymi MDI](../mfc/managing-mdi-child-windows.md)
+- [Zarządzanie oknami podrzędnymi MDI](managing-mdi-child-windows.md)
 
-- [Zarządzanie bieżącym widokiem](../mfc/managing-the-current-view.md) w oknie ramki, który zawiera więcej niż jeden widok
+- [Zarządzanie bieżącym widokiem](managing-the-current-view.md) w oknie ramki zawierającym więcej niż jeden widok
 
-- [Zarządzanie menu, paskami sterowania i akceleratorami (inne obiekty, które mają miejsce okno ramek)](../mfc/managing-menus-control-bars-and-accelerators.md)
+- [Zarządzanie menu, paskami sterowania i akceleratorami (inne obiekty, które współdzielą przestrzeń okna ramki)](managing-menus-control-bars-and-accelerators.md)
 
-**Tematy dotyczące możliwości okna ramki specjalne**
+**Tematy dotyczące funkcji okna ramki specjalnej**
 
-- [Przeciąganie i upuszczanie plików](../mfc/dragging-and-dropping-files-in-a-frame-window.md) z Eksploratora plików lub Menedżera plików, w oknie ramowym
+- [Przeciąganie i upuszczanie plików](dragging-and-dropping-files-in-a-frame-window.md) z Eksploratora plików lub Menedżera plików do okna ramowego
 
-- [Odpowiadanie na dynamiczną wymianę danych (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)
+- [Reagowanie na dynamiczną wymianę danych (DDE)](responding-to-dynamic-data-exchange-dde.md)
 
-- [Stany półmodalne: Pomoc kontekstowa Windows (organizowanie innych akcji okna)](../mfc/orchestrating-other-window-actions.md)
+- [Stany półmodalne: kontekstowa Pomoc systemu Windows (organizowanie innych akcji okna)](orchestrating-other-window-actions.md)
 
-- [Stany półmodalne: drukowanie i Podgląd wydruku (organizowanie innych akcji okna)](../mfc/orchestrating-other-window-actions.md)
+- [Stany półmodalne: drukowanie i Podgląd wydruku (organizowanie innych akcji okna)](orchestrating-other-window-actions.md)
 
-**Tematy dotyczące innych rodzajów Windows**
+**Tematy dotyczące innych rodzajów okien**
 
-- [Używanie widoków](../mfc/using-views.md)
+- [Używanie widoków](using-views.md)
 
-- [Okna dialogowe](../mfc/dialog-boxes.md)
+- [Okna dialogowe](dialog-boxes.md)
 
-- [Kontrolki](../mfc/controls-mfc.md)
+- [Formanty](controls-mfc.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Windows](../mfc/windows.md)
+[Windows](windows.md)

@@ -1,5 +1,5 @@
 ---
-title: funkcje&gt; algorytm &lt;
+title: '&lt;&gt;funkcje algorytmu'
 ms.date: 11/04/2016
 f1_keywords:
 - algorithm/std::adjacent_find
@@ -200,14 +200,14 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: b9f1e5c4c5600fa07d2f9c5222bf57fb43446955
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: c8c550be87eacf81fab994239e07ed2358fad39b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076830"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617662"
 ---
-# <a name="ltalgorithmgt-functions"></a>funkcje&gt; algorytm &lt;
+# <a name="ltalgorithmgt-functions"></a>&lt;&gt;funkcje algorytmu
 
 ## <a name="adjacent_find"></a><a name="adjacent_find"></a>adjacent_find
 
@@ -241,13 +241,13 @@ ForwardIterator adjacent_find(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, który ma być przeszukiwany.
 
-*ostatni*\
+*ostatniego*\
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma być przeszukiwany.
 
 *pred*\
@@ -259,9 +259,9 @@ Iterator do przodu do pierwszego z sąsiadujących elementów, które są równe
 
 ### <a name="remarks"></a>Uwagi
 
-Algorytm `adjacent_find` jest niemutacją algorytmem sekwencji. Zakres, który ma być przeszukiwany, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a ostatnia pozycja jest dostępna od pierwszej do przyrostu. Stopień złożoności algorytmu jest liniowy w liczbie elementów zawartych w zakresie.
+`adjacent_find`Algorytm jest niemutacją algorytmem sekwencji. Zakres, który ma być przeszukiwany, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a ostatnia pozycja jest dostępna od pierwszej do przyrostu. Stopień złożoności algorytmu jest liniowy w liczbie elementów zawartych w zakresie.
 
-`operator==` używany do określenia dopasowania między elementami musi nałożyć relację równoważności między operandami.
+`operator==`Użycie do określenia dopasowania między elementami musi mieć relację równoważności między operandami.
 
 ### <a name="example"></a>Przykład
 
@@ -348,13 +348,13 @@ bool all_of(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wejściowych, który wskazuje, gdzie rozpocząć sprawdzanie warunku. Znaczniki iteratora, w których jest uruchamiany zakres elementów.
 
-*ostatni*\
+*ostatniego*\
 Iterator danych wejściowych, który wskazuje koniec zakresu elementów do sprawdzenia dla warunku.
 
 *pred*\
@@ -366,7 +366,7 @@ Zwraca **wartość true** , jeśli warunek jest wykrywany dla każdego elementu 
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca **wartość true** tylko wtedy, gdy dla każdego `N` w zakresie `[0, last - first)`, predykat `pred(*(first + N))` ma **wartość true**.
+Funkcja szablonu zwraca **wartość true** tylko wtedy, gdy dla każdego `N` z zakresów `[0, last - first)` `pred(*(first + N))` jest **spełniony**predykat.
 
 ### <a name="example"></a>Przykład
 
@@ -424,13 +424,13 @@ bool any_of(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wejściowych, który wskazuje, gdzie rozpocząć sprawdzanie zakresu elementów dla warunku.
 
-*ostatni*\
+*ostatniego*\
 Iterator danych wejściowych, który wskazuje koniec zakresu elementów do sprawdzenia dla warunku.
 
 *pred*\
@@ -442,9 +442,9 @@ Zwraca **wartość true** , jeśli warunek jest wykrywany co najmniej raz we wsk
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca **wartość true** tylko wtedy, gdy dla niektórych `N` w zakresie
+Funkcja szablonu zwraca **wartość true** tylko wtedy, gdy dla niektórych `N` z zakresu
 
-`[0, last - first)`predykat `pred(*(first + N))` ma wartość true.
+`[0, last - first)`, predykat `pred(*(first + N))` ma wartość true.
 
 ### <a name="example"></a>Przykład
 
@@ -501,13 +501,13 @@ bool binary_search(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, który ma być przeszukiwany.
 
-*ostatni*\
+*ostatniego*\
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma być przeszukiwany.
 
-\ *wartości*
+*wartościami*\
 Wartość wymagana do dopasowania przez wartość elementu lub, która musi spełniać warunek z wartością elementu określoną przez Predykat binarny.
 
 *pred*\
@@ -521,13 +521,13 @@ Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens,
 
 Posortowany zakres źródłowy musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a w ramach sekwencji Ostatnia pozycja musi być osiągalna od pierwszej przez przyrost.
 
-Posortowany zakres musi być uporządkowany jako warunek wstępny do zastosowania algorytmu `binary_search`, zgodnie z tą samą kolejnością, w jakiej ma być używany przez algorytm w celu sortowania połączonych zakresów.
+Posortowany zakres musi być uporządkowany jako warunek wstępny do zastosowania `binary_search` algorytmu zgodnie z tą samą kolejnością, w jakiej ma być używany przez algorytm w celu sortowania połączonych zakresów.
 
-Zakresy źródłowe nie są modyfikowane przez `binary_search`.
+Zakresy źródłowe nie są modyfikowane przez program `binary_search` .
 
 Typy wartości iteratorów do przodu muszą być mniej-niż porównywalne do uporządkowania, tak że, w przypadku dwóch elementów, można określić, że są one równoważne (w sensie, że żaden z nich nie jest mniejszy niż drugi) lub że jeden z nich jest mniejszy od drugiego. Powoduje to porządkowanie między nierównoważnymi elementami
 
-Złożoność algorytmu jest logarytmiczna dla iteratorów dostępu losowego i liniowego w przeciwnym razie z liczbą kroków proporcjonalną do (`last` - `first`).
+Złożoność algorytmu jest logarytmiczna dla iteratorów dostępu losowego i liniowego w przeciwnym razie z liczbą kroków proporcjonalną do ( `last`  -  `first` ).
 
 ### <a name="example"></a>Przykład
 
@@ -640,13 +640,13 @@ constexpr const Type& clamp(
 
 ### <a name="parameters"></a>Parametry
 
-\ *wartości*
+*wartościami*\
 Wartość do porównania z *górną* i *niższą*.
 
-*dolna*\
+*dołu*\
 Dolna granica wartości, do której ma zostać zamocowana *wartość* .
 
-*górny*\
+*prawym górnym*\
 Górna granica wartości, do której należy *wartość* .
 
 *pred*\
@@ -654,7 +654,7 @@ Predykat używany do porównywania *wartości* z *dolną* lub *górną*. Predyka
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca odwołanie do *mniejszej* , jeśli `value < lower`lub odwołanie do *górnego* , jeśli `upper < value`. W przeciwnym razie zwraca odwołanie do *wartości*.
+Zwraca odwołanie do *mniejszej* `value < lower` , jeśli lub odwołanie do *górnej* Jeśli `upper < value` . W przeciwnym razie zwraca odwołanie do *wartości*.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -681,13 +681,13 @@ ForwardIterator2 copy(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie źródłowym.
 
-*ostatni*\
+*ostatniego*\
 Iterator danych wejściowych odnoszący się do pozycji, która jest jedną poza ostatnim elementem w zakresie źródłowym.
 
 *destBeg*\
@@ -695,15 +695,15 @@ Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w za
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator danych wyjściowych odnoszący się do pozycji, która jest jedną poza ostatnim elementem w zakresie docelowym, czyli adresów iteratorów `result` + (*ostatni* - *pierwszy*).
+Iterator danych wyjściowych odnoszący się do pozycji, która jest jedną poza ostatnim elementem w zakresie docelowym, czyli adresów iteratorów `result` + (*ostatni*  -  *pierwszy*).
 
 ### <a name="remarks"></a>Uwagi
 
 Zakres źródłowy musi być prawidłowy i musi być wystarczająco dużo miejsca w miejscu przeznaczenia, aby pomieścić wszystkie elementy kopiowane.
 
-Ponieważ algorytm Kopiuje elementy źródłowe w kolejności rozpoczynającej się od pierwszego elementu, zakres docelowy może pokrywać się z zakresem źródłowym, pod warunkiem, że *Ostatnia* pozycja zakresu źródłowego nie jest zawarta w zakresie docelowym. `copy` może służyć do przesuwania elementów z lewej strony, ale nie do prawej, chyba że między zakres źródłowy i docelowy. Aby przesunąć do prawej dowolnej liczby pozycji, użyj algorytmu [copy_backward](../standard-library/algorithm-functions.md#copy_backward) .
+Ponieważ algorytm Kopiuje elementy źródłowe w kolejności rozpoczynającej się od pierwszego elementu, zakres docelowy może pokrywać się z zakresem źródłowym, pod warunkiem, że *Ostatnia* pozycja zakresu źródłowego nie jest zawarta w zakresie docelowym. `copy`może służyć do przesuwania elementów z lewej strony, ale nie do prawej, chyba że między zakres źródłowy i docelowy. Aby przesunąć do prawej dowolnej liczby pozycji, użyj algorytmu [copy_backward](algorithm-functions.md#copy_backward) .
 
-Algorytm `copy` modyfikuje tylko wartości wskazywane przez Iteratory, przypisując nowe wartości do elementów w zakresie docelowym. Nie może służyć do tworzenia nowych elementów i nie może bezpośrednio wstawiać elementów do pustego kontenera.
+`copy`Algorytm modyfikuje tylko wartości wskazywane przez Iteratory, przypisując nowe wartości do elementów w zakresie docelowym. Nie może służyć do tworzenia nowych elementów i nie może bezpośrednio wstawiać elementów do pustego kontenera.
 
 ### <a name="example"></a>Przykład
 
@@ -777,10 +777,10 @@ BidirectionalIterator2 copy_backward(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
+*pierwszego*\
 Iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w zakresie źródłowym.
 
-*ostatni*\
+*ostatniego*\
 Iterator dwukierunkowy odnoszący się do pierwszej pozycji po elemencie końcowym w zakresie źródłowym.
 
 *destEnd*\
@@ -788,19 +788,19 @@ Iterator dwukierunkowy odnoszący się do pierwszej pozycji po elemencie końcow
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator danych wyjściowych odnoszący się do pozycji, która jest jedną poza elementem końcowym*w - zakresie* docelowym
+Iterator danych wyjściowych odnoszący się do pozycji, która jest jednym poza ostatnim elementem w zakresie docelowym, to jest, adresy iteratorów *destEnd* -(*Last*  -  *First*).
 
 ### <a name="remarks"></a>Uwagi
 
 Zakres źródłowy musi być prawidłowy i musi być wystarczająco dużo miejsca w miejscu przeznaczenia, aby pomieścić wszystkie elementy kopiowane.
 
-Algorytm `copy_backward` nakłada bardziej rygorystyczne wymagania niż algorytm `copy`. Oba iteratory, wejściowy i wyjściowy muszą być dwukierunkowe.
+`copy_backward`Algorytm nakłada bardziej rygorystyczne wymagania niż `copy` algorytm. Oba iteratory, wejściowy i wyjściowy muszą być dwukierunkowe.
 
-Algorytmy `copy_backward` i [move_backward](../standard-library/algorithm-functions.md#move_backward) są jedynymi C++ algorytmami biblioteki standardowej, które wyznaczają zakres wyjściowy z iteratorem wskazującym na koniec zakresu docelowego.
+`copy_backward`Algorytmy i [move_backward](algorithm-functions.md#move_backward) są jedynymi algorytmami standardowej biblioteki języka C++, które wyznaczają zakres wyjściowy z iteratorem wskazującym na koniec zakresu docelowego.
 
-Ponieważ algorytm Kopiuje elementy źródłowe w kolejności rozpoczynającej się od ostatniego elementu, zakres docelowy może pokrywać się z zakresem źródłowym, pod warunkiem, że *Pierwsza* pozycja zakresu źródłowego nie jest zawarta w zakresie docelowym. `copy_backward` może służyć do przesuwania elementów w prawo, ale nie do lewej, chyba że między zakres źródłowy i docelowy. Aby przesunąć w lewo dowolną liczbę pozycji, użyj algorytmu [kopiowania](../standard-library/algorithm-functions.md#copy) .
+Ponieważ algorytm Kopiuje elementy źródłowe w kolejności rozpoczynającej się od ostatniego elementu, zakres docelowy może pokrywać się z zakresem źródłowym, pod warunkiem, że *Pierwsza* pozycja zakresu źródłowego nie jest zawarta w zakresie docelowym. `copy_backward`może służyć do przesuwania elementów w prawo, ale nie do lewej, chyba że między zakres źródłowy i docelowy. Aby przesunąć w lewo dowolną liczbę pozycji, użyj algorytmu [kopiowania](algorithm-functions.md#copy) .
 
-Algorytm `copy_backward` modyfikuje tylko wartości wskazywane przez Iteratory, przypisując nowe wartości do elementów w zakresie docelowym. Nie może służyć do tworzenia nowych elementów i nie może bezpośrednio wstawiać elementów do pustego kontenera.
+`copy_backward`Algorytm modyfikuje tylko wartości wskazywane przez Iteratory, przypisując nowe wartości do elementów w zakresie docelowym. Nie może służyć do tworzenia nowych elementów i nie może bezpośrednio wstawiać elementów do pustego kontenera.
 
 ### <a name="example"></a>Przykład
 
@@ -883,16 +883,16 @@ ForwardIterator2 copy_if(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wejściowych, który wskazuje początek zakresu do sprawdzenia warunku.
 
-*ostatni*\
+*ostatniego*\
 Iterator danych wejściowych, który wskazuje koniec zakresu.
 
-\ miejsca *docelowego*
+*dest*\
 Iterator danych wyjściowych, który wskazuje miejsce docelowe dla skopiowanych elementów.
 
 *pred*\
@@ -908,7 +908,7 @@ Funkcja szablonu oblicza
 
 `if (pred(*first + N)) * dest++ = *(first + N))`
 
-jeden raz dla każdego `N` w zakresie `[0, last - first)`, dla ściśle rosnących wartości `N` zaczynających się od najniższej wartości. Jeśli *docelowy* i *pierwszy* wyznaczysz regiony magazynu, element *docelowy* nie może znajdować się w zakresie `[ first, last )`.
+jeden raz dla każdego `N` z zakresów `[0, last - first)` , dla ściśle rosnących wartości `N` rozpoczynających się od najniższej wartości. Jeśli *docelowy* i *pierwszy* wyznaczysz regiony magazynu, element *docelowy* nie może znajdować się w zakresie `[ first, last )` .
 
 ### <a name="example"></a>Przykład
 
@@ -986,16 +986,16 @@ ForwardIterator2 copy_n(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wejściowych wskazujący miejsce, z którego mają zostać skopiowane elementy.
 
-*liczba*\
+*liczbą*\
 Typ liczby całkowitej ze znakiem lub bez znaku określający liczbę elementów do skopiowania.
 
-\ miejsca *docelowego*
+*dest*\
 Iterator danych wyjściowych wskazujący miejsce, do którego należy skopiować elementy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1004,7 +1004,7 @@ Zwraca iterator danych wyjściowych, w przypadku których elementy zostały skop
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu oblicza `*(dest + N) = *(first + N))` raz dla każdego `N` w zakresie `[0, count)`, dla ściśle rosnących wartości `N`, zaczynając od najniższej wartości. Następnie zwraca `dest + N`. Jeśli *docelowy* i *pierwszy* wyznaczysz regiony magazynu, element *docelowy* nie może znajdować się w zakresie `[first, last)`.
+Funkcja szablonu oblicza `*(dest + N) = *(first + N))` jeden raz dla każdego `N` z nich w zakresie `[0, count)` , aby ściśle zwiększać wartości, `N` Zaczynając od najniższej wartości. Następnie zwraca wartość `dest + N` . Jeśli *docelowy* i *pierwszy* wyznaczysz regiony magazynu, element *docelowy* nie może znajdować się w zakresie `[first, last)` .
 
 ### <a name="example"></a>Przykład
 
@@ -1057,27 +1057,27 @@ count(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie, który ma zostać przesunięty.
 
-*ostatni*\
+*ostatniego*\
 Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma zostać przesunięty.
 
-\ *wartości*
+*wartościami*\
 Wartość elementów do zliczenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Typ różnicy `InputIterator`, który zlicza liczbę elementów w zakresie [*First*, *Last*), które mają *wartość*Value.
+Typ różnicy `InputIterator` określający liczbę elementów w zakresie [*First*, *Last*), który ma *wartość*Value.
 
 ### <a name="remarks"></a>Uwagi
 
-`operator==` używany do określenia dopasowania między elementem a określoną wartością musi nałożyć relację równoważności między operandami.
+`operator==`Użycie do określenia dopasowania między elementem a określoną wartością musi nałożyć relację równoważności między operandami.
 
-Ten algorytm jest uogólniony do zliczania elementów, które spełniają dowolny predykat za pomocą funkcji szablonu [count_if](../standard-library/algorithm-functions.md#count_if).
+Ten algorytm jest uogólniony do zliczania elementów, które spełniają dowolny predykat za pomocą funkcji szablonu [count_if](algorithm-functions.md#count_if).
 
 ### <a name="example"></a>Przykład
 
@@ -1138,13 +1138,13 @@ count_if(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie, który ma być przeszukiwany.
 
-*ostatni*\
+*ostatniego*\
 Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma być przeszukiwany.
 
 *pred*\
@@ -1156,7 +1156,7 @@ Liczba elementów, które spełniają warunek określony przez predykat.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja szablonu jest generalizacją [liczby](../standard-library/algorithm-functions.md#count)algorytmów, zastępując predykat "równa określonej wartości" z dowolnym predykatem.
+Ta funkcja szablonu jest generalizacją [liczby](algorithm-functions.md#count)algorytmów, zastępując predykat "równa określonej wartości" z dowolnym predykatem.
 
 ### <a name="example"></a>Przykład
 
@@ -1205,7 +1205,7 @@ The number of elements in v1 greater than 10 is: 2.
 
 Porównuje dwa zakresy elementów przez element pod kątem równości lub równoważności w sensie określonym przez Predykat binarny.
 
-Użyj `std::equal` podczas porównywania elementów w różnych typach kontenerów (na przykład `vector` i `list`) lub podczas porównywania różnych typów elementów lub gdy zachodzi potrzeba porównania podzakresów kontenerów. W przeciwnym razie, podczas porównywania elementów tego samego typu w tym samym typie kontenera, użyj `operator==` nienależących do elementu członkowskiego, który jest udostępniany dla każdego kontenera.
+Używany `std::equal` do porównywania elementów w różnych typach kontenerów (na przykład `vector` i `list` ) lub podczas porównywania różnych typów elementów lub kiedy należy porównać podzakresy kontenerów. W przeciwnym razie, podczas porównywania elementów tego samego typu w tym samym typie kontenera, użyj elementu innego niż, `operator==` który jest dostarczany dla każdego kontenera.
 
 Używaj przeciążeń podwójnego zakresu w kodzie języka C++ 14, ponieważ przeciążenia, które pobierają tylko jeden iterator dla drugiego zakresu, nie wykryją różnic, jeśli drugi zakres jest dłuższy niż pierwszy zakres i spowoduje niezdefiniowane zachowanie, jeśli drugi zakres jest krótszy niż pierwszy zakres.
 
@@ -1273,7 +1273,7 @@ bool equal(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
 *first1*\
@@ -1301,7 +1301,7 @@ Zakres, który ma być przeszukiwany, musi być prawidłowy; wszystkie Iteratory
 
 Jeśli dwa zakresy są równej długości, to stopień złożoności algorytmu jest liniowy w liczbie elementów zawartych w zakresie. W przeciwnym razie funkcja natychmiast zwraca **wartość false**.
 
-Ani `operator==` ani predykatu zdefiniowanego przez użytkownika nie jest wymagana, aby nałożyć relację równoważności, która jest symetryczna, zwrotna i przechodnia między operandami.
+Ani `operator==` predykatu zdefiniowanego przez użytkownika nie jest wymagane, aby nałożyć relację równoważności, która jest symetryczna, zwrotna i przechodnia między operandami.
 
 ### <a name="example"></a>Przykład
 
@@ -1357,13 +1357,13 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, który ma być przeszukiwany.
 
-*ostatni*\
+*ostatniego*\
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma być przeszukiwany.
 
-\ *wartości*
+*wartościami*\
 Wartość wyszukiwana w zakresie uporządkowanym.
 
 *pred*\
@@ -1377,13 +1377,13 @@ Jeśli żadne elementy z zakresu nie są równoważne *wartości*, Iteratory do 
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy iterator pary zwracanej przez algorytm jest [lower_bound](../standard-library/algorithm-functions.md#lower_bound), a drugi iterator jest [upper_bound](../standard-library/algorithm-functions.md#upper_bound).
+Pierwszy iterator pary zwracanej przez algorytm jest [lower_bound](algorithm-functions.md#lower_bound), a drugi iterator jest [upper_bound](algorithm-functions.md#upper_bound).
 
-Zakres musi być sortowany zgodnie z predykatem dostarczonym do `equal_range`. Na przykład, jeśli zamierzasz użyć predykatu większości, zakres musi być sortowany w kolejności malejącej.
+Zakres musi być sortowany zgodnie z predykatem dostarczonym do `equal_range` . Na przykład, jeśli zamierzasz użyć predykatu większości, zakres musi być sortowany w kolejności malejącej.
 
-Elementy w prawdopodobnie pustym podzakresie zdefiniowanym przez parę iteratorów zwracanych przez `equal_range` będą równoważne *wartości* w sensie zdefiniowanym przez użyty predykat.
+Elementy w prawdopodobnie pustym podzakresie zdefiniowanym przez parę iteratorów zwracanych przez `equal_range` są równoważne *wartości* w sensie zdefiniowanym przez użyty predykat.
 
-Złożoność algorytmu jest logarytmiczna dla iteratorów dostępu losowego i liniowego w przeciwnym razie z liczbą kroków proporcjonalnie*do (* *najpierw - pierwszej*).
+Złożoność algorytmu jest logarytmiczna dla iteratorów dostępu losowego i liniowego w przeciwnym razie z liczbą kroków proporcjonalną do (*ostatni*  -  *pierwszy*).
 
 ### <a name="example"></a>Przykład
 
@@ -1523,16 +1523,16 @@ void fill(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, który ma zostać przesunięty.
 
-*ostatni*\
+*ostatniego*\
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma zostać przesunięty.
 
-\ *wartości*
+*wartościami*\
 Wartość, która ma zostać przypisana do elementów w zakresie [*First*, *Last*).
 
 ### <a name="remarks"></a>Uwagi
@@ -1601,16 +1601,16 @@ ForwardIterator fill_n(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie, w którym ma zostać przypisana *wartość*wartości.
 
-*liczba*\
+*liczbą*\
 Typ liczby całkowitej ze znakiem lub bez znaku określający liczbę elementów do przypisania do wartości.
 
-\ *wartości*
+*wartościami*\
 Wartość, która ma zostać przypisana do elementów w zakresie [*First*, *First + Count*).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1690,16 +1690,16 @@ ForwardIterator find(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie, który ma być wyszukiwany dla określonej wartości.
 
-*ostatni*\
+*ostatniego*\
 Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma być wyszukiwany dla określonej wartości.
 
-\ *wartości*
+*wartościami*\
 Wartość do wyszukania.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1708,9 +1708,9 @@ Iterator danych wejściowych odnoszący się do pierwszego wystąpienia określo
 
 ### <a name="remarks"></a>Uwagi
 
-`operator==` używany do określenia dopasowania między elementem a określoną wartością musi nałożyć relację równoważności między operandami.
+`operator==`Użycie do określenia dopasowania między elementem a określoną wartością musi nałożyć relację równoważności między operandami.
 
-Aby zapoznać się z przykładem kodu przy użyciu `find()`, zobacz [find_if](../standard-library/algorithm-functions.md#find_if).
+Aby zapoznać się z przykładem kodu przy użyciu `find()` , zobacz [find_if](algorithm-functions.md#find_if).
 
 ## <a name="find_end"></a><a name="find_end"></a>find_end
 
@@ -1776,7 +1776,7 @@ Iterator do przodu, odnoszący się do pozycji pierwszego elementu ostatniej pod
 
 ### <a name="remarks"></a>Uwagi
 
-`operator==` używany do określenia dopasowania między elementem a określoną wartością musi nałożyć relację równoważności między operandami.
+`operator==`Użycie do określenia dopasowania między elementem a określoną wartością musi nałożyć relację równoważności między operandami.
 
 Zakresy, do których istnieją odwołania, muszą być prawidłowe; wszystkie wskaźniki muszą być odwołujące się, a w każdej sekwencji Ostatnia pozycja jest dostępna od pierwszej do przyrostu.
 
@@ -1940,7 +1940,7 @@ Iterator do przodu, odnoszący się do pozycji pierwszego elementu pierwszej pod
 
 ### <a name="remarks"></a>Uwagi
 
-`operator==` używany do określenia dopasowania między elementem a określoną wartością musi nałożyć relację równoważności między operandami.
+`operator==`Użycie do określenia dopasowania między elementem a określoną wartością musi nałożyć relację równoważności między operandami.
 
 Zakresy, do których istnieją odwołania, muszą być prawidłowe; wszystkie wskaźniki muszą być odwołujące się, a w każdej sekwencji Ostatnia pozycja jest dostępna od pierwszej do przyrostu.
 
@@ -2063,14 +2063,14 @@ ForwardIterator find_if(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie, który ma być przeszukiwany.
 
-*ostatni*\
+*ostatniego*\
 Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma być przeszukiwany.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu lub [wyrażenie lambda](../cpp/lambda-expressions-in-cpp.md) , które definiuje warunek, który ma być spełniony przez wyszukiwany element. Predykat jednoargumentowy przyjmuje jeden argument i zwraca **wartość true** , jeśli jest spełniony, lub **false** , jeśli nie jest spełniony. Sygnatura *pred* musi być efektywnie `bool pred(const T& arg);`, gdzie `T` jest typem, do którego `InputIterator` można niejawnie skonwertować podczas wyłączania. Słowo kluczowe **const** jest wyświetlane tylko w celu zilustrowania, że obiekt Function lub lambda nie powinien modyfikować argumentu.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu lub [wyrażenie lambda](../cpp/lambda-expressions-in-cpp.md) , które definiuje warunek, który ma być spełniony przez wyszukiwany element. Predykat jednoargumentowy przyjmuje jeden argument i zwraca **wartość true** , jeśli jest spełniony, lub **false** , jeśli nie jest spełniony. Sygnatura *pred* musi być w praktyce `bool pred(const T& arg);` , gdzie `T` jest typem, który `InputIterator` może być niejawnie konwertowany podczas wyłączania. Słowo kluczowe **const** jest wyświetlane tylko w celu zilustrowania, że obiekt Function lub lambda nie powinien modyfikować argumentu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2078,7 +2078,7 @@ Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie, 
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja szablonu jest generalizacją w celu [znalezienia](../standard-library/algorithm-functions.md#find)algorytmu, zastępując predykat "równa się określonej wartości" z dowolnym predykatem. Dla logicznego przeciwieństwa (Znajdź pierwszy element, który nie spełnia predykatu), zobacz [find_if_not](../standard-library/algorithm-functions.md#find_if_not).
+Ta funkcja szablonu jest generalizacją w celu [znalezienia](algorithm-functions.md#find)algorytmu, zastępując predykat "równa się określonej wartości" z dowolnym predykatem. Dla logicznego przeciwieństwa (Znajdź pierwszy element, który nie spełnia predykatu), zobacz [find_if_not](algorithm-functions.md#find_if_not).
 
 ### <a name="example"></a>Przykład
 
@@ -2185,14 +2185,14 @@ ForwardIterator find_if_not(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie, który ma być przeszukiwany.
 
-*ostatni*\
+*ostatniego*\
 Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma być przeszukiwany.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu lub [wyrażenie lambda](../cpp/lambda-expressions-in-cpp.md) , które definiuje warunek, który nie jest spełniony przez wyszukiwany element. Predykat jednoargumentowy przyjmuje jeden argument i zwraca **wartość true** , jeśli jest spełniony, lub **false** , jeśli nie jest spełniony. Sygnatura *pred* musi być efektywnie `bool pred(const T& arg);`, gdzie `T` jest typem, do którego `InputIterator` można niejawnie skonwertować podczas wyłączania. Słowo kluczowe **const** jest wyświetlane tylko w celu zilustrowania, że obiekt Function lub lambda nie powinien modyfikować argumentu.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu lub [wyrażenie lambda](../cpp/lambda-expressions-in-cpp.md) , które definiuje warunek, który nie jest spełniony przez wyszukiwany element. Predykat jednoargumentowy przyjmuje jeden argument i zwraca **wartość true** , jeśli jest spełniony, lub **false** , jeśli nie jest spełniony. Sygnatura *pred* musi być w praktyce `bool pred(const T& arg);` , gdzie `T` jest typem, który `InputIterator` może być niejawnie konwertowany podczas wyłączania. Słowo kluczowe **const** jest wyświetlane tylko w celu zilustrowania, że obiekt Function lub lambda nie powinien modyfikować argumentu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2200,9 +2200,9 @@ Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie, 
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja szablonu jest generalizacją w celu [znalezienia](../standard-library/algorithm-functions.md#find)algorytmu, zastępując predykat "równa się określonej wartości" z dowolnym predykatem. Dla logicznego przeciwieństwa (Znajdź pierwszy element, który spełnia predykat), zobacz [find_if](../standard-library/algorithm-functions.md#find_if).
+Ta funkcja szablonu jest generalizacją w celu [znalezienia](algorithm-functions.md#find)algorytmu, zastępując predykat "równa się określonej wartości" z dowolnym predykatem. Dla logicznego przeciwieństwa (Znajdź pierwszy element, który spełnia predykat), zobacz [find_if](algorithm-functions.md#find_if).
 
-Aby zapoznać się z przykładem kodu, który można łatwo dostosować do `find_if_not()`, zobacz [find_if](../standard-library/algorithm-functions.md#find_if).
+Przykładowy kod można łatwo dostosować do programu `find_if_not()` , zobacz [find_if](algorithm-functions.md#find_if).
 
 ## <a name="for_each"></a><a name="for_each"></a>for_each
 
@@ -2225,13 +2225,13 @@ void for_each(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie, w którym mają być obsługiwane.
 
-*ostatni*\
+*ostatniego*\
 Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim elementem w zakresie obsługiwanym przez.
 
-\ *Func*
+*Func*\
 Obiekt funkcji zdefiniowanej przez użytkownika, który jest stosowany do każdego elementu w zakresie.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -2240,11 +2240,11 @@ Kopia obiektu funkcji po zastosowaniu do wszystkich elementów w zakresie.
 
 ### <a name="remarks"></a>Uwagi
 
-Algorytm `for_each` jest bardzo elastyczny, co pozwala na modyfikację każdego elementu w zakresie w różnych sposób określony przez użytkownika. Funkcje szablonowana mogą być ponownie używane w zmodyfikowanym formularzu przez przekazanie innych parametrów. Funkcje zdefiniowane przez użytkownika mogą zbierać informacje w ramach wewnętrznego stanu, które algorytm może zwrócić po przetworzeniu wszystkich elementów w zakresie.
+Algorytm `for_each` jest bardzo elastyczny, co umożliwia modyfikację każdego elementu w zakresie w różnych sposób określony przez użytkownika. Funkcje szablonowana mogą być ponownie używane w zmodyfikowanym formularzu przez przekazanie innych parametrów. Funkcje zdefiniowane przez użytkownika mogą zbierać informacje w ramach wewnętrznego stanu, które algorytm może zwrócić po przetworzeniu wszystkich elementów w zakresie.
 
 Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a w ramach sekwencji Ostatnia pozycja musi być osiągalna od pierwszej przez przyrost.
 
-Złożoność jest liniowa z najwyżej (*ostatni* - *pierwsze*) porównania.
+Złożoność jest liniowa z najwyżej (*ostatnimi*  -  *first*) porównaniami.
 
 ### <a name="example"></a>Przykład
 
@@ -2396,13 +2396,13 @@ void generate(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, do którego mają być przypisane wartości.
 
-*ostatni*\
+*ostatniego*\
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, do którego mają być przypisane wartości.
 
-\ *Gen*
+*zbieranie*\
 Obiekt funkcji, który jest wywoływany bez argumentów, które są używane do generowania wartości, które mają być przypisane do każdego z elementów w zakresie.
 
 ### <a name="remarks"></a>Uwagi
@@ -2411,7 +2411,7 @@ Obiekt Function jest wywoływany dla każdego elementu w zakresie i nie musi zwr
 
 Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a w ramach sekwencji Ostatnia pozycja musi być osiągalna od pierwszej przez przyrost.
 
-Złożoność jest liniowa, przy czym dokładnie (`last` - `first`) wywołania generatora są wymagane.
+Złożoność jest liniowa, a dokładne ( `last`  -  `first` ) wywołania generatora są wymagane.
 
 ### <a name="example"></a>Przykład
 
@@ -2477,16 +2477,16 @@ ForwardIterator generate_n(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie, do którego mają być przypisane wartości.
 
-*liczba*\
+*liczbą*\
 Typ liczby całkowitej ze znakiem lub bez znaku określający liczbę elementów, do których ma zostać przypisana wartość przez funkcję generatora.
 
-\ *Gen*
+*zbieranie*\
 Obiekt funkcji, który jest wywoływany bez argumentów, które są używane do generowania wartości, które mają być przypisane do każdego z elementów w zakresie.
 
 ### <a name="remarks"></a>Uwagi
@@ -2495,7 +2495,7 @@ Obiekt Function jest wywoływany dla każdego elementu w zakresie i nie musi zwr
 
 Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a w ramach sekwencji Ostatnia pozycja musi być osiągalna od pierwszej przez przyrost.
 
-Złożoność jest liniowa i dokładnie `count` są wymagane wywołania generatora.
+Złożoność jest liniowa i `count` wymaga dokładnie wywołań generatora.
 
 ### <a name="example"></a>Przykład
 
@@ -2582,7 +2582,7 @@ bool includes(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
 *first1*\
@@ -2612,11 +2612,11 @@ Posortowane zakresy źródłowe, do których istnieją odwołania, muszą być p
 
 Posortowane zakresy źródłowe muszą być uporządkowane jako warunek wstępny do zastosowania algorytmu, w tym takie samo porządkowanie, jak ma być używane przez algorytm do sortowania połączonych zakresów.
 
-Zakresy źródłowe nie są modyfikowane przez algorytm `merge`.
+Zakresy źródłowe nie są modyfikowane przez algorytm `merge` .
 
 Typy wartości iteratorów danych wejściowych muszą być mniejsze niż porównywalne do uporządkowania, tak aby w przypadku dwóch elementów można było określić, że są one równoważne (w sensie, że żaden z nich nie jest mniejszy niż drugi) lub że jeden z nich jest mniejszy od drugiego. Skutkuje to ustaleniem kolejności dla elementów nierównoważnych. Dokładniej, algorytm sprawdza, czy wszystkie elementy w pierwszym posortowanym zakresie w ramach określonego predykatu binarnego mają równoważne porządkowanie do tych w drugim posortowanym zakresie.
 
-Złożoność algorytmu jest liniowa z co najwyżej `2 * ((last1 - first1) - (last2 - first2)) - 1` porównania dla niepustych zakresów źródłowych.
+Złożoność algorytmu jest liniowa z większością `2 * ((last1 - first1) - (last2 - first2)) - 1` porównań dla niepustych zakresów źródłowych.
 
 ### <a name="example"></a>Przykład
 
@@ -2803,16 +2803,16 @@ void inplace_merge(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w pierwszym z dwóch kolejnych posortowanych zakresów, które mają być połączone i posortowane w pojedynczym zakresie.
 
-\ *środkowy*
+*średnio*\
 Iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w drugim z dwóch kolejnych posortowanych zakresów, które mają być połączone i posortowane w pojedynczym zakresie.
 
-*ostatni*\
+*ostatniego*\
 Iterator dwukierunkowy odnoszący się do pozycji jednej poza ostatnim elementem w drugim z dwóch kolejnych posortowanych zakresów, który ma zostać połączony i posortowany w pojedynczym zakresie.
 
 *pred*\
@@ -2822,9 +2822,9 @@ Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens,
 
 Sortowane kolejne zakresy, do których istnieją odwołania, muszą być prawidłowe; wszystkie wskaźniki muszą być odwołujące się, a w każdej sekwencji Ostatnia pozycja musi być osiągalna od pierwszego przez przyrost.
 
-Posortowane kolejne zakresy muszą być ułożone jako warunek wstępny do zastosowania algorytmu `inplace_merge`, zgodnie z tą samą kolejnością, w jakiej ma być używany przez algorytm w celu sortowania połączonych zakresów. Operacja jest stabilna, ponieważ jest zachowywana względna kolejność elementów w ramach każdego zakresu. Gdy w obu zakresach źródłowych znajdują się równoważne elementy, element to pierwszy zakres poprzedza element od drugiego w połączonym zakresie.
+Posortowane kolejne zakresy muszą być uporządkowane jako warunek wstępny do aplikacji `inplace_merge` algorytmu zgodnie z tą samą kolejnością, w jakiej ma być używana przez algorytm w celu sortowania połączonych zakresów. Operacja jest stabilna, ponieważ jest zachowywana względna kolejność elementów w ramach każdego zakresu. Gdy w obu zakresach źródłowych znajdują się równoważne elementy, element to pierwszy zakres poprzedza element od drugiego w połączonym zakresie.
 
-Złożoność zależy od dostępnej pamięci, ponieważ algorytm przydziela pamięć do tymczasowego buforu. Jeśli dostępna jest wystarczająca ilość pamięci, najlepszym przypadkiem jest liniowy z `(last - first) - 1` porównaniami; Jeśli pamięć pomocnicza nie jest dostępna, najgorszy przypadek jest `N log(N)`, gdzie *N* = *ostatnią* -  *.*
+Złożoność zależy od dostępnej pamięci, ponieważ algorytm przydziela pamięć do tymczasowego buforu. Jeśli dostępna jest wystarczająca ilość pamięci, najlepszym przypadkiem jest liniowe z `(last - first) - 1` porównaniami; Jeśli nie jest dostępna pamięć pomocnicza, najgorszy przypadek to `N log(N)` , gdzie *N*  =  *ostatni*  -  *pierwszy*.
 
 ### <a name="example"></a>Przykład
 
@@ -2969,13 +2969,13 @@ bool is_heap(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator dostępu losowego, który wskazuje początek zakresu do sprawdzenia sterty.
 
-*ostatni*\
+*ostatniego*\
 Iterator dostępu losowego, który wskazuje koniec zakresu.
 
 *pred*\
@@ -2987,7 +2987,7 @@ Zwraca **wartość true** , jeśli elementy w określonym zakresie tworzą stert
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja szablonu zwraca [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(first , last) == last`.
+Pierwsza funkcja szablonu zwraca [is_heap_until](algorithm-functions.md#is_heap_until) `(first , last) == last` .
 
 Druga funkcja szablonu zwraca
 
@@ -2995,7 +2995,7 @@ Druga funkcja szablonu zwraca
 
 ## <a name="is_heap_until"></a><a name="is_heap_until"></a>is_heap_until
 
-Zwraca iterator umieszczony na pierwszym elemencie w zakresie [`first`, `last`), który nie spełnia warunku porządkowania sterty lub *kończy* , jeśli zakres tworzy stertę.
+Zwraca iterator umieszczony na pierwszym elemencie w zakresie [ `first` , `last` ), który nie spełnia warunku porządkowania sterty lub *kończy* , jeśli zakres tworzy stertę.
 
 ```cpp
 template<class RandomAccessIterator>
@@ -3025,17 +3025,17 @@ RandomAccessIterator is_heap_until(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator dostępu losowego, który określa pierwszy element zakresu do sprawdzenia sterty.
 
-*ostatni*\
+*ostatniego*\
 Iterator dostępu losowego, który określa koniec zakresu do sprawdzenia sterty.
 
 *pred*\
-Predykat binarny określający ścisły, słaby warunek porządkowania, który definiuje stertę. Predykat domyślny jest `std::less<>`, gdy nie określono *pred* .
+Predykat binarny określający ścisły, słaby warunek porządkowania, który definiuje stertę. Domyślny predykat to `std::less<>` Jeśli *pred* nie jest określony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3043,9 +3043,9 @@ Zwraca wartość *Last* , jeśli określony zakres tworzy stertę lub zawiera co
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja szablonu zwraca ostatni `next` iteratora w `[first, last)` gdzie `[first, next)` jest stertą uporządkowaną według `std::less<>`obiektu funkcji. Jeśli odległość `last - first` jest mniejsza niż 2, funkcja zwraca wartość *Last*.
+Pierwsza funkcja szablonu zwraca ostatni iterator `next` w miejscu, `[first, last)` gdzie `[first, next)` jest sterta uporządkowana według obiektu funkcji `std::less<>` . Jeśli odległość `last - first` jest mniejsza niż 2, funkcja zwraca wartość *Last*.
 
-Druga funkcja szablonu zachowuje się tak samo jak pierwszy, z tą różnicą, że używa predykatu *pred* zamiast `std::less<>` jako warunek porządkowania sterty.
+Druga funkcja szablonu zachowuje się tak samo jak pierwszy, z tą różnicą, że używa predykatu *pred* zamiast `std::less<>` warunku porządkowania sterty.
 
 ## <a name="is_partitioned"></a><a name="is_partitioned"></a>is_partitioned
 
@@ -3068,13 +3068,13 @@ bool is_partitioned(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wejściowych, który wskazuje, gdzie rozpocznie się sprawdzanie warunku przez zakres.
 
-*ostatni*\
+*ostatniego*\
 Iterator danych wejściowych, który wskazuje koniec zakresu.
 
 *pred*\
@@ -3086,7 +3086,7 @@ Zwraca **wartość PRAWDA** , jeśli wszystkie elementy w danym zakresie, które
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca **wartość true** tylko wtedy, gdy wszystkie elementy w `[first, last)` są podzielone na partycje przez *pred*; oznacza to, że wszystkie elementy `X` w `[first, last)`, dla których `pred (X)` jest spełniony, zanim wszystkie elementy `Y`, dla których `pred (Y)` ma **wartość false**.
+Funkcja szablonu zwraca **wartość true** tylko wtedy, gdy wszystkie elementy w `[first, last)` są podzielone na partycje przez *pred*; oznacza to, że wszystkie elementy `X` w, `[first, last)` dla których występuje wartość true, są `pred (X)` wykonywane przed wszystkimi elementami `Y` , dla których `pred (Y)` ma **wartość false**.
 
 ## <a name="is_permutation"></a><a name="is_permutation"></a>is_permutation
 
@@ -3146,15 +3146,15 @@ Predykat, który testuje dla równoważności i zwraca wartość **logiczną**.
 
 ### <a name="remarks"></a>Uwagi
 
-w najgorszym przypadku `is_permutation` ma złożoność kwadratową.
+`is_permutation`w najgorszym przypadku ma złożoność kwadratu.
 
-W pierwszej funkcji szablonu założono, że istnieje wiele elementów w zakresie zaczynającym się od *First2* , tak jak w zakresie wydzielonym przez `[first1, last1)`. Jeśli w drugim zakresie znajduje się więcej elementów, są one ignorowane; w przypadku mniej, niezdefiniowane zachowanie zostanie wykonane. Trzecia funkcja szablonu (C++ 14 i nowsze) nie przyjmuje tego założeń. Oba zwracają **wartość true** tylko wtedy, gdy dla każdego elementu X w zakresie wyznaczono przez `[first1, last1)` istnieje tyle elementów Y w tym samym zakresie, dla których x = = Y, tak jak w zakresie rozpoczynającym się o *First2* lub `[first2, last2)`. W tym miejscu `operator==` musi wykonać porównanie parowania między operandami.
+W pierwszej funkcji szablonu założono, że istnieje wiele elementów w zakresie zaczynającym się od *First2* , tak jak w zakresie wydzielonym przez `[first1, last1)` . Jeśli w drugim zakresie znajduje się więcej elementów, są one ignorowane; w przypadku mniej, niezdefiniowane zachowanie zostanie wykonane. Trzecia funkcja szablonu (C++ 14 i nowsze) nie przyjmuje tego założeń. Oba zwracają **wartość true** tylko wtedy, gdy dla każdego elementu X w zakresie wyznaczono przez `[first1, last1)` istnieje tyle elementów Y w tym samym zakresie, dla którego x = = Y, tak jak w zakresie rozpoczynającym się o *First2* lub `[first2, last2)` . W tym miejscu `operator==` należy wykonać porównanie parowania między operandami.
 
-Drugie i czwarte funkcje szablonu zachowują się tak samo, z tą różnicą, że zastępują `operator==(X, Y)` z `Pred(X, Y)`. Aby zachować prawidłowe działanie, predykat musi być symetryczny, zwrotny i przechodni.
+Drugie i czwarte funkcje szablonu zachowują się tak samo, z tą różnicą, że zastępują one `operator==(X, Y)` przy użyciu `Pred(X, Y)` . Aby zachować prawidłowe działanie, predykat musi być symetryczny, zwrotny i przechodni.
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak używać `is_permutation`:
+Poniższy przykład przedstawia sposób użycia `is_permutation` :
 
 ```cpp
 #include <vector>
@@ -3240,27 +3240,27 @@ bool is_sorted(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu, który wskazuje, gdzie rozpoczyna się zakres do sprawdzenia.
 
-*ostatni*\
+*ostatniego*\
 Iterator do przodu, który wskazuje koniec zakresu.
 
 *pred*\
-Warunek do przetestowania w celu określenia kolejności między dwoma elementami. Predykat porównania przyjmuje dwa argumenty i zwraca **wartość true** lub **false**. Wykonuje to to samo zadanie co `operator<`.
+Warunek do przetestowania w celu określenia kolejności między dwoma elementami. Predykat porównania przyjmuje dwa argumenty i zwraca **wartość true** lub **false**. Wykonuje to to samo zadanie co `operator<` .
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja szablonu zwraca [is_sorted_until](#is_sorted_until)`( first, last ) == last`. Funkcja `operator<` wykonuje porównanie kolejności.
+Pierwsza funkcja szablonu zwraca [is_sorted_until](#is_sorted_until) `( first, last ) == last` . `operator<`Funkcja wykonuje porównanie kolejności.
 
-Druga funkcja szablonu zwraca `is_sorted_until( first, last , pred ) == last`. Funkcja predykatu *pred* wykonuje porównanie kolejności.
+Druga funkcja szablonu zwraca wartość `is_sorted_until( first, last , pred ) == last` . Funkcja predykatu *pred* wykonuje porównanie kolejności.
 
 ## <a name="is_sorted_until"></a><a name="is_sorted_until"></a>is_sorted_until
 
-Zwraca `ForwardIterator`, który jest ustawiony do ostatniego elementu, który jest sortowany w kolejności od określonego zakresu.
+Zwraca wartość `ForwardIterator` , która jest ustawiona na ostatni element, który jest sortowany w kolejności od określonego zakresu.
 
 Druga wersja pozwala dostarczyć obiekt funkcji porównywania zwraca **wartość PRAWDA** , jeśli dwa podano elementy w kolejności sortowania, a w przeciwnym razie **wartość false** .
 
@@ -3292,13 +3292,13 @@ ForwardIterator is_sorted_until(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu, który wskazuje, gdzie zaczyna się zakres do sprawdzenia.
 
-*ostatni*\
+*ostatniego*\
 Iterator do przodu, który wskazuje koniec zakresu.
 
 *pred*\
@@ -3306,13 +3306,13 @@ Warunek do przetestowania w celu określenia kolejności między dwoma elementam
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca `ForwardIterator` ustawiany jako ostatni element w sortowanej kolejności. Posortowana Sekwencja zaczyna się od *pierwszego*.
+Zwraca `ForwardIterator` zestaw do ostatniego elementu w sortowanej kolejności. Posortowana Sekwencja zaczyna się od *pierwszego*.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja szablonu zwraca ostatni `next` iteratora w `[first, last]`, tak że `[first, next)` jest sortowaną sekwencją uporządkowaną według `operator<`. Jeśli `distance()` jest mniejsza niż 2, funkcja zwraca wartość *Last*.
+Pierwsza funkcja szablonu zwraca ostatni iterator `next` w `[first, last]` tak, że `[first, next)` jest sortowaną sekwencją uporządkowaną według `operator<` . Jeśli `distance()` jest mniejsza niż 2, funkcja zwraca wartość *Last*.
 
-Druga funkcja szablonu zachowuje się tak samo, z tą różnicą, że zastępuje `operator<(X, Y)` z `pred(X, Y)`.
+Druga funkcja szablonu zachowuje się tak samo, z tą różnicą, że zastępuje `operator<(X, Y)` `pred(X, Y)` .
 
 ## <a name="iter_swap"></a><a name="iter_swap"></a>iter_swap
 
@@ -3325,15 +3325,15 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Jeden z iteratorów do przodu, którego wartość ma być wymieniana.
 
-*prawa*\
+*Kliknij*\
 Drugi iterator do przodu, którego wartość ma być wymieniana.
 
 ### <a name="remarks"></a>Uwagi
 
-`swap` powinna być używana w preferencjach do **iter_swap**, która została uwzględniona C++ w standardzie w celu zapewnienia zgodności z poprzednimi wersjami. Jeśli `Fit1` i `Fit2` są iteratorami progresywnymi, `iter_swap( Fit1, Fit2 )`, jest równoznaczne z `swap( *Fit1, *Fit2 )`.
+`swap`powinien być używany w preferencjach do **iter_swap**, który został uwzględniony w standardzie C++ w celu zapewnienia zgodności z poprzednimi wersjami. Jeśli `Fit1` i `Fit2` są Iteratory do przodu, `iter_swap( Fit1, Fit2 )` jest równoważne z `swap( *Fit1, *Fit2 )` .
 
 Typy wartości iteratorów przekazujących dane wejściowe muszą mieć tę samą wartość.
 
@@ -3510,7 +3510,7 @@ bool lexicographical_compare(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
 *first1*\
@@ -3658,13 +3658,13 @@ ForwardIterator lower_bound(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, który ma być przeszukiwany.
 
-*ostatni*\
+*ostatniego*\
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma być przeszukiwany.
 
-\ *wartości*
+*wartościami*\
 Wartość, której Pierwsza pozycja lub możliwe pierwsze miejsce są wyszukiwane w zakresie uporządkowanym.
 
 *pred*\
@@ -3678,13 +3678,13 @@ Iterator do przodu na pozycji pierwszego elementu w uporządkowanym zakresie o w
 
 Posortowany zakres źródłowy musi być prawidłowy; wszystkie Iteratory muszą być odwołujące się, a w sekwencji Ostatnia pozycja musi być osiągalna od pierwszej przez przyrost.
 
-Sortowany zakres jest warunkiem wstępnym używania `lower_bound` i gdzie kolejność jest taka sama jak określona przez Predykat binarny.
+Sortowany zakres jest warunkiem wstępnym korzystania z `lower_bound` i gdzie kolejność jest taka sama jak określona przez Predykat binarny.
 
-Zakres nie jest modyfikowany przez algorytm `lower_bound`.
+Zakres nie jest modyfikowany przez algorytm `lower_bound` .
 
 Typy wartości iteratorów do przodu muszą być mniejsze niż porównywalne do uporządkowania, tak że, w przypadku dwóch elementów, można określić, że są one równoważne (w sensie, że żaden z nich nie jest mniejszy od drugiego) lub że jeden z nich jest mniejszy od drugiego. Powoduje to porządkowanie między nierównoważnymi elementami
 
-Złożoność algorytmu jest logarytmiczna dla iteratorów dostępu losowego i liniowego w przeciwnym razie z liczbą kroków proporcjonalną do (`last - first`).
+Złożoność algorytmu jest logarytmiczna dla iteratorów dostępu losowego i liniowego w przeciwnym razie z liczbą kroków proporcjonalną do ( `last - first` ).
 
 ### <a name="example"></a>Przykład
 
@@ -3795,10 +3795,10 @@ void make_heap(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
+*pierwszego*\
 Iterator dostępu swobodnego odnoszący się do pozycji pierwszego elementu w zakresie, który ma zostać przekonwertowany na stos.
 
-*ostatni*\
+*ostatniego*\
 Iterator dostępu swobodnego odnoszący się do jednej z elementów znajdujących się poza ostatnim elementem w zakresie, który ma zostać przekonwertowany na stos.
 
 *pred*\
@@ -3812,7 +3812,7 @@ Sterty mają dwie właściwości:
 
 - Elementy mogą być dodawane lub usuwane w czasie logarytmu.
 
-Sterty są idealnym sposobem implementacji kolejek priorytetów i są używane w implementacji adaptera [priority_queue](../standard-library/priority-queue-class.md)biblioteki C++ standardowej.
+Sterty są idealnym sposobem implementowania kolejek priorytetowych i są używane w implementacji adaptera kontenera standardowej biblioteki języka C++ [priority_queue klasie](priority-queue-class.md).
 
 Złożoność jest liniowa, wymagając `3 * (last - first)` porównania.
 
@@ -3883,16 +3883,16 @@ constexpr Type& max(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Pierwszy z dwóch obiektów, które są porównywane.
 
-*prawa*\
+*Kliknij*\
 Drugi z dwóch obiektów, które są porównywane.
 
 *pred*\
 Predykat binarny służący do porównywania dwóch obiektów.
 
-\ *listy*
+*podklauzulę do*\
 Lista inicjatorów zawierająca obiekty, które mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -3901,7 +3901,7 @@ Większy z dwóch obiektów, chyba że ani nie jest większy; w takim przypadku 
 
 ### <a name="remarks"></a>Uwagi
 
-Algorytm `max` jest nietypowy w przypadku, gdy obiekty są przenoszone jako parametry. Większość C++ algorytmów biblioteki standardowej operuje na zakresie elementów, których pozycja jest określona przez Iteratory przekazaną jako parametry. Jeśli potrzebujesz funkcji, która działa w zakresie elementów, użyj [max_element](../standard-library/algorithm-functions.md#max_element) zamiast tego. Program Visual Studio 2017 włącza wartość **constexpr** dla przeciążenia, które pobierają initializer_list.
+`max`Algorytm jest nietypowy w przypadku, gdy obiekty są przenoszone jako parametry. Większość algorytmów standardowej biblioteki języka C++ działa w zakresie elementów, których pozycja jest określona przez Iteratory przenoszone jako parametry. Jeśli potrzebujesz funkcji, która działa w zakresie elementów, użyj [max_element](algorithm-functions.md#max_element) zamiast tego. Program Visual Studio 2017 włącza wartość **constexpr** dla przeciążenia, które pobierają initializer_list.
 
 ### <a name="example"></a>Przykład
 
@@ -4103,13 +4103,13 @@ ForwardIterator max_element(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, który ma być przeszukiwany dla największego elementu.
 
-*ostatni*\
+*ostatniego*\
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma być przeszukiwany dla największego elementu.
 
 *pred*\
@@ -4123,7 +4123,7 @@ Iterator do przodu, odnoszący się do pozycji pierwszego wystąpienia najwięks
 
 Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się i w każdej sekwencji, która jest dostępna od pierwszej do przyrostu.
 
-Złożoność jest liniowa: porównania `(last - first) - 1` są wymagane dla niepustego zakresu.
+Złożoność jest liniowa: `(last - first) - 1` porównania są wymagane dla niepustego zakresu.
 
 ### <a name="example"></a>Przykład
 
@@ -4269,7 +4269,7 @@ ForwardIterator merge(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
 *first1*\
@@ -4284,7 +4284,7 @@ Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w dr
 *last2*\
 Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim elementem w drugim z dwóch kolejnych posortowanych zakresów źródłowych do łączenia i sortowania w pojedynczym zakresie.
 
-\ *wyniku*
+*wynika*\
 Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, w którym dwa zakresy źródłowe mają być połączone w pojedynczy posortowany zakres.
 
 *pred*\
@@ -4300,15 +4300,15 @@ Posortowane zakresy źródłowe, do których istnieją odwołania, muszą być p
 
 Zakres docelowy nie powinien nakładać się na żaden z zakresów źródłowych i powinien być wystarczająco duży, aby zawierał zakres docelowy.
 
-Posortowane zakresy źródłowe muszą być uporządkowane jako warunek wstępny do zastosowania algorytmu `merge`, zgodnie z tą samą kolejnością, w jakiej ma być używana przez algorytm w celu sortowania połączonych zakresów.
+Posortowane zakresy źródłowe muszą być uporządkowane jako warunek wstępny do zastosowania `merge` algorytmu zgodnie z tą samą kolejnością, w jakiej ma być używana przez algorytm w celu sortowania połączonych zakresów.
 
-Operacja jest stabilna, ponieważ względna kolejność elementów w każdym zakresie jest zachowywana w zakresie docelowym. Zakresy źródłowe nie są modyfikowane przez algorytm `merge`.
+Operacja jest stabilna, ponieważ względna kolejność elementów w każdym zakresie jest zachowywana w zakresie docelowym. Zakresy źródłowe nie są modyfikowane przez algorytm `merge` .
 
 Typy wartości iteratorów danych wejściowych muszą być mniejsze niż porównywalne do uporządkowania, tak aby w przypadku dwóch elementów można było określić, że są one równoważne (w sensie, że żaden z nich nie jest mniejszy niż drugi) lub że jeden z nich jest mniejszy od drugiego. Skutkuje to ustaleniem kolejności dla elementów nierównoważnych. Gdy w obu zakresach źródłowych znajdują się równoważne elementy, elementy z pierwszego zakresu poprzedzają elementy z drugiego zakresu źródłowego w zakresie docelowym.
 
-Złożoność algorytmu jest liniowa z co najwyżej `(last1 - first1) - (last2 - first2) - 1` porównaniami.
+Złożoność algorytmu jest liniowa z większością `(last1 - first1) - (last2 - first2) - 1` porównań.
 
-[Klasa list](../standard-library/list-class.md) udostępnia funkcję członkowską "merge" do scalania elementów dwóch list.
+[Klasa list](list-class.md) udostępnia funkcję członkowską "merge" do scalania elementów dwóch list.
 
 ### <a name="example"></a>Przykład
 
@@ -4420,7 +4420,7 @@ int main() {
 }
 ```
 
-## <a name="min"></a><a name="min"></a>długości
+## <a name="min"></a><a name="min"></a> min
 
 Porównuje dwa obiekty i zwraca mniejszy z nich, gdzie kryterium sortowania może być określone przez predykat binarny.
 
@@ -4448,25 +4448,25 @@ constexpr Type min(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Pierwszy z dwóch obiektów, które są porównywane.
 
-*prawa*\
+*Kliknij*\
 Drugi z dwóch obiektów, które są porównywane.
 
 *pred*\
 Predykat binarny służący do porównywania dwóch obiektów.
 
-\ *listy*
-`initializer_list`, który zawiera elementy członkowskie, które mają być porównane.
+*podklauzulę do*\
+`initializer_list`Zawiera elementy członkowskie, które mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Dwa obiekty, chyba że ani nie są mniejsze; w takim przypadku zwraca pierwsze z dwóch obiektów. W przypadku `initializer_list`zwraca najmniejszą liczbę obiektów na liście.
+Dwa obiekty, chyba że ani nie są mniejsze; w takim przypadku zwraca pierwsze z dwóch obiektów. W przypadku `initializer_list` , zwraca najmniejszą liczbę obiektów na liście.
 
 ### <a name="remarks"></a>Uwagi
 
-Algorytm `min` jest nietypowy w przypadku, gdy obiekty są przenoszone jako parametry. Większość C++ algorytmów biblioteki standardowej operuje na zakresie elementów, których pozycja jest określona przez Iteratory przekazaną jako parametry. Jeśli potrzebujesz funkcji korzystającej z zakresu elementów, użyj [min_element](../standard-library/algorithm-functions.md#min_element). Funkcja [constexpr](../cpp/constexpr-cpp.md) została włączona dla przeciążeń `initializer_list` w programie Visual Studio 2017.
+`min`Algorytm jest nietypowy w przypadku, gdy obiekty są przenoszone jako parametry. Większość algorytmów standardowej biblioteki języka C++ działa w zakresie elementów, których pozycja jest określona przez Iteratory przenoszone jako parametry. Jeśli potrzebujesz funkcji korzystającej z zakresu elementów, użyj [min_element](algorithm-functions.md#min_element). Funkcja [constexpr](../cpp/constexpr-cpp.md) została włączona w przypadku `initializer_list` przeciążeń w programie Visual Studio 2017.
 
 ### <a name="example"></a>Przykład
 
@@ -4667,13 +4667,13 @@ ForwardIterator min_element(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, który ma być przeszukiwany dla najmniejszego elementu.
 
-*ostatni*\
+*ostatniego*\
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma być przeszukiwany dla najmniejszego elementu.
 
 *pred*\
@@ -4687,7 +4687,7 @@ Iterator do przodu, odnoszący się do pozycji pierwszego wystąpienia najmniejs
 
 Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się i w każdej sekwencji, która jest dostępna od pierwszej do przyrostu.
 
-Złożoność jest liniowa: porównania `(last - first) - 1` są wymagane dla niepustego zakresu.
+Złożoność jest liniowa: `(last - first) - 1` porównania są wymagane dla niepustego zakresu.
 
 ### <a name="example"></a>Przykład
 
@@ -4801,7 +4801,7 @@ binary predicate is: 0
 
 ## <a name="minmax_element"></a><a name="minmax_element"></a>minmax_element
 
-Wykonuje działania wykonywane przez `min_element` i `max_element` w jednym wywołaniu.
+Wykonuje prace wykonywane przez `min_element` i `max_element` w jednym wywołaniu.
 
 ```cpp
 template<class ForwardIterator>
@@ -4831,13 +4831,13 @@ pair<ForwardIterator, ForwardIterator> minmax_element(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu, który wskazuje początek zakresu.
 
-*ostatni*\
+*ostatniego*\
 Iterator do przodu, który wskazuje koniec zakresu.
 
 *pred*\
@@ -4855,9 +4855,9 @@ Pierwsza funkcja szablonu zwraca
 
 `pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`.
 
-Druga funkcja szablonu zachowuje się tak samo, z tą różnicą, że zastępuje `operator<(X, Y)` z `pred(X, Y)`.
+Druga funkcja szablonu zachowuje się tak samo, z tą różnicą, że zastępuje `operator<(X, Y)` `pred(X, Y)` .
 
-Jeśli sekwencja nie jest pusta, funkcja wykonuje co najwyżej `3 * (last - first - 1) / 2` porównania.
+Jeśli sekwencja nie jest pusta, funkcja wykonuje przy większości `3 * (last - first - 1) / 2` porównań.
 
 ## <a name="minmax"></a><a name="minmax"></a>MinMax
 
@@ -4887,21 +4887,21 @@ constexpr pair<Type&, Type&> minmax(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Pierwszy z dwóch obiektów, które są porównywane.
 
-*prawa*\
+*Kliknij*\
 Drugi z dwóch obiektów, które są porównywane.
 
 *pred*\
 Predykat binarny służący do porównywania dwóch obiektów.
 
-\ *listy*
-`initializer_list`, który zawiera elementy członkowskie, które mają być porównane.
+*podklauzulę do*\
+`initializer_list`Zawiera elementy członkowskie, które mają być porównane.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja szablonu zwraca `pair<const Type&, const Type&>( right, left )`, jeśli wartość *Right* jest mniejsza od *lewej*. W przeciwnym razie zwraca `pair<const Type&, const Type&>( left, right )`.
+Pierwsza funkcja szablonu zwraca, `pair<const Type&, const Type&>( right, left )` Jeśli wartość *Right* jest mniejsza od *lewej*. W przeciwnym razie zwraca `pair<const Type&, const Type&>( left, right )` .
 
 Druga funkcja członkowska zwraca parę, w której pierwszy element jest mniejszy, a drugi jest większy w porównaniu z *pred*predykatu.
 
@@ -4987,7 +4987,7 @@ mismatch(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
 *first1*\
@@ -5007,7 +5007,7 @@ Zdefiniowany przez użytkownika obiekt funkcji predykatu, który porównuje bie�
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Para iteratorów odwołująca się do pozycji niezgodności w dwóch zakresach, pierwszy składnik iterator do pozycji w pierwszym zakresie i drugi iterator składnika do pozycji w drugim zakresie. Jeśli nie ma różnicy między elementami w porównywanych zakresach lub jeśli Predykat binarny w drugiej wersji jest spełniony przez wszystkie pary elementów z dwóch zakresów, a następnie pierwszy punkt końcowy wskazuje na pozycję, która znajduje się po ostatnim elemencie w pierwszym zakres i drugi iterator składnika, aby pomieścić jeden poza ostatnim elementem przetestowanym w drugim zakresie.
+Para iteratorów odwołująca się do pozycji niezgodności w dwóch zakresach, pierwszy składnik iterator do pozycji w pierwszym zakresie i drugi iterator składnika do pozycji w drugim zakresie. Jeśli nie ma różnicy między elementami w porównywanych zakresach lub jeśli Predykat binarny w drugiej wersji jest spełniony przez wszystkie pary elementów z dwóch zakresów, to pierwszy iterator składnika wskazuje na pozycję, która znajduje się po ostatnim elemencie w pierwszym zakresie, a drugi iterator składa w celu umieszczenia jednego z elementów znajdujących się poza ostatnim elementem przetestowanym w drugim zakresie.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -5114,7 +5114,7 @@ C++14: vec_1 and list_1 are a mismatch: false
 Press a key
 ```
 
-## <a name="ltalggt-move"></a><a name="alg_move"></a>&lt;alg&gt; przenoszenia
+## <a name="ltalggt-move"></a><a name="alg_move"></a>&lt;alg &gt; Przenieś
 
 Przenieś elementy związane z określonym zakresem.
 
@@ -5135,21 +5135,21 @@ ForwardIterator2 move(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wejściowych wskazujący, gdzie ma być uruchamiany zakres elementów do przeniesienia.
 
-*ostatni*\
+*ostatniego*\
 Iterator danych wejściowych, który wskazuje koniec zakresu elementów do przeniesienia.
 
-\ miejsca *docelowego*
+*dest*\
 Iterator danych wyjściowych, który ma zawierać przeniesione elementy.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu oblicza `*(dest + N) = move(*(first + N))` raz dla każdego `N` w zakresie `[0, last - first)`, dla ściśle rosnących wartości `N`, zaczynając od najniższej wartości. Następnie zwraca `dest + N`. Jeśli `dest` i *najpierw* wyznaczać regiony magazynu, miejscem *docelowy* nie może być w zakresie `[first, last)`.
+Funkcja szablonu oblicza `*(dest + N) = move(*(first + N))` jeden raz dla każdego `N` z nich w zakresie `[0, last - first)` , aby ściśle zwiększać wartości, `N` Zaczynając od najniższej wartości. Następnie zwraca wartość `dest + N` . Jeśli `dest` i *pierwszego* wyznaczania regionów magazynu, element *docelowy* nie może znajdować się w zakresie `[first, last)` .
 
 ## <a name="move_backward"></a><a name="move_backward"></a>move_backward
 
@@ -5165,10 +5165,10 @@ BidirectionalIterator2 move_backward(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
+*pierwszego*\
 Iterator, który wskazuje początek zakresu, z którego można przenieść elementy.
 
-*ostatni*\
+*ostatniego*\
 Iterator, który wskazuje koniec zakresu, z którego można przenieść elementy. Ten element nie jest przenoszony.
 
 *destEnd*\
@@ -5176,9 +5176,9 @@ Iterator dwukierunkowy odnoszący się do pierwszej pozycji po elemencie końcow
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu oblicza `*(destEnd - N - 1) = move(*(last - N - 1))` raz dla każdego `N` w zakresie `[0, last - first)`, dla ściśle rosnących wartości `N`, zaczynając od najniższej wartości. Następnie zwraca `destEnd - (last - first)`. Jeśli *destEnd* i *pierwszy* wyznaczysz regiony magazynu, *destEnd* nie może znajdować się w zakresie `[first, last)`.
+Funkcja szablonu oblicza `*(destEnd - N - 1) = move(*(last - N - 1))` jeden raz dla każdego `N` z nich w zakresie `[0, last - first)` , aby ściśle zwiększać wartości, `N` Zaczynając od najniższej wartości. Następnie zwraca wartość `destEnd - (last - first)` . Jeśli *destEnd* i *pierwszy* wyznaczy regiony magazynu, *destEnd* nie może znajdować się w zakresie `[first, last)` .
 
-`move` i `move_backward` są funkcjonalnie równoważne z użyciem `copy` i `copy_backward` z iteratorem przenoszenia.
+`move`i `move_backward` są funkcjonalnie równoważne z użyciem `copy` i `copy_backward` z iteratorem przenoszenia.
 
 ## <a name="next_permutation"></a><a name="next_permutation"></a>next_permutation
 
@@ -5199,10 +5199,10 @@ bool next_permutation(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
+*pierwszego*\
 Iterator dwukierunkowy wskazujący na pozycję pierwszego elementu w zakresie, który ma być permuted.
 
-*ostatni*\
+*ostatniego*\
 Iterator dwukierunkowy wskazujący na pozycję jeden poza ostatnim elementem w zakresie, który ma być permuted.
 
 *pred*\
@@ -5218,7 +5218,7 @@ Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaź
 
 Domyślny Predykat binarny jest mniejszy niż, a elementy w zakresie muszą być mniejsze niż porównywalne, aby upewnić się, że następna Permutacja jest dobrze zdefiniowana.
 
-Złożoność jest liniowa z maksymalnie `(last - first) / 2` wymian.
+Złożoność jest liniowa z największą `(last - first) / 2` wymianą.
 
 ### <a name="example"></a>Przykład
 
@@ -5395,16 +5395,16 @@ void nth_element(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator dostępu swobodnego odnoszący się do pozycji pierwszego elementu w zakresie, który ma zostać podzielony na partycje.
 
-*n*\
+*NTH*\
 Iterator dostępu swobodnego odnoszący się do pozycji elementu, który ma być prawidłowo uporządkowany na granicy partycji.
 
-*ostatni*\
+*ostatniego*\
 Iterator dostępu swobodnego odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma zostać podzielony na partycje.
 
 *pred*\
@@ -5414,7 +5414,7 @@ Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryte
 
 Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a w kolejności, w której ostatnia pozycja jest dostępna od pierwszej do przyrostu.
 
-Algorytm `nth_element` nie gwarantuje, że elementy w podzakresach są sortowane po obu stronach *tego elementu*. Powoduje to mniejsze gwarancje niż `partial_sort`, które porządkują elementy w zakresie poniżej wybranego elementu i mogą być używane jako szybsza alternatywa dla `partial_sort`, gdy kolejność dolnego zakresu nie jest wymagana.
+`nth_element`Algorytm nie gwarantuje, że elementy w podzakresach są sortowane po obu stronach *tego*elementu. W ten sposób zwiększa się mniejsze gwarancje niż `partial_sort` , które porządkują elementy w zakresie poniżej pewnego wybranego elementu i mogą być używane jako szybsze alternatywy dla `partial_sort` sytuacji, gdy kolejność niższych zakresów nie jest wymagana.
 
 Elementy są równoważne, ale niekoniecznie równe, jeśli nie są mniejsze od siebie.
 
@@ -5507,13 +5507,13 @@ bool none_of(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wejściowych, który wskazuje, gdzie rozpocząć sprawdzanie zakresu elementów dla warunku.
 
-*ostatni*\
+*ostatniego*\
 Iterator danych wejściowych, który wskazuje koniec zakresu elementów.
 
 *pred*\
@@ -5525,7 +5525,7 @@ Zwraca **wartość true** , jeśli warunek nie jest wykrywany co najmniej raz we
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca **wartość true** tylko wtedy, gdy dla niektórych `N` w zakresie `[0, last - first)`, predykat `pred(*(first + N))` ma zawsze **wartość false**.
+Funkcja szablonu zwraca **wartość true** tylko wtedy, gdy dla niektórych `N` z zakresu `[0, last - first)` predykat `pred(*(first + N))` ma zawsze **wartość false**.
 
 ## <a name="partial_sort"></a><a name="partial_sort"></a>partial_sort
 
@@ -5563,16 +5563,16 @@ void partial_sort(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator dostępu swobodnego odnoszący się do pozycji pierwszego elementu w zakresie, który ma zostać posortowany.
 
 *sortEnd*\
 Iterator dostępu swobodnego, odnoszący się do pozycji jednej poza ostatnim elementem w podzakresie, który ma zostać posortowany.
 
-*ostatni*\
+*ostatniego*\
 Iterator dostępu swobodnego, odnoszący się do jednej z elementów znajdujących się poza ostatnim elementem w zakresie, który ma zostać częściowo posortowany.
 
 *pred*\
@@ -5582,9 +5582,9 @@ Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryte
 
 Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a w kolejności, w której ostatnia pozycja jest dostępna od pierwszej do przyrostu.
 
-Elementy są równoważne, ale niekoniecznie równe, jeśli nie są mniejsze od siebie. Algorytm `sort` nie jest stabilny i nie gwarantuje, że względne porządkowanie elementów równoważnych zostanie zachowane. Algorytm `stable_sort` zachowuje to oryginalne porządkowanie.
+Elementy są równoważne, ale niekoniecznie równe, jeśli nie są mniejsze od siebie. `sort`Algorytm nie jest stabilny i nie gwarantuje, że względne porządkowanie elementów równoważnych zostanie zachowane. Algorytm `stable_sort` zachowuje oryginalne porządkowanie.
 
-Średnia częściowa złożoność sortowania to *O*((`last`- `first`) log (`sortEnd`- `first`)).
+Średnia częściowa złożoność sortowania to *O*(( `last` -  `first` ) log ( `sortEnd` -  `first` )).
 
 ### <a name="example"></a>Przykład
 
@@ -5698,7 +5698,7 @@ RandomAccessIterator partial_sort_copy(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
 *first1*\
@@ -5823,13 +5823,13 @@ ForwardIterator partition(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w zakresie, który ma zostać podzielony na partycje.
 
-*ostatni*\
+*ostatniego*\
 Iterator dwukierunkowy odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma zostać podzielony na partycje.
 
 *pred*\
@@ -5843,9 +5843,9 @@ Iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w zakresie
 
 Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a w kolejności, w której ostatnia pozycja jest dostępna od pierwszej do przyrostu.
 
-Elementy *a* i *b* są równoważne, ale niekoniecznie równe, jeśli oba `pred( a, b )` ma wartość false i `pred( b, a )` ma wartość false, gdzie *pred* jest predykatem określonym parametrem. Algorytm `partition` nie jest stabilny i nie gwarantuje, że względne porządkowanie elementów równoważnych zostanie zachowane. Algorytm `stable_partition` zachowuje to oryginalne porządkowanie.
+Elementy *a* i *b* są równoważne, ale niekoniecznie równe, jeśli oba mają `pred( a, b )` wartość false i `pred( b, a )` ma wartość false, gdzie *pred* jest predykatem określonym parametrem. `partition`Algorytm nie jest stabilny i nie gwarantuje, że względne porządkowanie elementów równoważnych zostanie zachowane. Algorytm `stable_partition` zachowuje oryginalne porządkowanie.
 
-Złożoność jest liniowa: istnieją `(last - first)` aplikacje *pred* i `(last - first)/2` zamian.
+Złożoność jest liniowa: istnieją `(last - first)` aplikacje *pred* i z większością `(last - first)/2` wymian.
 
 ### <a name="example"></a>Przykład
 
@@ -5913,13 +5913,13 @@ pair<ForwardIterator1, ForwardIterator2> partition_copy(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wejściowych, który wskazuje początek zakresu do sprawdzenia warunku.
 
-*ostatni*\
+*ostatniego*\
 Iterator danych wejściowych, który wskazuje koniec zakresu.
 
 *dest1*\
@@ -5933,7 +5933,7 @@ Warunek do przetestowania. Jest to zapewniane przez zdefiniowany przez użytkown
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja Template kopiuje każdy element `X` w `[first,last)` do `*dest1++` Jeśli `pred(X)` ma wartość true lub `*dest2++`, jeśli nie. Zwraca `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.
+Funkcja szablonu kopiuje każdy element `X` w `[first,last)` do `*dest1++` , jeśli `pred(X)` ma wartość true, lub na, `*dest2++` Jeśli nie. Zwraca wartość `pair<OutputIterator1, OutputIterator2>(dest1, dest2)` .
 
 ## <a name="partition_point"></a><a name="partition_point"></a>partition_point
 
@@ -5949,22 +5949,22 @@ ForwardIterator partition_point(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
-`ForwardIterator` wskazujący początek zakresu do sprawdzenia warunku.
+*pierwszego*\
+`ForwardIterator`Wskazuje początek zakresu do sprawdzenia warunku.
 
-*ostatni*\
-`ForwardIterator` wskazujący koniec zakresu.
+*ostatniego*\
+`ForwardIterator`Wskazuje koniec zakresu.
 
 *pred*\
 Warunek do przetestowania. Jest to zapewniane przez zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek, który ma być spełniony przez wyszukiwany element. Predykat jednoargumentowy przyjmuje jeden argument i zwraca **wartość PRAWDA** lub **Fałsz**.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca `ForwardIterator`, która odwołuje się do pierwszego elementu, który nie spełnia warunku przetestowanego przez *pred*, lub zwraca wartość *Last* , jeśli nie zostanie znaleziona.
+Zwraca obiekt `ForwardIterator` , który odwołuje się do pierwszego elementu, który nie spełnia warunku przetestowanego przez *pred*, lub zwraca wartość *Last* , jeśli nie zostanie znaleziona.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja Template znajduje pierwszy iterator `it` w `[first, last)`, dla którego `pred(*it)` ma **wartość false**. Sekwencja musi być uporządkowana według *pred*.
+Funkcja Template znajduje pierwszy iterator `it` w `[first, last)` dla, który `pred(*it)` ma **wartość false**. Sekwencja musi być uporządkowana według *pred*.
 
 ## <a name="pop_heap"></a><a name="pop_heap"></a>pop_heap
 
@@ -5985,10 +5985,10 @@ void pop_heap(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
+*pierwszego*\
 Iterator dostępu swobodnego, odnoszący się do pozycji pierwszego elementu sterty.
 
-*ostatni*\
+*ostatniego*\
 Iterator dostępu swobodnego, odnoszący się do jednej z elementów znajdujących się poza ostatnim elementem w stercie.
 
 *pred*\
@@ -5996,7 +5996,7 @@ Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens,
 
 ### <a name="remarks"></a>Uwagi
 
-Algorytm `pop_heap` jest odwrotnością operacji wykonywanej przez algorytm push_heap, w którym element w następnej pozycji zakresu jest dodawany do sterty składającej się z wcześniejszych elementów w zakresie, w przypadku gdy element dodawany do sterty jest większy niż którykolwiek z elementów znajdujących się już na stercie.
+`pop_heap`Algorytm jest odwrotnością operacji wykonywanej przez algorytm push_heap, w którym element w następnej pozycji zakresu jest dodawany do sterty składającej się z wcześniejszych elementów w zakresie, w przypadku gdy element dodawany do sterty jest większy niż którykolwiek z elementów znajdujących się już w stercie.
 
 Sterty mają dwie właściwości:
 
@@ -6004,13 +6004,13 @@ Sterty mają dwie właściwości:
 
 - Elementy mogą być dodawane lub usuwane w czasie logarytmu.
 
-Sterty są idealnym sposobem implementacji kolejek priorytetów i są używane w implementacji adaptera [priority_queue](../standard-library/priority-queue-class.md)biblioteki C++ standardowej.
+Sterty są idealnym sposobem implementowania kolejek priorytetowych i są używane w implementacji adaptera kontenera standardowej biblioteki języka C++ [priority_queue klasie](priority-queue-class.md).
 
 Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a w kolejności, w której ostatnia pozycja jest dostępna od pierwszej do przyrostu.
 
 Zakres wykluczający nowo dodany element na końcu musi być stertą.
 
-Złożoność jest logarytmu, wymagającą co najwyżej `log (last - first)` porównania.
+Złożoność jest logarytmu, wymagającą co najwyżej `log (last - first)` porównań.
 
 ### <a name="example"></a>Przykład
 
@@ -6094,10 +6094,10 @@ bool prev_permutation(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
+*pierwszego*\
 Iterator dwukierunkowy wskazujący na pozycję pierwszego elementu w zakresie, który ma być permuted.
 
-*ostatni*\
+*ostatniego*\
 Iterator dwukierunkowy wskazujący na pozycję jeden poza ostatnim elementem w zakresie, który ma być permuted.
 
 *pred*\
@@ -6113,7 +6113,7 @@ Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaź
 
 Domyślny Predykat binarny jest mniejszy niż i elementy w zakresie muszą być mniejsze niż porównywalne, aby upewnić się, że poprzednia Permutacja jest dobrze zdefiniowana.
 
-Złożoność jest liniowa, z maksymalnie (`last` - `first`)/2.
+Złożoność jest liniowa, z maksymalnie ( `last`  -  `first` )/2 swapami.
 
 ### <a name="example"></a>Przykład
 
@@ -6269,10 +6269,10 @@ void push_heap(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
+*pierwszego*\
 Iterator dostępu swobodnego, odnoszący się do pozycji pierwszego elementu sterty.
 
-*ostatni*\
+*ostatniego*\
 Iterator dostępu swobodnego odnoszący się do jednej z elementów znajdujących się poza ostatnim elementem w zakresie, który ma zostać przekonwertowany na stos.
 
 *pred*\
@@ -6288,13 +6288,13 @@ Sterty mają dwie właściwości:
 
 - Elementy mogą być dodawane lub usuwane w czasie logarytmu.
 
-Sterty są idealnym sposobem implementacji kolejek priorytetów i są używane w implementacji adaptera [priority_queue](../standard-library/priority-queue-class.md)biblioteki C++ standardowej.
+Sterty są idealnym sposobem implementowania kolejek priorytetowych i są używane w implementacji adaptera kontenera standardowej biblioteki języka C++ [priority_queue klasie](priority-queue-class.md).
 
 Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a w kolejności, w której ostatnia pozycja jest dostępna od pierwszej do przyrostu.
 
 Zakres wykluczający nowo dodany element na końcu musi być stertą.
 
-Złożoność jest logarytmu, wymagającą co najwyżej `log(last - first)` porównania.
+Złożoność jest logarytmu, wymagającą co najwyżej `log(last - first)` porównań.
 
 ### <a name="example"></a>Przykład
 
@@ -6365,7 +6365,7 @@ int main() {
 
 ## <a name="random_shuffle"></a><a name="random_shuffle"></a>random_shuffle
 
-Funkcja std:: random_shuffle () jest przestarzała, zastąpiona przez [std:: losowo](../standard-library/algorithm-functions.md#shuffle). Aby uzyskać przykład kodu i więcej informacji, zobacz [\<losowo >](../standard-library/random.md) i Stack Overflow post [dlaczego są std:: random_shuffle metody przestarzałe w języku c++ 14?](https://go.microsoft.com/fwlink/p/?linkid=397954).
+Funkcja std:: random_shuffle () jest przestarzała, zastąpiona przez [std:: losowo](algorithm-functions.md#shuffle). Aby zapoznać się z przykładem kodu i uzyskać więcej informacji, zobacz [\<random>](random.md) i Stack Overflow post [dlaczego są to metody std:: random_shuffle, które są przestarzałe w języku c++ 14?](https://go.microsoft.com/fwlink/p/?linkid=397954).
 
 ## <a name="remove"></a><a name="remove"></a>usuwa
 
@@ -6388,16 +6388,16 @@ ForwardIterator remove(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, z którego elementy są usuwane.
 
-*ostatni*\
+*ostatniego*\
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, z którego elementy są usuwane.
 
-\ *wartości*
+*wartościami*\
 Wartość, która ma zostać usunięta z zakresu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -6410,11 +6410,11 @@ Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaź
 
 Kolejność elementów, które nie zostały usunięte, pozostaje stabilna.
 
-`operator==` używany do określania równości między elementami musi nałożyć relację równoważności między operandami.
+`operator==`Użycie do określenia równości między elementami musi mieć relację równoważności między operandami.
 
-Złożoność jest liniowa; Istnieją porównania (`last` - `first`) dla równości.
+Złożoność jest liniowa; Istnieją ( `last`  -  `first` ) porównania dla równości.
 
-[Klasa list](../standard-library/list-class.md) ma wydajniejszą wersję funkcji składowej `remove`, która również łączy wskaźniki.
+[Klasa list](list-class.md) ma wydajniejszą wersję funkcji składowej `remove` , która również łączy wskaźniki.
 
 ### <a name="example"></a>Przykład
 
@@ -6486,19 +6486,19 @@ ForwardIterator2 remove_copy(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie, z którego elementy są usuwane.
 
-*ostatni*\
+*ostatniego*\
 Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, z którego elementy są usuwane.
 
-\ *wyniku*
+*wynika*\
 Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, do którego elementy są usuwane.
 
-\ *wartości*
+*wartościami*\
 Wartość, która ma zostać usunięta z zakresu.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -6513,9 +6513,9 @@ Musi być wystarczająco dużo miejsca w zakresie docelowym, aby można było za
 
 Kolejność elementów, które nie zostały usunięte, pozostaje stabilna.
 
-`operator==` używany do określania równości między elementami musi nałożyć relację równoważności między operandami.
+`operator==`Użycie do określenia równości między elementami musi mieć relację równoważności między operandami.
 
-Złożoność jest liniowa; Istnieje (`last` - `first`) porównania dla równości i maksymalnie (`last` - `first`).
+Złożoność jest liniowa; Istnieją ( `last`  -  `first` ) porównania dla równości i najwyżej ( `last`  -  `first` ) przypisań.
 
 ### <a name="example"></a>Przykład
 
@@ -6584,16 +6584,16 @@ ForwardIterator2 remove_copy_if(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w zakresie, z którego elementy są usuwane.
 
-*ostatni*\
+*ostatniego*\
 Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, z którego elementy są usuwane.
 
-\ *wyniku*
+*wynika*\
 Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, do którego elementy są usuwane.
 
 *pred*\
@@ -6611,11 +6611,11 @@ Musi być wystarczająco dużo miejsca w zakresie docelowym, aby można było za
 
 Kolejność elementów, które nie zostały usunięte, pozostaje stabilna.
 
-`operator==` używany do określania równości między elementami musi nałożyć relację równoważności między operandami.
+`operator==`Użycie do określenia równości między elementami musi mieć relację równoważności między operandami.
 
-Złożoność jest liniowa: istnieje (`last` - `first`) porównania dla równości i maksymalnie (`last` - `first`).
+Złożoność jest liniowa: istnieją `last`  -  `first` porównania dla równości i najwyżej ( `last`  -  `first` ) przypisań.
 
-Aby uzyskać informacje na temat zachowania tych funkcji, zobacz [sprawdzone Iteratory](../standard-library/checked-iterators.md).
+Aby uzyskać informacje na temat zachowania tych funkcji, zobacz [sprawdzone Iteratory](checked-iterators.md).
 
 ### <a name="example"></a>Przykład
 
@@ -6689,13 +6689,13 @@ ForwardIterator remove_if(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu wskazujący na pozycję pierwszego elementu w zakresie, z którego elementy są usuwane.
 
-*ostatni*\
+*ostatniego*\
 Iterator do przodu, wskazujący na pozycję jeden poza ostatnim elementem w zakresie, z którego elementy są usuwane.
 
 *pred*\
@@ -6711,9 +6711,9 @@ Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaź
 
 Kolejność elementów, które nie zostały usunięte, pozostaje stabilna.
 
-`operator==` używany do określania równości między elementami musi nałożyć relację równoważności między operandami.
+`operator==`Użycie do określenia równości między elementami musi mieć relację równoważności między operandami.
 
-Złożoność jest liniowa: istnieje (`last` - `first`) porównania dla równości.
+Złożoność jest liniowa: istnieją `last`  -  `first` porównania dla równości.
 
 Lista ma wydajniejszą wersję funkcji składowej, która umożliwia usunięcie wskaźników, które łączą się.
 
@@ -6792,13 +6792,13 @@ void replace(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu wskazujący na pozycję pierwszego elementu w zakresie, z którego są zamieniane elementy.
 
-*ostatni*\
+*ostatniego*\
 Iterator do przodu, wskazujący na pozycję jedną poza ostatnim elementem w zakresie, z którego są zamieniane elementy.
 
 *oldVal*\
@@ -6813,9 +6813,9 @@ Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaź
 
 Kolejność elementów, które nie zostały zastąpione, pozostaje stabilna.
 
-`operator==` używany do określania równości między elementami musi nałożyć relację równoważności między operandami.
+`operator==`Użycie do określenia równości między elementami musi mieć relację równoważności między operandami.
 
-Złożoność jest liniowa; Istnieją (`last` - `first`) porównania dla równości i maksymalnie (`last` - `first`) przypisań nowych wartości.
+Złożoność jest liniowa; Istnieją ( `last`  -  `first` ) porównania dla równości i najwyżej ( `last`  -  `first` ) przydziałów nowych wartości.
 
 ### <a name="example"></a>Przykład
 
@@ -6881,16 +6881,16 @@ ForwardIterator2 replace_copy(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator wejściowy wskazujący pozycję pierwszego elementu w zakresie, z którego są zamieniane elementy.
 
-*ostatni*\
+*ostatniego*\
 Iterator wejściowy wskazujący na pozycję jedną poza ostatnim elementem w zakresie, z którego są zamieniane elementy.
 
-\ *wyniku*
+*wynika*\
 Iterator danych wyjściowych wskazujący na pierwszy element w zakresie docelowym, do miejsca, w którym jest kopiowana zmieniona sekwencja elementów.
 
 *oldVal*\
@@ -6909,9 +6909,9 @@ Zakresy źródłowe i docelowe, do których istnieją odwołania, nie mogą się
 
 Kolejność elementów, które nie zostały zastąpione, pozostaje stabilna.
 
-`operator==` używany do określania równości między elementami musi nałożyć relację równoważności między operandami.
+`operator==`Użycie do określenia równości między elementami musi mieć relację równoważności między operandami.
 
-Złożoność jest liniowa: istnieje (`last` - `first`) porównania dla równości i maksymalnie (`last` - `first`) przypisań nowych wartości.
+Złożoność jest liniowa: istnieją `last`  -  `first` porównania dla równości i najwyżej ( `last`  -  `first` ) przydziałów nowych wartości.
 
 ### <a name="example"></a>Przykład
 
@@ -6996,22 +6996,22 @@ ForwardIterator2 replace_copy_if(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator wejściowy wskazujący pozycję pierwszego elementu w zakresie, z którego są zamieniane elementy.
 
-*ostatni*\
+*ostatniego*\
 Iterator wejściowy wskazujący na pozycję jedną poza ostatnim elementem w zakresie, z którego są zamieniane elementy.
 
-\ *wyniku*
+*wynika*\
 Iterator danych wyjściowych wskazujący na pozycję pierwszego elementu w zakresie docelowym, do którego kopiowane są elementy.
 
 *pred*\
 Predykat jednoargumentowy, który musi być spełniony, jest wartością elementu, który ma zostać zastąpiony.
 
-\ *wartości*
+*wartościami*\
 Nowa wartość jest przypisywana do elementów, których stara wartość spełnia predykat.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -7024,9 +7024,9 @@ Zakresy źródłowe i docelowe, do których istnieją odwołania, nie mogą się
 
 Kolejność elementów, które nie zostały zastąpione, pozostaje stabilna.
 
-`operator==` używany do określania równości między elementami musi nałożyć relację równoważności między operandami.
+`operator==`Użycie do określenia równości między elementami musi mieć relację równoważności między operandami.
 
-Złożoność jest liniowa; Istnieją (`last` - `first`) porównania dla równości i maksymalnie (`last` - `first`) przypisań nowych wartości.
+Złożoność jest liniowa; Istnieją ( `last`  -  `first` ) porównania dla równości i najwyżej ( `last`  -  `first` ) przydziałów nowych wartości.
 
 ### <a name="example"></a>Przykład
 
@@ -7117,19 +7117,19 @@ void replace_if(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu wskazujący na pozycję pierwszego elementu w zakresie, z którego są zamieniane elementy.
 
-*ostatni*\
+*ostatniego*\
 Iterator wskazujący na pozycję jedną poza ostatnim elementem w zakresie, z którego są zamieniane elementy.
 
 *pred*\
 Predykat jednoargumentowy, który musi być spełniony, jest wartością elementu, który ma zostać zastąpiony.
 
-\ *wartości*
+*wartościami*\
 Nowa wartość jest przypisywana do elementów, których stara wartość spełnia predykat.
 
 ### <a name="remarks"></a>Uwagi
@@ -7138,11 +7138,11 @@ Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaź
 
 Kolejność elementów, które nie zostały zastąpione, pozostaje stabilna.
 
-Algorytm `replace_if` jest generalizacją algorytmu `replace`, co pozwala określić dowolny predykat, a nie równość do określonej wartości stałej.
+Algorytm `replace_if` jest generalizacją algorytmu `replace` , umożliwiając określenie dowolnego predykatu, a nie równości do określonej wartości stałej.
 
-`operator==` używany do określania równości między elementami musi nałożyć relację równoważności między operandami.
+`operator==`Użycie do określenia równości między elementami musi mieć relację równoważności między operandami.
 
-Złożoność jest liniowa: istnieje (`last` - `first`) porównania dla równości i maksymalnie (`last` - `first`) przypisań nowych wartości.
+Złożoność jest liniowa: istnieją `last`  -  `first` porównania dla równości i najwyżej ( `last`  -  `first` ) przydziałów nowych wartości.
 
 ### <a name="example"></a>Przykład
 
@@ -7209,13 +7209,13 @@ void reverse(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator dwukierunkowy wskazujący na pozycję pierwszego elementu w zakresie, w którym są permuted elementy.
 
-*ostatni*\
+*ostatniego*\
 Iterator dwukierunkowy wskazujący na pozycję jeden poza ostatnim elementem w zakresie, w którym są permuted elementy.
 
 ### <a name="remarks"></a>Uwagi
@@ -7286,16 +7286,16 @@ ForwardIterator reverse_copy(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator dwukierunkowy wskazujący na pozycję pierwszego elementu w zakresie źródłowym, w którym są permuted elementy.
 
-*ostatni*\
+*ostatniego*\
 Iterator dwukierunkowy wskazujący na pozycję jeden poza ostatnim elementem w zakresie źródłowym, w którym są permuted elementy.
 
-\ *wyniku*
+*wynika*\
 Iterator danych wyjściowych wskazujący na pozycję pierwszego elementu w zakresie docelowym, do którego kopiowane są elementy.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -7368,23 +7368,23 @@ ForwardIterator rotate(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, który ma zostać obrócony.
 
-\ *środkowy*
+*średnio*\
 Iterator do przodu definiujący granicę w zakresie, który odnosi się do pozycji pierwszego elementu w drugiej części zakresu, którego elementy mają być wymieniane z tymi w pierwszej części zakresu.
 
-*ostatni*\
+*ostatniego*\
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma zostać obrócony.
 
 ### <a name="remarks"></a>Uwagi
 
 Zakresy, do których istnieją odwołania, muszą być prawidłowe; wszystkie wskaźniki muszą być odwołujące się, a w kolejności, w której ostatnia pozycja jest dostępna od pierwszej do przyrostu.
 
-Złożoność jest liniowa z maksymalnie (`last` - `first`) wymian.
+Złożoność jest liniowa z największą liczbą ( `last`  -  `first` ).
 
 ### <a name="example"></a>Przykład
 
@@ -7484,19 +7484,19 @@ ForwardIterator2 rotate_copy(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, który ma zostać obrócony.
 
-\ *środkowy*
+*średnio*\
 Iterator do przodu definiujący granicę w zakresie, który odnosi się do pozycji pierwszego elementu w drugiej części zakresu, którego elementy mają być wymieniane z tymi w pierwszej części zakresu.
 
-*ostatni*\
+*ostatniego*\
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma zostać obrócony.
 
-\ *wyniku*
+*wynika*\
 Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -7507,7 +7507,7 @@ Iterator danych wyjściowych odnoszący się do pozycji jednej poza ostatnim ele
 
 Zakresy, do których istnieją odwołania, muszą być prawidłowe; wszystkie wskaźniki muszą być odwołujące się, a w kolejności, w której ostatnia pozycja jest dostępna od pierwszej do przyrostu.
 
-Złożoność jest liniowa z maksymalnie (`last` - `first`) wymian.
+Złożoność jest liniowa z największą liczbą ( `last`  -  `first` ).
 
 ### <a name="example"></a>Przykład
 
@@ -7627,7 +7627,7 @@ ForwardIterator search(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
 *first1*\
@@ -7645,7 +7645,7 @@ Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w 
 *pred*\
 Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do spełnienia, jeśli dwa elementy mają być wykonane jako równoważne. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
 
-\ *wyszukiwania*
+*Wyszukaj*\
 Program do wyszukiwania, który hermetyzuje wzorzec do wyszukania i algorytm wyszukiwania do użycia. Aby uzyskać więcej informacji o wyszukiwarkach, zobacz Klasa [default_searcher](default-searcher-class.md), [Klasa boyer_moore_horspool_searcher](boyer-moore-horspool-searcher-class.md)i [Klasa boyer_moore_searcher](boyer-moore-searcher-class.md).
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -7654,7 +7654,7 @@ Iterator do przodu, odnoszący się do pozycji pierwszego elementu pierwszej pod
 
 ### <a name="remarks"></a>Uwagi
 
-`operator==` używany do określenia dopasowania między elementem a określoną wartością musi nałożyć relację równoważności między operandami.
+`operator==`Użycie do określenia dopasowania między elementem a określoną wartością musi nałożyć relację równoważności między operandami.
 
 Zakresy, do których istnieją odwołania, muszą być prawidłowe; wszystkie wskaźniki muszą być odwołujące się i w każdej sekwencji, która jest dostępna od pierwszej do przyrostu.
 
@@ -7799,7 +7799,7 @@ ForwardIterator search_n(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
 *first1*\
@@ -7808,10 +7808,10 @@ Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, k
 *last1*\
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma być przeszukiwany.
 
-*liczba*\
+*liczbą*\
 Rozmiar podsekwencji podszukiwanej.
 
-\ *wartości*
+*wartościami*\
 Wartość elementów w przeszukiwanej sekwencji.
 
 *pred*\
@@ -7823,7 +7823,7 @@ Iterator do przodu, odnoszący się do pozycji pierwszego elementu pierwszej pod
 
 ### <a name="remarks"></a>Uwagi
 
-`operator==` używany do określenia dopasowania między elementem a określoną wartością musi nałożyć relację równoważności między operandami.
+`operator==`Użycie do określenia dopasowania między elementem a określoną wartością musi nałożyć relację równoważności między operandami.
 
 Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a w kolejności, w której ostatnia pozycja jest dostępna od pierwszej do przyrostu.
 
@@ -7956,7 +7956,7 @@ ForwardIterator set_difference(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
 *first1*\
@@ -7971,7 +7971,7 @@ Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w dr
 *last2*\
 Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim elementem w drugim z dwóch kolejnych posortowanych zakresów źródłowych do zapełnienia i posortowania w jeden zakres reprezentujący różnicę dwóch zakresów źródłowych.
 
-\ *wyniku*
+*wynika*\
 Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, w którym dwa zakresy źródłowe mają być umieszczone w jednym posortowanym zakresie, reprezentującym różnicę dwóch zakresów źródłowych.
 
 *pred*\
@@ -7987,13 +7987,13 @@ Posortowane zakresy źródłowe, do których istnieją odwołania, muszą być p
 
 Zakres docelowy nie powinien nakładać się na żaden z zakresów źródłowych i powinien być wystarczająco duży, aby zawierał pierwszy zakres źródłowy.
 
-Posortowane zakresy źródłowe muszą być uporządkowane jako warunek wstępny do zastosowania algorytmu `set_difference`, zgodnie z tą samą kolejnością, w jakiej ma być używana przez algorytm w celu sortowania połączonych zakresów.
+Posortowane zakresy źródłowe muszą być uporządkowane jako warunek wstępny do zastosowania `set_difference` algorytmu zgodnie z tą samą kolejnością, w jakiej ma być używana przez algorytm w celu sortowania połączonych zakresów.
 
 Operacja jest stabilna, ponieważ względna kolejność elementów w każdym zakresie jest zachowywana w zakresie docelowym. Zakresy źródłowe nie są modyfikowane przez scalanie algorytmów.
 
-Typy wartości iteratorów wejściowych muszą być mniejsze niż-porównywalne, aby można je było uporządkować, tak że, w przypadku dwóch elementów, można określić, że są one równoważne (w sensie, że żaden z nich nie jest mniejszy od drugiego) lub jeden z nich jest mniejszy od drugiego. Skutkuje to ustaleniem kolejności dla elementów nierównoważnych. Gdy w obu zakresach źródłowych znajdują się równoważne elementy, elementy z pierwszego zakresu poprzedzają elementy z drugiego zakresu źródłowego w zakresie docelowym. Jeśli zakresy źródłowe zawierają duplikaty elementu, takie jak w pierwszym zakresie źródłowym niż w drugim, zakres docelowy będzie zawierać liczbę, za pomocą której wystąpienia tych elementów w pierwszym zakresie źródłowym przekraczają wystąpienia elementu te elementy w drugim zakresie źródłowym.
+Typy wartości iteratorów wejściowych muszą być mniejsze niż-porównywalne, aby można je było uporządkować, tak że, w przypadku dwóch elementów, można określić, że są one równoważne (w sensie, że żaden z nich nie jest mniejszy od drugiego) lub jeden z nich jest mniejszy od drugiego. Skutkuje to ustaleniem kolejności dla elementów nierównoważnych. Gdy w obu zakresach źródłowych znajdują się równoważne elementy, elementy z pierwszego zakresu poprzedzają elementy z drugiego zakresu źródłowego w zakresie docelowym. Jeśli zakresy źródłowe zawierają duplikaty elementu w taki sposób, że w pierwszym zakresie źródłowym jest więcej niż w drugim, zakres docelowy będzie zawierać liczbę, za pomocą której wystąpienia tych elementów w pierwszym zakresie źródłowym przekraczają wystąpienia tych elementów w drugim zakresie źródłowym.
 
-Złożoność algorytmu jest liniowa z co najwyżej `2 * ((last1 - first1) - (last2 - first2)) - 1` porównania dla niepustych zakresów źródłowych.
+Złożoność algorytmu jest liniowa z większością `2 * ((last1 - first1) - (last2 - first2)) - 1` porównań dla niepustych zakresów źródłowych.
 
 ### <a name="example"></a>Przykład
 
@@ -8158,7 +8158,7 @@ ForwardIterator set_intersection(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
 *first1*\
@@ -8173,7 +8173,7 @@ Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w dr
 *last2*\
 Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim elementem w drugim z dwóch kolejnych posortowanych zakresów źródłowych w celu posortowania w jeden zakres reprezentujący przecięcie dwóch zakresów źródłowych.
 
-\ *wyniku*
+*wynika*\
 Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, w którym dwa zakresy źródłowe mają być załączone do pojedynczego posortowanego zakresu reprezentującego część wspólną dwóch zakresów źródłowych.
 
 *pred*\
@@ -8195,7 +8195,7 @@ Operacja jest stabilna, ponieważ względna kolejność elementów w każdym zak
 
 Typy wartości iteratorów danych wejściowych muszą być mniejsze niż porównywalne do uporządkowania, tak aby w przypadku dwóch elementów można było określić, że są one równoważne (w sensie, że żaden z nich nie jest mniejszy niż drugi) lub że jeden z nich jest mniejszy od drugiego. Skutkuje to ustaleniem kolejności dla elementów nierównoważnych. Gdy w obu zakresach źródłowych znajdują się równoważne elementy, elementy z pierwszego zakresu poprzedzają elementy z drugiego zakresu źródłowego w zakresie docelowym. Jeśli zakresy źródłowe zawierają duplikaty elementu, zakres docelowy będzie zawierać maksymalną liczbę elementów występujących w obu zakresach źródłowych.
 
-Złożoność algorytmu jest liniowa z co najwyżej `2 * ((last1 - first1) + (last2 - first2)) - 1` porównania dla niepustych zakresów źródłowych.
+Złożoność algorytmu jest liniowa z większością `2 * ((last1 - first1) + (last2 - first2)) - 1` porównań dla niepustych zakresów źródłowych.
 
 ### <a name="example"></a>Przykład
 
@@ -8356,7 +8356,7 @@ ForwardIterator set_symmetric_difference(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
 *first1*\
@@ -8371,7 +8371,7 @@ Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w dr
 *last2*\
 Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim elementem w drugim z dwóch kolejnych posortowanych zakresów źródłowych w celu posortowania w jeden zakres reprezentujący różnicę symetryczne dwóch zakresów źródłowych.
 
-\ *wyniku*
+*wynika*\
 Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, w którym dwa zakresy źródłowe mają być załączone do pojedynczego posortowanego zakresu reprezentującego różnicę symetryczne dwóch zakresów źródłowych.
 
 *pred*\
@@ -8387,13 +8387,13 @@ Posortowane zakresy źródłowe, do których istnieją odwołania, muszą być p
 
 Zakres docelowy nie powinien nakładać się na żaden z zakresów źródłowych i powinien być wystarczająco duży, aby zawierał zakres docelowy.
 
-Posortowane zakresy źródłowe muszą być uporządkowane jako warunek wstępny do zastosowania algorytmu `merge*`, zgodnie z tą samą kolejnością, w jakiej ma być używana przez algorytm w celu sortowania połączonych zakresów.
+Posortowane zakresy źródłowe muszą być uporządkowane jako warunek wstępny do zastosowania `merge*` algorytmu zgodnie z tą samą kolejnością, w jakiej ma być używana przez algorytm w celu sortowania połączonych zakresów.
 
 Operacja jest stabilna, ponieważ względna kolejność elementów w każdym zakresie jest zachowywana w zakresie docelowym. Zakresy źródłowe nie są modyfikowane przez scalanie algorytmów.
 
-Typy wartości iteratorów danych wejściowych muszą być mniejsze niż porównywalne do uporządkowania, tak aby w przypadku dwóch elementów można było określić, że są one równoważne (w sensie, że żaden z nich nie jest mniejszy niż drugi) lub że jeden z nich jest mniejszy od drugiego. Skutkuje to ustaleniem kolejności dla elementów nierównoważnych. Gdy w obu zakresach źródłowych znajdują się równoważne elementy, elementy z pierwszego zakresu poprzedzają elementy z drugiego zakresu źródłowego w zakresie docelowym. Jeśli zakresy źródłowe zawierają duplikaty elementu, zakres docelowy będzie zawierać wartość bezwzględną liczby, za pomocą której wystąpienia tych elementów w jednym z zakresów źródłowych przekraczają wystąpienia tych elementów w drugim źródle. zakresu.
+Typy wartości iteratorów danych wejściowych muszą być mniejsze niż porównywalne do uporządkowania, tak aby w przypadku dwóch elementów można było określić, że są one równoważne (w sensie, że żaden z nich nie jest mniejszy niż drugi) lub że jeden z nich jest mniejszy od drugiego. Skutkuje to ustaleniem kolejności dla elementów nierównoważnych. Gdy w obu zakresach źródłowych znajdują się równoważne elementy, elementy z pierwszego zakresu poprzedzają elementy z drugiego zakresu źródłowego w zakresie docelowym. Jeśli zakresy źródłowe zawierają duplikaty elementu, zakres docelowy będzie zawierać wartość bezwzględną liczby, za pomocą której wystąpienia tych elementów w jednym z zakresów źródłowych przekraczają wystąpienia tych elementów w drugim zakresie źródłowym.
 
-Złożoność algorytmu jest liniowa z co najwyżej `2 * ((last1 - first1) - (last2 - first2)) - 1` porównania dla niepustych zakresów źródłowych.
+Złożoność algorytmu jest liniowa z większością `2 * ((last1 - first1) - (last2 - first2)) - 1` porównań dla niepustych zakresów źródłowych.
 
 ### <a name="example"></a>Przykład
 
@@ -8558,7 +8558,7 @@ ForwardIterator set_union(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
 *first1*\
@@ -8573,7 +8573,7 @@ Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w dr
 *last2*\
 Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim elementem w drugim z dwóch kolejnych posortowanych zakresów źródłowych do zapełnienia i posortowania w jeden zakres reprezentujący Unię dwóch zakresów źródłowych.
 
-\ *wyniku*
+*wynika*\
 Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, w którym dwa zakresy źródłowe mają być załączone do pojedynczego posortowanego zakresu reprezentującego Unię dwóch zakresów źródłowych.
 
 *pred*\
@@ -8589,13 +8589,13 @@ Posortowane zakresy źródłowe, do których istnieją odwołania, muszą być p
 
 Zakres docelowy nie powinien nakładać się na żaden z zakresów źródłowych i powinien być wystarczająco duży, aby zawierał zakres docelowy.
 
-Posortowane zakresy źródłowe muszą być uporządkowane jako warunek wstępny do zastosowania algorytmu `merge`, zgodnie z tą samą kolejnością, w jakiej ma być używana przez algorytm w celu sortowania połączonych zakresów.
+Posortowane zakresy źródłowe muszą być uporządkowane jako warunek wstępny do zastosowania `merge` algorytmu zgodnie z tą samą kolejnością, w jakiej ma być używana przez algorytm w celu sortowania połączonych zakresów.
 
-Operacja jest stabilna, ponieważ względna kolejność elementów w każdym zakresie jest zachowywana w zakresie docelowym. Zakresy źródłowe nie są modyfikowane przez algorytm `merge`.
+Operacja jest stabilna, ponieważ względna kolejność elementów w każdym zakresie jest zachowywana w zakresie docelowym. Zakresy źródłowe nie są modyfikowane przez algorytm `merge` .
 
 Typy wartości iteratorów danych wejściowych muszą być mniejsze niż porównywalne do uporządkowania, tak aby w przypadku dwóch elementów można było określić, że są one równoważne (w sensie, że żaden z nich nie jest mniejszy niż drugi) lub że jeden z nich jest mniejszy od drugiego. Skutkuje to ustaleniem kolejności dla elementów nierównoważnych. Gdy w obu zakresach źródłowych znajdują się równoważne elementy, elementy z pierwszego zakresu poprzedzają elementy z drugiego zakresu źródłowego w zakresie docelowym. Jeśli zakresy źródłowe zawierają duplikaty elementu, zakres docelowy będzie zawierać maksymalną liczbę elementów występujących w obu zakresach źródłowych.
 
-Złożoność algorytmu jest liniowa z co najwyżej `2 * ((last1 - first1) - (last2 - first2)) - 1` porównaniami.
+Złożoność algorytmu jest liniowa z większością `2 * ((last1 - first1) - (last2 - first2)) - 1` porównań.
 
 ### <a name="example"></a>Przykład
 
@@ -8730,18 +8730,18 @@ void shuffle(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
-Iterator do pierwszego elementu w zakresie, który ma być przestawiony, włącznie. Muszą spełniać wymagania `RandomAccessIterator` i `ValueSwappable`.
+*pierwszego*\
+Iterator do pierwszego elementu w zakresie, który ma być przestawiony, włącznie. Muszą spełniać wymagania `RandomAccessIterator` i `ValueSwappable` .
 
-*ostatni*\
-Iterator do ostatniego elementu w zakresie, który ma zostać przelosowy, na wyłączność. Muszą spełniać wymagania `RandomAccessIterator` i `ValueSwappable`.
+*ostatniego*\
+Iterator do ostatniego elementu w zakresie, który ma zostać przelosowy, na wyłączność. Muszą spełniać wymagania `RandomAccessIterator` i `ValueSwappable` .
 
-\ *Gen*
-Generator liczb losowych, który będzie używany przez funkcję `shuffle()` dla operacji. Musi spełniać wymagania `UniformRandomNumberGenerator`.
+*zbieranie*\
+Generator liczb losowych, który `shuffle()` będzie używany przez funkcję dla operacji. Musi spełniać wymagania `UniformRandomNumberGenerator` .
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji i przykład kodu, który używa `shuffle()`, zobacz [\<losowo >](../standard-library/random.md).
+Aby uzyskać więcej informacji i przykład kodu, który używa `shuffle()` , zobacz [\<random>](random.md) .
 
 ## <a name="sort"></a><a name="sort"></a>porządku
 
@@ -8775,25 +8775,25 @@ void sort(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator dostępu swobodnego odnoszący się do pozycji pierwszego elementu w zakresie, który ma zostać posortowany.
 
-*ostatni*\
+*ostatniego*\
 Iterator dostępu swobodnego, odnoszący się do jednej z elementów znajdujących się poza ostatnim elementem w zakresie, który ma zostać posortowany.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Ten Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli dwa argumenty są w porządku i w przeciwnym razie ma **wartość false** . Ta funkcja komparator musi nałożyć ścisłe słabe porządkowanie dla par elementów z sekwencji. Aby uzyskać więcej informacji, zobacz [algorytmy](../standard-library/algorithms.md).
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Ten Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli dwa argumenty są w porządku i w przeciwnym razie ma **wartość false** . Ta funkcja komparator musi nałożyć ścisłe słabe porządkowanie dla par elementów z sekwencji. Aby uzyskać więcej informacji, zobacz [algorytmy](algorithms.md).
 
 ### <a name="remarks"></a>Uwagi
 
 Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a w kolejności, w której ostatnia pozycja jest dostępna od pierwszej do przyrostu.
 
-Elementy są równoważne, ale niekoniecznie równe, jeśli nie są mniejsze od siebie. Algorytm `sort` nie jest stabilny i dlatego nie gwarantuje, że względne porządkowanie elementów równoważnych zostanie zachowane. Algorytm `stable_sort` zachowuje to oryginalne porządkowanie.
+Elementy są równoważne, ale niekoniecznie równe, jeśli nie są mniejsze od siebie. `sort`Algorytm nie jest stabilny i dlatego nie gwarantuje, że względne kolejność elementów równoważnych zostanie zachowana. Algorytm `stable_sort` zachowuje oryginalne porządkowanie.
 
-Średnia złożoności sortowania jest `O( N log N )`, gdzie *N* = *ostatnią* * - .*
+Średnia złożoności sortowania to `O( N log N )` , gdzie *N*  =  *ostatniej*  -  *pierwszej*.
 
 ### <a name="example"></a>Przykład
 
@@ -8882,10 +8882,10 @@ void sort_heap(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
+*pierwszego*\
 Iterator dostępu swobodnego odnoszący się do pozycji pierwszego elementu w stercie docelowej.
 
-*ostatni*\
+*ostatniego*\
 Iterator dostępu swobodnego, odnoszący się do pozycji jednej poza ostatnim elementem w stercie docelowej.
 
 *pred*\
@@ -8903,11 +8903,11 @@ Gdy aplikacja, jeśli ten algorytm, zakres, do którego został zastosowany, nie
 
 Jest to niestabilne sortowanie, ponieważ względna kolejność elementów równorzędnych nie jest konieczna.
 
-Sterty są idealnym sposobem implementacji kolejek priorytetów i są używane w implementacji adaptera [priority_queue](../standard-library/priority-queue-class.md)biblioteki C++ standardowej.
+Sterty są idealnym sposobem implementowania kolejek priorytetowych i są używane w implementacji adaptera kontenera standardowej biblioteki języka C++ [priority_queue klasie](priority-queue-class.md).
 
 Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a w kolejności, w której ostatnia pozycja jest dostępna od pierwszej do przyrostu.
 
-Złożoność jest najwyżej `N log N`, gdzie *N* = *ostatnią* -  *.*
+Złożoność jest największa `N log N` , gdzie *N*  =  *ostatniej*  -  *pierwszej*.
 
 ### <a name="example"></a>Przykład
 
@@ -8984,13 +8984,13 @@ BidirectionalIterator stable_partition(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w zakresie, który ma zostać podzielony na partycje.
 
-*ostatni*\
+*ostatniego*\
 Iterator dwukierunkowy odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma zostać podzielony na partycje.
 
 *pred*\
@@ -9004,7 +9004,7 @@ Iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w zakresie
 
 Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a w kolejności, w której ostatnia pozycja jest dostępna od pierwszej do przyrostu.
 
-Elementy *a* i *b* są równoważne, ale niekoniecznie równe, jeśli oba `pred( a, b )` ma wartość false i `pred( b, a )` ma wartość false, gdzie *pred* jest predykatem określonym parametrem. Algorytm `stable_partition` jest stabilny i gwarantuje, że względne kolejność elementów równoważnych zostanie zachowana. Algorytm `partition` nie musi zachować oryginalnego uporządkowania.
+Elementy *a* i *b* są równoważne, ale niekoniecznie równe, jeśli oba mają `pred( a, b )` wartość false i `pred( b, a )` ma wartość false, gdzie *pred* jest predykatem określonym parametrem. `stable_partition`Algorytm jest stabilny i gwarantuje, że względne uporządkowanie elementów zostanie zachowane. Algorytm `partition` niekoniecznie nie zachowuje oryginalnego uporządkowania.
 
 ### <a name="example"></a>Przykład
 
@@ -9085,13 +9085,13 @@ void stable_sort(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w zakresie, który ma zostać posortowany.
 
-*ostatni*\
+*ostatniego*\
 Iterator dwukierunkowy odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma zostać posortowany.
 
 *pred*\
@@ -9101,9 +9101,9 @@ Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryte
 
 Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a w kolejności, w której ostatnia pozycja jest dostępna od pierwszej do przyrostu.
 
-Elementy są równoważne, ale niekoniecznie równe, jeśli nie są mniejsze od siebie. Algorytm `sort` jest stabilny i gwarantuje, że względne kolejność elementów równoważnych zostanie zachowana.
+Elementy są równoważne, ale niekoniecznie równe, jeśli nie są mniejsze od siebie. `sort`Algorytm jest stabilny i gwarantuje, że względne uporządkowanie elementów zostanie zachowane.
 
-Złożoność w czasie wykonywania `stable_sort` zależy od ilości dostępnej pamięci, ale najlepszym przypadkiem (w przypadku wystarczającej ilości pamięci) jest `O(N log N)` i najgorszy przypadek jest `O(N (log N)^2)`, gdzie *N* = *najpierw* *ostatni* - . Zazwyczaj algorytm `sort` jest znacznie szybszy niż `stable_sort`.
+Złożoność czasu wykonywania `stable_sort` zależy od ilości dostępnej pamięci, ale najlepszym przypadku (w przypadku wystarczającej ilości pamięci) jest `O(N log N)` i najgorszy przypadek `O(N (log N)^2)` , gdzie *N*  =  *ostatniej*  -  *pierwszej*. Zazwyczaj `sort` algorytm jest znacznie szybszy `stable_sort` .
 
 ### <a name="example"></a>Przykład
 
@@ -9189,10 +9189,10 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Dla pierwszego przesłonięcia pierwszy obiekt, dla którego zamieni się jego zawartość. W przypadku drugiego przesłonięcia pierwsza tablica obiektów ma zawartooć wymiany.
 
-*prawa*\
+*Kliknij*\
 Dla pierwszego przesłonięcia, drugi obiekt do wymiany jego zawartości. W przypadku drugiego przesłonięcia druga tablica obiektów ma wymieniać jej zawartość.
 
 ### <a name="remarks"></a>Uwagi
@@ -9276,7 +9276,7 @@ ForwardIterator2 swap_ranges(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
 *first1*\
@@ -9296,7 +9296,7 @@ Iterator do przodu wskazujący na poprzednią pozycję drugiego zakresu, któreg
 
 Zakresy, do których istnieją odwołania, muszą być prawidłowe; wszystkie wskaźniki muszą być odwołujące się i w każdej sekwencji, która jest dostępna od pierwszej do przyrostu. Drugi zakres musi być tak duży, jak pierwszy zakres.
 
-Złożoność jest liniowa z *last1* - *FIRST1* . Jeśli są wymieniane elementy z kontenerów tego samego typu, należy używać ich funkcji składowej `swap` z tego kontenera, ponieważ funkcja członkowska zazwyczaj ma stałą złożoność.
+Złożoność jest liniowa z *last1*  -  *FIRST1* swapów. Jeśli są wymieniane elementy z kontenerów tego samego typu, `swap` należy użyć ich funkcji członkowskiej z tego kontenera, ponieważ Funkcja składowa zazwyczaj ma stałą złożoność.
 
 ### <a name="example"></a>Przykład
 
@@ -9399,7 +9399,7 @@ ForwardIterator transform(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
 *first1*\
@@ -9411,11 +9411,11 @@ Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim ele
 *first2*\
 Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w drugim zakresie źródłowym, w którym mają być obsługiwane.
 
-\ *wyniku*
+*wynika*\
 Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym.
 
-\ *Func*
-Zdefiniowany przez użytkownika obiekt funkcji jednoargumentowej używany w pierwszej wersji algorytmu, który jest stosowany do każdego elementu w pierwszym zakresie źródłowym lub obiekt funkcji binarnej zdefiniowany przez użytkownika (UD) używany w drugiej wersji algorytmu, który jest stosowany do parowania w kolejności przesyłania dalej , do dwóch zakresów źródłowych.
+*Func*\
+Zdefiniowany przez użytkownika obiekt funkcji jednoargumentowej używany w pierwszej wersji algorytmu, który jest stosowany do każdego elementu w pierwszym zakresie źródłowym lub obiekt funkcji binarnej zdefiniowany przez użytkownika (UD) używany w drugiej wersji algorytmu stosowanej do parowania, w kolejności przesyłania dalej do dwóch zakresów źródłowych.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -9425,9 +9425,9 @@ Iterator danych wyjściowych odnoszący się do pozycji jednej poza ostatnim ele
 
 Zakresy, do których istnieją odwołania, muszą być prawidłowe; wszystkie wskaźniki muszą być odwołujące się, a w każdej sekwencji Ostatnia pozycja musi być osiągalna od pierwszej przez przyrost. Zakres docelowy musi być wystarczająco duży, aby można było zawierać przekształcony zakres źródłowy.
 
-Jeśli *wynik* jest ustawiony na *FIRST1* w pierwszej wersji algorytmu, zakres źródłowy i docelowy będą takie same, a sekwencja zostanie zmodyfikowana. Jednak *wynik* nie może dotyczyć pozycji z zakresu [`first1` + 1, `last1`).
+Jeśli *wynik* jest ustawiony na *FIRST1* w pierwszej wersji algorytmu, zakres źródłowy i docelowy będą takie same, a sekwencja zostanie zmodyfikowana. Jednak *wynik* nie może dotyczyć pozycji z zakresu [ `first1` + 1, `last1` ).
 
-Złożoność jest liniowa z maksymalnie (`last1` - `first1`) porównania.
+Złożoność jest liniowa z większością ( `last1`  -  `first1` ) porównania.
 
 ### <a name="example"></a>Przykład
 
@@ -9547,13 +9547,13 @@ ForwardIterator unique(
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, który ma być skanowany w celu usunięcia duplikatu.
 
-*ostatni*\
+*ostatniego*\
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie do skanowania w celu usunięcia duplikatów.
 
 *pred*\
@@ -9569,7 +9569,7 @@ Obie formy algorytmu usuwają drugi duplikat kolejnej pary równych elementów.
 
 Operacja algorytmu jest stabilna, tak aby względna kolejność nieusuniętych elementów nie została zmieniona.
 
-Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a w kolejności, w której ostatnia pozycja jest dostępna od pierwszej do przyrostu. Liczba elementów w sekwencji nie jest zmieniana przez algorytm `unique` i elementy poza końcem zmodyfikowanej sekwencji są odwołujące się, ale nie są określone.
+Zakres, do którego istnieje odwołanie, musi być prawidłowy; wszystkie wskaźniki muszą być odwołujące się, a w kolejności, w której ostatnia pozycja jest dostępna od pierwszej do przyrostu. Liczba elementów w sekwencji nie jest zmieniana przez algorytm `unique` , a elementy poza końcem zmodyfikowanej sekwencji są odwołujące się, ale nie są określone.
 
 Złożoność jest liniowa, wymagając `(last - first) - 1` porównania.
 
@@ -9700,16 +9700,16 @@ ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
 
 ### <a name="parameters"></a>Parametry
 
-\ *exec*
+*szef*\
 Zasady wykonywania, które mają być używane.
 
-*pierwszy*\
+*pierwszego*\
 Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie źródłowym, który ma zostać skopiowany.
 
-*ostatni*\
+*ostatniego*\
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie źródłowym, który ma zostać skopiowany.
 
-\ *wyniku*
+*wynika*\
 Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, który otrzymuje kopię z usuniętymi kolejnymi duplikatami.
 
 *pred*\
@@ -9727,7 +9727,7 @@ Operacja algorytmu jest stabilna, tak aby względna kolejność nieusuniętych e
 
 Zakresy, do których istnieją odwołania, muszą być prawidłowe; wszystkie wskaźniki muszą być odwołujące się, a w ramach sekwencji Ostatnia pozycja jest dostępna od pierwszej do przyrostu.
 
-Złożoność jest liniowa i wymaga porównania (`last` - `first`).
+Złożoność to liniowe, wymaganie ( `last`  -  `first` ) porównań.
 
 ### <a name="example"></a>Przykład
 
@@ -9822,13 +9822,13 @@ ForwardIterator upper_bound(
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
+*pierwszego*\
 Pozycja pierwszego elementu w zakresie, który ma być przeszukiwany.
 
-*ostatni*\
+*ostatniego*\
 Pozycja jednej poza ostatnim elementem w zakresie, który ma być przeszukiwany.
 
-\ *wartości*
+*wartościami*\
 Wartość w uporządkowanym zakresie, która musi zostać przekroczona przez wartość elementu, do którego odnosił się iterator.
 
 *pred*\
@@ -9842,13 +9842,13 @@ Iterator do przodu do pozycji pierwszego elementu, który ma wartość większą
 
 Posortowany zakres źródłowy musi być prawidłowy; wszystkie Iteratory muszą być odwołujące się, a w sekwencji Ostatnia pozycja musi być osiągalna od pierwszej przez przyrost.
 
-Sortowany zakres jest warunkiem wstępnym użycia `upper_bound` i gdzie kryterium sortowania jest takie samo, jak określone przez predykat porównania.
+Sortowany zakres jest warunkiem wstępnym użycia i, `upper_bound` gdzie kryterium sortowania jest takie samo, jak określone przez predykatu porównania.
 
-Zakres nie jest modyfikowany przez `upper_bound`.
+Zakres nie jest modyfikowany przez `upper_bound` .
 
 Typy wartości iteratorów do przodu muszą być mniejsze niż porównywalne do uporządkowania, tak że, w przypadku dwóch elementów, można określić, że są one równoważne (w sensie, że żaden z nich nie jest mniejszy od drugiego) lub że jeden z nich jest mniejszy od drugiego. Powoduje to porządkowanie między nierównoważnymi elementami
 
-Złożoność algorytmu jest logarytmiczna dla iteratorów dostępu losowego i liniowego w przeciwnym razie z liczbą kroków proporcjonalną do (`last - first`).
+Złożoność algorytmu jest logarytmiczna dla iteratorów dostępu losowego i liniowego w przeciwnym razie z liczbą kroków proporcjonalną do ( `last - first` ).
 
 ### <a name="example"></a>Przykład
 

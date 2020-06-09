@@ -6,39 +6,39 @@ helpviewer_keywords:
 - Insert New dialog box [MFC]
 - forms, adding to projects
 ms.assetid: f3bd2998-3ce2-496d-ac5c-57ca70eec7cb
-ms.openlocfilehash: 2fa344f2d84b39be4ee36fd845edb82c14b6c519
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e3162ac3917781920130bcbed23864eb90afa59
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383868"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618432"
 ---
 # <a name="inserting-a-form-into-a-project"></a>Wstawianie formularza do projektu
 
-Formularze zapewniają wygodny kontenera dla formantów. Formularz oparty na bibliotece MFC można łatwo wprowadzić w aplikacji, tak długo, jak aplikacja obsługuje biblioteki MFC.
+Formularze zapewniają wygodny kontener dla kontrolek. Możesz łatwo wstawić formularz oparty na MFC do swojej aplikacji, o ile aplikacja obsługuje biblioteki MFC.
 
-### <a name="to-insert-a-form-into-your-project"></a>Aby wstawić formularza do projektu
+### <a name="to-insert-a-form-into-your-project"></a>Aby wstawić formularz do projektu
 
-1. W widoku klas wybierz projekt, do którego chcesz dodać formularz, a następnie kliknij prawym przyciskiem myszy.
+1. W obszarze Widok klasy wybierz projekt, do którego chcesz dodać formularz, a następnie kliknij prawym przyciskiem myszy.
 
-1. W menu skrótów kliknij **Dodaj** a następnie kliknij przycisk **Dodaj klasę**.
+1. W menu skrótów kliknij pozycję **Dodaj** , a następnie kliknij pozycję **Dodaj klasę**.
 
-   Jeśli **nowy formularz** polecenie jest niedostępne, projektu mogą opierać się na Active Template Library (ATL). Aby dodać formularz do projektu ATL, musisz mieć [określić pewne ustawienia](../atl/reference/application-settings-atl-project-wizard.md) tworząc po raz pierwszy projekt.
+   Jeśli **nowy formularz** nie jest dostępny, projekt może opierać się na Active Template Library (ATL). Aby dodać formularz do projektu ATL, należy [określić niektóre ustawienia](../atl/reference/application-settings-atl-project-wizard.md) podczas pierwszego tworzenia projektu.
 
-1. Z **MFC** folderu, kliknij przycisk **klasy MFC**.
+1. W folderze **MFC** kliknij pozycję **Klasa MFC**.
 
-1. Przy użyciu Kreatora klas MFC, wprowadź nową klasę pochodną [CFormView](../mfc/reference/cformview-class.md).
+1. Za pomocą kreatora klas MFC, Utwórz nową klasę pochodną od [CFormView](reference/cformview-class.md).
 
-Visual C++ dodaje formularz do aplikacji, otwierając go w edytorze okien dialogowych, aby rozpocząć dodawanie kontrolek i pracy z całego projektu.
+Visual C++ dodaje formularz do aplikacji, otwierając go w edytorze okien dialogowych, aby można było rozpocząć dodawanie kontrolek i pracować nad jej ogólnym projektem.
 
-Można wykonać następujące czynności dodatkowe (nie dotyczy oparta na oknach dialogowych aplikacji):
+Może być konieczne wykonanie następujących dodatkowych czynności (nie dotyczy aplikacji opartych na oknach dialogowych):
 
-1. Zastąp `OnUpdate` funkcja elementu członkowskiego.
+1. Przesłoń `OnUpdate` funkcję członkowską.
 
 1. Zaimplementuj funkcję członkowską, aby przenieść dane z widoku do dokumentu.
 
-1. Utwórz `OnPrint` funkcja elementu członkowskiego.
+1. Utwórz `OnPrint` funkcję członkowską.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Widoki formularzy](../mfc/form-views-mfc.md)
+[Widoki formularzy](form-views-mfc.md)

@@ -1,31 +1,31 @@
 ---
-title: 'Kontenery: Problemy z interfejsem użytkownika'
+title: 'Kontenery: kwestie dotyczące interfejsu użytkownika'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - containers [MFC], user-interface issues
 - OLE containers [MFC], user interface
 - user interface issues
 ms.assetid: c833c249-a633-4f1c-82d6-ec6b4892863a
-ms.openlocfilehash: 68a56983bccbdb2ed7f6701577ea5abaa7ea04c6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 623b5f5948d2428ccb4dab37ca227516474f2c1f
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346075"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625958"
 ---
-# <a name="containers-user-interface-issues"></a>Kontenery: Problemy z interfejsem użytkownika
+# <a name="containers-user-interface-issues"></a>Kontenery: kwestie dotyczące interfejsu użytkownika
 
-Należy dodać pewną liczbę funkcji do aplikacji kontenera interfejs użytkownika, aby odpowiednio zarządzania elementami połączone i osadzone. Te funkcje obejmują zmiany w strukturze menu i zdarzenia, które obsługuje aplikacja. Aby uzyskać szczegółowe informacje na ich temat zobacz następujące artykuły:
+Aby odpowiednio zarządzać elementami połączonymi i osadzonymi, należy dodać wiele funkcji do interfejsu użytkownika aplikacji kontenera. Te funkcje obejmują zmiany struktury menu i zdarzenia obsługiwane przez aplikację. Aby uzyskać szczegółowe informacje na ich temat, zobacz następujące artykuły:
 
-|Aby uzyskać informacji o|Zobacz|
+|Aby uzyskać informacje na temat|Zobacz|
 |------------------------|---------|
-|Dodatkowe menu dla kontenerów|[Menu i zasoby: dodatki kontenerów](../mfc/menus-and-resources-container-additions.md)|
-|Dodatkowe zasoby dla kontenerów|[Menu i zasoby: dodatki kontenerów](../mfc/menus-and-resources-container-additions.md)|
-|Malowanie połączone lub osadzone elementy|[Przykładowy kontener](../overview/visual-cpp-samples.md)|
-|Nowe okno dialogowe, dla kontenerów|[Okna dialogowe w OLE](../mfc/dialog-boxes-in-ole.md)|
+|Dodatki do menu dla kontenerów|[Menu i zasoby: dodatki do kontenera](menus-and-resources-container-additions.md)|
+|Dodatkowe zasoby dla kontenerów|[Menu i zasoby: dodatki do kontenera](menus-and-resources-container-additions.md)|
+|Malowanie połączonych lub osadzonych elementów|[Przykład kontenera](../overview/visual-cpp-samples.md)|
+|Nowe okna dialogowe dla kontenerów|[Okna dialogowe w OLE](dialog-boxes-in-ole.md)|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Kontenery](../mfc/containers.md)<br/>
-[Kontenery: funkcje zaawansowane](../mfc/containers-advanced-features.md)<br/>
-[Menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md)
+[Containers](containers.md)<br/>
+[Kontenery: funkcje zaawansowane](containers-advanced-features.md)<br/>
+[Menu i zasoby (OLE)](menus-and-resources-ole.md)

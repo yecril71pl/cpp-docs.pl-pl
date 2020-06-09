@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Internet classes [MFC]
 - networking classes [MFC]
 ms.assetid: 1acf793d-ebf2-4fac-97be-703d62e3897e
-ms.openlocfilehash: bf153c5b4602a0f9b151f225669efbb63f3583a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47d254d45cb1472f9cb203b90bbdf96afd79981f
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153050"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624463"
 ---
 # <a name="internet-and-networking-classes"></a>Klasy internetowe i sieciowe
 
-Klasy te umożliwiają wymiany informacji z innego komputera przy użyciu Windows gniazda lub internetowe Win32 (WinInet). Istnieją również zestaw klas do manipulowania w systemie Windows Sockets.
+Klasy te umożliwiają wymianę informacji z innym komputerem przy użyciu gniazda systemu Windows lub protokołu Win32 w sieci Internet (WinInet). Istnieje również zestaw klas do manipulowania Windows Sockets.
 
-Następujące kategorie klasy obsługi połączeń.
+Następujące kategorie klas obsługują łączność.
 
-- [Klasy gniazd systemu Windows](../mfc/windows-sockets-classes.md)
+- [Klasy Windows Sockets](windows-sockets-classes.md)
 
-- [Klasy internetowe Win32](../mfc/win32-internet-classes.md)
+- [Klasy internetowe Win32](win32-internet-classes.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../mfc/class-library-overview.md)
+[Przegląd klas](class-library-overview.md)

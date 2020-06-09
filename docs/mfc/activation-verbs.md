@@ -1,5 +1,5 @@
 ---
-title: 'Aktywacja: Zlecenia'
+title: 'Aktywacja: zlecenia'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verbs [MFC]
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - Primary verb [MFC]
 - OLE activation {MFC]
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
-ms.openlocfilehash: baf8e0ac3527407b2e5ba77dfdf3921419217fd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03edba0a4336fdc147ef6dd10c7a8154aca19d3a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392911"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616645"
 ---
-# <a name="activation-verbs"></a>Aktywacja: Zlecenia
+# <a name="activation-verbs"></a>Aktywacja: zlecenia
 
-W tym artykule opisano play zleceń podstawowych i pomocniczych roli w OLE [aktywacji](../mfc/activation-cpp.md).
+W tym artykule wyjaśniono, że główne i pomocnicze zlecenia są odtwarzane w ramach [aktywacji](activation-cpp.md)OLE.
 
-Zazwyczaj dwukrotne kliknięcie osadzonego elementu umożliwia użytkownikowi go edytować. Jednak niektóre elementy nie zachowywać się w ten sposób. Na przykład dwukrotnie elementu, który został utworzony za pomocą aplikacji Rejestrator dźwięku nie Otwórz serwer w osobnym oknie; Zamiast tego odtwarza dźwięk.
+Zazwyczaj dwukrotne kliknięcie elementu osadzonego umożliwia użytkownikowi edycję. Jednak niektóre elementy nie działają w ten sposób. Na przykład dwukrotne kliknięcie elementu utworzonego za pomocą aplikacji rejestratora dźwięku nie powoduje otwarcia serwera w osobnym oknie; Zamiast tego odtwarza dźwięk.
 
-Przyczyna odpowiadającą tej różnicy zachowanie jest, że elementy Rejestrator dźwięku ma różne "primary — zlecenie." Primary — zlecenie jest akcję wykonywaną, gdy użytkownik kliknie dwukrotnie elementu OLE. Dla większości typów elementów OLE primary — zlecenie jest edycji, który uruchamia serwer, który utworzył element. W przypadku niektórych typów elementów, takich jak elementy Rejestrator dźwięku primary — zlecenie jest Play.
+Przyczyną tego zachowania jest różnica polega na tym, że elementy rejestratora dźwięku mają inne "podstawowe zlecenie". Zlecenie podstawowe jest akcją wykonywaną, gdy użytkownik kliknie dwukrotnie element OLE. W przypadku większości typów elementów OLE zlecenie podstawowe jest Edytuj, co spowoduje uruchomienie serwera, który utworzył element. W przypadku niektórych typów elementów, takich jak elementy rejestratora dźwięku, zlecenie podstawowe jest odtwarzane.
 
-Wiele typów elementów OLE obsługują tylko jeden zlecenie i edycja jest najbardziej popularnym. Jednak niektóre typy elementów obsługują wiele poleceń. Na przykład Rejestrator dźwięku, które obsługują elementy Edytuj jako dodatkowej zlecenie.
+Wiele typów elementów OLE obsługuje tylko jedno zlecenie, a Edycja jest najbardziej powszechną. Jednak niektóre typy elementów obsługują wiele zleceń. Na przykład elementy rejestratora dźwięku obsługują edytowanie jako zlecenie pomocnicze.
 
-Inny zlecenie, często używane jest otwarte. Otwórz zlecenie jest taka sama jak edytowanie, z wyjątkiem aplikacji serwera jest uruchamiany w osobnym oknie. To zlecenie należy używać, gdy aplikacja serwera lub aplikacji kontenera nie obsługuje aktywacji w miejscu.
+Używane jest często inne zlecenie. Otwarte zlecenie jest identyczne z edytowaniem, z tą różnicą, że aplikacja serwera jest uruchamiana w osobnym oknie. Tego zlecenia należy używać, gdy aplikacja kontenera lub aplikacja serwera nie obsługuje aktywacji w miejscu.
 
-Wszystkie zlecenia niż primary — zlecenie musi można wywołać za pomocą polecenia podmenu, gdy zaznaczony element. To podmenu zawiera wszystkie zlecenia, które są obsługiwane przez ten element i zwykle jest osiągany przez *typename* **obiektu** polecenie **Edytuj** menu. Instrukcje dotyczące *typename* **obiektu** polecenia, zobacz artykuł [menu i zasoby: Dodatki do kontenera](../mfc/menus-and-resources-container-additions.md).
+Wszystkie czasowniki inne niż zlecenia podstawowe muszą być wywoływane za pomocą polecenia podmenu, gdy element jest zaznaczony. To podmenu zawiera wszystkie czasowniki obsługiwane przez element i jest zazwyczaj osiągane przez polecenie *typename* **obiektu** TypeName w menu **Edycja** . Aby uzyskać informacje na temat polecenia **obiektu** *TypeName* , zobacz [menu artykułów i zasoby: Dodatki do kontenera](menus-and-resources-container-additions.md).
 
-Zlecenia, który obsługuje aplikację serwera są wyświetlane w bazie danych rejestracji Windows. Jeśli aplikacja serwera są zapisywane przy użyciu biblioteki klas Microsoft Foundation, automatycznie zarejestrować wszystkie zlecenia, gdy serwer jest uruchomiony. Jeśli nie, należy go zarejestrować podczas fazy inicjowania aplikacji serwera. Aby uzyskać więcej informacji, zobacz artykuł [rejestracji](../mfc/registration.md).
+Zlecenia obsługiwane przez aplikację serwera są wymienione w bazie danych rejestracji systemu Windows. Jeśli aplikacja serwera jest zapisywana biblioteka MFC, wszystkie zlecenia zostaną automatycznie zarejestrowane po uruchomieniu serwera. W przeciwnym razie należy je zarejestrować podczas fazy inicjowania aplikacji serwera. Aby uzyskać więcej informacji, zobacz [rejestracja](registration.md)artykułu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Aktywacja](../mfc/activation-cpp.md)<br/>
-[Kontenery](../mfc/containers.md)<br/>
-[Serwery](../mfc/servers.md)
+[Uaktywnienie](activation-cpp.md)<br/>
+[Containers](containers.md)<br/>
+[Serwery](servers.md)

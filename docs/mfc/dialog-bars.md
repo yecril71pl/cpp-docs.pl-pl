@@ -8,29 +8,29 @@ helpviewer_keywords:
 - dialog bars
 - dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
-ms.openlocfilehash: e4e843327daba6f0aa468cb07394165bc70fa7f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 052e0b8a085c052f73d3c6540521f57fdfbb9c51
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389636"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624899"
 ---
 # <a name="dialog-bars"></a>Paski dialogowe
 
-Pasek dialogowy jest pasek narzędzi, rodzajem z [pasek sterowania](../mfc/control-bars.md) , mogą zawierać dowolny rodzaj kontrolki. Ponieważ ma ona charakterystykę niemodalnego okna dialogowego, [CDialogBar](../mfc/reference/cdialogbar-class.md) obiekt zapewnia bardziej zaawansowanych narzędzi.
+Pasek okna dialogowego jest paskiem narzędzi, czyli rodzajem [paska sterowania](control-bars.md) , który może zawierać dowolny rodzaj kontrolki. Ponieważ ma właściwości niemodalnego okna dialogowego, obiekt [CDialogBar](reference/cdialogbar-class.md) zapewnia bardziej wydajny pasek narzędzi.
 
-Istnieje kilka podstawowych różnic między paska narzędzi i `CDialogBar` obiektu. A `CDialogBar` obiekt zostanie utworzony z szablonu okna dialogowego zasobu, który można utworzyć za pomocą edytora okien dialogowych Visual C++ i które mogą zawierać dowolny rodzaj kontrolki Windows. Użytkownik może z kontrolki karty do kontroli. I możesz określić style wyrównania wyrównać paska dialogowego z dowolnej części nadrzędnej ramki okna, a nawet pozostawić na miejscu, jeśli element nadrzędny jest rozmiar. Na poniższej ilustracji przedstawiono paska dialogowego z wielu kontrolek.
+Istnieje kilka najważniejszych różnic między paskiem narzędzi a `CDialogBar` obiektem. `CDialogBar`Obiekt jest tworzony na podstawie zasobu szablonu okna dialogowego, który można utworzyć za pomocą edytora okna dialogowego Visual C++, który może zawierać dowolny rodzaj formantu systemu Windows. Użytkownik może z kontrolki kontrolować. Można również określić styl wyrównania, aby wyrównać pasek okna dialogowego do dowolnej części okna ramki nadrzędnej, lub nawet pozostawić go w miejscu, jeśli rozmiar elementu nadrzędnego zostanie zmieniony. Na poniższej ilustracji przedstawiono pasek dialogowe z różnymi kontrolkami.
 
-![Pasek dialogowy VC](../mfc/media/vc378t1.gif "Pasek dialogowy VC") <br/>
-Paska dialogowego
+![Pasek dialogowe VC](../mfc/media/vc378t1.gif "Pasek dialogowe VC") <br/>
+Pasek okna dialogowego
 
-Pod innymi względami pracę `CDialogBar` obiekt jest tak jak w przypadku niemodalnego okna dialogowego. Edytor okien dialogowych umożliwia projektowanie i tworzenie zasobu okna dialogowego.
+W innych aspektach praca z `CDialogBar` obiektem jest taka, jak praca z niemodalnym oknem dialogowym. Użyj edytora okien dialogowych, aby zaprojektować i utworzyć zasób okna dialogowego.
 
-Jest jedną z zalet programu paski dialogowe, mogą zawierać formanty innych niż przycisków.
+Jedną z zalet pasków dialogowych jest to, że mogą one zawierać formanty inne niż przyciski.
 
-Mimo że jest to normalne do wyprowadzenia własne klasy okien dialogowych z `CDialog`, nie zazwyczaj pochodną klasy dla paska dialogowego. Paski dialogowe są rozszerzenia do głównego okna i komunikaty paska dialogowego powiadamianie kontrolki, takie jak **BN_CLICKED** lub **EN_CHANGE**, będą wysyłane do nadrzędnego okna dialogowego paska głównego okna.
+Chociaż jest to normalne, aby utworzyć własne klasy okien dialogowych z programu `CDialog` , nie można zazwyczaj utworzyć własnej klasy dla paska dialogowego. Paskiem okien dialogowych są rozszerzenia do okna głównego i wszystkie kontrolki paska dialogowe — komunikaty powiadomień, takie jak **BN_CLICKED** lub **EN_CHANGE**, zostaną wysłane do obiektu nadrzędnego paska dialogowego, okna głównego.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Elementy interfejsu użytkownika](../mfc/user-interface-elements-mfc.md)<br/>
-[Próbki](../overview/visual-cpp-samples.md)
+[Elementy interfejsu użytkownika](user-interface-elements-mfc.md)<br/>
+[Przykład](../overview/visual-cpp-samples.md)

@@ -7,35 +7,35 @@ helpviewer_keywords:
 - events [MFC], event-driven programming
 - message-driven programming [MFC]
 ms.assetid: d799ed8c-6a9f-4f05-be5d-29cb5bc6d185
-ms.openlocfilehash: 4ddfd0a5ff506e17efeb63624b7cb8c6a8b1eda4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db529e2a22b45de3c6f6a659874bbaa941187217
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383792"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624289"
 ---
 # <a name="messages-and-commands-in-the-framework"></a>Komunikaty i polecenia w strukturze
 
-Aplikacje napisane z myślą o Microsoft Windows są "oparte na komunikat". W odpowiedzi na zdarzenia, takie jak kliknięć myszą, naciśnięć klawiszy, przemieszczania okna i tak dalej Windows wysyła komunikaty do odpowiednie okna. Aplikacje w ramach przetwarzania komunikatów Windows, jak wszystkie inne aplikacje dla Windows. Jednak Struktura ta oferuje niektóre udoskonalenia, wchodzące przetwarzanie komunikatów łatwiejsze, będzie łatwiejszy w utrzymaniu i skuteczniejsze zhermetyzowany.
+Aplikacje przeznaczone dla systemu Microsoft Windows są "sterowane komunikatami". W odpowiedzi na zdarzenia, takie jak kliknięcia myszą, naciśnięcia klawiszy, ruchy okna i tak dalej, system Windows wysyła komunikaty do odpowiedniego okna. Aplikacje platformy przetwarzają komunikaty systemu Windows podobne do innych aplikacji dla systemu Windows. Jednak struktura zawiera również pewne udoskonalenia, które ułatwiają przetwarzanie komunikatów i lepszą łatwość zarządzania.
 
-W poniższych tematach przedstawiono kluczowe terminy używane w dalszej części artykułu rodziny w celu omówienia komunikaty i polecenia:
+W poniższych tematach przedstawiono kluczowe terminy używane w pozostałej części rodziny artykułów do omówienia komunikatów i poleceń:
 
-- [Komunikaty](../mfc/messages.md)
+- [Komunikaty](messages.md)
 
-- [Programy obsługi komunikatów](../mfc/message-handlers.md)
+- [Procedury obsługi komunikatów](message-handlers.md)
 
-- [Kategorie komunikatów](../mfc/message-categories.md)
+- [Kategorie komunikatów](message-categories.md)
 
-- [Windows komunikatów i powiadamianie kontrolki komunikatów](../mfc/message-categories.md)
+- [Komunikaty systemu Windows i kontrolki — komunikaty powiadomień](message-categories.md)
 
-- [Komunikaty poleceń](../mfc/message-categories.md)
+- [Komunikaty poleceń](message-categories.md)
 
-- [Mapy komunikatów](../mfc/mapping-messages.md)
+- [Mapy komunikatów](mapping-messages.md)
 
-- [Obiekty interfejsu użytkownika i identyfikatory poleceń](../mfc/user-interface-objects-and-command-ids.md)
+- [Obiekty interfejsu użytkownika i identyfikatory poleceń](user-interface-objects-and-command-ids.md)
 
-- [Obiekty docelowe poleceń](../mfc/command-targets.md)
+- [Cele polecenia](command-targets.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)
+[Obsługa i mapowanie komunikatów](message-handling-and-mapping.md)

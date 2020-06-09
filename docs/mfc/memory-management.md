@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory [MFC], managing
 - memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
-ms.openlocfilehash: 5d81bd0a8bdd24059951cba5c8b69751b3d1db86
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 464a31491f2c3017453bdd5bbdc8b059d348eb3c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508270"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626259"
 ---
 # <a name="memory-management"></a>Zarządzanie pamięcią
 
@@ -25,21 +25,21 @@ Informacje inne niż MFC dotyczące zarządzania pamięcią w programach dla sys
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-- [Alokacja ramek](../mfc/memory-management-frame-allocation.md)
+- [alokacja ramek](memory-management-frame-allocation.md)
 
-- [Alokacja sterty](../mfc/memory-management-heap-allocation.md)
+- [Alokacja sterty](memory-management-heap-allocation.md)
 
-- [Przydzielanie pamięci dla tablicy](../mfc/memory-management-examples.md)
+- [Przydzielanie pamięci dla tablicy](memory-management-examples.md)
 
-- [Cofanie przydziału pamięci dla tablicy ze sterty](../mfc/memory-management-examples.md)
+- [Cofanie przydziału pamięci dla tablicy ze sterty](memory-management-examples.md)
 
-- [Przydzielanie pamięci dla struktury danych](../mfc/memory-management-examples.md)
+- [Przydzielanie pamięci dla struktury danych](memory-management-examples.md)
 
-- [Przydzielanie pamięci dla obiektu](../mfc/memory-management-examples.md)
+- [Przydzielanie pamięci dla obiektu](memory-management-examples.md)
 
-- [Bloki pamięci o zmiennym rozmiarze](../mfc/memory-management-resizable-memory-blocks.md)
+- [Bloki pamięci o zmiennym rozmiarze](memory-management-resizable-memory-blocks.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Pojęcia](../mfc/mfc-concepts.md)<br/>
-[Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)
+[Pojęcia](mfc-concepts.md)<br/>
+[Tematy ogólne dotyczące MFC](general-mfc-topics.md)

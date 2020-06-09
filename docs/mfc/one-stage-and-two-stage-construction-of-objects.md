@@ -7,42 +7,42 @@ helpviewer_keywords:
 - objects [MFC], graphic objects
 - one-stage and two-stage construction of objects [MFC]
 ms.assetid: 5a1c410c-4a4b-4dd9-a2ec-ced831aa7f21
-ms.openlocfilehash: 8f221ac6b63a06c65f932a695dfbf7b93ae7ac96
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 07e006d5b326486c54f23990c604a7d2ee0e4c83
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375965"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625288"
 ---
 # <a name="one-stage-and-two-stage-construction-of-objects"></a>Jedno- i dwuetapowa konstrukcja obiektów
 
-Masz do wyboru dwie techniki tworzenia obiektów graficznych, takich jak pióra i pędzle:
+Istnieje wybór między dwiema technikami tworzenia obiektów graficznych, takich jak pióra i pędzle:
 
-- *Konstrukcja jednoetapowa*: Konstruuj i inicjuj obiekt w jednym etapie, wszystko za pomocą konstruktora.
+- *Konstrukcja jednoetapowa*: Konstruuj i zainicjuj obiekt w jednym etapie, wszystko z konstruktorem.
 
-- *Konstrukcja dwustopniowa*: Konstruuj i inicjuj obiekt w dwóch oddzielnych etapach. Konstruktor tworzy obiekt, a funkcja inicjowania inicjuje go.
+- *Konstrukcja dwuetapowa*: Konstruowanie i inicjowanie obiektu w dwóch oddzielnych etapach. Konstruktor tworzy obiekt i inicjuje go funkcja inicjująca.
 
-Dwustopniowa konstrukcja jest zawsze bezpieczniejsza. W konstrukcji jednoetapowej konstruktor może zgłosić wyjątek, jeśli podasz niepoprawne argumenty lub alokacji pamięci nie powiedzie się. Tego problemu unika się przez dwustopniową konstrukcję, chociaż trzeba sprawdzić, czy nie ma awarii. W obu przypadkach zniszczenie obiektu jest tym samym procesem.
+Konstrukcja dwuetapowa jest zawsze bezpieczniejsza. W konstrukcji jednoetapowej Konstruktor może zgłosić wyjątek, jeśli podano nieprawidłowe argumenty lub alokacja pamięci nie powiedzie się. Ten problem można uniknąć przez konstrukcję dwuetapową, chociaż trzeba sprawdzić obecność błędów. W obu przypadkach zniszczenie obiektu jest tym samym procesem.
 
 > [!NOTE]
-> Techniki te mają zastosowanie do tworzenia dowolnych obiektów, a nie tylko obiektów graficznych.
+> Te techniki mają zastosowanie do tworzenia dowolnych obiektów, a nie tylko obiektów graficznych.
 
-## <a name="example-of-both-construction-techniques"></a>Przykład obu technik budowlanych
+## <a name="example-of-both-construction-techniques"></a>Przykład obu technik konstrukcyjnych
 
-Poniższy krótki przykład przedstawia obie metody konstruowania obiektu pióra:
+W poniższym przykładzie przedstawiono obie metody konstruowania obiektu pióra:
 
-[!code-cpp[NVC_MFCDocViewSDI#6](../mfc/codesnippet/cpp/one-stage-and-two-stage-construction-of-objects_1.cpp)]
+[!code-cpp[NVC_MFCDocViewSDI#6](codesnippet/cpp/one-stage-and-two-stage-construction-of-objects_1.cpp)]
 
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz wiedzieć więcej o
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-- [Obiekty graficzne](../mfc/graphic-objects.md)
+- [Obiekty graficzne](graphic-objects.md)
 
-- [Wybieranie obiektu graficznego w kontekście urządzenia](../mfc/selecting-a-graphic-object-into-a-device-context.md)
+- [Wybieranie obiektu graficznego do kontekstu urządzenia](selecting-a-graphic-object-into-a-device-context.md)
 
-- [Konteksty urządzeń](../mfc/device-contexts.md)
+- [Konteksty urządzenia](device-contexts.md)
 
-- [Rysowanie w widoku](../mfc/drawing-in-a-view.md)
+- [Rysowanie w widoku](drawing-in-a-view.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Obiekty graficzne](../mfc/graphic-objects.md)
+[Obiekty graficzne](graphic-objects.md)

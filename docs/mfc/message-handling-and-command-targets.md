@@ -9,26 +9,26 @@ helpviewer_keywords:
 - IOleCommandTarget interface [MFC]
 - command routing [MFC], command targets
 ms.assetid: e45ce14c-e6b6-4262-8f3b-4e891e0ec2a3
-ms.openlocfilehash: 702cb96da13d6109c17a28e58c08a30af3f77fd4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbcbce1e476fef0d076f9c25b46b3166c1eb5935
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383805"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624351"
 ---
 # <a name="message-handling-and-command-targets"></a>Obsługa komunikatów i obiekty docelowe poleceń
 
-Interfejs ekspedycji polecenia `IOleCommandTarget` definiuje prosty i rozszerzalny mechanizm zapytań i wykonywania poleceń. Ten mechanizm jest prostsze niż usługi Automation `IDispatch` ponieważ opiera się wyłącznie na zestaw standardowych poleceń; polecenia rzadko mają argumentów i uczestniczy nie informacji o typie (bezpieczeństwo typów będzie mniejsza także argumentów polecenia).
+Interfejs wysyłania poleceń `IOleCommandTarget` definiuje prosty i rozszerzalny mechanizm wykonywania zapytań i wykonywania poleceń. Ten mechanizm jest łatwiejszy niż Automatyzacja `IDispatch` , ponieważ opiera się wyłącznie na standardowym zestawie poleceń; polecenia rzadko mają argumenty i nie są związane z żadnymi informacjami o typie (zabezpieczenia typu są również zmniejszane dla argumentów polecenia).
 
-W projekcie interfejsu wysyłania polecenia, każdego polecenia należy do "grupy poleceń", która jest sam identyfikowany za pomocą **GUID**. W związku z tym każdy może zdefiniować nowe grupy i definiowania wszystkich poleceń w tej grupie bez konieczności koordynowania z firmą Microsoft lub innych dostawców. (To jest zasadniczo ten sam sposób definicji jako **dispinterface** oraz **DISPID** w usłudze Automation. Jest nakładają się w tym miejscu, mimo że ten mechanizm routingu poleceń jest tylko w przypadku routingu poleceń, a nie dla skryptów/programowania na dużą skalę jako usługi Automation obsługuje).
+W projekcie interfejsu wysyłania poleceń każde polecenie należy do "grupy poleceń", która jest sama identyfikowana przy użyciu **identyfikatora GUID**. W związku z tym każdy może definiować nową grupę i definiować wszystkie polecenia w tej grupie bez konieczności koordynowania z firmą Microsoft ani innego dostawcy. (Zasadniczo jest to ten sam sposób definiowania jako **dispinterface** i **identyfikatory SPID** w automatyzacji. Ta funkcja jest nakładana na siebie, chociaż mechanizm routingu poleceń jest przeznaczony tylko dla routingu poleceń, a nie do obsługi skryptów/programowania na dużą skalę jako uchwytów automatyzacji.
 
-`IOleCommandTarget` obsługuje następujące scenariusze:
+`IOleCommandTarget`obsługuje następujące scenariusze:
 
-- Gdy obiekt jest aktywowany tylko paski narzędzi obiektu zwykle są wyświetlane i paski narzędzi obiektu może być przycisków dla niektórych poleceń kontenera, takich jak w miejscu **drukowania**, **Podgląd wydruku**,  **Zapisz**, **New**, **powiększenia**i innym osobom. (Aktywacji w miejscu, zalecane standardy, Usuń obiekty takie przyciski ich paski narzędzi, albo w co najmniej je wyłączyć. Ten projekt umożliwia tych poleceń, należy włączyć i jeszcze kierowane do obsługi prawo). Obecnie nie ma mechanizmu dla obiektu do wysyłania poleceń do kontenera.
+- Gdy obiekt jest aktywowany w miejscu, zazwyczaj wyświetlane są tylko paski narzędzi obiektu, a paski narzędzi obiektu mogą mieć przyciski dla niektórych poleceń kontenera, takich jak **Drukowanie**, **Podgląd wydruku**, **Zapisywanie**, **nowe**, **powiększanie**i inne. (W przypadku standardów aktywacji w miejscu zaleca się, aby obiekty usuwają takie przyciski z pasków narzędzi lub co najmniej je wyłączyć. Ten projekt umożliwia włączenie tych poleceń, a następnie przekierowanie do odpowiedniej procedury obsługi. Obecnie nie istnieje mechanizm, dla którego obiekt wysyła te polecenia do kontenera.
 
-- Osadzone aktywnego dokumentu w kontenerze dokumentów aktywnych (np. Office Binder) kontener może być konieczne wysyłanie poleceń takich **drukowania**, **ustawienia strony**, **właściwości**i inne osoby do zamkniętego aktywnego dokumentu.
+- Gdy aktywny dokument jest osadzony w kontenerze aktywnego dokumentu (na przykład Office Binder), może być konieczne wysłanie przez kontener poleceń takich jak **Drukowanie**, **Konfiguracja strony**, **Właściwości**i inne do zawartego aktywnego dokumentu.
 
-Marszruty prostego polecenia, można obsługiwane przez istniejące standardy automatyzacji i `IDispatch`. Jednak obciążenie związane z `IDispatch` jest większa niż jest to konieczne, dzięki czemu `IOleCommandTarget` zapewnia prostszy sposób osiągnięcia tego samego kończy się:
+To proste rozsyłanie poleceń może być obsługiwane za poorednictwem istniejących standardów automatyzacji i `IDispatch` . Jednak narzuty związane z programem `IDispatch` są w tym miejscu większe niż jest to konieczne, dlatego `IOleCommandTarget` zapewnia prostsze środki do osiągnięcia tego samego końca:
 
 ```
 interface IOleCommandTarget : IUnknown
@@ -47,8 +47,8 @@ interface IOleCommandTarget : IUnknown
     }
 ```
 
-`QueryStatus` Tutaj metoda sprawdza, czy określony zestaw poleceń, zestaw jest identyfikowany za pomocą **GUID**, jest obsługiwane. To wywołanie wypełnia tablicę **OLECMD** (struktury) wartościami listę obsługiwanych poleceń, a także zwraca tekst opisu nazwę informacji polecenia i/lub stanu. Gdy obiekt wywołujący chce Wywołaj polecenie, można go przekazać polecenie (i zestawu **GUID**) do `Exec` oraz opcje i argumenty powrót do wartości zwracanej.
+W `QueryStatus` tym miejscu Metoda sprawdza, czy określony zestaw poleceń, zestaw identyfikowany za pomocą **identyfikatora GUID**, jest obsługiwany. To wywołanie wypełnia tablicę wartości **OLECMD** (struktury) z obsługiwaną listą poleceń, a także zwraca tekst opisujący nazwę polecenia i/lub informacje o stanie. Gdy obiekt wywołujący chce wywołać polecenie, może przekazać polecenie (i **Identyfikator GUID**zestawu) do programu `Exec` wraz z opcjami i argumentami, zwracając wartość zwracaną.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Kontenery dokumentów aktywnych](../mfc/active-document-containers.md)
+[Kontenery dokumentów aktywnych](active-document-containers.md)

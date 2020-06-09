@@ -18,48 +18,48 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - OLE menus and resources [MFC]
 ms.assetid: 52bfa086-7d3d-466f-94c7-c7061f3bdb3a
-ms.openlocfilehash: 4e8f8c7fa8e24349a741b99822f13d5473373e17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e705f28476df7b594f9648aee8317759211c66c9
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225470"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626213"
 ---
 # <a name="menus-and-resources-ole"></a>Menu i zasoby (OLE)
 
-Ta grupa artykuły wyjaśnienia dotyczące korzystania z menu i zasoby w aplikacjach dokumentu MFC OLE.
+W tej grupie artykułów objaśniono korzystanie z menu i zasobów w aplikacjach MFC OLE.
 
-OLE edycja wizualna umieszcza dodatkowymi wymaganiami w menu i innych zasobów, dostarczane przez aplikacje dokumentu OLE, ponieważ istnieje wiele trybów w obu kontenera i aplikacji serwera (składnik) można uruchomić i używane. Na przykład pełny serwer można uruchomić w jednym z tych trzech trybów:
+Edycja wizualizacji OLE umieszcza dodatkowe wymagania dotyczące menu i innych zasobów udostępnianych przez aplikacje dokumentów OLE, ponieważ istnieją różne tryby, w których można uruchamiać i używać zarówno aplikacji kontenera, jak i serwera (składników). Na przykład aplikacja całego serwera może działać w jednym z tych trzech trybów:
 
-- Autonomiczny.
+- Samodzielne.
 
-- W miejscu do edycji w ramach elementu kontenera.
+- W miejscu do edycji elementu w kontekście kontenera.
 
-- Otwórz do edycji elementu poza kontekstem swojego kontenera, często w osobnym oknie.
+- Otwórz, aby edytować element poza kontekstem jego kontenera, często w osobnym oknie.
 
-Wymaga to trzy oddzielne menu układy, jeden dla każdego możliwe trybu aplikacji. Tabele akceleratora również są niezbędne dla każdego nowego trybu. Aplikacja kontenera może być lub może nie obsługiwać aktywacji w miejscu, Jeśli tak jest, wymaga nowej struktury menu i skojarzonych tabel akceleratora.
+Wymaga to trzech oddzielnych układów menu, po jednym dla każdego możliwego trybu aplikacji. Tabele akceleratorów są również niezbędne dla każdego nowego trybu. Aplikacja kontenera może być nieobsługiwana w przypadku aktywacji w miejscu; Jeśli tak, potrzebuje nowej struktury menu i skojarzonych tabel akceleratorów.
 
-Aktywacja w miejscu wymaga, aby aplikacje kontenera i serwera muszą uzgodnić dla miejsca na pasku menu, pasek narzędzi i stanu. Wszystkie zasoby muszą być zaprojektowane z tym pamiętać. Artykuł [menu i zasoby: Scalanie menu](../mfc/menus-and-resources-menu-merging.md) opisano w tym temacie szczegółowo.
+Aktywacja w miejscu wymaga, aby aplikacje kontenera i serwera musiały być negocjowane dla menu, paska narzędzi i przestrzeni pasek stanu. Wszystkie zasoby muszą zostać zaprojektowane z tym zagadnieniem. Menu artykułów [i zasoby: scalanie menu](menus-and-resources-menu-merging.md) obejmuje szczegółowe omówienie tego tematu.
 
-Ze względu na te problemy dokumenty i aplikacje OLE utworzone za pomocą Kreatora aplikacji może mieć maksymalnie cztery oddzielne menu i zasoby tabeli akceleratora. Są one używane w następujących sytuacjach:
+Ze względu na te problemy aplikacje dokumentów OLE utworzone za pomocą Kreatora aplikacji mogą mieć do czterech oddzielnych menu i zasobów tabel akceleratorów. Są one używane z następujących powodów:
 
-|Nazwa zasobu|Zastosowanie|
+|Nazwa zasobu|Użycie|
 |-------------------|---------|
-|IDR_MAINFRAME|Używane w aplikacji MDI, jeśli plik nie jest otwarty lub w aplikacji interfejsu SDI, niezależnie od tego, otwartych plików. Jest to standardowe menu używanych w aplikacjach innych niż OLE.|
-|IDR_\<project>TYPE|Jeśli pliki są otwarte i używane w aplikacji MDI. Używany, gdy aplikacja jest uruchomiona w autonomicznej. Jest to standardowe menu używanych w aplikacjach innych niż OLE.|
-|IDR_\<project>TYPE_SRVR_IP|Używane przez serwer lub kontenera, gdy obiekt jest otwarty w miejscu.|
-|IDR_\<project>TYPE_SRVR_EMB|Używane przez aplikację serwera, jeśli obiekt zostanie otwarty bez używania aktywacji w miejscu.|
+|IDR_MAINFRAME|Używane w aplikacji MDI, jeśli żaden plik nie jest otwarty lub w aplikacji SDI niezależnie od otwartych plików. Jest to standardowe menu używane w aplikacjach innych niż OLE.|
+|\<project>typ IDR_|Używany w aplikacji MDI, jeśli pliki są otwarte. Używany, gdy aplikacja działa autonomicznie. Jest to standardowe menu używane w aplikacjach innych niż OLE.|
+|IDR_ \<project> TYPE_SRVR_IP|Używany przez serwer lub kontener, gdy obiekt jest otwarty.|
+|IDR_ \<project> TYPE_SRVR_EMB|Używany przez aplikację serwera, jeśli obiekt jest otwarty bez użycia aktywacji w miejscu.|
 
-Reprezentuje każda z tych nazw zasobów, menu i zazwyczaj tabeli klawiszy skrótu. Schemat podobne należy używać w aplikacjach MFC, które nie są tworzone za pomocą Kreatora aplikacji.
+Każda z tych nazw zasobów reprezentuje menu i, zazwyczaj, tabelę akceleratora. Podobny schemat powinien być używany w aplikacjach MFC, które nie są tworzone za pomocą Kreatora aplikacji.
 
-W następujących artykułach omówiono tematów związanych z kontenerów, serwerów i scalaniem niezbędne do zaimplementowania aktywacji w miejscu menu:
+W poniższych artykułach omówiono tematy związane z kontenerami, serwerami oraz scalaniem menu, które jest niezbędne do wdrożenia aktywacji w miejscu:
 
-- [Menu i zasoby: Dodatki do kontenera](../mfc/menus-and-resources-container-additions.md)
+- [Menu i zasoby: dodatki do kontenera](menus-and-resources-container-additions.md)
 
-- [Menu i zasoby: Dodatki do serwera](../mfc/menus-and-resources-server-additions.md)
+- [Menu i zasoby: dodatki do serwera](menus-and-resources-server-additions.md)
 
-- [Menu i zasoby: Scalanie menu](../mfc/menus-and-resources-menu-merging.md)
+- [Menu i zasoby: scalanie menu](menus-and-resources-menu-merging.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[OLE](../mfc/ole-in-mfc.md)
+[OLE](ole-in-mfc.md)

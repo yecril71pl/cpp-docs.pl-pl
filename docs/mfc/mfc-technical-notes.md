@@ -6,25 +6,25 @@ helpviewer_keywords:
 - technical notes, MFC
 - technical notes [MFC]
 ms.assetid: 8aa01d66-0b07-4d0a-a080-4bb00c7baaac
-ms.openlocfilehash: 3621bca8116e3dd8edf202f4efa758bcb2590fcc
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 251c37f687c0176256f74c7e4dc14cff7f25c99c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65610922"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617940"
 ---
 # <a name="mfc-technical-notes"></a>Uwagi techniczne dotyczące MFC
 
-Uwaga techniczna jest to dokument napisany dla programistów, przez programistów.
+Uwaga techniczna to dokument przeznaczony dla programistów przez programistów.
 
-Każdy Uwaga techniczna w tym artykule opisano problem lub funkcję, która wykracza poza zakres pozostałej części dokumentacji MFC. Uwagi techniczne dostarczony odzwierciedlają żądania informacji od użytkowników, a także deweloperom MFC oczekujemy, użytkownicy zaawansowani będą chcieli informacje.
+Każda Uwaga techniczna opisuje problem lub funkcję, która wykracza poza zakres pozostałej części dokumentacji MFC. Podane Uwagi techniczne odzwierciedlają żądania informacji od użytkowników, a także wyspecjalizowane informacje, które deweloperzy MFC przewidzieć dla użytkowników zaawansowanych.
 
-Istnieją dwa sposoby, aby przejrzeć Uwagi techniczne:
+Istnieją dwa sposoby przeglądania informacji technicznych:
 
-- [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)
+- [Uwagi techniczne według numeru](technical-notes-by-number.md)
 
-- [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)
+- [Uwagi techniczne według kategorii](technical-notes-by-category.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Aplikacje klasyczne MFC](../mfc/mfc-desktop-applications.md)
+[Aplikacje klasyczne MFC](mfc-desktop-applications.md)

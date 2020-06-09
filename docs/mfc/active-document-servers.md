@@ -6,29 +6,29 @@ helpviewer_keywords:
 - servers [MFC], active document
 - active document servers [MFC]
 ms.assetid: 131fec1e-02a0-4305-a7ab-903b911232a7
-ms.openlocfilehash: 7050b810bb5e1f0c240222cd9b8c4922ced4238a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58f2a63a8c640e6ae31640af680894763603e1d0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394978"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619142"
 ---
 # <a name="active-document-servers"></a>Serwery dokumentów aktywnych
 
-Serwery dokumentów aktywnych, takich jak Word, Excel lub PowerPoint hosta dokumenty w innych typów aplikacji o nazwie dokumenty aktywne. W odróżnieniu od OLE obiekty osadzone (które są po prostu wyświetlane na stronie innego dokumentu), Active dokumenty zawierają pełny interfejs i Pełna macierzystą funkcjonalność aplikacji serwera, z której zostały utworzone. Użytkownicy mogą tworzyć dokumenty przy użyciu pełnych możliwości ich ulubionych aplikacji (jeśli są one aktywnego dokumentu, włączone), jeszcze traktować Projekt wynikowy jako pojedynczy element.
+Serwery dokumentów aktywnych, takie jak Word, Excel lub dokumenty hosta programu PowerPoint dla innych typów aplikacji o nazwie Active Documents. W przeciwieństwie do obiektów OLE Embedded (które są po prostu wyświetlane na stronie innego dokumentu), aktywne dokumenty zapewniają pełny interfejs i kompletną funkcjonalność aplikacji serwera, która je tworzy. Użytkownicy mogą tworzyć dokumenty przy użyciu pełnych możliwości ich ulubionych aplikacji (jeśli są włączone, jeśli są aktywnymi dokumentami), ale mogą traktować projekt wynikający z jednej jednostki.
 
-Dokumenty aktywne może mieć więcej niż jedną stronę i są zawsze aktywny w miejscu. Dokumenty aktywne kontrolować część interfejsu użytkownika, scalanie menu za pomocą **pliku** i **pomocy** menu kontenera. One zajmują cały obszar edycji kontenera i kontrolowanie widoków i układ strony drukarki (marginesy, stopki i tak dalej).
+Aktywne dokumenty mogą mieć więcej niż jedną stronę i są zawsze aktywne. Formanty Active Documents — część interfejsu użytkownika, scalanie ich menu z menu **plik** i **Pomoc** kontenera. Zajmują cały obszar edycji kontenera i kontrolują widoki i układ strony drukarki (marginesy, stopki itp.).
 
-MFC implementuje serwery dokumentów aktywnych przy użyciu interfejsów dokument/widok, mapy wysyłania poleceń, drukowanie, zarządzania menu i zarządzanie rejestrem. Konkretne wymagania programowania są omówione w [dokumenty aktywne](../mfc/active-documents.md).
+MFC implementuje serwery dokumentów aktywnych przy użyciu interfejsów dokumentów/widoków, map wysyłania poleceń, drukowania, zarządzania menu i zarządzania rejestrem. Szczególne wymagania programistyczne omówiono w [dokumentach aktywnych](active-documents.md).
 
-Biblioteka MFC obsługuje dokumenty aktywne za pomocą [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) klasy pochodzące z [CCmdTarget](../mfc/reference/ccmdtarget-class.md), i [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md), pochodzącej z [ COleServerItem](../mfc/reference/coleserveritem-class.md). Biblioteka MFC obsługuje kontenery dokumentów aktywnych z [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md) klasy pochodzące z [COleClientItem](../mfc/reference/coleclientitem-class.md).
+MFC obsługuje aktywne dokumenty z klasą [CDocObjectServer](reference/cdocobjectserver-class.md) , pochodną od [CCmdTarget](reference/ccmdtarget-class.md)i [CDocObjectServerItem](reference/cdocobjectserveritem-class.md), uzyskaną z [COleServerItem](reference/coleserveritem-class.md). MFC obsługuje kontenery dokumentów aktywnych z klasą [metody COleDocObjectItem](reference/coledocobjectitem-class.md) , pochodzących od [COleClientItem](reference/coleclientitem-class.md).
 
-`CDocObjectServer` mapuje interfejsy aktywnego dokumentu i inicjuje i aktywuje aktywnego dokumentu. Biblioteka MFC zawiera również makra, aby obsługiwać routing poleceń w dokumenty aktywne. Aby użyć dokumenty aktywne w aplikacji, należy dołączyć AfxDocOb.h w pliku StdAfx.h.
+`CDocObjectServer`mapuje aktywne interfejsy dokumentów i inicjuje i aktywuje aktywny dokument. MFC udostępnia również makra do obsługi routingu poleceń w aktywnych dokumentach. Aby korzystać z dokumentów aktywnych w aplikacji, Dołącz AfxDocOb. h do pliku StdAfx. h.
 
-Regularne serwerze MFC przechwytuje własną `COleServerItem`-klasy pochodnej. Kreator aplikacji MFC generuje tę klasę dla Ciebie, jeśli zostanie wybrana **miniserwera** lub **pełny serwer** pole wyboru, aby zapewnić serwer aplikacji Obsługa dokumentów złożonych. Można również wybrać **serwera aktywnego dokumentu** pole wyboru, Kreator aplikacji MFC generuje klasę pochodną `CDocObjectServerItem` zamiast tego.
+Zwykły serwer MFC przechwytuje własną `COleServerItem` klasę pochodną. Kreator aplikacji MFC generuje tę klasę dla Ciebie, jeśli zaznaczysz pole wyboru **mini-Server** lub **Full-Server** , aby umożliwić obsługę dokumentu złożonego serwera aplikacji. Jeśli zaznaczysz również pole wyboru **serwer aktywnego dokumentu** , Kreator aplikacji MFC generuje klasę pochodną `CDocObjectServerItem` zamiast.
 
-`COleDocObjectItem` Klasa umożliwia kontener OLE w taki sposób, aby stać się kontener aktywnego dokumentu. Kreator aplikacji MFC można użyć, aby utworzyć kontener aktywnego dokumentu, wybierając **kontener dokumentów aktywnych** pole wyboru na stronie Obsługa dokumentów złożonych, Kreator aplikacji MFC. Aby uzyskać więcej informacji, zobacz [tworzenie aplikacji kontenera dokumentów aktywnych](../mfc/creating-an-active-document-container-application.md).
+`COleDocObjectItem`Klasa umożliwia kontenerowi OLE przestają się kontenerem aktywnego dokumentu. Za pomocą Kreatora aplikacji MFC można utworzyć kontener aktywnego dokumentu, zaznaczając pole wyboru **kontener aktywnego dokumentu** na stronie Obsługa dokumentu złożonego w Kreatorze aplikacji MFC. Aby uzyskać więcej informacji, zobacz [Tworzenie aplikacji kontenera dokumentów aktywnych](creating-an-active-document-container-application.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Zawieranie dokumentów aktywnych](../mfc/active-document-containment.md)
+[Zawieranie dokumentów aktywnych](active-document-containment.md)

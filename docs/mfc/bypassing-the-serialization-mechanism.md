@@ -10,25 +10,25 @@ helpviewer_keywords:
 - serialization [MFC], role of framework
 - serialization [MFC], overriding
 ms.assetid: 48d4a279-b51c-4ba5-81cd-ed043312b582
-ms.openlocfilehash: 1937098de30884be327c67a698dbb0023be248bb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f47cac34f6cdbdae01af98ec28be5af17edf0e25
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345199"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620963"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>Pomijanie mechanizmu serializacji
 
-Jak wiesz już, struktura umożliwia domyślne do odczytu i zapisu danych do i z plików. Serializacja przez obiekt, który archiwum odpowiadających potrzebom bardzo wiele aplikacji. Taką aplikację odczytuje plik całkowicie do pamięci, zezwala użytkownikowi na aktualizowanie pliku, a następnie zapisuje zaktualizowanej wersji na dysku, ponownie.
+Jak widać, struktura zapewnia domyślny sposób odczytywania i zapisywania danych w plikach i. Serializacja przy użyciu obiektu archiwum odpowiada potrzebom dużej liczby aplikacji. Taka aplikacja odczytuje plik w całości do pamięci, pozwala użytkownikowi aktualizować plik, a następnie ponownie zapisuje zaktualizowaną wersję na dysku.
 
-Jednak niektóre aplikacje działają na danych bardzo różny sposób, a dla tych aplikacji serializacji za pomocą archiwum nie nadaje się. Przykłady obejmują bazy danych programu, programy, które edytować tylko części dużych plików, programy, które zapisać pliki tekstowe i programy, które współużytkują plików danych.
+Jednak niektóre aplikacje działają na danych bardzo inaczej i w przypadku serializacji aplikacji za poorednictwem archiwum nie są odpowiednie. Przykłady obejmują programy baz danych, programy, które edytują tylko części dużych plików, programy, które zapisują pliki tekstowe i programy, które współużytkują pliki danych.
 
-W takich przypadkach można zastąpić [Serialize](../mfc/reference/cobject-class.md#serialize) funkcji w inny sposób, aby zapewnić obsługę akcje plików za pośrednictwem [CFile](../mfc/reference/cfile-class.md) obiektu zamiast [CArchive](../mfc/reference/carchive-class.md) obiektu.
+W takich przypadkach można zastąpić funkcję [serializacji](reference/cobject-class.md#serialize) w inny sposób, aby skorygować działania plików za pośrednictwem obiektu [CFile](reference/cfile-class.md) , a nie obiektu [CArchive](reference/carchive-class.md) .
 
-Możesz użyć `Open`, `Read`, `Write`, `Close`, i `Seek` funkcji elementów członkowskich klasy `CFile` próbę otwarcia pliku, przesuń wskaźnik pliku (wyszukiwanie) do określonego punktu w pliku odczytać rekordu (określoną liczbę bajtów ) w tym momencie umożliwiają użytkownikowi zaktualizować rekord, a następnie ponownie dążyć do tego samego punktu i zapisania rekordu z powrotem do pliku. Struktura otworzy plik dla Ciebie i możesz użyć `GetFile` funkcji składowej klasy typu `CArchive` uzyskać wskaźnik do `CFile` obiektu. Na korzystanie z jeszcze bardziej zaawansowane i elastyczne, można zastąpić [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) i [OnSaveDocument](../mfc/reference/cdocument-class.md#onsavedocument) funkcji elementów członkowskich klasy `CWinApp`. Aby uzyskać więcej informacji, zobacz klasy [CFile](../mfc/reference/cfile-class.md) w *odwołanie MFC*.
+Możesz użyć `Open` `Read` funkcji,, `Write` , `Close` i `Seek` elementu członkowskiego klasy, `CFile` Aby otworzyć plik, przenieść wskaźnik pliku (Seek) do określonego punktu w pliku, odczytać rekord (określoną liczbę bajtów) w tym momencie, pozwolić użytkownikowi na aktualizację rekordu, a następnie ponownie przejść do tego samego punktu i zapisać rekord z powrotem do pliku. Struktura otworzy plik i można użyć `GetFile` funkcji składowej klasy, `CArchive` Aby uzyskać wskaźnik do `CFile` obiektu. Aby uzyskać bardziej zaawansowane i elastyczne użycie, można przesłonić funkcje elementów członkowskich [OnOpenDocument](reference/cdocument-class.md#onopendocument) i [OnSaveDocument](reference/cdocument-class.md#onsavedocument) klasy `CWinApp` . Aby uzyskać więcej informacji, zobacz Klasa [CFile](reference/cfile-class.md) w *dokumentacji MFC*.
 
-W tym scenariuszu usługi `Serialize` zastąpienie nie wykonuje żadnych działań, chyba że na przykład chcesz go odczytywać i zapisywać w nagłówku pliku, aby utrzymać ją na bieżąco po zamknięciu dokumentu.
+W tym scenariuszu `Serialize` przesłonięcie nie wykonuje żadnych operacji, chyba że na przykład chcesz odczytywać i zapisywać nagłówek pliku, aby zachować jego aktualność podczas zamykania dokumentu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Używanie dokumentów](../mfc/using-documents.md)
+[Używanie dokumentów](using-documents.md)
