@@ -8,52 +8,52 @@ helpviewer_keywords:
 - exception handling [MFC], exception classes
 - MFC, exceptions
 ms.assetid: 1a2caf12-b3e9-4189-86d2-bf7a595bf025
-ms.openlocfilehash: 99a2764dcad15267b1aab8a60951f99f21352726
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 907b34b12ffdaa70c4377a1012a66662fbba12d0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392872"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619521"
 ---
 # <a name="exception-classes"></a>Klasy wyjątków
 
-Biblioteka klas udostępnia mechanizm obsługi wyjątków, na podstawie klasy `CException`. Struktura aplikacji używa wyjątków w jego kod; Umożliwia także je w należy do Ciebie. Aby uzyskać więcej informacji, zobacz artykuł [wyjątki](../mfc/exception-handling-in-mfc.md). Uzyskujesz własnych typów wyjątków z `CException`.
+Biblioteka klas zapewnia mechanizm obsługi wyjątków oparty na klasie `CException` . Struktura aplikacji używa wyjątków w kodzie. można ich również używać w swoich użytkownikach. Aby uzyskać więcej informacji, zobacz [wyjątki](exception-handling-in-mfc.md)w artykule. Możesz utworzyć własne typy wyjątków z `CException` .
 
-Biblioteka MFC zawiera klasę wyjątku, z którego można uzyskać własne wyjątek, a także klasy wyjątków dla wszystkich wyjątków, który ją obsługuje.
+MFC udostępnia klasę wyjątku, z której można utworzyć własny wyjątek, a także klasy wyjątków dla wszystkich obsługiwanych wyjątków.
 
-[CException](../mfc/reference/cexception-class.md)<br/>
+[CException](reference/cexception-class.md)<br/>
 Klasa bazowa dla wyjątków.
 
-[CArchiveException](../mfc/reference/carchiveexception-class.md)<br/>
+[CArchiveException](reference/carchiveexception-class.md)<br/>
 Wyjątek archiwum.
 
-[CDaoException](../mfc/reference/cdaoexception-class.md)<br/>
-Wyjątek, wynikające z wystąpił błąd podczas operacji bazy danych DAO.
+[CDaoException](reference/cdaoexception-class.md)<br/>
+Wyjątek wynikający z błędu w operacji bazy danych DAO.
 
-[CDBException](../mfc/reference/cdbexception-class.md)<br/>
-Wyjątek, wynikające z wystąpił błąd podczas przetwarzania baz danych ODBC.
+[CDBException](reference/cdbexception-class.md)<br/>
+Wyjątek wynikający z błędu podczas przetwarzania bazy danych ODBC.
 
-[CFileException](../mfc/reference/cfileexception-class.md)<br/>
-Wyjątek zorientowane na plik.
+[CFileException](reference/cfileexception-class.md)<br/>
+Wyjątek zorientowany na pliki.
 
-[CMemoryException](../mfc/reference/cmemoryexception-class.md)<br/>
+[CMemoryException](reference/cmemoryexception-class.md)<br/>
 Wyjątek braku pamięci.
 
-[CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md)<br/>
-Wyjątek, wynikające z używa nieobsługiwanej funkcji.
+[CNotSupportedException](reference/cnotsupportedexception-class.md)<br/>
+Wyjątek wynikający z użycia nieobsługiwanej funkcji.
 
-[COleException](../mfc/reference/coleexception-class.md)<br/>
-Wyjątek, wynikające z wystąpił błąd podczas przetwarzania OLE. Ta klasa jest używana zarówno kontenery i serwery.
+[COleException](reference/coleexception-class.md)<br/>
+Wyjątek wynikający z błędu przetwarzania OLE. Ta klasa jest używana przez kontenery i serwery.
 
-[COleDispatchException](../mfc/reference/coledispatchexception-class.md)<br/>
-Wyjątek wynikającego z błędem podczas automatyzacji. Automation wyjątki są zgłaszane przez serwery automatyzacji i przechwycony przez klientów automatyzacji.
+[COleDispatchException](reference/coledispatchexception-class.md)<br/>
+Wyjątek wynikający z błędu podczas automatyzacji. Wyjątki automatyzacji są generowane przez serwery automatyzacji i przechwytywane przez klientów usługi Automation.
 
-[CResourceException](../mfc/reference/cresourceexception-class.md)<br/>
-Wyjątek podczas awarii można załadować zasobu Windows.
+[CResourceException](reference/cresourceexception-class.md)<br/>
+Wyjątek wynikający z niepowodzenia załadowania zasobu systemu Windows.
 
-[CUserException](../mfc/reference/cuserexception-class.md)<br/>
-Wyjątek umożliwia zatrzymać operację Zainicjowanie przez użytkownika. Zazwyczaj użytkownik został powiadomiony o problem zanim ten wyjątek.
+[CUserException](reference/cuserexception-class.md)<br/>
+Wyjątek używany do zatrzymania operacji zainicjowanej przez użytkownika. Zazwyczaj użytkownik został powiadomiony o problemie przed zgłoszeniem tego wyjątku.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../mfc/class-library-overview.md)
+[Przegląd klas](class-library-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Podstawy OLE: Łączenie i osadzanie'
+title: 'Podstawy OLE: łączenie i osadzanie'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE embedded items [MFC]
@@ -10,26 +10,26 @@ helpviewer_keywords:
 - embedded objects [MFC]
 - OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
-ms.openlocfilehash: 02607df2a8fa086c5751f2b446e349a3efdbcd20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b6032d2e772728495d4ddb1dbfaa5daf7348b60
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186805"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619887"
 ---
-# <a name="ole-background-linking-and-embedding"></a>Podstawy OLE: Łączenie i osadzanie
+# <a name="ole-background-linking-and-embedding"></a>Podstawy OLE: łączenie i osadzanie
 
-Za pomocą polecenia wklejania w aplikacji kontenera można utworzyć składnika osadzonego lub osadzonego elementu. Źródło danych pod kątem osadzonego elementu jest przechowywane jako część dokumentu OLE, który go zawiera. W ten sposób plik dokumentu do dokumentu edytora tekstów może zawierać tekst i także może zawierać, mapy bitowe, wykresy, formuły lub dowolny inny typ danych.
+Za pomocą polecenia Wklej w aplikacji kontenera można utworzyć osadzony składnik lub osadzony element. Dane źródłowe dla osadzonego elementu są przechowywane jako część dokumentu OLE, który go zawiera. W ten sposób plik dokumentu dla dokumentu edytora tekstów może zawierać tekst i może zawierać mapy bitowe, wykresy, formuły lub inne typy danych.
 
-OLE udostępnia inny sposób, aby uwzględniać dane z innych aplikacji: tworzenie połączony składnik lub połączony element lub łącza. Procedury służące do tworzenia połączonego elementu są podobne do tworzenia element osadzony, z tą różnicą, że należy użyć polecenia Wklej łącze zamiast polecenie Paste. W przeciwieństwie do składnika osadzonego połączony składnik przechowuje ścieżkę do oryginalnych danych odbywa się w oddzielnym pliku.
+Mechanizm OLE zapewnia inny sposób dołączania danych z innej aplikacji: Tworzenie połączonego składnika, elementu połączonego lub linku. Kroki tworzenia połączonego elementu są podobne do tych w przypadku tworzenia osadzonego elementu, z tą różnicą, że zamiast polecenia Wklej użyto polecenia Wklej łącze. W przeciwieństwie do składnika osadzonego, połączony składnik przechowuje ścieżkę do oryginalnych danych, często w osobnym pliku.
 
-Na przykład jeśli pracujesz w programie dokumentu procesora i utworzyć połączony element, aby niektóre komórki arkusza kalkulacyjnego, dane, które dla połączonego elementu są przechowywane w oryginalnym dokumencie arkusza kalkulacyjnego. Dokument edytora tekstów zawiera tylko te informacje, określając, gdzie element zostanie znaleziony, oznacza to, zawiera łącze do oryginalnego dokumentu arkusza kalkulacyjnego. Dwukrotne kliknięcie komórki arkusza kalkulacyjnego aplikacja zostanie uruchomiona, a w oryginalnym dokumencie arkusza kalkulacyjnego jest ładowany z którym została zapisana.
+Na przykład jeśli pracujesz w dokumencie edytora tekstów i utworzysz połączony element do niektórych komórek arkusza kalkulacyjnego, dane połączonego elementu są przechowywane w oryginalnym dokumencie arkusza kalkulacyjnego. Dokument edytora wyrazów zawiera tylko informacje określające, gdzie można znaleźć element, czyli zawiera link do oryginalnego dokumentu arkusza kalkulacyjnego. Po dwukrotnym kliknięciu komórek aplikacja arkusza kalkulacyjnego zostanie uruchomiona i oryginalny dokument arkusza kalkulacyjnego zostanie załadowany z lokalizacji, w której został zapisany.
 
-Każdy element OLE, czy osadzony lub połączony, ma typ skojarzone z nią na podstawie aplikacji, w której został utworzony. Na przykład element Paintbrush firmy Microsoft jest jeden typ elementu, a element programu Microsoft Excel jest innego typu. Jednak niektóre aplikacje, można utworzyć więcej niż jeden typ elementu. Na przykład program Microsoft Excel można utworzyć elementy arkusza, elementów wykresu i elementy arkusz makr. Każdy z tych elementów można jednoznacznie zidentyfikować przez system za pomocą identyfikatora klasy lub **CLSID**.
+Każdy element OLE, niezależnie od tego, czy jest osadzony lub połączony, ma skojarzony typ na podstawie aplikacji, która ją utworzyła. Na przykład element Microsoft Paintbrush jest jednym typem elementu, a element programu Microsoft Excel jest innym typem. Niektóre aplikacje mogą jednak utworzyć więcej niż jeden typ elementu. Na przykład program Microsoft Excel może tworzyć elementy arkusza, elementy wykresu i elementy makr. Każdy z tych elementów może być jednoznacznie zidentyfikowany przez system przy użyciu identyfikatora klasy lub identyfikatora **CLSID**.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Podstawy OLE](../mfc/ole-background.md)<br/>
-[Podstawy OLE: Kontenery i serwery](../mfc/ole-background-containers-and-servers.md)<br/>
-[Kontenery: Elementy klienckie](../mfc/containers-client-items.md)<br/>
-[Serwery: Elementy serwera](../mfc/servers-server-items.md)
+[Podstawy OLE](ole-background.md)<br/>
+[Podstawy OLE: kontenery i serwery](ole-background-containers-and-servers.md)<br/>
+[Kontenery: elementy klienckie](containers-client-items.md)<br/>
+[Serwery: elementy serwera](servers-server-items.md)

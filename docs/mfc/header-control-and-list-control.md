@@ -9,33 +9,33 @@ helpviewer_keywords:
 - header controls [MFC]
 - header controls [MFC], list controls used with
 ms.assetid: b20194b1-1a6b-4e2f-b890-1b3cca6650bc
-ms.openlocfilehash: 53dd6f1a7878d82a7f7ac48dd7082d791323941b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f9dd34b27ddbdc0b99fafbb23ad1cf9782d98605
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370469"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626420"
 ---
 # <a name="header-control-and-list-control"></a>Formant nagłówka i formant listy
 
-W większości przypadków użyjesz formantu nagłówka, który jest osadzony w [CListCtrl](../mfc/reference/clistctrl-class.md) lub [CListView](../mfc/reference/clistview-class.md) obiektu. Istnieją jednak przypadki, w których pożądane jest oddzielne gołym okiem na nagłówek, takie jak manipulowanie danymi, rozmieszczone w kolumnach lub wierszach, w obiekcie cview.However, are in cases where a separate header control object is desirable, such as manipulating data, arranged in columns or rows, in a [CView](../mfc/reference/cview-class.md)-derived object. W takich przypadkach należy większą kontrolę nad wyglądem i domyślne zachowanie osadzonego formantu nagłówka.
+W większości przypadków będziesz używać kontrolki nagłówka osadzonej w obiekcie [CListCtrl](reference/clistctrl-class.md) lub [CListView](reference/clistview-class.md) . Istnieją jednak przypadki, w których pożądany jest oddzielny obiekt sterowania nagłówkami, taki jak manipulowanie danymi, ułożone w kolumnach lub wierszach w obiekcie pochodnym [CView](reference/cview-class.md). W takich przypadkach potrzebna jest większa kontrola nad wyglądem i domyślnym zachowaniem osadzonego formantu nagłówka.
 
-W typowym przypadku, że chcesz formantu nagłówka, aby zapewnić standardowe, domyślne zachowanie, można użyć [CListCtrl](../mfc/reference/clistctrl-class.md) lub [CListView](../mfc/reference/clistview-class.md) zamiast. Użyj, `CListCtrl` jeśli chcesz, aby funkcja domyślnego formantu nagłówka, osadzone w widoku listy wspólnego formantu. Użyj [CListView,](../mfc/reference/clistview-class.md) jeśli chcesz funkcjonalność domyślnego formantu nagłówka, osadzone w obiekcie widoku.
+W typowej sytuacji, gdy chcesz, aby kontrolka nagłówka zapewniała standardowe, domyślne zachowanie, możesz zamiast tego użyć [CListCtrl](reference/clistctrl-class.md) lub [CListView](reference/clistview-class.md) . Użyj `CListCtrl` , gdy chcesz, aby funkcja domyślnego formantu nagłówka była osadzona w widoku listy. Użyj [CListView](reference/clistview-class.md) , jeśli chcesz, aby funkcja domyślnego formantu nagłówka była osadzona w obiekcie widoku.
 
 > [!NOTE]
-> Te formanty obejmują tylko wbudowany kontrolka nagłówka, jeśli formant widoku listy jest tworzony przy użyciu **stylu LVS_REPORT.**
+> Te kontrolki zawierają tylko wbudowaną kontrolkę nagłówka, Jeśli kontrolka widok listy jest tworzona przy użyciu stylu **LVS_REPORT** .
 
-W większości przypadków wygląd osadzonego formantu nagłówka można zmodyfikować, zmieniając style formantu widoku listy zawierającej. Ponadto informacje o formancie nagłówka można uzyskać za pośrednictwem funkcji członkowskich nadrzędnego widoku listy. Jednak w celu uzyskania pełnej kontroli i dostępu do atrybutów i stylów osadzonego formantu nagłówka zaleca się uzyskanie wskaźnika do obiektu formantu nagłówka.
+W większości przypadków wygląd osadzonego formantu nagłówka można zmodyfikować, zmieniając style zawierające kontrolkę widok listy. Ponadto informacje o formancie nagłówka można uzyskać za pomocą funkcji Członkowskich formantu widoku listy nadrzędnej. Jednak w celu zapewnienia pełnej kontroli i dostępu do atrybutów i stylów osadzonego formantu nagłówka zaleca się uzyskanie wskaźnika do obiektu formantu nagłówka.
 
-Obiekt kontroli nagłówka osadzonego można uzyskać `CListCtrl` `CListView` dostęp z jednego lub wywołania funkcji `GetHeaderCtrl` elementu członkowskiego odpowiedniej klasy. Poniższy kod pokazuje to:
+Do osadzonego obiektu formantu nagłówka można uzyskać dostęp z `CListCtrl` lub `CListView` z wywołaniem do `GetHeaderCtrl` funkcji składowej odpowiedniej klasy. Poniższy kod ilustruje:
 
-[!code-cpp[NVC_MFCControlLadenDialog#14](../mfc/codesnippet/cpp/header-control-and-list-control_1.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#14](codesnippet/cpp/header-control-and-list-control_1.cpp)]
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz wiedzieć więcej o
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-- [Korzystanie z list obrazów z kontrolkami nagłówka](../mfc/using-image-lists-with-header-controls.md)
+- [Używanie list obrazów z kontrolkami nagłówka](using-image-lists-with-header-controls.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Korzystanie z CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
-[Formanty](../mfc/controls-mfc.md)
+[Korzystanie z CHeaderCtrl](using-cheaderctrl.md)<br/>
+[Formanty](controls-mfc.md)

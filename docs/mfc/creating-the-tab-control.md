@@ -10,55 +10,55 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], creating
 - TCS_EX_FLATSEPARATORS extended style
 ms.assetid: 3a9c2d64-f5f4-41ea-84ab-fceb73c3dbdc
-ms.openlocfilehash: 4627009e2e07d1c5692d83d8d6262a9fcd37977e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d5aa6873966ecb4c845f1c503b24c07b6c0c7a3
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241965"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619609"
 ---
 # <a name="creating-the-tab-control"></a>Tworzenie formantu karty
 
-Sposób tworzenia kontrolki karty zależy od tego, czy za pomocą formantu w oknie dialogowym lub tworzenie go w oknie nondialog.
+Sposób tworzenia kontrolki karta zależy od tego, czy używasz kontrolki w oknie dialogowym, czy też tworzysz ją w oknie niedialogowym.
 
-### <a name="to-use-ctabctrl-directly-in-a-dialog-box"></a>Aby użyć CTabCtrl bezpośrednio w oknie dialogowym
+### <a name="to-use-ctabctrl-directly-in-a-dialog-box"></a>Aby używać CTabCtrl bezpośrednio w oknie dialogowym
 
-1. W edytorze okien dialogowych Dodawanie formantu karty do zasobu szablonu okna dialogowego. Określ identyfikator kontrolki.
+1. W edytorze okien dialogowych Dodaj kontrolkę karta do zasobu szablon okna dialogowego. Określ jego identyfikator kontrolki.
 
-1. Użyj [Kreator dodawania zmiennej składowej](../ide/adding-a-member-variable-visual-cpp.md) można dodać zmiennej składowej typu [CTabCtrl](../mfc/reference/ctabctrl-class.md) z właściwością kontrolki. Można użyć tego elementu członkowskiego do wywołania `CTabCtrl` funkcji elementów członkowskich.
+1. Użyj [Kreatora dodawania zmiennej członkowskiej](../ide/adding-a-member-variable-visual-cpp.md) , aby dodać zmienną członkowską typu [CTabCtrl](reference/ctabctrl-class.md) z właściwością Control. Tego elementu członkowskiego można użyć do wywołania `CTabCtrl` funkcji Członkowskich.
 
-1. Mapowanie funkcji obsługi w klasy okien dialogowych dla dowolnej karcie komunikatów powiadomień dotyczących formantu potrzebnych do obsługi. Aby uzyskać więcej informacji, zobacz [mapowanie komunikatów do funkcji](../mfc/reference/mapping-messages-to-functions.md).
+1. Funkcje obsługi mapy w klasie okna dialogowego dla wszystkich komunikatów powiadomień o kontrolkach kart, które należy obsłużyć. Aby uzyskać więcej informacji, zobacz [Mapowanie komunikatów do funkcji](reference/mapping-messages-to-functions.md).
 
-1. W [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), ustawianie stylów dla `CTabCtrl`.
+1. W [OnInitDialog](reference/cdialog-class.md#oninitdialog)Ustaw style dla `CTabCtrl` .
 
-### <a name="to-use-ctabctrl-in-a-nondialog-window"></a>Aby użyć CTabCtrl w oknie nondialog
+### <a name="to-use-ctabctrl-in-a-nondialog-window"></a>Aby użyć CTabCtrl w oknie niedialogowym
 
-1. Zdefiniuj kontrolki w klasie widoku lub w oknie.
+1. Zdefiniuj formant w klasie widoku lub okna.
 
-1. Wywoływanie kontrolki [Utwórz](../mfc/reference/ctabctrl-class.md#create) funkcję członkowską, prawdopodobnie w [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), prawdopodobnie jako wczesne jako okno nadrzędne [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkcji obsługi (w przypadku Tworzenie podklasy kontrolki). Ustawianie stylów dla formantu.
+1. Wywoływanie funkcji [tworzenia](reference/ctabctrl-class.md#create) elementu członkowskiego kontrolki, prawdopodobnie w [OnInitialUpdate](reference/cview-class.md#oninitialupdate), prawdopodobnie tak wcześnie jak funkcja procedury obsługi [OnCreate](reference/cwnd-class.md#oncreate) okna nadrzędnego (Jeśli jesteś podklasą kontrolki). Ustaw style dla kontrolki.
 
-Po `CTabCtrl` obiekt został utworzony, można ustawić lub wyczyścić następujące style rozszerzone:
+Po `CTabCtrl` utworzeniu obiektu można ustawić lub wyczyścić następujące style rozszerzone:
 
-- **Tcs_ex_flatseparators —** formant karty będzie rysowanie separatory między elementami kartę. Rozszerzone style, tylko wpływa na karcie formantów, które mają **TCS_BUTTONS** i **TCS_FLATBUTTONS** style. Domyślnie, tworzenie formantu karty z **TCS_FLATBUTTONS** określa style rozszerzone style.
+- **TCS_EX_FLATSEPARATORS** Kontrolka karta będzie rysować separatory między elementami tabulacji. Ten styl rozszerzony ma wpływ tylko na kontrolki karty, które mają style **TCS_BUTTONS** i **TCS_FLATBUTTONS** . Domyślnie utworzenie kontrolki karta z stylem **TCS_FLATBUTTONS** ustawia ten rozszerzony styl.
 
-- **Tcs_ex_registerdrop —** generuje formant karty **TCN_GETOBJECT** powiadomienia do żądania miejsca docelowego obiektu, gdy obiekt jest przeciągany nad elementów karty w formancie.
+- **TCS_EX_REGISTERDROP** Kontrolka karta generuje **TCN_GETOBJECT** komunikatów powiadomień, aby zażądać obiektu docelowego upuszczania, gdy obiekt jest przeciągany nad elementami tabulacji w kontrolce.
 
     > [!NOTE]
-    >  Aby otrzymać **TCN_GETOBJECT** powiadomienia, musisz zainicjować bibliotek OLE z wywołaniem [afxoleinit —](../mfc/reference/ole-initialization.md#afxoleinit).
+    >  Aby odebrać powiadomienie **TCN_GETOBJECT** , należy ZAINICJOWAĆ biblioteki OLE z wywołaniem do [AfxOleInit](reference/ole-initialization.md#afxoleinit).
 
-Te style, można je pobrać i ustawić po utworzeniu kontrolki przy użyciu odpowiednich wywołań [GetExtendedStyle](../mfc/reference/ctabctrl-class.md#getextendedstyle) i [SetExtendedStyle](../mfc/reference/ctabctrl-class.md#setextendedstyle) funkcji elementów członkowskich.
+Te style można pobrać i ustawić, po utworzeniu kontrolki, przy użyciu odpowiednich wywołań do funkcji [getextended](reference/ctabctrl-class.md#getextendedstyle) i [setextended](reference/ctabctrl-class.md#setextendedstyle) elementu członkowskiego.
 
-Na przykład ustawić **tcs_ex_flatseparators —** styl z następującymi wierszami kodu:
+Na przykład ustaw styl **TCS_EX_FLATSEPARATORS** z następującymi wierszami kodu:
 
-[!code-cpp[NVC_MFCControlLadenDialog#33](../mfc/codesnippet/cpp/creating-the-tab-control_1.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#33](codesnippet/cpp/creating-the-tab-control_1.cpp)]
 
-Wyczyść **tcs_ex_flatseparators —** stylu z `CTabCtrl` obiektu z następującymi wierszami kodu:
+Wyczyść styl **TCS_EX_FLATSEPARATORS** z `CTabCtrl` obiektu z następującymi wierszami kodu:
 
-[!code-cpp[NVC_MFCControlLadenDialog#34](../mfc/codesnippet/cpp/creating-the-tab-control_2.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#34](codesnippet/cpp/creating-the-tab-control_2.cpp)]
 
-Spowoduje to usunięcie separatory, które pojawiają się między przyciskami z Twojej `CTabCtrl` obiektu.
+Spowoduje to usunięcie separatorów, które pojawiają się między przyciskami `CTabCtrl` obiektu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Korzystanie z CTabCtrl](../mfc/using-ctabctrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Korzystanie z CTabCtrl](using-ctabctrl.md)<br/>
+[Formanty](controls-mfc.md)

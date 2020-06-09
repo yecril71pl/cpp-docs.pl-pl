@@ -9,24 +9,24 @@ helpviewer_keywords:
 - MFC, managing state data
 - COM interfaces, entry points
 ms.assetid: 9e7421dc-0731-4748-9e1b-90acbaf26d77
-ms.openlocfilehash: eb8fc425d6b9849f6367d9b207e5181652386be3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 132dd7394119081dcaeb098c2088782ff5d40ae4
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207855"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619340"
 ---
 # <a name="com-interface-entry-points"></a>Punkty wejścia interfejsu COM
 
-W przypadku funkcji składowych interfejsu COM, użyj `METHOD_PROLOGUE` makra, aby zachować stan globalny odpowiednie podczas wywoływania metody z wyeksportowanego interfejsu.
+W przypadku funkcji Członkowskich interfejsu COM, użyj makra, `METHOD_PROLOGUE` Aby zachować właściwy stan globalny podczas wywoływania metod wyeksportowanego interfejsu.
 
-Zazwyczaj, funkcje składowe interfejsy implementowane przez `CCmdTarget`-obiektów pochodnych już Użyj tego makra w celu zapewnienia automatycznego inicjowania `pThis` wskaźnika. Na przykład:
+Zazwyczaj funkcje składowe interfejsów zaimplementowane przez `CCmdTarget` obiekty pochodne już używają tego makra, aby zapewnić automatyczne inicjowanie `pThis` wskaźnika. Przykład:
 
-[!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]
+[!code-cpp[NVC_MFCConnectionPoints#5](codesnippet/cpp/com-interface-entry-points_1.cpp)]
 
-Aby uzyskać więcej informacji, zobacz [techniczne 38 Uwaga](../mfc/tn038-mfc-ole-iunknown-implementation.md) na MFC/OLE `IUnknown` implementacji.
+Aby uzyskać dodatkowe informacje, zobacz [Uwagi techniczne 38](tn038-mfc-ole-iunknown-implementation.md) w implementacji MFC/OLE `IUnknown` .
 
-`METHOD_PROLOGUE` — Makro jest zdefiniowany jako:
+`METHOD_PROLOGUE`Makro jest zdefiniowane jako:
 
 ```cpp
 #define METHOD_PROLOGUE(theClass, localClass) \
@@ -35,12 +35,12 @@ Aby uzyskać więcej informacji, zobacz [techniczne 38 Uwaga](../mfc/tn038-mfc-o
     AFX_MANAGE_STATE(pThis->m_pModuleState) \
 ```
 
-Część związane z zarządzaniem stanu globalnego makro jest:
+Częścią makra związanego z zarządzaniem stanem globalnym jest:
 
 `AFX_MANAGE_STATE( pThis->m_pModuleState )`
 
-W tym wyrażeniu *m_pModuleState* będzie traktowana jako zmienną składową krawędzi zawierającego go obiektu. Jest implementowana przez `CCmdTarget` klasy bazowej i jest inicjowana na odpowiednią wartość przez `COleObjectFactory`, podczas tworzenia wystąpienia obiektu.
+W tym wyrażeniu przyjmuje się, że *m_pModuleState* jest zmienną członkowską zawierającego obiektu. Jest implementowana przez `CCmdTarget` klasę bazową i jest inicjowana do odpowiedniej wartości przez `COleObjectFactory` , po utworzeniu wystąpienia obiektu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Zarządzanie danymi stanu modułów MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
+[Zarządzanie danymi stanu modułów MFC](managing-the-state-data-of-mfc-modules.md)

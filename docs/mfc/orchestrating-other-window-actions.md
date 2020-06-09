@@ -9,17 +9,17 @@ helpviewer_keywords:
 - frame windows [MFC], semimodal states
 - context-sensitive Help [MFC]
 ms.assetid: 5f34eea8-2bf8-4479-95c7-45e8f443db8f
-ms.openlocfilehash: 4b767ac8899217761cfcca8e24da841a694ead1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b92a42766b96836dad527ce9191901270ff369ad
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378165"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622149"
 ---
 # <a name="orchestrating-other-window-actions"></a>Organizowanie innych akcji okna
 
-Okno ramowe organizuje stany półmodalne, takich jak Pomoc kontekstowa i Podgląd wydruku. Aby uzyskać opis roli okno ramowe w podglądzie wydruku, zobacz [drukowania i podglądu wydruku](../mfc/printing-and-print-preview.md).
+Okno ramowe organizuje Stany półmodalne, takie jak pomoc kontekstowa i Podgląd wydruku. Opis roli okna ramki w podglądzie wydruku można znaleźć w temacie [Drukowanie i Podgląd wydruku](printing-and-print-preview.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Używanie okien ramowych](../mfc/using-frame-windows.md)
+[Używanie okien ramowych](using-frame-windows.md)

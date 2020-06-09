@@ -6,28 +6,28 @@ helpviewer_keywords:
 - lists [MFC], image
 - CImageList class [MFC], manipulating
 ms.assetid: 043418f8-077e-4dce-b8bb-2b7b0d7b5156
-ms.openlocfilehash: 1e86961980c91ade47a3d6510dec5c04ac36cffb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb7376241febd6bd1545cd183147e14a15313820
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262791"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622461"
 ---
 # <a name="manipulating-image-lists"></a>Operowanie listami obrazów
 
-[Zastąp](../mfc/reference/cimagelist-class.md#replace) funkcji składowej zastępuje obraz w listy obrazów ([CImageList](../mfc/reference/cimagelist-class.md)) za pomocą nowego obrazu. Ta funkcja jest również przydatne, jeśli chcesz dynamicznie zwiększyć liczbę obrazów w obiekcie listy obrazów. [SetImageCount](../mfc/reference/cimagelist-class.md#setimagecount) funkcja dynamicznie zmienia Liczba obrazów przechowywanych w listy obrazów. Zwiększenie rozmiaru listy obrazów wywołać `Replace` dodać obrazy do nowego miejsca obrazu. Jeśli możesz zmniejszyć rozmiar listy obrazów, obrazy, poza nowy rozmiar są zwalniane.
+Funkcja [replace](reference/cimagelist-class.md#replace) member zamienia obraz na liście obrazów ([Korzystanie CImageList](reference/cimagelist-class.md)) na nowy obraz. Ta funkcja jest również przydatna, jeśli konieczne jest dynamiczne zwiększenie liczby obrazów w obiekcie listy obrazów. Funkcja [SetImageCount](reference/cimagelist-class.md#setimagecount) dynamicznie zmienia liczbę obrazów przechowywanych na liście obrazów. W przypadku zwiększenia rozmiaru listy obrazów należy wywołać `Replace` Dodawanie obrazów do nowych miejsc obrazu. Zmniejszenie rozmiaru listy obrazów pozwala zwolnić obrazy poza nowym rozmiarem.
 
-[Usuń](../mfc/reference/cimagelist-class.md#remove) funkcja członkowska usuwa obraz z listy obrazów. [Kopiowania](../mfc/reference/cimagelist-class.md#copy) funkcja elementu członkowskiego można skopiować lub wymiany obrazy w obrębie listy obrazów. Tej funkcji można określić, czy obraz źródłowy powinien zostać skopiowany do indeksu docelowego, czy obraz źródłowy i docelowy powinien być zamienione.
+Funkcja [usuwania](reference/cimagelist-class.md#remove) elementu członkowskiego usuwa obraz z listy obrazów. Funkcja [kopiowania](reference/cimagelist-class.md#copy) elementów członkowskich może kopiować lub zamieniać obrazy na liście obrazów. Ta funkcja pozwala wskazać, czy obraz źródłowy ma być kopiowany do indeksu docelowego, czy obrazy źródłowe i docelowe powinny zostać zamienione.
 
-Przez scalanie dwie listy obrazu, należy utworzyć nową listę obrazów, użyj odpowiedniej przeciążenia [Utwórz](../mfc/reference/cimagelist-class.md#create) funkcja elementu członkowskiego. To przeciążenie `Create` scalenia listy pierwsze obraz istniejącego obrazu, przechowywania obraz wynikowy w obiekcie listy obrazów. Nowy obraz jest tworzony za pomocą rysowania drugi obraz w sposób niewidoczny dla użytkownika za pośrednictwem pierwszego. Maska dla nowego obrazu jest wynikiem operacji logiczne OR na bity maski dla dwóch istniejących obrazów.
+Aby utworzyć nową listę obrazów przez scalenie dwóch list obrazów, użyj odpowiedniego przeciążenia funkcji [tworzenia](reference/cimagelist-class.md#create) elementu członkowskiego. To przeciążenie polega na `Create` scaleniu pierwszego obrazu istniejących list obrazów, przechowując wynikowy obraz w nowym obiekcie listy obrazów. Nowy obraz jest tworzony przez rysowanie drugiego obrazu w sposób niewidoczny w pierwszej kolejności. Maska dla nowego obrazu jest wynikiem wykonywania logicznej operacji na bitach masek dla obu istniejących obrazów.
 
-To jest powtarzany, dopóki wszystkie obrazy są scalane i dodawane do nowego obiektu listy obrazów.
+Jest to powtarzane, dopóki wszystkie obrazy nie zostaną scalone i dodane do nowego obiektu listy obrazów.
 
-Informacje o obrazie można zapisywać do archiwum, wywołując [zapisu](../mfc/reference/cimagelist-class.md#write) funkcja elementu członkowskiego, a także zapoznaj je z powrotem przez wywołanie metody [odczytu](../mfc/reference/cimagelist-class.md#read) funkcja elementu członkowskiego.
+Informacje o obrazie można zapisać do archiwum, wywołując funkcję składowej [zapisu](reference/cimagelist-class.md#write) i odczytając ją ponownie przez wywołanie funkcji [odczytu](reference/cimagelist-class.md#read) elementu członkowskiego.
 
-[GetSafeHandle](../mfc/reference/cimagelist-class.md#getsafehandle), [Attach](../mfc/reference/cimagelist-class.md#attach), i [Odłącz](../mfc/reference/cimagelist-class.md#detach) elementów członkowskich umożliwiają manipulowanie dojściem listy obrazów dołączonych do `CImageList` obiektu, gdy [DeleteImageList](../mfc/reference/cimagelist-class.md#deleteimagelist) funkcja członkowska usuwa listy obrazów bez niszczenia samego `CImageList` obiektu.
+Funkcje [GetSafeHandle](reference/cimagelist-class.md#getsafehandle), [Attach](reference/cimagelist-class.md#attach)i [Odłącz](reference/cimagelist-class.md#detach) składowe umożliwiają manipulowanie uchwytem listy obrazów dołączonej do `CImageList` obiektu, natomiast funkcja członkowska [DeleteImageList](reference/cimagelist-class.md#deleteimagelist) usuwa listę obrazów bez niszczenia `CImageList` obiektu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Korzystanie z CImageList](../mfc/using-cimagelist.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Korzystanie z CImageList](using-cimagelist.md)<br/>
+[Formanty](controls-mfc.md)

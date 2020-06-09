@@ -11,21 +11,21 @@ helpviewer_keywords:
 - deactivating views [MFC]
 - current view in frame window [MFC]
 ms.assetid: 0a1cc22d-d646-4536-9ad2-3cb6d7092e4a
-ms.openlocfilehash: a926a9e31f7c43ab625220a4d759f6d536c2a77f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2ce9d77234260ebcb1946dd381264fb6654a91c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173343"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621309"
 ---
 # <a name="managing-the-current-view"></a>Zarządzanie bieżącym widokiem
 
-W ramach domyślna Implementacja klasy okien ramowych okno ramowe przechowuje informacje o aktualnie aktywnego widoku. Jeśli okno ramowe zawiera więcej niż jeden widok, na przykład w okna dzielącego, bieżący widok jest najbardziej aktualną widoku w użyciu. Widok aktywny jest niezależna od aktywnego okna w Windows lub bieżący fokus wprowadzania.
+W ramach domyślnej implementacji okien ramowych, okno ramki śledzi aktualnie aktywny widok. Jeśli okno ramki zawiera więcej niż jeden widok, jak na przykład w oknie rozdzielacza bieżący widok jest ostatnim widokiem w użyciu. Aktywny widok jest niezależny od aktywnego okna w systemie Windows lub bieżącego fokusu wprowadzania.
 
-Gdy bieżącym widokiem zmieni, struktura powiadamia bieżący widok, wywołując jego [OnActivateView](../mfc/reference/cview-class.md#onactivateview) funkcja elementu członkowskiego. Można stwierdzić, czy widok jest aktywowany lub dezaktywowany, sprawdzając `OnActivateView`firmy *bActivate* parametru. Domyślnie `OnActivateView` Ustawia fokus na bieżący widok aktywacji. Można zastąpić `OnActivateView` do wykonania dowolnej specjalnego przetwarzania, jeśli widok jest dezaktywowany lub ponownie aktywować. Na przykład możesz chcieć zapewnić specjalne podpowiedzi wizualne do odróżnienia widok aktywny od innych, nieaktywne widoki.
+Gdy aktywny widok zostanie zmieniony, struktura powiadamia bieżący widok, wywołując jego funkcję członkowską [OnActivateView](reference/cview-class.md#onactivateview) . Możesz sprawdzić, czy widok jest aktywowany, czy zdezaktywowany, badając `OnActivateView` parametr *bActivate* . Domyślnie program `OnActivateView` Ustawia fokus na bieżący widok podczas aktywacji. Można przesłonić `OnActivateView` w celu przeprowadzenia dowolnego przetwarzania specjalnego, gdy widok zostanie zdezaktywowany lub ponownie aktywowany. Na przykład możesz chcieć podać specjalne podpowiedzi wizualne do odróżnienia aktywnego widoku od innych nieaktywnych widoków.
 
-Okno ramowe przekazuje polecenia do bieżącego widoku (aktywny), zgodnie z opisem w [Routing poleceń](../mfc/command-routing.md), w ramach standardowego routingu poleceń.
+Okno ramowe przekazuje polecenia do bieżącego (aktywnego) widoku, zgodnie z opisem w temacie [routing poleceń](command-routing.md)w ramach standardowego routingu poleceń.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Używanie okien ramowych](../mfc/using-frame-windows.md)
+[Używanie okien ramowych](using-frame-windows.md)

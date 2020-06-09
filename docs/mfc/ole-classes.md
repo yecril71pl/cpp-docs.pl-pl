@@ -9,47 +9,47 @@ helpviewer_keywords:
 - OLE classes [MFC]
 - OLE [MFC], classes
 ms.assetid: 4c2b2bca-fafb-4d2d-8498-9ed1e04011d2
-ms.openlocfilehash: 69eb604b3a343fd135c76a4bb3c17245ece62092
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 039f60f98a9109ca578b52db7d087a22d0440808
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186407"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617840"
 ---
 # <a name="ole-classes"></a>Klasy OLE
 
-Klasy OLE współpracować z innych aplikacji framework klas zapewnienie łatwego dostępu do interfejsu API ActiveX, zapewniając programów w prosty sposób możliwości ActiveX dla użytkowników. Za pomocą ActiveX, możesz wykonywać następujące czynności:
+Klasy OLE współpracują z innymi klasami struktury aplikacji w celu zapewnienia łatwego dostępu do interfejsu API ActiveX, dzięki czemu programy umożliwiają łatwą obsługę ActiveX użytkownikom. Za pomocą ActiveX można:
 
-- Tworzenie złożonych dokumentów, aby umożliwić użytkownikom tworzenie i edytowanie dokumentów zawierających dane utworzone przez wiele aplikacji, w tym tekst, grafikę, arkusze kalkulacyjne, dźwięk, lub inne typy danych.
+- Twórz złożone dokumenty, które umożliwiają użytkownikom tworzenie i edytowanie dokumentów zawierających dane utworzone przez wiele aplikacji, w tym tekst, grafikę, arkusze kalkulacyjne, dźwięk lub inne typy danych.
 
-- Tworzenie obiektów OLE, które mogą być osadzone w dokumentów złożonych.
+- Utwórz obiekty OLE, które mogą być osadzone w dokumentach złożonych.
 
-- Kopiowanie danych między aplikacjami za pomocą OLE przeciągania i upuszczania.
+- Użyj przeciągania i upuszczania OLE do kopiowania danych między aplikacjami.
 
-- Przy użyciu usługi Automation do kontrolowania jednego programu w innym.
+- Używanie automatyzacji do kontrolowania jednego programu z innym.
 
-- Tworzenie formantów ActiveX i kontenery kontrolek ActiveX (dawniej nazywanych formantów OLE i kontenery kontrolek OLE, odpowiednio).
+- Twórz kontrolki ActiveX i kontenery kontrolek ActiveX (wcześniej nazywane odpowiednio kontrolkami OLE i kontenerami formantów OLE).
 
-Następujące kategorie klasy pomocy technicznej ActiveX:
+Następujące kategorie klas obsługują kontrolki ActiveX:
 
-- [Klasy kontenerów OLE](../mfc/ole-container-classes.md)
+- [Klasy kontenerów OLE](ole-container-classes.md)
 
-- [Klasy serwerów OLE](../mfc/ole-server-classes.md)
+- [Klasy serwerów OLE](ole-server-classes.md)
 
-- [Klasy przeciągania i upuszczania oraz transferów danych OLE](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)
+- [Klasy przeciągania i upuszczania oraz transferów danych OLE](ole-drag-and-drop-and-data-transfer-classes.md)
 
-- [Klasy wspólnych okien dialogowych OLE](../mfc/ole-common-dialog-classes.md)
+- [Klasy wspólnych okien dialogowych OLE](ole-common-dialog-classes.md)
 
-- [Klasy automatyzacji OLE](../mfc/ole-automation-classes.md)
+- [Klasy automatyzacji OLE](ole-automation-classes.md)
 
-- [Klasy kontrolek OLE](../mfc/ole-control-classes.md)
+- [Klasy formantów OLE](ole-control-classes.md)
 
-- [Klasy dokumentów aktywnych](../mfc/active-document-classes.md)
+- [Klasy dokumentów aktywnych](active-document-classes.md)
 
-- [Klasy związane z OLE](../mfc/ole-related-classes.md)
+- [Klasy związane z OLE](ole-related-classes.md)
 
-Aby zobaczyć dziedziczenie klasy, użyj [Tabela hierarchii klas](../mfc/hierarchy-chart.md).
+Aby wyświetlić dziedziczenie klasy, użyj [wykresu hierarchii klas](hierarchy-chart.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../mfc/class-library-overview.md)
+[Przegląd klas](class-library-overview.md)

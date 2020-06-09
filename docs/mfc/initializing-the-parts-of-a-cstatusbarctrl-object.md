@@ -10,26 +10,26 @@ helpviewer_keywords:
 - icons, using in status bars
 - CStatusBarCtrl class [MFC], declaring parts of
 ms.assetid: 60e8f285-d2d8-424a-a6ea-2fc548370303
-ms.openlocfilehash: a5b65a2bbb68eaa7058f3514bb95a5209a0e5e71
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bd099a67d9f11cc3657a91b4141d3f18c6fa719d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444450"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621652"
 ---
 # <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>Inicjowanie części obiektu CStatusBarCtrl
 
 Domyślnie pasek stanu wyświetla informacje o stanie przy użyciu oddzielnych okienek. Te okienka (nazywane również częścią) mogą zawierać ciąg tekstowy, ikonę lub obie te okna.
 
-Użyj elementu [SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) , aby zdefiniować, ile części i długości ma mieć pasek stanu. Po utworzeniu części paska stanu, wykonaj wywołania do [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) i [SetIcon](../mfc/reference/cstatusbarctrl-class.md#seticon) , aby ustawić tekst lub ikonę dla określonej części paska stanu. Po pomyślnym ustawieniu części kontrolka zostanie automatycznie narysowana ponownie.
+Użyj elementu [SetParts](reference/cstatusbarctrl-class.md#setparts) , aby zdefiniować, ile części i długości ma mieć pasek stanu. Po utworzeniu części paska stanu, wykonaj wywołania do [SetText](reference/cstatusbarctrl-class.md#settext) i [SetIcon](reference/cstatusbarctrl-class.md#seticon) , aby ustawić tekst lub ikonę dla określonej części paska stanu. Po pomyślnym ustawieniu części kontrolka zostanie automatycznie narysowana ponownie.
 
-Poniższy przykład inicjuje istniejący obiekt `CStatusBarCtrl` (`m_StatusBarCtrl`) z czterema okienkami, a następnie ustawia ikonę (IDI_ICON1) i tekst w drugiej części.
+Poniższy przykład inicjuje istniejący `CStatusBarCtrl` obiekt ( `m_StatusBarCtrl` ) z czterema okienkami, a następnie ustawia ikonę (IDI_ICON1) i tekst w drugiej części.
 
-[!code-cpp[NVC_MFCControlLadenDialog#31](../mfc/codesnippet/cpp/initializing-the-parts-of-a-cstatusbarctrl-object_1.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#31](codesnippet/cpp/initializing-the-parts-of-a-cstatusbarctrl-object_1.cpp)]
 
-Aby uzyskać więcej informacji na temat ustawiania trybu obiektu `CStatusBarCtrl` na prosty, zobacz [Ustawianie trybu obiektu CStatusBarCtrl](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).
+Aby uzyskać więcej informacji na temat ustawiania trybu `CStatusBarCtrl` prostego dla obiektu, zobacz [Ustawianie trybu obiektu CStatusBarCtrl](setting-the-mode-of-a-cstatusbarctrl-object.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Korzystanie ze CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Korzystanie ze CStatusBarCtrl](using-cstatusbarctrl.md)<br/>
+[Formanty](controls-mfc.md)

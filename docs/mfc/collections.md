@@ -17,60 +17,60 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-ms.openlocfilehash: 3fba3a3c6cd3fecbda7f46575b1d72c450c44019
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f2cd03afbb09dff38298454658c3d3dc2dfa6a8a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361868"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619347"
 ---
 # <a name="collections"></a>Kolekcje
 
-Biblioteka klas programu Microsoft Foundation udostępnia klasy kolekcji do zarządzania grupami obiektów. Klasy te są dwojaki:
+Biblioteka MFC zawiera klasy kolekcji do zarządzania grupami obiektów. Te klasy są dwa typy:
 
 - [Klasy kolekcji utworzone na podstawie szablonów języka C++](#_core_the_template_based_collection_classes)
 
-- [Klasy kolekcji nie utworzone z szablonów](#_core_the_collection_classes_not_based_on_templates)
+- [Klasy kolekcji nie zostały utworzone na podstawie szablonów](#_core_the_collection_classes_not_based_on_templates)
 
 > [!NOTE]
-> Jeśli kod już używa klas kolekcji nontemplate, można nadal z nich korzystać. Jeśli piszesz nowe klasy kolekcji bezpieczne dla własnych typów danych, zaleca się użycie nowszych klas opartych na szablonie.
+> Jeśli kod używa już klas kolekcji nieszablonowych, można nadal z nich korzystać. Jeśli tworzysz nowe klasy kolekcji bezpiecznych dla typu danych, zalecamy użycie nowszych klas opartych na szablonach.
 
 ## <a name="collection-shapes"></a><a name="_core_collection_shapes"></a>Kształty kolekcji
 
-Klasa kolekcji charakteryzuje się "kształtem" i rodzajami jej elementów. Kształt odnosi się do sposobu, w jaki obiekty są zorganizowane i przechowywane przez kolekcję. MFC zawiera trzy podstawowe kształty kolekcji: listy, tablice i mapy (znane również jako słowniki). Można wybrać kształt kolekcji, który jest najbardziej odpowiedni do konkretnego problemu programowania.
+Klasa kolekcji jest scharakteryzowana przy użyciu jej "Shape" i typów jej elementów. Kształt odwołuje się do sposobu, w jaki obiekty są zorganizowane i przechowywane w kolekcji. MFC oferuje trzy podstawowe kształty kolekcji: listy, tablice i mapy (znane również jako słowniki). Można wybrać kształt kolekcji, który jest najbardziej odpowiedni dla danego problemu programistycznego.
 
-Każdy z trzech dostarczonych kształtów kolekcji jest opisany krótko w dalszej części tego tematu. Aby porównać cechy kształtów, które pomogą Ci zdecydować, który program jest najlepszy dla programu, zobacz [Zalecenia dotyczące wybierania klasy kolekcji](../mfc/recommendations-for-choosing-a-collection-class.md).
+Każdy z trzech podanych kształtów kolekcji został krótko opisany w dalszej części tego tematu. Aby porównać funkcje kształtów, aby ułatwić podjęcie decyzji, która jest Najlepsza dla programu, zobacz [zalecenia dotyczące wybierania klasy kolekcji](recommendations-for-choosing-a-collection-class.md).
 
-- List
+- Lista
 
-   Klasa listy zawiera uporządkowaną, nieindeksowana listę elementów, zaimplementowana jako podwójnie połączona lista. Lista ma "głowę" i "ogon", a dodawanie lub usuwanie elementów z głowy lub ogona lub wstawianie lub usuwanie elementów w środku jest bardzo szybkie.
+   Klasa list zawiera uporządkowaną, nieindeksowaną listę elementów, zaimplementowaną jako połączoną listę. Lista zawiera "główne" i "ogon" oraz dodawanie lub usuwanie elementów z głowy lub ogona, lub wstawianie lub usuwanie elementów w środku, jest bardzo szybka.
 
 - Tablica
 
-   Klasa tablicy zapewnia dynamicznie dobraną, uporządkowaną i indeksowany numer całkowity tablicę obiektów.
+   Klasa Array zapewnia dynamiczną, uporządkowaną i poindeksowaną tablicę obiektów.
 
-- Mapa (znana również jako słownik)
+- Mapa (znana także jako słownik)
 
-   Mapa to kolekcja, która kojarzy obiekt klucza z obiektem wartości.
+   Mapa jest kolekcją, która kojarzy obiekt klucza z obiektem wartości.
 
-## <a name="the-template-based-collection-classes"></a><a name="_core_the_template_based_collection_classes"></a>Klasy kolekcji oparte na szablonach
+## <a name="the-template-based-collection-classes"></a><a name="_core_the_template_based_collection_classes"></a>Klasy kolekcji opartej na szablonach
 
-Najprostszym sposobem zaimplementowania kolekcji bezpieczne typu, która zawiera obiekty dowolnego typu jest użycie jednej z klas opartych na szablonie MFC. Przykłady tych klas można znaleźć w przykładzie MFC [COLLECT](../overview/visual-cpp-samples.md).
+Najprostszym sposobem implementacji kolekcji bezpiecznej do typów, która zawiera obiekty dowolnego typu, jest użycie jednej z klas opartych na szablonie MFC. Aby zapoznać się z przykładami tych klas, zobacz [zbieranie](../overview/visual-cpp-samples.md)próbek MFC.
 
-W poniższej tabeli wymieniono klasy kolekcji oparte na szablonie MFC.
+Poniższa tabela zawiera listę klas kolekcji opartych na szablonie MFC.
 
-### <a name="collection-template-classes"></a>Klasy szablonów kolekcji
+### <a name="collection-template-classes"></a>Klasy szablonu kolekcji
 
 |Zawartość kolekcji|Tablice|Listy|Maps|
 |-------------------------|------------|-----------|----------|
 |Kolekcje obiektów dowolnego typu|`CArray`|`CList`|`CMap`|
 |Kolekcje wskaźników do obiektów dowolnego typu|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|
 
-## <a name="the-collection-classes-not-based-on-templates"></a><a name="_core_the_collection_classes_not_based_on_templates"></a>Klasy kolekcji nie oparte na szablonach
+## <a name="the-collection-classes-not-based-on-templates"></a><a name="_core_the_collection_classes_not_based_on_templates"></a>Klasy kolekcji, które nie są oparte na szablonach
 
-Jeśli aplikacja już używa klas niepamiętnych MFC, można nadal z nich korzystać. Jednak dla nowych kolekcji zaleca się użycie klas opartych na szablonie. W poniższej tabeli wymieniono klasy kolekcji MFC, które nie są oparte na szablonach.
+Jeśli aplikacja używa już klas MFC, można nadal z nich korzystać. Jednak w przypadku nowych kolekcji zalecamy korzystanie z klas opartych na szablonach. W poniższej tabeli wymieniono klasy kolekcji MFC, które nie są oparte na szablonach.
 
-### <a name="nontemplate-collection-classes"></a>Klasy kolekcji nontemplate
+### <a name="nontemplate-collection-classes"></a>Klasy kolekcji nieszablonowych
 
 |Tablice|Listy|Maps|
 |------------|-----------|----------|
@@ -82,39 +82,39 @@ Jeśli aplikacja już używa klas niepamiętnych MFC, można nadal z nich korzys
 |`CWordArray`||`CMapWordToOb`|
 |`CUIntArray`||`CMapWordToPtr`|
 
-Charakterystyka MFC Kolekcji klasy tabeli w [zalecenia dotyczące wyboru klasy kolekcji](../mfc/recommendations-for-choosing-a-collection-class.md) opisuje klasy kolekcji MFC pod względem tych cech (innych niż kształt):
+Charakterystyki tabeli klas kolekcji MFC w [zaleceniach dotyczących wybierania klasy kolekcji](recommendations-for-choosing-a-collection-class.md) opisują klasy kolekcji MFC pod względem tych cech (innych niż kształt):
 
-- Czy klasa używa szablonów języka C++
+- Czy Klasa używa szablonów języka C++
 
 - Czy elementy przechowywane w kolekcji mogą być serializowane
 
-- Czy elementy przechowywane w kolekcji mogą być po cenach dumpingowych do diagnostyki
+- Czy elementy przechowywane w kolekcji mogą być zrzucane na potrzeby diagnostyki
 
-- Czy kolekcja jest bezpieczna
+- Czy kolekcja jest bezpieczna pod względem typu
 
 ### <a name="what-do-you-want-to-do"></a>Co chcesz zrobić
 
-#### <a name="general-collection-class-tasks"></a>Zadania klasy kolekcji ogólnej
+#### <a name="general-collection-class-tasks"></a>Ogólne zadania klasy kolekcji
 
-- [Zalecenia dotyczące wybierania klasy kolekcji](../mfc/recommendations-for-choosing-a-collection-class.md)
+- [Zalecenia dotyczące wybierania klasy kolekcji](recommendations-for-choosing-a-collection-class.md)
 
-- [Instrukcje: tworzenie bezpiecznej kolekcji](../mfc/how-to-make-a-type-safe-collection.md)
+- [Instrukcje: tworzenie bezpiecznej kolekcji](how-to-make-a-type-safe-collection.md)
 
-- [Tworzenie kolekcji stosów i kolejek](../mfc/creating-stack-and-queue-collections.md)
+- [Tworzenie kolekcji stosów i kolejek](creating-stack-and-queue-collections.md)
 
-- [CArray::Dodaj](../mfc/reference/carray-class.md#add)
+- [CArray:: Add](reference/carray-class.md#add)
 
-#### <a name="template-based-collection-class-tasks"></a>Zadania klasy kolekcji oparte na szablonie
+#### <a name="template-based-collection-class-tasks"></a>Zadania klasy kolekcji opartej na szablonach
 
-- [Klasy oparte na szablonach](../mfc/template-based-classes.md)
+- [Klasy oparte na szablonach](template-based-classes.md)
 
-#### <a name="accessing-the-members-of-a-collection-template-based-or-not"></a>Uzyskiwanie dostępu do członków kolekcji (oparte na szablonach lub nie)
+#### <a name="accessing-the-members-of-a-collection-template-based-or-not"></a>Uzyskiwanie dostępu do elementów członkowskich kolekcji (opartych na szablonie lub nie)
 
-- [Uzyskiwanie dostępu do wszystkich elementów członkowskich kolekcji](../mfc/accessing-all-members-of-a-collection.md)
+- [Uzyskiwanie dostępu do wszystkich elementów członkowskich kolekcji](accessing-all-members-of-a-collection.md)
 
-- [Usuwanie wszystkich obiektów z kolekcji CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md)
+- [Usuwanie wszystkich obiektów z kolekcji CObject](deleting-all-objects-in-a-cobject-collection.md)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Pojęcia](../mfc/mfc-concepts.md)<br/>
-[Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)
+[Pojęcia](mfc-concepts.md)<br/>
+[Tematy ogólne dotyczące MFC](general-mfc-topics.md)

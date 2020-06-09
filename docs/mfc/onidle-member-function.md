@@ -10,24 +10,24 @@ helpviewer_keywords:
 - CWinApp class [MFC], OnIdle method [MFC]
 - message handling [MFC], OnIdle method [MFC]
 ms.assetid: 51adc874-0075-4f76-be1c-79283f46c10b
-ms.openlocfilehash: c7cdd5cd2327be1b90e7fdb3694353acf8adcafe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17595713f942c7fe7784fa2a12adbcc583cad418
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394563"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619843"
 ---
 # <a name="onidle-member-function"></a>OnIdle — Funkcja członkowska
 
-Podczas przetwarzania żadnych komunikatów Windows struktura wywołuje [CWinApp](../mfc/reference/cwinapp-class.md) funkcja elementu członkowskiego [OnIdle](../mfc/reference/cwinapp-class.md#onidle) (opisanej w odwołanie do biblioteki MFC).
+Gdy nie są przetwarzane żadne komunikaty systemu Windows, struktura [wywołuje funkcję elementu](reference/cwinapp-class.md#onidle) Członkowskiego [CWinApp](reference/cwinapp-class.md) (opisany w dokumentacji biblioteki MFC).
 
-Zastąp `OnIdle` do wykonywania zadań w tle. Domyślna wersja aktualizuje stan obiektów interfejsu użytkownika, takich jak przyciski paska narzędzi i wykonuje oczyszczania obiekty tymczasowe, utworzone przez platformę w trakcie jego działania. Na poniższym rysunku przedstawiono, jak pętli komunikatów wywołuje `OnIdle` gdy nie ma żadnych komunikatów w kolejce.
+Przesłoń `OnIdle` , aby wykonać zadania w tle. Wersja domyślna aktualizuje stan obiektów interfejsu użytkownika, takich jak przyciski paska narzędzi i wykonuje czyszczenie tymczasowych obiektów utworzonych przez platformę w trakcie jego operacji. Na poniższej ilustracji pokazano, jak pętla jest wywoływana w `OnIdle` przypadku braku komunikatów w kolejce.
 
-![Przetwarzanie pętli komunikatów](../mfc/media/vc387c1.gif "proces pętli komunikatów") <br/>
-Pętli komunikatów
+![Proces pętli komunikatów](../mfc/media/vc387c1.gif "Proces pętli komunikatów") <br/>
+Pętla komunikatów
 
-Aby uzyskać więcej informacji na temat działania w pętli bezczynności, zobacz [przetwarzanie pętli bezczynności](../mfc/idle-loop-processing.md).
+Aby uzyskać więcej informacji o tym, co można zrobić w pętli bezczynności, zobacz [przetwarzanie pętli bezczynności](idle-loop-processing.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)
+[CWinApp: klasa aplikacji](cwinapp-the-application-class.md)

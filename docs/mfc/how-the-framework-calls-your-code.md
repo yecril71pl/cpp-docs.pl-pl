@@ -12,25 +12,25 @@ helpviewer_keywords:
 - application-specific events [MFC]
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
-ms.openlocfilehash: 81b0749167391a841badff5494023a2ca5d3147e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 318ca9558d705ca483d41867a1fe2ad46c36666f
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407955"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622607"
 ---
 # <a name="how-the-framework-calls-your-code"></a>Jak struktura wywołuje kod
 
-Niezwykle ważne jest zrozumienie relacji między kodem źródłowym i kodu w ramach MFC. Po uruchomieniu aplikacji, większość przepływ sterowania znajduje się w kodzie programu framework. Szablon zarządza pętli komunikatów, która pobiera komunikaty z Windows, kiedy użytkownik wybierze poleceń i dokona edycji danych w widoku. Zdarzenia, które struktura może obsługiwać samodzielnie, nie należy polegać na jej kodzie na wszystkich. Na przykład platformę zna sposób zamknięcia systemu windows i zamknij aplikację w odpowiedzi na polecenia użytkownika. Sposób jak te zadania, struktura używa programy obsługi komunikatów i funkcji wirtualnych C++, co zapewnia możliwości, aby odpowiedzieć na te zdarzenia, jak również. Twój kod jest nie w kontrolce. Struktura jest.
+Ważne jest zrozumienie relacji między kodem źródłowym i kodem w strukturze MFC. Gdy aplikacja jest uruchomiona, większość przepływu sterowania znajduje się w kodzie struktury. Struktura zarządza pętlą komunikatów, która pobiera komunikaty z systemu Windows, gdy użytkownik wybierze polecenia i edytuje dane w widoku. Zdarzenia, które struktura może obsłużyć samodzielnie, nie polegają na kodzie. Na przykład struktura wie, jak zamknąć okna i jak wyjść z aplikacji w odpowiedzi na polecenia użytkownika. Ponieważ obsługuje te zadania, struktura używa programów obsługi komunikatów i wirtualnych funkcji języka C++, aby zapewnić możliwość reagowania na te zdarzenia. Kod nie jest jednak w kontroli; Struktura to.
 
-Struktura wywołuje kod dla zdarzeń specyficznych dla aplikacji. Na przykład, gdy użytkownik wybierze polecenie menu, struktura kieruje polecenia wzdłuż sekwencji obiektów C++: bieżące okno widoku i ramki, dokument skojarzony z widoku, w szablonie dokumentu i obiekt aplikacji. Jeśli jeden z tych obiektów można obsługiwać polecenia, robi, wywołanie funkcji odpowiedni program obsługi komunikatów. Dla dowolnego polecenia kod wywołuje się, może być należy do Ciebie, lub może być struktury.
+Struktura wywołuje kod dla zdarzeń specyficznych dla aplikacji. Na przykład, gdy użytkownik wybierze polecenie menu, struktura kieruje polecenie wzdłuż sekwencji obiektów C++: bieżące okno widok i ramka, dokument skojarzony z widokiem, szablon dokumentu dokumentu i obiekt aplikacji. Jeśli jeden z tych obiektów może obsłużyć polecenie, wywołuje odpowiednią funkcję obsługi komunikatów. W przypadku dowolnego polecenia kod o nazwie może być własny lub być strukturą.
 
-Taki układ jest dość dobrze znanych programistom technicznego z systemem Windows tradycyjnego programowania i programowanie sterowane zdarzeniami.
+To rozwiązanie jest nieco znane programistom, którzy znają tradycyjne programowanie dla systemu Windows lub programowania opartego na zdarzeniach.
 
-W powiązanych tematach możesz przeczytać co struktura ponieważ inicjuje i uruchamia aplikację i następnie czyści jako zakończenia aplikacji. Również wiedzieć, gdzie tworzonego kodu znajdzie się.
+W pokrewnych tematach można przeczytać informacje o tym, co jest inicjowane przez platformę, i uruchomić aplikację, a następnie czyści, gdy aplikacja zakończy działanie. Zapoznaj się również z miejscem, w którym napisano kod.
 
-Aby uzyskać więcej informacji, zobacz [CWinApp klasy: Klasa aplikacji](../mfc/cwinapp-the-application-class.md) i [szablony dokumentów i proces tworzenia dokumentu/widoku](../mfc/document-templates-and-the-document-view-creation-process.md).
+Aby uzyskać więcej informacji, zobacz [Klasa CWinApp: Klasa aplikacji](cwinapp-the-application-class.md) oraz [Szablony dokumentów i proces tworzenia dokumentu/widoku](document-templates-and-the-document-view-creation-process.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Opieranie się na strukturze](../mfc/building-on-the-framework.md)
+[Opieranie się na strukturze](building-on-the-framework.md)

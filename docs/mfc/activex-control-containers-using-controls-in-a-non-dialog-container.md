@@ -1,5 +1,5 @@
 ---
-title: 'Kontenery kontrolek ActiveX: Używanie kontrolek w kontenerze innym niż okno dialogowe'
+title: 'Kontenery kontrolek ActiveX: używanie kontrolek w kontenerze innym niż okno dialogowe'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Create method [MFC], ActiveX controls
@@ -8,59 +8,59 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: 70a67a6952d5361177b89e3ba514d7036b5799b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b010c35f32462810cbdb008e5688d4b41254fad1
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394874"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620774"
 ---
-# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Kontenery kontrolek ActiveX: Używanie kontrolek w kontenerze innym niż okno dialogowe
+# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Kontenery kontrolek ActiveX: używanie kontrolek w kontenerze innym niż okno dialogowe
 
-W niektórych aplikacji, takich jak SDI lub MDI aplikacji należy osadzić formantu w oknie aplikacji. **Utwórz** funkcji składowej klasy otoki wstawione przez Visual C++, można utworzyć wystąpienie kontrolki dynamicznie, bez konieczności dla okna dialogowego.
+W niektórych aplikacjach, takich jak aplikacja SDI lub MDI, trzeba osadzić kontrolkę w oknie aplikacji. Funkcja **Create** member klasy otoki, wstawiona przez Visual C++, może dynamicznie tworzyć wystąpienie formantu, bez potrzeby okna dialogowego.
 
-**Utwórz** funkcja elementu członkowskiego ma następujące parametry:
+Funkcja **Create** member ma następujące parametry:
 
 *lpszWindowName*<br/>
-Wskaźnik na tekst do wyświetlenia we właściwości Text lub Caption kontrolki (jeśli istnieje).
+Wskaźnik do tekstu, który ma być wyświetlany w właściwości tekst lub etykieta kontrolki (jeśli istnieje).
 
 *dwStyle*<br/>
-Style Windows. Aby uzyskać pełną listę, zobacz [CWnd::CreateControl](../mfc/reference/cwnd-class.md#createcontrol).
+Style systemu Windows. Aby uzyskać pełną listę, zobacz [CWnd:: IsControl](reference/cwnd-class.md#createcontrol).
 
-*Rect*<br/>
-Określa rozmiar i położenie formantu.
+*cinania*<br/>
+Określa rozmiar i położenie kontrolki.
 
 *pParentWnd*<br/>
-Określa okno nadrzędne kontrolki, zwykle `CDialog`. Nie może być **NULL**.
+Określa okno nadrzędne kontrolki, zazwyczaj a `CDialog` . Nie może mieć **wartości null**.
 
 *nID*<br/>
-Określa identyfikator kontrolki i może służyć przez kontener do odwoływania się do kontrolki.
+Określa identyfikator kontrolki i może być używany przez kontener w celu odwoływania się do kontrolki.
 
-Przykładem korzystania z tej funkcji umożliwia dynamiczne tworzenie formantu ActiveX byłoby w widoku formularza aplikacji interfejsu SDI. Następnie można utworzyć wystąpienia kontrolki `WM_CREATE` obsługi aplikacji.
+Przykładem użycia tej funkcji do dynamicznego tworzenia kontrolki ActiveX będzie w widoku formularza aplikacji SDI. Następnie można utworzyć wystąpienie kontrolki w programie `WM_CREATE` obsługi aplikacji.
 
-W tym przykładzie `CMyView` jest klasą Widok główny `CCirc` to klasa otoki i okólnik H jest nagłówkiem, którego (. H) plik klasy otoki.
+W tym przykładzie `CMyView` jest klasą widoku głównego, `CCirc` jest klasą otoki i cyklem. H jest nagłówkiem (. H) plik klasy otoki.
 
-Implementacja tej funkcji jest procesem, krok 4.
+Implementowanie tej funkcji jest procesem dwuetapowym.
 
-### <a name="to-dynamically-create-an-activex-control-in-a-non-dialog-window"></a>Umożliwia dynamiczne tworzenie kontrolki ActiveX w oknie innym niż okno dialogowe
+### <a name="to-dynamically-create-an-activex-control-in-a-non-dialog-window"></a>Aby dynamicznie utworzyć formant ActiveX w oknie innym niż okno dialogowe
 
-1. Wstaw okólnik H w CMYVIEW. Godz., tuż przed `CMyView` definicję klasy:
+1. Wstaw cykl. H w CMYVIEW. H, tuż przed `CMyView` definicją klasy:
 
-   [!code-cpp[NVC_MFC_AxCont#12](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_1.h)]
+   [!code-cpp[NVC_MFC_AxCont#12](codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_1.h)]
 
-1. Dodawanie zmiennej członkowskiej (typu `CCirc`) do sekcji chronionych `CMyView` na terenie CMYVIEW definicji klasy. GODZ.:
+1. Dodaj zmienną członkowską (typu `CCirc` ) do chronionej sekcji `CMyView` definicji klasy znajdującej się w CMYVIEW. C
 
-   [!code-cpp[NVC_MFC_AxCont#13](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_2.h)]
-    [!code-cpp[NVC_MFC_AxCont#14](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_3.h)]
+   [!code-cpp[NVC_MFC_AxCont#13](codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_2.h)]
+    [!code-cpp[NVC_MFC_AxCont#14](codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_3.h)]
 
-1. Dodaj `WM_CREATE` obsługi wiadomości do klasy `CMyView`.
+1. Dodaj `WM_CREATE` procedurę obsługi komunikatów do klasy `CMyView` .
 
-1. W funkcji obsługi `CMyView::OnCreate`, wywołanie formantu `Create` funkcję za pomocą **to** wskaźnik jako okno nadrzędne:
+1. W funkcji obsługi, należy `CMyView::OnCreate` wywołać funkcję kontrolki `Create` za pomocą **tego** wskaźnika jako okna nadrzędnego:
 
-   [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#15](codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
 
-1. Skompiluj ponownie projekt. Kontrolka OK zostanie utworzony dynamicznie po każdym utworzeniu widoku aplikacji.
+1. Ponownie skompiluj projekt. Kontrolka cykl zostanie utworzona dynamicznie za każdym razem, gdy zostanie utworzony widok aplikacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Kontenery kontrolek ActiveX](../mfc/activex-control-containers.md)
+[Kontenery kontrolek ActiveX](activex-control-containers.md)

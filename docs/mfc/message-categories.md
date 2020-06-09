@@ -10,39 +10,39 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - message handling [MFC], message types
 ms.assetid: 68e1db75-9da6-4a4d-b2c2-dc4d59f8d87b
-ms.openlocfilehash: 686d5eef4aaa67785aa56133d820b637fbf4bb86
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3875a6931b4380f0531e4c1786de6dddfccb76ca
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364751"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625465"
 ---
 # <a name="message-categories"></a>Kategorie komunikatów
 
-Jakie rodzaje wiadomości piszesz programy obsługi dla Istnieją trzy główne kategorie:
+Jakiego rodzaju komunikaty są przeznaczone do obsługi zapisu, istnieją trzy główne kategorie:
 
 1. komunikaty systemu Windows
 
-   Obejmuje to przede wszystkim te komunikaty, począwszy od prefiksu **WM_,** z wyjątkiem WM_COMMAND. Komunikaty systemu Windows są obsługiwane przez okna i widoki. Te komunikaty często mają parametry, które są używane do określania sposobu obsługi wiadomości.
+   Obejmuje to przede wszystkim te komunikaty zaczynające się od prefiksu **WM_** , z wyjątkiem WM_COMMAND. Komunikaty systemu Windows są obsługiwane przez system Windows i widoki. Te komunikaty często mają parametry, które są używane w celu określenia sposobu obsługi wiadomości.
 
-1. Powiadomienia kontrolne
+1. Powiadomienia sterujące
 
-   Obejmuje to WM_COMMAND komunikatów powiadomień z formantów i innych okien podrzędnych do ich okien nadrzędnych. Na przykład formant edycji wysyła jego nadrzędnej WM_COMMAND komunikat zawierający EN_CHANGE kodu kontroli powiadomień, gdy użytkownik podjął akcję, która może zmienić tekst w formancie edycji. Program obsługi okna dla wiadomości odpowiada na komunikat powiadomienia w odpowiedni sposób, takich jak pobieranie tekstu w formancie.
+   Obejmuje to WM_COMMAND komunikatów powiadomień z formantów i innych okien podrzędnych do ich okien nadrzędnych. Na przykład kontrolka edycji wysyła swój nadrzędny komunikat WM_COMMAND zawierający kod powiadomienia EN_CHANGE Control, gdy użytkownik podjął akcję, która może mieć zmieniony tekst w kontrolce edycji. Program obsługi komunikatu reaguje na komunikat powiadomienia w inny sposób, na przykład pobierając tekst w kontrolce.
 
-   Framework trasy kontroli powiadomień wiadomości, takich jak inne **wiadomości WM_.** Wyjątkiem jest jednak komunikat BN_CLICKED powiadomienia formantu wysyłane przez przyciski, gdy użytkownik kliknie je. Ta wiadomość jest traktowana specjalnie jako komunikat polecenia i kierowana jak inne polecenia.
+   Struktura kieruje komunikaty powiadomień sterowania, jak inne wiadomości **WM_** . Jedynym wyjątkiem jest to, że jest to komunikat BN_CLICKED Control — powiadomienie wysyłane przez przyciski po kliknięciu przez użytkownika. Ten komunikat jest traktowany specjalnie jako komunikat polecenia i kierowany jak inne polecenia.
 
 1. Komunikaty poleceń
 
-   Obejmuje to WM_COMMAND komunikatów powiadomień z obiektów interfejsu użytkownika: menu, przycisków paska narzędzi i klawiszy akceleratora. Struktura przetwarza polecenia inaczej niż inne wiadomości i mogą być obsługiwane przez więcej rodzajów obiektów, jak wyjaśniono w [celach docelowych polecenia](../mfc/command-targets.md).
+   Obejmuje to WM_COMMAND komunikatów powiadomień z obiektów interfejsu użytkownika: menu, przyciski paska narzędzi i klawisze skrótów. Struktura przetwarza polecenia inaczej niż inne komunikaty i może być obsługiwana przez więcej rodzajów obiektów, jak wyjaśniono w [obiektach docelowych poleceń](command-targets.md).
 
-## <a name="windows-messages-and-control-notification-messages"></a><a name="_core_windows_messages_and_control.2d.notification_messages"></a>Wiadomości systemu Windows i komunikaty z powiadomieniami o kontroli
+## <a name="windows-messages-and-control-notification-messages"></a><a name="_core_windows_messages_and_control.2d.notification_messages"></a>Komunikaty systemu Windows i kontrolki — komunikaty powiadomień
 
-Wiadomości w kategoriach 1 i 2 — Wiadomości systemu Windows i powiadomienia sterujące `CWnd`— są obsługiwane przez okna: obiekty klas pochodzących z klasy . Obejmuje `CFrameWnd`to `CMDIFrameWnd` `CMDIChildWnd`, `CView` `CDialog`, , i własne klasy pochodzące z tych klas podstawowych. Takie obiekty hermetyzują `HWND`dojście do okna systemu Windows.
+Komunikaty w kategoriach 1 i 2 — komunikaty systemu Windows i powiadomienia dotyczące kontroli — są obsługiwane przez system Windows: obiekty klas pochodnych od klasy `CWnd` . Obejmuje to,,,, `CFrameWnd` `CMDIFrameWnd` `CMDIChildWnd` `CView` `CDialog` i własne klasy pochodne od tych klas podstawowych. Takie obiekty hermetyzują `HWND` uchwyt do okna systemu Windows.
 
 ## <a name="command-messages"></a><a name="_core_command_messages"></a>Komunikaty poleceń
 
-Wiadomości w kategorii 3 — polecenia — mogą być obsługiwane przez szerszą gamę obiektów: dokumenty, szablony dokumentów i sam obiekt aplikacji oprócz okien i widoków. Gdy polecenie bezpośrednio wpływa na niektóre określonego obiektu, ma sens, aby ten obiekt obsługiwać polecenia. Na przykład polecenie Otwórz w menu Plik jest logicznie skojarzone z aplikacją: aplikacja otwiera określony dokument po otrzymaniu polecenia. Tak więc program obsługi dla Open polecenia jest funkcją elementu członkowskiego klasy aplikacji. Aby uzyskać więcej informacji o poleceniach i sposobie ich kierowania do obiektów, zobacz [Jak framework wywołuje program obsługi](../mfc/how-the-framework-calls-a-handler.md).
+Komunikaty w kategorii 3 — polecenia — mogą być obsługiwane przez szersze wiele obiektów: dokumenty, szablony dokumentów i sam obiekt aplikacji oprócz systemu Windows i widoków. Gdy polecenie bezpośrednio wpływa na określony obiekt, warto mieć ten obiekt, aby obsłużyć polecenie. Na przykład polecenie Otwórz w menu plik jest logicznie skojarzone z aplikacją: aplikacja otwiera określony dokument po odebraniu polecenia. Dlatego program obsługi polecenia Otwórz jest funkcją członkowską klasy aplikacji. Aby uzyskać więcej informacji o poleceniach i sposobie ich kierowania do obiektów, zobacz [jak struktura wywołuje program obsługi](how-the-framework-calls-a-handler.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Komunikaty i polecenia w strukturze](../mfc/messages-and-commands-in-the-framework.md)
+[Komunikaty i polecenia w strukturze](messages-and-commands-in-the-framework.md)

@@ -1,43 +1,43 @@
 ---
-title: 'Podstawy OLE: Strategie implementacji'
+title: 'Podstawy OLE: strategie implementacji'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE [MFC], development strategy
 - OLE applications [MFC], implementing OLE
 - applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
-ms.openlocfilehash: 83a1089ecaaaa9bd0dd1d928cd3d1869e5017a4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90517f9b37872dd7de0ce1a2d08da94c93e6f8f8
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186868"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619903"
 ---
-# <a name="ole-background-implementation-strategies"></a>Podstawy OLE: Strategie implementacji
+# <a name="ole-background-implementation-strategies"></a>Podstawy OLE: strategie implementacji
 
-W zależności od aplikacji dostępne są cztery strategie możliwą implementację dodanie obsługi:
+W zależności od aplikacji istnieją cztery możliwe strategie implementacji umożliwiające dodanie obsługi OLE:
 
-- Podczas pisania nowych aplikacji.
+- Piszesz nową aplikację.
 
-   Taka sytuacja jest zazwyczaj wymaga najmniejszej pracy. Uruchom Kreatora aplikacji MFC i wybierz pozycję Funkcje zaawansowane lub Obsługa dokumentów złożonych, aby utworzyć szkielet aplikacji. Aby uzyskać informacje na temat tych opcji i co zrobić, zobacz artykuł [tworzenie MFC EXE programu](../mfc/reference/mfc-application-wizard.md).
+   Ta sytuacja zwykle wymaga najmniejszej pracy. Uruchom Kreatora aplikacji MFC i wybierz opcję Zaawansowane funkcje lub Obsługa dokumentu złożonego, aby utworzyć aplikację szkieletową. Aby uzyskać informacje na temat tych opcji i ich działania, zobacz artykuł [Tworzenie programu MFC exe](reference/mfc-application-wizard.md).
 
-- Masz program napisany w języku bibliotekę Microsoft Foundation Class wersja 2.0 lub nowszej, który nie obsługuje OLE.
+- Masz program zapisany w biblioteka MFC w wersji 2,0 lub nowszej, która nie obsługuje OLE.
 
-   Utwórz nową aplikację za pomocą Kreatora aplikacji MFC, jak wcześniej wspomniano, a następnie skopiuj i Wklej kod z nową aplikację do istniejącej aplikacji. Będzie on działać w przypadku serwerów, kontenerów lub zautomatyzowane aplikacji. Zobacz MFC [BAZGROŁY](../overview/visual-cpp-samples.md) przykładowe przykładem tej strategii.
+   Utwórz nową aplikację za pomocą Kreatora aplikacji MFC, jak wspomniano wcześniej, a następnie skopiuj i wklej kod z nowej aplikacji do istniejącej aplikacji. Będzie to działało w przypadku serwerów, kontenerów lub zautomatyzowanych aplikacji. Przykład tej strategii można znaleźć w przykładowym przykładzie [bazgrołów](../overview/visual-cpp-samples.md) MFC.
 
-- Masz program bibliotekę Microsoft Foundation Class, który implementuje obsługi wersji 1.0.
+- Masz program biblioteka MFC, który implementuje obsługę OLE w wersji 1,0.
 
-   Zobacz [MFC techniczne Uwaga 41](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md) tej strategii konwersji.
+   Zapoznaj się z [uwagą technicznyą MFC 41](tn041-mfc-ole1-migration-to-mfc-ole-2.md) dla tej strategii konwersji.
 
-- Gdy masz już aplikację, który nie został zapisany przy użyciu Microsoft Foundation Classes i które mogą lub nie zostały zaimplementowane Obsługa OLE.
+- Masz aplikację, która nie została zapisywana przy użyciu Microsoft Foundation Classes i która może nie mieć zaimplementowanej obsługi OLE.
 
-   Taka sytuacja wymaga najwięcej pracy. Jedno z podejść jest tworzenie nowej aplikacji, jak pierwsza strategia, a następnie skopiuj i Wklej istniejący kod. Jeśli istniejący kod jest napisany w języku C, może być konieczne zmiany, dzięki czemu można kompilować jako kod C++. Jeśli kod C wywołuje interfejs API Windows, nie trzeba zmienić go do użycia klasy Microsoft Foundation. Takie podejście, prawdopodobnie będzie wymagać niektóre restrukturyzacji programu do obsługi architektury dokument/widok posługują się w wersji 2.0 lub nowszej klasy Microsoft Foundation. Aby uzyskać więcej informacji na temat tej architektury, zobacz [techniczne 25 Uwaga](../mfc/tn025-document-view-and-frame-creation.md).
+   Ta sytuacja wymaga najwięcej pracy. Jednym z rozwiązań jest utworzenie nowej aplikacji, jak w pierwszej strategii, a następnie skopiowanie i wklejenie istniejącego kodu do niego. Jeśli istniejący kod jest zapisywana w C, może być konieczne jego zmodyfikowanie, aby można było kompilować kod w języku C++. Jeśli kod C wywołuje interfejs API systemu Windows, nie trzeba go zmieniać, aby używać klas Microsoft Foundation. Takie podejście prawdopodobnie będzie wymagało pewnej restrukturyzacji programu, aby obsługiwała architekturę dokumentu/widoku używaną w wersjach 2,0 i wyższych Microsoft Foundation Classes. Aby uzyskać więcej informacji na temat tej architektury, zobacz [Uwagi techniczne 25](tn025-document-view-and-frame-creation.md).
 
-Po określeniu strategii, powinny albo odczytu [kontenery](../mfc/containers.md) lub [serwerów](../mfc/servers.md) artykuły (w zależności od typu aplikacji pisania), lub przejrzyj przykładowe programy i / lub. Przykłady MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) i [HIERSVR](../overview/visual-cpp-samples.md) pokazują sposób implementacji różnych aspektów kontenery i serwery, odpowiednio. W różnych punktach tych artykułów będzie odnosić się niektórych funkcji w tych przykładach jako przykładów, techniki omawiana.
+Po ustaleniu strategii należy odczytać artykuły dotyczące [kontenerów](containers.md) lub [serwerów](servers.md) (w zależności od typu aplikacji) lub przejrzeć przykładowe programy lub oba te elementy. Przykłady MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) i [HIERSVR](../overview/visual-cpp-samples.md) pokazują, jak zaimplementować odpowiednio różne aspekty kontenerów i serwerów. W różnych punktach w tych artykułach są określane pewne funkcje w tych przykładach jako przykłady omawianych technik.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Podstawy OLE](../mfc/ole-background.md)<br/>
-[Kontenery: Implementowanie kontenera](../mfc/containers-implementing-a-container.md)<br/>
-[Serwery: Implementowanie serwera](../mfc/servers-implementing-a-server.md)<br/>
-[Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md)
+[Podstawy OLE](ole-background.md)<br/>
+[Kontenery: implementowanie kontenera](containers-implementing-a-container.md)<br/>
+[Serwery: implementowanie serwera](servers-implementing-a-server.md)<br/>
+[Kreator aplikacji MFC](reference/mfc-application-wizard.md)

@@ -1,5 +1,5 @@
 ---
-title: Modalne i Niemodalne okna dialogowe
+title: Modalne i niemodalne okna dialogowe
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC dialog boxes [MFC], modeless
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], modal
 - modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
-ms.openlocfilehash: 886229a2b66968bf76129ecb1da838bd36e66215
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 857bb3ea9e66ca0be155413faea23c0aba2abc9e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685182"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622209"
 ---
-# <a name="modal-and-modeless-dialog-boxes"></a>Modalne i Niemodalne okna dialogowe
+# <a name="modal-and-modeless-dialog-boxes"></a>Modalne i niemodalne okna dialogowe
 
-Klasy [CDialog](../mfc/reference/cdialog-class.md) można użyć do zarządzania dwoma rodzajami okien dialogowych:
+Klasy [CDialog](reference/cdialog-class.md) można użyć do zarządzania dwoma rodzajami okien dialogowych:
 
 - *Modalne okna dialogowe*, które wymagają, aby użytkownik mógł odpowiedzieć przed kontynuowaniem działania programu
 
@@ -32,9 +32,9 @@ Tworzenie okna dialogowego dla programu wymaga wykonania następujących czynno�
 
 1. Połącz [kontrolki zasobu okna dialogowego z obsługą komunikatów](../windows/adding-event-handlers-for-dialog-box-controls.md) w klasie okna dialogowego.
 
-1. Dodaj elementy członkowskie danych skojarzone z kontrolkami okna dialogowego i, aby określić [wymianę danych okna](../mfc/dialog-data-exchange.md) dialogowego i [Sprawdzanie poprawności danych okna](../mfc/dialog-data-validation.md) dialogowego dla kontrolek.
+1. Dodaj elementy członkowskie danych skojarzone z kontrolkami okna dialogowego i, aby określić [wymianę danych okna](dialog-data-exchange.md) dialogowego i [Sprawdzanie poprawności danych okna](dialog-data-validation.md) dialogowego dla kontrolek.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Okna dialogowe](../mfc/dialog-boxes.md)<br/>
-[Praca z polami okna dialogowego w MFC](../mfc/life-cycle-of-a-dialog-box.md)
+[Okna dialogowe](dialog-boxes.md)<br/>
+[Praca z oknami dialogowymi w MFC](life-cycle-of-a-dialog-box.md)

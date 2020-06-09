@@ -33,102 +33,102 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: d339ec98dabc6cb24fc7106c4c7238cd6a14a71b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ef827af413513d1a1753f84b1cb69a66f41f690c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365536"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618852"
 ---
 # <a name="exception-handling-in-mfc"></a>Obsługa wyjątków w MFC
 
-W tym artykule wyjaśniono mechanizmy obsługi wyjątków dostępne w MFC. Dostępne są dwa mechanizmy:
+W tym artykule opisano mechanizmy obsługi wyjątków dostępne w MFC. Dostępne są dwa mechanizmy:
 
-- Wyjątki języka C++, dostępne w wersji MFC 3.0 i nowszej
+- Wyjątki języka C++, dostępne w bibliotece MFC w wersji 3,0 lub nowszej
 
-- Makra wyjątków MFC, dostępne w wersjach MFC 1.0 i nowszych
+- Makra wyjątku MFC, dostępne w MFC w wersji 1,0 lub nowszej
 
-Jeśli piszesz nową aplikację przy użyciu MFC, należy użyć mechanizmu C++. Mechanizm oparty na makrach można użyć, jeśli istniejąca aplikacja już używa tego mechanizmu szeroko.
+Jeśli piszesz nową aplikację przy użyciu MFC, należy użyć mechanizmu języka C++. Można użyć mechanizmu opartego na makrach, jeśli istniejąca aplikacja już korzysta z tego mechanizmu.
 
-Można łatwo przekonwertować istniejący kod do używania wyjątków Języka C++ zamiast makr wyjątków MFC. Zalety konwersji kodu i wskazówki dotyczące tego są opisane w artykule [Wyjątki: Konwersja z makr wyjątków MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
+Możesz łatwo skonwertować istniejący kod, aby używać wyjątków C++ zamiast makr wyjątków MFC. Zalety konwertowania kodu i wytycznych do tego celu są opisane w artykule [wyjątki: konwertowanie z makr wyjątków MFC](exceptions-converting-from-mfc-exception-macros.md).
 
-Jeśli aplikacja została już opracowana przy użyciu makr wyjątków MFC, można kontynuować korzystanie z tych makr w istniejącym kodzie, przy użyciu wyjątków Języka C++ w nowym kodzie. Artykuł [Wyjątki: Zmiany makr wyjątków w wersji 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) zawiera wskazówki, aby to zrobić.
+Jeśli aplikacja została już opracowana przy użyciu makr wyjątków MFC, można nadal używać tych makr w istniejącym kodzie, podczas gdy przy użyciu wyjątków C++ w nowym kodzie. Wyjątki artykułów [: zmiany w makrach wyjątków w wersji 3,0](exceptions-changes-to-exception-macros-in-version-3-0.md) dają wskazówki dotyczące wykonania tej czynności.
 
 > [!NOTE]
-> Aby włączyć obsługę wyjątków języka C++ w kodzie, wybierz opcję Włącz wyjątki C++ na stronie Generowanie kodu w folderze C/C++ w oknie dialogowym [Strony właściwości](../build/reference/property-pages-visual-cpp.md) projektu lub użyj opcji kompilatora [/EHsc.](../build/reference/eh-exception-handling-model.md)
+> Aby włączyć obsługę wyjątków C++ w kodzie, zaznacz opcję Włącz wyjątki C++ na stronie generowanie kodu w folderze C/C++ okna dialogowego [strony właściwości](../build/reference/property-pages-visual-cpp.md) projektu lub użyj opcji kompilatora [/EHsc](../build/reference/eh-exception-handling-model.md) .
 
 W tym artykule omówiono następujące tematy:
 
-- [Kiedy stosować wyjątki](#_core_when_to_use_exceptions)
+- [Kiedy używać wyjątków](#_core_when_to_use_exceptions)
 
 - [Obsługa wyjątków MFC](#_core_mfc_exception_support)
 
-- [Dalsze czytanie o wyjątkach](#_core_further_reading_about_exceptions)
+- [Dalsze informacje o wyjątkach](#_core_further_reading_about_exceptions)
 
 ## <a name="when-to-use-exceptions"></a><a name="_core_when_to_use_exceptions"></a>Kiedy używać wyjątków
 
-Trzy kategorie wyników może wystąpić, gdy funkcja jest wywoływana podczas wykonywania programu: normalne wykonanie, błędne wykonanie lub nieprawidłowe wykonanie. Każda kategoria jest opisana poniżej.
+Trzy kategorie wyników mogą wystąpić, gdy funkcja jest wywoływana podczas wykonywania programu: normalne wykonywanie, błędne wykonywanie lub nieprawidłowe wykonanie. Każda kategoria jest opisana poniżej.
 
-- Normalne wykonanie
+- Normalne wykonywanie
 
-   Funkcja może działać normalnie i zwracać. Niektóre funkcje zwracają kod wyniku do wywołującego, co wskazuje wynik funkcji. Możliwe kody wyników są ściśle zdefiniowane dla funkcji i reprezentują zakres możliwych wyników funkcji. Kod wyniku może wskazywać na powodzenie lub niepowodzenie lub nawet wskazać określony typ błędu, który mieści się w normalnym zakresie oczekiwań. Na przykład funkcja stanu pliku może zwrócić kod, który wskazuje, że plik nie istnieje. Należy zauważyć, że termin "kod błędu" nie jest używany, ponieważ kod wyniku reprezentuje jeden z wielu oczekiwanych wyników.
+   Funkcja może działać normalnie i zwracać. Niektóre funkcje zwracają kod wyniku do obiektu wywołującego, który wskazuje wynik funkcji. Możliwe kody wyników są ściśle zdefiniowane dla funkcji i reprezentują zakres możliwych wyników funkcji. Kod wyniku może wskazywać na powodzenie lub niepowodzenie lub nawet wskazywać konkretny typ błędu, który znajduje się w normalnym zakresie oczekiwań. Na przykład funkcja o stanie pliku może zwracać kod, który wskazuje, że plik nie istnieje. Należy zauważyć, że termin "kod błędu" nie jest używany, ponieważ kod wyniku reprezentuje jeden z wielu oczekiwanych wyników.
 
 - Błędne wykonanie
 
-   Wywołujący popełnia błąd w przekazywaniu argumentów do funkcji lub wywołuje funkcję w nieodpowiednim kontekście. Ta sytuacja powoduje błąd i powinny być wykrywane przez asercja podczas tworzenia programu. (Aby uzyskać więcej informacji na temat potwierdzeń, zobacz [C/C++ potwierdzenia](/visualstudio/debugger/c-cpp-assertions).)
+   Obiekt wywołujący wykonuje jakiś błąd podczas przekazywania argumentów do funkcji lub wywołuje funkcję w niewłaściwym kontekście. Ta sytuacja powoduje błąd i powinna zostać wykryta przez potwierdzenie podczas tworzenia programu. (Aby uzyskać więcej informacji na temat potwierdzeń, zobacz " [potwierdzenia C/C++](/visualstudio/debugger/c-cpp-assertions)").
 
 - Nieprawidłowe wykonanie
 
-   Nieprawidłowe wykonanie obejmuje sytuacje, w których warunki poza kontrolą programu, takie jak brak pamięci lub błędy we/wy, wpływają na wynik funkcji. Nietypowe sytuacje powinny być obsługiwane przez przechwytywanie i zgłaszanie wyjątków.
+   Nietypowe wykonywanie obejmuje sytuacje, w których warunki poza kontrolką programu, takie jak mała ilość pamięci lub błędy we/wy, wpływają na wynik funkcji. Nietypowe sytuacje powinny być obsługiwane przez przechwytywanie i zgłaszanie wyjątków.
 
-Używanie wyjątków jest szczególnie odpowiednie dla nieprawidłowego wykonywania.
+Użycie wyjątków jest szczególnie odpowiednie dla nietypowego wykonania.
 
 ## <a name="mfc-exception-support"></a><a name="_core_mfc_exception_support"></a>Obsługa wyjątków MFC
 
-Niezależnie od tego, czy używasz wyjątków C++ bezpośrednio lub użyć makr wyjątków MFC, użyjesz [CException Class](../mfc/reference/cexception-class.md) lub `CException`-derived obiektów, które mogą być generowane przez strukturę lub przez aplikację.
+Niezależnie od tego, czy wyjątki języka C++ są używane bezpośrednio, czy za pomocą makr wyjątków MFC, użyjesz [klasy CException](reference/cexception-class.md) lub `CException` obiektów pochodnych, które mogą być zgłaszane przez platformę lub przez aplikację.
 
-W poniższej tabeli przedstawiono wstępnie zdefiniowane wyjątki dostarczone przez MFC.
+W poniższej tabeli przedstawiono wstępnie zdefiniowane wyjątki udostępniane przez MFC.
 
 |Klasa wyjątku|Znaczenie|
 |---------------------|-------------|
-|[Klasa CMemoryException](../mfc/reference/cmemoryexception-class.md)|Brak pamięci|
-|[Klasa CFileException](../mfc/reference/cfileexception-class.md)|Wyjątek pliku|
-|[Klasa CArchiveException](../mfc/reference/carchiveexception-class.md)|Wyjątek archiwum/serializacji|
-|[Klasa CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md)|Odpowiedź na żądanie nieobsługiwała usługa|
-|[Klasa CResourceException](../mfc/reference/cresourceexception-class.md)|Wyjątek alokacji zasobów systemu Windows|
-|[Klasa CDaoException](../mfc/reference/cdaoexception-class.md)|Wyjątki bazy danych (klasy DAO)|
-|[Klasa CDBException](../mfc/reference/cdbexception-class.md)|Wyjątki bazy danych (klasy ODBC)|
-|[Klasa COleException](../mfc/reference/coleexception-class.md)|wyjątki OLE|
-|[Klasa COleDispatchException](../mfc/reference/coledispatchexception-class.md)|Wyjątki wysyłki (automatyzacji)|
-|[Klasa CUserException](../mfc/reference/cuserexception-class.md)|Wyjątek, który ostrzega użytkownika z okna komunikatu, a następnie zgłasza ogólną [klasę CException](../mfc/reference/cexception-class.md)|
+|[Klasa CMemoryException](reference/cmemoryexception-class.md)|Brak pamięci|
+|[Klasa CFileException](reference/cfileexception-class.md)|Wyjątek pliku|
+|[Klasa CArchiveException](reference/carchiveexception-class.md)|Wyjątek archiwizacji/serializacji|
+|[Klasa CNotSupportedException](reference/cnotsupportedexception-class.md)|Odpowiedź na żądanie nieobsługiwanej usługi|
+|[Klasa CResourceException](reference/cresourceexception-class.md)|Wyjątek alokacji zasobów systemu Windows|
+|[Klasa CDaoException](reference/cdaoexception-class.md)|Wyjątki bazy danych (klasy DAO)|
+|[Klasa CDBException](reference/cdbexception-class.md)|Wyjątki bazy danych (klasy ODBC)|
+|[Klasa COleException](reference/coleexception-class.md)|wyjątki OLE|
+|[Klasa COleDispatchException](reference/coledispatchexception-class.md)|Wyjątki wysyłania (Automatyzacja)|
+|[Klasa CUserException](reference/cuserexception-class.md)|Wyjątek, który ostrzega użytkownika przy użyciu okna komunikatu, a następnie zgłasza rodzajową [klasę CException](reference/cexception-class.md)|
 
-Od wersji 3.0, MFC wykorzystuje wyjątki C++, ale nadal obsługuje jego starsze makra obsługi wyjątków, które mają podobną formę do wyjątków C++. Chociaż wykorzystanie tych makr nie jest zalecane w przypadku nowych programów, nadal są one obsługiwane w celu zapewnienia zgodności z poprzednimi wersjami. W programach, które już używają makr, można bez ograniczeń wykorzystywać również wyjątki C++. Podczas przetwarzania wstępnego makra ocenić do obsługi wyjątków słów kluczowych zdefiniowanych w implementacji MSVC języka C++ w wersji Visual C++ w wersji 2.0. Podczas korzystania z języka C++, można pozostawić na miejscu istniejące makra wyjątków. Aby uzyskać informacje na temat mieszania makr i obsługi wyjątków C++ oraz konwertowania starego kodu na nowy mechanizm, zobacz artykuły [Wyjątki: Używanie makr MFC i wyjątków C++:](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) [Konwertowanie z makr wyjątków MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md). Starsze makra wyjątków MFC, jeżeli użytkownik nadal z nich korzysta, szacowane są jako słowa kluczowe wyjątków języka C++. Zobacz [Wyjątki: Zmiany makr wyjątków w wersji 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md). MFC nie obsługuje bezpośrednio programów obsługi wyjątków strukturalnych systemu Windows NT (SEH), jak omówiono w [ustrukturyzowanej obsługi wyjątków](/windows/win32/debug/structured-exception-handling).
+Od wersji 3.0, MFC wykorzystuje wyjątki C++, ale nadal obsługuje jego starsze makra obsługi wyjątków, które mają podobną formę do wyjątków C++. Chociaż wykorzystanie tych makr nie jest zalecane w przypadku nowych programów, nadal są one obsługiwane w celu zapewnienia zgodności z poprzednimi wersjami. W programach, które już używają makr, można bez ograniczeń wykorzystywać również wyjątki C++. Podczas przetwarzania wstępnego makra są oceniane do słów kluczowych obsługi wyjątków zdefiniowanych w implementacji MSVC języka C++ w Visual C++ wersji 2,0. Podczas korzystania z języka C++, można pozostawić na miejscu istniejące makra wyjątków. Aby uzyskać informacje o miksowaniu makr i obsłudze wyjątków C++ oraz o konwertowaniu starego kodu w celu korzystania z nowego mechanizmu, zobacz [wyjątki artykułów: używanie makr MFC i wyjątków C++](exceptions-using-mfc-macros-and-cpp-exceptions.md) i [wyjątków: konwertowanie z makr wyjątków MFC](exceptions-converting-from-mfc-exception-macros.md). Starsze makra wyjątków MFC, jeżeli użytkownik nadal z nich korzysta, szacowane są jako słowa kluczowe wyjątków języka C++. Zobacz [wyjątki: zmiany w makrach wyjątków w wersji 3,0](exceptions-changes-to-exception-macros-in-version-3-0.md). MFC nie obsługuje bezpośrednio obsługi wyjątków strukturalnych systemu Windows NT (SEH), jak opisano w [strukturalnej obsłudze wyjątków](/windows/win32/debug/structured-exception-handling).
 
-## <a name="further-reading-about-exceptions"></a><a name="_core_further_reading_about_exceptions"></a>Dalsze czytanie o wyjątkach
+## <a name="further-reading-about-exceptions"></a><a name="_core_further_reading_about_exceptions"></a>Dalsze informacje o wyjątkach
 
-Następujące artykuły wyjaśniają przy użyciu biblioteki MFC do przekazywania wyjątków:
+W poniższych artykułach opisano korzystanie z biblioteki MFC w celu uzyskania wyjątku:
 
-- [Wyjątki: przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md)
+- [Wyjątki: przechwytywanie i usuwanie wyjątków](exceptions-catching-and-deleting-exceptions.md)
 
-- [Wyjątki: badanie zawartości wyjątku](../mfc/exceptions-examining-exception-contents.md)
+- [Wyjątki: badanie zawartości wyjątku](exceptions-examining-exception-contents.md)
 
-- [Wyjątki: zwalnianie obiektów w wyjątkach](../mfc/exceptions-freeing-objects-in-exceptions.md)
+- [Wyjątki: zwalnianie obiektów w wyjątkach](exceptions-freeing-objects-in-exceptions.md)
 
-- [Wyjątki: zgłaszanie wyjątków z własnych funkcji](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)
+- [Wyjątki: zgłaszanie wyjątków z własnych funkcji](exceptions-throwing-exceptions-from-your-own-functions.md)
 
-- [Wyjątki: wyjątki bazy danych](../mfc/exceptions-database-exceptions.md)
+- [Wyjątki: wyjątki bazy danych](exceptions-database-exceptions.md)
 
-- [Wyjątki: wyjątki OLE](../mfc/exceptions-ole-exceptions.md)
+- [Wyjątki: wyjątki OLE](exceptions-ole-exceptions.md)
 
-Następujące artykuły porównują makra wyjątków MFC ze słowami kluczowymi wyjątków C++ i wyjaśniają, jak można dostosować kod:
+W poniższych artykułach porównano makra wyjątków MFC ze słowami kluczowymi wyjątków C++ i wyjaśniono, jak można dostosować kod:
 
-- [Wyjątki: zmiany w makrach wyjątków w wersji 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
+- [Wyjątki: zmiany w makrach wyjątków w wersji 3.0](exceptions-changes-to-exception-macros-in-version-3-0.md)
 
-- [Wyjątki: konwertowanie z makr wyjątków MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md)
+- [Wyjątki: konwertowanie z makr wyjątków MFC](exceptions-converting-from-mfc-exception-macros.md)
 
-- [Wyjątki: używanie makr MFC i wyjątków języka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
+- [Wyjątki: używanie makr MFC i wyjątków języka C++](exceptions-using-mfc-macros-and-cpp-exceptions.md)
 
 ## <a name="see-also"></a>Zobacz też
 
 [Nowoczesne najlepsze rozwiązania w języku C++ dotyczące wyjątków i obsługi błędów](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Jak: Tworzenie własnych niestandardowych klas wyjątków](https://go.microsoft.com/fwlink/p/?linkid=128045)
+[Jak: tworzenie własnych niestandardowych klas wyjątków](https://go.microsoft.com/fwlink/p/?linkid=128045)

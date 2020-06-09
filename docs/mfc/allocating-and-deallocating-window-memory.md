@@ -9,25 +9,25 @@ helpviewer_keywords:
 - window objects [MFC], deallocating memory for
 - storage for window objects [MFC], allocating
 ms.assetid: 7c962539-8461-4846-b5ca-fe3b15c313dc
-ms.openlocfilehash: 60f99c01c7a311c31602269b49efaf434d16827a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02546559183d0e14973bc2e5ccb26a4570a39b1e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394705"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623269"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Alokowanie i dealokowanie pamięci okna
 
-Nie używaj C++ **Usuń** operator można zniszczyć okna ramki lub widoku. Zamiast tego należy wywołać `CWnd` funkcja elementu członkowskiego `DestroyWindow`. Okna ramowe, dlatego powinna zostać przydzielona na stosie za pomocą operatora **nowe**. Należy zachować ostrożność podczas przydzielania okien ramowych na ramce stosu lub globalnie. Inne okna powinna zostać przydzielona w ramce stosu, jeśli to możliwe.
+Nie używaj operatora **delete** języka C++, aby zniszczyć okno lub widok ramki. Zamiast tego należy wywołać `CWnd` funkcję członkowską `DestroyWindow` . W związku z tym, powinny być przydzielane na stercie z użyciem operatora **New**. Należy zachować ostrożność podczas alokowania okien ramowych w ramce stosu lub globalnie. W miarę możliwości można przydzielać inne okna na ramkę stosu.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-- [Tworzenie okien](../mfc/creating-windows.md)
+- [Tworzenie okien](creating-windows.md)
 
-- [Sekwencja likwidacji okna](../mfc/window-destruction-sequence.md)
+- [Sekwencja niszczenia okna](window-destruction-sequence.md)
 
-- [Odłączanie obiektu CWnd od jego właściwości HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+- [Odłączanie elementu CWnd od jego elementu HWND](detaching-a-cwnd-from-its-hwnd.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Niszczenie obiektów okien](../mfc/destroying-window-objects.md)
+[Likwidowanie obiektów okien](destroying-window-objects.md)

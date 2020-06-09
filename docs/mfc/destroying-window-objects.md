@@ -7,29 +7,29 @@ helpviewer_keywords:
 - window objects [MFC], destroying
 - window objects [MFC], removing
 ms.assetid: 3241fea0-c614-4a25-957d-20f21bd5fd0c
-ms.openlocfilehash: f50d198f9868a70d25370f6c1399b66efaa5490b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22b483c1005931b229453ae229935c0e716ab726
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297245"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621861"
 ---
 # <a name="destroying-window-objects"></a>Likwidowanie obiektów okien
 
-Należy uważać za pomocą okien podrzędnych do zniszczenia obiektu języka C++ w oknie po użytkownik z oknem. Jeśli te obiekty nie są niszczone, aplikacja nie zostanie odzyskana ich pamięci. Na szczęście szablon zarządza zniszczenie okna, a także tworzenie okien ramowych, widoków i okien dialogowych. Jeśli tworzysz dodatkowe okna, ponosisz odpowiedzialność za zniszczenie ich.
+Należy zachować ostrożność przy użyciu własnych okien podrzędnych, aby zniszczyć obiekt okna języka C++, gdy użytkownik zakończy pracę z oknem. Jeśli te obiekty nie zostaną zniszczone, aplikacja nie odzyska swojej pamięci. Na szczęście środowisko zarządza zniszczeniem okna oraz tworzeniem okien ramowych, widoków i okien dialogowych. W przypadku tworzenia dodatkowych okien użytkownik jest odpowiedzialny za ich zniszczenie.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o
 
-- [Sekwencja likwidacji okna](../mfc/window-destruction-sequence.md)
+- [Sekwencja niszczenia okna](window-destruction-sequence.md)
 
-- [Alokowanie i dealokowanie pamięci okna](../mfc/allocating-and-deallocating-window-memory.md)
+- [Przydzielanie i cofanie alokacji pamięci okna](allocating-and-deallocating-window-memory.md)
 
-- [Odłączanie obiektu CWnd od jego właściwości HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+- [Odłączanie elementu CWnd od jego elementu HWND](detaching-a-cwnd-from-its-hwnd.md)
 
-- [Ogólna sekwencja tworzenia okna](../mfc/general-window-creation-sequence.md)
+- [Ogólna sekwencja tworzenia okna](general-window-creation-sequence.md)
 
-- [Niszczenie okien ramowych](../mfc/destroying-frame-windows.md)
+- [Niszczenie okien ramowych](destroying-frame-windows.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obiekty okna](../mfc/window-objects.md)
+[Obiekty okien](window-objects.md)

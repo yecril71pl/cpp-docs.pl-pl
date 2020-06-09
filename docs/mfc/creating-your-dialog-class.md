@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog classes [MFC], Add Class Wizard
 - dialog classes [MFC], creating
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
-ms.openlocfilehash: b8275754d46e9d76933624af55335e956736319a
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: fab75268e39d75b67db435ebb8d0af6c0b8371fd
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685646"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620503"
 ---
 # <a name="creating-your-dialog-class"></a>Tworzenie klasy okien dialogowych
 
@@ -23,7 +23,7 @@ Dla każdego okna dialogowego w programie Utwórz nową klasę okna dialogowego 
 
 W pliku h:
 
-- Deklaracja klasy dla klasy okna dialogowego. Klasa pochodzi od [CDialog](../mfc/reference/cdialog-class.md).
+- Deklaracja klasy dla klasy okna dialogowego. Klasa pochodzi od [CDialog](reference/cdialog-class.md).
 
 W pliku. cpp:
 
@@ -31,9 +31,9 @@ W pliku. cpp:
 
 - Standardowy Konstruktor dla okna dialogowego.
 
-- Przesłonięcie funkcji składowej [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) . Edytuj tę funkcję. Służy do wymiany i sprawdzania poprawności danych w oknie dialogowym zgodnie z opisem w dalszej części [okna dialogowego wymiana danych i sprawdzanie poprawności](../mfc/dialog-data-exchange-and-validation.md).
+- Przesłonięcie funkcji składowej [DoDataExchange](reference/cwnd-class.md#dodataexchange) . Edytuj tę funkcję. Służy do wymiany i sprawdzania poprawności danych w oknie dialogowym zgodnie z opisem w dalszej części [okna dialogowego wymiana danych i sprawdzanie poprawności](dialog-data-exchange-and-validation.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Tworzenie klasy okien dialogowych za pomocą kreatorów kodu](../mfc/creating-a-dialog-class-with-code-wizards.md)<br/>
-[Praca z polami okna dialogowego w MFC](../mfc/life-cycle-of-a-dialog-box.md)
+[Tworzenie klasy okien dialogowych za pomocą kreatorów kodu](creating-a-dialog-class-with-code-wizards.md)<br/>
+[Praca z oknami dialogowymi w MFC](life-cycle-of-a-dialog-box.md)

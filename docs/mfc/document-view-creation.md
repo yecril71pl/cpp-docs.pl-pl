@@ -1,5 +1,5 @@
 ---
-title: Tworzenie dokumentu widoku
+title: Tworzenie dokumentu-widok
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [MFC], creating
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - MFC, documents
 - tables [MFC], objects each MFC object creates
 ms.assetid: bda14f41-ed50-439d-af9e-591174e7dd64
-ms.openlocfilehash: b5f9b783e8e14744a816fd63b327ed95d9da8e8a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5441827188f5bff98638cc85cd29e2efd79f8ae8
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240793"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620343"
 ---
 # <a name="documentview-creation"></a>Tworzenie dokumentu/widoku
 
-Struktura dostarcza implementacje **New** i **Otwórz** polecenia (między innymi) na **pliku** menu. Tworzenie nowego dokumentu skojarzonego widoku i ramki okna jest wspólnego nakładu pracy obiekt aplikacji, szablon dokumentu, nowo utworzonego dokumentu i okno ramowe nowo utworzony. W poniższej tabeli podsumowano, obiekty, które tworzyć co.
+Struktura dostarcza implementacje **nowych** i **otwartych** poleceń (między innymi) w menu **plik** . Tworzenie nowego dokumentu wraz z jego skojarzonym widokiem i oknem ramki to wspólne wysiłki między obiektem aplikacji, szablonem dokumentu, nowo utworzonym dokumentem i nowo utworzonym oknem ramki. Poniższa tabela zawiera podsumowanie obiektów, które należy utworzyć.
 
-### <a name="object-creators"></a>Twórcy obiektu
+### <a name="object-creators"></a>Twórcy obiektów
 
 |Kreator|Tworzy|
 |-------------|-------------|
 |Obiekt aplikacji|Szablon dokumentu|
-|Szablon dokumentu|dokument|
+|Szablon dokumentu|Dokument|
 |Szablon dokumentu|Okno ramowe|
 |Okno ramowe|Widok|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Szablony dokumentów i proces tworzenia dokumentu/widoku](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
-[Tworzenie szablonu dokumentu](../mfc/document-template-creation.md)<br/>
-[Relacje między obiektami MFC](../mfc/relationships-among-mfc-objects.md)<br/>
-[Tworzenie nowych dokumentów, okien i widoków](../mfc/creating-new-documents-windows-and-views.md)
+[Szablony dokumentów i proces tworzenia dokumentu/widoku](document-templates-and-the-document-view-creation-process.md)<br/>
+[Tworzenie szablonu dokumentu](document-template-creation.md)<br/>
+[Relacje między obiektami MFC](relationships-among-mfc-objects.md)<br/>
+[Tworzenie nowych dokumentów, okien i widoków](creating-new-documents-windows-and-views.md)

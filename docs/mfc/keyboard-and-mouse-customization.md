@@ -5,70 +5,70 @@ helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-ms.openlocfilehash: 55eaac9d800730f3a01dcdb2eef943eb48d147b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 262555b060f226a86438a2189eda44d83c55d5a2
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311159"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621504"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Dostosowywanie klawiatury i myszy
 
-MFC umożliwia aplikacji, aby dostosować sposób obsługi klawiatury i myszy. Użytkownik może dostosować dane wejściowe z klawiatury, przez przypisanie skróty klawiaturowe do polecenia. Użytkownika można również dostosować wejście myszy, wybierając polecenie, które mają zostać wykonane, gdy użytkownik kliknie dwukrotnie wewnątrz określonego okna aplikacji. W tym temacie wyjaśniono, jak dostosować dane wejściowe dla swojej aplikacji.
+MFC zezwala użytkownikowi aplikacji na dostosowywanie sposobu obsługi klawiatury i myszy przez program. Użytkownik może dostosować wprowadzanie z klawiatury, przypisując skróty klawiaturowe do poleceń. Użytkownik może również dostosować dane wejściowe myszy, wybierając polecenie, które ma zostać wykonane, gdy użytkownik kliknie dwukrotnie wewnątrz określonych okien aplikacji. W tym temacie wyjaśniono, jak dostosować dane wejściowe dla aplikacji.
 
-W **dostosowywania** okno dialogowe, użytkownik może zmienić niestandardowe formanty dla klawiatury i myszy. Aby wyświetlić to okno dialogowe, użytkownik wskaże **Dostosuj** na **widoku** menu, a następnie klika przycisk **pasków narzędzi i dokowanie**. W oknie dialogowym użytkownik klika polecenie albo **klawiatury** karty lub **myszy** kartę.
+W oknie dialogowym **dostosowanie** użytkownik może zmienić niestandardowe kontrolki myszy i klawiatury. Aby wyświetlić to okno dialogowe, użytkownik wskazuje do **dostosowania** w menu **Widok** , a następnie klika **paski narzędzi i dokowanie**. W oknie dialogowym użytkownik klika kartę **Klawiatura** lub kartę **mysz** .
 
-## <a name="keyboard-customization"></a>Dostosowywanie klawiatury
+## <a name="keyboard-customization"></a>Dostosowanie klawiatury
 
-Poniższa ilustracja przedstawia **klawiatury** karcie **dostosowywania** okno dialogowe.
+Na poniższej ilustracji przedstawiono kartę **Klawiatura** okna dialogowego **Dostosowywanie** .
 
-![Karta klawiatury w oknie dialogowym Dostosuj](../mfc/media/mfcnextkeyboardtab.png "klawiatury karty w oknie dialogowym Dostosuj") <br/>
-Karta dostosowywania klawiatury
+![Karta klawiatura w oknie dialogowym Dostosowywanie](../mfc/media/mfcnextkeyboardtab.png "Karta klawiatura w oknie dialogowym Dostosowywanie") <br/>
+Karta Dostosowywanie klawiatury
 
-Użytkownik wchodzi w interakcję z kartą klawiatury, aby przypisać jeden lub więcej skrótów klawiaturowych do polecenia. Dostępne polecenia są wyświetlane po lewej stronie karty. Użytkownik może wybrać dowolne polecenie dostępne z menu. Tylko polecenia menu można skojarzyć za pomocą skrótów klawiaturowych. Gdy użytkownik wprowadzi nowy skrót **przypisać** przycisk staje się dostępny. Po kliknięciu tego przycisku aplikacji powoduje skojarzenie skrót wybranego polecenia.
+Użytkownik współdziała z kartą klawiatury, aby przypisać do polecenia co najmniej jedno skróty klawiaturowe. Dostępne polecenia są wyświetlane po lewej stronie karty. Użytkownik może wybrać dowolne z dostępnych poleceń z menu. Tylko polecenia menu można kojarzyć ze skrótem klawiaturowym. Po wprowadzeniu nowego skrótu przez użytkownika przycisk **Przypisz** zostanie włączony. Gdy użytkownik kliknie ten przycisk, aplikacja kojarzy wybrane polecenie z tym skrótem.
 
-W polu listy, w prawej kolumnie tabeli są wymienione wszystkie aktualnie przypisanych skrótów klawiaturowych. Użytkownika można również wybrać pojedyncze skróty i je usunąć lub zresetować wszystkie mapowania dla aplikacji.
+Wszystkie aktualnie przypisane skróty klawiaturowe są wymienione w polu listy w prawej kolumnie. Użytkownik może również wybrać poszczególne skróty i usunąć je lub zresetować wszystkie mapowania aplikacji.
 
-Jeśli chcesz obsługiwać to dostosowanie do aplikacji, należy utworzyć [CKeyboardManager](../mfc/reference/ckeyboardmanager-class.md) obiektu. Aby utworzyć `CKeyboardManager` obiektu, wywołaj funkcję [CWinAppEx::InitKeyboardManager](../mfc/reference/cwinappex-class.md#initkeyboardmanager). Ta metoda tworzy i inicjuje Menedżera klawiatury. Jeśli tworzysz klawiatury manager ręcznie, nadal należy wywołać `CWinAppEx::InitKeyboardManager` zainicjować go.
+Jeśli chcesz obsłużyć to dostosowanie w aplikacji, musisz utworzyć obiekt [CKeyboardManager](reference/ckeyboardmanager-class.md) . Aby utworzyć `CKeyboardManager` obiekt, wywołaj funkcję [CWinAppEx:: InitKeyboardManager](reference/cwinappex-class.md#initkeyboardmanager). Ta metoda służy do tworzenia i inicjowania Menedżera klawiatury. W przypadku ręcznego tworzenia Menedżera klawiatury nadal trzeba wywołać metodę `CWinAppEx::InitKeyboardManager` inicjalizacji.
 
-Jeśli używasz kreatora do tworzenia aplikacji, Kreator będzie inicjował Menedżera klawiatury. Po aplikacji inicjuje Menedżera klawiatury, struktura dodaje **klawiatury** kartę **dostosowywania** okno dialogowe.
+W przypadku tworzenia aplikacji za pomocą kreatora zostanie zainicjowany Menedżer klawiatury. Po zainicjowaniu przez aplikację Menedżera klawiatury, struktura dodaje kartę **klawiatury** do okna dialogowego **Dostosowywanie** .
 
 ## <a name="mouse-customization"></a>Dostosowywanie myszy
 
-Poniższa ilustracja przedstawia **myszy** karcie **dostosowywania** okno dialogowe.
+Na poniższej ilustracji przedstawiono kartę **myszy** okna dialogowego **Dostosowywanie** .
 
-![Karta myszy w oknie dialogowym Dostosuj](../mfc/media/mfcnextmousetab.png "myszy karty w oknie dialogowym Dostosuj") <br/>
-Karta dostosowywania myszy
+![Karta myszy w oknie dialogowym Dostosowywanie](../mfc/media/mfcnextmousetab.png "Karta myszy w oknie dialogowym Dostosowywanie") <br/>
+Karta Dostosowywanie myszy
 
-Użytkownik wchodzi w interakcję z tę kartę, aby przypisać menu polecenie, aby przycisk myszy, kliknij dwukrotnie działanie. Użytkownik wybiera widok z lewej strony okna i następnie używa formanty po prawej stronie, aby skojarzyć polecenia za pomocą akcji kliknij dwukrotnie plik. Po użytkownik klika **Zamknij**, aplikacja wykonuje polecenie skojarzone zawsze wtedy, gdy użytkownik kliknie dwukrotnie dowolne miejsce w widoku.
+Użytkownik współdziała z tą kartą, aby przypisać polecenie menu do akcji dwukrotnego kliknięcia przycisku myszy. Użytkownik wybiera widok z lewej strony okna, a następnie używa formantów po prawej stronie, aby skojarzyć polecenie z akcją dwukrotnego kliknięcia. Gdy użytkownik kliknie przycisk **Zamknij**, aplikacja wykonuje skojarzone polecenie za każdym razem, gdy użytkownik kliknie dwukrotnie dowolne miejsce w widoku.
 
-Domyślnie dostosowywania myszy nie jest włączona podczas tworzenia aplikacji za pomocą kreatora.
+Domyślnie Dostosowywanie myszy nie jest włączane podczas tworzenia aplikacji za pomocą kreatora.
 
 #### <a name="to-enable-mouse-customization"></a>Aby włączyć Dostosowywanie myszy
 
-1. Inicjowanie [CMouseManager](../mfc/reference/cmousemanager-class.md) obiektu przez wywołanie metody [CWinAppEx::InitMouseManager](../mfc/reference/cwinappex-class.md#initmousemanager).
+1. Zainicjuj obiekt [CMouseManager](reference/cmousemanager-class.md) przez wywołanie [CWinAppEx:: InitMouseManager](reference/cwinappex-class.md#initmousemanager).
 
-1. Uzyskiwanie wskaźnika do Menedżera myszy przy użyciu [CWinAppEx::GetMouseManager](../mfc/reference/cwinappex-class.md#getmousemanager).
+1. Uzyskaj wskaźnik do Menedżera myszy przy użyciu [CWinAppEx:: GetMouseManager](reference/cwinappex-class.md#getmousemanager).
 
-1. Dodawanie widoków do Menedżera myszy przy użyciu [CMouseManager::AddView](../mfc/reference/cmousemanager-class.md#addview) metody. W tym dla każdego widoku, który ma zostać dodany do Menedżera myszy.
+1. Dodaj widoki do Menedżera myszy przy użyciu metody [CMouseManager:: AddView](reference/cmousemanager-class.md#addview) . Zrób to dla każdego widoku, który chcesz dodać do Menedżera myszy.
 
-Po aplikacji zostają Menedżera myszy platformę dodaje **myszy** kartę **Dostosuj** okno dialogowe. Jeśli nie dodasz żadnych widoków, uzyskiwanie dostępu do karty spowoduje, że nieobsługiwany wyjątek. Po utworzeniu listy widoków, **myszy** karta jest dostępna dla użytkownika.
+Po zainicjowaniu przez aplikację Menedżera myszy, struktura dodaje kartę **myszy** do okna dialogowego **Dostosowywanie** . Jeśli nie dodasz żadnych widoków, uzyskanie dostępu do karty spowoduje nieobsługiwany wyjątek. Po utworzeniu listy widoków karta **mysz** jest dostępna dla użytkownika.
 
-Po dodaniu nowego widoku z menedżerem myszy tworzonemu elementowi nadawana unikatowego identyfikatora. Jeśli chcesz obsługiwać mysz dostosowywania okna, musisz przetworzyć WM_LBUTTONDBLCLICK komunikatów i wywołania [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) funkcji. Jeśli chcesz wywołać tę funkcję, jeden z parametrów jest identyfikator dla tego okna. Jest odpowiedzialny za programisty, aby śledzić numery identyfikatorów i obiektów skojarzonych z nimi.
+Po dodaniu nowego widoku do Menedżera myszy należy nadać mu unikatowy identyfikator. Jeśli chcesz obsługiwać Dostosowywanie myszy dla okna, musisz przetworzyć WM_LBUTTONDBLCLICK komunikat i wywołać funkcję [CWinAppEx:: OnViewDoubleClick](reference/cwinappex-class.md#onviewdoubleclick) . Po wywołaniu tej funkcji jeden z parametrów jest IDENTYFIKATORem tego okna. Programista jest odpowiedzialny za śledzenie numerów IDENTYFIKACYJNych i skojarzonych z nimi obiektów.
 
 ## <a name="security-concerns"></a>Zagadnienia dotyczące zabezpieczeń
 
-Zgodnie z opisem w [narzędzia zdefiniowane przez użytkownika](../mfc/user-defined-tools.md), użytkownik może skojarzyć identyfikator narzędzia zdefiniowanego przez użytkownika za pomocą zdarzenia kliknij dwukrotnie plik. Gdy użytkownik kliknie dwukrotnie widoku, aplikacja szuka narzędzie użytkownika, które odpowiada skojarzony identyfikator. Jeśli aplikacja wykryje pasującego narzędzia, uruchamia narzędzie. Jeśli aplikacja nie można odnaleźć pasującego narzędzia, wysyła komunikat WM_COMMAND o identyfikatorze do widoku, który był dwukrotnym kliknięciu.
+Zgodnie z opisem w [narzędziach zdefiniowanych przez użytkownika](user-defined-tools.md), użytkownik może skojarzyć identyfikator narzędzia zdefiniowanego przez użytkownika z zdarzeniem dwukrotnego kliknięcia. Gdy użytkownik kliknie dwukrotnie widok, aplikacja szuka narzędzia użytkownika odpowiadającego skojarzonemu IDENTYFIKATORowi. Jeśli aplikacja odnajdzie pasujące narzędzie, uruchamia narzędzie. Jeśli aplikacja nie może znaleźć pasującego narzędzia, wysyła komunikat WM_COMMAND z IDENTYFIKATORem do widoku, który został dwukrotnie kliknięty.
 
-Niestandardowe ustawienia są przechowywane w rejestrze. Edytując rejestr, osoba atakująca może zastąpić identyfikator narzędzia prawidłowego użytkownika dowolne polecenie. Gdy użytkownik kliknie dwukrotnie widoku, widok procesy polecenie, które osoba atakująca obsadzony. Może to spowodować nieoczekiwane i potencjalnie niebezpieczne zachowania.
+Dostosowane ustawienia są przechowywane w rejestrze. Edytując rejestr, osoba atakująca może zastąpić prawidłowy identyfikator narzędzia użytkownika za pomocą dowolnego polecenia. Gdy użytkownik kliknie dwukrotnie widok, widok przetwarza polecenie, którego osoba atakująca zasadzonie. Może to spowodować nieoczekiwane i potencjalnie niebezpieczne zachowanie.
 
-Oprócz tego rodzaju ataków można pominąć zabezpieczenia interfejsu użytkownika. Na przykład załóżmy, że aplikacja ma wyłączone drukowania. Oznacza to, że w jego interfejsie użytkownika **drukowania** menu i przycisk są niedostępne. Zapobiega to zwykle aplikacji drukowanie. Ale jeśli osoba atakująca edytować rejestr, użytkownik może teraz można wysłać polecenia drukowania bezpośrednio przez dwukrotne kliknięcie widoku, pomijając elementy interfejsu użytkownika, które są niedostępne.
+Ponadto ten rodzaj ataku może obejść zabezpieczenia interfejsu użytkownika. Załóżmy na przykład, że aplikacja ma wyłączone drukowanie. Oznacza to, że w interfejsie użytkownika menu i przycisk **Drukuj** są niedostępne. Zwykle zapobiega to drukowaniu aplikacji. Jeśli jednak osoba atakująca przeedytował rejestr, może wysłać polecenie drukowania bezpośrednio przez dwukrotne kliknięcie widoku, pomijając elementy interfejsu użytkownika, które są niedostępne.
 
-Aby zabezpieczyć się przed tego rodzaju atak, należy dodać kod do obsługi polecenia Twojej aplikacji, aby sprawdzić, czy polecenie jest prawidłowa, zanim zostanie on wykonany. Nie są zależne od interfejsu użytkownika, aby uniemożliwić polecenia wysyłane do aplikacji.
+Aby zabezpieczyć przed tym rodzajem ataku, Dodaj kod do programu obsługi poleceń aplikacji, aby sprawdzić, czy polecenie jest prawidłowe przed wykonaniem. Nie należy polegać na interfejsie użytkownika, aby zapobiec wysyłaniu polecenia do aplikacji.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Dostosowywanie na potrzeby MFC](../mfc/customization-for-mfc.md)<br/>
-[Klasa CKeyboardManager](../mfc/reference/ckeyboardmanager-class.md)<br/>
-[Klasa CMouseManager](../mfc/reference/cmousemanager-class.md)<br/>
-[Konsekwencje dostosowania związane z zabezpieczeniami](../mfc/security-implications-of-customization.md)
+[Dostosowywanie na potrzeby MFC](customization-for-mfc.md)<br/>
+[Klasa CKeyboardManager](reference/ckeyboardmanager-class.md)<br/>
+[Klasa CMouseManager](reference/cmousemanager-class.md)<br/>
+[Konsekwencje dostosowania związane z zabezpieczeniami](security-implications-of-customization.md)

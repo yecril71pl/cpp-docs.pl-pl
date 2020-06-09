@@ -7,29 +7,29 @@ helpviewer_keywords:
 - command handling [MFC], calling handlers and code in MFC
 - command routing [MFC], MFC
 ms.assetid: d79bceba-4ff6-417a-9d52-6b6af62a909d
-ms.openlocfilehash: b48d8ac93ca33bd80f9a8a8369291f63fc623f5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fcfcbdd224db66550e7f0ff27de6313c85f856a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254011"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618518"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>Jak struktura wywołuje program obsługi
 
-Poniższe tematy najpierw sprawdzić kierowanie poleceń w ramach, a następnie sprawdź, jak inne komunikaty i powiadomień dotyczących formantu karty są wysyłane do systemu windows:
+W poniższych tematach najpierw opisano sposób, w jaki struktura kieruje polecenia, a następnie bada, jak inne komunikaty i powiadomienia sterujące są wysyłane do systemu Windows:
 
-- [Wysyłanie i odbieranie komunikatów](../mfc/message-sending-and-receiving.md)
+- [Wysyłanie i otrzymywanie komunikatów](message-sending-and-receiving.md)
 
-- [Jak komunikaty niebędące poleceniami docierają do swoich programów obsługi](../mfc/how-noncommand-messages-reach-their-handlers.md)
+- [Jak komunikaty z poleceniami docierają do swoich programów obsługi](how-noncommand-messages-reach-their-handlers.md)
 
-- [Routing poleceń](../mfc/command-routing.md)
+- [Routing poleceń](command-routing.md)
 
-- [Ilustracja routingu poleceń](../mfc/command-routing-illustration.md)
+- [Ilustracja routingu poleceń](command-routing-illustration.md)
 
-- [Program obsługi OnCmdMsg](../mfc/oncmdmsg-handler.md)
+- [Procedura obsługi OnCmdMsg](oncmdmsg-handler.md)
 
-- [Zastępowanie standardowego routingu poleceń](../mfc/overriding-the-standard-command-routing.md)
+- [Zastępowanie standardowego routingu poleceń](overriding-the-standard-command-routing.md)
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)
+[Obsługa i mapowanie komunikatów](message-handling-and-mapping.md)

@@ -4,24 +4,24 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-ms.openlocfilehash: 6d3a692eab47a1309ee0248b51ab8563fb077d5a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29ca2e3df4981db22a10281ba2a2938fc91d5b46
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377248"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620003"
 ---
 # <a name="html-basics"></a>Podstawy HTML
 
-Większość przeglądarek ma możliwość badania źródła HTML przeglądanych stron. Podczas przeglądania źródła zostanie wyświetlonych kilka znaczników HTML (Język znaczników hipertekstowych), otoczonych nawiasami kątowymi (<>), przeplatanych tekstem.
+Większość przeglądarek ma możliwość zbadania źródła HTML przeglądanych stron. Po wyświetleniu źródła zobaczysz kilka tagów HTML (Hypertext Markup Language), otoczone nawiasami ostrymi (<>), przeplatanymi z tekstem.
 
-Poniższe kroki używają tagów HTML do tworzenia prostej strony sieci Web. W tych krokach wpiszesz zwykły tekst do pliku w Notatniku, dokonasz kilku zmian, zapisz plik i ponownie załadujesz stronę w przeglądarce, aby zobaczyć zmiany.
+W poniższych krokach użyto tagów HTML do utworzenia prostej strony internetowej. W tych krokach wpiszesz zwykły tekst do pliku w Notatniku, wprowadzisz kilka zmian, zapiszesz plik i załadujesz ponownie stronę w przeglądarce, aby zobaczyć zmiany.
 
 #### <a name="to-create-an-html-file"></a>Aby utworzyć plik HTML
 
 1. Otwórz Notatnik lub dowolny edytor zwykłego tekstu.
 
-1. Z menu **Plik** wybierz polecenie **Nowy**.
+1. Z menu **plik** wybierz polecenie **Nowy**.
 
 1. Wpisz następujące wiersze:
 
@@ -33,15 +33,15 @@ Poniższe kroki używają tagów HTML do tworzenia prostej strony sieci Web. W t
     </HTML>
     ```
 
-1. Z menu **Plik** wybierz polecenie **Zapisz**i zapisz plik jako c:\webpages\First.htm. Pozostaw plik otwarty w edytorze.
+1. Z menu **plik** wybierz polecenie **Zapisz**i Zapisz plik jako c:\webpages\First.htm. Pozostaw plik otwarty w edytorze.
 
-1. Przełącz się do przeglądarki i z menu **Plik** wybierz polecenie **Otwórz**lub *wpisz file://C:/webpages/first.htm* w polu edycji adresu URL przeglądarki. Powinna zostać wyświetlona pusta strona z podpisem okna "Najlepsze tagi HTML".
+1. Przejdź do przeglądarki, a następnie z menu **plik** wybierz polecenie **otwórz**lub wpisz *File://C:/webpages/first.htm* w polu edycji adresu URL w przeglądarce. Powinna zostać wyświetlona pusta strona z podpisem okna "Najważniejsze Tagi HTML".
 
-   Zwróć uwagę, że znaczniki są sparowane i są zawarte w nawiasach kątowych. W tagach nie rozróżnia się wielkość liter, ale wielkość liter jest często używana do wyróżniania znaczników.
+   Zauważ, że Tagi są sparowane i znajdują się w nawiasach kątowych. W tagach nie jest rozróżniana wielkość liter, ale wielkie litery są często używane do wyróżniania tagów.
 
-   Tag \<HTML> uruchamia dokument, a tag \</HTML> go kończy. Znaczniki końcowe (nie zawsze wymagane) są takie same jak znacznik początkowy, ale mają ukośnik do przodu (/) przed tagiem. Między nawiasem kątowym (<) a początkiem znacznika nie powinno być spacji.
+   Tag \<HTML> uruchamia dokument, a znacznik \</HTML> zostaje zakończony. Tagi końcowe (nie zawsze wymagane) są takie same jak tag początkowy, ale mają ukośnik (/) przed tagiem. Między nawiasem ostrym (<) i początkiem tagu nie powinny znajdować się spacje.
 
-1. Przełącz się z powrotem \<do Notatnika i po wierszu /HEAD> wpisz:
+1. Przełącz się z powrotem do Notatnika, a po \</HEAD> wierszu wpisz:
 
     ```html
     <BODY>
@@ -50,13 +50,13 @@ Poniższe kroki używają tagów HTML do tworzenia prostej strony sieci Web. W t
     </BODY>
     ```
 
-1. Z menu **Plik** wybierz polecenie **Zapisz**.
+1. Z menu **plik** wybierz polecenie **Zapisz**.
 
-1. Przełącz się z powrotem do przeglądarki i odśwież stronę.
+1. Przełącz się z powrotem do przeglądarki i Odśwież stronę.
 
-   Słowa pojawią się w obszarze klienta okna przeglądarki. Należy zauważyć, że zwrot karetki jest ignorowany. Jeśli chcesz mieć podział wiersza, musisz `<BR>` dołączyć znacznik po pierwszym wierszu.
+   Słowa pojawią się w obszarze klienta okna przeglądarki. Zwróć uwagę, że znak powrotu karetki został zignorowany. Jeśli chcesz mieć podział wiersza, musisz dołączyć `<BR>` tag po pierwszym wierszu.
 
-   Aby uzyskać wszystkie następujące kroki, wstaw tekst w dowolnym miejscu między \<> i \</BODY>, aby dodać go do treści dokumentu.
+   Dla wszystkich kroków, które należy wykonać, Wstaw tekst w dowolnym miejscu między elementami \<BODY> i, \</BODY> Aby dodać je do treści dokumentu.
 
 1. Dodaj nagłówek:
 
@@ -64,7 +64,7 @@ Poniższe kroki używają tagów HTML do tworzenia prostej strony sieci Web. W t
     <H3>Here's the big picture</H3>
     ```
 
-1. Dodawanie obrazu przy użyciu pliku gif zapisanego w tym samym katalogu co strona:
+1. Dodaj obraz przy użyciu pliku GIF zapisanego w tym samym katalogu, w którym znajduje się Strona:
 
     ```html
     <IMG src="yourfile.gif">
@@ -80,11 +80,11 @@ Poniższe kroki używają tagów HTML do tworzenia prostej strony sieci Web. W t
     </UL>
     ```
 
-1. Zamiast znaczników> UL i \< \</UL> \<należy użyć sparowanych znaczników \<OL> i /OL>.
+1. Aby ponumerować listę zamiast tego, należy użyć par \<OL> i \</OL> tagów w miejscu \<UL> \</UL> tagów i.
 
-To powinno zacząć. Jeśli na stronie sieci Web jest widoczna wspaniała funkcja, możesz dowiedzieć się, jak została utworzona, sprawdzając źródło HTML. Edytory HTML, takie jak Microsoft Front Page, mogą być używane do tworzenia zarówno stron prostych, jak i zaawansowanych.
+Który powinien zostać wyświetlony. Jeśli zobaczysz wspaniałą funkcję na stronie sieci Web, możesz dowiedzieć się, jak została ona utworzona, badając źródło HTML. Edytory HTML, takie jak Microsoft Front Page, mogą służyć do tworzenia prostych i zaawansowanych stron.
 
-Oto całe źródło HTML dla pliku, który zostałeś budulcem:
+Oto całe źródło HTML dla skompilowanego pliku:
 
 ```html
 <HTML>
@@ -105,10 +105,10 @@ Life is good.
 </HTML>
 ```
 
-Pełny opis znaczników, atrybutów i rozszerzeń można znaleźć w specyfikacji języka HTML (Hypertext Markup Language):
+Pełny opis tagów, atrybutów i rozszerzeń można znaleźć w specyfikacji HTML (HTML):
 
-[Najnowsza opublikowana wersja HTML](https://www.w3.org/TR/html/) w W3C.org.
+[Najnowsza opublikowana wersja języka HTML](https://www.w3.org/TR/html/) w W3C.org.
 
 ## <a name="see-also"></a>Zobacz też
 
-[MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)
+[MFC — podstawy programowania Internetu](mfc-internet-programming-basics.md)
