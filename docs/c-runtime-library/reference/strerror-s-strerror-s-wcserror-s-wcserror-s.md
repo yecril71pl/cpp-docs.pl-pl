@@ -1,6 +1,6 @@
 ---
 title: strerror_s, _strerror_s, _wcserror_s, __wcserror_s
-ms.date: 4/2/2020
+ms.date: 06/09/2020
 api_name:
 - __wcserror_s
 - _strerror_s
@@ -46,38 +46,38 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: b7361f626708672af5539dd3b3b9c0cf83fcd2d2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 91be8803a0695670e7afe673b25b54fccde40a9c
+ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918398"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84664329"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
-Pobierz komunikat o błędzie systemu (**strerror_s**, **_wcserror_s**) lub wydrukuj komunikat o błędzie dostarczony przez użytkownika (**_strerror_s**, **__wcserror_s**). Są to wersje [strerror, _strerror _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md) z ulepszonymi zabezpieczeniami, jak opisano w [funkcjach zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Pobierz komunikat o błędzie systemu (**strerror_s**, **_wcserror_s**) lub wydrukuj komunikat o błędzie dostarczony przez użytkownika (**_strerror_s**, **__wcserror_s**). Są to wersje [strerror, _strerror _wcserror, \_ _wcserror](strerror-strerror-wcserror-wcserror.md) z ulepszonymi zabezpieczeniami, jak opisano w [funkcjach zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
 ```C
 errno_t strerror_s(
    char *buffer,
-   size_t numberOfElements,
+   size_t sizeInBytes,
    int errnum
 );
 errno_t _strerror_s(
    char *buffer,
-   size_t numberOfElements,
+   size_t sizeInBytes,
    const char *strErrMsg
 );
 errno_t _wcserror_s(
    wchar_t *buffer,
-   size_t numberOfElements,
+   size_t sizeInWords,
    int errnum
 );
 errno_t __wcserror_s(
    wchar_t *buffer,
-   size_t numberOfElements,
+   size_t sizeInWords,
    const wchar_t *strErrMsg
 );
 template <size_t size>
@@ -107,8 +107,11 @@ errno_t __wcserror_s(
 *buforu*<br/>
 Bufor do przechowywania ciągu błędu.
 
-*numberOfElements*<br/>
-Rozmiar buforu.
+*sizeInBytes*<br/>
+Liczba bajtów w buforze.
+
+*sizeInWords*<br/>
+Liczba wyrazów w buforze.
 
 *errnum*<br/>
 Numer błędu.
@@ -122,10 +125,10 @@ Zero, jeśli to się powiedzie, kod błędu w przypadku niepowodzenia.
 
 ### <a name="error-condtions"></a>Warunki błędów
 
-|*buforu*|*numberOfElements*|*strErrMsg*|Zawartość *buforu*|
+|*buforu*|*sizeInBytes/sizeInWords*|*strErrMsg*|Zawartość *buforu*|
 |--------------|------------------------|-----------------|--------------------------|
-|**NULL**|ile|ile|n/d|
-|ile|0|ile|nie zmodyfikowano|
+|**NULL**|dowolny|dowolny|nie dotyczy|
+|dowolny|0|dowolny|nie zmodyfikowano|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -141,7 +144,7 @@ if (( _access( "datafile",2 )) == -1 )
 
 Jeśli *strErrMsg* ma **wartość null**, **_strerror_s** zwraca ciąg w *buforze* zawierającym komunikat o błędzie systemu dla ostatniego wywołania biblioteki, które spowodowało wystąpienie błędu. Ciąg komunikatu o błędzie jest zakończony znakiem nowego wiersza ("\n"). Jeśli *strErrMsg* nie jest równa **NULL**, wówczas **_strerror_s** zwraca ciąg w *buforze* zawierającym (w kolejności) komunikat ciągu, dwukropek, spację, komunikat o błędzie systemu dla ostatniego wywołania biblioteki, generując błąd i znak nowego wiersza. Ciąg może zawierać maksymalnie 94 znaków.
 
-Te funkcje obcinają komunikat o błędzie, jeśli jego długość przekracza *NumberOfElements* -1. Ciąg otrzymany w *buforze* jest zawsze zakończony wartością null.
+Te funkcje obcinają komunikat o błędzie, jeśli jego długość przekracza rozmiar buforu-1. Ciąg otrzymany w *buforze* będzie zawsze zakończony wartością null.
 
 Rzeczywisty numer błędu dla **_strerror_s** jest przechowywany w zmiennej [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Do komunikatów o błędach systemu uzyskuje się dostęp za pomocą zmiennej [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), która jest tablicą komunikatów uporządkowanych według numeru błędu. **_strerror_s** uzyskuje dostęp do odpowiedniego komunikatu o błędzie przy użyciu wartości **errno** jako indeksu do zmiennej **_sys_errlist**. Wartość zmiennej [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) jest definiowana jako maksymalna liczba elementów w tablicy **_sys_errlist** . Aby wygenerować dokładne wyniki, wywołaj **_strerror_s** natychmiast po wykonaniu procedury biblioteki z błędem. W przeciwnym razie kolejne wywołania **strerror_s** lub **_strerror_s** mogą zastąpić wartość **errno** .
 
@@ -167,8 +170,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strerror_s**, **_strerror_s**|\<> String. h|
-|**_wcserror_s**, **__wcserror_s**|\<ciąg. h> lub \<WCHAR. h>|
+|**strerror_s**, **_strerror_s**|\<string.h>|
+|**_wcserror_s**, **__wcserror_s**|\<string.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -176,7 +179,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 Zobacz przykład dla [pError](perror-wperror.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [clearerr](clearerr.md)<br/>
