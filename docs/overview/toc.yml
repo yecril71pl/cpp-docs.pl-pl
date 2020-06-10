@@ -1,4 +1,4 @@
-- name: Język C++ w programie Visual Studio
+- name: Microsoft C/C++ w programie Visual Studio
   expanded: false
   items:
     - name: Język C++ w programie Visual Studio
@@ -40,7 +40,7 @@
       href: /windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game
 - name: Projekty i systemy kompilacji
   href: ../build/projects-and-build-systems-cpp.md
-- name: Czytanie i pisanie kodu C++ w programie Visual Studio
+- name: Czytanie i pisanie kodu w programie Visual Studio
   href: ../ide/read-and-understand-code-cpp.md
 - name: Tworzenie aplikacji klasycznych systemu Windows
   href: ../windows/overview-of-windows-programming-in-cpp.md
@@ -123,6 +123,5 @@
           href: ../mfc/mfc-and-atl.md
         - name: Biblioteki równoległe
           href: ../parallel/
-          items: null
         - name: Biblioteki dostępu do danych
           href: ../data/
