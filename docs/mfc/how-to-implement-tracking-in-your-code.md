@@ -1,58 +1,58 @@
 ---
-title: 'Instrukcje: Implementowanie śledzenia w kodzie'
+title: 'Porady: implementowanie śledzenia w kodzie'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
-ms.openlocfilehash: 0f037480e83b8ca1ba12af56904afe25a33e4d6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d71543261021c7e20041d317401b7b7b8d0616e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160305"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621669"
 ---
-# <a name="how-to-implement-tracking-in-your-code"></a>Instrukcje: Implementowanie śledzenia w kodzie
+# <a name="how-to-implement-tracking-in-your-code"></a>Porady: implementowanie śledzenia w kodzie
 
-Aby śledzić elementu OLE, musi obsługiwać określonych zdarzeń związanych z elementu, na przykład klikając je lub aktualizowania widoku dokumentu. We wszystkich przypadkach jest wystarczające, aby zadeklarować tymczasowego [CRectTracker](../mfc/reference/crecttracker-class.md) obiektu i manipulowania elementem przy użyciu tego obiektu.
+Aby śledzić element OLE, należy obsłużyć pewne zdarzenia związane z elementem, takie jak kliknięcie elementu lub zaktualizowanie widoku dokumentu. We wszystkich przypadkach wystarczy zadeklarować tymczasowy obiekt [CRectTracker](reference/crecttracker-class.md) i manipulować elementem przy użyciu tego obiektu.
 
-Gdy użytkownik wybierze element lub wstawienie obiektu za pomocą polecenia menu, musi zostać zainicjowany śledzenia przy użyciu odpowiednich stylów do reprezentowania stanu elementu OLE. W poniższej tabeli przedstawiono Konwencji używanych przez przykład OCLIENT. Aby uzyskać więcej informacji na temat tych stylów, zobacz `CRectTracker`.
+Gdy użytkownik wybierze element lub wstawi obiekt z poleceniem menu, musisz zainicjować śledzenie przy użyciu odpowiednich stylów, aby reprezentować stan elementu OLE. Poniższa tabela zawiera opis Konwencji używanych przez przykład OCLIENT. Aby uzyskać więcej informacji na temat tych stylów, zobacz `CRectTracker` .
 
-### <a name="container-styles-and-states-of-the-ole-item"></a>Style kontenera i stany elementu OLE
+### <a name="container-styles-and-states-of-the-ole-item"></a>Style kontenera i Stany elementu OLE
 
-|Styl wyświetlane|Stan elementu OLE|
+|Wyświetlany styl|Stan elementu OLE|
 |---------------------|-----------------------|
-|Kropkowane obramowanie|Połączony element|
-|Obramowanie ciągłe|Element jest osadzony w dokumencie|
-|Uchwyty zmiany rozmiaru|Element jest aktualnie wybrany.|
-|Kreskowane obramowanie|Element jest aktualnie aktywny w miejscu|
-|Element nakładki wzorzec kreskowaniu|Serwer elementu jest otwarty|
+|Obramowanie kropkowane|Element jest połączony|
+|Stałe obramowanie|Element jest osadzony w dokumencie|
+|Uchwyty zmiany rozmiaru|Element jest obecnie zaznaczony|
+|Kreskowane obramowanie|Element jest obecnie aktywny|
+|Element nakładający się wzorca kreskowanego|Serwer elementu jest otwarty|
 
-Może obsługiwać ten proces inicjowania przy użyciu procedury, która sprawdza stan elementu OLE i ustawia odpowiednie style. `SetupTracker` Funkcji dostępnej w przykładzie OCLIENT pokazuje inicjowania śledzenia. Parametry dla tej funkcji to adres modułu śledzącego *pTracker*; wskaźnik do elementu klienta, który jest powiązany z obiektem śledzącym, *pItem*; i wskaźnik prostokąt, *pTrueRect* . Aby uzyskać bardziej szczegółowy przykład tej funkcji, zobacz przykład MFC OLE [OCLIENT](../overview/visual-cpp-samples.md).
+Można łatwo obsługiwać tę inicjalizację przy użyciu procedury, która sprawdza stan elementu OLE i ustawia odpowiednie style. `SetupTracker`Funkcja znaleziona w przykładzie OCLIENT demonstruje inicjalizację narzędzia do śledzenia. Parametry tej funkcji są adresami modułu śledzącego, *pTracker*; wskaźnik do elementu klienta, który jest powiązany z modułem śledzącym, *pItem*; i wskaźnik do prostokąta, *pTrueRect*. Aby zapoznać się z bardziej kompletnym przykładem tej funkcji, zobacz przykład OLE MFC [OCLIENT](../overview/visual-cpp-samples.md).
 
-**SetupTracker** przykładowy kod przedstawia jednej funkcji; wiersze funkcji są grupową dyskusję na temat funkcji funkcji:
+Przykład kodu **SetupTracker** przedstawia pojedynczą funkcję; wiersze funkcji są przeplatane z omówieniem funkcji funkcji:
 
-[!code-cpp[NVC_MFCOClient#1](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_1.cpp)]
+[!code-cpp[NVC_MFCOClient#1](codesnippet/cpp/how-to-implement-tracking-in-your-code_1.cpp)]
 
-Śledzenie jest inicjowany przez ustawienie minimalnego rozmiaru i wyczyszczenie styl śledzący.
+Moduł śledzący jest inicjowany przez ustawienie minimalnego rozmiaru i wyczyszczenie stylu modułu śledzącego.
 
-[!code-cpp[NVC_MFCOClient#2](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_2.cpp)]
+[!code-cpp[NVC_MFCOClient#2](codesnippet/cpp/how-to-implement-tracking-in-your-code_2.cpp)]
 
-Następujące wiersze Sprawdź, czy jest aktualnie wybrany element i tego, czy element jest połączony z dokumentem lub osadzone w nim. Uchwytami zmiany rozmiaru, znajduje się wewnątrz obramowania są dodawane do stylu, wskazującą, czy element jest aktualnie wybrany. Jeśli element jest połączony z dokumentu, używany jest styl obramowania kropkowana. Ciągłe obramowanie jest używana, jeśli element jest osadzony.
+Poniższe wiersze sprawdzają, czy element jest obecnie zaznaczony i czy element jest połączony z dokumentem lub osadzony. Uchwyty zmiany rozmiaru znajdujące się wewnątrz obramowania są dodawane do stylu, co oznacza, że element jest obecnie zaznaczony. Jeśli element jest połączony z dokumentem, używany jest styl obramowania kropkowanego. Gdy element jest osadzony, jest używany pełny obramowanie.
 
-[!code-cpp[NVC_MFCOClient#3](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_3.cpp)]
+[!code-cpp[NVC_MFCOClient#3](codesnippet/cpp/how-to-implement-tracking-in-your-code_3.cpp)]
 
-Otwórz element z kreskowanym wzorca, jeśli element znajduje się obecnie następujące nakładki kodu.
+Poniższy kod nakłada element z wzorcem, jeśli element jest aktualnie otwarty.
 
-[!code-cpp[NVC_MFCOClient#4](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_4.cpp)]
+[!code-cpp[NVC_MFCOClient#4](codesnippet/cpp/how-to-implement-tracking-in-your-code_4.cpp)]
 
-Następnie możesz wywołać tę funkcję, zawsze, gdy obiektem śledzącym ma być wyświetlana. Na przykład wywołać tę funkcję z `OnDraw` funkcji klasy widoku. Spowoduje to zaktualizowanie wygląd modułu śledzącego zawsze wtedy, gdy widok jest odświeżana. Aby uzyskać kompletny przykład, zobacz `CMainView::OnDraw` funkcja próbki MFC OLE [OCLIENT](../overview/visual-cpp-samples.md).
+Następnie można wywołać tę funkcję za każdym razem, gdy śledzenie ma być wyświetlane. Na przykład Wywołaj tę funkcję z `OnDraw` funkcji klasy widoku. Spowoduje to zaktualizowanie wyglądu narzędzia śledzącego za każdym razem, gdy widok zostanie odmalowany. Aby zapoznać się z kompletnym przykładem, zobacz `CMainView::OnDraw` Funkcja przykładowej klasy MFC OLE [OCLIENT](../overview/visual-cpp-samples.md).
 
-W aplikacji zdarzenia, które wymagają śledzenia kodu, takich jak wykrywanie zmiany rozmiaru, przenoszenie lub trafień, wystąpi. Te akcje zazwyczaj wskazują, że jest podejmowana jest próba pobrania lub Przenieś element w. W takich przypadkach należy zdecydować, co zostało złapał: uchwyt zmiany rozmiaru lub części granicy między uchwyty zmiany rozmiaru. `OnLButtonDown` Obsługi wiadomości jest dobrym miejscem do testowania położenie kursora myszy w odniesieniu do elementu. Wywołanie `CRectTracker::HitTest`. Jeśli test zwraca coś, co oprócz `CRectTracker::hitOutside`, element jest rozmiar lub przenieść. W związku z tym, należy po wywołaniu `Track` funkcja elementu członkowskiego. Zobacz `CMainView::OnLButtonDown` funkcji znajduje się w próbce MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) pełny przykład.
+W aplikacji są wykonywane zdarzenia wymagające kodu śledzenia, takie jak zmiana rozmiarów, przechodzenie lub wykrywanie trafień. Te akcje zwykle wskazują, że podjęto próbę pobrania lub przeniesienia elementu. W takich przypadkach należy zdecydować, co zostało wychwycone: uchwyt zmiany rozmiaru lub część obramowania między uchwytami zmiany rozmiaru. `OnLButtonDown`Program obsługi komunikatów jest dobrym miejscem do testowania pozycji myszy w odniesieniu do elementu. Wykonaj wywołanie `CRectTracker::HitTest` . Jeśli test zwróci coś poza `CRectTracker::hitOutside` , rozmiar elementu jest zmieniany lub przenoszony. W związku z tym należy wykonać wywołanie `Track` funkcji składowej. Zobacz `CMainView::OnLButtonDown` funkcję znajdującą się w przykładowej [OCLIENT](../overview/visual-cpp-samples.md) MFC OLE, aby uzyskać kompletny przykład.
 
-`CRectTracker` Klasa udostępnia kilka kształtów różne kursora służy do wskazywania, czy przenoszenie, zmiana rozmiaru, przeciągnij działanie odbywa się. Aby obsługiwać to zdarzenie, sprawdź, czy element umieszczono wskaźnik myszy jest zaznaczone. Jeśli tak jest, wywołania `CRectTracker::SetCursor`, lub wywołaj domyślny program obsługi. Poniższy przykład pochodzi z przykładu MFC OLE [OCLIENT](../overview/visual-cpp-samples.md):
+`CRectTracker`Klasa zawiera kilka różnych kształtów kursorów używanych do wskazywania, czy odbywa się Operacja przenoszenia, zmiany rozmiaru lub przeciągania. Aby obsłużyć to zdarzenie, sprawdź, czy element aktualnie pod myszą jest zaznaczony. Jeśli tak, wykonaj wywołanie `CRectTracker::SetCursor` lub wywołaj domyślną procedurę obsługi. Poniższy przykład pochodzi z przykładu [OCLIENT](../overview/visual-cpp-samples.md)MFC OLE:
 
-[!code-cpp[NVC_MFCOClient#5](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_5.cpp)]
+[!code-cpp[NVC_MFCOClient#5](codesnippet/cpp/how-to-implement-tracking-in-your-code_5.cpp)]
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Trackery: Implementowanie Trackerów w aplikacji OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
+[Trackery: implementowanie trackerów w aplikacji OLE](trackers-implementing-trackers-in-your-ole-application.md)

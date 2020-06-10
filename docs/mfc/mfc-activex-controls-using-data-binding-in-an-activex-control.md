@@ -14,125 +14,125 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 41ac0180242aea3143a1df2c32dc81fb18cd7dca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3f16ea3ad77c676695a9d5ca6e2deb10637de455
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370779"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621185"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Kontrolki ActiveX MFC: używanie powiązania danych w kontrolce ActiveX
 
-Jednym z bardziej zaawansowanych zastosowań formantów ActiveX jest powiązanie danych, co umożliwia właściwość formantu do powiązania z określonym polem w bazie danych. Gdy użytkownik modyfikuje dane w tej właściwości powiązanej, formant powiadamia bazę danych i żąda aktualizacji pola rekordu. Baza danych następnie powiadamia kontrolę nad powodzenie lub niepowodzenie żądania.
+Jednym z bardziej zaawansowanych sposobów użycia formantów ActiveX jest powiązanie danych, co pozwala na powiązanie z określonym polem w bazie danych właściwości formantu. Gdy użytkownik modyfikuje dane w tej powiązanej właściwości, formant powiadamia bazę danych i żąda aktualizacji pola rekordu. Następnie baza danych powiadamia kontrolę nad sukcesem lub niepowodzeniem żądania.
 
 >[!IMPORTANT]
-> ActiveX to starsza technologia, która nie powinna być używana do nowego rozwoju. Aby uzyskać więcej informacji na temat nowoczesnych technologii, które zastępują ActiveX, zobacz [ActiveX Controls](activex-controls.md).
+> Kontrolka ActiveX to Starsza technologia, która nie powinna być używana do nowych celów programistycznych. Aby uzyskać więcej informacji na temat nowoczesnych technologii, które zastępują ActiveX, zobacz [kontrolki ActiveX](activex-controls.md).
 
-W tym artykule opisano stronę kontrolną zadania. Implementowanie interakcji powiązania danych z bazą danych jest odpowiedzialny za kontenera kontroli. Sposób zarządzania interakcjami bazy danych w kontenerze wykracza poza zakres tej dokumentacji. Jak przygotować formant do powiązania danych jest wyjaśnione w pozostałej części tego artykułu.
+Ten artykuł dotyczy strony kontrolki zadania. Zaimplementowanie interakcji z powiązaniem danych z bazą danych jest obowiązkiem kontenera kontroli. Zarządzanie interakcjami bazy danych w kontenerze wykracza poza zakres tej dokumentacji. Sposób przygotowania kontroli dla powiązania danych znajduje się w dalszej części tego artykułu.
 
-![Diagram koncepcyjny kontroli danych&#45;powiązanych](../mfc/media/vc374v1.gif "Diagram koncepcyjny kontroli danych&#45;powiązanych") <br/>
-Diagram koncepcyjny formantu związanego z danymi
+![Diagram koncepcyjny kontrolki powiązanej&#45;danych](../mfc/media/vc374v1.gif "Diagram koncepcyjny kontrolki powiązanej&#45;danych") <br/>
+Diagram koncepcyjny kontrolki powiązanej z danymi
 
-Klasa `COleControl` udostępnia funkcje elementów członkowskich, które sprawiają, że powiązanie danych jest łatwym procesem do zaimplementowania. Pierwsza [funkcja, BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), służy do żądania uprawnień do zmiany wartości właściwości. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), druga funkcja, jest wywoływana po pomyślnej zmianie wartości właściwości.
+`COleControl`Klasa zawiera dwie funkcje członkowskie, które tworzą powiązanie danych z łatwym procesem implementacji. Pierwsza funkcja, [BoundPropertyRequestEdit](reference/colecontrol-class.md#boundpropertyrequestedit), jest używana do żądania uprawnień do zmiany wartości właściwości. [BoundPropertyChanged](reference/colecontrol-class.md#boundpropertychanged), druga funkcja jest wywoływana po pomyślnym zmianie wartości właściwości.
 
 W tym artykule omówiono następujące tematy:
 
-- [Tworzenie właściwości stockowej możliwej do wiązania](#vchowcreatingbindablestockproperty)
+- [Tworzenie właściwości zasobów możliwej do powiązania](#vchowcreatingbindablestockproperty)
 
-- [Tworzenie metody get/set możliwej do wiązania](#vchowcreatingbindablegetsetmethod)
+- [Tworzenie metody get/set możliwej do powiązania](#vchowcreatingbindablegetsetmethod)
 
-## <a name="creating-a-bindable-stock-property"></a><a name="vchowcreatingbindablestockproperty"></a>Tworzenie właściwości stockowej możliwej do wiązania
+## <a name="creating-a-bindable-stock-property"></a><a name="vchowcreatingbindablestockproperty"></a>Tworzenie właściwości zasobów możliwej do powiązania
 
-Istnieje możliwość utworzenia właściwości magazynu związane z danymi, chociaż jest bardziej prawdopodobne, że będzie chcesz [bindable get/ set metody](#vchowcreatingbindablegetsetmethod).
+Istnieje możliwość utworzenia właściwości podstawowych powiązanych z danymi, chociaż jest to bardziej prawdopodobne, że należy użyć [metody get/set do powiązania](#vchowcreatingbindablegetsetmethod).
 
 > [!NOTE]
-> Właściwości magazynowe `bindable` mają `requestedit` domyślnie atrybuty i atrybuty.
+> Właściwości podstawowe mają `bindable` `requestedit` Domyślnie atrybuty i.
 
-#### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>Aby dodać właściwość magazynu, która można powiązać za pomocą Kreatora dodawania właściwości
+#### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>Aby dodać właściwość zasobów możliwej do powiązania za pomocą Kreatora dodawania właściwości
 
-1. Rozpocznij projekt za pomocą [Kreatora sterowania MFC ActiveX](../mfc/reference/mfc-activex-control-wizard.md).
+1. Rozpocznij projekt przy użyciu [Kreatora kontrolek ActiveX MFC](reference/mfc-activex-control-wizard.md).
 
-1. Kliknij prawym przyciskiem myszy węzeł interfejsu dla formantu.
+1. Kliknij prawym przyciskiem myszy węzeł interfejsu dla kontrolki.
 
    Spowoduje to otwarcie menu skrótów.
 
-1. W menu skrótów kliknij polecenie **Dodaj,** a następnie kliknij pozycję **Dodaj właściwość**.
+1. W menu skrótów kliknij polecenie **Dodaj** , a następnie kliknij przycisk **Dodaj właściwość**.
 
-1. Wybierz jeden z wpisów z listy rozwijanej **Nazwa właściwości.** Na przykład można wybrać **tekst**.
+1. Wybierz jeden z wpisów z listy rozwijanej **Nazwa właściwości** . Na przykład możesz zaznaczyć **tekst**.
 
-   Ponieważ **Text** jest właściwością magazynu, atrybuty **bindable** i **requestedit** są już zaznaczone.
+   Ponieważ **tekst** jest właściwością giełdową, atrybuty możliwe do **powiązania** i **requestedit** są już zaznaczone.
 
-1. Zaznacz następujące pola wyboru na karcie **Atrybuty IDL:** **displaybind** i **defaultbind,** aby dodać atrybuty do definicji właściwości w projekcie . IDL. Te atrybuty sprawiają, że formant jest widoczny dla użytkownika i uczynić właściwość magazynu domyślną właściwość do wiązania.
+1. Zaznacz następujące pola wyboru na karcie **atrybuty IDL** : **displaybind** i **defaultbind** , aby dodać atrybuty do definicji właściwości w projekcie. Plik IDL. Te atrybuty sprawiają, że formant jest widoczny dla użytkownika i ustaw właściwość Stock jako domyślną właściwość, którą można powiązać.
 
-W tym momencie formant może wyświetlać dane ze źródła danych, ale użytkownik nie będzie mógł zaktualizować pól danych. Jeśli chcesz, aby formant mógł również aktualizować dane, zmień `OnOcmCommand` funkcję [OnOcmCommand,](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) aby wyglądała następująco:
+W tym momencie formant może wyświetlać dane ze źródła danych, ale użytkownik nie będzie mógł aktualizować pól danych. Aby formant mógł także aktualizować dane, należy zmienić `OnOcmCommand` funkcję [OnOcmCommand](mfc-activex-controls-subclassing-a-windows-control.md) , aby wyglądać następująco:
 
-[!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
+[!code-cpp[NVC_MFC_AxData#1](codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
 
-Teraz można utworzyć projekt, który zarejestruje formant. Po wstawieniu formantu w oknie dialogowym zostaną dodane właściwości **Pole danych** i **Źródło danych,** a teraz można wybrać źródło danych i pole do wyświetlenia w formancie.
+Teraz można skompilować projekt, który będzie rejestrował formant. Po wstawieniu kontrolki w oknie dialogowym zostaną dodane **pola danych** i właściwości **źródła danych** , a teraz można wybrać źródło danych i pole do wyświetlenia w formancie.
 
-## <a name="creating-a-bindable-getset-method"></a><a name="vchowcreatingbindablegetsetmethod"></a>Tworzenie metody get/set możliwej do wiązania
+## <a name="creating-a-bindable-getset-method"></a><a name="vchowcreatingbindablegetsetmethod"></a>Tworzenie metody get/set możliwej do powiązania
 
-Oprócz metody get/set związanej z danymi można również utworzyć [właściwość magazynu, którą można powiązać.](#vchowcreatingbindablestockproperty)
+Oprócz metody get/set powiązanej z danymi można także utworzyć [Właściwość zasobów](#vchowcreatingbindablestockproperty)możliwej do powiązania.
 
 > [!NOTE]
-> W tej procedurze przyjęto założenie, że masz projekt formantu ActiveX, który podklasuje formant systemu Windows.
+> W tej procedurze przyjęto założenie, że istnieje projekt kontrolki ActiveX, który jest podklasą kontrolki systemu Windows.
 
-#### <a name="to-add-a-bindable-getset-method-using-the-add-property-wizard"></a>Aby dodać metodę get/set można powiązać za pomocą Kreatora dodawania właściwości
+#### <a name="to-add-a-bindable-getset-method-using-the-add-property-wizard"></a>Aby dodać metodę get/set do powiązania za pomocą Kreatora dodawania właściwości
 
-1. Załaduj projekt formantu.
+1. Załaduj projekt kontrolki.
 
-1. Na stronie **Ustawienia sterowania** wybierz klasę okna dla formantu do podklasy. Na przykład można podklasy kontrolki EDIT.
+1. Na stronie **Ustawienia kontroli** wybierz klasę okna dla kontrolki do podklasy. Na przykład możesz chcieć utworzyć podklasę kontrolki edycji.
 
-1. Załaduj projekt formantu.
+1. Załaduj projekt kontrolki.
 
-1. Kliknij prawym przyciskiem myszy węzeł interfejsu dla formantu.
+1. Kliknij prawym przyciskiem myszy węzeł interfejsu dla kontrolki.
 
    Spowoduje to otwarcie menu skrótów.
 
-1. W menu skrótów kliknij polecenie **Dodaj,** a następnie kliknij pozycję **Dodaj właściwość**.
+1. W menu skrótów kliknij polecenie **Dodaj** , a następnie kliknij przycisk **Dodaj właściwość**.
 
-1. Wpisz nazwę właściwości w polu **Nazwa właściwości.** Użyj `MyProp` w tym przykładzie.
+1. Wpisz nazwę właściwości w polu **Nazwa właściwości** . Użyj `MyProp` w tym przykładzie.
 
-1. Wybierz typ danych z listy rozwijanej **Typ właściwości.** W tym przykładzie **użyj skrótu.**
+1. Wybierz typ danych z listy rozwijanej **Typ właściwości** . Użyj **krótkich** w tym przykładzie.
 
-1. W przypadku **typu implementacji**kliknij pozycję **Pobierz/Ustaw metody**.
+1. W obszarze **Typ implementacji**kliknij pozycję **Pobierz/ustaw metody**.
 
-1. Zaznacz następujące pola wyboru na karcie Atrybuty IDL: **bindable**, **requestedit**, **displaybind**i **defaultbind** , aby dodać atrybuty do definicji właściwości w projekcie . IDL. Te atrybuty sprawiają, że formant jest widoczny dla użytkownika i uczynić właściwość magazynu domyślną właściwość do wiązania.
+1. Zaznacz następujące pola wyboru na karcie atrybuty IDL: możliwe do **powiązania**, **requestedit**, **displaybind**i **defaultbind** , aby dodać atrybuty do definicji właściwości w projekcie. Plik IDL. Te atrybuty sprawiają, że formant jest widoczny dla użytkownika i ustaw właściwość Stock jako domyślną właściwość, którą można powiązać.
 
 1. Kliknij przycisk **Zakończ**.
 
-1. Zmodyfikuj treść funkcji tak, `SetMyProp` aby zawierała następujący kod:
+1. Zmodyfikuj treść `SetMyProp` funkcji, tak aby zawierała następujący kod:
 
-   [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
+   [!code-cpp[NVC_MFC_AxData#2](codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
 
-1. Parametr przekazany do `BoundPropertyChanged` `BoundPropertyRequestEdit` funkcji i jest dispid właściwości, który jest parametr przekazany do id() atrybut właściwości w . IDL.
+1. Parametr przesłany do `BoundPropertyChanged` funkcji i `BoundPropertyRequestEdit` jest identyfikatorem DISPID właściwości, który jest parametrem przesłanym do atrybutu ID () właściwości w. Plik IDL.
 
-1. Zmodyfikuj [onocmcommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) funkcji, więc zawiera następujący kod:
+1. Zmodyfikuj funkcję [OnOcmCommand](mfc-activex-controls-subclassing-a-windows-control.md) , aby zawierała następujący kod:
 
-   [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
+   [!code-cpp[NVC_MFC_AxData#1](codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
 
 1. Zmodyfikuj `OnDraw` funkcję tak, aby zawierała następujący kod:
 
-   [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
+   [!code-cpp[NVC_MFC_AxData#3](codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
 
-1. Do sekcji publicznej pliku nagłówka pliku nagłówka dla klasy kontrolnej dodaj następujące definicje (konstruktory) dla zmiennych elementów członkowskich:
+1. Do publicznej sekcji pliku nagłówkowego plik nagłówkowy klasy kontrolki, Dodaj następujące definicje (konstruktorów) dla zmiennych składowych:
 
-   [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
+   [!code-cpp[NVC_MFC_AxData#4](codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
 
-1. Ustaw ostatni wiersz w `DoPropExchange` funkcji:
+1. Ustaw następujący wiersz jako ostatni wiersz w `DoPropExchange` funkcji:
 
-   [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
+   [!code-cpp[NVC_MFC_AxData#5](codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
 
 1. Zmodyfikuj `OnResetState` funkcję tak, aby zawierała następujący kod:
 
-   [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
+   [!code-cpp[NVC_MFC_AxData#6](codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
 
 1. Zmodyfikuj `GetMyProp` funkcję tak, aby zawierała następujący kod:
 
-   [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxData#7](codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
 
-Teraz można utworzyć projekt, który zarejestruje formant. Po wstawieniu formantu w oknie dialogowym zostaną dodane właściwości **Pole danych** i **Źródło danych,** a teraz można wybrać źródło danych i pole do wyświetlenia w formancie.
+Teraz można skompilować projekt, który będzie rejestrował formant. Po wstawieniu kontrolki w oknie dialogowym zostaną dodane **pola danych** i właściwości **źródła danych** , a teraz można wybrać źródło danych i pole do wyświetlenia w formancie.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)
+[Kontrolki ActiveX MFC](mfc-activex-controls.md)

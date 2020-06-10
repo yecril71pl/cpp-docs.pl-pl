@@ -7,24 +7,24 @@ helpviewer_keywords:
 - communications, tree controls
 - tree controls
 ms.assetid: 680ad9ee-b11f-452d-93fa-501ca7d7e069
-ms.openlocfilehash: 920608724ebb362b91efdcb3eab50b80acd20474
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f480cdad2fce53f830b8067083a8a4be4b4e4848
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151262"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619645"
 ---
 # <a name="communicating-with-a-tree-control"></a>Komunikacja z formantem drzewa
 
-Możesz użyć różnych metod wywoływania funkcji elementów członkowskich [CTreeCtrl](../mfc/reference/ctreectrl-class.md) obiekt, w zależności od sposobu utworzenia obiektu:
+Używasz różnych metod wywoływania funkcji Członkowskich w obiekcie [CTreeCtrl](reference/ctreectrl-class.md) w zależności od sposobu utworzenia obiektu:
 
-- Jeśli kontrolka drzewa w oknie dialogowym, użyj zmiennej składowej typu `CTreeCtrl` utworzony w klasie okno dialogowe.
+- Jeśli formant drzewa znajduje się w oknie dialogowym, użyj zmiennej składowej typu `CTreeCtrl` , która została utworzona w klasie okna dialogowego.
 
-- Jeśli formant drzewa jest oknem podrzędnym, użyj `CTreeCtrl` obiektu (lub wskaźnik) użyty do utworzenia obiekt.
+- Jeśli formant drzewa jest oknem podrzędnym, użyj `CTreeCtrl` obiektu (lub wskaźnika) użytego do konstruowania obiektu.
 
-- Jeśli używasz `CTreeView` obiektu, należy użyć funkcji [CTreeView::GetTreeCtrl](../mfc/reference/ctreeview-class.md#gettreectrl) można pobrać odwołania do formantu drzewa. Możesz zainicjować innego odwołania o tej wartości lub przypisać adres odwołania do `CTreeCtrl` wskaźnika.
+- Jeśli używasz `CTreeView` obiektu, użyj funkcji [CTreeView:: funkcji GetTreeCtrl](reference/ctreeview-class.md#gettreectrl) , aby pobrać odwołanie do kontrolki drzewa. Możesz zainicjować inne odwołanie z tą wartością lub przypisać adres odwołania do `CTreeCtrl` wskaźnika.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
-[Kontrolki](../mfc/controls-mfc.md)
+[Korzystanie z CTreeCtrl](using-ctreectrl.md)<br/>
+[Formanty](controls-mfc.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Zarządzanie pamięcią: Alokacja sterty'
+title: 'Zarządzanie pamięcią: alokacja stosu'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory [MFC], detecting leaks
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - heap allocation [MFC]
 - detecting memory leaks [MFC]
 ms.assetid: a5d949c6-1b79-476e-9c66-513a558203d9
-ms.openlocfilehash: 93eee5cbfe1cd49042a9080f06657e751640de69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f0b07a0a3439faba71078af1e2d7d1559a42b41
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219480"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626284"
 ---
-# <a name="memory-management-heap-allocation"></a>Zarządzanie pamięcią: Alokacja sterty
+# <a name="memory-management-heap-allocation"></a>Zarządzanie pamięcią: alokacja stosu
 
-Stos jest zastrzeżona na potrzeby alokacji pamięci programu. To obszar, oprócz kodu programu i stosu. Typowe programów C, użyj funkcji **— funkcja malloc** i **bezpłatne** można przydzielić i cofanie przydziału pamięci sterty. Wersja do debugowania MFC udostępnia zmodyfikowanej wersji wbudowanych operatorów C++ **nowe** i **Usuń** można przydzielić i cofanie przydziału obiektów w pamięci sterty.
+Stos jest zarezerwowany dla potrzeb alokacji pamięci programu. Jest to obszar poza kodem programu i stosem. W przypadku typowych programów C użycie funkcji **malloc** i **Free** umożliwia przydzielanie i cofanie alokacji pamięci sterty. Wersja debugowania MFC zawiera zmodyfikowane wersje wbudowanych operatorów języka C++ **New** i **delete** w celu przydzielania i dealokacji obiektów w pamięci sterty.
 
-Zastosowania **nowe** i **Usuń** zamiast **— funkcja malloc** i **bezpłatne**, będą mogli korzystać z zalet biblioteki klas Zarządzanie pamięcią debugowania rozszerzenia, które mogą być przydatne podczas wykrywania przecieków pamięci. Podczas budowania programu z wersji biblioteki MFC, wersje standard **nowe** i **Usuń** operatory zapewnia skuteczny sposób przydzielania i cofnąć jej przydział pamięci (wydanej wersji programu MFC nie zawiera zmodyfikowanej wersji te operatory).
+W przypadku korzystania z funkcji **New** i **delete** zamiast opcji **malloc** i **Free**można korzystać z ulepszeń debugowania zarządzania pamięcią w bibliotece klas, co może być przydatne w przypadku wykrywania przecieków pamięci. Podczas kompilowania programu przy użyciu wersji MFC, standardowe wersje operatorów **New** i **delete** zapewniają efektywny sposób przydzielenia i cofnięcia przydziału pamięci (wersja wersji MFC nie udostępnia zmodyfikowanych wersji tych operatorów).
 
-Należy pamiętać, że łączny rozmiar obiektów zaalokowanych na stosie jest ograniczona jedynie ilością dostępnej pamięci wirtualnej w systemie.
+Należy zauważyć, że łączny rozmiar obiektów przydzielonych na stercie jest ograniczony tylko przez dostępną pamięć wirtualną systemu.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Zarządzanie pamięcią](../mfc/memory-management.md)
+[Zarządzanie pamięcią](memory-management.md)

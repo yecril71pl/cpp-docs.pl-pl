@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - _1 object
 ms.assetid: 30c3c480-ff31-4708-94be-7d0d65f243c9
-ms.openlocfilehash: 1c1f13d40e02ec6e099ef1e2c20fe1cac4a4ef93
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 8fdb53ea03031f2bf1634a105275c72263ee20e3
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246533"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620929"
 ---
-# <a name="1-object"></a>_1 Object
+# <a name="_1-object"></a>_1 Object
 
-Symbole zastępcze dla wymiennych argumentów.
+Symbole zastępcze dla argumentów do przemieszczenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,9 +29,9 @@ namespace placeholders {
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekty `_1, _2, ... _M` jest symboli zastępczych wyznaczając pierwszy, drugi,..., argument wyznaczającymi odpowiednio w wywołaniu funkcji do obiektu zwróconego przez [powiązać](../standard-library/functional-functions.md#bind). Możesz użyć `_N` do określenia, gdzie n-ty argument powinien być wstawiany gdy obliczane jest wyrażenie bind.
+Obiekty `_1, _2, ... _M` są symbolami zastępczymi, które wyznaczają pierwszy, drugi,..., miesięczny argument, odpowiednio w wywołaniu funkcji do obiektu zwróconego przez [powiązanie](functional-functions.md#bind). Służy `_N` do określenia miejsca, w którym należy wstawić n-argument, gdy wyrażenie powiązania jest oceniane.
 
-W tej implementacji wartość z `M` wynosi 20.
+W tej implementacji wartość jest równa `M` 20.
 
 ## <a name="example"></a>Przykład
 

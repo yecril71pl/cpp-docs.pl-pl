@@ -14,137 +14,137 @@ helpviewer_keywords:
 - text, controls for input [MFC]
 - user input [MFC], MFC control classes
 ms.assetid: f9876606-9f5b-44cb-9135-213298d1df8f
-ms.openlocfilehash: 79a71a4660cd49f85726d730c9fad0b2f10f83bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 277802bff3e4833396c4bf114ff8880fcd26343d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338171"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623001"
 ---
 # <a name="control-classes"></a>Klasy formantów
 
-Klasy formantów hermetyzować szerokiej gamy standardowych kontrolek Windows począwszy od statyczny tekst kontrolki do kontrolki drzewa. Ponadto biblioteka MFC zawiera kilka nowych formantów, w tym przycisków z paskami mapy bitowe i kontroli.
+Klasy formantów hermetyzują szeroką gamę standardowych kontrolek systemu Windows od formantów tekstu statycznego do kontrolek drzewa. Ponadto MFC udostępnia niektóre nowe kontrolki, w tym przyciski zawierające mapy bitowe i paski sterowania.
 
-Formanty, których nazwy klasy kończyć się "**Ctrl**" wprowadzono nowe Windows 95 i Windows NT w wersji 3.51.
+Kontrolki, których nazwy klas kończą się znakiem "**Ctrl**", były Nowość w systemach Windows 95 i Windows NT w wersji 3,51.
 
-## <a name="static-display-controls"></a>Statyczne formanty wyświetlania
+## <a name="static-display-controls"></a>Statyczne kontrolki wyświetlania
 
-[CStatic](../mfc/reference/cstatic-class.md)<br/>
-Okno wyświetlania statyczne. Statyczne formanty są używane do etykiety, pole lub rozdzielić inne kontrolki lub oknie dialogowym. Może również wyświetlić obrazy zamiast tekstu lub pola.
+[CStatic](reference/cstatic-class.md)<br/>
+Okno statycznego wyświetlania. Formanty statyczne służą do etykietowania, pól i oddzielania innych kontrolek w oknie dialogowym lub w oknach. Mogą również wyświetlać obrazy graficzne zamiast tekstu lub pola.
 
-## <a name="text-controls"></a>Kontrolek tekstu
+## <a name="text-controls"></a>Kontrolki tekstu
 
-[CEdit](../mfc/reference/cedit-class.md)<br/>
-Okno kontrolki edycji tekstu. Edycja kontrolki są używane do akceptowania tekstowe dane wejściowe od użytkownika.
+[CEdit](reference/cedit-class.md)<br/>
+Okno kontrolki tekstu edytowalnego. Kontrolki edycji służą do akceptowania danych tekstowych od użytkownika.
 
-[CIPAddressCtrl](../mfc/reference/cipaddressctrl-class.md)<br/>
-Obsługuje pole edycji do manipulowania adres protokołu internetowego (IP).
+[CIPAddressCtrl](reference/cipaddressctrl-class.md)<br/>
+Obsługuje pole edycji do manipulowania adresem protokołu internetowego (IP).
 
-[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)<br/>
-Formant, w którym użytkownik może wprowadzić i edytować tekst. W przeciwieństwie do kontrolki, zhermetyzowanych w ramach `CEdit`, kontrolki edycji wzbogaconej obsługuje znaków i formatowanie akapitów i obiektów OLE.
+[CRichEditCtrl](reference/cricheditctrl-class.md)<br/>
+Kontrolka, w której użytkownik może wprowadzać i edytować tekst. W przeciwieństwie do kontrolki kapsułowane w `CEdit` , formant edycji wzbogaconej obsługuje formatowanie znaków i akapitów oraz obiekty OLE.
 
-## <a name="controls-that-represent-numbers"></a>Formanty, które reprezentują cyfr
+## <a name="controls-that-represent-numbers"></a>Kontrolki reprezentujące liczby
 
-[CSliderCtrl](../mfc/reference/csliderctrl-class.md)<br/>
-Kontrolka zawierająca suwaka, którego użytkownik przechodzi do wybrania wartością lub zbiorem wartości.
+[Korzystanie CSliderCtrl](reference/csliderctrl-class.md)<br/>
+Kontrolka zawierająca suwak, do którego użytkownik przechodzi w celu wybrania wartości lub zestawu wartości.
 
-[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)<br/>
-Parę przycisków strzałek użytkownik może kliknąć, aby zwiększyć lub zmniejszyć wartość.
+[Korzystanie CSpinButtonCtrl](reference/cspinbuttonctrl-class.md)<br/>
+Para przycisków strzałek, które użytkownik może kliknąć, aby zwiększyć lub zmniejszyć wartość.
 
-[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)<br/>
-Wyświetla prostokąt, który stopniowo wypełnione od lewej do prawej, aby wskazać postęp operacji.
+[Korzystanie CProgressCtrl](reference/cprogressctrl-class.md)<br/>
+Wyświetla prostokąt, który jest stopniowo wypełniany od lewej do prawej, aby wskazać postęp operacji.
 
-[CScrollBar](../mfc/reference/cscrollbar-class.md)<br/>
-Okno formantu paska przewijania. Klasa oferuje funkcje paska przewijania, do użytku jako formant w okno dialogowe lub w oknie, za pomocą którego użytkownik może określić położenie w obrębie zakresu.
+[CScrollBar](reference/cscrollbar-class.md)<br/>
+Okno kontrolne paska przewijania. Klasa zawiera funkcje paska przewijania, do użycia jako kontrolka w oknie dialogowym lub okna, za pomocą którego użytkownik może określić pozycję w obrębie zakresu.
 
 ## <a name="buttons"></a>Przyciski
 
-[CButton](../mfc/reference/cbutton-class.md)<br/>
-Okno formantu przycisku. Klasa oferuje interfejs programistyczny dla przycisku, pole wyboru lub przycisku radiowego w lub oknie dialogowym.
+[CButton](reference/cbutton-class.md)<br/>
+Okno kontrolne przycisku. Klasa udostępnia interfejs programistyczny przycisku wypchnięcia, pole wyboru lub przycisk radiowy w oknie dialogowym lub okno.
 
-[CBitmapButton](../mfc/reference/cbitmapbutton-class.md)<br/>
-Przycisk z mapą bitową zamiast podpis tekstowy.
+[CBitmapButton](reference/cbitmapbutton-class.md)<br/>
+Przycisk z mapą bitową, a nie podpisem tekstowym.
 
 ## <a name="lists"></a>Listy
 
-[CListBox](../mfc/reference/clistbox-class.md)<br/>
-Okno formantu pola listy. Pole listy przedstawia listę elementów, które użytkownik może wyświetlać i wybierać.
+[CListBox](reference/clistbox-class.md)<br/>
+Okno kontrolne w polu listy. W polu listy zostanie wyświetlona lista elementów, które użytkownik może wyświetlać i wybrać.
 
-[CDragListBox](../mfc/reference/cdraglistbox-class.md)<br/>
-Oferuje funkcje pola listy Windows; Umożliwia użytkownikowi przenoszenie elementów pola listy, takich jak nazwy plików i literałów w obrębie pola listy. Pola list z tej możliwości są przydatne w przypadku listy elementów w kolejności innej niż alfabetycznej, takich jak obejmują nazwy ścieżek lub pliki w projekcie.
+[CDragListBox](reference/cdraglistbox-class.md)<br/>
+Oferuje funkcje pola listy systemu Windows; zezwala użytkownikowi na przenoszenie elementów pola listy, takich jak nazwy plików i literały ciągu, w polu listy. Pola listy z tą funkcją są przydatne dla listy elementów w kolejności innej niż alfabetyczna, na przykład do dołączania nazw ścieżek lub plików w projekcie.
 
-[CComboBox](../mfc/reference/ccombobox-class.md)<br/>
-Okno kontrolki pola kombi. Pole kombi składa się z formantu edycyjnego i pole listy.
+[CComboBox](reference/ccombobox-class.md)<br/>
+Okno kontrolne pola kombi. Pole kombi składa się z kontrolki edycji i pola listy.
 
-[CComboBoxEx](../mfc/reference/ccomboboxex-class.md)<br/>
-Rozszerza formant pola kombi, umożliwiając obsługę list obrazów.
+[Korzystanie CComboBoxEx](reference/ccomboboxex-class.md)<br/>
+Rozszerza formant pola kombi, dostarczając obsługę list obrazów.
 
-[CCheckListBox](../mfc/reference/cchecklistbox-class.md)<br/>
-Wyświetla listę elementów z polami wyboru, które użytkownik może zaznacz lub wyczyść obok każdego elementu.
+[CCheckListBox](reference/cchecklistbox-class.md)<br/>
+Wyświetla listę elementów z polami wyboru, które użytkownik może sprawdzić lub wyczyścić obok każdego elementu.
 
-[CListCtrl](../mfc/reference/clistctrl-class.md)<br/>
-Wyświetla zbiór elementów składających się z ikony oraz etykiety, w sposób podobny do prawego okienka Eksploratora plików.
+[CListCtrl](reference/clistctrl-class.md)<br/>
+Wyświetla kolekcję elementów, z których każda składa się z ikony i etykiety, w sposób podobny do prawego okienka Eksploratora plików.
 
-[CTreeCtrl](../mfc/reference/ctreectrl-class.md)<br/>
-Wyświetla listę hierarchiczną ikony oraz etykiety ułożone w sposób podobny do okienka po lewej stronie Eksploratora plików.
+[CTreeCtrl](reference/ctreectrl-class.md)<br/>
+Wyświetla hierarchiczną listę ikon i etykiet ułożone w sposób podobny do lewego okienka Eksploratora plików.
 
-## <a name="toolbars-and-status-bars"></a>Paski narzędzi i stanu
+## <a name="toolbars-and-status-bars"></a>Paski narzędzi i paski stanu
 
-[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)<br/>
-Oferuje funkcje formantu typowego paska narzędzi Windows. MFC większości programów użyj [CToolBar](../mfc/reference/ctoolbar-class.md) zamiast tej klasy.
+[CToolBarCtrl](reference/ctoolbarctrl-class.md)<br/>
+Oferuje funkcje formantu typowego paska narzędzi systemu Windows. Większość programów MFC używa [CToolBar](reference/ctoolbar-class.md) zamiast tej klasy.
 
-[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)<br/>
-Poziomy okno zwykle są podzielone na okienka, w których aplikacja może wyświetlać informacje o stanie. MFC większości programów użyj [CStatusBar](../mfc/reference/cstatusbar-class.md) zamiast tej klasy.
+[CStatusBarCtrl](reference/cstatusbarctrl-class.md)<br/>
+Okno poziome, zwykle podzielone na okienka, w którym aplikacja może wyświetlać informacje o stanie. Większość programów MFC używa [CStatusBar](reference/cstatusbar-class.md) zamiast tej klasy.
 
-## <a name="miscellaneous-controls"></a>Różne formanty
+## <a name="miscellaneous-controls"></a>Różne kontrolki
 
-[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)<br/>
-Wyświetla prosty klipu wideo.
+[Korzystanie CAnimateCtrl](reference/canimatectrl-class.md)<br/>
+Wyświetla prosty klip wideo.
 
-[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)<br/>
-Niewielkie okno podręczne, które wyświetla pojedynczy wiersz tekstu opisującego cel narzędzia w aplikacji.
+[CToolTipCtrl](reference/ctooltipctrl-class.md)<br/>
+Małe okno podręczne wyświetlające pojedynczy wiersz tekstu opisujący przeznaczenie narzędzia w aplikacji.
 
-[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)<br/>
-Obsługuje formant edycji rozszerzonej lub kontrolki interfejsu kalendarza prosty, umożliwiająca użytkownikowi wybrać określoną datę lub godzinę.
+[Korzystanie CDateTimeCtrl](reference/cdatetimectrl-class.md)<br/>
+Obsługuje rozszerzoną kontrolkę edycji lub prostą kontrolkę interfejsu kalendarza, która umożliwia użytkownikowi wybranie określonej wartości daty lub godziny.
 
-[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)<br/>
-Wyświetla tytuły i etykiety kolumn.
+[CHeaderCtrl](reference/cheaderctrl-class.md)<br/>
+Wyświetla tytuły lub etykiety kolumn.
 
-[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)<br/>
-Obsługuje formant interfejs proste kalendarza, który umożliwia użytkownikowi wybranie daty.
+[CMonthCalCtrl](reference/cmonthcalctrl-class.md)<br/>
+Obsługuje prostą kontrolkę interfejsu kalendarza, która umożliwia użytkownikowi wybranie daty.
 
-[CTabCtrl](../mfc/reference/ctabctrl-class.md)<br/>
-Kontrolka, za pomocą karty, na których użytkownik może kliknąć, analogiczne do separatorów w notesie.
+[CTabCtrl](reference/ctabctrl-class.md)<br/>
+Kontrolka z kartami, na których użytkownik może kliknąć, analogicznie do separatorów w notesie.
 
-[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)<br/>
-Umożliwia użytkownikowi utworzenie kombinację klawiszy dostępu, której użytkownik może nacisnąć szybko wykonać akcję.
+[CHotKeyCtrl](reference/chotkeyctrl-class.md)<br/>
+Umożliwia użytkownikowi tworzenie kombinacji klawisza skrótu, którą użytkownik może nacisnąć, aby szybko wykonać akcję.
 
-[CLinkCtrl](../mfc/reference/clinkctrl-class.md)<br/>
-Renderowanie tekstu oznaczone w górę i uruchamia odpowiednie aplikacje, gdy użytkownik kliknie łącze osadzonych.
+[CLinkCtrl](reference/clinkctrl-class.md)<br/>
+Renderuje tekst oznaczony tekstem i uruchamia odpowiednie aplikacje, gdy użytkownik kliknie link osadzony.
 
-[CHtmlEditCtrl](../mfc/reference/chtmleditctrl-class.md)<br/>
-Oferuje funkcje formantu WebBrowser ActiveX w oknie programu MFC.
+[CHtmlEditCtrl](reference/chtmleditctrl-class.md)<br/>
+Oferuje funkcje kontrolki ActiveX WebBrowser w oknie MFC.
 
-## <a name="related-classes"></a>Klasy pokrewne
+## <a name="related-classes"></a>Powiązane klasy
 
-[CImageList](../mfc/reference/cimagelist-class.md)<br/>
-Oferuje funkcje Windows listy obrazów. Listy obrazów są używane w kontrolkach listy i kontrolkach drzewa. One może również przechowywanie i archiwizowanie zestaw ten sam rozmiar mapy bitowej.
+[Korzystanie CImageList](reference/cimagelist-class.md)<br/>
+Oferuje funkcje listy obrazów systemu Windows. Listy obrazów są używane z kontrolkami list i kontrolkami drzewa. Mogą być również używane do przechowywania i archiwizowania zestawu o takich samych mapach bitowych.
 
-[CCtrlView](../mfc/reference/cctrlview-class.md)<br/>
-Klasa bazowa dla wszystkich widoków związane z formantami Windows. Widoki oparte na formanty są opisane poniżej.
+[CCtrlView](reference/cctrlview-class.md)<br/>
+Klasa bazowa dla wszystkich widoków skojarzonych z kontrolkami systemu Windows. Poniżej opisano widoki oparte na kontrolkach.
 
-[Elementu CEditView](../mfc/reference/ceditview-class.md)<br/>
-Widok, który zawiera standardowy Windows formantu edycyjnego.
+[Elementu CEditView](reference/ceditview-class.md)<br/>
+Widok, który zawiera kontrolkę edycji standardowej systemu Windows.
 
-[CRichEditView](../mfc/reference/cricheditview-class.md)<br/>
-Widok, który zawiera bogaty Windows formantu edycyjnego.
+[CRichEditView](reference/cricheditview-class.md)<br/>
+Widok, który zawiera kontrolkę zaawansowanej edycji systemu Windows.
 
-[CListView](../mfc/reference/clistview-class.md)<br/>
-Widok, który zawiera kontrolkę listy Windows.
+[CListView](reference/clistview-class.md)<br/>
+Widok zawierający formant listy systemu Windows.
 
-[CTreeView](../mfc/reference/ctreeview-class.md)<br/>
-Widok, który zawiera formant drzewa Windows.
+[CTreeView](reference/ctreeview-class.md)<br/>
+Widok, który zawiera kontrolkę drzewa systemu Windows.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Klasa — Przegląd](../mfc/class-library-overview.md)
+[Przegląd klas](class-library-overview.md)

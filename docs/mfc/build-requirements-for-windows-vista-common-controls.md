@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Common Controls (MFC), build requirements
 - Common Controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-ms.openlocfilehash: 9ea90f95ba8e704cba5b22c5e7338659f0c5f033
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: cf2139e04d2f72feb7951010caa351d67ccc5a93
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630845"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619742"
 ---
 # <a name="build-requirements-for-windows-common-controls"></a>Wymagania dotyczące kompilacji dla formantów standardowych systemu Windows
 
@@ -50,8 +50,8 @@ Jeśli używasz środowiska IDE programu Visual Studio do utworzenia nowej aplik
 #endif
 ```
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Tematy ogólne dotyczące MFC](../mfc/general-mfc-topics.md)<br/>
-[Wykres hierarchii](../mfc/hierarchy-chart.md)<br/>
-[Przestarzałe interfejsy API ANSI](../mfc/deprecated-ansi-apis.md)
+[Tematy ogólne dotyczące MFC](general-mfc-topics.md)<br/>
+[Wykres hierarchii](hierarchy-chart.md)<br/>
+[Przestarzałe interfejsy API ANSI](deprecated-ansi-apis.md)
