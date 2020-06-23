@@ -5,12 +5,12 @@ helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-ms.openlocfilehash: 46619e77861b6a3a78d74ce6c6d9173a3a5f270f
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 062f8fb8138446e4a00ba6501d6eeb8571625749
+ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857326"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84777321"
 ---
 # <a name="profile-guided-optimizations"></a>Optymalizacje sterowane profilem
 
@@ -31,11 +31,11 @@ Aby skorzystać z optymalizacji profilowanej, wykonaj następujące kroki, aby z
 
 - Link przy użyciu [/LTCG](reference/ltcg-link-time-code-generation.md) i [/GENPROFILE lub/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md).
 
-   Użycie zarówno **/LTCG** , jak i **/GENPROFILE** lub **/FASTGENPROFILE** tworzy `.pgd` plik, gdy aplikacja Instrumentacja jest uruchamiana. Po dodaniu danych do `.pgd` pliku Test-Run może być używany jako dane wejściowe do następnego kroku linku (Tworzenie zoptymalizowanego obrazu). Podczas określania **/GENPROFILE**można opcjonalnie dodać argumentu **PGD =**_filename_ , aby określić niedomyślną nazwę lub lokalizację `.pgd` pliku. Kombinacja opcji **/LTCG** i **/GENPROFILE** lub **/FASTGENPROFILE** konsolidatora zastępuje przestarzałą opcję konsolidatora **/LTCG: PGINSTRUMENT** .
+   Użycie zarówno **/LTCG** , jak i **/GENPROFILE** lub **/FASTGENPROFILE** tworzy `.pgd` plik, gdy aplikacja Instrumentacja jest uruchamiana. Po dodaniu danych do pliku Test-Run `.pgd` może być używany jako dane wejściowe do następnego kroku linku (Tworzenie zoptymalizowanego obrazu). Podczas określania **/GENPROFILE**można opcjonalnie dodać argumentu **PGD =**_filename_ , aby określić niedomyślną nazwę lub lokalizację `.pgd` pliku. Kombinacja opcji **/LTCG** i **/GENPROFILE** lub **/FASTGENPROFILE** konsolidatora zastępuje przestarzałą opcję konsolidatora **/LTCG: PGINSTRUMENT** .
 
 - Wykonaj profilowanie aplikacji.
 
-   Za `appname!N.pgc` każdym razem, gdy zostanie zakończona sesja pliku exe lub PROFILOWANA Biblioteka DLL zostaje zwolniona, tworzony jest plik. `.pgc` Plik zawiera informacje o konkretnym przebiegu testu aplikacji. *nazwa_aplikacji* to nazwa aplikacji, a *N* to liczba, która rozpoczyna się od 1, która jest zwiększana na podstawie liczby innych `appname!N.pgc` plików w katalogu. Można usunąć `.pgc` plik, jeśli przebieg testowy nie reprezentuje scenariusza, który ma zostać zoptymalizowany.
+   Za każdym razem, gdy zostanie zakończona sesja pliku EXE lub profilowana Biblioteka DLL zostaje zwolniona, `appname!N.pgc` tworzony jest plik. `.pgc`Plik zawiera informacje o konkretnym przebiegu testu aplikacji. *nazwa_aplikacji* to nazwa aplikacji, a *N* to liczba, która rozpoczyna się od 1, która jest zwiększana na podstawie liczby innych `appname!N.pgc` plików w katalogu. Można usunąć plik, `.pgc` Jeśli przebieg testowy nie reprezentuje scenariusza, który ma zostać zoptymalizowany.
 
    W trakcie przebiegu testowego można wymusić zamknięcie aktualnie otwartego `.pgc` pliku i utworzenie nowego `.pgc` pliku za pomocą narzędzia [pgosweep](pgosweep.md) (na przykład gdy koniec scenariusza testowego nie pokrywa się z zamknięciem aplikacji).
 
@@ -45,9 +45,12 @@ Aby skorzystać z optymalizacji profilowanej, wykonaj następujące kroki, aby z
 
 - Link przy użyciu **/LTCG** i **/USEPROFILE**.
 
-   Użyj opcji konsolidatora **/LTCG** i [/USEPROFILE](reference/useprofile.md) w celu utworzenia zoptymalizowanego obrazu. Ten krok przyjmuje jako `.pgd` plik wejściowy. Po określeniu **/USEPROFILE**można opcjonalnie dodać argumentu **PGD =**_filename_ , aby określić niedomyślną nazwę lub lokalizację `.pgd` pliku. Można również określić tę nazwę przy użyciu przestarzałej opcji konsolidatora **/PGD** . Kombinacja **/LTCG** i **/USEPROFILE** zastępuje przestarzałe Opcje konsolidatora **/LTCG: PGOPTIMIZE** i **/LTCG: PGUPDATE** .
+   Użyj opcji konsolidatora **/LTCG** i [/USEPROFILE](reference/useprofile.md) w celu utworzenia zoptymalizowanego obrazu. Ten krok przyjmuje jako plik wejściowy `.pgd` . Po określeniu **/USEPROFILE**można opcjonalnie dodać argumentu **PGD =**_filename_ , aby określić niedomyślną nazwę lub lokalizację `.pgd` pliku. Można również określić tę nazwę przy użyciu przestarzałej opcji konsolidatora **/PGD** . Kombinacja **/LTCG** i **/USEPROFILE** zastępuje przestarzałe Opcje konsolidatora **/LTCG: PGOPTIMIZE** i **/LTCG: PGUPDATE** .
 
 Można nawet utworzyć zoptymalizowany plik wykonywalny i później określić, że dodatkowe profilowanie byłoby przydatne do tworzenia bardziej zoptymalizowanego obrazu. Jeśli obraz z instrumentacją i jego `.pgd` plik są dostępne, można wykonać dodatkowe przebiegi testowe i skompilować zoptymalizowany obraz przy użyciu nowszego `.pgd` pliku, używając tych samych opcji konsolidatora **/LTCG** i **/USEPROFILE** .
+
+> [!NOTE]
+> Oba `.pgc` `.pgd` pliki są typami plików binarnych. Jeśli jest przechowywany w systemie kontroli źródła, należy unikać żadnego automatycznego przekształcenia, które może zostać wykonane w plikach tekstowych.
 
 ## <a name="optimizations-performed-by-pgo"></a>Optymalizacje wykonywane przez PGO
 
@@ -65,7 +68,7 @@ Optymalizacje oparte na profilach obejmują następujące testy i ulepszenia:
 
 - **Układ funkcji** — na podstawie grafu wywołań i PROFILOWANEGO zachowania wywołującego/wywoływanego, funkcje, które mają być wzdłuż tej samej ścieżki wykonywania, są umieszczane w tej samej sekcji.
 
-- **Optymalizacja rozgałęzienia warunkowego** — z sondami wartości, optymalizacje oparte na profilach mogą stwierdzić, czy dana wartość w instrukcji switch jest używana częściej niż inne wartości.  Następnie taką wartość można usunąć z instrukcji switch.  Można to zrobić za pomocą `if`... `else` instrukcje, w których Optymalizator może zamówić `if`... `else` tak, aby blok `if` lub `else` został umieszczony w pierwszej kolejności, w zależności od tego, który blok jest częściej prawdziwy.
+- **Optymalizacja rozgałęzienia warunkowego** — z sondami wartości, optymalizacje oparte na profilach mogą stwierdzić, czy dana wartość w instrukcji switch jest używana częściej niż inne wartości.  Następnie taką wartość można usunąć z instrukcji switch.  Tę samą opcję można wykonać za pomocą `if` ... instrukcje, w `else` których Optymalizator może zamówić `if` ..., `else` tak aby `if` `else` blok lub został umieszczony w pierwszej kolejności, w zależności od tego, który blok jest częściej prawdziwe.
 
 - Niedziałanie **separacji kodu** — kod, który nie jest wywoływany podczas profilowania, jest przenoszony do specjalnej sekcji, która jest dołączana na końcu zestawu sekcji. Efektywnie utrzymujemy tę sekcję na często używanych stronach.
 
@@ -77,11 +80,11 @@ Optymalizacje oparte na profilach obejmują następujące testy i ulepszenia:
 
 Przeczytaj więcej na temat tych zmiennych środowiskowych, funkcji i narzędzi, których można użyć w przypadku optymalizacji z przewodnikiem:
 
-[Zmienne środowiskowe dla optymalizacji profilowanych](environment-variables-for-profile-guided-optimizations.md)<br/>
+[Zmienne środowiskowe dla optymalizacji sterowanych profilem](environment-variables-for-profile-guided-optimizations.md)<br/>
 Te zmienne zostały użyte do określenia zachowania w czasie wykonywania scenariuszy testowania. Są one teraz przestarzałe i zastępowane przez nowe Opcje konsolidatora. W tym dokumencie pokazano, jak przenieść zmienne środowiskowe do opcji konsolidatora.
 
 [PgoAutoSweep](pgoautosweep.md)<br/>
-Funkcja, którą można dodać do aplikacji w celu zapewnienia precyzyjnej kontroli przechwytywania `.pgc` danych plików.
+Funkcja, którą można dodać do aplikacji w celu zapewnienia precyzyjnej `.pgc` kontroli przechwytywania danych plików.
 
 [pgosweep](pgosweep.md)<br/>
 Narzędzie wiersza polecenia, które zapisuje wszystkie dane profilu do `.pgc` pliku, zamyka ten `.pgc` plik i otwiera nowy `.pgc` plik.
@@ -89,7 +92,7 @@ Narzędzie wiersza polecenia, które zapisuje wszystkie dane profilu do `.pgc` p
 [pgomgr](pgomgr.md)<br/>
 Narzędzie wiersza polecenia, które dodaje dane profilu z jednego lub więcej `.pgc` plików do `.pgd` pliku.
 
-[Instrukcje: scalanie wielu profili PGO w jeden profil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
+[Instrukcje: Scalanie wielu profilów PGO w jeden profil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
 Przykłady użycia **pgomgr** .
 
 ## <a name="see-also"></a>Zobacz też

@@ -4,20 +4,20 @@ ms.date: 04/28/2018
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 5cf0f88c6937f4c1609a29fd618af0fdadad4437
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 233a5f8a549e33f63350115d90c7e7e6b5f6937b
+ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418719"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269718"
 ---
-# <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Użyj zestawów reguł, aby określić C++ reguły do uruchomienia
+# <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Korzystanie z zestawów reguł do określania reguł C++ do uruchomienia
 
-W programie Visual Studio można utworzyć i zmodyfikować niestandardowy *zestaw reguł* , aby spełniał wymagania dotyczące projektu związane z analizą kodu. Domyślne zestawy reguł są przechowywane w `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`.
+W programie Visual Studio można utworzyć i zmodyfikować niestandardowy *zestaw reguł* , aby spełniał wymagania dotyczące projektu związane z analizą kodu. Domyślne zestawy reguł są przechowywane w `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` .
 
 **Program Visual Studio 2017 w wersji 15,7 lub nowszej:** Zestawy reguł niestandardowych można utworzyć przy użyciu dowolnego edytora tekstu i zastosować je w przypadku kompilacji w wierszu polecenia niezależnie od tego, jakiego systemu kompilacji używasz. Aby uzyskać więcej informacji, zobacz [/analyze: reguł](/cpp/build/reference/analyze-code-analysis).
 
-Aby utworzyć niestandardowy C++ zestaw reguł w programie Visual Studio, projekt C/C++ musi być otwarty w środowisku IDE programu Visual Studio. Następnie można otworzyć standardowy zestaw reguł w edytorze zestawu reguł, a następnie dodać lub usunąć określone reguły i opcjonalnie zmienić akcję, która występuje, gdy analiza kodu ustali, że reguła została naruszona.
+Aby utworzyć niestandardowy zestaw reguł języka C++ w programie Visual Studio, projekt C/C++ musi być otwarty w środowisku IDE programu Visual Studio. Następnie można otworzyć standardowy zestaw reguł w edytorze zestawu reguł, a następnie dodać lub usunąć określone reguły i opcjonalnie zmienić akcję, która występuje, gdy analiza kodu ustali, że reguła została naruszona.
 
 Aby utworzyć nowy niestandardowy zestaw reguł, Zapisz go przy użyciu nowej nazwy pliku. Niestandardowy zestaw reguł jest automatycznie przypisywany do projektu.
 
@@ -31,9 +31,9 @@ Aby utworzyć nowy niestandardowy zestaw reguł, Zapisz go przy użyciu nowej na
 
    - Wybierz zestaw reguł, który chcesz dostosować.
 
-     \- lub-
+     \-oraz
 
-   - Wybierz **\<Przeglądaj... >** , aby określić istniejący zestaw reguł, którego nie ma na liście.
+   - Wybierz **\<Browse...>** , aby określić istniejący zestaw reguł, którego nie ma na liście.
 
 1. Wybierz pozycję **Otwórz** , aby wyświetlić reguły w edytorze zestawu reguł.
 
@@ -61,7 +61,7 @@ Aby utworzyć nowy niestandardowy zestaw reguł, Zapisz go przy użyciu nowej na
 
 - Aby zwinąć reguły we wszystkich grupach, wybierz pozycję **Zwiń wszystko**.
 
-- Aby zmienić pole, według którego reguły są grupowane, wybierz pole z listy **Grupuj według** . Aby wyświetlić reguły niezgrupowane, wybierz **\<brak >** .
+- Aby zmienić pole, według którego reguły są grupowane, wybierz pole z listy **Grupuj według** . Aby wyświetlić reguły niezgrupowane, wybierz opcję **\<None>** .
 
 - Aby dodać lub usunąć pola w kolumnach reguł, wybierz **Opcje kolumn**.
 
@@ -77,7 +77,7 @@ Aby utworzyć nowy niestandardowy zestaw reguł, Zapisz go przy użyciu nowej na
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>Aby utworzyć zestaw reguł w edytorze tekstu
 
-Można utworzyć niestandardowy zestaw reguł w edytorze tekstów, zapisać go w dowolnej lokalizacji z rozszerzeniem `.ruleset` i zastosować z użyciem opcji kompilatora [/analyze:](/cpp/build/reference/analyze-code-analysis) rule.
+Można utworzyć niestandardowy zestaw reguł w edytorze tekstów, zapisać go w dowolnej lokalizacji z `.ruleset` rozszerzeniem i zastosować go przy użyciu opcji kompilatora [/analyze: zestaw reguł](/cpp/build/reference/analyze-code-analysis) .
 
 Poniższy przykład przedstawia podstawowy plik zestawu reguł, którego można użyć jako punktu wyjścia:
 
@@ -108,3 +108,145 @@ Poniższy przykład przedstawia podstawowy plik zestawu reguł, którego można 
 ```
 
 ::: moniker-end
+
+## <a name="ruleset-schema"></a>Schemat zestawu reguł
+
+Poniższy schemat zestawu reguł zawiera opis schematu XML pliku zestawu reguł. Schemat zestawu reguł jest przechowywany w `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd` . Można jej użyć do programistycznego tworzenia własnych zestawów reguł lub do sprawdzenia, czy niestandardowe zestaw reguł jest zgodny z prawidłowym formatem. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie dokumentu XML na podstawie schematu XSD](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019).
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:annotation>
+    <xs:documentation xml:lang="en">
+            Visual Studio Code Analysis Rule Set Schema Definition Language.
+            Copyright (c) Microsoft Corporation. All rights reserved.
+        </xs:documentation>
+  </xs:annotation>
+
+  <!-- Every time this file changes, be sure to change the Validate method for the corresponding object in the code -->
+
+  <xs:element name="RuleSet" type="TRuleSet">
+  </xs:element>
+
+  <xs:complexType name="TLocalization">
+    <xs:all>
+      <xs:element name="Name" type="TName" minOccurs="0" maxOccurs="1" />
+      <xs:element name="Description" type="TDescription" minOccurs="0" maxOccurs="1" />
+    </xs:all>
+    <xs:attribute name="ResourceAssembly" type="TNonEmptyString" use="required" />
+    <xs:attribute name="ResourceBaseName" type="TNonEmptyString" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="TRuleHintPaths">
+    <xs:sequence>
+      <xs:element name="Path" type="TNonEmptyString" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="TName">
+    <xs:attribute name="Resource" type="TNonEmptyString" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="TDescription">
+    <xs:attribute name="Resource" type="TNonEmptyString" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="TInclude">
+    <xs:attribute name="Path" type="TNonEmptyString" use="required" />
+    <xs:attribute name="Action" type="TIncludeAction" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="TIncludeAll">
+    <xs:attribute name="Action" type="TIncludeAllAction" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="TRule">
+    <xs:attribute name="Id" type="TNonEmptyString" use="required" />
+    <xs:attribute name="Action" type="TRuleAction" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="TRules">
+    <xs:sequence>
+      <xs:element name="Rule" type="TRule" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="AnalyzerId" type="TNonEmptyString" use="required" />
+    <xs:attribute name="RuleNamespace" type="TNonEmptyString" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="TRuleSet">
+    <xs:sequence minOccurs="0" maxOccurs="1">
+      <xs:element name="Localization" type="TLocalization" minOccurs="0" maxOccurs="1" />
+      <xs:element name="RuleHintPaths" type="TRuleHintPaths" minOccurs="0" maxOccurs="1" />
+      <xs:element name="IncludeAll" type="TIncludeAll" minOccurs="0" maxOccurs="1" />
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Include" type="TInclude" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Rules" type="TRules" minOccurs="0" maxOccurs="unbounded">
+          <xs:unique name="UniqueRuleName">
+            <xs:selector xpath="Rule" />
+            <xs:field xpath="@Id" />
+          </xs:unique>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Name" type="TNonEmptyString" use="required" />
+    <xs:attribute name="Description" type="xs:string" use="optional" />
+    <xs:attribute name="ToolsVersion" type="TNonEmptyString" use="required" />
+  </xs:complexType>
+
+  <xs:simpleType name="TRuleAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Error"/>
+      <xs:enumeration value="Warning"/>
+      <xs:enumeration value="Info"/>
+      <xs:enumeration value="Hidden"/>
+      <xs:enumeration value="None"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TIncludeAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Error"/>
+      <xs:enumeration value="Warning"/>
+      <xs:enumeration value="Info"/>
+      <xs:enumeration value="Hidden"/>
+      <xs:enumeration value="None"/>
+      <xs:enumeration value="Default"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TIncludeAllAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Error"/>
+      <xs:enumeration value="Warning"/>
+      <xs:enumeration value="Info"/>
+      <xs:enumeration value="Hidden"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TNonEmptyString">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>
+
+```
+
+Szczegóły elementu schematu:
+
+- TLocalization: informacje o lokalizacji, w tym nazwa pliku zestawu reguł, Opis pliku z zestawem danych, nazwa zestawie zasobów zawierającego zlokalizowany zasób i nazwa podstawowa zlokalizowanego zasobu.
+- TRuleHintPaths: ścieżki plików używane jako wskazówki do wyszukiwania plików zestawu reguł.
+- TName: Nazwa bieżącego pliku zestawu reguł.
+- TDescription: Opis bieżącego pliku zestawu reguł.
+- TInclude: ścieżka do dołączonego zestawu reguł z akcją reguły.
+- TIncludeAll: Akcja reguły dla wszystkich reguł.
+- TRule: Identyfikator reguły z akcją reguły.
+- TRules: Kolekcja co najmniej jednej reguły.
+- TRuleSet: Format pliku zestawu reguł składający się z informacji o lokalizacji, ścieżek wskazówki reguły, obejmują wszystkie informacje, zawierają informacje, informacje o regułach, nazwę, opis i informacje o wersji.
+- TRuleAction: Wyliczenie opisujące akcję reguły, taką jak błąd, ostrzeżenie, informacje, ukryte lub brak.
+- TIncludeAction: Wyliczenie opisujące akcję reguły, taką jak błąd, ostrzeżenie, informacje, ukryte, brak lub wartość domyślna.
+- TIncludeAllAction: Wyliczenie opisujące akcję reguły, taką jak błąd, ostrzeżenie, informacje lub ukryte.
+
+Aby zapoznać się z przykładem zestawu reguł, zobacz, [Aby utworzyć zestaw reguły w edytorze tekstu](#to-create-a-rule-set-in-a-text-editor), lub dowolny z domyślnych zestawów reguł przechowywanych w `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` .

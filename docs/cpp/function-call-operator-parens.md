@@ -1,6 +1,6 @@
 ---
 title: 'Operator wywołania funkcji: ()'
-ms.date: 11/04/2016
+ms.date: 06/11/2020
 helpviewer_keywords:
 - ( ) function call operator
 - function calls, C++ functions
@@ -10,51 +10,57 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-ms.openlocfilehash: 08c60ff261e944ed5b54b51a013a6d331f212154
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+no-loc:
+- opt
+ms.openlocfilehash: 59fd36a5ae135c55813019f04b0f5df4be2800b3
+ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179773"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84777308"
 ---
 # <a name="function-call-operator-"></a>Operator wywołania funkcji: ()
 
-Wyrażenie przyrostkowe, po którym następuje operator wywołania funkcji **()** , określa wywołanie funkcji.
+Wywołanie funkcji jest rodzajem *`postfix-expression`* , utworzonym przez wyrażenie identyfikujące funkcję, po której następuje operator wywołania funkcji **`()`** . Obiekt może zadeklarować `operator ()` funkcję, która zapewnia semantykę wywołań funkcji dla obiektu.
 
 ## <a name="syntax"></a>Składnia
 
-```
-postfix-expression
-( [argument-expression-list ] )
-```
+> *`postfix-expression`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
 
 ## <a name="remarks"></a>Uwagi
 
-Argumenty operatora wywołania funkcji są równe zero lub więcej wyrażeń oddzielonych przecinkami — rzeczywiste argumenty funkcji.
+Argumenty operatora wywołania funkcji pochodzą z *`argument-expression-list`* , rozdzielana przecinkami lista wyrażeń. Wartości tych wyrażeń są przekazane do funkcji jako argumenty. *Argument-expression-list* może być pusty. Przed C++ 17 kolejność obliczania wyrażenia funkcji i wyrażeń argumentów jest nieokreślona i może wystąpić w dowolnej kolejności. W języku C++ 17 i nowszych wyrażenie funkcji jest oceniane przed wszystkimi wyrażeniami argumentów lub argumentami domyślnymi. Wyrażenia argumentów są oceniane w nieokreślonej kolejności.
 
-*Wyrażenie przyrostkowe* musi być szacowane do adresu funkcji (na przykład identyfikatora funkcji lub wartości wskaźnika funkcji), a *Lista argumentów wyrażenia* jest listą wyrażeń (rozdzielonych przecinkami), których wartości (argumenty) są przekazane do funkcji. Argument *-Expression-List* może być pusty.
+*`postfix-expression`* Identyfikuje funkcję, która ma zostać wywołana. Musi on być obliczany jako adres funkcji. Może to być jeden z kilku form:
 
-*Wyrażenie przyrostkowe* musi mieć jeden z następujących typów:
+- Nazwa lub wskaźnik funkcji lub obiektu funkcji,
+- wyrażenie lvalue odwołujące się do funkcji lub obiektu funkcji,
+- Metoda dostępu do funkcji składowej, jawnie lub implikowana.
 
-- Funkcja zwracająca typ `T`. Przykładowa deklaracja to
+Funkcja określona przez *`postfix-expression`* może być funkcją przeciążoną. Zwykle reguły rozpoznawania przeciążenia określają rzeczywistą funkcję do wywołania.
 
-    ```cpp
-    T func( int i )
-    ```
+Przykładowe deklaracje:
 
-- Wskaźnik do funkcji zwracającej typ `T`. Przykładowa deklaracja to
-
-    ```cpp
-    T (*func)( int i )
-    ```
-
-- Odwołanie do funkcji zwracającej typ `T`. Przykładowa deklaracja to
+- Funkcja zwraca typ `T` . Przykładowa deklaracja to
 
     ```cpp
-    T (&func)(int i)
+    T func( int i );
     ```
 
-- Zwraca odwołanie do funkcji typu wskaźnik-do-Członkowskiego zwracającego typ `T`. Przykładowe wywołania funkcji to
+- Wskaźnik do zwracanego typu funkcji `T` . Przykładowa deklaracja to
+
+    ```cpp
+    T (*func)( int i );
+    ```
+
+- Odwołanie do zwracanego typu funkcji `T` . Przykładowa deklaracja to
+
+    ```cpp
+    T (&func)(int i);
+    ```
+
+- Zwracany typ odwołania funkcji wskaźnika do składowej `T` . Przykładowe wywołania funkcji to
 
     ```cpp
     (pObject->*pmf)();
@@ -97,7 +103,7 @@ Welcome to C++
 
 ## <a name="function-call-results"></a>Wyniki wywołania funkcji
 
-Wywołanie funkcji zwraca wartość r-Value, chyba że funkcja jest zadeklarowana jako typ referencyjny. Funkcje z typem zwracanym odwołania są oceniane do l-wartości i mogą być używane po lewej stronie instrukcji przypisania w następujący sposób:
+Wywołanie funkcji jest oceniane do elementu rvalue, chyba że funkcja jest zadeklarowana jako typ referencyjny. Funkcje z zwracanymi typami odwołań są oceniane do lvalues. Te funkcje mogą być używane z lewej strony instrukcji przypisania, jak pokazano tutaj:
 
 ```cpp
 // expre_Function_Call_Results.cpp
@@ -129,9 +135,9 @@ int main()
 }
 ```
 
-Poprzedni kod definiuje klasę o nazwie `Point`, która zawiera obiekty danych prywatnych, które reprezentują współrzędne *x* i *y* . Te obiekty danych muszą być modyfikowane i ich wartości są pobierane. Ten program jest tylko jednym z kilku projektów dla takiej klasy; Korzystanie z `GetX` i `SetX` lub `GetY` oraz funkcji `SetY` jest innym możliwym projektem.
+Poprzedni kod definiuje klasę o nazwie `Point` , która zawiera obiekty danych prywatnych, które reprezentują współrzędne *x* i *y* . Te obiekty danych muszą być modyfikowane i ich wartości są pobierane. Ten program jest tylko jednym z kilku projektów dla takiej klasy; Korzystanie z `GetX` funkcji i `SetX` lub `GetY` i `SetY` jest innym możliwym projektem.
 
-Funkcje, które zwracają typy klas, wskaźniki do typów klas lub odwołania do typów klasy mogą być używane jako lewy operand do operatorów wyboru elementu członkowskiego. W związku z tym Poniższy kod jest dozwolony:
+Funkcje, które zwracają typy klas, wskaźniki do typów klas lub odwołania do typów klasy mogą być używane jako lewy operand do operatorów wyboru elementu członkowskiego. Następujący kod jest dozwolony:
 
 ```cpp
 // expre_Function_Results2.cpp
@@ -179,5 +185,5 @@ Funkcje mogą być wywoływane cyklicznie. Aby uzyskać więcej informacji na te
 ## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia przyrostków](../cpp/postfix-expressions.md)<br/>
-[Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Wbudowane operatory, pierwszeństwo i łączność języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Wywołanie funkcji](../c-language/function-call-c.md)

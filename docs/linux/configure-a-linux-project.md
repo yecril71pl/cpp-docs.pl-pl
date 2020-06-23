@@ -1,13 +1,13 @@
 ---
 title: Konfigurowanie projektu C++ w systemie Linux w programie Visual Studio
-ms.date: 06/11/2019
+ms.date: 06/22/2020
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: c60fd678caef20d8b5a715b0e40bba6a37407709
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6bc38e925e366804c8fe37604066b7cc20e04f15
+ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623593"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269744"
 ---
 # <a name="configure-a-linux-project"></a>Konfigurowanie projektu systemu Linux
 
@@ -33,7 +33,7 @@ Istnieje możliwość skonfigurowania projektu systemu Linux, który będzie prz
 
 ## <a name="general-settings"></a>Ustawienia ogólne
 
-Aby wyświetlić opcje konfiguracji, wybierz menu **właściwości > projektu** lub kliknij prawym przyciskiem myszy projekt w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości** z menu kontekstowego. Pojawią się ustawienia **Ogólne** .
+Aby wyświetlić opcje konfiguracji, zaznacz menu **właściwości > projektu** lub kliknij prawym przyciskiem myszy projekt w **Eksplorator rozwiązań** i wybierz polecenie **Właściwości** z menu kontekstowego. Pojawią się ustawienia **Ogólne** .
 
 ![Konfiguracja ogólna](media/settings_general.png)
 
@@ -43,7 +43,7 @@ Aby uzyskać więcej informacji na temat ustawień na stronach właściwości, z
 
 ## <a name="remote-settings"></a>Ustawienia zdalne
 
-Aby zmienić ustawienia odnoszące się do zdalnego komputera z systemem Linux, skonfiguruj ustawienia zdalne, które są wyświetlane w obszarze [Ogólne](prop-pages/general-linux.md).
+Aby zmienić ustawienia związane ze zdalnym komputerem z systemem Linux, skonfiguruj ustawienia zdalne, które są wyświetlane w obszarze [Ogólne](prop-pages/general-linux.md).
 
 - Aby określić zdalny docelowy komputer z systemem Linux, użyj wpisu **zdalnego komputera kompilacji** . Umożliwi to wybranie jednego z utworzonych wcześniej połączeń. Aby utworzyć nowy wpis, zobacz sekcję [łączenie się z komputerem zdalnym z systemem Linux](connect-to-your-remote-linux-computer.md) .
 
@@ -72,13 +72,13 @@ Aby zmienić ustawienia odnoszące się do zdalnego komputera z systemem Linux, 
 
 ::: moniker range="vs-2019"
 
-Ta sekcja nie ma zastosowania, jeśli celem jest WSL.
+Ta sekcja nie ma zastosowania, gdy element docelowy jest WSL.
 
 ::: moniker-end
 
 Podczas kompilowania w systemach zdalnych pliki źródłowe na komputerze deweloperskim są kopiowane do komputera z systemem Linux i kompilowane w tym miejscu. Domyślnie wszystkie źródła w projekcie programu Visual Studio są kopiowane do lokalizacji ustawionych w powyższych ustawieniach. Można jednak również dodać do listy dodatkowe źródła lub skopiować źródła, które są domyślnie wyłączone dla projektu reguł programu make.
 
-- **Źródła do skopiowania** określają, które źródła są kopiowane do komputera zdalnego. Domyślnie ** \@ (SourcesToCopyRemotely)** domyślne dla wszystkich plików kodu źródłowego w projekcie, ale nie zawierają żadnych plików zasobów/zasobu, takich jak obrazy.
+- **Źródła do skopiowania** określają, które źródła są kopiowane do komputera zdalnego. Domyślnie ** \@ (SourcesToCopyRemotely)** domyślne do wszystkich plików kodu źródłowego w projekcie, ale nie zawierają żadnych plików zasobów/zasobu, takich jak obrazy.
 
 - **Źródła kopiowania** można włączać i wyłączać w celu włączenia i wyłączenia kopiowania plików źródłowych na komputer zdalny.
 
@@ -122,6 +122,10 @@ Możesz włączyć rejestrowanie, aby pomóc w rozwiązywaniu problemów:
 ![Rejestrowanie zdalne](media/remote-logging-vs2019.png)
 
 ::: moniker-end
+
+## <a name="linux-target-locale"></a><a name="locale"></a>Ustawienia regionalne docelowego systemu Linux
+
+Ustawienia języka programu Visual Studio nie są propagowane do celów systemu Linux, ponieważ program Visual Studio nie zarządza ani nie konfiguruje zainstalowanych pakietów. Komunikaty wyświetlane w oknie **danych wyjściowych** , takie jak błędy kompilacji, są wyświetlane przy użyciu języka i ustawień regionalnych docelowego systemu Linux. Należy skonfigurować cele systemu Linux dla żądanych ustawień regionalnych.
 
 ## <a name="see-also"></a>Zobacz też
 
