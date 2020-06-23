@@ -1,21 +1,21 @@
 ---
 title: Aktualizowanie symboli WINVER i _WIN32_WINNT
-description: Kiedy i jak aktualizować makra WINVER i _WIN32_WINNT w uaktualnionych projektach programu C++ Visual Studio.
-ms.date: 01/22/2020
+description: Kiedy i jak aktualizować makra WINVER i _WIN32_WINNT w uaktualnionych projektach programu Visual Studio C++.
+ms.date: 06/19/2020
 helpviewer_keywords:
 - WINVER in an upgraded Visual Studio C++ project
 - _WIN32_WINNT in an upgraded Visual Studio C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: b81c7967732c7b0c23ff0eb73d2a866a9b33713b
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: a0faed612517bf26cd89473e1aef248fb9e7b33e
+ms.sourcegitcommit: 493fd8747f832e1facb9a76c437a25a5c9fb55f6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725699"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141057"
 ---
 # <a name="update-winver-and-_win32_winnt"></a>Aktualizowanie symboli WINVER i _WIN32_WINNT
 
-Korzystając z Windows SDK można określić wersje systemu Windows, na których można uruchomić kod. Preprocesor makra **winver** i **_WIN32_WINNT** określają minimalną wersję systemu operacyjnego obsługiwaną przez kod. Program Visual Studio i pomoc C++ techniczna kompilatora firmy Microsoft ukierunkowana na system Windows 7 z dodatkiem SP1 lub nowszym. Starsze zestawy narzędzi obejmują obsługę systemu Windows XP z dodatkiem SP4, Windows Server 2003 z dodatkiem SP4, Vista i Windows Server 2008. Systemy Windows 95, Windows 98, Windows ME, Windows NT i Windows 2000 nie są obsługiwane.
+Korzystając z Windows SDK można określić wersje systemu Windows, na których można uruchomić kod. Preprocesor makra **winver** i **_WIN32_WINNT** określają minimalną wersję systemu operacyjnego obsługiwaną przez kod. Program Visual Studio i obsługa kompilatora języka Microsoft C++ przeznaczonych dla systemu Windows 7 z dodatkiem SP1 i nowszych. Starsze zestawy narzędzi obejmują obsługę systemu Windows XP z dodatkiem SP2, Windows Server 2003 z dodatkiem SP1, Vista i Windows Server 2008. Systemy Windows 95, Windows 98, Windows ME, Windows NT i Windows 2000 nie są obsługiwane.
 
 W przypadku uaktualniania starszego projektu może być konieczne zaktualizowanie makr w programie **winver** lub **_WIN32_WINNT** . Jeśli są przypisane wartości dla nieobsługiwanej wersji systemu Windows, mogą pojawić się błędy kompilacji dotyczące tych makr.
 
@@ -92,10 +92,10 @@ Niektóre z tych wersji systemu Windows mogą nie być widoczne na liście w *do
 > [!NOTE]
 > Wartości nie są gwarantowane, jeśli dołączysz wewnętrzne nagłówki MFC w aplikacji.
 
-Możesz również zdefiniować to makro przy użyciu opcji kompilatora `/D`. Aby uzyskać więcej informacji, zobacz [/d (Definicje preprocesora)](../build/reference/d-preprocessor-definitions.md).
+Możesz również zdefiniować to makro przy użyciu `/D` opcji kompilatora. Aby uzyskać więcej informacji, zobacz [/d (Definicje preprocesora)](../build/reference/d-preprocessor-definitions.md).
 
 Aby uzyskać więcej informacji na temat znaczenia tych makr, zobacz [Korzystanie z nagłówków systemu Windows](/windows/win32/WinProg/using-the-windows-headers).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Historia C++ zmian wizualnych](../porting/visual-cpp-change-history-2003-2015.md)
+[Visual C++ historię zmian](../porting/visual-cpp-change-history-2003-2015.md)
