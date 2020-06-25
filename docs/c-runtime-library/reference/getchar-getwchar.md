@@ -1,6 +1,6 @@
 ---
 title: getchar, getwchar
-ms.date: 4/2/2020
+ms.date: 06/23/2020
 api_name:
 - getchar
 - getwchar
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: 2073f23583772f71489f1597b0df8e1e6abe2253
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c6a02f16c3ee3d3e3bc4f86026719a1bd2885416
+ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920329"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334974"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
@@ -53,13 +53,15 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca odczyt znaku. Aby wskazać błąd odczytu lub stan końca pliku, **GetChar** zwraca **EOF**, a **getwchar** zwraca **WEOF**. Dla elementu **GetChar**Użyj obiektu **odwołującego** lub **feof** , aby wyszukać błąd lub koniec pliku.
+Zwraca odczyt znaku. Te funkcje oczekują na wejście i nie zwracają do momentu udostępnienia danych wejściowych.
+
+Aby wskazać błąd odczytu lub stan końca pliku, **GetChar** zwraca **EOF**, a **getwchar** zwraca **WEOF**. Dla elementu **GetChar**Użyj obiektu **odwołującego** lub **feof** , aby wyszukać błąd lub koniec pliku.
 
 ## <a name="remarks"></a>Uwagi
 
 Każda procedura odczytuje pojedynczy znak z **stdin** i zwiększa skojarzony wskaźnik pliku, aby wskazywał na następny znak. **GetChar** jest taka sama jak [_fgetchar](fgetc-fgetwc.md), ale jest zaimplementowana jako funkcja i jako makro.
 
-Te funkcje blokują wątek wywołujący i dlatego są bezpieczne wątkowo. W przypadku wersji, która nie jest blokowana, zobacz [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
+Te funkcje również blokują wątek wywołujący i są bezpieczne wątkowo. W przypadku wersji, która nie jest blokowana, zobacz [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -73,8 +75,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**GetChar**|\<stdio. h>|
-|**getwchar**|\<stdio. h> lub \<WCHAR. h>|
+|**GetChar**|\<stdio.h>|
+|**getwchar**|\<stdio.h> lub \<wchar.h>|
 
 Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

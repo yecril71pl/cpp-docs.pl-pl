@@ -1,6 +1,6 @@
 ---
 title: SafeInt — Funkcje
-ms.date: 10/22/2018
+ms.date: 06/23/2020
 ms.topic: reference
 f1_keywords:
 - SafeInt functions
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: 585fd30715ff3520245210badc0fde2e2f87ae13
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9af34e7dcb13f54b824088fa81b6d5a7145c6ae5
+ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622065"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334921"
 ---
 # <a name="safeint-functions"></a>SafeInt — Funkcje
 
@@ -136,10 +136,10 @@ inline bool SafeDivide (
 ### <a name="parameters"></a>Parametry
 
 *&*<br/>
-podczas Dzielnik. Musi to być typ T.
+podczas Dywidenda. Musi to być typ T.
 
 *'t*<br/>
-podczas Dywidenda. Musi to być typ U.
+podczas Dzielnik. Musi to być typ U.
 
 *result*<br/>
 określoną Parametr, w którym `SafeDivide` jest przechowywany wynik.
@@ -250,7 +250,7 @@ inline bool SafeLessThan (
 podczas Numer pierwszej. Musi to być typ `T` .
 
 *'t*<br/>
-podczas Drugi numer. Musi to być typ `U` .
+podczas Druga liczba. Musi to być typ `U` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
