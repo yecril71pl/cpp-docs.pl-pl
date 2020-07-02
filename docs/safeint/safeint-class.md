@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: a7c0de8b5fd64fb9746f4c503189fcad409f1e85
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 0445901f935dbf16872dfeca40ca8d9808dd774e
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737571"
 ---
 # <a name="safeint-class"></a>SafeInt — Klasa
 
 Rozszerza elementy pierwotne całkowite, aby zapobiec przepełnieniu liczby całkowitej i umożliwia porównywanie różnych typów liczb całkowitych.
 
 > [!NOTE]
-> Najnowsza wersja tej biblioteki znajduje się w lokalizacji [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) .
+> Najnowsza wersja biblioteki SafeInt znajduje się w lokalizacji [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) . Aby użyć biblioteki SafeInt, Sklonuj repozytorium i`#include "SafeInt.hpp"`
 
 ## <a name="syntax"></a>Składnia
 
@@ -168,7 +168,7 @@ class SafeInt;
 
 `SafeInt`Klasa sprawdza, czy występuje przepełnienie arytmetyczne, czy kod próbuje podzielić przez zero. W obu przypadkach Klasa wywołuje procedurę obsługi błędów, aby ostrzec program o potencjalnym problemie.
 
-Ta klasa pozwala także porównać dwa różne typy liczb całkowitych, o ile są to `SafeInt` obiekty. Zwykle podczas przeprowadzania porównania należy najpierw skonwertować liczby na ten sam typ. Rzutowanie jednej liczby na inny typ często wymaga sprawdzenia, aby upewnić się, że dane nie są tracone.
+Ta klasa pozwala także porównać dwa różne typy liczb całkowitych, o ile są to `SafeInt` obiekty. Zwykle w przypadku porównania należy najpierw skonwertować liczby na ten sam typ. Rzutowanie jednej liczby na inny typ często wymaga sprawdzenia, aby upewnić się, że dane nie są tracone.
 
 W tabeli Operators w tym temacie wymieniono operatory matematyczne i porównania obsługiwane przez `SafeInt` klasę. Większość operatorów matematycznych zwraca `SafeInt` obiekt typu `T` .
 
@@ -177,17 +177,17 @@ Operacje porównania między `SafeInt` a i typem całkowitym można wykonać w d
 Wiele operatorów binarnych nie obsługuje korzystania z dwóch różnych `SafeInt` typów. Przykładem jest `&` operator. `SafeInt<T, E> & int`jest obsługiwane, ale `SafeInt<T, E> & SafeInt<U, E>` nie jest. W tym ostatnim przykładzie kompilator nie wie, jakiego typu parametru zwrócić. Jednym z rozwiązań tego problemu jest rzutowanie drugiego parametru z powrotem na typ podstawowy. Korzystając z tych samych parametrów, można to zrobić za pomocą polecenia `SafeInt<T, E> & (U)SafeInt<U, E>` .
 
 > [!NOTE]
-> Dla każdej operacji bitowej dwa różne parametry powinny mieć ten sam rozmiar. Jeśli rozmiary różnią się, kompilator zgłosi wyjątek [.](../mfc/reference/diagnostic-services.md#assert) Nie można zagwarantować dokładności wyników tej operacji. Aby rozwiązać ten problem, należy rzutować mniejszy parametr, dopóki nie jest to ten sam rozmiar, co większy parametr.
+> Dla każdej operacji bitowej dwa różne parametry powinny mieć ten sam rozmiar. Jeśli rozmiary różnią się, kompilator zgłosi wyjątek [.](../mfc/reference/diagnostic-services.md#assert) Nie można zagwarantować dokładnej wyników tej operacji. Aby rozwiązać ten problem, należy rzutować mniejszy parametr, dopóki nie jest to ten sam rozmiar, co większy parametr.
 
 Dla operatorów przesunięcia, przesunięcie większej liczby bitów niż istnieje dla typu szablonu spowoduje zgłoszenie wyjątku potwierdzenia. Nie będzie to miało wpływu na tryb zwolnienia. Mieszanie dwóch typów parametrów SafeInt jest możliwe dla operatorów przesunięcia, ponieważ typ zwracany jest taki sam jak typ oryginalny. Liczba po prawej stronie operatora wskazuje tylko liczbę bitów do przesunięcia.
 
-W przypadku wykonywania porównania logicznego z obiektem SafeInt porównanie jest wyłącznie arytmetyczne. Rozważmy na przykład następujące wyrażenia:
+W przypadku porównania logicznego z obiektem SafeInt porównanie jest wyłącznie arytmetyczne. Rozważmy na przykład następujące wyrażenia:
 
 - `SafeInt<uint>((uint)~0) > -1`
 
 - `((uint)~0) > -1`
 
-Pierwsza instrukcja jest rozpoznawana jako **true**, ale druga instrukcja jest rozpoznawana jako `false` . Negacja koniunkcji 0 to 0xFFFFFFFF. W drugiej instrukcji operator porównania domyślnego porównuje 0xFFFFFFFF z 0xFFFFFFFF i traktuje je jako równe. Operator porównania dla `SafeInt` klasy realizuje, że drugi parametr jest ujemny, podczas gdy pierwszy parametr jest niepodpisany. W związku z tym mimo że reprezentacja bitowa jest taka sama, `SafeInt` operator logiczny realizuje, że liczba całkowita bez znaku jest większa niż-1.
+Pierwsza instrukcja jest rozpoznawana jako **true**, ale druga instrukcja jest rozpoznawana jako `false` . Negacja koniunkcji 0 to 0xFFFFFFFF. W drugiej instrukcji operator porównania domyślnego porównuje 0xFFFFFFFF z 0xFFFFFFFF i traktuje je jako równe. Operator porównania dla `SafeInt` klasy realizuje, że drugi parametr jest ujemny, ale pierwszy parametr jest niepodpisany. Dlatego, chociaż reprezentacja bitowa jest identyczna, `SafeInt` operator logiczny realizuje, że liczba całkowita bez znaku jest większa niż-1.
 
 Należy zachować ostrożność w przypadku używania `SafeInt` klasy razem z `?:` operatorem Trzyelementowy. Rozważmy następujący wiersz kodu.
 
@@ -217,7 +217,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 Istnieją dwie opcje dostosowywania zasad błędów. Pierwsza opcja polega na ustawieniu parametru `E` podczas tworzenia `SafeInt` . Użyj tej opcji, jeśli chcesz zmienić zasady obsługi błędów dla tylko jednego `SafeInt` . Druga opcja polega na zdefiniowaniu _SAFEINT_DEFAULT_ERROR_POLICY jako dostosowanej klasy obsługi błędów przed dołączeniem `SafeInt` biblioteki. Użyj tej opcji, jeśli chcesz zmienić domyślne zasady obsługi błędów dla wszystkich wystąpień `SafeInt` klasy w kodzie.
 
 > [!NOTE]
-> Dostosowana Klasa, która obsługuje błędy z biblioteki SafeInt, nie powinna zwracać kontroli do kodu, który wywołał procedurę obsługi błędów. Po wywołaniu programu obsługi błędów wynik `SafeInt` operacji nie może być zaufany.
+> Dostosowana Klasa, która obsługuje błędy z biblioteki SafeInt, nie powinna zwracać kontroli do kodu, który wywołał procedurę obsługi błędów. Po wywołaniu programu obsługi błędów wynik `SafeInt` operacji nie może być godny zaufania.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -225,9 +225,28 @@ Istnieją dwie opcje dostosowywania zasad błędów. Pierwsza opcja polega na us
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** SafeInt. h
+**Nagłówek:** SafeInt. HPP
+> [!NOTE]
+> Najnowsza wersja tej biblioteki znajduje się w lokalizacji [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) . Sklonuj bibliotekę i Dołącz SafeInt. HPP, aby użyć biblioteki SafeInt.
+> Preferuj to repozytorium GitHub <SafeInt. h>. jest to Modern wersja <SafeInt. h>, która zawiera niewielką liczbę poprawek błędów, korzysta z nowoczesnych funkcji języka C++, w wyniku czego bardziej wydajny kod i jest przenośna na dowolną platformę przy użyciu oprogramowania w zatoce, Clang lub kompilatorów firmy Intel.
 
-**Przestrzeń nazw:** MSL:: Utilities
+### <a name="example"></a>Przykład
+
+```c
+#include "SafeInt.hpp" // set path to your clone of the SafeInt GitHub repo (https://github.com/dcleblanc/SafeInt)
+
+int main()
+{
+    int divisor = 3;
+    int dividend = 6;
+    int result;
+
+    bool success = SafeDivide(dividend, divisor, result); // result = 2
+    success = SafeDivide(dividend, 0, result); // expect fail. result isn't modified.
+}
+```
+
+**Przestrzeń nazw:** brak
 
 ## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt:: SafeInt
 
@@ -236,37 +255,29 @@ Konstruuje `SafeInt` obiekt.
 ```cpp
 SafeInt() throw
 
-SafeInt (
-   const T& i
-) throw ()
+SafeInt (const T& i) throw ()
 
-SafeInt (
-   bool b
-) throw ()
+SafeInt (bool b) throw ()
 
 template <typename U>
-SafeInt (
-   const SafeInt <U, E>& u
-)
+SafeInt (const SafeInt <U, E>& u)
 
 I template <typename U>
-SafeInt (
-   const U& i
-)
+SafeInt (const U& i)
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*i*<br/>
+`i`<br/>
 podczas Wartość nowego `SafeInt` obiektu. Ta wartość musi być parametrem typu T lub U, w zależności od konstruktora.
 
-*b*<br/>
+`b`<br/>
 podczas Wartość logiczna dla nowego `SafeInt` obiektu.
 
-*'t*<br/>
+`u`<br/>
 podczas A `SafeInt` typu U. Nowy `SafeInt` obiekt będzie mieć taką samą wartość jak *u*, ale będzie typu T.
 
-To typ danych przechowywanych w `SafeInt` . Może to być typ Boolean, znak lub liczba całkowita. Jeśli jest to typ liczba całkowita, może być podpisany lub niepodpisany i zawierać od 8 do 64 bitów.
+`U`Typ danych przechowywanych w `SafeInt` . Może to być typ Boolean, znak lub liczba całkowita. Jeśli jest to typ liczba całkowita, może być podpisany lub niepodpisany i zawierać od 8 do 64 bitów.
 
 ### <a name="remarks"></a>Uwagi
 

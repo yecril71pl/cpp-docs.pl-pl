@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: f58ba02862e9c0f0c0c0d24797be939276ca8035
-ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
+ms.openlocfilehash: 85ff8d77bda30bcf0b107f733098d07c4fd80283
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84664342"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813525"
 ---
 # <a name="cfileexception-class"></a>Klasa CFileException
 
@@ -205,11 +205,11 @@ Ten element członkowski danych jest zmienną publiczną typu **int**. Moduły w
 | `CFileException::diskFull` | 13: dysk jest pełny. |
 | `CFileException::endOfFile` | 14: osiągnięto koniec pliku. |
 
-    > [!NOTE]
-    >  These `CFileException` cause enumerators are distinct from the `CArchiveException` cause enumerators.
+> [!NOTE]
+> Te `CFileException` wyliczające przyczyny różnią się od modułów `CArchiveException` wyliczających przyczyn.
 
-    > [!NOTE]
-    > `CArchiveException::generic` is deprecated. Use `genericException` instead. If **generic** is used in an application and built with /clr, the resulting syntax errors are not easy to decipher.
+> [!NOTE]
+> `CArchiveException::generic`jest przestarzały. Zamiast tego użyj polecenia cmdlet `genericException`. Jeśli **jest** używana w aplikacji i skompilowana przy użyciu opcji/CLR, powstałe błędy składni nie są łatwe do odszyfrowania.
 
 ### <a name="example"></a>Przykład
 

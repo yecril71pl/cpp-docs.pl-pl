@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: ac141c6ce9e4cce37b72808de488df7f94d116f7
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: 1b084cab0e985f9ab8c593e22d972913130e4380
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206209"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813612"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Przewodnik: Tworzenie tradycyjnej aplikacji klasycznej systemu Windows (C++)
 
@@ -389,7 +389,7 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych systemu Win
    ```
 
    `HDC`kod jest uchwytem do kontekstu urządzenia, który jest używany do rysowania w obszarze klienta okna. Użyj `BeginPaint` funkcji i, `EndPaint` Aby przygotować się do i zakończyć rysowanie w obszarze klienta. `BeginPaint`zwraca dojście do kontekstu urządzenia wyświetlania używanego do rysowania w obszarze klienta. `EndPaint`zamyka żądanie malowania i zwalnia kontekst urządzenia.
-   
+
 1. Aplikacja zwykle obsługuje wiele innych komunikatów. Na przykład [WM_CREATE](/windows/win32/winmsg/wm-create) podczas pierwszego tworzenia okna i [WM_DESTROY](/windows/win32/winmsg/wm-destroy) po zamknięciu okna. Poniższy kod przedstawia podstawową funkcję, ale kompletną `WndProc` .
 
    ```cpp

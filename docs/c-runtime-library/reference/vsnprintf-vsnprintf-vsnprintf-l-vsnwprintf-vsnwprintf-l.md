@@ -1,6 +1,6 @@
 ---
 title: vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
-ms.date: 11/04/2016
+ms.date: 06/24/2020
 api_name:
 - _vsnprintf
 - _vsnprintf_l
@@ -55,12 +55,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: abe34dc0f3baf9bdc63e0314ac70af3783d2bd9a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 1cbb41d63669644f51b4d951d5b5507f64cf3da1
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857713"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737588"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -142,14 +142,14 @@ int _vsnwprintf_l(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
+*buforu*<br/>
 Lokalizacja magazynu dla danych wyjściowych.
 
-*count*<br/>
+*liczbą*<br/>
 Maksymalna liczba znaków do zapisania.
 
-*format*<br/>
-Format specyfikacji.
+*Formatowanie*<br/>
+Specyfikacja formatu.
 
 *argptr*<br/>
 Wskaźnik na listę argumentów.
@@ -159,15 +159,17 @@ Ustawienia regionalne do użycia.
 
 Aby uzyskać więcej informacji, zobacz temat [Formatowanie specyfikacji](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="return-value"></a>Wartość zwrócona
+## <a name="return-value"></a>Wartość zwracana
 
-Funkcja **vsnprintf** zwraca liczbę znaków pisanych, a nie zlicza kończącego znaku null. Jeśli rozmiar buforu określony przez *licznik* nie jest wystarczająco duży, aby można było zawierać dane wyjściowe określone przez *Format* i *argptr*, wartość zwracana przez **vsnprintf** to liczba znaków, które mają być zapisywane, a nie zliczanie znaku null, jeśli *Liczba* była wystarczająco duża. Jeśli wartość zwracana jest większa niż *Liczba* -1, dane wyjściowe zostały obcięte. Zwracana wartość-1 wskazuje, że wystąpił błąd kodowania.
+Funkcja **vsnprintf** zwraca liczbę znaków, które są zapisywane, bez zliczania kończącego znaku null. Jeśli rozmiar buforu określony przez *licznik* nie jest wystarczająco duży, aby można było zawierać dane wyjściowe określone przez *Format* i *argptr*, wartość zwracana przez **vsnprintf** to liczba znaków, które mają być zapisywane, a nie zliczanie znaku null, jeśli *Liczba* była wystarczająco duża. Jeśli wartość zwracana jest większa niż *Liczba* -1, dane wyjściowe zostały obcięte. Zwracana wartość-1 wskazuje, że wystąpił błąd kodowania.
 
-Funkcje **_vsnprintf** i **_vsnwprintf** zwracają liczbę znaków napisanych, jeśli liczba znaków do zapisania jest mniejsza lub równa *liczbie.* Jeśli liczba znaków do zapisania jest większa niż *Liczba*, te funkcje zwracają wartość-1 wskazującą, że dane wyjściowe zostały obcięte.
+Zarówno **_vsnprintf** , jak i funkcje **_vsnwprintf** zwracają liczbę pisanych znaków, jeśli liczba znaków do zapisania jest mniejsza lub równa *liczbie.* Jeśli liczba znaków do zapisania jest większa niż *Liczba*, te funkcje zwracają wartość-1 wskazującą, że dane wyjściowe zostały obcięte.
 
-Wartość zwracana przez wszystkie te funkcje nie obejmuje kończącej wartości null, niezależnie od tego, czy jest ona zapisywana. Gdy *Liczba* jest równa zero, zwracana wartość jest liczbą znaków, które mogą być zapisywane przez funkcje, bez uwzględniania żadnego kończącego null. Możesz użyć tego wyniku do przydzielenia wystarczającej ilości miejsca w buforze dla ciągu i jego końcowej wartości null, a następnie ponownie wywołaj funkcję, aby wypełnić bufor.
+Wartość zwracana przez wszystkie te funkcje nie obejmuje kończącej wartości null, niezależnie od tego, czy jest ona zapisywana.
 
-Jeśli *Format* ma **wartość null**lub jeśli *bufor* ma **wartość null** , a *Liczba* nie jest równa zero, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
+- Jeśli *Liczba* jest równa zero, a *bufor* ma wartość **null**, zwracaną wartością jest liczba znaków, które zostaną zapisane w funkcjach. Wartość nie uwzględnia końcowej **wartości null**. Możesz użyć tego wyniku do przydzielenia wystarczającej ilości miejsca w buforze dla ciągu i jego końcowej wartości null, a następnie ponownie wywołaj funkcję, aby wypełnić bufor.
+- Jeśli *licznik* ma wartość zero, ale *bufor* nie ma **wartości null**, nic nie jest zapisywana, a funkcja zwraca `-1` .
+- Jeśli *Format* ma **wartość null**lub jeśli *bufor* ma **wartość null** , a *Liczba* nie jest równa zero, te funkcje wywołują procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają wartość-1 i ustawiają **errno** na **EINVAL**.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -177,15 +179,15 @@ Każda z tych funkcji Pobiera wskaźnik do listy argumentów, a następnie forma
 > Aby uniknąć pewnego rodzaju zagrożeń bezpieczeństwa, upewnij się, że *Format* nie jest ciągiem zdefiniowanym przez użytkownika. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 > [!NOTE]
-> Aby upewnić się, że istnieje pomieszczenie dla kończącej wartości null podczas wywoływania **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** i **_vsnwprintf_l**, upewnij się, że *Liczba* jest ściśle mniejsza niż długość buforu i zainicjuj bufor na wartość null przed wywołaniem funkcji.
+> Aby upewnić się, że podczas wywoływania **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** i **_vsnwprintf_l**jest miejsce dla kończącego wartości null, upewnij się, że *Liczba* jest ściśle mniejsza niż długość buforu i zainicjuj bufor na wartość null przed wywołaniem funkcji.
 >
 > Ponieważ **vsnprintf** zawsze zapisuje kończącą wartość null, parametr *Count* może być równy rozmiarowi buforu.
 
-Począwszy od UCRT w programie Visual Studio 2015 i Windows 10, **vsnprintf** nie jest już identyczna z **_vsnprintf**. Funkcja **vsnprintf** jest zgodna ze standardem C99; **_vnsprintf** jest zachowywana na potrzeby zgodności z poprzednimi wersjami ze starszym kodem programu Visual Studio.
+Począwszy od UCRT w programie Visual Studio 2015 i Windows 10, **vsnprintf** nie jest już identyczna z **_vsnprintf**. Funkcja **vsnprintf** jest zgodna ze standardem C99; **_vnsprintf** jest zachowana na potrzeby zgodności z poprzednimi wersjami ze starszym kodem programu Visual Studio.
 
 Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych wątku.
 
-W języku programowania C++ funkcje te mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
+W języku C++ te funkcje mają przeciążenia szablonu, które wywołują nowsze, bezpieczne odpowiedniki tych funkcji. Aby uzyskać więcej informacji, zobacz [bezpieczne przeciążenia szablonów](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -198,8 +200,8 @@ W języku programowania C++ funkcje te mają przeciążenia szablonu, które wyw
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------------|-------------------------------|
-|**vsnprintf**, **_vsnprintf**, **_vsnprintf_l**|\<stdio.h>|\<stdio. h > lub \<cstdio >|
-|**_vsnwprintf**, **_vsnwprintf_l**|\<stdio. h > lub \<WCHAR. h >|\<stdio. h >, \<WCHAR. h >, \<cstdio > lub \<cwchar >|
+|**vsnprintf**, **_vsnprintf**, **_vsnprintf_l**|\<stdio.h>|\<stdio.h> lub \<cstdio>|
+|**_vsnwprintf**, **_vsnwprintf_l**|\<stdio.h> lub \<wchar.h>|\<stdio.h>, \<wchar.h> , \<cstdio> lub\<cwchar>|
 
 Funkcje **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** i **_vsnwprintf_l** są specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -283,10 +285,10 @@ nSize: 10, buff: Hi there!
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
-[vprintf, funkcje](../../c-runtime-library/vprintf-functions.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Funkcje vprintf —](../../c-runtime-library/vprintf-functions.md)<br/>
 [Składnia specyfikacji formatu: funkcje printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf —, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>
