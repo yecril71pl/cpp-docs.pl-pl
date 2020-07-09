@@ -1,6 +1,7 @@
 ---
 title: /HEAP
-ms.date: 11/04/2016
+description: MSVC konsolidatora lub polecenia EDITBIN/HEAP ustawia łączny rozmiar sterty i opcjonalnie rozmiar dodatkowych bloków sterty.
+ms.date: 07/07/2020
 f1_keywords:
 - /heap
 helpviewer_keywords:
@@ -9,31 +10,44 @@ helpviewer_keywords:
 - -HEAP editbin option
 - /HEAP editbin option
 ms.assetid: 6ce759b5-75b7-44ff-a5fd-3a83a0ba9a48
-ms.openlocfilehash: fcf557b467ba5bd04352ba2f2702659a1eb2948d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7976ae2927ca731c83fa42e87da182fee4df3d7c
+ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291993"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86127828"
 ---
-# <a name="heap"></a>/HEAP
+# `/HEAP`
 
-Ustawia rozmiar stosu w bajtach. Ta opcja dotyczy tylko plików wykonywalnych.
+Ustawia rozmiar sterty w bajtach. Ta opcja ma zastosowanie tylko do plików wykonywalnych.
 
-```
+## <a name="syntax"></a>Składnia
 
-/HEAP:
-reserve[,commit]
-```
+> **`/HEAP:`**_`reserve`_\[**`,`**_`commit`_]
 
 ## <a name="remarks"></a>Uwagi
 
-`reserve` Argument określa Alokacja łączna liczba początkowa sterty w pamięci wirtualnej. Domyślnie rozmiar stosu jest 1 MB. [Odwołanie EDITBIN](editbin-reference.md) zaokrągla w górę określoną wartość do najbliższej wielokrotności 4 bajty.
+*`reserve`* Argument określa łączną początkową alokację sterty w pamięci wirtualnej. **`/HEAP`** Opcja konsolidatora lub [polecenia EDITBIN](editbin-reference.md) zaokrągla określoną wartość do najbliższej wielokrotności 4 bajtów. Domyślnie rozmiar sterty wynosi 1 MB.
 
-Opcjonalny `commit` argument podlega interpretacji przez system operacyjny. W systemie operacyjnym Windows określa początkowej ilość pamięci fizycznej do przydzielenia, a ilość dodatkowej pamięci do przydzielenia, gdy stos musi być rozwinięty. Zadeklarowanej pamięci wirtualnej powoduje, że miejsce, które mają zostać zarezerwowane w pliku stronicowania. Uzyskanie lepszej `commit` wartość umożliwia systemowi można przydzielić pamięci na mniejsze często, gdy aplikacja potrzebuje więcej miejsca na stercie, ale zwiększa wymagania dotyczące pamięci i ewentualnie czas trwania uruchomienia aplikacji. `commit` Wartość musi być mniejsza lub równa `reserve` wartość.
+Opcjonalny *`commit`* argument podlega interpretacji przez system operacyjny. W systemie operacyjnym Windows określa początkową ilość pamięci fizycznej do przydzielenia. Określa również ilość pamięci do przydzielenia, gdy sterta jest rozwinięta. Przydzielona pamięć wirtualna powoduje, że miejsce jest zarezerwowane w pliku stronicowania. Wyższa *`commit`* wartość umożliwia systemowi przydzielanie pamięci rzadziej, gdy aplikacja wymaga większej liczby miejsc sterty, ale zwiększa wymagania dotyczące pamięci i prawdopodobnie czas uruchomienia aplikacji. *`commit`* Wartość musi być mniejsza lub równa *`reserve`* wartości. Wartość domyślna to 4 KB.
 
-Określ `reserve` i `commit` wartości dziesiętnych lub języka C notacji szesnastkowej lub ósemkowo. Na przykład wartość 1 MB można określić jako 1048576 w zapisie dziesiętnym, lub 0x100000 w formacie szesnastkowym lub 04000000 w ósemkowej.
+Określ *`reserve`* wartości i *`commit`* w notacji dziesiętnej, szesnastkowej języka C lub ósemkowej. Na przykład wartość 1 MB może być określona jako 1048576 w postaci dziesiętnej lub jako 0x100000 w formacie szesnastkowym lub jako 04000000 w postaci ósemkowej. Wartości domyślne są równoważne opcji **`/HEAP:1048576,4096`** .
 
-## <a name="see-also"></a>Zobacz także
+### <a name="example"></a>Przykład
 
-[Opcje EDITBIN](editbin-options.md)
+To przykładowe polecenie linku tworzy *main.exe* pliku wykonywalnego, który ma rezerwę sterty wynoszącą 2 MB. Sterta wstępna i późniejsze rozszerzenia sterty są dostępne w blokach 64 KB:
+
+**`link /heap:0x200000,0x10000 main.obj`**
+
+### <a name="to-set-this-linker-option-in-visual-studio"></a>Aby ustawić tę opcję konsolidatora w programie Visual Studio
+
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
+
+1. Wybierz pozycję **Właściwości konfiguracji**  >  **Linker**  >  Strona właściwości**systemu** konsolidatora.
+
+1. Ustaw właściwości **rozmiar rezerwacji sterty** i **rozmiar zatwierdzenia sterty** , a następnie wybierz przycisk **OK** lub **Zastosuj** , aby zapisać zmiany.
+
+## <a name="see-also"></a>Zobacz też
+
+[Opcje polecenia EDITBIN](editbin-options.md)\
+[Opcje konsolidatora MSVC](linker-options.md)

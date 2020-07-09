@@ -12,6 +12,7 @@ helpviewer_keywords:
 ms.assetid: 93181453-2676-42e5-bf63-3b19e07299b6
 ms.openlocfilehash: b8fc355503055af8b928874ced39cb8224901d3e
 ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86058610"
@@ -50,7 +51,7 @@ Ta deklaracja nie jest dostępna dla projektów 64-bitowych.
 
 - Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>

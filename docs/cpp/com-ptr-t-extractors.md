@@ -1,6 +1,7 @@
 ---
 title: _com_ptr_t — Ekstraktory
-ms.date: 11/04/2016
+description: Opisuje operatory wyodrębniania dla klasy _com_ptr_t.
+ms.date: 07/07/2020
 f1_keywords:
 - _com_ptr_t::operatorInterface&
 - _com_ptr_t::operatorbool
@@ -20,22 +21,22 @@ helpviewer_keywords:
 - extractors, _com_ptr_t class
 - extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
-ms.openlocfilehash: 31ac39104c041d1d119f6cd06de5f9c4a620dac0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e7b06bb11ab34a1a1a7f6fab98d177821f60b20c
+ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190030"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86127861"
 ---
-# <a name="_com_ptr_t-extractors"></a>_com_ptr_t — Ekstraktory
+# <a name="_com_ptr_t-extractors"></a>`_com_ptr_t`Ekstraktory
 
-**Specyficzne dla firmy Microsoft**
+**specyficzne dla firmy Microsoft**
 
 Wyodrębnij zhermetyzowany wskaźnik interfejsu COM.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```c++
 operator Interface*( ) const throw( );
 operator Interface&( ) const;
 Interface& operator*( ) const;
@@ -46,20 +47,21 @@ operator bool( ) const throw( );
 
 ## <a name="remarks"></a>Uwagi
 
-- **interfejs operatora** <strong>\*</strong> zwraca zhermetyzowany wskaźnik interfejsu, który może mieć wartość null.
+- **`operator Interface*`** Zwraca wskaźnik interfejsu hermetyzowanego, który może mieć wartość NULL.
 
-- **interfejs operatora &** Zwraca odwołanie do zhermetyzowanego wskaźnika interfejsu i wygeneruje błąd, jeśli wskaźnik ma wartość NULL.
+- **`operator Interface&`** Zwraca odwołanie do zhermetyzowanego wskaźnika interfejsu i wygeneruje błąd, jeśli wskaźnik ma wartość NULL.
 
-- **operator** <strong>\*</strong> umożliwia obiektowi inteligentnego wskaźnika, aby działał tak, jakby był rzeczywistym interfejsem hermetyzowanym podczas wypełniania odwołania.
+- **`operator*`** Zezwala obiektowi inteligentnego wskaźnika na działanie tak, jakby był rzeczywistym interfejsem hermetyzowanym podczas wypełniania odwołania.
 
-- **operator — >** Zezwala obiektowi inteligentnego wskaźnika na działanie tak, jakby był rzeczywistym interfejsem hermetyzowanym podczas wypełniania odwołania.
+- **`operator->`** Zezwala obiektowi inteligentnego wskaźnika na działanie tak, jakby był rzeczywistym interfejsem hermetyzowanym podczas wypełniania odwołania.
 
-- **& operatora** Zwalnia wszystkie hermetyzowane wskaźnike interfejsu, zastępując go wartością NULL i zwraca adres zhermetyzowanego wskaźnika. Pozwala to na przekazanie inteligentnego wskaźnika przez adres do funkcji, która ma parametr *out* , za pomocą którego zwraca wskaźnik interfejsu.
+- **`operator&`** Zwalnia wszystkie hermetyzowane wskaźnike interfejsu, zastępując go wartością NULL i zwraca adres zhermetyzowanego wskaźnika. Ten operator umożliwia przekazanie inteligentnego wskaźnika przez adres do funkcji, która ma parametr *out* , za pomocą którego zwraca wskaźnik interfejsu.
 
-- wartość **logiczna operatora** Umożliwia użycie obiektu inteligentnego wskaźnika w wyrażeniu warunkowym. Ten operator zwraca wartość TRUE, jeśli wskaźnik nie ma wartości NULL.
+- **`operator bool`** Umożliwia użycie obiektu inteligentnego wskaźnika w wyrażeniu warunkowym. Ten operator zwraca wartość TRUE, jeśli wskaźnik nie ma wartości NULL.
 
-**ZAKOŃCZENIE określonych przez firmę Microsoft**
+  > [!NOTE]
+  > Ponieważ **`operator bool`** nie jest zadeklarowany jako **`explicit`** , `_com_ptr_t` jest niejawnie konwertowany na **`bool`** , który jest konwertowany na dowolny typ skalarny. Może to spowodować nieoczekiwane konsekwencje w kodzie. Włącz [Ostrzeżenie kompilatora (poziom 4) C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) , aby zapobiec przypadkowemu użyciu tej konwersji.
 
 ## <a name="see-also"></a>Zobacz też
 
-[_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)
+[_com_ptr_t — klasa](../cpp/com-ptr-t-class.md)
