@@ -1,6 +1,7 @@
 ---
-title: /OX (Włącz większość optymalizacji szybkości)
-ms.date: 10/18/2018
+title: /OX (Włącz optymalizację z największą szybkością)
+description: Opcja MSVC/OX łączy niektóre opcje optymalizacji kompilatora umożliwiające przyspieszenie w jednej opcji.
+ms.date: 07/08/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ToolOptimization
 - /Ox
@@ -11,63 +12,61 @@ helpviewer_keywords:
 - /Ox compiler option [C++]
 - -Ox compiler option [C++]
 ms.assetid: 3ad7c30b-c615-428c-b1d0-2e024f81c760
-ms.openlocfilehash: e39905608087425fe5a445f4ef88434d73bb2ded
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10893fe1cf032f2ab56f27aa4af95b050c2ec37e
+ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320100"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86180841"
 ---
-# <a name="ox-enable-most-speed-optimizations"></a>/OX (Włącz większość optymalizacji szybkości)
+# <a name="ox-enable-most-speed-optimizations"></a>`/Ox`(Włącz optymalizację z największą szybkością)
 
-**Ox** — opcja kompilatora umożliwia kombinacja optymalizacji, które preferował szybkość. W niektórych wersjach środowiska IDE programu Visual Studio i komunikat pomocy kompilatora, jest to nazywane *Pełna optymalizacja*, ale **ox** — opcja kompilatora umożliwia tylko podzbiór opcje optymalizacji szybkości, które są obsługiwane przez **/O2**.
+**`/Ox`** Opcja kompilatora umożliwia łączenie optymalizacji, które preferują szybkość. W niektórych wersjach środowiska IDE programu Visual Studio i komunikatu pomocy kompilatora jest on nazywany *pełną optymalizacją*, ale **`/Ox`** Opcja kompilatora umożliwia tylko podzbiór opcji optymalizacji szybkości włączonej przez program **`/O2`** .
 
 ## <a name="syntax"></a>Składnia
 
-> **/Ox**
+> **`/Ox`**
 
 ## <a name="remarks"></a>Uwagi
 
-**Ox** włącza opcję kompilatora **/O** prędkości Preferuj opcji kompilatora. **Ox** — opcja kompilatora nie ma dodatkowych [/GF (eliminowanie ciągów zduplikowanych)](gf-eliminate-duplicate-strings.md) i [/Gy (Włącz łączenie poziomie funkcji)](gy-enable-function-level-linking.md) opcji włączane przez [/O1 lub/O2 (Minimalizuj rozmiar, Maksymalizuj szybkość)](o1-o2-minimize-size-maximize-speed.md). Dodatkowe opcje, które są stosowane przez **/O1** i **/O2** może spowodować, że wskaźnikami do ciągów lub do funkcji Udostępnianie adres docelowy, który może wpływać na debugowanie i zgodność języka strict. **Ox** opcja jest łatwym sposobem Włącz większość optymalizacji bez uwzględniania **/GF** i **/Gy**. Aby uzyskać więcej informacji, zobacz opisy [/GF](gf-eliminate-duplicate-strings.md) i [/Gy](gy-enable-function-level-linking.md) opcje.
+**`/Ox`** Opcja kompilatora włącza **`/O`** Opcje kompilatora, które preferują szybkość. **`/Ox`** Opcja kompilatora nie zawiera dodatkowych [ `/GF` (eliminując zduplikowane ciągi)](gf-eliminate-duplicate-strings.md) i [ `/Gy` (Włącz łączenie na poziomie funkcji)](gy-enable-function-level-linking.md) włączonych przez [ `/O1` lub `/O2` (Minimalizuj rozmiar, maksymalizuj szybkość)](o1-o2-minimize-size-maximize-speed.md). Dodatkowe opcje stosowane przez program **`/O1`** i **`/O2`** mogą spowodować, że wskaźniki do ciągów lub do funkcji współużytkują adres docelowy, co może mieć wpływ na Debugowanie i ścisłą zgodność języka. **`/Ox`** Opcja jest łatwym sposobem na włączenie większości optymalizacji bez uwzględniania **`/GF`** i **`/Gy`** . Aby uzyskać więcej informacji, zobacz opisy [`/GF`](gf-eliminate-duplicate-strings.md) [`/Gy`](gy-enable-function-level-linking.md) opcji i.
 
-**Ox** — opcja kompilatora jest taka sama jak w połączeniu przy użyciu następujących opcji:
+**`/Ox`** Opcja kompilatora jest taka sama jak w połączeniu z następującymi opcjami:
 
-- [/OB (rozszerzenie funkcji wbudowanej)](ob-inline-function-expansion.md), gdzie parametr opcji 2 (**/ob2**)
+- [ `/Ob` (Rozszerzenie funkcji wbudowanej)](ob-inline-function-expansion.md), gdzie parametr opcji ma wartość 2 ( **`/Ob2`** )
 
-- [/Og (Optymalizacje globalne)](og-global-optimizations.md)
+- [`/Oi`(Generuj funkcje wewnętrzne)](oi-generate-intrinsic-functions.md)
 
-- [/Oi (Generuj funkcje wewnętrzne)](oi-generate-intrinsic-functions.md)
+- [`/Ot`(Preferuj szybki kod)](os-ot-favor-small-code-favor-fast-code.md)
 
-- [/OT (Preferuj szybki kod)](os-ot-favor-small-code-favor-fast-code.md)
+- [`/Oy`(Pominięcie wskaźnika ramki)](oy-frame-pointer-omission.md)
 
-- [/Oy (pominięcie wskaźnika ramki)](oy-frame-pointer-omission.md)
+**`/Ox`** wykluczają się wzajemnie z:
 
-**Ox** jest wzajemnie wykluczających się od:
+- [`/O1`(Minimalizuj rozmiar)](o1-o2-minimize-size-maximize-speed.md)
 
-- [/ O1 (minimalizacja rozmiaru)](o1-o2-minimize-size-maximize-speed.md)
+- [`/O2`(Maksymalizuj szybkość)](o1-o2-minimize-size-maximize-speed.md)
 
-- [/ O2 (Maksymalizuj szybkość)](o1-o2-minimize-size-maximize-speed.md)
+- [`/Od`(Wyłącz (Debuguj))](od-disable-debug.md)
 
-- [/Od (Wyłącz (Debuguj))](od-disable-debug.md)
+Możesz anulować odchylenia w kierunku **`/Ox`** opcji kompilatora, jeśli zostanie określona **`/Oxs`** , która łączy **`/Ox`** opcję kompilatora z [ `/Os` (Preferuj mały kod)](os-ot-favor-small-code-favor-fast-code.md). Połączone opcje preferują mniejszy rozmiar kodu.  **`/Oxs`** Opcja jest dokładnie taka sama jak określenie, **`/Ox`** **`/Os`** kiedy opcje są wyświetlane w danej kolejności.
 
-Można anulować odchylenie kierunku szybkości **ox** w przypadku określenia — opcja kompilatora **/Oxs**, które łączy w sobie **ox** — opcja kompilatora przy użyciu  [ /OS (Preferuj mały Kod)](os-ot-favor-small-code-favor-fast-code.md). Opcje połączone Preferuj mniejszego rozmiaru kodu.  **/Oxs** opcji jest dokładnie taka sama, jak określenie **ox** **/Os** po opcje są wyświetlane w tej kolejności.
-
-Aby zastosować wszystkie dostępne optymalizacje poziomie plików dla kompilacji wydania, firma Microsoft zaleca, należy określić [/O2 (Maksymalizuj szybkość)](o1-o2-minimize-size-maximize-speed.md) zamiast **ox**, i [/O1 (Minimalizuj rozmiar)](o1-o2-minimize-size-maximize-speed.md) zamiast tego z **/Oxs**. Jeszcze więcej optymalizacji w wersji kompilacji, należy również rozważyć [/GL (Optymalizacja Całoprogramowa)](gl-whole-program-optimization.md) — opcja kompilatora i [opcję/LTCG (Generowanie kodu Link-time)](ltcg-link-time-code-generation.md) — opcja konsolidatora.
+Aby zastosować wszystkie dostępne optymalizacje na poziomie plików dla kompilacji wydań, zalecamy określenie [ `/O2` (maksymalizuj szybkość)](o1-o2-minimize-size-maximize-speed.md) zamiast **`/Ox`** , i [ `/O1` (minimalizowanie rozmiaru)](o1-o2-minimize-size-maximize-speed.md) zamiast **`/Oxs`** . Aby uzyskać większą optymalizację w kompilacjach wydania, należy również wziąć pod uwagę opcje kompilatora [ `/GL` (Optymalizacja całego programu)](gl-whole-program-optimization.md) i opcję konsolidatora [ `/LTCG` (generowanie kodu w czasie konsolidacji)](ltcg-link-time-code-generation.md) .
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. W obszarze **właściwości konfiguracji**, otwórz **C/C++** , a następnie wybierz **optymalizacji** stronę właściwości.
+1. Wybierz **Configuration Properties**  >  stronę właściwości optymalizacji**C/C++** właściwości konfiguracji  >  **Optimization** .
 
-1. Modyfikowanie **optymalizacji** właściwości.
+1. Zmodyfikuj właściwość **optymalizacji** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Optimization%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Optimization%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[/O Opcje (Optymalizuj kod)](o-options-optimize-code.md)<br/>
+[`/O`Opcje (Optymalizuj kod)](o-options-optimize-code.md)<br/>
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

@@ -1,47 +1,48 @@
 ---
 title: Pliki poleceń CL
-ms.date: 11/04/2016
+description: Kompilator MSVC umożliwia określenie plików poleceń, które zawierają opcje wiersza polecenia.
+ms.date: 07/08/2020
 helpviewer_keywords:
 - cl.exe compiler, command files
 - command files
 - command files, CL compiler
 ms.assetid: ec3cea06-2af0-4fe9-a94c-119c9d31b3a9
-ms.openlocfilehash: 1dc2d6bffe4d0681a04b875383215a0bbfc1a720
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6deab4b11dcc6c53beb5b4fa8b014a56020c3420
+ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440264"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86180945"
 ---
 # <a name="cl-command-files"></a>Pliki poleceń CL
 
-Plik poleceń to plik tekstowy, który zawiera opcje i nazwy plików, które w przeciwnym razie można wpisać w [wierszu polecenia](compiler-command-line-syntax.md) lub określić przy użyciu [zmiennej środowiskowej CL](cl-environment-variables.md). CL akceptuje plik poleceń kompilatora jako argument w zmiennej środowiskowej CL lub w wierszu polecenia. W przeciwieństwie do wiersza polecenia lub zmiennej środowiskowej CL, plik poleceń pozwala na używanie wielu wierszy opcji i nazw plików.
+Plik poleceń to plik tekstowy, który zawiera opcje kompilatora i nazwy plików. Udostępnia opcje, które można w przeciwnym razie wpisać w [wierszu polecenia](compiler-command-line-syntax.md)lub określić przy użyciu [zmiennej środowiskowej CL](cl-environment-variables.md). CL akceptuje plik poleceń kompilatora jako argument, w zmiennej środowiskowej CL lub w wierszu polecenia. W przeciwieństwie do wiersza polecenia lub zmiennej środowiskowej CL, można użyć wielu wierszy opcji i nazw plików w pliku poleceń.
 
-Opcje i nazwy plików w pliku poleceń są przetwarzane zgodnie z lokalizacją pliku poleceń w zmiennej środowiskowej CL lub w wierszu polecenia. Jeśli jednak w pliku poleceń zostanie wyświetlona opcja/link, wszystkie opcje w pozostałej części wiersza są przesyłane do konsolidatora. Opcje w kolejnych wierszach w pliku poleceń i opcjach w wierszu polecenia po wywołaniu pliku polecenia są nadal akceptowane jako opcje kompilatora. Aby uzyskać więcej informacji na temat sposobu, w jaki kolejność opcji ma wpływ na ich interpretację, zobacz [kolejność CL](order-of-cl-options.md).
+Opcje i nazwy plików w pliku poleceń są przetwarzane, gdy nazwa pliku polecenia pojawia się w zmiennej środowiskowej CL lub w wierszu polecenia. Jeśli jednak ta **`/link`** opcja pojawia się w pliku polecenia, wszystkie opcje w pozostałej części wiersza są przesyłane do konsolidatora. Opcje w późniejszych wierszach w pliku poleceń i opcje w wierszu polecenia po wywołaniu pliku polecenia są nadal akceptowane jako opcje kompilatora. Aby uzyskać więcej informacji na temat sposobu, w jaki kolejność opcji ma wpływ na ich interpretację, zobacz [kolejność CL](order-of-cl-options.md).
 
-Plik polecenia nie może zawierać CL polecenie. Każda opcja musi rozpoczynać się i kończyć w tym samym wierszu; nie można użyć ukośnika odwrotnego ( **\\** ), aby połączyć opcję w dwóch wierszach.
+Plik polecenia nie może zawierać CL polecenie. Każda opcja musi rozpoczynać się i kończyć w tym samym wierszu; nie można użyć ukośnika odwrotnego ( **`\`** ), aby połączyć opcję w dwóch wierszach.
 
-Plik poleceń jest określany za pomocą znaku ( **\@** ), po którym następuje nazwa pliku; Nazwa pliku może określać ścieżkę bezwzględną lub względną.
+Plik poleceń jest określany za pomocą znaku ( **`@`** ), po którym następuje nazwa pliku. Nazwa pliku może określać ścieżkę bezwzględną lub względną.
 
 Na przykład, jeśli następujące polecenie znajduje się w pliku o nazwie centr:
 
-```
-/Og /link LIBC.LIB
+```cmd
+/Ot /link LIBC.LIB
 ```
 
 i należy określić następujące CL polecenia:
 
-```
+```cmd
 CL /Ob2 @RESP MYAPP.C
 ```
 
 polecenie do CL jest następujące:
 
-```
-CL /Ob2 /Og MYAPP.C /link LIBC.LIB
+```cmd
+CL /Ob2 /Ot MYAPP.C /link LIBC.LIB
 ```
 
-Należy zauważyć, że wiersz polecenia i polecenia związane z plikiem poleceń są efektywnie połączone.
+W tym miejscu możesz zobaczyć, w jaki sposób wiersz polecenia i polecenia dotyczące pliku poleceń są efektywnie połączone.
 
 ## <a name="see-also"></a>Zobacz też
 
