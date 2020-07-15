@@ -1,15 +1,15 @@
 ---
 title: Korzystanie z zestawów reguł do określania reguł C++ do uruchomienia
-ms.date: 04/28/2018
+ms.date: 07/13/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 233a5f8a549e33f63350115d90c7e7e6b5f6937b
-ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
+ms.openlocfilehash: 8b6d3fe8c8e441d4b233f2f4008d8aae9225726f
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85269718"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373856"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Korzystanie z zestawów reguł do określania reguł C++ do uruchomienia
 
@@ -236,17 +236,19 @@ Poniższy schemat zestawu reguł zawiera opis schematu XML pliku zestawu reguł.
 
 Szczegóły elementu schematu:
 
-- TLocalization: informacje o lokalizacji, w tym nazwa pliku zestawu reguł, Opis pliku z zestawem danych, nazwa zestawie zasobów zawierającego zlokalizowany zasób i nazwa podstawowa zlokalizowanego zasobu.
-- TRuleHintPaths: ścieżki plików używane jako wskazówki do wyszukiwania plików zestawu reguł.
-- TName: Nazwa bieżącego pliku zestawu reguł.
-- TDescription: Opis bieżącego pliku zestawu reguł.
-- TInclude: ścieżka do dołączonego zestawu reguł z akcją reguły.
-- TIncludeAll: Akcja reguły dla wszystkich reguł.
-- TRule: Identyfikator reguły z akcją reguły.
-- TRules: Kolekcja co najmniej jednej reguły.
-- TRuleSet: Format pliku zestawu reguł składający się z informacji o lokalizacji, ścieżek wskazówki reguły, obejmują wszystkie informacje, zawierają informacje, informacje o regułach, nazwę, opis i informacje o wersji.
-- TRuleAction: Wyliczenie opisujące akcję reguły, taką jak błąd, ostrzeżenie, informacje, ukryte lub brak.
-- TIncludeAction: Wyliczenie opisujące akcję reguły, taką jak błąd, ostrzeżenie, informacje, ukryte, brak lub wartość domyślna.
-- TIncludeAllAction: Wyliczenie opisujące akcję reguły, taką jak błąd, ostrzeżenie, informacje lub ukryte.
+| Element schematu | Opis |
+|--------------------|--------------|
+| `TLocalization` | Informacje o lokalizacji, w tym nazwa pliku zestawu reguł, Opis pliku z zestawem zasobów, Nazwa zespołu zawierającego zlokalizowany zasób i podstawowa nazwa zlokalizowanego zasobu |
+| `TRuleHintPaths` | Ścieżki plików używane jako wskazówki do wyszukiwania plików zestawu reguł |
+| `TName` | Nazwa bieżącego pliku zestawu reguł |
+| `TDescription` | Opis bieżącego pliku zestawu reguł |
+| `TInclude` | Ścieżka do dołączonego zestawu reguł z akcją reguły |
+| `TIncludeAll` | Akcja reguły dla wszystkich reguł |
+| `TRule` | Identyfikator reguły z akcją reguły |
+| `TRules` | Kolekcja co najmniej jednej reguły |
+| `TRuleSet` | Format pliku zestawu reguł, składający się z informacji o lokalizacji, ścieżek podpowiedzi reguły, obejmują wszystkie informacje, zawierają informacje, informacje o regułach, nazwę, opis i informacje o wersji |
+| `TRuleAction` | Wyliczenie opisujące akcję reguły, taką jak błąd, ostrzeżenie, informacje, ukryte lub brak |
+| `TIncludeAction` | Wyliczenie opisujące akcję reguły, taką jak błąd, ostrzeżenie, informacje, ukryte, brak lub domyślny |
+| `TIncludeAllAction` | Wyliczenie opisujące akcję reguły, taką jak błąd, ostrzeżenie, informacje lub ukryte |
 
 Aby zapoznać się z przykładem zestawu reguł, zobacz, [Aby utworzyć zestaw reguły w edytorze tekstu](#to-create-a-rule-set-in-a-text-editor), lub dowolny z domyślnych zestawów reguł przechowywanych w `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` .

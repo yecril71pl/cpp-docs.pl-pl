@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-ms.openlocfilehash: 8556e005618a1b69c47498a07e218284dcb1164f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ea0ac6ab89179683d04f6b6233c6fa1996e51a1f
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443431"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373570"
 ---
 # <a name="countryregion-strings"></a>Ciągi kraj/region
 
-Ciągi kraju i regionu można łączyć z ciągiem języka, aby utworzyć specyfikację ustawień regionalnych dla funkcji `setlocale`, `_wsetlocale`, `_create_locale`i `_wcreate_locale`. W przypadku list nazw krajów i regionów obsługiwanych przez różne wersje systemu operacyjnego Windows Zapoznaj się z kolumnami **Language**, **Location**i **Language tag** tabeli w [dodatku A: zachowanie produktu](https://msdn.microsoft.com/library/cc233982.aspx) w [MS-LCID]: informacje o identyfikatorze kodu języka (LCID) systemu Windows. Przykład kodu, który wylicza dostępne nazwy ustawień regionalnych i powiązane wartości, można znaleźć w temacie [NLS: Omówienie interfejsów API opartych na nazwach](/windows/win32/intl/nls--name-based-apis-sample).
+Ciągi kraju i regionu można łączyć z ciągiem języka, aby utworzyć specyfikację ustawień regionalnych dla `setlocale` funkcji, `_wsetlocale` , `_create_locale` i `_wcreate_locale` . W przypadku list nazw krajów i regionów obsługiwanych przez różne wersje systemu operacyjnego Windows Zapoznaj się z kolumnami **Language**, **Location**i **Language tag** tabeli w [dodatku A: zachowanie produktu](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) w \[ MS-LCID]: informacje o identyfikatorze kodu języka (LCID) systemu Windows. Przykład kodu, który wylicza dostępne nazwy ustawień regionalnych i powiązane wartości, można znaleźć w temacie [NLS: Omówienie interfejsów API opartych na nazwach](/windows/win32/intl/nls--name-based-apis-sample).
 
 ## <a name="additional-supported-country-and-region-strings"></a>Dodatkowe obsługiwane ciągi krajów i regionów
 
@@ -21,29 +21,29 @@ Implementacja biblioteki wykonawczej Microsoft C obsługuje również następuj�
 
 |Ciąg kraju/regionu|Skrót|Równoważna Nazwa ustawień regionalnych|
 |----------------------------|------------------|----------------------------|
-|Stany Zjednoczone|Stany Zjednoczone|pl-PL|
+|USA|USA|pl-PL|
 |Brytanii|GBR|en-GB|
 |Chinach|CHN|zh-CN|
 |Czeski|CZE|cs-CZ|
 |Anglii|GBR|en-GB|
 |Wielka Brytania|GBR|en-GB|
-|Holland|NLD|NL-NL|
-|SRA Hongkong|HKG|zh-HK|
-|Nowa Zelandia|NZL|EN NZ|
-|nz|NZL|EN NZ|
+|Holland|NLD|nl-NL|
+|Hongkong|HKG|zh-HK|
+|Nowa Zelandia|NZL|EN-NZ|
+|NZ|NZL|EN-NZ|
 |Chiny (PR)|CHN|zh-CN|
 |PR — Chiny|CHN|zh-CN|
 |Portoryko — Portoryko|PRI|ES — PR|
 |Słowacki|SVK|sk-SK|
-|Republika Południowej Afryki|ZAF|af-ZA|
+|Republika Południowej Afryki|ZAF|AF — za|
 |Korea Południowa|KOR|ko-KR|
-|Republika Południowej Afryki|ZAF|af-ZA|
+|Republika Południowej Afryki|ZAF|AF — za|
 |Korea Południowa|KOR|ko-KR|
 |Trinidad & Tobago|Aby|pl-TT|
+|Południowe Zjednoczone Królestwo|GBR|en-GB|
 |Zjednoczone Królestwo|GBR|en-GB|
-|Zjednoczone Królestwo|GBR|en-GB|
-|Stany Zjednoczone|Stany Zjednoczone|pl-PL|
-|Prześlij|Stany Zjednoczone|pl-PL|
+|Stany Zjednoczone|USA|pl-PL|
+|Prześlij|USA|pl-PL|
 
 ## <a name="see-also"></a>Zobacz też
 

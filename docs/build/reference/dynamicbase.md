@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DYNAMICBASE editbin option
 - /DYNAMICBASE editbin option
 ms.assetid: edb3df90-7b07-42fb-a94a-f5a4c1d325d6
-ms.openlocfilehash: ab7682c8344d6fc36ded03e7ef885c83d2f19ab7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 54644d9df546299be3b688f9745a121592938df6
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169048"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373622"
 ---
 # <a name="dynamicbase"></a>/DYNAMICBASE
 
@@ -21,7 +21,7 @@ Określa, czy generować obraz wykonywalny, który może być losowo zmieniany w
 
 ## <a name="syntax"></a>Składnia
 
-> **/DYNAMICBASE**[ **: No**]
+> **/DYNAMICBASE**[**: No**]
 
 ## <a name="remarks"></a>Uwagi
 
@@ -31,5 +31,5 @@ Domyślnie **/DYNAMICBASE** jest włączona. Aby wyłączyć tę opcję, użyj *
 
 ## <a name="see-also"></a>Zobacz też
 
-- [Opcje EDITBIN](editbin-options.md)
-- [Ochrona przed oprogramowaniem ISV systemu Windows](https://msdn.microsoft.com/library/bb430720.aspx)
+- [Opcje polecenia EDITBIN](editbin-options.md)
+- [Ochrona przed oprogramowaniem ISV systemu Windows](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))

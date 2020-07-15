@@ -2,16 +2,16 @@
 title: /Qpar-raport (Poziom raportowania automatycznej paralelizacji)
 ms.date: 11/04/2016
 ms.assetid: 562673b9-02da-4bf8-bb64-70bc25ef4651
-ms.openlocfilehash: 25732900fa201258331dcb8eee96af9ba97a6def
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea3e430dec61d35b8540792773b5519e64cedaef
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319957"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373791"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-raport (Poziom raportowania automatycznej paralelizacji)
 
-Włącza funkcję raportowania kompilatora [automatycznego Zrównoleglacza](../../parallel/auto-parallelization-and-auto-vectorization.md) i określa stopień komunikaty informacyjne dla danych wyjściowych, podczas kompilacji.
+Włącza funkcję raportowania [autoparalelizacji](../../parallel/auto-parallelization-and-auto-vectorization.md) kompilatora i określa poziom komunikatów informacyjnych dla danych wyjściowych podczas kompilacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -21,29 +21,29 @@ Włącza funkcję raportowania kompilatora [automatycznego Zrównoleglacza](../.
 
 ## <a name="remarks"></a>Uwagi
 
-**/Qpar-report:1**<br/>
-Wyświetla komunikat informacyjny dla pętli, które są zrównoleglona.
+**/Qpar-report: 1**<br/>
+Wyświetla komunikat informacyjny dotyczący równoległych pętli.
 
-**/Qpar-report:2**<br/>
-Wyświetla komunikat informacyjny dla pętli, które są zrównoleglona, a także dla pętli, które są nie została zrównoleglona, wraz z kod przyczyny.
+**/Qpar-report: 2**<br/>
+Wyświetla komunikat informacyjny dla pętli, które są równoległe, a także dla pętli, które nie są równoległe, wraz z kodem przyczyny.
 
-Komunikaty są zgłaszane do strumienia wyjściowego stdout. Jeśli są zgłaszane nie komunikaty informacyjne, następnie kod zawiera żadne pętle albo poziomu raportowania nie został ustawiony na pętli raportów, które nie została zrównoleglona. Aby uzyskać więcej informacji na temat kodów przyczyn i komunikaty, zobacz [komunikaty Wektoryzatora i Paralelizatora](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
+Komunikaty są raportowane do stdout. Jeśli nie zgłoszono żadnych komunikatów informacyjnych, kod nie zawiera żadnych pętli lub poziom raportowania nie został ustawiony na pętle raportów, które nie są równoległe. Aby uzyskać więcej informacji na temat kodów przyczyn i komunikatów, zobacz [wektoryzator i paralelizacji messages](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
 
-### <a name="to-set-the-qpar-report-compiler-option-in-visual-studio"></a>Aby ustawić opcję kompilatora /Qpar-report w programie Visual Studio
+### <a name="to-set-the-qpar-report-compiler-option-in-visual-studio"></a>Aby ustawić opcję kompilatora/Qpar-report w programie Visual Studio
 
-1. W **Eksploratora rozwiązań**, otwórz menu skrótów dla projektu, a następnie wybierz **właściwości**.
+1. W **Eksplorator rozwiązań**Otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości**.
 
-1. W **stron właściwości** dialogowego **C/C++**, wybierz opcję **wiersza polecenia**.
+1. W oknie dialogowym **strony właściwości** w obszarze **C/C++** wybierz pozycję **wiersz polecenia**.
 
-1. W **dodatkowe opcje** wprowadź `/Qpar-report:1` lub `/Qpar-report:2`.
+1. W polu **dodatkowe opcje** wpisz `/Qpar-report:1` lub `/Qpar-report:2` .
 
-### <a name="to-set-the-qpar-report-compiler-option-programmatically"></a>Aby programowo ustawić opcję kompilatora /Qpar-report
+### <a name="to-set-the-qpar-report-compiler-option-programmatically"></a>Aby programowo ustawić opcję kompilatora/Qpar-report
 
-- Skorzystaj z tego przykładu kodu w <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+- Użyj przykładu kodu w <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[/Q Opcje (Operacje na niskim poziomie)](q-options-low-level-operations.md)<br/>
+[/Q opcje (operacje na niskim poziomie)](q-options-low-level-operations.md)<br/>
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
-[Programowanie równoległe w kodzie natywnym](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)
+[Kod natywny wektoryzacji w programie Visual Studio](https://docs.microsoft.com/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)

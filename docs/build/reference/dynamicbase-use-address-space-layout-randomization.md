@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 66d6232ed43f9c842ebbb0e22b57c509cf610afa
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 206c054f383418e176e00f4155f9f6a25a37e253
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170062"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373713"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (Korzystaj z randomizacji układu przestrzeni adresowej)
 
@@ -21,7 +21,7 @@ Określa, czy generować obraz wykonywalny, który może być losowo zmieniany w
 
 ## <a name="syntax"></a>Składnia
 
-> **/DYNAMICBASE**[ **: No**]
+> **/DYNAMICBASE**[**: No**]
 
 ## <a name="remarks"></a>Uwagi
 
@@ -31,9 +31,9 @@ Domyślnie **/DYNAMICBASE** jest włączona. Aby wyłączyć tę opcję, użyj *
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Aby ustawić tę opcję konsolidatora w programie Visual Studio
 
-1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać więcej informacji, [Zobacz C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **Właściwości konfiguracji** > **konsolidator** > strony właściwości **Zaawansowane** .
+1. Wybierz stronę właściwości **Konfiguracja**  >  **konsolidator**  >  **Zaawansowane** właściwości.
 
 1. Modyfikuj Właściwość **losowy adres podstawowy** .
 
@@ -44,6 +44,6 @@ Domyślnie **/DYNAMICBASE** jest włączona. Aby wyłączyć tę opcję, użyj *
 ## <a name="see-also"></a>Zobacz też
 
 - [Dokumentacja konsolidatora MSVC](linking.md)
-- [Opcje konsolidatora MSVC](linker-options.md)
+- [MSVC Opcje konsolidatora](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
-- [Ochrona przed oprogramowaniem ISV systemu Windows](https://msdn.microsoft.com/library/bb430720.aspx)
+- [Ochrona przed oprogramowaniem ISV systemu Windows](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))

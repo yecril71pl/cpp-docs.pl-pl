@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: 0b3fa8bcfd973949e73fdf701db2adb6c58be687
-ms.sourcegitcommit: 2f9ff2041d70c406df76c5053151192aad3937ea
+ms.openlocfilehash: 135d919278c8e969dc3a31381d5abbd1058c8663
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587386"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373895"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Utwórz aplikację świadomą serwera terminali)
 
@@ -54,9 +54,9 @@ Jeśli aplikacja została połączona z/TSAWARE, polecenia DUMPBIN [/Headers](he
 
 - Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)<br/>
+[MSVC Opcje konsolidatora](linker-options.md)<br/>
 [Przechowywanie informacji specyficznych dla użytkownika](/windows/win32/TermServ/storing-user-specific-information)<br/>
-[Starsze aplikacje w środowisku usług terminalowych](https://msdn.microsoft.com/library/aa382957.aspx)
+[Starsze aplikacje w środowisku usług terminalowych](https://docs.microsoft.com/previous-versions//aa382957(v=vs.85))

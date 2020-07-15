@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -await enable coroutine support [C++]
 - await enable coroutine support [C++]
 ms.assetid: 302c8e69-09b6-4c58-bcdd-0a6a8713a8df
-ms.openlocfilehash: eeab3f4a1afc73e341f04222a55c8ce429490742
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 53a6cf4b3d14ee97a324fa01f83c0d0fee61180b
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078447"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373700"
 ---
 # <a name="await-enable-coroutine-support"></a>/await (Włącz obsługę koprocedury)
 
@@ -26,7 +26,7 @@ Użyj opcji kompilatora **/await** , aby włączyć obsługę kompilatora dla pr
 
 ## <a name="remarks"></a>Uwagi
 
-Opcja kompilatora **/await** umożliwia obsługę kompilatora dla C++ procedur współpracujących i słów kluczowych **co_await**, **co_yield**i **co_return**. Ta opcja jest domyślnie wyłączona. Aby uzyskać informacje o obsłudze wspólnych procedur w programie Visual Studio, zapoznaj się z [blogiem zespołu programu Visual Studio](https://blogs.msdn.microsoft.com/vcblog/category/coroutine/). Aby uzyskać więcej informacji na temat standardowej oferty wspólnej procedury, zobacz [N4628 Work robocza, Specyfikacja techniczna C++ dla rozszerzeń wspólnych](https://wg21.link/n4628).
+Opcja kompilatora **/await** umożliwia obsługę kompilatora dla procedur współpracujących języka C++ i słów kluczowych **co_await**, **co_yield**i **co_return**. Ta opcja jest domyślnie wyłączona. Aby uzyskać informacje o obsłudze wspólnych procedur w programie Visual Studio, zapoznaj się z [blogiem zespołu programu Visual Studio](https://devblogs.microsoft.com/cppblog/category/coroutine/). Aby uzyskać więcej informacji na temat standardowej oferty wspólnej procedury, zobacz [N4628 Work robocza, Specyfikacja techniczna dla rozszerzeń języka C++ dla wspólnych procedur](https://wg21.link/n4628).
 
 Opcja **/await** jest dostępna, zaczynając od programu Visual Studio 2015.
 
@@ -34,7 +34,7 @@ Opcja **/await** jest dostępna, zaczynając od programu Visual Studio 2015.
 
 1. Otwórz okno dialogowe **strony właściwości** projektu.
 
-1. W obszarze **Właściwości konfiguracji**rozwiń folder **C/C++**  , a następnie wybierz stronę właściwości **wiersza polecenia** .
+1. W obszarze **Właściwości konfiguracji**rozwiń folder **C/C++** i wybierz stronę właściwości **wiersza polecenia** .
 
 1. Wprowadź opcję kompilatora **/await** w polu **dodatkowe opcje** . Wybierz **przycisk OK** lub **Zastosuj** , aby zapisać zmiany.
 

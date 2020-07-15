@@ -8,29 +8,29 @@ helpviewer_keywords:
 - -HIGHENTROPYVA editbin option
 - /HIGHENTROPYVA editbin option
 ms.assetid: ef4b7c63-440d-40ca-b39d-edefb3217505
-ms.openlocfilehash: 90d3c868eaab85e3b1a2a416c9aa14b0e27ec8f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2ff9929de74d99fbc45e4f4ff38fd6b939697bc
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270227"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373830"
 ---
 # <a name="highentropyva"></a>/HIGHENTROPYVA
 
-Określa, czy obraz wykonywalny obsługuje z randomizacji układu przestrzeni adresowej 64-bitowej o wysokiej entropii (ASLR).
+Określa, czy obraz wykonywalny obsługuje generowanie losowe układu przestrzeni adresowej o wysokiej entropii 64 (ASLR).
 
 ## <a name="syntax"></a>Składnia
 
-> **/HIGHENTROPYVA**[**:NO**]
+> **/HIGHENTROPYVA**[**: No**]
 
 ## <a name="remarks"></a>Uwagi
 
-Ta opcja modyfikuje nagłówek *obrazu pliku wykonywalnego*, pliku .dll lub pliku .exe, aby wskazać czy obsługiwany jest ASLR z 64-bitowymi adresami. Gdy ta opcja jest ustawiona na wykonawczą i wszystkie moduły, w których jest zależna, system operacyjny, który obsługuje 64-bitowy ASLR może przemieścić segmenty wykonawczego obrazu w czasie ładowania, używając niestandardowych adresów w 64-bitowej wirtualnej przestrzeni adresowej. Ta duża przestrzeń na sprawia, że utrudnia osobie atakującej intruzowi zgadnąć lokalizację konkretnego regionu pamięci.
+Ta opcja modyfikuje nagłówek *obrazu wykonywalnego*, pliku. dll lub pliku. exe, aby wskazać, czy obsługiwane są ASLR z adresami 64-bitowymi. Gdy ta opcja jest ustawiona dla pliku wykonywalnego i wszystkich modułów, od których jest zależna, system operacyjny obsługujący 64-bitowy ASLR może odtworzyć segmenty obrazu wykonywalnego w czasie ładowania przy użyciu losowych adresów w 64-bitowej wirtualnej przestrzeni adresowej. Ta duża przestrzeń adresowa utrudnia osobie atakującej odpuszczenie lokalizacji określonego obszaru pamięci.
 
-Domyślnie, włącza konsolidator **/highentropyva** dla 64-bitowych obrazów wykonywalnych. Ta opcja wymaga [/largeaddressaware](largeaddressaware.md), który jest również domyślnie włączone dla 64-bitowych obrazów. **/ HIGHENTROPYVA** nie ma zastosowania do wykonywalnych obrazów 32-bitowych, gdy opcja jest ignorowana. Aby jawnie wyłączyć tę opcję, należy użyć **/HIGHENTROPYVA:NO**. Aby uzyskać tę opcję, aby mieć wpływ [opcja/DynamicBase](dynamicbase.md) opcja musi być ustawiona.
+Domyślnie konsolidator włącza **/HIGHENTROPYVA** na 64-bitowe obrazy wykonywalne. Ta opcja wymaga [/LARGEADDRESSAWARE](largeaddressaware.md), który jest również domyślnie włączony dla obrazów 64-bitowych. **/HIGHENTROPYVA** nie ma zastosowania do 32-bitowych obrazów wykonywalnych, w których opcja jest ignorowana. Aby jawnie wyłączyć tę opcję, użyj **/HIGHENTROPYVA: No**. Aby ta opcja miała efekt, należy również ustawić opcję [/DYNAMICBASE](dynamicbase.md) .
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-- [Opcje EDITBIN](editbin-options.md)
+- [Opcje polecenia EDITBIN](editbin-options.md)
 - [/DYNAMICBASE](dynamicbase.md)
-- [Poziom ochrony oprogramowania niezależnego dostawcy oprogramowania Windows](https://msdn.microsoft.com/library/bb430720.aspx)
+- [Ochrona przed oprogramowaniem ISV systemu Windows](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))
