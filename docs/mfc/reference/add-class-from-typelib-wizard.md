@@ -4,74 +4,72 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: 7a866c0e6b772a992f5ae81dbb17646765f172e6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 6fa1dd3985fd5b565bcc4b4727f41960d1f4f5d0
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708340"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405133"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Kreator dodawania klasy z biblioteki typów
 
 ::: moniker range="vs-2019"
 
-Ten kreator nie jest dostępne w programie Visual Studio 2019 r i nowszych wersjach.
+Ten Kreator nie jest dostępny w programie Visual Studio 2019 i nowszych.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Ten kreator umożliwia dodawanie klasy MFC z biblioteki typów dostępne. Kreator utworzy klasę dla każdego interfejsu, który dodasz z wybranej biblioteki typów.
+Użyj tego kreatora, aby dodać klasę MFC z dostępnej biblioteki typów. Kreator tworzy klasę dla każdego interfejsu dodawanego z wybranej biblioteki typów.
 
-- **Dodaj klasę**
+- **Dodaj klasę z**
 
-   Określa lokalizację biblioteki typów, z którego jest tworzony klasy.
+   Określa lokalizację biblioteki typów, z której zostanie utworzona klasa.
 
    |Opcja|Opis|
    |------------|-----------------|
-   |**Registry**|Biblioteka typów jest zarejestrowany w systemie. Zarejestrowanego typu biblioteki są wymienione w **bibliotek typów dostępnych**.|
-   |**Plik**|Biblioteka typów nie zawsze jest zarejestrowany w systemie, ale jest zawarty w pliku. Należy podać lokalizację pliku w **lokalizacji**.|
+   |**Rejestr**|Biblioteka typów jest zarejestrowana w systemie. Zarejestrowane biblioteki typów są wymienione w **dostępnych bibliotekach typów**.|
+   |**Plik**|Biblioteka typów nie musi być zarejestrowana w systemie, ale jest zawarta w pliku. Należy podać lokalizację pliku w **lokalizacji**.|
 
-- **Biblioteki typów dostępne**
+- **Dostępne biblioteki typów**
 
-   Wyświetla listę bibliotek typów w danym momencie zarejestrowany w systemie. Wybierz bibliotekę typów z tej listy, aby wyświetlić swoje interfejsy w **interfejsów** listy.
-
-   Zobacz "wewnątrz rozproszonego modelu COM: Wpisz biblioteki oraz integracji języków"w bibliotece MSDN, aby uzyskać więcej informacji na temat rejestrowania biblioteki typów.
+   Wyświetla listę bibliotek typów aktualnie zarejestrowanych w systemie. Wybierz bibliotekę typów z tej listy, aby wyświetlić jej interfejsy na liście **interfejsy** .
 
 - **Lokalizacja**
 
-   Określa lokalizację biblioteki typów. Jeśli klikniesz **pliku** w obszarze **dodawania klasy z**, możesz określić lokalizację pliku zawierającego bibliotekę typów. Aby przejść do lokalizacji pliku, kliknij przycisk oznaczony wielokropkiem.
+   Określa lokalizację biblioteki typów. Jeśli klikniesz pozycję **plik** w obszarze **Dodaj klasę z**, możesz podać lokalizację pliku zawierającego bibliotekę typów. Aby przejść do lokalizacji pliku, kliknij przycisk wielokropka.
 
 - **Interfejsy**
 
-   Wyświetla listę interfejsów w aktualnie wybranego w bibliotece typów **bibliotek typów dostępnych** listy.
+   Wyświetla listę interfejsów w bibliotece typów aktualnie wybranych na liście **dostępne biblioteki typów** .
 
    |Przycisk transferu|Opis|
    |---------------------|-----------------|
-   |**>**|Dodaje interfejs aktualnie wybrany w **interfejsów** listy. Nieaktywne, jeśli interfejs nie jest zaznaczone.|
-   |**>>**|Dodaje wszystkie interfejsy w bibliotece typów aktualnie wybrany w **bibliotek typów dostępnych** listy.|
-   |**\<**|Usuwa klasę aktualnie wybrany w **wygenerowane klasy** listy. Wygaszony, jeśli klasa nie jest aktualnie wybrany w **wygenerowane klasy** listy.|
-   |**\<\<**|Usuwa wszystkie klasy w **wygenerowane klasy** listy. Jeśli wygaszone **wygenerowane klasy** lista jest pusta.|
+   |**>**|Dodaje interfejs aktualnie wybrany na liście **interfejsy** . Wygaszone, jeśli nie wybrano interfejsu.|
+   |**>>**|Dodaje wszystkie interfejsy w bibliotece typów aktualnie zaznaczonej na liście **dostępne biblioteki typów** .|
+   |**\<**|Usuwa klasę aktualnie wybraną z listy **wygenerowanych klas** . Wygaszone, jeśli żadna Klasa nie jest obecnie zaznaczona na liście **wygenerowanych klas** .|
+   |**\<\<**|Usuwa wszystkie klasy z listy **wygenerowanych klas** . Wygaszone, jeśli lista **wygenerowanych klas** jest pusta.|
 
 - **Wygenerowane klasy**
 
-   Określa nazwy klas, które było generowane przy użyciu interfejsów, dodać za pomocą **>** lub **>>** przycisku. Kliknięcie tego pola Wybierz klasę, a następnie górę lub w dół klucze, aby przewijać listę, wyświetlając nazwę każdej klasy w **klasy** okno i nazwę pliku w **pliku** pole, Kreator generuje, kiedy można Kliknij przycisk **Zakończ**. Jednocześnie można wybrać tylko jedną klasę, w tym polu.
+   Określa nazwy klas do wygenerowania z interfejsów dodanych za pomocą **>** przycisku lub **>>** . Możesz kliknąć to pole, aby wybrać klasę, a następnie użyć klawiszy w górę lub w dół, aby przewijać listę, wyświetlając każdą nazwę klasy w polu **Klasa** i nazwę pliku w polu **plik** generowanym przez kreatora po kliknięciu przycisku **Zakończ**. W tym polu można wybrać tylko jedną klasę naraz.
 
-   Klasę można usunąć, wybierając ją na tej liście i klikając **<**. Nie musisz wybrać klasę w polu wygenerowanej klasy, aby usunąć wszystkie klasy; klikając **<<**, Usuń wszystkie klasy w **wygenerowane klasy** pole.
+   Możesz usunąć klasę, wybierając ją na tej liście i klikając **<** . Nie trzeba wybierać klasy w polu wygenerowane klasy, aby usunąć wszystkie klasy; klikając **<<** , należy usunąć wszystkie klasy w polu **wygenerowane klasy** .
 
-- **Class**
+- **Klasa**
 
-   Określa nazwę klasy, wybranego w **wygenerowane klasy** pole, które Kreator dodaje po kliknięciu **Zakończ**. Można edytować nazwy w **klasy** pole.
+   Określa nazwę klasy wybranej w polu **wygenerowane klasy** , którą Kreator dodaje po kliknięciu przycisku **Zakończ**. Nazwę można edytować w polu Class ( **Klasa** ).
 
 - **Plik**
 
-   Określa nazwę pliku nagłówka dla nowej klasy. Domyślnie ta nazwa jest na podstawie nazwy podane **wygenerowane klasy**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku na lokalizację lub dołączyć deklaracji klasy do istniejącego pliku. Jeśli wybierzesz istniejący plik, Kreator nie zapisze go w wybranej lokalizacji do momentu kliknij **Zakończ** w kreatorze.
+   Ustawia nazwę pliku nagłówka dla nowej klasy. Domyślnie ta nazwa jest oparta na nazwie dostarczanej w **wygenerowanych klasach**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji, lub dołączyć deklarację klasy do istniejącego pliku. Jeśli wybierzesz istniejący plik, Kreator nie zapisze go w wybranej lokalizacji, dopóki nie klikniesz przycisku **Zakończ** w kreatorze.
 
-   Kreator nie powoduje zastąpienia pliku. Jeśli wybierasz nazwę istniejącego pliku, po kliknięciu **Zakończ**, Kreator wyświetli monit o wskazują, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** można dołączyć pliku kliknij przycisk **nie** aby powrócić do kreatora i podaj inną nazwę pliku.
+   Kreator nie zastępuje pliku. Jeśli wybierzesz nazwę istniejącego pliku, po kliknięciu przycisku **Zakończ**Kreator monituje o wskazanie, czy deklaracja klasy powinna zostać dołączona do zawartości pliku. Kliknij przycisk **tak** , aby dołączyć plik; Kliknij przycisk **nie** , aby powrócić do kreatora i określić inną nazwę pliku.
 
 ::: moniker-end
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Klasa MFC z biblioteki typów](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)<br/>
 [Klienci automatyzacji: korzystanie z bibliotek typów](../../mfc/automation-clients-using-type-libraries.md)

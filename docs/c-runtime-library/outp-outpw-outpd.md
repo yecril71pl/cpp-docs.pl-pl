@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 0d28511cdf7487226635c0317b7c0ba21ab1d1be
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ceaaefbbe6f9debfb5ac8e1e8f5f3d1bbb36c8a8
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373479"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404063"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>Outp, outpw, _outp, _outpw _outpd
 
@@ -61,15 +61,15 @@ Dane wyjściowe, w porcie, bajt ( `outp` , `_outp` ), słowo ( `outpw` , `_outpw
 ```cpp
 int _outp(
    unsigned short port,
-   int databyte
+   int data_byte
 );
 unsigned short _outpw(
    unsigned short port,
-   unsigned short dataword
+   unsigned short data_word
 );
 unsigned long _outpd(
    unsigned short port,
-   unsigned long dataword
+   unsigned long data_word
 );
 ```
 
@@ -78,18 +78,20 @@ unsigned long _outpd(
 *przewożąc*\
 Numer portu.
 
-*databyte, dataword*\
+*data_byte, data_word*\
 Wartości wyjściowe.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje zwracają dane wyjściowe. Brak powrotu błędu.
+Funkcje zwracają dane wyjściowe. Nie ma żadnego powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-`_outp`, `_outpw` , I `_outpd` funkcje zapisują bajt, wyraz i podwójne słowo odpowiednio do określonego portu wyjściowego. Argument *portu* może być dowolną liczbą całkowitą bez znaku z zakresu 0 – 65 535; *databyte* może być dowolną liczbą całkowitą z zakresu 0-255; i *dataword* może być dowolną wartością z zakresu liczb całkowitych, niepodpisanej krótkiej liczby całkowitej i niepodpisanej Long Integer.
+`_outp`, `_outpw` , I `_outpd` funkcje zapisują bajt, wyraz i podwójne słowo odpowiednio do określonego portu wyjściowego. Argument *portu* może być dowolną liczbą całkowitą bez znaku z zakresu 0 – 65 535. *data_byte* może być dowolną liczbą całkowitą z zakresu 0-255. *data_word* może być dowolną wartością z zakresu liczb całkowitych, niepodpisanej krótkiej liczby całkowitej i niepodpisanej Long Integer.
 
-Ponieważ te funkcje zapisują bezpośrednio do portu we/wy, nie można ich używać w kodzie systemu Windows w trybie użytkownika. Informacje o korzystaniu z portów we/wy w systemie operacyjnym Windows znajdują się w temacie [komunikacja szeregowa](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10)).
+Ponieważ te funkcje zapisują bezpośrednio do portu we/wy, nie można ich używać w kodzie systemu Windows w trybie użytkownika.
+
+Informacje o korzystaniu z portów we/wy w systemie operacyjnym Windows znajdują się w temacie [komunikacja szeregowa](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10)).
 
 `outp`Nazwy i `outpw` są starsze, przestarzałe nazwy dla `_outp` `_outpw` funkcji i. Aby uzyskać więcej informacji, zobacz [nazwy funkcji POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
@@ -110,4 +112,4 @@ Wszystkie wersje [bibliotek uruchomieniowych języka C](../c-runtime-library/crt
 ## <a name="see-also"></a>Zobacz też
 
 [We/wy konsoli i portu](../c-runtime-library/console-and-port-i-o.md)\
-[INP, inpw, _inp, _inpw _inpd](../c-runtime-library/inp-inpw-inpd.md)
+[`inp`, `inpw`, `_inp`, `_inpw`, `_inpd`](../c-runtime-library/inp-inpw-inpd.md)

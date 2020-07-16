@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 9d262371369681cbbd5975a733950d6c4150fd88
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 57fdd61a966cbeab07c0aeafdad0f6e6fb97cca1
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920019"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404323"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -98,7 +98,7 @@ Ciąg kontroli formatu.
 *timeptr*<br/>
 Struktura danych **TM** .
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -123,13 +123,13 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsftime**|**strftime**|**strftime**|**wcsftime**|
 
-Argument *formatu* składa się z co najmniej jednego kodu; Podobnie jak w **printf**, kody formatowania są poprzedzone znakiem procentu (**%**). Znaki, które nie zaczynają **%** się od, są kopiowane niezmienione do *strDest*. Kategoria **LC_TIME** bieżących ustawień regionalnych ma wpływ na formatowanie danych wyjściowych **strftime**. (Aby uzyskać więcej informacji na **LC_TIME**, zobacz [setlocale](setlocale-wsetlocale.md).) Funkcje **strftime** i **wcsftime** używają obecnie ustawionych ustawień regionalnych. **_Strftime_l** i **_wcsftime_l** wersje tych funkcji są identyczne, z tą różnicą, że przyjmują ustawienia regionalne jako parametr i używają go zamiast obecnie ustawionych ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
+Argument *formatu* składa się z co najmniej jednego kodu; Podobnie jak w **printf**, kody formatowania są poprzedzone znakiem procentu ( **%** ). Znaki, które nie zaczynają się od **%** , są kopiowane niezmienione do *strDest*. Kategoria **LC_TIME** bieżących ustawień regionalnych ma wpływ na formatowanie danych wyjściowych **strftime**. (Aby uzyskać więcej informacji na **LC_TIME**, zobacz [setlocale](setlocale-wsetlocale.md).) Funkcje **strftime** i **wcsftime** używają obecnie ustawionych ustawień regionalnych. **_Strftime_l** i **_wcsftime_l** wersje tych funkcji są identyczne, z tą różnicą, że przyjmują ustawienia regionalne jako parametr i używają go zamiast obecnie ustawionych ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
 Funkcje **strftime** obsługują następujące kody formatowania:
 
 |||
 |-|-|
-|Code|Ciąg zamienny|
+|Kod|Ciąg zamienny|
 |**% a**|Skrócona nazwa dnia tygodnia w ustawieniach regionalnych|
 |**% A**|Pełna nazwa dnia tygodnia w ustawieniach regionalnych|
 |**% b**|Skrócona nazwa miesiąca w ustawieniach regionalnych|
@@ -179,14 +179,17 @@ Podobnie jak w funkcji **printf** , **#** Flaga może mieć prefiks kodu formato
 
 Tydzień w formacie ISO 8601 i rok oparty na tygodniu wyprodukowanym przez **% V**, **% g**i **% g**, używa tygodnia rozpoczynającego się w poniedziałek, gdzie tydzień 1 jest tygodniem, który zawiera czwarty tydzień, który zawiera co najmniej cztery dni roku. Jeśli pierwszy poniedziałek roku jest drugi, trzeci lub czwarty, powyższe dni są częścią ostatniego tygodnia poprzedniego roku. W tych dniach **% V** jest zastępowana przez 53, a oba **% g** i **% g** są zastępowane cyframi z poprzedniego roku.
 
+> [!NOTE]
+> W przypadku korzystania z jednej z `strftime` funkcji ze `tm` wskaźnikiem zwróconym przez `gmtime` , wartości wydrukowane `%Z` przez `%z` specyfikatory i nie będą dokładne. Wynika to z faktu, że `tm` Struktura określona przez standard C nie zawiera informacji o nazwie strefy czasowej ani przesunięciu. Zamiast tego informacje o strefie czasowej są wypełniane za pośrednictwem zmiennych globalnych [ `_timezone` i `_dstbias` ](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strftime**|\<> godziny. h|
-|**wcsftime**|\<Time. h> lub \<WCHAR. h>|
-|**_strftime_l**|\<> godziny. h|
-|**_wcsftime_l**|\<Time. h> lub \<WCHAR. h>|
+|**strftime**|\<time.h>|
+|**wcsftime**|\<time.h> lub \<wchar.h>|
+|**_strftime_l**|\<time.h>|
+|**_wcsftime_l**|\<time.h> lub \<wchar.h>|
 
 **_Strftime_l** i **_wcsftime_l** funkcje są specyficzne dla firmy Microsoft. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -196,10 +199,10 @@ Zobacz przykład [czasu](time-time32-time64.md).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Ustawienie](../../c-runtime-library/locale.md) <br/>
+[Regionalne](../../c-runtime-library/locale.md) <br/>
 [Zarządzanie czasem](../../c-runtime-library/time-management.md) <br/>
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [localeconv](localeconv.md) <br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md) <br/>
-[strcoll — Funkcje](../../c-runtime-library/strcoll-functions.md) <br/>
+[Funkcje strcoll —](../../c-runtime-library/strcoll-functions.md) <br/>
 [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>

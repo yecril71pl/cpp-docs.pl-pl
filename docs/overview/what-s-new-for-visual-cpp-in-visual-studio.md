@@ -3,12 +3,12 @@ title: Co nowego w języku C++ w programie Visual Studio
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 7c36112f5d0f7f0475782eb40e31179e67ac4485
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: f4b22cd11bcdee3d7dc2fe232642c02a331354bc
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630490"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404977"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Co nowego w języku C++ w programie Visual Studio
 
@@ -20,7 +20,7 @@ Program Visual Studio 2019 oferuje wiele aktualizacji i poprawek do środowiska 
 
 - Ulepszona obsługa funkcji i poprawek w języku C++ 17 oraz Eksperymentalna obsługa funkcji języka C++ 20, takich jak moduły i współprocedury. Aby uzyskać szczegółowe informacje, zobacz [ulepszenia zgodności języka C++ w programie Visual Studio 2019](cpp-conformance-improvements.md).
 
-- Ta `/std:c++latest` opcja zawiera teraz funkcje języka c++ 20, które nie są gotowe, w tym wstępne wsparcie dla operatora c++ 20 \< => ("Spaceship") na potrzeby porównania trójwymiarowego.
+- Ta `/std:c++latest` opcja zawiera teraz funkcje języka c++ 20, które nie są gotowe, w tym wstępną obsługę operatora c++ 20 \<=> ("Spaceship") na potrzeby porównania trójwymiarowego.
 
 - Przełącznik kompilatora języka C++ `/Gm` jest obecnie przestarzały. Rozważ wyłączenie `/Gm` przełącznika w skryptach kompilacji, jeśli jest on jawnie zdefiniowany. Można również bezpiecznie zignorować ostrzeżenia o zaniechaniu dla `/Gm` , ponieważ nie jest on traktowany jako błąd podczas używania "Traktuj ostrzeżenia jako błędy" ( `/WX` ).
 
@@ -38,7 +38,7 @@ Ulepszona analiza z programem `/Qspectre` w celu zapewnienia pomocy w zakresie o
 
 - Clang-format został zastosowany do nagłówków standardowej biblioteki C++ w celu zwiększenia czytelności.
 
-- Ponieważ program Visual Studio obsługuje teraz Tylko mój kod dla języka C++, standardowa biblioteka nie musi już zapewniać niestandardowych maszyn `std::function` i `std::visit` Aby osiągnąć ten sam efekt. Usuwanie maszyn w dużej mierze nie ma żadnych efektów widocznych dla użytkownika. Jedynym wyjątkiem jest to, że kompilator nie będzie już generować diagnostyki wskazującej problemy w wierszu 15732480 lub 16707566 \<> type_traits lub \<> wariantów.
+- Ponieważ program Visual Studio obsługuje teraz Tylko mój kod dla języka C++, standardowa biblioteka nie musi już zapewniać niestandardowych maszyn `std::function` i `std::visit` Aby osiągnąć ten sam efekt. Usuwanie maszyn w dużej mierze nie ma żadnych efektów widocznych dla użytkownika. Jedynym wyjątkiem jest to, że kompilator nie będzie już generować diagnostyki wskazującej problemy w wierszu 15732480 lub 16707566 \<type_traits> lub \<variant> .
 
 ## <a name="performancethroughput-improvements-in-the-compiler-and-standard-library"></a>Ulepszenia wydajności/przepływności w bibliotece kompilator i Standardowa
 
@@ -62,7 +62,7 @@ Ulepszona analiza z programem `/Qspectre` w celu zapewnienia pomocy w zakresie o
 
   - Ulepszona Optymalizacja kodu przy użyciu `memmove` , takich jak `std::copy` lub `std::vector` i `std::string` konstrukcja.
 
-- Zoptymalizowano fizyczny projekt biblioteki standardowej, aby uniknąć niebezpośredniego kompilowania części biblioteki standardowej. Ta zmiana spowoduje skrócenie czasu kompilacji pustego pliku, który zawiera tylko \<> wektora. W związku z tym może być konieczne dodanie `#include` dyrektyw dla nagłówków, które wcześniej zostały uwzględnione. Na przykład kod, który używa `std::out_of_range` może teraz być dodany `#include <stdexcept>` . Kod, który używa operatora wstawiania strumienia, może teraz być dodany `#include <ostream>` . Korzyść polega na tym, że tylko jednostki tłumaczenia, w których używane są \< stdexcept> lub \< ostream>, uiszczają koszt przepływności w celu ich skompilowania.
+- Zoptymalizowano fizyczny projekt biblioteki standardowej, aby uniknąć niebezpośredniego kompilowania części biblioteki standardowej. Ta zmiana spowoduje skrócenie czasu kompilacji pustego pliku, który zawiera tylko \<vector> połowę. W związku z tym może być konieczne dodanie `#include` dyrektyw dla nagłówków, które wcześniej zostały uwzględnione. Na przykład kod, który używa `std::out_of_range` może teraz być dodany `#include <stdexcept>` . Kod, który używa operatora wstawiania strumienia, może teraz być dodany `#include <ostream>` . Korzyść polega na tym, że tylko jednostki tłumaczenia faktycznie używające \<stdexcept> lub \<ostream> komponentów zwracają koszt przepływności w celu ich skompilowania.
 
 - `if constexpr`został zastosowany w większej liczbie miejsc w standardowej bibliotece w celu zwiększenia przepływności i zmniejszenia rozmiaru kodu w operacjach kopiowania w permutacjach, takich jak odwracanie i obracanie, oraz w bibliotece algorytmów równoległych.
 
@@ -144,11 +144,11 @@ Rozszerzenia intellicode teraz dostarcza jako składnik opcjonalny do **tworzeni
 
 - Obsługa CMake 3,14
 
-- Program Visual Studio może teraz otwierać istniejące pamięci podręczne CMake wygenerowane przez narzędzia zewnętrzne, takie jak CMakeGUI, dostosowane systemy meta-Build lub skrypty kompilacji, które wywołują program CMAKE. exe.
+- Program Visual Studio może teraz otwierać istniejące pamięci podręczne CMake wygenerowane przez narzędzia zewnętrzne, takie jak CMakeGUI, dostosowane systemy meta-Build lub skrypty kompilacji, które wywołują cmake.exe.
 
 - Ulepszona wydajność funkcji IntelliSense.
 
-- Nowy edytor ustawień oferuje alternatywę do ręcznego edytowania pliku pliku cmakesettings. JSON i zapewnia pewną parzystość z CMakeGUI.
+- Nowy edytor ustawień oferuje alternatywę do ręcznego edytowania CMakeSettings.jsw pliku i zapewnia pewną zgodność z CMakeGUI.
 
 - Program Visual Studio ułatwia rozpoczęcie programowania w języku C++ za pomocą narzędzia CMake w systemie Linux, wykrywając, czy na komputerze z systemem Linux znajduje się zgodna wersja narzędzia CMake. W przeciwnym razie umożliwia jej zainstalowanie dla Ciebie.
 
@@ -162,7 +162,7 @@ Rozszerzenia intellicode teraz dostarcza jako składnik opcjonalny do **tworzeni
 
 - Wyraźniejsze Kompilowanie i Konfigurowanie komunikatów "BEGIN" i "End" dla projektów CMake i obsługi interfejsu użytkownika postępu kompilacji programu Visual Studio. Ponadto istnieje teraz ustawienie szczegółowości CMake w obszarze **narzędzia > opcje** umożliwiające dostosowanie poziomu szczegółowości komunikatów kompilacji CMAKE i konfiguracji w okno dane wyjściowe.
 
-- To `cmakeToolchain` ustawienie jest teraz obsługiwane w pliku pliku cmakesettings. JSON w celu określenia łańcuchy narzędzi bez ręcznej modyfikacji wiersza polecenia CMAKE.
+- To `cmakeToolchain` ustawienie jest teraz obsługiwane w CMakeSettings.jsna, aby określić łańcuchy narzędzi bez ręcznej modyfikacji wiersza polecenia CMAKE.
 
 - Nowe menu **Kompiluj wszystkie** skróty **Ctrl + Shift + B**.
 
@@ -221,7 +221,7 @@ Składnik eksperymentalny Clang/C2 został usunięty. Użyj zestawu narzędzi MS
 
 - Analiza kodu działa teraz automatycznie w tle. Ostrzeżenia są wyświetlane podczas pisania jako zielone podkreślenia w edytorze. Aby uzyskać więcej informacji, zobacz [Analiza kodu w edytorze w programie Visual Studio 2019 (wersja zapoznawcza 2](https://devblogs.microsoft.com/cppblog/in-editor-code-analysis-in-visual-studio-2019-preview-2/)).
 
-- Nowe eksperymentalne reguły ConcurrencyCheck dla dobrze znanych standardowych typów bibliotek z \< nagłówka> mutex. Aby uzyskać więcej informacji, zobacz [Analiza kodu współbieżności w programie Visual Studio 2019](https://devblogs.microsoft.com/cppblog/concurrency-code-analysis-in-visual-studio-2019/).
+- Nowe eksperymentalne reguły ConcurrencyCheck dla dobrze znanych standardowych typów bibliotek z \<mutex> nagłówka. Aby uzyskać więcej informacji, zobacz [Analiza kodu współbieżności w programie Visual Studio 2019](https://devblogs.microsoft.com/cppblog/concurrency-code-analysis-in-visual-studio-2019/).
 
 - Zaktualizowana częściowa implementacja [Narzędzia sprawdzania profilu okresu istnienia](https://herbsutter.com/2018/09/20/lifetime-profile-v1-0-posted/), która wykrywa zawieszonegoe wskaźniki i odwołania. Aby uzyskać więcej informacji, zobacz [Aktualizacja profilu okresu istnienia w programie Visual Studio 2019 (wersja zapoznawcza 2](https://devblogs.microsoft.com/cppblog/lifetime-profile-update-in-visual-studio-2019-preview-2/)).
 
@@ -358,8 +358,8 @@ Program Visual Studio 2017 RTM zawiera więcej ulepszeń biblioteki standardowej
 
 ### <a name="conformance-improvements"></a>Ulepszenia zgodności
 
-- Dodaliśmy \< wszystkie \> , \< string_view \> , `apply()` `make_from_tuple()` ...
-- Dodano \< opcjonalne \> , \< Variant \> , `shared_ptr::weak_type` i \< cstdalign \> .
+- Dodaliśmy \<any\> , \<string_view\> , `apply()` , `make_from_tuple()` .
+- Dodano \<optional\> , \<variant\> , `shared_ptr::weak_type` , i \<cstdalign\> .
 - Włączono C++ 14 `constexpr` w `min(initializer_list)` , `max(initializer_list)` , i `minmax(initializer_list)` ,, `min_element()` i `max_element()` `minmax_element()` .
 
 Aby uzyskać więcej informacji, zobacz [tabela zgodność języka Microsoft C++](../visual-cpp-language-conformance.md).
@@ -377,7 +377,7 @@ Aby uzyskać więcej informacji, zobacz [tabela zgodność języka Microsoft C++
 - Zmieniono `static_assert(false, "message")` na `#error message` . Ta zmiana poprawia diagnostykę kompilatora, ponieważ `#error` natychmiast kończy kompilację.
 - Standardowa biblioteka nie oznacza już funkcji jako `__declspec(dllimport)` . Nowoczesne technologie konsolidatora nie wymagają już tego.
 - Wyodrębniono SFINAE do domyślnych argumentów szablonu, które zmniejszają bałagan w porównaniu z typami zwracanymi i typami argumentów funkcji.
-- Testy debugowania \< losowo \> teraz używają zwykłych maszyn w standardowej bibliotece zamiast funkcji wewnętrznej `_Rng_abort()` , która jest wywoływana `fputs()` do **stderr**. Implementacja tej funkcji została zatrzymana na potrzeby zgodności binarnej. Usuniemy ją w następnej binarnej niezgodnej wersji biblioteki standardowej.
+- Testy debugowania w \<random\> tym teraz używają zwykłych maszyn w bibliotece standardowej zamiast funkcji wewnętrznej `_Rng_abort()` , która jest wywoływana `fputs()` do **stderr**. Implementacja tej funkcji została zatrzymana na potrzeby zgodności binarnej. Usuniemy ją w następnej binarnej niezgodnej wersji biblioteki standardowej.
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017, wersja 15.5
 
@@ -414,7 +414,7 @@ Aby uzyskać więcej informacji, zobacz [tabela zgodność języka Microsoft C++
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 w wersji 15.7
 
 - Obsługa algorytmów równoległych nie jest już eksperymentalna
-- Nowa implementacja systemu \< plików>
+- Nowa implementacja programu\<filesystem>
 - Konwersje elementarne ciągów (częściowa)
 - `std::launder()`
 - `std::byte`
@@ -454,7 +454,7 @@ Aby uzyskać więcej informacji, zobacz [tabela zgodność języka Microsoft C++
 - `basic_string`Wewnętrzna ścieżka wzrostu nie znajduje się już w ścieżce `shrink_to_fit()` .
 - `basic_string`Operacje zmieniania są teraz uwzględniane w niealokowanej szybkiej ścieżce i przydzielaniu funkcji wolnych ścieżek, co jest bardziej podobne dla wspólnych przypadków bez ponownego przydzielenia.
 - `basic_string`Operacje mutacji teraz konstruują ponownie przydzieloną bufory w preferowanym stanie zamiast zmieniać rozmiar w miejscu. Na przykład Wstaw na początku ciągu teraz przenosi zawartość po wstawieniu dokładnie jeden raz. Jest on przenoszony w dół lub do nowo przydzielonych buforów. Nie jest już dwukrotnie przenoszona w przypadku ponownej alokacji, najpierw do nowo przydzielonych buforów, a następnie w dół.
-- Operacje wywołujące bibliotekę języka C w \< ciągu "String" \> teraz buforują `errno` adres, aby usunąć powtórzoną interakcję z protokołem TLS.
+- Operacje wywołujące w pamięci podręcznej standardowej biblioteki języka C w tym \<string\> momencie `errno` umożliwiają usunięcie powtórzonej interakcji z protokołem TLS.
 - Uproszczona `is_pointer` implementacja.
 - Zakończono zmianę wyrażenia opartego na funkcji SFINAE na `struct` i `void_t` -based.
 - Algorytmy biblioteki standardowej teraz unikają iteratorów postincrementing.
@@ -515,7 +515,7 @@ Kilka operacji języka C++, które używają aparatu IntelliSense do refaktoryza
 
 |||
 |-|-|
-|Cechy|Poprawa wydajności|
+|Obiekt feature|Poprawa wydajności|
 |Zmień nazwę|5.3 x|
 |Zmień sygnaturę |4,5 x|
 |Znajdź wszystkie odwołania|4,7 x|
@@ -561,14 +561,14 @@ W programie Visual Studio 2017 wprowadzono funkcję **Otwórz folder** . Umożli
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017, wersja 15.3
 
 - Ulepszona obsługa alternatywnych kompilatorów i środowisk kompilacji, takich jak MinGW i Cygwin. Aby uzyskać więcej informacji, zobacz [Używanie MinGW i Cygwin z Visual C++ i otwartym folderem](https://devblogs.microsoft.com/cppblog/using-mingw-and-cygwin-with-visual-cpp-and-open-folder/).
-- Dodano obsługę definiowania zmiennych środowiskowych globalnych i specyficznych dla konfiguracji w pliku cppproperties. JSON i pliku cmakesettings. JSON. Te zmienne środowiskowe mogą być używane przez konfiguracje debugowania zdefiniowane w pliku Launch. vs. JSON i zadania w pliku Tasks. vs. JSON. Aby uzyskać więcej informacji, zobacz [Dostosowywanie środowiska przy użyciu Visual C++ i otwartych folderów](https://devblogs.microsoft.com/cppblog/customizing-your-environment-with-visual-c-and-open-folder/).
+- Dodano obsługę definiowania zmiennych środowiskowych globalnych i specyficznych dla konfiguracji w CppProperties.jsna i CMakeSettings.js. Te zmienne środowiskowe mogą być używane przez konfiguracje debugowania zdefiniowane w launch.vs.jsna i zadania w tasks.vs.jsna. Aby uzyskać więcej informacji, zobacz [Dostosowywanie środowiska przy użyciu Visual C++ i otwartych folderów](https://devblogs.microsoft.com/cppblog/customizing-your-environment-with-visual-c-and-open-folder/).
 - Ulepszona obsługa generatora Ninja programu CMake, w tym możliwość łatwego kierowania platform 64-bitowych.
 
 ## <a name="cmake-support-via-open-folder"></a>Obsługa CMake za pośrednictwem otwartego folderu
 
 Program Visual Studio 2017 wprowadza obsługę projektów CMake bez konwertowania na pliki projektu MSBuild (. vcxproj). Aby uzyskać więcej informacji, zobacz [CMAKE projects in Visual Studio](../build/cmake-projects-in-visual-studio.md). Otwieranie projektów CMake z **otwartym folderem** automatycznie konfiguruje środowisko do edytowania, kompilowania i debugowania języka C++.
 
-- Funkcja IntelliSense języka C++ działa bez konieczności tworzenia pliku pliku cppproperties. JSON w folderze głównym. Dodano również nową listę rozwijaną, aby umożliwić użytkownikom łatwe przełączanie się między konfiguracjami dostarczonymi przez pliki CMake i pliku cppproperties. JSON.
+- Funkcja IntelliSense języka C++ działa bez konieczności tworzenia CppProperties.jsw pliku w folderze głównym. Dodano również nową listę rozwijaną, aby umożliwić użytkownikom łatwe przełączanie się między konfiguracjami dostarczonymi przez CMake i CppProperties.jsna plikach.
 
 - Dalsza konfiguracja jest obsługiwana przy użyciu pliku CMakeSettings.json, który znajduje się w tym samym folderze co plik CMakeLists.txt.
 
@@ -598,9 +598,9 @@ Narzędzia kompilacji Visual C++ (wcześniej dostępne jako produkt autonomiczny
 
 ## <a name="linux-development-with-c"></a>Programowanie dla systemu Linux w języku C++
 
-Popularne rozszerzenie [Visual C++ for Linux Development](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e) stanowi obecnie cześć programu Visual Studio. Ta instalacja zawiera wszystko, czego potrzebujesz do tworzenia i debugowania aplikacji w języku C++ działających w środowisku systemu Linux.
+Popularne rozszerzenie [Visual C++ for Linux Development](https://marketplace.visualstudio.com/items?itemName=VisualCppDevLabs.VisualCforLinuxDevelopment) stanowi obecnie cześć programu Visual Studio. Ta instalacja zawiera wszystko, czego potrzebujesz do tworzenia i debugowania aplikacji w języku C++ działających w środowisku systemu Linux.
 
-##### <a name="visual-studio-2017-version-152"></a>Visual Studio 2017, wersja 15.2
+##### <a name="visual-studio-2017-version-152"></a>Program Visual Studio 2017 w wersji 15.2
 
 Wprowadzono ulepszenia w zakresie udostępniania kodu dla wielu platform i wizualizacji typów. Aby uzyskać więcej informacji, zobacz temat [udoskonalenia systemu Linux C++ na potrzeby udostępniania kodu międzyplatformowego i wizualizacji typu](https://devblogs.microsoft.com/cppblog/linux-cross-platform-and-type-visualization/).
 
@@ -697,7 +697,7 @@ Narzędzia Diagnostyka grafiki programu Visual Studio: można ich używać do re
 
 - **Wyszukiwanie i filtrowanie w tabeli obiektów:** Zapewnia szybki i łatwy sposób znajdowania szukanych zasobów.
 
-  ![Wyszukiwanie](media/search.png)
+  ![Wyszukaj](media/search.png)
 
 - **Historia zasobów:** Ten nowy widok zapewnia ulepszony sposób wyświetlania całej historii modyfikacji zasobu, ponieważ był używany podczas renderowania przechwyconej ramki. Aby wywoływać historię dla dowolnego zasobu, kliknij ikonę zegara obok dowolnego hiperłącza zasobu.
 
@@ -715,7 +715,7 @@ Narzędzia Diagnostyka grafiki programu Visual Studio: można ich używać do re
 
 - **Statystyka pamięci:** Wyświetl ilość pamięci przydzielonej przez sterownik dla zasobów tworzonych w ramce. To okno jest dostępne za pośrednictwem **widoku > statystyk pamięci** w **Analizator grafiki programu Visual Studio**. Aby skopiować dane do pliku CSV w celu wyświetlenia w arkuszu kalkulacyjnym, kliknij prawym przyciskiem myszy i wybierz polecenie **Kopiuj wszystko**.
 
-  ![Statystyka pamięci](media/memory-stats.png)
+  ![Statystyki pamięci](media/memory-stats.png)
 
 - **Sprawdzanie poprawności ramki:** Nowa lista błędów i ostrzeżeń umożliwia łatwe nawigowanie po liście zdarzeń na podstawie potencjalnych problemów wykrytych przez warstwę debugowania Direct3D. Kliknij pozycję **wyświetl > sprawdzanie poprawności ramki** w Analizator grafiki programu Visual Studio, aby otworzyć okno. Następnie kliknij pozycję **Uruchom weryfikację** , aby rozpocząć analizę. Ukończenie tej operacji może potrwać kilka minut, w zależności od złożoności ramki.
 

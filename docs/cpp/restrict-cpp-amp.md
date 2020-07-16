@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
-ms.openlocfilehash: 5a0011d11e4a59c9ca3a5e18f44d4cf831b21582
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b3464b758c6b66cdbd5015ee4b7c9d11eb2209dd
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366644"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404941"
 ---
 # <a name="restrict-c-amp"></a>ograniczenie (C++ AMP)
 
 Specyfikator ograniczenia może być stosowany do funkcji i deklaracji lambda. Wymusza on ograniczenia dotyczące kodu w funkcji i zachowania funkcji w zastosowaniach, które korzystają ze środowiska uruchomieniowego C++ Accelerated Massive Parallelism (C++ AMP).
 
 > [!NOTE]
-> Aby uzyskać informacje o słowa kluczowego **ogranicz,** które jest częścią **atrybutów __declspec** klasy magazynu, zobacz [ogranicz](../cpp/restrict.md).
+> Aby uzyskać informacje na temat **ograniczenia** słowa kluczowego, które jest częścią atrybutów klasy magazynu **__declspec** , zobacz [ograniczanie](../cpp/restrict.md).
 
-Klauzula **restrict** przyjmuje następujące formy:
+Klauzula **ograniczenia** przyjmuje następujące formy:
 
 |Klauzula|Opis|
 |------------|-----------------|
@@ -31,7 +31,7 @@ Klauzula **restrict** przyjmuje następujące formy:
 
 ## <a name="remarks"></a>Uwagi
 
-Słowo kluczowe **Restrict** jest słowem kluczowym kontekstowym. Specyfikatory ograniczeń `cpu` i `amp` nie są słowami zarezerwowanymi. Lista specyfikatorów nie jest rozszerzalna. Funkcja, która nie ma **klauzuli restrict** jest taka `restrict(cpu)` sama jak funkcja, która ma klauzulę.
+Słowo kluczowe **ograniczenia** jest kontekstowym słowem kluczowym. Specyfikatory ograniczeń `cpu` i `amp` nie są słowami zarezerwowanymi. Lista specyfikatorów nie jest rozszerzalna. Funkcja, która nie ma klauzuli **ograniczenia** , jest taka sama jak funkcja, która ma `restrict(cpu)` klauzulę.
 
 Funkcja z klauzulą `restrict(amp)` ma następujące ograniczenia:
 
@@ -39,7 +39,7 @@ Funkcja z klauzulą `restrict(amp)` ma następujące ograniczenia:
 
 - Funkcja musi być możliwa do wbudowania.
 
-- Funkcja może deklarować tylko **int,** **unsigned int**, **float**i **podwójne** zmienne oraz klasy i struktury, które zawierają tylko te typy. **bool** jest również dozwolone, ale musi być wyrównany 4-bajtowy, jeśli używasz go w typie związku.
+- Funkcja może deklarować tylko zmienne **int**, **unsigned int**, **float**i **Double** oraz klasy i struktury, które zawierają tylko te typy. wartość **logiczna** jest również dozwolona, ale musi być wyrównania 4-bajtowego, jeśli jest używana w typie złożonym.
 
 - Funkcje lambda nie mogą przechwytywać poprzez odwołanie i nie mogą przechwytywać wskaźników.
 
@@ -49,7 +49,7 @@ Funkcja z klauzulą `restrict(amp)` ma następujące ograniczenia:
 
   - Rekursja.
 
-  - Zmienne zadeklarowane za pomocą słowa kluczowego [volatile.](../cpp/volatile-cpp.md)
+  - Zmienne zadeklarowane za pomocą słowa kluczowego [volatile](../cpp/volatile-cpp.md) .
 
   - Funkcje wirtualne.
 
@@ -61,29 +61,29 @@ Funkcja z klauzulą `restrict(amp)` ma następujące ograniczenia:
 
   - Wskaźniki do wskaźników.
 
-  - oświadczenia **goto.**
+  - instrukcji **goto** .
 
   - Instrukcje oznaczone.
 
-  - **try**, **catch**, lub **throw** instrukcji.
+  - instrukcje **try**, **catch**i **throw** .
 
   - Zmienne globalne.
 
-  - Zmienne statyczne. Zamiast [tego użyj tile_static słowa kluczowego.](../cpp/tile-static-keyword.md)
+  - Zmienne statyczne. Zamiast tego użyj [słowa kluczowego tile_static](../cpp/tile-static-keyword.md) .
 
-  - **dynamic_cast** odlewy.
+  - **dynamic_cast** casts.
 
-  - Operator **typeid.**
+  - Operator **typeid** .
 
   - Deklaracje asm.
 
   - Elementy vararg.
 
-Aby zapoznać się z omówieniami ograniczeń funkcji, zobacz [ograniczanie ograniczeń .amp.](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/)
+Omówienie ograniczeń funkcji znajduje się w temacie [ograniczenia (amp)](/archive/blogs/nativeconcurrency/restrictamp-restrictions-part-0-of-n-introduction).
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie `restrict(amp)`pokazano, jak używać klauzuli.
+Poniższy przykład pokazuje, jak używać `restrict(amp)` klauzuli.
 
 ```cpp
 void functionAmp() restrict(amp) {}

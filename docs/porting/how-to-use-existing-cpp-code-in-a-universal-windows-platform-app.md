@@ -2,36 +2,36 @@
 title: 'Porady: używanie istniejącego kodu C++ w aplikacji platformy uniwersalnej systemu Windows'
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: b1351a1c7858b00cffc454fa66831b3995aea804
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 511bf07950cfb50f67a2027b9051c3efd7cc3b45
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366427"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405055"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Porady: używanie istniejącego kodu C++ w aplikacji platformy uniwersalnej systemu Windows
 
-Być może najprostszym sposobem uruchomienia programu klasycznego w środowisku platformy uniwersalnej systemu Windows (UWP) jest użycie technologii Mostka pulpitu. Należą do nich konwerter aplikacji pulpitu, który będzie pakiet istniejącej aplikacji jako aplikacji platformy uniwersalnej systemu Windows bez zmian kodu wymagane. Aby uzyskać więcej informacji, zobacz [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root).
+Prawdopodobnie najprostszym sposobem na rozpoczęcie pracy programu klasycznego w środowisku platforma uniwersalna systemu Windows (platformy UWP) jest użycie technologii mostka dla komputerów stacjonarnych. Obejmują one konwerter aplikacji klasycznych, który spowoduje spakowanie istniejącej aplikacji jako aplikacji platformy UWP bez konieczności wprowadzania zmian w kodzie. Aby uzyskać więcej informacji, zobacz [mostek Desktop](/windows/uwp/porting/desktop-to-uwp-root).
 
-W dalszej części tego tematu omówiono sposób przenoszenia bibliotek języka C++ (bibliotek DLL i bibliotek statycznych) do platformy uniwersalnej systemu Windows. Można to zrobić, aby podstawowa logika języka C++ może być używana z wieloma aplikacjami platformy uniwersalnej systemu Windows.
+W pozostałej części tego tematu omówiono, jak przenieść biblioteki C++ (biblioteki DLL i biblioteki statyczne) do platforma uniwersalna systemu Windows. Można to zrobić, aby można było używać podstawowej logiki C++ z wieloma aplikacjami platformy UWP.
 
-Aplikacje platformy uniwersalnej systemu Windows są uruchamiane w środowisku chronionym i w rezultacie wiele wywołań interfejsu API Win32, COM i CRT, które mogą naruszyć bezpieczeństwo platformy, nie jest dozwolonych. Kompilator może wykryć takie wywołania `/ZW` i wygenerować błąd, jeśli opcja jest używana. Za pomocą zestawu certyfikacji aplikacji w aplikacji można wykryć kod, który wywołuje niedozwolonych interfejsów API. Aby uzyskać więcej informacji, zobacz [Zestaw certyfikacji aplikacji systemu Windows](/windows/uwp/debug-test-perf/windows-app-certification-kit).
+Aplikacje platformy UWP działają w chronionym środowisku, a w związku z tym wiele wywołań interfejsu API systemu Win32, COM i CRT, które mogą naruszać bezpieczeństwo platformy, nie są dozwolone. Kompilator może wykryć takie wywołania i wygenerować błąd, jeśli `/ZW` opcja jest używana. Możesz użyć zestawu certyfikacji aplikacji w swojej aplikacji, aby wykryć kod, który wywołuje zabronione interfejsy API. Aby uzyskać więcej informacji, zobacz [zestaw certyfikacji aplikacji systemu Windows](/windows/uwp/debug-test-perf/windows-app-certification-kit).
 
-Jeśli kod źródłowy jest dostępny dla biblioteki, można wyeliminować zakazanych wywołań interfejsu API. Aby uzyskać szczegółowe informacje, w tym listę interfejsów API, które są dozwolone lub zabronione, zobacz [Interfejsy API win32 i COM dla aplikacji platformy uniwersalnej systemu Windows](/uwp/win32-and-com/win32-and-com-for-uwp-apps) i [funkcji CRT, które nie są obsługiwane w aplikacjach platformy uniwersalnej systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md). Niektóre alternatywy można znaleźć w [alternatywy dla interfejsów API systemu Windows w aplikacjach platformy uniwersalnej](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)systemu Windows .
+Jeśli dla biblioteki jest dostępny kod źródłowy, może być możliwe wyeliminowanie niedozwolonych wywołań interfejsu API. Aby uzyskać szczegółowe informacje, w tym listę interfejsów API, które są dozwolone lub zabronione, zobacz [interfejsy API Win32 i com dla aplikacji platformy UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps) i [funkcje CRT, które nie są obsługiwane w aplikacjach platforma uniwersalna systemu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md). Niektóre alternatywy można znaleźć w temacie [alternatywy dla interfejsów API systemu Windows w aplikacjach platformy UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).
 
-Jeśli po prostu spróbujesz dodać odwołanie z programu Universal Windows Project do klasycznej biblioteki pulpitu, zostanie wyświetlony komunikat o błędzie informujący, że biblioteka nie jest zgodna. W przypadku biblioteki statycznej można połączyć się z biblioteką, dodając bibliotekę (plik lib) do danych wejściowych konsolidatora, tak jak w klasycznej aplikacji Win32. W przypadku bibliotek, w których dostępny jest tylko plik binarny, jest to jedyna opcja. Biblioteka statyczna jest połączona z plikiem wykonywalnym aplikacji, ale biblioteka DLL win32, która jest zużywana w aplikacji platformy uniwersalnej systemu Uniwersalnego, musi być spakowana do aplikacji przez włączenie jej do projektu i oznaczenie jej jako zawartości. Aby załadować bibliotekę DLL Win32 w aplikacji platformy uniwersalnej systemuśpiłnie, `LoadLibraryEx`należy również wywołać [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary) zamiast `LoadLibrary` lub .
+Jeśli po prostu próbujesz dodać odwołanie z uniwersalnego projektu systemu Windows do klasycznej biblioteki pulpitów, zostanie wyświetlony komunikat o błędzie informujący, że biblioteka nie jest zgodna. W przypadku biblioteki statycznej można utworzyć połączenie z biblioteką, po prostu dodając bibliotekę (plik. lib) do danych wejściowych konsolidatora, tak jak w klasycznej aplikacji Win32. W przypadku bibliotek, w których dostępny jest tylko plik binarny, jest to jedyna opcja. Biblioteka statyczna jest połączona z plikiem wykonywalnym aplikacji, ale biblioteka Win32 DLL, która jest zużywana w aplikacji platformy UWP, musi być pakowana do aplikacji, dołączając ją do projektu i oznaczyć jako zawartość. Aby załadować bibliotekę DLL Win32 w aplikacji platformy UWP, należy również wywołać [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary) zamiast `LoadLibrary` lub `LoadLibraryEx` .
 
-Jeśli masz kod źródłowy biblioteki DLL lub biblioteki `/ZW` statycznej, można ponownie skompilować jako projekt platformy uniwersalnej systemu i platformy uniwersalnej systemu. Jeśli to zrobisz, można dodać odwołanie za pomocą **Eksploratora rozwiązań**i używać go w aplikacjach platformy uniwersalnej systemu Windows języka C++. W przypadku biblioteki DLL należy połączyć się z biblioteką eksportu.
+Jeśli masz kod źródłowy biblioteki DLL lub statycznej, możesz ponownie skompilować program `/ZW` jako projekt platformy UWP. Jeśli to zrobisz, możesz dodać odwołanie przy użyciu **Eksplorator rozwiązań**i używać go w aplikacjach C++ platformy UWP. W przypadku biblioteki DLL można połączyć z biblioteką eksportu.
 
-Aby udostępnić funkcje wywołującym w innych językach, można przekonwertować bibliotekę na składnik środowiska wykonawczego systemu Windows. Składniki środowiska wykonawczego systemu Windows różnią się od zwykłych bibliotek DLL tym, że zawierają metadane w postaci plików .winmd, które opisują zawartość w sposób wymagany przez konsumentów platformy .NET i JavaScript. Aby udostępnić elementy interfejsu API innym językom, można dodać konstrukcje C++/CX, takie jak klasy ref, i upublicznić je lub użyć [biblioteki szablonów Środowiska Wykonawczego systemu Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).  W systemie Windows 10 i nowszych można używać [biblioteki C++/WinRT](https://github.com/microsoft/cppwinrt) zamiast C++/CX.
+Aby uwidocznić funkcjonalność dla obiektów wywołujących w innych językach, można skonwertować bibliotekę na składnik środowisko wykonawcze systemu Windows. Składniki środowisko wykonawcze systemu Windows różnią się od zwykłych bibliotek DLL w tym, że zawierają metadane w postaci plików winmd, które opisują zawartość w sposób, w jaki użytkownicy platformy .NET i języka JavaScript potrzebują. Aby uwidocznić elementy interfejsu API w innych językach, można dodać konstrukcje C++/CX, takie jak klasy ref, i udostępnić je publicznie lub środowisko wykonawcze systemu Windows użyć [biblioteki szablonów języka c++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).  W systemie Windows 10 i nowszych można użyć [biblioteki c++/WinRT](https://github.com/microsoft/cppwinrt) zamiast języka c++/CX.
 
-Poprzedzająca dyskusja nie ma zastosowania do przypadku składników COM, które muszą być traktowane inaczej. Jeśli masz serwer COM w pliku EXE lub DLL, możesz go używać w uniwersalnym programie Windows Project, o ile spakowasz go jako [składnik COM bez rejestracji,](/windows/win32/sbscs/creating-registration-free-com-objects)dodaj go do projektu jako plik zawartości i skonkrzyjnie go za pomocą [CoCreateInstanceFromApp](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp). Aby uzyskać więcej informacji, zobacz [Korzystanie z biblioteki DLL free-COM w programie Windows Store C++ Project](https://blogs.msdn.microsoft.com/win8devsupport/2013/05/19/using-free-com-dll-in-windows-store-c-project/).
+Powyższa dyskusja nie dotyczy przypadku składników COM, które muszą być obsługiwane inaczej. Jeśli w pliku EXE lub DLL znajduje się serwer COM, można go użyć w uniwersalnym projekcie systemu Windows, o ile jest to pakiet jako [składnik COM bez rejestracji](/windows/win32/sbscs/creating-registration-free-com-objects), dodać go do projektu jako plik zawartości i utworzyć jego wystąpienie za pomocą [CoCreateInstanceFromApp](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp). Aby uzyskać więcej informacji, zobacz [Korzystanie z biblioteki DLL Free-com w projekcie w Sklepie Windows w języku C++](/archive/blogs/win8devsupport/using-free-com-dll-in-windows-store-c-project).
 
-Jeśli masz istniejącą bibliotekę COM, którą chcesz przenieść do platformy uniwersalnej systemu Windows, można przekonwertować ją na składnik środowiska wykonawczego systemu Windows przy użyciu [biblioteki szablonów WRL środowiska wykonawczego systemu Windows (WRL).](../windows/windows-runtime-cpp-template-library-wrl.md) WRL nie obsługuje wszystkich funkcji ATL i OLE, więc czy taki port jest możliwe zależy od tego, ile kodu COM zależy od jakich funkcji COM, ATL i OLE składnika wymaga.
+Jeśli masz istniejącą bibliotekę COM, którą chcesz przenieść do platformy UWP, możesz ją przekonwertować na składnik środowisko wykonawcze systemu Windows przy użyciu [biblioteki szablonów środowisko wykonawcze systemu Windows C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md). WRL nie obsługuje wszystkich funkcji ATL i OLE, więc czy taki port jest możliwy, zależy od tego, jak dużo kod COM zależy od tego, jakie funkcje COM, ATL i OLE wymaga składnik.
 
-Są to różne sposoby, które można użyć istniejącego kodu C++ w projektach platformy uniwersalnej systemu i platformy uniwersalnej systemu. Niektóre sposoby nie wymagają kodu do ponownej kompilacji z rozszerzeniami składników (C++/CX) włączone (to znaczy z `/ZW` opcją), a niektóre zrobić, więc jeśli trzeba zachować kod w standardzie C ++ lub zachować klasyczne środowisko kompilacji Win32 dla niektórych kodu, można to zrobić, z odpowiednimi wyborami architektury. Na przykład cały kod, który zawiera interfejs użytkownika platformy uniwersalnej systemu Windows i typy, które mają być narażone na c#, Visual Basic i JavaScript wywołań powinny być w projektach aplikacji systemu Windows i projektów składnika środowiska wykonawczego systemu Windows. Kod, który musi być używane tylko w języku C++ (w tym C++/CX) `/WX` kod może być w projekcie, który kompiluje z opcją lub standardowy projekt C++. Kod tylko binarny może służyć przez połączenie go jako biblioteki statycznej lub spakowane z aplikacją jako zawartość i ładowane w bibliotece DLL tylko wtedy, gdy nie używa zakazanych interfejsów API.
+Są to różne sposoby używania istniejącego kodu C++ w projektach platformy UWP. Niektóre z tych metod nie wymagają ponownej kompilacji kodu z włączonymi rozszerzeniami składników (C++/CX) (to jest z `/ZW` opcją), a więc jeśli chcesz zachować kod w standardowym języku C++ lub zachować klasyczne środowisko kompilacji Win32 dla pewnego kodu, możesz to zrobić, wybierając odpowiednią architekturę. Na przykład, cały kod, który zawiera interfejs użytkownika i typy platformy UWP, które mają być uwidocznione dla wywołujących w języku C#, Visual Basic i JavaScript, powinny znajdować się w projektach aplikacji systemu Windows i środowisko wykonawcze systemu Windows projektach składników. Kod, który musi być używany tylko w języku C++ (w tym kod C++/CX), może znajdować się w projekcie, który jest kompilowany przy użyciu `/WX` opcji lub standardowego projektu języka c++. Kod tylko binarny może być używany przez połączenie go jako Biblioteka statyczna lub spakowany z aplikacją jako zawartość i załadowana do biblioteki DLL tylko wtedy, gdy nie korzysta z niedozwolonych interfejsów API.
 
-Niezależnie od tego, który z tych scenariuszy rozwoju wybrać, należy pamiętać o wielu definicjach makr, które można użyć w kodzie, dzięki czemu można skompilować kod warunkowo w obu klasycznych pulpitu Win32 i platformy uniwersalnej systemu Windows.
+Niezależnie od tego, który z tych scenariuszy programistycznych jest wybierany, należy pamiętać o kilku definicjach makr, których można użyć w kodzie, aby można było kompilować kod warunkowo w klasycznym środowisku Win32 i platformy UWP.
 
 ```cpp
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PC_APP)
@@ -40,25 +40,25 @@ Niezależnie od tego, który z tych scenariuszy rozwoju wybrać, należy pamięt
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 ```
 
-Te instrukcje dotyczą odpowiednio aplikacji platformy uniwersalnej systemu Windows, aplikacji ze Sklepu Windows Phone, obu lub nie (tylko klasyczny pulpit Win32). Te makra są dostępne tylko w zestawie Windows SDK 8.1 lub nowszym, więc jeśli kod musi być kompilowany z wcześniejszymi wersjami zestawie Windows SDK lub dla innych platform oprócz systemu Windows, należy również wziąć pod uwagę przypadek, że żaden z nich nie jest zdefiniowany.
+Te instrukcje dotyczą odpowiednio aplikacji platformy UWP, aplikacji ze sklepu Windows Phone, obu lub nie (tylko klasyczny pulpit Win32). Te makra są dostępne tylko w Windows SDK 8,1 i nowszych, więc jeśli kod wymaga skompilowania ze starszymi wersjami Windows SDK lub dla innych platform oprócz systemu Windows, należy rozważyć również przypadek, w którym żaden z nich nie jest zdefiniowany.
 
 Ten temat obejmuje następujące procedury:
 
-- [Korzystanie z biblioteki DLL systemu Win32 w aplikacji platformy uniwersalnej systemu](#BK_Win32DLL)
+- [Korzystanie z biblioteki Win32 DLL w aplikacji platformy UWP](#BK_Win32DLL)
 
-- [Korzystanie z natywnej biblioteki statycznej języka C++ w aplikacji platformy uniwersalnej systemu](#BK_StaticLib)
+- [Używanie natywnej biblioteki statycznej języka C++ w aplikacji platformy UWP](#BK_StaticLib)
 
-- [Przenoszenie biblioteki języka C++ do składnika środowiska wykonawczego systemu Windows](#BK_WinRTComponent)
+- [Przenoszenie biblioteki C++ do składnika środowisko wykonawcze systemu Windows](#BK_WinRTComponent)
 
-## <a name="using-a-win32-dll-in-a-uwp-app"></a><a name="BK_Win32DLL"></a>Korzystanie z biblioteki DLL systemu Win32 w aplikacji platformy uniwersalnej systemu
+## <a name="using-a-win32-dll-in-a-uwp-app"></a><a name="BK_Win32DLL"></a>Korzystanie z biblioteki Win32 DLL w aplikacji platformy UWP
 
-Aby zapewnić większe bezpieczeństwo i niezawodność, uniwersalne aplikacje systemu Windows działają w ograniczonym środowisku wykonawczym, dzięki czemu nie można po prostu używać dowolnej natywnej biblioteki DLL w taki sposób, jak w klasycznej aplikacji klasycznej systemu Windows. Jeśli masz kod źródłowy dla biblioteki DLL, można przenieść kod tak, aby był uruchamiany na platformie uniwersalnej systemu ochrony systemu i platformy uniwersalnej systemu. Możesz zacząć od zmiany kilku ustawień projektu i metadanych pliku projektu, aby zidentyfikować projekt jako projekt platformy uniwersalnej systemu i platformy uniwersalnej systemu. Należy skompilować kod biblioteki przy użyciu `/ZW` opcji, która umożliwia C++/CX. Niektóre wywołania interfejsu API nie są dozwolone w aplikacjach platformy uniwersalnej systemu Windows ze względu na bardziej rygorystyczne kontrole skojarzone z tym środowiskiem. Zobacz [Interfejsy API win32 i COM dla aplikacji platformy uniwersalnej systemu Windows](/uwp/win32-and-com/win32-and-com-for-uwp-apps).
+Aby zapewnić lepsze zabezpieczenia i niezawodność, aplikacje uniwersalne systemu Windows działają w ograniczonym środowisku wykonawczym, więc nie można używać żadnej natywnej biblioteki DLL w sposób klasyczny w klasycznej aplikacji klasycznej systemu Windows. Jeśli masz kod źródłowy dla biblioteki DLL, możesz przenieść kod tak, aby był on uruchamiany w platformy UWP. Zacznij od zmiany kilku ustawień projektu i metadanych pliku projektu, aby zidentyfikować projekt jako projekt platformy UWP. Należy skompilować kod biblioteki przy użyciu `/ZW` opcji, która umożliwia C++/CX. Niektóre wywołania interfejsu API są niedozwolone w aplikacjach platformy UWP ze względu na bardziej rygorystyczne kontrolki skojarzone z tym środowiskiem. Zobacz [interfejsy API Win32 i com dla aplikacji platformy UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).
 
-Poniższa procedura dotyczy przypadku, w którym masz natywną `__declspec(dllexport)`bibliotekę DLL, która udostępnia funkcje za pomocą .
+Poniższa procedura dotyczy przypadku, w którym masz natywną bibliotekę DLL, która uwidacznia funkcje przy użyciu `__declspec(dllexport)` .
 
-### <a name="to-port-a-native-dll-to-the-uwp-without-creating-a-new-project"></a>Aby przenieść natywną bibliotekę DLL do platformy uniwersalnej systemu ochrony systemu ws.
+### <a name="to-port-a-native-dll-to-the-uwp-without-creating-a-new-project"></a>Aby przenieść natywną bibliotekę DLL do platformy UWP bez tworzenia nowego projektu
 
-1. Jeśli masz natywną bibliotekę `__declspec(dllexport)`DLL, która eksportuje funkcje przy użyciu , można wywołać te funkcje z aplikacji platformy uniwersalnej systemu Uniwersalnego, ponownie komponowanie biblioteki DLL jako projektu platformy uniwersalnej systemu. Załóżmy na przykład, że mamy bibliotekę DLL, która eksportuje kilka klas i ich metody, z kodem, takim jak następujący plik nagłówka:
+1. Jeśli masz natywną bibliotekę DLL, która eksportuje funkcje przy użyciu `__declspec(dllexport)` , możesz wywołać te funkcje z poziomu aplikacji platformy UWP przez ponowną kompilację biblioteki DLL jako projektu platformy UWP. Załóżmy na przykład, że mamy bibliotekę DLL, która eksportuje kilka klas i ich metod, przy użyciu kodu, takiego jak następujący plik nagłówkowy:
 
     ```cpp
     // giraffe.h
@@ -129,15 +129,15 @@ Poniższa procedura dotyczy przypadku, w którym masz natywną `__declspec(dllex
     int giraffeFunction();
     ```
 
-   Wszystko inne w projekcie (stdafx.h, dllmain.cpp) jest częścią standardowego szablonu projektu Win32. Jeśli chcesz wykonać następujące czynności, ale nie chcesz jeszcze używać własnej biblioteki DLL z tymi krokami, spróbuj utworzyć projekt Win32, wybierz bibliotekę DLL w kreatorze projektu, a następnie dodaj plik nagłówka giraffe.h i plik kodu giraffe.cpp i skopiuj zawartość z kodu w tym kroku do odpowiednich plików.
+   Wszystkie inne elementy w projekcie (stdafx. h, DllMain. cpp) są częścią standardowego szablonu projektu środowiska Win32. Jeśli chcesz wykonać te czynności, ale nie chcesz jeszcze korzystać z własnej biblioteki DLL, spróbuj utworzyć projekt Win32, wybierz pozycję DLL w Kreatorze projektu, a następnie Dodaj plik nagłówka Giraffe. h i plik kodu Giraffe. cpp i skopiuj zawartość z kodu w tym kroku do odpowiednich plików.
 
-   Kod definiuje makro, `GIRAFFE_API` które jest `__declspec(dllexport)` `_DLL` rozpoznawane, gdy jest zdefiniowany (to jest, gdy projekt jest zbudowany jako biblioteka DLL).
+   Kod definiuje makro, `GIRAFFE_API` które jest rozpoznawane `__declspec(dllexport)` `_DLL` jako, gdy jest zdefiniowane (to jest, gdy projekt jest skompilowany jako biblioteka DLL).
 
-2. Otwórz **właściwości projektu** DLL i ustaw **konfigurację** na **Wszystkie konfiguracje**.
+2. Otwórz **właściwości projektu** dla projektu DLL i ustaw **konfigurację** na **wszystkie konfiguracje**.
 
-3. Na karcie **Właściwości projektu**w obszarze **C/C++** > **Ogólne** ustaw **opcję Zużywają rozszerzenie środowiska wykonawczego systemu Windows** na Tak **(/ZW).** Umożliwia to rozszerzenia komponentów (C++/CX).
+3. We **właściwościach projektu**, na karcie Ogólne **C/C++**  >  **General** ustaw wartość Użyj **środowisko wykonawcze systemu Windows Extension** na **tak (/zw)**. Powoduje to włączenie rozszerzeń składników (C++/CX).
 
-4. W **Eksploratorze rozwiązań**wybierz węzeł projektu, otwórz menu skrótów i wybierz pozycję **Zwolnij projekt**. Następnie otwórz menu skrótów w niezaładowanym węźle projektu i wybierz opcję edycji pliku projektu. Zlokalizuj `WindowsTargetPlatformVersion` element i zastąp go następującymi elementami.
+4. W **Eksplorator rozwiązań**wybierz węzeł projektu, otwórz menu skrótów i wybierz polecenie **Zwolnij projekt**. Następnie otwórz menu skrótów w węźle niezaładowanego projektu, a następnie wybierz polecenie Edytuj plik projektu. Znajdź `WindowsTargetPlatformVersion` element i zastąp go następującymi elementami.
 
     ```xml
     <AppContainerApplication>true</AppContainerApplication>
@@ -147,31 +147,31 @@ Poniższa procedura dotyczy przypadku, w którym masz natywną `__declspec(dllex
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
     ```
 
-   Zamknij plik .vcxproj, otwórz ponownie menu skrótów i wybierz polecenie **Załaduj ponownie program Project**.
+   Zamknij plik. vcxproj, Otwórz ponownie menu skrótów i wybierz polecenie **Załaduj ponownie projekt**.
 
-   **Eksplorator rozwiązań** identyfikuje teraz projekt jako projekt systemu Uniwersalnego systemu Windows.
+   **Eksplorator rozwiązań** teraz identyfikuje projekt jako uniwersalny projekt systemu Windows.
 
-5. Upewnij się, że nazwa wstępnie skompilowanego pliku nagłówka jest poprawna. W sekcji **Wstępnie skompilowane nagłówki** zmień **wstępnie skompilowany plik nagłówka** z *pch.h* na *stdafx.h*. Jeśli tego nie zrobisz, zostanie wyświetlony następujący błąd.
+5. Upewnij się, że nazwa pliku prekompilowanego nagłówka jest poprawna. W sekcji **prekompilowane nagłówki** Zmień **wstępnie skompilowany plik nagłówkowy** z *PCH. h* na *stdafx. h*. Jeśli tego nie zrobisz, zostanie wyświetlony następujący błąd.
 
-   > błąd C2857: nie znaleziono instrukcji "#include" określonej za pomocą opcji wiersza polecenia /Ycpch.h w pliku źródłowym
+   > błąd C2857: Instrukcja "#include" określona za pomocą/Ycpch.h opcji wiersza polecenia nie została znaleziona w pliku źródłowym
 
-   Problem polega na tym, że projekty systemu Uniwersalnego systemu Windows używają innej konwencji nazewnictwa dla wstępnie skompilowanego pliku nagłówka.
+   Problem polega na tym, że uniwersalne projekty systemu Windows używają innej konwencji nazewnictwa dla prekompilowanego pliku nagłówkowego.
 
-6. Skompiluj projekt. Mogą pojawić się błędy dotyczące niezgodnych opcji wiersza polecenia. Na przykład przestarzała, ale często używana opcja **Włącz minimalne przebudowy (/Gm)** jest domyślnie ustawiona `/ZW`w wielu starszych projektach C++ i jest niezgodna z programem .
+6. Skompiluj projekt. Mogą wystąpić błędy dotyczące niezgodnych opcji wiersza polecenia. Na przykład obecnie przestarzałe, ale często używane opcje Włącz minimalną ponowną kompilację **(/GM)** jest domyślnie ustawiona w wielu starszych projektach C++ i jest niezgodna z `/ZW` .
 
-   Niektóre funkcje nie są dostępne podczas kompilowania dla platformy uniwersalnego systemu Windows. Zostaną wyświetlene błędy kompilatora dotyczące wszelkich problemów. Zajmij się tymi problemami, dopóki nie będziesz mieć czystej kompilacji.
+   Niektóre funkcje nie są dostępne podczas kompilowania dla platforma uniwersalna systemu Windows. Zostaną wyświetlone błędy kompilatora dotyczące wszelkich problemów. Należy je rozwiązać, dopóki nie zostanie wyczyszczona.
 
-7. Aby użyć biblioteki DLL w aplikacji platformy uniwersalnej systemu Windows w tym samym rozwiązaniu, otwórz menu skrótów dla węzła projektu platformy uniwersalnej systemu Windows i wybierz pozycję **Dodaj** > **odwołanie**.
+7. Aby użyć biblioteki DLL w aplikacji platformy UWP w tym samym rozwiązaniu, otwórz menu skrótów dla węzła projektu platformy UWP i wybierz polecenie **Dodaj**  >  **odwołanie**.
 
-   W obszarze**Rozwiązanie** **projektów** > zaznacz pole wyboru obok projektu biblioteki DLL i wybierz przycisk **OK.**
+   W obszarze **projekty**  >  **rozwiązania**zaznacz pole wyboru obok projektu DLL, a następnie wybierz przycisk **OK** .
 
-8. Uwzględnij pliki nagłówkowe biblioteki w pliku *pch.h* aplikacji platformy uniwersalnej systemu Uniwersalnego.
+8. Uwzględnij pliki nagłówkowe biblioteki w pliku *PCH. h* aplikacji platformy UWP.
 
     ```cpp
     #include "..\MyNativeDLL\giraffe.h"
     ```
 
-9. Dodaj kod jak zwykle w projekcie platformy uniwersalnej systemu i platformy uniwersalnej systemu, aby wywołać funkcje i utworzyć typy z biblioteki DLL.
+9. Dodaj kod w zwykły sposób w projekcie platformy UWP, aby wywoływać funkcje i tworzyć typy z biblioteki DLL.
 
     ```cpp
     MainPage::MainPage()
@@ -183,52 +183,52 @@ Poniższa procedura dotyczy przypadku, w którym masz natywną `__declspec(dllex
     }
     ```
 
-## <a name="using-a-native-c-static-library-in-a-uwp-app"></a><a name="BK_StaticLib"></a>Korzystanie z natywnej biblioteki statycznej języka C++ w aplikacji platformy uniwersalnej systemu
+## <a name="using-a-native-c-static-library-in-a-uwp-app"></a><a name="BK_StaticLib"></a>Używanie natywnej biblioteki statycznej języka C++ w aplikacji platformy UWP
 
-Można użyć natywnej biblioteki statycznej języka C++ w projekcie platformy uniwersalnej systemu uniwersalnego, ale istnieją pewne ograniczenia i ograniczenia, o których należy pamiętać. Zacznij od przeczytania o [bibliotekach statycznych w języku C++/CX](../cppcx/static-libraries-c-cx.md). Dostęp do kodu macierzystego w bibliotece statycznej z aplikacji platformy uniwersalnej systemu uniwersalnego systemu nagłaśniać, ale nie jest zalecane tworzenie publicznych typów ref w takiej bibliotece statycznej. Jeśli skompilujesz bibliotekę `/ZW` statyczną z opcją, bibliotekarz (a właściwie konsolidator w przebraniu) ostrzega:
+W projekcie platformy UWP można użyć natywnej biblioteki statycznej C++, ale istnieją pewne ograniczenia i ograniczenia, które należy znać. Zacznij od odczytywania [bibliotek statycznych w języku C++/CX](../cppcx/static-libraries-c-cx.md). Możesz uzyskać dostęp do kodu natywnego w bibliotece statycznej z aplikacji platformy UWP, ale nie zaleca się tworzenia publicznych typów referencyjnych w takiej bibliotece statycznej. W przypadku kompilowania biblioteki statycznej z `/ZW` opcją bibliotekarza (w rzeczywistości konsolidator w przebraniu) ostrzega:
 
-> LNK4264: archiwizacja pliku obiektu skompilowanego z /ZW do biblioteki statycznej; należy pamiętać, że podczas tworzenia typów środowiska wykonawczego systemu Windows nie zaleca się łączenia z biblioteką statyczną zawierającą metadane środowiska wykonawczego systemu Windows
+> LNK4264: archiwizowanie pliku obiektu skompilowanego z/ZW w bibliotece statycznej; należy pamiętać, że podczas tworzenia typów środowisko wykonawcze systemu Windows nie zaleca się łączenia z biblioteką statyczną zawierającą środowisko wykonawcze systemu Windows metadanych
 
-Można jednak użyć biblioteki statycznej w platformie uniwersalnej `/ZW`systemu wyrozumiałej bez konieczności ponownego komppilowania jej za pomocą programu . Nie będzie można zadeklarować żadnych typów ref lub użyć konstrukcji C++/CX, ale jeśli twoim celem jest po prostu użyć biblioteki kodu macierzystego, a następnie można to zrobić, wykonując następujące kroki.
+Można jednak użyć biblioteki statycznej w platformy UWP bez ponownego kompilowania jej w programie `/ZW` . Nie będzie można zadeklarować żadnych typów referencyjnych ani używać konstrukcji języka C++/CX, ale jeśli chcesz po prostu użyć biblioteki kodu natywnego, możesz to zrobić, wykonując następujące kroki.
 
-### <a name="to-use-a-native-c-static-library-in-a-uwp-project"></a>Aby użyć natywnej biblioteki statycznej języka C++ w projekcie platformy uniwersalnej systemu
+### <a name="to-use-a-native-c-static-library-in-a-uwp-project"></a>Aby użyć natywnej biblioteki statycznej C++ w projekcie platformy UWP
 
-1. We właściwościach projektu platformy uniwersalnej systemu uniwersalnego wybierz pozycję Wejście**konsolidatora** >  **Configuration Properties** > właściwości konfiguracji w lewym okienku.**Input** W prawym okienku dodaj ścieżkę do biblioteki we właściwości **Dodatkowe zależności.** Na przykład dla biblioteki w projekcie, która umieszcza swoje dane wyjściowe w *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, dodaj ścieżkę względną `Debug\MyNativeLibrary\MyNativeLibrary.lib`.
+1. We właściwościach projektu dla projektu platformy UWP wybierz pozycję **Właściwości konfiguracji**  >  **Linker**  >  **dane wejściowe** konsolidatora w okienku po lewej stronie. W okienku po prawej stronie Dodaj ścieżkę do biblioteki we właściwości **dodatkowe zależności** . Na przykład dla biblioteki w projekcie, która umieszcza dane wyjściowe w *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, Dodaj ścieżkę względną `Debug\MyNativeLibrary\MyNativeLibrary.lib` .
 
-2. Dodaj instrukcję include, aby odwołać się do pliku nagłówka do pliku *pch.h* (jeśli jest obecny) lub w dowolnym pliku cpp w razie potrzeby, i zacznij dodawać kod, który używa biblioteki.
+2. Dodaj instrukcję include, aby odwoływać się do pliku nagłówkowego w pliku *PCH. h* (jeśli istnieje) lub w dowolnym pliku. cpp w razie potrzeby, a następnie zacznij dodawać kod, który używa biblioteki.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
    ```
 
-   Nie należy dodawać odwołania w węźle **Odwołania** w **Eksploratorze rozwiązań**. Ten mechanizm działa tylko dla składników środowiska wykonawczego systemu Windows.
+   Nie dodawaj odwołania w węźle **References** w **Eksplorator rozwiązań**. Ten mechanizm działa tylko w przypadku składników środowisko wykonawcze systemu Windows.
 
-## <a name="porting-a-c-library-to-a-windows-runtime-component"></a><a name="BK_WinRTComponent"></a>Przenoszenie biblioteki języka C++ do składnika środowiska wykonawczego systemu Windows
+## <a name="porting-a-c-library-to-a-windows-runtime-component"></a><a name="BK_WinRTComponent"></a>Przenoszenie biblioteki C++ do składnika środowisko wykonawcze systemu Windows
 
-Jeśli chcesz korzystać z natywnych interfejsów API w bibliotece statycznej z aplikacji platformy uniwersalnej systemu Windows i masz kod źródłowy biblioteki macierzystej, możesz przenieść kod do składnika środowiska wykonawczego systemu Windows. Nie będzie już biblioteki statycznej, będzie to biblioteka DLL. Można go używać w dowolnej aplikacji platformy uniwersalnej systemu i platformy uniwersalnej systemu i w języku angielskim, ale w przeciwieństwie do przypadku biblioteki statycznej, można dodać typy ref i inne konstrukcje C++/CX, które są dostępne dla klientów w dowolnym kodzie aplikacji platformy uniwersalnej systemu Uniwersalnego, niezależnie od języka. W związku z tym można uzyskać dostęp do tych typów z języka C#, Visual Basic lub JavaScript.  Podstawową procedurą jest utworzenie projektu składnika środowiska wykonawczego systemu Windows, skopiowanie kodu biblioteki statycznej do niego i rozwiązanie wszelkich `/ZW` błędów, które wynikają z przenoszenia kodu ze standardowej kompilacji języka C++ do kompilacji.
+Jeśli chcesz korzystać z natywnych interfejsów API w bibliotece statycznej z poziomu aplikacji platformy UWP i masz kod źródłowy biblioteki natywnej, możesz przenieść kod do składnika środowisko wykonawcze systemu Windows. Nie jest już biblioteką statyczną, będzie to biblioteka DLL. Możesz użyć jej w dowolnej aplikacji C++ platformy UWP, ale w przeciwieństwie do przypadku biblioteki statycznej można dodać typy referencyjne i inne konstrukcje języka C++/CX, które są dostępne dla klientów w dowolnym kodzie aplikacji platformy UWP, niezależnie od języka. W związku z tym możesz uzyskać dostęp do tych typów z poziomu języka C#, Visual Basic lub JavaScript.  Podstawowa procedura polega na utworzeniu projektu składnika środowisko wykonawcze systemu Windows, skopiowaniu kodu biblioteki statycznej do niego i rozwodzeniu wszelkich błędów, które wynikają z przeniesienia kodu ze standardowej kompilacji C++ do `/ZW` kompilacji.
 
-### <a name="to-port-a-c-library-to-a-windows-runtime-component"></a>Aby przenieść bibliotekę języka C++ do składnika środowiska wykonawczego systemu Windows
+### <a name="to-port-a-c-library-to-a-windows-runtime-component"></a>Aby przenieść bibliotekę języka C++ do składnika środowisko wykonawcze systemu Windows
 
-1. Utwórz projekt składnika środowiska wykonawczego systemu Windows.
+1. Utwórz projekt składnika środowisko wykonawcze systemu Windows.
 
 2. Zamknij projekt.
 
-3. W **Eksploratorze plików systemu Windows**znajdź projekt. Domyślnie program Visual Studio używa folderu Visual Studio 2017\Projects w folderze Dokumenty. Znajdź projekt biblioteki języka C++, który zawiera kod, który chcesz port. Skopiuj pliki źródłowe (pliki nagłówkowe, pliki kodu i inne zasoby, w tym w podkatalogach) z projektu biblioteki języka C++ i wklej je do folderu projektu, upewniając się, że zachowaj tę samą strukturę folderów.
+3. Zlokalizuj projekt w **Eksploratorze plików systemu Windows**. Domyślnie program Visual Studio używa folderu programu Visual Studio 2017 \ projects w folderze Documents. Znajdź projekt biblioteki C++ zawierający kod, który chcesz przenieść. Skopiuj pliki źródłowe (pliki nagłówkowe, pliki kodu i inne zasoby, w tym w podkatalogach) z projektu biblioteki C++ i wklej je do folderu projektu, aby zachować tę samą strukturę folderów.
 
-4. Otwórz ponownie projekt składnika środowiska wykonawczego systemu Windows i otwórz menu skrótów dla węzła projektu w **Eksploratorze rozwiązań**i wybierz pozycję **Dodaj** > **istniejący element**.
+4. Otwórz ponownie projekt składnika Środowisko wykonawcze systemu Windows, a następnie otwórz menu skrótów dla węzła projektu w **Eksplorator rozwiązań**i wybierz polecenie **Dodaj**  >  **istniejący element**.
 
-5. Wybierz wszystkie pliki do dodania z oryginalnego projektu i wybierz przycisk **OK**. W razie potrzeby powtórzyć dla podfolderów.
+5. Zaznacz wszystkie pliki, które mają zostać dodane z oryginalnego projektu, a następnie wybierz **przycisk OK**. Powtórz w razie potrzeby dla podfolderów.
 
-6. Być może masz teraz zduplikowany kod. Jeśli masz więcej niż jeden wstępnie skompilowany nagłówek (powiedzmy *stdafx.h* i *pch.h),* wybierz jeden, aby zachować. Skopiuj dowolny wymagany kod, taki jak dołącz instrukcje, do tego, który przechowujesz. Następnie usuń inne i we właściwościach projektu w obszarze **Wstępnie skompilowane nagłówki**upewnij się, że nazwa pliku nagłówka jest poprawna.
+6. Może teraz istnieć pewien duplikat kodu. Jeśli masz więcej niż jeden prekompilowany nagłówek (Powiedz *stdafx. h* i *PCH. h*), wybierz jedną, która ma zostać zachowana. Skopiuj dowolny wymagany kod, taki jak instrukcje include, do tej, która jest zachowywana. Następnie usuń inne i we właściwościach projektu w obszarze **prekompilowane nagłówki**upewnij się, że nazwa pliku nagłówka jest poprawna.
 
-   Jeśli plik ma być używany jako wstępnie skompilowany nagłówek, upewnij się, że wstępnie skompilowane opcje nagłówka są poprawne dla każdego pliku. Zaznacz każdy plik cpp po kolei, otwórz jego okno właściwości i upewnij się, że wszystkie są ustawione na **Use (/Yu),** z wyjątkiem żądanego wstępnie skompilowanego nagłówka, który powinien być ustawiony na **Utwórz (/Yc).**
+   Jeśli plik został zmieniony tak, aby używał jako prekompilowanego nagłówka, upewnij się, że opcje prekompilowanego nagłówka są poprawne dla każdego pliku. Zaznacz każdy plik CPP z kolei, otwórz jego okno właściwości i upewnij się, że wszystkie są ustawione na **Użyj (/Yu)**, z wyjątkiem żądanego prekompilowanego nagłówka, który powinien być ustawiony na **Utwórz (/Yc)**.
 
-7. Skompiluj projekt i rozwiąż wszelkie błędy. Te błędy mogą być spowodowane `/ZW` przy użyciu opcji lub mogą być spowodowane przez nową wersję zestawu Windows SDK lub mogą odzwierciedlać zależności, takie jak pliki nagłówkowe, od których zależy biblioteka, lub różnice w ustawieniach projektu między starym projektem a nowym.
+7. Skompiluj projekt i Usuń wszelkie błędy. Te błędy mogą być spowodowane użyciem `/ZW` opcji lub mogą być spowodowane przez nową wersję Windows SDK lub mogą odzwierciedlać zależności, takie jak pliki nagłówkowe, od których zależy biblioteka, lub różnice w ustawieniach projektu między starym projektem a nowym.
 
-8. Dodaj publiczne typy ref do projektu lub konwertuj zwykłe typy na typy ref, aby udostępnić punkty wejścia do funkcji, które chcesz wywołać z aplikacji platformy uniwersalnej systemu Windows.
+8. Dodaj publiczne typy odwołań do projektu lub przekonwertuj zwykłe typy na typy referencyjne, aby uwidocznić punkty wejścia do funkcji, które mają być wywoływane z aplikacji platformy UWP.
 
-9. Przetestuj składnik, dodając odwołanie do niego z projektu aplikacji platformy uniwersalnej systemu i dodaj kod, aby wywołać utworzone publiczne interfejsy API.
+9. Przetestuj składnik, dodając odwołanie do niego z projektu aplikacji platformy UWP i dodając kod do wywoływania publicznych interfejsów API, które zostały utworzone.
 
 ## <a name="see-also"></a>Zobacz też
 
-[Przenoszenie na uniwersalną platformę systemu Windows](../porting/porting-to-the-universal-windows-platform-cpp.md)
+[Przenoszenie do platforma uniwersalna systemu Windows](../porting/porting-to-the-universal-windows-platform-cpp.md)

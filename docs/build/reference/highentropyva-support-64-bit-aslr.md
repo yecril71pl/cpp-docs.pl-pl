@@ -2,12 +2,12 @@
 title: /HIGHENTROPYVA (Adres 64-bitowej obsługi ASLR)
 ms.date: 06/12/2018
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
-ms.openlocfilehash: 8f8601d89e8456461aac3d91f9fd2cfda216d7f5
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 929d6aa71010c1f303bf7a1ce64109a01b8792e4
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373843"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404128"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (Adres 64-bitowej obsługi ASLR)
 
@@ -15,15 +15,15 @@ Określa, czy obraz wykonywalny obsługuje generowanie losowe układu przestrzen
 
 ## <a name="syntax"></a>Składnia
 
-> **/HIGHENTROPYVA**[**: No**]
+> **`/HIGHENTROPYVA`**[**`:NO`**]
 
 ## <a name="remarks"></a>Uwagi
 
-**/HIGHENTROPYVA** modyfikuje nagłówek *obrazu wykonywalnego*, pliku. dll lub pliku. exe, aby wskazać, czy ASLR może korzystać z całej 64-bitowej przestrzeni adresowej. Gdy ta opcja jest ustawiona dla pliku wykonywalnego i wszystkich modułów, od których jest zależna, system operacyjny obsługujący 64-bitowy ASLR może odtworzyć segmenty obrazu wykonywalnego w czasie ładowania przy użyciu losowych adresów w 64-bitowej wirtualnej przestrzeni adresowej. Ta duża przestrzeń adresowa utrudnia osobie atakującej odpuszczenie lokalizacji określonego obszaru pamięci.
+**`/HIGHENTROPYVA`** modyfikuje nagłówek pliku *obrazu wykonywalnego* (na przykład *`.dll`* *`.exe`* pliku lub), aby wskazać, czy ASLR może używać całej przestrzeni adresów 64-bitowej.  Aby mieć efekt, należy ustawić opcję zarówno dla pliku wykonywalnego, jak i wszystkich modułów, od których jest zależna. Następnie system operacyjny obsługujący 64-bitowy ASLR może odtworzyć segmenty obrazu wykonywalnego w czasie ładowania przy użyciu 64-bitowych losowych adresów wirtualnych. Ta duża przestrzeń adresowa utrudnia osobie atakującej odpuszczenie lokalizacji określonego obszaru pamięci.
 
-Domyślnie **/HIGHENTROPYVA** jest włączona dla 64-bitowych obrazów plików wykonywalnych. Ta opcja wymaga [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md), który jest również domyślnie włączony dla obrazów 64-bitowych. **/HIGHENTROPYVA** nie ma zastosowania do 32-bitowych obrazów wykonywalnych, gdzie konsolidator ignoruje opcję. Aby jawnie wyłączyć tę opcję, użyj **/HIGHENTROPYVA: No**.
+Domyślnie program **`/HIGHENTROPYVA`** jest włączony dla obrazów wykonywalnych 64-bitowych. Ta opcja wymaga [`/LARGEADDRESSAWARE`](largeaddressaware-handle-large-addresses.md) , który jest również domyślnie włączony dla obrazów 64-bitowych. **`/HIGHENTROPYVA`** nie ma zastosowania do 32-bitowych obrazów wykonywalnych, gdzie konsolidator ignoruje opcję. Aby jawnie wyłączyć tę opcję, użyj **`/HIGHENTROPYVA:NO`** .
 
-Aby **/HIGHENTROPYVA** miał efekt w czasie ładowania, należy również włączyć funkcję [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md) . **/DYNAMICBASE** jest domyślnie włączony i jest wymagany do włączenia ASLR w systemie Windows Vista i nowszych systemach operacyjnych. Starsze wersje systemu Windows ignorują tę flagę.
+Aby **`/HIGHENTROPYVA`** program miał efekt w czasie ładowania, [`/DYNAMICBASE`](dynamicbase-use-address-space-layout-randomization.md) również musi być włączony. **`/DYNAMICBASE`** Program jest domyślnie włączony i jest wymagany do włączenia ASLR w systemie Windows Vista i nowszych systemach operacyjnych. Starsze wersje systemu Windows ignorują tę flagę.
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Aby ustawić tę opcję konsolidatora w programie Visual Studio
 
@@ -36,7 +36,7 @@ Aby **/HIGHENTROPYVA** miał efekt w czasie ładowania, należy również włąc
 ## <a name="see-also"></a>Zobacz też
 
 - [Dokumentacja konsolidatora MSVC](linking.md)
-- [MSVC Opcje konsolidatora](linker-options.md)
-- [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)
-- [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)
+- [Opcje konsolidatora MSVC](linker-options.md)
+- [`/DYNAMICBASE`](dynamicbase-use-address-space-layout-randomization.md)
+- [`/LARGEADDRESSAWARE`](largeaddressaware-handle-large-addresses.md)
 - [Ochrona przed oprogramowaniem ISV systemu Windows](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))

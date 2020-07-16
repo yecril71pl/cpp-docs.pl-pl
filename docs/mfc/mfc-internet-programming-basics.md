@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 3265bffb393eeff1d8a04a41357e2b138aa0ebf7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c9825cdcb5cb0963a4e0d3acdeb36dfee54b70fc
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615574"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405029"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC — podstawy programowania Internetu
 
@@ -68,11 +68,9 @@ MFC zawiera klasy, które obsługują programowanie Internetu. Można użyć [CO
 
 - [Obsługa ALT dla kontrolek DHTML](../atl/atl-support-for-dhtml-controls.md)
 
-## <a name="web-sites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>Witryny sieci Web, aby uzyskać więcej informacji
+## <a name="websites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>Witryny sieci Web, aby uzyskać więcej informacji
 
-Aby uzyskać dodatkowe informacje na temat technologii Internet firmy Microsoft, zobacz witrynę sieci Web [Microsoft Developer Network (MSDN)](https://go.microsoft.com/fwlink/p/?linkid=56322) . (Linki mogą ulec zmianie bez powiadomienia).
-
-Ta witryna sieci Web dla deweloperów zawiera informacje na temat korzystania z narzędzi i technologii programistycznych firmy Microsoft oraz najważniejszych scenariuszy dotyczących najnowszych i nadchodzących konferencji. Na tej stronie możesz przejść do wielu powiązanych witryn deweloperskich, takich jak .NET i Centra deweloperów XML. Możesz również pobrać zestawy SDK i przykłady dla wersji beta.
+Aby uzyskać więcej informacji na temat technologii Microsoft Internet, zobacz [Microsoft docs](https://docs.microsoft.com/).
 
 [Organizacja World Wide Web Consortium (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125) publikuje specyfikacje dla języka HTML, http, CGI i innych technologii World Wide Web.
 

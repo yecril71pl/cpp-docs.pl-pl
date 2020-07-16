@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 98436e7519279197fe192d9ef8b7344b211b24bc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 96f9e5f836205df71e03638858cb00b788d03c0b
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624668"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403728"
 ---
 # <a name="exceptions-database-exceptions"></a>Wyjątki: wyjątki bazy danych
 
@@ -38,7 +38,7 @@ Najbardziej pragmatycznym podejściem do przechwytywania wyjątków bazy danych 
 
 Oprócz kodów powrotu zdefiniowanych przez platformę, które mają nazwy formularza **AFX_SQL_ERROR_XXX**, niektóre [CDBExceptions](reference/cdbexception-class.md) są oparte na kodach powrotu [ODBC](../data/odbc/odbc-basics.md) . Kody powrotne dla takich wyjątków mają nazwy formularzy **SQL_ERROR_XXX**.
 
-Kody powrotne — zdefiniowane przez platformę i ODBC, które klasy bazy danych mogą zwracać, są udokumentowane w elemencie członkowskim danych [m_nRetCode](reference/cdbexception-class.md#m_nretcode) klasy `CDBException` . Dodatkowe informacje na temat kodów powrotnych zdefiniowanych przez ODBC są dostępne w *dokumentacji programisty* zestawu ODBC SDK w bibliotece MSDN.
+Kody powrotne — zdefiniowane przez platformę i ODBC, które klasy bazy danych mogą zwracać, są udokumentowane w elemencie członkowskim danych [m_nRetCode](reference/cdbexception-class.md#m_nretcode) klasy `CDBException` . Dodatkowe informacje na temat kodów powrotnych zdefiniowanych przez ODBC są dostępne w [dokumentacji programu ODBC Programmer's Reference](/sql/odbc/reference/odbc-programmer-s-reference).
 
 ### <a name="error-codes-used-for-dao-exceptions"></a>Kody błędów używane dla wyjątków DAO
 

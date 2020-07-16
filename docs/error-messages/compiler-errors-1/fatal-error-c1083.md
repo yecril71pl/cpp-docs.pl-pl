@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: b982c3adf59789f6c48e7e0f54ed4e71539692ad
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 87f3440dc71246c3a925ed3d64f8ccf1b2c28cd1
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630771"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404284"
 ---
 # <a name="fatal-error-c1083"></a>Błąd krytyczny C1083
 
-> Nie można otworzyć pliku wieloplikowego: "*plik*": *komunikat*
+> Nie można *otworzyć pliku* wieloplikowego: "*plik*": *komunikat*
 
 Kompilator generuje błąd C1083, jeśli nie można odnaleźć wymaganego pliku. Istnieje wiele możliwych przyczyn tego błędu. Niepoprawna ścieżka wyszukiwania lub brakujące lub nienazwane pliki nagłówkowe są najbardziej typowymi przyczynami, ale inne typy plików i problemy mogą również powodować C1083. Poniżej przedstawiono niektóre typowe powody, dla których kompilator generuje ten błąd.
 
 ## <a name="the-specified-file-name-is-wrong"></a>Określona nazwa pliku jest nieprawidłowa
 
-Być może źle wpisano nazwę pliku. Na przykład
+Być może źle wpisano nazwę pliku. Przykład:
 
 `#include <algorithm.h>`
 
-nie można było znaleźć potrzebnego pliku. Większość C++ plików nagłówka biblioteki standardowej nie ma rozszerzenia nazwy pliku. h. \< Ta`#include` dyrektywa nie może odnaleźć nagłówka > algorytmu. Aby rozwiązać ten problem, sprawdź, czy wprowadzono poprawną nazwę pliku, jak w poniższym przykładzie:
+nie można było znaleźć potrzebnego pliku. Większość plików nagłówkowych standardowej biblioteki C++ nie ma rozszerzenia nazwy pliku. h. \<algorithm>Nagłówek nie zostanie znaleziony przez tę `#include` dyrektywę. Aby rozwiązać ten problem, sprawdź, czy wprowadzono poprawną nazwę pliku, jak w poniższym przykładzie:
 
 `#include <algorithm>`
 
@@ -45,7 +45,7 @@ Jeśli nazwa jest ujęta w nawiasy kątowe,
 
 `#include <stdio.h>`
 
-Kompilator korzysta ze ścieżki wyszukiwania, która jest zdefiniowana przez środowisko kompilacji, dla opcji kompilatora **/i** , opcji **/x** kompilatora i zmiennej środowiskowej **include** . Aby uzyskać więcej informacji, w tym szczegółowe informacje o kolejności wyszukiwania używanej do znajdowania pliku, zobacz [Dyrektywa #include (C++C/)](../../preprocessor/hash-include-directive-c-cpp.md) i [#import](../../preprocessor/hash-import-directive-cpp.md).
+Kompilator korzysta ze ścieżki wyszukiwania, która jest zdefiniowana przez środowisko kompilacji, dla opcji kompilatora **/i** , opcji **/x** kompilatora i zmiennej środowiskowej **include** . Aby uzyskać więcej informacji, w tym szczegółowe informacje o kolejności wyszukiwania używanej do znajdowania pliku, zobacz [#include dyrektywie (C/C++)](../../preprocessor/hash-include-directive-c-cpp.md) i [#import](../../preprocessor/hash-import-directive-cpp.md).
 
 Jeśli pliki dołączane znajdują się w innym katalogu względem katalogu źródłowego i używasz ścieżki względnej w dyrektywach dołączania, należy użyć podwójnych cudzysłowów zamiast nawiasów ostrych. Na przykład jeśli plik nagłówkowy header. h znajduje się w podkatalogu ze źródłami projektu o nazwie Headers, ten przykład nie będzie mógł znaleźć pliku i powoduje wystąpienie C1083:
 
@@ -55,19 +55,19 @@ ale w tym przykładzie działa:
 
 `#include "headers\myheader.h"`
 
-Ścieżek względnych można również używać z katalogami w ścieżce wyszukiwania dołączania. W przypadku dodania katalogu do zmiennej środowiskowej **include** lub ścieżki **katalogów** dołączanych w programie Visual Studio, nie należy również dodawać części ścieżki do dyrektyw include. Na przykład, jeśli nagłówek znajduje się w \path\example\headers\myheader.h i dodasz \path\example\headers\ do ścieżki **katalogów** dołączanych w programie Visual Studio, ale `#include` dyrektywa odwołuje się do pliku jako
+Ścieżek względnych można również używać z katalogami w ścieżce wyszukiwania dołączania. W przypadku dodania katalogu do zmiennej środowiskowej **include** lub ścieżki **katalogów dołączanych** w programie Visual Studio, nie należy również dodawać części ścieżki do dyrektyw include. Na przykład, jeśli nagłówek znajduje się w \path\example\headers\myheader.h i dodasz \path\example\headers\ do ścieżki **katalogów dołączanych** w programie Visual Studio, ale `#include` dyrektywa odwołuje się do pliku jako
 
 `#include <headers\myheader.h>`
 
-plik nie zostanie znaleziony. Użyj poprawnej ścieżki względem katalogu określonego w ścieżce wyszukiwania dołączania. W tym przykładzie można zmienić ścieżkę wyszukiwania dołączania na \path\example\, lub usunąć segment ścieżki \ Path `#include` z dyrektywy.
+plik nie zostanie znaleziony. Użyj poprawnej ścieżki względem katalogu określonego w ścieżce wyszukiwania dołączania. W tym przykładzie można zmienić ścieżkę wyszukiwania dołączania na \path\example \, lub usunąć segment ścieżki \ Path z `#include` dyrektywy.
 
-## <a name="third-party-library-issues-and-vcpkg"></a>Problemy z biblioteką innych firm i Vcpkg
+## <a name="third-party-library-issues-and-vcpkg"></a>Problemy z biblioteką innych firm i vcpkg
 
-Jeśli ten błąd jest wyświetlany podczas próby skonfigurowania biblioteki innej firmy jako części kompilacji, należy rozważyć użycie [Vcpkg](../../vcpkg.md), Menedżera pakietów Visual C++ Package, aby zainstalować i skompilować bibliotekę. Program Vcpkg obsługuje dużą i rosnącą [listę bibliotek innych firm](https://github.com/Microsoft/vcpkg/tree/master/ports), a także ustawia wszystkie właściwości konfiguracji i zależności wymagane dla zakończonych powodzeniem kompilacji w ramach projektu. Aby uzyskać więcej informacji, zobacz odpowiedni wpis w [blogu C++ wizualnym](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) .
+Jeśli ten błąd jest wyświetlany podczas próby skonfigurowania biblioteki innej firmy jako części kompilacji, należy rozważyć użycie [vcpkg](../../vcpkg.md), Menedżera pakietów języka C++, aby zainstalować i skompilować bibliotekę. Program vcpkg obsługuje dużą i rosnącą [listę bibliotek innych firm](https://github.com/Microsoft/vcpkg/tree/master/ports), a także ustawia wszystkie właściwości konfiguracji i zależności wymagane dla zakończonych powodzeniem kompilacji w ramach projektu.
 
 ## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>Plik znajduje się w projekcie, ale nie ścieżka wyszukiwania dołączania
 
-Nawet wtedy, gdy pliki nagłówkowe są wymienione w **Eksplorator rozwiązań** w ramach projektu, pliki są znajdowane tylko przez kompilator, gdy są one określane przez `#include` lub `#import` przez dyrektywę w pliku źródłowym i znajdują się w ścieżce wyszukiwania dołączania. Różne rodzaje kompilacji mogą używać różnych ścieżek wyszukiwania. Opcji kompilatora **/x** można użyć do wykluczenia katalogów ze ścieżki wyszukiwania dołączania. Dzięki temu różne kompilacje mogą stosować różne dołączane pliki, które mają taką samą nazwę, ale są przechowywane w różnych katalogach. Jest to alternatywa dla kompilacji warunkowej przy użyciu poleceń preprocesora. Aby uzyskać więcej informacji na temat opcji kompilatora **/x** , zobacz [/X (Ignoruj standardowe ścieżki dołączane)](../../build/reference/x-ignore-standard-include-paths.md).
+Nawet wtedy, gdy pliki nagłówkowe są wymienione w **Eksplorator rozwiązań** w ramach projektu, pliki są znajdowane tylko przez kompilator, gdy są one określane przez lub przez `#include` `#import` dyrektywę w pliku źródłowym i znajdują się w ścieżce wyszukiwania dołączania. Różne rodzaje kompilacji mogą używać różnych ścieżek wyszukiwania. Opcji kompilatora **/x** można użyć do wykluczenia katalogów ze ścieżki wyszukiwania dołączania. Dzięki temu różne kompilacje mogą stosować różne dołączane pliki, które mają taką samą nazwę, ale są przechowywane w różnych katalogach. Jest to alternatywa dla kompilacji warunkowej przy użyciu poleceń preprocesora. Aby uzyskać więcej informacji na temat opcji kompilatora **/x** , zobacz [/X (Ignoruj standardowe ścieżki dołączane)](../../build/reference/x-ignore-standard-include-paths.md).
 
 Aby rozwiązać ten problem, popraw ścieżkę, której kompilator używa do wyszukiwania dołączanego lub importowanego pliku. Nowy projekt używa domyślnych ścieżek wyszukiwania dołączania. Może być konieczne zmodyfikowanie ścieżki wyszukiwania dołączania, aby dodać katalog dla projektu. Jeśli kompilujesz w wierszu polecenia, Dodaj ścieżkę do zmiennej środowiskowej **include** lub **/i** kompilator, aby określić ścieżkę do pliku.
 
@@ -75,7 +75,7 @@ Aby ustawić ścieżkę katalogu dołączania w programie Visual Studio, Otwórz
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>Nie ustawiono środowiska INCLUDE lub LIB wiersza polecenia.
 
-Gdy kompilator jest wywoływany w wierszu polecenia, do określania ścieżek wyszukiwania zwykle używa się zmiennych środowiskowych. Jeśli ścieżka wyszukiwania opisana przez zmienną środowiskową **include** lub **lib** nie jest ustawiona poprawnie, można wygenerować błąd C1083. Zdecydowanie zalecamy użycie skrótu wiersza polecenia dla deweloperów, aby ustawić podstawowe środowisko dla kompilacji wiersza polecenia. Aby uzyskać więcej informacji, zobacz [kompilacja CC++ /w wierszu polecenia](../../build/building-on-the-command-line.md). Aby uzyskać więcej informacji o sposobach używania zmiennych środowiskowych [, zobacz How to: Użyj zmiennych środowiskowych w kompilacji](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).
+Gdy kompilator jest wywoływany w wierszu polecenia, do określania ścieżek wyszukiwania zwykle używa się zmiennych środowiskowych. Jeśli ścieżka wyszukiwania opisana przez zmienną środowiskową **include** lub **lib** nie jest ustawiona poprawnie, można wygenerować błąd C1083. Zdecydowanie zalecamy użycie skrótu wiersza polecenia dla deweloperów, aby ustawić podstawowe środowisko dla kompilacji wiersza polecenia. Aby uzyskać więcej informacji, zobacz [kompilacja C/C++ w wierszu polecenia](../../build/building-on-the-command-line.md). Aby uzyskać więcej informacji o sposobach używania zmiennych środowiskowych, zobacz [How to: use Environment w Build](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).
 
 ## <a name="the-file-may-be-locked-or-in-use"></a>Plik może być zablokowany lub w użyciu
 
@@ -91,7 +91,7 @@ Gdy konfigurujesz projekt tak, aby używał wstępnie skompilowanych nagłówkó
 
 ## <a name="additional-causes"></a>Inne przyczyny
 
-- Zainstalowano zestaw SDK lub bibliotekę innych firm, ale nie otwarto nowego okna wiersza polecenia dewelopera po zainstalowaniu zestawu SDK lub biblioteki. Jeśli zestaw SDK lub biblioteka dodaje pliki do ścieżki dołączania, może być konieczne otwarcie nowego okna wiersza polecenia dewelopera, aby pobrać te zmiany zmiennych środowiskowych.
+- Zainstalowano zestaw SDK lub bibliotekę innych firm, ale nie otwarto nowego okna wiersza polecenia dewelopera po zainstalowaniu zestawu SDK lub biblioteki. Jeśli zestaw SDK lub biblioteka dodaje pliki do ścieżki **dołączania** , może być konieczne otwarcie nowego okna wiersza polecenia dewelopera, aby pobrać te zmiany zmiennych środowiskowych.
 
 - Plik używa kodu zarządzanego, ale nie określono opcji kompilatora **/CLR** . Aby uzyskać więcej informacji, zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md).
 
@@ -107,7 +107,7 @@ Gdy konfigurujesz projekt tak, aby używał wstępnie skompilowanych nagłówkó
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje błąd C1083, gdy plik `"test.h"` nagłówkowy nie istnieje w katalogu źródłowym ani w ścieżce wyszukiwania dołączania.
+Poniższy przykład generuje błąd C1083, gdy plik nagłówkowy `"test.h"` nie istnieje w katalogu źródłowym ani w ścieżce wyszukiwania dołączania.
 
 ```cpp
 // C1083.cpp
@@ -116,8 +116,8 @@ Poniższy przykład generuje błąd C1083, gdy plik `"test.h"` nagłówkowy nie 
 #include "stdio.h"  // OK
 ```
 
-Aby uzyskać informacje o sposobach tworzenia projektówC++ C/w środowisku IDE lub w wierszu polecenia oraz informacje o ustawianiu zmiennych środowiskowych, zobacz [projekty i systemy kompilacji](../../build/projects-and-build-systems-cpp.md).
+Aby uzyskać informacje o sposobach kompilowania projektów C/C++ w środowisku IDE lub w wierszu polecenia oraz informacje na temat ustawiania zmiennych środowiskowych, zobacz [projekty i systemy kompilacji](../../build/projects-and-build-systems-cpp.md).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 - [Właściwości programu MSBuild](/visualstudio/msbuild/msbuild-properties)

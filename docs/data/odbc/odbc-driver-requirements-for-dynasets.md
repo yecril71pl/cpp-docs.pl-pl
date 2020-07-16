@@ -9,22 +9,22 @@ helpviewer_keywords:
 - dynasets
 - ODBC drivers, dynasets
 ms.assetid: 585cc67b-4d92-404b-9903-d769cd17badc
-ms.openlocfilehash: c612e8ea91882a6e744a8f47afe0decbeba85358
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4c436764649a1aa418e12300809482b45224dd46
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367214"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403845"
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>Wymagania dotyczące sterownika ODBC dla zestawów dynamicznych
 
-W klasach bazy danych MFC ODBC zestawy dynasets są zestawami rekordów o właściwościach dynamicznych; pozostają one zsynchronizowane ze źródłem danych w określony sposób. Zestawy dynasetów MFC (ale nie tylko do przodu) wymagają sterownika ODBC o zgodności interfejsu API poziomu 2. Jeśli sterownik [źródła danych](../../data/odbc/data-source-odbc.md) jest zgodny z zestawem interfejsu API poziomu 1, nadal można używać zarówno aktualizacji, jak i migawek tylko do odczytu oraz zestawów rekordów tylko do przodu, ale nie zestawów dynamicznych. Jednak sterownik poziomu 1 może obsługiwać dynasets, jeśli obsługuje rozszerzone pobieranie i kursory oparte na zestawie kluczy.
+W klasach baz danych MFC ODBC zestawy dynamiczne są zestawami rekordów z właściwościami dynamicznymi; pozostaną one zsynchronizowane ze źródłem danych w określony sposób. Zestawy dynamiczne MFC (ale nie tylko te zestawy rekordów) wymagają sterownika ODBC z zgodnym z interfejsem API poziomu 2. Jeśli sterownik [źródła danych](../../data/odbc/data-source-odbc.md) jest zgodny z zestawem interfejsów API poziomu 1, nadal można używać zarówno migawek, jak i tylko do odczytu, jak i zestawów rekordów, ale nie zestawów dynamicznych. Jednak sterownik Level 1 może obsługiwać zestawy dynamiczne, jeśli obsługuje rozszerzone pobieranie i kursory z zestawem kluczy.
 
-W terminologii ODBC dynasets i migawki są określane jako kursory. Kursor jest mechanizmem używanym do śledzenia jego pozycji w ach. Aby uzyskać więcej informacji na temat wymagań dotyczących sterowników dla zestawów dynaset, zobacz [Dynaset](../../data/odbc/dynaset.md). Aby uzyskać więcej informacji na temat kursorów, zobacz [open database connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK w dokumentacji MSDN.
+W terminologii ODBC, zestawy dynamiczne i migawki są określane jako kursory. Kursor jest mechanizmem służącym do śledzenia jego pozycji w zestawie rekordów. Aby uzyskać więcej informacji o wymaganiach dotyczących sterowników dla zestawów dynamicznych, zobacz [zestaw dynamiczny](../../data/odbc/dynaset.md). Aby uzyskać więcej informacji na temat kursorów, zobacz dokumentację [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) .
 
 > [!NOTE]
-> W przypadku aktualizacji zestawy rekordów sterownik ODBC musi obsługiwać `::SQLSetPos` instrukcje aktualizacji pozycjonowane lub funkcji interfejsu API ODBC. Jeśli oba są obsługiwane, MFC używa `::SQLSetPos` wydajności. Alternatywnie w przypadku migawek można użyć biblioteki kursora, która zapewnia wymaganą obsługę migawek podlegaalnych aktualizacji (kursorów statycznych i instrukcji aktualizacji pozycjonowanych).
+> Aby można było aktualizować zestawy rekordów, sterownik ODBC musi obsługiwać ustawione instrukcje aktualizacji lub `::SQLSetPos` funkcję interfejsu API ODBC. Jeśli oba są obsługiwane, MFC używa `::SQLSetPos` do wydajności. Alternatywnie, w przypadku migawek można użyć biblioteki kursorów, która zapewnia wymaganą obsługę migawek aktualizowalnych (Kursory statyczne i instrukcje aktualizacji).
 
 ## <a name="see-also"></a>Zobacz też
 
-[Podstawy ODBC](../../data/odbc/odbc-basics.md)
+[Podstawowe informacje dotyczące ODBC](../../data/odbc/odbc-basics.md)

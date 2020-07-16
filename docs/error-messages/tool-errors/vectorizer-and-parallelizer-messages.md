@@ -8,16 +8,16 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 4f105558d7795210e1edb2470af4e50326f49de6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1cdbb40d06d2b3da7e6444e3a6743c6e6ae1c874
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182204"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405003"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Komunikaty wektoryzatora i paralelizatora
 
-Możesz użyć opcji kompilatora firmy C++ Microsoft [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) i [/Qvec-Report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) , aby ustawić [autoprzetwarzanie równoległe i autowektoryzacji](../../parallel/auto-parallelization-and-auto-vectorization.md) do danych wyjściowych kodów przyczyn i komunikatów informacyjnych dotyczących działania. Ten artykuł wyjaśnia kody przyczyn i komunikaty.
+Możesz użyć opcji kompilatora języka Microsoft C++ [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) i [/Qvec-Report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) , aby ustawić [autoprzetwarzanie równoległe i autowektoryzacji](../../parallel/auto-parallelization-and-auto-vectorization.md) do danych wyjściowych kodów przyczyn i komunikatów informacyjnych dotyczących działania. Ten artykuł wyjaśnia kody przyczyn i komunikaty.
 
 ## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a>Komunikaty informacyjne
 
@@ -964,10 +964,10 @@ void code_1505(int *A, int *B)
 
 ## <a name="see-also"></a>Zobacz też
 
-[Błędy iC++ ostrzeżenia narzędzi języka C/kompilatora i kompilacji](../compiler-errors-1/c-cpp-build-errors.md)
-[autoprzetwarzanie równoległe i autowektoryzacji](../../parallel/auto-parallelization-and-auto-vectorization.md) \
-[Autowektoryzator w programie Visual Studio 2012 — omówienie](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
-[pętla #pragma ()](../../preprocessor/loop.md) \
-[/Q opcji (operacje na niskim poziomie)](../../build/reference/q-options-low-level-operations.md) \
+[Błędy i ostrzeżenia](../compiler-errors-1/c-cpp-build-errors.md) 
+ dotyczące kompilatora i narzędzi kompilacji C/C++ [Autoprzetwarzanie równoległe i autowektoryzacji](../../parallel/auto-parallelization-and-auto-vectorization.md) \
+[Autowektoryzator w programie Visual Studio 2012 — Omówienie](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview) \
+[Pętla #pragma ()](../../preprocessor/loop.md) \
+[/Q opcje (operacje na niskim poziomie)](../../build/reference/q-options-low-level-operations.md) \
 [/Qpar-report (poziom raportowania autoparalelizacji)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
-[/Qvec-report (Poziom raportowania automatycznej wektoryzacji)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
+[/Qvec-Report (poziom raportowania autowektoryzator)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

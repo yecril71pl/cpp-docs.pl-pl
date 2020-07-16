@@ -1,5 +1,5 @@
 ---
-title: Operatory przesunięcia w lewo i w&gt; &gt; prawo &lt; &lt;(i)
+title: Operatory przesunięcia w lewo i w prawo ( &gt; &gt; i &lt; &lt; )
 ms.date: 08/13/2018
 f1_keywords:
 - <<
@@ -13,26 +13,26 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 2020c2dbbf8ff91ee692366f55c836be0b3dddb0
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 7cde299d305219f2bd0e53a9f19c2ca35a8c7b69
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825918"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404773"
 ---
-# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operatory przesunięcia w lewo i w&gt; &gt; prawo &lt; &lt;(i)
+# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operatory przesunięcia w lewo i w prawo ( &gt; &gt; i &lt; &lt; )
 
-Operatory przesunięcia bitowego to operator przesunięcia w prawo (**&gt;**), który przenosi bity *przesunięcia* w prawo i operator przesunięcia w lewo (**&lt;**), który przenosi bity *przesunięcia* w lewo. <sup>1</sup>
+Operatory przesunięcia bitowego to operator przesunięcia w prawo ( **&gt;&gt;** ), który przenosi bity *przesunięcia* w prawo i operator przesunięcia w lewo ( **&lt;&lt;** ), który przenosi bity *przesunięcia* w lewo. <sup>1</sup>
 
 ## <a name="syntax"></a>Składnia
 
-> dodatek *shift-expression* `<<` *-Expression*\
-> dodatek *shift-expression* `>>` *-Expression*
+> *wyrażenie* `<<` przesunięcia *wyrażenie addytywne*\
+> *wyrażenie* `>>` przesunięcia *wyrażenie addytywne*
 
 ## <a name="remarks"></a>Uwagi
 
 > [!IMPORTANT]
-> Poniższe opisy i przykłady są prawidłowe w systemie Windows dla architektury x86 i x64. Implementacja operatorów przesunięcia w lewo i przesunięcia w prawo jest znacznie inna w systemie Windows dla urządzeń ARM. Aby uzyskać więcej informacji, zobacz sekcję "operatory przesunięcia" wpisu w blogu [Hello ARM](https://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) .
+> Poniższe opisy i przykłady są prawidłowe w systemie Windows dla architektury x86 i x64. Implementacja operatorów przesunięcia w lewo i przesunięcia w prawo jest znacznie inna w systemie Windows dla urządzeń ARM. Aby uzyskać więcej informacji, zobacz sekcję "operatory przesunięcia" wpisu w blogu [Hello ARM](https://devblogs.microsoft.com/cppblog/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c/) .
 
 ## <a name="left-shifts"></a>Przesunięcia w lewo
 
@@ -224,11 +224,11 @@ int main() {
 
 <sup>1</sup> poniżej znajduje się opis operatorów przesunięcia w specyfikacji ISO języka c++ 11 (INCITS/ISO/IEC 14882-2011 [2012]), sekcje 5.8.2 i 5.8.3.
 
-Wartość `E1 << E2` jest `E1` przysuniętą do lewej pozycji `E2` bitów. opuszczone bity są wypełnione zerem. Jeśli `E1` ma typ bez znaku, wartość wyniku jest **E1 × 2**<sup>**E2**</sup>, a zmniejszenie modulo o jeden więcej niż wartość maksymalna, którą można przedstawić w typie wyniku. W przeciwnym razie `E1` , jeśli ma typ ze znakiem i wartość nieujemną, a **E1 × 2**<sup>**E2**</sup> można reprezentować w odpowiadającym typie niepodpisanym typu wyniku, wówczas ta wartość jest konwertowana na typ wyniku, jest wartością wynikową; w przeciwnym razie zachowanie jest niezdefiniowane.
+Wartość `E1 << E2` jest `E1` przysuniętą do lewej `E2` pozycji bitów; opuszczone bity są wypełnione zerem. Jeśli `E1` ma typ bez znaku, wartość wyniku jest **E1 × 2**<sup>**E2**</sup>, a zmniejszenie modulo o jeden więcej niż wartość maksymalna, którą można przedstawić w typie wyniku. W przeciwnym razie, jeśli `E1` ma typ ze znakiem i wartość nieujemną, a **E1 × 2**<sup>**E2**</sup> można reprezentować w odpowiadającym typie niepodpisanym typu wyniku, wówczas ta wartość jest konwertowana na typ wyniku, jest wartością wynikową; w przeciwnym razie zachowanie jest niezdefiniowane.
 
-Wartość `E1 >> E2` jest `E1` przysuniętą do prawej pozycji `E2` bitów. Jeśli `E1` ma typ bez znaku lub `E1` ma typ ze znakiem i wartość nieujemną, wartość wyniku jest integralną częścią ilorazu **E1/2**<sup>**E2**</sup>. Jeśli `E1` ma typ ze znakiem i wartość ujemną, wynikowa wartość jest definiowana przez implementację.
+Wartość `E1 >> E2` jest `E1` przysuniętą do prawej `E2` pozycji bitów. Jeśli `E1` ma typ bez znaku lub `E1` ma typ ze znakiem i wartość nieujemną, wartość wyniku jest integralną częścią ilorazu **E1/2**<sup>**E2**</sup>. Jeśli `E1` ma typ ze znakiem i wartość ujemną, wynikowa wartość jest definiowana przez implementację.
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Wyrażenia z operatorami dwuargumentowymi](../cpp/expressions-with-binary-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SAL annotations
 - code analysis, annotation
 ms.assetid: a16e47d0-6f3e-4ed6-8883-459b2874e9a4
-ms.openlocfilehash: bfd6a58c7dc8664dce91906279a62380768a5c65
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 1d47608137e2a9d9ed13740a5f4424cc0aff2902
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418712"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403897"
 ---
 # <a name="using-sal-annotations-to-reduce-cc-code-defects"></a>Korzystanie z adnotacji SAL w celu redukowanie defektów kodu C/C++
 
@@ -20,7 +20,7 @@ SAL to język adnotacji kodu źródłowego firmy Microsoft. Przy użyciu adnotac
 
 Artykuły w tej sekcji dokumentacji omawiają aspekty SAL, zawierają odwołania do składni SAL i dają przykłady użycia.
 
-- [Informacje o języku SAL](../code-quality/understanding-sal.md)
+- [Poznanie SAL](../code-quality/understanding-sal.md)
 
      Zawiera informacje i przykłady pokazujące podstawowe adnotacje SAL.
 
@@ -32,7 +32,7 @@ Artykuły w tej sekcji dokumentacji omawiają aspekty SAL, zawierają odwołania
 
      Wyświetla adnotacje SAL dla funkcji i zachowania funkcji.
 
-- [Dodawanie adnotacji do struktur i klas](../code-quality/annotating-structs-and-classes.md)
+- [Dodawanie adnotacji struktur i klas](../code-quality/annotating-structs-and-classes.md)
 
      Wyświetla listę adnotacji SAL dla struktur i klas.
 
@@ -51,10 +51,6 @@ Artykuły w tej sekcji dokumentacji omawiają aspekty SAL, zawierają odwołania
 - [Najlepsze rozwiązania i przykłady](../code-quality/best-practices-and-examples-sal.md)
 
      Zawiera przykłady, które pokazują, jak używać adnotacji SAL. Wyjaśniono również typowe pułapek.
-
-## <a name="related-resources"></a>Powiązane zasoby
-
-[Blog zespołu ds. analizy kodu](https://blogs.msdn.microsoft.com/codeanalysis/)
 
 ## <a name="see-also"></a>Zobacz też
 

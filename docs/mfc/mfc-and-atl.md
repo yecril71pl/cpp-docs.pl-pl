@@ -3,12 +3,12 @@ title: MFC i ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
 ms.topic: overview
-ms.openlocfilehash: 2fd109792bde0717c88222d5d53be3a26df95239
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a0ad1eac7991655eae5ae1a328145e66031e40dd
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619920"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405042"
 ---
 # <a name="mfc-and-atl"></a>MFC i ATL
 
@@ -28,4 +28,4 @@ W programie Visual Studio 2017 i nowszych, MFC i ATL są opcjonalnymi podskładn
 |[Składniki ATL COM pulpitu](../atl/atl-com-desktop-components.md)|ATL udostępnia szablony klas i inne konstrukcje używane do uproszczenia tworzenia obiektów COM w języku C++.|
 |[Klasy udostępnione ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)|Odwołania do [klasy CStringT](../atl-mfc-shared/reference/cstringt-class.md) i innych klas, które są współużytkowane przez MFC i ATL.|
 |[Praca z plikami zasobów](../windows/working-with-resource-files.md)|Edytor zasobów umożliwia edytowanie zasobów interfejsu użytkownika, takich jak ciągi, obrazy i okna dialogowe.|
-|[Język C++ w programie Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Temat nadrzędny dla całej zawartości C++ w bibliotece MSDN.|
+|[Język C++ w programie Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Temat nadrzędny dla całej dokumentacji języka C++.|

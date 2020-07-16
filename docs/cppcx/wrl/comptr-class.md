@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 612747fe0acfa29acc3f516f1257e80069d5395c
-ms.sourcegitcommit: d695bb727bd2b081af4d50127b0242a9a5bdce61
+ms.openlocfilehash: 265553d29bcc153bbbb065443391d3aa4b3b0bd2
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84332256"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404554"
 ---
 # <a name="comptr-class"></a>ComPtr — Klasa
 
@@ -84,7 +84,7 @@ Klasa, do której jest obecny `ComPtr` obiekt zaprzyjaźniony. (Szablon, który 
 
 `ComPtr<>`deklaruje typ, który reprezentuje wskaźnik podstawowego interfejsu. Użyj, `ComPtr<>` Aby zadeklarować zmienną, a następnie użyć operatora dostępu do elementu członkowskiego () ze strzałką, `->` Aby uzyskać dostęp do funkcji składowej interfejsu.
 
-Aby uzyskać więcej informacji o inteligentnych wskaźnikach, zobacz podsekcję "inteligentne wskaźniki COM" w artykule [dotyczącym tworzenia kodu com](/windows/win32/LearnWin32/com-coding-practices) w bibliotece MSDN.
+Aby uzyskać więcej informacji o inteligentnych wskaźnikach, zobacz podsekcję "inteligentne wskaźniki COM" w artykule [dotyczącym tworzenia kodu com](/windows/win32/LearnWin32/com-coding-practices) .
 
 ## <a name="members"></a>Elementy członkowskie
 
