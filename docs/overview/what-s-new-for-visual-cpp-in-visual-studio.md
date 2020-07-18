@@ -3,12 +3,12 @@ title: Co nowego w języku C++ w programie Visual Studio
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: f4b22cd11bcdee3d7dc2fe232642c02a331354bc
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 6813a119453bfd365763269169f1291fa165bdcd
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404977"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446873"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Co nowego w języku C++ w programie Visual Studio
 
@@ -70,7 +70,7 @@ Ulepszona analiza z programem `/Qspectre` w celu zapewnienia pomocy w zakresie o
 
 - Wykrywanie dynamicznego łączenia środowiska uruchomieniowego dla biblioteki algorytmów równoległych nie używa już całej strony do przechowywania tablicy wskaźników funkcji. Oznaczenie tej pamięci jako tylko do odczytu nie jest już ważne ze względów bezpieczeństwa.
 
-- `std::thread`Konstruktor nie czeka już na uruchomienie wątku i nie wstawia już tak wielu warstw wywołań funkcji między podstawową biblioteką C a podanym `_beginthreadex` możliwym do wywołania obiektem. Poprzednio `std::thread` umieścić sześć funkcji między `_beginthreadex` i podanym możliwym do nadania obiektowi. Ta liczba została zredukowana do trzech, z których tylko trzy `std::invoke` . Ta zmiana powoduje również rozwiązanie usterki powodującej zaciemnienie czasu, w której `std::thread` Konstruktor zawiesza się, jeśli zegar systemowy został zmieniony w chwili, gdy jest `std::thread` tworzony.
+- `std::thread`Konstruktor nie czeka już na uruchomienie wątku i nie wstawia już tak wielu warstw wywołań funkcji między podstawową biblioteką C a podanym `_beginthreadex` możliwym do wywołania obiektem. Poprzednio `std::thread` umieścić sześć funkcji między `_beginthreadex` i podanym możliwym do nadania obiektowi. Ta liczba została zredukowana do trzech, z których tylko trzy `std::invoke` . Ta zmiana powoduje również rozwiązanie usterki powodującej zaciemnienie czasu, w której `std::thread` Konstruktor przestanie odpowiadać, jeśli zegar systemowy został zmieniony w chwili, gdy jest `std::thread` tworzony.
 
 - Naprawiono regresję wydajności `std::hash` wprowadzoną podczas wdrażania `std::hash<std::filesystem::path>` .
 
@@ -590,7 +590,7 @@ Program Visual Studio 2017 wprowadza obsługę projektów CMake bez konwertowani
 
 Zapewniamy obecnie bardziej zaawansowane środowisko instalacji oryginalnego obciążenia C++. Dodaliśmy możliwe do wybrania składniki pozwalające na zainstalowanie tylko tych narzędzi, których potrzebujesz. Wskazane rozmiary instalacji składników wymienionych w interfejsie użytkownika Instalatora są nieprawidłowe i nieszacunkowo łączny rozmiar.
 
-Aby pomyślnie tworzyć projekty Win32 w obciążeniu C++ dla komputerów stacjonarnych, musisz zainstalować zarówno zestaw narzędzi, jak i zestaw SDK systemu Windows. Zainstaluj zalecane (wybrane) składniki programu **VC + + 2017 najnowsze 141 zestaw narzędzi (x86, x64)** i **Windows 10 SDK (10.0. nnnnn)** , aby upewnić się, że działa. Jeśli niezbędne narzędzia nie są zainstalowane, projekty nie zostaną utworzone pomyślnie, a Kreator przestanie działać.
+Aby pomyślnie tworzyć projekty Win32 w obciążeniu C++ dla komputerów stacjonarnych, musisz zainstalować zarówno zestaw narzędzi, jak i zestaw SDK systemu Windows. Zainstaluj zalecane (wybrane) składniki programu **VC + + 2017 najnowsze 141 zestaw narzędzi (x86, x64)** i **Windows 10 SDK (10.0. nnnnn)** , aby upewnić się, że działa. Jeśli niezbędne narzędzia nie są zainstalowane, projekty nie zostaną utworzone pomyślnie, a Kreator przestanie odpowiadać.
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017, wersja 15.5
 

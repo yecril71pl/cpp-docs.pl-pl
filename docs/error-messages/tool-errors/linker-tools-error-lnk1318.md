@@ -5,12 +5,12 @@ f1_keywords:
 - LNK1318
 helpviewer_keywords:
 - LNK1318
-ms.openlocfilehash: a61c11a9cbb25fea6fddc0bf1c5c4c2a7af1cf4f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cce2c03783039a62b5cb6f60ecf8d76b23589483
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80183582"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446704"
 ---
 # <a name="linker-tools-error-lnk1318"></a>Błąd narzędzi konsolidatora LNK1318
 
@@ -24,7 +24,7 @@ Ze względu na to, że Źródło błędu jest nietypowe, dostępne są tylko og�
 
 - Wykonaj czystą operację w katalogach kompilacji, a następnie wykonaj pełną kompilację rozwiązania.
 
-- Uruchom ponownie komputer lub sprawdź, czy są to procesy niewidoczne lub zawieszone w mspdbsrv. exe i Kasuj je w programie taskmanager.
+- Uruchom ponownie komputer lub Wyszukaj niedziałające lub nieodpowiadające procesy mspdbsrv.exe i Kasuj je w programie taskmanager.
 
 - Wyłącz sprawdzanie oprogramowania antywirusowego w katalogach projektu.
 
@@ -32,4 +32,4 @@ Ze względu na to, że Źródło błędu jest nietypowe, dostępne są tylko og�
 
 - Spróbuj skompilować, używając 64-bitowego hostowanego zestawu narzędzi.
 
-- Serializacja łączenia do rozwiązywania problemów z łączem równoległym w razie potrzeby. Ten błąd może być spowodowany tym, że program mspdbsrv. exe jest uruchamiany przez jedno wystąpienie linku i jest zamykany przed użyciem innego wystąpienia linku. Minusem do tej poprawki polega na tym, że kompilacje projektu mogą trwać znacznie dłużej.
+- Serializacja łączenia do rozwiązywania problemów z łączem równoległym w razie potrzeby. Ten błąd może być spowodowany tym, że mspdbsrv.exe jest uruchamiana przez jedno wystąpienie linku i zostanie zamknięty przed użyciem innego wystąpienia linku. Minusem do tej poprawki polega na tym, że kompilacje projektu mogą trwać znacznie dłużej.
