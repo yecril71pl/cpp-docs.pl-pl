@@ -1,5 +1,5 @@
 ---
-title: Literal (C++/CLI i C++/CX)
+title: literał (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: 8c40adaed32bae23ec43cd553c3f755ac2b54cfb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2470d5680f7538af2db7bda3611abad11b827970
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172142"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214259"
 ---
-# <a name="literal-ccli-and-ccx"></a>Literal (C++/CLI i C++/CX)
+# <a name="literal-ccli-and-ccx"></a>literał (C++/CLI i C++/CX)
 
 Zmienna (składowa danych) oznaczona jako **literał** w kompilacji **/CLR** jest natywnym odpowiednikiem zmiennej **static const** .
 
@@ -33,7 +33,7 @@ Zmienna (składowa danych) oznaczona jako **literał** w kompilacji **/CLR** jes
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: `/ZW`
+Opcja kompilatora:`/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -51,7 +51,7 @@ Aby uzyskać więcej informacji, zobacz [static](../cpp/storage-classes-cpp.md) 
 
 ## <a name="example"></a>Przykład
 
-Ten przykład pokazuje, że zmienna **literału** oznacza **statyczny**.
+Ten przykład pokazuje, że zmienna **literału** oznacza **`static`** .
 
 ```cpp
 // mcppv2_literal.cpp
@@ -78,7 +78,7 @@ public ref struct A {
 };
 ```
 
-Zwróć uwagę na różnice w metadanych dla `sc` i `lit`: dyrektywa `modopt` jest stosowana do `sc`, co oznacza, że może być ignorowana przez inne kompilatory.
+Zwróć uwagę na różnice w metadanych dla `sc` i `lit` : `modopt` dyrektywa jest stosowana do `sc` , co oznacza, że może być ignorowana przez inne kompilatory.
 
 ```
 .field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)
@@ -90,7 +90,7 @@ Zwróć uwagę na różnice w metadanych dla `sc` i `lit`: dyrektywa `modopt` je
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład, który został utworzony w C#, odwołuje się do metadanych utworzonych w poprzednim przykładzie i pokazuje wpływ **literału** i **statyczne zmienne stałe** :
+Poniższy przykład, utworzony w języku C#, odwołuje się do metadanych utworzonych w poprzednim przykładzie i pokazuje wpływ **literału** i **statyczne zmienne stałe** :
 
 ```csharp
 // mcppv2_literal3.cs
@@ -123,8 +123,8 @@ class B {
 
 ## <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: `/clr`
+Opcja kompilatora:`/clr`
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

@@ -1,29 +1,29 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4463
+title: Ostrzeżenie kompilatora (poziom 4) C4463
 ms.date: 11/04/2016
 f1_keywords:
 - C4463
 helpviewer_keywords:
 - C4463
 ms.assetid: a07ae70c-db4e-472b-8b58-9137d9997323
-ms.openlocfilehash: e125a532f87533958ec43ed5580665ad4108856b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acc7957493942a9c0e19ce098b74ed0b5d75a12d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400802"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214363"
 ---
-# <a name="compiler-warning-level-4-c4463"></a>Kompilator ostrzeżenie (poziom 4) C4463
+# <a name="compiler-warning-level-4-c4463"></a>Ostrzeżenie kompilatora (poziom 4) C4463
 
-> przepełnienie; Przypisywanie *wartość* do pola bitowego, która może zawierać wartości z *low_value* do *high_value*
+> przepływ Przypisywanie *wartości* do pola bitowego, które może zawierać tylko wartości z *low_value* do *high_value*
 
-Przypisane *wartość* znajduje się poza zakresem wartości, które mogą zawierać pola bitowego. Typy ze znakiem pola bitowego Użyj znaczących bitów podczas logowania, więc jeśli *n* jest rozmiar pola bitowego, zakres, dla podpisanych pól bitowych to -2<sup>n-1</sup> 2<sup>n-1</sup>-1, podczas gdy bez znaku pola bitowe ma zakres od 0 do 2<sup>n</sup>-1.
+Przypisana *wartość* znajduje się poza zakresem wartości, które może zawierać pole bitowe. Podpisane typy pól bitowych używają bitu o wysokiej kolejności dla znaku, więc jeśli *n* to rozmiar pola bitowego, zakres podpisanych pól bitowych to-2<sup>n-1</sup> do 2<sup>n-</sup>1-1, podczas gdy pola bitowe bez znaku mają zakres od 0 do 2<sup>n</sup>-1.
 
 ## <a name="example"></a>Przykład
 
-Ten przykład generuje C4463, ponieważ próbuje przypisać wartość 3 do pola bitowego typu `int` o rozmiarze 2, która ma zakres od -2 do 1.
+Ten przykład generuje C4463, ponieważ próbuje przypisać wartość 3 do pola bitowego typu **`int`** o rozmiarze 2, który ma zakres od-2 do 1.
 
-Aby rozwiązać ten problem, można zmienić przypisaną wartością coś o nim w dozwolonym zakresem. Jeśli pole bitowe jest przeznaczony do przechowywania wartości bez znaku z zakresu od 0 do 3, można zmienić typu zgłoszenia do `unsigned`. Jeśli pole jest przeznaczony do przechowywania wartości w zakresie -4-3, można zmienić rozmiar pola bitowego do 3.
+Aby rozwiązać ten problem, można zmienić przypisaną wartość na coś w dozwolonym zakresie. Jeśli pole bitowe jest przeznaczone do przechowywania wartości bez znaku z zakresu od 0 do 3, można zmienić typ deklaracji na **`unsigned`** . Jeśli pole jest przeznaczone do przechowywania wartości z zakresu od 4 do 3, można zmienić rozmiar pola bitowego na 3.
 
 ```cpp
 // C4463_overflow.cpp

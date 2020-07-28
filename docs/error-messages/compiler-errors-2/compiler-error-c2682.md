@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2682
 ms.assetid: 30c6a7c4-f5f7-4fe8-81a8-c48938521ab4
-ms.openlocfilehash: c1ce0132ed0db418359effe60f59e1eb2d3cc221
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 2697ce5a790fffe762d97ca3380853514de6d437
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760286"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220265"
 ---
 # <a name="compiler-error-c2682"></a>Błąd kompilatora C2682
 
 nie można użyć casting_operator do konwersji z "type1" na "type2"
 
-Operator rzutowania próbował wykonać konwersję między niezgodnymi typami. Na przykład nie można użyć operatora [dynamic_cast](../../cpp/dynamic-cast-operator.md) , aby skonwertować wskaźnik na odwołanie. Operatora `dynamic_cast` nie można użyć do rzutowania kwalifikatorów. Wszystkie kwalifikatory typów muszą być zgodne.
+Operator rzutowania próbował wykonać konwersję między niezgodnymi typami. Na przykład nie można użyć operatora [dynamic_cast](../../cpp/dynamic-cast-operator.md) , aby skonwertować wskaźnik na odwołanie. **`dynamic_cast`** Nie można użyć operatora do rzutowania kwalifikatorów. Wszystkie kwalifikatory typów muszą być zgodne.
 
-Możesz użyć operatora `const_cast`, aby usunąć atrybuty, takie jak `const`, `volatile`lub `__unaligned`.
+Możesz użyć operatora, **`const_cast`** Aby usunąć atrybuty, takie jak **`const`** , **`volatile`** , lub **`__unaligned`** .
 
 Poniższy przykład generuje C2682:
 

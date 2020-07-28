@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3718
 ms.assetid: 346b5205-c44d-49d3-b66a-96417d3d6986
-ms.openlocfilehash: d0bcf784f5b522d05585d63a3b38a2befb5aa191
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 423c65271c640b987381728b5b9be454a74dfa22
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753201"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214519"
 ---
 # <a name="compiler-error-c3718"></a>Błąd kompilatora C3718
 
-element "Event" można wywołać tylko w kontekście funkcji składowej klasy odbiorczej
+> element "*Event*" można wywołać tylko w kontekście funkcji składowej klasy odbiorczej
 
-`event` można wywołać tylko z klasy odbiorczej.
+Zdarzenie można wywołać tylko z klasy odbiorczej.
 
 ## <a name="example"></a>Przykład
 

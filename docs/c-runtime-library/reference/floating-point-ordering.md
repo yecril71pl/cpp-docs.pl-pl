@@ -1,5 +1,5 @@
 ---
-title: isgreater isgreaterequal, isless, islessequal, islessgreater, isunordered
+title: isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered
 ms.date: 01/31/2019
 f1_keywords:
 - isgreater
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - islessequal function
 - islessgreater function
 - isunordered function
-ms.openlocfilehash: 748360cae1dd0ee43645dee369c60c835246ed03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 907b26f4e1824d7ef5c7c1a36b4e4d8ccb74c978
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333706"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220720"
 ---
-# <a name="isgreater-isgreaterequal-isless-islessequal-islessgreater-isunordered"></a>isgreater isgreaterequal, isless, islessequal, islessgreater, isunordered
+# <a name="isgreater-isgreaterequal-isless-islessequal-islessgreater-isunordered"></a>isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered
 
-Określa szeregowania relację między dwiema wartościami zmiennoprzecinkowych.
+Określa relację porządkowania między dwiema wartościami zmiennoprzecinkowymi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -111,29 +111,29 @@ Wartości zmiennoprzecinkowe do porównania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wszystkie porównania porównuje nieskończoności ten sam znak jako równe. Minus nieskończoności jest mniejsza niż wartość skończoną ani nieskończoności dodatniej. Nieskończoności dodatniej jest większa niż wartość skończoną ani ujemna nieskończoność. Wartości zerowe są takie same, niezależnie od tego znaku. NaNs nie jest mniejsza, równa lub większa niż dowolne wartości, w tym innego NaN.
+We wszystkich porównaniach nieskończoności tego samego znaku należy porównać jako równe. Ujemna nieskończoność jest mniejsza od dowolnej wartości lub nieskończoności dodatniej. Nieskończoność dodatnia jest większa niż jakakolwiek wartość skończone lub nieskończoność ujemna. Zera są równe niezależnie od znaku. NaNs nie są mniejsze niż lub równe żadnej wartości, łącznie z innym NaN.
 
-Jeśli żaden argument jest NaN, makra szeregowania **isgreater**, **isgreaterequal**, **isless**, i **islessequal** zwracają różna od zera Jeśli określonej relacji szeregowania między *x* i *y* prawdziwe. Te makra zwraca 0, jeśli jeden lub oba argumenty są NaNs lub szeregowania relacji ma wartość false. Formularze funkcja zachowują się tak samo, ale powróci **true** lub **false**.
+Gdy żaden z argumentów nie jest NaN, porządkowanie makr **isisgreaterequal**, **isless**i **islessequal** zwracają wartość różną od **zera, jeśli**określona relacja kolejności między *x* a *y* ma wartość true. Te makra zwracają wartość 0, jeśli jeden lub oba argumenty są NaNs lub jeśli relacja kolejności ma wartość false. Formularze funkcji działają w ten sam sposób, ale zwracają **`true`** lub **`false`** .
 
-**Islessgreater** makro zwraca wartość niezerową, jeśli obie *x* i *y* nie są NaNs, i *x* jest mniejsza niż lub równa *y*. Zwraca 0, jeśli jeden lub oba argumenty są NaNs lub jeśli wartości są równe. Formularz funkcja działa tak samo, ale zwraca **true** lub **false**.
+Makro **islessgreater** zwraca wartość różną od zera, jeśli zarówno *x* , jak i *y* nie są Nans, a *x* jest albo mniejsze niż lub większe niż *y*. Zwraca wartość 0, jeśli jeden lub oba argumenty są NaNs lub wartości są równe. Formularz funkcji działa tak samo, ale zwraca **`true`** lub **`false`** .
 
-**Isunordered** — makro zwraca wartość niezerową, jeśli *x*, *y*, lub jedne i drugie są NaNs. W przeciwnym razie zwraca wartość 0. Formularz funkcja działa tak samo, ale zwraca **true** lub **false**.
+Makro **isunordered** zwraca wartość różną od zera, jeśli zarówno *x*, *y*, jak i obie są Nans. W przeciwnym razie zwraca wartość 0. Formularz funkcji działa tak samo, ale zwraca **`true`** lub **`false`** .
 
 ## <a name="remarks"></a>Uwagi
 
-Te operacje porównania są implementowane jako makra, gdy skompilowano C, jak i wbudowane funkcje szablonu, gdy skompilowano co kod C++.
+Te operacje porównania są implementowane jako makra w przypadku skompilowania jako C, a jako wbudowane funkcje szablonu po skompilowaniu jako C++.
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |--------------|---------------------------|-------------------------------|
-| **isgreater**, **isgreaterequal**, **isless**,<br/>**islessequal**, **islessgreater**, **isunordered** | \<math.h> | \<Math.h > lub \<cmath > |
+| **isgreater**isisgreaterequal, **isless**, **isgreaterequal**<br/>**islessequal**, **islessgreater**, **isunordered** | \<math.h> | \<math.h> lub \<cmath> |
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

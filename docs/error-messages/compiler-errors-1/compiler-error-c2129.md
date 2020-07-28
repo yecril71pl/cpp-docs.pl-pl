@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2129
 ms.assetid: 21a8223e-1d22-4baa-9ca1-922b7f751dd0
-ms.openlocfilehash: a3e2268bfc5597668e8689d093a0c2bb7f18e037
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9cf414200dcfad8ae617e16e111bd26b19a315a6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80207288"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220434"
 ---
 # <a name="compiler-error-c2129"></a>Błąd kompilatora C2129
 
 funkcja statyczna "Function" została zadeklarowana, ale nie została zdefiniowana
 
-Odwołanie do przodu jest wykonywane do funkcji `static`, która nigdy nie jest zdefiniowana.
+Odwołanie do przodu jest tworzone do **`static`** funkcji, która nigdy nie jest zdefiniowana.
 
-Funkcja `static` musi być zdefiniowana w zakresie pliku. Jeśli funkcja jest zdefiniowana w innym pliku, należy ją zadeklarować `extern`.
+**`static`** Funkcja musi być zdefiniowana w zakresie pliku. Jeśli funkcja jest zdefiniowana w innym pliku, musi być zadeklarowana **`extern`** .

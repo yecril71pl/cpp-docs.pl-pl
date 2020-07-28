@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
-ms.openlocfilehash: b2fa2643898fed510aa7cf0f483b538ebb33b033
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5e2dd6b01db5f7d3026f14c5032ab4623eb6fb58
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760455"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220291"
 ---
 # <a name="compiler-error-c2662"></a>Błąd kompilatora C2662
 
 "Function": nie można skonwertować wskaźnika "This" z "type1" na "type2"
 
-Kompilator nie może skonwertować wskaźnika `this` z `type1` na `type2`.
+Kompilator nie może skonwertować **`this`** wskaźnika z `type1` do `type2` .
 
-Ten błąd może być spowodowany wywołaniem funkcji członkowskiej innej niż`const` na obiekcie `const`.  Możliwe rozwiązania:
+Ten błąd może być spowodowany wywoływaniem **`const`** funkcji nienależącej do elementu członkowskiego w **`const`** obiekcie.  Możliwe rozwiązania:
 
-- Usuń `const` z deklaracji obiektu.
+- Usuń **`const`** z deklaracji Object.
 
-- Dodaj `const` do funkcji członkowskiej.
+- Dodaj **`const`** do funkcji członkowskiej.
 
 Poniższy przykład generuje C2662:
 
@@ -41,7 +41,7 @@ int main() {
 }
 ```
 
-Podczas kompilowania z **/CLR**nie można wywołać funkcji na `const` lub `volatile` kwalifikowanego typu zarządzanego. Nie można zadeklarować stałej funkcji składowej klasy zarządzanej, więc nie można wywoływać metod w zarządzanych obiektach const.
+Podczas kompilowania z **/CLR**nie można wywołać funkcji dla **`const`** lub **`volatile`** kwalifikowanego typu zarządzanego. Nie można zadeklarować stałej funkcji składowej klasy zarządzanej, więc nie można wywoływać metod w zarządzanych obiektach const.
 
 ```cpp
 // C2662_b.cpp

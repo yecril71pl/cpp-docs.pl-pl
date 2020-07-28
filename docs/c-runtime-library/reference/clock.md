@@ -28,12 +28,12 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 660c97882151127cc6c1caa64bb27f5728f169fb
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 03d1a9ece92dbedfdceb89488e5d0440dc64f7ae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737471"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220733"
 ---
 # <a name="clock"></a>zegar
 
@@ -53,7 +53,7 @@ Czas, który upłynął od momentu inicjalizacji CRT na początku procesu, mierz
 
 Funkcja **Clock** informuje, ile czasu zegar ściany został zakończony od momentu inicjalizacji CRT podczas uruchamiania procesu. Należy zauważyć, że ta funkcja nie jest ściśle zgodna z normą ISO C, która określa czas procesora CPU jako wartość zwracaną. Aby uzyskać czasy procesora, użyj funkcji Win32 [GetProcessTimes](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) . Aby określić czas (w sekundach), należy podzielić wartość zwróconą przez funkcję **zegara** przez makro **CLOCKS_PER_SEC**.
 
-Mając wystarczająco dużo czasu, wartość zwracana przez **zegar** może przekroczyć maksymalną wartość dodatnią **clock_t**. Gdy proces ma więcej czasu, wartość zwracana przez **zegar** jest zawsze `(clock_t)(-1)` określona przez standard ISO C99 Standard (7.23.2.1) i ISO C11 (7.27.2.1). Firma Microsoft implementuje **clock_t** jako **Long**, cyfrowo 32-bitową liczbę całkowitą i makro **CLOCKS_PER_SEC** jest zdefiniowane jako 1000. Dzięki temu maksymalna wartość **zegara** jest zwracana przez 2147483,647 sekund lub około 24,8 dni. Nie należy polegać na wartości zwracanej przez **zegar** w procesach, które są wykonywane dłużej niż ten czas. Można użyć funkcji [czasu](time-time32-time64.md) 64-bitowego lub funkcji [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) systemu Windows, aby nagrać czas, który upłynął przez wiele lat.
+Mając wystarczająco dużo czasu, wartość zwracana przez **zegar** może przekroczyć maksymalną wartość dodatnią **clock_t**. Gdy proces ma więcej czasu, wartość zwracana przez **zegar** jest zawsze `(clock_t)(-1)` określona przez standard ISO C99 Standard (7.23.2.1) i ISO C11 (7.27.2.1). Firma Microsoft implementuje **clock_t** w postaci **`long`** podpisanej 32-bitowej liczby całkowitej, a makro **CLOCKS_PER_SEC** jest zdefiniowane jako 1000. Dzięki temu maksymalna wartość **zegara** jest zwracana przez 2147483,647 sekund lub około 24,8 dni. Nie należy polegać na wartości zwracanej przez **zegar** w procesach, które są wykonywane dłużej niż ten czas. Można użyć funkcji [czasu](time-time32-time64.md) 64-bitowego lub funkcji [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) systemu Windows, aby nagrać czas, który upłynął przez wiele lat.
 
 ## <a name="requirements"></a>Wymagania
 

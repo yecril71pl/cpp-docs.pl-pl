@@ -5,19 +5,19 @@ ms.topic: reference
 helpviewer_keywords:
 - pointers, interior
 ms.assetid: 64e08b0e-9396-4046-ab51-8f6588f32330
-ms.openlocfilehash: 9515abb6fed2ffd2c818fc14eae321bfcc856ce5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c5768487c9b720b1a49e50de88022a2bdc02d482
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172312"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214285"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Poradnik: Deklarowanie wewnętrznych wskaźników za pomocą słowa kluczowego const (C++/CLI)
 
-Poniższy przykład pokazuje, jak używać **stałej** w deklaracji wskaźnika wewnętrznego.
+Poniższy przykład pokazuje, jak używać **`const`** w deklaracji wskaźnika wewnętrznego.
 
 > [!IMPORTANT]
-> Ta funkcja języka jest obsługiwana przez opcję kompilatora `/clr`, ale nie za pomocą opcji kompilatora `/ZW`.
+> Ta funkcja języka jest obsługiwana przez `/clr` opcję kompilatora, ale nie przez `/ZW` opcję kompilatora.
 
 ## <a name="example"></a>Przykład
 
@@ -78,6 +78,6 @@ int main() {
 };
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)

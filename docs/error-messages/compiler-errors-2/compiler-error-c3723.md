@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3723
 ms.assetid: ef0fb1ff-3f9a-4093-a6b6-894d1ab0c4b9
-ms.openlocfilehash: c45eee5ead680f63b85dcdd94e4ca099dabfeefc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 2948b9af50179082e61a222484053bcf3858f454
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74752993"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220174"
 ---
 # <a name="compiler-error-c3723"></a>Błąd kompilatora C3723
 
-"Function": nie można rozpoznać zdarzenia
+> "Function": nie można rozpoznać zdarzenia
 
-`function` nie może rozpoznać zdarzenia do wywołania.
+`function`nie można rozpoznać zdarzenia do wywołania.
 
 Poniższy przykład generuje C3723:
 
@@ -42,7 +42,7 @@ int main() {
 }
 ```
 
-`__hook` i `__unhook` nie są zgodne z programowaniem/CLR.  Zamiast tego użyj operatorów + = i-=.
+**`__hook`** i **`__unhook`** nie są zgodne z **`/clr`** programowaniem.  Zamiast tego użyj operatorów + = i-=.
 
 Poniższy przykład generuje C3723:
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2108
 ms.assetid: c84f0b47-5e2c-47d2-8edb-427a40e17c36
-ms.openlocfilehash: 069f369627f42314cc14688a9e0c0a55808db507
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: cbbfa865682ac7423fccd9de4212d901f408810f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74752031"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214779"
 ---
 # <a name="compiler-error-c2108"></a>Błąd kompilatora C2108
 
@@ -21,7 +21,7 @@ Indeks dolny tablicy jest wyrażeniem niebędącym liczbą całkowitą.
 
 ## <a name="example"></a>Przykład
 
-C2108 może wystąpić, jeśli nieprawidłowo użyto wskaźnika `this` typu wartości, aby uzyskać dostęp do domyślnego indeksatora typu. Aby uzyskać więcej informacji, zobacz [semantyka tego wskaźnika](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).
+C2108 może wystąpić w przypadku nieprawidłowego użycia **`this`** wskaźnika typu wartości w celu uzyskania dostępu do domyślnego indeksatora typu. Aby uzyskać więcej informacji, zobacz [semantyka tego wskaźnika](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).
 
 Poniższy przykład generuje C2108.
 

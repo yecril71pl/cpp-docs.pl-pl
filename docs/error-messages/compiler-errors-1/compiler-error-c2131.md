@@ -1,26 +1,26 @@
 ---
-title: C2131 błąd kompilatora
+title: Błąd kompilatora C2131
 ms.date: 02/28/2019
 f1_keywords:
 - C2131
 helpviewer_keywords:
 - C2131
-ms.openlocfilehash: 19bdf73efa82e624382446c94642ceddac00bf2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e5dc328375f720ad39ce57a3da500e0bedcb468
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397591"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220421"
 ---
-# <a name="compiler-error-c2131"></a>C2131 błąd kompilatora
+# <a name="compiler-error-c2131"></a>Błąd kompilatora C2131
 
-> Wyrażenie nie zostało obliczone do stałej
+> wyrażenie nie zostało obliczone do stałej
 
-Wyrażenie jest zadeklarowane jako **const** lub **constexpr** nie zostało oszacowane jako stała w czasie kompilacji. Kompilator musi mieć możliwość określenia wartości wyrażenia w punkcie, który jest używany.
+Wyrażenie zadeklarowane jako **`const`** lub **`constexpr`** nie zostało obliczone do stałej w czasie kompilacji. Kompilator musi być w stanie określić wartość wyrażenia w punkcie, w którym jest używana.
 
 ## <a name="example"></a>Przykład
 
-Ten przykład przedstawia sposób, aby spowodować błąd C2131 i jak go naprawić.
+Ten przykład pokazuje sposób, aby spowodować wystąpienie błędu C2131 i sposób jego naprawy.
 
 ```cpp
 // c2131.cpp

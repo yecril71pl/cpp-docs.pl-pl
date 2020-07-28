@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2360
 ms.assetid: 51bfd2ee-8108-4777-aa93-148b9cebfa83
-ms.openlocfilehash: 226fcd8a27c9abdb789b8191a5cf4e59cc4a66cc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a2a164f919dc7535a4587d51f4f7dba8653a1760
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759909"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214688"
 ---
 # <a name="compiler-error-c2360"></a>Błąd kompilatora C2360
 
 Inicjalizacja elementu "identifier" jest pomijana w etykiecie "Case"
 
-Inicjalizację `identifier` można pominąć w instrukcji `switch`. Nie można przeskoczyć do wcześniejszej deklaracji z inicjatorem, chyba że deklaracja jest ujęta w bloku. (Chyba że jest zadeklarowany w bloku, zmienna jest w zakresie do końca instrukcji `switch`).
+Inicjowanie `identifier` można pominąć w **`switch`** instrukcji. Nie można przeskoczyć do wcześniejszej deklaracji z inicjatorem, chyba że deklaracja jest ujęta w bloku. (Chyba że jest zadeklarowany wewnątrz bloku, zmienna jest w zakresie do końca **`switch`** instrukcji).
 
 Poniższy przykład generuje C2360:
 

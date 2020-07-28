@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-ms.openlocfilehash: 62f297bba116550f572725a6bde094e5407777a4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac31df51490880cdd831a34c8adeed9223aafc21
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939412"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220746"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
 
@@ -66,7 +66,7 @@ long double cabsl(
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*porządku*<br/>
 Liczba złożona.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -75,11 +75,11 @@ Wartość bezwzględna *z.*
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **OOZ** , które pobierają wartości **_Fcomplex** lub **_Lcomplex** , i zwracają wartości **zmiennoprzecinkowe** lub **długie** **Double** . W programie w języku C, **OOZ** zawsze przyjmuje wartość **_Dcomplex** i zwraca wartość **podwójnej precyzji** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **OOZ** , które pobierają **_Fcomplex** lub **_Lcomplex** wartości, oraz zwracają **`float`** lub **`long double`** wartości. W programie w języku C, **OOZ** zawsze przyjmuje wartość **_Dcomplex** i zwraca **`double`** wartość.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
 |**OOZ**, **cabsf**, **OOZ**|\<complex.h>|\<ccomplex>|
 

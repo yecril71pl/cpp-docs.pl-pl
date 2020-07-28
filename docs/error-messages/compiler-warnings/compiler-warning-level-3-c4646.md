@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4646
 ms.assetid: 23677e8e-603e-40e0-b99a-2e4894a1278e
-ms.openlocfilehash: a5f78a978baa1c5b4c7854692d7b8b6ff294f3a2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 3bbb9214a67284876c55e04485cea796cf9dbc29
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991720"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214428"
 ---
 # <a name="compiler-warning-level-3-c4646"></a>Ostrzeżenie kompilatora (poziom 3) C4646
 
 Funkcja zadeklarowana z elementem __declspec (noreturn) ma typ inny niż void
 
-Funkcja oznaczona modyfikatorem [noreturn](../../cpp/noreturn.md) `__declspec` powinna mieć typ [void](../../cpp/void-cpp.md) Return.
+Funkcja oznaczona modyfikatorem [noreturn](../../cpp/noreturn.md) **`__declspec`** powinna mieć typ zwracany [void](../../cpp/void-cpp.md) .
 
 Poniższy przykład generuje C4646:
 

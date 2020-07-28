@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 265553d29bcc153bbbb065443391d3aa4b3b0bd2
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4f9462ca15f5db5c3f8c0de88ce5a76b142065b4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404554"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220551"
 ---
 # <a name="comptr-class"></a>ComPtr — Klasa
 
@@ -77,7 +77,7 @@ friend class ComPtr;
 *T*<br/>
 Interfejs, który `ComPtr` reprezentuje.
 
-*'T*<br/>
+*U*<br/>
 Klasa, do której jest obecny `ComPtr` obiekt zaprzyjaźniony. (Szablon, który używa tego parametru jest chroniony).
 
 ## <a name="remarks"></a>Uwagi
@@ -177,7 +177,7 @@ HRESULT As(
 
 ### <a name="parameters"></a>Parametry
 
-*'T*<br/>
+*U*<br/>
 Interfejs, który ma być reprezentowany przez parametr *p*.
 
 *St*<br/>
@@ -286,7 +286,7 @@ WRL_NOTHROW ComPtr(
 
 ### <a name="parameters"></a>Parametry
 
-*'T*<br/>
+*U*<br/>
 Typ *drugiego* parametru.
 
 *różnych*<br/>
@@ -326,7 +326,7 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>Parametry
 
-*'T*<br/>
+*U*<br/>
 Nazwa typu.
 
 *ptr*<br/>
@@ -440,7 +440,7 @@ Wskaźnik do typu określonego przez nazwę bieżącego typu szablonu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja pomocnika usuwa niepotrzebne obciążenie spowodowane przez użycie makra STDMETHOD. Ta funkcja tworzy `IUnknown` typy `private` zamiast `virtual` .
+Ta funkcja pomocnika usuwa niepotrzebne obciążenie spowodowane przez użycie makra STDMETHOD. Ta funkcja tworzy `IUnknown` typy **`private`** zamiast **`virtual`** .
 
 ## <a name="comptroperator"></a><a name="operator-assign"></a>ComPtr:: operator =
 
@@ -475,7 +475,7 @@ WRL_NOTHROW ComPtr& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*'T*<br/>
+*U*<br/>
 Klasa.
 
 *różnych*<br/>
@@ -532,9 +532,9 @@ Odwołanie do innego `ComPtr` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwszy operator daje `true` , że obiekt *a* jest równy obiektowi *b*; w przeciwnym razie `false` .
+Pierwszy operator daje **`true`** , że obiekt *a* jest równy obiektowi *b*; w przeciwnym razie **`false`** .
 
-Drugi i trzeci operator `true` uzyskują wartość, jeśli obiekt *a* jest równy `nullptr` ; w przeciwnym razie `false` .
+Drugi i trzeci operator **`true`** uzyskują wartość, jeśli obiekt *a* jest równy **`nullptr`** ; w przeciwnym razie **`false`** .
 
 ## <a name="comptroperator"></a><a name="operator-inequality"></a>ComPtr:: operator! =
 
@@ -567,9 +567,9 @@ Odwołanie do innego `ComPtr` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwszy operator daje `true` , że obiekt *a* nie jest równy obiektowi *b*; w przeciwnym razie `false` .
+Pierwszy operator daje **`true`** , że obiekt *a* nie jest równy obiektowi *b*; w przeciwnym razie **`false`** .
 
-Drugi i trzeci operator uzyskują `true` wartość, jeśli obiekt *a* nie jest równy `nullptr` ; w przeciwnym razie `false` .
+Drugi i trzeci operator **`true`** uzyskują wartość, jeśli obiekt *a* nie jest równy **`nullptr`** ; w przeciwnym razie **`false`** .
 
 ## <a name="comptroperator-microsoftwrldetailsbooltype"></a><a name="operator-microsoft-wrl-details-booltype"></a>ComPtr:: operator Microsoft:: WRL::D etails:: BoolType
 
@@ -581,7 +581,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli interfejs jest skojarzony z tym `ComPtr` , adresem elementu członkowskiego danych [BoolStruct:: member](boolstruct-structure.md#member) ; w przeciwnym razie, `nullptr` .
+Jeśli interfejs jest skojarzony z tym `ComPtr` , adresem elementu członkowskiego danych [BoolStruct:: member](boolstruct-structure.md#member) ; w przeciwnym razie, **`nullptr`** .
 
 ## <a name="comptrptr_"></a><a name="ptr"></a>ComPtr::p tr_
 

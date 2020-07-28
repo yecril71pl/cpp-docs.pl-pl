@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: f364c3c0b558c00e3d411ab5b697ed01ec395cbd
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 760973bba1798068b5a19ebeb7a285d241d4ef72
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299081"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220811"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Podsumowanie okresu istnienia i widoczności
 
@@ -20,13 +20,13 @@ Poniższa tabela zawiera podsumowanie okresu istnienia i cech charakterystycznyc
 
 |Atrybuty:<br /><br /> Poziom|Element|Storage — Klasa<br /><br /> Specyfikator|Wynik:<br /><br /> Okres istnienia|Widoczność|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
-|Zakres pliku|Definicja zmiennej|**static**|Globalny|Pozostała część pliku źródłowego, w którym występuje|
-||Deklaracja zmiennej|**extern**|Globalny|Pozostała część pliku źródłowego, w którym występuje|
-||Prototyp lub definicja funkcji|**static**|Globalny|Pojedynczy plik źródłowy|
-||Prototyp funkcji|**extern**|Globalny|Pozostała część pliku źródłowego|
-|Zakres bloku|Deklaracja zmiennej|**extern**|Globalny|Zablokowanie|
-||Definicja zmiennej|**static**|Globalny|Zablokowanie|
-||Definicja zmiennej|**Autofiltr** lub **Rejestruj**|Lokalny|Zablokowanie|
+|Zakres pliku|Definicja zmiennej|**`static`**|Globalnie|Pozostała część pliku źródłowego, w którym występuje|
+||Deklaracja zmiennej|**`extern`**|Globalnie|Pozostała część pliku źródłowego, w którym występuje|
+||Prototyp lub definicja funkcji|**`static`**|Globalnie|Pojedynczy plik źródłowy|
+||Prototyp funkcji|**`extern`**|Globalnie|Pozostała część pliku źródłowego|
+|Zakres bloku|Deklaracja zmiennej|**`extern`**|Globalnie|Zablokowanie|
+||Definicja zmiennej|**`static`**|Globalnie|Zablokowanie|
+||Definicja zmiennej|**`auto`** oraz**`register`**|Lokalne|Zablokowanie|
 
 ## <a name="example"></a>Przykład
 
@@ -34,7 +34,7 @@ Poniższa tabela zawiera podsumowanie okresu istnienia i cech charakterystycznyc
 
 Poniższy przykład ilustruje bloki, zagnieżdżanie i widoczność zmiennych:
 
-### <a name="code"></a>Code
+### <a name="code"></a>Kod
 
 ```c
 // Lifetime_and_Visibility.c
@@ -66,6 +66,6 @@ int main()  // main function defined at external level
 
 W tym przykładzie istnieją cztery poziomy widoczności: poziom zewnętrzny i trzy poziomy blokowania. Wartości są drukowane na ekranie zgodnie z opisem w komentarzach po każdej instrukcji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Okres istnienia, zakres, widoczność i połączenie](../c-language/lifetime-scope-visibility-and-linkage.md)

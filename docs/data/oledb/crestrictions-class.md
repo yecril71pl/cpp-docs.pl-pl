@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 4a4c86987ceff0f04986d32011ba941e0d2319fe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9fb911b469497a007550c042ade97b5a463e78fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211305"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220447"
 ---
 # <a name="crestrictions-class"></a>Klasa CRestrictions
 
@@ -34,7 +34,7 @@ class CRestrictions :
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
+*T*<br/>
 Klasa używana dla metody dostępu.
 
 *nRestrictions*<br/>
@@ -47,7 +47,7 @@ Wskaźnik do identyfikatora GUID schematu.
 
 **Nagłówek:** atldbsch. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="methods"></a>Metody
 
@@ -82,7 +82,7 @@ podczas Określa istniejący obiekt sesji używany do nawiązywania połączenia
 podczas Określa ograniczenia dotyczące zestawu wierszy schematu.
 
 *bBind*<br/>
-podczas Określa, czy automatycznie powiązać mapę kolumn. Wartość domyślna to **true**, co powoduje automatyczne powiązanie mapy kolumn. Ustawienie *bBind* na **false** uniemożliwia automatyczne powiązanie mapy kolumn, aby można było utworzyć powiązanie ręcznie. (Ręczne powiązanie ma szczególne znaczenie dla użytkowników OLAP).
+podczas Określa, czy automatycznie powiązać mapę kolumn. Wartość domyślna to **`true`** , co powoduje automatyczne powiązanie mapy kolumn. Ustawienie *bBind* **`false`** uniemożliwia automatyczne wiązanie mapy kolumn, aby można było utworzyć powiązanie ręcznie. (Ręczne powiązanie ma szczególne znaczenie dla użytkowników OLAP).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -94,8 +94,8 @@ W zestawie wierszy schematu można określić maksymalnie siedem ograniczeń.
 
 Zobacz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) , aby uzyskać informacje o zdefiniowanych ograniczeniach dla każdego zestawu wierszy schematu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[Klasy zestawów wierszy schematu i klasy Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+[Dokumentacja szablonów klientów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Klasy zestawów wierszy schematu i klasy typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-ms.openlocfilehash: 44c6293b56e9e03c23d0d8cebf2a112e6fcf3664
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f43166920f3582ab681b67d2c89563dcf78ff0f1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214035"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220499"
 ---
 # <a name="enableif-structure"></a>EnableIf — Struktura
 
@@ -30,7 +30,7 @@ struct EnableIf<true, T>;
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
+*T*<br/>
 Typ.
 
 *b*<br/>
@@ -38,15 +38,15 @@ Wyrażenie logiczne.
 
 ## <a name="remarks"></a>Uwagi
 
-Definiuje element członkowski danych typu określonego przez drugi parametr szablonu, jeśli pierwszy parametr szablonu daje w wyniku **wartość true**.
+Definiuje element członkowski danych typu określonego przez drugi parametr szablonu, jeśli pierwszy parametr szablonu daje w wyniku **`true`** .
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|`type`|Jeśli parametr szablonu *b* zwróci **wartość true**, Częściowa specjalizacja definiuje składową danych `type` być typu `T`.|
+|`type`|Jeśli parametr szablonu *b* szacuje się na **`true`** , Częściowa specjalizacja definiuje element członkowski danych `type` jako typ `T` .|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -58,6 +58,6 @@ Definiuje element członkowski danych typu określonego przez drugi parametr sza
 
 **Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)
+[Microsoft:: WRL::D etails — przestrzeń nazw](microsoft-wrl-details-namespace.md)

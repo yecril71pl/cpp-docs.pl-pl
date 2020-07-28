@@ -1,41 +1,41 @@
 ---
-title: nullptr (C++/CLI i C++/CX)
+title: nullptr  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 02da716959deb7fcffa7a63a8308279a765c4569
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5e7a5d3f9a42968dee35f82d3f19d0fdb6da5d0c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172117"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214233"
 ---
-# <a name="nullptr--ccli-and-ccx"></a>nullptr (C++/CLI i C++/CX)
+# <a name="nullptr--ccli-and-ccx"></a>nullptr  (C++/CLI i C++/CX)
 
-Słowo kluczowe **nullptr** reprezentuje *wartość wskaźnika o wartości null*. Użyj wartości wskaźnika o wartości null, aby wskazać, że uchwyt obiektu, wskaźnik wewnętrzny lub typ wskaźnika natywnego nie wskazuje na obiekt.
+**`nullptr`** Słowo kluczowe reprezentuje *wartość wskaźnika o wartości null*. Użyj wartości wskaźnika o wartości null, aby wskazać, że uchwyt obiektu, wskaźnik wewnętrzny lub typ wskaźnika natywnego nie wskazuje na obiekt.
 
-Użyj **nullptr** z kodem zarządzanym lub natywnym. Kompilator emituje odpowiednie, ale różne instrukcje dotyczące zarządzanych i natywnych wartości wskaźników wartości null. Aby uzyskać informacje o używaniu standardowej C++ wersji ISO tego słowa kluczowego, zobacz [nullptr](../cpp/nullptr.md).
+Używany **`nullptr`** z kodem zarządzanym lub natywnym. Kompilator emituje odpowiednie, ale różne instrukcje dotyczące zarządzanych i natywnych wartości wskaźników wartości null. Aby uzyskać informacje na temat używania standardowej wersji ISO języka C++ tego słowa kluczowego, zobacz [nullptr](../cpp/nullptr.md).
 
-Słowo kluczowe **__nullptr** jest słowem kluczowym specyficznym dla firmy Microsoft, który ma takie samo znaczenie jak **nullptr**, ale ma zastosowanie tylko do kodu natywnego. Jeśli używasz **nullptr** z natywną literąC++ C/Code, a następnie kompilujesz przy użyciu opcji kompilatora [/CLR](../build/reference/clr-common-language-runtime-compilation.md) , kompilator nie może określić, czy **nullptr** wskazuje natywną lub zarządzaną wartość wskaźnika o wartości null. Aby wyznaczać zamierzone dla kompilatora, użyj **nullptr** , aby określić wartość zarządzaną lub **__nullptr** , aby określić wartość natywną.
+Słowo kluczowe **__nullptr** jest słowem kluczowym specyficznym dla firmy Microsoft, który ma takie samo znaczenie jak **`nullptr`** , ale ma zastosowanie tylko do kodu natywnego. Jeśli używasz **`nullptr`** z natywnym kodem C/C++, a następnie kompilujesz przy użyciu opcji kompilatora [/CLR](../build/reference/clr-common-language-runtime-compilation.md) , kompilator nie może określić, czy **`nullptr`** wskazuje natywną lub zarządzaną wartość wskaźnika o wartości null. Aby wyznaczać zamierzone dla kompilatora, użyj, **`nullptr`** Aby określić wartość zarządzaną lub **__nullptr** , aby określić wartość natywną.
 
-Słowo kluczowe **nullptr** jest odpowiednikiem **Nothing** w Visual Basic i **wartości null** w C#elemencie.
+**`nullptr`** Słowo kluczowe jest równoważne wartości **Nothing** w Visual Basic i **null** w języku C#.
 
 ## <a name="usage"></a>Sposób użycia
 
-Słowa kluczowego **nullptr** można użyć wszędzie tam, gdzie można użyć uchwytu, wskaźnika natywnego lub argumentu funkcji.
+**`nullptr`** Słowo kluczowe może być używane wszędzie tam, gdzie dojście, wskaźnik natywny lub argument funkcji może być używany.
 
-Słowo kluczowe **nullptr** nie jest typu i nie jest obsługiwane w przypadku:
+**`nullptr`** Słowo kluczowe nie jest typu i nie jest obsługiwane w przypadku:
 
 - [sizeof](../cpp/sizeof-operator.md)
 
 - [typeid](../cpp/typeid-operator.md)
 
-- `throw nullptr` (choć `throw (Object^)nullptr;` będzie działała)
+- `throw nullptr`(chociaż `throw (Object^)nullptr;` będzie działała)
 
-Słowo kluczowe **nullptr** może być używane podczas inicjowania następujących typów wskaźnika:
+**`nullptr`** Słowo kluczowe może być używane podczas inicjowania następujących typów wskaźnika:
 
 - Wskaźnik natywny
 
@@ -45,15 +45,15 @@ Słowo kluczowe **nullptr** może być używane podczas inicjowania następując
 
 - Zarządzany wskaźnik wewnętrzny
 
-Za pomocą słowa kluczowego **nullptr** można sprawdzić, czy wskaźnik lub odwołanie do dojścia mają wartość null przed użyciem odwołania.
+**`nullptr`** Słowa kluczowego można użyć do sprawdzenia, czy odwołanie do wskaźnika lub dojścia ma wartość null przed użyciem odwołania.
 
 Wywołania funkcji w różnych językach, które używają wartości wskaźnika wartości null do sprawdzania błędów, powinny być poprawnie interpretowane.
 
-Nie można zainicjować dojścia do zera. można używać tylko **nullptr** . Przypisanie stałej 0 do dojścia do obiektu tworzy opakowaną `Int32` i rzutowanie na `Object^`.
+Nie można zainicjować dojścia do zera. **`nullptr`** można używać tylko. Przypisanie stałej 0 do dojścia do obiektu tworzy opakowane `Int32` i rzutowanie na `Object^` .
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu pokazuje, że słowo kluczowe **nullptr** może być używane wszędzie tam, gdzie można użyć uchwytu, wskaźnika natywnego lub argumentu funkcji. W przykładzie pokazano, że słowo kluczowe **nullptr** można użyć do sprawdzenia odwołania przed jego użyciem.
+Poniższy przykład kodu pokazuje, że **`nullptr`** słowo kluczowe może być używane wszędzie tam, gdzie można użyć uchwytu, wskaźnika natywnego lub argumentu funkcji. W przykładzie pokazano, że **`nullptr`** słowo kluczowe może służyć do sprawdzenia odwołania przed jego użyciem.
 
 ```cpp
 // mcpp_nullptr.cpp
@@ -82,7 +82,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu pokazuje, że **nullptr** i zero można używać zamiennie na wskaźnikach natywnych.
+Poniższy przykład kodu pokazuje, że **`nullptr`** i zero można użyć zamiennie na wskaźnikach natywnych.
 
 ```cpp
 // mcpp_nullptr_1.cpp
@@ -121,7 +121,7 @@ pMyClass == 0
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu pokazuje, że **nullptr** jest interpretowany jako dojście do dowolnego typu lub macierzystego wskaźnika do dowolnego typu. W przypadku przeciążania funkcji z dojściami do różnych typów zostanie wygenerowany błąd niejednoznaczności. **Nullptr** musi być jawnie rzutowany na typ.
+Poniższy przykład kodu pokazuje, że **`nullptr`** jest interpretowany jako dojście do dowolnego typu lub macierzystego wskaźnika do dowolnego typu. W przypadku przeciążania funkcji z dojściami do różnych typów zostanie wygenerowany błąd niejednoznaczności. **`nullptr`** Musi być jawnie rzutowany na typ.
 
 ```cpp
 // mcpp_nullptr_2.cpp
@@ -139,7 +139,7 @@ void f_null() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu pokazuje, że rzutowanie **nullptr** jest dozwolone i zwraca wskaźnik lub uchwyt do typu rzutowania, który zawiera wartość **nullptr** .
+Poniższy przykład kodu pokazuje, że rzutowanie **`nullptr`** jest dozwolone i zwraca wskaźnik lub uchwyt do typu rzutowania, który zawiera **`nullptr`** wartość.
 
 ```cpp
 // mcpp_nullptr_3.cpp
@@ -160,7 +160,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu pokazuje, że **nullptr** może być używany jako parametr funkcji.
+Poniższy przykład kodu pokazuje, że **`nullptr`** może być używany jako parametr funkcji.
 
 ```cpp
 // mcpp_nullptr_4.cpp
@@ -181,7 +181,7 @@ test
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu pokazuje, że gdy dojścia są zadeklarowane i nie są jawnie inicjowane, są one domyślnie zainicjowane do **nullptr**.
+Poniższy przykład kodu pokazuje, że gdy dojścia są zadeklarowane i nie są jawnie inicjowane, są one domyślnie inicjowane **`nullptr`** .
 
 ```cpp
 // mcpp_nullptr_5.cpp
@@ -208,7 +208,7 @@ NULL
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu pokazuje, że **nullptr** można przypisać do macierzystego wskaźnika podczas kompilowania z `/clr`.
+Poniższy przykład kodu pokazuje, że **`nullptr`** można przypisać do macierzystego wskaźnika podczas kompilowania przy użyciu `/clr` .
 
 ```cpp
 // mcpp_nullptr_6.cpp
@@ -221,9 +221,9 @@ int main() {
 
 ## <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: (niewymagane; obsługiwane przez wszystkie opcje generowania kodu, w tym `/ZW` i `/clr`)
+Opcja kompilatora: (niewymagane; obsługiwane przez wszystkie opcje generowania kodu, w tym `/ZW` i `/clr` )
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)<br/>
+[Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)<br/>
 [nullptr](../cpp/nullptr.md)

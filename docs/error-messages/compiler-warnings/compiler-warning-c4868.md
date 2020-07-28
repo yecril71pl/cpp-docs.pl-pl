@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-ms.openlocfilehash: 00c3e01f46bc98baff1b266bb8ee445b0f868522
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fe113a948cdf2a6e4b4fcf6b0055fe92d583f004
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165018"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220135"
 ---
 # <a name="compiler-warning-level-4-c4868"></a>Ostrzeżenie kompilatora (poziom 4) C4868
 
 > Kompilator "_File_(*line_number*)" nie może wymusić kolejności oceny od lewej do prawej na liście inicjalizatora w nawiasach klamrowych
 
-Elementy listy inicjalizatora w nawiasach klamrowych są oceniane w kolejności od lewej do prawej. Istnieją dwa przypadki, w których kompilator nie może zagwarantowania tej kolejności: pierwszy to, gdy niektóre elementy są obiektami przekazaną przez wartość; druga jest podczas kompilowania z `/clr`, a niektóre elementy są polami obiektów lub są elementami tablicy. Gdy kompilator nie może zagwarantować oceny od lewej do prawej, emituje ostrzeżenie C4868.
+Elementy listy inicjalizatora w nawiasach klamrowych są oceniane w kolejności od lewej do prawej. Istnieją dwa przypadki, w których kompilator nie może zagwarantowania tej kolejności: pierwszy to, gdy niektóre elementy są obiektami przekazaną przez wartość; druga jest podczas kompilowania z `/clr` i niektóre elementy są polami obiektów lub są elementami tablicy. Gdy kompilator nie może zagwarantować oceny od lewej do prawej, emituje ostrzeżenie C4868.
 
 To ostrzeżenie może być generowane w wyniku działania kompilatora, który został wykonany dla programu Visual Studio 2015 Update 2. Kod, który został skompilowany przed Visual Studio 2015 Update 2, może teraz generować C4868.
 
-To ostrzeżenie jest domyślnie wyłączone. Użyj `/Wall`, aby aktywować to ostrzeżenie.
+To ostrzeżenie jest domyślnie wyłączone. Użyj `/Wall` , aby aktywować to ostrzeżenie.
 
 Aby rozwiązać ten problem, należy najpierw rozważyć, czy konieczne jest oszacowanie wartości z listy inicjatorów od lewej do prawej, na przykład wtedy, gdy oceny elementów mogą generować efekty uboczne zależne od kolejności. W wielu przypadkach kolejność, w której elementy są oceniane, nie ma zauważalnego efektu.
 
-Jeśli kolejność obliczeń musi być od lewej do prawej, należy rozważyć, czy można przekazać elementy przez `const` odwołanie. Zmiana taka, jak eliminuje to ostrzeżenie, w poniższym przykładzie kodu.
+Jeśli kolejność obliczeń musi być od lewej do prawej, należy rozważyć, czy można przekazać elementy przez **`const`** odwołanie zamiast tego. Zmiana taka, jak eliminuje to ostrzeżenie, w poniższym przykładzie kodu.
 
 ## <a name="example"></a>Przykład
 

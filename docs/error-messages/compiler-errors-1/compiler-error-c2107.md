@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2107
 ms.assetid: 2866a121-884e-4bb5-8613-36de5817000e
-ms.openlocfilehash: e492f58717a8356da54f7f26bd0d5db905f858a0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1be2ebb82aca481df9efbbc4ccdd54466ae60a3f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74745879"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214792"
 ---
 # <a name="compiler-error-c2107"></a>Błąd kompilatora C2107
 
@@ -21,7 +21,7 @@ Indeks dolny jest stosowany do wyrażenia, które nie jest szacowane do wskaźni
 
 ## <a name="example"></a>Przykład
 
-C2107 może wystąpić, jeśli nieprawidłowo użyto wskaźnika `this` typu wartości, aby uzyskać dostęp do domyślnego indeksatora typu. Aby uzyskać więcej informacji, zobacz [semantyka tego wskaźnika](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).
+C2107 może wystąpić w przypadku nieprawidłowego użycia **`this`** wskaźnika typu wartości w celu uzyskania dostępu do domyślnego indeksatora typu. Aby uzyskać więcej informacji, zobacz [semantyka tego wskaźnika](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).
 
 Poniższy przykład generuje C2107.
 

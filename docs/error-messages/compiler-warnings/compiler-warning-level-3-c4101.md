@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4101
 ms.assetid: d98563cd-9dce-4aae-8f12-bd552a4ea677
-ms.openlocfilehash: 0ac34fbaf4cbb54583394dff5b8645fe56b8b9cd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f9d3875fdc17def1e7d3bcb72149c5faf90f656a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199048"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220057"
 ---
 # <a name="compiler-warning-level-3-c4101"></a>Ostrzeżenie kompilatora (poziom 3) C4101
 
@@ -27,7 +27,7 @@ int i;   // C4101
 }
 ```
 
-Jednak to ostrzeżenie również występuje podczas wywoływania **statycznej** funkcji składowej za pomocą wystąpienia klasy:
+Jednak to ostrzeżenie również występuje podczas wywoływania **`static`** funkcji składowej za pomocą wystąpienia klasy:
 
 ```cpp
 // C4101b.cpp
@@ -46,10 +46,10 @@ int main() {
 }
 ```
 
-W tej sytuacji kompilator używa informacji o `si`, aby uzyskać dostęp do funkcji **statycznej** , ale wystąpienie klasy nie jest konieczne do wywołania funkcji **statycznej** ; w związku z tym ostrzeżeniem. Aby rozwiązać ten problem, możesz:
+W tej sytuacji kompilator używa informacji o `si` dostępie do **`static`** funkcji, ale wystąpienie klasy nie jest konieczne do wywołania **`static`** funkcji; w związku z tym ostrzeżenie. Aby rozwiązać ten problem, możesz:
 
-- Dodaj Konstruktor, w którym kompilator będzie używać wystąpienia `si` w wywołaniu `func`.
+- Dodaj Konstruktor, w którym kompilator będzie używać wystąpienia elementu `si` w wywołaniu `func` .
 
-- Usuń słowo kluczowe **static** z definicji `func`.
+- Usuń **`static`** słowo kluczowe z definicji `func` .
 
-- Jawnie wywołaj funkcję **statyczną** : `int y = S::func();`.
+- Wywołaj **`static`** funkcję jawnie: `int y = S::func();` .

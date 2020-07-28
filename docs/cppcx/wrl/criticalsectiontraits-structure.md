@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock method
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
-ms.openlocfilehash: 05c93bf6a2765bd11489075067c627ab3c3ab691
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3573cad21734a97629cbc12b76d73b99024cbc2f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372578"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220512"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits — Struktura
 
-Specjalizuje się `CriticalSection` obiekt do obsługi nieprawidłowej sekcji krytycznej lub funkcji do wydania sekcji krytycznej.
+Wyspecjalizowano `CriticalSection` obiekt do obsługi nieprawidłowej sekcji krytycznej lub funkcji w celu wydania sekcji krytycznej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,18 +30,18 @@ struct CriticalSectionTraits;
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne typedefs
+### <a name="public-typedefs"></a>Publiczne definicje typów
 
 Nazwa   | Opis
 ------ | -----------------------------------------------------------------------------------------------------------------
-`Type` | A, `typedef` który definiuje wskaźnik do sekcji krytycznej. `Type`jest zdefiniowany jako `typedef CRITICAL_SECTION* Type;`.
+`Type` | A **`typedef`** , który definiuje wskaźnik do sekcji krytycznej. `Type`jest zdefiniowane jako `typedef CRITICAL_SECTION* Type;` .
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Nazwa                                                       | Opis
 ---------------------------------------------------------- | -----------------
-[CriticalSectionTraits::GetInvalidValue](#getinvalidvalue) | Specjalizuje się `CriticalSection` w szablonie, dzięki czemu szablon jest zawsze nieprawidłowy.
-[CriticalSectionTraits::Odblokuj](#unlock)                   | Specjalizuje się `CriticalSection` szablon, dzięki czemu obsługuje zwalnianie własności określonego obiektu sekcji krytycznej.
+[CriticalSectionTraits:: GetInvalidValue —](#getinvalidvalue) | `CriticalSection`Określa szablon w taki sposób, aby szablon był zawsze nieprawidłowy.
+[CriticalSectionTraits:: Unlock](#unlock)                   | Specjalizacja `CriticalSection` szablonu, aby obsługiwał możliwość zwalniania własności określonego obiektu sekcji krytycznej.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -49,13 +49,13 @@ Nazwa                                                       | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** corewrappers.h
+**Nagłówek:** corewrappers. h
 
-**Obszar nazw:** Microsoft::WRL::Otoki::HandleTraits
+**Przestrzeń nazw:** Microsoft:: WRL:: otoki:: HandleTraits
 
-## <a name="criticalsectiontraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>CriticalSectionTraits::GetInvalidValue
+## <a name="criticalsectiontraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>CriticalSectionTraits:: GetInvalidValue —
 
-Specjalizuje się `CriticalSection` w szablonie, dzięki czemu szablon jest zawsze nieprawidłowy.
+`CriticalSection`Określa szablon w taki sposób, aby szablon był zawsze nieprawidłowy.
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -67,11 +67,11 @@ Zawsze zwraca wskaźnik do nieprawidłowej sekcji krytycznej.
 
 ### <a name="remarks"></a>Uwagi
 
-Modyfikator `Type` jest `typedef CRITICAL_SECTION* Type;`zdefiniowany jako .
+`Type`Modyfikator jest zdefiniowany jako `typedef CRITICAL_SECTION* Type;` .
 
-## <a name="criticalsectiontraitsunlock"></a><a name="unlock"></a>CriticalSectionTraits::Odblokuj
+## <a name="criticalsectiontraitsunlock"></a><a name="unlock"></a>CriticalSectionTraits:: Unlock
 
-Specjalizuje się `CriticalSection` szablon, dzięki czemu obsługuje zwalnianie własności określonego obiektu sekcji krytycznej.
+Specjalizacja `CriticalSection` szablonu, aby obsługiwał możliwość zwalniania własności określonego obiektu sekcji krytycznej.
 
 ```cpp
 inline static void Unlock(
@@ -81,11 +81,11 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>Parametry
 
-*Cs*<br/>
+*Rejestr*<br/>
 Wskaźnik do obiektu sekcji krytycznej.
 
 ### <a name="remarks"></a>Uwagi
 
-Modyfikator `Type` jest `typedef CRITICAL_SECTION* Type;`zdefiniowany jako .
+`Type`Modyfikator jest zdefiniowany jako `typedef CRITICAL_SECTION* Type;` .
 
-Aby uzyskać więcej informacji, zobacz **LeaveCriticalSection, funkcja** w sekcji **Funkcje synchronizacji** dokumentacji interfejsu API systemu Windows.
+Aby uzyskać więcej informacji, zobacz **Funkcja LeaveCriticalSection** w sekcji **funkcje synchronizacji** dokumentacji interfejsu API systemu Windows.

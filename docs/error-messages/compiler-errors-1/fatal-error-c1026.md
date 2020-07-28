@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1026
 ms.assetid: 89bb9d40-673a-44aa-a9f4-b42c07b49d44
-ms.openlocfilehash: a7c7a5da01c8b4a44c307a00f53530acb12a8009
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9ea97bef16bebb8fc0e765ed708e54baee9a64de
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80204656"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220343"
 ---
 # <a name="fatal-error-c1026"></a>Błąd krytyczny C1026
 
@@ -21,6 +21,6 @@ Miejsce wymagane do przeanalizowania programu spowodowało przepełnienie stosu 
 
 Zmniejsz złożoność wyrażeń przez:
 
-- Zmniejszenie zagnieżdżenia w `for` i `switch` instrukcji. Umieść bardziej głęboko zagnieżdżone instrukcje w osobnych funkcjach.
+- Zmniejszenie zagnieżdżenia w **`for`** **`switch`** instrukcjach i. Umieść bardziej głęboko zagnieżdżone instrukcje w osobnych funkcjach.
 
 - Przerywanie długich wyrażeń, które obejmują operatory przecinkowe lub wywołania funkcji.

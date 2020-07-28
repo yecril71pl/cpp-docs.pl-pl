@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4437
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-ms.openlocfilehash: 84c6e8d09495d871b8c490a92558aaba14b0574c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 949cd208d8c4f86afb1ef0a36db8483de4aac232
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185337"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214389"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>Ostrzeżenie kompilatora (poziom 4) C4437
 
@@ -19,21 +19,21 @@ dynamic_cast z wirtualnej bazy "Class1" do "'klasa" może zakończyć się niepo
 
 To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-Kompilator napotkał `dynamic_cast` operacji z następującymi charakterystykami.
+Kompilator napotkał **`dynamic_cast`** operację o następującej charakterystyce.
 
 - Rzutowanie pochodzi ze wskaźnika klasy bazowej do wskaźnika klasy pochodnej.
 
 - Klasa pochodna praktycznie dziedziczy klasę bazową.
 
-- Klasa pochodna nie ma pola `vtordisp` dla bazy wirtualnej.
+- Klasa pochodna nie ma `vtordisp` pola dla bazy wirtualnej.
 
 - Rzutowanie nie znajduje się w konstruktorze lub destruktorze klasy pochodnej lub Klasa, która dodatkowo dziedziczy z klasy pochodnej (w przeciwnym razie zostanie wygenerowane Ostrzeżenie kompilatora C4436).
 
-Ostrzeżenie wskazuje, że `dynamic_cast` może nie działać prawidłowo, jeśli działa na obiekt częściowo skonstruowany.  Ta sytuacja występuje, gdy funkcja otaczająca jest wywoływana z konstruktora lub destruktora klasy, która dziedziczy klasę pochodną o nazwie w ostrzeżeniu.  Jeśli klasa pochodna o nazwie w ostrzeżeniu nigdy nie będzie bardziej pochodna lub otaczająca funkcja nie jest wywoływana podczas konstruowania lub niszczenia obiektu, ostrzeżenie można zignorować.
+Ostrzeżenie wskazuje, że **`dynamic_cast`** może nie działać poprawnie, jeśli działa na obiekcie częściowo skonstruowanym.  Ta sytuacja występuje, gdy funkcja otaczająca jest wywoływana z konstruktora lub destruktora klasy, która dziedziczy klasę pochodną o nazwie w ostrzeżeniu.  Jeśli klasa pochodna o nazwie w ostrzeżeniu nigdy nie będzie bardziej pochodna lub otaczająca funkcja nie jest wywoływana podczas konstruowania lub niszczenia obiektu, ostrzeżenie można zignorować.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C4437 i demonstruje problem z generowaniem kodu, który powstał z brakujących pola `vtordisp`.
+Poniższy przykład generuje C4437 i demonstruje problem z generowaniem kodu, który wynika z brakujących `vtordisp` pól.
 
 ```cpp
 // C4437.cpp
@@ -81,7 +81,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operator dynamic_cast](../../cpp/dynamic-cast-operator.md)<br/>
 [vtordisp](../../preprocessor/vtordisp.md)<br/>

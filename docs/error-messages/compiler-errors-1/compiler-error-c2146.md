@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-ms.openlocfilehash: 8dc7b521243c4eafdc22fab851812b6c12b004cf
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c1a790902af92d72eb73be7fc2321762ab01fd8c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755918"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214766"
 ---
 # <a name="compiler-error-c2146"></a>Błąd kompilatora C2146
 
 Błąd składniowy: Brak tokenu "token" przed identyfikatorem "identifier"
 
-Kompilator oczekiwał `token` i znaleziono `identifier`.  Możliwe przyczyny:
+Oczekiwano kompilatora `token` i znaleziono go `identifier` .  Możliwe przyczyny:
 
 1. Błąd pisowni lub wielkości liter.
 
@@ -46,7 +46,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Ten błąd może być również wygenerowany jako wynik zgodności kompilatora, który został wykonany dla programu Visual Studio .NET 2003: brak słowa kluczowego `typename`.
+Ten błąd może być również wygenerowany jako wynik zgodności kompilatora, który został wykonany dla programu Visual Studio .NET 2003: brak **`typename`** słowa kluczowego.
 
 Poniższy przykład kompiluje w programie Visual Studio .NET 2002, ale zakończy się niepowodzeniem w programie Visual Studio .NET 2003:
 

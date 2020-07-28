@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: 40d1d0744588c4b7911e84f5e57a6b40372b48cf
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 68817498d6f29ef5982b72a2fee4e64a4423ccde
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630135"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214818"
 ---
 # <a name="compiler-error-c2065"></a>Błąd kompilatora C2065
 
 > "*Identyfikator*": niezadeklarowany identyfikator
 
-Kompilator nie może znaleźć deklaracji identyfikatora. Istnieje wiele możliwych przyczyn tego błędu. Najczęstszymi przyczynami C2065 jest to, że identyfikator nie został zadeklarowany, identyfikator jest błędnie wpisany, nagłówek, w którym zadeklarowany jest identyfikator, nie jest uwzględniony w pliku lub w identyfikatorze brakuje kwalifikatora zakresu, na przykład `cout` zamiast `std::cout`. Aby uzyskać więcej informacji na temat C++deklaracji w, zobacz [deklaracjeC++i definicje ()](../../cpp/declarations-and-definitions-cpp.md).
+Kompilator nie może znaleźć deklaracji identyfikatora. Istnieje wiele możliwych przyczyn tego błędu. Najczęstszymi przyczynami C2065 jest to, że identyfikator nie został zadeklarowany, identyfikator jest błędnie wpisany, nagłówek, w którym zadeklarowany jest identyfikator, nie jest uwzględniony w pliku lub w identyfikatorze brakuje kwalifikatora zakresu, na przykład, `cout` zamiast `std::cout` . Aby uzyskać więcej informacji na temat deklaracji w języku C++, zobacz [deklaracje i definicje (C++)](../../cpp/declarations-and-definitions-cpp.md).
 
 Poniżej przedstawiono kilka typowych problemów i rozwiązań bardziej szczegółowych.
 
 ## <a name="the-identifier-is-undeclared"></a>Identyfikator jest niezadeklarowany
 
-Jeśli identyfikator jest zmienną lub nazwą funkcji, należy ją zadeklarować przed użyciem. Aby można było użyć funkcji, deklaracja funkcji musi również zawierać typy parametrów. Jeśli zmienna jest zadeklarowana przy `auto`użyciu, kompilator musi mieć możliwość wywnioskowania typu z inicjatora.
+Jeśli identyfikator jest zmienną lub nazwą funkcji, należy ją zadeklarować przed użyciem. Aby można było użyć funkcji, deklaracja funkcji musi również zawierać typy parametrów. Jeśli zmienna jest zadeklarowana przy użyciu **`auto`** , kompilator musi mieć możliwość wywnioskowania typu z inicjatora.
 
-Jeśli identyfikator jest składową klasy lub struktury lub jest zadeklarowany w przestrzeni nazw, musi być kwalifikowana przez nazwę klasy lub struktury lub nazwę przestrzeni nazw, gdy jest używana poza strukturą, klasą lub zakresem przestrzeni nazw. Alternatywnie, przestrzeń nazw musi zostać przeprowadzona do zakresu przez `using` dyrektywę, taką `using namespace std;`jak, lub nazwa elementu członkowskiego musi być `using` wprowadzona do zakresu przez deklarację, `using std::string;`taką jak. W przeciwnym razie Niekwalifikowana nazwa jest uznawana za niezadeklarowany identyfikator w bieżącym zakresie.
+Jeśli identyfikator jest składową klasy lub struktury lub jest zadeklarowany w przestrzeni nazw, musi być kwalifikowana przez nazwę klasy lub struktury lub nazwę przestrzeni nazw, gdy jest używana poza strukturą, klasą lub zakresem przestrzeni nazw. Alternatywnie, przestrzeń nazw musi zostać przeprowadzona do zakresu przez **`using`** dyrektywę, taką jak `using namespace std;` , lub nazwa elementu członkowskiego musi być wprowadzona do zakresu przez **`using`** deklarację, taką jak `using std::string;` . W przeciwnym razie Niekwalifikowana nazwa jest uznawana za niezadeklarowany identyfikator w bieżącym zakresie.
 
-Jeśli identyfikator jest tagiem dla typu zdefiniowanego przez użytkownika, na przykład, `class` lub `struct`, typ znacznika musi być zadeklarowany, zanim będzie można go użyć. Na przykład deklaracja `struct SomeStruct { /*...*/ };` musi istnieć, aby można było zadeklarować zmienną `SomeStruct myStruct;` w kodzie.
+Jeśli identyfikator jest tagiem dla typu zdefiniowanego przez użytkownika, na przykład, **`class`** lub **`struct`** , typ znacznika musi być zadeklarowany, zanim będzie można go użyć. Na przykład deklaracja `struct SomeStruct { /*...*/ };` musi istnieć, aby można było zadeklarować zmienną `SomeStruct myStruct;` w kodzie.
 
-Jeśli identyfikator jest aliasem typu, typ musi być zadeklarowany za pomocą `using` deklaracji lub `typedef` zanim będzie można go użyć. Na przykład należy zadeklarować `using my_flags = std::ios_base::fmtflags;` , aby można było użyć `my_flags` jako aliasu typu dla. `std::ios_base::fmtflags`
+Jeśli identyfikator jest aliasem typu, typ musi być zadeklarowany za pomocą **`using`** deklaracji lub zanim będzie **`typedef`** można go użyć. Na przykład należy zadeklarować, aby `using my_flags = std::ios_base::fmtflags;` można było użyć `my_flags` jako aliasu typu dla `std::ios_base::fmtflags` .
 
 ## <a name="example-misspelled-identifier"></a>Przykład: Błędny identyfikator
 
@@ -51,9 +51,9 @@ int main() {
 
 ## <a name="example-use-an-unscoped-identifier"></a>Przykład: Użyj identyfikatora nieobjętego zakresem
 
-Ten błąd może wystąpić, jeśli identyfikator nie został prawidłowo objęty zakresem. Jeśli podczas korzystania `cout`z programu zobaczysz C2065, jest to przyczyna. Gdy C++ standardowe funkcje i operatory biblioteki nie są w pełni kwalifikowane przez przestrzeń nazw lub nie `std` przełączysz przestrzeni nazw do bieżącego `using` zakresu przy użyciu dyrektywy, kompilator nie może go znaleźć. Aby rozwiązać ten problem, należy w pełni zakwalifikować nazwy identyfikatorów lub określić przestrzeń nazw za pomocą `using` dyrektywy.
+Ten błąd może wystąpić, jeśli identyfikator nie został prawidłowo objęty zakresem. Jeśli podczas korzystania z programu zobaczysz C2065 `cout` , jest to przyczyna. Gdy funkcje i Operatory standardowej biblioteki C++ nie są w pełni kwalifikowane przez przestrzeń nazw lub nie przełączysz `std` przestrzeni nazw do bieżącego zakresu przy użyciu **`using`** dyrektywy, kompilator nie może go znaleźć. Aby rozwiązać ten problem, należy w pełni zakwalifikować nazwy identyfikatorów lub określić przestrzeń nazw za pomocą **`using`** dyrektywy.
 
-Nie można skompilować tego przykładu `cout` , `endl` ponieważ i są zdefiniowane `std` w przestrzeni nazw:
+Nie można skompilować tego przykładu `cout` , ponieważ i `endl` są zdefiniowane w `std` przestrzeni nazw:
 
 ```cpp
 // C2065_scope.cpp
@@ -69,13 +69,13 @@ int main() {
 }
 ```
 
-Identyfikatory, które są zadeklarowane `class`wewnątrz `struct`,, `enum class` lub, muszą być również kwalifikowane według nazwy zakresu otaczającego, gdy są używane poza tym zakresem.
+Identyfikatory, które są zadeklarowane wewnątrz **`class`** , **`struct`** , lub, **`enum class`** muszą być również kwalifikowane według nazwy zakresu otaczającego, gdy są używane poza tym zakresem.
 
 ## <a name="example-precompiled-header-isnt-first"></a>Przykład: prekompilowany nagłówek nie jest pierwszy
 
 Ten błąd może wystąpić, jeśli przed #include prekompilowanego pliku nagłówkowego zostanie umieszczona dyrektywa preprocesora, taka jak #include, #define lub #pragma. Jeśli plik źródłowy używa prekompilowanego pliku nagłówkowego (czyli jeśli jest kompilowany przy użyciu opcji kompilatora **/Yu** ), wszystkie dyrektywy preprocesora przed prekompilowanym plikiem nagłówkowym zostaną zignorowane.
 
-Nie można skompilować tego przykładu `cout` , `endl` ponieważ i są zdefiniowane \<w nagłówku > iostream, który jest ignorowany, ponieważ jest zawarty przed prekompilowanym plikiem nagłówkowym. Aby skompilować ten przykład, Utwórz wszystkie trzy pliki, a następnie Skompiluj stdafx. cpp, a następnie Skompiluj C2065_pch. cpp.
+Nie można skompilować tego przykładu `cout` , ponieważ i `endl` są zdefiniowane w \<iostream> nagłówku, który jest ignorowany, ponieważ jest zawarty przed prekompilowanym plikiem nagłówkowym. Aby skompilować ten przykład, Utwórz wszystkie trzy pliki, a następnie Skompiluj stdafx. cpp, a następnie Skompiluj C2065_pch. cpp.
 
 ```cpp
 // pch.h (stdafx.h in Visual Studio 2017 and earlier)
@@ -101,7 +101,7 @@ int main() {
 }
 ```
 
-Aby rozwiązać ten problem, Dodaj #include \<iostream > do prekompilowanego pliku nagłówkowego lub przenieś go po umieszczeniu prekompilowanego pliku nagłówkowego w pliku źródłowym.
+Aby rozwiązać ten problem, Dodaj #include \<iostream> do prekompilowanego pliku nagłówkowego lub przenieś go po umieszczeniu prekompilowanego pliku nagłówkowego w pliku źródłowym.
 
 ## <a name="example-missing-header-file"></a>Przykład: Brak pliku nagłówkowego
 
@@ -119,7 +119,7 @@ int main() {
 }
 ```
 
-Inną możliwą przyczyną jest użycie listy inicjatora bez uwzględnienia \<nagłówka > initializer_list.
+Inną możliwą przyczyną jest użycie listy inicjatorów bez uwzględnienia \<initializer_list> nagłówka.
 
 ```cpp
 // C2065_initializer.cpp
@@ -134,7 +134,7 @@ int main() {
 }
 ```
 
-Ten błąd może pojawić się w plikach źródłowych aplikacji klasycznych systemu Windows `VC_EXTRALEAN`, `WIN32_LEAN_AND_MEAN`jeśli zdefiniujesz, lub `WIN32_EXTRA_LEAN`. Te makra preprocesora wykluczają niektóre pliki nagłówkowe z systemów Windows. h\_i afxv W32. h, aby przyspieszyć kompilacje. Zapoznaj się z informacjami w systemach Windows. h i afxv_w32. h, aby uzyskać aktualne opisy elementów wykluczonych.
+Ten błąd może pojawić się w plikach źródłowych aplikacji klasycznych systemu Windows, jeśli zdefiniujesz `VC_EXTRALEAN` , `WIN32_LEAN_AND_MEAN` lub `WIN32_EXTRA_LEAN` . Te makra preprocesora wykluczają niektóre pliki nagłówkowe z systemów Windows. h i afxv \_ W32. h, aby przyspieszyć kompilacje. Zapoznaj się z informacjami w systemie Windows. h i afxv_w32. h, aby uzyskać aktualne opisy elementów wykluczonych.
 
 ## <a name="example-missing-closing-quote"></a>Przykład: brak cudzysłowu zamykającego
 
@@ -155,7 +155,7 @@ int main() {
 
 ## <a name="example-use-iterator-outside-for-loop-scope"></a>Przykład: Użyj iteratora na zewnątrz dla zakresu pętli
 
-Ten błąd może wystąpić, Jeśli zadeklarujesz zmienną iteratora `for` w pętli, a następnie spróbujesz użyć tej zmiennej iteratora poza zakresem `for` pętli. Kompilator domyślnie włącza opcję kompilatora [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) . Aby uzyskać więcej informacji, zobacz [Obsługa iteratora debugowania](../../standard-library/debug-iterator-support.md) .
+Ten błąd może wystąpić, Jeśli zadeklarujesz zmienną iteratora w **`for`** pętli, a następnie spróbujesz użyć tej zmiennej iteratora poza zakresem **`for`** pętli. Kompilator domyślnie włącza opcję kompilatora [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) . Aby uzyskać więcej informacji, zobacz [Obsługa iteratora debugowania](../../standard-library/debug-iterator-support.md) .
 
 ```cpp
 // C2065_iter.cpp
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>Przykład: C++Błąd odejmowania typu/CLI
+## <a name="example-ccli-type-deduction-failure"></a>Przykład: błąd odejmowania typu C++/CLI
 
-Ten błąd może wystąpić podczas wywoływania funkcji ogólnej, jeśli nie można wywnioskować typu argumentu zamierzonego z użytych parametrów. Aby uzyskać więcej informacji, zobacz [funkcje ogólneC++(/CLI)](../../extensions/generic-functions-cpp-cli.md).
+Ten błąd może wystąpić podczas wywoływania funkcji ogólnej, jeśli nie można wywnioskować typu argumentu zamierzonego z użytych parametrów. Aby uzyskać więcej informacji, zobacz [funkcje ogólne (C++/CLI)](../../extensions/generic-functions-cpp-cli.md).
 
 ```cpp
 // C2065_b.cpp
@@ -220,9 +220,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>Przykład: C++/CLI — parametry atrybutów
+## <a name="example-ccli-attribute-parameters"></a>Przykład:/CLI języka C++ — parametry atrybutów
 
-Ten błąd może być również wygenerowany jako wynik zgodności kompilatora, który został wykonany dla programu Visual Studio 2005: sprawdzanie parametrów wizualizacji C++ .
+Ten błąd może być również wygenerowany jako wynik zgodności kompilatora, który został wykonany dla programu Visual Studio 2005: sprawdzanie parametrów Visual C++ atrybutów.
 
 ```cpp
 // C2065_attributes.cpp

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - _mm_stream_sd intrinsic
 - movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
-ms.openlocfilehash: 7f0c6457cc0806a0f1764300cffa1c9878b8a600
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: ec639004884d022fe6a827c2ec31d3201ea04657
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217365"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214220"
 ---
 # <a name="_mm_stream_sd"></a>_mm_stream_sd
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Zapisuje 64-bitowe dane w lokalizacji pamięci bez zanieczyszczania pamięci podręcznych.
 
@@ -35,7 +35,7 @@ void _mm_stream_sd(
 określoną Wskaźnik do lokalizacji, w której będą zapisywane dane źródłowe.
 
 *Zewnętrz*\
-podczas Wartość 128-bitowa zawierająca wartość `double` , która ma zostać zapisywana w dolnych bitach 64.
+podczas Wartość 128-bitowa zawierająca **`double`** wartość, która ma zostać zapisywana w dolnych bitach 64.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -47,13 +47,13 @@ Brak.
 |---------------|------------------|
 |`_mm_stream_sd`|SSE4a|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
-Wewnętrznie generuje `movntsd` instrukcję. Aby określić obsługę sprzętową dla tej instrukcji, wywołaj `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 `CPUInfo[2] (ECX)`z. Ten bit ma wartość 1, jeśli sprzęt obsługuje tę instrukcję i 0 w przeciwnym razie.
+Wewnętrznie generuje `movntsd` instrukcję. Aby określić obsługę sprzętową dla tej instrukcji, wywołaj `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 z `CPUInfo[2] (ECX)` . Ten bit ma wartość 1, jeśli sprzęt obsługuje tę instrukcję i 0 w przeciwnym razie.
 
-Jeśli uruchamiasz kod, który używa `_mm_stream_sd` wewnętrznego na sprzęcie, który nie `movntsd` obsługuje instrukcji, wyniki są nieprzewidywalne.
+Jeśli uruchamiasz kod, który używa `_mm_stream_sd` wewnętrznego na sprzęcie, który nie obsługuje `movntsd` instrukcji, wyniki są nieprzewidywalne.
 
 ## <a name="example"></a>Przykład
 

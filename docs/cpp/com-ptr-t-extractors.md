@@ -21,12 +21,12 @@ helpviewer_keywords:
 - extractors, _com_ptr_t class
 - extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
-ms.openlocfilehash: e7b06bb11ab34a1a1a7f6fab98d177821f60b20c
-ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
+ms.openlocfilehash: fb5441d87dc35ec6fbb495bc38d9041c1f2d2f33
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86127861"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220577"
 ---
 # <a name="_com_ptr_t-extractors"></a>`_com_ptr_t`Ekstraktory
 
@@ -57,11 +57,11 @@ operator bool( ) const throw( );
 
 - **`operator&`** Zwalnia wszystkie hermetyzowane wskaźnike interfejsu, zastępując go wartością NULL i zwraca adres zhermetyzowanego wskaźnika. Ten operator umożliwia przekazanie inteligentnego wskaźnika przez adres do funkcji, która ma parametr *out* , za pomocą którego zwraca wskaźnik interfejsu.
 
-- **`operator bool`** Umożliwia użycie obiektu inteligentnego wskaźnika w wyrażeniu warunkowym. Ten operator zwraca wartość TRUE, jeśli wskaźnik nie ma wartości NULL.
+- **`operator bool`** Umożliwia użycie obiektu inteligentnego wskaźnika w wyrażeniu warunkowym. Ten operator zwraca **`true`** , jeśli wskaźnik nie ma wartości null.
 
   > [!NOTE]
   > Ponieważ **`operator bool`** nie jest zadeklarowany jako **`explicit`** , `_com_ptr_t` jest niejawnie konwertowany na **`bool`** , który jest konwertowany na dowolny typ skalarny. Może to spowodować nieoczekiwane konsekwencje w kodzie. Włącz [Ostrzeżenie kompilatora (poziom 4) C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) , aby zapobiec przypadkowemu użyciu tej konwersji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [_com_ptr_t — klasa](../cpp/com-ptr-t-class.md)

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: d539a9ebb4042b18e6ec1ef8ed204a61cc7bb8cc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 34d8877d4b8372a33fb5f0f6095a7027cae50555
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911605"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220707"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp —, frexpf —, frexpl
 
@@ -70,7 +70,7 @@ long double frexp(
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Wartość zmiennoprzecinkowa.
 
 *expptr*<br/>
@@ -82,9 +82,9 @@ Wskaźnik do przechowywanego wykładniku liczb całkowitych.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **frexp —** dzieli wartość zmiennoprzecinkową (*x*) na mantysy (*m*) i wykładnik (*n*), tak że wartość bezwzględna *m* jest większa lub równa 0,5 i mniejsza niż 1,0 i *x* = *m* * 2<sup>*n*</sup>. Wykładnik całkowity *n* jest przechowywany w lokalizacji wskazywanej przez *expptr*.
+Funkcja **frexp —** dzieli wartość zmiennoprzecinkową (*x*) na mantysy (*m*) i wykładnik (*n*), tak że wartość bezwzględna *m* jest większa lub równa 0,5 i mniejsza niż 1,0 i *x*  =  *m* * 2<sup>*n*</sup>. Wykładnik całkowity *n* jest przechowywany w lokalizacji wskazywanej przez *expptr*.
 
-Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **frexp —**. W programie C **frexp —** zawsze Pobiera wskaźnik **Double** i **int** i zwraca wartość **Double**.
+Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **frexp —**. W programie C **frexp —** zawsze przyjmuje **`double`** wskaźnik i **`int`** zwraca **`double`** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -92,7 +92,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**frexp —**, **frexpf —**, **frexpl**|\<> Math. h|
+|**frexp —**, **frexpf —**, **frexpl**|\<math.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -121,7 +121,7 @@ int main( void )
 frexp( 16.400000, &n ) = 0.512500, n = 5
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [ldexp](ldexp.md)<br/>

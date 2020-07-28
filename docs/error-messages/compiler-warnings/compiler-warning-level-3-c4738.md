@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4738
 ms.assetid: 9094895f-7eec-46c2-83d3-249b761d585e
-ms.openlocfilehash: c1989518c3965f8faa54a05b2925d0e37455625e
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 639fb14fc409a9954315184bab7ae1127460ea0d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991704"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214415"
 ---
 # <a name="compiler-warning-level-3-c4738"></a>Ostrzeżenie kompilatora (poziom 3) C4738
 
@@ -19,7 +19,7 @@ przechowywanie 32-bitowego wyniku zmiennopozycyjnego w pamięci, możliwa utrata
 
 C4738 ostrzega, że wynik przypisywania, rzutowania, pomyślnego argumentu lub innej operacji może być zaokrąglony lub że operacja została wykonana z rejestrów i jest wymagana do użycia pamięci (rozłożenie). Może to spowodować utratę wydajności.
 
-Aby rozwiązać to ostrzeżenie i uniknąć zaokrąglania, Kompiluj z [/FP: Fast](../../build/reference/fp-specify-floating-point-behavior.md) lub użyj `double` zamiast `float`.
+Aby rozwiązać to ostrzeżenie i uniknąć zaokrąglania, Kompiluj z [/FP: Fast](../../build/reference/fp-specify-floating-point-behavior.md) lub USE **`double`** zamiast **`float`** .
 
 Aby rozwiązać to ostrzeżenie i uniknąć braku rejestrów, Zmień kolejność obliczeń i zmodyfikuj użycie funkcji tworzenia konspektu
 

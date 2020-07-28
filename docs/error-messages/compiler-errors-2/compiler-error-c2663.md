@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2663
 ms.assetid: 1e93e368-fd52-42bf-9908-9b6df467c8c9
-ms.openlocfilehash: f07b63202d8f171dfb69f4bb294b392152b9290b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f9746ecb41e873fb1d929a939c78f1817dc0e2f9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756035"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220278"
 ---
 # <a name="compiler-error-c2663"></a>Błąd kompilatora C2663
 
 "Function": przeciążenia numerów nie mają żadnych dozwolonych konwersji dla wskaźnika "This"
 
-Kompilator nie może skonwertować `this` na żadne przeciążone wersje funkcji składowej.
+Kompilator nie może wykonać konwersji **`this`** do żadnej ze przeciążonych wersji funkcji składowej.
 
-Ten błąd może być spowodowany wywołaniem funkcji członkowskiej innej niż`const` na obiekcie `const`.  Możliwe rozwiązania:
+Ten błąd może być spowodowany wywoływaniem **`const`** funkcji nienależącej do elementu członkowskiego w **`const`** obiekcie.  Możliwe rozwiązania:
 
-1. Usuń `const` z deklaracji obiektu.
+1. Usuń **`const`** z deklaracji Object.
 
-1. Dodaj `const` do jednego z przeciążeń funkcji składowych.
+1. Dodaj **`const`** do jednego z przeciążeń funkcji składowych.
 
 Poniższy przykład generuje C2663:
 

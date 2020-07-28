@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4145
 ms.assetid: 0440777a-cca2-4159-aff5-e67a254ad64a
-ms.openlocfilehash: 5028ae20c2413c98fa55bd81081552d22381cdbc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 19d2d1a018c7ee981f83aa6fa0914f1241c55538
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163679"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220109"
 ---
 # <a name="compiler-warning-level-1-c4145"></a>Ostrzeżenie kompilatora (poziom 1) C4145
 
 "wyrażenie1": wyrażenie relacyjne jako wyrażenie przełącznika; możliwe pomyłki z "wyrażenie2"
 
-W instrukcji `switch` jest używany wyrażenie relacyjne jako wyrażenie kontrolne, które daje w wyniku wartość logiczną instrukcji **Case** . Czy chodziło o *to?*
+W **`switch`** instrukcji jest stosowane wyrażenie relacyjne jako wyrażenie kontrolne, które daje w wyniku wartość logiczną **`case`** instrukcji. Czy chodziło o *to?*
 
 ## <a name="example"></a>Przykład
 
