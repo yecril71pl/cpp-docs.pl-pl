@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-ms.openlocfilehash: cef2c39d3cfcb7690a644d9d2db68f25259b8162
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c07c52e0dcfe84c5f00a9a0b67d872a860941c6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955190"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229444"
 ---
 # <a name="_getdcwd_nolock-_wgetdcwd_nolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
 
@@ -71,11 +71,11 @@ wchar_t *_wgetdcwd_nolock(
 *litera*<br/>
 Stacja dysków.
 
-*buffer*<br/>
+*buforu*<br/>
 Lokalizacja przechowywania dla ścieżki.
 
-*maxlen*<br/>
-Maksymalna długość ścieżki w znakach: **char** dla **_getdcwd** i **wchar_t** dla **_wgetdcwd**.
+*MaxLen*<br/>
+Maksymalna długość ścieżki w znakach: **`char`** dla **_getdcwd** i **`wchar_t`** **_wgetdcwd**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -83,7 +83,7 @@ Zobacz [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_getdcwd_nolock** i **_wgetdcwd_nolock** są identyczne z **_getdcwd** i **_wgetdcwd**, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z zablokowaniem innych wątków. Tych funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
+**_getdcwd_nolock** i **_wgetdcwd_nolock** są takie same jak odpowiednio **_getdcwd** i **_wgetdcwd**, z tą różnicą, że nie są chronione przed ingerencją przez inne wątki. Mogą one być szybsze, ponieważ nie wiążą się z zablokowaniem innych wątków. Tych funkcji należy używać tylko w kontekstach bezpiecznych dla wątków, takich jak aplikacje jednowątkowe lub gdzie zakres wywoływania już obsługuje izolację wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -96,13 +96,13 @@ Zobacz [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md).
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_getdcwd_nolock**|\<direct.h>|
-|**_wgetdcwd_nolock**|\<Direct. h > lub \<WCHAR. h >|
+|**_wgetdcwd_nolock**|\<direct.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Kontrola katalogu](../../c-runtime-library/directory-control.md)<br/>
+[Kontrolka katalogu](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>
 [_getdrive](getdrive.md)<br/>

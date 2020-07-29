@@ -1,6 +1,7 @@
 ---
 title: Operatory przypisania
-ms.date: 03/27/2019
+description: Składnia operatorów przypisania języka standardowego w języku C++ i użycie.
+ms.date: 07/24/2020
 f1_keywords:
 - =
 - '*='
@@ -31,59 +32,59 @@ helpviewer_keywords:
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-ms.openlocfilehash: 758c82f02d2b113f6c750f7f0ede662c97b646b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91346d06c6fab4f3cd83c5318c88e738daf8d249
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184390"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229223"
 ---
 # <a name="assignment-operators"></a>Operatory przypisania
 
 ## <a name="syntax"></a>Składnia
 
-*wyrażenie* *operator przypisania* *wyrażenia*
+*wyrażenie* przypisania *wyrażenia* *operatora*
 
-*operator przypisania* : jeden z<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>=&nbsp;&nbsp;&nbsp;*=&nbsp;&nbsp;&nbsp;/=&nbsp;&nbsp;&nbsp;%=&nbsp;&nbsp;&nbsp;+=&nbsp;&nbsp;&nbsp;-=&nbsp;&nbsp;&nbsp;\<\<=&nbsp;&nbsp;&nbsp;>>=&nbsp;&nbsp;&nbsp;&=&nbsp;&nbsp;&nbsp;^=&nbsp;&nbsp;&nbsp;\|=</strong>
+*przypisanie — operator*: jeden z<br/>
+&emsp;**`=`**&emsp;**`*=`**&emsp;**`/=`**&emsp;**`%=`**&emsp;**`+=`**&emsp;**`-=`**&emsp;**`<<=`**&emsp;**`>>=`**&emsp;**`&=`**&emsp;**`^=`**&emsp;**`|=`**
 
 ## <a name="remarks"></a>Uwagi
 
-Operatory przypisania przechowują wartość w obiekcie wyznaczonym przez lewy operand. Istnieją dwa rodzaje operacji przypisania:
+Operatory przypisania przechowują wartość w obiekcie określonym przez lewy argument operacji. Istnieją dwa rodzaje operacji przypisania:
 
-1. *Przypisanie proste*, w którym wartość drugiego operandu jest przechowywana w obiekcie określonym przez pierwszy operand.
+- *przypisanie proste*, w którym wartość drugiego operandu jest przechowywana w obiekcie określonym przez pierwszy operand.
 
-1. *przydział złożony*, w którym operacje arytmetyczne, przesunięcia lub operacji na poziomie bitowym są wykonywane przed zachowaniem wyniku.
+- *przypisanie złożone*, w którym wykonywane jest operacje arytmetyczne, Shift lub bitowe przed zapisaniem wyniku.
 
-Wszystkie operatory przypisania w tabeli poniżej, z wyjątkiem operatora =, są operatorami przypisania złożonego.
+Wszystkie operatory przypisania w poniższej tabeli, z wyjątkiem **`=`** operatora, są operatorami przypisania złożonego.
 
-### <a name="assignment-operators-table"></a>Tabela operatory przypisania
+### <a name="assignment-operators-table"></a>Tabela operatorów przypisania
 
-|Operator|Znaczenie|
-|--------------|-------------|
-|**=**|Przechowuje wartość drugiego operandu w obiekcie określonym przez pierwszy operand (przypisanie proste).|
-|**\*=**|Mnoży wartość pierwszego operandu przez wartość drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|
-|**/=**|Dzieli wartość pierwszego operandu przez wartość drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|
-|**%=**|Wyznacza moduł wartości pierwszego operandu określonej przez wartość drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|
-|**+=**|Dodaje wartość drugiego operandu do wartości pierwszego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|
-|**-=**|Odejmuje wartość drugiego operandu od wartości pierwszego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|
-|**<\<=**|Przesuwa wartość pierwszego operandu w lewo o liczbę bitów określoną przez wartość drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|
-|**>>=**|Przesuwa wartość pierwszego operandu w prawo o liczbę bitów określoną przez wartość drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|
-|**&=**|Uzyskuje bitowe AND pierwszego i drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|
-|**^=**|Uzyskuje bitowe wykluczające OR pierwszego i drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|
-|**\|=**|Uzyskuje bitowe zawierające OR pierwszego i drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand.|
+| Operator | Znaczenie |
+|--|--|
+| **`=`** | Przechowuje wartość drugiego operandu w obiekcie określonym przez pierwszy operand (przypisanie proste). |
+| **`*=`** | Mnoży wartość pierwszego operandu przez wartość drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand. |
+| **`/=`** | Dzieli wartość pierwszego operandu przez wartość drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand. |
+| **`%=`** | Wyznacza moduł wartości pierwszego operandu określonej przez wartość drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand. |
+| **`+=`** | Dodaje wartość drugiego operandu do wartości pierwszego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand. |
+| **`-=`** | Odejmuje wartość drugiego operandu od wartości pierwszego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand. |
+| **`<<=`** | Przesuwa wartość pierwszego operandu w lewo o liczbę bitów określoną przez wartość drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand. |
+| **`>>=`** | Przesuwa wartość pierwszego operandu w prawo o liczbę bitów określoną przez wartość drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand. |
+| **`&=`** | Uzyskuje bitowe AND pierwszego i drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand. |
+| **`^=`** | Uzyskuje bitowe wykluczające OR pierwszego i drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand. |
+| **`|=`** | Uzyskuje bitowe zawierające OR pierwszego i drugiego operandu; przechowuje wynik w obiekcie określonym przez pierwszy operand. |
 
 ### <a name="operator-keywords"></a>Słowa kluczowe operatora
 
-Trzy z operatorów przypisania złożonego mają odpowiedniki tekstowe. Są to:
+Trzy złożone operatory przypisania mają odpowiedniki słów kluczowych. Oto one:
 
-|Operator|Odpowiednik|
-|--------------|----------------|
-|**&=**|`and_eq`|
-|**\|=**|`or_eq`|
-|**^=**|`xor_eq`|
+| Operator | Odpowiednik |
+|--|--|
+| **`&=`** | **`and_eq`** |
+| **`|=`** | **`or_eq`** |
+| **`^=`** | **`xor_eq`** |
 
-Istnieją dwa sposoby dostępu do tych słów kluczowych operatora w programach: dołączanie pliku nagłówka `iso646.h`, lub kompilowanie z [/za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).
+Język C++ określa te słowa kluczowe operatora jako alternatywne pisowni dla operatorów przypisania złożonego. W języku C alternatywna pisownia jest podawana jako makra w \<iso646.h> nagłówku. W języku C++ pisownia alternatywna to słowa kluczowe; Użycie \<iso646.h> lub odpowiednik języka C++ \<ciso646> jest przestarzałe. W programie Microsoft C++ [`/permissive-`](../build/reference/permissive-standards-conformance.md) [`/Za`](../build/reference/za-ze-disable-language-extensions.md) Opcja kompilatora or jest wymagana do włączenia alternatywnej pisowni.
 
 ## <a name="example"></a>Przykład
 
@@ -111,13 +112,13 @@ int main() {
 
 ## <a name="simple-assignment"></a>Przypisanie proste
 
-Prosty operator przypisania (**=**) powoduje, że wartość drugiego operandu w obiekcie określonym przez pierwszy operand. Jeśli oba obiekty są typami arytmetycznymi, prawy operand jest konwertowany na typ po lewej stronie, przed zachowaniem wartości.
+Prosty operator przypisania ( **`=`** ) powoduje, że wartość drugiego operandu, który ma być przechowywany w obiekcie określonym przez pierwszy operand. Jeśli oba obiekty są typu arytmetycznego, prawy operand jest konwertowany na typ po lewej stronie przed zapisaniem wartości.
 
-Obiekty **const** i **volatile** typy mogą być przypisane do l wartości typów, które są po prostu **volatile** lub które nie należą do żadnej **const** ani **volatile**.
+Obiekty **`const`** i **`volatile`** typy można przypisywać do l-wartości typów, które są tylko **`volatile`** lub nie są **`const`** lub **`volatile`** .
 
-Przypisanie do obiektów typu klasy (struktury, Unii i typy klas) jest wykonywane przez funkcję o nazwie `operator=`. Domyślne zachowanie tej funkcji operatora ma wykonywać kopię bitową; jednak to zachowanie może być modyfikowane przy użyciu przeciążonych operatorów. Zobacz [przeciążania operatora](../cpp/operator-overloading.md) Aby uzyskać więcej informacji. Ponadto może mieć typu klasy *przypisania kopiowania* i *Przenieś przypisania* operatorów. Aby uzyskać więcej informacji, zobacz [kopiowanie konstruktorów i operatory przypisania kopiowania](copy-constructors-and-copy-assignment-operators-cpp.md) i [konstruktory przenoszenia i operatory przypisania przenoszenia](move-constructors-and-move-assignment-operators-cpp.md).
+Przypisanie do obiektów typu klasy ( **`struct`** , **`union`** , i **`class`** ) jest wykonywane przez funkcję o nazwie `operator=` . Domyślne zachowanie tej funkcji operatora ma wykonywać kopię bitową; jednak to zachowanie może być modyfikowane przy użyciu przeciążonych operatorów. Aby uzyskać więcej informacji, zobacz [przeciążanie operatora](../cpp/operator-overloading.md). Typy klas mogą także mieć *przypisanie kopiowania* i operatory *przypisania przenoszenia* . Aby uzyskać więcej informacji, zobacz [Kopiowanie konstruktorów i kopiowanie operatorów przypisania](copy-constructors-and-copy-assignment-operators-cpp.md) oraz [przenoszenie konstruktorów i przenoszenie operatorów przypisania](move-constructors-and-move-assignment-operators-cpp.md).
 
-Obiekt dowolnej jednoznacznej klasy pochodnej od danej klasy bazowej może być przypisany do obiektu klasy bazowej. Przeciwny warunek nie jest spełniony, ponieważ istnieje niejawna konwersja z klasy pochodnej do klasy bazowej, ale nie z klasy bazowej do klasy pochodnej. Na przykład:
+Obiekt dowolnej jednoznacznej klasy pochodnej od danej klasy bazowej może być przypisany do obiektu klasy bazowej. Odwrócenie nie jest prawdziwe, ponieważ istnieje niejawna konwersja z klasy pochodnej na klasę bazową, ale nie z klasy bazowej na klasę pochodną. Na przykład:
 
 ```cpp
 // expre_SimpleAssignment.cpp
@@ -172,32 +173,32 @@ B = A;
 
 może mieć jeden z następujących efektów:
 
-- Wywołaj funkcję `operator=` dla `UserType2`, podana `operator=` jest dostarczana z `UserType1` argumentu.
+- Wywołaj funkcję `operator=` dla `UserType2` , dostarczono `operator=` z `UserType1` argumentem.
 
 - Wywołanie funkcji konwersji jawnej `UserType1::operator UserType2`, jeśli istnieje taka funkcja.
 
 - Wywołanie konstruktora `UserType2::UserType2`, jeśli taki konstruktor istnieje, który przyjmuje argument `UserType1` i kopiuje wynik.
 
-## <a name="compound-assignment"></a>Przydział złożony
+## <a name="compound-assignment"></a>Przypisanie złożone
 
-Złożone operatory przypisania, objętego [tabeli operatory przypisania](#assignment-operators-table), są określone w formie *e1* *op*= *e2*, gdzie *e1* jest modyfikowalną l wartością nie **const** typu i *e2* jest jednym z następujących czynności:
+Operatory przypisania złożonego są wyświetlane w [tabeli operatorów przypisania](#assignment-operators-table). Te operatory mają formę *E1* *op* =  *E2*, gdzie *E1* jest **`const`** niemodyfikowalną literą l-Value i *E2* jest:
 
-- Typ arytmetyczny
+- typ arytmetyczny
 
-- Wskaźnik, jeśli *op* jest **+** lub **-**
+- wskaźnik, jeśli *op* jest **`+`** lub**`-`**
 
-*E1* *op*= *e2* formularz, który zachowuje się jak *e1* **=** *e1* *op* *e2*, ale *e1* jest oceniane tylko raz.
+Formularz *E1* *op* =  *E2* zachowuje się jako *E1* **`=`** *E1* *op* *e2*, ale *E1* jest oceniane tylko raz.
 
-Przydział złożony, aby Typ wyliczany generuje komunikat o błędzie. Jeśli lewy operand jest typu wskaźnika, prawy operand musi być typem wskaźnika lub musi być wyrażeniem stałym, którego wynikiem jest 0. Jeśli lewy operand jest typu całkowitego, prawy operand nie musi być typu wskaźnika.
+Przypisanie złożone do typu wyliczeniowego generuje komunikat o błędzie. Jeśli argument operacji po lewej stronie jest typu wskaźnika, prawy operand musi być typu wskaźnika lub musi być wyrażeniem stałym, które ma wartość 0. Gdy argument operacji po lewej stronie jest typu całkowitego, prawy operand nie może być typu wskaźnika.
 
-## <a name="result-of-assignment-operators"></a>Wynik dla operatorów przypisania
+## <a name="result-of-assignment-operators"></a>Wynik operatorów przypisania
 
-Operatory przypisania zwróć wartość obiektu określonego przez lewy argument operacji po przypisaniu. Wynikowy typ jest typem operandu po lewej stronie. Wynik wyrażenia przypisania zawsze jest l wartością. Te operatory mają łączność od prawej do lewej. Lewy operand musi być modyfikowalną l wartością.
+Operatory przypisania zwracają wartość obiektu określonego przez lewy operand po przypisaniu. Typ wynikowy jest typem lewego operandu. Wynikiem wyrażenia przypisania jest zawsze l-wartość. Te operatory mają łączność od prawej do lewej. Lewy operand musi być modyfikowalną wartością l.
 
-W ANSI C wynik wyrażenia przypisania nie jest l wartością. W związku z tym, prawne wyrażenie C++ `(a += b) += c` jest niedozwolony w C.
+W standardzie ANSI C, wynik wyrażenia przypisania nie jest l-wartością. Oznacza to, że prawne wyrażenie języka C++ `(a += b) += c` nie jest dozwolone w języku C.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wyrażenia z operatorami dwuargumentowymi](../cpp/expressions-with-binary-operators.md)<br/>
-[Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Operatory przypisania w języku C](../c-language/c-assignment-operators.md)
+[Wyrażenia z operatorami binarnymi](../cpp/expressions-with-binary-operators.md)<br/>
+[Wbudowane operatory, pierwszeństwo i łączność języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[operatory przypisania w języku C](../c-language/c-assignment-operators.md)

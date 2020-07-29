@@ -1,5 +1,5 @@
 ---
-title: Auto(C++)
+title: auto (C++)
 ms.date: 12/10/2019
 f1_keywords:
 - auto_CPP
@@ -7,35 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 0991c836d1ade663be3e1b734ec4745796b91abd
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 675f6919b6804cfb1d2c5395d046cb5fa39e625d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301655"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229197"
 ---
-# <a name="auto-c"></a>Auto(C++)
+# <a name="auto-c"></a>`auto`Języków
 
 Wywnioskuje typ zadeklarowanej zmiennej na podstawie jego wyrażenia inicjującego.
 
 > [!NOTE]
-> C++ Standard definiuje oryginalne i zmienione znaczenie dla tego słowa kluczowego. Przed Visual Studio **2010 słowo kluczowe** Automatic deklaruje zmienną w klasie magazynu *automatycznego* ; oznacza to, że zmienna, która ma lokalny okres istnienia. Począwszy od programu Visual Studio 2010, **słowo kluczowe** "autosłowa" deklaruje zmienną, której typ jest wywnioskowany na podstawie wyrażenia inicjowania w jego deklaracji. Opcja [/Zc:&#91;&#93; ](../build/reference/zc-auto-deduce-variable-type.md) autokompilator kontroluje **znaczenie słowa** kluczowego autosłowo kluczowe.
+> Standard C++ definiuje oryginalne i zmienione znaczenie dla tego słowa kluczowego. Przed Visual Studio 2010 **`auto`** słowo kluczowe deklaruje zmienną w *automatycznej* klasie magazynu, czyli zmienną, która ma lokalny okres istnienia. Począwszy od programu Visual Studio 2010, **`auto`** słowo kluczowe deklaruje zmienną, której typ jest wywnioskowany z wyrażenia inicjowania w jego deklaracji. Opcja kompilatora [ `/Zc:auto`&#91;-&#93;](../build/reference/zc-auto-deduce-variable-type.md) kontroluje znaczenie **`auto`** słowa kluczowego.
 
 ## <a name="syntax"></a>Składnia
 
-```
-auto declarator initializer;
-```
+> **`auto`***declarator* *inicjator* deklarator**`;`**
 
-```
-[](auto param1, auto param2) {};
-```
+> **`[](auto`***param1* **`, auto`** *param2***`) {};`**
 
 ## <a name="remarks"></a>Uwagi
 
-Słowo **kluczowe** "Direct" kieruje kompilator do użycia wyrażenia inicjującego zmiennej zadeklarowanej lub parametru wyrażenia lambda, aby ustalić jego typ.
+**`auto`** Słowo kluczowe kieruje kompilator do użycia wyrażenia inicjującego zmiennej zadeklarowanej lub parametru wyrażenia lambda, aby ustalić jego typ.
 
-Zalecamy używanie słowa kluczowego "autosłowo kluczowe **" w większości** sytuacji, chyba że naprawdę potrzebujesz konwersji — ponieważ zapewnia to następujące korzyści:
+Zalecamy używanie **`auto`** słowa kluczowego w większości sytuacji — chyba że naprawdę chcesz wykonać konwersję, ponieważ zapewnia to następujące korzyści:
 
 - **Niezawodność:** Jeśli typ wyrażenia jest zmieniony — obejmuje to, kiedy typ zwracany funkcji jest zmieniany — tylko działa.
 
@@ -45,31 +41,31 @@ Zalecamy używanie słowa kluczowego "autosłowo kluczowe **" w większości** s
 
 - **Wydajność:** Kodowanie może być bardziej wydajne.
 
-Przypadki konwersji, w których można nie **chcieć używać**Auto:
+Przypadki konwersji, w których może nie być używane **`auto`** :
 
 - Jeśli potrzebujesz określonego typu i nic nie zrobi.
 
-- Typy pomocników szablonu wyrażenia — na przykład `(valarray+valarray)`.
+- Typy pomocników szablonu wyrażenia — na przykład `(valarray+valarray)` .
 
-Aby **użyć słowa** kluczowego autosłowo kluczowe, użyj go zamiast typu, aby zadeklarować zmienną i określić wyrażenie inicjalizacji. Ponadto można **zmodyfikować słowo kluczowe** autosłowa przy użyciu specyfikatorów i deklaratory, takich jak **const**, **volatile**, wskaźnik (`*`), Reference (`&`) i odwołania rvalue (`&&`). Kompilator szacuje wyrażenie inicjalizacji, a następnie użyje tych informacji do wywnioskowania typu zmiennej.
+Aby użyć **`auto`** słowa kluczowego, użyj go zamiast typu, aby zadeklarować zmienną i określić wyrażenie inicjalizacji. Ponadto można zmodyfikować **`auto`** słowo kluczowe przy użyciu specyfikatorów i deklaratory takich jak **`const`** , **`volatile`** , wskaźnik ( **`*`** ), Reference ( **`&`** ) i rvalue Reference ( **`&&`** ). Kompilator szacuje wyrażenie inicjalizacji, a następnie użyje tych informacji do wywnioskowania typu zmiennej.
 
-Wyrażenie inicjacji może być przypisaniem (składnią znaku równości), bezpośrednim inicjalizacją (składnią stylu funkcji), wyrażeniem [New](new-operator-cpp.md) lub wyrażeniem inicjowania może być parametrem *-Range-deklaracji* w instrukcji ["for" opartej na zakresie (C++)](../cpp/range-based-for-statement-cpp.md) . Aby uzyskać więcej informacji, zobacz [inicjatory](../cpp/initializers.md) i przykłady kodu w dalszej części tego dokumentu.
+Wyrażeniem inicjalizacji może być przypisanie (składnia znaku równości), bezpośrednie inicjowanie (składnia w stylu funkcji), [`operator new`](new-operator-cpp.md) wyrażenie lub wyrażenie inicjacji, może być parametrem *-Range-deklaracji* w instrukcji [ `for` instrukcji (C++) opartej na zakresie](../cpp/range-based-for-statement-cpp.md) . Aby uzyskać więcej informacji, zobacz [inicjatory](../cpp/initializers.md) i przykłady kodu w dalszej części tego dokumentu.
 
-Słowo kluczowe " **automatycznie** " jest symbolem zastępczym dla typu, ale nie jest samo typem. W związku z tym nie można **używać słowa** kluczowego autosłowo kluczowe w rzutach ani operatorach C++, takich jak [sizeof](../cpp/sizeof-operator.md) i (for/CLI) [typeid](../extensions/typeid-cpp-component-extensions.md).
+**`auto`** Słowo kluczowe jest symbolem zastępczym dla typu, ale nie jest samo typem. W związku z tym **`auto`** słowo kluczowe nie może być używane w rzutach ani operatorach, takich jak [`sizeof`](../cpp/sizeof-operator.md) i (dla C++/CLI) [`typeid`](../extensions/typeid-cpp-component-extensions.md) .
 
 ## <a name="usefulness"></a>Przydatność
 
-**Funkcja** autosłowo kluczowe to prosty sposób deklarowania zmiennej, która ma typ skomplikowany. **Na przykład można użyć funkcji** Auto, aby zadeklarować zmienną, w której wyrażenie inicjacji obejmuje szablony, wskaźniki do funkcji lub wskaźniki do elementów członkowskich.
+**`auto`** Słowo kluczowe to prosty sposób deklarowania zmiennej, która ma typ skomplikowany. Na przykład można użyć, **`auto`** Aby zadeklarować zmienną, w której wyrażenie inicjacji obejmuje szablony, wskaźniki do funkcji lub wskaźniki do elementów członkowskich.
 
-Można również użyć funkcji autodeklaruj i zainicjować **zmienną do wyrażenia** lambda. Nie można zadeklarować typu zmiennej samodzielnie, ponieważ typ wyrażenia lambda jest znany tylko kompilatorowi. Aby uzyskać więcej informacji, zobacz [Przykłady wyrażeń lambda](../cpp/examples-of-lambda-expressions.md).
+Można również użyć **`auto`** do zadeklarowania i zainicjowania zmiennej w wyrażeniu lambda. Nie można zadeklarować typu zmiennej samodzielnie, ponieważ typ wyrażenia lambda jest znany tylko kompilatorowi. Aby uzyskać więcej informacji, zobacz [Przykłady wyrażeń lambda](../cpp/examples-of-lambda-expressions.md).
 
 ## <a name="trailing-return-types"></a>Końcowe zwracane typy
 
-Możesz użyć Auto, wraz ze specyfikatorem typu **decltype** **, aby**ułatwić pisanie bibliotek szablonów. Użyj **opcji** autoi **decltype** , aby zadeklarować funkcję szablonu, której typ zwracany zależy od typów argumentów szablonu. Lub **Użyj funkcji** autoi **decltype** , aby zadeklarować funkcję szablonu, która zawija wywołanie do innej funkcji, a następnie zwraca dowolny z nich jest typem zwracanym przez inną funkcję. Aby uzyskać więcej informacji, zobacz [decltype](../cpp/decltype-cpp.md).
+**`auto`** **`decltype`** Aby ułatwić pisanie bibliotek szablonów, można użyć razem ze specyfikatorem typu. Użyj **`auto`** i, **`decltype`** Aby zadeklarować funkcję szablonu, której typ zwracany zależy od typów argumentów szablonu. Lub Użyj **`auto`** i, **`decltype`** Aby zadeklarować funkcję szablonu, która zawija wywołanie do innej funkcji, a następnie zwraca dowolny typ zwracany przez inną funkcję. Aby uzyskać więcej informacji, zobacz [`decltype`](../cpp/decltype-cpp.md).
 
 ## <a name="references-and-cv-qualifiers"></a>Odwołania i kwalifikatory CV
 
-Należy pamiętać, **że przy użyciu** odwołań do porzucania, kwalifikatorów const i kwalifikatorów nietrwałych. Rozważmy następujący przykład:
+Należy pamiętać, że przy użyciu **`auto`** odwołujących się odwołań, **`const`** kwalifikatorów i **`volatile`** kwalifikatorów. Rozpatrzmy następujący przykład:
 
 ```cpp
 // cl.exe /analyze /EHsc /W4
@@ -91,11 +87,11 @@ int main( )
 }
 ```
 
-W poprzednim przykładzie jest to wartość int, a nie odwołanie int, dlatego dane wyjściowe są `11 11`, a nie `11 12`, tak jakby kwalifikator odwołania nie został porzucony przez **funkcję Autostart**.
+W poprzednim przykładzie jest to **`int`** , **`int`** a nie odwołanie, dlatego dane wyjściowe nie są tak `11 11` , `11 12` jak byłyby w przypadku, gdy kwalifikator odwołania nie został porzucony przez **`auto`** .
 
 ## <a name="type-deduction-with-braced-initializers-c14"></a>Odliczanie w nawiasach klamrowych (C++ 14)
 
-Poniższy przykład kodu pokazuje, jak zainicjować funkcję autovariable przy użyciu nawiasów klamrowych. Należy zwrócić uwagę na różnice między B i C oraz między a i E.
+Poniższy przykład kodu pokazuje, jak zainicjować **`auto`** zmienną za pomocą nawiasów klamrowych. Należy zwrócić uwagę na różnice między B i C oraz między a i E.
 
 ```cpp
 #include <initializer_list>
@@ -124,39 +120,39 @@ int main()
 
 ## <a name="restrictions-and-error-messages"></a>Ograniczenia i komunikaty o błędach
 
-W poniższej tabeli wymieniono ograniczenia dotyczące **użycia słowa** kluczowego "autosłowo kluczowe" oraz odpowiedni komunikat o błędzie diagnostycznym emitowany przez kompilator.
+W poniższej tabeli wymieniono ograniczenia dotyczące użycia **`auto`** słowa kluczowego i odpowiadający mu komunikat o błędzie diagnostycznym, który emituje kompilator.
 
 |Numer błędu|Opis|
 |------------------|-----------------|
-|[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|Słowa kluczowego autosłowo kluczowe nie można łączyć z jakimkolwiek innym specyfikatorem typu.|
-|[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|Symbol, który jest zadeklarowany za **pomocą słowa** kluczowego autosłowo kluczowe, musi mieć inicjator.|
-|[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|Użyto nieprawidłowego **słowa** kluczowego autosłowo kluczowe, aby zadeklarować typ. Na przykład zadeklarowano typ zwracany metody lub tablicę.|
-|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md), [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|Nie można zadeklarować parametru lub argumentu szablonu za pomocą **słowa** kluczowego autosłowo kluczowe.|
-|[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|Nie można zadeklarować metody lub parametru szablonu za pomocą **słowa** kluczowego autosłowo kluczowe.|
+|[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|**`auto`** Nie można łączyć słowa kluczowego z żadnym innym specyfikatorem typu.|
+|[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|Symbol, który jest zadeklarowany za pomocą **`auto`** słowa kluczowego, musi mieć inicjator.|
+|[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|Słowo kluczowe jest nieprawidłowo używane **`auto`** do deklarowania typu. Na przykład zadeklarowano typ zwracany metody lub tablicę.|
+|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md), [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|Nie można zadeklarować parametru lub argumentu szablonu za pomocą **`auto`** słowa kluczowego.|
+|[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|Nie można zadeklarować metody lub parametru szablonu za pomocą **`auto`** słowa kluczowego.|
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|Nie można użyć symbolu przed jego zainicjowaniem. W tym przypadku oznacza to, że zmienna nie może zostać użyta do zainicjowania siebie.|
-|[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|Nie można rzutować na typ, który jest zadeklarowany za **pomocą słowa** kluczowego autosłowo kluczowe.|
-|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Wszystkie symbole na liście deklarator, które są zadeklarowane za pomocą słowa kluczowego autosłowo **kluczowe, muszą** być rozpoznawane jako ten sam typ. Aby uzyskać więcej informacji, zobacz [deklaracje i definicje](declarations-and-definitions-cpp.md).|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|Operatorów [sizeof](../cpp/sizeof-operator.md) i [typeid](../extensions/typeid-cpp-component-extensions.md) nie można zastosować do symbolu, który jest zadeklarowany za pomocą **słowa** kluczowego autosłowo kluczowe.|
+|[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|Nie można rzutować na typ, który jest zadeklarowany za pomocą **`auto`** słowa kluczowego.|
+|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Wszystkie symbole na liście deklarator, które są zadeklarowane za pomocą **`auto`** słowa kluczowego, muszą być rozpoznawane jako ten sam typ. Aby uzyskać więcej informacji, zobacz [deklaracje i definicje](declarations-and-definitions-cpp.md).|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|Operatorów [sizeof](../cpp/sizeof-operator.md) i [typeid](../extensions/typeid-cpp-component-extensions.md) nie można zastosować do symbolu, który jest zadeklarowany ze **`auto`** słowem kluczowym.|
 
 ## <a name="examples"></a>Przykłady
 
-Te fragmenty kodu ilustrują niektóre sposoby **używania słowa** kluczowego autosłowo kluczowe.
+Te fragmenty kodu ilustrują niektóre sposoby **`auto`** używania słowa kluczowego.
 
-Następujące deklaracje są równoważne. W pierwszej instrukcji zmienna `j` jest zadeklarowana jako typ **int**. W drugiej instrukcji zmienna `k` jest określana jako typ **int** , ponieważ wyrażenie inicjalizacji (0) jest liczbą całkowitą.
+Następujące deklaracje są równoważne. W pierwszej instrukcji zmienna `j` jest zadeklarowana jako typ **`int`** . W drugiej instrukcji zmienna `k` jest określana jako typ, **`int`** ponieważ wyrażenie inicjacji (0) jest liczbą całkowitą.
 
 ```cpp
 int j = 0;  // Variable j is explicitly type int.
 auto k = 0; // Variable k is implicitly type int because 0 is an integer.
 ```
 
-Następujące deklaracje są równoważne, ale druga deklaracja jest prostsza od pierwszej. Jednym z najbardziej atrakcyjnych powodów **użycia słowa** kluczowego autosłowo kluczowe jest uproszczenie.
+Następujące deklaracje są równoważne, ale druga deklaracja jest prostsza od pierwszej. Jednym z najbardziej atrakcyjnych powodów użycia **`auto`** słowa kluczowego jest prostota.
 
 ```cpp
 map<int,list<string>>::iterator i = m.begin();
 auto i = m.begin();
 ```
 
-Poniższy fragment kodu deklaruje typ zmiennych `iter` i `elem`, gdy rozpoczyna **się pętla** **for** i Range.
+Poniższy fragment kodu deklaruje typ zmiennych `iter` i `elem` gdy **`for`** **`for`** rozpoczynane są pętle i.
 
 ```cpp
 // cl /EHsc /nologo /W4
@@ -184,7 +180,7 @@ int main()
 }
 ```
 
-Poniższy fragment kodu używa operatora **New** i deklaracji wskaźnika do deklarowania wskaźników.
+Poniższy fragment kodu używa **`new`** deklaracji operatora i wskaźnika, aby zadeklarować wskaźniki.
 
 ```cpp
 double x = 12.34;
@@ -200,14 +196,14 @@ auto c = 'a', *d(&c);          // Resolves to char.
 auto m = 1, &n = m;            // Resolves to int.
 ```
 
-Ten fragment kodu używa operatora warunkowego (`?:`) do deklarowania zmiennej `x` jako liczby całkowitej o wartości 200:
+Ten fragment kodu używa operatora warunkowego ( `?:` ) do deklarowania zmiennej `x` jako liczby całkowitej o wartości 200:
 
 ```cpp
 int v1 = 100, v2 = 200;
 auto x = v1 > v2 ? v1 : v2;
 ```
 
-Poniższy fragment kodu inicjuje zmienną `x` do wpisywania **int**, zmiennej `y` do odwołania do typu **const int**, a zmienna `fp` do wskaźnika do funkcji, która zwraca typ **int**.
+Poniższy fragment kodu inicjuje zmienną `x` do typu **`int`** , zmienna `y` dla odwołania do typu **`const int`** i zmienna `fp` do wskaźnika do funkcji, która zwraca typ **`int`** .
 
 ```cpp
 int f(int x) { return x; }
@@ -224,13 +220,13 @@ int main()
 
 ## <a name="see-also"></a>Zobacz także
 
-[Auto, słowo kluczowe](../cpp/auto-keyword.md)<br/>
+[`auto`Kodu](../cpp/auto-keyword.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
-[/Zc:auto (Dedukuj typ zmiennej)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
-[sizeof, operator](../cpp/sizeof-operator.md)<br/>
-[typeid](../extensions/typeid-cpp-component-extensions.md)<br/>
-[Nowy operator](new-operator-cpp.md)<br/>
+[`/Zc:auto`(Wywnioskowanie typu zmiennej)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
+[`sizeof`Zakład](../cpp/sizeof-operator.md)<br/>
+[`typeid`](../extensions/typeid-cpp-component-extensions.md)<br/>
+[`operator new`](new-operator-cpp.md)<br/>
 [Deklaracje i definicje](declarations-and-definitions-cpp.md)<br/>
 [Przykłady wyrażeń lambda](../cpp/examples-of-lambda-expressions.md)<br/>
 [Inicjatory](../cpp/initializers.md)<br/>
-[decltype](../cpp/decltype-cpp.md)
+[`decltype`](../cpp/decltype-cpp.md)

@@ -47,12 +47,12 @@ helpviewer_keywords:
 - tcschr function
 - mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
-ms.openlocfilehash: 69d82ae1a89e58b8cefcd2c1e24f49e24379ba11
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a7cea0b2c640b7cb87d7097cea7bdf94a73abfb8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920401"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229314"
 ---
 # <a name="strchr-wcschr-_mbschr-_mbschr_l"></a>strchr, wcschr, _mbschr, _mbschr_l
 
@@ -125,7 +125,7 @@ Ciąg źródłowy zakończony wartością null.
 *s*<br/>
 Znak, który ma zostać zlokalizowany.
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -134,13 +134,13 @@ Każda z tych funkcji zwraca wskaźnik do pierwszego wystąpienia *c* w *str*lub
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja znajduje pierwsze wystąpienie c w *str*lub zwraca wartość null, jeśli nie znaleziono języka *c* . *c* `strchr` Znak końcowy o wartości null jest uwzględniany w wyszukiwaniu.
+`strchr`Funkcja znajduje pierwsze wystąpienie *c* w *str*lub zwraca wartość null, jeśli nie znaleziono języka *c* . Znak końcowy o wartości null jest uwzględniany w wyszukiwaniu.
 
-`wcschr``_mbschr` i `_mbschr_l` są wersjami znaków dwubajtowych `strchr`. Argumenty i wartość zwracana przez `wcschr` są ciągami znaków dwubajtowych; te z `_mbschr` są ciągami znaków wielobajtowych. `_mbschr`rozpoznaje sekwencje znaków wielobajtowych. Ponadto, jeśli ciąg jest wskaźnikiem typu null, `_mbschr` wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, `_mbschr` zwraca wartość null i `errno` ustawia do EINVAL. `strchr`i `wcschr` nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie w inny sposób.
+`wcschr``_mbschr`i `_mbschr_l` są wersjami znaków dwubajtowych `strchr` . Argumenty i wartość zwracana przez `wcschr` są ciągami znaków `_mbschr` dwubajtowych; te z są ciągami znaków wieloznacznych. `_mbschr`rozpoznaje sekwencje znaków wielobajtowych. Ponadto, jeśli ciąg jest wskaźnikiem typu null, `_mbschr` wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, `_mbschr` zwraca wartość null i ustawia `errno` do EINVAL. `strchr`i `wcschr` nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie w inny sposób.
 
 Wartość wyjściowa jest zależna od ustawienia ustawienia kategorii LC_CTYPE ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną w zamian parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
-W języku C te funkcje przyjmują wskaźnik **const** dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie pobierające wskaźnik do elementu **const** zwraca wskaźnik do elementu **const**; wersja, która przyjmuje wskaźnik do elementu niebędącego**stałą** , zwraca wskaźnik do elementu innego niż**const**. Makro _CRT_CONST_CORRECT_OVERLOADS jest zdefiniowane, jeśli są dostępne zarówno wersje **const** , jak i**niestałe** tych funkcji. Jeśli wymagane jest zachowanie**niestałe** dla obu przeciążeń C++, zdefiniuj symbol _CONST_RETURN.
+W języku C te funkcje przyjmują **`const`** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie pobierające wskaźnik do **`const`** zwraca wskaźnik do **`const`** ; wersja, która przyjmuje wskaźnik do **`const`** niezwracanego wskaźnika do niebędącego elementem **`const`** . Makro _CRT_CONST_CORRECT_OVERLOADS jest zdefiniowane, jeśli **`const`** są dostępne zarówno i nie **`const`** wersje tych funkcji. Jeśli wymagane jest **`const`** zachowanie niezachowania dla obu przeciążeń C++, zdefiniuj symbol _CONST_RETURN.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -155,9 +155,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`strchr`|\<> String. h|
-|`wcschr`|\<ciąg. h> lub \<WCHAR. h>|
-|`_mbschr`, `_mbschr_l`|\<mbstring. h>|
+|`strchr`|\<string.h>|
+|`wcschr`|\<string.h> lub \<wchar.h>|
+|`_mbschr`, `_mbschr_l`|\<mbstring.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -218,11 +218,11 @@ Result:   first r found at position 12
 Result:   last r found at position 30
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>

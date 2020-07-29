@@ -6,18 +6,18 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 4640bcf5f21bbe018a8744a6c5206bdd09509c98
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 23567ff2c4ff431ba3dccdb600e5d7b3e848c852
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749646"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229015"
 ---
 # <a name="constructors-c"></a>Konstruktory (C++)
 
-Aby dostosować sposób inicjowania elementów członkowskich klasy lub wywołać funkcje podczas tworzenia obiektu klasy, należy zdefiniować *konstruktor*. Konstruktor ma taką samą nazwę jak klasa i nie ma wartości zwracanej. Można zdefiniować dowolną liczbę przeciążonych konstruktorów, ile potrzeba, aby dostosować inicjalizację na różne sposoby. Zazwyczaj konstruktory mają dostępność publiczną, dzięki czemu kod poza definicją klasy lub hierarchią dziedziczenia może tworzyć obiekty klasy. Ale można również zadeklarować konstruktora jako **chronione** lub **prywatne**.
+Aby dostosować sposób inicjowania składowych klasy lub wywołania funkcji po utworzeniu obiektu klasy, zdefiniuj *konstruktora*. Konstruktor ma taką samą nazwę jak Klasa i nie zwraca wartości. Można zdefiniować dowolną liczbę przeciążonych konstruktorów, aby dostosować inicjalizację na różne sposoby. Zazwyczaj konstruktory mają publicznego ułatwienia dostępu, tak aby kod poza hierarchią klasy lub hierarchii dziedziczenia mógł tworzyć obiekty klasy. Ale można również zadeklarować konstruktora jako **`protected`** lub **`private`** .
 
-Konstruktory opcjonalnie można podjąć init listy elementu członkowskiego. Jest to bardziej efektywny sposób inicjowania elementów członkowskich klasy niż przypisywanie wartości w treści konstruktora. W poniższym przykładzie pokazano klasę `Box` z trzech przeciążonych konstruktorów. Dwa ostatnie użyj init listy elementu członkowskiego:
+Konstruktory mogą opcjonalnie przyjmować listę init elementu członkowskiego. Jest to bardziej wydajny sposób na zainicjowanie elementów członkowskich klasy niż przypisanie wartości w treści konstruktora. Poniższy przykład przedstawia klasę `Box` z trzema przeciążonymi konstruktorami. Ostatnie dwie listy init elementu członkowskiego use:
 
 ```cpp
 class Box {
@@ -46,7 +46,7 @@ private:
 };
 ```
 
-Podczas deklarowania wystąpienia klasy kompilator wybiera konstruktora do wywołania na podstawie reguł rozpoznawania przeciążenia:
+W przypadku deklarowania instancji klasy kompilator wybiera konstruktora, który ma zostać wywołany na podstawie reguł rozpoznania przeciążenia:
 
 ```cpp
 int main()
@@ -62,15 +62,15 @@ int main()
 }
 ```
 
-- Konstruktory mogą być zadeklarowane jako **wbudowane,** [jawne,](#explicit_constructors) **przyjaciel** lub [constexpr](#constexpr_constructors).
-- Konstruktor może zainicjować obiekt, który został zadeklarowany jako **const**, **volatile** lub **const volatile**. Obiekt staje się **const** po zakończeniu konstruktora.
-- Aby zdefiniować konstruktora w pliku implementacji, nadaj `Box::Box(){...}`mu nazwę kwalifikowaną, tak jak w przypadku każdej innej funkcji elementu członkowskiego: .
+- Konstruktory mogą być zadeklarowane jako **`inline`** , [jawne](#explicit_constructors) **`friend`** lub [constexpr](#constexpr_constructors).
+- Konstruktor może zainicjować obiekt, który został zadeklarowany jako **`const`** , **`volatile`** lub **`const volatile`** . Obiekt zostanie **`const`** ukończony po zakończeniu konstruktora.
+- Aby zdefiniować konstruktora w pliku implementacji, nadaj mu nazwę kwalifikowaną, jak z jakąkolwiek inną funkcją składową: `Box::Box(){...}` .
 
-## <a name="member-initializer-lists"></a><a name="member_init_list"></a>Listy inicjatorów elementów członkowskich
+## <a name="member-initializer-lists"></a><a name="member_init_list"></a>Listy inicjatorów składowych
 
-Konstruktor może opcjonalnie mieć listę inicjatora elementu członkowskiego, który inicjuje członków klasy przed wykonaniem obiektu konstruktora. (Należy zauważyć, że lista inicjatora elementu członkowskiego nie jest tym samym, co *lista inicjatora* typu [\<std::initializer_list T>](../standard-library/initializer-list-class.md).)
+Konstruktor może opcjonalnie mieć listę inicjatorów składowych, która inicjuje składowe klasy przed wykonaniem treści konstruktora. (Należy zauważyć, że lista inicjatorów składowych nie jest taka sama jak lista *inicjatorów* typu [std:: \<T> initializer_list](../standard-library/initializer-list-class.md).)
 
-Za pomocą listy inicjatora elementu członkowskiego jest preferowane niż przypisywanie wartości w treści konstruktora, ponieważ bezpośrednio inicjuje element członkowski. W poniższym przykładzie przedstawiono listę inicjatora elementu członkowskiego składa się ze wszystkich wyrażeń **identyfikator(argument)** po dwukropku:
+Użycie listy inicjatorów składowych jest preferowane przez przypisanie wartości w treści konstruktora, ponieważ bezpośrednio Inicjuje element członkowski. W poniższym przykładzie przedstawiono listę inicjatorów składowych składającą się ze wszystkich wyrażeń **identyfikatora (argumentu)** po dwukropku:
 
 ```cpp
     Box(int width, int length, int height)
@@ -78,15 +78,15 @@ Za pomocą listy inicjatora elementu członkowskiego jest preferowane niż przyp
     {}
 ```
 
-Identyfikator musi odnosić się do elementu członkowskiego klasy; jest inicjowany z wartością argumentu. Argument może być jednym z parametrów konstruktora, wywołaniem funkcji lub [std::initializer_list\<T>](../standard-library/initializer-list-class.md).
+Identyfikator musi odwoływać się do elementu członkowskiego klasy; zostanie ona zainicjowana przy użyciu wartości argumentu. Argument może być jednym z parametrów konstruktora, wywołania funkcji lub [std:: initializer_list \<T> ](../standard-library/initializer-list-class.md).
 
-**const** elementów członkowskich i członków typu odwołania musi być zainicjowany na liście inicjatora elementu członkowskiego.
+**`const`** elementy członkowskie i elementy członkowskie typu referencyjnego muszą być zainicjowane na liście inicjatorów elementów członkowskich.
 
-Wywołania do sparametryzowanych konstruktorów klas podstawowych powinny być wykonane na liście inicjatora, aby upewnić się, że klasa podstawowa jest w pełni zainicjowana przed wykonaniem konstruktora pochodnego.
+Wywołania sparametryzowanych konstruktorów klas podstawowych powinny być wprowadzane na liście inicjatorów, aby upewnić się, że klasa bazowa jest w pełni zainicjowana przed wykonaniem konstruktora pochodnego.
 
 ## <a name="default-constructors"></a><a name="default_constructors"></a>Konstruktory domyślne
 
-*Domyślne konstruktory* zazwyczaj nie mają parametrów, ale mogą mieć parametry z wartościami domyślnymi.
+*Konstruktory domyślne* nie mają zwykle żadnych parametrów, ale mogą mieć parametry z wartościami domyślnymi.
 
 ```cpp
 class Box {
@@ -99,7 +99,7 @@ public:
 }
 ```
 
-Domyślne konstruktory są jedną ze [specjalnych funkcji elementów członkowskich](special-member-functions.md). Jeśli żadne konstruktory nie są zadeklarowane w klasie, kompilator zapewnia niejawne **wbudowany** konstruktor domyślny.
+Konstruktory domyślne są jedną z [specjalnych funkcji Członkowskich](special-member-functions.md). Jeśli w klasie nie zadeklarowano konstruktorów, kompilator dostarcza niejawnego **`inline`** konstruktora domyślnego.
 
 ```cpp
 #include <iostream>
@@ -120,18 +120,18 @@ int main() {
 }
 ```
 
-Jeśli polegasz na niejawnym konstruktorze domyślnym, należy zainicjować elementy członkowskie w definicji klasy, jak pokazano w poprzednim przykładzie. Bez tych inicjatorów, elementy członkowskie będą niezainicjowane i Volume() wywołanie spowoduje wartość śmieci. Ogólnie rzecz biorąc jest dobrą praktyką, aby zainicjować elementy członkowskie w ten sposób, nawet wtedy, gdy nie polega na niejawnym konstruktora domyślnego.
+Jeśli korzystasz z niejawnego konstruktora domyślnego, pamiętaj o zainicjowaniu elementów członkowskich w definicji klasy, jak pokazano w poprzednim przykładzie. Bez tych inicjatorów elementy członkowskie byłyby niezainicjowane, a wywołanie Volume () wygenerowało wartość bezużyteczną. Ogólnie rzecz biorąc, dobrym sposobem jest zainicjowanie elementów członkowskich w ten sposób nawet wtedy, gdy nie polega na niejawnym konstruktorze domyślnym.
 
-Można uniemożliwić kompilatorowi wygenerowanie domyślnego konstruktora niejawnego, definiując go jako [usuniętego:](#explicitly_defaulted_and_deleted_constructors)
+Można uniemożliwić kompilatorowi generowanie niejawnego konstruktora domyślnego przez zdefiniowanie go jako [usuniętego](#explicitly_defaulted_and_deleted_constructors):
 
 ```cpp
     // Default constructor
     Box() = delete;
 ```
 
-Domyślny konstruktor wygenerowany przez kompilator zostanie zdefiniowany jako usunięty, jeśli wszystkie elementy członkowskie klasy nie są konstruowane domyślnie. Na przykład wszystkie elementy członkowskie typu klasy i ich członków typu klasy, musi mieć domyślny konstruktor i destruktory, które są dostępne. Wszystkie elementy członkowskie danych typu odwołania, a także **const** członków musi mieć domyślny inicjatora elementu członkowskiego.
+Konstruktor domyślny wygenerowany przez kompilator zostanie zdefiniowany jako usunięty, jeśli którykolwiek element członkowski klasy nie jest domyślny-konstrukcyjną. Na przykład wszystkie elementy członkowskie typu klasy i ich elementy członkowskie typu klasy muszą mieć domyślny Konstruktor i destruktory, które są dostępne. Wszystkie elementy członkowskie danych typu referencyjnego, a także **`const`** elementy członkowskie muszą mieć domyślny inicjator składowej.
 
-Podczas wywoływania domyślnego konstruktora wygenerowanego przez kompilator i próby użycia nawiasów jest wydawane ostrzeżenie:
+Gdy wywołujesz Konstruktor domyślny wygenerowany przez kompilator i spróbujesz użyć nawiasów, zostanie wygenerowane Ostrzeżenie:
 
 ```cpp
 class myclass{};
@@ -140,7 +140,7 @@ myclass mc();     // warning C4930: prototyped function not called (was a variab
 }
 ```
 
-Jest to przykład problemu najbardziej irytującej interpretacji składni (Most Vexing Parse). Ponieważ wyrażenie przykładowe może być interpretowane jako deklaracja funkcji lub wywołanie konstruktora domyślnego i ponieważ analizatory składni języka C++ promują deklaracje w stosunku do innych obiektów, wyrażenie jest traktowane jako deklaracja funkcji. Aby uzyskać więcej informacji, zobacz [Najbardziej vexing analizowania](https://en.wikipedia.org/wiki/Most_vexing_parse).
+Jest to przykład problemu najbardziej irytującej interpretacji składni (Most Vexing Parse). Ponieważ wyrażenie przykładowe może być interpretowane jako deklaracja funkcji lub wywołanie konstruktora domyślnego i ponieważ analizatory składni języka C++ promują deklaracje w stosunku do innych obiektów, wyrażenie jest traktowane jako deklaracja funkcji. Aby uzyskać więcej informacji, zobacz [większość uciążliwych Parse](https://en.wikipedia.org/wiki/Most_vexing_parse).
 
 Jeśli zadeklarowano jakiekolwiek konstruktory inne niż domyślne, kompilator nie udostępnia domyślnego konstruktora:
 
@@ -176,13 +176,13 @@ Można jednak użyć zestawu list inicjatorów, aby zainicjować tablicę obiekt
 Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 ```
 
-Aby uzyskać więcej informacji, zobacz [Inicjatorzy](initializers.md).
+Aby uzyskać więcej informacji, zobacz [inicjatory](initializers.md).
 
-## <a name="copy-constructors"></a><a name="copy_and_move_constructors"></a>Konstruktory kopiowania
+## <a name="copy-constructors"></a><a name="copy_and_move_constructors"></a>Kopiuj konstruktory
 
-*Konstruktor kopii* inicjuje obiekt, kopiując wartości elementów członkowskich z obiektu tego samego typu. Jeśli elementy członkowskie klasy są wszystkie proste typy, takie jak wartości skalarne, konstruktor kopii generowany przez kompilator jest wystarczająca i nie trzeba definiować własne. Jeśli klasa wymaga bardziej złożonego inicjowania, należy zaimplementować konstruktora kopii niestandardowej. Na przykład jeśli element członkowski klasy jest wskaźnikiem, należy zdefiniować konstruktor kopii, aby przydzielić nową pamięć i skopiować wartości z obiektu spiczastego innego. Konstruktor kopii generowany przez kompilator po prostu kopiuje wskaźnik, dzięki czemu nowy wskaźnik nadal wskazuje lokalizację pamięci drugiej strony.
+*Konstruktor kopiujący* inicjuje obiekt kopiując wartości elementu członkowskiego z obiektu tego samego typu. Jeśli składowe klasy są wszystkie typy proste, takie jak wartości skalarne, Konstruktor kopiujący generowany przez kompilator jest wystarczający i nie trzeba definiować własnych. Jeśli Klasa wymaga bardziej złożonej inicjalizacji, należy zaimplementować niestandardowy Konstruktor kopiujący. Na przykład, jeśli element członkowski klasy jest wskaźnikiem, należy zdefiniować Konstruktor kopiujący, aby przydzielić nową pamięć i skopiować wartości z innego obiektu wskazywanego przez. Konstruktor kopiujący wygenerowany przez kompilator po prostu kopiuje wskaźnik, tak aby nowy wskaźnik nadal wskazywał lokalizację w pamięci.
 
-Konstruktor kopii może mieć jeden z tych podpisów:
+Konstruktor kopiujący może mieć jeden z następujących sygnatur:
 
 ```cpp
     Box(Box& other); // Avoid if possible--allows modification of other.
@@ -194,25 +194,25 @@ Konstruktor kopii może mieć jeden z tych podpisów:
     Box(Box& other, int i = 42, string label = "Box");
 ```
 
-Podczas definiowania konstruktora kopii należy również zdefiniować operator przypisania kopii (=). Aby uzyskać więcej informacji, zobacz [Konstruktory przypisywania](assignment.md) i [kopiowania oraz operatory przypisywania kopiowania](copy-constructors-and-copy-assignment-operators-cpp.md).
+Podczas definiowania konstruktora kopiującego należy również zdefiniować operator przypisania kopiowania (=). Aby uzyskać więcej informacji, zobacz [przypisania](assignment.md) i [kopiowania konstruktorów oraz kopiowanie operatorów przypisania](copy-constructors-and-copy-assignment-operators-cpp.md).
 
-Można zapobiec kopiowaniu obiektu, definiując konstruktor kopii jako usunięty:
+Można zapobiec kopiowaniu obiektu przez zdefiniowanie konstruktora kopiującego jako usuniętego:
 
 ```cpp
     Box (const Box& other) = delete;
 ```
 
-Próba skopiowania obiektu powoduje błąd *C2280: próba odwołania się do usuniętej funkcji*.
+Próba skopiowania obiektu powoduje błąd *C2280: próbuje odwołać się do usuniętej funkcji*.
 
-## <a name="move-constructors"></a><a name="move_constructors"></a>Konstruktory przenoszenia
+## <a name="move-constructors"></a><a name="move_constructors"></a>Przenoszenie konstruktorów
 
-*Konstruktor przenoszenia* jest specjalną funkcją elementu członkowskiego, która przenosi własność danych istniejącego obiektu do nowej zmiennej bez kopiowania oryginalnych danych. Przyjmuje odwołanie rvalue jako pierwszy parametr, a wszelkie dodatkowe parametry muszą mieć wartości domyślne. Konstruktory przenoszenia mogą znacznie zwiększyć wydajność programu podczas przekazywania wokół dużych obiektów.
+*Konstruktor przenoszący* jest specjalną funkcją członkowską, która przenosi własność istniejących danych obiektu do nowej zmiennej bez kopiowania oryginalnych danych. Przyjmuje odwołanie rvalue jako pierwszy parametr, a wszystkie dodatkowe parametry muszą mieć wartości domyślne. Konstruktory przenoszenia mogą znacząco zwiększyć wydajność programu podczas przekazywania dużych obiektów.
 
 ```cpp
 Box(Box&& other);
 ```
 
-Kompilator wybiera konstruktora przenoszenia w niektórych sytuacjach, gdy obiekt jest inicjowany przez inny obiekt tego samego typu, który ma zostać zniszczony i nie potrzebuje już swoich zasobów. Poniższy przykład pokazuje jeden przypadek, gdy konstruktor przenoszenia jest zaznaczony przez rozdzielczość przeciążenia. W konstruktorze, który wywołuje, `get_Box()`zwracana wartość jest *xvalue* (eXpiring wartość). Nie jest przypisany do żadnej zmiennej i dlatego ma zamiar wyjść poza zakres. Aby zapewnić motywację dla tego przykładu, dajmy Box duży wektor ciągów, które reprezentują jego zawartość. Zamiast kopiowania wektora i jego ciągów, konstruktor przenoszenia "kradnie" go z wygasającej wartości "box", dzięki czemu wektor należy teraz do nowego obiektu. Wywołanie `std::move` jest wszystko, co jest `vector` `string` potrzebne, ponieważ zarówno i klasy implementują własne konstruktory przenoszenia.
+Kompilator wybiera Konstruktor przenoszący w pewnych sytuacjach, gdzie obiekt jest inicjowany przez inny obiekt tego samego typu, który ma zostać zniszczony i nie potrzebuje już zasobów. W poniższym przykładzie pokazano jeden przypadek, gdy Konstruktor przenoszenia jest wybierany przez rozpoznanie przeciążenia. W konstruktorze, który wywołuje `get_Box()` , zwrócona wartość to *XValue* (wartość wygaśnięcia). Nie jest ona przypisana do żadnej zmiennej i w związku z tym wkrótce wyjdzie poza zakres. Aby dostarczyć motywację do tego przykładu, przypuśćmy do pudełka duży wektor ciągów, które reprezentują jego zawartość. Zamiast kopiować wektor i jego ciągi, Konstruktor przenoszenia "wykraść" z wartości "Box", tak aby wektor należał teraz do nowego obiektu. Wywołanie `std::move` jest konieczne, ponieważ obie `vector` `string` klasy i implementują własne konstruktory przenoszenia.
 
 ```cpp
 #include <iostream>
@@ -279,15 +279,15 @@ int main()
 }
 ```
 
-Jeśli klasa nie definiuje konstruktora przenoszenia, kompilator generuje niejawny, jeśli nie ma konstruktora kopii zadeklarowanego przez użytkownika, operatora przypisania kopiowania, operatora przenoszenia przydziału lub destruktora. Jeśli nie jawne lub niejawne przenieść konstruktora jest zdefiniowany, operacje, które w przeciwnym razie użyć konstruktora przenieść zamiast tego. Jeśli klasa deklaruje move konstruktora lub przenieść operator przypisania, niejawnie zadeklarowany konstruktor kopii jest zdefiniowany jako usunięty.
+Jeśli Klasa nie definiuje konstruktora przenoszenia, kompilator generuje niejawny, jeśli nie istnieje zadeklarowany przez użytkownika Konstruktor kopiujący, operator przypisania kopiowania, operator przypisania przenoszenia lub destruktor. Jeśli nie zdefiniowano jawnego lub niejawnego konstruktora przenoszącego, operacje w przeciwnym razie używają konstruktora kopiującego. Jeśli Klasa deklaruje Konstruktor przenoszenia lub operator przypisania przenoszenia, niejawnie zadeklarowany Konstruktor kopiujący jest zdefiniowany jako usunięty.
 
-Niejawnie zadeklarowany konstruktor przenoszenia jest zdefiniowany jako usunięty, jeśli jakiekolwiek elementy członkowskie, które są typami klas, nie mają destruktora lub kompilatora nie może określić, który konstruktor ma być używany dla operacji przenoszenia.
+Niejawnie zadeklarowany Konstruktor przenoszący został zdefiniowany jako usunięty, jeśli którykolwiek element członkowski, który jest typem klasy nie ma destruktora lub kompilator nie może określić konstruktora, który ma być używany dla operacji przenoszenia.
 
-Aby uzyskać więcej informacji na temat zapisywania nietrywialnego konstruktora przenoszenia, zobacz [Przenoszenie konstruktorów i operatorów przenoszenia przydziałów (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
+Aby uzyskać więcej informacji na temat pisania nieuproszczonego konstruktora przenoszenia, zobacz [przenoszenie konstruktorów i operatory przypisania przenoszenia (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
 
-## <a name="explicitly-defaulted-and-deleted-constructors"></a><a name="explicitly_defaulted_and_deleted_constructors"></a>Jawnie domyślnie i usunięte konstruktory
+## <a name="explicitly-defaulted-and-deleted-constructors"></a><a name="explicitly_defaulted_and_deleted_constructors"></a>Konstruktory jawnie domyślne i usunięte
 
-Można jawnie *domyślne* konstruktory kopiowania, konstruktory domyślne, konstruktory przenoszenia, operatory przypisywania kopiowania, przenosić operatory przydziałów i destruktory. Można jawnie *usunąć* wszystkie funkcje elementów członkowskich specjalnych.
+Można jawnie *domyślne* konstruktory kopiowania, konstruktory domyślne, konstruktory przenoszenia, operatory przypisania kopii, operatory przypisania przenoszenia i destruktory. Można jawnie *usunąć* wszystkie specjalne funkcje składowe.
 
 ```cpp
 class Box
@@ -302,23 +302,23 @@ public:
 };
 ```
 
-Aby uzyskać więcej informacji, zobacz [Jawnie domyślne i usunięte funkcje](../cpp/explicitly-defaulted-and-deleted-functions.md).
+Aby uzyskać więcej informacji, zobacz [jawnie domyślne i usunięte funkcje](../cpp/explicitly-defaulted-and-deleted-functions.md).
 
-## <a name="constexpr-constructors"></a><a name="constexpr_constructors"></a>konstruktory constexpr
+## <a name="constexpr-constructors"></a><a name="constexpr_constructors"></a>Konstruktory constexpr
 
-Konstruktor może zostać zgłoszony jako [constexpr,](constexpr-cpp.md) jeśli
+Konstruktor może być zadeklarowany jako [constexpr](constexpr-cpp.md) , jeśli
 
-- jest albo zadeklarowany jako domyślny, albo spełnia wszystkie warunki [dla funkcji constexpr](constexpr-cpp.md#constexpr_functions) w ogóle;
-- klasa nie ma wirtualnych klas podstawowych;
-- każdy z parametrów jest [typem dosłownym;](trivial-standard-layout-and-pod-types.md#literal_types)
-- ciało nie jest funkcją try-block;
-- wszystkie niestatyczne elementy członkowskie danych i obiekty podrzędne klasy podstawowej są inicjowane;
-- jeśli klasa jest (a) związkiem posiadającym członków wariantu lub b) ma anonimowe związki, tylko jeden z członków związku jest inicjowany;
-- każdy niestatyczny element członkowski danych typu klasy, a wszystkie podkategoraliczne obiekty klasy podstawowej mają konstruktor constexpr
+- jest zadeklarowany jako domyślny lub w przeciwnym razie spełnia wszystkie warunki [funkcji constexpr](constexpr-cpp.md#constexpr_functions) w ogóle;
+- Klasa nie ma wirtualnych klas bazowych;
+- Każdy z parametrów jest [typem literału](trivial-standard-layout-and-pod-types.md#literal_types);
+- treść nie jest funkcją try-Block;
+- wszystkie niestatyczne składowe danych i podrzędne obiekty klasy bazowej są inicjowane;
+- Jeśli Klasa to (a) Unia z składowymi Variant lub (b) ma anonimowe Unii, inicjowana jest tylko jeden z członków Unii;
+- Każdy niestatyczny element członkowski danych typu klasy, a wszystkie obiekty podrzędne klasy podstawowej mają konstruktora constexpr
 
-## <a name="initializer-list-constructors"></a><a name="init_list_constructors"></a>Konstruktory listy inicjatorów
+## <a name="initializer-list-constructors"></a><a name="init_list_constructors"></a>Konstruktory list inicjatorów
 
-Jeśli konstruktor przyjmuje [std::initializer_list\<T\> ](../standard-library/initializer-list-class.md) jako parametr, a inne parametry mają domyślne argumenty, ten konstruktor zostanie wybrany w rozdzielczości przeciążenia, gdy klasa zostanie skonkrzetowana przez bezpośrednie inicjowanie. Za pomocą initializer_list można zainicjować dowolny element członkowski, który może go zaakceptować. Załóżmy na przykład, że klasa Box `std::vector<string>` `m_contents`(pokazana wcześniej) ma element członkowski . Konstruktora można podać w ten sposób:
+Jeśli Konstruktor przyjmuje wartość [std:: initializer_list \<T\> ](../standard-library/initializer-list-class.md) jako parametr, a wszystkie inne parametry mają argumenty domyślne, ten Konstruktor zostanie wybrany w celu rozpoznania przeciążenia, gdy Klasa zostanie utworzona przy użyciu inicjowania bezpośredniego. Initializer_list można użyć do zainicjowania dowolnego elementu członkowskiego, który może go zaakceptować. Załóżmy na przykład, że Klasa Box (pokazana wcześniej) ma `std::vector<string>` element członkowski `m_contents` . Można podać Konstruktor podobny do tego:
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)
@@ -326,28 +326,28 @@ Jeśli konstruktor przyjmuje [std::initializer_list\<T\> ](../standard-library/i
 {}
 ```
 
-A następnie utwórz obiekty Box w ten sposób:
+A następnie utwórz obiekty Box w następujący sposób:
 
 ```cpp
     Box b{ "apples", "oranges", "pears" }; // or ...
     Box b2(initializer_list<string> { "bread", "cheese", "wine" }, 2, 4, 6);
 ```
 
-## <a name="explicit-constructors"></a><a name="explicit_constructors"></a>Jawne konstruktory
+## <a name="explicit-constructors"></a><a name="explicit_constructors"></a>Konstruktory jawne
 
-Jeśli klasa ma konstruktora z jednym parametrem lub jeśli wszystkie parametry z wyjątkiem jednego mają wartość domyślną, typ parametru może być niejawnie konwertowany na typ klasy. Na przykład jeśli `Box` klasa ma konstruktora w ten sposób:
+Jeśli klasa ma Konstruktor z pojedynczym parametrem lub jeśli wszystkie parametry z wyjątkiem jednego mają wartość domyślną, typ parametru może być niejawnie konwertowany na typ klasy. Na przykład jeśli `Box` Klasa ma Konstruktor podobny do tego:
 
 ```cpp
 Box(int size): m_width(size), m_length(size), m_height(size){}
 ```
 
-Możliwe jest zainicjowanie boxa w ten sposób:
+Możliwe jest zainicjowanie pola w następujący sposób:
 
 ```cpp
 Box b = 42;
 ```
 
-Lub przekazać int do funkcji, która zajmuje Pole:
+Lub Przekaż liczbę całkowitą do funkcji, która przyjmuje pole:
 
 ```cpp
 class ShippingOrder
@@ -363,15 +363,15 @@ private:
     ShippingOrder so(42, 10.8);
 ```
 
-Takie konwersje mogą być przydatne w niektórych przypadkach, ale częściej mogą prowadzić do subtelnych, ale poważnych błędów w kodzie. Zgodnie z ogólną zasadą należy użyć **jawnego** słowa kluczowego w konstruktorze (i operatorach zdefiniowanych przez użytkownika), aby zapobiec tego rodzaju konwersji typu niejawnego:
+Takie Konwersje mogą być przydatne w niektórych przypadkach, ale częściej mogą prowadzić do delikatnych, ale poważniejszych błędów w kodzie. Ogólnie rzecz biorąc, należy użyć **`explicit`** słowa kluczowego dla konstruktora (i operatorów zdefiniowanych przez użytkownika), aby zapobiec niejawnej konwersji typów:
 
 ```cpp
 explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 ```
 
-Gdy konstruktor jest jawny, ten wiersz `ShippingOrder so(42, 10.8);`powoduje błąd kompilatora: .  Aby uzyskać więcej informacji, zobacz [Konwersje typu zdefiniowane przez użytkownika](../cpp/user-defined-type-conversions-cpp.md).
+Gdy Konstruktor jest jawny, ten wiersz powoduje błąd kompilatora: `ShippingOrder so(42, 10.8);` .  Aby uzyskać więcej informacji, zobacz [konwersje typów zdefiniowane przez użytkownika](../cpp/user-defined-type-conversions-cpp.md).
 
-## <a name="order-of-construction"></a><a name="order_of_construction"></a>Kolejność budowy
+## <a name="order-of-construction"></a><a name="order_of_construction"></a>Kolejność konstrukcji
 
 Konstruktor wykonuje pracę w następującej kolejności:
 
@@ -425,7 +425,7 @@ int main() {
 }
 ```
 
-Oto dane wyjściowe:
+Dane wyjściowe są następujące:
 
 ```Output
 Contained1 ctor
@@ -435,7 +435,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-Konstruktor klasy pochodnej zawsze wywołuje konstruktora klasy bazowej, tak aby mógł polegać na całkowicie skonstruowanych klasach bazowych, zanim wszelkie dodatkowe prace zostaną wykonane. Konstruktory klasy podstawowej są wywoływane w `ClassA` kolejności wyprowadzania `ClassB`— na przykład, `ClassC` jeśli pochodzi od , `ClassB` który pochodzi od `ClassA` `ClassC`, konstruktor jest nazywany najpierw, następnie konstruktor, a następnie konstruktora.
+Konstruktor klasy pochodnej zawsze wywołuje konstruktora klasy bazowej, tak aby mógł polegać na całkowicie skonstruowanych klasach bazowych, zanim wszelkie dodatkowe prace zostaną wykonane. Konstruktory klasy bazowej są wywoływane w kolejności wyprowadzenia — na przykład, jeśli pochodzi `ClassA` od `ClassB` , który pochodzi od `ClassC` , `ClassC` Konstruktor jest wywoływany jako pierwszy, a następnie `ClassB` Konstruktor, a następnie `ClassA` Konstruktor.
 
 Jeśli klasa bazowa nie ma domyślnego konstruktora, musisz podać parametry konstruktora klasy bazowej w konstruktorze klasy pochodnej:
 
@@ -478,11 +478,11 @@ Jeśli konstruktor zgłasza wyjątek, kolejność zniszczenia jest odwrotna do k
 
 1. Jeśli konstruktor nie jest delegujący, wszystkie w pełni skonstruowane obiekty i składowe klasy podstawowej zostaną zniszczone. Jednak ponieważ sam obiekt nie jest w pełni skonstruowany, destruktor nie zostanie uruchomiony.
 
-## <a name="derived-constructors-and-extended-aggregate-initialization"></a><a name="extended_aggregate"></a>Konstruktory pochodne i inicjalizacja agregacji rozszerzonej
+## <a name="derived-constructors-and-extended-aggregate-initialization"></a><a name="extended_aggregate"></a>Konstruktory pochodne i rozszerzona Inicjalizacja agregacji
 
-Jeśli konstruktor klasy podstawowej jest niepubliczny, ale dostępny dla klasy pochodnej, w obszarze **/std:c++17** w trybie Visual Studio 2017 i nowszych nie można użyć pustych nawiasów klamrowych do zainicjowania obiektu typu pochodnego.
+Jeśli Konstruktor klasy bazowej jest niepubliczny, ale jest dostępny dla klasy pochodnej, wówczas w obszarze **/std: tryb c++ 17** w programie Visual Studio 2017 i nowszych nie można użyć pustych nawiasów klamrowych w celu zainicjowania obiektu typu pochodnego.
 
-Poniższy przykład przedstawia zachowanie konformanta języka C++14:
+W poniższym przykładzie przedstawiono zachowanie zgodne z językiem C++ 14:
 
 ```cpp
 struct Derived;
@@ -500,9 +500,9 @@ Derived d2 {}; // OK in C++14: Calls Derived::Derived()
                // which can call Base ctor.
 ```
 
-W języku C++ `Derived` 17 jest teraz uważany za typ agregacji. Oznacza to, że `Base` inicjowanie za pośrednictwem prywatnego konstruktora domyślnego odbywa się bezpośrednio, jako część rozszerzonej reguły inicjowania agregacji. Wcześniej `Base` konstruktor prywatny został wywołany za pośrednictwem `Derived` konstruktora i zakończyło się pomyślnie z powodu deklaracji znajomego.
+W języku C++ 17 `Derived` jest teraz uznawany za typ zagregowany. Oznacza to, że inicjalizacja `Base` za pośrednictwem prywatnego konstruktora domyślnego odbywa się bezpośrednio w ramach rozszerzonej reguły inicjowania agregacji. Wcześniej `Base` Konstruktor prywatny został wywołany za pośrednictwem `Derived` konstruktora i powiódł się z powodu deklaracji zaprzyjaźnionej.
 
-W poniższym przykładzie przedstawiono zachowanie języka C++17 w programie Visual Studio 2017 i później w trybie **/std:c++17:**
+W poniższym przykładzie przedstawiono zachowanie języka C++ 17 w programie Visual Studio 2017 i nowszych w **/std: c++ 17** Mode:
 
 ```cpp
 struct Derived;
@@ -524,7 +524,7 @@ Derived d2 {}; // error C2248: 'Base::Base': cannot access
                // private member declared in class 'Base'
 ```
 
-### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>Konstruktory klas, które mają wielokrotne dziedziczenie
+### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>Konstruktory dla klas, które mają wiele dziedziczeń
 
 Jeśli klasa jest pochodną wielu klas bazowych, konstruktory klas bazowych są wywoływane w kolejności, w której są wymienione w deklaracji klasy pochodnej:
 
@@ -568,7 +568,7 @@ DerivedClass ctor
 
 ## <a name="delegating-constructors"></a><a name="delegating_constructors"></a>Delegowanie konstruktorów
 
-*Konstruktor delegowania* wywołuje inny konstruktor w tej samej klasie, aby wykonać niektóre pracy inicjowania. Jest to przydatne, gdy masz wiele konstruktorów, które wszystkie muszą wykonywać podobną pracę. Można napisać logikę główną w jednym konstruktorze i wywołać go od innych. W poniższym trywialnym przykładzie Box(int) deleguje swoją pracę do Box(int,int,int):
+*Konstruktor delegowania* wywołuje innego konstruktora w tej samej klasie, aby wykonać część pracy inicjalizacji. Jest to przydatne w przypadku wielu konstruktorów, które wszystkie muszą wykonywać podobne prace. Można napisać podstawową logikę w jednym konstruktorze i wywołać ją od innych. W poniższym prostym przykładzie pole (int) deleguje swoją służbę do pola (int, int, int):
 
 ```cpp
 class Box {
@@ -588,11 +588,11 @@ public:
 };
 ```
 
-Obiekt utworzony przez konstruktory jest w pełni zainicjowany natychmiast po zakończeniu wszelkich konstruktorów. Aby uzyskać więcej informacji, zobacz [Delegowanie konstruktorów](../cpp/delegating-constructors.md).
+Obiekt utworzony przez konstruktory jest w pełni zainicjowany natychmiast po zakończeniu wszelkich konstruktorów. Aby uzyskać więcej informacji, zobacz [delegowanie konstruktorów](../cpp/delegating-constructors.md).
 
-## <a name="inheriting-constructors-c11"></a><a name="inheriting_constructors"></a>Konstruktory dziedziczące (C++11)
+## <a name="inheriting-constructors-c11"></a><a name="inheriting_constructors"></a>Konstruktory dziedziczenia (C++ 11)
 
-Klasa pochodna może dziedziczyć konstruktorów z bezpośredniej klasy **podstawowej** przy użyciu using deklaracji, jak pokazano w poniższym przykładzie:
+Klasa pochodna może dziedziczyć konstruktory z bezpośredniej klasy podstawowej przy użyciu **`using`** deklaracji, jak pokazano w następującym przykładzie:
 
 ```cpp
 #include <iostream>
@@ -643,11 +643,11 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 i nowsze:** **Using** instrukcji w **trybie /std:c++17** wprowadza do zakresu wszystkie konstruktory z klasy podstawowej, z wyjątkiem tych, które mają identyczny podpis do konstruktorów w klasie pochodnej. Ogólnie rzecz biorąc najlepiej jest użyć konstruktorów dziedziczenia, gdy klasa pochodna deklaruje żadnych nowych elementów członkowskich danych lub konstruktorów. Zobacz też [ulepszenia w programie Visual Studio 2017 w wersji 15.7](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157).
+**Visual Studio 2017 i nowsze**: **`using`** instrukcja w **/std: tryb c++ 17** umożliwia przezakres wszystkich konstruktorów z klasy bazowej, z wyjątkiem tych, które mają identyczny podpis do konstruktorów w klasie pochodnej. Ogólnie rzecz biorąc, najlepszym rozwiązaniem jest użycie konstruktorów dziedziczenia, gdy Klasa pochodna nie deklaruje nowych elementów członkowskich lub konstruktorów danych. Zobacz również [ulepszenia w programie Visual Studio 2017 w wersji 15,7](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157).
 
 ::: moniker-end
 
-Szablon klasy może dziedziczyć wszystkie konstruktory z argumentu typu, jeśli ten typ określa klasę podstawową:
+Szablon klasy może dziedziczyć wszystkich konstruktorów z argumentu typu, jeśli ten typ określa klasę bazową:
 
 ```cpp
 template< typename T >
@@ -657,11 +657,11 @@ class Derived : T {
 };
 ```
 
-Klasa pochodna nie może dziedziczyć z wielu klas podstawowych, jeśli te klasy podstawowe mają konstruktory, które mają identyczny podpis.
+Klasa pochodna nie może dziedziczyć z wielu klas bazowych, jeśli te klasy bazowe mają takie same sygnatury.
 
-## <a name="constructors-and-composite-classes"></a><a name="constructors_in_composite_classes"></a>Konstruktory i klasy kompozytowe
+## <a name="constructors-and-composite-classes"></a><a name="constructors_in_composite_classes"></a>Konstruktory i klasy złożone
 
-Klasy, które zawierają elementy członkowskie typu klasy są znane jako *klasy złożone*. Gdy jest tworzona składowa typu klasa klasy złożonej, konstruktor jest wywoływany przed konstruktorem tej klasy. Gdy klasa zamknięta nie ma domyślnego konstruktora, należy użyć listy inicjalizacji w konstruktorze klasy złożonej. We wcześniejszym `StorageBox` przykładzie, jeśli zmienisz `m_label` typ zmiennej `Label` elementu członkowskiego na nową klasę, należy wywołać zarówno konstruktor klasy podstawowej, jak i zainicjować zmienną `m_label` w konstruktorze: `StorageBox`
+Klasy, które zawierają składowe typu klasy, są znane jako *klasy złożone*. Gdy jest tworzona składowa typu klasa klasy złożonej, konstruktor jest wywoływany przed konstruktorem tej klasy. Gdy klasa zamknięta nie ma domyślnego konstruktora, należy użyć listy inicjalizacji w konstruktorze klasy złożonej. W poprzednim `StorageBox` przykładzie, jeśli zmienisz typ `m_label` zmiennej składowej na nową `Label` klasę, musisz wywołać zarówno konstruktora klasy bazowej, jak i zainicjować `m_label` zmienną w `StorageBox` konstruktorze:
 
 ```cpp
 class Label {
@@ -694,10 +694,10 @@ int main(){
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-- [Konstruktory kopiowania i operatory przypisywania kopii](copy-constructors-and-copy-assignment-operators-cpp.md)
-- [Przenoszenie konstruktorów i przenoszenie operatorów przydziałów](move-constructors-and-move-assignment-operators-cpp.md)
+- [Konstruktory kopiujące i kopiujące operatory przypisania](copy-constructors-and-copy-assignment-operators-cpp.md)
+- [Konstruktory przenoszące i przenoszące operatory przypisania](move-constructors-and-move-assignment-operators-cpp.md)
 - [Delegowanie konstruktorów](delegating-constructors.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy i struktury](classes-and-structs-cpp.md)

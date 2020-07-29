@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-ms.openlocfilehash: 6c3de36482c4ffdf1ef402b4059816639014eb8b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bddee0b6c5e08e7a7fbae3ca72c3125fa9849c03
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912691"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229392"
 ---
 # <a name="_sopen_s-_wsopen_s"></a>_sopen_s, _wsopen_s
 
@@ -114,7 +114,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsopen_s**|**_sopen_s**|**_sopen_s**|**_wsopen_s**|
 
-Wyrażenie liczby całkowitej *Oflag* jest tworzone przez połączenie co najmniej jednej stałej manifestu, która jest zdefiniowana w \<fcntl. h>. Gdy co najmniej dwie stałe tworzą argument *Oflag*, są łączone z operatorem bitowym or ( **&#124;** ).
+Wyrażenie typu Integer *Oflag* jest tworzone przez połączenie co najmniej jednej stałej manifestu, która jest zdefiniowana w \<fcntl.h> . Gdy co najmniej dwie stałe tworzą argument *Oflag*, są łączone z operatorem bitowym or ( **&#124;** ).
 
 |stała *Oflag*|Zachowanie|
 |-|-|
@@ -138,11 +138,11 @@ Wyrażenie liczby całkowitej *Oflag* jest tworzone przez połączenie co najmni
 
 Aby określić tryb dostępu do pliku, należy określić **_O_RDONLY**, **_O_RDWR**lub **_O_WRONLY**. Brak wartości domyślnej dla trybu dostępu.
 
-Gdy plik jest otwierany w trybie Unicode przy użyciu **_O_WTEXT**, **_O_U8TEXT**lub **_O_U16TEXT**, funkcje wejściowe przekładają dane odczytane z pliku do danych UTF-16 przechowywanych jako **wchar_t**typu. Funkcje, które zapisują do pliku otwartego w trybie Unicode, oczekują buforów zawierających dane w formacie UTF-16 przechowywane jako typ **wchar_t**. Jeśli plik jest zakodowany jako UTF-8, dane UTF-16 są tłumaczone na UTF-8 podczas zapisywania, a zawartość zakodowana w formacie UTF-8 jest tłumaczona na UTF-16 podczas odczytywania. Próba odczytania lub zapisania nieparzystej liczby bajtów w trybie Unicode powoduje błąd walidacji parametru. Aby odczytać lub zapisać dane, które są przechowywane w programie jako UTF-8, użyj trybu plików tekstowych lub binarnych zamiast trybu Unicode. Użytkownik jest odpowiedzialny za wszelkie wymagane tłumaczenia kodowania.
+Gdy plik zostanie otwarty w trybie Unicode przy użyciu **_O_WTEXT**, **_O_U8TEXT**lub **_O_U16TEXT**, funkcje wejściowe przekładają dane odczytane z pliku do danych UTF-16 przechowywanych jako typ **`wchar_t`** . Funkcje, które zapisują do pliku otwartego w trybie Unicode, oczekują buforów zawierających dane w formacie UTF-16 przechowywane jako typ **`wchar_t`** . Jeśli plik jest zakodowany jako UTF-8, dane UTF-16 są tłumaczone na UTF-8 podczas zapisywania, a zawartość zakodowana w formacie UTF-8 jest tłumaczona na UTF-16 podczas odczytywania. Próba odczytania lub zapisania nieparzystej liczby bajtów w trybie Unicode powoduje błąd walidacji parametru. Aby odczytać lub zapisać dane, które są przechowywane w programie jako UTF-8, użyj trybu plików tekstowych lub binarnych zamiast trybu Unicode. Użytkownik jest odpowiedzialny za wszelkie wymagane tłumaczenia kodowania.
 
-Jeśli **_sopen_s** jest wywoływana z **_O_WRONLY** | **_O_APPEND** (tryb Append) i **_O_WTEXT**, **_O_U16TEXT**lub **_O_U8TEXT**, najpierw próbuje otworzyć plik do odczytu i zapisu, odczytać BOM, a następnie otworzyć go tylko do zapisu. Jeśli otwarcie pliku do odczytu i zapisu nie powiedzie się, otwiera plik wyłącznie do zapisu i używa wartości domyślnej dla ustawienia trybu Unicode.
+Jeśli **_sopen_s** jest wywoływana z **_O_WRONLY**  |  **_O_APPEND** (tryb Append) i **_O_WTEXT**, **_O_U16TEXT**lub **_O_U8TEXT**, najpierw próbuje otworzyć plik do odczytu i zapisu, odczytać BOM, a następnie otworzyć go tylko do zapisu. Jeśli otwarcie pliku do odczytu i zapisu nie powiedzie się, otwiera plik wyłącznie do zapisu i używa wartości domyślnej dla ustawienia trybu Unicode.
 
-Argument *Shflag* jest wyrażeniem stałym, które składa się z jednej z następujących stałych manifestu, które są \<zdefiniowane w udziale. h>.
+Argument *Shflag* jest wyrażeniem stałym, które składa się z jednej z następujących stałych manifestu, które są zdefiniowane w \<share.h> .
 
 |stała *Shflag*|Zachowanie|
 |-|-|
@@ -151,7 +151,7 @@ Argument *Shflag* jest wyrażeniem stałym, które składa się z jednej z nast�
 | **_SH_DENYRD** | Odmowa dostępu do odczytu do pliku. |
 | **_SH_DENYNO** | Zezwala na dostęp do odczytu i zapisu. |
 
-Argument *PMODE* jest zawsze wymagany, w przeciwieństwie do **_sopen**. W przypadku określenia **_O_CREAT**, jeśli plik nie istnieje, *PMODE* określa ustawienia uprawnień pliku, które są ustawiane, gdy nowy plik jest zamykany po raz pierwszy. W przeciwnym razie *PMODE* jest ignorowana. *PMODE* jest wyrażeniem liczb całkowitych, które zawiera jedną lub obie stałe manifestu **_S_IWRITE** i **_S_IREAD**, które są zdefiniowane \<w> sys\stat.h. Po otrzymaniu obu stałych są one łączone z operatorem bitowym lub. Znaczenie *PMODE* jest następujące.
+Argument *PMODE* jest zawsze wymagany, w przeciwieństwie do **_sopen**. W przypadku określenia **_O_CREAT**, jeśli plik nie istnieje, *PMODE* określa ustawienia uprawnień pliku, które są ustawiane, gdy nowy plik jest zamykany po raz pierwszy. W przeciwnym razie *PMODE* jest ignorowana. *PMODE* jest wyrażeniem liczb całkowitych, które zawiera jedną lub obie stałe manifestu **_S_IWRITE** i **_S_IREAD**, które są zdefiniowane w \<sys\stat.h> . Po otrzymaniu obu stałych są one łączone z operatorem bitowym lub. Znaczenie *PMODE* jest następujące.
 
 |*pmode*|Znaczenie|
 |-|-|
@@ -159,7 +159,7 @@ Argument *PMODE* jest zawsze wymagany, w przeciwieństwie do **_sopen**. W przyp
 | **_S_IWRITE** | Dozwolone jest zapisanie. (W efekcie zezwala na odczyt i zapis). |
 | **_S_IREAD** &#124; **_S_IWRITE** | Dozwolone odczytywanie i zapisywanie. |
 
-Jeśli nie podano uprawnienia do zapisu, plik jest tylko do odczytu. W systemie operacyjnym Windows wszystkie pliki są odczytywane; nie można udzielić uprawnienia tylko do zapisu. W związku z tym tryby **_S_IWRITE** i **_S_IREAD** | **_S_IWRITE** są równoważne.
+Jeśli nie podano uprawnienia do zapisu, plik jest tylko do odczytu. W systemie operacyjnym Windows wszystkie pliki są odczytywane; nie można udzielić uprawnienia tylko do zapisu. W związku z tym tryby **_S_IWRITE** i **_S_IREAD**  |  **_S_IWRITE** są równoważne.
 
 **_sopen_s** stosuje bieżącą maskę uprawnień pliku do *PMODE* przed ustawieniem uprawnień. (Zobacz [_umask](umask.md).)
 
@@ -167,8 +167,8 @@ Jeśli nie podano uprawnienia do zapisu, plik jest tylko do odczytu. W systemie 
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_sopen_s**|\<IO. h>|\<fcntl. h>, \<sys\types.h>, \<sys\stat.h>, \<Share. h>|
-|**_wsopen_s**|\<IO. h> lub \<WCHAR. h>|\<fcntl. h>, \<sys/typy. h>, \<sys/stat. h>, \<Share. h>|
+|**_sopen_s**|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>, \<share.h>|
+|**_wsopen_s**|\<io.h> lub \<wchar.h>|\<fcntl.h>, \<sys/types.h>, \<sys/stat.h>, \<share.h>|
 
 **_sopen_s** i **_wsopen_s** są rozszerzeniami firmy Microsoft. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -176,7 +176,7 @@ Jeśli nie podano uprawnienia do zapisu, plik jest tylko do odczytu. W systemie 
 
 Zapoznaj się z przykładem [_locking](locking.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>

@@ -33,16 +33,16 @@ helpviewer_keywords:
 - _wgetdcwd_dbg function
 - directories [C++], current working
 ms.assetid: 266bf6f0-0417-497f-963d-2e0f306d9385
-ms.openlocfilehash: 8eb22f3716102c1b63b483e493eb44ac99228004
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a31617445ccb0640042be41ee4f710e528b9ceb7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955232"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229457"
 ---
 # <a name="_getdcwd_dbg-_wgetdcwd_dbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
 
-Wersje debugowania funkcji [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md) (dostępne tylko podczas debugowania).
+Wersje debugowania [_getdcwd, funkcje _wgetdcwd](getdcwd-wgetdcwd.md) (dostępne tylko podczas debugowania).
 
 ## <a name="syntax"></a>Składnia
 
@@ -70,11 +70,11 @@ wchar_t *_wgetdcwd_dbg(
 *litera*<br/>
 Nazwa stacji dysków.
 
-*buffer*<br/>
+*buforu*<br/>
 Lokalizacja przechowywania dla ścieżki.
 
-*maxlen*<br/>
-Maksymalna długość ścieżki w znakach: **char** dla **_getdcwd_dbg** i **wchar_t** dla **_wgetdcwd_dbg**.
+*MaxLen*<br/>
+Maksymalna długość ścieżki w znakach: **`char`** dla **_getdcwd_dbg** i **`wchar_t`** **_wgetdcwd_dbg**.
 
 *BlockType*<br/>
 Żądany typ bloku pamięci: **_CLIENT_BLOCK** lub **_NORMAL_BLOCK**.
@@ -87,13 +87,13 @@ Numer wiersza w pliku źródłowym, w którym zażądano operacji alokacji lub *
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do *buforu*. Wartość zwracana **null** wskazuje na błąd, a **errno** jest ustawiona na **ENOMEM**, co oznacza, że za mało pamięci do przydzielenia bajtów *MaxLen* (gdy argument o **wartości null** jest podawany jako *bufor*) lub do **ERANGE** , co oznacza, że ścieżka jest dłuższa niż *MaxLen* znaków. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Zwraca wskaźnik do *buforu*. Wartość zwracana **null** wskazuje na błąd, a **errno** jest ustawiona na **ENOMEM**, co oznacza, że za mało pamięci do przydzielenia bajtów *MaxLen* (gdy argument o **wartości null** jest podawany jako *bufor*) lub do **ERANGE**, co oznacza, że ścieżka jest dłuższa niż *MaxLen* znaków. Aby uzyskać więcej informacji, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **_getdcwd_dbg** i **_wgetdcwd_dbg** są identyczne z **_getdcwd** i **_wgetdcwd** , z tą różnicą, że w przypadku zdefiniowania elementu **_DEBUG** te funkcje korzystają z wersji " **malloc** " i " **_malloc_dbg** " do Przydziel pamięć, jeśli **wartość null** jest przenoszona jako parametr *buforu* . Aby uzyskać więcej informacji, zobacz [_malloc_dbg](malloc-dbg.md).
+**_Getdcwd_dbg** i **_wgetdcwd_dbg** funkcje są takie same jak **_getdcwd** i **_wgetdcwd** , z wyjątkiem tego, że w przypadku zdefiniowania **_DEBUG** te funkcje używają wersji i **_Malloc_dbg** **debugowania w celu** przydzielenia pamięci, jeśli **wartość null** jest przenoszona jako parametr *buforu* . Aby uzyskać więcej informacji, zobacz [_malloc_dbg](malloc-dbg.md).
 
-Nie trzeba jawnie wywoływać tych funkcji w większości przypadków. Zamiast tego można zdefiniować flagę **_CRTDBG_MAP_ALLOC** . Gdy **_CRTDBG_MAP_ALLOC** jest zdefiniowany, wywołania **_getdcwd** i **_wgetdcwd** są ponownie mapowane odpowiednio do **_getdcwd_dbg** i **_wgetdcwd_dbg**, z atrybutem *BlockType* ustawionym na wartość **_NORMAL_BLOCK**. W ten sposób nie trzeba wywoływać tych funkcji jawnie, chyba że chcesz oznaczyć bloki sterty jako **_CLIENT_BLOCK**. Aby uzyskać więcej informacji, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
+Nie trzeba jawnie wywoływać tych funkcji w większości przypadków. Zamiast tego można zdefiniować flagę **_CRTDBG_MAP_ALLOC** . Gdy **_CRTDBG_MAP_ALLOC** jest zdefiniowany, wywołania **_getdcwd** i **_wgetdcwd** są ponownie mapowane do **_getdcwd_dbg** i **_wgetdcwd_dbg**, z ustawieniem *BlockType* na **_NORMAL_BLOCK**. W ten sposób nie trzeba wywoływać tych funkcji jawnie, chyba że chcesz oznaczyć bloki sterty jako **_CLIENT_BLOCK**. Aby uzyskać więcej informacji, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
@@ -113,5 +113,5 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtim
 ## <a name="see-also"></a>Zobacz także
 
 [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md)<br/>
-[Kontrola katalogu](../../c-runtime-library/directory-control.md)<br/>
-[Wersje debugowania funkcji alokacji sterty](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>
+[Kontrolka katalogu](../../c-runtime-library/directory-control.md)<br/>
+[Wersja debugowania funkcji alokacji stosu](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - noinline __declspec keyword
 - __declspec keyword [C++], noinline
 ms.assetid: f259d55b-dec7-4bde-8cf9-14521e4fdc42
-ms.openlocfilehash: 6e424846c46dd50852b62008c4f1f38827da849c
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: bedf17072c06ec893b9cbd83b46403dcd3bc1560
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857414"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186688"
 ---
 # <a name="noinline"></a>noinline
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-**__declspec (NoLine)** instruuje kompilator, aby nigdy nie wbudowana do określonej funkcji elementu członkowskiego (funkcja w klasie).
+**`__declspec(noinline)`** instruuje kompilator, aby nigdy nie wbudowanł określonej funkcji elementu członkowskiego (funkcja w klasie).
 
 Może być wartościowa niewbudowaną funkcję, jeśli jest ona mała i nie ma znaczenia dla wydajności kodu. Oznacza to, że jeśli funkcja jest mała i prawdopodobnie nie jest często wywoływana, na przykład funkcja, która obsługuje warunek błędu.
 
-Należy pamiętać, że jeśli funkcja jest oznaczona jako **NoLine**, funkcja wywołująca będzie mniejsza i w ten sposób sama jest kandydatem do dekreślenia kompilatora.
+Należy pamiętać, że jeśli funkcja jest oznaczona **`noinline`** , funkcja wywołująca będzie mniejsza i w ten sposób sama jest kandydatem do dekreślenia kompilatora.
 
 ```cpp
 class X {
@@ -38,4 +38,4 @@ class X {
 
 [__declspec](../cpp/declspec.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
-[wbudowane, __inline, \__forceinline](inline-functions-cpp.md)
+[inline, __inline, \_ _forceinline](inline-functions-cpp.md)

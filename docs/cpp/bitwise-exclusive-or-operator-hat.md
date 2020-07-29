@@ -1,6 +1,9 @@
 ---
 title: 'Operator wyłączny sumy bitowej OR: ^'
-ms.date: 11/04/2016
+description: Wzorzec języka C++ lub Składnia operatora OR.
+ms.date: 07/23/2020
+f1_keywords:
+- xor_cpp
 helpviewer_keywords:
 - operators [C++], bitwise
 - exclusive OR operator
@@ -10,30 +13,29 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-ms.openlocfilehash: 9a44dc60a985729aae79ed0e2e48c44adace647b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0f64b9f90b70756d29fcabb361cc07abe58e0a54
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190719"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229106"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Operator wyłączny sumy bitowej OR: ^
 
 ## <a name="syntax"></a>Składnia
 
-```
-expression ^ expression
-```
+> *wyrażenie* **`^`** *wyrażenie*
 
 ## <a name="remarks"></a>Uwagi
 
-Operator wyłączny bitowego or ( **^** ) porównuje każdy bit pierwszego operandu z odpowiadającym mu bitem drugiego operandu. Jeśli jeden bit ma wartość 0, a drugi bit to 1, odpowiedni bit wynikowy jest ustawiony na 1. W przeciwnym razie odpowiedni bit wynikowy jest ustawiony na 0.
+Operator wyłączny bitowego or ( **`^`** ) porównuje każdy bit pierwszego operandu z odpowiadającym mu bitem drugiego operandu. Jeśli bit w pierwszym operandzie ma wartość 0, a drugi bit to 1, odpowiedni bit wynikowy jest ustawiony na 1. W przeciwnym razie odpowiedni bit wynikowy jest ustawiony na 0.
 
-Oba argumenty operacji w operatorze wykluczającym or muszą być typami całkowitymi. Zwykle konwersje arytmetyczne omówione w [konwersji standardowej](standard-conversions.md) są stosowane do operandów.
+Oba operandy operatora muszą mieć typy całkowite. Zwykle konwersje arytmetyczne omówione w [konwersji standardowej](standard-conversions.md) są stosowane do operandów.
 
 ## <a name="operator-keyword-for-"></a>Słowo kluczowe operatora dla ^
 
-Operator **XOR** jest odpowiednikiem tekstu **^** . Istnieją dwa sposoby uzyskania dostępu do operatora **XOR** w programach: Dołącz plik nagłówka `iso646.h`lub Kompiluj z opcją kompilatora [/za](../build/reference/za-ze-disable-language-extensions.md) (Wyłącz rozszerzenia językowe).
+Język C++ określa **`xor`** jako alternatywną pisownię **`^`** . W języku C alternatywna pisownia jest podawana jako makro w \<iso646.h> nagłówku. W języku C++ alternatywna pisownia jest słowem kluczowym; Użycie \<iso646.h> lub odpowiednik języka C++ \<ciso646> jest przestarzałe. W programie Microsoft C++ [`/permissive-`](../build/reference/permissive-standards-conformance.md) [`/Za`](../build/reference/za-ze-disable-language-extensions.md) Opcja kompilatora or jest wymagana do włączenia alternatywnej pisowni.
+
 
 ## <a name="example"></a>Przykład
 
@@ -51,6 +53,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+[Wbudowane operatory, pierwszeństwo i łączność języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

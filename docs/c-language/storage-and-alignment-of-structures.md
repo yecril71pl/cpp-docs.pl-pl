@@ -7,12 +7,12 @@ helpviewer_keywords:
 - storing structures
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
-ms.openlocfilehash: 8e15f39b5a7a78da117c3b8a551ebfba5e07c194
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81f5b640585ec3b55e4e3d65b37ea0929a757473
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336175"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229483"
 ---
 # <a name="storage-and-alignment-of-structures"></a>Magazynowanie i wyrównanie struktur
 
@@ -22,7 +22,7 @@ Elementy członkowskie struktur są przechowywane sekwencyjnie, w kolejności, w
 
 Każdy obiekt danych ma *wymaganie wyrównania*. W przypadku struktur, wymagany jest największy z ich elementów członkowskich. Każdy obiekt ma przydzieloną *przesunięcie* , aby
 
-Wyrównanie *przesunięcia* `%` *— wymaganie* `==` 0
+*przesunięcie* `%` *wyrównanie — wymaganie* `==` 2,0
 
 Sąsiadujące pola bitowe są pakowane w takie same 1-, 2- lub 4-bajtowe jednostki alokacji, jeśli typy całkowite mają taki sam rozmiar i jeśli następne pole bitowe pasuje do bieżącej jednostki alokacji bez przekraczania granicy nałożonej przez wspólne wymagania wyrównania pól bitowych.
 
@@ -36,10 +36,10 @@ gdzie *n* to rozmiar pakowania wyrażony za pomocą opcji/ZP [*n*], a *element* 
 
 Aby użyć dyrektywy `pack` do określenia pakowania innego, niż określone w wierszu polecenia dla określonej struktury, przed strukturą podaj dyrektywę `pack`, gdzie rozmiar pakowania wynosi 1, 2, 4, 8 lub 16. Aby przywrócić pakowanie podane w wierszu polecenia, określ dyrektywę `pack` bez argumentów.
 
-Domyślnie pola bitowe mają rozmiar **Long** dla kompilatora języka Microsoft C. Elementy członkowskie struktury są wyrównane do rozmiaru typu lub rozmiaru/ZP [*n*], w zależności od tego, który jest mniejszy. Domyślny rozmiar to 4.
+Pola bitowe są domyślnie rozmiarem **`long`** kompilatora języka Microsoft C. Elementy członkowskie struktury są wyrównane do rozmiaru typu lub rozmiaru/ZP [*n*], w zależności od tego, który jest mniejszy. Domyślny rozmiar to 4.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Deklaracje struktur](../c-language/structure-declarations.md)
+[Deklaracje struktury](../c-language/structure-declarations.md)

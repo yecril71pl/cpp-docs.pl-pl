@@ -118,12 +118,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: 607a7aff3acf923e0dd62e0dc332283f66b436b1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bb9603b6a76e92561db6c28792e4644949e190d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918323"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229340"
 ---
 # <a name="_stat-_stat32-_stat64-_stati64-_stat32i64-_stat64i32-_wstat-_wstat32-_wstat64-_wstati64-_wstat32i64-_wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -206,7 +206,7 @@ Funkcja **_stat** uzyskuje informacje o pliku lub katalogu określonym przez *ś
 
 Różnice tych funkcji obsługują typy czasu 32-lub 64-bitowe oraz 32-lub 64-bitowy długości plików. Pierwszy sufiks numeryczny (**32** lub **64**) wskazuje rozmiar używanego typu czasu; drugi sufiks jest **I32** lub **I64**, wskazując, czy rozmiar pliku jest reprezentowany jako 32-bitowa czy 64-bitowa liczba całkowita.
 
-**_stat** jest odpowiednikiem **_stat64i32**, a **Struktura** **_stat** zawiera czas 64-bitowy. Jest to prawdziwe, chyba że **_USE_32BIT_TIME_T** jest zdefiniowany, w takim przypadku stare zachowanie jest stosowane; **_stat** używa czasu 32-bitowego, a **struktura** **_stat** zawiera 32-bitowy czas. Ta sama wartość dotyczy **_stati64**.
+**_stat** jest równoważne **_stat64i32**, a **`struct`** **_stat** zawiera czas 64-bitowy. Jest to prawdziwe, chyba że **_USE_32BIT_TIME_T** jest zdefiniowany, w takim przypadku stare zachowanie jest stosowane; **_stat** używa czasu 32-bitowego, a **`struct`** **_stat** zawiera 32-bitowy czas. Ta sama wartość dotyczy **_stati64**.
 
 > [!NOTE]
 > **_wstat** nie działa z linkami symbolicznymi systemu Windows Vista. W takich przypadkach **_wstat** zawsze zgłasza rozmiar pliku 0. **_stat** działa prawidłowo z linkami symbolicznymi.
@@ -260,8 +260,8 @@ Jeśli *ścieżka* odwołuje się do urządzenia, **st_size**, różne pola czas
 
 |Procedura|Wymagany nagłówek|Opcjonalne nagłówki|
 |-------------|---------------------|----------------------|
-|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**_stat64i32 **_stat64i32**|\<sys/typy. h> po którym \<następuje sys/stat. h>|\<errno. h>|
-|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**_wstat64i32 **_wstat64i32**|\<sys/typy. h> po którym \<następuje sys/stat. h> \<lub WCHAR. h>|\<errno. h>|
+|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**_stat64i32 **_stat64i32**|\<sys/types.h>a następnie\<sys/stat.h>|\<errno.h>|
+|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**_wstat64i32 **_wstat64i32**|\<sys/types.h>po którym następuje program \<sys/stat.h> lub\<wchar.h>|\<errno.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -328,7 +328,7 @@ Drive         : C:
 Time modified : Thu Feb 07 14:39:36 2002
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa plików](../../c-runtime-library/file-handling.md)<br/>
 [_access, _waccess](access-waccess.md)<br/>

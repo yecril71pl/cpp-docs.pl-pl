@@ -5,24 +5,24 @@ f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: aac43a15b09bd792118fbfe7ea51493b73b8ac9d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6cef9304be17dd39e0f0b020133abd08f07fba7c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374382"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87194384"
 ---
 # <a name="concurrency-namespace-operators"></a>Operatory przestrzeni nazw współbieżności
 
 ||||
 |-|-|-|
-|[operator!=](#operator_neq)|[Operator&amp;&amp;](#operator_amp_amp)|[Operator&gt;](#operator_gt)|
-|[Operator&gt;=](#operator_gt_eq)|[Operator&lt;](#operator_lt)|[Operator&lt;=](#operator_lt_eq)|
-|[operator==](#operator_eq_eq)|[&#124;&#124;operatora](#operator_lor)| |
+|[operator! =](#operator_neq)|[operator&amp;&amp;](#operator_amp_amp)|[operator&gt;](#operator_gt)|
+|[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|
+|[operator = =](#operator_eq_eq)|[&#124;&#124;operatora](#operator_lor)| |
 
-## <a name="operator124124-operator"></a><a name="operator_lor"></a>operator&#124;&#124; Operator
+## <a name="operator124124-operator"></a><a name="operator_lor"></a>operator&#124;&#124; operatora
 
-Tworzy zadanie, które zostanie pomyślnie ukończone, gdy którekolwiek z zadań dostarczonych jako argumenty zakończy się pomyślnie.
+Tworzy zadanie, które zostanie ukończone pomyślnie, gdy jedno z zadań dostarczonych jako argumenty zakończy się pomyślnie.
 
 ```cpp
 template<typename ReturnType>
@@ -47,26 +47,26 @@ inline task<void> operator||(
 
 ### <a name="parameters"></a>Parametry
 
-*Returntype*<br/>
-Typ zwróconego zadania.
+*Atrybuty*<br/>
+Typ zwracanego zadania.
 
-*Lhs*<br/>
-Pierwsze zadanie do połączenia z wynikowego zadania.
+*LHS*<br/>
+Pierwsze zadanie do połączenia z wynikiem zadania.
 
-*Rhs*<br/>
-Drugie zadanie, które ma łączyć w wynikowe zadanie.
+*RHS*<br/>
+Drugie zadanie, które ma zostać połączone z wynikiem zadania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zadanie, które kończy się pomyślnie po pomyślnym zakończeniu jednego z zadań wejściowych. Jeśli zadania wejściowe `T`są typu, dane wyjściowe `task<std::vector<T>`tej funkcji będzie . Jeśli zadania wejściowe `void` są typu, zadaniem `task<void>`wyjściowym będzie również .
+Zadanie, które zakończyło się pomyślnie, gdy jedno z zadań wejściowych zakończyło się pomyślnie. Jeśli zadania wejściowe są typu `T` , danymi wyjściowymi tej funkcji będą `task<std::vector<T>` . Jeśli zadania wejściowe są typu **`void`** , zadanie wyjściowe również będzie `task<void>` .
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli oba zadania są anulowane lub zgłosić wyjątki, zwrócone zadanie zostanie ukończone w stanie anulowane i jeden z `get()` wyjątków, jeśli wystąpią, zostaną odrzucone podczas wywołania lub `wait()` na to zadanie.
+Jeśli oba zadania są anulowane lub zgłaszają wyjątki, zwrócone zadanie zostanie ukończone w stanie anulowane, a jedno z wyjątków, jeśli wystąpi, zostanie zgłoszone po wywołaniu `get()` lub `wait()` w tym zadaniu.
 
-## <a name="operatorampamp-operator"></a><a name="operator_amp_amp"></a>operator&amp; &amp; operatora
+## <a name="operatorampamp-operator"></a><a name="operator_amp_amp"></a>&amp; &amp; operator operator
 
-Tworzy zadanie, które zostanie pomyślnie ukończone, gdy oba zadania dostarczone jako argumenty zostaną pomyślnie ukończone.
+Tworzy zadanie, które zostanie ukończone pomyślnie, gdy oba zadania dostarczone jako argumenty zakończą się pomyślnie.
 
 ```cpp
 template<typename ReturnType>
@@ -96,26 +96,26 @@ inline task<void>  operator&&(
 
 ### <a name="parameters"></a>Parametry
 
-*Returntype*<br/>
-Typ zwróconego zadania.
+*Atrybuty*<br/>
+Typ zwracanego zadania.
 
-*Lhs*<br/>
-Pierwsze zadanie do połączenia z wynikowego zadania.
+*LHS*<br/>
+Pierwsze zadanie do połączenia z wynikiem zadania.
 
-*Rhs*<br/>
-Drugie zadanie, które ma łączyć w wynikowe zadanie.
+*RHS*<br/>
+Drugie zadanie, które ma zostać połączone z wynikiem zadania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zadanie, które kończy się pomyślnie po pomyślnym zakończeniu obu zadań wejściowych. Jeśli zadania wejściowe `T`są typu, dane wyjściowe `task<std::vector<T>>`tej funkcji będzie . Jeśli zadania wejściowe `void` są typu, zadaniem `task<void>`wyjściowym będzie również .
+Zadanie, które zakończy się pomyślnie, gdy oba zadania wejściowe zostały wykonane pomyślnie. Jeśli zadania wejściowe są typu `T` , danymi wyjściowymi tej funkcji będą `task<std::vector<T>>` . Jeśli zadania wejściowe są typu **`void`** , zadanie wyjściowe również będzie `task<void>` .
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli jedno z zadań zostanie anulowane lub zgłosić wyjątek, zwrócone zadanie zakończy się wcześniej, w stanie anulowane, `get()` `wait()` a wyjątek, jeśli wystąpi, zostanie zgłoszony, jeśli wywołasz lub na to zadanie.
+Jeśli jedno z zadań zostanie anulowane lub zgłosi wyjątek, zwrócone zadanie zakończy się wcześnie, w stanie anulowanym, a wyjątek, jeśli wystąpi, zostanie wygenerowany w przypadku wywołania `get()` lub `wait()` wykonania tego zadania.
 
-## <a name="operator-operator"></a><a name="operator_eq_eq"></a>operator== Operator
+## <a name="operator-operator"></a><a name="operator_eq_eq"></a>operator = = — operator
 
-Sprawdza, `concurrent_vector` czy obiekt po lewej stronie operatora `concurrent_vector` jest równy obiektowi po prawej stronie.
+Testuje, czy `concurrent_vector` obiekt po lewej stronie operatora jest równy `concurrent_vector` obiektowi po prawej stronie.
 
 ```cpp
 template<typename T, class A1, class A2>
@@ -127,13 +127,13 @@ inline bool operator== (
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ danych elementów przechowywanych w równoczesnych wektorach.
+Typ danych elementów przechowywanych w wektorach współbieżnych.
 
 *A1*<br/>
 Typ alokatora pierwszego `concurrent_vector` obiektu.
 
 *A2*<br/>
-Typ alokatora drugiego `concurrent_vector` obiektu.
+Typ programu przydzielania drugiego `concurrent_vector` obiektu.
 
 *_A*<br/>
 Obiekt typu `concurrent_vector`.
@@ -143,17 +143,17 @@ Obiekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli równoczesny wektor po lewej stronie operatora jest równy wektorowi równemu wektorowi równemu po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli wektor współbieżny po lewej stronie operatora jest równy współbieżnemu wektorowi po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Dwa równoczesnych wektorów są równe, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
+Dwa współbieżne wektory są równe, jeśli mają taką samą liczbę elementów, a ich odpowiednie elementy mają takie same wartości. W przeciwnym razie są one nierówne.
 
-Ta metoda nie jest bezpieczna współbieżności w odniesieniu do innych metod, które `_A` mogą `_B`modyfikować jeden z równoczesnych wektorów lub .
+Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które mogą zmodyfikować jeden z współbieżnych wektorów `_A` lub `_B` .
 
-## <a name="operator-operator"></a><a name="operator_neq"></a>operator!= Operator
+## <a name="operator-operator"></a><a name="operator_neq"></a>operator! = — operator
 
-Sprawdza, `concurrent_vector` czy obiekt po lewej stronie operatora nie `concurrent_vector` jest równy obiektowi po prawej stronie.
+Testuje, czy `concurrent_vector` obiekt po lewej stronie operatora nie jest równy `concurrent_vector` obiektowi po prawej stronie.
 
 ```cpp
 template<typename T, class A1, class A2>
@@ -165,13 +165,13 @@ inline bool operator!= (
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ danych elementów przechowywanych w równoczesnych wektorach.
+Typ danych elementów przechowywanych w wektorach współbieżnych.
 
 *A1*<br/>
 Typ alokatora pierwszego `concurrent_vector` obiektu.
 
 *A2*<br/>
-Typ alokatora drugiego `concurrent_vector` obiektu.
+Typ programu przydzielania drugiego `concurrent_vector` obiektu.
 
 *_A*<br/>
 Obiekt typu `concurrent_vector`.
@@ -181,17 +181,17 @@ Obiekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli równoczesne wektory nie są równe; **false,** jeśli równoczesne wektory są równe.
+**`true`** Jeśli współbieżne wektory nie są równe; **`false`** Jeśli współbieżne wektory są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Dwa równoczesnych wektorów są równe, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
+Dwa współbieżne wektory są równe, jeśli mają taką samą liczbę elementów, a ich odpowiednie elementy mają takie same wartości. W przeciwnym razie są one nierówne.
 
-Ta metoda nie jest bezpieczna współbieżności w odniesieniu do innych metod, które `_A` mogą `_B`modyfikować jeden z równoczesnych wektorów lub .
+Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które mogą zmodyfikować jeden z współbieżnych wektorów `_A` lub `_B` .
 
-## <a name="operatorlt-operator"></a><a name="operator_lt"></a>operator&lt; operatora
+## <a name="operatorlt-operator"></a><a name="operator_lt"></a>&lt;operator operator
 
-Sprawdza, `concurrent_vector` czy obiekt po lewej stronie operatora `concurrent_vector` jest mniejszy niż obiekt po prawej stronie.
+Testuje, czy `concurrent_vector` obiekt po lewej stronie operatora jest mniejszy od `concurrent_vector` obiektu po prawej stronie.
 
 ```cpp
 template<typename T, class A1, class A2>
@@ -203,13 +203,13 @@ inline bool operator<(
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ danych elementów przechowywanych w równoczesnych wektorach.
+Typ danych elementów przechowywanych w wektorach współbieżnych.
 
 *A1*<br/>
 Typ alokatora pierwszego `concurrent_vector` obiektu.
 
 *A2*<br/>
-Typ alokatora drugiego `concurrent_vector` obiektu.
+Typ programu przydzielania drugiego `concurrent_vector` obiektu.
 
 *_A*<br/>
 Obiekt typu `concurrent_vector`.
@@ -219,17 +219,17 @@ Obiekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli równoczesnych wektor po lewej stronie operatora jest mniejsza niż równoczesnych wektor po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli wektor współbieżny po lewej stronie operatora jest mniejszy od współbieżnego wektora po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Zachowanie tego operatora jest identyczne z `vector` równoważnym `std` operatorem dla klasy w obszarze nazw.
+Zachowanie tego operatora jest takie samo jak odpowiednik operatora `vector` klasy w `std` przestrzeni nazw.
 
-Ta metoda nie jest bezpieczna współbieżności w odniesieniu do innych metod, które `_A` mogą `_B`modyfikować jeden z równoczesnych wektorów lub .
+Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które mogą zmodyfikować jeden z współbieżnych wektorów `_A` lub `_B` .
 
-## <a name="operatorlt-operator"></a><a name="operator_lt_eq"></a>operator&lt;= Operator
+## <a name="operatorlt-operator"></a><a name="operator_lt_eq"></a>operator &lt; = — operator
 
-Sprawdza, `concurrent_vector` czy obiekt po lewej stronie operatora jest mniejszy `concurrent_vector` lub równy obiektowi po prawej stronie.
+Testuje, czy `concurrent_vector` obiekt po lewej stronie operatora jest mniejszy od lub równy `concurrent_vector` obiektowi po prawej stronie.
 
 ```cpp
 template<typename T, class A1, class A2>
@@ -241,13 +241,13 @@ inline bool operator<= (
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ danych elementów przechowywanych w równoczesnych wektorach.
+Typ danych elementów przechowywanych w wektorach współbieżnych.
 
 *A1*<br/>
 Typ alokatora pierwszego `concurrent_vector` obiektu.
 
 *A2*<br/>
-Typ alokatora drugiego `concurrent_vector` obiektu.
+Typ programu przydzielania drugiego `concurrent_vector` obiektu.
 
 *_A*<br/>
 Obiekt typu `concurrent_vector`.
@@ -257,17 +257,17 @@ Obiekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli równoczesny wektor po lewej stronie operatora jest mniejszy lub równy równemu równemu wektorowi równemu po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli wektor współbieżny po lewej stronie operatora jest mniejszy niż lub równy współbieżnemu wektorowi po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Zachowanie tego operatora jest identyczne z `vector` równoważnym `std` operatorem dla klasy w obszarze nazw.
+Zachowanie tego operatora jest takie samo jak odpowiednik operatora `vector` klasy w `std` przestrzeni nazw.
 
-Ta metoda nie jest bezpieczna współbieżności w odniesieniu do innych metod, które `_A` mogą `_B`modyfikować jeden z równoczesnych wektorów lub .
+Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które mogą zmodyfikować jeden z współbieżnych wektorów `_A` lub `_B` .
 
-## <a name="operatorgt-operator"></a><a name="operator_gt"></a>operator&gt; operatora
+## <a name="operatorgt-operator"></a><a name="operator_gt"></a>&gt;operator operator
 
-Sprawdza, `concurrent_vector` czy obiekt po lewej stronie operatora `concurrent_vector` jest większy niż obiekt po prawej stronie.
+Testuje, czy `concurrent_vector` obiekt po lewej stronie operatora jest większy niż `concurrent_vector` obiekt po prawej stronie.
 
 ```cpp
 template<typename T, class A1, class A2>
@@ -279,13 +279,13 @@ inline bool operator>(
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ danych elementów przechowywanych w równoczesnych wektorach.
+Typ danych elementów przechowywanych w wektorach współbieżnych.
 
 *A1*<br/>
 Typ alokatora pierwszego `concurrent_vector` obiektu.
 
 *A2*<br/>
-Typ alokatora drugiego `concurrent_vector` obiektu.
+Typ programu przydzielania drugiego `concurrent_vector` obiektu.
 
 *_A*<br/>
 Obiekt typu `concurrent_vector`.
@@ -295,17 +295,17 @@ Obiekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli równoczesnych wektor po lewej stronie operatora jest większa niż równoczesnych wektor po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli wektor współbieżny po lewej stronie operatora jest większy niż współbieżny wektor po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Zachowanie tego operatora jest identyczne z `vector` równoważnym `std` operatorem dla klasy w obszarze nazw.
+Zachowanie tego operatora jest takie samo jak odpowiednik operatora `vector` klasy w `std` przestrzeni nazw.
 
-Ta metoda nie jest bezpieczna współbieżności w odniesieniu do innych metod, które `_A` mogą `_B`modyfikować jeden z równoczesnych wektorów lub .
+Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które mogą zmodyfikować jeden z współbieżnych wektorów `_A` lub `_B` .
 
-## <a name="operatorgt-operator"></a><a name="operator_gt_eq"></a>operator&gt;= Operator
+## <a name="operatorgt-operator"></a><a name="operator_gt_eq"></a>operator &gt; = — operator
 
-Sprawdza, `concurrent_vector` czy obiekt po lewej stronie operatora jest większy `concurrent_vector` lub równy obiektowi po prawej stronie.
+Testuje, czy `concurrent_vector` obiekt po lewej stronie operatora jest większy niż lub równy `concurrent_vector` obiektowi po prawej stronie.
 
 ```cpp
 template<typename T, class A1, class A2>
@@ -317,13 +317,13 @@ inline bool operator>= (
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ danych elementów przechowywanych w równoczesnych wektorach.
+Typ danych elementów przechowywanych w wektorach współbieżnych.
 
 *A1*<br/>
 Typ alokatora pierwszego `concurrent_vector` obiektu.
 
 *A2*<br/>
-Typ alokatora drugiego `concurrent_vector` obiektu.
+Typ programu przydzielania drugiego `concurrent_vector` obiektu.
 
 *_A*<br/>
 Obiekt typu `concurrent_vector`.
@@ -333,14 +333,14 @@ Obiekt typu `concurrent_vector`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli równoczesny wektor po lewej stronie operatora jest większy lub równy równemu równoczesnego wektora po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli wektor współbieżny po lewej stronie operatora jest większy niż lub równy współbieżnemu wektorowi po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Zachowanie tego operatora jest identyczne z `vector` równoważnym `std` operatorem dla klasy w obszarze nazw.
+Zachowanie tego operatora jest takie samo jak odpowiednik operatora `vector` klasy w `std` przestrzeni nazw.
 
-Ta metoda nie jest bezpieczna współbieżności w odniesieniu do innych metod, które `_A` mogą `_B`modyfikować jeden z równoczesnych wektorów lub .
+Ta metoda nie jest bezpieczna pod kątem współbieżności w odniesieniu do innych metod, które mogą zmodyfikować jeden z współbieżnych wektorów `_A` lub `_B` .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[współbieżność Obszar nazw](concurrency-namespace.md)
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)

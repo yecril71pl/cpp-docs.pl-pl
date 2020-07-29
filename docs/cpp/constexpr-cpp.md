@@ -1,102 +1,102 @@
 ---
-title: constexpr (C++)
-description: Wskazówki dotyczące słowa C++ kluczowego constexpr języka.
+title: :::no-loc(constexpr):::Języków
+description: 'Wskazówki dotyczące :::no-loc(constexpr)::: słowa kluczowego języka C++.'
 ms.date: 01/28/2020
 f1_keywords:
-- constexpr_cpp
+- :::no-loc(constexpr):::_cpp
 ms.assetid: c6458ccb-51c6-4a16-aa61-f69e6f4e04f7
 no-loc:
-- constexpr
-- const
-- inline
-- goto
-- try
-- if
-- switch
-- for
-- while
-ms.openlocfilehash: 4f34eef3217377ab50a2d80d42b5bea4b054c5be
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+- ':::no-loc(constexpr):::'
+- ':::no-loc(const):::'
+- ':::no-loc(inline):::'
+- ':::no-loc(goto):::'
+- ':::no-loc(try):::'
+- ':::no-loc(if):::'
+- ':::no-loc(switch):::'
+- ':::no-loc(for):::'
+- ':::no-loc(while):::'
+ms.openlocfilehash: d66dc333b7ac9fba94221dc4efa723c7919ef88f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821782"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229028"
 ---
-# <a name="opno-locconstexpr-c"></a>constexpr (C++)
+# <a name="no-locconstexpr-c"></a>:::no-loc(constexpr):::Języków
 
-Słowo kluczowe **constexpr** zostało wprowadzone w języku c++ 11 i udoskonalone w języku c++ 14. Oznacza *stałe wyrażenie*. Podobnie jak **const** , można go zastosować do zmiennych: błąd kompilatora jest wywoływany, gdy kod próbuje zmodyfikować wartość. W przeciwieństwie do **const** , **constexpr** można również stosować do funkcji i konstruktorów klas. **constexpr** wskazuje, że wartość lub wartość zwracana jest stała i, gdzie to możliwe, jest obliczana w czasie kompilacji.
+Słowo kluczowe **`:::no-loc(constexpr):::`** zostało wprowadzone w języku c++ 11 i udoskonalone w języku c++ 14. Oznacza * :::no-loc(const)::: wyrażenie ANT*. Podobnie **`:::no-loc(const):::`** , można je stosować do zmiennych: błąd kompilatora jest wywoływany, gdy dowolny kod próbuje mod :::no-loc(if)::: t wartości. W przeciwieństwie **`:::no-loc(const):::`** **`:::no-loc(constexpr):::`** do, można również zastosować do funkcji i klasy :::no-loc(const)::: ructors. **`:::no-loc(constexpr):::`** wskazuje, że wartość lub wartość zwracana jest :::no-loc(const)::: Ant i, jeśli jest to możliwe, jest obliczana w czasie kompilacji.
 
-Wartości całkowitej **constexpr** można użyć wszędzie tam, gdzie jest wymagana const liczba całkowita, na przykład w argumentach szablonu i deklaracjach tablicowych. A gdy wartość jest obliczana w czasie kompilacji, a nie w czasie wykonywania, pomaga ona działać szybciej i używać mniejszej ilości pamięci.
+**`:::no-loc(constexpr):::`** Wartość Całka może być używana wszędzie tam :::no-loc(const)::: , gdzie jest wymagana liczba całkowita, na przykład w argumentach szablonu i deklaracjach tablicowych. A gdy wartość jest obliczana w czasie kompilacji, a nie w czasie wykonywania, pomaga ona działać szybciej i używać mniejszej ilości pamięci.
 
-Aby ograniczyć złożoność obliczeń stałych czasu kompilacji i ich potencjalną wpływ na czas kompilacji, standard C++ 14 wymaga, aby typy w wyrażeniach stałych były [typami literałów](trivial-standard-layout-and-pod-types.md#literal_types).
+Aby ograniczyć złożoność obliczeń ANT w czasie kompilacji :::no-loc(const)::: i ich potencjalną wpływ na czas kompilacji, w standardzie c++ 14 wymagane są typy w :::no-loc(const)::: wyrażeniach ANT, które mają być [typami literałów](trivial-standard-layout-and-pod-types.md#literal_types).
 
 ## <a name="syntax"></a>Składnia
 
-> **constexpr** identyfikator *typu literału* **=** *wyrażenie stałe* **;** \
-> **constexpr** *Identyfikator typu literał* **{** *stała-Expression* **}** **;** \
-> *Identyfikator* *typu literału* **constexpr** **(** *params* **)** **;** \
-> **constexpr** *ctor* **(** *params* **)** **;**
+> **`:::no-loc(constexpr):::`***Literal-Type* *ident :::no-loc(if)::: IER* **=** * :::no-loc(const)::: ANT-Expression* **;**\
+> **`:::no-loc(constexpr):::`***Literal-Type* *ident :::no-loc(if)::: IER* **{** * :::no-loc(const)::: ANT-Expression* **}** **;**\
+> **`:::no-loc(constexpr):::`***Literal-Type* *ident :::no-loc(if)::: IER* **(** *params* **)** **;**\
+> **`:::no-loc(constexpr):::`***ctor* **(** *params* **)** **;**
 
 ## <a name="parameters"></a>Parametry
 
-*parametry*\
-Co najmniej jeden parametr, z którego każdy musi być typem literału i musi być wyrażeniem stałym.
+*Krocz*\
+Co najmniej jeden parametr, z którego każdy musi być typem literału i musi być :::no-loc(const)::: wyrażeniem ANT.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zmienna **constexpr** lub funkcja musi zwracać [Typ literału](trivial-standard-layout-and-pod-types.md#literal_types).
+**`:::no-loc(constexpr):::`** Zmienna lub funkcja musi zwracać [Typ literału](trivial-standard-layout-and-pod-types.md#literal_types).
 
-## <a name="opno-locconstexpr-variables"></a>zmienne constexpr
+## <a name="no-locconstexpr-variables"></a>:::no-loc(constexpr):::modyfikacj
 
-Podstawowa różnica między zmiennymi **const** i **constexpr** polega na tym, że inicjalizacja zmiennej **const** może zostać odroczona do czasu wykonywania. Zmienna **constexpr** musi zostać zainicjowana w czasie kompilacji.  **const** wszystkie zmienne **constexpr** .
+Podstawowy zbiór d :::no-loc(if)::: między **`:::no-loc(const):::`** i **`:::no-loc(constexpr):::`** zmienne polega na tym, że inicjalizacja **`:::no-loc(const):::`** zmiennej może zostać odroczona do czasu wykonywania. **`:::no-loc(constexpr):::`** Zmienna musi być inicjowana w czasie kompilacji.  Wszystkie **`:::no-loc(constexpr):::`** zmienne są **`:::no-loc(const):::`** .
 
-- Zmienna może być zadeklarowana przy użyciu **constexpr** , gdy ma typ literału i jest inicjowana. Jeśli inicjalizacja jest wykonywana przez konstruktora, Konstruktor musi być zadeklarowany jako **constexpr** .
+- Zmienna może być zadeklarowana przy użyciu **`:::no-loc(constexpr):::`** , gdy ma typ literału i jest inicjowana. Jeśli inicjalizacja jest na :::no-loc(for)::: wartość Med przez :::no-loc(const)::: ructor, :::no-loc(const)::: ructor musi być zadeklarowany jako **`:::no-loc(constexpr):::`** .
 
-- Odwołanie może być zadeklarowane jako **constexpr** , gdy oba te warunki są spełnione: przywoływany obiekt jest inicjowany przez wyrażenie stałe i wszystkie niejawne konwersje wywoływane podczas inicjowania są również wyrażeniami stałymi.
+- Odwołanie może być zadeklarowane jako, **`:::no-loc(constexpr):::`** gdy oba te warunki są spełnione: obiekt, do którego się odwoływano, jest inicjowany przez :::no-loc(const)::: wyrażenie Ant i wszystkie niejawne konwersje wywoływane podczas inicjowania również są :::no-loc(const)::: wyrażeniami ANT.
 
-- Wszystkie deklaracje zmiennej **constexpr** lub funkcji muszą mieć specyfikator **constexpr** .
+- Wszystkie deklaracje **`:::no-loc(constexpr):::`** zmiennej lub funkcji muszą mieć **`:::no-loc(constexpr):::`** specyfikację :::no-loc(if)::: Ier.
 
 ```cpp
-constexpr float x = 42.0;
-constexpr float y{108};
-constexpr float z = exp(5, 3);
-constexpr int i; // Error! Not initialized
+:::no-loc(constexpr)::: float x = 42.0;
+:::no-loc(constexpr)::: float y{108};
+:::no-loc(constexpr)::: float z = exp(5, 3);
+:::no-loc(constexpr)::: int i; // Error! Not initialized
 int j = 0;
-constexpr int k = j + 1; //Error! j not a constant expression
+:::no-loc(constexpr)::: int k = j + 1; //Error! j not a :::no-loc(const):::ant expression
 ```
 
-## <a name="constexpr_functions"></a>funkcje constexpr
+## <a name="no-locconstexpr-functions"></a><a name=":::no-loc(constexpr):::_functions"></a>:::no-loc(constexpr):::funkcje
 
-Funkcja **constexpr** to jedna, której wartość zwracana jest obliczanej w czasie kompilacji, gdy wymaga użycia kodu. Kod zużywający wymaga wartości zwracanej w czasie kompilacji w celu zainicjowania zmiennej **constexpr** lub podania argumentu szablonu bez typu. Gdy argumenty są **constexpr** wartości, funkcja **constexpr** generuje stałą czasu kompilacji. Gdy jest wywoływana z argumentami innymi niż **constexpr** lub gdy jego wartość nie jest wymagana w czasie kompilacji, generuje wartość w czasie wykonywania, jak zwykła funkcja. (To podwójne zachowanie umożliwia zapisanie **constexpr** i **nieconstexpr** wersji tej samej funkcji).
+**`:::no-loc(constexpr):::`** Funkcja jest jedną, której wartością zwracaną jest obliczanej w czasie kompilacji, gdy wymaga użycia kodu. Kod zużywający wymaga wartości zwracanej w czasie kompilacji w celu zainicjowania **`:::no-loc(constexpr):::`** zmiennej lub podania argumentu szablonu, który nie jest typem. Gdy argumenty są **`:::no-loc(constexpr):::`** wartościami, **`:::no-loc(constexpr):::`** Funkcja tworzy ANT w czasie kompilacji :::no-loc(const)::: . Gdy jest wywoływana z **`:::no-loc(constexpr):::`** argumentami innymi niż argumenty lub gdy jej wartość nie jest wymagana w czasie kompilacji, generuje wartość w czasie wykonywania, jak zwykła funkcja. (To podwójne zachowanie umożliwia zapisanie **`:::no-loc(constexpr):::`** i **`:::no-loc(constexpr):::`** niewersja tej samej funkcji).
 
-Niejawnie **inline** funkcji **constexpr** lub konstruktora.
+**`:::no-loc(constexpr):::`** Funkcja lub :::no-loc(const)::: ructor jest niejawnie **`:::no-loc(inline):::`** .
 
-Do funkcji constexpr są stosowane następujące reguły:
+Do funkcji są stosowane następujące reguły :::no-loc(constexpr)::: :
 
-- Funkcja **constexpr** musi akceptować i zwracać tylko [typy literałów](trivial-standard-layout-and-pod-types.md#literal_types).
+- **`:::no-loc(constexpr):::`** Funkcja musi akceptować i zwracać tylko [typy literałów](trivial-standard-layout-and-pod-types.md#literal_types).
 
-- Funkcja **constexpr** może być cykliczna.
+- **`:::no-loc(constexpr):::`** Funkcja może być cykliczna.
 
-- Nie może być [wirtualna](../cpp/virtual-cpp.md). Nie można zdefiniować konstruktora jako **constexpr** , gdy otaczająca Klasa ma wszystkie wirtualne klasy bazowe.
+- Nie może być [wirtualna](../cpp/virtual-cpp.md). :::no-loc(const):::Nie można zdefiniować elementu ructor, tak jakby **`:::no-loc(constexpr):::`** otaczająca Klasa ma jakiekolwiek wirtualne klasy bazowe.
 
-- Treść można zdefiniować jako `= default` lub `= delete`.
+- Treść można zdefiniować jako `= default` lub `= delete` .
 
-- Treść nie może zawierać żadnych instrukcji **goto** ani bloków **try** .
+- Treść nie może zawierać żadnych **`:::no-loc(goto):::`** instrukcji ani **`:::no-loc(try):::`** bloków.
 
-- Jawna specjalizacja szablonu innego niż **constexpr** można zadeklarować jako **constexpr** :
+- Jawna specjalizacja niebędąca **`:::no-loc(constexpr):::`** szablonem może być zadeklarowana jako **`:::no-loc(constexpr):::`** :
 
-- Jawna specjalizacja szablonu **constexpr** nie może być również **constexpr** :
+- Jawna specjalizacja **`:::no-loc(constexpr):::`** szablonu nie musi być **`:::no-loc(constexpr):::`** :
 
-Następujące reguły mają zastosowanie do funkcji **constexpr** w programie Visual Studio 2017 i nowszych:
+Następujące reguły mają zastosowanie do **`:::no-loc(constexpr):::`** funkcji w programie Visual Studio 2017 i nowszych:
 
-- Może zawierać instrukcje **if** i **switch** , a także wszystkie instrukcje pętli, w tym **for** , **for** na podstawie zakresu, **while** i **dowhile** .
+- Może zawierać **`:::no-loc(if):::`** i **`:::no-loc(switch):::`** instrukcje oraz wszystkie instrukcje pętli, takie jak, **`:::no-loc(for):::`** oparte na zakresie **`:::no-loc(for):::`** , **`:::no-loc(while):::`** ** :::no-loc(while)::: **, i do.
 
-- Może zawierać deklaracje zmiennych lokalnych, ale zmienna musi być zainicjowana. Musi być typem literału i nie może być **statyczny** ani lokalny wątku. Zmienna zadeklarowana lokalnie nie jest wymagana do **const** i może ulec mutacji.
+- Może zawierać deklaracje zmiennych lokalnych, ale zmienna musi być zainicjowana. Musi być typem literału i nie może być **`static`** ani elementem lokalnym wątku. Zmienna zadeklarowana lokalnie nie jest wymagana **`:::no-loc(const):::`** i może ulec mutacji.
 
-- **Niestatyczna** funkcja członkowska **constexpr** nie musi być niejawnie **const** .
+- Funkcja niebędąca **`:::no-loc(constexpr):::`** **`static`** członkiem nie musi być niejawnie **`:::no-loc(const):::`** .
 
 ```cpp
-constexpr float exp(float x, int n)
+:::no-loc(constexpr)::: float exp(float x, int n)
 {
     return n == 0 ? 1 :
         n % 2 == 0 ? exp(x * x, n / 2) :
@@ -105,25 +105,25 @@ constexpr float exp(float x, int n)
 ```
 
 > [!TIP]
-> W debugerze programu Visual Studio podczas debugowania niezoptymalizowanej kompilacji debugowania można sprawdzić, czy funkcja **constexpr** jest szacowana w czasie kompilacji, umieszczając w niej punkt przerwania. Po trafieniu punktu przerwania funkcja została wywołana w czasie wykonywania.  Jeśli nie, funkcja została wywołana w czasie kompilacji.
+> W debugerze programu Visual Studio podczas debugowania niezoptymalizowanej kompilacji debugowania można sprawdzić, czy **`:::no-loc(constexpr):::`** Funkcja jest szacowana w czasie kompilacji, umieszczając w niej punkt przerwania. Po trafieniu punktu przerwania funkcja została wywołana w czasie wykonywania.  Jeśli nie, funkcja została wywołana w czasie kompilacji.
 
-## <a name="extern-opno-locconstexpr"></a>constexpr extern
+## <a name="extern-no-locconstexpr"></a>modyfikator:::no-loc(constexpr):::
 
-Opcja kompilatora [/Zc: externConstexpr](../build/reference/zc-externconstexpr.md) powoduje, że kompilator zastosuje [zewnętrzne połączenie](../c-language/external-linkage.md) do zmiennych zadeklarowanych za pomocą **constexprextern** . We wcześniejszych wersjach programu Visual Studio, domyślnie lub gdy **/Zc: externConstexpr-** jest określony, program Visual Studio stosuje połączenie wewnętrzne do zmiennych **constexpr** nawet wtedy, gdy jest używane słowo kluczowe **extern** . Opcja **/Zc: externConstexpr** jest dostępna począwszy od programu Visual Studio 2017 Update 15,6 i jest domyślnie wyłączona. Opcja [/permissive-](../build/reference/permissive-standards-conformance.md) nie włącza **/Zc: externConstexpr**.
+Opcja kompilatora [/Zc: externConstexpr](../build/reference/zc-extern:::no-loc(constexpr):::.md) powoduje, że kompilator zastosuje [zewnętrzne połączenie](../c-language/external-linkage.md) ze zmiennymi zadeklarowanymi przy **użyciu :::no-loc(constexpr)::: extern **. We wcześniejszych wersjach programu Visual Studio, domyślnie lub gdy **/Zc: externConstexpr-** is spec :::no-loc(if)::: IED, program Visual Studio stosuje wewnętrzne połączenie ze **`:::no-loc(constexpr):::`** zmiennymi nawet wtedy, gdy **`extern`** słowo kluczowe jest używane. Opcja **/Zc: externConstexpr** jest dostępna począwszy od programu Visual Studio 2017 Update 15,6 i jest domyślnie wyłączona. Opcja [/permissive-](../build/reference/permissive-standards-con:::no-loc(for):::mance.md) nie włącza **/Zc: externConstexpr**.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia zmienne **constexpr** , funkcje i typ zdefiniowany przez użytkownika. W ostatniej instrukcji w `main()`, **constexpr** funkcja członkowska `GetValue()` jest wywołaniem w czasie wykonywania, ponieważ wartość nie jest wymagana, aby była znana w czasie kompilacji.
+Poniższy przykład przedstawia **`:::no-loc(constexpr):::`** zmienne, funkcje i typ zdefiniowany przez użytkownika. W ostatniej instrukcji w `main()` , **`:::no-loc(constexpr):::`** funkcja członkowska `GetValue()` jest wywołaniem w czasie wykonywania, ponieważ wartość nie jest wymagana, aby była znana w czasie kompilacji.
 
 ```cpp
-// constexpr.cpp
-// Compile with: cl /EHsc /W4 constexpr.cpp
+// :::no-loc(constexpr):::.cpp
+// Compile with: cl /EHsc /W4 :::no-loc(constexpr):::.cpp
 #include <iostream>
 
 using namespace std;
 
 // Pass by value
-constexpr float exp(float x, int n)
+:::no-loc(constexpr)::: float exp(float x, int n)
 {
     return n == 0 ? 1 :
         n % 2 == 0 ? exp(x * x, n / 2) :
@@ -131,7 +131,7 @@ constexpr float exp(float x, int n)
 };
 
 // Pass by reference
-constexpr float exp2(const float& x, const int& n)
+:::no-loc(constexpr)::: float exp2(:::no-loc(const)::: float& x, :::no-loc(const)::: int& n)
 {
     return n == 0 ? 1 :
         n % 2 == 0 ? exp2(x * x, n / 2) :
@@ -140,13 +140,13 @@ constexpr float exp2(const float& x, const int& n)
 
 // Compile-time computation of array length
 template<typename T, int N>
-constexpr int length(const T(&)[N])
+:::no-loc(constexpr)::: int length(:::no-loc(const)::: T(&)[N])
 {
     return N;
 }
 
-// Recursive constexpr function
-constexpr int fac(int n)
+// Recursive :::no-loc(constexpr)::: function
+:::no-loc(constexpr)::: int fac(int n)
 {
     return n == 1 ? 1 : n * fac(n - 1);
 }
@@ -155,8 +155,8 @@ constexpr int fac(int n)
 class Foo
 {
 public:
-    constexpr explicit Foo(int i) : _i(i) {}
-    constexpr int GetValue() const
+    :::no-loc(constexpr)::: explicit Foo(int i) : _i(i) {}
+    :::no-loc(constexpr)::: int GetValue() :::no-loc(const):::
     {
         return _i;
     }
@@ -166,17 +166,17 @@ private:
 
 int main()
 {
-    // foo is const:
-    constexpr Foo foo(5);
+    // foo is :::no-loc(const)::::
+    :::no-loc(constexpr)::: Foo foo(5);
     // foo = Foo(6); //Error!
 
     // Compile time:
-    constexpr float x = exp(5, 3);
-    constexpr float y { exp(2, 5) };
-    constexpr int val = foo.GetValue();
-    constexpr int f5 = fac(5);
-    const int nums[] { 1, 2, 3, 4 };
-    const int nums2[length(nums) * 2] { 1, 2, 3, 4, 5, 6, 7, 8 };
+    :::no-loc(constexpr)::: float x = exp(5, 3);
+    :::no-loc(constexpr)::: float y { exp(2, 5) };
+    :::no-loc(constexpr)::: int val = foo.GetValue();
+    :::no-loc(constexpr)::: int f5 = fac(5);
+    :::no-loc(const)::: int nums[] { 1, 2, 3, 4 };
+    :::no-loc(const)::: int nums2[length(nums) * 2] { 1, 2, 3, 4, 5, 6, 7, 8 };
 
     // Run time:
     cout << "The value of foo is " << foo.GetValue() << endl;
@@ -190,4 +190,4 @@ Program Visual Studio 2015 lub nowszy.
 ## <a name="see-also"></a>Zobacz także
 
 [Deklaracje i definicje](../cpp/declarations-and-definitions-cpp.md)\
-[const](../cpp/const-cpp.md)
+[:::no-loc(const):::](../cpp/:::no-loc(const):::-cpp.md)

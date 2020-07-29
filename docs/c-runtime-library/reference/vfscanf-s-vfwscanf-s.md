@@ -24,12 +24,12 @@ f1_keywords:
 - vfwscanf_s
 - _vftscanf_s
 ms.assetid: 9b0133f0-9a18-4581-b24b-3b72683ad432
-ms.openlocfilehash: 2c6f3504c9c12ad5429a1b9649eda351c473671a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 834def5f1465f3ce0d903b0af31b67d0e7eb2543
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957377"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229288"
 ---
 # <a name="vfscanf_s-vfwscanf_s"></a>vfscanf_s, vfwscanf_s
 
@@ -52,10 +52,10 @@ int vfwscanf_s(
 
 ### <a name="parameters"></a>Parametry
 
-*stream*<br/>
+*produkcyjne*<br/>
 Wskaźnik do struktury **pliku** .
 
-*format*<br/>
+*Formatowanie*<br/>
 Ciąg kontroli formatu.
 
 *arglist*<br/>
@@ -69,16 +69,16 @@ Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *strumień* jest 
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **vfscanf_s** odczytuje dane z bieżącego położenia *strumienia* do lokalizacji, które są określone przez listę argumentów *arglist* (jeśli istnieje). Każdy argument na liście musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w *formacie*. *Format* kontroluje interpretację pól wejściowych i ma taką samą formę i funkcję jak argument *formatu* dla **scanf_s**; Zobacz sekcję [Specyfikacja formatu: scanf i wscanf funkcje](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) opisujące *Format*. **vfwscanf_s** to dwubajtowa wersja **vfscanf_s**; argument formatu **vfwscanf_s** jest ciągiem znaków dwubajtowych. Te funkcje zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **vfscanf_s** obecnie nie obsługuje danych wejściowych ze strumienia Unicode.
+Funkcja **vfscanf_s** odczytuje dane z bieżącego położenia *strumienia* do lokalizacji, które są określone przez listę argumentów *arglist* (jeśli istnieje). Każdy argument na liście musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w *formacie*. *Format* kontroluje interpretację pól wejściowych i ma taką samą formę i funkcję jak argument *formatu* dla **scanf_s**; Zobacz sekcję [Specyfikacja formatu: scanf i wscanf funkcje](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) opisujące *Format*. **vfwscanf_s** to dwubajtowa wersja **vfscanf_s**; argument formatu **vfwscanf_s** jest ciągiem znaków dwubajtowych. Te funkcje zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **vfscanf_s** nie obsługuje obecnie danych wejściowych ze strumienia Unicode.
 
-Główna różnica między bardziej bezpiecznymi funkcjami (które mają sufiks **_s** ) i innymi wersjami polega na tym, że bezpieczniejsze funkcje wymagają rozmiaru w znakach każdego języka **c**, **c**, **s**, **s**i **[** Type, aby przekazanie jako argument bezpośrednio po zmiennej. Aby uzyskać więcej informacji, zobacz [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) i [scanf Width Specification](../../c-runtime-library/scanf-width-specification.md).
+Główna różnica między bardziej bezpiecznymi funkcjami (z sufiksem **_s** ) i innymi wersjami polega na tym, że bezpieczniejsze funkcje wymagają rozmiaru w znakach każdego języka **c**, **c**, **s**, **s**i pola **[** Type, które mają być przesyłane jako argumenty bezpośrednio po zmiennej. Aby uzyskać więcej informacji, zobacz [scanf_s, _scanf_s_l, wscanf_s _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) i [Specyfikacja szerokości scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> Parametr size jest typu **unsigned**, not **size_t**.
+> Parametr size ma typ, a **`unsigned`** nie **size_t**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vftscanf_s**|**vfscanf_s**|**vfscanf_s**|**vfwscanf_s**|
 
@@ -87,7 +87,7 @@ Główna różnica między bardziej bezpiecznymi funkcjami (które mają sufiks 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
 |**vfscanf_s**|\<stdio.h>|
-|**vfwscanf_s**|\<stdio. h > lub \<WCHAR. h >|
+|**vfwscanf_s**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -161,7 +161,7 @@ x
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)<br/>
 [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

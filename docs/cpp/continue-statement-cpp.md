@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - continue keyword [C++]
 ms.assetid: 3c94ee57-f732-4c1d-8537-d0ce5382bfd4
-ms.openlocfilehash: b3790ecfde0af958b3244cfdaa61524ba78d6267
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 55a81338f1a0f9036a6d42c4bac7c99489c18d64
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180280"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229002"
 ---
 # <a name="continue-statement-c"></a>continue — instrukcja (C++)
 
@@ -27,11 +27,11 @@ continue;
 
 Wszystkie pozostałe instrukcje w bieżącej iteracji nie są wykonywane. Następna iteracja pętli jest określana w następujący sposób:
 
-- W pętli **do** lub **while** następna iteracja jest uruchamiana przez ponowną ocenę wyrażenia sterującego instrukcji **do** lub **while** .
+- W **`do`** pętli lub **`while`** , następna iteracja jest uruchamiana przez ponowną ocenę wyrażenia sterującego **`do`** instrukcji or **`while`** .
 
-- W pętli **for** (przy użyciu składni `for`(`init-expr`; `cond-expr`; `loop-expr`)) jest wykonywana klauzula `loop-expr`. Następnie klauzula `cond-expr` jest ponownie Szacowana i, w zależności od wyniku, pętla lub jest wykonywana inna iteracja.
+- W **`for`** pętli (przy użyciu składni `for( <init-expr> ; <cond-expr> ; <loop-expr> )` ) `<loop-expr>` klauzula jest wykonywana. Następnie `<cond-expr>` klauzula jest ponownie Szacowana i, w zależności od wyniku, pętla lub zostanie zakończona.
 
-Poniższy przykład pokazuje, jak można użyć instrukcji **Continue** , aby pominąć sekcje kodu i rozpocząć następną iterację pętli.
+Poniższy przykład pokazuje, jak **`continue`** można użyć instrukcji w celu obejścia sekcji kodu i rozpoczęcia następnej iteracji pętli.
 
 ## <a name="example"></a>Przykład
 
@@ -60,7 +60,7 @@ before the continue
 after the do loop
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Instrukcje skoku](../cpp/jump-statements-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

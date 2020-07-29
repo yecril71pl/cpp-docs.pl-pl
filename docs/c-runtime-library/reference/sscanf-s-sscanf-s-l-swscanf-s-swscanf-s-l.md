@@ -44,16 +44,16 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-ms.openlocfilehash: 14707b64a9c5c49837391be59d83ee39b79d5065
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e92fc2544b6b137c64c388bed9013a6fdd5d3252
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957957"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229353"
 ---
 # <a name="sscanf_s-_sscanf_s_l-swscanf_s-_swscanf_s_l"></a>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 
-Odczytuje sformatowane dane z ciągu. Te wersje [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Odczytuje sformatowane dane z ciągu. Te wersje [sscanf, _sscanf_l, swscanf _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -84,10 +84,10 @@ int _swscanf_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
+*buforu*<br/>
 Przechowywane dane
 
-*format*<br/>
+*Formatowanie*<br/>
 Ciąg kontroli formatu. Aby uzyskać więcej informacji, zobacz [Formatowanie pól specyfikacji: scanf i wscanf Functions](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 *argument*<br/>
@@ -106,7 +106,7 @@ Aby uzyskać informacje o tych i innych kodach błędów, zobacz [errno, _doserr
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **sscanf_s** odczytuje dane z *buforu* do lokalizacji podanej przez każdy *argument*. Argumenty po ciągu formatu określają wskaźniki do zmiennych, które mają typ, który odpowiada specyfikatorowi typu w *formacie*. W przeciwieństwie do mniej bezpiecznej wersji [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), parametr rozmiaru buforu jest wymagany w przypadku używania znaków pola typu **c**, **c**, **s**, **s**lub, które są ujęte w **[]** . Rozmiar buforu w znakach musi być podany jako dodatkowy parametr natychmiast po każdym parametrze buforu, który go wymaga. Na przykład, jeśli odczytujesz do ciągu, rozmiar buforu dla tego ciągu jest przesyłany w następujący sposób:
+Funkcja **sscanf_s** odczytuje dane z *buforu* do lokalizacji podanej przez każdy *argument*. Argumenty po ciągu formatu określają wskaźniki do zmiennych, które mają typ, który odpowiada specyfikatorowi typu w *formacie*. W przeciwieństwie do mniej bezpiecznej wersji [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), parametr rozmiaru buforu jest wymagany w przypadku używania znaków pola typu **c**, **c**, **s**, **s**lub, które są ujęte w **[]**. Rozmiar buforu w znakach musi być podany jako dodatkowy parametr natychmiast po każdym parametrze buforu, który go wymaga. Na przykład, jeśli odczytujesz do ciągu, rozmiar buforu dla tego ciągu jest przesyłany w następujący sposób:
 
 ```C
 wchar_t ws[10];
@@ -129,20 +129,20 @@ char c[4];
 sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 ```
 
-Aby uzyskać więcej informacji, zobacz [znaki pól](../../c-runtime-library/scanf-type-field-characters.md) [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) i scanf.
+Aby uzyskać więcej informacji, zobacz [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) i [pola typu scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Parametr size jest typu **unsigned**, not **size_t**. Podczas kompilowania dla elementów docelowych 64-bitowych Użyj statycznego rzutowania, aby przekonwertować **_countof** lub **sizeof** wyniki do poprawnego rozmiaru.
+> Parametr size ma typ, a **`unsigned`** nie **size_t**. Podczas kompilowania dla elementów docelowych 64-bitowych Użyj statycznego rzutowania, aby skonwertować **_countof** lub **`sizeof`** wyniki do poprawnego rozmiaru.
 
 Argument *Format* kontroluje interpretację pól wejściowych i ma taką samą formę i funkcję jak argument *formatu* dla funkcji **scanf_s** . Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
-**swscanf_s** to dwubajtowa wersja **sscanf_s**; argumenty **swscanf_s** są ciągami znaków dwubajtowych. **sscanf_s** nie obsługuje wielobajtowych znaków szesnastkowych. **swscanf_s** nie obsługuje znaków szesnastkowych o pełnej szerokości Unicode lub "strefy zgodności". W przeciwnym razie **swscanf_s** i **sscanf_s** zachowują się identycznie.
+**swscanf_s** to dwubajtowa wersja **sscanf_s**; argumenty do **swscanf_s** są ciągami znaków dwubajtowych. **sscanf_s** nie obsługuje wielobajtowych znaków szesnastkowych. **swscanf_s** nie obsługuje znaków szesnastkowych o pełnej szerokości Unicode lub "strefy zgodności". W przeciwnym razie **swscanf_s** i **sscanf_s** zachowują się identycznie.
 
 Wersje tych funkcji, które mają sufiks **_l** są identyczne, z tą różnicą, że używają parametru ustawień regionalnych, który został przekazaną, zamiast bieżących ustawień regionalnych wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_stscanf_s**|**sscanf_s**|**sscanf_s**|**swscanf_s**|
 |**_stscanf_s_l**|**_sscanf_s_l**|**_sscanf_s_l**|**_swscanf_s_l**|
@@ -152,7 +152,7 @@ Wersje tych funkcji, które mają sufiks **_l** są identyczne, z tą różnicą
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**sscanf_s**, **_sscanf_s_l**|\<stdio.h>|
-|**swscanf_s**, **_swscanf_s_l**|\<stdio. h > lub \<WCHAR. h >|
+|**swscanf_s**, **_swscanf_s_l**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -198,8 +198,8 @@ Real:     = 15.000000
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf —, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)<br/>

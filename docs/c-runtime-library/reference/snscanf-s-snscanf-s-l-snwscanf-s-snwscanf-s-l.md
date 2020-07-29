@@ -52,16 +52,16 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-ms.openlocfilehash: 33507990c1b7e2c6fd1b30e2bdb9277ab611ef2a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6c814d0085fed90f1b3c36684f54368d811c294f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947948"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229405"
 ---
 # <a name="_snscanf_s-_snscanf_s_l-_snwscanf_s-_snwscanf_s_l"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 
-Odczytuje sformatowane dane o określonej długości z ciągu. Są to wersje [_snscanf, _snscanf_l, _snwscanf, _snwscanf_l](snscanf-snscanf-l-snwscanf-snwscanf-l.md) z ulepszeniami zabezpieczeń, jak opisano w [funkcjach zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Odczytuje sformatowane dane o określonej długości z ciągu. Są to wersje [_snscanf, _snscanf_l, _snwscanf _snwscanf_l](snscanf-snscanf-l-snwscanf-snwscanf-l.md) z ulepszonymi zabezpieczeniami, jak opisano w [funkcjach zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -95,10 +95,10 @@ int __cdecl _snwscanf_s_l(
 *klawiatur*<br/>
 Ciąg wejściowy do sprawdzenia.
 
-*length*<br/>
+*Długość*<br/>
 Liczba znaków do sprawdzenia w *danych wejściowych*.
 
-*format*<br/>
+*Formatowanie*<br/>
 Jeden lub więcej specyfikatorów formatu.
 
 *ustawienie*<br/>
@@ -109,7 +109,7 @@ Opcjonalne argumenty, które mają być przypisane zgodnie z ciągiem formatu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obie te funkcje zwracają liczbę pól, które zostały pomyślnie przekonwertowane i przypisane; wartość zwracana nie zawiera pól, które zostały odczytane, ale nie przypisane. Wartość zwracana przez 0 wskazuje, że nie przypisano żadnych pól. Wartość zwracana to **eof** dla błędu lub, jeśli osiągnięto koniec ciągu przed pierwszą konwersją. Aby uzyskać więcej informacji, zobacz [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Obie te funkcje zwracają liczbę pól, które zostały pomyślnie przekonwertowane i przypisane; wartość zwracana nie zawiera pól, które zostały odczytane, ale nie przypisane. Wartość zwracana przez 0 wskazuje, że nie przypisano żadnych pól. Wartość zwracana to **eof** dla błędu lub, jeśli osiągnięto koniec ciągu przed pierwszą konwersją. Aby uzyskać więcej informacji, zobacz [sscanf_s, _sscanf_s_l, swscanf_s _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
 Jeśli *wejście* lub *Format* jest wskaźnikiem o **wartości null** , zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje zwracają **eof** i ustawiają **errno** na **EINVAL**.
 
@@ -117,12 +117,12 @@ Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, err
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja jest taka sama jak **sscanf_s** , z tą różnicą, że umożliwia określenie stałej liczby znaków do sprawdzenia z ciągu wejściowego. Aby uzyskać więcej informacji, zobacz [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Ta funkcja jest taka sama jak **sscanf_s** , z tą różnicą, że umożliwia określenie stałej liczby znaków do sprawdzenia z ciągu wejściowego. Aby uzyskać więcej informacji, zobacz [sscanf_s, _sscanf_s_l, swscanf_s _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-Wymagany jest parametr rozmiaru buforu z znakami pola typu **c**, **c**, **s**, **s**i **[** . Aby uzyskać więcej informacji, zobacz [znaki pola typu scanf](../../c-runtime-library/scanf-type-field-characters.md).
+Wymagany jest parametr rozmiaru buforu z znakami pola typu **c**, **c**, **s**, **s**i **[**. Aby uzyskać więcej informacji, zobacz [znaki pola typu scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Parametr size jest typu **unsigned**, not **size_t**.
+> Parametr size ma typ, a **`unsigned`** nie **size_t**.
 
 Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych wątku.
 
@@ -138,7 +138,7 @@ Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korz
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_snscanf_s**, **_snscanf_s_l**|\<stdio.h>|
-|**_snwscanf_s**, **_snwscanf_s_l**|\<stdio. h > lub \<WCHAR. h >|
+|**_snwscanf_s**, **_snwscanf_s_l**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -179,4 +179,4 @@ _snwscanf_s converted 2 fields: 15 and 12.000000
 
 ## <a name="see-also"></a>Zobacz także
 
-[scanf, specyfikacje szerokości](../../c-runtime-library/scanf-width-specification.md)<br/>
+[scanf — Specyfikacja szerokości](../../c-runtime-library/scanf-width-specification.md)<br/>

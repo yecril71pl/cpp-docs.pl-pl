@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-ms.openlocfilehash: d3bb4ca843833cfe9e027f694f25c989895487bb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f31938c78e443bb53a286f79661d86b7a6e9edbc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161038"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186545"
 ---
 # <a name="nonstandard-behavior"></a>Niestandardowe zachowanie
 
-W poniższych sekcjach wymieniono niektóre miejsca, w których implementacja C++ firmy Microsoft nie jest zgodna ze C++ standardem. Numery sekcji podane poniżej odnoszą się do numerów sekcji w standardzie C++11 (ISO/IEC 14882:2011(E)).
+W poniższych sekcjach wymieniono niektóre miejsca, w których implementacja języka C++ firmy Microsoft nie jest zgodna ze standardem C++. Numery sekcji podane poniżej odnoszą się do numerów sekcji w standardzie C++11 (ISO/IEC 14882:2011(E)).
 
-Lista ograniczeń kompilatora, które różnią się od tych zdefiniowanych w C++ standardzie, jest określona w [ograniczeniach kompilatora](../cpp/compiler-limits.md).
+Lista ograniczeń kompilatora, które różnią się od tych zdefiniowanych w standardzie C++, jest określona w [limitach kompilatora](../cpp/compiler-limits.md).
 
 ## <a name="covariant-return-types"></a>Kowariantne typy zwracane
 
@@ -38,7 +38,7 @@ class B : virtual A
 
 ## <a name="binding-nondependent-names-in-templates"></a>Powiązanie nazw niezależnych w szablonach
 
-Kompilator firmy C++ Microsoft nie obsługuje obecnie powiązań nazw niezależnych podczas wstępnego analizowania szablonu. Jest to niezgodne z sekcją 14.6.3 specyfikacji ISO C++. Może to powodować wystąpienie przeciążeń zadeklarowanych po szablonie (ale przed wystąpieniem szablonu).
+Kompilator języka Microsoft C++ nie obsługuje obecnie powiązań nazw niezależnych podczas wstępnego analizowania szablonu. Jest to niezgodne z sekcją 14.6.3 specyfikacji ISO C++. Może to powodować wystąpienie przeciążeń zadeklarowanych po szablonie (ale przed wystąpieniem szablonu).
 
 ```cpp
 #include <iostream>
@@ -75,7 +75,7 @@ Aby uzyskać więcej informacji dotyczących specyfikacji wyjątków, zobacz [sp
 
 ## <a name="char_traitseof"></a>char_traits::eof()
 
-C++ Standardowe Stany, które [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) nie mogą odpowiadać prawidłowym `char_type` wartości. Kompilator firmy C++ Microsoft wymusza to ograniczenie dla typu **char**, ale nie dla typu **wchar_t**. Jest to niezgodne z wymogami określonymi w tabeli 62 w sekcji 12.1.1 specyfikacji ISO C++. Prezentuje to poniższy przykład.
+Standardowe Stany języka C++, które [char_traits:: eof](../standard-library/char-traits-struct.md#eof) nie mogą odpowiadać prawidłowej `char_type` wartości. Kompilator języka Microsoft C++ wymusza to ograniczenie dla typu **`char`** , ale nie dla typu **`wchar_t`** . Jest to niezgodne z wymogami określonymi w tabeli 62 w sekcji 12.1.1 specyfikacji ISO C++. Prezentuje to poniższy przykład.
 
 ```cpp
 #include <iostream>
@@ -94,4 +94,4 @@ int main()
 
 ## <a name="storage-location-of-objects"></a>Lokalizacja przechowywania obiektów
 
-Standard C++ (sekcja 1.8.6) wymaga, aby kompletne obiekty C++ miały unikatową lokalizację przechowywania. Jednak w przypadku C++firmy Microsoft istnieją przypadki, w których typy bez składowych danych współdzielą lokalizację magazynu z innymi typami w okresie istnienia obiektu.
+Standard C++ (sekcja 1.8.6) wymaga, aby kompletne obiekty C++ miały unikatową lokalizację przechowywania. Jednak w przypadku oprogramowania Microsoft C++ istnieją przypadki, w których typy bez elementów członkowskich danych współdzielą lokalizację magazynu z innymi typami w okresie istnienia obiektu.

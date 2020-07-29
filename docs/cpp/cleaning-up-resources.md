@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: ba7841f4fa8f0b6654e78e529e82f86237707787
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b172695044057f58771af0f4cfcb5ca869b36678
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180866"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229054"
 ---
 # <a name="cleaning-up-resources"></a>Oczyszczanie zasobów
 
@@ -26,7 +26,7 @@ W związku z tym należy sprawdzić, które zasoby są rzeczywiście otwarte prz
 
 1. W bloku instrukcji **__try** Przydziel zasoby. Dojścia są ustawione na wartości dodatnie w miarę przydzielenia zasobu.
 
-1. W bloku instrukcji **__finally** Zwolnij każdy zasób, którego odpowiedni uchwyt lub zmienna flagi jest różna od zera lub nie ma wartości null.
+1. W **`__finally`** bloku instrukcji Zwolnij każdy zasób, którego odpowiedni uchwyt lub zmienna flagi jest różna od zera lub nie ma wartości null.
 
 ## <a name="example"></a>Przykład
 
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Pisanie procedury obsługi zakończenia](../cpp/writing-a-termination-handler.md)<br/>
+[Pisanie programu obsługi zakończenia](../cpp/writing-a-termination-handler.md)<br/>
 [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
