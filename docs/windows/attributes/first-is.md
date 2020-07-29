@@ -1,17 +1,17 @@
 ---
-title: first_is (C++ atrybut com)
+title: first_is (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 4ac7142ed4f81d6011894681311e1aa5f129380b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 192d08471241526cace895bd5a5147070316cd6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167020"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228066"
 ---
 # <a name="first_is"></a>first_is
 
@@ -30,7 +30,7 @@ Co najmniej jedno wyrażenie języka C. Puste gniazda argumentów są dozwolone.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **first_is** C++ ma taką samą funkcjonalność jak atrybut [first_is](/windows/win32/Midl/first-is) MIDL.
+Atrybut **first_is** C++ ma takie same funkcje jak atrybut [first_is](/windows/win32/Midl/first-is) MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -62,17 +62,17 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 |||
 |-|-|
-|**Dotyczy**|Pole w **strukturze** lub **Unii**, parametr interfejsu, metoda interfejsu|
+|**Dotyczy**|Pole w **`struct`** lub **`union`** , parametr interfejsu, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty IDL](idl-attributes.md)<br/>
-[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Atrybuty typedef, enum, Union i struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atrybuty parametru](parameter-attributes.md)<br/>
 [last_is](last-is.md)<br/>
 [max_is](max-is.md)<br/>

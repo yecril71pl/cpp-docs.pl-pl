@@ -11,22 +11,22 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: f9f5f62e2326826e3087a8668cd9107da4b85388
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 32ff74be0fd1afb1d8a21d74abb194eaa5e273df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334998"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227988"
 ---
 # <a name="c-multiplicative-operators"></a>Operatory mnożenia języka C
 
-Operatory mnożenia wykonują operacje mnożenia (<strong>\*</strong>), dzielenia (**/**) i reszty (**%**).
+Operatory mnożenia wykonują operacje mnożenia ( <strong>\*</strong> ), dzielenia ( **/** ) i reszty ( **%** ).
 
 ## <a name="syntax"></a>Składnia
 
-*mnożenia-Expression*: &nbsp; &nbsp; &nbsp; &nbsp; *cast-expression* &nbsp; &nbsp; <strong>\*</strong> &nbsp; &nbsp; **%** *cast-expression* *cast-expression* **/** *cast-expression* *multiplicative-expression* &nbsp; &nbsp; *multiplicative-expression* *multiplicative-expression* mnożenia-Expression Cast- &nbsp;Expression mnożenia &nbsp;- &nbsp;Expression cast-expression mnożenia-Expression Cast Expression &nbsp; &nbsp; &nbsp;
+*mnożenia-Expression*: &nbsp; &nbsp; &nbsp; &nbsp; *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *mnożenia-* Expression <strong>\*</strong> *Cast-* Expression &nbsp; &nbsp; &nbsp; &nbsp; *mnożenia-* **/** *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicative-expression* **%** *cast-expression* Expression cast-expression mnożenia-Expression cast expression
 
-Operandy operatora pozostałej części (**%**) muszą być typu całkowitego. Operatory mnożenia (<strong>\*</strong>) i dzielenia (**/**) mogą przyjmować operandy typu całkowitego lub zmiennoprzecinkowego; Typy operandów mogą być różne.
+Operandy operatora pozostałej części ( **%** ) muszą być typu całkowitego. Operatory mnożenia ( <strong>\*</strong> ) i dzielenia ( **/** ) mogą przyjmować operandy typu całkowitego lub zmiennoprzecinkowego; Typy operandów mogą być różne.
 
 Operatory mnożenia wykonują zwykle konwersje arytmetyczne dla operandów. Typ wyniku jest typem operandów po konwersji.
 
@@ -62,7 +62,7 @@ Ta instrukcja używa operatora mnożenia:
 y = x * i;
 ```
 
-W tym przypadku jest `x` mnożony przez `i` , aby nadać wartość 20,0. Wynik ma typ **Double** .
+W tym przypadku `x` jest mnożony przez, `i` Aby nadać wartość 20,0. Wynik ma **`double`** Typ.
 
 ```
 n = i / j;
@@ -78,7 +78,7 @@ Ta instrukcja przypisuje `n` liczbę całkowitą, 1, gdy 10 jest podzielona prze
 
 **Specyficzne dla firmy Microsoft**
 
-Znak reszty jest taki sam jak znak dywidendy. Przykład:
+Znak reszty jest taki sam jak znak dywidendy. Na przykład:
 
 ```
 50 % -6 = 2
@@ -89,6 +89,6 @@ W każdym przypadku `50` i `2` mają ten sam znak.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operatory mnożenia i operator modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)

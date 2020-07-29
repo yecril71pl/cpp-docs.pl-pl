@@ -8,37 +8,37 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-ms.openlocfilehash: b6c645bafef87ed0b2d43903f4752ef659d79f89
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ff0fb4102a0453b900b5b406739492a9420a5b07
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375808"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228092"
 ---
 # <a name="international-enabling"></a>Włączanie internacjonalizacji
 
-Większość tradycyjnych kod C i C++ sprawia, że założenia dotyczące manipulacji znak i ciąg, które nie działają dobrze dla aplikacji międzynarodowych. Podczas gdy zarówno MFC, jak i biblioteka w czasie wykonywania obsługują unicode lub MBCS, nadal jest do wykonania. Aby cię poprowadzić, w tej sekcji wyjaśniono znaczenie "międzynarodowego włączania" w języku Visual C++:
+Najbardziej tradycyjny kod C i C++ tworzy założenia dotyczące manipulowania znakami i ciągami, które nie działają dobrze w przypadku aplikacji międzynarodowych. Chociaż zarówno MFC, jak i Biblioteka wykonawcza obsługują standard Unicode lub MBCS, nadal można wykonywać zadania. W tej sekcji wyjaśniono znaczenie "włączenia międzynarodowego" w Visual C++:
 
-- Unicode i MBCS są włączone za pomocą przenośnych typów danych na listach parametrów funkcji MFC i typach zwracanych. Typy te są warunkowo zdefiniowane w odpowiedni sposób, `_UNICODE` w zależności `_MBCS` od tego, czy kompilacja definiuje symbol, czy symbol (co oznacza DBCS). Różne warianty bibliotek MFC są automatycznie połączone z aplikacją, w zależności od tego, który z tych dwóch symboli kompilacji definiuje.
+- Zarówno Unicode, jak i MBCS są włączane za pomocą typu danych przenośnych na listach parametrów funkcji MFC i zwracanych typów. Te typy są definiowane warunkowo w odpowiedni sposób, w zależności od tego, czy kompilacja definiuje symbol, `_UNICODE` czy symbol `_MBCS` (co oznacza DBCS). Różne warianty bibliotek MFC są automatycznie łączone z aplikacją, w zależności od tego, które z tych dwóch symboli definiuje kompilacja.
 
-- Kod biblioteki klas używa przenośnych funkcji wykonywania i innych środków w celu zapewnienia prawidłowego zachowania Unicode lub MBCS.
+- Kod biblioteki klas używa przenośnych funkcji czasu wykonywania i innych metod, aby zapewnić poprawne zachowanie w formacie Unicode lub MBCS.
 
-- Nadal należy obsługiwać pewne rodzaje zadań internacjonalizacji w kodzie:
+- Nadal musisz obsługiwać pewne rodzaje zadań wielojęzycznych w kodzie:
 
-  - Użyj tych samych funkcji przenośnego czasu wykonywania, które sprawiają, że MFC przenośne w obu środowiskach.
+  - Użyj tych samych przenośnych funkcji środowiska uruchomieniowego, które obsługują MFC w dowolnym środowisku.
 
-  - Aby dosłowne ciągi i znaki były `_T` przenośne w każdym środowisku, używając makra. Aby uzyskać więcej informacji, zobacz [Mapowania tekstu ogólnego w tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+  - Wprowadź ciągi literałów i znaki przenośne w obu środowiskach przy użyciu `_T` makra. Aby uzyskać więcej informacji, zobacz [Mapowanie tekstu ogólnego w używanie TCHAR. h](../text/generic-text-mappings-in-tchar-h.md).
 
-  - Należy podjąć środki ostrożności podczas analizowania ciągów w mbcs. Te środki ostrożności nie są potrzebne w ramach Unicode. Aby uzyskać więcej informacji, zobacz [Porady dotyczące programowania MBCS](../text/mbcs-programming-tips.md).
+  - Podejmuj środki ostrożności podczas analizowania ciągów w obszarze MBCS. Te środki ostrożności nie są niezbędne w standardzie Unicode. Aby uzyskać więcej informacji, zobacz [wskazówki dotyczące programowania MBCS](../text/mbcs-programming-tips.md).
 
-  - Należy uważać, jeśli mieszasz znaki ANSI (8-bitowe) i Unicode (16-bitowe) w aplikacji. W niektórych częściach programu można używać znaków ANSI, a w innych znaków Unicode, ale nie można ich mieszać w tym samym ciągu.
+  - Należy zachować ostrożność, jeśli Mieszasz znaki ANSI (8-bitowe) i Unicode (16-bitowe) w aplikacji. Istnieje możliwość używania znaków ANSI w niektórych częściach programu i znaków Unicode w innych, ale nie można ich mieszać w tym samym ciągu.
 
-  - Nie należy wykonywać ciągów kodu twardego w aplikacji. Zamiast tego, uczynić je stringtable zasobów, dodając je do pliku .rc aplikacji. Aplikacja może być następnie zlokalizowane bez konieczności zmiany kodu źródłowego lub ponownej kompilacji. Aby uzyskać więcej informacji na temat zasobów STRINGTABLE, zobacz [Edytor ciągów](../windows/string-editor.md).
+  - Nie należy określać twardych ciągów w aplikacji. Zamiast tego należy udostępnić im zasoby CIĄGÓW, dodając je do pliku. RC aplikacji. Aplikacja może zostać następnie zlokalizowana bez konieczności zmiany kodu źródłowego lub ponownej kompilacji. Aby uzyskać więcej informacji na temat zasobów CIĄGÓW, zobacz [Edytor ciągów](../windows/string-editor.md).
 
 > [!NOTE]
-> Europejskie i MBCS zestawy znaków mają pewne znaki, takie jak litery akcentowane, z kodami znaków większymi niż 0x80. Ponieważ większość kodu używa znaków podpisanych, znaki te większe niż 0x80 są rozszerzane na znaki po przekonwertowaniu **na int**. Jest to problem dla indeksowania tablicy, ponieważ znaki rozszerzone znak, są ujemne, indeksuje poza tablicy. Języki, które używają MBCS, takich jak japoński, są również unikatowe. Ponieważ znak może składać się z 1 lub 2 bajtów, należy zawsze manipulować oba bajty w tym samym czasie.
+> Zestawy znaków europejskie i MBCS zawierają kilka znaków, takich jak litery akcentowane, z kodami znaku większymi niż 0x80. Ze względu na to, że większość kodu używa znaków podpisanych, te znaki większe niż 0x80 są po konwersji na **`int`** . Jest to problem z indeksowaniem tablicy, ponieważ znaki, które są znakami, są ujemne, indeksy poza tablicą. Języki, które używają MBCS, takie jak japoński, również są unikatowe. Ponieważ znak może składać się z 1 lub 2 bajtów, zawsze należy manipulować obu bajtami jednocześnie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Unicode i MBCS](../text/unicode-and-mbcs.md)<br/>
-[Strategie internacjonalizacji](../text/internationalization-strategies.md)
+[Strategie międzynarodowe](../text/internationalization-strategies.md)

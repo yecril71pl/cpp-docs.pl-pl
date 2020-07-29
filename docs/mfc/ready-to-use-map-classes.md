@@ -8,38 +8,38 @@ helpviewer_keywords:
 - classes [MFC], map
 - map classes [MFC]
 ms.assetid: 3f0b1c05-2243-4d4d-98d4-429fc3310c9f
-ms.openlocfilehash: 6136557bd436fb9964498384f277d48e8525a027
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ed191525e11ca2a4d3f5b1c39e9b50b65066d7c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253997"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228547"
 ---
 # <a name="ready-to-use-map-classes"></a>Gotowe do użycia klasy map
 
-Następujące klasy są gotowe do użycia klasy map.
+Następujące klasy są gotowymi do użycia klasami map.
 
 [CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md)<br/>
-Używa **void** wskaźników jako klucze do znajdowania innych **void** wskaźników.
+Używa **`void`** wskaźników jako kluczy do znajdowania innych **`void`** wskaźników.
 
 [CMapPtrToWord](../mfc/reference/cmapptrtoword-class.md)<br/>
-Używa **void** wskaźników jako klucze do znajdowania danych typu **WORD**.
+Używa **`void`** wskaźników jako kluczy do znajdowania danych typu **Word**.
 
 [CMapStringToOb](../mfc/reference/cmapstringtoob-class.md)<br/>
-Używa `CString` obiektów jako klucze do wyszukiwania `CObject` wskaźników.
+Używa `CString` obiektów jako kluczy do znajdowania `CObject` wskaźników.
 
 [CMapStringToPtr](../mfc/reference/cmapstringtoptr-class.md)<br/>
-Używa `CString` obiektów jako klucze do wyszukiwania **void** wskaźników.
+Używa `CString` obiektów jako kluczy do znajdowania **`void`** wskaźników.
 
 [CMapStringToString](../mfc/reference/cmapstringtostring-class.md)<br/>
-Używa `CString` obiektów jako klucze do znajdowania innych `CString` obiektów.
+Używa `CString` obiektów jako kluczy do znajdowania innych `CString` obiektów.
 
 [CMapWordToOb](../mfc/reference/cmapwordtoob-class.md)<br/>
-Korzysta z danych typu **WORD** można znaleźć `CObject` wskaźników.
+Używa danych typu **słowo** , aby znaleźć `CObject` wskaźniki.
 
 [CMapWordToPtr](../mfc/reference/cmapwordtoptr-class.md)<br/>
-Korzysta z danych typu **WORD** można znaleźć **void** wskaźników.
+Używa danych typu **słowo** , aby znaleźć **`void`** wskaźniki.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa — Przegląd](../mfc/class-library-overview.md)
+[Przegląd klas](../mfc/class-library-overview.md)

@@ -12,112 +12,112 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 79b05fde362a44453aac45aa8dc269c9689ea8fc
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 125d7272b5b9fb0f656ba0621667885026e152fb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751187"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228677"
 ---
 # <a name="add-a-property"></a>Dodawanie właściwości
 
-[Kreatora dodawania właściwości](#names-add-property-wizard) można użyć, aby dodać metodę do interfejsu w projekcie.
+Aby dodać metodę do interfejsu w projekcie, można użyć [Kreatora dodawania właściwości](#names-add-property-wizard) .
 
 **Aby dodać właściwość do obiektu:**
 
-1. W [widoku klasy](/visualstudio/ide/viewing-the-structure-of-code)kliknij prawym przyciskiem myszy nazwę interfejsu, do którego chcesz dodać właściwość.
+1. W [Widok klasy](/visualstudio/ide/viewing-the-structure-of-code)kliknij prawym przyciskiem myszy nazwę interfejsu, do którego chcesz dodać właściwość.
 
    > [!NOTE]
-   > Można również dodać właściwości do dispinterfaces, które, o ile projekt nie jest przypisany, są zagnieżdżone w węźle biblioteki.
+   > Możesz również dodać właściwości do dispinterfaces, które, chyba że projekt jest przypisany do atrybutu, są zagnieżdżone w węźle biblioteki.
 
-1. Z menu skrótów wybierz polecenie **Dodaj**, a następnie wybierz pozycję **Dodaj właściwość**.
+1. Z menu skrótów wybierz polecenie **Dodaj**, a następnie wybierz polecenie **Dodaj właściwość**.
 
-1. W [kreatorze dodawania właściwości](#names-add-property-wizard)podaj informacje, aby utworzyć właściwość.
+1. W [Kreatorze dodawania właściwości](#names-add-property-wizard)podaj informacje, aby utworzyć właściwość.
 
-1. Określ dowolne ustawienia języka definicji interfejsu (IDL) dla właściwości na stronie [atrybuty IDL](#idl-attributes-add-property-wizard) kreatora.
+1. Określ wszystkie ustawienia języka definicji interfejsu (IDL) dla właściwości na stronie [atrybuty IDL](#idl-attributes-add-property-wizard) kreatora.
 
-1. Wybierz **pozycję Zakończ,** aby dodać właściwość.
+1. Wybierz pozycję **Zakończ** , aby dodać właściwość.
 
-I `Get` `Put` metody właściwości są wyświetlane jako dwie ikony w widoku klasy, w interfejsie, w którym jest zdefiniowany. Można kliknąć dwukrotnie jedną z ikon, aby wyświetlić deklarację właściwości w pliku .idl.
+`Get`Metody i `Put` właściwości są wyświetlane jako dwie ikony w widok klasy w obszarze interfejsu, w którym jest zdefiniowany. Możesz dwukrotnie kliknąć każdą ikonę, aby wyświetlić deklarację właściwości w pliku IDL.
 
-- W przypadku interfejsów `Get` ATL i `Put` funkcje są dodawane do pliku .cpp, a odwołania do tych funkcji są dodawane do pliku .h.
+- W przypadku interfejsów ATL `Get` funkcje i `Put` są dodawane do pliku. cpp, a odwołania do tych funkcji są dodawane do pliku h.
 
-- Dla MFC dispinterfaces, jeśli wybierzesz **Zmienna Elementu Członkowskiego** jako typ implementacji, metoda i zmienna są dodawane do klasy, która implementuje go. Jeśli wybierzesz **Get/Set metody** jako typ implementacji, dwie metody są dodawane do klasy, która implementuje go.
+- W przypadku dispinterfaces MFC, jeśli wybierzesz **zmienną członkowską** jako typ implementacji, Metoda i zmienna są dodawane do klasy implementującej ją. W przypadku wybrania **metod get/set** jako typu implementacji dwie metody są dodawane do klasy implementującej ją.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-- [Nazwy, dodaj kreatora właściwości](#names-add-property-wizard)
-- [Atrybuty IDL, kreator dodawania właściwości](#idl-attributes-add-property-wizard)
-- [Nieruchomości magazynowe](#stock-properties)
+- [Nazwy, Kreator dodawania właściwości](#names-add-property-wizard)
+- [Atrybuty IDL, Kreator dodawania właściwości](#idl-attributes-add-property-wizard)
+- [Właściwości podstawowe](#stock-properties)
 
-## <a name="names-add-property-wizard"></a>Nazwy, dodaj kreatora właściwości
+## <a name="names-add-property-wizard"></a>Nazwy, Kreator dodawania właściwości
 
-Ten kreator służy do dodawania właściwości do interfejsu.
+Użyj tego kreatora, aby dodać właściwość do interfejsu.
 
 - **Typ właściwości**
 
-  Ustawia typ dodanej właściwości. W przypadku dispinterfaces MFC, podaj swój własny typ lub wybierz z listy wstępnie zdefiniowane. Jeśli podasz implementację zapasów właściwości, **Typ właściwości** jest ustawiony na typ magazynu i jest niedostępny do zmiany.
+  Ustawia typ dodawanej właściwości. W przypadku biblioteki MFC dispinterfaces podaj własny typ lub wybierz pozycję ze wstępnie zdefiniowanej listy. Jeśli podano implementację giełdową właściwości, **Typ właściwości** jest ustawiany na typ magazynu i jest niedostępny do zmiany.
 
 - **Nazwa właściwości**
 
-  Ustawia nazwę właściwości. W przypadku dispinterfaces MFC skojarzonych z formantami ActiveX można podać własną nazwę lub nazwę właściwości magazynu z wstępnie zdefiniowanej listy. Jeśli podasz własną nazwę właściwości, typ implementacji **zapasów** jest niedostępny. Opis właściwości na liście można znaleźć w [właściwościach magazynowych.](#stock-properties)
+  Ustawia nazwę właściwości. W przypadku MFC dispinterfaces skojarzonych z kontrolkami ActiveX można podać własną nazwę lub wybrać nazwę właściwości giełdowej ze wstępnie zdefiniowanej listy. Jeśli podano własną nazwę właściwości, typ implementacji **zapasowej** jest niedostępny. Zobacz [Właściwości giełdowe](#stock-properties) , aby uzyskać opis właściwości na liście.
 
   |Typ interfejsu|Opis|
   |--------------------|-----------------|
-  |Podwójny interfejs ATL, interfejs niestandardowy i lokalny interfejs niestandardowy|Podaj nazwę właściwości.|
-  |MFC dispinterface, MFC ActiveX sterowanie dispinterface|Podaj nazwę właściwości lub wybierz właściwość magazynową z listy. Jeśli wybierzesz właściwość z listy, odpowiednia wartość pojawi się w polu **Typ właściwości.** Można zmienić ten typ, w zależności od wyboru w obszarze **Typ implementacji**.|
+  |Interfejs ATL Dual Interface, niestandardowy interfejs i lokalny|Podaj nazwę właściwości.|
+  |MFC dispinterface, Kontrolka ActiveX MFC dispinterface|Podaj nazwę właściwości lub wybierz z listy Właściwość giełdową. Jeśli wybierzesz właściwość z listy, odpowiednia wartość zostanie wyświetlona w polu **Typ właściwości** . Ten typ można zmienić, w zależności od dokonanego wyboru w obszarze **Typ implementacji**.|
 
-- **Zwracany typ**
+- **Typ zwracany**
 
-  Tylko interfejsy ATL. Ustawia typ zwracany dla właściwości. W przypadku dwóch `HRESULT` interfejsów jest zawsze typem zwracany, a to pole jest niedostępne. W przypadku interfejsów niestandardowych można wybrać typ zwracany z listy. `HRESULT`jest nadal zalecane, ponieważ zapewnia standardowy sposób zwracania błędów.
+  Tylko interfejsy ATL. Ustawia zwracany typ dla właściwości. W przypadku podwójnych interfejsów `HRESULT` jest zawsze typem zwracanym, a to pole jest niedostępne. W przypadku interfejsów niestandardowych można wybrać typ zwracany z listy. `HRESULT`jest nadal zalecane, ponieważ zapewnia standardowy sposób zwracania błędów.
 
 - **Nazwa zmiennej**
 
-  MFC dispinterfaces tylko. Dostępne tylko wtedy, gdy określisz **zmienną elementu członkowskiego** w obszarze **Typ implementacji**. Ustawia nazwę zmiennej członkowskiej, z którą jest skojarzona właściwość. Domyślnie nazwa zmiennej jest `m_`ustawiona na *PropertyName*. Możesz edytować tę nazwę.
+  Tylko MFC dispinterfaces. Dostępne tylko wtedy, gdy w obszarze **Typ implementacji**określono **zmienną członkowską** . Ustawia nazwę zmiennej członkowskiej, z którą skojarzona jest właściwość. Domyślnie nazwa zmiennej jest ustawiona na `m_` *PropertyName*. Można edytować tę nazwę.
 
 - **Funkcja powiadomień**
 
-  MFC dispinterfaces tylko. Dostępne tylko wtedy, gdy określisz **zmienną elementu członkowskiego** w obszarze **Typ implementacji**. Ustawia nazwę funkcji powiadomień wywołanej, jeśli właściwość ulegnie zmianie. Domyślnie nazwa funkcji powiadomień jest `On` *ustawiona na PropertyName*`Changed`. Możesz edytować tę nazwę.
+  Tylko MFC dispinterfaces. Dostępne tylko wtedy, gdy w obszarze **Typ implementacji**określono **zmienną członkowską** . Ustawia nazwę funkcji powiadomień wywoływanej, jeśli właściwość zostanie zmieniona. Domyślnie nazwa funkcji powiadomień jest ustawiona na `On` *PropertyName* `Changed` . Można edytować tę nazwę.
 
 - **Get, funkcja**
 
-  Dla MFC dispinterfaces. Dostępne tylko wtedy, gdy określisz **metody Get/Set** w obszarze **Typ implementacji**. Ustawia nazwę funkcji, aby uzyskać właściwość. Domyślnie nazwa funkcji `Get` jest ustawiona `Get`na *PropertyName*. Możesz edytować tę nazwę. Jeśli usuniesz nazwę, funkcja [GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported) zostanie wstawiona do mapy wysyłki interfejsu. Funkcja `Get` *PropertyName* określa, że właściwość jest czytelna.
+  Dla MFC dispinterfaces. Dostępne tylko w przypadku określenia **metod get/set** w obszarze **Typ implementacji**. Ustawia nazwę funkcji, aby pobrać właściwość. Domyślnie nazwa `Get` funkcji jest ustawiona na `Get` *PropertyName*. Można edytować tę nazwę. W przypadku usunięcia nazwy funkcja [GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported) zostanie wstawiona do mapy wysyłania interfejsu. Funkcja `Get` *PropertyName* określa, że właściwość jest odczytywana.
 
-- **Ustaw funkcję**
+- **Set — funkcja**
 
-  MFC dispinterfaces tylko. Dostępne tylko wtedy, gdy określisz **metody Get/Set** w obszarze **Typ implementacji**. Ustawia nazwę funkcji, aby ustawić właściwość. Domyślnie nazwa funkcji `Set` jest ustawiona `Set`na *PropertyName*. Możesz edytować tę nazwę. Jeśli usuniesz nazwę, funkcja [SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported) zostanie wstawiona do mapy wysyłki interfejsu. Funkcja `Set` *PropertyName* określa, że właściwość jest zapisywalna.
+  Tylko MFC dispinterfaces. Dostępne tylko w przypadku określenia **metod get/set** w obszarze **Typ implementacji**. Ustawia nazwę funkcji, aby ustawić właściwość. Domyślnie nazwa `Set` funkcji jest ustawiona na `Set` *PropertyName*. Można edytować tę nazwę. W przypadku usunięcia nazwy funkcja [SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported) zostanie wstawiona do mapy wysyłania interfejsu. Funkcja `Set` *PropertyName* określa, że właściwość jest zapisywalna.
 
 - **Typ implementacji**
 
-  MFC dispinterfaces tylko. Określa sposób implementacji właściwości, którą dodajesz.
+  Tylko MFC dispinterfaces. Określa sposób implementacji dodawanej właściwości.
 
   |Typ implementacji|Opis|
   |-------------------------|-----------------|
-  |**Stock**|Określa implementację zapasów dla właściwości wybranej w **nazwa właściwości**. Domyślnie. Aby uzyskać więcej informacji, zobacz [właściwości zapasów](#stock-properties).<br /><br /> Jeśli określisz **stock**, następnie **typ właściwości,** **typ parametru**i **nazwa parametru** zostaną wyszarzone.|
-  |**Zmienna elementu członkowskiego**|Określa, że właściwość jest dodawana jako zmienna elementu członkowskiego. Właściwości niestandardowe lub większość właściwości magazynowych można dodawać jako zmienne członkowskie. Nie można określić **zmiennej** `Caption` `hWnd`elementu `Text` członkowskiego dla , i właściwości.<br /><br /> Zawiera nazwy **domyślne** w obszarze Nazwa zmiennej i **Funkcja powiadomień**. Możesz edytować tę nazwę.|
-  |**Metody get/set**|Określa, że właściwość `Get`jest domyślnie dodawana jako *propertyname* i `Set` *PropertyName.* Nazwy te są wyświetlane w obszarze **Pobierz funkcję** i **Ustaw funkcję**.<br /><br /> Można zmienić domyślny **typ właściwości**, który przekazuje wartość funkcji Pobierz. Można określić parametry `Get` `Set` i funkcje.|
+  |**Stanu**|Określa implementację giełdową właściwości wybranej w polu **Nazwa właściwości**. Domyślnie. Aby uzyskać więcej informacji, zobacz [Właściwości giełdowe](#stock-properties).<br /><br /> W przypadku określenia **akcji**, **Typ właściwości**, **Typ parametru**i **Nazwa parametru** są wygaszone.|
+  |**Zmienna członkowska**|Określa, że właściwość jest dodawana jako zmienna członkowska. Możesz dodać właściwości niestandardowe lub większość właściwości podstawowych jako zmienne składowe. Nie można określić **zmiennej składowej** dla `Caption` `hWnd` właściwości, i `Text` .<br /><br /> Zawiera nazwy domyślne w obszarze **Nazwa zmiennej** i **Funkcja powiadomień**. Można edytować tę nazwę.|
+  |**Metody get/set**|Określa, że właściwość jest domyślnie dodawana jako `Get` Funkcja *PropertyName* i `Set` *PropertyName* . Te nazwy są wyświetlane w obszarze **Pobierz funkcję** i **Ustaw funkcję**.<br /><br /> Można zmienić domyślny **Typ właściwości**, który przekazuje wartość funkcji get. Można określić parametry dla `Get` `Set` funkcji i.|
 
 - **Get, funkcja**
 
-  Dla interfejsów ATL. Ustawia właściwość jako czytelną; oznacza to, że `Get` tworzy metodę pobierania tej właściwości z obiektu. Wybierz **pozycję Pobierz**, **Umieść**lub oba.
+  Dla interfejsów ATL. Ustawia właściwość jako czytelną; oznacza to, że tworzy `Get` metodę pobierania tej właściwości z obiektu. Wybierz pozycję **Get**, **Put**lub oba.
 
-- **Umieść, funkcja**
+- **Put — funkcja**
 
-  Tylko interfejsy ATL. Ustawia właściwość zapisywalną; oznacza to, że `Put` tworzy metodę ustawiania lub "oddanie", tej właściwości obiektu. Wybierz **pozycję Pobierz**, **Umieść**lub oba. Jeśli wybierzesz tę opcję, możesz wybrać jeden z następujących dwóch sposobów zaimplementowania metody:
+  Tylko interfejsy ATL. Ustawia właściwość do zapisu; oznacza to, że tworzy `Put` metodę ustawiania lub "umieszczania" tej właściwości obiektu. Wybierz pozycję **Get**, **Put**lub oba. W przypadku wybrania tej opcji można wybrać jeden z następujących dwóch sposobów implementacji metody:
 
   |Opcja|Opis|
   |------------|-----------------|
-  |**Propput**|[PropPut](../windows/propput.md) Funkcja zwraca kopię obiektu. Jest to domyślny i najbardziej typowy sposób, aby właściwość zapisywalna.|
-  |**PropPutRef (PropPutRef)**|[Funkcja PropPutRef](../windows/propputref.md) zwraca odwołanie do obiektu, zamiast zwracać kopię samego obiektu. Należy rozważyć użycie tej opcji dla obiektów, takich jak duże struktury lub tablice, które mogą mieć obciążenie inicjowania.|
+  |**PropPut**|Funkcja [propput](../windows/propput.md) zwraca kopię obiektu. Jest to domyślny i najbardziej typowy sposób na zapisanie właściwości.|
+  |**PropPutRef**|Funkcja [PropPutRef](../windows/propputref.md) zwraca odwołanie do obiektu, zamiast zwracać kopię samego obiektu. Należy rozważyć użycie tej opcji dla obiektów, takich jak duże struktury lub tablice, które mogą mieć obciążenie inicjalizacją.|
 
 - **Atrybuty parametru**
 
-  Tylko interfejsy ATL. Określa, czy parametr określony `in`przez `out` **nazwę parametru** jest , oba lub żaden.
+  Tylko interfejsy ATL. Określa, czy parametr określony przez **parametr name** ma wartość `in` , `out` , Both lub None.
 
   |Opcja|Opis|
   |------------|-----------------|
-  |`in`|Wskazuje, że parametr jest przekazywany z procedury wywołującej do procedury wywoływania.|
-  |`out`|Wskazuje, że parametr wskaźnika jest zwracany z procedury wywoływania do procedury wywołującej (z serwera do klienta).|
+  |`in`|Wskazuje, że parametr jest przesyłany z procedury wywołującej do procedury wywoływanej.|
+  |`out`|Wskazuje, że parametr wskaźnika jest zwracany z wywoływanej procedury do procedury wywołującej (z serwera do klienta).|
 
 - **Typ parametru**
 
@@ -125,15 +125,15 @@ Ten kreator służy do dodawania właściwości do interfejsu.
 
 - **Nazwa parametru**
 
-  Ustawia nazwę parametru, który dodajesz dla właściwości, jeśli właściwość ma parametry. Po **wybraniu**opcji Dodaj nazwa parametru pojawi się na **liście parametrów**.
+  Ustawia nazwę parametru, który jest dodawany do właściwości, jeśli właściwość ma parametry. Po wybraniu opcji **Dodaj**Nazwa parametru zostanie wyświetlona na **liście parametrów**.
 
 - **Lista parametrów**
 
-  Wyświetla listę atrybutów, które mają zostać dodane do właściwości. Każdy element na liście składa się z nazwy parametru, typu parametru i atrybutów. Aby zaktualizować listę, użyj **funkcji Dodaj** i **usuń.**
+  Wyświetla listę atrybutów, które mają zostać dodane do właściwości. Każdy element na liście składa się z nazwy parametru, typu parametru i atrybutów. Użyj **Dodaj** i **Usuń** , aby zaktualizować listę.
 
 - **Dodaj**
 
-  Dodaje parametr określony w obszarze **Nazwa parametru** i **Typ parametru** do **listy Parametrów**. Wybierz **pozycję Dodaj,** aby dodać parametr do listy.
+  Dodaje parametr określony w polu **Nazwa parametru** i **Typ parametru** do **listy parametrów**. Wybierz pozycję **Dodaj** , aby dodać parametr do listy.
 
 - **Usuń**
 
@@ -141,23 +141,23 @@ Ten kreator służy do dodawania właściwości do interfejsu.
 
 - **Właściwość domyślna**
 
-  MFC dispinterface tylko. Ustawia tę właściwość jako domyślną dla interfejsu. Interfejs może mieć tylko jedną właściwość domyślną; po określeniu właściwości domyślnej dla innych właściwości dodawanych do interfejsu to pole jest niedostępne.
+  Tylko MFC dispinterface. Ustawia tę właściwość jako domyślną dla interfejsu. Interfejs może mieć tylko jedną właściwość domyślną; Po określeniu właściwości domyślnej dla wszystkich innych właściwości dodawanych do interfejsu to pole jest niedostępne.
 
-## <a name="idl-attributes-add-property-wizard"></a>Atrybuty IDL, kreator dodawania właściwości
+## <a name="idl-attributes-add-property-wizard"></a>Atrybuty IDL, Kreator dodawania właściwości
 
-Ta strona Kreatora dodawania właściwości służy do określania ustawień języka definicji interfejsu (IDL) dla właściwości.
+Użyj tej strony Kreatora dodawania właściwości, aby określić ustawienia języka definicji interfejsu (IDL) dla właściwości.
 
 - `id`
 
-  Ustawia identyfikator numeryczny, który identyfikuje właściwość. Ta opcja nie jest dostępna dla właściwości interfejsów niestandardowych. Zobacz [id](/windows/win32/Midl/id) w *midl reference*.
+  Ustawia identyfikator liczbowy, który identyfikuje właściwość. Ta opcja jest niedostępna dla właściwości interfejsów niestandardowych. Zobacz [Identyfikator](/windows/win32/Midl/id) w *odwołaniu MIDL*.
 
 - `helpcontext`
 
-  Określa identyfikator kontekstu, który umożliwia użytkownikowi wyświetlanie informacji o tej właściwości w pliku Pomocy. Zobacz [helpcontext](/windows/win32/Midl/helpcontext) w *midl reference*.
+  Określa identyfikator kontekstu, który umożliwia użytkownikowi wyświetlanie informacji o tej właściwości w pliku pomocy. Zobacz [atrybut HelpContext](/windows/win32/Midl/helpcontext) w *dokumentacji MIDL*.
 
 - `helpstring`
 
-  Określa ciąg znaków, który jest używany do opisania elementu, do którego ma zastosowanie. Domyślnie jest ustawiona `property` &nbsp;na *Nazwa właściwości&nbsp;*. Zobacz [helpstring](/windows/win32/Midl/helpstring) w *MIDL Reference*.
+  Określa ciąg znaków, który jest używany do opisania elementu, do którego ma zastosowanie. Domyślnie jest ono ustawione na **`property`** &nbsp; * &nbsp; nazwę właściwości*. Zobacz [HelpString](/windows/win32/Midl/helpstring) w *dokumentacji MIDL*.
 
 ### <a name="other-options"></a>Inne opcje
 
@@ -165,31 +165,31 @@ Nie wszystkie opcje są dostępne dla wszystkich typów właściwości.
 
 |Opcja|Opis|
 |------------|-----------------|
-|`bindable`|Wskazuje, że właściwość obsługuje powiązanie danych. Patrz [bindable](/windows/win32/Midl/bindable) w *MIDL Reference*. W przypadku implementacji właściwości zapasów ta opcja jest ustawiona domyślnie i jest niezmienna.|
-|`defaultbind`|Wskazuje, że ta pojedyncza, powiązana właściwość najlepiej reprezentuje obiekt. Zobacz [defaultbind](/windows/win32/Midl/defaultbind) w *midl reference*.|
-|`displaybind`|Wskazuje, że ta właściwość powinna być wyświetlana użytkownikowi jako możliwe do powiązania. Zobacz [displaybind](/windows/win32/Midl/displaybind) w *midl reference*.|
-|`immediatebind`|Wskazuje, że baza danych zostanie natychmiast powiadomiona o wszystkich zmianach w tej właściwości obiektu powiązanego z danymi. Zobacz [immediatebind](/windows/win32/Midl/immediatebind) w *midl reference*.|
-|`defaultcollelem`|Wskazuje, że właściwość jest funkcją akcesora dla elementu kolekcji domyślnej. Zobacz [defaultcollelem](/windows/win32/Midl/defaultcollelem) w *midl reference*.|
-|`nonbrowsable`|Oznacza interfejs lub dispinterface element członkowski, który nie powinien być wyświetlany w przeglądarce właściwości. Zobacz, [że nie można brwi w](/windows/win32/Midl/nonbrowsable) *midl reference*.|
-|`requestedit`|Wskazuje, że właściwość `OnRequestEdit` obsługuje powiadomienie. Patrz [requestedit](/windows/win32/Midl/requestedit) w *midl reference*. W przypadku implementacji właściwości zapasów ta opcja jest ustawiona domyślnie i jest niezmienna.|
-|`source`|Wskazuje, że element członkowski właściwości jest źródłem zdarzeń. Zobacz [źródło](/windows/win32/Midl/source) w *midl reference*.|
-|`hidden`|Wskazuje, że właściwość istnieje, ale nie powinny być wyświetlane w przeglądarce zorientowanej na użytkownika. Zobacz [ukryte](/windows/win32/Midl/hidden) w *MIDL Reference*.|
-|`restricted`|Określa, że właściwości nie można wywołać dowolnie. Patrz [ograniczone](/windows/win32/Midl/restricted) w *midl reference*.|
-|`local`|Określa kompilatora MIDL, że właściwość nie jest zdalna. Zobacz [lokalne](/windows/win32/Midl/local) w *midl reference*.|
+|`bindable`|Wskazuje, że właściwość obsługuje powiązanie danych. Zobacz [powiązanie](/windows/win32/Midl/bindable) z *odwołaniem MIDL*. Dla implementacji giełdowej właściwości ta opcja jest domyślnie ustawiana i nie można jej zmienić.|
+|`defaultbind`|Wskazuje, że ta pojedyncza, możliwa do powiązania Właściwość najlepiej reprezentuje obiekt. Zobacz [defaultbind](/windows/win32/Midl/defaultbind) w *dokumentacji MIDL*.|
+|`displaybind`|Wskazuje, że ta właściwość powinna być wyświetlana użytkownikowi jako możliwy do powiązania. Zobacz [displaybind](/windows/win32/Midl/displaybind) w *dokumentacji MIDL*.|
+|`immediatebind`|Wskazuje, że baza danych zostanie natychmiast powiadomiona o wszystkich zmianach właściwości obiektu powiązanego z danymi. Zobacz [immediatebind](/windows/win32/Midl/immediatebind) w *dokumentacji MIDL*.|
+|`defaultcollelem`|Wskazuje, że właściwość jest funkcją dostępu dla elementu kolekcji domyślnej. Zobacz [defaultcollelem](/windows/win32/Midl/defaultcollelem) w *dokumentacji MIDL*.|
+|`nonbrowsable`|Znaczniki elementu członkowskiego interfejsu lub dispinterface, który nie powinien być wyświetlany w przeglądarce właściwości. Zobacz [nonbrowsable](/windows/win32/Midl/nonbrowsable) w *dokumentacji MIDL*.|
+|`requestedit`|Wskazuje, że właściwość obsługuje `OnRequestEdit` powiadomienie. Zobacz [requestedit](/windows/win32/Midl/requestedit) w *dokumentacji MIDL*. Dla implementacji giełdowej właściwości ta opcja jest domyślnie ustawiana i nie można jej zmienić.|
+|`source`|Wskazuje, że element członkowski właściwości jest źródłem zdarzeń. Zobacz [Źródło](/windows/win32/Midl/source) w *MIDL Reference*.|
+|`hidden`|Wskazuje, że właściwość istnieje, ale nie powinna być wyświetlana w przeglądarce zorientowanej na użytkownika. Zobacz [ukryty](/windows/win32/Midl/hidden) w *odwołaniu MIDL*.|
+|`restricted`|Określa, że właściwość nie może być wywoływana arbitralnie. Zobacz [ograniczony](/windows/win32/Midl/restricted) w *MIDL Reference*.|
+|`local`|Określa kompilatorowi MIDL, że właściwość nie jest zdalna. Zobacz [lokalne](/windows/win32/Midl/local) w *MIDL Reference*.|
 
-## <a name="stock-properties"></a>Nieruchomości magazynowe
+## <a name="stock-properties"></a>Właściwości podstawowe
 
-Jeśli dodajesz właściwość do dispinterface MFC za pomocą [kreatora dodawania właściwości,](#idl-attributes-add-property-wizard)możesz wybrać właściwość magazynu z listy **Nazwa właściwości** na stronie [Nazwy](../ide/names-add-property-wizard.md) kreatora. Właściwości są następujące:
+Jeśli dodajesz właściwość do dispinterface MFC przy użyciu [Kreatora dodawania właściwości](#idl-attributes-add-property-wizard), możesz wybrać Właściwość giełdową z listy **Nazwa właściwości** na stronie [nazwy](../ide/names-add-property-wizard.md) kreatora. Właściwości są następujące:
 
 |Nazwa właściwości|Opis|
 |-------------------|-----------------|
-|`Appearance`|Zwraca lub ustawia wartość, która określa wygląd formantu. `Appearance` Właściwości formantu można uwzględnić lub pominąć trójwymiarowe efekty wyświetlania. Ta właściwość jest właściwość odczytu/zapisu otoczenia.|
-|`BackColor`|Zwraca lub ustawia właściwość `BackColor` otoczenia formantu na kolor palety (RGB) lub wstępnie zdefiniowany kolor systemu. Domyślnie jego wartość odpowiada kolor pierwszego planu kontenera formantu. Ta właściwość jest właściwość odczytu/zapisu otoczenia.|
-|`BorderStyle`|Zwraca lub ustawia styl obramowania dla formantu. Ta właściwość jest właściwością odczytu/zapisu.|
-|`Caption`|Zwraca lub ustawia `Caption` właściwość formantu. Podpis jest tytułem okna. `Caption`nie ma typu implementacji **zmiennej elementu członkowskiego.**|
-|`Enabled`|Zwraca lub ustawia `Enabled` właściwość formantu. Włączona kontrolka może reagować na zdarzenia generowane przez użytkownika.|
-|`Font`|Zwraca lub ustawia czcionkę otoczenia formantu. Null, jeśli formant nie ma czcionki.|
-|`ForeColor`|Zwraca lub ustawia właściwość `ForeColor` otoczenia formantu.|
-|`hWnd`|Zwraca lub ustawia `hWnd` właściwość formantu. `hWnd`nie ma typu implementacji **zmiennej elementu członkowskiego.**|
-|`ReadyState`|Zwraca lub ustawia `ReadyState` właściwość formantu. Formant może być niezainicjowany, zainicjowany, załadowany, interaktywny lub ukończony. Aby uzyskać więcej informacji, zobacz [READYSTATE](/previous-versions/aa768362\(v=vs.85\)) w *internetowym SDK*.|
-|`Text`|Zwraca lub ustawia tekst zawarty w formancie. `Text`nie ma typu implementacji **zmiennej elementu członkowskiego.**|
+|`Appearance`|Zwraca lub ustawia wartość określającą wygląd formantu. Właściwość kontrolki `Appearance` może zawierać lub pominąć trójwymiarowe efekty wyświetlania. Ta właściwość jest otaczającą właściwością odczytu/zapisu.|
+|`BackColor`|Zwraca lub ustawia właściwość otoczenia kontrolki `BackColor` na kolor palety (RGB) lub wstępnie zdefiniowany kolor systemu. Domyślnie jego wartość odnosi się do koloru pierwszego planu kontenera formantu. Ta właściwość jest otaczającą właściwością odczytu/zapisu.|
+|`BorderStyle`|Zwraca lub ustawia styl obramowania kontrolki. Ta właściwość jest właściwością odczytu/zapisu.|
+|`Caption`|Zwraca lub ustawia właściwość kontrolki `Caption` . Podpis jest tytułem okna. `Caption`nie ma typu implementacji **zmiennej składowej** .|
+|`Enabled`|Zwraca lub ustawia właściwość kontrolki `Enabled` . Włączona kontrola może odpowiadać na zdarzenia generowane przez użytkownika.|
+|`Font`|Zwraca lub ustawia otaczającą czcionkę formantu. Wartość null, Jeśli kontrolka nie ma czcionki.|
+|`ForeColor`|Zwraca lub ustawia właściwość otoczenia kontrolki `ForeColor` .|
+|`hWnd`|Zwraca lub ustawia właściwość kontrolki `hWnd` . `hWnd`nie ma typu implementacji **zmiennej składowej** .|
+|`ReadyState`|Zwraca lub ustawia właściwość kontrolki `ReadyState` . Kontrolka może być niezainicjowana, zainicjowana, załadowana, interaktywna lub ukończona. Aby uzyskać więcej informacji, zobacz [READYSTATE](/previous-versions/aa768362\(v=vs.85\)) w *zestawie Internet SDK*.|
+|`Text`|Zwraca lub ustawia tekst zawarty w kontrolce. `Text`nie ma typu implementacji **zmiennej składowej** .|

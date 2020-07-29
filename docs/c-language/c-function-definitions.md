@@ -12,12 +12,12 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-ms.openlocfilehash: 5cf56375df417ac68b3e03d00f2bd7770ee571e8
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: a26f95f8fef2b52dac36dd5d33f826c73fd84eee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857141"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228014"
 ---
 # <a name="c-function-definitions"></a>Definicje funkcji języka C
 
@@ -81,13 +81,13 @@ Składnia dla treści funkcji jest następująca:
 *instrukcja złożona*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**{** *deklaracji*<sub>opt</sub> *instrukcji SELECT-list*<sub>opt</sub> **}**
 
-Jedyne specyfikatory klasy magazynu, które mogą modyfikować deklarację funkcji, są **extern** i **statyczne**. Specyfikator **extern** oznacza, że funkcja może być przywoływana z innych plików; oznacza to, że nazwa funkcji jest eksportowana do konsolidatora. Specyfikator **statyczny** oznacza, że funkcji nie można odwoływać się od innych plików; oznacza to, że nazwa nie jest eksportowana przez konsolidator. Jeśli Klasa magazynu nie jest wyświetlana w definicji funkcji, założono **extern** . W każdym przypadku funkcja jest zawsze widoczna z punktu definicji do końca pliku.
+Jedyne specyfikatory klasy magazynu, które mogą modyfikować deklarację funkcji **`extern`** , są i **`static`** . **`extern`** Specyfikator oznacza, że do funkcji można odwoływać się z innych plików, to oznacza, że nazwa funkcji zostanie wyeksportowana do konsolidatora. **`static`** Specyfikator oznacza, że nie można odwoływać się do funkcji z innych plików, to oznacza, że nazwa nie jest eksportowana przez konsolidator. Jeśli Klasa magazynu nie jest wyświetlana w definicji funkcji, **`extern`** przyjmuje się. W każdym przypadku funkcja jest zawsze widoczna z punktu definicji do końca pliku.
 
 Opcjonalne *specyfikatory deklaracji* i obowiązkowe *deklarator* razem określają typ zwracany i nazwę funkcji. *Deklarator* to kombinacja identyfikatorów, która nazywa funkcję i nawiasy po nazwie funkcji. Opcjonalny *atrybut-seq* nieterminalu jest funkcją specyficzną dla firmy Microsoft zdefiniowaną w [atrybutach funkcji](../c-language/function-attributes.md).
 
 *Direct-deklarator* (w składni *deklarator* ) określa nazwę zdefiniowanej funkcji i identyfikatory jej parametrów. Jeśli polecenie *Direct-deklarator* zawiera *listę typów parametrów*, lista określa typy wszystkich parametrów. Takie deklarator również służy jako prototyp funkcji dla późniejszego wywołania funkcji.
 
-*Deklaracja* na *liście deklaracji* w definicjach funkcji nie może zawierać *specyfikatora klasy magazynu* innego niż **register**. *Specyfikator typu* w składni *specyfikatorów deklaracji* można pominąć tylko wtedy, gdy Klasa magazynu **rejestru** jest określona dla wartości typu **int** .
+*Deklaracja* na *liście deklaracji* w definicjach funkcji nie może zawierać *specyfikatora klasy magazynu* innego niż **`register`** . *Specyfikator typu* w składni *specyfikatorów deklaracji* można pominąć tylko wtedy, gdy **`register`** Klasa magazynu jest określona dla wartości **`int`** typu.
 
 *Instrukcja złożona* jest treścią funkcji zawierającą deklaracje zmiennej lokalnej, odwołania do elementów zadeklarowanych zewnętrznie i instrukcji.
 

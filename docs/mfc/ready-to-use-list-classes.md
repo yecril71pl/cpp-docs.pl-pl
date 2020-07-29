@@ -8,26 +8,26 @@ helpviewer_keywords:
 - list classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: aed8e9bd-edb7-4620-84a2-77c20322abd7
-ms.openlocfilehash: 7796e1abb2d7d22f17ac704091e62cc65c428405
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56c9b2a2152fb3723ec5c400c59bb5885e734e24
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338522"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228560"
 ---
 # <a name="ready-to-use-list-classes"></a>Gotowe do użycia klasy list
 
 Następujące klasy są gotowe do użycia klasy list.
 
 [CObList](../mfc/reference/coblist-class.md)<br/>
-Przechowuje wskaźniki do obiektów klasy `CObject` lub do obiektów klasy pochodne `CObject` połączonej listy.
+Przechowuje wskaźniki do obiektów klasy `CObject` lub obiektów klas pochodnych `CObject` na liście połączonej.
 
 [CPtrList](../mfc/reference/cptrlist-class.md)<br/>
-Przechowuje wskaźniki do **void** (ogólnych wskaźników) na połączonej liście.
+Przechowuje wskaźniki do **`void`** (wskaźników ogólnych) na liście połączonej.
 
 [CStringList](../mfc/reference/cstringlist-class.md)<br/>
-Magazyny `CString` obiektów w połączonej listy.
+Przechowuje `CString` obiekty na liście połączonej.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa — Przegląd](../mfc/class-library-overview.md)
+[Przegląd klas](../mfc/class-library-overview.md)

@@ -11,22 +11,22 @@ helpviewer_keywords:
 - '&& operator'
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
-ms.openlocfilehash: 5df0c0f16bdf298c47a6a0699ec10c7392ab84ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f59ad927dd8ee62dbfc80fd238677bf1b646f9c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326589"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228001"
 ---
 # <a name="c-logical-operators"></a>Operatory logiczne języka C
 
-Operatory logiczne wykonują operacje logiczne-i**&&**() i logiczne-lub**||**().
+Operatory logiczne wykonują operacje logiczne-i ( **&&** ) i logiczne-lub ( **||** ).
 
 ## <a name="syntax"></a>Składnia
 
 *wyrażenie logiczne-and-Expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie włączne-lub-*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie koniunkcji logicznej i wyrażenia***&&***włącznie z* wyrażeniem or    
+&nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne-and-Expression* **&&** *wyrażenie włączne-lub-*    
 
 *wyrażenie logiczne or*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*wyrażenie logiczne-AND-Expression*<br/>
@@ -34,7 +34,7 @@ Operatory logiczne wykonują operacje logiczne-i**&&**() i logiczne-lub**||**().
 
 ## <a name="remarks"></a>Uwagi
 
-Operatory logiczne nie wykonują zwykłych konwersji arytmetycznych. Zamiast tego sprawdzają każdy operand w warunkach równoważności równy 0. Wynikiem operacji logicznej jest 0 lub 1. Typ wyniku to **int**.
+Operatory logiczne nie wykonują zwykłych konwersji arytmetycznych. Zamiast tego sprawdzają każdy operand w warunkach równoważności równy 0. Wynikiem operacji logicznej jest 0 lub 1. Typ wyniku to **`int`** .
 
 Operatory logiczne języka C są opisane poniżej:
 
@@ -56,15 +56,15 @@ if ( x < y && y < z )
     printf( "x is less than z\n" );
 ```
 
-W tym przykładzie funkcja **printf** jest wywoływana, aby wydrukować komunikat, jeśli `x` jest mniejszy `y` niż i `y` jest mniejszy niż. `z` Jeśli `x` jest większy niż `y`, drugi operand (`y < z`) nie jest szacowany i niczego nie wydrukowane. Należy zauważyć, że może to spowodować problemy w przypadkach, gdy drugi operand ma efekty uboczne, które są używane z jakiegoś innego powodu.
+W tym przykładzie funkcja **printf** jest wywoływana, aby wydrukować komunikat, jeśli `x` jest mniejszy niż `y` i `y` jest mniejszy niż `z` . Jeśli `x` jest większy niż `y` , drugi operand ( `y < z` ) nie jest szacowany i niczego nie wydrukowane. Należy zauważyć, że może to spowodować problemy w przypadkach, gdy drugi operand ma efekty uboczne, które są używane z jakiegoś innego powodu.
 
 ```C
 printf( "%d" , (x == w || x == y || x == z) );
 ```
 
-W tym przykładzie, jeśli `x` jest `w`równe albo `y`,, lub `z`, drugi argument funkcji **printf** ma wartość true, a wartość 1 jest drukowana. W przeciwnym razie zostanie wyznaczona wartość false i zostanie wydrukowany wynik 0. Gdy tylko jeden z warunków zwróci wartość true, ocena zostanie przerwana.
+W tym przykładzie, jeśli `x` jest równe albo, `w` `y` , lub `z` , drugi argument funkcji **printf** ma wartość true, a wartość 1 jest drukowana. W przeciwnym razie zostanie wyznaczona wartość false i zostanie wydrukowany wynik 0. Gdy tylko jeden z warunków zwróci wartość true, ocena zostanie przerwana.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Operator logiczny AND: &&](../cpp/logical-and-operator-amp-amp.md)
 - [Operator logiczny OR:  &#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)

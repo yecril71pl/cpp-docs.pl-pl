@@ -23,12 +23,12 @@ helpviewer_keywords:
 - typedefs
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
-ms.openlocfilehash: 26e4e80ed3110351130731e6030427d25fc4a0ea
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: a6b1ce33fe201338a0cc9356f2ef86e598629fd6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168738"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228040"
 ---
 # <a name="atl-typedefs"></a>Definicje typów ATL
 
@@ -44,10 +44,10 @@ Active Template Library obejmuje następujące definicje typów.
 |[CComDispatchDriver](#ccomdispatchdriver)|Ta klasa zarządza wskaźnikami interfejsu COM.|
 |[CComGlobalsThreadModel](#ccomglobalsthreadmodel)|Wywołuje odpowiednie metody modelu wątku, niezależnie od używanego modelu wątkowego.|
 |[CComObjectThreadModel](#ccomobjectthreadmodel)|Wywołuje odpowiednie metody modelu wątku, niezależnie od używanego modelu wątkowego.|
-|[CContainedWindow](#ccontainedwindow)|Ta klasa jest specjalizacją `CContainedWindowT`.|
-|[CPath](#cpath)|Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CString`.|
-|[CPathA](#cpatha)|Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CStringA`.|
-|[CPathW](#cpathw)|Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CStringW`.|
+|[CContainedWindow](#ccontainedwindow)|Ta klasa jest specjalizacją `CContainedWindowT` .|
+|[CPath](#cpath)|Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CString` .|
+|[CPathA](#cpatha)|Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CStringA` .|
+|[CPathW](#cpathw)|Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CStringW` .|
 |[CSimpleValArray](#csimplevalarray)|Reprezentuje tablicę do przechowywania typów prostych.|
 |[DefaultThreadTraits](#defaultthreadtraits)|Domyślna klasa cech wątku.|
 |[LPCURL](#lpcurl)|Wskaźnik do obiektu z stałym [zwinięciem](../../atl/reference/curl-class.md) .|
@@ -161,21 +161,21 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
 
 ### <a name="remarks"></a>Uwagi
 
-W zależności od modelu wątkowości używanego przez `CComGlobalsThreadModel` aplikację nazwa **typedef** odwołuje się do [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) lub [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Klasy te zawierają dodatkowe `typedef` nazwy do odwoływania się do klasy sekcji krytycznej.
+W zależności od modelu wątkowości używanego przez aplikację **`typedef`** nazwa `CComGlobalsThreadModel` odwołuje się do [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) lub [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Klasy te zawierają dodatkowe **`typedef`** nazwy do odwoływania się do klasy sekcji krytycznej.
 
 > [!NOTE]
 > `CComGlobalsThreadModel`nie odwołuje się do klasy [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).
 
 Użycie `CComGlobalsThreadModel` zwalnia użytkownika od określenia określonej klasy modelu wątkowego. Bez względu na używany model wątkowości odpowiednie metody będą wywoływane.
 
-Oprócz `CComGlobalsThreadModel`, ATL zawiera nazwę **typedef** [CComObjectThreadModel](#ccomobjectthreadmodel). Klasa, do której odwołuje się każdy `typedef` , zależy od używanego modelu wątkowości, jak pokazano w poniższej tabeli:
+Oprócz programu `CComGlobalsThreadModel` ATL zawiera **`typedef`** nazwę [CComObjectThreadModel](#ccomobjectthreadmodel). Klasa, do której odwołuje się każdy **`typedef`** , zależy od używanego modelu wątkowości, jak pokazano w poniższej tabeli:
 
 | — klasa typedef|Pojedyncze wątki|Wątkowość apartamentu|Bezpłatna wątkowość|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M =`CComMultiThreadModel`
+S = `CComSingleThreadModel` ; M =`CComMultiThreadModel`
 
 Użyj `CComObjectThreadModel` wewnątrz klasy jednego obiektu. Użyj `CComGlobalsThreadModel` w obiekcie, który jest globalnie dostępny dla programu, lub jeśli chcesz chronić zasoby modułu w wielu wątkach.
 
@@ -201,21 +201,21 @@ typedef CComMultiThreadModel CComObjectThreadModel;
 
 ### <a name="remarks"></a>Uwagi
 
-W zależności od modelu wątkowości używanego `typedef` przez aplikację nazwa `CComObjectThreadModel` odwołuje się do [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) lub [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Klasy te zawierają dodatkowe `typedef` nazwy do odwoływania się do klasy sekcji krytycznej.
+W zależności od modelu wątkowości używanego przez aplikację **`typedef`** nazwa `CComObjectThreadModel` odwołuje się do [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) lub [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Klasy te zawierają dodatkowe **`typedef`** nazwy do odwoływania się do klasy sekcji krytycznej.
 
 > [!NOTE]
 > `CComObjectThreadModel`nie odwołuje się do klasy [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).
 
 Użycie `CComObjectThreadModel` zwalnia użytkownika od określenia określonej klasy modelu wątkowego. Bez względu na używany model wątkowości odpowiednie metody będą wywoływane.
 
-Oprócz `CComObjectThreadModel`, ATL zawiera nazwę **typedef** [CComGlobalsThreadModel](#ccomglobalsthreadmodel). Klasa, do której odwołuje się każdy **element typedef** , zależy od używanego modelu wątkowości, jak pokazano w poniższej tabeli:
+Oprócz programu `CComObjectThreadModel` ATL zawiera **`typedef`** nazwę [CComGlobalsThreadModel](#ccomglobalsthreadmodel). Klasa, do której odwołuje się każdy **`typedef`** , zależy od używanego modelu wątkowości, jak pokazano w poniższej tabeli:
 
 | — klasa typedef|Pojedyncze wątki|Wątkowość apartamentu|Bezpłatna wątkowość|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M =`CComMultiThreadModel`
+S = `CComSingleThreadModel` ; M =`CComMultiThreadModel`
 
 Użyj `CComObjectThreadModel` wewnątrz klasy jednego obiektu. Użyj `CComGlobalsThreadModel` w obiekcie, który jest globalnie dostępny dla programu, lub jeśli chcesz chronić zasoby modułu w wielu wątkach.
 
@@ -225,7 +225,7 @@ Użyj `CComObjectThreadModel` wewnątrz klasy jednego obiektu. Użyj `CComGlobal
 
 ## <a name="ccontainedwindow"></a><a name="ccontainedwindow"></a>CContainedWindow
 
-Ta klasa jest specjalizacją `CContainedWindowT`.
+Ta klasa jest specjalizacją `CContainedWindowT` .
 
 ```cpp
 typedef CContainedWindowT<CWindow> CContainedWindow;
@@ -241,7 +241,7 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 
 ## <a name="cpath"></a><a name="cpath"></a>CPath
 
-Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CString`.
+Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CString` .
 
 ```cpp
 typedef CPathT<CString> CPath;
@@ -253,7 +253,7 @@ typedef CPathT<CString> CPath;
 
 ## <a name="cpatha"></a><a name="cpatha"></a>CPathA
 
-Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CStringA`.
+Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CStringA` .
 
 ```cpp
 typedef CPathT<CStringA> CPathA;
@@ -265,7 +265,7 @@ typedef CPathT<CStringA> CPathA;
 
 ## <a name="cpathw"></a><a name="cpathw"></a>CPathW
 
-Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CStringW`.
+Specjalizacja [CPathT](../../atl/reference/cpatht-class.md) przy użyciu `CStringW` .
 
 ```cpp
 typedef ATL::CPathT<CStringW> CPathW;

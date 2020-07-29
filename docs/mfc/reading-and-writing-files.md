@@ -12,32 +12,32 @@ helpviewer_keywords:
 - reading files
 - writing to files [MFC]
 ms.assetid: cac0c826-ba56-495f-99b3-ce6336f65763
-ms.openlocfilehash: 6c4b2b21bbfa19fb73997f8475cfa9a4047dc0ca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f68fd5c48bce214329437cc13fc39da0c3ca7d2b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371800"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228586"
 ---
 # <a name="reading-and-writing-files"></a>Odczytywanie i zapisywanie danych pliku
 
-Jeśli używano funkcji obsługi plików biblioteki w czasie wykonywania języka C, operacje odczytu i zapisu MFC będą znane. W tym artykule opisano czytanie bezpośrednio `CFile` z i pisanie bezpośrednio do obiektu. Można również wykonać buforowane we/wy pliku z [CArchive](../mfc/reference/carchive-class.md) klasy.
+Jeśli użyto funkcji obsługi plików biblioteki wykonawczej języka C, operacje odczytu i zapisu MFC będą wyświetlane jako znane. W tym artykule opisano odczyt bezpośrednio z i zapis bezpośrednio do `CFile` obiektu. Można również wykonywać buforowane we/wy pliku za pomocą klasy [CArchive](../mfc/reference/carchive-class.md) .
 
-#### <a name="to-read-from-and-write-to-the-file"></a>Aby odczytać i zapisać do pliku
+#### <a name="to-read-from-and-write-to-the-file"></a>Aby odczytać i zapisać w pliku
 
-1. Użyj `Read` funkcji `Write` i członków do odczytu i zapisu danych w pliku.
+1. Użyj `Read` funkcji i, `Write` aby odczytywać i zapisywać dane w pliku.
 
-     — lub —
+     -lub-
 
-1. Funkcja `Seek` elementu członkowskiego jest również dostępna do przenoszenia do określonego przesunięcia w pliku.
+1. `Seek`Funkcja członkowska jest również dostępna do przejścia do określonego przesunięcia w pliku.
 
-`Read`pobiera wskaźnik do buforu i liczbę bajtów do odczytu i zwraca rzeczywistą liczbę bajtów, które zostały odczytane. Jeśli nie można odczytać wymaganej liczby bajtów z powodu osiągnięcia wartości końcowego pliku (EOF), zwracana jest rzeczywista liczba odczytanych bajtów. Jeśli wystąpi błąd odczytu, zostanie zgłoszony wyjątek. `Write`jest podobny `Read`do , ale liczba bajtów zapisanych nie jest zwracana. Jeśli wystąpi błąd zapisu, w tym nie pisanie wszystkich bajtów określonych, wyjątek. Jeśli masz prawidłowy `CFile` obiekt, możesz odczytać z niego lub zapisać do niego, jak pokazano w poniższym przykładzie:
+`Read`przyjmuje wskaźnik do buforu i liczbę bajtów do odczytania i zwraca rzeczywistą liczbę odczytanych bajtów. Jeśli wymagana liczba bajtów nie może zostać odczytana, ponieważ zostanie osiągnięty koniec pliku (EOF), zwracana jest rzeczywista liczba odczytanych bajtów. Jeśli wystąpi błąd odczytu, zostanie zgłoszony wyjątek. `Write`jest podobny do `Read` , ale liczba zapisanych bajtów nie jest zwracana. Jeśli wystąpi błąd zapisu, łącznie z niepisaniem wszystkich określonych bajtów, zgłaszany jest wyjątek. Jeśli masz prawidłowy `CFile` obiekt, możesz go odczytać lub zapisać w nim, jak pokazano w następującym przykładzie:
 
 [!code-cpp[NVC_MFCFiles#2](../atl-mfc-shared/reference/codesnippet/cpp/reading-and-writing-files_1.cpp)]
 
 > [!NOTE]
-> Zwykle należy przeprowadzić operacje wejścia/wyjścia w ramach bloku obsługi wyjątków **try**/**catch.** Aby uzyskać więcej informacji, zobacz [Obsługa wyjątków (MFC)](../mfc/exception-handling-in-mfc.md).
+> Zwykle powinny być wykonywane operacje wejścia/wyjścia w **`try`** / **`catch`** bloku obsługi wyjątków. Aby uzyskać więcej informacji, zobacz [Obsługa wyjątków (MFC)](../mfc/exception-handling-in-mfc.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Pliki](../mfc/files-in-mfc.md)
+[Plikach](../mfc/files-in-mfc.md)

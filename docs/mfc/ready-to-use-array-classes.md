@@ -8,38 +8,38 @@ helpviewer_keywords:
 - collection classes [MFC], arrays
 - classes [MFC], array
 ms.assetid: fdeabf95-2fe7-43a8-8f88-d954133caf52
-ms.openlocfilehash: 309567f897bf5ca941852b433cdee0e8e0d44b3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd297752728f54de2b2ff50877954440cbe70ff9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392638"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228573"
 ---
 # <a name="ready-to-use-array-classes"></a>Gotowe do użycia klasy tablic
 
-Następujące klasy są gotowe do użycia klasy tablic.
+Następujące klasy są gotowymi do użycia klasami tablic.
 
 [CByteArray](../mfc/reference/cbytearray-class.md)<br/>
-Przechowuje elementy typu **BAJTÓW** w tablicy.
+Przechowuje elementy typu **Byte** w tablicy.
 
 [CDWordArray](../mfc/reference/cdwordarray-class.md)<br/>
 Przechowuje elementy typu **DWORD** w tablicy.
 
 [CObArray](../mfc/reference/cobarray-class.md)<br/>
-Przechowuje wskaźniki do obiektów klasy `CObject` lub do obiektów klasy pochodne `CObject` w tablicy.
+Przechowuje wskaźniki do obiektów klasy `CObject` lub obiektów klas pochodnych `CObject` w tablicy.
 
 [CPtrArray](../mfc/reference/cptrarray-class.md)<br/>
-Przechowuje wskaźniki do **void** (ogólnych wskaźników) w tablicy.
+Przechowuje wskaźniki do **`void`** (wskaźników ogólnych) w tablicy.
 
 [CUIntArray](../mfc/reference/cuintarray-class.md)<br/>
-Przechowuje elementy typu **UINT** w tablicy.
+Przechowuje elementy typu **uint** w tablicy.
 
 [CWordArray](../mfc/reference/cwordarray-class.md)<br/>
-Przechowuje elementy typu **WORD** w tablicy.
+Przechowuje elementy typu **wyraz** w tablicy.
 
 [CStringArray](../mfc/reference/cstringarray-class.md)<br/>
-Magazyny `CString` obiektów w tablicy.
+Przechowuje `CString` obiekty w tablicy.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa — Przegląd](../mfc/class-library-overview.md)
+[Przegląd klas](../mfc/class-library-overview.md)

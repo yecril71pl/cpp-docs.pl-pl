@@ -2,22 +2,22 @@
 title: Operatory przestrzeni nazw współbieżności (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: c4086029b71d71091a12b9b6023cc6098faf2f85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 03079f8899f3b13c8509e1affd10a82191b1817c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376291"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228482"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Operatory przestrzeni nazw współbieżności (AMP)
 
 ||||
 |-|-|-|
-|[operator!=](#operator_neq)|[% operator](#operator_mod)|[operator*](#operator_star)|
-|[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|
-|[operator==](#operator_eq_eq)|
+|[operator! =](#operator_neq)|[zakład](#operator_mod)|[zakład](#operator_star)|
+|[operator +](#operator_add)|[zakład](#operator-)|[zakład](#operator_div)|
+|[operator = =](#operator_eq_eq)|
 
-## <a name="operator"></a><a name="operator_eq_eq"></a>operator==
+## <a name="operator"></a><a name="operator_eq_eq"></a>operator = =
 
 Określa, czy określone argumenty są równe.
 
@@ -44,9 +44,9 @@ Jedna z krotek do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli krotki są równe; w przeciwnym razie **false**.
+**`true`** Jeśli krotki są równe; w przeciwnym razie **`false`** .
 
-## <a name="operator"></a><a name="operator_neq"></a>operator!=
+## <a name="operator"></a><a name="operator_neq"></a>operator! =
 
 Określa, czy określone argumenty nie są równe.
 
@@ -73,11 +73,11 @@ Jedna z krotek do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli krotki nie są równe; w przeciwnym razie **false**.
+**`true`** Jeśli krotki nie są równe; w przeciwnym razie **`false`** .
 
-## <a name="operator"></a><a name="operator_add"></a>operator+
+## <a name="operator"></a><a name="operator_add"></a>operator +
 
-Oblicza sumę składników określonych argumentów.
+Oblicza sumę elementów dla określonych argumentów.
 
 ```cpp
 template <
@@ -111,18 +111,18 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 Ranga argumentów krotki.
 
 *_Lhs*<br/>
-Jeden z argumentów, aby dodać.
+Jeden z argumentów do dodania.
 
 *_Rhs*<br/>
-Jeden z argumentów, aby dodać.
+Jeden z argumentów do dodania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Suma składników określonych argumentów.
+Suma składnika dla określonych argumentów.
 
-## <a name="operator-"></a><a name="operator-"></a>operator-
+## <a name="operator-"></a><a name="operator-"></a>zakład
 
-Oblicza różnicę składników między określonymi argumentami.
+Oblicza różnicę składnika między określonymi argumentami.
 
 ```cpp
 template <
@@ -156,18 +156,18 @@ _Tuple_type<_Rank>   operator-(
 Ranga argumentów krotki.
 
 *_Lhs*<br/>
-Argument, od który należy odjąć.
+Argument, z którego ma zostać odjęta wartość.
 
 *_Rhs*<br/>
-Argument do odjęcie.
+Argument odejmowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Różnica między określonymi argumentami.
+Różnica składnika między określonymi argumentami.
 
-## <a name="operator"></a><a name="operator_star"></a>operator*
+## <a name="operator"></a><a name="operator_star"></a>zakład
 
-Oblicza produkt składników określonych argumentów.
+Oblicza produkt ze składnikami dla określonych argumentów.
 
 ```cpp
 template <
@@ -200,11 +200,11 @@ Jedna z krotek do pomnożenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Produkt składników określonych argumentów.
+Iloczyn dotyczący składnika określonych argumentów.
 
-## <a name="operator"></a><a name="operator_div"></a>operator/
+## <a name="operator"></a><a name="operator_div"></a>zakład
 
-Oblicza iloraz określony argumentów.
+Oblicza iloraz składnika dla określonych argumentów.
 
 ```cpp
 template <
@@ -230,16 +230,16 @@ _Tuple_type<_Rank>   operator/(
 Ranga argumentów krotki.
 
 *_Lhs*<br/>
-Krotka do podziału.
+Krotka, która ma zostać podzielona.
 
 *_Rhs*<br/>
-Krotka do podziału.
+Krotka, według której ma zostać podzielona wartość.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iloraz określonych argumentów.
+Iloraz składnika dla określonych argumentów.
 
-## <a name="operator"></a><a name="operator_mod"></a>% operator
+## <a name="operator"></a><a name="operator_mod"></a>zakład
 
 Oblicza moduł pierwszego określonego argumentu przez drugi określony argument.
 
@@ -267,15 +267,15 @@ _Tuple_type<_Rank>   operator%(
 Ranga argumentów krotki.
 
 *_Lhs*<br/>
-Krotka, z której obliczany jest modulo.
+Krotka, z której jest obliczane modulo.
 
 *_Rhs*<br/>
 Krotka do modulo przez.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wynik pierwszego określonego argumentu modułuje drugi określony argument.
+Wynik pierwszego określonego argumentu, który został określony dla drugiego określonego argumentu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Obszar nazw współbieżności](concurrency-namespace-cpp-amp.md)
+[Przestrzeń nazw współbieżności](concurrency-namespace-cpp-amp.md)

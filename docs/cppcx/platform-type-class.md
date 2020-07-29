@@ -1,5 +1,5 @@
 ---
-title: Platform::Type, klasa
+title: 'Platform:: Type — Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: 7463a2518e6ec5cc84f59db05cfaf60e43eb9fde
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2c73967d287ade86e2657af70592845d2cc2085e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322093"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87185037"
 ---
-# <a name="platformtype-class"></a>Platform::Type, klasa
+# <a name="platformtype-class"></a>Platform:: Type — Klasa
 
-Zawiera informacje o czasie wykonywania typu — w szczególności nazwę ciągu i kod typu. Uzyskane przez [wywołanie Object::GetType](../cppcx/platform-object-class.md#gettype) na dowolnym obiekcie lub przy użyciu operatora [typeid](../extensions/typeid-cpp-component-extensions.md) na nazwę klasy lub struktury.
+Zawiera informacje dotyczące typu w czasie wykonywania, w tym nazwę ciągu i element TypeCode. Uzyskany przez wywołujący [obiekt:: GetType](../cppcx/platform-object-class.md#gettype) dla dowolnego obiektu lub przy użyciu operatora [typeid](../extensions/typeid-cpp-component-extensions.md) dla nazwy klasy lub struktury.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,41 +29,41 @@ public ref class Platform::Type :
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa `Type` jest przydatna w aplikacjach, które `if` `switch` muszą bezpośrednio przetwarzania przy użyciu lub instrukcji, która oddziałów na podstawie typu wykonywania obiektu. Kod typu opisujący kategorię typu jest pobierany przy użyciu funkcji elementu członkowskiego [Type::GetTypeCode.](#gettypecode)
+`Type`Klasa jest przydatna w aplikacjach, które muszą bezpośrednio przetwarzać przy **`if`** użyciu **`switch`** instrukcji lub, która jest zależna od typu czasu wykonywania obiektu. Kod typu, który opisuje kategorię typu, jest pobierany przy użyciu funkcji składowej [typu:: GetTypeCode](#gettypecode) .
 
 ## <a name="public-methods"></a>Metody publiczne
 
 |||
 |-|-|
-|[Typ::Metoda GetTypeCode](#gettypecode)|Zwraca [wartość wyliczenia platformy::TypeCode](../cppcx/platform-typecode-enumeration.md) dla obiektu.|
-|[Typ::Metoda ToString](#tostring)|Zwraca nazwę typu określonego w jego metadanych.|
+|[Type:: GetTypeCode — Metoda](#gettypecode)|Zwraca wartość [wyliczenia platform:: TypeCode](../cppcx/platform-typecode-enumeration.md) dla obiektu.|
+|[Type:: ToString — Metoda](#tostring)|Zwraca nazwę typu, jak określono w jego metadanych.|
 
 ## <a name="public-properties"></a>Właściwości publiczne
 
 |||
 |-|-|
-|[Typ::Pełna nazwa](#fullname)|Zwraca [platformę::String Class](../cppcx/platform-string-class.md)^ reprezentującą w pełni kwalifikowaną nazwę typu i używa . (kropka) jako separator, a nie :: (dwukropek) — na przykład `MyNamespace.MyClass`.|
+|[Typ:: FullName](#fullname)|Zwraca [klasę platform:: String](../cppcx/platform-string-class.md)^ reprezentującą w pełni kwalifikowaną nazwę typu i używa. (kropka) jako separator, nie:: (dwukropek) — na przykład `MyNamespace.MyClass` .|
 
 ## <a name="conversion-operators"></a>Operatory konwersji
 
 |||
 |-|-|
-|[typ operatora^](../cppcx/operator-type-hat.md)|Umożliwia konwersję z `Windows::UI::Xaml::Interop::TypeName` do `Platform::Type`.|
-|[operator Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Umożliwia konwersję z `Platform::Type` do `Windows::UI::Xaml::Interop::TypeName`.|
+|[Typ operatora ^](../cppcx/operator-type-hat.md)|Włącza konwersję z `Windows::UI::Xaml::Interop::TypeName` do `Platform::Type` .|
+|[operator Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Włącza konwersję z `Platform::Type` do `Windows::UI::Xaml::Interop::TypeName` .|
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalny obsługiwany klient:** Windows 8
+**Minimalny obsługiwany klient:** System Windows 8
 
 **Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Obszar nazw:** Platformy
+**Przestrzeń nazw:** Platformach
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd
 
-## <a name="typefullname-property"></a><a name="fullname"></a>Typ::Właściwość FullName
+## <a name="typefullname-property"></a><a name="fullname"></a>Type:: FullName, właściwość
 
-Pobiera w pełni kwalifikowaną nazwę bieżącego `Namespace.Type`typu w formularzu .
+Pobiera w postaci w pełni kwalifikowaną nazwę bieżącego typu `Namespace.Type` .
 
 ### <a name="syntax"></a>Składnia
 
@@ -88,9 +88,9 @@ MainPage::MainPage()
 }
 ```
 
-## <a name="typegettypecode-method"></a><a name="gettypecode"></a>Typ::Metoda GetTypeCode
+## <a name="typegettypecode-method"></a><a name="gettypecode"></a>Type:: GetTypeCode — Metoda
 
-Pobiera wbudowaną kategorię typów numerycznych.
+Pobiera typy wbudowanej kategorii typu liczbowego.
 
 ### <a name="syntax"></a>Składnia
 
@@ -100,13 +100,13 @@ Platform::TypeCode GetTypeCode();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jedna z wartości wyliczonych przez platformę::TypeCode.
+Jedna z wartości wyliczenia platform:: TypeCode.
 
 ### <a name="remarks"></a>Uwagi
 
-Odpowiednik getTypeCode() metoda elementu członkowskiego `typeid` jest właściwość.
+Odpowiednikiem metody elementu członkowskiego GetTypeCode () jest **`typeid`** Właściwość.
 
-## <a name="typetostring-method"></a><a name="tostring"></a>Typ::Metoda ToString
+## <a name="typetostring-method"></a><a name="tostring"></a>Type:: ToString — Metoda
 
 Pobiera nazwę typu.
 
@@ -118,8 +118,8 @@ Platform::String^ ToString();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nazwa typu określonego w jego metadanych.
+Nazwa typu określonego w metadanych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md)

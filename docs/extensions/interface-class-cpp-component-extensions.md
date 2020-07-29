@@ -1,5 +1,5 @@
 ---
-title: Klasa interfejsu (C++/CLI i C++/CX)
+title: klasa interfejsu  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: cb4566a0094db6d9e0cc97d81718a18a6df5cf18
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e7847f71502354189e874d505414b4a45b74ab45
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172168"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228703"
 ---
-# <a name="interface-class--ccli-and-ccx"></a>Klasa interfejsu (C++/CLI i C++/CX)
+# <a name="interface-class--ccli-and-ccx"></a>klasa interfejsu  (C++/CLI i C++/CX)
 
 Deklaruje interfejs.  Aby uzyskać informacje na temat natywnych interfejsów, zobacz [__interface](../cpp/interface.md).
 
@@ -32,13 +32,13 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 ### <a name="parameters"></a>Parametry
 
 *interface_access*<br/>
-Dostępność interfejsu poza zestawem.  Możliwe wartości to **Public** i **Private**.  wartość domyślna to **Private** . Interfejsy zagnieżdżone nie mogą mieć specyfikatora *interface_access* .
+Dostępność interfejsu poza zestawem.  Możliwe wartości to **`public`** i **`private`** .  **`private`** jest wartością domyślną. Interfejsy zagnieżdżone nie mogą mieć specyfikatora *interface_access* .
 
 *Nazwij*<br/>
 Nazwa interfejsu.
 
 *inherit_access*<br/>
-Dostępność *base_interface*.  Jedyna dozwolona dostępność dla interfejsu podstawowego jest **publiczna** (domyślnie).
+Dostępność *base_interface*.  Jedyna dozwolona dostępność dla interfejsu podstawowego to **`public`** (domyślnie).
 
 *base_interface*<br/>
 Obowiązkowe Interfejs podstawowy dla *nazwy*interfejsu.
@@ -51,7 +51,7 @@ Interfejs może zawierać deklaracje dla funkcji, zdarzeń i właściwości.  Ws
 
 Interfejs definiuje, jak można zaimplementować klasę. Interfejs nie jest klasą, a klasy mogą implementować tylko interfejsy. Gdy klasa definiuje funkcję zadeklarowaną w interfejsie, funkcja jest zaimplementowana, a nie przesłonięta. W związku z tym wyszukiwanie nazw nie zawiera elementów członkowskich interfejsu.
 
-Klasa lub struktura, która dziedziczy z interfejsu, musi implementować wszystkie elementy członkowskie interfejsu. Podczas implementowania *nazwy* interfejsu należy również zaimplementować interfejsy na liście `base_interface`.
+Klasa lub struktura, która dziedziczy z interfejsu, musi implementować wszystkie elementy członkowskie interfejsu. Podczas implementowania *nazwy* interfejsu należy również zaimplementować interfejsy na `base_interface` liście.
 
 Aby uzyskać więcej informacji, zobacz:
 
@@ -61,9 +61,9 @@ Aby uzyskać więcej informacji, zobacz:
 
 Aby uzyskać informacje na temat innych typów CLR, zobacz [klasy i struktury](classes-and-structs-cpp-component-extensions.md).
 
-Możesz wykryć w czasie kompilacji, jeśli typ jest interfejsem o `__is_interface_class(type)`. Aby uzyskać więcej informacji, zobacz [Obsługa kompilatora dla cech typu](compiler-support-for-type-traits-cpp-component-extensions.md).
+Możesz wykryć w czasie kompilacji, jeśli typ jest interfejsem z `__is_interface_class(type)` . Aby uzyskać więcej informacji, zobacz [Obsługa kompilatora dla cech typu](compiler-support-for-type-traits-cpp-component-extensions.md).
 
-W środowisku programistycznym możesz uzyskać pomoc dotyczącą klawisza F1 dla tych słów kluczowych, zaznaczając słowo kluczowe (na przykład`interface class`) i naciskając klawisz F1.
+W środowisku programistycznym możesz uzyskać pomoc dotyczącą F1 dla tych słów kluczowych, zaznaczając słowo kluczowe ( **`interface class`** na przykład) i naciskając klawisz F1.
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
@@ -73,7 +73,7 @@ W środowisku programistycznym możesz uzyskać pomoc dotyczącą klawisza F1 dl
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: `/ZW`
+Opcja kompilatora:`/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -83,7 +83,7 @@ Opcja kompilatora: `/ZW`
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: `/clr`
+Opcja kompilatora:`/clr`
 
 ### <a name="examples"></a>Przykłady
 
@@ -218,6 +218,6 @@ ref struct R : I, J {
 };
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)
