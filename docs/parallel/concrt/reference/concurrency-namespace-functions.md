@@ -33,12 +33,12 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 2eb5b908d66b221e9efae20ba04e2963805798ab
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: 86324d126fa1c3b659e6500579c4a1d220874094
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446609"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182749"
 ---
 # <a name="concurrency-namespace-functions"></a>Funkcje przestrzeni nazw współbieżności
 
@@ -110,7 +110,7 @@ Odwołanie do danych do wysłania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli wiadomość została zaakceptowana przed zwróceniem metody, w przeciwnym razie **false** .
+**`true`** Jeśli wiadomość została zaakceptowana przed zwróceniem metody, **`false`** w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -199,7 +199,7 @@ Wiele kolejnych wywołań tej metody zwróci to samo wystąpienie Menedżer zaso
 
 ## <a name="create_task"></a><a name="create_task"></a>create_task
 
-Tworzy obiekt [zadania](task-class.md) PPL. `create_task`mogą być używane wszędzie, gdzie użyto konstruktora zadań. Jest ona świadczona głównie dla wygody, ponieważ umożliwia użycie `auto` słowa kluczowego podczas tworzenia zadań.
+Tworzy obiekt [zadania](task-class.md) PPL. `create_task`mogą być używane wszędzie, gdzie użyto konstruktora zadań. Jest ona świadczona głównie dla wygody, ponieważ umożliwia użycie **`auto`** słowa kluczowego podczas tworzenia zadań.
 
 ```cpp
 template<typename T>
@@ -408,7 +408,7 @@ Nie należy przechwytywać wewnętrznego wyjątku anulowania zgłoszonego przez 
 
 ## <a name="is_current_task_group_canceling"></a><a name="is_current_task_group_canceling"></a>is_current_task_group_canceling
 
-Zwraca wskazanie, czy grupa zadań, która jest aktualnie uruchamiana w bieżącym kontekście, znajduje się w pośrodku aktywnego anulowania (lub będzie wkrótce). Należy pamiętać, że jeśli w bieżącym kontekście nie ma żadnej grupy zadań, która jest aktualnie wykonywana, `false` zostanie zwrócona wartość.
+Zwraca wskazanie, czy grupa zadań, która jest aktualnie uruchamiana w bieżącym kontekście, znajduje się w pośrodku aktywnego anulowania (lub będzie wkrótce). Należy pamiętać, że jeśli w bieżącym kontekście nie ma żadnej grupy zadań, która jest aktualnie wykonywana, **`false`** zostanie zwrócona wartość.
 
 ```cpp
 bool __cdecl is_current_task_group_canceling();
@@ -416,7 +416,7 @@ bool __cdecl is_current_task_group_canceling();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli obecnie wykonywana jest grupa zadań, w przeciwnym razie **false** .
+**`true`** w przeciwnym razie trwa anulowanie grupy zadań, która jest obecnie wykonywana **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -679,7 +679,7 @@ Iterator dostępu swobodnego, odnoszący się do jednej z elementów znajdujący
 Wystąpienie programu przydzielania pamięci w standardowej bibliotece języka C++.
 
 *_Func*<br/>
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony. Ta funkcja komparator musi nałożyć ścisłe słabe porządkowanie dla par elementów z sekwencji.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony. Ta funkcja komparator musi nałożyć ścisłe słabe porządkowanie dla par elementów z sekwencji.
 
 *_Chunk_size*<br/>
 Minimalny rozmiar fragmentu, który zostanie podzielony na dwa na potrzeby wykonywania równoległego.
@@ -767,7 +767,7 @@ Wartość, według której ma zostać przekroczenie podczas iteracji z `first` d
 Funkcja, która ma być wykonywana w każdej iteracji. Może to być wyrażenie lambda, wskaźnik funkcji lub dowolny obiekt obsługujący wersję operatora wywołania funkcji z podpisem `void operator()(_Index_type)` .
 
 *_Part*<br/>
-Odwołanie do obiektu Partitioner. Argument może być jednym z `const` [auto_partitioner](auto-partitioner-class.md) `&` , `const` [static_partitioner](static-partitioner-class.md) `&` , `const` [simple_partitioner](simple-partitioner-class.md) `&` lub [affinity_partitioner](affinity-partitioner-class.md) , `&` Jeśli używany jest obiekt [affinity_partitioner](affinity-partitioner-class.md) , odwołanie musi być niestałym odwołaniem l-wartości, dzięki czemu algorytm może przechowywać stan dla przyszłych pętli do ponownego użycia.
+Odwołanie do obiektu Partitioner. Argument może być jednym z **`const`** [auto_partitioner](auto-partitioner-class.md) `&` , **`const`** [static_partitioner](static-partitioner-class.md) `&` , **`const`** [simple_partitioner](simple-partitioner-class.md) `&` lub [affinity_partitioner](affinity-partitioner-class.md) , `&` Jeśli używany jest obiekt [affinity_partitioner](affinity-partitioner-class.md) , odwołanie musi być niestałym odwołaniem l-wartości, dzięki czemu algorytm może przechowywać stan dla przyszłych pętli do ponownego użycia.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -811,7 +811,7 @@ Iterator odnoszący się do pozycji jednej poza końcowym elementem, który ma z
 Obiekt funkcji zdefiniowany przez użytkownika, który jest stosowany do każdego elementu w zakresie.
 
 *_Part*<br/>
-Odwołanie do obiektu Partitioner. Argument może być jednym z `const` [auto_partitioner](auto-partitioner-class.md) `&` , `const` [static_partitioner](static-partitioner-class.md) `&` , `const` [simple_partitioner](simple-partitioner-class.md) `&` lub [affinity_partitioner](affinity-partitioner-class.md) , `&` Jeśli używany jest obiekt [affinity_partitioner](affinity-partitioner-class.md) , odwołanie musi być niestałym odwołaniem l-wartości, dzięki czemu algorytm może przechowywać stan dla przyszłych pętli do ponownego użycia.
+Odwołanie do obiektu Partitioner. Argument może być jednym z **`const`** [auto_partitioner](auto-partitioner-class.md) `&` , **`const`** [static_partitioner](static-partitioner-class.md) `&` , **`const`** [simple_partitioner](simple-partitioner-class.md) `&` lub [affinity_partitioner](affinity-partitioner-class.md) , `&` Jeśli używany jest obiekt [affinity_partitioner](affinity-partitioner-class.md) , odwołanie musi być niestałym odwołaniem l-wartości, dzięki czemu algorytm może przechowywać stan dla przyszłych pętli do ponownego użycia.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1209,7 +1209,7 @@ Iterator dostępu swobodnego odnoszący się do pozycji pierwszego elementu w za
 Iterator dostępu swobodnego, odnoszący się do jednej z elementów znajdujących się poza ostatnim elementem w zakresie, który ma zostać posortowany.
 
 *_Func*<br/>
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony. Ta funkcja komparator musi nałożyć ścisłe słabe porządkowanie dla par elementów z sekwencji.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony. Ta funkcja komparator musi nałożyć ścisłe słabe porządkowanie dla par elementów z sekwencji.
 
 *_Chunk_size*<br/>
 Minimalny rozmiar fragmentu, który zostanie podzielony na dwa na potrzeby wykonywania równoległego.
@@ -1325,7 +1325,7 @@ Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w za
 Zdefiniowany przez użytkownika obiekt funkcji jednoargumentowej, który jest stosowany do każdego elementu w zakresie źródłowym.
 
 *_Part*<br/>
-Odwołanie do obiektu Partitioner. Argument może być jednym z `const` [auto_partitioner](auto-partitioner-class.md) `&` , `const` [static_partitioner](static-partitioner-class.md) `&` , `const` [simple_partitioner](simple-partitioner-class.md) `&` lub [affinity_partitioner](affinity-partitioner-class.md) , `&` Jeśli używany jest obiekt [affinity_partitioner](affinity-partitioner-class.md) , odwołanie musi być niestałym odwołaniem l-wartości, dzięki czemu algorytm może przechowywać stan dla przyszłych pętli do ponownego użycia.
+Odwołanie do obiektu Partitioner. Argument może być jednym z **`const`** [auto_partitioner](auto-partitioner-class.md) `&` , **`const`** [static_partitioner](static-partitioner-class.md) `&` , **`const`** [simple_partitioner](simple-partitioner-class.md) `&` lub [affinity_partitioner](affinity-partitioner-class.md) , `&` Jeśli używany jest obiekt [affinity_partitioner](affinity-partitioner-class.md) , odwołanie musi być niestałym odwołaniem l-wartości, dzięki czemu algorytm może przechowywać stan dla przyszłych pętli do ponownego użycia.
 
 *first2*<br/>
 Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w drugim zakresie źródłowym, w którym mają być obsługiwane.
@@ -1452,7 +1452,7 @@ Odwołanie do danych do wysłania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli wiadomość została zaakceptowana, w przeciwnym razie **false** .
+**`true`** Jeśli wiadomość została zaakceptowana, **`false`** w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1605,7 +1605,7 @@ Nazwa danego obiektu.
 
 ## <a name="try_receive"></a><a name="try_receive"></a>try_receive
 
-Ogólna implementacja try-Receive, umożliwiająca kontekstowi wyszukiwanie danych z dokładnie jednego źródła i filtrowanie wartości, które są akceptowane. Jeśli dane nie są gotowe, metoda zwróci **wartość false**.
+Ogólna implementacja try-Receive, umożliwiająca kontekstowi wyszukiwanie danych z dokładnie jednego źródła i filtrowanie wartości, które są akceptowane. Jeśli dane nie są gotowe, metoda zwróci wartość **`false`** .
 
 ```cpp
 template <class T>
@@ -1643,7 +1643,7 @@ Funkcja filtru określająca, czy komunikaty powinny być akceptowane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`bool`Wartość wskazująca, czy ładunek został umieszczony w `_value` .
+**`bool`** Wartość wskazująca, czy ładunek został umieszczony w `_value` .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1696,7 +1696,7 @@ Obiekt `task_options`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zadanie, które zakończyło się pomyślnie, gdy wszystkie zadania wejściowe zostały zakończone pomyślnie. Jeśli zadania wejściowe są typu `T` , danymi wyjściowymi tej funkcji będą `task<std::vector<T>>` . Jeśli zadania wejściowe są typu `void` , zadanie wyjściowe również będzie `task<void>` .
+Zadanie, które zakończyło się pomyślnie, gdy wszystkie zadania wejściowe zostały zakończone pomyślnie. Jeśli zadania wejściowe są typu `T` , danymi wyjściowymi tej funkcji będą `task<std::vector<T>>` . Jeśli zadania wejściowe są typu **`void`** , zadanie wyjściowe również będzie `task<void>` .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1749,7 +1749,7 @@ Token anulowania, który kontroluje anulowanie zwracanego zadania. Jeśli nie po
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zadanie, które zakończyło się pomyślnie po pomyślnym zakończeniu jednego z zadań wejściowych. Jeśli zadania wejściowe są typu `T` , danymi wyjściowymi tej funkcji będzie `task<std::pair<T, size_t>>>` , gdzie pierwszy element pary jest wynikiem ukończenia zadania, a drugi element jest indeksem zadania, które zostało zakończone. Jeśli zadania wejściowe są typu, `void` dane wyjściowe to `task<size_t>` , gdzie wynik jest indeksem ukończenia zadania.
+Zadanie, które zakończyło się pomyślnie po pomyślnym zakończeniu jednego z zadań wejściowych. Jeśli zadania wejściowe są typu `T` , danymi wyjściowymi tej funkcji będzie `task<std::pair<T, size_t>>>` , gdzie pierwszy element pary jest wynikiem ukończenia zadania, a drugi element jest indeksem zadania, które zostało zakończone. Jeśli zadania wejściowe są typu, **`void`** dane wyjściowe to `task<size_t>` , gdzie wynik jest indeksem ukończenia zadania.
 
 ### <a name="remarks"></a>Uwagi
 

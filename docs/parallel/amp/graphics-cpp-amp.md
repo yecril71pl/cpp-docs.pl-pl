@@ -2,12 +2,12 @@
 title: Grafika (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 393fadbba90b135e6394cf848668b4957a6d7ce2
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: e0ea4de44f5215f47fe8c1a5e018bd91a82708ac
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404837"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182814"
 ---
 # <a name="graphics-c-amp"></a>Grafika (C++ AMP)
 
@@ -21,11 +21,11 @@ C++ AMP zawiera kilka interfejsów API w przestrzeni nazw [concurrency:: Graphic
 
 ## <a name="the-norm-and-unorm-types"></a>Typy norm i unorm
 
-`norm`Typy i `unorm` są typami skalarnymi, które ograniczają zakres wartości **zmiennoprzecinkowych** ; jest to nazywane *clamping*ogranicznikiem. Te typy mogą być jawnie skonstruowane z innych typów skalarnych. W przypadku rzutowania wartość jest najpierw rzutowana na typ **float** , a następnie zamocowana do odpowiedniego regionu, który jest dozwolony przez normę [-1,0, 1,0] lub unorm [0,0, 1,0]. Rzutowanie z +/-nieskończone zwraca +/-1. Rzutowanie z NaN jest niezdefiniowane. Norma może być niejawnie skonstruowana z unorm, a dane nie są tracone. Operator niejawnej konwersji na wartość zmiennoprzecinkową jest zdefiniowany dla tych typów. Operatory binarne są definiowane między tymi typami i innymi wbudowanymi typami skalarnymi, takimi jak **zmiennoprzecinkowe** i **int**: +,-, \* ,/, = =,! =, >, \<, > =, <=. Operatory przypisania złożonego są również obsługiwane: + =,-=, \* =,/=. Jednoargumentowy operator negacji (-) jest zdefiniowany dla typów norm.
+`norm`Typy i `unorm` są typami skalarnymi, które ograniczają zakres **`float`** wartości; jest to nazywane *clamping*ogranicznikiem. Te typy mogą być jawnie skonstruowane z innych typów skalarnych. W przypadku rzutowania wartość jest najpierw rzutowana na **`float`** , a następnie zamocowana do odpowiedniego regionu, który jest dozwolony przez normę [-1,0, 1,0] lub unorm [0,0, 1,0]. Rzutowanie z +/-nieskończone zwraca +/-1. Rzutowanie z NaN jest niezdefiniowane. Norma może być niejawnie skonstruowana z unorm, a dane nie są tracone. Operator niejawnej konwersji na wartość zmiennoprzecinkową jest zdefiniowany dla tych typów. Operatory binarne są zdefiniowane między tymi typami i innymi wbudowanymi typami skalarnymi, takimi jak **`float`** i **`int`** : +,-, \* ,/, = =,! =, >, \<, > =, <=. Operatory przypisania złożonego są również obsługiwane: + =,-=, \* =,/=. Jednoargumentowy operator negacji (-) jest zdefiniowany dla typów norm.
 
 ## <a name="short-vector-library"></a>Krótka Biblioteka wektorów
 
-Krótka Biblioteka wektorów udostępnia niektóre funkcje [typu wektora](https://go.microsoft.com/fwlink/p/?linkid=248500) zdefiniowanego w HLSL i są zwykle używane do definiowania tekseli. Krótki wektor jest strukturą danych, która przechowuje od jednej do czterech wartości tego samego typu. Obsługiwane typy to **Double**, **float**, **int**, `norm` , `uint` i `unorm` . Nazwy typów są pokazane w poniższej tabeli. Dla każdego typu istnieje również odpowiadający mu **element typedef** , który nie ma znaku podkreślenia w nazwie. Typy, które mają znaki podkreślenia, znajdują się w [przestrzeni nazw Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Typy, które nie mają podkreślenia, znajdują się w [przestrzeni nazw Concurrency:: Graphics::d irect3d](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) , dzięki czemu są wyraźnie oddzielone od typów podstawowych o podobnej nazwie, takich jak **__int8** i **__int16**.
+Krótka Biblioteka wektorów udostępnia niektóre funkcje [typu wektora](https://go.microsoft.com/fwlink/p/?linkid=248500) zdefiniowanego w HLSL i są zwykle używane do definiowania tekseli. Krótki wektor jest strukturą danych, która przechowuje od jednej do czterech wartości tego samego typu. Obsługiwane typy to **`double`** ,,,, **`float`** **`int`** `norm` `uint` i `unorm` . Nazwy typów są pokazane w poniższej tabeli. Dla każdego typu istnieje również odpowiednia **`typedef`** , która nie ma znaku podkreślenia w nazwie. Typy, które mają znaki podkreślenia, znajdują się w [przestrzeni nazw Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Typy, które nie mają podkreślenia, znajdują się w [przestrzeni nazw Concurrency:: Graphics::d irect3d](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) , dzięki czemu są wyraźnie oddzielone od typów podstawowych o podobnej nazwie, takich jak **`__int8`** i **`__int16`** .
 
 ||Długość 2|Długość 3|Długość 4|
 |-|--------------|--------------|--------------|
@@ -63,7 +63,7 @@ Krótka Biblioteka wektorów obsługuje `vector_type.identifier` konstrukcję ak
 
 Wiele procesorów GPU ma sprzęt i pamięć podręczną zoptymalizowane pod kątem pobierania pikseli i tekseli oraz do renderowania obrazów i tekstur. Klasa [tekstury \<T,N> ](../../parallel/amp/reference/texture-class.md) , która jest klasą kontenera dla obiektów Texel, udostępnia funkcje tekstury tych procesorów GPU. Texel może:
 
-- **Int**, `uint` , **float**, **Double**, `norm` lub `unorm` skalarny.
+- **`int`**,,,, `uint` **`float`** **`double`** `norm` Lub `unorm` skalarne.
 
 - Krótki wektor, który ma dwa lub cztery składniki. Jedynym wyjątkiem jest `double_4` , co jest niedozwolone.
 
@@ -214,7 +214,7 @@ Użyj metody [Texture:: Set](reference/texture-class.md#set) do zapisu w `textur
 
 - T ma tylko jeden składnik skalarny. (Krótkie wektory są niedozwolone).
 
-- T nie jest **Podwójna**, `norm` lub `unorm` .
+- T nie jest **`double`** , `norm` lub `unorm` .
 
 - `texture::bits_per_scalar_element`Właściwość to 32.
 
@@ -406,7 +406,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 Środowisko uruchomieniowe C++ AMP obsługuje współdziałanie między programem i interfejsem `texture<T,1>` [ID3D11Texture1D](https://go.microsoft.com/fwlink/p/?linkId=248503), między innymi interfejsem `texture<T,2>` [ID3D11Texture2D](https://go.microsoft.com/fwlink/p/?linkId=255317)i między programem `texture<T,3>` a [interfejsem ID3D11Texture3D](https://go.microsoft.com/fwlink/p/?linkId=255377). Metoda [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) przyjmuje `texture` obiekt i zwraca `IUnknown` interfejs. Metoda [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) przyjmuje `IUnknown` interfejs i `accelerator_view` obiekt i zwraca `texture` obiekt.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa double_2](../../parallel/amp/reference/double-2-class.md)<br/>
 [Klasa double_3](../../parallel/amp/reference/double-3-class.md)<br/>

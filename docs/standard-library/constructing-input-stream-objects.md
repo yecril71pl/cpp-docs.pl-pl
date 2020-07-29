@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - input stream objects
 ms.assetid: ab94866e-6ffe-4f15-b4db-0bd23e636075
-ms.openlocfilehash: c000a9e927169ef710554372217ba15089ee11b8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f281741979680fc03d3f96d2dbfbac6e1feefdea
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457298"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228313"
 ---
 # <a name="constructing-input-stream-objects"></a>Konstruowanie obiektów strumienia danych wejściowych
 
@@ -19,11 +19,11 @@ Jeśli używasz tylko `cin` obiektu, nie musisz tworzyć strumienia wejściowego
 
 - [Konstruktory strumienia ciągów wejściowych](#vclrfinputstringstreamconstructorsanchor9)
 
-## <a name="vclrfinputfilestreamconstructorsanchor8"></a>Konstruktory strumienia plików wejściowych
+## <a name="input-file-stream-constructors"></a><a name="vclrfinputfilestreamconstructorsanchor8"></a>Konstruktory strumienia plików wejściowych
 
 Istnieją dwa sposoby tworzenia strumienia pliku wejściowego:
 
-- Użyj konstruktora argumentów **void** , a następnie Wywołaj `open` funkcję członkowską:
+- Użyj **`void`** konstruktora argumentów, a następnie Wywołaj `open` funkcję członkowską:
 
    ```cpp
    ifstream myFile; // On the stack
@@ -39,7 +39,7 @@ Istnieją dwa sposoby tworzenia strumienia pliku wejściowego:
    ifstream myFile("filename");
    ```
 
-## <a name="vclrfinputstringstreamconstructorsanchor9"></a>Konstruktory strumienia ciągów wejściowych
+## <a name="input-string-stream-constructors"></a><a name="vclrfinputstringstreamconstructorsanchor9"></a>Konstruktory strumienia ciągów wejściowych
 
 Konstruktory strumienia ciągów wejściowych wymagają adresu wstępnie przydzieloną, wstępnie zainicjowany magazyn:
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - conditional class
 - conditional
 ms.assetid: ece9f539-fb28-4e26-a79f-3264bc984493
-ms.openlocfilehash: b8f0f69cc1e4f6966bc9ccb63fe529436295badd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 03ec6248ba3361622ad061ac3854a60995148f4a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457323"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228378"
 ---
 # <a name="conditional-class"></a>conditional — Klasa
 
@@ -33,7 +33,7 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 *B*\
 Wartość, która określa wybrany typ.
 
-*POŁĄCZEŃ*\
+*Połączeń*\
 Wynik typu, gdy B ma wartość true.
 
 *T2*\
@@ -41,11 +41,11 @@ Wynik typu, gdy B ma wartość false.
 
 ## <a name="remarks"></a>Uwagi
 
-Element członkowski szablonu typedef `conditional<B, T1, T2>::type` szacuje się na *T1* , gdy *b* zwróci **wartość true**, i szacuje się na *T2* , gdy *b* zwróci **wartość false**.
+Element członkowski szablonu typedef `conditional<B, T1, T2>::type` szacuje się na *T1* , gdy *b* szacuje się w **`true`** , i przyjmuje wartość *T2* , gdy *b* szacuje się **`false`** .
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun_t class
 ms.assetid: f169d381-019b-4a0e-a9a3-54da6d948270
-ms.openlocfilehash: 5263612a26b2bcb606ad712a2a8e0a521ce9437a
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6b34fb6b20b2aaf2f18fbe8d937e50bdbaa3bdff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688206"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228352"
 ---
 # <a name="const_mem_fun_t-class"></a>const_mem_fun_t — Klasa
 
@@ -30,10 +30,10 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *PM*
-Wskaźnik do funkcji członkowskiej klasy `Type` do przekonwertowania na obiekt funkcji.
+*23:59:59*\
+Wskaźnik do funkcji składowej klasy `Type` , która ma zostać przekonwertowana na obiekt funkcji.
 
-*Pleft* \
+*Pleft*\
 Obiekt, na którym jest wywoływana funkcja członkowska *PM* .
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -42,8 +42,8 @@ Dostosowywalna funkcja Jednoargumentowa.
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy przechowuje kopię *PM*, która musi być wskaźnikiem do funkcji członkowskiej klasy `Type`, w prywatnym obiekcie elementu członkowskiego. Definiuje jej funkcję członkowską `operator()` jako zwracającą (`Pleft` -> \* `Pm`) () **const**.
+Szablon klasy przechowuje kopię *PM*, która musi być wskaźnikiem do funkcji składowej klasy `Type` , w prywatnym obiekcie składowej. Definiuje swoją funkcję członkowską `operator()` jako zwracaną ( `Pleft` -> \* `Pm` ) () **`const`** .
 
 ## <a name="example"></a>Przykład
 
-Konstruktor `const_mem_fun_t` nie jest zazwyczaj używany bezpośrednio; funkcja pomocnika `mem_fun` jest używana do adaptacji funkcji Członkowskich. Zobacz [mem_fun](../standard-library/functional-functions.md#mem_fun) , aby zapoznać się z przykładem użycia adapterów funkcji składowych.
+Konstruktor `const_mem_fun_t` nie jest zazwyczaj używany bezpośrednio; funkcja pomocnika `mem_fun` służy do adaptacji funkcji Członkowskich. Zobacz [mem_fun](../standard-library/functional-functions.md#mem_fun) , aby zapoznać się z przykładem użycia adapterów funkcji składowych.

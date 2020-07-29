@@ -36,12 +36,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: a9c064582e22e267b0c597ecd89df8a43ef0bbc4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5f8d4b1fcdc2d4d4de712ee79742025db74b6452
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912868"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189288"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
@@ -65,7 +65,7 @@ Wskaźnik do struktury **pliku** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fgetc** zwraca znak odczytywany jako **int** lub zwraca **znacznik EOF** , aby wskazać błąd lub koniec pliku. **fgetwc** zwraca, jako [wint_t](../../c-runtime-library/standard-types.md), znak dwubajtowy, który odpowiada znakowi odczytu lub zwraca **WEOF** , aby wskazać błąd lub koniec pliku. Dla obu funkcji Użyj **feof** lub obiektu **odwołującego** do rozróżnienia między błędem a warunkiem końca pliku. Jeśli wystąpi błąd odczytu, zostanie ustawiony wskaźnik błędu dla strumienia. Jeśli *strumień* ma **wartość null**, **fgetc** i **fgetwc** Wywołaj procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają **znacznik EOF**.
+**fgetc** zwraca znak odczytywany jako **`int`** lub zwraca **znacznik EOF** , aby wskazać błąd lub koniec pliku. **fgetwc** zwraca, jako [wint_t](../../c-runtime-library/standard-types.md), znak dwubajtowy, który odpowiada znakowi odczytu lub zwraca **WEOF** , aby wskazać błąd lub koniec pliku. Dla obu funkcji Użyj **feof** lub obiektu **odwołującego** do rozróżnienia między błędem a warunkiem końca pliku. Jeśli wystąpi błąd odczytu, zostanie ustawiony wskaźnik błędu dla strumienia. Jeśli *strumień* ma **wartość null**, **fgetc** i **fgetwc** Wywołaj procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają **znacznik EOF**.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -91,8 +91,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fgetc**|\<stdio. h>|
-|**fgetwc**|\<stdio. h> lub \<WCHAR. h>|
+|**fgetc**|\<stdio.h>|
+|**fgetwc**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -133,7 +133,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crt_fgetctxt"></a>Dane wejściowe: crt_fgetc. txt
+## <a name="input-crt_fgetctxt"></a>Dane wejściowe: crt_fgetc.txt
 
 ```Input
 Line one.
@@ -147,7 +147,7 @@ Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>

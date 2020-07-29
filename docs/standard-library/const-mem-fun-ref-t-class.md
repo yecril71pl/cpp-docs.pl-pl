@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun_ref_t class
 ms.assetid: 316ddbaa-9f46-4931-8eba-ea4ca66360ef
-ms.openlocfilehash: 8ce29eb0d2122dbd95fea34fa59f3fa11b9b388e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 09d8569253dbeb1a873f4fc7b64b55658511d18e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689757"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228365"
 ---
 # <a name="const_mem_fun_ref_t-class"></a>const_mem_fun_ref_t — Klasa
 
-Klasa adaptera, która umożliwia **stałej** funkcji składowej, która nie przyjmuje argumentów, które mają być wywoływane jako jednoargumentowy obiekt funkcji po zainicjowaniu z argumentem Reference. Przestarzałe w języku C++ 11, usunięte w języku C++ 17.
+Klasa adaptera, która umożliwia **`const`** funkcji składowej, która nie przyjmuje argumentów do wywołania jednoargumentowego obiektu funkcyjnego, gdy jest inicjowany z argumentem odwołania. Przestarzałe w języku C++ 11, usunięte w języku C++ 17.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,10 +31,10 @@ template <class Result, class Type>
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *PM*
-Wskaźnik do funkcji członkowskiej klasy `Type` do przekonwertowania na obiekt funkcji.
+*23:59:59*\
+Wskaźnik do funkcji składowej klasy `Type` , która ma zostać przekonwertowana na obiekt funkcji.
 
-\ *lewo*
+*lewym*\
 Obiekt, na którym jest wywoływana funkcja członkowska *PM* .
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -43,8 +43,8 @@ Dostosowywalna funkcja Jednoargumentowa.
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy przechowuje kopię *PM*, która musi być wskaźnikiem do funkcji członkowskiej klasy `Type`, w prywatnym obiekcie elementu członkowskiego. Definiuje jej funkcję członkowską `operator()` jako zwracającą (**Left**. \* `Pm`) () **const**.
+Szablon klasy przechowuje kopię *PM*, która musi być wskaźnikiem do funkcji składowej klasy `Type` , w prywatnym obiekcie składowej. Definiuje swoją funkcję członkowską `operator()` jako zwracaną (**Left**. \* `Pm` ) () **`const`**.
 
 ## <a name="example"></a>Przykład
 
-Konstruktor `const_mem_fun_ref_t` nie jest zazwyczaj używany bezpośrednio; funkcja pomocnika `mem_fun_ref` jest używana do adaptacji funkcji Członkowskich. Zobacz [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref) , aby zapoznać się z przykładem użycia adapterów funkcji składowych.
+Konstruktor `const_mem_fun_ref_t` nie jest zazwyczaj używany bezpośrednio; funkcja pomocnika `mem_fun_ref` służy do adaptacji funkcji Członkowskich. Zobacz [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref) , aby zapoznać się z przykładem użycia adapterów funkcji składowych.

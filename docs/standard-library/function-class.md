@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: 432b61c7bc5b7f0e6f82e5bfeca7758c70785774
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ed00d8e3a94b03a5d44194b880218ded7a6dc0e8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689634"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182502"
 ---
 # <a name="function-class"></a>function — Klasa
 
@@ -79,33 +79,33 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Fty* \
+*Fty*\
 Typ funkcji do oblewania.
 
-@No__t_1 *AX*
+*Oś*\
 Funkcja alokatora.
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy jest otoką wywołania, której podpis wywołania jest `Ret(T1, T2, ..., TN)`. Służy do umieszczania różnych wywoływanych obiektów w jednorodnej otoki.
+Szablon klasy jest otoką wywołania, której sygnatura wywołania to `Ret(T1, T2, ..., TN)` . Służy do umieszczania różnych wywoływanych obiektów w jednorodnej otoki.
 
 Niektóre funkcje członkowskie przyjmują operand, który nazywa żądany obiekt docelowy. Możesz określić taki operand na kilka sposobów:
 
-`fn` — `fn` możliwego do narzutowania obiektu; Po wywołaniu obiekt `function` przechowuje kopię `fn`
+`fn`--Obiekt możliwy do `fn` wywołania; po wywołaniu `function` obiektu posiada kopię`fn`
 
-`fnref`--obiekt możliwy do nadawania o nazwie przez `fnref.get()`; Po wywołaniu obiekt `function` przechowuje odwołanie do `fnref.get()`
+`fnref`--możliwy do wywołania obiekt nazwany przez `fnref.get()` ; po wywołaniu `function` obiektu jest odwołanie do`fnref.get()`
 
-`right`--obiekt możliwy do odłożenia, jeśli istnieje, przez obiekt `function` `right`
+`right`--Obiekt możliwy do odłożenia (jeśli istnieje), który jest przechowywany przez `function` obiekt`right`
 
-`npc`--pusty wskaźnik; Po wywołaniu obiekt `function` jest pusty
+`npc`--pusty wskaźnik; Po wywołaniu `function` obiekt jest pusty
 
-We wszystkich przypadkach `INVOKE(f, t1, t2, ..., tN)`, gdzie `f` jest obiektem możliwym do odłożenia i `t1, t2, ..., tN` są lvalues typy `T1, T2, ..., TN`, muszą być poprawnie sformułowane i, jeśli `Ret` nie jest typem void, można dokonać konwersji na `Ret`.
+We wszystkich przypadkach, `INVOKE(f, t1, t2, ..., tN)` gdzie `f` jest obiektem, który jest możliwy do `t1, t2, ..., tN` nalvalues `T1, T2, ..., TN` , musi być poprawnie sformułowany i, jeśli `Ret` nie jest typem void, można przekonwertować na `Ret` .
 
-Pusty obiekt `function` nie ma obiektu, który można wywołać lub odwołanie do możliwego do przeprowadzenia obiektu.
+Pusty obiekt nie posiada możliwego `function` do przeprowadzenia obiektu ani odwołania do możliwego do narzutowania obiektu.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
 |||
 |-|-|
@@ -121,7 +121,7 @@ Pusty obiekt `function` nie ma obiektu, który można wywołać lub odwołanie d
 
 |||
 |-|-|
-|[ponownie](#assign)|Przypisuje obiekt możliwy do oddzielenia do tego obiektu funkcji.|
+|[przypisać](#assign)|Przypisuje obiekt możliwy do oddzielenia do tego obiektu funkcji.|
 |[wymiany](#swap)|Zamień dwa obiekty, które są wywoływane.|
 |[obiektów](#target)|Testuje, czy przechowywany wywoływany obiekt jest wywoływany jako określony.|
 |[target_type](#target_type)|Pobiera informacje o typie dla możliwego do odzyskania obiektu.|
@@ -134,7 +134,7 @@ Pusty obiekt `function` nie ma obiektu, który można wywołać lub odwołanie d
 |[operator ()](#op_call)|Wywołuje możliwy do wywołania obiekt.|
 |[operator =](#op_eq)|Zastępuje przechowywany obiekt, który jest wywoływany.|
 
-## <a name="assign"></a>ponownie
+## <a name="assign"></a><a name="assign"></a>ponownie
 
 Przypisuje obiekt możliwy do oddzielenia do tego obiektu funkcji.
 
@@ -152,20 +152,20 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametry
 
-*_Func* \
+*_Func*\
 Obiekt możliwy do narzutu.
 
-*_Fnref* \
+*_Fnref*\
 Otoka odwołania, która zawiera możliwy do narzutu obiekt.
 
-@No__t_1 *AX*
+*Oś*\
 Obiekt alokatora.
 
 ### <a name="remarks"></a>Uwagi
 
-Każda funkcja członkowska zastępuje `callable object`, które są przechowywane przez `*this` z możliwym do przekazaniem obiektem, który został przeprowadzony jako `operand`. Przydziel magazyn z obiektem alokatora *AX*.
+Każdy element członkowski jest zastępowany `callable object` przez obiekt, który jest **`*this`** możliwy do przekazanie jako `operand` . Przydziel magazyn z obiektem alokatora *AX*.
 
-## <a name="function"></a>funkcyjn
+## <a name="function"></a>Funkcja <a name="function"></a>
 
 Konstruuje otokę, która jest pusta lub przechowuje możliwy do przechowania obiekt dowolnego typu ze stałą sygnaturą.
 
@@ -190,27 +190,27 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*Kliknij*\
 Obiekt funkcji do skopiowania.
 
-@No__t_1 *FX*
+*Niezr*\
 Typ wywoływanego obiektu.
 
-*_Func* \
+*_Func*\
 Obiekt możliwy do zawinięcia.
 
-@No__t_1 *alokacji*
+*Alokacj*\
 Typ alokatora.
 
-@No__t_1 *AX*
+*Oś*\
 Program przydzielający.
 
-*_Fnref* \
+*_Fnref*\
 Odwołanie do możliwego do przewinięcia obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsze dwa konstruktory konstruują pusty obiekt `function`. Następne trzy konstruktory konstruują obiekt `function`, który przechowuje możliwy do przekazanie obiekt jako operand. Ostatnie dwa konstruktory przydzielą magazyn z obiektem alokatora systemu AX.
+Pierwsze dwa konstruktory konstruują pusty `function` obiekt. Następne trzy konstruktory konstruują `function` obiekt, który przechowuje możliwy do przekazanie obiekt jako operand. Ostatnie dwa konstruktory przydzielą magazyn z obiektem alokatora systemu AX.
 
 ### <a name="example"></a>Przykład
 
@@ -282,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="op_unspecified"></a>nieokreślony operator
+## <a name="operator-unspecified"></a><a name="op_unspecified"></a>nieokreślony operator
 
 Testuje, czy istnieje przechowywany możliwy do przeprowadzenia obiekt.
 
@@ -292,7 +292,7 @@ operator unspecified();
 
 ### <a name="remarks"></a>Uwagi
 
-Operator zwraca wartość, która jest konwertowany na typ **bool** z wartością true tylko wtedy, gdy obiekt nie jest pusty. Służy do sprawdzania, czy obiekt jest pusty.
+Operator zwraca wartość, która jest konwertowany na wartość **`bool`** true, tylko wtedy, gdy obiekt nie jest pusty. Służy do sprawdzania, czy obiekt jest pusty.
 
 ### <a name="example"></a>Przykład
 
@@ -324,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="op_call"></a>operator ()
+## <a name="operator"></a><a name="op_call"></a>operator ()
 
 Wywołuje możliwy do wywołania obiekt.
 
@@ -337,15 +337,15 @@ result_type operator()(
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *TN*
+*TN*\
 Typ argumentu n wywołania.
 
-\ *TN*
+*tN*\
 N-ty argument wywołania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `INVOKE(fn, t1, t2, ..., tN, Ret)`, gdzie `fn` jest obiektem docelowym przechowywanym w `*this`. Służy do wywoływania zapakowanego obiektu, który można wywołać.
+Funkcja członkowska zwraca `INVOKE(fn, t1, t2, ..., tN, Ret)` , gdzie `fn` jest obiektem docelowym przechowywanym w **`*this`** . Służy do wywoływania zapakowanego obiektu, który można wywołać.
 
 ### <a name="example"></a>Przykład
 
@@ -375,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a>operator =
 
 Zastępuje przechowywany obiekt, który jest wywoływany.
 
@@ -390,21 +390,21 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parametry
 
-*npc* \
+*npc*\
 Stała wskaźnika o wartości null.
 
-*prawa* \
+*Kliknij*\
 Obiekt funkcji do skopiowania.
 
-\ *Fn*
+*Fn*\
 Obiekt możliwy do zawinięcia.
 
-*fnref* \
+*fnref*\
 Odwołanie do możliwego do przewinięcia obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Operatorzy każdy zastępują obiekt możliwy do przetrzymywania przez `*this` z możliwym do przekazaniem obiektem przekazaną jako operand.
+Operatorzy każdy zastępują obiekt możliwy do przetrzymywania **`*this`** z obiektem możliwym do przekazanie jako operand.
 
 ### <a name="example"></a>Przykład
 
@@ -457,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a>result_type
+## <a name="result_type"></a><a name="result_type"></a>result_type
 
 Zwracany typ przechowywanego obiektu, który jest wywoływany.
 
@@ -467,7 +467,7 @@ typedef Ret result_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Element typedef jest synonimem dla typu `Ret` w sygnaturze wywołania szablonu. Służy do określenia zwracanego typu zapakowanego obiektu, który można wywołać.
+Element typedef jest synonimem dla typu `Ret` w podpisie wywołania szablonu. Służy do określenia zwracanego typu zapakowanego obiektu, który można wywołać.
 
 ### <a name="example"></a>Przykład
 
@@ -499,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a>wymiany
+## <a name="swap"></a><a name="swap"></a>wymiany
 
 Zamień dwa obiekty, które są wywoływane.
 
@@ -509,12 +509,12 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa* \
+*Kliknij*\
 Obiekt funkcyjny do zamiany.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zamienia obiekty docelowe między `*this` i *po prawej*. Robi to w stałym czasie i nie zgłasza wyjątków.
+Funkcja członkowska zamienia obiekty docelowe między **`*this`** i *po prawej*. Robi to w stałym czasie i nie zgłasza wyjątków.
 
 ### <a name="example"></a>Przykład
 
@@ -558,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a>obiektów
+## <a name="target"></a><a name="target"></a>obiektów
 
 Testuje, czy przechowywany wywoływany obiekt jest wywoływany jako określony.
 
@@ -571,14 +571,14 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Parametry
 
-*Fty2* \
+*Fty2*\
 Docelowy typ obiektu możliwy do przetestowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Typ *Fty2* musi zostać wywołany dla typów argumentów `T1, T2, ..., TN` i `Ret` typu zwracanego. Jeśli `target_type() == typeid(Fty2)`, funkcja szablonu elementu członkowskiego zwraca adres obiektu docelowego; w przeciwnym razie zwraca wartość 0.
+Typ *Fty2* musi być wywoływany dla typów argumentów `T1, T2, ..., TN` i zwracanego typu `Ret` . Jeśli `target_type() == typeid(Fty2)` , funkcja szablonu elementu członkowskiego zwraca adres obiektu docelowego; w przeciwnym razie zwraca wartość 0.
 
-Typ *Fty2* jest wywoływany dla typów argumentów `T1, T2, ..., TN` i zwracany typ `Ret` jeśli lvalues `fn, t1, t2, ..., tN` typów `Fty2, T1, T2, ..., TN` odpowiednio, `INVOKE(fn, t1, t2, ..., tN)` jest poprawnie sformułowany i, jeśli `Ret` nie jest **typem void**, można przekonwertować na `Ret`.
+Typ *Fty2* jest wywoływany dla typów argumentów `T1, T2, ..., TN` i zwracanego typu, `Ret` Jeśli dla lvalues `fn, t1, t2, ..., tN` typów, odpowiednio, `Fty2, T1, T2, ..., TN` `INVOKE(fn, t1, t2, ..., tN)` jest poprawnie sformułowany i, jeśli `Ret` nie **`void`** , jest konwertowany na `Ret` .
 
 ### <a name="example"></a>Przykład
 
@@ -619,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a>target_type
+## <a name="target_type"></a><a name="target_type"></a>target_type
 
 Pobiera informacje o typie dla możliwego do odzyskania obiektu.
 
@@ -629,7 +629,7 @@ const std::type_info& target_type() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `typeid(void)`, jeśli `*this` jest pusta. w przeciwnym razie zwraca `typeid(T)`, gdzie `T` jest typem obiektu docelowego.
+Funkcja członkowska zwraca `typeid(void)` wartość **`*this`** , jeśli jest pusta. w przeciwnym razie zwraca `typeid(T)` , gdzie `T` jest typem obiektu docelowego.
 
 ### <a name="example"></a>Przykład
 

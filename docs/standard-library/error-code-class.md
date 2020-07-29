@@ -19,16 +19,16 @@ helpviewer_keywords:
 - std::error_code::default_error_condition
 - std::error_code::message
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
-ms.openlocfilehash: 919a2a81c66de9adf15deeae8cf8ff3dea08762e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3f272c25572ebebd95e5a59b50094d8e1872c90a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245825"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228287"
 ---
-# <a name="errorcode-class"></a>error_code — Klasa
+# <a name="error_code-class"></a>error_code — Klasa
 
-Reprezentuje błędy niskiego poziomu systemu, które są specyficzne dla implementacji.
+Reprezentuje błędy systemu niskiego poziomu, które są specyficzne dla implementacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,45 +38,45 @@ class error_code;
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt typu `error_code` klasa przechowuje wartość kodu błędu i wskaźnik do obiektu, który reprezentuje [kategorii](../standard-library/error-category-class.md) błędu kodów, które opisują zgłaszane błędy systemu niskiego poziomu.
+Obiekt typu `error_code` Class przechowuje wartość kodu błędu i wskaźnik do obiektu, który reprezentuje [kategorię](../standard-library/error-category-class.md) kodów błędów, które opisują raportowane błędy systemu niskiego poziomu.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
 |||
 |-|-|
-|[error_code —](#error_code)|Tworzy obiekt typu `error_code`.|
+|[error_code](#error_code)|Konstruuje obiekt typu `error_code` .|
 
 ### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
-|[value_type](#value_type)|Typ, który reprezentuje wartość kodu błędu przechowywanych.|
+|[value_type](#value_type)|Typ reprezentujący przechowywaną wartość kodu błędu.|
 
 ### <a name="functions"></a>Funkcje
 
 |||
 |-|-|
-|[Przypisz](#assign)|Przypisuje wartość kodu błędu i kategorii kod błędu.|
-|[category](#category)|Zwraca kategoria błędu.|
-|[Usuń zaznaczenie](#clear)|Czyści wartość kodu błędu i kategorii.|
+|[przypisać](#assign)|Przypisuje wartość kodu błędu i kategorię do kodu błędu.|
+|[kategorii](#category)|Zwraca kategorię błędu.|
+|[Wyczyść](#clear)|Czyści wartość kodu błędu i kategorię.|
 |[default_error_condition](#default_error_condition)|Zwraca domyślny warunek błędu.|
-|[komunikat](#message)|Zwraca nazwę kod błędu.|
+|[Komunikat](#message)|Zwraca nazwę kodu błędu.|
 
 ### <a name="operators"></a>Operatory
 
 |||
 |-|-|
-|[operator==](#op_eq_eq)|Testuje pod kątem równości pomiędzy `error_code` obiektów.|
-|[operator!=](#op_neq)|Testuje pod kątem nierówności pomiędzy `error_code` obiektów.|
-|[Operator <](#op_lt)|Sprawdza, czy `error_code` obiekt jest mniejszy od `error_code` obiekt przekazany do porównania.|
-|[operator=](#op_eq)|Przypisuje nową wartość wyliczenia do `error_code` obiektu.|
-|[bool — operator](#op_bool)|Rzutuje zmienną typu `error_code`.|
+|[operator = =](#op_eq_eq)|Testuje równość między `error_code` obiektami.|
+|[operator! =](#op_neq)|Testuje pod kątem nierówności między `error_code` obiektami.|
+|[<operatora](#op_lt)|Testuje, czy `error_code` obiekt jest mniejszy niż `error_code` obiekt przeszedł do porównania.|
+|[operator =](#op_eq)|Przypisuje nowej wartości wyliczenia do `error_code` obiektu.|
+|[wartość logiczna operatora](#op_bool)|Rzutuje zmienną typu `error_code` .|
 
-### <a name="assign"></a> Przypisz
+### <a name="assign"></a><a name="assign"></a>ponownie
 
-Przypisuje wartość kodu błędu i kategorii kod błędu.
+Przypisuje wartość kodu błędu i kategorię do kodu błędu.
 
 ```cpp
 void assign(value_type val, const error_category& _Cat);
@@ -84,19 +84,19 @@ void assign(value_type val, const error_category& _Cat);
 
 #### <a name="parameters"></a>Parametry
 
-*Val*\
-Wartość kodu błędu, aby przechowywać w `error_code`.
+*użyte*\
+Wartość kodu błędu, która ma być przechowywana w `error_code` .
 
 *_Cat*\
-Kategoria błędu, aby przechowywać w `error_code`.
+Kategoria błędów do przechowywania w `error_code` .
 
 #### <a name="remarks"></a>Uwagi
 
-Magazyny funkcja elementu członkowskiego *val* jako wartość kodu błędu i wskaźnik *_Cat*.
+Funkcja członkowska przechowuje wartości *Val* jako wartość kodu błędu i wskaźnik do *_Cat*.
 
-### <a name="category"></a> Kategoria
+### <a name="category"></a><a name="category"></a>kategorii
 
-Zwraca kategoria błędu.
+Zwraca kategorię błędu.
 
 ```cpp
 const error_category& category() const;
@@ -104,9 +104,9 @@ const error_category& category() const;
 
 #### <a name="remarks"></a>Uwagi
 
-### <a name="clear"></a> Usuń zaznaczenie
+### <a name="clear"></a><a name="clear"></a>Wyczyść
 
-Czyści wartość kodu błędu i kategorii.
+Czyści wartość kodu błędu i kategorię.
 
 ```cpp
 clear();
@@ -114,9 +114,9 @@ clear();
 
 #### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego przechowuje błąd kodu wartość zero i wskaźnik [generic_category](../standard-library/system-error-functions.md#generic_category) obiektu.
+Funkcja członkowska przechowuje zero wartości kodu błędu i wskaźnik do obiektu [generic_category](../standard-library/system-error-functions.md#generic_category) .
 
-### <a name="default_error_condition"></a> default_error_condition —
+### <a name="default_error_condition"></a><a name="default_error_condition"></a>default_error_condition
 
 Zwraca domyślny warunek błędu.
 
@@ -126,15 +126,15 @@ error_condition default_error_condition() const;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-[Error_condition](../standard-library/error-condition-class.md) określony przez [default_error_condition —](../standard-library/error-category-class.md#default_error_condition).
+[Error_condition](../standard-library/error-condition-class.md) określony przez [default_error_condition](../standard-library/error-category-class.md#default_error_condition).
 
 #### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego zwraca `category().default_error_condition(value())`.
+Ta funkcja członkowska zwraca `category().default_error_condition(value())` .
 
-### <a name="error_code"></a> error_code —
+### <a name="error_code"></a><a name="error_code"></a>error_code
 
-Tworzy obiekt typu `error_code`.
+Konstruuje obiekt typu `error_code` .
 
 ```cpp
 error_code();
@@ -149,26 +149,26 @@ error_code(_Enum _Errcode,
 
 #### <a name="parameters"></a>Parametry
 
-*Val*\
-Wartość kodu błędu, aby przechowywać w `error_code`.
+*użyte*\
+Wartość kodu błędu, która ma być przechowywana w `error_code` .
 
 *_Cat*\
-Kategoria błędu, aby przechowywać w `error_code`.
+Kategoria błędów do przechowywania w `error_code` .
 
 *_Errcode*\
-Wartość wyliczenia do przechowywania w `error_code`.
+Wartość wyliczenia, która ma być przechowywana w `error_code` .
 
 #### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor przechowuje błąd kodu wartość zero i wskaźnik [generic_category](../standard-library/system-error-functions.md#generic_category).
+Pierwszy Konstruktor przechowuje zero wartość kodu błędu i wskaźnik do [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-Drugi Konstruktor magazynów *val* jako wartość kodu błędu i wskaźnik [error_category](../standard-library/error-category-class.md).
+Drugi Konstruktor przechowuje *Val* jako wartość kodu błędu i wskaźnik do [error_category](../standard-library/error-category-class.md).
 
-Trzeci Konstruktor magazynów `(value_type)_Errcode` jako wartość kodu błędu i wskaźnik [generic_category](../standard-library/system-error-functions.md#generic_category).
+Trzeci Konstruktor przechowuje `(value_type)_Errcode` jako wartość kodu błędu i wskaźnik do [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-### <a name="message"></a> Komunikat
+### <a name="message"></a><a name="message"></a>Komunikat
 
-Zwraca nazwę kod błędu.
+Zwraca nazwę kodu błędu.
 
 ```cpp
 string message() const;
@@ -176,15 +176,15 @@ string message() const;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-A `string` reprezentujący nazwę kod błędu.
+`string`Reprezentujący nazwę kodu błędu.
 
 #### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego zwraca `category().message(value())`.
+Ta funkcja członkowska zwraca `category().message(value())` .
 
-### <a name="op_eq_eq"></a> operator ==
+### <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
-Testuje pod kątem równości pomiędzy `error_code` obiektów.
+Testuje równość między `error_code` obiektami.
 
 ```cpp
 bool operator==(const error_code& right) const;
@@ -192,20 +192,20 @@ bool operator==(const error_code& right) const;
 
 #### <a name="parameters"></a>Parametry
 
-*po prawej stronie*\
-Obiekt, który ma zostać przetestowana pod kątem równości.
+*Kliknij*\
+Obiekt, który ma być testowany pod kątem równości.
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obiekty są równe; **false** obiekty nie są równe.
+**`true`** Jeśli obiekty są równe; **`false`** Jeśli obiekty nie są równe.
 
 #### <a name="remarks"></a>Uwagi
 
-Operator elementu członkowskiego zwraca `category() == right.category() && value == right.value()`.
+Operator elementu członkowskiego zwraca `category() == right.category() && value == right.value()` .
 
-### <a name="op_neq"></a> operator! =
+### <a name="operator"></a><a name="op_neq"></a>operator! =
 
-Testuje pod kątem nierówności pomiędzy `error_code` obiektów.
+Testuje pod kątem nierówności między `error_code` obiektami.
 
 ```cpp
 bool operator!=(const error_code& right) const;
@@ -213,20 +213,20 @@ bool operator!=(const error_code& right) const;
 
 #### <a name="parameters"></a>Parametry
 
-*po prawej stronie*\
-Obiekt, który ma zostać przetestowana pod kątem nierówności.
+*Kliknij*\
+Obiekt, który ma być testowany pod kątem nierówności.
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli `error_code` obiektu nie jest równa `error_code` obiekt przekazany w *prawo*; w przeciwnym razie **false**.
+**`true`** Jeśli `error_code` obiekt nie jest równy `error_code` obiektowi przekazanym w *prawej*; w przeciwnym razie **`false`** .
 
 #### <a name="remarks"></a>Uwagi
 
-Operator elementu członkowskiego zwraca `!(*this == right)`.
+Operator elementu członkowskiego zwraca `!(*this == right)` .
 
-### <a name="op_lt"></a> Operator&lt;
+### <a name="operatorlt"></a><a name="op_lt"></a>zakład&lt;
 
-Sprawdza, czy `error_code` obiekt jest mniejszy od `error_code` obiekt przekazany do porównania.
+Testuje, czy `error_code` obiekt jest mniejszy niż `error_code` obiekt przeszedł do porównania.
 
 ```cpp
 bool operator<(const error_code& right) const;
@@ -234,20 +234,20 @@ bool operator<(const error_code& right) const;
 
 #### <a name="parameters"></a>Parametry
 
-*po prawej stronie*\
-Error_code — obiekt, który ma zostać porównane.
+*Kliknij*\
+Obiekt error_code, który ma zostać porównany.
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli `error_code` obiekt jest mniejszy od `error_code` obiekt przekazany do porównania; W przeciwnym razie **false**.
+**`true`** Jeśli `error_code` obiekt jest mniejszy niż `error_code` obiekt przeszedł do porównania; W przeciwnym razie **`false`** .
 
 #### <a name="remarks"></a>Uwagi
 
-Operator elementu członkowskiego zwraca `category() < right.category() || category() == right.category() && value < right.value()`.
+Operator elementu członkowskiego zwraca `category() < right.category() || category() == right.category() && value < right.value()` .
 
-### <a name="op_eq"></a> operator =
+### <a name="operator"></a><a name="op_eq"></a>operator =
 
-Przypisuje nową wartość wyliczenia do `error_code` obiektu.
+Przypisuje nowej wartości wyliczenia do `error_code` obiektu.
 
 ```cpp
 template <class _Enum>
@@ -258,19 +258,19 @@ typename enable_if<is_error_code_enum<_Enum>::value, error_code>::type&
 #### <a name="parameters"></a>Parametry
 
 *_Errcode*\
-Wartość wyliczenia do przypisania do `error_code` obiektu.
+Wartość wyliczenia, która ma zostać przypisana do `error_code` obiektu.
 
 #### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do `error_code` obiektu, który jest przypisany nową wartość wyliczenia przy użyciu funkcji elementu członkowskiego.
+Odwołanie do `error_code` obiektu, do którego jest przypisana nowa wartość wyliczenia przez funkcję członkowską.
 
 #### <a name="remarks"></a>Uwagi
 
-Magazyny operator członkowski `(value_type)_Errcode` jako wartość kodu błędu i wskaźnik [generic_category](../standard-library/system-error-functions.md#generic_category). Zwraca `*this`.
+Operator elementu członkowskiego przechowuje `(value_type)_Errcode` jako wartość kodu błędu i wskaźnik do [generic_category](../standard-library/system-error-functions.md#generic_category). Zwraca wartość **`*this`** .
 
-### <a name="op_bool"></a> bool — operator
+### <a name="operator-bool"></a><a name="op_bool"></a>wartość logiczna operatora
 
-Rzutuje zmienną typu `error_code`.
+Rzutuje zmienną typu `error_code` .
 
 ```cpp
 explicit operator bool() const;
@@ -282,11 +282,11 @@ Wartość logiczna `error_code` obiektu.
 
 #### <a name="remarks"></a>Uwagi
 
-Operator zwraca można przekonwertować wartości na **true** tylko wtedy, gdy [wartość](#value) nie jest równa zero. Typ zwracany jest konwertowany tylko **bool**, nie `void *` lub innych znanych typów skalarnych.
+Operator zwraca wartość, która **`true`** jest możliwa do konwersji tylko wtedy, gdy [wartość](#value) nie jest równa zero. Typ zwracany jest konwertowany tylko na **`bool`** , nie do `void *` lub inne znane typy skalarne.
 
-### <a name="value"></a> Wartość
+### <a name="value"></a><a name="value"></a>wartościami
 
-Zwraca wartość kodu błędu przechowywanych.
+Zwraca przechowywaną wartość kodu błędu.
 
 ```cpp
 value_type value() const;
@@ -294,11 +294,11 @@ value_type value() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość kodu błędu przechowywanych typu [value_type](#value_type).
+Wartość przechowywanego kodu błędu typu [value_type](#value_type).
 
-### <a name="value_type"></a> value_type
+### <a name="value_type"></a><a name="value_type"></a>value_type
 
-Typ, który reprezentuje wartość kodu błędu przechowywanych.
+Typ reprezentujący przechowywaną wartość kodu błędu.
 
 ```cpp
 typedef int value_type;
@@ -306,4 +306,4 @@ typedef int value_type;
 
 #### <a name="remarks"></a>Uwagi
 
-Ta definicja typu jest synonimem dla **int**.
+Ta definicja typu jest synonimem dla **`int`** .
