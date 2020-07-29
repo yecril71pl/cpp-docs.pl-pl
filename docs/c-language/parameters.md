@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ellipsis (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-ms.openlocfilehash: 78ad91ea86d81a3b6d888335ba7b78399a1d2aea
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 57648747bbb50ffe46b199a03563757c331f088a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032073"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229574"
 ---
 # <a name="parameters"></a>Parametry
 
@@ -25,39 +25,37 @@ Argumenty są nazwami wartości przekazaną do funkcji przez wywołanie funkcji.
 
 ## <a name="syntax"></a>Składnia
 
-*definicja funkcji*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja-specyfikators*<sub>opt</sub> *Attribute-SEQ*<sub>opt</sub> *deklarator* *deklaracji-list*<sub>opt</sub> *złożone-instrukcja*
+*`function-definition`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`*<sub>wybór</sub> *`attribute-seq`* <sub>wybór</sub> *`declarator`* *`declaration-list`* <sub>wybór</sub>*`compound-statement`*
 
-/\**atrybut-seq* jest specyficzny dla firmy Microsoft\*/
+/\**`attribute-seq`* czy specyficzny dla firmy Microsoft\*/
 
-*deklarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>wybór</sub> wskaźnika *Direct-deklarator*
+*`declarator`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`pointer`*<sub>wybór</sub>*`direct-declarator`*
 
-*Direct-deklarator*:/\* A funkcja deklarator\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(***Typ parametru-list***)**  / \* New-Style deklarator      \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***(** nieważność*listy identyfikatorów*<sub>opt</sub> **)**  / \* — przestarzałe style deklarator    \*/
+*`direct-declarator`*:/ \* Funkcja deklarator\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`*  **`(`**  *`parameter-type-list`*  **`)`** /\*Deklarator nowego stylu\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`*  **`(`**  *`identifier-list`*<sub>opt</sub> **`)`**  / wybór \* Przestarzałe style deklarator\*/
 
-*Typ parametru-list*:/\* lista parametrów\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* **,...**
+*`parameter-type-list`*:/ \* Lista parametrów\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* **`, ...`**
 
-*Lista parametrów*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Deklaracja parametru*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Lista parametrów* **,**  *Deklaracja parametru*
+*`parameter-list`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-declaration`*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* **`,`**  *`parameter-declaration`*
 
-*Deklaracja parametru*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specyfikatory deklaracji* *deklarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;abstrakcyjne *specyfikatory deklaracji* *-deklarator*<sub>opt</sub>
+*`parameter-declaration`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`* *`declarator`*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`**`abstract-declarator`* <sub>wybór</sub>
 
-*Typ parametru-list* jest sekwencją deklaracji parametrów oddzielonych przecinkami. Formularz każdego parametru na liście parametrów wygląda następująco:
+*`parameter-type-list`* Jest sekwencją deklaracji parametrów oddzielonych przecinkami. Formularz każdego parametru na liście parametrów wygląda następująco:
 
-```C
-[register]  type-specifier [declarator]
-```
+> **`register`**<sub>wybór</sub> *`type-specifier`* *`declarator`* <sub>wybór</sub>
 
-Parametry funkcji zadeklarowane z **błędami generowania atrybutu** AutoGenerate. Identyfikatory parametrów są używane w treści funkcji w celu odwoływania się do wartości przekazaną do funkcji. Parametry można nazwać w prototypie, ale nazwy wykraczają poza zakres na końcu deklaracji. W związku z tym nazwy parametrów mogą być przypisywane w taki sam sposób lub w inny sposób w definicji funkcji. Tych identyfikatorów nie można ponownie zdefiniować w zewnętrznym bloku treści funkcji, ale można je ponownie zdefiniować w wewnętrznych, zagnieżdżonych blokach tak, jakby lista parametrów była otaczającym blokiem.
+Parametry funkcji zadeklarowane za pomocą **`auto`** atrybutu generują błędy. Identyfikatory parametrów są używane w treści funkcji w celu odwoływania się do wartości przekazaną do funkcji. Parametry można nazwać w prototypie, ale nazwy wykraczają poza zakres na końcu deklaracji. Oznacza to, że nazwy parametrów mogą być przypisywane w taki sam sposób lub w różny sposób w definicji funkcji. Tych identyfikatorów nie można ponownie zdefiniować w zewnętrznym bloku treści funkcji, ale można je ponownie zdefiniować w wewnętrznych, zagnieżdżonych blokach tak, jakby lista parametrów była otaczającym blokiem.
 
-Każdy identyfikator na *liście parametrów typu* musi być poprzedzony odpowiednim specyfikatorem typu, jak pokazano w tym przykładzie:
+Każdy identyfikator w *`parameter-type-list`* musi być poprzedzony odpowiadającym mu specyfikatorem typu, jak pokazano w poniższym przykładzie:
 
 ```C
 void new( double x, double y, double z )
@@ -66,14 +64,14 @@ void new( double x, double y, double z )
 }
 ```
 
-Jeśli na liście parametrów występuje co najmniej jeden parametr, lista może kończyć się przecinkiem, po którym następuje trzy kropki (**,...**). Ta konstrukcja, nazywana "notacją wielokropka," oznacza zmienną liczbę argumentów funkcji. (Zobacz [wywołania z zmienną liczbą argumentów,](../c-language/calls-with-a-variable-number-of-arguments.md) Aby uzyskać więcej informacji). Jednak wywołanie funkcji musi mieć co najmniej tyle argumentów, ponieważ istnieją parametry przed ostatnim przecinkiem.
+Jeśli na liście parametrów występuje co najmniej jeden parametr, lista może kończyć się przecinkiem, po którym następuje trzy kropki ( **`, ...`** ). Ta konstrukcja, nazywana "notacją wielokropka," oznacza zmienną liczbę argumentów funkcji. (Aby uzyskać więcej informacji, zobacz [wywołania z zmienną liczbą argumentów](../c-language/calls-with-a-variable-number-of-arguments.md)). Jednak wywołanie funkcji musi mieć co najmniej tyle argumentów, ponieważ istnieją parametry przed ostatnim przecinkiem.
 
-Jeśli żadne argumenty nie mają być przekazane do funkcji, lista parametrów jest zastępowana słowem kluczowym `void`. To użycie `void` jest odrębne od jego użycia jako specyfikatora typu.
+Jeśli żadne argumenty nie mają być przekazane do funkcji, lista parametrów jest zastępowana słowem kluczowym **`void`** . To użycie **`void`** jest odrębne od jego użycia jako specyfikatora typu.
 
-Kolejność i typ parametrów, łącznie z dowolnym użyciem notacji wielokropka, muszą być takie same we wszystkich deklaracjach funkcji (jeśli istnieją) i w definicji funkcji. Typy argumentów po zwykłych konwersje arytmetyczne muszą być zgodne z typami odpowiednich parametrów. (Zobacz [typowe konwersje arytmetyczne](../c-language/usual-arithmetic-conversions.md) , aby uzyskać informacje na temat konwersji arytmetycznych). Argumenty po wielokropku nie są sprawdzane. Parametr może mieć dowolny typ podstawowy, struktura, Unia, wskaźnik lub tablicę.
+Kolejność i typ parametrów, łącznie z dowolnym użyciem notacji wielokropka, muszą być takie same we wszystkich deklaracjach funkcji (jeśli istnieją) i w definicji funkcji. Typy argumentów po zwykłych konwersje arytmetyczne muszą być zgodne z typami odpowiednich parametrów. (Zobacz [typowe konwersje arytmetyczne](../c-language/usual-arithmetic-conversions.md) , aby uzyskać informacje na temat konwersji arytmetycznych). Argumenty po wielokropku nie są zaznaczone. Parametr może mieć dowolny typ podstawowy, struktura, Unia, wskaźnik lub tablicę.
 
-Kompilator wykonuje Zwykłe konwersje arytmetyczne niezależnie od każdego parametru i każdego argumentu, w razie potrzeby. Po konwersji żaden parametr nie jest krótszy niż `int`, a żaden parametr nie ma typu **zmiennoprzecinkowego** , chyba że typ parametru jest jawnie określony jako **float** w prototypie. Oznacza to, na przykład, który deklaruje parametr jako `char` ma taki sam skutek jak zadeklarowanie go jako. `int`
+Kompilator wykonuje Zwykłe konwersje arytmetyczne niezależnie od każdego parametru i każdego argumentu, w razie potrzeby. Po konwersji żaden parametr nie jest krótszy niż **`int`** , a żaden parametr nie ma **`float`** typu, chyba że typ parametru jest jawnie określony jako **`float`** w prototypie. Oznacza to, na przykład, który deklaruje parametr jako **`char`** ma taki sam skutek jak zadeklarowanie go jako **`int`** .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Definicje funkcji języka C](../c-language/c-function-definitions.md)

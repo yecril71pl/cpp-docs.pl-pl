@@ -16,34 +16,34 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: 702324c3300ff23bb60113529a681e3b8fa99354
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d8c9538c9f3d889360c0527ba538e9e091df0755
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331621"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229964"
 ---
 # <a name="compiler-options-macros"></a>Makra opcji kompilatora
 
-Te makra kontrolują określone funkcje kompilatora.
+Te makra sterują określonymi funkcjami kompilatora.
 
 |||
 |-|-|
-|[_ATL_ALL_WARNINGS](#_atl_all_warnings)|Symbol, który włącza błędy w projektach konwertowanych z poprzednich wersji ATL.|
-|[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Zdefiniuj, czy jeden lub więcej obiektów używa wątków mieszkania.|
-|[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Sprawia, `CString` że niektóre konstruktory jawne, zapobiegając niezamierzone konwersje.|
-|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Zdefiniuj to makro w celu użycia składni zgodnej ze standardem C++, która generuje błąd kompilatora C4867, gdy niestandardowa składnia jest używana do inicjowania wskaźnika do funkcji elementu członkowskiego.|
-|[_ATL_FREE_THREADED](#_atl_free_threaded)|Zdefiniuj, czy jeden lub więcej obiektów używa wątków wolnych lub neutralnych.|
-|[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Symbol wskazujący projekt będzie miał obiekty, które są oznaczone jako zarówno, wolne lub neutralne. Zamiast tego należy użyć [_ATL_FREE_THREADED](#_atl_free_threaded) makr.|
+|[_ATL_ALL_WARNINGS](#_atl_all_warnings)|Symbol, który umożliwia błędy w projektach przekonwertowanych z poprzednich wersji ATL.|
+|[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Zdefiniuj, czy co najmniej jeden z obiektów ma używać wątków apartamentu.|
+|[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Sprawia, że niektóre `CString` konstruktory są jawne, zapobiegając niezamierzonym konwersji.|
+|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Zdefiniuj to makro, aby użyć standardowej składni zgodnej języka C++, która generuje błąd kompilatora C4867, gdy składnia niestandardowa jest używana do inicjowania wskaźnika do funkcji członkowskiej.|
+|[_ATL_FREE_THREADED](#_atl_free_threaded)|Zdefiniuj, czy co najmniej jeden z obiektów ma korzystać z wątków bezpłatnych, czy neutralnych.|
+|[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Symbol wskazujący, że projekt będzie miał obiekty, które są oznaczone jako zarówno, bezpłatny, jak i neutralny. Należy zamiast tego użyć makra [_ATL_FREE_THREADED](#_atl_free_threaded) .|
 |[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Symbol, który uniemożliwia domyślne użycie przestrzeni nazw jako ATL.|
-|[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|Symbol, który uniemożliwia kompilowanie kodu związanego z com z projektem.|
-|[ATL_NO_VTABLE](#atl_no_vtable)|Symbol, który uniemożliwia vtable wskaźnik inicjuje w konstruktorze klasy i destruktora.|
-|[ATL_NOINLINE](#atl_noinline)|Symbol wskazujący funkcję nie powinien być inlined.|
-|[_ATL_SINGLE_THREADED](#_atl_single_threaded)|Zdefiniuj, czy wszystkie obiekty używają modelu pojedynczego wątku.|
+|[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|Symbol uniemożliwiający kompilowanie kodu związanego z modelem COM przy użyciu projektu.|
+|[ATL_NO_VTABLE](#atl_no_vtable)|Symbol, który uniemożliwia zainicjowanie wskaźnika tabeli metod w konstruktorze i destruktorze klasy.|
+|[ATL_NOINLINE](#atl_noinline)|Symbol wskazujący, że funkcja nie powinna być wbudowana.|
+|[_ATL_SINGLE_THREADED](#_atl_single_threaded)|Zdefiniuj, czy wszystkie obiekty korzystają z modelu pojedynczego wątku.|
 
 ## <a name="_atl_all_warnings"></a><a name="_atl_all_warnings"></a>_ATL_ALL_WARNINGS
 
-Symbol, który włącza błędy w projektach konwertowanych z poprzednich wersji ATL.
+Symbol, który umożliwia błędy w projektach przekonwertowanych z poprzednich wersji ATL.
 
 ```
 #define _ATL_ALL_WARNINGS
@@ -51,35 +51,35 @@ Symbol, który włącza błędy w projektach konwertowanych z poprzednich wersji
 
 ### <a name="remarks"></a>Uwagi
 
-Przed Visual C++ .NET 2002 ATL wyłączone wiele ostrzeżeń i pozostawił je wyłączone, tak aby nigdy nie pojawił się w kodzie użytkownika. Są to:
+Przed Visual C++ .NET 2002, ATL wyłączył wiele ostrzeżeń i pozostawiono je wyłączyć, aby nigdy nie były wyświetlane w kodzie użytkownika. W szczególności:
 
-- Wyrażenie warunkowe C4127 jest stałe
+- Wyrażenie warunkowe C4127 jest stałą
 
-- C4786 "identyfikator": identyfikator został obcięty do znaków "numer" w informacjach debugowania
+- C4786 ': identyfikator został obcięty do znaków "number" w informacjach o debugowaniu
 
-- Używane niestandardowe rozszerzenie C4201 : bezimienna struktura/unia
+- Użyto niestandardowego rozszerzenia C4201: pustego struct/Union
 
-- C4103 'nazwa pliku': używany #pragma pack do zmiany wyrównania
+- C4103 "filename": używany #pragma Pack do zmiany wyrównania
 
-- C4291 "deklaracja": nie znaleziono usuwania pasującego operatora; pamięć nie zostanie zwolniona, jeśli inicjalizacja zda wyjątek
+- C4291 "Deklaracja": nie znaleziono pasującego operatora delete; pamięć nie zostanie zwolniona, jeśli Inicjalizacja zgłosi wyjątek
 
-- C4268 "identyfikator" : "const" statyczne/globalne dane zainicjowane za pomocą wygenerowanego przez kompilatora domyślnego konstruktora wypełnia obiekt zerami
+- C4268 "Identyfikator": "const" dane statyczne/globalne zainicjowane za pomocą konstruktora domyślnego generowanego przez kompilator wypełniają obiekt zerami
 
 - C4702 nieosiągalny kod
 
 W projektach przekonwertowanych z poprzednich wersji te ostrzeżenia są nadal wyłączone przez nagłówki bibliotek.
 
-Dodając następujący wiersz do pliku *pch.h* (*stdafx.h* w programie Visual Studio 2017 i wcześniejszych) przed dołączeniem nagłówków bibliotek, to zachowanie można zmienić.
+Po dodaniu następującego wiersza do pliku *PCH. h* (*stdafx. h* w programie Visual Studio 2017 i starszych) przed dołączeniem nagłówków bibliotek można zmienić to zachowanie.
 
 [!code-cpp[NVC_ATL_Utilities#97](../../atl/codesnippet/cpp/compiler-options-macros_1.h)]
 
-Jeśli `#define` zostanie to dodane, nagłówki ATL są ostrożne, aby zachować stan tych ostrzeżeń, tak aby nie są wyłączone globalnie (lub jeśli użytkownik jawnie wyłącza poszczególne ostrzeżenia, aby nie włączyć je).
+W przypadku `#define` dodania tego elementu w nagłówkach ATL należy zachować ostrożność w celu zachowania tych ostrzeżeń, aby nie były one wyłączone globalnie (lub jeśli użytkownik jawnie wyłącza poszczególne ostrzeżenia, a nie włączy ich).
 
-Nowe projekty `#define` mają ten zestaw w *pch.h* (*stdafx.h* w programie Visual Studio 2017 i wcześniejszych) domyślnie.
+Nowe projekty mają ten `#define` zestaw w *PCH. h* (*stdafx. h* w programie Visual Studio 2017 i starszych) domyślnie.
 
 ## <a name="_atl_apartment_threaded"></a><a name="_atl_apartment_threaded"></a>_ATL_APARTMENT_THREADED
 
-Zdefiniuj, czy jeden lub więcej obiektów używa wątków mieszkania.
+Zdefiniuj, czy co najmniej jeden z obiektów ma używać wątków apartamentu.
 
 ```
 _ATL_APARTMENT_THREADED
@@ -87,11 +87,11 @@ _ATL_APARTMENT_THREADED
 
 ### <a name="remarks"></a>Uwagi
 
-Określa wątki apartamentu. Zobacz [Określanie modelu wątkowego projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) dla innych opcji wątków i [opcje, Kreator obiektów prostych ATL](../../atl/reference/options-atl-simple-object-wizard.md) opis modeli wątków dostępnych dla obiektu ATL.
+Określa wątkowość apartamentu. Aby zapoznać się z opisem modeli wątkowości dostępnych dla obiektu ATL, zobacz [Określanie modelu wątkowości projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) dla innych opcji wątkowego i [opcji, Kreator prostych obiektów ATL](../../atl/reference/options-atl-simple-object-wizard.md) .
 
 ## <a name="_atl_cstring_explicit_constructors"></a><a name="_atl_cstring_explicit_constructors"></a>_ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
-Sprawia, `CString` że niektóre konstruktory jawne, zapobiegając niezamierzone konwersje.
+Sprawia, że niektóre `CString` konstruktory są jawne, zapobiegając niezamierzonym konwersji.
 
 ```
 _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
@@ -99,13 +99,13 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy ten konstruktor jest zdefiniowany, wszystkie konstruktory CString, które przyjmują pojedynczy parametr są kompilowane za pomocą jawnego słowa kluczowego, co zapobiega niejawnym konwersjom argumentów wejściowych. Oznacza to, na przykład, że po zdefiniowaniu _UNICODE, jeśli spróbujesz użyć ciągu char* jako argument konstruktora CString, spowoduje to błąd kompilatora. Użyj tego makra w sytuacjach, w których należy zapobiegać konwersjom niejawnym między typami ciągów wąskich i szerokich.
+Po zdefiniowaniu tego konstruktora wszystkie konstruktory CString, które pobierają jeden parametr, są kompilowane za pomocą słowa kluczowego Explicit, co uniemożliwia niejawne konwersje argumentów wejściowych. Oznacza to, na przykład, że jeśli _UNICODE jest zdefiniowany, jeśli spróbujesz użyć ciągu char * jako argumentu konstruktora CString, spowoduje to błąd kompilatora. Tego makra należy używać w sytuacjach, gdy trzeba zapobiec niejawnym konwersji między typami ciągów wąskich i szerokich.
 
-Za pomocą makra _T na wszystkich argumentów ciągu konstruktora, można zdefiniować _ATL_CSTRING_EXPLICIT_CONSTRUCTORS i uniknąć błędów kompilacji, niezależnie od tego, czy _UNICODE jest zdefiniowany.
+Za pomocą makra _T dla wszystkich argumentów ciągu konstruktora można zdefiniować _ATL_CSTRING_EXPLICIT_CONSTRUCTORS i uniknąć błędów kompilacji, niezależnie od tego, czy _UNICODE jest zdefiniowany.
 
 ## <a name="_atl_enable_ptm_warning"></a><a name="_atl_enable_ptm_warning"></a>_ATL_ENABLE_PTM_WARNING
 
-Zdefiniuj to makro, aby wymusić użycie standardowej składni zgodnej ze standardem ANSI C++ dla funkcji wskaźnika do elementów członkowskich. Użycie tego makra spowoduje, że błąd kompilatora C4867 zostanie wygenerowany, gdy niestandardowa składnia jest używana do inicjowania wskaźnika do funkcji elementu członkowskiego.
+Zdefiniuj to makro, aby wymusić użycie standardowej składni ANSI C++ zgodnej ze wskaźnikiem do funkcji składowych. Użycie tego makra spowoduje wygenerowanie błędu kompilatora C4867, gdy niestandardowa składnia zostanie użyta do zainicjowania wskaźnika do funkcji członkowskiej.
 
 ```
 #define _ATL_ENABLE_PTM_WARNING
@@ -113,11 +113,11 @@ Zdefiniuj to makro, aby wymusić użycie standardowej składni zgodnej ze standa
 
 ### <a name="remarks"></a>Uwagi
 
-Biblioteki ATL i MFC zostały zmienione, aby były zgodne z ulepszoną standardową zgodnością kompilatora Języka C++ firmy Microsoft. Zgodnie ze standardem ANSI C++ składnia wskaźnika do funkcji `&CMyClass::MyFunc`elementu członkowskiego klasy powinna być .
+Biblioteki ATL i MFC zostały zmienione tak, aby pasowały do ulepszonej standardowej zgodności języka C++ w kompilatorze Microsoft C++. Zgodnie ze standardem ANSI C++, składnia wskaźnika do funkcji składowej klasy powinna być `&CMyClass::MyFunc` .
 
-Gdy [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) nie jest zdefiniowany (przypadek domyślny), ATL/MFC wyłącza błąd C4867 w mapach makr (zwłaszcza mapy wiadomości), dzięki czemu kod, który został utworzony we wcześniejszych wersjach, może nadal tworzyć jak poprzednio. Jeśli zdefiniujesz **_ATL_ENABLE_PTM_WARNING,** kod powinien być zgodny ze standardem C++.
+Jeśli nie zdefiniowano [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) (przypadek domyślny), ATL/MFC wyłącza błąd C4867 w mapach makr (szczególnie w mapach komunikatów), dzięki czemu kod, który został utworzony we wcześniejszych wersjach, może nadal być gotowy do kompilacji. Jeśli zdefiniujesz **_ATL_ENABLE_PTM_WARNING**, kod powinien być zgodny ze standardem C++.
 
-Jednak niestandardowy formularz został przestarzały. Należy przenieść istniejący kod do standardowej składni zgodnej ze standardem C++. Na przykład następujący kod:
+Niestandardowa forma nie jest jednak przestarzała. Należy przenieść istniejący kod do składni zgodnej ze standardem C++. Na przykład następujący kod:
 
 [!code-cpp[NVC_MFCListView#14](../../atl/reference/codesnippet/cpp/compiler-options-macros_2.cpp)]
 
@@ -125,11 +125,11 @@ Należy zmienić na:
 
 [!code-cpp[NVC_MFCListView#11](../../atl/reference/codesnippet/cpp/compiler-options-macros_3.cpp)]
 
-W przypadku makr mapy dodaj znak ampersand "&". Nie należy ponownie dodawać znaku w kodzie.
+Dla makr mapy Dodaj znak handlowego "&". Nie należy ponownie dodawać znaku w kodzie.
 
 ## <a name="_atl_free_threaded"></a><a name="_atl_free_threaded"></a>_ATL_FREE_THREADED
 
-Zdefiniuj, czy jeden lub więcej obiektów używa wątków wolnych lub neutralnych.
+Zdefiniuj, czy co najmniej jeden z obiektów ma korzystać z wątków bezpłatnych, czy neutralnych.
 
 ```
 _ATL_FREE_THREADED
@@ -137,11 +137,11 @@ _ATL_FREE_THREADED
 
 ### <a name="remarks"></a>Uwagi
 
-Określa wolne wątki. Swobodne gwintowanie jest równoznaczne z modelem mieszkania wielowątkowe. Zobacz [Określanie modelu wątkowego projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) dla innych opcji wątków i [opcje, Kreator obiektów prostych ATL](../../atl/reference/options-atl-simple-object-wizard.md) opis modeli wątków dostępnych dla obiektu ATL.
+Określa bezpłatną wielowątkowość. Bezpłatna wątkowość jest równoważna z modelem apartamentu wielowątkowej. Aby zapoznać się z opisem modeli wątkowości dostępnych dla obiektu ATL, zobacz [Określanie modelu wątkowości projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) dla innych opcji wątkowego i [opcji, Kreator prostych obiektów ATL](../../atl/reference/options-atl-simple-object-wizard.md) .
 
 ## <a name="_atl_multi_threaded"></a><a name="_atl_multi_threaded"></a>_ATL_MULTI_THREADED
 
-Symbol wskazujący projekt będzie miał obiekty, które są oznaczone jako zarówno, wolne lub neutralne.
+Symbol wskazujący, że projekt będzie miał obiekty, które są oznaczone jako zarówno, bezpłatny, jak i neutralny.
 
 ```
 _ATL_MULTI_THREADED
@@ -149,7 +149,7 @@ _ATL_MULTI_THREADED
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli ten symbol jest zdefiniowany, ATL będzie pobierać kod, który będzie poprawnie synchronizować dostęp do danych globalnych. Nowy kod powinien zamiast tego używać równoważnego [_ATL_FREE_THREADED](#_atl_free_threaded) makra.
+Jeśli ten symbol jest zdefiniowany, ATL będzie ściągać kod, który będzie poprawnie synchronizować dostęp do danych globalnych. Zamiast tego nowy kod powinien używać równoważnego makra [_ATL_FREE_THREADED](#_atl_free_threaded) .
 
 ## <a name="_atl_no_automatic_namespace"></a><a name="_atl_no_automatic_namespace"></a>_ATL_NO_AUTOMATIC_NAMESPACE
 
@@ -161,11 +161,11 @@ _ATL_NO_AUTOMATIC_NAMESPACE
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli ten symbol nie jest zdefiniowany, w tym atlbase.h będzie działać **przy użyciu przestrzeni nazw ATL** domyślnie, co może prowadzić do konfliktów nazewnictwa. Aby temu zapobiec, zdefiniuj ten symbol.
+Jeśli ten symbol nie jest zdefiniowany, w tym atlbase. h zostanie wykonane **przy użyciu przestrzeni nazw ATL** domyślnie, co może prowadzić do konfliktów nazw. Aby tego uniknąć, Zdefiniuj ten symbol.
 
 ## <a name="_atl_no_com_support"></a><a name="_atl_no_com_support"></a>_ATL_NO_COM_SUPPORT
 
-Symbol, który uniemożliwia kompilowanie kodu związanego z com z projektem.
+Symbol uniemożliwiający kompilowanie kodu związanego z modelem COM przy użyciu projektu.
 
 ```
 _ATL_NO_COM_SUPPORT
@@ -173,7 +173,7 @@ _ATL_NO_COM_SUPPORT
 
 ## <a name="atl_no_vtable"></a><a name="atl_no_vtable"></a>ATL_NO_VTABLE
 
-Symbol, który uniemożliwia vtable wskaźnik inicjuje w konstruktorze klasy i destruktora.
+Symbol, który uniemożliwia zainicjowanie wskaźnika tabeli metod w konstruktorze i destruktorze klasy.
 
 ```
 ATL_NO_VTABLE
@@ -181,7 +181,7 @@ ATL_NO_VTABLE
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wskaźnik vtable nie jest inicjowany w konstruktorze klasy i destruktora, konsolidator można wyeliminować vtable i wszystkie funkcje, do których wskazuje. Rozwija się do **__declspec(novtable)**.
+Jeśli wskaźnik tablic wirtualnych nie zostanie zainicjowany w konstruktorze i destruktorze klasy, konsolidator może wyeliminować tablicę i wszystkie funkcje, do których się odwołuje. Rozwija do **`__declspec(novtable)`** .
 
 ### <a name="example"></a>Przykład
 
@@ -189,7 +189,7 @@ Jeśli wskaźnik vtable nie jest inicjowany w konstruktorze klasy i destruktora,
 
 ## <a name="atl_noinline"></a><a name="atl_noinline"></a>ATL_NOINLINE
 
-Symbol wskazujący funkcję nie powinien być inlined.
+Symbol wskazujący, że funkcja nie powinna być wbudowana.
 
 ```
     ATL_NOINLINE inline
@@ -201,16 +201,16 @@ Symbol wskazujący funkcję nie powinien być inlined.
 
 ### <a name="parameters"></a>Parametry
 
-*myfunction (myfunction)*<br/>
-Funkcja, która nie powinna być inlined.
+*myFunction*<br/>
+Funkcja, która nie powinna być wbudowana.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj tego symbolu, jeśli chcesz upewnić się, że funkcja nie zostanie inlined przez kompilator, nawet jeśli musi być zadeklarowany jako wbudowany, tak aby można było umieścić w pliku nagłówka. Rozwija się do **__declspec(noinline)**.
+Użyj tego symbolu, aby upewnić się, że funkcja nie jest umieszczona w wierszu przez kompilator, mimo że musi być zadeklarowana jako wbudowana, tak aby można ją było umieścić w pliku nagłówkowym. Rozwija do **`__declspec(noinline)`** .
 
 ## <a name="_atl_single_threaded"></a><a name="_atl_single_threaded"></a>_ATL_SINGLE_THREADED
 
-Zdefiniuj, czy wszystkie obiekty używają modelu pojedynczego wątku
+Zdefiniuj, czy wszystkie obiekty używają modelu jednowątkowego
 
 ```
 _ATL_SINGLE_THREADED
@@ -218,8 +218,8 @@ _ATL_SINGLE_THREADED
 
 ### <a name="remarks"></a>Uwagi
 
-Określa, że obiekt jest zawsze uruchamiany w podstawowym wątku COM. Zobacz [Określanie modelu wątkowego projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) dla innych opcji wątków i [opcje, Kreator obiektów prostych ATL](../../atl/reference/options-atl-simple-object-wizard.md) opis modeli wątków dostępnych dla obiektu ATL.
+Określa, że obiekt jest zawsze uruchamiany w podstawowym wątku COM. Aby zapoznać się z opisem modeli wątkowości dostępnych dla obiektu ATL, zobacz [Określanie modelu wątkowości projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) dla innych opcji wątkowego i [opcji, Kreator prostych obiektów ATL](../../atl/reference/options-atl-simple-object-wizard.md) .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Makra](../../atl/reference/atl-macros.md)

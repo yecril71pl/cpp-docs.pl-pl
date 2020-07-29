@@ -1,21 +1,21 @@
 ---
-title: złożone &gt; &lt;float
+title: złożone &lt; zmiennoprzecinkowe&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - complex/std::complex<float>
 helpviewer_keywords:
 - complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-ms.openlocfilehash: 7b49e63302ad0c26f393fdfd9dd443c77455a643
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 441006c977b4a4249270d0f4809da0fba0163395
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688240"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230068"
 ---
-# <a name="complexltfloatgt"></a>złożone &gt; &lt;float
+# <a name="complexltfloatgt"></a>złożone &lt; zmiennoprzecinkowe&gt;
 
-Opisuje obiekt, który przechowuje uporządkowaną parę obiektów typu **float**, pierwszą reprezentującą rzeczywistą część liczby zespolonej i drugą reprezentującą część urojoną.
+Opisuje obiekt, który przechowuje uporządkowaną parę obiektów typu **`float`** , pierwszą reprezentującą rzeczywistą część liczby zespolonej i drugą reprezentującą część urojoną.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,24 +41,24 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametry
 
-*_RealVal* \
-Wartość typu **float** dla rzeczywistej części konstruowanej liczby zespolonej.
+*_RealVal*\
+Wartość typu **`float`** dla rzeczywistej części konstruowanej liczby zespolonej.
 
-*_ImagVal* \
-Wartość typu **float** dla części urojonej konstruowanej liczby zespolonej.
+*_ImagVal*\
+Wartość typu **`float`** dla części urojonej konstruowanej liczby zespolonej.
 
-*complexNum* \
-Złożona liczba typu **Double** lub typu **Long Double** , których elementy rzeczywiste i urojone są używane do zainicjowania złożonej liczby konstruowanych typów **zmiennoprzecinkowych** .
+*complexNum*\
+Liczba złożona typu **`double`** lub typu, **`long double`** którego elementy rzeczywiste i urojone są używane do zainicjowania złożonej liczby **`float`** konstruowanych typów.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Złożona liczba typu **zmiennoprzecinkowego**.
+Złożona liczba typu **`float`** .
 
 ## <a name="remarks"></a>Uwagi
 
-Jawna specjalizacja szablonu klasy złożonego do złożonej klasy typu **zmiennoprzecinkowego** różni się od szablonu klasy tylko w konstruktorach, które definiuje. Konwersja z wartości **zmiennoprzecinkowej** na **Double** może być niejawna, ale mniej bezpieczna konwersja z wartości **zmiennoprzecinkowych** na **Long Double** musi być **jawna**. Użycie **jawnych** reguł inicjacji z konwersją typu przy użyciu składni przypisania.
+Jawna specjalizacja szablonu klasy złożonego do złożonej klasy typu **`float`** różni się od szablonu klasy tylko w konstruktorach, które definiuje. Konwersja z **`float`** do na **`double`** może być niejawna, ale mniej bezpieczna konwersja z **`float`** do na **`long double`** jest wymagana **`explicit`** . Użycie **`explicit`** reguł inicjacji z konwersją typu przy użyciu składni przypisywania.
 
-Aby uzyskać więcej informacji na `complex` szablonu klasy, zobacz [Klasa złożona](../standard-library/complex-class.md). Aby uzyskać listę elementów członkowskich `complex` szablonu klasy, zobacz.
+Aby uzyskać więcej informacji na temat szablonu klasy `complex` , zobacz [Klasa złożona](../standard-library/complex-class.md). Aby uzyskać listę elementów członkowskich szablonu klasy `complex` , zobacz.
 
 ## <a name="example"></a>Przykład
 
@@ -118,11 +118,11 @@ arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**: \<complex >
+**Nagłówek**:\<complex>
 
 **Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa złożona](../standard-library/complex-class.md) \
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Klasa złożona](../standard-library/complex-class.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

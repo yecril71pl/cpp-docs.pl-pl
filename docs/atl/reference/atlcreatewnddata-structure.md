@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _AtlCreateWndData structure
 - AtlCreateWndData structure
 ms.assetid: 76ed5382-bfbf-4b8b-8a29-912688dfd2ae
-ms.openlocfilehash: 6453156a59b73bcb06c7c86920e1dc524874cef8
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: a38ddb7e3575e883c11b14a9b01004bb54fcd4a4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168543"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230016"
 ---
 # <a name="_atlcreatewnddata-structure"></a>Struktura _AtlCreateWndData
 
@@ -33,7 +33,7 @@ Ta struktura zawiera dane wystąpienia klasy w kodzie systemu Windows w ATL.
 ## <a name="members"></a>Elementy członkowskie
 
 `m_pThis`<br/>
-Wskaźnik **używany** do uzyskania dostępu do wystąpienia klasy w procedurach okna.
+**`this`** Wskaźnik używany do uzyskania dostępu do wystąpienia klasy w procedurach okna.
 
 `m_dwThreadID`<br/>
 Identyfikator wątku bieżącego wystąpienia klasy.

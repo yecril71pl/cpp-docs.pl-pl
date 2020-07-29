@@ -12,12 +12,12 @@ helpviewer_keywords:
 - '& operator, address-of operator'
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
-ms.openlocfilehash: 1bae98663b8dc2b09efeff9139e8d028abcd862e
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 2ea8fc8a26642abf593c7f4df3928ff90e66e2b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168840"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230003"
 ---
 # <a name="cadapt-class"></a>Klasa CAdapt
 
@@ -47,11 +47,11 @@ Typ dostosowany.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CAdapt:: operator const T&](#operator_const_t_amp)|Zwraca odwołanie **const** do `m_T`.|
-|[CAdapt:: operator T&](#operator_t_amp)|Zwraca odwołanie do `m_T`.|
-|[CAdapt:: operator <](#operator_lt)|Porównuje obiekt typu dostosowanego z `m_T`.|
-|[CAdapt:: operator =](#operator_eq)|Przypisuje obiekt typu dostosowanego do `m_T`.|
-|[CAdapt:: operator = =](#operator_eq_eq)|Porównuje obiekt typu dostosowanego z `m_T`.|
+|[CAdapt:: operator const T&](#operator_const_t_amp)|Zwraca **`const`** odwołanie do `m_T` .|
+|[CAdapt:: operator T&](#operator_t_amp)|Zwraca odwołanie do `m_T` .|
+|[CAdapt:: operator <](#operator_lt)|Porównuje obiekt typu dostosowanego z `m_T` .|
+|[CAdapt:: operator =](#operator_eq)|Przypisuje obiekt typu dostosowanego do `m_T` .|
+|[CAdapt:: operator = =](#operator_eq_eq)|Porównuje obiekt typu dostosowanego z `m_T` .|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
@@ -61,13 +61,13 @@ Typ dostosowany.
 
 ## <a name="remarks"></a>Uwagi
 
-`CAdapt`jest prostym szablonem używanym do zawijania klas, które definiują operator`operator &`address-of (), aby zwrócić coś innego niż adres obiektu. Przykładami takich klas są klasy ATL `CComBSTR`, `CComPtr`, i `CComQIPtr` i Klasa obsługi kompilatora com `_com_ptr_t`. W tych klasach wszystkie ponownie definiują operator address-of `CComBSTR`, aby zwrócić adres jednego z ich składowych danych (BSTR w przypadku i wskaźnik interfejsu w przypadku innych klas).
+`CAdapt`jest prostym szablonem używanym do zawijania klas, które definiują operator address-of ( `operator &` ), aby zwrócić coś innego niż adres obiektu. Przykładami takich klas są klasy ATL `CComBSTR` , `CComPtr` , i i `CComQIPtr` Klasa obsługi kompilatora com `_com_ptr_t` . W tych klasach wszystkie ponownie definiują operator address-of, aby zwrócić adres jednego z ich składowych danych (BSTR w przypadku `CComBSTR` i wskaźnik interfejsu w przypadku innych klas).
 
-`CAdapt`podstawowa rola to ukrycie operatora address-of zdefiniowanego przez klasę *T*, ale nadal zachowuje charakterystykę przystosowanej klasy. `CAdapt`spełnia tę rolę, przechowując publiczną składową, [m_T](#m_t), typu *T*, i definiując operatory konwersji, operatory porównania i Konstruktor kopiujący, aby zezwolić `CAdapt` na traktowanie specjalizacji, tak jakby były obiektami typu *T*.
+`CAdapt`podstawowa rola to ukrycie operatora address-of zdefiniowanego przez klasę *T*, ale nadal zachowuje charakterystykę przystosowanej klasy. `CAdapt`spełnia tę rolę, przechowując publiczną składową, [m_T](#m_t), typu *T*, i definiując operatory konwersji, operatory porównania i Konstruktor kopiujący, aby zezwolić na traktowanie specjalizacji, tak jakby były `CAdapt` obiektami typu *T*.
 
-Klasa `CAdapt` adaptera jest przydatna, ponieważ niektóre klasy stylu kontenera mogą uzyskać adresy zawartych w nich obiektów przy użyciu operatora address-of. Ponowne zdefiniowanie operatora address-of może spowodować problemy z tym wymaganiem, zazwyczaj powoduje błędy kompilacji i uniemożliwia wykorzystywanie typu niezaadaptowanego z klasami, które oczekują, że „po prostu ma działać”. `CAdapt`pozwala na obejście tych problemów.
+Klasa adaptera `CAdapt` jest przydatna, ponieważ niektóre klasy stylu kontenera mogą uzyskać adresy zawartych w nich obiektów przy użyciu operatora address-of. Ponowne zdefiniowanie operatora address-of może spowodować problemy z tym wymaganiem, zazwyczaj powoduje błędy kompilacji i uniemożliwia wykorzystywanie typu niezaadaptowanego z klasami, które oczekują, że „po prostu ma działać”. `CAdapt`pozwala na obejście tych problemów.
 
-`CAdapt` Zwykle, gdy chcesz przechowywać `CComBSTR`, `CComPtr`, `CComQIPtr`, lub `_com_ptr_t` obiekty w klasie stylu kontenera. Jest to najczęściej konieczne w przypadku kontenerów standardowej biblioteki języka C++ przed wsparciem standardu C++ 11, ale Kontenery biblioteki standardowej języka C++ 11 automatycznie pracują z `operator&()`typami, które mają przeciążony. Biblioteka standardowa realizuje ją wewnętrznie przy użyciu [std:: AddressOf](../../standard-library/memory-functions.md#addressof) , aby uzyskać prawdziwe adresy obiektów.
+Zwykle, `CAdapt` gdy chcesz przechowywać `CComBSTR` , `CComPtr` , `CComQIPtr` , lub `_com_ptr_t` obiekty w klasie stylu kontenera. Jest to najczęściej konieczne w przypadku kontenerów standardowej biblioteki języka C++ przed wsparciem standardu C++ 11, ale Kontenery biblioteki standardowej języka C++ 11 automatycznie pracują z typami, które mają przeciążony `operator&()` . Biblioteka standardowa realizuje ją wewnętrznie przy użyciu [std:: AddressOf](../../standard-library/memory-functions.md#addressof) , aby uzyskać prawdziwe adresy obiektów.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -103,11 +103,11 @@ T m_T;
 
 ### <a name="remarks"></a>Uwagi
 
-Dostęp do tej **publicznej** składowej danych można uzyskać bezpośrednio lub pośrednio z [operatorem const t&](#operator_const_t_amp) i [operatorem t&](#operator_t_amp).
+**`public`** Dostęp do tego elementu członkowskiego danych można uzyskać bezpośrednio lub pośrednio z [operatorem const t&](#operator_const_t_amp) i [operatorem t&](#operator_t_amp).
 
 ## <a name="cadaptoperator-const-tamp"></a><a name="operator_const_t_amp"></a>CAdapt:: operator const T&amp;
 
-Zwraca odwołanie **const** do składowej [m_T](#m_t) , co umożliwia podtraktowanie obiektu adaptera tak, jakby był obiektem typu *T*.
+Zwraca **`const`** odwołanie do elementu członkowskiego [m_T](#m_t) , co umożliwia podtraktowanie obiektu adaptera tak, jakby był obiektem typu *T*.
 
 ```cpp
 operator const T&() const;
@@ -115,7 +115,7 @@ operator const T&() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**Stałe** odwołanie do `m_T`.
+**`const`** Odwołanie do `m_T` .
 
 ## <a name="cadaptoperator-tamp"></a><a name="operator_t_amp"></a>CAdapt:: operator T&amp;
 
@@ -127,7 +127,7 @@ operator T&();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do `m_T`.
+Odwołanie do `m_T` .
 
 ## <a name="cadaptoperator-lt"></a><a name="operator_lt"></a>CAdapt:: operator&lt;
 

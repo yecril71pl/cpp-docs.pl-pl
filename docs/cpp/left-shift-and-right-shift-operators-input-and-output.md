@@ -13,12 +13,12 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 7cde299d305219f2bd0e53a9f19c2ca35a8c7b69
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4cdb353c950313396b331dc7ba01b3ea392ed0f8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404773"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186961"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operatory przesunięcia w lewo i w prawo ( &gt; &gt; i &lt; &lt; )
 
@@ -176,7 +176,7 @@ int main() {
 
 Wyrażenia po obu stronach operatora przesunięcia muszą być typami całkowitoliczbowymi. Promocje integralne są wykonywane zgodnie z zasadami opisanymi w [standardowym konwersji](standard-conversions.md). Typ wyniku jest taki sam jak typ awansowanego *wyrażenia przesunięcia*.
 
-W poniższym przykładzie zmienna typu **char** jest podwyższana do liczby **całkowitej**.
+W poniższym przykładzie zmienna typu **`char`** jest podwyższana do **`int`** .
 
 ```cpp
 #include <iostream>
@@ -228,7 +228,7 @@ Wartość `E1 << E2` jest `E1` przysuniętą do lewej `E2` pozycji bitów; opusz
 
 Wartość `E1 >> E2` jest `E1` przysuniętą do prawej `E2` pozycji bitów. Jeśli `E1` ma typ bez znaku lub `E1` ma typ ze znakiem i wartość nieujemną, wartość wyniku jest integralną częścią ilorazu **E1/2**<sup>**E2**</sup>. Jeśli `E1` ma typ ze znakiem i wartość ujemną, wynikowa wartość jest definiowana przez implementację.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wyrażenia z operatorami dwuargumentowymi](../cpp/expressions-with-binary-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

@@ -2,12 +2,12 @@
 title: Omówienie Konwencji ABI ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: 8737f7b1cbe0651b43eb3b9990a4035b60bd01b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc211b887b2b82f533c1e36bf95e6fd6b8e24728
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320728"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229769"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Omówienie Konwencji ABI ARM32
 
@@ -59,7 +59,7 @@ Użycie instrukcji IT w kodzie kciuka 2 jest niedozwolone z wyjątkiem tych szcz
    |LDR, LDR [S] B, LDR [S] H|Ładowanie z pamięci|Ale nie są to formy literału LDR|
    |STR, STRB, STRH|Przechowywanie w pamięci||
    |ADD, ADC, RSB, SBC, SUB|Dodaj lub Odejmij|Ale nie Dodaj/SUB SP, SP, imm7 Forms<br /><br /> RM! = PC, RDN! = PC, RDM! = PC|
-   |CMP, CMN|Porównanie|RM! = PC, RN! = PC|
+   |CMP, CMN|Porównaj|RM! = PC, RN! = PC|
    |MUL|Mnożenie||
    |ASR, SKRÓCONO, LSR, ROR|Bit Shift||
    |I, BIC, EOR, ORR, TST|Arytmetyka bitowa||
@@ -201,7 +201,7 @@ Domyślny stos trybu jądra w systemie Windows to trzy strony (12 KB). Należy z
 
 Wyliczenia są 32-bitowymi liczbami całkowitymi, chyba że co najmniej jedna wartość w wyliczeniu wymaga magazynu o wartości 64-bitowej podwójnego tekstu. W takim przypadku Wyliczenie zostanie podwyższone do 64-bitowej liczby całkowitej.
 
-`wchar_t`jest zdefiniowane jako równoważne `unsigned short`, aby zachować zgodność z innymi platformami.
+**`wchar_t`** jest zdefiniowane jako równoważne, aby **`unsigned short`** zachować zgodność z innymi platformami.
 
 ## <a name="stack-walking"></a>Idący stos
 
@@ -219,9 +219,9 @@ Zalecamy, aby kod wygenerowany dynamicznie został opisany przy użyciu tabel fu
 
 Procesory ARM z systemem Windows są wymagane do obsługi licznika cykl, ale użycie licznika bezpośrednio może spowodować problemy. Aby uniknąć tych problemów, system Windows on ARM używa niezdefiniowanego kodu operacji do żądania znormalizowanej wartości licznika 64-bitowego cyklu. W języku C lub C++ Użyj `__rdpmccntr64` wewnętrznego, aby wyemitować odpowiedni opcode; z zestawu, użyj `__rdpmccntr64` instrukcji. Odczyt licznika cykl trwa około 60 cykli na Cortex-A9.
 
-Licznik jest prawdziwym licznikiem cyklu, a nie zegarem; w związku z tym częstotliwość zliczania zależy od częstotliwości procesora. Jeśli chcesz zmierzyć czas, który upłynął, użyj `QueryPerformanceCounter`.
+Licznik jest prawdziwym licznikiem cyklu, a nie zegarem; w związku z tym częstotliwość zliczania zależy od częstotliwości procesora. Jeśli chcesz zmierzyć czas, który upłynął, użyj `QueryPerformanceCounter` .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Typowe problemy przy migracji Visual C++ ARM](common-visual-cpp-arm-migration-issues.md)<br/>
 [Obsługa wyjątków ARM](arm-exception-handling.md)

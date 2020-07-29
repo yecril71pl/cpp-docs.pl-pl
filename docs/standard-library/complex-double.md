@@ -1,21 +1,21 @@
 ---
-title: złożone &gt; &lt;double
+title: złożona &lt; Podwójna&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - complex/std::complex<double>
 helpviewer_keywords:
 - complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
-ms.openlocfilehash: 8955669f4bc6fd7b3b373751e0e5134205dd1657
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: b9bf4780dd78800653804762301b36ff6bb30a92
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689789"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230081"
 ---
-# <a name="complexltdoublegt"></a>złożone &gt; &lt;double
+# <a name="complexltdoublegt"></a>złożona &lt; Podwójna&gt;
 
-Opisuje obiekt, który przechowuje uporządkowaną parę obiektów typu **Double**, pierwszej reprezentującej rzeczywistą część liczby zespolonej, a drugą reprezentującą część urojoną.
+Opisuje obiekt, który przechowuje uporządkowaną parę obiektów typu **`double`** , pierwszą reprezentującą rzeczywistą część liczby zespolonej i drugą reprezentującą część urojoną.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,24 +36,24 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-*RealVal* \
-Wartość typu **Double** dla rzeczywistej części konstruowanej liczby zespolonej.
+*RealVal*\
+Wartość typu **`double`** dla rzeczywistej części konstruowanej liczby zespolonej.
 
-*ImagVal* \
-Wartość typu **Double** dla części urojonej konstruowanej liczby zespolonej.
+*ImagVal*\
+Wartość typu **`double`** dla części urojonej konstruowanej liczby zespolonej.
 
-*complexNum* \
-Liczba zespolona typu **zmiennoprzecinkowego** lub typu **Long podwójnie** , których elementy rzeczywiste i urojone są używane do zainicjowania złożonej liczby typu **Double** .
+*complexNum*\
+Liczba złożona typu **`float`** lub typu, **`long double`** którego elementy rzeczywiste i urojone są używane do zainicjowania złożonej liczby **`double`** konstruowanych typów.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Złożona liczba typu **Double**.
+Złożona liczba typu **`double`** .
 
 ## <a name="remarks"></a>Uwagi
 
-Jawna specjalizacja szablonu klasy złożonego do złożonej klasy typu **Double** różni się od szablonu klasy tylko w konstruktorach, które definiuje. Konwersja z wartości **zmiennoprzecinkowej** na **Double** może być niejawna, ale konwersja z typu **Long Double** do **Double** musi być **jawna**. Użycie **jawnych** reguł inicjacji z konwersją typu przy użyciu składni przypisania.
+Jawna specjalizacja szablonu klasy złożonego do złożonej klasy typu **`double`** różni się od szablonu klasy tylko w konstruktorach, które definiuje. Konwersja z **`float`** do na **`double`** może być niejawna, ale konwersja z **`long double`** do na **`double`** jest wymagana **`explicit`** . Użycie **`explicit`** reguł inicjacji z konwersją typu przy użyciu składni przypisywania.
 
-Aby uzyskać więcej informacji na `complex` szablonu klasy, zobacz [Klasa złożona](../standard-library/complex-class.md). Aby uzyskać listę elementów członkowskich `complex` szablonu klasy, zobacz.
+Aby uzyskać więcej informacji na temat szablonu klasy `complex` , zobacz [Klasa złożona](../standard-library/complex-class.md). Aby uzyskać listę elementów członkowskich szablonu klasy `complex` , zobacz.
 
 ## <a name="example"></a>Przykład
 
@@ -112,11 +112,11 @@ arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**: \<complex >
+**Nagłówek**:\<complex>
 
 **Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa złożona](../standard-library/complex-class.md) \
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Klasa złożona](../standard-library/complex-class.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

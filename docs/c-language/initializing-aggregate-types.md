@@ -8,12 +8,12 @@ helpviewer_keywords:
 - union keyword [C]
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
-ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: b4b0dd82263781966760b6e21ef24ded56b06a01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "62326082"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229626"
 ---
 # <a name="initializing-aggregate-types"></a>Inicjowanie typów agregacji
 
@@ -51,7 +51,7 @@ Jeśli określisz rozmiar i podasz nieprawidłową liczbę inicjatorów, kompila
 
 **Specyficzne dla firmy Microsoft**
 
-Maksymalny rozmiar tablicy jest definiowany przez **size_t**. Zdefiniowane w pliku nagłówka STDDEF. H, **size_t** jest `unsigned int` z zakresem od 0x00000000 do 0x7CFFFFFF.
+Maksymalny rozmiar tablicy jest definiowany przez **size_t**. Zdefiniowane w pliku nagłówka STDDEF. H, **size_t** jest **`unsigned int`** z zakresem od 0x00000000 do 0x7CFFFFFF.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
@@ -119,7 +119,7 @@ triplet nlist[2][3] =  /* THIS CAUSES AN ERROR */
 
 W tej konstrukcji pierwszy lewy nawias klamrowy w wierszu 1 zaczyna inicjalizację `nlist[0]` , która jest tablicą trzech struktur. Wartości 1, 2 i 3 są przypisywane do trzech członków pierwszej struktury. Po napotkaniu następnego prawego nawiasu klamrowego (po wartości 3) Inicjalizacja `nlist[0]` jest zakończona, a dwie pozostałe struktury w tablicy z trzema strukturami są automatycznie inicjowane na wartość 0. Podobnie, `{ 4,5,6 }` inicjuje pierwszą strukturę w drugim wierszu `nlist` . Pozostałe dwie struktury `nlist[1]` są ustawione na 0. Gdy kompilator napotka następną listę inicjatora ( `{ 7,8,9 }` ), próbuje zainicjować `nlist[2]` . Ponieważ `nlist` ma tylko dwa wiersze, ta próba powoduje błąd.
 
-W tym następnym przykładzie trzy `int` elementy członkowskie `x` są inicjowane odpowiednio do wartości 1, 2 i 3.
+W tym następnym przykładzie trzy **`int`** elementy członkowskie `x` są inicjowane odpowiednio do wartości 1, 2 i 3.
 
 ```C
 struct list

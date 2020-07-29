@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: c80bb27761b8de91f7caee5932f28f1ec2ac0e29
-ms.sourcegitcommit: 166039ceea3256c26fb23920b96de4257b8cf149
+ms.openlocfilehash: 55327d53f3f9e8439ba6e008f1b5a6b384722d54
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84946651"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229873"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.jsodwołania do schematu
 
@@ -31,7 +31,7 @@ Można dodać lub usunąć konfiguracje w IDE, a następnie edytować je bezpoś
 
 `configuration`Ma następujące właściwości:
 
-- `addressSanitizerEnabled`: Jeśli `true` kompiluje program z adresem Sanitizer (eksperymentalny w systemie Windows). W systemie Linux Skompiluj przy użyciu elementu-FNO-pominięcia-ramki i optymalizacji kompilatora — OS lub-oo, aby uzyskać najlepsze wyniki.
+- `addressSanitizerEnabled`: Jeśli **`true`** kompiluje program z adresem Sanitizer (eksperymentalny w systemie Windows). W systemie Linux Skompiluj przy użyciu elementu-FNO-pominięcia-ramki i optymalizacji kompilatora — OS lub-oo, aby uzyskać najlepsze wyniki.
 - `addressSanitizerRuntimeFlags`: flagi środowiska uruchomieniowego przekazane do AddressSanitizer za pośrednictwem zmiennej środowiskowej ASAN_OPTIONS. Format: przedsięwzięcia1 = Value: przedsięwzięcia2 = wartość2.
 - `buildCommandArgs`: określa natywne przełączniki kompilacji przesłane do CMake po--Build--. Na przykład przekazywanie-v przy użyciu generatora Ninja wymusza Ninja do danych wyjściowych wiersza polecenia. Zobacz [argumenty wiersza polecenia Ninja](#ninja) , aby uzyskać więcej informacji na temat poleceń ninja.
 - `buildRoot`: określa katalog, w którym CMake generuje skrypty kompilacji dla wybranego generatora.  Mapuje do przełącznika **-DCMAKE_BINARY_DIR** i określa, gdzie *CMakeCache.txt* zostanie utworzony. Jeśli folder nie istnieje, zostanie utworzony. Obsługiwane makra obejmują,,,,,, `${workspaceRoot}` `${workspaceHash}` ,, `${projectFile}` `${projectDir}` `${thisFile}` `${thisFileDir}` `${name}` `${generator}` `${env.VARIABLE}` .
@@ -44,7 +44,7 @@ Można dodać lub usunąć konfiguracje w IDE, a następnie edytować je bezpoś
 - `configurationType`: określa konfigurację typu kompilacji dla wybranego generatora. Może być jednym z:
 
   - Debugowanie
-  - Wydanie
+  - Release
   - MinSizeRel
   - RelWithDebInfo
   

@@ -4,12 +4,12 @@ description: Przewodnik referencyjny dotyczący właściwości strony właściwo
 ms.date: 07/08/2020
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-ms.openlocfilehash: 3366f6677bf976b6211dd27a8abb114765fb2abc
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: d1ade2959351d6e60b1d80554bbfa34074dda725
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180893"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229743"
 ---
 # <a name="cc-property-pages"></a>Strony właściwości C/C++
 
@@ -118,10 +118,10 @@ Wybierz poziom rozwinięcia [funkcji wbudowanej](../../cpp/inline-functions-cpp.
 
 #### <a name="choices"></a>Choices
 
-- **Domyślne**
+- **Wartooć**
 - **Wyłączone** — wyłącza rozszerzanie wbudowane, które jest domyślnie włączone.
-- **Tylko __inline** -rozszerza tylko funkcje oznaczone jako **`inline`** , `__forceinline` lub `__inline` . Lub, w funkcji składowej C++, zdefiniowanej w deklaracji klasy.
-- **Wszystkie odpowiednie** funkcje do rozwijania oznaczone jako **`inline`** lub `__inline` i wszystkie inne funkcje, które kompilator wybiera. (Rozszerzenie występuje według uznania kompilatora, często nazywane *autozwijaniem*).
+- **Tylko __inline** -rozszerza tylko funkcje oznaczone jako **`inline`** , **`__forceinline`** lub **`__inline`** . Lub, w funkcji składowej C++, zdefiniowanej w deklaracji klasy.
+- **Wszystkie odpowiednie** funkcje do rozwijania oznaczone jako **`inline`** lub **`__inline`** i wszystkie inne funkcje, które kompilator wybiera. (Rozszerzenie występuje według uznania kompilatora, często nazywane *autozwijaniem*).
 
 ### <a name="enable-intrinsic-functions"></a>Włącz funkcje wewnętrzne
 
@@ -317,7 +317,7 @@ Włącza lub wyłącza tryb zgodności. Zestawy [`/permissive-`](permissive-stan
 
 ### <a name="treat-wchar_t-as-built-in-type"></a>Traktuj wchar_t jako typ wbudowany
 
-Gdy jest określony, typ jest **`wchar_t`** typem natywnym, który jest mapowany na `__wchar_t` w taki sam sposób, w jaki **`short`** mapuje się do `__int16` . [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md)jest domyślnie włączona.
+Gdy jest określony, typ jest **`wchar_t`** typem natywnym, który jest mapowany na **`__wchar_t`** w taki sam sposób, w jaki **`short`** mapuje się do **`__int16`** . [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md)jest domyślnie włączona.
 
 ### <a name="force-conformance-in-for-loop-scope"></a>Wymuś zgodność w zakresie pętli for
 
@@ -345,7 +345,7 @@ Określa standard języka C++, który włącza kompilator. Użyj najnowszej wers
 
 #### <a name="choices"></a>Choices
 
-- **Domyślne**
+- **Wartooć**
 - **Standard ISO C++ 14**
 - **Standard ISO C++ 17**
 - **Wersja zapoznawcza — funkcje z najnowszej roboczej wersji języka C++**
@@ -434,10 +434,10 @@ Wybierz domyślną konwencję wywoływania dla aplikacji (może być zastąpiona
 
 #### <a name="choices"></a>Choices
 
-- **__cdecl** — określa `__cdecl` konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych C++ i funkcji oznaczonych `__stdcall` lub `__fastcall` .
-- **__fastcall** — określa `__fastcall` konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych C++ i funkcji oznaczonych `__cdecl` lub `__stdcall` . Wszystkie `__fastcall` funkcje muszą mieć prototypy.
-- **__stdcall** — określa `__stdcall` konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych C++ i funkcji oznaczonych `__cdecl` lub `__fastcall` . Wszystkie `__stdcall` funkcje muszą mieć prototypy.
-- **__vectorcall** — określa `__vectorcall` konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych C++ i funkcji oznaczonych jako `__cdecl` , `__fastcall` lub `__stdcall` . Wszystkie `__vectorcall` funkcje muszą mieć prototypy.
+- **`__cdecl`**-Określa **`__cdecl`** konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych C++ i funkcji oznaczonych **`__stdcall`** lub **`__fastcall`** .
+- **`__fastcall`**-Określa **`__fastcall`** konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych C++ i funkcji oznaczonych **`__cdecl`** lub **`__stdcall`** . Wszystkie **`__fastcall`** funkcje muszą mieć prototypy.
+- **`__stdcall`**-Określa **`__stdcall`** konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych C++ i funkcji oznaczonych **`__cdecl`** lub **`__fastcall`** . Wszystkie **`__stdcall`** funkcje muszą mieć prototypy.
+- **`__vectorcall`**-Określa **`__vectorcall`** konwencję wywoływania dla wszystkich funkcji, z wyjątkiem funkcji składowych C++ i funkcji oznaczonych jako **`__cdecl`** , **`__fastcall`** lub **`__stdcall`** . Wszystkie **`__vectorcall`** funkcje muszą mieć prototypy.
 
 ### <a name="compile-as"></a>Kompiluj jako
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __if_not_exists keyword [C++]
 ms.assetid: a2f322d4-e96f-4a32-954e-4323d20c6e32
-ms.openlocfilehash: 1118f9fcca525b2b2d5869fb507ee974d2b0d28f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3e0eb550830a1689d440e3b471759a98f1eef0ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374137"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187260"
 ---
 # <a name="__if_not_exists-statement"></a>__if_not_exists — Instrukcja
 
-Instrukcja **__if_not_exists** sprawdza, czy określony identyfikator istnieje. Jeśli identyfikator nie istnieje, wykonywany jest określony blok instrukcji.
+**`__if_not_exists`** Instrukcja testuje, czy określony identyfikator istnieje. Jeśli identyfikator nie istnieje, zostanie wykonany określony blok instrukcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,30 +29,30 @@ statements
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Identyfikator*|Identyfikator, którego istnienie chcesz przetestować.|
-|*Instrukcji*|Co najmniej jedna instrukcja do wykonania, jeśli *identyfikator* nie istnieje.|
+|*identyfikatora*|Identyfikator, którego istnienie ma zostać przetestowane.|
+|*zatwierdzeni*|Jedna lub więcej instrukcji do wykonania, jeśli *Identyfikator* nie istnieje.|
 
 ## <a name="remarks"></a>Uwagi
 
 > [!CAUTION]
-> Aby osiągnąć najbardziej wiarygodne wyniki, należy użyć **__if_not_exists** instrukcji w następujących ograniczeniach.
+> Aby uzyskać najbardziej niezawodne wyniki, użyj **`__if_not_exists`** instrukcji w ramach następujących ograniczeń.
 
-- Zastosuj **instrukcję __if_not_exists** tylko do typów prostych, a nie szablonów.
+- Zastosuj **`__if_not_exists`** instrukcję tylko do typów prostych, a nie szablonów.
 
-- Zastosuj **__if_not_exists** instrukcji do identyfikatorów zarówno wewnątrz, jak i na zewnątrz klasy. Nie należy stosować **instrukcji __if_not_exists** do zmiennych lokalnych.
+- Zastosuj **`__if_not_exists`** instrukcję do identyfikatorów zarówno wewnątrz, jak i poza klasą. Nie stosuj **`__if_not_exists`** instrukcji do zmiennych lokalnych.
 
-- Instrukcja **__if_not_exists** należy używać tylko w treści funkcji. Poza treścią **funkcji, __if_not_exists** instrukcja może testować tylko w pełni zdefiniowane typy.
+- Użyj **`__if_not_exists`** instrukcji tylko w treści funkcji. Poza treścią funkcji, **`__if_not_exists`** instrukcja może testować tylko w pełni zdefiniowane typy.
 
-- Podczas testowania funkcji przeciążonych, nie można przetestować dla określonej formy przeciążenia.
+- Podczas testowania dla przeciążonych funkcji nie można testować pod kątem określonej formy przeciążenia.
 
-Uzupełnieniem **oświadczenia __if_not_exists** jest oświadczenie [__if_exists.](../cpp/if-exists-statement.md)
+Uzupełnienie **`__if_not_exists`** instrukcji jest instrukcją [__if_exists](../cpp/if-exists-statement.md) .
 
 ## <a name="example"></a>Przykład
 
-Na przykład dotyczące **używania __if_not_exists**, zobacz [__if_exists Instrukcji](../cpp/if-exists-statement.md).
+Aby zapoznać się z przykładem sposobu użycia **`__if_not_exists`** , zobacz [__if_exists instrukcji](../cpp/if-exists-statement.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Instrukcje wyboru](../cpp/selection-statements-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
-[__if_exists, instrukcja](../cpp/if-exists-statement.md)
+[Instrukcja __if_exists](../cpp/if-exists-statement.md)

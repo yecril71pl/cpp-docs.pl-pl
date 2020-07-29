@@ -10,12 +10,12 @@ helpviewer_keywords:
 - void keyword [C]
 - structures, incomplete
 ms.assetid: 01bc0cf6-9fa7-458c-9371-ecbe54ea6aee
-ms.openlocfilehash: e7a5cd7624b55e7bce0fbd09451ab42426f5bc37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 192a6556fd8a5d3039598b883ed7c870fc01ad12
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232899"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229652"
 ---
 # <a name="incomplete-types"></a>Niekompletne typy
 
@@ -27,9 +27,9 @@ ms.locfileid: "62232899"
 
 - Typ tablicy, którego wymiar nie został jeszcze określony.
 
-Typ **void** jest niekompletnym typem, którego nie można ukończyć. Aby ukończyć niekompletny typ, określ brakujące informacje. W poniższych przykładach pokazano, jak utworzyć i zakończyć niekompletne typy.
+**`void`** Typ jest niekompletnym typem, którego nie można ukończyć. Aby ukończyć niekompletny typ, określ brakujące informacje. W poniższych przykładach pokazano, jak utworzyć i zakończyć niekompletne typy.
 
-- Aby utworzyć niekompletny typ struktury, zadeklaruj typ struktury bez określania jej elementów członkowskich. W tym przykładzie `ps` wskaźnik wskazuje niekompletny typ struktury o nazwie `student`.
+- Aby utworzyć niekompletny typ struktury, zadeklaruj typ struktury bez określania jej elementów członkowskich. W tym przykładzie `ps` wskaźnik wskazuje niekompletny typ struktury o nazwie `student` .
 
     ```C
     struct student *ps;
@@ -44,7 +44,7 @@ Typ **void** jest niekompletnym typem, którego nie można ukończyć. Aby ukoń
     }                   /* student structure now completed */
     ```
 
-- Aby utworzyć niekompletny typ tablicy, zadeklaruj typ tablicy bez określenia jego liczby powtórzeń. Przykład:
+- Aby utworzyć niekompletny typ tablicy, zadeklaruj typ tablicy bez określenia jego liczby powtórzeń. Na przykład:
 
     ```C
     char a[];  /* a has incomplete type */
@@ -56,6 +56,6 @@ Typ **void** jest niekompletnym typem, którego nie można ukończyć. Aby ukoń
     char a[25]; /* a now has complete type */
     ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Deklaracje i typy](../c-language/declarations-and-types.md)

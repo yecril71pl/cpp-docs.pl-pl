@@ -6,12 +6,12 @@ helpviewer_keywords:
 - function calls, argument type conversions
 - functions [C], argument conversions
 ms.assetid: 04ea0f81-509a-4913-8b12-0937a81babcf
-ms.openlocfilehash: d9f205bbbbac353b57743f8e1211b20fa3d32f05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4e84c9d4e1f25a56c0bcabcec99e5e75fcaa321
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233226"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229678"
 ---
 # <a name="function-call-conversions"></a>Konwersje wywołania funkcji
 
@@ -19,8 +19,8 @@ Typ konwersji wykonywanej na argumentach wywołania funkcji zależy od obecnośc
 
 Jeśli prototyp funkcji jest obecny i zawiera zadeklarowane typy argumentów, kompilator wykonuje sprawdzanie typu (zobacz [funkcje](../c-language/functions-c.md)).
 
-Jeśli nie ma prototypu funkcji, tylko standardowe konwersje arytmetyczne są wykonywane na argumentach wywołania funkcji. Te konwersje są wykonywane niezależnie od każdego argumentu w wywołaniu. Oznacza to, że wartość **zmiennoprzecinkowa** jest konwertowana na **podwójną**; wartość `char` a lub **krótka** jest konwertowana na `int`; a `unsigned char` lub **bez znaku Short** jest konwertowany na `unsigned int`.
+Jeśli nie ma prototypu funkcji, tylko standardowe konwersje arytmetyczne są wykonywane na argumentach wywołania funkcji. Te konwersje są wykonywane niezależnie od każdego argumentu w wywołaniu. Oznacza to, że **`float`** wartość jest konwertowana na **`double`** ; a **`char`** lub **`short`** wartość jest konwertowana na **`int`** ; i **`unsigned char`** lub **`unsigned short`** jest konwertowana na **`unsigned int`** .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Konwersje typu](../c-language/type-conversions-c.md)
+[Konwersje typów](../c-language/type-conversions-c.md)

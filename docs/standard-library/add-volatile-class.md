@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_volatile class
 - add_volatile
 ms.assetid: cde57277-d764-402d-841e-97611ebaab14
-ms.openlocfilehash: 1a4ad8a86b88cdfa98f043bb49ba6eeff8b090c9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e8c213a116ff7a7d4218179f0e944ac4f84a75e5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619206"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230275"
 ---
 # <a name="add_volatile-class"></a>add_volatile — Klasa
 
-Tworzy typ **nietrwały** z określonego typu.
+Tworzy **`volatile`** Typ z określonego typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,7 +35,7 @@ Typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie ma element `add_volatile<T>` członkowski **typedef** `type` , który jest *t* if *t* jest odwołaniem, funkcją lub typem kwalifikowanym niestabilnym, w przeciwnym razie **volatile** *t*. Alias `add_volatile_t` jest skrótem umożliwiającym dostęp do elementu członkowskiego **typedef** `type` .
+Wystąpienie `add_volatile<T>` ma element członkowski, który ma wartość **`typedef`** `type` *t* , jeśli *t* jest odwołaniem, funkcją lub typem kwalifikowanym nietrwałym, w przeciwnym razie **`volatile`** *T*. Alias `add_volatile_t` jest skrótem, aby uzyskać dostęp do elementu członkowskiego **`typedef`** `type` .
 
 ## <a name="example"></a>Przykład
 
@@ -65,7 +65,7 @@ add_volatile<int> == int
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [<type_traits>](type-traits.md)\
 [Klasa remove_volatile](remove-volatile-class.md)

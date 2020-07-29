@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-ms.openlocfilehash: 920135943c9dfb46b00ee6ceb2535fde128dffb0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9a9144229b75c09a892ddbf5bd592e67c7c2b6d9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172038"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230561"
 ---
 # <a name="pin_ptr-ccli"></a>pin_ptr (C++/CLI)
 
@@ -42,12 +42,12 @@ Deklaruje *przypinany wskaźnik*, który jest używany tylko w środowisku uruch
 ### <a name="parameters"></a>Parametry
 
 *cv_qualifier*<br/>
-kwalifikatory **const** lub **volatile** . Domyślnie przypinany wskaźnik jest **nietrwały**. Jest on nadmiarowy, ale nie jest błędem, aby zadeklarować przypinany wskaźnik **nietrwały**.
+**`const`** lub **`volatile`** kwalifikatory. Domyślnie przypinany jest wskaźnik **`volatile`** . Jest on nadmiarowy, ale nie jest błędem, aby zadeklarować przypinany wskaźnik **`volatile`** .
 
-*type*<br/>
+*Wprowadź*<br/>
 Typ *inicjatora*.
 
-*var*<br/>
+*funkcję*<br/>
 Nazwa zmiennej **pin_ptr** .
 
 *skład*<br/>
@@ -59,7 +59,7 @@ Składową typu referencyjnego, elementu tablicy zarządzanej lub dowolnego inne
 
 Obiekt lub obiekt podrzędny klasy zarządzanej może być przypięty, w tym przypadku środowisko uruchomieniowe języka wspólnego nie przesunie go podczas odzyskiwania pamięci. Głównym zastosowaniem tego elementu jest przekazanie wskaźnika do danych zarządzanych jako rzeczywisty parametr wywołania funkcji niezarządzanej. Podczas cyklu zbierania środowisko uruchomieniowe sprawdzi metadane utworzone dla przypinanego wskaźnika i nie przeniesie elementu, do którego wskazuje.
 
-Przypinanie obiektu także przypina jego pola wartości; oznacza to, że pola typu pierwotnego lub wartościowego. Jednak pola zadeklarowane przez dojście śledzenia (`%`) nie są przypięte.
+Przypinanie obiektu także przypina jego pola wartości; oznacza to, że pola typu pierwotnego lub wartościowego. Jednak pola zadeklarowane przez uchwyt śledzenia ( `%` ) nie są przypięte.
 
 Przypinanie obiektu podrzędnego zdefiniowanego w obiekcie zarządzanym ma wpływ na przypinanie całego obiektu.
 
@@ -93,7 +93,7 @@ Aby uzyskać więcej informacji na temat przypinania wskaźników, zobacz [How t
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: `/clr`
+Opcja kompilatora:`/clr`
 
 ### <a name="examples"></a>Przykłady
 
@@ -147,7 +147,7 @@ int main() {
 45
 ```
 
-Poniższy przykład pokazuje, że wewnętrzny wskaźnik można przekonwertować na przypięty wskaźnik, a zwracany typ operatora address-of (`&`) jest wskaźnikiem wewnętrznym, gdy operand jest na zarządzanym stosie.
+Poniższy przykład pokazuje, że wewnętrzny wskaźnik można przekonwertować na przypięty wskaźnik, a zwracany typ operatora address-of ( `&` ) jest wskaźnikiem wewnętrznym, gdy operand znajduje się na stercie zarządzanym.
 
 ```cpp
 // pin_ptr_2.cpp

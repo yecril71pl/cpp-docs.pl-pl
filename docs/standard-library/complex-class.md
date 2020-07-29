@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: db2f8b2f889d9454db737cf5b2a39b414f1d67f1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416768"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230094"
 ---
 # <a name="complex-class"></a>complex — Klasa
 
-Szablon klasy opisuje obiekt przechowujący dwa obiekty typu `Type`, taki, który reprezentuje rzeczywistą część liczby zespolonej i jeden, który reprezentuje część urojoną.
+Szablon klasy opisuje obiekt przechowujący dwa obiekty typu `Type` , taki, który reprezentuje rzeczywistą część liczby zespolonej i jeden, który reprezentuje część urojoną.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,7 +30,7 @@ class complex
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt klasy `Type`:
+Obiekt klasy `Type` :
 
 - Ma publiczny Konstruktor domyślny, destruktor, Konstruktor kopiujący i operator przypisania z zachowaniem konwencjonalnym.
 
@@ -38,13 +38,13 @@ Obiekt klasy `Type`:
 
 - Definiuje operatory arytmetyczne i funkcje matematyczne w razie potrzeby, które są zdefiniowane dla typów zmiennoprzecinkowych z zachowaniem konwencjonalnym.
 
-W szczególności nie mogą istnieć żadne delikatne różnice między konstrukcją kopiowania i domyślną konstrukcją, po którym następuje przypisanie. Żadna z operacji na obiektach klasy `Type` może generować wyjątki.
+W szczególności nie mogą istnieć żadne delikatne różnice między konstrukcją kopiowania i domyślną konstrukcją, po którym następuje przypisanie. Żadna z operacji na obiektach klasy `Type` nie może zgłosić wyjątków.
 
-Jawne specjalizacje złożone szablonu klas istnieją dla trzech typów zmiennoprzecinkowych. W tej implementacji wartość dowolnego innego typu `Type` jest **rzutowanie dla** rzeczywistej obliczeń, z **podwójnym** wynikiem przypisanym do przechowywanego obiektu typu `Type`.
+Jawne specjalizacje złożone szablonu klas istnieją dla trzech typów zmiennoprzecinkowych. W tej implementacji wartość dowolnego innego typu `Type` jest rzutowanie do **`double`** rzeczywistej obliczeń, a **`double`** wynik jest przypisywany z powrotem do przechowywanego obiektu typu `Type` .
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
-### <a name="constructors"></a>Konstruktorzy
+### <a name="constructors"></a>Konstruktory
 
 |||
 |-|-|
@@ -61,7 +61,7 @@ Jawne specjalizacje złożone szablonu klas istnieją dla trzech typów zmiennop
 |||
 |-|-|
 |[imag](#imag)|Wyodrębnia część urojoną liczby zespolonej.|
-|[czasie rzeczywistym](#real)|Wyodrębnia prawdziwy składnik liczby zespolonej.|
+|[real](#real)|Wyodrębnia prawdziwy składnik liczby zespolonej.|
 
 ### <a name="operators"></a>Operatory
 
@@ -73,7 +73,7 @@ Jawne specjalizacje złożone szablonu klas istnieją dla trzech typów zmiennop
 |[operator/=](#op_div_eq)|Dzieli docelowy liczbę zespoloną przez dzielnik, który może być złożony lub być tego samego typu co wartości rzeczywiste i urojone części liczby zespolonej.|
 |[operator =](#op_eq)|Przypisuje liczbę do docelowego numeru zespolonego, gdzie przypisana liczba może być złożona lub tego samego typu, co jest częścią rzeczywistą i urojoną liczby zespolonej, do której jest przypisany.|
 
-## <a name="complex"></a>złożonych
+## <a name="complex"></a><a name="complex"></a>złożonych
 
 Konstruuje liczbę zespoloną z określonymi częściami rzeczywistymi i urojonymi albo jako kopię innej liczby zespolonej.
 
@@ -100,7 +100,7 @@ Liczba zespolona, której części rzeczywiste i urojone są używane do inicjow
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor inicjuje przechowywaną część rzeczywistą do *\_RealVal* i składowanej części urojonej do *\_Imagval*. Drugi Konstruktor inicjuje przechowywaną część rzeczywistą do `complexNum.real()` i magazynowaną część urojoną do `complexNum.imag()`.
+Pierwszy Konstruktor inicjuje przechowywaną część rzeczywistą do * \_ RealVal* i magazynowaną część urojoną do * \_ Imagval*. Drugi Konstruktor inicjuje przechowywaną część rzeczywistą do `complexNum.real()` i przechowywaną część urojoną do `complexNum.imag()` .
 
 W tej implementacji, jeśli Translator nie obsługuje funkcji szablonu elementu członkowskiego, szablon:
 
@@ -157,7 +157,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a>imag
+## <a name="imag"></a><a name="imag"></a>imag
 
 Wyodrębnia część urojoną liczby zespolonej.
 
@@ -169,10 +169,10 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa*\
+*Kliknij*\
 Liczba złożona, której wartość urojona ma zostać wyodrębniona.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Część urojona liczby zespolonej.
 
@@ -211,7 +211,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="op_star_eq"></a>operator * =
+## <a name="operator"></a><a name="op_star_eq"></a>operator * =
 
 Mnoży docelowy liczbę zespoloną przez współczynnik, który może być złożony lub być tego samego typu, co są częścią rzeczywistą i urojoną liczby zespolonej.
 
@@ -226,10 +226,10 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa*\
+*Kliknij*\
 Liczba złożona lub liczba, która jest tego samego typu co parametr docelowego numeru zespolonego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba złożona, która została pomnożona przez liczbę określoną jako parametr.
 
@@ -296,7 +296,7 @@ int main()
 }
 ```
 
-## <a name="op_add_eq"></a>operator + =
+## <a name="operator"></a><a name="op_add_eq"></a>operator + =
 
 Dodaje liczbę do docelowej liczby zespolonej, w której dodana liczba może być złożona lub tego samego typu co są częścią rzeczywistą i urojoną liczby zespolonej, do której jest dodawany.
 
@@ -311,10 +311,10 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa*\
+*Kliknij*\
 Liczba złożona lub liczba, która jest tego samego typu co parametr docelowego numeru zespolonego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba złożona, która ma numer określony jako parametr dodany.
 
@@ -399,7 +399,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-_eq"></a>operator-=
+## <a name="operator-"></a><a name="operator-_eq"></a>operator-=
 
 Odejmuje liczbę od docelowej liczby zespolonej, w której liczba odejmowanych może być złożona lub tego samego typu co są częścią rzeczywistą i urojoną liczby zespolonej, do której jest dodawany.
 
@@ -420,7 +420,7 @@ Liczba zespolona, która ma zostać odjęta od docelowego numeru zespolonego.
 *_RealPart*\
 Liczba rzeczywista, która ma zostać odjęta od docelowego numeru zespolonego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba złożona, która ma numer określony jako parametr odejmowany od niego.
 
@@ -507,7 +507,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="op_div_eq"></a>operator/=
+## <a name="operator"></a><a name="op_div_eq"></a>operator/=
 
 Dzieli docelowy liczbę zespoloną przez dzielnik, który może być złożony lub być tego samego typu co wartości rzeczywiste i urojone części liczby zespolonej.
 
@@ -528,7 +528,7 @@ Liczba zespolona, która ma zostać odjęta od docelowego numeru zespolonego.
 *_RealPart*\
 Liczba rzeczywista, która ma zostać odjęta od docelowego numeru zespolonego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba złożona, która została podzielona przez liczbę określoną jako parametr.
 
@@ -611,7 +611,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a>operator =
 
 Przypisuje liczbę do docelowego numeru zespolonego, gdzie przypisana liczba może być złożona lub tego samego typu, co jest częścią rzeczywistą i urojoną liczby zespolonej, do której jest przypisany.
 
@@ -624,10 +624,10 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa*\
+*Kliknij*\
 Liczba złożona lub liczba, która jest tego samego typu co parametr docelowego numeru zespolonego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba złożona, która ma przypisany numer określony jako parametr.
 
@@ -689,7 +689,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a>czasie rzeczywistym
+## <a name="real"></a><a name="real"></a>czasie rzeczywistym
 
 Pobiera lub ustawia prawdziwy składnik liczby zespolonej.
 
@@ -701,10 +701,10 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa*\
+*Kliknij*\
 Liczba złożona, której rzeczywista wartość ma zostać wyodrębniona.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Rzeczywista część liczby zespolonej.
 
@@ -743,7 +743,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 Typ, który reprezentuje typ danych używany do reprezentowania rzeczywistych i urojonych części liczby zespolonej.
 
@@ -753,7 +753,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`value_type` jest synonimem dla parametru złożonego szablonu `Type` klasy.
+`value_type`jest synonimem dla parametru szablonu złożonego klasy `Type` .
 
 ### <a name="example"></a>Przykład
 
@@ -780,6 +780,6 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

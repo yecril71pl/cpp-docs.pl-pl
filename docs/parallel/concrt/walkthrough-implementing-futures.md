@@ -5,12 +5,12 @@ helpviewer_keywords:
 - implementing futures [Concurrency Runtime]
 - futures, implementing [Concurrency Runtime]
 ms.assetid: 82ea75cc-aaec-4452-b10d-8abce0a87e5b
-ms.openlocfilehash: 2b9d889dac195bb60651cbb76110d54b6231a5fd
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 9bf46b7f2a761aaf0c07e1017524c8ddf533aca6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141977"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230301"
 ---
 # <a name="walkthrough-implementing-futures"></a>Wskazówki: wdrażanie przyszłych operacji
 
@@ -21,27 +21,27 @@ W tym temacie pokazano, jak zaimplementować przyszłość w aplikacji. W tym te
 
 *Zadanie* to obliczenie, które może być rozłożone na dodatkowe, bardziej szczegółowe obliczenia. *Przyszłość* to asynchroniczne zadanie, które oblicza wartość do późniejszego użycia.
 
-Aby zaimplementować przyszłość, ten temat definiuje klasę `async_future`. Klasa `async_future` używa tych składników środowisko uruchomieniowe współbieżności: Klasa [concurrency:: task_group](reference/task-group-class.md) oraz Klasa [concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md) . Klasa `async_future` używa klasy `task_group` do obliczania wartości asynchronicznej i klasy `single_assignment` do przechowywania wyniku obliczeń. Konstruktor klasy `async_future` pobiera funkcję roboczą, która oblicza wynik, a metoda `get` pobiera wynik.
+Aby zaimplementować przyszłość, ten temat definiuje `async_future` klasę. `async_future`Klasa używa tych składników Środowisko uruchomieniowe współbieżności: Klasa [concurrency:: task_group](reference/task-group-class.md) i [concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md) klasy. `async_future`Klasa używa `task_group` klasy do obliczania wartości asynchronicznej i `single_assignment` klasy do przechowywania wyniku obliczenia. Konstruktor `async_future` klasy pobiera funkcję roboczą, która oblicza wynik, a `get` Metoda pobiera wynik.
 
 ### <a name="to-implement-the-async_future-class"></a>Aby implementować klasę async_future
 
-1. Zadeklaruj klasę szablonu o nazwie `async_future`, która jest sparametryzowane dla typu wyniku obliczeń. Dodaj `public` i `private` sekcje do tej klasy.
+1. Zadeklaruj klasę szablonu o nazwie `async_future` , która jest sparametryzowana dla typu obliczanego wyniku. Dodaj **`public`** **`private`** sekcje i do tej klasy.
 
 [!code-cpp[concrt-futures#2](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_1.cpp)]
 
-1. W sekcji `private` klasy `async_future` Zadeklaruj `task_group` i `single_assignment` element członkowski danych.
+1. W **`private`** sekcji `async_future` klasy Zadeklaruj `task_group` `single_assignment` element członkowski danych i.
 
 [!code-cpp[concrt-futures#3](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_2.cpp)]
 
-1. W sekcji `public` klasy `async_future` Zaimplementuj konstruktora. Konstruktor jest szablon, który jest sparametryzowane dla funkcji pracy, która oblicza wynik. Konstruktor asynchronicznie wykonuje funkcję Work w elemencie członkowskim danych `task_group` i używa funkcji [concurrency:: Send](reference/concurrency-namespace-functions.md#send) , aby zapisać wynik do `single_assignment` elementu członkowskiego danych.
+1. W **`public`** sekcji `async_future` klasy Zaimplementuj konstruktora. Konstruktor jest szablon, który jest sparametryzowane dla funkcji pracy, która oblicza wynik. Konstruktor asynchronicznie wykonuje funkcję Work w `task_group` składowej danych i używa funkcji [concurrency:: Send](reference/concurrency-namespace-functions.md#send) , aby zapisać wynik do `single_assignment` elementu członkowskiego danych.
 
 [!code-cpp[concrt-futures#4](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_3.cpp)]
 
-1. W sekcji `public` klasy `async_future` Zaimplementuj destruktor. Destruktor czeka na zakończenie zadania.
+1. W **`public`** sekcji `async_future` klasy Zaimplementuj destruktor. Destruktor czeka na zakończenie zadania.
 
 [!code-cpp[concrt-futures#5](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_4.cpp)]
 
-1. W sekcji `public` klasy `async_future` Zaimplementuj metodę `get`. Ta metoda używa funkcji [concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) , aby pobrać wynik funkcji służbowej.
+1. W **`public`** sekcji `async_future` klasy Zaimplementuj `get` metodę. Ta metoda używa funkcji [concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) , aby pobrać wynik funkcji służbowej.
 
 [!code-cpp[concrt-futures#6](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_5.cpp)]
 
@@ -49,7 +49,7 @@ Aby zaimplementować przyszłość, ten temat definiuje klasę `async_future`. K
 
 ### <a name="description"></a>Opis
 
-W poniższym przykładzie przedstawiono kompletną klasę `async_future` i przykład użycia. Funkcja `wmain` tworzy obiekt[wektorów](../../standard-library/vector-class.md) std:: Vector, który zawiera 10 000 losowe wartości całkowite. Następnie używa `async_future` obiektów, aby znaleźć najmniejsze i największe wartości, które są zawarte w obiekcie `vector`.
+Poniższy przykład pokazuje kompletną `async_future` klasę i przykład użycia. `wmain`Funkcja tworzy obiekt wektor::[Vector](../../standard-library/vector-class.md) , który zawiera 10 000 losowe wartości całkowite. Następnie używa `async_future` obiektów, aby znaleźć najmniejsze i największe wartości, które są zawarte w `vector` obiekcie.
 
 ### <a name="code"></a>Kod
 
@@ -65,13 +65,13 @@ largest:  9999
 average:  4981
 ```
 
-W przykładzie zastosowano metodę `async_future::get` w celu pobrania wyników obliczeń. Metoda `async_future::get` czeka na zakończenie obliczeń, jeśli obliczenie jest nadal aktywne.
+W przykładzie zastosowano `async_future::get` metodę w celu pobrania wyników obliczeń. `async_future::get`Metoda czeka na zakończenie obliczeń, jeśli obliczenie jest nadal aktywne.
 
-## <a name="robust-programming"></a>Skuteczne programowanie
+## <a name="robust-programming"></a>Niezawodne programowanie
 
-Aby zwiększyć klasę `async_future`, aby obsługiwała wyjątki, które są zgłaszane przez funkcję służbową, należy zmodyfikować metodę `async_future::get`, aby wywołać metodę [concurrency:: task_group:: wait](reference/task-group-class.md#wait) . Metoda `task_group::wait` zgłasza wszystkie wyjątki, które zostały wygenerowane przez funkcję służbową.
+Aby zwiększyć klasę obsługującą `async_future` wyjątki, które są zgłaszane przez funkcję służbową, zmodyfikuj `async_future::get` metodę w celu wywołania metody [concurrency:: task_group:: wait](reference/task-group-class.md#wait) . `task_group::wait`Metoda zgłasza wszystkie wyjątki, które zostały wygenerowane przez funkcję służbową.
 
-W poniższym przykładzie przedstawiono zmodyfikowaną wersję klasy `async_future`. Funkcja `wmain` używa bloku `try`-`catch` do drukowania wyniku obiektu `async_future` lub do wydrukowania wartości wyjątku, który jest generowany przez funkcję służbową.
+W poniższym przykładzie przedstawiono zmodyfikowaną wersję `async_future` klasy. `wmain`Funkcja używa **`try`** - **`catch`** bloku do drukowania wyniku `async_future` obiektu lub do drukowania wartości wyjątku, który jest generowany przez funkcję służbową.
 
 [!code-cpp[concrt-futures-with-eh#1](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_7.cpp)]
 
@@ -85,13 +85,13 @@ Aby uzyskać więcej informacji na temat modelu obsługi wyjątków w środowisk
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `futures.cpp` a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie, `futures.cpp` a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
 
-**CL. exe/EHsc przyszłość. cpp**
+**cl.exe przyszłość/EHsc. cpp**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Środowisko uruchomieniowe współbieżności — wskazówki](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
+[Instruktaże środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Obsługa wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
-[task_group, klasa](reference/task-group-class.md)<br/>
-[single_assignment, klasa](../../parallel/concrt/reference/single-assignment-class.md)
+[Klasa task_group](reference/task-group-class.md)<br/>
+[Klasa single_assignment](../../parallel/concrt/reference/single-assignment-class.md)

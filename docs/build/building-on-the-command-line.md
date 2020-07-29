@@ -1,8 +1,8 @@
 ---
 title: Używanie zestawu narzędzi platformy Microsoft C++ w wierszu polecenia
-description: Użyj łańcucha narzędzi kompilatora języka Microsoft C++ (MSVC) z wiersza polecenia poza środowiskiem IDE programu Visual Studio.
+description: Użyj zestawu narzędzi kompilatora Microsoft C++ (MSVC) z wiersza polecenia poza środowiskiem IDE programu Visual Studio.
 ms.custom: conceptual
-ms.date: 11/12/2019
+ms.date: 04/21/2020
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,19 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f729947e4d798e5817ff8d4e5abe09eaca090e01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417440"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229899"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Używanie zestawu narzędzi platformy Microsoft C++ w wierszu polecenia
 
-Możesz tworzyć aplikacje C i C++ w wierszu polecenia, korzystając z narzędzi zawartych w programie Visual Studio. Zestaw narzędzi kompilatora języka Microsoft C++ (MSVC) jest również pobierany jako pakiet autonomiczny, który nie zawiera środowiska IDE programu Visual Studio.
+Możesz tworzyć aplikacje C i C++ w wierszu polecenia, korzystając z narzędzi zawartych w programie Visual Studio. Zestaw narzędzi kompilatora języka Microsoft C++ (MSVC) jest również pobierany jako pakiet autonomiczny. Nie musisz instalować środowiska IDE programu Visual Studio, jeśli nie planujesz go używać.
+
+> [!NOTE]
+> W tym artykule opisano sposób konfigurowania środowiska do korzystania z pojedynczych kompilatorów, linków, bibliotekarza i innych podstawowych narzędzi. Natywny system kompilacji projektu, MSBuild nie używa środowiska zgodnie z opisem w tym artykule. Aby uzyskać więcej informacji na temat korzystania z programu MSBuild z wiersza polecenia, zobacz [MSBuild w wierszu polecenia-C++](msbuild-visual-cpp.md).
 
 ## <a name="download-and-install-the-tools"></a>Pobieranie i Instalowanie narzędzi
 
@@ -75,59 +78,59 @@ Jeśli wolisz ustawić środowisko kompilacji w istniejącym oknie wiersza polec
 
 ::: moniker range=">= vs-2019"
 
-Lokalizacja pliku poleceń zależy od zainstalowanej wersji programu Visual Studio i opcji dostępnych podczas instalacji. W przypadku programu Visual Studio 2019 typowa lokalizacja instalacji w systemie 64-bitowym jest \\w plikach Program Files (\\x86\\)\\Microsoft Visual Studio 2019*Edition*. *Wersja* może być Community, Professional, Enterprise, BuildTools lub inną dostarczoną pseudonimem.
+Lokalizacja pliku poleceń zależy od zainstalowanej wersji programu Visual Studio i opcji dostępnych podczas instalacji. W przypadku programu Visual Studio 2019 typowa lokalizacja instalacji w systemie 64-bitowym jest w \\ plikach Program Files (x86) \\ Microsoft Visual Studio \\ 2019 \\ *Edition*. *Wersja* może być Community, Professional, Enterprise, BuildTools lub inną dostarczoną pseudonimem.
 
 ::: moniker-end
 ::: moniker range="= vs-2017"
 
-Lokalizacja pliku poleceń zależy od zainstalowanej wersji programu Visual Studio i opcji dostępnych podczas instalacji. W przypadku programu Visual Studio 2017 typowa lokalizacja instalacji w systemie 64-bitowym jest \\w plikach Program Files (\\x86\\)\\Microsoft Visual Studio 2017*Edition*. *Wersja* może być Community, Professional, Enterprise, BuildTools lub inną dostarczoną pseudonimem.
+Lokalizacja pliku poleceń zależy od zainstalowanej wersji programu Visual Studio i opcji dostępnych podczas instalacji. W przypadku programu Visual Studio 2017 typowa lokalizacja instalacji w systemie 64-bitowym jest w \\ plikach Program Files (x86) \\ Microsoft Visual Studio \\ 2017 \\ *Edition*. *Wersja* może być Community, Professional, Enterprise, BuildTools lub inną dostarczoną pseudonimem.
 
 ::: moniker-end
 ::: moniker range="< vs-2017"
 
-Lokalizacja pliku poleceń zależy od wersji programu Visual Studio i katalogu instalacyjnego. W przypadku programu Visual Studio 2015 typowa lokalizacja instalacji to \\w plikach programowych (\\x86) Microsoft Visual Studio 14,0.
+Lokalizacja pliku poleceń zależy od wersji programu Visual Studio i katalogu instalacyjnego. W przypadku programu Visual Studio 2015 typowa lokalizacja instalacji to w \\ plikach programowych (x86) \\ Microsoft Visual Studio 14,0.
 
 ::: moniker-end
 
-Podstawowy plik poleceń wiersza polecenia dla deweloperów, VsDevCmd. bat, znajduje się w podkatalogu\\Common7 Tools. Jeśli nie określono parametrów, ustawia środowisko do używania narzędzi x86-native do kompilowania 32-bitowego kodu x86.
+Podstawowy plik poleceń wiersza polecenia dla deweloperów, VsDevCmd.bat, znajduje się w \\ podkatalogu Tools Common7. Jeśli nie określono parametrów, ustawia środowisko do używania narzędzi x86-native do kompilowania 32-bitowego kodu x86.
 
 ::: moniker range=">= vs-2017"
 
-Więcej plików poleceń jest dostępnych do skonfigurowania określonych architektur kompilacji. Dostępne pliki poleceń zależą od obciążeń i opcji programu Visual Studio, które zostały zainstalowane. W programie Visual Studio 2017 i Visual Studio 2019 znajdują się one w podkatalogu\\kompilacji\\pomocniczej VC.
+Więcej plików poleceń jest dostępnych do skonfigurowania określonych architektur kompilacji. Dostępne pliki poleceń zależą od obciążeń i opcji programu Visual Studio, które zostały zainstalowane. W programie Visual Studio 2017 i Visual Studio 2019 znajdują się one w \\ \\ podkatalogu kompilacji pomocniczej VC.
 
 ::: moniker-end
 ::: moniker range="< vs-2017"
 
-Więcej plików poleceń jest dostępnych do skonfigurowania określonych architektur kompilacji. Dostępne pliki poleceń zależą od obciążeń i opcji programu Visual Studio, które zostały zainstalowane. W programie Visual Studio 2015 znajdują się one w podkatalogach\\VC, VC lub\\VC\\*architektury* bin, gdzie *Architecture* jest jedną z opcji macierzystych lub międzykompilatorowych.
+Więcej plików poleceń jest dostępnych do skonfigurowania określonych architektur kompilacji. Dostępne pliki poleceń zależą od obciążeń i opcji programu Visual Studio, które zostały zainstalowane. W programie Visual Studio 2015 znajdują się one w \\ podkatalogach VC, VC lub \\ VC \\ *architektury* bin, gdzie *Architecture* jest jedną z opcji macierzystych lub międzykompilatorowych.
 
 ::: moniker-end
 
-Te pliki poleceń ustawiają domyślne parametry i Wywołaj VsDevCmd. bat, aby skonfigurować określone środowisko architektury kompilacji. Typowa instalacja może obejmować następujące pliki poleceń:
+Te pliki poleceń ustawiają domyślne parametry i Wywołaj VsDevCmd.bat, aby skonfigurować określone środowisko architektury kompilacji. Typowa instalacja może obejmować następujące pliki poleceń:
 
 |Plik polecenia|Architektury hosta i celu|
 |---|---|
-|**vcvars32. bat**| Do kompilowania kodu 32-bitowym x86 można używać narzędzi 32-bitowych x86-Native.|
-|**vcvars64. bat**| Do kompilowania kodu 64-bitowego x64 Użyj narzędzi 64-bitowych x64-Native.|
-|**vcvarsx86_amd64. bat**| Do kompilowania kodu 64-bitowego x64 należy użyć 32-bitowych narzędzi międzynatywnych platformy x86.|
-|**vcvarsamd64_x86. bat**| Użyj 64-bitowego 64-macierzystego narzędzia krzyżowe, aby skompilować 32-bitowy kod x86.|
-|**vcvarsx86_arm. bat**| Aby skompilować kod ARM, użyj 32-bitowych międzyfirmowych narzędzi dla wielu procesorów x86.|
-|**vcvarsamd64_arm. bat**| Użyj 64-bitowego 64-natywnych narzędzi do obsługi wielu procesorów, aby skompilować kod ARM.|
-|**vcvarsall. bat**| Użyj parametrów, aby określić architektury hosta i celu, Windows SDK i opcje platformy. Aby zapoznać się z listą obsługiwanych opcji, należy wywołać parametr **/help** .|
+|**vcvars32.bat**| Do kompilowania kodu 32-bitowym x86 można używać narzędzi 32-bitowych x86-Native.|
+|**vcvars64.bat**| Do kompilowania kodu 64-bitowego x64 Użyj narzędzi 64-bitowych x64-Native.|
+|**vcvarsx86_amd64.bat**| Do kompilowania kodu 64-bitowego x64 należy użyć 32-bitowych narzędzi międzynatywnych platformy x86.|
+|**vcvarsamd64_x86.bat**| Użyj 64-bitowego 64-macierzystego narzędzia krzyżowe, aby skompilować 32-bitowy kod x86.|
+|**vcvarsx86_arm.bat**| Aby skompilować kod ARM, użyj 32-bitowych międzyfirmowych narzędzi dla wielu procesorów x86.|
+|**vcvarsamd64_arm.bat**| Użyj 64-bitowego 64-natywnych narzędzi do obsługi wielu procesorów, aby skompilować kod ARM.|
+|**vcvarsall.bat**| Użyj parametrów, aby określić architektury hosta i celu, Windows SDK i opcje platformy. Aby zapoznać się z listą obsługiwanych opcji, należy wywołać parametr **/help** .|
 
 > [!CAUTION]
-> Plik vcvarsall. bat i inne pliki poleceń programu Visual Studio mogą się różnić w zależności od komputera do komputera. Nie zamieniaj brakującego lub uszkodzonego pliku vcvarsall. bat przy użyciu pliku z innego komputera. Uruchom ponownie Instalatora programu Visual Studio, aby zastąpić brakujący plik.
+> Plik vcvarsall.bat i inne pliki poleceń programu Visual Studio mogą się różnić od komputera do komputera. Nie zamieniaj brakującego lub uszkodzonego pliku vcvarsall.bat przy użyciu pliku z innego komputera. Uruchom ponownie Instalatora programu Visual Studio, aby zastąpić brakujący plik.
 >
-> Plik vcvarsall. bat różni się także od wersji do wersji. Jeśli bieżąca wersja programu Visual Studio jest zainstalowana na komputerze, który ma również starszą wersję programu Visual Studio, nie należy uruchamiać vcvarsall. bat ani innego pliku poleceń programu Visual Studio z różnych wersji w tym samym oknie wiersza polecenia.
+> Plik vcvarsall.bat również różni się od wersji do wersji. Jeśli bieżąca wersja programu Visual Studio jest zainstalowana na komputerze, który ma również starszą wersję programu Visual Studio, nie należy uruchamiać vcvarsall.bat ani innego pliku poleceń programu Visual Studio z różnych wersji w tym samym oknie wiersza polecenia.
 
 ## <a name="use-the-developer-tools-in-an-existing-command-window"></a>Korzystanie z narzędzi deweloperskich w istniejącym oknie poleceń
 
-Najprostszym sposobem określenia konkretnej architektury kompilacji w istniejącym oknie poleceń jest użycie pliku vcvarsall. bat. Użyj vcvarsall. bat, aby ustawić zmienne środowiskowe, aby skonfigurować wiersz polecenia dla kompilacji natywnej 32-bitowej lub 64-bitowej. Argumenty umożliwiają określenie wielu kompilacji na procesorach x86, x64, ARM lub ARM64. Można kierować Microsoft Store, platforma uniwersalna systemu Windows lub platform klasycznych Windows. Możesz nawet określić, który Windows SDK używać, i wybrać wersję zestawu narzędzi platformy.
+Najprostszym sposobem określenia konkretnej architektury kompilacji w istniejącym oknie polecenia jest użycie pliku vcvarsall.bat. Użyj vcvarsall.bat, aby ustawić zmienne środowiskowe, aby skonfigurować wiersz polecenia dla kompilacji natywnej 32-bitowej lub 64-bitowej. Argumenty umożliwiają określenie wielu kompilacji na procesorach x86, x64, ARM lub ARM64. Można kierować Microsoft Store, platforma uniwersalna systemu Windows lub platform klasycznych Windows. Możesz nawet określić, który Windows SDK używać, i wybrać wersję zestawu narzędzi platformy.
 
-Gdy jest używany bez argumentów, vcvarsall. bat konfiguruje zmienne środowiskowe, aby użyć bieżącego kompilatora x86-Native dla 32-bitowych elementów docelowych pulpitu systemu Windows. Można dodać argumenty, aby skonfigurować środowisko do korzystania z dowolnego narzędzia kompilatora natywnego lub krzyżowego. vcvarsall. bat wyświetla komunikat o błędzie w przypadku określenia konfiguracji, która nie jest zainstalowana lub dostępna na komputerze.
+Gdy jest używany bez argumentów, vcvarsall.bat konfiguruje zmienne środowiskowe, aby użyć bieżącego kompilatora x86-Native dla 32-bitowych elementów docelowych pulpitu systemu Windows. Można dodać argumenty, aby skonfigurować środowisko do korzystania z dowolnego narzędzia kompilatora natywnego lub krzyżowego. vcvarsall.bat wyświetla komunikat o błędzie w przypadku określenia konfiguracji, która nie jest zainstalowana lub jest niedostępna na komputerze.
 
 ### <a name="vcvarsall-syntax"></a>Składnia vcvarsall
 
-> **vcvarsall. bat** [*architektura*] [*platform_type*] [*winsdk_version*] [**-vcvars_ver =**_vcversion_]
+> **vcvarsall.bat** [*architektura*] [*platform_type*] [*winsdk_version*] [**-vcvars_ver =**_vcversion_]
 
 *Będąc*<br/>
 Ten opcjonalny argument określa architekturę hosta i docelowy do użycia. Jeśli *Architektura* nie jest określona, używane jest domyślne środowisko kompilacji. Te argumenty są obsługiwane:
@@ -135,13 +138,13 @@ Ten opcjonalny argument określa architekturę hosta i docelowy do użycia. Jeś
 |*Będąc*|Compiler|Architektura komputera hosta|Architektura kompilacji danych wyjściowych (target)|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|x86 32-bitowy natywny|x86, x64|x86|
-|**x86\_amd64** lub **x86\_x64**|x64 w przypadku procesora x86|x86, x64|x64|
+|**x86 \_ amd64** lub **x86 \_ x64**|x64 w przypadku procesora x86|x86, x64|x64|
 |**x86_arm**|ARM na procesorze x86|x86, x64|ARM|
 |**x86_arm64**|ARM64 na procesorze x86|x86, x64|ARM64|
 |**amd64** lub **x64**|x64 64-bitowe natywne|x64|x64|
-|**amd64\_x86** lub **x64\_x86**|x86 na x64 krzyżowe|x64|x86|
-|**amd64\_ARM** lub **x64\_ARM**|ARM na x64|x64|ARM|
-|**amd64\_arm64** lub **x64\_arm64**|ARM64 na x64|x64|ARM64|
+|**amd64 \_ x86** lub **x64 \_ x86**|x86 na x64 krzyżowe|x64|x86|
+|**amd64 \_ ARM** lub **x64 \_ ARM**|ARM na x64|x64|ARM|
+|**amd64 \_ arm64** lub **x64 \_ arm64**|ARM64 na x64|x64|ARM64|
 
 *platform_type*<br/>
 Ten opcjonalny argument umożliwia określenie **sklepu** lub **platformy UWP** jako typu platformy. Domyślnie środowisko jest ustawione na potrzeby kompilowania aplikacji klasycznych lub konsolowych.
@@ -171,7 +174,7 @@ Użyj **-vcvars_ver = 14.0** , aby określić zestaw narzędzi kompilatora progr
 
 #### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a><a name="vcvarsall"></a>Aby skonfigurować środowisko kompilacji w istniejącym oknie wiersza polecenia
 
-1. W wierszu polecenia Użyj polecenia CD, aby przejść do katalogu instalacyjnego programu Visual Studio. Następnie ponownie Użyj dysku CD, aby przejść do podkatalogu, który zawiera pliki poleceń specyficznych dla konfiguracji. W przypadku programów Visual Studio 2019 i Visual Studio 2017 należy użyć podkatalogu *kompilacji pomocniczej\\\\VC* . Dla programu Visual Studio 2015 Użyj podkatalogu *VC* .
+1. W wierszu polecenia Użyj polecenia CD, aby przejść do katalogu instalacyjnego programu Visual Studio. Następnie ponownie Użyj dysku CD, aby przejść do podkatalogu, który zawiera pliki poleceń specyficznych dla konfiguracji. W przypadku programów Visual Studio 2019 i Visual Studio 2017 należy użyć podkatalogu * \\ \\ kompilacji pomocniczej VC* . Dla programu Visual Studio 2015 Użyj podkatalogu *VC* .
 
 1. Wprowadź polecenie dla preferowanego środowiska deweloperskiego. Na przykład, aby skompilować kod ARM dla platformy UWP na platformie 64-bitowej przy użyciu najnowszych Windows SDK i zestawu narzędzi kompilatora programu Visual Studio, użyj tego wiersza polecenia:
 
@@ -201,7 +204,7 @@ Otwórz okno dialogowe właściwości dla skrótu wiersza polecenia dla dewelope
 
 ::: moniker-end
 
-Pliki wsadowe specyficzne dla architektury ustawiają parametr *Architecture* i Wywołaj vcvarsall. bat. Te same opcje można przekazać do tych plików wsadowych, co zostało przekazane do vcvarsall. bat lub bezpośrednio wywołać vcvarsall. bat. Aby określić parametry dla własnego skrótu polecenia, Dodaj je na końcu polecenia w podwójnym cudzysłowie. Na przykład Oto skrót do kompilowania kodu ARM dla platformy UWP na platformie 64-bitowej przy użyciu najnowszej Windows SDK. Aby użyć wcześniejszego zestawu narzędzi kompilatora, określ numer wersji. Użyj podobnej do tego celu polecenia w skrócie:
+Pliki wsadowe specyficzne dla architektury ustawiają parametr *architektury* i vcvarsall.bat wywołań. Te same opcje można przekazać do tych plików wsadowych, co zostało przekazane do vcvarsall.bat lub można tylko wywołać vcvarsall.bat bezpośrednio. Aby określić parametry dla własnego skrótu polecenia, Dodaj je na końcu polecenia w podwójnym cudzysłowie. Na przykład Oto skrót do kompilowania kodu ARM dla platformy UWP na platformie 64-bitowej przy użyciu najnowszej Windows SDK. Aby użyć wcześniejszego zestawu narzędzi kompilatora, określ numer wersji. Użyj podobnej do tego celu polecenia w skrócie:
 
 ::: moniker range=">= vs-2019"
 
@@ -219,28 +222,32 @@ Pliki wsadowe specyficzne dla architektury ustawiają parametr *Architecture* i 
 
 ::: moniker-end
 
-Dostosuj ścieżkę, aby odzwierciedlała katalog instalacyjny programu Visual Studio. Plik vcvarsall. bat zawiera dodatkowe informacje o określonych numerach wersji.
+Dostosuj ścieżkę, aby odzwierciedlała katalog instalacyjny programu Visual Studio. Plik vcvarsall.bat zawiera dodatkowe informacje o określonych numerach wersji.
 
 ## <a name="command-line-tools"></a>Narzędzia wiersza polecenia
 
 Aby skompilować projekt C/C++ w wierszu polecenia, program Visual Studio udostępnia następujące narzędzia wiersza polecenia:
 
 [CL](reference/compiling-a-c-cpp-program.md)<br/>
-Użyj kompilatora (CL. exe) do kompilowania i łączenia plików kodu źródłowego w aplikacje, biblioteki i biblioteki DLL.
+Użyj kompilatora (cl.exe) do kompilowania i łączenia plików kodu źródłowego w aplikacje, biblioteki i biblioteki DLL.
 
-[Łącze](reference/linking.md)<br/>
-Użyj konsolidatora (link. exe), aby połączyć skompilowane pliki i biblioteki obiektów w aplikacje i biblioteki DLL.
-
-[MSBuild](msbuild-visual-cpp.md)<br/>
-Użyj programu MSBuild (MSBuild. exe) i pliku projektu (. vcxproj), aby skonfigurować kompilację i wywoływać zestaw narzędzi pośrednio. Jest to odpowiednik uruchomienia polecenia **Kompiluj** projekt lub **Kompiluj rozwiązanie** w środowisku IDE programu Visual Studio. Uruchamianie programu MSBuild z wiersza polecenia jest zaawansowanym scenariuszem i nie jest często zalecane.
-
-[DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
-Użyj DEVENV (devenv. exe) połączonego z przełącznikiem wiersza polecenia, takim jak **/Build** lub **/Clean** , aby wykonać niektóre polecenia kompilacji bez wyświetlania środowiska IDE programu Visual Studio. Ogólnie rzecz biorąc, DEVENV jest preferowana bezpośrednio przy użyciu programu MSBuild, ponieważ program Visual Studio może obsłużyć złożoność programu MSBuild.
+[Powiązań](reference/linking.md)<br/>
+Użyj konsolidatora (link.exe), aby połączyć skompilowane pliki i biblioteki obiektów w aplikacje i biblioteki DLL.
 
 [NMAKE](reference/nmake-reference.md)<br/>
-Użyj NMAKE (NMAKE. exe) w systemie Windows do kompilowania projektów C++ opartych na tradycyjnym pliku reguł programu make.
+Używaj NMAKE (nmake.exe) w systemie Windows do kompilowania projektów C++ opartych na tradycyjnym pliku reguł programu make.
 
-Gdy kompilujesz w wierszu polecenia, polecenie F1 nie jest dostępne do natychmiastowej pomocy. Zamiast tego można użyć aparatu wyszukiwania, aby uzyskać informacje dotyczące ostrzeżeń, błędów i komunikatów lub można użyć plików pomocy w trybie offline. Aby użyć wyszukiwania w [docs.Microsoft.com](https://docs.microsoft.com/cpp/), użyj pola wyszukiwania w górnej części strony.
+Gdy kompilujesz w wierszu polecenia, polecenie F1 nie jest dostępne do natychmiastowej pomocy. Zamiast tego można użyć aparatu wyszukiwania, aby uzyskać informacje dotyczące ostrzeżeń, błędów i komunikatów. Możesz również pobrać pliki pomocy w trybie offline i korzystać z nich. Aby użyć wyszukiwania w [docs.Microsoft.com](https://docs.microsoft.com/cpp/), wprowadź zapytanie w polu wyszukiwania w górnej części dowolnego artykułu.
+
+## <a name="command-line-project-management-tools"></a>Narzędzia do zarządzania projektami w wierszu polecenia
+
+Środowisko IDE programu Visual Studio używa natywnego systemu kompilacji projektu opartego na programie MSBuild. Można wywołać program MSBuild bezpośrednio lub użyć natywnego systemu projektu bez użycia środowiska IDE:
+
+[MSBuild](msbuild-visual-cpp.md)<br/>
+Użyj programu MSBuild (msbuild.exe) i pliku projektu (. vcxproj), aby skonfigurować kompilację i wywoływać zestaw narzędzi pośrednio. Jest to odpowiednik uruchomienia polecenia **Kompiluj** projekt lub **Kompiluj rozwiązanie** w środowisku IDE programu Visual Studio. Uruchamianie programu MSBuild z wiersza polecenia jest zaawansowanym scenariuszem i nie jest często zalecane. Począwszy od programu Visual Studio w wersji 16,5, MSBuild nie używa środowiska wiersza polecenia do sterowania używanym zestawem narzędzi i bibliotekami.
+
+[DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
+Użyj DEVENV (devenv.exe) połączonej z przełącznikiem wiersza polecenia, takim jak **/Build** lub **/Clean** , aby wykonać niektóre polecenia kompilacji bez wyświetlania środowiska IDE programu Visual Studio. Ogólnie rzecz biorąc, DEVENV jest preferowana bezpośrednio przy użyciu programu MSBuild, ponieważ program Visual Studio może obsłużyć złożoność programu MSBuild. Począwszy od programu Visual Studio w wersji 16,5, DEVENV nie używa środowiska wiersza polecenia do sterowania używanym zestawem narzędzi i bibliotekami.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
@@ -249,23 +256,23 @@ W tych artykułach przedstawiono sposób tworzenia aplikacji w wierszu polecenia
 [Przewodnik: kompilowanie natywnego programu C++ w wierszu polecenia](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 Zawiera przykład pokazujący sposób tworzenia i kompilowania programu w języku C++ w wierszu polecenia.
 
-[Przewodnik: kompilowanie programu w języku C w wierszu polecenia](walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
+[Przewodnik: Kompilowanie programu w języku C w wierszu polecenia](walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
 Opisuje sposób kompilowania programu pisanego w języku programowania C.
 
-[Przewodnik: kompilowanie programu w języku C++/CLI w wierszu polecenia](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)<br/>
+[Przewodnik: Kompilowanie programu języka C++/interfejsu wiersza polecenia w wierszu polecenia](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)<br/>
 Opisuje sposób tworzenia i kompilowania programu C++/CLI, który używa .NET Framework.
 
-[Przewodnik: kompilowanie programu w języku C++/CX w wierszu polecenia](walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)<br/>
+[Przewodnik: Kompilowanie programu w języku C++/CX w wierszu polecenia](walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)<br/>
 Opisuje sposób tworzenia i kompilowania programu C++/CX, który używa środowisko wykonawcze systemu Windows.
 
 [Ustawianie ścieżki i zmiennych środowiskowych dla kompilacji z wiersza polecenia](setting-the-path-and-environment-variables-for-command-line-builds.md)<br/>
 Jak ustawić zmienne środowiskowe, aby używać zestawu narzędzi 32-bitowego lub 64-bitowego do tworzenia docelowych platform x86, x64, ARM i ARM64.
 
 [Odwołanie NMAKE](reference/nmake-reference.md)<br/>
-Zawiera łącza do artykułów opisujących narzędzie do konserwacji programów firmy Microsoft (NMAKE. EXE).
+Zawiera łącza do artykułów opisujących narzędzie do konserwacji programów firmy Microsoft (NMAKE.EXE).
 
 [MSBuild w wierszu polecenia — C++](msbuild-visual-cpp.md)<br/>
-Zawiera łącza do artykułów, w których omówiono sposób użycia programu MSBuild. exe w wierszu polecenia.
+Zawiera łącza do artykułów, w których omówiono sposób używania msbuild.exe z wiersza polecenia.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
@@ -273,14 +280,14 @@ Zawiera łącza do artykułów, w których omówiono sposób użycia programu MS
 W tym artykule opisano, jak używać tych opcji kompilatora do korzystania z biblioteki wykonawczej Debug lub Release.
 
 [Opcje kompilatora C/C++](reference/compiler-options.md)<br/>
-Zawiera łącza do artykułów, które omawiają opcje kompilatora C i C++ oraz CL. exe.
+Zawiera łącza do artykułów, które omawiają opcje kompilatora C i C++ oraz CL.exe.
 
-[MSVC Opcje konsolidatora](reference/linker-options.md)<br/>
-Zawiera łącza do artykułów, które omawiają Opcje konsolidatora i LINK. exe.
+[Opcje konsolidatora MSVC](reference/linker-options.md)<br/>
+Zawiera łącza do artykułów, które omawiają Opcje konsolidatora i LINK.exe.
 
 [Dodatkowe narzędzia kompilacji kompilatora MSVC](reference/c-cpp-build-tools.md)<br/>
 Oferuje linki do narzędzi do kompilacji C/C++, które są zawarte w programie Visual Studio.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Projekty i systemy kompilacji](projects-and-build-systems-cpp.md)

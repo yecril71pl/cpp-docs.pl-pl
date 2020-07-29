@@ -9,17 +9,17 @@ helpviewer_keywords:
 - modules [C++]
 - modules [C++], import
 - modules [C++], export
-description: Użyj deklaracji importu i eksportu, aby uzyskać dostęp i publikować typy i funkcje zdefiniowane w określonym module.
-ms.openlocfilehash: a765e9a406660d3c945ef3d70754178b0648458c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+description: Użyj deklaracji importu i eksportu, aby uzyskać dostęp do typów i funkcji, które są zdefiniowane w określonym module, oraz do ich publikowania.
+ms.openlocfilehash: 5be1618d7e64f6887cf78bd863d428d6710eaf7e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374118"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187195"
 ---
 # <a name="module-import-export"></a>moduł, import, eksport
 
-**Moduł**, **import**i deklaracje **eksportowe** są dostępne w języku C++20 i wymagają przełącznika kompilatora [/experimental:module](../build/reference/experimental-module.md) wraz z [/std:c++latest](../build/reference/std-specify-language-standard-version.md). Aby uzyskać więcej informacji, zobacz [Omówienie modułów w języku C++](modules-cpp.md).
+**Moduł**, **Importowanie**i **`export`** deklaracje są dostępne w języku c++ 20 i wymagają przełącznika kompilatora [/Experimental: module](../build/reference/experimental-module.md) z [/std: C + + Najnowsza](../build/reference/std-specify-language-standard-version.md). Aby uzyskać więcej informacji, zobacz [Omówienie modułów w języku C++](modules-cpp.md).
 
 ## <a name="module"></a>moduł
 
@@ -29,15 +29,15 @@ Umieść deklarację **modułu** na początku pliku implementacji modułu, aby o
 module ModuleA;
 ```
 
-## <a name="export"></a>export
+## <a name="export"></a>eksportowanie
 
-Użyj deklaracji **modułu eksportu** dla pliku interfejsu podstawowego modułu, który musi mieć rozszerzenie **.ixx:**
+Użyj deklaracji **modułu eksportu** dla podstawowego pliku interfejsu modułu, który musi mieć rozszerzenie **. IXX**:
 
 ```cpp
 export module ModuleA;
 ```
 
-W pliku interfejsu użyj modyfikatora **eksportu** na nazwach, które mają być częścią interfejsu publicznego:
+W pliku interfejsu, użyj **`export`** modyfikatora w nazwach, które są przeznaczone do interfejsu publicznego:
 
 ```cpp
 // ModuleA.ixx
@@ -66,11 +66,11 @@ int main() {
 }
 ```
 
-Słowo kluczowe **eksportu** może nie pojawić się w pliku implementacji modułu. Gdy **eksport** jest stosowany do nazwy obszaru nazw, wszystkie nazwy w obszarze nazw są eksportowane.
+**`export`** Słowo kluczowe może nie pojawić się w pliku implementacji modułu. Gdy **`export`** jest stosowany do nazwy przestrzeni nazw, zostaną wyeksportowane wszystkie nazwy w przestrzeni nazw.
 
 ## <a name="import"></a>import
 
-Użyj deklaracji **importu,** aby nazwy modułu były widoczne w programie. Deklaracja importu musi pojawić się po deklaracji modułu i po wszelkich #include dyrektyw, ale przed wszelkimi deklaracjami w pliku.
+Użyj deklaracji **importu** , aby uczynić nazwy modułów widocznymi w programie. Deklaracja importu musi znajdować się po deklaracji modułu i po każdej #include dyrektywie, ale przed wszelkimi deklaracjami w pliku.
 
 ```cpp
 module ModuleA;
@@ -88,7 +88,7 @@ class Baz
 
 ## <a name="remarks"></a>Uwagi
 
-Zarówno **import,** jak i **moduł** są traktowane jako słowa kluczowe tylko wtedy, gdy pojawiają się na początku wiersza logicznego:
+Zarówno **Import** , jak i **moduł** są traktowane jako słowa kluczowe, gdy pojawiają się na początku linii logicznej:
 
 ```cpp
 
@@ -112,7 +112,7 @@ int i; module ;
 
 **Specyficzne dla firmy Microsoft**
 
-W języku Microsoft C++ **import** tokenów i **moduł** są zawsze identyfikatory i nigdy słowa kluczowe, gdy są one używane jako argumenty do makra.
+W programie Microsoft C++ tokeny **importu** i **modułu** są zawsze identyfikatory i nigdy nie są słowami kluczowymi, gdy są używane jako argumenty do makra.
 
 ### <a name="example"></a>Przykład
 
@@ -123,7 +123,7 @@ import // Always an identifier, never a keyword
 )
 ```
 
-**Koniec z programem Microsoft**
+**Zakończenie określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
 

@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: 66c2e6e323ed9f12f30e9392ec7afe431fc2138b
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: f710ead679484c41b006566a711a03ba153201ec
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446743"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230379"
 ---
 # <a name="concurrency-namespace"></a>concurrency — Przestrzeń nazwy
 
@@ -83,7 +83,7 @@ namespace concurrency;
 |[Klasa invalid_link_target](invalid-link-target-class.md)|Ta klasa opisuje wyjątek zgłoszony, gdy `link_target` wywoływana jest metoda bloku komunikatów i blok komunikatów nie może połączyć się z obiektem docelowym. Może to wynikać z przekroczenia liczby linków, do których blok komunikatów jest dozwolony, lub próba łączenia określonego elementu docelowego dwa razy do tego samego źródła.|
 |[Klasa invalid_multiple_scheduling](invalid-multiple-scheduling-class.md)|Ta klasa opisuje wyjątek zgłoszony, gdy `task_handle` obiekt jest zaplanowany wiele razy przy użyciu `run` metody `task_group` lub `structured_task_group` obiektu bez wywołania wywołującego do albo `wait` `run_and_wait` metody.|
 |[Klasa invalid_operation](invalid-operation-class.md)|Ta klasa opisuje wyjątek zgłoszony w przypadku wykonania nieprawidłowej operacji, która nie jest dokładniej opisana przez inny typ wyjątku zgłoszony przez środowisko uruchomieniowe współbieżności.|
-|[Klasa invalid_oversubscribe_operation](invalid-oversubscribe-operation-class.md)|Ta klasa opisuje wyjątek zgłoszony, gdy `Context::Oversubscribe` Metoda jest wywoływana z `_BeginOversubscription` parametrem ustawionym na `false` bez wcześniejszego wywołania `Context::Oversubscribe` metody z `_BeginOversubscription` parametrem ustawionym na `true` .|
+|[Klasa invalid_oversubscribe_operation](invalid-oversubscribe-operation-class.md)|Ta klasa opisuje wyjątek zgłoszony, gdy `Context::Oversubscribe` Metoda jest wywoływana z `_BeginOversubscription` parametrem ustawionym na **`false`** bez wcześniejszego wywołania `Context::Oversubscribe` metody z `_BeginOversubscription` parametrem ustawionym na **`true`** .|
 |[Klasa invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md)|Ta klasa opisuje wyjątek zgłoszony, gdy nieprawidłowy lub nieznany klucz jest przesyłany do `SchedulerPolicy` konstruktora obiektów lub `SetPolicyValue` Metoda `SchedulerPolicy` obiektu jest przenoszona jako klucz, który należy zmienić przy użyciu innych metod, takich jak `SetConcurrencyLimits` Metoda.|
 |[Klasa invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md)|Ta klasa opisuje wyjątek zgłoszony, gdy podejmowana jest próba ustawienia limitów współbieżności obiektu w `SchedulerPolicy` taki sposób, że wartość `MinConcurrency` klucza jest mniejsza niż wartość `MaxConcurrency` klucza.|
 |[Klasa invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)|Ta klasa opisuje wyjątek zgłoszony, gdy klucz zasad `SchedulerPolicy` obiektu jest ustawiony na nieprawidłową wartość dla tego klucza.|
@@ -179,7 +179,7 @@ namespace concurrency;
 |[asend, funkcja](concurrency-namespace-functions.md#asend)|Przeciążone. Asynchroniczna operacja wysyłania, która planuje zadanie propagacji danych do docelowego bloku.|
 |[Funkcja cancel_current_task](concurrency-namespace-functions.md#cancel_current_task)|Anuluje aktualnie wykonywane zadanie. Ta funkcja może zostać wywołana z poziomu treści zadania, aby przerwać wykonywanie zadania i spowodować, że `canceled` przestanie on działać.<br /><br /> Nie jest to obsługiwany scenariusz do wywołania tej funkcji, jeśli nie znajdujesz się w treści `task` . Wykonanie tej czynności spowoduje niezdefiniowane zachowanie, takie jak awaria lub brak odpowiedzi w aplikacji.|
 |[Funkcja create_async](concurrency-namespace-functions.md#create_async)|Tworzy środowisko wykonawcze systemu Windows asynchronicznej na podstawie podanego przez użytkownika obiektu lambda lub funkcji. Zwracany typ `create_async` to jeden z `IAsyncAction^` , `IAsyncActionWithProgress<TProgress>^` , `IAsyncOperation<TResult>^` , lub `IAsyncOperationWithProgress<TResult, TProgress>^` na podstawie podpisu wyrażenia lambda przesłanego do metody.|
-|[Funkcja create_task](concurrency-namespace-functions.md#create_task)|Przeciążone. Tworzy obiekt [zadania](task-class.md) PPL. `create_task`mogą być używane wszędzie, gdzie użyto konstruktora zadań. Jest ona świadczona głównie dla wygody, ponieważ umożliwia użycie `auto` słowa kluczowego podczas tworzenia zadań.|
+|[Funkcja create_task](concurrency-namespace-functions.md#create_task)|Przeciążone. Tworzy obiekt [zadania](task-class.md) PPL. `create_task`mogą być używane wszędzie, gdzie użyto konstruktora zadań. Jest ona świadczona głównie dla wygody, ponieważ umożliwia użycie **`auto`** słowa kluczowego podczas tworzenia zadań.|
 |[Serviceresourcemanager — funkcja](concurrency-namespace-functions.md#createresourcemanager)|Zwraca interfejs, który reprezentuje pojedyncze wystąpienie Menedżer zasobów środowisko uruchomieniowe współbieżności. Menedżer zasobów jest odpowiedzialny za przypisywanie zasobów do harmonogramów, które chcą współpracować ze sobą.|
 |[DisableTracing —, funkcja](concurrency-namespace-functions.md#disabletracing)|Wyłącza śledzenie w środowisko uruchomieniowe współbieżności. Ta funkcja jest przestarzała, ponieważ śledzenie ETW jest domyślnie wyrejestrowane.|
 |[EnableTracing —, funkcja](concurrency-namespace-functions.md#enabletracing)|Włącza śledzenie w środowisko uruchomieniowe współbieżności. Ta funkcja jest przestarzała, ponieważ śledzenie ETW jest teraz domyślnie włączone.|
@@ -191,7 +191,7 @@ namespace concurrency;
 |[GetProcessorNodeCount —, funkcja](concurrency-namespace-functions.md#getprocessornodecount)|Zwraca liczbę węzłów NUMA lub pakietów procesorów w źródłowym systemie.|
 |[GetSchedulerId —, funkcja](concurrency-namespace-functions.md#getschedulerid)|Zwraca unikatowy identyfikator, który można przypisać do harmonogramu, który implementuje `IScheduler` interfejs.|
 |[Funkcja interruption_point](concurrency-namespace-functions.md#interruption_point)|Tworzy punkt przerwania do anulowania. Jeśli anulowanie jest w toku w kontekście, w którym ta funkcja jest wywoływana, spowoduje to zgłoszenie wyjątku wewnętrznego, który przerywa wykonywanie aktualnie wykonywanej pracy równoległej. Jeśli anulowanie nie jest w toku, funkcja nic nie robi.|
-|[Funkcja is_current_task_group_canceling](concurrency-namespace-functions.md#is_current_task_group_canceling)|Zwraca wskazanie, czy grupa zadań, która jest aktualnie uruchamiana w bieżącym kontekście, znajduje się w pośrodku aktywnego anulowania (lub będzie wkrótce). Należy pamiętać, że jeśli w bieżącym kontekście nie ma żadnej grupy zadań, która jest aktualnie wykonywana, `false` zostanie zwrócona wartość.|
+|[Funkcja is_current_task_group_canceling](concurrency-namespace-functions.md#is_current_task_group_canceling)|Zwraca wskazanie, czy grupa zadań, która jest aktualnie uruchamiana w bieżącym kontekście, znajduje się w pośrodku aktywnego anulowania (lub będzie wkrótce). Należy pamiętać, że jeśli w bieżącym kontekście nie ma żadnej grupy zadań, która jest aktualnie wykonywana, **`false`** zostanie zwrócona wartość.|
 |[Funkcja make_choice](concurrency-namespace-functions.md#make_choice)|Przeciążone. Konstruuje `choice` blok komunikatów z opcjonalnych `Scheduler` lub co najmniej `ScheduleGroup` dwóch źródeł danych wejściowych.|
 |[Funkcja make_greedy_join](concurrency-namespace-functions.md#make_greedy_join)|Przeciążone. Konstruuje `greedy multitype_join` blok komunikatów z opcjonalnych `Scheduler` lub co najmniej `ScheduleGroup` dwóch źródeł danych wejściowych.|
 |[Funkcja make_join](concurrency-namespace-functions.md#make_join)|Przeciążone. Konstruuje `non_greedy multitype_join` blok komunikatów z opcjonalnych `Scheduler` lub co najmniej `ScheduleGroup` dwóch źródeł danych wejściowych.|
@@ -260,4 +260,4 @@ namespace concurrency;
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja](reference-concurrency-runtime.md)
+[Odwołanie](reference-concurrency-runtime.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - simple assignment operator
 - equal sign
 ms.assetid: e7140a0a-7104-4b3a-b293-7adcc1fdd52b
-ms.openlocfilehash: 77c61101e9540a0d9469e7176eb15992a73b4b09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64112a54828a9a6626e78e556e8fe6dc52a3300f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158285"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229548"
 ---
 # <a name="simple-assignment-c"></a>Przypisanie proste (C)
 
@@ -27,8 +27,8 @@ int y;
 x = y;
 ```
 
-W tym przykładzie wartość `y` jest konwertowana na typ **Double** i przypisany do. `x`
+W tym przykładzie wartość `y` jest konwertowana na typ **`double`** i przypisany do `x` .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Operatory przypisania w języku C](../c-language/c-assignment-operators.md)
+[Operatory przypisania języka C](../c-language/c-assignment-operators.md)

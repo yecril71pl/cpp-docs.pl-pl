@@ -25,47 +25,47 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-ms.openlocfilehash: 37c3169b66e1120dbfdb3a69379430e9bc8a1586
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cb5224b3edaf84dbcb7c0429044a647fb5ac19a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294794"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229756"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Kompilowanie biblioteki importowanej oraz pliku eksportowanego
 
-Do tworzenia biblioteki importu i eksportu plików, użyj następującej składni:
+Aby utworzyć bibliotekę importu i wyeksportować plik, należy użyć następującej składni:
 
-> **/ DEF LIB**[**:**<em>deffile</em>] [*opcje*] [*objfiles*] [*bibliotek*]
+> **Lib/def**[**:**<em>deffile</em>] [*Opcje*] [*objfiles*] [*biblioteki*]
 
-Jeśli określono/DEF, pliki wyjściowe LIB tworzy na podstawie specyfikacje eksportu, które są przekazywane w poleceniu LIB. Istnieją trzy metody Określanie eksportów, wymienione w zalecanej kolejności używania:
+Gdy/DEF jest określony, LIB tworzy pliki wyjściowe z specyfikacji eksportu, które są przekazywane w LIB polecenie. Istnieją trzy metody określania eksportu, wymienione w zalecanej kolejności użycia:
 
-1. A **__declspec(dllexport)** definicji w jednym z *objfiles* lub *biblioteki*
+1. **`__declspec(dllexport)`** Definicja w jednej z *objfiles* lub *bibliotek*
 
-1. Specyfikacji/Export:*nazwa* w wierszu polecenia LIB
+1. Specyfikacja/EXPORT:*name* w wierszu polecenia LIB
 
-1. Definicja w **EKSPORTÓW** instrukcji w *deffile*
+1. Definicja w instrukcji **eksports** w *deffile*
 
-Są to te same metody, które służy do określania eksporty podczas łączenia z eksportu programu. Program można używać więcej niż jednej metody. Można określić część polecenia LIB (takich jak wiele *objfiles* lub specyfikacji/Export) w pliku poleceń w poleceniu LIB, podobnie jak wykonywać następujące czynności za pomocą polecenia łącza.
+Są to te same metody, które służą do określania eksportu podczas łączenia programu eksportu. Program może używać więcej niż jednej metody. Możesz określić części polecenia LIB (takie jak wiele specyfikacji *objfiles* lub/Export) w pliku poleceń w lib polecenia, tak jak w przypadku polecenia link.
 
-Następujące opcje dotyczą kompilowania biblioteki importowanej i eksportowanie pliku:
+Następujące opcje dotyczą tworzenia biblioteki importu i eksportu pliku:
 
-> **/ OUT:** *importowania*
+> **/Out:** *Import*
 
-Przesłania domyślną nazwę pliku wyjściowego dla *zaimportować* biblioteki tworzona. Gdy out nie zostanie określony, domyślną nazwą jest podstawowa nazwa pierwszego pliku obiektu lub biblioteki w poleceniu LIB i rozszerzenia. lib. Plik eksportu otrzymuje taką samą nazwę jak biblioteki importowanej oraz rozszerzenie. oczekiwane.
+Zastępuje domyślną nazwę pliku wyjściowego dla tworzonej biblioteki *importu* . Gdy nie określono parametru/OUT, domyślną nazwą jest podstawowa nazwa pierwszego pliku obiektu lub biblioteki w poleceniu LIB i Extension. lib. Plik eksportu ma taką samą nazwę podstawową jak biblioteka importowana i rozszerzenie. EXP.
 
-> **/ EXPORT:** *Nazwa_wpisu* \[ **=** *internalname*]\[,**\@** <em>porządkowe</em>\[, **NONAME**]]\[, **danych**]
+> **/Export:** *EntryName* \[ **=** *InternalName*] \[ , **\@** <em>porządkowy</em> \[ , **NoName**]] \[ , **dane**]
 
-Eksportuje funkcję z programu, aby zezwolić na inne programy w wywołaniu funkcji. Można także eksportować dane (przy użyciu **danych** — słowo kluczowe). Eksporty są zazwyczaj zdefiniowane w bibliotece DLL.
+Eksportuje funkcję z programu, aby umożliwić innym programom wywoływanie funkcji. Możesz również eksportować dane (za pomocą słowa kluczowego **danych** ). Eksporty są zwykle zdefiniowane w bibliotece DLL.
 
-*Nazwa_wpisu* jest nazwa elementu funkcję lub dane, ponieważ jest używane przez program wywołujący. Opcjonalnie można określić *internalname* jako funkcja znane w programie definiujące; domyślnie *internalname* jest taka sama jak *Nazwa_wpisu*. *Porządkowe* Określa indeks w tabeli eksportu do zakresu od 1 do 65 535; Jeśli nie określisz *porządkowe*, LIB przypisuje jeden. **NONAME** — słowo kluczowe eksportuje funkcję tylko jako liczby porządkowej, bez *Nazwa_wpisu*. **Danych** — słowo kluczowe jest używany do eksportowania obiektów tylko do danych.
+*EntryName* jest nazwą funkcji lub elementu danych, która ma być używana przez program wywołujący. Opcjonalnie można określić *wewnętrznyname* jako funkcję znaną w programie definiującym; Domyślnie *wewnętrznaname* jest taka sama jak *EntryName*. *Numer porządkowy* Określa indeks w tabeli eksportu z zakresu od 1 do 65 535; Jeśli nie określisz *liczby porządkowej*, lib przypisuje jeden. Słowo kluczowe **NoName** eksportuje funkcję tylko jako numer porządkowy bez *wpisu*. Słowo kluczowe **Data** służy do eksportowania obiektów tylko do danych.
 
-> **/ INCLUDE:** *symboli*
+> **/Include:** *symbol*
 
-Dodaje określony *symbol* do tabeli symboli. Ta opcja jest przydatne w przypadku wymuszania użycie obiektu biblioteki, które w przeciwnym razie nie będzie uwzględniony.
+Dodaje określony *symbol* do tabeli symboli. Ta opcja jest przydatna do wymuszania użycia obiektu biblioteki, który w przeciwnym razie nie zostanie uwzględniony.
 
-Należy pamiętać, że jeśli tworzysz biblioteki importu w krok wstępny, przed utworzeniem usługi .dll, należy przekazać ten sam zestaw plików obiektów podczas tworzenia pliku .dll, jako zakończony powodzeniem w podczas kompilowania biblioteki importowanej.
+Należy pamiętać, że jeśli utworzysz bibliotekę importu w ramach wstępnego kroku przed utworzeniem biblioteki. dll, musisz przekazać ten sam zestaw plików obiektów podczas kompilowania biblioteki.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Praca z bibliotekami importowanymi oraz plikami eksportowanymi](working-with-import-libraries-and-export-files.md)
+[Praca z bibliotekami importu i plikami eksportu](working-with-import-libraries-and-export-files.md)

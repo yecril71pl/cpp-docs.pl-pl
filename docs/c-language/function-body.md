@@ -7,12 +7,12 @@ helpviewer_keywords:
 - function definitions, function body
 - function body
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
-ms.openlocfilehash: 2d2e04572de91b161237d999bb95cfda26256c54
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 2ae73ab4ca91e06e3b6cd41166a8d05ae0857e4a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857102"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229704"
 ---
 # <a name="function-body"></a>Treść funkcji
 
@@ -25,13 +25,13 @@ ms.locfileid: "74857102"
 
 /\**atrybut-seq* jest specyficzny dla firmy Microsoft\*/
 
-*instrukcja złożona*:/\* treść funkcji\*/<br/>
+*instrukcja złożona*:/ \* treść funkcji\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**{** *deklaracji*<sub>opt</sub> *instrukcji SELECT-list*<sub>opt</sub> **}**
 
-Zmienne zadeklarowane w treści funkcji, znane jako *zmienne lokalne* **, mają klasy** magazynu autostorage, chyba że określono inaczej. Po wywołaniu funkcji magazyn jest tworzony dla zmiennych lokalnych i są wykonywane lokalne inicjalizacje. Kontrola wykonywania przechodzi do pierwszej instrukcji w *instrukcji złożonej* i kontynuuje do momentu wykonania instrukcji **Return** lub napotkania końca treści funkcji. Następnie formant wraca do punktu, w którym wywołano funkcję.
+Zmienne zadeklarowane w treści funkcji, znane jako *zmienne lokalne*, mają **`auto`** klasę magazynu, chyba że określono inaczej. Po wywołaniu funkcji magazyn jest tworzony dla zmiennych lokalnych i są wykonywane lokalne inicjalizacje. Kontrola wykonywania przechodzi do pierwszej instrukcji w *instrukcji złożonej* i kontynuuje do momentu **`return`** wykonania instrukcji lub napotkania końca treści funkcji. Następnie formant wraca do punktu, w którym wywołano funkcję.
 
-Instrukcja **Return** zawierająca wyrażenie musi być wykonana, jeśli funkcja ma zwracać wartość. Wartość zwracana funkcji jest niezdefiniowana, jeśli instrukcja **Return** nie jest wykonywana lub instrukcja **Return** nie zawiera wyrażenia.
+**`return`** Instrukcja zawierająca wyrażenie musi być wykonana, jeśli funkcja ma zwracać wartość. Wartość zwracana funkcji jest niezdefiniowana, jeśli instrukcja nie **`return`** jest wykonywana lub **`return`** instrukcja nie zawiera wyrażenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Definicje funkcji języka C](../c-language/c-function-definitions.md)

@@ -1,19 +1,19 @@
 ---
-title: Tworzenie kalkulatora konsoli w języku C++
+title: Tworzenie kalkulatora konsoli w C++
 description: Tworzenie aplikacji konsolowej Hello world i aplikacji Kalkulator w programie Visual C++
 ms.custom: mvc
 ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: b292d5b8e1db7415aed6427f2327788e08a28a20
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 5f448e68878e211969c89f7c4c750e3231d3a9b7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404453"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230587"
 ---
-# <a name="create-a-console-calculator-in-c"></a>Tworzenie kalkulatora konsoli w języku C++
+# <a name="create-a-console-calculator-in-c"></a>Tworzenie kalkulatora konsoli w C++
 
 ::: moniker range=">=vs-2019"
 
@@ -123,7 +123,7 @@ Teraz zmień kod w tym szablonie na aplikację Kalkulator.
    > Zrozumienie kodu:
    >
    > - `#include`Instrukcje umożliwiają odwoływanie się do kodu znajdującego się w innych plikach. Czasami może zostać wyświetlona nazwa pliku otoczona nawiasami ostrymi ( **\<\>** ); inne godziny są otoczone cudzysłowem (**""**). Ogólnie rzecz biorąc, nawiasy ostre są używane podczas odwoływania się do standardowej biblioteki języka C++, natomiast cudzysłowy są używane dla innych plików.
-   > - `using namespace std;`Linia instruuje kompilator, aby oczekiwał od standardowej biblioteki języka C++, która ma być używana w tym pliku. Bez tego wiersza każde słowo kluczowe z biblioteki musi być poprzedzone znakiem `std::` , aby zauważyć jego zakres. Na przykład bez tego wiersza każde odwołanie `cout` musi być zapisywane jako `std::cout` . `using`Instrukcja zostanie dodana, aby kod wyglądał bardziej czysty.
+   > - `using namespace std;`Linia instruuje kompilator, aby oczekiwał od standardowej biblioteki języka C++, która ma być używana w tym pliku. Bez tego wiersza każde słowo kluczowe z biblioteki musi być poprzedzone znakiem `std::` , aby zauważyć jego zakres. Na przykład bez tego wiersza każde odwołanie `cout` musi być zapisywane jako `std::cout` . **`using`** Instrukcja zostanie dodana, aby kod wyglądał bardziej czysty.
    > - `cout`Słowo kluczowe jest używane do drukowania do wyjścia standardowego w języku C++. **\<\<** Operator instruuje kompilator, aby wysyłał dane z prawej strony do wyjścia standardowego.
    > - Słowo kluczowe **endl** jest podobne do klawisza ENTER; zamyka wiersz i przenosi kursor do następnego wiersza. Lepszym rozwiązaniem jest umieszczenie `\n` wewnątrz ciągu (zawartego w ""), aby wykonać to samo, jak `endl` zawsze opróżnia bufor i może obniżyć wydajność programu, ale ponieważ jest to bardzo mała aplikacja, `endl` jest używana zamiast tego w celu uzyskania lepszej czytelności.
    > - Wszystkie instrukcje C++ muszą kończyć się średnikami, a wszystkie aplikacje C++ muszą zawierać `main()` funkcję. Ta funkcja jest uruchamiana na początku. Cały kod musi być dostępny `main()` , aby można było go użyć.
@@ -205,7 +205,7 @@ Czas na dodanie pewnej logiki matematycznej.
    >
    > - Funkcja `Calculate` używa liczby, operatora i drugiej liczby, a następnie wykonuje żądaną operację dla liczb.
    > - Instrukcja Switch sprawdza, który operator został dostarczony i wykonuje tylko przypadki odpowiadające tej operacji. Wartość domyślna: przypadek jest rezerwy w przypadku, gdy użytkownik wpisze operator, który nie został zaakceptowany, więc program nie przerywa. Ogólnie rzecz biorąc, najlepiej jest obsługiwać nieprawidłowe dane wprowadzane przez użytkownika w bardziej elegancki sposób, ale wykracza to poza zakres tego samouczka.
-   > - `double`Słowo kluczowe wskazuje typ liczby, która obsługuje miejsca dziesiętne. Dzięki temu Kalkulator może obsłużyć zarówno dziesiętną matematyczną, jak i liczbę całkowitą. `Calculate`Funkcja jest wymagana, aby zawsze zwracała taką liczbę ze względu na `double` bardzo początek kodu (oznacza to, że zwracany typ funkcji), dlatego zwracamy 0,0 nawet w przypadku domyślnego.
+   > - **`double`** Słowo kluczowe wskazuje typ liczby, która obsługuje miejsca dziesiętne. Dzięki temu Kalkulator może obsłużyć zarówno dziesiętną matematyczną, jak i liczbę całkowitą. `Calculate`Funkcja jest wymagana, aby zawsze zwracała taką liczbę ze względu na **`double`** bardzo początek kodu (oznacza to, że zwracany typ funkcji), dlatego zwracamy 0,0 nawet w przypadku domyślnego.
    > - Plik. h deklaruje *prototyp*funkcji, który informuje kompilator, jakie parametry wymagają, i jakie zwraca typ od niego oczekiwane. Plik. cpp zawiera wszystkie szczegóły implementacji funkcji.
 
 Jeśli kompilujesz i uruchomisz kod ponownie w tym momencie, nadal będzie on się zamykał po zaproszeniu do wykonania operacji. Następnie zmodyfikujesz `main` funkcję, aby wykonać pewne obliczenia.
@@ -251,7 +251,7 @@ Jeśli kompilujesz i uruchomisz kod ponownie w tym momencie, nadal będzie on si
    > - Ponieważ programy C++ są zawsze uruchamiane przy użyciu `main()` funkcji, musimy w tym miejscu wywołać inny kod, więc `#include` konieczne jest wykonanie instrukcji.
    > - Niektóre zmienne początkowe `x` , `y` , `oper` i `result` są zadeklarowane w celu przechowania odpowiednio pierwszej liczby, drugiej liczby, operatora i wyniku końcowego. Zawsze dobrym sposobem jest przyznanie im początkowych wartości, aby uniknąć niezdefiniowanego zachowania, co jest wykonywane w tym miejscu.
    > - `Calculator c;`Wiersz deklaruje obiekt o nazwie "c" jako wystąpienie `Calculator` klasy. Sama klasa jest tylko planem, w jaki działają Kalkulatory. Obiekt jest określonym kalkulatorem, który wykonuje obliczenia matematyczne.
-   > - `while (true)`Instrukcja jest pętlą. Kod wewnątrz pętli będzie nadal wykonywany przez cały czas i dłużej, o ile warunek wewnątrz ma `()` wartość true. Ponieważ warunek jest po prostu wyświetlany jako `true` , zawsze ma wartość true, więc pętla jest uruchamiana w nieskończoność. Aby zamknąć program, użytkownik musi ręcznie zamknąć okno konsoli. W przeciwnym razie program zawsze czeka na nowe dane wejściowe.
+   > - `while (true)`Instrukcja jest pętlą. Kod wewnątrz pętli będzie nadal wykonywany przez cały czas i dłużej, o ile warunek wewnątrz ma `()` wartość true. Ponieważ warunek jest po prostu wyświetlany jako **`true`** , zawsze ma wartość true, więc pętla jest uruchamiana w nieskończoność. Aby zamknąć program, użytkownik musi ręcznie zamknąć okno konsoli. W przeciwnym razie program zawsze czeka na nowe dane wejściowe.
    > - `cin`Słowo kluczowe jest używane do akceptowania danych wejściowych od użytkownika. Ten strumień wejściowy jest wystarczająco inteligentny, aby przetwarzać wiersz tekstu wprowadzony w oknie konsoli i umieścić go wewnątrz każdej z wymienionych zmiennych w kolejności, przy założeniu, że dane wejściowe użytkownika są zgodne z wymaganą specyfikacją. Możesz zmodyfikować ten wiersz, aby akceptować różne typy danych wejściowych, na przykład więcej niż dwie liczby, chociaż `Calculate()` należy również zaktualizować tę funkcję, aby ją obsłużyć.
    > - `c.Calculate(x, oper, y);`Wyrażenie wywołuje `Calculate` wcześniej zdefiniowaną funkcję i dostarcza wprowadzone wartości wejściowe. Funkcja zwraca liczbę, która jest przechowywana w `result` .
    > - Na koniec `result` jest drukowana w konsoli, więc użytkownik zobaczy wynik obliczenia.
@@ -487,7 +487,7 @@ Teraz zmień kod w tym szablonie na aplikację Kalkulator.
    >
    > - `#include`Instrukcje umożliwiają odwoływanie się do kodu znajdującego się w innych plikach. Czasami może zostać wyświetlona nazwa pliku otoczona nawiasami ostrymi ( **\<\>** ); inne godziny są otoczone cudzysłowem (**""**). Ogólnie rzecz biorąc, nawiasy ostre są używane podczas odwoływania się do standardowej biblioteki języka C++, natomiast cudzysłowy są używane dla innych plików.
    > - `#include "pch.h"`Wiersz (lub w programie Visual Studio 2017 i starszych `#include "stdafx.h"` ) odwołuje się do elementu znanego jako prekompilowany nagłówek. Są one często używane przez profesjonalne programiści, aby skrócić czasy kompilacji, ale wykraczają poza zakres tego samouczka.
-   > - `using namespace std;`Linia instruuje kompilator, aby oczekiwał od standardowej biblioteki języka C++, która ma być używana w tym pliku. Bez tego wiersza każde słowo kluczowe z biblioteki musi być poprzedzone znakiem `std::` , aby zauważyć jego zakres. Na przykład bez tego wiersza każde odwołanie `cout` musi być zapisywane jako `std::cout` . `using`Instrukcja zostanie dodana, aby kod wyglądał bardziej czysty.
+   > - `using namespace std;`Linia instruuje kompilator, aby oczekiwał od standardowej biblioteki języka C++, która ma być używana w tym pliku. Bez tego wiersza każde słowo kluczowe z biblioteki musi być poprzedzone znakiem `std::` , aby zauważyć jego zakres. Na przykład bez tego wiersza każde odwołanie `cout` musi być zapisywane jako `std::cout` . **`using`** Instrukcja zostanie dodana, aby kod wyglądał bardziej czysty.
    > - `cout`Słowo kluczowe jest używane do drukowania do wyjścia standardowego w języku C++. **\<\<** Operator instruuje kompilator, aby wysyłał dane z prawej strony do wyjścia standardowego.
    > - Słowo kluczowe **endl** jest podobne do klawisza ENTER; zamyka wiersz i przenosi kursor do następnego wiersza. Lepszym rozwiązaniem jest umieszczenie `\n` wewnątrz ciągu (zawartego w ""), aby wykonać to samo, jak `endl` zawsze opróżnia bufor i może obniżyć wydajność programu, ale ponieważ jest to bardzo mała aplikacja, `endl` jest używana zamiast tego w celu uzyskania lepszej czytelności.
    > - Wszystkie instrukcje C++ muszą kończyć się średnikami, a wszystkie aplikacje C++ muszą zawierać `main()` funkcję. Ta funkcja jest uruchamiana na początku. Cały kod musi być dostępny `main()` , aby można było go użyć.
@@ -568,7 +568,7 @@ Czas na dodanie pewnej logiki matematycznej.
    >
    > - Funkcja `Calculate` używa liczby, operatora i drugiej liczby, a następnie wykonuje żądaną operację dla liczb.
    > - Instrukcja Switch sprawdza, który operator został dostarczony i wykonuje tylko przypadki odpowiadające tej operacji. Wartość domyślna: przypadek jest rezerwy w przypadku, gdy użytkownik wpisze operator, który nie został zaakceptowany, więc program nie przerywa. Ogólnie rzecz biorąc, najlepiej jest obsługiwać nieprawidłowe dane wprowadzane przez użytkownika w bardziej elegancki sposób, ale wykracza to poza zakres tego samouczka.
-   > - `double`Słowo kluczowe wskazuje typ liczby, która obsługuje miejsca dziesiętne. Dzięki temu Kalkulator może obsłużyć zarówno dziesiętną matematyczną, jak i liczbę całkowitą. `Calculate`Funkcja jest wymagana, aby zawsze zwracała taką liczbę ze względu na `double` bardzo początek kodu (oznacza to, że zwracany typ funkcji), dlatego zwracamy 0,0 nawet w przypadku domyślnego.
+   > - **`double`** Słowo kluczowe wskazuje typ liczby, która obsługuje miejsca dziesiętne. Dzięki temu Kalkulator może obsłużyć zarówno dziesiętną matematyczną, jak i liczbę całkowitą. `Calculate`Funkcja jest wymagana, aby zawsze zwracała taką liczbę ze względu na **`double`** bardzo początek kodu (oznacza to, że zwracany typ funkcji), dlatego zwracamy 0,0 nawet w przypadku domyślnego.
    > - Plik. h deklaruje *prototyp*funkcji, który informuje kompilator, jakie parametry wymagają, i jakie zwraca typ od niego oczekiwane. Plik. cpp zawiera wszystkie szczegóły implementacji funkcji.
 
 Jeśli kompilujesz i uruchomisz kod ponownie w tym momencie, nadal będzie on się zamykał po zaproszeniu do wykonania operacji. Następnie zmodyfikujesz `main` funkcję, aby wykonać pewne obliczenia.
@@ -615,7 +615,7 @@ Jeśli kompilujesz i uruchomisz kod ponownie w tym momencie, nadal będzie on si
    > - Ponieważ programy C++ są zawsze uruchamiane przy użyciu `main()` funkcji, musimy w tym miejscu wywołać inny kod, więc `#include` konieczne jest wykonanie instrukcji.
    > - Niektóre zmienne początkowe `x` , `y` , `oper` i `result` są zadeklarowane w celu przechowania odpowiednio pierwszej liczby, drugiej liczby, operatora i wyniku końcowego. Zawsze dobrym sposobem jest przyznanie im początkowych wartości, aby uniknąć niezdefiniowanego zachowania, co jest wykonywane w tym miejscu.
    > - `Calculator c;`Wiersz deklaruje obiekt o nazwie "c" jako wystąpienie `Calculator` klasy. Sama klasa jest tylko planem, w jaki działają Kalkulatory. Obiekt jest określonym kalkulatorem, który wykonuje obliczenia matematyczne.
-   > - `while (true)`Instrukcja jest pętlą. Kod wewnątrz pętli będzie nadal wykonywany przez cały czas i dłużej, o ile warunek wewnątrz ma `()` wartość true. Ponieważ warunek jest po prostu wyświetlany jako `true` , zawsze ma wartość true, więc pętla jest uruchamiana w nieskończoność. Aby zamknąć program, użytkownik musi ręcznie zamknąć okno konsoli. W przeciwnym razie program zawsze czeka na nowe dane wejściowe.
+   > - `while (true)`Instrukcja jest pętlą. Kod wewnątrz pętli będzie nadal wykonywany przez cały czas i dłużej, o ile warunek wewnątrz ma `()` wartość true. Ponieważ warunek jest po prostu wyświetlany jako **`true`** , zawsze ma wartość true, więc pętla jest uruchamiana w nieskończoność. Aby zamknąć program, użytkownik musi ręcznie zamknąć okno konsoli. W przeciwnym razie program zawsze czeka na nowe dane wejściowe.
    > - `cin`Słowo kluczowe jest używane do akceptowania danych wejściowych od użytkownika. Ten strumień wejściowy jest wystarczająco inteligentny, aby przetwarzać wiersz tekstu wprowadzony w oknie konsoli i umieścić go wewnątrz każdej z wymienionych zmiennych w kolejności, przy założeniu, że dane wejściowe użytkownika są zgodne z wymaganą specyfikacją. Możesz zmodyfikować ten wiersz, aby akceptować różne typy danych wejściowych, na przykład więcej niż dwie liczby, chociaż `Calculate()` należy również zaktualizować tę funkcję, aby ją obsłużyć.
    > - `c.Calculate(x, oper, y);`Wyrażenie wywołuje `Calculate` wcześniej zdefiniowaną funkcję i dostarcza wprowadzone wartości wejściowe. Funkcja zwraca liczbę, która jest przechowywana w `result` .
    > - Na koniec `result` jest drukowana w konsoli, więc użytkownik zobaczy wynik obliczenia.

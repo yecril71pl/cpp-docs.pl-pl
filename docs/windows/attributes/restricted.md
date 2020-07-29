@@ -1,17 +1,17 @@
 ---
-title: z ograniczeniami (C++ atrybut com)
+title: z ograniczeniami (atrybut C++ COM)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.restricted
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: a47c56673e19f891b24ff433b9c614804f0bd51c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0545c07936c59a59dd4712f4b0a2fd98a6701f2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166370"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230029"
 ---
 # <a name="restricted"></a>restricted
 
@@ -32,7 +32,7 @@ Co najmniej jeden interfejs, który może nie być wywoływany arbitralnie dla o
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut z **ograniczeniami** C++ ma taką samą funkcjonalność jak atrybut MIDL z [ograniczeniami](/windows/win32/Midl/restricted) .
+Atrybut C++ z **ograniczeniami** ma taką samą funkcjonalność jak atrybut MIDL z [ograniczeniami](/windows/win32/Midl/restricted) .
 
 ## <a name="example"></a>Przykład
 
@@ -67,14 +67,14 @@ class c : public a, public b
 
 |||
 |-|-|
-|**Dotyczy**|Interface — Metoda, **interfejs**, **Klasa**, **Struktura**|
+|**Dotyczy**|Interface — Metoda, **interfejs**, **`class`** ,**`struct`**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|**coclass** (w przypadku zastosowania do **klasy** lub **struktury**)|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|**coclass** (w przypadku zastosowania do **`class`** lub **`struct`** )|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>

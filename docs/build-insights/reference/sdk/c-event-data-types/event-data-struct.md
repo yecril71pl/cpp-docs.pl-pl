@@ -1,6 +1,6 @@
 ---
 title: Struktura EVENT_DATA
-description: C++ Build Insights SDK EVENT_DATA odwołania do struktury.
+description: Informacje o strukturze EVENT_DATA zestawu SDK usługi Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 8ce396febe278c5e7c34fe170939c9522913f92a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ccba320a8bb9279b874fae2484c71af913253148
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325598"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229925"
 ---
 # <a name="event_data-structure"></a>Struktura EVENT_DATA
 
 ::: moniker range="<=vs-2015"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `EVENT_DATA` opisuje zdarzenie odebrane z analizy lub sesji ponownego rejestrowania. Sesje te są uruchamiane przez [wywołanie](../functions/analyze.md)funkcji Analyze , [AnalyzeA](../functions/analyze-a.md), [AnalyzeW](../functions/analyze-w.md), [Relog](../functions/relog.md), [RelogA](../functions/relog-a.md)lub [RelogW.](../functions/relog-w.md)
+`EVENT_DATA`Struktura opisuje zdarzenie odebrane z analizy lub sesji rejestrowania. Te sesje są uruchamiane przez wywołanie funkcji [Analizuj](../functions/analyze.md), [Analizuj](../functions/analyze-a.md)i [AnalyzeW](../functions/analyze-w.md), [relog](../functions/relog.md), [RelogA](../functions/relog-a.md)lub [RelogW](../functions/relog-w.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,30 +60,30 @@ typedef struct EVENT_DATA_TAG
 
 |  |  |
 |--|--|
-| `EventId` | Liczba identyfikująca zdarzenie. Aby uzyskać listę identyfikatorów zdarzeń, zobacz [EVENT_ID](event-id-enum.md). |
-| `EventInstanceId` | Liczba, która jednoznacznie identyfikuje bieżące zdarzenie wewnątrz śledzenia. Ta wartość nie zmienia się podczas analizowania lub ponownego rejestrowania tego samego śledzenia wiele razy. To pole służy do identyfikowania tego samego zdarzenia w wielu analizach lub przeksięgowania przebiegów przez ten sam ślad. |
-| `TickFrequency` | Liczba znaczników na sekundę do użycia podczas oceny czasu trwania mierzonego w kleszczach. |
-| `StartTimestamp` | Gdy zdarzenie jest *działanie,* to pole jest ustawione na wartość znacznika przechwycone w momencie rozpoczęcia działania. Jeśli to zdarzenie jest *zdarzeniem prostym,* to pole jest ustawione na wartość znacznika przechwyconą w momencie wystąpienia zdarzenia. |
-| `StopTimestamp` | Gdy zdarzenie jest *działanie,* to pole jest ustawione na wartość znacznika przechwycone w momencie zatrzymania działania. Jeśli zdarzenie zatrzymania nie zostało jeszcze odebrane dla tego działania, to pole jest ustawione na zero. Jeśli to zdarzenie jest *zdarzeniem prostym,* to pole jest ustawione na zero. |
-| `ExclusiveDurationTicks` | Jeśli to zdarzenie jest *działanie,* to pole jest ustawione na liczbę znaczników, które wystąpiły bezpośrednio w tym działaniu. Liczba znaczników, które wystąpiły w aktywności podrzędnej są wykluczone. To pole jest ustawione na zero dla *zdarzeń prostych*. |
-| `CPUTicks` | Jeśli to zdarzenie jest *działanie,* to pole jest ustawione na liczbę znaczników procesora CPU, które wystąpiły podczas tego działania. Znacznik procesora różni się od zwykłego kleszcza. Znaczniki procesora CPU są liczone tylko wtedy, gdy procesor jest wykonywany kod w działaniu. Znaczniki procesora CPU nie są liczone, gdy wątek skojarzony z aktywnością jest uśpiony. To pole jest ustawione na zero dla *zdarzeń prostych*. |
-| `ExclusiveCPUTicks` | To pole ma takie `CPUTicks`samo znaczenie jak , z tą różnicą, że nie obejmuje znaczników procesora CPU, które wystąpiły w działaniach dla dzieci. To pole jest ustawione na zero dla *zdarzeń prostych*. |
-| `WallClockTimeResponsibilityTicks` | Jeśli to zdarzenie jest *działanie,* to pole jest ustawione na liczbę znaczników, która reprezentuje wkład tego działania w ogólny czas zegara ściennego. Odpowiedzialność za czas zegara ściennego różni się od zwykłego kleszcza. Odpowiedzialność zegara ściennego uwzględnia równoległość między działaniami. Na przykład dwa równoległe działania mogą mieć czas trwania 50 znaczników i ten sam czas rozpoczęcia i zatrzymania. W takim przypadku oba zostaną przypisane do odpowiedzialności zegara ściennego 25 kleszczy. To pole jest ustawione na zero dla *zdarzeń prostych*. |
-| `ExclusiveWallClockTimeResponsibilityTicks` | To pole ma takie `WallClockTimeResponsibilityTicks`samo znaczenie jak , z tą różnicą, że nie zawiera znaczników odpowiedzialności za czas ścienny zajęć dla dzieci. To pole jest ustawione na zero dla *zdarzeń prostych*. |
-| `Data` | Wskazuje na dodatkowe dane przechowywane w zdarzeniu. Typ wskazanych danych różni się w `EventId` zależności od pola. |
+| `EventId` | Liczba, która identyfikuje zdarzenie. Aby uzyskać listę identyfikatorów zdarzeń, zobacz [EVENT_ID](event-id-enum.md). |
+| `EventInstanceId` | Liczba, która jednoznacznie identyfikuje bieżące zdarzenie wewnątrz śladu. Ta wartość nie ulega zmianie podczas analizowania lub wielokrotnego rejestrowania tego samego śledzenia. To pole służy do identyfikowania tego samego zdarzenia w wielu analizach lub przerejestrowaniu przebiegów tego samego śledzenia. |
+| `TickFrequency` | Liczba taktów na sekundę do użycia podczas oceniania czasu trwania mierzoną w taktach. |
+| `StartTimestamp` | Gdy zdarzenie jest *działaniem*, to pole jest ustawione na wartość takt przechwyconą w momencie uruchomienia działania. Jeśli to zdarzenie jest *zdarzeniem prostym*, to pole jest ustawione na wartość taktu przechwyconą w momencie wystąpienia zdarzenia. |
+| `StopTimestamp` | Gdy zdarzenie jest *działaniem*, to pole jest ustawione na wartość takt przechwyconą w momencie zatrzymania działania. Jeśli zdarzenie zatrzymania nie zostało jeszcze odebrane dla tego działania, to pole jest ustawione na wartość zero. Jeśli to zdarzenie jest *zdarzeniem prostym*, to pole jest ustawione na wartość zero. |
+| `ExclusiveDurationTicks` | Jeśli to zdarzenie jest *działaniem*, to pole jest ustawione na liczbę taktów, które wystąpiły bezpośrednio w tym działaniu. Liczba znaczników, które wystąpiły w działaniu podrzędnym, jest wykluczona. To pole jest ustawione na zero dla *zdarzeń prostych*. |
+| `CPUTicks` | Jeśli to zdarzenie jest *działaniem*, to pole jest ustawione na liczbę cykli procesora CPU, które wystąpiły w trakcie tego działania. Cykl procesora CPU różni się od zwykłego taktu. Takty procesora są zliczane tylko wtedy, gdy procesor wykonuje kod w działaniu. Takty procesora nie są zliczane, gdy wątek skojarzony z działaniem jest uśpiony. To pole jest ustawione na zero dla *zdarzeń prostych*. |
+| `ExclusiveCPUTicks` | To pole ma takie samo znaczenie jak `CPUTicks` , z tą różnicą, że nie obejmuje taktów procesora, które wystąpiły w działaniach podrzędnych. To pole jest ustawione na zero dla *zdarzeń prostych*. |
+| `WallClockTimeResponsibilityTicks` | Jeśli to zdarzenie jest *działaniem*, wartość tego pola jest równa liczbie cykli reprezentującej udział tego działania w ogólnym czasie zegara ściany. Cykl odpowiedzialności w czasie zegara ściany różni się od zwykłego taktu. Cykle odpowiedzialności za zegary ścienne są uwzględniane równolegle między działaniami. Na przykład dwie działania równoległe mogą mieć czas trwania 50 taktów i ten sam czas rozpoczęcia i zakończenia. W takim przypadku do obu tych elementów zostanie przypisany Czas zegarowy do 25 taktów. To pole jest ustawione na zero dla *zdarzeń prostych*. |
+| `ExclusiveWallClockTimeResponsibilityTicks` | To pole ma takie samo znaczenie jak `WallClockTimeResponsibilityTicks` , z tą różnicą, że nie zawiera on znaczników odpowiedzialności za czas zegara ściennego działań podrzędnych. To pole jest ustawione na zero dla *zdarzeń prostych*. |
+| `Data` | Wskazuje dodatkowe dane przechowywane w zdarzeniu. Typ danych wskazywanych przez jest inny, w zależności od `EventId` pola. |
 | `ProcessId` | Identyfikator procesu, w którym wystąpiło zdarzenie. |
 | `ThreadId` | Identyfikator wątku, w którym wystąpiło zdarzenie. |
-| `ProcessorIndex` | Numer procesora CPU z zerowym indeksem, na którym wystąpiło zdarzenie. |
-| `EventName` | Ciąg ANSI zawierający nazwę jednostki identyfikowanej przez `EventId`. |
-| `EventWideName` | Szeroki ciąg zawierający nazwę jednostki identyfikowanej przez `EventId`. |
+| `ProcessorIndex` | Numer procesora CPU, na którym wystąpiło zdarzenie. |
+| `EventName` | Ciąg ANSI zawierający nazwę jednostki identyfikowanej przez `EventId` . |
+| `EventWideName` | Szeroki ciąg zawierający nazwę jednostki identyfikowanej przez `EventId` . |
 
 ## <a name="remarks"></a>Uwagi
 
-Wiele pól `EVENT_DATA` zawiera liczbę znaczników. Usługa Buduj w usłudze C++ używa licznika wydajności window jako źródła znaczników. Aby przekształcić je w `TickFrequency` odpowiednią jednostkę czasu, taką jak sekundy, należy użyć liczby znaczników. Zobacz poniższy przykład, aby wykonać tę konwersję. `EVENT_DATA`nie zawiera pola dla zwykłej liczby znaczników działania. Aby uzyskać tę wartość, `StartTimestamp` `StopTimestamp`odejmij od . `EVENT_DATA`jest strukturą, która ma być używana przez użytkowników interfejsu API języka C. W przypadku użytkowników interfejsu API języka C++ klasy takie jak konwersje czasowe [eventowe](../cpp-event-data-types/event.md) automatycznie.
+Wiele pól w programie `EVENT_DATA` zawiera liczbę cykli. Informacje o kompilacji w języku C++ wykorzystują licznik wydajności okna jako źródło taktów. Liczba cykli musi być użyta z `TickFrequency` polem, aby przekonwertować ją do odpowiedniej jednostki czasu, na przykład sekund. Zapoznaj się z poniższym przykładem w celu wykonania tej konwersji. `EVENT_DATA`nie zawiera pola dla zwykłej liczby cykli działania. Aby uzyskać tę wartość, Odejmij `StartTimestamp` od `StopTimestamp` . `EVENT_DATA`jest strukturą, która jest przeznaczona do użycia przez użytkowników interfejsu API języka C. W przypadku użytkowników interfejsu API C++ klasy takie jak [zdarzenia](../cpp-event-data-types/event.md) do konwersji czasu są automatycznie.
 
-Wartość `EVENT_DATA` `Data` pola zależy od wartości jego `EventId` pola. Wartość jest `Data` opisana w poniższej tabeli. W poniższej tabeli mogą brakować niektórych identyfikatorów jednostek. W takim przypadku `Data` pole jest `nullptr` ustawione na lub zero.
+Wartość `EVENT_DATA` `Data` pola zależy od wartości `EventId` pola. Wartość `Data` jest opisana w poniższej tabeli. W poniższej tabeli mogą brakować identyfikatorów jednostek. W tym przypadku `Data` pole jest ustawione na wartość **`nullptr`** lub zero.
 
-| `EventId`Wartość | Typ wskazywowy przez`Data` |
+| `EventId`wartościami | Typ wskazywany przez`Data` |
 |--|--|
 | `EVENT_ID_BACK_END_PASS` | [CL_PASS_DATA](cl-pass-data-struct.md) |
 | `EVENT_ID_COMMAND_LINE` | `const wchar_t` |
@@ -103,7 +103,7 @@ Wartość `EVENT_DATA` `Data` pola zależy od wartości jego `EventId` pola. War
 | `EVENT_ID_SYMBOL_NAME` | [SYMBOL_NAME_DATA](symbol-name-data-struct.md) |
 | `EVENT_ID_TEMPLATE_INSTANTIATION` | [TEMPLATE_INSTANTIATION_DATA](template-instantiation-data-struct.md) |
 
-## <a name="tick-conversion-example"></a>Przykład konwersji zaznaczenia
+## <a name="tick-conversion-example"></a>Przykład konwersji znaczników
 
 ```cpp
 //

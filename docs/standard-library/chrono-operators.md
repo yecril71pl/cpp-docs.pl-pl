@@ -1,19 +1,19 @@
 ---
-title: Operatory &lt;Chrono&gt;
+title: '&lt;&gt;Operatory Chrono'
 ms.date: 11/04/2016
 f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-ms.openlocfilehash: 398e2429c38cffb454c7b510aa5ab44fbe4cfef6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 82f0b7b0f55cf4d71ef7c0ed92a55ca0fa1139e0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421934"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230146"
 ---
-# <a name="ltchronogt-operators"></a>Operatory &lt;Chrono&gt;
+# <a name="ltchronogt-operators"></a>&lt;&gt;Operatory Chrono
 
-## <a name="operator-"></a>zakład
+## <a name="operator-"></a><a name="operator-"></a>zakład
 
 Operator odejmowania lub negacji [czasu trwania](../standard-library/duration-class.md) i [time_point](../standard-library/time-point-class.md) obiektów.
 
@@ -39,27 +39,27 @@ constexpr typename common_type<Duration1, Duration2>::type
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
-Lewy `duration` lub `time_point` obiektu.
+*Lewym*\
+Lewo `duration` lub `time_point` obiekt.
 
-*Prawa*\
-Właściwy `duration` lub `time_point` obiektu.
+*Kliknij*\
+Prawo `duration` lub `time_point` obiekt.
 
-\ *czasu*
+*Pierwszym*\
 Obiekt `time_point`.
 
-Czas *trwania*\
+*Trwania*\
 Obiekt `duration`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza funkcja zwraca obiekt `duration`, którego długość interwału jest różnica między przedziałami czasu dwóch argumentów.
+Pierwsza funkcja zwraca obiekt, `duration` którego długość interwału jest różnica między przedziałami czasu dwóch argumentów.
 
-Druga funkcja zwraca obiekt `time_point`, który reprezentuje punkt w czasie, który jest przewidziany przez negację przedziału czasu, który jest reprezentowany przez czas *trwania*, od punktu w czasie, który jest określony w *czasie*.
+Druga funkcja zwraca `time_point` obiekt, który reprezentuje punkt w czasie, który jest przewidziany przez negację przedziału czasu, który jest reprezentowany przez *czas* *trwania*, od momentu określonego w czasie.
 
-Trzecia funkcja zwraca obiekt `duration`, który reprezentuje przedział czasu od *lewej* do *prawej*.
+Trzecia funkcja zwraca `duration` obiekt, który reprezentuje przedział czasu od *lewej* do *prawej*.
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 Operator nierówności dla obiektów [Duration](../standard-library/duration-class.md) lub [time_point](../standard-library/time-point-class.md) .
 
@@ -77,17 +77,17 @@ constexpr bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
-Lewy `duration` lub `time_point` obiektu.
+*Lewym*\
+Lewo `duration` lub `time_point` obiekt.
 
-*Prawa*\
-Właściwy `duration` lub `time_point` obiektu.
+*Kliknij*\
+Prawo `duration` lub `time_point` obiekt.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca `!(Left == Right)`.
+Każda funkcja zwraca wartość `!(Left == Right)` .
 
-## <a name="op_star"></a>zakład
+## <a name="operator"></a><a name="op_star"></a>zakład
 
 Operator mnożenia dla obiektów [czasu trwania](../standard-library/chrono-operators.md#op_star) .
 
@@ -108,21 +108,21 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 
 ### <a name="parameters"></a>Parametry
 
-Czas *trwania*\
+*Trwania*\
 Obiekt `duration`.
 
 *Iloczyn*\
 Wartość całkowita.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca obiekt `duration`, którego długość interwału jest *iloczyn* pomnożona przez długość czasu *trwania*.
+Każda funkcja zwraca `duration` obiekt, którego długość interwału jest *iloczyn* pomnożona przez długość wartości czasu *trwania*.
 
-Chyba że `is_convertible<Rep2, common_type<Rep1, Rep2>>`*ma wartość true*, Pierwsza funkcja nie bierze udziału w przeciążeniu. Aby uzyskać więcej informacji, zobacz [< type_traits >](../standard-library/type-traits.md).
+O ile nie `is_convertible<Rep2, common_type<Rep1, Rep2>>` *ma wartości true*, Pierwsza funkcja nie uczestniczy w przeciążeniu do przeciążenia. Aby uzyskać więcej informacji, zobacz [<type_traits>](../standard-library/type-traits.md).
 
-Jeśli `is_convertible<Rep1, common_type<Rep1, Rep2>>`*ma wartość true*, druga funkcja nie bierze udziału w przeciążeniu. Aby uzyskać więcej informacji, zobacz [< type_traits >](../standard-library/type-traits.md).
+O ile nie `is_convertible<Rep1, common_type<Rep1, Rep2>>` *ma wartości true*, druga funkcja nie uczestniczy w rozpoznawaniu przeciążenia. Aby uzyskać więcej informacji, zobacz [<type_traits>](../standard-library/type-traits.md).
 
-## <a name="op_div"></a>zakład
+## <a name="operator"></a><a name="op_div"></a>zakład
 
 Operator dzielenia dla obiektów [czasu trwania](../standard-library/chrono-operators.md#op_star) .
 
@@ -142,27 +142,27 @@ constexpr typename common_type<Rep1, Rep2>::type
 
 ### <a name="parameters"></a>Parametry
 
-Czas *trwania*\
+*Trwania*\
 Obiekt `duration`.
 
-\ *DIV*
+*Służąc*\
 Wartość całkowita.
 
-\ *lewo*
-Obiekt `duration` po lewej stronie.
+*Lewym*\
+Lewy `duration` obiekt.
 
-*Prawa*\
-Właściwy `duration` obiektu.
+*Kliknij*\
+Prawidłowy `duration` obiekt.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Pierwszy operator zwraca obiekt czasu trwania, którego długość interwału jest długością *podzieloną* przez wartość *DIV*.
 
 Drugi operator zwraca stosunek długości interwału od *lewej* do *prawej*.
 
-Chyba że `is_convertible<Rep2, common_type<Rep1, Rep2>>`ma *wartość true*, a `Rep2` nie jest wystąpieniem `duration`, Pierwszy operator nie uczestniczy w rozpoznawaniu przeciążenia. Aby uzyskać więcej informacji, zobacz [< type_traits >](../standard-library/type-traits.md).
+Chyba że `is_convertible<Rep2, common_type<Rep1, Rep2>>` ma *wartość true*i `Rep2` nie jest wystąpieniem `duration` , Pierwszy operator nie bierze udziału w przeciążeniu. Aby uzyskać więcej informacji, zobacz [<type_traits>](../standard-library/type-traits.md).
 
-## <a name="op_add"></a>operator +
+## <a name="operator"></a><a name="op_add"></a>operator +
 
 Dodaje [czas trwania](../standard-library/duration-class.md) i [time_point](../standard-library/time-point-class.md) obiektów.
 
@@ -188,27 +188,27 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
-Lewy `duration` lub `time_point` obiektu.
+*Lewym*\
+Lewo `duration` lub `time_point` obiekt.
 
-*Prawa*\
-Właściwy `duration` lub `time_point` obiektu.
+*Kliknij*\
+Prawo `duration` lub `time_point` obiekt.
 
-\ *czasu*
+*Pierwszym*\
 Obiekt `time_point`.
 
-Czas *trwania*\
+*Trwania*\
 Obiekt `duration`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza funkcja zwraca obiekt `duration`, który ma interwał czasu, który jest równy sumie interwałów od *lewej* do *prawej*.
+Pierwsza funkcja zwraca `duration` obiekt, który ma interwał czasu, który jest równy sumie interwałów od *lewej* do *prawej*.
 
-Drugie i trzecie funkcje zwracają `time_point` obiektu, który reprezentuje punkt w czasie, który jest przemieszczenia, przez interwał czasu *trwania*od momentu w *czasie.*
+Druga i trzecia funkcja zwraca `time_point` obiekt, który reprezentuje punkt w czasie, który jest przemieszczenia przez interwał czasu *trwania*od momentu w *czasie*.
 
-## <a name="op_lt"></a>&lt; operatora
+## <a name="operatorlt"></a><a name="op_lt"></a>zakład&lt;
 
-Określa, czy jeden obiekt [czasu trwania](../standard-library/duration-class.md) lub [time_point](../standard-library/time-point-class.md) jest mniejszy niż inny obiekt `duration` lub `time_point`.
+Określa, czy jeden obiekt [czasu trwania](../standard-library/duration-class.md) lub [time_point](../standard-library/time-point-class.md) jest mniejszy niż inny `duration` `time_point` obiekt lub.
 
 ```cpp
 template <class Rep1, class Period1, class Rep2, class Period2>
@@ -224,21 +224,21 @@ constexpr bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
-Lewy `duration` lub `time_point` obiektu.
+*Lewym*\
+Lewo `duration` lub `time_point` obiekt.
 
-*Prawa*\
-Właściwy `duration` lub `time_point` obiektu.
+*Kliknij*\
+Prawo `duration` lub `time_point` obiekt.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza funkcja zwraca **wartość true** , jeśli długość interwału *po lewej stronie* jest mniejsza niż długość interwału *po prawej stronie*. W przeciwnym razie funkcja zwraca **wartość false**.
+Pierwsza funkcja zwraca, **`true`** Jeśli długość interwału *po lewej stronie* jest mniejsza niż długość interwału *po prawej stronie*. W przeciwnym razie funkcja zwraca wartość **`false`** .
 
-Druga funkcja zwraca **wartość true** , jeśli *Left* poprzedza *prawo*. W przeciwnym razie funkcja zwraca **wartość false**.
+Druga funkcja zwraca **`true`** Jeśli *Left* poprzedza *prawo*. W przeciwnym razie funkcja zwraca wartość **`false`** .
 
-## <a name="op_lt_eq"></a>&lt;operatora =
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>zakład&lt;=
 
-Określa, czy jeden obiekt [czasu trwania](../standard-library/duration-class.md) lub [time_point](../standard-library/time-point-class.md) jest mniejszy lub równy innemu `duration` lub `time_point` obiektu.
+Określa, czy jeden obiekt [czasu trwania](../standard-library/duration-class.md) lub [time_point](../standard-library/time-point-class.md) jest mniejszy lub równy innemu `duration` lub `time_point` obiektowi.
 
 ```cpp
 template <class Rep1, class Period1, class Rep2, class Period2>
@@ -254,19 +254,19 @@ constexpr bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
-Lewy `duration` lub `time_point` obiektu.
+*Lewym*\
+Lewo `duration` lub `time_point` obiekt.
 
-*Prawa*\
-Właściwy `duration` lub `time_point` obiektu.
+*Kliknij*\
+Prawo `duration` lub `time_point` obiekt.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca `!(Right < Left)`.
+Każda funkcja zwraca wartość `!(Right < Left)` .
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
-Określa, czy dwa `duration` obiekty reprezentują przedziały czasu mające taką samą długość, czy dwa obiekty `time_point` reprezentują ten sam punkt w czasie.
+Określa, czy dwa `duration` obiekty reprezentują przedziały czasu mające taką samą długość, czy dwa `time_point` obiekty reprezentują ten sam punkt w czasie.
 
 ```cpp
 template <class Rep1, class Period1, class Rep2, class Period2>
@@ -282,21 +282,21 @@ constexpr bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
-Lewy `duration` lub `time_point` obiektu.
+*Lewym*\
+Lewo `duration` lub `time_point` obiekt.
 
-*Prawa*\
-Właściwy `duration` lub `time_point` obiektu.
+*Kliknij*\
+Prawo `duration` lub `time_point` obiekt.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza funkcja zwraca **wartość true** , jeśli *Left* i *Right* reprezentuje przedziały czasu, które mają tę samą długość. W przeciwnym razie funkcja zwraca **wartość false**.
+Pierwsza funkcja zwraca **`true`** Jeśli *po lewej* i *prawej stronie* przedziały czasu mają tę samą długość. W przeciwnym razie funkcja zwraca wartość **`false`** .
 
-Druga funkcja zwraca **wartość true** , jeśli *Left* i *Right* reprezentuje ten sam punkt w czasie. W przeciwnym razie funkcja zwraca **wartość false**.
+Druga funkcja zwraca **`true`** Jeśli *Left* i *Right* reprezentują ten sam punkt w czasie. W przeciwnym razie funkcja zwraca wartość **`false`** .
 
-## <a name="op_gt"></a>&gt; operatora
+## <a name="operatorgt"></a><a name="op_gt"></a>zakład&gt;
 
-Określa, czy jeden obiekt [czasu trwania](../standard-library/duration-class.md) lub [time_point](../standard-library/time-point-class.md) jest większy niż inny obiekt `duration` lub `time_point`.
+Określa, czy jeden obiekt [czasu trwania](../standard-library/duration-class.md) lub [time_point](../standard-library/time-point-class.md) jest większy niż inny `duration` `time_point` obiekt lub.
 
 ```cpp
 template <class Rep1, class Period1, class Rep2, class Period2>
@@ -312,19 +312,19 @@ constexpr bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
-Lewy `duration` lub `time_point` obiektu.
+*Lewym*\
+Lewo `duration` lub `time_point` obiekt.
 
-*Prawa*\
-Właściwy `duration` lub `time_point` obiektu.
+*Kliknij*\
+Prawo `duration` lub `time_point` obiekt.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca `Right < Left`.
+Każda funkcja zwraca wartość `Right < Left` .
 
-## <a name="op_gt_eq"></a>&gt;operatora =
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>zakład&gt;=
 
-Określa, czy jeden obiekt [czasu trwania](../standard-library/duration-class.md) lub [time_point](../standard-library/time-point-class.md) jest większy lub równy innemu `duration` lub `time_point` obiektu.
+Określa, czy jeden obiekt [czasu trwania](../standard-library/duration-class.md) lub [time_point](../standard-library/time-point-class.md) jest większy lub równy innemu `duration` lub `time_point` obiektowi.
 
 ```cpp
 template <class Rep1, class Period1, class Rep2, class Period2>
@@ -340,17 +340,17 @@ constexpr bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
-Lewy `duration` lub `time_point` obiektu.
+*Lewym*\
+Lewo `duration` lub `time_point` obiekt.
 
-*Prawa*\
-Właściwy `duration` lub `time_point` obiektu.
+*Kliknij*\
+Prawo `duration` lub `time_point` obiekt.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca `!(Left < Right)`.
+Każda funkcja zwraca wartość `!(Left < Right)` .
 
-## <a name="op_modulo"></a>modulo operatorów
+## <a name="operator-modulo"></a><a name="op_modulo"></a>modulo operatorów
 
 Operator dla operacji modulo na obiektach [czasu trwania](../standard-library/duration-class.md) .
 
@@ -370,20 +370,20 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 
 ### <a name="parameters"></a>Parametry
 
-Czas *trwania*\
+*Trwania*\
 Obiekt `duration`.
 
-\ *DIV*
+*Służąc*\
 Wartość całkowita.
 
-\ *lewo*
-Obiekt `duration` po lewej stronie.
+*Lewym*\
+Lewy `duration` obiekt.
 
-*Prawa*\
-Właściwy `duration` obiektu.
+*Kliknij*\
+Prawidłowy `duration` obiekt.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza funkcja zwraca obiekt `duration`, którego długość interwału jest *równa wartość elementu* *DIV*modulo.
+Pierwsza funkcja zwraca obiekt, `duration` którego długość interwału jest *Dur* równy czasowi *DIV*modulo.
 
 Druga funkcja zwraca wartość, która reprezentuje *lewe* *prawo*modulo.

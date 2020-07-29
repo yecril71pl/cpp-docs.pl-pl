@@ -7,27 +7,27 @@ helpviewer_keywords:
 - decrement operators [C++]
 - decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
-ms.openlocfilehash: 40ae12130fdced9fd958c3b8316fa3b718ca9b5b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 10cda57b74a7da57f2d48b91854b5d37c8d181f1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374128"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186987"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>Przeładowanie operatorów inkrementacji i dekrementacji (C++)
 
-Operatory przyrostu i dekrementacji należą do kategorii specjalnej, ponieważ istnieją dwa warianty każdego z nich:
+Operatory przyrostu i zmniejszania wchodzą w skład specjalnej kategorii, ponieważ istnieją dwie warianty każdej z nich:
 
-- Przyrost wstępny i postincrement
+- Przedrastaj i postinkrementacji
 
-- Predecrement i postdecrement
+- Zmniejszenie i postdekrementacyjne
 
-Podczas pisania przeciążonych funkcji operatora, może być przydatne do zaimplementowania oddzielnych wersji dla wersji prefiksu i postfix tych operatorów. Aby odróżnić te dwa, przestrzegana jest następująca reguła: Formularz prefiksu operatora jest zadeklarowany dokładnie w taki sam sposób, jak każdy inny operator jednoobrzętowy; formularz postfix akceptuje dodatkowy argument typu **int**.
+Gdy zapisujesz przeciążone funkcje operatora, może być przydatne, aby zaimplementować oddzielne wersje dla prefiksu i przyrostowych wersji tych operatorów. Aby rozróżnić te dwa, zaobserwuj następującą regułę: prefiks formy operatora jest zadeklarowany dokładnie tak samo jak każdy inny operator jednoargumentowy; formularz Przyrostkowy akceptuje dodatkowy argument typu **`int`** .
 
 > [!NOTE]
-> Podczas określania przeciążony operator dla formularza postfix operatora przyrostu lub dekrementacji, dodatkowy argument musi być typu **int;** określenie dowolnego innego typu generuje błąd.
+> Podczas określania przeciążonego operatora dla przyrostowej formy operatora zwiększania lub zmniejszania, dodatkowy argument musi być typu **`int`** ; określenie dowolnego innego typu generuje błąd.
 
-W poniższym przykładzie pokazano, jak zdefiniować operatory prefiksu i przyrostu poprawek i dekrementacji dla `Point` klasy:
+Poniższy przykład pokazuje, jak definiować operatory prefiksu i zwiększania przyrostu i zmniejszania dla `Point` klasy:
 
 ```cpp
 // increment_and_decrement1.cpp
@@ -88,7 +88,7 @@ int main()
 }
 ```
 
-Te same operatory można zdefiniować w zakresie plików (globalnie) przy użyciu następujących głowic funkcji:
+Te same operatory można definiować w zakresie plików (globalnie) przy użyciu następujących głowic funkcji:
 
 ```cpp
 friend Point& operator++( Point& )      // Prefix increment
@@ -97,7 +97,7 @@ friend Point& operator--( Point& )      // Prefix decrement
 friend Point& operator--( Point&, int ) // Postfix decrement
 ```
 
-Argument typu **int,** który oznacza formę postfix operatora przyrostu lub dekrementacji nie jest powszechnie używany do przekazywania argumentów. Zwykle zawiera wartość 0. Jednakże, może być stosowany w następujący sposób:
+Argument typu **`int`** , który oznacza przyrostkową formę operatora przyrostu lub zmniejszania nie jest często używany do przekazywania argumentów. Zwykle zawiera wartość 0. Można go jednak użyć w następujący sposób:
 
 ```cpp
 // increment_and_decrement2.cpp
@@ -124,8 +124,8 @@ int main()
 }
 ```
 
-Nie ma składni przy użyciu operatorów przyrostu lub dekrementacji do przekazywania tych wartości innych niż jawne wywołanie, jak pokazano w poprzednim kodzie. Prostszym sposobem zaimplementowania tej funkcji jest przeciążenie operatora dodawania/przypisania (**+=**).
+Nie ma składni do przekazywania tych wartości innych niż jawne wywołanie, jak pokazano w powyższym kodzie. Bardziej prostym sposobem implementacji tej funkcji jest Przeciążenie operatora dodawania/przypisywania ( **+=** ).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Przeciążenie operatora](../cpp/operator-overloading.md)
+[Przeciążanie operatora](../cpp/operator-overloading.md)

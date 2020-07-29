@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: c7facb82054eed4ef28c52830b8a3079eecb7fdc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 37c0120b7879678ad65dfbbffc17bd6d6791fdfe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169958"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229912"
 ---
 # <a name="consuming-libraries-and-components"></a>Zużywanie bibliotek i składników
 
@@ -26,7 +26,7 @@ Aby korzystać z biblioteki pobranej przy użyciu Menedżera pakietów **vcpkg**
 
 Jeśli projekt biblioteki statycznej jest kompilowany w tym samym rozwiązaniu:
 
-1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>Uwzględnij pliki nagłówkowe biblioteki statycznej przy użyciu znaków cudzysłowu. W typowym rozwiązaniu ścieżka zacznie się od `../<library project name>`. Technologia IntelliSense pomoże jej znaleźć.
+1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>Uwzględnij pliki nagłówkowe biblioteki statycznej przy użyciu znaków cudzysłowu. W typowym rozwiązaniu ścieżka zacznie się od `../<library project name>` . Technologia IntelliSense pomoże jej znaleźć.
 2. Dodaj odwołanie do projektu biblioteki statycznej. Kliknij prawym przyciskiem myszy pozycję **odwołania** w węźle projektu aplikacji w **Eksplorator rozwiązań** i wybierz polecenie **Dodaj odwołanie**.
 
 Jeśli Biblioteka statyczna nie jest częścią rozwiązania:
@@ -98,11 +98,11 @@ W przypadku różnych rodzajów odwołań dostępne są następujące właściwo
 
 - **Kopiuj lokalne zestawy satelickie (C++/CLI)**
 
-   Określa, czy zestawy satelickie przywoływanego zestawu mają być automatycznie kopiowane do lokalizacji docelowej podczas kompilacji. Używane tylko wtedy, gdy **kopia lokalna** ma **wartość true**.
+   Określa, czy zestawy satelickie przywoływanego zestawu mają być automatycznie kopiowane do lokalizacji docelowej podczas kompilacji. Używany tylko w przypadku **kopiowania lokalnego** **`true`** .
 
 - **Wyjście zestawu odwołania**
 
-   Określa, że ten zestaw jest używany w procesie kompilacji. W przypadku **wartości true**zestaw jest używany w wierszu polecenia kompilatora podczas kompilacji.
+   Określa, że ten zestaw jest używany w procesie kompilacji. Jeśli **`true`** , zestaw jest używany w wierszu poleceń kompilatora podczas kompilacji.
 
 ### <a name="project-to-project-reference-properties"></a>Właściwości odwołania projektu do projektu
 
@@ -158,13 +158,13 @@ Poniższe właściwości znajdują się w odwołaniach do zestawów COM i .NET i
 
 - **Silna nazwa**
 
-   `true`Jeśli przywoływany zestaw ma silną nazwę. Zestaw o silnej nazwie jest unikatowy.
+   **`true`** Jeśli przywoływany zestaw ma silną nazwę. Zestaw o silnej nazwie jest unikatowy.
 
 - **Wersja**
 
    Wyświetla wersję przywoływanego zestawu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Odwołanie do strony właściwości projektu C++](reference/property-pages-visual-cpp.md)<br>
 [Ustawianie właściwości kompilacji i kompilatora języka C++ w programie Visual Studio](working-with-project-properties.md)

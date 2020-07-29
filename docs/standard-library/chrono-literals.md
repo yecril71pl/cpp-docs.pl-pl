@@ -2,16 +2,16 @@
 title: literały chrono
 ms.date: 11/04/2016
 ms.assetid: 1a9e23b1-256f-4570-8226-5fa7364fb032
-ms.openlocfilehash: 28ba8138d41cf1bd72911959f07b0d3c9e5fdc0e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d8416580df09a8a466678702cb20ba4ddf37eb28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244900"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230159"
 ---
 # <a name="chrono-literals"></a>literały chrono
 
-(C ++ 14) \<Chrono > nagłówka definiuje 12 [literały definiowane przez użytkownika](../cpp/user-defined-literals-cpp.md) ułatwiające pomocą literałów ciągów, które reprezentują godziny, minuty, sekundy, milisekundy, mikrosekund i nanosekundach. Każdy literału zdefiniowanego przez użytkownika ma całkowita i zmiennoprzecinkowa przeciążenia. Literały są zdefiniowane w przestrzeni nazw wbudowane literals::chrono_literals, którego zostanie przełączony w tryb do zakresu automatycznie po std::chrono znajduje się w zakresie.
+(C++ 14) \<chrono>Nagłówek definiuje 12 [literałów zdefiniowanych przez użytkownika](../cpp/user-defined-literals-cpp.md) , aby ułatwić korzystanie z literałów, które reprezentują godziny, minuty, sekundy, milisekundy, mikrosekundy i nanosekund. Każdy literał zdefiniowany przez użytkownika ma całkowite i Przeciążenie zmiennoprzecinkowe. Literały są zdefiniowane w literałach:: chrono_literals wbudowanej przestrzeni nazw, która jest przenoszona do zakresu automatycznie, gdy std:: chrono znajduje się w zakresie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -60,11 +60,11 @@ inline namespace literals {
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Literały, które przyjmują **long long** argument zwraca wartość lub odpowiedniego typu. Literały, które przyjmują zmiennoprzecinkowy punktu zwracaną argumentu [czas trwania](../standard-library/duration-class.md).
+Literały przyjmujące **`long long`** argument zwracają wartość lub odpowiedni typ. Literały przyjmujące argument zmiennoprzecinkowe zwracają [czas trwania](../standard-library/duration-class.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższe przykłady sow sposób używania literały chrono.
+W poniższych przykładach przedstawiono sposób użycia literałów Chrono.
 
 ```cpp
 constexpr auto day = 24h;

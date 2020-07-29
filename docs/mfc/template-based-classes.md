@@ -22,18 +22,18 @@ helpviewer_keywords:
 - template-based collection classes [MFC]
 - simple list collection classes [MFC]
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
-ms.openlocfilehash: 29f5f815b62835aedbca1f79b797f826ea53d83b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: eceee4421b43515b9b246f4af26a1a3741c6b25b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370455"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230457"
 ---
 # <a name="template-based-classes"></a>Klasy oparte na szablonach
 
-W tym artykule wyjaśniono klasy kolekcji oparte na szablonie typu w wersji MFC 3.0 i nowszych. Korzystanie z tych szablonów do tworzenia kolekcji typu bezpieczne jest wygodniejsze i pomaga zapewnić bezpieczeństwo typów bardziej efektywnie niż przy użyciu klas kolekcji nie na podstawie szablonów.
+W tym artykule opisano klasy kolekcji z bezpiecznym typem na podstawie szablonu w MFC w wersji 3,0 i nowszych. Korzystanie z tych szablonów do tworzenia kolekcji bezpiecznych dla typów jest wygodniejsze i zapewnia bardziej wydajne bezpieczeństwo typów niż korzystanie z klas kolekcji nieopartych na szablonach.
 
-MFC wstępnie definiuje dwie kategorie kolekcji opartych na szablonie:
+MFC wstępnie definiuje dwie kategorie kolekcji opartych na szablonach:
 
 - [Proste klasy tablic, list i map](#_core_using_simple_array.2c_.list.2c_.and_map_templates)
 
@@ -43,75 +43,75 @@ MFC wstępnie definiuje dwie kategorie kolekcji opartych na szablonie:
 
    `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
 
-Klasy kolekcji prostej są `CObject`wyprowadzane z klasy, więc dziedziczą serializację, `CObject`tworzenie dynamiczne i inne właściwości programu . Klasy kolekcji wskaźników maszynowych wymagają określenia klasy, z której pochodzisz — która musi być jedną z kolekcji wskaźników `CPtrList` nontemplate wstępnie zdefiniowanych przez MFC, takich jak . `CPtrArray` Nowa klasa kolekcji dziedziczy z określonej klasy podstawowej, a funkcje członkowskie nowej klasy używają zhermetyzowanych wywołań do elementów członkowskich klasy podstawowej, aby wymusić bezpieczeństwo typu.
+Proste klasy kolekcji są wyprowadzane z klasy `CObject` , dzięki czemu dziedziczą serializacji, tworzenie dynamiczne i inne właściwości `CObject` . Klasy kolekcji wskaźników z określonym typem wymagają określenia klasy pochodnej, która musi być jedną z kolekcji wskaźników nieszablonowych wstępnie zdefiniowanych przez MFC, takich jak `CPtrList` lub `CPtrArray` . Nowa Klasa kolekcji dziedziczy z określonej klasy bazowej, a funkcje składowe nowej klasy używają hermetyzowanych wywołań do elementów członkowskich klasy podstawowej w celu wymuszenia bezpieczeństwa typu.
 
-Aby uzyskać więcej informacji na temat szablonów języka C++, zobacz [Szablony](../cpp/templates-cpp.md) w *odwołaniu do języka języka języka C++*.
+Aby uzyskać więcej informacji na temat szablonów języka C++, zobacz [Szablony](../cpp/templates-cpp.md) w *dokumentacji języka c++*.
 
-## <a name="using-simple-array-list-and-map-templates"></a><a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a>Korzystanie z prostych szablonów tablic, list i map
+## <a name="using-simple-array-list-and-map-templates"></a><a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a>Używanie prostych szablonów tablicowych, list i map
 
-Aby użyć szablonów kolekcji proste, należy wiedzieć, jakiego rodzaju danych można przechowywać w tych kolekcjach i jakie parametry do użycia w deklaracjach kolekcji.
+Aby używać prostych szablonów kolekcji, musisz wiedzieć, jakiego rodzaju dane można przechowywać w tych kolekcjach i jakich parametrów użyć w deklaracjach kolekcji.
 
 ### <a name="simple-array-and-list-usage"></a><a name="_core_simple_array_and_list_usage"></a>Proste użycie tablicy i listy
 
-Proste klasy tablicy i listy, [CArray](../mfc/reference/carray-class.md) i [CList](../mfc/reference/clist-class.md), przyjmują dwa parametry: *TYPE* i `ARG_TYPE`. Te klasy mogą przechowywać dowolny typ danych, który można określić w *parametrze TYPE:*
+Proste klasy Array i list, [CArray](../mfc/reference/carray-class.md) i [CList](../mfc/reference/clist-class.md), przyjmują dwa parametry: *Type* i `ARG_TYPE` . Klasy te mogą przechowywać dowolny typ danych określony w parametrze *typu* :
 
-- Podstawowe typy danych języka C++, takie jak **int**, **char**i **float**
+- Podstawowe typy danych języka C++, takie jak **`int`** , **`char`** i**`float`**
 
 - Struktury i klasy języka C++
 
-- Inne typy zdefiniowane
+- Inne zdefiniowane typy
 
-Dla wygody i wydajności można użyć *parametru ARG_TYPE,* aby określić typ argumentów funkcji. Zazwyczaj należy określić *ARG_TYPE* jako odwołanie do typu, który został nazwany w *parametrze TYPE.* Przykład:
+Aby uzyskać wygodę i wydajność, można użyć parametru *ARG_TYPE* , aby określić typ argumentów funkcji. Zazwyczaj należy określić *ARG_TYPE* jako odwołanie do typu, który został nazwany w parametrze *typu* . Na przykład:
 
 [!code-cpp[NVC_MFCCollections#1](../mfc/codesnippet/cpp/template-based-classes_1.cpp)]
 
-Pierwszy przykład deklaruje kolekcję `myArray`tablic, która zawiera **int**s. Drugi przykład deklaruje kolekcję `myList`listy, `CPerson` , która przechowuje obiekty. Niektóre funkcje członkowskie klas kolekcji wziąć argumenty, których typ jest określony przez *ARG_TYPE* parametr szablonu. Na przykład `Add` funkcja elementu `CArray` członkowskiego klasy przyjmuje *argument ARG_TYPE:*
+Pierwszy przykład deklaruje kolekcję tablicową, `myArray` która zawiera element **`int`** s. Drugi przykład deklaruje kolekcję list, `myList` która przechowuje `CPerson` obiekty. Niektóre funkcje elementów członkowskich klas kolekcji przyjmują argumenty, których typ jest określony przez parametr szablonu *ARG_TYPE* . Na przykład `Add` funkcja członkowska klasy `CArray` przyjmuje *ARG_TYPE* argument:
 
 [!code-cpp[NVC_MFCCollections#2](../mfc/codesnippet/cpp/template-based-classes_2.cpp)]
 
 ### <a name="simple-map-usage"></a><a name="_core_simple_map_usage"></a>Proste użycie mapy
 
-Prosta klasa mapy, [CMap](../mfc/reference/cmap-class.md), przyjmuje cztery parametry: *KEY*, *ARG_KEY*, *VALUE*i *ARG_VALUE*. Podobnie jak klasy tablicy i listy, klasy mapy mogą przechowywać dowolny typ danych. W przeciwieństwie do tablic i list, które indeksują i porządkują dane, które przechowują, mapy kojarzą klucze i wartości: uzyskujesz dostęp do wartości przechowywanej na mapie, określając skojarzony klucz wartości. Parametr *KEY* określa typ danych kluczy używanych do uzyskiwania dostępu do danych przechowywanych na mapie. Jeśli *typem KEY* jest struktura lub klasa, *parametr ARG_KEY* jest zazwyczaj odwołaniem do typu określonego w *key*. Parametr *WARTOŚĆ* określa typ elementów przechowywanych na mapie. Jeśli typem *ARG_VALUE* jest struktura lub klasa, *parametr ARG_VALUE* jest zazwyczaj odwołaniem do typu określonego w *wartości*. Przykład:
+Prosta Klasa map, [CMAP](../mfc/reference/cmap-class.md), przyjmuje cztery parametry: *Key*, *ARG_KEY*, *Value*i *ARG_VALUE*. Podobnie jak w przypadku klas Array i list, klasy map mogą przechowywać dowolny typ danych. W przeciwieństwie do tablic i list, które indeksuje i porządkują dane przechowywane, mapują skojarzone klucze i wartości: uzyskuje się dostęp do wartości przechowywanej na mapie, określając klucz skojarzony z wartością. Parametr *klucza* określa typ danych kluczy używanych do uzyskiwania dostępu do danych przechowywanych na mapie. Jeśli typ *klucza* jest strukturą lub klasą, parametr *ARG_KEY* jest zazwyczaj odwołaniem do typu określonego w *kluczu*. *Wartość* parametru określa typ elementów przechowywanych na mapie. Jeśli typ *ARG_VALUE* jest strukturą lub klasą, parametr *ARG_VALUE* jest zazwyczaj odwołaniem do typu określonego w polu *wartość*. Na przykład:
 
 [!code-cpp[NVC_MFCCollections#3](../mfc/codesnippet/cpp/template-based-classes_3.cpp)]
 
-Pierwszy przykład `MY_STRUCT` przechowuje wartości, uzyskuje do nich dostęp `MY_STRUCT` za pomocą kluczy **int** i zwraca dostęp do elementów przez odwołanie. Drugi przykład `CPerson` przechowuje wartości, `CString` uzyskuje do nich dostęp za pomocą kluczy i zwraca odwołania do elementów, do których dostęp. Ten przykład może reprezentować prostą książkę adresową, w której wyszukujesz osoby według nazwiska.
+Pierwszy przykład zapisuje `MY_STRUCT` wartości, uzyskuje dostęp do nich przez **`int`** klucze i zwraca dostępne `MY_STRUCT` elementy przez odwołanie. Drugi przykład zapisuje `CPerson` wartości, uzyskuje dostęp do nich według `CString` kluczy i zwraca odwołania do elementów, do których można uzyskać dostęp. Ten przykład może reprezentować prostą książkę adresową, w której można wyszukiwać osoby według nazwiska.
 
-Ponieważ parametr *KEY* jest `CString` typu i *parametr KEY_TYPE* jest `LPCSTR`typu, klucze są przechowywane na `CString` mapie jako elementy typu, ale są odwoływane w funkcjach, takich jak `SetAt` za pośrednictwem wskaźników typu `LPCSTR`. Przykład:
+Ponieważ parametr *klucza* jest typu `CString` , a parametr *key_type* jest typu `LPCSTR` , klucze są przechowywane na mapie jako elementy typu, `CString` ale są przywoływane w funkcjach, takich jak `SetAt` wskaźniki typu `LPCSTR` . Na przykład:
 
 [!code-cpp[NVC_MFCCollections#4](../mfc/codesnippet/cpp/template-based-classes_4.cpp)]
 
-## <a name="using-typed-pointer-collection-templates"></a><a name="_core_using_typed.2d.pointer_collection_templates"></a>Korzystanie z szablonów kolekcji typed-pointer
+## <a name="using-typed-pointer-collection-templates"></a><a name="_core_using_typed.2d.pointer_collection_templates"></a>Korzystanie z szablonów kolekcji wskaźników typu
 
-Aby użyć szablonów kolekcji wpisanych wskaźników, musisz wiedzieć, jakie rodzaje danych można przechowywać w tych kolekcjach i jakie parametry mają być używane w deklaracjach kolekcji.
+Aby używać szablonów kolekcji wskaźników typu, musisz wiedzieć, jakiego rodzaju dane można przechowywać w tych kolekcjach i jakich parametrów użyć w deklaracjach kolekcji.
 
-### <a name="typed-pointer-array-and-list-usage"></a><a name="_core_typed.2d.pointer_array_and_list_usage"></a>Typed-Pointer Array i użycie listy
+### <a name="typed-pointer-array-and-list-usage"></a><a name="_core_typed.2d.pointer_array_and_list_usage"></a>Tablica wskaźników typu i użycie listy
 
-Klasy tablicy i listy wpisanych wskaźników, [CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md) i [CTypedPtrList,](../mfc/reference/ctypedptrlist-class.md)przyjmują dwa parametry: *BASE_CLASS* i *TYP*. Te klasy mogą przechowywać dowolny typ danych, który można określić w *TYPE* parametru. Pochodzą one z jednej z klas kolekcji nontemplate, która przechowuje wskaźniki; tę klasę podstawową można określić w *BASE_CLASS*. W przypadku tablic należy `CObArray` `CPtrArray`użyć jednego lub . W przypadku list `CObList` użyj `CPtrList`jednego lub .
+Klasy i tablice wskaźników typu, [CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md) i [CTypedPtrList](../mfc/reference/ctypedptrlist-class.md), przyjmują dwa parametry: *BASE_CLASS* i *Type*. Klasy te mogą przechowywać dowolny typ danych określony w parametrze *typu* . Są one wyprowadzane z jednej z klas kolekcji nienależących do szablonu, która przechowuje wskaźniki; Tę klasę bazową należy określić w *BASE_CLASS*. W przypadku tablic Użyj jednego `CObArray` lub `CPtrArray` . W przypadku list Użyj jednego `CObList` lub `CPtrList` .
 
-W efekcie podczas deklarowania kolekcji `CObList`na podstawie, powiedzmy, nowa klasa nie tylko dziedziczy członków swojej klasy podstawowej, ale również deklaruje szereg dodatkowych funkcji elementów członkowskich bezpiecznych dla typu i operatorów, które pomagają zapewnić bezpieczeństwo typu przez hermetyzowanie wywołań do elementów członkowskich klasy podstawowej. Te hermetacje zarządzają wszystkie niezbędne konwersji typu. Przykład:
+W efekcie w przypadku deklarowania kolekcji na podstawie, Załóżmy `CObList` , Nowa klasa nie tylko dziedziczy elementy członkowskie swojej klasy bazowej, ale również deklaruje szereg dodatkowych bezpiecznych funkcji elementów członkowskich i operatorów, które pomagają zapewnić bezpieczeństwo typu przez hermetyzację wywołań do elementów członkowskich klasy bazowej. Te hermetyzacje zarządzają wszelką wymaganą konwersją typu. Na przykład:
 
 [!code-cpp[NVC_MFCCollections#5](../mfc/codesnippet/cpp/template-based-classes_5.cpp)]
 
-W pierwszym przykładzie deklaruje tablicę `myArray`wpisywany `CObArray`wskaźnik, wywodzącą się z . Tablica przechowuje i `CPerson` zwraca wskaźniki `CPerson` do obiektów (gdzie jest klasą pochodną `CObject`). Można wywołać `CObArray` dowolną funkcję elementu członkowskiego lub można `GetAt` `ElementAt` wywołać nowy typ bezpieczne i funkcje lub użyć operatora typu bezpieczne **[ ].**
+Pierwszy przykład deklaruje tablicę wskaźników typu, `myArray` , pochodny od `CObArray` . Tablica przechowuje i zwraca wskaźniki do `CPerson` obiektów (gdzie `CPerson` jest klasą pochodną `CObject` ). Można wywołać dowolną `CObArray` funkcję członkowską lub wywołać nowe bezpieczne typy `GetAt` i `ElementAt` funkcje lub użyć operatora typu Safe **[]** .
 
-Drugi przykład deklaruje listę wpisanych `myList`wskaźników, `CPtrList`wywodzącą się z pliku . Lista przechowuje i zwraca `MY_STRUCT` wskaźniki do obiektów. Klasa oparta `CPtrList` na jest używana do przechowywania wskaźników `CObject`do obiektów, które nie pochodzą od . `CTypedPtrList`posiada szereg funkcji elementów członkowskich `GetHead` `GetTail`bezpiecznych dla typu: `RemoveHead`, , , `RemoveTail` `GetNext`, , `GetPrev`, i `GetAt`.
+Drugi przykład deklaruje listę wskaźników typu, `myList` , pochodny od `CPtrList` . Lista przechowuje i zwraca wskaźniki do `MY_STRUCT` obiektów. Klasa oparta na `CPtrList` jest używana do przechowywania wskaźników do obiektów, które nie są wyprowadzane z `CObject` . `CTypedPtrList`ma wiele bezpiecznych funkcji składowych typu:,,,,, `GetHead` `GetTail` `RemoveHead` `RemoveTail` `GetNext` `GetPrev` i `GetAt` .
 
-### <a name="typed-pointer-map-usage"></a><a name="_core_typed.2d.pointer_map_usage"></a>Użycie mapy typu wskaźnik
+### <a name="typed-pointer-map-usage"></a><a name="_core_typed.2d.pointer_map_usage"></a>Użycie mapy wskaźnika typu
 
-Klasa mapy wpisywany wskaźnik, [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), przyjmuje trzy parametry: *BASE_CLASS*, *KEY*i *VALUE*. Parametr *BASE_CLASS* określa klasę, z której ma pochodzić nowa `CMapPtrToWord` `CMapPtrToPtr`klasa: `CMapWordToPtr`, , `CMapStringToOb` `CMapStringToPtr`, , i tak dalej. *KEY* jest analogiczny `CMap`do *keyw* : Określa typ klucza używanego do wyszukiwania. *WARTOŚĆ* jest *analogiczna* `CMap`do wartości w : Określa typ obiektu przechowywanego na mapie. Przykład:
+Klasa mapy typu wskaźnika [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), przyjmuje trzy parametry: *BASE_CLASS*, *klucz*i *wartość*. *BASE_CLASS* parametr określa klasę, z której należy utworzyć nową klasę: `CMapPtrToWord` ,,, `CMapPtrToPtr` , `CMapStringToPtr` `CMapWordToPtr` `CMapStringToOb` i tak dalej. *Klucz* jest analogiczny do *klucza* w `CMap` : określa typ klucza używanego do wyszukiwania. *Wartość* jest analogiczna do *wartości* w `CMap` : określa typ obiektu przechowywanego na mapie. Na przykład:
 
 [!code-cpp[NVC_MFCCollections#6](../mfc/codesnippet/cpp/template-based-classes_6.cpp)]
 
-Pierwszym przykładem jest mapa `CMapPtrToPtr` oparta `CString` na — używa klawiszy mapowanych do wskaźników do `MY_STRUCT`. Można wyszukać zapisany wskaźnik, wywołując `Lookup` funkcję bezpiecznego typu elementu członkowskiego. Operator [ **]** służy do wyszukiwania zapisanego wskaźnika i dodawania go, jeśli nie został znaleziony. Możesz iterować mapę za pomocą `GetNextAssoc` funkcji bezpiecznego typu. Można również wywołać inne `CMapPtrToPtr`funkcje członkowskie klasy .
+Pierwszy przykład jest oparty na mapie `CMapPtrToPtr` — używa `CString` kluczy mapowanych na wskaźniki do `MY_STRUCT` . Można wyszukać przechowywany wskaźnik, wywołując bezpieczną `Lookup` funkcję składową typu. Możesz użyć operatora **[]** , aby wyszukać przechowywany wskaźnik i dodać go, jeśli nie zostanie znaleziony. I można wykonać iterację mapy przy użyciu funkcji bezpiecznego typu `GetNextAssoc` . Możesz również wywołać inne funkcje składowe klasy `CMapPtrToPtr` .
 
-Drugi przykład to mapa `CMapStringToOb` oparta na — używa kluczy ciągów mapowanych do przechowywanych wskaźników do `CMyObject` obiektów. Można użyć tych samych elementów członkowskich typu, które opisano w `CMapStringToOb`poprzednim akapicie, lub można wywołać członków klasy .
+Drugim przykładem jest mapa oparta na `CMapStringToOb` — używa kluczy ciągów mapowanych na przechowywane wskaźniki do `CMyObject` obiektów. Można użyć tych samych bezpiecznych dla typu elementów członkowskich opisanych w poprzednim akapicie lub wywołać elementy członkowskie klasy `CMapStringToOb` .
 
 > [!NOTE]
-> Jeśli określisz **klasę** lub typ **struktury** dla parametru *VALUE,* a nie wskaźnik lub odwołanie do typu, klasa lub struktura musi mieć konstruktora kopii.
+> Jeśli określisz **`class`** Typ lub jako **`struct`** parametr *wartości* , a nie wskaźnik lub odwołanie do typu, Klasa lub struktura muszą mieć Konstruktor kopiujący.
 
-Aby uzyskać więcej informacji, zobacz [Jak zrobić kolekcję bezpieczną](../mfc/how-to-make-a-type-safe-collection.md)dla typu .
+Aby uzyskać więcej informacji, zobacz [jak tworzyć Kolekcje bezpieczne dla typów](../mfc/how-to-make-a-type-safe-collection.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kolekcje](../mfc/collections.md)

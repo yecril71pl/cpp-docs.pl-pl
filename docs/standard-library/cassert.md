@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cassert header
 ms.assetid: 6ead15a3-ac45-4075-be8e-350bca995c26
-ms.openlocfilehash: 58ebd91fb4fa32cf31d2c49429d0445b92fe0c82
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b28f4554610d37b881494748f75499f46cd9e8d9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449908"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230236"
 ---
 # <a name="ltcassertgt"></a>&lt;cassert&gt;
 
-Zawiera nagłówek \<standardowej biblioteki C Assert. h > i dodaje skojarzone nazwy `std` do przestrzeni nazw. Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są `std` deklarowane w przestrzeni nazw.
+Zawiera nagłówek standardowej biblioteki C \<assert.h> i dodaje skojarzone nazwy do `std` przestrzeni nazw. Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
 
 > [!NOTE]
-> \<Assert. h > nie definiuje `static_assert` makra.
+> \<assert.h>nie definiuje **`static_assert`** makra.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,11 +34,11 @@ Zawiera nagłówek \<standardowej biblioteki C Assert. h > i dodaje skojarzone n
 
 ### <a name="remarks"></a>Uwagi
 
-`assert(E)`jest tylko stałą, jeśli NDEBUG jest zdefiniowany, `assert` gdzie jest zdefiniowana jako Ostatnia zdefiniowana lub ponownie zdefiniowana, lub wartość *E* konwertowana na typ bool jest równa **true**.
+`assert(E)`jest tylko stałą, jeśli NDEBUG jest zdefiniowany, gdzie jest zdefiniowana jako `assert` Ostatnia zdefiniowana lub ponownie zdefiniowana, lub wartość *E* konwertowana na bool jest równa **`true`** .
 
 ## <a name="see-also"></a>Zobacz także
 
-[assert Macro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)\
+[potwierdzj makro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)\
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[C++Omówienie biblioteki standardowej](../standard-library/cpp-standard-library-overview.md)\
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Omówienie standardowej biblioteki języka C++](../standard-library/cpp-standard-library-overview.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - ll_lshift intrinsic
 - __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-ms.openlocfilehash: 158ecbf39320d70b51f1f498a0b689ba58fec363
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 988284b81c9f04ee5d7f09f8a2f173a689f9fb55
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221812"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230522"
 ---
 # <a name="__ll_lshift"></a>__ll_lshift
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Przesuwa podaną wartość 64-bitową w lewo o określoną liczbę bitów.
 
@@ -40,7 +40,7 @@ podczas Liczba bitów do przesunięcia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Maska przesunięta w lewo `nBit` o bity.
+Maska przesunięta w lewo o `nBit` bity.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -48,13 +48,13 @@ Maska przesunięta w lewo `nBit` o bity.
 |---------------|------------------|
 |`__ll_lshift`|x86, x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
 Jeśli kompilujesz program dla architektury 64-bitowej i `nBit` jest większy niż 63, liczba bitów do przesunięcia to `nBit` modulo 64. Jeśli kompilujesz program dla architektury 32-bitowej i `nBit` jest większy niż 31, liczba bitów do przesunięcia to `nBit` modulo 32.
 
-Wartość `ll` w polu Nazwa wskazuje, że jest to operacja na `long long` (`__int64`).
+Wartość `ll` w polu Nazwa wskazuje, że jest to operacja na **`long long`** ( **`__int64`** ).
 
 ## <a name="example"></a>Przykład
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-ms.openlocfilehash: f01e69138a6ca1744645a1c2fa8525b7088e260d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771ce7506359178c1b8346598e93c30a20329fe8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295684"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229795"
 ---
 # <a name="mutual-imports"></a>Importy wzajemne
 
@@ -37,20 +37,20 @@ Ogólne rozwiązanie do obsługi wzajemnych importów to:
 
 1. Po użyciu LINKu lub LIB do skompilowania wszystkich bibliotek importu, wróć i uruchom LINK, aby skompilować wszystkie pliki wykonywalne, które nie zostały skompilowane w poprzednim kroku. Należy pamiętać, że odpowiedni plik EXP musi być określony w wierszu łącza.
 
-   Jeśli narzędzie LIB zostało wcześniej uruchomione w celu utworzenia biblioteki Imports dla DLL1, LIB również wyprodukował plik DLL1. EXP. Musisz użyć DLL1. EXP jako danych wejściowych do LINKu podczas kompilowania DLL1. dlll.
+   Jeśli narzędzie LIB zostało wcześniej uruchomione w celu utworzenia biblioteki Imports dla DLL1, LIB również wyprodukował plik DLL1. EXP. Musisz użyć DLL1. EXP jako danych wejściowych do KONSOLIDACJi podczas kompilowania DLL1.dlll.
 
 Na poniższej ilustracji przedstawiono rozwiązanie dla dwóch wzajemnie importowanych bibliotek DLL, DLL1 i DLL2. Krok 1. Aby uruchomić LIB, z ustawioną opcją/DEF na DLL1. Krok 1 powoduje utworzenie DLL1. lib, biblioteki Import i DLL1. EXP. W kroku 2 Biblioteka importowania jest używana do kompilowania DLL2, co z kolei powoduje utworzenie biblioteki Import dla symboli DLL2's. Krok 3 kompiluje DLL1, używając DLL1. exp i DLL2. lib jako dane wejściowe. Należy zauważyć, że plik. EXP dla DLL2 nie jest potrzebny, ponieważ LIB nie został użyty do skompilowania biblioteki importu DLL2's.
 
-![Łączenie]dwóch bibliotek DLL przy użyciu wzajemnych importów w(media/vc37yj1.gif "celu łączenia dwóch bibliotek DLL")<br/>
+![Łączenie dwóch bibliotek DLL przy użyciu wzajemnych importów](media/vc37yj1.gif "Łączenie dwóch bibliotek DLL przy użyciu wzajemnych importów")<br/>
 Łączenie dwóch bibliotek DLL z wzajemnymi importami
 
 ## <a name="limitations-of-_afxext"></a>Ograniczenia _AFXEXT
 
 Możesz użyć `_AFXEXT` symbolu preprocesora dla bibliotek DLL rozszerzenia MFC, o ile nie masz wielu warstw bibliotek DLL rozszerzeń MFC. Jeśli masz biblioteki DLL rozszerzenia MFC, które wywołują lub pochodzą z klas we własnych bibliotekach DLL rozszerzenia MFC, które następnie pochodzą od klas MFC, należy użyć własnego symbolu preprocesora, aby uniknąć niejednoznaczności.
 
-Problem polega na tym, że w systemie Win32 należy jawnie zadeklarować dowolne dane jako **__declspec (dllexport)** , jeśli ma zostać wyeksportowane z biblioteki DLL, a **__declspec (dllimport)** , jeśli ma zostać zaimportowany z biblioteki DLL. Podczas definiowania `_AFXEXT`, nagłówki MFC upewnij się, że **AFX_EXT_CLASS** jest prawidłowo zdefiniowany.
+Problem polega na tym, że w systemie Win32 należy jawnie zadeklarować wszelkie dane tak, jakby zostały **`__declspec(dllexport)`** wyeksportowane z biblioteki DLL, i **`__declspec(dllimport)`** Jeśli ma zostać zaimportowany z biblioteki DLL. Podczas definiowania `_AFXEXT` , nagłówki MFC upewnij się, że **AFX_EXT_CLASS** jest prawidłowo zdefiniowany.
 
-Jeśli masz wiele warstw, jeden symbol taki jak **AFX_EXT_CLASS** nie jest wystarczający, ponieważ biblioteka DLL rozszerzenia MFC może eksportować nowe klasy, a także importować inne klasy z innej biblioteki DLL rozszerzenia MFC. Aby rozwiązać ten problem, należy użyć specjalnego symbolu preprocesora, który wskazuje, że tworzysz bibliotekę DLL zamiast korzystać z biblioteki DLL. Załóżmy na przykład, że istnieją dwie biblioteki DLL rozszerzenia MFC, DLL i B. dll. Każdy z nich eksportuje kilka klas odpowiednio do. h i B. h. B. dll używa klas z biblioteki DLL. Pliki nagłówkowe będą wyglądać następująco:
+Jeśli masz wiele warstw, jeden symbol taki jak **AFX_EXT_CLASS** nie jest wystarczający, ponieważ biblioteka DLL rozszerzenia MFC może eksportować nowe klasy, a także importować inne klasy z innej biblioteki DLL rozszerzenia MFC. Aby rozwiązać ten problem, należy użyć specjalnego symbolu preprocesora, który wskazuje, że tworzysz bibliotekę DLL zamiast korzystać z biblioteki DLL. Załóżmy na przykład, że istnieją dwie biblioteki DLL rozszerzenia MFC, A.dll i B.dll. Każdy z nich eksportuje kilka klas odpowiednio do. h i B. h. B.dll używa klas z A.dll. Pliki nagłówkowe będą wyglądać następująco:
 
 ```
 /* A.H */
@@ -75,7 +75,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...
 ```
 
-Po skompilowaniu pliku. dll jest on zbudowany z `/D A_IMPL` i, gdy jest tworzona biblioteka B. dll, jest skompilowana przy `/D B_IMPL`użyciu. Przy użyciu oddzielnych symboli dla każdej biblioteki DLL `CExampleB` jest eksportowany i `CExampleA` importowany podczas kompilowania pliku B. dll. `CExampleA`jest eksportowany podczas kompilowania pliku dll i importowany, gdy jest używany przez B. dll (lub innego klienta).
+Po skompilowaniu A.dll jest on zbudowany z `/D A_IMPL` i po skompilowaniu B.dll jest on zbudowany przy użyciu `/D B_IMPL` . Przy użyciu oddzielnych symboli dla każdej biblioteki DLL `CExampleB` jest eksportowany i `CExampleA` importowany podczas kompilowania B.dll. `CExampleA`jest eksportowany podczas kompilowania A.dll i importowania, gdy jest używany przez B.dll (lub innego klienta).
 
 Tego typu warstw nie można wykonać w przypadku używania wbudowanych **AFX_EXT_CLASS** i `_AFXEXT` symboli preprocesora. Opisana powyżej technika pozwala rozwiązać ten problem w sposób, który nie jest w przeciwieństwie do mechanizmu MFC, który używa w przypadku kompilowania aktywnych technologii, bazy danych i bibliotek DLL rozszerzeń MFC.
 
@@ -83,7 +83,7 @@ Tego typu warstw nie można wykonać w przypadku używania wbudowanych **AFX_EXT
 
 Gdy nie eksportujesz całej klasy, musisz upewnić się, że niezbędne elementy danych utworzone przez makra MFC są poprawnie wyeksportowane. Można to zrobić przez ponowne zdefiniowanie `AFX_DATA` do makra konkretnej klasy. Należy to zrobić za każdym razem, gdy nie eksportujesz całej klasy.
 
-Przykład:
+Na przykład:
 
 ```
 /* A.H */
@@ -119,7 +119,7 @@ class CExampleA : public CObject
 
 - [Eksportowanie funkcji języka C++ do użycia w plikach wykonywalnych języka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Określanie, której metody eksportowania użyć](determining-which-exporting-method-to-use.md)
+- [Wybieranie metody eksportowania do użycia](determining-which-exporting-method-to-use.md)
 
 - [Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
@@ -127,6 +127,6 @@ class CExampleA : public CObject
 
 - [Narzędzie LIB i opcja/DEF](reference/lib-reference.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Importowanie i eksportowanie](importing-and-exporting.md)
