@@ -9,23 +9,23 @@ helpviewer_keywords:
 - inline assembly, calling functions
 - __asm keyword [C++], calling functions
 ms.assetid: 1f0d1eb3-54cf-45d5-838d-958188616b38
-ms.openlocfilehash: f16e466ebb5f31231411eaaf9a1a85bfcc46a34d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 781b60c8973593039c0fdfa2f457170e95048597
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169581"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87192538"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>Wywoływanie funkcji C++ w asemblerze wbudowanym
 
 **Specyficzne dla firmy Microsoft**
 
-Blok `__asm` może wywoływać tylko funkcje C++ globalne, które nie są przeciążone. Jeśli wywołasz przeciążoną funkcję C++ globalną lub C++ funkcję członkowską, kompilator wygeneruje błąd.
+**`__asm`** Blok może wywoływać tylko globalne funkcje C++, które nie są przeciążone. Jeśli wywołasz przeciążoną globalną funkcję C++ lub funkcję członkowską języka C++, kompilator wygeneruje błąd.
 
-Możesz również wywołać wszystkie funkcje zadeklarowane za pomocą zewnętrznego powiązania **"C"** . Umożliwia to blokowi `__asm` w ramach C++ programu wywoływanie funkcji biblioteki języka C, ponieważ wszystkie standardowe pliki nagłówkowe deklarują funkcje biblioteki jako zewnętrzne powiązania **"C"** .
+Możesz również wywołać wszystkie funkcje zadeklarowane za pomocą zewnętrznego powiązania **"C"** . Dzięki temu **`__asm`** blok w ramach programu C++ może wywoływać funkcje biblioteki języka C, ponieważ wszystkie standardowe pliki nagłówkowe deklarują funkcje biblioteki jako zewnętrzne powiązania **"C"** .
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Wbudowany asembler](../../assembler/inline/inline-assembler.md)<br/>
+[Asembler wbudowany](../../assembler/inline/inline-assembler.md)<br/>

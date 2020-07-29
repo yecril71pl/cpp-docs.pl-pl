@@ -29,16 +29,16 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 9e02be690b257842c49166e18cf551c540190388
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 227010fde5dc5ec82fc13c724c8d5a2f43788a8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915094"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234201"
 ---
 # <a name="_ecvt"></a>_ecvt
 
-Konwertuje liczbę **podwójną** na ciąg. Dostępna jest bezpieczniejsza wersja tej funkcji; Zobacz [_ecvt_s](ecvt-s.md).
+Konwertuje **`double`** liczbę na ciąg. Dostępna jest bezpieczniejsza wersja tej funkcji; Zobacz [_ecvt_s](ecvt-s.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,7 +62,7 @@ Liczba przechowywanych cyfr.
 *dec*<br/>
 Przechowywana pozycja punktu dziesiętnego.
 
-*zapis*<br/>
+*sign*<br/>
 Znak przekonwertowanego numeru.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -89,7 +89,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_ecvt**|\<STDLIB. h>|
+|**_ecvt**|\<stdlib.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -122,7 +122,7 @@ int main( void )
 source: 3.1415926535   buffer: '3141592654'  decimal: 1  sign: 0
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>

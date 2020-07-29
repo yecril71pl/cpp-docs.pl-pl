@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: b6d4906212073ab8cb04a0ab77d1234d444a4c95
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9872a83ba3ec5346b7aed5fb51ee837d3ed827aa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909656"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234175"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
@@ -68,7 +68,7 @@ long double expl(
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Wartość zmiennoprzecinkowa do exponentiate logarytmu naturalnego *o podstawie.*
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -86,7 +86,7 @@ Funkcja **EXP** ma implementację, która używa Streaming SIMD Extensions 2 (SS
 
 ## <a name="remarks"></a>Uwagi
 
-Język C++ pozwala na Przeciążenie, dlatego można wywoływać przeciążenia, **które** przyjmują wartość **zmiennoprzecinkową** lub **długą podwójnego** argumentu. W programie C funkcja **EXP** zawsze przyjmuje i zwraca wartość **Double**.
+Język C++ pozwala na Przeciążenie, dlatego można wywoływać przeciążenia, **które** przyjmują **`float`** argument lub **`long double`** . W programie C funkcja **EXP** zawsze przyjmuje i zwraca **`double`** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -94,7 +94,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek C|Wymagany nagłówek C++|
 |--------------|---------------------|---|
-|**EXP**, **expf —**, **Expl**|\<> Math. h|\<cmath> lub \<Math. h>|
+|**EXP**, **expf —**, **Expl**|\<math.h>|\<cmath> lub \<math.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -119,7 +119,7 @@ int main( void )
 exp( 2.302585 ) = 10.000000
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>

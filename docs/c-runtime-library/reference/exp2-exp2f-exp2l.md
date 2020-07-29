@@ -37,12 +37,12 @@ helpviewer_keywords:
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-ms.openlocfilehash: 3a80efab34b45348ca00f09b2fd6e2ea5077fd86
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d2eb3f6d27e943110c5e82968d4fee949644601f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909627"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234162"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
@@ -74,7 +74,7 @@ long double exp2l(
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Wartość wykładnika.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -84,7 +84,7 @@ Jeśli to się powiedzie, zwraca wykładnik Base-2 *x*, czyli 2<sup>x</sup>. W p
 |Problem|Przesłać|
 |-----------|------------|
 |*x* = ± 0|1|
-|*x* = — nieskończoność|+ 0|
+|*x* = — nieskończoność|+0|
 |*x* = + nieskończoność|+ NIESKOŃCZONość|
 |*x* = NaN|NaN|
 |Błąd przepełnienia zakresu|+ HUGE_VAL, + HUGE_VALF lub + HUGE_VALL|
@@ -94,7 +94,7 @@ Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **exp2 —** , które pobierają i zwracają **zmiennoprzecinkowe** i **długie podwójne** typy. W programie C **exp2 —** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **exp2 —** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C **exp2 —** zawsze przyjmuje i zwraca **`double`** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -102,11 +102,11 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
-|**EXP**, **expf —**, **Expl**|\<> Math. h|\<cmath>|
+|**EXP**, **expf —**, **Expl**|\<math.h>|\<cmath>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>
