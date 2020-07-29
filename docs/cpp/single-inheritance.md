@@ -10,23 +10,23 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: 8fe141886fd5087b71484368c0f79d62238f7f22
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 306f5eb3624797ca48848ef0a8f69625e0f6b574
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365610"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186363"
 ---
 # <a name="single-inheritance"></a>Pojedyncze dziedziczenie
 
-W "pojedynczego dziedziczenia", wspólnej formie dziedziczenia, klasy mają tylko jedną klasę podstawową. Należy wziąć pod uwagę relację zilustrowaną na poniższej ilustracji.
+W obszarze "pojedyncze dziedziczenie" wspólna forma dziedziczenia klasy mają tylko jedną klasę bazową. Rozważmy zależność podaną na poniższej ilustracji.
 
-![Podstawowy wykres dziedziczenia pojedynczego&#45;](../cpp/media/vc38xj1.gif "Podstawowy wykres dziedziczenia pojedynczego&#45;") <br/>
-Prosty wykres pojedynczego dziedziczenia
+![Wykres podstawowego dziedziczenia pojedynczego&#45;](../cpp/media/vc38xj1.gif "Wykres podstawowego dziedziczenia pojedynczego&#45;") <br/>
+Prosty wykres z pojedynczym dziedziczeniem
 
-Zwróć uwagę na postęp od ogólnego do specyficznego na rysunku. Innym typowym atrybutem znalezionym w projekcie większości hierarchii klas jest to, że klasa pochodna ma relację "rodzaj" z klasą podstawową. Na rysunku, `Book` jest rodzajem `PrintedDocument`, `PaperbackBook` i jest rodzajem `book`.
+Zwróć uwagę na postęp od ogólnego do określonego na rysunku. Innym wspólnym atrybutem znalezionym w projekcie większości hierarchii klas jest to, że Klasa pochodna ma relację "rodzaj" z klasą bazową. Na rysunku, a `Book` jest rodzajem a `PrintedDocument` , a a `PaperbackBook` jest rodzajem a `book` .
 
-Inny element uwagi na `Book` rysunku: jest zarówno klasą pochodną (od `PrintedDocument`) jak i klasą podstawową (`PaperbackBook` pochodzi od `Book`). Szkieletowa deklaracja takiej hierarchii klas jest pokazana w poniższym przykładzie:
+Jeden inny element notatki na rysunku: `Book` jest klasą pochodną (od `PrintedDocument` ) i klasą bazową ( `PaperbackBook` pochodną `Book` ). Deklaracja szkieletowa tej hierarchii klas jest pokazana w poniższym przykładzie:
 
 ```cpp
 // deriv_SingleInheritance.cpp
@@ -40,23 +40,23 @@ class Book : public PrintedDocument {};
 class PaperbackBook : public Book {};
 ```
 
-`PrintedDocument`jest uważany za klasę "bezpośrednią bazę" do; `Book` jest to klasa "pośrednia `PaperbackBook`podstawa" do . Różnica polega na tym, że bezpośrednia klasa podstawowa pojawia się na liście podstawowej deklaracji klasy, a podstawa pośrednia nie.
+`PrintedDocument`jest traktowana jako Klasa "Direct Base" do `Book` ; jest to Klasa "pośrednia podstawowa" do `PaperbackBook` . Różnica polega na tym, że bezpośrednia klasa bazowa pojawia się na liście podstawowej deklaracji klasy, a pośrednia podstawowa nie.
 
-Klasa podstawowa, z której pochodzi każda klasa, jest deklarowana przed deklaracją klasy pochodnej. Nie jest wystarczające, aby zapewnić deklarację odwołującą się do przodu dla klasy podstawowej; musi to być pełna deklaracja.
+Klasa bazowa, z której każda klasa jest pochodna jest zadeklarowana przed deklaracją klasy pochodnej. Nie wystarcza do zapewnienia deklaracji odwołującej się do przodu dla klasy bazowej; musi być kompletną deklaracją.
 
-W poprzednim przykładzie jest używany specyfikator dostępu **publicznych.** Znaczenie dziedziczenia publicznego, chronionego i prywatnego jest opisane w [kontroli dostępu do elementu członkowskiego.](../cpp/member-access-control-cpp.md)
+W poprzednim przykładzie **`public`** używany jest specyfikator dostępu. Znaczenie publicznego, chronionego i prywatnego dziedziczenia jest opisane w [Access Control członkowskich.](../cpp/member-access-control-cpp.md)
 
-Klasa może służyć jako klasa podstawowa dla wielu określonych klas, jak pokazano na poniższym rysunku.
+Klasa może stanowić klasę bazową dla wielu określonych klas, jak pokazano na poniższej ilustracji.
 
-![Wykres acykliczny skierowany](../cpp/media/vc38xj2.gif "Wykres acykliczny skierowany") <br/>
-Próbka reżyserii wykresu acyklicznego
+![Ukierunkowany wykres acykliczne](../cpp/media/vc38xj2.gif "Ukierunkowany wykres acykliczne") <br/>
+Przykład ukierunkowanego wykresu acykliczne
 
-Na diagramie pokazanym powyżej, o nazwie "skierowane wykres acykliczny" (lub "DAG"), niektóre klasy są klasy podstawowe dla więcej niż jednej klasy pochodnej. Jednak odwrotnie nie jest prawdą: istnieje tylko jedna bezpośrednia klasa podstawowa dla danej klasy pochodnej. Wykres na rysunku przedstawia strukturę "pojedynczego dziedziczenia".
+Na schemacie pokazanym powyżej, nazywany "bezpośrednim wykresem acykliczne" (lub "DAG"), niektóre klasy są klasami podstawowymi dla więcej niż jednej klasy pochodnej. Jednak odwrócenie nie jest prawdziwe: istnieje tylko jedna bezpośrednia klasa bazowa dla danej klasy pochodnej. Wykres na rysunku przedstawia strukturę "pojedynczego dziedziczenia".
 
 > [!NOTE]
-> Ukierunkowane wykresy acykliczne nie są unikatowe dla pojedynczego dziedziczenia. Są one również używane do przedstawiania wykresów wielokrotnego dziedziczenia.
+> Ukierunkowane wykresy acykliczne nie są unikatowe dla pojedynczego dziedziczenia. Są one również używane do przedstawiania wykresów o wielu dziedziczeniu.
 
-W dziedziczeniu klasa pochodna zawiera członków klasy podstawowej oraz wszystkie nowe elementy członkowskie, które można dodać. W rezultacie klasa pochodna może odwoływać się do członków klasy podstawowej (chyba że te elementy członkowskie są ponownie zdefiniowane w klasie pochodnej). Operator rozpoznawania zakresu`::`( ) może służyć do odwoływania się do elementów członkowskich klas podstawowych bezpośrednich lub pośrednich, gdy te elementy członkowskie zostały ponownie zdefiniowane w klasie pochodnej. Rozważmy następujący przykład:
+W obszarze dziedziczenia Klasa pochodna zawiera elementy członkowskie klasy bazowej oraz dowolnych nowych członków. W efekcie Klasa pochodna może odwoływać się do elementów członkowskich klasy podstawowej (chyba że te elementy członkowskie są ponownie zdefiniowane w klasie pochodnej). Operatora rozpoznawania zakresu ( `::` ) można użyć do odwoływania się do członków bezpośrednich lub pośrednich klas podstawowych, gdy te elementy członkowskie zostały ponownie zdefiniowane w klasie pochodnej. Rozważmy następujący przykład:
 
 ```cpp
 // deriv_SingleInheritance2.cpp
@@ -89,7 +89,7 @@ Book::Book( char *name, long pagecount ) {
 };
 ```
 
-Należy zauważyć, że `Book`konstruktor dla ,`Book::Book`( `Name`), ma dostęp do elementu członkowskiego danych, . W programie obiekt typu `Book` może być tworzony i używany w następujący sposób:
+Należy zauważyć, że Konstruktor dla `Book` , ( `Book::Book` ), ma dostęp do elementu członkowskiego danych, `Name` . W programie obiekt typu `Book` można utworzyć i użyć w następujący sposób:
 
 ```cpp
 //  Create a new object of type Book. This invokes the
@@ -102,7 +102,7 @@ Book LibraryBook( "Programming Windows, 2nd Ed", 944 );
 LibraryBook.PrintNameOf();
 ```
 
-Jak pokazano w poprzednim przykładzie, class-member i dziedziczone dane i funkcje są używane identycznie. Jeśli implementacja `Book` dla klasy wymaga ponownego wdrożenia `PrintNameOf` funkcji, funkcja, która należy `Document` do klasy można wywołać tylko`::`za pomocą operatora scope-resolution ( ):
+Jak pokazano w powyższym przykładzie, element członkowski klasy i dziedziczone dane oraz funkcje są używane identycznie. Jeśli implementacja klasy `Book` wywołuje dla ponownej implementacji `PrintNameOf` funkcji, funkcja, która należy do `Document` klasy, może być wywoływana tylko za pomocą operatora rozpoznawania zakresu ( `::` ):
 
 ```cpp
 // deriv_SingleInheritance3.cpp
@@ -128,7 +128,7 @@ void Book::PrintNameOf() {
 }
 ```
 
-Wskaźniki i odwołania do klas pochodnych mogą być niejawnie konwertowane na wskaźniki i odwołania do ich klas podstawowych, jeśli istnieje dostępna, jednoznaczna klasa podstawowa. Poniższy kod demonstruje tę koncepcję przy użyciu wskaźników (ta sama zasada ma zastosowanie do odwołań):
+Wskaźniki i odwołania do klas pochodnych mogą być niejawnie konwertowane na wskaźniki i odwołania do ich klas bazowych, jeśli istnieje dostępna jednoznaczna Klasa bazowa. Poniższy kod ilustruje tę koncepcję przy użyciu wskaźników (ta sama zasada dotyczy odwołań):
 
 ```cpp
 // deriv_SingleInheritance4.cpp
@@ -149,9 +149,9 @@ int main() {
 }
 ```
 
-W poprzednim przykładzie tworzone są różne typy. Jednak ponieważ wszystkie te typy `Document` pochodzą z klasy, istnieje `Document *`niejawna konwersja do . W rezultacie `DocLib` jest "heterogeniią" (lista, w której nie wszystkie obiekty są tego samego typu) zawierające różne rodzaje obiektów.
+W poprzednim przykładzie tworzone są różne typy. Ponieważ jednak te typy są wszystkie pochodne od `Document` klasy, istnieje niejawna konwersja na `Document *` . W związku z `DocLib` tym jest "listą heterogeniczną" (lista, w której nie wszystkie obiekty są tego samego typu) zawierający różne rodzaje obiektów.
 
-Ponieważ `Document` klasa ma `PrintNameOf` funkcję, może wydrukować nazwę każdej książki w bibliotece, chociaż może pominąć niektóre informacje specyficzne `Book`dla typu dokumentu `HelpFile`(liczba stron dla , liczba bajtów dla , i tak dalej).
+Ponieważ `Document` Klasa ma `PrintNameOf` funkcję, może ona drukować nazwę każdej książki w bibliotece, chociaż może pominąć niektóre informacje specyficzne dla typu dokumentu (liczba stron dla `Book` , liczba bajtów dla `HelpFile` itd.).
 
 > [!NOTE]
-> Wymuszanie klasy podstawowej do `PrintNameOf` zaimplementowania funkcji, takiej jak często nie jest najlepszym projektem. [Funkcje wirtualne](../cpp/virtual-functions.md) oferują inne alternatywy projektowe.
+> Wymuszanie implementacji przez klasę bazową funkcji, takiej jak `PrintNameOf` często nie jest najlepszym projektem. [Funkcje wirtualne](../cpp/virtual-functions.md) oferują inne alternatywy projektowe.
