@@ -1,6 +1,6 @@
 ---
-title: MatchEventStack (własnik dopasowywki)
-description: Odwołanie do funkcji SDK MatchEventStack aplikacji C++ Build Insights.
+title: MatchEventStack
+description: Dokumentacja funkcji MatchEventStack zestawu SDK usługi Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a223d420e8c48667fbd1c6569f02d0486f597b5e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ae476c402c3ea0cad558ce41a979b4233e0f1dd3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323873"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224126"
 ---
-# <a name="matcheventstack"></a>MatchEventStack (własnik dopasowywki)
+# <a name="matcheventstack"></a>MatchEventStack
 
 ::: moniker range="<=vs-2015"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkcja `MatchEventStack` jest używana do dopasowania stosu zdarzeń do hierarchii zdarzeń określonych. Dopasowane hierarchie są przekazywane do programu obsługi w celu dalszego przetwarzania. Aby dowiedzieć się więcej o zdarzeniach, stosach zdarzeń i hierarchiach, zobacz [tabelę zdarzeń](../event-table.md).
+`MatchEventStack`Funkcja jest używana do dopasowania stosu zdarzeń do określonej hierarchii zdarzeń. Dopasowane hierarchie są przekazywane do programu obsługi w celu dalszej obróbki. Aby dowiedzieć się więcej o zdarzeniach, stosach zdarzeń i hierarchiach, zobacz [tabela zdarzeń](../event-table.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,36 +43,36 @@ bool MatchEventStack(
 
 ### <a name="parameters"></a>Parametry
 
-*TEvent ( TEvent )*\
-Typ najstarszego rodzica do dopasowania w stosie zdarzeń.
+*TEvent*\
+Typ elementu nadrzędnego eldest do dopasowania w stosie zdarzeń.
 
-*TEvents (WYCHO.*\
-Pozostałe typy, które chcesz dopasować w stosie zdarzeń.
+*TEvents*\
+Pozostałe typy, które chcesz dopasować, w stosie zdarzeń.
 
-*TCallable (Można się do systemu)*\
-Typ, który `operator()`obsługuje . Aby uzyskać więcej informacji na temat argumentów, które są przekazywane do tego operatora, zobacz opis parametru *wywoływane.*
+*TCallable*\
+Typ, który obsługuje `operator()` . Aby uzyskać więcej informacji na temat tego, które argumenty są przekazane do tego operatora, zobacz Opis możliwego do *uzyskania parametru.*
 
 *TExtraArgs*\
-Typy dodatkowych argumentów `MatchEventStack`przekazywane do .
+Typy dodatkowych argumentów przekazane do `MatchEventStack` .
 
-*eventStack (własówce wydarzenia)*\
-Stos zdarzeń zgodny z hierarchią typów zdarzeń opisaną przez *TEvent* i *TEvents*.
+*eventStack*\
+Stos zdarzeń do dopasowania względem hierarchii typów zdarzeń opisanych przez *TEvent* i *TEvents*.
 
-*Nieopłacona*\
-Po pomyślnym dopasowaniu stosu zdarzeń do hierarchii typów zdarzeń opisanej `MatchEventStack` przez *TEvent* i *TEvents,* wywołuje *wywoływane*. Przekazuje do *wywoływania* jeden argument wartości r dla każdego typu w hierarchii zdarzeń. Pakiet *parametrów extraArgs* jest idealnie przekierowywany w pozostałych parametrach *wywoływanych.*
+*żądanie*\
+Po pomyślnym dopasowaniu stosu zdarzeń z hierarchią typów zdarzeń opisanymi przez *TEvent* i *TEvents* `MatchEventStack` wywołuje wywołanie *callable*. Przekazuje *on do* możliwego do przekroczenia jednego argumentu r-wartości dla każdego typu w hierarchii zdarzeń. Pakiet parametrów *extraArgs* jest idealnym przesłanym dalej w pozostałych parametrach *, które są wywoływane.*
 
-*extraArgs (extraArgs)*\
-Argumenty, które są perfekcyjnie przekazywane do *wywoływania* wraz z dopasowanym typem zdarzenia.
+*extraArgs*\
+Argumenty, które uzyskują doskonałe utajnienie przekazywania *, wraz z* dopasowanym typem zdarzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość **bool,** która jest **true,** jeśli dopasowanie zakończyło się pomyślnie lub **false** w inny sposób.
+**`bool`** Wartość, która jest w **`true`** przypadku, gdy dopasowanie zakończyło się powodzeniem lub **`false`** w inny sposób.
 
 ## <a name="remarks"></a>Uwagi
 
-Ostatnie wydarzenie w *eventStack* jest zawsze dopasowane do ostatniego \[wpisu w konkapacji *TEvent*, *TEvents ...* \] listy typów. Wszystkie inne wpisy *TEvent* i *TEvents* mogą pasować do dowolnej pozycji w *eventStack* z wyjątkiem ostatniego, pod warunkiem, że są w tej samej kolejności.
+Ostatnie zdarzenie w *eventStack* jest zawsze dopasowane do ostatniego wpisu na liście połączone \[ *TEvent*, *TEvents...* \] typu. Wszystkie inne wpisy *TEvent* i *TEvents* mogą być zgodne z dowolnym pozycją w *eventStack* z wyjątkiem ostatniego, pod warunkiem, że znajdują się one w tej samej kolejności.
 
-Typy zdarzeń, które mają być używane dla parametrów *TEvent* i *TEvents,* są wybierane z listy *klas przechwytywania.* Aby uzyskać listę zdarzeń i klasy przechwytywania, których można użyć do ich dopasowania, zobacz [tabelę zdarzeń](../event-table.md).
+Typy zdarzeń do użycia dla parametrów *TEvent* i *TEvents* są wybierane z listy *klas przechwytywania*. Aby zapoznać się z listą zdarzeń i klas przechwytywania, których można użyć do dopasowania, zobacz [tabela zdarzeń](../event-table.md).
 
 ## <a name="example"></a>Przykład
 

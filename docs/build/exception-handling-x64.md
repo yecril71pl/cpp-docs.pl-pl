@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: eff4f1a22512b597b5479dbcaabcc9d5fc93c940
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 75658e2c86ffb1a75d5f66e873e0648a8ebae29e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303205"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224048"
 ---
 # <a name="x64-exception-handling"></a>Obsługa wyjątku x64
 
@@ -128,17 +128,17 @@ Przesunięcie (od początku prologu) zakończenia instrukcji, która wykonuje t�
 
 #### <a name="unwind-operation-code"></a>Kod operacji unwind
 
-Uwaga: Niektóre kody operacji wymagają przesunięcia bez znaku do wartości w lokalnej klatce stosu. To przesunięcie jest od początku, czyli najniższego adresu stałego przydziału stosu. Jeśli pole rejestru ramki w UNWIND_INFO wynosi zero, to przesunięcie jest z usługi RSP. Jeśli pole rejestr ramki ma wartość różną od zera, to przesunięcie pochodzi z lokalizacji, w której zarejestrowano żądanie RSP po ustanowieniu rejestru FP. Jest to zgodne z rejestrem FP pomniejszonym o przesunięcie rejestru \* FP (16 przesunięte do rejestru ramki skalowane w UNWIND_INFO). Jeśli jest używany rejestr FP, każdy kod operacji unwind z przesunięciem musi być używany tylko po ustanowieniu rejestru FP w prologu.
+Uwaga: Niektóre kody operacji wymagają przesunięcia bez znaku do wartości w lokalnej klatce stosu. To przesunięcie jest od początku, czyli najniższego adresu stałego przydziału stosu. Jeśli pole rejestru ramki w UNWIND_INFO wynosi zero, to przesunięcie jest z usługi RSP. Jeśli pole rejestr ramki ma wartość różną od zera, to przesunięcie pochodzi z lokalizacji, w której zarejestrowano żądanie RSP po ustanowieniu rejestru FP. Jest to zgodne z rejestrem FP pomniejszonym o przesunięcie rejestru FP (16 \* przesunięte do rejestru ramki skalowane w UNWIND_INFO). Jeśli jest używany rejestr FP, każdy kod operacji unwind z przesunięciem musi być używany tylko po ustanowieniu rejestru FP w prologu.
 
-W przypadku wszystkich kodów, `UWOP_SAVE_XMM128` z `UWOP_SAVE_XMM128_FAR`wyjątkiem i, przesunięcie jest zawsze wielokrotnością 8, ponieważ wszystkie wartości stosu są przechowywane na 8-bajtowych granicach (sam stos ma zawsze 16-bajtowy). W przypadku kodów operacji, które przyjmują krótkie przesunięcie (mniej niż 512K), końcowa USHORT w węzłach dla tego kodu przechowuje przesunięcie podzielone przez 8. W przypadku kodów operacji, które pobierają długie przesunięcie (512K <= offset < 4 GB), ostatnie dwa węzły USHORT dla tego kodu przechowują przesunięcie (w formacie little-endian).
+W przypadku wszystkich kodów, z wyjątkiem `UWOP_SAVE_XMM128` i `UWOP_SAVE_XMM128_FAR` , przesunięcie jest zawsze wielokrotnością 8, ponieważ wszystkie wartości stosu są przechowywane na 8-bajtowych granicach (sam stos ma zawsze 16-bajtowy). W przypadku kodów operacji, które przyjmują krótkie przesunięcie (mniej niż 512K), końcowa USHORT w węzłach dla tego kodu przechowuje przesunięcie podzielone przez 8. W przypadku kodów operacji, które pobierają długie przesunięcie (512K <= offset < 4 GB), ostatnie dwa węzły USHORT dla tego kodu przechowują przesunięcie (w formacie little-endian).
 
-W przypadku kodów `UWOP_SAVE_XMM128` i `UWOP_SAVE_XMM128_FAR`przesunięcie jest zawsze wielokrotnością 16, ponieważ wszystkie 128-bitowe operacje XMM muszą odbywać się w pamięci podręcznej 16-bajtowej. W związku z tym, współczynnik skalowania 16 jest `UWOP_SAVE_XMM128`używany dla, co pozwala na przesunięcie mniejsze niż 1M.
+W przypadku kodów `UWOP_SAVE_XMM128` i `UWOP_SAVE_XMM128_FAR` przesunięcie jest zawsze wielokrotnością 16, ponieważ wszystkie 128-BITOWE operacje XMM muszą odbywać się w pamięci podręcznej 16-bajtowej. W związku z tym, współczynnik skalowania 16 jest używany dla `UWOP_SAVE_XMM128` , co pozwala na przesunięcie mniejsze niż 1M.
 
 Kod operacji unwindy jest jedną z następujących wartości:
 
 - `UWOP_PUSH_NONVOL`(0) 1 węzeł
 
-  Wypchnij nietrwały rejestr liczb całkowitych, co zmniejsza żądanie RSP przez 8. Informacje o operacji są numerem rejestru. Ze względu na ograniczenia dotyczące epilogs `UWOP_PUSH_NONVOL` , kody unwind muszą znajdować się najpierw w prologu i odpowiadające mu, ostatnio w tablicy kodu unwind. To względne porządkowanie ma zastosowanie do wszystkich innych kodów `UWOP_PUSH_MACHFRAME`operacji unwind z wyjątkiem.
+  Wypchnij nietrwały rejestr liczb całkowitych, co zmniejsza żądanie RSP przez 8. Informacje o operacji są numerem rejestru. Ze względu na ograniczenia dotyczące epilogs, `UWOP_PUSH_NONVOL` kody unwind muszą znajdować się najpierw w prologu i odpowiadające mu, ostatnio w tablicy kodu unwind. To względne porządkowanie ma zastosowanie do wszystkich innych kodów operacji unwind z wyjątkiem `UWOP_PUSH_MACHFRAME` .
 
 - `UWOP_ALLOC_LARGE`(1) 2 lub 3 węzły
 
@@ -146,7 +146,7 @@ Kod operacji unwindy jest jedną z następujących wartości:
 
 - `UWOP_ALLOC_SMALL`(2) 1 węzeł
 
-  Przydziel obszar o małym rozmiarze na stosie. Rozmiar alokacji to pole \* informacji o operacji 8 + 8, które umożliwia przydzielanie od 8 do 128 bajtów.
+  Przydziel obszar o małym rozmiarze na stosie. Rozmiar alokacji to pole informacji o operacji \* 8 + 8, które umożliwia przydzielanie od 8 do 128 bajtów.
 
   Kod unwind dla alokacji stosu powinien zawsze używać najkrótszego możliwego kodowania:
 
@@ -215,7 +215,7 @@ Kod operacji unwindy jest jedną z następujących wartości:
 
   1. Kod błędu wypychania (Jeśli informacja o op jest równa 1)
 
-  Symulowana `UWOP_PUSH_MACHFRAME` operacja zmniejsza żądanie RSP o 40 (informacja o op równa 0) lub 48 (informacja o op jest równa 1).
+  Symulowana `UWOP_PUSH_MACHFRAME` operacja zmniejsza żądanie rsp o 40 (informacja o op równa 0) lub 48 (informacja o op jest równa 1).
 
 #### <a name="operation-info"></a>Informacje o operacji
 
@@ -235,7 +235,7 @@ Znaczenie informacji o operacji BITS zależy od kodu operacji. Aby zakodować re
 
 ### <a name="chained-unwind-info-structures"></a>Struktury informacji z łańcucha operacji unwind
 
-Jeśli flaga UNW_FLAG_CHAININFO jest ustawiona, to struktura informacji o elemencie unwind jest pomocniczą, a pole udostępniony program obsługi wyjątków/połączone z informacjami zawiera podstawowe informacje o rozwinięcia. Ten przykładowy kod pobiera podstawowe informacje o rozwinięcia, przy `unwindInfo` założeniu, że jest to struktura, która ma ustawioną flagę UNW_FLAG_CHAININFO.
+Jeśli flaga UNW_FLAG_CHAININFO jest ustawiona, to struktura informacji o elemencie unwind jest pomocniczą, a pole udostępniony program obsługi wyjątków/połączone z informacjami zawiera podstawowe informacje o rozwinięcia. Ten przykładowy kod pobiera podstawowe informacje o rozwinięcia, przy założeniu, że `unwindInfo` jest to struktura, która ma ustawioną flagę UNW_FLAG_CHAININFO.
 
 ```cpp
 PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode[( unwindInfo->CountOfCodes + 1 ) & ~1]);
@@ -305,7 +305,7 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
 ```
 
-**ControlPc** jest wartością protokołu RIP w tej funkcji. Ta wartość to adres wyjątku lub adres, pod którym formant opuścił funkcję ustanawiającą. Protokół RIP służy do określenia, czy formant znajduje się w pewnej chronionej konstrukcji wewnątrz tej funkcji, na przykład `__try` blok dla `__try` / `__except` lub `__try` / `__finally`.
+**ControlPc** jest wartością protokołu RIP w tej funkcji. Ta wartość to adres wyjątku lub adres, pod którym formant opuścił funkcję ustanawiającą. Protokół RIP służy do określenia, czy formant znajduje się w pewnej chronionej konstrukcji wewnątrz tej funkcji, na przykład `__try` blok dla `__try` / **`__except`** lub `__try` / **`__finally`** .
 
 **ImageBase** to podstawowy obraz (adres ładowania) modułu zawierającego tę funkcję, który ma zostać dodany do 32-bitowych przesunięć użytych we wpisie funkcji i w informacjach o rozwinięcia, aby zarejestrować adresy względne.
 
@@ -329,7 +329,7 @@ Aby można było napisać poprawne procedury asemblera, istnieje zestaw pseudo o
 
 |Pseudo operacja|Opis|
 |-|-|
-|Ramka \[procedury:*ehandler*]|Powoduje, że MASM wygenerował wpis tabeli funkcji w. pdata i informacje o rozwinięcia w. xdata dla zachowania funkcji unwind strukturalnych obsługującego wyjątek strukturalny.  Jeśli *ehandler* jest obecny, ten proces jest wprowadzany w. xdata jako program obsługi specyficzny dla języka.<br /><br /> Gdy atrybut FRAME jest używany, musi następować po nim. ENDPROLOG.  Jeśli funkcja jest funkcją liścia (zgodnie z definicją w [typach funkcji](../build/stack-usage.md#function-types)), atrybut ramki jest zbędny, co jest pozostałą częścią tych pseudo operacji.|
+|Ramka procedury \[ :*ehandler*]|Powoduje, że MASM wygenerował wpis tabeli funkcji w. pdata i informacje o rozwinięcia w. xdata dla zachowania funkcji unwind strukturalnych obsługującego wyjątek strukturalny.  Jeśli *ehandler* jest obecny, ten proces jest wprowadzany w. xdata jako program obsługi specyficzny dla języka.<br /><br /> Gdy atrybut FRAME jest używany, musi następować po nim. ENDPROLOG.  Jeśli funkcja jest funkcją liścia (zgodnie z definicją w [typach funkcji](../build/stack-usage.md#function-types)), atrybut ramki jest zbędny, co jest pozostałą częścią tych pseudo operacji.|
 |. *Rejestr* PUSHREG|Generuje UWOP_PUSH_NONVOL wpis kodu unwind dla określonego numeru rejestru przy użyciu bieżącego przesunięcia w prologu.<br /><br /> Używać go tylko z rejestrami nietrwałych liczb całkowitych.  W przypadku wypchnięcia rejestrów nietrwałych należy użyć. ALLOCSTACK 8 zamiast tego|
 |. SETFRAME — *rejestracja*, *przesunięcie*|Wypełnia pole rejestr ramki i przesunięcia w informacjach o rozwinięcia przy użyciu określonego rejestru i przesunięcia. Przesunięcie musi być wielokrotnością 16 i mniejszą lub równą 240. Ta dyrektywa generuje również UWOP_SET_FPREG wpis kodu unwind dla określonego rejestru przy użyciu bieżącego przesunięcia prologu.|
 |. *Rozmiar* ALLOCSTACK|Generuje UWOP_ALLOC_SMALL lub UWOP_ALLOC_LARGE o określonym rozmiarze dla bieżącego przesunięcia w prologu.<br /><br /> Operand *rozmiaru* musi być wielokrotnością liczby 8.|
@@ -395,12 +395,12 @@ Aby uprościć korzystanie z [nieprzetworzonych pseudo operacji](#raw-pseudo-ope
 
 |Makro|Opis|
 |-|-|
-|alloc_stack (n)|Przypisuje ramkę stosu o n bajtach ( `sub rsp, n`za pomocą) i emituje odpowiednie informacje dotyczące rozwinięcia (. ALLOCSTACK n)|
+|alloc_stack (n)|Przypisuje ramkę stosu o n bajtach (za pomocą `sub rsp, n` ) i emituje odpowiednie informacje dotyczące rozwinięcia (. ALLOCSTACK n)|
 |save_reg *reg*, *Loc*|Zapisuje nietrwały rejestr *rejestru na stosie w witrynie* RSP offset *Loc*i emituje odpowiednie informacje o rozwinięcia. (. SAVEREG reg, Loc)|
 |push_reg *reg*|Wypchnij nietrwały rejestr *rejestru na* stosie i emituje odpowiednie informacje o rozwinięcia. (. pushreg reg)|
 |rex_push_reg *reg*|Zapisuje nietrwały rejestr na stosie przy użyciu wypychania 2-bajtowego i emituje odpowiednie informacje o rozwinięcia (. pushreg reg).  Użyj tego makra, jeśli wypychanie jest pierwszą instrukcją w funkcji, aby upewnić się, że funkcja jest w pełni funkcjonalna.|
 |save_xmm128 *reg*, *Loc*|Zapisuje element *reg* unvolatile XMM Register na stosie w witrynie RSP offset *Loc*i emituje odpowiednie informacje dotyczące operacji unwind (. SAVEXMM128 reg, Loc)|
-|set_frame *reg*, *przesunięcie*|Ustawia rejestr ramek *reg* w taki sposób, aby był to żądanie rsp + `mov` *offset* (przy `lea`użyciu lub) i emituje odpowiednie informacje o rozwinięcia (. set_frame reg, offset)|
+|set_frame *reg*, *przesunięcie*|Ustawia rejestr ramek *reg* w taki sposób, aby był to żądanie rsp + *offset* (przy użyciu `mov` lub `lea` ) i emituje odpowiednie informacje o rozwinięcia (. set_frame reg, offset)|
 |push_eflags|Wypchnięcie EFLAGS z `pushfq` instrukcją i emituje odpowiednie informacje o rozwinięcia (. alloc_stack 8)|
 
 Oto przykładowa funkcja prologu z prawidłowym użyciem makr:
@@ -498,6 +498,6 @@ typedef struct _RUNTIME_FUNCTION {
     ((PVOID)((PULONG)GetLanguageSpecificData(info) + 1)
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwencje kodowania x64](../build/x64-software-conventions.md)

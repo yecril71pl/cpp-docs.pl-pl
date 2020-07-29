@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-ms.openlocfilehash: e29812563ef1d4d7f6612ea2516f2f6327e90e1b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: eaac568387138450577ead23f1470c37ad300335
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760442"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225426"
 ---
 # <a name="compiler-error-c2707"></a>Błąd kompilatora C2707
 
@@ -19,11 +19,11 @@ ms.locfileid: "74760442"
 
 Elementy wewnętrzne obsługi wyjątków strukturalnych są nieprawidłowe w niektórych kontekstach:
 
-- `_exception_code()` poza filtrem wyjątków lub blokiem `__except`
+- `_exception_code()`poza filtrem lub **`__except`** blokiem wyjątków
 
-- `_exception_info()` poza filtrem wyjątków
+- `_exception_info()`poza filtrem wyjątków
 
-- `_abnormal_termination()` poza blokiem `__finally`
+- `_abnormal_termination()`poza **`__finally`** blokiem
 
 Aby rozwiązać ten problem, upewnij się, że wewnętrzne elementy obsługi wyjątków są umieszczane w odpowiednim kontekście.
 

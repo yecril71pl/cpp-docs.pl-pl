@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: d3aaedf616bf50e18e21b465727f10190fd127b2
-ms.sourcegitcommit: ac5e5edd3e4f31d5dc7df48316cb7649b3f4a41f
+ms.openlocfilehash: 771a2973e0254194d99ddfd46ca7df7d6cc8e5a4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872390"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224828"
 ---
 # <a name="locale-class"></a>locale — Klasa
 
@@ -161,7 +161,7 @@ Reguły formatowania liczb dla kolejnych wstawek `cout` pozostają takie same ja
 
 |||
 |-|-|
-|[motyw](#classic)|Funkcja statycznej składowej zwraca obiekt ustawień regionalnych, który reprezentuje klasyczne ustawienia regionalne C.|
+|[wdrożenie klasyczne](#classic)|Funkcja statycznej składowej zwraca obiekt ustawień regionalnych, który reprezentuje klasyczne ustawienia regionalne C.|
 |[globalne](#global)|Resetuje domyślne ustawienia lokalne dla programu.|
 
 ### <a name="operators"></a>Operatory
@@ -204,7 +204,7 @@ static const int none = 0;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla typu **int** , który może reprezentować grupę odrębnych elementów typu maski bitowej do ustawień regionalnych klasy lub może służyć do reprezentowania dowolnej z odpowiednich kategorii języka C. Elementy to:
+Typ jest synonim dla **`int`** typu, który może reprezentować grupę odrębnych elementów typu maski bitowej do ustawień regionalnych klasy lub może służyć do reprezentowania dowolnej z odpowiednich kategorii języka C. Elementy to:
 
 - `collate`, odpowiadające kategorii C LC_COLLATE
 
@@ -574,7 +574,7 @@ Jedno z wartości lokalnych do przetestowania pod kątem nierówności.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość logiczna **prawda** , jeśli ustawienia regionalne nie są kopiami tych samych ustawień regionalnych. Jest to **wartość FAŁSZ** , jeśli ustawienia regionalne są kopiami tych samych ustawień regionalnych.
+Wartość logiczna, która jest **`true`** Jeśli ustawienia regionalne nie są kopiami tych samych ustawień regionalnych. Jest to możliwe, **`false`** Jeśli ustawienia regionalne są kopiami tych samych ustawień regionalnych.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -641,7 +641,7 @@ Drugi ciąg do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-- `true`Jeśli *po lewej stronie* jest lexicographically mniejsze niż *prawo*, w przeciwnym razie `false` .
+- **`true`** Jeśli *po lewej stronie* jest lexicographically mniejsze niż *prawo*, w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -701,7 +701,7 @@ Jeden z ustawień regionalnych, które mają być testowane pod kątem równośc
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość logiczna **prawda** , jeśli ustawienia regionalne są kopiami tych samych ustawień regionalnych. Ma **wartość FAŁSZ** , jeśli ustawienia regionalne nie są kopiami tych samych ustawień regionalnych.
+Wartość logiczna, która jest, **`true`** Jeśli ustawienia regionalne są kopiami tych samych ustawień regionalnych. Jest to możliwe **`false`** , jeśli wartości lokalne nie są kopiami tych samych ustawień regionalnych.
 
 ### <a name="remarks"></a>Uwagi
 

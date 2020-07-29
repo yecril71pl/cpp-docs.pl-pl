@@ -7,18 +7,18 @@ helpviewer_keywords:
 - __asm keyword [C++], data members
 - structure types in __asm blocks
 ms.assetid: e99f5a28-0381-4090-8ece-6af8f2436a49
-ms.openlocfilehash: b4341f87226118906749dcdb18b9227e68be6a23
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8fbe855c2f5de96d81e6c8a27c4bfcee0864f12c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318091"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193045"
 ---
 # <a name="accessing-c-or-c-data-in-__asm-blocks"></a>Uzyskiwanie dostępu do danych C lub C++ w blokach __asm
 
 **Specyficzne dla firmy Microsoft**
 
-Dużą wygodą zestawu wbudowanego jest możliwość odwoływania się do zmiennych C lub C++ według nazwy. Blok `__asm` może odwoływać się do dowolnych symboli, w tym nazw zmiennych, które znajdują się w zakresie, w którym pojawia się blok. Na przykład, jeśli `var` zmienna C jest w zakresie, instrukcja
+Doskonałym zestawem wbudowanym jest możliwość odwoływania się do zmiennych C lub C++ według nazwy. **`__asm`** Blok może odwoływać się do dowolnych symboli, w tym nazw zmiennych, które znajdują się w zakresie, w którym znajduje się blok. Na przykład jeśli zmienna C `var` znajduje się w zakresie, instrukcja
 
 ```cpp
 __asm mov eax, var
@@ -26,16 +26,16 @@ __asm mov eax, var
 
 przechowuje wartość `var` w EAX.
 
-Jeśli klasa, struktura lub element członkowski unii `__asm` ma unikatową nazwę, blok może odwoływać się `typedef` do niego przy użyciu tylko nazwy elementu członkowskiego, bez określania zmiennej lub nazwy przed operatorem kropki (**.**). Jeśli jednak nazwa elementu członkowskiego nie jest unikatowa, należy umieścić zmienną lub `typedef` nazwę bezpośrednio przed operatorem okresu. Na przykład typy struktury w `same_name` poniższym przykładowym udziale jako ich nazwa elementu członkowskiego:.
+Jeśli klasa, struktura lub członek Unii ma unikatową nazwę, **`__asm`** blok może odwoływać się do niego tylko przy użyciu nazwy elementu członkowskiego bez określania zmiennej lub **`typedef`** nazwy przed operatorem kropki (**.**). Jeśli nazwa elementu członkowskiego nie jest unikatowa, należy jednak umieścić zmienną lub **`typedef`** nazwę bezpośrednio przed operatorem kropki. Na przykład typy struktury w następującym przykładowym udziale `same_name` jako nazwa elementu członkowskiego:.
 
-W przypadku deklarowania zmiennych z typami
+Jeśli deklarujesz zmienne z typami
 
 ```cpp
 struct first_type hal;
 struct second_type oat;
 ```
 
-wszystkie odwołania do `same_name` elementu członkowskiego musi `same_name` używać nazwy zmiennej, ponieważ nie jest unikatowy. Ale element `weasel` członkowski ma unikatową nazwę, więc można odwoływać się do niego przy użyciu tylko jego nazwę członka:
+wszystkie odwołania do elementu członkowskiego `same_name` muszą używać nazwy zmiennej, ponieważ `same_name` nie są unikatowe. Ale element członkowski `weasel` ma unikatową nazwę, więc można się do niego odwoływać tylko przy użyciu nazwy elementu członkowskiego:
 
 ```cpp
 // InlineAssembler_Accessing_C_asm_Blocks.cpp
@@ -68,12 +68,12 @@ int main()
 }
 ```
 
-Należy zauważyć, że pominięcie nazwy zmiennej jest jedynie wygodą kodowania. Te same instrukcje zestawu są generowane niezależnie od tego, czy nazwa zmiennej jest obecna.
+Należy zauważyć, że pominięcie nazwy zmiennej jest tylko wygodą kodowania. Te same instrukcje dotyczące zestawu są generowane niezależnie od tego, czy nazwa zmiennej jest obecna.
 
-Można uzyskać dostęp do elementów członkowskich danych w języku C++ bez względu na ograniczenia dostępu. Jednak nie można wywołać funkcji członkowskich.
+Dostęp do danych można uzyskać w języku C++ bez względu na ograniczenia dostępu. Nie można jednak wywołać funkcji Członkowskich.
 
-**ZAKOŃCZ Specyficzne dla firmy Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Korzystanie z C lub C++ w blokach __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>
+[Używanie C lub C++ w blokach __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

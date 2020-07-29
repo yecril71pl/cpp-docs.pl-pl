@@ -1,6 +1,6 @@
 ---
-title: Funkcja MatchEventInMemberFunction
-description: Odwołanie do funkcji SDK MatchEventInMemberFunction aplikacji C++ Build Insights.
+title: MatchEventInMemberFunction
+description: Dokumentacja funkcji MatchEventInMemberFunction zestawu SDK usługi Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 522630da16e3f4a1294316d88140f4bc25dca2c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d3fdc015b0744cb5d0f98a1c9025343b93489ed9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323898"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224152"
 ---
-# <a name="matcheventinmemberfunction"></a>Funkcja MatchEventInMemberFunction
+# <a name="matcheventinmemberfunction"></a>MatchEventInMemberFunction
 
 ::: moniker range="<=vs-2015"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkcja `MatchEventInMemberFunction` jest używana do dopasowania zdarzenia do typu opisanego przez pierwszy parametr funkcji elementu członkowskiego. Dopasowane zdarzenie jest przekazywane do funkcji elementu członkowskiego w celu dalszego przetwarzania.
+`MatchEventInMemberFunction`Funkcja jest używana do dopasowania zdarzenia do typu opisanego przez pierwszy parametr funkcji członkowskiej. Dopasowane zdarzenie jest przekazywane do funkcji składowej w celu dalszej obróbki.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,40 +45,40 @@ bool MatchEventInMemberFunction(
 
 ### <a name="parameters"></a>Parametry
 
-*TInterface (Wzlot)*\
-Typ, który zawiera funkcję elementu członkowskiego.
+*TInterface*\
+Typ, który zawiera funkcję członkowską.
 
-*TReturn (Powrót)*\
-Zwracany typ funkcji elementu członkowskiego.
+*TReturn*\
+Zwracany typ funkcji składowej.
 
-*TEvent ( TEvent )*\
+*TEvent*\
 Typ zdarzenia do dopasowania.
 
 *TExtraParams*\
-Typy dodatkowych parametrów zaakceptowanych przez funkcję elementu członkowskiego wraz z typem zdarzenia do dopasowania.
+Typy dodatkowych parametrów akceptowane przez funkcję członkowską wraz z typem zdarzenia do dopasowania.
 
 *TExtraArgs*\
-Typy dodatkowych argumentów, które `MatchEventInMemberFunction`zostały przekazane do .
+Typy dodatkowych argumentów, które zostały przekazane do `MatchEventInMemberFunction` .
 
-*Zdarzenie*\
-Zdarzenie zgodne z typem zdarzenia opisanym przez *TEvent*.
+*wydarzen*\
+Zdarzenie do dopasowania względem typu zdarzenia opisanego przez *TEvent*.
 
-*objectPtr (polecenie objectPtr)*\
-Wskaźnik do obiektu, na którym *element memberFunc* zostanie wywołany.
+*objectPtr*\
+Wskaźnik do obiektu, w którym wywołano *memberFunc* .
 
-*element członkowskiFunc*\
-Funkcja elementu członkowskiego, która opisuje typ zdarzenia do dopasowania.
+*memberFunc*\
+Funkcja członkowska opisująca typ zdarzenia do dopasowania.
 
-*extraArgs (extraArgs)*\
-Argumenty, które uzyskać doskonałe przekazywane do *elementu memberFunc* wraz z parametrem typu zdarzenia.
+*extraArgs*\
+Argumenty, które uzyskują doskonałe przesłanie dalej do *memberFunc* wraz z parametrem typu zdarzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość **bool,** która jest **true,** jeśli dopasowanie zakończyło się pomyślnie lub **false** w inny sposób.
+**`bool`** Wartość, która jest w **`true`** przypadku, gdy dopasowanie zakończyło się powodzeniem lub **`false`** w inny sposób.
 
 ## <a name="remarks"></a>Uwagi
 
-Typ zdarzenia, który ma być używany dla parametru *TEvent,* można wybrać z listy *klas przechwytywania*. Aby uzyskać listę zdarzeń i klasy przechwytywania, których można użyć do ich dopasowania, zobacz [tabelę zdarzeń](../event-table.md).
+Typ zdarzenia do użycia dla parametru *TEvent* można wybrać z listy *klas przechwytywania*. Aby zapoznać się z listą zdarzeń i klas przechwytywania, których można użyć do dopasowania, zobacz [tabela zdarzeń](../event-table.md).
 
 ## <a name="example"></a>Przykład
 

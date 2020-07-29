@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: d282d3ea54528b422509f4259e2d9a191f88e091
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8c1da5d45acd68838174d02305a246ba2d2c169b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453784"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224633"
 ---
 # <a name="stack-class"></a>stack — Klasa
 
@@ -44,15 +44,15 @@ class stack
 Typ danych elementu, który ma być przechowywany w stosie.
 
 *Wbudowane*\
-Typ źródłowego kontenera używany do implementowania stosu. Wartość domyślna to `deque`typ klasy  *\<>* .
+Typ źródłowego kontenera używany do implementowania stosu. Wartość domyślna to Klasa `deque` *\<Type>* .
 
 ## <a name="remarks"></a>Uwagi
 
-Elementy klasy `Type` ustalone w pierwszym parametrze szablonu obiektu stosu są synonimami z [value_type](#value_type) i muszą być zgodne z typem elementu w klasie `Container` bazowego kontenera określonym przez drugi szablon konstruktora. `Type` Należy je przypisać, aby można było kopiować obiekty tego typu i przypisywać wartości do zmiennych tego typu.
+Elementy klasy `Type` ustalone w pierwszym parametrze szablonu obiektu stosu są synonimem [value_type](#value_type) i muszą być zgodne z typem elementu w klasie bazowego kontenera `Container` określonym przez drugi parametr szablonu. `Type`Należy je przypisać, aby można było kopiować obiekty tego typu i przypisywać wartości do zmiennych tego typu.
 
-Odpowiednie źródłowe klasy kontenerów dla stosu obejmują [deque](../standard-library/deque-class.md), [klasy list](../standard-library/list-class.md)i [klasy Vector](../standard-library/vector-class.md)albo dowolnego kontenera sekwencji obsługującego operacje `back`, `push_back`i `pop_back`. Bazowa Klasa kontenera jest hermetyzowana w ramach adaptera kontenerów, która uwidacznia tylko ograniczony zestaw funkcji Członkowskich kontenera sekwencji jako interfejs publiczny.
+Odpowiednie źródłowe klasy kontenerów dla stosu obejmują [deque](../standard-library/deque-class.md), [klasy list](../standard-library/list-class.md)i [klasy Vector](../standard-library/vector-class.md)albo dowolnego kontenera sekwencji obsługującego operacje `back` , `push_back` i `pop_back` . Bazowa Klasa kontenera jest hermetyzowana w ramach adaptera kontenerów, która uwidacznia tylko ograniczony zestaw funkcji Członkowskich kontenera sekwencji jako interfejs publiczny.
 
-Obiekty stosu są równe porównywalnie, jeśli i tylko wtedy, gdy elementy `Type` klasy są porównywalne, i są mniejsze niż porównywalne, jeśli elementy klasy `Type` są mniejsze niż porównywalne.
+Obiekty stosu są równe porównywalnie, jeśli i tylko wtedy, gdy elementy klasy `Type` są porównywalne, i są mniejsze niż porównywalne, jeśli elementy klasy `Type` są mniejsze niż porównywalne.
 
 - Klasa stosu obsługuje strukturę danych Last-in, First-Out (LIFO). Dobrym sposobem na zachowywać się to stos płyt. Elementy (płytki) mogą być wstawiane, badane lub usuwane tylko z góry stosu, który jest ostatnim elementem na końcu kontenera podstawowego. Ograniczenie dostępu do elementu Top jest przyczyną użycia klasy stosu.
 
@@ -62,31 +62,31 @@ Obiekty stosu są równe porównywalnie, jeśli i tylko wtedy, gdy elementy `Typ
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
 |||
 |-|-|
-|[stack](#stack)|Tworzy element `stack` a, który jest pusty lub jest kopią podstawowego obiektu kontenera.|
+|[stosu](#stack)|Tworzy element a `stack` , który jest pusty lub jest kopią podstawowego obiektu kontenera.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
-|[container_type](#container_type)|Typ, który dostarcza kontener podstawowy, który ma zostać dostosowany przez `stack`.|
-|[size_type](#size_type)|Typ liczby całkowitej bez znaku, który może reprezentować liczbę elementów `stack`w.|
-|[value_type](#value_type)|Typ, który reprezentuje typ obiektu przechowywanego jako element w `stack`.|
+|[container_type](#container_type)|Typ, który dostarcza kontener podstawowy, który ma zostać dostosowany przez `stack` .|
+|[size_type](#size_type)|Typ liczby całkowitej bez znaku, który może reprezentować liczbę elementów w `stack` .|
+|[value_type](#value_type)|Typ, który reprezentuje typ obiektu przechowywanego jako element w `stack` .|
 
 ### <a name="functions"></a>Funkcje
 
 |||
 |-|-|
-|[empty](#empty)|Testuje, `stack` czy jest pusty.|
-|[skakując](#pop)|Usuwa element z góry `stack`.|
-|[push](#push)|Dodaje element w górnej części `stack`.|
-|[zmienia](#size)|Zwraca liczbę elementów w `stack`.|
-|[Do góry](#top)|Zwraca odwołanie do elementu w górnej części `stack`.|
+|[puste](#empty)|Testuje, czy `stack` jest pusty.|
+|[skakując](#pop)|Usuwa element z góry `stack` .|
+|[push](#push)|Dodaje element w górnej części `stack` .|
+|[zmienia](#size)|Zwraca liczbę elementów w `stack` .|
+|[top (pierwsze)](#top)|Zwraca odwołanie do elementu w górnej części `stack` .|
 
-## <a name="container_type"></a>container_type
+## <a name="container_type"></a><a name="container_type"></a>container_type
 
 Typ, który dostarcza kontener bazowy, który ma zostać dostosowany.
 
@@ -96,15 +96,15 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru `Container`szablonu. Wszystkie trzy C++ klasy kontenerów sekwencji biblioteki standardowej — Klasa Vector, Klasa list i Klasa domyślna deque — spełniają wymagania, które mają być używane jako kontener podstawowy dla obiektu stosu. Typy zdefiniowane przez użytkownika spełniające te wymagania mogą być również używane.
+Typ jest synonimem dla parametru szablonu `Container` . Wszystkie trzy klasy kontenerów sekwencji standardowej biblioteki C++ — Klasa Vector, Klasa list i Klasa domyślna deque — spełniają wymagania, które mają być używane jako kontener podstawowy dla obiektu stosu. Typy zdefiniowane przez użytkownika spełniające te wymagania mogą być również używane.
 
-Aby uzyskać więcej informacji `Container`na temat, zobacz sekcję Uwagi w temacie [klasy stosu](../standard-library/stack-class.md) .
+Aby uzyskać więcej informacji na temat `Container` , zobacz sekcję Uwagi w temacie [klasy stosu](../standard-library/stack-class.md) .
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem dla [stosu:: Stack](#stack) na przykład sposobu deklarowania i `container_type`używania.
+Zapoznaj się z przykładem dla [stosu:: Stack](#stack) na przykład sposobu deklarowania i używania `container_type` .
 
-## <a name="empty"></a>ciągiem
+## <a name="empty"></a><a name="empty"></a>ciągiem
 
 Testuje, czy stos jest pusty.
 
@@ -114,7 +114,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli stos jest pusty. **wartość false** , jeśli stos nie jest pusty.
+**`true`** Jeśli stos jest pusty; **`false`** Jeśli stos nie jest pusty.
 
 ### <a name="example"></a>Przykład
 
@@ -149,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a>skakując
+## <a name="pop"></a><a name="pop"></a>skakując
 
 Usuwa element z góry stosu.
 
@@ -205,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a>wydajności
+## <a name="push"></a><a name="push"></a>wydajności
 
 Dodaje element na górze stosu.
 
@@ -254,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a>zmienia
+## <a name="size"></a><a name="size"></a>zmienia
 
 Zwraca liczbę elementów w stosie.
 
@@ -295,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a>size_type
 
 Typ liczby całkowitej bez znaku, który może reprezentować liczbę elementów w stosie.
 
@@ -309,9 +309,9 @@ Typ jest synonimem dla `size_type` kontenera podstawowego dostosowany przez stos
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem dotyczącym [rozmiaru](#size) , aby zapoznać się z `size_type`przykładem sposobu deklarowania i używania.
+Zapoznaj się z przykładem dotyczącym [rozmiaru](#size) , aby zapoznać się z przykładem sposobu deklarowania i używania `size_type` .
 
-## <a name="stack"></a>stosu
+## <a name="stack"></a><a name="stack"></a>stosu
 
 Konstruuje stos, który jest pusty lub jest kopią bazowej klasy kontenera.
 
@@ -365,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a>Do góry
+## <a name="top"></a><a name="top"></a>Do góry
 
 Zwraca odwołanie do elementu w górnej części stosu.
 
@@ -383,7 +383,7 @@ Odwołanie do ostatniego elementu w kontenerze w górnej części stosu.
 
 Stos nie może być pusty, aby można było zastosować funkcję członkowską. Górna część stosu jest pozycją zajmowaną przez ostatnio dodany element i jest ostatnim elementem na końcu kontenera.
 
-Jeśli wartość `top` zwracana jest przypisana `const_reference`do, obiekt stosu nie może być modyfikowany. Jeśli wartość `top` zwracana jest przypisana `reference`do, obiekt stosu może być modyfikowany.
+Jeśli wartość zwracana `top` jest przypisana do `const_reference` , obiekt stosu nie może być modyfikowany. Jeśli wartość zwracana `top` jest przypisana do `reference` , obiekt stosu może być modyfikowany.
 
 ### <a name="example"></a>Przykład
 
@@ -416,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 Typ, który reprezentuje typ obiektu przechowywanego jako element w stosie.
 
@@ -459,5 +459,5 @@ The element at the top of the stack is 69.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

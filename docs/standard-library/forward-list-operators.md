@@ -1,5 +1,5 @@
 ---
-title: '&lt;forward_list operatory&gt;'
+title: '&lt;&gt;operatory forward_list'
 ms.date: 11/04/2016
 f1_keywords:
 - forward_list/std::operator!=
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (forward_list)
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
-ms.openlocfilehash: 1ddfb56c7ff68ec10c7bb56af3495e4042acb83c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: beb02a8353c6c5187dd0fa0171518c753eee7868
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421794"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193344"
 ---
-# <a name="ltforward_listgt-operators"></a>&lt;forward_list operatory&gt;
+# <a name="ltforward_listgt-operators"></a>&lt;&gt;operatory forward_list
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 Testuje, czy obiekt listy do przodu po lewej stronie operatora jest równy obiektowi listy do przodu po prawej stronie.
 
@@ -37,17 +37,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `forward_list`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `forward_list`.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja szablonu przeciąża `operator==`, aby porównać dwa obiekty `forward_list`szablonu klasy. Funkcja zwraca `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
+Ta funkcja szablonu przeciąża `operator==` , aby porównać dwa obiekty szablonu klasy `forward_list` . Funkcja zwraca wartość `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())` .
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 Testuje, czy obiekt listy do przodu po lewej stronie operatora nie jest równy obiektowi listy do przodu po prawej stronie.
 
@@ -59,21 +59,21 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `forward_list`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `forward_list`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli listy nie są równe; **wartość false** , jeśli listy są równe.
+**`true`** Jeśli listy nie są równe; **`false`** Jeśli listy są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja szablonu zwraca `!(left == right)`.
+Ta funkcja szablonu zwraca wartość `!(left == right)` .
 
-## <a name="op_lt"></a>&lt; operatora
+## <a name="operatorlt"></a><a name="op_lt"></a>zakład&lt;
 
 Testuje, czy obiekt listy do przodu po lewej stronie operatora jest mniejszy niż obiekt listy do przodu po prawej stronie.
 
@@ -85,21 +85,21 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `forward_list`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `forward_list`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli lista po lewej stronie operatora jest mniejsza niż, ale nie równa liście po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli lista po lewej stronie operatora jest mniejsza niż, ale nie równa liście po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja szablonu przeciąża `operator<`, aby porównać dwa obiekty `forward_list`szablonu klasy. Funkcja zwraca `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
+Ta funkcja szablonu przeciąża `operator<` , aby porównać dwa obiekty szablonu klasy `forward_list` . Funkcja zwraca wartość `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())` .
 
-## <a name="op_lt_eq"></a>&lt;operatora =
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>zakład&lt;=
 
 Testuje, czy obiekt listy do przodu po lewej stronie operatora jest mniejszy niż lub równy obiektowi listy do przodu po prawej stronie.
 
@@ -111,21 +111,21 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `forward_list`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `forward_list`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli lista po lewej stronie operatora jest mniejsza lub równa liście po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli lista po lewej stronie operatora jest mniejsza lub równa liście po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja szablonu zwraca `!(right < left)`.
+Ta funkcja szablonu zwraca wartość `!(right < left)` .
 
-## <a name="op_gt"></a>&gt; operatora
+## <a name="operatorgt"></a><a name="op_gt"></a>zakład&gt;
 
 Testuje, czy obiekt listy do przodu po lewej stronie operatora jest większy niż obiekt listy do przodu po prawej stronie.
 
@@ -137,21 +137,21 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `forward_list`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `forward_list`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli lista po lewej stronie operatora jest większa niż lista po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli lista po lewej stronie operatora jest większa niż lista po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja szablonu zwraca `right < left`.
+Ta funkcja szablonu zwraca wartość `right < left` .
 
-## <a name="op_gt_eq"></a>&gt;operatora =
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>zakład&gt;=
 
 Testuje, czy obiekt listy do przodu po lewej stronie operatora jest większy niż lub równy obiektowi listy do przodu po prawej stronie.
 
@@ -163,16 +163,16 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `forward_list`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `forward_list`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli lista przesyłania dalej po lewej stronie operatora jest większa lub równa liście do przodu po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli lista przesyłania dalej po lewej stronie operatora jest większa lub równa liście do przodu po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca `!(left < right)`.
+Funkcja szablonu zwraca wartość `!(left < right)` .

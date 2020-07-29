@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 136320ba3be36ec20fc08e0d83b1ce3274ed08ff
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: ced6046b93a8d5140118e1e9de848df13a8c29c4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737564"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224880"
 ---
 # <a name="error_category-class"></a>error_category — Klasa
 
@@ -113,7 +113,7 @@ Obiekt [error_code](../standard-library/error-code-class.md) do porównania.
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli Kategoria i wartość są równe; w przeciwnym razie **false**.
+**`true`** Jeśli Kategoria i wartość są równe; w przeciwnym razie **`false`** .
 
 #### <a name="remarks"></a>Uwagi
 
@@ -179,7 +179,7 @@ Obiekt, który ma być testowany pod kątem równości.
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli obiekty są równe; **Fałsz** , jeśli obiekty nie są równe.
+**`true`** Jeśli obiekty są równe; **`false`** Jeśli obiekty nie są równe.
 
 #### <a name="remarks"></a>Uwagi
 
@@ -200,7 +200,7 @@ Obiekt, który ma być testowany pod kątem nierówności.
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli `error_category` obiekt nie jest równy `error_category` obiektowi przekazanym w *prawej*; w przeciwnym razie **false**.
+**`true`** Jeśli `error_category` obiekt nie jest równy `error_category` obiektowi przekazanym w *prawej*; w przeciwnym razie **`false`** .
 
 #### <a name="remarks"></a>Uwagi
 
@@ -221,7 +221,7 @@ bool operator<(const error_category& right) const;
 
 #### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli `error_category` obiekt jest mniejszy niż `error_category` obiekt przeszedł do porównania; W przeciwnym razie **false**.
+**`true`** Jeśli `error_category` obiekt jest mniejszy niż `error_category` obiekt przeszedł do porównania; W przeciwnym razie **`false`** .
 
 #### <a name="remarks"></a>Uwagi
 
@@ -243,4 +243,4 @@ typedef int value_type;
 
 #### <a name="remarks"></a>Uwagi
 
-Ta definicja typu jest synonimem dla **int**.
+Ta definicja typu jest synonimem dla **`int`** .

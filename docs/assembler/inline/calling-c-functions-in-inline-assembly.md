@@ -9,18 +9,18 @@ helpviewer_keywords:
 - inline assembly, calling functions
 - __asm keyword [C++], calling functions
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
-ms.openlocfilehash: 94bbfda3a5fd15885f3d8276d506541418a9489f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 73be1142747dc608d683e6bd847639b9df718a13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169594"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87192629"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>Wywoływanie funkcji C w asemblerze wbudowanym
 
 **Specyficzne dla firmy Microsoft**
 
-Blok `__asm` może wywoływać funkcje C, w tym procedury biblioteki języka C. Poniższy przykład wywołuje procedurę biblioteki `printf`:
+**`__asm`** Blok może wywoływać funkcje języka c, w tym procedury biblioteki języka c. Poniższy przykład wywołuje `printf` procedurę biblioteki:
 
 ```cpp
 // InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp
@@ -56,10 +56,10 @@ Ponieważ argumenty funkcji są przekazywane na stosie, po prostu wypchnij potrz
 printf( format, hello, world );
 ```
 
-przykład wypchnięcie wskaźników do `world`, `hello`i `format`w tej kolejności, a następnie wywołuje `printf`.
+przykład wypchnięcie wskaźników do `world` , `hello` , i `format` , w tej kolejności, a następnie wywołuje `printf` .
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Wbudowany asembler](../../assembler/inline/inline-assembler.md)<br/>
+[Asembler wbudowany](../../assembler/inline/inline-assembler.md)<br/>

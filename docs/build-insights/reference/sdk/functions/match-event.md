@@ -1,6 +1,6 @@
 ---
-title: MatchEvent ( MatchEvent )
-description: Odwołanie do funkcji SDK MatchEvent aplikacji C++ Build Insights.
+title: MatchEvent
+description: Dokumentacja funkcji MatchEvent zestawu SDK usługi Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 0c60653641c676716bcdd60865433773da79325f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8ec2c6bfcacf28998058dc66b5f363fbf1ea5d70
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323856"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224113"
 ---
-# <a name="matchevent"></a>MatchEvent ( MatchEvent )
+# <a name="matchevent"></a>MatchEvent
 
 ::: moniker range="<=vs-2015"
 
-C++ Kompilacja insights SDK jest zgodny z visual studio 2017 i powyżej. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolka **selektora wersji** programu Visual Studio dla tego artykułu na Visual Studio 2017 lub Visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
+Zestaw SDK usługi Build Insights jest zgodny z programem Visual Studio 2017 lub nowszym. Aby zapoznać się z dokumentacją tych wersji, ustaw kontrolkę selektora **wersji** programu Visual Studio dla tego artykułu na visual Studio 2017 lub visual Studio 2019. Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkcja `MatchEvent` jest używana do dopasowania zdarzenia do listy typów zdarzeń. Jeśli zdarzenie pasuje do typu na liście, jest przekazywane do programu obsługi do dalszego przetwarzania.
+`MatchEvent`Funkcja jest używana do dopasowania zdarzenia do listy typów zdarzeń. Jeśli zdarzenie jest zgodne z typem na liście, zostanie przekazane do procedury obsługi w celu dalszej obróbki.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,34 +43,34 @@ bool MatchEvent(
 
 ### <a name="parameters"></a>Parametry
 
-*TEvent ( TEvent )*\
-Pierwszy typ zdarzenia, który chcesz dopasować.
+*TEvent*\
+Pierwszy typ zdarzenia, który ma być zgodny.
 
-*TEvents (WYCHO.*\
+*TEvents*\
 Pozostałe typy zdarzeń, które chcesz dopasować.
 
-*TCallable (Można się do systemu)*\
-Typ, który `operator()`obsługuje . Aby uzyskać więcej informacji na temat argumentów, które są przekazywane do tego operatora, zobacz opis parametru *wywoływane.*
+*TCallable*\
+Typ, który obsługuje `operator()` . Aby uzyskać więcej informacji na temat tego, które argumenty są przekazane do tego operatora, zobacz Opis możliwego do *uzyskania parametru.*
 
 *TExtraArgs*\
-Typy dodatkowych argumentów, które `MatchEvent`zostały przekazane do .
+Typy dodatkowych argumentów, które zostały przekazane do `MatchEvent` .
 
-*Zdarzenie*\
+*wydarzen*\
 Zdarzenie, które ma być zgodne z typami zdarzeń opisanymi przez *TEvent* i *TEvents*.
 
-*Nieopłacona*\
-`MatchEvent`wywołuje *wywoływane* po pomyślnym dopasowaniu zdarzenia do dowolnego z typów zdarzeń opisanych przez *TEvent* i *TEvents*. Pierwszy argument przekazany do *wywoływania* jest r-wartość dopasowanego typu zdarzenia. Pakiet *parametrów extraArgs* jest idealnie przekierowywany w pozostałych parametrach *wywoływanych.*  
+*żądanie*\
+`MatchEvent`wywołuje *callable* wywoływanie po pomyślnym dopasowaniu zdarzenia do dowolnego z typów zdarzeń opisanych przez *TEvent* i *TEvents*. Pierwszy argument przesłany do *wartości* wywoływanej jest wartością r dla dopasowanego typu zdarzenia. Pakiet parametrów *extraArgs* jest idealnym przesłanym dalej w pozostałych parametrach *, które są wywoływane.*  
 
-*extraArgs (extraArgs)*\
-Argumenty, które są perfekcyjnie przekazywane do *wywoływania* wraz z dopasowanym typem zdarzenia.
+*extraArgs*\
+Argumenty, które uzyskują doskonałe utajnienie przekazywania *, wraz z* dopasowanym typem zdarzenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość **bool,** która **jest prawdziwa,** jeśli dopasowanie zakończyło się pomyślnie lub **false** w inny sposób.
+**`bool`** Wartość, która jest w **`true`** przypadku, gdy dopasowanie zakończyło się powodzeniem lub **`false`** w inny sposób.
 
 ## <a name="remarks"></a>Uwagi
 
-Typy zdarzeń, które mają być używane dla parametrów *TEvent* i *TEvents,* są wybierane z listy *klas przechwytywania.* Aby uzyskać listę zdarzeń i klasy przechwytywania, których można użyć do ich dopasowania, zobacz [tabelę zdarzeń](../event-table.md).
+Typy zdarzeń do użycia dla parametrów *TEvent* i *TEvents* są wybierane z listy *klas przechwytywania*. Aby zapoznać się z listą zdarzeń i klas przechwytywania, których można użyć do dopasowania, zobacz [tabela zdarzeń](../event-table.md).
 
 ## <a name="example"></a>Przykład
 

@@ -1,17 +1,17 @@
 ---
-title: wątkowość (C++ atrybut com)
+title: Threading (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.threading
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: b249eaf61266ed9964e44f6f0ad1c2f12a1b1067
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e08d25df07ad881c8843953d01d9074c815ddb85
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214503"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193071"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -28,23 +28,23 @@ Określa model wątkowości dla obiektu COM.
 *wzorów*<br/>
 Obowiązkowe Jeden z następujących modeli wątkowości:
 
-- `apartment` (wątkowość apartamentu)
+- `apartment`(wątkowość apartamentu)
 
-- `neutral` (składniki .NET Framework bez interfejsu użytkownika)
+- `neutral`(Składniki .NET Framework bez interfejsu użytkownika)
 
-- `single` (prosta wątkowość)
+- `single`(prosta wątkowość)
 
-- `free` (bezpłatna wątkowość)
+- `free`(bezpłatna wątkowość)
 
-- `both` (Apartment i Free Threading)
+- `both`(Apartment i Free Threading)
 
-Wartością domyślną jest `apartment`.
+Wartość domyślna to `apartment`.
 
 ## <a name="remarks"></a>Uwagi
 
-C++ Atrybut **Threading** nie jest wyświetlany w wygenerowanym pliku IDL, ale zostanie użyty w implementacji obiektu com.
+Atrybut **Threading** języka C++ nie jest wyświetlany w wygenerowanym pliku IDL, ale zostanie użyty w implementacji obiektu com.
 
-W projektach ATL, jeśli istnieje również atrybut [klasy coclass](coclass.md) , model wątkowości określony przez *model* jest przenoszona jako parametr szablonu do klasy [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) , wstawiany przez atrybut `coclass`.
+W projektach ATL, jeśli istnieje również atrybut [klasy coclass](coclass.md) , model wątkowości określony przez *model* jest przenoszona jako parametr szablonu do klasy [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) , wstawiany przez `coclass` atrybut.
 
 Atrybut **wątkowości** chroni również dostęp do [event_source](event-source.md).
 
@@ -58,17 +58,17 @@ Zapoznaj się z [licencjonowanym](licensed.md) przykładem użycia **wątku**.
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **Struktura**|
+|**Dotyczy**|**`class`**, **`struct`**|
 |**Powtarzalne**|Nie|
 |**Wymagane atrybuty**|**coclass**|
-|**Nieprawidłowe atrybuty**|None|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty COM](com-attributes.md)<br/>
-[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Atrybuty typedef, enum, Union i struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Obsługa wielowątkowości w przypadku starszego kodu (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
 [Neutralny apartamentach](/windows/win32/cossdk/neutral-apartments)

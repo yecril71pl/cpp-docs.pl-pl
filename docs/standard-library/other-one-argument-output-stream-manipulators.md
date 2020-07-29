@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams, one-argument manipulators
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
-ms.openlocfilehash: c9e9e7531733ac40022b477980297c80ac488221
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8fe30a0df70d84f7a8a9eafcdf22439cbe321043
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453448"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224646"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Inne manipulatory strumieni wyjściowych z jednym argumentem
 
-W poniższym przykładzie jest używany Klasa `money`, która jest typem **długim** . Manipulator dołącza ciąg "Picture" formatowania do klasy, która może być używana przez operator wstawiania przeciążonego strumienia klasy `money`. `setpic` Ciąg obrazu jest przechowywany jako zmienna statyczna w `money` klasie, a nie jako element członkowski danych klasy strumienia, więc nie trzeba tworzyć nowej klasy strumienia wyjściowego.
+Poniższy przykład używa klasy `money` , która jest **`long`** typem. `setpic`Manipulator dołącza ciąg "Picture" formatowania do klasy, która może być używana przez operator wstawiania przeciążonego strumienia klasy `money` . Ciąg obrazu jest przechowywany jako zmienna statyczna w `money` klasie, a nie jako element członkowski danych klasy strumienia, więc nie trzeba tworzyć nowej klasy strumienia wyjściowego.
 
 ## <a name="example"></a>Przykład
 
@@ -77,4 +77,4 @@ int main( )
 
 ## <a name="see-also"></a>Zobacz także
 
-[Niestandardowe manipulatory z argumentami](../standard-library/custom-manipulators-with-arguments.md)
+[Niestandardowe manipulowanie z argumentami](../standard-library/custom-manipulators-with-arguments.md)
