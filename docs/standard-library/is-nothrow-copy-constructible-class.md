@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_copy_constructible
 ms.assetid: f13a0bea-63b1-492a-9a45-d445df35c282
-ms.openlocfilehash: 229083f4569647bd65d1ce7e640f753a9418371d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ff88eacc8b692436bc5c7dfa3a01340527862809
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455960"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222358"
 ---
-# <a name="isnothrowcopyconstructible-class"></a>is_nothrow_copy_constructible — klasa
+# <a name="is_nothrow_copy_constructible-class"></a>is_nothrow_copy_constructible — klasa
 
-Testuje, czy typ  ma Konstruktor kopiujący nothrow.
+Testuje, czy typ ma **`nothrow`** Konstruktor kopiujący.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,7 +35,7 @@ Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* ma Konstruktor ko
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 

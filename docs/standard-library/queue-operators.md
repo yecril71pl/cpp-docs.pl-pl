@@ -1,5 +1,5 @@
 ---
-title: Operatory &lt;kolejki&gt;
+title: '&lt;&gt;Operatory kolejki'
 ms.date: 11/04/2016
 f1_keywords:
 - queue/std::operator!=
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: 420d717b34b6c17587f8790701906e06ab008d96
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8c02e79e6a300f23ac31ea876c9d4576cfe5e9a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419652"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232927"
 ---
-# <a name="ltqueuegt-operators"></a>Operatory &lt;kolejki&gt;
+# <a name="ltqueuegt-operators"></a>&lt;&gt;Operatory kolejki
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 Testuje, czy obiekt kolejki po lewej stronie operatora nie jest równy obiektowi kolejki po prawej stronie.
 
@@ -35,15 +35,15 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `queue`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `queue`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli kolejki nie są równe; **Fałsz** , jeśli kolejki są równe.
+**`true`** Jeśli kolejki nie są równe; **`false`** Jeśli kolejki są równe.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -92,7 +92,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_lt"></a>&lt; operatora
+## <a name="operatorlt"></a><a name="op_lt"></a>zakład&lt;
 
 Testuje, czy obiekt kolejki po lewej stronie operatora jest mniejszy niż obiekt kolejki po prawej stronie.
 
@@ -102,15 +102,15 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `queue`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `queue`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli kolejka po lewej stronie operatora jest mniejsza niż i nie równa kolejki po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli kolejka po lewej stronie operatora jest mniejsza niż i nie równa kolejki po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -155,7 +155,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.
 ```
 
-## <a name="op_lt_eq"></a>&lt;operatora =
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>zakład&lt;=
 
 Testuje, czy obiekt kolejki po lewej stronie operatora jest mniejszy niż lub równy obiektowi kolejki po prawej stronie.
 
@@ -165,15 +165,15 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `queue`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `queue`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli kolejka po lewej stronie operatora jest ściśle mniejsza niż kolejka po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli kolejka po lewej stronie operatora jest ściśle mniejsza niż kolejka po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -220,7 +220,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 Testuje, czy obiekt kolejki po lewej stronie operatora jest równy obiektowi kolejki po prawej stronie.
 
@@ -230,15 +230,15 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `queue`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `queue`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli kolejki nie są równe; **Fałsz** , jeśli kolejki są równe.
+**`true`** Jeśli kolejki nie są równe; **`false`** Jeśli kolejki są równe.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -286,7 +286,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_gt"></a>&gt; operatora
+## <a name="operatorgt"></a><a name="op_gt"></a>zakład&gt;
 
 Testuje, czy obiekt kolejki po lewej stronie operatora jest większy niż obiekt kolejki po prawej stronie.
 
@@ -296,15 +296,15 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `queue`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `queue`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli kolejka po lewej stronie operatora jest ściśle mniejsza niż kolejka po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli kolejka po lewej stronie operatora jest ściśle mniejsza niż kolejka po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -352,7 +352,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.
 ```
 
-## <a name="op_gt_eq"></a>&gt;operatora =
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>zakład&gt;=
 
 Testuje, czy obiekt kolejki po lewej stronie operatora jest większy niż lub równy obiektowi kolejki po prawej stronie.
 
@@ -362,15 +362,15 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `queue`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `queue`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli kolejka po lewej stronie operatora jest ściśle mniejsza niż kolejka po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli kolejka po lewej stronie operatora jest ściśle mniejsza niż kolejka po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 

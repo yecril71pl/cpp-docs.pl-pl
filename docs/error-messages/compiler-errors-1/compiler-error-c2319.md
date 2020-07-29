@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2319
 ms.assetid: 25263e6e-f5ba-4d2c-8727-8c2d8ca2e5ce
-ms.openlocfilehash: b3da0297558a9b8281f9c4756a54a577cc78a682
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: af9c0f0395e29c384ddc06f9a029f29c921e71c8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74747920"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221240"
 ---
 # <a name="compiler-error-c2319"></a>Błąd kompilatora C2319
 
 po instrukcji "try/catch" musi występować złożona instrukcja. Brak znaku "{"
 
-Nie znaleziono bloku `try` lub `catch` po instrukcji `try` lub `catch`. Blok musi być ujęty w nawiasy klamrowe.
+**`try`** **`catch`** Nie znaleziono bloku lub w **`try`** **`catch`** instrukcji or. Blok musi być ujęty w nawiasy klamrowe.
 
 Poniższy przykład generuje C2319:
 

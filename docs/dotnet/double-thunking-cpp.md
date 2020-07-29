@@ -8,16 +8,16 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: 89cca9ef42910d295cbae8bb677fb51927dbcdd2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 6b2d3b4415b81dc5a9b7d0e36c154d9ee74b98ee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988535"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221487"
 ---
 # <a name="double-thunking-c"></a>Podwójna konwersja bitowa adresów (C++)
 
-Podwójny podwójna odnosi się do utraty wydajności, które można napotkać, gdy wywołanie funkcji w kontekście zarządzanym wywołuje C++ funkcję zarządzaną wizualną i gdzie wykonywanie programu wywołuje natywny punkt wejścia funkcji w celu wywołania funkcji zarządzanej. W tym temacie omówiono, gdzie występuje podwójny podwójna oraz jak można uniknąć poprawy wydajności.
+Podwójny podwójna odnosi się do utraty wydajności, która może wystąpić, gdy wywołanie funkcji w kontekście zarządzanym wywołuje funkcję zarządzaną Visual C++ i gdzie wykonywanie programu wywołuje natywny punkt wejścia funkcji w celu wywołania funkcji zarządzanej. W tym temacie omówiono, gdzie występuje podwójny podwójna oraz jak można uniknąć poprawy wydajności.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -25,15 +25,15 @@ Domyślnie podczas kompilowania z **/CLR**, definicja funkcji zarządzanej powod
 
 Jednym z rozwiązań jest informowanie kompilatora, aby nie generował natywnego punktu wejścia dla funkcji zarządzanej, że funkcja zostanie wywołana tylko z kontekstu zarządzanego, przy użyciu konwencji wywoływania [__clrcall](../cpp/clrcall.md) .
 
-Podobnie, Jeśli eksportujesz ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) funkcję zarządzaną, zostanie wygenerowany natywny punkt wejścia i każda funkcja, która importuje i wywołuje tę funkcję, będzie wywoływała za pomocą natywnego punktu wejścia. Aby uniknąć podwójnego podwójna w tej sytuacji, nie używaj natywnej semantyki eksportu/importu; po prostu Odwołuj się do metadanych za pośrednictwem `#using` (patrz [#using dyrektywy](../preprocessor/hash-using-directive-cpp.md)).
+Podobnie, Jeśli eksportujesz ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) funkcję zarządzaną, zostanie wygenerowany natywny punkt wejścia i każda funkcja, która importuje i wywołuje tę funkcję, będzie wywoływała za pomocą natywnego punktu wejścia. Aby uniknąć podwójnego podwójna w tej sytuacji, nie używaj natywnej semantyki eksportu/importu; po prostu Odwołuj się do metadanych za pośrednictwem `#using` (patrz [#using dyrektywa](../preprocessor/hash-using-directive-cpp.md)).
 
-Kompilator został zaktualizowany, aby zmniejszyć niepotrzebne podwójne podwójna. Na przykład każda funkcja z typem zarządzanym w sygnaturze (łącznie z typem zwracanym) zostanie niejawnie oznaczona jako `__clrcall`.
+Kompilator został zaktualizowany, aby zmniejszyć niepotrzebne podwójne podwójna. Na przykład każda funkcja z typem zarządzanym w sygnaturze (łącznie z typem zwracanym) zostanie niejawnie oznaczona jako `__clrcall` .
 
 ## <a name="example"></a>Przykład
 
 ### <a name="description"></a>Opis
 
-Poniższy przykład ilustruje podwójny podwójna. W przypadku skompilowania natywnego (bez **/CLR**) wywołanie funkcji wirtualnej w `main` generuje jedno wywołanie do konstruktora kopiującego `T`i jedno wywołanie do destruktora. Podobne zachowanie jest realizowane, gdy funkcja wirtualna jest zadeklarowana z **/CLR** i `__clrcall`. Jednak po prostu skompilowane z **/CLR**wywołanie funkcji generuje wywołanie konstruktora kopiującego, ale istnieje inne wywołanie konstruktora kopiującego ze względu na natywny thunk.
+Poniższy przykład ilustruje podwójny podwójna. W przypadku skompilowania natywnego (bez **/CLR**) wywołanie funkcji wirtualnej w programie `main` generuje jedno wywołanie `T` konstruktora kopiującego i jedno wywołanie do destruktora. Podobne zachowanie jest realizowane, gdy funkcja wirtualna jest zadeklarowana z **/CLR** i `__clrcall` . Jednak po prostu skompilowane z **/CLR**wywołanie funkcji generuje wywołanie konstruktora kopiującego, ale istnieje inne wywołanie konstruktora kopiującego ze względu na natywny thunk.
 
 ### <a name="code"></a>Kod
 
@@ -91,7 +91,7 @@ __thiscall T::~T(void)
 
 ### <a name="description"></a>Opis
 
-W poprzednim przykładzie przedstawiono istnienie podwójnej podwójna. Ten przykład pokazuje jego efekt. Pętla `for` wywołuje funkcję wirtualną, a program zgłasza czas wykonywania. Najwolniejszy czas jest raportowany, gdy program jest kompilowany z **/CLR**. Najszybsze czasy są raportowane w przypadku kompilacji bez **/CLR** lub jeśli funkcja wirtualna jest zadeklarowana przy użyciu `__clrcall`.
+W poprzednim przykładzie przedstawiono istnienie podwójnej podwójna. Ten przykład pokazuje jego efekt. **`for`** Pętla wywołuje funkcję wirtualną, a program zgłasza czas wykonywania. Najwolniejszy czas jest raportowany, gdy program jest kompilowany z **/CLR**. Najszybsze czasy są raportowane w przypadku kompilowania bez **/CLR** lub jeśli funkcja wirtualna jest zadeklarowana za pomocą `__clrcall` .
 
 ### <a name="code"></a>Kod
 

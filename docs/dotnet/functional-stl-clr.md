@@ -63,16 +63,16 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: 2d06a92fea9a702633216e3244879687b66f97d6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9349de8c42bbed72384ea2b61b39bdea82172f9d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208731"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221435"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
-Dołącz nagłówek STL/CLR `<cliext/functional>`, aby zdefiniować liczbę klas szablonu i powiązane z nią delegatów szablonu i funkcje.
+Dołącz nagłówek STL/CLR, `<cliext/functional>` Aby zdefiniować liczbę klas szablonu i powiązane z nimi delegatów szablonu i funkcje.
 
 ## <a name="syntax"></a>Składnia
 
@@ -82,18 +82,18 @@ Dołącz nagłówek STL/CLR `<cliext/functional>`, aby zdefiniować liczbę klas
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<cliext/> funkcjonalne
+**Nagłówek:**\<cliext/functional>
 
 **Przestrzeń nazw:** cliext
 
 ## <a name="declarations"></a>Deklaracje
 
-|Delegate|Opis|
+|Delegat|Opis|
 |--------------|-----------------|
 |[binary_delegate (STL/CLR)](#binary_delegate)|Delegat dwóch argumentów.|
-|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|Delegat dwóch argumentów zwraca **typ void**.|
+|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|Zwracanie delegata dwoma argumentami **`void`** .|
 |[unary_delegate (STL/CLR)](#unary_delegate)|Delegat z jednym argumentem.|
-|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|Delegat z jednym argumentem zwraca **typ void**.|
+|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|Zwracanie delegata z jednym argumentem **`void`** .|
 
 |Klasa|Opis|
 |-----------|-----------------|
@@ -124,7 +124,7 @@ Dołącz nagłówek STL/CLR `<cliext/functional>`, aby zdefiniować liczbę klas
 |[not1 (STL/CLR)](#not1)|Generuje unary_negate dla elementu Funktor.|
 |[not2 (STL/CLR)](#not2)|Generuje binary_negate dla elementu Funktor.|
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ## <a name="binary_delegate-stlclr"></a><a name="binary_delegate"></a>binary_delegate (STL/CLR)
 
@@ -147,7 +147,7 @@ Typ pierwszego argumentu.
 *Arg2*<br/>
 Typ drugiego argumentu.
 
-*Wynika*<br/>
+*Wynik*<br/>
 Typ zwracany.
 
 ### <a name="remarks"></a>Uwagi
@@ -160,7 +160,7 @@ Należy pamiętać, że w przypadku:
 
 `binary_delegate<int, int, int> Fun2;`
 
-typy `Fun1` i `Fun2` są synonimami, a w przypadku:
+typy `Fun1` i `Fun2` są synonimami, w czasie dla:
 
 `delegate int Fun1(int, int);`
 
@@ -204,7 +204,7 @@ compare(L'b', L'a') = False
 
 ## <a name="binary_delegate_noreturn-stlclr"></a><a name="binary_delegate_noreturn"></a>binary_delegate_noreturn (STL/CLR)
 
-Klasa genereic opisuje delegata dwóch argumentów, która zwraca wartość **void**. Używasz tego elementu jako delegata w odniesieniu do jego argumentu.
+Klasa genereic opisuje delegata dwóch argumentów, która zwraca wartość **`void`** . Używasz tego elementu jako delegata w odniesieniu do jego argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -224,7 +224,7 @@ Typ drugiego argumentu.
 
 ### <a name="remarks"></a>Uwagi
 
-Delegat genereic opisuje funkcję dwuargumentową zwracającą **typ void**.
+Delegat genereic opisuje funkcję dwuargumentową, która zwraca wartość **`void`** .
 
 Należy pamiętać, że w przypadku:
 
@@ -232,7 +232,7 @@ Należy pamiętać, że w przypadku:
 
 `binary_delegate_noreturn<int, int> Fun2;`
 
-typy `Fun1` i `Fun2` są synonimami, a w przypadku:
+typy `Fun1` i `Fun2` są synonimami, w czasie dla:
 
 `delegate void Fun1(int, int);`
 
@@ -302,7 +302,7 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*Zabawny*<br/>
+*Zabawa*<br/>
 Typ przechowywanego Funktor.
 
 ## <a name="member-functions"></a>Funkcje elementów członkowskich
@@ -326,9 +326,9 @@ Typ przechowywanego Funktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dwa argumenty Funktor, które przechowują kolejne dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość logiczną, a nie przechowywane Funktor wywołana z dwoma argumentami.
+Klasa szablonu opisuje dwa argumenty Funktor, które przechowują kolejne dwa argumenty Funktor. Definiuje operator elementu członkowskiego, `operator()` tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość logiczną, a nie przechowywane Funktor wywołana z dwoma argumentami.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 
@@ -404,7 +404,7 @@ template<typename Fun,
 *ARG*<br/>
 Typ argumentu.
 
-*Zabawny*<br/>
+*Zabawa*<br/>
 Typ Funktor.
 
 #### <a name="function-parameters"></a>Parametry funkcji
@@ -417,7 +417,7 @@ Pierwszy argument, który ma być zawijany.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja Template zwraca [binder1st — (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`. Jest on używany jako wygodny sposób zawijania Funktor dwuargumentowego i jego pierwszego argumentu w Funktor jednoargumentowym, który wywołuje ją z drugim argumentem.
+Funkcja Template zwraca [binder1st — (STL/CLR)](../dotnet/binder1st-stl-clr.md) `<Fun>(functor, left)` . Jest on używany jako wygodny sposób zawijania Funktor dwuargumentowego i jego pierwszego argumentu w Funktor jednoargumentowym, który wywołuje ją z drugim argumentem.
 
 ### <a name="example"></a>Przykład
 
@@ -485,7 +485,7 @@ template<typename Fun,
 *ARG*<br/>
 Typ argumentu.
 
-*Zabawny*<br/>
+*Zabawa*<br/>
 Typ Funktor.
 
 #### <a name="function-parameters"></a>Parametry funkcji
@@ -498,7 +498,7 @@ Drugi argument, który ma być zawijany.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja Template zwraca [binder2nd — (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Jest on używany jako wygodny sposób zawijania Funktor dwuargumentowego i jego drugiego argumentu w Funktor jednym argumencie, który wywołuje go przy użyciu pierwszego argumentu.
+Funkcja Template zwraca [binder2nd — (STL/CLR)](../dotnet/binder2nd-stl-clr.md) `<Fun>(functor, right)` . Jest on używany jako wygodny sposób zawijania Funktor dwuargumentowego i jego drugiego argumentu w Funktor jednym argumencie, który wywołuje go przy użyciu pierwszego argumentu.
 
 ### <a name="example"></a>Przykład
 
@@ -577,7 +577,7 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*Zabawny*<br/>
+*Zabawa*<br/>
 Typ przechowywanego Funktor.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
@@ -601,9 +601,9 @@ Typ przechowywanego Funktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje Funktor z jednym argumentem, który przechowuje dwa argumenty Funktor i pierwszy argument. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wynik wywołania przechowywanej Funktor z przechowywanym pierwszym argumentem i podanym drugim argumentem.
+Klasa szablonu opisuje Funktor z jednym argumentem, który przechowuje dwa argumenty Funktor i pierwszy argument. Definiuje operator elementu członkowskiego `operator()` , tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca wynik wywołania Funktor przechowywanych z przechowywanym pierwszym argumentem i podanym drugim argumentem.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 
@@ -682,7 +682,7 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*Zabawny*<br/>
+*Zabawa*<br/>
 Typ przechowywanego Funktor.
 
 ## <a name="member-functions"></a>Funkcje elementów członkowskich
@@ -706,9 +706,9 @@ Typ przechowywanego Funktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje Funktor z jednym argumentem, który przechowuje dwa argumenty Funktor i drugi argument. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wynik wywołania przechowywanego Funktor z podanym pierwszym argumentem i przechowywaną drugim argumentem.
+Klasa szablonu opisuje Funktor z jednym argumentem, który przechowuje dwa argumenty Funktor i drugi argument. Definiuje operator elementu członkowskiego `operator()` , tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca wynik wywołania przechowywanego Funktor z podanym pierwszym argumentem i przechowywaną drugim argumentem.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 
@@ -810,9 +810,9 @@ Typ argumentów i wartość zwracana.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca pierwszy argument podzielony przez drugi.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` , tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca pierwszy argument podzielony przez drugi.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 
@@ -911,9 +911,9 @@ Typ argumentów.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument jest równy drugiemu.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` , tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument jest równy drugiemu.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 
@@ -1012,9 +1012,9 @@ Typ argumentów.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument jest większy od drugiego.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego, `operator()` tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument jest większy od drugiego.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 
@@ -1113,9 +1113,9 @@ Typ argumentów.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument jest większy lub równy drugiemu.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego, `operator()` tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument jest większy lub równy drugiemu.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 
@@ -1214,9 +1214,9 @@ Typ argumentów.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument jest mniejszy od drugiego.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego, `operator()` tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument jest mniejszy od drugiego.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 
@@ -1315,9 +1315,9 @@ Typ argumentów.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument jest mniejszy lub równy drugiemu.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego, `operator()` tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument jest mniejszy lub równy drugiemu.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 
@@ -1416,9 +1416,9 @@ Typ argumentów.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy oba argumenty i drugi test mają wartość true.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego, `operator()` tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy oba argumenty i drugi test mają wartość true.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 
@@ -1514,9 +1514,9 @@ Typ argumentów.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje Funktor z jednym argumentem. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy jego argument ma wartość false.
+Klasa szablonu opisuje Funktor z jednym argumentem. Definiuje operator elementu członkowskiego, `operator()` tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy jego argument ma wartość false.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 
@@ -1607,9 +1607,9 @@ Typ argumentów.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument lub drugi test ma wartość true.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego, `operator()` tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument lub drugi test ma wartość true.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 
@@ -1708,9 +1708,9 @@ Typ argumentów i wartość zwracana.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator składowej `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca pierwszy argument minus sekunda.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` , tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca pierwszy argument minus sekunda.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 
@@ -1809,9 +1809,9 @@ Typ argumentów i wartość zwracana.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca pierwszy argument modulo w drugim.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` , tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca pierwszy argument moduluje drugi.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 
@@ -1910,9 +1910,9 @@ Typ argumentów i wartość zwracana.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca pierwszy argument razy w drugim.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` , tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca pierwszy argument razy w drugim.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 
@@ -2008,9 +2008,9 @@ Typ argumentów.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje Funktor z jednym argumentem. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca swój argument Negacja.
+Klasa szablonu opisuje Funktor z jednym argumentem. Definiuje operator elementu członkowskiego `operator()` , tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca swój argument Negacja.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 
@@ -2101,9 +2101,9 @@ Typ argumentów.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument nie jest równy drugiemu.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` , tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość true tylko wtedy, gdy pierwszy argument nie jest równy drugiemu.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 
@@ -2163,7 +2163,7 @@ template<typename Fun>
 
 #### <a name="template-parameters"></a>Parametry szablonu
 
-*Zabawny*<br/>
+*Zabawa*<br/>
 Typ Funktor.
 
 #### <a name="function-parameters"></a>Parametry funkcji
@@ -2173,7 +2173,7 @@ Funktor do zawijania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`. Jest on używany jako wygodny sposób zawijania Funktor z jednym argumentem w Funktor, który dostarcza jej wartość logiczną.
+Funkcja szablonu zwraca [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md) `<Fun>(functor)` . Jest on używany jako wygodny sposób zawijania Funktor z jednym argumentem w Funktor, który dostarcza jej wartość logiczną.
 
 ### <a name="example"></a>Przykład
 
@@ -2235,7 +2235,7 @@ template<typename Fun>
 
 #### <a name="template-parameters"></a>Parametry szablonu
 
-*Zabawny*<br/>
+*Zabawa*<br/>
 Typ Funktor.
 
 #### <a name="function-parameters"></a>Parametry funkcji
@@ -2245,7 +2245,7 @@ Funktor do zawijania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`. Jest on używany jako wygodny sposób zawijania Funktor dwuargumentowego w Funktor, który zapewnia jego wartość logiczną.
+Funkcja szablonu zwraca [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md) `<Fun>(functor)` . Jest on używany jako wygodny sposób zawijania Funktor dwuargumentowego w Funktor, który zapewnia jego wartość logiczną.
 
 ### <a name="example"></a>Przykład
 
@@ -2355,9 +2355,9 @@ Typ argumentów i wartość zwracana.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator składowej `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca pierwszy argument Plus sekunda.
+Klasa szablonu opisuje dwa argumenty Funktor. Definiuje operator elementu członkowskiego `operator()` , tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca pierwszy argument Plus sekunda.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 
@@ -2421,7 +2421,7 @@ generic<typename Arg,
 *ARG*<br/>
 Typ argumentu.
 
-*Wynika*<br/>
+*Wynik*<br/>
 Typ zwracany.
 
 ### <a name="remarks"></a>Uwagi
@@ -2434,7 +2434,7 @@ Należy pamiętać, że w przypadku:
 
 `unary_delegare<int, int> Fun2;`
 
-typy `Fun1` i `Fun2` są synonimami, a w przypadku:
+typy `Fun1` i `Fun2` są synonimami, w czasie dla:
 
 `delegate int Fun1(int);`
 
@@ -2472,7 +2472,7 @@ hash(L'b') = 22
 
 ## <a name="unary_delegate_noreturn-stlclr"></a><a name="unary_delegate_noreturn"></a>unary_delegate_noreturn (STL/CLR)
 
-Klasa genereic opisuje delegata z jednym argumentem, który zwraca wartość **void**. Służy do tego określenie delegata pod względem jego typu argumentu.
+Klasa genereic opisuje delegata z jednym argumentem, który zwraca wartość **`void`** . Służy do tego określenie delegata pod względem jego typu argumentu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -2488,7 +2488,7 @@ Typ argumentu.
 
 ### <a name="remarks"></a>Uwagi
 
-Delegat genereic opisuje funkcję jednoargumentową zwracającą **typ void**.
+Delegat genereic opisuje funkcję jednoargumentową, która zwraca wartość **`void`** .
 
 Należy pamiętać, że w przypadku:
 
@@ -2496,7 +2496,7 @@ Należy pamiętać, że w przypadku:
 
 `unary_delegare_noreturn<int> Fun2;`
 
-typy `Fun1` i `Fun2` są synonimami, a w przypadku:
+typy `Fun1` i `Fun2` są synonimami, w czasie dla:
 
 `delegate void Fun1(int);`
 
@@ -2561,7 +2561,7 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*Zabawny*<br/>
+*Zabawa*<br/>
 Typ przechowywanego Funktor.
 
 ### <a name="member-functions"></a>Funkcje elementów członkowskich
@@ -2583,9 +2583,9 @@ Typ przechowywanego Funktor.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje Funktor z jednym argumentem, który przechowuje kolejną Funktor z jednym argumentem. Definiuje operator elementu członkowskiego `operator()` tak, aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość logiczną, a nie przechowywane Funktor wywołana z argumentem.
+Klasa szablonu opisuje Funktor z jednym argumentem, który przechowuje kolejną Funktor z jednym argumentem. Definiuje operator elementu członkowskiego `operator()` , tak aby, gdy obiekt jest wywoływany jako funkcja, zwraca wartość logiczną, a nie przechowywane Funktor wywołana z argumentem.
 
-Można również przekazać obiekt jako argument funkcji, którego typ jest `delegate_type^` i zostanie odpowiednio przekonwertowane.
+Można również przekazać obiekt jako argument funkcji, którego typem jest `delegate_type^` i który zostanie odpowiednio przekształcony.
 
 ### <a name="example"></a>Przykład
 

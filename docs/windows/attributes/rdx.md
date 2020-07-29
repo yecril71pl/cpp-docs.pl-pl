@@ -1,17 +1,17 @@
 ---
-title: RDX (C++ atrybut com)
+title: RDX (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.rdx
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: f0140b759b1d78eb1284213a0dc47d9600b2a83b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b5f0981f249653b1068e2fbec3d02d3209d5f935
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214633"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232758"
 ---
 # <a name="rdx"></a>rdx
 
@@ -25,14 +25,14 @@ Tworzy klucz rejestru lub modyfikuje istniejący klucz rejestru.
 
 ### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*głównych*<br/>
 Nazwa klucza, który ma zostać utworzony lub otwarty.
 
 *Pełna*<br/>
 Obowiązkowe Określa pole wartości, które ma zostać ustawione. Jeśli pole wartości o tej nazwie nie istnieje jeszcze w kluczu, zostanie dodane.
 
 *regtype*<br/>
-Typ klucza rejestru, który jest dodawany. Może być jedną z następujących wartości: `text`, `dword`, `binary`lub `CString`.
+Typ klucza rejestru, który jest dodawany. Może być jedną z następujących wartości: `text` , `dword` , `binary` , lub `CString` .
 
 ## <a name="remarks"></a>Uwagi
 
@@ -46,10 +46,10 @@ Ten atrybut może być używany w połączeniu z atrybutami [coclass](coclass.md
 
 |||
 |-|-|
-|**Dotyczy**|składowa **klasy** lub **struktury**|
+|**Dotyczy**|**`class`** lub **`struct`** członek|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
@@ -76,7 +76,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty COM](com-attributes.md)<br/>
 [registration_script](registration-script.md)

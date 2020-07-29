@@ -95,18 +95,18 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: d110e356-ba3e-4e52-9e2d-d997bf975c96
-ms.openlocfilehash: 92434a6617e041e4c0ab11499b8eb3535093caad
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a2f7dafc99c8632f420bcd8119fe489353cf4b28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208575"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221383"
 ---
 # <a name="hash_set-stlclr"></a>hash_set (STL/CLR)
 
-Klasa szablonu opisuje obiekt, który kontroluje różnej długości sekwencje elementów, które mają dostęp dwukierunkowy. `hash_set` kontenera służy do zarządzania sekwencją elementów jako tabelą skrótów, każdy wpis w tabeli przechowujący dwukierunkową listę połączonych węzłów oraz każdy węzeł przechowujący jeden element. Wartość każdego elementu jest używana jako klucz do porządkowania sekwencji.
+Klasa szablonu opisuje obiekt, który kontroluje różnej długości sekwencje elementów, które mają dostęp dwukierunkowy. Kontener służy `hash_set` do zarządzania sekwencją elementów jako tabelą skrótów, każdy wpis w tabeli przechowujący dwukierunkową listę węzłów oraz każdy węzeł przechowujący jeden element. Wartość każdego elementu jest używana jako klucz do porządkowania sekwencji.
 
-W poniższym opisie `GValue` jest taka sama jak `GKey`, która z kolei jest taka sama jak *klucz* , chyba że ostatni jest typem ref, w tym przypadku jest `Key^`.
+W poniższym opisie `GValue` jest taka sama jak `GKey` , która z kolei jest taka sama jak *klucz* , chyba że ostatni jest typem ref, w takim przypadku jest to `Key^` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -131,7 +131,7 @@ Typ składnika klucza elementu w kontrolowanej sekwencji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<cliext/hash_set >
+**Nagłówek:**\<cliext/hash_set>
 
 **Przestrzeń nazw:** cliext
 
@@ -191,50 +191,50 @@ Typ składnika klucza elementu w kontrolowanej sekwencji.
 
 ## <a name="interfaces"></a>Interfejsy
 
-|Interface|Opis|
+|Interfejs|Opis|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Duplikowanie obiektu.|
 |<xref:System.Collections.IEnumerable>|Sekwencja przez elementy.|
 |<xref:System.Collections.ICollection>|Obsługa grupy elementów.|
 |<xref:System.Collections.Generic.IEnumerable%601>|Sekwencja przez wpisane elementy.|
 |<xref:System.Collections.Generic.ICollection%601>|Obsługuj grupę wpisanych elementów.|
-|IHash\<klucz, wartość >|Obsługa kontenera ogólnego.|
+|IHash\<Key, Value>|Obsługa kontenera ogólnego.|
 
 ## <a name="remarks"></a>Uwagi
 
 Obiekt przydziela i zwalnia magazyn dla sekwencji, która kontroluje jako pojedyncze węzły na liście połączonej dwukierunkowo. Aby przyspieszyć dostęp, obiekt przechowuje również tablicę o różnej długości wskaźników do listy (tabela skrótów), efektywnie zarządzając całą listą jako sekwencję podlistów lub zasobników. Wstawia elementy do zasobnika, który ma być uporządkowany przez zmianę linków między węzłami, bez kopiowania zawartości jednego węzła do drugiego. Oznacza to, że można wstawiać i usuwać elementy swobodnie bez zakłócania pozostałych elementów.
 
-Obiekt porządkuje każdy przedział IT, wywołując zapisany obiekt delegata typu [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Podczas konstruowania hash_set można określić przechowywany obiekt delegata; Jeśli określisz brak obiektu delegowanego, wartością domyślną jest porównanie `operator<=(key_type, key_type)`.
+Obiekt porządkuje każdy przedział IT, wywołując zapisany obiekt delegata typu [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Podczas konstruowania hash_set można określić przechowywany obiekt delegata; Jeśli określisz brak obiektu delegowanego, wartością domyślną jest porównanie `operator<=(key_type, key_type)` .
 
-Dostęp do przechowywanego obiektu delegata można uzyskać, wywołując funkcję członkowską [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Taki obiekt delegata musi definiować równoważne porządkowanie między kluczami typu [hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Oznacza to, że dla dowolnych dwóch kluczy `X` i `Y`:
+Dostęp do przechowywanego obiektu delegata można uzyskać, wywołując funkcję członkowską [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md) `()` . Taki obiekt delegata musi definiować równoważne porządkowanie między kluczami typu [hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Oznacza to, że dla dowolnych dwóch kluczy `X` i `Y` :
 
-`key_comp()(X, Y)` zwraca ten sam wynik Boolean dla każdego wywołania.
+`key_comp()(X, Y)`zwraca ten sam wynik Boolean dla każdego wywołania.
 
-Jeśli `key_comp()(X, Y) && key_comp()(Y, X)` ma wartość true, wówczas `X` i `Y` są określane jako równoważne.
+Jeśli `key_comp()(X, Y) && key_comp()(Y, X)` ma wartość true, wówczas `X` i `Y` są określane jako równoważne porządkowanie.
 
-Każda reguła porządkowania, która zachowuje się jak `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` lub `operator==(key_type, key_type)` definiuje porządkowanie eqivalent.
+Dowolna reguła porządkowania, która zachowuje się jak `operator<=(key_type, key_type)` `operator>=(key_type, key_type)` lub `operator==(key_type, key_type)` definiuje porządkowanie eqivalent.
 
-Należy zauważyć, że kontener gwarantuje tylko te elementy, których klucze mają równoważne porządkowanie (i które mieszanie z tą samą wartością całkowitą) jest przyległy w obrębie przedziału. W przeciwieństwie do klas szablonu [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md), obiekt klasy szablonu `hash_set` gwarantuje, że klucze dla wszystkich elementów są unikatowe. (Żadne dwa klucze nie mają równoważnej kolejności).
+Należy zauważyć, że kontener gwarantuje tylko te elementy, których klucze mają równoważne porządkowanie (i które mieszanie z tą samą wartością całkowitą) jest przyległy w obrębie przedziału. W przeciwieństwie do klas szablonu [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)obiekt klasy szablonu `hash_set` gwarantuje, że klucze dla wszystkich elementów są unikatowe. (Żadne dwa klucze nie mają równoważnej kolejności).
 
-Obiekt określa, który zasobnik powinien zawierać dany klucz porządkowania, wywołując zapisany obiekt delegata typu [hash_set:: Hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Dostęp do tego przechowywanego obiektu można uzyskać, wywołując funkcję członkowską [hash_set:: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md)`()` w celu uzyskania wartości całkowitej, która zależy od wartości klucza. Podczas konstruowania hash_set można określić przechowywany obiekt delegata; Jeśli określisz brak obiektu delegowanego, wartością domyślną jest funkcja `System::Object::hash_value(key_type)`. Oznacza to, że dla wszystkich kluczy `X` i `Y`:
+Obiekt określa, który zasobnik powinien zawierać dany klucz porządkowania, wywołując zapisany obiekt delegata typu [hash_set:: Hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Dostęp do tego przechowywanego obiektu można uzyskać, wywołując funkcję członkowską [hash_set:: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` w celu uzyskania wartości całkowitej, która zależy od wartości klucza. Podczas konstruowania hash_set można określić przechowywany obiekt delegata; Jeśli określisz brak obiektu delegowanego, wartością domyślną jest funkcja `System::Object::hash_value(key_type)` . Oznacza to, że dla wszystkich kluczy `X` i `Y` :
 
-`hash_delegate()(X)` zwraca ten sam wynik całkowity dla każdego wywołania.
+`hash_delegate()(X)`zwraca ten sam wynik całkowity dla każdego wywołania.
 
-Jeśli `X` i `Y` mają równoważnej kolejności, `hash_delegate()(X)` powinny zwracać ten sam wynik liczby całkowitej jako `hash_delegate()(Y)`.
+Jeśli `X` i `Y` mają równoważne porządkowanie, wówczas `hash_delegate()(X)` powinna zwracać wynik tego samego typu Integer co `hash_delegate()(Y)` .
 
 Każdy element służy jako klucz i wartość. Sekwencja jest reprezentowana w sposób umożliwiający wyszukiwanie, wstawianie i usuwanie dowolnego elementu z liczbą operacji, która jest niezależna od liczby elementów w sekwencji (stały czas) — co najmniej w najlepszym przypadku. Ponadto, wstawianie elementu nie unieważnia iteratorów, a usuwanie elementu unieważnia tylko te iteratory, które wskazują na usunięty element.
 
 Jeśli wartości skrótów nie są dystrybuowane równomiernie, może to spowodować wygenerowanie tabeli skrótów. W skrajnym — dla funkcji skrótu, która zawsze zwraca tę samą wartość — wyszukiwanie, wstawianie i usuwanie jest proporcjonalna do liczby elementów w sekwencji (czas liniowy). Kontener przedsięwzięciach, aby wybrać rozsądną funkcję mieszania, średni rozmiar przedziału i rozmiar tabeli skrótów (łączna liczba przedziałów), ale można przesłonić dowolne lub wszystkie z tych opcji. Zobacz na przykład funkcje [hash_set:: max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) i [hash_set:: rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).
 
-Hash_set obsługuje Iteratory dwukierunkowe, co oznacza, że można przechodzić do sąsiadujących elementów przy użyciu iteratora, który wyznacza element w kontrolowanej sekwencji. Specjalny węzeł główny odpowiada iteratorowi zwróconemu przez [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`. Można zmniejszyć ten iterator, aby dotrzeć do ostatniego elementu w kontrolowanej sekwencji, jeśli jest obecny. Można zwiększyć iterator hash_set, aby dotrzeć do węzła głównego. następnie będzie on porównywany z `end()`. Ale nie można usunąć odwołania do iteratora zwróconego przez `end()`.
+Hash_set obsługuje Iteratory dwukierunkowe, co oznacza, że można przechodzić do sąsiadujących elementów przy użyciu iteratora, który wyznacza element w kontrolowanej sekwencji. Specjalny węzeł główny odpowiada iteratorowi zwróconemu przez [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `()` . Można zmniejszyć ten iterator, aby dotrzeć do ostatniego elementu w kontrolowanej sekwencji, jeśli jest obecny. Można zwiększyć iterator hash_set, aby dotrzeć do węzła głównego. następnie będzie on porównywany z równą `end()` . Ale nie można usunąć odwołania do iteratora zwróconego przez `end()` .
 
 Należy zauważyć, że nie można odwołać się do hash_set elementu bezpośrednio przy użyciu pozycji liczbowej — która wymaga iteratora dostępu swobodnego.
 
-Iterator hash_set przechowuje dojście do skojarzonego z nim węzła hash_set, co z kolei przechowuje dojście do skojarzonego kontenera. Iteratorów można używać tylko ze skojarzonymi obiektami kontenera. Iterator hash_set pozostaje prawidłowy, dopóki jego skojarzony węzeł hash_set jest skojarzony z pewnymi hash_setami. Ponadto prawidłowy iterator jest dereferencable — można go użyć w celu uzyskania dostępu do lub zmiany wartości elementu, którą wyznacza, tak długo, jak nie jest równa `end()`.
+Iterator hash_set przechowuje dojście do skojarzonego z nim węzła hash_set, co z kolei przechowuje dojście do skojarzonego kontenera. Iteratorów można używać tylko ze skojarzonymi obiektami kontenera. Iterator hash_set pozostaje prawidłowy, dopóki jego skojarzony węzeł hash_set jest skojarzony z pewnymi hash_setami. Ponadto prawidłowy iterator jest dereferencable — można go użyć w celu uzyskania dostępu do lub zmiany wartości elementu, który wyznacza, tak długo, jak nie jest równa `end()` .
 
 Wymazywanie lub usuwanie elementu wywołuje destruktor dla jego przechowywanej wartości. Niszczenie kontenera powoduje wymazanie wszystkich elementów. W tym celu kontener, którego typem elementu jest Klasa ref, zapewnia, że żadne elementy nie wyprowadzą kontenera. Należy jednak zauważyć, że kontener dojść *nie* niszczy swoich elementów.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ## <a name="hash_setbegin-stlclr"></a><a name="begin"></a>hash_set:: begin (STL/CLR)
 
@@ -248,7 +248,7 @@ iterator begin();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca iterator dwukierunkowy, który wyznacza pierwszy element kontrolowanej sekwencji lub tuż poza końcem pustej sekwencji. Służy do uzyskania iteratora, który wyznacza `current` początku kontrolowanej sekwencji, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
+Funkcja członkowska zwraca iterator dwukierunkowy, który wyznacza pierwszy element kontrolowanej sekwencji lub tuż poza końcem pustej sekwencji. Służy do uzyskania iteratora, który wyznacza `current` początek kontrolowanej sekwencji, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -364,7 +364,7 @@ void clear();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska skutecznie wywołuje [hash_set:: Erase (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md)`(` [hash_set:: begin (STL/clr)](../dotnet/hash-set-begin-stl-clr.md)`(),` [HASH_SET:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`())`. Jest on używany do upewnienia się, że kontrolowana sekwencja jest pusta.
+Funkcja członkowska skutecznie wywołuje [hash_set:: Erase (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md) `(` [hash_set:: begin (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md) `(),` [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `())` . Jest on używany do upewnienia się, że kontrolowana sekwencja jest pusta.
 
 ### <a name="example"></a>Przykład
 
@@ -422,7 +422,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt nieokreślonego typu `T2`, który może obsłużyć jako stały iterator dwukierunkowy dla kontrolowanej sekwencji.
+Typ opisuje obiekt nieokreślonego typu `T2` , który może obsłużyć jako stały iterator dwukierunkowy dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -509,7 +509,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt nieokreślonego typu `T4`, który może być używany jako ciągły iterator odwrotny dla kontrolowanej sekwencji.
+Typ opisuje obiekt nieokreślonego typu `T4` , który może być używany jako ciągły iterator odwrotny dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -551,7 +551,7 @@ size_type count(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*głównych*<br/>
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
@@ -659,7 +659,7 @@ bool empty();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca wartość true dla pustej kontrolowanej sekwencji. Jest to odpowiednik`() == 0`[hash_set:: size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md) . Służy do sprawdzania, czy hash_set jest puste.
+Funkcja członkowska zwraca wartość true dla pustej kontrolowanej sekwencji. Jest równoważne [hash_set:: size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md) `() == 0` . Służy do sprawdzania, czy hash_set jest puste.
 
 ### <a name="example"></a>Przykład
 
@@ -760,12 +760,12 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*głównych*<br/>
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca parę iteratorów `cliext::pair<iterator, iterator>(` [hash_set:: lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md)`(key),` [hash_set:: upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)`(key))`. Służy do określania zakresu elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
+Funkcja członkowska zwraca parę iteratorów `cliext::pair<iterator, iterator>(` [hash_set:: lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md) `(key),` [hash_set:: upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md) `(key))` . Służy do określania zakresu elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -825,7 +825,7 @@ bool erase(key_type key)
 *pierwszego*<br/>
 Początek zakresu do wymazania.
 
-*Klucz*<br/>
+*głównych*<br/>
 Wartość klucza do wymazania.
 
 *ostatniego*<br/>
@@ -836,9 +836,9 @@ Element do wymazania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja członkowska usuwa element kontrolowanej sekwencji wskazywany przez *WHERE*, a zwraca iterator, który wyznacza pierwszy element, który został poza elementem usunięty, lub [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`, jeśli taki element nie istnieje. Służy do usuwania pojedynczego elementu.
+Pierwsza funkcja członkowska usuwa element kontrolowanej sekwencji wskazywany przez *WHERE*, a zwraca iterator, który wyznacza pierwszy element, który został poza elementem usunięty, lub [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) , `()` Jeśli taki element nie istnieje. Służy do usuwania pojedynczego elementu.
 
-Druga funkcja członkowska usuwa elementy kontrolowanej sekwencji z zakresu [`first`, `last`) i zwraca iterator, który wyznacza pierwszy element pozostały poza elementami usuniętymi lub `end()`, jeśli taki element nie istnieje. Jest on używany do usuwania elementów sąsiadujących lub więcej.
+Druga funkcja członkowska usuwa elementy z kontrolowanej sekwencji z zakresu [ `first` , `last` ) i zwraca iterator, który wyznacza pierwszy element pozostały poza elementami usuniętymi lub `end()` Jeśli taki element nie istnieje. Jest on używany do usuwania elementów sąsiadujących lub więcej.
 
 Trzecia funkcja członkowska usuwa każdy element kontrolowanej sekwencji, którego klucz ma równoważne porządkowanie do *klucza*i zwraca liczbę usuniętych elementów. Służy do usuwania i zliczania wszystkich elementów, które pasują do określonego klucza.
 
@@ -904,12 +904,12 @@ iterator find(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*głównych*<br/>
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli co najmniej jeden element w kontrolowanej sekwencji ma równoważne porządkowanie z *kluczem*, funkcja członkowska zwraca iterator wyznaczający jeden z tych elementów. w przeciwnym razie zwraca [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`. Służy do lokalizowania elementu w kontrolowanej sekwencji, który odpowiada określonemu kluczowi.
+Jeśli co najmniej jeden element w kontrolowanej sekwencji ma równoważne porządkowanie z *kluczem*, funkcja członkowska zwraca iterator wyznaczający jeden z tych elementów. w przeciwnym razie zwraca [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `()` . Służy do lokalizowania elementu w kontrolowanej sekwencji, który odpowiada określonemu kluczowi.
 
 ### <a name="example"></a>Przykład
 
@@ -1136,7 +1136,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt typu `GValue`, który opisuje wartość przechowywanego elementu do użycia z interfejsem ogólnym dla tej klasy kontenera szablonu.
+Typ opisuje obiekt typu `GValue` , który opisuje wartość przechowywanego elementu do użycia z interfejsem ogólnym dla tej klasy kontenera szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -1266,7 +1266,7 @@ Konstruktor:
 
 `hash_set();`
 
-Inicjuje kontrolowaną sekwencję bez elementów, z predykatem kolejności domyślnej `key_compare()`i z domyślną funkcją skrótu. Służy do określania pustej początkowej kontrolowanej sekwencji z zastosowaniem domyślnego predykatu porządkowania i funkcji skrótu.
+Inicjuje kontrolowaną sekwencję bez elementów, z predykatem kolejności domyślnej `key_compare()` i z domyślną funkcją skrótu. Służy do określania pustej początkowej kontrolowanej sekwencji z zastosowaniem domyślnego predykatu porządkowania i funkcji skrótu.
 
 Konstruktor:
 
@@ -1284,31 +1284,31 @@ Konstruktor:
 
 `hash_set(hash_set<Key>% right);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją [`right.begin()`, `right.end()`) przy użyciu domyślnego predykatu porządkowania i z domyślną funkcją skrótu. Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej przez obiekt hash_set *po prawej stronie*, przy użyciu domyślnego predykatu porządkowania i funkcji mieszania.
+Inicjuje kontrolowaną sekwencję z sekwencją [ `right.begin()` , `right.end()` ) przy użyciu domyślnego predykatu porządkowania i z domyślną funkcją skrótu. Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej przez obiekt hash_set *po prawej stronie*, przy użyciu domyślnego predykatu porządkowania i funkcji mieszania.
 
 Konstruktor:
 
 `hash_set(hash_set<Key>^ right);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją [`right->begin()`, `right->end()`) przy użyciu domyślnego predykatu porządkowania i z domyślną funkcją skrótu. Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej przez obiekt hash_set *po prawej stronie*, przy użyciu domyślnego predykatu porządkowania i funkcji mieszania.
+Inicjuje kontrolowaną sekwencję z sekwencją [ `right->begin()` , `right->end()` ) przy użyciu domyślnego predykatu porządkowania i z domyślną funkcją skrótu. Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej przez obiekt hash_set *po prawej stronie*, przy użyciu domyślnego predykatu porządkowania i funkcji mieszania.
 
 Konstruktor:
 
 `template<typename InIter> hash_set(InIter first, InIter last);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją [`first`, `last`) przy użyciu domyślnego predykatu porządkowania i z domyślną funkcją skrótu. Służy do przetworzenia kontrolowanej sekwencji kopii kolejnej sekwencji z domyślnym predykatem porządkowania i funkcją skrótu.
+Inicjuje kontrolowaną sekwencję z sekwencją [ `first` , `last` ) przy użyciu domyślnego predykatu porządkowania i z domyślną funkcją skrótu. Służy do przetworzenia kontrolowanej sekwencji kopii kolejnej sekwencji z domyślnym predykatem porządkowania i funkcją skrótu.
 
 Konstruktor:
 
 `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją [`first`, `last`) z predykatem porządkowania *pred*oraz z domyślną funkcją skrótu. Służy do przetworzenia kontrolowanej sekwencji kopii innej sekwencji z określonym predykatem porządkowania i domyślną funkcją skrótu.
+Inicjuje kontrolowaną sekwencję z sekwencją [ `first` , `last` ), z predykatem porządkowania *pred*oraz z domyślną funkcją skrótu. Służy do przetworzenia kontrolowanej sekwencji kopii innej sekwencji z określonym predykatem porządkowania i domyślną funkcją skrótu.
 
 Konstruktor:
 
 `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją [`first`, `last`), z predykatem porządkowania *pred*i funkcją hash *hashfn*. Służy do przetworzenia kontrolowanej sekwencji kopii innej sekwencji z określonym predykatem porządkowania i funkcją skrótu.
+Inicjuje kontrolowaną sekwencję z sekwencją [ `first` , `last` ), z predykatem porządkowania *pred*i funkcją hash *hashfn*. Służy do przetworzenia kontrolowanej sekwencji kopii innej sekwencji z określonym predykatem porządkowania i funkcją skrótu.
 
 Konstruktor:
 
@@ -1530,11 +1530,11 @@ Gdzie w kontenerze do wstawienia (tylko Wskazówka).
 
 Każda funkcja członkowska wstawia sekwencję określoną przez pozostałe operandy.
 
-Pierwsza funkcja członkowska przedsięwzięciach do wstawienia elementu z wartością *Val*i zwraca parę wartości `X`. Jeśli `X.second` ma wartość true, `X.first` wyznacza nowo wstawiony element; w przeciwnym razie `X.first` wyznacza element o równoważnej kolejności, która już istnieje, i nie zostanie wstawiony nowy element. Służy do wstawiania pojedynczego elementu.
+Pierwsza funkcja członkowska przedsięwzięciach do wstawienia elementu z wartością *Val*i zwraca parę wartości `X` . Jeśli `X.second` ma wartość true, `X.first` oznacza nowo wstawiony element; w przeciwnym razie `X.first` oznacza element o równoważnej kolejności, która już istnieje, a nowy element nie zostanie wstawiony. Służy do wstawiania pojedynczego elementu.
 
 Druga funkcja członkowska wstawia element z wartością *Val*przy użyciu instrukcji *WHERE* jako wskazówkę (w celu zwiększenia wydajności) i zwraca iterator, który wyznacza nowo wstawiony element. Służy do wstawiania pojedynczego elementu, który może być przyległy do elementu, który znasz.
 
-Trzecia funkcja członkowska wstawia sekwencję [`first`, `last`). Służy do wstawiania elementów, które zostały skopiowane z innej sekwencji.
+Trzecia funkcja członkowska wstawia sekwencję [ `first` , `last` ). Służy do wstawiania elementów, które zostały skopiowane z innej sekwencji.
 
 Czwarta funkcja członkowska wstawia sekwencję wydaną po *prawej stronie*. Służy do wstawiania sekwencji opisanej przez moduł wyliczający.
 
@@ -1623,7 +1623,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt nieokreślonego typu `T1`, który może obsłużyć iterator dwukierunkowy dla kontrolowanej sekwencji.
+Typ opisuje obiekt nieokreślonego typu `T1` , który może obsłużyć iterator dwukierunkowy dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -1888,7 +1888,7 @@ float load_factor();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `(float)`[hash_set:: size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md)`() /` [hash_set:: bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)`()`. Służy do określania średniego rozmiaru przedziału.
+Funkcja członkowska zwraca `(float)` [hash_set:: size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md) `() /` [hash_set:: bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md) `()` . Służy do określania średniego rozmiaru przedziału.
 
 ### <a name="example"></a>Przykład
 
@@ -1962,12 +1962,12 @@ iterator lower_bound(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*głównych*<br/>
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska określa pierwszy element `X` w kontrolowanej sekwencji, który miesza się do tego samego zasobnika co *klucz* i ma równoważne porządkowanie do *klucza*. Jeśli taki element nie istnieje, zwraca [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; w przeciwnym razie zwraca iterator, który wyznacza `X`. Służy do lokalizowania początku sekwencji elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
+Funkcja członkowska określa pierwszy element `X` w kontrolowanej sekwencji, który miesza się do tego samego zasobnika co *klucz* i ma równoważne porządkowanie do *klucza*. Jeśli taki element nie istnieje, zwraca [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `()` ; w przeciwnym razie zwraca iterator, który wyznacza `X` . Służy do lokalizowania początku sekwencji elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -2019,12 +2019,12 @@ static value_type make_value(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*głównych*<br/>
 Wartość klucza do użycia.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca obiekt `value_type`, którego klucz jest *kluczem*. Służy do redagowania obiektu odpowiedniego do użycia z kilkoma innymi funkcjami składowymi.
+Funkcja członkowska zwraca `value_type` obiekt, którego klucz jest *kluczem*. Służy do redagowania obiektu odpowiedniego do użycia z kilkoma innymi funkcjami składowymi.
 
 ### <a name="example"></a>Przykład
 
@@ -2137,7 +2137,7 @@ Kontener do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator elementu członkowskiego kopiuje *prawo* do obiektu, a następnie zwraca `*this`. Służy do zastępowania kontrolowanej sekwencji kopią kontrolowanej sekwencji *po prawej stronie*.
+Operator elementu członkowskiego kopiuje *prawo* do obiektu, a następnie zwraca **`*this`** . Służy do zastępowania kontrolowanej sekwencji kopią kontrolowanej sekwencji *po prawej stronie*.
 
 ### <a name="example"></a>Przykład
 
@@ -2187,7 +2187,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca iterator odwrotny, który wyznacza ostatni element kontrolowanej sekwencji lub tuż poza początkiem pustej sekwencji. W związku z tym wyznacza `beginning` sekwencji odwrotnej. Służy do uzyskania iteratora, który wyznacza `current` początku kontrolowanej sekwencji widocznej w odwrotnej kolejności, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
+Funkcja członkowska zwraca iterator odwrotny, który wyznacza ostatni element kontrolowanej sekwencji lub tuż poza początkiem pustej sekwencji. W związku z tym określa `beginning` odwrotną sekwencję. Służy do uzyskania iteratora, który wyznacza `current` początek kontrolowanej sekwencji widoczny w kolejności odwrotnej, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2280,7 +2280,7 @@ void rehash();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska ponownie kompiluje tablicę skrótów, upewniając się, że [hash_set:: load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md)`() <=` [hash_set:: max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md). W przeciwnym razie tabela skrótów zwiększa rozmiar tylko w razie konieczności po wstawieniu. (Rozmiar nigdy nie zmniejsza się automatycznie). Służy do dostosowywania rozmiaru tabeli skrótów.
+Funkcja członkowska ponownie kompiluje tablicę skrótów, upewniając się, że [hash_set:: load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md) `() <=` [hash_set:: max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md). W przeciwnym razie tabela skrótów zwiększa rozmiar tylko w razie konieczności po wstawieniu. (Rozmiar nigdy nie zmniejsza się automatycznie). Służy do dostosowywania rozmiaru tabeli skrótów.
 
 ### <a name="example"></a>Przykład
 
@@ -2354,7 +2354,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca iterator odwrotny, który wskazuje tuż poza początkiem kontrolowanej sekwencji. W związku z tym wyznacza `end` sekwencji odwrotnej. Służy do uzyskania iteratora, który wyznacza `current` końca kontrolowanej sekwencji widoczny w odwrotnej kolejności, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
+Funkcja członkowska zwraca iterator odwrotny, który wskazuje tuż poza początkiem kontrolowanej sekwencji. W związku z tym określa `end` odwrotną sekwencję. Służy do uzyskania iteratora, który wyznacza `current` koniec kontrolowanej sekwencji widoczny w odwrotnej kolejności, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2403,7 +2403,7 @@ typedef T3 reverse_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt nieokreślonego typu `T3`, który może działać jako iterator odwrotny dla kontrolowanej sekwencji.
+Typ opisuje obiekt nieokreślonego typu `T3` , który może być używany jako iterator odwrotny dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2445,7 +2445,7 @@ size_type size();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca długość kontrolowanej sekwencji. Służy do określania liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli dowiesz się, czy sekwencja ma rozmiar różny od zera, zobacz [hash_set:: empty (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md)`()`.
+Funkcja członkowska zwraca długość kontrolowanej sekwencji. Służy do określania liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli dowiesz się, czy sekwencja ma rozmiar różny od zera, zobacz [hash_set:: empty (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md) `()` .
 
 ### <a name="example"></a>Przykład
 
@@ -2552,7 +2552,7 @@ Kontener, za pomocą którego ma zostać zamieniony zawartość.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zamienia kontrolowane sekwencje między `this` i *po prawej*. Robi to w stałym czasie i nie zgłasza wyjątków. Jest ona używana jako Szybka metoda wymiany zawartości dwóch kontenerów.
+Funkcja członkowska zamienia kontrolowane sekwencje między **`this`** i *po prawej*. Robi to w stałym czasie i nie zgłasza wyjątków. Jest ona używana jako Szybka metoda wymiany zawartości dwóch kontenerów.
 
 ### <a name="example"></a>Przykład
 
@@ -2665,12 +2665,12 @@ iterator upper_bound(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*głównych*<br/>
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska określa ostatni element `X` w kontrolowanej sekwencji, który miesza się do tego samego zasobnika co *klucz* i ma równoważne porządkowanie do *klucza*. Jeśli taki element nie istnieje lub `X` jest ostatnim elementem w kontrolowanej sekwencji, zwraca [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; w przeciwnym razie zwraca iterator, który wyznacza pierwszy element poza `X`. Służy do lokalizowania końca sekwencji elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
+Funkcja członkowska określa ostatni element `X` w kontrolowanej sekwencji, który miesza się do tego samego zasobnika co *klucz* i ma równoważne porządkowanie do *klucza*. Jeśli taki element nie istnieje lub `X` jest ostatnim elementem w kontrolowanej sekwencji, zwraca [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `()` ; w przeciwnym razie zwraca iterator, który wyznacza pierwszy element poza `X` . Służy do lokalizowania końca sekwencji elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -2811,7 +2811,7 @@ typedef generic_value value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla `generic_value`.
+Typ jest synonimem dla `generic_value` .
 
 ### <a name="example"></a>Przykład
 

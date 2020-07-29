@@ -33,12 +33,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 74935f724b678b08e39604d9916c7c5de5925aee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1a7bbeaf77c94f620a82f77fb1aad3c71c34f2ef
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941297"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221916"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -78,7 +78,7 @@ long double fdiml(
 *x*<br/>
 Pierwsza wartość.
 
-*y*<br/>
+*t*<br/>
 Druga wartość.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -87,14 +87,14 @@ Zwraca dodatnią różnicę z zakresu od *x* do *y*:
 
 |Wartość zwracana|Scenariusz|
 |------------------|--------------|
-|x-y|if x > y|
-|0|Jeśli x < = y|
+|x-y|Jeśli x > y|
+|0|Jeśli x <= y|
 
 W przeciwnym razie może zwrócić jeden z następujących błędów:
 
-|Problem|przesłać|
+|Problem|Przesłać|
 |-----------|------------|
-|Błąd przepełnienia zakresu|\+ HUGE_VAL, + HUGE_VALF lub + HUGE_VALL|
+|Błąd przepełnienia zakresu|+ HUGE_VAL, + HUGE_VALF lub + HUGE_VALL|
 |Błąd zakresu niedopełnienia|poprawna wartość (po zaokrągleniu)|
 |*x* lub *y* jest NaN|NaN|
 
@@ -102,15 +102,15 @@ Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **fdim —** , które pobierają i zwracają **zmiennoprzecinkowe** i **długie** **podwójne** typy. W programie C **fdim —** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **fdim —** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C **fdim —** zawsze przyjmuje i zwraca **`double`** .
 
-Z wyjątkiem obsługi NaN, ta funkcja jest równoważna z `fmax(x - y, 0)`.
+Z wyjątkiem obsługi NaN, ta funkcja jest równoważna z `fmax(x - y, 0)` .
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|C++nagłówki|
+|Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**fdim —** , **fdimf —** , **fdiml**|\<math.h>|\<cmath >|
+|**fdim —**, **fdimf —**, **fdiml**|\<math.h>|\<cmath>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

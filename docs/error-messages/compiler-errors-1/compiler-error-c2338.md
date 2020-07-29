@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - C2338
 ms.assetid: 49bba575-1de4-4963-86c6-ce3226a2ba51
-ms.openlocfilehash: 2a76ecaf78b117b0c1acabd9fcd50c9ae0f73b98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c92a95b97cb4c57d3ad5cfbf8fe1d9980d5362cd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188299"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221214"
 ---
 # <a name="compiler-error-c2338"></a>Błąd kompilatora C2338
 
-> *komunikat o błędzie*
+> *Komunikat o błędzie*
 
-Ten błąd może być spowodowany przez `static_assert` wystąpił błąd podczas kompilacji. Komunikat jest dostarczany przez `static_assert` parametrów.
+Ten błąd może być spowodowany **`static_assert`** błędem podczas kompilacji. Komunikat jest dostarczany przez **`static_assert`** parametry.
 
-Ten komunikat o błędzie mogą być też generowane przez zewnętrznych dostawców w kompilatorze. W większości przypadków te błędy są zgłaszane przez dostawcę atrybutu biblioteki DLL, takie jak ATLPROV. Niektóre typowe rodzaje tego komunikatu, obejmują:
+Ten komunikat o błędzie może być również generowany przez zewnętrznych dostawców do kompilatora. W większości przypadków te błędy są zgłaszane przez bibliotekę DLL dostawcy atrybutów, taką jak ATLPROV. Niektóre typowe formy tego komunikatu obejmują:
 
-- "*atrybut*" dostawca atrybutów Atl: Błąd biblioteki ATL*numer* *wiadomości*
+- "*Attribute*" — dostawca atrybutów ATL: błąd *komunikatu* o*numerze* ATL
 
-- Nieprawidłowe użycie atrybutu "*atrybut*"
+- Nieprawidłowe użycie atrybutu "*Attribute*"
 
-- "*użycia*": nieprawidłowy format atrybutu "użycie"
+- "*użycie*": niepoprawny format atrybutu "Usage"
 
-Te błędy są często nieodwracalny, a następuje błąd krytyczny kompilatora.
+Te błędy są często nieodwracalne i mogą następować krytyczne błędy kompilatora.
 
-Aby rozwiązać te problemy, popraw użycie atrybutu. Na przykład w niektórych przypadkach parametry atrybutów musi być zadeklarowany przed ich użyciem. Jeśli zostanie podany numer błędu ATL, sprawdź w dokumentacji tego błędu, aby uzyskać bardziej szczegółowe informacje.
+Aby rozwiązać te problemy, Popraw użycie atrybutu. Na przykład w niektórych przypadkach parametry atrybutu muszą być zadeklarowane, aby można było ich używać. Jeśli zostanie podany numer błędu ATL, zapoznaj się z dokumentacją tego błędu, aby uzyskać bardziej szczegółowe informacje.

@@ -1,21 +1,21 @@
 ---
-title: Case (C++ atrybut com)
+title: Case (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.case
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: da72fff3bb600b5db2fba0ecdfe9c6a768836f3c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 23330b7b220873725dc566df947f3f3596160029
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167343"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232810"
 ---
 # <a name="case-c"></a>case (C++)
 
-Używany z atrybutem [switch_type](switch-type.md) w **Unii**.
+Używany z atrybutem [switch_type](switch-type.md) w **`union`** .
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,22 +25,22 @@ Używany z atrybutem [switch_type](switch-type.md) w **Unii**.
 
 #### <a name="parameters"></a>Parametry
 
-*value*<br/>
+*wartościami*<br/>
 Możliwa wartość wejściowa, dla której ma zostać przetworzone przetwarzanie. Typ **wartości** może być jednym z następujących typów:
 
-- `int`
+- **`int`**
 
-- `char`
+- **`char`**
 
 - `boolean`
 
-- `enum`
+- **`enum`**
 
 lub identyfikator takiego typu.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **Case** C++ ma takie same funkcje jak atrybut MIDL **przypadku** . Ten atrybut jest używany tylko z atrybutem [switch_type](switch-type.md) .
+Atrybut **Case** języka C++ ma takie same funkcje jak atrybut MIDL **przypadku** . Ten atrybut jest używany tylko z atrybutem [switch_type](switch-type.md) .
 
 ## <a name="example"></a>Przykład
 
@@ -69,15 +69,15 @@ struct SizedValue2 {
 
 |||
 |-|-|
-|**Dotyczy**|Składowa **klasy** lub **struktury**|
+|**Dotyczy**|Składowa a **`class`** lub**`struct`**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty IDL](idl-attributes.md)<br/>
-[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Atrybuty typedef, enum, Union i struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)

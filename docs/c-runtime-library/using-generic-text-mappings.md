@@ -27,80 +27,80 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-ms.openlocfilehash: aa6827607430bf8f0db37997bac0223833fcd171
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8616e0ff660b299544ed3c2f0a12feb4dbfe66b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376058"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221877"
 ---
 # <a name="using-generic-text-mappings"></a>Mapowania zwykłego tekstu
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Aby uprościć tworzenie kodu na różne rynki międzynarodowe, biblioteki wykonawczej Microsoft przewiduje mapowania "generic-text" specyficzne dla firmy Microsoft wiele typów danych, procedury i innych obiektów. Te mapowania są zdefiniowane w TCHAR. H. Te mapowania nazwy służy do pisania ogólnego kodu, który może być kompilowane dla każdego z trzech typów zestawów znaków: ASCII (SBCS), MBCS lub Unicode, w zależności od stała manifestu, można zdefiniować przy użyciu `#define` instrukcji. Mapowania zwykłego tekstu są rozszerzeniami Microsoft, które nie są zgodny ze standardem ANSI.
+Aby uprościć Programowanie kodu dla różnych rynków międzynarodowych, Biblioteka wykonawcza firmy Microsoft zapewnia specyficzne dla firmy Microsoft mapowania "ogólny-tekst" dla wielu typów danych, procedur i innych obiektów. Mapowania te są zdefiniowane w używanie TCHAR. C. Przy użyciu tych mapowań nazw można napisać kod generyczny, który można skompilować dla dowolnego z trzech rodzajów zestawów znaków: ASCII (SBCS), MBCS lub Unicode, w zależności od stałej manifestu zdefiniowanej przy użyciu `#define` instrukcji. Mapowania tekstu ogólnego są rozszerzeniami firmy Microsoft, które nie są zgodne ze standardem ANSI.
 
-### <a name="preprocessor-directives-for-generic-text-mappings"></a>Dyrektywy preprocesora do mapowania zwykłego tekstu
+### <a name="preprocessor-directives-for-generic-text-mappings"></a>Dyrektywy preprocesora dla mapowań tekstu ogólnego
 
-|#define|Skompilowanych wersji|Przykład|
+|#define|Skompilowana wersja|Przykład|
 |--------------|----------------------|-------------|
-|`_UNICODE`|Unicode (szerokich znaków)|`_tcsrev` Mapuje `_wcsrev`|
-|`_MBCS`|Multibyte-character|`_tcsrev` Mapuje `_mbsrev`|
-|None (wartość domyślna: ani `_UNICODE` ani `_MBCS` zdefiniowane)|SBCS (ASCII)|`_tcsrev` Mapuje `strrev`|
+|`_UNICODE`|Unicode (znak dwubajtowy)|`_tcsrev`mapuje do`_wcsrev`|
+|`_MBCS`|Znaki wielobajtowe|`_tcsrev`mapuje do`_mbsrev`|
+|Brak (wartość domyślna: nie jest ani `_UNICODE` `_MBCS` zdefiniowana)|SBCS (ASCII)|`_tcsrev`mapuje do`strrev`|
 
-Na przykład funkcja generic tekst `_tcsrev`zdefiniowaną w TCHAR. Godz., mapuje `mbsrev` Jeśli `MBCS` został zdefiniowany w programie lub do `_wcsrev` Jeśli `_UNICODE` został zdefiniowany. W przeciwnym razie `_tcsrev` mapuje `strrev`.
+Na przykład funkcja generyczna tekstu `_tcsrev` zdefiniowana w używanie TCHAR. H, mapowanie do `mbsrev` if zostało `MBCS` zdefiniowane w programie lub w `_wcsrev` przypadku, gdy został `_UNICODE` zdefiniowany. W przeciwnym razie `_tcsrev` mapuje na `strrev` .
 
-Typ danych — zwykły tekst `_TCHAR`, również zdefiniowanej w TCHAR. H, mapuje do typu `char` Jeśli `_MBCS` jest zdefiniowana na typ `wchar_t` Jeśli `_UNICODE` jest zdefiniowany i wpisz `char` Jeśli żadna stała jest zdefiniowany. W TCHAR znajdują się inne mapowanie typu danych. Godz. w celu ułatwienia programowania, ale `_TCHAR` to typ, który jest najbardziej przydatne.
+Typ danych rodzajowych `_TCHAR` , zdefiniowany również w używanie TCHAR. H mapuje do typu, **`char`** Jeśli `_MBCS` jest zdefiniowany, do typu, jeśli **`wchar_t`** `_UNICODE` jest zdefiniowany, i do typu, **`char`** Jeśli żadna stała nie jest zdefiniowana. Inne mapowania typów danych są dostępne w używanie TCHAR. H dla wygody programowania, ale `_TCHAR` jest to najbardziej użyteczny typ.
 
-### <a name="generic-text-data-type-mappings"></a>Mapowanie typu danych — zwykły tekst
+### <a name="generic-text-data-type-mappings"></a>Mapowanie typu danych tekstu ogólnego
 
-|Nazwa typu danych — zwykły tekst|SBCS (_UNICODE, _MBCS nie zdefiniowano)|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Nazwa typu danych rodzajowych|SBCS (_UNICODE, _MBCS nie zdefiniowany)|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |----------------------------------|--------------------------------------------|--------------------|-----------------------|
-|`_TCHAR`|`char`|`char`|`wchar_t`|
-|`_TINT`|`int`|`int`|`wint_t`|
-|`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|
-|`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|
-|`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|
-|`_T` lub `_TEXT`|Żadnego skutku (usuwane przez preprocesor)|Żadnego skutku (usuwane przez preprocesor)|`L` (konwertuje zgodnie z jego odpowiednikiem Unicode znak lub ciąg)|
+|`_TCHAR`|**`char`**|**`char`**|**`wchar_t`**|
+|`_TINT`|**`int`**|**`int`**|`wint_t`|
+|`_TSCHAR`|**`signed char`**|**`signed char`**|**`wchar_t`**|
+|`_TUCHAR`|**`unsigned char`**|**`unsigned char`**|**`wchar_t`**|
+|`_TXCHAR`|**`char`**|**`unsigned char`**|**`wchar_t`**|
+|`_T` lub `_TEXT`|Brak efektu (usunięty przez preprocesor)|Brak efektu (usunięty przez preprocesor)|`L`(konwertuje następujący znak lub ciąg na odpowiedni odpowiednik Unicode)|
 
-Aby uzyskać pełną listę mapowania typ ogólny tekst procedury, zmienne i innych obiektów, zobacz [mapowania typ ogólny-tekst](../c-runtime-library/generic-text-mappings.md).
+Aby uzyskać pełną listę mapowań tekstu ogólnego procedur, zmiennych i innych obiektów, zobacz [Mapowanie tekstu ogólnego](../c-runtime-library/generic-text-mappings.md).
 
-Poniższe fragmenty kodu pokazują korzystanie z `_TCHAR` i `_tcsrev` do mapowania do MBCS, Unicode i SBCS modele.
+Poniższe fragmenty kodu ilustrują użycie `_TCHAR` i `_tcsrev` dla mapowania do modeli MBCS, Unicode i SBCS.
 
 ```
 _TCHAR *RetVal, *szString;
 RetVal = _tcsrev(szString);
 ```
 
-Jeśli `MBCS` została zdefiniowana, preprocesor mapuje poprzedniego fragmentu z następującym kodem:
+Jeśli `MBCS` został zdefiniowany, preprocesor mapuje poprzedni fragment do następującego kodu:
 
 ```
 char *RetVal, *szString;
 RetVal = _mbsrev(szString);
 ```
 
-Jeśli `_UNICODE` została zdefiniowana, preprocesor mapuje tego samego fragmentu z następującym kodem:
+Jeśli `_UNICODE` został zdefiniowany, preprocesor mapuje ten sam fragment do następującego kodu:
 
 ```
 wchar_t *RetVal, *szString;
 RetVal = _wcsrev(szString);
 ```
 
-Jeśli żadna `_MBCS` ani `_UNICODE` została zdefiniowana, preprocesor mapuje fragment kodowi ASCII jednobajtowe w następujący sposób:
+Jeśli ani nie został `_MBCS` `_UNICODE` zdefiniowany, preprocesor mapuje fragment na jednobajtowy kod ASCII w następujący sposób:
 
 ```
 char *RetVal, *szString;
 RetVal = strrev(szString);
 ```
 
-Ten sposób można napisać, obsługa i skompiluj plik kodu źródłowego pojedynczej do uruchamiania przy użyciu procedur, które są specyficzne dla żadnego z trzech typów zestawów znaków.
+W ten sposób można pisać, konserwować i kompilować pojedynczy plik kodu źródłowego do uruchamiania z procedurami, które są specyficzne dla każdego z trzech rodzajów zestawów znaków.
 
-**END specyficzny dla Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 
-[Mapowania zwykłego tekstu](../c-runtime-library/generic-text-mappings.md)<br/>
-[Mapowania typu danych](../c-runtime-library/data-type-mappings.md)<br/>
-[Mapowania zmiennych globalnych i stałych](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
+[Mapowania tekstu ogólnego](../c-runtime-library/generic-text-mappings.md)<br/>
+[Mapowania typów danych](../c-runtime-library/data-type-mappings.md)<br/>
+[Stałe i globalne mapowania zmiennych](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
 [Mapowania procedur](../c-runtime-library/routine-mappings.md)<br/>
-[Przykładowy ogólny program tekstowy](../c-runtime-library/a-sample-generic-text-program.md)
+[Przykładowy program tekstu ogólnego](../c-runtime-library/a-sample-generic-text-program.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: 2ffb307aa3eb6bb8d253129a550c95342ad497bc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 19f92e2aa62adf1ede4c0e6ab1187fd9e4106e68
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189471"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221695"
 ---
 # <a name="delete-operator-c"></a>delete — Operator (C++)
 
@@ -21,12 +21,12 @@ Zwalnia blok pamięci.
 
 ## <a name="syntax"></a>Składnia
 
-> [`::`] `delete` *wyrażenie cast*\
-> [`::`] `delete []` *wyrażenie cast*
+> [ `::` ] `delete` *wyrażenie cast*\
+> [ `::` ] `delete []` *wyrażenie cast*
 
 ## <a name="remarks"></a>Uwagi
 
-Argument *cast-expression* musi być wskaźnikiem do bloku pamięci, który został wcześniej przydzielony dla obiektu utworzonego za pomocą [operatora new](../cpp/new-operator-cpp.md). Operator **delete** ma wynik typu **void** i w związku z tym nie zwraca wartości. Na przykład:
+Argument *cast-expression* musi być wskaźnikiem do bloku pamięci, który został wcześniej przydzielony dla obiektu utworzonego za pomocą [operatora new](../cpp/new-operator-cpp.md). **`delete`** Operator ma wynik typu **`void`** i w związku z tym nie zwraca wartości. Na przykład:
 
 ```cpp
 CDialog* MyDialog = new CDialog;
@@ -34,9 +34,9 @@ CDialog* MyDialog = new CDialog;
 delete MyDialog;
 ```
 
-Użycie polecenia **delete** na wskaźniku do obiektu, który nie jest przydzielony przy użyciu funkcji **New** , daje nieprzewidywalne wyniki. Można jednak użyć **delete** na wskaźniku o wartości 0. Dzięki temu, gdy **nowe** zwraca wartość 0 w przypadku niepowodzenia, usunięcie wyniku nieudanej **nowej** operacji jest nieszkodliwe. Aby uzyskać więcej informacji, zobacz [Operatory New i DELETE](../cpp/new-and-delete-operators.md).
+Użycie **`delete`** na wskaźniku do obiektu, którego nie przydzielono, **`new`** daje nieprzewidywalne wyniki. Można jednak użyć **`delete`** na wskaźniku o wartości 0. Ten sposób oznacza, że gdy **`new`** zwraca wartość 0 w przypadku niepowodzenia, usunięcie wyniku operacji zakończonej niepowodzeniem **`new`** jest szkodliwe. Aby uzyskać więcej informacji, zobacz [Operatory New i DELETE](../cpp/new-and-delete-operators.md).
 
-Operatorów **New** i **delete** można także używać w przypadku typów wbudowanych, w tym tablic. Jeśli `pointer` odwołuje się do tablicy, umieść puste nawiasy klamrowe (`[]`) przed `pointer`:
+**`new`** Operatory i **`delete`** mogą być również używane dla typów wbudowanych, w tym tablic. Jeśli `pointer` odwołuje się do tablicy, umieść puste nawiasy ( `[]` ) przed `pointer` :
 
 ```cpp
 int* set = new int[100];
@@ -44,13 +44,13 @@ int* set = new int[100];
 delete [] set;
 ```
 
-Użycie operatora **delete** na obiekcie powoduje cofnięcie przydziału pamięci. Program, który odwołuje się do wskaźnika po usunięciu obiektu, może mieć nieprzewidywalne wyniki lub awarię.
+Użycie **`delete`** operatora na obiekcie powoduje cofnięcie przydziału pamięci. Program, który odwołuje się do wskaźnika po usunięciu obiektu, może mieć nieprzewidywalne wyniki lub awarię.
 
-Gdy **delete** jest używany do cofnięcia alokacji pamięci C++ dla obiektu klasy, destruktor obiektu jest wywoływana przed cofnięciem alokacji pamięci obiektu (Jeśli obiekt ma destruktor).
+Gdy **`delete`** jest używany do cofnięcia przydziału pamięci dla obiektu klasy języka C++, destruktor obiektu jest wywoływana przed cofnięciem alokacji pamięci obiektu (Jeśli obiekt ma destruktor).
 
-Jeśli argument operacji operatora **delete** jest modyfikowalną wartością l, jej wartość jest niezdefiniowana po usunięciu obiektu.
+Jeśli argument operacji **`delete`** operatora jest modyfikowalną wartością l, jej wartość jest niezdefiniowana po usunięciu obiektu.
 
-Jeśli określono opcję kompilatora [/SDL (Włącz dodatkowe kontrole zabezpieczeń)](/cpp/build/reference/sdl-enable-additional-security-checks) , operand do operatora **delete** jest ustawiony na nieprawidłową wartość po usunięciu obiektu.
+Jeśli określono opcję kompilatora [/SDL (Włącz dodatkowe kontrole zabezpieczeń)](/cpp/build/reference/sdl-enable-additional-security-checks) , operand do **`delete`** operatora jest ustawiony na nieprawidłową wartość po usunięciu obiektu.
 
 ## <a name="using-delete"></a>Używanie opcji usuwania
 
@@ -80,20 +80,20 @@ int main()
 }
 ```
 
-Dwa następujące przypadki generują niezdefiniowane wyniki: przy użyciu formy tablicowej Delete (`delete []`) w obiekcie i przy użyciu formy DELETE w tablicy.
+Dwa następujące przypadki generują niezdefiniowane wyniki: przy użyciu formy tablicowej Delete ( `delete []` ) dla obiektu oraz przy użyciu formy usuwania z tablicy.
 
 ## <a name="example"></a>Przykład
 
-Przykłady użycia polecenia **delete**można znaleźć w temacie [New Operator](../cpp/new-operator-cpp.md).
+Aby zapoznać się z przykładami użycia **`delete`** , zobacz [New Operator](../cpp/new-operator-cpp.md).
 
 ## <a name="how-delete-works"></a>Jak działa usuwanie
 
 Operator delete wywołuje **operator funkcji Delete**.
 
-Dla obiektów, które nie są typu klasy ([Klasa](../cpp/class-cpp.md), [Struktura](../cpp/struct-cpp.md)lub [Unia](../cpp/unions.md)), jest wywoływany operator usuwania globalnego. W przypadku obiektów typu klasy nazwa funkcji cofania alokacji jest rozpoznawana w zakresie globalnym, jeśli wyrażenie delete zaczyna się od jednoargumentowego operatora rozpoznawania zakresu (`::`). W przeciwnym razie operator delete wywołuje destruktor dla obiektu przed cofnięciem alokacji pamięci (jeśli wskaźnik nie ma wartości null). Operator delete można zdefiniować dla poszczególnych klas. Jeśli nie ma takiej definicji dla danej klasy, zostanie wywołany globalny operator delete. Jeśli wyrażenie delete służy do cofnięcia alokacji obiektu klasy, którego typ statyczny ma destruktor wirtualny, funkcja cofania alokacji jest rozwiązywana przez destruktor wirtualny typu dynamicznego obiektu.
+Dla obiektów, które nie są typu klasy ([Klasa](../cpp/class-cpp.md), [Struktura](../cpp/struct-cpp.md)lub [Unia](../cpp/unions.md)), jest wywoływany operator usuwania globalnego. W przypadku obiektów typu klasy nazwa funkcji cofania alokacji jest rozpoznawana w zakresie globalnym, jeśli wyrażenie delete zaczyna się od jednoargumentowego operatora rozpoznawania zakresu ( `::` ). W przeciwnym razie operator delete wywołuje destruktor dla obiektu przed cofnięciem alokacji pamięci (jeśli wskaźnik nie ma wartości null). Operator delete można zdefiniować dla poszczególnych klas. Jeśli nie ma takiej definicji dla danej klasy, zostanie wywołany globalny operator delete. Jeśli wyrażenie delete służy do cofnięcia alokacji obiektu klasy, którego typ statyczny ma destruktor wirtualny, funkcja cofania alokacji jest rozwiązywana przez destruktor wirtualny typu dynamicznego obiektu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Wyrażenia z operatorami Jednoargumentowymi](../cpp/expressions-with-unary-operators.md)\
-[Słowa kluczowe](../cpp/keywords-cpp.md)\
-[new i delete, operatory](../cpp/new-and-delete-operators.md)
+[Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)\
+[Służąc](../cpp/keywords-cpp.md)\
+[New i DELETE — operatory](../cpp/new-and-delete-operators.md)

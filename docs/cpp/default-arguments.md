@@ -10,12 +10,12 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-ms.openlocfilehash: 0202aaca47964f8923aa57d84515dc70ae8c8a2d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ef0c81501fe37bd27a23daf2dd1c58b3e6a4f6c0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189549"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221734"
 ---
 # <a name="default-arguments"></a>Argumenty domyślne
 
@@ -29,7 +29,7 @@ int print( double dvalue, int prec );  // Print a double with a
 //  given precision.
 ```
 
-W wielu aplikacjach można dostarczyć rozsądną wartość domyślną dla `prec`, eliminując konieczność stosowania dwóch funkcji:
+W wielu aplikacjach można dostarczyć rozsądną wartość domyślną dla `prec` , eliminując konieczność stosowania dwóch funkcji:
 
 ```cpp
 // Prototype two print functions.
@@ -38,7 +38,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.
 ```
 
-Implementacja funkcji `print` jest nieco zmieniana w celu odzwierciedlenia faktu, że tylko jedna taka funkcja istnieje dla typu **Double**:
+Implementacja `print` funkcji jest nieco zmieniana w celu odzwierciedlenia faktu, że tylko jedna taka funkcja istnieje dla typu **`double`** :
 
 ```cpp
 // default_arguments.cpp
@@ -71,7 +71,7 @@ int print( double dvalue, int prec ) {
 }
 ```
 
-Aby wywołać nową funkcję `print`, należy użyć następującego kodu:
+Aby wywołać nową `print` funkcję, należy użyć kodu takiego jak:
 
 ```cpp
 print( d );    // Precision of 2 supplied by default argument.
@@ -102,7 +102,7 @@ Należy pamiętać o tych punktach przy użyciu domyślnych argumentów:
     }
     ```
 
-   Problem z tym kodem polega na tym, że deklaracja funkcji w definicji ponownie definiuje domyślny argument dla `prec`.
+   Problem z tym kodem polega na tym, że deklaracja funkcji w definicji ponownie definiuje domyślny argument dla `prec` .
 
 - Dodatkowe argumenty domyślne mogą być dodawane przez późniejsze deklaracje.
 

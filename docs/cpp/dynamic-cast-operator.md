@@ -1,22 +1,22 @@
 ---
 title: Operator dynamic_cast
-description: Omówienie operatora dynamic_cast C++ języka.
+description: Omówienie operatora dynamic_cast języka C++.
 ms.date: 02/03/2020
 f1_keywords:
 - dynamic_cast_cpp
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-ms.openlocfilehash: d12b338b4b52d81b01097a1e1f5c83ec10eac774
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 15609aeaef815ff89ca196876e1143090c65221b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189497"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221643"
 ---
 # <a name="dynamic_cast-operator"></a>Operator dynamic_cast
 
-Konwertuje operand `expression` na obiekt typu `type-id`.
+Konwertuje operand `expression` na obiekt typu `type-id` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,17 +26,17 @@ dynamic_cast < type-id > ( expression )
 
 ## <a name="remarks"></a>Uwagi
 
-`type-id` musi być wskaźnikiem lub odwołaniem do wcześniej zdefiniowanego typu klasy lub "wskaźnikiem do wartości void". Typ `expression` musi być wskaźnikiem, jeśli `type-id` jest wskaźnikiem lub l-wartością, jeśli `type-id` jest odwołaniem.
+`type-id`Musi być wskaźnikiem lub odwołaniem do wcześniej zdefiniowanego typu klasy lub "wskaźnikiem do void". Typ elementu `expression` musi być wskaźnikiem, jeśli `type-id` jest wskaźnikiem lub l-wartością, jeśli `type-id` jest odwołaniem.
 
 Zobacz [static_cast](../cpp/static-cast-operator.md) , aby uzyskać wyjaśnienie różnic między konwersjami statycznymi a dynamicznymi, i kiedy jest on właściwy do użycia.
 
-Istnieją dwie zmiany w zachowaniu **dynamic_cast** w kodzie zarządzanym:
+Istnieją dwie zmiany w zachowaniu **`dynamic_cast`** w kodzie zarządzanym:
 
-- **dynamic_cast** wskaźnikiem do bazowego typu wyliczenia w ramce będzie kończyć się niepowodzeniem w czasie wykonywania, zwracając 0 zamiast przekonwertowanego wskaźnika.
+- **`dynamic_cast`** na wskaźnik do podstawowego typu wyliczenia w ramce będzie kończyć się niepowodzeniem w czasie wykonywania, zwracając 0 zamiast przekonwertowanego wskaźnika.
 
-- **dynamic_cast** nie będzie już zgłaszać wyjątku, gdy `type-id` jest wskaźnikiem wewnętrznym do typu wartości, a rzutowanie kończy się niepowodzeniem w czasie wykonywania.  Rzutowanie będzie teraz zwracało 0 wartość wskaźnika zamiast zgłaszania.
+- **`dynamic_cast`** nie będzie już `type-id` zgłaszać wyjątku, gdy jest wskaźnikiem wewnętrznym do typu wartości, a rzutowanie kończy się niepowodzeniem w czasie wykonywania.  Rzutowanie będzie teraz zwracało 0 wartość wskaźnika zamiast zgłaszania.
 
-Jeśli `type-id` jest wskaźnikiem do nieniejednoznacznej dostępnej bezpośredniej lub pośredniej klasy podstawowej `expression`, wynik jest wskaźnikiem do unikatowego podobiektu typu `type-id`. Na przykład:
+Jeśli `type-id` jest wskaźnikiem do nieniejednoznacznej dostępnej bezpośredniej lub pośredniej klasy bazowej `expression` , wskaźnik do unikatowego podobiektu typu `type-id` jest wynikiem. Na przykład:
 
 ```cpp
 // dynamic_cast_1.cpp
@@ -55,7 +55,7 @@ void f(D* pd) {
 
 Ten typ konwersji nazywa się "przerzutem", ponieważ przenosi wskaźnik do hierarchii klas z klasy pochodnej do klasy, z której pochodzi. Rzutowanie jest niejawną konwersją.
 
-Jeśli `type-id` jest void *, jest przeprowadzane sprawdzenie w czasie wykonywania w celu określenia rzeczywistego typu `expression`. Wynik jest wskaźnikiem do kompletnego obiektu wskazywanym przez `expression`. Na przykład:
+Jeśli `type-id` jest wartością void *, jest przeprowadzane sprawdzanie czasu wykonania w celu określenia rzeczywistego typu `expression` . Wynik jest wskaźnikiem do kompletnego obiektu wskazywanego przez `expression` . Na przykład:
 
 ```cpp
 // dynamic_cast_2.cpp
@@ -74,9 +74,9 @@ void f() {
 }
 ```
 
-Jeśli `type-id` nie jest typu void *, jest przeprowadzane sprawdzenie w czasie wykonywania, aby sprawdzić, czy obiekt wskazany przez `expression` można skonwertować na typ wskazywany przez `type-id`.
+Jeśli `type-id` wartość nie jest równa void *, sprawdzanie czasu wykonywania jest wykonywane w celu sprawdzenia, czy obiekt wskazywany przez `expression` można przekonwertować na typ wskazywany przez `type-id` .
 
-Jeśli typ `expression` jest klasą bazową typu `type-id`, zostanie wykonane sprawdzenie w czasie wykonywania, aby zobaczyć, czy `expression` rzeczywiście wskazuje na kompletny obiekt typu `type-id`. Jeśli wartość jest równa true, wynik jest wskaźnikiem do kompletnego obiektu typu `type-id`. Na przykład:
+Jeśli typ `expression` jest klasą bazową typu `type-id` , wykonywane jest sprawdzanie w czasie wykonywania, aby zobaczyć `expression` , czy faktycznie wskazuje na kompletny obiekt typu `type-id` . Jeśli wartość jest równa true, wynik jest wskaźnikiem do kompletnego obiektu typu `type-id` . Na przykład:
 
 ```cpp
 // dynamic_cast_3.cpp
@@ -97,9 +97,9 @@ Ten typ konwersji nosi nazwę "downcast", ponieważ przesuwa wskaźnik w dół h
 
 W przypadku wielokrotnego dziedziczenia są wprowadzane możliwości niejednoznaczności. Rozważmy hierarchię klas pokazaną na poniższym rysunku.
 
-W przypadku typów CLR **dynamic_cast** powoduje, że konwersja może zostać wykonana niejawnie lub instrukcji `isinst` MSIL, która wykonuje dynamiczne sprawdzanie i zwraca **nullptr** , jeśli konwersja nie powiedzie się.
+W przypadku typów CLR **`dynamic_cast`** w programie powstaje wartość No-op, jeśli konwersja może zostać wykonana niejawnie lub instrukcji MSIL `isinst` , która wykonuje dynamiczne sprawdzanie i zwraca, **`nullptr`** Jeśli konwersja nie powiedzie się.
 
-Poniższy przykład używa **dynamic_cast** , aby określić, czy Klasa jest wystąpieniem określonego typu:
+Poniższy przykład używa **`dynamic_cast`** do określenia, czy Klasa jest wystąpieniem określonego typu:
 
 ```cpp
 // dynamic_cast_clr.cpp
@@ -125,7 +125,7 @@ int main() {
 ![Hierarchia klas, która pokazuje wielokrotne dziedziczenie](../cpp/media/vc39011.gif "Hierarchia klas, która pokazuje wielokrotne dziedziczenie") <br/>
 Hierarchia klas, która pokazuje wielokrotne dziedziczenie
 
-Wskaźnik do obiektu typu `D` można bezpiecznie rzutować do `B` lub `C`. Jeśli jednak `D` jest rzutowane w celu wskazywania `A` obiektu, którego wystąpienie może być wynikiem `A`? Spowoduje to niejednoznaczny błąd rzutowania. Aby obejść ten problem, można wykonać dwa niejednoznaczne rzuty. Na przykład:
+Wskaźnik do obiektu typu `D` może być bezpiecznie rzutowany na `B` lub `C` . Jeśli jednak `D` rzutowanie wskazuje na `A` obiekt, którego wystąpienie `A` miałoby wynik? Spowoduje to niejednoznaczny błąd rzutowania. Aby obejść ten problem, można wykonać dwa niejednoznaczne rzuty. Na przykład:
 
 ```cpp
 // dynamic_cast_4.cpp
@@ -148,14 +148,14 @@ Dalsze niejasności można wprowadzać w przypadku używania wirtualnych klas ba
 ![Hierarchia klas, która pokazuje wirtualne klasy bazowe](../cpp/media/vc39012.gif "Hierarchia klas, która pokazuje wirtualne klasy bazowe") <br/>
 Hierarchia klas, która pokazuje wirtualne klasy bazowe
 
-W tej hierarchii `A` jest wirtualną klasą bazową. Jeśli wystąpienie klasy `E` i wskaźnik do podobiektu `A`, **dynamic_cast** do wskaźnika do `B` zakończy się niepowodzeniem z powodu niejednoznaczności. Najpierw należy wykonać rzutowanie do kompletnego obiektu `E`, a następnie wykonać kopię zapasową hierarchii w sposób niejednoznaczny, aby dotrzeć do poprawnego obiektu `B`.
+W tej hierarchii, `A` jest wirtualną klasą bazową. Wystąpienie klasy `E` i wskaźnik do `A` podobiektu, **`dynamic_cast`** do wskaźnika do `B` nie powiedzie się z powodu niejednoznaczności. Najpierw należy wykonać rzutowanie do kompletnego `E` obiektu, a następnie wykonać kopię zapasową hierarchii w sposób niejednoznaczny, aby dotrzeć do prawidłowego `B` obiektu.
 
 Rozważmy hierarchię klas pokazaną na poniższym rysunku.
 
 ![Hierarchia klas, która pokazuje zduplikowane klasy bazowe](../cpp/media/vc39013.gif "Hierarchia klas, która pokazuje zduplikowane klasy bazowe") <br/>
 Hierarchia klas, która pokazuje zduplikowane klasy bazowe
 
-W przypadku obiektu typu `E` i wskaźnika do `D` podobiektu, aby przejść z podobiektu `D` do `A` podobiektu z lewej strony, można wykonać trzy konwersje. Można wykonać konwersję **dynamic_cast** ze wskaźnika `D` do wskaźnika `E`, a następnie konwersji ( **dynamic_cast** lub niejawnej konwersji) od `E` do `B`, a na koniec niejawnej konwersji z `B` na `A`. Na przykład:
+Mając obiekt typu `E` i wskaźnik do `D` podobiektu, aby nawigować z `D` podobiektu do obiektu podobiektu z lewej strony `A` , można wykonać trzy konwersje. Można wykonać **`dynamic_cast`** konwersję ze `D` wskaźnika do `E` wskaźnika, a następnie konwersję (albo **`dynamic_cast`** niejawną konwersję) z `E` do i na `B` końcu niejawną konwersję z `B` na `A` . Na przykład:
 
 ```cpp
 // dynamic_cast_5.cpp
@@ -173,9 +173,9 @@ void f(D* pd) {
 }
 ```
 
-Operatora **dynamic_cast** można również użyć do przeprowadzenia "krzyżowego rzutowania". Korzystając z tej samej hierarchii klas, możliwe jest rzutowanie wskaźnika, na przykład, z podobiektu `B` do `D` podobiektu, o ile kompletny obiekt jest typu `E`.
+**`dynamic_cast`** Operatora można także użyć do wykonania "rzutowanie krzyżowe". Korzystając z tej samej hierarchii klas, można rzutować wskaźnik, na przykład, z `B` podobiektu do `D` podobiektu, o ile kompletny obiekt jest typu `E` .
 
-Biorąc pod uwagę rzuty krzyżowe, można w rzeczywistości wykonać konwersję ze wskaźnika, aby `D` do wskaźnika do największej `A` podobiektu w zaledwie dwóch krokach. Można wykonać rzutowanie krzyżowe z `D` na `B`, a następnie niejawną konwersję z `B` do `A`. Na przykład:
+Biorąc pod uwagę rzutowanie krzyżowe, można w rzeczywistości wykonać konwersję ze wskaźnika do `D` wskaźnika do podobiektu znajdującego się po lewej stronie `A` w zaledwie dwóch krokach. Można wykonać rzutowanie krzyżowe z `D` do `B` , a następnie niejawną konwersję z `B` na `A` . Na przykład:
 
 ```cpp
 // dynamic_cast_6.cpp
@@ -192,9 +192,9 @@ void f(D* pd) {
 }
 ```
 
-Wartość wskaźnika o wartości null jest konwertowana na wartość wskaźnika o wartości null typu docelowego przez **dynamic_cast**.
+Wartość wskaźnika o wartości null jest konwertowana na wartość wskaźnika o wartości null typu docelowego przez **`dynamic_cast`** .
 
-Jeśli używasz `dynamic_cast < type-id > ( expression )`, jeśli nie można bezpiecznie skonwertować `expression` do typu `type-id`, sprawdzenie w czasie wykonywania powoduje niepowodzenie rzutowania. Na przykład:
+`dynamic_cast < type-id > ( expression )`Jeśli używasz, jeśli `expression` nie można bezpiecznie skonwertować do typu `type-id` , sprawdzenie w czasie wykonywania powoduje niepowodzenie rzutowania. Na przykład:
 
 ```cpp
 // dynamic_cast_7.cpp
@@ -209,9 +209,9 @@ void f() {
 }
 ```
 
-Wartość nieudanego rzutowania na typ wskaźnika jest wskaźnikiem o wartości null. Rzutowanie na typ referencyjny nie powiodło się, zgłasza [wyjątek bad_cast](../cpp/bad-cast-exception.md).   Jeśli `expression` nie wskazuje lub nie odwołuje się do prawidłowego obiektu, zostanie zgłoszony wyjątek `__non_rtti_object`.
+Wartość nieudanego rzutowania na typ wskaźnika jest wskaźnikiem o wartości null. Rzutowanie na typ referencyjny nie powiodło się, zgłasza [wyjątek bad_cast](../cpp/bad-cast-exception.md).   Jeśli nie `expression` wskazuje lub nie odwołuje się do prawidłowego obiektu, `__non_rtti_object` zostanie zgłoszony wyjątek.
 
-Zobacz [typeid](../cpp/typeid-operator.md) , aby uzyskać wyjaśnienie wyjątku `__non_rtti_object`.
+Aby [typeid](../cpp/typeid-operator.md) uzyskać wyjaśnienie wyjątku, zobacz typeid `__non_rtti_object` .
 
 ## <a name="example"></a>Przykład
 
@@ -291,7 +291,7 @@ in GlobalTest
 Can't cast to C
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operatory rzutowania](../cpp/casting-operators.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

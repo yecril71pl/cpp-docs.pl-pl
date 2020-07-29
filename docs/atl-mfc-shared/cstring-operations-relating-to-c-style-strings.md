@@ -1,5 +1,5 @@
 ---
-title: CString — operacje odnoszące się do ciągów stylu C
+title: Operacje CString odnoszące się do ciągów w stylu C
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CString objects, basic operations
@@ -15,34 +15,34 @@ helpviewer_keywords:
 - strings [C++], class CString
 - casting CString objects
 ms.assetid: 5048de8a-5298-4891-b8a0-c554b5a3ac1b
-ms.openlocfilehash: 406a934d3691c7787085cc319770074ac2ee5926
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bbf483703b04c26c9462e4fe6adb08b614e440f7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317948"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222046"
 ---
-# <a name="cstring-operations-relating-to-c-style-strings"></a>CString — operacje odnoszące się do ciągów stylu C
+# <a name="cstring-operations-relating-to-c-style-strings"></a>Operacje CString odnoszące się do ciągów w stylu C
 
-Obiekt [CString](../atl-mfc-shared/using-cstring.md) zawiera dane ciągu znaków. `CString`dziedziczy zestaw [metod i operatorów,](../atl-mfc-shared/reference/cstringt-class.md) które są zdefiniowane w szablonie klasy [CStringT](../atl-mfc-shared/reference/cstringt-class.md) do pracy z danymi ciągu. (`CString` jest **typedef,** `CStringT` który specjalizuje się do pracy `CString` z rodzaju danych znaków, który obsługuje.)
+Obiekt [CString](../atl-mfc-shared/using-cstring.md) zawiera dane ciągu znaków. `CString`dziedziczy zestaw [metod i operatorów](../atl-mfc-shared/reference/cstringt-class.md) , które są zdefiniowane w szablonie klasy [CStringT](../atl-mfc-shared/reference/cstringt-class.md) do pracy z danymi ciągu. ( `CString` jest to **`typedef`** specjalizacja `CStringT` do pracy z rodzajem danych znakowych obsługiwanych przez program `CString` ).
 
-`CString`nie przechowuje danych znaków wewnętrznie jako ciąg zakończony zerem w stylu C. Zamiast tego `CString` śledzi długość danych znaków, dzięki czemu można bezpieczniej obserwować dane i miejsce, które wymaga.
+`CString`dane znakowe nie są przechowywane wewnętrznie jako ciąg w stylu C zakończony wartością null. Zamiast tego `CString` śledzi długość danych znakowych, dzięki czemu może bezpiecznie oglądać dane i wymagane miejsce.
 
-`CString`akceptuje ciągi w stylu C i udostępnia sposoby dostępu do danych znaków jako ciągu w stylu C. Ten temat zawiera następujące sekcje, które `CString` wyjaśniają, jak używać obiektu tak, jakby był ciągiem zakończonym zerem w stylu C.
+`CString`akceptuje ciągi w stylu C i zapewnia sposoby dostępu do danych znakowych jako ciąg w stylu języka C. Ten temat zawiera następujące sekcje, które wyjaśniają, jak używać `CString` obiektu w taki sposób, jakby był ciągiem typu C zakończonym znakiem null.
 
-- [Konwertowanie ciągów zakończonych zerem w stylu C](#_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string)
+- [Konwertowanie do ciągów zakończonych znakiem null w stylu języka C](#_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string)
 
-- [Praca ze standardowymi funkcjami ciągu biblioteki w czasie wykonywania](#_core_working_with_standard_run.2d.time_library_string_functions)
+- [Praca z funkcjami ciągu standardowej biblioteki wykonawczej](#_core_working_with_standard_run.2d.time_library_string_functions)
 
-- [Bezpośrednie modyfikowanie zawartości CString](#_core_modifying_cstring_contents_directly)
+- [Modyfikowanie zawartości CString bezpośrednio](#_core_modifying_cstring_contents_directly)
 
-- [Używanie obiektów CString z funkcjami argumentów zmiennych](#_core_using_cstring_objects_with_variable_argument_functions)
+- [Używanie obiektów CString z funkcjami zmiennych argumentów](#_core_using_cstring_objects_with_variable_argument_functions)
 
 - [Określanie parametrów formalnych CString](#_core_specifying_cstring_formal_parameters)
 
-## <a name="using-cstring-as-a-c-style-null-terminated-string"></a><a name="_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string"></a>Używanie CString jako ciągu zakończonego w stylu C
+## <a name="using-cstring-as-a-c-style-null-terminated-string"></a><a name="_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string"></a>Używanie CString jako ciągu znaków zakończonych znakiem null w stylu C
 
-Aby użyć `CString` obiektu jako ciągu w stylu C, należy rzutować obiekt na LPCTSTR. W poniższym przykładzie `CString` zwraca wskaźnik do ciągu zakończonego tylko do odczytu c. Funkcja `strcpy` umieszcza kopię ciągu w stylu C `myString`w zmiennej .
+Aby użyć `CString` obiektu jako ciągu w stylu C, rzutowanie obiektu na LPCTSTR. W poniższym przykładzie `CString` zwraca wskaźnik do ciągu języka C w stylu języka c++, który jest zakończony znakiem null. `strcpy`Funkcja umieszcza kopię ciągu w stylu C w zmiennej `myString` .
 
 ```cpp
 CString aCString = "A string";
@@ -50,56 +50,56 @@ char myString[256];
 strcpy(myString, (LPCTSTR)aCString);
 ```
 
-Można użyć `CString` metod, na `SetAt`przykład, aby zmodyfikować poszczególne znaki w obiekcie ciągu. Jednak wskaźnik LPCTSTR jest tymczasowy i staje się `CString`nieprawidłowy, gdy wprowadzana jest jakakolwiek zmiana . Może `CString` również wyjść poza zakres i zostać automatycznie usunięty. Zaleca się, aby uzyskać świeży wskaźnik `CString` LPCTSTR obiektu za każdym razem, gdy używasz jednego.
+Można użyć `CString` metod, na przykład, `SetAt` do modyfikacji pojedynczych znaków w obiekcie String. Jednak wskaźnik LPCTSTR jest tymczasowy i jest nieprawidłowy, gdy zostanie wprowadzona jakakolwiek zmiana `CString` . `CString`Może również wykroczyć zakres i być automatycznie usunięty. Zalecamy uzyskanie nowego LPCTSTRego wskaźnika `CString` obiektu za każdym razem, gdy jest on używany.
 
-Czasami może wymagać `CString` kopii danych do bezpośredniej modyfikacji. Użyj bardziej zabezpieczonej funkcji `strcpy_s` (lub Unicode/MBCS-portable), `_tcscpy_s`aby skopiować `CString` obiekt do oddzielnego buforu. W tym miejscu znaki mogą być bezpiecznie modyfikowane, jak pokazano w poniższym przykładzie.
+Czasami może być konieczne `CString` bezpośrednie modyfikowanie kopii danych. Użyj bardziej zabezpieczonej funkcji `strcpy_s` (lub Unicode/MBCS-Portable `_tcscpy_s` ), aby skopiować `CString` obiekt do oddzielnego buforu. Jest to miejsce, w którym można bezpiecznie zmodyfikować znaki, jak pokazano w poniższym przykładzie.
 
 [!code-cpp[NVC_ATLMFC_Utilities#189](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_1.cpp)]
 
 > [!NOTE]
-> Trzeci argument `strcpy_s` do (lub Unicode/MBCS-portable) `_tcscpy_s`jest `const wchar_t*` (Unicode) `const char*` lub (ANSI). Powyższy przykład `CString` przekazuje dla tego argumentu. Kompilator C++ automatycznie stosuje funkcję konwersji `CString` zdefiniowaną dla `CString` klasy `LPCTSTR`konwertowane na . Możliwość definiowania operacji rzutowania z jednego typu do drugiego jest jedną z najbardziej przydatnych funkcji języka C++.
+> Trzeci argument do `strcpy_s` (lub Unicode/MBCS-Portable `_tcscpy_s` ) ma postać `const wchar_t*` (Unicode) lub `const char*` (ANSI). Powyższy przykład przekazuje `CString` dla tego argumentu. Kompilator języka C++ automatycznie stosuje funkcję konwersji zdefiniowaną dla `CString` klasy, która konwertuje element `CString` na `LPCTSTR` . Możliwość definiowania operacji rzutowania z jednego typu na inny to jedna z najbardziej przydatnych funkcji języka C++.
 
-## <a name="working-with-standard-run-time-library-string-functions"></a><a name="_core_working_with_standard_run.2d.time_library_string_functions"></a>Praca ze standardowymi funkcjami ciągu biblioteki w czasie wykonywania
+## <a name="working-with-standard-run-time-library-string-functions"></a><a name="_core_working_with_standard_run.2d.time_library_string_functions"></a>Praca z funkcjami ciągu standardowej biblioteki wykonawczej
 
-Można znaleźć `CString` metodę wykonywania dowolnej operacji ciągu, dla której można rozważyć użycie standardowych funkcji ciągu `strcmp` biblioteki w czasie wykonywania `_tcscmp`C, takich jak (lub Unicode/MBCS-portable).
+Powinno być możliwe znalezienie `CString` metody w celu wykonania dowolnej operacji na ciągach, dla których można rozważyć użycie standardowych funkcji ciągu biblioteki wykonawczej C, takich jak `strcmp` (lub Unicode/MBCS-Portable `_tcscmp` ).
 
-Jeśli należy użyć funkcji ciągu wykonywania języka C, można użyć technik opisanych w _core_using_cstring_as_a_c.2d.style_null.2d.terminated_string. Obiekt można `CString` skopiować do buforu ciągów w stylu C, wykonać operacje w buforze, a `CString` następnie przypisać wynikowy ciąg w stylu C z powrotem do obiektu.
+Jeśli konieczne jest użycie funkcji ciągu czasu wykonywania języka C, można użyć technik opisanych w _core_using_cstring_as_a_c. 2D. style_null. 2D. terminated_string. Można skopiować `CString` obiekt do równoważnego buforu ciągu języka c, wykonać operacje na buforze, a następnie przypisać otrzymany ciąg stylu c z powrotem do `CString` obiektu.
 
-## <a name="modifying-cstring-contents-directly"></a><a name="_core_modifying_cstring_contents_directly"></a>Bezpośrednie modyfikowanie zawartości cstring
+## <a name="modifying-cstring-contents-directly"></a><a name="_core_modifying_cstring_contents_directly"></a>Modyfikowanie zawartości CString bezpośrednio
 
-W większości sytuacji należy `CString` użyć funkcji członkowskich, `CString` aby zmodyfikować `CString` zawartość obiektu lub przekonwertować ciąg znaków w stylu C.
+W większości sytuacji należy użyć `CString` funkcji składowych, aby zmodyfikować zawartość `CString` obiektu lub skonwertować `CString` ciąg znaków w stylu C.
 
-Istnieją sytuacje, w których ma sens `CString` bezpośrednie modyfikowanie zawartości, na przykład podczas pracy z funkcjami systemu operacyjnego, które wymagają buforu znaków.
+Istnieją sytuacje, w których warto bezpośrednio modyfikować `CString` zawartość, na przykład podczas pracy z funkcjami systemu operacyjnego, które wymagają buforu znaków.
 
-Metody `GetBuffer` `ReleaseBuffer` i oferują dostęp do wewnętrznego `CString` buforu znaków obiektu i umożliwiają jego bezpośrednią modyfikację. Poniższe kroki pokazują, jak korzystać z tych funkcji w tym celu.
+`GetBuffer`Metody i `ReleaseBuffer` oferują dostęp do wewnętrznego buforu znaków `CString` obiektu i pozwalają na ich modyfikowanie bezpośrednio. Poniższe kroki pokazują, jak używać tych funkcji do tego celu.
 
-### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>Aby użyć GetBuffer i ReleaseBuffer, aby uzyskać dostęp do wewnętrznego buforu znaków obiektu CString
+### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>Aby użyć metody GetBuffer i ReleaseBuffer w celu uzyskania dostępu do wewnętrznego buforu znaków obiektu CString
 
-1. Wywołaj `GetBuffer` `CString` obiekt i określ długość buforu, którego potrzebujesz.
+1. Wywołaj `GetBuffer` dla `CString` obiektu i określ długość wymaganego buforu.
 
-1. Użyj wskaźnika `GetBuffer` zwróconego przez do `CString` zapisu znaków bezpośrednio do obiektu.
+1. Użyj wskaźnika zwróconego przez, `GetBuffer` Aby pisać znaki bezpośrednio w `CString` obiekcie.
 
-1. Wywołanie `ReleaseBuffer` `CString` obiektu, aby zaktualizować `CString` wszystkie informacje o stanie wewnętrznym, na przykład długość ciągu. Po zmodyfikowaniu zawartości `CString` obiektu bezpośrednio, należy `ReleaseBuffer` wywołać przed `CString` wywołaniem innych funkcji członkowskich.
+1. Wywołaj metodę `ReleaseBuffer` `CString` , aby zaktualizować wszystkie wewnętrzne `CString` Informacje o stanie, na przykład długość ciągu. Po zmodyfikowaniu zawartości `CString` obiektu należy wywołać `ReleaseBuffer` przed wywołaniem innych `CString` funkcji Członkowskich.
 
-## <a name="using-cstring-objects-with-variable-argument-functions"></a><a name="_core_using_cstring_objects_with_variable_argument_functions"></a>Używanie obiektów CString z funkcjami argumentu zmiennego
+## <a name="using-cstring-objects-with-variable-argument-functions"></a><a name="_core_using_cstring_objects_with_variable_argument_functions"></a>Używanie obiektów CString z funkcjami zmiennych argumentów
 
-Niektóre funkcje C przyjmują zmienną liczbę argumentów. Godnym uwagi `printf_s`przykładem jest . Ze względu na sposób tego rodzaju funkcji jest zadeklarowany, kompilator nie może być pewien typu argumentów i nie można określić, która operacja konwersji do wykonania na każdym argurze. W związku z tym jest niezbędne, aby użyć `CString` jawnego typu rzutowania podczas przekazywania obiektu do funkcji, która przyjmuje zmienną liczbę argumentów.
+Niektóre funkcje języka C przyjmują zmienną liczbę argumentów. Przykładem jest `printf_s` . Ze względu na sposób, w jaki jest zadeklarowany ten rodzaj funkcji, kompilator nie może sprawdzić typu argumentów i nie może określić, która operacja konwersji ma zostać wykonana dla każdego argumentu. W związku z tym należy użyć jawnego rzutowania typu podczas przekazywania `CString` obiektu do funkcji, która przyjmuje zmienną liczbę argumentów.
 
-Aby użyć `CString` obiektu w funkcji argumentu zmiennej, jawnie rzutuj ciąg `CString` LPCTSTR, jak pokazano w poniższym przykładzie.
+Aby użyć `CString` obiektu w funkcji argumentu zmiennej, należy jawnie rzutować `CString` na ciąg LPCTSTR, jak pokazano w poniższym przykładzie.
 
 [!code-cpp[NVC_ATLMFC_Utilities#190](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_2.cpp)]
 
 ## <a name="specifying-cstring-formal-parameters"></a><a name="_core_specifying_cstring_formal_parameters"></a>Określanie parametrów formalnych CString
 
-W przypadku większości funkcji, które wymagają argumentu ciągu, najlepiej jest określić parametr formalny w prototypie funkcji jako `const` wskaźnik do znaku (`LPCTSTR`) zamiast . `CString` Gdy parametr formalny jest `const` określony jako wskaźnik do znaku, można przekazać wskaźnik do tablicy TCHAR, ciąg literału [`"hi there"`], lub `CString` obiekt. Obiekt `CString` zostanie automatycznie przekonwertowany na LPCTSTR. W dowolnym miejscu można użyć LPCTSTR, `CString` można również użyć obiektu.
+W przypadku większości funkcji, które wymagają argumentu ciągu, najlepszym rozwiązaniem jest określenie parametru formalnego w prototypie funkcji jako **`const`** wskaźnika do znaku ( `LPCTSTR` ) zamiast elementu `CString` . Gdy parametr formalny jest określony jako **`const`** wskaźnik do znaku, można przekazać wskaźnik do tablicy używanie TCHAR, ciągu literału [ `"hi there"` ] lub `CString` obiektu. `CString`Obiekt zostanie automatycznie przekonwertowany na LPCTSTR. W dowolnym miejscu możesz użyć LPCTSTR, można również użyć `CString` obiektu.
 
-Można również określić parametr formalny jako odwołanie `const CString&`do ciągu stałego (czyli ), jeśli argument nie zostanie zmodyfikowany. Upuść **const** modyfikator, jeśli ciąg zostanie zmodyfikowany przez funkcję. Jeśli żądana jest domyślna wartość null, zainicjuj ją do ciągu zerowego [`""`], jak pokazano poniżej:
+Można również określić parametr formalny jako odwołanie do ciągu stałego (czyli `const CString&` ), jeśli argument nie zostanie zmodyfikowany. Usuń **`const`** modyfikator, jeśli ciąg zostanie zmodyfikowany przez funkcję. Jeśli jest wymagana domyślna wartość null, zainicjuj ją w ciągu o wartości null [ `""` ], jak pokazano poniżej:
 
 [!code-cpp[NVC_ATLMFC_Utilities#191](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_3.cpp)]
 
-Dla większości wyników funkcji można `CString` po prostu zwrócić obiekt według wartości.
+W przypadku większości wyników funkcji można po prostu zwrócić `CString` obiekt według wartości.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Ciągi (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
-[CString — przekazywanie argumentów](../atl-mfc-shared/cstring-argument-passing.md)
+[Przekazywanie argumentu CString](../atl-mfc-shared/cstring-argument-passing.md)

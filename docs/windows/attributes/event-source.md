@@ -1,5 +1,5 @@
 ---
-title: event_source (C++ atrybut com)
+title: event_source (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.event_source
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - event sources
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
-ms.openlocfilehash: e187e57f21e9c94068c0b3396b93deed617fef2a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a7231b01cd341bbc04bcccd3c2198d1a76dd5e39
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167072"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232771"
 ---
 # <a name="event_source"></a>event_source
 
@@ -30,12 +30,12 @@ Tworzy Źródło zdarzenia.
 
 ### <a name="parameters"></a>Parametry
 
-*type*<br/>
+*Wprowadź*<br/>
 Wyliczenie jednej z następujących wartości:
 
-- `native` dla niezarządzanegoC++ kodu C/Code (domyślnie dla klas niezarządzanych).
+- `native`dla niezarządzanego kodu C/C++ (domyślnie dla klas niezarządzanych).
 
-- `com` dla kodu COM. Należy użyć `coclass`, gdy `type`=`com`. Ta wartość wymaga uwzględnienia następujących plików nagłówkowych:
+- `com`dla kodu COM. Musisz użyć `coclass` `type` = `com` . Ta wartość wymaga uwzględnienia następujących plików nagłówkowych:
 
     ```cpp
     #define _ATL_ATTRIBUTES
@@ -43,17 +43,17 @@ Wyliczenie jednej z następujących wartości:
     #include <atlcom.h>
     ```
 
-*optymalizuj*<br/>
-Gdy *Typ* jest `native`, można określić `optimize=size`, aby wskazać, że jest 4-bajtowy magazyn (minimum) dla wszystkich zdarzeń w klasie lub `optimize=speed` (wartość domyślna), aby wskazać, że istnieją 4 * (liczba zdarzeń) bajty magazynu.
+*zoptymalizować*<br/>
+Gdy *Typ* to `native` , możesz określić `optimize=size` , aby wskazać, że dla wszystkich zdarzeń w klasie lub (wartość domyślna) istnieje 4-bajtowe miejsce w magazynie (minimum) `optimize=speed` .
 
 *dekorować*<br/>
-Gdy *Typ* jest `native`, można określić `decorate=false`, aby wskazać, że rozwinięta nazwa w pliku scalonego (. MRG) nie powinna zawierać otaczającej nazwy klasy. [/FX](../../build/reference/fx-merge-injected-code.md) umożliwia generowanie plików. MRG. `decorate=false`, która jest wartością domyślną, powoduje w pełni kwalifikowane nazwy typów w scalonym pliku.
+Gdy *Typ* to `native` , można określić `decorate=false` , aby wskazać, że rozwinięta nazwa w scalonym pliku (. MRG) nie powinna zawierać otaczającej nazwy klasy. [/FX](../../build/reference/fx-merge-injected-code.md) umożliwia generowanie plików. MRG. `decorate=false`, który jest wartością domyślną, powoduje w pełni kwalifikowane nazwy typów w scalonym pliku.
 
 ## <a name="remarks"></a>Uwagi
 
 Atrybut **event_source** C++ określa, że Klasa lub struktura, do której ma zastosowanie, będzie źródłem zdarzenia.
 
-**event_source** jest używany w połączeniu z atrybutem [event_receiver](event-receiver.md) i słowem kluczowym [__event](../../cpp/event.md) . Użyj `event_receiver`, aby utworzyć odbiorców zdarzeń. Użyj **__event** metod w źródle zdarzenia, aby określić te metody jako zdarzenia.
+**event_source** jest używany w połączeniu z atrybutem [event_receiver](event-receiver.md) i słowem kluczowym [__event](../../cpp/event.md) . Służy `event_receiver` do tworzenia odbiorców zdarzeń. Użyj **`__event`** metod w ramach źródła zdarzeń, aby określić te metody jako zdarzenia.
 
 > [!NOTE]
 > Klasa lub struktura z szablonem nie może zawierać zdarzeń.
@@ -64,14 +64,14 @@ Atrybut **event_source** C++ określa, że Klasa lub struktura, do której ma za
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **Struktura**|
+|**Dotyczy**|**`class`**, **`struct`**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|**Klasa coclass** podczas `type`=`com`|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|**Klasa coclass** , gdy`type`=`com`|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty kompilatora](compiler-attributes.md)<br/>
 [event_receiver](event-receiver.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: 87043315def59bcd7cff706710d988cc0ed37876
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: ff1a9c55dc859016e5fc4210e96bc3fcf1b1fec5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825437"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232784"
 ---
 # <a name="db_command"></a>db_command
 
@@ -44,7 +44,7 @@ Składnia *polecenia* jest następująca:
 
 *Blok parametrów powiązania* jest definiowany w następujący sposób:
 
-> **(\[ ** *BindType* **]** *szVar1* \[, *szVar2* \[, *nVar3* \[,...]]] **)**
+> **( \[ ** *BindType* **]** *szVar1* \[ , *szVar2* \[ , *nVar3* \[ ,...]]] **)**
 
 gdzie:
 
@@ -52,28 +52,28 @@ gdzie:
 
 - **\[***BindType* **]** to jeden z następujących ciągów bez uwzględniania wielkości liter:
 
-  - ** \[Db_column]** tworzy powiązanie każdej zmiennej składowej z kolumną w zestawie wierszy.
+  - ** \[ Db_column]** wiąże wszystkie zmienne Członkowskie z kolumną w zestawie wierszy.
 
-  - ** \[BindTo]** (analogicznie jak ** \[Db_column]**).
+  - ** \[ BindTo]** (tak samo jak ** \[ Db_column]**).
 
-  - ** \[w]** tworzy powiązanie zmiennych składowych jako parametrów wejściowych.
+  - ** \[ in]** wiąże Zmienne Członkowskie jako parametry wejściowe.
 
-  - ** \[out]** tworzy powiązanie zmiennych składowych jako parametrów wyjściowych.
+  - ** \[ out]** tworzy powiązania zmiennych składowych jako parametrów wyjściowych.
 
-  - w, out] ** \[** wiąże Zmienne Członkowskie jako parametry wejściowe/wyjściowe.
+  - ** \[ w, out]** tworzy zmienne składowe jako parametry wejściowe/wyjściowe.
 
 - *szVarX*, *nVarX* jest rozpoznawana jako zmienna członkowska w bieżącym zakresie.
 
 - **)** oznacza koniec bloku powiązania danych.
 
-Jeśli ciąg polecenia zawiera jeden lub więcej specyfikatorów, takich jak \[in], \[out] lub \[in/out], **db_command** kompiluje mapę parametrów.
+Jeśli ciąg polecenia zawiera jeden lub więcej specyfikatorów, takich jak \[ in], \[ out] lub \[ in/out], **db_command** kompiluje mapę parametrów.
 
-Jeśli ciąg polecenia zawiera jeden lub więcej parametrów, takich jak \[Db_column] lub \[BindTo], **db_command** generuje zestaw wierszy i mapę dostępu, aby obsłużyć te zmienne powiązane. Aby uzyskać więcej informacji, zobacz [db_accessor](db-accessor.md) .
+Jeśli ciąg polecenia zawiera jeden lub więcej parametrów, takich jak \[ Db_column] lub \[ BindTo], **db_command** generuje zestaw wierszy i mapę dostępu, aby obsłużyć te zmienne powiązane. Aby uzyskać więcej informacji, zobacz [db_accessor](db-accessor.md) .
 
 > [!NOTE]
 > \[*BindType*] Składnia i parametr *bindings* są nieprawidłowe, gdy jest używany **db_command** na poziomie klasy.
 
-Oto kilka przykładów bloków parametrów powiązań. Poniższy `m_au_fname` przykład wiąże `m_au_lname` i składowe danych z i odpowiednio `au_fname` do `au_lname` kolumn w tabeli autorów w bazie danych pubs:
+Oto kilka przykładów bloków parametrów powiązań. Poniższy przykład wiąże `m_au_fname` i `m_au_lname` składowe danych z i `au_fname` odpowiednio do `au_lname` kolumn w tabeli autorów w bazie danych pubs:
 
 ```cpp
 TCHAR m_au_fname[21];
@@ -90,7 +90,7 @@ TCHAR m_state[3] = 'CA';
 Obowiązkowe Nazwa dojścia używanego do pracy z zestawem wierszy. Jeśli określisz *nazwę*, **db_command** generuje klasę o określonej *nazwie*, która może być używana do przechodzenia zestawu wierszy lub wykonywania wielu zapytań akcji. Jeśli *Nazwa*nie zostanie określona, nie będzie możliwe zwrócenie więcej niż jednego wiersza wyników do użytkownika.
 
 *source_name*<br/>
-Obowiązkowe `CSession` Zmienna lub wystąpienie klasy, `db_source` do której zastosowano polecenie. Zobacz [db_source](db-source.md).
+Obowiązkowe `CSession`Zmienna lub wystąpienie klasy, `db_source` do której zastosowano polecenie. Zobacz [db_source](db-source.md).
 
 **db_command** sprawdza, czy zmienna użyta dla *source_name* jest prawidłowa, więc określona zmienna powinna być w funkcji lub globalnym zakresie.
 
@@ -100,7 +100,7 @@ Obowiązkowe Identyfikuje zmienną, która będzie otrzymywać wartość HRESULT
 *powiązań*<br/>
 Obowiązkowe Umożliwia rozdzielenie parametrów powiązania za pomocą polecenia OLE DB.
 
-Jeśli określisz wartość *powiązań*, **db_command** przeanalizuje skojarzoną wartość i nie przeanalizuje \[parametru *BindType*]. To użycie umożliwia użycie składni dostawcy OLE DB. Aby wyłączyć analizowanie bez parametrów powiązań, określ `Bindings=""`.
+Jeśli określisz wartość *powiązań*, **db_command** przeanalizuje skojarzoną wartość i nie przeanalizuje parametru \[ *BindType*]. To użycie umożliwia użycie składni dostawcy OLE DB. Aby wyłączyć analizowanie bez parametrów powiązań, określ `Bindings=""` .
 
 Jeśli nie określisz wartości *powiązań*, **db_command** przeanalizuje Blok parametrów powiązania, szukając znaku "**(**", po którym następuje **\[** _powiązanietype_**]** w nawiasach, po którym następuje co najmniej jedna zadeklarowana wcześniej zmienna członkowska języka C++, po której następuje znak "**)**". Cały tekst między nawiasami zostanie usunięty z wyniku polecenia i te parametry będą używane do konstruowania powiązań kolumn i parametrów dla tego polecenia.
 
@@ -117,11 +117,11 @@ Jeśli *bulk_fetch* jest mniejsza niż 1, `SetRows` zwróci wartość zero.
 
 **db_command** tworzy obiekt [CCommand](../../data/oledb/ccommand-class.md) , który jest używany przez konsumenta OLE DB do wykonania polecenia.
 
-Można użyć **db_command** z zakresem klasy lub funkcji; Główną różnicą jest zakres `CCommand` obiektu. Wraz z zakresem funkcji dane takie jak powiązania kończą się na końcu funkcji. Użycie zakresów klasy i funkcji obejmuje OLE DB klasy `CCommand<>`szablonu konsumenta, ale argumenty szablonu różnią się w przypadku funkcji i klas. W przypadku funkcji, powiązania zostaną wykonane do obiektu `Accessor` , który składa się ze zmiennych lokalnych, podczas gdy użycie klasy spowoduje wywnioskowanie `CAccessor`klasy pochodnej jako argumentu. Gdy jest używany jako atrybut klasy, **db_command** działa w połączeniu z **Db_column**.
+Można użyć **db_command** z zakresem klasy lub funkcji; Główną różnicą jest zakres `CCommand` obiektu. Wraz z zakresem funkcji dane takie jak powiązania kończą się na końcu funkcji. Użycie zakresów klasy i funkcji obejmuje OLE DB klasy szablonu konsumenta `CCommand<>` , ale argumenty szablonu różnią się w przypadku funkcji i klas. W przypadku funkcji, powiązania zostaną wykonane do obiektu, `Accessor` który składa się ze zmiennych lokalnych, podczas gdy użycie klasy spowoduje wywnioskowanie `CAccessor` klasy pochodnej jako argumentu. Gdy jest używany jako atrybut klasy, **db_command** działa w połączeniu z **Db_column**.
 
 **db_command** może służyć do wykonywania poleceń, które nie zwracają zestawu wyników.
 
-Gdy dostawca atrybutu konsumenta zastosuje ten atrybut do klasy, kompilator zmieni nazwę klasy na \_ *YourClassName*, gdzie *YourClassName* jest nazwą, która została nadana klasie, a kompilator utworzy również klasę o nazwie *YourClassName*, która pochodzi z \_metody dostępu *YourClassName*.  W Widok klasy są wyświetlane obie klasy.
+Gdy dostawca atrybutu konsumenta zastosuje ten atrybut do klasy, kompilator zmieni nazwę klasy na \_ *YourClassName*, gdzie *YourClassName* jest nazwą, która została nadana klasie, a kompilator utworzy również klasę o nazwie *YourClassName*, która pochodzi z \_ metody dostępu *YourClassName*.  W Widok klasy są wyświetlane obie klasy.
 
 ## <a name="example"></a>Przykład
 
@@ -195,7 +195,7 @@ int main(int argc, _TCHAR* argv[]) {
 
 ## <a name="example"></a>Przykład
 
-Ten przykład używa `db_source` na klasie `CMySource`źródła danych i `db_command` w klasach `CCommand1` poleceń i. `CCommand2`
+Ten przykład używa `db_source` na klasie źródła danych `CMySource` i `db_command` w klasach poleceń `CCommand1` i `CCommand2` .
 
 ```cpp
 // db_command_2.cpp
@@ -242,7 +242,7 @@ int main() {
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **Struktura**, element członkowski, metoda, lokalna|
+|**Dotyczy**|**`class`**, **`struct`** , członek, metoda, lokalna|
 |**Powtarzalne**|Nie|
 |**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|

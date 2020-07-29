@@ -2,26 +2,26 @@
 title: Wyjątki i odwijanie stosu w języku C++
 ms.date: 11/19/2019
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
-ms.openlocfilehash: 11657206e86dbc81eb62c1e11b49fd87777f11d8
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: e0dadc90f85caeea359fca4ed0b45868ea77177e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246566"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221565"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>Wyjątki i odwijanie stosu w języku C++
 
 W mechanizmie wyjątków C++, kontrola zostaje przekazana z instrukcji throw do pierwszej instrukcji catch, która może obsłużyć wyrzucony typ. Po osiągnięciu instrukcji catch wszystkie zmienne automatyczne, które są w zakresie między instrukcjami throw i catch, są niszczone w procesie, który jest znany jako odwracanie *stosu*. W odwijaniu stosu, wykonanie przebiega w następujący sposób:
 
-1. Kontrolka osiąga instrukcję **try** przez normalne wykonywanie sekwencyjne. Sekcja chroniona w bloku **try** jest wykonywana.
+1. Formant osiąga **`try`** instrukcję przez normalne wykonywanie sekwencyjne. Sekcja chroniona w **`try`** bloku jest wykonywana.
 
-1. Jeśli podczas wykonywania sekcji chronionej nie wystąpi wyjątek, klauzule **catch** wykonujące blok **try** nie są wykonywane. Wykonywanie jest kontynuowane w instrukcji po ostatniej klauzuli **catch** , która następuje po skojarzonym bloku **try** .
+1. Jeśli podczas wykonywania sekcji chronionej nie wystąpi wyjątek, **`catch`** klauzule znajdujące się po **`try`** bloku nie są wykonywane. Wykonywanie jest kontynuowane w instrukcji po ostatniej **`catch`** klauzuli, która następuje po elemencie skojarzonym **`try`** bloku.
 
-1. Jeśli wyjątek jest zgłaszany podczas wykonywania sekcji chronionej lub w każdej procedurze, którą Sekcja chroniona wywołuje bezpośrednio lub pośrednio, obiekt wyjątku jest tworzony na podstawie obiektu utworzonego przez operand operacji **throw** . (Oznacza to, że może być używany Konstruktor kopiujący). W tym momencie kompilator szuka klauzuli **catch** w wyższym kontekście wykonywania, który może obsłużyć wyjątek zgłoszonego typu lub dla procedury obsługi **catch** , która może obsługiwać dowolny typ wyjątku. Programy obsługi **catch** są badane w kolejności ich występowania po bloku **try** . Jeśli nie zostanie znaleziona odpowiednia procedura obsługi, zostanie sprawdzona Następna dynamicznie otaczający blok **try** . Ten proces jest kontynuowany, dopóki nie zostanie sprawdzony zewnętrzny otaczający blok **try** .
+1. Jeśli wyjątek jest zgłaszany podczas wykonywania sekcji chronionej lub procedury, którą Sekcja chroniona wywołuje bezpośrednio lub pośrednio, obiekt wyjątku jest tworzony na podstawie obiektu utworzonego przez **`throw`** operand. (Oznacza to, że może być używany Konstruktor kopiujący). W tym momencie kompilator szuka **`catch`** klauzuli w wyższym kontekście wykonywania, który może obsłużyć wyjątek zgłoszonego typu lub dla **`catch`** programu obsługi, który może obsługiwać dowolny typ wyjątku. **`catch`** Programy obsługi są badane w kolejności ich występowania po **`try`** bloku. Jeśli nie zostanie znaleziona odpowiednia procedura obsługi, **`try`** zostanie zbadany następny dynamicznie otaczający blok. Ten proces jest kontynuowany do momentu zbadania najbardziej zewnętrznego otaczającego **`try`** bloku.
 
 1. Jeśli nadal nie znaleziono pasującej klauzuli obsługi lub jeśli podczas procesu odwijania wystąpi wyjątek, ale zanim klauzula obsługi przejmie kontrolę, wywoływana jest wstępnie zdefiniowana funkcja `terminate`. Jeśli wyjątek wystąpi po wyrzuceniu wyjątku, ale przed rozpoczęciem odwijania, wywoływane jest `terminate`.
 
-1. Jeśli zostanie znaleziony pasujący program obsługi **catch** i przechwytuje on wartość, jego parametr formalny jest inicjowany przez skopiowanie obiektu Exception. Jeżeli przechwyci kontrolę przez odwołanie, inicjowany jest parametr odwołujący się do obiektu wyjątku. Po zainicjowaniu parametru formalnego, rozpocznie się proces odwijania stosu. Dotyczy to niszczenia wszystkich obiektów automatycznych, które zostały w pełni skonstruowane — ale nie zostały jeszcze zadestruktorne — między początkiem bloku **try** , który jest skojarzony z obsługą **catch** i witryną throw wyjątku. Destrukcja następuje w odwrotnej kolejności do konstrukcji. Procedura obsługi **catch** jest wykonywana, a program wznawia wykonywanie po ostatniej obsłudze — to znaczy, na pierwszej instrukcji lub konstrukcji, która nie jest obsługą **catch** . Kontrolka może wprowadzać tylko procedurę obsługi **catch** poprzez zgłoszony wyjątek, nigdy za pomocą instrukcji **goto** lub etykiety **Case** w instrukcji **Switch** .
+1. W przypadku znalezienia zgodnego **`catch`** programu obsługi i przechwycenia przez wartość jego parametr formalny jest inicjowany przez skopiowanie obiektu Exception. Jeżeli przechwyci kontrolę przez odwołanie, inicjowany jest parametr odwołujący się do obiektu wyjątku. Po zainicjowaniu parametru formalnego, rozpocznie się proces odwijania stosu. Dotyczy to niszczenia wszystkich obiektów automatycznych, które zostały w pełni skonstruowane — ale nie zostały jeszcze zadestruktorne — między początkiem **`try`** bloku, który jest skojarzony z **`catch`** programem obsługi, a lokacją throw wyjątku. Destrukcja następuje w odwrotnej kolejności do konstrukcji. **`catch`** Procedura obsługi jest wykonywana, a program wznawia wykonywanie po ostatniej obsłudze — to znaczy, na pierwszej instrukcji lub konstrukcji, która nie jest **`catch`** programem obsługi. Kontrolka może wprowadzać tylko **`catch`** procedurę obsługi poprzez zgłoszony wyjątek, nigdy za pomocą **`goto`** instrukcji lub **`case`** etykiety w **`switch`** instrukcji.
 
 ## <a name="stack-unwinding-example"></a>Przykład odwinięcia stosu
 

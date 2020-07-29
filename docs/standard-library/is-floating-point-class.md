@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_floating_point class
 - is_floating_point
 ms.assetid: 070679c1-115b-4ee4-8ab7-f52e5d9e157f
-ms.openlocfilehash: c46b74cc9c1d3c6f3a93925d6df46f46d0151e2d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8da613bca165f68ef2e15e2be6291485a89222de
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452593"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222397"
 ---
-# <a name="isfloatingpoint-class"></a>is_floating_point — Klasa
+# <a name="is_floating_point-class"></a>is_floating_point — Klasa
 
 Testuje, czy typ jest liczbą zmiennoprzecinkową.
 
@@ -34,7 +34,7 @@ Typ do zapytania.
 
 Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest typem zmiennoprzecinkowym lub `cv-qualified` postacią typu zmiennoprzecinkowego, w przeciwnym razie ma wartość false.
 
-Typ zmiennoprzecinkowy to jeden z wartości **zmiennoprzecinkowych**, **Double**lub **Long Double**.
+Typ zmiennoprzecinkowy jest jednym z **`float`** , **`double`** lub **`long double`** .
 
 ## <a name="example"></a>Przykład
 
@@ -70,11 +70,11 @@ is_floating_point<float> == true
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[< type_traits >](../standard-library/type-traits.md)\
-[is_integral, klasa](../standard-library/is-integral-class.md)
+[<type_traits>](../standard-library/type-traits.md)\
+[Klasa is_integral](../standard-library/is-integral-class.md)

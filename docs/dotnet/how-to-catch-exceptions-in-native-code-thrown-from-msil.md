@@ -6,18 +6,18 @@ helpviewer_keywords:
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 23adb573a62e93933c487f611c05aed4c08494ef
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 6f2de640a2427bb1ea65d099742967454ca625f6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988269"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221357"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Porady: przechwytywanie wyjątków w kodzie natywnym wygenerowanym w języku MSIL
 
-W kodzie natywnym można wychwycić wyjątek C++ natywny z MSIL.  Wyjątki CLR można przechwycić za pomocą `__try` i `__except`.
+W kodzie natywnym można przechwycić natywny wyjątek C++ z MSIL.  Wyjątki CLR można przechwycić za pomocą `__try` i **`__except`** .
 
-Aby uzyskać więcej informacji, zobacz [Obsługa wyjątków strukturalnych (CC++/)](../cpp/structured-exception-handling-c-cpp.md) i [nowoczesne C++ najlepsze rozwiązania dotyczące wyjątków i obsługi błędów](../cpp/errors-and-exception-handling-modern-cpp.md).
+Aby uzyskać więcej informacji, zobacz [Obsługa wyjątków strukturalnych (C/C++)](../cpp/structured-exception-handling-c-cpp.md) i [nowoczesne najlepsze rozwiązania C++ dotyczące wyjątków i obsługi błędów](../cpp/errors-and-exception-handling-modern-cpp.md).
 
 ## <a name="example"></a>Przykład
 

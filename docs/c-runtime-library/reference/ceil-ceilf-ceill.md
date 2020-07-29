@@ -35,12 +35,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 284443f511217be7873a7d7b02562484b32cefca
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 2cacd0ad9fa08e903d2ab5cff5f73611c85fab3e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507082"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221955"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -83,7 +83,7 @@ Funkcje **ceil —** zwracają wartość zmiennoprzecinkową, która reprezentuj
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ceil —** , które mają typ **float** lub **Long** **Double** . W programie C **ceil —** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ceil —** przyjmujących **`float`** lub **`long double`** . W programie C **ceil —** zawsze przyjmuje i zwraca **`double`** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 

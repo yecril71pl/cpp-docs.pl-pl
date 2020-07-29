@@ -2,12 +2,12 @@
 title: System typów (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: f4a6ea32681ad033b5db9451682c764f0a6d8959
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b9d26f0fc79b2dc5000be6e6a06f51efd3f0b53f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404629"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221552"
 ---
 # <a name="type-system-ccx"></a>System typów (C++/CX)
 
@@ -63,7 +63,7 @@ Aby uzyskać więcej informacji, zobacz [przestrzenie nazw i widoczność typów
 
 Środowisko wykonawcze systemu Windows definiuje następujące podstawowe typy: UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, Double, Char16, Boolean i String. C++/CX obsługuje podstawowe typy liczbowe w swojej domyślnej przestrzeni nazw jako UInt16, UInt32, UInt64, Int16, Int32, Int64, float32, Float64 i char16. Wartość logiczna i ciąg są również zdefiniowane w przestrzeni nazw platformy.
 
-C++/CX definiuje również Uint8, równoważne z `unsigned char` , co nie jest obsługiwane w środowisko wykonawcze systemu Windows i nie może być używane w publicznych interfejsach API.
+C++/CX definiuje również Uint8, równoważne z **`unsigned char`** , co nie jest obsługiwane w środowisko wykonawcze systemu Windows i nie może być używane w publicznych interfejsach API.
 
 Typ podstawowy może dopuszczać wartość null przez zapakowanie go w interfejsie interfejsu [:: IBox](../cppcx/platform-ibox-interface.md) . Aby uzyskać więcej informacji, zobacz [klasy wartości i struktury](../cppcx/value-classes-and-structs-c-cx.md).
 
@@ -71,11 +71,11 @@ Aby uzyskać więcej informacji na temat typów podstawowych, zobacz [podstawowe
 
 ### <a name="strings"></a>Ciągi
 
-Ciąg środowisko wykonawcze systemu Windows jest niezmiennym sekwencją 16-bitowych znaków UNICODE. Ciąg środowisko wykonawcze systemu Windows jest rzutowany jako `Platform::String^` . Ta klasa udostępnia metody tworzenia ciągów, manipulowania i konwersji do i z `wchar_t` .
+Ciąg środowisko wykonawcze systemu Windows jest niezmiennym sekwencją 16-bitowych znaków UNICODE. Ciąg środowisko wykonawcze systemu Windows jest rzutowany jako `Platform::String^` . Ta klasa udostępnia metody tworzenia ciągów, manipulowania i konwersji do i z **`wchar_t`** .
 
 Aby uzyskać więcej informacji, zobacz [ciągi](../cppcx/strings-c-cx.md).
 
-### <a name="arrays"></a>Tablice
+### <a name="arrays"></a>Macierze
 
 Środowisko wykonawcze systemu Windows obsługuje tablice jednowymiarowe dowolnego typu. Tablice tablic nie są obsługiwane.  W języku C++/CX tablice środowisko wykonawcze systemu Windows są rzutowane jako [Klasa platform:: Array](../cppcx/platform-array-class.md).
 
@@ -139,7 +139,7 @@ Klasa enum w środowisko wykonawcze systemu Windows przypomina Wyliczenie w zakr
 
 Aby uzyskać więcej informacji, zobacz [wyliczenia](../cppcx/enums-c-cx.md).
 
-### <a name="delegates"></a>Delegaty
+### <a name="delegates"></a>Delegaci
 
 Delegat w środowisko wykonawcze systemu Windows jest analogiczny do obiektu std:: Function w języku C++. Jest to specjalny rodzaj klasy referencyjnej, który służy do wywoływania funkcji udostępnianych przez klienta, które mają zgodne podpisy.  Delegaty są najczęściej używane w środowisko wykonawcze systemu Windows jako typ zdarzenia.
 
@@ -179,6 +179,6 @@ Opisuje sposób oznaczania publicznych interfejsów API jako przestarzałych prz
 
 Aby uzyskać więcej informacji, zobacz [przestarzałe typy i składowe](../cppcx/deprecating-types-and-members-c-cx.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja języka C++/CX](../cppcx/visual-c-language-reference-c-cx.md)

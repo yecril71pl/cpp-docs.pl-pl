@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _copysign function
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
-ms.openlocfilehash: 1575f0863b56256513cf6a93cf7b63f3d921af57
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4dea95240dcbd3dbbf221ff7af80a9e3ee554e23
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942859"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221942"
 ---
 # <a name="copysign-copysignf-copysignl-_copysign-_copysignf-_copysignl"></a>copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
 
@@ -88,7 +88,7 @@ long double _copysignl(
 *x*<br/>
 Wartość zmiennoprzecinkowa, która jest zwracana jako wielkość wyniku.
 
-*y*<br/>
+*t*<br/>
 Wartość zmiennoprzecinkowa, która jest zwracana jako znak wyniku.
 
 [Procedury obsługi zmiennoprzecinkowej](../../c-runtime-library/floating-point-support.md)
@@ -99,14 +99,14 @@ Funkcje **copysign —** zwracają wartość zmiennoprzecinkową, która łączy
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **copysign —** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** o **podwójnej precyzji** . W programie C **copysign —** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **copysign —** , które pobierają i zwracają **`float`** **`long double`** wartości. W programie C **copysign —** zawsze przyjmuje i zwraca **`double`** .
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_copysign**|\<float.h>|
-|**copysign —** , **copysignf —** , **copysignl**, **_copysignf**, **_copysignl**|\<math.h>|
+|**copysign —**, **copysignf —**, **copysignl**, **_copysignf**, **_copysignl**|\<math.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

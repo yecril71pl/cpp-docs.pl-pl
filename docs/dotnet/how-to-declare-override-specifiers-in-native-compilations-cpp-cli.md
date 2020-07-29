@@ -1,30 +1,30 @@
 ---
-title: 'Jak: Declare Override Specifiers (C++/CLI)'
+title: 'Instrukcje: deklarowanie specyfikatorów przesłonięć (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: 9f3f6855f257d0af250b9bbdd2c0360b308ce775
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c5ed413f403fb12f116633c0e39f9e7b32b2e9f8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374447"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221331"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Porady: deklarowanie specyfikatorów przesłonięć w kompilacjach kodu natywnego (C++/CLI)
 
-[zapieczętowane,](../extensions/sealed-cpp-component-extensions.md) [abstrakcyjne](../extensions/abstract-cpp-component-extensions.md)i [zastępowane](../extensions/override-cpp-component-extensions.md) są dostępne w kompilacjach, które nie używają **/ZW** lub [/clr](../build/reference/clr-common-language-runtime-compilation.md).
+[zapieczętowane](../extensions/sealed-cpp-component-extensions.md), [abstrakcyjne](../extensions/abstract-cpp-component-extensions.md)i [przesłonięcia](../extensions/override-cpp-component-extensions.md) są dostępne w kompilacjach, które nie używają **/zw** lub [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
 > [!NOTE]
-> Język standardowy ISO C++11 ma identyfikator [zastępowania](../cpp/override-specifier.md) i [ostateczny](../cpp/final-specifier.md) identyfikator, a oba `final` są `sealed` obsługiwane w programie Visual Studio Use zamiast w kodzie, który ma być skompilowany jako tylko natywny.
+> Język standardowy ISO C++ 11 ma identyfikator [przesłonięcia](../cpp/override-specifier.md) i [końcowy](../cpp/final-specifier.md) identyfikator, a oba są obsługiwane w programie Visual Studio `final` , a nie **`sealed`** w kodzie, który jest przeznaczony do skompilowania jako tylko natywny.
 
 ## <a name="example"></a>Przykład
 
 ### <a name="description"></a>Opis
 
-Poniższy przykład `sealed` pokazuje, że jest prawidłowy w kompilacjach natywnych.
+Poniższy przykład pokazuje, że **`sealed`** jest prawidłowy w kompilacjach natywnych.
 
-### <a name="code"></a>Code
+### <a name="code"></a>Kod
 
 ```cpp
 // sealed_native_keyword.cpp
@@ -53,7 +53,7 @@ public:
 
 Następny przykład pokazuje, że `override` jest prawidłowy w kompilacjach natywnych.
 
-### <a name="code"></a>Code
+### <a name="code"></a>Kod
 
 ```cpp
 // override_native_keyword.cpp
@@ -73,9 +73,9 @@ public:
 
 ### <a name="description"></a>Opis
 
-W tym `abstract` przykładzie pokazano, że jest prawidłowy w kompilacjach natywnych.
+Ten przykład pokazuje, że **`abstract`** jest prawidłowy w kompilacjach natywnych.
 
-### <a name="code"></a>Code
+### <a name="code"></a>Kod
 
 ```cpp
 // abstract_native_keyword.cpp
@@ -86,6 +86,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Specyfikatory zastąpienia](../extensions/override-specifiers-cpp-component-extensions.md)
+[Specyfikatory przesłonięcia](../extensions/override-specifiers-cpp-component-extensions.md)

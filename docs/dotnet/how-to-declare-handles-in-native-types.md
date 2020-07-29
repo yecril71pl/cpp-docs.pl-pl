@@ -9,24 +9,24 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: 11dbc196a89a224afe02312fbe4dff99d8467f4c
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 1aca21402122a0c8641a7e57ace2a3477ff96f01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988247"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221344"
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>Porady: deklarowanie dojść w typach natywnych
 
-Nie można zadeklarować typu dojścia w typie natywnym. Vcclr. h udostępnia szablon otoki bezpiecznego typu `gcroot`, aby odwołać się do obiektu CLR ze C++ sterty. Ten szablon umożliwia osadzenie dojścia wirtualnego w typie natywnym i traktuje go tak, jakby był typem podstawowym. W większości przypadków można użyć obiektu `gcroot` jako typu osadzonego bez rzutowania. Jednak [w przypadku każdego programu w programie](../dotnet/for-each-in.md)należy użyć `static_cast`, aby pobrać bazowe odwołanie zarządzane.
+Nie można zadeklarować typu dojścia w typie natywnym. Vcclr. h udostępnia szablon otoki bezpiecznego typu, `gcroot` Aby odwołać się do obiektu CLR ze sterty języka C++. Ten szablon umożliwia osadzenie dojścia wirtualnego w typie natywnym i traktuje go tak, jakby był typem podstawowym. W większości przypadków można użyć `gcroot` obiektu jako typu osadzonego bez rzutowania. Jednak [w przypadku każdego z nich](../dotnet/for-each-in.md)należy użyć, **`static_cast`** Aby pobrać bazowe odwołanie zarządzane.
 
-Szablon `gcroot` jest implementowany przy użyciu obiektów klasy wartości system:: Runtime:: InteropServices:: GCHandle, która zapewnia "uchwyty" w stercie zebranych elementów bezużytecznych. Należy zauważyć, że same uchwyty nie są zbierane jako elementy bezużyteczne i są zwalniane, gdy nie są już używane przez destruktor w klasie `gcroot` (tego destruktora nie można wywołać ręcznie). Jeśli utworzysz wystąpienie obiektu `gcroot` na stercie natywnym, musisz wywołać metodę Delete dla tego zasobu.
+`gcroot`Szablon jest implementowany przy użyciu obiektów klasy wartości system:: Runtime:: InteropServices:: GCHandle, który zapewnia "Handles" na stosie zebranych elementów bezużytecznych. Należy zauważyć, że same uchwyty nie są odbierane jako elementy bezużyteczne i są zwalniane, gdy nie są już używane przez destruktor w `gcroot` klasie (tego destruktora nie można wywołać ręcznie). Jeśli tworzysz wystąpienie `gcroot` obiektu na stercie natywnym, musisz wywołać metodę Delete dla tego zasobu.
 
-Środowisko uruchomieniowe będzie zachować skojarzenie między uchwytem a obiektem CLR, do którego się odwołuje. Gdy obiekt CLR jest przenoszony z sterty zebranych elementów bezużytecznych, uchwyt zwróci nowy adres obiektu. Zmienna nie musi być przypięta, zanim zostanie przypisana do szablonu `gcroot`.
+Środowisko uruchomieniowe będzie zachować skojarzenie między uchwytem a obiektem CLR, do którego się odwołuje. Gdy obiekt CLR jest przenoszony z sterty zebranych elementów bezużytecznych, uchwyt zwróci nowy adres obiektu. Zmienna nie musi być przypięta, zanim zostanie przypisana do `gcroot` szablonu.
 
 ## <a name="example"></a>Przykład
 
-Ten przykład pokazuje, jak utworzyć obiekt `gcroot` na stosie natywnym.
+Ten przykład pokazuje, jak utworzyć `gcroot` obiekt na stosie natywnym.
 
 ```cpp
 // mcpp_gcroot.cpp
@@ -53,7 +53,7 @@ hello
 
 ## <a name="example"></a>Przykład
 
-Ten przykład pokazuje, jak utworzyć obiekt `gcroot` na stercie natywnym.
+Ten przykład pokazuje, jak utworzyć `gcroot` obiekt na stercie natywnym.
 
 ```cpp
 // mcpp_gcroot_2.cpp
@@ -83,7 +83,7 @@ hello
 
 ## <a name="example"></a>Przykład
 
-Ten przykład pokazuje, jak używać `gcroot` do przechowywania odwołań do typów wartości (nie typów odwołań) w typie natywnym przy użyciu `gcroot` w typie opakowanym.
+Ten przykład pokazuje, jak używać `gcroot` do przechowywania odwołań do typów wartości (nie typów referencyjnych) w typie natywnym przy użyciu `gcroot` typu opakowanego.
 
 ```cpp
 // mcpp_gcroot_3.cpp
@@ -115,4 +115,4 @@ String in V: Hello
 
 ## <a name="see-also"></a>Zobacz także
 
-[Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[Korzystanie z międzyoperacyjności języka C++ (niejawne PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_assignable
 ms.assetid: aa3aca92-308b-4b1d-b3f3-c54216c48fe7
-ms.openlocfilehash: 9ee8b5f97c92b6eb378db40f93696e5e6c554205
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7130079ff58820ec5a8893fd248c5b98fc10c93c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456018"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222371"
 ---
-# <a name="isnothrowassignable-class"></a>Klasa is_nothrow_assignable
+# <a name="is_nothrow_assignable-class"></a>Klasa is_nothrow_assignable
 
 Testuje, czy wartość typu *from* może być przypisana *do typu,* a przypisanie jest nieznane.
 
@@ -34,11 +34,11 @@ Typ obiektu, który zawiera wartość.
 
 ## <a name="remarks"></a>Uwagi
 
-Wyrażenie `declval<To>() = declval<From>()` musi być poprawnie sformułowane i musi być znane kompilatorowi, aby nie zgłaszać. Oba elementy *od* i *do* muszą być pełnymi typami, **void**lub tablicami nieznanego powiązania.
+Wyrażenie `declval<To>() = declval<From>()` musi być poprawnie sformułowane i musi być znane kompilatorowi, aby nie zgłaszać. Oba elementy *od* i *do* muszą być pełnymi typami **`void`** lub tablicami nieznanego powiązania.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 

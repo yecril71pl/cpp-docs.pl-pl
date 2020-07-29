@@ -1,5 +1,5 @@
 ---
-title: Operatory&gt; pamięci &lt;
+title: '&lt;&gt;Operatory pamięci'
 ms.date: 11/04/2016
 f1_keywords:
 - memory/std::operator!=
@@ -10,16 +10,16 @@ f1_keywords:
 - memory/std::operator<<
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 15762e4853cfd018c7cff997a3ed9ba7d86b3c2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419932"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233057"
 ---
-# <a name="ltmemorygt-operators"></a>Operatory&gt; pamięci &lt;
+# <a name="ltmemorygt-operators"></a>&lt;&gt;Operatory pamięci
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 Testuje pod kątem nierówności między obiektami.
 
@@ -42,10 +42,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Jeden z obiektów do przetestowania pod kątem nierówności.
 
-*prawa*\
+*Kliknij*\
 Jeden z obiektów do przetestowania pod kątem nierówności.
 
 *Ty1*\
@@ -54,15 +54,15 @@ Typ kontrolowany przez lewy udostępniony wskaźnik.
 *Ty2*\
 Typ kontrolowany przez prawy udostępniony wskaźnik.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli obiekty nie są równe; **Fałsz** , jeśli obiekty są równe.
+**`true`** Jeśli obiekty nie są równe; **`false`** Jeśli obiekty są równe.
 
 ### <a name="remarks"></a>Uwagi
 
 Pierwszy operator szablonu zwraca wartość false. (Wszystkie domyślne przydzielenie są równe).
 
-Drugi i trzeci operator szablonu zwracają `!(left == right)`.
+Drugi i trzeci operator szablonu zwracają `!(left == right)` .
 
 ### <a name="example"></a>Przykład
 
@@ -120,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 Testuje równość między obiektami.
 
@@ -143,10 +143,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Jeden z obiektów do sprawdzenia pod kątem równości.
 
-*prawa*\
+*Kliknij*\
 Jeden z obiektów do sprawdzenia pod kątem równości.
 
 *Ty1*\
@@ -155,15 +155,15 @@ Typ kontrolowany przez lewy udostępniony wskaźnik.
 *Ty2*\
 Typ kontrolowany przez prawy udostępniony wskaźnik.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli obiekty są równe, **Fałsz** , jeśli obiekty nie są równe.
+**`true`** Jeśli obiekty są równe, **`false`** Jeśli obiekty nie są równe.
 
 ### <a name="remarks"></a>Uwagi
 
 Pierwszy operator szablonu zwraca wartość true. (Wszystkie domyślne przydzielenie są równe).
 
-Drugi i trzeci operator szablonu zwracają `left.get() ==  right.get()`.
+Drugi i trzeci operator szablonu zwracają `left.get() ==  right.get()` .
 
 ### <a name="example"></a>Przykład
 
@@ -232,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a>&gt;operatora =
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>zakład&gt;=
 
 Testy dla jednego obiektu, który jest większy niż lub równy drugiemu obiektowi.
 
@@ -250,10 +250,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Jeden z obiektów, które mają być porównane.
 
-*prawa*\
+*Kliknij*\
 Jeden z obiektów, które mają być porównane.
 
 *Ty1*\
@@ -264,9 +264,9 @@ Typ kontrolowany przez prawy udostępniony wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
 
-Operatory szablonu zwracają `left.get() >= right.get()`.
+Operatory szablonu zwracają `left.get() >= right.get()` .
 
-## <a name="op_lt"></a>&lt; operatora
+## <a name="operatorlt"></a><a name="op_lt"></a>zakład&lt;
 
 Testy dla jednego obiektu, który jest mniejszy niż drugi obiekt.
 
@@ -284,10 +284,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Jeden z obiektów, które mają być porównane.
 
-*prawa*\
+*Kliknij*\
 Jeden z obiektów, które mają być porównane.
 
 *Ty1*\
@@ -296,7 +296,7 @@ Typ kontrolowany przez lewy wskaźnik.
 *Ty2*\
 Typ kontrolowany przez prawy wskaźnik.
 
-## <a name="op_lt_eq"></a>&lt;operatora =
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>zakład&lt;=
 
 Testy dla jednego obiektu, który jest mniejszy niż lub równy drugiemu obiektowi.
 
@@ -314,10 +314,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Jeden z obiektów, które mają być porównane.
 
-*prawa*\
+*Kliknij*\
 Jeden z obiektów, które mają być porównane.
 
 *Ty1*\
@@ -328,9 +328,9 @@ Typ kontrolowany przez prawy udostępniony wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
 
-Operatory szablonu zwracają `left.get() <= right.get()`
+Operatory szablonu zwracają`left.get() <= right.get()`
 
-## <a name="op_gt"></a>&gt; operatora
+## <a name="operatorgt"></a><a name="op_gt"></a>zakład&gt;
 
 Testy dla jednego obiektu, który jest większy niż drugi obiekt.
 
@@ -348,10 +348,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Jeden z obiektów, które mają być porównane.
 
-*prawa*\
+*Kliknij*\
 Jeden z obiektów, które mają być porównane.
 
 *Ty1*\
@@ -360,7 +360,7 @@ Typ kontrolowany przez lewy udostępniony wskaźnik.
 *Ty2*\
 Typ kontrolowany przez prawy udostępniony wskaźnik.
 
-## <a name="op_lt_lt"></a>&lt;operatora &lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>zakład&lt;&lt;
 
 Zapisuje wspólny wskaźnik do strumienia.
 
@@ -375,21 +375,21 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 *Elem*\
 Typ elementu strumienia.
 
-\ *TR*
+*Zdawczy*\
 Typ cech elementu strumienia.
 
-*Ty*\
+*Br*\
 Typ kontrolowany przez wspólny wskaźnik.
 
-\ *out*
+*określoną*\
 Strumień danych wyjściowych.
 
-\ *SP*
+*requirement*\
 Udostępniony wskaźnik.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca `out << sp.get()`.
+Funkcja szablonu zwraca wartość `out << sp.get()` .
 
 ### <a name="example"></a>Przykład
 

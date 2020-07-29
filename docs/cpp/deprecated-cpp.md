@@ -7,26 +7,26 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-ms.openlocfilehash: e4689d3cb1a1757e2ac3bf4ca9eef7670ad5c655
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 243c75f4726927c54989c33c1738e38938aa5f64
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189484"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221682"
 ---
 # <a name="deprecated-c"></a>przestarzałe (C++)
 
-W tym temacie opisano przestarzałą deklarację declspec zainstalowaną przez firmę Microsoft. Aby uzyskać informacje o atrybucie `[[deprecated]]` języka c++ 14 i wskazówki dotyczące sytuacji, w których należy używać tego atrybutu w porównaniu z declspec lub pragma specyficzna dla firmy Microsoft, zobacz [ C++ atrybuty standardowe](attributes.md).
+W tym temacie opisano przestarzałą deklarację declspec zainstalowaną przez firmę Microsoft. Aby uzyskać informacje na temat atrybutu C++ 14 `[[deprecated]]` i wskazówki dotyczące sytuacji, w których należy używać tego atrybutu w porównaniu z declspec lub pragma specyficzna dla firmy Microsoft, zobacz [atrybuty standardowe języka c++](attributes.md).
 
-Zgodnie z wyjątkami wymienionymi poniżej **przestarzała** deklaracja ma takie same funkcje jak [przestarzała](../preprocessor/deprecated-c-cpp.md) dyrektywa pragma:
+Zgodnie z wyjątkami wymienionymi poniżej, **`deprecated`** Deklaracja oferuje te same funkcje co [przestarzała](../preprocessor/deprecated-c-cpp.md) dyrektywa pragma:
 
-- **Przestarzała** deklaracja pozwala określić określone formy przeciążeń funkcji jako przestarzałe, natomiast formularz pragma dotyczy wszystkich przeciążonych formularzy nazwy funkcji.
+- **`deprecated`** Deklaracja pozwala określić określone formy przeciążeń funkcji jako przestarzałe, natomiast formularz pragma dotyczy wszystkich przeciążonych formularzy nazwy funkcji.
 
-- **Przestarzała** deklaracja pozwala określić komunikat, który będzie wyświetlany w czasie kompilacji. Tekst komunikatu może pochodzić z makra.
+- **`deprecated`** Deklaracja pozwala określić komunikat, który będzie wyświetlany w czasie kompilacji. Tekst komunikatu może pochodzić z makra.
 
-- Makra można oznaczyć tylko jako przestarzałe przy użyciu **przestarzałej** dyrektywy pragma.
+- Makra można oznaczyć tylko jako przestarzałe przy użyciu **`deprecated`** dyrektywy pragma.
 
-Jeśli kompilator napotyka użycie przestarzałego identyfikatora lub standardowego atrybutu [`[[deprecated]]`](attributes.md) , zostanie wygenerowane ostrzeżenie [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) .
+Jeśli kompilator napotyka użycie przestarzałego identyfikatora lub [`[[deprecated]]`](attributes.md) atrybutu standardowego, zostanie wygenerowane ostrzeżenie [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) .
 
 ## <a name="example"></a>Przykład
 
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [__declspec](../cpp/declspec.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

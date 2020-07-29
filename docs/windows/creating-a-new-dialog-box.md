@@ -12,16 +12,16 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: 3eae1aca53c40a33b8d120b02fdde8f68d58b723
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0d5e4836933f1ce32f28c7fd03c81be5b7d09fd9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160428"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222085"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>Instrukcje: Tworzenie okna dialogowego (C++)
 
-W jednostkach okna dialogowego są C++ mierzone lokalizacje i rozmiary okna dialogowego oraz lokalizacje i rozmiary kontrolek. Wartości poszczególnych kontrolek i okna dialogowego pojawiają się w prawym dolnym rogu paska stanu programu Visual Studio po ich wybraniu.
+Położenie i rozmiar okna dialogowego języka C++ oraz lokalizacja i rozmiar kontrolek w niej są mierzone w jednostkach okna dialogowego. Wartości poszczególnych kontrolek i okna dialogowego pojawiają się w prawym dolnym rogu paska stanu programu Visual Studio po ich wybraniu.
 
 > [!NOTE]
 > Jeśli projekt nie zawiera jeszcze pliku. RC, zobacz [Tworzenie nowego pliku skryptu zasobu](../windows/how-to-create-a-resource-script-file.md).
@@ -36,7 +36,7 @@ W jednostkach okna dialogowego są C++ mierzone lokalizacje i rozmiary okna dial
 
 1. W oknie dialogowym **Dodawanie zasobu** wybierz pozycję **okno dialogowe** na liście **Typ zasobu** , a następnie wybierz pozycję **Nowy**.
 
-   Jeśli znak plus ( **+** ) pojawia się obok pola typ zasobów **okna** dialogowego, oznacza to, że szablony okna dialogowego są dostępne. Wybierz znak plus, aby rozwinąć listę szablonów, wybierz szablon i wybierz pozycję **Nowy**.
+   Jeśli **+** obok typu zasobu **okna dialogowego** pojawia się znak plus (), oznacza to, że szablony okna dialogowego są dostępne. Wybierz znak plus, aby rozwinąć listę szablonów, wybierz szablon i wybierz pozycję **Nowy**.
 
    Nowe okno dialogowe zostanie otwarte w **edytorze okien dialogowych**.
 
@@ -46,7 +46,7 @@ Możesz również otworzyć istniejące okna dialogowe w edytorze okien dialogow
 
 Można utworzyć okno dialogowe środowiska uruchomieniowego, którego użytkownik nie może zamknąć. Ten rodzaj okna dialogowego jest przydatny w przypadku logowań oraz dla blokad aplikacji lub dokumentów.
 
-1. W okienku **Właściwości** okna dialogowego Ustaw **wartość false**dla właściwości **menu systemowego** .
+1. W okienku **Właściwości** okna dialogowego Ustaw właściwość **menu system** **`false`** .
 
    To ustawienie powoduje wyłączenie menu systemowego okna dialogowego i przycisku **Zamknij** .
 
@@ -57,7 +57,7 @@ Można utworzyć okno dialogowe środowiska uruchomieniowego, którego użytkown
 Aby włączyć testowanie tego rodzaju okna dialogowego, funkcja okna dialogowego test wykrywa, kiedy naciśnięto **klawisz ESC** . **ESC** jest również znany jako klucz wirtualny VK_ESCAPE. Niezależnie od tego, jak okno dialogowe ma zachowywać się w czasie wykonywania, można zakończyć tryb testowy, naciskając klawisz **ESC**.
 
 > [!NOTE]
-> W przypadku aplikacji MFC, aby utworzyć okno dialogowe, którego użytkownicy nie mogą zakończyć, należy zastąpić domyślne zachowanie `OnOK` i `OnCancel`, ponieważ nawet jeśli usuniesz skojarzone przyciski, okno dialogowe będzie nadal można odrzucić, naciskając klawisz **Enter** lub **ESC**.
+> W przypadku aplikacji MFC, aby utworzyć okno dialogowe, którego użytkownicy nie mogą zakończyć, należy zastąpić zachowanie domyślne `OnOK` i, `OnCancel` ponieważ nawet jeśli usuniesz skojarzone przyciski, okno dialogowe będzie nadal można odrzucić, naciskając klawisz **Enter** lub **ESC**.
 
 ### <a name="to-specify-the-location-and-size-of-a-dialog-box"></a>Aby określić lokalizację i rozmiar okna dialogowego
 
@@ -69,7 +69,7 @@ W [oknie właściwości](/visualstudio/ide/reference/properties-window) można u
 
 - Właściwości **XPos** i **YPos** , które są używane do jawnego definiowania, gdzie zostanie wyświetlone okno dialogowe.
 
-   Te właściwości położenia są wartościami przesunięcia w lewym górnym rogu obszaru wyświetlania, który jest zdefiniowany jako `{X=0, Y=0}`.
+   Te właściwości położenia są wartościami przesunięcia w lewym górnym rogu obszaru wyświetlania, który jest zdefiniowany jako `{X=0, Y=0}` .
 
 - Właściwość **dopasowania bezwzględnego** , która wpływa na pozycję.
 
@@ -92,7 +92,7 @@ Podczas projektowania okna dialogowego można symulować i testować jego zachow
 
 Po przetestowaniu okna dialogowego zwykle jest ono wyświetlane w lokalizacji względem okna głównego programu. Jeśli ustawisz właściwość **bezwzględną Wyrównaj** okno dialogowe na **wartość true**, okno dialogowe jest wyświetlane w pozycji względem lewego górnego rogu ekranu.
 
-1. Gdy **Edytor okien dialogowych** jest aktywnym oknem, przejdź do menu **Format** > **okno dialogowe testowania**.
+1. Gdy **Edytor okien dialogowych** jest aktywnym oknem, przejdź do **Format**  >  **okna dialogowego**formatowanie menu.
 
 1. Aby zakończyć symulację, naciśnij klawisz **ESC** lub wybierz przycisk **Zamknij** w oknie dialogowym, które chcesz przetestować.
 
@@ -100,7 +100,7 @@ Po przetestowaniu okna dialogowego zwykle jest ono wyświetlane w lokalizacji wz
 
 Win32
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Edytor okien dialogowych](../windows/dialog-editor.md)<br/>
 [Instrukcje: Zarządzanie kontrolkami okna dialogowego](../windows/controls-in-dialog-boxes.md)<br/>

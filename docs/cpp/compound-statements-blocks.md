@@ -8,16 +8,16 @@ helpviewer_keywords:
 - blocks, about blocks
 - compound statements
 ms.assetid: 23855939-7430-498e-8936-0c70055ea701
-ms.openlocfilehash: 60d7e88c5ccccac5a1d967a91c8a82dd954d9afc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a06a3d9ce887150ba3333e8e9e874ab337f8b4df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337346"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221812"
 ---
 # <a name="compound-statements-blocks"></a>Instrukcje złożone (bloki)
 
-Instrukcja złożona składa się z instrukcji zero lub więcej ujętych w nawiasach klamrowych (**{ }**). Instrukcja złożona może być używana wszędzie tam, gdzie oczekuje się instrukcji. Instrukcje złożone są powszechnie nazywane "bloki."
+Złożona instrukcja składa się z zero lub więcej instrukcji ujętych w nawiasy klamrowe (**{}**). Złożonej instrukcji można użyć wszędzie tam, gdzie jest oczekiwana instrukcja. Złożone instrukcje są zwykle nazywane "blokami".
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,7 +27,7 @@ Instrukcja złożona składa się z instrukcji zero lub więcej ujętych w nawia
 
 ## <a name="remarks"></a>Uwagi
 
-W poniższym przykładzie użyto instrukcji złożonej jako części *instrukcji* **if** (zobacz [Instrukcja if, aby](../cpp/if-else-statement-cpp.md) uzyskać szczegółowe informacje na temat składni):
+W poniższym przykładzie użyto złożonej instrukcji jako części *instrukcji* **`if`** instrukcji (patrz [instrukcja IF](../cpp/if-else-statement-cpp.md) w celu uzyskania szczegółowych informacji o składni):
 
 ```cpp
 if( Amount > 100 )
@@ -42,8 +42,8 @@ else
 ```
 
 > [!NOTE]
-> Ponieważ deklaracja jest instrukcją, deklaracja może być jedną z instrukcji na *liście instrukcji*. W rezultacie nazwy zadeklarowane wewnątrz instrukcji złożonej, ale nie jawnie zadeklarowane jako statyczne, mają zakres lokalny i (dla obiektów) okres istnienia. Zobacz [Zakres](../cpp/scope-visual-cpp.md) szczegółowe informacje na temat traktowania nazw z zakresem lokalnym.
+> Ponieważ deklaracja jest instrukcją, deklaracja może być jedną z instrukcji na *liście instrukcji*. W związku z tym nazwy zadeklarowane wewnątrz instrukcji złożonej, ale nie są jawnie zadeklarowane jako static, mają zakres lokalny i (dla obiektów) okres istnienia. Zobacz [zakres](../cpp/scope-visual-cpp.md) , aby uzyskać szczegółowe informacje na temat traktowania nazw z zakresem lokalnym.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Omówienie instrukcji języka C++](../cpp/overview-of-cpp-statements.md)

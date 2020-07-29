@@ -37,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 9007f043b64c666d463f46661cfa5f43646e26b7
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ee5cb2c3a05514b4f10f73a2b27199b8e3a5ac4b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506900"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221929"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -77,7 +77,7 @@ Cosinus *x*. Jeśli wartość *x* jest większa lub równa 263 lub mniejsza lub 
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia funkcji **cos** , które przyjmują i zwracają wartości **zmiennoprzecinkowe** lub **długie** **podwójne** . W programie C funkcja **cos** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia funkcji **cos** przyjmujące i zwracające **`float`** **`long double`** wartości lub. W programie C funkcja **cos** zawsze przyjmuje i zwraca **`double`** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 

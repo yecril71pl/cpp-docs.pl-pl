@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: d76c533c278e7f1808eb631e4c94e681b1ae0b6b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ace9421fa8f93f03b0b9ad7dd698474ec90fdf97
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912104"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221981"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -66,7 +66,7 @@ long double cbrtl(
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Wartość zmiennoprzecinkowa
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -79,7 +79,7 @@ Funkcje **cbrt —** zwracają element module-root z *x*.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cbrt —** , które mają typ **float** lub **Long** **Double** . W programie C **cbrt —** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cbrt —** przyjmujących **`float`** lub **`long double`** . W programie C **cbrt —** zawsze przyjmuje i zwraca **`double`** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -87,7 +87,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**cbrt —**, **cbrtf —**, **cbrtl**|\<> Math. h|\<cmath>|
+|**cbrt —**, **cbrtf —**, **cbrtl**|\<math.h>|\<cmath>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -115,7 +115,7 @@ int main( void )
 The cube root of -64.64 is -4.013289
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: f372ae036ff4843532efa18c3d518820b5f06111
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 504bd4fad47d85b0f92603b2cf77a6fca1e9876b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244420"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233018"
 ---
 # <a name="pair-structure"></a>pair — Struktura
 
-Struktury, która zapewnia możliwość traktowania dwa obiekty jako pojedynczy obiekt.
+Struktura, która umożliwia traktowanie dwóch obiektów jako jednego obiektu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -59,28 +59,28 @@ template<class T1, class T2>
 
 ### <a name="parameters"></a>Parametry
 
-*val1*\
-Wartość, inicjowanie pierwszego elementu `pair`.
+*Val1*\
+Wartość inicjująca pierwszy element `pair` .
 
 *Val2*\
-Wartość inicjowanie drugi element `pair`.
+Wartość inicjująca drugi element `pair` .
 
-*po prawej stronie*\
-Para, w której wartości mają być używane do inicjowania elementów tworzonej tablicy inną parę.
+*Kliknij*\
+Para, której wartości mają być używane do inicjowania elementów innej pary.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Pierwszy (domyślny) Konstruktor inicjuje pierwszy element pary domyślnego typu `T1` i drugi element do domyślnego typu `T2`.
+Pierwszy (domyślny) Konstruktor inicjuje pierwszy element pary do domyślnego `T1` elementu Type i Second do default typu `T2` .
 
-Drugi Konstruktor inicjuje pierwszy element pary do *Val1* i drugi do *Val2.*
+Drugi Konstruktor inicjuje pierwszy element pary do *Val1* i sekundę do *val2.*
 
-Trzeci Konstruktor (szablon) inicjuje pierwszy element pary do `Right`. **pierwszy** i drugi do `Right`. **drugi**.
+Trzeci Konstruktor (Template) inicjuje pierwszy element pary do `Right` . **pierwszy** i drugi do `Right` . **sekunda**.
 
-Czwarty Konstruktor inicjuje pierwszy element pary do *Val1* i drugi do *Val2* przy użyciu [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Czwarty Konstruktor inicjuje pierwszy element pary do *Val1* i sekundę do *val2* przy użyciu [rvalue Reference deklarator:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Struktura szablonu przechowuje dwa obiekty typu `T1` i `T2`, odpowiednio. Typ `first_type` jest taka sama jak wartość parametru szablonu `T1` i typ `second_type` jest taka sama jak wartość parametru szablonu `T2`. `T1` i `T2` każdy musi dostarczać konstruktora domyślnego, Konstruktor jednego argumentu i destruktor. Wszystkie elementy członkowskie tego typu `pair` są publiczne, ponieważ typ został zadeklarowany jako `struct` , a nie jako **klasy**. Dwie najbardziej typowe zastosowania parę są typy jako zwracany dla funkcji, które zwracają dwie wartości oraz elementy klas kontenerem [map — klasa](../standard-library/map-class.md) i [multimap — klasa](../standard-library/multimap-class.md) mają zarówno klucz i Typ wartości skojarzone z każdym elementem. Te ostatnie spełnia wymagania dotyczące kontenerem skojarzonych par i ma typ wartości formularza `pair` <  **const**`key_type`, `mapped_type`>.
+Struktura szablonu przechowuje parę obiektów typu `T1` i `T2` , odpowiednio. Typ `first_type` jest taki sam jak parametr szablonu `T1` , a typ jest taki `second_type` sam jak parametr szablonu `T2` . `T1``T2`każdy z nich wymaga tylko konstruktora domyślnego, konstruktora pojedynczego argumentu i destruktora. Wszystkie elementy członkowskie tego typu `pair` są publiczne, ponieważ typ jest zadeklarowany jako a, **`struct`** a nie jako **`class`** . Dwa najczęstsze zastosowania dla pary są jako zwracane typy dla funkcji, które zwracają dwie wartości, a jako elementy klas [mapowania](../standard-library/map-class.md) klasy kontenera i klasy [multimap](../standard-library/multimap-class.md) , które mają zarówno klucz, jak i typ wartości skojarzone z każdym elementem. Druga z nich spełnia wymagania dotyczące pary kontenerów asocjacyjnych i ma typ wartości formularza `pair` <  **`const`** `key_type` , `mapped_type`>.
 
 ## <a name="example"></a>Przykład
 

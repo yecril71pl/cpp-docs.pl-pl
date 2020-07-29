@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2361
 ms.assetid: efbdaeb9-891c-4f7d-97da-89088a8413f3
-ms.openlocfilehash: 747b85b57bee9e53f13a978254798a1dc268ef85
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b95c6459c0ff093d22f3e754f2c7fd6564d2b296
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759896"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221201"
 ---
 # <a name="compiler-error-c2361"></a>Błąd kompilatora C2361
 
 Inicjalizacja elementu "identifier" jest pomijana przez etykietę "default"
 
-Inicjalizację `identifier` można pominąć w instrukcji `switch`. Nie można przeskoczyć do wcześniejszej deklaracji z inicjatorem, chyba że deklaracja jest ujęta w bloku. (Chyba że jest zadeklarowany w bloku, zmienna jest w zakresie do końca instrukcji `switch`).
+Inicjowanie `identifier` można pominąć w **`switch`** instrukcji. Nie można przeskoczyć do wcześniejszej deklaracji z inicjatorem, chyba że deklaracja jest ujęta w bloku. (Chyba że jest zadeklarowany wewnątrz bloku, zmienna jest w zakresie do końca **`switch`** instrukcji).
 
 Poniższy przykład generuje C2361:
 

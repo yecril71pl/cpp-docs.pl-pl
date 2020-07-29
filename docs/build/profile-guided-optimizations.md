@@ -5,12 +5,12 @@ helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-ms.openlocfilehash: 062f8fb8138446e4a00ba6501d6eeb8571625749
-ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
+ms.openlocfilehash: efa4c35810f6272b89ff11cd1c890a7f535cfc1c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777321"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232732"
 ---
 # <a name="profile-guided-optimizations"></a>Optymalizacje sterowane profilem
 
@@ -68,7 +68,7 @@ Optymalizacje oparte na profilach obejmują następujące testy i ulepszenia:
 
 - **Układ funkcji** — na podstawie grafu wywołań i PROFILOWANEGO zachowania wywołującego/wywoływanego, funkcje, które mają być wzdłuż tej samej ścieżki wykonywania, są umieszczane w tej samej sekcji.
 
-- **Optymalizacja rozgałęzienia warunkowego** — z sondami wartości, optymalizacje oparte na profilach mogą stwierdzić, czy dana wartość w instrukcji switch jest używana częściej niż inne wartości.  Następnie taką wartość można usunąć z instrukcji switch.  Tę samą opcję można wykonać za pomocą `if` ... instrukcje, w `else` których Optymalizator może zamówić `if` ..., `else` tak aby `if` `else` blok lub został umieszczony w pierwszej kolejności, w zależności od tego, który blok jest częściej prawdziwe.
+- **Optymalizacja rozgałęzienia warunkowego** — z sondami wartości, optymalizacje oparte na profilach mogą stwierdzić, czy dana wartość w instrukcji switch jest używana częściej niż inne wartości.  Następnie taką wartość można usunąć z instrukcji switch.  Tę samą opcję można wykonać za pomocą **`if`** ... instrukcje, w **`else`** których Optymalizator może zamówić **`if`** ..., **`else`** tak aby **`if`** **`else`** blok lub został umieszczony w pierwszej kolejności, w zależności od tego, który blok jest częściej prawdziwe.
 
 - Niedziałanie **separacji kodu** — kod, który nie jest wywoływany podczas profilowania, jest przenoszony do specjalnej sekcji, która jest dołączana na końcu zestawu sekcji. Efektywnie utrzymujemy tę sekcję na często używanych stronach.
 
@@ -95,6 +95,6 @@ Narzędzie wiersza polecenia, które dodaje dane profilu z jednego lub więcej `
 [Instrukcje: Scalanie wielu profilów PGO w jeden profil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
 Przykłady użycia **pgomgr** .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dodatkowe narzędzia kompilacji kompilatora MSVC](reference/c-cpp-build-tools.md)

@@ -4,60 +4,60 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: 05b9d8bcf5d7364e1dcd31940bc0db64a5e605f1
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: a42caaf07f6ec0c71f63d6a0df8a79fff6f737e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447307"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221448"
 ---
 # <a name="friend-assemblies-c"></a>Przyjazne zestawy (C++)
 
-Aby uzyskać odpowiednie środowiska uruchomieniowe *przyjaznych zestawów* funkcja językowa sprawia, że typy, które są w zakresie przestrzeni nazw lub zakresie globalnym w dostępna dla zestawów klientów lub modułów .netmodule składnika zestawu.
+W przypadku odpowiednich środowisk uruchomieniowych funkcja języka *zaprzyjaźnionych zestawów* tworzy typy, które są w zakresie przestrzeni nazw lub globalnym zakresie w składniku zestawu dostępnym dla jednego lub kilku zestawów klienta lub modułów.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
 **Uwagi**
 
-(Ta funkcja język nie jest obsługiwana w wszystkie środowiska uruchomieniowe).
+(Ta funkcja języka nie jest obsługiwana we wszystkich środowiskach uruchomieniowych).
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
 **Uwagi**
 
-(Ta funkcja języka nie jest obsługiwana w środowisku uruchomieniowym Windows).
+(Ta funkcja języka nie jest obsługiwana w środowisko wykonawcze systemu Windows).
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora: **/ZW**
+Opcja kompilatora: **/zw**
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
 **Uwagi**
 
-#### <a name="to-make-types-at-namespace-scope-or-global-scope-in-an-assembly-component-accessible-to-a-client-assembly-or-netmodule"></a>Aby udostępnić typów w zakresie przestrzeni nazw lub zasięgu globalnym w składniku zestawu do klienta, zestaw lub moduł .netmodule
+#### <a name="to-make-types-at-namespace-scope-or-global-scope-in-an-assembly-component-accessible-to-a-client-assembly-or-netmodule"></a>Aby wprowadzić typy w zakresie przestrzeni nazw lub globalnym zakresie w składniku zestawu dostępnym dla zestawu klienta lub modułu.
 
-1. W składniku, określ atrybut zestawu <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>i przekazywać nazwę jednostki zestaw klienta lub moduł .netmodule, który będzie uzyskiwać dostęp do typów w zakresie przestrzeni nazw lub zakresie globalnym w składniku.  Można określić wiele zestawów klientów lub modułów .netmodule przez określenie dodatkowych atrybutów.
+1. W składniku Określ atrybut zestawu <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> i przekaż nazwę zestawu klienta lub moduł, który będzie miał dostęp do typów w zakresie przestrzeni nazw lub w zakresie globalnym w składniku.  Można określić wiele zestawów klienta lub modułów, określając dodatkowe atrybuty.
 
-1. W zestawie klienta lub .netmodule, gdy odwołujesz się zestaw składników za pomocą `#using`, przekazać `as_friend` atrybutu.  Jeśli określisz `as_friend` atrybutu dla zestawu, który nie określa `InternalsVisibleToAttribute`, jeśli zostanie podjęta próba dostęp do typu w zakresie przestrzeni nazw lub zakresie globalnym w składniku zostanie zgłoszony wyjątek czasu wykonywania.
+1. W zestawie klienta lub module, podczas odwoływania się do zestawu składników przy użyciu, należy `#using` przekazać **`as_friend`** atrybut.  Jeśli określisz **`as_friend`** atrybut zestawu, który nie `InternalsVisibleToAttribute` zostanie określony, zostanie wygenerowany wyjątek czasu wykonywania, jeśli spróbujesz uzyskać dostęp do typu w zakresie przestrzeni nazw lub zakresu globalnego w składniku.
 
-Spowoduje to błąd kompilacji, jeśli zestaw zawiera <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybut nie ma silnej nazwy, ale zestaw klienta, który używa `as_friend` atrybut zapewnia.
+Jeśli zestaw zawierający <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybut nie ma silnej nazwy, ale zestaw klienta, który używa tego atrybutu, zostanie zwrócony błąd kompilacji **`as_friend`** .
 
-Mimo że typów w zakresie przestrzeni nazw i zakresu globalnego może być znane klienta zestaw lub moduł .netmodule, dostępność składowej jest nadal obowiązują.  Na przykład nie można uzyskać dostępu od prywatnej składowej.
+Mimo że typy w zakresie przestrzeni nazw i zakres globalny mogą być znane w zestawie klienta lub module, ułatwienia dostępu członków nadal obowiązują.  Na przykład nie można uzyskać dostępu do prywatnego elementu członkowskiego.
 
-Dostęp do wszystkich typów w zestawie, muszą zostać przyznane jawnie.  Na przykład zestaw C nie ma dostępu do wszystkich typów w zestawie, A Jeśli zestaw B odwołuje się do zestawu języka C, a zestaw B ma dostęp do wszystkich typów w zestawie A.
+Dostęp do wszystkich typów w zestawie musi być jawnie przyznany.  Na przykład zestaw C nie ma dostępu do wszystkich typów w zestawie A, jeśli zestaw C odwołuje się do zestawu B, a zestaw B ma dostęp do wszystkich typów w zestawie A.
 
-Aby uzyskać informacje dotyczące sposobu podpisywania — czyli udzielanie silnej nazwy do — zestawu, który jest kompilowany przez korzystanie z programu Microsoft C++ kompilatora, zobacz [zestawy o silnej nazwach (podpisywanie zestawów) (C++sposób niezamierzony)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+Aby uzyskać informacje na temat sposobu podpisywania — to znaczy, jak nadać silną nazwę, zestawowi skompilowanemu przy użyciu kompilatora języka Microsoft C++, zobacz [zestawy silnej nazwy (podpisywanie zestawów) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
-Alternatywa przy użyciu funkcji zestawów friend, można użyć <xref:System.Security.Permissions.StrongNameIdentityPermission> ograniczyć dostęp do poszczególnych typów.
+Alternatywą dla korzystania z funkcji zaprzyjaźnionych zestawów jest możliwość <xref:System.Security.Permissions.StrongNameIdentityPermission> ograniczenia dostępu do poszczególnych typów.
 
 ### <a name="requirements"></a>Wymagania
 
-— Opcja kompilatora:   **/CLR**
+Opcja kompilatora: **/CLR**
 
 ### <a name="examples"></a>Przykłady
 
-Poniższy przykład kodu określa składnik, który określa zestaw klienta, który ma dostęp do typów w składniku.
+Poniższy przykład kodu definiuje składnik określający zestaw klienta, który ma dostęp do typów w składniku.
 
 ```cpp
 // friend_assemblies.cpp
@@ -75,7 +75,7 @@ public:
 };
 ```
 
-W kolejnym przykładzie kod uzyskuje dostęp do prywatnej typu składnika.
+Następny przykład kodu uzyskuje dostęp do typu prywatnego w składniku.
 
 ```cpp
 // friend_assemblies_2.cpp
@@ -92,9 +92,9 @@ int main() {
 Class1::Test_Public
 ```
 
-Następny przykład kodu definiuje składnika, ale nie określa zestawu klienta, który będzie miał dostęp do typów w składniku.
+Następny przykład kodu definiuje składnik, ale nie określa zestawu klienta, który będzie miał dostęp do typów w składniku.
 
-Należy zauważyć, że składnik jest połączony za pomocą **/ opt: noref**. Daje to gwarancję, że prywatnej typy są emitowane w metadanych składnika, który nie jest wymagane podczas `InternalsVisibleTo` atrybut był obecny. Aby uzyskać więcej informacji, zobacz [od (optymalizacje)](../build/reference/opt-optimizations.md).
+Zwróć uwagę, że składnik jest połączony za pomocą **/OPT: NOREF**. Gwarantuje to, że typy prywatne są emitowane w metadanych składnika, co nie jest wymagane, gdy `InternalsVisibleTo` atrybut jest obecny. Aby uzyskać więcej informacji, zobacz [/opt (optymalizacje)](../build/reference/opt-optimizations.md).
 
 ```cpp
 // friend_assemblies_3.cpp
@@ -109,7 +109,7 @@ public:
 };
 ```
 
-Poniższy kod definiuje klienta, który próbuje uzyskać dostęp prywatny typ składnika, który nie daje dostęp do swojej prywatnej typów. Ze względu na zachowanie aparatu plików wykonywalnych Jeśli chcesz przechwytywać wyjątek, musi próbie uzyskania dostępu prywatny typ w funkcji pomocnika.
+Poniższy przykład kodu definiuje klienta próbującego uzyskać dostęp do typu prywatnego w składniku, który nie zapewnia dostępu do jego typów prywatnych. W związku z zachowaniem środowiska uruchomieniowego, jeśli chcesz przechwytywać wyjątek, musisz próbować uzyskać dostęp do typu prywatnego w funkcji pomocnika.
 
 ```cpp
 // friend_assemblies_4.cpp
@@ -136,7 +136,7 @@ int main() {
 caught an exception
 ```
 
-Następny przykład kodu pokazuje, jak utworzyć składnika silnej nazwy, który określa zestaw klienta, który będzie miał dostęp do typów w składniku.
+Następny przykład kodu pokazuje, jak utworzyć składnik o silnej nazwie, który określa zestaw klienta, który będzie miał dostęp do typów w składniku.
 
 ```cpp
 // friend_assemblies_5.cpp
@@ -155,19 +155,19 @@ public:
 };
 ```
 
-Należy zauważyć, że składnika należy określić swojego klucza publicznego. Sugerujemy, uruchom następujące polecenia sekwencyjnie w wierszu polecenia, aby utworzyć parę kluczy i uzyskać klucz publiczny:
+Należy zauważyć, że składnik musi określić swój klucz publiczny. Sugerujemy uruchomienie następujących poleceń sekwencyjnie w wierszu polecenia, aby utworzyć parę kluczy i uzyskać klucz publiczny:
 
-**sn -d friend_assemblies.snk**
+**SN-d friend_assemblies. snk**
 
-**sn -k friend_assemblies.snk**
+**SN-k friend_assemblies. snk**
 
-**sn -i friend_assemblies.snk friend_assemblies.snk**
+**SN-i friend_assemblies. snk friend_assemblies. snk**
 
-**sn -pc friend_assemblies.snk key.publickey**
+**SN-PC friend_assemblies. snk Key. PublicKey**
 
-**key.publickey - tp SN**
+**SN-TP Key. PublicKey**
 
-W kolejnym przykładzie kod uzyskuje dostęp do prywatnej typu w składniku silnej nazwy.
+Następny przykład kodu uzyskuje dostęp do typu prywatnego w składniku o silnej nazwie.
 
 ```cpp
 // friend_assemblies_6.cpp

@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C]
 ms.assetid: 015627c7-0924-49b2-a4d1-c77edf5eae6a
-ms.openlocfilehash: b38ff6c535c142bd15ea09a4d7c80010c3fff31f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c46173ceebd7291336c18d36203d1e4dc59ce46d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313366"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222007"
 ---
 # <a name="break-statement-c"></a>break — instrukcja (C)
 
-`break` Instrukcja kończy wykonywanie najbliższej `do`otaczającej, `for`, `switch`lub `while` instrukcji, w której występuje. Kontrolka przechodzi do instrukcji, która następuje po instrukcji zakończony.
+**`break`** Instrukcja kończy wykonywanie najbliższej otaczającej **`do`** , **`for`** , **`switch`** lub **`while`** instrukcji, w której występuje. Kontrolka przechodzi do instrukcji, która następuje po instrukcji zakończony.
 
 ## <a name="syntax"></a>Składnia
 
 *skok-instrukcja*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Przerwij**
 
-`break` Instrukcja jest często używana do kończenia przetwarzania określonego przypadku w `switch` instrukcji. Brak otaczającej instrukcji iteracyjnej or `switch` generuje błąd.
+**`break`** Instrukcja jest często używana do kończenia przetwarzania określonego przypadku w **`switch`** instrukcji. Brak otaczającej instrukcji iteracyjnej or **`switch`** generuje błąd.
 
-W zagnieżdżonych instrukcjach `break` instrukcja kończy tylko instrukcję, `do` `for`, `switch`, lub `while` , która bezpośrednio należy do niej. Możesz użyć instrukcji `return` lub `goto` , aby przenieść kontrolę w innym miejscu poza zagnieżdżoną strukturę.
+W zagnieżdżonych instrukcjach **`break`** instrukcja kończy tylko **`do`** **`for`** instrukcję,, **`switch`** , lub, **`while`** która bezpośrednio należy do niej. Możesz użyć **`return`** instrukcji lub, **`goto`** Aby przenieść kontrolę w innym miejscu poza zagnieżdżoną strukturę.
 
-Ten przykład ilustruje `break` instrukcję:
+Ten przykład ilustruje **`break`** instrukcję:
 
 ```
 #include <stdio.h>
@@ -43,6 +43,6 @@ int main() {
 } // Loop exits only when 'Q' is pressed
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[break, instrukcja](../cpp/break-statement-cpp.md)
+[Break, instrukcja](../cpp/break-statement-cpp.md)

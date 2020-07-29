@@ -25,16 +25,16 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: a830ff5b8ba4b7fcd95eb462f899f2eadce6de11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49f0e4bace5f3dd199b58854e838204bd2cd5f3b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318553"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222020"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (Sprawdzanie błędów czasu wykonywania)
 
-Używane do włączania i wyłączania funkcji Sprawdzanie błędów czasu wykonywania w połączeniu z [runtime_checks](../../preprocessor/runtime-checks.md) pragmy.
+Służy do włączania i wyłączania funkcji sprawdzania błędów czasu wykonywania w połączeniu z [runtime_checks](../../preprocessor/runtime-checks.md) pragma.
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,12 +48,12 @@ Używane do włączania i wyłączania funkcji Sprawdzanie błędów czasu wykon
 ## <a name="arguments"></a>Argumenty
 
 **1**<br/>
-Odpowiada to **usunęliśmy**`su`.
+Odpowiednik **/RTC** `su` .
 
-**c**<br/>
-Informuje, kiedy wartość jest przypisana do mniejszego typu danych oraz powoduje utratę danych. Na przykład, jeśli wartość typu `short 0x101` jest przypisany do zmiennej typu `char`.
+**s**<br/>
+Raportuje, gdy wartość jest przypisana do mniejszego typu danych i powoduje utratę danych. Na przykład jeśli wartość typu `short 0x101` jest przypisana do zmiennej typu **`char`** .
 
-Ta opcja zgłasza sytuacje, w których ma być obcięta, na przykład, jeśli chcesz, aby pierwsze osiem bitów `int` zwracane jako `char`. Ponieważ **usunęliśmy** `c` powoduje błąd czasu wykonywania, jeśli wszystkie informacje są tracone w wyniku przypisania, można zamaskować off potrzebne informacje znajdziesz w celu uniknięcia błędów czasu wykonywania, na **usunęliśmy** `c`. Na przykład:
+Ta opcja zgłasza sytuacje, w których zamierzasz obciąć, na przykład jeśli chcesz, aby pierwsze osiem bitów **`int`** zwrócone jako **`char`** . Ponieważ **/RTC** `c` powoduje błąd czasu wykonywania, jeśli dowolna informacja zostanie utracona w wyniku przypisania, można zamaskować informacje, które są potrzebne, aby uniknąć błędu czasu wykonywania w wyniku **/RTC** `c` . Na przykład:
 
 ```
 #include <crtdbg.h>
@@ -70,19 +70,19 @@ int main() {
 }
 ```
 
-**s**<br/>
-Włącza ramki błąd w czasie wykonywania sprawdzania stosu, w następujący sposób:
+**wolumin**<br/>
+Włącza sprawdzanie błędów czasu wykonywania ramki stosu w następujący sposób:
 
-- Inicjalizacja zmiennych lokalnych na wartość różną od zera. Pomaga to identyfikować błędy, które nie są wyświetlane podczas pracy w trybie debugowania. Istnieje duże prawdopodobieństwo, że zmiennych stosu będą nadal zero do kompilacji debugowanej, ze względu na optymalizacje kompilatora zmiennych stosu w kompilacji wydania w porównaniu do kompilacji wydania. Gdy program został użyty obszar swój stos, nigdy nie zresetowaniu 0 przez kompilator. W związku z tym zmiennych stosu kolejne, niezainicjowanej, które zdarzają się używać tego samego obszaru stosu mogą zwracać pozostawione przez wcześniejsze korzystanie z tej pamięci stosu.
+- Inicjalizacja zmiennych lokalnych na wartość różną od zera. Ułatwia to zidentyfikowanie usterek, które nie są wyświetlane podczas działania w trybie debugowania. Istnieje większa szansa, że zmienne stosu nadal będą zerem w kompilacji debugowania w porównaniu do kompilacji wydania z powodu optymalizacji kompilatora zmiennych stosu w kompilacji wydania. Gdy program używa obszaru jego stosu, nigdy nie jest resetowany do 0 przez kompilator. W związku z tym kolejne Niezainicjowane zmienne stosu, które wystąpiły w celu użycia tego samego obszaru stosu, mogą zwracać wartości pozostawione przez poprzednie użycie tej pamięci stosu.
 
-- Wykrywanie przepełnienia i underruns zmiennych lokalnych, takich jak tablice. **/ RTC** `s` nie wykrywa przepełnienia podczas uzyskiwania dostępu do pamięci, która wynika z kompilatora uzupełnienia w ramach struktury. Dopełnienie mogą wystąpić przy użyciu [wyrównać](../../cpp/align-cpp.md), [/ZP (wyrównanie członka struktury)](zp-struct-member-alignment.md), lub [pakiet](../../preprocessor/pack.md), lub jeśli porządkowania elementów struktury w taki sposób, aby wymagać kompilator, aby dodać dopełnienia.
+- Wykrywanie przekroczeń i niedziałających zmiennych lokalnych, takich jak tablice. **/RTC** `s` nie wykrywa przekroczeń podczas uzyskiwania dostępu do pamięci, która wynika z dopełnienia kompilatora w obrębie struktury. Dopełnienie może wystąpić przy użyciu [align](../../cpp/align-cpp.md), [/ZP (wyrównanie składowej struktury)](zp-struct-member-alignment.md)lub [Pack](../../preprocessor/pack.md), lub jeśli planujesz elementy struktury w taki sposób, aby wymagało, aby kompilator dodał uzupełnienie.
 
-- Weryfikacja wskaźnik stosu, które wykrywa uszkodzenie wskaźnik stosu. Uszkodzenie wskaźnika stosu może być spowodowany niezgodnością konwencji wywoływania. Na przykład za pomocą wskaźnika funkcji, należy wywołać funkcję w bibliotece DLL, która jest eksportowana jako [__stdcall](../../cpp/stdcall.md) , ale deklaruje wskaźnik, aby działały jak [__cdecl](../../cpp/cdecl.md).
+- Weryfikacja wskaźnika stosu, która wykrywa uszkodzenie wskaźnika stosu. Uszkodzenie wskaźnika stosu może być spowodowane niezgodnością konwencji wywoływania. Na przykład przy użyciu wskaźnika funkcji można wywołać funkcję w bibliotece DLL, która jest eksportowana jako [__stdcall](../../cpp/stdcall.md) ale deklaruje wskaźnik do funkcji jako [__cdecl](../../cpp/cdecl.md).
 
-**u**<br/>
-Raporty, gdy zmienna jest używana bez zainicjowania. Na przykład instrukcja, która generuje `C4701` mogą również generować błędów czasu wykonywania, w obszarze **usunęliśmy**`u`. Żadnych instrukcji, która generuje [ostrzeżenie kompilatora (poziom 1 i 4) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md) wygeneruje błąd czasu wykonywania w ramach **usunęliśmy**`u`.
+**'t**<br/>
+Raportuje, gdy zmienna jest używana bez zainicjowania. Na przykład instrukcja, która generuje `C4701` może również generować błąd czasu wykonywania w obszarze **/RTC** `u` . Wszystkie instrukcje, które generują [Ostrzeżenie kompilatora (poziom 1 i poziom 4) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md) wygenerują błąd czasu wykonywania w obszarze **/RTC** `u` .
 
-Jednakże należy wziąć pod uwagę następujący fragment kodu:
+Jednak Rozważmy następujący fragment kodu:
 
 ```cpp
 int a, *b, c;
@@ -91,27 +91,27 @@ b = &a;
 c = a;  // No run-time error with /RTCu
 ```
 
-Jeśli zmienna może zostać zainicjowany, nie zostanie on zgłoszony w czasie wykonywania przez **usunęliśmy**`u`. Na przykład po zmiennej jest aliasowany przez wskaźnik, kompilator będzie nie śledzenie zmiennej i raport używa niezainicjowany. W efekcie można zainicjować zmienną przez pobranie jego adresu. & — Operator działa jak operator przypisania w takiej sytuacji.
+Jeśli zmienna mogła zostać zainicjowana, nie będzie raportowana w czasie wykonywania przez **/RTC** `u` . Na przykład po zastosowaniu aliasu zmiennej przez wskaźnik kompilator nie śledzi zmiennej i nie zainicjowano użycia. W efekcie można zainicjować zmienną, przyjmując jej adres. Operator & działa jak operator przypisania w tej sytuacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Sprawdzanie błędów czasu wykonywania to sposób odnajdywania problemów w kodzie uruchomiona; Aby uzyskać więcej informacji, zobacz [jak: Korzystanie z macierzystego sprawdzania w czasie wykonywania](/visualstudio/debugger/how-to-use-native-run-time-checks).
+Kontrole błędów czasu wykonywania są sposobem na znalezienie problemów w uruchomionym kodzie; Aby uzyskać więcej informacji, zobacz [jak: korzystanie z natywnych testów w czasie wykonywania](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
-Jeśli kompilujesz program w wierszu polecenia przy użyciu dowolnej z **usunęliśmy** opcje kompilatora, wszelkie pragma [zoptymalizować](../../preprocessor/optimize.md) po cichu nie będzie zgodnie z instrukcjami w kodzie. Jest to spowodowane sprawdzanie błędów czasu wykonywania nie są dozwolone w kompilacji wydania (zoptymalizowany).
+Jeśli kompilujesz program w wierszu polecenia przy użyciu dowolnych opcji kompilatora **/RTC** , wszelkie dyrektywy pragma [optymalizują](../../preprocessor/optimize.md) instrukcje w kodzie w trybie dyskretnym. Wynika to z faktu, że testy błędów czasu wykonywania nie są prawidłowe w kompilacji wersji (zoptymalizowanej).
 
-Należy używać **usunęliśmy** dla rozwoju kompilacji; **Usunęliśmy** nie powinny być używane dla kompilacji detalicznej. **/ RTC** nie można używać z optymalizacje kompilatora ([/O opcje (Optymalizuj kod)](o-options-optimize-code.md)). Obraz programu utworzonych za pomocą **usunęliśmy** będzie nieco większy przebiegać wolniej niż obrazu skompilowanego za pomocą **/Od** (5 procent wolniej niż **/Od** kompilacji).
+Należy używać **/RTC** na potrzeby kompilacji programistycznych; **/RTC** nie należy używać w przypadku kompilacji detalicznej. **/RTC** nie można używać z optymalizacjami kompilatora ([/O opcje (Optymalizuj kod)](o-options-optimize-code.md)). Obraz programu utworzony za pomocą **/RTC** będzie nieco większy i nieco wolniejszy od obrazu skompilowanego z **/od** (do 5 procent wolniej niż kompilacja **/od** ).
 
-Dyrektywy preprocesora __MSVC_RUNTIME_CHECKS zostanie zdefiniowana, jeśli używasz jakiejkolwiek **usunęliśmy** opcji lub [GZ](gz-enable-stack-frame-run-time-error-checking.md).
+Dyrektywa preprocesora __MSVC_RUNTIME_CHECKS zostanie zdefiniowana w przypadku używania dowolnej opcji **/RTC** lub [/GZ](gz-enable-stack-frame-run-time-error-checking.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Kliknij przycisk **C/C++** folderu.
+1. Kliknij folder **C/C++** .
 
-1. Kliknij przycisk **generowania kodu** stronę właściwości.
+1. Kliknij stronę właściwości **generowanie kodu** .
 
-1. Zmodyfikuj jedną lub obie następujące właściwości: **Podstawowe sprawdzenia środowiska uruchomieniowego** lub **mniejsze wpisz wyboru**.
+1. Zmodyfikuj jedną lub obie następujące właściwości: **podstawowe testy środowiska uruchomieniowego** lub **mniejszego typu**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
@@ -121,4 +121,4 @@ Dyrektywy preprocesora __MSVC_RUNTIME_CHECKS zostanie zdefiniowana, jeśli używ
 
 [Opcje kompilatora MSVC](compiler-options.md)<br/>
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)<br/>
-[Instrukcje: Korzystanie z natywnego sprawdzania w trakcie wykonywania](/visualstudio/debugger/how-to-use-native-run-time-checks)
+[Instrukcje: korzystanie z natywnych testów w czasie wykonywania](/visualstudio/debugger/how-to-use-native-run-time-checks)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2044
 ms.assetid: adf4bedc-f915-4008-8b48-a06d626d8c38
-ms.openlocfilehash: 7acb660314390d75bce935ffb26c4dcfeae1351b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c7149fed6c19b796d466dc9da9ae82af2761addd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80207996"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221318"
 ---
 # <a name="compiler-error-c2044"></a>Błąd kompilatora C2044
 
 niedozwolone kontynuowanie
 
-[Kontynuacja](../../cpp/continue-statement-cpp.md) jest dozwolona tylko w instrukcji `do`, `for`lub `while`.
+[Kontynuacja](../../cpp/continue-statement-cpp.md) jest dozwolona tylko w **`do`** instrukcji, **`for`** , lub **`while`** .

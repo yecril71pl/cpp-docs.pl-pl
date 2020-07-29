@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: b952ca0aab5c4417f22fd958514894c53a39f800
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7c2dbb6e2932265984c8cb4e1e34504921e5d666
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170608"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221786"
 ---
 # <a name="c-bit-fields"></a>Pola bitowe języka C++
 
@@ -41,12 +41,12 @@ struct Date {
 };
 ```
 
-Układ pamięci koncepcyjnej obiektu typu `Date` pokazano na poniższej ilustracji.
+Koncepcyjny układ pamięci obiektu typu `Date` jest pokazywany na poniższej ilustracji.
 
 ![Układ pamięci obiektu Date](../cpp/media/vc38uq1.png "Układ pamięci obiektu Date") <br/>
 Układ pamięci obiektu Date
 
-Należy pamiętać, że `nYear` jest 8 bitów Long i spowodowałoby przepełnienie granicy słowa zadeklarowanego typu, **bez znaku** **.** W związku z tym rozpoczyna się na początku nowego **niepodpisanego znaku** **.** Nie jest konieczne, aby wszystkie pola bitowe mieściły się w jednym obiekcie typu podstawowego; przydzielono nowe jednostki magazynu, zgodnie z liczbą bitów żądaną w deklaracji.
+Należy pamiętać, że `nYear` jest to 8 bitów Long i spowodowałoby przepełnienie granicy słowa zadeklarowanego typu, **`unsigned short`** . W związku z tym rozpoczyna się na początku nowej **`unsigned short`** . Nie jest konieczne, aby wszystkie pola bitowe mieściły się w jednym obiekcie typu podstawowego; przydzielono nowe jednostki magazynu, zgodnie z liczbą bitów żądaną w deklaracji.
 
 **Specyficzne dla firmy Microsoft**
 
@@ -70,12 +70,12 @@ struct Date {
 
 następnie układ pamięci jest przedstawiony na poniższej ilustracji:
 
-![Układ obiektu Date z polem bitowym o zerowej&#45;długości](../cpp/media/vc38uq2.png "Układ obiektu Date z polem bitowym o zerowej&#45;długości") <br/>
+![Układ obiektu Date o zerowej długości&#45;polu bitowym](../cpp/media/vc38uq2.png "Układ obiektu Date o zerowej długości&#45;polu bitowym") <br/>
 Układ obiektu Date z polem bitowym o zerowej długości
 
 Typ podstawowy pola bitowego musi być typem całkowitym, zgodnie z opisem w [typach wbudowanych](../cpp/fundamental-types-cpp.md).
 
-Jeśli inicjator dla odwołania typu `const T&` to lvalue, który odwołuje się do pola bitowego typu `T`, odwołanie nie jest bezpośrednio powiązane z polem bitowym. Zamiast tego odwołanie jest powiązane z tymczasową inicjalizacją do przechowywania wartości pola bitowego.
+Jeśli inicjator dla odwołania typu `const T&` jest lvalue, który odwołuje się do pola bitowego typu `T` , odwołanie nie jest bezpośrednio powiązane z polem bitowym. Zamiast tego odwołanie jest powiązane z tymczasową inicjalizacją do przechowywania wartości pola bitowego.
 
 ## <a name="restrictions-on-bit-fields"></a>Ograniczenia dotyczące pól bitowych
 
@@ -83,8 +83,8 @@ Poniższa lista zawiera błędne operacje dotyczące pól bitowych:
 
 - Pobieranie adresu pola bitowego.
 
-- Inicjowanie odwołania**niestałego** za pomocą pola bitowego.
+- Inicjowanie odwołania niezwiązanego **`const`** z polem bitowym.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)

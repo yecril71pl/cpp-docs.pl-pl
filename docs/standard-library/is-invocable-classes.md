@@ -15,16 +15,16 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: 53394a10464e2688953cd1b5703530e2719b7593
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 47801eff0ea0c41c7b69dfb7a1aa5190a43f1b75
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076456"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233109"
 ---
 # <a name="is_invocable-is_invocable_r-is_nothrow_invocable-is_nothrow_invocable_r-classes"></a>is_invocable, is_invocable_r, is_nothrow_invocable, klasy is_nothrow_invocable_r
 
-Te szablony określają, czy typ można wywołać z określonymi typami argumentów. `is_invocable_r` i `is_nothrow_invocable_r` określają również, czy wynik wywołania jest konwertowany na określony typ. `is_nothrow_invocable` i `is_nothrow_invocable_r` również określają, czy wywołanie jest znane, aby nie zgłaszać wyjątków. Dodano w języku C++ 17.
+Te szablony określają, czy typ można wywołać z określonymi typami argumentów. `is_invocable_r`a `is_nothrow_invocable_r` także określić, czy wynik wywołania jest konwertowany do określonego typu. `is_nothrow_invocable`a `is_nothrow_invocable_r` także określić, czy wywołanie jest znane, aby nie zgłaszać wyjątków. Dodano w języku C++ 17.
 
 ## <a name="syntax"></a>Składnia
 
@@ -61,26 +61,26 @@ inline constexpr bool is_nothrow_invocable_r_v =
 
 ### <a name="parameters"></a>Parametry
 
-*Możliwy* do\
+*Żądanie*\
 Typ możliwy do zapytania.
 
-*Argumenty*\
+*Argumentów*\
 Typy argumentów do zapytania.
 
-\ *wymienialne*
+*Dach*\
 Typ wyniku możliwego do *zażądanie* musi być konwertowany na.
 
 ## <a name="remarks"></a>Uwagi
 
-Predykat typu `is_invocable` ma wartość true, *Jeśli możliwy do wywołania typ można* wywołać za *pomocą argumentów argumenty w* nieoszacowanym kontekście.
+`is_invocable`Predykat typu ma wartość true, jeśli możliwy do *Callable* wywołania typ wywołujący może być wywoływany przy użyciu argumentów argumenty w nieoszacowanym kontekście. *Args*
 
-Predykat typu `is_invocable_r` ma wartość true, *Jeśli możliwy do wywołania typ można* wywołać za *pomocą argumentów argumenty w* nieoszacowanym kontekście, aby utworzyć konwersję typu wynik do *konwersji*.
+`is_invocable_r`Predykat typu ma wartość true, jeśli możliwy do *Callable* wywołania typ można wywołać za pomocą argumentów *Args* argumenty w nieoszacowanym kontekście, aby utworzyć konwersję typu wynik do *konwersji*.
 
-Predykat typu `is_nothrow_invocable` ma wartość true, *Jeśli możliwy do wywołania typ można* wywołać przy *użyciu argumentów argumenty w* nieoszacowanym kontekście i że takie wywołanie jest znane, aby nie zgłosić wyjątku.
+`is_nothrow_invocable`Predykat typu ma wartość true, jeśli możliwy do *Callable* wywołania typ można wywołać przy użyciu argumentów *Args* argumenty w nieoszacowanym kontekście i że takie wywołanie jest znane, aby nie zgłosić wyjątku.
 
-Predykat typu `is_nothrow_invocable_r` ma wartość true, *Jeśli możliwy do* wywołania typ wywołujący może być wywoływany przy *użyciu argumentów argumenty w* nieoszacowanym kontekście, aby utworzyć konwersję typu wyniku do *konwersji*i że takie wywołanie jest znane, aby nie zgłosić wyjątku.
+`is_nothrow_invocable_r`Predykat typu ma wartość true, jeśli możliwy do *Callable* wywołania typ wywołujący może być wywoływany przy użyciu argumentów argumenty w nieoszacowanym kontekście, aby utworzyć typ wyniku konwersji do *konwersji*, i że takie wywołanie jest znane, aby nie zgłosić wyjątku. *Args*
 
-Każdy typ, który można *przekonwertować*, *wywołać*i typy w parametrach *pakietu parametrów* , musi być kompletnym typem, tablicą nieznanej granicy lub prawdopodobnie **void**kwalifikowaną. W przeciwnym razie zachowanie predykatu jest niezdefiniowane.
+Każdy typ, który można *przekonwertować*, *wywołać*i typy w parametrach *pakietu parametrów* musi być kompletnym typem, tablicą nieznanej granicy lub prawdopodobnie kwalifikowaną CV **`void`** . W przeciwnym razie zachowanie predykatu jest niezdefiniowane.
 
 ## <a name="example"></a>Przykład
 
@@ -116,11 +116,11 @@ int main()
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[< type_traits >](../standard-library/type-traits.md)\
+[<type_traits>](../standard-library/type-traits.md)\
 [wywołuje](functional-functions.md#invoke)

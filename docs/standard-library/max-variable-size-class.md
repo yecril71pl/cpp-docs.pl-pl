@@ -16,16 +16,16 @@ helpviewer_keywords:
 - stdext::max_variable_size [C++], released
 - stdext::max_variable_size [C++], saved
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
-ms.openlocfilehash: 79e37d8c464a009e4a5196aeacc8d4a718e355b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f98b5698ff14349abf9300799f00c6d9121bcf65
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370972"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222267"
 ---
 # <a name="max_variable_size-class"></a>max_variable_size — Klasa
 
-Opisuje [obiekt klasy max,](../standard-library/allocators-header.md) który ogranicza [obiekt freelist](../standard-library/freelist-class.md) do maksymalnej długości, która jest w przybliżeniu proporcjonalna do liczby przydzielonych bloków pamięci.
+Opisuje obiekt [klasy maksymalnej](../standard-library/allocators-header.md) , który ogranicza obiekt [freelist](../standard-library/freelist-class.md) do maksymalnej długości, która jest w przybliżeniu proporcjonalna do liczby przydzielone bloków pamięci.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,31 +33,31 @@ Opisuje [obiekt klasy max,](../standard-library/allocators-header.md) który ogr
 class max_variable_size
 ```
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Opis|
 |-|-|
-|[max_variable_size](#max_variable_size)|Konstruuje obiekt `max_variable_size`typu .|
+|[max_variable_size](#max_variable_size)|Konstruuje obiekt typu `max_variable_size` .|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja członkowce|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
-|[Przydzielone](#allocated)|Zwiększa liczbę przydzielonych bloków pamięci.|
-|[Dealokowane](#deallocated)|Zmniejsza liczbę przydzielonych bloków pamięci.|
-|[Pełne](#full)|Zwraca wartość, która określa, czy więcej bloków pamięci powinny zostać dodane do listy wolnych.|
-|[Wydany](#released)|Zmniejsza liczbę bloków pamięci na liście wolnych.|
-|[Zapisano](#saved)|Zwiększa liczbę bloków pamięci na liście wolnych.|
+|[rozdziela](#allocated)|Zwiększa liczbę przydzieloną bloków pamięci.|
+|[bez alokacji](#deallocated)|Zmniejsza liczbę przydzieloną bloków pamięci.|
+|[szczegółowe](#full)|Zwraca wartość określającą, czy więcej bloków pamięci należy dodać do listy bezpłatnych.|
+|[zwolni](#released)|Zmniejsza liczbę bloków pamięci na liście bezpłatnych.|
+|[zapis](#saved)|Zwiększa liczbę bloków pamięci na liście bezpłatnych.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<alokatory>
+**Nagłówek:**\<allocators>
 
-**Obszar nazw:** stdext
+**Przestrzeń nazw:** stdext
 
-## <a name="max_variable_sizeallocated"></a><a name="allocated"></a>max_variable_size::przydzielone
+## <a name="max_variable_sizeallocated"></a><a name="allocated"></a>max_variable_size:: przydzielono
 
-Zwiększa liczbę przydzielonych bloków pamięci.
+Zwiększa liczbę przydzieloną bloków pamięci.
 
 ```cpp
 void allocated(std::size_t _Nx = 1);
@@ -71,11 +71,11 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego dodaje *_Nx* `_Nallocs`do zapisanej wartości . Ta funkcja elementu członkowskiego jest `cache_freelist::allocate` wywoływana po każdym pomyślnym wywołaniu przez operatora **nowego**. Argument *_Nx* jest liczba bloków pamięci w fragmencie przydzielonym przez operatora **new**.
+Ta funkcja członkowska dodaje *_Nx* do przechowywanej wartości `_Nallocs` . Ta funkcja członkowska jest wywoływana po każdym pomyślnym wywołaniu `cache_freelist::allocate` operatora **`new`** . Argument *_Nx* jest liczbą bloków pamięci w fragmencie przydzielonym przez operatora **`new`** .
 
-## <a name="max_variable_sizedeallocated"></a><a name="deallocated"></a>max_variable_size::dlokowane
+## <a name="max_variable_sizedeallocated"></a><a name="deallocated"></a>max_variable_size::d eallocated
 
-Zmniejsza liczbę przydzielonych bloków pamięci.
+Zmniejsza liczbę przydzieloną bloków pamięci.
 
 ```cpp
 void deallocated(std::size_t _Nx = 1);
@@ -89,11 +89,11 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego odejmuje *_Nx* od `_Nallocs`zapisanej wartości . Ta funkcja elementu członkowskiego jest `cache_freelist::deallocate` wywoływana po każdym wywołaniu przez operatora **delete**. Argument *_Nx* jest liczba bloków pamięci w fragmencie cofnięte przez operatora **usunąć**.
+Funkcja członkowska odejmuje *_Nx* od przechowywanej wartości `_Nallocs` . Ta funkcja członkowska jest wywoływana po każdym wywołaniu `cache_freelist::deallocate` operatora **`delete`** . Argument *_Nx* jest liczbą bloków pamięci w przydzielonym operatorze fragmentów **`delete`** .
 
-## <a name="max_variable_sizefull"></a><a name="full"></a>max_variable_size::pełna
+## <a name="max_variable_sizefull"></a><a name="full"></a>max_variable_size:: Full
 
-Zwraca wartość, która określa, czy więcej bloków pamięci powinny zostać dodane do listy wolnych.
+Zwraca wartość określającą, czy więcej bloków pamięci należy dodać do listy bezpłatnych.
 
 ```cpp
 bool full();
@@ -101,15 +101,15 @@ bool full();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**prawda,** jeśli `_Nallocs / 16 + 16 <= _Nblocks`.
+**`true`** Jeśli `_Nallocs / 16 + 16 <= _Nblocks` .
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu `cache_freelist::deallocate`członkowskiego jest wywoływana przez . Jeśli wywołanie **true**zwraca `deallocate` true , umieszcza blok pamięci na liście wolnych; jeśli zwraca false, `deallocate` wywołuje delete operatora, aby zdyskontować blok. **delete**
+Ta funkcja członkowska jest wywoływana przez `cache_freelist::deallocate` . Jeśli wywołanie zwraca **`true`** , `deallocate` umieszcza blok pamięci na liście bezpłatnej; jeśli zwraca wartość false, `deallocate` operator wywołań, **`delete`** Aby cofnąć alokację bloku.
 
-## <a name="max_variable_sizemax_variable_size"></a><a name="max_variable_size"></a>max_variable_size::max_variable_size
+## <a name="max_variable_sizemax_variable_size"></a><a name="max_variable_size"></a>max_variable_size:: max_variable_size
 
-Konstruuje obiekt `max_variable_size`typu .
+Konstruuje obiekt typu `max_variable_size` .
 
 ```cpp
 max_variable_size();
@@ -117,11 +117,11 @@ max_variable_size();
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor inicjuje `_Nblocks` przechowywane `_Nallocs` wartości i do zera.
+Konstruktor inicjuje przechowywane wartości `_Nblocks` i `_Nallocs` zero.
 
-## <a name="max_variable_sizereleased"></a><a name="released"></a>max_variable_size::zwolniony
+## <a name="max_variable_sizereleased"></a><a name="released"></a>max_variable_size:: wydano
 
-Zmniejsza liczbę bloków pamięci na liście wolnych.
+Zmniejsza liczbę bloków pamięci na liście bezpłatnych.
 
 ```cpp
 void released();
@@ -129,11 +129,11 @@ void released();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego zmniejsza `_Nblocks`wartość zapisaną . Funkcja `released` elementu członkowskiego bieżącej klasy `cache_freelist::allocate` max jest wywoływana za każdym razem, gdy usuwa blok pamięci z listy wolnych.
+Ta funkcja członkowska zmniejsza przechowywaną wartość `_Nblocks` . `released`Funkcja członkowska bieżącej klasy Max jest wywoływana za `cache_freelist::allocate` każdym razem, gdy usuwa blok pamięci z listy bezpłatnych.
 
-## <a name="max_variable_sizesaved"></a><a name="saved"></a>max_variable_size::zapisane
+## <a name="max_variable_sizesaved"></a><a name="saved"></a>max_variable_size:: Zapisano
 
-Zwiększa liczbę bloków pamięci na liście wolnych.
+Zwiększa liczbę bloków pamięci na liście bezpłatnych.
 
 ```cpp
 void saved();
@@ -141,8 +141,8 @@ void saved();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego zwiększa `_Nblocks`wartość zapisaną . Ta funkcja elementu `cache_freelist::deallocate` członkowskiego jest wywoływana przez każdym razem, gdy umieszcza blok pamięci na liście wolnych.
+Ta funkcja członkowska zwiększa przechowywaną wartość `_Nblocks` . Ta funkcja członkowska jest wywoływana za `cache_freelist::deallocate` każdym razem, gdy umieszcza blok pamięci na liście bezpłatnych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[\<>alokatorów](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

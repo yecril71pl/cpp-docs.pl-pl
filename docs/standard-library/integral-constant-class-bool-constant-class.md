@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::integral_constant [C++]
 - std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-ms.openlocfilehash: 9577ce51d4b0773f7b309fe3dc6dcb5820693dcb
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 30e00fdc166b4a6f2db64a3552a3bb87335c7e32
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689536"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233148"
 ---
 # <a name="integral_constant-class-bool_constant-class"></a>Klasa integral_constant, Klasa bool_constant
 
@@ -36,17 +36,17 @@ struct integral_constant {
 
 ### <a name="parameters"></a>Parametry
 
-*T* \
+*&*\
 Typ stałej.
 
-\ *v*
+*v*\
 Wartość stałej.
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy `integral_constant`, gdy jest wyspecjalizowany dla typu całkowitego *t* i wartość *v* tego typu, reprezentuje obiekt, który przechowuje stałą tego typu całkowitego z określoną wartością. Element członkowski o nazwie `type` jest aliasem dla wygenerowanego typu specjalizacji szablonu, a element członkowski `value` przechowuje wartość *v* używaną do tworzenia specjalizacji.
+`integral_constant`Szablon klasy, gdy jest wyspecjalizowany dla typu całkowitego *T* i wartość *v* tego typu, reprezentuje obiekt, który przechowuje stałą tego typu całkowitego z określoną wartością. Element członkowski o nazwie `type` jest aliasem dla wygenerowanego typu specjalizacji szablonu, a `value` składowa zawiera wartość *v* użytą do utworzenia specjalizacji.
 
-Szablon klasy `bool_constant` jest jawnym częściową specjalizacją `integral_constant`, która używa **bool** jako argumentu *t* .
+`bool_constant`Szablon klasy jest jawną specjalizacją częściową `integral_constant` , która używa **`bool`** jako argumentu *T* .
 
 ## <a name="example"></a>Przykład
 
@@ -74,12 +74,12 @@ integral_constant<bool, false> == false
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[< type_traits >](../standard-library/type-traits.md) \
-[false_type](../standard-library/type-traits-typedefs.md#false_type) \
+[<type_traits>](../standard-library/type-traits.md)\
+[false_type](../standard-library/type-traits-typedefs.md#false_type)\
 [true_type](../standard-library/type-traits-typedefs.md#true_type)

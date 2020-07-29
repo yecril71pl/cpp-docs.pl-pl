@@ -1,5 +1,5 @@
 ---
-title: klasa mutex (standardowa biblioteka C++)| Dokumenty firmy Microsoft
+title: mutex — Klasa (standardowa biblioteka C++) | Microsoft Docs
 ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::mutex
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::mutex [C++], native_handle
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
-ms.openlocfilehash: 84e6e3a46903a204444df9886556ae2c563304a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20e2165a70dec8a3d3918eece6cb78057ac19138
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364842"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233044"
 ---
-# <a name="mutex-class-c-standard-library"></a>klasa mutex (standardowa biblioteka C++)
+# <a name="mutex-class-c-standard-library"></a>mutex — Klasa (standardowa biblioteka C++)
 
-Reprezentuje *typ mutex*. Obiekty tego typu mogą służyć do wymuszania wzajemnego wykluczenia w programie.
+Reprezentuje *Typ muteksu*. Obiekty tego typu mogą być używane do wymuszania wzajemnego wykluczania w ramach programu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,27 +39,27 @@ class mutex;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Mutex](#mutex)|Konstruuje `mutex` obiekt.|
-|[mutex::~mutex Destructor](#dtormutex_destructor)|Zwalnia wszystkie zasoby, które `mutex` były używane przez obiekt.|
+|[mutex](#mutex)|Konstruuje `mutex` obiekt.|
+|[mutex:: ~ mutex — destruktor](#dtormutex_destructor)|Zwalnia wszystkie zasoby, które były używane przez `mutex` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[lock](#lock)|Blokuje wątek wywołujący, dopóki `mutex`wątek nie uzyska własności . .|
-|[native_handle](#native_handle)|Zwraca typ specyficzny dla implementacji, który reprezentuje dojście obiektu mutex.|
+|[skręt](#lock)|Blokuje wątek wywołujący do momentu, aż wątek uzyska własność `mutex` .|
+|[native_handle](#native_handle)|Zwraca typ specyficzny dla implementacji, który reprezentuje uchwyt obiektu mutex.|
 |[try_lock](#try_lock)|Próbuje uzyskać własność `mutex` bez blokowania.|
-|[Odblokować](#unlock)|Zwalnia własność `mutex`.|
+|[odblokowania](#unlock)|Zwalnia własność `mutex` .|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<mutex>
+**Nagłówek:**\<mutex>
 
 **Przestrzeń nazw:** std
 
-## <a name="mutexlock"></a><a name="lock"></a>mutex::lock
+## <a name="mutexlock"></a><a name="lock"></a>mutex:: Lock
 
-Blokuje wątek wywołujący, dopóki `mutex`wątek nie uzyska własności . .
+Blokuje wątek wywołujący do momentu, aż wątek uzyska własność `mutex` .
 
 ```cpp
 void lock();
@@ -67,19 +67,19 @@ void lock();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wątek wywołujący jest już właścicielem `mutex`, zachowanie jest niezdefiniowane.
+Jeśli wątek wywołujący jest już właścicielem `mutex` , zachowanie jest niezdefiniowane.
 
-## <a name="mutexmutex-constructor"></a><a name="mutex"></a>mutex::mutex Konstruktor
+## <a name="mutexmutex-constructor"></a><a name="mutex"></a>mutex:: mutex — Konstruktor
 
-Tworzy `mutex` obiekt, który nie jest zablokowany.
+Konstruuje `mutex` obiekt, który nie jest zablokowany.
 
 ```cpp
 constexpr mutex() noexcept;
 ```
 
-## <a name="mutexmutex-destructor"></a><a name="dtormutex_destructor"></a>mutex::~mutex Destructor
+## <a name="mutexmutex-destructor"></a><a name="dtormutex_destructor"></a>mutex:: ~ mutex — destruktor
 
-Zwalnia wszystkie zasoby, które `mutex` są używane przez obiekt.
+Zwalnia wszystkie zasoby, które są używane przez `mutex` obiekt.
 
 ```cpp
 ~mutex();
@@ -87,11 +87,11 @@ Zwalnia wszystkie zasoby, które `mutex` są używane przez obiekt.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli obiekt jest zablokowany podczas pracy destruktora, zachowanie jest niezdefiniowane.
+Jeśli obiekt jest zablokowany podczas działania destruktora, zachowanie jest niezdefiniowane.
 
-## <a name="mutexnative_handle"></a><a name="native_handle"></a>mutex::native_handle
+## <a name="mutexnative_handle"></a><a name="native_handle"></a>mutex:: native_handle
 
-Zwraca typ specyficzny dla implementacji, który reprezentuje dojście obiektu mutex. Dojście obiektu mutex może być używane w sposób specyficzny dla implementacji.
+Zwraca typ specyficzny dla implementacji, który reprezentuje uchwyt obiektu mutex. Uchwytu muteksu można użyć w sposób specyficzny dla implementacji.
 
 ```cpp
 native_handle_type native_handle();
@@ -99,9 +99,9 @@ native_handle_type native_handle();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`native_handle_type`jest zdefiniowany `Concurrency::critical_section *` jako, który `void *`jest oddanych jako .
+`native_handle_type`jest definiowana jako `Concurrency::critical_section *` rzutowanie jako `void *` .
 
-## <a name="mutextry_lock"></a><a name="try_lock"></a>mutex::try_lock
+## <a name="mutextry_lock"></a><a name="try_lock"></a>mutex:: try_lock
 
 Próbuje uzyskać własność `mutex` bez blokowania.
 
@@ -111,15 +111,15 @@ bool try_lock();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli metoda pomyślnie uzyskuje `mutex`własność ; w przeciwnym razie **false**.
+**`true`** Jeśli metoda pomyślnie uzyska własność `mutex` ; w przeciwnym razie, **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wątek wywołujący jest już właścicielem `mutex`, zachowanie jest niezdefiniowane.
+Jeśli wątek wywołujący jest już właścicielem `mutex` , zachowanie jest niezdefiniowane.
 
-## <a name="mutexunlock"></a><a name="unlock"></a>mutex::odblokuj
+## <a name="mutexunlock"></a><a name="unlock"></a>mutex:: Unlock
 
-Zwalnia własność `mutex`.
+Zwalnia własność `mutex` .
 
 ```cpp
 void unlock();
@@ -127,9 +127,9 @@ void unlock();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wątek wywołujący `mutex`nie jest właścicielem , zachowanie jest niezdefiniowane.
+Jeśli wątek wywołujący nie `mutex` jest własnym, zachowanie jest niezdefiniowane.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[\<>mutex](../standard-library/mutex.md)
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

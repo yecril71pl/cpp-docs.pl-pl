@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_class class
 - is_class
 ms.assetid: 96fc34a3-a81b-4ec6-b7fb-baafde1a0f4e
-ms.openlocfilehash: 7dc71622a37164e996b067276ddf8a5d1dd88b62
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4122ad2b4adbd0ed290f26428560c569b3754d7d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456648"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222449"
 ---
-# <a name="isclass-class"></a>is_class — Klasa
+# <a name="is_class-class"></a>is_class — Klasa
 
 Testuje, czy typ jest klasą.
 
@@ -32,7 +32,7 @@ Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest typem zdefiniowanym jako **Klasa** lub `cv-qualified` **Struktura**lub postaci jednego z nich, w przeciwnym razie ma wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest typem zdefiniowanym w postaci lub lub postaci **`class`** **`struct`** `cv-qualified` jednego z nich, w przeciwnym razie ma wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -65,12 +65,12 @@ is_class<int> == false
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[< type_traits >](../standard-library/type-traits.md)\
+[<type_traits>](../standard-library/type-traits.md)\
 [Klasa is_compound](../standard-library/is-compound-class.md)\
-[is_union, klasa](../standard-library/is-union-class.md)
+[Klasa is_union](../standard-library/is-union-class.md)

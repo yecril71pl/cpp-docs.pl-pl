@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::sync_none [C++], deallocate
 - stdext::sync_none [C++], equals
 ms.assetid: f7473cee-14f3-4fe1-88bc-68cd085e59e1
-ms.openlocfilehash: 046cbca30b6cdef2dc4e7dbbe2791d52384d9f25
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4caf2cc2b6aa7494f343d10709f3190cb41631be
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376570"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232914"
 ---
 # <a name="sync_none-class"></a>sync_none — Klasa
 
-W tym artykule opisano [filtr synchronizacji,](../standard-library/allocators-header.md) który nie zapewnia synchronizacji.
+Opisuje [filtr synchronizacji](../standard-library/allocators-header.md) , który nie zapewnia synchronizacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,23 +34,23 @@ class sync_none
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`Cache`|Typ pamięci podręcznej skojarzonej z filtrem synchronizacji. Może to być [cache_chunklist,](../standard-library/cache-chunklist-class.md) [cache_freelist](../standard-library/cache-freelist-class.md)lub [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|`Cache`|Typ pamięci podręcznej skojarzonej z filtrem synchronizacji. Może to być [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md)lub [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja członkowce|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
 |[allocate](#allocate)|Przydziela blok pamięci.|
-|[Deallocate](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu, począwszy od określonej pozycji.|
-|[equals](#equals)|Porównuje dwie pamięci podręczne dla równości.|
+|[alokowany](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu, zaczynając od określonej pozycji.|
+|[równa się](#equals)|Porównuje dwie pamięci podręczne pod kątem równości.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<alokatory>
+**Nagłówek:**\<allocators>
 
-**Obszar nazw:** stdext
+**Przestrzeń nazw:** stdext
 
-## <a name="sync_noneallocate"></a><a name="allocate"></a>sync_none::przydziel
+## <a name="sync_noneallocate"></a><a name="allocate"></a>sync_none:: Allocate
 
 Przydziela blok pamięci.
 
@@ -62,15 +62,15 @@ void *allocate(std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Liczba*|Liczba elementów w tablicy, które mają zostać przydzielone.|
+|*liczbą*|Liczba elementów w tablicy, która ma zostać przypisana.|
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu `cache.allocate(count)`członkowskiego `cache` zwraca , gdzie jest obiekt pamięci podręcznej.
+Funkcja członkowska zwraca `cache.allocate(count)` , gdzie `cache` jest obiektem pamięci podręcznej.
 
-## <a name="sync_nonedeallocate"></a><a name="deallocate"></a>sync_none::dlokalizuj
+## <a name="sync_nonedeallocate"></a><a name="deallocate"></a>sync_none::d eallocate
 
-Zwalnia określoną liczbę obiektów z magazynu, począwszy od określonej pozycji.
+Zwalnia określoną liczbę obiektów z magazynu, zaczynając od określonej pozycji.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -80,16 +80,16 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Ptr*|Wskaźnik do pierwszego obiektu, który ma zostać cofnięty z magazynu.|
-|*Liczba*|Liczba obiektów, które mają zostać przydzielone z magazynu.|
+|*ptr*|Wskaźnik do pierwszego obiektu do cofnięcia przydziału z magazynu.|
+|*liczbą*|Liczba obiektów do cofnięcia przydziału z magazynu.|
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołana przez `cache.deallocate(ptr, count)`funkcję `cache` elementu członkowskiego , gdzie reprezentuje obiekt pamięci podręcznej.
+Funkcja elementu członkowskiego wywołuje `cache.deallocate(ptr, count)` , gdzie `cache` reprezentuje obiekt pamięci podręcznej.
 
-## <a name="sync_noneequals"></a><a name="equals"></a>sync_none::równa się
+## <a name="sync_noneequals"></a><a name="equals"></a>sync_none:: Equals
 
-Porównuje dwie pamięci podręczne dla równości.
+Porównuje dwie pamięci podręczne pod kątem równości.
 
 ```cpp
 bool equals(const sync<Cache>& Other) const;
@@ -99,15 +99,15 @@ bool equals(const sync<Cache>& Other) const;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*Pamięć podręczna*|Obiekt pamięci podręcznej filtru synchronizacji.|
-|*Inne*|Obiekt pamięci podręcznej do porównania dla równości.|
+|*Cache*|Obiekt pamięci podręcznej filtru synchronizacji.|
+|*Inne problemy*|Obiekt pamięci podręcznej, który ma zostać porównany pod kątem równości.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Funkcja elementu członkowskiego zawsze zwraca **wartość true**.
+Funkcja członkowska zawsze zwraca wartość **`true`** .
 
 ### <a name="remarks"></a>Uwagi
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[\<>alokatorów](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

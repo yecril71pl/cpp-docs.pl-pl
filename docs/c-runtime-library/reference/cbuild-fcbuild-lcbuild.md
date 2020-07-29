@@ -32,12 +32,12 @@ helpviewer_keywords:
 - _Cbuild function
 - _FCbuild function
 - _LCbuild function
-ms.openlocfilehash: b0ae50f40f0ca0a926e1eef586c6610a04b6ea7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d521fdb0d79e1e4ff6e6c1b01ce40941ed5c8c0a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943218"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221968"
 ---
 # <a name="_cbuild-_fcbuild-_lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
 
@@ -53,15 +53,15 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 
 ### <a name="parameters"></a>Parametry
 
-*czasie rzeczywistym*<br/>
+*real*<br/>
 Rzeczywista część liczby zespolonej do skonstruowania.
 
-*imaginary*<br/>
+*urojony*<br/>
 Część urojona liczby zespolonej do skonstruowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Struktura **_Dcomplex**, **_Fcomplex**lub **_Lcomplex** , która reprezentuje liczbę zespoloną \* (*rzeczywistą*, *urojoną* i) dla wartości określonego typu zmiennoprzecinkowego.
+Struktura **_Dcomplex**, **_Fcomplex**lub **_Lcomplex** reprezentująca liczbę zespoloną (*rzeczywistą*, *urojoną* \* i) dla wartości określonego typu zmiennoprzecinkowego.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -69,11 +69,11 @@ Funkcje **_Cbuild**, **_FCbuild**i **_LCbuild** upraszczają tworzenie typów z�
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
 |**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex>|
 
-Te funkcje są specyficzne dla firmy Microsoft. Typy **_Dcomplex**, **_Fcomplex**i **_Lcomplex** są odpowiednikami specyficznymi dla firmy Microsoft dla niewdrożonych typów natywnych C99, odpowiednio **_Complex**, **float _Complex**i **Long podwójnie _Complex**. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Te funkcje są specyficzne dla firmy Microsoft. Typy **_Dcomplex**, **_Fcomplex**i **_Lcomplex** są odpowiednikami specyficznymi dla firmy Microsoft do niezaimplementowanych natywnych typów C99 **`double _Complex`** , **`float _Complex`** i **`long double _Complex`** , odpowiednio. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
