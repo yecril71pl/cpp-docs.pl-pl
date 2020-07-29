@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 9890a6a9dea1671f14b66897a80f4b49861dff2b
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 04fd3ec6ce3363d118174025823279a80dd00f0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257107"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215546"
 ---
 # <a name="tuple-class"></a>tuple — Klasa
 
@@ -41,12 +41,12 @@ class tuple {
 
 ### <a name="parameters"></a>Parametry
 
-\ *TN*
+*TN*\
 Typ n-tego elementu krotki.
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy opisuje obiekt, który przechowuje N obiektów typu `T1`, `T2`,..., `TN`, odpowiednio, gdzie `0 <= N <= Nmax`. Zakresem `tuple<T1, T2, ..., TN>` wystąpienia krotki jest liczba `N` argumentów szablonu. Indeks argumentu szablonu `Ti` i z odpowiadającej jej wartości przechowywanej tego typu jest `i - 1`. W ten sposób, chociaż numery typy z zakresu od 1 do N w tej dokumentacji, odpowiednie wartości indeksu mieszczą się w zakresie od 0 do N-1.
+Szablon klasy opisuje obiekt, który przechowuje N obiektów typu `T1` , `T2` ,..., `TN` odpowiednio, gdzie `0 <= N <= Nmax` . Zakres wystąpienia krotki `tuple<T1, T2, ..., TN>` jest liczbą `N` argumentów szablonu. Indeks argumentu szablonu `Ti` i odpowiadająca mu wartość przechowywana tego typu to `i - 1` . W ten sposób, chociaż numery typy z zakresu od 1 do N w tej dokumentacji, odpowiednie wartości indeksu mieszczą się w zakresie od 0 do N-1.
 
 ## <a name="example"></a>Przykład
 
@@ -116,9 +116,9 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a>operator =
 
-Przypisuje obiekt `tuple`.
+Przypisuje `tuple` obiekt.
 
 ```cpp
 tuple& operator=(const tuple& right);
@@ -137,17 +137,17 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametry
 
-*\*
+*ODINSTALOWAĆ*\
 Typ n-ty skopiowanego elementu krotki.
 
-*prawa*\
+*Kliknij*\
 Krotka, z której ma zostać skopiowane.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsze dwa operatory Członkowskie przypisują elementy *bezpośrednio* do odpowiednich elementów `*this`. Trzeci operator członkowski przypisuje `right.first` do elementu pod indeksem 0 `*this` i `right.second` do elementu pod indeksem 1. Wszystkie trzy operatory Członkowskie zwracają `*this`.
+Pierwsze dwa operatory Członkowskie przypisują elementy *bezpośrednio* do odpowiednich elementów **`*this`** . Trzeci operator członkowski przypisuje `right.first` do elementu pod indeksem 0 **`*this`** i `right.second` do elementu pod indeksem 1. Wszystkie trzy operatory składowe zwracają **`*this`** .
 
-Pozostałe operatory składowe są analogiczne do wcześniejszych, ale z [rvalue Reference deklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Pozostałe operatory składowe są analogiczne do wcześniejszych, ale z [rvalue odwołanie deklarator:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ### <a name="example"></a>Przykład
 
@@ -198,7 +198,7 @@ int main()
 x 4
 ```
 
-## <a name="tuple_swap"></a>wymiany
+## <a name="swap"></a><a name="tuple_swap"></a>wymiany
 
 Wymienia elementy dwóch krotek.
 
@@ -209,19 +209,19 @@ template <class... Types>
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Krotka, której elementy są wymieniane z tymi, które są z *prawej strony*.
 
-*prawa*\
+*Kliknij*\
 Krotka, której elementy są wymieniane z *pozostałymi*kolekcjami z lewej strony.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja wykonuje `left.swap(right)`.
+Funkcja jest wykonywana `left.swap(right)` .
 
-## <a name="tuple"></a>spoin
+## <a name="tuple"></a><a name="tuple"></a>spoin
 
-Konstruuje obiekt `tuple`.
+Konstruuje `tuple` obiekt.
 
 ```cpp
 constexpr tuple();
@@ -246,23 +246,23 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametry
 
-*\*
+*ODINSTALOWAĆ*\
 Typ n-ty skopiowanego elementu krotki.
 
-*prawa*\
+*Kliknij*\
 Krotka, z której ma zostać skopiowane.
 
 ### <a name="remarks"></a>Uwagi
 
 Pierwszy Konstruktor konstruuje obiekt, którego elementy są konstruowane domyślnie.
 
-Drugi Konstruktor konstruuje obiekt, którego elementy są kopiowane z argumentów `P1`, `P2`,..., `PN` z każdym `Pi` inicjowania elementu przy indeksie `i - 1`.
+Drugi Konstruktor konstruuje obiekt, którego elementy są kopiowane z argumentów `P1` , `P2` ,..., `PN` z każdą `Pi` inicjalizacją elementu przy indeksie `i - 1` .
 
 Trzeci i czwarty konstruktory konstruują obiekt, którego elementy są kopiowane z odpowiedniego elementu z *prawej strony*.
 
-Piąty Konstruktor konstruuje obiekt, którego element pod indeksem 0 jest kopiowany z `right.first` i którego element o indeksie 1 jest kopiowany z `right.second`.
+Piąty Konstruktor konstruuje obiekt, którego element pod indeksem 0 jest kopiowany z `right.first` elementu i którego element o indeksie 1 jest kopiowany z `right.second` .
 
-Pozostałe konstruktory są analogowe do wcześniejszych, ale z [rvalue Reference deklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Pozostałe konstruktory są analogowe do wcześniejszych, ale z [rvalue Reference deklarator:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ### <a name="example"></a>Przykład
 

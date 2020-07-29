@@ -1,5 +1,5 @@
 ---
-title: Wariant klasy
+title: Klasa Variant
 ms.date: 04/04/2019
 f1_keywords:
 - variant/std::variant
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - variant/std::variant::emplace
 - variant/std::variant::index
 - variant/std::variant::valueless_by_exception
-ms.openlocfilehash: 9bfdf644374a0b825fd0ca02bf4164a766cb42a3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e34704b0ad8cf8fbaf8ee9514583f9597be40122
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268145"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215403"
 ---
-# <a name="variant-class"></a>Wariant klasy
+# <a name="variant-class"></a>Klasa Variant
 
-Dowolne wystąpienie wariant w danym momencie albo przechowuje wartość jednego z jej typów alternatywnych lub przechowuje żadnej wartości.
+Każde wystąpienie wariantu w dowolnym momencie zawiera wartość jednego z jego typów alternatywnych lub nie ma żadnej wartości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,30 +31,30 @@ template <class... Types>
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
 |||
 |-|-|
-|[Variant](#variant)|Tworzy obiekt typu `variant`.|
+|[typu](#variant)|Konstruuje obiekt typu `variant` .|
 
 ### <a name="functions"></a>Funkcje
 
 |||
 |-|-|
-|[emplace —](#emplace)|Tworzy nową wartość zawartych.|
-|[index](#index)|Zwraca indeks wartości zawartych.|
-|[swap](#swap)||
-|[valueless_by_exception](#emplace)|Zwraca **false** Jeśli wariant przechowuje wartość.|
+|[emplace](#emplace)|Tworzy nową wartość zawartej.|
+|[indeks](#index)|Zwraca indeks zawartej wartości.|
+|[wymiany](#swap)||
+|[valueless_by_exception](#emplace)|Zwraca **`false`** czy wariant ma wartość.|
 
 ### <a name="operators"></a>Operatory
 
 |||
 |-|-|
-|[operator=](#op_eq)|Zastępuje kopię inny wariant wariant.|
+|[operator =](#op_eq)|Zastępuje wariant z kopią innego wariantu.|
 
-## <a name="emplace"></a> emplace —
+## <a name="emplace"></a><a name="emplace"></a>emplace
 
-Tworzy nową wartość zawartych.
+Tworzy nową wartość zawartej.
 
 ```cpp
 template <class T, class... Args>
@@ -67,17 +67,17 @@ template <size_t I, class U, class... Args>
     variant_alternative_t<I, variant<Types...>>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="index"></a> Indeks
+## <a name="index"></a><a name="index"></a>indeks
 
-Zwraca indeks wartości zawartych.
+Zwraca indeks zawartej wartości.
 
 ```cpp
 constexpr size_t index() const noexcept;
 ```
 
-## <a name="variant"></a> Variant
+## <a name="variant"></a><a name="variant"></a>typu
 
-Tworzy obiekt typu `variant`. Zawiera także destruktora.
+Konstruuje obiekt typu `variant` . Zawiera również destruktor.
 
 ```cpp
 constexpr variant() noexcept(see below);
@@ -116,12 +116,12 @@ template <class Alloc, size_t I, class U, class... Args>
 
 ### <a name="parameters"></a>Parametry
 
-*Al*\
+*Wsp*\
 Klasa alokatora do wykorzystania z tym obiektem.
 
-## <a name="op_eq"></a> operator =
+## <a name="operator"></a><a name="op_eq"></a>operator =
 
-Zastępuje kopię inny wariant wariant.
+Zastępuje wariant z kopią innego wariantu.
 
 ```cpp
 variant& operator=(const variant&);
@@ -130,15 +130,15 @@ template <class T>
     variant& operator=(T&&) noexcept(see below);
 ```
 
-## <a name="swap"></a> swap
+## <a name="swap"></a><a name="swap"></a>wymiany
 
 ```cpp
 void swap(variant&) noexcept(see below);
 ```
 
-## <a name="valueless"></a> valueless_by_exception
+## <a name="valueless_by_exception"></a><a name="valueless"></a>valueless_by_exception
 
-Zwraca **false** Jeśli wariant przechowuje wartość.
+Zwraca **`false`** czy wariant ma wartość.
 
 ```cpp
 constexpr bool valueless_by_exception() const noexcept;

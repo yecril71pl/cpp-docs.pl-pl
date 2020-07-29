@@ -1,17 +1,17 @@
 ---
-title: db_source (C++ atrybut com)
+title: db_source (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_source
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-ms.openlocfilehash: 6346a8d6f60313dc17bbcbad062aa888857f0b67
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d328cd7bcfed257b423a440041b6806149736ed0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167280"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215299"
 ---
 # <a name="db_source"></a>db_source
 
@@ -29,7 +29,7 @@ Tworzy połączenie ze źródłem danych.
 Parametry połączenia używane do nawiązywania połączenia ze źródłem danych. Aby uzyskać format parametrów połączenia, zobacz [parametry połączeń i linki do danych](/previous-versions/windows/desktop/ms718376(v=vs.85)) w zestawie SDK składników Microsoft Data Access Components (MDAC).
 
 *Nazwij*<br/>
-Obowiązkowe W przypadku używania **db_source** w klasie, *name* jest wystąpieniem obiektu źródła danych, do którego zastosowano atrybut **db_source** (Zobacz przykład 1). W przypadku używania **db_source** wbudowanej w implementacji metody *name* jest zmienną (lokalną dla metody), która może być używana do uzyskiwania dostępu do źródła danych (Zobacz przykład 2). Ta *Nazwa* jest przekazywany do *source_name* parametru `db_command` w celu skojarzenia źródła danych z poleceniem.
+Obowiązkowe W przypadku używania **db_source** w klasie, *name* jest wystąpieniem obiektu źródła danych, do którego zastosowano atrybut **db_source** (Zobacz przykład 1). W przypadku używania **db_source** wbudowanej w implementacji metody *name* jest zmienną (lokalną dla metody), która może być używana do uzyskiwania dostępu do źródła danych (Zobacz przykład 2). Ta *Nazwa* jest przekazywany do *source_name* parametru, `db_command` Aby skojarzyć źródło danych z poleceniem.
 
 *wynik*<br/>
 Obowiązkowe Identyfikuje zmienną, która będzie otrzymywać wartość HRESULT tego polecenia bazy danych. Jeśli zmienna nie istnieje, zostanie automatycznie wprowadzona przez atrybut.
@@ -38,19 +38,19 @@ Obowiązkowe Identyfikuje zmienną, która będzie otrzymywać wartość HRESULT
 
 **db_source** tworzy obiekt [CDataSource](../../data/oledb/cdatasource-class.md) i [CSession](../../data/oledb/csession-class.md) , który razem reprezentuje połączenie ze źródłem danych odbiorcy OLE DB.
 
-Gdy używasz **db_source** w klasie, obiekt `CSession` zostanie członkiem klasy.
+Gdy używasz **db_source** w klasie, `CSession` obiekt zostaje członkiem klasy.
 
-Gdy używasz **db_source** w metodzie, wprowadzony kod zostanie wykonany w zakresie metody, a obiekt `CSession` zostanie utworzony jako zmienna lokalna.
+W przypadku używania **db_source** w metodzie wstrzykiwany kod zostanie wykonany w zakresie metody, a `CSession` obiekt jest tworzony jako zmienna lokalna.
 
-**db_source** dodaje właściwości źródła danych do klasy lub w ramach metody. Jest on używany w połączeniu z `db_command` (który przyjmuje parametr *db_source* *name* db_source jako parametr *source_name* ).
+**db_source** dodaje właściwości źródła danych do klasy lub w ramach metody. Jest on używany w połączeniu z `db_command` (który przyjmuje parametr *db_source* *name* jako parametr *source_name* ).
 
-Gdy dostawca atrybutu odbiorcy zastosuje ten atrybut do klasy, kompilator zmieni nazwę klasy na \_akcesor *YourClassName*, gdzie *YourClassName* jest nazwą, którą nadano klasy, a kompilator utworzy również klasę o nazwie *YourClassName*, która pochodzi od metody dostępu \_*YourClassName*.  W Widok klasy są wyświetlane obie klasy.
+Gdy dostawca atrybutu konsumenta zastosuje ten atrybut do klasy, kompilator zmieni nazwę klasy na \_ *YourClassName*, gdzie *YourClassName* jest nazwą, która została nadana klasie, a kompilator utworzy również klasę o nazwie *YourClassName*, która pochodzi z \_ metody dostępu *YourClassName*.  W Widok klasy są wyświetlane obie klasy.
 
 Aby zapoznać się z przykładem tego atrybutu używanym w aplikacji, zobacz [Odczytaj](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer).
 
 ## <a name="example"></a>Przykład
 
-Ten przykład wywołuje **db_source** na klasie w celu utworzenia połączenia ze źródłem danych `ds` przy użyciu bazy danych Northwind. `ds` jest dojściem do źródła danych, które może być używane wewnętrznie do klasy `CMyCommand`.
+Ten przykład wywołuje **db_source** na klasie w celu utworzenia połączenia ze źródłem danych `ds` przy użyciu bazy danych Northwind. `ds`jest dojściem do źródła danych, które może być używane wewnętrznie w `CMyCommand` klasie.
 
 ```cpp
 // db_source_1.cpp
@@ -72,13 +72,13 @@ class CMyCommand {};
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **Struktura**, element członkowski, metoda, lokalna|
+|**Dotyczy**|**`class`**, **`struct`** , członek, metoda, lokalna|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Atrybuty konsumentów OLE DB](ole-db-consumer-attributes.md)
+[OLE DB atrybuty konsumenta](ole-db-consumer-attributes.md)

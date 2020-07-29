@@ -8,32 +8,32 @@ helpviewer_keywords:
 - Zc:implicitNoexcept
 - -Zc:implicitNoexcept
 ms.assetid: 71807652-6f9d-436b-899e-f52daa6f500b
-ms.openlocfilehash: ec2b8c8fb4c7730a78c4403606d6fa61c0ddc374
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb1a632ffe684ac0777d0089a2edfd514bf66d0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315563"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223801"
 ---
 # <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept (niejawne specyfikatory wyjątków)
 
-Gdy **/Zc: implicitnoexcept** opcja zostanie określona, kompilator dodający ukrytego [noexcept](../../cpp/noexcept-cpp.md) specyfikator wyjątku do zdefiniowanego przez kompilator specjalnych funkcji Członkowskich i zdefiniowanych przez użytkownika destruktorów i deallocators. Domyślnie **/Zc: implicitnoexcept** jest włączona, aby były zgodne z normą ISO C ++ 11, standard. Włączenie tej opcji wyłącza niejawne `noexcept` na zdefiniowanych przez użytkownika destruktorów i dealloacators i zdefiniowanego przez kompilator specjalnych funkcji Członkowskich.
+Gdy jest określona opcja **/Zc: implicitNoexcept** , kompilator dodaje niejawny specyfikator wyjątku [noexcept](../../cpp/noexcept-cpp.md) do specjalnych funkcji składowych zdefiniowanych przez kompilator oraz do destruktorów zdefiniowanych przez użytkownika i dealokacji. Domyślnie **/Zc: implicitNoexcept** jest włączona, aby była zgodna ze standardem ISO c++ 11. Wyłączenie tej opcji wyłącza niejawnie **`noexcept`** w przypadku destruktorów zdefiniowanych przez użytkownika i dealloacators oraz specjalnych funkcji składowych zdefiniowanych przez kompilator.
 
 ## <a name="syntax"></a>Składnia
 
-> **/Zc:implicitNoexcept**[**-**]
+> **/Zc: implicitNoexcept**[ **-** ]
 
 ## <a name="remarks"></a>Uwagi
 
-**/ Zc: implicitnoexcept** informuje kompilator, postępuj zgodnie z sekcją 15.4 ISO C ++ 11, standardowy. Niejawnie dodaje `noexcept` specyfikator wyjątek, aby każdy jawnie ustawione jako domyślne lub niejawnie deklarowana specjalna funkcja członkowska — Konstruktor domyślny, Kopiuj konstruktora, Konstruktor przenoszący, destruktor, operator przypisania kopiowania lub przenoszenia przypisania operator — i każdej funkcji zdefiniowanej przez użytkownika — destruktor lub program wycofujący przydzielenia. Program wycofujący przydzielenia zdefiniowanych przez użytkownika mają niejawny `noexcept(true)` specyfikator wyjątku. Zdefiniowane przez użytkownika destruktorów, specyfikator niejawne wyjątek jest `noexcept(true)` chyba że zamkniętego elementu członkowskiego klasy lub klasa bazowa ma destruktor, który nie jest `noexcept(true)`. Dla generowanych przez kompilator specjalnych funkcji Członkowskich, jeśli żadnej funkcji bezpośrednio wywoływane przez tę funkcję jest faktycznie `noexcept(false)`, specyfikator niejawne wyjątek jest `noexcept(false)`. W przeciwnym razie jest specyfikator niejawne wyjątek `noexcept(true)`.
+**/Zc: implicitNoexcept** instruuje kompilator, aby przestrzegał sekcji 15,4 standardu ISO c++ 11. Niejawnie dodaje **`noexcept`** specyfikator wyjątku do każdej niejawnie zadeklarowanej lub jawnie domyślnej specjalnej funkcji składowej — Konstruktor domyślny, Konstruktor kopiujący, Konstruktor przenoszenia, destruktor, operator przypisania kopiowania lub operator przypisania przenoszenia — oraz każdy destruktor zdefiniowany przez użytkownika lub funkcję dealokacji. Zdefiniowany przez użytkownika deprzypisanie ma niejawny `noexcept(true)` specyfikator wyjątku. Dla destruktorów zdefiniowanych przez użytkownika, niejawny specyfikator wyjątku jest `noexcept(true)` chyba, że w klasie składowej lub klasie bazowej nie ma destruktora, który nie jest `noexcept(true)` . W przypadku funkcji specjalnych elementów członkowskich generowanych przez kompilator, jeśli jakakolwiek funkcja wywoływana bezpośrednio przez tę funkcję jest skuteczna `noexcept(false)` , niejawny specyfikator wyjątku to `noexcept(false)` . W przeciwnym razie niejawny specyfikator wyjątku to `noexcept(true)` .
 
-Kompilator nie generuje specyfikatorem wyjątek niejawne funkcje zadeklarowane za pomocą jawnego `noexcept` lub `throw` specyfikatory lub `__declspec(nothrow)` atrybutu.
+Kompilator nie generuje niejawnego specyfikatora wyjątku dla funkcji zadeklarowanych za pomocą jawnych **`noexcept`** lub **`throw`** specyfikatorów lub `__declspec(nothrow)` atrybutu.
 
-Domyślnie **/Zc: implicitnoexcept** jest włączona. [/ Permissive-](permissive-standards-conformance.md) opcji nie ma wpływu na **/Zc: implicitnoexcept**.
+Domyślnie **/Zc: implicitNoexcept** jest włączona. Opcja [/permissive-](permissive-standards-conformance.md) nie ma wpływu na **/Zc: implicitNoexcept**.
 
-Jeśli ta opcja jest wyłączona, określając **/Zc:implicitNoexcept-**, nie specyfikatory wyjątków niejawne są generowane przez kompilator. To zachowanie jest taka sama jak Visual Studio 2013, gdzie może mieć destruktory i deallocators, które nie miały specyfikatory wyjątków `throw` instrukcji. Domyślnie i kiedy **/Zc: implicitnoexcept** jest określona, jeśli `throw` instrukcji zostanie osiągnięty w czasie wykonywania w funkcji za pomocą ukrytego `noexcept(true)` specyfikator powoduje natychmiastowe wywołanie `std::terminate`, i normalne zachowanie odwijania dla obsługi wyjątków nie jest gwarantowana. Aby ułatwić identyfikację tę sytuację, kompilator generuje [ostrzeżenie kompilatora (poziom 1) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md). Jeśli `throw` jest zamierzone, zaleca się zmienić swoje deklaracji funkcji, aby jawnie `noexcept(false)` specyfikator zamiast **/Zc:implicitNoexcept-**.
+Jeśli opcja jest wyłączona przez określenie **/Zc: implicitNoexcept-**, w kompilatorze nie są generowane żadne niejawne specyfikatory wyjątków. Takie zachowanie jest takie samo jak Visual Studio 2013, gdzie destruktory i dekonstruktory, które nie mają specyfikatorów wyjątków, mogą mieć **`throw`** instrukcje. Domyślnie, a gdy **/Zc: implicitNoexcept** jest określony, jeśli **`throw`** instrukcja zostanie napotkana w czasie wykonywania w funkcji z specyfikatorem niejawnym `noexcept(true)` , powoduje natychmiastowe wywołanie `std::terminate` i normalne zachowanie odwinięcia dla programów obsługi wyjątków. Aby pomóc w zidentyfikowaniu tej sytuacji, kompilator generuje [Ostrzeżenie kompilatora (poziom 1) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md). Jeśli **`throw`** jest zamierzone, zalecamy zmianę deklaracji funkcji tak, aby zawierała jawny `noexcept(false)` specyfikator zamiast używania **/Zc: implicitNoexcept-**.
 
-W tym przykładzie pokazano, jak destruktor zdefiniowany przez użytkownika, zawierającej specyfikator nie jawnych wyjątków zachowuje się kiedy **/Zc: implicitnoexcept** opcji jest ustawiona lub wyłączone. Aby wyświetlić zachowanie po ustawieniu kompilowania przy użyciu `cl /EHsc /W4 implicitNoexcept.cpp`. Aby wyświetlić zachowanie wyłączenia, kompilowania przy użyciu `cl /EHsc /W4 /Zc:implicitNoexcept- implicitNoexcept.cpp`.
+Ten przykład pokazuje, jak zdefiniowany przez użytkownika destruktor, który nie ma jawnego specyfikatora wyjątku zachowuje się, gdy opcja **/Zc: implicitNoexcept** jest ustawiona lub wyłączona. Aby wyświetlić zachowanie po ustawieniu, Kompiluj przy użyciu `cl /EHsc /W4 implicitNoexcept.cpp` . Aby wyświetlić zachowanie po wyłączeniu, Kompiluj przy użyciu `cl /EHsc /W4 /Zc:implicitNoexcept- implicitNoexcept.cpp` .
 
 ```cpp
 // implicitNoexcept.cpp
@@ -109,7 +109,7 @@ int main()
 }
 ```
 
-Gdy kompilowany przy użyciu domyślnego ustawienia **/Zc: implicitnoexcept**, przykład generuje następujące dane wyjściowe:
+Podczas kompilowania przy użyciu domyślnego ustawienia **/Zc: implicitNoexcept**, przykład generuje te dane wyjściowe:
 
 ```Output
 ~B Exception caught
@@ -117,7 +117,7 @@ Unexpected throw caused std::terminate
 Exit returning EXIT_FAILURE
 ```
 
-Podczas kompilowania przy użyciu ustawienia **/Zc:implicitNoexcept-**, przykład generuje następujące dane wyjściowe:
+Podczas kompilowania przy użyciu ustawienia **/Zc: implicitNoexcept-**, przykład generuje te dane wyjściowe:
 
 ```Output
 ~B Exception caught
@@ -125,19 +125,19 @@ Podczas kompilowania przy użyciu ustawienia **/Zc:implicitNoexcept-**, przykła
 Exit returning EXIT_SUCCESS
 ```
 
-Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
+Aby uzyskać więcej informacji na temat problemów ze zgodnością w Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
+1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja wiersza polecenia**C/C++**  >  **Command Line** .
 
-1. Modyfikowanie **dodatkowe opcje** właściwości do uwzględnienia **/Zc: implicitnoexcept** lub **/Zc:implicitNoexcept-** , a następnie wybierz **OK**.
+1. Zmodyfikuj właściwość **Opcje dodatkowe** , aby uwzględnić **/Zc: implicitNoexcept** lub **/Zc: implicitNoexcept-** , a następnie wybierz **przycisk OK**.
 
 ## <a name="see-also"></a>Zobacz także
 
 [/Zc (Zgodność)](zc-conformance.md)<br/>
 [noexcept](../../cpp/noexcept-cpp.md)<br/>
 [Specyfikacje wyjątków (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>
-[Zakończenie](../../standard-library/exception-functions.md#terminate)<br/>
+[kończyć](../../standard-library/exception-functions.md#terminate)<br/>

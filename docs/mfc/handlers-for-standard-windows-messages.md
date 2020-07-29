@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [MFC], handler
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
-ms.openlocfilehash: 190acd619224bdf22a5c8d35f541fa48b6664fe1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d967341cdb0197f1157ab9d253072f3d0d7aa46f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625754"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223151"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Programy obsługi dla standardowych komunikatów systemu Windows
 
@@ -23,7 +23,7 @@ Domyślne programy obsługi dla standardowych komunikatów systemu Windows (**WM
 
 `afx_msg void OnPaint();`
 
-Słowo kluczowe **afx_msg** sugeruje efekt **wirtualnego** słowa kluczowego języka C++ poprzez odróżnienie obsługi od innych `CWnd` funkcji Członkowskich. Należy jednak pamiętać, że te funkcje nie są w rzeczywistości wirtualne; Zamiast tego są one wdrażane za poorednictwem map komunikatów. Mapy komunikatów są zależne wyłącznie od standardowych makr preprocesora, a nie na żadnych rozszerzeniach języka C++. Słowo kluczowe **afx_msg** jest rozpoznawane jako biały znak po przeprowadzeniu wstępnego przetwarzania.
+Słowo kluczowe **afx_msg** sugeruje efekt **`virtual`** słowa kluczowego języka C++ poprzez odróżnienie obsługi od innych `CWnd` funkcji Członkowskich. Należy jednak pamiętać, że te funkcje nie są w rzeczywistości wirtualne; Zamiast tego są one wdrażane za poorednictwem map komunikatów. Mapy komunikatów są zależne wyłącznie od standardowych makr preprocesora, a nie na żadnych rozszerzeniach języka C++. Słowo kluczowe **afx_msg** jest rozpoznawane jako biały znak po przeprowadzeniu wstępnego przetwarzania.
 
 Aby zastąpić procedurę obsługi zdefiniowaną w klasie bazowej, wystarczy zdefiniować funkcję z tym samym prototypem w klasie pochodnej i utworzyć wpis mapy komunikatów dla programu obsługi. Procedura obsługi "przesłania" wszystkie procedury obsługi o tej samej nazwie w dowolnych klasach bazowych klasy.
 
@@ -36,8 +36,8 @@ Jak określić właściwy sposób przesłonięcia danego komunikatu, gdy [Kreato
 
 [!code-cpp[NVC_MFCMessageHandling#3](codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]
 
-Według Konwencji nazwy tych programów obsługi zaczynają się prefiksem "on". Niektóre z tych programów obsługi nie przyjmują argumentów, a inne zajmują kilka. Niektóre z nich również mają typ zwracany inny niż **void**. Domyślne programy obsługi dla wszystkich komunikatów **WM_** są udokumentowane w *odwołaniu MFC* jako funkcje elementów członkowskich klasy, `CWnd` których nazwy zaczynają się od "on". Deklaracje funkcji Członkowskich w programie `CWnd` są poprzedzone prefiksem **afx_msg**.
+Według Konwencji nazwy tych programów obsługi zaczynają się prefiksem "on". Niektóre z tych programów obsługi nie przyjmują argumentów, a inne zajmują kilka. Niektóre z nich również mają typ zwracany inny niż **`void`** . Domyślne programy obsługi dla wszystkich komunikatów **WM_** są udokumentowane w *odwołaniu MFC* jako funkcje elementów członkowskich klasy, `CWnd` których nazwy zaczynają się od "on". Deklaracje funkcji Członkowskich w programie `CWnd` są poprzedzone prefiksem **afx_msg**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Deklarowanie funkcji obsługi komunikatów](declaring-message-handler-functions.md)

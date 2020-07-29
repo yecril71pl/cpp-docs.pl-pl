@@ -28,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: f402b090409c2eb5dc8db457776140a27f8f820e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3740e4bebcc63f0f664d40b2e048f19c2aa24c99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910475"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215091"
 ---
 # <a name="wctob"></a>wctob
 
@@ -58,7 +58,7 @@ Jeśli **wctob** pomyślnie konwertuje znak dwubajtowy, zwraca swoją reprezenta
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **wctob** konwertuje szeroką literę zawartą w *WCHAR* do odpowiedniego znaku wielobajtowego przekazaną przez zwracaną wartość **int** , jeśli znak wielobajtowy ma dokładnie jeden bajt Long.
+Funkcja **wctob** konwertuje szeroką literę zawartą w *WCHAR* do odpowiedniego znaku wielobajtowego przekazaną przez wartość zwracaną **`int`** , jeśli znak wielobajtowy ma dokładnie jeden bajt Long.
 
 Jeśli **wctob** zakończyło się niepowodzeniem i nie znaleziono odpowiedniego znaku wielobajtowego, funkcja ustawia **errno** na **EILSEQ** i zwraca wartość-1.
 
@@ -68,7 +68,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**wctob**|\<WCHAR. h>|
+|**wctob**|\<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -106,10 +106,10 @@ int main( void )
 Determined the corresponding multibyte character to be "A".
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

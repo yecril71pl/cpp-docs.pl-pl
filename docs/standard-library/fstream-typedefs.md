@@ -1,5 +1,5 @@
 ---
-title: '&lt;fstream&gt; typedefs'
+title: '&lt;fstream — &gt; Typedefs'
 ms.date: 11/04/2016
 f1_keywords:
 - fstream/std::filebuf
@@ -11,24 +11,24 @@ f1_keywords:
 - fstream/std::wifstream
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
-ms.openlocfilehash: 57e481c131a6e4a1111b1ed88217b891d6fc96a8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a0f62f951fb6de4b32a27511ae38e1346cbc22e3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317195"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215754"
 ---
-# <a name="ltfstreamgt-typedefs"></a>&lt;fstream&gt; typedefs
+# <a name="ltfstreamgt-typedefs"></a>&lt;fstream — &gt; Typedefs
 
 ||||
 |-|-|-|
-|[filebuf (właśc.](#filebuf)|[fstream (fstream)](#fstream)|[Ifstream](#ifstream)|
-|[Ofstream](#ofstream)|[wfilebuf](#wfilebuf)|[wfstream](#wfstream)|
+|[filebuf](#filebuf)|[fstream —](#fstream)|[ifstream](#ifstream)|
+|[ofstream](#ofstream)|[wfilebuf](#wfilebuf)|[wfstream](#wfstream)|
 |[wifstream](#wifstream)|[wofstream](#wofstream)|
 
-## <a name="filebuf"></a><a name="filebuf"></a>filebuf (właśc.
+## <a name="filebuf"></a><a name="filebuf"></a>filebuf
 
-Typ `basic_filebuf` wyspecjalizowany w parametrach szablonu **znaku.**
+Typ `basic_filebuf` wyspecjalizowany dla **`char`** parametrów szablonu.
 
 ```cpp
 typedef basic_filebuf<char, char_traits<char>> filebuf;
@@ -36,11 +36,11 @@ typedef basic_filebuf<char, char_traits<char>> filebuf;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem szablonu klasy [basic_filebuf,](../standard-library/basic-filebuf-class.md)wyspecjalizowane dla elementów **typu char** z domyślnymi cechami znaków.
+Typ jest synonimem dla szablonu klasy [basic_filebuf](../standard-library/basic-filebuf-class.md), wyspecjalizowany dla elementów typu **`char`** z cechami domyślnymi znaków.
 
-## <a name="fstream"></a><a name="fstream"></a>fstream (fstream)
+## <a name="fstream"></a><a name="fstream"></a>fstream —
 
-Typ `basic_fstream` wyspecjalizowany w parametrach szablonu **znaku.**
+Typ `basic_fstream` wyspecjalizowany dla **`char`** parametrów szablonu.
 
 ```cpp
 typedef basic_fstream<char, char_traits<char>> fstream;
@@ -48,13 +48,13 @@ typedef basic_fstream<char, char_traits<char>> fstream;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem szablonu klasy [basic_fstream,](../standard-library/basic-fstream-class.md)wyspecjalizowane dla elementów **typu char** z domyślnymi cechami znaków.
+Typ jest synonimem dla szablonu klasy [basic_fstream](../standard-library/basic-fstream-class.md), wyspecjalizowany dla elementów typu **`char`** z cechami domyślnymi znaków.
 
-## <a name="ifstream"></a><a name="ifstream"></a>Ifstream
+## <a name="ifstream"></a><a name="ifstream"></a>ifstream
 
-Definiuje strumień, który ma być używany do odczytywania danych znaków jedno bajtowych szeregowo z pliku. `ifstream`jest typedef, który specjalizuje `basic_ifstream` się szablon klasy dla **char**.
+Definiuje strumień, który ma być używany do odczytywania jednobajtowego danych znakowego z pliku. `ifstream`jest elementem TypeDef, który określa szablon klasy `basic_ifstream` dla **`char`** .
 
-Istnieje również `wifstream`, typedef, `basic_ifstream` który specjalizuje się w czytania **wchar_t** znaków o podwójnej szerokości. Aby uzyskać więcej informacji, zobacz [wifstream](../standard-library/fstream-typedefs.md#wifstream).
+Istnieje również `wifstream` element typedef, który jest wyspecjalizowany `basic_ifstream` do odczytywania **`wchar_t`** podwójnych znaków. Aby uzyskać więcej informacji, zobacz [wifstream](../standard-library/fstream-typedefs.md#wifstream).
 
 ```cpp
 typedef basic_ifstream<char, char_traits<char>> ifstream;
@@ -62,7 +62,7 @@ typedef basic_ifstream<char, char_traits<char>> ifstream;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem szablonu klasy [basic_ifstream,](../standard-library/basic-ifstream-class.md)wyspecjalizowane dla elementów typu char z domyślnymi cechami znaków. Przykładem jest
+Typ jest synonimem dla szablonu klasy [basic_ifstream](../standard-library/basic-ifstream-class.md), wyspecjalizowany dla elementów typu char z domyślnymi cechami znaków. Przykładem jest
 
 ```cpp
 using namespace std;
@@ -76,9 +76,9 @@ if (!infile.bad())
 }
 ```
 
-## <a name="ofstream"></a><a name="ofstream"></a>Ofstream
+## <a name="ofstream"></a><a name="ofstream"></a>ofstream
 
-Typ `basic_ofstream` wyspecjalizowany w parametrach szablonu **znaku.**
+Typ `basic_ofstream` wyspecjalizowany dla **`char`** parametrów szablonu.
 
 ```cpp
 typedef basic_ofstream<char, char_traits<char>> ofstream;
@@ -86,11 +86,11 @@ typedef basic_ofstream<char, char_traits<char>> ofstream;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem szablonu klasy [basic_ofstream,](../standard-library/basic-ofstream-class.md)wyspecjalizowane dla elementów **typu char** z domyślnymi cechami znaków.
+Typ jest synonimem dla szablonu klasy [basic_ofstream](../standard-library/basic-ofstream-class.md), wyspecjalizowany dla elementów typu **`char`** z cechami domyślnymi znaków.
 
 ## <a name="wfstream"></a><a name="wfstream"></a>wfstream
 
-Typ `basic_fstream` wyspecjalizowany w **parametrach szablonu wchar_t.**
+Typ `basic_fstream` wyspecjalizowany dla **`wchar_t`** parametrów szablonu.
 
 ```cpp
 typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
@@ -98,11 +98,11 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem szablonu klasy [basic_fstream,](../standard-library/basic-fstream-class.md)wyspecjalizowanym dla elementów typu **wchar_t** z domyślnymi cechami znaków.
+Typ jest synonimem dla szablonu klasy [basic_fstream](../standard-library/basic-fstream-class.md), wyspecjalizowany dla elementów typu **`wchar_t`** z cechami domyślnymi znaków.
 
 ## <a name="wifstream"></a><a name="wifstream"></a>wifstream
 
-Typ `basic_ifstream` wyspecjalizowany w **parametrach szablonu wchar_t.**
+Typ `basic_ifstream` wyspecjalizowany dla **`wchar_t`** parametrów szablonu.
 
 ```cpp
 typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
@@ -110,11 +110,11 @@ typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem szablonu klasy [basic_ifstream,](../standard-library/basic-ifstream-class.md)wyspecjalizowanym dla elementów typu **wchar_t** z domyślnymi cechami znaków.
+Typ jest synonimem dla szablonu klasy [basic_ifstream](../standard-library/basic-ifstream-class.md), wyspecjalizowany dla elementów typu **`wchar_t`** z cechami domyślnymi znaków.
 
 ## <a name="wofstream"></a><a name="wofstream"></a>wofstream
 
-Typ `basic_ofstream` wyspecjalizowany w **parametrach szablonu wchar_t.**
+Typ `basic_ofstream` wyspecjalizowany dla **`wchar_t`** parametrów szablonu.
 
 ```cpp
 typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
@@ -122,11 +122,11 @@ typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem szablonu klasy [basic_ofstream,](../standard-library/basic-ofstream-class.md)wyspecjalizowanym dla elementów typu **wchar_t** z domyślnymi cechami znaków.
+Typ jest synonimem dla szablonu klasy [basic_ofstream](../standard-library/basic-ofstream-class.md), wyspecjalizowany dla elementów typu **`wchar_t`** z cechami domyślnymi znaków.
 
 ## <a name="wfilebuf"></a><a name="wfilebuf"></a>wfilebuf
 
-Typ `basic_filebuf` wyspecjalizowany w **parametrach szablonu wchar_t.**
+Typ `basic_filebuf` wyspecjalizowany dla **`wchar_t`** parametrów szablonu.
 
 ```cpp
 typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
@@ -134,8 +134,8 @@ typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem szablonu klasy [basic_filebuf,](../standard-library/basic-filebuf-class.md)wyspecjalizowanym dla elementów typu **wchar_t** z domyślnymi cechami znaków.
+Typ jest synonimem dla szablonu klasy [basic_filebuf](../standard-library/basic-filebuf-class.md), wyspecjalizowany dla elementów typu **`wchar_t`** z cechami domyślnymi znaków.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[\<>fstream](../standard-library/fstream.md)
+[\<fstream>](../standard-library/fstream.md)

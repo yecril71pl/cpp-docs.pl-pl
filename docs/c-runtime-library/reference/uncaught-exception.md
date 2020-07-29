@@ -23,16 +23,16 @@ f1_keywords:
 helpviewer_keywords:
 - __uncaught_exception
 ms.assetid: 4d9b75c6-c9c7-4876-b761-ea9ab1925e96
-ms.openlocfilehash: 0130776ec2511aefd42d1700f950d97738e9fb14
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1eb06abbda7978acf578555f966f0857dff02053
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945947"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211635"
 ---
 # <a name="__uncaught_exception"></a>__uncaught_exception
 
-Wskazuje, czy zgłoszono co najmniej jeden wyjątek, ale nie został jeszcze obsłużony przez odpowiedni blok **catch** instrukcji [try-catch](../../cpp/try-throw-and-catch-statements-cpp.md) .
+Wskazuje, czy zgłoszono co najmniej jeden wyjątek, ale nie został jeszcze obsłużony przez odpowiedni **`catch`** blok instrukcji [try-catch](../../cpp/try-throw-and-catch-statements-cpp.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,7 +43,7 @@ bool __uncaught_exception(
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**wartość true** od momentu, gdy wyjątek jest zgłaszany w bloku **try** do momentu zainicjowania pasującego bloku **catch** ; w przeciwnym razie **false**.
+**`true`** od momentu, gdy wyjątek jest zgłaszany w **`try`** bloku do momentu **`catch`** zainicjowania pasującego bloku; w przeciwnym razie **`false`** .
 
 ## <a name="remarks"></a>Uwagi
 

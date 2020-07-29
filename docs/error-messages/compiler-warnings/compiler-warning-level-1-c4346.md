@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-ms.openlocfilehash: 3ab519f612d5272b0562728917cc777f1de86b79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f1f731eed2dae2721b13bb2e526992849e217f7f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187248"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223203"
 ---
 # <a name="compiler-warning-level-1-c4346"></a>Ostrzeżenie kompilatora (poziom 1) C4346
 
 "name": Nazwa zależna nie jest typem
 
-Słowo kluczowe [TypeName](../../cpp/typename.md) jest wymagane, jeśli nazwa zależna ma być traktowana jako typ. W przypadku kodu, który działa tak samo we wszystkich wersjach C++wizualizacji, Dodaj `typename` do deklaracji.
+Słowo kluczowe [TypeName](../../cpp/typename.md) jest wymagane, jeśli nazwa zależna ma być traktowana jako typ. W przypadku kodu, który działa tak samo we wszystkich wersjach Visual C++, Dodaj **`typename`** do deklaracji.
 
 Poniższy przykład generuje C4346:
 
@@ -32,7 +32,7 @@ struct C {
 };
 ```
 
-W poniższych przykładach pokazano inne przykłady, w których wymagane jest słowo kluczowe **TypeName** :
+W poniższych przykładach przedstawiono inne przykłady, w których **`typename`** słowo kluczowe jest wymagane:
 
 ```cpp
 // C4346b.cpp

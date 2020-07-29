@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 5c9819c1d9167bea9a9bedeef2ac44798d5a121f
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 249170e1e29d3ca8c488d15be8fa4ccd2b9070c1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404850"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222761"
 ---
 # <a name="c-amp-overview"></a>Przegląd C++ AMP
 
@@ -60,7 +60,7 @@ Ważne części kodu są następujące:
 
 - Dane: dane składają się z trzech tablic. Wszystkie mają tę samą rangę (jeden) i długość (pięć).
 
-- Iteracja: pierwsza `for` Pętla zapewnia mechanizm do iterowania przez elementy w tablicach. Kod, który chcesz wykonać, aby obliczyć sumy, jest zawarty w pierwszym `for` bloku.
+- Iteracja: pierwsza **`for`** Pętla zapewnia mechanizm do iterowania przez elementy w tablicach. Kod, który chcesz wykonać, aby obliczyć sumy, jest zawarty w pierwszym **`for`** bloku.
 
 - Indeks: `idx` zmienna uzyskuje dostęp do poszczególnych elementów tablic.
 
@@ -238,7 +238,7 @@ W poniższej tabeli zestawiono podobieństwa i różnice między `array` `array_
 
 Pamięć współdzielona jest pamięcią, do której można uzyskać dostęp zarówno przy użyciu procesora, jak i akceleratora. Użycie pamięci współużytkowanej eliminuje lub znacznie zmniejsza obciążenie związane z kopiowaniem danych między PROCESORem a akceleratorem. Mimo że pamięć jest udostępniona, dostęp do niej nie jest możliwy jednocześnie przez procesor i akcelerator, a tym samym powoduje niezdefiniowane zachowanie.
 
-`array`obiekty mogą służyć do określania precyzyjnej kontroli nad użyciem pamięci współdzielonej, jeśli skojarzony akcelerator obsługuje tę funkcję. Czy akcelerator obsługuje pamięć współużytkowaną jest określany przez właściwość [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) akceleratora, która zwraca **wartość PRAWDA** , jeśli jest obsługiwana pamięć udostępniona. Jeśli obsługiwana jest pamięć współdzielona, domyślne [wyliczenie access_type](reference/concurrency-namespace-enums-amp.md#access_type) dla alokacji pamięci w akceleratorze jest określane przez `default_cpu_access_type` Właściwość. Domyślnie `array` obiekty i są `array_view` wykonywane w taki sam `access_type` sposób, jak skojarzona z nim podstawowa `accelerator` .
+`array`obiekty mogą służyć do określania precyzyjnej kontroli nad użyciem pamięci współdzielonej, jeśli skojarzony akcelerator obsługuje tę funkcję. Czy akcelerator obsługuje pamięć współużytkowaną jest określany przez właściwość [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) akceleratora, która zwraca wartość, **`true`** gdy obsługiwana jest pamięć współdzielona. Jeśli obsługiwana jest pamięć współdzielona, domyślne [wyliczenie access_type](reference/concurrency-namespace-enums-amp.md#access_type) dla alokacji pamięci w akceleratorze jest określane przez `default_cpu_access_type` Właściwość. Domyślnie `array` obiekty i są `array_view` wykonywane w taki sam `access_type` sposób, jak skojarzona z nim podstawowa `accelerator` .
 
 Przez ustawienie właściwości [element członkowski danych Array:: cpu_access_type](reference/array-class.md#cpu_access_type) `array` jawnie można wykonać szczegółową kontrolę nad sposobem używania pamięci współużytkowanej, aby zoptymalizować aplikację pod kątem charakterystyki wydajności sprzętu w oparciu o wzorce dostępu do pamięci w jądrach obliczeniowych. `array_view`Odzwierciedla te same dane, `cpu_access_type` które są `array` skojarzone z; lub, jeśli array_view jest konstruowany bez źródła danych, `access_type` odzwierciedla środowisko, które po raz pierwszy powoduje przydzielenie magazynu. Oznacza to, że jeśli dostęp do niego następuje po raz pierwszy przez hosta (procesor CPU), działa on tak, jakby został utworzony za pośrednictwem źródła danych procesora CPU i ma udział w `access_type` `accelerator_view` przechwyceniu. Jeśli jednak dostęp do niego następuje po raz pierwszy `accelerator_view` , jest on traktowany tak, jakby został utworzony `array` w ramach utworzonego elementu `accelerator_view` i `array` udostępnia `access_type` .
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>Biblioteki matematyczne
 
-C++ AMP obejmuje dwie biblioteki matematyczne. Biblioteka o podwójnej precyzji w [przestrzeni nazw współbieżności::p recise_math](../../parallel/amp/reference/concurrency-precise-math-namespace.md) zapewnia obsługę funkcji podwójnej precyzji. Zapewnia również obsługę funkcji o pojedynczej precyzji, chociaż pomoc techniczna o podwójnej precyzji na sprzęcie jest nadal wymagana. Jest on zgodny ze [specyfikacją C99 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887). Akcelerator musi obsługiwać pełną podwójną precyzję. Można określić, czy robi to poprzez sprawdzenie wartości [elementu członkowskiego danych akceleratora:: supports_double_precision](reference/accelerator-class.md#supports_double_precision). Szybka Biblioteka matematyczna w [przestrzeni nazw Concurrency:: fast_math](../../parallel/amp/reference/concurrency-fast-math-namespace.md)zawiera inny zestaw funkcji matematycznych. Te funkcje, które obsługują tylko `float` operandy, wykonują się szybciej, ale nie są tak dokładne jak te w bibliotece matematycznej o podwójnej precyzji. Funkcje są zawarte w \<amp_math.h> pliku nagłówka i wszystkie są zadeklarowane za pomocą `restrict(amp)` . Funkcje w \<cmath> pliku nagłówkowym są importowane do `fast_math` `precise_math` przestrzeni nazw i. Słowo kluczowe **ograniczenia** jest używane do rozróżnienia \<cmath> wersji i wersji C++ amp. Poniższy kod oblicza logarytm dziesiętny przy użyciu metody Fast dla każdej wartości, która znajduje się w domenie obliczeniowej.
+C++ AMP obejmuje dwie biblioteki matematyczne. Biblioteka o podwójnej precyzji w [przestrzeni nazw współbieżności::p recise_math](../../parallel/amp/reference/concurrency-precise-math-namespace.md) zapewnia obsługę funkcji podwójnej precyzji. Zapewnia również obsługę funkcji o pojedynczej precyzji, chociaż pomoc techniczna o podwójnej precyzji na sprzęcie jest nadal wymagana. Jest on zgodny ze [specyfikacją C99 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887). Akcelerator musi obsługiwać pełną podwójną precyzję. Można określić, czy robi to poprzez sprawdzenie wartości [elementu członkowskiego danych akceleratora:: supports_double_precision](reference/accelerator-class.md#supports_double_precision). Szybka Biblioteka matematyczna w [przestrzeni nazw Concurrency:: fast_math](../../parallel/amp/reference/concurrency-fast-math-namespace.md)zawiera inny zestaw funkcji matematycznych. Te funkcje, które obsługują tylko **`float`** operandy, wykonują się szybciej, ale nie są tak dokładne jak te w bibliotece matematycznej o podwójnej precyzji. Funkcje są zawarte w \<amp_math.h> pliku nagłówka i wszystkie są zadeklarowane za pomocą `restrict(amp)` . Funkcje w \<cmath> pliku nagłówkowym są importowane do `fast_math` `precise_math` przestrzeni nazw i. **`restrict`** Słowo kluczowe jest używane do rozróżnienia \<cmath> wersji i wersji C++ amp. Poniższy kod oblicza logarytm dziesiętny przy użyciu metody Fast dla każdej wartości, która znajduje się w domenie obliczeniowej.
 
 ```cpp
 #include <amp.h>
@@ -465,7 +465,7 @@ C++ AMP zawiera bibliotekę grafiki, która została zaprojektowana do przyspies
 
 - [klasa writeonly_texture_view](../../parallel/amp/reference/writeonly-texture-view-class.md): zapewnia dostęp tylko do zapisu do dowolnej tekstury.
 
-- Krótka Biblioteka wektorów: definiuje zestaw krótkich typów wektorów o długości 2, 3 i 4, które są oparte na **int**, `uint` , **float**, **Double**, [normie](../../parallel/amp/reference/norm-class.md)lub [unorm](../../parallel/amp/reference/unorm-class.md).
+- Krótka Biblioteka wektorów: definiuje zestaw krótkich typów wektorów o długości 2, 3 i 4, które są oparte na **`int`** , `uint` ,, **`float`** **`double`** , [normie](../../parallel/amp/reference/norm-class.md)lub [unorm](../../parallel/amp/reference/unorm-class.md).
 
 ## <a name="universal-windows-platform-uwp-apps"></a>Aplikacje platforma uniwersalna systemu Windows (platformy UWP)
 
@@ -503,7 +503,7 @@ Wizualizator współbieżności obejmuje obsługę analizowania wydajności kodu
 
 Modulo i dzielenie liczb całkowitych bez znaku znacznie lepsza wydajność niż moduł i dzielenie liczb całkowitych ze znakiem. Zalecamy używanie niepodpisanych liczb całkowitych, gdy jest to możliwe.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Składnia wyrażenia lambda](../../cpp/lambda-expression-syntax.md)<br/>

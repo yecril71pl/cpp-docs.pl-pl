@@ -9,12 +9,12 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: 888a33161cd33b20d5f40a07f9b54235f06b8bd8
-ms.sourcegitcommit: 57e26bdd7839fce3c4154a61e987d165f0ba6f5b
+ms.openlocfilehash: f677d7382a9747df63023bd83b104a6bb3b74c1f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301969"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222657"
 ---
 # <a name="thread-local-storage-tls"></a>Lokalny magazyn wątków (TLS)
 
@@ -22,9 +22,9 @@ Lokalny magazyn wątków (TLS) to metoda, za pomocą której każdy wątek w dan
 
 ## <a name="compiler-implementation-for-tls"></a><a name="_core_compiler_implementation_for_tls"></a>Implementacja kompilatora dla protokołu TLS
 
-**C++ 11:**  `thread_local`Specyfikator klasy magazynu jest zalecanym sposobem określania magazynu lokalnego wątków dla obiektów i elementów członkowskich klasy. Aby uzyskać więcej informacji, zobacz [klasy magazynu (C++)](../cpp/storage-classes-cpp.md).
+**C++ 11:**  **`thread_local`** Specyfikator klasy magazynu jest zalecanym sposobem określania magazynu lokalnego wątków dla obiektów i elementów członkowskich klasy. Aby uzyskać więcej informacji, zobacz [klasy magazynu (C++)](../cpp/storage-classes-cpp.md).
 
-MSVC udostępnia również atrybut, [wątek](../cpp/thread.md), jako modyfikator klasy rozszerzonej pamięci masowej. Użyj słowa kluczowego **__declspec** , aby zadeklarować zmienną **wątku** . Na przykład, poniższy kod deklaruje lokalną zmienną całkowitą wątku i inicjuje ją wartością:
+MSVC udostępnia również atrybut, [wątek](../cpp/thread.md), jako modyfikator klasy rozszerzonej pamięci masowej. Użyj **`__declspec`** słowa kluczowego, aby zadeklarować **`thread`** zmienną. Na przykład, poniższy kod deklaruje lokalną zmienną całkowitą wątku i inicjuje ją wartością:
 
 ```C
 __declspec( thread ) int tls_i = 1;
@@ -34,13 +34,13 @@ __declspec( thread ) int tls_i = 1;
 
 Podczas deklarowania statycznie powiązanych obiektów i zmiennych wątków należy przestrzegać następujących wytycznych. Te wytyczne mają zastosowanie zarówno do [wątku](../cpp/thread.md) , jak i do [thread_local](../cpp/storage-classes-cpp.md):
 
-- Atrybut **wątku** może być stosowany tylko do deklaracji klasy i danych oraz definicji. Nie można jej używać w deklaracjach lub definicjach funkcji. Na przykład poniższy kod generuje błąd kompilatora:
+- Ten **`thread`** atrybut może być stosowany tylko do deklaracji klasy i danych oraz definicji. Nie można jej używać w deklaracjach lub definicjach funkcji. Na przykład poniższy kod generuje błąd kompilatora:
 
     ```C
     __declspec( thread )void func();     // This will generate an error.
     ```
 
-- Modyfikator **wątku** można określić tylko dla elementów danych ze **statycznym** zakresem. Obejmuje to globalne obiekty danych (zarówno **statyczne** , jak i zewnętrzne), lokalne obiekty **statyczne i statyczne**elementy członkowskie danych klas języka C++. Nie można zadeklarować automatycznych obiektów danych przy użyciu atrybutu **wątku** . Poniższy kod generuje błędy kompilatora:
+- **`thread`** Modyfikator można określić tylko dla elementów danych z **`static`** zakresem. Obejmuje to globalne obiekty danych (zarówno **`static`** i **`extern`** ), lokalne obiekty statyczne i statyczne elementy członkowskie danych klas języka C++. Nie można zadeklarować automatycznych obiektów danych przy użyciu **`thread`** atrybutu. Poniższy kod generuje błędy kompilatora:
 
     ```C
     void func1()
@@ -54,7 +54,7 @@ Podczas deklarowania statycznie powiązanych obiektów i zmiennych wątków nale
     }
     ```
 
-- Deklaracje i definicje obiektu lokalnego wątku muszą określać atrybut **wątku** . Na przykład poniższy kod generuje błąd:
+- Deklaracje i definicje obiektu lokalnego wątku muszą określać **`thread`** atrybut. Na przykład poniższy kod generuje błąd:
 
     ```C
     #define Thread  __declspec( thread )
@@ -62,13 +62,13 @@ Podczas deklarowania statycznie powiązanych obiektów i zmiennych wątków nale
     int __declspec( thread )tls_i;        // declaration and definition differ.
     ```
 
-- Nie można użyć atrybutu **wątku** jako modyfikatora typu. Na przykład poniższy kod generuje błąd kompilatora:
+- **`thread`** Nie można użyć atrybutu jako modyfikatora typu. Na przykład poniższy kod generuje błąd kompilatora:
 
     ```C
     char __declspec( thread ) *ch;        // Error
     ```
 
-- Ponieważ deklaracja obiektów języka C++, które używają atrybutu **wątku** , jest dozwolona, następujące dwa przykłady są semantycznie równoważne:
+- Ponieważ deklaracja obiektów języka C++, które używają **`thread`** atrybutu jest dozwolona, następujące dwa przykłady są semantycznie równoważne:
 
     ```cpp
     __declspec( thread ) class B
@@ -100,7 +100,7 @@ Podczas deklarowania statycznie powiązanych obiektów i zmiennych wątków nale
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-   `sizeof`Wyrażenie, które zawiera inicjowany obiekt nie reprezentuje odwołania do samego siebie i jest włączone zarówno w C, jak i C++.
+   **`sizeof`** Wyrażenie, które zawiera inicjowany obiekt nie reprezentuje odwołania do samego siebie i jest włączone zarówno w C, jak i C++.
 
    Język C++ nie pozwala na takie dynamiczne inicjowanie danych wątku ze względu na możliwe przyszłe ulepszenia funkcji lokalnego magazynu wątków.
 

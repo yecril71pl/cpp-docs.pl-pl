@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
-ms.openlocfilehash: 789bb879922bbd96a04085159205d02fb7f495c8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 62e8a2026babbfea3cd1583def05a03b4bc4a229
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160687"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223515"
 ---
 # <a name="typename"></a>typename
 
@@ -27,7 +27,7 @@ typename identifier;
 
 Tego słowa kluczowego należy użyć, jeśli nazwa w definicji szablonu jest kwalifikowana nazwa, która jest zależna od argumentu szablonu; jest opcjonalne, jeśli kwalifikowana nazwa nie jest zależna. Aby uzyskać więcej informacji, zobacz [Szablony i rozpoznawanie nazw](../cpp/templates-and-name-resolution.md).
 
-**Właściwość TypeName** może być używana przez dowolny typ dowolnego miejsca w deklaracji lub definicji szablonu. Nie jest to dozwolone na liście klas bazowych, chyba że jako argument szablonu dla klasy podstawowej szablonu.
+**`typename`** może być używany przez dowolny typ dowolnego miejsca w deklaracji lub definicji szablonu. Nie jest to dozwolone na liście klas bazowych, chyba że jako argument szablonu dla klasy podstawowej szablonu.
 
 ```cpp
 template <class T>
@@ -38,7 +38,7 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};
 ```
 
-Można również użyć słowa kluczowego **TypeName** zamiast **klasy** na listach parametrów szablonu. Na przykład następujące instrukcje są semantycznie równoważne:
+**`typename`** Słowo kluczowe może być również używane zamiast **`class`** na listach parametrów szablonu. Na przykład następujące instrukcje są semantycznie równoważne:
 
 ```cpp
 template<class T1, class T2>...
@@ -59,7 +59,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony](../cpp/templates-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

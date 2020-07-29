@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: 1a8fc4742b8bf686edf75f3b98cc283b9bf9881b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c14d8247be2abdf828b88e728bd930691ec6571f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620728"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214155"
 ---
 # <a name="connection-points"></a>Punkty połączenia
 
@@ -37,7 +37,7 @@ MFC implementuje ten model w klasach [CConnectionPoint](reference/cconnectionpoi
 
 Dla każdego punktu połączenia zaimplementowanego w klasie należy zadeklarować część połączenia implementującą punkt połączenia. W przypadku zaimplementowania co najmniej jednego punktu połączenia należy również zadeklarować pojedyncze mapowanie połączenia w klasie. Mapa połączenia to tabela punktów połączenia obsługiwanych przez formant ActiveX.
 
-W poniższych przykładach pokazano prostą mapę połączeń i jeden punkt połączenia. Pierwszy przykład deklaruje mapę połączenia i punkt; Drugi przykład implementuje mapę i punkt. Należy pamiętać, że `CMyClass` musi być `CCmdTarget` klasą pochodną. W pierwszym przykładzie kod jest wstawiany w deklaracji klasy, w sekcji **chronionej** :
+W poniższych przykładach pokazano prostą mapę połączeń i jeden punkt połączenia. Pierwszy przykład deklaruje mapę połączenia i punkt; Drugi przykład implementuje mapę i punkt. Należy pamiętać, że `CMyClass` musi być `CCmdTarget` klasą pochodną. W pierwszym przykładzie kod jest wstawiany w deklaracji klasy, w **`protected`** sekcji:
 
 [!code-cpp[NVC_MFCConnectionPoints#1](codesnippet/cpp/connection-points_1.h)]
 
@@ -49,7 +49,7 @@ W drugim przykładzie kod jest wstawiany do pliku implementacji kontrolki (plik.
 
 Jeśli klasa ma więcej niż jeden punkt połączenia, Wstaw dodatkowe makra **CONNECTION_PART** między makrami **BEGIN_CONNECTION_MAP** i **END_CONNECTION_MAP** .
 
-Na koniec Dodaj wywołanie do `EnableConnections` w konstruktorze klasy. Przykład:
+Na koniec Dodaj wywołanie do `EnableConnections` w konstruktorze klasy. Na przykład:
 
 [!code-cpp[NVC_MFCConnectionPoints#3](codesnippet/cpp/connection-points_3.cpp)]
 
@@ -64,6 +64,6 @@ Zazwyczaj punkty połączenia obsługują "multiemisję" — możliwość emisji
 
 Ten przykład pobiera bieżący zestaw połączeń w `SampleConnPt` punkcie połączenia z wywołaniem do `CConnectionPoint::GetConnections` . Następnie wykonuje iterację połączeń i wywołań `ISampleSink::SinkFunc` na każdym aktywnym połączeniu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [MFC COM](mfc-com.md)

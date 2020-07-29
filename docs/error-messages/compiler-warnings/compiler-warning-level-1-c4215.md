@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4215
 ms.assetid: f2aab64d-1bab-4f75-95ee-89e1263047b1
-ms.openlocfilehash: b62f382759c7e4c9dc888cf75d4df07a063df571
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: aeab5a90647015a8848d7c2af62f7d7fc6932900
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199865"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223281"
 ---
 # <a name="compiler-warning-level-1-c4215"></a>Ostrzeżenie kompilatora (poziom 1) C4215
 
 użyto niestandardowego rozszerzenia: Long float
 
-Domyślne rozszerzenia Microsoft (/ze) traktują **długie dane zmiennoprzecinkowe** jako **Double**. Zgodność ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)) nie jest zgodna z programem. Aby zachować zgodność, użyj **podwójnej precyzji** .
+Domyślne rozszerzenia Microsoft (/ze) traktują **długie dane zmiennoprzecinkowe** jako **`double`** . Zgodność ANSI ([/za](../../build/reference/za-ze-disable-language-extensions.md)) nie jest zgodna z programem. Służy **`double`** do zachowania zgodności.
 
 Poniższy przykład generuje C4215:
 

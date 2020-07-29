@@ -2,18 +2,18 @@
 title: Słabe odwołania i przerywanie cykli (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 1acb6402-05f0-4951-af94-0e9dab41c53e
-ms.openlocfilehash: 19252b8684eade131394e98dc705f2f1d451f0cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04ba70c148121de520b470bd727b26e756858011
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384897"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214935"
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>Słabe odwołania i przerywanie cykli (C++/CX)
 
-W dowolnym system typu, który opiera się na zliczaniu odwołań, można tworzyć odwołania do typów *cykle*— czyli jeden obiekt, który odwołuje się do drugiego obiektu, drugi obiekt, który odwołuje się do innego obiektu, i tak dalej do momentu końcowego obiektu odwołuje się do pierwszy obiekt. W cyklu nie można usunąć obiektów poprawnie, gdy liczba odwołań w jeden obiekt staje się zerem. Aby rozwiązać ten problem, C++zapewnia /CX [Platform::WeakReference, klasa](../cppcx/platform-weakreference-class.md) klasy. A `WeakReference` obiekt obsługuje [rozwiązać](../cppcx/platform-weakreference-class.md#resolve) metody, która zwraca wartość null, jeśli obiekt nie jest już istnieje, lub zgłasza [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) Jeśli obiekt jest aktywny, ale nie jest typu `T`.
+W każdym systemie typu, który jest oparty na zliczaniu odwołań, odwołania do typów mogą tworzyć *cykle*— to znaczy, że jeden obiekt odwołuje się do drugiego obiektu, drugi obiekt odwołuje się do trzeciego obiektu itd. do momentu, gdy jakiś końcowy obiekt odwołuje się do pierwszego obiektu. W cyklu nie można prawidłowo usunąć obiektów, gdy liczba odwołań jednego obiektu zmieni się na zero. Aby pomóc w rozwiązaniu tego problemu, C++/CX udostępnia klasę [klasy platform:: WeakReference](../cppcx/platform-weakreference-class.md) . `WeakReference`Obiekt obsługuje metodę [Rozwiązuj](../cppcx/platform-weakreference-class.md#resolve) , która zwraca wartość null, jeśli obiekt już nie istnieje lub zgłasza [platformę:: InvalidCastException](../cppcx/platform-invalidcastexception-class.md) , jeśli obiekt jest aktywny, ale nie jest typu `T` .
 
-Jeden scenariusz, w którym `WeakReference` musi być używana jest, gdy `this` wskaźnik jest przechwytywane w wyrażeniu lambda, które jest używane do definiowania obsługi zdarzeń. Zalecane jest użycie metody nazwanej, podczas definiowania programów obsługi zdarzeń, ale jeśli chcesz użyć wyrażenia lambda do obsługi zdarzenia — lub jeśli trzeba przerwać zliczanie cyklu w niektórych innych sytuacji — użyj `WeakReference`. Oto przykład:
+W `WeakReference` przypadku, gdy **`this`** wskaźnik jest przechwytywany w wyrażeniu lambda, które jest używane do definiowania programu obsługi zdarzeń, należy użyć jednego scenariusza. Zalecamy używanie nazwanych metod podczas definiowania programów obsługi zdarzeń, ale jeśli chcesz użyć wyrażenia lambda dla programu obsługi zdarzeń — lub jeśli musisz przerwać cykl zliczania odwołań w innej sytuacji — użyj `WeakReference` . Oto przykład:
 
 ```
 
@@ -51,4 +51,4 @@ Class1::Class1()
 }
 ```
 
-Gdy program obsługi zdarzeń zgłasza `DisconnectedException`, spowoduje wygenerowanie zdarzenia usunąć program obsługi z listy subskrybentów.
+Gdy procedura obsługi zdarzeń zgłasza `DisconnectedException` , spowoduje to usunięcie programu obsługi z listy subskrybentów.

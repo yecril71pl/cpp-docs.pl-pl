@@ -6,85 +6,85 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: f6d81029d20d9aaca96ff184f48e94a9ce35d56e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20e7f5855b771caf23217e5c17db50a890e28113
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320503"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223853"
 ---
 # <a name="decorated-names"></a>Nazwy ozdobione
 
-Funkcje, dane i obiekty w programach C i C++ są reprezentowane wewnętrznie przez ich nazwy dekoracyjne. Dekoracyjna *nazwa* jest zakodowanym ciągiem utworzonym przez kompilator podczas kompilacji obiektu, danych lub definicji funkcji. Rejestruje konwencje wywołujące, typy, parametry funkcji i inne informacje wraz z nazwą. Ta dekoracja nazwy, znana również jako *mangling nazw,* pomaga konsolidatorowi znaleźć poprawne funkcje i obiekty podczas łączenia pliku wykonywalnego.
+Funkcje, dane i obiekty w programach C i C++ są reprezentowane wewnętrznie przez ich nazwy dekoracyjne. *Nazwa dekoracyjna* to zakodowany ciąg utworzony przez kompilator podczas kompilowania definicji obiektu, danych lub funkcji. Rejestruje konwencje wywoływania, typy, parametry funkcji i inne informacje razem z nazwą. Ten dekoracja nazwy, znana także jako *Nazwa dekorowanie*, ułatwia konsolidatorowi znalezienie poprawnych funkcji i obiektów podczas łączenia pliku wykonywalnego.
 
-Dekoracyjne konwencje nazewnictwa uległy zmianie w różnych wersjach programu Visual Studio i mogą być również różne w różnych architekturach docelowych. Aby poprawnie połączyć się z plikami źródłowymi utworzonymi przy użyciu programu Visual Studio, biblioteki DLL i biblioteki DLL w języku C i C++ i biblioteki powinny być kompilowane przy użyciu tego samego zestawu narzędzi kompilatora, flag i architektury docelowej.
+Konwencje nazewnictwa dekoracyjne uległy zmianie w różnych wersjach programu Visual Studio i mogą być różne w różnych architekturach docelowych. Aby prawidłowo połączyć się z plikami źródłowymi utworzonymi przy użyciu programu Visual Studio, biblioteki DLL i biblioteki języka C i C++ powinny być kompilowane przy użyciu tego samego zestawu narzędzi kompilatora, flag i architektury docelowej.
 
 > [!NOTE]
-> Biblioteki utworzone za pomocą programu Visual Studio 2015 mogą być używane przez aplikacje utworzone za pomocą programu Visual Studio 2017 lub Visual Studio 2019.
+> Biblioteki skompilowane z programem Visual Studio 2015 mogą być używane przez aplikacje skompilowane przy użyciu programu Visual Studio 2017 lub Visual Studio 2019.
 
-## <a name="using-decorated-names"></a><a name="Using"></a>Używanie dekorowanych nazw
+## <a name="using-decorated-names"></a><a name="Using"></a>Korzystanie z dekoracyjnych nazw
 
-Zwykle nie trzeba znać dekoracyjną nazwę, aby napisać kod, który kompiluje i łączy pomyślnie. Dekoracyjne nazwy są szczegóły implementacji wewnętrzne do kompilatora i konsolidatora. Narzędzia zazwyczaj mogą obsługiwać nazwę w postaci niezrażonej. Jednak dekoracyjna nazwa jest czasami wymagana podczas określania nazwy funkcji konsolidatora i innych narzędzi. Na przykład, aby dopasować przeciążonych funkcji C++, członków obszarów nazw, konstruktorów klas, destruktorów i specjalnych funkcji członkowskich, należy określić nazwę dekoracyjną. Aby uzyskać szczegółowe informacje na temat flag opcji i innych sytuacji, które wymagają dekoracyjnych nazw, zobacz dokumentację narzędzi i opcji, których używasz.
+Zwykle nie trzeba znać nazwy dekoracyjnej, aby napisać kod, który pomyślnie kompiluje i łączy. Nazwy dekoracyjne to szczegóły implementacji wewnętrzne dla kompilatora i konsolidatora. Narzędzia mogą zazwyczaj obsługiwać nazwę w postaci niedekoracyjnej. Jednak nazwa dekoracyjna jest czasami wymagana w przypadku określenia nazwy funkcji dla konsolidatora i innych narzędzi. Na przykład aby dopasować przeciążone funkcje języka C++, elementy członkowskie przestrzeni nazw, konstruktory klas, destruktory i specjalne funkcje składowe, należy określić nazwę dekoracyjną. Aby uzyskać szczegółowe informacje na temat flag opcji i innych sytuacji, które wymagają nazw dekoracyjnych, zapoznaj się z dokumentacją narzędzi i opcji, których używasz.
 
-Jeśli zmienisz nazwę funkcji, klasę, konwencję wywoływania, typ zwracany lub dowolny parametr, nazwa dekoracyjna również się zmieni. W takim przypadku należy uzyskać nową nazwę dekoracyjną i używać jej wszędzie tam, gdzie określono nazwę dekoracyjną.
+W przypadku zmiany nazwy funkcji, klasy, konwencji wywoływania, typu zwracanego lub dowolnego parametru, nazwa dekoracyjna również ulega zmianie. W takim przypadku należy uzyskać nową nazwę dekoracyjną i użyć jej wszędzie tam, gdzie jest określona nazwa dekoracyjna.
 
-Dekoracja nazwy jest również ważne podczas łączenia do kodu napisanego w innych językach programowania lub przy użyciu innych kompilatorów. Różne kompilatory używają różnych konwencji dekoracji nazw. Gdy można wykonywalne łącza do kodu napisanego w innym języku, należy zwrócić szczególną uwagę, aby dopasować eksportowane i importowane nazwy i konwencje wywoływania. Kod języka zestawu musi używać msvc dekoracyjne nazwy i konwencje wywoływania do łącza do kodu źródłowego napisanego przy użyciu MSVC.
+Dekoracja nazw jest również ważna w przypadku łączenia się z kodem zapisanym w innych językach programowania lub przy użyciu innych kompilatorów. Różne kompilatory używają różnych konwencji dekoracji nazw. Gdy plik wykonywalny łączy się z kodem zapisanym w innym języku, należy zwrócić szczególną uwagę na wyeksportowane i zaimportowane nazwy oraz konwencje wywoływania. Kod języka asemblera musi używać nazw dekoracyjnych MSVC i konwencji wywoływania do łączenia się z kodem źródłowym zapisanym przy użyciu MSVC.
 
 ## <a name="format-of-a-c-decorated-name"></a><a name="Format"></a>Format nazwy dekoracyjnej języka C++
 
-Udekorowana nazwa funkcji Języka C++ zawiera następujące informacje:
+Nazwa dekoracyjna funkcji języka C++ zawiera następujące informacje:
 
 - Nazwa funkcji.
 
-- Klasa, do jakiej należy pełnić funkcję, jeśli jest to funkcja elementu członkowskiego. Może to obejmować klasę, która otacza klasę, która zawiera funkcję i tak dalej.
+- Klasa, do której należy funkcja, jeśli jest to funkcja członkowska. Może to obejmować klasę, która zawiera klasę zawierającą funkcję i tak dalej.
 
-- Obszar nazw, do którego należy funkcja, jeśli jest częścią obszaru nazw.
+- Przestrzeń nazw, do której należy funkcja, jeśli jest częścią przestrzeni nazw.
 
 - Typy parametrów funkcji.
 
-- Konwencja wywołująca.
+- Konwencja wywoływania.
 
 - Zwracany typ funkcji.
 
-Nazwy funkcji i klas są zakodowane w nazwie dekoracyjną. Reszta nazwy dekoracyjną to kod, który ma wewnętrzne znaczenie tylko dla kompilatora i konsolidatora. Poniżej przedstawiono przykłady niezrażonych i zdobionych nazw C++.
+Nazwy funkcji i klas są zakodowane w nazwie dekoracyjnej. Pozostała część nazwy dekoracyjnej to kod, który ma wewnętrzne znaczenie tylko dla kompilatora i konsolidatora. Poniżej przedstawiono przykłady niedekoracyjnych i dekoracyjnych nazw języka C++.
 
-|Niezdrobniona nazwa|Nazwa zdobiona|
+|Nazwa niedekoracyjna|Nazwa dekoracyjna|
 |----------------------|--------------------|
 |`int a(char){int i=3;return i;};`|`?a@@YAHD@Z`|
 |`void __stdcall b::c(float){};`|`?c@b@@AAGXM@Z`|
 
-## <a name="format-of-a-c-decorated-name"></a><a name="FormatC"></a>Format nazwy zdobionej c
+## <a name="format-of-a-c-decorated-name"></a><a name="FormatC"></a>Format nazwy dekoracyjnej języka C
 
-Forma dekoracji dla funkcji C zależy od konwencji wywołującej używanej w jej deklaracji, jak pokazano w poniższej tabeli. Jest to również format dekoracji, który jest używany, `extern "C"` gdy kod C++ jest zadeklarowany jako mający powiązania. Domyślną konwencją `__cdecl`wywoływania jest . Należy zauważyć, że w środowisku 64-bitowym funkcje nie są dekorowane.
+Forma dekoracji dla funkcji języka C zależy od konwencji wywoływania używanej w jej deklaracji, jak pokazano w poniższej tabeli. Jest to również format dekoracyjny, który jest używany, gdy kod języka C++ jest zadeklarowany jako mający `extern "C"` połączenie. Domyślna konwencja wywoływania to **`__cdecl`** . Należy pamiętać, że w środowisku 64-bitowym funkcje nie są dekoracyjne.
 
-|Konwencja wywoływania|Dekoracji|
+|Konwencja wywoływania|Dekorację|
 |------------------------|----------------|
-|`__cdecl`|Podkreślenie wiodące (**_**)|
-|`__stdcall`|Podkreślenie wiodące (**_**)**\@** i końcowe na znak ( ), po którym następuje liczba bajtów na liście parametrów w przecinku|
-|`__fastcall`|Prowadzenie i końcowe znaki**\@**( ), po którym następuje liczba dziesiętna reprezentująca liczbę bajtów na liście parametrów|
-|`__vectorcall`|Dwa końcowe znaki**\@**( ), po których na liście parametrów znajduje się liczba dziesiętnych bajtów|
+|**`__cdecl`**|Wiodący znak podkreślenia ( **`_`** )|
+|**`__stdcall`**|Wiodący znak podkreślenia ( **`_`** ) i kończący się znakiem ( **`@`** ), po którym następuje liczba bajtów na liście parametrów w wartości dziesiętnej|
+|**`__fastcall`**|Wiodące i końcowe znaki ( **`@`** ), po których następuje liczba dziesiętna reprezentująca liczbę bajtów na liście parametrów|
+|**`__vectorcall`**|Dwa końcowe znaki ( **`@@`** ), po których następuje dziesiętna liczba bajtów na liście parametrów|
 
-## <a name="viewing-decorated-names"></a><a name="Viewing"></a>Wyświetlanie udekorowanych nazw
+## <a name="viewing-decorated-names"></a><a name="Viewing"></a>Wyświetlanie dekoracyjnych nazw
 
-Po skompilowaniu pliku źródłowego zawierającego dane, obiekt lub definicję lub prototyp można uzyskać dekoracyjną formę nazwy symbolu. Aby sprawdzić dekoracyjne nazwy w programie, można użyć jednej z następujących metod:
+Po skompilowaniu pliku źródłowego, który zawiera dane, obiekt lub definicję funkcji lub prototyp, można uzyskać dekoracyjną postać nazwy symbolu. Aby przejrzeć dekoracyjne nazwy w programie, można użyć jednej z następujących metod:
 
-#### <a name="to-use-a-listing-to-view-decorated-names"></a>Aby użyć aukcji do wyświetlania udekorowanych nazw
+#### <a name="to-use-a-listing-to-view-decorated-names"></a>Aby użyć listy do wyświetlania dekoracyjnych nazw
 
-1. Generowanie listy przez kompilowanie pliku źródłowego zawierającego definicję danych, obiektu lub funkcji lub prototyp z opcją kompilatora [typu pliku aukcji](fa-fa-listing-file.md) ustawioną na Zestaw z kodem źródłowym (**/FAs**).
+1. Wygeneruj listę, kompilując plik źródłowy, który zawiera definicję danych, obiektu lub funkcji albo prototyp z [listą typów plików](fa-fa-listing-file.md) z opcją kompilatora zestawu z kodem źródłowym (**/FAS**).
 
-   Na przykład `cl /c /FAs example.cpp` wprowadź w wierszu polecenia dewelopera, aby wygenerować plik aukcji, example.asm.
+   Na przykład wpisz `cl /c /FAs example.cpp` w wierszu polecenia dewelopera, aby wygenerować plik listy, przykład. asm.
 
-2. W wynikowym pliku aukcji znajdź wiersz rozpoczynający się od PUBLIC i kończy średnik, po którym następuje niezrażonych danych lub nazwa funkcji. Symbolem między PUBLIC a średnikiem jest nazwa dekoracyjna.
+2. W wyszukiwanym pliku listy Znajdź wiersz, który rozpoczyna się od publicznego i kończy średnik, po którym następuje niedekoracyjne dane lub nazwa funkcji. Symbol między PUBLICZNą i średnikiem jest nazwą dekoracyjną.
 
-#### <a name="to-use-dumpbin-to-view-decorated-names"></a>Aby wyświetlić nazwy dekoracyjne, aby użyć funkcji DUMPBIN
+#### <a name="to-use-dumpbin-to-view-decorated-names"></a>Aby używać polecenia DUMPBIN do wyświetlania dekoracyjnych nazw
 
-1. Aby wyświetlić wyeksportowane symbole w pliku `dumpbin /symbols` `objfile` obj lub lib, wprowadź w wierszu polecenia dewelopera.
+1. Aby wyświetlić eksportowane symbole w pliku obj lub lib, wpisz `dumpbin /symbols` `objfile` w wierszu polecenia dewelopera.
 
-2. Aby znaleźć dekoracyjną formę symbolu, poszukaj nazwy niezdrobnionej w nawiasach. Nazwa dekoracyjna znajduje się w tym samym wierszu, po znaku potoku (&#124;) i przed nazwą niezrażoną.
+2. Aby znaleźć dekoracyjną postać symbolu, poszukaj niedekoracyjnej nazwy w nawiasach. Nazwa dekoracyjna znajduje się w tym samym wierszu, po znaku potoku (&#124;) i przed nazwą niedekoracyjną.
 
-## <a name="viewing-undecorated-names"></a><a name="Undecorated"></a>Wyświetlanie niezdrobnionych nazw
+## <a name="viewing-undecorated-names"></a><a name="Undecorated"></a>Wyświetlanie niedekoracyjnych nazw
 
-Za pomocą undname.exe można przekonwertować dekoracyjną nazwę na jej niezrażony formularz. W tym przykładzie pokazano, jak to działa:
+Można użyć undname.exe do przekonwertowania dekoracyjnej nazwy na postać niedekoracyjną. Ten przykład pokazuje, jak działa:
 
 ```
 C:\>undname ?func1@a@@AAEXH@Z
@@ -95,7 +95,7 @@ Undecoration of :- "?func1@a@@AAEXH@Z"
 is :- "private: void __thiscall a::func1(int)"
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Dodatkowe narzędzia do budowania MSVC](c-cpp-build-tools.md)<br/>
+[Dodatkowe narzędzia do kompilacji MSVC](c-cpp-build-tools.md)<br/>
 [Użycie zewnętrznie w celu określenia powiązania](../../cpp/using-extern-to-specify-linkage.md)

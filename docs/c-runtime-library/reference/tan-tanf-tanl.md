@@ -37,12 +37,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: d35ed6ca8dd4c3ea7a149e0fb2085aa8a97b11b4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ada853087cb0c6c127873e2929a73e4d3c92035c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912375"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215130"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -63,7 +63,7 @@ long double tan( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -77,7 +77,7 @@ Funkcje **Tan** zwracają tangens *x*. Jeśli wartość *x* jest większa lub r�
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **Tan** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** **podwójne** . W programie C polecenie **Tan** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać **przeciążenia zwracające** i zwracające **`float`** lub **`long double`** wartości. W programie C funkcja **Tan** zawsze przyjmuje i zwraca **`double`** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -85,7 +85,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------|-|
-|**Tan**, **TANF —**, **tanl**|\<> Math. h|\<cmath> lub \<Math. h>|
+|**Tan**, **TANF —**, **tanl**|\<math.h>|\<cmath> lub \<math.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -113,7 +113,7 @@ int main( void )
 tan( 0.785398 ) = 1.000000
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

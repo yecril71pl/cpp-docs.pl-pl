@@ -1,20 +1,20 @@
 ---
-title: '&lt;unordered_set operatory&gt;'
+title: '&lt;&gt;operatory unordered_set'
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_set/std::operator!=
 - unordered_set/std::operator==
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
-ms.openlocfilehash: 59a7154ed46ac788516bc9f42c3385ec8f07dcf1
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2b77c7d8e1b159198be471fb2da0bfb1f98bab0d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422508"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215494"
 ---
-# <a name="ltunordered_setgt-operators"></a>&lt;unordered_set operatory&gt;
+# <a name="ltunordered_setgt-operators"></a>&lt;&gt;operatory unordered_set
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 Testuje, czy obiekt [unordered_set](../standard-library/unordered-set-class.md) po lewej stronie operatora nie jest równy obiektowi unordered_set po prawej stronie.
 
@@ -24,15 +24,15 @@ bool operator!=(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `unordered_set`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `unordered_set`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli unordered_sets nie są równe; **Fałsz** , jeśli są równe.
+**`true`** Jeśli unordered_sets nie są równe; **`false`** Jeśli są równe.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -82,7 +82,7 @@ int main()
 
 `c2 != c3: true`
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 Testuje, czy obiekt [unordered_set](../standard-library/unordered-set-class.md) po lewej stronie operatora jest równy obiektowi unordered_set po prawej stronie.
 
@@ -92,15 +92,15 @@ bool operator==(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `unordered_set`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `unordered_set`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli unordered_sets są równe; **wartość false** , jeśli nie są równe.
+**`true`** Jeśli unordered_sets są równe; **`false`** Jeśli nie są równe.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -148,7 +148,7 @@ c1 == c3: true
 c2 == c3: false
 ```
 
-## <a name="op_neq_unordered_multiset"></a>operator! =
+## <a name="operator"></a><a name="op_neq_unordered_multiset"></a>operator! =
 
 Testuje, czy obiekt [unordered_multiset](../standard-library/unordered-multiset-class.md) po lewej stronie operatora nie jest równy obiektowi unordered_multiset po prawej stronie.
 
@@ -158,15 +158,15 @@ bool operator!=(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `unordered_multiset`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `unordered_multiset`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli unordered_multisets nie są równe; **Fałsz** , jeśli są równe.
+**`true`** Jeśli unordered_multisets nie są równe; **`false`** Jeśli są równe.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -217,7 +217,7 @@ c1 != c3: false
 c2 != c3: true
 ```
 
-## <a name="op_eq_eq_unordered_multiset"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq_unordered_multiset"></a>operator = =
 
 Testuje, czy obiekt [unordered_multiset](../standard-library/unordered-multiset-class.md) po lewej stronie operatora jest równy obiektowi unordered_multiset po prawej stronie.
 
@@ -227,15 +227,15 @@ bool operator==(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `unordered_multiset`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `unordered_multiset`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli unordered_multisets są równe; **wartość false** , jeśli nie są równe.
+**`true`** Jeśli unordered_multisets są równe; **`false`** Jeśli nie są równe.
 
 ### <a name="remarks"></a>Uwagi
 

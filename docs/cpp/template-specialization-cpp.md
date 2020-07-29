@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
-ms.openlocfilehash: 96f755b20e1de21eae47c4de0a181aa5d0738bf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17f1f15a5356d760119123214e939a7dd2d1fbaf
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330508"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223580"
 ---
 # <a name="template-specialization-c"></a>Specjalizacja szablonu (C++)
 
-Szablony klas mogą być częściowo specjalizowany, a wynikowe klasy nadal jest szablonem. Częściowa specjalizacja umożliwia kodu szablonu częściowo dostosować do określonych typów w sytuacjach, takich jak:
+Szablony klas mogą być częściowo wyspecjalizowane, a klasa będąca wynikiem jest nadal szablonem. Częściowa specjalizacja pozwala na częściowe dostosowanie kodu szablonu do określonych typów w sytuacjach, takich jak:
 
-- Szablon ma wiele typów, a tylko niektóre z nich muszą być wyspecjalizowane pod. Wynik jest szablonem sparametryzowane o pozostałych typach.
+- Szablon zawiera wiele typów i tylko niektóre z nich muszą być wyspecjalizowane. Wynikiem jest szablon sparametryzowany na pozostałych typach.
 
-- Szablon ma tylko jeden typ, ale wymagane jest specjalizacją wskaźników, odwołań, wskaźnik do elementu członkowskiego lub typy wskaźników funkcji. Specjalizacja, sama jest nadal szablonu dla typu wskazywanego ani mieć odwołania.
+- Szablon ma tylko jeden typ, ale dla wskaźnika, odwołania, wskaźnika do elementu członkowskiego lub typu wskaźnika funkcji jest wymagana specjalizacja. Sama specjalizacja jest nadal szablonem na typie wskazywanym lub, do którego się odwołuje.
 
 ## <a name="example"></a>Przykład
 
@@ -68,7 +68,7 @@ PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
 
 ## <a name="example"></a>Przykład
 
-Jeśli masz szablonu klasy kolekcji, która przyjmuje dowolnego typu `T`, możesz utworzyć częściowa specjalizacja, która przyjmuje dowolny typ wskaźnika `T*`. Poniższy przykład demonstruje szablonu klasy kolekcji `Bag` i częściowej specjalizacji dla typów wskaźnika, w których kolekcja wyłuskań typów wskaźnika przed skopiowaniem ich do tablicy. Następnie kolekcja przechowuje wartości, które są wskazywał. Z oryginalnym szablonem wskaźniki, samodzielnie czy były przechowywane w kolekcji, pozostawiając dane są narażone na usunięcie lub zmiana. W tej wersji specjalne wskaźnika kolekcji kodu pod kątem wartości null wskaźnika w `add` metoda jest dodawana.
+Jeśli masz klasę kolekcji szablonów, która przyjmuje dowolny typ `T` , można utworzyć częściową specjalizację, która przyjmuje dowolny typ wskaźnika `T*` . Poniższy kod ilustruje szablon klasy kolekcji `Bag` i częściową specjalizację dla typów wskaźników, w których kolekcja odwołuje się do typów wskaźnika przed skopiowaniem ich do tablicy. Kolekcja przechowuje następnie wartości, które są wskazywane przez. W oryginalnym szablonie tylko te same wskaźniki byłyby przechowywane w kolekcji, pozostawiając dane podatne na usunięcie lub modyfikację. W tej specjalnej wersji wskaźnika kolekcji, kod do sprawdzenia wskaźnika o wartości null w `add` metodzie jest dodawany.
 
 ```cpp
 // partial_specialization_of_class_templates2.cpp
@@ -180,7 +180,7 @@ Null pointer!
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie zdefiniowano szablonu klasy, która przyjmuje pary wszelkie dwa typy i następnie definiuje częściowa specjalizacja szablonu klasy przeznaczone specjalnie tak, aby jeden z typów **int**. Specjalizacja definiuje metody dodatkowe sortowania, która implementuje sortowanie bąbelków proste, oparte na liczbę całkowitą.
+W poniższym przykładzie zdefiniowano klasę szablonu, która pobiera pary dowolnego typu, a następnie definiuje częściową specjalizację tej klasy szablonu wyspecjalizowanej, tak aby jeden z typów był **`int`** . Specjalizacja definiuje dodatkową metodę sortowania, która implementuje proste sortowanie bąbelkowe oparte na liczbie całkowitej.
 
 ```cpp
 // partial_specialization_of_class_templates3.cpp

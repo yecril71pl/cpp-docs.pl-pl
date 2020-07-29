@@ -4,54 +4,54 @@ ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: c79d2fb1ac73947ddb13adcbd444ff7b5d50bdb4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ef8ee6b87bdeb9d5da9f34d303e0c0fda89443c5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365734"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222800"
 ---
 # <a name="event-maps"></a>Mapy zdarzeń
 
-Za każdym razem, gdy formant chce powiadomić swój kontener, że niektóre akcje (określone przez dewelopera formantu) miało miejsce (na przykład naciśnięcie klawisza, kliknięcie myszą lub zmiana stanu formantu) wywołuje funkcję wypalania zdarzeń. Ta funkcja powiadamia kontener formantu, że wystąpiła jakaś ważna akcja przez wypalanie powiązanego zdarzenia.
+Za każdym razem, gdy kontrolka życzy sobie poinformować, że została wykonana jakaś akcja (określona przez dewelopera kontrolki) (na przykład naciśnięcie klawisza, kliknięcie myszą lub zmiana stanu kontrolki), wywołuje funkcję uruchamiania zdarzeń. Ta funkcja powiadamia kontener formantów o wystąpieniu pewnej ważnej akcji przez wyzwolenie powiązanego zdarzenia.
 
-Biblioteka klas Microsoft Foundation oferuje model programowania zoptymalizowany pod kątem wypalania zdarzeń. W tym modelu "mapy zdarzeń" są używane do określania, które funkcje ognia, które zdarzenia dla określonego formantu. Mapy zdarzeń zawierają jedno makro dla każdego zdarzenia. Na przykład mapa zdarzeń, która uruchamia zdarzenie click stock może wyglądać następująco:
+Biblioteka MFC oferuje model programowania zoptymalizowany pod kątem wyzwalania zdarzeń. W tym modelu "mapy zdarzeń" są używane do wyznaczania, które funkcje wyzwalają zdarzenia dla konkretnej kontrolki. Mapy zdarzeń zawierają jedno makro dla każdego zdarzenia. Na przykład mapa zdarzeń, która wyzwala wydarzenie akcji kliknięcia, może wyglądać następująco:
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-Makro `EVENT_STOCK_CLICK` wskazuje, że formant będzie uruchamiał zdarzenie kliknięcie za każdym razem, gdy wykryje kliknięcie myszą. Aby uzyskać bardziej szczegółową listę innych zdarzeń giełdowych, zobacz artykuł [ActiveX Controls: Events](../../mfc/mfc-activex-controls-events.md). Makra są również dostępne do wskazywania zdarzeń niestandardowych.
+`EVENT_STOCK_CLICK`Makro wskazuje, że po wykryciu kliknięcia myszą przez formant będzie wyzwalane zdarzenie kliknięcia. Aby zapoznać się z bardziej szczegółową listą innych zdarzeń giełdowych, zobacz artykuł [formanty ActiveX: zdarzenia](../../mfc/mfc-activex-controls-events.md). Dostępne są również makra wskazujące na zdarzenia niestandardowe.
 
-Chociaż makra mapy zdarzeń są ważne, zazwyczaj nie należy ich wstawiać bezpośrednio. Dzieje się tak, ponieważ okno **Właściwości** (w **widoku klasy)** automatycznie tworzy wpisy mapy zdarzeń w plikach źródłowych, gdy jest używane do kojarzenia funkcji wypalania zdarzeń ze zdarzeniami. Za każdym razem, gdy chcesz edytować lub dodać wpis mapy zdarzeń, możesz użyć okna **Właściwości.**
+Mimo że makra mapy zdarzeń są ważne, zazwyczaj nie należy wstawiać ich bezpośrednio. Jest to spowodowane tym, że okno **Właściwości** (w **Widok klasy**) automatycznie tworzy wpisy mapowania zdarzeń w plikach źródłowych, gdy jest on używany do kojarzenia funkcji wyzwalania zdarzeń ze zdarzeniami. Za każdym razem, gdy chcesz edytować lub dodać wpis mapy zdarzeń, możesz użyć okna **Właściwości** .
 
-Aby obsługiwać mapy zdarzeń, MFC udostępnia następujące makra:
+Aby można było obsługiwać mapy zdarzeń, MFC udostępnia następujące makra:
 
 ## <a name="event-map-macros"></a>Makra mapy zdarzeń
 
-### <a name="event-map-declaration-and-demarcation"></a>Deklaracja i rozgraniczenie mapy zdarzeń
+### <a name="event-map-declaration-and-demarcation"></a>Deklaracja i rozgraniczanie mapy zdarzeń
 
 |||
 |-|-|
-|[DECLARE_EVENT_MAP](#declare_event_map)|Deklaruje, że mapa zdarzeń będzie używana w klasie do mapowania zdarzeń do funkcji wypalania zdarzeń (musi być używana w deklaracji klasy).|
-|[BEGIN_EVENT_MAP](#begin_event_map)|Rozpoczyna definicję mapy zdarzeń (musi być używana w implementacji klasy).|
-|[END_EVENT_MAP](#end_event_map)|Kończy definicję mapy zdarzeń (musi być używana w implementacji klasy).|
+|[DECLARE_EVENT_MAP](#declare_event_map)|Deklaruje, że mapa zdarzeń zostanie użyta w klasie do mapowania zdarzeń do funkcji uruchamiania zdarzeń (musi być używana w deklaracji klasy).|
+|[BEGIN_EVENT_MAP](#begin_event_map)|Rozpoczyna definicję mapy zdarzeń (należy ją użyć w implementacji klasy).|
+|[END_EVENT_MAP](#end_event_map)|Zamyka definicję mapy zdarzeń (musi być używana w implementacji klasy).|
 
 ### <a name="event-mapping-macros"></a>Makra mapowania zdarzeń
 
 |||
 |-|-|
-|[EVENT_CUSTOM](#event_custom)|Wskazuje, która funkcja wypalania zdarzeń spowoduje wystrzelenie określonego zdarzenia.|
-|[EVENT_CUSTOM_ID](#event_custom_id)|Wskazuje, która funkcja wywoływania zdarzeń spowoduje wystrzelenie określonego zdarzenia, z wyznaczonym identyfikatorem wysyłki.|
+|[EVENT_CUSTOM](#event_custom)|Wskazuje, która funkcja uruchamiania zdarzeń uruchamia określone zdarzenie.|
+|[EVENT_CUSTOM_ID](#event_custom_id)|Wskazuje, która funkcja uruchamiania zdarzeń uruchamia określone zdarzenie z wyznaczonym IDENTYFIKATORem wysyłania.|
 
-### <a name="message-mapping-macros"></a>Makra mapowania wiadomości
+### <a name="message-mapping-macros"></a>Makra mapowania komunikatów
 
 |||
 |-|-|
-|[ON_OLEVERB](#on_oleverb)|Wskazuje zlecenie niestandardowe obsługiwane przez kontrolkę OLE.|
-|[ON_STDOLEVERB](#on_stdoleverb)|Zastępuje standardowe mapowanie zlecenia formantu OLE.|
+|[ON_OLEVERB](#on_oleverb)|Wskazuje niestandardowe zlecenie obsługiwane przez kontrolkę OLE.|
+|[ON_STDOLEVERB](#on_stdoleverb)|Zastępuje standardowe mapowanie czasownika kontrolki OLE.|
 
 ## <a name="declare_event_map"></a><a name="declare_event_map"></a>DECLARE_EVENT_MAP
 
-Każda `COleControl`klasa pochodna w programie może dostarczyć mapę zdarzeń, aby określić zdarzenia, które zostanie podpalone przez formant.
+Każda `COleControl` Klasa pochodna w programie może zapewnić mapę zdarzeń, aby określić zdarzenia, które będą uruchamiane przez formant.
 
 ```cpp
 DECLARE_EVENT_MAP()
@@ -59,13 +59,13 @@ DECLARE_EVENT_MAP()
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj makra DECLARE_EVENT_MAP na końcu deklaracji klasy. Następnie w pliku .cpp, który definiuje funkcje członkowskie dla klasy, użyj BEGIN_EVENT_MAP makra, wpisów makr dla każdego zdarzenia formantu i makra END_EVENT_MAP, aby zadeklarować koniec listy zdarzeń.
+Użyj makra DECLARE_EVENT_MAP na końcu deklaracji klasy. Następnie w pliku. cpp, który definiuje funkcje elementu członkowskiego dla klasy, użyj makra BEGIN_EVENT_MAP, wpisów makr dla każdego zdarzenia kontrolki i makra END_EVENT_MAP, aby zadeklarować koniec listy zdarzeń.
 
-Aby uzyskać więcej informacji na temat map zdarzeń, zobacz artykuł [ActiveX Controls: Events](../../mfc/mfc-activex-controls-events.md).
+Aby uzyskać więcej informacji na temat map zdarzeń, zobacz artykuł [formanty ActiveX: zdarzenia](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek** afxctl.h
+**Nagłówek** 'afxctl. h
 
 ## <a name="begin_event_map"></a><a name="begin_event_map"></a>BEGIN_EVENT_MAP
 
@@ -77,21 +77,21 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ### <a name="parameters"></a>Parametry
 
-*klasa*<br/>
-Określa nazwę klasy kontrolnej, której mapa zdarzeń jest to.
+*theClass*<br/>
+Określa nazwę klasy kontrolki, której mapowanie zdarzeń to.
 
-*Baseclass*<br/>
-Określa nazwę klasy podstawowej *klasy klasy*.
+*baseClass*<br/>
+Określa nazwę klasy bazowej *theClass*.
 
 ### <a name="remarks"></a>Uwagi
 
-W pliku implementacji (.cpp), który definiuje funkcje członkowskie dla klasy, uruchom mapę zdarzeń BEGIN_EVENT_MAP makra, a następnie dodaj wpisy makr dla każdego zdarzenia i uzupełnij mapę zdarzeń END_EVENT_MAP makra.
+W pliku implementacji (. cpp), który definiuje funkcje elementów członkowskich klasy, uruchom mapę zdarzeń za pomocą makra BEGIN_EVENT_MAP, a następnie Dodaj wpisy makr dla każdego zdarzenia i Ukończ mapowanie zdarzeń za pomocą makra END_EVENT_MAP.
 
 Aby uzyskać więcej informacji na temat map zdarzeń i makra BEGIN_EVENT_MAP, zobacz artykuł [ActiveX Controls: Events](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek** afxctl.h
+**Nagłówek** 'afxctl. h
 
 ## <a name="end_event_map"></a><a name="end_event_map"></a>END_EVENT_MAP
 
@@ -103,7 +103,7 @@ END_EVENT_MAP()
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek** afxctl.h
+**Nagłówek** 'afxctl. h
 
 ## <a name="event_custom"></a><a name="event_custom"></a>EVENT_CUSTOM
 
@@ -115,40 +115,40 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ### <a name="parameters"></a>Parametry
 
-*pszName (Nazwa psz)*<br/>
+*pszName*<br/>
 Nazwa zdarzenia.
 
-*pfnFire (pfnFire)*<br/>
-Nazwa funkcji wypalania zdarzenia.
+*pfnFire*<br/>
+Nazwa funkcji wywołującej zdarzenia.
 
-*vtsParams ( vtsParams )*<br/>
-Oddzielona spacja lista jednej lub więcej stałych określających listę parametrów funkcji.
+*vtsParams*<br/>
+Rozdzielana spacjami lista jednej lub kilku stałych określających listę parametrów funkcji.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametr *vtsParams* jest oddzieloną spacją listą `VTS_` wartości ze stałych. Jedna lub więcej z tych wartości oddzielonych spacjami (nie przecinkami) określa listę parametrów funkcji. Przykład:
+*VtsParams* parametr to rozdzielana spacjami lista wartości ze `VTS_` stałych. Co najmniej jedna z tych wartości rozdzielonych spacjami (nie przecinkami) określa listę parametrów funkcji. Na przykład:
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-określa listę zawierającą 32-bitową liczbę całkowitą reprezentującą wartość koloru RGB, `IFontDisp` po której następuje wskaźnik do interfejsu obiektu czcionek OLE.
+Określa listę zawierającą 32-bitową liczbę całkowitą reprezentującą wartość koloru RGB, a następnie wskaźnik do `IFontDisp` interfejsu obiektu czcionki OLE.
 
-Stałe `VTS_` i ich znaczenie są następujące:
+`VTS_`Stałe i ich znaczenie są następujące:
 
 |Symbol|Typ parametru|
 |------------|--------------------|
-|VTS_I2|**short**|
-|VTS_I4|**long**|
-|VTS_R4|**float**|
-|VTS_R8|**double**|
+|VTS_I2|**`short`**|
+|VTS_I4|**`long`**|
+|VTS_R4|**`float`**|
+|VTS_R8|**`double`**|
 |VTS_COLOR|OLE_COLOR|
 |VTS_CY|WALUTA|
 |VTS_DATE|DATE|
-|VTS_BSTR|const __char\* __ **(char)**|
-|VTS_DISPATCH|LPDISPATCH ( LPDISPATCH )|
+|VTS_BSTR|**`const`**__znak \* __|
+|VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
-|VTS_HANDLE|Obsługi|
+|VTS_HANDLE|UCHWYTY|
 |VTS_SCODE|SCODE|
-|VTS_BOOL|Bool|
+|VTS_BOOL|LOGICZNA|
 |VTS_VARIANT|`const VARIANT*`|
 |VTS_PVARIANT|`VARIANT*`|
 |VTS_UNKNOWN|LPUNKNOWN|
@@ -165,15 +165,15 @@ Stałe `VTS_` i ich znaczenie są następujące:
 |VTS_YSIZE_HIMETRIC|OLE_YSIZE_HIMETRIC|
 
 > [!NOTE]
-> Dodatkowe stałe wariantu zostały zdefiniowane dla wszystkich typów wariantów, z wyjątkiem VTS_FONT i VTS_PICTURE, które zapewniają wskaźnik do stałej danych wariantu. Te stałe są nazwane przy użyciu `VTS_Pconstantname` konwencji. Na przykład VTS_PCOLOR jest wskaźnikiem do stałej VTS_COLOR.
+> Dodatkowe stałe wariantowe zostały zdefiniowane dla wszystkich typów wariantów, z wyjątkiem VTS_FONT i VTS_PICTURE, które zapewniają wskaźnik do stałej danych Variant. Te stałe są nazwane przy użyciu `VTS_Pconstantname` Konwencji. Na przykład VTS_PCOLOR jest wskaźnikiem do stałej VTS_COLOR.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek** afxctl.h
+**Nagłówek** 'afxctl. h
 
 ## <a name="event_custom_id"></a><a name="event_custom_id"></a>EVENT_CUSTOM_ID
 
-Definiuje funkcję wywoływania zdarzeń dla zdarzenia niestandardowego należącego do identyfikatora wysyłki określonego przez *dispid*.
+Definiuje funkcję do uruchamiania zdarzeń dla zdarzenia niestandardowego należącego do identyfikatora wysyłania określonego przez *DISPID*.
 
 ```cpp
 EVENT_CUSTOM_ID(
@@ -185,35 +185,35 @@ EVENT_CUSTOM_ID(
 
 ### <a name="parameters"></a>Parametry
 
-*pszName (Nazwa psz)*<br/>
+*pszName*<br/>
 Nazwa zdarzenia.
 
-*Dispid*<br/>
-Identyfikator wysyłki używany przez formant podczas wypalania zdarzenia.
+*DISPID*<br/>
+Identyfikator wysyłania używany przez formant podczas wyzwalania zdarzenia.
 
-*pfnFire (pfnFire)*<br/>
-Nazwa funkcji wypalania zdarzenia.
+*pfnFire*<br/>
+Nazwa funkcji wywołującej zdarzenia.
 
-*vtsParams ( vtsParams )*<br/>
-Lista zmiennych parametrów przekazanych do kontenera formantu po uruchomieniu zdarzenia.
+*vtsParams*<br/>
+Zmienna lista parametrów przenoszona do kontenera kontroli, gdy zdarzenie jest wyzwalane.
 
 ### <a name="remarks"></a>Uwagi
 
-*VtsParams* argument jest oddzielona spacja lista `VTS_` wartości ze stałych. Jedna lub więcej z tych wartości oddzielonych spacjami, a nie przecinkami, określa listę parametrów funkcji. Przykład:
+Argument *vtsParams* jest rozdzielaną spacją listą wartości ze `VTS_` stałych. Co najmniej jedna z tych wartości oddzielona spacjami, a nie przecinkiem, określa listę parametrów funkcji. Na przykład:
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-określa listę zawierającą 32-bitową liczbę całkowitą reprezentującą wartość koloru RGB, `IFontDisp` po której następuje wskaźnik do interfejsu obiektu czcionek OLE.
+Określa listę zawierającą 32-bitową liczbę całkowitą reprezentującą wartość koloru RGB, a następnie wskaźnik do `IFontDisp` interfejsu obiektu czcionki OLE.
 
-Aby uzyskać listę `VTS_` stałych, zobacz [EVENT_CUSTOM](#event_custom).
+Aby zapoznać się z listą `VTS_` stałych, zobacz [EVENT_CUSTOM](#event_custom).
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek** afxctl.h
+**Nagłówek** 'afxctl. h
 
 ## <a name="on_oleverb"></a><a name="on_oleverb"></a>ON_OLEVERB
 
-To makro definiuje wpis mapy wiadomości, który mapuje zlecenie niestandardowe na określoną funkcję elementu członkowskiego formantu.
+To makro definiuje wpis mapy komunikatów, który mapuje czasownik niestandardowy na określoną funkcję elementu członkowskiego formantu.
 
 ```cpp
 ON_OLEVERB(idsVerbName,  memberFxn)
@@ -224,8 +224,8 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 *idsVerbName*<br/>
 Identyfikator zasobu ciągu nazwy zlecenia.
 
-*członekFxn*<br/>
-Funkcja wywoływana przez strukturę, gdy wywoływany jest zlecenie.
+*memberFxn*<br/>
+Funkcja wywoływana przez platformę, gdy zlecenie jest wywoływane.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -240,15 +240,15 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-Wartości *parametrów lpMsg*, *hWndParent*i *lpRect* są pobierane `IOleObject::DoVerb` z odpowiednich parametrów funkcji elementu członkowskiego.
+Wartości parametrów *lpMsg*, *hWndParent*i *lpRect* są pobierane z odpowiednich parametrów `IOleObject::DoVerb` funkcji składowej.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek** afxole.h
+**Nagłówek** Afxole. h
 
 ## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a>ON_STDOLEVERB
 
-To makro służy do zastępowania domyślnego zachowania zlecenia standardowego.
+To makro służy do przesłonięcia domyślnego zachowania standardowego czasownika.
 
 ```cpp
 ON_STDOLEVERB(iVerb, memberFxn)
@@ -257,21 +257,21 @@ ON_STDOLEVERB(iVerb, memberFxn)
 ### <a name="parameters"></a>Parametry
 
 *iVerb*<br/>
-Indeks zlecenia standardowego dla zlecenia jest zastępowane.
+Standardowy indeks czasowników dla przesłanianego zlecenia.
 
-*członekFxn*<br/>
-Funkcja wywoływana przez strukturę, gdy wywoływany jest zlecenie.
+*memberFxn*<br/>
+Funkcja wywoływana przez platformę, gdy zlecenie jest wywoływane.
 
 ### <a name="remarks"></a>Uwagi
 
-Standardowy indeks czasownika `OLEIVERB_`ma formę , po której następuje akcja. OLEIVERB_SHOW, OLEIVERB_HIDE i OLEIVERB_UIACTIVATE są przykładami czasowników standardowych.
+Standardowy indeks czasowników ma postać `OLEIVERB_` , a po niej akcja. Przykłady standardowych czasowników OLEIVERB_SHOW, OLEIVERB_HIDE i OLEIVERB_UIACTIVATE.
 
-Zobacz [ON_OLEVERB](#on_oleverb) opis prototypu funkcji, który ma być używany jako parametr *memberFxn.*
+Zobacz [ON_OLEVERB](#on_oleverb) , aby uzyskać opis prototypu funkcji, który ma być używany jako parametr *memberFxn* .
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek** afxole.h
+**Nagłówek** Afxole. h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Makra i globals](../../mfc/reference/mfc-macros-and-globals.md)
+[Makra i Globals](../../mfc/reference/mfc-macros-and-globals.md)

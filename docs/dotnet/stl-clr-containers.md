@@ -6,18 +6,18 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: bfdbbeb735f98f77046790e21c19dd2d21b9d5c6
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 04ba56bf4f134ac5e9b906f7f84563c00ffe1b96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988110"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214870"
 ---
 # <a name="stlclr-containers"></a>Kontenery STL/CLR
 
-Biblioteka STL/CLR składa się z kontenerów, które są podobne do tych C++ , które znajdują się w bibliotece standardowej, ale działają w środowisku zarządzanym .NET Framework. Nie jest on aktualizowany za pomocą rzeczywistej C++ biblioteki standardowej i jest obsługiwany dla starszej obsługi.
+Biblioteka STL/CLR zawiera kontenery podobne do tych znajdujących się w standardowej bibliotece języka C++, ale działa w środowisku zarządzanym .NET Framework. Nie jest on aktualizowany za pomocą rzeczywistej standardowej biblioteki C++ i jest obsługiwany dla starszej obsługi.
 
-Ten dokument zawiera omówienie kontenerów w STL/CLR, takich jak wymagania dotyczące elementów kontenera, typy elementów, które można wstawić do kontenerów, i problemy własności z elementami w kontenerach. W razie potrzeby różnice między natywną C++ biblioteką standardową i STL/CLR są wymienione.
+Ten dokument zawiera omówienie kontenerów w STL/CLR, takich jak wymagania dotyczące elementów kontenera, typy elementów, które można wstawić do kontenerów, i problemy własności z elementami w kontenerach. W razie potrzeby różnice między natywną biblioteką standardu C++ i STL/CLR są wymienione.
 
 ## <a name="requirements-for-container-elements"></a>Wymagania dotyczące elementów kontenera
 
@@ -37,7 +37,7 @@ Nie można wstawić opakowanych typów wartości do żadnego kontenera STL/CLR.
 
 ### <a name="handles-to-reference-types"></a>Uchwyty do typów referencyjnych
 
-Dojście do typu odwołania można wstawić do kontenera STL/CLR. Dojście w C++ tym elemencie docelowym CLR jest analogiczne do wskaźnika w trybie C++macierzystym. Aby uzyskać więcej informacji, zobacz [uchwyt do operatora obiektu (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
+Dojście do typu odwołania można wstawić do kontenera STL/CLR. Dojście w języku C++, które jest celem środowiska CLR jest analogiczne do wskaźnika w natywnym języku C++. Aby uzyskać więcej informacji, zobacz [uchwyt do operatora obiektu (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
 
 #### <a name="example"></a>Przykład
 
@@ -136,7 +136,7 @@ Można również wstawić typ referencyjny (zamiast dojścia do typu referencyjn
 
 #### <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak wstawić obiekt Employee do `cliext::set`.
+Poniższy przykład pokazuje, jak wstawić obiekt Employee do `cliext::set` .
 
 ```cpp
 // cliext_container_valid_reference.cpp
@@ -229,11 +229,11 @@ int main()
 
 Możesz również wstawić nieopakowany typ wartości do kontenera STL/CLR. Nieopakowany typ wartości jest typem wartości, który nie został *opakowany* na typ referencyjny.
 
-Element typu wartości może być jednym z standardowych typów wartości, takich jak `int`, lub może być typem wartości zdefiniowanym przez użytkownika, np. `value class`. Aby uzyskać więcej informacji, zobacz [klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md)
+Element typu wartości może być jednym z standardowych typów wartości, takich jak **`int`** , lub może być typem wartości zdefiniowanym przez użytkownika, np **`value class`** .. Aby uzyskać więcej informacji, zobacz [klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 #### <a name="example"></a>Przykład
 
-Poniższy przykład modyfikuje pierwszy przykład, tworząc klasę Employee jako typ wartości. Ten typ wartości jest następnie wstawiany do `cliext::set` tak jak w pierwszym przykładzie.
+Poniższy przykład modyfikuje pierwszy przykład, tworząc klasę Employee jako typ wartości. Ten typ wartości jest następnie wstawiany do postaci `cliext::set` tak jak w pierwszym przykładzie.
 
 ```cpp
 // cliext_container_valid_valuetype.cpp
@@ -312,4 +312,4 @@ Gdy wywoływana jest metoda Clear lub Erase kontenera obiektów dojścia, obiekt
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
+[Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

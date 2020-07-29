@@ -13,12 +13,12 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: 1187b745a6d8c903c22958185be8d98a6e3d0204
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5bf3c1f8a1de4d61b849bd56363ce3f0c7437348
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376352"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222748"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funkcje przestrzeni nazw współbieżności (AMP)
 
@@ -28,13 +28,13 @@ ms.locfileid: "81376352"
 |[Funkcja atomic_exchange (C++ AMP)](#atomic_exchange)|[Funkcja atomic_fetch_add (C++ AMP)](#atomic_fetch_add)|[Funkcja atomic_fetch_and (C++ AMP)](#atomic_fetch_and)|
 |[atomic_fetch_dec](#atomic_fetch_dec)|[atomic_fetch_inc](#atomic_fetch_inc)|[atomic_fetch_max](#atomic_fetch_max)|
 |[atomic_fetch_min](#atomic_fetch_min)|[Funkcja atomic_fetch_or (C++ AMP)](#atomic_fetch_or)|[Funkcja atomic_fetch_sub (C++ AMP)](#atomic_fetch_sub)|
-|[Funkcja atomic_fetch_xor (C++ AMP)](#atomic_fetch_xor)|[Kopii](#copy)|[copy_async](#copy_async)|
+|[Funkcja atomic_fetch_xor (C++ AMP)](#atomic_fetch_xor)|[kopiowane](#copy)|[copy_async](#copy_async)|
 |[direct3d_abort](#direct3d_abort)|[direct3d_errorf](#direct3d_errorf)|[direct3d_printf](#direct3d_printf)|
 |[global_memory_fence](#global_memory_fence)|[Funkcja parallel_for_each (C++ AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|
 
 ## <a name="all_memory_fence"></a><a name="all_memory_fence"></a>all_memory_fence
 
-Blokuje wykonywanie wszystkich wątków w kafelku, dopóki nie zostaną ukończone wszystkie dostępy do pamięci. Gwarantuje to, że wszystkie dostępy do pamięci są widoczne dla innych wątków na kafelku wątku i są wykonywane w kolejności programu.
+Blokuje wykonywanie wszystkich wątków we fragmencie do momentu zakończenia wszystkich operacji dostępu do pamięci. Daje to pewność, że wszystkie dostępy do pamięci są widoczne dla innych wątków w kafelku wątku i są wykonywane w kolejności programu.
 
 ```cpp
 inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
@@ -47,7 +47,7 @@ Obiekt `tile_barrier`.
 
 ## <a name="amp_uninitialize"></a><a name="amp_uninitialize"></a>amp_uninitialize
 
-Uninitializes środowiska wykonawczego C++ AMP. Jest to legalne, aby wywołać tę funkcję wiele razy w okresie istnienia aplikacji. Wywołanie dowolnego interfejsu API C++ AMP po wywołaniu tej funkcji spowoduje ponowne zainicjowanie środowiska wykonawczego C++ AMP. Należy zauważyć, że jest to niezgodne z prawem do korzystania z obiektów C++ AMP przez wywołania tej funkcji i spowoduje to niezdefiniowane zachowanie. Ponadto jednoczesne wywołanie tej funkcji i innych interfejsów API amp jest nielegalne i spowodowałoby niezdefiniowane zachowanie.
+Umożliwia odinicjowanie środowiska uruchomieniowego C++ AMP. Istnieje możliwość wielokrotnego wywołania tej funkcji w okresie istnienia aplikacji. Wywołanie interfejsu API C++ AMP po wywołaniu tej funkcji spowoduje ponowne zainicjowanie środowiska uruchomieniowego C++ AMP. Należy zauważyć, że nie jest dozwolone używanie C++ AMP obiektów w ramach wywołań tej funkcji, co spowoduje niezdefiniowane zachowanie. Ponadto współbieżne wywoływanie tej funkcji i innych interfejsów API AMP jest niedozwolone i spowoduje niezdefiniowane zachowanie.
 
 ```cpp
 void __cdecl amp_uninitialize();
@@ -55,7 +55,7 @@ void __cdecl amp_uninitialize();
 
 ## <a name="atomic_compare_exchange"></a><a name="atomic_compare_exchange"></a>atomic_compare_exchange
 
-Niepodzielnie porównuje wartość przechowywaną w lokalizacji pamięci określonej w pierwszym argurze równości z wartością drugiego określonego argumentu, a jeśli wartości są takie same, wartość w lokalizacji pamięci zostanie zmieniona na wartość trzeciego określonego argumentu.
+Niepodzielnie porównuje wartość przechowywaną w lokalizacji w pamięci określonej w pierwszym argumencie dla równości z wartością drugiego określonego argumentu, a jeśli wartości są takie same, wartość w lokalizacji pamięci jest zmieniana na trzeci określony argument.
 
 ```cpp
 inline bool atomic_compare_exchange(
@@ -74,21 +74,21 @@ inline bool atomic_compare_exchange(
 ### <a name="parameters"></a>Parametry
 
 *_Dest*<br/>
-Lokalizacja, z której odczytywana jest jedna z wartości, które mają być porównywane, i do której ma być przechowywana nowa wartość, jeśli istnieje.
+Lokalizacja, z której jest odczytywana jedna z wartości, które mają być porównane, i do której ma zostać zapisana nowa wartość (jeśli istnieje).
 
 *_Expected_value*<br/>
-Zostanie odczytana lokalizacja, z której zostanie porównana druga wartość do porównania.
+Lokalizacja, z której zostanie odczytana druga wartość do porównania.
 
-*value*<br/>
-Wartość, która ma być przechowywana `_Dest` w `_Dest` lokalizacji `_Expected_value`pamięci określonej przez if jest równa .
+*wartościami*<br/>
+Wartość, która ma być przechowywana w lokalizacji pamięci określonej w parametrze `_Dest` if `_Dest` jest równa `_Expected_value` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli operacja zakończy się pomyślnie; w przeciwnym razie **false**.
+**`true`** Jeśli operacja się powiedzie; w przeciwnym razie **`false`** .
 
 ## <a name="atomic_exchange-function-c-amp"></a><a name="atomic_exchange"></a>Funkcja atomic_exchange (C++ AMP)
 
-Ustawia wartość lokalizacji docelowej jako operacji niepodzielnej.
+Ustawia wartość lokalizacji docelowej jako operację niepodzielną.
 
 ```cpp
 inline int atomic_exchange(
@@ -112,7 +112,7 @@ inline float atomic_exchange(
 *_Dest*<br/>
 Wskaźnik do lokalizacji docelowej.
 
-*value*<br/>
+*wartościami*<br/>
 Nowa wartość.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -121,7 +121,7 @@ Oryginalna wartość lokalizacji docelowej.
 
 ## <a name="atomic_fetch_add-function-c-amp"></a><a name="atomic_fetch_add"></a>Funkcja atomic_fetch_add (C++ AMP)
 
-Atomicznie dodać wartość do wartości lokalizacji pamięci.
+Niepodzielnie Dodaj wartość do wartości lokalizacji pamięci.
 
 ```cpp
 inline int atomic_fetch_add(
@@ -140,8 +140,8 @@ inline unsigned int atomic_fetch_add(
 *_Dest*<br/>
 Wskaźnik do lokalizacji pamięci.
 
-*value*<br/>
-Wartość dodana.
+*wartościami*<br/>
+Wartość, która ma zostać dodana.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -149,7 +149,7 @@ Oryginalna wartość lokalizacji pamięci.
 
 ## <a name="atomic_fetch_and-function-c-amp"></a><a name="atomic_fetch_and"></a>Funkcja atomic_fetch_and (C++ AMP)
 
-Atomically wykonuje działanie bitowe i wartości wartości lokalizacji pamięci.
+Niepodzielnie wykonuje wartości bitowe i wartość lokalizacji pamięci.
 
 ```cpp
 inline int atomic_fetch_and(
@@ -168,8 +168,8 @@ inline unsigned int atomic_fetch_and(
 *_Dest*<br/>
 Wskaźnik do lokalizacji pamięci.
 
-*value*<br/>
-Wartość używana w obliczeniach bitowych AND.
+*wartościami*<br/>
+Wartość, która ma być używana w obliczeniach bitowych i.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -189,7 +189,7 @@ inline unsigned int atomic_fetch_dec(_Inout_ unsigned int* _Dest) restrict(amp);
 ### <a name="parameters"></a>Parametry
 
 *_Dest*<br/>
-Lokalizacja w pamięci wartości, która ma zostać zdekrzecona.
+Lokalizacja w pamięci wartości do zmniejszenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -197,7 +197,7 @@ Oryginalna wartość przechowywana w lokalizacji pamięci.
 
 ## <a name="atomic_fetch_inc"></a><a name="atomic_fetch_inc"></a>atomic_fetch_inc
 
-Niepotarcie zwiększa wartość przechowywaną w określonej lokalizacji pamięci.
+Niepodzielnie zwiększa wartość przechowywaną w określonej lokalizacji pamięci.
 
 ```cpp
 inline int atomic_fetch_inc(_Inout_ int* _Dest) restrict(amp);
@@ -208,7 +208,7 @@ inline unsigned int atomic_fetch_inc(_Inout_ unsigned int* _Dest) restrict(amp);
 ### <a name="parameters"></a>Parametry
 
 *_Dest*<br/>
-Lokalizacja w pamięci wartości, która ma być zwiększana.
+Lokalizacja w pamięci wartości do zwiększenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -216,7 +216,7 @@ Oryginalna wartość przechowywana w lokalizacji pamięci.
 
 ## <a name="atomic_fetch_max"></a><a name="atomic_fetch_max"></a>atomic_fetch_max
 
-Atomically oblicza maksymalną wartość między wartością przechowywaną w lokalizacji pamięci określonej w pierwszym argumentie a wartością określoną w drugim argum i przechowuje ją w tej samej lokalizacji pamięci.
+Niepodzielnie oblicza wartość maksymalną między wartością przechowywaną w lokalizacji w pamięci określonej w pierwszym argumencie i wartością określoną w drugim argumencie i zapisuje ją w tej samej lokalizacji pamięci.
 
 ```cpp
 inline int atomic_fetch_max(
@@ -233,18 +233,18 @@ inline unsigned int atomic_fetch_max(
 ### <a name="parameters"></a>Parametry
 
 *_Dest*<br/>
-Lokalizacja, z której odczytywana jest jedna z wartości, które mają być porównywane, i do której ma być przechowywana maksymalna z dwóch wartości.
+Lokalizacja, z której jest odczytywana jedna z wartości, które mają być porównane, i do której mają być przechowywane wartości maksymalne z dwóch.
 
-*value*<br/>
-Wartość, która ma być porównywana z wartością w określonej lokalizacji.
+*wartościami*<br/>
+Wartość do porównania z wartością w określonej lokalizacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Oryginalna wartość przechowywana w określonej lokalizacji.
+Oryginalna wartość przechowywana w określonej lokalizacji lokalizacji.
 
 ## <a name="atomic_fetch_min"></a><a name="atomic_fetch_min"></a>atomic_fetch_min
 
-Atomically oblicza wartość minimalną między wartością przechowywaną w lokalizacji pamięci określonej w pierwszym argumentie a wartością określoną w drugim argum i przechowuje ją w tej samej lokalizacji pamięci.
+Niepodzielnie oblicza wartość minimalną między wartością przechowywaną w lokalizacji pamięci określonej w pierwszym argumencie i wartością określoną w drugim argumencie i zapisuje ją w tej samej lokalizacji pamięci.
 
 ```cpp
 inline int atomic_fetch_min(
@@ -261,18 +261,18 @@ inline unsigned int atomic_fetch_min(
 ### <a name="parameters"></a>Parametry
 
 *_Dest*<br/>
-Lokalizacja, z której odczytywana jest jedna z wartości, które mają być porównywane, i do której ma być przechowywana minimalna z dwóch wartości.
+Lokalizacja, z której jest odczytywana jedna z wartości, które mają być porównane, i do której mają być przechowywane minimum dwóch wartości.
 
-*value*<br/>
-Wartość, która ma być porównywana z wartością w określonej lokalizacji.
+*wartościami*<br/>
+Wartość do porównania z wartością w określonej lokalizacji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Oryginalna wartość przechowywana w określonej lokalizacji.
+Oryginalna wartość przechowywana w określonej lokalizacji lokalizacji.
 
 ## <a name="atomic_fetch_or-function-c-amp"></a><a name="atomic_fetch_or"></a>Funkcja atomic_fetch_or (C++ AMP)
 
-Niepodzielnie wykonuje działanie bitowe OR z wartością i wartością lokalizacji pamięci.
+Niepodzielnie wykonuje operacje bitowe lub z wartością oraz wartością lokalizacji pamięci.
 
 ```cpp
 inline int atomic_fetch_or(
@@ -291,8 +291,8 @@ inline unsigned int atomic_fetch_or(
 *_Dest*<br/>
 Wskaźnik do lokalizacji pamięci.
 
-*value*<br/>
-Wartość używana w obliczeniach bitowych OR.
+*wartościami*<br/>
+Wartość, która ma być używana w obliczeniach bitowych lub.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -300,7 +300,7 @@ Oryginalna wartość lokalizacji pamięci.
 
 ## <a name="atomic_fetch_sub-function-c-amp"></a><a name="atomic_fetch_sub"></a>Funkcja atomic_fetch_sub (C++ AMP)
 
-Niepodzielnie odejmuje wartość od lokalizacji pamięci.
+Niepodzielnie odejmuje wartość z lokalizacji pamięci.
 
 ```cpp
 inline int atomic_fetch_sub(
@@ -319,8 +319,8 @@ inline unsigned int atomic_fetch_sub(
 *_Dest*<br/>
 Wskaźnik do lokalizacji docelowej.
 
-*value*<br/>
-Wartość do odjętej.
+*wartościami*<br/>
+Wartość do odjęcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -328,7 +328,7 @@ Oryginalna wartość lokalizacji pamięci.
 
 ## <a name="atomic_fetch_xor-function-c-amp"></a><a name="atomic_fetch_xor"></a>Funkcja atomic_fetch_xor (C++ AMP)
 
-Niepodzielnie wykonuje bitowe działanie XOR wartości i lokalizacji pamięci.
+Niepodzielnie wykonuje bitowe operacje XOR o wartości i lokalizacji pamięci.
 
 ```cpp
 inline int atomic_fetch_xor(
@@ -347,16 +347,16 @@ inline unsigned int atomic_fetch_xor(
 *_Dest*<br/>
 Wskaźnik do lokalizacji pamięci.
 
-*value*<br/>
-Wartość używana w obliczeniach XOR.
+*wartościami*<br/>
+Wartość, która ma zostać użyta w obliczeniach XOR.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Oryginalna wartość lokalizacji pamięci.
 
-## <a name="copy"></a><a name="copy"></a>Kopii
+## <a name="copy"></a><a name="copy"></a>kopiowane
 
-Kopiuje obiekt C++ AMP. Wszystkie wymagania dotyczące synchroniczowego transferu danych są spełnione. Nie można skopiować danych podczas uruchamiania kodu na akceleratorze. Ogólną formą tej `copy(src, dest)`funkcji jest .
+Kopiuje obiekt C++ AMP. Spełnione są wszystkie wymagania dotyczące synchronicznego transferu danych. Nie można skopiować danych podczas uruchamiania kodu na akceleratorze. Ogólna forma tej funkcji to `copy(src, dest)` .
 
 ```cpp
 template <typename value_type, int _Rank>
@@ -428,32 +428,32 @@ void copy(
 Obiekt do skopiowania.
 
 *_DestIter*<br/>
-Iterator wyjściowy do pozycji początkowej w miejscu docelowym.
+Iterator danych wyjściowych do pozycji początkowej w miejscu docelowym.
 
 *InputIterator*<br/>
 Typ iteratora wejściowego.
 
-*Dane wyjścioweIterator*<br/>
-Typ iteratora wyjściowego.
+*OutputIterator*<br/>
+Typ iteratora danych wyjściowych.
 
 *_Rank*<br/>
-Ranga obiektu do skopiowania lub obiektu do skopiowania.
+Ranga obiektu, z którego ma zostać skopiowana lub do której ma być kopiowany obiekt.
 
 *_Src*<br/>
-Aby sprzeciwić się kopiowaniu.
+Na obiekt do skopiowania.
 
 *_SrcFirst*<br/>
-Początkujący iterator do kontenera źródłowego.
+Początkowy iterator do kontenera źródłowego.
 
 *_SrcLast*<br/>
-Iterator końcowy do kontenera źródłowego.
+Końcowy iterator do kontenera źródłowego.
 
 *value_type*<br/>
 Typ danych elementów, które są kopiowane.
 
 ## <a name="copy_async"></a><a name="copy_async"></a>copy_async
 
-Kopiuje obiekt C++ AMP i zwraca [completion_future](completion-future-class.md) obiekt, na który można czekać. Nie można skopiować danych podczas uruchamiania kodu na akceleratorze.  Ogólną formą tej `copy(src, dest)`funkcji jest .
+Kopiuje obiekt C++ AMP i zwraca obiekt [completion_future](completion-future-class.md) , który może być oczekiwany. Nie można skopiować danych podczas uruchamiania kodu na akceleratorze.  Ogólna forma tej funkcji to `copy(src, dest)` .
 
 ```cpp
 template <typename value_type, int _Rank>
@@ -517,36 +517,36 @@ concurrency::completion_future copy_async(
 Obiekt do skopiowania.
 
 *_DestIter*<br/>
-Iterator wyjściowy do pozycji początkowej w miejscu docelowym.
+Iterator danych wyjściowych do pozycji początkowej w miejscu docelowym.
 
 *InputIterator*<br/>
 Typ iteratora wejściowego.
 
-*Dane wyjścioweIterator*<br/>
-Typ iteratora wyjściowego.
+*OutputIterator*<br/>
+Typ iteratora danych wyjściowych.
 
 *_Rank*<br/>
-Ranga obiektu do skopiowania lub obiektu do skopiowania.
+Ranga obiektu, z którego ma zostać skopiowana lub do której ma być kopiowany obiekt.
 
 *_Src*<br/>
-Aby sprzeciwić się kopiowaniu.
+Na obiekt do skopiowania.
 
 *_SrcFirst*<br/>
-Początkujący iterator do kontenera źródłowego.
+Początkowy iterator do kontenera źródłowego.
 
 *_SrcLast*<br/>
-Iterator końcowy do kontenera źródłowego.
+Końcowy iterator do kontenera źródłowego.
 
 *value_type*<br/>
 Typ danych elementów, które są kopiowane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-A, `future<void>` na które można czekać.
+`future<void>`, Który może być oczekiwany.
 
 ## <a name="direct3d_abort"></a><a name="direct3d_abort"></a>direct3d_abort
 
-Przerywa wykonywanie funkcji z klauzulą `restrict(amp)` ograniczeń. Gdy środowisko wykonawcze AMP wykryje wywołanie, wywołuje wyjątek [runtime_exception](runtime-exception-class.md) z komunikatem o błędzie "Reference Rasterizer: Shader abort instruction hit".
+Przerywa wykonywanie funkcji z `restrict(amp)` klauzulą ograniczenia. Gdy środowisko uruchomieniowe AMP wykryje wywołanie, wywołuje [runtime_exception](runtime-exception-class.md) wyjątek z komunikatem o błędzie "Rasteryzuj referenceer: trafienie instrukcji przerwania cienia".
 
 ```cpp
 void direct3d_abort() restrict(amp);
@@ -554,7 +554,7 @@ void direct3d_abort() restrict(amp);
 
 ## <a name="direct3d_errorf"></a><a name="direct3d_errorf"></a>direct3d_errorf
 
-Drukuje sformatowany ciąg do okna wyjściowego programu Visual Studio. Jest wywoływana z funkcji `restrict(amp)` z klauzulą ograniczenia. Gdy środowisko wykonawcze AMP wykryje wywołanie, wywołuje [wyjątek runtime_exception](runtime-exception-class.md) z tym samym ciągiem formatowania.
+Drukuje sformatowany ciąg w oknie danych wyjściowych programu Visual Studio. Jest wywoływana z funkcji z `restrict(amp)` klauzulą ograniczenia. Gdy środowisko uruchomieniowe AMP wykryje wywołanie, wywołuje [runtime_exception](runtime-exception-class.md) wyjątek z tym samym ciągiem formatowania.
 
 ```cpp
 void direct3d_errorf(
@@ -564,7 +564,7 @@ void direct3d_errorf(
 
 ## <a name="direct3d_printf"></a><a name="direct3d_printf"></a>direct3d_printf
 
-Drukuje sformatowany ciąg do okna wyjściowego programu Visual Studio. Jest wywoływana z funkcji `restrict(amp)` z klauzulą ograniczenia.
+Drukuje sformatowany ciąg w oknie danych wyjściowych programu Visual Studio. Jest wywoływana z funkcji z `restrict(amp)` klauzulą ograniczenia.
 
 ```cpp
 void direct3d_printf(
@@ -574,7 +574,7 @@ void direct3d_printf(
 
 ## <a name="global_memory_fence"></a><a name="global_memory_fence"></a>global_memory_fence
 
-Blokuje wykonywanie wszystkich wątków na kafelku, dopóki nie zostaną ukończone wszystkie dostępy do pamięci globalnej. Gwarantuje to, że dostęp do pamięci globalnej są widoczne dla innych wątków na kafelku wątku i są wykonywane w kolejności programu.
+Blokuje wykonywanie wszystkich wątków w kafelku do momentu zakończenia wszystkich dostępów do pamięci globalnej. Gwarantuje to, że dostępy do pamięci globalnej są widoczne dla innych wątków w kafelku wątku i są wykonywane w kolejności programu.
 
 ```cpp
 inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
@@ -587,7 +587,7 @@ Obiekt tile_barrier
 
 ## <a name="parallel_for_each-function-c-amp"></a><a name="parallel_for_each"></a>Funkcja parallel_for_each (C++ AMP)
 
-Uruchamia funkcję w domenie obliczeniowej. Aby uzyskać więcej informacji, zobacz [Omówienie amp języka C++](../../../parallel/amp/cpp-amp-overview.md).
+Uruchamia funkcję w całej domenie obliczeniowej. Aby uzyskać więcej informacji, zobacz [C++ amp przegląd](../../../parallel/amp/cpp-amp-overview.md).
 
 ```cpp
 template <int _Rank, typename _Kernel_type>
@@ -638,10 +638,10 @@ void parallel_for_each(
 ### <a name="parameters"></a>Parametry
 
 *_Accl_view*<br/>
-Obiekt `accelerator_view` do uruchomienia obliczeń równoległych na.
+Obiekt, dla `accelerator_view` którego ma zostać uruchomione obliczenie równoległe.
 
 *_Compute_domain*<br/>
-Obiekt, `extent` który zawiera dane dla obliczeń.
+`extent`Obiekt, który zawiera dane do obliczenia.
 
 *_Dim0*<br/>
 Wymiar `tiled_extent` obiektu.
@@ -653,17 +653,17 @@ Wymiar `tiled_extent` obiektu.
 Wymiar `tiled_extent` obiektu.
 
 *_Kernel*<br/>
-Lambda lub obiekt funkcji, który przyjmuje\<argument typu "indeks _Rank>" i wykonuje obliczenia równoległe.
+Obiekt lambda lub funkcja, która przyjmuje argument typu "index \<_Rank> " i wykonuje obliczenia równoległe.
 
 *_Kernel_type*<br/>
-Lambda lub functor.
+Lambda lub Funktor.
 
 *_Rank*<br/>
 Ranga zakresu.
 
 ## <a name="tile_static_memory_fence"></a><a name="tile_static_memory_fence"></a>tile_static_memory_fence
 
-Blokuje wykonywanie wszystkich wątków w kafelku, dopóki nie zostaną ukończone wszystkie zaległe `tile_static` dostępy do pamięci. Dzięki temu `tile_static` dostęp do pamięci są widoczne dla innych wątków na kafelku wątku i że dostępy są wykonywane w kolejności programu.
+Blokuje wykonywanie wszystkich wątków we fragmencie do momentu zakończenia wszystkich zaległych `tile_static` operacji dostępu do pamięci. Dzięki temu `tile_static` dostęp do pamięci będzie widoczny dla innych wątków w kafelku wątku, a dostęp do nich jest wykonywany w kolejności programu.
 
 ```cpp
 inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp);
@@ -674,6 +674,6 @@ inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp)
 *_Barrier*<br/>
 Obiekt tile_barrier.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Obszar nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

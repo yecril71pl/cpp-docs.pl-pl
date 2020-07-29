@@ -2,31 +2,29 @@
 title: Range-based for — instrukcja (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
-ms.openlocfilehash: 504f177cf68b978642f15ba4799cab8cb517f447
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1197080e2e96e0e5c51bc06e93026567a33c7842
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188353"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223619"
 ---
 # <a name="range-based-for-statement-c"></a>Range-based for — instrukcja (C++)
 
-Wykonuje `statement` wielokrotnie i sekwencyjnie dla każdego elementu w `expression`.
+Wykonuje `statement` wielokrotnie i sekwencyjnie dla każdego elementu w `expression` .
 
 ## <a name="syntax"></a>Składnia
 
-```
-for ( for-range-declaration : expression )
-   statement
-```
+> **`for (`***Deklaracja* **`:`** dla zakresu *wyrażenie***`)`**\
+&emsp;*instrukcja*
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj instrukcji **for** opartej na zakresie, aby utworzyć pętle, które muszą być wykonywane przez "zakres", który jest zdefiniowany jako wszystkie elementy, które można wykonać za pośrednictwem, na przykład C++ `std::vector`, lub dowolnej innej standardowej sekwencji biblioteki, której zakres jest definiowany przez `begin()` i `end()`. Nazwa zadeklarowana w części `for-range-declaration` jest lokalną instrukcją **for** i nie może zostać ponownie zadeklarowana w `expression` lub `statement`. Należy [zauważyć, że słowo kluczowe](../cpp/auto-cpp.md) "Select" jest preferowane w części `for-range-declaration` instrukcji.
+Użyj instrukcji opartej na zakresie **`for`** , aby utworzyć pętle, które muszą zostać wykonane przez *zakres*, który jest zdefiniowany jako wszystko, co można wykonać w iteracji, na przykład `std::vector` , lub dowolną inną sekwencję standardowej biblioteki języka C++, której zakres jest zdefiniowany przez `begin()` i `end()` . Nazwa zadeklarowana w `for-range-declaration` części jest lokalną **`for`** instrukcją i nie może być ponownie zadeklarowana w `expression` lub `statement` . Należy zauważyć, że [`auto`](../cpp/auto-cpp.md) słowo kluczowe jest preferowany w `for-range-declaration` części instrukcji.
 
-**Nowość w programie Visual Studio 2017:**  Pętle oparte na zakresie dla pętli nie wymagają już, aby obiekty Begin () i End () były zwracane przez ten sam typ. Umożliwia to end () zwrócenie obiektu wskaźnikowego, takiego jak używany przez zakresy, zgodnie z definicją w propozycji zakres-v3. Aby uzyskać więcej informacji, zobacz [uogólnianie pętli for opartej na zakresie](https://wg21.link/p0184r0) i [biblioteki z zakresem V3 w serwisie GitHub](https://github.com/ericniebler/range-v3).
+**Nowość w programie Visual Studio 2017:**  Pętle oparte na zakresie **`for`** nie wymagają już, aby `begin()` obiekty tego samego typu i nie były `end()` zwracane. Umożliwia to `end()` zwrócenie obiektu wskaźnikowego, takiego jak używany przez zakresy, zgodnie z definicją w propozycjach zakres-v3. Aby uzyskać więcej informacji, zobacz [uogólnianie `For` pętli opartej na zakresie](https://wg21.link/p0184r0) oraz [biblioteki zakresu-V3 w serwisie GitHub](https://github.com/ericniebler/range-v3).
 
-Ten kod pokazuje, w jaki sposób **używać pętli opartych na zakresie** do iterowania przez tablicę i wektor:
+Ten kod pokazuje, jak używać pętli opartych na zakresie **`for`** do iteracji przez tablicę i wektor:
 
 ```cpp
 // range-based-for.cpp
@@ -96,21 +94,21 @@ end of integer array test
 end of vector test
 ```
 
-Pętla **for** jest przerywana, gdy jest wykonywane jedno z następujących w `statement`: [Break](../cpp/break-statement-cpp.md), [Return](../cpp/return-statement-cpp.md)lub [goto](../cpp/goto-statement-cpp.md) do instrukcji oznaczonej poza zakresem pętli **for** . Instrukcja [Continue](../cpp/continue-statement-cpp.md) w pętli **for** opartej na zakresie kończy się tylko bieżącą iteracją.
+Pętla oparta na zakresie **`for`** kończy się, gdy jedno z nich `statement` jest wykonywane: a [`break`](../cpp/break-statement-cpp.md) , [`return`](../cpp/return-statement-cpp.md) , lub [`goto`](../cpp/goto-statement-cpp.md) do instrukcji oznaczonej poza pętlą opartą na zakresie **`for`** . [`continue`](../cpp/continue-statement-cpp.md)Instrukcja w pętli opartej na zakresie **`for`** kończy tylko bieżącą iterację.
 
-Weź pod uwagę te fakty dotyczące zakresu **dla**:
+Weź pod uwagę następujące fakty dotyczące zakresu **`for`** :
 
 - Automatycznie rozpoznaje tablice.
 
-- Rozpoznaje kontenery, które mają `.begin()` i `.end()`.
+- Rozpoznaje kontenery, które mają `.begin()` i `.end()` .
 
-- Używa `begin()` wyszukiwania zależnego od argumentów i `end()` dla innych elementów.
+- Używa wyszukiwania zależnego od argumentów `begin()` i `end()` innych elementów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[auto](../cpp/auto-cpp.md)<br/>
+[`auto`](../cpp/auto-cpp.md)<br/>
 [Instrukcje iteracji](../cpp/iteration-statements-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
-[while, instrukcja (C++)](../cpp/while-statement-cpp.md)<br/>
-[do-while, instrukcja (C++)](../cpp/do-while-statement-cpp.md)<br/>
-[for, instrukcja (C++)](../cpp/for-statement-cpp.md)
+[`while`Instrukcja (C++)](../cpp/while-statement-cpp.md)<br/>
+[`do-while`Instrukcja (C++)](../cpp/do-while-statement-cpp.md)<br/>
+[`for`Instrukcja (C++)](../cpp/for-statement-cpp.md)

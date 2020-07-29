@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4218
 ms.assetid: d6c3cd90-4518-49e9-ae86-4ba9e2761d98
-ms.openlocfilehash: f7553b30a17f50f559351353552fd656fceb8657
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 226bc91c272ff62ebe127aa190384d30a214b05d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199800"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223255"
 ---
 # <a name="compiler-warning-level-1-c4218"></a>Ostrzeżenie kompilatora (poziom 1) C4218
 
 użyto niestandardowego rozszerzenia: należy określić co najmniej klasę magazynu lub typ
 
-Przy użyciu domyślnych rozszerzeń Microsoft (/ze) można zadeklarować zmienną bez określania typu lub klasy magazynu. Domyślny typ to `int`.
+Przy użyciu domyślnych rozszerzeń Microsoft (/ze) można zadeklarować zmienną bez określania typu lub klasy magazynu. Domyślnym typem jest **`int`** .
 
 ## <a name="example"></a>Przykład
 

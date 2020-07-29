@@ -7,18 +7,18 @@ helpviewer_keywords:
 - windows [MFC], creating
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
-ms.openlocfilehash: 0b09543d659448454bbc7c2cca6abee5de3013e5
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 63b5e0131642692d9372c148827a583f19114fb9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618755"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223164"
 ---
 # <a name="general-window-creation-sequence"></a>Ogólna sekwencja tworzenia okna
 
 W przypadku tworzenia własnego okna, takiego jak okno podrzędne, struktura używa znacznie tego samego procesu, który został opisany w temacie [Tworzenie dokumentu/widoku](document-view-creation.md).
 
-Wszystkie klasy okna udostępniane przez MFC wykorzystują [konstrukcję dwuetapową](one-stage-and-two-stage-construction-of-objects.md). Oznacza to, że podczas wywołania operatora **New** języka c++ Konstruktor przydziela i inicjuje obiekt c++, ale nie tworzy odpowiedniego okna systemu Windows. Jest to wykonywane później przez wywołanie funkcji [tworzenia](reference/cwnd-class.md#create) elementu członkowskiego obiektu okna.
+Wszystkie klasy okna udostępniane przez MFC wykorzystują [konstrukcję dwuetapową](one-stage-and-two-stage-construction-of-objects.md). Oznacza to, że podczas wywołania **`new`** operatora c++ Konstruktor przydziela i inicjuje obiekt C++, ale nie tworzy odpowiedniego okna systemu Windows. Jest to wykonywane później przez wywołanie funkcji [tworzenia](reference/cwnd-class.md#create) elementu członkowskiego obiektu okna.
 
 `Create`Funkcja członkowska powoduje, że okno systemu Windows i przechowuje jego `HWND` w [m_hWnd](reference/cwnd-class.md#m_hwnd)publicznej składowej danych obiektu C++. `Create`zapewnia pełną elastyczność nad parametrami tworzenia. Przed wywołaniem `Create` można zarejestrować klasę okna przy użyciu funkcji globalnej [AfxRegisterWndClass —](reference/application-information-and-management.md#afxregisterwndclass) w celu ustawienia stylu ikon i klas dla ramki.
 
@@ -33,10 +33,10 @@ W przypadku okien ramowych można użyć funkcji składowej [LoadFrame](referenc
 
 - [Rejestrowanie okna "classes"](registering-window-classes.md)
 
-- [Niszczenie obiektów okien](destroying-window-objects.md)
+- [niszczenie obiektów okien](destroying-window-objects.md)
 
 - [Tworzenie okien ramowych dokumentu](creating-document-frame-windows.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Tworzenie okien](creating-windows.md)

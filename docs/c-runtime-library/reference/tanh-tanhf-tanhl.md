@@ -35,12 +35,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: d368f9ca99753e0749fe3c77a512c0d0c8975161
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9e280e489d5da5d66a48b72b38fe22a6943b7318
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912300"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215117"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
@@ -61,7 +61,7 @@ long double tanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -74,7 +74,7 @@ Funkcja **tanh** zwraca tangens hiperboliczny *x*. Brak powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **tanh** , które przyjmują i zwracają wartości **zmiennoprzecinkowe** lub **długie** **podwójne** . W programie C, **tanh** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **tanh** , które przyjmują i zwracają **`float`** **`long double`** wartości. W programie C, **tanh** zawsze przyjmuje i zwraca **`double`** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -82,7 +82,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C)|
 |-------------|---------------------|-|
-|**tanh**, **tanhf —**, **tanhl**|\<> Math. h|\<cmath> lub \<Math. h>|
+|**tanh**, **tanhf —**, **tanhl**|\<math.h>|\<cmath> lub \<math.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -114,7 +114,7 @@ tan( 0.785398 ) = 1.000000
 tanh( 1.000000 ) = 0.761594
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

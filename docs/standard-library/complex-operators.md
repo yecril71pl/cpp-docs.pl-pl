@@ -1,5 +1,5 @@
 ---
-title: '&lt;złożone operatory&gt;'
+title: '&lt;&gt;Operatory złożone'
 ms.date: 11/04/2016
 f1_keywords:
 - xcomplex/std::operator!=
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: e9ea296ab1b3440782871e3d4c7555ff2075e445
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 325e194e9cc5b597ae010477ecbe313be11b179a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416796"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222592"
 ---
-# <a name="ltcomplexgt-operators"></a>&lt;złożone operatory&gt;
+# <a name="ltcomplexgt-operators"></a>&lt;&gt;Operatory złożone
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 Testuje pod kątem nierówności między dwoma złożonymi liczbami, jedną lub obie, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.
 
@@ -47,15 +47,15 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Liczba złożona lub obiekt typu parametru, który ma być testowany pod kątem nierówności.
 
-*prawa*\
+*Kliknij*\
 Liczba złożona lub obiekt typu parametru, który ma być testowany pod kątem nierówności.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli liczby nie są równe; **wartość false** , jeśli liczba jest równa.
+**`true`** Jeśli liczby nie są równe; **`false`** Jeśli liczba jest równa.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -163,7 +163,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_star"></a>\* operatora
+## <a name="operator"></a><a name="op_star"></a>zakład\*
 
 Mnoży dwie liczby zespolone, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.
 
@@ -186,13 +186,13 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
-Pierwsze dwie liczby zespolone lub liczba, która jest typem parametru dla liczby zespolonej, która ma zostać pomnożona przez operację \*.
+*lewym*\
+Pierwsze dwie liczby zespolone lub liczba, która jest typem parametru dla liczby zespolonej, która ma zostać pomnożona przez \* operację.
 
-*prawa*\
-Druga z dwóch wartości zespolonych lub liczba będąca typem parametru dla liczby zespolonej, która ma zostać pomnożona przez operację \*.
+*Kliknij*\
+Druga z dwóch wartości zespolonych lub liczba będąca typem parametru dla liczby zespolonej, która ma zostać pomnożona przez \* operację.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba złożona, która wynika z mnożenia dwóch liczb, których wartość i typ są określone przez dane wejściowe parametru.
 
@@ -260,7 +260,7 @@ int main( )
 }
 ```
 
-## <a name="op_add"></a>operator +
+## <a name="operator"></a><a name="op_add"></a>operator +
 
 Dodaje dwie liczby zespolone, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.
 
@@ -286,13 +286,13 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Pierwsze dwie liczby zespolone lub liczba, która jest typem parametru dla liczby zespolonej, która ma zostać dodana przez operację +.
 
-*prawa*\
+*Kliknij*\
 Druga z dwóch wartości zespolonych lub liczba będąca typem parametru dla liczby zespolonej, która ma zostać dodana przez operację +.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba złożona, która wynika z dodania dwóch liczb, których wartość i typ są określone przez dane wejściowe parametru.
 
@@ -400,7 +400,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-"></a>zakład
+## <a name="operator-"></a><a name="operator-"></a>zakład
 
 Odejmuje dwie liczby zespolone, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.
 
@@ -426,13 +426,13 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Pierwsze dwie liczby zespolone lub liczba, która jest typem parametru dla liczby zespolonej, która ma zostać odjęta przez operację.
 
-*prawa*\
+*Kliknij*\
 Druga z dwóch wartości zespolonych lub liczba będąca typem parametru dla liczby zespolonej, która ma zostać odjęta przez operację.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba złożona, która wynika z odejmowania od *prawej* od *lewej*, dwóch liczb, których wartości są określone przez dane wejściowe parametru.
 
@@ -542,7 +542,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
 
-## <a name="op_div"></a>zakład
+## <a name="operator"></a><a name="op_div"></a>zakład
 
 Dzieli dwie liczby zespolone, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.
 
@@ -565,13 +565,13 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Liczba zespolona lub liczba, która jest typem parametru dla liczby zespolonej, która ma zostać podzielona przez mianownik z operacją/.
 
-*prawa*\
+*Kliknij*\
 Liczba złożona lub liczba, która jest typem parametru dla liczby zespolonej, która jest mianownik, który ma zostać użyty do podzielenia licznika z operacją/.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Liczba złożona, która wynika z dzielenia licznika przez mianownik, wartości, które są określone przez dane wejściowe parametru.
 
@@ -662,7 +662,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.
 ```
 
-## <a name="op_lt_lt"></a>&lt;operatora &lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>zakład&lt;&lt;
 
 Wstawia liczbę zespoloną określoną w strumieniu wyjściowym.
 
@@ -678,10 +678,10 @@ basic_ostream<Elem, Traits>& operator<<(
 *Ostr*\
 Strumień wyjściowy, w którym jest wprowadzany numer złożony.
 
-*prawa*\
+*Kliknij*\
 Liczba zespolona, która ma zostać wprowadzona do strumienia wyjściowego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zapisuje wartość określonej liczby zespolonej do *ostr* w formacie kartezjańskiego: ( *część rzeczywista, część urojona* ).
 
@@ -724,7 +724,7 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 Testuje równość między dwoma złożonymi liczbami, jedno lub oba, które mogą należeć do podzbioru typu dla części rzeczywistych i urojonych.
 
@@ -747,15 +747,15 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Liczba złożona lub obiekt typu parametru, który ma być testowany pod kątem nierówności.
 
-*prawa*\
+*Kliknij*\
 Liczba złożona lub obiekt typu parametru, który ma być testowany pod kątem nierówności.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli liczby są równe; **Fałsz** , jeśli liczby nie są równe.
+**`true`** Jeśli liczby są równe; **`false`** liczba nie równa się.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -863,7 +863,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_gt_gt"></a>&gt;operatora &gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>zakład&gt;&gt;
 
 Wyodrębnia wartość złożoną ze strumienia wejściowego.
 
@@ -879,10 +879,10 @@ basic_istream<Elem, Traits>& operator>>(
 *Istr*\
 Strumień wejściowy, z którego jest wyodrębniany numer złożony.
 
-*prawa*\
+*Kliknij*\
 Liczba złożona, która jest wyodrębniana ze strumienia wejściowego.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Odczytuje wartość określonej liczby zespolonej z *ISTR* i zwraca ją do *prawej*.
 

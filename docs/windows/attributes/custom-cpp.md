@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: f51b0210fff4db5be359fa94237f4d7c77b4fef2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 185517720af7e61f6a04068e8868d258a51f262f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214893"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215325"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -31,12 +31,12 @@ Definiuje metadane dla obiektu w bibliotece typów.
 *uuid*<br/>
 Unikatowy identyfikator.
 
-*value*<br/>
+*wartościami*<br/>
 Wartość, która może zostać wprowadzona do wariantu.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **niestandardowy** C++ spowoduje umieszczenie informacji w bibliotece typów. Wymagane jest narzędzie, które odczytuje wartość niestandardową z biblioteki typów.
+**Niestandardowy** atrybut C++ spowoduje umieszczenie informacji w bibliotece typów. Wymagane jest narzędzie, które odczytuje wartość niestandardową z biblioteki typów.
 
 Atrybut **niestandardowy** ma taką samą funkcjonalność jak [niestandardowy](/windows/win32/Midl/custom) atrybut MIDL.
 
@@ -46,18 +46,18 @@ Atrybut **niestandardowy** ma taką samą funkcjonalność jak [niestandardowy](
 
 |||
 |-|-|
-|**Dotyczy**|**Interfejs**inny niż com, **Klasa**, **Wyliczenie**s, metody `idl_module`, składowe interfejsu, parametry interfejsu, **typedef**s, **Union**s, **struct**s|
-|**Powtarzalne**|Yes|
+|**Dotyczy**|**Interfejs**niebędący modelem COM, **`class`** , **`enum`** s, `idl_module` metody, elementy członkowskie interfejsu, parametry interfejsu, **`typedef`** s, **`union`** s, **`struct`** s|
+|**Powtarzalne**|Tak|
 |**Wymagane atrybuty**|**Klasa coclass** (używana w klasie)|
-|**Nieprawidłowe atrybuty**|None|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty IDL](idl-attributes.md)<br/>
-[Oddzielne atrybuty](stand-alone-attributes.md)<br/>
-[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Atrybuty autonomiczne](stand-alone-attributes.md)<br/>
+[Atrybuty typedef, enum, Union i struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atrybuty parametru](parameter-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>

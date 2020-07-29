@@ -1,21 +1,21 @@
 ---
-title: db_param — (C++ atrybutów COM)
+title: db_param (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_param
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: a3cfcf3c7ce3313eaff9a3b35854e1e077fc906f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a32dcceae1e4e4fbc730101381eda84b5350ffd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148097"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215312"
 ---
-# <a name="dbparam"></a>db_param
+# <a name="db_param"></a>db_param
 
-Zmienna określonego elementu członkowskiego jest skojarzona z parametrów wejściowych lub wyjściowych, a rozgranicza zmiennej.
+Kojarzy określoną zmienną członkowską z parametrem wejściowym lub wyjściowym i ogranicza zmienną.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,48 +25,48 @@ Zmienna określonego elementu członkowskiego jest skojarzona z parametrów wej�
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba porządkowa*<br/>
-Numer kolumny (liczba porządkowa DBCOLUMNINFO) odpowiadający pole w zestawie wierszy, do którego należy powiązać dane.
+*liczbą*<br/>
+Numer kolumny (DBCOLUMNINFO) odpowiadający polu w zestawie wierszy, do którego mają być powiązane dane.
 
-*paramtype*<br/>
-(Opcjonalnie) Typ, który można ustawić dla parametru. Dostawcy obsługują tylko typy operacji We/Wy parametrów, które są obsługiwane przez bazowe źródło danych. Typ składa się z co najmniej jedną wartość DBPARAMIOENUM:
+*parametr ParamType*<br/>
+Obowiązkowe Typ do ustawienia dla parametru. Dostawcy obsługują tylko typy we/wy parametrów, które są obsługiwane przez bazowe źródło danych. Typ jest kombinacją co najmniej jednej wartości DBPARAMIOENUM:
 
 - DBPARAMIO_INPUT parametr wejściowy.
 
-- DBPARAMIO_OUTPUT parametru wyjściowego.
+- DBPARAMIO_OUTPUT parametr wyjściowy.
 
-- DBPARAMIO_NOTPARAM akcesor nie ma parametrów. Ustawienie `eParamIO` tej wartości w wierszu Akcesory przypomina o tym użytkownika, parametry są ignorowane.
+- DBPARAMIO_NOTPARAM akcesor nie ma parametrów. Ustawienie `eParamIO` tej wartości w funkcjach dostępu do wierszy przypomina użytkownika, że parametry są ignorowane.
 
-*dbtype*<br/>
-(Opcjonalnie) OLE DB [wskaźnika typu](/previous-versions/windows/desktop/ms711251(v=vs.85)) wpisu kolumny.
+*DbType*<br/>
+Obowiązkowe [Wskaźnik typu](/previous-versions/windows/desktop/ms711251(v=vs.85)) OLE DB dla wpisu kolumny.
 
-*precision*<br/>
-(Opcjonalnie) Dokładności, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bPrecision` elementu [DBBINDING struktury](/previous-versions/windows/desktop/ms716845(v=vs.85))
+*dokładne*<br/>
+Obowiązkowe Precyzja, która ma być używana dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz Opis `bPrecision` elementu [struktury DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*scale*<br/>
-(Opcjonalnie) Skala, który ma być używany dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz opis `bScale` elementu [DBBINDING struktury](/previous-versions/windows/desktop/ms716845(v=vs.85))
+*zasięgu*<br/>
+Obowiązkowe Skala, która ma być używana dla wpisu kolumny. Aby uzyskać szczegółowe informacje, zobacz Opis `bScale` elementu [struktury DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*status*<br/>
-(Opcjonalnie) Zmienną członkowską, używane do przechowywania stanu dla tej kolumny. Stan wskazuje, czy wartość kolumny jest wartość danych lub innej wartości, takie jak wartości NULL. Możliwe wartości, zobacz [stan](/previous-versions/windows/desktop/ms722617(v=vs.85)) w *OLE DB Podręcznik programisty*.
+*Stany*<br/>
+Obowiązkowe Zmienna członkowska używana do przechowywania stanu tej kolumny. Stan wskazuje, czy wartość kolumny jest wartością danych, czy inną wartością, taką jak NULL. Aby uzyskać możliwe wartości, zobacz [status](/previous-versions/windows/desktop/ms722617(v=vs.85)) w *dokumentacji programisty OLE DB*.
 
 *Długość*<br/>
-(Opcjonalnie) Zmienną członkowską, używane do przechowywania rozmiar kolumny w bajtach.
+Obowiązkowe Zmienna członkowska używana do przechowywania rozmiaru kolumny w bajtach.
 
 ## <a name="remarks"></a>Uwagi
 
-**db_param —** definiuje parametry użycia w poleceniach; w związku z tym możesz go użyć za pomocą `db_command`. Na przykład, można użyć **db_param —** by powiązać parametry zapytania SQL lub procedur składowanych. Parametry w procedurze składowanej są wskazywane przez znaki zapytania (?) i elementy członkowskie danych powinna być powiązana, w kolejności, w jakiej są wyświetlane parametry.
+**db_param** definiuje parametry używane w poleceniach; w związku z tym jest używany z `db_command` . Na przykład można użyć **db_param** , aby powiązać parametry w zapytaniach SQL lub procedurach składowanych. Parametry w procedurze składowanej są oznaczane znakami zapytania (?) i należy powiązać składowe danych w kolejności, w której wyświetlane są parametry.
 
-**db_param —** rozgranicza dane elementu członkowskiego, które mogą uczestniczyć w OLE DB `ICommandWithParameters`— na podstawie powiązania. Ustawia typ parametru (dane wejściowe lub wyjściowe), typ OLE DB, dokładności, skala, stan i długość określonego parametru. Ten atrybut wstawia makra konsumenta OLE DB BEGIN_PARAM_MAP... END_PARAM_MAP. Każdy element członkowski, oznacz za pomocą **db_param —** atrybut zajmie jednego wpisu na mapie w formie COLUMN_ENTRY.
+**db_param** ogranicza dane elementów członkowskich, które mogą uczestniczyć w `ICommandWithParameters` powiązaniu opartym na OLE DB. Ustawia typ parametru (dane wejściowe lub wyjściowe), typ OLE DB, precyzja, skalę, stan i długość dla określonego parametru. Ten atrybut wstawia OLE DB makra BEGIN_PARAM_MAP... END_PARAM_MAP. Każdy element członkowski, który jest oznaczony za pomocą atrybutu **db_param** , będzie zajmował jeden wpis w mapie w postaci COLUMN_ENTRY.
 
-**db_param —** jest używany w połączeniu z oboma [db_table —](db-table.md) lub [db_command —](db-command.md) atrybutów.
+**db_param** jest używany w połączeniu z atrybutami [DB_Table](db-table.md) lub [db_command](db-command.md) .
 
-Gdy dostawca atrybucie odbiorcy dotyczy ten atrybut do klasy, kompilator spowoduje zmianę nazwy klasy, która ma \_ *YourClassName*dostępu, których *YourClassName* jest nazwa nadana klasy i kompilator utworzy klasę o nazwie *YourClassName*, która jest pochodną \_ *YourClassName*metody dostępu.  W widoku klas pojawi się, obie klasy.
+Gdy dostawca atrybutu konsumenta zastosuje ten atrybut do klasy, kompilator zmieni nazwę klasy na \_ *YourClassName*, gdzie *YourClassName* jest nazwą, która została nadana klasie, a kompilator utworzy również klasę o nazwie *YourClassName*, która pochodzi z \_ metody dostępu *YourClassName*.  W Widok klasy są wyświetlane obie klasy.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład tworzy klasę polecenia, w zależności od procedury SalesbyYear przechowywane w bazie danych Northwind. Kojarzy pierwszy parametr w procedurze składowanej za pomocą `m_RETURN_VALUE` zmienną i definiuje ją jako parametr wyjściowy. Kojarzy ostatnie dwa parametry (wejścia) za pomocą `m_Beginning_Date` i `m_Ending_Date`.
+Poniższy przykład tworzy klasę poleceń na podstawie procedury składowanej SalesbyYear w bazie danych Northwind. Kojarzy pierwszy parametr w procedurze składowanej ze `m_RETURN_VALUE` zmienną i definiuje go jako parametr wyjściowy. Kojarzy ostatnie dwa (dane wejściowe) parametry z `m_Beginning_Date` i `m_Ending_Date` .
 
-W poniższym przykładzie `nOutput` zmiennej za pomocą parametru wyjściowego.
+Poniższy przykład kojarzy `nOutput` zmienną z parametrem wyjściowym.
 
 ```cpp
 // db_param.cpp
@@ -108,13 +108,13 @@ struct CSalesbyYear {
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **struktury**, elementu członkowskiego, metoda, lokalne|
+|**Dotyczy**|**`class`**, **`struct`** , członek, metoda, lokalna|
 |**Powtarzalne**|Nie|
-|**Wymaganych atrybutów**|Brak|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|Brak|
 
-Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](cpp-attributes-com-net.md#contexts).
+Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Atrybuty konsumentów OLE DB](ole-db-consumer-attributes.md)
+[OLE DB atrybuty konsumenta](ole-db-consumer-attributes.md)

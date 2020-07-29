@@ -1,5 +1,5 @@
 ---
-title: Default (C++ atrybut com)
+title: Default (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: b789f82f4b5a09b86d72dfde5d783665cf2e918a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dc0244897f73a5185451159aa0f4ec66dd9dae56
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167189"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215273"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -28,7 +28,7 @@ Wskazuje, że niestandardowe lub dispinterface zdefiniowane w ramach klasy cocla
 ### <a name="parameters"></a>Parametry
 
 *, interfejs1*<br/>
-Domyślny interfejs, który zostanie udostępniony dla środowisk skryptów, które tworzą obiekt na podstawie klasy zdefiniowanej przy użyciu atrybutu **domyślnego** .
+Domyślny interfejs, który zostanie udostępniony dla środowisk skryptów, które tworzą obiekt na podstawie klasy zdefiniowanej przy użyciu **`default`** atrybutu.
 
 Jeśli nie określono żadnego interfejsu domyślnego, domyślnie używane jest pierwsze wystąpienie interfejsu nieźródłowego.
 
@@ -39,11 +39,11 @@ Jeśli nie określono żadnego domyślnego interfejsu źródłowego, domyślnie 
 
 ## <a name="remarks"></a>Uwagi
 
-**Domyślny** C++ atrybut ma taką samą funkcjonalność jak [domyślny](/windows/win32/Midl/default) atrybut MIDL. **Domyślny** atrybut jest również używany z atrybutem [Case](case-cpp.md) .
+**`default`** Atrybut C++ ma taką samą funkcjonalność, jak [domyślny](/windows/win32/Midl/default) atrybut MIDL. Ten **`default`** atrybut jest również używany z atrybutem [Case](case-cpp.md) .
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod pokazuje, jak **domyślny** jest używany w definicji klasy coclass, aby określić `ICustomDispatch` jako domyślny interfejs programowalności:
+Poniższy kod pokazuje, w jaki sposób **`default`** jest używany w definicji klasy coclass, aby określić `ICustomDispatch` jako domyślny interfejs programowania:
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -91,7 +91,7 @@ int main() {
 }
 ```
 
-Atrybut [Source](source-cpp.md) zawiera również przykład sposobu użycia wartości **domyślnej**.
+Atrybut [Source](source-cpp.md) zawiera również przykład użycia **`default`** .
 
 ## <a name="requirements"></a>Wymagania
 
@@ -99,14 +99,14 @@ Atrybut [Source](source-cpp.md) zawiera również przykład sposobu użycia wart
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **Struktura**, składowa danych|
+|**Dotyczy**|**`class`**, **`struct`** , element członkowski danych|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|**coclass** (w przypadku zastosowania do **klasy** lub **struktury**)|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|**coclass** (w przypadku zastosowania do **`class`** lub **`struct`** )|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>

@@ -15,18 +15,18 @@ helpviewer_keywords:
 - OnClose method [MFC]
 - PostNcDestroy method [MFC]
 ms.assetid: 5affca77-1999-4507-a2b2-9aa226611b4b
-ms.openlocfilehash: 4bc7945ecd9aee9021ce97fa3ea05f512c58fe20
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 20eefa2be6d0e0df4585834bae5c37cd258610a7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621919"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214142"
 ---
 # <a name="destroying-frame-windows"></a>Niszczenie okien ramowych
 
 Struktura MFC zarządza zniszczeniem okna oraz tworzeniem tych okien skojarzonych z dokumentami i widokami struktury. W przypadku tworzenia dodatkowych okien użytkownik jest odpowiedzialny za ich zniszczenie.
 
-W strukturze, gdy użytkownik zamknie okno ramki, domyślna procedura obsługi [OnClose](reference/cwnd-class.md#onclose) okna wywołuje [DestroyWindow](reference/cwnd-class.md#destroywindow). Ostatnia funkcja członkowska wywoływana, gdy okno systemu Windows jest niszczone to [OnNcDestroy](reference/cwnd-class.md#onncdestroy), która wykonuje pewne oczyszczanie, wywołuje [domyślną](reference/cwnd-class.md#default) funkcję członkowską w celu przeprowadzenia oczyszczania systemu Windows i po raz ostatni wywołuje wirtualną funkcję członkowską [PostNcDestroy](reference/cwnd-class.md#postncdestroy). Implementacja [obiektu CFrameWnd](reference/cframewnd-class.md) `PostNcDestroy` usuwania obiektu okna języka C++. Nigdy nie należy używać operatora **delete** języka C++ w oknie ramki. Zamiast tego użyj polecenia cmdlet `DestroyWindow`.
+W strukturze, gdy użytkownik zamknie okno ramki, domyślna procedura obsługi [OnClose](reference/cwnd-class.md#onclose) okna wywołuje [DestroyWindow](reference/cwnd-class.md#destroywindow). Ostatnia funkcja członkowska wywoływana, gdy okno systemu Windows jest niszczone to [OnNcDestroy](reference/cwnd-class.md#onncdestroy), która wykonuje pewne oczyszczanie, wywołuje [domyślną](reference/cwnd-class.md#default) funkcję członkowską w celu przeprowadzenia oczyszczania systemu Windows i po raz ostatni wywołuje wirtualną funkcję członkowską [PostNcDestroy](reference/cwnd-class.md#postncdestroy). Implementacja [obiektu CFrameWnd](reference/cframewnd-class.md) `PostNcDestroy` usuwania obiektu okna języka C++. Nigdy nie należy używać operatora C++ **`delete`** w oknie ramek. Zamiast tego użyj polecenia cmdlet `DestroyWindow`.
 
 Gdy okno główne zostanie zamknięte, aplikacja zostanie zamknięta. W przypadku zmodyfikowania niezapisanych dokumentów w strukturze zostanie wyświetlone okno komunikatu z monitem o zapisanie dokumentów i zagwarantowanie, że odpowiednie dokumenty zostały zapisane w razie potrzeby.
 
@@ -34,6 +34,6 @@ Gdy okno główne zostanie zamknięte, aplikacja zostanie zamknięta. W przypadk
 
 - [Tworzenie okien ramowych dokumentu](creating-document-frame-windows.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Używanie okien ramowych](using-frame-windows.md)
+[Korzystanie z okien ramowych](using-frame-windows.md)

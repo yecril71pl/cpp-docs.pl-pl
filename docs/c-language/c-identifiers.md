@@ -9,12 +9,12 @@ helpviewer_keywords:
 - identifiers, case sensitivity
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
-ms.openlocfilehash: 1f3abf304e6fda52e2571d0bccb8d4db5a414dfe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d68eb690a19f57555d9d757a2f058692ea1a40c3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325666"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223749"
 ---
 # <a name="c-identifiers"></a>Identyfikatory języka C
 
@@ -34,7 +34,7 @@ int main()
 
 Po zadeklarowaniu można użyć identyfikatora w późniejszych instrukcjach programu, aby odwołać się do skojarzonej wartości.
 
-W `goto` instrukcjach można używać specjalnego rodzaju identyfikatora o nazwie etykieta instrukcji. (Deklaracje są opisane w [deklaracjach i typach](../c-language/declarations-and-types.md) etykiet instrukcji są opisane w [instrukcjach goto i labeled](../c-language/goto-and-labeled-statements-c.md).)
+W instrukcjach można używać specjalnego rodzaju identyfikatora o nazwie etykieta instrukcji **`goto`** . (Deklaracje są opisane w [deklaracjach i typach](../c-language/declarations-and-types.md) etykiet instrukcji są opisane w [instrukcjach goto i labeled](../c-language/goto-and-labeled-statements-c.md).)
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,7 +50,7 @@ W `goto` instrukcjach można używać specjalnego rodzaju identyfikatora o nazwi
 *cyfra*: jeden z<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
-Pierwszym znakiem nazwy identyfikatora musi być `nondigit` (to oznacza, że pierwszy znak musi być podkreśleniem lub wielką lub małą literą). ANSI dopuszcza sześć znaczących znaków w nazwie zewnętrznego identyfikatora i 31 dla nazw wewnętrznych (w ramach funkcji). Identyfikatory zewnętrzne (deklarowane w zakresie globalnym lub zadeklarowane za `extern`pomocą klasy magazynu) mogą podlegać dodatkowym ograniczeniom nazewnictwa, ponieważ te identyfikatory muszą być przetwarzane przez inne oprogramowanie, takie jak linki.
+Pierwszym znakiem nazwy identyfikatora musi być `nondigit` (to oznacza, że pierwszy znak musi być podkreśleniem lub wielką lub małą literą). ANSI dopuszcza sześć znaczących znaków w nazwie zewnętrznego identyfikatora i 31 dla nazw wewnętrznych (w ramach funkcji). Identyfikatory zewnętrzne (deklarowane w zakresie globalnym lub zadeklarowane za pomocą klasy magazynu **`extern`** ) mogą podlegać dodatkowym ograniczeniom nazewnictwa, ponieważ te identyfikatory muszą być przetwarzane przez inne oprogramowanie, takie jak linki.
 
 **Specyficzne dla firmy Microsoft**
 
@@ -96,6 +96,6 @@ W konsolidatorze firmy Microsoft jest rozróżniana wielkość liter. Wszystkie 
 
 Identyfikator ma wartość "Scope", czyli region programu, w którym jest znany i "powiązanie", które określa, czy ta sama nazwa w innym zakresie odwołuje się do tego samego identyfikatora. Te tematy zostały wyjaśnione w [okresie istnienia, zakresu, widoczności i powiązania](../c-language/lifetime-scope-visibility-and-linkage.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Elementy języka C](../c-language/elements-of-c.md)

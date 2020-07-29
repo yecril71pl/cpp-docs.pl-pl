@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3539
 ms.assetid: 34a33a0f-d1b6-498f-b312-ffad2d4799b3
-ms.openlocfilehash: 85381b237480b86b59c33f02601a1b9dc644a5a4
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 813da5a2fd79c191df731937e58100d749f8690c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761533"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223411"
 ---
 # <a name="compiler-error-c3539"></a>Błąd kompilatora C3539
 
 "Type": argument szablonu nie może być typem zawierającym wartość "Auto"
 
-Wskazany typ argumentu szablonu nie może zawierać użycia słowa kluczowego `auto`.
+Wskazany typ argumentu szablonu nie może zawierać użycia **`auto`** słowa kluczowego.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-1. Nie określaj argumentu szablonu za pomocą słowa kluczowego `auto`.
+1. Nie określaj argumentu szablonu ze **`auto`** słowem kluczowym.
 
 ## <a name="example"></a>Przykład
 
@@ -40,4 +40,4 @@ int main()
 
 ## <a name="see-also"></a>Zobacz także
 
-[Auto, słowo kluczowe](../../cpp/auto-keyword.md)
+[Słowo kluczowe "Autouzupełnianie"](../../cpp/auto-keyword.md)

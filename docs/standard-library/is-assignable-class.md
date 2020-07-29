@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_assignable
 ms.assetid: 53444287-c8be-4ad2-9487-a85c066a4f84
-ms.openlocfilehash: 33b0ce6112119c935ff70e5d619b284acc6ee8c2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2137f6bfb63e93da2c1367a21f608c113e80d196
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456667"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215728"
 ---
-# <a name="isassignable-class"></a>Klasa is_assignable
+# <a name="is_assignable-class"></a>Klasa is_assignable
 
-Testuje, `To` czy wartość `From` typu może być przypisana do typu.
+Testuje, czy wartość `From` typu może być przypisana do `To` typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,11 +34,11 @@ Typ obiektu, który zawiera wartość.
 
 ## <a name="remarks"></a>Uwagi
 
-Wyrażenie `declval<To>() = declval<From>()` nieoceniane musi być poprawnie sformułowane. Oba `From` i`To` muszą być pełnymi typami, **void**lub tablicami nieznanego powiązania.
+Wyrażenie nieoceniane `declval<To>() = declval<From>()` musi być poprawnie sformułowane. Oba `From` i `To` muszą być pełnymi typami **`void`** lub tablicami nieznanego powiązania.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 

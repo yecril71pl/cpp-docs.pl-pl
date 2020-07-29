@@ -1,17 +1,17 @@
 ---
-title: com_interface_entry (C++ atrybut com)
+title: com_interface_entry (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.com_interface_entry
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: d7b378baedd3f8c2720c7ab17698e8b416304061
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 06df146ea47428ee782da7a93c2da7097e110324
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168307"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215351"
 ---
 # <a name="com_interface_entry-c"></a>com_interface_entry (C++)
 
@@ -31,9 +31,9 @@ Ciąg zawierający rzeczywisty tekst wpisu. Listę możliwych wartości można z
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **COM_INTERFACE_ENTRY** C++ Wstawia zawartość nieskróconą ciągu znakowego do mapy interfejsu com obiektu docelowego. Jeśli atrybut jest stosowany raz do obiektu docelowego, wpis zostanie wstawiony na początku istniejącej mapy interfejsu. Jeśli atrybut jest stosowany wielokrotnie do tego samego obiektu docelowego, wpisy są wstawiane na początku mapy interfejsu w kolejności, w jakiej zostały odebrane.
+**Com_interface_entry** atrybut C++ Wstawia zawartość nieskróconą ciągu znakowego do mapy interfejsu com obiektu docelowego. Jeśli atrybut jest stosowany raz do obiektu docelowego, wpis zostanie wstawiony na początku istniejącej mapy interfejsu. Jeśli atrybut jest stosowany wielokrotnie do tego samego obiektu docelowego, wpisy są wstawiane na początku mapy interfejsu w kolejności, w jakiej zostały odebrane.
 
-Ten atrybut wymaga, aby atrybut [coclass](coclass.md), [ProgID](progid.md)lub [vi_progid](vi-progid.md) (lub inny atrybut, który implikuje jeden z tych) został również zastosowany do tego samego elementu. W przypadku użycia dowolnego pojedynczego atrybutu zostaną automatycznie zastosowane pozostałe dwa. Na przykład jeśli `progid` jest stosowany, `vi_progid` i `coclass` są również stosowane.
+Ten atrybut wymaga, aby atrybut [coclass](coclass.md), [ProgID](progid.md)lub [vi_progid](vi-progid.md) (lub inny atrybut, który implikuje jeden z tych) został również zastosowany do tego samego elementu. W przypadku użycia dowolnego pojedynczego atrybutu zostaną automatycznie zastosowane pozostałe dwa. Na przykład, jeśli `progid` jest stosowany, `vi_progid` i `coclass` są również stosowane.
 
 Ponieważ pierwsze użycie **COM_INTERFACE_ENTRY** powoduje, że nowy interfejs zostanie wstawiony na początku mapy interfejsu, musi być jednym z następujących typów COM_INTERFACE_ENTRY:
 
@@ -47,7 +47,7 @@ Ponieważ pierwsze użycie **COM_INTERFACE_ENTRY** powoduje, że nowy interfejs 
 
 Dodatkowe zastosowania atrybutu **COM_INTERFACE_ENTRY** mogą korzystać ze wszystkich obsługiwanych typów COM_INTERFACE_ENTRY.
 
-To ograniczenie jest konieczne, ponieważ ATL używa pierwszego wpisu w mapie interfejsu jako tożsamości `IUnknown`; w związku z tym wpis musi być prawidłowym interfejsem. Na przykład następujący przykładowy kod jest nieprawidłowy, ponieważ pierwszy wpis w mapie interfejsu nie określa rzeczywistego interfejsu COM.
+To ograniczenie jest konieczne, ponieważ ATL używa pierwszego wpisu w mapie interfejsu jako tożsamości; w `IUnknown` związku z tym wpis musi być prawidłowym interfejsem. Na przykład następujący przykładowy kod jest nieprawidłowy, ponieważ pierwszy wpis w mapie interfejsu nie określa rzeczywistego interfejsu COM.
 
 ```cpp
 [ coclass, com_interface_entry =
@@ -60,7 +60,7 @@ To ograniczenie jest konieczne, ponieważ ATL używa pierwszego wpisu w mapie in
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod dodaje dwa wpisy do istniejącej mapy interfejsu COM `CMyBaseClass`. Pierwszy jest standardowym interfejsem, a drugi ukrywa interfejs `IDebugTest`.
+Poniższy kod dodaje dwa wpisy do istniejącej mapy interfejsu COM `CMyBaseClass` . Pierwszy jest standardowym interfejsem, a drugi ukrywa `IDebugTest` interfejs.
 
 ```cpp
 // cpp_attr_ref_com_interface_entry.cpp
@@ -90,7 +90,7 @@ class CMyClass: public IMyClass, public IDebugTest
 };
 ```
 
-W wyniku mapowania obiektów COM dla `CMyBaseClass` jest następująca:
+W wyniku mapowania obiektów COM dla programu `CMyBaseClass` jest następująca:
 
 ```cpp
 BEGIN_COM_MAP(CMyClass)
@@ -109,15 +109,15 @@ END_COM_MAP()
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **Struktura**|
-|**Powtarzalne**|Yes|
-|**Wymagane atrybuty**|Co najmniej jeden z następujących elementów: `coclass`, `progid`lub `vi_progid`.|
-|**Nieprawidłowe atrybuty**|None|
+|**Dotyczy**|**`class`**, **`struct`**|
+|**Powtarzalne**|Tak|
+|**Wymagane atrybuty**|Co najmniej jeden z następujących elementów: `coclass` , `progid` , lub `vi_progid` .|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty COM](com-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
-[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)
+[Atrybuty typedef, enum, Union i struct](typedef-enum-union-and-struct-attributes.md)

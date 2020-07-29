@@ -9,16 +9,16 @@ helpviewer_keywords:
 - -constexpr control constexpr evaluation [C++]
 - constexpr control constexpr evaluation [C++]
 ms.assetid: 76d56784-f5ad-401d-841d-09d1059e8b8c
-ms.openlocfilehash: 4d3f33a64dcebfc40778f81354cb5067a5239ace
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 7b3ae1cd732fe1ec234e2734ea4c6fa86db9d5af
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825594"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223866"
 ---
 # <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (Szacowanie kontrolki constexpr)
 
-Użyj opcji kompilatora **/constexpr** , aby kontrolować parametry oceny **constexpr** w czasie kompilacji.
+Użyj opcji kompilatora **/constexpr** , aby kontrolować parametry **`constexpr`** oceny w czasie kompilacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,15 +28,15 @@ Użyj opcji kompilatora **/constexpr** , aby kontrolować parametry oceny **cons
 
 ## <a name="arguments"></a>Argumenty
 
-**głębokość**<em>n</em> ogranicza głębokość cyklicznego wywołania funkcji **constexpr** do *N* poziomów. Wartość domyślna to 512.
+**głębokość**<em>n</em> ogranicza głębokość **`constexpr`** wywołania funkcji cyklicznej do poziomu *n* poziomów. Wartość domyślna to 512.
 
-**wyniki śledzenia**<em>n</em> pokazują do *n* ocen **constexpr** w diagnostyce. Wartość domyślna to 10.
+**wyniki śledzenia**<em>n</em> pokazują do *n* **`constexpr`** ocen w diagnostyce. Wartość domyślna to 10.
 
-**kroki**<em>n</em> zakończenie oceny **constexpr** po *n* krokach. Wartość domyślna to 100 000.
+**kroki**<em>n</em> zakończenie **`constexpr`** oceny po *n* krokach. Wartość domyślna to 100 000.
 
 ## <a name="remarks"></a>Uwagi
 
-Opcje kompilatora **/constexpr** kontrolują ocenę czasu kompilowania wyrażeń **constexpr** . Kroki oceny, poziomy rekursji i głębokości śledzenia są kontrolowane, aby zapobiec wykorzystaniu przez kompilator zbyt dużo czasu na ocenie **constexpr** . Aby uzyskać więcej informacji o elemencie języka **constexpr** , zobacz [constexpr (C++)](../../cpp/constexpr-cpp.md).
+Opcje kompilatora **/constexpr** kontrolują ocenę czasu kompilowania **`constexpr`** wyrażeń. Kroki oceny, poziomy rekursji i głębokość śledzenia nieprześledzonych są kontrolowane, aby zapobiec wykorzystaniu przez kompilator zbyt dużej ilości czasu na **`constexpr`** ocenę. Aby uzyskać więcej informacji na temat **`constexpr`** elementu języka, zobacz [constexpr (C++)](../../cpp/constexpr-cpp.md).
 
 Opcje **/constexpr** są dostępne począwszy od programu Visual Studio 2015.
 

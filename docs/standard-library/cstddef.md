@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: 87d268977ee46112fedce517e66a9e68071863db
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f1582a4af1c26e1ef85cf0dce8406a4046a8fe8b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457574"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222527"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
-Zawiera nagłówek \<standardowej biblioteki C STDDEF. h > i dodaje skojarzone nazwy `std` do przestrzeni nazw. Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są `std` deklarowane w przestrzeni nazw.
+Zawiera nagłówek standardowej biblioteki C \<stddef.h> i dodaje skojarzone nazwy do `std` przestrzeni nazw. Dołączenie tego nagłówka zapewnia, że nazwy zadeklarowane za pomocą zewnętrznego powiązania w nagłówku standardowej biblioteki C są deklarowane w `std` przestrzeni nazw.
 
 > [!NOTE]
-> \<cstddef > obejmuje typ **Byte** i nie zawiera typu **wchar_t**.
+> \<cstddef>obejmuje typ **Byte** i nie zawiera typu **`wchar_t`** .
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,7 +52,7 @@ Zdefiniowany w implementacji typ liczby całkowitej bez znaku, który jest wysta
 Typ POD, którego wymaganie wyrównania jest co najmniej tak duże, jak każdy typ skalarny, i którego wymaganie wyrównania jest obsługiwane w każdym kontekście.
 
 *nullptr_t*\
-Synonim dla typu wyrażenia **nullptr** . Mimo że nie można pobrać adresu **nullptr** , można wykonać adres innego obiektu *nullptr_t* , który jest lvalue.
+Synonim dla typu **`nullptr`** wyrażenia. Chociaż **`nullptr`** nie można pobrać adresu, można wykonać adres innego *nullptr_t* obiektu, który jest lvalue.
 
 ## <a name="byte-class"></a>Byte — Klasa
 
@@ -80,5 +80,5 @@ template <class IntType>
 ## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[C++Omówienie biblioteki standardowej](../standard-library/cpp-standard-library-overview.md)\
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Omówienie standardowej biblioteki języka C++](../standard-library/cpp-standard-library-overview.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

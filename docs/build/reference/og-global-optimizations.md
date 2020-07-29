@@ -14,12 +14,12 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: c1cab53ccb391bd7d6ca7660e2750f53aa7c72e4
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: 7dde5e97bd8690dc491916de8fb279e80a2c9ed4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180854"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215208"
 ---
 # <a name="og-global-optimizations"></a>`/Og`(Optymalizacje globalne)
 
@@ -49,7 +49,7 @@ Następujące optymalizacje są dostępne w obszarze **`/Og`** :
 
 - Automatyczne przydzielanie rejestru
 
-   Ta optymalizacja umożliwia kompilatorowi przechowywanie często używanych zmiennych i podwyrażeń w rejestrach. `register`słowo kluczowe jest ignorowane.
+   Ta optymalizacja umożliwia kompilatorowi przechowywanie często używanych zmiennych i podwyrażeń w rejestrach. **`register`** słowo kluczowe jest ignorowane.
 
 - Optymalizacja pętli
 
@@ -91,6 +91,6 @@ Aby uzyskać powiązane informacje, zobacz [ `/Oi` (generowanie funkcji wewnętr
 
 - Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

@@ -72,16 +72,16 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: 83171e012db7ef2cce459d35cfc689746afd062c
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 2c2c97090fc8255c06e1678a377fe2dcc968ffd2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749023"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214116"
 ---
 # <a name="colecontrolcontainer-class"></a>Klasa COleControlContainer
 
-Działa jako kontener formantu activex.
+Działa jako kontener formantów dla kontrolek ActiveX.
 
 ## <a name="syntax"></a>Składnia
 
@@ -101,65 +101,65 @@ class COleControlContainer : public CCmdTarget
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleControlContainer::AttachControlSite](#attachcontrolsite)|Tworzy witrynę formantu, hostowane przez kontener.|
-|[COleControlContainer::BroadcastAmbientPropertyChange](#broadcastambientpropertychange)|Informuje wszystkie hostowane formanty, że właściwość otoczenia została zmieniona.|
-|[COleControlContainer::CheckDlgButton](#checkdlgbutton)|Modyfikuje określony przycisk.|
-|[COleControlContainer::CheckRadioButton](#checkradiobutton)|Wybiera określony przycisk opcji grupy.|
-|[COleControlContainer::CreateControl](#createcontrol)|Tworzy hostowany formant ActiveX.|
+|[COleControlContainer::AttachControlSite](#attachcontrolsite)|Tworzy lokację kontrolną hostowaną przez kontener.|
+|[COleControlContainer::BroadcastAmbientPropertyChange](#broadcastambientpropertychange)|Informuje wszystkie formanty hostowane, że Właściwość otoczenia została zmieniona.|
+|[COleControlContainer::CheckDlgButton](#checkdlgbutton)|Modyfikuje określoną kontrolkę Button.|
+|[COleControlContainer::CheckRadioButton](#checkradiobutton)|Wybiera określony przycisk radiowy grupy.|
+|[COleControlContainer:: IsControl](#createcontrol)|Tworzy hostowaną kontrolkę ActiveX.|
 |[COleControlContainer::CreateOleFont](#createolefont)|Tworzy czcionkę OLE.|
-|[COleControlContainer::FindItem](#finditem)|Zwraca niestandardową lokację określonego formantu.|
-|[COleControlContainer::FreezeAllEvents](#freezeallevents)|Określa, czy witryna kontrolna akceptuje zdarzenia.|
+|[COleControlContainer::FindItem](#finditem)|Zwraca niestandardową lokację określonej kontrolki.|
+|[COleControlContainer::FreezeAllEvents](#freezeallevents)|Określa, czy lokacja kontrolki akceptuje zdarzenia.|
 |[COleControlContainer::GetAmbientProp](#getambientprop)|Pobiera określoną właściwość otoczenia.|
-|[COleControlContainer::GetDlgItem](#getdlgitem)|Pobiera określony formant okna dialogowego.|
-|[COleControlContainer::GetDlgItemInt](#getdlgitemint)|Pobiera wartość określonego formantu okna dialogowego.|
-|[COleControlContainer::GetDlgItemText](#getdlgitemtext)|Pobiera podpis określonego formantu okna dialogowego.|
-|[COleControlContainer::HandleSetFocus](#handlesetfocus)|Określa, czy kontener obsługuje WM_SETFOCUS wiadomości.|
-|[COleControlContainer::HandleWindowlessMessage](#handlewindowlessmessage)|Obsługuje wiadomości wysyłane do formantu bez okien.|
-|[COleControlContainer::IsDlgButtonSprawdziony](#isdlgbuttonchecked)|Określa stan określonego przycisku.|
-|[COleControlContainer::OnPaint](#onpaint)|Wywołany, aby przemalować część kontenera.|
+|[COleControlContainer::GetDlgItem](#getdlgitem)|Pobiera określoną kontrolkę okna dialogowego.|
+|[COleControlContainer::GetDlgItemInt](#getdlgitemint)|Pobiera wartość określonej kontrolki okna dialogowego.|
+|[COleControlContainer::GetDlgItemText](#getdlgitemtext)|Pobiera podpis określonej kontrolki okna dialogowego.|
+|[COleControlContainer::HandleSetFocus](#handlesetfocus)|Określa, czy kontener obsługuje wiadomości WM_SETFOCUS.|
+|[COleControlContainer::HandleWindowlessMessage](#handlewindowlessmessage)|Obsługuje komunikaty wysyłane do kontrolki bez okna.|
+|[COleControlContainer::IsDlgButtonChecked](#isdlgbuttonchecked)|Określa stan określonego przycisku.|
+|[COleControlContainer:: OnPaint](#onpaint)|Wywoływana w celu odświeżenia części kontenera.|
 |[COleControlContainer::OnUIActivate](#onuiactivate)|Wywoływana, gdy formant ma być aktywowany w miejscu.|
-|[COleControlContainer::OnUIDeaktywacji](#onuideactivate)|Wywoływana, gdy formant ma zostać dezaktywowany.|
-|[COleControlContainer::ScrollChildren](#scrollchildren)|Wywoływane przez strukturę, gdy wiadomości przewijania są odbierane z okna podrzędnego.|
-|[COleControlContainer::SendDlgItemMessage](#senddlgitemmessage)|Wysyła wiadomość do określonego formantu.|
-|[COleControlContainer::SetDlgItemInt](#setdlgitemint)|Ustawia wartość określonego formantu.|
+|[COleControlContainer::OnUIDeactivate](#onuideactivate)|Wywoływana, gdy formant zostanie zdezaktywowany.|
+|[COleControlContainer::ScrollChildren](#scrollchildren)|Wywoływane przez platformę, gdy komunikaty przewijania są odbierane z okna podrzędnego.|
+|[COleControlContainer::SendDlgItemMessage](#senddlgitemmessage)|Wysyła komunikat do określonej kontrolki.|
+|[COleControlContainer::SetDlgItemInt](#setdlgitemint)|Ustawia wartość określonej kontrolki.|
 |[COleControlContainer::SetDlgItemText](#setdlgitemtext)|Ustawia tekst określonego formantu.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[COleControlContainer::m_crBack](#m_crback)|Kolor tła kontenera.|
-|[COleControlContainer::m_crFore](#m_crfore)|Kolor pierwszego planu kontenera.|
-|[COleControlContainer::m_listSitesOrWnds](#m_listsitesorwnds)|Lista obsługiwanych witryn kontrolnych.|
-|[COleControlContainer::m_nWindowlessControls](#m_nwindowlesscontrols)|Liczba hostowanych formantów bez okien.|
-|[COleControlContainer::m_pOleFont](#m_polefont)|Wskaźnik do czcionki OLE w witrynie formantu niestandardowego.|
-|[COleControlContainer::m_pSiteCapture](#m_psitecapture)|Wskaźnik do witryny kontroli przechwytywania.|
-|[COleControlContainer::m_pSiteFocus](#m_psitefocus)|Wskaźnik do formantu, który obecnie ma fokus wejściowy.|
-|[COleControlContainer::m_pSiteUIActive](#m_psiteuiactive)|Wskaźnik do formantu, który jest obecnie w miejscu aktywowane.|
-|[COleControlContainer::m_pWnd](#m_pwnd)|Wskaźnik do okna implementując kontener formantu.|
-|[COleControlContainer::m_siteMap](#m_sitemap)|Mapa witryny.|
+|[COleControlContainer:: m_crBack](#m_crback)|Kolor tła kontenera.|
+|[COleControlContainer:: m_crFore](#m_crfore)|Kolor pierwszego planu kontenera.|
+|[COleControlContainer:: m_listSitesOrWnds](#m_listsitesorwnds)|Lista obsługiwanych lokacji sterowania.|
+|[COleControlContainer:: m_nWindowlessControls](#m_nwindowlesscontrols)|Liczba obsługiwanych kontrolek bez okien.|
+|[COleControlContainer:: m_pOleFont](#m_polefont)|Wskaźnik do czcionki OLE niestandardowej strony kontrolki.|
+|[COleControlContainer:: m_pSiteCapture](#m_psitecapture)|Wskaźnik do witryny sterowania przechwytywaniem.|
+|[COleControlContainer:: m_pSiteFocus](#m_psitefocus)|Wskaźnik do kontrolki, która aktualnie ma fokus wprowadzania.|
+|[COleControlContainer:: m_pSiteUIActive](#m_psiteuiactive)|Wskaźnik do formantu, który jest aktualnie aktywowany w miejscu.|
+|[COleControlContainer:: m_pWnd](#m_pwnd)|Wskaźnik do okna implementującego kontener sterowania.|
+|[COleControlContainer:: m_siteMap](#m_sitemap)|Mapa witryny.|
 
 ## <a name="remarks"></a>Uwagi
 
-Odbywa się to poprzez zapewnienie wsparcia dla jednej lub `COleControlSite`więcej witryn kontrolnych ActiveX (zaimplementowanych przez ). `COleControlContainer`w pełni implementuje interfejsy [IOleInPlaceFrame](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceframe) i [IOleContainer,](/windows/win32/api/oleidl/nn-oleidl-iolecontainer) umożliwiając zawartym formantom ActiveX spełnienie ich kwalifikacji jako elementów w miejscu.
+W tym celu należy zapewnić obsługę co najmniej jednej witryny kontrolki ActiveX (zaimplementowane przez `COleControlSite` ). `COleControlContainer`w pełni implementuje interfejsy [IOleInPlaceFrame](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceframe) i [IOleContainer](/windows/win32/api/oleidl/nn-oleidl-iolecontainer) , dzięki czemu zawarte kontrolki ActiveX mogą spełnić swoje kwalifikacje jako elementy w miejscu.
 
-Zazwyczaj ta klasa jest używana `COccManager` w `COleControlSite` połączeniu z i do zaimplementowania niestandardowego kontenera formantu ActiveX, z witryn niestandardowych dla jednego lub więcej formantów ActiveX.
+Często ta klasa jest używana w połączeniu z `COccManager` i `COleControlSite` do implementowania niestandardowego kontenera kontrolek ActiveX z lokacjami niestandardowymi dla co najmniej jednej kontrolki ActiveX.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
 `COleControlContainer`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxocc.h
+**Nagłówek:** afxocc. h
 
 ## <a name="colecontrolcontainerattachcontrolsite"></a><a name="attachcontrolsite"></a>COleControlContainer::AttachControlSite
 
-Wywoływana przez strukturę do tworzenia i dołączania witryny kontrolnej.
+Wywoływane przez platformę, aby utworzyć i dołączyć lokację kontroli.
 
 ```
 virtual void AttachControlSite(
@@ -173,22 +173,22 @@ void AttachControlSite(
 
 ### <a name="parameters"></a>Parametry
 
-*Pwnd*<br/>
+*pWnd*<br/>
 Wskaźnik do `CWnd` obiektu.
 
-*nIDC (nIDC)*<br/>
-Identyfikator formantu, który ma być dołączony.
+*nIDC*<br/>
+Identyfikator kontrolki, która ma zostać dołączona.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąd w tej funkcji należy zastądić, jeśli chcesz dostosować ten proces.
+Zastąp tę funkcję, jeśli chcesz dostosować ten proces.
 
 > [!NOTE]
-> Użyj pierwszej formy tej funkcji, jeśli statycznie łączysz się z biblioteką MFC. Użyj drugiego formularza, jeśli dynamicznie łączysz się z biblioteką MFC.
+> Użyj pierwszej formy tej funkcji, jeśli łączysz się statycznie z biblioteką MFC. Jeśli łączysz się dynamicznie z biblioteką MFC, użyj drugiej formy.
 
 ## <a name="colecontrolcontainerbroadcastambientpropertychange"></a><a name="broadcastambientpropertychange"></a>COleControlContainer::BroadcastAmbientPropertyChange
 
-Informuje wszystkie hostowane formanty, że właściwość otoczenia została zmieniona.
+Informuje wszystkie formanty hostowane, że Właściwość otoczenia została zmieniona.
 
 ```
 virtual void BroadcastAmbientPropertyChange(DISPID dispid);
@@ -196,12 +196,12 @@ virtual void BroadcastAmbientPropertyChange(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*Dispid*<br/>
-Identyfikator wysyłki właściwości otoczenia, która jest zmieniana.
+*DISPID*<br/>
+Identyfikator wysyłania właściwości otoczenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja jest wywoływana przez platformę, gdy właściwość otoczenia została zmieniona wartość. Zastąd w tej funkcji należy dostosować tę funkcję.
+Ta funkcja jest wywoływana przez platformę, gdy właściwość otoczenia zmieniła wartość. Zastąp tę funkcję, aby dostosować to zachowanie.
 
 ## <a name="colecontrolcontainercheckdlgbutton"></a><a name="checkdlgbutton"></a>COleControlContainer::CheckDlgButton
 
@@ -215,21 +215,21 @@ virtual void CheckDlgButton(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDButton (przycisk NID)*<br/>
+*nIDButton*<br/>
 Identyfikator przycisku, który ma zostać zmodyfikowany.
 
-*nSprawda*<br/>
+*nSprawdź*<br/>
 Określa stan przycisku. Może być jedną z następujących czynności:
 
-- BST_CHECKED Ustawia stan przycisku do sprawdzenia.
+- BST_CHECKED ustawia stan przycisku na zaznaczone.
 
-- BST_INDETERMINATE Ustawia stan przycisku na wyszarzony, wskazując stan nieokreślony. Tej wartości należy używać tylko wtedy, gdy przycisk ma styl BS_3STATE lub BS_AUTO3STATE.
+- BST_INDETERMINATE ustawia stan przycisku na szary, wskazując nieokreślony stan. Użyj tej wartości tylko wtedy, gdy przycisk ma styl BS_3STATE lub BS_AUTO3STATE.
 
-- BST_UNCHECKED Ustawia stan przycisku na wyczyszczone.
+- BST_UNCHECKED ustawia stan przycisku na wyczyszczony.
 
 ## <a name="colecontrolcontainercheckradiobutton"></a><a name="checkradiobutton"></a>COleControlContainer::CheckRadioButton
 
-Wybiera określony przycisk opcji w grupie i czyści pozostałe przyciski w grupie.
+Wybiera określony przycisk radiowy w grupie i czyści pozostałe przyciski w grupie.
 
 ```
 virtual void CheckRadioButton(
@@ -243,11 +243,11 @@ virtual void CheckRadioButton(
 *nIDFirstButton*<br/>
 Określa identyfikator pierwszego przycisku radiowego w grupie.
 
-*nIDLastButton (Przycisk nIDLastButton)*<br/>
+*nIDLastButton*<br/>
 Określa identyfikator ostatniego przycisku radiowego w grupie.
 
-*nIDCheckButton (Przycisk kontroli nIDCheck)*<br/>
-Określa identyfikator zaznaczonego przycisku opcji.
+*nIDCheckButton*<br/>
+Określa identyfikator przycisku radiowego, który ma zostać sprawdzony.
 
 ## <a name="colecontrolcontainercolecontrolcontainer"></a><a name="colecontrolcontainer"></a>COleControlContainer::COleControlContainer
 
@@ -259,16 +259,16 @@ explicit COleControlContainer(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*Pwnd*<br/>
-Wskaźnik do okna nadrzędnego kontenera formantu.
+*pWnd*<br/>
+Wskaźnik do okna nadrzędnego kontenera kontrolek.
 
 ### <a name="remarks"></a>Uwagi
 
-Po pomyślnym utworzeniu obiektu dodaj niestandardową witrynę `AttachControlSite`kontrolną z wywołaniem .
+Po pomyślnym utworzeniu obiektu Dodaj niestandardową lokację kontrolną z wywołaniem do `AttachControlSite` .
 
-## <a name="colecontrolcontainercreatecontrol"></a><a name="createcontrol"></a>COleControlContainer::CreateControl
+## <a name="colecontrolcontainercreatecontrol"></a><a name="createcontrol"></a>COleControlContainer:: IsControl
 
-Tworzy formant ActiveX, obsługiwany `COleControlSite` przez określony obiekt.
+Tworzy kontrolkę ActiveX hostowaną przez określony `COleControlSite` obiekt.
 
 ```
 BOOL CreateControl(
@@ -299,61 +299,61 @@ BOOL CreateControl(
 
 ### <a name="parameters"></a>Parametry
 
-*pWndCtrl (właśc.*<br/>
+*pWndCtrl*<br/>
 Wskaźnik do obiektu okna reprezentującego formant.
 
-*Clsid*<br/>
+*Identyfikator*<br/>
 Unikatowy identyfikator klasy formantu.
 
 *lpszWindowName*<br/>
-Wskaźnik do tekstu, który ma być wyświetlany w formancie. Ustawia wartość formantu Caption lub Text właściwości (jeśli istnieje). Jeśli NULL, podpis formantu lub text właściwość nie zostanie zmieniona.
+Wskaźnik do tekstu, który ma być wyświetlany w kontrolce. Ustawia wartość napisu lub właściwości text kontrolki (jeśli istnieje). Jeśli wartość jest równa NULL, podpis lub właściwość tekstu kontrolki nie zostanie zmieniona.
 
-*Dwstyle*<br/>
-Style systemu Windows. Dostępne style są wymienione w sekcji **Uwagi.**
+*dwStyle*<br/>
+Style systemu Windows. Dostępne style są wymienione w sekcji **uwagi** .
 
-*Rect*<br/>
-Określa rozmiar i położenie formantu. Może to być `CRect` obiekt lub `RECT` struktura.
+*cinania*<br/>
+Określa rozmiar i położenie kontrolki. Może to być `CRect` obiekt lub `RECT` Struktura.
 
-*Nid*<br/>
-Określa identyfikator okna podrzędnego formantu.
+*nID*<br/>
+Określa identyfikator okna podrzędnego kontrolki.
 
 *pPersist*<br/>
-Wskaźnik do `CFile` zawierającego stan trwały dla formantu. Wartością domyślną jest NULL, co oznacza, że formant inicjuje się bez przywracania jego stanu z dowolnego magazynu trwałego. Jeśli nie NULL, powinien być `CFile`wskaźnikiem do obiektu pochodnego, który zawiera trwałe dane formantu, w postaci strumienia lub magazynu. Te dane mogły zostać zapisane podczas poprzedniej aktywacji klienta. Może `CFile` zawierać inne dane, ale musi mieć ustawiony wskaźnik odczytu i zapisu na pierwszy `CreateControl`bajt danych trwałych w czasie wywołania .
+Wskaźnik do elementu `CFile` zawierającego trwały stan dla kontrolki. Wartość domyślna to NULL, co oznacza, że kontrolka inicjuje się sama bez przywracania stanu z dowolnego trwałego magazynu. Jeśli wartość nie jest równa NULL, powinna to być wskaźnik do `CFile` obiektu pochodnego, który zawiera trwałe dane kontrolki w postaci strumienia lub magazynu. Te dane mogły zostać zapisane w poprzedniej aktywacji klienta. `CFile`Może zawierać inne dane, ale musi mieć ustawiony wskaźnik odczytu i zapisu na pierwszy bajt trwałych danych w czasie wywołania do `CreateControl` .
 
-*bSporównania*<br/>
-Wskazuje, czy dane w *pPersist* powinny `IStorage` `IStream` być interpretowane jako lub danych. Jeśli dane w *pPersist* jest magazyn, *bSprzeczynienie* powinno być prawda. Jeśli dane w *pPersist* jest strumień, *bSprzeczynienie* powinno być FALSE. Wartością domyślną jest FAŁSZ.
+*bStorage*<br/>
+Wskazuje, czy dane w *pPersist* powinny być interpretowane jako `IStorage` czy `IStream` dane. Jeśli dane w *pPersist* są magazynem, *bStorage* powinna mieć wartość true. Jeśli dane w *pPersist* jest strumieniem, *bStorage* powinna mieć wartość false. Wartość domyślna to FALSE.
 
-*klawisz bstrLicKey*<br/>
-Opcjonalne dane klucza licencyjnego. Te dane są potrzebne tylko do tworzenia formantów, które wymagają klucza licencji w czasie wykonywania. Jeśli formant obsługuje licencjonowanie, należy podać klucz licencji do tworzenia formantu, aby zakończyć się pomyślnie. Wartością domyślną jest NULL.
+*bstrLicKey*<br/>
+Opcjonalne dane klucza licencji. Te dane są potrzebne tylko do tworzenia formantów, które wymagają klucza licencji w czasie wykonywania. Jeśli formant obsługuje Licencjonowanie, należy podać klucz licencji, aby można było utworzyć formant. Wartość domyślna to NULL.
 
-*ppNewWitła*<br/>
-Wskaźnik do istniejącej lokacji kontrolnej, która będzie obsługiwać formant tworzony. Wartością domyślną jest NULL, co oznacza, że nowa lokacja formantu zostanie automatycznie utworzona i dołączona do nowego formantu.
+*ppNewSite*<br/>
+Wskaźnik do istniejącej lokacji kontrolki, która będzie hostować utworzoną kontrolkę. Wartość domyślna to NULL, co oznacza, że nowa witryna kontrolna zostanie automatycznie utworzona i dołączona do nowej kontrolki.
 
-*Ppt*<br/>
-Wskaźnik do `POINT` struktury, która zawiera lewy górny róg formantu. Wielkość formantu zależy od wartości *psize*. Wartości *ppt* i *psize* są opcjonalną metodą określania rozmiaru i położenia formantu.
+*formacie*<br/>
+Wskaźnik do `POINT` struktury zawierającej lewy górny róg kontrolki. Rozmiar kontrolki jest określany na podstawie wartości *psize*. Wartości *PPT* i *psize* są opcjonalną metodą określania rozmiaru i położenia kontrolki.
 
-*psize (psize)*<br/>
-Wskaźnik do `SIZE` struktury, która zawiera rozmiar formantu. Lewy górny róg jest określany przez wartość *ppt*. Wartości *ppt* i *psize* są opcjonalną metodą określania rozmiaru i położenia formantu.
+*psize*<br/>
+Wskaźnik do `SIZE` struktury zawierającej rozmiar kontrolki. Lewy górny róg jest określany przez wartość *PPT*. Wartości *PPT* i *psize* są opcjonalną metodą określania rozmiaru i położenia kontrolki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Tylko podzbiór flag systemu Windows *dwStyle* są obsługiwane przez: `CreateControl`
+Tylko podzbiór flag *DwStyle* systemu Windows jest obsługiwany przez `CreateControl` :
 
-- WS_VISIBLE Tworzy okno, które jest początkowo widoczne. Wymagane, jeśli chcesz, aby formant był widoczny natychmiast, jak zwykłe okna.
+- WS_VISIBLE tworzy okno, które jest początkowo widoczne. Wymagane, jeśli formant ma być widoczny natychmiast, na przykład w zwykłych oknach.
 
-- WS_DISABLED Tworzy okno, które jest początkowo wyłączone. Wyłączone okno nie może odbierać danych wejściowych od użytkownika. Można ustawić, jeśli formant ma Enabled właściwości.
+- WS_DISABLED tworzy okno, które jest początkowo wyłączone. Wyłączone okno nie może odebrać danych wejściowych od użytkownika. Można ustawić, Jeśli kontrolka ma właściwość Enabled.
 
-- WS_BORDER Tworzy okno z cienką linią obramowania. Można ustawić, jeśli formant ma BorderStyle właściwości.
+- WS_BORDER tworzy okno z obramowaniem cienkim. Można ustawić, Jeśli kontrolka ma właściwość BorderStyle.
 
-- WS_GROUP Określa pierwszą kontrolę grupy formantów. Użytkownik może zmienić fokus klawiatury z jednego formantu w grupie do następnego za pomocą klawiszy kierunku. Wszystkie formanty zdefiniowane za pomocą stylu WS_GROUP po pierwszym formancie należą do tej samej grupy. Następny formant ze stylem WS_GROUP kończy grupę i rozpoczyna następną grupę.
+- WS_GROUP Określa pierwszą kontrolkę grupy kontrolek. Użytkownik może zmienić fokus klawiatury z jednej kontrolki w grupie na następny przy użyciu klawiszy kierunkowych. Wszystkie kontrolki zdefiniowane przy użyciu stylu WS_GROUP po pierwszej kontrolce należy do tej samej grupy. Następna kontrolka o WS_GROUP stylu zamyka grupę i rozpoczyna następną grupę.
 
-- WS_TABSTOP Określa formant, który może odbierać fokus klawiatury, gdy użytkownik naciśnie klawisz TAB. Naciśnięcie klawisza TAB powoduje zmianę fokusu klawiatury na następną kontrolkę stylu WS_TABSTOP.
+- WS_TABSTOP określa kontrolkę, która może odbierać fokus klawiatury, gdy użytkownik naciśnie klawisz TAB. Naciśnięcie klawisza TAB powoduje zmianę fokusu klawiatury na następną kontrolkę stylu WS_TABSTOP.
 
-Użyj drugiego przeciążenia, aby utworzyć domyślne formanty o rozmiarze.
+Użyj drugiego przeciążenia, aby utworzyć kontrolki o rozmiarze domyślnym.
 
 ## <a name="colecontrolcontainercreateolefont"></a><a name="createolefont"></a>COleControlContainer::CreateOleFont
 
@@ -365,12 +365,12 @@ void CreateOleFont(CFont* pFont);
 
 ### <a name="parameters"></a>Parametry
 
-*pFont (pFont)*<br/>
-Wskaźnik do czcionki, która ma być używana przez kontener formantu.
+*pFont*<br/>
+Wskaźnik do czcionki, która ma być używana przez kontener sterowania.
 
 ## <a name="colecontrolcontainerfinditem"></a><a name="finditem"></a>COleControlContainer::FindItem
 
-Znajduje witrynę niestandardową, która obsługuje określony element.
+Znajduje lokację niestandardową, która hostuje określony element.
 
 ```
 virtual COleControlSite* FindItem(UINT nID) const;
@@ -378,16 +378,16 @@ virtual COleControlSite* FindItem(UINT nID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Nid*<br/>
-Identyfikator elementu, który należy znaleźć.
+*nID*<br/>
+Identyfikator elementu, który ma zostać znaleziony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do witryny niestandardowej określonego elementu.
+Wskaźnik do niestandardowej witryny określonego elementu.
 
 ## <a name="colecontrolcontainerfreezeallevents"></a><a name="freezeallevents"></a>COleControlContainer::FreezeAllEvents
 
-Określa, czy kontener będzie ignorować zdarzenia z dołączonych witryn kontrolnych lub je zaakceptować.
+Określa, czy kontener będzie ignorować zdarzenia z dołączonych lokacji sterowania, czy je zaakceptować.
 
 ```cpp
 void FreezeAllEvents(BOOL bFreeze);
@@ -395,13 +395,13 @@ void FreezeAllEvents(BOOL bFreeze);
 
 ### <a name="parameters"></a>Parametry
 
-*bZamk.*<br/>
-Nonzero, jeśli zdarzenia będą przetwarzane; w przeciwnym razie 0.
+*bFreeze*<br/>
+Niezerowe, jeśli zdarzenia zostaną przetworzone; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
 > [!NOTE]
-> Formant nie jest wymagane, aby zatrzymać zdarzenia wypalania, jeśli jest to wymagane przez kontener kontrolny. Może kontynuować wypalanie, ale wszystkie kolejne zdarzenia zostaną zignorowane przez kontener kontrolny.
+> Kontrolka nie jest wymagana, aby zatrzymać Wyzwalanie zdarzeń, jeśli są żądane przez kontener sterowania. Może kontynuować proces uruchamiania, ale wszystkie kolejne zdarzenia zostaną zignorowane przez kontener sterowania.
 
 ## <a name="colecontrolcontainergetambientprop"></a><a name="getambientprop"></a>COleControlContainer::GetAmbientProp
 
@@ -416,22 +416,22 @@ virtual BOOL GetAmbientProp(
 
 ### <a name="parameters"></a>Parametry
 
-*pWitła*<br/>
-Wskaźnik do witryny kontrolnej, z której zostanie pobrana właściwość otoczenia.
+*pSite*<br/>
+Wskaźnik do lokacji kontrolki, z której zostanie pobrana Właściwość otoczenia.
 
-*Dispid*<br/>
-Identyfikator wysyłki żądanej właściwości otoczenia.
+*DISPID*<br/>
+Identyfikator wysyłki odpowiedniej właściwości otoczenia.
 
-*pVarResult (Niesienie wyników)*<br/>
+*pVarResult*<br/>
 Wskaźnik do wartości właściwości otoczenia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ## <a name="colecontrolcontainergetdlgitem"></a><a name="getdlgitem"></a>COleControlContainer::GetDlgItem
 
-Pobiera wskaźnik do określonego formantu lub okna podrzędnego w oknie dialogowym lub innym oknie.
+Pobiera wskaźnik do określonego formantu lub okna podrzędnego w oknie dialogowym lub w innym oknie.
 
 ```
 virtual CWnd* GetDlgItem(int nID) const;
@@ -443,11 +443,11 @@ virtual void GetDlgItem(
 
 ### <a name="parameters"></a>Parametry
 
-*Nid*<br/>
+*nID*<br/>
 Identyfikator elementu okna dialogowego do pobrania.
 
-*phWnd (właśc.*<br/>
-Wskaźnik do uchwytu obiektu okna określonego elementu okna okna.
+*phWnd*<br/>
+Wskaźnik do uchwytu obiektu okna określonego okna dialogowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -455,7 +455,7 @@ Wskaźnik do okna elementu okna dialogowego.
 
 ## <a name="colecontrolcontainergetdlgitemint"></a><a name="getdlgitemint"></a>COleControlContainer::GetDlgItemInt
 
-Pobiera wartość przetłumaczonego tekstu danego formantu.
+Pobiera wartość przetłumaczonego tekstu danej kontrolki.
 
 ```
 virtual UINT GetDlgItemInt(
@@ -466,32 +466,32 @@ virtual UINT GetDlgItemInt(
 
 ### <a name="parameters"></a>Parametry
 
-*Nid*<br/>
-Identyfikator formantu.
+*nID*<br/>
+Identyfikator kontrolki.
 
-*lpTrans (lpTrans)*<br/>
-Wskaźnik do zmiennej logicznej, która otrzymuje wartość sukcesu/niepowodzenia funkcji (WARTOŚĆ TRUE wskazuje sukces, FALSE wskazuje niepowodzenie).
+*lpTrans*<br/>
+Wskaźnik do zmiennej logicznej, która otrzymuje wartość sukcesu lub niepowodzenia funkcji (wartość TRUE oznacza powodzenie, FAŁSZ wskazuje błąd).
 
-*bPodpisany*<br/>
-Określa, czy funkcja powinna zbadać tekst dla znaku minus na początku i zwrócić podpisaną wartość całkowitą, jeśli ją znajdzie. Jeśli *parametrem bSigned* jest PRAWDA, określając, że wartość do pobrania jest podpisaną wartością całkowitą, należy rzutować wartość zwracaną na typ **int.** Aby uzyskać rozszerzone informacje o błędzie, zadzwoń [do GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+*bSigned*<br/>
+Określa, czy funkcja powinna przebadać tekst dla znaku minus na początku i zwracać wartość ze znakiem liczby całkowitej, jeśli znajdzie ją. Jeśli parametr *bSigned* ma wartość true, określenie, że wartość, która ma zostać pobrana, jest wartością ze znakiem Integer, Rzutowanie wartości zwracanej na **`int`** Typ. Aby uzyskać rozszerzone informacje o błędzie, wywołaj [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli się powiedzie, zmienna wskazywała przez *lpTrans* jest ustawiona na WARTOŚĆ TRUE, a zwracana wartość jest przetłumaczoną wartością tekstu kontrolnego.
+Jeśli to się powiedzie, zmienna wskazywana przez *lpTrans* jest ustawiona na wartość true, a wartość zwracana to przetłumaczona wartość tekstu kontrolki.
 
-Jeśli funkcja nie powiedzie się, zmienna wskazywała przez *lpTrans* jest ustawiona na FAŁSZ, a zwracana wartość wynosi zero. Należy zauważyć, że ponieważ zero jest możliwą wartością przetłumaczoną, zwracana wartość zero sama w sobie nie oznacza błędu.
+Jeśli funkcja się nie powiedzie, zmienna wskazywana przez *lpTrans* ma wartość false, a zwracana wartość to zero. Zwróć uwagę, że ponieważ zero jest możliwie przetłumaczonej wartości, wartość zwracana przez zero sama nie wskazuje błędu.
 
-Jeśli *lpTrans* ma wartość NULL, funkcja zwraca żadnych informacji o sukcesie lub niepowodzeniu.
+Jeśli *lpTrans* ma wartość null, funkcja nie zwraca informacji o powodzeniu lub niepowodzeniu.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja tłumaczy pobrany tekst, usuwając dodatkowe spacje na początku tekstu, a następnie konwertując cyfry dziesiętne. Funkcja przestaje tłumaczyć, gdy osiągnie koniec tekstu lub napotka znak nieliczny.
+Funkcja tłumaczy pobrany tekst, oddzielając wszelkie dodatkowe spacje na początku tekstu, a następnie konwertując cyfry dziesiętne. Funkcja przerywa translację, gdy dociera do końca tekstu lub napotka znak nienumeryczny.
 
-Ta funkcja zwraca wartość zero, jeśli przetłumaczona wartość jest większa niż INT_MAX (dla podpisanych numerów) lub UINT_MAX (dla niepodpisanych liczb).
+Ta funkcja zwraca zero, jeśli przetłumaczona wartość jest większa niż INT_MAX (dla cyfr ze znakiem) lub UINT_MAX (dla liczb bez znaku).
 
 ## <a name="colecontrolcontainergetdlgitemtext"></a><a name="getdlgitemtext"></a>COleControlContainer::GetDlgItemText
 
-Pobiera tekst danego formantu.
+Pobiera tekst danej kontrolki.
 
 ```
 virtual int GetDlgItemText(
@@ -502,24 +502,24 @@ virtual int GetDlgItemText(
 
 ### <a name="parameters"></a>Parametry
 
-*Nid*<br/>
-Identyfikator formantu.
+*nID*<br/>
+Identyfikator kontrolki.
 
-*Lpstr*<br/>
-Wskaźnik do tekstu formantu.
+*lpStr*<br/>
+Wskaźnik na tekst kontrolki.
 
 *nMaxCount*<br/>
-Określa maksymalną długość w znakach ciągu, który ma zostać skopiowany do buforu wskazywionego przez *lpStr*. Jeśli długość ciągu przekracza limit, ciąg jest obcinany.
+Określa maksymalną długość ciągu, który ma zostać skopiowany do buforu wskazywanym przez *lpStr*. Jeśli długość ciągu przekracza limit, ciąg zostanie obcięty.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja powiedzie się, zwracana wartość określa liczbę znaków skopiowanych do buforu, z wyłączeniem kończącego się znaku null.
+Jeśli funkcja się powiedzie, wartość zwracana określa liczbę znaków skopiowanych do buforu, bez uwzględnienia kończącego znaku null.
 
-Jeśli funkcja nie powiedzie się, zwracana wartość wynosi zero. Aby uzyskać rozszerzone informacje o błędzie, zadzwoń [do GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Jeśli funkcja się nie powiedzie, zwracana wartość jest równa zero. Aby uzyskać rozszerzone informacje o błędzie, wywołaj [wartość GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ## <a name="colecontrolcontainerhandlesetfocus"></a><a name="handlesetfocus"></a>COleControlContainer::HandleSetFocus
 
-Określa, czy kontener obsługuje WM_SETFOCUS wiadomości.
+Określa, czy kontener obsługuje wiadomości WM_SETFOCUS.
 
 ```
 virtual BOOL HandleSetFocus();
@@ -527,11 +527,11 @@ virtual BOOL HandleSetFocus();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli kontener obsługuje WM_SETFOCUS komunikatów; w przeciwnym razie zero.
+Różne od zera, jeśli kontener obsługuje komunikaty WM_SETFOCUS; w przeciwnym razie zero.
 
 ## <a name="colecontrolcontainerhandlewindowlessmessage"></a><a name="handlewindowlessmessage"></a>COleControlContainer::HandleWindowlessMessage
 
-Przetwarza komunikaty okien dla formantów bez okien.
+Przetwarza komunikaty okna dla kontrolek bez okien.
 
 ```
 virtual BOOL HandleWindowlessMessage(
@@ -544,26 +544,26 @@ virtual BOOL HandleWindowlessMessage(
 ### <a name="parameters"></a>Parametry
 
 *Komunikat*<br/>
-Identyfikator komunikatu okna, dostarczony przez system Windows.
+Identyfikator komunikatu okna dostarczonego przez system Windows.
 
-*Wparam*<br/>
-Parametr wiadomości; przez system Windows. Określa dodatkowe informacje specyficzne dla wiadomości. Zawartość tego parametru zależy od wartości parametru *message.*
+*wParam*<br/>
+Parametr komunikatu; zapewniane przez system Windows. Określa dodatkowe informacje dotyczące wiadomości. Zawartość tego parametru zależy od wartości parametru *Message* .
 
-*Lparam*<br/>
-Parametr wiadomości; przez system Windows. Określa dodatkowe informacje specyficzne dla wiadomości. Zawartość tego parametru zależy od wartości parametru *message.*
+*lParam*<br/>
+Parametr komunikatu; zapewniane przez system Windows. Określa dodatkowe informacje dotyczące wiadomości. Zawartość tego parametru zależy od wartości parametru *Message* .
 
-*plResult (wyniki)*<br/>
-Kod wyniku systemu Windows. Określa wynik przetwarzania wiadomości i zależy od wysłanej wiadomości.
+*plResult*<br/>
+Kod wyniku systemu Windows. Określa wynik przetwarzania komunikatów i zależy od wysyłanej wiadomości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie zero.
+Niezerowe, jeśli pomyślne; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąd w tej funkcji można dostosować obsługę komunikatów sterujących bez okien.
+Zastąp tę funkcję, aby dostosować obsługę komunikatów kontroli bez okien.
 
-## <a name="colecontrolcontainerisdlgbuttonchecked"></a><a name="isdlgbuttonchecked"></a>COleControlContainer::IsDlgButtonSprawdziony
+## <a name="colecontrolcontainerisdlgbuttonchecked"></a><a name="isdlgbuttonchecked"></a>COleControlContainer::IsDlgButtonChecked
 
 Określa stan określonego przycisku.
 
@@ -573,24 +573,24 @@ virtual UINT IsDlgButtonChecked(int nIDButton) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nIDButton (przycisk NID)*<br/>
-Identyfikator formantu przycisku.
+*nIDButton*<br/>
+Identyfikator kontrolki przycisku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwracana wartość za pomocą przycisku utworzonego w stylu BS_AUTOCHECKBOX, BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON lub BS_3STATE. Może być jedną z następujących czynności:
+Wartość zwracana z przycisku utworzonego za pomocą stylu BS_AUTOCHECKBOX, BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON lub BS_3STATE. Może być jedną z następujących czynności:
 
-- BST_CHECKED przycisk jest zaznaczony.
+- Przycisk BST_CHECKED jest zaznaczone.
 
-- BST_INDETERMINATE Przycisk jest wyszarzony, co oznacza stan nieokreślony (dotyczy tylko wtedy, gdy przycisk ma styl BS_3STATE lub BS_AUTO3STATE).
+- Przycisk BST_INDETERMINATE jest wyszarzony, wskazując nieokreślony stan (ma zastosowanie tylko wtedy, gdy przycisk ma styl BS_3STATE lub BS_AUTO3STATE).
 
-- BST_UNCHECKED Przycisk jest wyczyszczony.
+- Przycisk BST_UNCHECKED jest wyczyszczony.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli przycisk jest formantem trójstanowym, funkcja elementu członkowskiego określa, czy jest wyszarzona, zaznaczona, czy żadna.
+Jeśli przycisk jest formantem z trzema stanami, funkcja członkowska określa, czy jest ona wygaszona, zaznaczona, czy nie.
 
-## <a name="colecontrolcontainerm_crback"></a><a name="m_crback"></a>COleControlContainer::m_crBack
+## <a name="colecontrolcontainerm_crback"></a><a name="m_crback"></a>COleControlContainer:: m_crBack
 
 Kolor tła kontenera.
 
@@ -598,7 +598,7 @@ Kolor tła kontenera.
 COLORREF m_crBack;
 ```
 
-## <a name="colecontrolcontainerm_crfore"></a><a name="m_crfore"></a>COleControlContainer::m_crFore
+## <a name="colecontrolcontainerm_crfore"></a><a name="m_crfore"></a>COleControlContainer:: m_crFore
 
 Kolor pierwszego planu kontenera.
 
@@ -606,55 +606,55 @@ Kolor pierwszego planu kontenera.
 COLORREF m_crFore;
 ```
 
-## <a name="colecontrolcontainerm_listsitesorwnds"></a><a name="m_listsitesorwnds"></a>COleControlContainer::m_listSitesOrWnds
+## <a name="colecontrolcontainerm_listsitesorwnds"></a><a name="m_listsitesorwnds"></a>COleControlContainer:: m_listSitesOrWnds
 
-Lista witryn kontrolnych hostowanych przez kontener.
+Lista lokacji formantów hostowanych przez kontener.
 
 ```
 CTypedPtrList<CPtrList, COleControlSiteOrWnd*> m_listSitesOrWnds;
 ```
 
-## <a name="colecontrolcontainerm_nwindowlesscontrols"></a><a name="m_nwindowlesscontrols"></a>COleControlContainer::m_nWindowlessControls
+## <a name="colecontrolcontainerm_nwindowlesscontrols"></a><a name="m_nwindowlesscontrols"></a>COleControlContainer:: m_nWindowlessControls
 
-Liczba formantów bez okien obsługiwanych przez kontener formantu.
+Liczba kontrolek bez okien hostowanych przez kontener formantów.
 
 ```
 int m_nWindowlessControls;
 ```
 
-## <a name="colecontrolcontainerm_polefont"></a><a name="m_polefont"></a>COleControlContainer::m_pOleFont
+## <a name="colecontrolcontainerm_polefont"></a><a name="m_polefont"></a>COleControlContainer:: m_pOleFont
 
-Wskaźnik do czcionki OLE w witrynie formantu niestandardowego.
+Wskaźnik do czcionki OLE niestandardowej strony kontrolki.
 
 ```
 LPFONTDISP m_pOleFont;
 ```
 
-## <a name="colecontrolcontainerm_psitecapture"></a><a name="m_psitecapture"></a>COleControlContainer::m_pSiteCapture
+## <a name="colecontrolcontainerm_psitecapture"></a><a name="m_psitecapture"></a>COleControlContainer:: m_pSiteCapture
 
-Wskaźnik do witryny kontroli przechwytywania.
+Wskaźnik do witryny sterowania przechwytywaniem.
 
 ```
 COleControlSite* m_pSiteCapture;
 ```
 
-## <a name="colecontrolcontainerm_psitefocus"></a><a name="m_psitefocus"></a>COleControlContainer::m_pSiteFocus
+## <a name="colecontrolcontainerm_psitefocus"></a><a name="m_psitefocus"></a>COleControlContainer:: m_pSiteFocus
 
-Wskaźnik do witryny sterowania, która obecnie ma fokus wejściowy.
+Wskaźnik do lokacji kontrolki, która aktualnie ma fokus wprowadzania.
 
 ```
 COleControlSite* m_pSiteFocus;
 ```
 
-## <a name="colecontrolcontainerm_psiteuiactive"></a><a name="m_psiteuiactive"></a>COleControlContainer::m_pSiteUIActive
+## <a name="colecontrolcontainerm_psiteuiactive"></a><a name="m_psiteuiactive"></a>COleControlContainer:: m_pSiteUIActive
 
-Wskaźnik do witryny sterowania, która jest w miejscu aktywowane.
+Wskaźnik do lokacji kontrolki, która jest aktywowana w miejscu.
 
 ```
 COleControlSite* m_pSiteUIActive;
 ```
 
-## <a name="colecontrolcontainerm_pwnd"></a><a name="m_pwnd"></a>COleControlContainer::m_pWnd
+## <a name="colecontrolcontainerm_pwnd"></a><a name="m_pwnd"></a>COleControlContainer:: m_pWnd
 
 Wskaźnik do obiektu okna skojarzonego z kontenerem.
 
@@ -662,7 +662,7 @@ Wskaźnik do obiektu okna skojarzonego z kontenerem.
 CWnd* m_pWnd;
 ```
 
-## <a name="colecontrolcontainerm_sitemap"></a><a name="m_sitemap"></a>COleControlContainer::m_siteMap
+## <a name="colecontrolcontainerm_sitemap"></a><a name="m_sitemap"></a>COleControlContainer:: m_siteMap
 
 Mapa witryny.
 
@@ -670,9 +670,9 @@ Mapa witryny.
 CMapPtrToPtr m_siteMap;
 ```
 
-## <a name="colecontrolcontaineronpaint"></a><a name="onpaint"></a>COleControlContainer::OnPaint
+## <a name="colecontrolcontaineronpaint"></a><a name="onpaint"></a>COleControlContainer:: OnPaint
 
-Wywoływana przez platformę do obsługi żądań WM_PAINT.
+Wywoływane przez platformę, aby obsługiwać żądania WM_PAINT.
 
 ```
 virtual BOOL OnPaint(CDC* pDC);
@@ -680,20 +680,20 @@ virtual BOOL OnPaint(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*Pdc*<br/>
+*Domeny*<br/>
 Wskaźnik do kontekstu urządzenia używanego przez kontener.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero, jeśli wiadomość została obsłużona; w przeciwnym razie zero.
+Niezerowe, jeśli komunikat został obsłużony; w przeciwnym razie zero.
 
 ### <a name="remarks"></a>Uwagi
 
-Zastąd w tej funkcji należy dostosować proces malowania.
+Zastąp tę funkcję, aby dostosować proces malowania.
 
 ## <a name="colecontrolcontaineronuiactivate"></a><a name="onuiactivate"></a>COleControlContainer::OnUIActivate
 
-Wywoływane przez ramy, gdy miejsce kontroli, wskazane przez *pSite*, ma być aktywowany w miejscu.
+Wywoływane przez platformę, gdy lokacja kontrolna wskazywana przez *pSite*ma zostać aktywowana w miejscu.
 
 ```
 virtual void OnUIActivate(COleControlSite* pSite);
@@ -701,16 +701,16 @@ virtual void OnUIActivate(COleControlSite* pSite);
 
 ### <a name="parameters"></a>Parametry
 
-*pWitła*<br/>
-Wskaźnik do witryny sterowania, która ma być aktywowana w miejscu.
+*pSite*<br/>
+Wskaźnik do witryny sterowania, który ma zostać aktywowany w miejscu.
 
 ### <a name="remarks"></a>Uwagi
 
 Aktywacja w miejscu oznacza, że menu główne kontenera jest zastępowane menu złożonym w miejscu.
 
-## <a name="colecontrolcontaineronuideactivate"></a><a name="onuideactivate"></a>COleControlContainer::OnUIDeaktywacji
+## <a name="colecontrolcontaineronuideactivate"></a><a name="onuideactivate"></a>COleControlContainer::OnUIDeactivate
 
-Wywoływana przez ramy, gdy miejsce kontroli, wskazane przez *pSite*, ma zostać dezaktywowane.
+Wywoływane przez platformę, gdy lokacja kontroli, wskazywana przez *pSite*, zostanie zdezaktywowana.
 
 ```
 virtual void OnUIDeactivate(COleControlSite* pSite);
@@ -718,16 +718,16 @@ virtual void OnUIDeactivate(COleControlSite* pSite);
 
 ### <a name="parameters"></a>Parametry
 
-*pWitła*<br/>
-Wskaźnik do witryny sterowania, który ma zostać dezaktywowany.
+*pSite*<br/>
+Wskaźnik do lokacji sterowania, który ma zostać zdezaktywowany.
 
 ### <a name="remarks"></a>Uwagi
 
-Po odebraniu tego powiadomienia kontener powinien ponownie zainstalować swój interfejs użytkownika i skupić się.
+Po otrzymaniu tego powiadomienia kontener powinien ponownie zainstalować interfejs użytkownika i zastosować fokus.
 
 ## <a name="colecontrolcontainerscrollchildren"></a><a name="scrollchildren"></a>COleControlContainer::ScrollChildren
 
-Wywoływane przez strukturę, gdy wiadomości przewijania są odbierane z okna podrzędnego.
+Wywoływane przez platformę, gdy komunikaty przewijania są odbierane z okna podrzędnego.
 
 ```
 virtual void ScrollChildren(
@@ -737,15 +737,15 @@ virtual void ScrollChildren(
 
 ### <a name="parameters"></a>Parametry
 
-*Dx*<br/>
-Ilość przewijania wzdłuż osi x w pikselach.
+*DX*<br/>
+Ilość, w pikselach, przewijania wzdłuż osi x.
 
-*Dy*<br/>
-Ilość przewijania wzdłuż osi y w pikselach.
+*dy*<br/>
+Kwota przewijania wzdłuż osi y (w pikselach).
 
 ## <a name="colecontrolcontainersenddlgitemmessage"></a><a name="senddlgitemmessage"></a>COleControlContainer::SendDlgItemMessage
 
-Wysyła wiadomość do określonego formantu.
+Wysyła komunikat do określonej kontrolki.
 
 ```
 virtual LRESULT SendDlgItemMessage(
@@ -757,21 +757,21 @@ virtual LRESULT SendDlgItemMessage(
 
 ### <a name="parameters"></a>Parametry
 
-*Nid*<br/>
-Określa identyfikator formantu odbieranego przez wiadomość.
+*nID*<br/>
+Określa identyfikator formantu, który odbiera komunikat.
 
 *Komunikat*<br/>
-Określa wiadomość, która ma zostać wysłana.
+Określa komunikat do wysłania.
 
-*Wparam*<br/>
-Określa dodatkowe informacje specyficzne dla wiadomości.
+*wParam*<br/>
+Określa dodatkowe informacje dotyczące wiadomości.
 
-*Lparam*<br/>
-Określa dodatkowe informacje specyficzne dla wiadomości.
+*lParam*<br/>
+Określa dodatkowe informacje dotyczące wiadomości.
 
 ## <a name="colecontrolcontainersetdlgitemint"></a><a name="setdlgitemint"></a>COleControlContainer::SetDlgItemInt
 
-Ustawia tekst formantu w oknie dialogowym na reprezentację ciągu określonej wartości całkowitej.
+Ustawia tekst kontrolki w oknie dialogowym na ciąg reprezentujący określoną liczbę całkowitą.
 
 ```
 virtual void SetDlgItemInt(
@@ -782,18 +782,18 @@ virtual void SetDlgItemInt(
 
 ### <a name="parameters"></a>Parametry
 
-*Nid*<br/>
-Identyfikator formantu.
+*nID*<br/>
+Identyfikator kontrolki.
 
-*wartość nValue*<br/>
-Wartość całkowita, która ma być wyświetlana.
+*nWartość*<br/>
+Wartość całkowita, która ma zostać wyświetlona.
 
-*bPodpisany*<br/>
-Określa, czy parametr *nValue* jest podpisany, czy niepodpisany. Jeśli ten parametr ma wartość PRAWDA, *nValue* jest podpisany. Jeśli ten parametr ma wartość PRAWDA, a *wartość nValue* jest mniejsza niż zero, znak minus jest umieszczany przed pierwszą cyfrą w ciągu. Jeśli ten parametr ma wartość FAŁSZ, *wartość nValue* jest niepodpisywalna.
+*bSigned*<br/>
+Określa, czy parametr *nWartość* jest podpisany czy niepodpisany. Jeśli ten parametr ma wartość TRUE, *nWartość* jest podpisana. Jeśli ten parametr ma wartość TRUE, a *nWartość* jest mniejsza od zera, znak minus jest umieszczany przed pierwszą cyfrą w ciągu. Jeśli ten parametr ma wartość FALSE, *nWartość* jest niepodpisany.
 
 ## <a name="colecontrolcontainersetdlgitemtext"></a><a name="setdlgitemtext"></a>COleControlContainer::SetDlgItemText
 
-Ustawia tekst określonego formantu, używając tekstu zawartego w *lpszString*.
+Ustawia tekst określonego formantu przy użyciu tekstu zawartego w *lpszString*.
 
 ```
 virtual void SetDlgItemText(
@@ -803,13 +803,13 @@ virtual void SetDlgItemText(
 
 ### <a name="parameters"></a>Parametry
 
-*Nid*<br/>
-Identyfikator formantu.
+*nID*<br/>
+Identyfikator kontrolki.
 
 *lpszString*<br/>
-Wskaźnik do tekstu formantu.
+Wskaźnik na tekst kontrolki.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

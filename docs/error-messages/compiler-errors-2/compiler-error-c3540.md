@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3540
 ms.assetid: 3c0c959c-e3b7-40eb-b922-ccac44bd9d85
-ms.openlocfilehash: 94f35f9f3bf64e09087f28a11a4fb9802d9d3c0f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a041961e8a91832be67d8def8f2a6a3ef70906d9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761520"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223398"
 ---
 # <a name="compiler-error-c3540"></a>Błąd kompilatora C3540
 
 "Type": nie można zastosować operatora sizeof do typu, który zawiera element "Auto"
 
-Nie można zastosować operatora [sizeof](../../cpp/sizeof-operator.md) do wskazanego typu, ponieważ zawiera on specyfikator `auto`.
+Nie można zastosować operatora [sizeof](../../cpp/sizeof-operator.md) do wskazanego typu, ponieważ zawiera on **`auto`** specyfikator.
 
 ## <a name="example"></a>Przykład
 
@@ -36,6 +36,6 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[Auto, słowo kluczowe](../../cpp/auto-keyword.md)<br/>
-[/Zc:auto (Dedukuj typ zmiennej)](../../build/reference/zc-auto-deduce-variable-type.md)<br/>
-[sizeof, operator](../../cpp/sizeof-operator.md)
+[Słowo kluczowe "Autouzupełnianie"](../../cpp/auto-keyword.md)<br/>
+[/Zc: Auto(wywnioskowanie typu zmiennej)](../../build/reference/zc-auto-deduce-variable-type.md)<br/>
+[sizeof — Operator](../../cpp/sizeof-operator.md)

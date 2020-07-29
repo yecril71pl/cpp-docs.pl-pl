@@ -6,32 +6,32 @@ helpviewer_keywords:
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-ms.openlocfilehash: 59dd8c7a7b0b930ffdb68fd96410fd73aeb02e81
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 24921f2da404a2e5103d9a3cd2abba03109f0681
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365755"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222813"
 ---
 # <a name="dispatch-maps"></a>Mapy wysyłania
 
-Automatyzacja OLE udostępnia sposoby wywoływania metod i dostępu do właściwości w aplikacjach. Mechanizm dostarczony przez Bibliotekę klas Microsoft Foundation do wysyłania tych żądań jest "mapa wysyłki", który wyznacza wewnętrzne i zewnętrzne nazwy funkcji i właściwości obiektu, a także typy danych samych właściwości i argumentów funkcji.
+Automatyzacja OLE zapewnia sposoby wywoływania metod i dostępu do właściwości w aplikacjach. Mechanizmem dostarczanym przez biblioteka MFC do wysyłania tych żądań jest "Mapa wysyłania", która określa wewnętrzne i zewnętrzne nazwy funkcji obiektów i właściwości, a także typy danych samych właściwości i argumentów funkcji.
 
-|Makra mapy wysyłki|Opis|
+|Makro mapy wysyłania|Opis|
 |-|-|
-|[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|Deklaruje, że mapa wysyłki będzie używany do udostępnienia metody i właściwości klasy (musi być używany w deklaracji klasy).|
-|[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|Rozpoczyna definicję mapy wysyłki.|
-|[END_DISPATCH_MAP](#end_dispatch_map)|Kończy definicję mapy wysyłki.|
-|[DISP_FUNCTION](#disp_function)|Używane na mapie wysyłki do definiowania funkcji automatyzacji OLE.|
-|[DISP_PROPERTY](#disp_property)|Definiuje właściwość automatyzacji OLE.|
-|[DISP_PROPERTY_EX](#disp_property_ex)|Definiuje właściwość automatyzacji OLE i nazwy Get i Set funkcje.|
-|[DISP_PROPERTY_NOTIFY](#disp_property_notify)|Definiuje właściwość automatyzacji OLE z powiadomieniem.|
-|[DISP_PROPERTY_PARAM](#disp_property_param)|Definiuje właściwość automatyzacji OLE, która przyjmuje parametry i nazwy funkcji Pobierz i Ustaw.|
-|[DISP_DEFVALUE](#disp_defvalue)|Sprawia, że istniejąca właściwość jest wartością domyślną obiektu.|
+|[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|Deklaruje, że mapa wysyłania zostanie użyta do ujawnienia metod i właściwości klasy (musi być używana w deklaracji klasy).|
+|[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|Uruchamia definicję mapy wysyłania.|
+|[END_DISPATCH_MAP](#end_dispatch_map)|Zamyka definicję mapy wysyłania.|
+|[DISP_FUNCTION](#disp_function)|Używane w mapie wysyłania do definiowania funkcji automatyzacji OLE.|
+|[DISP_PROPERTY](#disp_property)|Definiuje Właściwość automatyzacji OLE.|
+|[DISP_PROPERTY_EX](#disp_property_ex)|Definiuje Właściwość automatyzacji OLE i nazywa funkcje get i Set.|
+|[DISP_PROPERTY_NOTIFY](#disp_property_notify)|Definiuje Właściwość automatyzacji OLE z powiadomieniem.|
+|[DISP_PROPERTY_PARAM](#disp_property_param)|Definiuje Właściwość automatyzacji OLE, która pobiera parametry i nazywa funkcje get i Set.|
+|[DISP_DEFVALUE](#disp_defvalue)|Tworzy istniejącą właściwość jako wartość domyślną obiektu.|
 
 ## <a name="declare_dispatch_map"></a><a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP
 
-Jeśli `CCmdTarget`klasa pochodna w programie obsługuje automatyzacji OLE, ta klasa musi dostarczyć mapę wysyłki, aby udostępnić jego metody i właściwości.
+Jeśli `CCmdTarget` Klasa pochodna w programie obsługuje automatyzację OLE, ta klasa musi udostępnić mapę wysyłania, aby uwidocznić jej metody i właściwości.
 
 ```cpp
 DECLARE_DISPATCH_MAP()
@@ -39,12 +39,12 @@ DECLARE_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj makra DECLARE_DISPATCH_MAP na końcu deklaracji klasy. Następnie, w . Plik CPP, który definiuje funkcje członkowskie dla klasy, należy użyć makra BEGIN_DISPATCH_MAP. Następnie należy uwzględnić wpisy makr dla każdej z dostępnych metod i właściwości klasy (DISP_FUNCTION, DISP_PROPERTY itd.). Na koniec użyj makra END_DISPATCH_MAP.
+Użyj makra DECLARE_DISPATCH_MAP na końcu deklaracji klasy. Następnie w. Plik CPP, który definiuje funkcje elementu członkowskiego dla klasy, użyj makra BEGIN_DISPATCH_MAP. Następnie Uwzględnij wpisy makr dla każdej z klas i właściwości uwidocznionych (DISP_FUNCTION, DISP_PROPERTY itd.). Na koniec użyj makra END_DISPATCH_MAP.
 
 > [!NOTE]
-> Jeśli po DECLARE_DISPATCH_MAP zgłosisz dowolny element członkowek, musisz określić dla nich nowy typ dostępu ( **publiczny,** **prywatny**lub **chroniony).**
+> W przypadku deklarowania wszelkich elementów członkowskich po DECLARE_DISPATCH_MAP należy określić dla nich nowy typ dostępu ( **`public`** , **`private`** lub **`protected`** ).
 
-Kreator aplikacji i kreatorzy kodu pomagają w tworzeniu klas automatyzacji i w utrzymywaniu map wysyłki. Aby uzyskać więcej informacji na temat map wysyłki, zobacz [Serwery automatyzacji](../../mfc/automation-servers.md).
+Kreator aplikacji i kreatory kodu pomagają w tworzeniu klas automatyzacji i zachowaniu map wysyłania. Aby uzyskać więcej informacji na temat map wysyłania, zobacz [serwery automatyzacji](../../mfc/automation-servers.md).
 
 ### <a name="example"></a>Przykład
 
@@ -52,11 +52,11 @@ Kreator aplikacji i kreatorzy kodu pomagają w tworzeniu klas automatyzacji i w 
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwin.h
+**Nagłówek:** afxwin. h
 
 ## <a name="begin_dispatch_map"></a><a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP
 
-Deklaruje definicję mapy wysyłki.
+Deklaruje definicję mapy wysyłania.
 
 ```cpp
 BEGIN_DISPATCH_MAP(theClass, baseClass)
@@ -64,23 +64,23 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 
 ### <a name="parameters"></a>Parametry
 
-*klasa*<br/>
-Określa nazwę klasy, która jest właścicielem tej mapy wysyłki.
+*theClass*<br/>
+Określa nazwę klasy, która jest właścicielem tej mapy wysyłania.
 
-*Baseclass*<br/>
-Określa nazwę klasy podstawowej *klasy klasy*.
+*baseClass*<br/>
+Określa nazwę klasy bazowej *theClass*.
 
 ### <a name="remarks"></a>Uwagi
 
-W pliku implementacji (.cpp), który definiuje funkcje członkowskie dla klasy, uruchom mapę wysyłki z BEGIN_DISPATCH_MAP makra, dodaj wpisy makr dla każdej funkcji i właściwości wysyłki i uzupełnij mapę wysyłki END_DISPATCH_MAP makra.
+W pliku implementacji (. cpp), który definiuje funkcje elementu członkowskiego dla klasy, uruchom mapę wysyłania za pomocą makra BEGIN_DISPATCH_MAP, Dodaj wpisy makr dla każdej funkcji i właściwości wysyłania i wypełnij mapę wysyłania za pomocą makra END_DISPATCH_MAP.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdisp.h
+**Nagłówek:** AFXDISP. h
 
 ## <a name="end_dispatch_map"></a><a name="end_dispatch_map"></a>END_DISPATCH_MAP
 
-Kończy definicję mapy wysyłki.
+Zamyka definicję mapy wysyłania.
 
 ```cpp
 END_DISPATCH_MAP()
@@ -88,15 +88,15 @@ END_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Uwagi
 
-Musi być stosowany w połączeniu z BEGIN_DISPATCH_MAP.
+Musi być używana w połączeniu z BEGIN_DISPATCH_MAP.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdisp.h
+**Nagłówek:** AFXDISP. h
 
 ## <a name="disp_function"></a><a name="disp_function"></a>DISP_FUNCTION
 
-Definiuje funkcję automatyzacji OLE na mapie wysyłki.
+Definiuje funkcję automatyzacji OLE na mapie wysyłania.
 
 ```cpp
 DISP_FUNCTION(
@@ -109,67 +109,67 @@ DISP_FUNCTION(
 
 ### <a name="parameters"></a>Parametry
 
-*klasa*<br/>
+*theClass*<br/>
 Nazwa klasy.
 
-*pszName (Nazwa psz)*<br/>
+*pszName*<br/>
 Zewnętrzna nazwa funkcji.
 
-*numer pfn*<br/>
-Nazwa funkcji elementu członkowskiego.
+*pfnMember*<br/>
+Nazwa funkcji składowej.
 
-*vtRetVal ( vtRetVal )*<br/>
-Wartość określająca typ zwracany funkcji.
+*vtRetVal*<br/>
+Wartość określająca zwracany typ funkcji.
 
-*vtsParams ( vtsParams )*<br/>
-Oddzielona spacja lista jednej lub więcej stałych określających listę parametrów funkcji.
+*vtsParams*<br/>
+Rozdzielana spacjami lista jednej lub kilku stałych określających listę parametrów funkcji.
 
 ### <a name="remarks"></a>Uwagi
 
-Argument *vtRetVal* jest typu VARTYPE. Następujące możliwe wartości dla tego argumentu są pobierane z wyliczenia: `VARENUM`
+Argument *vtRetVal* jest typu VARTYPE. Następujące możliwe wartości tego argumentu są pobierane z `VARENUM` wyliczenia:
 
-|Symbol|Zwracany typ|
+|Symbol|Typ zwracany|
 |------------|-----------------|
-|Vt_empty|**void**|
-|VT_I2|**short**|
-|VT_I4|**long**|
-|VT_R4|**float**|
-|VT_R8|**double**|
+|VT_EMPTY|**`void`**|
+|VT_I2|**`short`**|
+|VT_I4|**`long`**|
+|VT_R4|**`float`**|
+|VT_R8|**`double`**|
 |VT_CY|CY|
 |VT_DATE|DATE|
-|Vt_bstr|Bstr|
-|VT_DISPATCH|LPDISPATCH ( LPDISPATCH )|
+|VT_BSTR|ANI|
+|VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
-|VT_BOOL|Bool|
+|VT_BOOL|LOGICZNA|
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-*VtsParams* argument jest oddzielona spacja lista `VTS_*` wartości ze stałych. Jedna lub więcej z tych wartości oddzielonych spacjami (nie przecinkami) określa listę parametrów funkcji. Na przykład:
+Argument *vtsParams* jest rozdzielaną spacją listą wartości ze `VTS_*` stałych. Co najmniej jedna z tych wartości rozdzielonych spacjami (nie przecinkami) określa listę parametrów funkcji. Przykład:
 
 [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]
 
-określa listę zawierającą krótką liczbę całkowitą, po której następuje wskaźnik do krótkiej liczby całkowitej.
+Określa listę zawierającą krótką liczbę całkowitą, a następnie wskaźnik do krótkiej liczby całkowitej.
 
-Stałe `VTS_` i ich znaczenie są następujące:
+`VTS_`Stałe i ich znaczenie są następujące:
 
 |Symbol|Typ parametru|
 |------------|--------------------|
-|VTS_I2|**short**|
-|VTS_I4|**long**|
-|VTS_R4|**float**|
-|VTS_R8|**double**|
+|VTS_I2|**`short`**|
+|VTS_I4|**`long`**|
+|VTS_R4|**`float`**|
+|VTS_R8|**`double`**|
 |VTS_CY|`const CY` lub `CY*`|
 |VTS_DATE|DATE|
 |VTS_BSTR|LPCSTR|
-|VTS_DISPATCH|LPDISPATCH ( LPDISPATCH )|
+|VTS_DISPATCH|LPDISPATCH|
 |VTS_SCODE|SCODE|
-|VTS_BOOL|Bool|
+|VTS_BOOL|LOGICZNA|
 |VTS_VARIANT|`const VARIANT*` lub `VARIANT&`|
 |VTS_UNKNOWN|LPUNKNOWN|
-|VTS_PI2|__Krótki\*__|
-|VTS_PI4|__Długi\*__|
+|VTS_PI2|__wybierak\*__|
+|VTS_PI4|__liczba długa\*__|
 |VTS_PR4|__float\*__|
-|VTS_PR8|__double\*__|
+|VTS_PR8|__Double\*__|
 |VTS_PCY|`CY*`|
 |VTS_PDATE|`DATE*`|
 |VTS_PBSTR|`BSTR*`|
@@ -182,11 +182,11 @@ Stałe `VTS_` i ich znaczenie są następujące:
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdisp.h
+**Nagłówek:** AFXDISP. h
 
 ## <a name="disp_property"></a><a name="disp_property"></a>DISP_PROPERTY
 
-Definiuje właściwość automatyzacji OLE na mapie wysyłki.
+Definiuje Właściwość automatyzacji OLE na mapie wysyłania.
 
 ```cpp
 DISP_PROPERTY(
@@ -198,46 +198,46 @@ DISP_PROPERTY(
 
 ### <a name="parameters"></a>Parametry
 
-*klasa*<br/>
+*theClass*<br/>
 Nazwa klasy.
 
-*pszName (Nazwa psz)*<br/>
-Nazwa zewnętrzna właściwości.
+*pszName*<br/>
+Zewnętrzna nazwa właściwości.
 
-*Membername*<br/>
-Nazwa zmiennej członkowskiej, w której przechowywana jest właściwość.
+*memberName*<br/>
+Nazwa zmiennej członkowskiej, w której jest przechowywana właściwość.
 
-*vtPropType (Typ vtPropType)*<br/>
+*vtPropType*<br/>
 Wartość określająca typ właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-Argument *vtPropType* jest typu **VARTYPE**. Możliwe wartości dla tego argumentu są pobierane z wyliczenia VARENUM:
+Argument *vtPropType* jest typu **VARTYPE**. Możliwe wartości tego argumentu są pobierane z wyliczenia VARENUM:
 
 |Symbol|Typ właściwości|
 |------------|-----------------------|
-|VT_I2|**short**|
-|VT_I4|**long**|
-|VT_R4|**float**|
-|VT_R8|**double**|
+|VT_I2|**`short`**|
+|VT_I4|**`long`**|
+|VT_R4|**`float`**|
+|VT_R8|**`double`**|
 |VT_CY|CY|
 |VT_DATE|DATE|
-|Vt_bstr|`CString`|
-|VT_DISPATCH|LPDISPATCH ( LPDISPATCH )|
+|VT_BSTR|`CString`|
+|VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
-|VT_BOOL|Bool|
+|VT_BOOL|LOGICZNA|
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-Gdy klient zewnętrzny zmienia właściwość, zmienia się wartość zmiennej członkowskiej określonej przez *memberName;* nie ma powiadomienia o zmianie.
+Gdy Klient zewnętrzny zmieni właściwość, wartość zmiennej składowej określona przez *element MemberName* ulegnie zmianie; nie ma powiadomienia o zmianie.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdisp.h
+**Nagłówek:** AFXDISP. h
 
 ## <a name="disp_property_ex"></a><a name="disp_property_ex"></a>DISP_PROPERTY_EX
 
-Definiuje właściwość automatyzacji OLE i nazwę funkcji używanych do uzyskania i ustawić wartość właściwości w mapie wysyłki.
+Definiuje Właściwość automatyzacji OLE i nazwij funkcje używane do pobierania i ustawiania wartości właściwości w mapie wysyłania.
 
 ```cpp
 DISP_PROPERTY_EX(
@@ -250,34 +250,34 @@ DISP_PROPERTY_EX(
 
 ### <a name="parameters"></a>Parametry
 
-*klasa*<br/>
+*theClass*<br/>
 Nazwa klasy.
 
-*pszName (Nazwa psz)*<br/>
-Nazwa zewnętrzna właściwości.
+*pszName*<br/>
+Zewnętrzna nazwa właściwości.
 
-*członekGet*<br/>
-Nazwa funkcji elementu członkowskiego używanej do uzyskania właściwości.
+*memberGet*<br/>
+Nazwa funkcji składowej używanej do pobierania właściwości.
 
 *memberSet*<br/>
-Nazwa funkcji elementu członkowskiego używanej do ustawiania właściwości.
+Nazwa funkcji składowej używanej do ustawiania właściwości.
 
-*vtPropType (Typ vtPropType)*<br/>
+*vtPropType*<br/>
 Wartość określająca typ właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje *memberGet* i *memberSet* mają podpisy określone przez argument *vtPropType.* Funkcja *memberGet* nie przyjmuje żadnych argumentów i zwraca wartość typu określonego przez *vtPropType*. Funkcja *memberSet* przyjmuje argument typu określonego przez *vtPropType* i nic nie zwraca.
+Funkcje *memberGet* i *memberSet* mają sygnatury określone przez argument *vtPropType* . Funkcja *memberGet* nie przyjmuje argumentów i zwraca wartość typu określonego przez *vtPropType*. Funkcja *memberSet* przyjmuje argument typu określonego przez *vtPropType* i zwraca wartość Nothing.
 
-Argument *vtPropType* jest typu VARTYPE. Możliwe wartości dla tego argumentu są pobierane z wyliczenia VARENUM. Aby uzyskać listę tych wartości, zobacz Uwagi dla parametru *vtRetVal* w [DISP_FUNCTION](#disp_function). Należy zauważyć, że VT_EMPTY, wymienione w DISP_FUNCTION uwagi, nie jest dozwolone jako typ danych właściwości.
+Argument *vtPropType* jest typu VARTYPE. Możliwe wartości tego argumentu są pobierane z wyliczenia VARENUM. Aby uzyskać listę tych wartości, zobacz uwagi dotyczące parametru *vtRetVal* w [DISP_FUNCTION](#disp_function). Należy zauważyć, że VT_EMPTY wymienione w DISP_FUNCTION uwagi nie są dozwolone jako typ danych właściwości.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdisp.h
+**Nagłówek:** AFXDISP. h
 
 ## <a name="disp_property_notify"></a><a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY
 
-Definiuje właściwość automatyzacji OLE z powiadomieniem na mapie wysyłki.
+Definiuje Właściwość automatyzacji OLE z powiadomieniem w mapie wysyłania.
 
 ```cpp
 DISP_PROPERTY_NOTIFY(
@@ -290,49 +290,49 @@ DISP_PROPERTY_NOTIFY(
 
 ### <a name="parameters"></a>Parametry
 
-*klasa*<br/>
+*theClass*<br/>
 Nazwa klasy.
 
 *szExternalName*<br/>
-Nazwa zewnętrzna właściwości.
+Zewnętrzna nazwa właściwości.
 
-*Membername*<br/>
-Nazwa zmiennej członkowskiej, w której przechowywana jest właściwość.
+*memberName*<br/>
+Nazwa zmiennej członkowskiej, w której jest przechowywana właściwość.
 
-*pfnAfterSet (Zestaw)*<br/>
+*pfnAfterSet*<br/>
 Nazwa funkcji powiadomień dla *szExternalName*.
 
-*vtPropType (Typ vtPropType)*<br/>
+*vtPropType*<br/>
 Wartość określająca typ właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-W przeciwieństwie do właściwości zdefiniowanych za pomocą DISP_PROPERTY, właściwość zdefiniowana za pomocą DISP_PROPERTY_NOTIFY automatycznie wywoła funkcję określoną przez *pfnAfterSet* po zmianie właściwości.
+W przeciwieństwie do właściwości zdefiniowanych za pomocą DISP_PROPERTY, właściwość zdefiniowana za pomocą DISP_PROPERTY_NOTIFY automatycznie wywoła funkcję określoną przez *pfnAfterSet* , gdy właściwość zostanie zmieniona.
 
-Argument *vtPropType* jest typu VARTYPE. Możliwe wartości dla tego argumentu są pobierane z wyliczenia VARENUM:
+Argument *vtPropType* jest typu VARTYPE. Możliwe wartości tego argumentu są pobierane z wyliczenia VARENUM:
 
 |Symbol|Typ właściwości|
 |------------|-----------------------|
-|VT_I2|**short**|
-|VT_I4|**long**|
-|VT_R4|**float**|
-|VT_R8|**double**|
+|VT_I2|**`short`**|
+|VT_I4|**`long`**|
+|VT_R4|**`float`**|
+|VT_R8|**`double`**|
 |VT_CY|CY|
 |VT_DATE|DATE|
-|Vt_bstr|`CString`|
-|VT_DISPATCH|LPDISPATCH ( LPDISPATCH )|
+|VT_BSTR|`CString`|
+|VT_DISPATCH|LPDISPATCH|
 |VT_ERROR|SCODE|
-|VT_BOOL|Bool|
+|VT_BOOL|LOGICZNA|
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdisp.h
+**Nagłówek:** AFXDISP. h
 
 ## <a name="disp_property_param"></a><a name="disp_property_param"></a>DISP_PROPERTY_PARAM
 
-Definiuje właściwość dostęp do `Get` `Set` funkcji oddzielnych i elementów członkowskich.
+Definiuje właściwość, do której można uzyskać dostęp za pomocą oddzielnych `Get` `Set` funkcji i elementów członkowskich.
 
 ```cpp
 DISP_PROPERTY_PARAM(
@@ -346,53 +346,53 @@ DISP_PROPERTY_PARAM(
 
 ### <a name="parameters"></a>Parametry
 
-*klasa*<br/>
+*theClass*<br/>
 Nazwa klasy.
 
 *pszExternalName*<br/>
-Nazwa zewnętrzna właściwości.
+Zewnętrzna nazwa właściwości.
 
-*pfnGet (angielski)*<br/>
-Nazwa funkcji elementu członkowskiego używanej do uzyskania właściwości.
+*pfnGet*<br/>
+Nazwa funkcji składowej używanej do pobierania właściwości.
 
-*zestaw pfnSet*<br/>
-Nazwa funkcji elementu członkowskiego używanej do ustawiania właściwości.
+*pfnSet*<br/>
+Nazwa funkcji składowej używanej do ustawiania właściwości.
 
-*vtPropType (Typ vtPropType)*<br/>
+*vtPropType*<br/>
 Wartość określająca typ właściwości.
 
-*vtsParams ( vtsParams )*<br/>
-Ciąg typów parametrów `VTS_*` wariantu oddzielonych odstępami, po jednym dla każdego parametru.
+*vtsParams*<br/>
+Ciąg typów parametrów Variant rozdzielonych spacjami `VTS_*` , jeden dla każdego parametru.
 
 ### <a name="remarks"></a>Uwagi
 
-W przeciwieństwie do makra DISP_PROPERTY_EX, to makro umożliwia określenie listy parametrów właściwości. Jest to przydatne do implementowania właściwości, które są indeksowane lub sparametryzowane.
+W przeciwieństwie do makra DISP_PROPERTY_EX, to makro pozwala określić listę parametrów dla właściwości. Jest to przydatne w przypadku implementowania właściwości, które są indeksowane lub sparametryzowane.
 
 ### <a name="example"></a>Przykład
 
-Należy wziąć pod uwagę następującą deklarację get i set funkcji członkowskich, które umożliwiają użytkownikowi żądanie określonego wiersza i kolumny podczas uzyskiwania dostępu do właściwości:
+Rozważmy następującą deklarację funkcji get i Set member, która umożliwia użytkownikowi zażądanie określonego wiersza i kolumny podczas uzyskiwania dostępu do właściwości:
 
 [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]
 
-Odpowiadają one następującym makro DISP_PROPERTY_PARAM na mapie wysyłki sterowania:
+Są one odnoszące się do następującego DISP_PROPERTY_PARAM makra na mapie wysyłania formantu:
 
 [!code-cpp[NVC_MFCActiveXControl#10](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]
 
-Jako inny przykład należy wziąć pod uwagę następujące funkcje elementów członkowskich get i set:
+Innym przykładem jest rozważenie następujących funkcji elementów członkowskich get i set:
 
 [!code-cpp[NVC_MFCActiveXControl#11](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]
 
-Odpowiadają one następującym makro DISP_PROPERTY_PARAM na mapie wysyłki sterowania:
+Są one odnoszące się do następującego DISP_PROPERTY_PARAM makra na mapie wysyłania formantu:
 
 [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdisp.h
+**Nagłówek:** AFXDISP. h
 
 ## <a name="disp_defvalue"></a><a name="disp_defvalue"></a>DISP_DEFVALUE
 
-Sprawia, że istniejąca właściwość jest wartością domyślną obiektu.
+Tworzy istniejącą właściwość jako wartość domyślną obiektu.
 
 ```cpp
 DISP_DEFVALUE(theClass, pszName)
@@ -400,22 +400,22 @@ DISP_DEFVALUE(theClass, pszName)
 
 ### <a name="parameters"></a>Parametry
 
-*klasa*<br/>
+*theClass*<br/>
 Nazwa klasy.
 
-*pszName (Nazwa psz)*<br/>
-Nazwa zewnętrzna właściwości, która reprezentuje "wartość" obiektu.
+*pszName*<br/>
+Zewnętrzna nazwa właściwości, która reprezentuje "wartość" obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Użycie wartości domyślnej może ułatwić programowanie obiektu automatyzacji w aplikacjach języka Visual Basic.
+Użycie wartości domyślnej może sprawiać, że programowanie obiektu automatyzacji jest prostsze dla Visual Basic aplikacji.
 
-"Wartość domyślna" obiektu jest właściwość, która jest pobierana lub ustawiana, gdy odwołanie do obiektu nie określa właściwości lub funkcji elementu członkowskiego.
+"Wartość domyślna" obiektu jest właściwością pobieraną lub ustawianą, gdy odwołanie do obiektu nie określa właściwości lub funkcji członkowskiej.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdisp.h
+**Nagłówek:** AFXDISP. h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Makra i globals](../../mfc/reference/mfc-macros-and-globals.md)
+[Makra i Globals](../../mfc/reference/mfc-macros-and-globals.md)

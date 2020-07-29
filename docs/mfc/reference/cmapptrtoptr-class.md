@@ -1,5 +1,5 @@
 ---
-title: CMapPtrToPtr Class
+title: Klasa CMapPtrToPtr
 ms.date: 11/04/2016
 f1_keywords:
 - CMapPtrToPtr
@@ -34,14 +34,14 @@ helpviewer_keywords:
 - CMapPtrToPtr [MFC], RemoveKey
 - CMapPtrToPtr [MFC], SetAt
 ms.assetid: 23cbbaec-9d64-48f2-92ae-5e24fa64b926
-ms.openlocfilehash: b4ae511caab8278daf723bbcb8ffc5d57f5a1cd0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f8fc69007d35927daaa7128de1bc0ceb0b44c746
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442673"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223047"
 ---
-# <a name="cmapptrtoptr-class"></a>CMapPtrToPtr Class
+# <a name="cmapptrtoptr-class"></a>Klasa CMapPtrToPtr
 
 Obsługuje mapy wskaźników typu void, które są oparte na wskaźnikach void.
 
@@ -53,7 +53,7 @@ class CMapPtrToPtr : public CObject
 
 ## <a name="members"></a>Elementy członkowskie
 
-Funkcje składowe `CMapPtrToPtr` są podobne do funkcji składowych klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). W związku z tym podobieństwem można użyć dokumentacji referencyjnej `CMapStringToOb` dla specyficznych dla funkcji składowych. Wszędzie tam, gdzie widzisz wskaźnik `CObject` jako parametr funkcji lub wartość zwracana, Zastąp wskaźnik do typu **void**. Wszędzie tam, gdzie widzisz `CString` lub **stały wskaźnik do** **char** jako parametr funkcji lub wartość zwracana, Zastąp wskaźnik do typu **void**.
+Funkcje składowe `CMapPtrToPtr` są podobne do funkcji składowych klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). W związku z tym podobieństwem można użyć `CMapStringToOb` dokumentacji referencyjnej dla specyficznych dla funkcji składowych. Wszędzie tam, gdzie widzisz `CObject` wskaźnik jako parametr funkcji lub wartość zwracana, Zastąp wskaźnik do **`void`** . W każdym przypadku, gdy widzisz `CString` **`const`** wskaźnik **`char`** jako parametr funkcji lub wartość zwrotną, Zastąp wskaźnik do **`void`** .
 
 `BOOL CMapPtrToPtr::Lookup( void* <key>, void*& <rValue> ) const;`
 
@@ -63,13 +63,13 @@ na przykład tłumaczy na
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMapPtrToPtr::CMapPtrToPtr](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Konstruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMapPtrToPtr:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Zwraca liczbę elementów w tej mapie.|
 |[CMapPtrToPtr::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Określa bieżącą liczbę elementów w tabeli skrótów.|
@@ -87,19 +87,19 @@ na przykład tłumaczy na
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CMapPtrToPtr:: operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Wstawia element do mapy — podstawienie operatora dla `SetAt`.|
+|[CMapPtrToPtr:: operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Wstawia element do mapy — podstawienia operatora dla `SetAt` .|
 
 ## <a name="remarks"></a>Uwagi
 
-`CMapPtrToPtr` obejmuje makro IMPLEMENT_DYNAMIC w celu obsługi dostępu do typu w czasie wykonywania i zatopienia do obiektu `CDumpContext`. Jeśli potrzebujesz zrzutu poszczególnych elementów mapy (wartości wskaźnika), musisz ustawić głębokość kontekstu zrzutu na 1 lub większą.
+`CMapPtrToPtr`obejmuje makro IMPLEMENT_DYNAMIC do obsługi dostępu do typu w czasie wykonywania i zrzucania do `CDumpContext` obiektu. Jeśli potrzebujesz zrzutu poszczególnych elementów mapy (wartości wskaźnika), musisz ustawić głębokość kontekstu zrzutu na 1 lub większą.
 
 Mapowania wskaźnika do wskaźnika nie mogą być serializowane.
 
-Po usunięciu obiektu `CMapPtrToPtr` lub po usunięciu jego elementów zostaną usunięte tylko te wskaźniki, a nie jednostki, do których się odwołują.
+Po `CMapPtrToPtr` usunięciu obiektu lub po usunięciu jego elementów zostaną usunięte tylko te wskaźniki, a nie jednostki, do których się odwołują.
 
-Aby uzyskać więcej informacji na temat `CMapPtrToPtr`, zobacz [kolekcje](../../mfc/collections.md)artykułów.
+Aby uzyskać więcej informacji na temat `CMapPtrToPtr` , zobacz [kolekcje](../../mfc/collections.md)artykułów.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -111,7 +111,7 @@ Aby uzyskać więcej informacji na temat `CMapPtrToPtr`, zobacz [kolekcje](../..
 
 **Nagłówek:** afxcoll. h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

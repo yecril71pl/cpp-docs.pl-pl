@@ -1,5 +1,5 @@
 ---
-title: Obiekty funkcji w bibliotece C++ standardowej
+title: Obiekty funkcji w standardowej bibliotece języka C++
 ms.date: 03/15/2019
 helpviewer_keywords:
 - functors
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: 4df8096603b53d05e050750a860c76528a44b28c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ed413b2bcdcda8f65794b10c792b10358564420a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454075"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215741"
 ---
-# <a name="function-objects-in-the-c-standard-library"></a>Obiekty funkcji w bibliotece C++ standardowej
+# <a name="function-objects-in-the-c-standard-library"></a>Obiekty funkcji w standardowej bibliotece języka C++
 
-*Obiekt Function*lub *Funktor*jest dowolnym typem, który implementuje operator (). Ten operator jest nazywany *operatorem wywołania* lub czasami *operatorem aplikacji*. Biblioteka C++ standardowa używa obiektów funkcji głównie jako kryterium sortowania kontenerów i algorytmów.
+*Obiekt Function*lub *Funktor*jest dowolnym typem, który implementuje operator (). Ten operator jest nazywany *operatorem wywołania* lub czasami *operatorem aplikacji*. Standardowa biblioteka języka C++ używa obiektów funkcyjnych głównie jako kryterium sortowania kontenerów i algorytmów.
 
 Obiekty funkcyjne zapewniają dwie główne zalety wywołania funkcji prostych. Pierwszy polega na tym, że obiekt funkcji może zawierać stan. Drugim jest to, że obiekt funkcji jest typem i dlatego może być używany jako parametr szablonu.
 
@@ -47,7 +47,7 @@ Ostatni wiersz `main` funkcji pokazuje, jak wywołać obiekt Function. To wywoł
 
 ## <a name="function-objects-and-containers"></a>Obiekty funkcyjne i kontenery
 
-Biblioteka C++ standardowa zawiera kilka obiektów funkcji w [ \<> funkcjonalny](../standard-library/functional.md) plik nagłówkowy. Jednym z nich jest użycie tych obiektów funkcyjnych jako kryterium sortowania kontenerów. Na przykład `set` kontener jest zadeklarowany w następujący sposób:
+Standardowa biblioteka języka C++ zawiera kilka obiektów funkcji w [\<functional>](../standard-library/functional.md) pliku nagłówkowym. Jednym z nich jest użycie tych obiektów funkcyjnych jako kryterium sortowania kontenerów. Na przykład `set` kontener jest zadeklarowany w następujący sposób:
 
 ```cpp
 template <class Key,
@@ -56,7 +56,7 @@ template <class Key,
 class set
 ```
 
-Drugi argument szablonu jest obiektem `less`funkcji. Ten obiekt funkcji zwraca **wartość true** , jeśli pierwszy parametr jest mniejszy niż drugi parametr. Ponieważ niektóre kontenery są sortowane według ich elementów, kontener wymaga metody porównania dwóch elementów. Porównanie odbywa się przy użyciu obiektu Function. Można zdefiniować własne kryteria sortowania dla kontenerów, tworząc obiekt funkcji i określając go na liście szablonów dla kontenera.
+Drugi argument szablonu jest obiektem funkcji `less` . Ten obiekt funkcji zwraca wartość **`true`** , jeśli pierwszy parametr jest mniejszy niż drugi parametr. Ponieważ niektóre kontenery są sortowane według ich elementów, kontener wymaga metody porównania dwóch elementów. Porównanie odbywa się przy użyciu obiektu Function. Można zdefiniować własne kryteria sortowania dla kontenerów, tworząc obiekt funkcji i określając go na liście szablonów dla kontenera.
 
 ## <a name="function-objects-and-algorithms"></a>Obiekty i algorytmy funkcji
 
@@ -70,8 +70,8 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-Ostatni argument `remove_if` jest obiektem funkcji, który zwraca wartość logiczną (predykatu) . Jeśli wynik obiektu Function ma **wartość true**, element zostanie usunięty z kontenera, do którego uzyskuje dostęp Iteratory `first` i. `last` Można użyć dowolnych obiektów funkcji zadeklarowanych w `pred` [ \<nagłówku > funkcjonalnym](../standard-library/functional.md) dla argumentu lub można utworzyć własne.
+Ostatni argument `remove_if` jest obiektem funkcji, który zwraca wartość logiczną ( *predykatu*). Jeśli wynikiem obiektu funkcji jest **`true`** , element zostanie usunięty z kontenera, do którego uzyskuje dostęp Iteratory `first` i `last` . Można użyć dowolnego z obiektów funkcji zadeklarowanych w [\<functional>](../standard-library/functional.md) nagłówku dla argumentu lub można `pred` utworzyć własny.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
+[Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

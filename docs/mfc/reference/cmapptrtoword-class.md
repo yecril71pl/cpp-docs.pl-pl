@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapPtrToWord [MFC], RemoveKey
 - CMapPtrToWord [MFC], SetAt
 ms.assetid: 4631c6b6-d49f-49d9-adc0-1e0491e32d7b
-ms.openlocfilehash: 698e306896fd62888a84b6d6ce55fb4c9678187b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 254659a9f00ff7c0c27174cfbea4c131993150f3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442654"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223034"
 ---
 # <a name="cmapptrtoword-class"></a>Klasa CMapPtrToWord
 
@@ -53,7 +53,7 @@ class CMapPtrToWord : public CObject
 
 ## <a name="members"></a>Elementy członkowskie
 
-Funkcje składowe `CMapPtrToWord` są podobne do funkcji składowych klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). W związku z tym podobieństwem można użyć dokumentacji referencyjnej `CMapStringToOb` dla specyficznych dla funkcji składowych. Wszędzie tam, gdzie widzisz wskaźnik `CObject` jako parametr funkcji lub wartość zwrotna, podstaw wyraz. Wszędzie tam, gdzie widzisz `CString` lub **stały wskaźnik do** **char** jako parametr funkcji lub wartość zwracana, Zastąp wskaźnik do typu **void**.
+Funkcje składowe `CMapPtrToWord` są podobne do funkcji składowych klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). W związku z tym podobieństwem można użyć `CMapStringToOb` dokumentacji referencyjnej dla specyficznych dla funkcji składowych. Wszędzie tam, gdzie widzisz `CObject` wskaźnik jako parametr funkcji lub wartość zwrotna, podstaw wyraz. W każdym przypadku, gdy widzisz `CString` **`const`** wskaźnik **`char`** jako parametr funkcji lub wartość zwrotną, Zastąp wskaźnik do **`void`** .
 
 `BOOL CMapPtrToWord::Lookup( const void* <key>, WORD& <rValue> ) const;`
 
@@ -63,13 +63,13 @@ na przykład tłumaczy na
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMapPtrToWord::CMapPtrToWord](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Konstruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMapPtrToWord:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Zwraca liczbę elementów w tej mapie.|
 |[CMapPtrToWord::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Określa bieżącą liczbę elementów w tabeli skrótów.|
@@ -87,19 +87,19 @@ na przykład tłumaczy na
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CMapPtrToWord:: operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Wstawia element do mapy — podstawienie operatora dla `SetAt`.|
+|[CMapPtrToWord:: operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Wstawia element do mapy — podstawienia operatora dla `SetAt` .|
 
 ## <a name="remarks"></a>Uwagi
 
-`CMapWordToPtr` obejmuje makro IMPLEMENT_DYNAMIC w celu obsługi dostępu do typu w czasie wykonywania i zatopienia do obiektu `CDumpContext`. Jeśli potrzebujesz zrzutu poszczególnych elementów mapy, należy ustawić głębokość kontekstu zrzutu na 1 lub większą.
+`CMapWordToPtr`obejmuje makro IMPLEMENT_DYNAMIC do obsługi dostępu do typu w czasie wykonywania i zrzucania do `CDumpContext` obiektu. Jeśli potrzebujesz zrzutu poszczególnych elementów mapy, należy ustawić głębokość kontekstu zrzutu na 1 lub większą.
 
 Mapy wskaźników do słów nie mogą być serializowane.
 
-Po usunięciu obiektu `CMapPtrToWord` lub po usunięciu jego elementów wskaźniki i słowa są usuwane. Jednostki, do których odwołują się wskaźniki kluczy, nie są usuwane.
+Po `CMapPtrToWord` usunięciu obiektu lub po usunięciu jego elementów wskaźniki i słowa są usuwane. Jednostki, do których odwołują się wskaźniki kluczy, nie są usuwane.
 
-Aby uzyskać więcej informacji na temat `CMapPtrToWord`, zobacz [kolekcje](../../mfc/collections.md)artykułów.
+Aby uzyskać więcej informacji na temat `CMapPtrToWord` , zobacz [kolekcje](../../mfc/collections.md)artykułów.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -111,7 +111,7 @@ Aby uzyskać więcej informacji na temat `CMapPtrToWord`, zobacz [kolekcje](../.
 
 **Nagłówek:** afxcoll. h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

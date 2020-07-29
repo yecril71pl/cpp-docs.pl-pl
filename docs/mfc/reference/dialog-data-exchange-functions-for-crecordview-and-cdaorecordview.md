@@ -20,39 +20,39 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 3128b1ba459cb017d1cdb2321bc55d865aa4f8b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8eef2f3dc7880f9b2a937a26db1b74687fa00f1d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365776"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222839"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funkcje wymiany danych w oknie dialogowym dla formularzy CRecordView i CDaoRecordView
 
-W tym temacie wymieniono DDX_Field funkcji używanych do wymiany danych między [CRecordset](../../mfc/reference/crecordset-class.md) i [CRecordView](../../mfc/reference/crecordview-class.md) formularza lub [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) i [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) formularza. DAO jest używany z bazami danych programu Access i jest obsługiwany przez pakiet Office 2013. DAO 3.6 jest ostateczną wersją i jest uważana za przestarzałą.
+W tym temacie wymieniono funkcje DDX_Field używane do wymiany danych między [CRecordset](../../mfc/reference/crecordset-class.md) i formularzem [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub formularzem [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) i [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) . Obiekty DAO są używane z bazami danych programu Access i są obsługiwane za pomocą pakietu Office 2013. Element DAO 3,6 jest wersją ostateczną i jest uznawany za przestarzały.
 
 > [!NOTE]
-> DDX_Field funkcje są jak funkcje DDX, ponieważ wymieniają dane z formantami w formularzu. Jednak w przeciwieństwie do DDX wymieniają dane z polami obiektu skojarzonego z zestawem rekordów widoku, a nie z polami samego widoku rekordu. Aby uzyskać więcej `CRecordView` informacji, zobacz klasy i `CDaoRecordView`.
+> Funkcje DDX_Field są podobne do funkcji DDX w tym, że wymieniają dane za pomocą kontrolek w formularzu. Ale w przeciwieństwie do DDX, wymieniają dane z polami obiektu zestawu rekordów widoku, a nie z polami widoku rekordu. Aby uzyskać więcej informacji, zobacz klasy `CRecordView` i `CDaoRecordView` .
 
-### <a name="ddx_field-functions"></a>funkcje DDX_Field
+### <a name="ddx_field-functions"></a>Funkcje DDX_Field
 
 |||
 |-|-|
-|[DDX_FieldCBIndex](#ddx_fieldcbindex)|Przesyła dane całkowite między elementem członkowskim pola pliku recordset a indeksem bieżącego zaznaczenia w polu kombi w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md).|
-|[DDX_FieldCBString](#ddx_fieldcbstring)|Przesyła `CString` dane między elementem członkowskim danych pola zbioru rekordów `CRecordView` `CDaoRecordView`a formantem edycji pola kombi w pliku a lub . Podczas przenoszenia danych z zestawu rekordów do formantu ta funkcja wybiera element w polu kombi, który rozpoczyna się od znaków w określonym ciągu.|
-|[DDX_FieldCBStringExact](#ddx_fieldcbstringexact)|Przesyła `CString` dane między elementem członkowskim danych pola zbioru rekordów `CRecordView` `CDaoRecordView`a formantem edycji pola kombi w pliku a lub . Podczas przenoszenia danych z zestawu rekordów do formantu ta funkcja wybiera element w polu kombi, który dokładnie pasuje do określonego ciągu.|
-|[DDX_FieldCheck](#ddx_fieldcheck)|Przesyła dane logiczne między elementem członkowskim pola zbioru rekordów a polem `CRecordView` wyboru w polu . `CDaoRecordView`|
-|[DDX_FieldLBIndex](#ddx_fieldlbindex)|Przesyła dane całkowite między elementem członkowskim danych pola zestawie rekordów a indeksem bieżącego zaznaczenia w polu listy w `CRecordView` polu lub . `CDaoRecordView`|
-|[DDX_FieldLBString](#ddx_fieldlbstring)|Zarządza transferem danych [CString](../../atl-mfc-shared/reference/cstringt-class.md) między formantem pola listy a członkami danych pola zestawie rekordów. Podczas przenoszenia danych z zestawie rekordów do formantu ta funkcja wybiera element w polu listy, który rozpoczyna się od znaków w określonym ciągu.|
-|[DDX_FieldLBStringExact](#ddx_fieldlbstringexact)|Zarządza transferem `CString` danych między formantem pola listy a członkami danych pola zestawie rekordów. Podczas przenoszenia danych z zestawu rekordów do formantu ta funkcja wybiera pierwszy element, który dokładnie pasuje do określonego ciągu.|
-|[DDX_FieldRadio](#ddx_fieldradio)|Przesyła dane całkowite między elementem członkowskim pola pliku recordset `CRecordView` a `CDaoRecordView`grupą przycisków radiowych w pliku lub .|
-|[DDX_FieldScroll](#ddx_fieldscroll)|Ustawia lub pobiera pozycję przewijania formantu paska przewijania w lub `CRecordView` . `CDaoRecordView` Zadzwoń z funkcji [DoFieldExchange.](../../mfc/reference/cdaorecordset-class.md#dofieldexchange)|
-|[DDX_FieldSlider](#ddx_fieldslider)|Synchronizuje położenie kciuka formantu suwaka w `int` widoku rekordu i członka danych pola w zbiorze rekordów. |
-|[DDX_FieldText](#ddx_fieldtext)|Przeciążone wersje są dostępne `int`do przesyłania , `DWORD` **UINT**, **long**, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **double**, **short**, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)i [COleCurrency](../../mfc/reference/colecurrency-class.md) danych między elementem członkowskim pola recordset i pole edycji w `CRecordView` lub . `CDaoRecordView`|
+|[DDX_FieldCBIndex](#ddx_fieldcbindex)|Przesyła dane całkowite między elementem członkowskim danych pola zestawu rekordów i indeksem bieżącego zaznaczenia w polu kombi w [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md).|
+|[DDX_FieldCBString](#ddx_fieldcbstring)|Przesyła `CString` dane między składową danych pola zestawu rekordów i kontrolki edycji pola kombi w `CRecordView` lub `CDaoRecordView` . Podczas przesuwania danych z zestawu rekordów do kontrolki ta funkcja wybiera element w polu kombi, który rozpoczyna się od znaków w określonym ciągu.|
+|[DDX_FieldCBStringExact](#ddx_fieldcbstringexact)|Przesyła `CString` dane między składową danych pola zestawu rekordów i kontrolki edycji pola kombi w `CRecordView` lub `CDaoRecordView` . Podczas przesuwania danych z zestawu rekordów do kontrolki ta funkcja wybiera element w polu kombi, który dokładnie pasuje do określonego ciągu.|
+|[DDX_FieldCheck](#ddx_fieldcheck)|Przesyła dane logiczne między elementem członkowskim danych pola zestawu rekordów a polem wyboru w `CRecordView` lub `CDaoRecordView` .|
+|[DDX_FieldLBIndex](#ddx_fieldlbindex)|Przenosi dane całkowite między elementem członkowskim danych pola zestawu rekordów a indeksem bieżącego zaznaczenia w polu listy w `CRecordView` lub `CDaoRecordView` .|
+|[DDX_FieldLBString](#ddx_fieldlbstring)|Zarządza transferem danych [CString](../../atl-mfc-shared/reference/cstringt-class.md) między kontrolką pola listy i elementami członkowskimi danych pola zestawu rekordów. Podczas przesuwania danych z zestawu rekordów do kontrolki ta funkcja wybiera element w polu listy, który rozpoczyna się od znaków w określonym ciągu.|
+|[DDX_FieldLBStringExact](#ddx_fieldlbstringexact)|Zarządza przesyłaniem `CString` danych między kontrolką pola listy i elementami członkowskimi danych pola zestawu rekordów. Podczas przesuwania danych z zestawu rekordów do kontrolki ta funkcja wybiera pierwszy element, który dokładnie pasuje do określonego ciągu.|
+|[DDX_FieldRadio](#ddx_fieldradio)|Przenosi dane całkowite między elementem członkowskim danych pola zestawu rekordów i grupą przycisków radiowych w `CRecordView` lub `CDaoRecordView` .|
+|[DDX_FieldScroll](#ddx_fieldscroll)|Ustawia lub Pobiera pozycję przewijania kontrolki paska przewijania w `CRecordView` lub `CDaoRecordView` . Wywołanie z funkcji [DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) .|
+|[DDX_FieldSlider](#ddx_fieldslider)|Synchronizuje położenie kciuka kontrolki suwaka w widoku rekordu i **`int`** element członkowski danych pola zestawu rekordów. |
+|[DDX_FieldText](#ddx_fieldtext)|Przeciążone wersje są dostępne do transferowania **`int`** , **uint**,,, CString,,,, **`long`** `DWORD` [CString](../../atl-mfc-shared/reference/cstringt-class.md) **`float`** **`double`** **`short`** [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)i [COleCurrency](../../mfc/reference/colecurrency-class.md) danych między składową danych pola zestawu rekordów a polem edycji w `CRecordView` lub `CDaoRecordView` .|
 
 ## <a name="ddx_fieldcbindex"></a><a name="ddx_fieldcbindex"></a>DDX_FieldCBIndex
 
-Funkcja `DDX_FieldCBIndex` synchronizuje indeks zaznaczonego elementu w formancie pola listy formantu pola `int` kombi w widoku rekordu i członka danych pola z zestawem rekordów skojarzonym z widokiem rekordu.
+`DDX_FieldCBIndex`Funkcja synchronizuje indeks zaznaczonego elementu w kontrolce pole kombi w widoku rekordu i element **`int`** członkowski danych pola zestawu rekordów skojarzonego z widokiem rekordu.
 
 ```cpp
 void AFXAPI DDX_FieldCBIndex(
@@ -70,37 +70,37 @@ void AFXAPI DDX_FieldCBIndex(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdx*<br/>
-Wskaźnik do [obiektu CDataExchange.](../../mfc/reference/cdataexchange-class.md) Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
+*pDX*<br/>
+Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md) . Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*nIDC (nIDC)*<br/>
-Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.
+*nIDC*<br/>
+Identyfikator kontrolki w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*Indeks*<br/>
-Odwołanie do elementu członkowskiego danych pola `CRecordset` `CDaoRecordset` w skojarzonym lub obiektu.
+*indeks*<br/>
+Odwołanie do elementu członkowskiego danych pola w obiekcie skojarzonym `CRecordset` lub `CDaoRecordset` .
 
-*pRekord*<br/>
-Wskaźnik do [obiektu CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) za pomocą którego są wymieniane dane.
+*pRecordset*<br/>
+Wskaźnik do obiektu [CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
 
-Podczas przenoszenia danych z zestawu rekordów do formantu ta funkcja ustawia zaznaczenie w formancie na podstawie wartości określonej w *indeksie*. W przypadku transferu z zestawu rekordów do formantu, jeśli pole zestaw rekordów jest Null, MFC ustawia wartość indeksu na 0. W przypadku transferu z formantu do zestawu rekordów, jeśli formant jest pusty lub jeśli nie wybrano żadnego elementu, pole zestawu rekordów jest ustawione na 0.
+Podczas przesuwania danych z zestawu rekordów do kontrolki ta funkcja ustawia zaznaczenie w kontrolce na podstawie wartości określonej w *indeksie*. W przypadku transferu z zestawu rekordów do formantu, jeśli pole zestaw rekordów ma wartość null, MFC ustawi wartość indeksu na 0. W przypadku transferu z kontroli do zestawu rekordów, Jeśli kontrolka jest pusta lub jeśli żaden element nie jest zaznaczony, pole zestaw rekordów jest ustawione na 0.
 
-Użyj pierwszej wersji, jeśli pracujesz z klasami opartymi na ODBC. Użyj drugiej wersji, jeśli pracujesz z klasami opartymi na DAO.
+Użyj pierwszej wersji, jeśli pracujesz z klasami opartymi na ODBC. Użyj drugiej wersji, jeśli pracujesz z klasami opartymi na programie DAO.
 
-Aby uzyskać więcej informacji na temat DDX, zobacz [Okno Dialog wymiany danych i sprawdzania poprawności](../../mfc/dialog-data-exchange-and-validation.md). Aby uzyskać przykłady i więcej informacji na temat pól DDX dla [CRecordView](../../mfc/reference/crecordview-class.md) i [CDaoRecordView,](../../mfc/reference/cdaorecordview-class.md) zobacz artykuł [Widoki rekordów](../../data/record-views-mfc-data-access.md).
+Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja danych w oknie dialogowym](../../mfc/dialog-data-exchange-and-validation.md). Przykłady i więcej informacji na temat DDX dla pól [formularzy CRecordView](../../mfc/reference/crecordview-class.md) i [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) można znaleźć w artykułach [widoki rekordów](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [DDX_FieldText,](#ddx_fieldtext) aby zapoznać się DDX_Field przykładem. Przykład może być `DDX_FieldCBIndex`podobny dla .
+Zobacz [DDX_FieldText](#ddx_fieldtext) , aby uzyskać przykład DDX_Field ogólny. Przykład będzie podobny do `DDX_FieldCBIndex` .
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdao.h
+**Nagłówek:** afxdao. h
 
 ## <a name="ddx_fieldcbstring"></a><a name="ddx_fieldcbstring"></a>DDX_FieldCBString
 
-Funkcja `DDX_FieldCBString` zarządza transferem danych [CString](../../atl-mfc-shared/reference/cstringt-class.md) między formantem edycji formantu pola `CString` kombi w widoku rekordu a elementem członkowskim danych pola z zestawem rekordów skojarzonym z widokiem rekordu.
+`DDX_FieldCBString`Funkcja zarządza transferem danych [CString](../../atl-mfc-shared/reference/cstringt-class.md) między kontrolką edycji kontrolki pola kombi w widoku rekordu i elementem `CString` członkowskim danych pola zestawu rekordów skojarzonego z widokiem rekordu.
 
 ```cpp
 void AFXAPI DDX_FieldCBString(
@@ -118,37 +118,37 @@ void AFXAPI DDX_FieldCBString(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdx*<br/>
-Wskaźnik do [obiektu CDataExchange.](../../mfc/reference/cdataexchange-class.md) Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
+*pDX*<br/>
+Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md) . Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*nIDC (nIDC)*<br/>
-Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.
+*nIDC*<br/>
+Identyfikator kontrolki w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*value*<br/>
-Odwołanie do elementu członkowskiego danych pola `CRecordset` `CDaoRecordset` w skojarzonym lub obiektu.
+*wartościami*<br/>
+Odwołanie do elementu członkowskiego danych pola w obiekcie skojarzonym `CRecordset` lub `CDaoRecordset` .
 
-*pRekord*<br/>
-Wskaźnik do [obiektu CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) za pomocą którego są wymieniane dane.
+*pRecordset*<br/>
+Wskaźnik do obiektu [CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
 
-Podczas przenoszenia danych z zbioru rekordów do formantu ta funkcja ustawia bieżące zaznaczenie w polu kombi na pierwszy wiersz rozpoczynający się od znaków w ciągu określonym w *wartości*. W przypadku transferu z zestawu rekordów do formantu, jeśli pole zestawu rekordów jest null, wszelkie zaznaczenia są usuwane z pola kombi, a formant edycji pola kombi jest ustawiony na pusty. W przypadku transferu z formantu do zestawu rekordów, jeśli formant jest pusty, pole zestawu rekordów jest ustawione na Null, jeśli pole na to pozwala.
+Podczas przesuwania danych z zestawu rekordów do kontrolki ta funkcja ustawia bieżące zaznaczenie w polu kombi na pierwszy wiersz, który rozpoczyna się od znaków w ciągu określonym w *wartości*. W przypadku transferu z zestawu rekordów do kontrolki, jeśli pole zestaw rekordów ma wartość null, każdy wybór zostanie usunięty z pola kombi, a kontrolka edycji pola kombi jest ustawiona na wartość puste. W przypadku przeniesienia z kontroli do zestawu rekordów, Jeśli kontrolka jest pusta, pole zestaw rekordów ma wartość null, jeśli pole zezwala.
 
-Użyj pierwszej wersji, jeśli pracujesz z klasami opartymi na ODBC. Użyj drugiej wersji, jeśli pracujesz z klasami opartymi na DAO.
+Użyj pierwszej wersji, jeśli pracujesz z klasami opartymi na ODBC. Użyj drugiej wersji, jeśli pracujesz z klasami opartymi na programie DAO.
 
-Aby uzyskać więcej informacji na temat DDX, zobacz [Okno Dialog wymiany danych i sprawdzania poprawności](../../mfc/dialog-data-exchange-and-validation.md). Aby uzyskać przykłady i więcej informacji na temat pól DDX dla [CRecordView](../../mfc/reference/crecordview-class.md) i [CDaoRecordView,](../../mfc/reference/cdaorecordview-class.md) zobacz artykuł [Widoki rekordów](../../data/record-views-mfc-data-access.md).
+Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja danych w oknie dialogowym](../../mfc/dialog-data-exchange-and-validation.md). Przykłady i więcej informacji na temat DDX dla pól [formularzy CRecordView](../../mfc/reference/crecordview-class.md) i [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) można znaleźć w artykułach [widoki rekordów](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [DDX_FieldText,](#ddx_fieldtext) aby zapoznać się DDX_Field przykładem. Przykład zawiera wywołanie `DDX_FieldCBString`.
+Zobacz [DDX_FieldText](#ddx_fieldtext) , aby uzyskać przykład DDX_Field ogólny. Przykład zawiera wywołanie `DDX_FieldCBString` .
 
 ### <a name="requirements"></a>Wymagania
 
-  **Nagłówek** afxdao.h
+  **Nagłówek** afxdao. h
 
 ## <a name="ddx_fieldcbstringexact"></a><a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact
 
-Funkcja `DDX_FieldCBStringExact` zarządza transferem danych [CString](../../atl-mfc-shared/reference/cstringt-class.md) między formantem edycji formantu pola `CString` kombi w widoku rekordu a elementem członkowskim danych pola z zestawem rekordów skojarzonym z widokiem rekordu.
+`DDX_FieldCBStringExact`Funkcja zarządza transferem danych [CString](../../atl-mfc-shared/reference/cstringt-class.md) między kontrolką edycji kontrolki pola kombi w widoku rekordu i elementem `CString` członkowskim danych pola zestawu rekordów skojarzonego z widokiem rekordu.
 
 ```cpp
 void AFXAPI DDX_FieldCBStringExact(
@@ -166,37 +166,37 @@ void AFXAPI DDX_FieldCBStringExact(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdx*<br/>
-Wskaźnik do [obiektu CDataExchange.](../../mfc/reference/cdataexchange-class.md) Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
+*pDX*<br/>
+Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md) . Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*nIDC (nIDC)*<br/>
-Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.
+*nIDC*<br/>
+Identyfikator kontrolki w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*value*<br/>
-Odwołanie do elementu członkowskiego danych pola `CRecordset` `CDaoRecordset` w skojarzonym lub obiektu.
+*wartościami*<br/>
+Odwołanie do elementu członkowskiego danych pola w obiekcie skojarzonym `CRecordset` lub `CDaoRecordset` .
 
-*pRekord*<br/>
-Wskaźnik do [obiektu CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) za pomocą którego są wymieniane dane.
+*pRecordset*<br/>
+Wskaźnik do obiektu [CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
 
-Podczas przenoszenia danych z zestawu rekordów do formantu ta funkcja ustawia bieżące zaznaczenie w polu kombi na pierwszy wiersz, który dokładnie odpowiada ciągowi określonej w *wartości*. W przypadku transferu z zestawu rekordów do formantu, jeśli pole zestawu rekordów ma wartość NULL, każde zaznaczenie jest usuwane z pola kombi, a pole edycji pola kombi jest puste. W przypadku transferu z formantu do zestawu rekordów, jeśli formant jest pusty, pole zestawu rekordów jest ustawione na wartość NULL.
+Podczas przesuwania danych z zestawu rekordów do kontrolki ta funkcja ustawia bieżące zaznaczenie w polu kombi na pierwszy wiersz, który dokładnie pasuje do ciągu określonego w *wartości*. W przypadku transferu z zestawu rekordów do kontrolki, jeśli pole zestaw rekordów ma wartość NULL, każdy zaznaczony element zostanie usunięty z pola kombi, a pole kombi jest ustawione jako puste. W przypadku transferu z kontroli do zestawu rekordów, Jeśli kontrolka jest pusta, pole zestaw rekordów jest ustawione na wartość NULL.
 
-Użyj pierwszej wersji, jeśli pracujesz z klasami opartymi na ODBC. Użyj drugiej wersji, jeśli pracujesz z klasami opartymi na DAO.
+Użyj pierwszej wersji, jeśli pracujesz z klasami opartymi na ODBC. Użyj drugiej wersji, jeśli pracujesz z klasami opartymi na programie DAO.
 
-Aby uzyskać więcej informacji na temat DDX, zobacz [Okno Dialog wymiany danych i sprawdzania poprawności](../../mfc/dialog-data-exchange-and-validation.md). Aby uzyskać przykłady i więcej informacji na temat pól DDX dla [CRecordView](../../mfc/reference/crecordview-class.md) i [CDaoRecordView,](../../mfc/reference/cdaorecordview-class.md) zobacz artykuł [Widoki rekordów](../../data/record-views-mfc-data-access.md).
+Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja danych w oknie dialogowym](../../mfc/dialog-data-exchange-and-validation.md). Przykłady i więcej informacji na temat DDX dla pól [formularzy CRecordView](../../mfc/reference/crecordview-class.md) i [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) można znaleźć w artykułach [widoki rekordów](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [DDX_FieldText,](#ddx_fieldtext) aby zapoznać się DDX_Field przykładem. Wezwania `DDX_FieldCBStringExact` byłyby podobne.
+Zobacz [DDX_FieldText](#ddx_fieldtext) , aby uzyskać przykład DDX_Field ogólny. Wywołania `DDX_FieldCBStringExact` byłyby podobne.
 
 ### <a name="requirements"></a>Wymagania
 
-  **Nagłówek** afxdao.h
+  **Nagłówek** afxdao. h
 
 ## <a name="ddx_fieldcheck"></a><a name="ddx_fieldcheck"></a>DDX_FieldCheck
 
-Funkcja `DDX_FieldCheck` zarządza transferem danych **int** między formantem pola wyboru w oknie dialogowym, widoku formularza lub obiektu widoku sterującego a elementem członkowskim danych **int** okna dialogowego, widoku formularza lub obiektu widoku sterującego.
+`DDX_FieldCheck`Funkcja zarządza przesyłaniem **`int`** danych między kontrolką pola wyboru w oknie dialogowym, widoku Formularz lub obiektem widoku formantu i **`int`** elementem członkowskim danych okna dialogowego, widoku formularza lub obiektu widoku formantu.
 
 ```cpp
 void AFXAPI DDX_FieldCheck(
@@ -214,31 +214,31 @@ void AFXAPI DDX_FieldCheck(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdx*<br/>
-Wskaźnik do [obiektu CDataExchange.](../../mfc/reference/cdataexchange-class.md) Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
+*pDX*<br/>
+Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md) . Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*nIDC (nIDC)*<br/>
-Identyfikator zasobu formantu pola wyboru skojarzonego z właściwością formantu.
+*nIDC*<br/>
+Identyfikator zasobu kontrolki pola wyboru skojarzonej z właściwością kontrolki.
 
-*value*<br/>
-Odwołanie do zmiennej elementu członkowskiego okna dialogowego, widoku formularza lub obiektu widoku sterującego, z którym są wymieniane dane.
+*wartościami*<br/>
+Odwołanie do zmiennej składowej okna dialogowego, widoku formularza lub obiektu widoku formantu, z którym są wymieniane dane.
 
-*pRekord*<br/>
-Wskaźnik do [obiektu CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) za pomocą którego są wymieniane dane.
+*pRecordset*<br/>
+Wskaźnik do obiektu [CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
 
-Gdy `DDX_FieldCheck` jest wywoływana, *wartość* jest ustawiona na bieżący stan formantu pola wyboru lub stan formantu jest ustawiona na *wartość*, w zależności od kierunku transferu.
+Gdy `DDX_FieldCheck` jest wywoływana, *wartość* jest ustawiana na bieżący stan kontrolki pole wyboru lub stan kontrolki jest ustawiony na *wartość*, w zależności od kierunku transferu.
 
-Aby uzyskać więcej informacji na temat DDX, zobacz [Okno Dialog wymiany danych i sprawdzania poprawności](../../mfc/dialog-data-exchange-and-validation.md).
+Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja danych w oknie dialogowym](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Wymagania
 
-  **Nagłówek** afxdao.h
+  **Nagłówek** afxdao. h
 
 ## <a name="ddx_fieldlbindex"></a><a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex
 
-Funkcja `DDX_FieldLBIndex` synchronizuje indeks zaznaczonego elementu w formancie pola listy w widoku rekordu i element członkowski danych pola **int** zestawie rekordów skojarzony z widokiem rekordu.
+`DDX_FieldLBIndex`Funkcja synchronizuje indeks wybranego elementu w kontrolce pole listy w widoku rekordu i **`int`** element członkowski danych pola zestawu rekordów skojarzonego z widokiem rekordu.
 
 ```cpp
 void AFXAPI DDX_FieldLBIndex(
@@ -256,37 +256,37 @@ void AFXAPI DDX_FieldLBIndex(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdx*<br/>
-Wskaźnik do [obiektu CDataExchange.](../../mfc/reference/cdataexchange-class.md) Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
+*pDX*<br/>
+Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md) . Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*nIDC (nIDC)*<br/>
-Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.
+*nIDC*<br/>
+Identyfikator kontrolki w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*Indeks*<br/>
-Odwołanie do elementu członkowskiego danych pola `CRecordset` `CDaoRecordset` w skojarzonym lub obiektu.
+*indeks*<br/>
+Odwołanie do elementu członkowskiego danych pola w obiekcie skojarzonym `CRecordset` lub `CDaoRecordset` .
 
-*pRekord*<br/>
-Wskaźnik do [obiektu CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) za pomocą którego są wymieniane dane.
+*pRecordset*<br/>
+Wskaźnik do obiektu [CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
 
-Podczas przenoszenia danych z zestawu rekordów do formantu ta funkcja ustawia zaznaczenie w formancie na podstawie wartości określonej w *indeksie*. W przypadku transferu z zestawu rekordów do formantu, jeśli pole zestaw rekordów jest Null, MFC ustawia wartość indeksu na 0. W przypadku transferu z formantu do zestawu rekordów, jeśli formant jest pusty, pole zestawu rekordów jest ustawione na 0.
+Podczas przesuwania danych z zestawu rekordów do kontrolki ta funkcja ustawia zaznaczenie w kontrolce na podstawie wartości określonej w *indeksie*. W przypadku transferu z zestawu rekordów do formantu, jeśli pole zestaw rekordów ma wartość null, MFC ustawi wartość indeksu na 0. W przypadku przeniesienia z kontroli do zestawu rekordów, Jeśli kontrolka jest pusta, pole zestaw rekordów jest ustawione na 0.
 
-Użyj pierwszej wersji, jeśli pracujesz z klasami opartymi na ODBC. Użyj drugiej wersji, jeśli pracujesz z klasami opartymi na DAO.
+Użyj pierwszej wersji, jeśli pracujesz z klasami opartymi na ODBC. Użyj drugiej wersji, jeśli pracujesz z klasami opartymi na programie DAO.
 
-Aby uzyskać więcej informacji na temat DDX, zobacz [Okno Dialog wymiany danych i sprawdzania poprawności](../../mfc/dialog-data-exchange-and-validation.md). Aby uzyskać przykłady i więcej informacji na temat pól DDX dla [CRecordView](../../mfc/reference/crecordview-class.md) i [CDaoRecordView,](../../mfc/reference/cdaorecordview-class.md) zobacz artykuł [Widoki rekordów](../../data/record-views-mfc-data-access.md).
+Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja danych w oknie dialogowym](../../mfc/dialog-data-exchange-and-validation.md). Przykłady i więcej informacji na temat DDX dla pól [formularzy CRecordView](../../mfc/reference/crecordview-class.md) i [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) można znaleźć w artykułach [widoki rekordów](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [DDX_FieldText,](#ddx_fieldtext) aby zapoznać się DDX_Field przykładem.
+Zobacz [DDX_FieldText](#ddx_fieldtext) , aby uzyskać przykład DDX_Field ogólny.
 
 ### <a name="requirements"></a>Wymagania
 
-  **Nagłówek** afxdao.h
+  **Nagłówek** afxdao. h
 
 ## <a name="ddx_fieldlbstring"></a><a name="ddx_fieldlbstring"></a>DDX_FieldLBString
 
-Kopiuje `DDX_FieldLBString` bieżący wybór formantu pola listy w widoku rekordu do członka danych pola [CString](../../atl-mfc-shared/reference/cstringt-class.md) w zestawie rekordów skojarzonym z widokiem rekordu.
+`DDX_FieldLBString`Kopiuje bieżące zaznaczenie kontrolki pole listy w widoku rekordu do elementu członkowskiego danych pola [CString](../../atl-mfc-shared/reference/cstringt-class.md) zestawu rekordów skojarzonego z widokiem rekordu.
 
 ```cpp
 void AFXAPI DDX_FieldLBString(
@@ -304,37 +304,37 @@ void AFXAPI DDX_FieldLBString(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdx*<br/>
-Wskaźnik do [obiektu CDataExchange.](../../mfc/reference/cdataexchange-class.md) Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
+*pDX*<br/>
+Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md) . Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*nIDC (nIDC)*<br/>
-Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.
+*nIDC*<br/>
+Identyfikator kontrolki w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*value*<br/>
-Odwołanie do elementu członkowskiego danych pola `CRecordset` `CDaoRecordset` w skojarzonym lub obiektu.
+*wartościami*<br/>
+Odwołanie do elementu członkowskiego danych pola w obiekcie skojarzonym `CRecordset` lub `CDaoRecordset` .
 
-*pRekord*<br/>
-Wskaźnik do [obiektu CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) za pomocą którego są wymieniane dane.
+*pRecordset*<br/>
+Wskaźnik do obiektu [CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
 
-W kierunku odwrotnym ta funkcja ustawia bieżące zaznaczenie w polu listy na pierwszy wiersz, który zaczyna się od znaków w ciągu określonym przez *wartość*. W przypadku transferu z zestawie rekordów do formantu, jeśli pole zestawie rekordów jest null, wszelkie zaznaczenia są usuwane z pola listy. W przypadku transferu z formantu do zestawu rekordów, jeśli formant jest pusty, pole zestawu rekordów jest ustawione na Wartość Null.
+W odwrotnym kierunku ta funkcja ustawia bieżące zaznaczenie w polu listy na pierwszy wiersz zaczynający się od znaków w ciągu określonym przez *wartość*. W przypadku transferu z zestawu rekordów do kontrolki, jeśli pole zestaw rekordów ma wartość null, wszystkie zaznaczenia zostaną usunięte z pola listy. W przypadku transferu z kontroli do zestawu rekordów, Jeśli kontrolka jest pusta, pole zestaw rekordów jest ustawione na wartość null.
 
-Użyj pierwszej wersji, jeśli pracujesz z klasami opartymi na ODBC. Użyj drugiej wersji, jeśli pracujesz z klasami opartymi na DAO.
+Użyj pierwszej wersji, jeśli pracujesz z klasami opartymi na ODBC. Użyj drugiej wersji, jeśli pracujesz z klasami opartymi na programie DAO.
 
-Aby uzyskać więcej informacji na temat DDX, zobacz [Okno Dialog wymiany danych i sprawdzania poprawności](../../mfc/dialog-data-exchange-and-validation.md). Aby uzyskać przykłady i więcej informacji na temat pól DDX dla [CRecordView](../../mfc/reference/crecordview-class.md) i [CDaoRecordView,](../../mfc/reference/cdaorecordview-class.md) zobacz artykuł [Widoki rekordów](../../data/record-views-mfc-data-access.md).
+Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja danych w oknie dialogowym](../../mfc/dialog-data-exchange-and-validation.md). Przykłady i więcej informacji na temat DDX dla pól [formularzy CRecordView](../../mfc/reference/crecordview-class.md) i [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) można znaleźć w artykułach [widoki rekordów](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [DDX_FieldText,](#ddx_fieldtext) aby zapoznać się DDX_Field przykładem. Wezwania `DDX_FieldLBString` byłyby podobne.
+Zobacz [DDX_FieldText](#ddx_fieldtext) , aby uzyskać przykład DDX_Field ogólny. Wywołania `DDX_FieldLBString` byłyby podobne.
 
 ### <a name="requirements"></a>Wymagania
 
-  **Nagłówek** afxdao.h
+  **Nagłówek** afxdao. h
 
 ## <a name="ddx_fieldlbstringexact"></a><a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact
 
-Funkcja `DDX_FieldLBStringExact` kopiuje bieżący wybór formantu pola listy w widoku rekordu do elementu członkowskiego danych pola [CString](../../atl-mfc-shared/reference/cstringt-class.md) w zestawie rekordów skojarzonym z widokiem rekordu.
+`DDX_FieldLBStringExact`Funkcja kopiuje bieżące zaznaczenie kontrolki pole listy w widoku rekordu do elementu członkowskiego danych pola [CString](../../atl-mfc-shared/reference/cstringt-class.md) zestawu rekordów skojarzonego z widokiem rekordu.
 
 ```cpp
 void AFXAPI DDX_FieldLBStringExact(
@@ -352,37 +352,37 @@ void AFXAPI DDX_FieldLBStringExact(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdx*<br/>
-Wskaźnik do [obiektu CDataExchange.](../../mfc/reference/cdataexchange-class.md) Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
+*pDX*<br/>
+Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md) . Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*nIDC (nIDC)*<br/>
-Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.
+*nIDC*<br/>
+Identyfikator kontrolki w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*value*<br/>
-Odwołanie do elementu członkowskiego danych pola `CRecordset` `CDaoRecordset` w skojarzonym lub obiektu.
+*wartościami*<br/>
+Odwołanie do elementu członkowskiego danych pola w obiekcie skojarzonym `CRecordset` lub `CDaoRecordset` .
 
-*pRekord*<br/>
-Wskaźnik do [obiektu CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) za pomocą którego są wymieniane dane.
+*pRecordset*<br/>
+Wskaźnik do obiektu [CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
 
-W odwrotnym kierunku ta funkcja ustawia bieżące zaznaczenie w polu listy na pierwszy wiersz, który dokładnie pasuje do ciągu określonego w *wartości*. W przypadku transferu z zestawie rekordów do formantu, jeśli pole zestawie rekordów jest null, wszelkie zaznaczenia są usuwane z pola listy. W przypadku transferu z formantu do zestawu rekordów, jeśli formant jest pusty, pole zestawu rekordów jest ustawione na Wartość Null.
+W odwrotnym kierunku ta funkcja ustawia bieżące zaznaczenie w polu listy na pierwszy wiersz, który dokładnie pasuje do ciągu określonego w *wartości*. W przypadku transferu z zestawu rekordów do kontrolki, jeśli pole zestaw rekordów ma wartość null, wszystkie zaznaczenia zostaną usunięte z pola listy. W przypadku transferu z kontroli do zestawu rekordów, Jeśli kontrolka jest pusta, pole zestaw rekordów jest ustawione na wartość null.
 
-Użyj pierwszej wersji, jeśli pracujesz z klasami opartymi na ODBC. Użyj drugiej wersji, jeśli pracujesz z klasami opartymi na DAO.
+Użyj pierwszej wersji, jeśli pracujesz z klasami opartymi na ODBC. Użyj drugiej wersji, jeśli pracujesz z klasami opartymi na programie DAO.
 
-Aby uzyskać więcej informacji na temat DDX, zobacz [Okno Dialog wymiany danych i sprawdzania poprawności](../../mfc/dialog-data-exchange-and-validation.md). Aby uzyskać przykłady i więcej informacji na temat pól DDX dla [CRecordView](../../mfc/reference/crecordview-class.md) i [CDaoRecordView,](../../mfc/reference/cdaorecordview-class.md) zobacz artykuł [Widoki rekordów](../../data/record-views-mfc-data-access.md).
+Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja danych w oknie dialogowym](../../mfc/dialog-data-exchange-and-validation.md). Przykłady i więcej informacji na temat DDX dla pól [formularzy CRecordView](../../mfc/reference/crecordview-class.md) i [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) można znaleźć w artykułach [widoki rekordów](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [DDX_FieldText,](#ddx_fieldtext) aby zapoznać się DDX_Field przykładem. Wezwania `DDX_FieldLBStringExact` byłyby podobne.
+Zobacz [DDX_FieldText](#ddx_fieldtext) , aby uzyskać przykład DDX_Field ogólny. Wywołania `DDX_FieldLBStringExact` byłyby podobne.
 
 ### <a name="requirements"></a>Wymagania
 
-  **Nagłówek** afxdao.h
+  **Nagłówek** afxdao. h
 
 ## <a name="ddx_fieldradio"></a><a name="ddx_fieldradio"></a>DDX_FieldRadio
 
-Funkcja `DDX_FieldRadio` kojarzy zmienną **elementów** członkowskich int opartą na wartości zerowej w akuplcie widoku rekordu z aktualnie wybranym przyciskiem opcji w grupie przycisków radiowych w widoku rekordu.
+`DDX_FieldRadio`Funkcja kojarzy **`int`** zmienną członkowską od zera zestawu rekordów widoku rekordu z aktualnie wybranym przyciskiem radiowym w grupie przycisków radiowych w widoku rekordu.
 
 ```cpp
 void AFXAPI DDX_FieldRadio(
@@ -400,37 +400,37 @@ void AFXAPI DDX_FieldRadio(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdx*<br/>
-Wskaźnik do [obiektu CDataExchange.](../../mfc/reference/cdataexchange-class.md) Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
+*pDX*<br/>
+Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md) . Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*nIDC (nIDC)*<br/>
-Identyfikator pierwszego w grupie (ze stylem WS_GROUP) sąsiednich formantu przycisku radiowego w [obiekcie CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView.](../../mfc/reference/cdaorecordview-class.md)
+*nIDC*<br/>
+Identyfikator pierwszego w grupie (z stylem WS_GROUP) sąsiadujących kontrolek przycisków radiowych w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*value*<br/>
-Odwołanie do elementu członkowskiego danych pola `CRecordset` `CDaoRecordset` w skojarzonym lub obiektu.
+*wartościami*<br/>
+Odwołanie do elementu członkowskiego danych pola w obiekcie skojarzonym `CRecordset` lub `CDaoRecordset` .
 
-*pRekord*<br/>
-Wskaźnik do [obiektu CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) za pomocą którego są wymieniane dane.
+*pRecordset*<br/>
+Wskaźnik do obiektu [CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
 
-Podczas przenoszenia z pola zestaw rekordów do widoku ta funkcja włącza *n-ty* przycisk radiowy (oparty na wartości zero) i wyłącza inne przyciski. W odwrotnym kierunku ta funkcja ustawia pole zestawu rekordów na numer porządkowy przycisku opcji, który jest aktualnie włączony (zaznaczony). W przypadku transferu z listy rekordów do formantu, jeśli polemikawnika rekordów ma wartość Null, nie wybrano żadnego przycisku. W przypadku transferu z formantu do zestawu rekordów, jeśli nie wybrano żadnej kontroli, pole zestawu rekordów jest ustawione na Null, jeśli pole na to zezwala.
+Podczas przenoszenia z pola zestaw rekordów do widoku ta funkcja włącza *n-ty* przycisk radiowy (liczony od zera) i wyłącza pozostałe przyciski. W odwrotnym kierunku ta funkcja ustawia pole zestaw rekordów na numer porządkowy przycisku radiowego, który jest obecnie włączony (zaznaczone). W przypadku transferu z zestawu rekordów do kontrolki, jeśli pole zestaw rekordów ma wartość null, nie jest wybrany żaden przycisk. W przypadku transferu z kontroli do zestawu rekordów, jeśli żadna kontrola nie jest zaznaczona, pole zestaw rekordów jest ustawione na wartość null, jeśli pole to zezwoli.
 
-Użyj pierwszej wersji, jeśli pracujesz z klasami opartymi na ODBC. Użyj drugiej wersji, jeśli pracujesz z klasami opartymi na DAO.
+Użyj pierwszej wersji, jeśli pracujesz z klasami opartymi na ODBC. Użyj drugiej wersji, jeśli pracujesz z klasami opartymi na programie DAO.
 
-Aby uzyskać więcej informacji na temat DDX, zobacz [Okno Dialog wymiany danych i sprawdzania poprawności](../../mfc/dialog-data-exchange-and-validation.md). Aby uzyskać przykłady i więcej informacji na temat pól DDX dla [CRecordView](../../mfc/reference/crecordview-class.md) i [CDaoRecordView,](../../mfc/reference/cdaorecordview-class.md) zobacz artykuł [Widoki rekordów](../../data/record-views-mfc-data-access.md).
+Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja danych w oknie dialogowym](../../mfc/dialog-data-exchange-and-validation.md). Przykłady i więcej informacji na temat DDX dla pól [formularzy CRecordView](../../mfc/reference/crecordview-class.md) i [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) można znaleźć w artykułach [widoki rekordów](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [DDX_FieldText,](#ddx_fieldtext) aby zapoznać się DDX_Field przykładem. Wezwania `DDX_FieldRadio` byłyby podobne.
+Zobacz [DDX_FieldText](#ddx_fieldtext) , aby uzyskać przykład DDX_Field ogólny. Wywołania `DDX_FieldRadio` byłyby podobne.
 
 ### <a name="requirements"></a>Wymagania
 
-  **Nagłówek** afxdao.h
+  **Nagłówek** afxdao. h
 
 ## <a name="ddx_fieldscroll"></a><a name="ddx_fieldscroll"></a>DDX_FieldScroll
 
-Funkcja `DDX_FieldScroll` synchronizuje położenie przewijania formantu paska przewijania w widoku rekordu i elementu członkowskiego danych pola **int** w komecie rekordów skojarzonego z widokiem rekordu (lub ze zmienną całkowitą, na którą chcesz go zamapować).
+`DDX_FieldScroll`Funkcja synchronizuje położenie przewijania kontrolki pasek przewijania w widoku rekordu i **`int`** element członkowski danych pola zestawu rekordów skojarzonego z widokiem rekordu (lub z dowolną zmienną całkowitą wybraną do zmapowania).
 
 ```cpp
 void AFXAPI DDX_FieldScroll(
@@ -448,37 +448,37 @@ void AFXAPI DDX_FieldScroll(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdx*<br/>
-Wskaźnik do [obiektu CDataExchange.](../../mfc/reference/cdataexchange-class.md) Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
+*pDX*<br/>
+Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md) . Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*nIDC (nIDC)*<br/>
-Identyfikator pierwszego w grupie (ze stylem WS_GROUP) sąsiednich formantu przycisku radiowego w [obiekcie CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView.](../../mfc/reference/cdaorecordview-class.md)
+*nIDC*<br/>
+Identyfikator pierwszego w grupie (z stylem WS_GROUP) sąsiadujących kontrolek przycisków radiowych w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*value*<br/>
-Odwołanie do elementu członkowskiego danych pola `CRecordset` `CDaoRecordset` w skojarzonym lub obiektu.
+*wartościami*<br/>
+Odwołanie do elementu członkowskiego danych pola w obiekcie skojarzonym `CRecordset` lub `CDaoRecordset` .
 
-*pRekord*<br/>
-Wskaźnik do [obiektu CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) za pomocą którego są wymieniane dane.
+*pRecordset*<br/>
+Wskaźnik do obiektu [CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
 
-Podczas przenoszenia danych z zestawu rekordów do formantu ta funkcja ustawia położenie przewijania formantu paska przewijania na wartość *określoną*w wartości . W przypadku transferu z zestawu rekordów do formantu, jeśli pole zestawu rekordów jest null, kontrolka paska przewijania jest ustawiona na 0. W przypadku transferu z formantu do formantu, jeśli formant jest pusty, wartość pola pliku recordset wynosi 0.
+Podczas przesuwania danych z zestawu rekordów do kontrolki ta funkcja ustawia położenie przewijania kontrolki paska przewijania na wartość określoną w polu *wartość*. W przypadku transferu z zestawu rekordów do kontrolki, jeśli pole zestaw rekordów ma wartość null, kontrolka paska przewijania jest ustawiona na 0. W przypadku transferu z kontroli do zestawu rekordów, Jeśli kontrolka jest pusta, wartość pola zestaw rekordów jest równa 0.
 
-Użyj pierwszej wersji, jeśli pracujesz z klasami opartymi na ODBC. Użyj drugiej wersji, jeśli pracujesz z klasami opartymi na DAO.
+Użyj pierwszej wersji, jeśli pracujesz z klasami opartymi na ODBC. Użyj drugiej wersji, jeśli pracujesz z klasami opartymi na programie DAO.
 
-Aby uzyskać więcej informacji na temat DDX, zobacz [Okno Dialog wymiany danych i sprawdzania poprawności](../../mfc/dialog-data-exchange-and-validation.md). Aby uzyskać przykłady i więcej informacji na temat pól DDX dla [CRecordView](../../mfc/reference/crecordview-class.md) i [CDaoRecordView,](../../mfc/reference/cdaorecordview-class.md) zobacz artykuł [Widoki rekordów](../../data/record-views-mfc-data-access.md).
+Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja danych w oknie dialogowym](../../mfc/dialog-data-exchange-and-validation.md). Przykłady i więcej informacji na temat DDX dla pól [formularzy CRecordView](../../mfc/reference/crecordview-class.md) i [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) można znaleźć w artykułach [widoki rekordów](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [DDX_FieldText,](#ddx_fieldtext) aby zapoznać się DDX_Field przykładem. Wezwania `DDX_FieldScroll` byłyby podobne.
+Zobacz [DDX_FieldText](#ddx_fieldtext) , aby uzyskać przykład DDX_Field ogólny. Wywołania `DDX_FieldScroll` byłyby podobne.
 
 ### <a name="requirements"></a>Wymagania
 
-  **Nagłówek** afxdao.h
+  **Nagłówek** afxdao. h
 
 ## <a name="ddx_fieldslider"></a><a name="ddx_fieldslider"></a>DDX_FieldSlider
 
-Funkcja `DDX_FieldSlider` synchronizuje położenie kciuka formantu suwaka w widoku rekordu i element członkowski danych pola **int** zestawu rekordów skojarzonego z widokiem rekordu (lub ze zmienną całkowitą, na którą chcesz go zamapować).
+`DDX_FieldSlider`Funkcja synchronizuje położenie kciuka kontrolki suwaka w widoku rekordu i **`int`** element członkowski danych pola zestawu rekordów skojarzonego z widokiem rekordu (lub z dowolną zmienną całkowitą wybraną do mapowania).
 
 ### <a name="syntax"></a>Składnia
 
@@ -498,39 +498,39 @@ void AFXAPI DDX_FieldSlider(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdx*<br/>
-Wskaźnik do [obiektu CDataExchange.](cdataexchange-class.md) Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
+*pDX*<br/>
+Wskaźnik do obiektu [CDataExchange](cdataexchange-class.md) . Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*nIDC (nIDC)*<br/>
-Identyfikator zasobu formantu suwaka.
+*nIDC*<br/>
+Identyfikator zasobu kontrolki suwaka.
 
-*value*<br/>
-Odwołanie do wartości, która ma zostać wymieniona. Ten parametr zawiera lub będzie używany do ustawiania bieżącej pozycji kciuka formantu suwaka.
+*wartościami*<br/>
+Odwołanie do wartości, która ma zostać nadana wymianie. Ten parametr zawiera lub zostanie użyty do ustawienia bieżącego położenia kciuka kontrolki suwaka.
 
-*pRekord*<br/>
-Wskaźnik do skojarzonego `CRecordset` `CDaoRecordset` lub obiektu, z którym dane są wymieniane.
+*pRecordset*<br/>
+Wskaźnik do skojarzonego `CRecordset` lub obiektu, `CDaoRecordset` z którym są wymieniane dane.
 
 ### <a name="remarks"></a>Uwagi
 
-Podczas przenoszenia danych z zestawu rekordów do suwaka ta funkcja ustawia położenie suwaka na wartość *określoną*w wartości . W przypadku transferu z zestawu rekordów do formantu, jeśli pole zestawu rekordów jest Null, położenie formantu suwaka jest ustawione na 0. W przypadku transferu z formantu do formantu, jeśli formant jest pusty, wartość pola recordset wynosi 0.
+Gdy przenosisz dane z zestawu rekordów do suwaka, ta funkcja ustawia pozycję suwaka na wartość określoną w polu *wartość*. W przypadku przeniesienia z zestawu rekordów do kontrolki, jeśli pole zestaw rekordów ma wartość null, pozycja kontrolki suwaka jest ustawiona na 0. W przypadku przeniesienia z formantu do zestawu rekordów, Jeśli kontrolka jest pusta, wartość pola zestaw rekordów jest równa 0.
 
-`DDX_FieldSlider`nie wymienia informacji o zakresie za pomocą suwaków umożliwiających ustawienie zakresu, a nie tylko pozycję.
+`DDX_FieldSlider`nie wymienia informacji o zakresie z kontrolkami suwaka, które mogą ustawić zakres, a nie po prostu pozycji.
 
-Użyj pierwszego zastąpienia funkcji, jeśli pracujesz z klasami opartymi na ODBC. Użyj drugiego zastąpienia z klasami opartymi na DAO.
+Użyj pierwszego przesłonięcia funkcji, jeśli pracujesz z klasami opartymi na ODBC. Użyj drugiego przesłonięcia przy użyciu klas opartych na programie DAO.
 
-Aby uzyskać więcej informacji na temat DDX, zobacz [Okno Dialog wymiany danych i sprawdzania poprawności](../dialog-data-exchange-and-validation.md). Aby uzyskać przykłady i więcej `CRecordView` informacji `CDaoRecordView` o DDX dla i pola, zobacz [Rejestrowanie widoków](../../data/record-views-mfc-data-access.md). Aby uzyskać informacje na temat kontrolek suwaków, zobacz [Korzystanie z CSliderCtrl](../using-csliderctrl.md).
+Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja danych w oknie dialogowym](../dialog-data-exchange-and-validation.md). Aby uzyskać przykłady i więcej informacji na temat DDX dla `CRecordView` i `CDaoRecordView` pól, zobacz [widoki rekordów](../../data/record-views-mfc-data-access.md). Aby uzyskać informacje o kontrolkach suwaka, zobacz [using korzystanie CSliderCtrl](../using-csliderctrl.md).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [DDX_FieldText,](#ddx_fieldtext) aby zapoznać się DDX_Field przykładem. Wezwania `DDX_FieldSlider` byłyby podobne.
+Zobacz [DDX_FieldText](#ddx_fieldtext) , aby uzyskać przykład DDX_Field ogólny. Wywołania `DDX_FieldSlider` byłyby podobne.
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxdao.h
+**Nagłówek:** afxdao. h
 
 ## <a name="ddx_fieldtext"></a><a name="ddx_fieldtext"></a>DDX_FieldText
 
-Funkcja `DDX_FieldText` zarządza transferem danych **int,** **short,** **long**, DWORD, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **double**, **BOOL**lub **BYTE** między formantem pola edycji a elementami elementów członkowskich danych pola w zbiorze rekordów.
+`DDX_FieldText`Funkcja zarządza transferem danych, **`int`** **`short`** ,, **`long`** typu DWORD, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **`float`** , **`double`** , wartości **bool**lub **Byte** między kontrolką pola edycji i elementami członkowskimi danych pola zestawu rekordów.
 
 ```cpp
 void AFXAPI DDX_FieldText(
@@ -644,36 +644,36 @@ void AFXAPI DDX_FieldText(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdx*<br/>
-Wskaźnik do [obiektu CDataExchange.](../../mfc/reference/cdataexchange-class.md) Ramy dostarcza ten obiekt w celu ustalenia kontekstu wymiany danych, w tym jego kierunku.
+*pDX*<br/>
+Wskaźnik do obiektu [CDataExchange](../../mfc/reference/cdataexchange-class.md) . Platforma dostarcza ten obiekt, aby ustalić kontekst wymiany danych, w tym jej kierunek.
 
-*nIDC (nIDC)*<br/>
-Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.
+*nIDC*<br/>
+Identyfikator kontrolki w obiekcie [formularzy CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*value*<br/>
-Odwołanie do elementu członkowskiego danych pola `CRecordset` `CDaoRecordset` w skojarzonym lub obiektu. Typ danych wartości zależy od tego, które `DDX_FieldText` z przeciążonych wersji używasz.
+*wartościami*<br/>
+Odwołanie do elementu członkowskiego danych pola w obiekcie skojarzonym `CRecordset` lub `CDaoRecordset` . Typ danych wartości zależy od tego, które z przeciążonych wersji są `DDX_FieldText` używane.
 
-*pRekord*<br/>
-Wskaźnik do [obiektu CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) za pomocą którego są wymieniane dane. Ten wskaźnik `DDX_FieldText` umożliwia wykrywanie i ustawianie wartości null.
+*pRecordset*<br/>
+Wskaźnik do obiektu [CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , z którym są wymieniane dane. Ten wskaźnik umożliwia `DDX_FieldText` wykrywanie i ustawianie wartości null.
 
 ### <a name="remarks"></a>Uwagi
 
-W przypadku obiektów [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) zarządza `DDX_FieldText` również transferami [wartości COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)i [COleCurrency.](../../mfc/reference/colecurrency-class.md) Formant pustego pola edycji wskazuje wartość Null. W przypadku transferu z zestawu rekordów do formantu, jeśli pole zestawu rekordów ma wartość Null, pole edycji jest ustawione na puste. W przypadku transferu z formantu do zestawu rekordów, jeśli formant jest pusty, pole zestawu rekordów jest ustawione na Wartość Null.
+Dla obiektów [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) `DDX_FieldText` zarządza również transferem wartości [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)i [COleCurrency](../../mfc/reference/colecurrency-class.md) . Pusta kontrolka pole edycji wskazuje wartość null. W przypadku transferu z zestawu rekordów do kontrolki, jeśli pole zestaw rekordów ma wartość null, pole edycji ma wartość puste. W przypadku transferu z kontroli do zestawu rekordów, Jeśli kontrolka jest pusta, pole zestaw rekordów jest ustawione na wartość null.
 
-Użyj wersji z [CRecordset](../../mfc/reference/crecordset-class.md) parametrów, jeśli pracujesz z klas opartych na ODBC. Użyj wersji z parametrami [CDaoRecordset,](../../mfc/reference/cdaorecordset-class.md) jeśli pracujesz z klasami opartymi na DAO.
+Jeśli pracujesz z klasami opartymi na ODBC, użyj wersji z parametrami [CRecordset](../../mfc/reference/crecordset-class.md) . Jeśli pracujesz z klasami opartymi na programie DAO, użyj wersji z parametrami [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) .
 
-Aby uzyskać więcej informacji na temat DDX, zobacz [Okno Dialog wymiany danych i sprawdzania poprawności](../../mfc/dialog-data-exchange-and-validation.md). Aby uzyskać przykłady i więcej informacji na temat pól DDX dla [CRecordView](../../mfc/reference/crecordview-class.md) i [CDaoRecordView,](../../mfc/reference/cdaorecordview-class.md) zobacz artykuł [Widoki rekordów](../../data/record-views-mfc-data-access.md).
+Aby uzyskać więcej informacji na temat DDX, zobacz temat [wymiana i walidacja danych w oknie dialogowym](../../mfc/dialog-data-exchange-and-validation.md). Przykłady i więcej informacji na temat DDX dla pól [formularzy CRecordView](../../mfc/reference/crecordview-class.md) i [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) można znaleźć w artykułach [widoki rekordów](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Przykład
 
-Następująca `DoDataExchange` funkcja dla [CRecordView](../../mfc/reference/crecordview-class.md) zawiera `DDX_FieldText` wywołania `IDC_COURSELIST` funkcji dla trzech typów danych: jest polem kombi; pozostałe dwa formanty są pola edycji. W przypadku programowania DAO parametr *m_pSet* jest wskaźnikiem do [CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
+Następująca `DoDataExchange` Funkcja dla elementu [formularzy CRecordView](../../mfc/reference/crecordview-class.md) zawiera `DDX_FieldText` wywołania funkcji dla trzech typów danych: `IDC_COURSELIST` jest polem kombi; pozostałe dwie kontrolki to pola edycji. W przypadku programowania DAO parametr *m_pSet* jest wskaźnikiem do elementu [CRecordset](../../mfc/reference/crecordset-class.md) lub [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
 
 [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]
 
 ### <a name="requirements"></a>Wymagania
 
-  **Nagłówek** afxdao.h
+  **Nagłówek** afxdao. h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Makra i globals](mfc-macros-and-globals.md)
+[Makra i Globals](mfc-macros-and-globals.md)

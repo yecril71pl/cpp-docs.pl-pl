@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: d0fa5f381dba4f67934007d59dbdaf4450bcfb60
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2a48acb8a961d76c34d2ba85ede5c827c880f400
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211799"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214922"
 ---
 # <a name="cenumerator-class"></a>Klasa CEnumerator
 
@@ -44,19 +44,19 @@ class CEnumerator :
 
 **Nagłówek:** atldbcli. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="methods"></a>Metody
 
 |||
 |-|-|
-|[Wyszukiwanie](#find)|Wyszukuje dostępne dostawcy (źródła danych) szukające jednego z określoną nazwą.|
-|[GetMoniker](#getmoniker)|Pobiera interfejs `IMoniker` dla bieżącego rekordu.|
+|[Wyświetlić](#find)|Wyszukuje dostępne dostawcy (źródła danych) szukające jednego z określoną nazwą.|
+|[GetMoniker](#getmoniker)|Pobiera `IMoniker` interfejs dla bieżącego rekordu.|
 |[Otwórz](#open)|Otwiera moduł wyliczający.|
 
 ## <a name="remarks"></a>Uwagi
 
-`ISourcesRowset` dane można pobrać pośrednio z tej klasy.
+Dane można pobrać `ISourcesRowset` pośrednio z tej klasy.
 
 ## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator:: find
 
@@ -75,11 +75,11 @@ podczas Nazwa do wyszukania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli znaleziono nazwę. W przeciwnym razie **false**.
+**`true`** Jeśli nazwa została znaleziona. W przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Ta nazwa jest mapowana do `SOURCES_NAME`ego elementu członkowskiego interfejsu [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
+Ta nazwa jest mapowana na `SOURCES_NAME` element członkowski interfejsu [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
 
 ## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator:: GetMoniker
 
@@ -135,8 +135,8 @@ podczas Odwołanie do modułu wyliczającego.
 
 Standardowa wartość HRESULT.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [DBVIEWER](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Dokumentacja szablonów klientów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

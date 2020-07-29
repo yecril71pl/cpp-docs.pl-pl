@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 57fdd61a966cbeab07c0aeafdad0f6e6fb97cca1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: c59e8297013e02592e623859621bb1ff11474733
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404323"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215143"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -90,7 +90,7 @@ size_t _wcsftime_l(
 Ciąg wyjściowy.
 
 *maksymalne*<br/>
-Rozmiar buforu *strDest* (**znak** lub **wchar_t**).
+Rozmiar buforu *strDest* ( **`char`** lub **`wchar_t`** ).
 
 *Formatowanie*<br/>
 Ciąg kontroli formatu.
@@ -197,7 +197,7 @@ Tydzień w formacie ISO 8601 i rok oparty na tygodniu wyprodukowanym przez **% V
 
 Zobacz przykład [czasu](time-time32-time64.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Regionalne](../../c-runtime-library/locale.md) <br/>
 [Zarządzanie czasem](../../c-runtime-library/time-management.md) <br/>

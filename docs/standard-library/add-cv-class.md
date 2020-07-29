@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-ms.openlocfilehash: 412dc8426112e65d00b572a65f064667d2709a0d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 0afeea71daf8358b2aeeefe8d368c135a54a6ad6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620779"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222631"
 ---
 # <a name="add_cv-class"></a>add_cv — Klasa
 
-Tworzy typ **const volatile** z typu.
+Tworzy **`const volatile`** Typ z typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,7 +35,7 @@ Typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie zmodyfikowanego typu ma element typedef, który jest `add_cv<T>` `type` odpowiednikiem *T* modyfikowany przez obie [add_volatile](add-volatile-class.md) i [add_const](add-const-class.md), chyba że *T* ma już kwalifikatory CV, jest odwołaniem lub jest funkcją. **typedef**
+Wystąpienie zmodyfikowanego typu `add_cv<T>` ma `type` element członkowski, **`typedef`** który jest odpowiednikiem *T* modyfikowany przez obie [Add_volatile](add-volatile-class.md) i [add_const](add-const-class.md), chyba że *T* ma już kwalifikatory CV, jest odwołaniem lub jest funkcją.
 
 `add_cv_t<T>`Typ pomocnika to skrót umożliwiający dostęp do `add_cv<T>` elementu członkowskiego typedef `type` .
 
@@ -90,7 +90,7 @@ invoked const volatile S.f()
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [<type_traits>](type-traits.md)\
 [Klasa remove_const](remove-const-class.md)\

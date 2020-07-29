@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMemoryException [MFC], CMemoryException
 ms.assetid: 9af0ed57-d12a-45ca-82b5-c910a60f7edf
-ms.openlocfilehash: 375b4227a25ae4c18cfd263eff4c3ec13f1304e1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 71b17e777db9d6351192da7cffd075b3a64553bd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370005"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222930"
 ---
 # <a name="cmemoryexception-class"></a>Klasa CMemoryException
 
@@ -35,23 +35,23 @@ class CMemoryException : public CSimpleException
 
 ## <a name="remarks"></a>Uwagi
 
-Dalsze kwalifikacje nie są konieczne ani możliwe. Wyjątki pamięci są generowane automatycznie przez **nowe**. Jeśli piszesz własne funkcje `malloc`pamięci, na przykład przy użyciu , a następnie są odpowiedzialne za zgłaszanie wyjątków pamięci.
+Dalsze kwalifikacje nie są wymagane ani możliwe. Wyjątki pamięci są generowane automatycznie przez program **`new`** . W przypadku pisania własnych funkcji pamięci przy użyciu programu `malloc` , na przykład, użytkownik jest odpowiedzialny za zgłaszanie wyjątków pamięci.
 
-Aby uzyskać `CMemoryException`więcej informacji na temat , zobacz artykuł [Obsługa wyjątków (MFC)](../../mfc/exception-handling-in-mfc.md).
+Aby uzyskać więcej informacji na temat `CMemoryException` , zobacz [Obsługa wyjątków artykułów (MFC)](../../mfc/exception-handling-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Cexception](../../mfc/reference/cexception-class.md)
+[CException](../../mfc/reference/cexception-class.md)
 
-[Csimpleexception](../../mfc/reference/csimpleexception-class.md)
+[CSimpleException](../../mfc/reference/csimpleexception-class.md)
 
 `CMemoryException`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afx.h
+**Nagłówek:** AFX. h
 
 ## <a name="cmemoryexceptioncmemoryexception"></a><a name="cmemoryexception"></a>CMemoryException::CMemoryException
 
@@ -63,9 +63,9 @@ CMemoryException();
 
 ### <a name="remarks"></a>Uwagi
 
-Nie należy używać tego konstruktora bezpośrednio, ale raczej wywołać funkcję globalną [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). ta funkcja globalna może odnieść sukces w sytuacji braku pamięci, ponieważ konstruuje obiekt wyjątku w pamięci wcześniej przydzielone. Aby uzyskać więcej informacji na temat przetwarzania [wyjątków,](../exception-handling-in-mfc.md)zobacz wyjątki artykułu .
+Nie używaj tego konstruktora bezpośrednio, ale zamiast tego wywołaj funkcję globalną [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). Ta funkcja globalna może się powieść w sytuacji braku pamięci, ponieważ konstruuje obiekt Exception w wcześniej przydzielonym pamięci. Aby uzyskać więcej informacji na temat przetwarzania wyjątków, zobacz [wyjątki](../exception-handling-in-mfc.md)w artykule.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CException](cexception-class.md)<br/>
 [Wykres hierarchii](../hierarchy-chart.md)

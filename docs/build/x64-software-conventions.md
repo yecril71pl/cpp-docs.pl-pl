@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4755cfcf98c9eadbd944e06a56f86ca89a33b0a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417195"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223775"
 ---
 # <a name="x64-software-conventions"></a>Konwencje kodowania x64
 
@@ -18,13 +18,13 @@ W tej sekcji opisano metodologię wywoływania architektury języka C++ dla proc
 
 ## <a name="overview-of-x64-calling-conventions"></a>Omówienie konwencji wywoływania x64
 
-Dwie istotne różnice między procesorami x86 i x64 to 64-bitowe możliwości adresowania i płaski zestaw 16 64-bitowy rejestrów do użytku ogólnego. Z uwzględnieniem rozszerzonego zestawu rejestrów, x64 używa konwencji wywoływania [__fastcall](../cpp/fastcall.md) i modelu obsługi wyjątków opartego na procesorze RISC. `__fastcall` Konwencja używa rejestrów dla pierwszych czterech argumentów i ramki stosu, aby przekazać dodatkowe argumenty. Aby uzyskać szczegółowe informacje na temat konwencji wywoływania x64, w tym rejestrowania użycia, parametrów stosu, wartości zwracanych i rozwinięcia stosu, zobacz [konwencję wywoływania x64](x64-calling-convention.md).
+Dwie istotne różnice między procesorami x86 i x64 to 64-bitowe możliwości adresowania i płaski zestaw 16 64-bitowy rejestrów do użytku ogólnego. Z uwzględnieniem rozszerzonego zestawu rejestrów, x64 używa konwencji wywoływania [__fastcall](../cpp/fastcall.md) i modelu obsługi wyjątków opartego na procesorze RISC. **`__fastcall`** Konwencja używa rejestrów dla pierwszych czterech argumentów i ramki stosu, aby przekazać dodatkowe argumenty. Aby uzyskać szczegółowe informacje na temat konwencji wywoływania x64, w tym rejestrowania użycia, parametrów stosu, wartości zwracanych i rozwinięcia stosu, zobacz [konwencję wywoływania x64](x64-calling-convention.md).
 
 ## <a name="enable-optimization-for-x64"></a>Włącz optymalizację dla architektury x64
 
 Poniższa opcja kompilatora pomaga zoptymalizować aplikację dla architektury x64:
 
-- [/favor (Optymalizacja pod kątem specyfiki architektury)](../build/reference/favor-optimize-for-architecture-specifics.md)
+- [/Favor (Optymalizacja pod kątem specyfiki architektury)](../build/reference/favor-optimize-for-architecture-specifics.md)
 
 ## <a name="types-and-storage"></a>Typy i magazyn
 
@@ -47,19 +47,19 @@ Chociaż jest możliwe uzyskanie dostępu do danych z dowolnymi wyrównaniami, z
 |||||
 |-|-|-|-|
 |Typ skalarny|Typ danych języka C|Rozmiar magazynu (w bajtach)|Zalecane wyrównanie|
-|**INT8**|**char**|1|Byte|
-|**UINT8**|**unsigned char**|1|Byte|
-|**INT16**|**short**|2|Word|
-|**UINT16**|**unsigned short**|2|Word|
-|**ELEMENTEM**|**int**, **Long**|4|Doubleword|
+|**INT8**|**`char`**|1|Byte|
+|**UINT8**|**`unsigned char`**|1|Byte|
+|**INT16**|**`short`**|2|Word|
+|**UINT16**|**`unsigned short`**|2|Word|
+|**ELEMENTEM**|**`int`**, **`long`**|4|Doubleword|
 |**RÓWN**|**unsigned int, Long unsigned**|4|Doubleword|
-|**INT64**|**__int64**|8|Quadword|
+|**INT64**|**`__int64`**|8|Quadword|
 |**UINT64**|**__int64 bez znaku**|8|Quadword|
-|**OPERACJI FP32 (pojedyncza precyzja)**|**float**|4|Doubleword|
-|**FP64 (Podwójna precyzja)**|**double**|8|Quadword|
+|**OPERACJI FP32 (pojedyncza precyzja)**|**`float`**|4|Doubleword|
+|**FP64 (Podwójna precyzja)**|**`double`**|8|Quadword|
 |**PRZYTRZYMAJ**|__\*__|8|Quadword|
-|**__m64**|**__m64 struktury**|8|Quadword|
-|**__m128**|**__m128 struktury**|16|Octaword|
+|**`__m64`**|**__m64 struktury**|8|Quadword|
+|**`__m128`**|**__m128 struktury**|16|Octaword|
 
 ### <a name="aggregates-and-unions"></a>Agregaty i unie
 
@@ -82,19 +82,19 @@ W poniższej tabeli przedstawiono silnie sugerowane wyrównanie dla skalarnych e
 ||||
 |-|-|-|
 |Typ skalarny|Typ danych języka C|Wymagane wyrównanie|
-|**INT8**|**char**|Byte|
-|**UINT8**|**unsigned char**|Byte|
-|**INT16**|**short**|Word|
-|**UINT16**|**unsigned short**|Word|
-|**ELEMENTEM**|**int**, **Long**|Doubleword|
+|**INT8**|**`char`**|Byte|
+|**UINT8**|**`unsigned char`**|Byte|
+|**INT16**|**`short`**|Word|
+|**UINT16**|**`unsigned short`**|Word|
+|**ELEMENTEM**|**`int`**, **`long`**|Doubleword|
 |**RÓWN**|**unsigned int, Long unsigned**|Doubleword|
-|**INT64**|**__int64**|Quadword|
+|**INT64**|**`__int64`**|Quadword|
 |**UINT64**|**__int64 bez znaku**|Quadword|
-|**OPERACJI FP32 (pojedyncza precyzja)**|**float**|Doubleword|
-|**FP64 (Podwójna precyzja)**|**double**|Quadword|
+|**OPERACJI FP32 (pojedyncza precyzja)**|**`float`**|Doubleword|
+|**FP64 (Podwójna precyzja)**|**`double`**|Quadword|
 |**PRZYTRZYMAJ**|<strong>\*</strong>|Quadword|
-|**__m64**|**__m64 struktury**|Quadword|
-|**__m128**|**__m128 struktury**|Octaword|
+|**`__m64`**|**__m64 struktury**|Quadword|
+|**`__m128`**|**__m128 struktury**|Octaword|
 
 Stosowane są następujące reguły wyrównania agregacji:
 
@@ -181,7 +181,7 @@ Praca z niewyrównanymi danymi ma dwa konsekwencje.
 
 - Niewyrównane lokalizacje nie mogą być używane w operacjach zablokowanych.
 
-Jeśli potrzebujesz bardziej rygorystycznego wyrównania, `__declspec(align(N))` Użyj w deklaracjach zmiennych. Powoduje to, że kompilator dynamicznie dopasowuje stos, aby spełniał Twoje wymagania. Jednak dynamiczne dostosowywanie stosu w czasie wykonywania może spowodować wolniejsze wykonywanie aplikacji.
+Jeśli potrzebujesz bardziej rygorystycznego wyrównania, użyj `__declspec(align(N))` w deklaracjach zmiennych. Powoduje to, że kompilator dynamicznie dopasowuje stos, aby spełniał Twoje wymagania. Jednak dynamiczne dostosowywanie stosu w czasie wykonywania może spowodować wolniejsze wykonywanie aplikacji.
 
 ## <a name="register-usage"></a>Rejestrowanie użycia
 
@@ -193,7 +193,7 @@ W poniższej tabeli opisano, w jaki sposób każdy rejestr jest używany w ramac
 
 ||||
 |-|-|-|
-|Zarejestruj|Stan|Użycie|
+|Zarejestruj|Stan|Zastosowanie|
 |RAX|Volatile|Rejestr wartości zwracanej|
 |RCX|Volatile|Pierwszy argument liczby całkowitej|
 |RDX|Volatile|Drugi argument liczby całkowitej|
@@ -206,12 +206,12 @@ W poniższej tabeli opisano, w jaki sposób każdy rejestr jest używany w ramac
 |RBX|Nieulotnej swobodnym|Musi być zachowana przez wywoływany|
 |RBP|Nieulotnej swobodnym|Może być używany jako wskaźnik ramki; musi być zachowana przez wywoływany|
 |RSP|Nieulotnej swobodnym|Wskaźnik stosu|
-|XMM0, YMM0|Volatile|Pierwszy argument FP; pierwszy argument typu Vector-when `__vectorcall` , gdy jest używany|
-|XMM1, YMM1|Volatile|Drugi argument FP; drugi argument typu Vector-when `__vectorcall` , gdy jest używany|
-|XMM2, YMM2|Volatile|Trzeci argument FP; trzeci argument typu wektorowego, `__vectorcall` gdy jest używany|
-|XMM3, YMM3|Volatile|Czwarty argument FP; czwarty argument typu Vector, `__vectorcall` gdy jest używany|
-|XMM4, YMM4|Volatile|Muszą być zachowywane w razie konieczności przez wywołującego; piąty argument typu Vector, `__vectorcall` gdy jest używany|
-|XMM5, YMM5|Volatile|Muszą być zachowywane w razie konieczności przez wywołującego; Szósty argument typu Vector, `__vectorcall` gdy jest używany|
+|XMM0, YMM0|Volatile|Pierwszy argument FP; pierwszy argument typu Vector-when, gdy **`__vectorcall`** jest używany|
+|XMM1, YMM1|Volatile|Drugi argument FP; drugi argument typu Vector-when, gdy **`__vectorcall`** jest używany|
+|XMM2, YMM2|Volatile|Trzeci argument FP; trzeci argument typu wektorowego, gdy **`__vectorcall`** jest używany|
+|XMM3, YMM3|Volatile|Czwarty argument FP; czwarty argument typu Vector, gdy **`__vectorcall`** jest używany|
+|XMM4, YMM4|Volatile|Muszą być zachowywane w razie konieczności przez wywołującego; piąty argument typu Vector, gdy **`__vectorcall`** jest używany|
+|XMM5, YMM5|Volatile|Muszą być zachowywane w razie konieczności przez wywołującego; Szósty argument typu Vector, gdy **`__vectorcall`** jest używany|
 |XMM6:XMM15, YMM6:YMM15|Nietrwały (XMM), nietrwały (Wielka połowa z YMM)|Musi być zachowana przez wywoływany. Rejestry YMM muszą być zachowywane w razie konieczności przez wywołującego.|
 
 W przypadku wyjścia funkcji i wejścia funkcji do wywołań biblioteki środowiska uruchomieniowego C i wywołań systemu Windows oczekiwana jest flaga kierunku w rejestrze flag procesora.
@@ -238,6 +238,6 @@ Elementy wewnętrzne obsługiwane przez kompilator są opisane w funkcjach [wewn
 
 Format obrazu pliku wykonywalnego x64 to PE32 +. Obrazy wykonywalne (zarówno biblioteki DLL, jak i exe) są ograniczone do maksymalnego rozmiaru wynoszącego 2 gigabajty, więc względne adresy z przemieszczeniem 32-bitowym mogą służyć do adresowania statycznych danych obrazu. Te dane obejmują tabelę adresów importu, stałe ciągów, statyczne dane globalne itd.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwencje wywoływania](../cpp/calling-conventions.md)

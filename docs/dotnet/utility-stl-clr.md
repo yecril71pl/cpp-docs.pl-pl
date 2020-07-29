@@ -39,16 +39,16 @@ helpviewer_keywords:
 - operator<= member [STL/CLR]
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-ms.openlocfilehash: 6d025230abcff42e367a231e616a13f0f8c684f0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b21f9ec2ace54281f30f8f32134c7fb3466a1faa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320287"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214857"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
-Dołącz nagłówek `<cliext/utility>` STL/CLR, aby `pair` zdefiniować klasę szablonu i kilka funkcji szablonu pomocniczego.
+Dołącz nagłówek STL/CLR `<cliext/utility>` w celu zdefiniowania klasy szablonu `pair` i kilku funkcji szablonu pomocniczego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -58,9 +58,9 @@ Dołącz nagłówek `<cliext/utility>` STL/CLR, aby `pair` zdefiniować klasę s
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<cliext /> użytkowej
+**Nagłówek:**\<cliext/utility>
 
-**Obszar nazw:** cliext
+**Przestrzeń nazw:** cliext
 
 ## <a name="declarations"></a>Deklaracje
 
@@ -70,20 +70,20 @@ Dołącz nagłówek `<cliext/utility>` STL/CLR, aby `pair` zdefiniować klasę s
 
 |Operator|Opis|
 |--------------|-----------------|
-|[operator== (pair) (STL/CLR)](#op_eq)|Sparuj równe porównanie.|
-|[operator!= (para) (STL/CLR)](#op_neq)|Para nie równa porównanie.|
-|[operator< (para) (STL/CLR)](#op_lt)|Para mniej niż porównanie.|
-|[operator\<= (para) (STL/CLR)](#op_lteq)|Sparuj mniej niż lub równe porównanie.|
-|[operator> (para) (STL/CLR)](#op_gt)|Para większa niż porównanie.|
-|[operator>= (para) (STL/CLR)](#op_gteq)|Paruj porównanie większe lub równe.|
+|[operator== (pair) (STL/CLR)](#op_eq)|Porównanie równości pary.|
+|[operator! = (para) (STL/CLR)](#op_neq)|Para nie jest równa porównaniu.|
+|[< operatora (para) (STL/CLR)](#op_lt)|Para jest mniejsza niż porównanie.|
+|[operator \< = (para) (STL/CLR)](#op_lteq)|Para jest mniejsza niż lub równa.|
+|[> operatora (para) (STL/CLR)](#op_gt)|Para większa niż porównanie.|
+|[operator>= (para) (STL/CLR)](#op_gteq)|Para większa niż lub równa porównywania.|
 
 |Funkcja|Opis|
 |--------------|-----------------|
-|[make_pair (STL/CLR)](#make_pair)|Zrób parę z pary wartości.|
+|[make_pair (STL/CLR)](#make_pair)|Utwórz parę z pary wartości.|
 
 ## <a name="members"></a>Elementy członkowskie
 
-## <a name="pair-stlclr"></a><a name="pair"></a>par (STL/CLR)
+## <a name="pair-stlclr"></a><a name="pair"></a>para (STL/CLR)
 
 Klasa szablonu opisuje obiekt, który zawija parę wartości.
 
@@ -97,20 +97,20 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametry
 
-*Wartość1*<br/>
-Typ pierwszej wartości zawiniętej.
+*Sekwencj*<br/>
+Typ pierwszej opakowanej wartości.
 
 *Wartość2*<br/>
-Typ drugiej wartości zawiniętej.
+Typ drugiej opakowanej wartości.
 
 ## <a name="members"></a>Elementy członkowskie
 
 |Definicja typu|Opis|
 |---------------------|-----------------|
-|[pair::first_type (STL/CLR)](#first_type)|Typ pierwszej wartości zawiniętej.|
-|[pair::second_type (STL/CLR)](#second_type)|Typ drugiej wartości zawiniętej.|
+|[pair::first_type (STL/CLR)](#first_type)|Typ pierwszej opakowanej wartości.|
+|[pair::second_type (STL/CLR)](#second_type)|Typ drugiej opakowanej wartości.|
 
-|Obiekt elementu członkowskiego|Opis|
+|Obiekt członkowski|Opis|
 |-------------------|-----------------|
 |[pair::first (STL/CLR)](#first)|Pierwsza przechowywana wartość.|
 |[pair::second (STL/CLR)](#second)|Druga przechowywana wartość.|
@@ -122,13 +122,13 @@ Typ drugiej wartości zawiniętej.
 
 |Operator|Opis|
 |--------------|-----------------|
-|[pair::operator= (STL/CLR)](#op_as)|Zastępuje przechowywaną parę wartości.|
+|[pair::operator= (STL/CLR)](#op_as)|Zastępuje składowaną parę wartości.|
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt przechowuje parę wartości. Ta klasa szablonu służy do łączenia dwóch wartości w jeden obiekt. Ponadto obiekt `cliext::pair` (opisane w tym miejscu) przechowuje tylko typy zarządzane; , aby zapisać parę typów `std::pair`niezarządzanych , zadeklarowanych w `<utility>`.
+Obiekt przechowuje parę wartości. Ta klasa szablonu służy do łączenia dwóch wartości w jeden obiekt. Ponadto obiekt `cliext::pair` (opisany tutaj) przechowuje tylko typy zarządzane; aby można było przechowywać parę typów niezarządzanych `std::pair` , zadeklarowanych w `<utility>` .
 
-## <a name="pairfirst-stlclr"></a><a name="first"></a>para::pierwszy (STL/CLR)
+## <a name="pairfirst-stlclr"></a><a name="first"></a>para:: First (STL/CLR)
 
 Pierwsza opakowana wartość.
 
@@ -140,7 +140,7 @@ Value1 first;
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt przechowuje pierwszą wartość opakowane.
+Obiekt przechowuje pierwszą opakowaną wartość.
 
 ### <a name="example"></a>Przykład
 
@@ -165,9 +165,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairfirst_type-stlclr"></a><a name="first_type"></a>para::first_type (STL/CLR)
+## <a name="pairfirst_type-stlclr"></a><a name="first_type"></a>para:: first_type (STL/CLR)
 
-Typ pierwszej wartości zawiniętej.
+Typ pierwszej opakowanej wartości.
 
 ### <a name="syntax"></a>Składnia
 
@@ -177,7 +177,7 @@ typedef Value1 first_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem parametru szablonu *Value1*.
+Typ jest synonimem dla parametru szablonu *wartość1*.
 
 ### <a name="example"></a>Przykład
 
@@ -202,9 +202,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairoperator-stlclr"></a><a name="op_as"></a>para::operator= (STL/CLR)
+## <a name="pairoperator-stlclr"></a><a name="op_as"></a>para:: operator = (STL/CLR)
 
-Zastępuje przechowywaną parę wartości.
+Zastępuje składowaną parę wartości.
 
 ### <a name="syntax"></a>Składnia
 
@@ -214,12 +214,12 @@ pair<Value1, Value2>% operator=(pair<Value1, Value2>% right);
 
 #### <a name="parameters"></a>Parametry
 
-*Prawo*<br/>
+*Kliknij*<br/>
 Para do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator elementu członkowskiego kopiuje *prawo* `*this`do obiektu, a następnie zwraca . Służy do zastąpienia zapisanej pary wartości kopią zapisanej pary wartości w *prawej*.
+Operator elementu członkowskiego kopiuje *prawo* do obiektu, a następnie zwraca **`*this`** . Służy do zamienienia przechowywanej pary wartości z kopią przechowywanej pary wartości w *prawo*.
 
 ### <a name="example"></a>Przykład
 
@@ -246,7 +246,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairpair-stlclr"></a><a name="pair_pair"></a>para::pair (STL/CLR)
+## <a name="pairpair-stlclr"></a><a name="pair_pair"></a>para::p powietrze (STL/CLR)
 
 Konstruuje obiekt pary.
 
@@ -261,13 +261,13 @@ pair(Value1 val1, Value2 val2);
 
 #### <a name="parameters"></a>Parametry
 
-*Prawo*<br/>
-Sparuj do przechowywania.
+*Kliknij*<br/>
+Para do zapisania.
 
-*val1*<br/>
-Pierwsza wartość do przechowywania.
+*Val1*<br/>
+Pierwsza wartość do zapisania.
 
-*val2 (val2)*<br/>
+*val2*<br/>
 Druga wartość do zapisania.
 
 ### <a name="remarks"></a>Uwagi
@@ -276,23 +276,23 @@ Konstruktor:
 
 `pair();`
 
-inicjuje zapisaną parę z domyślnymi wartościami konstruowanymi.
+Inicjuje składowaną parę z domyślnymi skonstruowanymi wartościami.
 
 Konstruktor:
 
 `pair(pair<Value1, Value2>% right);`
 
-inicjuje przechowywaną `right.`parę z [parą::first (STL/CLR)](../dotnet/pair-first-stl-clr.md) i `right.` [parą::second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
+Inicjuje składowaną parę z `right.` [parą:: First (STL/CLR)](../dotnet/pair-first-stl-clr.md) i `right.` [parę:: Second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
 
 `pair(pair<Value1, Value2>^ right);`
 
-inicjuje przechowywaną `right->`parę z [parą::first (STL/CLR)](../dotnet/pair-first-stl-clr.md) i `right>` [parą::second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
+Inicjuje składowaną parę z `right->` [parą:: First (STL/CLR)](../dotnet/pair-first-stl-clr.md) i `right>` [parę:: Second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
 
 Konstruktor:
 
 `pair(Value1 val1, Value2 val2);`
 
-inicjuje przechowywaną parę z *val1* i *val2*.
+Inicjuje składowaną parę z *Val1* i *val2*.
 
 ### <a name="example"></a>Przykład
 
@@ -331,7 +331,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairsecond-stlclr"></a><a name="second"></a>para::second (STL/CLR)
+## <a name="pairsecond-stlclr"></a><a name="second"></a>para:: Second (STL/CLR)
 
 Druga opakowana wartość.
 
@@ -343,7 +343,7 @@ Value2 second;
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt przechowuje drugą wartość opakowane.
+Obiekt przechowuje drugą opakowaną wartość.
 
 ### <a name="example"></a>Przykład
 
@@ -368,9 +368,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairsecond_type-stlclr"></a><a name="second_type"></a>para::second_type (STL/CLR)
+## <a name="pairsecond_type-stlclr"></a><a name="second_type"></a>para:: second_type (STL/CLR)
 
-Typ drugiej wartości zawiniętej.
+Typ drugiej opakowanej wartości.
 
 ### <a name="syntax"></a>Składnia
 
@@ -380,7 +380,7 @@ typedef Value2 second_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem parametru szablonu *Value2*.
+Typ jest synonimem dla parametru szablonu *wartość2*.
 
 ### <a name="example"></a>Przykład
 
@@ -405,7 +405,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairswap-stlclr"></a><a name="swap"></a>para::swap (STL/CLR)
+## <a name="pairswap-stlclr"></a><a name="swap"></a>para:: swap (STL/CLR)
 
 Zamienia zawartość dwóch par.
 
@@ -417,12 +417,12 @@ void swap(pair<Value1, Value2>% right);
 
 #### <a name="parameters"></a>Parametry
 
-*Prawo*<br/>
-Sparuj, aby zamienić zawartość.
+*Kliknij*<br/>
+Para do zamiany zawartości na.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu członkowskiego zamienia zapisaną `*this` parę wartości między i *w prawo*.
+Funkcja członkowska zamienia składowaną parę wartości między **`*this`** i *po prawej*.
 
 ### <a name="example"></a>Przykład
 
@@ -476,7 +476,7 @@ a b c
 
 ## <a name="make_pair-stlclr"></a><a name="make_pair"></a>make_pair (STL/CLR)
 
-Zrób `pair` z pary wartości.
+Utwórz `pair` z pary wartości.
 
 ### <a name="syntax"></a>Składnia
 
@@ -488,21 +488,21 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametry
 
-*Wartość1*<br/>
-Typ pierwszej wartości zawiniętej.
+*Sekwencj*<br/>
+Typ pierwszej opakowanej wartości.
 
 *Wartość2*<br/>
-Typ drugiej wartości zawiniętej.
+Typ drugiej opakowanej wartości.
 
-*Pierwszym*<br/>
-Pierwsza wartość do zawijania.
+*pierwszego*<br/>
+Pierwsza wartość do zawinięcia.
 
-*Drugi*<br/>
-Druga wartość do zawijania.
+*drugi*<br/>
+Druga wartość do zawinięcia.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu `pair<Value1, Value2>(first, second)`zwraca . Służy do konstruowania `pair<Value1, Value2>` obiektu z pary wartości.
+Funkcja szablonu zwraca wartość `pair<Value1, Value2>(first, second)` . Służy do konstruowania obiektu na `pair<Value1, Value2>` podstawie pary wartości.
 
 ### <a name="example"></a>Przykład
 
@@ -527,9 +527,9 @@ int main()
 [y, 4]
 ```
 
-## <a name="operator-pair-stlclr"></a><a name="op_neq"></a>operator!= (para) (STL/CLR)
+## <a name="operator-pair-stlclr"></a><a name="op_neq"></a>operator! = (para) (STL/CLR)
 
-Para nie równa porównanie.
+Para nie jest równa porównaniu.
 
 ### <a name="syntax"></a>Składnia
 
@@ -542,15 +542,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametry
 
-*Lewej*<br/>
+*lewym*<br/>
 Lewa para do porównania.
 
-*Prawo*<br/>
+*Kliknij*<br/>
 Prawa para do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operatora `!(left == right)`zwraca . Służy do testowania, czy *left* nie jest uporządkowany tak samo jak *prawo,* gdy dwie pary są porównywane element po elemencie.
+Funkcja operatora zwraca wartość `!(left == right)` . Służy do sprawdzania, czy *lewo* nie jest uporządkowane *tak samo, jak w* przypadku porównywania dwóch par elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -581,9 +581,9 @@ int main()
 [x 3] != [x 4] is True
 ```
 
-## <a name="operatorlt-pair-stlclr"></a><a name="op_lt"></a>operator&lt; (para) (STL/CLR)
+## <a name="operatorlt-pair-stlclr"></a><a name="op_lt"></a>operator &lt; (para) (STL/CLR)
 
-Para mniej niż porównanie.
+Para jest mniejsza niż porównanie.
 
 ### <a name="syntax"></a>Składnia
 
@@ -596,15 +596,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametry
 
-*Lewej*<br/>
+*lewym*<br/>
 Lewa para do porównania.
 
-*Prawo*<br/>
+*Kliknij*<br/>
 Prawa para do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operatora `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`zwraca . Służy do testowania, czy *left* jest uporządkowany przed *prawym,* gdy dwie pary są porównywane element po elemencie.
+Funkcja operatora zwraca wartość `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second` . Służy do sprawdzania, czy *lewa* jest uporządkowana przed *prawem* , gdy dwie pary są porównywane elementy według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -635,9 +635,9 @@ int main()
 [x 3] < [x 4] is True
 ```
 
-## <a name="operatorlt-pair-stlclr"></a><a name="op_lteq"></a>operator&lt;= (para) (STL/CLR)
+## <a name="operatorlt-pair-stlclr"></a><a name="op_lteq"></a>operator &lt; = (para) (STL/CLR)
 
-Sparuj mniej niż lub równe porównanie.
+Para jest mniejsza niż lub równa.
 
 ### <a name="syntax"></a>Składnia
 
@@ -650,15 +650,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametry
 
-*Lewej*<br/>
+*lewym*<br/>
 Lewa para do porównania.
 
-*Prawo*<br/>
+*Kliknij*<br/>
 Prawa para do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operatora `!(right < left)`zwraca . Służy do testowania, czy *left* nie jest uporządkowany po *prawej,* gdy dwie pary są porównywane element po elemencie.
+Funkcja operatora zwraca wartość `!(right < left)` . Służy do sprawdzania *, czy nie* jest on uporządkowany po *prawej stronie* , gdy dwie pary są porównywane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -689,9 +689,9 @@ int main()
 [x 4] <= [x 3] is False
 ```
 
-## <a name="operator-pair-stlclr"></a><a name="op_eq"></a>operator== (para) (STL/CLR)
+## <a name="operator-pair-stlclr"></a><a name="op_eq"></a>operator = = (para) (STL/CLR)
 
-Sparuj równe porównanie.
+Porównanie równości pary.
 
 ### <a name="syntax"></a>Składnia
 
@@ -704,15 +704,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametry
 
-*Lewej*<br/>
+*lewym*<br/>
 Lewa para do porównania.
 
-*Prawo*<br/>
+*Kliknij*<br/>
 Prawa para do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operatora `left.first ==` `right.first &&` `left.second ==` `right.second`zwraca . Służy do testowania, czy *left* jest uporządkowany tak samo jak *prawo,* gdy dwie pary są porównywane element po elemencie.
+Funkcja operatora zwraca wartość `left.first ==` `right.first &&` `left.second ==` `right.second` . Służy do sprawdzania, czy *lewa* jest uporządkowana *tak samo jak w* przypadku porównywania dwóch par elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -743,7 +743,7 @@ int main()
 [x 3] == [x 4] is False
 ```
 
-## <a name="operatorgt-pair-stlclr"></a><a name="op_gt"></a>operator&gt; (para) (STL/CLR)
+## <a name="operatorgt-pair-stlclr"></a><a name="op_gt"></a>operator &gt; (para) (STL/CLR)
 
 Para większa niż porównanie.
 
@@ -758,15 +758,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametry
 
-*Lewej*<br/>
+*lewym*<br/>
 Lewa para do porównania.
 
-*Prawo*<br/>
+*Kliknij*<br/>
 Prawa para do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operatora `right` `<` `left`zwraca . Służy do testowania, czy *left* jest uporządkowany po *prawej stronie,* gdy dwie pary są porównywane element po elemencie.
+Funkcja operatora zwraca wartość `right` `<` `left` . Służy do sprawdzania, czy *lewa* jest uporządkowana po *prawej* , gdy dwie pary są porównywane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -797,9 +797,9 @@ int main()
 [x 4] > [x 3] is True
 ```
 
-## <a name="operatorgt-pair-stlclr"></a><a name="op_gteq"></a>operator&gt;= (para) (STL/CLR)
+## <a name="operatorgt-pair-stlclr"></a><a name="op_gteq"></a>operator &gt; = (para) (STL/CLR)
 
-Paruj porównanie większe lub równe.
+Para większa niż lub równa porównywania.
 
 ### <a name="syntax"></a>Składnia
 
@@ -812,15 +812,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametry
 
-*Lewej*<br/>
+*lewym*<br/>
 Lewa para do porównania.
 
-*Prawo*<br/>
+*Kliknij*<br/>
 Prawa para do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operatora `!(left < right)`zwraca . Służy do testowania, czy *left* nie jest uporządkowany przed *prawym,* gdy dwie pary są porównywane element po elemencie.
+Funkcja operatora zwraca wartość `!(left < right)` . Służy do sprawdzania, czy nie *jest on* uporządkowany przed *prawem* , gdy dwie pary są porównywane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 

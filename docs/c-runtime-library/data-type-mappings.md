@@ -29,37 +29,37 @@ helpviewer_keywords:
 - _TEXT type
 - _T type
 ms.assetid: 4e573c05-8800-468b-ae5f-76ff7409835e
-ms.openlocfilehash: 60dc4329ae4c908b9bd168584c71c42c12634bb2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d77ac4fa9afcd5a6b8f86261c7a3ba466adc64a4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344370"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215156"
 ---
 # <a name="data-type-mappings"></a>Mapowanie typu danych
 
-Te mapowania typu danych są definiowane w TCHAR. Godz. i są zależne od tego, czy stałej `_UNICODE` lub `_MBCS` został zdefiniowany w programach.
+Te mapowania typu danych są zdefiniowane w używanie TCHAR. H i zależy od tego, czy stała `_UNICODE` lub `_MBCS` została zdefiniowana w programie.
 
-Aby uzyskać powiązane informacje, zobacz [TCHAR przy użyciu. Typy danych H z kodem _MBCS](../text/using-tchar-h-data-types-with-mbcs-code.md).
+Aby uzyskać powiązane informacje, zobacz [using używanie TCHAR. H typy danych z kodem _MBCS](../text/using-tchar-h-data-types-with-mbcs-code.md).
 
-### <a name="generic-text-data-type-mappings"></a>Mapowanie typu danych — zwykły tekst
+### <a name="generic-text-data-type-mappings"></a>Mapowanie typu danych tekstu ogólnego
 
-|Zwykły tekst<br /><br /> Nazwa typu danych|SBCS (_UNICODE,<br /><br /> _MBCS nie<br /><br /> definicja)|_MBCS<br /><br /> zdefiniowane|_UNICODE<br /><br /> zdefiniowane|
+|Tekst ogólny<br /><br /> Nazwa typu danych|SBCS (_UNICODE,<br /><br /> Nie _MBCS<br /><br /> określonych|_MBCS<br /><br /> zdefiniowane|_UNICODE<br /><br /> zdefiniowane|
 |--------------------------------------|----------------------------------------------------|------------------------|---------------------------|
-|`_TCHAR`|`char`|`char`|`wchar_t`|
+|`_TCHAR`|**`char`**|**`char`**|**`wchar_t`**|
 |`_tfinddata_t`|`_finddata_t`|`_finddata_t`|`_wfinddata_t`|
 |`_tfinddata64_t`|`__finddata64_t`|`__finddata64_t`|`__wfinddata64_t`|
 |`_tfinddatai64_t`|`_finddatai64_t`|`_finddatai64_t`|`_wfinddatai64_t`|
-|`_TINT`|`int`|`int`|`wint_t`|
-|`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|
-|`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|
-|`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|
-|`_T` lub `_TEXT`|Żadnego skutku (usuwane przez preprocesor)|Żadnego skutku (usuwane przez preprocesor)|`L` (konwertuje zgodnie z jego odpowiednikiem Unicode znak lub ciąg)|
+|`_TINT`|**`int`**|**`int`**|`wint_t`|
+|`_TSCHAR`|**`signed char`**|**`signed char`**|**`wchar_t`**|
+|`_TUCHAR`|**`unsigned char`**|**`unsigned char`**|**`wchar_t`**|
+|`_TXCHAR`|**`char`**|**`unsigned char`**|**`wchar_t`**|
+|`_T` lub `_TEXT`|Brak efektu (usunięty przez preprocesor)|Brak efektu (usunięty przez preprocesor)|`L`(konwertuje następujący znak lub ciąg na odpowiedni odpowiednik Unicode)|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Mapowania zwykłego tekstu](../c-runtime-library/generic-text-mappings.md)<br/>
-[Mapowania zmiennych globalnych i stałych](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
+[Mapowania tekstu ogólnego](../c-runtime-library/generic-text-mappings.md)<br/>
+[Stałe i globalne mapowania zmiennych](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
 [Mapowania procedur](../c-runtime-library/routine-mappings.md)<br/>
-[Przykładowy ogólny program tekstowy](../c-runtime-library/a-sample-generic-text-program.md)<br/>
-[Mapowania zwykłego tekstu](../c-runtime-library/using-generic-text-mappings.md)
+[Przykładowy program tekstu ogólnego](../c-runtime-library/a-sample-generic-text-program.md)<br/>
+[Korzystanie z mapowań tekstu ogólnego](../c-runtime-library/using-generic-text-mappings.md)

@@ -34,16 +34,16 @@ helpviewer_keywords:
 - CMapWordToOb [MFC], RemoveKey
 - CMapWordToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
-ms.openlocfilehash: 80d53f195ba98f853c86a4d9c38fa9fcda52da3b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f360760bb5c04400ed77ef49c5968f8e9e7a6e59
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442586"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222995"
 ---
 # <a name="cmapwordtoob-class"></a>Klasa CMapWordToOb
 
-Obsługuje mapy wskaźników `CObject`, które są oparte na słowach 16-bitowych.
+Obsługuje mapy wskaźników opartych `CObject` na słowach 16-bitowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,7 +53,7 @@ class CMapWordToOb : public CObject
 
 ## <a name="members"></a>Elementy członkowskie
 
-Funkcje składowe `CMapWordToOb` są podobne do funkcji składowych klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). W związku z tym podobieństwem można użyć dokumentacji referencyjnej `CMapStringToOb` dla specyficznych dla funkcji składowych. Wszędzie tam, gdzie widzisz `CString` lub **stały wskaźnik do** **char** jako parametr funkcji lub wartość zwracaną, podstaw wyraz.
+Funkcje składowe `CMapWordToOb` są podobne do funkcji składowych klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). W związku z tym podobieństwem można użyć `CMapStringToOb` dokumentacji referencyjnej dla specyficznych dla funkcji składowych. W każdym przypadku, gdy widzisz `CString` **`const`** wskaźnik **`char`** jako parametr funkcji lub wartość zwrotną, podstaw wyraz.
 
 `BOOL CMapWordToOb::Lookup( WORD <key>, CObject*& <rValue> ) const;`
 
@@ -63,13 +63,13 @@ na przykład tłumaczy na
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMapWordToOb::CMapWordToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Konstruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMapWordToOb:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Zwraca liczbę elementów w tej mapie.|
 |[CMapWordToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Określa bieżącą liczbę elementów w tabeli skrótów.|
@@ -87,19 +87,19 @@ na przykład tłumaczy na
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CMapWordToOb:: operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Wstawia element do mapy — podstawienie operatora dla `SetAt`.|
+|[CMapWordToOb:: operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Wstawia element do mapy — podstawienia operatora dla `SetAt` .|
 
 ## <a name="remarks"></a>Uwagi
 
-`CMapWordToOb` zawiera IMPLEMENT_SERIAL makro do obsługi serializacji i dumpingu jego elementów. Każdy element jest serializowany, jeśli mapa jest przechowywana w archiwum, za pomocą operatora przeciążonego wstawiania ( **<<** ) lub funkcji członkowskiej `Serialize`.
+`CMapWordToOb`obejmuje IMPLEMENT_SERIAL makro do obsługi serializacji i dumpingu jego elementów. Każdy element jest serializowany, jeśli mapa jest przechowywana w archiwum, przy użyciu przeciążonego operatora wstawiania ( **<<** ) lub `Serialize` funkcji członkowskiej.
 
-Jeśli potrzebujesz zrzutu poszczególnych elementów WYRAZów `CObject`, musisz ustawić głębokość kontekstu zrzutu na 1 lub większą.
+Jeśli potrzebujesz zrzutu poszczególnych elementów WYRAZów `CObject` , musisz ustawić głębokość kontekstu zrzutu na 1 lub większą.
 
-Po usunięciu obiektu `CMapWordToOb` lub po usunięciu jego elementów, wskaźniki `CObject` są usuwane. Obiekty, do których odwołuje się wskaźniki `CObject`, nie są niszczone.
+Po `CMapWordToOb` usunięciu obiektu lub po usunięciu jego elementów `CObject` wskaźniki są usuwane. Obiekty, do których odwołuje się `CObject` wskaźnik, nie są niszczone.
 
-Aby uzyskać więcej informacji na temat `CMapWordToOb`, zobacz [kolekcje](../../mfc/collections.md)artykułów.
+Aby uzyskać więcej informacji na temat `CMapWordToOb` , zobacz [kolekcje](../../mfc/collections.md)artykułów.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -111,7 +111,7 @@ Aby uzyskać więcej informacji na temat `CMapWordToOb`, zobacz [kolekcje](../..
 
 **Nagłówek:** afxcoll. h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

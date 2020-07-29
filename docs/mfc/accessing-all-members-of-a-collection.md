@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-ms.openlocfilehash: 0d8b5491ee5321171ef358308f3c1548e43953d3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cc058e6e4bf0058adb13f83e7ea071ebb4570ec4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616493"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214181"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Uzyskiwanie dostępu do wszystkich elementów członkowskich kolekcji
 
@@ -42,11 +42,11 @@ W poniższych procedurach pokazano, jak wykonać iterację trzech głównych typ
 
    W tym przykładzie używa tablicy wskaźników typu, która zawiera wskaźniki do `CPerson` obiektów. Tablica pochodzi od klasy `CObArray` , jednej z wstępnie zdefiniowanych klas. `GetAt`Zwraca wskaźnik do `CPerson` obiektu. Dla klas kolekcji wskaźników wpisanych — tablice lub listy — pierwszy parametr określa klasę bazową; drugi parametr określa typ do zapisania.
 
-   `CTypedPtrArray`Klasa przeciąża również operator **[]** , aby można było użyć niestandardowej składni indeksu tablicy w celu uzyskania dostępu do elementów tablicy. Alternatywą dla instrukcji w treści pętli **for** jest
+   `CTypedPtrArray`Klasa przeciąża również operator **[]** , aby można było użyć niestandardowej składni indeksu tablicy w celu uzyskania dostępu do elementów tablicy. Alternatywą dla instrukcji w treści **`for`** pętli powyżej jest
 
    [!code-cpp[NVC_MFCCollections#13](codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
 
-   Ten operator istnieje w wersjach **const** i non-**const** . Wersja **stałej** , która jest wywoływana dla tablic **stałych** , może występować tylko po prawej stronie instrukcji przypisania.
+   Ten operator istnieje zarówno w **`const`** , jak i w **`const`** wersji. **`const`** Wersja, która jest wywoływana dla **`const`** tablic, może występować tylko po prawej stronie instrukcji przypisania.
 
 ### <a name="to-iterate-a-list"></a><a name="_core_to_iterate_a_list"></a>Aby wykonać iterację listy
 
@@ -73,6 +73,6 @@ W poniższych procedurach pokazano, jak wykonać iterację trzech głównych typ
 
 Aby uzyskać więcej informacji, zobacz [usuwanie wszystkich obiektów w kolekcji CObject](deleting-all-objects-in-a-cobject-collection.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kolekcje](collections.md)

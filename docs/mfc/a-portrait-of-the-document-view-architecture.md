@@ -1,5 +1,5 @@
 ---
-title: Portret architektury dokumentu-widoku
+title: Pionowa architektura widoku dokumentu
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [MFC], views
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - document/view architecture [MFC], about document/view architecture
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
-ms.openlocfilehash: f0e71c42004b5409eeb6f5e2ddabd33296cf5f49
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8c7bb4add1ebce62147f0bd5403f693cbec87e91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623448"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214194"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Portret architektury dokument/widok
 
@@ -27,7 +27,7 @@ Dokumenty i widoki są sparowane w typowej aplikacji MFC. Dane są przechowywane
 
 ## <a name="gaining-access-to-document-data-from-the-view"></a>Uzyskiwanie dostępu do danych dokumentu z widoku
 
-Widok uzyskuje dostęp do danych dokumentu przy użyciu funkcji [GetDocument](reference/cview-class.md#getdocument) , która zwraca wskaźnik do dokumentu lub przez utworzenie klasy widoku w języku C++ `friend` klasy dokumentu. W widoku zostanie następnie użyty dostęp do danych w celu uzyskania danych, gdy wszystko jest gotowe do rysowania lub manipulowania nimi.
+Widok uzyskuje dostęp do danych dokumentu przy użyciu funkcji [GetDocument](reference/cview-class.md#getdocument) , która zwraca wskaźnik do dokumentu lub przez utworzenie klasy widoku w języku C++ **`friend`** klasy dokumentu. W widoku zostanie następnie użyty dostęp do danych w celu uzyskania danych, gdy wszystko jest gotowe do rysowania lub manipulowania nimi.
 
 Na przykład, w funkcji składowej [OnDraw](reference/cview-class.md#ondraw) widoku, widok używa `GetDocument` do uzyskania wskaźnika dokumentu. Następnie używa tego wskaźnika, aby uzyskać dostęp do `CString` elementu członkowskiego danych w dokumencie. Widok przekazuje ciąg do `TextOut` funkcji. Aby wyświetlić kod dla tego przykładu, zobacz [Rysowanie w widoku](drawing-in-a-view.md).
 
@@ -45,6 +45,6 @@ W aplikacji z wieloma widokami tego samego dokumentu — na przykład okna rozdz
 
 - [Alternatywy dla architektury dokumentu/widoku](alternatives-to-the-document-view-architecture.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Architektura dokumentu/widoku](document-view-architecture.md)

@@ -139,116 +139,116 @@ helpviewer_keywords:
 - SIZE_MAX constant
 - RSIZE_MAX constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
-ms.openlocfilehash: c4ffbf294083131f29ffe957fd0434182fbb8f99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d9d053611fb733d55424d01be2bab030fc49e6e0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344398"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215169"
 ---
 # <a name="data-type-constants"></a>Typ danych — Stałe
 
-Typ danych — stałe są zakresy zależne od implementacji wartości dozwolone w przypadku typów całkowitych i zmiennoprzecinkowych danych.
+Stałe typu danych to zależne od implementacji zakresy wartości dozwolone dla typów danych całkowitych i zmiennoprzecinkowych.
 
 ## <a name="integral-type-constants"></a>Stałe typu całkowitego
 
-Te stałe oferują zakresy dla typów całkowitych danych. Aby użyć tych stałych, należy dołączyć nagłówek limits.h w pliku źródłowym:
+Te stałe dają zakresy dla całkowitych typów danych. Aby użyć tych stałych, Uwzględnij nagłówek Limits. h w pliku źródłowym:
 
 ```C
 #include <limits.h>
 ```
 
 > [!NOTE]
-> [/J.](../build/reference/j-default-char-type-is-unsigned.md) — opcja kompilatora zmienia domyślny **char** typ **niepodpisane**.
+> [`/J`](../build/reference/j-default-char-type-is-unsigned.md)Opcja kompilatora zmienia domyślny **`char`** Typ z **`signed char`** na **`unsigned char`** .
 
-|Stała|Wartość|Opis|
+|Stały|Wartość|Opis|
 |--------------|-----------|-------------|
-|**CHAR_BIT**|8|Liczba bitów **char**|
-|**SCHAR_MIN**|(-128)|Co najmniej podpisany **char** wartość|
-|**SCHAR_MAX**|127|Maksymalna podpisany **char** wartość|
-|**UCHAR_MAX**|255 (0xff)|Maksymalna **niepodpisane** **char** wartość|
-|**CHAR_MIN**|(od -128) (0, jeśli **/j.** opcja używana)|Co najmniej **char** wartość|
-|**CHAR_MAX**|127 (jeśli 255 **/j.** opcja używana)|Maksymalna **char** wartość|
-|**MB_LEN_MAX**|5|Maksymalna liczba bajtów znaków wielobajtowych **char**|
-|**SHRT_MIN**|-32768|Co najmniej podpisany **krótki** wartość|
-|**SHRT_MAX**|32767|Maksymalna podpisany **krótki** wartość|
-|**USHRT_MAX**|65535 (0xffff)|Maksymalna **niepodpisane** **krótki** wartość|
-|**INT_MIN**|(-2147483647 - 1)|Co najmniej podpisany **int** wartość|
-|**INT_MAX**|2147483647|Maksymalna podpisany **int** wartość|
-|**UINT_MAX**|4294967295 (0xffffffff)|Maksymalna **niepodpisane** **int** wartość|
-|**LONG_MIN**|(-2147483647 L - 1)|Co najmniej podpisany **długie** wartość|
-|**LONG_MAX**|2147483647L|Maksymalna podpisany **długie** wartość|
-|**ULONG_MAX**|4294967295UL (0xfffffffful)|Maksymalna **niepodpisane** **długie** wartość|
-|**LLONG_MIN**|(- 9223372036854775807LL - 1)|Co najmniej podpisany **długie** **długie** lub **__int64** wartość|
-|**LLONG_MAX**|9223372036854775807LL|Maksymalna podpisany **długie** **długie** lub **__int64** wartość|
-|**ULLONG_MAX**|0xffffffffffffffffull|Maksymalna **niepodpisane** **długie** **długie** wartość|
-|**_I8_MIN**|(- 127i8 - 1)|Co najmniej podpisany 8-bitową wartością|
-|**_I8_MAX**|127i8|Maksymalna podpisany 8-bitową wartością|
-|**_UI8_MAX**|0xffui8|Wartość maksymalna 8-bitowych unsigned|
-|**_I16_MIN**|(- 32767i16 - 1)|Co najmniej podpisany 16-bitową wartość|
-|**_I16_MAX**|32767i16|Maksymalna podpisany 16-bitową wartość|
-|**_UI16_MAX**|0xffffui16|Maksymalna wartość 16-bitowych unsigned|
-|**_I32_MIN**|(- 2147483647i32 - 1)|Co najmniej podpisany 32-bitową wartość|
-|**_I32_MAX**|2147483647i32|Maksymalna podpisany 32-bitową wartość|
-|**_UI32_MAX**|0xffffffffui32|Maksymalna wartość 32-bitowych unsigned|
-|**_I64_MIN**|(-9223372036854775807 - 1)|Co najmniej podpisany wartość 64-bitowa|
-|**_I64_MAX**|9223372036854775807|Maksymalna podpisany wartość 64-bitowa|
-|**_UI64_MAX**|0xffffffffffffffffui64|Maksymalna wartość 64-bitowych unsigned|
-|**_I128_MIN**|(- 170141183460469231731687303715884105727i128 - 1)|Co najmniej podpisany 128-bitowej wartości|
-|**_I128_MAX**|170141183460469231731687303715884105727i128|Maksymalna podpisany 128-bitowej wartości|
-|**_UI128_MAX**|0xffffffffffffffffffffffffffffffffui128|Maksymalna wartość 128-bitowych unsigned|
-|**SIZE_MAX**|taki sam jak **_UI64_MAX** Jeśli **_WIN64** jest zdefiniowany, lub **UINT_MAX**|Maksymalna liczba całkowita natywnych rozmiar|
-|**RSIZE_MAX**|taki sam jak (**SIZE_MAX** >> 1)|Maksymalna bezpieczna biblioteka liczba całkowita określająca rozmiar|
+|**CHAR_BIT**|8|Liczba bitów w**`char`**|
+|**SCHAR_MIN**|(-128)|**`signed char`** Wartość minimalna|
+|**SCHAR_MAX**|127|**`signed char`** Wartość maksymalna|
+|**UCHAR_MAX**|255 (0xFF)|**`unsigned char`** Wartość maksymalna|
+|**CHAR_MIN**|(-128) (0 Jeśli **`/J`** użyto opcji)|**`char`** Wartość minimalna|
+|**CHAR_MAX**|127 (255 Jeśli **`/J`** użyto opcji)|**`char`** Wartość maksymalna|
+|**MB_LEN_MAX**|5|Maksymalna liczba bajtów w wielobajtowym**`char`**|
+|**SHRT_MIN**|-32768|**`signed short`** Wartość minimalna|
+|**SHRT_MAX**|32767|**`signed short`** Wartość maksymalna|
+|**USHRT_MAX**|65535 (0xFFFF)|**`unsigned short`** Wartość maksymalna|
+|**INT_MIN**|(-2147483647-1)|**`signed int`** Wartość minimalna|
+|**INT_MAX**|2147483647|**`signed int`** Wartość maksymalna|
+|**UINT_MAX**|4294967295 (0xffffffff)|**`unsigned int`** Wartość maksymalna|
+|**LONG_MIN**|(-2147483647-1)|**`signed long`** Wartość minimalna|
+|**LONG_MAX**|2147483647|**`signed long`** Wartość maksymalna|
+|**ULONG_MAX**|4294967295UL (0xfffffffful)|**`unsigned long`** Wartość maksymalna|
+|**LLONG_MIN**|(-9223372036854775807LL-1)|Minimum **`signed long long`** lub **`__int64`** wartość|
+|**LLONG_MAX**|9223372036854775807LL|Maksimum **`signed long long`** lub **`__int64`** wartość|
+|**ULLONG_MAX**|0xffffffffffffffffull|**`unsigned long long`** Wartość maksymalna|
+|**_I8_MIN**|(-127i8-1)|Minimalna podpisana wartość 8-bitowa|
+|**_I8_MAX**|127i8|Maksymalna podpisana wartość 8-bitowa|
+|**_UI8_MAX**|0xffui8|Maksymalna wartość 8-bitowa bez znaku|
+|**_I16_MIN**|(-32767i16-1)|Minimalna podpisana wartość 16-bitowa|
+|**_I16_MAX**|32767i16|Maksymalna podpisana wartość 16-bitowa|
+|**_UI16_MAX**|0xffffui16|Maksymalna wartość 16-bitowa bez znaku|
+|**_I32_MIN**|(-2147483647i32-1)|Minimalna podpisana wartość 32-bitowa|
+|**_I32_MAX**|2147483647i32|Maksymalna podpisana wartość 32-bitowa|
+|**_UI32_MAX**|0xffffffffui32|Maksymalna niepodpisana wartość 32-bitowa|
+|**_I64_MIN**|(-9223372036854775807-1)|Minimalna podpisana wartość 64-bitowa|
+|**_I64_MAX**|9223372036854775807|Maksymalna podpisana wartość 64-bitowa|
+|**_UI64_MAX**|0xffffffffffffffffui64|Maksymalna niepodpisana wartość 64-bitowa|
+|**_I128_MIN**|(-170141183460469231731687303715884105727i128-1)|Minimalna podpisana wartość 128-bitowa|
+|**_I128_MAX**|170141183460469231731687303715884105727i128|Maksymalna podpisana wartość 128-bitowa|
+|**_UI128_MAX**|0xffffffffffffffffffffffffffffffffui128|Maksymalna niepodpisana wartość 128-bitowa|
+|**SIZE_MAX**|tak samo jak **_UI64_MAX** , jeśli **_WIN64** jest zdefiniowany lub **UINT_MAX**|Maksymalny rozmiar natywnej wartości całkowitej|
+|**RSIZE_MAX**|Analogicznie jak (**SIZE_MAX** >> 1)|Maksymalny rozmiar całkowitej biblioteki bezpiecznych|
 
 ## <a name="floating-point-type-constants"></a>Stałe typu zmiennoprzecinkowego
 
-Nadaj następujących stałych, zakresu i inne cechy charakterystyczne **długie** **double**, **double** i **float** typy danych. Aby użyć tych stałych, należy dołączyć nagłówek float.h w pliku źródłowym:
+Poniższe stałe dają zakres i inne cechy **`long double`** **`double`** typów i **`float`** . Aby użyć tych stałych, Uwzględnij nagłówek float. h w pliku źródłowym:
 
 ```C
 #include <float.h>
 ```
 
-|Stała|Wartość|Opis|
+|Stały|Wartość|Opis|
 |--------------|-----------|-----------------|
-|**DBL_DECIMAL_DIG**|17|Liczba cyfr dziesiętnych zaokrąglania dokładności|
-|**DBL_DIG**|15|Liczba cyfr dziesiętnych|
-|**DBL_EPSILON**|2.2204460492503131e-016|Najmniejsza taki sposób, że 1.0 + **DBL_EPSILON** ! = 1,0|
-|**DBL_HAS_SUBNORM**|1|Obsługuje typ subnormal (numery zdenormalizowany)|
-|**DBL_MANT_DIG**|53|Liczba bitów mantysę (mantysy)|
-|**DBL_MAX**|1, 7976931348623158e + 308.|Wartość maksymalna|
-|**DBL_MAX_10_EXP**|308|Maksymalna wykładnik dziesiętna|
-|**DBL_MAX_EXP**|1024|Maksymalna wykładnik binarne|
-|**DBL_MIN**|2.2250738585072014e-308|Minimalna liczba znormalizowanych wartość dodatnią|
-|**DBL_MIN_10_EXP**|(-307)|Minimalna wykładnik dziesiętna|
-|**DBL_MIN_EXP**|(-1021)|Minimalna wykładnik binarne|
+|**DBL_DECIMAL_DIG**|17|Liczba cyfr dziesiętnych dokładności zaokrąglania|
+|**DBL_DIG**|15|Liczba cyfr dziesiętnych dokładności|
+|**DBL_EPSILON**|2.2204460492503131 e-016|Najmniejszy taki, że 1,0 + **DBL_EPSILON** ! = 1,0|
+|**DBL_HAS_SUBNORM**|1|Typ obsługuje liczby podnormalne (nienormalne)|
+|**DBL_MANT_DIG**|53|Liczba bitów w mantysę (mantysy)|
+|**DBL_MAX**|1.7976931348623158 e + 308|Wartość maksymalna|
+|**DBL_MAX_10_EXP**|308|Maksymalny wykładnik dziesiętny|
+|**DBL_MAX_EXP**|1024|Maksymalny wykładnik binarny|
+|**DBL_MIN**|2.2250738585072014 e-308|Minimalna znormalizowana wartość dodatnia|
+|**DBL_MIN_10_EXP**|(-307)|Minimalny wykładnik dziesiętny|
+|**DBL_MIN_EXP**|(-1021)|Minimalny wykładnik binarny|
 |**_DBL_RADIX**|2|Podstawy wykładnika|
-|**DBL_TRUE_MIN**|4.9406564584124654e-324|Minimalna wartość subnormal dodatnią|
-|**FLT_DECIMAL_DIG**|9|Liczba cyfr dziesiętnych zaokrąglania dokładności|
+|**DBL_TRUE_MIN**|4.9406564584124654 e-324|Minimalna dodatnia wartość nienormalna|
+|**FLT_DECIMAL_DIG**|9|Liczba cyfr dziesiętnych dokładności zaokrąglania|
 |**FLT_DIG**|6|Liczba cyfr dziesiętnych dokładności|
-|**FLT_EPSILON**|1.192092896e-07F|Najmniejsza taki sposób, że 1.0 + **FLT_EPSILON** ! = 1,0|
-|**FLT_HAS_SUBNORM**|1|Obsługuje typ subnormal (numery zdenormalizowany)|
-|**FLT_MANT_DIG**|24|Liczba bitów mantysę (mantysy)|
-|**FLT_MAX**|3.402823466e+38F|Wartość maksymalna|
-|**FLT_MAX_10_EXP**|38|Maksymalna wykładnik dziesiętna|
-|**FLT_MAX_EXP**|128|Maksymalna wykładnik binarne|
-|**FLT_MIN**|1.175494351e-38F|Minimalna liczba znormalizowanych wartość dodatnią|
-|**FLT_MIN_10_EXP**|(-37)|Minimalna wykładnik dziesiętna|
-|**FLT_MIN_EXP**|(-125)|Minimalna wykładnik binarne|
+|**FLT_EPSILON**|1.192092896 e-07F|Najmniejszy taki, że 1,0 + **FLT_EPSILON** ! = 1,0|
+|**FLT_HAS_SUBNORM**|1|Typ obsługuje liczby podnormalne (nienormalne)|
+|**FLT_MANT_DIG**|24|Liczba bitów w mantysę (mantysy)|
+|**FLT_MAX**|3.402823466 e + 38F|Wartość maksymalna|
+|**FLT_MAX_10_EXP**|38|Maksymalny wykładnik dziesiętny|
+|**FLT_MAX_EXP**|128|Maksymalny wykładnik binarny|
+|**FLT_MIN**|1.175494351 e-38F|Minimalna znormalizowana wartość dodatnia|
+|**FLT_MIN_10_EXP**|(-37)|Minimalny wykładnik dziesiętny|
+|**FLT_MIN_EXP**|(-125)|Minimalny wykładnik binarny|
 |**FLT_RADIX**|2|Podstawy wykładnika|
-|**FLT_TRUE_MIN**|1.401298464e-45F|Minimalna wartość subnormal dodatnią|
-|**LDBL_DIG**|15|Liczba cyfr dziesiętnych|
-|**LDBL_EPSILON**|2.2204460492503131e-016|Najmniejsza taki sposób, że 1.0 + **LDBL_EPSILON** ! = 1,0|
-|**LDBL_HAS_SUBNORM**|1|Obsługuje typ subnormal (numery zdenormalizowany)|
-|**LDBL_MANT_DIG**|53|Liczba bitów mantysę (mantysy)|
-|**LDBL_MAX**|1, 7976931348623158e + 308.|Wartość maksymalna|
-|**LDBL_MAX_10_EXP**|308|Maksymalna wykładnik dziesiętna|
-|**LDBL_MAX_EXP**|1024|Maksymalna wykładnik binarne|
-|**LDBL_MIN**|2.2250738585072014e-308|Minimalna liczba znormalizowanych wartość dodatnią|
-|**LDBL_MIN_10_EXP**|(-307)|Minimalna wykładnik dziesiętna|
-|**LDBL_MIN_EXP**|(-1021)|Minimalna wykładnik binarne|
+|**FLT_TRUE_MIN**|1.401298464 e-45F|Minimalna dodatnia wartość nienormalna|
+|**LDBL_DIG**|15|Liczba cyfr dziesiętnych dokładności|
+|**LDBL_EPSILON**|2.2204460492503131 e-016|Najmniejszy taki, że 1,0 + **LDBL_EPSILON** ! = 1,0|
+|**LDBL_HAS_SUBNORM**|1|Typ obsługuje liczby podnormalne (nienormalne)|
+|**LDBL_MANT_DIG**|53|Liczba bitów w mantysę (mantysy)|
+|**LDBL_MAX**|1.7976931348623158 e + 308|Wartość maksymalna|
+|**LDBL_MAX_10_EXP**|308|Maksymalny wykładnik dziesiętny|
+|**LDBL_MAX_EXP**|1024|Maksymalny wykładnik binarny|
+|**LDBL_MIN**|2.2250738585072014 e-308|Minimalna znormalizowana wartość dodatnia|
+|**LDBL_MIN_10_EXP**|(-307)|Minimalny wykładnik dziesiętny|
+|**LDBL_MIN_EXP**|(-1021)|Minimalny wykładnik binarny|
 |**_LDBL_RADIX**|2|Podstawy wykładnika|
-|**LDBL_TRUE_MIN**|4.9406564584124654e-324|Minimalna wartość subnormal dodatnią|
-|**DECIMAL_DIG**|taki sam jak **DBL_DECIMAL_DIG**|Domyślne (podwójny) cyfr dziesiętnych zaokrąglania dokładności|
+|**LDBL_TRUE_MIN**|4.9406564584124654 e-324|Minimalna dodatnia wartość nienormalna|
+|**DECIMAL_DIG**|taki sam jak **DBL_DECIMAL_DIG**|Domyślne (podwójne) cyfry dziesiętne dokładności zaokrąglania|
 
 ## <a name="see-also"></a>Zobacz także
 

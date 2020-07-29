@@ -6,18 +6,18 @@ helpviewer_keywords:
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-ms.openlocfilehash: ebdfea18e6e8445dd734bf43fb6a4ecf422975e9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cdcdd63e84d4b375c44c2b89bf2d4f3285b0323c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622747"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223190"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Wyjątki: zgłaszanie wyjątków z własnych funkcji
 
 Istnieje możliwość użycia modelu obsługi wyjątków MFC wyłącznie do przechwytywania wyjątków zgłoszonych przez funkcje w MFC lub innych bibliotekach. Oprócz przechwytywania wyjątków zgłoszonych przez kod biblioteki można generować wyjątki z własnego kodu, jeśli piszesz funkcje, które mogą napotkać wyjątkowe warunki.
 
-Gdy wyjątek jest zgłaszany, wykonywanie bieżącej funkcji jest zatrzymane i przechodzi bezpośrednio do bloku **catch** najbardziej wewnętrznej ramki wyjątku. Mechanizm wyjątków pomija normalne ścieżki wyjścia z funkcji. W związku z tym należy koniecznie usunąć te bloki pamięci, które zostałyby usunięte w normalnym zakończeniu.
+Gdy wyjątek jest zgłaszany, wykonywanie bieżącej funkcji jest zatrzymane i przechodzi bezpośrednio do **`catch`** bloku najbardziej wewnętrznej ramki wyjątku. Mechanizm wyjątków pomija normalne ścieżki wyjścia z funkcji. W związku z tym należy koniecznie usunąć te bloki pamięci, które zostałyby usunięte w normalnym zakończeniu.
 
 #### <a name="to-throw-an-exception"></a>Aby zgłosić wyjątek
 
@@ -40,6 +40,6 @@ Gdy wyjątek jest zgłaszany, wykonywanie bieżącej funkcji jest zatrzymane i p
 > [!NOTE]
 > Domyślna obsługa wyjątków MFC ma zastosowanie tylko do wskaźników do `CException` obiektów (i obiektów `CException` klas pochodnych). W powyższym przykładzie pominięto mechanizm wyjątków MFC.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa wyjątków](exception-handling-in-mfc.md)

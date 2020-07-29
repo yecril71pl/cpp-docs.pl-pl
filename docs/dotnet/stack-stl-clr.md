@@ -53,18 +53,18 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: 18c94df643371f7b645ac9658a51d133d53f3403
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5f5cfbb4f6125c1c72550018735b377e1507ab08
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208328"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214893"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
-Klasa szablonu opisuje obiekt, który kontroluje różnej długości sekwencje elementów, które mają ostatni pierwszy dostęp do zewnątrz. Karta kontenera jest używana `stack` do zarządzania bazowym kontenerem jako stosem wypychania.
+Klasa szablonu opisuje obiekt, który kontroluje różnej długości sekwencje elementów, które mają ostatni pierwszy dostęp do zewnątrz. Karta kontenera służy `stack` do zarządzania kontenerem bazowym jako stosem wypychania.
 
-W poniższym opisie `GValue` jest taka sama jak *wartość* , chyba że ostatni jest typem ref, w takim przypadku jest `Value^`. Podobnie `GContainer` jest taka sama jak *kontener* , chyba że ostatni jest typem ref, w takim przypadku jest `Container^`.
+W poniższym opisie `GValue` jest taka sama jak *wartość* , chyba że ostatni jest typem ref, w takim przypadku jest to `Value^` . Podobnie, `GContainer` jest taka sama jak *kontener* , chyba że ostatni jest typem ref, w takim przypadku jest to `Container^` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -83,12 +83,12 @@ template<typename Value,
 *Wartość*<br/>
 Typ elementu w kontrolowanej sekwencji.
 
-*Wbudowane*<br/>
+*Kontener*<br/>
 Typ bazowego kontenera.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<cliext/stos >
+**Nagłówek:**\<cliext/stack>
 
 **Przestrzeń nazw:** cliext
 
@@ -124,25 +124,25 @@ Typ bazowego kontenera.
 |Operator|Opis|
 |--------------|-----------------|
 |[stack::operator= (STL/CLR)](#op_as)|Zastępuje kontrolowaną sekwencję.|
-|[operator!= (stack) (STL/CLR)](#op_neq)|Określa, czy obiekt `stack` nie jest równy innemu obiektowi `stack`.|
-|[operator< (stack) (STL/CLR)](#op_lt)|Określa, czy obiekt `stack` jest mniejszy niż inny obiekt `stack`.|
-|[operator<= (stack) (STL/CLR)](#op_lteq)|Określa, czy obiekt `stack` jest mniejszy niż lub równy innemu obiektowi `stack`.|
-|[operator== (stack) (STL/CLR)](#op_eq)|Określa, czy obiekt `stack` jest równy innemu obiektowi `stack`.|
-|[operator> (stack) (STL/CLR)](#op_gt)|Określa, czy obiekt `stack` jest większy niż inny obiekt `stack`.|
-|[operator>= (stack) (STL/CLR)](#op_gteq)|Określa, czy obiekt `stack` jest większy niż lub równy innemu obiektowi `stack`.|
+|[operator! = (stack) (STL/CLR)](#op_neq)|Określa, czy `stack` obiekt nie jest równy innemu `stack` obiektowi.|
+|[< operatora (stos) (STL/CLR)](#op_lt)|Określa, czy `stack` obiekt jest mniejszy niż inny `stack` obiekt.|
+|[operator<= (stack) (STL/CLR)](#op_lteq)|Określa, czy `stack` obiekt jest mniejszy niż lub równy innemu `stack` obiektowi.|
+|[operator== (stack) (STL/CLR)](#op_eq)|Określa, czy `stack` obiekt jest równy innemu `stack` obiektowi.|
+|[> operatora (stos) (STL/CLR)](#op_gt)|Określa, czy `stack` obiekt jest większy niż inny `stack` obiekt.|
+|[operator>= (stack) (STL/CLR)](#op_gteq)|Określa, czy `stack` obiekt jest większy lub równy innemu `stack` obiektowi.|
 
 ## <a name="interfaces"></a>Interfejsy
 
-|Interface|Opis|
+|Interfejs|Opis|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Duplikowanie obiektu.|
-|Isvalue\<wartość, kontener >|Obsługa karty kontenera ogólnego.|
+|Isprostopadły\<Value, Container>|Obsługa karty kontenera ogólnego.|
 
 ## <a name="remarks"></a>Uwagi
 
 Obiekt przydziela i zwalnia magazyn dla sekwencji, która kontroluje za pomocą kontenera bazowego, typu *Container*, który przechowuje elementy *wartości* i zwiększa się na żądanie. Obiekt ogranicza dostęp do wypychania i usuwanie tylko ostatniego elementu, implementując ostatnią wbudowaną kolejkę (znaną również jako kolejka LIFO lub stos).
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ## <a name="stackassign-stlclr"></a><a name="assign"></a>Stack:: Assign (STL/CLR)
 
@@ -354,7 +354,7 @@ bool empty();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca wartość true dla pustej kontrolowanej sekwencji. Jest odpowiednikiem [stosu:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`. Służy do sprawdzania, czy stos jest pusty.
+Funkcja członkowska zwraca wartość true dla pustej kontrolowanej sekwencji. Jest odpowiednikiem [stosu:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() == 0` . Służy do sprawdzania, czy stos jest pusty.
 
 ### <a name="example"></a>Przykład
 
@@ -471,7 +471,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt typu `GValue`, który opisuje wartość przechowywanego elementu do użycia z interfejsem ogólnym dla tej klasy kontenera szablonu. (`GValue` jest `value_type` lub `value_type^`, jeśli `value_type` jest typem ref).
+Typ opisuje obiekt typu `GValue` , który opisuje wartość przechowywanego elementu do użycia z interfejsem ogólnym dla tej klasy kontenera szablonu. ( `GValue` is `value_type` lub `value_type^` if `value_type` jest typem ref).
 
 ### <a name="example"></a>Przykład
 
@@ -576,7 +576,7 @@ Adapter kontenera do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator elementu członkowskiego kopiuje *prawo* do obiektu, a następnie zwraca `*this`. Służy do zastępowania kontrolowanej sekwencji kopią kontrolowanej sekwencji *po prawej stronie*.
+Operator elementu członkowskiego kopiuje *prawo* do obiektu, a następnie zwraca **`*this`** . Służy do zastępowania kontrolowanej sekwencji kopią kontrolowanej sekwencji *po prawej stronie*.
 
 ### <a name="example"></a>Przykład
 
@@ -763,7 +763,7 @@ size_type size();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca długość kontrolowanej sekwencji. Służy do określania liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli dowiesz się, czy sekwencja ma rozmiar różny od zera, zobacz [Stack:: empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`.
+Funkcja członkowska zwraca długość kontrolowanej sekwencji. Służy do określania liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli dowiesz się, czy sekwencja ma rozmiar różny od zera, zobacz [Stack:: empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md) `()` .
 
 ### <a name="example"></a>Przykład
 
@@ -887,13 +887,13 @@ Konstruktor:
 
 `stack(stack<Value, Container>% right);`
 
-tworzy opakowany kontener, który jest kopią `right.get_container()`. Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej *przez obiekt stosu*.
+tworzy opakowany kontener, który jest kopią programu `right.get_container()` . Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej *przez obiekt stosu*.
 
 Konstruktor:
 
 `stack(stack<Value, Container>^ right);`
 
-tworzy opakowany kontener, który jest kopią `right->get_container()`. Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej przez obiekt stosu `*right`.
+tworzy opakowany kontener, który jest kopią programu `right->get_container()` . Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej przez obiekt stosu `*right` .
 
 Konstruktor:
 
@@ -1169,7 +1169,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca `!(left == right)`. Służy do sprawdzania *, czy nie* jest on uporządkowany *tak samo jak w* przypadku, gdy dwa stosy są porównane elementów według elementu.
+Funkcja operatora zwraca wartość `!(left == right)` . Służy do sprawdzania *, czy nie* jest on uporządkowany *tak samo jak w* przypadku, gdy dwa stosy są porównane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -1217,7 +1217,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a>&lt; operatora (stos) (STL/CLR)
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a>operator &lt; (stack) (STL/CLR)
 
 Stos jest mniejszy niż porównanie.
 
@@ -1240,7 +1240,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca wartość true, jeśli dla najniższej pozycji `i`, dla której `!(right[i] < left[i])` jest również spełniony `left[i] < right[i]`. W przeciwnym razie zwraca `left->`[Stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() <` `right->size()` służy do sprawdzania, czy *lewa* jest uporządkowana przed *prawą* , gdy dwa stosy są porównywane elementów według elementu.
+Funkcja operator zwraca wartość true, jeśli dla najniższej pozycji `i` `!(right[i] < left[i])` ma również wartość true `left[i] < right[i]` . W przeciwnym razie zwraca `left->` [stos:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md) , za `() <` `right->size()` pomocą którego można testować, czy *lewa* jest uporządkowana przed *prawą* , gdy dwa stosy są porównane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -1288,7 +1288,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a>operator&lt;= (stack) (STL/CLR)
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a>operator &lt; = (stack) (STL/CLR)
 
 Stos jest mniejszy niż lub równy porównaniu.
 
@@ -1311,7 +1311,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca `!(right < left)`. Służy do sprawdzania *, czy nie* jest on uporządkowany po *prawej stronie* , gdy dwa stosy są porównywane elementów według elementu.
+Funkcja operatora zwraca wartość `!(right < left)` . Służy do sprawdzania *, czy nie* jest on uporządkowany po *prawej stronie* , gdy dwa stosy są porównywane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -1382,7 +1382,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca wartość true tylko wtedy, gdy sekwencje sterowane przez *lewo* i *prawo* mają taką samą długość i, dla każdej pozycji `i`, `left[i] ==` `right[i]`. Służy do sprawdzania, czy *lewa* jest uporządkowana *tak samo jak w* przypadku, gdy dwa stosy są porównywane elementów według elementu.
+Funkcja operator zwraca wartość true tylko wtedy, gdy sekwencje sterowane przez *lewo* i *prawo* mają taką samą długość i, dla każdej pozycji `i` `left[i] ==` `right[i]` . Służy do sprawdzania, czy *lewa* jest uporządkowana *tak samo jak w* przypadku, gdy dwa stosy są porównywane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -1430,7 +1430,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a>&gt; operatora (stos) (STL/CLR)
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a>operator &gt; (stack) (STL/CLR)
 
 Stos jest większy niż porównanie.
 
@@ -1453,7 +1453,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca `right` `<` `left`. Służy do sprawdzania, czy *lewa* jest uporządkowana po *prawej stronie* , gdy dwa stosy są porównane elementów według elementu.
+Funkcja operatora zwraca wartość `right` `<` `left` . Służy do sprawdzania, czy *lewa* jest uporządkowana po *prawej stronie* , gdy dwa stosy są porównane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -1501,7 +1501,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a>operator&gt;= (stack) (STL/CLR)
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a>operator &gt; = (stack) (STL/CLR)
 
 Stos jest większy lub równy porównaniu.
 
@@ -1524,7 +1524,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca `!(left < right)`. Służy do sprawdzania, czy nie *jest on* uporządkowany przed *prawem* , gdy dwa stosy są porównywane elementów według elementu.
+Funkcja operatora zwraca wartość `!(left < right)` . Służy do sprawdzania, czy nie *jest on* uporządkowany przed *prawem* , gdy dwa stosy są porównywane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 

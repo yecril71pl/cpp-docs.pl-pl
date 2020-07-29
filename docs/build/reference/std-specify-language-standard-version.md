@@ -6,14 +6,14 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: ddb0fc9ad4880ed317a28d7aec5eba1669eabbc5
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: eef44858064b89d4a836c80a48552599bceec242
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507069"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223827"
 ---
-# <a name="std-specify-language-standard-version"></a>/STD (Określ wersję standardową języka)
+# <a name="std-specify-language-standard-version"></a>`/std`(Określ wersję standardową języka)
 
 Włącz obsługiwane funkcje języka C++ z określonej wersji standardu języka C++.
 
@@ -29,9 +29,9 @@ Ta **`/std`** opcja jest dostępna w programie Visual Studio 2017 i nowszych. S�
 
 Opcja domyślna **`/std:c++14`** włącza zestaw funkcji języka c++ 14 implementowanych przez KOMPILATOR MSVC. Ta opcja powoduje wyłączenie obsługi biblioteki kompilatora i standardowej dla funkcji, które są zmieniane lub nowe w nowszych wersjach standardu językowego. Nie powoduje wyłączenia niektórych funkcji języka C++ 17 już zaimplementowanych w poprzednich wersjach kompilatora MSVC. Aby uniknąć istotnej zmiany dla użytkowników, którzy już korzystali z funkcji dostępnych w programie lub przed aktualizacją Update 2 programu Visual Studio 2015, te funkcje pozostaną włączone po **`/std:c++14`** określeniu opcji:
 
-- [Reguły dla Autotekstu z klamrami-init-list](https://wg21.link/n3922)
+- [Reguły dla `auto` z nawiasami klamrowymi-list init](https://wg21.link/n3922)
 
-- [TypeName w szablonie szablonu — parametry](https://wg21.link/n4051)
+- [`typename`w szablonie szablonu — parametry](https://wg21.link/n4051)
 
 - [Usuwanie trigraphs](https://wg21.link/n4086)
 

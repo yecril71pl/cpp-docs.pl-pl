@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: b010c35f32462810cbdb008e5688d4b41254fad1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f3f0bc7c89ff2bea1c344f2c876e1624ba82fb87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620774"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214168"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Kontenery kontrolek ActiveX: używanie kontrolek w kontenerze innym niż okno dialogowe
 
@@ -55,12 +55,12 @@ Implementowanie tej funkcji jest procesem dwuetapowym.
 
 1. Dodaj `WM_CREATE` procedurę obsługi komunikatów do klasy `CMyView` .
 
-1. W funkcji obsługi, należy `CMyView::OnCreate` wywołać funkcję kontrolki `Create` za pomocą **tego** wskaźnika jako okna nadrzędnego:
+1. W funkcji obsługi, należy `CMyView::OnCreate` wywołać funkcję kontrolki `Create` przy użyciu **`this`** wskaźnika jako okna nadrzędnego:
 
    [!code-cpp[NVC_MFC_AxCont#15](codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
 
 1. Ponownie skompiluj projekt. Kontrolka cykl zostanie utworzona dynamicznie za każdym razem, gdy zostanie utworzony widok aplikacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontenery kontrolek ActiveX](activex-control-containers.md)

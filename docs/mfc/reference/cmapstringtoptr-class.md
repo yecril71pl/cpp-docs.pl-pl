@@ -34,16 +34,16 @@ helpviewer_keywords:
 - CMapStringToPtr [MFC], RemoveKey
 - CMapStringToPtr [MFC], SetAt
 ms.assetid: 1ac11143-eb0a-4511-a662-2df0d1d9005b
-ms.openlocfilehash: 0e722b305dad6595eb67b1a235c375d21f674353
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 26a606d5813a68b55d8fc555025ccef270a25766
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442605"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223021"
 ---
 # <a name="cmapstringtoptr-class"></a>Klasa CMapStringToPtr
 
-Obsługuje mapy wskaźników typu void, które są oparte na `CString` obiektów.
+Obsługuje mapy wskaźników typu void, które są oparte na `CString` obiektach.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,7 +53,7 @@ class CMapStringToPtr : public CObject
 
 ## <a name="members"></a>Elementy członkowskie
 
-Funkcje składowe `CMapStringToPtr` są podobne do funkcji składowych klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). W związku z tym podobieństwem można użyć dokumentacji referencyjnej `CMapStringToOb` dla specyficznych dla funkcji składowych. Wszędzie tam, gdzie widzisz wskaźnik `CObject` jako parametr funkcji lub wartość zwracana, Zastąp wskaźnik do typu **void**.
+Funkcje składowe `CMapStringToPtr` są podobne do funkcji składowych klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). W związku z tym podobieństwem można użyć `CMapStringToOb` dokumentacji referencyjnej dla specyficznych dla funkcji składowych. Wszędzie tam, gdzie widzisz `CObject` wskaźnik jako parametr funkcji lub wartość zwracana, Zastąp wskaźnik do **`void`** .
 
 `BOOL CMapStringToPtr::Lookup( LPCTSTR <key>, void*& <rValue> ) const;`
 
@@ -63,13 +63,13 @@ na przykład tłumaczy na
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMapStringToPtr::CMapStringToPtr](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Konstruktor.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[CMapStringToPtr:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Zwraca liczbę elementów w tej mapie.|
 |[CMapStringToPtr::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Określa bieżącą liczbę elementów w tabeli skrótów.|
@@ -87,17 +87,17 @@ na przykład tłumaczy na
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[CMapStringToPtr:: operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Wstawia element do mapy — podstawienie operatora dla `SetAt`.|
+|[CMapStringToPtr:: operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Wstawia element do mapy — podstawienia operatora dla `SetAt` .|
 
 ## <a name="remarks"></a>Uwagi
 
-`CMapStringToPtr` obejmuje makro IMPLEMENT_DYNAMIC w celu obsługi dostępu do typu w czasie wykonywania i zatopienia do obiektu `CDumpContext`. Jeśli potrzebujesz zrzutu poszczególnych elementów mapy, należy ustawić głębokość kontekstu zrzutu na 1 lub większą.
+`CMapStringToPtr`obejmuje makro IMPLEMENT_DYNAMIC do obsługi dostępu do typu w czasie wykonywania i zrzucania do `CDumpContext` obiektu. Jeśli potrzebujesz zrzutu poszczególnych elementów mapy, należy ustawić głębokość kontekstu zrzutu na 1 lub większą.
 
 Mapowania ciągów do wskaźnika nie mogą być serializowane.
 
-Po usunięciu obiektu `CMapStringToPtr` lub po usunięciu jego elementów obiekty kluczy `CString` i słowa zostaną usunięte.
+Po `CMapStringToPtr` usunięciu obiektu lub po usunięciu jego elementów `CString` obiekty kluczy i słowa są usuwane.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -109,7 +109,7 @@ Po usunięciu obiektu `CMapStringToPtr` lub po usunięciu jego elementów obiekt
 
 **Nagłówek:** afxcoll. h
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CObject](../../mfc/reference/cobject-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)

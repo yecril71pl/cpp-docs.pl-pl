@@ -4,12 +4,12 @@ description: Lista odwołań w kolejności alfabetycznej opcji wiersza polecenia
 ms.date: 07/08/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 41a2f6617e879a00101205f3505e70831f9efd50
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: 46c6f7009c840c83db2f945de2e504f08172fca2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180932"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223892"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opcje kompilatora w porządku alfabetycznym
 
@@ -59,7 +59,7 @@ Ta tabela zawiera alfabetyczną listę opcji kompilatora. Aby zapoznać się z l
 | [`/FU`](fu-name-forced-hash-using-file.md) | Wymusza użycie nazwy pliku, tak jakby została przeniesiona do [`#using`](../../preprocessor/hash-using-directive-cpp.md) dyrektywy. |
 | [`/Fx`](fx-merge-injected-code.md) | Scala wprowadzony kod z plikiem źródłowym. |
 | [`/GA`](ga-optimize-for-windows-application.md) | Optymalizuje kod dla aplikacji systemu Windows. |
-| [`/Gd`](gd-gr-gv-gz-calling-convention.md) | Używa `__cdecl` konwencji wywoływania (tylko x86). |
+| [`/Gd`](gd-gr-gv-gz-calling-convention.md) | Używa **`__cdecl`** konwencji wywoływania (tylko x86). |
 | [`/Ge`](ge-enable-stack-probes.md) | Przestarzałe. Aktywuje sondy stosu. |
 | [`/GF`](gf-eliminate-duplicate-strings.md) | Włącza buforowanie ciągów. |
 | [`/GH`](gh-enable-pexit-hook-function.md) | Wywołuje funkcję haka `_pexit` . |
@@ -67,24 +67,24 @@ Ta tabela zawiera alfabetyczną listę opcji kompilatora. Aby zapoznać się z l
 | [`/GL`](gl-whole-program-optimization.md) | Włącza optymalizację całego programu. |
 | [`/Gm`](gm-enable-minimal-rebuild.md) | Przestarzałe. Włącza minimalną ponowną kompilację. |
 | [`/GR`](gr-enable-run-time-type-information.md) | Włącza informacje o typach w czasie wykonywania (RTTI). |
-| [`/Gr`](gd-gr-gv-gz-calling-convention.md) | Używa `__fastcall` konwencji wywoływania (tylko x86). |
+| [`/Gr`](gd-gr-gv-gz-calling-convention.md) | Używa **`__fastcall`** konwencji wywoływania (tylko x86). |
 | [`/GS`](gs-buffer-security-check.md) | Bufory kontroli zabezpieczeń. |
 | [`/Gs`](gs-control-stack-checking-calls.md) | Kontroluje sondy stosu. |
 | [`/GT`](gt-support-fiber-safe-thread-local-storage.md) | Obsługuje zabezpieczenia włókna danych przydzielonych przy użyciu statycznego magazynu wątków lokalnych. |
 | [`/guard:cf`](guard-enable-control-flow-guard.md) | Dodaje testy zabezpieczeń funkcji Ochrona przepływu sterowania. |
 | [`/guard:ehcont`](guard-enable-eh-continuation-metadata.md) | Włącza metadane kontynuacji EH. |
-| [`/Gv`](gd-gr-gv-gz-calling-convention.md) | Używa `__vectorcall` konwencji wywoływania. (tylko x86 i x64) |
+| [`/Gv`](gd-gr-gv-gz-calling-convention.md) | Używa **`__vectorcall`** konwencji wywoływania. (tylko x86 i x64) |
 | [`/Gw`](gw-optimize-global-data.md) | Włącza optymalizację danych globalnych całego programu. |
 | [`/GX`](gx-enable-exception-handling.md) | Przestarzałe. Włącza synchroniczną obsługę wyjątków. Użyj [`/EH`](eh-exception-handling-model.md) zamiast tego. |
 | [`/Gy`](gy-enable-function-level-linking.md) | Włącza łączenie na poziomie funkcji. |
 | [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | Przestarzałe. Analogicznie jak [`/RTC1`](rtc-run-time-error-checks.md) . |
-| [`/Gz`](gd-gr-gv-gz-calling-convention.md) | Używa `__stdcall` konwencji wywoływania (tylko x86). |
+| [`/Gz`](gd-gr-gv-gz-calling-convention.md) | Używa **`__stdcall`** konwencji wywoływania (tylko x86). |
 | [`/H`](h-restrict-length-of-external-names.md) | Przestarzałe. Ogranicza długość nazw zewnętrznych (publicznych). |
 | [`/HELP`](help-compiler-command-line-help.md) | Wyświetla listę opcji kompilatora. |
 | [`/homeparams`](homeparams-copy-register-parameters-to-stack.md) | Wymusza, aby parametry przesyłane w rejestrach były zapisywane do ich lokalizacji na stosie przy wejściu do funkcji. Ta opcja kompilatora jest tylko dla kompilatorów x64 (kompilacja natywna i krzyżowa). |
 | [`/hotpatch`](hotpatch-create-hotpatchable-image.md) | Tworzy obraz z poprawkami na gorąco. |
 | [`/I`](i-additional-include-directories.md) | Wyszukuje pliki dołączane w katalogu. |
-| [`/J`](j-default-char-type-is-unsigned.md) | Zmienia typ domyślny `char` . |
+| [`/J`](j-default-char-type-is-unsigned.md) | Zmienia typ domyślny **`char`** . |
 | [`/JMC`](jmc.md) | Obsługuje natywne debugowanie Tylko mój kod języka C++. |
 | [`/kernel`](kernel-create-kernel-mode-binary.md) | Kompilator i konsolidator utworzy plik binarny, który może być wykonywany w jądrze systemu Windows. |
 | [`/LD`](md-mt-ld-use-run-time-library.md) | Tworzy bibliotekę dołączaną dynamicznie. |
@@ -112,7 +112,7 @@ Ta tabela zawiera alfabetyczną listę opcji kompilatora. Aby zapoznać się z l
 | [`/permissive-`](permissive-standards-conformance.md) | Ustaw tryb zgodności ze standardem. |
 | [`/Qfast_transcendentals`](qfast-transcendentals-force-fast-transcendentals.md) | Generuje szybki transcendentals. |
 | [`/QIfist`](qifist-suppress-ftol.md) | Przestarzałe. Pomija `_ftol` , gdy wymagana jest konwersja z typu zmiennoprzecinkowego na typ całkowity (tylko x86). |
-| [`/Qimprecise_fwaits`](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md) | Usuwa `fwait` polecenia wewnątrz `try` bloków. |
+| [`/Qimprecise_fwaits`](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md) | Usuwa `fwait` polecenia wewnątrz **`try`** bloków. |
 | [`/QIntel-jcc-erratum`](qintel-jcc-erratum.md) | Zmniejsza wpływ na wydajność aktualizacji włączenia mikrokodu firmy Intel JCC sprawdzenia erraty. |
 | [/Qpar (autoparalelizacji)](qpar-auto-parallelizer.md) | Włącza automatyczne przetwarzanie równoległe pętle, które są oznaczone za pomocą dyrektywy [pętli #pragma ()](../../preprocessor/loop.md) . |
 | [`/Qsafe_fp_loads`](qsafe-fp-loads.md) | Używa instrukcji przenoszenia liczb całkowitych dla wartości zmiennoprzecinkowych i wyłącza pewne optymalizacje ładowania zmiennoprzecinkowego. |
@@ -174,7 +174,7 @@ Ta tabela zawiera alfabetyczną listę opcji kompilatora. Aby zapoznać się z l
 | [`/Zs`](zs-syntax-check-only.md) | Sprawdza tylko składnię. |
 | [`/ZW`](zw-windows-runtime-compilation.md) | Tworzy plik wyjściowy do uruchomienia na środowisko wykonawcze systemu Windows. |
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Opcje kompilatora MSVC](compiler-options.md)\
 [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

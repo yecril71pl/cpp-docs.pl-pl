@@ -24,28 +24,28 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-ms.openlocfilehash: 7eb3db1e359349eaf5125a6c8a46a3ac7d847f2f
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 238e5533c062678c59b61ebeba71eee3231fb5fb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915482"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215221"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (Rozszerzenie funkcji wbudowanej)
 
-Kontroluje wbudowane rozwijanie funkcji. Domyślnie podczas optymalizowania, rozszerzanie odbywa się zgodnie z uznaniem kompilatora dla wszystkich funkcji, często nazywane autoskalowaniem.
+Kontroluje wbudowane rozwijanie funkcji. Domyślnie podczas optymalizowania, rozszerzanie odbywa się zgodnie z uznaniem kompilatora dla wszystkich funkcji, często nazywane *autoskalowaniem*.
 
 ## <a name="syntax"></a>Składnia
 
 ::: moniker range=">=vs-2019"
 
-> **/Ob** {**0**|12|**3**}|
+> **/Ob**{**0** | **1** | **2** | **3**}
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-> **/Ob** {**0**|12|}
+> **/Ob**{**0** | **1** | **2**}
 
 ::: moniker-end
 
@@ -54,8 +54,8 @@ Kontroluje wbudowane rozwijanie funkcji. Domyślnie podczas optymalizowania, roz
 **2,0**\
 Wartość domyślna w obszarze [/od](od-disable-debug.md). Wyłącza wbudowane rozszerzenia.
 
-**1**\
-Zezwala na rozszerzanie tylko funkcji [](../../cpp/inline-functions-cpp.md)oznaczonych jako inline, [__inline](../../cpp/inline-functions-cpp.md)lub [__forceinline](../../cpp/inline-functions-cpp.md)lub C++ w funkcji składowej zdefiniowanej w deklaracji klasy.
+**jedno**\
+Zezwala na rozszerzanie tylko funkcji oznaczonych jako [inline](../../cpp/inline-functions-cpp.md), [__inline](../../cpp/inline-functions-cpp.md)lub [__forceinline](../../cpp/inline-functions-cpp.md)lub w funkcji składowej C++ zdefiniowanej w deklaracji klasy.
 
 **dwóch**\
 Wartość domyślna w obszarze [/O1](o1-o2-minimize-size-maximize-speed.md) i [/O2](o1-o2-minimize-size-maximize-speed.md). Zezwala kompilatorowi na rozwijanie dowolnej funkcji, która nie jest jawnie oznaczona jako niewyróżniający.
@@ -69,18 +69,18 @@ Ta opcja określa bardziej agresywne wykreślenie poza **/Ob2**, ale ma takie sa
 
 ## <a name="remarks"></a>Uwagi
 
-Kompilator traktuje wbudowane opcje rozwijania i słowa kluczowe jako sugestie. Nie ma gwarancji, że jakakolwiek funkcja zostanie rozwinięta w tekście. Można wyłączyć rozszerzanie wbudowane, ale nie można wymusić wbudowania określonej funkcji przez kompilator, nawet w przypadku użycia `__forceinline` słowa kluczowego.
+Kompilator traktuje wbudowane opcje rozwijania i słowa kluczowe jako sugestie. Nie ma gwarancji, że jakakolwiek funkcja zostanie rozwinięta w tekście. Można wyłączyć rozszerzanie wbudowane, ale nie można wymusić wbudowania określonej funkcji przez kompilator, nawet w przypadku użycia **`__forceinline`** słowa kluczowego.
 
-Aby wykluczyć funkcje z rozważania jako kandydaci do rozwinięcia wbudowane, można użyć [__declspec (NoLine)](../../cpp/noinline.md)lub regionu oznaczonego przez [#pragma auto_inline (off)](../../preprocessor/auto-inline.md) i [#pragma auto_inline (on)](../../preprocessor/auto-inline.md) dyrektyw. Aby uzyskać informacje na temat innego sposobu udostępniania wskazówek dotyczących dekreślenia do kompilatora, zobacz [wewnętrzną dyrektywę #pragma](../../preprocessor/intrinsic.md) .
+Aby wykluczyć funkcje z rozważania jako kandydaci do rozwinięcia wbudowane, można użyć [__declspec (NoLine)](../../cpp/noinline.md)lub regionu oznaczonego przez [#pragma auto_inline (off)](../../preprocessor/auto-inline.md) i [#pragma auto_inline (on)](../../preprocessor/auto-inline.md) . Aby uzyskać informacje na temat innego sposobu udostępniania wskazówek dotyczących dekreślenia do kompilatora, zobacz [wewnętrzną dyrektywę #pragma](../../preprocessor/intrinsic.md) .
 
 > [!NOTE]
-> Informacje zbierane z przebiegów testów profilowania zastępują optymalizacje, które w przeciwnym razie byłyby stosowane, ponieważ określono **/ob**, **/OS**lub **/OT**. Aby uzyskać więcej informacji, [](../profile-guided-optimizations.md)zapoznaj się z tematem optymalizacje profilowane.
+> Informacje zbierane z przebiegów testów profilowania zastępują optymalizacje, które w przeciwnym razie byłyby stosowane, ponieważ określono **/ob**, **/OS**lub **/OT**. Aby uzyskać więcej informacji, zapoznaj się z tematem [optymalizacje](../profile-guided-optimizations.md)profilowane.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz stronę właściwości **Konfiguracja** > **C/C++**  > **Optymalizacja** .
+1. Wybierz **Configuration Properties**  >  stronę właściwości optymalizacji**C/C++** właściwości konfiguracji  >  **Optimization** .
 
 1. Zmodyfikuj właściwość **rozwinięcia funkcji wbudowanej** .
 
@@ -88,9 +88,9 @@ Aby wykluczyć funkcje z rozważania jako kandydaci do rozwinięcia wbudowane, m
 
 Opcja **/Ob3** jest niedostępna we właściwości **rozwinięcia funkcji wbudowanej** . Aby ustawić **/Ob3**:
 
-1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [ C++ Ustawianie właściwości kompilatora i Build w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz stronę właściwości **Konfiguracja** > **C/C++**  > **wiersz polecenia** .
+1. Wybierz **Configuration Properties** > stronę właściwości konfiguracja wiersza polecenia **C/C++** > **Command Line** .
 
 1. Wprowadź **/Ob3** w polu **Opcje dodatkowe**.
 
@@ -98,7 +98,7 @@ Opcja **/Ob3** jest niedostępna we właściwości **rozwinięcia funkcji wbudow
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.InlineFunctionExpansion%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.InlineFunctionExpansion%2A>.
 
 ## <a name="see-also"></a>Zobacz także
 

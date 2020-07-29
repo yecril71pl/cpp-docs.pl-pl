@@ -1,5 +1,5 @@
 ---
-title: Obsługa złożonych obliczeń w języku C
+title: Kompleksowe wsparcie matematyczne języka C
 ms.date: 05/14/2019
 f1_keywords:
 - c.complex
@@ -7,96 +7,96 @@ helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: 493886fcf1dbfd3dc16487dd8650206c428bb06d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: dac032940ed9d96764b64809c5f8901ac273898b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707391"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215182"
 ---
-# <a name="c-complex-math-support"></a>Obsługa złożonych obliczeń w języku C
+# <a name="c-complex-math-support"></a>Kompleksowe wsparcie matematyczne języka C
 
-Biblioteka Microsoft C Runtime (CRT) zapewnia funkcje biblioteki złożonych obliczeń, wraz ze wszystkimi wymaganymi przez ISO C99. Kompilator nie obsługuje bezpośrednio **złożonych** lub **_complex —** — słowo kluczowe, w związku z tym implementacja firmy Microsoft korzysta z typów struktury do reprezentowania liczb zespolonych.
+Biblioteka środowiska uruchomieniowego Microsoft C (CRT) oferuje złożone funkcje biblioteki matematycznej, w tym wszystkie wymagane przez C99 ISO. Kompilator nie obsługuje bezpośrednio **`complex`** **`_Complex`** słowa kluczowego or, dlatego implementacja firmy Microsoft używa typów struktury do reprezentowania liczb złożonych.
 
-Te funkcje są implementowane aby zrównoważyć wydajność za pomocą poprawności. Ponieważ tworzenie poprawnie zaokrąglony wynik może być zbyt duży, te funkcje są przeznaczone do wydajnego tworzenia bliskie zbliżenia wyniku poprawnie zaokrąglony. W większości przypadków wynik tworzony mieści się w +/-1 ulp poprawnie zaokrąglone wyniku, chociaż może się zdarzyć, gdy większej dokładności.
+Te funkcje są implementowane w celu zrównoważenia wydajności z korekcją. Ponieważ generowanie prawidłowo zaokrąglonego wyniku może być niezwykle kosztowne, te funkcje są zaprojektowane w celu wydajnego utworzenia bliskiego przybliżenia do prawidłowo zaokrąglonego wyniku. W większości przypadków powstaje wynik w zakresie od +/-1 ULP prawidłowo zaokrąglonego wyniku, chociaż mogą wystąpić sytuacje, w których występuje większa niedokładność.
 
-Procedury matematyczne złożonych zależą od tego, wartość zmiennoprzecinkowa punktu funkcji bibliotek matematycznych ich wdrażania. Funkcje te mają różne implementacje dla innej architektury Procesora. Na przykład x86 32-bitowych CRT może mieć inną implementację od x64 64-bitowych CRT. Ponadto niektóre funkcje mogą mieć wiele implementacji dla danej architektury Procesora. Najbardziej efektywny sposób wdrażania jest wybierana dynamicznie w czasie wykonywania w zależności od zestawów instrukcji, obsługiwanych przez CPU. Na przykład w x86 32-bitowych CRT, niektóre funkcje mają zarówno x87 implementacji i implementację SSE2. Podczas uruchamiania, na którego procesor CPU obsługuje SSE2, szybsze implementacji SSE2 jest używany. Podczas uruchamiania na procesorze CPU, który nie obsługuje SSE2, wolniejsze x87 implementacja jest używana. Ponieważ różne implementacje funkcji bibliotek matematycznych może używać różne instrukcje procesora CPU i różnych algorytmów, aby wygenerować ich wyniki, funkcje mogą wygenerować różne wyniki we wszystkich procesorach. W większości przypadków wyniki znajdują się w +/-1 ulp poprawnie zaokrąglone wyników, ale rzeczywiste wyniki mogą się różnić we wszystkich procesorach.
+Złożone procedury matematyczne opierają się na funkcjach matematycznych w liczbie zmiennoprzecinkowych dla ich implementacji. Te funkcje mają różne implementacje dla różnych architektur procesora. Na przykład 32-bitowa architektura x86 CRT może mieć inną implementację niż 64-bit x64 CRT. Ponadto niektóre funkcje mogą mieć wiele implementacji dla danej architektury procesora CPU. Najbardziej wydajna implementacja jest wybierana dynamicznie w czasie wykonywania w zależności od zestawów instrukcji obsługiwanych przez procesor CPU. Na przykład w 32-bitowej architekturze x86, niektóre funkcje mają implementację x87 i implementację SSE2. W przypadku uruchamiania na PROCESORze, który obsługuje SSE2, używana jest szybsza implementacja SSE2. W przypadku uruchamiania na PROCESORze, który nie obsługuje SSE2, używana jest wolniejsza implementacja x87. Ponieważ różne implementacje funkcji biblioteki matematycznej mogą korzystać z różnych instrukcji procesora CPU i różnych algorytmów w celu wygenerowania ich wyników, funkcje mogą generować różne wyniki w procesorach. W większości przypadków wyniki znajdują się w przedziale od +/-1 ULP prawidłowo zaokrąglonego wyniku, ale rzeczywiste wyniki mogą się różnić w zależności od procesorów.
 
-## <a name="types-used-in-complex-math"></a>Typy używane w złożonych obliczeń
+## <a name="types-used-in-complex-math"></a>Typy używane w złożonej matematycznej
 
-Implementacja firmy Microsoft w nagłówku complex.h definiuje te typy jako odpowiedniki C99 standardowych natywnych złożonych typów:
+Implementacja firmy Microsoft dla złożonego nagłówka. h definiuje te typy jako odpowiedniki dla natywnych typów C99 standardowych:
 
-|Standardowe|Typ firmy Microsoft|
+|Typ standardowy|Typ firmy Microsoft|
 |-|-|
-|**złożone float** lub **float _complex —**|**_Fcomplex**|
-|**podwójne złożone** lub **double _complex —**|**_Dcomplex**|
-|**złożone typu Long double** lub **_complex typu long double —**|**_Lcomplex**|
+|**`float complex`** oraz**`float _Complex`**|**_Fcomplex**|
+|**`double complex`** oraz**`double _Complex`**|**_Dcomplex**|
+|**`long double complex`** oraz**`long double _Complex`**|**_Lcomplex**|
 
-W nagłówku math.h definiuje oddzielnego typu **_complex — struktura**, który jest używany dla [_cabs](../c-runtime-library/reference/cabs.md) funkcji. **_Complex — struktura** typu nie jest używany przez równoważne złożone funkcje matematyczne [pliki cab, cabsf cabsl —](../c-runtime-library/reference/cabs-cabsf-cabsl.md).
+Nagłówek Math. h definiuje oddzielny typ **_complex struktury**używany przez funkcję [_cabs](../c-runtime-library/reference/cabs.md) . Typ **_complex struktury** nie jest używany przez równoważne złożone skomplikowane funkcje matematyczne [OOZ, cabsf, CAB](../c-runtime-library/reference/cabs-cabsf-cabsl.md).
 
 ## <a name="complex-constants-and-macros"></a>Złożone stałe i makra
 
-**Czy mogę** jest zdefiniowany jako **float** typu złożonego **_Fcomplex** inicjowane przez `{ 0.0f, 1.0f }`.
+**I** został zdefiniowany jako typ złożony **_Fcomplex** zainicjowany przez `{ 0.0f, 1.0f }` .
 
 ## <a name="trigonometric-functions"></a>Funkcje trygonometryczne
 
 |Funkcja|Opis|
 |-|-|
-|[cacos, cacosf, cacosl](../c-runtime-library/reference/cacos-cacosf-cacosl.md)|Obliczenia złożonych funkcji arcus cosinus liczby zespolonej|
-|[casin, casinf, casinl](../c-runtime-library/reference/casin-casinf-casinl.md)|Obliczenia złożonych funkcji arcus sinus liczby zespolonej|
-|[catan, catanf, catanl](../c-runtime-library/reference/catan-catanf-catanl.md)|Obliczenia złożonych funkcji arcus tangens liczby zespolonej|
-|[ccos, ccosf, ccosl](../c-runtime-library/reference/ccos-ccosf-ccosl.md)|Obliczenia złożonych cosinus liczby zespolonej|
-|[csin, csinf, csinl](../c-runtime-library/reference/csin-csinf-csinl.md)|Obliczenia złożonych sinus liczby zespolonej|
-|[ctan, ctanf, ctanl](../c-runtime-library/reference/ctan-ctanf-ctanl.md)|Obliczenia złożonych tangens liczby zespolonej|
+|[cacos, cacosf, cacosl](../c-runtime-library/reference/cacos-cacosf-cacosl.md)|Oblicz cosinus złożonego łuku dla liczby zespolonej|
+|[casin, casinf, casinl](../c-runtime-library/reference/casin-casinf-casinl.md)|Oblicz łuk złożonego łuku dla liczby zespolonej|
+|[catan, catanf, catanl](../c-runtime-library/reference/catan-catanf-catanl.md)|Oblicz skomplikowany tangens łuku liczby zespolonej|
+|[ccos, ccosf, ccosl](../c-runtime-library/reference/ccos-ccosf-ccosl.md)|Oblicz skomplikowany cosinus liczby zespolonej|
+|[csin, csinf, csinl](../c-runtime-library/reference/csin-csinf-csinl.md)|Oblicz skomplikowany sinus liczby zespolonej|
+|[ctan, ctanf, ctanl](../c-runtime-library/reference/ctan-ctanf-ctanl.md)|Oblicz skomplikowany tangens liczby zespolonej|
 
 ## <a name="hyperbolic-functions"></a>Funkcje hiperboliczne
 
 |Funkcja|Opis|
 |-|-|
-|[cacosh, cacoshf, cacoshl](../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)|Obliczenia złożonych arcus cosinus hiperboliczny liczby zespolonej|
-|[casinh, casinhf, casinhl](../c-runtime-library/reference/casinh-casinhf-casinhl.md)|Obliczenia złożonych arcus sinus hiperboliczny liczby zespolonej|
-|[catanh, catanhf, catanhl](../c-runtime-library/reference/catanh-catanhf-catanhl.md)|Obliczenia złożonych arcus tangens hiperboliczny liczby zespolonej|
-|[ccosh, ccoshf, ccoshl](../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)|Obliczenia złożonych cosinus hiperboliczny dla liczby zespolonej|
-|[csinh, csinhf, csinhl](../c-runtime-library/reference/csinh-csinhf-csinhl.md)|Obliczenia złożonych sinus hiperboliczny liczby zespolonej|
-|[ctanh, ctanhf, ctanhl](../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)|Obliczenia złożonych tangens hiperboliczny dla liczby zespolonej|
+|[cacosh, cacoshf, cacoshl](../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)|Oblicz skomplikowany cosinus hiperboliczny liczby zespolonej|
+|[casinh, casinhf, casinhl](../c-runtime-library/reference/casinh-casinhf-casinhl.md)|Oblicz złożone arcus sinus hiperboliczny liczby zespolonej|
+|[catanh, catanhf, catanhl](../c-runtime-library/reference/catanh-catanhf-catanhl.md)|Oblicz złożony tangens hiperboliczny liczby zespolonej|
+|[ccosh, ccoshf, ccoshl](../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)|Oblicz skomplikowany cosinus hiperboliczny liczby zespolonej|
+|[csinh, csinhf, csinhl](../c-runtime-library/reference/csinh-csinhf-csinhl.md)|Oblicz skomplikowany sinus hiperboliczny liczby zespolonej|
+|[ctanh, ctanhf, ctanhl](../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)|Oblicz skomplikowany tangens hiperboliczny liczby zespolonej|
 
-## <a name="exponential-and-logarithmic-functions"></a>Funkcji wykładniczej i logarytmiczną
-
-|Funkcja|Opis|
-|-|-|
-|[cexp, cexpf, cexpl](../c-runtime-library/reference/cexp-cexpf-cexpl.md)|Obliczenia złożone podstawowej -*e* wykładniczą liczby zespolonej|
-|[clog, clogf, clogl](../c-runtime-library/reference/clog-clogf-clogl.md)|Obliczenia złożonych naturalnego (podstawowy -*e*) logarytm liczby zespolonej|
-|[clog10, clog10f, clog10l](../c-runtime-library/reference/clog10-clog10f-clog10l.md)|Obliczenia złożonych logarytm o podstawie base 10 liczby zespolonej|
-
-## <a name="power-and-absolute-value-functions"></a>Możliwości i funkcje wartość bezwzględna
+## <a name="exponential-and-logarithmic-functions"></a>Funkcje wykładnicze i logarytmiczne
 
 |Funkcja|Opis|
 |-|-|
-|[cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md)|Obliczenia złożona wartość bezwzględna (nazywane również norm, modułu lub wielkości) liczby zespolonej|
-|[cpow, cpowf, cpowl](../c-runtime-library/reference/cpow-cpowf-cpowl.md)|Obliczenia funkcji power złożonych x<sup>y</sup>|
-|[csqrt, csqrtf, csqrtl](../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)|Obliczenia złożonych pierwiastek kwadratowy liczby zespolonej|
+|[cexp, cexpf, cexpl](../c-runtime-library/reference/cexp-cexpf-cexpl.md)|Oblicz kompleksową liczbę wykładniczą-*e* w liczbie zespolonej|
+|[clog, clogf, clogl](../c-runtime-library/reference/clog-clogf-clogl.md)|Oblicz skomplikowaną wartość logarytmu naturalnego (Base-*e*) liczby zespolonej|
+|[clog10, clog10f, clog10l](../c-runtime-library/reference/clog10-clog10f-clog10l.md)|Oblicz złożony logarytm dziesiętny liczby zespolonej|
+
+## <a name="power-and-absolute-value-functions"></a>Funkcje potęgowe i bezwzględne
+
+|Funkcja|Opis|
+|-|-|
+|[cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md)|Oblicz złożoną wartość bezwzględną (zwaną również normą, modułem lub wielkością) liczby zespolonej|
+|[cpow, cpowf, cpowl](../c-runtime-library/reference/cpow-cpowf-cpowl.md)|Oblicz złożoną funkcję potęgi x<sup>y</sup>|
+|[csqrt, csqrtf, csqrtl](../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)|Oblicz zespolony pierwiastek kwadratowy z liczbą zespoloną|
 
 ## <a name="manipulation-functions"></a>Funkcje manipulowania
 
 |Funkcja|Opis|
 |-|-|
-|[_Cbuild, _FCbuild, _LCbuild](../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)|Konstrukcja z rzeczywiste i urojone części liczby zespolonej|
-|[carg, cargf, cargl](../c-runtime-library/reference/carg-cargf-cargl.md)|Obliczenia argumentu (nazywane również kąt fazy) liczby zespolonej|
-|[cimag, cimagf, cimagl](../c-runtime-library/reference/cimag-cimagf-cimagl.md)|Obliczenia urojone części liczby zespolonej|
-|[conj, conjf, conjl](../c-runtime-library/reference/conj-conjf-conjl.md)|Obliczenia zespolonej liczby zespolonej|
-|[cproj, cprojf, cprojl](../c-runtime-library/reference/cproj-cprojf-cprojl.md)|Obliczenia projekcji sphere Riemanna liczby zespolonej|
-|[creal, crealf, creall](../c-runtime-library/reference/creal-crealf-creall.md)|Obliczenia rzeczywistych część liczby zespolonej|
-|[norm, normf, norml](../c-runtime-library/reference/norm-normf-norml1.md)|Obliczanie kwadratów wielkości liczby zespolonej|
+|[_Cbuild, _FCbuild, _LCbuild](../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)|Konstruowanie liczby zespolonej z części rzeczywistych i urojonych|
+|[carg, cargf, cargl](../c-runtime-library/reference/carg-cargf-cargl.md)|Oblicza argument (nazywany również kątem fazy) liczby zespolonej|
+|[cimag, cimagf, cimagl](../c-runtime-library/reference/cimag-cimagf-cimagl.md)|Oblicz część urojoną liczby zespolonej|
+|[conj, conjf, conjl](../c-runtime-library/reference/conj-conjf-conjl.md)|Oblicz zespolone sprzężenie liczby zespolonej|
+|[cproj, cprojf, cprojl](../c-runtime-library/reference/cproj-cprojf-cprojl.md)|Oblicz rzutowanie liczby zespolonej na Riemann sferę|
+|[creal, crealf, creall](../c-runtime-library/reference/creal-crealf-creall.md)|Oblicz rzeczywistą część liczby zespolonej|
+|[norm, normf, norml](../c-runtime-library/reference/norm-normf-norml1.md)|Oblicz kwadratową wielkość liczby zespolonej|
 
 ## <a name="operation-functions"></a>Funkcje operacji
 
-Ponieważ liczby zespolone nie są typu natywnego w kompilatorze Microsoft, standardowe operatory arytmetyczne nie są zdefiniowane dla typów złożonych. Dla wygody te funkcje biblioteki złożonych obliczeń umożliwiające manipulowanie ograniczonej liczby zespolone w kodzie użytkownika:
+Ponieważ liczby zespolone nie są typami natywnymi w kompilatorze firmy Microsoft, standardowe operatory arytmetyczne nie są zdefiniowane w typach złożonych. Dla wygody są udostępniane te złożone funkcje biblioteki matematycznej umożliwiające ograniczone manipulowanie liczbami złożonymi w kodzie użytkownika:
 
 |Funkcja|Opis|
 |-|-|
-|[_Cmulcc, _FCmulcc, _LCmulcc](../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)|Mnożenie dwóch liczb zespolonych|
-|[_Cmulcr, _FCmulcr, _LCmulcr](../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)|Pomnóż złożony i liczba zmiennoprzecinkowa|
+|[_Cmulcc, _FCmulcc, _LCmulcc](../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)|Pomnóż dwie liczby zespolone|
+|[_Cmulcr, _FCmulcr, _LCmulcr](../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)|Mnożenie złożonej i liczby zmiennoprzecinkowej|
 
 ## <a name="see-also"></a>Zobacz także
 
-[Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
