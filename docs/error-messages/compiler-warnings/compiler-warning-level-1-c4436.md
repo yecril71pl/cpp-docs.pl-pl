@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C4436
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-ms.openlocfilehash: 7772d835e398ade24b452f2b816afeae09659bf7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a15220cb02a48fb11936b69e5830412f1221108
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162390"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230678"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>Ostrzeżenie kompilatora (poziom 1) C4436
 
 dynamic_cast z wirtualnej bazy "Class1" do "'klasa" w konstruktorze lub destruktorze może zakończyć się niepowodzeniem z zakompilowaniem częściowo skompilowanego obiektu przy użyciu/VD2 zmieni lub Zdefiniuj "'klasa" z #pragma vtordisp (2) w efekcie
 
-Kompilator napotkał `dynamic_cast` operacji z następującymi charakterystykami.
+Kompilator napotkał **`dynamic_cast`** operację o następującej charakterystyce.
 
 - Rzutowanie pochodzi ze wskaźnika klasy bazowej do wskaźnika klasy pochodnej.
 
 - Klasa pochodna praktycznie dziedziczy klasę bazową.
 
-- Klasa pochodna nie ma pola `vtordisp` dla bazy wirtualnej.
+- Klasa pochodna nie ma `vtordisp` pola dla bazy wirtualnej.
 
 - Rzutowanie jest dostępne w konstruktorze lub destruktorze klasy pochodnej lub pewnej klasie, która dodatkowo dziedziczy z klasy pochodnej.
 
-Ostrzeżenie wskazuje, że `dynamic_cast` może nie działać prawidłowo, jeśli działa na obiekt częściowo skonstruowany.  Dzieje się tak, jeśli Konstruktor pochodny/destruktor działa na obiekcie podrzędnym innego obiektu pochodnego.  Jeśli klasa pochodna o nazwie w ostrzeżeniu nigdy nie będzie bardziej pochodna, ostrzeżenie można zignorować.
+Ostrzeżenie wskazuje, że **`dynamic_cast`** może nie działać poprawnie, jeśli działa na obiekcie częściowo skonstruowanym.  Dzieje się tak, jeśli Konstruktor pochodny/destruktor działa na obiekcie podrzędnym innego obiektu pochodnego.  Jeśli klasa pochodna o nazwie w ostrzeżeniu nigdy nie będzie bardziej pochodna, ostrzeżenie można zignorować.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C4436 i demonstruje problem z generowaniem kodu, który powstał z brakujących pola `vtordisp`.
+Poniższy przykład generuje C4436 i demonstruje problem z generowaniem kodu, który wynika z brakujących `vtordisp` pól.
 
 ```cpp
 // C4436.cpp
@@ -73,7 +73,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operator dynamic_cast](../../cpp/dynamic-cast-operator.md)<br/>
 [vtordisp](../../preprocessor/vtordisp.md)<br/>

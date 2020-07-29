@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4565
 ms.assetid: a71f1341-a4a1-4060-ad1e-9322531883ed
-ms.openlocfilehash: 5eccb3c29da612a39f7fcdf4ef25dedb898c8d43
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ba2e1e7eb490a28626937a3911608ff9686d6f38
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198331"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195983"
 ---
 # <a name="compiler-warning-level-4-c4565"></a>Ostrzeżenie kompilatora (poziom 4) C4565
 
@@ -19,7 +19,7 @@ ms.locfileid: "80198331"
 
 ## <a name="remarks"></a>Uwagi
 
-Symbol został ponownie zdefiniowany lub ponownie zadeklarowany, a druga definicja lub Deklaracja, w przeciwieństwie do pierwszej definicji lub deklaracji, nie miała modyfikatora `__declspec` (*modyfikator*). To ostrzeżenie jest informacje. Aby usunąć to ostrzeżenie, Usuń jedną z definicji.
+Symbol został ponownie zdefiniowany lub ponownie zadeklarowany, a druga definicja lub Deklaracja, w przeciwieństwie do pierwszej definicji lub deklaracji, nie miała **`__declspec`** modyfikatora (*modyfikatora*). To ostrzeżenie jest informacje. Aby usunąć to ostrzeżenie, Usuń jedną z definicji.
 
 ## <a name="example"></a>Przykład
 

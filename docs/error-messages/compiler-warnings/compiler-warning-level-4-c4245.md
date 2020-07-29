@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4245
 ms.assetid: 85083d53-9cc2-4d12-b58c-6dad28f15cbe
-ms.openlocfilehash: 321451f0cc2ac538dbd0779001e22be047a3cc4d
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 15105bb82409edd7bb7ca9ddd10b831b6dc3be94
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991417"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87196139"
 ---
 # <a name="compiler-warning-level-4-c4245"></a>Ostrzeżenie kompilatora (poziom 4) C4245
 
-"Conversion": konwersja z "type1" na "type2", niezgodność ze znakiem/bez znaku
+> "*Conversion*": konwersja z "*Type1*" na "*Type2*", niezgodność ze znakiem/bez znaku
 
-Próbowano skonwertować podpisaną **stałą** , która ma wartość ujemną do `unsigned`.
+Podjęto próbę przekonwertowania **`signed const`** typu o wartości ujemnej na **`unsigned`** Typ.
 
 Poniższy przykład generuje C4245:
 

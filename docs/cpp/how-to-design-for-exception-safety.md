@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 48a2f5a94eb2695c0a08a0ae397d02080e7e1261
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 732a46166c99396c5d55a7d2acd834b58f3d2b2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246517"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187806"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Instrukcje: projektowanie pod kątem bezpieczeństwa wyjątków
 
@@ -85,7 +85,7 @@ public:
 
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>Zarządzanie zasobami za pomocą RAII idiom
 
-Aby zapewnić bezpieczeństwo przed wyjątkami, funkcja musi upewnić się, że obiekty, które zostały przydzielone za pomocą `malloc` lub **nowe** są niszczone, a wszystkie zasoby, takie jak dojścia do plików, są zamknięte lub wydawane, nawet jeśli wyjątek jest zgłaszany. *Pozyskiwanie zasobów jest inicjowane* (RAII) idiom więzi zarządzania takimi zasobami w cykl życia zmiennych automatycznych. Kiedy funkcja wykracza poza swój zakres, powracając do stanu wyjściowego normalnie lub z powodu wyjątku, następuje wywołanie destruktorów wszystkich w pełni skonstruowanym automatycznych zmiennych. Obiekt otoki idiomu RAII, taki jak inteligentny wskaźnik, wywołuje w destruktorze odpowiednią funkcje usunięcia lub zamknięcia. W kodzie bezpiecznym pod względem wyjątków kluczowe znaczenie ma natychmiastowe przekazywanie własności każdego zasobu do jakiegoś obiektu RAII. Należy zauważyć, że `vector`, `string`, `make_shared`, `fstream`i podobne klasy obsługują pozyskiwanie zasobu.  Jednak `unique_ptr` i tradycyjne `shared_ptr` konstrukcji są specyficzne, ponieważ pozyskiwanie zasobów jest wykonywane przez użytkownika zamiast obiektu; w związku z tym są one uznawane za *wydawanie zasobów* , ale są pytaniami RAII.
+Aby zapewnić bezpieczeństwo przed wyjątkami, funkcja musi upewnić się, że obiekty, które zostały przydzielone za pomocą `malloc` lub **`new`** są niszczone, a wszystkie zasoby, takie jak dojścia do plików, są zamknięte lub wydawane, nawet jeśli wyjątek jest zgłaszany. *Pozyskiwanie zasobów jest inicjowane* (RAII) idiom więzi zarządzania takimi zasobami w cykl życia zmiennych automatycznych. Kiedy funkcja wykracza poza swój zakres, powracając do stanu wyjściowego normalnie lub z powodu wyjątku, następuje wywołanie destruktorów wszystkich w pełni skonstruowanym automatycznych zmiennych. Obiekt otoki idiomu RAII, taki jak inteligentny wskaźnik, wywołuje w destruktorze odpowiednią funkcje usunięcia lub zamknięcia. W kodzie bezpiecznym pod względem wyjątków kluczowe znaczenie ma natychmiastowe przekazywanie własności każdego zasobu do jakiegoś obiektu RAII. Należy zauważyć `vector` , że `string` klasy,, `make_shared` , `fstream` i podobne obsługują pozyskiwanie zasobu.  Jednak `unique_ptr` tradycyjna `shared_ptr` konstrukcja jest specjalna, ponieważ pozyskiwanie zasobów jest wykonywane przez użytkownika zamiast obiektu; w związku z tym są one zliczane jako *wydawanie zasobów* , ale pytania są RAII.
 
 ## <a name="the-three-exception-guarantees"></a>Trzy gwarancje wyjątków
 
@@ -121,5 +121,5 @@ Wszystkie typy wbudowane gwarantują brak niepowodzenia, a typy w bibliotece sta
 
 ## <a name="see-also"></a>Zobacz także
 
-[Nowoczesne C++ najlepsze rozwiązania dotyczące wyjątków i obsługi błędów](errors-and-exception-handling-modern-cpp.md)<br/>
-[Instrukcje: interfejs między kodem obsługi wyjątków a innym kodem](how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[Nowoczesne najlepsze rozwiązania w języku C++ dotyczące wyjątków i obsługi błędów](errors-and-exception-handling-modern-cpp.md)<br/>
+[Instrukcje: interfejs między wyjątkowym i niewyjątkowym kodem](how-to-interface-between-exceptional-and-non-exceptional-code.md)

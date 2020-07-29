@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4325
 ms.assetid: 8127a08c-d626-481b-aa7b-04a3fdc9a9ec
-ms.openlocfilehash: e0a13761b0657d054065358994638779817dad6a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 551680bc1d24097200a1e641bc4238f883ad94dd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163027"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230704"
 ---
 # <a name="compiler-warning-level-1-c4325"></a>Ostrzeżenie kompilatora (poziom 1) C4325
 
@@ -25,17 +25,17 @@ Nie można zmienić atrybutów sekcji standardowa. Na przykład:
 #pragma section(".sdata", long)
 ```
 
-Spowoduje to zastąpienie standardowej sekcji `.sdata`, która używa typu danych **Short** z typem danych **Long** .
+Spowoduje to zastąpienie `.sdata` standardowej sekcji, która używa **`short`** typu danych z **`long`** typem danych.
 
 Standardowe sekcje, których atrybuty nie mogą ulec zmianie,
 
-- .data
+- . dane
 
-- .sdata
+- . sdata
 
 - . BSS
 
-- .sbss
+- . sbss
 
 - . Text
 
@@ -49,6 +49,6 @@ Standardowe sekcje, których atrybuty nie mogą ulec zmianie,
 
 Dodatkowe sekcje można dodać później.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[sekcja](../../preprocessor/section.md)
+[Paragraf](../../preprocessor/section.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-ms.openlocfilehash: da0f2bc1a503226e41198871e6dc48ace7a86854
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 567b6d8fe9412e58f21de9a1031ec54c4bc01cdc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988538"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230899"
 ---
 # <a name="call_in_appdomain-function"></a>call_in_appdomain — Funkcja
 
@@ -45,21 +45,21 @@ RetType call_in_appdomain(
 Domena aplikacji, w której ma zostać wywołana funkcja.
 
 *voidFunc*<br/>
-Wskaźnik do funkcji `void`, która pobiera N parametrów (0 < = N < = 15).
+Wskaźnik do **`void`** funkcji, która pobiera N parametrów (0 <= N <= 15).
 
 *nonvoidFunc*<br/>
-Wskaźnik do funkcji innej niż`void`, która pobiera N parametrów (0 < = N < = 15).
+Wskaźnik do funkcji nie będącej **`void`** funkcją, która pobiera N parametrów (0 <= N <= 15).
 
-*arg1...argN*<br/>
-Od zera do 15 parametrów do przesłania do `voidFunc` lub `nonvoidFunc` w innej domenie aplikacji.
+*arg1... argN*<br/>
+Od zera do 15 parametrów do przesłania do `voidFunc` lub `nonvoidFunc` z innej domeny aplikacji.
 
-## <a name="return-value"></a>Wartość zwrócona
+## <a name="return-value"></a>Wartość zwracana
 
-Wynik wykonywania `voidFunc` lub `nonvoidFunc` w określonej domenie aplikacji.
+Wynik wykonania `voidFunc` lub `nonvoidFunc` w określonej domenie aplikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Argumenty funkcji przekazane do `call_in_appdomain` nie mogą być typami CLR.
+Argumenty funkcji przekazanej do `call_in_appdomain` nie mogą być TYPAMI CLR.
 
 ## <a name="example"></a>Przykład
 
@@ -118,6 +118,6 @@ appDomain1 id = 2
 
 ## <a name="requirements"></a>Wymagania
 
-**Plik nagłówka** \<msclr\appdomain.h >
+**Plik nagłówka**\<msclr\appdomain.h>
 
 Msclr **przestrzeni nazw**

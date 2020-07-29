@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3556
 ms.assetid: 9b002dcc-494e-414f-9587-20c2a0a39333
-ms.openlocfilehash: bc5eae58ac453182fd25853edd45e2c45093f5e5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 50f97c4360080f1271d9decc3b3460c06f3fec0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200580"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230821"
 ---
 # <a name="compiler-error-c3556"></a>Błąd kompilatora C3556
 
 > "*Expression*": nieprawidłowy argument dla "decltype"
 
-Kompilator nie może wywnioskować typu wyrażenia będącego argumentem *wyrażenia* `decltype(`specyfikatorem typu`)`.
+Kompilator nie może wywnioskować typu wyrażenia, które jest argumentem `decltype(` *expression* `)` specyfikatora typu wyrażenia.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie kodu kompilator nie może wywnioskować typu argumentu `myFunction`, ponieważ `myFunction` jest przeciążona. Aby rozwiązać ten problem, można użyć `static_cast`, aby utworzyć wystąpienie wskaźnika do określonej przeciążonej funkcji, aby określić w wyrażeniu `decltype`.
+W poniższym przykładzie kodu kompilator nie może wywnioskować typu `myFunction` argumentu, ponieważ `myFunction` jest przeciążony. Aby rozwiązać ten problem, można użyć **`static_cast`** programu do utworzenia wystąpienia wskaźnika do określonej przeciążonej funkcji w celu określenia w **`decltype`** wyrażeniu.
 
 ```cpp
 // C3556.cpp

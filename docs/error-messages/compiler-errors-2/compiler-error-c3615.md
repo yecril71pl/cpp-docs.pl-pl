@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3615
 ms.assetid: 5ce96ba9-3d31-49f3-9aa8-24e5cdf6dcfc
-ms.openlocfilehash: c1a5b6edbc87e14de267cf962dc2b1a71dd6be12
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 17a210e2a514af1ffd62bf38651c4d17bd1fe32b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200541"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230795"
 ---
 # <a name="compiler-error-c3615"></a>Błąd kompilatora C3615
 
 > Funkcja constexpr "*Function*" nie może skutkować wyrażeniem stałym
 
-Nie można ocenić *funkcji* funkcji jako `constexpr` w czasie kompilacji. Aby `constexpr`, funkcja może wywołać tylko inne funkcje `constexpr`.
+Nie można ocenić *funkcji* funkcji w **`constexpr`** czasie kompilacji. Aby było możliwe **`constexpr`** , funkcja może wywołać tylko inne **`constexpr`** funkcje.
 
 ## <a name="example"></a>Przykład
 
-Program Visual Studio 2017 poprawnie zgłasza błąd, gdy operand po lewej stronie operacji oceniania warunkowego jest nieprawidłowy w kontekście `constexpr`. Poniższy kod kompiluje się w programie Visual Studio 2015, ale nie w programie Visual Studio 2017.
+Program Visual Studio 2017 poprawnie zgłasza błąd, gdy operand po lewej stronie operacji oceniania warunkowego jest nieprawidłowy w **`constexpr`** kontekście. Poniższy kod kompiluje się w programie Visual Studio 2015, ale nie w programie Visual Studio 2017.
 
 ```cpp
 // C3615.cpp
@@ -39,4 +39,4 @@ constexpr bool f(const myarray<1> &arr)
 }
 ```
 
-Aby rozwiązać ten problem, należy zadeklarować funkcję `array::size()` jako `constexpr` lub usunąć kwalifikator `constexpr` z `f`.
+Aby rozwiązać ten problem, należy zadeklarować `array::size()` funkcję jako **`constexpr`** lub usunąć **`constexpr`** kwalifikator z elementu `f` .

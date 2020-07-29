@@ -10,34 +10,34 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: 6bc1e9c6d40599ae9a821179dcf56dbb7e21bf10
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4eeec5db00ceca5429f4a3a270e1b249a8955249
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372525"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230925"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Podstawowe pojęcia związane z używaniem wyjątków zarządzanych
 
-W tym temacie omówiono obsługę wyjątków w aplikacjach zarządzanych. Oznacza to, że aplikacja, która jest skompilowana za pomocą opcji kompilatora **/clr.**
+W tym temacie omówiono obsługę wyjątków w zarządzanych aplikacjach. Oznacza to, że aplikacja, która jest skompilowana przy użyciu opcji kompilatora **/CLR** .
 
 ## <a name="in-this-topic"></a>W tym temacie:
 
-- [Zgłaszanie wyjątków w obszarze /clr](#vcconbasicconceptsinusingmanagedexceptionsanchor1)
+- [Zgłaszanie wyjątków z opcją/CLR](#vcconbasicconceptsinusingmanagedexceptionsanchor1)
 
-- [Try/Catch Bloki dla rozszerzeń CLR](#vcconbasicconceptsinusingmanagedexceptionsanchor2)
+- [Bloki try/catch dla rozszerzeń CLR](#vcconbasicconceptsinusingmanagedexceptionsanchor2)
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli kompilujesz z **/clr** opcji, można obsługiwać wyjątki <xref:System.Exception> CLR, a także klasy standardowej zawiera wiele przydatnych metod przetwarzania wyjątków CLR i jest zalecane jako klasa podstawowa dla klas wyjątków zdefiniowanych przez użytkownika.
+W przypadku kompilowania z opcją **/CLR** można obsłużyć wyjątki CLR, <xref:System.Exception> a także Klasa standardowa zapewnia wiele przydatnych metod przetwarzania wyjątków CLR i jest zalecane jako klasa bazowa dla klas wyjątków zdefiniowanych przez użytkownika.
 
-Przechwytywanie typów wyjątków pochodzących z interfejsu nie jest obsługiwane w **obszarze /clr**. Ponadto środowisko uruchomieniowe języka wspólnego nie pozwala na catch wyjątki przepełnienia stosu; wyjątek przepełnienia stosu zakończy proces.
+Przechwytywanie typów wyjątków pochodnych od interfejsu nie jest obsługiwane w przypadku opcji **/CLR**. Ponadto środowisko uruchomieniowe języka wspólnego nie pozwala na przechwytywanie wyjątków przepełnienia stosu. Wyjątek przepełnienia stosu zakończy proces.
 
-Aby uzyskać więcej informacji na temat różnic w obsłudze wyjątków w aplikacjach zarządzanych i niezarządzanych, zobacz [Różnice w zachowaniu obsługi wyjątków w obszarze Rozszerzenia zarządzane dla języka C++](../dotnet/differences-in-exception-handling-behavior-under-clr.md).
+Aby uzyskać więcej informacji o różnicach w obsłudze wyjątków w aplikacjach zarządzanych i niezarządzanych, zobacz [różnice w zachowaniu obsługi wyjątków w obszarze Managed Extensions for C++](../dotnet/differences-in-exception-handling-behavior-under-clr.md).
 
-## <a name="throwing-exceptions-under-clr"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>Zgłaszanie wyjątków w obszarze /clr
+## <a name="throwing-exceptions-under-clr"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>Zgłaszanie wyjątków z opcją/CLR
 
-Wyrażenie throw języka C++ jest rozszerzone, aby rzucić dojście do typu CLR. Poniższy przykład tworzy niestandardowy typ wyjątku, a następnie zgłasza wystąpienie tego typu:
+Wyrażenie throw języka C++ zostało rozszerzone, aby zgłosić dojście do typu CLR. Poniższy przykład tworzy niestandardowy typ wyjątku, a następnie zgłasza wystąpienie tego typu:
 
 ```cpp
 // clr_exception_handling.cpp
@@ -53,7 +53,7 @@ void GlobalFunction() {
 }
 ```
 
-Typ wartości musi być zapakowany przed wyrzuceniem:
+Typ wartości musi być opakowany przed zgłoszeniem:
 
 ```cpp
 // clr_exception_handling_2.cpp
@@ -68,9 +68,9 @@ void GlobalFunction() {
 }
 ```
 
-## <a name="trycatch-blocks-for-clr-extensions"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>Try/Catch Bloki dla rozszerzeń CLR
+## <a name="trycatch-blocks-for-clr-extensions"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>Bloki try/catch dla rozszerzeń CLR
 
-Ta sama struktura bloku **try**/**catch** może służyć do przechwytywania zarówno CLR i wyjątków natywnych:
+Ta sama **`try`** / **`catch`** Struktura bloku może służyć do przechwytywania zarówno wyjątków CLR, jak i natywnych:
 
 ```cpp
 // clr_exception_handling_3.cpp
@@ -126,25 +126,25 @@ In 'catch(MyStruct^ catchException)'
 11
 ```
 
-### <a name="order-of-unwinding-for-c-objects"></a>Kolejność odwijania dla obiektów języka C++
+### <a name="order-of-unwinding-for-c-objects"></a>Kolejność odwinięcia dla obiektów C++
 
-Odwijanie występuje dla wszystkich obiektów C++ z destruktorami, które mogą znajdować się na stosie w czasie wykonywania między funkcją rzucania a funkcją obsługi. Ponieważ typy CLR są przydzielane na stercie, odwijanie nie ma zastosowania do nich.
+Rozwinięcia występuje dla wszystkich obiektów C++ z destruktorami, które mogą znajdować się w stosie czasu wykonywania między funkcją przerzucania a funkcją obsługi. Ponieważ typy CLR są przydzielane na stercie, odróżnianie nie ma zastosowania do nich.
 
-Kolejność zdarzeń dla wyjątku zaniechanego jest następująca:
+Kolejność zdarzeń dla zgłoszonego wyjątku jest następująca:
 
-1. Środowisko uruchomieniowe przechodzi stosu szuka klauzuli catch odpowiednie lub w przypadku SEH, z wyjątkiem filtru dla SEH, aby przechwyć wyjątek. Catch klauzule są przeszukiwane najpierw w kolejności leksykalne, a następnie dynamicznie w dół stosu wywołań.
+1. Środowisko uruchomieniowe sprawdza stos szukający odpowiedniej klauzuli catch lub w przypadku SEH, z wyjątkiem filtru dla SEH, aby przechwytywać wyjątek. Klauzule catch są przeszukiwane najpierw w kolejności leksykalnej, a następnie dynamicznie w dół stosu wywołań.
 
-1. Po znalezieniu poprawnego programu obsługi stos jest odwijanie do tego punktu. Dla każdego wywołania funkcji na stosie jego obiekty lokalne są zniszczone i __finally bloki są wykonywane, z większości zagnieżdżonych na zewnątrz.
+1. Po znalezieniu prawidłowej procedury obsługi stos jest odłożony do tego punktu. Dla każdego wywołania funkcji na stosie, jego obiekty lokalne są destruktorne i __finally bloków są wykonywane od najbardziej zagnieżdżonej lokalizacji.
 
-1. Po rozwiń stosu, catch klauzuli jest wykonywany.
+1. Po rozwróceniu stosu jest wykonywana klauzula catch.
 
-### <a name="catching-unmanaged-types"></a>Łapanie typów niezarządzanych
+### <a name="catching-unmanaged-types"></a>Przechwytywanie typów niezarządzanych
 
-Gdy zgłaszany jest niezarządzany typ obiektu, jest <xref:System.Runtime.InteropServices.SEHException>on zawijany z wyjątkiem typu . Podczas wyszukiwania odpowiedniej klauzuli **catch,** istnieją dwie możliwości.
+Gdy zostanie zgłoszony typ obiektu niezarządzanego, jest on opakowany jako wyjątek typu <xref:System.Runtime.InteropServices.SEHException> . Podczas wyszukiwania odpowiedniej klauzuli istnieją **`catch`** dwie możliwości.
 
-- Jeśli napotkany jest natywny typ C++, wyjątek jest rozpakowany i porównywany do napotkanego typu. To porównanie umożliwia natywnego typu C++ zostać przechwycone w normalny sposób.
+- Jeśli zostanie napotkany natywny typ języka C++, wyjątek jest nieopakowany i porównywany z napotkanym typem. To porównanie umożliwia przechwycić natywny typ C++ w normalny sposób.
 
-- Jednak jeśli **catch** klauzuli typu **SEHException** lub któregokolwiek z jego klas podstawowych jest analizowany pierwszy, klauzula przechwytuje wyjątek. W związku z tym należy umieścić wszystkie catch klauzule, które przechwytują natywne typy C++ pierwszy przed wszelkie catch klauzule typów CLR.
+- Jednakże jeśli **`catch`** klauzula typu **SEHException —** lub dowolna z jej klas podstawowych jest analizowana jako pierwsza, klauzula przechwytuje wyjątek. W związku z tym należy umieścić wszystkie klauzule catch, które przechwytują natywne typy C++ przed wszelkimi klauzulami catch typów CLR.
 
 Należy pamiętać, że
 
@@ -152,19 +152,19 @@ Należy pamiętać, że
 catch(Object^)
 ```
 
-i
+oraz
 
 ```
 catch(...)
 ```
 
-zł wyłapuje każdy zgłoszony typ, w tym wyjątki SEH.
+przechwytuje wszystkie zgłoszone typy, w tym wyjątki SEH.
 
-Jeśli typ niezarządzany zostanie przechwycony przez catch(Object^), nie zniszczy wyrzucanego obiektu.
+Jeśli typ niezarządzany zostanie przechwycony przez catch (Object ^), nie spowoduje to zniszczenia zgłoszonego obiektu.
 
-Podczas zgłaszania lub wychwytowywania niezarządzanych wyjątków zaleca się użycie opcji kompilatora [/EHsc](../build/reference/eh-exception-handling-model.md) zamiast **/EHs** lub **/EHa**.
+W przypadku zgłaszania lub przechwytywania wyjątków niezarządzanych zalecamy użycie opcji kompilatora [/EHsc](../build/reference/eh-exception-handling-model.md) zamiast **/EHS** lub **/EHa**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa wyjątków](../extensions/exception-handling-cpp-component-extensions.md)<br/>
 [safe_cast](../extensions/safe-cast-cpp-component-extensions.md)<br/>

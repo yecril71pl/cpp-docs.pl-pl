@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3166
 ms.assetid: ec3e330d-c15d-4158-8268-09101486c566
-ms.openlocfilehash: 17efd401314e93ff710be2c1e6f187a938e388b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1915d58f73ce8d16135951b359c3f0fd48aea3ac
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174306"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230873"
 ---
 # <a name="compiler-error-c3166"></a>Błąd kompilatora C3166
 
-"wskaźnik": nie można zadeklarować wskaźnika do wskaźnika wnętrza __gc jako członek "type"
+> "wskaźnik": nie można zadeklarować wskaźnika do wewnętrznego wskaźnika __gc jako elementu członkowskiego "Type"
 
-Kompilator znaleziono deklaracji nieprawidłowy wskaźnik ( `__nogc` wskaźnik do `__gc` wskaźnika.).
+Kompilator znalazł nieprawidłową deklarację wskaźnika ( **`__nogc`** wskaźnik do **`__gc`** wskaźnika).
 
-C3166 jest dostępna, przy użyciu opcji kompilatora przestarzałe **: oldsyntax**.
+C3166 jest osiągalna tylko przy użyciu przestarzałej opcji kompilatora **`/clr:oldSyntax`** .

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-ms.openlocfilehash: 7c482107b5ad1546c64e0b70ef1714cff8a668ab
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 4296d66af8f8bb9aed4946d6dc57871f447108d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926090"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231042"
 ---
 # <a name="virtual-functions"></a>Funkcje wirtualne
 
@@ -140,9 +140,9 @@ Invoked by Derived
 
 Należy zauważyć, że bez względu na to, czy funkcja `NameOf` jest wywoływana za pomocą wskaźnika do `Base`, czy wskaźnika do `Derived`, wywołuje funkcję dla `Derived`. Wywołuje funkcję dla `Derived`, ponieważ `NameOf` jest funkcją wirtualną i zarówno `pBase`, jak i `pDerived` wskazują obiekt typu `Derived`.
 
-Ponieważ funkcje wirtualne są wywoływane tylko dla obiektów typu klasy, nie można zadeklarować globalnych lub statycznych funkcji jako **wirtualne**.
+Ponieważ funkcje wirtualne są wywoływane tylko dla obiektów typu klasy, nie można zadeklarować funkcji globalnych lub statycznych jako **`virtual`** .
 
-**Wirtualne** słowo kluczowe może być używane podczas deklarowania funkcji przesłaniania w klasie pochodnej, ale nie jest to potrzebne; przesłonięcia funkcji wirtualnych są zawsze wirtualne.
+**`virtual`** Słowo kluczowe może być używane podczas deklarowania funkcji przesłaniania w klasie pochodnej, ale nie jest to konieczne; zastąpienia funkcji wirtualnych są zawsze wirtualne.
 
 Funkcje wirtualne w klasie bazowej muszą być zdefiniowane, chyba że są deklarowane przy użyciu *czystego specyfikatora*. (Aby uzyskać więcej informacji na temat czystych funkcji wirtualnych, zobacz [klasy abstrakcyjne](../cpp/abstract-classes-cpp.md)).
 

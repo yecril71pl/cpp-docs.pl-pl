@@ -4,26 +4,26 @@ ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: fccc40302ab7bd43b3e6b2f87eef488c7813c9be
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 88dacda9b20f351eb67dde24a8335bdcbba27dd3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245608"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187702"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Instrukcje: interfejs między wyjątkowym i niewyjątkowym kodem
 
-W tym artykule opisano, jak zaimplementować spójną obsługę wyjątków w C++ module, a także jak przetłumaczyć te wyjątki na i z kodów błędów na granicach wyjątków.
+W tym artykule opisano, jak zaimplementować spójną obsługę wyjątków w module języka C++, a także jak przetłumaczyć te wyjątki na i z kodów błędów na granicach wyjątków.
 
-Czasami C++ moduł ma interfejs z kodem, który nie używa wyjątków (kod niewyjątkowy). Taki interfejs jest znany jako *granica wyjątku*. Na przykład może być konieczne wywołanie funkcji Win32 `CreateFile` w C++ programie. `CreateFile` nie zgłasza wyjątków; Zamiast tego ustawia kody błędów, które mogą być pobierane przez funkcję `GetLastError`. Jeśli C++ program nie jest uproszczony, prawdopodobnie wolisz mieć spójne zasady obsługi błędów oparte na wyjątkach. Prawdopodobnie nie chcesz porzucać wyjątków tylko z powodu interfejsu z niewyjątkowym kodem i nie chcesz mieszać zasad błędów opartych na wyjątkach i nieopartych na wyjątkach w C++ module.
+Czasami moduł C++ ma interfejs z kodem, który nie używa wyjątków (kod niewyjątkowy). Taki interfejs jest znany jako *granica wyjątku*. Na przykład możesz chcieć wywołać funkcję Win32 `CreateFile` w programie języka C++. `CreateFile`nie zgłasza wyjątków; Zamiast tego ustawia kody błędów, które mogą być pobierane przez `GetLastError` funkcję. Jeśli Twój program w języku C++ nie jest prosty, prawdopodobnie wolisz mieć spójne zasady obsługi błędów oparte na wyjątkach. Prawdopodobnie nie chcesz porzucać wyjątków tylko z powodu interfejsu z niewyjątkowym kodem i nie chcesz mieszać zasad błędów opartych na wyjątkach i nieopartych na wyjątkach w module języka C++.
 
-## <a name="calling-non-exceptional-functions-from-c"></a>Wywoływanie niewyjątkowych funkcji zC++
+## <a name="calling-non-exceptional-functions-from-c"></a>Wywoływanie niewyjątkowych funkcji z C++
 
-Gdy wywołujesz niewyjątkową funkcję z C++, pomysłem jest Zawijanie tej funkcji w C++ funkcji, która wykrywa wszelkie błędy, a następnie może zgłaszać wyjątek. Podczas projektowania takiej funkcji otoki należy najpierw zdecydować, jaki typ gwarancji wyjątku należy podać: nie-throw, Strong lub Basic. Następnie Zaprojektuj funkcję tak, aby wszystkie zasoby, na przykład dojścia do plików, były prawidłowo wydane, jeśli wystąpi wyjątek. Zazwyczaj oznacza to, że do własnych zasobów można używać inteligentnych wskaźników lub podobnych menedżerów zasobów. Aby uzyskać więcej informacji na temat zagadnień związanych z projektowaniem, zobacz [How to: Design for Exception Safety](how-to-design-for-exception-safety.md).
+Gdy wywołujesz niewyjątkową funkcję z C++, pomysłem jest Zawijanie tej funkcji w funkcji języka C++, która wykrywa wszelkie błędy, a następnie może zgłaszać wyjątek. Podczas projektowania takiej funkcji otoki należy najpierw zdecydować, jaki typ gwarancji wyjątku należy podać: nie-throw, Strong lub Basic. Następnie Zaprojektuj funkcję tak, aby wszystkie zasoby, na przykład dojścia do plików, były prawidłowo wydane, jeśli wystąpi wyjątek. Zazwyczaj oznacza to, że do własnych zasobów można używać inteligentnych wskaźników lub podobnych menedżerów zasobów. Aby uzyskać więcej informacji na temat zagadnień związanych z projektowaniem, zobacz [How to: Design for Exception Safety](how-to-design-for-exception-safety.md).
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie przedstawiono C++ funkcje, które używają `CreateFile` Win32 i funkcji `ReadFile` wewnętrznie do otwierania i odczytywania dwóch plików.  Klasa `File` to otoka inicjująca (RAII) do obsługi plików. Jego Konstruktor wykrywa warunek "nie znaleziono pliku" i zgłasza wyjątek w celu propagowania błędu w górę stosu wywołań C++ modułu (w tym przykładzie funkcja `main()`). Jeśli wyjątek jest zgłaszany po pełnym zbudowaniu obiektu `File`, destruktor automatycznie wywoła `CloseHandle` do zwolnienia dojścia do pliku. (Jeśli wolisz, możesz użyć klasy `CHandle` Active Template Library (ATL) dla tego samego celu lub `unique_ptr` razem z niestandardowym usuwaniem). Funkcje, które wywołują interfejsy API Win32 i CRT, wykrywają C++ błędy, a następnie generują wyjątki przy użyciu funkcji `ThrowLastErrorIf` zdefiniowanej lokalnie, która z kolei używa klasy `Win32Exception`, pochodzącej z klasy `runtime_error`. Wszystkie funkcje w tym przykładzie zapewniają silną gwarancję wyjątku; Jeśli w dowolnym momencie w tych funkcjach wystąpi wyjątek, żadne zasoby nie są wyciekami i nie jest modyfikowany żaden stan programu.
+W poniższym przykładzie przedstawiono funkcje języka C++, które używają Win32 `CreateFile` i `ReadFile` Functions wewnętrznie do otwierania i odczytywania dwóch plików.  `File`Klasa jest otoką inicjującą (RAII) do obsługi plików. Jego Konstruktor wykrywa warunek "nie znaleziono pliku" i zgłasza wyjątek w celu propagowania błędu w górę stosu wywołań modułu języka C++ (w tym przykładzie `main()` Funkcja). Jeśli wyjątek jest zgłaszany, gdy `File` obiekt jest w pełni skonstruowany, destruktor automatycznie wywołuje `CloseHandle` do zwolnienia dojścia do pliku. (Jeśli wolisz, możesz użyć klasy Active Template Library (ATL) `CHandle` w tym samym przeznaczeniu lub w `unique_ptr` połączeniu z niestandardowym usuwaniem). Funkcje, które wywołują interfejsy API Win32 i CRT, wykrywają błędy, a następnie generują wyjątki C++ przy użyciu funkcji zdefiniowanej lokalnie `ThrowLastErrorIf` , która z kolei używa `Win32Exception` klasy pochodzącej od `runtime_error` klasy. Wszystkie funkcje w tym przykładzie zapewniają silną gwarancję wyjątku; Jeśli w dowolnym momencie w tych funkcjach wystąpi wyjątek, żadne zasoby nie są wyciekami i nie jest modyfikowany żaden stan programu.
 
 ```cpp
 // compile with: /EHsc
@@ -160,9 +160,9 @@ int main ( int argc, char* argv[] )
 
 ## <a name="calling-exceptional-code-from-non-exceptional-code"></a>Wywoływanie wyjątkowego kodu z kodu niewyjątkowego
 
-C++funkcje zadeklarowane jako "extern C" mogą być wywoływane przez programy języka C. C++Serwery COM mogą być używane przez kod zapisany w dowolnej wielu różnych językach. W przypadku zaimplementowania funkcji publicznych obsługujących C++ wyjątek w programie w celu ich wywołania przez kod niewyjątkowy, C++ funkcja nie może zezwalać na żadne wyjątki, aby wykonać propagację do obiektu wywołującego. W związku z C++ tym, funkcja musi zwrócić uwagę na każdy wyjątek, który wie, jak obsłużyć i, w razie potrzeby, przekonwertować wyjątek na kod błędu, który jest rozpoznawany przez wywołującego. Jeśli nie wszystkie potencjalne wyjątki są znane, C++ funkcja powinna mieć blok `catch(...)` jako ostatnią procedurę obsługi. W takim przypadku najlepszym rozwiązaniem jest zgłoszenie błędu krytycznego do obiektu wywołującego, ponieważ program może znajdować się w nieznanym stanie.
+Funkcje języka C++, które są zadeklarowane jako "extern C", mogą być wywoływane przez programy C. Serwery C++ COM mogą być używane przez kod zapisany w dowolnej wielu różnych językach. W przypadku zaimplementowania funkcji publicznych obsługujących wyjątki w języku C++ do wywołania przez kod niewyjątkowy, funkcja C++ nie może zezwalać na żadne wyjątki do propagacji z powrotem do obiektu wywołującego. W związku z tym, funkcja języka C++ musi zwrócić uwagę na każdy wyjątek, który wie, jak obsłużyć i, w razie potrzeby, przekonwertować wyjątek na kod błędu, który jest rozpoznawany przez wywołującego. Jeśli nie wszystkie potencjalne wyjątki są znane, funkcja C++ powinna mieć `catch(...)` blok jako ostatnią procedurę obsługi. W takim przypadku najlepszym rozwiązaniem jest zgłoszenie błędu krytycznego do obiektu wywołującego, ponieważ program może znajdować się w nieznanym stanie.
 
-W poniższym przykładzie pokazano funkcję, która zakłada, że każdy wyjątek, który może zostać wygenerowany jest Win32exception lub typ wyjątku pochodzący z `std::exception`. Funkcja przechwytuje dowolny wyjątek tych typów i propaguje informacje o błędzie jako kod błędu Win32 do obiektu wywołującego.
+W poniższym przykładzie pokazano funkcję, która zakłada, że każdy wyjątek, który może zostać wygenerowany jest Win32exception lub typ wyjątku pochodzący z `std::exception` . Funkcja przechwytuje dowolny wyjątek tych typów i propaguje informacje o błędzie jako kod błędu Win32 do obiektu wywołującego.
 
 ```cpp
 BOOL DiffFiles2(const string& file1, const string& file2)
@@ -191,7 +191,7 @@ BOOL DiffFiles2(const string& file1, const string& file2)
 }
 ```
 
-W przypadku konwersji z wyjątków na kody błędów, jeden potencjalny problem występuje, że kody błędów często nie zawierają bogatej informacji, które mogą być przechowywane przez wyjątek. Aby rozwiązać ten problem, można dostarczyć blok **catch** dla każdego określonego typu wyjątku, który może zostać wygenerowany, i wykonać rejestrowanie, aby zarejestrować szczegóły wyjątku przed przekonwertowaniem go na kod błędu. Takie podejście może stworzyć wiele powtórzeń kodu, jeśli wiele funkcji używa tego samego zestawu bloków **catch** . Dobrym sposobem uniknięcia powtarzania kodu jest Refaktoryzacja tych bloków w jedną funkcję narzędzia prywatnego, która implementuje bloki **try** i **catch** i akceptuje obiekt Function, który jest wywoływany w bloku **try** . W każdej funkcji publicznej Przekaż kod do funkcji narzędzia jako wyrażenie lambda.
+W przypadku konwersji z wyjątków na kody błędów, jeden potencjalny problem występuje, że kody błędów często nie zawierają bogatej informacji, które mogą być przechowywane przez wyjątek. Aby rozwiązać ten problem, można dostarczyć **`catch`** blok dla każdego określonego typu wyjątku, który może zostać wygenerowany, i wykonać rejestrowanie, aby zarejestrować szczegóły wyjątku przed przekonwertowaniem go na kod błędu. Takie podejście może stworzyć wiele powtórzeń kodu, jeśli wiele funkcji używa tego samego zestawu **`catch`** bloków. Dobrym sposobem uniknięcia powtarzania kodu jest Refaktoryzacja tych bloków w jedną funkcję narzędzia prywatnego, która implementuje **`try`** **`catch`** bloki i i akceptuje obiekt Function, który jest wywoływany w **`try`** bloku. W każdej funkcji publicznej Przekaż kod do funkcji narzędzia jako wyrażenie lambda.
 
 ```cpp
 template<typename Func>
@@ -236,5 +236,5 @@ Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [lambda Expres
 
 ## <a name="see-also"></a>Zobacz także
 
-[Nowoczesne C++ najlepsze rozwiązania dotyczące wyjątków i obsługi błędów](errors-and-exception-handling-modern-cpp.md)<br/>
+[Nowoczesne najlepsze rozwiązania w języku C++ dotyczące wyjątków i obsługi błędów](errors-and-exception-handling-modern-cpp.md)<br/>
 [Instrukcje: projektowanie pod kątem bezpieczeństwa wyjątków](how-to-design-for-exception-safety.md)<br/>

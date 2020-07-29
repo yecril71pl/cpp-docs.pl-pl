@@ -2,57 +2,57 @@
 title: Typy podstawowe (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-ms.openlocfilehash: 2bd5be01b868fd3086c2064edfd4ca343db425be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d484d9490a0a5b2ee2e7f92381528124b47701c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301459"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231003"
 ---
 # <a name="fundamental-types-ccx"></a>Typy podstawowe (C++/CX)
 
-Oprócz standardowych C++ wbudowanych typów C++/CX obsługuje system typu, który jest definiowany przez architekturę środowiska wykonawczego Windows, zapewniając definicje typów dla środowiska uruchomieniowego Windows podstawowych typów mapowane na warstwę standardowa C++ typy... C++/CX implementuje wyrażenie logiczne, znaki i liczbowych typów podstawowych. Te definicje typów są zdefiniowane w `default` przestrzeń nazw, która nigdy nie musi być jawnie określony. Ponadto C++/CX zapewnia otoki i konkretnych implementacji niektórych interfejsów i typów środowiska wykonawczego Windows.
+Oprócz standardowych typów wbudowanych języka C++/CX języka C++ obsługuje system typów, który jest zdefiniowany przez architekturę środowisko wykonawcze systemu Windows, dostarczając elementy typedef dla typów podstawowych środowisko wykonawcze systemu Windows, które są mapowane na standardowe typy języka C++. C++/CX implementuje wartości logiczne, znakowe i liczbowe podstawowe typy. Te definicje typów są zdefiniowane w `default` przestrzeni nazw, która nigdy nie musi być określona jawnie. Ponadto C++/CX zapewnia otoki i konkretne implementacje dla niektórych typów środowisko wykonawcze systemu Windows i interfejsów.
 
-## <a name="boolean-and-character-types"></a>Typy Boolean i znaków
+## <a name="boolean-and-character-types"></a>Typy logiczne i znaki
 
-Poniższa lista zawiera wbudowane Boolean i typy znakowe i odpowiedniki standardowego języka C++.
+Poniższa tabela zawiera listę wbudowanych typów wartości logicznych i znaków oraz ich standardowych odpowiedników języka C++.
 
-|Przestrzeń nazw|C++Nazwa /CX|Definicja|Nazwa czasu standardowego języka C++|Zakres wartości|
+|Przestrzeń nazw|Nazwa/CX języka C++|Definicja|Standardowa nazwa języka C++|Zakres wartości|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
-|Platforma|Boolean|Wartość logiczna 8-bitowych.|bool|**wartość true,** (niezerową) i **false** (zero)|
-|default|char16|Wartość nieliczbową 16-bitową, która reprezentuje punkt kodu Unicode (UTF-16).|wchar_t<br /><br /> —lub—<br /><br /> L'c'|(Określony przez Unicode standard)|
+|Platforma|Wartość logiczna|8-bitowa wartość logiczna.|bool|**`true`**(niezerowe) i **`false`** (zero)|
+|default|char16|16-bitowa wartość nieliczbowa, która reprezentuje punkt kodowy Unicode (UTF-16).|wchar_t<br /><br /> -lub-<br /><br /> L'c'|(Określony przez standard Unicode)|
 
 ## <a name="numeric-types"></a>Typy liczbowe
 
-Poniższa tabela zawiera listę wbudowanych typów liczbowych. Typy liczbowe są deklarowane w `default` przestrzeni nazw i czy definicje typów dla danego typu wbudowanego C++. Nie wszystkie C++ wbudowanych typów (long, na przykład) są obsługiwane w środowisku uruchomieniowym Windows. Spójność i przejrzystości, zaleca się używanie C++/CX nazwy.
+Poniższa tabela zawiera listę wbudowanych typów liczbowych. Typy liczbowe są deklarowane w `default` przestrzeni nazw i są typedef dla odpowiedniego typu wbudowanego języka C++. Nie wszystkie typy wbudowane języka C++ (na przykład) są obsługiwane w środowisko wykonawcze systemu Windows. Aby zapewnić spójność i przejrzystość, zalecamy użycie nazwy/CX języka C++.
 
-|C++Nazwa /CX|Definicja|Nazwa czasu standardowego języka C++|Zakres wartości|
+|Nazwa/CX języka C++|Definicja|Standardowa nazwa języka C++|Zakres wartości|
 |-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
-|int8|8-bitowe podpisane wartość liczbowa.|podpisany char|od -128 do 127|
-|uint8|8-bitową wartością numeryczną bez znaku.|unsigned char|od 0 do 255|
-|Int16|Całkowita 16-bitowych.|short|-32 768 do 32 767|
+|Int8|8-bitowa podpisana wartość numeryczna.|znak ze znakiem|-128 do 127|
+|Uint8|8-bitowa wartość liczbowa bez znaku.|unsigned char|od 0 do 255|
+|Int16|16-bitowa liczba całkowita ze znakiem.|short|-32 768 do 32 767|
 |UInt16|16-bitowa liczba całkowita bez znaku.|unsigned short|od 0 do 65 535|
-|int32|Całkowita 32-bitowych.|int|-2,147,483,648 do 2 147 483 647|
-|uint32|32-bitowa liczba całkowita bez znaku.|unsigned int|od 0 do 4 294 967 295|
-|int64|Całkowita 64-bitowych.|Long long - lub - __int64|-9,223,372,036,854, 775,808 za pośrednictwem 9,223,372,036,854,775,807|
-|uint64|64-bitowej nieoznaczonej liczby całkowitej.|unsigned long long - lub - unsigned __int64|od 0 do 18,446,744,073,709,551,615|
-|float32|Liczba zmiennoprzecinkowa IEEE 754 32-bitowych.|float|3.4e/38 (7 cyfr)|
-|float64|Liczba zmiennoprzecinkowa IEEE 754 64-bitowych.|double|308 (15 cyfr) 1, 7e|
+|elementem|32-bitowa liczba całkowita ze znakiem.|int|-2 147 483 648 do 2 147 483 647|
+|równ|32-bitowa liczba całkowita bez znaku.|unsigned int|od 0 do 4 294 967 295|
+|Int64|64-bitowa liczba całkowita ze znakiem.|Long Long-lub-__int64|-9 223 372 036 854, 775 808 do 9 223 372 036 854 775 807|
+|UInt64|64-bitowa liczba całkowita bez znaku.|__int64 bez znaku long long-lub-unsigned|od 0 do 18446744073709551615 są|
+|float32|32-bitowa liczba zmiennoprzecinkowa IEEE 754.|float|3.4 e +/-38 (7 cyfr)|
+|Float64|64-bitowa liczba zmiennoprzecinkowa IEEE 754.|double|1.7 e +/-308 (15 cyfr)|
 
-## <a name="windows-runtime-types"></a>Typów środowiska wykonawczego Windows
+## <a name="windows-runtime-types"></a>Typy środowisko wykonawcze systemu Windows
 
-W poniższej tabeli wymieniono niektóre dodatkowe typy są definiowane przez architekturę środowiska wykonawczego Windows, które są wbudowane w C++/CX. Obiekt i parametry są typami odwołań. Inne są typami wartości. Wszystkie te typy są deklarowane w `Platform` przestrzeni nazw. Aby uzyskać pełną listę, zobacz [przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md).
+W poniższej tabeli wymieniono niektóre dodatkowe typy, które są zdefiniowane przez architekturę środowisko wykonawcze systemu Windows i są wbudowane w C++/CX. Obiekt i ciąg są typami referencyjnymi. Pozostałe są typami wartości. Wszystkie te typy są zadeklarowane w `Platform` przestrzeni nazw. Aby uzyskać pełną listę, zobacz [przestrzeń nazw platformy](../cppcx/platform-namespace-c-cx.md).
 
 |Nazwa|Definicja|
 |----------|----------------|
-|Obiekt|Reprezentuje dowolny typ środowiska wykonawczego Windows.|
-|String|Ciąg znaków, które reprezentują tekstu.|
-|Rect|Zestaw czterech liczb zmiennoprzecinkowych, które reprezentują położenie i rozmiar prostokąta.|
-|SizeT|Uporządkowana para liczb zmiennoprzecinkowych, który określa szerokość i wysokość.|
-|Punkt|Uporządkowana para zmiennoprzecinkowych współrzędnych x i współrzędne y, które definiują punkt w dwuwymiarowej płaszczyzny.|
-|Guid|Wartość nieliczbową 128-bitowego, która jest używana jako unikatowy identyfikator.|
-|UIntPtr|(Tylko do użytku wewnętrznego.) Niepodpisane wartość 64-bitową, która jest używana jako wskaźnik.|
-|IntPtr|(Tylko do użytku wewnętrznego.)  Podpisany wartość 64-bitową, która jest używana jako wskaźnik.|
+|Obiekt|Reprezentuje dowolny typ środowisko wykonawcze systemu Windows.|
+|String|Ciąg znaków, który reprezentuje tekst.|
+|Rect|Zestaw czterech liczb zmiennoprzecinkowych, które reprezentują lokalizację i rozmiar prostokąta.|
+|SizeT|Uporządkowana para liczb zmiennoprzecinkowych, które określają wysokość i szerokość.|
+|Moment|Uporządkowana para zmiennoprzecinkowych współrzędnych x i Współrzędne y, które definiują punkt w płaszczyźnie dwuwymiarowej.|
+|Guid (identyfikator GUID)|128-bitowa wartość nieliczbowa, która jest używana jako unikatowy identyfikator.|
+|UIntPtr|(Tylko do użytku wewnętrznego). Nieniepodpisana wartość 64-bitowa, która jest używana jako wskaźnik.|
+|IntPtr|(Tylko do użytku wewnętrznego).  Podpisana wartość 64-bitowa, która jest używana jako wskaźnik.|
 
 ## <a name="see-also"></a>Zobacz także
 

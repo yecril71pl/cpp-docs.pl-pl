@@ -1,7 +1,7 @@
 ---
 title: if-else — instrukcja (C++)
 ms.date: 07/20/2019
-description: Użyj instrukcji if-else w C++ programie w celu kontrolowania warunkowego rozgałęzienia.
+description: Używaj instrukcji if-else w języku C++ do kontrolowania warunkowego rozgałęzienia.
 f1_keywords:
 - else_cpp
 - if_cpp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-ms.openlocfilehash: fd2736d80d68249773c9aa6cf7cb9edffdaadac4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a9256e32c89890635c5473a85b4bb3b56bec26d4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178434"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187572"
 ---
 # <a name="if-else-statement-c"></a>if-else — instrukcja (C++)
 
-Kontroluje rozgałęzienie warunkowe. Instrukcje w *bloku if-Block* są wykonywane tylko wtedy, gdy *wyrażenie IF* zwraca wartość różną od zera (lub true). Jeśli wartość *wyrażenia* jest różna od zera, *instrukcja1* i wszystkie inne instrukcje w bloku są wykonywane i blok else, jeśli jest obecny, jest pomijany. Jeśli wartość *wyrażenia* jest równa zero, wówczas blok IF jest pomijany i jest wykonywany blok else, jeśli jest obecny. Wyrażenia, które mają wartość różną od zera, są
+Kontroluje rozgałęzienie warunkowe. Instrukcje w *bloku if-Block* są wykonywane tylko wtedy, gdy *wyrażenie IF* zwraca wartość różną od zera (lub **`true`** ). Jeśli wartość *wyrażenia* jest różna od zera, *instrukcja1* i wszystkie inne instrukcje w bloku są wykonywane i blok else, jeśli jest obecny, jest pomijany. Jeśli wartość *wyrażenia* jest równa zero, wówczas blok IF jest pomijany i jest wykonywany blok else, jeśli jest obecny. Wyrażenia, które mają wartość różną od zera, są
 
-- TRUE
+- **`true`**
 - wskaźnik o wartości innej niż null,
 - dowolna wartość arytmetyczna niezerowa lub
 - Typ klasy, który definiuje niejednoznaczną konwersję na typ arytmetyczny, Boolean lub typu wskaźnika. (Aby uzyskać informacje na temat konwersji, zobacz [Konwersje standardowe](../cpp/standard-conversions.md)).
@@ -113,7 +113,7 @@ int main()
 
 ## <a name="if-statement-with-an-initializer"></a><a name="if_with_init"></a>Instrukcja if z inicjatorem
 
-**Visual Studio 2017 w wersji 15,3 lub nowszej** (dostępny w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): instrukcja **if** może również zawierać wyrażenie, które deklaruje i inicjuje nazwaną zmienną. Użyj tej postaci instrukcji if-Statement, gdy zmienna jest wymagana tylko w zakresie bloku if.
+**Visual Studio 2017 w wersji 15,3 lub nowszej** (dostępne z [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): **`if`** instrukcja może również zawierać wyrażenie, które deklaruje i inicjuje nazwaną zmienną. Użyj tej postaci instrukcji if-Statement, gdy zmienna jest wymagana tylko w zakresie bloku if.
 
 ## <a name="example"></a>Przykład
 
@@ -159,11 +159,11 @@ int main()
 }
 ```
 
-We wszystkich formach instrukcji **if** , *wyrażenie*, które może mieć dowolną wartość z wyjątkiem struktury, jest oceniane, łącznie ze wszystkimi efektami ubocznymi. Kontrolka jest przekazywana z instrukcji **if** do następnej instrukcji w programie, chyba że jedna z *instrukcji*s zawiera [Break](../cpp/break-statement-cpp.md), [Continue](../cpp/continue-statement-cpp.md)lub [goto](../cpp/goto-statement-cpp.md).
+We wszystkich formach **`if`** instrukcji, *wyrażenie*, które może mieć dowolną wartość z wyjątkiem struktury, jest oceniane, łącznie ze wszystkimi efektami ubocznymi. Kontrolka przechodzi z **`if`** instrukcji do następnej instrukcji w programie, chyba że jedna z *instrukcji*s zawiera [Break](../cpp/break-statement-cpp.md), [Continue](../cpp/continue-statement-cpp.md)lub [goto](../cpp/goto-statement-cpp.md).
 
-Klauzula **else** instrukcji `if...else` jest skojarzona z najbliższą poprzednią instrukcją **if** w tym samym zakresie, który nie ma odpowiedniej instrukcji **else** .
+**`else`** Klauzula `if...else` instrukcji jest skojarzona z najbliższą poprzednią **`if`** instrukcją w tym samym zakresie, który nie ma odpowiedniej **`else`** instrukcji.
 
-## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr"> jeśli instrukcje constexpr
+## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr">If constexpr — instrukcje
 
 **Visual Studio 2017 w wersji 15,3 i nowszej** (dostępny w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): w szablonach funkcji można użyć instrukcji **if constexpr** , aby podejmować decyzje dotyczące rozgałęziania czasu kompilowania bez konieczności stosowania wielu przeciążeń funkcji. Można na przykład napisać pojedynczą funkcję, która obsługuje rozpakowywanie parametrów (nie jest potrzebne Przeciążenie o wartości zero parametrów):
 
@@ -186,8 +186,8 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Instrukcje wyboru](../cpp/selection-statements-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
-[switch, instrukcja (C++)](../cpp/switch-statement-cpp.md)
+[switch — instrukcja (C++)](../cpp/switch-statement-cpp.md)

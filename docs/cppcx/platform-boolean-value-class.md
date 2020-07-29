@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Boolean Struct
 ms.assetid: 8518a1db-7139-4187-9c7a-1ae3943373f2
-ms.openlocfilehash: c97ce0171fcf8f28254ce3f91b91f4d1711ad813
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9297c0062a3c64a4e830e083b515aef41416e527
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161696"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230964"
 ---
 # <a name="platformboolean-value-class"></a>Klasa wartości Platform::Boolean
 
-Reprezentuje wartość logiczną. Odpowiednik `bool`.
+Reprezentuje wartość logiczną. Odpowiednik **`bool`** .
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,17 +26,17 @@ public value struct Boolean
 
 ### <a name="members"></a>Elementy członkowskie
 
-Atrybut typu wartość logiczna ma metodę Equals, element GetHashCode(), i metody ToString() pochodną [Platform::Object, klasa](../cppcx/platform-object-class.md), i metoda GetTypeCode() pochodnych [Platform::Type, klasa](../cppcx/platform-type-class.md).
+Wartość logiczna ma metody Equals (), GetHashCode () i ToString () pochodne od klasy [platform:: Object](../cppcx/platform-object-class.md)i metody GetTypeCode () pochodzącej od obiektu [platform:: Type](../cppcx/platform-type-class.md).
 
 ### <a name="requirements"></a>Wymagania
 
-**Minimalna obsługiwana klienta:** Windows 8
+**Minimalny obsługiwany klient:** System Windows 8
 
-**Minimalna obsługiwana serwera:** Windows Server 2012
+**Minimalny obsługiwany serwer:** System Windows Server 2012
 
-**Namespace:** Platforma
+**Przestrzeń nazw:** Platformach
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd
 
 ## <a name="see-also"></a>Zobacz także
 

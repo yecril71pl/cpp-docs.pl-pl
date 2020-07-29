@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3490
 ms.assetid: 7638559a-fd06-4527-a9c1-0c8ae68b3123
-ms.openlocfilehash: 940eae39222548ec74bda8ccb38e669748ffa74f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ea7341b9c587a764c7366fa7b7c89e4fc67bc7d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738404"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230860"
 ---
 # <a name="compiler-error-c3490"></a>Błąd kompilatora C3490
 
 nie można zmodyfikować elementu "var", ponieważ jest on dostępny za pomocą obiektu const
 
-Wyrażenie lambda zadeklarowane w metodzie `const` nie może modyfikować niemodyfikowalnych danych elementu członkowskiego.
+Wyrażenie lambda zadeklarowane w **`const`** metodzie nie może modyfikować niemodyfikowalnych danych elementu członkowskiego.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-- Usuń modyfikator `const` z deklaracji metody.
+- Usuń **`const`** modyfikator z deklaracji metody.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3490, ponieważ modyfikuje zmienną członkowską `_i` w metodzie `const`:
+Poniższy przykład generuje C3490, ponieważ modyfikuje zmienną członkowską `_i` w **`const`** metodzie:
 
 ```cpp
 // C3490a.cpp
@@ -44,7 +44,7 @@ class C
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład rozwiązuje C3490 przez usunięcie modyfikatora `const` z deklaracji metody:
+Poniższy przykład rozwiązuje C3490 przez usunięcie **`const`** modyfikatora z deklaracji metody:
 
 ```cpp
 // C3490b.cpp
