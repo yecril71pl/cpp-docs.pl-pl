@@ -29,12 +29,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: c54490a5625bfa2f9ffc95d616c2d73a7acf98e5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 12f54c54b59e43d9a2861489171dd6c9c9436a8a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916087"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232433"
 ---
 # <a name="_putw"></a>_putw
 
@@ -65,7 +65,7 @@ Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, err
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_putw** zapisuje wartość binarną typu **int** do bieżącej pozycji *strumienia.* **_putw** nie wpływa na wyrównanie elementów w strumieniu ani nie przyjmuje żadnych specjalnych wyrównania. **_putw** jest przede wszystkim zgodne z poprzednimi bibliotekami. Mogą wystąpić problemy z przenośnością **_putw** , ponieważ rozmiar **int** i porządkowanie bajtów w ramach **int** różnią się w różnych systemach.
+Funkcja **_putw** zapisuje wartość binarną typu **`int`** do bieżącej pozycji *strumienia.* **_putw** nie wpływa na wyrównanie elementów w strumieniu ani nie przyjmuje żadnych specjalnych wyrównania. **_putw** jest przede wszystkim zgodne z poprzednimi bibliotekami. Mogą wystąpić problemy z przenośnością **_putw** , ponieważ rozmiar **`int`** i kolejność bajtów w **`int`** różnych systemach.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -73,7 +73,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_putw**|\<stdio. h>|
+|**_putw**|\<stdio.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -119,7 +119,7 @@ int main( void )
 Wrote ten words
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_getw](getw.md)<br/>

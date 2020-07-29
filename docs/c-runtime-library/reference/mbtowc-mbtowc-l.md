@@ -32,12 +32,12 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: 54e50da06fbe009184894edc60b6267e372aefc1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9502de7b12394277b01a18caca48a7e783efaf4e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915416"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232485"
 ---
 # <a name="mbtowc-_mbtowc_l"></a>mbtowc, _mbtowc_l
 
@@ -62,7 +62,7 @@ int _mbtowc_l(
 ### <a name="parameters"></a>Parametry
 
 *WCHAR*<br/>
-Adres znaku dwubajtowego (typ **wchar_t**).
+Adres znaku dwubajtowego (typu **`wchar_t`** ).
 
 *mbchar*<br/>
 Adres sekwencji bajtów (znak wielobajtowy).
@@ -70,7 +70,7 @@ Adres sekwencji bajtów (znak wielobajtowy).
 *liczbą*<br/>
 Liczba bajtów do sprawdzenia.
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -87,8 +87,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**mbtowc**|\<STDLIB. h>|
-|**_mbtowc_l**|\<STDLIB. h>|
+|**mbtowc**|\<stdlib.h>|
+|**_mbtowc_l**|\<stdlib.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -152,12 +152,12 @@ Attempt to convert a NULL pointer to a wide character:
    Bytes converted: 0
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: a200aa6e511ab83866fbf1df2beabb827c611c46
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0443648d33929082042881c14562b34356cb6063
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919622"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232654"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -60,7 +60,7 @@ long double asinh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -73,7 +73,7 @@ Funkcje **ASINH —** zwracają odwrotność hyberbolic sinus (łuk hiperboliczn
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy używasz języka C++, możesz wywoływać przeciążenia **ASINH —** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** o **podwójnej precyzji** . W programie C **ASINH —** zawsze przyjmuje i zwraca wartość **Double**.
+Gdy używasz języka C++, możesz wywoływać przeciążenia **ASINH —** , które pobierają i **`float`** zwracają **`long double`** wartości. W programie C **ASINH —** zawsze przyjmuje i zwraca **`double`** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -81,7 +81,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek C|Wymagany nagłówek C++|
 |--------------|--------------|------------------|
-|**ASINH —**, **asinhf —**, **asinhl**|\<> Math. h|\<cmath> lub \<Math. h<|
+|**ASINH —**, **asinhf —**, **asinhl**|\<math.h>|\<cmath>lub \< Math. h<|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -113,7 +113,7 @@ sinh( 0.785398 ) = 0.868671
 asinh( 0.868671 ) = 0.785398
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

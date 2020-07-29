@@ -9,47 +9,47 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-ms.openlocfilehash: 7c4f4621bbccd4285bcf4eca07d2544d53d14f6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a55b2a4ce72de644fe426894ab389f62bd29b204
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271362"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232693"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Eksportuje funkcję)
 
-Eksportuje funkcję według nazwy lub numer lub danych z programu.
+Eksportuje funkcję według nazwy lub liczby porządkowej lub danych z programu.
 
 ## <a name="syntax"></a>Składnia
 
-> **/ EXPORT:**<em>Nazwa_wpisu</em>[**,\@**<em>porządkowe</em>[**, NONAME**]] [**, dane**]
+> **/Export:**<em>EntryName</em>[**, \@ **<em>porządkowa</em>[**, NoName**]] [**, dane**]
 
 ## <a name="remarks"></a>Uwagi
 
-**/EXPORT** opcja określa element funkcję lub dane, aby wyeksportować z programu, tak aby inne programy można wywołać funkcję lub korzystać z danych. Eksporty są zazwyczaj zdefiniowane w bibliotece DLL.
+Opcja **/Export** określa funkcję lub element danych do wyeksportowania z programu, tak aby inne programy mogły wywołać funkcję lub użyć danych. Eksporty są zwykle zdefiniowane w bibliotece DLL.
 
-*Nazwa_wpisu* jest nazwa elementu funkcję lub dane, ponieważ jest używane przez program wywołujący. *numer porządkowy* Określa indeks w tabeli eksportu do zakresu od 1 do 65 535; Jeśli nie określisz *porządkowe*, LINK przypisuje jeden. **NONAME** — słowo kluczowe eksportuje funkcję tylko jako liczby porządkowej, bez *Nazwa_wpisu*.
+*EntryName* jest nazwą funkcji lub elementu danych, która ma być używana przez program wywołujący. *numer porządkowy* Określa indeks w tabeli eksportu z zakresu od 1 do 65 535; Jeśli nie określisz *liczby porządkowej*, link przypisze jeden. Słowo kluczowe **NoName** eksportuje funkcję tylko jako numer porządkowy bez *wpisu*.
 
-**Danych** — słowo kluczowe Określa, że element wyeksportowanego elementu danych. Element danych w programie klienckim musi być zadeklarowany za pomocą **extern __declspec(dllimport)**.
+Słowo kluczowe **danych** określa, że wyeksportowany element jest elementem danych. Element danych w programie klienckim musi być zadeklarowany za pomocą **__declspec extern (dllimport)**.
 
-Istnieją cztery metody eksportowania definicji, wymienione w zalecanej kolejności używania:
+Istnieją cztery metody eksportowania definicji, wymienione w zalecanej kolejności użycia:
 
-1. [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) w kodzie źródłowym
+1. [__declspec (dllexport)](../../cpp/dllexport-dllimport.md) w kodzie źródłowym
 
-1. [EKSPORTY](exports.md) instrukcja w pliku .def
+1. Instrukcja [eksportu](exports.md) w pliku. def
 
-1. Specyfikacji/Export, za pomocą polecenia łącza
+1. Specyfikacja/EXPORT w poleceniu LINKu
 
-1. A [komentarz](../../preprocessor/comment-c-cpp.md) dyrektywę w kodzie źródłowym w postaci `#pragma comment(linker, "/export: definition ")`.
+1. Dyrektywa [komentarza](../../preprocessor/comment-c-cpp.md) w kodzie źródłowym formularza `#pragma comment(linker, "/export: definition ")` .
 
-Wszystkie te metody może służyć w tym samym programie. Gdy łącze tworzy program, który zawiera eksporty, tworzy również biblioteki importowanej, chyba że używany jest plik .exp w kompilacji.
+Wszystkie te metody mogą być używane w tym samym programie. Gdy LINK kompiluje program, który zawiera eksporty, tworzy również bibliotekę importowaną, chyba że plik EXP jest używany w kompilacji.
 
-Zastosowań łącze dekorowane formularzy identyfikatorów. Podczas tworzenia pliku .obj, kompilator zdobi identyfikatora. Jeśli *Nazwa_wpisu* określono konsolidatora w jego niedekorowanego formularza (wyświetlaną w kodzie źródłowym), łącze podejmuje próbę dopasowania nazwy. Nie można znaleźć unikatowego dopasowania, łącze wysyła komunikat o błędzie. Użyj [DUMPBIN](dumpbin-reference.md) narzędzie, aby uzyskać [nazwy ozdobionej](decorated-names.md) formularz identyfikator, gdy należy określić go do konsolidatora.
+LINK używa dekoracyjnych formularzy identyfikatorów. Kompilator zdobi identyfikator podczas tworzenia pliku. obj. Jeśli *EntryName* jest określony dla konsolidatora w postaci niedekoracyjnej (jak pojawia się w kodzie źródłowym), link próbuje dopasować nazwę. Jeśli nie można znaleźć unikatowego dopasowania, LINK wysyła komunikat o błędzie. Użyj narzędzia [polecenia DUMPBIN](dumpbin-reference.md) , aby uzyskać postać [nazwy dekoracyjnej](decorated-names.md) identyfikatora, gdy trzeba ją określić dla konsolidatora.
 
 > [!NOTE]
-> Nie określaj ozdobione formularza identyfikatory w języku C, które są zadeklarowane `__cdecl` lub `__stdcall`.
+> Nie określaj dekoracyjnej postaci identyfikatorów języka C, które są zadeklarowane **`__cdecl`** lub **`__stdcall`** .
 
-Jeśli potrzebujesz eksportować nazwy funkcji bez i eksportuje różne w zależności od konfiguracji kompilacji (na przykład w wersjach 32-bitową lub 64-bitowy), można użyć różnych plików DEF dla każdej konfiguracji. (Dyrektywy preprocesora warunkowego nie są dozwolone w pliki DEF). Alternatywnie, można użyć `#pragma comment` dyrektywy przed deklaracji funkcji, jak pokazano poniżej, gdzie `PlainFuncName` jest nieozdobioną nazwę i `_PlainFuncName@4` jest dekorowane nazwy funkcji:
+Jeśli musisz wyeksportować niedekoracyjną nazwę funkcji i mieć różne Eksporty w zależności od konfiguracji kompilacji (na przykład w 32-bitowych lub 64-bitowych kompilacjach), możesz użyć różnych DEF plików dla każdej konfiguracji. (Dyrektywy warunkowe preprocesora są niedozwolone w plikach DEF). Alternatywnie można użyć `#pragma comment` dyrektywy przed deklaracją funkcji, jak pokazano w tym miejscu, gdzie `PlainFuncName` jest nazwą niedekoracyjną i `_PlainFuncName@4` jest nazwą dekoracyjną funkcji:
 
 ```cpp
 #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
@@ -58,17 +58,17 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję konsolidatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **konsolidatora** > **wiersza polecenia** stronę właściwości.
+1. Wybierz stronę właściwości **Konfiguracja właściwości**  >  **Linker**  >  **wiersza polecenia** konsolidatora.
 
-1. Wprowadź opcje do **dodatkowe opcje** pole.
+1. Wprowadź opcję w polu **dodatkowe opcje** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Aby programowo ustawić tę opcję konsolidatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja konsolidatora MSVC](linking.md)<br/>
-[Opcje konsolidatora MSVC](linker-options.md)
+[MSVC Opcje konsolidatora](linker-options.md)

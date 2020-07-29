@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-ms.openlocfilehash: 38eef416afb078614ef26ab5d7c8810f46dd9a85
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: af7d15ee1b5dfd863025565bf8827199f7492841
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939165"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232550"
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag, cimagf, cimagl
 
@@ -59,7 +59,7 @@ long double cimag( _Lcomplex z );  // C++
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*porządku*<br/>
 Liczba złożona.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -68,11 +68,11 @@ Liczba złożona.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cimag** , które pobierają wartości **_Fcomplex** lub **_Lcomplex** i zwracają wartości **zmiennoprzecinkowe** lub **długie** **Double** . W programie C **cimag** zawsze przyjmuje wartość **_Dcomplex** i zwraca wartość **podwójną** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cimag** , które pobierają wartości **_Fcomplex** lub **_Lcomplex** , i zwracają **`float`** lub **`long double`** wartości. W programie C **cimag** zawsze przyjmuje wartość **_Dcomplex** i zwraca **`double`** wartość.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
 |**cimag**, **cimagf**, **cimagl**|\<complex.h>|\<ccomplex>|
 

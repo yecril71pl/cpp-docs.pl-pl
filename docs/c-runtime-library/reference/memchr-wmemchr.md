@@ -27,12 +27,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: c951716d623d900f975e9d6f8a1c762a155b1a7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b4640004526eda4ff26e9601e15298bcb8ba3c79
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951947"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232472"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -75,10 +75,10 @@ const wchar_t *wmemchr(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
+*buforu*<br/>
 Wskaźnik do buforu.
 
-*c*<br/>
+*s*<br/>
 Znak, który ma być wyszukiwany.
 
 *liczbą*<br/>
@@ -92,14 +92,14 @@ Jeśli to się powiedzie, zwraca wskaźnik do pierwszej lokalizacji *c* w *bufor
 
 `memchr`i `wmemchr` poszukaj pierwszego wystąpienia *c* w pierwszej *liczbie* znaków w *buforze*. Kończy się po znalezieniu *c* lub po sprawdzeniu pierwszej *liczby* znaków.
 
-W języku C te funkcje przyjmują wskaźnik **const** dla pierwszego argumentu. W C++programie dostępne są dwa przeciążenia. Przeciążenie pobierające wskaźnik do elementu **const** zwraca wskaźnik do elementu **const**; wersja, która przyjmuje wskaźnik do elementu niebędącego**stałą** , zwraca wskaźnik do elementu innego niż**const**. \_ Wprzypadku\_, gdy są dostępne zarówno wersje stałe, jak i niestałe tych funkcji, są definiowane poprawne przeciążenia. \_\_ Jeśli jest wymagane zachowanie**niestałe** dla obu C++ przeciążeń w C++programie, zdefiniuj symbol \_Return\_const.
+W języku C te funkcje przyjmują **`const`** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie pobierające wskaźnik do **`const`** zwraca wskaźnik do **`const`** ; wersja, która przyjmuje wskaźnik do **`const`** niezwracanego wskaźnika do niebędącego elementem **`const`** . W \_ przypadku, \_ \_ \_ gdy obie **`const`** **`const`** te funkcje są dostępne, są zdefiniowane poprawne przeciążenia w ramach monitora. Jeśli wymagane jest **`const`** niezachowanie w przypadku przeciążeń c++ w języku c++, zdefiniuj \_ zwracaną wartość symbolu const \_ .
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`memchr`|\<> pamięci. h > \<lub String. h|
-|`wmemchr`|\<WCHAR. h >|
+|`memchr`|\<memory.h> lub \<string.h>|
+|`wmemchr`|\<wchar.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

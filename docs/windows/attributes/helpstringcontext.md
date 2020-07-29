@@ -1,17 +1,17 @@
 ---
-title: helpstringcontext (C++ atrybut com)
+title: helpstringcontext (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringcontext
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: 339d65070efe8bf2dafae2cf76e92c75a1bebc18
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e6d4a6b4ab2381fc9ebe0f237978c92fe0f656c5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168152"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224451"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -54,17 +54,17 @@ __interface IMyI
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **interfejs**, metoda interfejsu|
+|**Dotyczy**|**`class`**, **interfejs**, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
-[module](module-cpp.md)
+[elementu](module-cpp.md)

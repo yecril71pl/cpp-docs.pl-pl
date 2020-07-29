@@ -1,17 +1,17 @@
 ---
-title: agregowany (C++ atrybut com)
+title: agregowany (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregatable
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: d929543f699dcd20471ff9a9b45f54119f82a40a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 883094c85418c15455a020cfe73538a6576eddd0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168528"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224490"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -25,20 +25,20 @@ Wskazuje, że Klasa obsługuje agregację.
 
 ### <a name="parameters"></a>Parametry
 
-*value*<br/>
+*wartościami*<br/>
 Obowiązkowe Parametr wskazujący, kiedy można agregować obiekt COM:
 
-- `never` nie można agregować obiektu COM.
+- `never`Nie można agregować obiektu COM.
 
-- `allowed` obiekt COM można utworzyć bezpośrednio lub można go agregować. Domyślnie włączone.
+- `allowed`Obiekt COM można utworzyć bezpośrednio lub może być zagregowany. Jest to opcja domyślna.
 
-- `always` obiektu COM nie można utworzyć bezpośrednio i można go tylko agregować. Podczas wywoływania `CoCreateInstance` dla tego obiektu należy określić interfejs `IUnknown` obiektu agregowania (kontrolka `IUnknown`).
+- `always`Obiektu COM nie można utworzyć bezpośrednio i można go agregować tylko. Po wywołaniu `CoCreateInstance` dla tego obiektu należy określić interfejs obiektu agregowania `IUnknown` (kontrolka `IUnknown` ).
 
 ## <a name="remarks"></a>Uwagi
 
-**Agregowany** C++ atrybut ma takie same funkcje jak atrybut MIDL do [agregowania](/windows/win32/Midl/aggregatable) . Oznacza to, że kompilator przekaże atrybut **agregowany** do wygenerowanego pliku IDL.
+**Agregowany** atrybut C++ ma taką samą funkcjonalność jak atrybut MIDL, który jest [agregowany](/windows/win32/Midl/aggregatable) . Oznacza to, że kompilator przekaże atrybut **agregowany** do wygenerowanego pliku IDL.
 
-Ten atrybut wymaga, aby atrybut [coclass](coclass.md), [ProgID](progid.md)lub [vi_progid](vi-progid.md) (lub inny atrybut, który implikuje jeden z tych) został również zastosowany do tego samego elementu. W przypadku użycia dowolnego pojedynczego atrybutu zostaną automatycznie zastosowane pozostałe dwa. Na przykład jeśli `progid` jest stosowany, `vi_progid` i `coclass` są również stosowane.
+Ten atrybut wymaga, aby atrybut [coclass](coclass.md), [ProgID](progid.md)lub [vi_progid](vi-progid.md) (lub inny atrybut, który implikuje jeden z tych) został również zastosowany do tego samego elementu. W przypadku użycia dowolnego pojedynczego atrybutu zostaną automatycznie zastosowane pozostałe dwa. Na przykład, jeśli `progid` jest stosowany, `vi_progid` i `coclass` są również stosowane.
 
 ### <a name="atl-projects"></a>Projekty ATL
 
@@ -72,16 +72,16 @@ class CMyClass {};
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **Struktura**|
+|**Dotyczy**|**`class`**, **`struct`**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|Co najmniej jeden z następujących elementów: `coclass`, `progid`lub `vi_progid`.|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Co najmniej jeden z następujących elementów: `coclass` , `progid` , lub `vi_progid` .|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
-[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Agregacja](/windows/win32/com/aggregation)
+[Atrybuty typedef, enum, Union i struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Agregacji](/windows/win32/com/aggregation)

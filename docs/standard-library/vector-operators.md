@@ -1,5 +1,5 @@
 ---
-title: Operatory&gt; &lt;Vector
+title: '&lt;Operatory wektorów &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - vector/std::operator!=
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: f6717add93c489f536bd0c0b0f82b74bbd915985
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6e3b78a7b7176be917da5a3e44e9bf54efc0b08c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422375"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224542"
 ---
-# <a name="ltvectorgt-operators"></a>Operatory&gt; &lt;Vector
+# <a name="ltvectorgt-operators"></a>&lt;Operatory wektorów &gt;
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 Testuje, czy obiekt po lewej stronie operatora nie jest równy obiektowi po prawej stronie.
 
@@ -35,15 +35,15 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `vector`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `vector`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli wektory nie są równe; **Fałsz** , jeśli wektory są równe.
+**`true`** Jeśli wektory nie są równe; **`false`** Jeśli wektory są równe.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -76,7 +76,7 @@ int main( )
 Vectors not equal.
 ```
 
-## <a name="op_lt"></a>&lt; operatora
+## <a name="operatorlt"></a><a name="op_lt"></a>zakład&lt;
 
 Testuje, czy obiekt po lewej stronie operatora jest mniejszy od obiektu po prawej stronie.
 
@@ -86,15 +86,15 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `vector`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `vector`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**true** , jeśli wektor po lewej stronie operatora jest mniejszy od wektora po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli wektor po lewej stronie operatora jest mniejszy od wektora po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="example"></a>Przykład
 
@@ -127,7 +127,7 @@ int main( )
 Vector v1 is less than vector v2.
 ```
 
-## <a name="op_lt_eq"></a>&lt;operatora =
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>zakład&lt;=
 
 Testuje, czy obiekt po lewej stronie operatora jest mniejszy od lub równy obiektowi po prawej stronie.
 
@@ -137,15 +137,15 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `vector`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `vector`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**true** , jeśli wektor po lewej stronie operatora jest mniejszy lub równy wektorowi po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli wektor po lewej stronie operatora jest mniejszy lub równy wektorowi po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="example"></a>Przykład
 
@@ -178,7 +178,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 Testuje, czy obiekt po lewej stronie operatora jest równy obiektowi po prawej stronie.
 
@@ -188,15 +188,15 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `vector`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `vector`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli wektor po lewej stronie operatora jest równy wektorowi po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli wektor po lewej stronie operatora jest równy wektorowi po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -229,7 +229,7 @@ int main( )
 Vectors equal.
 ```
 
-## <a name="op_gt"></a>&gt; operatora
+## <a name="operatorgt"></a><a name="op_gt"></a>zakład&gt;
 
 Testuje, czy obiekt po lewej stronie operatora jest większy niż obiekt po prawej stronie.
 
@@ -239,15 +239,15 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `vector`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `vector`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli wektor po lewej stronie operatora jest większy niż wektor po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli wektor po lewej stronie operatora jest większy niż wektor po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="example"></a>Przykład
 
@@ -281,7 +281,7 @@ int main( )
 Vector v1 is greater than vector v2.
 ```
 
-## <a name="op_gt_eq"></a>&gt;operatora =
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>zakład&gt;=
 
 Testuje, czy obiekt po lewej stronie operatora jest większy niż lub równy obiektowi po prawej stronie.
 
@@ -291,15 +291,15 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `vector`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `vector`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli wektor po lewej stronie operatora jest większy niż lub równy wektorowi po prawej stronie wektora; w przeciwnym razie **false**.
+**`true`** Jeśli wektor po lewej stronie operatora jest większy niż lub równy wektorowi po prawej stronie wektora; w przeciwnym razie **`false`** .
 
 ### <a name="example"></a>Przykład
 

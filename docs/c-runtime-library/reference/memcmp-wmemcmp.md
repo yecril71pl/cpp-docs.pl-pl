@@ -28,12 +28,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 2fa902c0fa5a4a78f6fd3e46edeb3799aaf92569
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b18479e50d5b35c8de3dfd11eb34d0d21d45f223
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951934"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232459"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
@@ -77,14 +77,14 @@ Wartość zwracana wskazuje związek między buforami.
 
 ## <a name="remarks"></a>Uwagi
 
-Porównuje pierwsze znaki *Count* z *buffer1* i *buffer2* i zwraca wartość, która wskazuje ich relację. Znak wartości zwracanej niezerowej jest znakiem różnicy między pierwszą różnicą pary wartości w buforach. Wartości są interpretowane jako **znaki** **bez znaku** dla **funkcji memcmp**oraz jako **wchar_t** dla **wmemcmp**.
+Porównuje pierwsze znaki *Count* z *buffer1* i *buffer2* i zwraca wartość, która wskazuje ich relację. Znak wartości zwracanej niezerowej jest znakiem różnicy między pierwszą różnicą pary wartości w buforach. Wartości są interpretowane jako **`unsigned char`** dla **funkcji memcmp**i jako **`wchar_t`** **wmemcmp**.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**memcmp**|\<> pamięci. h > \<lub String. h|
-|**wmemcmp**|\<WCHAR. h >|
+|**funkcji memcmp**|\<memory.h> lub \<string.h>|
+|**wmemcmp**|\<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

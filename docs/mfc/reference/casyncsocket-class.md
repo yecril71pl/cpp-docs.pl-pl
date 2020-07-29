@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: 9a3a04046d75a4cfdbb50347259820eb727eeb38
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 95d24c9fb9e432a54705a6b8f9fa7638affad2d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813591"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195099"
 ---
 # <a name="casyncsocket-class"></a>Klasa CAsyncSocket
 
@@ -819,7 +819,7 @@ BOOL GetSockOpt(
 Opcja gniazda, dla której ma zostać pobrana wartość.
 
 *lpOptionValue*<br/>
-Wskaźnik do buforu, w którym ma zostać zwrócona wartość dla wybranej opcji. Wartość skojarzona z wybraną opcją jest zwracana w buforze *lpOptionValue*. Liczba całkowita wskazywana przez *lpOptionLen* powinna początkowo zawierać rozmiar tego buforu w bajtach; i w przypadku powrotu zostanie ustawiony rozmiar zwracanej wartości. W przypadku SO_LINGER będzie to rozmiar `LINGER` struktury; dla wszystkich innych opcji będzie rozmiar bool lub **int**, w zależności od opcji. Zapoznaj się z listą opcji i ich rozmiarów w sekcji uwagi.
+Wskaźnik do buforu, w którym ma zostać zwrócona wartość dla wybranej opcji. Wartość skojarzona z wybraną opcją jest zwracana w buforze *lpOptionValue*. Liczba całkowita wskazywana przez *lpOptionLen* powinna początkowo zawierać rozmiar tego buforu w bajtach; i w przypadku powrotu zostanie ustawiony rozmiar zwracanej wartości. W przypadku SO_LINGER będzie to rozmiar `LINGER` struktury; w przypadku wszystkich innych opcji będzie to rozmiar bool lub **`int`** , w zależności od opcji. Zapoznaj się z listą opcji i ich rozmiarów w sekcji uwagi.
 
 *lpOptionLen*<br/>
 Wskaźnik do rozmiaru buforu *lpOptionValue* w bajtach.
@@ -856,26 +856,26 @@ W programie są obsługiwane następujące opcje `GetSockOpt` . Typ identyfikuje
 |SO_DEBUG|LOGICZNA|Debugowanie jest włączone.|
 |SO_DONTLINGER|LOGICZNA|W przypadku opcji true opcja SO_LINGER jest wyłączona.|
 |SO_DONTROUTE|LOGICZNA|Routing jest wyłączony.|
-|SO_ERROR|**int**|Pobierz stan błędu i usuń zaznaczenie.|
+|SO_ERROR|**`int`**|Pobierz stan błędu i usuń zaznaczenie.|
 |SO_KEEPALIVE|LOGICZNA|Trwa wysyłanie aktywności.|
 |SO_LINGER|`struct LINGER`|Zwraca bieżące opcje pokutujące.|
 |SO_OOBINLINE|LOGICZNA|Dane poza pasmem są odbierane w normalnym strumieniu danych.|
 |SO_RCVBUF|int|Rozmiar buforu dla odbieranych.|
 |SO_REUSEADDR|LOGICZNA|Gniazdo może być powiązane z adresem, który jest już używany.|
-|SO_SNDBUF|**int**|Rozmiar buforu do wysłania.|
-|SO_TYPE|**int**|Typ gniazda (na przykład SOCK_STREAM).|
+|SO_SNDBUF|**`int`**|Rozmiar buforu do wysłania.|
+|SO_TYPE|**`int`**|Typ gniazda (na przykład SOCK_STREAM).|
 |TCP_NODELAY|LOGICZNA|Wyłącza algorytm nagle dla łączenia wysyłania.|
 
 Opcje rozpowszechniania oprogramowania Berkeley (BSD) nie są obsługiwane w przypadku programu `GetSockOpt` :
 
 |Wartość|Typ|Znaczenie|
 |-----------|----------|-------------|
-|SO_RCVLOWAT|**int**|Odbierz znak wodny.|
-|SO_RCVTIMEO|**int**|Limit czasu odbierania.|
-|SO_SNDLOWAT|**int**|Wyślij znak wodny.|
-|SO_SNDTIMEO|**int**|Limit czasu wysyłania.|
+|SO_RCVLOWAT|**`int`**|Odbierz znak wodny.|
+|SO_RCVTIMEO|**`int`**|Limit czasu odbierania.|
+|SO_SNDLOWAT|**`int`**|Wyślij znak wodny.|
+|SO_SNDTIMEO|**`int`**|Limit czasu wysyłania.|
 |IP_OPTIONS||Pobierz opcje w nagłówku IP.|
-|TCP_MAXSEG|**int**|Pobierz maksymalny rozmiar segmentu TCP.|
+|TCP_MAXSEG|**`int`**|Pobierz maksymalny rozmiar segmentu TCP.|
 
 Wywołanie `GetSockOpt` z nieobsługiwaną opcją spowoduje zwrócenie kodu błędu WSAENOPROTOOPT z `GetLastError` .
 
@@ -1765,9 +1765,9 @@ W programie są obsługiwane następujące opcje `SetSockOpt` . Typ identyfikuje
 |SO_KEEPALIVE|LOGICZNA|Wyślij utrzymywanie aktywności.|
 |SO_LINGER|`struct LINGER`|Pokutujący na `Close` obecność niewysłanych danych.|
 |SO_OOBINLINE|LOGICZNA|Odbieraj dane poza pasmem w normalnym strumieniu danych.|
-|SO_RCVBUF|**int**|Określ rozmiar buforu dla odbieranych.|
+|SO_RCVBUF|**`int`**|Określ rozmiar buforu dla odbieranych.|
 |SO_REUSEADDR|LOGICZNA|Zezwól na powiązanie gniazda z adresem, który jest już używany. (Zobacz [bind](#bind).)|
-|SO_SNDBUF|**int**|Określ rozmiar buforu dla wysyłanych.|
+|SO_SNDBUF|**`int`**|Określ rozmiar buforu dla wysyłanych.|
 |TCP_NODELAY|LOGICZNA|Wyłącza algorytm nagle dla łączenia wysyłania.|
 
 Opcje rozpowszechniania oprogramowania Berkeley (BSD) nie są obsługiwane w przypadku programu `SetSockOpt` :
@@ -1775,12 +1775,12 @@ Opcje rozpowszechniania oprogramowania Berkeley (BSD) nie są obsługiwane w prz
 |Wartość|Typ|Znaczenie|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|LOGICZNA|Gniazdo nasłuchuje|
-|SO_ERROR|**int**|Pobierz stan błędu i usuń zaznaczenie.|
-|SO_RCVLOWAT|**int**|Odbierz znak wodny.|
-|SO_RCVTIMEO|**int**|Limit czasu odbierania|
-|SO_SNDLOWAT|**int**|Wyślij znak wodny.|
-|SO_SNDTIMEO|**int**|Limit czasu wysyłania.|
-|SO_TYPE|**int**|Typ gniazda.|
+|SO_ERROR|**`int`**|Pobierz stan błędu i usuń zaznaczenie.|
+|SO_RCVLOWAT|**`int`**|Odbierz znak wodny.|
+|SO_RCVTIMEO|**`int`**|Limit czasu odbierania|
+|SO_SNDLOWAT|**`int`**|Wyślij znak wodny.|
+|SO_SNDTIMEO|**`int`**|Limit czasu wysyłania.|
+|SO_TYPE|**`int`**|Typ gniazda.|
 |IP_OPTIONS||Ustaw pole opcji w nagłówku adresu IP.|
 
 ## <a name="casyncsocketshutdown"></a><a name="shutdown"></a>CAsyncSocket:: ShutDown

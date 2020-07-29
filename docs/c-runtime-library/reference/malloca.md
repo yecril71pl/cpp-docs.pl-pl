@@ -26,16 +26,16 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 0b12b4adde710f2fc46b3a3790519006fabbb1fc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d4604a6e2dfb00502e3c942c9735a077e1632843
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952772"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232498"
 ---
 # <a name="_malloca"></a>_malloca
 
-Przydziela pamięć na stosie. Jest to wersja [_alloca](alloca.md) z ulepszeniami zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Przydziela pamięć na stosie. Jest to wersja [_alloca](alloca.md) z ulepszonymi zabezpieczeniami, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,28 +52,28 @@ Bajty do przydzielenia ze stosu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Procedura **_malloca** zwraca wskaźnik **void** do przydzieloną miejsce, co gwarantuje, że jest odpowiednio wyrównany do przechowywania dowolnego typu obiektu. Jeśli *size* ma wartość 0, **_malloca** przydziela element o zerowej długości i zwraca prawidłowy wskaźnik do tego elementu.
+Procedura **_malloca** zwraca **`void`** wskaźnik do przydzieloną miejsce, który jest gwarantowany odpowiednio wyrównany do przechowywania dowolnego typu obiektu. Jeśli *size* ma wartość 0, **_malloca** przydziela element o zerowej długości i zwraca prawidłowy wskaźnik do tego elementu.
 
-Jeśli *rozmiar* jest większy niż **_ALLOCA_S_THRESHOLD**, następnie **_malloca** próbuje przydzielić na stercie i zwraca wskaźnik o wartości null, jeśli nie można przydzielić miejsca. Jeśli wartość *size* jest mniejsza lub równa **_ALLOCA_S_THRESHOLD**, wówczas **_malloca** próbuje przydzielić na stosie, a wyjątek przepełnienia stosu jest generowany, jeśli nie można przydzielić miejsca. Wyjątek przepełnienia stosu nie C++ jest wyjątkiem; jest to wyjątek strukturalny. Zamiast korzystać C++ z obsługi wyjątków, należy użyć [obsługi wyjątków strukturalnych](../../cpp/structured-exception-handling-c-cpp.md) (SEH) w celu przechwycenia tego wyjątku.
+Jeśli *rozmiar* jest większy niż **_ALLOCA_S_THRESHOLD**, wówczas **_malloca** próbuje przydzielić sterty i zwraca wskaźnik o wartości null, jeśli nie można przydzielić miejsca. Jeśli *rozmiar* jest mniejszy lub równy **_ALLOCA_S_THRESHOLD**, **_malloca** próbuje przydzielić na stosie, a wyjątek przepełnienia stosu jest generowany, jeśli nie można przydzielić miejsca. Wyjątek przepełnienia stosu nie jest wyjątkiem C++; jest to wyjątek strukturalny. Zamiast korzystać z obsługi wyjątków C++, należy użyć [obsługi wyjątków strukturalnych](../../cpp/structured-exception-handling-c-cpp.md) (SEH) w celu przechwycenia tego wyjątku.
 
 ## <a name="remarks"></a>Uwagi
 
-**_malloca** przydziela bajty *rozmiaru* ze stosu programu lub sterty, jeśli żądanie przekroczy określony rozmiar w bajtach przyznanych przez **_ALLOCA_S_THRESHOLD**. Różnica między **_malloca** i **_alloca** polega na tym, że **_alloca** zawsze przydziela na stosie, bez względu na rozmiar. W przeciwieństwie do **_alloca**, która nie wymaga ani nie zezwala na wywołanie **bezpłatne do zwolnienia** pamięci do przydzielenia, **_malloca** wymaga użycia [_freea](freea.md) do zwolnienia pamięci. W trybie debugowania **_malloca** zawsze przydziela pamięć ze sterty.
+**_malloca** przydziela bajty *rozmiaru* ze stosu programu lub sterty, jeśli żądanie przekroczy określony rozmiar w bajtach przyznanych przez **_ALLOCA_S_THRESHOLD**. Różnica między **_malloca** i **_alloca** jest **_alloca** zawsze przydzielana na stosie, niezależnie od rozmiaru. W przeciwieństwie do **_alloca**, które nie wymagają ani nie zezwalają **na zwolnienie do zwolnienia pamięci do** przydzielenia, **_malloca** wymaga użycia [_freea](freea.md) do zwolnienia pamięci. W trybie debugowania, **_malloca** zawsze przydziela pamięć ze sterty.
 
-Istnieją ograniczenia dotyczące jawnego wywoływania **_malloca** w obsłudze wyjątków (EH). Procedury EH uruchamiane na procesorach klasy x86 działają w ich własnych ramkach pamięci: Wykonują swoje zadania w przestrzeni pamięci, które nie są oparte na bieżącej lokalizacji wskaźnika stosu otaczającej funkcji. Najpopularniejsze implementacje obejmują obsługę wyjątków strukturalnych systemu Windows NT (SEH) C++ i wyrażenia klauzuli catch. W związku z tym jawne wywołanie **_malloca** w jednym z następujących scenariuszy powoduje niepowodzenie programu podczas powrotu do procedury wywołującej EH:
+Istnieją ograniczenia dotyczące jawnego wywoływania **_malloca** w programie obsługi wyjątków (EH). Procedury EH uruchamiane na procesorach klasy x86 działają w ich własnej ramce pamięci: wykonują swoje zadania w przestrzeni pamięci, które nie są oparte na bieżącej lokalizacji wskaźnika stosu otaczającej funkcji. Najpopularniejsze implementacje obejmują wyrażenia z obsługą wyjątków strukturalnych systemu Windows NT (SEH) i wyrażenie klauzuli catch języka C++. W związku z tym jawne wywołanie **_malloca** w jednym z następujących scenariuszy powoduje błąd programu podczas powrotu do procedury wywołującej EH:
 
-- Wyrażenie filtru wyjątków SEH systemu Windows NT : __except`_malloca ()` ()
+- Wyrażenie filtru wyjątków SEH systemu Windows NT: **`__except`** ( `_malloca ()` )
 
-- Końcowy program obsługi wyjątków SEH systemu Windows NT:`_malloca ()` __finally {}
+- Program obsługi wyjątku końcowego SEH systemu Windows NT: **`__finally`** { `_malloca ()` }
 
-- C++Wyrażenie klauzuli catch w instrukcji EH
+- Wyrażenie klauzuli catch języka C++ EH
 
 Jednakże **_malloca** można wywołać bezpośrednio z poziomu procedury EH lub z wywołania zwrotnego dostarczonego przez aplikację, które jest wywoływane przez jedno z wcześniej wymienionych scenariuszy EH.
 
 > [!IMPORTANT]
 > W systemie Windows XP, jeśli **_malloca** jest wywoływana wewnątrz bloku try/catch, należy wywołać [_resetstkoflw](resetstkoflw.md) w bloku catch.
 
-Oprócz powyższych ograniczeń, przy użyciu opcji [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md) **_malloca** nie można używać w blokach **__except** . Aby uzyskać więcej informacji, zobacz temat [ograniczenia/CLR](../../build/reference/clr-restrictions.md).
+Oprócz powyższych ograniczeń, przy użyciu opcji [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md) **_malloca** nie można używać w **`__except`** blokach. Aby uzyskać więcej informacji, zobacz temat [ograniczenia/CLR](../../build/reference/clr-restrictions.md).
 
 ## <a name="requirements"></a>Wymagania
 

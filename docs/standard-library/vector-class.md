@@ -1,6 +1,6 @@
 ---
 title: vector — Klasa
-description: Dokumentacja dotycząca implementacji C++ standardowej biblioteki firmy Microsoft klasy Vector.
+description: Dokumentacja dotycząca implementacji standardowej biblioteki języka Microsoft C++ w klasie Vector.
 ms.date: 02/07/2020
 f1_keywords:
 - vector/std::vector::allocator_type
@@ -87,16 +87,16 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-ms.openlocfilehash: ed987409dc99ea9b1dade632a5fa5deeb322347a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 71b55b4af44a641846ca7b8706bee420887950c5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422396"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224568"
 ---
 # <a name="vector-class"></a>vector — Klasa
 
-Klasa C++ wektora standardowej biblioteki to szablon klasy dla kontenerów sekwencji. Wektor przechowuje elementy danego typu w rozmieszczeniu liniowym i umożliwia szybki dostęp losowy do dowolnego elementu. Wektor jest preferowanym kontenerem dla sekwencji, gdy wydajność dostępu swobodnego jest w warstwie Premium.
+Klasa wektorów standardowej biblioteki C++ to szablon klasy dla kontenerów sekwencji. Wektor przechowuje elementy danego typu w rozmieszczeniu liniowym i umożliwia szybki dostęp losowy do dowolnego elementu. Wektor jest preferowanym kontenerem dla sekwencji, gdy wydajność dostępu swobodnego jest w warstwie Premium.
 
 ## <a name="syntax"></a>Składnia
 
@@ -107,11 +107,11 @@ class vector
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*\
+*Wprowadź*\
 Typ danych elementu, który ma być przechowywany w wektorze
 
-\ *alokatora*
-Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji wektora i cofania alokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to `allocator<Type>`.
+*Alokator*\
+Typ reprezentujący przechowywany obiekt alokatora, który hermetyzuje szczegóły dotyczące alokacji wektora i cofania alokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to `allocator<Type>` .
 
 ## <a name="remarks"></a>Uwagi
 
@@ -119,13 +119,13 @@ Wektory umożliwiają stałe wstawienia i usunięcia na końcu sekwencji. Wstawi
 
 Ponowna alokacja wektora występuje, gdy funkcja członkowska musi zwiększyć sekwencję zawartą w obiekcie Vector poza bieżącą pojemność magazynu. Inne wstawienia i wymazy mogą zmieniać różne adresy magazynu w ramach sekwencji. We wszystkich takich przypadkach Iteratory lub odwołania wskazujące na zmienione fragmenty sekwencji stają się nieprawidłowe. W przypadku braku ponownej alokacji tylko Iteratory i odwołania przed punktem wstawiania/usuwania pozostają prawidłowe.
 
-[Klasa vector\<bool >](../standard-library/vector-bool-class.md) jest pełną specjalizacją wektora szablonu klasy dla elementów typu `bool`. Ma Alokator dla typu podstawowego używanego przez specjalizację.
+[ \<bool> Klasa Vector](../standard-library/vector-bool-class.md) jest pełną specjalizacją wektora szablonu klasy dla elementów typu **`bool`** . Ma Alokator dla typu podstawowego używanego przez specjalizację.
 
-[Klasa referencyjna vector\<bool >](../standard-library/vector-bool-class.md#reference_class) jest klasą zagnieżdżoną, której obiekty mogą dostarczać odwołania do elementów (pojedynczych bitów) w wektorowej\<logicznej > obiektu.
+[ \<bool> Klasa referencyjna wektora](../standard-library/vector-bool-class.md#reference_class) jest klasą zagnieżdżoną, której obiekty mogą udostępniać odwołania do elementów (pojedynczych bitów) w \<bool> obiekcie Vector.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
-### <a name="constructors"></a>Konstruktorzy
+### <a name="constructors"></a>Konstruktory
 
 |||
 |-|-|
@@ -135,14 +135,14 @@ Ponowna alokacja wektora występuje, gdy funkcja członkowska musi zwiększyć s
 
 |||
 |-|-|
-|[allocator_type](#allocator_type)|Typ, który reprezentuje klasę `allocator` dla obiektu Vector.|
-|[const_iterator](#const_iterator)|Typ, który dostarcza Iterator dostępu swobodnego, który może odczytać element **const** w wektorze.|
-|[const_pointer](#const_pointer)|Typ, który dostarcza wskaźnik do elementu **const** w wektorze.|
-|[const_reference](#const_reference)|Typ, który dostarcza odwołanie do elementu **const** przechowywanego w wektorze. Jest on używany do odczytywania i wykonywania operacji **const** .|
-|[const_reverse_iterator](#const_reverse_iterator)|Typ, który dostarcza Iterator dostępu swobodnego, który może odczytać dowolny element **const** w wektorze.|
+|[allocator_type](#allocator_type)|Typ, który reprezentuje `allocator` klasę obiektu Vector.|
+|[const_iterator](#const_iterator)|Typ, który dostarcza Iterator dostępu swobodnego, który może odczytywać **`const`** element w wektorze.|
+|[const_pointer](#const_pointer)|Typ, który dostarcza wskaźnik do **`const`** elementu w wektorze.|
+|[const_reference](#const_reference)|Typ, który zawiera odwołanie do **`const`** elementu przechowywanego w wektorze. Jest on używany do odczytywania i wykonywania **`const`** operacji.|
+|[const_reverse_iterator](#const_reverse_iterator)|Typ, który dostarcza Iterator dostępu swobodnego, który może odczytać dowolny **`const`** element w wektorze.|
 |[difference_type](#difference_type)|Typ, który zawiera różnicę między adresami dwóch elementów w wektorze.|
 |[Iterator](#iterator)|Typ, który dostarcza Iterator dostępu swobodnego, który może odczytać lub zmodyfikować dowolny element w wektorze.|
-|[przytrzymaj](#pointer)|Typ, który dostarcza wskaźnik do elementu w wektorze.|
+|[pointer](#pointer)|Typ, który dostarcza wskaźnik do elementu w wektorze.|
 |[odwoła](#reference)|Typ, który zawiera odwołanie do elementu przechowywanego w wektorze.|
 |[reverse_iterator](#reverse_iterator)|Typ, który dostarcza Iterator dostępu swobodnego, który może odczytać lub zmodyfikować dowolny element w odwróconym wektorze.|
 |[size_type](#size_type)|Typ, który zlicza liczbę elementów w wektorze.|
@@ -152,7 +152,7 @@ Ponowna alokacja wektora występuje, gdy funkcja członkowska musi zwiększyć s
 
 |||
 |-|-|
-|[ponownie](#assign)|Wymazuje wektor i kopiuje określone elementy do pustego wektora.|
+|[przypisać](#assign)|Wymazuje wektor i kopiuje określone elementy do pustego wektora.|
 |[w](#at)|Zwraca odwołanie do elementu w określonej lokalizacji wektora.|
 |[Wstecz](#back)|Zwraca odwołanie do ostatniego elementu wektora.|
 |[zaczną](#begin)|Zwraca iterator dostępu swobodnego do pierwszego elementu w wektorze.|
@@ -162,14 +162,14 @@ Ponowna alokacja wektora występuje, gdy funkcja członkowska musi zwiększyć s
 |[crbegin —](#crbegin)|Zwraca iterator const do pierwszego elementu w odwróconym wektorze.|
 |[crend](#crend)|Zwraca iterator const do końca odwróconego wektora.|
 |[Wyczyść](#clear)|Wymazuje elementy wektora.|
-|[Data](#data)|Zwraca wskaźnik do pierwszego elementu w wektorze.|
+|[data](#data)|Zwraca wskaźnik do pierwszego elementu w wektorze.|
 |[emplace](#emplace)|Wstawia element skonstruowany w miejscu do wektora w określonym położeniu.|
 |[emplace_back](#emplace_back)|Dodaje element skonstruowany w miejscu do końca wektora.|
-|[ciągiem](#empty)|Testuje, czy kontener wektora jest pusty.|
+|[puste](#empty)|Testuje, czy kontener wektora jest pusty.|
 |[punktów](#end)|Zwraca iterator dostępu swobodnego, który wskazuje na koniec wektora.|
 |[Wyłączanie](#erase)|Usuwa element lub zakres elementów w wektorze z określonych pozycji.|
 |[FSB](#front)|Zwraca odwołanie do pierwszego elementu w wektorze.|
-|[get_allocator](#get_allocator)|Zwraca obiekt do klasy `allocator` używanej przez wektor.|
+|[get_allocator](#get_allocator)|Zwraca obiekt do `allocator` klasy używanej przez wektor.|
 |[wstawienia](#insert)|Wstawia element lub liczbę elementów do wektora w określonym położeniu.|
 |[max_size](#max_size)|Zwraca maksymalną długość wektora.|
 |[pop_back](#pop_back)|Usuwa element na końcu wektora.|
@@ -186,10 +186,10 @@ Ponowna alokacja wektora występuje, gdy funkcja członkowska musi zwiększyć s
 
 |||
 |-|-|
-|[zakład&#91;&#93;](#op_at)|Zwraca odwołanie do elementu wektora na określonej pozycji.|
+|[&#91;&#93;operatora](#op_at)|Zwraca odwołanie do elementu wektora na określonej pozycji.|
 |[operator =](#op_eq)|Zastępuje elementy wektora kopią innego wektora.|
 
-## <a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
 
 Typ, który reprezentuje klasę alokatora dla obiektu Vector.
 
@@ -199,13 +199,13 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`allocator_type` jest synonimem dla `Allocator`parametru szablonu.
+`allocator_type`jest synonimem dla parametru szablonu `Allocator` .
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem [get_allocator](#get_allocator) , aby uzyskać przykład, który używa `allocator_type`.
+Zapoznaj się z przykładem [get_allocator](#get_allocator) , aby uzyskać przykład, który używa programu `allocator_type` .
 
-## <a name="assign"></a>ponownie
+## <a name="assign"></a><a name="assign"></a>ponownie
 
 Wymazuje wektor i kopiuje określone elementy do pustego wektora.
 
@@ -219,16 +219,16 @@ void assign(InputIterator first, InputIterator last);
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszy*\
+*pierwszego*\
 Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.
 
-*ostatni*\
+*ostatniego*\
 Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
 
-*liczba*\
+*liczbą*\
 Liczba kopii elementu wstawianych do wektora.
 
-\ *wartości*
+*wartościami*\
 Wartość wstawianego elementu do wektora.
 
 *init_list*\
@@ -236,7 +236,7 @@ Initializer_list zawierający elementy do wstawienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Najpierw `assign` kasuje wszystkie istniejące elementy w wektorze. Następnie `assign` wstawia do wektora określony zakres elementów z oryginalnego wektora lub wstawia kopie nowego określonego elementu wartości do wektora.
+Najpierw `assign` kasuje wszystkie istniejące elementy w wektorze. Następnie `assign` Wstawia określony zakres elementów z oryginalnego wektora do wektora lub wstawia kopie nowego określonego elementu wartości do wektora.
 
 ### <a name="example"></a>Przykład
 
@@ -285,7 +285,7 @@ int main()
 }
 ```
 
-## <a name="at"></a>w
+## <a name="at"></a><a name="at"></a>w
 
 Zwraca odwołanie do elementu w określonej lokalizacji wektora.
 
@@ -297,16 +297,16 @@ const_reference at(size_type position) const;
 
 ### <a name="parameters"></a>Parametry
 
-\ *pozycji*
+*umieścić*\
 Indeks dolny lub numer pozycji elementu do odwołania w wektorze.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Odwołanie do elementu w indeksie w argumencie. Jeśli *pozycja* jest większa niż rozmiar wektora, `at` zgłasza wyjątek.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość zwracana `at` jest przypisana do `const_reference`, nie można zmodyfikować obiektu wektora. Jeśli wartość zwracana `at` jest przypisana do `reference`, można zmodyfikować obiekt wektora.
+Jeśli wartość zwracana `at` jest przypisana do `const_reference` , nie można zmodyfikować obiektu wektora. Jeśli wartość zwracana `at` jest przypisana do `reference` , obiekt Vector może być modyfikowany.
 
 ### <a name="example"></a>Przykład
 
@@ -336,7 +336,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="back"></a>Wstecz
+## <a name="back"></a><a name="back"></a>Wstecz
 
 Zwraca odwołanie do ostatniego elementu wektora.
 
@@ -346,13 +346,13 @@ reference back();
 const_reference back() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Ostatni element wektora. Jeśli wektor jest pusty, wartość zwracana jest niezdefiniowana.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość zwracana `back` jest przypisana do `const_reference`, nie można zmodyfikować obiektu wektora. Jeśli wartość zwracana `back` jest przypisana do `reference`, można zmodyfikować obiekt wektora.
+Jeśli wartość zwracana `back` jest przypisana do `const_reference` , nie można zmodyfikować obiektu wektora. Jeśli wartość zwracana `back` jest przypisana do `reference` , obiekt Vector może być modyfikowany.
 
 Podczas kompilowania przy użyciu [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) zdefiniowanego jako 1 lub 2, wystąpi błąd czasu wykonywania, jeśli próbujesz uzyskać dostęp do elementu w pustym wektorze. Aby uzyskać więcej informacji, zobacz [sprawdzone Iteratory](../standard-library/checked-iterators.md).
 
@@ -380,7 +380,7 @@ int main() {
 }
 ```
 
-## <a name="begin"></a>zaczną
+## <a name="begin"></a><a name="begin"></a>zaczną
 
 Zwraca iterator dostępu swobodnego do pierwszego elementu w wektorze.
 
@@ -390,13 +390,13 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Iterator dostępu swobodnego odnoszący się do pierwszego elementu w `vector` lub do lokalizacji po pomyślnym `vector`pustej. Zawsze należy porównać wartość zwróconą z [wektorem:: end](#end) , aby upewnić się, że jest ona prawidłowa.
+Iterator dostępu swobodnego odnoszący się do pierwszego elementu w `vector` lub do lokalizacji, która powiodła się, jest pusta `vector` . Zawsze należy porównać wartość zwróconą z [wektorem:: end](#end) , aby upewnić się, że jest ona prawidłowa.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość zwracana `begin` jest przypisana do [wektora:: const_iterator](#const_iterator), nie można zmodyfikować obiektu `vector`. Jeśli wartość zwracana `begin` jest przypisana do [wektora:: iterator](#iterator), obiekt `vector` może być modyfikowany.
+Jeśli wartość zwracana elementu `begin` jest przypisana do [wektora:: const_iterator](#const_iterator), `vector` nie można zmodyfikować obiektu. Jeśli wartość zwracana elementu `begin` jest przypisana do [wektora:: iterator](#iterator), `vector` obiekt może być modyfikowany.
 
 ### <a name="example"></a>Przykład
 
@@ -443,7 +443,7 @@ The vector c1 contains elements: 1 2
 The vector c1 now contains elements: 20 2
 ```
 
-## <a name="capacity"></a>pojemności
+## <a name="capacity"></a><a name="capacity"></a>pojemności
 
 Zwraca liczbę elementów, które może zawierać wektor bez przydziału większej ilości miejsca w magazynie.
 
@@ -451,7 +451,7 @@ Zwraca liczbę elementów, które może zawierać wektor bez przydziału większ
 size_type capacity() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Bieżąca długość magazynu przydzieloną dla wektora.
 
@@ -487,23 +487,23 @@ The length of storage allocated is 1.
 The length of storage allocated is now 2.
 ```
 
-## <a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a>cbegin
 
-Zwraca iterator **const** , który dotyczy pierwszego elementu w zakresie.
+Zwraca **`const`** iterator, który odnosi się do pierwszego elementu w zakresie.
 
 ```cpp
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Iterator **const** dostępu swobodnego, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu, `cbegin() == cend()`).
+**`const`** Iterator dostępu swobodnego, który wskazuje na pierwszy element zakresu lub lokalizację tuż poza końcem pustego zakresu (dla pustego zakresu `cbegin() == cend()` ).
 
 ### <a name="remarks"></a>Uwagi
 
-Z wartością zwracaną `cbegin`nie można modyfikować elementów w zakresie.
+Z wartością zwracaną `cbegin` nie można modyfikować elementów w zakresie.
 
-Można użyć tej funkcji elementu członkowskiego zamiast funkcji składowej `begin()`, aby zagwarantować, że wartość zwracana jest `const_iterator`. Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy, że `Container` być kontenerem modyfikowalnym (innym niż **const**) dowolnego rodzaju, który obsługuje `begin()` i `cbegin()`.
+Można użyć tej funkcji elementu członkowskiego zamiast `begin()` funkcji składowej, aby zagwarantować, że wartość zwracana to `const_iterator` . Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy, `Container` że jest to modyfikowalny **`const`** kontener dowolnego rodzaju, który obsługuje `begin()` i `cbegin()` .
 
 ```cpp
 auto i1 = Container.begin();
@@ -513,23 +513,23 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a>cend
 
-Zwraca iterator **const** , który odnosi się do lokalizacji jedynie poza ostatnim elementem w zakresie.
+Zwraca **`const`** iterator, który odnosi się do lokalizacji jedynie poza ostatnim elementem w zakresie.
 
 ```cpp
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Iterator **stałej** dostępu swobodnego, który wskazuje tuż poza końcem zakresu.
+**`const`** Iterator dostępu swobodnego, który wskazuje tuż poza końcem zakresu.
 
 ### <a name="remarks"></a>Uwagi
 
-`cend` służy do sprawdzania, czy iterator przeszedł koniec zakresu.
+`cend`służy do sprawdzania, czy iterator przeszedł koniec zakresu.
 
-Można użyć tej funkcji elementu członkowskiego zamiast funkcji składowej `end()`, aby zagwarantować, że wartość zwracana jest `const_iterator`. Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy, że `Container` być kontenerem modyfikowalnym (innym niż **const**) dowolnego rodzaju, który obsługuje `end()` i `cend()`.
+Można użyć tej funkcji elementu członkowskiego zamiast `end()` funkcji składowej, aby zagwarantować, że wartość zwracana to `const_iterator` . Zwykle jest używany w połączeniu z słowem kluczowym odejmowania [autotype,](../cpp/auto-cpp.md) jak pokazano w poniższym przykładzie. W tym przykładzie Rozważmy, `Container` że jest to modyfikowalny **`const`** kontener dowolnego rodzaju, który obsługuje `end()` i `cend()` .
 
 ```cpp
 auto i1 = Container.end();
@@ -539,9 +539,9 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-Nie należy wywoływać wartości zwracanej przez `cend`. Używać go tylko do porównania.
+Nie można usunąć odwołania do wartości zwracanej przez nie `cend` . Używać go tylko do porównania.
 
-## <a name="clear"></a>Wyczyść
+## <a name="clear"></a><a name="clear"></a>Wyczyść
 
 Wymazuje elementy wektora.
 
@@ -577,9 +577,9 @@ The size of v1 is 3
 The size of v1 after clearing is 0
 ```
 
-## <a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
 
-Typ, który dostarcza Iterator dostępu swobodnego, który może odczytać element **const** w wektorze.
+Typ, który dostarcza Iterator dostępu swobodnego, który może odczytywać **`const`** element w wektorze.
 
 ```cpp
 typedef implementation-defined const_iterator;
@@ -587,15 +587,15 @@ typedef implementation-defined const_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Nie można użyć typu `const_iterator` w celu zmodyfikowania wartości elementu.
+Typ `const_iterator` nie może być używany do modyfikacji wartości elementu.
 
 ### <a name="example"></a>Przykład
 
-Zapoznaj się z przykładem z [powrotem](#back) dla przykładu korzystającego z `const_iterator`.
+Zapoznaj się z przykładem z [powrotem](#back) dla przykładu korzystającego z programu `const_iterator` .
 
-## <a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
 
-Typ, który dostarcza wskaźnik do elementu **const** w wektorze.
+Typ, który dostarcza wskaźnik do **`const`** elementu w wektorze.
 
 ```cpp
 typedef typename Allocator::const_pointer const_pointer;
@@ -603,13 +603,13 @@ typedef typename Allocator::const_pointer const_pointer;
 
 ### <a name="remarks"></a>Uwagi
 
-Nie można użyć typu `const_pointer` w celu zmodyfikowania wartości elementu.
+Typ `const_pointer` nie może być używany do modyfikacji wartości elementu.
 
 [Iterator](#iterator) jest najczęściej używany do uzyskiwania dostępu do elementu Vector.
 
-## <a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a>const_reference
 
-Typ, który dostarcza odwołanie do elementu **const** przechowywanego w wektorze. Jest on używany do odczytywania i wykonywania operacji **const** .
+Typ, który zawiera odwołanie do **`const`** elementu przechowywanego w wektorze. Jest on używany do odczytywania i wykonywania **`const`** operacji.
 
 ```cpp
 typedef typename Allocator::const_reference const_reference;
@@ -617,7 +617,7 @@ typedef typename Allocator::const_reference const_reference;
 
 ### <a name="remarks"></a>Uwagi
 
-Nie można użyć typu `const_reference` w celu zmodyfikowania wartości elementu.
+Typ `const_reference` nie może być używany do modyfikacji wartości elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -651,9 +651,9 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a>const_reverse_iterator
+## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a>const_reverse_iterator
 
-Typ, który dostarcza Iterator dostępu swobodnego, który może odczytać dowolny element **const** w wektorze.
+Typ, który dostarcza Iterator dostępu swobodnego, który może odczytać dowolny **`const`** element w wektorze.
 
 ```cpp
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
@@ -667,7 +667,7 @@ Typ `const_reverse_iterator` nie może zmodyfikować wartości elementu i służ
 
 Zobacz [rbegin](#rbegin) , aby zapoznać się z przykładem sposobu deklarowania iteratora i korzystania z niego.
 
-## <a name="crbegin"></a>crbegin —
+## <a name="crbegin"></a><a name="crbegin"></a>crbegin —
 
 Zwraca iterator const do pierwszego elementu w odwróconym wektorze.
 
@@ -675,13 +675,13 @@ Zwraca iterator const do pierwszego elementu w odwróconym wektorze.
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Iterator typu const odwrotnie, odnoszący się do pierwszego elementu w odwróconym [wektorze](../standard-library/vector-class.md) lub adresowania ostatniego elementu w nieodwróconej `vector`.
+Iterator typu stała odwrotnie dostęp losowy odnoszący się do pierwszego elementu w odwróconym [wektorze](../standard-library/vector-class.md) lub na adres, który był ostatnim elementem w odwrót `vector` .
 
 ### <a name="remarks"></a>Uwagi
 
-Nie można zmodyfikować obiektu `vector` z wartością zwracaną `crbegin`.
+`crbegin` `vector` Nie można zmodyfikować obiektu z wartością zwracaną.
 
 ### <a name="example"></a>Przykład
 
@@ -716,7 +716,7 @@ The first element of vector is 1.
 The first element of the reversed vector is 2.
 ```
 
-## <a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a>crend
 
 Zwraca iterator const, który odnosi się do lokalizacji po ostatnim elemencie w odwróconym wektorze.
 
@@ -724,19 +724,19 @@ Zwraca iterator const, który odnosi się do lokalizacji po ostatnim elemencie w
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Iterator typu const odwrotnie dostępu swobodnego, który odnosi się do lokalizacji po ostatnim elemencie w odwróconym [wektorze](../standard-library/vector-class.md) (lokalizacja, która poprzedza pierwszy element w nieodwróconym `vector`).
+Iterator typu const odwrotnie, który odnosi się do lokalizacji po ostatnim elemencie w odwróconym [wektorze](../standard-library/vector-class.md) (lokalizacja, która poprzedza pierwszy element w odwrót `vector` ).
 
 ### <a name="remarks"></a>Uwagi
 
-`crend` jest używany z odwróconym `vector` tak samo jak [Vector:: cend](#cend) jest używany z `vector`em.
+`crend`jest używany z odwróconym `vector` , podobnie jak [Vector:: cend](#cend) jest używany z `vector` .
 
-Gdy wartość zwracana `crend` (odpowiednio zmniejsza), nie można zmodyfikować obiektu `vector`.
+Po wartości zwracanej `crend` (odpowiednio zmniejszonej) `vector` nie można zmodyfikować obiektu.
 
-`crend` można użyć do przetestowania, czy iterator odwrotny osiągnął koniec jego `vector`.
+`crend`można go użyć do przetestowania, czy iterator odwrotny osiągnął koniec jego `vector` .
 
-Nie należy wywoływać wartości zwracanej przez `crend`. Używać go tylko do porównania.
+Nie można usunąć odwołania do wartości zwracanej przez nie `crend` . Używać go tylko do porównania.
 
 ### <a name="example"></a>Przykład
 
@@ -765,7 +765,7 @@ int main( )
 1
 ```
 
-## <a name="data"></a>Data
+## <a name="data"></a><a name="data"></a>Data
 
 Zwraca wskaźnik do pierwszego elementu w wektorze.
 
@@ -775,9 +775,9 @@ const_pointer data() const;
 pointer data();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do pierwszego elementu w [wektorze](../standard-library/vector-class.md) lub do lokalizacji powiodło się puste `vector`.
+Wskaźnik do pierwszego elementu w [wektorze](../standard-library/vector-class.md) lub do lokalizacji powiodło się puste `vector` .
 
 ### <a name="example"></a>Przykład
 
@@ -821,7 +821,7 @@ The vector c1 contains elements: 1 2
 The vector c1 now contains elements: 20 2
 ```
 
-## <a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a>difference_type
 
 Typ, który zawiera różnicę między dwoma iteratorami odwołującymi się do elementów w obrębie tego samego wektora.
 
@@ -831,7 +831,7 @@ typedef typename Allocator::difference_type difference_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`difference_type` można również opisać jako liczbę elementów między dwoma wskaźnikami, ponieważ wskaźnik do elementu zawiera jego adres.
+`difference_type`Można również opisać jako liczbę elementów między dwoma wskaźnikami, ponieważ wskaźnik do elementu zawiera swój adres.
 
 [Iterator](#iterator) jest najczęściej używany do uzyskiwania dostępu do elementu Vector.
 
@@ -878,7 +878,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a>emplace
 
 Wstawia element skonstruowany w miejscu do wektora w określonym położeniu.
 
@@ -891,15 +891,15 @@ iterator emplace(
 
 ### <a name="parameters"></a>Parametry
 
-\ *pozycji*
+*umieścić*\
 Pozycja w [wektorze](../standard-library/vector-class.md) , w której wstawiany jest pierwszy element.
 
-*argumenty*\
+*argumentów*\
 Argumenty konstruktora. Funkcja wnioskuje, jakie przeciążenie konstruktora ma zostać wywołane na podstawie podanych argumentów.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Funkcja zwraca iterator, który wskazuje na położenie, w którym nowy element został wstawiony do `vector`.
+Funkcja zwraca iterator, który wskazuje na położenie, w którym nowy element został wstawiony do `vector` .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -947,7 +947,7 @@ v1 = 10 20 30
 vv1[0] = 10 20 30
 ```
 
-## <a name="emplace_back"></a>emplace_back
+## <a name="emplace_back"></a><a name="emplace_back"></a>emplace_back
 
 Dodaje element skonstruowany w miejscu do końca wektora.
 
@@ -958,7 +958,7 @@ void emplace_back(Types&&... args);
 
 ### <a name="parameters"></a>Parametry
 
-*argumenty*\
+*argumentów*\
 Argumenty konstruktora. Funkcja wnioskuje, jakie przeciążenie konstruktora ma zostać wywołane na podstawie podanych argumentów.
 
 ### <a name="example"></a>Przykład
@@ -977,7 +977,7 @@ int main()
 }
 ```
 
-## <a name="empty"></a>ciągiem
+## <a name="empty"></a><a name="empty"></a>ciągiem
 
 Testuje, czy wektor jest pusty.
 
@@ -985,9 +985,9 @@ Testuje, czy wektor jest pusty.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli wektor jest pusty. **Fałsz** , jeśli wektor nie jest pusty.
+**`true`** Jeśli wektor jest pusty; **`false`** Jeśli wektor nie jest pusty.
 
 ### <a name="example"></a>Przykład
 
@@ -1015,7 +1015,7 @@ int main( )
 The vector is not empty.
 ```
 
-## <a name="end"></a>punktów
+## <a name="end"></a><a name="end"></a>punktów
 
 Zwraca iterator poza końcem.
 
@@ -1025,13 +1025,13 @@ iterator end();
 const_iterator end() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Poprzedni-końcowy iterator dla wektora. Jeśli wektor jest pusty, a następnie `vector::end() == vector::begin()`.
+Poprzedni-końcowy iterator dla wektora. Jeśli wektor jest pusty, a następnie `vector::end() == vector::begin()` .
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość zwracana `end` jest przypisana do zmiennej typu `const_iterator`, nie można zmodyfikować obiektu wektora. Jeśli wartość zwracana `end` jest przypisana do zmiennej typu `iterator`, można zmodyfikować obiekt wektora.
+Jeśli wartość zwracana `end` jest przypisana do zmiennej typu `const_iterator` , nie można zmodyfikować obiektu wektora. Jeśli wartość zwracana `end` jest przypisana do zmiennej typu `iterator` , można zmodyfikować obiekt wektora.
 
 ### <a name="example"></a>Przykład
 
@@ -1059,7 +1059,7 @@ int main( )
 2
 ```
 
-## <a name="erase"></a>Wyłączanie
+## <a name="erase"></a><a name="erase"></a>Wyłączanie
 
 Usuwa element lub zakres elementów w wektorze z określonych pozycji.
 
@@ -1074,16 +1074,16 @@ iterator erase(
 
 ### <a name="parameters"></a>Parametry
 
-\ *pozycji*
+*umieścić*\
 Pozycja elementu, który ma zostać usunięty z wektora.
 
-*pierwszy*\
+*pierwszego*\
 Pozycja pierwszego elementu usuniętego z wektora.
 
-*ostatni*\
+*ostatniego*\
 Umieść tuż poza ostatnim elementem usuniętym z wektora.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator, który wyznacza pierwszy element pozostający poza elementami usuniętymi lub wskaźnik do końca wektora, jeśli taki element nie istnieje.
 
@@ -1132,7 +1132,7 @@ v1 = 20 30 40 50
 v1 = 20 50
 ```
 
-## <a name="front"></a>FSB
+## <a name="front"></a><a name="front"></a>FSB
 
 Zwraca odwołanie do pierwszego elementu w wektorze.
 
@@ -1142,13 +1142,13 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Odwołanie do pierwszego elementu w obiekcie Vector. Jeśli wektor jest pusty, zwracany jest niezdefiniowany.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość zwracana `front` jest przypisana do `const_reference`, nie można zmodyfikować obiektu wektora. Jeśli wartość zwracana `front` jest przypisana do **odwołania**, obiekt Vector może być modyfikowany.
+Jeśli wartość zwracana `front` jest przypisana do `const_reference` , nie można zmodyfikować obiektu wektora. Jeśli wartość zwracana `front` jest przypisana do **odwołania**, obiekt Vector może być modyfikowany.
 
 Podczas kompilowania przy użyciu [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) zdefiniowanego jako 1 lub 2, wystąpi błąd czasu wykonywania, jeśli próbujesz uzyskać dostęp do elementu w pustym wektorze. Aby uzyskać więcej informacji, zobacz [sprawdzone Iteratory](../standard-library/checked-iterators.md).
 
@@ -1178,7 +1178,7 @@ int main( )
 }
 ```
 
-## <a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
 
 Zwraca kopię obiektu alokatora użytego do skonstruowania wektora.
 
@@ -1186,13 +1186,13 @@ Zwraca kopię obiektu alokatora użytego do skonstruowania wektora.
 Allocator get_allocator() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Alokator używany przez wektor.
 
 ### <a name="remarks"></a>Uwagi
 
-Przypisania klasy Vector określają sposób zarządzania magazynem przez klasę. Domyślne przydzielenie klas kontenerów C++ biblioteki standardowej jest wystarczające dla większości potrzeb programistycznych. Pisanie i używanie własnej klasy alokatora jest funkcją zaawansowaną C++ .
+Przypisania klasy Vector określają sposób zarządzania magazynem przez klasę. Domyślne przydzielenie klas kontenerów standardowej biblioteki języka C++ jest wystarczające dla większości potrzeb programistycznych. Pisanie i używanie własnej klasy alokatora jest zaawansowaną funkcją języka C++.
 
 ### <a name="example"></a>Przykład
 
@@ -1217,7 +1217,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a>wstawienia
+## <a name="insert"></a><a name="insert"></a>wstawienia
 
 Wstawia element, liczbę elementów lub zakres elementów do wektora w określonym położeniu.
 
@@ -1244,24 +1244,24 @@ void insert(
 
 ### <a name="parameters"></a>Parametry
 
-\ *pozycji*
+*umieścić*\
 Pozycja w wektorze, w której wstawiany jest pierwszy element.
 
-\ *wartości*
+*wartościami*\
 Wartość wstawianego elementu do wektora.
 
-*liczba*\
+*liczbą*\
 Liczba elementów wstawianych do wektora.
 
-*pierwszy*\
+*pierwszego*\
 Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.
 
-*ostatni*\
+*ostatniego*\
 Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Pierwsze dwie funkcje `insert` zwracają iterator, który wskazuje na położenie, w którym nowy element został wstawiony do wektora.
+Pierwsze dwie `insert` funkcje zwracają iterator, który wskazuje na położenie, w którym nowy element został wstawiony do wektora.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1331,7 +1331,7 @@ v1 = 10 50 50 40 50 50 50 50 20 30
 vv1[0] = 10 50 50 40 50 50 50 50 20 30
 ```
 
-## <a name="iterator"></a>Iterator
+## <a name="iterator"></a><a name="iterator"></a>Iterator
 
 Typ, który dostarcza Iterator dostępu swobodnego, który może odczytać lub zmodyfikować dowolny element w wektorze.
 
@@ -1347,7 +1347,7 @@ typedef implementation-defined iterator;
 
 Zobacz przykład [rozpoczęcia](#begin).
 
-## <a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a>max_size
 
 Zwraca maksymalną długość wektora.
 
@@ -1355,7 +1355,7 @@ Zwraca maksymalną długość wektora.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Maksymalna możliwa długość wektora.
 
@@ -1378,7 +1378,7 @@ int main( )
 }
 ```
 
-## <a name="op_at"></a>operator []
+## <a name="operator"></a><a name="op_at"></a>operator []
 
 Zwraca odwołanie do elementu wektora na określonej pozycji.
 
@@ -1390,16 +1390,16 @@ const_reference operator[](size_type position) const;
 
 ### <a name="parameters"></a>Parametry
 
-\ *pozycji*
+*umieścić*\
 Położenie elementu wektora.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Jeśli określona pozycja jest większa niż lub równa rozmiarowi kontenera, wynik jest niezdefiniowany.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość zwracana `operator[]` jest przypisana do `const_reference`, nie można zmodyfikować obiektu wektora. Jeśli wartość zwracana `operator[]` jest przypisana do odwołania, obiekt Vector może być modyfikowany.
+Jeśli wartość zwracana `operator[]` jest przypisana do `const_reference` , nie można zmodyfikować obiektu wektora. Jeśli wartość zwracana `operator[]` jest przypisana do odwołania, obiekt Vector może być modyfikowany.
 
 Podczas kompilowania przy użyciu [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) zdefiniowanego jako 1 lub 2, wystąpi błąd czasu wykonywania, jeśli próbujesz uzyskać dostęp do elementu poza granicami wektora. Aby uzyskać więcej informacji, zobacz [sprawdzone Iteratory](../standard-library/checked-iterators.md).
 
@@ -1424,7 +1424,7 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a>operator =
 
 Zastępuje elementy wektora kopią innego wektora.
 
@@ -1436,12 +1436,12 @@ vector& operator=(vector&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*prawa*\
-[Wektor](../standard-library/vector-class.md) kopiowany do `vector`.
+*Kliknij*\
+[Wektor](../standard-library/vector-class.md) kopiowany do `vector` .
 
 ### <a name="remarks"></a>Uwagi
 
-Po wymazaniu wszelkich istniejących elementów w `vector`, `operator=` kopiuje lub przenosi zawartość *bezpośrednio* do `vector`.
+Po wymazaniu wszelkich istniejących elementów w programie `vector` , `operator=` kopiuje lub przenosi zawartość *bezpośrednio* do `vector` .
 
 ### <a name="example"></a>Przykład
 
@@ -1484,7 +1484,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>przytrzymaj
+## <a name="pointer"></a><a name="pointer"></a>przytrzymaj
 
 Typ, który dostarcza wskaźnik do elementu w wektorze.
 
@@ -1526,7 +1526,7 @@ int main( )
 44
 ```
 
-## <a name="pop_back"></a>pop_back
+## <a name="pop_back"></a><a name="pop_back"></a>pop_back
 
 Usuwa element na końcu wektora.
 
@@ -1538,7 +1538,7 @@ void pop_back();
 
 Aby zapoznać się z przykładowym kodem, zobacz [Vector::p ush_back ()](#push_back).
 
-## <a name="push_back"></a>push_back
+## <a name="push_back"></a><a name="push_back"></a>push_back
 
 Dodaje element na końcu wektora.
 
@@ -1550,7 +1550,7 @@ void push_back(T&& value);
 
 ### <a name="parameters"></a>Parametry
 
-\ *wartości*
+*wartościami*\
 Wartość do przypisania do elementu dodanego do końca wektora.
 
 ### <a name="example"></a>Przykład
@@ -1593,7 +1593,7 @@ int main()
 }
 ```
 
-## <a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a>rbegin
 
 Zwraca iterator do pierwszego elementu w odwróconym wektorze.
 
@@ -1602,13 +1602,13 @@ reverse_iterator rbegin();
 const_reverse_iterator rbegin() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Iterator odwrotnego dostępu swobodnego, odnoszący się do pierwszego elementu w odwróconym wektorze lub adresowania ostatniego elementu w nieodwróconym wektorze.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli wartość zwracana `rbegin` jest przypisana do `const_reverse_iterator`, nie można zmodyfikować obiektu wektora. Jeśli wartość zwracana `rbegin` jest przypisana do `reverse_iterator`, można zmodyfikować obiekt wektora.
+Jeśli wartość zwracana `rbegin` jest przypisana do `const_reverse_iterator` , nie można zmodyfikować obiektu wektora. Jeśli wartość zwracana `rbegin` jest przypisana do `reverse_iterator` , obiekt Vector może być modyfikowany.
 
 ### <a name="example"></a>Przykład
 
@@ -1643,7 +1643,7 @@ The first element of vector is 1.
 The first element of the reversed vector is 2.
 ```
 
-## <a name="reference"></a>odwoła
+## <a name="reference"></a><a name="reference"></a>odwoła
 
 Typ, który zawiera odwołanie do elementu przechowywanego w wektorze.
 
@@ -1655,7 +1655,7 @@ typedef typename Allocator::reference reference;
 
 Zobacz [na](#at) przykład, jak używać **odwołania** w klasie Vector.
 
-## <a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a>rend
 
 Zwraca iterator, który odnosi się do lokalizacji po ostatnim elemencie w odwróconym wektorze.
 
@@ -1664,19 +1664,19 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Odwrotny iterator dostępu swobodnego, który odnosi się do lokalizacji po ostatnim elemencie w odwróconym wektorze (lokalizacja, która poprzedza pierwszy element w wektorze nieodwróconym).
 
 ### <a name="remarks"></a>Uwagi
 
-`rend` jest używany z odwróconym wektorem, podobnie jak [koniec](#end) jest używany z wektorem.
+`rend`jest używany z odwróconym wektorem, tak jak [koniec](#end) jest używany z wektorem.
 
-Jeśli wartość zwracana `rend` jest przypisana do `const_reverse_iterator`, nie można zmodyfikować obiektu wektora. Jeśli wartość zwracana `rend` jest przypisana do `reverse_iterator`, obiekt Vector może być modyfikowany.
+Jeśli wartość zwracana elementu `rend` jest przypisana do `const_reverse_iterator` , nie można zmodyfikować obiektu Vector. Jeśli wartość zwracana elementu `rend` jest przypisana do `reverse_iterator` , można zmodyfikować obiekt wektora.
 
-`rend` można użyć do przetestowania, czy iterator odwrotny osiągnął koniec wektora.
+`rend`może służyć do sprawdzenia, czy iterator odwrotny osiągnął koniec jego wektora.
 
-Nie należy wywoływać wartości zwracanej przez `rend`. Używać go tylko do porównania.
+Nie można usunąć odwołania do wartości zwracanej przez nie `rend` . Używać go tylko do porównania.
 
 ### <a name="example"></a>Przykład
 
@@ -1705,7 +1705,7 @@ int main( )
 1
 ```
 
-## <a name="reserve"></a>zarezerwować
+## <a name="reserve"></a><a name="reserve"></a>zarezerwować
 
 Rezerwuje minimalną długość magazynu dla obiektu Vector, przydzielając miejsce w razie potrzeby.
 
@@ -1715,7 +1715,7 @@ void reserve(size_type count);
 
 ### <a name="parameters"></a>Parametry
 
-*liczba*\
+*liczbą*\
 Minimalna długość magazynu do przydzielenia dla wektora.
 
 ### <a name="example"></a>Przykład
@@ -1746,7 +1746,7 @@ Current capacity of v1 = 1
 Current capacity of v1 = 20
 ```
 
-## <a name="resize"></a>Zmień rozmiar
+## <a name="resize"></a><a name="resize"></a>Zmień rozmiar
 
 Określa nowy rozmiar wektora.
 
@@ -1760,12 +1760,12 @@ void resize(size_type new_size, Type value);
 *new_size*\
 Nowy rozmiar wektora.
 
-\ *wartości*
+*wartościami*\
 Wartość inicjująca nowych elementów dodanych do wektora, jeśli nowy rozmiar jest większy niż rozmiar oryginalny. W przypadku pominięcia wartości nowe obiekty używają ich domyślnego konstruktora.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli rozmiar kontenera jest mniejszy niż żądany rozmiar, *new_size*, `resize` dodaje elementy do wektora do momentu osiągnięcia żądanego rozmiaru. Gdy rozmiar kontenera jest większy niż żądany rozmiar, `resize` usuwa elementy znajdujące się najbliżej końca kontenera do momentu osiągnięcia rozmiaru *new_size*. Nie jest podejmowana żadna akcja, jeśli obecny rozmiar kontenera jest taki sam jak żądany rozmiar.
+Jeśli rozmiar kontenera jest mniejszy niż żądany rozmiar, *new_size*, program `resize` dodaje elementy do wektora do momentu osiągnięcia żądanego rozmiaru. Gdy rozmiar kontenera jest większy niż żądany rozmiar, program `resize` usuwa elementy znajdujące się najbliżej końca kontenera do momentu osiągnięcia rozmiaru *new_size*. Nie jest podejmowana żadna akcja, jeśli obecny rozmiar kontenera jest taki sam jak żądany rozmiar.
 
 [rozmiar](#size) odzwierciedla bieżący rozmiar wektora.
 
@@ -1875,7 +1875,7 @@ int main()
 }
 ```
 
-## <a name="reverse_iterator"></a>reverse_iterator
+## <a name="reverse_iterator"></a><a name="reverse_iterator"></a>reverse_iterator
 
 Typ, który dostarcza Iterator dostępu swobodnego, który może odczytać lub zmodyfikować dowolny element w odwróconym wektorze.
 
@@ -1891,7 +1891,7 @@ Typ `reverse_iterator` jest używany do iteracji w odróżnieniu od wektora.
 
 Zobacz przykład dla [rbegin](#rbegin).
 
-## <a name="shrink_to_fit"></a>shrink_to_fit
+## <a name="shrink_to_fit"></a><a name="shrink_to_fit"></a>shrink_to_fit
 
 Odrzuca nadmiarową pojemność.
 
@@ -1931,7 +1931,7 @@ Current capacity of v1 = 20
 Current capacity of v1 = 1
 ```
 
-## <a name="size"></a>zmienia
+## <a name="size"></a><a name="size"></a>zmienia
 
 Zwraca liczbę elementów w wektorze.
 
@@ -1939,7 +1939,7 @@ Zwraca liczbę elementów w wektorze.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Bieżąca długość wektora.
 
@@ -1972,7 +1972,7 @@ Vector length is 1.
 Vector length is now 2.
 ```
 
-## <a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a>size_type
 
 Typ, który zlicza liczbę elementów w wektorze.
 
@@ -1984,7 +1984,7 @@ typedef typename Allocator::size_type size_type;
 
 Zapoznaj się z przykładem [pojemności](#capacity).
 
-## <a name="swap"></a>wymiany
+## <a name="swap"></a><a name="swap"></a>wymiany
 
 Wymienia elementy dwóch wektorów.
 
@@ -1999,10 +1999,10 @@ friend void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*prawa*\
+*Kliknij*\
 Wektor przedstawiający elementy, które mają zostać zamienione. Lub wektor, którego elementy mają być wymieniane z elementami w *pozostałej*części wektora.
 
-\ *lewo*
+*lewym*\
 Wektor, którego elementy są wymieniane z elementami w *prawym*wektorze.
 
 ### <a name="example"></a>Przykład
@@ -2044,7 +2044,7 @@ The number of elements in v1 = 2
 The number of elements in v2 = 3
 ```
 
-## <a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 Typ, który reprezentuje typ danych przechowywany w wektorze.
 
@@ -2054,7 +2054,7 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`value_type` jest synonimem dla `Type`parametru szablonu.
+`value_type`jest synonimem dla parametru szablonu `Type` .
 
 ### <a name="example"></a>Przykład
 
@@ -2077,7 +2077,7 @@ int main( )
 44
 ```
 
-## <a name="vector"></a>niemożliwe
+## <a name="vector"></a><a name="vector"></a>niemożliwe
 
 Konstruuje wektor. Przeciążenia konstruowają wektor o określonym rozmiarze lub z elementami określonej wartości. Lub, jako kopia całości lub części innego wektora. Niektóre przeciążenia umożliwiają również określenie alokatora, który ma być używany.
 
@@ -2100,26 +2100,26 @@ vector(InputIterator first, InputIterator last, const Allocator& allocator);
 
 ### <a name="parameters"></a>Parametry
 
-\ *alokatora*
+*Alokator*\
 Klasa alokatora do wykorzystania z tym obiektem. [get_allocator](#get_allocator) zwraca klasę alokatora dla obiektu.
 
-*liczba*\
+*liczbą*\
 Liczba elementów w skonstruowanym wektorze.
 
-\ *wartości*
+*wartościami*\
 Wartość elementów w skonstruowanym wektorze.
 
-\ *źródłowa*
+*zewnętrz*\
 Wektor, którego skonstruowany wektor ma być kopią.
 
-*pierwszy*\
+*pierwszego*\
 Pozycja pierwszego elementu w zakresie elementów, które mają zostać skopiowane.
 
-*ostatni*\
+*ostatniego*\
 Pozycja pierwszego elementu poza zakresem elementów, które mają zostać skopiowane.
 
 *init_list*\
-`initializer_list` zawierający elementy do skopiowania.
+`initializer_list`Zawierający elementy do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2127,7 +2127,7 @@ Wszystkie konstruktory przechowują obiekt alokatora (*Alokator*) i inicjują we
 
 Pierwsze dwa konstruktory określają pusty wektor początkowy. Drugi Konstruktor jawnie określa typ alokatora (*Alokator*), który ma być używany.
 
-Trzeci konstruktor określa powtarzanie określonej liczby (*Count*) elementów wartości domyślnej dla klasy `Type`.
+Trzeci konstruktor określa powtarzanie określonej liczby (*Count*) elementów wartości domyślnej dla klasy `Type` .
 
 Czwarty i piąty konstruktory określają powtórzenia (*Count*) elementów *wartości*wartości.
 
@@ -2137,7 +2137,7 @@ Siódmy Konstruktor przenosi *Źródło*wektora.
 
 Ósmy Konstruktor używa initializer_list, aby określić elementy.
 
-"Dziewiąte i dziesiąte konstruktory" kopiują zakres [`first`, `last`) wektora.
+"Dziewiąte i dziesiąte konstruktory" kopiują zakres [ `first` , `last` ) wektora.
 
 ### <a name="example"></a>Przykład
 
@@ -2234,7 +2234,7 @@ int main()
 v1 = 0 0 0v2 = 2 2 2 2 2v3 = 1 1 1v4 = 2 2 2 2 2v5 = 0 1 2 3 4v6 = 1 2v7 = 2 2 2 2 21 2 3 4
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

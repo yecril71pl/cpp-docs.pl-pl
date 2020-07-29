@@ -49,12 +49,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: b8be8af9fc56eea0011e5b07c1573dfe848b6c7d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 49e8569ceec005680f97faa9bc64783a097db36a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919861"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232576"
 ---
 # <a name="atoi-_atoi_l-_wtoi-_wtoi_l"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 
@@ -84,12 +84,12 @@ int _wtoi_l(
 *str*<br/>
 Ciąg do przekonwertowania.
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca wartość **int** wygenerowanej przez interpretowanie znaków wejściowych jako liczby. Wartość zwracana to 0 dla **atoi** i **_wtoi**, jeśli dane wejściowe nie mogą być konwertowane na wartość tego typu.
+Każda funkcja zwraca **`int`** wartość wygenerowaną przez interpretowanie znaków wejściowych jako liczby. Wartość zwracana to 0 dla **atoi** i **_wtoi**, jeśli dane wejściowe nie mogą być konwertowane na wartość tego typu.
 
 W przypadku przepełnienia z dużymi ujemnymi wartościami całkowitymi **LONG_MIN** jest zwracana. **atoi** i **_wtoi** zwracają **INT_MAX** i **INT_MIN** w tych warunkach. We wszystkich przypadkach poza zakresem **errno** jest ustawiony na **ERANGE**. Jeśli przekazanie parametru ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają 0.
 
@@ -118,8 +118,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedury|Wymagany nagłówek|
 |--------------|---------------------|
-|**atoi**|\<STDLIB. h>|
-|**_atoi_l**, **_wtoi**, **_wtoi_l**|\<STDLIB. h> lub \<WCHAR. h>|
+|**atoi**|\<stdlib.h>|
+|**_atoi_l**, **_wtoi**, **_wtoi_l**|\<stdlib.h> lub \<wchar.h>|
 
 ## <a name="example"></a>Przykład
 
@@ -169,11 +169,11 @@ Function: atoi( "3336402735171707160320" ) = 2147483647
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

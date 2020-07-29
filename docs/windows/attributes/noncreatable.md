@@ -1,17 +1,17 @@
 ---
-title: niemożliwy do utworzeniaC++ (atrybut com)
+title: niemożliwy do utworzenia (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.noncreatable
 helpviewer_keywords:
 - noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-ms.openlocfilehash: e855497cb6f619ecdaa6aedf16a04f045a60faa7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c5d51d7c5628a875f036b4e48b03b317490b37ff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514564"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224399"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -25,9 +25,9 @@ Definiuje obiekt, którego nie można utworzyć na podstawie samego siebie.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut niemożliwy do utworzenia ma taką samą funkcjonalność jak atrybut [](/windows/win32/Midl/noncreatable) MIDL, którego nie można uzyskać, i jest automatycznie przenoszona do wygenerowanego. C++ Plik IDL przez kompilator.
+Atrybut **języka C++ niemożliwy do utworzenia** ma taką samą funkcjonalność jak [atrybut MIDL,](/windows/win32/Midl/noncreatable) którego nie można uzyskać, i jest automatycznie przenoszona do wygenerowanego. Plik IDL przez kompilator.
 
-Gdy ten atrybut jest używany w projekcie, który korzysta z ATL, zachowanie atrybutu zostanie zmienione. Oprócz powyższych zachowań atrybut również wprowadza makro [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) . To makro wskazuje na ATL, że nie można utworzyć obiektu zewnętrznie.
+Gdy ten atrybut jest używany w projekcie, który korzysta z ATL, zachowanie atrybutu zostanie zmienione. Oprócz powyższych zachowań atrybut wprowadza również makro [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) . To makro wskazuje na ATL, że nie można utworzyć obiektu zewnętrznie.
 
 ## <a name="example"></a>Przykład
 
@@ -55,7 +55,7 @@ class CMyClass : public A
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **Struktura**|
+|**Dotyczy**|**`class`**, **`struct`**|
 |**Powtarzalne**|Nie|
 |**Wymagane atrybuty**|**coclass**|
 |**Nieprawidłowe atrybuty**|Brak|

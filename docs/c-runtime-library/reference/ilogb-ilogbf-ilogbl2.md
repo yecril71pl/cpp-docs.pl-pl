@@ -33,12 +33,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: fdafba039537358c9b6a1de21dc176ceea38b4fa
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6feea7a242a066f669429944226f4ca6022505b6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954763"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232524"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -75,28 +75,28 @@ Określona wartość.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli to się powiedzie, zwróć wartość typu " *x* 2" w postaci wartości **całkowitej** .
+Jeśli to się powiedzie, zwróć wartość typu " *x* 2" w postaci **`signed int`** wartości.
 
-W przeciwnym razie zwraca jedną z następujących wartości zdefiniowanych w \<Math. h >:
+W przeciwnym razie zwraca jedną z następujących wartości zdefiniowanych w \<math.h> :
 
 |Dane wejściowe|Wynik|
 |-----------|------------|
-|±0|FP_ILOGB0|
+|± 0|FP_ILOGB0|
 |± inf, ± NaN, nieokreślony|FP_ILOGBNAN|
 
 Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ilogb —** , które pobierają i zwracają **zmiennoprzecinkowe** i **długie** **podwójne** typy. W programie C **ilogb —** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ilogb —** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C **ilogb —** zawsze przyjmuje i zwraca **`double`** .
 
-Wywołanie tej funkcji jest podobne do wywołania równoważnej funkcji **logb —** , a następnie rzutowania wartości zwracanej na **int**.
+Wywołanie tej funkcji jest podobne do wywołania równoważnej funkcji **logb —** , a następnie rzutowania wartości zwracanej na **`int`** .
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
-|**ilogb —** , **ilogbf —** , **ilogbl**|\<math.h>|\<cmath >|
+|**ilogb —**, **ilogbf —**, **ilogbl**|\<math.h>|\<cmath>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

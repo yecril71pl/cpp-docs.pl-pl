@@ -1,5 +1,5 @@
 ---
-title: assert Macro, _assert, _wassert
+title: potwierdzj makro, _assert, _wassert
 ms.date: 11/04/2016
 api_name:
 - assert
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - assert function
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
-ms.openlocfilehash: badca46a0793e51602f0de87dfca21816dcd6295
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 173974cfd9d3f9b3fc054bb71ad70b757f8ef819
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939618"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232628"
 ---
-# <a name="assert-macro-_assert-_wassert"></a>assert Macro, _assert, _wassert
+# <a name="assert-macro-_assert-_wassert"></a>potwierdzj makro, _assert, _wassert
 
-Oblicza wyrażenie i, gdy wynik ma **wartość false**, drukuje komunikat diagnostyczny i przerywa program.
+Oblicza wyrażenie i, gdy wynik jest **`false`** , drukuje komunikat diagnostyczny i przerywa program.
 
 ## <a name="syntax"></a>Składnia
 
@@ -62,10 +62,10 @@ void _wassert(
 
 ### <a name="parameters"></a>Parametry
 
-*expression*<br/>
-Wyrażenie skalarne (w tym wyrażenia wskaźnika), które ma wartość różną od zera (**true**) lub 0 (**false**).
+*wyrażenia*<br/>
+Wyrażenie skalarne (w tym wyrażenia wskaźnika), które daje w wyniku wartość różną od zera ( **`true`** ) lub 0 ( **`false`** ).
 
-*komunikat*<br/>
+*Komunikat*<br/>
 Widomość do wyświetlenia.
 
 *Nazwa pliku*<br/>
@@ -76,9 +76,9 @@ Numer wiersza w pliku źródłowym potwierdzeń zakończonych niepowodzeniem.
 
 ## <a name="remarks"></a>Uwagi
 
-Makro **Assert** jest zwykle używane do identyfikowania błędów logiki podczas tworzenia programu. Za jego pomocą można zatrzymać wykonywanie programu w przypadku nieoczekiwanych warunków przez implementację argumentu *Expression* , aby oszacować **wartość false** tylko wtedy, gdy program działa nieprawidłowo. Testy potwierdzenia można wyłączyć w czasie kompilacji, definiując **NDEBUG**makro. Można wyłączyć makro **Assert** bez modyfikowania plików źródłowych przy użyciu opcji wiersza polecenia **/DNDEBUG** . Można wyłączyć makro **Assert** w kodzie źródłowym przy użyciu `#define NDEBUG` dyrektywy przed \<Assert. h > jest dołączony.
+Makro **Assert** jest zwykle używane do identyfikowania błędów logiki podczas tworzenia programu. Służy do zatrzymywania wykonywania programu w przypadku nieoczekiwanych warunków przez implementację argumentu *Expression* do obliczenia **`false`** tylko wtedy, gdy program działa nieprawidłowo. Testy potwierdzenia można wyłączyć w czasie kompilacji, definiując **NDEBUG**makro. Można wyłączyć makro **Assert** bez modyfikowania plików źródłowych przy użyciu opcji wiersza polecenia **/DNDEBUG** . Można wyłączyć makro **Assert** w kodzie źródłowym przy użyciu `#define NDEBUG` dyrektywy przed \<assert.h> dołączonym.
 
-Makro **Assert** wyświetla komunikat diagnostyczny, gdy *wyrażenie* zwróci **wartość false** (0), a wywołania [przerywają](abort.md) działanie, aby przerwać wykonywanie programu. Jeśli *wyrażenie* ma **wartość true** (niezerowe), nie jest wykonywana żadna akcja. Komunikat diagnostyczny zawiera niepowodzenie wyrażenie, nazwę pliku źródłowego i numer wiersza, w którym potwierdzenie nie powiodło się.
+Makro **potwierdzenia** drukuje komunikat diagnostyczny, gdy *wyrażenie* zwróci wartość **`false`** (0), a wywołania [przerywają](abort.md) działanie, aby przerwać wykonywanie programu. Nie jest podejmowana żadna akcja, jeśli *wyrażenie* jest **`true`** (niezerowe). Komunikat diagnostyczny zawiera niepowodzenie wyrażenie, nazwę pliku źródłowego i numer wiersza, w którym potwierdzenie nie powiodło się.
 
 Komunikat diagnostyczny jest drukowany w postaci dwubajtowej. W ten sposób będzie działał zgodnie z oczekiwaniami, nawet jeśli w wyrażeniu znajdują się znaki Unicode.
 
@@ -90,7 +90,7 @@ Aby uzyskać więcej informacji na temat debugowania CRT, zobacz [techniki debug
 
 Funkcje **_ASSERT** i **_wassert** są wewnętrznymi funkcjami CRT. Pomagają zminimalizować kod wymagany w plikach obiektów do obsługi potwierdzeń. Nie zalecamy bezpośredniego wywoływania tych funkcji.
 
-Makro **Assert** jest włączane w wersjach wersji i debugowania bibliotek uruchomieniowych C, gdy **NDEBUG** nie jest zdefiniowany. Gdy **NDEBUG** jest zdefiniowany, makro jest dostępne, ale nie oblicza jego argumentu i nie ma wpływu. Gdy ta funkcja jest włączona, makro **potwierdzenia** wywołuje **_wassert** do wdrożenia. Inne makra potwierdzenia, [_ASSERT](assert-asserte-assert-expr-macros.md), [_ASSERTE](assert-asserte-assert-expr-macros.md) i [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md), są również dostępne, ale tylko obliczają wyrażenia przesłane do nich, gdy makro [_DEBUG](../../c-runtime-library/debug.md) zostało zdefiniowane i gdy znajdują się w kodzie połączonym z debugowaniem wersja bibliotek czasu wykonywania języka C.
+Makro **Assert** jest włączane w wersjach wersji i debugowania bibliotek uruchomieniowych C, gdy **NDEBUG** nie jest zdefiniowany. Gdy **NDEBUG** jest zdefiniowany, makro jest dostępne, ale nie oblicza jego argumentu i nie ma wpływu. Gdy ta funkcja jest włączona, makro **potwierdzenia** wywołuje **_wassert** do jego implementacji. Dostępne są również inne makra potwierdzania, [_ASSERT](assert-asserte-assert-expr-macros.md), [_ASSERTE](assert-asserte-assert-expr-macros.md) i [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md), ale tylko są oceniane tylko wyrażenia przesłane do nich, gdy makro [_DEBUG](../../c-runtime-library/debug.md) zostało zdefiniowane i gdy znajdują się w kodzie połączonym z wersją debugową bibliotek uruchomieniowych C.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -98,7 +98,7 @@ Makro **Assert** jest włączane w wersjach wersji i debugowania bibliotek uruch
 |-------------|---------------------|
 |**Assert**, **_wassert**|\<assert.h>|
 
-Sygnatura funkcji **_ASSERT** jest niedostępna w pliku nagłówkowym. Sygnatura funkcji **_wassert** jest dostępna tylko wtedy, gdy makro **NDEBUG** nie jest zdefiniowane.
+Podpis funkcji **_ASSERT** nie jest dostępny w pliku nagłówkowym. Sygnatura funkcji **_wassert** jest dostępna tylko wtedy, gdy makro **NDEBUG** nie jest zdefiniowane.
 
 ## <a name="example"></a>Przykład
 
@@ -154,9 +154,9 @@ Jeśli jest zainstalowany debuger, wybierz przycisk **Debuguj** , aby uruchomić
 ## <a name="see-also"></a>Zobacz także
 
 [Obsługa błędów](../../c-runtime-library/error-handling-crt.md)<br/>
-[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
-[abort](abort.md)<br/>
-[raise](raise.md)<br/>
-[signal](signal.md)<br/>
-[_ASSERT, _ASSERTE, _ASSERT_EXPR Macros](assert-asserte-assert-expr-macros.md)<br/>
+[Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[przerwij](abort.md)<br/>
+[wywołaj](raise.md)<br/>
+[sygnał](signal.md)<br/>
+[_ASSERT, _ASSERTE, _ASSERT_EXPR makra](assert-asserte-assert-expr-macros.md)<br/>
 [_DEBUG](../../c-runtime-library/debug.md)<br/>

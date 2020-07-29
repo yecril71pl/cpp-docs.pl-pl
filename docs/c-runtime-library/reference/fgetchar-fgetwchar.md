@@ -38,12 +38,12 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: 79b932268f379309d7765d8fa03797a5b8360ccf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 99febac7de2c2fa4e6587654e854b32b702d299e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912765"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232537"
 ---
 # <a name="_fgetchar-_fgetwchar"></a>_fgetchar, _fgetwchar
 
@@ -58,13 +58,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-fgetchar zwraca znak odczytywany jako **int** lub Return `EOF` , aby wskazać błąd lub koniec pliku. ** \_** fgetwchar zwraca, jako [wint_t](../../c-runtime-library/standard-types.md), znak dwubajtowy, który odpowiada znakowi odczytywania lub powracania `WEOF` , aby wskazać błąd lub koniec pliku. ** \_** Dla obu funkcji Użyj **feof** lub obiektu **odwołującego** do rozróżnienia między błędem a warunkiem końca pliku.
+** \_ fgetchar** zwraca znak odczytywany jako **`int`** lub zwraca, `EOF` Aby wskazać błąd lub koniec pliku. ** \_ fgetwchar** zwraca, jako [wint_t](../../c-runtime-library/standard-types.md), znak dwubajtowy, który odpowiada znakowi odczytywania lub powracania, `WEOF` Aby wskazać błąd lub koniec pliku. Dla obu funkcji Użyj **feof** lub obiektu **odwołującego** do rozróżnienia między błędem a warunkiem końca pliku.
 
 ## <a name="remarks"></a>Uwagi
 
 Te funkcje odczytują pojedynczy znak z **stdin**. Funkcja następnie zwiększa skojarzony wskaźnik pliku (jeśli jest zdefiniowany), aby wskazywał na następny znak. Jeśli strumień znajduje się na końcu pliku, wskaźnik końca pliku dla strumienia jest ustawiony.
 
-**_fgetchar** jest równoważne `fgetc( stdin )`. Jest ona również równoważna z **GetChar**, ale implementowana tylko jako funkcja, a nie jako funkcja i makro. **_fgetwchar** to wersja znaku dwubajtowego **_fgetchar**.
+**_fgetchar** jest równoważne `fgetc( stdin )` . Jest ona również równoważna z **GetChar**, ale implementowana tylko jako funkcja, a nie jako funkcja i makro. **_fgetwchar** to wersja znaku dwubajtowego **_fgetchar**.
 
 Te funkcje nie są zgodne ze standardem ANSI.
 
@@ -80,8 +80,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fgetchar**|\<stdio. h>|
-|**_fgetwchar**|\<stdio. h> lub \<WCHAR. h>|
+|**_fgetchar**|\<stdio.h>|
+|**_fgetwchar**|\<stdio.h> lub \<wchar.h>|
 
 Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą —**stdin**, **stdout**i **stderr**— muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -123,7 +123,7 @@ Line two.Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>

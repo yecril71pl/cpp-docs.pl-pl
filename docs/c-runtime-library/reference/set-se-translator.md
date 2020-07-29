@@ -26,16 +26,16 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: 781deaad091b6aed72350100f7575c566bbae793
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f1c9446f9c3f0d637ea53d54584258959677b339
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948397"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232420"
 ---
 # <a name="_set_se_translator"></a>_set_se_translator
 
-Ustaw funkcję wywołania zwrotnego dla wątku, aby przetłumaczyć wyjątki Win32 (wyjątki strukturalne C) na C++ wpisane wyjątki.
+Ustaw funkcję wywołania zwrotnego dla wątku, aby przetłumaczyć wyjątki Win32 (wyjątki strukturalne C) na wyjątki z określonym językiem C++.
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,29 +52,29 @@ Wskaźnik do zapisanej funkcji translatora wyjątków języka C.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do poprzedniej funkcji translatora zarejestrowanej przez **_set_se_translator**, aby można było przywrócić poprzednią funkcję. Jeśli żadna Poprzednia funkcja nie została ustawiona, wartość zwracana może zostać użyta do przywrócenia zachowania domyślnego. Ta wartość może być **nullptr**.
+Zwraca wskaźnik do poprzedniej funkcji translatora zarejestrowanej przez **_set_se_translator**, aby można było przywrócić poprzednią funkcję. Jeśli żadna Poprzednia funkcja nie została ustawiona, wartość zwracana może zostać użyta do przywrócenia zachowania domyślnego. Ta wartość może być równa **`nullptr`** .
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_set_se_translator** zapewnia sposób obsługi wyjątków Win32 (wyjątki strukturalne C) jako C++ wyjątków wpisanych. Aby zezwolić na obsługę każdego wyjątku c przez C++ procedurę obsługi **catch** , należy najpierw zdefiniować klasę otoki wyjątku c, która może być używana, lub pochodną klasy, aby przypisać do wyjątku typu c. Aby użyć tej klasy, należy zainstalować niestandardową funkcję translatora wyjątków języka C, która jest wywoływana przez wewnętrzny mechanizm obsługi wyjątków za każdym razem, gdy zostanie zgłoszony wyjątek C. W ramach funkcji translator można zgłosić każdy wpisany wyjątek, który może zostać przechwycony przez zgodną C++ procedurę obsługi **catch** .
+Funkcja **_set_se_translator** zapewnia sposób obsługi wyjątków Win32 (wyjątki strukturalne C) jako wyjątków wpisanych w języku C++. Aby zezwolić na obsługę każdego wyjątku C przez **`catch`** procedurę obsługi języka C++, należy najpierw zdefiniować klasę otoki wyjątku C, która może być używana, lub pochodną od, aby poatrybucie określony typ klasy jako wyjątek C. Aby użyć tej klasy, należy zainstalować niestandardową funkcję translatora wyjątków języka C, która jest wywoływana przez wewnętrzny mechanizm obsługi wyjątków za każdym razem, gdy zostanie zgłoszony wyjątek C. W ramach funkcji translator można zgłosić każdy wpisany wyjątek, który może zostać przechwycony przez pasującą **`catch`** procedurę obsługi języka C++.
 
 W przypadku korzystania z **_set_se_translator**należy użyć [/EHa](../../build/reference/eh-exception-handling-model.md) .
 
-Aby określić niestandardową funkcję tłumaczenia, należy wywołać **_set_se_translator** przy użyciu nazwy funkcji tłumaczenia jako argumentu. Funkcja translatora, którą można napisać, jest wywoływana jednokrotnie dla każdego wywołania funkcji na stosie, który ma bloki **try** . Brak domyślnej funkcji translatora.
+Aby określić niestandardową funkcję tłumaczenia, wywołaj **_set_se_translator** przy użyciu nazwy funkcji tłumaczenia jako argumentu. Funkcja translatora, którą można napisać, jest wywoływana jednokrotnie dla każdego wywołania funkcji na stosie, który ma **`try`** bloki. Brak domyślnej funkcji translatora.
 
-Funkcja translatora nie powinna wykonywać więcej niż zgłosić wyjątek C++ z określonym typem. Jeśli to wszystko, oprócz wyrzucania (na przykład zapisu w pliku dziennika), program może nie zachowywać się zgodnie z oczekiwaniami, ponieważ liczba wywoływania funkcji translatora jest zależna od platformy.
+Funkcja translatora nie powinna być dłuższa niż throw wyjątek z typem języka C++. Jeśli to wszystko, oprócz wyrzucania (na przykład zapisu w pliku dziennika), program może nie zachowywać się zgodnie z oczekiwaniami, ponieważ liczba wywoływania funkcji translatora jest zależna od platformy.
 
 W środowisku wielowątkowym funkcje usługi Translator są obsługiwane osobno dla każdego wątku. Każdy nowy wątek musi zainstalować własną funkcję translatora. W ten sposób każdy wątek jest odpowiedzialny za obsługę translacji. **_set_se_translator** jest charakterystyczny dla jednego wątku; inna Biblioteka DLL może zainstalować inną funkcję tłumaczenia.
 
-Funkcja *seTransFunction* , którą pisze, musi być funkcją skompilowaną natywnie (nieskompilowana z/CLR). Musi ona przyjmować liczbę całkowitą bez znaku oraz wskaźnik do struktury **_EXCEPTION_POINTERS** Win32 jako argumenty. Argumenty są wartościami zwrotnymi wywołań odpowiednio do Win32 API funkcji **GetExceptionCode** i **GetExceptionInformation** .
+Funkcja *seTransFunction* , którą pisze, musi być funkcją skompilowaną natywnie (nieskompilowana z/CLR). Musi przyjmować liczbę całkowitą bez znaku oraz wskaźnik do struktury **_EXCEPTION_POINTERS** Win32 jako argumenty. Argumenty są wartościami zwrotnymi wywołań odpowiednio do Win32 API funkcji **GetExceptionCode** i **GetExceptionInformation** .
 
 ```cpp
 typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS* );
 ```
 
-W przypadku **_set_se_translator**ma wpływ na dynamiczne łączenie z CRT; inna Biblioteka DLL w procesie może wywoływać **_set_se_translator** i zamienić swój program obsługi na własny.
+W przypadku **_set_se_translator**mają wpływ na dynamiczne łączenie z CRT; inna Biblioteka DLL w procesie może wywoływać **_set_se_translator** i zamienić swój program obsługi na własny.
 
-W przypadku korzystania z programu **_set_se_translator** z kodu zarządzanego (kod skompilowany za pomocą/CLR) lub kodu natywnego i zarządzanego, należy pamiętać, że translator wpływa na wyjątki generowane tylko w kodzie natywnym. Wszelkie zarządzane wyjątki generowane w kodzie zarządzanym (takie jak w `System::Exception`przypadku podnoszenia) nie są kierowane przez funkcję translatora. Wyjątki wywoływane w kodzie zarządzanym przy **użyciu funkcji** Win32Exception lub spowodowane przez wyjątek systemu, takie jak wyjątek dzielenia przez zero, są kierowane przez translatora.
+W przypadku korzystania z **_set_se_translator** z kodu zarządzanego (kod skompilowany za pomocą/CLR) lub kodu natywnego i zarządzanego, należy pamiętać, że translator wpływa na wyjątki generowane tylko w kodzie natywnym. Wszelkie zarządzane wyjątki generowane w kodzie zarządzanym (takie jak w przypadku podnoszenia `System::Exception` ) nie są kierowane przez funkcję translatora. Wyjątki wywoływane w kodzie zarządzanym przy **użyciu funkcji** Win32Exception lub spowodowane przez wyjątek systemu, takie jak wyjątek dzielenia przez zero, są kierowane przez translatora.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -86,7 +86,7 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtim
 
 ## <a name="example"></a>Przykład
 
-Ten przykład otacza wywołania w celu ustawienia translatora wyjątków strukturalnych i przywrócenia starego obiektu w klasie `Scoped_SE_Translator`RAII. Ta klasa umożliwia wprowadzenie translatora specyficznego dla zakresu jako pojedynczej deklaracji. Destruktor klasy przywraca oryginalny translator, gdy kontrolka opuszcza zakres.
+Ten przykład otacza wywołania w celu ustawienia translatora wyjątków strukturalnych i przywrócenia starego obiektu w klasie RAII `Scoped_SE_Translator` . Ta klasa umożliwia wprowadzenie translatora specyficznego dla zakresu jako pojedynczej deklaracji. Destruktor klasy przywraca oryginalny translator, gdy kontrolka opuszcza zakres.
 
 ```cpp
 // crt_settrans.cpp
@@ -159,7 +159,7 @@ Caught a __try exception, error c0000094.
 
 ## <a name="example"></a>Przykład
 
-Chociaż funkcje udostępniane przez **_set_se_translator** nie są dostępne w kodzie zarządzanym, można użyć tego mapowania w kodzie natywnym, nawet jeśli ten kod natywny jest w kompilacji pod przełącznikiem **/CLR** , o ile kod natywny jest wskazane przy `#pragma unmanaged`użyciu. Jeśli wystąpi wyjątek strukturalny w kodzie zarządzanym, który ma zostać zamapowany, kod generujący i obsługujący wyjątek musi być oznaczony `#pragma unmanaged`. Poniższy kod pokazuje możliwe użycie. Aby uzyskać więcej informacji, zobacz [dyrektywy pragma i słowo kluczowe __pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Chociaż funkcje zapewniane przez **_set_se_translator** nie są dostępne w kodzie zarządzanym, można użyć tego mapowania w kodzie natywnym, nawet jeśli ten kod natywny jest w kompilacji pod przełącznikiem **/CLR** , o ile kod natywny jest wskazywany przy użyciu `#pragma unmanaged` . Jeśli wystąpi wyjątek strukturalny w kodzie zarządzanym, który ma zostać zamapowany, kod generujący i obsługujący wyjątek musi być oznaczony `#pragma unmanaged` . Poniższy kod pokazuje możliwe użycie. Aby uzyskać więcej informacji, zobacz [dyrektywy pragma i słowo kluczowe __pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ```cpp
 // crt_set_se_translator_clr.cpp
@@ -232,7 +232,7 @@ Caught SE_Exception, error c0000094
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa wyjątków — procedury](../../c-runtime-library/exception-handling-routines.md)<br/>
+[Procedury obsługi wyjątków](../../c-runtime-library/exception-handling-routines.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
 [kończyć](terminate-crt.md)<br/>

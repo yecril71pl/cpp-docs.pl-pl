@@ -45,12 +45,12 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 41007e08884da6ccac09c7dc98cef12381e4b45a
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ad6bed621a0f1b5dd686909e4bf579e915662079
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506783"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232615"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
@@ -97,7 +97,7 @@ Funkcja **atan** Oblicza arcus tangens (funkcja odwrotnej styczności) *x*. Funk
 
 **atan** ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Informacje i ograniczenia dotyczące korzystania z implementacji SSE2 można znaleźć w temacie [_set_SSE2_enable](set-sse2-enable.md).
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **atan** i **atan2** , które przyjmują **zmiennoprzecinkowe** lub **długie** **podwójne** argumenty. W programie C **atan** i **atan2** zawsze przyjmują **podwójne** argumenty i zwracają **podwójny**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **atan** i **atan2** przyjmujących **`float`** lub **`long double`** argumenty. W programie C **atan** i **atan2** zawsze przyjmują **`double`** argumenty i zwracają **`double`** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 

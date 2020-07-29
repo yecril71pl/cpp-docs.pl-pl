@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 555cd27e87324141f21bdd7ef12f9ff8ea1a4e09
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 44b1abf816020258240d653cfbf8cd806fcb7dd1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913570"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232563"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 
@@ -89,12 +89,12 @@ __int64 _wtoi64_l(
 *str*<br/>
 Ciąg do przekonwertowania.
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca wartość **__int64** wygenerowanej przez interpretowanie znaków wejściowych jako liczby. Wartość zwracana to 0 dla **_atoi64** , jeśli nie można przekonwertować danych wejściowych na wartość tego typu.
+Każda funkcja zwraca **`__int64`** wartość wygenerowaną przez interpretowanie znaków wejściowych jako liczby. Wartość zwracana to 0 dla **_atoi64** , jeśli nie można przekonwertować danych wejściowych na wartość tego typu.
 
 W przypadku przepełnienia z dużymi dodatnimi wartościami całkowitymi **_atoi64** zwraca **I64_MAX** i **I64_MIN** w przypadku przepełnienia z dużą liczbą ujemnych wartości całkowitych.
 
@@ -129,8 +129,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedury|Wymagany nagłówek|
 |--------------|---------------------|
-|**_atoi64**, **_atoi64_l**|\<STDLIB. h>|
-|**_wtoi64**, **_wtoi64_l**|\<STDLIB. h> lub \<WCHAR. h>|
+|**_atoi64**, **_atoi64_l**|\<stdlib.h>|
+|**_wtoi64**, **_wtoi64_l**|\<stdlib.h> lub \<wchar.h>|
 
 ## <a name="example"></a>Przykład
 
@@ -181,11 +181,11 @@ Function: _atoi64( "3336402735171707160320" ) = -1
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>
