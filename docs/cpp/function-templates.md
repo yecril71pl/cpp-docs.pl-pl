@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-ms.openlocfilehash: f2caf70dd90e76c7bc4f20ea4bf34845b343efc2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 44fb8691c296892377686310fbd9b4d9adcd0f80
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179747"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232290"
 ---
 # <a name="function-templates"></a>Szablony funkcji
 
@@ -28,7 +28,7 @@ int main() {
 }
 ```
 
-Ten kod definiuje rodzinę funkcji, które zamieniają wartości argumentów. Z tego szablonu można generować funkcje, które zastąpią typy **int** i **Long** , a także typy zdefiniowane przez użytkownika. `MySwap` będzie zamieniać nawet klasy, jeśli w klasie został poprawnie zdefiniowany konstruktor kopiujący i operator przypisania.
+Ten kod definiuje rodzinę funkcji, które zamieniają wartości argumentów. Z tego szablonu można generować funkcje, które będą zamieniać **`int`** i **`long`** typy, a także typy zdefiniowane przez użytkownika. `MySwap` będzie zamieniać nawet klasy, jeśli w klasie został poprawnie zdefiniowany konstruktor kopiujący i operator przypisania.
 
 Ponadto szablon funkcji uniemożliwi zamianę obiektów różnych typów, ponieważ kompilator zna typy parametrów *a* i *b* w czasie kompilacji.
 
@@ -55,11 +55,11 @@ int main(int j) {
 }
 ```
 
-Gdy argument szablonu jest określony jawnie, wykonywane są zwykłe konwersje niejawne, aby przekonwertować argument funkcji na typ odpowiadający parametrom szablonu funkcji. W powyższym przykładzie kompilator wykona konwersję `j` do typu **char**.
+Gdy argument szablonu jest określony jawnie, wykonywane są zwykłe konwersje niejawne, aby przekonwertować argument funkcji na typ odpowiadający parametrom szablonu funkcji. W powyższym przykładzie kompilator zostanie skonwertowany `j` do typu **`char`** .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony](../cpp/templates-cpp.md)<br/>
 [Tworzenie wystąpienia szablonu funkcji](../cpp/function-template-instantiation.md)<br/>
-[Jawne tworzenie wystąpienia](../cpp/explicit-instantiation.md)<br/>
+[Jawne utworzenie wystąpienia](../cpp/explicit-instantiation.md)<br/>
 [Jawna specjalizacja szablonów funkcji](../cpp/explicit-specialization-of-function-templates.md)

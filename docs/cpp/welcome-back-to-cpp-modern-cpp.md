@@ -4,12 +4,12 @@ description: Opisuje nowy idiomy programistyczny w nowoczesnej C++ i ich racjona
 ms.date: 05/17/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 76ac17e71368cdeee669b98505778838ef0dfee7
-ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
+ms.openlocfilehash: f2b9159e74ba7ce37c7eab1513826da939a3be49
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550800"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232199"
 ---
 # <a name="welcome-back-to-c---modern-c"></a>Witamy w języku C++ — nowoczesny C++
 
@@ -115,7 +115,7 @@ auto i = m.begin(); // modern C++
 
 ## <a name="range-based-for-loops"></a>Pętle zależne od zakresu `for`
 
-Iteracja w stylu języka C w odniesieniu do tablic i kontenerów jest podatna na błędy indeksowania i jest również żmudnym do wpisywania. Aby wyeliminować te błędy i zwiększyć czytelność kodu, należy użyć pętli opartych na zakresie `for` zarówno w przypadku kontenerów biblioteki standardowej, jak i nieprzetworzonych tablic. Aby uzyskać więcej informacji, zobacz [ `for` instrukcje oparte na zakresie](../cpp/range-based-for-statement-cpp.md).
+Iteracja w stylu języka C w odniesieniu do tablic i kontenerów jest podatna na błędy indeksowania i jest również żmudnym do wpisywania. Aby wyeliminować te błędy i zwiększyć czytelność kodu, należy użyć pętli opartych na zakresie **`for`** zarówno w przypadku kontenerów biblioteki standardowej, jak i nieprzetworzonych tablic. Aby uzyskać więcej informacji, zobacz [ `for` instrukcje oparte na zakresie](../cpp/range-based-for-statement-cpp.md).
 
 ```cpp
 #include <iostream>
@@ -200,7 +200,7 @@ W programowaniu w stylu języka C funkcja może zostać przeniesiona do innej fu
     auto result = find_if(begin(v), end(v), [=](int i) { return i > x && i < y; });
 ```
 
-Wyrażenie lambda `[=](int i) { return i > x && i < y; }` może być odczytane jako "funkcja, która przyjmuje pojedynczy argument typu `int` i zwraca wartość logiczną wskazującą, czy argument jest większy niż `x` i mniejszy niż `y` ". Należy zauważyć, że zmienne `x` i `y` z otaczającego kontekstu mogą być używane w wyrażeniach lambda. `[=]`Określa, że te zmienne są *przechwytywane* przez wartość; innymi słowy, wyrażenie lambda ma własne kopie tych wartości.
+Wyrażenie lambda `[=](int i) { return i > x && i < y; }` może być odczytane jako "funkcja, która przyjmuje pojedynczy argument typu **`int`** i zwraca wartość logiczną wskazującą, czy argument jest większy niż `x` i mniejszy niż `y` ". Należy zauważyć, że zmienne `x` i `y` z otaczającego kontekstu mogą być używane w wyrażeniach lambda. `[=]`Określa, że te zmienne są *przechwytywane* przez wartość; innymi słowy, wyrażenie lambda ma własne kopie tych wartości.
 
 ## <a name="exceptions"></a>Wyjątki
 

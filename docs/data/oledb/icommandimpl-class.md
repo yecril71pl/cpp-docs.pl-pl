@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: f04885ef61841ac20f87ab07ce73d3c9342fe39c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b235a85ccab4fd3d3377e656b53276928b425d94
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212165"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232160"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl — Klasa
 
@@ -71,8 +71,8 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
-Klasa, która pochodzi od `ICommandImpl`.
+*T*<br/>
+Klasa, która pochodzi od `ICommandImpl` .
 
 *CommandBase*<br/>
 Interfejs polecenia. Wartość domyślna to `ICommand`.
@@ -81,16 +81,16 @@ Interfejs polecenia. Wartość domyślna to `ICommand`.
 
 **Nagłówek:** ATLDB. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="methods"></a>Metody
 
 |||
 |-|-|
-|[Anulowanie](#cancel)|Anuluje bieżące wykonanie polecenia.|
+|[Anuluj](#cancel)|Anuluje bieżące wykonanie polecenia.|
 |[CancelExecution](#cancelexecution)|Anuluje bieżące wykonanie polecenia.|
 |[CreateRowset](#createrowset)|Tworzy obiekt zestawu wierszy.|
-|[Execute](#execute)|Wykonuje polecenie.|
+|[Realizacja](#execute)|Wykonuje polecenie.|
 |[GetDBSession](#getdbsession)|Zwraca wskaźnik interfejsu do sesji, która utworzyła polecenie.|
 |[ICommandImpl](#icommandimpl)|Konstruktor.|
 
@@ -152,30 +152,30 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 Składowa klasy szablonu reprezentująca klasę zestawu wierszy użytkownika. Zwykle generowany przez kreatora.
 
 *pUnkOuter*<br/>
-podczas Wskaźnik do kontrolki interfejsu `IUnknown`, jeśli zestaw wierszy jest tworzony w ramach agregacji; w przeciwnym razie ma wartość null.
+podczas Wskaźnik do interfejsu kontrolującego, `IUnknown` Jeśli zestaw wierszy jest tworzony w ramach agregacji; w przeciwnym razie ma wartość null.
 
 *riid*<br/>
-podczas Odnosi się do *riid* w `ICommand::Execute`.
+podczas Odnosi się do *riid* w `ICommand::Execute` .
 
 *pParams*<br/>
-[we/out] Odnosi się do *pParams* w `ICommand::Execute`.
+[we/out] Odnosi się do *pParams* w `ICommand::Execute` .
 
 *pcRowsAffected*<br/>
-Odnosi się do *pcRowsAffected* w `ICommand::Execute`.
+Odnosi się do *pcRowsAffected* w `ICommand::Execute` .
 
 *ppRowset*<br/>
-[we/out] Odnosi się do *ppRowset* w `ICommand::Execute`.
+[we/out] Odnosi się do *ppRowset* w `ICommand::Execute` .
 
 *pRowsetObj*<br/>
 określoną Wskaźnik do obiektu zestawu wierszy. Zazwyczaj ten parametr nie jest używany, ale może być używany, jeśli trzeba wykonać więcej pracy na zestawie wierszy przed przekazaniem go do obiektu COM. Okres istnienia *pRowsetObj* jest związany z *ppRowset*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Standardowa wartość HRESULT. Aby uzyskać listę typowych wartości, zobacz `ICommand::Execute`.
+Standardowa wartość HRESULT. `ICommand::Execute`Aby uzyskać listę typowych wartości, zobacz.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby utworzyć więcej niż jeden zestaw wierszy lub podać własne warunki tworzenia różnych zestawów wierszy, należy umieścić różne wywołania do `CreateRowset` z poziomu `Execute`.
+Aby utworzyć więcej niż jeden zestaw wierszy lub podać własne warunki tworzenia różnych zestawów wierszy, umieść różne wywołania do `CreateRowset` wewnątrz `Execute` .
 
 Zobacz [Interfejs ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) w *dokumentacji programisty OLE DB.*
 
@@ -201,7 +201,7 @@ Zobacz [Interfejs ICommand:: Execute](/previous-versions/windows/desktop/ms71809
 
 Żądany interfejs wychodzący będzie interfejsem uzyskanym z obiektu zestawu wierszy, który tworzy ta funkcja.
 
-`Execute` wywołuje [zestaw wierszy](../../data/oledb/icommandimpl-createrowset.md). Zastąp domyślną implementację, aby utworzyć więcej niż jeden zestaw wierszy lub podać własne warunki tworzenia różnych zestawów wierszy.
+`Execute`wywołuje [zestaw wierszy](../../data/oledb/icommandimpl-createrowset.md). Zastąp domyślną implementację, aby utworzyć więcej niż jeden zestaw wierszy lub podać własne warunki tworzenia różnych zestawów wierszy.
 
 ## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a>ICommandImpl:: GetDBSession
 
@@ -244,7 +244,7 @@ unsigned m_bCancel:1;
 
 ### <a name="remarks"></a>Uwagi
 
-Tę zmienną można pobrać w metodzie `Execute` klasy Command i anulować odpowiednie działania.
+Tę zmienną można pobrać w `Execute` metodzie klasy Command i anulować zgodnie z potrzebami.
 
 ## <a name="icommandimplm_bcancelwhenexecuting"></a><a name="bcancelwhenexecuting"></a>ICommandImpl:: m_bCancelWhenExecuting
 
@@ -258,7 +258,7 @@ unsigned m_bCancelWhenExecuting:1;
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość domyślna to **true** (może być anulowana).
+Wartość domyślna **`true`** (może być anulowana).
 
 ## <a name="icommandimplm_bisexecuting"></a><a name="bisexecuting"></a>ICommandImpl:: m_bIsExecuting
 
@@ -272,9 +272,9 @@ unsigned m_bIsExecuting:1;
 
 ### <a name="remarks"></a>Uwagi
 
-Metoda `Execute` klasy Command może ustawić dla tej zmiennej **wartość true**.
+`Execute`Metoda klasy Command może ustawić tę zmienną na **`true`** .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

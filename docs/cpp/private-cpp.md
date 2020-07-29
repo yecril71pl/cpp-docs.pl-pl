@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C++]
 ms.assetid: 94e99983-46a5-4e21-800c-28f8a7c6a8ff
-ms.openlocfilehash: d6dc1ca309c096a4f5e857ade3d7550749991f3f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3b9df2ee2abcaca1c7c11c08ef73ae795a84310d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366206"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232251"
 ---
 # <a name="private-c"></a>private (C++)
 
@@ -25,22 +25,22 @@ private base-class
 
 ## <a name="remarks"></a>Uwagi
 
-Poprzedzając listę członków klasy, **prywatne** słowo kluczowe określa, że te elementy członkowskie są dostępne tylko z funkcji członkowskich i znajomych klasy. Dotyczy to wszystkich członków zadeklarowanych do następnego specyfikatora dostępu lub na końcu klasy.
+Po powyższym liście elementów członkowskich klasy, **`private`** słowo kluczowe Określa, że te składowe są dostępne tylko z funkcji składowych i przyjaciół klasy. Dotyczy to wszystkich członków zadeklarowanych do następnego specyfikatora dostępu lub końca klasy.
 
-Poprzedzając nazwę klasy podstawowej, **prywatne** słowo kluczowe określa, że publiczne i chronione elementy członkowskie klasy podstawowej są członkami prywatnymi klasy pochodnej.
+Gdy poprzedzająca nazwę klasy bazowej, **`private`** słowo kluczowe Określa, że publiczne i chronione składowe klasy bazowej są prywatnymi elementami członkowskimi klasy pochodnej.
 
-Domyślny dostęp członków w klasie jest prywatny. Domyślny dostęp członków w strukturze lub związku jest publiczny.
+Domyślny dostęp do elementów członkowskich w klasie jest prywatny. Domyślny dostęp do elementów członkowskich w strukturze lub Unii jest publiczny.
 
-Domyślny dostęp do klasy podstawowej jest prywatny dla klas i publiczny dla struktur. Związki zawodowe nie mogą mieć klas podstawowych.
+Domyślny dostęp klasy bazowej jest prywatny dla klas i publicznych dla struktur. Unia nie może mieć klas bazowych.
 
-Aby uzyskać powiązane informacje, zobacz [znajomego,](../cpp/friend-cpp.md) [publiczne,](../cpp/public-cpp.md) [chronione](../cpp/protected-cpp.md)i tabela dostępu do członków w [obszarze Kontrolowanie dostępu do członków klasy](member-access-control-cpp.md).
+Aby uzyskać powiązane informacje, zobacz [zaprzyjaźniona](../cpp/friend-cpp.md), [publiczna](../cpp/public-cpp.md), [chroniona](../cpp/protected-cpp.md)i tabela dostępu do elementów członkowskich w celu [kontrolowania dostępu do składowych klasy](member-access-control-cpp.md).
 
 ## <a name="clr-specific"></a>Specyficzne dla /clr
 
-W typach CLR specyfikator dostępu języka C++**(publiczny,** **prywatny**i **chroniony)** może mieć wpływ na widoczność typów i metod w odniesieniu do zestawów. Aby uzyskać więcej informacji, zobacz [Kontrola dostępu do członków](member-access-control-cpp.md).
+W typach CLR słowa kluczowe specyfikator dostępu języka C++ ( **`public`** , **`private`** , i **`protected`** ) mogą wpływać na widoczność typów i metod w odniesieniu do zestawów. Aby uzyskać więcej informacji, zobacz [Access Control elementu członkowskiego](member-access-control-cpp.md).
 
 > [!NOTE]
-> To zachowanie nie ma wpływu na pliki skompilowane za pomocą [/LN.](../build/reference/ln-create-msil-module.md) W tym przypadku, widoczne będą wszystkie klasy zarządzane (publiczne lub prywatne).
+> Takie zachowanie nie ma wpływ na pliki skompilowane za pomocą [/LN](../build/reference/ln-create-msil-module.md) . W tym przypadku, widoczne będą wszystkie klasy zarządzane (publiczne lub prywatne).
 
 ## <a name="end-clr-specific"></a>KONIEC specyficzne dla /clr
 
@@ -81,7 +81,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Kontrolowanie dostępu do członków klasy](member-access-control-cpp.md)<br/>
+[Kontrolowanie dostępu do składowych klasy](member-access-control-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

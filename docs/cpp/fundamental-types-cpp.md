@@ -1,6 +1,6 @@
 ---
 title: Typy wbudowane (C++)
-ms.date: 12/11/2019
+ms.date: 07/22/2020
 f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
@@ -46,62 +46,114 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: 14d96453785a55f625b5467458f9cf79e6739acf
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 73486dd4d81fc91007f078ec5c509bcb963d2706
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188619"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232277"
 ---
 # <a name="built-in-types-c"></a>Typy wbudowane (C++)
 
-Typy wbudowane (zwane również *typami podstawowymi*) są określane przez standard C++ języka i są wbudowane w kompilator. Wbudowane typy nie są zdefiniowane w żadnym pliku nagłówkowym. Wbudowane typy są podzielone na trzy kategorie: całek, zmiennoprzecinkowe i void. Typy całkowite mogą obsługiwać liczbę całkowitą. Typy zmiennoprzecinkowe mogą określać wartości, które mogą mieć części ułamkowe.
+Typy wbudowane (zwane również *typami podstawowymi*) są określane przez Standard języka C++ i są wbudowane w kompilator. Wbudowane typy nie są zdefiniowane w żadnym pliku nagłówkowym. Typy wbudowane są podzielone na trzy główne kategorie: *Całka*, *zmiennoprzecinkowa*i *void*. Typy całkowite reprezentują liczby całkowite. Typy zmiennoprzecinkowe mogą określać wartości, które mogą mieć części ułamkowe. Większość typów wbudowanych jest traktowana jako odrębne typy przez kompilator. Jednak niektóre typy są *synonimami*lub traktowane jako równoważne typy przez kompilator.
 
-Typ [void](void-cpp.md) opisuje pusty zestaw wartości. Nie można określić żadnej zmiennej typu **void** — jest ona używana głównie do deklarowania funkcji, które nie zwracają żadnych wartości lub deklarują ogólne wskaźniki do niewpisanych lub arbitralnie wpisanych danych. Każde wyrażenie może być jawnie konwertowane lub rzutowane na typ **void**. Jednakże takie wyrażenia są ograniczone do następujących celów:
+## <a name="void-type"></a>Typ void
+
+[`void`](void-cpp.md)Typ opisuje pusty zestaw wartości. Nie można określić żadnej zmiennej typu **`void`** . **`void`** Typ jest używany głównie do deklarowania funkcji, które nie zwracają wartości ani do deklarowania wskaźników ogólnych do niewpisanych lub arbitralnie wpisanych danych. Każde wyrażenie może być jawnie konwertowane lub rzutowane na typ **`void`** . Jednakże takie wyrażenia są ograniczone do następujących celów:
 
 - Instrukcja wyrażenia. (Aby uzyskać więcej informacji, zobacz [Expressions](expressions-cpp.md)).
 
 - Lewy operand operatora przecinka. (Aby uzyskać więcej informacji, zobacz [operator przecinka](comma-operator.md)).
 
-- Drugi lub trzeci operand operatora warunkowego (`? :`). (Aby uzyskać więcej informacji, zobacz [wyrażenia z operatorem warunkowym](conditional-operator-q.md)).
+- Drugi lub trzeci operand operatora warunkowego ( `? :` ). (Aby uzyskać więcej informacji, zobacz [wyrażenia z operatorem warunkowym](conditional-operator-q.md)).
 
-W poniższej tabeli opisano ograniczenia dotyczące rozmiarów typów w zależności od siebie. Ograniczenia te są wymagane przez C++ Standard i są niezależne od implementacji firmy Microsoft. Rozmiar bezwzględny niektórych typów wbudowanych nie jest określony w standardzie.
+## <a name="stdnullptr_t"></a>std:: nullptr_t
 
-### <a name="built-in-type-size-restrictions"></a>Ograniczenia rozmiaru typu wbudowanego
+Słowo kluczowe **`nullptr`** jest stałą wskaźnika o wartości null typu `std::nullptr_t` , który jest konwertowany na dowolny nieprzetworzony typ wskaźnika. Aby uzyskać więcej informacji, zobacz [`nullptr`](nullptr.md).
 
-|Kategoria|Typ|Zawartość|
-|--------------|----------|--------------|
-|Integraln|**char**|Typ **char** jest typem całkowitym, który zwykle zawiera elementy członkowskie podstawowego zestawu znaków wykonywania — domyślnie jest to ASCII w firmie Microsoft C++.<br /><br /> Kompilator traktuje zmienne typu **char** **, ze znakiem**znaku i **unsigned char** jako mające różne typy. C++ Zmienne typu **char** są podwyższane do wartości **int** , tak jakby były typu ze znakiem **podpisane** domyślnie, chyba że zostanie użyta opcja/j kompilacja. W tym przypadku są one traktowane jako znaki typu **unsigned** i są promowane jako **int** bez rozszerzenia.|
-||**bool**|Typ **bool** jest typem całkowitym, który może mieć jedną z dwóch wartości **true** lub **false**. Nie określono jego rozmiaru.|
-||**short**|Typ **short int** (lub po prostu **Short**) jest typem całkowitym, który jest większy niż lub równy rozmiarowi typu **char**, i krótszy niż lub równy rozmiarowi typu **int**.<br /><br /> Obiekty typu **Short** mogą być deklarowane jako **krótkie** lub **niepodpisane**. **Krótka ze znakiem** jest synonimem dla **krótkiej**.|
-||**int**|Typ **int** jest typem całkowitym, który jest większy niż lub równy rozmiarowi typu **short int**i krótszy niż lub równy rozmiarowi typu **Long**.<br /><br /> Obiekty typu **int** mogą być deklarowane jako liczba całkowita ze **znakiem int** lub **unsigned int**. **Cyfra ze znakiem int** jest synonimem dla **int**.|
-||**__int8**, **__int16**, **__int32** **__int64**|Liczba całkowita o rozmiarze `__int n`, gdzie `n` jest rozmiar w bitach zmiennej całkowitej. **__int8**, **__int16**, **__int32** i **__int64** są słowami kluczowymi specyficznymi dla firmy Microsoft. Nie wszystkie typy są dostępne we wszystkich architekturach. ( **__int128** nie jest obsługiwana).|
-||**long**|Typ **Long** (lub **long int**) jest typem całkowitym, który jest większy niż lub równy rozmiarowi typu **int**. (W systemie Windows **Long** ma taki sam rozmiar jak **int**).<br /><br /> Obiekty typu **Long** mogą być deklarowane jako **długie** lub **niepodpisane**. **Znak Long** jest synonimem dla **Long**.|
-||**Long Long**|Większe niż **znak bez znaku**.<br /><br /> Obiekty typu **Long Long** mogą być deklarowane jako **podpisane o długim** długim lub **bez znaku**long long. **podpisana long long** jest synonimem dla **długiej**długości.|
-||**wchar_t**, **__wchar_t**|Zmienna typu **wchar_t** wyznacza typ dwubajtowy lub znak wieloznaczny. Domyślnie **wchar_t** jest typem natywnym, ale można użyć [/Zc: wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) , aby **wchar_t** typedef dla **niepodpisanego Short**. Typ **__wchar_t** jest synonimem specyficznym dla firmy Microsoft dla natywnego typu **wchar_t** .<br /><br /> Użyj prefiksu L przed znakiem lub literałem ciągu, aby wyznaczyć typ szerokich znaków.|
-|Liczba zmiennoprzecinkowa|**float**|Typ **float** jest najmniejszym typem zmiennoprzecinkowym.|
-||**double**|Typ **Double** to typ zmiennoprzecinkowy, który jest większy niż lub równy typowi **zmiennoprzecinkowej**, ale krótszy niż lub równy rozmiarowi typu **Long Double**.<br /><br /> Specyficzne dla firmy Microsoft: reprezentacja typu **Long Double** i **Double** jest taka sama. Jednak **długie podwójne** i **podwójne** są oddzielnymi typami.|
-||**Long Double**|Typ **Long Double** jest typem zmiennoprzecinkowym, który jest większy niż lub równy typ **Double**.|
+## <a name="boolean-type"></a>Typ wartości logicznej
 
-**Specyficzne dla firmy Microsoft**
+[`bool`](bool-cpp.md)Typ może mieć wartości [`true`](../cpp/true-cpp.md) i [`false`](../cpp/false-cpp.md) . Rozmiar **`bool`** typu jest specyficzny dla implementacji. Zobacz [rozmiary typów wbudowanych](#sizes-of-built-in-types) dla szczegółów implementacji specyficznych dla firmy Microsoft.
 
-W poniższej tabeli przedstawiono ilość pamięci wymaganej dla wbudowanych typów w firmie Microsoft C++. W szczególności należy zauważyć, że **Long** to 4 bajty nawet w 64-bitowych systemach operacyjnych.
+## <a name="character-types"></a>Typy znaków
 
-### <a name="sizes-of-built-in-types"></a>Rozmiary typów wbudowanych
+**`char`** Typ jest typem reprezentacji znaku, który efektywnie koduje elementy członkowskie podstawowego zestawu znaków wykonania. Kompilator języka C++ traktuje zmienne typu **`char`** , **`signed char`** i **`unsigned char`** jako mające różne typy.
 
-|Typ|Rozmiar|
-|----------|----------|
-|**bool**, **char**, **znak bez znaku**, znak **podpisany**, **__int8**|1 bajt|
-|**__int16**, **krótkie**, **niepodpisane, krótkie**, **wchar_t**, **__wchar_t**|2 bajty|
-|**float**, **__int32**, **int**, **unsigned int**, **Long**i **unsigned long**|4 bajty|
-|**Double**, **__int64**, **Long Double**, **Long Long**|8 bajtów|
+**Specyficzne dla firmy Microsoft**: zmienne typu **`char`** są podwyższane **`int`** jako Jeśli **`signed char`** Domyślnie, chyba że [`/J`](../build/reference/j-default-char-type-is-unsigned.md) jest używana opcja kompilacji. W tym przypadku są one traktowane jako typ **`unsigned char`** i są promowane do **`int`** bez rozszerzenia znaku.
 
-**ZAKOŃCZENIE określonych przez firmę Microsoft**
+Zmienna typu **`wchar_t`** jest typu szerokiego lub wielobajtowego. Użyj **`L`** prefiksu przed znakiem lub literałem ciągu, aby określić typ szerokich znaków.
+
+**Specyficzne dla firmy Microsoft**: Domyślnie **`wchar_t`** jest typem natywnym, ale można użyć, [`/Zc:wchar_t-`](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Aby utworzyć **`wchar_t`** element typedef dla **`unsigned short`** . **`__wchar_t`** Typ jest synonimem specyficznym dla firmy Microsoft dla typu natywnego **`wchar_t`** .
+
+**`char8_t`** Typ jest używany dla reprezentacji znaków UTF-8. Ma taką samą reprezentację jak **`unsigned char`** , ale jest traktowana jako odrębny typ przez kompilator. **`char8_t`** Typ jest nowy w języku c++ 20. **Specyficzne dla firmy Microsoft**: użycie **`char8_t`** wymaga [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) opcji kompilatora.
+
+**`char16_t`** Typ jest używany dla reprezentacji znaków UTF-16. Musi być wystarczająco duży, aby reprezentować dowolną jednostkę kodu w formacie UTF-16. Jest on traktowany jako typ odrębny przez kompilator.
+
+**`char32_t`** Typ jest używany dla reprezentacji znaków UTF-32. Musi być wystarczająco duży, aby reprezentować dowolną jednostkę kodu w formacie UTF-32. Jest on traktowany jako typ odrębny przez kompilator.
+
+## <a name="floating-point-types"></a>Typy zmiennoprzecinkowe
+
+Typy zmiennoprzecinkowe wykorzystują reprezentację IEEE-754, aby zapewnić przybliżenie wartości ułamkowych w szerokim zakresie wielkości. Poniższa tabela zawiera listę typów zmiennoprzecinkowych w języku C++ i ograniczenia porównawcze dla rozmiaru typu zmiennoprzecinkowego. Ograniczenia te są wymagane przez standard C++ i są niezależne od implementacji firmy Microsoft. Rozmiar bezwzględny wbudowanych typów zmiennoprzecinkowych nie jest określany w standardzie.
+
+| Typ | Zawartość |
+|--|--|
+| **`float`** | Typ **`float`** to najmniejszy typ zmiennoprzecinkowy w języku C++. |
+| **`double`** | Typ **`double`** jest typem zmiennoprzecinkowym, który jest większy niż lub równy typ **`float`** , ale krótszy niż lub równy rozmiarowi typu **`long double`** . |
+| **`long double`** | Typ **`long double`** wskazuje typ zmiennoprzecinkowy, który jest większy niż lub równy typowi **`double`** . |
+
+**Specyficzne dla firmy Microsoft**: reprezentacja **`long double`** i **`double`** jest identyczna. Jednak **`long double`** i **`double`** są traktowane jako różne typy przez kompilator. Kompilator języka Microsoft C++ używa reprezentacji zmiennoprzecinkowych 4-i 8-bajtowych IEEE-754. Aby uzyskać więcej informacji, zobacz [reprezentacja zmiennoprzecinkowa IEEE](../build/ieee-floating-point-representation.md).
+
+## <a name="integer-types"></a>Typy całkowite
+
+**`int`** Typ jest domyślnym Basic typu Integer. Może reprezentować wszystkie liczby całkowite w zakresie określonym dla implementacji.
+
+Reprezentacja liczby całkowitej ze *znakiem* jest taka, która może zawierać zarówno wartości dodatnie, jak i ujemne. Jest ona używana domyślnie lub kiedy **`signed`** słowo kluczowe modyfikatora jest obecne. **`unsigned`** Słowo kluczowe modyfikatora określa *niepodpisany* reprezentację, która może zawierać tylko wartości nieujemne.
+
+Modyfikator rozmiaru Określa szerokość w bitach używanej reprezentacji liczb całkowitych. Język obsługuje **`short`** **`long`** modyfikatory, i **`long long`** . **`short`** Typ musi mieć co najmniej 16 bitów. **`long`** Typ musi mieć co najmniej 32 bitów. **`long long`** Typ musi mieć co najmniej 64 bitów. Standard określa relację rozmiaru między typami całkowitymi:
+
+`1 == sizeof(char) <= sizeof(short) <= sizeof(int) <= sizeof(long) <= sizeof(long long)`
+
+Implementacja musi zachować minimalne wymagania dotyczące rozmiaru i relację rozmiaru dla każdego typu. Jednak rzeczywiste rozmiary mogą być różne w zależności od implementacji. Zobacz [rozmiary typów wbudowanych](#sizes-of-built-in-types) dla szczegółów implementacji specyficznych dla firmy Microsoft.
+
+**`int`** Słowo kluczowe może zostać pominięte **`signed`** , jeśli **`unsigned`** określono modyfikatory, lub rozmiaru. Modyfikatory i **`int`** typy, jeśli istnieją, mogą pojawiać się w dowolnej kolejności. Na przykład, **`short unsigned`** i **`unsigned int short`** odwołują się do tego samego typu.
+
+### <a name="integer-type-synonyms"></a>Synonimy typu Integer
+
+Następujące grupy typów są uznawane za synonimy przez kompilator:
+
+- **`short`**, **`short int`**, **`signed short`**, **`signed short int`**
+
+- **`unsigned short`**, **`unsigned short int`**
+
+- **`int`**, **`signed`**, **`signed int`**
+
+- **`unsigned`**, **`unsigned int`**
+
+- **`long`**, **`long int`**, **`signed long`**, **`signed long int`**
+
+- **`unsigned long`**, **`unsigned long int`**
+
+- **`long long`**, **`long long int`**, **`signed long long`**, **`signed long long int`**
+
+- **`unsigned long long`**, **`unsigned long long int`**
+
+Typy liczb całkowitych **specyficznych dla firmy Microsoft** obejmują **`__int8`** określone **`__int16`** typy,, **`__int32`** i **`__int64`** . Te typy mogą używać **`signed`** **`unsigned`** modyfikatorów i. **`__int8`** Typ danych jest synonimem typu **`char`** , **`__int16`** jest synonimem typu **`short`** , **`__int32`** jest synonimem typu **`int`** i **`__int64`** jest synonimem typu **`long long`** .
+
+## <a name="sizes-of-built-in-types"></a>Rozmiary typów wbudowanych
+
+Większość typów wbudowanych ma rozmiary zdefiniowane przez implementację. W poniższej tabeli przedstawiono ilość pamięci wymaganej dla wbudowanych typów w programie Microsoft C++. W szczególności program **`long`** ma 4 bajty nawet w 64-bitowych systemach operacyjnych.
+
+| Typ | Rozmiar |
+|--|--|
+| **`bool`**, **`char`**, **`char8_t`**, **`unsigned char`**, **`signed char`**, **`__int8`** | 1 bajt |
+| **`char16_t`**, **`__int16`**, **`short`**, **`unsigned short`**, **`wchar_t`**, **`__wchar_t`** | 2 bajty |
+| **`char32_t`**, **`float`**, **`__int32`**, **`int`**, **`unsigned int`**, **`long`**, **`unsigned long`** | 4 bajty |
+| **`double`**, **`__int64`**, **`long double`**, **`long long`**, **`unsigned long long`** | 8 bajtów |
 
 Zobacz [zakresy typów danych](data-type-ranges.md) , aby uzyskać podsumowanie zakresu wartości poszczególnych typów.
 
 Aby uzyskać więcej informacji na temat konwersji typów, zobacz [Konwersje standardowe](standard-conversions.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zakresy typu danych](data-type-ranges.md)

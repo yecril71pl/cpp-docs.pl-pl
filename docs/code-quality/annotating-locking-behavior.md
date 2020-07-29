@@ -27,12 +27,12 @@ f1_keywords:
 - _Lock_level_order_
 - _Lock_kind_event_
 ms.assetid: 07769c25-9b97-4ab7-b175-d1c450308d7a
-ms.openlocfilehash: c9079ac35c4219495b62cd1f4aa2f8ecbbdcf8c9
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 371422275b965fd2ce12995b55221a011a4edae6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404027"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232368"
 ---
 # <a name="annotating-locking-behavior"></a>Dodawanie adnotacji do zachowania blokującego
 
@@ -116,9 +116,9 @@ Inteligentne blokady zwykle zawijają natywne blokady i zarządzają ich okresem
 |`_Moves_lock_(target, source)`|Opisuje `move constructor` operację, która przenosi stan blokady z `source` obiektu do `target` . `target`Jest traktowany jako nowo skonstruowany obiekt, dlatego każdy stanie musiał przed utratą i zastąpiony przez `source` stan. `source`Program jest również resetowany do stanu czystego bez liczby blokad ani obiektu docelowego aliasu, ale aliasy wskazujące, pozostaną bez zmian.|
 |`_Replaces_lock_(target, source)`|Opisuje `move assignment operator` semantykę, w której wydano blokadę docelową przed przeniesieniem stanu ze źródła. Ta wartość może być traktowana jako kombinacja `_Moves_lock_(target, source)` poprzedzona przez `_Releases_lock_(target)` .|
 |`_Swaps_locks_(left, right)`|Opisuje standardowe `swap` zachowanie, które zakłada, że obiekty `left` i `right` wymieniają ich stan. Wymieniany stan obejmuje liczbę blokad i obiekt docelowy aliasu, jeśli jest obecny. Aliasy wskazujące `left` obiekty i `right` pozostają niezmienione.|
-|`_Detaches_lock_(detached, lock)`|Opisuje scenariusz, w którym typ otoki blokady zezwala na skojarzenie z zawartym w nim zasobem. Jest to podobne do sposobu `std::unique_ptr` działania ze swoim wskaźnikiem wewnętrznym: umożliwia programistom wyodrębnienie wskaźnika i pozostawienie jego kontenera inteligentnego wskaźnika w stanie czystym. Podobna logika jest obsługiwana przez program `std::unique_lock` i może być implementowana w niestandardowych otokach blokady. Odłączona blokada zachowuje swój stan (liczba zablokowanych i obiekt docelowy aliasu, jeśli istnieje), podczas gdy otoka jest resetowana, aby zawierała liczbę blokad równą zero i bez obiektu docelowego aliasu, zachowując własne aliasy. Nie ma operacji dotyczących liczby blokad (zwalniania i pozyskiwania). Ta adnotacja zachowuje się dokładnie tak, jak `_Moves_lock_` z tą różnicą, że odłączony argument powinien być `return` zamiast `this` .|
+|`_Detaches_lock_(detached, lock)`|Opisuje scenariusz, w którym typ otoki blokady zezwala na skojarzenie z zawartym w nim zasobem. Jest to podobne do sposobu `std::unique_ptr` działania ze swoim wskaźnikiem wewnętrznym: umożliwia programistom wyodrębnienie wskaźnika i pozostawienie jego kontenera inteligentnego wskaźnika w stanie czystym. Podobna logika jest obsługiwana przez program `std::unique_lock` i może być implementowana w niestandardowych otokach blokady. Odłączona blokada zachowuje swój stan (liczba zablokowanych i obiekt docelowy aliasu, jeśli istnieje), podczas gdy otoka jest resetowana, aby zawierała liczbę blokad równą zero i bez obiektu docelowego aliasu, zachowując własne aliasy. Nie ma operacji dotyczących liczby blokad (zwalniania i pozyskiwania). Ta adnotacja zachowuje się dokładnie tak, jak `_Moves_lock_` z tą różnicą, że odłączony argument powinien być **`return`** zamiast **`this`** .|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Korzystanie z adnotacji SAL w celu zmniejszenia liczby defektów kodu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [Poznanie SAL](../code-quality/understanding-sal.md)

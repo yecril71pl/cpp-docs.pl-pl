@@ -5,18 +5,18 @@ helpviewer_keywords:
 - control flow, branching
 - control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
-ms.openlocfilehash: c9a46ccb1cf519080c5105855e41ecd3ebc23f77
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ef437d0a691ceff72485be1ff9584052f540031a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188054"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232186"
 ---
 # <a name="transfers-of-control"></a>Transferowanie kontroli
 
-Można użyć instrukcji **goto** lub etykiety **Case** w instrukcji **Switch** , aby określić program, który oddziałuje poza inicjatorem. Taki kod jest niedozwolony, chyba że deklaracja zawierająca inicjator znajduje się w bloku ujętym w blok, w którym występuje instrukcja skoku.
+Możesz użyć **`goto`** instrukcji lub **`case`** etykiety w **`switch`** instrukcji, aby określić program, który oddziałuje poza inicjatorem. Taki kod jest niedozwolony, chyba że deklaracja zawierająca inicjator znajduje się w bloku ujętym w blok, w którym występuje instrukcja skoku.
 
-Poniższy przykład pokazuje pętlę, która deklaruje i inicjuje obiekty `total`, `ch`i `i`. Istnieje również błędna instrukcja **goto** , która przenosi formant poza inicjator.
+Poniższy przykład pokazuje pętlę, która deklaruje i inicjuje obiekty `total` , `ch` i `i` . Istnieje również błędne **`goto`** instrukcje, które przesyła kontrolkę poza inicjatorem.
 
 ```cpp
 // transfers_of_control.cpp
@@ -48,6 +48,6 @@ int main()
 }
 ```
 
-W poprzednim przykładzie instrukcja **goto** próbuje przenieść kontrolkę poza inicjalizacją `i`. Jeśli jednak `i` zostały zadeklarowane, ale nie zainicjowano, transfer będzie dozwolony.
+W poprzednim przykładzie **`goto`** instrukcja próbuje przenieść kontrolkę poza inicjalizacją `i` . Jednakże jeśli `i` zostały zadeklarowane, ale nie zainicjowano, transfer będzie dozwolony.
 
-Obiekty `total` i `ch`, zadeklarowane w bloku, który służy jako *instrukcja* instrukcji **while** , są niszczone, gdy ten blok jest zakończony przy użyciu instrukcji **Break** .
+Obiekty `total` i `ch` , zadeklarowane w bloku, który służy jako *instrukcja* **`while`** instrukcji, są niszczone, gdy ten blok jest zakończony przy użyciu **`break`** instrukcji.

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-ms.openlocfilehash: b0c615c91e562fa45f791d8cc20f39a830013aeb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b47d07cbe1e86e3f53d3a562cd5e1b3dca7f4814
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946007"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232394"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 
@@ -68,7 +68,7 @@ Jeśli to się powiedzie, zwraca wartość typu Integer *x*, zaokrągloną do ze
 
 W przeciwnym razie może zwrócić jeden z następujących elementów:
 
-|Problem|przesłać|
+|Problem|Przesłać|
 |-----------|------------|
 |*x* = ± nieskończoność|x|
 |*x* = ± 0|x|
@@ -78,7 +78,7 @@ Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **TRUNC —** , które pobierają i zwracają **zmiennoprzecinkowe** i **długie** **podwójne** typy. W programie C **TRUNC —** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **TRUNC —** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C **TRUNC —** zawsze przyjmuje i zwraca **`double`** .
 
 Ponieważ największe wartości zmiennoprzecinkowe są dokładnymi liczbami całkowitymi, ta funkcja nie zostanie przepełniony. Jednak może dojść do przepełnienia funkcji przez zwrócenie wartości do typu Integer.
 
@@ -86,9 +86,9 @@ Możesz również zaokrąglić w dół, niejawnie konwertując od zmiennoprzecin
 
 ## <a name="requirements"></a>Wymagania
 
-|Funkcja|Nagłówek języka C|C++nagłówki|
+|Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**TRUNC —** , **truncf —** , **truncl**|\<math.h>|\<cmath >|
+|**TRUNC —**, **truncf —**, **truncl**|\<math.h>|\<cmath>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

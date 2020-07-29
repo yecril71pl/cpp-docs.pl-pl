@@ -124,12 +124,12 @@ f1_keywords:
 - _Scanf_s_format_string_
 - _Printf_format_string_
 ms.assetid: 82826a3d-0c81-421c-8ffe-4072555dca3a
-ms.openlocfilehash: d2aa57abc6c0bcc50bcae743a50f86e5de65ab64
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4d0325fbab2f27da2556e2c252e35711d9b42789
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404040"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231263"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>Dodawanie adnotacji do parametrów funkcji i zwracanych wartości
 
@@ -167,7 +167,7 @@ W przypadku adnotacji w poniższej tabeli, gdy wskaźnik jest oznaczony adnotacj
 
      Wskaźnik do tablicy, który jest odczytywany przez funkcję. Tablica zawiera elementy o rozmiarze `s` , które muszą być prawidłowe.
 
-     `_bytes_`Wariant zawiera rozmiar w bajtach, a nie elementy. Tego wariantu należy używać tylko wtedy, gdy rozmiar nie może być wyrażony jako elementy. Na przykład `char` ciągi używają `_bytes_` wariantu tylko wtedy, gdy Podobna funkcja, która używa tej funkcji `wchar_t` .
+     `_bytes_`Wariant zawiera rozmiar w bajtach, a nie elementy. Tego wariantu należy używać tylko wtedy, gdy rozmiar nie może być wyrażony jako elementy. Na przykład **`char`** ciągi używają `_bytes_` wariantu tylko wtedy, gdy Podobna funkcja, która używa tej funkcji **`wchar_t`** .
 
 - `_In_reads_z_(s)`
 
@@ -190,7 +190,7 @@ W przypadku adnotacji w poniższej tabeli, gdy wskaźnik jest oznaczony adnotacj
 
      W tym przykładzie obiekt wywołujący udostępnia bufor `size` elementów dla `p1` . `MyStringCopy`sprawia, że niektóre z tych elementów są prawidłowe. Co ważniejsze, `_Null_terminated_` Adnotacja na `PWSTR` oznacza, że `p1` jest zakończona wartością null w stanie post. W ten sposób liczba prawidłowych elementów jest nadal zdefiniowana, ale określona liczba elementów nie jest wymagana.
 
-     `_bytes_`Wariant zawiera rozmiar w bajtach, a nie elementy. Tego wariantu należy używać tylko wtedy, gdy rozmiar nie może być wyrażony jako elementy. Na przykład `char` ciągi używają `_bytes_` wariantu tylko wtedy, gdy Podobna funkcja, która używa tej funkcji `wchar_t` .
+     `_bytes_`Wariant zawiera rozmiar w bajtach, a nie elementy. Tego wariantu należy używać tylko wtedy, gdy rozmiar nie może być wyrażony jako elementy. Na przykład **`char`** ciągi używają `_bytes_` wariantu tylko wtedy, gdy Podobna funkcja, która używa tej funkcji **`wchar_t`** .
 
 - `_Out_writes_z_(s)`
 
@@ -202,7 +202,7 @@ W przypadku adnotacji w poniższej tabeli, gdy wskaźnik jest oznaczony adnotacj
 
      Wskaźnik do tablicy, który jest odczytywany i zapisywana w funkcji. Jest to rozmiar `s` elementów i jest prawidłowy w stanie sprzed i po nim.
 
-     `_bytes_`Wariant zawiera rozmiar w bajtach, a nie elementy. Tego wariantu należy używać tylko wtedy, gdy rozmiar nie może być wyrażony jako elementy. Na przykład `char` ciągi używają `_bytes_` wariantu tylko wtedy, gdy Podobna funkcja, która używa tej funkcji `wchar_t` .
+     `_bytes_`Wariant zawiera rozmiar w bajtach, a nie elementy. Tego wariantu należy używać tylko wtedy, gdy rozmiar nie może być wyrażony jako elementy. Na przykład **`char`** ciągi używają `_bytes_` wariantu tylko wtedy, gdy Podobna funkcja, która używa tej funkcji **`wchar_t`** .
 
 - `_Inout_updates_z_(s)`
 
@@ -231,7 +231,7 @@ W przypadku adnotacji w poniższej tabeli, gdy wskaźnik jest oznaczony adnotacj
 
      Wskaźnik do tablicy, który jest odczytywany i zapisywana przez funkcję. Jest to element size `s` , który musi być prawidłowy w stanie sprzed i `c` elementy muszą być prawidłowe w stanie post.
 
-     `_bytes_`Wariant zawiera rozmiar w bajtach, a nie elementy. Tego wariantu należy używać tylko wtedy, gdy rozmiar nie może być wyrażony jako elementy. Na przykład `char` ciągi używają `_bytes_` wariantu tylko wtedy, gdy Podobna funkcja, która używa tej funkcji `wchar_t` .
+     `_bytes_`Wariant zawiera rozmiar w bajtach, a nie elementy. Tego wariantu należy używać tylko wtedy, gdy rozmiar nie może być wyrażony jako elementy. Na przykład **`char`** ciągi używają `_bytes_` wariantu tylko wtedy, gdy Podobna funkcja, która używa tej funkcji **`wchar_t`** .
 
 - `_Inout_updates_all_(s)`
 
@@ -243,7 +243,7 @@ W przypadku adnotacji w poniższej tabeli, gdy wskaźnik jest oznaczony adnotacj
 
      Innymi słowy, każdy element, który istnieje w buforze do `s` w stanie wstępnym, jest prawidłowy w stanie sprzed i po nim.
 
-     `_bytes_`Wariant zawiera rozmiar w bajtach, a nie elementy. Tego wariantu należy używać tylko wtedy, gdy rozmiar nie może być wyrażony jako elementy. Na przykład `char` ciągi używają `_bytes_` wariantu tylko wtedy, gdy Podobna funkcja, która używa tej funkcji `wchar_t` .
+     `_bytes_`Wariant zawiera rozmiar w bajtach, a nie elementy. Tego wariantu należy używać tylko wtedy, gdy rozmiar nie może być wyrażony jako elementy. Na przykład **`char`** ciągi używają `_bytes_` wariantu tylko wtedy, gdy Podobna funkcja, która używa tej funkcji **`wchar_t`** .
 
 - `_In_reads_to_ptr_(p)`
 
@@ -533,7 +533,7 @@ Wartość zwracana przez funkcję jest podobna do `_Out_` parametru, ale jest na
 
      `min(pM->nSize, sizeof(MyStruct))`
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Korzystanie z adnotacji SAL w celu zmniejszenia liczby defektów kodu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [Poznanie SAL](../code-quality/understanding-sal.md)
