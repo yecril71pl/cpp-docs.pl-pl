@@ -6,58 +6,58 @@ helpviewer_keywords:
 - examples [MFC], Windows Sockets
 - Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
-ms.openlocfilehash: 253a65430ae230fbc4deeb9bd5288f28237310d2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 275a6c274648225fedcec9d42c280f77af68158e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371085"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226779"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: przykład gniazd korzystających z archiwów
 
-W tym artykule przedstawiono przykład użycia klasy [CSocket](../mfc/reference/csocket-class.md). W przykładzie `CArchive` wykorzystuje obiekty do serializacji danych za pośrednictwem gniazda. Należy zauważyć, że nie jest to serializacja dokumentu do lub z pliku.
+W tym artykule przedstawiono przykład użycia klasy [CSocket](../mfc/reference/csocket-class.md). W przykładzie zastosowano `CArchive` obiekty do serializacji danych za pomocą gniazda. Należy zauważyć, że nie jest to Serializacja dokumentu do lub z pliku.
 
-Poniższy przykład ilustruje sposób używania archiwum `CSocket` do wysyłania i odbierania danych za pośrednictwem obiektów. Przykład jest zaprojektowany tak, aby dwa wystąpienia aplikacji (na tym samym komputerze lub na różnych komputerach w sieci) wymieniać dane. Jedno wystąpienie wysyła dane, które inne wystąpienie odbiera i potwierdza. Każda aplikacja może zainicjować wymianę i może działać jako serwer lub jako klient innej aplikacji. Następująca funkcja jest zdefiniowana w klasie widoku aplikacji:
+Poniższy przykład ilustruje sposób użycia archiwum do wysyłania i odbierania danych za pomocą `CSocket` obiektów. Przykład został zaprojektowany tak, aby dwa wystąpienia aplikacji (na tym samym komputerze lub na różnych komputerach w sieci) wymieniali dane. Jedno wystąpienie wysyła dane, które drugie wystąpienie odbiera i potwierdza. Aplikacja może inicjować wymianę i może działać jako serwer lub jako klient dla innej aplikacji. Następująca funkcja jest zdefiniowana w klasie widoku aplikacji:
 
 [!code-cpp[NVC_MFCSimpleSocket#1](../mfc/codesnippet/cpp/windows-sockets-example-of-sockets-using-archives_1.cpp)]
 
-Najważniejszą rzeczą w tym przykładzie jest to, że `Serialize` jego struktura jest równoległa do funkcji MFC. Funkcja `PacketSerialize` elementu członkowskiego składa się z **if** instrukcji z **else** klauzuli. Funkcja odbiera dwa [CArchive](../mfc/reference/carchive-class.md) odwołania jako parametry: *arData* i *arAck*. Jeśli obiekt archiwum *arData* jest ustawiony do przechowywania (wysyłania), **jeśli** gałąź jest wykonywana; w przeciwnym razie, jeśli *arData* jest ustawiona do ładowania (odbierania) funkcja przyjmuje gałąź **else.** Aby uzyskać więcej informacji na temat serializacji w MFC, zobacz [Serializacja](../mfc/how-to-make-a-type-safe-collection.md).
+Najważniejszym elementem tego przykładu jest to, że jego struktura jest równoległa do `Serialize` funkcji MFC. `PacketSerialize`Funkcja członkowska składa się z **`if`** instrukcji z **`else`** klauzulą. Funkcja otrzymuje dwa odwołania [CArchive](../mfc/reference/carchive-class.md) jako parametry: *arData* i *arAck*. Jeśli obiekt archiwum *arData* jest ustawiony do przechowywania (wysyłania), gałąź jest **`if`** wykonywana; w przeciwnym razie, jeśli *arData* jest ustawiona na potrzeby ładowania (otrzymywanie), funkcja przyjmuje **`else`** gałąź. Aby uzyskać więcej informacji na temat serializacji w MFC, zobacz [serializacji](../mfc/how-to-make-a-type-safe-collection.md).
 
 > [!NOTE]
-> Zakłada się, że obiekt archiwum *arAck* jest przeciwieństwem *arData*. Jeśli arData jest do *wysyłania,* *arAck* odbiera, a odwrotność jest prawdziwa.
+> Założono, że obiekt archiwum *arAck* jest przeciwieństwem elementu *arData*. Jeśli *arData* jest do wysłania, *arAck* odbiera i ma wartość true.
 
-Do wysyłania przykładowe pętle funkcji dla określonej liczby razy, za każdym razem generowania niektórych losowych danych do celów demonstracyjnych. Aplikacja będzie uzyskać rzeczywiste dane z jakiegoś źródła, takich jak plik. Operator wstawiania archiwum danych**<<** *arData* ( ) służy do wysyłania strumienia trzech kolejnych fragmentów danych:
+W przypadku operacji wysyłania Przykładowa pętla działa przez określoną liczbę razy, za każdym razem, gdy w celach demonstracyjnych są generowane pewne dane losowe. Aplikacja będzie uzyskiwać prawdziwe dane z niektórych źródeł, takich jak plik. Operator wstawiania Archiwum *arData* () służy **<<** do wysyłania strumienia trzech kolejnych fragmentów danych:
 
-- "Nagłówek", który określa charakter danych (w tym przypadku wartość zmiennej *bValue* i liczbę kopii zostanie wysłanych).
+- "Nagłówek", który określa charakter danych (w tym przypadku wartość zmiennej *bValue* oraz liczbę kopii do wysłania).
 
-   Oba elementy są generowane losowo w tym przykładzie.
+   Oba elementy są generowane losowo dla tego przykładu.
 
 - Określona liczba kopii danych.
 
-   Wewnętrzna **pętla for** wysyła *bWartość* określoną liczbę razy.
+   **`for`** Pętla wewnętrzna wysyła *bValue* określoną liczbę razy.
 
-- Ciąg o nazwie *strText,* który odbiorca wyświetla jego użytkownikowi.
+- Ciąg o nazwie *strText* , który odbiorca wyświetla dla użytkownika.
 
-Do odbierania funkcja działa podobnie, z tą różnicą, że używa**>>** operatora wyodrębniania archiwum ( ) do pobierania danych z archiwum. Aplikacja odbierająca weryfikuje dane, które otrzymuje, wyświetla ostateczną wiadomość "Odebrane", a następnie odsyła komunikat z napisem "Wysłane" dla aplikacji wysyłającej do wyświetlenia.
+W przypadku odbioru funkcja działa podobnie, z tą różnicą, że używa operatora wyodrębniania archiwum ( **>>** ) w celu pobierania danych z archiwum. Aplikacja odbierająca weryfikuje otrzymane dane, wyświetla końcowy komunikat "Received", a następnie odsyła komunikat "wysłano", aby można było wyświetlić aplikację wysyłającą.
 
-W tym modelu komunikacji słowo "Odebrane", wiadomość wysłana w zmiennej *strText,* jest wyświetlane na drugim końcu komunikacji, więc określa użytkownikowi odbierającemu, że odebrano określoną liczbę pakietów danych. Odbiorca odpowiada podobnym ciągiem z napisem "Wysłane", aby wyświetlić go na ekranie oryginalnego nadawcy. Odbiór obu ciągów wskazuje, że nastąpiła pomyślna komunikacja.
+W tym modelu komunikacyjnym słowo "Received", komunikat wysłany w zmiennej *strText* , jest do wyświetlenia na drugim końcu komunikacji, więc określa użytkownika, że otrzymano określoną liczbę pakietów danych. Odbiorca otrzymuje odpowiedzi o podobnym ciągu "wysłane", aby wyświetlić na ekranie oryginalnego nadawcy. Otrzymanie obu ciągów wskazuje, że wystąpiła pomyślna komunikacja.
 
 > [!CAUTION]
-> Jeśli piszesz program kliencki MFC do komunikowania się z ustalonymi serwerami (nie-MFC), nie wysyłaj obiektów C++ za pośrednictwem archiwum. Chyba że serwer jest aplikacją MFC, która rozumie rodzaje obiektów, które chcesz wysłać, nie będzie w stanie odbierać i deserializacji obiektów. Przykład w artykule [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md) pokazuje komunikację tego typu.
+> W przypadku pisania programu klienckiego MFC w celu komunikowania się z ustalonymi serwerami (bez MFC) nie należy wysyłać obiektów C++ za pomocą archiwum. Chyba że serwer jest aplikacją MFC, która zrozumie rodzaje obiektów, które chcesz wysłać, nie będzie można odbierać i deserializować obiektów. Przykład w artykule [Windows Sockets: porządkowanie bajtów](../mfc/windows-sockets-byte-ordering.md) pokazuje komunikację tego typu.
 
-Aby uzyskać więcej informacji, zobacz Windows Sockets Specyfikacja: **htonl**, **htons**, **ntohl**, **ntohs**. Aby uzyskać więcej informacji, zobacz:
+Aby uzyskać więcej informacji, zobacz Specyfikacja Windows Sockets: **htonl**, **htons**, **ntohl**, **ntohs**. Ponadto, aby uzyskać więcej informacji, zobacz:
 
-- [Gniazda systemu Windows: wyprowadzanie z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows Sockets: wyprowadzanie z klas gniazd](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
 - [Windows Sockets: jak działają gniazda z archiwami](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Gniazda systemu Windows: podstawy](../mfc/windows-sockets-background.md)
+- [Windows Sockets: Tło](../mfc/windows-sockets-background.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Gniazda systemu Windows w MFC](../mfc/windows-sockets-in-mfc.md)<br/>
-[CArchive::IsStoring](../mfc/reference/carchive-class.md#isstoring)<br/>
-[CArchive::operator <<](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
-[CArchive::operator >>](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
-[CArchive::Flush](../mfc/reference/carchive-class.md#flush)<br/>
-[CObject::Serialize](../mfc/reference/cobject-class.md#serialize)
+[Windows Sockets w MFC](../mfc/windows-sockets-in-mfc.md)<br/>
+[CArchive:: isprzechowywanie](../mfc/reference/carchive-class.md#isstoring)<br/>
+[CArchive:: operator <<](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
+[CArchive:: operator >>](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
+[CArchive:: Flush](../mfc/reference/carchive-class.md#flush)<br/>
+[CObject:: serializować](../mfc/reference/cobject-class.md#serialize)

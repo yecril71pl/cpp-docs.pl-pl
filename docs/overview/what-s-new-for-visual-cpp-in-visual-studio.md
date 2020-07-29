@@ -3,12 +3,12 @@ title: Co nowego w języku C++ w programie Visual Studio
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 6813a119453bfd365763269169f1291fa165bdcd
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: e8202d03517086192ae893caff0602ec86fcb426
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446873"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226792"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Co nowego w języku C++ w programie Visual Studio
 
@@ -249,7 +249,7 @@ Zaktualizowaliśmy kompilator i standardową bibliotekę języka C++ w tej wersj
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017, wersja 15.5
 
-Kompilator obsługuje około 75% funkcji, które są nowością w języku C++ 17, w tym powiązania strukturalne, `constexpr` wyrażenia lambda, `if constexpr` zmienne wbudowane, zapełnianie wyrażeń i Dodawanie `noexcept` do systemu typu. Te funkcje są dostępne w ramach **`/std:c++17`** opcji. Aby uzyskać więcej informacji, zobacz [ulepszenia zgodności języka C++ w programie Visual Studio 2017](cpp-conformance-improvements.md)
+Kompilator obsługuje około 75% funkcji, które są nowością w języku C++ 17, w tym powiązania strukturalne, **`constexpr`** wyrażenia lambda, `if constexpr` zmienne wbudowane, zapełnianie wyrażeń i Dodawanie **`noexcept`** do systemu typu. Te funkcje są dostępne w ramach **`/std:c++17`** opcji. Aby uzyskać więcej informacji, zobacz [ulepszenia zgodności języka C++ w programie Visual Studio 2017](cpp-conformance-improvements.md)
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 w wersji 15.7
 
@@ -296,7 +296,7 @@ Wydajność środowiska uruchomieniowego Visual C++ w dalszym ciągu ulepsza jak
 
 Kompilator języka Microsoft C++ obsługuje firmę Intel AVX-512. Zawiera instrukcje długości wektora, które wprowadzają nowe funkcje w AVX-512 do 128-bitowe i 256-bit Wide.
 
-Opcja [/Zc: noexceptTypes —](../build/reference/zc-noexcepttypes.md) umożliwia przywrócenie do wersji c++ 14 systemu, w którym jest `noexcept` używany tryb c++ 17. Ta opcja umożliwia zaktualizowanie kodu źródłowego tak, aby był zgodny z językiem C++ 17 bez konieczności ponownego pisania całego `throw()` kodu. Aby uzyskać więcej informacji, zobacz sekcję [usuwanie specyfikacji wyjątków dynamicznych i noexcept](cpp-conformance-improvements.md#noexcept_removal).
+Opcja [/Zc: noexceptTypes —](../build/reference/zc-noexcepttypes.md) umożliwia przywrócenie do wersji c++ 14 systemu, w którym jest **`noexcept`** używany tryb c++ 17. Ta opcja umożliwia zaktualizowanie kodu źródłowego tak, aby był zgodny z językiem C++ 17 bez konieczności ponownego pisania całego `throw()` kodu. Aby uzyskać więcej informacji, zobacz sekcję [usuwanie specyfikacji wyjątków dynamicznych i noexcept](cpp-conformance-improvements.md#noexcept_removal).
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 w wersji 15.7
 
@@ -314,7 +314,7 @@ Opcja [/Zc: noexceptTypes —](../build/reference/zc-noexcepttypes.md) umożliwi
 - Naprawiono `std::promise` operator przypisania przenoszenia, który wcześniej mógłby spowodować zablokowanie kodu na zawsze.
 - Naprawiono błędy kompilatora z `atomic<T*>` niejawną konwersją na `T*` .
 - `pointer_traits<Ptr>`teraz poprawnie wykrywane `Ptr::rebind<U>` .
-- Naprawiono brakujący `const` kwalifikator w `move_iterator` operatorze odejmowania.
+- Naprawiono brakujący **`const`** kwalifikator w `move_iterator` operatorze odejmowania.
 - Rozwiązano cichą codegeną nieprawidłowym dla stanowych zdefiniowanych przez użytkownika przystawek `propagate_on_container_copy_assignment` z żądaniem i `propagate_on_container_move_assignment` .
 - `atomic<T>`teraz dopuszczalne są przeciążenia `operator&()` .
 - Nieco Ulepszona diagnostyka kompilatora dla nieprawidłowych `bind()` wywołań.
@@ -335,8 +335,8 @@ Program Visual Studio 2017 RTM zawiera więcej ulepszeń biblioteki standardowej
 - Ustalono również "Specyfikacja wyjątku w deklaracji jest niezgodna z poprzednią deklaracją" zgłoszoną przez Clang **-wMicrosoft-Exception-spec**.
 - Również stałe pamięci podręcznej określania kolejności list raportowane przez Clang i C1XX.
 - Kontenery nieuporządkowane nie zamieniają swoich funkcji skrótu ani predykatów, gdy same kontenery zostały zamienione. Teraz.
-- Wiele operacji wymiany kontenera jest teraz oznaczonych `noexcept` (w przypadku, gdy biblioteka standardowa nigdy nie zamierza zgłosić wyjątku podczas wykrywania `propagate_on_container_swap` niezdefiniowanego warunku zachowania nierównego alokatora).
-- Wiele `vector<bool>` operacji jest teraz oznaczonych `noexcept` .
+- Wiele operacji wymiany kontenera jest teraz oznaczonych **`noexcept`** (w przypadku, gdy biblioteka standardowa nigdy nie zamierza zgłosić wyjątku podczas wykrywania `propagate_on_container_swap` niezdefiniowanego warunku zachowania nierównego alokatora).
+- Wiele `vector<bool>` operacji jest teraz oznaczonych **`noexcept`** .
 - Biblioteka standardowa będzie teraz wymuszać pasujący Alokator `value_type` (w trybie c++ 17) z wystąpieniem ucieczki.
 - Naprawiono niektóre warunki, w których funkcja samodzielnego wstawiania `basic_string` może zaszyfrować zawartość ciągów. (Uwaga: zestaw samodzielny — Wstawianie do wektorów jest nadal zabroniony przez standard).
 - `basic_string::shrink_to_fit()`nie ma już wpływ na program przydzielający `propagate_on_container_swap` .
@@ -360,7 +360,7 @@ Program Visual Studio 2017 RTM zawiera więcej ulepszeń biblioteki standardowej
 
 - Dodaliśmy \<any\> , \<string_view\> , `apply()` , `make_from_tuple()` .
 - Dodano \<optional\> , \<variant\> , `shared_ptr::weak_type` , i \<cstdalign\> .
-- Włączono C++ 14 `constexpr` w `min(initializer_list)` , `max(initializer_list)` , i `minmax(initializer_list)` ,, `min_element()` i `max_element()` `minmax_element()` .
+- Włączono C++ 14 **`constexpr`** w `min(initializer_list)` , `max(initializer_list)` , i `minmax(initializer_list)` ,, `min_element()` i `max_element()` `minmax_element()` .
 
 Aby uzyskać więcej informacji, zobacz [tabela zgodność języka Microsoft C++](../visual-cpp-language-conformance.md).
 
@@ -368,11 +368,11 @@ Aby uzyskać więcej informacji, zobacz [tabela zgodność języka Microsoft C++
 
 - Wprowadzono kilka dodatkowych funkcji języka C++ 17. Aby uzyskać więcej informacji, zobacz [tabela zgodność języka Microsoft C++](cpp-conformance-improvements.md#improvements_153).
 - Zaimplementowana P0602R0 "Variant i Optional powinna propagować nieuproszczoność kopiowania/przenoszenia".
-- Biblioteka standardowa teraz oficjalnie dopuszcza, aby dynamiczne RTTI były wyłączone za pośrednictwem opcji [/gr-](../build/reference/gr-enable-run-time-type-information.md) . Zarówno, jak i niezależnie `dynamic_pointer_cast()` `rethrow_if_nested()` `dynamic_cast` , więc Biblioteka standardowa oznacza teraz je jako `=delete` poniżej **`/GR-`** .
+- Biblioteka standardowa teraz oficjalnie dopuszcza, aby dynamiczne RTTI były wyłączone za pośrednictwem opcji [/gr-](../build/reference/gr-enable-run-time-type-information.md) . Zarówno, jak i niezależnie `dynamic_pointer_cast()` `rethrow_if_nested()` **`dynamic_cast`** , więc Biblioteka standardowa oznacza teraz je jako `=delete` poniżej **`/GR-`** .
 - Nawet wtedy, gdy dynamiczny RTTI został wyłączony za pośrednictwem **`/GR-`** , "static RTTI" w formie `typeid(SomeType)` jest nadal dostępny i ma kilka składników biblioteki standardowej. Biblioteka standardowa obsługuje teraz wyłączenie tej funkcji za pośrednictwem programu **`/D_HAS_STATIC_RTTI=0`** . Ta flaga wyłącza również `std::any` `target()` `target_type()` funkcje elementów członkowskich i `std::function` `get_deleter()` zaprzyjaźnioną funkcję członkowską i `std::shared_ptr` `std::weak_ptr` .
-- Biblioteka standardowa domyślnie używa języka C++ 14 `constexpr` zamiast wstępnie zdefiniowanych makr.
+- Biblioteka standardowa domyślnie używa języka C++ 14 **`constexpr`** zamiast wstępnie zdefiniowanych makr.
 - Biblioteka standardowa używa teraz szablonów aliasów wewnętrznie.
-- Biblioteka standardowa używa teraz `nullptr` wewnętrznie, zamiast `nullptr_t{}` . (Zostało wyeliminowane wewnętrzne użycie wartości NULL. Wewnętrzne użycie 0-jako-null jest czyszczone stopniowo.)
+- Biblioteka standardowa używa teraz **`nullptr`** wewnętrznie, zamiast `nullptr_t{}` . (Zostało wyeliminowane wewnętrzne użycie wartości NULL. Wewnętrzne użycie 0-jako-null jest czyszczone stopniowo.)
 - Biblioteka standardowa jest teraz używana `std::move()` wewnętrznie zamiast stylistically `std::forward()` .
 - Zmieniono `static_assert(false, "message")` na `#error message` . Ta zmiana poprawia diagnostykę kompilatora, ponieważ `#error` natychmiast kończy kompilację.
 - Standardowa biblioteka nie oznacza już funkcji jako `__declspec(dllimport)` . Nowoczesne technologie konsolidatora nie wymagają już tego.
@@ -439,7 +439,7 @@ Aby uzyskać więcej informacji, zobacz [tabela zgodność języka Microsoft C++
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017, wersja 15.3
 
-- Praca z usługą `noexcept` , która uniemożliwiła `std::atomic` wprowadzanie implementacji do funkcji, które korzystają z obsługi wyjątków strukturalnych (SEH).
+- Praca z usługą **`noexcept`** , która uniemożliwiła `std::atomic` wprowadzanie implementacji do funkcji, które korzystają z obsługi wyjątków strukturalnych (SEH).
 - Zmieniono wewnętrzną funkcję biblioteki standardowej `_Deallocate()` , aby zoptymalizować do mniejszego kodu, co pozwala na przekreślenie do większej liczby miejsc.
 - Zmieniono `std::try_lock()` , aby użyć rozwinięcia pakietu zamiast rekursji.
 - Ulepszono `std::lock()` algorytm unikania zakleszczenia w celu używania `lock()` operacji zamiast obracania na `try_lock()` wszystkie blokady.
@@ -456,7 +456,7 @@ Aby uzyskać więcej informacji, zobacz [tabela zgodność języka Microsoft C++
 - `basic_string`Operacje mutacji teraz konstruują ponownie przydzieloną bufory w preferowanym stanie zamiast zmieniać rozmiar w miejscu. Na przykład Wstaw na początku ciągu teraz przenosi zawartość po wstawieniu dokładnie jeden raz. Jest on przenoszony w dół lub do nowo przydzielonych buforów. Nie jest już dwukrotnie przenoszona w przypadku ponownej alokacji, najpierw do nowo przydzielonych buforów, a następnie w dół.
 - Operacje wywołujące w pamięci podręcznej standardowej biblioteki języka C w tym \<string\> momencie `errno` umożliwiają usunięcie powtórzonej interakcji z protokołem TLS.
 - Uproszczona `is_pointer` implementacja.
-- Zakończono zmianę wyrażenia opartego na funkcji SFINAE na `struct` i `void_t` -based.
+- Zakończono zmianę wyrażenia opartego na funkcji SFINAE na **`struct`** i `void_t` -based.
 - Algorytmy biblioteki standardowej teraz unikają iteratorów postincrementing.
 - Stałe ostrzeżenia obcinania w przypadku korzystania z 32-bitowych przystawek w systemach 64-bitowych.
 - `std::vector`przypisanie przenoszenia jest teraz bardziej wydajne w przypadku niePOCMAego przypadku alokatora, gdy jest to możliwe.
@@ -515,7 +515,7 @@ Kilka operacji języka C++, które używają aparatu IntelliSense do refaktoryza
 
 |||
 |-|-|
-|Obiekt feature|Poprawa wydajności|
+|Cechy|Poprawa wydajności|
 |Zmień nazwę|5.3 x|
 |Zmień sygnaturę |4,5 x|
 |Znajdź wszystkie odwołania|4,7 x|
@@ -657,7 +657,7 @@ Podstawowe narzędzia do sprawdzania kodu C++ wymuszające stosowanie [podstawow
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017, wersja 15.5
 
-- Nowe podstawowe wytyczne dotyczące języka C++ sprawdzają poprawność wskaźnika inteligentnego, prawidłowe użycie inicjatorów globalnych i Oflagowanie użycia konstrukcji, takich jak `goto` i złe rzutowanie.
+- Nowe podstawowe wytyczne dotyczące języka C++ sprawdzają poprawność wskaźnika inteligentnego, prawidłowe użycie inicjatorów globalnych i Oflagowanie użycia konstrukcji, takich jak **`goto`** i złe rzutowanie.
 
 - Niektóre numery ostrzeżeń, które można znaleźć w wersji 15.3, nie są już dostępne w wersji 15.5. Ostrzeżenia te zostały zastąpione bardziej szczegółowymi operacjami sprawdzania.
 
@@ -697,7 +697,7 @@ Narzędzia Diagnostyka grafiki programu Visual Studio: można ich używać do re
 
 - **Wyszukiwanie i filtrowanie w tabeli obiektów:** Zapewnia szybki i łatwy sposób znajdowania szukanych zasobów.
 
-  ![Wyszukaj](media/search.png)
+  ![Wyszukiwanie](media/search.png)
 
 - **Historia zasobów:** Ten nowy widok zapewnia ulepszony sposób wyświetlania całej historii modyfikacji zasobu, ponieważ był używany podczas renderowania przechwyconej ramki. Aby wywoływać historię dla dowolnego zasobu, kliknij ikonę zegara obok dowolnego hiperłącza zasobu.
 

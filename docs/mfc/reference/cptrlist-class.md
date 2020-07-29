@@ -1,5 +1,5 @@
 ---
-title: CPtrList Class
+title: Klasa CPtrList
 ms.date: 11/04/2016
 f1_keywords:
 - CPtrList
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - CPtrList class [MFC]
 - generic lists
 ms.assetid: 4139a09c-4338-4f42-9eea-51336120b43c
-ms.openlocfilehash: 5b88b0950b3b46f9738bd26080883c00d46f8555
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7da4fe52d25d9ffdf6371aa40f41d7082f1165c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372442"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226844"
 ---
-# <a name="cptrlist-class"></a>CPtrList Class
+# <a name="cptrlist-class"></a>Klasa CPtrList
 
 Obsługuje listy wskaźników typu void.
 
@@ -27,23 +27,23 @@ class CPtrList : public CObject
 
 ## <a name="members"></a>Elementy członkowskie
 
-Funkcje elementów członkowskich `CPtrList` są podobne do funkcji elementów członkowskich klasy [CObList](../../mfc/reference/coblist-class.md). Ze względu na to podobieństwa można użyć `CObList` dokumentacji kątem specyfiki funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnik jako funkcja parametru lub zwracanej wartości, Wstaw wskaźnik do **void**.
+Funkcje składowe `CPtrList` są podobne do funkcji składowych klasy [CObList](../../mfc/reference/coblist-class.md). W związku z tym podobieństwem można użyć `CObList` dokumentacji referencyjnej dla specyficznych dla funkcji składowych. Wszędzie tam, gdzie widzisz `CObject` wskaźnik jako parametr funkcji lub wartość zwracana, Zastąp wskaźnik do **`void`** .
 
 `CObject*& CObList::GetHead() const;`
 
-na przykład przekłada się na
+na przykład tłumaczy na
 
 `void*& CPtrList::GetHead() const;`
 
 ## <a name="remarks"></a>Uwagi
 
-`CPtrList` dołącza IMPLEMENT_DYNAMIC — makro do obsługi dostępu typu run-time i zrzucanie `CDumpContext` obiektu. Zrzut elementów listy poszczególnych wskaźnika, należy należy ustawić głębokość kontekstu zrzutu do 1 lub większą.
+`CPtrList`obejmuje makro IMPLEMENT_DYNAMIC do obsługi dostępu do typu w czasie wykonywania i zrzucania do `CDumpContext` obiektu. Jeśli potrzebujesz zrzutu poszczególnych elementów listy wskaźników, musisz ustawić głębokość kontekstu zrzutu na 1 lub większą.
 
-Nie można serializować list wskaźnika.
+Listy wskaźników nie mogą być serializowane.
 
-Gdy `CPtrList` obiekt zostanie usunięty lub usunięcie jej elementy są usuwane tylko wskaźników, nie mogą odwoływać się do jednostki.
+Po `CPtrList` usunięciu obiektu lub po usunięciu jego elementów zostaną usunięte tylko te wskaźniki, a nie jednostki, do których się odwołują.
 
-Aby uzyskać więcej informacji na temat korzystania z `CPtrList`, zapoznaj się z artykułem [kolekcje](../../mfc/collections.md).
+Aby uzyskać więcej informacji na temat korzystania z programu `CPtrList` , zobacz [kolekcje](../../mfc/collections.md)artykułów.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -53,7 +53,7 @@ Aby uzyskać więcej informacji na temat korzystania z `CPtrList`, zapoznaj się
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxcoll.h
+**Nagłówek:** afxcoll. h
 
 ## <a name="see-also"></a>Zobacz także
 

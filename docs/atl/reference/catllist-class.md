@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 2c16713af11a915772085165ed294cba4ae337f2
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 15830a30e8236a13f3911d1b84d3727d3246fc0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168049"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226675"
 ---
 # <a name="catllist-class"></a>Klasa CAtlList
 
@@ -113,7 +113,7 @@ Kod używany do kopiowania lub przenoszenia elementów. Aby uzyskać więcej inf
 
 ## <a name="remarks"></a>Uwagi
 
-`CAtlList` Klasa obsługuje uporządkowane listy nieunikatowych obiektów dostępnych sekwencyjnie lub według wartości. `CAtlList`listy zachowują się jak listy połączone podwójnie. Każda lista ma nagłówek i ogon, a nowe elementy (lub listy w niektórych przypadkach) można dodać do dowolnego końca listy lub wstawić przed lub po określonych elementach.
+`CAtlList`Klasa obsługuje uporządkowane listy nieunikatowych obiektów dostępnych sekwencyjnie lub według wartości. `CAtlList`listy zachowują się jak listy połączone podwójnie. Każda lista ma nagłówek i ogon, a nowe elementy (lub listy w niektórych przypadkach) można dodać do dowolnego końca listy lub wstawić przed lub po określonych elementach.
 
 Większość `CAtlList` metod używa wartości pozycji. Ta wartość jest używana przez metody do odwoływania się do rzeczywistej lokalizacji pamięci, w której są przechowywane elementy, i nie powinna być obliczana ani przewidywalna bezpośrednio. Jeśli konieczne jest uzyskanie dostępu do *n*-tego elementu na liście, Metoda [CAtlList:: FindIndex —](#findindex) zwróci odpowiadającą wartość pozycji dla danego indeksu. Metody [CAtlList:: GetNext](#getnext) i [CAtlList:: getpoprz](#getprev) mogą służyć do iteracji obiektów na liście.
 
@@ -266,7 +266,7 @@ Destruktor.
 
 Zwalnia wszystkie przydzieloną zasoby, w tym wywołanie [CAtlList::](#removeall) Usuń wszystkie elementy z listy.
 
-W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli lista nadal zawiera pewne elementy po wywołaniu `RemoveAll`.
+W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli lista nadal zawiera pewne elementy po wywołaniu `RemoveAll` .
 
 ## <a name="catllistfind"></a><a name="find"></a>CAtlList:: find
 
@@ -343,9 +343,9 @@ Odwołanie do elementu lub jego kopię.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli lista jest **stałą**, `GetAt` zwraca kopię elementu. Pozwala to na użycie metody tylko po prawej stronie instrukcji przypisania i ochronę listy przed modyfikacją.
+Jeśli lista jest **`const`** , `GetAt` zwraca kopię elementu. Pozwala to na użycie metody tylko po prawej stronie instrukcji przypisania i ochronę listy przed modyfikacją.
 
-Jeśli lista nie jest **stałą**, `GetAt` zwraca odwołanie do elementu. Pozwala to na użycie metody po obu stronach instrukcji przypisania i w ten sposób pozwala na modyfikowanie wpisów listy.
+Jeśli lista nie jest **`const`** , `GetAt` zwraca odwołanie do elementu. Pozwala to na użycie metody po obu stronach instrukcji przypisania i w ten sposób pozwala na modyfikowanie wpisów listy.
 
 W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli wartość *pos* będzie równa null.
 
@@ -384,9 +384,9 @@ Zwraca odwołanie do lub kopię elementu na początku listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli lista jest **stałą**, `GetHead` zwraca kopię elementu na początku listy. Pozwala to na użycie metody tylko po prawej stronie instrukcji przypisania i ochronę listy przed modyfikacją.
+Jeśli lista jest **`const`** , `GetHead` zwraca kopię elementu na początku listy. Pozwala to na użycie metody tylko po prawej stronie instrukcji przypisania i ochronę listy przed modyfikacją.
 
-Jeśli lista nie jest **stałą**, `GetHead` zwraca odwołanie do elementu znajdującego się na końcu listy. Pozwala to na użycie metody po obu stronach instrukcji przypisania i w ten sposób pozwala na modyfikowanie wpisów listy.
+Jeśli lista nie jest **`const`** , `GetHead` zwraca odwołanie do elementu znajdującego się na końcu listy. Pozwala to na użycie metody po obu stronach instrukcji przypisania i w ten sposób pozwala na modyfikowanie wpisów listy.
 
 W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli nagłówek listy wskazuje wartość NULL.
 
@@ -426,13 +426,13 @@ const E& GetNext(POSITION& pos) const throw();
 ### <a name="parameters"></a>Parametry
 
 *Terminal*<br/>
-Wartość pozycji zwrócona przez poprzednie wywołanie do `GetNext`, [CAtlList:: GetHeadPosition](#getheadposition)lub inną `CAtlList` metodę.
+Wartość pozycji zwrócona przez poprzednie wywołanie do `GetNext` , [CAtlList:: GetHeadPosition](#getheadposition)lub inną `CAtlList` metodę.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli lista jest **stałą**, `GetNext` zwraca kopię następnego elementu listy. Pozwala to na użycie metody tylko po prawej stronie instrukcji przypisania i ochronę listy przed modyfikacją.
+Jeśli lista jest **`const`** , `GetNext` zwraca kopię następnego elementu listy. Pozwala to na użycie metody tylko po prawej stronie instrukcji przypisania i ochronę listy przed modyfikacją.
 
-Jeśli lista nie jest **stałą**, `GetNext` zwraca odwołanie do następnego elementu listy. Pozwala to na użycie metody po obu stronach instrukcji przypisania i w ten sposób pozwala na modyfikowanie wpisów listy.
+Jeśli lista nie jest **`const`** , `GetNext` zwraca odwołanie do następnego elementu listy. Pozwala to na użycie metody po obu stronach instrukcji przypisania i w ten sposób pozwala na modyfikowanie wpisów listy.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -454,13 +454,13 @@ const E& GetPrev(POSITION& pos) const throw();
 ### <a name="parameters"></a>Parametry
 
 *Terminal*<br/>
-Wartość pozycji zwrócona przez poprzednie wywołanie do `GetPrev`, [CAtlList:: GetTailPosition](#gettailposition)lub inną `CAtlList` metodę.
+Wartość pozycji zwrócona przez poprzednie wywołanie do `GetPrev` , [CAtlList:: GetTailPosition](#gettailposition)lub inną `CAtlList` metodę.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli lista jest **stałą**, `GetPrev` zwraca kopię elementu listy. Pozwala to na użycie metody tylko po prawej stronie instrukcji przypisania i ochronę listy przed modyfikacją.
+Jeśli lista jest **`const`** , `GetPrev` zwraca kopię elementu listy. Pozwala to na użycie metody tylko po prawej stronie instrukcji przypisania i ochronę listy przed modyfikacją.
 
-Jeśli lista nie jest **stałą**, `GetPrev` zwraca odwołanie do elementu listy. Pozwala to na użycie metody po obu stronach instrukcji przypisania i w ten sposób pozwala na modyfikowanie wpisów listy.
+Jeśli lista nie jest **`const`** , `GetPrev` zwraca odwołanie do elementu listy. Pozwala to na użycie metody po obu stronach instrukcji przypisania i w ten sposób pozwala na modyfikowanie wpisów listy.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -485,9 +485,9 @@ Zwraca odwołanie do lub kopię elementu na końcu listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli lista jest **stałą**, `GetTail` zwraca kopię elementu na początku listy. Pozwala to na użycie metody tylko po prawej stronie instrukcji przypisania i ochronę listy przed modyfikacją.
+Jeśli lista jest **`const`** , `GetTail` zwraca kopię elementu na początku listy. Pozwala to na użycie metody tylko po prawej stronie instrukcji przypisania i ochronę listy przed modyfikacją.
 
-Jeśli lista nie jest **stałą**, `GetTail` zwraca odwołanie do elementu znajdującego się na końcu listy. Pozwala to na użycie metody po obu stronach instrukcji przypisania i w ten sposób pozwala na modyfikowanie wpisów listy.
+Jeśli lista nie jest **`const`** , `GetTail` zwraca odwołanie do elementu znajdującego się na końcu listy. Pozwala to na użycie metody po obu stronach instrukcji przypisania i w ten sposób pozwala na modyfikowanie wpisów listy.
 
 W kompilacjach debugowania wystąpi błąd potwierdzenia, jeśli ogon listy wskazuje wartość NULL.
 

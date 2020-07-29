@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - amp_math/Concurrency::fast_math
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-ms.openlocfilehash: 57e2134a2254dc4bc34d515e65e2ec629efeff33
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 6ed8dcfa2faff49e8811769b76aad9df15b2fe7b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139513"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226753"
 ---
 # <a name="concurrencyfast_math-namespace"></a>Concurrency::fast_math — Przestrzeń nazw
 
-Funkcje w przestrzeni nazw `fast_math` mają niższą dokładność, obsługują tylko jedną precyzję (`float`) i wywołują elementy wewnętrzne DirectX. Istnieją dwie wersje każdej funkcji, na przykład `cos` i `cosf`. Obie wersje pobierają i zwracają `float`, ale każdy wywołuje te same wewnętrzne środowiska DirectX.
+Funkcje w `fast_math` przestrzeni nazw mają mniejszą dokładność, obsługują tylko jedną precyzję ( **`float`** ) i wywołują elementy wewnętrzne DirectX. Istnieją dwie wersje każdej funkcji, na przykład `cos` i `cosf` . Obie wersje pobierają i zwracają **`float`** , ale każdy wywołuje te same wewnętrzne środowiska DirectX.
 
 ## <a name="syntax"></a>Składnia
 
@@ -21,11 +21,11 @@ Funkcje w przestrzeni nazw `fast_math` mają niższą dokładność, obsługują
 namespace fast_math;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="functions"></a>Funkcje
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[cosinus](concurrency-fast-math-namespace-functions.md#cos)|Oblicza arcus cosinus argumentu|
 |[cosf —](concurrency-fast-math-namespace-functions.md#cosf)|Oblicza arcus cosinus argumentu|
@@ -99,6 +99,6 @@ namespace fast_math;
 
 **Przestrzeń nazw:** Concurrency:: fast_math
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności (C++ AMP)](concurrency-namespace-cpp-amp.md)

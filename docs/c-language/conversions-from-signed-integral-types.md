@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data type conversion [C++], signed and unsigned integers
 - type conversion [C++], signed and unsigned integers
 ms.assetid: 5eea32f8-8b14-413d-acac-c063b3d118d7
-ms.openlocfilehash: 79608b5ca4335ee3c30bdab27e7efade5b7e2f54
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: d41d2fd205a87f9f2be2179ffd8e38256a96e4f7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998721"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226480"
 ---
 # <a name="conversions-from-signed-integral-types"></a>Konwersje z podpisanych typów całkowitych
 
@@ -33,61 +33,61 @@ W przypadku konwertowania podpisanej liczby całkowitej na typ zmiennoprzecinkow
 
 Informacje o rozmiarach typów całkowitych i zmiennoprzecinkowych znajdują się w temacie [Storage of Basic Types](../c-language/storage-of-basic-types.md).
 
-Poniższa tabela zawiera podsumowanie konwersji z podpisanych typów całkowitych. Przyjęto założenie, że typ **char** jest podpisany domyślnie. Jeśli użyjesz opcji czasu kompilowania, aby zmienić wartość domyślną dla typu **char** na unsigned, zamiast konwersji w tej tabeli należy zastosować konwersje [z tabeli niepodpisanych typów całkowitych](../c-language/conversions-from-unsigned-integral-types.md) dla typu **znak bez znaku** .
+Poniższa tabela zawiera podsumowanie konwersji z podpisanych typów całkowitych. Zakłada, że **`char`** Typ jest podpisany domyślnie. Jeśli używasz opcji czasu kompilowania, aby zmienić wartość domyślną dla **`char`** typu unsigned, konwersje podanych w tabeli [typów całkowitych bez znaku](../c-language/conversions-from-unsigned-integral-types.md) dla **`unsigned char`** typu Apply zamiast konwersji w tej tabeli.
 
 **Specyficzne dla firmy Microsoft**
 
-W kompilatorze firmy Microsoft **int** i **Long** są odrębnymi, ale równoważnymi typami. Konwersja wartości **int** jest wykonywana w taki sam sposób jak w przypadku konwersji **Long**.
+W kompilatorze firmy Microsoft **`int`** i **`long`** są to różne, ale równoważne typy. Konwersja wartości jest wykonywana **`int`** w taki sam sposób jak w przypadku konwersji **`long`** .
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 ## <a name="table-of-conversions-from-signed-integral-types"></a>Tabela konwersji z podpisanych typów całkowitych
 
-|Z|Do|Metoda|
+|Źródło|Działanie|Metoda|
 |----------|--------|------------|
-|**znak**<sup>1</sup>|**short**|Podjęcie i rozciągnięcie|
-|**char**|**długi**|Podjęcie i rozciągnięcie|
-|**char**|**long long**|Podjęcie i rozciągnięcie|
-|**char**|**unsigned char**|Zachowaj wzorzec; bit o wysokiej kolejności utraci funkcję jako bit znaku|
-|**char**|**unsigned short**|Podpisz do **Short**; Konwertuj **krótko** - **unsigned Short**|
-|**char**|**unsigned long**|Podpisz do **Long**; Konwertuj **Long** na **Long bez znaku**|
-|**char**|**bez znaku Long Long**|Podpisz do **Long Long**; Konwertuj **Long** Long na **unsigned** Long Long|
-|**char**|**float**|Podpisz do **Long**; Konwertuj **Long** na **zmiennoprzecinkową**|
-|**char**|**double**|Podpisz do **Long**; Konwertuj **Long** na **Double**|
-|**char**|**Long Double**|Podpisz do **Long**; Konwertuj **Long** na **Double**|
-|**short**|**char**|Zachowaj bajt o niskiej kolejności|
-|**short**|**długi**|Podjęcie i rozciągnięcie|
-|**short**|**long long**|Podjęcie i rozciągnięcie|
-|**short**|**unsigned char**|Zachowaj bajt o niskiej kolejności|
-|**short**|**unsigned short**|Zachowaj wzorzec bitowy; bit o wysokiej kolejności utraci funkcję jako bit znaku|
-|**short**|**unsigned long**|Podpisz do **Long**; Konwertuj **Long** na **Long bez znaku**|
-|**short**|**bez znaku Long Long**|Podpisz do **Long Long**; Konwertuj **Long** Long na **unsigned** Long Long|
-|**short**|**float**|Podpisz do **Long**; Konwertuj **Long** na **zmiennoprzecinkową**|
-|**short**|**double**|Podpisz do **Long**; Konwertuj **Long** na **Double**|
-|**short**|**Long Double**|Podpisz do **Long**; Konwertuj **Long** na **Double**|
-|**długi**|**char**|Zachowaj bajt o niskiej kolejności|
-|**długi**|**short**|Zachowaj wyraz o niskiej kolejności|
-|**długi**|**long long**|Podjęcie i rozciągnięcie|
-|**długi**|**unsigned char**|Zachowaj bajt o niskiej kolejności|
-|**długi**|**unsigned short**|Zachowaj wyraz o niskiej kolejności|
-|**długi**|**unsigned long**|Zachowaj wzorzec bitowy; bit o wysokiej kolejności utraci funkcję jako bit znaku|
-|**długi**|**bez znaku Long Long**|Podpisz do **Long Long**; Konwertuj **Long** Long na **unsigned** Long Long|
-|**długi**|**float**|Reprezentuje jako **zmiennoprzecinkowe**. Jeśli **Long** nie można przedstawić dokładnie, pewna precyzja zostanie utracona.|
-|**długi**|**double**|Reprezentuje jako **Double**. Jeśli **Long** nie można reprezentować dokładnie jako **podwójnej**precyzji, pewne są tracone.|
-|**długi**|**Long Double**|Reprezentuje jako **Double**. Jeśli **Long** nie można reprezentować dokładnie jako **podwójnej**precyzji, pewne są tracone.|
-|**long long**|**char**|Zachowaj bajt o niskiej kolejności|
-|**long long**|**short**|Zachowaj wyraz o niskiej kolejności|
-|**long long**|**długi**|Zachowywanie wartości DWORD z niską kolejnością|
-|**long long**|**unsigned char**|Zachowaj bajt o niskiej kolejności|
-|**long long**|**unsigned short**|Zachowaj wyraz o niskiej kolejności|
-|**long long**|**unsigned long**|Zachowywanie wartości DWORD z niską kolejnością|
-|**long long**|**bez znaku Long Long**|Zachowaj wzorzec bitowy; bit o wysokiej kolejności utraci funkcję jako bit znaku|
-|**long long**|**float**|Reprezentuje jako **zmiennoprzecinkowe**. Jeśli **Long Long** nie można dokładnie przedstawić, pewna dokładność zostanie utracona.|
-|**long long**|**double**|Reprezentuje jako **Double**. Jeśli **Long Long** nie można reprezentować dokładnie jako **Double**, pewna dokładność zostanie utracona.|
-|**long long**|**Long Double**|Reprezentuje jako **Double**. Jeśli **Long Long** nie można reprezentować dokładnie jako **Double**, pewna dokładność zostanie utracona.|
+|**`char`**<sup>jedno</sup>|**`short`**|Podjęcie i rozciągnięcie|
+|**`char`**|**`long`**|Podjęcie i rozciągnięcie|
+|**`char`**|**`long long`**|Podjęcie i rozciągnięcie|
+|**`char`**|**`unsigned char`**|Zachowaj wzorzec; bit o wysokiej kolejności utraci funkcję jako bit znaku|
+|**`char`**|**`unsigned short`**|Podpisz do **`short`** ; Konwertuj **`short`** na**`unsigned short`**|
+|**`char`**|**`unsigned long`**|Podpisz do **`long`** ; Konwertuj **`long`** na**`unsigned long`**|
+|**`char`**|**`unsigned long long`**|Podpisz do **`long long`** ; Konwertuj **`long long`** na**`unsigned long long`**|
+|**`char`**|**`float`**|Podpisz do **`long`** ; Konwertuj **`long`** na**`float`**|
+|**`char`**|**`double`**|Podpisz do **`long`** ; Konwertuj **`long`** na**`double`**|
+|**`char`**|**`long double`**|Podpisz do **`long`** ; Konwertuj **`long`** na**`double`**|
+|**`short`**|**`char`**|Zachowaj bajt o niskiej kolejności|
+|**`short`**|**`long`**|Podjęcie i rozciągnięcie|
+|**`short`**|**`long long`**|Podjęcie i rozciągnięcie|
+|**`short`**|**`unsigned char`**|Zachowaj bajt o niskiej kolejności|
+|**`short`**|**`unsigned short`**|Zachowaj wzorzec bitowy; bit o wysokiej kolejności utraci funkcję jako bit znaku|
+|**`short`**|**`unsigned long`**|Podpisz do **`long`** ; Konwertuj **`long`** na**`unsigned long`**|
+|**`short`**|**`unsigned long long`**|Podpisz do **`long long`** ; Konwertuj **`long long`** na**`unsigned long long`**|
+|**`short`**|**`float`**|Podpisz do **`long`** ; Konwertuj **`long`** na**`float`**|
+|**`short`**|**`double`**|Podpisz do **`long`** ; Konwertuj **`long`** na**`double`**|
+|**`short`**|**`long double`**|Podpisz do **`long`** ; Konwertuj **`long`** na**`double`**|
+|**`long`**|**`char`**|Zachowaj bajt o niskiej kolejności|
+|**`long`**|**`short`**|Zachowaj wyraz o niskiej kolejności|
+|**`long`**|**`long long`**|Podjęcie i rozciągnięcie|
+|**`long`**|**`unsigned char`**|Zachowaj bajt o niskiej kolejności|
+|**`long`**|**`unsigned short`**|Zachowaj wyraz o niskiej kolejności|
+|**`long`**|**`unsigned long`**|Zachowaj wzorzec bitowy; bit o wysokiej kolejności utraci funkcję jako bit znaku|
+|**`long`**|**`unsigned long long`**|Podpisz do **`long long`** ; Konwertuj **`long long`** na**`unsigned long long`**|
+|**`long`**|**`float`**|Reprezentuje jako **`float`** . Jeśli **`long`** nie może być reprezentowany dokładnie, pewna dokładność zostanie utracona.|
+|**`long`**|**`double`**|Reprezentuje jako **`double`** . Jeśli **`long`** element nie może być reprezentowany dokładnie jako **`double`** , pewna dokładność zostanie utracona.|
+|**`long`**|**`long double`**|Reprezentuje jako **`double`** . Jeśli **`long`** element nie może być reprezentowany dokładnie jako **`double`** , pewna dokładność zostanie utracona.|
+|**`long long`**|**`char`**|Zachowaj bajt o niskiej kolejności|
+|**`long long`**|**`short`**|Zachowaj wyraz o niskiej kolejności|
+|**`long long`**|**`long`**|Zachowywanie wartości DWORD z niską kolejnością|
+|**`long long`**|**`unsigned char`**|Zachowaj bajt o niskiej kolejności|
+|**`long long`**|**`unsigned short`**|Zachowaj wyraz o niskiej kolejności|
+|**`long long`**|**`unsigned long`**|Zachowywanie wartości DWORD z niską kolejnością|
+|**`long long`**|**`unsigned long long`**|Zachowaj wzorzec bitowy; bit o wysokiej kolejności utraci funkcję jako bit znaku|
+|**`long long`**|**`float`**|Reprezentuje jako **`float`** . Jeśli **`long long`** nie może być reprezentowany dokładnie, pewna dokładność zostanie utracona.|
+|**`long long`**|**`double`**|Reprezentuje jako **`double`** . Jeśli **`long long`** element nie może być reprezentowany dokładnie jako **`double`** , pewna dokładność zostanie utracona.|
+|**`long long`**|**`long double`**|Reprezentuje jako **`double`** . Jeśli **`long long`** element nie może być reprezentowany dokładnie jako **`double`** , pewna dokładność zostanie utracona.|
 
-<sup>1</sup> wszystkie wpisy **znaków** zakładają, że typ **char** jest podpisany domyślnie.
+<sup>1</sup> wszystkie **`char`** wpisy zakładają, że **`char`** Typ jest podpisany domyślnie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersje przypisań](../c-language/assignment-conversions.md)

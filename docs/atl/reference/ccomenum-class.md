@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
-ms.openlocfilehash: 7252eb2fa5d34618a1c38484a2506bae27a1106a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 7241d903e44329eb8fd50155059355a470fb7b90
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497219"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226623"
 ---
 # <a name="ccomenum-class"></a>Klasa CComEnum
 
@@ -48,13 +48,13 @@ Model wątkowości klasy. Ten parametr domyślnie jest modelem wątku obiektu gl
 
 ## <a name="remarks"></a>Uwagi
 
-`CComEnum`definiuje obiekt modułu wyliczającego COM na podstawie tablicy. Ta klasa jest analogiczna do [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) , która implementuje moduł wyliczający C++ oparty na kontenerze biblioteki standardowej. Typowe kroki dotyczące korzystania z tej klasy przedstawiono poniżej. Aby uzyskać więcej informacji, zobacz [zestawy ATL i moduły wyliczające](../../atl/atl-collections-and-enumerators.md).
+`CComEnum`definiuje obiekt modułu wyliczającego COM na podstawie tablicy. Ta klasa jest analogiczna do [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) , która implementuje moduł wyliczający oparty na kontenerze standardowej biblioteki języka C++. Typowe kroki dotyczące korzystania z tej klasy przedstawiono poniżej. Aby uzyskać więcej informacji, zobacz [zestawy ATL i moduły wyliczające](../../atl/atl-collections-and-enumerators.md).
 
 ## <a name="to-use-this-class"></a>Aby użyć tej klasy:
 
-- **element typedef** jest specjalizacją tej klasy.
+- **`typedef`** Specjalizacja tej klasy.
 
-- Użyj `CComObject`elementu **typedef** jako argumentu szablonu w specjalizacji.
+- Użyj **`typedef`** jako argumentu szablonu w specjalizacji `CComObject` .
 
 - Utwórz wystąpienie `CComObject` specjalizacji.
 
@@ -84,11 +84,11 @@ Kod przedstawiony poniżej udostępnia funkcję wielokrotnego użytku do tworzen
 
 [!code-cpp[NVC_ATL_COM#32](../../atl/codesnippet/cpp/ccomenum-class_1.h)]
 
-Ta funkcja szablonu może służyć do implementowania `_NewEnum` właściwości interfejsu kolekcji, jak pokazano poniżej:
+Ta funkcja szablonu może służyć do implementowania `_NewEnum` Właściwości interfejsu kolekcji, jak pokazano poniżej:
 
 [!code-cpp[NVC_ATL_COM#33](../../atl/codesnippet/cpp/ccomenum-class_2.h)]
 
-Ten kod tworzy **element typedef** dla `CComEnum` , który uwidacznia wektor wariantów za pomocą `IEnumVariant` interfejsu. Klasa `CVariantArrayCollection` jest po prostu `CreateEnumerator` wyspecjalizowana do pracy z obiektami modułu wyliczającego tego typu i przekazuje wymagane argumenty.
+Ten kod tworzy **`typedef`** dla `CComEnum` , który uwidacznia wektor wariantów za pomocą `IEnumVariant` interfejsu. `CVariantArrayCollection`Klasa jest po prostu wyspecjalizowana `CreateEnumerator` do pracy z obiektami modułu wyliczającego tego typu i przekazuje wymagane argumenty.
 
 ## <a name="see-also"></a>Zobacz także
 

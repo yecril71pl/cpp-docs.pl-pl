@@ -8,12 +8,12 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: 3099f0113103223e392dc20560899b4a6e3ebf20
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 08b88b1343f56f8d79fc39c53505b26caecfe3c4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998791"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226467"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Konwersje z niepodpisanych typów całkowitych
 
@@ -35,7 +35,7 @@ Zobacz [Magazyn typów podstawowych](../c-language/storage-of-basic-types.md) , 
 
 **Specyficzne dla firmy Microsoft**
 
-W kompilatorze Microsoft: **unsigned** (lub **unsigned int**) i **unsigned long** są DISTINCT, ale równoważnymi typami. Konwersja **niepodpisanej wartości int** jest wykonywana w taki sam sposób jak w przypadku konwersji typu **unsigned long**.
+W kompilatorze firmy Microsoft **`unsigned`** (lub **`unsigned int`** ) i **`unsigned long`** są to różne, ale równoważne typy. Konwersja **`unsigned int`** wartości jest wykonywana w taki sam sposób jak w przypadku konwersji **`unsigned long`** .
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
@@ -43,49 +43,49 @@ Poniższa tabela zawiera podsumowanie konwersji z niepodpisanych typów całkowi
 
 ## <a name="table-of-conversions-from-unsigned-integral-types"></a>Tabela konwersji z niepodpisanych typów całkowitych
 
-|Z|Do|Metoda|
+|Źródło|Działanie|Metoda|
 |----------|--------|------------|
-|**unsigned char**|**char**|Zachowaj wzorzec bitowy; bit z wysokim priorytetem jest bit znaku|
-|**unsigned char**|**short**|Zero — zwiększenie|
-|**unsigned char**|**długi**|Zero — zwiększenie|
-|**unsigned char**|**long long**|Zero — zwiększenie|
-|**unsigned char**|**unsigned short**|Zero — zwiększenie|
-|**unsigned char**|**unsigned long**|Zero — zwiększenie|
-|**unsigned char**|**bez znaku Long Long**|Zero — zwiększenie|
-|**unsigned char**|**float**|Konwertuj na **Long**; Konwertuj **Long** na **zmiennoprzecinkową**|
-|**unsigned char**|**double**|Konwertuj na **Long**; Konwertuj **Long** na **Double**|
-|**unsigned char**|**Long Double**|Konwertuj na **Long**; Konwertuj **Long** na **Double**|
-|**unsigned short**|**char**|Zachowaj bajt o niskiej kolejności|
-|**unsigned short**|**short**|Zachowaj wzorzec bitowy; bit z wysokim priorytetem jest bit znaku|
-|**unsigned short**|**długi**|Zero — zwiększenie|
-|**unsigned short**|**long long**|Zero — zwiększenie|
-|**unsigned short**|**unsigned char**|Zachowaj bajt o niskiej kolejności|
-|**unsigned short**|**unsigned long**|Zero — zwiększenie|
-|**unsigned short**|**bez znaku Long Long**|Zero — zwiększenie|
-|**unsigned short**|**float**|Konwertuj na **Long**; Konwertuj **Long** na **zmiennoprzecinkową**|
-|**unsigned short**|**double**|Konwertuj na **Long**; Konwertuj **Long** na **Double**|
-|**unsigned short**|**Long Double**|Konwertuj na **Long**; Konwertuj **Long** na **Double**|
-|**unsigned long**|**char**|Zachowaj bajt o niskiej kolejności|
-|**unsigned long**|**short**|Zachowaj wyraz o niskiej kolejności|
-|**unsigned long**|**długi**|Zachowaj wzorzec bitowy; bit z wysokim priorytetem jest bit znaku|
-|**unsigned long**|**long long**|Zero — zwiększenie|
-|**unsigned long**|**unsigned char**|Zachowaj bajt o niskiej kolejności|
-|**unsigned long**|**unsigned short**|Zachowaj wyraz o niskiej kolejności|
-|**unsigned long**|**bez znaku Long Long**|Zero — zwiększenie|
-|**unsigned long**|**float**|Konwertuj na **Long**; Konwertuj **Long** na **zmiennoprzecinkową**|
-|**unsigned long**|**double**|Konwertuj bezpośrednio do **podwójnego**|
-|**unsigned long**|**Long Double**|Konwertuj na **Long**; Konwertuj **Long** na **Double**|
-|**bez znaku Long Long**|**char**|Zachowaj bajt o niskiej kolejności|
-|**bez znaku Long Long**|**short**|Zachowaj wyraz o niskiej kolejności|
-|**bez znaku Long Long**|**długi**|Zachowywanie wartości DWORD z niską kolejnością|
-|**bez znaku Long Long**|**long long**|Zachowaj wzorzec bitowy; bit z wysokim priorytetem jest bit znaku|
-|**bez znaku Long Long**|**unsigned char**|Zachowaj bajt o niskiej kolejności|
-|**bez znaku Long Long**|**unsigned short**|Zachowaj wyraz o niskiej kolejności|
-|**bez znaku Long Long**|**unsigned long**|Zachowywanie wartości DWORD z niską kolejnością|
-|**bez znaku Long Long**|**float**|Konwertuj na **Long**; Konwertuj **Long** na **zmiennoprzecinkową**|
-|**bez znaku Long Long**|**double**|Konwertuj bezpośrednio do **podwójnego**|
-|**bez znaku Long Long**|**Long Double**|Konwertuj na **Long**; Konwertuj **Long** na **Double**|
+|**`unsigned char`**|**`char`**|Zachowaj wzorzec bitowy; bit z wysokim priorytetem jest bit znaku|
+|**`unsigned char`**|**`short`**|Zero — zwiększenie|
+|**`unsigned char`**|**`long`**|Zero — zwiększenie|
+|**`unsigned char`**|**`long long`**|Zero — zwiększenie|
+|**`unsigned char`**|**`unsigned short`**|Zero — zwiększenie|
+|**`unsigned char`**|**`unsigned long`**|Zero — zwiększenie|
+|**`unsigned char`**|**`unsigned long long`**|Zero — zwiększenie|
+|**`unsigned char`**|**`float`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`float`**|
+|**`unsigned char`**|**`double`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`double`**|
+|**`unsigned char`**|**`long double`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`double`**|
+|**`unsigned short`**|**`char`**|Zachowaj bajt o niskiej kolejności|
+|**`unsigned short`**|**`short`**|Zachowaj wzorzec bitowy; bit z wysokim priorytetem jest bit znaku|
+|**`unsigned short`**|**`long`**|Zero — zwiększenie|
+|**`unsigned short`**|**`long long`**|Zero — zwiększenie|
+|**`unsigned short`**|**`unsigned char`**|Zachowaj bajt o niskiej kolejności|
+|**`unsigned short`**|**`unsigned long`**|Zero — zwiększenie|
+|**`unsigned short`**|**`unsigned long long`**|Zero — zwiększenie|
+|**`unsigned short`**|**`float`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`float`**|
+|**`unsigned short`**|**`double`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`double`**|
+|**`unsigned short`**|**`long double`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`double`**|
+|**`unsigned long`**|**`char`**|Zachowaj bajt o niskiej kolejności|
+|**`unsigned long`**|**`short`**|Zachowaj wyraz o niskiej kolejności|
+|**`unsigned long`**|**`long`**|Zachowaj wzorzec bitowy; bit z wysokim priorytetem jest bit znaku|
+|**`unsigned long`**|**`long long`**|Zero — zwiększenie|
+|**`unsigned long`**|**`unsigned char`**|Zachowaj bajt o niskiej kolejności|
+|**`unsigned long`**|**`unsigned short`**|Zachowaj wyraz o niskiej kolejności|
+|**`unsigned long`**|**`unsigned long long`**|Zero — zwiększenie|
+|**`unsigned long`**|**`float`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`float`**|
+|**`unsigned long`**|**`double`**|Konwertuj bezpośrednio na**`double`**|
+|**`unsigned long`**|**`long double`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`double`**|
+|**`unsigned long long`**|**`char`**|Zachowaj bajt o niskiej kolejności|
+|**`unsigned long long`**|**`short`**|Zachowaj wyraz o niskiej kolejności|
+|**`unsigned long long`**|**`long`**|Zachowywanie wartości DWORD z niską kolejnością|
+|**`unsigned long long`**|**`long long`**|Zachowaj wzorzec bitowy; bit z wysokim priorytetem jest bit znaku|
+|**`unsigned long long`**|**`unsigned char`**|Zachowaj bajt o niskiej kolejności|
+|**`unsigned long long`**|**`unsigned short`**|Zachowaj wyraz o niskiej kolejności|
+|**`unsigned long long`**|**`unsigned long`**|Zachowywanie wartości DWORD z niską kolejnością|
+|**`unsigned long long`**|**`float`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`float`**|
+|**`unsigned long long`**|**`double`**|Konwertuj bezpośrednio na**`double`**|
+|**`unsigned long long`**|**`long double`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`double`**|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersje przypisań](../c-language/assignment-conversions.md)
