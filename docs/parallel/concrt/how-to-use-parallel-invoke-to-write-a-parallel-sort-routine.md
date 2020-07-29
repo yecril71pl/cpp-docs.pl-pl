@@ -8,12 +8,12 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-ms.openlocfilehash: 6acac3f6bc82db6e6981f83715c7ee88cfd06fbd
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 9d84cdbecb7cc6d39cb30077780c558db85888c0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422291"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222722"
 ---
 # <a name="how-to-use-parallel_invoke-to-write-a-parallel-sort-routine"></a>Porady: używanie parallel_invoke do napisania procedury sortowania równoległego
 
@@ -24,7 +24,7 @@ Chociaż sortowanie bitonicznego jest przykładem *sieci sortowania* , która so
 > [!NOTE]
 > W tym przykładzie zastosowano równoległą procedurę sortowania dla ilustracji. Można również użyć wbudowanych algorytmów sortowania, które zapewnia PPL: [concurrency::p arallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [concurrency::p arallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)i [concurrency::p arallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Aby uzyskać więcej informacji, zobacz [algorytmy równoległe](../../parallel/concrt/parallel-algorithms.md).
 
-## <a name="top"></a>Poszczególne
+## <a name="sections"></a><a name="top"></a>Poszczególne
 
 W tym dokumencie opisano następujące zadania:
 
@@ -32,17 +32,17 @@ W tym dokumencie opisano następujące zadania:
 
 - [Używanie parallel_invoke do równoległego sortowania bitonicznego](#parallel)
 
-## <a name="serial"></a>Wykonywanie sortowania bitonicznego w sposób szeregowy
+## <a name="performing-bitonic-sort-serially"></a><a name="serial"></a>Wykonywanie sortowania bitonicznego w sposób szeregowy
 
-Poniższy przykład pokazuje wersję seryjną algorytmu sortowania bitonicznego. Funkcja `bitonic_sort` dzieli sekwencję na dwie partycje, sortuje te partycje w odwrotnych kierunkach, a następnie scala wyniki. Ta funkcja wywołuje dwa razy cyklicznie, aby posortować każdą partycję.
+Poniższy przykład pokazuje wersję seryjną algorytmu sortowania bitonicznego. `bitonic_sort`Funkcja dzieli sekwencję na dwie partycje, sortuje te partycje w odwrotnych kierunkach, a następnie scala wyniki. Ta funkcja wywołuje dwa razy cyklicznie, aby posortować każdą partycję.
 
 [!code-cpp[concrt-parallel-bitonic-sort#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_1.cpp)]
 
 [[Top](#top)]
 
-## <a name="parallel"></a>Używanie parallel_invoke do równoległego sortowania bitonicznego
+## <a name="using-parallel_invoke-to-perform-bitonic-sort-in-parallel"></a><a name="parallel"></a>Używanie parallel_invoke do równoległego sortowania bitonicznego
 
-W tej sekcji opisano, jak używać algorytmu `parallel_invoke` do równoległego wykonywania algorytmu sortowania bitonicznego.
+W tej sekcji opisano, jak używać `parallel_invoke` algorytmu do równoległego wykonywania algorytmu sortowania bitonicznego.
 
 ### <a name="to-perform-the-bitonic-sort-algorithm-in-parallel"></a>Aby wykonać algorytm bitonicznego sortowania równolegle
 
@@ -50,23 +50,23 @@ W tej sekcji opisano, jak używać algorytmu `parallel_invoke` do równoległego
 
 [!code-cpp[concrt-parallel-bitonic-sort#10](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_2.cpp)]
 
-1. Dodaj `using` dyrektywę dla przestrzeni nazw `concurrency`.
+1. Dodaj **`using`** dyrektywę dla `concurrency` przestrzeni nazw.
 
 [!code-cpp[concrt-parallel-bitonic-sort#11](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_3.cpp)]
 
-1. Utwórz nową funkcję o nazwie `parallel_bitonic_mege`, która używa algorytmu `parallel_invoke`, aby scalić sekwencje równolegle w przypadku wystarczającej ilości pracy do wykonania. W przeciwnym razie Wywołaj `bitonic_merge`, aby scalić sekwencje sekwencyjnie.
+1. Utwórz nową funkcję o nazwie `parallel_bitonic_mege` , która używa `parallel_invoke` algorytmu do scalania sekwencji równolegle, jeśli istnieje wystarczająca ilość pracy do wykonania. W przeciwnym razie Wywołaj, `bitonic_merge` Aby scalić sekwencje sekwencyjnie.
 
 [!code-cpp[concrt-parallel-bitonic-sort#2](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_4.cpp)]
 
-1. Wykonaj proces podobny do przedstawionego w poprzednim kroku, ale dla funkcji `bitonic_sort`.
+1. Wykonaj proces podobny do przedstawionego w poprzednim kroku, ale dla `bitonic_sort` funkcji.
 
 [!code-cpp[concrt-parallel-bitonic-sort#3](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_5.cpp)]
 
-1. Utwórz przeciążoną wersję funkcji `parallel_bitonic_sort`, która sortuje tablicę w kolejności rosnącej.
+1. Utwórz przeciążoną wersję `parallel_bitonic_sort` funkcji, która sortuje tablicę w kolejności rosnącej.
 
 [!code-cpp[concrt-parallel-bitonic-sort#4](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_6.cpp)]
 
-Algorytm `parallel_invoke` zmniejsza obciążenie, wykonując ostatnią z serii zadań w kontekście wywołującym. Na przykład w funkcji `parallel_bitonic_sort` pierwsze zadanie jest uruchamiane w oddzielnym kontekście, a drugie zadanie jest uruchamiane w kontekście wywołującym.
+`parallel_invoke`Algorytm zmniejsza obciążenie, wykonując ostatnią serię zadań w kontekście wywołującym. Na przykład w `parallel_bitonic_sort` funkcji pierwsze zadanie jest uruchamiane w oddzielnym kontekście, a drugie zadanie jest uruchamiane w kontekście wywołującym.
 
 [!code-cpp[concrt-parallel-bitonic-sort#5](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_7.cpp)]
 
@@ -85,21 +85,21 @@ parallel time: 1248
 
 ### <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Aby skompilować kod, skopiuj go, a następnie wklej w projekcie programu Visual Studio lub wklej go w pliku o nazwie `parallel-bitonic-sort.cpp` a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+Aby skompilować kod, skopiuj go, a następnie wklej w projekcie programu Visual Studio lub wklej go w pliku o nazwie, `parallel-bitonic-sort.cpp` a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
 
-> **CL. exe/EHsc Parallel-bitonic-Sort. cpp**
+> **cl.exe/EHsc Parallel-bitonic-Sort. cpp**
 
-## <a name="robust-programming"></a>Skuteczne programowanie
+## <a name="robust-programming"></a>Niezawodne programowanie
 
-W tym przykładzie jest używany algorytm `parallel_invoke` zamiast klasy [concurrency:: task_group](reference/task-group-class.md) , ponieważ okres istnienia każdej grupy zadań nie wykracza poza funkcję. Zalecamy używanie `parallel_invoke`, gdy jest to możliwe, ponieważ ma mniej nakładów wykonywania niż obiekty `task group` i dlatego umożliwia pisanie lepszego wykonywania kodu.
+W tym przykładzie jest używany `parallel_invoke` algorytm zamiast klasy [concurrency:: task_group](reference/task-group-class.md) , ponieważ okres istnienia każdej grupy zadań nie wykracza poza funkcję. Zalecamy korzystanie z programu, `parallel_invoke` gdy jest to możliwe, ponieważ ma mniej nakładów wykonywania niż `task group` obiekty i dlatego umożliwia pisanie lepszego wykonywania kodu.
 
-Równoległe wersje niektórych algorytmów działają lepiej tylko wtedy, gdy jest wystarczająca ilość pracy do wykonania. Na przykład funkcja `parallel_bitonic_merge` wywołuje wersję seryjną, `bitonic_merge`, jeśli w sekwencji występuje 500 lub mniej elementów. Możesz również zaplanować ogólną strategię sortowania na podstawie ilości pracy. Na przykład może być bardziej wydajne użycie wersji szeregowej algorytmu szybkiego sortowania, jeśli tablica zawiera mniej niż 500 elementów, jak pokazano w następującym przykładzie:
+Równoległe wersje niektórych algorytmów działają lepiej tylko wtedy, gdy jest wystarczająca ilość pracy do wykonania. Na przykład `parallel_bitonic_merge` funkcja wywołuje wersję seryjną, `bitonic_merge` Jeśli w sekwencji występuje 500 lub mniej elementów. Możesz również zaplanować ogólną strategię sortowania na podstawie ilości pracy. Na przykład może być bardziej wydajne użycie wersji szeregowej algorytmu szybkiego sortowania, jeśli tablica zawiera mniej niż 500 elementów, jak pokazano w następującym przykładzie:
 
 [!code-cpp[concrt-parallel-bitonic-sort#9](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_9.cpp)]
 
 Podobnie jak w przypadku dowolnego algorytmu równoległego, zalecamy profilowanie i dostrajanie kodu zgodnie z potrzebami.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [Funkcja parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)
