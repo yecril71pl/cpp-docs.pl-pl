@@ -18,12 +18,12 @@ helpviewer_keywords:
 - derived classes [C++], declaring
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
-ms.openlocfilehash: f0aae655540b4d3f9130d9840d77e0abcf270cc2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bc9afdcb7971c478c1cad9185cece57ea6326a48
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374103"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233733"
 ---
 # <a name="inheritance-keywords"></a>Słowa kluczowe dziedziczenia
 
@@ -37,25 +37,25 @@ class [__virtual_inheritance] class-name;
 
 gdzie:
 
-*nazwa klasy*<br/>
+*Nazwa klasy*<br/>
 Nazwa deklarowanej klasy.
 
-C++ umożliwia deklarację wskaźnika do składowej klasy przed definicją klasy. Przykład:
+C++ umożliwia deklarację wskaźnika do składowej klasy przed definicją klasy. Na przykład:
 
 ```cpp
 class S;
 int S::*p;
 ```
 
-W powyższym `p` kodzie jest zadeklarowany jako wskaźnik do elementu członkowskiego liczby całkowitej klasy S. Jednak `class S` nie został jeszcze zdefiniowany w tym kodzie; została tylko zadeklarowana. Gdy kompilator napotka taki wskaźnik, musi stworzyć uogólnioną reprezentację wskaźnika. Rozmiar reprezentacji zależy od określonego modelu dziedziczenia. Istnieją cztery sposoby określania modelu dziedziczenia w kompilatorze:
+W powyższym kodzie, `p` jest zadeklarowany jako wskaźnik do składowej typu Integer klasy S. Jednakże `class S` nie została jeszcze zdefiniowana w tym kodzie, ale została zadeklarowana. Gdy kompilator napotka taki wskaźnik, musi stworzyć uogólnioną reprezentację wskaźnika. Rozmiar reprezentacji zależy od określonego modelu dziedziczenia. Istnieją cztery sposoby określania modelu dziedziczenia w kompilatorze:
 
-- W IDE w obszarze **Odwzorować wskaźnik do elementu członkowskiego**
+- W środowisku IDE w obszarze **reprezentacja wskaźnika do elementu członkowskiego**
 
-- W wierszu polecenia za pomocą przełącznika [/vmg](../build/reference/vmb-vmg-representation-method.md)
+- W wierszu polecenia przy użyciu przełącznika [/VMG](../build/reference/vmb-vmg-representation-method.md)
 
-- Korzystanie z [pragmy pointers_to_members](../preprocessor/pointers-to-members.md)
+- Używanie dyrektywy pragma [pointers_to_members](../preprocessor/pointers-to-members.md)
 
-- Korzystanie ze słów kluczowych dziedziczenia **__single_inheritance** **, __multiple_inheritance**i **__virtual_inheritance**. Technika ta kontroluje model dziedziczenia na podstawie klasy.
+- Przy użyciu słów kluczowych dziedziczenia **`__single_inheritance`** , **`__multiple_inheritance`** i **`__virtual_inheritance`** . Technika ta kontroluje model dziedziczenia na podstawie klasy.
 
     > [!NOTE]
     >  Jeśli zawsze deklarowany jest wskaźnik do składowej klasy po zdefiniowaniu klasy, nie trzeba używać żadnej z tych opcji.
@@ -74,10 +74,10 @@ niezależnie od opcji wiersza polecenia lub pragm, wskaźniki do elementów czł
 > [!NOTE]
 > Taka sama wczesna reprezentacja wskaźnika składowej klasy powinna występować w każdej jednostce translacji, która deklaruje wskaźniki do składowych tej klasy, a deklaracja powinna występować przed deklaracją wskaźników do składowych.
 
-Aby uzyskać zgodność z poprzednimi wersjami, **_single_inheritance** **, _multiple_inheritance**i **_virtual_inheritance** są synonimami **dla __single_inheritance,** **__multiple_inheritance**i **__virtual_inheritance,** chyba że określono opcję kompilatora [/Za \(Wyłącz rozszerzenia języka).](../build/reference/za-ze-disable-language-extensions.md)
+Aby zapewnić zgodność z poprzednimi wersjami, **_single_inheritance**, **_multiple_inheritance**i **_virtual_inheritance** są synonimami dla **`__single_inheritance`** , **`__multiple_inheritance`** i, **`__virtual_inheritance`** chyba że opcja kompilatora [/za \( wyłączanie rozszerzeń języka)](../build/reference/za-ze-disable-language-extensions.md) jest określona.
 
-**ZAKOŃCZ Specyficzne dla firmy Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)

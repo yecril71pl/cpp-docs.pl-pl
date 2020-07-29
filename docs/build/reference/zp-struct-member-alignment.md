@@ -11,61 +11,61 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: d76cd93c7af4228bff8f73fa3bcbf40fa149b0be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c78e670303bde68299725e18c6f588f5e410a971
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315914"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234305"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (Wyrównanie członka struktury)
 
-Określa, jak elementy członkowskie struktury są pakowane w pamięci, a następnie określa ten sam pakowania dla wszystkich elementów w module.
+Kontroluje sposób pakowania elementów członkowskich struktury do pamięci i określa to samo pakowanie dla wszystkich struktur w module.
 
 ## <a name="syntax"></a>Składnia
 
-> **/Zp**[**1**|**2**|**4**|**8**|**16**]
+> **`/Zp`**[**`1`**|**`2`**|**`4`**|**`8`**|**`16`**]
 
 ## <a name="remarks"></a>Uwagi
 
-**/ZP**_n_ opcji informuje kompilator, gdzie można przechowywać każdy element członkowski struktury. Kompilator zapisuje elementy członkowskie po pierwszy z nich w granicach mniejszego rozmiaru typ elementu członkowskiego lub *n*-bajtowych granic.
+**`/ZpN`** Opcja informuje kompilator, gdzie ma być przechowywany każdy element członkowski struktury. Kompilator przechowuje elementy członkowskie po pierwszej stronie na granicy, która jest mniejsza od rozmiaru typu elementu członkowskiego lub granicy *N*-bajtowej.
 
-Wartości pakowania dostępne są opisane w poniższej tabeli:
+Dostępne wartości pakowania są opisane w poniższej tabeli:
 
-|/Zp argument|Efekt|
+|/ZP — argument|Efekt|
 |-|-|
-|1|Struktury pakietów przy 1-bajtowych granicach. Taki sam jak **/ZP**.|
+|1|Struktury pakietów na 1-bajtowych granicach. Analogicznie jak **`/Zp`** .|
 |2|Struktury pakietów przy 2-bajtowych granicach.|
 |4|Struktury pakietów przy 4-bajtowych granicach.|
-|8|Struktury pakietów przy 8-bajtowych granicach (domyślnie dla x86, ARM i ARM64).|
-|16| Struktury pakietów przy 16-bajtowych granicach (domyślnie x64).|
+|8|Struktury pakietów na 8-bajtowych granicach (domyślnie dla procesorów x86, ARM i ARM64).|
+|16| Struktury pakietów na 16-bajtowych granicach (domyślnie dla architektury x64).|
 
-Nie należy używać tej opcji, chyba że masz wymagania wyraźnego związku.
+Nie należy używać tej opcji, chyba że są określone wymagania dotyczące wyrównania.
 
 > [!WARNING]
-> Ustaw nagłówki C++ w zestawie Windows SDK i przyjęto założenie, **/zp8** pakowania wewnętrznie. Jeśli może spowodować uszkodzenie pamięci **/ZP** ustawienie to ulegnie zmianie wewnątrz nagłówków zestawu Windows SDK. Nagłówki nie ma wpływu na dowolny **/ZP** opcja zostanie ustawiona w wierszu polecenia.
+> Nagłówki C++ w zestawie Windows SDK i zakładają **`/Zp8`** wewnętrznie pakowanie. Może wystąpić uszkodzenie pamięci, jeśli **`/Zp`** ustawienie zostanie zmienione wewnątrz nagłówków Windows SDK. W nagłówkach nie ma wpływu żadna **`/Zp`** opcja ustawiona w wierszu polecenia.
 
-Można również użyć [pakiet](../../preprocessor/pack.md) do sterowania struktury pakowania. Aby uzyskać więcej informacji na temat wyrównania zobacz:
+Można również użyć [`pack`](../../preprocessor/pack.md) do kontroli pakowania struktury. Aby uzyskać więcej informacji na temat wyrównania, zobacz:
 
-- [align](../../cpp/align-cpp.md)
+- [`align`](../../cpp/align-cpp.md)
 
-- [Operator __alignof](../../cpp/alignof-operator.md)
+- [`alignof`Zakład](../../cpp/alignof-operator.md)
 
-- [__unaligned](../../cpp/unaligned.md)
+- [`__unaligned`](../../cpp/unaligned.md)
 
-- [/ALIGN (Wyrównanie sekcji)](align-section-alignment.md)
+- [`/ALIGN`(Wyrównanie sekcji)](align-section-alignment.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **generowania kodu** stronę właściwości.
+1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja generowania kodu**C/C++**  >  **Code Generation** .
 
-1. Modyfikowanie **wyrównanie członka struktury** właściwości.
+1. Zmodyfikuj właściwość **wyrównania elementu członkowskiego struktury** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Aby programowo ustawić tę opcję kompilatora
 
-- Zobacz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>.
+- Zobacz: <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>.
 
 ## <a name="see-also"></a>Zobacz także
 

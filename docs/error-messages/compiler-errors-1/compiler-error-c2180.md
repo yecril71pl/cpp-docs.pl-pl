@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2180
 ms.assetid: ea71b39e-b977-48a7-b7bd-af68ef5e263b
-ms.openlocfilehash: 5e9444356e536a8369dbcf62cac3c7538d9da5dd
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 3794a1ce0fcbe60c06cb3efca45a3081e85c17ce
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301902"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210023"
 ---
 # <a name="compiler-error-c2180"></a>Błąd kompilatora C2180
 
 wyrażenie kontrolne ma typ "Type"
 
-Wyrażenie kontrolne w instrukcji `if`, `while`, `for`lub `do` jest rzutowane wyrażenia na `void`. Aby rozwiązać ten problem, zmień wyrażenie kontrolne na takie, które tworzy `bool` lub typ, który można przekonwertować na `bool`.
+Wyrażenie kontrolne w **`if`** instrukcji, **`while`** , **`for`** lub **`do`** jest rzutowane na wyrażenie **`void`** . Aby rozwiązać ten problem, zmień wyrażenie kontrolne na takie, które tworzy **`bool`** lub typ, który można przekonwertować na **`bool`** .
 
 Poniższy przykład generuje C2180:
 

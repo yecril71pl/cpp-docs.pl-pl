@@ -34,12 +34,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 078efc2fa5499e23ce7f2fb6f8fc0ffc5123de1e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1d2202bd1ca59ee42287c398da429df132e24fcb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909543"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234084"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte, _isleadbyte_l
 
@@ -68,7 +68,7 @@ Liczba całkowita do przetestowania.
 
 Makro **isleadbyte** zwraca wartość różną od zera, jeśli jej argument jest pierwszym bajtem znaku wielobajtowego. **isleadbyte** generuje znaczący wynik dla dowolnego argumentu całkowitego z-1 (**EOF**) do **UCHAR_MAX** (0xFF), włącznie.
 
-Oczekiwany typ argumentu **isleadbyte** to **int**; Jeśli zostanie przesłany znak podpisany, kompilator może przekonwertować go na liczbę całkowitą za pomocą rozszerzenia, co daje nieprzewidywalne wyniki.
+Oczekiwanym typem argumentu **isleadbyte** jest **`int`** ; Jeśli zostanie przesłany znak podpisany, kompilator może przekonwertować go na liczbę całkowitą za pomocą rozszerzenia znaku, co daje nieprzewidywalne wyniki.
 
 Wersja tej funkcji z sufiksem **_l** jest identyczna, z tą różnicą, że używa przeszukanych ustawień regionalnych zamiast bieżących ustawień regionalnych dla zachowań zależnych od ustawień regionalnych.
 
@@ -84,13 +84,13 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**isleadbyte**|\<CType. h>|
-|**_isleadbyte_l**|\<CType. h>|
+|**isleadbyte**|\<ctype.h>|
+|**_isleadbyte_l**|\<ctype.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasyfikacja bajtów](../../c-runtime-library/byte-classification.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
-[_ismbb, procedury](../../c-runtime-library/ismbb-routines.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Procedury _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

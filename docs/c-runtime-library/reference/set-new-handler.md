@@ -30,16 +30,16 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: 06da25fb38d18691f78973f4e63a8b7b48d98ce1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cd6e4df47b28e84bb0ac5ee857cfa1a3e7cf805a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913958"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218549"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
-Przenosi kontrolę do mechanizmu obsługi błędów, jeśli **Nowy** operator nie może przydzielić pamięci.
+Przenosi kontrolę do mechanizmu obsługi błędów, jeśli **`new`** nie można przydzielić pamięci przez operatora.
 
 ## <a name="syntax"></a>Składnia
 
@@ -58,7 +58,7 @@ Zwraca wskaźnik do poprzedniej funkcji obsługi wyjątków zarejestrowanej prze
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja C++ **_set_new_handler** określa funkcję obsługi wyjątków, która uzyskuje kontrolę w przypadku niepowodzenia alokacji pamięci przez operatora **New** . Jeśli **nowe** nie powiodło się, system czasu wykonywania automatycznie wywoła funkcję obsługi wyjątków, która została przeniesiona jako argument do **_set_new_handler**. **_PNH**, zdefiniowany w nowym. h, jest wskaźnikiem do funkcji, która zwraca typ **int** i przyjmuje argument typu **size_t**. Użyj **size_t** , aby określić ilość miejsca do przydzielenia.
+Funkcja C++ **_set_new_handler** określa funkcję obsługi wyjątków, która uzyskuje kontrolę w przypadku, gdy **`new`** operator nie może przydzielić pamięci. Jeśli **`new`** to się nie powiedzie, system czasu wykonywania automatycznie wywoła funkcję obsługi wyjątków, która została przeniesiona jako argument do **_set_new_handler**. **_PNH**, zdefiniowany w nowym. h, jest wskaźnikiem do funkcji, która zwraca typ **`int`** , i przyjmuje argument typu **size_t**. Użyj **size_t** , aby określić ilość miejsca do przydzielenia.
 
 Brak domyślnej procedury obsługi.
 
@@ -95,7 +95,7 @@ Można zapisać adres funkcji, który został ostatnio przesłany do funkcji **_
    // . . .
 ```
 
-Funkcja C++ [_set_new_mode](set-new-mode.md) ustawia nowy tryb obsługi dla opcji [malloc](malloc.md). Nowy tryb obsługi wskazuje, czy w przypadku niepowodzenia, **malloc** ma wywołać nową procedurę obsługi jako ustawioną przez **_set_new_handler**. Domyślnie funkcja **malloc** nie wywołuje nowej procedury obsługi w przypadku niepowodzenia przydzielenia pamięci. Można zastąpić to zachowanie domyślne, tak aby w przypadku niepowodzenia przydzielenia pamięci przez funkcję **malloc** wywołuje nową procedurę obsługi w taki sam **sposób, w** jaki operator **New** wykonuje, gdy nie powiedzie się z tego samego powodu. Aby zastąpić wartość domyślną, należy wywołać:
+Funkcja C++ [_set_new_mode](set-new-mode.md) ustawia nowy tryb obsługi dla opcji [malloc](malloc.md). Nowy tryb obsługi wskazuje, czy w przypadku niepowodzenia, **malloc** ma wywołać nową procedurę obsługi jako ustawioną przez **_set_new_handler**. Domyślnie funkcja **malloc** nie wywołuje nowej procedury obsługi w przypadku niepowodzenia przydzielenia pamięci. Można zastąpić to zachowanie domyślne, tak aby w przypadku niepowodzenia przydzielenia pamięci przez funkcję **malloc** wywołuje nową procedurę obsługi w taki sam **sposób, w** jaki **`new`** operator wykonuje, gdy nie powiedzie się z tego samego powodu. Aby zastąpić wartość domyślną, należy wywołać:
 
 ```cpp
 _set_new_mode(1);
@@ -103,7 +103,7 @@ _set_new_mode(1);
 
 Wczesne w programie lub Połącz z NewMode. obj.
 
-Jeśli zostanie podany zdefiniowany `operator new` przez użytkownika, nowe funkcje obsługi nie są automatycznie wywoływane w przypadku niepowodzenia.
+Jeśli zostanie podany zdefiniowany przez użytkownika `operator new` , nowe funkcje obsługi nie są automatycznie wywoływane w przypadku niepowodzenia.
 
 Aby uzyskać więcej informacji, zobacz [Nowość](../../cpp/new-operator-cpp.md) i [delete](../../cpp/delete-operator-cpp.md) w *dokumentacji języka C++*.
 
@@ -113,7 +113,7 @@ Istnieje jedna procedura obsługi **_set_new_handler** dla wszystkich dynamiczni
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_set_new_handler**|\<Nowy. h>|
+|**_set_new_handler**|\<new.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -167,7 +167,7 @@ This application has requested the Runtime to terminate it in an unusual way.
 Please contact the application's support team for more information.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

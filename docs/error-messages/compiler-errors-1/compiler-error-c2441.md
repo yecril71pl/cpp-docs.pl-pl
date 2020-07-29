@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2441
 ms.assetid: ffbd6573-777a-48dd-892f-5cf4a758dcab
-ms.openlocfilehash: 4e5d5335717ec77c61069ad08e209f9e1851dc2f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: aa55392e9f58caa4292cf5f96ef97f65a53bf913
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80205312"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87207956"
 ---
 # <a name="compiler-error-c2441"></a>Błąd kompilatora C2441
 
@@ -21,9 +21,9 @@ ms.locfileid: "80205312"
 
 **/CLR: Pure** i **/CLR:** opcje kompilatora bezpiecznego są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017.
 
-Domyślnie zmienne są dla domeny aplikacji w ramach opcji **/CLR: Pure**. Zmienna oznaczona `__declspec(process)` w opcji **/CLR: Pure** jest podatna na błędy w przypadku zmodyfikowania w jednej domenie aplikacji i odczytania w innej.
+Domyślnie zmienne są dla domeny aplikacji w ramach opcji **/CLR: Pure**. Zmienna oznaczona jako `__declspec(process)` **/CLR: Pure** jest podatna na błędy w przypadku zmodyfikowania w jednej domenie aplikacji i odczytania w innej.
 
-W związku z tym kompilator wymusza na zmienne procesów `const` w obszarze **/CLR: Pure**, co sprawia, że są one odczytane tylko we wszystkich domenach aplikacji.
+W związku z tym kompilator wymusza na zmienne procesów **`const`** w obszarze **/CLR: Pure**, co sprawia, że są one odczytane tylko we wszystkich domenach aplikacji.
 
 Aby uzyskać więcej informacji, zobacz [proces](../../cpp/process.md) i [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md).
 

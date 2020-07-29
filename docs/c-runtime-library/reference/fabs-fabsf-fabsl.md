@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 7a65e3ef5b0d15e82ada07eef495600a50531f34
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 52ec65e744cd0ee04068ddc6cfd537ea1ae2b9f0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920246"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234123"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
@@ -70,7 +70,7 @@ long double fabsl(
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Wartość zmiennoprzecinkowa.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -83,7 +83,7 @@ Funkcje **fabs —** zwracają wartość bezwzględną argumentu *x*. Brak powro
 
 ## <a name="remarks"></a>Uwagi
 
-Język C++ pozwala na Przeciążenie, dlatego można wywoływać przeciążenia elementu **fabs —** , jeśli dołączysz nagłówek> \<cmath. W programie C **fabs —** zawsze przyjmuje i zwraca wartość **Double**.
+Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia elementu **fabs —** , jeśli dołączysz \<cmath> nagłówek. W programie C **fabs —** zawsze przyjmuje i zwraca **`double`** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -91,7 +91,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek C|Wymagany nagłówek C++|
 |--------------|-----------------------|---------------------------|
-|**fabs —**, **fabsf —**, **fabsl**|\<> Math. h|\<cmath> lub \<Math. h>|
+|**fabs —**, **fabsf —**, **fabsl**|\<math.h>|\<cmath> lub \<math.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -99,7 +99,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 Zobacz przykład dla [ABS](abs-labs-llabs-abs64.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>

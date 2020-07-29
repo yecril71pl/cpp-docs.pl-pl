@@ -26,16 +26,16 @@ helpviewer_keywords:
 - _RTC_NumErrors function
 - RTC_NumErrors function
 ms.assetid: 7e82adae-38e2-4f8b-bc0b-37bda8109fd1
-ms.openlocfilehash: 72056208ca6d714f788ae325b90786f5be4ab443
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0e0af8596dbc7f48bc3f6b996219ec7c7a57749d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949032"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234032"
 ---
 # <a name="_rtc_numerrors"></a>_RTC_NumErrors
 
-Zwraca łączną liczbę błędów, które mogą zostać wykryte przez sprawdzanie błędów czasu wykonywania (RTC). Tej liczby można użyć jako formantu w pętli **for** , gdzie każda wartość w pętli jest przenoszona do [_RTC_GetErrDesc](rtc-geterrdesc.md).
+Zwraca łączną liczbę błędów, które mogą zostać wykryte przez sprawdzanie błędów czasu wykonywania (RTC). Tej liczby można użyć jako formantu w **`for`** pętli, gdzie każda wartość w pętli jest przenoszona do [_RTC_GetErrDesc](rtc-geterrdesc.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,7 +46,7 @@ int _RTC_NumErrors( void );
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczba całkowita, której wartość reprezentuje całkowitą liczbę błędów, które mogą być wykrywane przez sprawdzanie C++ błędów w czasie wykonywania wizualizacji.
+Liczba całkowita, której wartość reprezentuje całkowitą liczbę błędów, które mogą zostać wykryte przez Visual C++ sprawdzenia błędów czasu wykonywania.
 
 ## <a name="requirements"></a>Wymagania
 

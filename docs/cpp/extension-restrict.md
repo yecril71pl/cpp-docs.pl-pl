@@ -8,31 +8,31 @@ f1_keywords:
 helpviewer_keywords:
 - __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
-ms.openlocfilehash: 27ac76251456d9a0bf5908ad6d1fc2bee7534e9f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6318e6d78f6c4c4bb6827a79d26bca028dfe3f3f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360816"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233746"
 ---
 # <a name="__restrict"></a>__restrict
 
-Podobnie jak **modyfikator __declspec ( [restrict),](../cpp/restrict.md) ** **__restrict** słowo kluczowe wskazuje, że symbol nie jest aliasowany w bieżącym zakresie. __restrict **__restrict** słowo kluczowe różni się `__declspec ( restrict )` od modyfikatora w następujący sposób:
+Podobnie jak **__declspec ( [ograniczanie](../cpp/restrict.md) )** , **`__restrict`** słowo kluczowe wskazuje, że symbol nie jest aliasem w bieżącym zakresie. **`__restrict`** Słowo kluczowe różni się od `__declspec ( restrict )` modyfikatora w następujący sposób:
 
-- **__restrict** słowo kluczowe jest prawidłowe tylko dla `__declspec ( restrict )` zmiennych i jest prawidłowe tylko w deklaracjach funkcji i definicjach.
+- **`__restrict`** Słowo kluczowe jest prawidłowe tylko dla zmiennych i `__declspec ( restrict )` jest prawidłowe tylko w deklaracjach i definicjach funkcji.
 
-- **__restrict** jest podobny do **ograniczenia** ze specyfikacji C99, ale **__restrict** może być używany w programach C++ lub C.
+- **`__restrict`** jest podobny do **`restrict`** od specyfikacji C99, ale **`__restrict`** może być używany w programach C++ lub C.
 
-- Gdy jest używany **__restrict,** kompilator nie będzie propagować no-alias właściwości zmiennej. Oznacza to, że jeśli zostanie przypisana zmienna **__restrict** do zmiennej **__restrict,** kompilator nadal będzie zezwalał na aliasowanie zmiennej __restrict. To różni się od zachowania słowa kluczowego **ograniczyć** ze specyfikacji C99.
+- Gdy **`__restrict`** jest używany, kompilator nie propaguje właściwości "No-alias" zmiennej. Oznacza to, że jeśli zmienna zostanie przypisana **`__restrict`** do **`__restrict`** niezmiennej, kompilator nadal zezwoli na aliasowanie zmiennej nie__restrictj. Różni się to od zachowania **`restrict`** słowa kluczowego ze specyfikacji C99.
 
-Ogólnie rzecz biorąc, jeśli wpływasz na zachowanie całej `__declspec ( restrict )` funkcji, lepiej jest użyć niż słowa kluczowego.
+Ogólnie rzecz biorąc, jeśli wpłynie to na zachowanie całej funkcji, lepiej jest użyć `__declspec ( restrict )` słowa kluczowego.
 
-W przypadku zgodności z poprzednimi wersjami **_restrict** jest synonimem **__restrict** chyba że określono opcję kompilatora [/Za \(Wyłącz rozszerzenia języka).](../build/reference/za-ze-disable-language-extensions.md)
+W celu zapewnienia zgodności z poprzednimi wersjami **_restrict** jest synonimem, **`__restrict`** Jeśli nie określono opcji kompilatora [/za \( disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
-W programie Visual Studio 2015 i nowszych **__restrict** można używać w odwołaniach do języka C++.
+W programie Visual Studio 2015 i nowszych **`__restrict`** można używać odwołań do języka C++.
 
 > [!NOTE]
-> Gdy jest używana w zmiennej, która ma również [volatile](../cpp/volatile-cpp.md) słowa kluczowego, **volatile** będzie pierwszeństwo.
+> W przypadku użycia na zmiennej, która ma także słowo kluczowe [volatile](../cpp/volatile-cpp.md) , **`volatile`** pierwszeństwo ma.
 
 ## <a name="example"></a>Przykład
 
@@ -58,6 +58,6 @@ union z {
 };
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)

@@ -47,16 +47,16 @@ helpviewer_keywords:
 - strtoi64 function
 - wcstoi64_l function
 ms.assetid: ea2abc50-7bfe-420e-a46b-703c3153593a
-ms.openlocfilehash: 7929f5e7d5971278dfe19a0850ccf660751c2acf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ede96e39b596225d13c041468eb6172853959c6a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910894"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233954"
 ---
 # <a name="_strtoi64-_wcstoi64-_strtoi64_l-_wcstoi64_l"></a>_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 
-Konwertuj ciąg na wartość **__int64** .
+Konwertuj ciąg na **`__int64`** wartość.
 
 ## <a name="syntax"></a>Składnia
 
@@ -96,7 +96,7 @@ Wskaźnik do znaku, który powoduje zatrzymanie skanowania.
 *base*<br/>
 Numer bazowy do użycia.
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -111,7 +111,7 @@ Aby uzyskać więcej informacji na temat tych i innych kodów powrotu, zobacz [_
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_strtoi64** konwertuje *strSource* na **__int64**. Obie funkcje przerywają odczytywanie ciągu *strSource* na pierwszym znaku, którego nie mogą rozpoznać jako części liczby. Może to być kończący znak null lub może być pierwszym znakiem numerycznym większym lub równym *Base*. **_wcstoi64** to dwubajtowa wersja **_strtoi64**; jego argument *strSource* jest ciągiem znaków dwubajtowych. Funkcje te zachowują się identycznie w inny sposób.
+Funkcja **_strtoi64** konwertuje *strSource* na **`__int64`** . Obie funkcje przerywają odczytywanie ciągu *strSource* na pierwszym znaku, którego nie mogą rozpoznać jako części liczby. Może to być kończący znak null lub może być pierwszym znakiem numerycznym większym lub równym *Base*. **_wcstoi64** to dwubajtowa wersja **_strtoi64**; jego argument *strSource* jest ciągiem znaków dwubajtowych. Funkcje te zachowują się identycznie w inny sposób.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -128,7 +128,7 @@ Jeśli *endptr* nie ma **wartości null**, wskaźnik do znaku, który zatrzymał
 
 **_strtoi64** oczekuje, że *strSource* wskaże ciąg o następującej postaci:
 
-> [*odstęp*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **x** }]] [*cyfry* &#124; *litery*]
+> [*odstęp*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*cyfry* &#124; *litery*]
 
 *Odstępy* mogą składać się ze znaków spacji i tabulatora, które są ignorowane; *cyfry* są jedną lub większą liczbą cyfr dziesiętnych; *litery* są jedną lub większą literą od "a" do "z" (lub od "a" do "z").  Pierwszy znak, który nie pasuje do tego formularza, zatrzyma skanowanie. Jeśli *baza* jest z przedziału od 2 do 36, zostanie użyta jako podstawa liczby. Jeśli *Base* ma wartość 0, początkowe znaki ciągu wskazywane przez *strSource* są używane do określenia podstawy. Jeśli pierwszym znakiem jest 0, a drugi znak nie jest "x" lub "X", ciąg jest interpretowany jako ósemkowa liczba całkowita. Jeśli pierwszy znak to "0", a drugi znak to "x" lub "X", ciąg jest interpretowany jako Szesnastkowa liczba całkowita. Jeśli pierwszym znakiem jest "1" do "9", ciąg jest interpretowany jako dziesiętna liczba całkowita. Litery od "a" do "z" (lub "A" do "z") mają przypisane wartości od 10 do 35; dozwolone są tylko litery, których przypisane wartości są mniejsze niż *podstawowe* . Pierwszy znak poza zakresem podstawy powoduje zatrzymanie skanowania. Na przykład jeśli *Base* ma wartość 0, a pierwszy znak skanowany to "0", zakłada się liczbę całkowitą, a znak "8" lub "9" spowoduje zatrzymanie skanowania.
 
@@ -136,15 +136,15 @@ Jeśli *endptr* nie ma **wartości null**, wskaźnik do znaku, który zatrzymał
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strtoi64**, **_strtoi64_l**|\<STDLIB. h>|
-|**_wcstoi64**, **_wcstoi64_l**|\<STDLIB. h> lub \<WCHAR. h>|
+|**_strtoi64**, **_strtoi64_l**|\<stdlib.h>|
+|**_wcstoi64**, **_wcstoi64_l**|\<stdlib.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [Funkcje ciągu do wartości numerycznych](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>

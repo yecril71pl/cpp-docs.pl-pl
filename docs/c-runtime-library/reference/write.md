@@ -28,12 +28,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: b56022f39264a200bf6fa550bffa8e5e0ed73cf0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 02864a797a64e6c1b1d836edf4e435cdb43d0932
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916706"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211622"
 ---
 # <a name="_write"></a>_write
 
@@ -68,7 +68,7 @@ Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz
 
 Jeśli plik jest otwarty w trybie tekstowym, każdy znak wysuwu wiersza zostanie zastąpiony parą wysuwu wiersza powrotu karetki w danych wyjściowych. Zastąpienie nie ma wpływu na wartość zwracaną.
 
-Gdy plik jest otwarty w trybie translacji Unicode — na przykład, jeśli *FD* zostanie otwarty przy użyciu **_open** lub **_sopen** i parametru trybu, który zawiera **_O_WTEXT**, **_O_U16TEXT**, lub **_O_U8TEXT**lub jeśli zostanie otwarty przy użyciu **FOPEN** i parametru trybu, który zawiera **CCS = Unicode**, **CCS = UTF-16LE**lub **CCS = UTF-8**, lub jeśli tryb zostanie zmieniony na tryb tłumaczenia Unicode przy użyciu **_setmode**—*bufor* jest interpretowany jako wskaźnik do tablicy **wchar_t** zawierającej dane **UTF-16** . Próba zapisania nieparzystej liczby bajtów w tym trybie powoduje błąd walidacji parametru.
+Gdy plik jest otwarty w trybie translacji Unicode — na przykład, jeśli *FD* zostanie otwarty przy użyciu **_open** lub **_sopen** i parametru trybu, który zawiera **_O_WTEXT**, **_O_U16TEXT**, lub **_O_U8TEXT**, lub jeśli zostanie otwarty przy użyciu **FOPEN** i parametru trybu, który zawiera **CCS = Unicode**, **CCS = UTF-16LE**lub **CCS = UTF-8**, lub jeśli tryb zostanie zmieniony na tryb tłumaczenia Unicode przy użyciu **_setmode**—*bufor* jest interpretowany jako wskaźnik do tablicy **`wchar_t`** zawierającej dane **UTF-16** . Próba zapisania nieparzystej liczby bajtów w tym trybie powoduje błąd walidacji parametru.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -82,7 +82,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_write**|\<IO. h>|
+|**_write**|\<io.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -144,7 +144,7 @@ int main( void )
 Wrote 36 bytes to file.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/wy niskiego poziomu](../../c-runtime-library/low-level-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>

@@ -37,12 +37,12 @@ helpviewer_keywords:
 - gmtime64 function
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
-ms.openlocfilehash: 16f4315837873c8d78065ea97a11188bdddedbed
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 86919e2ba6f5e301f1dffd87dfb4ecd22ce416e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916235"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234110"
 ---
 # <a name="gmtime-_gmtime32-_gmtime64"></a>gmtime, _gmtime32, _gmtime64
 
@@ -63,7 +63,7 @@ Wskaźnik na czas przechowywania. Czas jest reprezentowany jako sekund, które u
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do struktury typu [TM](../../c-runtime-library/standard-types.md). Pola zwróconej struktury przechowują obliczoną wartość argumentu *sourceTime* w formacie UTC, a nie w czasie lokalnym. Każde pole struktury jest typu **int**w następujący sposób:
+Wskaźnik do struktury typu [TM](../../c-runtime-library/standard-types.md). Pola zwróconej struktury przechowują obliczoną wartość argumentu *sourceTime* w formacie UTC, a nie w czasie lokalnym. Każde z pól struktury jest typu **`int`** , w następujący sposób:
 
 |Pole|Opis|
 |-|-|
@@ -98,7 +98,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek C|Wymagany nagłówek C++|
 |-------------|---------------------|-|
-|**gmtime**, **_gmtime32**, **_gmtime64**|\<> godziny. h|\<CTime> lub \<Time. h>|
+|**gmtime**, **_gmtime32**, **_gmtime64**|\<time.h>|\<ctime> lub \<time.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -135,7 +135,7 @@ int main( void )
 Coordinated universal time is Tue Feb 12 23:11:31 2002
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zarządzanie czasem](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>

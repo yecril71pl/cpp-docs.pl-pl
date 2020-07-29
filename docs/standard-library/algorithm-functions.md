@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: c8c550be87eacf81fab994239e07ed2358fad39b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5b83306d34c5e881e679ac4b6f0d7b9c249035cd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617662"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205577"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;&gt;funkcje algorytmu
 
@@ -329,7 +329,7 @@ They have values of 10 & 20.
 
 ## <a name="all_of"></a><a name="all_of"></a>all_of
 
-Zwraca **wartość PRAWDA** , jeśli warunek jest obecny dla każdego elementu w danym zakresie.
+Zwraca **`true`** , gdy warunek jest obecny dla każdego elementu w danym zakresie.
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -358,15 +358,15 @@ Iterator danych wejściowych, który wskazuje, gdzie rozpocząć sprawdzanie war
 Iterator danych wejściowych, który wskazuje koniec zakresu elementów do sprawdzenia dla warunku.
 
 *pred*\
-Warunek do przetestowania. Jest to zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek, który ma być spełniony przez sprawdzany element. Predykat jednoargumentowy przyjmuje jeden argument i zwraca **wartość PRAWDA** lub **Fałsz**.
+Warunek do przetestowania. Jest to zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek, który ma być spełniony przez sprawdzany element. Predykat jednoargumentowy przyjmuje pojedynczy argument i zwraca **`true`** lub **`false`** .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca **wartość true** , jeśli warunek jest wykrywany dla każdego elementu w wskazanym zakresie lub jeśli zakres jest pusty, a w przeciwnym razie ma **wartość false** .
+Zwraca **`true`** czy warunek jest wykrywany dla każdego elementu w wskazanym zakresie, czy zakres jest pusty i **`false`** w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca **wartość true** tylko wtedy, gdy dla każdego `N` z zakresów `[0, last - first)` `pred(*(first + N))` jest **spełniony**predykat.
+Funkcja szablonu zwraca **`true`** tylko wtedy, gdy, dla każdego `N` z zakresu `[0, last - first)` , predykatu `pred(*(first + N))` jest **`true`** .
 
 ### <a name="example"></a>Przykład
 
@@ -405,7 +405,7 @@ All the elements are even numbers.
 
 ## <a name="any_of"></a><a name="any_of"></a>any_of
 
-Zwraca **wartość PRAWDA** , jeśli warunek występuje co najmniej raz w określonym zakresie elementów.
+Zwraca **`true`** , gdy warunek jest obecny co najmniej raz w określonym zakresie elementów.
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -434,15 +434,15 @@ Iterator danych wejściowych, który wskazuje, gdzie rozpocząć sprawdzanie zak
 Iterator danych wejściowych, który wskazuje koniec zakresu elementów do sprawdzenia dla warunku.
 
 *pred*\
-Warunek do przetestowania. Jest to zapewniane przez zdefiniowany przez użytkownika obiekt funkcji predykatu. Predykat definiuje warunek, który ma być spełniony przez testowany element. Predykat jednoargumentowy przyjmuje jeden argument i zwraca **wartość PRAWDA** lub **Fałsz**.
+Warunek do przetestowania. Jest to zapewniane przez zdefiniowany przez użytkownika obiekt funkcji predykatu. Predykat definiuje warunek, który ma być spełniony przez testowany element. Predykat jednoargumentowy przyjmuje pojedynczy argument i zwraca **`true`** lub **`false`** .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca **wartość true** , jeśli warunek jest wykrywany co najmniej raz we wskazanym zakresie, **Fałsz** , jeśli warunek nie jest nigdy wykryty.
+Zwraca **`true`** czy warunek jest wykrywany co najmniej raz we wskazanym zakresie, **`false`** Jeśli warunek nigdy nie zostanie wykryty.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca **wartość true** tylko wtedy, gdy dla niektórych `N` z zakresu
+Funkcja szablonu zwraca **`true`** tylko wtedy, gdy dla niektórych `N` z zakresu
 
 `[0, last - first)`, predykat `pred(*(first + N))` ma wartość true.
 
@@ -511,11 +511,11 @@ Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w 
 Wartość wymagana do dopasowania przez wartość elementu lub, która musi spełniać warunek z wartością elementu określoną przez Predykat binarny.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli element znajduje się w zakresie równym lub równoważnym z określoną wartością; w przeciwnym razie **false**.
+**`true`** Jeśli element znajduje się w zakresie, który jest równy lub równoważny podanej wartości; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -650,7 +650,7 @@ Dolna granica wartości, do której ma zostać zamocowana *wartość* .
 Górna granica wartości, do której należy *wartość* .
 
 *pred*\
-Predykat używany do porównywania *wartości* z *dolną* lub *górną*. Predykat porównania przyjmuje dwa argumenty i zwraca **wartość true** , jeśli pierwszy jest w pewnym sensie mniejszy niż drugi i w przeciwnym razie **false**.
+Predykat używany do porównywania *wartości* z *dolną* lub *górną*. Predykat porównania przyjmuje dwa argumenty i zwraca **`true`** , jeśli pierwszy jest w pewnym sensie mniejszy niż drugi i w przeciwnym razie **`false`** .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -862,7 +862,7 @@ v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
 
 ## <a name="copy_if"></a><a name="copy_if"></a>copy_if
 
-W zakresie elementów Kopiuje elementy, które są **spełnione** dla określonego warunku.
+W zakresie elementów Kopiuje elementy, które są **`true`** dla określonego warunku.
 
 ```cpp
 template<class InputIterator, class OutputIterator, class UnaryPredicate>
@@ -896,7 +896,7 @@ Iterator danych wejściowych, który wskazuje koniec zakresu.
 Iterator danych wyjściowych, który wskazuje miejsce docelowe dla skopiowanych elementów.
 
 *pred*\
-Warunek, względem którego jest testowany każdy element w zakresie. Ten warunek jest dostarczany przez zdefiniowany przez użytkownika obiekt funkcji predykatu. Predykat jednoargumentowy przyjmuje jeden argument i zwraca **wartość PRAWDA** lub **Fałsz**.
+Warunek, względem którego jest testowany każdy element w zakresie. Ten warunek jest dostarczany przez zdefiniowany przez użytkownika obiekt funkcji predykatu. Predykat jednoargumentowy przyjmuje jeden argument i zwraca **`true`** lub **`false`** .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1148,7 +1148,7 @@ Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w za
 Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma być przeszukiwany.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do spełnienia w przypadku zliczenia elementu. Predykat jednoargumentowy przyjmuje jeden argument i zwraca **wartość PRAWDA** lub **Fałsz**.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do spełnienia w przypadku zliczenia elementu. Predykat jednoargumentowy przyjmuje pojedynczy argument i zwraca **`true`** lub **`false`** .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1289,17 +1289,17 @@ Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w dr
 Iterator danych wejściowych odnoszący się do pozycji jednego ostatniego elementu z drugiego zakresu, który ma zostać przetestowany.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do spełnienia, jeśli dwa elementy mają być wykonane jako równoważne. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do spełnienia, jeśli dwa elementy mają być wykonane jako równoważne. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli i tylko wtedy, gdy zakresy są identyczne lub równoważne pod predykatem binarnym, gdy porównane elementy przez element; w przeciwnym razie **false**.
+**`true`** Jeśli i tylko wtedy, gdy zakresy są identyczne lub równoważne pod predykatem binarnym w przypadku porównywania elementu według elementu; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
 Zakres, który ma być przeszukiwany, musi być prawidłowy; wszystkie Iteratory muszą być odwołujące się, a ostatnia pozycja jest dostępna od pierwszego do przyrostu.
 
-Jeśli dwa zakresy są równej długości, to stopień złożoności algorytmu jest liniowy w liczbie elementów zawartych w zakresie. W przeciwnym razie funkcja natychmiast zwraca **wartość false**.
+Jeśli dwa zakresy są równej długości, to stopień złożoności algorytmu jest liniowy w liczbie elementów zawartych w zakresie. W przeciwnym razie funkcja natychmiast zwraca wartość **`false`** .
 
 Ani `operator==` predykatu zdefiniowanego przez użytkownika nie jest wymagane, aby nałożyć relację równoważności, która jest symetryczna, zwrotna i przechodnia między operandami.
 
@@ -1367,7 +1367,7 @@ Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w 
 Wartość wyszukiwana w zakresie uporządkowanym.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1768,7 +1768,7 @@ Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, k
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma zostać wyszukany.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do spełnienia, jeśli dwa elementy mają być wykonane jako równoważne. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do spełnienia, jeśli dwa elementy mają być wykonane jako równoważne. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1932,7 +1932,7 @@ Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, k
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma zostać dopasowany.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do spełnienia, jeśli dwa elementy mają być wykonane jako równoważne. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do spełnienia, jeśli dwa elementy mają być wykonane jako równoważne. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -2070,11 +2070,11 @@ Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w za
 Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma być przeszukiwany.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu lub [wyrażenie lambda](../cpp/lambda-expressions-in-cpp.md) , które definiuje warunek, który ma być spełniony przez wyszukiwany element. Predykat jednoargumentowy przyjmuje jeden argument i zwraca **wartość true** , jeśli jest spełniony, lub **false** , jeśli nie jest spełniony. Sygnatura *pred* musi być w praktyce `bool pred(const T& arg);` , gdzie `T` jest typem, który `InputIterator` może być niejawnie konwertowany podczas wyłączania. Słowo kluczowe **const** jest wyświetlane tylko w celu zilustrowania, że obiekt Function lub lambda nie powinien modyfikować argumentu.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu lub [wyrażenie lambda](../cpp/lambda-expressions-in-cpp.md) , które definiuje warunek, który ma być spełniony przez wyszukiwany element. Predykat jednoargumentowy przyjmuje pojedynczy argument i zwraca **`true`** , jeśli jest spełniony, lub **`false`** Jeśli nie jest spełniony. Sygnatura *pred* musi być w praktyce `bool pred(const T& arg);` , gdzie `T` jest typem, który `InputIterator` może być niejawnie konwertowany podczas wyłączania. **`const`** Słowo kluczowe jest wyświetlane tylko w celu zilustrowania, że obiekt Function lub lambda nie powinien modyfikować argumentu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie, który spełnia warunek określony przez predykat (predykat daje w wyniku **wartość true**). Jeśli żaden element nie zostanie znaleziony do spełnienia predykatu, zwraca wartość *Last*.
+Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie, który spełnia warunek określony przez predykat (wynik predykatu **`true`** ). Jeśli żaden element nie zostanie znaleziony do spełnienia predykatu, zwraca wartość *Last*.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2192,11 +2192,11 @@ Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w za
 Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma być przeszukiwany.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu lub [wyrażenie lambda](../cpp/lambda-expressions-in-cpp.md) , które definiuje warunek, który nie jest spełniony przez wyszukiwany element. Predykat jednoargumentowy przyjmuje jeden argument i zwraca **wartość true** , jeśli jest spełniony, lub **false** , jeśli nie jest spełniony. Sygnatura *pred* musi być w praktyce `bool pred(const T& arg);` , gdzie `T` jest typem, który `InputIterator` może być niejawnie konwertowany podczas wyłączania. Słowo kluczowe **const** jest wyświetlane tylko w celu zilustrowania, że obiekt Function lub lambda nie powinien modyfikować argumentu.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu lub [wyrażenie lambda](../cpp/lambda-expressions-in-cpp.md) , które definiuje warunek, który nie jest spełniony przez wyszukiwany element. Predykat jednoargumentowy przyjmuje pojedynczy argument i zwraca **`true`** , jeśli jest spełniony, lub **`false`** Jeśli nie jest spełniony. Sygnatura *pred* musi być w praktyce `bool pred(const T& arg);` , gdzie `T` jest typem, który `InputIterator` może być niejawnie konwertowany podczas wyłączania. **`const`** Słowo kluczowe jest wyświetlane tylko w celu zilustrowania, że obiekt Function lub lambda nie powinien modyfikować argumentu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie, który nie spełnia warunku określonego przez predykat (predykat wynikiem jest **false**). Jeśli wszystkie elementy spełniają predykat (predykat jest **wartością true** dla każdego elementu), zwraca *Last*.
+Iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie, który nie spełnia warunku określonego przez predykat (wynik predykatu **`false`** ). Jeśli wszystkie elementy spełniają predykat (predykat powoduje **`true`** dla każdego elementu), zwraca *Last*.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2598,11 +2598,11 @@ Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w dr
 Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim elementem w drugim z dwóch kolejnych posortowanych zakresów źródłowych do sprawdzenia, czy wszystkie elementy drugiego są zawarte w pierwszym elemencie.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true** , jeśli pierwszy posortowany zakres zawiera wszystkie elementy w drugim posortowanym zakresie; w przeciwnym razie **false**.
+**`true`** Jeśli pierwszy posortowany zakres zawiera wszystkie elementy w drugim posortowanym zakresie; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2816,7 +2816,7 @@ Iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w drugim z
 Iterator dwukierunkowy odnoszący się do pozycji jednej poza ostatnim elementem w drugim z dwóch kolejnych posortowanych zakresów, który ma zostać połączony i posortowany w pojedynczym zakresie.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i zwraca **wartość true** , gdy pierwszy element jest mniejszy od drugiego elementu i w przeciwnym razie zwraca **wartość false** .
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i powinien zwrócić, **`true`** gdy pierwszy element jest mniejszy od drugiego elementu i **`false`** w inny sposób.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -2939,7 +2939,7 @@ vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 
 ## <a name="is_heap"></a><a name="is_heap"></a>is_heap
 
-Zwraca **wartość true** , jeśli elementy w określonym zakresie tworzą stertę.
+Zwraca **`true`** czy elementy w określonym zakresie tworzą stertę.
 
 ```cpp
 template<class RandomAccessIterator>
@@ -2979,11 +2979,11 @@ Iterator dostępu losowego, który wskazuje początek zakresu do sprawdzenia ste
 Iterator dostępu losowego, który wskazuje koniec zakresu.
 
 *pred*\
-Warunek, który ma zostać przetestowany w celu przetestowania elementów. Predykat porównania przyjmuje dwa argumenty i zwraca **wartość true** lub **false**.
+Warunek, który ma zostać przetestowany w celu przetestowania elementów. Predykat porównania przyjmuje dwa argumenty i zwraca **`true`** lub **`false`** .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca **wartość true** , jeśli elementy w określonym zakresie tworzą stertę, **Fałsz** , jeśli nie.
+Zwraca **`true`** czy elementy w określonym zakresie tworzą stertę, **`false`** Jeśli nie.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -3049,7 +3049,7 @@ Druga funkcja szablonu zachowuje się tak samo jak pierwszy, z tą różnicą, �
 
 ## <a name="is_partitioned"></a><a name="is_partitioned"></a>is_partitioned
 
-Zwraca **wartość true** , jeśli wszystkie elementy w danym zakresie, które testują **wartość true** dla warunku, są przed wszystkimi elementami, które testują **wartość false**.
+Zwraca **`true`** czy wszystkie elementy w danym zakresie, które testują **`true`** dla warunku, są przed wszystkimi elementami, które testują **`false`** .
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -3078,15 +3078,15 @@ Iterator danych wejściowych, który wskazuje, gdzie rozpocznie się sprawdzanie
 Iterator danych wejściowych, który wskazuje koniec zakresu.
 
 *pred*\
-Warunek do przetestowania. Jest to zapewniane przez zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek, który ma być spełniony przez wyszukiwany element. Predykat jednoargumentowy przyjmuje jeden argument i zwraca **wartość PRAWDA** lub **Fałsz**.
+Warunek do przetestowania. Jest to zapewniane przez zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek, który ma być spełniony przez wyszukiwany element. Predykat jednoargumentowy przyjmuje pojedynczy argument i zwraca **`true`** lub **`false`** .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca **wartość PRAWDA** , jeśli wszystkie elementy w danym zakresie, które testują **wartość true** dla warunku, są przed wszystkimi elementami, które testują **wartość false**, i w przeciwnym razie zwraca **wartość false**.
+Zwraca **`true`** , gdy wszystkie elementy w danym zakresie, które testują **`true`** dla warunku, są przed wszystkimi elementami, które testują **`false`** i w przeciwnym razie zwraca **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca **wartość true** tylko wtedy, gdy wszystkie elementy w `[first, last)` są podzielone na partycje przez *pred*; oznacza to, że wszystkie elementy `X` w, `[first, last)` dla których występuje wartość true, są `pred (X)` wykonywane przed wszystkimi elementami `Y` , dla których `pred (Y)` ma **wartość false**.
+Funkcja szablonu zwraca **`true`** tylko wtedy, gdy wszystkie elementy w `[first, last)` są podzielone na partycje przez *pred*; oznacza to, że wszystkie elementy `X` w, `[first, last)` dla których występuje wartość true, są `pred (X)` wykonywane przed wszystkimi elementami `Y` , dla których `pred (Y)` jest **`false`** .
 
 ## <a name="is_permutation"></a><a name="is_permutation"></a>is_permutation
 
@@ -3138,17 +3138,17 @@ Iterator do przodu, który odwołuje się do pierwszego elementu drugiego zakres
 Iterator do przodu, który odwołuje się do jednego z nich poza ostatnim elementem drugiego zakresu, używany do porównania.
 
 *pred*\
-Predykat, który testuje dla równoważności i zwraca wartość **logiczną**.
+Predykat, który testuje dla równoważności i zwraca **`bool`** .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli zakresy można zmienić tak, aby były takie same, jak w przypadku predykatu komparator; w przeciwnym razie **false**.
+**`true`** gdy zakresy można zmienić tak, aby były takie same, jak w przypadku predykatu komparator; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
 `is_permutation`w najgorszym przypadku ma złożoność kwadratu.
 
-W pierwszej funkcji szablonu założono, że istnieje wiele elementów w zakresie zaczynającym się od *First2* , tak jak w zakresie wydzielonym przez `[first1, last1)` . Jeśli w drugim zakresie znajduje się więcej elementów, są one ignorowane; w przypadku mniej, niezdefiniowane zachowanie zostanie wykonane. Trzecia funkcja szablonu (C++ 14 i nowsze) nie przyjmuje tego założeń. Oba zwracają **wartość true** tylko wtedy, gdy dla każdego elementu X w zakresie wyznaczono przez `[first1, last1)` istnieje tyle elementów Y w tym samym zakresie, dla którego x = = Y, tak jak w zakresie rozpoczynającym się o *First2* lub `[first2, last2)` . W tym miejscu `operator==` należy wykonać porównanie parowania między operandami.
+W pierwszej funkcji szablonu założono, że istnieje wiele elementów w zakresie zaczynającym się od *First2* , tak jak w zakresie wydzielonym przez `[first1, last1)` . Jeśli w drugim zakresie znajduje się więcej elementów, są one ignorowane; w przypadku mniej, niezdefiniowane zachowanie zostanie wykonane. Trzecia funkcja szablonu (C++ 14 i nowsze) nie przyjmuje tego założeń. Obie wartości zwracają **`true`** tylko wtedy, gdy, dla każdego elementu X z zakresu wyznaczynego przez `[first1, last1)` istnieje wiele elementów Y w tym samym zakresie, dla którego x = = Y, tak jak w zakresie rozpoczynającym się o *First2* lub `[first2, last2)` . W tym miejscu `operator==` należy wykonać porównanie parowania między operandami.
 
 Drugie i czwarte funkcje szablonu zachowują się tak samo, z tą różnicą, że zastępują one `operator==(X, Y)` przy użyciu `Pred(X, Y)` . Aby zachować prawidłowe działanie, predykat musi być symetryczny, zwrotny i przechodni.
 
@@ -3210,7 +3210,7 @@ int main()
 
 ## <a name="is_sorted"></a><a name="is_sorted"></a>is_sorted
 
-Zwraca **wartość true** , jeśli elementy w określonym zakresie są sortowane według kolejności.
+Zwraca **`true`** czy elementy w określonym zakresie są w kolejności posortowanej.
 
 ```cpp
 template<class ForwardIterator>
@@ -3250,7 +3250,7 @@ Iterator do przodu, który wskazuje, gdzie rozpoczyna się zakres do sprawdzenia
 Iterator do przodu, który wskazuje koniec zakresu.
 
 *pred*\
-Warunek do przetestowania w celu określenia kolejności między dwoma elementami. Predykat porównania przyjmuje dwa argumenty i zwraca **wartość true** lub **false**. Wykonuje to to samo zadanie co `operator<` .
+Warunek do przetestowania w celu określenia kolejności między dwoma elementami. Predykat porównania przyjmuje dwa argumenty i zwraca **`true`** lub **`false`** . Wykonuje to to samo zadanie co `operator<` .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -3262,7 +3262,7 @@ Druga funkcja szablonu zwraca wartość `is_sorted_until( first, last , pred ) =
 
 Zwraca wartość `ForwardIterator` , która jest ustawiona na ostatni element, który jest sortowany w kolejności od określonego zakresu.
 
-Druga wersja pozwala dostarczyć obiekt funkcji porównywania zwraca **wartość PRAWDA** , jeśli dwa podano elementy w kolejności sortowania, a w przeciwnym razie **wartość false** .
+Druga wersja pozwala dostarczyć obiekt funkcji porównywania, który zwraca **`true`** , gdy dwa podano elementy w kolejności sortowania i w **`false`** inny sposób.
 
 ```cpp
 template<class ForwardIterator>
@@ -3302,7 +3302,7 @@ Iterator do przodu, który wskazuje, gdzie zaczyna się zakres do sprawdzenia.
 Iterator do przodu, który wskazuje koniec zakresu.
 
 *pred*\
-Warunek do przetestowania w celu określenia kolejności między dwoma elementami. Predykat porównania przyjmuje dwa argumenty i zwraca **wartość true** lub **false**.
+Warunek do przetestowania w celu określenia kolejności między dwoma elementami. Predykat porównania przyjmuje dwa argumenty i zwraca **`true`** lub **`false`** .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3526,11 +3526,11 @@ Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w dr
 Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim elementem w drugim zakresie, który ma zostać porównany.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli pierwszy zakres jest lexicographically mniejszy niż drugi zakres; w przeciwnym razie **false**.
+**`true`** Jeśli pierwszy zakres jest lexicographically mniejszy niż drugi zakres; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -3540,7 +3540,7 @@ Porównanie lexicographical między sekwencjami porównuje je z elementem do mom
 
 - Nie znaleziono żadnych nierówności, ale jedna sekwencja ma więcej elementów niż pozostałe, a krótsza sekwencja jest uznawana za mniejszą niż dłuższa.
 
-- Nie znaleziono żadnych nierówności i sekwencje mają taką samą liczbę elementów, dlatego sekwencje są równe, a wynik porównania ma **wartość false**.
+- Nie znaleziono żadnych nierówności i sekwencje mają taką samą liczbę elementów, dlatego sekwencje są równe, a wynikiem porównania jest **`false`** .
 
 ### <a name="example"></a>Przykład
 
@@ -3668,7 +3668,7 @@ Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w 
 Wartość, której Pierwsza pozycja lub możliwe pierwsze miejsce są wyszukiwane w zakresie uporządkowanym.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -3802,7 +3802,7 @@ Iterator dostępu swobodnego odnoszący się do pozycji pierwszego elementu w za
 Iterator dostępu swobodnego odnoszący się do jednej z elementów znajdujących się poza ostatnim elementem w zakresie, który ma zostać przekonwertowany na stos.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -3901,7 +3901,7 @@ Większy z dwóch obiektów, chyba że ani nie jest większy; w takim przypadku 
 
 ### <a name="remarks"></a>Uwagi
 
-`max`Algorytm jest nietypowy w przypadku, gdy obiekty są przenoszone jako parametry. Większość algorytmów standardowej biblioteki języka C++ działa w zakresie elementów, których pozycja jest określona przez Iteratory przenoszone jako parametry. Jeśli potrzebujesz funkcji, która działa w zakresie elementów, użyj [max_element](algorithm-functions.md#max_element) zamiast tego. Program Visual Studio 2017 włącza wartość **constexpr** dla przeciążenia, które pobierają initializer_list.
+`max`Algorytm jest nietypowy w przypadku, gdy obiekty są przenoszone jako parametry. Większość algorytmów standardowej biblioteki języka C++ działa w zakresie elementów, których pozycja jest określona przez Iteratory przenoszone jako parametry. Jeśli potrzebujesz funkcji, która działa w zakresie elementów, użyj [max_element](algorithm-functions.md#max_element) zamiast tego. Program Visual Studio 2017 włącza **`constexpr`** przeciążenia, które pobierają initializer_list.
 
 ### <a name="example"></a>Przykład
 
@@ -4113,7 +4113,7 @@ Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, k
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma być przeszukiwany dla największego elementu.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i zwraca **wartość true** , gdy pierwszy element jest mniejszy od drugiego elementu i w przeciwnym razie zwraca **wartość false** .
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i powinien zwrócić, **`true`** gdy pierwszy element jest mniejszy od drugiego elementu i **`false`** w inny sposób.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -4288,7 +4288,7 @@ Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim ele
 Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, w którym dwa zakresy źródłowe mają być połączone w pojedynczy posortowany zakres.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i zwraca **wartość true** , gdy pierwszy element jest mniejszy od drugiego elementu i w przeciwnym razie zwraca **wartość false** .
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i powinien zwrócić **`true`** , gdy pierwszy element jest mniejszy od drugiego elementu i **`false`** w przeciwnym razie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -4677,7 +4677,7 @@ Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, k
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma być przeszukiwany dla najmniejszego elementu.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i zwraca **wartość true** , gdy pierwszy element jest mniejszy od drugiego elementu i w przeciwnym razie zwraca **wartość false** .
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i powinien zwrócić **`true`** , gdy pierwszy element jest mniejszy od drugiego elementu i **`false`** w przeciwnym razie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -4841,7 +4841,7 @@ Iterator do przodu, który wskazuje początek zakresu.
 Iterator do przodu, który wskazuje koniec zakresu.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i zwraca **wartość true** , jeśli pierwszy jest mniejszy niż drugi i w przeciwnym razie zwraca **wartość false** .
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i powinien zwrócić **`true`** , gdy pierwszy jest mniejszy niż drugi i **`false`** w przeciwnym razie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -5003,7 +5003,7 @@ Iterator danych wejściowych odnoszący się do pozycji pierwszego elementu w dr
 Iterator danych wejściowych odnoszący się do pozycji jednego ostatniego elementu z drugiego zakresu, który ma zostać przetestowany.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który porównuje bieżące elementy w każdym zakresie i określa, czy są one równoważne. Zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który porównuje bieżące elementy w każdym zakresie i określa, czy są one równoważne. Zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -5206,11 +5206,11 @@ Iterator dwukierunkowy wskazujący na pozycję pierwszego elementu w zakresie, k
 Iterator dwukierunkowy wskazujący na pozycję jeden poza ostatnim elementem w zakresie, który ma być permuted.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli istnieje lexicographically Następna Permutacja i zastąpiła pierwotna kolejność zakresu; w przeciwnym razie **wartość false**, w takim przypadku kolejność jest przekształcana do lexicographically najmniejszej permutacji.
+**`true`** Jeśli istnieje lexicographically Następna Permutacja i zastąpiono oryginalną kolejność zakresu; w przeciwnym razie **`false`** kolejność jest przekształcana do lexicographically najmniejszej permutacji.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -5408,7 +5408,7 @@ Iterator dostępu swobodnego odnoszący się do pozycji elementu, który ma być
 Iterator dostępu swobodnego odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma zostać podzielony na partycje.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Predykat porównania przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Predykat porównania przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -5488,7 +5488,7 @@ int main() {
 
 ## <a name="none_of"></a><a name="none_of"></a>none_of
 
-Zwraca **wartość PRAWDA** , jeśli warunek nigdy nie występuje między elementami w danym zakresie.
+Zwraca **`true`** , gdy warunek nigdy nie występuje między elementami w danym zakresie.
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -5517,15 +5517,15 @@ Iterator danych wejściowych, który wskazuje, gdzie rozpocząć sprawdzanie zak
 Iterator danych wejściowych, który wskazuje koniec zakresu elementów.
 
 *pred*\
-Warunek do przetestowania. Jest to zapewniane przez zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek. Predykat jednoargumentowy przyjmuje jeden argument i zwraca **wartość PRAWDA** lub **Fałsz**.
+Warunek do przetestowania. Jest to zapewniane przez zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek. Predykat jednoargumentowy przyjmuje pojedynczy argument i zwraca **`true`** lub **`false`** .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca **wartość true** , jeśli warunek nie jest wykrywany co najmniej raz we wskazanym zakresie, i **wartość false** , jeśli warunek zostanie wykryty.
+Zwraca **`true`** czy warunek nie jest wykrywany co najmniej raz we wskazanym zakresie, a **`false`** Jeśli warunek zostanie wykryty.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu zwraca **wartość true** tylko wtedy, gdy dla niektórych `N` z zakresu `[0, last - first)` predykat `pred(*(first + N))` ma zawsze **wartość false**.
+Funkcja szablonu zwraca **`true`** tylko wtedy, gdy dla niektórych `N` z zakresu `[0, last - first)` predykat `pred(*(first + N))` jest zawsze **`false`** .
 
 ## <a name="partial_sort"></a><a name="partial_sort"></a>partial_sort
 
@@ -5576,7 +5576,7 @@ Iterator dostępu swobodnego, odnoszący się do pozycji jednej poza ostatnim el
 Iterator dostępu swobodnego, odnoszący się do jednej z elementów znajdujących się poza ostatnim elementem w zakresie, który ma zostać częściowo posortowany.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -5714,7 +5714,7 @@ Iterator dostępu swobodnego, odnoszący się do pozycji pierwszego elementu w s
 Iterator dostępu swobodnego odnoszący się do pozycji jednej poza ostatnim elementem w sortowanym zakresie docelowym.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -5833,7 +5833,7 @@ Iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w zakresie
 Iterator dwukierunkowy odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma zostać podzielony na partycje.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek, który ma zostać spełniony, jeśli element ma zostać sklasyfikowany. Predykat jednoargumentowy przyjmuje jeden argument i zwraca **wartość PRAWDA** lub **Fałsz**.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek, który ma zostać spełniony, jeśli element ma zostać sklasyfikowany. Predykat jednoargumentowy przyjmuje pojedynczy argument i zwraca **`true`** lub **`false`** .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -5890,7 +5890,7 @@ int main()
 
 ## <a name="partition_copy"></a><a name="partition_copy"></a>partition_copy
 
-Kopiuje elementy, dla których warunek ma **wartość true** do jednego miejsca docelowego i dla którego warunek ma **wartość false** . Elementy muszą pochodzić z określonego zakresu.
+Kopiuje elementy, dla których warunek jest **`true`** w jednym miejscu docelowym i dla których warunek jest **`false`** inny. Elementy muszą pochodzić z określonego zakresu.
 
 ```cpp
 template<class InputIterator, class OutputIterator1, class OutputIterator2, class UnaryPredicate>
@@ -5929,7 +5929,7 @@ Iterator wyjściowy używany do kopiowania elementów zwracających wartość tr
 Iterator wyjściowy używany do kopiowania elementów zwracających wartość false dla warunku testowanego przy użyciu *pred*.
 
 *pred*\
-Warunek do przetestowania. Jest to zapewniane przez zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do przetestowania. Predykat jednoargumentowy przyjmuje jeden argument i zwraca **wartość PRAWDA** lub **Fałsz**.
+Warunek do przetestowania. Jest to zapewniane przez zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do przetestowania. Predykat jednoargumentowy przyjmuje pojedynczy argument i zwraca **`true`** lub **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -5956,7 +5956,7 @@ ForwardIterator partition_point(
 `ForwardIterator`Wskazuje koniec zakresu.
 
 *pred*\
-Warunek do przetestowania. Jest to zapewniane przez zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek, który ma być spełniony przez wyszukiwany element. Predykat jednoargumentowy przyjmuje jeden argument i zwraca **wartość PRAWDA** lub **Fałsz**.
+Warunek do przetestowania. Jest to zapewniane przez zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek, który ma być spełniony przez wyszukiwany element. Predykat jednoargumentowy przyjmuje pojedynczy argument i zwraca **`true`** lub **`false`** .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -5964,7 +5964,7 @@ Zwraca obiekt `ForwardIterator` , który odwołuje się do pierwszego elementu, 
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja Template znajduje pierwszy iterator `it` w `[first, last)` dla, który `pred(*it)` ma **wartość false**. Sekwencja musi być uporządkowana według *pred*.
+Funkcja Template znajduje pierwszy iterator `it` w `[first, last)` , dla którego `pred(*it)` jest **`false`** . Sekwencja musi być uporządkowana według *pred*.
 
 ## <a name="pop_heap"></a><a name="pop_heap"></a>pop_heap
 
@@ -5992,7 +5992,7 @@ Iterator dostępu swobodnego, odnoszący się do pozycji pierwszego elementu ste
 Iterator dostępu swobodnego, odnoszący się do jednej z elementów znajdujących się poza ostatnim elementem w stercie.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -6101,11 +6101,11 @@ Iterator dwukierunkowy wskazujący na pozycję pierwszego elementu w zakresie, k
 Iterator dwukierunkowy wskazujący na pozycję jeden poza ostatnim elementem w zakresie, który ma być permuted.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli istnieje lexicographically Poprzednia Permutacja i zastąpiła pierwotna kolejność zakresu; w przeciwnym razie **wartość false**, w takim przypadku kolejność jest przekształcana do lexicographically największej permutacji.
+**`true`** Jeśli istnieje lexicographically Poprzednia Permutacja i zastąpiono oryginalną kolejność zakresu; w przeciwnym razie **`false`** kolejność jest przekształcana do lexicographically największej permutacji.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -6276,7 +6276,7 @@ Iterator dostępu swobodnego, odnoszący się do pozycji pierwszego elementu ste
 Iterator dostępu swobodnego odnoszący się do jednej z elementów znajdujących się poza ostatnim elementem w zakresie, który ma zostać przekonwertowany na stos.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -7643,7 +7643,7 @@ Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, k
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma zostać dopasowany.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do spełnienia, jeśli dwa elementy mają być wykonane jako równoważne. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do spełnienia, jeśli dwa elementy mają być wykonane jako równoważne. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 *Wyszukaj*\
 Program do wyszukiwania, który hermetyzuje wzorzec do wyszukania i algorytm wyszukiwania do użycia. Aby uzyskać więcej informacji o wyszukiwarkach, zobacz Klasa [default_searcher](default-searcher-class.md), [Klasa boyer_moore_horspool_searcher](boyer-moore-horspool-searcher-class.md)i [Klasa boyer_moore_searcher](boyer-moore-searcher-class.md).
@@ -7815,7 +7815,7 @@ Rozmiar podsekwencji podszukiwanej.
 Wartość elementów w przeszukiwanej sekwencji.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do spełnienia, jeśli dwa elementy mają być wykonane jako równoważne. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do spełnienia, jeśli dwa elementy mają być wykonane jako równoważne. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -7975,7 +7975,7 @@ Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim ele
 Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, w którym dwa zakresy źródłowe mają być umieszczone w jednym posortowanym zakresie, reprezentującym różnicę dwóch zakresów źródłowych.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , gdy pierwszy element jest mniejszy od drugiego elementu i w przeciwnym razie zwraca **wartość false** .
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat binarny przyjmuje dwa argumenty i powinien zwrócić, **`true`** gdy pierwszy element jest mniejszy od drugiego elementu i **`false`** w inny sposób.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -8177,7 +8177,7 @@ Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim ele
 Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, w którym dwa zakresy źródłowe mają być załączone do pojedynczego posortowanego zakresu reprezentującego część wspólną dwóch zakresów źródłowych.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , gdy pierwszy element jest mniejszy od drugiego elementu i w przeciwnym razie zwraca **wartość false** .
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat binarny przyjmuje dwa argumenty i powinien zwrócić, **`true`** gdy pierwszy element jest mniejszy od drugiego elementu i **`false`** w inny sposób.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -8375,7 +8375,7 @@ Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim ele
 Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, w którym dwa zakresy źródłowe mają być załączone do pojedynczego posortowanego zakresu reprezentującego różnicę symetryczne dwóch zakresów źródłowych.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , gdy pierwszy element jest mniejszy od drugiego elementu i w przeciwnym razie zwraca **wartość false** .
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat binarny przyjmuje dwa argumenty i powinien zwrócić, **`true`** gdy pierwszy element jest mniejszy od drugiego elementu i **`false`** w inny sposób.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -8577,7 +8577,7 @@ Iterator danych wejściowych odnoszący się do pozycji jednej poza ostatnim ele
 Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, w którym dwa zakresy źródłowe mają być załączone do pojedynczego posortowanego zakresu reprezentującego Unię dwóch zakresów źródłowych.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , gdy pierwszy element jest mniejszy od drugiego elementu i w przeciwnym razie zwraca **wartość false** .
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat binarny przyjmuje dwa argumenty i powinien zwrócić, **`true`** gdy pierwszy element jest mniejszy od drugiego elementu i **`false`** w inny sposób.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -8785,7 +8785,7 @@ Iterator dostępu swobodnego odnoszący się do pozycji pierwszego elementu w za
 Iterator dostępu swobodnego, odnoszący się do jednej z elementów znajdujących się poza ostatnim elementem w zakresie, który ma zostać posortowany.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Ten Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli dwa argumenty są w porządku i w przeciwnym razie ma **wartość false** . Ta funkcja komparator musi nałożyć ścisłe słabe porządkowanie dla par elementów z sekwencji. Aby uzyskać więcej informacji, zobacz [algorytmy](algorithms.md).
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Ten Predykat binarny przyjmuje dwa argumenty i zwraca, **`true`** Jeśli dwa argumenty są w kolejności i w **`false`** inny sposób. Ta funkcja komparator musi nałożyć ścisłe słabe porządkowanie dla par elementów z sekwencji. Aby uzyskać więcej informacji, zobacz [algorytmy](algorithms.md).
 
 ### <a name="remarks"></a>Uwagi
 
@@ -8889,7 +8889,7 @@ Iterator dostępu swobodnego odnoszący się do pozycji pierwszego elementu w st
 Iterator dostępu swobodnego, odnoszący się do pozycji jednej poza ostatnim elementem w stercie docelowej.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -8994,7 +8994,7 @@ Iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w zakresie
 Iterator dwukierunkowy odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma zostać podzielony na partycje.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek, który ma zostać spełniony, jeśli element ma zostać sklasyfikowany. Predykat jednoargumentowy przyjmuje jeden argument i zwraca **wartość true** , jeśli jest spełniony, lub **false** , jeśli nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek, który ma zostać spełniony, jeśli element ma zostać sklasyfikowany. Predykat jednoargumentowy przyjmuje pojedynczy argument i zwraca **`true`** , jeśli jest spełniony, lub **`false`** Jeśli nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -9095,7 +9095,7 @@ Iterator dwukierunkowy odnoszący się do pozycji pierwszego elementu w zakresie
 Iterator dwukierunkowy odnoszący się do pozycji jednej poza ostatnim elementem w zakresie, który ma zostać posortowany.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje kryterium porównania do spełnienia przez kolejne elementy w kolejności. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -9557,7 +9557,7 @@ Iterator do przodu, odnoszący się do pozycji pierwszego elementu w zakresie, k
 Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w zakresie do skanowania w celu usunięcia duplikatów.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do spełnienia, jeśli dwa elementy mają być wykonane jako równoważne. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do spełnienia, jeśli dwa elementy mają być wykonane jako równoważne. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -9713,7 +9713,7 @@ Iterator do przodu, odnoszący się do pozycji jednej poza ostatnim elementem w 
 Iterator danych wyjściowych odnoszący się do pozycji pierwszego elementu w zakresie docelowym, który otrzymuje kopię z usuniętymi kolejnymi duplikatami.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do spełnienia, jeśli dwa elementy mają być wykonane jako równoważne. Predykat binarny przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu, który definiuje warunek do spełnienia, jeśli dwa elementy mają być wykonane jako równoważne. Predykat binarny przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -9832,7 +9832,7 @@ Pozycja jednej poza ostatnim elementem w zakresie, który ma być przeszukiwany.
 Wartość w uporządkowanym zakresie, która musi zostać przekroczona przez wartość elementu, do którego odnosił się iterator.
 
 *pred*\
-Zdefiniowany przez użytkownika obiekt funkcji predykatu porównującego, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i zwraca **wartość true** , jeśli jest spełniony, i **wartość false** , gdy nie jest spełniony.
+Zdefiniowany przez użytkownika obiekt funkcji predykatu porównującego, który definiuje sens, w którym jeden element jest mniejszy niż inny. Predykat porównania przyjmuje dwa argumenty i zwraca **`true`** po spełnieniu i **`false`** gdy nie jest spełniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 

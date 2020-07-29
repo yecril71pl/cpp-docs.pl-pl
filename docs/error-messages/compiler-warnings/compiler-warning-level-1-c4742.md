@@ -1,27 +1,31 @@
 ---
 title: Ostrzeżenie kompilatora (poziom 1) C4742
-ms.date: 11/04/2016
+ms.date: 07/22/2020
 f1_keywords:
 - C4742
 helpviewer_keywords:
 - C4742
 ms.assetid: e520881d-1eeb-48b1-9df0-8017ee8ba076
-ms.openlocfilehash: af97c72f496177d2e94cf18f9685ac33c5e62404
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e6ecd082a9f6d690414761d11d3a0adf101f87c2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185662"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233239"
 ---
 # <a name="compiler-warning-level-1-c4742"></a>Ostrzeżenie kompilatora (poziom 1) C4742
 
-element "var" ma inne wyrównanie w "plik1" i "plik2": Number i Number
+> element "*Variable*" ma inne wyrównanie w "*plik1*" i "*plik2*": *Liczba1* i *liczba2*
 
-Zmienna zewnętrzna, do której odwołuje się lub została zdefiniowana w dwóch plikach, ma inne wyrównanie w tych plikach. To ostrzeżenie jest emitowane po znalezieniu przez kompilator `__alignof` dla zmiennej w *plik1* różni się od `__alignof` dla zmiennej w *plik2*. Może to być spowodowane użyciem niezgodnych typów podczas deklarowania zmiennej w różnych plikach lub przy użyciu `#pragma pack` niezgodnych z innymi plikami.
+Zmienna zewnętrzna, do której odwołuje się lub została zdefiniowana w dwóch plikach, ma inne wyrównanie w tych plikach.
+
+## <a name="remarks"></a>Uwagi
+
+To ostrzeżenie jest emitowane po znalezieniu przez kompilator, że **`alignof`** dla zmiennej w *plik1* różni się od **`alignof`** dla zmiennej w *plik2*. Może to być spowodowane użyciem niezgodnych typów podczas deklarowania zmiennej w różnych plikach lub przy użyciu niezgodnych `#pragma pack` z innymi plikami.
 
 Aby rozwiązać to ostrzeżenie, należy użyć tej samej definicji typu lub użyć różnych nazw dla zmiennych.
 
-Aby uzyskać więcej informacji, zobacz [pakiet](../../preprocessor/pack.md) i [operator __alignof](../../cpp/alignof-operator.md).
+Aby uzyskać więcej informacji, zobacz [`pack`](../../preprocessor/pack.md) i [ `alignof` operator](../../cpp/alignof-operator.md).
 
 ## <a name="example"></a>Przykład
 
@@ -34,8 +38,6 @@ struct X {
    char x, y, z, w;
 } global;
 ```
-
-## <a name="example"></a>Przykład
 
 Poniższy przykład generuje C4742.
 

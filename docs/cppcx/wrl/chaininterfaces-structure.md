@@ -17,16 +17,16 @@ helpviewer_keywords:
 - Microsoft::WRL::ChainInterfaces::IidCount constant
 - Microsoft::WRL::ChainInterfaces::Verify method
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
-ms.openlocfilehash: dd1af3fb5c1079a40d8248dc71ae4972537aa856
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 48b663f2042ff0095466d83fe872ef6196112f76
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372654"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211544"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces — Struktura
 
-Określa funkcje weryfikacji i inicjowania, które można zastosować do zestawu identyfikatorów interfejsu.
+Określa funkcje weryfikacji i inicjowania, które mogą być stosowane do zestawu identyfikatorów interfejsów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -71,43 +71,43 @@ struct ChainInterfaces<
 ### <a name="parameters"></a>Parametry
 
 *I0*<br/>
-(Wymagane) Identyfikator interfejsu 0.
+Potrzeb Identyfikator interfejsu 0.
 
-*I1*<br/>
-(Wymagane) Identyfikator interfejsu 1.
+*Elementem I1*<br/>
+Potrzeb Identyfikator interfejsu 1.
 
 *I2*<br/>
-(Opcjonalnie) Identyfikator interfejsu 2.
+Obowiązkowe Identyfikator interfejsu 2.
 
 *I3*<br/>
-(Opcjonalnie) Identyfikator interfejsu 3.
+Obowiązkowe Identyfikator interfejsu 3.
 
 *I4*<br/>
-(Opcjonalnie) Identyfikator interfejsu 4.
+Obowiązkowe Identyfikator interfejsu 4.
 
 *I5*<br/>
-(Opcjonalnie) Identyfikator interfejsu 5.
+Obowiązkowe Identyfikator interfejsu 5.
 
 *I6*<br/>
-(Opcjonalnie) Identyfikator interfejsu 6.
+Obowiązkowe Identyfikator interfejsu 6.
 
 *I7*<br/>
-(Opcjonalnie) Identyfikator interfejsu 7.
+Obowiązkowe Identyfikator interfejsu 7.
 
 *I8*<br/>
-(Opcjonalnie) Identyfikator interfejsu 8.
+Obowiązkowe Identyfikator interfejsu 8.
 
 *I9*<br/>
-(Opcjonalnie) Identyfikator interfejsu 9.
+Obowiązkowe Identyfikator interfejsu 9.
 
-*Typ pochodny*<br/>
+*Pochodntype*<br/>
 Typ pochodny.
 
 *BaseType*<br/>
 Typ podstawowy typu pochodnego.
 
-*HasImplements*<br/>
-Wartość logiczna, która jeśli **true**, oznacza, że nie można użyć [MixIn](mixin-structure.md) struktury z klasy, która nie pochodzi od [Implements](implements-structure.md) stucture.
+*hasImplements*<br/>
+Wartość logiczna, która **`true`** oznacza, że nie można użyć struktury [domieszki](mixin-structure.md) z klasą, która nie pochodzi od [implementuje](implements-structure.md) Stucture.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -115,16 +115,16 @@ Wartość logiczna, która jeśli **true**, oznacza, że nie można użyć [MixI
 
 Nazwa                                                   | Opis
 ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[ChainInterfaces::CanCastTo](#cancastto)               | Wskazuje, czy określony identyfikator interfejsu może być rzutowany na każdą `ChainInterface` ze specjalizacji zdefiniowanych przez parametry szablonu.
-[ChainInterfaces::CastToUnknown](#casttounknown)       | Rzutuje wskaźnik interfejsu typu zdefiniowanego przez parametr szablonu `IUnknown` *I0* na wskaźnik do .
-[ChainInterfaces::FillArrayWithIid](#fillarraywithiid) | Przechowuje identyfikator interfejsu zdefiniowany przez parametr szablonu *I0* w określonej lokalizacji w określonej tablicy identyfikatorów interfejsu.
-[ChainInterfaces::Sprawdź](#verify)                     | Sprawdza, czy każdy interfejs zdefiniowany przez parametry szablonu od `IInspectable` *I0* do *I9* dziedziczy i/lub `IUnknown` , a *I0* dziedziczy od *I1* do *I9.*
+[ChainInterfaces:: CanCastTo —](#cancastto)               | Wskazuje, czy określony identyfikator interfejsu może być rzutowany do każdej specjalizacji zdefiniowanej przez `ChainInterface` Parametry szablonu.
+[ChainInterfaces:: CastToUnknown —](#casttounknown)       | Rzutuje wskaźnik interfejsu typu zdefiniowanego przez parametr szablonu *I0* na wskaźnik do `IUnknown` .
+[ChainInterfaces:: FillArrayWithIid —](#fillarraywithiid) | Przechowuje identyfikator interfejsu zdefiniowany przez parametr szablonu *I0* w określonej lokalizacji w określonej tablicy identyfikatorów interfejsu.
+[ChainInterfaces:: Verify](#verify)                     | Sprawdza, czy każdy interfejs zdefiniowany przez parametry szablonu *I0* za pośrednictwem *i9* dziedziczy z `IUnknown` i/lub `IInspectable` , i że *I0* dziedziczy z elementów *I1* za pośrednictwem *i9*.
 
-### <a name="protected-constants"></a>Stałe chronione
+### <a name="protected-constants"></a>Chronione stałe
 
 Nazwa                                   | Opis
 -------------------------------------- | -----------------------------------------------------------------------------------------------------------------
-[ChainInterfaces::IidCount](#iidcount) | Całkowita liczba identyfikatorów interfejsu zawartych w interfejsach określonych przez parametry szablonu *od I0* do *I9*.
+[ChainInterfaces:: IidCount —](#iidcount) | Całkowita liczba identyfikatorów interfejsów zawartych w interfejsach określonych przez parametry szablonu *I0* do *i9*.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -134,13 +134,13 @@ Nazwa                                   | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** implements.h
+**Nagłówek:** implementuje. h
 
-**Obszar nazw:** Microsoft::WRL
+**Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="chaininterfacescancastto"></a><a name="cancastto"></a>ChainInterfaces::CanCastTo
+## <a name="chaininterfacescancastto"></a><a name="cancastto"></a>ChainInterfaces:: CanCastTo —
 
-Wskazuje, czy określony identyfikator interfejsu może być rzutowany na każdą ze specjalizacji zdefiniowanych przez domyślne parametry szablonu.
+Wskazuje, czy określony identyfikator interfejsu może być rzutowany do każdej specjalizacji zdefiniowanej przez parametry szablonu inne niż domyślne.
 
 ```cpp
 __forceinline bool CanCastTo(
@@ -151,19 +151,19 @@ __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>Parametry
 
-*Riid*<br/>
+*riid*<br/>
 Identyfikator interfejsu.
 
-*Ppv*<br/>
-Wskaźnik do ostatniego identyfikatora interfejsu, który został pomyślnie oddanych.
+*ppv*<br/>
+Wskaźnik do ostatniego identyfikatora interfejsu, który został pomyślnie przerzutowany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli wszystkie operacje rzutowania zakończyły się pomyślnie; w przeciwnym razie **false**.
+**`true`** Jeśli wszystkie operacje rzutowania zakończyły się powodzeniem; w przeciwnym razie **`false`** .
 
-## <a name="chaininterfacescasttounknown"></a><a name="casttounknown"></a>ChainInterfaces::CastToUnknown
+## <a name="chaininterfacescasttounknown"></a><a name="casttounknown"></a>ChainInterfaces:: CastToUnknown —
 
-Rzutuje wskaźnik interfejsu typu zdefiniowanego przez parametr szablonu `IUnknown` *I0* na wskaźnik do .
+Rzutuje wskaźnik interfejsu typu zdefiniowanego przez parametr szablonu *I0* na wskaźnik do `IUnknown` .
 
 ```cpp
 __forceinline IUnknown* CastToUnknown();
@@ -171,9 +171,9 @@ __forceinline IUnknown* CastToUnknown();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do `IUnknown`.
+Wskaźnik do `IUnknown` .
 
-## <a name="chaininterfacesfillarraywithiid"></a><a name="fillarraywithiid"></a>ChainInterfaces::FillArrayWithIid
+## <a name="chaininterfacesfillarraywithiid"></a><a name="fillarraywithiid"></a>ChainInterfaces:: FillArrayWithIid —
 
 Przechowuje identyfikator interfejsu zdefiniowany przez parametr szablonu *I0* w określonej lokalizacji w określonej tablicy identyfikatorów interfejsu.
 
@@ -186,15 +186,15 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parametry
 
-*Indeks*<br/>
-Wskaźnik do wartości indeksu do *tablicy iids.*
+*indeks*<br/>
+Wskaźnik na wartość indeksu do tablicy *IID* .
 
-*iids*<br/>
-Tablica identyfikatorów interfejsu.
+*IID*<br/>
+Tablica identyfikatorów interfejsów.
 
-## <a name="chaininterfacesiidcount"></a><a name="iidcount"></a>ChainInterfaces::IidCount
+## <a name="chaininterfacesiidcount"></a><a name="iidcount"></a>ChainInterfaces:: IidCount —
 
-Całkowita liczba identyfikatorów interfejsu zawartych w interfejsach określonych przez parametry szablonu *od I0* do *I9*.
+Całkowita liczba identyfikatorów interfejsów zawartych w interfejsach określonych przez parametry szablonu *I0* do *i9*.
 
 ```cpp
 static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + Details::InterfaceTraits<I1>::IidCount + Details::InterfaceTraits<I2>::IidCount + Details::InterfaceTraits<I3>::IidCount + Details::InterfaceTraits<I4>::IidCount + Details::InterfaceTraits<I5>::IidCount + Details::InterfaceTraits<I6>::IidCount + Details::InterfaceTraits<I7>::IidCount + Details::InterfaceTraits<I8>::IidCount + Details::InterfaceTraits<I9>::IidCount;
@@ -202,15 +202,15 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Całkowita liczba identyfikatorów interfejsu.
+Całkowita liczba identyfikatorów interfejsów.
 
 ### <a name="remarks"></a>Uwagi
 
-Parametry szablonu *I0* i *I1* są wymagane, a parametry *od I2* do *I9* są opcjonalne. Liczba identyfikatorów każdego interfejsu jest zazwyczaj 1.
+Parametry szablonu *I0* i *I1* są wymagane, a parametry *I2* do *i9* są opcjonalne. Liczba IID każdego interfejsu jest zwykle 1.
 
-## <a name="chaininterfacesverify"></a><a name="verify"></a>ChainInterfaces::Sprawdź
+## <a name="chaininterfacesverify"></a><a name="verify"></a>ChainInterfaces:: Verify
 
-Sprawdza, czy każdy interfejs zdefiniowany przez parametry szablonu od `IInspectable` *I0* do *I9* dziedziczy i/lub `IUnknown` , a *I0* dziedziczy od *I1* do *I9.*
+Sprawdza, czy każdy interfejs zdefiniowany przez parametry szablonu *I0* za pośrednictwem *i9* dziedziczy z `IUnknown` i/lub `IInspectable` , i że *I0* dziedziczy z elementów *I1* za pośrednictwem *i9*.
 
 ```cpp
 WRL_NOTHROW __forceinline static void Verify();
@@ -218,6 +218,6 @@ WRL_NOTHROW __forceinline static void Verify();
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli operacja weryfikacji nie `static_assert` powiedzie się, emituje komunikat o błędzie opisujący błąd.
+Jeśli operacja weryfikacji nie powiedzie się, **`static_assert`** emituje komunikat o błędzie opisujący błąd.
 
-Parametry szablonu *I0* i *I1* są wymagane, a parametry *od I2* do *I9* są opcjonalne.
+Parametry szablonu *I0* i *I1* są wymagane, a parametry *I2* do *i9* są opcjonalne.

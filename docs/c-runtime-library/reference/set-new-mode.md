@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-ms.openlocfilehash: f3635d462d2c7438ce985d74ff347120c02c82e0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: aa21854f6a8c4b58a510b16e824449a53b91f329
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920099"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218536"
 ---
 # <a name="_set_new_mode"></a>_set_new_mode
 
@@ -57,7 +57,7 @@ Zwraca poprzedni tryb obsługi ustawiony dla opcji **malloc**. Zwracana wartoś�
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja C++ **_set_new_mode** ustawia nowy tryb obsługi dla opcji [malloc](malloc.md). Nowy tryb obsługi wskazuje, czy w przypadku niepowodzenia, **malloc** ma wywołać nową procedurę obsługi jako ustawioną przez [_set_new_handler](set-new-handler.md). Domyślnie funkcja **malloc** nie wywołuje nowej procedury obsługi w przypadku niepowodzenia przydzielenia pamięci. Można zastąpić to zachowanie domyślne, tak aby w przypadku niepowodzenia przydzielenia pamięci przez funkcję **malloc** wywołuje nową procedurę obsługi w taki sam **sposób, w** jaki operator **New** wykonuje, gdy nie powiedzie się z tego samego powodu. Aby uzyskać więcej informacji, zobacz Operatory [New](../../cpp/new-operator-cpp.md) i [delete](../../cpp/delete-operator-cpp.md) w *dokumentacji języka C++*. Aby zastąpić wartość domyślną, należy wywołać:
+Funkcja C++ **_set_new_mode** ustawia nowy tryb obsługi dla opcji [malloc](malloc.md). Nowy tryb obsługi wskazuje, czy w przypadku niepowodzenia, **malloc** ma wywołać nową procedurę obsługi jako ustawioną przez [_set_new_handler](set-new-handler.md). Domyślnie funkcja **malloc** nie wywołuje nowej procedury obsługi w przypadku niepowodzenia przydzielenia pamięci. Można zastąpić to zachowanie domyślne, tak aby w przypadku niepowodzenia przydzielenia pamięci przez funkcję **malloc** wywołuje nową procedurę obsługi w taki sam **sposób, w** jaki **`new`** operator wykonuje, gdy nie powiedzie się z tego samego powodu. Aby uzyskać więcej informacji, zobacz Operatory [New](../../cpp/new-operator-cpp.md) i [delete](../../cpp/delete-operator-cpp.md) w *dokumentacji języka C++*. Aby zastąpić wartość domyślną, należy wywołać:
 
 ```cpp
 _set_new_mode(1);
@@ -65,7 +65,7 @@ _set_new_mode(1);
 
 Wczesne w programie lub Połącz z NewMode. obj (zobacz [Opcje linku](../../c-runtime-library/link-options.md)).
 
-Ta funkcja sprawdza poprawność parametru. Jeśli *newhandlermode* jest coś innego niż 0 lub 1, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, <strong>_set_new_mode</strong> zwraca wartość-1 i **errno** ustawia errno `EINVAL`na.
+Ta funkcja sprawdza poprawność parametru. Jeśli *newhandlermode* jest coś innego niż 0 lub 1, funkcja wywołuje procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, <strong>_set_new_mode</strong> zwraca wartość-1 i ustawia **errno** na `EINVAL` .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -73,11 +73,11 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_set_new_mode**|\<Nowy. h>|
+|**_set_new_mode**|\<new.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

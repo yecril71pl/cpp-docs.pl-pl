@@ -28,12 +28,12 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 29b760d8831411142aad052fdef510efb0486747
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 70ed4adb7ceada53205fd69f111c8976fe95c711
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914524"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234019"
 ---
 # <a name="set_terminate-crt"></a>set_terminate (CRT)
 
@@ -60,7 +60,7 @@ Funkcja **set_terminate** instaluje *termFunction* jako funkcję wywołana przez
 
 W środowisku wielowątkowym funkcje Przerwij są obsługiwane oddzielnie dla każdego wątku. Każdy nowy wątek musi zainstalować własną funkcję terminate. W ten sposób każdy wątek jest odpowiedzialny za jego własną zakończenie obsługi.
 
-Typ **terminate_function** jest zdefiniowany w EH. H jako wskaźnik do funkcji zakończenia zdefiniowanej przez użytkownika, *termFunction* , która zwraca wartość **void**. Funkcja niestandardowa *termFunction* może nie przyjmować argumentów i nie powinna zwracać do obiektu wywołującego. W takim przypadku wywoływana jest metoda [Abort](abort.md) . Wyjątek nie może zostać zgłoszony z poziomu *termFunction*.
+Typ **terminate_function** jest zdefiniowany w EH. H jako wskaźnik do funkcji zakończenia zdefiniowanej przez użytkownika, *termFunction* , która zwraca wartość **`void`** . Funkcja niestandardowa *termFunction* może nie przyjmować argumentów i nie powinna zwracać do obiektu wywołującego. W takim przypadku wywoływana jest metoda [Abort](abort.md) . Wyjątek nie może zostać zgłoszony z poziomu *termFunction*.
 
 ```cpp
 typedef void ( *terminate_function )( );
@@ -77,7 +77,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**set_terminate**|\<> EH. h|
+|**set_terminate**|\<eh.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -85,10 +85,10 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 Zapoznaj się z przykładem [przerwania](terminate-crt.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Procedury obsługi wyjątków](../../c-runtime-library/exception-handling-routines.md)<br/>
-[Anuluj](abort.md)<br/>
+[przerwij](abort.md)<br/>
 [_get_terminate](get-terminate.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
 [kończyć](terminate-crt.md)<br/>

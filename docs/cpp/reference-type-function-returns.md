@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-ms.openlocfilehash: 5e84643713dcbcb278fe7ce07c5d55f3593ec2ef
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b2997348a3234302655187af25c9c4644c95e48e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188301"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233629"
 ---
 # <a name="reference-type-function-returns"></a>Zwracanie funkcji typu odwołania
 
@@ -29,7 +29,7 @@ Typy zwracające odwołanie mogą być również przydatne, gdy funkcja musi osz
 
 ## <a name="example"></a>Przykład
 
-Rozważmy przykład `Point`:
+Rozważmy `Point` przykład:
 
 ```cpp
 // refType_function_returns.cpp
@@ -86,7 +86,7 @@ Zwróć uwagę na to, że w głównym obiekcie ThePoint pozostaje w zakresie, a 
 
 Deklaracje typów referencyjnych muszą zawierać inicjatory, z wyjątkiem następujących przypadków:
 
-- Jawna deklaracja **extern**
+- Jawna **`extern`** Deklaracja
 
 - Deklaracja składowej klasy
 
@@ -108,8 +108,8 @@ Foo& GetFoo()
 } // f is destroyed here
 ```
 
-Kompilator generuje ostrzeżenie w tym przypadku: `warning C4172: returning address of local variable or temporary`. W przypadku prostych programów możliwe jest, że czasami nie zostanie naruszone naruszenie dostępu, jeśli odwołanie jest dostępne przez wywołującego przed zastąpieniem lokalizacji pamięci. Jest to spowodowane zawiera szczęściem. Zwróć ostrzeżenie.
+Kompilator wystawia ostrzeżenie w tym przypadku: `warning C4172: returning address of local variable or temporary` . W przypadku prostych programów możliwe jest, że czasami nie zostanie naruszone naruszenie dostępu, jeśli odwołanie jest dostępne przez wywołującego przed zastąpieniem lokalizacji pamięci. Jest to spowodowane zawiera szczęściem. Zwróć ostrzeżenie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Odwołania](../cpp/references-cpp.md)
+[Dokumentacja](../cpp/references-cpp.md)

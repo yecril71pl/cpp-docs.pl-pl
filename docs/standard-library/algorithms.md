@@ -8,12 +8,12 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-ms.openlocfilehash: 4b49b3c296d3afcbb26af028dc0b4a885444a897
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6532cb56bb70c82525a13ba53efdd6203ebafb12
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617629"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205226"
 ---
 # <a name="algorithms"></a>Algorytmy
 
@@ -33,7 +33,7 @@ Opisy funkcji szablonu algorytmu korzystają z kilku skróconych fraz:
 
 - Wyrażenia takie jak *x*  -  *Y*, gdzie *x* i *Y* mogą być iteratorami innymi niż Iteratory dostępu swobodnego, są zamierzone w sensie matematycznym. Funkcja nie musi obliczać operatora **-** , jeśli musi ustalić taką wartość. Ta sama wartość dotyczy również wyrażeń, takich jak *x*  +  *n* i *x*  -  *n*, gdzie *N* jest typem liczb całkowitych.
 
-Kilka algorytmów używa predykatu, który wykonuje porównanie parowania, takie jak with `operator==` , w celu uzyskania wyniku **logicznego** . Funkcja predykatu `operator==` lub wszelkie jej zamiany nie mogą zmieniać żadnego z argumentów operacji. Musi ona dawać ten sam wynik **bool** przy każdej ocenie i musi dać ten sam wynik, jeśli kopia jednego z operandów jest zastępowana dla operandu.
+Kilka algorytmów używa predykatu, który wykonuje porównanie parowania, na przykład z `operator==` , aby uzyskać **`bool`** wynik. Funkcja predykatu `operator==` lub wszelkie jej zamiany nie mogą zmieniać żadnego z argumentów operacji. Musi ona dawać ten sam **`bool`** wynik przy każdej ocenie i musi dać ten sam wynik, jeśli kopia jednego z operandów jest zastępowana dla operandu.
 
 Kilka algorytmów używa predykatu, który musi mieć ścisłe słabe porządkowanie dla par elementów z sekwencji. W przypadku predykatu *pred*(*X*, *Y*):
 
@@ -45,13 +45,13 @@ Kilka algorytmów używa predykatu, który musi mieć ścisłe słabe porządkow
 
 Niektóre z tych algorytmów niejawnie używają predykatu *x* \< *Y*. Other predicates that typically satisfy the strict weak ordering requirement are *X* > *Y*, `less` (*X*, *Y*) i `greater` (*x*, *y*). Należy jednak zauważyć, że predykaty takie jak *X* \<= *Y* and *X* > =  *Y* nie spełniają tego wymagania.
 
-Sekwencja elementów wyznaczono przez Iteratory w zakresie \[ *pierwszy*, *ostatni*) jest sekwencją uporządkowaną według operatora **<** , jeśli dla każdego *N* z zakresu \[ od 0, *ostatniego*  -  *pierwszego*) i dla każdego *M* w zakresie (*N*, *ostatni*  -  *pierwszy*) predykat \! ( \* (*pierwszy*  +  *M*) < \* (*pierwsze*  +  *n*)) ma wartość true. (Należy zauważyć, że elementy są sortowane w kolejności rosnącej). Funkcja predykatu `operator<` lub wszelkie jej zamiany nie mogą zmieniać żadnego z argumentów operacji. Musi ona dawać ten sam wynik **bool** przy każdej ocenie i musi dać ten sam wynik, jeśli kopia jednego z operandów jest zastępowana dla operandu. Ponadto musi nałożyć ścisłe słabe porządkowanie dla operandów, które porównuje.
+Sekwencja elementów wyznaczono przez Iteratory w zakresie \[ *pierwszy*, *ostatni*) jest sekwencją uporządkowaną według operatora **<** , jeśli dla każdego *N* z zakresu \[ od 0, *ostatniego*  -  *pierwszego*) i dla każdego *M* w zakresie (*N*, *ostatni*  -  *pierwszy*) predykat \! ( \* (*pierwszy*  +  *M*) < \* (*pierwsze*  +  *n*)) ma wartość true. (Należy zauważyć, że elementy są sortowane w kolejności rosnącej). Funkcja predykatu `operator<` lub wszelkie jej zamiany nie mogą zmieniać żadnego z argumentów operacji. Musi ona dawać ten sam **`bool`** wynik przy każdej ocenie i musi dać ten sam wynik, jeśli kopia jednego z operandów jest zastępowana dla operandu. Ponadto musi nałożyć ścisłe słabe porządkowanie dla operandów, które porównuje.
 
-Sekwencja elementów oznaczona przez Iteratory w zakresie \[ `First` , `Last` ) jest stertą uporządkowaną według `operator<` IF, dla każdego *N* z zakresu \[ 1, *ostatniego*  -  *pierwszego*) predykat \! ( \* _pierwszy_  <  \* (*pierwszy*  +  *N*)) ma wartość true. (Pierwszy element jest największą.) Struktura wewnętrzna jest w inny sposób znana tylko w przypadku funkcji szablonu [make_heap](algorithm-functions.md#make_heap), [pop_heap](algorithm-functions.md#pop_heap)i [push_heap](algorithm-functions.md#push_heap). Podobnie jak w przypadku kolejności uporządkowanej, funkcji predykatu `operator<` lub wszelkich zastąpień dla niej, nie może zmienić któregokolwiek z operandów i musi nałożyć ścisłe niedokładne porządkowanie dla operandów, które porównuje. Musi ona dawać ten sam wynik **bool** przy każdej ocenie i musi dać ten sam wynik, jeśli kopia jednego z operandów jest zastępowana dla operandu.
+Sekwencja elementów oznaczona przez Iteratory w zakresie \[ `First` , `Last` ) jest stertą uporządkowaną według `operator<` IF, dla każdego *N* z zakresu \[ 1, *ostatniego*  -  *pierwszego*) predykat \! ( \* _pierwszy_  <  \* (*pierwszy*  +  *N*)) ma wartość true. (Pierwszy element jest największą.) Struktura wewnętrzna jest w inny sposób znana tylko w przypadku funkcji szablonu [make_heap](algorithm-functions.md#make_heap), [pop_heap](algorithm-functions.md#pop_heap)i [push_heap](algorithm-functions.md#push_heap). Podobnie jak w przypadku kolejności uporządkowanej, funkcji predykatu `operator<` lub wszelkich zastąpień dla niej, nie może zmienić któregokolwiek z operandów i musi nałożyć ścisłe niedokładne porządkowanie dla operandów, które porównuje. Musi ona dawać ten sam **`bool`** wynik przy każdej ocenie i musi dać ten sam wynik, jeśli kopia jednego z operandów jest zastępowana dla operandu.
 
 Algorytmy standardowej biblioteki języka C++ znajdują się [\<algorithm>](algorithm.md) w [\<numeric>](numeric.md) plikach nagłówkowych i.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja standardowej biblioteki języka C++](cpp-standard-library-reference.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](thread-safety-in-the-cpp-standard-library.md)

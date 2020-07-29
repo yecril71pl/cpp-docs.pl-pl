@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: e60f3fff2ef61f4d6374072c05a2ad3e64a57031
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 9b6b7bb54d5dce48dc6fce517eb0c909b0284da2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760931"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233447"
 ---
 # <a name="compiler-error-c2885"></a>Błąd kompilatora C2885
 
@@ -21,7 +21,7 @@ Użyto nieprawidłowej deklaracji [using](../../cpp/using-declaration.md) .
 
 ## <a name="example"></a>Przykład
 
-Ten błąd może być wygenerowany jako wynik zgodności kompilatora, który został wykonany dla programu Visual Studio 2005: nie jest już prawidłowym elementem deklaracji `using` dla typu zagnieżdżonego; należy jawnie zakwalifikować każde odwołanie do typu zagnieżdżonego, umieścić typ w przestrzeni nazw lub utworzyć typedef.
+Ten błąd może zostać wygenerowany w wyniku pracy zgodnej z kompilatorem, który został wykonany dla programu Visual Studio 2005: nie jest już prawidłowa **`using`** Deklaracja do typu zagnieżdżonego; należy jawnie zakwalifikować każde odwołanie do typu zagnieżdżonego, umieścić typ w przestrzeni nazw lub utworzyć element typedef.
 
 Poniższy przykład generuje C2885.
 
@@ -54,7 +54,7 @@ int main () {
 
 ## <a name="example"></a>Przykład
 
-Użycie słowa kluczowego `using` z elementem członkowskim klasy C++ wymaga zdefiniowania tego elementu członkowskiego wewnątrz innej klasy (klasy pochodnej).
+Jeśli używasz **`using`** słowa kluczowego z składową klasy, C++ wymaga zdefiniowania tego elementu członkowskiego wewnątrz innej klasy (klasy pochodnej).
 
 Poniższy przykład generuje C2885.
 

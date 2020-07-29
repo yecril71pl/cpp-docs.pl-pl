@@ -38,12 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: b55a7ec92787cb6b3103bf71b65d137d24ffff04
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 452a6bdc0382af4c9d01921c51dbaa0e00ccdcb2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617586"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205005"
 ---
 # <a name="allocator_base-class"></a>allocator_base — Klasa
 
@@ -61,7 +61,7 @@ class allocator_base
 |Parametr|Opis|
 |---------------|-----------------|
 |*Typ*|Typ elementów przyznanych przez alokatora.|
-|*Synchronizuj*|Zasady synchronizacji dla alokatora, który jest klasą [sync_none](sync-none-class.md), klasą [sync_per_container](sync-per-container-class.md), [klasą sync_per_thread](sync-per-thread-class.md)lub [klasą sync_shared](sync-shared-class.md).|
+|*Synchronizacja*|Zasady synchronizacji dla alokatora, który jest klasą [sync_none](sync-none-class.md), klasą [sync_per_container](sync-per-container-class.md), [klasą sync_per_thread](sync-per-thread-class.md)lub [klasą sync_shared](sync-shared-class.md).|
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -85,8 +85,8 @@ class allocator_base
 
 |Funkcja członkowska|Opis|
 |-|-|
-|[_Charalloc](#charalloc)|Przydziela magazyn dla tablicy typu **char**.|
-|[_Chardealloc](#chardealloc)|Zwalnia magazyn dla tablicy zawierającej elementy typu **char**.|
+|[_Charalloc](#charalloc)|Przydziela magazyn dla tablicy typu **`char`** .|
+|[_Chardealloc](#chardealloc)|Zwalnia magazyn dla tablicy zawierającej elementy typu **`char`** .|
 |[Ulica](#address)|Znajduje adres obiektu, którego wartość jest określona.|
 |[allocate](#allocate)|Przydziela blok pamięci wystarczająco duży, aby można było przechowywać co najmniej określoną liczbę elementów.|
 |[Konstruuj](#construct)|Konstruuje określony typ obiektu pod określonym adresem, który jest zainicjowany z określoną wartością.|
@@ -102,7 +102,7 @@ class allocator_base
 
 ## <a name="allocator_base_charalloc"></a><a name="charalloc"></a>allocator_base:: _Charalloc
 
-Przydziela magazyn dla tablicy typu **char**.
+Przydziela magazyn dla tablicy typu **`char`** .
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -112,7 +112,7 @@ char *_Charalloc(size_type count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*count*|Liczba elementów w tablicy, która ma zostać przypisana.|
+|*liczbą*|Liczba elementów w tablicy, która ma zostać przypisana.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -124,7 +124,7 @@ Ta funkcja członkowska jest używana przez kontenery podczas kompilowania z kom
 
 ## <a name="allocator_base_chardealloc"></a><a name="chardealloc"></a>allocator_base:: _Chardealloc
 
-Zwalnia magazyn dla tablicy zawierającej elementy typu **char**.
+Zwalnia magazyn dla tablicy zawierającej elementy typu **`char`** .
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -135,11 +135,11 @@ void _Chardealloc(void* ptr, size_type count);
 |Parametr|Opis|
 |---------------|-----------------|
 |*ptr*|Wskaźnik do pierwszego obiektu do cofnięcia przydziału z magazynu.|
-|*count*|Liczba obiektów do cofnięcia przydziału z magazynu.|
+|*liczbą*|Liczba obiektów do cofnięcia przydziału z magazynu.|
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska jest używana przez kontenery podczas kompilowania z kompilatorem, który nie może skompilować ponownie powiązania. Implementuje `_Chardealloc` dla alokatora zdefiniowanego przez użytkownika przez wywołanie `deallocate` funkcji filtru synchronizacji. Wskaźnik ptr musi zostać wcześniej zwrócony przez wywołanie `_Charalloc` dla obiektu alokatora, który porównuje równe `*this` , przydzielenie obiektu tablicy o tym samym rozmiarze i typie. `_Chardealloc`nigdy nie zgłasza wyjątku.
+Ta funkcja członkowska jest używana przez kontenery podczas kompilowania z kompilatorem, który nie może skompilować ponownie powiązania. Implementuje `_Chardealloc` dla alokatora zdefiniowanego przez użytkownika przez wywołanie `deallocate` funkcji filtru synchronizacji. Wskaźnik ptr musi zostać wcześniej zwrócony przez wywołanie `_Charalloc` dla obiektu alokatora, który porównuje równe **`*this`** , przydzielenie obiektu tablicy o tym samym rozmiarze i typie. `_Chardealloc`nigdy nie zgłasza wyjątku.
 
 ## <a name="allocator_baseaddress"></a><a name="address"></a>allocator_base:: Address
 
@@ -339,6 +339,6 @@ Typ, który jest zarządzany przez program przydzielający.
 typedef Type value_type;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [\<allocators>](allocators-header.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4307
 ms.assetid: 7cca11e9-be61-49e4-8b15-88b84f0cbf07
-ms.openlocfilehash: f6e06acaf43708d6c0da6d67531b6c4b9f202971
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d0179dc5f5cb9367ee83a7f40f8b9ceb368474fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161883"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218133"
 ---
 # <a name="compiler-warning-level-2-c4307"></a>Ostrzeżenie kompilatora (poziom 2) C4307
 
 "operator": przepełnienie stałej całkowitej
 
-Operator jest używany w wyrażeniu, które powoduje stałe przepełnienie przyjmowanego miejsca. Może być konieczne użycie większego typu dla stałej. **Podpisana int** ma mniejszą wartość niż `unsigned int`, ponieważ **podpisana int** używa jednego bitu do reprezentowania znaku.
+Operator jest używany w wyrażeniu, które powoduje stałe przepełnienie przyjmowanego miejsca. Może być konieczne użycie większego typu dla stałej. **`signed int`** Zawiera mniejszą wartość niż, **`unsigned int`** ponieważ **`signed int`** używa jednego bitu do reprezentowania znaku.
 
 Poniższy przykład generuje C4307:
 

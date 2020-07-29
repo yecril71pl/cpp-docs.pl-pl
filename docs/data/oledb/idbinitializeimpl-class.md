@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: ff74ae93f01c7e8588a0eff1f48d3f6f0e6d5e81
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 511d67586a7adc2b26cc6acbdf39beff78f9c38a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210772"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218328"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl — Klasa
 
@@ -58,14 +58,14 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
-Klasa, która pochodzi od `IDBInitializeImpl`.
+*T*<br/>
+Klasa, która pochodzi od `IDBInitializeImpl` .
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** ATLDB. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="methods"></a>Metody
 
@@ -145,7 +145,7 @@ DWORD m_dwStatus;
 
 ### <a name="remarks"></a>Uwagi
 
-Te flagi określają lub wskazują stan różnych atrybutów dla obiektu źródła danych. Zawiera co najmniej jedną z następujących wartości **wyliczeniowych** :
+Te flagi określają lub wskazują stan różnych atrybutów dla obiektu źródła danych. Zawiera co najmniej jedną z następujących **`enum`** wartości:
 
 ```cpp
 enum DATASOURCE_FLAGS {
@@ -171,7 +171,7 @@ Wskaźnik do obiektu implementacji dla informacji o właściwościach bazy danyc
 CUtlPropInfo< T >* m_pCUtlPropInfo;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Szablony dostawców OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura szablonu dostawcy OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - inline functions [C++], treating member functions as
 - member functions [C++], definition in class declaration
 ms.assetid: 9f77a438-500e-40bb-a6c6-544678f3f4c8
-ms.openlocfilehash: 6dec4ee53cd840c47d76ac0579daca710b0eeb68
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 81fc3ae7a732171c6bddff9f584976dd747372b4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358407"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233668"
 ---
 # <a name="overview-of-member-functions"></a>Przegląd funkcji członkowskich
 
-Funkcje składowe są statyczne lub niestatyczne. Zachowanie statycznych funkcji elementów członkowskich różni się od innych funkcji członkowskich, ponieważ statyczne funkcje członkowskie nie mają niejawnego **tego** argumentu. Niestatyczne funkcje członkowskie mają **ten** wskaźnik. Funkcje członkowskie, zarówno statyczne, jak i niestatyczne, można zdefiniować w obrębie lub poza deklaracją klasy.
+Funkcje składowe są statyczne lub niestatyczne. Zachowanie statycznych funkcji Członkowskich różni się od innych funkcji Członkowskich, ponieważ statyczne funkcje członkowskie nie mają niejawnego **`this`** argumentu. Niestatyczne funkcje składowe mają **`this`** wskaźnik. Funkcje członkowskie, zarówno statyczne, jak i niestatyczne, można zdefiniować w obrębie lub poza deklaracją klasy.
 
-Jeśli funkcję składową zdefiniowano w obrębie deklaracji klasy, jest ona traktowana jak funkcja śródwierszowa i nie ma potrzeby kwalifikowania nazwy funkcji za pomocą nazwy klasy. Chociaż funkcje zdefiniowane wewnątrz deklaracji klas są już traktowane jako funkcje wbudowane, można użyć **wbudowanego** słowa kluczowego do udokumentowania kodu.
+Jeśli funkcję składową zdefiniowano w obrębie deklaracji klasy, jest ona traktowana jak funkcja śródwierszowa i nie ma potrzeby kwalifikowania nazwy funkcji za pomocą nazwy klasy. Chociaż funkcje zdefiniowane wewnątrz deklaracji klasy są już traktowane jako funkcje wbudowane, można użyć **`inline`** słowa kluczowego, aby udokumentować kod.
 
 Przykład deklarowania funkcji w obrębie deklaracji klasy:
 
@@ -43,7 +43,7 @@ int main()
 }
 ```
 
-Jeśli definicja funkcji elementu członkowskiego znajduje się poza deklaracją klasy, jest traktowana jako funkcja wbudowana tylko wtedy, gdy jest jawnie zadeklarowana jako **wbudowana.** Ponadto, nazwa funkcji w definicji musi być kwalifikowana odpowiednią nazwą klasy za pomocą operatora rozpoznawania zakresu (`::`).
+Jeśli definicja funkcji składowej znajduje się poza deklaracją klasy, jest traktowana jako funkcja wbudowana tylko wtedy, gdy jest jawnie zadeklarowana jako **`inline`** . Ponadto, nazwa funkcji w definicji musi być kwalifikowana odpowiednią nazwą klasy za pomocą operatora rozpoznawania zakresu (`::`).
 
 Poniższy przykład jest identyczny z poprzednią deklaracją klasy `Account`, z wyjątkiem tego, że funkcja `Deposit` jest zdefiniowana poza deklaracją klasy:
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4312
 ms.assetid: 541906ed-4f62-4bcb-947f-cf9ae7411bcb
-ms.openlocfilehash: d76b08a31cacdc4e2e367a236ce98ec5204ac3e7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 379803260492449da4985e62d36750f121b4e7fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163066"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233265"
 ---
 # <a name="compiler-warning-level-1-c4312"></a>Ostrzeżenie kompilatora (poziom 1) C4312
 
 'operacja' : konwersja z 'typ1' na 'typ2' o większym rozmiarze
 
-To ostrzeżenie wykrywa próbę przypisania wartości 32-bitowej do typu wskaźnika 64-bitowego, na przykład rzutowania 32-bitowego `int` lub `long` do wskaźnika 64-bitowego.
+To ostrzeżenie wykrywa próbę przypisania wartości 32-bitowej do typu wskaźnika 64-bitowego, na przykład rzutowania 32 bitowego **`int`** lub **`long`** do wskaźnika 64-bitowego.
 
 Może to być niebezpieczna konwersja nawet w przypadku wartości wskaźnika, które mieszczą się w 32 bitach, gdy występuje rozszerzenie podpisywania. Jeśli ujemna 32-bitowa liczba całkowita jest przypisana do typu wskaźnika 64-bitowego, rozszerzenie znaku powoduje, że wartość wskaźnika odwołuje się do adresu pamięci innego niż wartość całkowita.
 

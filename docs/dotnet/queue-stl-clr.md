@@ -57,18 +57,18 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: 5339472574bced99d833a0b60e8b72b10b0fa989
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ce4b3ca37fc5e13ace3058cb9ec9e9daad073b47
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208367"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210933"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
-Klasa szablonu opisuje obiekt, który kontroluje różnej długości sekwencje elementów, które mają pierwszy dostęp do pierwszego. Karta kontenera jest używana `queue` do zarządzania kontenerem bazowym jako kolejką.
+Klasa szablonu opisuje obiekt, który kontroluje różnej długości sekwencje elementów, które mają pierwszy dostęp do pierwszego. Karta kontenera służy `queue` do zarządzania kontenerem bazowym jako kolejką.
 
-W poniższym opisie `GValue` jest taka sama jak *wartość* , chyba że ostatni jest typem ref, w takim przypadku jest `Value^`. Podobnie `GContainer` jest taka sama jak *kontener* , chyba że ostatni jest typem ref, w takim przypadku jest `Container^`.
+W poniższym opisie `GValue` jest taka sama jak *wartość* , chyba że ostatni jest typem ref, w takim przypadku jest to `Value^` . Podobnie, `GContainer` jest taka sama jak *kontener* , chyba że ostatni jest typem ref, w takim przypadku jest to `Container^` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -87,12 +87,12 @@ template<typename Value,
 *Wartość*<br/>
 Typ elementu w kontrolowanej sekwencji.
 
-*Wbudowane*<br/>
+*Kontener*<br/>
 Typ bazowego kontenera.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<cliext/Queue >
+**Nagłówek:**\<cliext/queue>
 
 **Przestrzeń nazw:** cliext
 
@@ -130,25 +130,25 @@ Typ bazowego kontenera.
 |Operator|Opis|
 |--------------|-----------------|
 |[queue::operator= (STL/CLR)](#op_as)|Zastępuje kontrolowaną sekwencję.|
-|[operator!= (queue) (STL/CLR)](#op_neq)|Określa, czy obiekt `queue` nie jest równy innemu obiektowi `queue`.|
-|[operator< (queue) (STL/CLR)](#op_lt)|Określa, czy obiekt `queue` jest mniejszy niż inny obiekt `queue`.|
-|[operator<= (queue) (STL/CLR)](#op_lteq)|Określa, czy obiekt `queue` jest mniejszy niż lub równy innemu obiektowi `queue`.|
-|[operator== (queue) (STL/CLR)](#op_eq)|Określa, czy obiekt `queue` jest równy innemu obiektowi `queue`.|
-|[operator> (queue) (STL/CLR)](#op_gt)|Określa, czy obiekt `queue` jest większy niż inny obiekt `queue`.|
-|[operator>= (queue) (STL/CLR)](#op_gteq)|Określa, czy obiekt `queue` jest większy niż lub równy innemu obiektowi `queue`.|
+|[operator! = (queue) (STL/CLR)](#op_neq)|Określa, czy `queue` obiekt nie jest równy innemu `queue` obiektowi.|
+|[< operatora (queue) (STL/CLR)](#op_lt)|Określa, czy `queue` obiekt jest mniejszy niż inny `queue` obiekt.|
+|[operator<= (queue) (STL/CLR)](#op_lteq)|Określa, czy `queue` obiekt jest mniejszy niż lub równy innemu `queue` obiektowi.|
+|[operator = = (queue) (STL/CLR)](#op_eq)|Określa, czy `queue` obiekt jest równy innemu `queue` obiektowi.|
+|[> operatora (queue) (STL/CLR)](#op_gt)|Określa, czy `queue` obiekt jest większy niż inny `queue` obiekt.|
+|[operator>= (queue) (STL/CLR)](#op_gteq)|Określa, czy `queue` obiekt jest większy lub równy innemu `queue` obiektowi.|
 
 ## <a name="interfaces"></a>Interfejsy
 
-|Interface|Opis|
+|Interfejs|Opis|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Duplikowanie obiektu.|
-|IQueue\<wartość, kontener >|Obsługa karty kontenera ogólnego.|
+|IQueue\<Value, Container>|Obsługa karty kontenera ogólnego.|
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt przydziela i zwalnia magazyn dla sekwencji, która kontroluje za pomocą bazowego kontenera, typu `Container`, który przechowuje `Value` elementów i rośnie na żądanie. Obiekt ogranicza dostęp do po prostu wypychania pierwszego elementu i usuwanie ostatniego elementu, implementując pierwszą kolejkę pierwszego wiersza (znaną również jako kolejka FIFO lub po prostu kolejkę).
+Obiekt przydziela i zwalnia magazyn dla sekwencji, która kontroluje za pomocą kontenera bazowego, typu `Container` , który przechowuje `Value` elementy i rośnie na żądanie. Obiekt ogranicza dostęp do po prostu wypychania pierwszego elementu i usuwanie ostatniego elementu, implementując pierwszą kolejkę pierwszego wiersza (znaną również jako kolejka FIFO lub po prostu kolejkę).
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ## <a name="queueassign-stlclr"></a><a name="assign"></a>queue:: Assign (STL/CLR)
 
@@ -364,7 +364,7 @@ typedef Container value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla parametru szablonu `Container`.
+Typ jest synonimem dla parametru szablonu `Container` .
 
 ### <a name="example"></a>Przykład
 
@@ -464,7 +464,7 @@ bool empty();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca wartość true dla pustej kontrolowanej sekwencji. Jest on odpowiednikiem [kolejki:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`. Służy do sprawdzania, czy kolejka jest pusta.
+Funkcja członkowska zwraca wartość true dla pustej kontrolowanej sekwencji. Jest równoważne z [kolejką:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() == 0` . Służy do sprawdzania, czy kolejka jest pusta.
 
 ### <a name="example"></a>Przykład
 
@@ -685,7 +685,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt typu `GValue`, który opisuje wartość przechowywanego elementu do użycia z interfejsem ogólnym dla tej klasy kontenera szablonu. (`GValue` jest `value_type` lub `value_type^`, jeśli `value_type` jest typem ref).
+Typ opisuje obiekt typu `GValue` , który opisuje wartość przechowywanego elementu do użycia z interfejsem ogólnym dla tej klasy kontenera szablonu. ( `GValue` is `value_type` lub `value_type^` if `value_type` jest typem ref).
 
 ### <a name="example"></a>Przykład
 
@@ -789,7 +789,7 @@ Adapter kontenera do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator elementu członkowskiego kopiuje *prawo* do obiektu, a następnie zwraca `*this`. Służy do zastępowania kontrolowanej sekwencji kopią kontrolowanej sekwencji *po prawej stronie*.
+Operator elementu członkowskiego kopiuje *prawo* do obiektu, a następnie zwraca **`*this`** . Służy do zastępowania kontrolowanej sekwencji kopią kontrolowanej sekwencji *po prawej stronie*.
 
 ### <a name="example"></a>Przykład
 
@@ -886,7 +886,7 @@ void push(value_type val);
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska dodaje element o wartości `val` na końcu kolejki. Służy do dołączania elementu do kolejki.
+Funkcja członkowska dodaje element z wartością `val` na końcu kolejki. Służy do dołączania elementu do kolejki.
 
 ### <a name="example"></a>Przykład
 
@@ -948,13 +948,13 @@ Konstruktor:
 
 `queue(queue<Value, Container>% right);`
 
-tworzy opakowany kontener, który jest kopią `right.get_container()`. Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej *przez obiekt Queue*.
+tworzy opakowany kontener, który jest kopią programu `right.get_container()` . Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej *przez obiekt Queue*.
 
 Konstruktor:
 
 `queue(queue<Value, Container>^ right);`
 
-tworzy opakowany kontener, który jest kopią `right->get_container()`. Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej przez obiekt kolejki `*right`.
+tworzy opakowany kontener, który jest kopią programu `right->get_container()` . Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej przez obiekt kolejki `*right` .
 
 Konstruktor:
 
@@ -1069,7 +1069,7 @@ size_type size();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca długość kontrolowanej sekwencji. Służy do określania liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli dowiesz się, czy sekwencja ma rozmiar różny od zera, zobacz [queue:: empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`.
+Funkcja członkowska zwraca długość kontrolowanej sekwencji. Służy do określania liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli dowiesz się, czy sekwencja ma rozmiar różny od zera, zobacz [queue:: empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md) `()` .
 
 ### <a name="example"></a>Przykład
 
@@ -1278,7 +1278,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca `!(left == right)`. Służy do sprawdzania *, czy nie* jest on uporządkowany *tak samo jak w* przypadku porównywania dwóch kolejek elementu według elementu.
+Funkcja operatora zwraca wartość `!(left == right)` . Służy do sprawdzania *, czy nie* jest on uporządkowany *tak samo jak w* przypadku porównywania dwóch kolejek elementu według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -1326,7 +1326,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>&lt; operatora (queue) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>operator &lt; (queue) (STL/CLR)
 
 Kolejka jest mniejsza niż porównanie.
 
@@ -1349,7 +1349,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca wartość true, jeśli dla najniższej pozycji `i`, dla której `!(right[i] < left[i])` jest również spełniony `left[i] < right[i]`. W przeciwnym razie zwraca `left->`[queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() <` `right->size()` służy do sprawdzania, czy *lewa* jest uporządkowana przed *prawą* , gdy dwie kolejki są porównywane elementów według elementu.
+Funkcja operator zwraca wartość true, jeśli dla najniższej pozycji `i` `!(right[i] < left[i])` ma również wartość true `left[i] < right[i]` . W przeciwnym razie zwraca `left->` [kolejkę queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md) , za `() <` `right->size()` pomocą której można testować, czy *lewa* jest uporządkowana przed *prawem* , gdy dwie kolejki są porównywane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -1397,7 +1397,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>operator&lt;= (queue) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>operator &lt; = (queue) (STL/CLR)
 
 Kolejka jest mniejsza niż lub równa porównaniu.
 
@@ -1420,7 +1420,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca `!(right < left)`. Służy do sprawdzania *, czy nie* jest on uporządkowany po *prawej stronie* , gdy dwie kolejki są porównywane elementów według elementu.
+Funkcja operatora zwraca wartość `!(right < left)` . Służy do sprawdzania *, czy nie* jest on uporządkowany po *prawej stronie* , gdy dwie kolejki są porównywane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -1491,7 +1491,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca wartość true tylko wtedy, gdy sekwencje sterowane przez *lewo* i *prawo* mają taką samą długość i, dla każdej pozycji `i`, `left[i] ==` `right[i]`. Służy do sprawdzania, czy *lewa* jest uporządkowana tak samo jak *w przypadku* porównywania dwóch kolejek elementu według elementu.
+Funkcja operator zwraca wartość true tylko wtedy, gdy sekwencje sterowane przez *lewo* i *prawo* mają taką samą długość i, dla każdej pozycji `i` `left[i] ==` `right[i]` . Służy do sprawdzania, czy *lewa* jest uporządkowana tak samo jak *w przypadku* porównywania dwóch kolejek elementu według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -1539,7 +1539,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>&gt; operatora (queue) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>operator &gt; (queue) (STL/CLR)
 
 Kolejka jest większa niż porównanie.
 
@@ -1562,7 +1562,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca `right` `<` `left`. Służy do sprawdzania, czy *lewa* jest uporządkowana po *prawej stronie* , gdy dwie kolejki są porównywane elementów według elementu.
+Funkcja operatora zwraca wartość `right` `<` `left` . Służy do sprawdzania, czy *lewa* jest uporządkowana po *prawej stronie* , gdy dwie kolejki są porównywane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -1610,7 +1610,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>operator&gt;= (queue) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>operator &gt; = (queue) (STL/CLR)
 
 Kolejka jest większa niż lub równa porównaniu.
 
@@ -1633,7 +1633,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca `!(left < right)`. Służy do sprawdzania *, czy nie* jest on uporządkowany przed *prawem* , gdy dwie kolejki są porównywane elementów według elementu.
+Funkcja operatora zwraca wartość `!(left < right)` . Służy do sprawdzania *, czy nie* jest on uporządkowany przed *prawem* , gdy dwie kolejki są porównywane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 

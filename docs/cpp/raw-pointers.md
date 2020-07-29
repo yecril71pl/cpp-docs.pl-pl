@@ -1,66 +1,66 @@
 ---
-title: Nieprzetworzone wskaźniki (C++)
-description: Jak używać surowych wskaźników w języku C++
+title: Wskaźniki pierwotne (C++)
+description: Jak używać wskaźników surowych w języku C++
 ms.date: 04/21/2020
 helpviewer_keywords:
 - pointers [C++]
 no-loc:
-- void
-- nullptr
-- const
-- char
-- new
-- delete
-ms.openlocfilehash: 8ba188154d7395ce7be3878fa9dbee2fde08a130
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+- ':::no-loc(void):::'
+- ':::no-loc(nullptr):::'
+- ':::no-loc(const):::'
+- ':::no-loc(char):::'
+- ':::no-loc(new):::'
+- ':::no-loc(delete):::'
+ms.openlocfilehash: 53679559888191fe7f2aad7cb5a70d607974ae96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032099"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233655"
 ---
-# <a name="raw-pointers-c"></a>Nieprzetworzone wskaźniki (C++)
+# <a name="raw-pointers-c"></a>Wskaźniki pierwotne (C++)
 
-Wskaźnik *pointer* jest typem zmiennej. Przechowuje adres obiektu w pamięci i jest używany do uzyskiwania dostępu do tego obiektu. *Nieprzetworzony wskaźnik* jest wskaźnikiem, którego okres istnienia nie jest kontrolowany przez obiekt hermetyzujący, taki jak [inteligentny wskaźnik](smart-pointers-modern-cpp.md). Nieprzetworzonemu wskaźnikowi można przypisać adres innej zmiennej niebędącej wskaźnikiem [nullptr](nullptr.md)lub można przypisać mu wartość . Wskaźnik, który nie został przypisany wartość zawiera losowe dane.
+*Wskaźnik* jest typem zmiennej. Przechowuje adres obiektu w pamięci i służy do uzyskiwania dostępu do tego obiektu. *Surowy wskaźnik* jest wskaźnikiem, którego okres istnienia nie jest kontrolowany przez obiekt hermetyzowany, taki jak [inteligentny wskaźnik](smart-pointers-modern-cpp.md). Do wskaźnika pierwotnego można przypisać adres innej zmiennej niebędącej wskaźnikiem lub może być przypisana wartość [:::no-loc(nullptr):::](:::no-loc(nullptr):::.md) . Wskaźnik, który nie ma przypisanej wartości, zawiera dane losowe.
 
-Wskaźnik może być również *wyłuskiwane,* aby pobrać wartość obiektu, który wskazuje na. *Operator dostępu elementu członkowskiego* zapewnia dostęp do elementów członkowskich obiektu.
+Wskaźnik może być również *odwołuje* się do pobrania wartości obiektu, który wskazuje. *Operator dostępu do elementów członkowskich* zapewnia dostęp do elementów członkowskich obiektu.
 
 ```cpp
-    int* p = nullptr; // declare pointer and initialize it
+    int* p = :::no-loc(nullptr):::; // declare pointer and initialize it
                       // so that it doesn't store a random address
     int i = 5;
     p = &i; // assign pointer to address of object
     int j = *p; // dereference p to retrieve the value at its address
 ```
 
-Wskaźnik może wskazywać na wpisany **void** obiekt lub na . Gdy program przydziela obiekt na [stercie](https://wikipedia.org/wiki/Heap) w pamięci, odbiera adres tego obiektu w postaci wskaźnika. Takie wskaźniki są nazywane *wskaźnikami właścicielami*. Wskaźnik będący właścicielem (lub jego kopia) musi służyć do jawnego zwolnienia obiektu przydzielonego stercie, gdy nie jest już potrzebny. Niepowodzenie zwolnienia pamięci powoduje *przeciek pamięci*i powoduje, że lokalizacja pamięci jest niedostępna dla innego programu na komputerze. Pamięć przydzielona przy **new** użyciu **delete** musi zostać zwolniona przy użyciu (lub ** delete \[]**). Aby uzyskać więcej informacji, zobacz [ new delete i operatorów](new-and-delete-operators.md).
+Wskaźnik może wskazywać na obiekt z określonym typem lub do **`:::no-loc(void):::`** . Gdy program alokuje obiekt na [stercie](https://wikipedia.org/wiki/Heap) w pamięci, otrzymuje adres tego obiektu w postaci wskaźnika. Takie wskaźniki są nazywane *wskaźnikami będącymi właścicielami*. Wskaźnik będący właścicielem (lub jego kopia) musi być używany do bezpośredniego zwolnienia obiektu przystosowanego do sterty, gdy nie jest już wymagany. Nie można zwolnić pamięci z powodu *przecieku pamięci*, a ta lokalizacja pamięci jest niedostępna dla żadnego innego programu na komputerze. Pamięć przydzielone za pomocą **`:::no-loc(new):::`** musi być zwolniona przy użyciu **`:::no-loc(delete):::`** ** :::no-loc(delete)::: \[ **(lub). Aby uzyskać więcej informacji, zobacz [ :::no-loc(new)::: i :::no-loc(delete)::: Operatory](:::no-loc(new):::-and-:::no-loc(delete):::-operators.md).
 
 ```cpp
-    MyClass* mc = new MyClass(); // allocate object on the heap
+    MyClass* mc = :::no-loc(new)::: MyClass(); // allocate object on the heap
     mc->print(); // access class member
-    delete mc; // delete object (please don't forget!)
+    :::no-loc(delete)::: mc; // :::no-loc(delete)::: object (please don't forget!)
 ```
 
-Wskaźnik (jeśli nie jest zadeklarowany jako) **const** może być zwiększany lub zmniejszany, aby wskazać inną lokalizację w pamięci. Ta operacja jest nazywana *arytmetyką wskaźnika*. Jest on używany w programowaniu w stylu C do iteracji nad elementami w tablicach lub innych struktur danych. Nie **const** można wskazać innej lokalizacji pamięci i w tym sensie jest podobny do [odwołania.](references-cpp.md) Aby uzyskać więcej informacji, zobacz [ const i wskaźniki nietrwałe](const-and-volatile-pointers.md).
+Wskaźnik (jeśli nie jest zadeklarowany jako **`:::no-loc(const):::`** ) można zwiększyć lub zmniejszyć do momentu w innej lokalizacji w pamięci. Ta operacja jest nazywana *arytmetyczną wskaźnikiem*. Jest on używany w programowaniu w stylu języka C do iteracji nad elementami w tablicach lub w innych strukturach danych. **`:::no-loc(const):::`** Nie można nawiązać wskaźnika w celu wskazywania innej lokalizacji pamięci, a w tym sensie jest podobna do [odwołania](references-cpp.md). Aby uzyskać więcej informacji, zobacz [ :::no-loc(const)::: i wskaźniki lotne](:::no-loc(const):::-and-volatile-pointers.md).
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
-    const char* str = "Hello world";
+    :::no-loc(const)::: :::no-loc(char):::* str = "Hello world";
 
-    const int c = 1;
-    const int* pconst = &c; // declare a non-const pointer to const int
-    const int c2 = 2;
-    pconst = &c2;  // OK pconst itself isn't const
-    const int* const pconst2 = &c;
-    // pconst2 = &c2; // Error! pconst2 is const.
+    :::no-loc(const)::: int c = 1;
+    :::no-loc(const)::: int* p:::no-loc(const)::: = &c; // declare a non-:::no-loc(const)::: pointer to :::no-loc(const)::: int
+    :::no-loc(const)::: int c2 = 2;
+    p:::no-loc(const)::: = &c2;  // OK p:::no-loc(const)::: itself isn't :::no-loc(const):::
+    :::no-loc(const)::: int* :::no-loc(const)::: p:::no-loc(const):::2 = &c;
+    // p:::no-loc(const):::2 = &c2; // Error! p:::no-loc(const):::2 is :::no-loc(const):::.
 ```
 
-W 64-bitowych systemach operacyjnych wskaźnik ma rozmiar 64 bitów. Rozmiar wskaźnika systemu określa, ile pamięci adresowalnej może mieć. Wszystkie kopie wskaźnika wskazują tę samą lokalizację pamięci. Wskaźniki (wraz z odwołaniami) są szeroko używane w języku C++ do przekazywania większych obiektów do i z funkcji. To dlatego, że często bardziej efektywne jest kopiowanie adresu obiektu niż kopiowanie całego obiektu. Podczas definiowania funkcji należy określić parametry wskaźnika jako, **const** chyba że funkcja ma zmodyfikować obiekt. Ogólnie rzecz **const** biorąc, odwołania są preferowanym sposobem przekazywania obiektów do **nullptr** funkcji, chyba że wartość obiektu może być ewentualnie .
+W 64-bitowych systemach operacyjnych wskaźnik ma rozmiar 64 bitów. Rozmiar wskaźnika systemu określa ilość pamięci, jaką może mieć adres. Wszystkie kopie wskaźnika wskazują tę samą lokalizację w pamięci. Wskaźniki (wraz z odwołaniami) są szeroko używane w języku C++ do przekazywania większych obiektów do i z funkcji. Dzieje się tak, ponieważ często bardziej wydajne jest skopiowanie adresu obiektu niż kopiowanie całego obiektu. Podczas definiowania funkcji należy określić parametry wskaźnika jako, **`:::no-loc(const):::`** chyba że funkcja modyfikuje obiekt. Ogólnie rzecz biorąc, **`:::no-loc(const):::`** odwołania są preferowanym sposobem przekazywania obiektów do funkcji, chyba że wartość obiektu może być niemożliwa **`:::no-loc(nullptr):::`** .
 
-[Wskaźniki do funkcji](#pointers_to_functions) umożliwiają funkcje, które mają być przekazywane do innych funkcji i są używane do "wywołania zwrotnego" w programowaniu w stylu C. Modern C++ używa [wyrażeń lambda](lambda-expressions-in-cpp.md) w tym celu.
+[Wskaźniki do funkcji](#pointers_to_functions) umożliwiają przekazywanie funkcji do innych funkcji i są używane do "wywołania zwrotne" w programowaniu w stylu języka C. W tym celu w nowoczesnych językach C++ są stosowane [wyrażenia lambda](lambda-expressions-in-cpp.md) .
 
-## <a name="initialization-and-member-access"></a>Inicjowanie i dostęp do członków
+## <a name="initialization-and-member-access"></a>Inicjowanie i dostęp do elementów członkowskich
 
-W poniższym przykładzie pokazano, jak zadeklarować, zainicjować i użyć nieprzetworzonego wskaźnika. Jest inicjowany **new** przy użyciu wskaż obiekt przydzielony na **delete** stercie, który należy jawnie . W przykładzie pokazano również kilka niebezpieczeństw związanych z surowymi wskaźnikami. (Pamiętaj, że w tym przykładzie jest programowanie w stylu C, a nie nowoczesne C ++!)
+Poniższy przykład pokazuje, jak zadeklarować, zainicjować i używać surowego wskaźnika. Jest on inicjowany przy użyciu **`:::no-loc(new):::`** , aby wskazywał obiekt przydzielony na stosie, który należy jawnie **`:::no-loc(delete):::`** . W przykładzie przedstawiono również kilka zagrożeń związanych z nieprzetworzonymi wskaźnikami. (Pamiętaj, że ten przykład to programowanie w stylu C i nie nowoczesny C++)
 
 ```cpp
 #include <iostream>
@@ -71,11 +71,11 @@ class MyClass
 public:
     int num;
     std::string name;
-    void print() { std::cout << name << ":" << num << std::endl; }
+    :::no-loc(void)::: print() { std::cout << name << ":" << num << std::endl; }
 };
 
 // Accepts a MyClass pointer
-void func_A(MyClass* mc)
+:::no-loc(void)::: func_A(MyClass* mc)
 {
     // Modify the object that mc points to.
     // All copies of the pointer will point to
@@ -84,7 +84,7 @@ void func_A(MyClass* mc)
 }
 
 // Accepts a MyClass object
-void func_B(MyClass mc)
+:::no-loc(void)::: func_B(MyClass mc)
 {
     // mc here is a regular object, not a pointer.
     // Use the "." operator to access members.
@@ -98,8 +98,8 @@ void func_B(MyClass mc)
 int main()
 {
     // Use the * operator to declare a pointer type
-    // Use new to allocate and initialize memory
-    MyClass* pmc = new MyClass{ 108, "Nick" };
+    // Use :::no-loc(new)::: to allocate and initialize memory
+    MyClass* pmc = :::no-loc(new)::: MyClass{ 108, "Nick" };
 
     // Prints the memory address. Usually not what you want.
     std:: cout << pmc << std::endl;
@@ -133,24 +133,24 @@ int main()
     func_B(*pmc);
     pmc->print(); // "Erika, 3" (original not modified by function)
 
-    delete(pmc); // don't forget to give memory back to operating system!
-   // delete(pmc2); //crash! memory location was already deleted
+    :::no-loc(delete):::(pmc); // don't forget to give memory back to operating system!
+   // :::no-loc(delete):::(pmc2); //crash! memory location was already :::no-loc(delete):::d
 }
 ```
 
-## <a name="pointer-arithmetic-and-arrays"></a>Arytmetyka wskaźnika i tablice
+## <a name="pointer-arithmetic-and-arrays"></a>Arytmetyczne i tablice wskaźników
 
-Wskaźniki i tablice są ściśle ze sobą powiązane. Gdy tablica jest przekazywana przez wartość do funkcji, jest przekazywana jako wskaźnik do pierwszego elementu. W poniższym przykładzie przedstawiono następujące ważne właściwości wskaźników i tablic:
+Wskaźniki i tablice są ściśle powiązane. Gdy tablica jest przenoszona przez wartość do funkcji, jest ona przenoszona jako wskaźnik do pierwszego elementu. Poniższy przykład ilustruje następujące ważne właściwości wskaźników i tablic:
 
-- `sizeof` operator zwraca całkowity rozmiar w bajtach tablicy
-- aby określić liczbę elementów, podziel całkowite bajty przez rozmiar jednego elementu
-- gdy tablica jest przekazywana do funkcji, *rozpada* się na typ wskaźnika
-- `sizeof` operator po zastosowaniu do wskaźnika zwraca rozmiar wskaźnika, 4 bajty na x86 lub 8 bajtów na x64
+- **`sizeof`** operator zwraca łączny rozmiar w bajtach tablicy
+- Aby określić liczbę elementów, Podziel sumę bajtów o rozmiar jednego elementu
+- gdy tablica jest przenoszona do funkcji, powoduje ona *zanikanie* do typu wskaźnika
+- **`sizeof`** operator w przypadku zastosowania do wskaźnika zwraca rozmiar wskaźnika, 4 bajty w x86 lub 8 bajtów na x64
 
 ```cpp
 #include <iostream>
 
-void func(int arr[], int length)
+:::no-loc(void)::: func(int arr[], int length)
 {
     // returns pointer size. not useful here.
     size_t test = sizeof(arr);
@@ -171,9 +171,9 @@ int main()
 }
 ```
 
-Niektóre operacje arytmetyczne mogą byćconst używane na wskaźnikach innych niż wskaźniki, aby wskazać inną lokalizację pamięci. Wskaźniki są zwiększane i zmniejszane przy **++** użyciu **+=** **-=** programu **--** , i operatorów. Ta technika może być używana w tablicach i jest szczególnie przydatna w buforach danych nietypowych. A ** void ** jest zwiększany o rozmiar **char** (1 bajt). Wpisany wskaźnik zostanie wzmocniony o rozmiar typu, na który wskazuje.
+Niektóre operacje arytmetyczne mogą być używane w przypadku braku :::no-loc(const)::: wskaźników, aby wskazywały na inną lokalizację w pamięci. Wskaźniki są zwiększane i zmniejszane przy użyciu **++** **+=** operatorów, **-=** i **--** . Ta technika może być używana w tablicach i jest szczególnie przydatna w przypadku buforów danych, które nie są typu. Wartość jest **:::no-loc(void):::\*** zwiększana o rozmiar **`:::no-loc(char):::`** (1 bajt). Wskaźnik o określonym typie jest zwiększany o rozmiar typu, na który wskazuje.
 
-W poniższym przykładzie pokazano, jak arytmetyka wskaźnika może służyć do uzyskiwania dostępu do poszczególnych pikseli w mapie bitowej w systemie Windows. Należy zwrócić **new** uwagę **delete** na użycie i , i operatora wyłudnika.
+W poniższym przykładzie pokazano, jak można użyć arytmetycznego wskaźnika w celu uzyskania dostępu do poszczególnych pikseli w mapie bitowej w systemie Windows. Zwróć uwagę na użycie **`:::no-loc(new):::`** operatora and i **`:::no-loc(delete):::`** operator dereferencji.
 
 ```cpp
 #include <Windows.h>
@@ -192,8 +192,8 @@ int main()
     header.biCompression = BI_RGB;
     header.biSize = sizeof(BITMAPINFOHEADER);
 
-    constexpr int bufferSize = 30000;
-    unsigned char* buffer = new unsigned char[bufferSize];
+    :::no-loc(const):::expr int bufferSize = 30000;
+    unsigned :::no-loc(char):::* buffer = :::no-loc(new)::: unsigned :::no-loc(char):::[bufferSize];
 
     BITMAPFILEHEADER bf;
     bf.bfType = 0x4D42;
@@ -203,11 +203,11 @@ int main()
     bf.bfOffBits = sizeof(BITMAPFILEHEADER) + sizeof(BITMAPINFOHEADER); //54
 
     // Create a gray square with a 2-pixel wide outline.
-    unsigned char* begin = &buffer[0];
-    unsigned char* end = &buffer[0] + bufferSize;
-    unsigned char* p = begin;
-    constexpr int pixelWidth = 3;
-    constexpr int borderWidth = 2;
+    unsigned :::no-loc(char):::* begin = &buffer[0];
+    unsigned :::no-loc(char):::* end = &buffer[0] + bufferSize;
+    unsigned :::no-loc(char):::* p = begin;
+    :::no-loc(const):::expr int pixelWidth = 3;
+    :::no-loc(const):::expr int borderWidth = 2;
 
     while (p < end)
     {
@@ -224,32 +224,32 @@ int main()
         {
             *p = 0xC3; // Gray
         }
-        p++; // Increment one byte sizeof(unsigned char).
+        p++; // Increment one byte sizeof(unsigned :::no-loc(char):::).
     }
 
     ofstream wf(R"(box.bmp)", ios::out | ios::binary);
 
-    wf.write(reinterpret_cast<char*>(&bf), sizeof(bf));
-    wf.write(reinterpret_cast<char*>(&header), sizeof(header));
-    wf.write(reinterpret_cast<char*>(begin), bufferSize);
+    wf.write(reinterpret_cast<:::no-loc(char):::*>(&bf), sizeof(bf));
+    wf.write(reinterpret_cast<:::no-loc(char):::*>(&header), sizeof(header));
+    wf.write(reinterpret_cast<:::no-loc(char):::*>(begin), bufferSize);
 
-    delete[] buffer; // Return memory to the OS.
+    :::no-loc(delete):::[] buffer; // Return memory to the OS.
     wf.close();
 }
 ```
 
-## <a name="opno-locvoid-pointers"></a>void* wskaźniki
+## <a name="no-locvoid-pointers"></a>:::no-loc(void):::* wskaźniki
 
-Wskaźnik wskazujący **void** po prostu lokalizację pamięci nieprzetworzonej. Czasami jest konieczne użycie ** void ** wskaźników, na przykład podczas przekazywania między kodem C++ i funkcjami C.
+Wskaźnik **`:::no-loc(void):::`** po prostu wskazuje lokalizację w pamięci nieprzetworzonej. Czasami konieczne jest użycie **:::no-loc(void):::\*** wskaźników, na przykład podczas przekazywania między kodem C++ i funkcjami języka C.
 
-Gdy wpisany wskaźnik jest void rzutowany na wskaźnik, zawartość lokalizacji pamięci pozostaje niezmieniona. Jednak informacje o typie są tracone, dzięki czemu nie można wykonać operacji przyrostu lub dekrementacji. Lokalizację pamięci można rzutować, na `MyClass*` `void*` przykład, od `MyClass*`do i z powrotem do . Takie operacje są z natury podatne na błędy i wymagają dużej starannej starannością, aby uniknąć błędów. Nowoczesne C++ zniechęca do void korzystania z wskaźników w prawie wszystkich okolicznościach.
+Gdy określony wskaźnik jest rzutowany na :::no-loc(void)::: wskaźnik, zawartość lokalizacji pamięci nie jest zmieniana. Jednak informacje o typie są tracone, dzięki czemu nie można wykonywać operacji zwiększania ani zmniejszania. Lokalizację pamięci można rzutować na przykład z `MyClass*` **`:::no-loc(void):::*`** i z powrotem do `MyClass*` . Takie operacje są z natury podatne na błędy i wymagają dużej uwagi do :::no-loc(void)::: błędów. Nowoczesne C++ odradza użycie :::no-loc(void)::: wskaźników w prawie całych okolicznościach.
 
 ```cpp
 
 //func.c
-void func(void* data, int length)
+:::no-loc(void)::: func(:::no-loc(void):::* data, int length)
 {
-    char* c = (char*)(data);
+    :::no-loc(char):::* c = (:::no-loc(char):::*)(data);
 
     // fill in the buffer with data
     for (int i = 0; i < length; ++i)
@@ -264,7 +264,7 @@ void func(void* data, int length)
 
 extern "C"
 {
-    void func(void* data, int length);
+    :::no-loc(void)::: func(:::no-loc(void):::* data, int length);
 }
 
 class MyClass
@@ -272,35 +272,35 @@ class MyClass
 public:
     int num;
     std::string name;
-    void print() { std::cout << name << ":" << num << std::endl; }
+    :::no-loc(void)::: print() { std::cout << name << ":" << num << std::endl; }
 };
 
 int main()
 {
-    MyClass* mc = new MyClass{10, "Marian"};
-    void* p = static_cast<void*>(mc);
+    MyClass* mc = :::no-loc(new)::: MyClass{10, "Marian"};
+    :::no-loc(void):::* p = static_cast<:::no-loc(void):::*>(mc);
     MyClass* mc2 = static_cast<MyClass*>(p);
     std::cout << mc2->name << std::endl; // "Marian"
 
-    // use operator new to allocate untyped memory block
-    void* pvoid = operator new(1000);
-    char* pchar = static_cast<char*>(pvoid);
-    for(char* c = pchar; c < pchar + 1000; ++c)
+    // use operator :::no-loc(new)::: to allocate untyped memory block
+    :::no-loc(void):::* p:::no-loc(void)::: = operator :::no-loc(new):::(1000);
+    :::no-loc(char):::* p:::no-loc(char)::: = static_cast<:::no-loc(char):::*>(p:::no-loc(void):::);
+    for(:::no-loc(char):::* c = p:::no-loc(char):::; c < p:::no-loc(char)::: + 1000; ++c)
     {
         *c = 0x00;
     }
-    func(pvoid, 1000);
-    char ch = static_cast<char*>(pvoid)[0];
+    func(p:::no-loc(void):::, 1000);
+    :::no-loc(char)::: ch = static_cast<:::no-loc(char):::*>(p:::no-loc(void):::)[0];
     std::cout << ch << std::endl; // 'A'
-    operator delete(p);
+    operator :::no-loc(delete):::(p);
 }
 ```
 
 ## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>Wskaźniki do funkcji
 
-W programowaniu w stylu C wskaźniki funkcji są używane przede wszystkim do przekazywania funkcji do innych funkcji. Ta technika umożliwia wywołującemu dostosować zachowanie funkcji bez modyfikowania go. W nowoczesnych C++ [wyrażenia lambda](lambda-expressions-in-cpp.md) zapewniają taką samą możliwość z większym bezpieczeństwem typu i innymi zaletami.
+W programowaniu w stylu języka C, wskaźniki funkcji są używane głównie do przekazywania funkcji do innych funkcji. Ta technika umożliwia obiektowi wywołującemu dostosowanie zachowania funkcji bez jej modyfikowania. W nowoczesnych językach C++ [wyrażenia lambda](lambda-expressions-in-cpp.md) zapewniają taką samą funkcję, która zapewnia większe bezpieczeństwo typów i inne zalety.
 
-Deklaracja wskaźnika funkcji określa podpis, który musi mieć funkcja wskazywania:
+Deklaracja wskaźnika funkcji określa sygnaturę, którą funkcja wskazywana musi mieć:
 
 ```cpp
 // Declare pointer to any function that...
@@ -309,14 +309,14 @@ Deklaracja wskaźnika funkcji określa podpis, który musi mieć funkcja wskazyw
 string (*g)(string a);
 
 // has no return value and no parameters
-void (*x)();
+:::no-loc(void)::: (*x)();
 
 // ...returns an int and takes three parameters
 // of the specified types
 int (*i)(int i, string s, double d);
 ```
 
-Poniższy przykład przedstawia `combine` funkcję, która przyjmuje jako parametr `std::string` dowolną `std::string`funkcję, która akceptuje i zwraca . W zależności od funkcji, `combine`która jest przekazywana do , to albo poprzedza lub dołącza ciąg.
+Poniższy przykład pokazuje funkcję `combine` , która przyjmuje jako parametr każda funkcja, która akceptuje `std::string` i zwraca `std::string` . W zależności od funkcji, która jest przenoszona do `combine` , dołącza lub dołącza ciąg.
 
 ```cpp
 #include <iostream>
@@ -348,9 +348,9 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Inteligentne wskaźniki](smart-pointers-modern-cpp.md)
-[Pośredni operator: *](indirection-operator-star.md)<br/>
+[Inteligentne wskaźniki](smart-pointers-modern-cpp.md) 
+ [Operator pośredni: *](indirection-operator-star.md)<br/>
 [Operator Address-of: &](address-of-operator-amp.md)</br>
-[Witamy z powrotem w języku C++](welcome-back-to-cpp-modern-cpp.md)
+[Witamy ponownie w języku C++](welcome-back-to-cpp-modern-cpp.md)

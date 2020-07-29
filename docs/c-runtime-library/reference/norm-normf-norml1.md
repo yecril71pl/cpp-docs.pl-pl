@@ -33,12 +33,12 @@ helpviewer_keywords:
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-ms.openlocfilehash: 8deaa07d984a3840c73e594535ffffc9078d4716
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 38e7283ca5acd5571589d3ef0b19c626806e4bca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951317"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234058"
 ---
 # <a name="norm-normf-norml"></a>norm, normf, norml
 
@@ -59,7 +59,7 @@ long double norm( _Lcomplex z );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*porządku*<br/>
 Liczba złożona.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -68,15 +68,15 @@ Kwadratowa wielkość *z.*
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **normy** , które pobierają wartości **_Fcomplex** lub **_Lcomplex** i zwracają wartości **zmiennoprzecinkowe** lub **długie Double** . W programie C, **norma** zawsze przyjmuje wartość **_Dcomplex** i zwraca wartość **podwójnej precyzji** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **normy** , które pobierają **_Fcomplex** lub **_Lcomplex** wartości, oraz zwracają **`float`** lub **`long double`** wartości. W programie w języku C **norma** zawsze przyjmuje wartość **_Dcomplex** i zwraca **`double`** wartość.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
 |**norma**, **normf**, **norma**|\<complex.h>|\<complex.h>|
 
-Typy **_Fcomplex**, **_Dcomplex**i **_Lcomplex** to charakterystyczne dla firmy Microsoft ekwiwalenty niezaimplementowanych natywnych typów C99 **zmiennoprzecinkowych _Complex**, **podwójnie _Complex**i **Long podwójnie _Complex**.  Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
+Typy **_Fcomplex**, **_Dcomplex**i **_Lcomplex** są odpowiednikami charakterystycznymi dla niewdrożonych natywnych typów C99 **zmiennoprzecinkowych _Complex**, **Double _Complex**i **Long Double _Complex**.  Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 

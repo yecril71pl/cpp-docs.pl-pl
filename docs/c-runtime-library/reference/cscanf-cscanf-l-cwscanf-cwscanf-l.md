@@ -48,19 +48,19 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 973642aa113c8db4174b399f22e980daba95ce41
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 45dcbd93ab689c8c86ab35e53552a65f561dfd18
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079992"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234253"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
 Odczytuje sformatowane dane z konsoli programu. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [_cscanf_s, _cscanf_s_l, _cwscanf_s _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md).
 
 > [!NOTE]
-> W programie Visual Studio 2015 `printf` i `scanf` Rodzina funkcji zostały zadeklarowane jako **wbudowane** i przeniesione do nagłówków `<stdio.h>` i `<conio.h>`. W przypadku migrowania starszego kodu w połączeniu z tymi funkcjami może być widoczny *LNK2019* . Aby uzyskać więcej informacji, [Zobacz C++ historia zmian wizualnych 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
+> W programie Visual Studio 2015 `printf` i `scanf` Rodzina funkcji zostały zadeklarowane jako **`inline`** i przenoszone do `<stdio.h>` `<conio.h>` nagłówków i. W przypadku migrowania starszego kodu w połączeniu z tymi funkcjami może być widoczny *LNK2019* . Aby uzyskać więcej informacji, zobacz [Visual C++ historię zmian 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 > [!IMPORTANT]
 > Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -122,8 +122,8 @@ Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korz
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_cscanf**, **_cscanf_l**|\<CONIO. h >|
-|**_cwscanf**, **_cwscanf_l**|\<CONIO. h > lub \<WCHAR. h >|
+|**_cscanf**, **_cscanf_l**|\<conio.h>|
+|**_cwscanf**, **_cwscanf_l**|\<conio.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -164,7 +164,7 @@ Enter three integers: 1 2 3
 You entered 3 2 1
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/wy konsoli i portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>

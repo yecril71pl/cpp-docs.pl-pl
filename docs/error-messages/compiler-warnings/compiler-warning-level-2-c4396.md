@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-ms.openlocfilehash: f37fcc7ece09bb9028a522ec6baf85d0e0e585c2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fec6875fdb2e8a60e71fe08da1ed4e8fa82e4641
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161818"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206045"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>Ostrzeżenie kompilatora (poziom 2) C4396
 
@@ -21,11 +21,11 @@ Specjalizacja szablonu funkcji nie może określać żadnego ze specyfikatorów 
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-- Usuń specyfikator `inline`, `__inline`lub `__forceinline` z deklaracji zaprzyjaźnionej funkcji.
+- Usuń **`inline`** specyfikator, **`__inline`** , lub **`__forceinline`** z deklaracji funkcji zaprzyjaźnionej.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu przedstawia nieprawidłową deklarację zaprzyjaźnionej funkcji ze specyfikatorem `inline`.
+Poniższy przykład kodu pokazuje niepoprawną deklarację funkcji zaprzyjaźnionej ze **`inline`** specyfikatorem.
 
 ```cpp
 // C4396.cpp

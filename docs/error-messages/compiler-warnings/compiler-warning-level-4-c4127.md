@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4127
 ms.assetid: f59ded9e-5227-45bd-ac43-2aa861581363
-ms.openlocfilehash: 9d4397c11c4d2f0f9013c7df914cbc4be9fd4e9d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: afca92602aa6033c56869d3f84192ca0f029a23e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198487"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218120"
 ---
 # <a name="compiler-warning-level-4-c4127"></a>Ostrzeżenie kompilatora (poziom 4) C4127
 
@@ -19,9 +19,9 @@ ms.locfileid: "80198487"
 
 ## <a name="remarks"></a>Uwagi
 
-Wyrażenie kontrolne instrukcji **if** lub **while** jest oceniane jako stała. Ze względu na typowe użycie idiomatyczne, zaczynając od programu Visual Studio 2015 Update 3, proste stałe, takie jak 1 lub **true** , nie wyzwalają ostrzeżenia, chyba że są wynikiem operacji w wyrażeniu.
+Wyrażenie kontrolne **`if`** instrukcji lub pętli jest **`while`** obliczane jako stała. Ze względu na typowe użycie idiomatyczne, zaczynając od programu Visual Studio 2015 Update 3, proste stałe, takie jak 1 lub **`true`** nie wyzwalają ostrzeżenia, chyba że są wynikiem operacji w wyrażeniu.
 
-Jeśli wyrażenie sterujące pętli **while** jest stałą, ponieważ pętla kończy się w środku, rozważ zastępowanie pętli **while** pętlą **for** . Można pominąć inicjalizację, test zakończenia i przyrost pętli pętli **for** , co powoduje nieskończoność pętli, podobnie jak `while(1)`, i można opuścić pętlę z treści instrukcji **for** .
+Jeśli wyrażenie kontrolne **`while`** pętli jest stałą, ponieważ pętla opuszcza środek, rozważ zastąpienie pętli pętlą **`while`** **`for`** . Możesz pominąć inicjalizację, test zakończenia i przyrost pętli pętli **`for`** , co powoduje nieskończoność pętli, podobnie jak `while(1)` i można opuścić pętlę z treści **`for`** instrukcji.
 
 ## <a name="example"></a>Przykład
 

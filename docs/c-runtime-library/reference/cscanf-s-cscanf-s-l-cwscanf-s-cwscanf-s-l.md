@@ -51,16 +51,16 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-ms.openlocfilehash: be9d2b0af461b25f5c4db37bb084afcf822480ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a869ae4ab1b5f81c4198f620662604b79f19c2ab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938527"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234240"
 ---
 # <a name="_cscanf_s-_cscanf_s_l-_cwscanf_s-_cwscanf_s_l"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 
-Odczytuje sformatowane dane z konsoli programu. Te bezpieczniejsze wersje [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Odczytuje sformatowane dane z konsoli programu. Te bezpieczniejsze wersje [_cscanf, _cscanf_l _cwscanf _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md) mają ulepszenia zabezpieczeń, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
 > Tego interfejsu API nie można używać w aplikacjach, które są wykonywane w środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz [funkcje CRT nieobsługiwane w aplikacjach platforma uniwersalna systemu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -90,7 +90,7 @@ int _cwscanf_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*format*<br/>
+*Formatowanie*<br/>
 Ciąg kontroli formatu.
 
 *argument*<br/>
@@ -107,12 +107,12 @@ Te funkcje sprawdzają poprawność swoich parametrów. Jeśli *Format* jest wsk
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_cscanf_s** odczytuje dane bezpośrednio z konsoli programu do lokalizacji określonych przez *argument*. Funkcja [_getche](getch-getwch.md) służy do odczytywania znaków. Każdy opcjonalny parametr musi być wskaźnikiem do zmiennej z typem, który odpowiada specyfikatorowi typu w *formacie*. Format kontroluje interpretację pól wejściowych i ma taką samą formę i funkcję jak parametr *formatu* dla funkcji [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) . Podczas gdy **_cscanf_s** zwykle zwraca znak wejściowy, nie robi to, jeśli ostatnie wywołanie było **_ungetch**.
+Funkcja **_cscanf_s** odczytuje dane bezpośrednio z konsoli programu do lokalizacji określonych przez *argument*. Funkcja [_getche](getch-getwch.md) służy do odczytywania znaków. Każdy opcjonalny parametr musi być wskaźnikiem do zmiennej z typem, który odpowiada specyfikatorowi typu w *formacie*. Format kontroluje interpretację pól wejściowych i ma taką samą formę i funkcję jak parametr *formatu* dla funkcji [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) . Mimo że **_cscanf_s** zwykle echo znaku wejściowego, nie robi to, jeśli ostatnie wywołanie było **_ungetch**.
 
-Podobnie jak inne bezpieczne wersje funkcji w rodzinie **scanf** , **_cscanf_s** i **_cswscanf_s** wymagają argumentów rozmiaru dla znaków pola typu **c**, **c**, **s**, **s**i **[** . Aby uzyskać więcej informacji, zobacz [Specyfikacja szerokości scanf](../../c-runtime-library/scanf-width-specification.md).
+Podobnie jak inne bezpieczne wersje funkcji w rodzinie **scanf** , **_cscanf_s** i **_cswscanf_s** wymagają argumentów rozmiaru dla znaków pola typu **c**, **c**, **s**, **s**i **[**. Aby uzyskać więcej informacji, zobacz [Specyfikacja szerokości scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> Parametr size jest typu **unsigned**, not **size_t**.
+> Parametr size ma typ, a **`unsigned`** nie **size_t**.
 
 Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną parametrem ustawień regionalnych zamiast bieżących ustawień regionalnych wątku.
 
@@ -128,7 +128,7 @@ Wersje tych funkcji z sufiksem **_l** są identyczne, z tą różnicą, że korz
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**_cscanf_s**, **_cscanf_s_l**|\<conio.h>|
-|**_cwscanf_s**, **_cwscanf_s_l**|\<CONIO. h > lub \<WCHAR. h >|
+|**_cwscanf_s**, **_cwscanf_s_l**|\<conio.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

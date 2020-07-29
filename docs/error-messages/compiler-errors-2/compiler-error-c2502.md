@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2502
 ms.assetid: affa0b86-15fc-4e17-b7f2-6aad4a3771c4
-ms.openlocfilehash: 4ff3523ac803e7804ca56532631fe77b240c215d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bb0e9cc16d403439dc74ae7c93cfe51e370b199a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74746919"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218211"
 ---
 # <a name="compiler-error-c2502"></a>Błąd kompilatora C2502
 
 "Identyfikator": zbyt wiele modyfikatorów dostępu dla klasy bazowej
 
-Klasa bazowa ma więcej niż jeden modyfikator dostępu. Dozwolony jest tylko jeden modyfikator dostępu (`public`, `private`lub `protected`).
+Klasa bazowa ma więcej niż jeden modyfikator dostępu. Dozwolony jest tylko jeden modyfikator dostępu ( **`public`** , **`private`** lub **`protected`** ).
 
 Poniższy przykład generuje C2502:
 

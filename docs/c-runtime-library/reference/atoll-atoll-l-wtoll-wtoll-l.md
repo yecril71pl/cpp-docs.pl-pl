@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 89a4d94a98e58f4ef5489554e02866a8471ade20
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f18fb618909b2dfd4bcd1b4d759fe7a895724896
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913523"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218718"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
-Konwertuje ciąg na **długą** **długą liczbę całkowitą** .
+Konwertuje ciąg na **`long long`** liczbę całkowitą.
 
 ## <a name="syntax"></a>Składnia
 
@@ -76,12 +76,12 @@ long long _wtoll_l(
 *str*<br/>
 Ciąg do przekonwertowania.
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca **długą** **wartość,** która jest generowana przez interpretowanie znaków wejściowych jako liczby. Wartość zwracana dla **Atoll** jest równa 0, jeśli dane wejściowe nie mogą być konwertowane na wartość tego typu.
+Każda funkcja zwraca **`long long`** wartość, która jest generowana przez interpretowanie znaków wejściowych jako liczby. Wartość zwracana dla **Atoll** jest równa 0, jeśli dane wejściowe nie mogą być konwertowane na wartość tego typu.
 
 W przypadku przepełnienia z dużymi dodatnimi wartościami całkowitymi funkcja **Atoll** zwraca **LLONG_MAX**i w przypadku przepełnienia z dużymi negatywnymi wartościami całkowitymi zwraca **LLONG_MIN**.
 
@@ -89,7 +89,7 @@ We wszystkich przypadkach poza zakresem **errno** jest ustawiony na **ERANGE**. 
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje konwertują ciąg znaków na wartość **Long** **Long** Integer.
+Te funkcje konwertują ciąg znaków na **`long long`** wartość całkowitą.
 
 Ciąg wejściowy jest sekwencją znaków, które mogą być interpretowane jako wartość liczbowa określonego typu. Funkcja przestaje odczytywać ciąg wejściowy przy pierwszym znaku, którego nie może rozpoznać jako część liczby. Ten znak może być znakiem null (' \ 0 ' lub L ' \ 0 '), który kończy ciąg.
 
@@ -117,8 +117,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedury|Wymagany nagłówek|
 |--------------|---------------------|
-|**Atoll**, **_atoll_l**|\<STDLIB. h>|
-|**_wtoll**, **_wtoll_l**|\<STDLIB. h> lub \<WCHAR. h>|
+|**Atoll**, **_atoll_l**|\<stdlib.h>|
+|**_wtoll**, **_wtoll_l**|\<stdlib.h> lub \<wchar.h>|
 
 ## <a name="example"></a>Przykład
 
@@ -170,11 +170,11 @@ Function: atoll("3336402735171707160320") = 9223372036854775807
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

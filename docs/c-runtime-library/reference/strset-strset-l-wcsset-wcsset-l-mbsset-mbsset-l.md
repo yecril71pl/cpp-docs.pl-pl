@@ -67,12 +67,12 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 304f0cf5929dcce68402dd2f7dc2ce3b28e36db9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 99cf969714115effcfd7f8f82b2247556d5dd110
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911109"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234006"
 ---
 # <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 
@@ -121,7 +121,7 @@ Ciąg zakończony znakiem null, który ma zostać ustawiony.
 *s*<br/>
 Ustawienie znaku.
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -130,7 +130,7 @@ Zwraca wskaźnik do zmienionego ciągu.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_strset** ustawia wszystkie znaki (z wyjątkiem kończącego znaku null) z *str* do *c*, konwertowane na **char**. **_wcsset** i **_mbsset_l** są wersjami znaków dwubajtowych i znakami wieloznacznymi **_strset**, a typy danych argumentów i wartości zwracane różnią się odpowiednio. Funkcje te zachowują się identycznie w inny sposób.
+Funkcja **_strset** ustawia wszystkie znaki (z wyjątkiem kończącego znaku null) z *str* do *c*, konwertowane na **`char`** . **_wcsset** i **_mbsset_l** są wersjami znaków dwubajtowych i znakami wieloznacznymi **_strset**, a typy danych argumentów i wartości zwracane różnią się odpowiednio. Funkcje te zachowują się identycznie w inny sposób.
 
 **_mbsset** sprawdza poprawność swoich parametrów. Jeśli *str* jest pustym wskaźnikiem, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **_mbsset** zwraca **wartość null** i ustawia **errno** na **EINVAL**. **_strset** i **_wcsset** nie weryfikują ich parametrów.
 
@@ -152,11 +152,11 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strset**|\<> String. h|
-|**_strset_l**|\<Używanie TCHAR. h>|
-|**_wcsset**|\<ciąg. h> lub \<WCHAR. h>|
-|**_wcsset_l**|\<Używanie TCHAR. h>|
-|**_mbsset**, **_mbsset_l**|\<mbstring. h>|
+|**_strset**|\<string.h>|
+|**_strset_l**|\<tchar.h>|
+|**_wcsset**|\<string.h> lub \<wchar.h>|
+|**_wcsset_l**|\<tchar.h>|
+|**_mbsset**, **_mbsset_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -184,11 +184,11 @@ Before: Fill the string with something.
 After:  *******************************
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset, wmemset](memset-wmemset.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

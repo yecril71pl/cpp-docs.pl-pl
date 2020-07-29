@@ -37,12 +37,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: 21bba72b204f975b806e43cdc6d36d8efa173b9b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d599567e38d216e78720a3d6b330310095acdd11
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911430"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218588"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p —, log1pf —, log1pl
 
@@ -74,7 +74,7 @@ long double log1pl(
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Argument zmiennoprzecinkowy.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -98,9 +98,9 @@ Wartość **errno** jest ustawiona na ERANGE, jeśli *x* =-1. Wartość **errno*
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **log1p —** mogą być bardziej dokładne niż użycie `log(x + 1)` , gdy *x* jest blisko 0.
+Funkcje **log1p —** mogą być bardziej dokładne niż użycie, `log(x + 1)` gdy *x* jest blisko 0.
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **log1p —** , które pobierają i zwracają **zmiennoprzecinkowe** i **długie** **podwójne** typy. W programie C **log1p —** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **log1p —** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C **log1p —** zawsze przyjmuje i zwraca **`double`** .
 
 Jeśli *x* jest liczbą naturalną, ta funkcja Zwraca logarytm o silności (*x* -1).
 
@@ -110,11 +110,11 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**log1p —**, **log1pf —**, **log1pl**|\<> Math. h|\<cmath>|
+|**log1p —**, **log1pf —**, **log1pl**|\<math.h>|\<cmath>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [log2, log2f, log2l](log2-log2f-log2l.md)<br/>

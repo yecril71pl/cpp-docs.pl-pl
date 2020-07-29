@@ -7,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2555
 ms.assetid: 5e49ebb8-7c90-457a-aa12-7ca7ab6574b2
-ms.openlocfilehash: fe0e6379e783387506e6098c9b14a047baa8e6c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ecac92bc663a6344e9ddafe13c194a92ab944c51
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374172"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87207800"
 ---
 # <a name="compiler-error-c2555"></a>Błąd kompilatora C2555
 
-> '*class1*::*function1*': nadrzędny typ powrotu funkcji wirtualnej różni się i nie jest kowariancją od '*class2*::*function2*'
+> "*Class1*::*function1*": przesłanianie typu zwracanego funkcji wirtualnej różni się i nie jest współwariantem z "*'klasa*::*function2*"
 
-Funkcja wirtualna i pochodna funkcja zastępowania mają identyczne listy parametrów, ale różne typy zwracane.
+Funkcja wirtualna i pochodna funkcja przesłaniania mają identyczne listy parametrów, ale różne typy zwracane.
 
 ## <a name="remarks"></a>Uwagi
 
-W języku C++ funkcja nadrzędna w klasie pochodnej nie może się różnić tylko przez typ zwracany z funkcji wirtualnej w klasie podstawowej.
+W języku C++ funkcja zastępująca w klasie pochodnej nie może się różnić tylko przez zwracany typ z funkcji wirtualnej w klasie bazowej.
 
-Istnieje wyjątek od tej reguły dla niektórych typów zwracania. Gdy klasa pochodna zastępuje publiczną klasę podstawową, może zwrócić wskaźnik lub odwołanie do klasy pochodnej zamiast wskaźnika klasy podstawowej lub odwołania. Te typy zwracane są nazywane *kowariancją,* ponieważ różnią się one w zależności od typu. Ten wyjątek reguły nie zezwala na kowariancyjne odwołania do wskaźnika lub wskaźnik do wskaźnika typów.
+Istnieją wyjątki od tej reguły dla określonych typów zwracanych. Gdy Klasa pochodna przesłania publiczną klasę bazową, może zwrócić wskaźnik lub odwołanie do klasy pochodnej zamiast wskaźnika lub odwołania do klasy bazowej. Te typy zwracane są nazywane *współwariantem*, ponieważ różnią się w zależności od typu. Ten wyjątek reguły nie zezwala na typ referencyjny współwariantu na wskaźnik lub wskaźnik do wskaźnika.
 
-Jednym ze sposobów rozwiązania błędu jest zwrócenie tego samego typu co klasa podstawowa. Następnie rzutuj wartość zwracaną po wywołaniu funkcji wirtualnej. Innym jest również zmienić listę parametrów, aby pochodna funkcja elementu członkowskiego klasy przeciążenia zamiast zastąpienia.
+Jednym ze sposobów na rozwiązanie błędu jest zwrócenie tego samego typu co Klasa bazowa. Następnie należy rzutować wartość zwracaną po wywołaniu funkcji wirtualnej. Innym jest również zmiana listy parametrów, aby uczynić składową klasy pochodnej funkcję przeciążenia zamiast zastąpienia.
 
 ## <a name="examples"></a>Przykłady
 
-Ten błąd może zostać wyświetlony **`/clr`** podczas kompilowania z . Na przykład C++ równoważne następującej deklaracji Języka C#:
+Ten błąd może pojawić się w przypadku kompilowania za pomocą **`/clr`** . Na przykład język C++ odpowiada następującej deklaracji języka C#:
 
 ```csharp
 Guid[] CheckSources(Guid sourceID, Guid[] carouselIDs);
@@ -42,7 +42,7 @@ is
 Guid CheckSources(Guid sourceID, Guid carouselIDs[]) [];
 ```
 
-Następujący przykład generuje C2555:
+Poniższy przykład generuje C2555:
 
 ```cpp
 // C2555.cpp
@@ -56,4 +56,4 @@ struct Y : X {
 };
 ```
 
-Aby to naprawić, zmień `Y::func` typ `void`zwrotu na .
+Aby rozwiązać ten problem, Zmień zwracany typ `Y::func` na **`void`** .

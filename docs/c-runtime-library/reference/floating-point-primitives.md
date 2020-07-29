@@ -157,12 +157,12 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: c103d28dc111af4736bdc299b498b98eccb3af60
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e28c873206d8f050dbde2afc9ebfe3540b6642ff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916697"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218689"
 ---
 # <a name="floating-point-primitives"></a>Zmiennoprzecinkowe typy pierwotne
 
@@ -182,7 +182,7 @@ short __cdecl _fdclass(float x);
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Argument funkcji zmiennoprzecinkowej.
 
 ### <a name="remarks"></a>Uwagi
@@ -211,7 +211,7 @@ int __cdecl _fdsign(float x);
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Argument funkcji zmiennoprzecinkowej.
 
 ### <a name="remarks"></a>Uwagi
@@ -377,11 +377,11 @@ short __cdecl _fdnorm(unsigned short* ps);
 ### <a name="parameters"></a>Parametry
 
 *iloczyn*<br/>
-Wskaźnik na bitową reprezentację wartości zmiennoprzecinkowej wyrażonej jako tablica **niepodpisanego znaku** **.**
+Wskaźnik na bitową reprezentację wartości zmiennoprzecinkowej wyrażonej jako tablica **`unsigned short`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy podstawowe zmiennoprzecinkowe normalizią część ułamkową bezosiowej wartości zmiennoprzecinkowej i dostosowują *charakterystykę*lub wykładnikę, aby dopasować. Wartość jest przenoszona jako bitowa reprezentacja typu zmiennoprzecinkowego przekonwertowana na tablicę **niepodpisanej** **skróconą** przez `_double_val`, `_ldouble_val`lub `_float_val` typu punning Union zadeklarowaną w Math. h. Wartość zwracana jest wynikiem **fpclassify —** wartości wejściowej zmiennoprzecinkowej, jeśli jest to NaN lub nieskończoność, a wartość wyjściowa w przeciwnym razie.
+Te elementy podstawowe zmiennoprzecinkowe normalizią część ułamkową bezosiowej wartości zmiennoprzecinkowej i dostosowują *charakterystykę*lub wykładnikę, aby dopasować. Wartość jest przenoszona jako bitowa reprezentacja typu zmiennoprzecinkowego konwertowana na tablicę **`unsigned short`** przez `_double_val` , `_ldouble_val` lub `_float_val` typu punning Union zadeklarowanej w Math. h. Wartość zwracana jest wynikiem **fpclassify —** wartości wejściowej zmiennoprzecinkowej, jeśli jest to NaN lub nieskończoność, a wartość wyjściowa w przeciwnym razie.
 
 ## <a name="_dpoly-_ldpoly-_fdpoly"></a>_dpoly, _ldpoly, _fdpoly
 
@@ -395,7 +395,7 @@ float __cdecl _fdpoly(float x, _float const* table, int n);
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Argument funkcji zmiennoprzecinkowej.
 
 *tabele*<br/>
@@ -406,7 +406,7 @@ Kolejność wielomianu do obliczenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Te elementy pierwotne zmiennoprzecinkowe zwracają ocenę *x* w wielomianie kolejności *n* , której współczynniki są reprezentowane przez odpowiadające im wartości stałe w *tabeli*. Na przykład jeśli *tabela*\[0] = 3,0, *tabela*\[1] = 4,0, *tabela*\[2] = 5,0 i *n* = 2, reprezentuje wielomian 5.0 x<sup>2</sup> + 4.0 x + 3,0. W przypadku obliczenia tego wielomianu dla *x* z 2,0, wynik wynosi 31,0. Te funkcje nie są używane wewnętrznie.
+Te elementy pierwotne zmiennoprzecinkowe zwracają ocenę *x* w wielomianie kolejności *n* , której współczynniki są reprezentowane przez odpowiadające im wartości stałe w *tabeli*. Na przykład jeśli *tabela* \[ 0] = 3,0, *tabela* \[ 1] = 4,0, *tabela* \[ 2] = 5,0 i *n* = 2, reprezentuje wielomian 5.0 x<sup>2</sup> + 4.0 x + 3,0. W przypadku obliczenia tego wielomianu dla *x* z 2,0, wynik wynosi 31,0. Te funkcje nie są używane wewnętrznie.
 
 ## <a name="_dlog-_dlog-_dlog"></a>_dlog, _dlog, _dlog
 
@@ -420,7 +420,7 @@ float __cdecl _fdlog(float x, int base_flag);
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Argument funkcji zmiennoprzecinkowej.
 
 *base_flag*<br/>
@@ -442,11 +442,11 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Argument funkcji zmiennoprzecinkowej.
 
 *ćwiartk*<br/>
-Przesunięcie ćwiartki 0, 1, 2 lub 3, które ma być używane `sin`do `cos`tworzenia `-sin`,, `-cos` i wyników.
+Przesunięcie ćwiartki 0, 1, 2 lub 3, które ma być używane do tworzenia `sin` , `cos` , `-sin` i `-cos` wyników.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -454,17 +454,17 @@ Te elementy pierwotne zmiennoprzecinkowe zwracają sinus przesunięcia *x* do *�
 
 ## <a name="requirements"></a>Wymagania
 
-Nagłówek: \<Math. h>
+Nagłówki\<math.h>
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa liczb zmiennoprzecinkowych](../floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
-[isinf —](isinf.md)<br/>
+[isinf](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>

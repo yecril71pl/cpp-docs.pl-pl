@@ -48,16 +48,16 @@ helpviewer_keywords:
 - strtoui64_l function
 - strtoui64 function
 ms.assetid: 7fcb537e-4554-4ceb-a5b6-bc09244e72ef
-ms.openlocfilehash: 430d72595aadc677fe51d9ed868e4388071decec
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: dc70cc5a2a7c1c8975e90d5e8d1d5225522e0592
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912456"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233941"
 ---
 # <a name="_strtoui64-_wcstoui64-_strtoui64_l-_wcstoui64_l"></a>_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
 
-Przekonwertuj ciąg na nieniepodpisana wartość **__int64** .
+Konwertuj ciąg na **`unsigned __int64`** wartość.
 
 ## <a name="syntax"></a>Składnia
 
@@ -97,7 +97,7 @@ Wskaźnik do znaku, który powoduje zatrzymanie skanowania.
 *base*<br/>
 Numer bazowy do użycia.
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -112,7 +112,7 @@ Aby uzyskać więcej informacji na temat tych i innych kodów powrotu, zobacz [_
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_strtoui64** konwertuje *strSource* na **niepodpisane** **__int64**. **_wcstoui64** to dwubajtowa wersja **_strtoui64**; jego argument *strSource* jest ciągiem znaków dwubajtowych. W przeciwnym razie te funkcje zachowują się identycznie.
+Funkcja **_strtoui64** konwertuje *strSource* na **`unsigned __int64`** . **_wcstoui64** to dwubajtowa wersja **_strtoui64**; jego argument *strSource* jest ciągiem znaków dwubajtowych. W przeciwnym razie te funkcje zachowują się identycznie.
 
 Obie funkcje przerywają odczytywanie ciągu *strSource* na pierwszym znaku, którego nie mogą rozpoznać jako części liczby. Może to być kończący znak null lub może być pierwszym znakiem numerycznym większym lub równym *Base*.
 
@@ -131,7 +131,7 @@ Jeśli *endptr* nie ma **wartości null**, wskaźnik do znaku, który zatrzymał
 
 **_strtoui64** oczekuje, że *strSource* wskaże ciąg o następującej postaci:
 
-> [*odstęp*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **x** }]] [*cyfry* &#124; *litery*]
+> [*odstęp*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*cyfry* &#124; *litery*]
 
 *Odstępy* mogą zawierać spacje i znaki tabulacji, które są ignorowane. *cyfry* to co najmniej jedna cyfra dziesiętna. *litery* są jedną lub większą literą od "a" do "z" (lub od "a" do "z"). Pierwszy znak, który nie pasuje do tego formularza, zatrzyma skanowanie. Jeśli *baza* jest z przedziału od 2 do 36, zostanie użyta jako podstawa liczby. Jeśli *Base* ma wartość 0, początkowe znaki ciągu wskazywane przez *strSource* są używane do określenia podstawy. Jeśli pierwszym znakiem jest 0, a drugi znak nie jest "x" lub "X", ciąg jest interpretowany jako ósemkowa liczba całkowita. Jeśli pierwszy znak to "0", a drugi znak to "x" lub "X", ciąg jest interpretowany jako Szesnastkowa liczba całkowita. Jeśli pierwszym znakiem jest "1" do "9", ciąg jest interpretowany jako dziesiętna liczba całkowita. Litery od "a" do "z" (lub "A" do "z") mają przypisane wartości od 10 do 35; dozwolone są tylko litery, których przypisane wartości są mniejsze niż *podstawowe* . Pierwszy znak poza zakresem podstawy powoduje zatrzymanie skanowania. Na przykład jeśli *Base* ma wartość 0, a pierwszy znak skanowany to "0", zakłada się liczbę całkowitą, a znak "8" lub "9" spowoduje zatrzymanie skanowania.
 
@@ -139,10 +139,10 @@ Jeśli *endptr* nie ma **wartości null**, wskaźnik do znaku, który zatrzymał
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strtoui64**|\<STDLIB. h>|
-|**_wcstoui64**|\<STDLIB. h> lub \<WCHAR. h>|
-|**_strtoui64_l**|\<STDLIB. h>|
-|**_wcstoui64_l**|\<STDLIB. h> lub \<WCHAR. h>|
+|**_strtoui64**|\<stdlib.h>|
+|**_wcstoui64**|\<stdlib.h> lub \<wchar.h>|
+|**_strtoui64_l**|\<stdlib.h>|
+|**_wcstoui64_l**|\<stdlib.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -166,10 +166,10 @@ int main() {
 u = 18446744073709551615
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [Funkcje ciągu do wartości numerycznych](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>

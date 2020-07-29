@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2280
 ms.assetid: e6c5b1fb-2b9b-4554-8ff9-775eeb37161b
-ms.openlocfilehash: e1ec032878fefdc1992605df5ee1aa13c673d4cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ee5b8105241ee347812a0dcc083a4f1cc7dca49
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388907"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87208411"
 ---
 # <a name="compiler-error-c2280"></a>Błąd kompilatora C2280
 
-"*deklaracji*": próba odwania do usuniętej funkcji do
+"*Deklaracja*": próba odwołująca się do usuniętej funkcji
 
-Kompilator wykrył próbę odwołania `deleted` funkcji. Ten błąd może być spowodowany przez wywołanie do funkcji składowej, która została jawnie oznaczona jako `= deleted` w kodzie źródłowym. Ten błąd, również może być spowodowany przez wywołanie niejawne specjalną funkcję członkowską struktury lub klasy, która jest zadeklarowana i automatycznie oznaczone jako `deleted` przez kompilator. Aby uzyskać więcej informacji na temat gdy kompilator automatycznie generuje `default` lub `deleted` specjalnych funkcji Członkowskich, zobacz [specjalnych funkcji Członkowskich](../../cpp/special-member-functions.md).
+Kompilator wykrył próbę odwołania do `deleted` funkcji. Ten błąd może być spowodowany wywołaniem funkcji członkowskiej, która została jawnie oznaczona jako `= deleted` w kodzie źródłowym. Ten błąd może być również spowodowany wywołaniem niejawnej specjalnej funkcji składowej struktury lub klasy, która jest automatycznie deklaruje i oznaczona jako `deleted` kompilator. Aby uzyskać więcej informacji o tym, kiedy kompilator automatycznie generuje **`default`** lub `deleted` Specjalna funkcja członkowska, zobacz [specjalne funkcje składowe](../../cpp/special-member-functions.md).
 
-## <a name="example-explicitly-deleted-functions"></a>Przykład: Funkcje jawnie usunięte
+## <a name="example-explicitly-deleted-functions"></a>Przykład: jawnie usunięte funkcje
 
-Wywołania jawne `deleted` funkcji powoduje, że ten błąd. Jawnie `deleted` funkcja elementu członkowskiego oznacza, że klasy lub struktury jest celowo ustalono, aby uniemożliwić korzystanie z niego, tak aby rozwiązać ten problem, należy zmienić swój kod, aby uniknąć tego błędu.
+Wywołanie `deleted` funkcji jawnie powoduje wystąpienie tego błędu. Jawna `deleted` funkcja członkowska oznacza, że Klasa lub struktura jest celowo zaprojektowana tak, aby zapobiec jej użyciu, więc aby rozwiązać ten problem, należy zmienić kod, aby go uniknąć.
 
 ```cpp
 // C2280_explicit.cpp
@@ -42,9 +42,9 @@ void f() {
 }
 ```
 
-## <a name="example-uninitialized-data-members"></a>Przykład: Niezainicjowane składowe danych
+## <a name="example-uninitialized-data-members"></a>Przykład: Niezainicjowany element członkowski danych
 
-Element członkowski danych typu odwołania niezainicjowanej lub `const` element członkowski danych powoduje, że kompilator niejawnie zadeklarować `deleted` domyślnego konstruktora. Aby rozwiązać ten problem, należy zainicjować element członkowski danych, gdy jest on zadeklarowany.
+Niezainicjowany element członkowski danych typu odwołania lub **`const`** składowa danych powoduje, że kompilator niejawnie deklaruje `deleted` domyślnego konstruktora. Aby rozwiązać ten problem, zainicjuj element członkowski danych, gdy jest on zadeklarowany.
 
 ```cpp
 // C2280_uninit.cpp
@@ -58,9 +58,9 @@ struct A {
 } a;    // C2280
 ```
 
-## <a name="example-reference-and-const-data-members"></a>Przykład: Odwołań i stałych elementów członkowskich danych
+## <a name="example-reference-and-const-data-members"></a>Przykład: elementy członkowskie danych Reference i const
 
-A `const` lub odwołanie do typu element członkowski danych powoduje, że kompilator, aby zadeklarować `deleted` operator przypisania kopiowania. Po zainicjowaniu, nie można przypisać te elementy członkowskie, więc prostego kopiowania lub przenoszenia nie mogą działać. Aby rozwiązać ten problem, zalecamy, zmień logikę w taki sposób, aby usunąć operacji przypisania, których przyczyną błędu.
+**`const`** Element członkowski danych typu lub referencyjnego powoduje, że kompilator deklaruje `deleted` operator przypisania kopii. Po zainicjowaniu tych członków nie można przypisać do, więc nie można wykonać prostej kopii ani przeniesienia. Aby rozwiązać ten problem, zalecamy zmianę logiki w celu usunięcia operacji przypisania, które powodują wystąpienie błędu.
 
 ```cpp
 // C2280_ref.cpp
@@ -79,11 +79,11 @@ void f() {
 }
 ```
 
-## <a name="example-movable-deletes-implicit-copy"></a>Przykład: Niejawne kopiowanie usuwa ruchome
+## <a name="example-movable-deletes-implicit-copy"></a>Przykład: Movable usuwa niejawną kopię
 
-Jeśli klasa deklaruje Konstruktor przenoszący lub operator przypisania przenoszenia, ale nie deklaruje jawnie konstruktora kopiującego, kompilator niejawnie deklaruje Konstruktor kopiujący i definiuje ją jako `deleted`. Podobnie, jeśli klasa deklaruje Konstruktor przenoszący lub operator przypisania przenoszenia, ale nie jawnie deklarować operatora przypisania kopii, kompilator niejawnie deklaruje operator przypisania kopiowania i definiuje ją jako `deleted`. Aby rozwiązać ten problem, należy jawnie zadeklarować te składowe.
+Jeśli Klasa deklaruje Konstruktor przenoszący lub przeniesienie przypisania, ale nie deklaruje jawnie konstruktora kopiującego, kompilator niejawnie deklaruje Konstruktor kopiujący i definiuje go jako `deleted` . Podobnie, jeśli Klasa deklaruje Konstruktor przenoszący lub przeniesienie operatora przypisania, ale nie deklaruje jawnie operatora przypisania kopii, kompilator niejawnie deklaruje operator przypisania kopii i definiuje go jako `deleted` . Aby rozwiązać ten problem, należy jawnie zadeklarować tych członków.
 
-Po wyświetleniu błędu C2280 w połączeniu z `unique_ptr`, jest prawie na pewno ponieważ próbujesz wywołać konstruktora kopiującego, który jest `deleted` funkcji. Zgodnie z projektem `unique_ptr` nie mogą być kopiowane. Użyj konstruktora przenoszącego, aby przenieść własność zamiast tego.
+Gdy zobaczysz błąd C2280 w połączeniu z `unique_ptr` , prawie jest to spowodowane tym, że próbujesz wywołać jego Konstruktor kopiujący, który jest `deleted` funkcją. Po zaprojektowaniu `unique_ptr` nie można skopiować elementu. Zamiast tego Przenieś własność przy użyciu konstruktora przenoszenia.
 
 ```cpp
 // C2280_move.cpp
@@ -108,9 +108,9 @@ void copy(base *p)
 }
 ```
 
-## <a name="example-variant-and-volatile-members"></a>Przykład: Elementy członkowskie typu Variant i nietrwałe
+## <a name="example-variant-and-volatile-members"></a>Przykład: Variant i lotnych elementów członkowskich
 
-Wersje kompilatora przed Visual Studio 2015 Update 2 było niezgodnych i generowanej domyślne konstruktory i destruktory związki anonimowe. Teraz są one niejawnie zadeklarowany jako `deleted`. Te wersje również dozwolone niezgodnych niejawne definicji `default` kopiowanie i przenoszenie konstruktorów i `default` skopiuj i Przenieś operatory przypisania w klas i struktur, które mają `volatile` zmiennych Członkowskich. Kompilator teraz traktuje te nietrywialnymi konstruktorami i operatory przypisania i nie generuje `default` implementacji. Jeśli taka klasa jest elementem członkowskim Unii lub anonimowej Unii wewnątrz klasy, konstruktorach kopiowania i przenoszenia i operatory przypisania kopiowania i przenoszenia, Unia lub klasa jest niejawnie definiowany jako `deleted`. Aby rozwiązać ten problem, należy jawnie zadeklarować wymagane specjalne funkcje Członkowskie.
+Wersje kompilatora przed Visual Studio 2015 Update 2 były niezgodne i wygenerowały domyślne konstruktory i destruktory dla Unii anonimowych. Są one teraz niejawnie zadeklarowane jako `deleted` . Wersje te mogą również niezgodność z niezgodnością definicji **`default`** konstruktorów kopiowania i przenoszenia oraz **`default`** kopiowania i przenoszenia operatorów przypisania w klasach i strukturach, które mają **`volatile`** zmienne składowe. Kompilator uważa teraz, że mają nieuproszczone konstruktory i operatory przypisania, i nie generuje **`default`** implementacji. Gdy taka Klasa jest członkiem Unii lub z anonimowej Unii wewnątrz klasy, konstruktory kopiowania i przenoszenia oraz operatory przypisania kopiowania i przenoszenia dla Unii lub klasy są niejawnie zdefiniowane jako `deleted` . Aby rozwiązać ten problem, należy jawnie zadeklarować wymagane specjalne funkcje składowe.
 
 ```cpp
 // C2280_variant.cpp
@@ -137,11 +137,11 @@ int main() {
 }
 ```
 
-## <a name="example-indirect-base-members-deleted"></a>Przykład: Pośrednie składowe bazowe usunięte
+## <a name="example-indirect-base-members-deleted"></a>Przykład: Usunięto pośrednie składowe podstawowe
 
-Wersje kompilatora przed Visual Studio 2015 Update 2 były niezgodne i dozwolone klasy pochodnej w celu wywołania funkcji pośrednio pochodzi specjalnych elementów członkowskich `private virtual` klas bazowych. Kompilator generuje błąd kompilatora C2280 teraz, gdy takie połączenie jest nawiązywane.
+Wersje kompilatora przed niezgodnością programu Visual Studio 2015 Update 2 i dopuszczają klasę pochodną do wywołania specjalnych funkcji Członkowskich `private virtual` klas podstawowych pochodnych. Kompilator wystawia teraz błąd kompilatora C2280, gdy takie wywołanie zostało wykonane.
 
-W tym przykładzie klasa `top` pośrednio pochodzi z prywatnego wirtualnego `base`. W kodzie odpowiadające temu członkowie `base` dostępnych dla `top`; obiekt typu `top` nie może być domyślny zbudowanych lub zniszczone. Aby rozwiązać ten problem w kodzie, który opierał się na stare zachowanie kompilatora, należy zmienić klasa pośrednicząca do użycia `protected virtual` pochodnym lub zmień `top` klasy bezpośrednie tworzenie wartości pochodnych:
+W tym przykładzie Klasa `top` pośrednio pochodzi od prywatnej wirtualnej `base` . W przypadku zgodności z kodem sprawia to, że elementy członkowskie są `base` niedostępne dla `top` ; obiekt typu `top` nie może być skonstruowany lub zniszczony jako domyślny. Aby rozwiązać ten problem w kodzie, który opierał się na Starym zachowaniu kompilatora, Zmień klasę pośrednią na Użyj `protected virtual` pochodnej lub Zmień `top` klasę, aby używała bezpośredniego wyprowadzenia:
 
 ```cpp
 // C2280_indirect.cpp

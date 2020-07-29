@@ -1,21 +1,21 @@
 ---
-title: isinf —
+title: isinf
 ms.date: 01/31/2019
 f1_keywords:
 - isinf
 - math/isinf
 helpviewer_keywords:
 - isinf function
-ms.openlocfilehash: be99970a0c7b152ba213eabd59b53a7503cd3c54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7366f340477bf1bb50ebe1e53bcec1f3e16e0863
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331613"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234097"
 ---
-# <a name="isinf"></a>isinf —
+# <a name="isinf"></a>isinf
 
-Określa, czy wartość zmiennoprzecinkowa jest nieskończoność.
+Określa, czy wartość zmiennoprzecinkowa jest nieskończonością.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,27 +33,27 @@ inline bool isinf(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Wartość zmiennoprzecinkowa do testowania.
+Wartość zmiennoprzecinkowa do przetestowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**isinf —** zwraca wartość różną od zera (**true** w przypadku kodu C++) Jeśli argument *x* jest nieskończoności dodatniej lub ujemnej. **isinf —** zwraca wartość 0 (**false** w przypadku kodu C++), jeśli argument ma skończoną lub NAN. Normalne i subnormal różne wartości zmiennoprzecinkowe są traktowane jako skończoną.
+**isinf —** zwraca wartość różną od zera ( **`true`** w kodzie C++), jeśli argument *x* jest nieskończoną dodatnią lub ujemną. **isinf —** zwraca wartość 0 ( **`false`** w kodzie C++), jeśli argument jest skończona lub NaN. Normalne i nienormalne wartości zmiennoprzecinkowe są uważane za skończone.
 
 ## <a name="remarks"></a>Uwagi
 
-**isinf —** jest makrem, gdy skompilowano C; oraz wbudowanej funkcji szablonu, gdy skompilowano co kod C++.
+**isinf —** to makro, które jest kompilowane jako C i wbudowana funkcja szablonu po skompilowaniu jako C++.
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |--------------|---------------------------|-------------------------------|
-|**isinf**|\<math.h>|\<Math.h > lub \<cmath >|
+|**isinf**|\<math.h>|\<math.h> lub \<cmath>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>

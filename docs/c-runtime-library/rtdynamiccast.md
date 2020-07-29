@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: a5384966ff96c4e4831ba06f7c67467156a9ecd2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 238310791baebc941ad23b798adc1ea2e7fffcbb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170075"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218510"
 ---
 # <a name="__rtdynamiccast"></a>__RTDynamicCast
 
@@ -52,13 +52,13 @@ Wskaźnik do obiektu polimorficznego.
 Przesunięcie wskaźnika funkcji wirtualnej w obiekcie.
 
 *SrcType*<br/>
-Typ statyczny obiektu wskazywany przez parametr `inptr`.
+Typ statyczny obiektu wskazywanego przez `inptr` parametr.
 
 *Typ*<br/>
 Zamierzony wynik rzutowania.
 
 *isReference*<br/>
-**prawda** , jeśli dane wejściowe są odwołaniami; **Fałsz** , jeśli dane wejściowe są wskaźnikiem.
+**`true`** Jeśli dane wejściowe są odwołaniami; **`false`** Jeśli dane wejściowe są wskaźnikiem.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -66,11 +66,11 @@ Wskaźnik do odpowiedniego obiektu podrzędnego, jeśli powodzenie; w przeciwnym
 
 ## <a name="exceptions"></a>Wyjątki
 
-`bad_cast()`, jeśli dane wejściowe do `dynamic_cast<>` są odwołania, a rzutowanie nie powiedzie się.
+`bad_cast()`Jeśli dane wejściowe `dynamic_cast<>` to odwołanie, a rzutowanie nie powiedzie się.
 
 ## <a name="remarks"></a>Uwagi
 
-Konwertuje `inptr` do obiektu typu `TargetType`. Typ `inptr` musi być wskaźnikiem, jeśli `TargetType` jest wskaźnikiem lub l-wartością, jeśli `TargetType` jest odwołaniem. `TargetType` musi być wskaźnikiem lub odwołaniem do wcześniej zdefiniowanego typu klasy lub wskaźnikiem do wartości void.
+Konwertuje `inptr` do obiektu typu `TargetType` . Typ elementu `inptr` musi być wskaźnikiem, jeśli `TargetType` jest wskaźnikiem lub l-wartością, jeśli `TargetType` jest odwołaniem. `TargetType`musi być wskaźnikiem lub odwołaniem do wcześniej zdefiniowanego typu klasy lub wskaźnikiem do wartości void.
 
 ## <a name="requirements"></a>Wymagania
 

@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-ms.openlocfilehash: a2cde4d3a57884413f0c48aa299b171334c5f988
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7e15a6619e584ff52c07048fcf591835b799587f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957181"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218705"
 ---
 # <a name="isfinite-_finite-_finitef"></a>isfinite, _finite, _finitef
 
@@ -74,24 +74,24 @@ Wartość zmiennoprzecinkowa do przetestowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Makro i funkcje`_finitef` i zwracają wartość różną od zera, jeśli x jest wartością normalną lub nienormalną. `isfinite` `_finite` Zwracają one wartość 0, jeśli argument jest nieskończony lub NaN. C++ Wbudowana funkcja `isfinite` szablonu zachowuje się tak samo, ale zwraca **wartość PRAWDA** lub **Fałsz**.
+`isfinite`Makro i `_finite` `_finitef` funkcje i zwracają wartość różną od zera, jeśli *x* jest wartością normalną lub nienormalną. Zwracają one wartość 0, jeśli argument jest nieskończony lub NaN. Wbudowana funkcja szablonu C++ `isfinite` zachowuje się tak samo, ale zwraca **`true`** lub **`false`** .
 
 ## <a name="remarks"></a>Uwagi
 
-`isfinite`jest makrem kompilowanym jako C i wbudowaną funkcją szablonu kompilowaną jako C++. Funkcje `_finite` i`_finitef` są specyficzne dla firmy Microsoft. `_finitef` Funkcja jest dostępna tylko po skompilowaniu dla platform x86, ARM lub arm64.
+`isfinite`jest makrem kompilowanym jako C i wbudowaną funkcją szablonu kompilowaną jako C++. `_finite`Funkcje i `_finitef` są specyficzne dla firmy Microsoft. `_finitef`Funkcja jest dostępna tylko po skompilowaniu dla platform x86, ARM lub arm64.
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |--------------|---------------------------|-------------------------------|
-|`_finite`|\<typ float. h > \<lub Math. h >|\<float. h >, \<Math. h >, \<cfloat > lub \<cmath >|
-|`isfinite`, `_finitef`|\<math.h>|\<Math. h > lub \<cmath >|
+|`_finite`|\<float.h> lub \<math.h>|\<float.h>, \<math.h> , \<cfloat> lub\<cmath>|
+|`isfinite`, `_finitef`|\<math.h>|\<math.h> lub \<cmath>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isinf](isinf.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2732
 ms.assetid: 01b7ad2c-93cf-456f-a4c0-c5f2fdc7c07c
-ms.openlocfilehash: 61bac8c1b5c9e029cc5833f458669b490fed8c91
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 78be424040c7315271d0880c6678584f698b5be8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755801"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218185"
 ---
 # <a name="compiler-error-c2732"></a>Błąd kompilatora C2732
 
@@ -21,7 +21,7 @@ Funkcja jest już zadeklarowana z innym specyfikatorem powiązania.
 
 Przyczyną tego błędu może być dołączenie plików z różnymi specyfikatorami powiązania.
 
-Aby naprawić ten błąd, Zmień instrukcje `extern` tak, aby powiązania były zgodne. W szczególności nie należy zawijać `#include` dyrektyw w blokach `extern "C"`.
+Aby naprawić ten błąd, należy zmienić **`extern`** instrukcje w taki sposób, aby powiązania były zgodne. W szczególności nie należy zawijać `#include` dyrektyw w `extern "C"` blokach.
 
 ## <a name="example"></a>Przykład
 

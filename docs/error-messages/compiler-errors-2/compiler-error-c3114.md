@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3114
 ms.assetid: b5d2df4f-87d0-4292-9981-25c6a6013c05
-ms.openlocfilehash: 6f548c72a0e95c533ed711fe9f2583a7abd6c500
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 481e0ac5a395b38bc9d1874959b010ecd71f9fb5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760764"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233382"
 ---
 # <a name="compiler-error-c3114"></a>Błąd kompilatora C3114
 
 "argument": nie jest prawidłowym argumentem nazwanego atrybutu
 
-Aby element członkowski danych klasy atrybutów był prawidłowym argumentem nazwanym, nie może być oznaczony jako `static`, `const`lub `literal`. Jeśli właściwość nie może być `static` i musi mieć metody dostępu get i Set.
+Aby element członkowski danych klasy atrybutów był prawidłowym argumentem nazwanym, nie może być oznaczony jako, **`static`** **`const`** lub **`literal`** . Jeśli właściwość, właściwość nie może być **`static`** i musi mieć metody dostępu get i Set.
 
 Aby uzyskać więcej informacji, zobacz [Właściwości](../../extensions/property-cpp-component-extensions.md) i [atrybuty zdefiniowane przez użytkownika](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 

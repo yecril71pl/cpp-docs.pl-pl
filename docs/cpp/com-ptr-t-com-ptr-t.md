@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 96589d8be56b81e78ea7c474aea24803cc56ab21
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e8d3d09bf385cb9fdaa02d460952fadbf83bc193
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180488"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233798"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
@@ -139,7 +139,7 @@ explicit _com_ptr_t(
 Pierwotny wskaźnik interfejsu.
 
 *fAddRef*<br/>
-W przypadku wartości TRUE `AddRef` jest wywoływana, aby zwiększyć liczbę odwołań wskaźnika interfejsu hermetyzowanego.
+Jeśli **`true`** , `AddRef` jest wywoływana, aby zwiększyć liczbę odwołań do zhermetyzowanego wskaźnika interfejsu.
 
 *CP*<br/>
 Obiekt **_com_ptr_t** .
@@ -151,19 +151,19 @@ Wskaźnik interfejsu RAW, jego typ różni się od typu inteligentnego wskaźnik
 Obiekt `_variant_t`.
 
 *Identyfikator*<br/>
-`CLSID` klasy coclass.
+`CLSID`Klasy coclass.
 
 *dwClsContext*<br/>
 Kontekst do uruchamiania kodu wykonywalnego.
 
 *lpcStr*<br/>
-Ciąg wielobajtowy, który zawiera `CLSID` (Zaczynając od " **{** ") lub `ProgID`.
+Ciąg wielobajtowy, który zawiera `CLSID` (Zaczynając od "**{**") lub `ProgID` .
 
 *pOuter*<br/>
 Nieznana zewnętrzna do [agregacji](/windows/win32/com/aggregation).
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)
+[Klasa _com_ptr_t](../cpp/com-ptr-t-class.md)

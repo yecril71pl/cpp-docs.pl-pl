@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: efb5618c03b1f70a809bb2bafe9611474799e00b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 42b7d385877d68db22ccaf6665e8043dbfe2ee44
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212254"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233486"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset — Klasa
 
@@ -58,15 +58,15 @@ Klasa zestawu wierszy.
 
 **Nagłówek:** atldbcli. h
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="methods"></a>Metody
 
 |||
 |-|-|
-|[Bind](#bind)|Tworzy powiązania (używane, gdy `bBind` jest określony jako **false** w [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
+|[Węglowodor](#bind)|Tworzy powiązania (używane `bBind` , gdy jest określony **`false`** w [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
 |[CAccessorRowset](#caccessorrowset)|Konstruktor.|
-|[Ściśle](#close)|Zamyka zestaw wierszy i wszelkie metody dostępu.|
+|[Zamknij](#close)|Zamyka zestaw wierszy i wszelkie metody dostępu.|
 |[FreeRecordMemory](#freerecordmemory)|Zwalnia wszystkie kolumny w bieżącym rekordzie, które muszą zostać zwolnione.|
 |[GetColumnInfo](#getcolumninfo)|Implementuje [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|
 
@@ -76,7 +76,7 @@ Klasa `TAccessor` zarządza akcesorem. Klasa *TRowset* zarządza zestawem wiersz
 
 ## <a name="caccessorrowsetbind"></a><a name="bind"></a>CAccessorRowset:: bind
 
-Tworzy powiązania, jeśli określono `bBind` jako **false** w [CCommand:: Open](../../data/oledb/ccommand-open.md).
+Tworzy powiązania, jeśli określono `bBind` **`false`** w [CCommand:: Open](../../data/oledb/ccommand-open.md).
 
 ### <a name="syntax"></a>Składnia
 
@@ -90,7 +90,7 @@ Standardowa wartość HRESULT.
 
 ## <a name="caccessorrowsetcaccessorrowset"></a><a name="caccessorrowset"></a>CAccessorRowset:: CAccessorRowset
 
-Inicjuje obiekt `CAccessorRowset`.
+Inicjuje `CAccessorRowset` obiekt.
 
 ### <a name="syntax"></a>Składnia
 
@@ -151,7 +151,7 @@ Użytkownik musi zwolnić zwrócone informacje o kolumnie i buforze ciągów. U�
 
 Aby uzyskać więcej informacji, zobacz [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) w *dokumentacji programisty OLE DB*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Dokumentacja szablonów klientów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

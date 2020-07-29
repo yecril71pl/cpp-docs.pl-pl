@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - WCHAR_MIN constant
 ms.assetid: f2d192d7-4412-483f-9839-c29e4f174b83
-ms.openlocfilehash: 613dcb1e9efc1213190f6887de7304cb36419e3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80df4ed309c4426a7b753f9f59ae27f7e6117d93
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377481"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218484"
 ---
-# <a name="wcharmin"></a>WCHAR_MIN
+# <a name="wchar_min"></a>WCHAR_MIN
 
-Minimalna wartość dla typu `wchar_t`.
+Minimalna wartość typu **`wchar_t`** .
 
 ## <a name="syntax"></a>Składnia
 

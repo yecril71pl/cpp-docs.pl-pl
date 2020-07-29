@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 24c6811a755ea242d424c5dd06cdf48c6e9c1b20
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: dd1b88f51dfd414fc1668199350db1e2c34b9f33
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507004"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218688"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -83,7 +83,7 @@ Funkcje **podłogi** zwracają wartość zmiennoprzecinkową, która reprezentuj
 
 ## <a name="remarks"></a>Uwagi
 
-Język C++ pozwala na Przeciążenie, dlatego można wywoływać przeciążenia, **które** pobierają i zwracają wartości **zmiennoprzecinkowe** i **długie** **Double** . W programie C **podłoga** zawsze przyjmuje i zwraca wartość **podwójną**.
+Język C++ pozwala na Przeciążenie, dlatego można wywoływać przeciążenia, **które** pobierają i zwracają **`float`** **`long double`** wartości. W programie C **podłoga** zawsze przyjmuje i zwraca **`double`** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 

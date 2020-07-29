@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 8aef8a04d7adff903e21491a91014d55aab769da
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e29883b2a42010daee19f915c49c31686b232cf6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212295"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233460"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase — Klasa
 
-Wszystkie metody dostępu w szablonach OLE DB pochodzą od tej klasy. `CAccessorBase` umożliwia jednemu zestawowi wierszy zarządzanie wieloma metod dostępu. Zawiera również powiązanie zarówno z parametrami, jak i kolumnami wyjściowymi.
+Wszystkie metody dostępu w szablonach OLE DB pochodzą od tej klasy. `CAccessorBase`umożliwia jednemu zestawowi wierszy zarządzanie wieloma metod dostępu. Zawiera również powiązanie zarówno z parametrami, jak i kolumnami wyjściowymi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,13 +42,13 @@ Wszystkie metody dostępu w szablonach OLE DB pochodzą od tej klasy. `CAccessor
 // Replace with syntax
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="methods"></a>Metody
 
 |||
 |-|-|
-|[Ściśle](#close)|Zamyka metody dostępu.|
+|[Zamknij](#close)|Zamyka metody dostępu.|
 |[GetHAccessor](#geth)|Pobiera dojście metody dostępu.|
 |[GetNumAccessors](#getnum)|Pobiera liczbę metod dostępu utworzonych przez klasę.|
 |[IsAutoAccessor](#isauto)|Testuje, czy określony akcesor jest autodostępnym.|
@@ -122,7 +122,7 @@ podczas Numer przesunięcia zerowego dla metody dostępu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca **wartość PRAWDA** , jeśli metoda dostępu jest autodostępna. W przeciwnym razie zwraca **wartość false**.
+Zwraca **`true`** czy akcesor jest autodostępnym. W przeciwnym razie zwraca **`false`** .
 
 ## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a>CAccessorBase:: ReleaseAccessors
 
@@ -137,7 +137,7 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 #### <a name="parameters"></a>Parametry
 
 *Punkt*<br/>
-podczas Wskaźnik do interfejsu `IUnknown` obiektu COM, dla którego utworzono metody dostępu.
+podczas Wskaźnik do `IUnknown` interfejsu obiektu com, dla którego utworzono metody dostępu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -147,8 +147,8 @@ Standardowa wartość HRESULT.
 
 Wywoływana z [CAccessorRowset:: Close](../../data/oledb/caccessorrowset-close.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [OLE DB Szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Szablony konsumentów OLE DB — dokumentacja](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[CAccessorBase, klasa](../../data/oledb/caccessorbase-class.md)
+[Dokumentacja szablonów klientów OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Klasa CAccessorBase](../../data/oledb/caccessorbase-class.md)

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - _CrtSetDumpClient function
 - CrtSetDumpClient function
 ms.assetid: f3dd06d0-c331-4a12-b68d-25378d112033
-ms.openlocfilehash: f739f86a8410c66135704d61944d122a38c196a5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fd2b037ce10f708ab133f31a20636438b0d04b93
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938560"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234266"
 ---
 # <a name="_crtsetdumpclient"></a>_CrtSetDumpClient
 
@@ -53,7 +53,7 @@ Zwraca wcześniej zdefiniowaną funkcję zrzutu bloku klienta.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_CrtSetDumpClient** umożliwia aplikacji podłączać własną funkcję w celu zrzutów obiektów przechowywanych w blokach pamięci **_CLIENT_BLOCK** do procesu zrzutu pamięci debugowania w czasie wykonywania C. W związku z tym za każdym razem, gdy funkcja zrzutu debugowania, taka jak [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) lub [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) zrzuca blok pamięci **_CLIENT_BLOCK** , wywoływana jest również funkcja zrzutu aplikacji. **_CrtSetDumpClient** zapewnia aplikacji prostą metodę wykrywania przecieków pamięci i sprawdzania poprawności zawartości danych przechowywanych w blokach **_CLIENT_BLOCK** . Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania **_CrtSetDumpClient** są usuwane podczas przetwarzania wstępnego.
+Funkcja **_CrtSetDumpClient** umożliwia aplikacji podpiąć własną funkcję w celu zrzutów obiektów przechowywanych w blokach pamięci **_CLIENT_BLOCK** do procesu zrzutu pamięci debugowania w czasie wykonywania C. W związku z tym za każdym razem, gdy funkcja zrzutu debugowania, taka jak [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) lub [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) zrzuca blok pamięci **_CLIENT_BLOCK** , wywoływana jest również funkcja zrzutu aplikacji. **_CrtSetDumpClient** zapewnia aplikacji prostą metodę wykrywania przecieków pamięci i sprawdzania poprawności zawartości danych przechowywanych w blokach **_CLIENT_BLOCK** . Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołania do **_CrtSetDumpClient** są usuwane podczas przetwarzania wstępnego.
 
 Funkcja **_CrtSetDumpClient** instaluje nową funkcję zrzutu zdefiniowaną przez aplikację określoną w *dumpClient* i zwraca wcześniej zdefiniowaną funkcję zrzutu. Przykładem funkcji zrzutu bloku klienta jest następująca:
 
@@ -61,13 +61,13 @@ Funkcja **_CrtSetDumpClient** instaluje nową funkcję zrzutu zdefiniowaną prze
 void DumpClientFunction( void *userPortion, size_t blockSize );
 ```
 
-Argument *userPortion* jest wskaźnikiem do początku części danych użytkownika bloku pamięci i *rozmiar bloku* określa rozmiar przydzielony blok pamięci w bajtach. Funkcja zrzutu bloku klienta musi zwracać **typ void**. Wskaźnik do funkcji zrzutu klienta, która jest przenoszona do **_CrtSetDumpClient** jest typu **_CRT_DUMP_CLIENT**, zgodnie z definicją w CRTDBG. h:
+Argument *userPortion* jest wskaźnikiem do początku części danych użytkownika bloku pamięci i *rozmiar bloku* określa rozmiar przydzielony blok pamięci w bajtach. Funkcja zrzutu bloku klienta musi zwracać **`void`** . Wskaźnik do funkcji zrzutu klienta, która jest przenoszona do **_CrtSetDumpClient** jest typu **_CRT_DUMP_CLIENT**, zgodnie z definicją w CRTDBG. h:
 
 ```C
 typedef void (__cdecl *_CRT_DUMP_CLIENT)( void *, size_t );
 ```
 
-Aby uzyskać więcej informacji o funkcjach, które działają w blokach pamięci typu **_CLIENT_BLOCK** , zobacz [funkcje punktu zaczepienia bloku klienta](/visualstudio/debugger/client-block-hook-functions). Funkcja [_CrtReportBlockType](crtreportblocktype.md) może służyć do zwracania informacji o typach bloków i podtypach.
+Aby uzyskać więcej informacji na temat funkcji, które działają na blokach pamięci typu **_CLIENT_BLOCK** , zobacz [funkcje punktu zaczepienia bloku klienta](/visualstudio/debugger/client-block-hook-functions). Funkcja [_CrtReportBlockType](crtreportblocktype.md) może służyć do zwracania informacji o typach bloków i podtypach.
 
 ## <a name="requirements"></a>Wymagania
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: 5b40fa0c4cc9cdf0c0de0f6af21da04b0c70369f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 24432ec1514f6cd2d569fd5752a8ed7118059d6a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937695"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234227"
 ---
 # <a name="div-ldiv-lldiv"></a>DIV, ldiv, LLDiv
 
@@ -77,13 +77,13 @@ Mianownik.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**blok DIV** wywoływany za pomocą argumentów typu **int** zwraca strukturę typu **div_t**, która składa się z ilorazu i reszty. Wartość zwracana z argumentami typu **Long** to **ldiv_t**, a wartość zwracana z argumentami typu **Long** **Long** to **lldiv_t**. **div_t**, **ldiv_t**i **lldiv_t** są zdefiniowane w \<STDLIB. h >.
+**blok DIV** wywoływany za pomocą argumentów typu **`int`** zwraca strukturę typu **div_t**, która składa się z ilorazu i reszty. Zwracaną wartością z argumentami typu **`long`** jest **ldiv_t**, a zwracaną wartością z argumentami typu **`long long`** jest **lldiv_t**. **div_t**, **ldiv_t**i **lldiv_t** są zdefiniowane w \<stdlib.h> .
 
 ## <a name="remarks"></a>Uwagi
 
 Funkcja **DIV** dzieli *numer* przez *denom* , a tym samym Oblicza iloraz i resztę. Struktura [div_t](../../c-runtime-library/standard-types.md) zawiera iloraz, **Quote**i resztę, **REM**. Znak ilorazu jest taki sam jak w przypadku ilorazu matematycznego. Wartość bezwzględna jest największą liczbą całkowitą, która jest mniejsza niż wartość bezwzględna ilorazu matematycznego. Jeśli mianownik ma wartość 0, program kończy pracę z komunikatem o błędzie.
 
-Przeciążenia elementu **DIV** , które przyjmują argumenty typu **Long** lub **Long** **Long** , są dostępne tylko C++ dla kodu. Zwracane typy [ldiv_t](../../c-runtime-library/standard-types.md) i [lldiv_t](../../c-runtime-library/standard-types.md) zawierają elementy **Quote** i **REM**, które mają takie same znaczenie jak elementy członkowskie **div_t**.
+Przeciążenia elementu **DIV** , które przyjmują argumenty typu **`long`** lub **`long long`** są dostępne tylko dla kodu C++. Typy zwracane [ldiv_t](../../c-runtime-library/standard-types.md) i [lldiv_t](../../c-runtime-library/standard-types.md) zawierają elementy **Quote** i **REM**, które mają takie same znaczenie jak elementy członkowskie **div_t**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -133,6 +133,6 @@ The quotient is 67, and the remainder is 5
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>

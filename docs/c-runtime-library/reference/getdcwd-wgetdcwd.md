@@ -40,12 +40,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 69e9d0b0eaa3a62d95ea602b68b5d1ad0df99e4a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c9ae07c5880cb86b0aafb0dc66a7c1ce3edcc9d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919216"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218666"
 ---
 # <a name="_getdcwd-_wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -79,7 +79,7 @@ Lokalizacja przechowywania dla ścieżki lub **wartość null**.
 Jeśli określono **wartość null** , ta funkcja przydziela bufor o rozmiarze co najmniej *MaxLen* przy użyciu wartości **malloc**, a zwracana wartość **_getdcwd** jest wskaźnikiem do przydzielonego buforu. Bufor może zostać zwolniony przez wywołanie **bezpłatnej** i przekazanie jej wskaźnika.
 
 *MaxLen*<br/>
-Niezerowy dodatnia liczba całkowita, która określa maksymalną długość ścieżki, w znakach: **char** dla **_getdcwd** i **wchar_t** dla **_wgetdcwd**.
+Niezerowy dodatnia liczba całkowita, która określa maksymalną długość ścieżki, w znakach: **`char`** dla **_getdcwd** i **`wchar_t`** **_wgetdcwd**.
 
 Jeśli *MaxLen* jest mniejsza lub równa zero, zostanie wywołana procedura obsługi nieprawidłowego parametru. Aby uzyskać więcej informacji, zobacz [Walidacja parametrów](../../c-runtime-library/parameter-validation.md).
 
@@ -91,7 +91,7 @@ Jeśli *bufor* jest określony jako **null** , a za mało pamięci do przydziele
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_getdcwd** pobiera pełną ścieżkę bieżącego katalogu roboczego na określonym dysku i zapisuje ją w *buforze*. Jeśli bieżący katalog roboczy jest ustawiony na katalog główny, ciąg kończący się ukośnikiem odwrotnym (\\). Jeśli bieżący katalog roboczy jest ustawiony na katalog inny niż główny, ciąg zostanie zakończony nazwą katalogu, a nie ukośnikiem odwrotnym.
+Funkcja **_getdcwd** pobiera pełną ścieżkę bieżącego katalogu roboczego na określonym dysku i zapisuje ją w *buforze*. Jeśli bieżący katalog roboczy jest ustawiony na katalog główny, ciąg kończący się ukośnikiem odwrotnym ( \\ ). Jeśli bieżący katalog roboczy jest ustawiony na katalog inny niż główny, ciąg zostanie zakończony nazwą katalogu, a nie ukośnikiem odwrotnym.
 
 **_wgetdcwd** to wersja znaku dwubajtowego **_getdcwd**, a jej parametr *buforu* i wartość zwracana są ciągami znaków dwubajtowych. W przeciwnym razie **_wgetdcwd** i **_getdcwd** zachowują się identycznie.
 
@@ -113,8 +113,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_getdcwd**|\<> Direct. h|
-|**_wgetdcwd**|\<Direct. h> lub \<WCHAR. h>|
+|**_getdcwd**|\<direct.h>|
+|**_wgetdcwd**|\<direct.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -122,9 +122,9 @@ Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtim
 
 Zobacz przykład w [_getdrive](getdrive.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Kontrola katalogu](../../c-runtime-library/directory-control.md)<br/>
+[Kontrolka katalogu](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>
 [_getdrive](getdrive.md)<br/>

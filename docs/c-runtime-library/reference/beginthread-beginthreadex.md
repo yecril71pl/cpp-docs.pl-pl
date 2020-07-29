@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: acf885c923db3fdf91119b29a78d64824384166b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 29458f2d752f1fe59778b752480e268f8243f15e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913509"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234279"
 ---
 # <a name="_beginthread-_beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -109,13 +109,13 @@ Aby uzyskać więcej informacji na temat **uintptr_t**, zobacz [typy standardowe
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_beginthread** tworzy wątek, który rozpoczyna wykonywanie procedury w *start_address*. Procedura w *start_address* musi używać **__cdecl** (dla kodu natywnego) lub **__clrcall** (dla kodu zarządzanego) i nie powinna mieć wartości zwracanej. Gdy wątek wraca z tej procedury, zostanie automatycznie zakończony. Aby uzyskać więcej informacji na temat wątków, zobacz [Obsługa wielowątkowości dla starszego kodu (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md).
+Funkcja **_beginthread** tworzy wątek, który rozpoczyna wykonywanie procedury w *start_address*. Procedura w *start_address* musi używać **`__cdecl`** konwencji wywoływania (dla kodu natywnego) lub **__clrcall** (dla kodu zarządzanego) i nie powinna mieć wartości zwracanej. Gdy wątek wraca z tej procedury, zostanie automatycznie zakończony. Aby uzyskać więcej informacji na temat wątków, zobacz [Obsługa wielowątkowości dla starszego kodu (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
 **_beginthreadex** przypomina interfejs API [wielowątkowości](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) Win32 bardziej blisko niż **_beginthread** . **_beginthreadex** różni się od **_beginthread** w następujący sposób:
 
 - **_beginthreadex** ma trzy dodatkowe parametry: *initflag*, *Security*i **threadaddr**. Nowy wątek można utworzyć w stanie wstrzymania z określonym zabezpieczeniami i można uzyskać do niego dostęp przy użyciu *thrdaddr*, który jest identyfikatorem wątku.
 
-- Procedura w *start_address* , która jest przenoszona do **_beginthreadex** musi używać **__stdcall** (dla kodu natywnego) lub **__clrcall** (dla kodu zarządzanego) konwencji wywoływania i musi zwracać kod zakończenia wątku.
+- Procedura w *start_address* , która jest przenoszona do **_beginthreadex** musi używać **`__stdcall`** konwencji wywoływania (dla kodu natywnego) lub **__clrcall** (dla kodu zarządzanego) i musi zwrócić kod zakończenia wątku.
 
 - **_beginthreadex** zwraca wartość 0 w przypadku niepowodzenia, a nie 1L.
 
@@ -146,8 +146,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_beginthread**|\<proces. h>|
-|**_beginthreadex**|\<proces. h>|
+|**_beginthread**|\<process.h>|
+|**_beginthreadex**|\<process.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -327,10 +327,10 @@ In second thread...
 Counter should be 1000000; it is-> 1000000
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)
 - [_endthread, _endthreadex](endthread-endthreadex.md)
-- [Anuluj](abort.md)
+- [przerwij](abort.md)
 - [exit, _Exit, _exit](exit-exit-exit.md)
 - [GetExitCodeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)

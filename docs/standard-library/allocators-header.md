@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: f981b86ed8f5d3b240d9f02380a603eb4f2605bc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 69c086515230fd5a9aaa039ef02b7995842fa260
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623581"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204888"
 ---
 # <a name="ltallocatorsgt"></a>&lt;alokatorów&gt;
 
@@ -80,7 +80,7 @@ std::list<int, alloc<int> > _List1;
 
 _Lst1 przydziela węzły z `allocator_chunklist` i [sync_per_thread](sync-per-thread-class.md) filtr synchronizacji.
 
-Alokator bloku jest pamięcią podręczną lub filtrem. Pamięć podręczna to szablon klasy, który przyjmuje jeden argument typu std:: size_t. Definiuje program przydzielający blok, który przydziela i cofa alokacje bloków pamięci o pojedynczym rozmiarze. Musi on uzyskać pamięć przy użyciu operatora **New**, ale nie musi wykonywać osobnego wywołania operatora **New** dla każdego bloku. Może to być na przykład alokacja z większymi blokami lub alokacja pamięci podręcznej w celu kolejnej ponownej alokacji.
+Alokator bloku jest pamięcią podręczną lub filtrem. Pamięć podręczna to szablon klasy, który przyjmuje jeden argument typu std:: size_t. Definiuje program przydzielający blok, który przydziela i cofa alokacje bloków pamięci o pojedynczym rozmiarze. Musi on uzyskać użycie operatora Memory **`new`** , ale nie musi mieć osobnego wywołania operatora **`new`** dla każdego bloku. Może to być na przykład alokacja z większymi blokami lub alokacja pamięci podręcznej w celu kolejnej ponownej alokacji.
 
 Kompilator, który nie może ponownie powiązać wartości argumentu std:: size_t użytego podczas tworzenia wystąpienia szablonu, nie musi być wartością argumentu _Sz przekazaną do funkcji składowych pamięci podręcznej alokacji i alokacji.
 
@@ -168,6 +168,6 @@ Szablon pamięci podręcznej `cache_freelist` przyjmuje argument Max Class, któ
 
 **Przestrzeń nazw:** stdext
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja plików nagłówkowych](cpp-standard-library-header-files.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: 8de433361901b5d247616c154afc48d637373d43
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 75b2ba62182a33137b433c836b4acf7c9e1fc231
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448032"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87207982"
 ---
 # <a name="compiler-error-c2440"></a>Błąd kompilatora C2440
 
-'conversion': nie można konwertować z 'Typ1' na 'type2'
+"Konwersja": nie można konwertować z "type1" na "type2"
 
-Kompilator nie może rzutować z `type1` do `type2`.
+Kompilator nie może rzutować z `type1` na `type2` .
 
 ## <a name="example"></a>Przykład
 
-C2440 może być spowodowany, jeśli użytkownik spróbuje zainicjować wartości innej niż stała `char*` (lub `wchar_t*`) przy użyciu ciągu literału w przypadku kodu C++, gdy opcję zgodności kompilatora [/Zc: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) jest ustawiona. W języku C typem literału ciągu jest tablica `char`, ale w języku C++ jest Tablica obiektów `const char`. Ten przykład generuje C2440:
+C2440 może być spowodowany próbą zainicjowania niestałej **`char*`** (lub) przy `wchar_t*` użyciu literału ciągu w kodzie C++, gdy opcja zgodności kompilatora [/Zc: strictStrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) jest ustawiona. W C, typ literału ciągu jest tablicą **`char`** , ale w języku C++ jest tablicą `const char` . Ten przykład generuje C2440:
 
 ```cpp
 // C2440s.cpp
@@ -40,7 +40,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Jeśli użytkownik spróbuje przekonwertować wskaźnik do elementu void *, może być także spowodowany C2440. Następny przykład generuje C2440:
+C2440 może również być spowodowany próbą przekonwertowania wskaźnika do elementu członkowskiego na typ void *. Następny przykład generuje C2440:
 
 ```cpp
 // C2440.cpp
@@ -63,7 +63,7 @@ public:
 
 ## <a name="example"></a>Przykład
 
-Można również c2440 Jeśli próbowano rzutowania z typu, który jest tylko do przodu jest zadeklarowana, ale nie jest zdefiniowany. Ten przykład generuje C2440:
+C2440 może również być spowodowany próbą rzutowania z typu, który jest tylko zadeklarowany do przodu, ale nie jest zdefiniowany. Ten przykład generuje C2440:
 
 ```cpp
 // c2440a.cpp
@@ -78,13 +78,13 @@ Base * func(Derived * d) {
 
 ## <a name="example"></a>Przykład
 
-Błędy C2440 w wierszach 15 i 16 następnej próbki są kwalifikowane `Incompatible calling conventions for UDT return value` wiadomości. A *UDT* jest typ zdefiniowany przez użytkownika, takie jak klasy, struktury lub Unii. Tego rodzaju błędy niezgodności powstają, gdy konwencja wywołania UDT określona w typie zwracanym przyszłych deklaracji koliduje z rzeczywistą konwencją wywołania UDT, i w przypadku wskaźnika funkcji.
+Błędy C2440 w wierszach 15 i 16 z kolejnego przykładu są kwalifikowane do `Incompatible calling conventions for UDT return value` wiadomości. *UDT* to typ zdefiniowany przez użytkownika, taki jak Klasa, struktura lub Unia. Te rodzaje błędów niezgodności są spowodowane tym, gdy Konwencja wywoływania UDT określona w zwracanym typie deklaracji do przodu powoduje konflikt z rzeczywistą konwencją wywoływania UDT i kiedy jest używana wskaźnik funkcji.
 
-W tym przykładzie najpierw są deklaracje przechodzenia do przodu dla struktury i dla funkcji zwracającej strukturę; kompilator zakłada, że struktura używa konwencji wywoływania języka C++. Następna jest definicja struktury, która domyślnie używa języka C Konwencja wywoływania. Ponieważ kompilator nie zna konwencji wywołania struktury, do momentu zakończenia na całej strukturze konwencją wywołania dla struktur w typie zwracanym `get_c2` również muszą być w języku C++.
+W przykładzie najpierw istnieją deklaracje dalej dla struktury i dla funkcji, która zwraca strukturę; kompilator zakłada, że struktura używa konwencji wywoływania języka C++. Następnie jest definicją struktury, która domyślnie używa konwencji wywoływania języka C. Ponieważ kompilator nie zna konwencji wywoływania struktury, dopóki nie zakończy się odczytywanie całej struktury, przyjęto również konwencję wywoływania dla struktury w typie zwracanym jako `get_c2` C++.
 
-Struktura występuje kolejna deklaracja funkcji zwracająca strukturę, ale w tym momencie kompilator wie, że Konwencja wywołania struktury to C++. Podobnie wskaźnik funkcji, która zwraca strukturę, jest zdefiniowany po definicji struktury, tak, aby kompilator wiedział, że struktura używa konwencji wywoływania języka C++.
+Następuje struktura jest kolejną deklaracją funkcji, która zwraca strukturę, ale w tym momencie kompilator wie, że konwencją wywoływania struktury jest C++. Podobnie, wskaźnik funkcji, która zwraca strukturę, jest zdefiniowany po definicji struktury, tak aby kompilator wie, że struktura używa konwencji wywoływania języka C++.
 
-Aby rozwiązać problem C2440 występujący na skutek niezgodności konwencji wywoływania, Zadeklaruj funkcje wracające do UDT po definicji UDT.
+Aby rozwiązać C2440 występujący ze względu na niezgodne konwencje wywoływania, należy zadeklarować funkcje, które zwracają UDT po definicji UDT.
 
 ```cpp
 // C2440b.cpp
@@ -128,7 +128,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-C2440 może również wystąpić, jeśli przypiszesz zero do wnętrza wskaźnika:
+C2440 może również wystąpić, Jeśli przypiszesz zero do wewnętrznego wskaźnika:
 
 ```cpp
 // C2440c.cpp
@@ -143,7 +143,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-C2440 może również wystąpić dla niepoprawnego użycia konwersji zdefiniowanej przez użytkownika. Na przykład, gdy operator konwersji został zdefiniowany jako `explicit`, kompilator nie można go używać w niejawną konwersję. Aby uzyskać więcej informacji dotyczących konwersji zdefiniowanych przez użytkownika, zobacz [konwersje zdefiniowane przez użytkownika (C++sposób niezamierzony)](../../dotnet/user-defined-conversions-cpp-cli.md)). Ten przykład generuje C2440:
+C2440 może również wystąpić w przypadku nieprawidłowego użycia konwersji zdefiniowanej przez użytkownika. Na przykład, gdy operator konwersji został zdefiniowany jako **`explicit`** , kompilator nie może użyć go w niejawnej konwersji. Aby uzyskać więcej informacji dotyczących konwersji zdefiniowanych przez użytkownika, zobacz [konwersje zdefiniowane przez użytkownika (C++/CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)). Ten przykład generuje C2440:
 
 ```cpp
 // C2440d.cpp
@@ -167,7 +167,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-C2440 może również wystąpić, jeśli zostanie podjęta próba utworzenia instancji tablicy języka Visual C++, którego typem jest <xref:System.Array>.  Aby uzyskać więcej informacji, zobacz [tablic](../../extensions/arrays-cpp-component-extensions.md).  Następny przykład generuje C2440:
+C2440 może również wystąpić, jeśli spróbujesz utworzyć wystąpienie tablicy Visual C++, której typem jest <xref:System.Array> .  Aby uzyskać więcej informacji, zobacz [tablice](../../extensions/arrays-cpp-component-extensions.md).  Następny przykład generuje C2440:
 
 ```cpp
 // C2440e.cpp
@@ -182,7 +182,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-C2440 może również wystąpić z powodu zmian w funkcji atrybutów.  Poniższy przykład generuje C2440.
+C2440 może również wystąpić ze względu na zmiany w funkcji atrybutów.  Poniższy przykład generuje C2440.
 
 ```cpp
 // c2440f.cpp
@@ -194,9 +194,9 @@ C2440 może również wystąpić z powodu zmian w funkcji atrybutów.  Poniższy
 
 ## <a name="example"></a>Przykład
 
-Microsoft C++ kompilatora nie zezwala już [const_cast Operator](../../cpp/const-cast-operator.md) na spadek, gdy kod, który używa **/CLR** programowania jest kompilowany.
+Kompilator języka Microsoft C++ nie zezwala już [operatorowi const_cast](../../cpp/const-cast-operator.md) na rzutowanie, gdy jest kompilowany kod źródłowy korzystający z programowania **/CLR** .
 
-Aby rozwiązać ten C2440, użyj prawidłowego operatora rzutowania. Aby uzyskać więcej informacji, zobacz [operatorów rzutowania](../../cpp/casting-operators.md).
+Aby rozwiązać ten C2440, użyj poprawnego operatora rzutowania. Aby uzyskać więcej informacji, zobacz [Operatory rzutowania](../../cpp/casting-operators.md).
 
 Ten przykład generuje C2440:
 
@@ -215,7 +215,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-C2440 może wystąpić z powodu zmian zgodności kompilatora w programie Visual Studio 2015 Update 3. Wcześniej kompilator niepoprawnie uznaje niektóre wyrażenia distinct tego samego typu przy identyfikowaniu dopasowania szablonu dla `static_cast` operacji. Obecnie kompilator poprawnie rozróżnia typów i kodu, opiera się na poprzednim `static_cast` zachowanie jest uszkodzona. Aby rozwiązać ten problem, należy zmienić argument szablonu, który jest zgodny z typem parametru szablonu lub skorzystania z `reinterpret_cast` lub rzutowania w stylu języka C.
+C2440 może wystąpić ze względu na zgodność ze zmianami kompilatora w programie Visual Studio 2015 Update 3. Wcześniej kompilator nieprawidłowo traktował określone wyrażenie DISTINCT jako ten sam typ podczas identyfikowania dopasowania szablonu dla **`static_cast`** operacji. Teraz kompilator rozróżnia typy prawidłowo, a kod, który opierał się na poprzednim **`static_cast`** zachowaniu, jest przerwany. Aby rozwiązać ten problem, Zmień argument szablonu tak, aby pasował do typu parametru szablonu lub użyć **`reinterpret_cast`** rzutowania w stylu języka C.
 
 Ten przykład generuje C2440:
 
@@ -242,11 +242,11 @@ This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in
 
 ## <a name="example"></a>Przykład
 
-### <a name="copy-list-initialization"></a>Copy-list-initialization
+### <a name="copy-list-initialization"></a>Inicjalizacja kopiowania listy
 
-Visual Studio 2017 i nowszym poprawnie zgłaszać błędy kompilatora dotyczące tworzenia obiektów przy użyciu listy inicjatorów, które nie zostały wykryte w Visual Studio 2015 i może prowadzić do awarii lub niezdefiniowane zachowanie środowiska uruchomieniowego. W języku C ++ 17 listy Inicjalizacja kopiowania kompilator jest wymagany do rozważenia jawny Konstruktor przypadku rozpoznawania przeciążenia, ale musi zgłosić błąd, jeśli niejawnej tego przeciążenia.
+Program Visual Studio 2017 lub nowszy prawidłowo podnosi błędy kompilatora związane z tworzeniem obiektów przy użyciu list inicjatorów, które nie zostały przechwycone w programie Visual Studio 2015 i mogą prowadzić do awarii lub niezdefiniowanego zachowania środowiska uruchomieniowego. W przypadku inicjalizacji listy kopii w języku C++ 17, kompilator jest wymagany do uwzględnienia jawnego konstruktora w celu rozpoznania przeciążenia, ale musi zgłosić błąd, jeśli to przeciążenie jest rzeczywiście wybrane.
 
-Poniższy przykład tworzy jedynie w programie Visual Studio 2015, ale nie w programie Visual Studio 2017.
+Poniższy przykład kompiluje w programie Visual Studio 2015, ale nie w programie Visual Studio 2017.
 
 ```cpp
 // C2440j.cpp
@@ -263,7 +263,7 @@ int main()
 }
 ```
 
-Aby poprawić ten błąd, należy użyć inicjalizacji bezpośredniej:
+Aby poprawić błąd, użyj bezpośredniej inicjalizacji:
 
 ```cpp
 // C2440k.cpp
@@ -281,9 +281,9 @@ int main()
 
 ## <a name="example"></a>Przykład
 
-### <a name="cv-qualifiers-in-class-construction"></a>Kwalifikatory CV w konstrukcji klasy
+### <a name="cv-qualifiers-in-class-construction"></a>kwalifikatory CV w konstrukcji klasy
 
-W programie Visual Studio 2015 Kompilator ignoruje czasami niepoprawnie Kwalifikator cv podczas generowania obiektu przez wywołanie konstruktora klasy. Może to teoretycznie spowodować awarię lub nieoczekiwane zachowanie. W poniższym przykładzie kompiluje w programie Visual Studio 2015, ale zgłasza błąd kompilatora w programie Visual Studio 2017 i nowszych:
+W programie Visual Studio 2015 kompilator czasami niepoprawnie ignoruje kwalifikator CV podczas generowania obiektu klasy za pośrednictwem wywołania konstruktora. Może to spowodować awarię lub nieoczekiwane zachowanie środowiska uruchomieniowego. Poniższy przykład kompiluje w programie Visual Studio 2015, ale wywołuje błąd kompilatora w programie Visual Studio 2017 lub nowszym:
 
 ```cpp
 struct S
@@ -295,4 +295,4 @@ struct S
 int i = (const S)0; // error C2440
 ```
 
-Aby poprawić ten błąd, należy zadeklarować operatora int() jako const.
+Aby poprawić błąd, zadeklaruj operator int () jako const.

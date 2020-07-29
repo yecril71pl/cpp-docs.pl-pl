@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
-ms.openlocfilehash: d1bd287c6b7e0b07938db55c282c69cd00fd25df
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 290faa1a227920cd46f32a4adf0dd6a6f3687c6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761546"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233369"
 ---
 # <a name="compiler-error-c3538"></a>Błąd kompilatora C3538
 
@@ -21,11 +21,11 @@ Wszystkie zadeklarowane zmienne na liście deklaracji nie są rozpoznawane jako 
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-1. Upewnij się, że wszystkie deklaracje `auto` na liście ustalają ten sam typ.
+1. Upewnij się, że wszystkie **`auto`** deklaracje na liście wywnioskowania tego samego typu.
 
 ## <a name="example"></a>Przykład
 
-Poniższe instrukcje zwracają C3538. Każda instrukcja deklaruje wiele zmiennych, ale każde użycie słowa kluczowego `auto` nie powoduje tego samego typu.
+Poniższe instrukcje zwracają C3538. Każda instrukcja deklaruje wiele zmiennych, ale każde użycie **`auto`** słowa kluczowego nie ma tego samego typu.
 
 ```cpp
 // C3538.cpp
@@ -47,4 +47,4 @@ int main()
 
 ## <a name="see-also"></a>Zobacz także
 
-[Auto, słowo kluczowe](../../cpp/auto-keyword.md)
+[Słowo kluczowe "Autouzupełnianie"](../../cpp/auto-keyword.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-ms.openlocfilehash: c09832a4f27bff51cbb5bd847a3123e62c9ee8d5
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 068bdb2c7c87e8fe7cd3e482f53934de098a6166
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991001"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218094"
 ---
 # <a name="compiler-warning-level-4-c4512"></a>Ostrzeżenie kompilatora (poziom 4) C4512
 
@@ -23,13 +23,13 @@ Operator przypisania dla klasy podstawowej, która nie jest dostępna w klasie p
 
 Aby uniknąć tego ostrzeżenia, określ zdefiniowany przez użytkownika operator przypisania dla klasy.
 
-Kompilator generuje również funkcję operatora przypisania dla klasy, która nie definiuje jednej. Ten operator przypisania jest składowych kopią elementów członkowskich danych obiektu. Ponieważ `const` elementów danych nie można modyfikować po inicjacji, jeśli Klasa zawiera element `const`, domyślny operator przypisania nie będzie działać. Inną przyczyną ostrzeżenia C4512 jest deklaracja niestatycznej składowej danych typu referencyjnego. Jeśli celem jest utworzenie typu bez kopiowania, należy również uniemożliwić utworzenie domyślnego konstruktora kopiującego.
+Kompilator generuje również funkcję operatora przypisania dla klasy, która nie definiuje jednej. Ten operator przypisania jest składowych kopią elementów członkowskich danych obiektu. Ponieważ **`const`** elementy danych nie mogą być modyfikowane po inicjacji, jeśli Klasa zawiera **`const`** element, domyślny operator przypisania nie będzie działać. Inną przyczyną ostrzeżenia C4512 jest deklaracja niestatycznej składowej danych typu referencyjnego. Jeśli celem jest utworzenie typu bez kopiowania, należy również uniemożliwić utworzenie domyślnego konstruktora kopiującego.
 
 Ostrzeżenie C4512 dla kodu można rozwiązać na jeden z trzech sposobów:
 
 - Jawnie Zdefiniuj operator przypisania dla klasy.
 
-- Usuń element **const** lub Operator Reference z elementu danych w klasie.
+- Usuń **`const`** lub Operator Reference z elementu danych w klasie.
 
 - Aby pominąć ostrzeżenie, użyj instrukcji #pragma [Warning](../../preprocessor/warning.md) .
 

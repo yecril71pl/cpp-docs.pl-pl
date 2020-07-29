@@ -8,16 +8,16 @@ helpviewer_keywords:
 - function arguments [C++], reference-type
 - passing parameters [C++], reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
-ms.openlocfilehash: 2a0bd21023bd1c6bc14b1f587c85960cf1e8b820
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a409efbe2908954d394656cb989ad6b80a9ce22
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244185"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233642"
 ---
 # <a name="reference-type-function-arguments"></a>Argumenty funkcji typu odwołania
 
-Jest często bardziej wydajnym sposobem przekazywania odwołania, a nie dużych obiektów, do funkcji. Dzięki temu kompilator mógł przekazać adres obiektu, przy zachowaniu składni, która będzie używana do dostępu do obiektu. Rozważmy następujący przykład, który używa `Date` strukturę:
+Często bardziej wydajne jest przekazanie odwołań, a nie dużych obiektów, do funkcji. Dzięki temu kompilator może przekazać adres obiektu przy zachowaniu składni, która mogłaby zostać użyta w celu uzyskania dostępu do obiektu. Rozważmy następujący przykład, który używa `Date` struktury:
 
 ```cpp
 // reference_type_function_arguments.cpp
@@ -67,18 +67,18 @@ int main()
 }
 ```
 
-Poprzedni kod pokazuje dostępne elementy członkowskie struktury przekazywany przez odwołanie za pomocą operatora wyboru składowej (**.**) zamiast operatora wyboru elementu członkowskiego wskaźnika (**->**).
+Poprzedni kod pokazuje, że elementy członkowskie struktury przekazana przez odwołanie są dostępne przy użyciu operatora wyboru elementu członkowskiego (**.**) zamiast operatora wyboru elementu członkowskiego wskaźnika ( **->** ).
 
-Mimo że argumenty przekazane jako typy odwołań, Sprawdź składnię typów nie będącego wskaźnikiem, zachowują jedną z ważnych cech typów wskaźnika: są one można modyfikować, chyba że zadeklarowany jako **const**. Ponieważ celem poprzedni kod nie może modyfikować dany obiekt `date`, jest bardziej odpowiednia prototypu funkcji:
+Chociaż argumenty przekazane jako typy referencyjne obserwują składnię typów niebędących wskaźnikami, zachowują jedną ważną cechę typów wskaźnika: można je modyfikować, chyba że zostanie zadeklarowany jako **`const`** . Ponieważ przeznaczenie powyższego kodu nie powoduje modyfikacji obiektu `date` , bardziej odpowiedni prototyp funkcji to:
 
 ```cpp
 long DateOfYear( const Date& date );
 ```
 
-Prototyp to gwarantuje, że funkcja `DateOfYear` nie zmieni się z jej argument.
+Ten prototyp gwarantuje, że funkcja `DateOfYear` nie zmieni jej argumentu.
 
-Dowolnej funkcji prototypowej jako biorąc typu odwołania może zaakceptować obiekt tego samego typu, w tym miejscu, ponieważ nie istnieje konwersja standardowa ze *typename* do *typename* <strong>&</strong>.
+Każda funkcja zaprototypowa jako pobierająca typ referencyjny może zaakceptować obiekt tego samego typu w jego miejscu, ponieważ istnieje konwersja standardowa z *TypeName* do *TypeName* <strong>&</strong> .
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania](../cpp/references-cpp.md)<br/>
+[Dokumentacja](../cpp/references-cpp.md)<br/>

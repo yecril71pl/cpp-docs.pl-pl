@@ -32,12 +32,12 @@ helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-ms.openlocfilehash: 0e3d5ceffa5adc9e9f6ba96cccb46a3fbcfca69a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 113c103cfedfe1982c8524623b259c3d58d4f4e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919569"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234071"
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 
@@ -64,7 +64,7 @@ size_t mbrtoc32(
 ### <a name="parameters"></a>Parametry
 
 *punktu*\
-Wskaźnik do **char16_t** lub **char32_t** równoważnego znaku wielobajtowego UTF-8 do przekonwertowania. Jeśli wartość jest równa null, funkcja nie przechowuje wartości.
+Wskaźnik do **`char16_t`** lub **`char32_t`** równoważnego znaku wielobajtowego UTF-8 do przekonwertowania. Jeśli wartość jest równa null, funkcja nie przechowuje wartości.
 
 *zewnętrz*\
 Wskaźnik na ciąg znaków wielobajtowych UTF-8 do przekonwertowania.
@@ -103,11 +103,11 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**mbrtoc16**, **mbrtoc32**|\<uchar. h>|\<cuchar>|
+|**mbrtoc16**, **mbrtoc32**|\<uchar.h>|\<cuchar>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../compatibility.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../data-conversion.md)\
 [Ustawienie](../locale.md)\

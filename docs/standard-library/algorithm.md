@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: d36ee5ea0d38455b52cb988dc30b13d47be16e53
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a2a48eec2ed75fffd711a8704cb8c896f8ee7242
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623844"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205538"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorytm&gt;
 
@@ -49,15 +49,15 @@ Algorytmy liczbowe standardowej biblioteki języka C++, które są udostępniane
 |||
 |-|-|
 |[adjacent_find](algorithm-functions.md#adjacent_find)|Wyszukuje dwa sąsiadujące elementy, które są równe lub spełniają określony warunek.|
-|[all_of](algorithm-functions.md#all_of)|Zwraca **wartość PRAWDA** , jeśli warunek jest obecny dla każdego elementu w danym zakresie.|
-|[any_of](algorithm-functions.md#any_of)|Zwraca **wartość PRAWDA** , jeśli warunek występuje co najmniej raz w określonym zakresie elementów.|
+|[all_of](algorithm-functions.md#all_of)|Zwraca **`true`** , gdy warunek jest obecny dla każdego elementu w danym zakresie.|
+|[any_of](algorithm-functions.md#any_of)|Zwraca **`true`** , gdy warunek jest obecny co najmniej raz w określonym zakresie elementów.|
 |[binary_search](algorithm-functions.md#binary_search)|Testuje, czy w sortowanym zakresie istnieje element, który jest równy określonej wartości lub który jest odpowiednikiem w sensie określonym przez predykat binarny.|
 |[opraw](algorithm-functions.md#clamp)||
 |[kopiowane](algorithm-functions.md#copy)|Przypisuje wartości elementów z zakresu źródłowego do zakresu docelowego, iterując przez sekwencję źródłową elementów oraz przypisując im nowe pozycje w kierunku do przodu.|
 |[copy_backward](algorithm-functions.md#copy_backward)|Przypisuje wartości elementów z zakresu źródłowego do zakresu docelowego, iterując przez sekwencję źródłową elementów oraz przypisując im nowe pozycje w kierunku do tyłu.|
-|[copy_if](algorithm-functions.md#copy_if)|Kopiuj wszystkie elementy w danym zakresie, które testują **true** dla określonego warunku|
+|[copy_if](algorithm-functions.md#copy_if)|Kopiuj wszystkie elementy w danym zakresie, które testują **`true`** pod kątem określonego warunku|
 |[copy_n](algorithm-functions.md#copy_n)|Kopiuje określoną liczbę elementów.|
-|[count](algorithm-functions.md#count)|Zwraca liczbę elementów w zakresie, których wartości pasują do określonej wartości.|
+|[liczbą](algorithm-functions.md#count)|Zwraca liczbę elementów w zakresie, których wartości pasują do określonej wartości.|
 |[count_if](algorithm-functions.md#count_if)|Zwraca liczbę elementów w zakresie, których wartości pasują do określonego warunku.|
 |[większy](algorithm-functions.md#equal)|Porównuje dwa zakresy element po elemencie, pod względem równości lub równoważności w sensie określonym przez predykat binarny.|
 |[equal_range](algorithm-functions.md#equal_range)|Wyszukuje parę pozycji w uporządkowanym zakresie, pierwszą mniejszą lub równoważną położeniu określonego elementu, a drugą większą niż pozycja elementu, gdzie sens równoważności lub szeregowania używany do ustanawiania pozycji w sekwencji może zostać określony przez predykat binarny.|
@@ -74,12 +74,12 @@ Algorytmy liczbowe standardowej biblioteki języka C++, które są udostępniane
 |[generate_n](algorithm-functions.md#generate_n)|Przypisuje wartości generowane przez obiekt funkcji określonej liczbie elementów w zakresie i wraca do jednej pozycji poza ostatnią przypisaną wartością.|
 |[łącznie](algorithm-functions.md#includes)|Sprawdza, czy jeden posortowany zakres zawiera wszystkie elementy zawarte w drugim posortowanym zakresie, gdzie kryterium szeregowania lub równoważności między elementami może zostać określone przez predykat binarny.|
 |[inplace_merge](algorithm-functions.md#inplace_merge)|Łączy elementy z dwóch następujących po sobie posortowanych zakresów w pojedynczy posortowany zakres, gdzie kryterium szeregowania może być określone przez predykat binarny.|
-|[is_heap](algorithm-functions.md#is_heap)|Zwraca **wartość true** , jeśli elementy w określonym zakresie tworzą stertę.|
-|[is_heap_until](algorithm-functions.md#is_heap_until)|Zwraca **wartość true** , jeśli określony zakres tworzy stertę do momentu ostatniego elementu.|
-|[is_partitioned](algorithm-functions.md#is_partitioned)|Zwraca **wartość true** , jeśli wszystkie elementy w danym zakresie, które testują **wartość true** dla warunku, są przed wszystkimi elementami, które testują **wartość false**.|
+|[is_heap](algorithm-functions.md#is_heap)|Zwraca **`true`** czy elementy w określonym zakresie tworzą stertę.|
+|[is_heap_until](algorithm-functions.md#is_heap_until)|Zwraca **`true`** czy określony zakres tworzy stertę do momentu ostatniego elementu.|
+|[is_partitioned](algorithm-functions.md#is_partitioned)|Zwraca **`true`** czy wszystkie elementy w danym zakresie, które testują **`true`** dla warunku, są przed wszystkimi elementami, które testują **`false`** .|
 |[is_permutation](algorithm-functions.md#is_permutation)|Określa, czy elementy w danym zakresie tworzą prawidłową permutację.|
-|[is_sorted](algorithm-functions.md#is_sorted)|Zwraca **wartość true** , jeśli elementy w określonym zakresie są sortowane według kolejności.|
-|[is_sorted_until](algorithm-functions.md#is_sorted_until)|Zwraca **wartość true** , jeśli elementy w określonym zakresie są sortowane według kolejności.|
+|[is_sorted](algorithm-functions.md#is_sorted)|Zwraca **`true`** czy elementy w określonym zakresie są w kolejności posortowanej.|
+|[is_sorted_until](algorithm-functions.md#is_sorted_until)|Zwraca **`true`** czy elementy w określonym zakresie są w kolejności posortowanej.|
 |[iter_swap](algorithm-functions.md#iter_swap)|Wymienia dwie wartości, do których odnosi się para określonych iteratorów.|
 |[lexicographical_compare](algorithm-functions.md#lexicographical_compare)|Porównuje dwie sekwencje element po elemencie, aby określić, która z nich jest mniejsza.|
 |[lower_bound](algorithm-functions.md#lower_bound)|Znajduje pozycję pierwszego elementu w uporządkowanym zakresie, który ma wartość większą niż lub równoważną określonej wartości, gdzie kryterium szeregowania może być określone przez predykat binarny.|
@@ -95,12 +95,12 @@ Algorytmy liczbowe standardowej biblioteki języka C++, które są udostępniane
 |[&lt;alg &gt; Przenieś](algorithm-functions.md#alg_move)|Przenieś elementy związane z określonym zakresem.|
 |[move_backward](algorithm-functions.md#move_backward)|Przenosi elementy jednego iteratora do drugiego. Przeniesienie rozpoczyna się od ostatniego elementu w określonym zakresie, a kończy się na pierwszym elemencie w tym zakresie.|
 |[next_permutation](algorithm-functions.md#next_permutation)|Zmienia kolejność elementów w zakresie, tak że oryginalna kolejność jest zastąpiona przez leksykograficznie kolejną większą permutację, o ile takowa istnieje, gdzie sens „kolejna” może być określony przez predykat binarny.|
-|[none_of](algorithm-functions.md#none_of)|Zwraca **wartość PRAWDA** , jeśli warunek nigdy nie występuje między elementami w danym zakresie.|
+|[none_of](algorithm-functions.md#none_of)|Zwraca **`true`** , gdy warunek nigdy nie występuje między elementami w danym zakresie.|
 |[nth_element](algorithm-functions.md#nth_element)|Dzieli zakres elementów, poprawnie lokalizując *n*-ty element sekwencji w zakresie, tak aby wszystkie elementy przed nim były mniejsze lub równe, a wszystkie elementy, które podążają w sekwencji, są większe lub równe.|
 |[partial_sort](algorithm-functions.md#partial_sort)|Rozmieszcza określoną liczbę mniejszych elementów w zakresie w niemalejącej kolejności, lub według kryteriów sortowania określonych przez binarny predykat.|
 |[partial_sort_copy](algorithm-functions.md#partial_sort_copy)|Kopiuje elementy z zakresu źródłowego do zakresu docelowego, gdzie elementy źródłowe są uporządkowane według albo zasady mniejszy niż, albo innego określonego predykatu binarnego.|
 |[podzielić](algorithm-functions.md#partition)|Klasyfikuje elementy w zakresie na dwa rozłączne zestawy, z elementami spełniającymi predykat unarny poprzedzającymi te, które go nie spełniają.|
-|[partition_copy](algorithm-functions.md#partition_copy)|Kopiuje elementy, dla których warunek ma **wartość true** do jednego miejsca docelowego i dla którego warunek ma **wartość false** . Elementy muszą pochodzić z określonego zakresu.|
+|[partition_copy](algorithm-functions.md#partition_copy)|Kopiuje elementy, dla których warunek jest **`true`** w jednym miejscu docelowym i dla których warunek jest **`false`** inny. Elementy muszą pochodzić z określonego zakresu.|
 |[partition_point](algorithm-functions.md#partition_point)|Zwraca pierwszy element w danym zakresie, który nie spełnia warunku. Elementy są sortowane, aby te, które spełniają warunek, występowały przed tymi, które go nie spełniają.|
 |[pop_heap](algorithm-functions.md#pop_heap)|Usuwa największy element z przodu sterty do przedostatniej pozycji w zakresie, a następnie tworzy nową stertę z pozostałych elementów.|
 |[prev_permutation](algorithm-functions.md#prev_permutation)|Zmienia kolejność elementów w zakresie, tak że oryginalna kolejność jest zastąpiona przez leksykograficznie kolejną większą permutację, o ile takowa istnieje, gdzie sens „kolejna” może być określony przez predykat binarny.|
@@ -137,7 +137,7 @@ Algorytmy liczbowe standardowej biblioteki języka C++, które są udostępniane
 |[unique_copy](algorithm-functions.md#unique_copy)|Kopiuje elementy z zakresu źródłowego do zakresu docelowego z wyjątkiem zduplikowanych elementów, które ze sobą sąsiadują.|
 |[upper_bound](algorithm-functions.md#upper_bound)|Znajduje pozycję pierwszego elementu w uporządkowanym zakresie, który ma wartość większą niż określona wartość, gdzie kryterium sortowania może być określone przez predykat binarny.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja plików nagłówkowych](cpp-standard-library-header-files.md)\
 [Bezpieczeństwo wątku w standardowej bibliotece języka C++](thread-safety-in-the-cpp-standard-library.md)\

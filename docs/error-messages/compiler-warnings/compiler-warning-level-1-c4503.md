@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
-ms.openlocfilehash: 9077c448f3b5f1d70d18047b91dcf300e606c91f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1d3af2b5629906679db46f6f669084c11a41f7ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186550"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233252"
 ---
 # <a name="compiler-warning-level-1-c4503"></a>Ostrzeżenie kompilatora (poziom 1) C4503
 
@@ -23,7 +23,7 @@ To ostrzeżenie kompilatora jest przestarzałe i nie jest generowane w kompilato
 
 Nazwa dekoracyjna była dłuższa niż limit kompilatora (4096) i została obcięta. Aby uniknąć tego ostrzeżenia i obcinania, zmniejsz liczbę argumentów lub długość nazw używanych identyfikatorów. Nazwy dekoracyjne, które są dłuższe niż limit kompilatora, mają zastosowanie skrótu i nie są niebezpieczne dla kolizji nazw.
 
-W przypadku korzystania ze starszej wersji programu Visual Studio to ostrzeżenie można wydać, gdy kod zawiera szablony wyspecjalizowane dla szablonów. Na przykład mapa map (z biblioteki C++ standardowa). W takiej sytuacji można sprawić, aby definicje typów (na przykład **struktury**) zawierały mapę.
+W przypadku korzystania ze starszej wersji programu Visual Studio to ostrzeżenie można wydać, gdy kod zawiera szablony wyspecjalizowane dla szablonów. Na przykład mapa map (z biblioteki standardowej języka C++). W takiej sytuacji można sprawić, aby elementy typedef były typu (na **`struct`** przykład), który zawiera mapę.
 
 Można jednak zrezygnować z restrukturyzacji kodu.  Istnieje możliwość wysłania aplikacji generującej C4503, ale jeśli zostaną wyświetlone błędy czasu łącza w obciętym symbolu, może być trudniejsze do określenia typu symbolu w błędzie. Debugowanie może być również trudniejsze; Debuger może mieć trudne mapowanie nazwy symbolu na nazwę typu. Poprawność programu jest jednak niezależna od skróconej nazwy.
 

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 1fb6c025ec324fceb1b11dd23ed61500f08b4535
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3ac4df470e40b35257495d51c5d2d0efdb9310af
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910997"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233993"
 ---
 # <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 
@@ -128,7 +128,7 @@ Ciąg zakończony znakiem null do wyszukania.
 *strSearch*<br/>
 Ciąg zakończony znakiem null do wyszukania.
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -137,12 +137,12 @@ Zwraca wskaźnik do pierwszego wystąpienia *strSearch* w *str*lub null, jeśli 
 
 ## <a name="remarks"></a>Uwagi
 
-`strstr` Funkcja zwraca wskaźnik do pierwszego wystąpienia *strSearch* w *str*. Wyszukiwanie nie obejmuje kończących się pustych znaków. `wcsstr`jest wersją znaków dwubajtowych `strstr` i `_mbsstr` jest wersją znaku wieloznakówowego. Argumenty i wartość zwracana przez `wcsstr` są ciągami znaków dwubajtowych; te z `_mbsstr` są ciągami znaków wielobajtowych. `_mbsstr`sprawdza poprawność swoich parametrów. Jeśli *str* lub *strSearch* ma wartość null, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, `_mbsstr` ustawia `errno` na EINVAL i zwraca 0. `strstr`i `wcsstr` nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie w inny sposób.
+`strstr`Funkcja zwraca wskaźnik do pierwszego wystąpienia *strSearch* w *str*. Wyszukiwanie nie obejmuje kończących się pustych znaków. `wcsstr`jest wersją znaków `strstr` `_mbsstr` dwubajtowych i jest wersją znaku wieloznakówowego. Argumenty i wartość zwracana przez `wcsstr` są ciągami znaków `_mbsstr` dwubajtowych; te z są ciągami znaków wieloznacznych. `_mbsstr`sprawdza poprawność swoich parametrów. Jeśli *str* lub *strSearch* ma wartość null, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md) . Jeśli wykonanie może być kontynuowane, `_mbsstr` ustawia `errno` na EINVAL i zwraca 0. `strstr`i `wcsstr` nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie w inny sposób.
 
 > [!IMPORTANT]
 > Te funkcje mogą spowodować zagrożenie z powodu problemu z przepełnieniem buforu. Problemy z przepełnieniem buforu mogą służyć do ataku systemu, ponieważ mogą one umożliwić wykonanie dowolnego kodu, co może spowodować nieuzasadnione podniesienie uprawnień. Aby uzyskać więcej informacji, zobacz [unikanie przekroczeń buforu](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-W języku C te funkcje przyjmują wskaźnik **const** dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie, które Pobiera wskaźnik do elementu **const** , zwraca wskaźnik do elementu **const**; wersja, która przyjmuje wskaźnik do elementu niebędącego**stałą** , zwraca wskaźnik do elementu innego niż**const**. Makro _CRT_CONST_CORRECT_OVERLOADS jest zdefiniowane, jeśli są dostępne zarówno wersje **const** , jak i**niestałe** tych funkcji. Jeśli wymagane jest zachowanie**niestałe** dla obu przeciążeń C++, zdefiniuj symbol _CONST_RETURN.
+W języku C te funkcje przyjmują **`const`** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie, które przyjmuje wskaźnik do **`const`** zwraca wskaźnik do **`const`** ; wersja, która przyjmuje wskaźnik do nie **`const`** zwraca wskaźnika do elementu niebędącego elementem **`const`** . Makro _CRT_CONST_CORRECT_OVERLOADS jest zdefiniowane, jeśli **`const`** są dostępne zarówno i nie **`const`** wersje tych funkcji. Jeśli wymagane jest **`const`** zachowanie niezachowania dla obu przeciążeń C++, zdefiniuj symbol _CONST_RETURN.
 
 Wartość wyjściowa jest zależna od ustawienia kategorii ustawień regionalnych LC_CTYPE; Aby uzyskać więcej informacji, zobacz [setlocals, _wsetlocale](setlocale-wsetlocale.md). Wersje tych funkcji, które nie mają sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych; wersje, które mają sufiks **_l** są identyczne, z tą różnicą, że zamiast tego używają parametru ustawień regionalnych, który jest przesyłany. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
@@ -159,9 +159,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`strstr`|\<> String. h|
-|`wcsstr`|\<ciąg. h> lub \<WCHAR. h>|
-|`_mbsstr`, `_mbsstr_l`|\<mbstring. h>|
+|`strstr`|\<string.h>|
+|`wcsstr`|\<string.h> lub \<wchar.h>|
+|`_mbsstr`, `_mbsstr_l`|\<mbstring.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -202,11 +202,11 @@ String to be searched:
 lazy found at position 36
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l](strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)<br/>

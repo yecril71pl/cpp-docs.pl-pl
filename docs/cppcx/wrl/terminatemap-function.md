@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - TerminateMap function
 ms.assetid: 1c314a61-da5d-49bb-ac44-c34ee3c23b66
-ms.openlocfilehash: 560f563e43fc8b818b04cd0bda6b01fbc916cb84
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2aa4d6733d2a4e458ff8abff192778d52a4522b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213554"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233499"
 ---
 # <a name="terminatemap-function"></a>TerminateMap — Funkcja
 
@@ -29,18 +29,18 @@ inline bool TerminateMap(
 
 ### <a name="parameters"></a>Parametry
 
-*module*<br/>
+*elementu*<br/>
 [Moduł](module-class.md).
 
 *serverName*<br/>
 Nazwa podzbioru fabryk klasy w module określonym przez *moduł*parametrów.
 
 *forceTerminate*<br/>
-**wartość true** powoduje zakończenie fabryk klasy niezależnie od ich aktywności. **wartość false** , aby nie kończyć fabryk klas, jeśli jakakolwiek fabryka jest aktywna.
+**`true`** do kończenia fabryk klas niezależnie od ich aktywności. **`false`** nie należy kończyć fabryk klas, jeśli jakakolwiek fabryka jest aktywna.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli wszystkie fabryki klas zostały zakończone; w przeciwnym razie **false**.
+**`true`** Jeśli wszystkie fabryki klas zostały zakończone; w przeciwnym razie **`false`** .
 
 ## <a name="remarks"></a>Uwagi
 
@@ -52,6 +52,6 @@ Zamyka fabryki klas w określonym module.
 
 **Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Microsoft::WRL::Details, przestrzeń nazw](microsoft-wrl-details-namespace.md)
+[Microsoft:: WRL::D etails — przestrzeń nazw](microsoft-wrl-details-namespace.md)

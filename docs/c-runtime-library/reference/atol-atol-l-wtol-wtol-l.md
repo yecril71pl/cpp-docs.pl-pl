@@ -51,12 +51,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: 56f2efb4e7282cbcfb6a123f56797e2867d6bb4b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ffb318a53b34e1d69e533b05f80e942c945e1af7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913536"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218731"
 ---
 # <a name="atol-_atol_l-_wtol-_wtol_l"></a>atol, _atol_l, _wtol, _wtol_l
 
@@ -86,12 +86,12 @@ long _wtol_l(
 *str*<br/>
 Ciąg do przekonwertowania.
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każda funkcja zwraca wartość **długą** wygenerowaną przez interpretowanie znaków wejściowych jako liczby. Wartość zwracana jest 0L dla **Atol** , jeśli nie można przekonwertować danych wejściowych na wartość tego typu.
+Każda funkcja zwraca **`long`** wartość wygenerowaną przez interpretowanie znaków wejściowych jako liczby. Wartość zwracana jest 0L dla **Atol** , jeśli nie można przekonwertować danych wejściowych na wartość tego typu.
 
 W przypadku przepełnienia z dużymi dodatnimi wartościami całkowitymi funkcja **Atol** zwraca **LONG_MAX**; w przypadku przepełnienia z dużymi ujemnymi wartościami całkowitymi **LONG_MIN** jest zwracana. We wszystkich przypadkach poza zakresem **errno** jest ustawiony na **ERANGE**. Jeśli przekazanie parametru ma **wartość null**, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, te funkcje ustawiają **errno** na **EINVAL** i zwracają 0.
 
@@ -124,8 +124,8 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedury|Wymagany nagłówek|
 |--------------|---------------------|
-|**atol**|\<STDLIB. h>|
-|**_atol_l**, **_wtol**, **_wtol_l**|\<STDLIB. h> i \<WCHAR. h>|
+|**atol**|\<stdlib.h>|
+|**_atol_l**, **_wtol**, **_wtol_l**|\<stdlib.h> i \<wchar.h>|
 
 ## <a name="example"></a>Przykład
 
@@ -176,11 +176,11 @@ Function: atol( "3336402735171707160320" ) = 2147483647
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - restoring stack environment and execution locale
 - longjmp function
 ms.assetid: 0e13670a-5130-45c1-ad69-6862505b7a2f
-ms.openlocfilehash: b4527a29475f9e393dc5abf19b866d926bec2ccc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4f737818afe7136262362e4fe996745064568758
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953141"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218562"
 ---
 # <a name="longjmp"></a>longjmp
 
@@ -50,35 +50,35 @@ void longjmp(
 *kopert*<br/>
 Zmienna, w której jest przechowywane środowisko.
 
-*value*<br/>
-Wartość, która ma zostać `setjmp` zwrócona do wywołania.
+*wartościami*<br/>
+Wartość, która ma zostać zwrócona do `setjmp` wywołania.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **longjmp** przywraca środowisko stosu i ustawienia regionalne wykonywania wcześniej zapisane w *ENV* przez `setjmp`. `setjmp`i **longjmp** umożliwiają wykonanie nielokalnego elementu **goto**; są one zazwyczaj używane do przekazywania kontroli wykonywania do kodu obsługi błędów lub odzyskiwania w wcześniej wywołanej procedurze bez używania normalnych konwencji wywołania i powrotu.
+Funkcja **longjmp** przywraca środowisko stosu i ustawienia regionalne wykonywania wcześniej zapisane w *ENV* przez `setjmp` . `setjmp`i **longjmp** zapewniają sposób wykonywania nielokalnego **`goto`** . zazwyczaj są one używane do przekazywania kontroli wykonywania do kodu obsługi błędów lub odzyskiwania w wcześniej wywołanej procedurze bez używania normalnych konwencji wywołania i powrotu.
 
-Wywołanie `setjmp` powoduje, że bieżące środowisko stosu zostanie zapisane w *ENV*. Kolejne wywołanie **longjmp** przywraca zapisane środowisko i zwraca kontrolę do punktu bezpośrednio po odpowiednim `setjmp` wywołaniu. Wykonywanie jest `setjmp` wznawiane, gdy *wartość* została właśnie zwrócona przez wywołanie. Wartości wszystkich zmiennych (z wyjątkiem zmiennych rejestru), które są dostępne dla rutynowej kontroli, zawierają wartości, które miały po wywołaniu **longjmp** . Wartości zmiennych rejestru są nieprzewidywalne. Wartość zwracana przez program `setjmp` musi być różna od zera. Jeśli *wartość* jest przenoszona jako 0, wartość 1 jest zastępowana w rzeczywistym zwracaniu.
+Wywołanie `setjmp` powoduje, że bieżące środowisko stosu zostanie zapisane w *ENV*. Kolejne wywołanie **longjmp** przywraca zapisane środowisko i zwraca kontrolę do punktu bezpośrednio po odpowiednim `setjmp` wywołaniu. Wykonywanie jest wznawiane, gdy *wartość* została właśnie zwrócona przez `setjmp` wywołanie. Wartości wszystkich zmiennych (z wyjątkiem zmiennych rejestru), które są dostępne dla rutynowej kontroli, zawierają wartości, które miały po wywołaniu **longjmp** . Wartości zmiennych rejestru są nieprzewidywalne. Wartość zwracana przez program `setjmp` musi być różna od zera. Jeśli *wartość* jest przenoszona jako 0, wartość 1 jest zastępowana w rzeczywistym zwracaniu.
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-W programie C++ Microsoft Code w systemie Windows **longjmp** używa tej samej semantyki odwracania stosu, co kod obsługi wyjątków. Można bezpiecznie użyć w tych samych miejscach, w których C++ mogą zostać zgłoszone wyjątki. Takie użycie nie jest jednak przenośne i zawiera pewne ważne zastrzeżenia.
+W programie Microsoft C++ Code w systemie Windows **longjmp** używa tej samej semantyki odwinięcia stosu, co kod obsługi wyjątków. Można bezpiecznie użyć w tych samych miejscach, które mogą być zgłaszane wyjątki C++. Takie użycie nie jest jednak przenośne i zawiera pewne ważne zastrzeżenia.
 
-Wywołaj **longjmp** tylko przed funkcją, która `setjmp` wywołuje metodę Returns; w przeciwnym razie wyniki są nieprzewidywalne.
+Wywołaj **longjmp** tylko przed funkcją, która wywołuje metodę `setjmp` Returns; w przeciwnym razie wyniki są nieprzewidywalne.
 
 W przypadku korzystania z programu **longjmp**należy przestrzegać następujących ograniczeń:
 
-- Nie należy zakładać, że wartości zmiennych rejestru pozostaną takie same. Wartości zmiennych rejestru w wywołaniu `setjmp` procedury mogą nie zostać przywrócone do odpowiednich wartości po wykonaniu **longjmp** .
+- Nie należy zakładać, że wartości zmiennych rejestru pozostaną takie same. Wartości zmiennych rejestru w wywołaniu procedury `setjmp` mogą nie zostać przywrócone do odpowiednich wartości po wykonaniu **longjmp** .
 
 - Nie należy używać **longjmp** do transferowania kontroli z procedury obsługi przerwania, chyba że przerwanie jest spowodowane przez wyjątek zmiennoprzecinkowy. W takim przypadku program może zwrócić z procedury obsługi przerwania za pośrednictwem **longjmp** , jeśli najpierw ponownie zainicjuje pakiet matematyczny zmiennoprzecinkowych przez wywołanie [_fpreset](fpreset.md).
 
 - Nie należy używać **longjmp** do transferowania kontroli z procedury wywołania zwrotnego wywoływanej bezpośrednio lub pośrednio przez kod systemu Windows.
 
-- Jeśli kod jest kompilowany za pomocą **/EHS** lub **/EHsc** , a funkcja, która zawiera wywołanie **longjmp** ma wartość **noexcept** , obiekty lokalne w tej funkcji mogą nie być destruktory podczas operacji unwindy stosu.
+- Jeśli kod jest kompilowany za pomocą **/EHS** lub **/EHsc** , a funkcja, która zawiera wywołanie **longjmp** , **`noexcept`** wówczas obiekty lokalne w tej funkcji mogą nie być destruktory podczas operacji unwindy stosu.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
 > [!NOTE]
-> W kodzie C++ przenośnym nie można przyjąć `setjmp` ani `longjmp` obsługiwać C++ semantyki obiektów. `longjmp` `setjmp` W odniesieniu do pary wywołańwystępujeniezdefiniowanezachowanie,jeślizastąpienieobiektuiprzechwycenieithrowwywoławszystkienieuproszczonedestruktorydlawszystkichobiektówautomatycznych.`longjmp` `setjmp` / W C++ obszarze programy zalecamy korzystanie z C++ mechanizmu obsługi wyjątków.
+> W kodzie Portable C++ nie można przyjąć `setjmp` ani `longjmp` obsługiwać semantyki obiektów c++. W `setjmp` / `longjmp` odniesieniu do pary wywołań występuje niezdefiniowane zachowanie, Jeśli zastępowanie `setjmp` i `longjmp` **`catch`** i **`throw`** wywoła wszystkie nieuproszczone destruktory dla wszystkich obiektów automatycznych. W programach w języku C++ zalecamy korzystanie z mechanizmu obsługi wyjątków C++.
 
 Aby uzyskać więcej informacji, zobacz [Korzystanie z setjmp i longjmp](../../cpp/using-setjmp-longjmp.md).
 
@@ -92,9 +92,9 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład dla [_fpreset](fpreset.md).
+Zapoznaj się z przykładem [_fpreset](fpreset.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
 [setjmp](setjmp.md)

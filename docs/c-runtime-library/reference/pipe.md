@@ -30,12 +30,12 @@ helpviewer_keywords:
 - pipes
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
-ms.openlocfilehash: d3805de6a591169f94926c09a4542ec01f221d1d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 692a891549e0c84d6297b108918d9d7c58495ef7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916841"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234045"
 ---
 # <a name="_pipe"></a>_pipe
 
@@ -57,7 +57,7 @@ int _pipe(
 ### <a name="parameters"></a>Parametry
 
 *pfds*<br/>
-Wskaźnik do tablicy dwóch liczb **całkowitych** do przechowywania deskryptorów plików odczytu i zapisu.
+Wskaźnik na tablicę dwóch **`int`** do przechowywania deskryptorów plików odczytu i zapisu.
 
 *psize*<br/>
 Ilość pamięci do zarezerwowania.
@@ -81,7 +81,7 @@ Aby uzyskać więcej informacji na temat tych i innych kodów powrotnych, zobacz
 
 Funkcja **_pipe** tworzy *potok*, który jest sztucznym kanałem we/wy używanym przez program do przekazywania informacji do innych programów. Potok przypomina plik, ponieważ ma wskaźnik pliku, deskryptor pliku lub oba te elementy, z których może być odczytywany lub zapisywana przy użyciu standardowych funkcji danych wejściowych i wyjściowych biblioteki standardowej. Jednak potok nie reprezentuje określonego pliku lub urządzenia. Zamiast tego reprezentuje magazyn tymczasowy w pamięci, który jest niezależny od własnej pamięci programu i jest kontrolowany w całości przez system operacyjny.
 
-**_pipe** przypomina **_open** , ale otwiera potok do odczytu i zapisu oraz zwraca dwa deskryptory plików zamiast jednego. Program może używać obu stron potoku lub zamknąć ten, którego nie potrzebuje. Na przykład procesor poleceń w systemie Windows tworzy potok, gdy wykonuje polecenie, takie jak **PROGRAM1** | **PROGRAM2**.
+**_pipe** przypomina **_open** , ale otwiera potok do odczytu i zapisu oraz zwraca dwa deskryptory plików zamiast jednego. Program może używać obu stron potoku lub zamknąć ten, którego nie potrzebuje. Na przykład procesor poleceń w systemie Windows tworzy potok, gdy wykonuje polecenie, takie jak **PROGRAM1**  |  **PROGRAM2**.
 
 Standardowy deskryptor wyjściowy elementu **PROGRAM1** jest dołączony do deskryptora zapisu potoku. Standardowy deskryptor wejścia **PROGRAM2** jest dołączany do deskryptora odczytu potoku. Eliminuje to konieczność tworzenia plików tymczasowych w celu przekazywania informacji do innych programów.
 
@@ -91,7 +91,7 @@ Argument *psize* określa ilość pamięci, w bajtach, do zarezerwowania dla pot
 
 W programach wielowątkowych nie jest wykonywane blokowanie. Zwracane deskryptory plików są nowo otwierane i nie powinny odwoływać się do żadnego wątku do momentu zakończenia wywołania **_pipe** .
 
-Aby użyć funkcji **_pipe** do komunikacji między procesem nadrzędnym i procesem podrzędnym, każdy proces musi mieć otwarty tylko jeden deskryptor w potoku. Deskryptory muszą być odwrotne: Jeśli element nadrzędny ma otwarty skrypt odczytu, element podrzędny musi mieć otwarty deskryptor zapisu. Najprostszym sposobem wykonania tej czynności jest bitowe lub (**|**) flagi **_O_NOINHERIT** z *tekstem*. Następnie użyj **_dup** lub **_dup2** , aby utworzyć dziedziczną kopię deskryptora potoku, który ma zostać przekazany do elementu podrzędnego. Zamknij oryginalny deskryptor, a następnie przeduplikuj proces podrzędny. Po powrocie z wywołania duplikatu Zamknij zduplikowany deskryptor w procesie nadrzędnym. Aby uzyskać więcej informacji, zobacz przykład 2 w dalszej części tego artykułu.
+Aby użyć funkcji **_pipe** do komunikacji między procesem nadrzędnym i procesem podrzędnym, każdy proces musi mieć otwarty tylko jeden deskryptor w potoku. Deskryptory muszą być odwrotne: Jeśli element nadrzędny ma otwarty skrypt odczytu, element podrzędny musi mieć otwarty deskryptor zapisu. Najprostszym sposobem wykonania tej czynności jest bitowe lub ( **|** ) flagi **_O_NOINHERIT** z *tekstem*. Następnie użyj **_dup** lub **_dup2** , aby utworzyć dziedziczną kopię deskryptora potoku, który ma zostać przekazany do elementu podrzędnego. Zamknij oryginalny deskryptor, a następnie przeduplikuj proces podrzędny. Po powrocie z wywołania duplikatu Zamknij zduplikowany deskryptor w procesie nadrzędnym. Aby uzyskać więcej informacji, zobacz przykład 2 w dalszej części tego artykułu.
 
 W systemie operacyjnym Windows potok jest niszczony, gdy wszystkie jego deskryptory zostały zamknięte. (Jeśli wszystkie deskryptory odczytu w potoku zostały zamknięte, zapis do potoku powoduje wystąpienie błędu). Wszystkie operacje odczytu i zapisu w potoku czekają na wystarczającą ilość danych lub wystarczającą ilość miejsca w buforze, aby zakończyć żądanie we/wy.
 
@@ -101,7 +101,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|Opcjonalny nagłówek|
 |-------------|---------------------|---------------------|
-|**_pipe**|\<IO. h>|\<fcntl. h>, 1 \<errno. h>2|
+|**_pipe**|\<io.h>|\<fcntl.h>, 1 \<errno.h> 2|
 
 1 dla definicji **_O_BINARY** i **_O_TEXT** .
 
@@ -347,7 +347,7 @@ This is speaker beep number 9...
 This is speaker beep number 10...
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Proces i kontrola środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

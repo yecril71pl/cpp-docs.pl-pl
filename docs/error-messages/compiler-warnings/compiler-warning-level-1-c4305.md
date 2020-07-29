@@ -5,12 +5,12 @@ f1_keywords:
 - C4305
 helpviewer_keywords:
 - C4305
-ms.openlocfilehash: dc718e5f7ebe9478ed1bf2a7323db940935cb1d6
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 567442bc48487e4f7d1f905f871d15f913646e87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926121"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233291"
 ---
 # <a name="compiler-warning-level-1-c4305"></a>Ostrzeżenie kompilatora (poziom 1) C4305
 
@@ -41,4 +41,4 @@ int main()
 }
 ```
 
-Aby rozwiązać ten problem, należy zainicjować przy użyciu wartości poprawnego typu lub użyć jawnego rzutowania do poprawnego typu. Na przykład użyj literału **zmiennoprzecinkowego** , takiego jak 2.71828 f zamiast **podwójnego** (domyślny typ literałów zmiennoprzecinkowych), aby zainicjować zmienną **zmiennoprzecinkową** lub przekazać do konstruktora, który przyjmuje argument **zmiennoprzecinkowy** .
+Aby rozwiązać ten problem, należy zainicjować przy użyciu wartości poprawnego typu lub użyć jawnego rzutowania do poprawnego typu. Na przykład użyj **`float`** literału, takiego jak 2.71828 f zamiast **`double`** (domyślny typ dla literałów zmiennoprzecinkowych), aby zainicjować **`float`** zmienną lub przekazać do konstruktora, który przyjmuje **`float`** argument.

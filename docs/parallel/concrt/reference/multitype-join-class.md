@@ -17,16 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-ms.openlocfilehash: 4214c43fa0d0ab8fdd29ed54738c19f72a07267a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c648e77e404cf39eab281a93e03d8b427da375f8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77138954"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205863"
 ---
 # <a name="multitype_join-class"></a>multitype_join — Klasa
 
-Blok komunikatów `multitype_join` to wieloźródłowy blok komunikatów z pojedynczym miejscem, który łączy połączenia różnych typów z poszczególnych źródeł i oferuje spójną kolekcję komunikatów z obiektami docelowymi.
+`multitype_join`Blok komunikatów to wieloźródłowy blok komunikatów z jednym elementem docelowym, który łączy połączenia różnych typów z poszczególnych źródeł i oferuje spójną kolekcję komunikatów z obiektami docelowymi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,40 +40,40 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
-`tuple` typ ładunku komunikatów przyłączonych i rozpropagowanych przez blok.
+*T*<br/>
+`tuple`Typ ładunku komunikatów przyłączonych i rozpropagowanych przez blok.
 
 *_Jtype*<br/>
-Rodzaj bloku `join` to `greedy` lub `non_greedy`
+Rodzaj `join` bloku to, `greedy` albo`non_greedy`
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|`type`|Alias typu dla `T`.|
+|`type`|Alias typu dla `T` .|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[multitype_join](#ctor)|Przeciążone. Tworzy blok komunikatów `multitype_join`.|
-|[~ multitype_join destruktor](#dtor)|Niszczy blok komunikatów `multitype_join`.|
+|[multitype_join](#ctor)|Przeciążone. Tworzy `multitype_join` blok komunikatów.|
+|[~ multitype_join destruktor](#dtor)|Niszczy `multitype_join` blok komunikatów.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[odebrać](#accept)|Akceptuje komunikat, który został zaoferowany przez ten blok `multitype_join`, przez przeniesienie własności do obiektu wywołującego.|
-|[acquire_ref](#acquire_ref)|Uzyskuje liczbę odwołań w tym bloku komunikatów `multitype_join`, aby zapobiec usunięciu.|
-|[wykorzystania](#consume)|Wykorzystuje komunikat wcześniej oferowany przez blok komunikatów `multitype_join` i został pomyślnie zarezerwowany przez obiekt docelowy, przez przeniesienie własności do obiektu wywołującego.|
-|[link_target](#link_target)|Łączy blok docelowy z tym blokiem komunikatów `multitype_join`.|
+|[odebrać](#accept)|Akceptuje komunikat, który był oferowany przez ten `multitype_join` blok, przekazując własność do obiektu wywołującego.|
+|[acquire_ref](#acquire_ref)|Uzyskuje liczbę odwołań w tym `multitype_join` bloku komunikatów, aby zapobiec usunięciu.|
+|[wykorzystania](#consume)|Wykorzystuje komunikat wcześniej oferowany przez `multitype_join` blok komunikatów i został pomyślnie zarezerwowany przez obiekt docelowy, przez przeniesienie własności do obiektu wywołującego.|
+|[link_target](#link_target)|Łączy blok docelowy z tym `multitype_join` blokiem obsługi komunikatów.|
 |[Usuwanie](#release)|Zwalnia poprzednie pomyślne zastrzeżenie dotyczące komunikatów.|
-|[release_ref](#release_ref)|Zwalnia liczbę odwołań w tym bloku komunikatów `multiple_join`.|
-|[zarezerwować](#reserve)|Rezerwuje komunikat wcześniej oferowany przez ten blok komunikatów `multitype_join`.|
-|[unlink_target](#unlink_target)|Odłącza blok docelowy z tego bloku komunikatów `multitype_join`.|
-|[unlink_targets](#unlink_targets)|Odłącza wszystkie elementy docelowe z tego bloku komunikatów `multitype_join`. (Przesłania [ISource:: unlink_targets](isource-class.md#unlink_targets).)|
+|[release_ref](#release_ref)|Zwalnia liczbę odwołań w tym `multiple_join` bloku komunikatów.|
+|[zarezerwować](#reserve)|Rezerwuje komunikat wcześniej oferowany przez ten `multitype_join` blok komunikatów.|
+|[unlink_target](#unlink_target)|Odłącza blok docelowy z tego `multitype_join` bloku komunikatów.|
+|[unlink_targets](#unlink_targets)|Odłącza wszystkie elementy docelowe z tego `multitype_join` bloku komunikatów. (Przesłania [ISource:: unlink_targets](isource-class.md#unlink_targets).)|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -91,9 +91,9 @@ Aby uzyskać więcej informacji, zobacz [asynchroniczne bloki komunikatów](../.
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="accept"></a>odebrać
+## <a name="accept"></a><a name="accept"></a>odebrać
 
-Akceptuje komunikat, który został zaoferowany przez ten blok `multitype_join`, przez przeniesienie własności do obiektu wywołującego.
+Akceptuje komunikat, który był oferowany przez ten `multitype_join` blok, przekazując własność do obiektu wywołującego.
 
 ```cpp
 virtual message<_Destination_type>* accept(
@@ -104,18 +104,18 @@ virtual message<_Destination_type>* accept(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` oferowanego obiektu `message`.
+Dla `runtime_object_identity` oferowanego `message` obiektu.
 
 *_PTarget*<br/>
-Wskaźnik do bloku docelowego, który wywołuje metodę `accept`.
+Wskaźnik do bloku docelowego, który wywołuje `accept` metodę.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wskaźnik do komunikatu, którego obiekt wywołujący ma teraz własność.
 
-## <a name="acquire_ref"></a>acquire_ref
+## <a name="acquire_ref"></a><a name="acquire_ref"></a>acquire_ref
 
-Uzyskuje liczbę odwołań w tym bloku komunikatów `multitype_join`, aby zapobiec usunięciu.
+Uzyskuje liczbę odwołań w tym `multitype_join` bloku komunikatów, aby zapobiec usunięciu.
 
 ```cpp
 virtual void acquire_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
@@ -128,11 +128,11 @@ Wskaźnik do bloku docelowego, który wywołuje tę metodę.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana przez obiekt `ITarget`, który jest połączony z tym źródłem podczas `link_target` metody.
+Ta metoda jest wywoływana przez `ITarget` obiekt, który jest połączony z tym źródłem podczas tej `link_target` metody.
 
-## <a name="consume"></a>wykorzystania
+## <a name="consume"></a><a name="consume"></a>wykorzystania
 
-Wykorzystuje komunikat wcześniej oferowany przez blok komunikatów `multitype_join` i został pomyślnie zarezerwowany przez obiekt docelowy, przez przeniesienie własności do obiektu wywołującego.
+Wykorzystuje komunikat wcześniej oferowany przez `multitype_join` blok komunikatów i został pomyślnie zarezerwowany przez obiekt docelowy, przez przeniesienie własności do obiektu wywołującego.
 
 ```cpp
 virtual message<_Destination_type>* consume(
@@ -143,22 +143,22 @@ virtual message<_Destination_type>* consume(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` zarezerwowanych obiektów `message`.
+`runtime_object_identity`Obiekt zastrzeżony `message` .
 
 *_PTarget*<br/>
-Wskaźnik do bloku docelowego, który wywołuje metodę `consume`.
+Wskaźnik do bloku docelowego, który wywołuje `consume` metodę.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do obiektu `message`, do którego obiekt wywołujący ma teraz własność.
+Wskaźnik do `message` obiektu, do którego obiekt wywołujący ma teraz własność.
 
 ### <a name="remarks"></a>Uwagi
 
-Metoda `consume` jest podobna do `accept`, ale zawsze musi być poprzedzona wywołaniem `reserve` zwracającym **wartość true**.
+`consume`Metoda jest podobna do `accept` , ale musi być zawsze poprzedzona wywołaniem `reserve` zwracanym **`true`** .
 
-## <a name="link_target"></a>link_target
+## <a name="link_target"></a><a name="link_target"></a>link_target
 
-Łączy blok docelowy z tym blokiem komunikatów `multitype_join`.
+Łączy blok docelowy z tym `multitype_join` blokiem obsługi komunikatów.
 
 ```cpp
 virtual void link_target(_Inout_ ITarget<_Destination_type>* _PTarget);
@@ -167,11 +167,11 @@ virtual void link_target(_Inout_ ITarget<_Destination_type>* _PTarget);
 ### <a name="parameters"></a>Parametry
 
 *_PTarget*<br/>
-Wskaźnik do bloku `ITarget`, aby połączyć ten blok komunikatów `multitype_join`.
+Wskaźnik do `ITarget` bloku do łączenia z tym `multitype_join` blokiem obsługi komunikatów.
 
-## <a name="ctor"></a>multitype_join
+## <a name="multitype_join"></a><a name="ctor"></a>multitype_join
 
-Tworzy blok komunikatów `multitype_join`.
+Tworzy `multitype_join` blok komunikatów.
 
 ```cpp
 explicit multitype_join(
@@ -192,32 +192,32 @@ multitype_join(
 ### <a name="parameters"></a>Parametry
 
 *_Tuple*<br/>
-`tuple` źródeł dla tego bloku komunikatów `multitype_join`.
+`tuple`Źródło dla tego `multitype_join` bloku obsługi komunikatów.
 
 *_PScheduler*<br/>
-Obiekt `Scheduler`, w ramach którego zaplanowano zadanie propagacji dla bloku obsługi komunikatów `multitype_join`.
+`Scheduler`Obiekt, w ramach którego zaplanowano zadanie propagacji dla `multitype_join` bloku obsługi komunikatów.
 
 *_PScheduleGroup*<br/>
-Obiekt `ScheduleGroup`, w ramach którego zaplanowano zadanie propagacji dla bloku obsługi komunikatów `multitype_join`. Używany obiekt `Scheduler` jest implikowany przez grupę harmonogramów.
+`ScheduleGroup`Obiekt, w ramach którego zaplanowano zadanie propagacji dla `multitype_join` bloku obsługi komunikatów. `Scheduler`Używany obiekt jest implikowany przez grupę harmonogramów.
 
 *_Join*<br/>
-Blok komunikatów `multitype_join` do skopiowania. Należy zauważyć, że oryginalny obiekt jest oddzielony, co czyni ten konstruktor przenoszenia.
+`multitype_join`Blok komunikatów do skopiowania. Należy zauważyć, że oryginalny obiekt jest oddzielony, co czyni ten konstruktor przenoszenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Środowisko uruchomieniowe używa domyślnego harmonogramu, jeśli nie określisz parametrów `_PScheduler` lub `_PScheduleGroup`.
+Środowisko uruchomieniowe używa domyślnego harmonogramu, jeśli nie określono `_PScheduler` `_PScheduleGroup` parametrów lub.
 
 Konstrukcja przenoszenia nie jest przeprowadzana w ramach blokady, co oznacza, że jest ona dostępna dla użytkownika, aby upewnić się, że w czasie przenoszenia nie ma żadnych lekkich zadań. W przeciwnym razie może wystąpić wiele Races, co prowadzi do wyjątków lub niespójnego stanu.
 
-## <a name="dtor"></a>~ multitype_join
+## <a name="multitype_join"></a><a name="dtor"></a>~ multitype_join
 
-Niszczy blok komunikatów `multitype_join`.
+Niszczy `multitype_join` blok komunikatów.
 
 ```cpp
 ~multitype_join();
 ```
 
-## <a name="release"></a>Usuwanie
+## <a name="release"></a><a name="release"></a>Usuwanie
 
 Zwalnia poprzednie pomyślne zastrzeżenie dotyczące komunikatów.
 
@@ -230,14 +230,14 @@ virtual void release(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` wydawany `message` obiektu.
+`runtime_object_identity` `message` Wydawany obiekt.
 
 *_PTarget*<br/>
-Wskaźnik do bloku docelowego, który wywołuje metodę `release`.
+Wskaźnik do bloku docelowego, który wywołuje `release` metodę.
 
-## <a name="release_ref"></a>release_ref
+## <a name="release_ref"></a><a name="release_ref"></a>release_ref
 
-Zwalnia liczbę odwołań w tym bloku komunikatów `multiple_join`.
+Zwalnia liczbę odwołań w tym `multiple_join` bloku komunikatów.
 
 ```cpp
 virtual void release_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
@@ -250,11 +250,11 @@ Wskaźnik do bloku docelowego, który wywołuje tę metodę.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana przez obiekt `ITarget`, który jest odłączany od tego źródła. Blok źródłowy może zwolnić wszystkie zasoby zarezerwowane dla bloku docelowego.
+Ta metoda jest wywoływana przez `ITarget` obiekt, który jest odłączany od tego źródła. Blok źródłowy może zwolnić wszystkie zasoby zarezerwowane dla bloku docelowego.
 
-## <a name="reserve"></a>zarezerwować
+## <a name="reserve"></a><a name="reserve"></a>zarezerwować
 
-Rezerwuje komunikat wcześniej oferowany przez ten blok komunikatów `multitype_join`.
+Rezerwuje komunikat wcześniej oferowany przez ten `multitype_join` blok komunikatów.
 
 ```cpp
 virtual bool reserve(
@@ -265,22 +265,22 @@ virtual bool reserve(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` obiektu `message`, który jest zarezerwowany.
+Obiekt, który jest `runtime_object_identity` `message` zarezerwowany.
 
 *_PTarget*<br/>
-Wskaźnik do bloku docelowego, który wywołuje metodę `reserve`.
+Wskaźnik do bloku docelowego, który wywołuje `reserve` metodę.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-`true`, jeśli komunikat został pomyślnie zarezerwowany, `false` w przeciwnym razie. Rezerwacje mogą się nie powieść z wielu powodów, takich jak: komunikat został już zarezerwowany lub zaakceptowany przez inny obiekt docelowy, źródło może odmówić rezerwacji i tak dalej.
+**`true`** Jeśli komunikat został pomyślnie zarezerwowany, **`false`** w przeciwnym razie. Rezerwacje mogą się nie powieść z wielu powodów, takich jak: komunikat został już zarezerwowany lub zaakceptowany przez inny obiekt docelowy, źródło może odmówić rezerwacji i tak dalej.
 
 ### <a name="remarks"></a>Uwagi
 
-Po wywołaniu `reserve`, jeśli zakończy się powodzeniem, należy wywołać `consume` lub `release` w celu podjęcia lub zadawania wiadomości odpowiednio.
+Po wywołaniu `reserve` , jeśli zakończy się powodzeniem, należy wywołać `consume` lub `release` w celu przeprowadzenia lub zadawać swój komunikat odpowiednio.
 
-## <a name="unlink_target"></a>unlink_target
+## <a name="unlink_target"></a><a name="unlink_target"></a>unlink_target
 
-Odłącza blok docelowy z tego bloku komunikatów `multitype_join`.
+Odłącza blok docelowy z tego `multitype_join` bloku komunikatów.
 
 ```cpp
 virtual void unlink_target(_Inout_ ITarget<_Destination_type>* _PTarget);
@@ -289,18 +289,18 @@ virtual void unlink_target(_Inout_ ITarget<_Destination_type>* _PTarget);
 ### <a name="parameters"></a>Parametry
 
 *_PTarget*<br/>
-Wskaźnik do bloku `ITarget`, aby odłączyć od tego bloku komunikatów `multitype_join`.
+Wskaźnik do `ITarget` bloku do odłączenia od tego `multitype_join` bloku komunikatów.
 
-## <a name="unlink_targets"></a>unlink_targets
+## <a name="unlink_targets"></a><a name="unlink_targets"></a>unlink_targets
 
-Odłącza wszystkie elementy docelowe z tego bloku komunikatów `multitype_join`.
+Odłącza wszystkie elementy docelowe z tego `multitype_join` bloku komunikatów.
 
 ```cpp
 virtual void unlink_targets();
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
-[choice, klasa](choice-class.md)<br/>
-[join, klasa](join-class.md)
+[Choice — Klasa](choice-class.md)<br/>
+[join — Klasa](join-class.md)

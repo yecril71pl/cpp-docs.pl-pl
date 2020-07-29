@@ -48,12 +48,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: ce01a16e173ba3afb7ad8a0d55303559519fe19e
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ddfe0198ab83f72868f383d6c35f040415893ad4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507043"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218601"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf —, logl, log10 —, log10f —, log10l
 
@@ -96,7 +96,7 @@ Funkcja **log** Zwraca logarytm naturalny (o podstawie *e*) z *x* , jeśli to si
 
 ## <a name="remarks"></a>Uwagi
 
-Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **dzienników** i **log10 —** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** . W programie w języku C **log** i **log10 —** zawsze przyjmują i zwracają **podwójny**.
+Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **dzienników** i **log10 —** , które pobierają i zwracają **`float`** **`long double`** wartości. W programie w języku C **log** i **log10 —** zawsze przyjmują i zwracają **`double`** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -163,7 +163,7 @@ int main()
 Log base 2 of 65536.000000 is 16.000000
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>

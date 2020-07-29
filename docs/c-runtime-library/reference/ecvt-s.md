@@ -30,16 +30,16 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: 9ac623c6cb80c774184dcb005e6d1d631c498040
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e76ebd065d323a9ae501ce6a7a5790389c7d5dad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915142"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234214"
 ---
 # <a name="_ecvt_s"></a>_ecvt_s
 
-Konwertuje liczbę **podwójną** na ciąg. Jest to wersja [_ecvt](ecvt.md) z ulepszonymi zabezpieczeniami, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Konwertuje **`double`** liczbę na ciąg. Jest to wersja [_ecvt](ecvt.md) z ulepszonymi zabezpieczeniami, zgodnie z opisem w temacie [funkcje zabezpieczeń w CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -92,10 +92,10 @@ W przypadku nieprawidłowego parametru, jak wymieniono w poniższej tabeli, ta f
 
 |*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Wartość zwracana|Wartość w *buforze*|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
-|**NULL**|ile|ile|ile|ile|ile|**EINVAL**|Nie zmodyfikowano.|
-|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|<= 0|ile|ile|ile|ile|**EINVAL**|Nie zmodyfikowano.|
-|ile|ile|ile|ile|**NULL**|ile|**EINVAL**|Nie zmodyfikowano.|
-|ile|ile|ile|ile|ile|**NULL**|**EINVAL**|Nie zmodyfikowano.|
+|**NULL**|dowolny|dowolny|dowolny|dowolny|dowolny|**EINVAL**|Nie zmodyfikowano.|
+|Nie **ma wartości null** (wskazuje na prawidłową pamięć)|<= 0|dowolny|dowolny|dowolny|dowolny|**EINVAL**|Nie zmodyfikowano.|
+|dowolny|dowolny|dowolny|dowolny|**NULL**|dowolny|**EINVAL**|Nie zmodyfikowano.|
+|dowolny|dowolny|dowolny|dowolny|dowolny|**NULL**|**EINVAL**|Nie zmodyfikowano.|
 
 ## <a name="security-issues"></a>Problemy z zabezpieczeniami
 
@@ -121,7 +121,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|Opcjonalny nagłówek|
 |--------------|---------------------|---------------------|
-|**_ecvt_s**|\<STDLIB. h>|\<errno. h>|
+|**_ecvt_s**|\<stdlib.h>|\<errno.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -157,7 +157,7 @@ int main( )
 Converted value: 12000
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>

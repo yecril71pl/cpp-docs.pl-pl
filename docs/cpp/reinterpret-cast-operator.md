@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - reinterpret_cast keyword [C++]
 ms.assetid: eb3283c7-7f88-467e-affd-407d37b46d6c
-ms.openlocfilehash: 34c2fcb0e1f7f4df4e207d1737afc9c42e011feb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 33da7427adeb0a0cade2a369664d7fbd34790681
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188288"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233603"
 ---
 # <a name="reinterpret_cast-operator"></a>Operator reinterpret_cast
 
@@ -25,17 +25,17 @@ reinterpret_cast < type-id > ( expression )
 
 ## <a name="remarks"></a>Uwagi
 
-Niewłaściwe użycie operatora **reinterpret_cast** może być łatwo niebezpieczne. Chyba że żądana konwersja jest z natury niskiego poziomu, należy użyć jednego z innych operatorów rzutowania.
+Nieprawidłowe użycie **`reinterpret_cast`** operatora może być niebezpieczne. Chyba że żądana konwersja jest z natury niskiego poziomu, należy użyć jednego z innych operatorów rzutowania.
 
-Operatora **reinterpret_cast** można używać do konwersji, takich jak `char*` do `int*`lub `One_class*` do `Unrelated_class*`, które są z natury niebezpieczne.
+**`reinterpret_cast`** Operatora można używać do konwersji, takich jak **`char*`** do **`int*`** , lub `One_class*` do `Unrelated_class*` , które są niebezpieczne.
 
-Wynik **reinterpret_cast** nie może być bezpiecznie użyty dla wszystkiego innego niż rzutowanie na jego pierwotny typ. Inne zastosowania są, w największej, nieportowe.
+Wynik typu **`reinterpret_cast`** nie może być bezpiecznie używany dla niczego innego niż rzutowanie na jego oryginalny typ. Inne zastosowania są, w największej, nieportowe.
 
-Operator **reinterpret_cast** nie może rzutować atrybutów **const**, **volatile**lub **__unaligned** . Aby uzyskać informacje na temat usuwania tych atrybutów, zobacz [Operator const_cast](../cpp/const-cast-operator.md) .
+**`reinterpret_cast`** Operator nie może rzutować **`const`** atrybutów, **`volatile`** , ani **`__unaligned`** . Aby uzyskać informacje na temat usuwania tych atrybutów, zobacz [Operator const_cast](../cpp/const-cast-operator.md) .
 
-Operator **reinterpret_cast** konwertuje wartość wskaźnika o wartości null na wartość wskaźnika o wartości null typu docelowego.
+**`reinterpret_cast`** Operator konwertuje wartość wskaźnika o wartości null na wartość wskaźnika o wartości null typu docelowego.
 
-Jednym z praktycznych metod korzystania z **reinterpret_cast** jest funkcja skrótu, która mapuje wartość na indeks w taki sposób, że dwa różne wartości rzadko kończą się tym samym indeksem.
+Jednym z praktycznych metod użycia **`reinterpret_cast`** jest funkcja mieszania, która mapuje wartość na indeks w taki sposób, że dwa różne wartości rzadko kończą się tym samym indeksem.
 
 ```cpp
 #include <iostream>
@@ -77,9 +77,9 @@ Output:
 64829
 ```
 
-**Reinterpret_cast** umożliwia traktowanie wskaźnika jako typu całkowitego. Następnie wynik jest bitowy i XORed, aby utworzyć unikatowy indeks (unikatowy dla wysokiego prawdopodobieństwa). Indeks jest następnie obcinany przez standardowe Rzutowanie w stylu C do zwracanego typu funkcji.
+**`reinterpret_cast`** Umożliwia przetraktowanie wskaźnika jako typu całkowitego. Następnie wynik jest bitowy i XORed, aby utworzyć unikatowy indeks (unikatowy dla wysokiego prawdopodobieństwa). Indeks jest następnie obcinany przez standardowe Rzutowanie w stylu C do zwracanego typu funkcji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operatory rzutowania](../cpp/casting-operators.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

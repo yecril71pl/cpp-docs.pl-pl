@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4211
 ms.assetid: 3eea3455-6faa-4cdb-8730-73db7026bd1f
-ms.openlocfilehash: 6387f58430098e49e7add25e8915bf6b181634e9
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: df19f90e17d6737a2639eb1245da197881e35c96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541844"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218107"
 ---
 # <a name="compiler-warning-level-4-c4211"></a>Ostrzeżenie kompilatora (poziom 4) C4211
 
 użyto niestandardowego rozszerzenia: ponownie zdefiniowano extern jako static
 
-Przy użyciu domyślnych rozszerzeń Microsoft (/ze) można ponownie zdefiniować identyfikator `extern` jako **statyczny**.
+Przy użyciu domyślnych rozszerzeń Microsoft (/ze) można ponownie zdefiniować **`extern`** Identyfikator jako **`static`** .
 
 ## <a name="example"></a>Przykład
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], jitintrinsic
 - jitintrinsic __declspec modifier
 ms.assetid: 23dbe416-7ef6-442b-b16d-9a81aab04fa6
-ms.openlocfilehash: 4626ba82d1d24582951bbffd8e6be687007d390f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cecadcad15ee65a44ad5a8245efdb69903c89459
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178193"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233707"
 ---
 # <a name="jitintrinsic"></a>jitintrinsic
 
@@ -27,11 +27,11 @@ __declspec(jitintrinsic)
 
 ## <a name="remarks"></a>Uwagi
 
-**jitintrinsic** dodaje MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) do sygnatury funkcji.
+**`jitintrinsic`** dodaje MODOPT ( <xref:System.Runtime.CompilerServices.IsJitIntrinsic> ) do sygnatury funkcji.
 
-Użytkownicy nie odradzają korzystania z tego modyfikatora **__declspec** , ponieważ mogą wystąpić nieoczekiwane wyniki.
+Użytkownicy nie odradzają korzystania z tego **`__declspec`** modyfikatora, ponieważ mogą wystąpić nieoczekiwane wyniki.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [__declspec](../cpp/declspec.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

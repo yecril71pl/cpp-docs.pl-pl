@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2883
 ms.assetid: 5c6d689d-ed42-41ad-b5c0-e9c2e0b8c356
-ms.openlocfilehash: cb6b1043d976cfeb8cb92c8780c5b84ea9700b8b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: fcd97a2f362e50ec856e53da2603c29e07595670
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760957"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233473"
 ---
 # <a name="compiler-error-c2883"></a>Błąd kompilatora C2883
 
 "name": deklaracja funkcji powoduje konflikt z elementem "identifier" wprowadzonym za pomocą deklaracji using
 
-Podjęto próbę zdefiniowania funkcji więcej niż jeden raz. Pierwsza definicja została wykonana z przestrzeni nazw z deklaracją `using`. Druga była definicją lokalną.
+Podjęto próbę zdefiniowania funkcji więcej niż jeden raz. Pierwsza definicja została wykonana z przestrzeni nazw z **`using`** deklaracją. Druga była definicją lokalną.
 
 Poniższy przykład generuje C2883:
 

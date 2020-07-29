@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleClassFactory class
 - Microsoft::WRL::SimpleClassFactory::CreateInstance method
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
-ms.openlocfilehash: 924b9d2c30f11e6f0444d9c647807f1c86dcc411
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66794789e51a2635fae646cca49e4fae8385dfe0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373547"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211154"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory — Klasa
 
-Zapewnia podstawowy mechanizm do tworzenia klasy podstawowej.
+Zapewnia podstawowy mechanizm tworzenia klasy bazowej.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,14 +29,14 @@ class SimpleClassFactory : public ClassFactory<>;
 
 ### <a name="parameters"></a>Parametry
 
-*Podstawowej*<br/>
-Klasa podstawowa.
+*Opiera*<br/>
+Klasa bazowa.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa podstawowa musi zawierać konstruktora domyślnego.
+Klasa bazowa musi udostępniać Konstruktor domyślny.
 
-Poniższy przykład kodu pokazuje, `SimpleClassFactory` jak używać z [macro ActivatableClassWithFactoryEx.](activatableclass-macros.md)
+Poniższy przykład kodu demonstruje sposób użycia `SimpleClassFactory` z makrem [ActivatableClassWithFactoryEx](activatableclass-macros.md) .
 
 `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`
 
@@ -74,11 +74,11 @@ Poniższy przykład kodu pokazuje, `SimpleClassFactory` jak używać z [macro Ac
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** module.h
+**Nagłówek:** module. h
 
-**Obszar nazw:** Microsoft::WRL
+**Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a>SimpleClassFactory::Metoda tworzenia instance
+## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a>SimpleClassFactory:: CreateInstance — Metoda
 
 Tworzy wystąpienie określonego interfejsu.
 
@@ -92,21 +92,21 @@ STDMETHOD( CreateInstance )(
 
 #### <a name="parameters"></a>Parametry
 
-*pUnkOuter (Nieunikat.*<br/>
-Musi `nullptr`być ; w przeciwnym razie zwracana jest wartość CLASS_E_NOAGGREGATION.
+*pUnkOuter*<br/>
+Musi być **`nullptr`** ; w przeciwnym razie wartość zwracana jest CLASS_E_NOAGGREGATION.
 
-SimpleClassFactory nie obsługuje agregacji. Jeśli agregacja były obsługiwane i obiekt tworzony był częścią agregacji, *pUnkOuter* będzie wskaźnik do interfejsu sterującego `IUnknown` agregacji.
+SimpleClassFactory nie obsługuje agregacji. Jeśli agregacja była obsługiwana, a tworzony obiekt był częścią agregacji, *pUnkOuter* byłby wskaźnikiem do interfejsu sterującego `IUnknown` agregacji.
 
-*Riid*<br/>
+*riid*<br/>
 Identyfikator interfejsu obiektu do utworzenia.
 
-*ppvObiekt*<br/>
-Po zakończeniu tej operacji wskaźnik do wystąpienia obiektu określonego przez *riid* parametru.
+*ppvObject*<br/>
+Po zakończeniu tej operacji wskaźnik do wystąpienia obiektu określonego przez parametr *riid* .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK, jeśli się powiedzie; w przeciwnym razie HRESULT, który wskazuje błąd.
+S_OK, jeśli się to powiedzie; w przeciwnym razie wynik HRESULT wskazuje na błąd.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `__WRL_STRICT__` jest zdefiniowany, błąd potwierdzenia jest emitowany, jeśli klasa podstawowa określona w parametrze szablonu klasy nie pochodzi z [runtimeclass](runtimeclass-class.md)lub nie jest skonfigurowana z wartością wyliczania ClassicCom lub WinRtClassicComMix [RuntimeClassType.](runtimeclasstype-enumeration.md)
+Jeśli `__WRL_STRICT__` jest zdefiniowany, błąd potwierdzenia jest emitowany, jeśli klasa bazowa określona w parametrze szablonu klasy nie pochodzi od [RuntimeClass](runtimeclass-class.md)lub nie została skonfigurowana przy użyciu wartości wyliczenia ClassicCom lub WinRtClassicComMix [RuntimeClassType —](runtimeclasstype-enumeration.md) .

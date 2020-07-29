@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 5459fdbd445e7823dcc28096a7b7da3c0c5b38cf
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 547fdc83f0524c8bfd44754f26ca8c4d21f6a599
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617511"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204992"
 ---
 # <a name="allocator-class"></a>allocator — Klasa
 
@@ -468,7 +468,7 @@ Wartość, za pomocą której tworzony jest obiekt, ma zostać zainicjowany.
 
 #### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja członkowska jest równoważna z **nowym** (( `void` \* ) `ptr` ) **typem** ( `val` ).
+Pierwsza funkcja członkowska jest równoważna z `new ((void *) ptr) Type(val)` .
 
 #### <a name="example"></a>Przykład
 
@@ -874,7 +874,7 @@ Typ elementu, dla którego przydzielono pamięć.
 
 Ta struktura jest przydatna do przydzielania pamięci dla typu, który różni się od typu elementu implementowanego kontenera.
 
-Szablon klasy członkowskiej definiuje typ inny. Jego jedynym celem jest udostępnienie **alokatora**nazw typów \<_ **Other**> , z uwzględnieniem **alokatora**nazw typów \< **Type**> .
+Szablon klasy członkowskiej definiuje typ inny. Jedynym celem jest podanie nazwy typu, która ma `allocator<_Other>` nazwę typu `allocator<Type>` .
 
 Na przykład, dany obiekt alokatora `al` typu `A` , można przydzielić obiekt typu `_Other` za pomocą wyrażenia:
 
