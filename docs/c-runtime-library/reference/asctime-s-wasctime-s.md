@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 282f4666734a4a8fd9c6825ee18265bd03fff65b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 529663a8c36a1b934a4dd99852aee19fb1a1e6e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909406"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217015"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
@@ -81,7 +81,7 @@ Wskaźnik do buforu do przechowywania wyniku ciągu znaków. Ta funkcja przyjmuj
 Rozmiar buforu używany do przechowywania wyniku.
 
 *tmSource*<br/>
-Struktura czasu/daty. Ta funkcja zakłada, że wskaźnik jest prawidłowym obiektem **struktury** **TM** .
+Struktura czasu/daty. Ta funkcja przyjmuje wskaźnik do prawidłowego **`struct`** obiektu **TM** .
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -118,7 +118,7 @@ Funkcja **asctime** konwertuje godzinę przechowywaną jako strukturę do ciągu
 
 Przekonwertowany ciąg znaków jest również dostosowywany zgodnie z ustawieniami lokalnej strefy czasowej. Zapoznaj się [z funkcjami](tzset.md) [Time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)i localtime_s, _localtime32_s [, _localtime64_s,](localtime-s-localtime32-s-localtime64-s.md) Aby uzyskać informacje na temat konfigurowania środowiska strefy czasowej i zmiennych globalnych.
 
-Wynik ciągu utworzony przez **asctime_s** zawiera dokładnie 26 znaków i ma postać `Wed Jan 02 02:03:55 1980\n\0`. Używany jest zegar 24-godzinny. Wszystkie pola mają stałą szerokość. Nowy znak linii i znak null zajmują ostatnie dwa pozycje ciągu. Wartość, która została przeniesiona jako drugi parametr, musi mieć co najmniej wartość Big. Jeśli jest mniejsza, zostanie zwrócony kod błędu, **EINVAL**.
+Wynik ciągu utworzony przez **asctime_s** zawiera dokładnie 26 znaków i ma postać `Wed Jan 02 02:03:55 1980\n\0` . Używany jest zegar 24-godzinny. Wszystkie pola mają stałą szerokość. Nowy znak linii i znak null zajmują ostatnie dwa pozycje ciągu. Wartość, która została przeniesiona jako drugi parametr, musi mieć co najmniej wartość Big. Jeśli jest mniejsza, zostanie zwrócony kod błędu, **EINVAL**.
 
 **_wasctime_s** to dwubajtowa wersja **asctime_s**. **_wasctime_s** i **asctime_s** zachowują się identycznie w inny sposób.
 
@@ -138,8 +138,8 @@ W języku C++ korzystanie z tych funkcji jest uproszczone przez przeciążenia s
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**asctime_s**|\<> godziny. h|
-|**_wasctime_s**|\<Time. h> lub \<WCHAR. h>|
+|**asctime_s**|\<time.h>|
+|**_wasctime_s**|\<time.h> lub \<wchar.h>|
 
 ## <a name="security"></a>Zabezpieczenia
 
@@ -183,7 +183,7 @@ int main( void )
 Current date and time: Wed May 14 15:30:17 2003
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Zarządzanie czasem](../../c-runtime-library/time-management.md)<br/>
 [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>

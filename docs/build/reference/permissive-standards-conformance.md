@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 3b5ddc4b4e9b70b2191a17d2201a441603182149
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 69a6b413ec6d9d6897e5f11a11aac8c75db2cf5f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507030"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217210"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive- (Zgodność ze standardami)
 
@@ -40,7 +40,7 @@ Domyślnie **`/permissive-`** opcja jest ustawiana w nowych projektach utworzony
 
 W wersjach kompilatora rozpoczynających się w programie Visual Studio 2017 w wersji 15,3, **`/permissive-`** opcja ustawia [**`/Zc:ternary`**](zc-ternary.md) opcję. Kompilator implementuje również więcej wymagań dotyczących dwufazowych nazw. Gdy **`/permissive-`** opcja jest ustawiona, kompilator analizuje definicje funkcji i szablonów klas oraz identyfikuje zależne i niezależne nazwy używane w szablonach. W tej wersji jest wykonywana tylko analiza zależności nazw.
 
-Rozszerzenia specyficzne dla środowiska i obszary języka, które w standardzie opuszczają się do implementacji, nie mają na nie wpływ **`/permissive-`** . Na przykład słowa kluczowe "specyficzny dla firmy Microsoft" `__declspec` i "strukturalna obsługa wyjątków" i dyrektywy pragma specyficzne dla kompilatora nie są oflagowane przez kompilator w **`/permissive-`** trybie.
+Rozszerzenia specyficzne dla środowiska i obszary języka, które w standardzie opuszczają się do implementacji, nie mają na nie wpływ **`/permissive-`** . Na przykład słowa kluczowe "specyficzny dla firmy Microsoft" **`__declspec`** i "strukturalna obsługa wyjątków" i dyrektywy pragma specyficzne dla kompilatora nie są oflagowane przez kompilator w **`/permissive-`** trybie.
 
 **`/permissive-`** Opcja korzysta z wsparcia zgodności w bieżącej wersji kompilatora, aby określić, które konstrukcje językowe nie są zgodne. Opcja nie określa, czy kod jest zgodny z określoną wersją standardu C++. Aby włączyć obsługę wszystkich wdrożonych kompilatorów dla najnowszej wersji standardu, użyj [**`/std:c++latest`**](std-specify-language-standard-version.md) opcji. Aby ograniczyć obsługę kompilatora do aktualnie zaimplementowanego standardu C++ 17, użyj [**`/std:c++17`**](std-specify-language-standard-version.md) opcji. Aby ograniczyć obsługę kompilatora do bardziej dokładnej zgodności ze standardem C++ 14, użyj [**`/std:c++14`**](std-specify-language-standard-version.md) opcji, która jest wartością domyślną.
 

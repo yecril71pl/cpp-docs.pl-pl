@@ -73,12 +73,12 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: 2bd0c31b025b9a11cbdb10e8607a283d6ae1f84b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: eb23e63fa5eba7ab79fc45b8c8cb6ea350685a7e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911196"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231328"
 ---
 # <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
@@ -136,7 +136,7 @@ Ustawienie znaku.
 *liczbą*<br/>
 Liczba znaków, które mają zostać ustawione.
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -145,7 +145,7 @@ Zwraca wskaźnik do zmienionego ciągu.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_strnset** ustawia najwyżej pierwsze znaki *zliczania* *str* do *c* (konwertowane na **char**). Jeśli *Liczba* jest większa niż długość *str*, używana jest długość *str* zamiast *Count*.
+Funkcja **_strnset** ustawia najwyżej pierwsze znaki *zliczania* *str* do *c* (przekonwertowane do **`char`** ). Jeśli *Liczba* jest większa niż długość *str*, używana jest długość *str* zamiast *Count*.
 
 **_wcsnset** i **_mbsnset** są wersjami znaków dwubajtowych i **_strnset**. Argumenty ciągów i zwracaną wartość **_wcsnset** są ciągami znaków dwubajtowych; te **_mbsnset** są ciągami znaków wielobajtowych. Te trzy funkcje zachowują się identycznie w inny sposób.
 
@@ -166,11 +166,11 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strnset**|\<> String. h|
-|**_strnset_l**|\<Używanie TCHAR. h>|
-|**_wcsnset**|\<ciąg. h> lub \<WCHAR. h>|
-|**_wcsnset_l**|\<Używanie TCHAR. h>|
-|**_mbsnset**, **_mbsnset_l**|\<mbstring. h>|
+|**_strnset**|\<string.h>|
+|**_strnset_l**|\<tchar.h>|
+|**_wcsnset**|\<string.h> lub \<wchar.h>|
+|**_wcsnset_l**|\<tchar.h>|
+|**_mbsnset**, **_mbsnset_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -198,11 +198,11 @@ Before: This is a test
 After:  **** is a test
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>

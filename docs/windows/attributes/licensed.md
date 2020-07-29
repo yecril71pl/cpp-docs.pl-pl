@@ -1,21 +1,21 @@
 ---
-title: licencjonowanyC++ (atrybut com)
+title: licencjonowane (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.licensed
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 49585a697c7880da27357ebcafce9c5cefd89fd2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 53b1a356f3a7e224cb85c15b8aa725a5f0469157
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214763"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201716"
 ---
 # <a name="licensed"></a>licensed
 
-Wskazuje, że obiekt COM, do którego ma zastosowanie, jest licencjonowany i musi być skonkretyzowany przy użyciu `IClassFactory2`.
+Wskazuje, że obiekt COM, do którego ma zastosowanie, jest licencjonowany i musi być skonkretyzowany przy użyciu `IClassFactory2` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,7 +25,7 @@ Wskazuje, że obiekt COM, do którego ma zastosowanie, jest licencjonowany i mus
 
 ## <a name="remarks"></a>Uwagi
 
-**Licencjonowany** C++ atrybut ma takie same funkcje jak [licencjonowany](/windows/win32/Midl/licensed) atrybut MIDL.
+**Licencjonowany** atrybut C++ ma taką samą funkcjonalność jak [licencjonowany](/windows/win32/Midl/licensed) atrybut MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -54,14 +54,14 @@ public:
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **Struktura**|
+|**Dotyczy**|**`class`**, **`struct`**|
 |**Powtarzalne**|Nie|
 |**Wymagane atrybuty**|`coclass`|
-|**Nieprawidłowe atrybuty**|None|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)

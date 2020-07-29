@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-ms.openlocfilehash: 73fc2ffe5cd4ed65c8695432b53816090bbc5f8e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9f21258fa1f6ecd2d1717b00ef2cecaee9c865e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955676"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216950"
 ---
 # <a name="_get_purecall_handler-_set_purecall_handler"></a>_get_purecall_handler, _set_purecall_handler
 
@@ -65,23 +65,23 @@ Funkcja, która ma zostać wywołana w przypadku wywołania czystej funkcji wirt
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Poprzedni **_purecall_handler**. Zwraca **nullptr** , jeśli nie ma poprzedniej procedury obsługi.
+Poprzednia **_purecall_handler**. Zwraca w **`nullptr`** przypadku braku poprzedniej procedury obsługi.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **_get_purecall_handler** i **_set_purecall_handler** są specyficzne dla firmy Microsoft i mają zastosowanie tylko C++ do kodu.
+**_Get_purecall_handler** i **_set_purecall_handler** funkcje są specyficzne dla firmy Microsoft i mają zastosowanie tylko do kodu C++.
 
-Wywołanie czystej funkcji wirtualnej jest błędem, ponieważ nie ma implementacji. Domyślnie kompilator generuje kod, aby wywołać funkcję programu obsługi błędów w przypadku wywołania czystej funkcji wirtualnej, która kończy program. Możesz zainstalować własną funkcję obsługi błędów dla czystych wywołań funkcji wirtualnych, aby przechwycić je do celów debugowania lub raportowania. Aby użyć własnego programu obsługi błędów, należy utworzyć funkcję, która ma sygnaturę **_purecall_handler** , a następnie użyć **_set_purecall_handler** w celu udostępnienia jej jako bieżącej procedury obsługi.
+Wywołanie czystej funkcji wirtualnej jest błędem, ponieważ nie ma implementacji. Domyślnie kompilator generuje kod, aby wywołać funkcję programu obsługi błędów w przypadku wywołania czystej funkcji wirtualnej, która kończy program. Możesz zainstalować własną funkcję obsługi błędów dla czystych wywołań funkcji wirtualnych, aby przechwycić je do celów debugowania lub raportowania. Aby użyć własnego programu obsługi błędów, należy utworzyć funkcję, która ma sygnaturę **_purecall_handler** , a następnie użyć **_set_purecall_handler** , aby uczynić ją bieżącą obsługą.
 
-Ponieważ istnieje tylko jeden **_purecall_handler** dla każdego procesu, wywołanie **_set_purecall_handler** go natychmiast wpływa na wszystkie wątki. Ostatni obiekt wywołujący w dowolnym wątku ustawia procedurę obsługi.
+Ponieważ istnieje tylko jeden **_purecall_handler** dla każdego procesu, wywołanie **_set_purecall_handlere** natychmiast wpływa na wszystkie wątki. Ostatni obiekt wywołujący w dowolnym wątku ustawia procedurę obsługi.
 
-Aby przywrócić zachowanie domyślne, wywołaj **_set_purecall_handler** przy użyciu argumentu **nullptr** .
+Aby przywrócić zachowanie domyślne, wywołaj **_set_purecall_handler** przy użyciu **`nullptr`** argumentu.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_get_purecall_handler**, **_set_purecall_handler**|\<cstdlib > lub \<STDLIB. h >|
+|**_get_purecall_handler**, **_set_purecall_handler**|\<cstdlib> lub \<stdlib.h>|
 
 Aby uzyskać informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

@@ -9,36 +9,36 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 5f5bc102-44c3-4688-bbe1-080594dcee5c
-ms.openlocfilehash: 9609bc484310fbc9999182add384eb4e438378bf
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 866cccb490136e951effb1f8da20877c8d5ec763
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446244"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217184"
 ---
-# <a name="zcauto-deduce-variable-type"></a>/Zc:auto (Dedukuj typ zmiennej)
+# <a name="zcauto-deduce-variable-type"></a>`/Zc:auto`(Wywnioskowanie typu zmiennej)
 
-**/Zc: Auto [-]** — opcja kompilatora informuje kompilator, jak używać [auto — słowo kluczowe](../../cpp/auto-keyword.md) do zadeklarowania zmiennych. W przypadku określenia opcji domyślnej **/Zc: Auto**, kompilator określi typ zmiennej zadeklarowanej z jej wyrażenia inicjowania. Jeśli określisz **/Zc:auto-**, kompilator przydziela zmienną automatyczna Klasa magazynu.
+**`/Zc:auto`** Opcja kompilatora instruuje kompilator, jak używać [ `auto` słowa kluczowego](../../cpp/auto-keyword.md) do deklarowania zmiennych. Jeśli określisz opcję domyślną, kompilator wystawia **`/Zc:auto`** Typ zadeklarowanej zmiennej z jej wyrażenia inicjującego. Jeśli określisz **`/Zc:auto-`** , kompilator przydzieli zmienną do automatycznej klasy magazynu.
 
 ## <a name="syntax"></a>Składnia
 
-> **/Zc:auto**[**-**]
+> **`/Zc:auto`**[**`-`**]
 
 ## <a name="remarks"></a>Uwagi
 
-C++ standard definiuje oryginału i poprawione znaczenie dla `auto` — słowo kluczowe. Przed Visual Studio 2010 słowo kluczowe deklaruje zmienną w klasie automatycznego przechowywania; oznacza to, że zmienna, który ma lokalne okresy istnienia. Począwszy od programu Visual Studio 2010, słowo kluczowe określi typ zmiennej z deklaracji wyrażenia inicjowania. Użyj **/Zc: Auto [-]** opcję kompilatora, aby poinformować kompilator, aby użyć oryginalnej lub poprawionego rozumieniu `auto` — słowo kluczowe. **/Zc: Auto** opcja jest domyślnie włączone. [/ Permissive-](permissive-standards-conformance.md) opcja nie powoduje zmiany domyślne ustawienie **/Zc: Auto**.
+Standard C++ definiuje oryginalne i zmienione znaczenie **`auto`** słowa kluczowego. Przed Visual Studio 2010 słowo kluczowe deklaruje zmienną w klasie magazynu automatycznego; oznacza to, że zmienna, która ma lokalny okres istnienia. Począwszy od programu Visual Studio 2010, słowo kluczowe ustala typ zmiennej w wyrażeniu inicjalizacji deklaracji. Użyj **`/Zc:auto`** opcji kompilatora, aby poinformować kompilator, aby używał zweryfikowanego znaczenia **`auto`** słowa kluczowego. **`/Zc:auto`** Opcja jest domyślnie włączona. [`/permissive-`](permissive-standards-conformance.md)Opcja nie zmienia domyślnego ustawienia **`/Zc:auto`** .
 
-Kompilator generuje komunikat diagnostyczny odpowiednie, jeśli korzystanie z `auto` — słowo kluczowe jest sprzeczna bieżącego **/Zc: Auto** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [auto — słowo kluczowe](../../cpp/auto-keyword.md). Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
+Kompilator emituje odpowiedni komunikat diagnostyczny, jeśli użycie **`auto`** słowa kluczowego wyklucza bieżącą **`/Zc:auto`** opcję kompilatora. Aby uzyskać więcej informacji, zobacz [ `auto` słowo kluczowe](../../cpp/auto-keyword.md). Aby uzyskać więcej informacji na temat problemów ze zgodnością Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Aby ustawić tę opcję kompilatora w programie Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
+1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja wiersza polecenia**C/C++**  >  **Command Line** .
 
-1. Dodaj **/Zc: Auto** lub **/Zc:auto-** do **dodatkowe opcje:** okienka.
+1. Dodaj **`/Zc:auto`** lub **`/Zc:auto-`** do **opcji dodatkowe:** okienko.
 
 ## <a name="see-also"></a>Zobacz także
 
-[/Zc (Zgodność)](zc-conformance.md)<br/>
-[Auto, słowo kluczowe](../../cpp/auto-keyword.md)
+[`/Zc`Zgodności](zc-conformance.md)<br/>
+[`auto`Kodu](../../cpp/auto-keyword.md)

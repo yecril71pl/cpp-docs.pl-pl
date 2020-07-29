@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-ms.openlocfilehash: 2475eab34c6a18b3dc7a8a15145c184cea543aee
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d1350cf14df0c87d57a87ad3aced35e3887b6676
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911168"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231302"
 ---
 # <a name="strrchr-wcsrchr-_mbsrchr-_mbsrchr_l"></a>strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 
@@ -126,7 +126,7 @@ Ciąg zakończony znakiem null do wyszukania.
 *s*<br/>
 Znak, który ma zostać zlokalizowany.
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -135,11 +135,11 @@ Zwraca wskaźnik do ostatniego wystąpienia *c* w *str*lub wartość null, jeśl
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja znajduje ostatnie wystąpienie *c* (konwertowane do **char**) w *str.* `strrchr` Wyszukiwanie zawiera kończący znak null.
+`strrchr`Funkcja znajduje ostatnie wystąpienie *c* (konwertowane do **`char`** ) w *str*. Wyszukiwanie zawiera kończący znak null.
 
-`wcsrchr`i `_mbsrchr` są wersjami znaków dwubajtowych i znakami `strrchr`wieloznacznymi. Argumenty i wartość zwracana przez `wcsrchr` są ciągami znaków dwubajtowych; te z `_mbsrchr` są ciągami znaków wielobajtowych.
+`wcsrchr`i `_mbsrchr` są wersjami znaków dwubajtowych i znakami wieloznacznymi `strrchr` . Argumenty i wartość zwracana przez `wcsrchr` są ciągami znaków `_mbsrchr` dwubajtowych; te z są ciągami znaków wieloznacznych.
 
-W języku C te funkcje przyjmują wskaźnik **const** dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie pobierające wskaźnik do elementu **const** zwraca wskaźnik do elementu **const**; wersja, która przyjmuje wskaźnik do elementu niebędącego**stałą** , zwraca wskaźnik do elementu innego niż**const**. Makro _CRT_CONST_CORRECT_OVERLOADS jest zdefiniowane, jeśli są dostępne zarówno wersje **const** , jak i**niestałe** tych funkcji. Jeśli wymagane jest zachowanie**niestałe** dla obu przeciążeń C++, zdefiniuj symbol _CONST_RETURN.
+W języku C te funkcje przyjmują **`const`** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie pobierające wskaźnik do **`const`** zwraca wskaźnik do **`const`** ; wersja, która przyjmuje wskaźnik do **`const`** niezwracanego wskaźnika do niebędącego elementem **`const`** . Makro _CRT_CONST_CORRECT_OVERLOADS jest zdefiniowane, jeśli **`const`** są dostępne zarówno i nie **`const`** wersje tych funkcji. Jeśli wymagane jest **`const`** zachowanie niezachowania dla obu przeciążeń C++, zdefiniuj symbol _CONST_RETURN.
 
 `_mbsrchr`sprawdza poprawność swoich parametrów. Jeśli *str* ma wartość null, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, `errno` jest ustawione na EINVAL i `_mbsrchr` zwraca 0. `strrchr`i `wcsrchr` nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie w inny sposób.
 
@@ -158,21 +158,21 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`strrchr`|\<> String. h|
-|`wcsrchr`|\<ciąg. h> lub \<WCHAR. h>|
-|`_mbsrchr`, `_mbsrchr_l`|\<mbstring. h>|
+|`strrchr`|\<string.h>|
+|`wcsrchr`|\<string.h> lub \<wchar.h>|
+|`_mbsrchr`, `_mbsrchr_l`|\<mbstring.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Przykład
 
-Aby zapoznać się z przykładem użycia `strrchr`, zobacz [strchr](strchr-wcschr-mbschr-mbschr-l.md).
+Aby zapoznać się z przykładem użycia `strrchr` , zobacz [strchr](strchr-wcschr-mbschr-mbschr-l.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strchr, wcschr, _mbschr, _mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>

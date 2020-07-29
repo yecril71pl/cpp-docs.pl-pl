@@ -29,24 +29,24 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: dab8ac23be8b66ca84c57514c6c04e94dddebaae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77f2ed64a0c816d84e67f66b664141581a9fad51
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321192"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231510"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Rozszerzenia Microsoft do C i C++
 
 Środowisko Visual C++ rozszerza standardy ANSI języków C i C++ w następujący sposób.
 
-## <a name="keywords"></a>słowa kluczowe
+## <a name="keywords"></a>Słowa kluczowe
 
-Dodano kilka słów kluczowych. Na liście w [słowa kluczowe](../../cpp/keywords-cpp.md), słowa kluczowe poprzedzone dwoma podkreśleniami wiodącymi są rozszerzeniami środowiska Visual C++.
+Dodano kilka słów kluczowych. Na liście w [słowach kluczowych](../../cpp/keywords-cpp.md)słowa kluczowe, które mają dwie wiodące podkreślenia, są Visual C++ rozszerzenia.
 
-## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>Brak definicji klasy statyczne składowe const integral (lub wyliczeniami enum)
+## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>Definicja poza klasą składowych static const Integer (lub enum)
 
-Zgodnie ze standardem (**/Za**), należy definicji klasy składowych danych, jak pokazano poniżej:
+W obszarze Standard (**/za**) należy utworzyć definicję poza klasą dla elementów członkowskich danych, jak pokazano poniżej:
 
 ```cpp
 class CMyClass  {
@@ -57,9 +57,9 @@ class CMyClass  {
 const int CMyClass::max;   // out of class definition
 ```
 
-W obszarze **/Ze**, definicja klasy jest opcjonalny w przypadku elementów członkowskich danych statycznych, const integral i const enum. Tylko elementy całkowitoliczbowe i wyliczenia, które są statyczne i stałe, mogą mieć inicjatory w klasach. Wyrażenie inicjujące musi być wyrażeniem stałym.
+W obszarze **/ze**Definicja poza klasą jest opcjonalna dla elementów członkowskich danych static, const integer i const. Tylko elementy całkowitoliczbowe i wyliczenia, które są statyczne i stałe, mogą mieć inicjatory w klasach. Wyrażenie inicjujące musi być wyrażeniem stałym.
 
-Aby uniknąć błędów, gdy definicja klasy jest podany w nagłówku pliku i plikiem nagłówka znajduje się w wielu plikach źródłowych, należy użyć [selectany](../../cpp/selectany.md). Na przykład:
+Aby uniknąć błędów w przypadku podanej definicji poza klasą w pliku nagłówkowym, a plik nagłówkowy jest uwzględniany w wielu plikach źródłowych, użyj [selectany](../../cpp/selectany.md). Na przykład:
 
 ```cpp
 __declspec(selectany) const int CMyClass::max = 5;
@@ -178,7 +178,7 @@ Kompilator języka C obsługuje następujące funkcje deklarowania i definiowani
    char arr[5] = {'a', 'b', "cde"};
    ```
 
-- Pola bitowe o typach podstawowych innych niż **unsigned int** lub **podpisany int**.
+- Pola bitowe mające typy podstawowe inne niż **`unsigned int`** lub **`signed int`** .
 
 - Deklaratory, które nie mają typu:
 
@@ -232,11 +232,11 @@ Kompilator języka C obsługuje następujące funkcje deklarowania i definiowani
 
 ## <a name="intrinsic-floating-point-functions"></a>Wewnętrzne funkcje zmiennoprzecinkowe
 
-Zarówno x86 kompilator języka C++ i C obsługują generowanie w tekście elementu `atan`, `atan2`, `cos`, `exp`, `log`, `log10`, `sin`, `sqrt`, i `tan` funkcje po **/Oi** jest określony. Użycie tych wewnętrznych funkcji powoduje, że kompilator języka C traci zgodność ze standardem ANSI, ponieważ funkcje nie ustawiają zmiennej `errno`.
+Kompilator x86 C++ i kompilator C obsługują wbudowaną generację `atan` funkcji,,,,,,, `atan2` `cos` i w `exp` `log` `log10` `sin` `sqrt` `tan` przypadku określenia **/Oi** . Użycie tych wewnętrznych funkcji powoduje, że kompilator języka C traci zgodność ze standardem ANSI, ponieważ funkcje nie ustawiają zmiennej `errno`.
 
-## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>Przekazywanie parametru wskaźnika niebędącego stałą do funkcji, która oczekuje odwołania do parametru wskaźnika będącego stałą
+## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>Przekazywanie parametru wskaźnika innego niż const do funkcji, która oczekuje odwołania do parametru wskaźnika const
 
-Jest to rozszerzenie języka C++. Ten kod będzie kompilowany przy użyciu **/Ze**:
+Jest to rozszerzenie języka C++. Ten kod zostanie skompilowany z **/ze**:
 
 ```cpp
 typedef   int   T;
@@ -258,17 +258,17 @@ void func ()
 }
 ```
 
-## <a name="iso646h-not-enabled"></a>ISO646. Nie włączono H
+## <a name="iso646h-not-enabled"></a>Iso646. H nie włączona
 
-W obszarze **/Ze**, należy dołączyć nagłówek iso646.h, chcąc używać postaci tekstowych wymienionych operatorów:
+W obszarze **/ze**należy uwzględnić iso646. h, jeśli chcesz używać form tekstowych następujących operatorów:
 
-- & & (i)
+- && (i)
 
-- & = (and_eq)
+- &= (and_eq)
 
-- & (bitand)
+- & (BitAnd)
 
-- &#124;(bitor)
+- &#124; (BitOr)
 
 - ~ (compl)
 
@@ -276,7 +276,7 @@ W obszarze **/Ze**, należy dołączyć nagłówek iso646.h, chcąc używać pos
 
 - != (not_eq)
 
-- &#124;&#124;(lub)
+- &#124;&#124; (lub)
 
 - &#124;= (or_eq)
 
@@ -284,9 +284,9 @@ W obszarze **/Ze**, należy dołączyć nagłówek iso646.h, chcąc używać pos
 
 - ^= (xor_eq)
 
-## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>Adres literału ciągu ma typ const char [], nie const char (*)]
+## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>Adres literału ciągu zawiera typ const char [], a nie const char (*) []
 
-Poniższy przykład generuje `char const (*)[4]` w obszarze **/za**, ale `char const [4]` w obszarze **/Ze**.
+Poniższy przykład zostanie wyprowadzony `char const (*)[4]` w obszarze **/za**, ale `char const [4]` w obszarze **/ze**.
 
 ```cpp
 #include <stdio.h>
@@ -300,6 +300,6 @@ int main()
 
 ## <a name="see-also"></a>Zobacz także
 
-- [/Za, /Ze (Wyłącz rozszerzenia językowe)](za-ze-disable-language-extensions.md)
+- [/Za,/ze (Wyłącz rozszerzenia językowe)](za-ze-disable-language-extensions.md)
 - [Opcje kompilatora MSVC](compiler-options.md)
 - [Składnia wiersza polecenia kompilatora MSVC](compiler-command-line-syntax.md)

@@ -1,19 +1,19 @@
 ---
-title: signbit —
+title: signbit
 ms.date: 01/31/2019
 f1_keywords:
 - signbit
 - math/signbit
 helpviewer_keywords:
 - signbit function
-ms.openlocfilehash: ce2f632f11296bf71036011a57f242365951d7f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f8399c16d2abc70a50740b0629bc5d9b3a1f067
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356332"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216742"
 ---
-# <a name="signbit"></a>signbit —
+# <a name="signbit"></a>signbit
 
 Określa, czy wartość zmiennoprzecinkowa jest ujemna.
 
@@ -40,27 +40,27 @@ inline bool signbit(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Wartość zmiennoprzecinkowa do testowania.
+Wartość zmiennoprzecinkowa do przetestowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**signbit —** zwraca wartość niezerową (**true** w języku C++) Jeśli argument *x* jest ujemny lub ujemna nieskończoność. Zwraca 0 (**false** w języku C++) Jeśli argument jest ujemna, dodatnią infinity lub NAN.
+**signbit —** zwraca wartość różną od zera ( **`true`** w języku C++), jeśli argument *x* jest ujemny lub ujemny. Zwraca wartość 0 ( **`false`** w języku C++), jeśli argument jest nieujemny, nieskończoności dodatniej lub NaN.
 
 ## <a name="remarks"></a>Uwagi
 
-**signbit —** jest makrem, gdy skompilowano C; oraz wbudowanej przeciążonej funkcji podczas kompilowania co kod C++.
+**signbit —** jest makrem kompilowanym jako C i przeciążoną funkcją wbudowaną kompilowaną jako C++.
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |--------------|---------------------------|-------------------------------|
-|**signbit**|\<math.h>|\<Math.h > lub \<cmath >|
+|**signbit**|\<math.h>|\<math.h> lub \<cmath>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

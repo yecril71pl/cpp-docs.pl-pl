@@ -9,12 +9,12 @@ helpviewer_keywords:
 - extended storage-class attributes
 - dllexport attribute [C++], storage-class attribute
 ms.assetid: 08d164b9-770a-4e14-afeb-c6f21d9e33e4
-ms.openlocfilehash: 8d703045773e4d2c320eaef2aa80c4ce74d23472
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 753a51fa8e2c87b77a54e5e93522e5f11585b610
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234250"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87200078"
 ---
 # <a name="dll-import-and-export-functions"></a>Importowanie bibliotek DLL i eksportowanie funkcji
 
@@ -22,9 +22,9 @@ ms.locfileid: "62234250"
 
 Najbardziej kompletne i aktualne informacje na ten temat można znaleźć w [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
-Modyfikatory klasy `dllexport` **dllimport** i magazynu są rozszerzeniami specyficznymi dla firmy Microsoft do języka C. Te Modyfikatory jawnie definiują interfejs biblioteki DLL dla klienta (plik wykonywalny lub inna Biblioteka DLL). Deklarowanie funkcji `dllexport` jako eliminuje potrzebę definicji modułów (. DEF). Można również użyć elementu **dllimport** i `dllexport` modyfikatorów z danymi i obiektami.
+**`dllimport`** `dllexport` Modyfikatory klasy magazynu i są rozszerzeniami specyficznymi dla firmy Microsoft do języka C. Te Modyfikatory jawnie definiują interfejs biblioteki DLL dla klienta (plik wykonywalny lub inna Biblioteka DLL). Deklarowanie funkcji jako `dllexport` eliminuje potrzebę definicji modułów (. DEF). Można również używać **`dllimport`** `dllexport` modyfikatorów i z danymi i obiektami.
 
-Modyfikatory **dllimport** i `dllexport` klasy magazynu muszą być używane z słowem kluczowym `__declspec`składni atrybutów rozszerzonych, jak pokazano w poniższym przykładzie:
+**`dllimport`** `dllexport` Modyfikatory klasy magazynu i muszą być używane z słowem kluczowym składni atrybutów rozszerzonych, **`__declspec`** jak pokazano w poniższym przykładzie:
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -40,6 +40,6 @@ Aby uzyskać szczegółowe informacje na temat składni dla rozszerzonych modyfi
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Definicje funkcji języka C](../c-language/c-function-definitions.md)

@@ -6,28 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword [C++], allocator
 - allocator __declspec keyword
-ms.openlocfilehash: 39708e8cfff7f61c3a3f763f87e1a3da36f0d4b1
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: a26cf4d2b79d64ddc9f0b60982d778e33d0f200a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077254"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216651"
 ---
-# <a name="allocator"></a>allocator
+# `allocator`
 
 **Specyficzne dla firmy Microsoft**
 
-Specyfikator deklaracji **alokatora** można zastosować do funkcji niestandardowych alokacji pamięci, aby udostępnić alokacje za pośrednictwem śledzenia zdarzeń dla systemu Windows (ETW).
+**`allocator`** Specyfikator deklaracji można zastosować do funkcji niestandardowej alokacji pamięci, aby udostępnić alokacje za pośrednictwem śledzenia zdarzeń dla systemu Windows (ETW).
 
 ## <a name="syntax"></a>Składnia
 
-```
-   __declspec(allocator)
-```
+> **`__declspec(allocator)`**
 
 ## <a name="remarks"></a>Uwagi
 
-Profiler pamięci natywnej w programie Visual Studio działa przez zbieranie danych zdarzeń ETW alokacji emitowanych przez środowisko uruchomieniowe. Puli buforów w CRT i zestaw Windows SDK ma została oznaczona na poziomie źródła przechwycić swoje dane alokacji. W przypadku pisania własnych przydziałów, wszystkie funkcje, które zwracają wskaźnik do nowo przydzieloną pamięci sterty, mogą być dekoracyjne `__declspec(allocator)`, jak pokazano w tym przykładzie dla elementu malloc:
+Profiler pamięci natywnej w programie Visual Studio działa przez zbieranie danych zdarzeń ETW alokacji emitowanych przez środowisko uruchomieniowe. Przydziały w CRT i Windows SDK zostały opatrzone adnotacją na poziomie źródła, aby można było przechwytywać ich dane alokacji. W przypadku pisania własnych przydziałów, wszystkie funkcje, które zwracają wskaźnik do nowo przydzieloną pamięci sterty, mogą być dekoracyjne `__declspec(allocator)` , jak pokazano w tym przykładzie dla elementu malloc:
 
 ```cpp
 __declspec(allocator) void* myMalloc(size_t size)

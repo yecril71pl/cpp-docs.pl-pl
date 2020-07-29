@@ -12,42 +12,42 @@ helpviewer_keywords:
 - simple types, names
 - type names [C++], simple
 ms.assetid: 0d4b515a-4f68-4786-83cf-a5d43c7cb6f3
-ms.openlocfilehash: 4003d9427c160b0e1c725cdc591190bd9777b3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfbca4ae87d84286b94120eaf24de928ae75f3c9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234933"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87200325"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>Specyfikatory typu danych i odpowiedniki
 
-Ta książka zazwyczaj używa formularzy specyfikatorów typu wymienionych w poniższej tabeli, a nie w postaci długich, i zakłada, że `char` typ jest podpisany domyślnie. W związku z tym, w `char` tej książce, jest równoznaczny z **podpisem znaku**.
+Ta książka zazwyczaj używa formularzy specyfikatorów typu wymienionych w poniższej tabeli, a nie w postaci długich, i zakłada, że **`char`** Typ jest podpisany domyślnie. W związku z tym, w tej książce, **`char`** jest równoważne **`signed char`** .
 
-### <a name="type-specifiers-and-equivalents"></a>Specyfikatory typów i równoważne
+## <a name="type-specifiers-and-equivalents"></a>Specyfikatory typów i równoważne
 
 |Specyfikator typu|Równoważne|
 |--------------------|---------------------|
-|**znak znaku**1|**char**|
-|**Liczba cyfr ze znakiem**|ze **znakiem**, **int**|
-|**podpisana krótka liczba całkowita**|**krótkie**, **podpisane krótkie**|
-|**podpisana long int**|**długa**, **niepodpisana** cyfra|
-|**unsigned char**|—|
-|**unsigned int**|**bajt**|
-|**unsigned short int**|**unsigned short**|
-|**unsigned long int**|**unsigned long**|
-|**float**|—|
-|**Long Double**2|—|
+|**`signed char`** jedno|**`char`**|
+|**`signed int`**|**`signed`**, **`int`**|
+|**`signed short int`**|**`short`**, **`signed short`**|
+|**`signed long int`**|**`long`**, **`signed long`**|
+|**`unsigned char`**|—|
+|**`unsigned int`**|**`unsigned`**|
+|**`unsigned short int`**|**`unsigned short`**|
+|**`unsigned long int`**|**`unsigned long`**|
+|**`float`**|—|
+|**`long double`** dwóch|—|
 
-1 Jeśli typ **znaku** jest domyślnie oznaczony jako niepodpisany (przez określenie opcji kompilatora/j), nie można skrócić znaku **podpisanego char** jako **char**.
+1 w przypadku wybrania **`char`** typu bez znaku domyślnie (przez określenie **`/J`** opcji kompilatora) nie można skrócić **`signed char`** **`char`** .
 
-2 w 32-bitowych i 64-bitowych systemach operacyjnych kompilator języka Microsoft C mapuje na **dużą** wartość typu **Double**.
+2 w 32-bitowych i 64-bitowych systemach operacyjnych kompilator języka Microsoft C mapuje **`long double`** do typu **`double`** .
 
 **Specyficzne dla firmy Microsoft**
 
-Można określić opcje kompilatora/J, aby zmienić domyślny typ **char** z podpisane na unsigned. Gdy ta opcja jest stosowana, **znak** oznacza takie samo jak **znak bez znaku**i należy użyć **podpisanego** słowa kluczowego, aby zadeklarować wartość znaku ze znakiem. Jeśli wartość **char** jest jawnie zadeklarowana jako podpisana, nie ma ona wpływu na tę opcję, a wartość jest podpisywana po rozszerzeniu na typ **int** . Typ **char** jest przedłużony o zero, gdy rozszerzany na typ **int** .
+Możesz określić **`/J`** opcję kompilatora, aby zmienić domyślny **`char`** Typ z **`signed char`** na **`unsigned char`** . Gdy ta opcja jest stosowana, **`char`** oznacza to samo, co **`unsigned char`** , i musisz użyć **`signed`** słowa kluczowego, aby zadeklarować wartość znaku ze znakiem. Jeśli **`char`** wartość jest zadeklarowana jawnie **`signed`** , ta **`/J`** opcja nie ma wpływu na tę opcję, a wartość jest podpisywany po rozszerzeniu do **`int`** typu. **`char`** Typ ma wartość zero-Extended, gdy zostanie rozszerzony do **`int`** typu.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Specyfikatory typu C](../c-language/c-type-specifiers.md)

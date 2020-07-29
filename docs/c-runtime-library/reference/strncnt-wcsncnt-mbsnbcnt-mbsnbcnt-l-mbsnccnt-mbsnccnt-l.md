@@ -58,12 +58,12 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 020b844d884182ae7553fec9e9db746987189910
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 77746af98e5d62b80d5a0d2d93eb1f717c74b33e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914211"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231341"
 ---
 # <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
@@ -111,12 +111,12 @@ Ciąg, który ma zostać zbadany.
 *liczbą*<br/>
 Liczba znaków lub bajtów do zbadania w *str*.
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_mbsnbcnt** i **_mbsnbcnt_l** zwracają liczbę bajtów znalezionych w pierwszej *liczbie* znaków wielobajtowych *str*. **_mbsnccnt** i **_mbsnccnt_l** zwracają liczbę znaków znalezionych w pierwszej *liczbie* bajtów *str*. Jeśli znak null zostanie napotkany przed zakończeniem badania *str* , zwraca liczbę bajtów lub znaków znalezionych przed znakiem null. Jeśli *str* zawiera mniej niż *Count* znaków lub bajtów, zwraca liczbę znaków lub bajtów w ciągu. Jeśli *Liczba* jest mniejsza od zera, zwracają 0. W poprzednich wersjach te funkcje miały wartość zwracaną typu **int** , a nie **size_t**.
+**_mbsnbcnt** i **_mbsnbcnt_l** zwracają liczbę bajtów znalezionych w pierwszej *liczbie* znaków wielobajtowych *str*. **_mbsnccnt** i **_mbsnccnt_l** zwracają liczbę znaków znalezionych w pierwszej *liczbie* bajtów *str*. Jeśli znak null zostanie napotkany przed zakończeniem badania *str* , zwraca liczbę bajtów lub znaków znalezionych przed znakiem null. Jeśli *str* zawiera mniej niż *Count* znaków lub bajtów, zwraca liczbę znaków lub bajtów w ciągu. Jeśli *Liczba* jest mniejsza od zera, zwracają 0. W poprzednich wersjach te funkcje miały wartość zwracaną typu, **`int`** a nie **size_t**.
 
 **_strncnt** zwraca liczbę znaków w pierwszej liczbie bajtów *jednobajtowego* ciągu *str*. **_wcsncnt** zwraca liczbę znaków w pierwszej liczbie znaków dwubajtowych *w ciągu* *znaków szerokich* .
 
@@ -137,21 +137,21 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |Procedura|_UNICODE i _MBCS niezdefiniowane|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |-------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnbcnt**|**_strncnt**|**_mbsnbcnt**|**_wcsncnt**|
-|**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|n/d|
-|**_wcsncnt**|n/d|n/d|**_mbsnbcnt**|
-|**_wcsncnt**|n/d|n/d|**_mbsnccnt**|
-|n/d|n/d|**_mbsnbcnt_l**|**_mbsnccnt_l**|
+|**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|nie dotyczy|
+|**_wcsncnt**|nie dotyczy|nie dotyczy|**_mbsnbcnt**|
+|**_wcsncnt**|nie dotyczy|nie dotyczy|**_mbsnccnt**|
+|nie dotyczy|nie dotyczy|**_mbsnbcnt_l**|**_mbsnccnt_l**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_mbsnbcnt**|\<mbstring. h>|
-|**_mbsnbcnt_l**|\<mbstring. h>|
-|**_mbsnccnt**|\<mbstring. h>|
-|**_mbsnccnt_l**|\<mbstring. h>|
-|**_strncnt**|\<Używanie TCHAR. h>|
-|**_wcsncnt**|\<Używanie TCHAR. h>|
+|**_mbsnbcnt**|\<mbstring.h>|
+|**_mbsnbcnt_l**|\<mbstring.h>|
+|**_mbsnccnt**|\<mbstring.h>|
+|**_mbsnccnt_l**|\<mbstring.h>|
+|**_strncnt**|\<tchar.h>|
+|**_wcsncnt**|\<tchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -182,9 +182,9 @@ int main( void )
 The first 10 characters are single-byte.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

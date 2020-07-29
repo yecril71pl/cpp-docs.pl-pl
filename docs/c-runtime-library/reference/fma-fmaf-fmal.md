@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: be3578aa9c66f329e191749b4506091bff69b1eb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d82565ed53f311ef1b2cf5942d207bf96090bd13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914953"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217002"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -84,7 +84,7 @@ long double fmal(
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Pierwsza wartość do pomnożenia.
 
 *t*<br/>
@@ -112,7 +112,7 @@ Błędy są raportowane zgodnie z opisem w [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **FMA** , które pobierają i zwracają **zmiennoprzecinkowe** i **długie** **podwójne** typy. W programie C **FMA** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **FMA** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C **FMA** zawsze przyjmuje i zwraca **`double`** .
 
 Ta funkcja oblicza wartość tak, jakby była pobrana z dokładnością do nieskończoności, a następnie zaokrągla wynik końcowy.
 
@@ -122,11 +122,11 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**FMA**, **fmaf —**, **Fmal**|\<> Math. h|\<cmath>|
+|**FMA**, **fmaf —**, **Fmal**|\<math.h>|\<cmath>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [remainder, remainderf, remainderl](remainder-remainderf-remainderl.md)<br/>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-ms.openlocfilehash: 01b2bc8d75c3c65639a3ff0c57b1a368760eba53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 354b354a72b5a96a190ce2322eb160b7d6bff1c2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158348"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87199402"
 ---
 # <a name="scope-and-visibility"></a>Zakres i widoczność
 
@@ -27,8 +27,8 @@ Zakres bloku Deklarator lub specyfikator typu dla identyfikatora z zakresem blok
 
 Zakres prototypu funkcji Deklarator lub specyfikator typu dla identyfikatora z zakresem prototypu funkcji pojawia się na liście deklaracji parametrów w prototypie funkcji (nie jest częścią deklaracji funkcji). Jej zakres kończy się z końcem deklaratora funkcji.
 
-Odpowiednie deklaracje dotyczące tworzenia zmiennych widocznych w innych plikach źródłowych są opisane w [klasach magazynu](../c-language/c-storage-classes.md). Jednak zmienne i funkcje zadeklarowane na poziomie zewnętrznym ze specyfikatorem klasy magazynu **statycznego** są widoczne tylko w pliku źródłowym, w którym są zdefiniowane. Wszystkie pozostałe funkcje są widoczne globalnie.
+Odpowiednie deklaracje dotyczące tworzenia zmiennych widocznych w innych plikach źródłowych są opisane w [klasach magazynu](../c-language/c-storage-classes.md). Jednak zmienne i funkcje zadeklarowane na poziomie zewnętrznym ze **`static`** specyfikatorem klasy magazynu są widoczne tylko w pliku źródłowym, w którym są zdefiniowane. Wszystkie pozostałe funkcje są widoczne globalnie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Okres istnienia, zakres, widoczność i połączenie](../c-language/lifetime-scope-visibility-and-linkage.md)

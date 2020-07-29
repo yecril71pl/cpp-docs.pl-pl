@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], container_type
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
-ms.openlocfilehash: 455db433aff1c1aa241beeb6e2435807959b7dd4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8f60b2e5e21b559edb630be2aee377341d4480f6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317151"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203276"
 ---
 # <a name="front_insert_iterator-class"></a>front_insert_iterator — Klasa
 
-Opisuje adapter iteratora, który spełnia wymagania iteratora danych wyjściowych. Wstawia (a nie zastępuje) elementy do przedniego końca sekwencji i w ten sposób zapewnia semantykę, która różni się od semantyki zastępowania, dostarczanej przez iteratory kontenerów sekwencji C++. Klasa `front_insert_iterator` jest templatized na typ kontenera.
+Opisuje adapter iteratora, który spełnia wymagania iteratora danych wyjściowych. Wstawia (a nie zastępuje) elementy do przedniego końca sekwencji i w ten sposób zapewnia semantykę, która różni się od semantyki zastępowania, dostarczanej przez iteratory kontenerów sekwencji C++. `front_insert_iterator`Klasa jest szablonowana w typie kontenera.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,14 +30,14 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>Parametry
 
-*Kontenera*\
-Typ pojemnika z przodu, którego elementy mają być `front_insert_iterator`wstawione przez .
+*Wbudowane*\
+Typ kontenera na początku elementów, które mają zostać wstawione przez `front_insert_iterator` .
 
 ## <a name="remarks"></a>Uwagi
 
-Kontener musi spełniać wymagania dla sekwencji wstawiania na przód, gdzie jest możliwe wstawianie elementów na początek sekwencji w amortyzowanym stałym czasie. Kontenery sekwencji biblioteki standardowej języka C++ zdefiniowane `push_front` przez klasę [deque i](../standard-library/deque-class.md) [list](../standard-library/list-class.md) zapewniają wymagani funkcję elementu członkowskiego i spełniają te wymagania. Natomiast kontenery sekwencji zdefiniowane przez [klasę wektorową](../standard-library/vector-class.md) nie spełniają tych wymagań `front_insert_iterator`i nie mogą być dostosowane do użycia z s. A `front_insert_iterator` musi być zawsze zainicjowany za pomocą jego kontenera.
+Kontener musi spełniać wymagania dla sekwencji wstawiania na przód, gdzie jest możliwe wstawianie elementów na początek sekwencji w amortyzowanym stałym czasie. Kontenery sekwencji standardowej biblioteki C++ zdefiniowane przez [klasę deque](../standard-library/deque-class.md) i [klasę listy](../standard-library/list-class.md) zapewniają potrzebną `push_front` funkcję członkowską i spełniają te wymagania. Z kolei Kontenery sekwencji zdefiniowane przez [klasę Vector](../standard-library/vector-class.md) nie spełniają tych wymagań i nie można ich dostosować do użycia z atrybutami `front_insert_iterator` s. Element A `front_insert_iterator` musi zawsze być zainicjowany przy użyciu jego kontenera.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Opis|
 |-|-|
@@ -48,23 +48,23 @@ Kontener musi spełniać wymagania dla sekwencji wstawiania na przód, gdzie jes
 |Nazwa typu|Opis|
 |-|-|
 |[container_type](#container_type)|Typ, który reprezentuje kontener, w którym ma być przeprowadzone wstawienie na przód.|
-|[Odwołanie](#reference)|Typ, który zawiera odwołanie do elementu w sekwencji kontrolowanej przez skojarzony kontener.|
+|[odwoła](#reference)|Typ, który zawiera odwołanie do elementu w sekwencji kontrolowanej przez skojarzony kontener.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator*](#op_star)|Dereferencing operator używany do implementacji \* `i`  =  `x` wyrażenia iteratora wyjściowego dla wstawiania z przodu.|
-|[operator++](#op_add_add)|Zwiększa do `front_insert_iterator` następnej lokalizacji, w której wartość może być przechowywana.|
-|[operator=](#op_eq)|Operator przypisania używany do implementacji \* `i`  =  `x` wyrażenia iteratora wyjściowego dla wstawiania z przodu.|
+|[zakład](#op_star)|Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* `i`  =  `x` dla wstawiania z przodu.|
+|[operator + +](#op_add_add)|Zwiększa `front_insert_iterator` do następnej lokalizacji, w której może być przechowywana wartość.|
+|[operator =](#op_eq)|Operator przypisania używany do implementowania wyrażenia iteratora danych wyjściowych \* `i`  =  `x` dla wstawiania z przodu.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek** \<:> iteratora
+**Nagłówek**:\<iterator>
 
 **Przestrzeń nazw:** std
 
-## <a name="front_insert_iteratorcontainer_type"></a><a name="container_type"></a>front_insert_iterator::container_type
+## <a name="front_insert_iteratorcontainer_type"></a><a name="container_type"></a>front_insert_iterator:: container_type
 
 Typ, który reprezentuje kontener, w którym ma być przeprowadzone wstawienie na przód.
 
@@ -74,7 +74,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem parametru *szablonu Container*.
+Typ jest synonimem dla *kontenera*parametrów szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -106,7 +106,7 @@ The list L2 is: ( 40 10 20 ).
 */
 ```
 
-## <a name="front_insert_iteratorfront_insert_iterator"></a><a name="front_insert_iterator"></a>front_insert_iterator::front_insert_iterator
+## <a name="front_insert_iteratorfront_insert_iterator"></a><a name="front_insert_iterator"></a>front_insert_iterator:: front_insert_iterator
 
 Tworzy iterator, który może wstawić elementy z przodu określonego obiektu kontenera.
 
@@ -117,7 +117,7 @@ explicit front_insert_iterator(Container& _Cont);
 ### <a name="parameters"></a>Parametry
 
 *_Cont*\
-Obiekt kontenera, `front_insert_iterator` do którego ma wstawić elementy.
+Obiekt kontenera, do którego `front_insert_iterator` ma zostać wstawiony element.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -169,9 +169,9 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="front_insert_iteratoroperator"></a><a name="op_star"></a>front_insert_iterator::operator\*
+## <a name="front_insert_iteratoroperator"></a><a name="op_star"></a>front_insert_iterator:: operator\*
 
-Dereferences wstaw iteratora zwraca element, który adresuje.
+Usuwa odwołanie do iteratora INSERT zwracające element, który zawiera.
 
 ```cpp
 front_insert_iterator<Container>& operator*();
@@ -179,11 +179,11 @@ front_insert_iterator<Container>& operator*();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Funkcja elementu członkowskiego zwraca wartość elementu adresowane.
+Funkcja członkowska zwraca wartość elementu, do którego się odnosi.
 
 ### <a name="remarks"></a>Uwagi
 
-Służy do implementacji**wartości** ** \*iteratora iteratora** = wyrażenia wyjściowego . Jeśli `Iter` jest iteratorem, który adresuje element w sekwencji, a następnie ** \*iter** = **wartość** zastępuje ten element z wartością i nie zmienia całkowitą liczbę elementów w sekwencji.
+Służy do implementowania wyrażenia iteratora danych wyjściowych ** \* ITER**  =  **value**. Jeśli `Iter` jest iteratorem, który dotyczy elementu w sekwencji, a następnie ** \* ITER**  =  **wartość** zastępuje ten element wartością i nie zmienia łącznej liczby elementów w sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -230,9 +230,9 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="front_insert_iteratoroperator"></a><a name="op_add_add"></a>front_insert_iterator::operator++
+## <a name="front_insert_iteratoroperator"></a><a name="op_add_add"></a>front_insert_iterator:: operator + +
 
-Zwiększa do `back_insert_iterator` następnej lokalizacji, w której wartość może być przechowywana.
+Zwiększa `back_insert_iterator` do następnej lokalizacji, w której może być przechowywana wartość.
 
 ```cpp
 front_insert_iterator<Container>& operator++();
@@ -242,11 +242,11 @@ front_insert_iterator<Container> operator++(int);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Adresowanie `front_insert_iterator` następnej lokalizacji, w której może być przechowywana wartość.
+`front_insert_iterator`Adresowanie następnej lokalizacji, w której może być przechowywana wartość.
 
 ### <a name="remarks"></a>Uwagi
 
-Operatory przedwcześnie i postincrementation zwracają ten sam wynik.
+Operatory przedrastające i postincrementation zwracają ten sam wynik.
 
 ### <a name="example"></a>Przykład
 
@@ -281,9 +281,9 @@ The list L1 is: ( 30 20 10 ).
 */
 ```
 
-## <a name="front_insert_iteratoroperator"></a><a name="op_eq"></a>front_insert_iterator::operator=
+## <a name="front_insert_iteratoroperator"></a><a name="op_eq"></a>front_insert_iterator:: operator =
 
-Dołącza (wypycha) wartość z przodu kontenera.
+Dołącza (wypchnięcia) wartość na wierzchu kontenera.
 
 ```cpp
 front_insert_iterator<Container>& operator=(typename Container::const_reference val);
@@ -293,22 +293,22 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>Parametry
 
-*Val*\
+*użyte*\
 Wartość, która ma zostać przypisana do kontenera.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do ostatniego elementu wstawionego z przodu kontenera.
+Odwołanie do ostatniego elementu wstawionego na początku kontenera.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy operator elementu `container.push_front( val)`członkowskiego ocenia `*this`, a następnie zwraca .
+Pierwszy operator elementu członkowskiego oblicza `container.push_front( val)` , a następnie zwraca **`*this`** .
 
-Drugi operator członkowski ocenia
+Drugi operator elementu członkowskiego oblicza
 
 `container->push_front((typename Container::value_type&&) val)`,
 
-następnie `*this`zwraca .
+następnie zwraca wartość **`*this`** .
 
 ### <a name="example"></a>Przykład
 
@@ -343,7 +343,7 @@ The list L1 is: ( 30 20 10 ).
 */
 ```
 
-## <a name="front_insert_iteratorreference"></a><a name="reference"></a>front_insert_iterator::odwołanie
+## <a name="front_insert_iteratorreference"></a><a name="reference"></a>front_insert_iterator:: Reference
 
 Typ, który zawiera odwołanie do elementu w sekwencji kontrolowanej przez skojarzony kontener.
 
@@ -387,8 +387,8 @@ The first element in the list L is: 30.
 */
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[\<>iteratora](../standard-library/iterator.md)\
-[Bezpieczeństwo gwintów w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Odwołanie do standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)
+[\<iterator>](../standard-library/iterator.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Dokumentacja standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md)

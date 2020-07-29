@@ -34,12 +34,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: a6fcb7feeae72ff15d7b1ed0d55c5abbb408135a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 4fa3df46358932b8a62a6b8529baed4a5c9e5c49
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914969"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216976"
 ---
 # <a name="fmod-fmodf-fmodl"></a>FMOD —, fmodf —, fmodl
 
@@ -77,13 +77,13 @@ Wartości zmiennoprzecinkowe.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**FMOD —** zwraca liczbę zmiennoprzecinkową z przestawu *x* / *y*. Jeśli wartość *y* to 0,0, **FMOD —** zwraca cichy NaN. Aby uzyskać informacje na temat reprezentacji cichego NaN przez rodzinę **printf** , zobacz [printf](printf-printf-l-wprintf-wprintf-l.md).
+**FMOD —** zwraca liczbę zmiennoprzecinkową z przestawu *x*  /  *y*. Jeśli wartość *y* to 0,0, **FMOD —** zwraca cichy NaN. Aby uzyskać informacje na temat reprezentacji cichego NaN przez rodzinę **printf** , zobacz [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **FMOD —** oblicza pozostałą liczbę zmiennoprzecinkową *f* z *x* / *y* , taką jak *x* = *i* \* *y* + *f*, *gdzie i* jest liczbą całkowitą, *f* ma ten sam znak jako *x*, a wartość bezwzględna *f* jest mniejsza niż wartość bezwzględna *y*.
+Funkcja **FMOD —** oblicza pozostałą liczbę zmiennoprzecinkową *f* z *x*  /  *y* , taką jak *x*  =  *i* \* *y*  +  *f*, *gdzie i* jest liczbą całkowitą, *f* ma ten sam znak jako *x*, a wartość bezwzględna *f* jest mniejsza niż wartość bezwzględna *y*.
 
-Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **FMOD —** , które pobierają i zwracają wartości **zmiennoprzecinkowe** i **długie** **Double** . W programie C **FMOD —** zawsze przyjmuje dwa **podwójne** argumenty i zwraca wartość **podwójną**.
+Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **FMOD —** , które pobierają i zwracają **`float`** **`long double`** wartości. W programie C **FMOD —** zawsze przyjmuje dwa **`double`** argumenty i zwraca **`double`** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -91,7 +91,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**FMOD —**, **fmodf —**, **fmodl**|\<> Math. h|
+|**FMOD —**, **fmodf —**, **fmodl**|\<math.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -117,7 +117,7 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

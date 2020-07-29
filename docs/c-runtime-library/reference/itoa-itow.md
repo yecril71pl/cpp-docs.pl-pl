@@ -113,12 +113,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 424ee4fb732811bffc6a83c0de57cd35fe747c42
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 28e6e2300c96e6236ffc4fd927d8153a1f8bcd13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914667"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216937"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -188,7 +188,7 @@ Bufor, który przechowuje wynik konwersji.
 *podstawy*<br/>
 Baza, która ma zostać użyta do konwersji *wartości*, która musi znajdować się w zakresie 2-36.
 
-*size*<br/>
+*zmienia*<br/>
 Długość buforu w jednostkach typu znaku. Ten parametr jest wywnioskowany na podstawie argumentu *buforu* w języku C++.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -197,7 +197,7 @@ Każda z tych funkcji zwraca wskaźnik do *buforu*. Brak powrotu błędu.
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**i **_ui64toa** konwertują cyfry danego argumentu *wartości* na ciąg znaków zakończony znakiem null i przechowują wynik (do 33 znaków dla **_itoa**, **_ltoa**i **_ultoa**oraz 65 dla **_i64toa** i **_ui64toa**) w *buforze*. Jeśli *podstawy* jest równe 10, a *wartość* jest ujemna, pierwszy znak przechowywanego ciągu jest znakiem minus (**-**). **_Itow**, **_ltow**, **_ultow**, **_i64tow**i **_ui64tow** są wersjami znaków dwubajtowych **_itoa**, **_ltoa**, _ultoa, **_ultoa** **_i64toa**i **_ui64toa**.
+Funkcje **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**i **_ui64toa** konwertują cyfry danego argumentu *wartości* na ciąg znaków zakończony znakiem null i przechowują wynik (do 33 znaków dla **_itoa**, **_ltoa**i **_ultoa**oraz 65 dla **_i64toa** i **_ui64toa**) w *buforze*. Jeśli *podstawy* jest równe 10, a *wartość* jest ujemna, pierwszy znak przechowywanego ciągu jest znakiem minus ( **-** ). **_Itow**, **_ltow**, **_ultow**, **_i64tow**i **_ui64tow** są wersjami znaków dwubajtowych **_itoa**, **_ltoa**, _ultoa, **_ultoa** **_i64toa**i **_ui64toa**.
 
 > [!IMPORTANT]
 > Te funkcje mogą zapisywać poza końcem bufora, który jest zbyt mały. Aby zapobiec przepełnieniu buforów, upewnij się, że *bufor* jest wystarczająco duży, aby pomieścić przekonwertowane cyfry oraz końcowy znak null i znak. Użycie tych funkcji może spowodować poważne problemy z zabezpieczeniami w kodzie.
@@ -240,7 +240,7 @@ Aby użyć jednego z tych makr w funkcji konwersji ciągów, zadeklaruj bufor ko
 |**_i64toa**, **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
 |**_ui64toa**, **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
-W tym przykładzie do definiowania bufora wystarczająco długo, aby zawierał **niepodpisane długo** w bazie 2, należy użyć makra z liczbą konwersji:
+W tym przykładzie do definiowania bufora wystarczająco duże, aby zawierała wartość **`unsigned long long`** w podstawie 2:
 
 ```cpp
 #include <wchar.h>
@@ -266,9 +266,9 @@ int main()
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**itoa**, **ltoa**, **ultoa**|\<STDLIB. h>|
-|**_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, **_ui64toa**|\<STDLIB. h>|
-|**_itow**, **_ltow**, **_ultow**, **_i64tow**, **_ui64tow**|\<STDLIB. h> lub \<WCHAR. h>|
+|**itoa**, **ltoa**, **ultoa**|\<stdlib.h>|
+|**_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, **_ui64toa**|\<stdlib.h>|
+|**_itow**, **_ltow**, **_ultow**, **_i64tow**, **_ui64tow**|\<stdlib.h> lub \<wchar.h>|
 
 Te funkcje i makra są specyficzne dla firmy Microsoft. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -349,7 +349,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [_itoa_s, funkcje _itow_s](itoa-s-itow-s.md)<br/>

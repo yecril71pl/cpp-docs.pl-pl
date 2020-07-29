@@ -1,40 +1,40 @@
 ---
 title: Nawigacja w systemie plików
-description: Jak poruszać się po systemie plików w standardzie standardu C++ Standard.
+description: Jak nawigować w systemie plików przy użyciu interfejsów API biblioteki standardowej języka C++.
 ms.date: 04/13/2020
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: 412d865582a14da7b8c31d9f07a43106b0c49491
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 26abe2fad6cacf8959507f15e967278e85254024
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368429"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203289"
 ---
 # <a name="file-system-navigation"></a>Nawigacja w systemie plików
 
-Nagłówek \<> systemu plików implementuje specyfikację techniczną systemu plików C++ ISO/IEC TS 18822:2015 (wersja robocza końcowa: [ISO/IEC JTC 1/SC 22/WG 21 N4100)](https://wg21.link/n4100)i posiada typy i funkcje umożliwiające pisanie kodu niezależnego od platformy do nawigacji po systemie plików. Ponieważ jest wieloplatformowy, zawiera interfejsy API, które nie są istotne dla systemów Windows. Na przykład `is_fifo(const path&)` zawsze zwraca **false** w systemie Windows.
+\<filesystem>Nagłówek implementuje specyfikację techniczną systemu plików C++ ISO/IEC TS 18822:2015 (końcowa wersja robocza: [ISO/IEC JTC 1/SC 22/Via 21 N4100](https://wg21.link/n4100)) i zawiera typy i funkcje, które umożliwiają pisanie kodu niezależnego od platformy dla nawigowania w systemie plików. Ponieważ jest to platforma wieloplatformowa, zawiera interfejsy API, które nie są odpowiednie dla systemów Windows. Na przykład `is_fifo(const path&)` zawsze zwraca **`false`** w systemie Windows.
 
 ## <a name="overview"></a>Omówienie
 
-Użyj \<interfejsu API systemu plików> dla następujących zadań:
+Użyj \<filesystem> interfejsów API dla następujących zadań:
 
-- iteracji nad plikami i katalogami w określonej ścieżce
+- Iterowanie plików i katalogów w określonej ścieżce
 
-- uzyskać informacje o plikach, w tym o czasie utworzenia, rozmiarze, rozszerzeniu i katalogu głównym
+- Uzyskaj informacje na temat plików, w tym czas utworzenia, rozmiar, rozszerzenie i katalog główny
 
-- komponowanie, rozkład i porównywanie ścieżek
+- Twórz, rozkładaj i porównuj ścieżki
 
-- tworzenie, kopiowanie i usuwanie katalogów
+- Tworzenie, kopiowanie i Usuwanie katalogów
 
-- kopiowanie i usuwanie plików
+- Kopiowanie i usuwanie plików
 
-Aby uzyskać więcej informacji na temat we/wy pliku przy użyciu biblioteki standardowej, zobacz [Programowanie iostream](../standard-library/iostream-programming.md).
+Aby uzyskać więcej informacji na temat we/wy plików przy użyciu standardowej biblioteki, zobacz [programowanie iostream](../standard-library/iostream-programming.md).
 
 ## <a name="paths"></a>Ścieżki
 
-### <a name="constructing-and-composing-paths"></a>Konstruowanie i komponowanie ścieżek
+### <a name="constructing-and-composing-paths"></a>Konstruowanie i tworzenie ścieżek
 
-Ścieżki w systemie Windows (od XP) są przechowywane natywnie w unicode. Klasa [ścieżki](../standard-library/path-class.md) automatycznie wykonuje wszystkie niezbędne konwersje ciągów. Akceptuje argumenty zarówno szerokich, jak i wąskich tablic znaków i obu `std::string` i `std::wstring` typów sformatowanych jako UTF8 lub UTF16. Klasa `path` automatycznie normalizuje również separatory ścieżek. Można użyć pojedynczego ukośnika do przodu jako separatora katalogów w argumentach konstruktora. Ten separator umożliwia używanie tych samych ciągów do przechowywania ścieżek zarówno w środowiskach Windows, jak i UNIX:
+Ścieżki w systemie Windows (ponieważ XP) są przechowywane natywnie w formacie Unicode. Klasa [Path](../standard-library/path-class.md) automatycznie wykonuje wszystkie niezbędne konwersje ciągów. Akceptuje ona argumenty zarówno szerokiej, jak i wąskich tablic znaków, zarówno `std::string` i `std::wstring` typów sformatowanych w formacie UTF8 lub UTF16. `path`Klasa również automatycznie normalizuje separatory ścieżki. W argumentach konstruktora można użyć pojedynczego ukośnika w górę jako separatora katalogu. Ten separator pozwala używać tych samych ciągów do przechowywania ścieżek w środowiskach Windows i UNIX:
 
 ```cpp
 path pathToDisplay(L"/FileSystemTest/SubDir3");     // OK!
@@ -42,7 +42,7 @@ path pathToDisplay2(L"\\FileSystemTest\\SubDir3");  // Still OK as always
 path pathToDisplay3(LR"(\FileSystemTest\SubDir3)"); // Raw string literals are OK, too.
 ```
 
-Aby połączyć dwie ścieżki, można użyć `/` `/=` przeciążonych operatorów, `+` które `+=` są `std::string` `std::wstring`analogiczne do operatorów i operatorów włączonych i . Obiekt `path` wygodnie dostarczy separatory, jeśli tego nie zrobisz.
+Aby połączyć dwie ścieżki, można użyć przeciążonych `/` `/=` operatorów i, które są analogiczne do `+` `+=` Operatory i w `std::string` i `std::wstring` . `path`Obiekt będzie wygodnie dostarczyć separatory, jeśli nie.
 
 ```cpp
 path myRoot("C:/FileSystemTest");  // no trailing separator, no problem!
@@ -51,7 +51,7 @@ myRoot /= path("SubDirRoot");      // C:/FileSystemTest/SubDirRoot
 
 ### <a name="examining-paths"></a>Badanie ścieżek
 
-Klasa path ma kilka metod, które zwracają informacje o różnych częściach samej ścieżki. Te informacje różnią się od informacji o jednostce systemu plików, do której może się odwoływać. Możesz uzyskać katalog główny, ścieżkę względną, nazwę pliku, rozszerzenie pliku i inne. Można iterować nad obiektem ścieżki, aby zbadać wszystkie foldery w hierarchii. W poniższym przykładzie pokazano, jak iterować nad obiektem ścieżki. I, jak pobrać informacje o jego częściach.
+Klasa Path ma kilka metod, które zwracają informacje o różnych częściach samej ścieżki. Te informacje różnią się od informacji o jednostce systemu plików, do której mogą się odwoływać. Możesz uzyskać katalog główny, ścieżkę względną, nazwę pliku, rozszerzenie pliku i inne. Można wykonać iterację obiektu ścieżki, aby przeanalizować wszystkie foldery w hierarchii. Poniższy przykład pokazuje, jak wykonać iterację obiektu Path. I, jak pobrać informacje o jego częściach.
 
 ```cpp
 // filesystem_path_example.cpp
@@ -99,7 +99,7 @@ int main()
 }
 ```
 
-Kod tworzy następujące dane wyjściowe:
+Kod generuje te dane wyjściowe:
 
 ```Output
 Displaying path info for: C:\FileSystemTest\SubDir3\SubDirLevel2\File2.txt
@@ -120,7 +120,7 @@ extension() = .txt
 
 ### <a name="comparing-paths"></a>Porównywanie ścieżek
 
-Klasa `path` przeciąża te same operatory porównania co `std::string` i `std::wstring`. Podczas porównywania dwóch ścieżek, należy dokonać porównania ciągów po separatory zostały znormalizowane. Jeśli brakuje ukośnika końcowego (lub ukośnika odwrotnego), nie jest on dodawany, co ma wpływ na porównanie. W poniższym przykładzie pokazano, jak wartości ścieżki są porównywane:
+`path`Klasa przeciąża te same operatory porównania co `std::string` i `std::wstring` . Porównując dwie ścieżki, należy dokonać porównania ciągów po znormalizowaniu separatorów. Jeśli brakuje końcowego ukośnika (lub ukośnika odwrotnego), nie zostanie on dodany i ma wpływ na porównanie. Poniższy przykład ilustruje sposób porównywania wartości ścieżki:
 
 ```cpp
 wstring ComparePaths()
@@ -151,11 +151,11 @@ C:\Documents\2013\Reports\ < C:\Documents\2014\: true
 C:\Documents\2014\ < D:\Documents\2013\Reports\: true
 ```
 
-Aby uruchomić ten kod, wklej go `main` do pełnego przykładu powyżej przed i odkomentuj wiersz, który wywołuje go w głównym.
+Aby uruchomić ten kod, wklej go do pełnego powyższego przykładu przed `main` i usuń znaczniki komentarza wiersza, który wywołuje go w głównej.
 
-### <a name="converting-between-path-and-string-types"></a>Konwertowanie między typami ścieżek i ciągów
+### <a name="converting-between-path-and-string-types"></a>Konwertowanie między ścieżkami i typami ciągów
 
-Obiekt `path` jest niejawnie `std::wstring` konwertowany na lub `std::string`. Oznacza to, że można przekazać ścieżkę do funkcji, takich jak [wofstream::open](../standard-library/basic-ofstream-class.md#open), jak pokazano w tym przykładzie:
+`path`Obiekt jest niejawnie konwertowany do `std::wstring` lub `std::string` . Oznacza to, że można przekazać ścieżkę do funkcji, takich jak [wofstream:: Open](../standard-library/basic-ofstream-class.md#open), jak pokazano w poniższym przykładzie:
 
 ```cpp
 // filesystem_path_conversion.cpp
@@ -208,6 +208,6 @@ Press Enter to exit
 
 ## <a name="iterating-directories-and-files"></a>Iterowanie katalogów i plików
 
-Nagłówek \<> systemu plików udostępnia typ [directory_iterator](../standard-library/directory-iterator-class.md) do iteracji w pojedynczych katalogach, a klasa [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) do powtarzania powtarzalnej liczby nad katalogiem i jego podkatalogami. Po skonstruowaniu iteratora przez `path` przekazanie go obiektu, iterator wskazuje na pierwszy directory_entry w ścieżce. Utwórz iterator końcowy, wywołując domyślny konstruktor.
+\<filesystem>Nagłówek zawiera [directory_iterator](../standard-library/directory-iterator-class.md) typ do iteracji dla pojedynczych katalogów, a Klasa [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) do iteracji cyklicznie w katalogu i jego podkatalogach. Po utworzeniu iteratora poprzez przekazanie go `path` do pierwszego directory_entry w ścieżce. Utwórz iterator końcowy, wywołując Konstruktor domyślny.
 
-Podczas iteracji za pośrednictwem katalogu, istnieje kilka rodzajów elementów, które można odnajdyć. Elementy te obejmują katalogi, pliki, łącza symboliczne, pliki gniazda i inne. Zwraca `directory_iterator` jego elementy jako [directory_entry](../standard-library/directory-entry-class.md) obiektów.
+Podczas iterowania za pomocą katalogu istnieje kilka rodzajów elementów, które mogą być odnajdywane. Elementy te obejmują katalogi, pliki, linki symboliczne, pliki gniazd i inne. `directory_iterator`Zwraca swoje elementy jako [directory_entry](../standard-library/directory-entry-class.md) obiektów.

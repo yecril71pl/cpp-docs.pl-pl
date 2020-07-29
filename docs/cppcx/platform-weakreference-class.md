@@ -1,18 +1,18 @@
 ---
-title: Platform::WeakReference, klasa
+title: 'Platform:: WeakReference, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-ms.openlocfilehash: cadafcc227347bc2f55c8600ae63a5c0996aefae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: befefba7cc76f24f6dddd58d0c5f040bfd205508
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182967"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216599"
 ---
-# <a name="platformweakreference-class"></a>Platform::WeakReference, klasa
+# <a name="platformweakreference-class"></a>Platform:: WeakReference, Klasa
 
 Reprezentuje słabe odwołanie do wystąpienia klasy ref.
 
@@ -26,30 +26,30 @@ class WeakReference
 
 ### <a name="members"></a>Elementy członkowskie
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|[Weakreference::weakreference —](#ctor)|Inicjuje nowe wystąpienie klasy WeakReference.|
+|[WeakReference:: WeakReference](#ctor)|Inicjuje nowe wystąpienie klasy WeakReference.|
 
 ### <a name="methods"></a>Metody
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|[Weakreference::Resolve —](#resolve)|Zwraca uchwyt do podstawowej klasy referencyjnej lub nullptr, jeśli obiekt nie jest już istnieje.|
+|[WeakReference:: Rozwiąż](#resolve)|Zwraca dojście do bazowej klasy referencyjnej lub nullptr, jeśli obiekt już nie istnieje.|
 
 ### <a name="operators"></a>Operatory
 
-|Element członkowski|Opis|
+|Członek|Opis|
 |------------|-----------------|
-|[WeakReference::operator =](#operator-assign)|Przypisuje nową wartość do obiektu WeakReference.|
-|[WeakReference::operator BoolType](#booltype)|Implementuje wzorzec bool bezpieczne.|
+|[WeakReference:: operator =](#operator-assign)|Przypisuje nową wartość do obiektu WeakReference.|
+|[WeakReference:: operator BoolType](#booltype)|Implementuje bezpieczny wzorzec bool.|
 
 ### <a name="remarks"></a>Uwagi
 
-Weakreference — klasa nie jest klasą ref i dlatego nie dziedziczą z Platform::Object ^ i nie można używać w podpisie metody publicznej.
+Sama klasa WeakReference nie jest klasą referencyjną i dlatego nie dziedziczy z klasy platform:: Object ^ i nie może być używana w sygnaturze metody publicznej.
 
-## <a name="operator-assign"></a> WeakReference::operator =
+## <a name="weakreferenceoperator"></a><a name="operator-assign"></a>WeakReference:: operator =
 
 Przypisuje wartość do WeakReference.
 
@@ -64,11 +64,11 @@ WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 
 ### <a name="remarks"></a>Uwagi
 
-Ostatnie przeciążenie na powyższej liście umożliwia przypisanie klasy referencyjnej do zmiennej WeakReference. W takim przypadku klasa ref jest takiej [Platform::Object](../cppcx/platform-object-class.md)^. Później przywrócić oryginalny typ, określając ją jako argumentu dla parametru typu w [weakreference::Resolve —\<T >](#resolve) funkcja elementu członkowskiego.
+Ostatnie Przeciążenie na powyższej liście umożliwia przypisanie klasy ref do zmiennej WeakReference. W takim przypadku Klasa ref jest downcast do [platform:: Object](../cppcx/platform-object-class.md)^. Oryginalny typ można przywrócić później przez określenie go jako argumentu parametru typu w funkcji członkowskiej [WeakReference:: Rozwiązuj \<T> ](#resolve) .
 
-## <a name="booltype"></a> WeakReference::operator BoolType
+## <a name="weakreferenceoperator-booltype"></a><a name="booltype"></a>WeakReference:: operator BoolType
 
-Implementuje wzorzec bezpieczne bool weakreference — klasa. Nie można jawnie wywoływana z kodu użytkownika.
+Implementuje bezpieczny wzorzec bool dla klasy WeakReference. Nie można jawnie wywołać w kodzie.
 
 ### <a name="syntax"></a>Składnia
 
@@ -76,9 +76,9 @@ Implementuje wzorzec bezpieczne bool weakreference — klasa. Nie można jawnie 
 BoolType BoolType();
 ```
 
-## <a name="resolve"></a> Weakreference::Resolve — metoda (przestrzeń nazw platformy)
+## <a name="weakreferenceresolve-method-platform-namespace"></a><a name="resolve"></a>WeakReference:: Rozwiązuj — Metoda (przestrzeń nazw platformy)
 
-Zwraca uchwyt do oryginalnej klasy ref lub `nullptr` Jeśli obiekt nie jest już istnieje.
+Zwraca dojście do oryginalnej klasy referencyjnej lub **`nullptr`** Jeśli obiekt już nie istnieje.
 
 ### <a name="syntax"></a>Składnia
 
@@ -91,7 +91,7 @@ T^ Resolve() const;
 
 ### <a name="property-valuereturn-value"></a>Wartość właściwości/Zwracana wartość
 
-Dojście do klasy referencyjnej, która obiektu WeakReference został poprzednio powiązany z lub nullptr.
+Dojście do klasy referencyjnej, z którą wcześniej skojarzono obiekt WeakReference, lub nullptr.
 
 ### <a name="example"></a>Przykład
 
@@ -106,11 +106,11 @@ if (bar != nullptr)
 }
 ```
 
-Należy pamiętać, że parametr typu T, T nie ^.
+Należy zauważyć, że parametr type ma wartość T, a nie T ^.
 
-## <a name="ctor"></a> Weakreference::weakreference — Konstruktor
+## <a name="weakreferenceweakreference-constructor"></a><a name="ctor"></a>WeakReference:: WeakReference — Konstruktor
 
-Zapewnia różne sposoby, aby skonstruować WeakReference.
+Oferuje różne sposoby konstruowania WeakReference.
 
 ### <a name="syntax"></a>Składnia
 

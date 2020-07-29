@@ -5,17 +5,17 @@ helpviewer_keywords:
 - string literals, type
 - types [C], string literals
 ms.assetid: f50a28af-20c1-4440-bdc6-564c86a309c8
-ms.openlocfilehash: 7e832ac7aa08ad80ab395baa59eabbabb486b46f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd84a8c37e2929394e34010d14fc9264080539cc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344853"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87198999"
 ---
 # <a name="type-for-string-literals"></a>Typy literałów ciągów
 
-Literały ciągu mają typ Array of `char` (czyli **Char []**). (Ciągi znaków dwubajtowych mają tablicę `wchar_t` typu (czyli **wchar_t []**).) Oznacza to, że ciąg jest tablicą z elementami typu `char`. Liczba elementów w tablicy jest równa liczbie znaków w ciągu plus jeden dla kończącego znaku null.
+Literały ciągu mają typ Array of **`char`** (czyli **Char []**). (Ciągi znaków dwubajtowych mają tablicę **`wchar_t`** typu (oznacza to, **wchar_t []**). Oznacza to, że ciąg jest tablicą z elementami typu **`char`** . Liczba elementów w tablicy jest równa liczbie znaków w ciągu plus jeden dla kończącego znaku null.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Literały ciągu języka C](../c-language/c-string-literals.md)

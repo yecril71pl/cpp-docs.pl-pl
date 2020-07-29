@@ -27,16 +27,16 @@ helpviewer_keywords:
 - handler modes
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
-ms.openlocfilehash: 59724dafdc6488596478d0b44b254c4f498fce99
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 26fabc71337f1554b63909697b601a0bd9e86638
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950113"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216833"
 ---
 # <a name="_query_new_mode"></a>_query_new_mode
 
-Zwraca liczbę całkowitą wskazującą nowy tryb obsługi ustawiony przez **_set_new_mode** dla **malloc**.
+Zwraca liczbę całkowitą wskazującą nowy tryb obsługi ustawiony przez **_set_new_mode** dla opcji **malloc**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,7 +52,7 @@ Zwraca bieżący nowy tryb obsługi, czyli 0 lub 1, dla **malloc**. Zwracana war
 
 ## <a name="remarks"></a>Uwagi
 
-C++ Funkcja **_query_new_mode** zwraca liczbę całkowitą, która wskazuje nowy tryb obsługi ustawiony C++ przez funkcję [_set_new_mode](set-new-mode.md) dla opcji [malloc](malloc.md). Nowy tryb obsługi wskazuje, czy w przypadku niemożności przydzielenia pamięci, **malloc** ma wywołać nową procedurę obsługi jako ustawioną przez [_set_new_handler](set-new-handler.md). Domyślnie funkcja **malloc** nie wywołuje nowej procedury obsługi w przypadku niepowodzenia. Możesz użyć **_set_new_mode** , aby zastąpić to zachowanie, tak aby w przypadku niepowodzenia **malloc** wywołuje nową procedurę obsługi w taki sam sposób, jak w przypadku niepowodzenia przydzielenia pamięci przez operatora **New** . Aby uzyskać więcej informacji, zobacz Omówienie [operatorów New i DELETE](../../cpp/new-and-delete-operators.md) w dokumentacji C++ języka.
+Funkcja C++ **_query_new_mode** zwraca liczbę całkowitą, która wskazuje nowy tryb obsługi ustawiony przez funkcję [_set_new_mode](set-new-mode.md) języka c++ dla opcji [malloc](malloc.md). Nowy tryb obsługi wskazuje, czy w przypadku niemożności przydzielenia pamięci, **malloc** ma wywołać nową procedurę obsługi jako ustawioną przez [_set_new_handler](set-new-handler.md). Domyślnie funkcja **malloc** nie wywołuje nowej procedury obsługi w przypadku niepowodzenia. Możesz użyć **_set_new_mode** , aby przesłonić to zachowanie, tak że w przypadku niepowodzenia **malloc** wywołuje nową procedurę obsługi w taki sam sposób, w jaki **`new`** operator wykonuje w przypadku niepowodzenia przydzielenia pamięci. Aby uzyskać więcej informacji, zobacz Omówienie [operatorów New i DELETE](../../cpp/new-and-delete-operators.md) w dokumentacji języka C++.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -70,6 +70,6 @@ Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/
 
 [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[zwolniony](free.md)<br/>
 [realloc](realloc.md)<br/>
 [_query_new_handler](query-new-handler.md)<br/>

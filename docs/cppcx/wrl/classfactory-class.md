@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ClassFactory::QueryInterface method
 - Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-ms.openlocfilehash: 3b738cc8f439e6653162ab99b0a26e87aa8fee36
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bbf20e2269e6d62206e06e748174d7b88898cd68
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372663"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87198102"
 ---
 # <a name="classfactory-class"></a>ClassFactory — Klasa
 
@@ -53,9 +53,9 @@ class ClassFactory :
 ### <a name="parameters"></a>Parametry
 
 *I0*<br/>
-Interfejs zerowy.
+Interfejs zerowego.
 
-*I1*<br/>
+*Elementem I1*<br/>
 Pierwszy interfejs.
 
 *I2*<br/>
@@ -63,9 +63,9 @@ Drugi interfejs.
 
 ## <a name="remarks"></a>Uwagi
 
-`ClassFactory` Skorzystaj, aby zapewnić implementację fabryczną zdefiniowaną przez użytkownika.
+Użyj `ClassFactory` , aby zapewnić implementację fabryki zdefiniowanej przez użytkownika.
 
-Poniższy wzorzec programowania pokazuje, jak używać [Implements](implements-structure.md) struktury, aby określić więcej niż trzy interfejsy w fabryce klasy.
+Poniższy wzorzec programowania ilustruje sposób użycia struktury [Implements](implements-structure.md) do określenia więcej niż trzech interfejsów w fabryce klasy.
 
 `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`
 
@@ -75,16 +75,16 @@ Poniższy wzorzec programowania pokazuje, jak używać [Implements](implements-s
 
 Nazwa                                        | Opis
 ------------------------------------------- | -----------
-[ClassFactory::ClassFactory](#classfactory) |
+[ClassFactory:: ClassFactory](#classfactory) |
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Nazwa                                            | Opis
 ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
-[ClassFactory::AddRef](#addref)                 | Zwiększa liczbę odwołań dla `ClassFactory` bieżącego obiektu.
-[ClassFactory::LockServer](#lockserver)         | Zwiększa lub zmniejsza liczbę obiektów bazowych, które są śledzone `ClassFactory` przez bieżący obiekt.
-[ClassFactory::QueryInterface](#queryinterface) | Pobiera wskaźnik do interfejsu określonego przez parametr.
-[ClassFactory::Release](#release)               | Zmniejsza liczbę odwołań dla `ClassFactory` bieżącego obiektu.
+[ClassFactory:: AddRef](#addref)                 | Zwiększa liczbę odwołań dla bieżącego `ClassFactory` obiektu.
+[ClassFactory:: LockServer —](#lockserver)         | Zwiększa lub zmniejsza liczbę obiektów bazowych, które są śledzone przez bieżący `ClassFactory` obiekt.
+[ClassFactory:: QueryInterface](#queryinterface) | Pobiera wskaźnik do interfejsu określonego przez parametr.
+[ClassFactory:: Release](#release)               | Zmniejsza liczbę odwołań dla bieżącego `ClassFactory` obiektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -110,13 +110,13 @@ Nazwa                                            | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** module.h
+**Nagłówek:** module. h
 
-**Obszar nazw:** Microsoft::WRL
+**Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="classfactoryaddref"></a><a name="addref"></a>ClassFactory::AddRef
+## <a name="classfactoryaddref"></a><a name="addref"></a>ClassFactory:: AddRef
 
-Zwiększa liczbę odwołań dla `ClassFactory` bieżącego obiektu.
+Zwiększa liczbę odwołań dla bieżącego `ClassFactory` obiektu.
 
 ```cpp
 STDMETHOD_(
@@ -127,17 +127,17 @@ STDMETHOD_(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK, jeśli się powiedzie; w przeciwnym razie HRESULT, który opisuje błąd.
+S_OK, jeśli się to powiedzie; w przeciwnym razie wartość HRESULT, która opisuje awarię.
 
-## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>ClassFactory::ClassFactory
+## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>ClassFactory:: ClassFactory
 
 ```cpp
 WRL_NOTHROW ClassFactory();
 ```
 
-## <a name="classfactorylockserver"></a><a name="lockserver"></a>ClassFactory::LockServer
+## <a name="classfactorylockserver"></a><a name="lockserver"></a>ClassFactory:: LockServer —
 
-Zwiększa lub zmniejsza liczbę obiektów bazowych, które są śledzone `ClassFactory` przez bieżący obiekt.
+Zwiększa lub zmniejsza liczbę obiektów bazowych, które są śledzone przez bieżący `ClassFactory` obiekt.
 
 ```cpp
 STDMETHOD(
@@ -147,18 +147,18 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*Stado*<br/>
-**true,** aby zwiększać liczbę śledzonych obiektów. **false,** aby zniegodzić liczbę śledzonych obiektów.
+*Zarodowych*<br/>
+**`true`** Aby zwiększyć liczbę śledzonych obiektów. **`false`** zmniejszenie liczby śledzonych obiektów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK, jeśli się powiedzie; w przeciwnym razie E_FAIL.
+S_OK, jeśli się to powiedzie; w przeciwnym razie E_FAIL.
 
 ### <a name="remarks"></a>Uwagi
 
-`ClassFactory`przechowuje śledzenie obiektów w wystąpieniu podstawowym [Module](module-class.md) klasy.
+`ClassFactory`śledzi obiekty w podstawowym wystąpieniu klasy [modułu](module-class.md) .
 
-## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>ClassFactory::QueryInterface
+## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>ClassFactory:: QueryInterface
 
 Pobiera wskaźnik do interfejsu określonego przez parametr.
 
@@ -170,19 +170,19 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*Riid*<br/>
+*riid*<br/>
 Identyfikator interfejsu.
 
-*ppvObiekt*<br/>
+*ppvObject*<br/>
 Po zakończeniu tej operacji wskaźnik do interfejsu określony przez parametr *riid*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK, jeśli się powiedzie; w przeciwnym razie HRESULT, który opisuje błąd.
+S_OK, jeśli się to powiedzie; w przeciwnym razie wartość HRESULT, która opisuje awarię.
 
-## <a name="classfactoryrelease"></a><a name="release"></a>ClassFactory::Release
+## <a name="classfactoryrelease"></a><a name="release"></a>ClassFactory:: Release
 
-Zmniejsza liczbę odwołań dla `ClassFactory` bieżącego obiektu.
+Zmniejsza liczbę odwołań dla bieżącego `ClassFactory` obiektu.
 
 ```cpp
 STDMETHOD_(
@@ -193,4 +193,4 @@ STDMETHOD_(
 
 ### <a name="return-value"></a>Wartość zwracana
 
-S_OK, jeśli się powiedzie; w przeciwnym razie HRESULT, który opisuje błąd.
+S_OK, jeśli się to powiedzie; w przeciwnym razie wartość HRESULT, która opisuje awarię.

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4042
 ms.assetid: e4bd861b-1194-426b-bf79-68c5b021eb0a
-ms.openlocfilehash: 0ffc4c4aeb7d37ffa45f503a34fd369d36c00ce4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cd8d8addb8441bd32d242c4f4858104048f7a62e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164212"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197075"
 ---
 # <a name="compiler-warning-level-1-c4042"></a>Ostrzeżenie kompilatora (poziom 1) C4042
 
@@ -19,13 +19,13 @@ ms.locfileid: "80164212"
 
 Nie można użyć określonej klasy magazynu z tym identyfikatorem w tym kontekście. Kompilator używa domyślnej klasy magazynu:
 
-- `extern`, jeśli *Identyfikator* jest funkcją.
+- **`extern`**, jeśli *Identyfikator* jest funkcją.
 
-- **auto**Auto, jeśli *Identyfikator* jest parametrem formalnym lub zmienną lokalną.
+- **`auto`**, jeśli *Identyfikator* jest parametrem formalnym lub zmienną lokalną.
 
 - Brak klasy magazynu, jeśli *Identyfikator* jest zmienną globalną.
 
-To ostrzeżenie może być spowodowane określeniem klasy magazynu innej niż **register** w deklaracji parametru.
+To ostrzeżenie może być spowodowane określeniem klasy magazynu innej niż **`register`** w deklaracji parametru.
 
 Poniższy przykład generuje C4042
 

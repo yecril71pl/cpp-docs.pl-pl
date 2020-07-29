@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::InterfaceTraits::IidCount constant
 - Microsoft::WRL::Details::InterfaceTraits::Verify method
 ms.assetid: ede0c284-19a7-4892-9738-ff3da4923d0a
-ms.openlocfilehash: 17f743a38af3ddc600a55e38905d19868d076a22
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c08c6e8bbcc16120dd44da69a2933fc3ec42f387
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371368"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216573"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits — Struktura
 
-Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,38 +50,38 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 *I0*<br/>
 Nazwa interfejsu.
 
-*CloakedType (Typ maskowania)*<br/>
-Dla `RuntimeClass` `Implements` , `ChainInterfaces`i , interfejs, który nie będzie na liście obsługiwanych identyfikatorów interfejsu.
+*CloakedType*<br/>
+W `RuntimeClass` przypadku `Implements` `ChainInterfaces` interfejsu, który nie znajduje się na liście obsługiwanych identyfikatorów interfejsów.
 
 ## <a name="remarks"></a>Uwagi
 
-Implementuje wspólne cechy interfejsu.
+Implementuje typowe cechy interfejsu.
 
-Drugi szablon jest specjalizacją dla zamaskowanych interfejsów. Trzeci szablon jest specjalizacją dla parametrów Nil.
+Drugi szablon jest specjalizacją dla maskowanych interfejsów. Trzeci szablon jest specjalizacją dla parametrów Nil.
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a><a name="public-typedefs"></a>Publiczne typedefs
+### <a name="public-typedefs"></a><a name="public-typedefs"></a>Publiczne definicje typów
 
 Nazwa   | Opis
 ------ | ------------------------------------------
-`Base` | Synonim parametru szablonu *I0.*
+`Base` | Synonim dla parametru szablonu *I0* .
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Nazwa                                                   | Opis
 ------------------------------------------------------ | ----------------------------------------------------------------------------------------
-[InterfaceTraits::CanCastTo](#cancastto)               | Wskazuje, czy określony wskaźnik można rzutować `Base`na wskaźnik do .
-[InterfaceTraits::CastToBase](#casttobase)             | Rzutuje określony wskaźnik na `Base`wskaźnik do .
-[InterfaceTraits::CastToUnknown](#casttounknown)       | Rzutuje określony wskaźnik na `IUnknown`wskaźnik do .
-[InterfaceTraits::FillArrayWithIid](#fillarraywithiid) | Przypisuje identyfikator interfejsu do `Base` elementu tablicy określonego przez argument indeksu.
-[InterfaceTraits::Sprawdź](#verify)                     | Sprawdza, `Base` czy jest prawidłowo pochodna.
+[InterfaceTraits:: CanCastTo —](#cancastto)               | Wskazuje, czy określony wskaźnik może być rzutowany na wskaźnik do `Base` .
+[InterfaceTraits:: CastToBase —](#casttobase)             | Rzutuje określony wskaźnik na wskaźnik `Base` .
+[InterfaceTraits:: CastToUnknown —](#casttounknown)       | Rzutuje określony wskaźnik na wskaźnik `IUnknown` .
+[InterfaceTraits:: FillArrayWithIid —](#fillarraywithiid) | Przypisuje identyfikator interfejsu `Base` do elementu tablicy określonego przez argument indeksu.
+[InterfaceTraits:: Verify](#verify)                     | Weryfikuje, które `Base` jest prawidłowo wyprowadzane.
 
 ### <a name="public-constants"></a>Stałe publiczne
 
 Nazwa                                   | Opis
 -------------------------------------- | ---------------------------------------------------------------------------------------
-[InterfaceTraits::IidCount](#iidcount) | Przechowuje liczbę identyfikatorów interfejsu skojarzonych `InterfaceTraits` z bieżącym obiektem.
+[InterfaceTraits:: IidCount —](#iidcount) | Przechowuje liczbę identyfikatorów interfejsów skojarzonych z bieżącym `InterfaceTraits` obiektem.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -89,13 +89,13 @@ Nazwa                                   | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** implements.h
+**Nagłówek:** implementuje. h
 
-**Obszar nazw:** Microsoft::WRL::Dszczegóły
+**Przestrzeń nazw:** Microsoft:: WRL::D etails
 
-## <a name="interfacetraitscancastto"></a><a name="cancastto"></a>InterfaceTraits::CanCastTo
+## <a name="interfacetraitscancastto"></a><a name="cancastto"></a>InterfaceTraits:: CanCastTo —
 
-Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ```cpp
 template<typename T>
@@ -108,28 +108,28 @@ static __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>Parametry
 
-*Ptr*<br/>
+*ptr*<br/>
 Nazwa wskaźnika do typu.
 
-*Riid*<br/>
-Identyfikator interfejsu . `Base`
+*riid*<br/>
+Identyfikator interfejsu `Base` .
 
-*Ppv*<br/>
-Jeśli ta operacja zakończy się pomyślnie, *ppv* wskazuje interfejs określony przez `Base`. W przeciwnym razie *ppv* jest ustawiona na `nullptr`.
+*ppv*<br/>
+Jeśli ta operacja zakończy się pomyślnie, *PPV* wskazuje interfejs określony przez `Base` . W przeciwnym razie *PPV* jest ustawiony na **`nullptr`** .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli ta operacja zakończy się pomyślnie `Base`i *ptr* jest rzutowy na wskaźnik do ; w przeciwnym razie **false**.
+**`true`** Jeśli ta operacja zakończyła się pomyślnie i *PTR* jest rzutowany na wskaźnik do `Base` ; w przeciwnym razie, **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Wskazuje, czy określony wskaźnik można rzutować `Base`na wskaźnik do .
+Wskazuje, czy określony wskaźnik może być rzutowany na wskaźnik do `Base` .
 
-Aby uzyskać `Base`więcej informacji na temat , zobacz [Public Typedefs](#public-typedefs) sekcji.
+Aby uzyskać więcej informacji na temat `Base` , zobacz sekcję [publiczne definicje](#public-typedefs) .
 
-## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a>InterfaceTraits::CastToBase
+## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a>InterfaceTraits:: CastToBase —
 
-Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ```cpp
 template<typename T>
@@ -141,24 +141,24 @@ static __forceinline Base* CastToBase(
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ parametru *ptr*.
+Typ parametru *PTR*.
 
-*Ptr*<br/>
+*ptr*<br/>
 Wskaźnik do typu *T*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do `Base`.
+Wskaźnik do `Base` .
 
 ### <a name="remarks"></a>Uwagi
 
-Rzutuje określony wskaźnik na `Base`wskaźnik do .
+Rzutuje określony wskaźnik na wskaźnik `Base` .
 
-Aby uzyskać `Base`więcej informacji na temat , zobacz [Public Typedefs](#public-typedefs) sekcji.
+Aby uzyskać więcej informacji na temat `Base` , zobacz sekcję [publiczne definicje](#public-typedefs) .
 
-## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a>InterfaceTraits::CastToUnknown
+## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a>InterfaceTraits:: CastToUnknown —
 
-Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ```cpp
 template<typename T>
@@ -170,24 +170,24 @@ static __forceinline IUnknown* CastToUnknown(
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ parametru *ptr*.
+Typ parametru *PTR*.
 
-*Ptr*<br/>
-Wskaźnik do wpisywać *T*.
+*ptr*<br/>
+Wskaźnik do typu *T*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do IUnknown, `Base` z którego pochodzi.
+Wskaźnik do elementu IUnknown, z którego `Base` pochodzi.
 
 ### <a name="remarks"></a>Uwagi
 
-Rzutuje określony wskaźnik na `IUnknown`wskaźnik do .
+Rzutuje określony wskaźnik na wskaźnik `IUnknown` .
 
-Aby uzyskać `Base`więcej informacji na temat , zobacz [Public Typedefs](#public-typedefs) sekcji.
+Aby uzyskać więcej informacji na temat `Base` , zobacz sekcję [publiczne definicje](#public-typedefs) .
 
-## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a>InterfaceTraits::FillArrayWithIid
+## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a>InterfaceTraits:: FillArrayWithIid —
 
-Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ```cpp
 __forceinline static void FillArrayWithIid(
@@ -198,23 +198,23 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parametry
 
-*Indeks*<br/>
-Wskaźnik do pola, które zawiera wartość indeksu opartego na wartości od zera.
+*indeks*<br/>
+Wskaźnik do pola, które zawiera wartość indeksu równą zero.
 
-*iids*<br/>
-Tablica identyfikatorów interfejsu.
+*IID*<br/>
+Tablica identyfikatorów interfejsów.
 
 ### <a name="remarks"></a>Uwagi
 
-Przypisuje identyfikator interfejsu do `Base` elementu tablicy określonego przez argument indeksu.
+Przypisuje identyfikator interfejsu `Base` do elementu tablicy określonego przez argument indeksu.
 
-W przeciwieństwie do nazwy tego interfejsu API tylko jeden element tablicy jest modyfikowany; nie cała tablica.
+W przeciwieństwie do nazwy tego interfejsu API modyfikowany jest tylko jeden element array; to nie jest cała tablica.
 
-Aby uzyskać `Base`więcej informacji na temat , zobacz [Public Typedefs](#public-typedefs) sekcji.
+Aby uzyskać więcej informacji na temat `Base` , zobacz sekcję [publiczne definicje](#public-typedefs) .
 
-## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a>InterfaceTraits::IidCount
+## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a>InterfaceTraits:: IidCount —
 
-Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ```cpp
 static const unsigned long IidCount = 1;
@@ -222,11 +222,11 @@ static const unsigned long IidCount = 1;
 
 ### <a name="remarks"></a>Uwagi
 
-Przechowuje liczbę identyfikatorów interfejsu skojarzonych `InterfaceTraits` z bieżącym obiektem.
+Przechowuje liczbę identyfikatorów interfejsów skojarzonych z bieżącym `InterfaceTraits` obiektem.
 
-## <a name="interfacetraitsverify"></a><a name="verify"></a>InterfaceTraits::Sprawdź
+## <a name="interfacetraitsverify"></a><a name="verify"></a>InterfaceTraits:: Verify
 
-Obsługuje infrastrukturę WRL i nie jest przeznaczony do użycia bezpośrednio z kodu.
+Obsługuje infrastrukturę WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 
 ```cpp
 __forceinline static void Verify();
@@ -234,6 +234,6 @@ __forceinline static void Verify();
 
 ### <a name="remarks"></a>Uwagi
 
-Sprawdza, `Base` czy jest prawidłowo pochodna.
+Weryfikuje, które `Base` jest prawidłowo wyprowadzane.
 
-Aby uzyskać `Base`więcej informacji na temat , zobacz [Public Typedefs](#public-typedefs) sekcji.
+Aby uzyskać więcej informacji na temat `Base` , zobacz sekcję [publiczne definicje](#public-typedefs) .

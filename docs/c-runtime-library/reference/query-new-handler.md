@@ -28,12 +28,12 @@ helpviewer_keywords:
 - error handling
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
-ms.openlocfilehash: 0cbd434ee0b75f78a2492bd6239bd89f584215ff
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9c87a63a9ed94eb1473230aedb5e9c17fcc6410b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949695"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216846"
 ---
 # <a name="_query_new_handler"></a>_query_new_handler
 
@@ -53,7 +53,7 @@ Zwraca adres bieżącej nowej procedury obsługi ustawionej przez **_set_new_han
 
 ## <a name="remarks"></a>Uwagi
 
-C++ **Funkcja _query_new_handler** zwraca adres bieżącej funkcji obsługi wyjątków ustawionej przez C++ funkcję [_set_new_handler](set-new-handler.md) . **_set_new_handler** służy do określania funkcji obsługi wyjątków, która ma uzyskać kontrolę, jeśli **Nowy** operator nie może przydzielić pamięci. Aby uzyskać więcej informacji, zobacz Omówienie [operatorów New i DELETE](../../cpp/new-and-delete-operators.md) w dokumentacji C++ języka.
+Funkcja C++ **_query_new_handler** zwraca adres bieżącej funkcji obsługi wyjątków ustawionej przez funkcję [_set_new_handler](set-new-handler.md) języka c++. **_set_new_handler** służy do określania funkcji obsługi wyjątków, która ma uzyskać kontrolę, jeśli **`new`** operator nie może przydzielić pamięci. Aby uzyskać więcej informacji, zobacz Omówienie [operatorów New i DELETE](../../cpp/new-and-delete-operators.md) w dokumentacji języka C++.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -70,4 +70,4 @@ Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/
 ## <a name="see-also"></a>Zobacz także
 
 [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)<br/>
-[free](free.md)<br/>
+[zwolniony](free.md)<br/>

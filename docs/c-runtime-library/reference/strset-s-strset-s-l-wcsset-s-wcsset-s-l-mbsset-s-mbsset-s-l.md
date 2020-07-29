@@ -66,12 +66,12 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-ms.openlocfilehash: 0338d84cbea864eca561c37f1d107a08f1c1e01e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 520e272955884b6701f12576e2f5d5c86fe25684
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911144"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216716"
 ---
 # <a name="_strset_s-_strset_s_l-_wcsset_s-_wcsset_s_l-_mbsset_s-_mbsset_s_l"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 
@@ -129,7 +129,7 @@ Rozmiar buforu *str* .
 *s*<br/>
 Ustawienie znaku.
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -140,7 +140,7 @@ Te funkcje weryfikują ich argumenty. Jeśli *str* jest wskaźnikiem o wartości
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_strset_s** ustawia wszystkie znaki *str* na *c* (konwertowane na **char**), z wyjątkiem kończącego znaku null. **_wcsset_s** i **_mbsset_s** są wersjami znaków dwubajtowych i **_strset_s**. Typy danych argumentów i wartości zwracanych różnią się odpowiednio. Funkcje te zachowują się identycznie w inny sposób.
+Funkcja **_strset_s** ustawia wszystkie znaki *str* na *c* (przekonwertowane do **`char`** ), z wyjątkiem kończącego znaku null. **_wcsset_s** i **_mbsset_s** są wersjami znaków dwubajtowych i **_strset_s**. Typy danych argumentów i wartości zwracanych różnią się odpowiednio. Funkcje te zachowują się identycznie w inny sposób.
 
 Wartość wyjściowa jest zależna od ustawienia ustawienia kategorii **LC_CTYPE** ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocals](setlocale-wsetlocale.md) . Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersje z sufiksem **_l** są identyczne, z tą różnicą, że korzystają z przekazaną w zamian parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
@@ -159,11 +159,11 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_strset_s**|\<> String. h|
-|**_strset_s_l**|\<Używanie TCHAR. h>|
-|**_wcsset_s**|\<ciąg. h> lub \<WCHAR. h>|
-|**_wcsset_s_l**|\<Używanie TCHAR. h>|
-|**_mbsset_s**, **_mbsset_s_l**|\<mbstring. h>|
+|**_strset_s**|\<string.h>|
+|**_strset_s_l**|\<tchar.h>|
+|**_wcsset_s**|\<string.h> lub \<wchar.h>|
+|**_wcsset_s_l**|\<tchar.h>|
+|**_mbsset_s**, **_mbsset_s_l**|\<mbstring.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -189,11 +189,11 @@ Before: Fill the string with something.
 After:  *******************************
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset, wmemset](memset-wmemset.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

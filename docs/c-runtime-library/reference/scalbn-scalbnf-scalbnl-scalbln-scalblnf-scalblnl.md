@@ -46,12 +46,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 3d450459b4f428e5d5f1f02eaa71a126e4f710df
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 351f56629435754f74565d9674874d5a73915773
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918186"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231380"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -104,7 +104,7 @@ long double scalblnl(
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Wartość zmiennoprzecinkowa.
 
 *EXP*<br/>
@@ -118,9 +118,9 @@ Aby uzyskać więcej informacji na temat **errno** i możliwych zwracanych warto
 
 ## <a name="remarks"></a>Uwagi
 
-**FLT_RADIX** jest zdefiniowany w \<tabeli zmiennoprzecinkowej. h> jako natywny podstawy zmiennoprzecinkowy; w systemach binarnych ma wartość 2, a **scalbn —** jest odpowiednikiem [ldexp —](ldexp.md).
+**FLT_RADIX** jest zdefiniowany \<float.h> jako natywny zmiennoprzecinkowy podstawy; w systemach binarnych ma wartość 2, a **scalbn —** jest odpowiednikiem [ldexp —](ldexp.md).
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **scalbn —** i **scalbln** , które pobierają i zwracają **zmiennoprzecinkowe** lub **długie** **podwójne** typy. W programie C **scalbn —** zawsze pobiera wartość typu **Double** i **int** oraz zwraca wartość typu **Double**, a **scalbln** zawsze przyjmuje wartość typu **Double** i **Long** i zwraca wartość typu **Double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **scalbn —** i **scalbln** , które pobierają i zwracają **`float`** lub **`long double`** typu. W programie w języku C **scalbn —** zawsze przyjmuje i **`double`** **`int`** i zwraca **`double`** , a funkcja **scalbln** zawsze przyjmuje i **`double`** **`long`** zwraca **`double`** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -128,7 +128,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**scalbn —**, **scalbnf —**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<> Math. h|\<cmath>|
+|**scalbn —**, **scalbnf —**, **scalbnl**, **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -156,7 +156,7 @@ int main( void )
 6.4 times FLT_RADIX to the power of 3 is 51.2
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

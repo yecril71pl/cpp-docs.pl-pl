@@ -8,16 +8,16 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - external linkage, extern modifier
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
-ms.openlocfilehash: 6bbae7c778f5196ac0dca387265499b27119a367
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3242f86e30dcf3227586400b83266ad366ec7e8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233837"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217106"
 ---
 # <a name="extern-storage-class-specifier"></a>extern — specyfikator klasy magazynowania
 
-Zmienna zadeklarowana ze specyfikatorem klasy magazynu **extern** jest odwołaniem do zmiennej o tej samej nazwie zdefiniowanej w innym pliku źródłowym. Służy do widoczności definicji zmiennej na poziomie zewnętrznym. Zmienna zadeklarowana jako **extern** nie ma magazynu przypisanego do siebie. jest to tylko nazwa.
+Zmienna zadeklarowana ze **`extern`** specyfikatorem klasy magazynu jest odwołaniem do zmiennej o tej samej nazwie zdefiniowanej w innym pliku źródłowym. Służy do widoczności definicji zmiennej na poziomie zewnętrznym. Zmienna zadeklarowana jako nie **`extern`** ma magazynu przypisanego do siebie; jest tylko nazwą.
 
 ## <a name="example"></a>Przykład
 
@@ -59,10 +59,10 @@ void func(void)
 }
 ```
 
-W tym przykładzie zmienna `i` jest zdefiniowana w Source1. c z początkową wartością 1. Deklaracja **extern** w SOURCE2. c sprawia, że w tym pliku jest widoczne "i".
+W tym przykładzie zmienna `i` jest zdefiniowana w Source1. c z początkową wartością 1. **`extern`** Deklaracja w SOURCE2. c powoduje, że w tym pliku jest widoczne "i".
 
-W `func` funkcji adres zmiennej `i` globalnej jest używany do inicjowania zmiennej `external_i`wskaźnika **statycznego** . Dzieje się tak, ponieważ zmienna globalna ma **statyczny** okres istnienia, co oznacza, że jej adres nie zmienia się podczas wykonywania programu. Następnie zmienna `i` jest definiowana w zakresie `func` jako zmienna lokalna z wartością początkową 16. Ta definicja nie wpływa na wartość na poziomie `i`zewnętrznym, która jest ukryta przy użyciu jego nazwy dla zmiennej lokalnej. Wartość globalnego `i` jest teraz dostępna tylko za pomocą wskaźnika `external_i`.
+W `func` funkcji adres zmiennej globalnej `i` jest używany do inicjowania **`static`** zmiennej wskaźnika `external_i` . Dzieje się tak, ponieważ zmienna globalna ma **`static`** okres istnienia, co oznacza, że jej adres nie zmienia się podczas wykonywania programu. Następnie zmienna `i` jest definiowana w zakresie `func` jako zmienna lokalna z wartością początkową 16. Ta definicja nie wpływa na wartość na poziomie zewnętrznym `i` , która jest ukryta przy użyciu jego nazwy dla zmiennej lokalnej. Wartość globalnego `i` jest teraz dostępna tylko za pomocą wskaźnika `external_i` .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Specyfikatory klasy magazynowania dla deklaracji na poziomie wewnętrznym](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

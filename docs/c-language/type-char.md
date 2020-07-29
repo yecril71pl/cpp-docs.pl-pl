@@ -6,23 +6,23 @@ helpviewer_keywords:
 - unsigned char keyword [C]
 - char keyword [C]
 ms.assetid: a5da0866-e780-4793-be87-15a8426e7ea0
-ms.openlocfilehash: bc8d3bef85b82d5bb5c2575b3bc6c6d8a4887140
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b60af4becb3fa496a0b54c3702eac247bd75d5e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345048"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231445"
 ---
 # <a name="type-char"></a>Typ char
 
-`char` Typ jest używany do przechowywania wartości całkowitej elementu członkowskiego zestawu znaków, które można reprezentować. Ta wartość całkowita to kod ASCII odpowiadający określonemu znakowi.
+**`char`** Typ jest używany do przechowywania wartości całkowitej elementu członkowskiego zestawu znaków, które można reprezentować. Ta wartość całkowita to kod ASCII odpowiadający określonemu znakowi.
 
 **Specyficzne dla firmy Microsoft**
 
-Wartości znakowe typu `unsigned char` mają zakres od 0 do 0xFF szesnastkowy. **Podpisany znak** ma zakres 0X80 do 0x7F. Te zakresy przekładają się na 0 do 255 dziesiętnych i-128 do + 127 dziesiętnego. Opcje kompilatora/J zmieniają wartość domyślną z **zalogowanego** na `unsigned`.
+Wartości znakowe typu **`unsigned char`** mają zakres od 0 do 0xFF szesnastkowy. **`signed char`** Ma zakres 0x80 do 0x7F. Te zakresy przekładają się na 0 do 255 dziesiętnych i-128 do + 127 dziesiętnego. Opcje kompilatora/J zmieniają wartość domyślną z **`signed`** na **`unsigned`** .
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Magazyn typów podstawowych](../c-language/storage-of-basic-types.md)

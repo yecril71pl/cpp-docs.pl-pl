@@ -1,17 +1,17 @@
 ---
-title: transmit_as (C++ atrybut com)
+title: transmit_as (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: cf89be12672ac77a67617b6b222f27d739db9261
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a34d57cc60dcc65e8b111c595fdd819dea407b78
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214490"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201131"
 ---
 # <a name="transmit_as"></a>transmit_as
 
@@ -25,12 +25,12 @@ Instruuje kompilator, aby skojarzyć przedstawiony typ, który obsługuje aplika
 
 ### <a name="parameters"></a>Parametry
 
-*type*<br/>
+*Wprowadź*<br/>
 Określa typ danych, który jest przesyłany między klientem i serwerem.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **transmit_as** C++ ma taką samą funkcjonalność jak atrybut [transmit_as](/windows/win32/Midl/transmit-as) MIDL.
+Atrybut **transmit_as** C++ ma takie same funkcje jak atrybut [transmit_as](/windows/win32/Midl/transmit-as) MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -70,15 +70,15 @@ struct _TREE_NODE_TYPE * right;
 
 |||
 |-|-|
-|**Dotyczy**|**własne**|
+|**Dotyczy**|**`typedef`**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty IDL](idl-attributes.md)<br/>
-[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)
+[Atrybuty typedef, enum, Union i struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[wywozu](export.md)

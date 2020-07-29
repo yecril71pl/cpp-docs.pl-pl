@@ -1,5 +1,5 @@
 ---
-title: '&lt;type_traits &gt;'
+title: '&lt;type_traits&gt;'
 ms.date: 02/21/2019
 f1_keywords:
 - <type_traits>
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: a0d7f57d13b4387dd5ba39048adf65d9ec7ca3f5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 94178d2efd1942a7475fa7987526b021b1c6fb68
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684426"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201963"
 ---
-# <a name="lttype_traitsgt"></a>&lt;type_traits &gt;
+# <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
 Definiuje szablony dla stałych czasu kompilacji, które zawierają informacje o właściwościach ich argumentów typu lub generują przekształcone typy.
 
@@ -26,22 +26,22 @@ Definiuje szablony dla stałych czasu kompilacji, które zawierają informacje o
 
 ## <a name="remarks"></a>Uwagi
 
-Klasy i szablony w \<type_traits > są używane do obsługi wnioskowania o typie, klasyfikacji i transformacji w czasie kompilacji. Są one również używane do wykrywania błędów związanych z typem i pomagają zoptymalizować kod generyczny. Cechy typu jednoargumentowego opisują właściwość typu, cechy typu binarnego opisują relację między typami, a cechy transformacji modyfikują właściwość typu.
+Klasy i szablony w programie służą \<type_traits> do obsługi wnioskowania o typie, klasyfikacji i transformacji w czasie kompilacji. Są one również używane do wykrywania błędów związanych z typem i pomagają zoptymalizować kod generyczny. Cechy typu jednoargumentowego opisują właściwość typu, cechy typu binarnego opisują relację między typami, a cechy transformacji modyfikują właściwość typu.
 
 Klasa pomocnika `integral_constant` i jej specjalizacje szablonu `true_type` i `false_type` tworzą klasy bazowe dla predykatów typu. *Predykat typu* jest szablonem, który przyjmuje jeden lub więcej argumentów typu. Gdy predykat typu *ma wartość true*, jest publicznie pochodny, bezpośrednio lub pośrednio, z [true_type](../standard-library/type-traits-typedefs.md#true_type). Gdy predykat typu ma *wartość false*, jest publicznie pochodny, bezpośrednio lub pośrednio, z [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
-*Modyfikator typu* lub *cecha przekształcenia* to szablon, który przyjmuje jeden lub więcej argumentów szablonu i ma jeden element członkowski, `type`, który jest synonimem dla zmodyfikowanego typu.
+*Modyfikator typu* lub *cecha przekształcenia* to szablon, który przyjmuje jeden lub więcej argumentów szablonu i ma jeden element członkowski, `type` który jest synonimem dla zmodyfikowanego typu.
 
 ### <a name="alias-templates"></a>Szablony aliasów
 
-Aby uprościć wyrażenia cech typu, należy podać [Szablony aliasów](../cpp/aliases-and-typedefs-cpp.md) dla `typename some_trait<T>::type`, gdzie *some_trait* jest nazwą szablonu klasy. Na przykład [add_const](../standard-library/add-const-class.md) ma szablon aliasu dla tego typu, `add_const_t`, zdefiniowany jako:
+Aby uprościć wyrażenia cech typu, są udostępniane [Szablony aliasów](../cpp/aliases-and-typedefs-cpp.md) `typename some_trait<T>::type` , gdzie *some_trait* jest nazwą szablonu klasy. Na przykład [add_const](../standard-library/add-const-class.md) ma szablon aliasu dla typu, `add_const_t` , zdefiniowany jako:
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-Oto podane aliasy dla elementów członkowskich `type`:
+Są to podane aliasy dla `type` członków:
 
 ||||
 |-|-|-|
@@ -68,8 +68,8 @@ Kategorie typów podstawowych
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|Testuje, czy typ jest typem **void**.|
-|[is_null_pointer](../standard-library/is-null-pointer-class.md)|Testuje, czy typ jest `std::nullptr_t`.|
+|[is_void](../standard-library/is-void-class.md)|Testuje, czy typ to **`void`** .|
+|[is_null_pointer](../standard-library/is-null-pointer-class.md)|Testuje, czy typ to `std::nullptr_t` .|
 |[is_integral](../standard-library/is-integral-class.md)|Testuje, czy typ jest całkowity.|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|Testuje, czy typ jest zmiennoprzecinkowy.|
 |[is_array](../standard-library/is-array-class.md)|Testuje, czy typ jest tablicą.|
@@ -89,7 +89,7 @@ Kategorie typów złożonych
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|Testuje, czy typ jest odwołaniem.|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|Testuje, czy typ jest arytmetyczny.|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|Testuje, czy typ jest typem **void** czy arytmetyką.|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|Testuje, czy typ jest **`void`** lub arytmetyczny.|
 |[is_object](../standard-library/is-object-class.md)|Testuje, czy typ jest typem obiektu.|
 |[is_scalar](../standard-library/is-scalar-class.md)|Testuje, czy typ jest skalarny.|
 |[is_compound](../standard-library/is-compound-class.md)|Testuje, czy typ nie jest skalarny.|
@@ -99,17 +99,17 @@ Właściwości typu
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|Testuje, czy typ jest wartością **stałą**.|
-|[is_volatile](../standard-library/is-volatile-class.md)|Testuje, czy typ jest **nietrwały**.|
+|[is_const](../standard-library/is-const-class.md)|Testuje, czy typ to **`const`** .|
+|[is_volatile](../standard-library/is-volatile-class.md)|Testuje, czy typ to **`volatile`** .|
 |[is_trivial](../standard-library/is-trivial-class.md)|Testuje, czy typ jest prosty.|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|Testuje, czy typ jest z możliwością kopiowania.|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|Testuje, czy typ jest standardowym typem układu.|
 |[is_pod](../standard-library/is-pod-class.md)|Testuje, czy typ jest POD.|
-|[is_literal_type](../standard-library/is-literal-type-class.md)|Testuje, czy typ może być zmienną `constexpr` lub używaną w funkcji `constexpr`.|
+|[is_literal_type](../standard-library/is-literal-type-class.md)|Testuje, czy typ może być **`constexpr`** zmienną lub używaną w **`constexpr`** funkcji.|
 |[is_empty](../standard-library/is-empty-class.md)|Testuje, czy typ jest pustą klasą.|
 |[is_polymorphic](../standard-library/is-polymorphic-class.md)|Testuje, czy typ jest klasą polimorficzną.|
 |[is_abstract](../standard-library/is-abstract-class.md)|Testuje, czy typ jest klasą abstrakcyjną.|
-|[is_final](../standard-library/is-final-class.md)|Testuje, czy typ jest typem klasy oznaczonym `final`.|
+|[is_final](../standard-library/is-final-class.md)|Testuje, czy typ jest oznaczony typem klasy `final` .|
 |[is_aggregate](../standard-library/is-aggregate-class.md)||
 |[is_signed](../standard-library/is-signed-class.md)|Testuje, czy typ jest cyfrową liczbą całkowitą.|
 |[is_unsigned](../standard-library/is-unsigned-class.md)|Testuje, czy typ jest liczbą całkowitą bez znaku.|
@@ -168,9 +168,9 @@ Nietrwałe modyfikacje
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|Tworzy typ **const** z typu.|
-|[add_volatile](../standard-library/add-volatile-class.md)|Tworzy typ **nietrwały** z typu.|
-|[add_cv](../standard-library/add-cv-class.md)|Tworzy typ **const volatile** z typu.|
+|[add_const](../standard-library/add-const-class.md)|Tworzy **`const`** Typ z typu.|
+|[add_volatile](../standard-library/add-volatile-class.md)|Tworzy **`volatile`** Typ z typu.|
+|[add_cv](../standard-library/add-cv-class.md)|Tworzy **`const volatile`** Typ z typu.|
 |[remove_const](../standard-library/remove-const-class.md)|Tworzy typ inny niż const z typu.|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|Tworzy typ nietrwały od typu.|
 |[remove_cv](../standard-library/remove-cv-class.md)|Tworzy typ inny niż const nietrwały od typu.|
@@ -228,4 +228,4 @@ Cechy operatora logicznego
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<functional >](../standard-library/functional.md)
+[\<functional>](../standard-library/functional.md)

@@ -1,5 +1,5 @@
 ---
-title: Struktura poprawiono elementy high_resolution_clock | Dokumentacja firmy Microsoft
+title: Struktura high_resolution_clock | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018
 ms.technology: cpp-standard-libraries
@@ -12,16 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b00b20e7cea4fa24b37ad33d5536eb9844e6953
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 850d5e3a5434aa44e23a7f74aeb9c306ab6c0a8e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268091"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203211"
 ---
-# <a name="steadyclock-struct"></a>steady_clock — struktura
+# <a name="steady_clock-struct"></a>steady_clock — struktura
 
-Reprezentuje *high_resolution* zegara.
+Przedstawia zegar *high_resolution* .
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,19 +35,19 @@ class high_resolution_clock
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`duration`|Synonim dla `nanoseconds`zdefiniowaną w \<chrono >.|
-|`period`|Synonim dla `nano`zdefiniowaną w \<współczynnik >.|
-|`rep`|Synonim dla **długie** **długie**, typ, który jest używany do reprezentowania liczby taktów zegara w zamkniętym `duration`.|
-|`time_point`|Synonim dla `chrono::time_point<high_resolution_clock>`.|
+|`duration`|Synonim dla `nanoseconds` , zdefiniowany w \<chrono> .|
+|`period`|Synonim dla `nano` , zdefiniowany w \<ratio> .|
+|`rep`|Synonim dla **`long long`** typu, który jest używany do reprezentowania liczby taktów zegara w zawartym utworzeniu wystąpienia `duration` .|
+|`time_point`|Synonim dla `chrono::time_point<high_resolution_clock>` .|
 
 ## <a name="functions"></a>Funkcje
 
 |||
 |-|-|
-|`now`|Zwraca bieżącą godzinę jako `time_point` wartość.|
+|`now`|Zwraca bieżący czas jako `time_point` wartość.|
 
 ## <a name="constants"></a>Stałe
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`is_steady`|Przechowuje **true**. A `high_resolution_clock` jest *stały*.|
+|`is_steady`|Zawiera **`true`** . `high_resolution_clock`Jest *stała*.|

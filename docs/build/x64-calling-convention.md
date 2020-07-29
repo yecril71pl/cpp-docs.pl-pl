@@ -3,11 +3,12 @@ title: Konwencja wywoływania x64
 description: Szczegóły domyślnej konwencji wywoływania x64.
 ms.date: 07/06/2020
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 9bfecd0fb154658a299d3dac7d9e45398ebe450b
-ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.openlocfilehash: b615d2e4473fed1d090b7411211c08b0b824bc8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86058636"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87200858"
 ---
 # <a name="x64-calling-convention"></a>Konwencja wywoływania x64
 
@@ -43,7 +44,7 @@ Argumenty o wartościach całkowitych w czterech miejscach z lewej strony są pr
 
 Wszystkie argumenty zmiennoprzecinkowe i podwójnej precyzji w pierwszych czterech parametrach są przesyłane w XMM0-XMM3, w zależności od pozycji. Wartości zmiennoprzecinkowe są umieszczane tylko w rejestrach całkowitych RCX, RDX, R8 i R9, gdy istnieją argumenty typu VarArgs. Aby uzyskać szczegółowe informacje, zobacz [VarArgs](#varargs). Podobnie rejestry XMM0-XMM3 są ignorowane, gdy odpowiadający argument jest liczbą całkowitą lub wskaźnikiem.
 
-[`__m128`](../cpp/m128.md)typy, tablice i ciągi nigdy nie są przesyłane przez bezpośrednią wartość. Zamiast tego wskaźnik jest przesyłany do pamięci przydzielonej przez obiekt wywołujący. Struktury i Unii o rozmiarze 8, 16, 32 lub 64 bitów i `__m64` typach są przesyłane tak, jakby były liczbami całkowitymi o tym samym rozmiarze. Struktury lub złożenia innych rozmiarów są przesyłane jako wskaźnik do pamięci przydzielonej przez obiekt wywołujący. Dla tych typów agregacji przechodzą jako wskaźnik, w tym `__m128` , Pamięć tymczasowa przydzielonej przez obiekt wywołujący musi być równa 16-bajtowa.
+[`__m128`](../cpp/m128.md)typy, tablice i ciągi nigdy nie są przesyłane przez bezpośrednią wartość. Zamiast tego wskaźnik jest przesyłany do pamięci przydzielonej przez obiekt wywołujący. Struktury i Unii o rozmiarze 8, 16, 32 lub 64 bitów i **`__m64`** typach są przesyłane tak, jakby były liczbami całkowitymi o tym samym rozmiarze. Struktury lub złożenia innych rozmiarów są przesyłane jako wskaźnik do pamięci przydzielonej przez obiekt wywołujący. Dla tych typów agregacji przechodzą jako wskaźnik, w tym **`__m128`** , Pamięć tymczasowa przydzielonej przez obiekt wywołujący musi być równa 16-bajtowa.
 
 Funkcje wewnętrzne, które nie przydzielą przestrzeni stosu i nie wywołują innych funkcji, czasami używają innych nietrwałych rejestrów do przekazania dodatkowych argumentów rejestru. Optymalizacja jest możliwa przez ścisłe powiązanie między kompilatorem a implementacją funkcji wewnętrznej.
 
@@ -55,9 +56,9 @@ Poniższa tabela zawiera podsumowanie sposobu przekazywania parametrów według 
 |-|-|-|-|-|-|
 | liczba zmiennoprzecinkowa | stack | XMM3 | XMM2 | XMM1 | XMM0 |
 | liczba całkowita | stack | R9 | R8 | RDX | RCX |
-| Agregaty (8, 16, 32 lub 64 bitów) i`__m64` | stack | R9 | R8 | RDX | RCX |
+| Agregaty (8, 16, 32 lub 64 bitów) i**`__m64`** | stack | R9 | R8 | RDX | RCX |
 | Inne agregaty, jako wskaźniki | stack | R9 | R8 | RDX | RCX |
-| `__m128`, jako wskaźnik | stack | R9 | R8 | RDX | RCX |
+| **`__m128`**, jako wskaźnik | stack | R9 | R8 | RDX | RCX |
 
 ### <a name="example-of-argument-passing-1---all-integers"></a>Przykład przejścia argumentu 1 — wszystkie liczby całkowite
 
@@ -103,9 +104,9 @@ func2() {   // RCX = 2, RDX = XMM1 = 1.0, and R8 = 7
 }
 ```
 
-## <a name="return-values"></a>Zwracane wartości
+## <a name="return-values"></a>Wartości zwracane
 
-Skalarna wartość zwracana, która może pasować do 64 bitów, łącznie z `__m64` typem, jest zwracana przez RAX. Typy nieskalarne, w tym wartości zmiennoprzecinkowe, podwaja i typy wektorów, takie jak [`__m128`](../cpp/m128.md) , [`__m128i`](../cpp/m128i.md) [`__m128d`](../cpp/m128d.md) są zwracane w XMM0. Stan nieużywanych bitów w wartości zwracanej przez RAX lub XMM0 jest niezdefiniowany.
+Skalarna wartość zwracana, która może pasować do 64 bitów, łącznie z **`__m64`** typem, jest zwracana przez RAX. Typy nieskalarne, w tym wartości zmiennoprzecinkowe, podwaja i typy wektorów, takie jak [`__m128`](../cpp/m128.md) , [`__m128i`](../cpp/m128i.md) [`__m128d`](../cpp/m128d.md) są zwracane w XMM0. Stan nieużywanych bitów w wartości zwracanej przez RAX lub XMM0 jest niezdefiniowany.
 
 Typy zdefiniowane przez użytkownika mogą być zwracane przez wartość z funkcji globalnych i statycznych funkcji składowych. Aby zwrócić typ zdefiniowany przez użytkownika przez wartość w RAX, musi mieć długość 1, 2, 4, 8, 16, 32 lub 64 bitów. Musi on również mieć zdefiniowany przez użytkownika Konstruktor, destruktor lub operator przypisania kopiowania. Nie może mieć żadnych prywatnych lub chronionych niestatycznych elementów członkowskich danych i nie ma żadnych statycznych składowych danych typu referencyjnego. Nie może mieć klas bazowych ani funkcji wirtualnych. Ponadto może mieć tylko składowe danych, które spełniają te wymagania. (Ta definicja jest zasadniczo taka sama jak w przypadku typu C++ 03 POD. Ze względu na to, że definicja została zmieniona w standardzie C++ 11, nie zalecamy używania `std::is_pod` dla tego testu.) W przeciwnym razie obiekt wywołujący musi przydzielić pamięć dla wartości zwracanej i przekazać do niego wskaźnik jako pierwszy argument. Pozostałe argumenty są następnie przesunięte o jeden argument w prawo. Ten sam wskaźnik musi być zwracany przez obiekt wywoływany w RAX.
 
@@ -211,7 +212,7 @@ Nie należy wprowadzać żadnych założeń dotyczących nietrwałego stanu czę
 
 ## <a name="setjmplongjmp"></a>setjmp/longjmp
 
-Po dołączeniu SETJMPEX. h lub setjmp. h wszystkie wywołania [`setjmp`](../c-runtime-library/reference/setjmp.md) lub [`longjmp`](../c-runtime-library/reference/longjmp.md) powodują odwinięcie, które wywołuje destruktory i `__finally` wywołania.  To zachowanie różni się od x86, gdzie w tym setjmp. h powoduje, `__finally` że nie są wywoływane klauzule i destruktory.
+Po dołączeniu SETJMPEX. h lub setjmp. h wszystkie wywołania [`setjmp`](../c-runtime-library/reference/setjmp.md) lub [`longjmp`](../c-runtime-library/reference/longjmp.md) powodują odwinięcie, które wywołuje destruktory i **`__finally`** wywołania.  To zachowanie różni się od x86, gdzie w tym setjmp. h powoduje, **`__finally`** że nie są wywoływane klauzule i destruktory.
 
 Wywołanie w celu `setjmp` zachowywania bieżącego wskaźnika stosu, rejestrów nietrwałych i rejestrów MXCSR.  Wywołania do `longjmp` powrotu do najnowszej `setjmp` lokacji wywołania i resetowania wskaźnika stosu, rejestrów nietrwałych i rejestrów MXCSR, z powrotem do stanu zakonserwowanego przez ostatnie `setjmp` wywołanie.
 

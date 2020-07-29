@@ -37,12 +37,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: d9e7adb321d85c728c5185c1663fd7f945fc4a82
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 898544f5b191eb68e0ed6f17d7c3c7df849e8d11
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914579"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216859"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 
@@ -63,7 +63,7 @@ long double nearbyint( long double x ); //C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Wartość do zaokrąglenia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -84,7 +84,7 @@ Podstawowa różnica między tą funkcją i [rukuj](rint-rintf-rintl.md) polega 
 
 Ponieważ maksymalne wartości zmiennoprzecinkowe są dokładnymi liczbami całkowitymi, ta funkcja nigdy nie przejdzie przez siebie. Zamiast tego dane wyjściowe mogą przekroczyć wartość zwracaną, w zależności od używanej wersji funkcji.
 
-Język C++ pozwala na Przeciążenie, dlatego można wywoływać przeciążenia **nearbyint —** , które pobierają i **zwracają parametry** **zmiennoprzecinkowe** lub **długie** . W programie C **nearbyint —** zawsze przyjmuje dwie wartości podwójne i zwraca wartość podwójnej precyzji.
+Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **nearbyint —** , które pobierają i zwracają **`float`** **`long double`** parametry lub. W programie C **nearbyint —** zawsze przyjmuje dwie wartości podwójne i zwraca wartość podwójnej precyzji.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -92,11 +92,11 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Nagłówek języka C|Nagłówek C++|
 |--------------|--------------|------------------|
-|**nearbyint —**, **nearbyintf —**, **nearbyintl**|\<> Math. h|\<cmath> lub \<Math. h>|
+|**nearbyint —**, **nearbyintf —**, **nearbyintl**|\<math.h>|\<cmath> lub \<math.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Alfabetyczne zestawienie funkcji](crt-alphabetical-function-reference.md)<br/>
 [Obsługa obliczeń matematycznych i zmiennoprzecinkowych](../floating-point-support.md)<br/>

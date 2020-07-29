@@ -29,12 +29,12 @@ helpviewer_keywords:
 - stack, recovering
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
-ms.openlocfilehash: b19b66279427aa4623cff037e67067096eb6bd42
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6f4d5d930ebdc487c3c2bcc2f93494a25528c438
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917781"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216781"
 ---
 # <a name="_resetstkoflw"></a>_resetstkoflw
 
@@ -79,7 +79,7 @@ Po przekroczeniu maksymalnego rozmiaru stosu system wykonuje następujące trzy 
 
 Należy pamiętać, że w tym momencie stos nie ma już strony ochrony. Przy następnym powiększeniu stosu przez program do końca, gdzie powinna być stroną ochrony, program zapisuje się poza końcem stosu i powoduje naruszenie zasad dostępu.
 
-Wywołaj **_resetstkoflw** , aby przywrócić stronę ochrony po każdym zakończeniu odzyskiwania po wystąpieniu wyjątku przepełnienia stosu. Tę funkcję można wywołać z wewnątrz głównej treści bloku **__except** lub poza blokiem **__except** . Istnieją jednak pewne ograniczenia dotyczące sytuacji, w których należy korzystać z programu. nie należy wywoływać **_resetstkoflw** z:
+Wywołaj **_resetstkoflw** , aby przywrócić stronę ochrony po każdym zakończeniu odzyskiwania po wystąpieniu wyjątku przepełnienia stosu. Tę funkcję można wywołać z wewnątrz głównej treści **`__except`** bloku lub poza **`__except`** blokiem. Istnieją jednak pewne ograniczenia dotyczące sytuacji, w których należy korzystać z programu. nie należy wywoływać **_resetstkoflw** z:
 
 - Wyrażenie filtru.
 
@@ -87,17 +87,17 @@ Wywołaj **_resetstkoflw** , aby przywrócić stronę ochrony po każdym zakońc
 
 - Funkcja wywołana z funkcji filtrowania.
 
-- Blok **catch** .
+- **`catch`** Blok.
 
-- Blok **__finally** .
+- **`__finally`** Blok.
 
 W tych punktach stos nie jest jeszcze wystarczająco rozrany.
 
-Wyjątki przepełnienia stosu są generowane jako wyjątki strukturalne, nie wyjątki C++, więc **_resetstkoflw** nie są przydatne w przypadku zwykłego bloku **catch** , ponieważ nie przechwytuje wyjątku przepełnienia stosu. Jeśli jednak [_set_se_translator](set-se-translator.md) jest używany do implementowania translatora wyjątków strukturalnych, który zgłasza wyjątki C++ (jak w drugim przykładzie), wyjątek przepełnienia stosu spowoduje wyjątek języka c++, który może być obsługiwany przez blok catch języka c++.
+Wyjątki przepełnienia stosu są generowane jako wyjątki strukturalne, nie wyjątki C++, dlatego **_resetstkoflw** nie są przydatne w przypadku zwykłego **`catch`** bloku, ponieważ nie przechwytuje wyjątku przepełnienia stosu. Jeśli jednak [_set_se_translator](set-se-translator.md) jest używany do implementowania translatora wyjątków strukturalnych, który zgłasza wyjątki C++ (jak w drugim przykładzie), wyjątek przepełnienia stosu spowoduje wyjątek języka c++, który może być obsługiwany przez blok catch języka c++.
 
 Nie jest bezpieczne wywoływanie **_resetstkoflw** w bloku catch języka C++, który został osiągnięty od wyjątku zgłoszonego przez funkcję translatora wyjątków strukturalnych. W takim przypadku przestrzeń stosu nie jest zwalniana, a wskaźnik stosu nie jest resetowany do zewnątrz bloku catch, chociaż destruktory zostały wywołane dla wszystkich obiektów zniszczalnych przed blokiem catch. Ta funkcja nie powinna być wywoływana do momentu zwolnienia przestrzeni stosu i zresetowania wskaźnika stosu. W związku z tym należy ją wywołać tylko po opuszczeniu bloku catch. W bloku catch należy używać możliwie najmniejszej ilości miejsca w stosie, ponieważ przepełnienie stosu, który występuje w bloku catch, który jest samo próba odzyskania z poprzedniego przepełnienia stosu, nie jest możliwe do odzyskania i może spowodować, że program przestanie odpowiadać, ponieważ przepełnienie w bloku catch wyzwala wyjątek, który jest obsługiwany przez ten sam blok catch.
 
-Istnieją sytuacje, w których **_resetstkoflw** mogą kończyć się niepowodzeniem nawet wtedy, gdy są używane w poprawnej lokalizacji, na przykład w bloku **__except** . Jeśli nawet po rozmieszczeniu stosu nadal nie ma wystarczającej ilości miejsca na stosie, aby wykonać **_resetstkoflw** bez zapisywania na ostatniej stronie stosu, **_resetstkoflw** nie może zresetować ostatniej strony stosu jako strony ochrony i zwróci wartość 0, wskazując awarię. W związku z tym bezpieczne użycie tej funkcji powinno obejmować sprawdzenie wartości zwracanej zamiast zagwarantowania, że stos jest bezpieczny do użycia.
+Istnieją sytuacje, w których **_resetstkoflw** mogą kończyć się niepowodzeniem, nawet jeśli są używane w poprawnej lokalizacji, na przykład w **`__except`** bloku. Jeśli nawet po rozmieszczeniu stosu nadal nie ma wystarczającej ilości miejsca na stosie, aby wykonać **_resetstkoflw** bez zapisywania na ostatniej stronie stosu, **_resetstkoflw** nie może zresetować ostatniej strony stosu jako strony ochrony i zwróci wartość 0, wskazując awarię. W związku z tym bezpieczne użycie tej funkcji powinno obejmować sprawdzenie wartości zwracanej zamiast zagwarantowania, że stos jest bezpieczny do użycia.
 
 Strukturalna obsługa wyjątków nie przechwytuje wyjątku **STATUS_STACK_OVERFLOW** , gdy aplikacja zostanie skompilowana z **/CLR** (zobacz [/CLR (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md)).
 
@@ -107,7 +107,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_resetstkoflw**|\<malloc. h>|
+|**_resetstkoflw**|\<malloc.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -221,7 +221,7 @@ resetting stack overflow
 
 W poniższym przykładzie przedstawiono zalecane użycie **_resetstkoflw** w programie, w którym strukturalne wyjątki są konwertowane na wyjątki C++.
 
-### <a name="code"></a>Code
+### <a name="code"></a>Kod
 
 ```cpp
 // crt_resetstkoflw2.cpp
@@ -309,6 +309,6 @@ Stack overflow!
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [_alloca](alloca.md)<br/>

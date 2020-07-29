@@ -43,19 +43,19 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: df63baa8ffa878a4a65c84e07f0e68aa383e79cf
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 62f97c901bc7e6dc34a2db6ad80193cc4aaa986a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079211"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231354"
 ---
 # <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
 Odczytuje sformatowane dane ze standardowego strumienia wejściowego. Bardziej bezpieczne wersje tych funkcji są dostępne; Zobacz [scanf_s, _scanf_s_l, wscanf_s _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
 
 > [!NOTE]
-> W programie Visual Studio 2015 `printf` i `scanf` Rodzina funkcji zostały zadeklarowane jako **wbudowane** i przeniesione do nagłówków `<stdio.h>` i `<conio.h>`. W przypadku migrowania starszego kodu w połączeniu z tymi funkcjami może być widoczny *LNK2019* . Aby uzyskać więcej informacji, [Zobacz C++ historia zmian wizualnych 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
+> W programie Visual Studio 2015 `printf` i `scanf` Rodzina funkcji zostały zadeklarowane jako **`inline`** i przenoszone do `<stdio.h>` `<conio.h>` nagłówków i. W przypadku migrowania starszego kodu w połączeniu z tymi funkcjami może być widoczny *LNK2019* . Aby uzyskać więcej informacji, zobacz [Visual C++ historię zmian 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 ## <a name="syntax"></a>Składnia
 
@@ -104,7 +104,7 @@ Aby uzyskać informacje o tych i innych kodach błędów, zobacz [_doserrno, err
 Funkcja **scanf** odczytuje dane ze standardowego strumienia wejściowego **stdin** i zapisuje dane w lokalizacji podanej przez *argument*. Każdy *argument* musi być wskaźnikiem do zmiennej typu odpowiadającego specyfikatorowi typu w *formacie*. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
 > [!IMPORTANT]
-> Podczas odczytywania ciągu z **scanf**, zawsze określaj szerokość formatu **% s** (na przykład **"% 32S"** zamiast **"% s"** ); w przeciwnym razie nieprawidłowo sformatowane dane wejściowe mogą łatwo spowodować przepełnienie buforu. Alternatywnie Rozważ użycie [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) lub [fgets](fgets-fgetws.md).
+> Podczas odczytywania ciągu z **scanf**, zawsze określaj szerokość formatu **% s** (na przykład **"% 32S"** zamiast **"% s"**); w przeciwnym razie nieprawidłowo sformatowane dane wejściowe mogą łatwo spowodować przepełnienie buforu. Alternatywnie Rozważ użycie [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) lub [fgets](fgets-fgetws.md).
 
 **wscanf** to dwubajtowa wersja **scanf**; argument *formatu* **wscanf** jest ciągiem znaków dwubajtowych. **wscanf** i **scanf** zachowują się identycznie, jeśli strumień jest otwarty w trybie ANSI. **scanf** obecnie nie obsługuje danych wejściowych ze strumienia Unicode.
 
@@ -123,8 +123,8 @@ Aby uzyskać więcej informacji, zobacz [Formatowanie pól specyfikacji — funk
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**scanf**, **_scanf_l**|\<stdio. h >|
-|**wscanf**, **_wscanf_l**|\<stdio. h > lub \<WCHAR. h >|
+|**scanf**, **_scanf_l**|\<stdio.h>|
+|**wscanf**, **_wscanf_l**|\<stdio.h> lub \<wchar.h>|
 
 Konsola nie jest obsługiwana w aplikacjach platforma uniwersalna systemu Windows (platformy UWP). Standardowe uchwyty strumienia, które są skojarzone z konsolą, **stdin**, **stdout**i **stderr**, muszą zostać przekierowane przed użyciem funkcji języka C w aplikacjach platformy UWP. Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -166,12 +166,12 @@ The number of fields input is 6
 The contents are: 36 92.300003 y n Wide characters
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
-[Wersja regionalna](../../c-runtime-library/locale.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf —, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf —, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>

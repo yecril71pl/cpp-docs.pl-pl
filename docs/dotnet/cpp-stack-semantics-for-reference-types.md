@@ -4,46 +4,46 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: 4d9aaa493eab39199ac75b6b9fe888c3e103f115
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 886d0d16d8b81364078db5604ab10d8dcc3fa561
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448068"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197842"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semantyka stosu języka C++ dla typów odwołań
 
-Przed Visual Studio 2005, wystąpienia typu referencyjnego można można tworzyć tylko za pomocą `new` operatora, który utworzył obiekt w pamięci zbierane sterty. Teraz można jednak utworzyć wystąpienia typu referencyjnego przy użyciu tej samej składni, którego używasz do utworzenia wystąpienia typu natywnego w stosie. Dlatego nie trzeba używać [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) do utworzenia obiektu typu referencyjnego. A gdy obiekt wykracza poza zakres, kompilator wywołuje destruktor obiektu.
+W starszych wersjach programu Visual Studio 2005 wystąpienie typu referencyjnego można utworzyć tylko przy użyciu **`new`** operatora, który utworzył obiekt na stertie zebranych elementów bezużytecznych. Można jednak teraz utworzyć wystąpienie typu referencyjnego przy użyciu tej samej składni, która będzie używana do tworzenia wystąpienia typu natywnego na stosie. Dlatego nie trzeba używać [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) do tworzenia obiektu typu referencyjnego. A gdy obiekt wykracza poza zakres, kompilator wywołuje destruktor obiektu.
 
 ## <a name="remarks"></a>Uwagi
 
-Podczas tworzenia wystąpienia typu referencyjnego, używając semantyki stosu, kompilator wewnętrznie tworzenia wystąpienia na stercie zebranych wyrzucania elementów (przy użyciu `gcnew`).
+Podczas tworzenia wystąpienia typu odwołania przy użyciu semantyki stosu kompilator wykonuje wewnętrznie Tworzenie wystąpienia na stosie odzyskiwanych elementów bezużytecznych (przy użyciu **`gcnew`** ).
 
-Kiedy podpisu lub zwracany typ funkcji obejmuje wystąpienia typu referencyjnego przez wartość, funkcja zostanie oznaczona w metadanych, które wymagają specjalnej obsługi (z modreq). To specjalnej obsługi jest obecnie świadczona wyłącznie przez klientów Visual C++. inne języki aktualnie nie obsługują konsumencki funkcji lub dane, których używa typów referencyjnych utworzonych za pomocą semantyka stosu.
+Gdy sygnatura lub typ zwracany funkcji zawiera wystąpienie typu odwołania przez wartość, funkcja zostanie oznaczona w metadanych jako wymagającej specjalnej obsługi (z modreq). Ta specjalna obsługa jest obecnie świadczona tylko przez Visual C++ klientów; inne języki nie obsługują obecnie korzystania z funkcji ani danych, które używają typów referencyjnych utworzonych przy użyciu semantyki stosu.
 
-Jednym z powodów używania `gcnew` (dynamiczna alokacja) zamiast stosu semantyki będzie, jeśli typ ma destruktor nie. Również typów odwołań utworzonych za pomocą semantyka stosu w sygnaturach funkcji nie jest możliwe, jeśli chcesz, aby funkcje do użycia przez języki inne niż Visual C++.
+Jedną z przyczyn użycia **`gcnew`** (Alokacja dynamiczna) zamiast semantyki stosu będzie, jeśli typ nie ma destruktora. Ponadto używanie typów odwołań utworzonych z semantyką stosu w sygnaturach funkcji nie będzie możliwe, jeśli chcesz, aby funkcje były używane przez języki inne niż Visual C++.
 
-Kompilator nie wygeneruje konstruktora kopiującego dla typu referencyjnego. W związku z tym Jeśli zdefiniujesz funkcję, która używa typu odwołania przez wartość w podpisie, należy zdefiniować konstruktora kopiującego dla typu odwołania. Konstruktora kopiującego dla typu odwołania, ma podpis następującą postać: `R(R%){}`.
+Kompilator nie będzie generował konstruktora kopiującego dla typu referencyjnego. W związku z tym, jeśli zdefiniujesz funkcję, która używa typu odwołania przez wartość w podpisie, musisz zdefiniować Konstruktor kopiujący dla typu referencyjnego. Konstruktor kopiujący dla typu referencyjnego ma podpis w następującej postaci: `R(R%){}` .
 
-Kompilator nie wygeneruje operator przypisania domyślny dla typu odwołania. Operator przypisania pozwala utworzyć obiekt przy użyciu semantyka stosu i zainicjować go z istniejącym obiektem utworzone za pomocą semantyka stosu. Operator przypisania dla typu odwołania, ma podpis następującą postać: `void operator=( R% ){}`.
+Kompilator nie będzie generował domyślnego operatora przypisania dla typu referencyjnego. Operator przypisania umożliwia utworzenie obiektu przy użyciu semantyki stosu i zainicjowanie go z istniejącym obiektem utworzonym przy użyciu semantyki stosu. Operator przypisania dla typu referencyjnego ma sygnaturę następującej formy: `void operator=( R% ){}` .
 
-Jeśli używasz semantyka stosu dla typów odwołań danego typu destruktor zwalnia zasoby o znaczeniu krytycznym, nie trzeba jawnie wywołać destruktor (lub zadzwoń `delete`). Aby uzyskać więcej informacji dotyczących destruktorów w typach odwołań, zobacz [destruktory i finalizatory w sposób: Definiowanie oraz stosowanie klas i struktur (C++sposób niezamierzony)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Jeśli destruktor typu zwalnia zasoby krytyczne i używasz semantyki stosu dla typów referencyjnych, nie musisz jawnie wywołać destruktora (lub wywołaniu **`delete`** ). Aby uzyskać więcej informacji na temat destruktorów w typach referencyjnych, zobacz [destruktory i finalizatory w instrukcje: Definiowanie i korzystanie z klas i struktur (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
-Operator przypisania generowane przez kompilator będzie śledzić zwykły standardowe reguły języka C++ z następującymi dodatkami:
+Generowany przez kompilator operator przypisania będzie przestrzegać zwykłych standardowych reguł języka C++ z następującymi dodatkami:
 
-- Wszelkie dane niestatycznych elementów członkowskich, którego typem jest dojścia do typu odwołania, będzie skrócona skopiowanych (traktowane jak element członkowski danych niestatyczna, którego typ jest wskaźnikiem typu).
+- Wszystkie niestatyczne składowe danych, których typ to dojście do typu referencyjnego, zostaną skopiowane na płytki (traktowane jak niestatyczny element członkowski danych, którego typem jest wskaźnik).
 
-- Wszelkie element członkowski danych niestatycznych którego typ jest typem wartości będzie płytka skopiowane.
+- Wszystkie niestatyczne składowe danych, których typem jest typ wartości, zostaną skopiowane na płytki.
 
-- Wszelkie element członkowski danych niestatycznych którego typ jest wystąpieniem typu referencyjnego wywoła wywołanie konstruktora kopiującego typ odwołania.
+- Każdy niestatyczny element członkowski danych, którego typem jest wystąpienie typu referencyjnego, wywoła wywołanie konstruktora kopiującego typu odwołania.
 
-Kompilator zapewnia również `%` operatora jednoargumentowego do konwertowania wystąpienia typu referencyjnego utworzone za pomocą semantyka stosu na jej typ podstawowy uchwyt.
+Kompilator udostępnia również `%` operator jednoargumentowy do konwersji wystąpienia typu odwołania utworzonego przy użyciu semantyki stosu do jego bazowego typu uchwytu.
 
-Następujące typy odwołań nie są dostępne do użytku z programem semantyka stosu:
+Następujące typy referencyjne nie są dostępne do użycia z semantyką stosu:
 
 - [delegate (C++ Component Extensions)](../extensions/delegate-cpp-component-extensions.md)
 
-- [Tablice](../extensions/arrays-cpp-component-extensions.md)
+- [Macierze](../extensions/arrays-cpp-component-extensions.md)
 
 - <xref:System.String>
 
@@ -51,7 +51,7 @@ Następujące typy odwołań nie są dostępne do użytku z programem semantyka 
 
 ### <a name="description"></a>Opis
 
-Poniższy przykład kodu pokazuje sposób deklarowania wystąpień typów referencyjnych z semantyką stosu, jak operator przypisania i działa Konstruktor kopiowania i jak zainicjować odwołanie śledzenia z typem referencyjnym, utworzony za pomocą semantyka stosu.
+Poniższy przykład kodu pokazuje, jak zadeklarować wystąpienia typów odwołań z semantyką stosu, jak działa operator przypisania i Konstruktor kopiujący oraz jak zainicjować odwołanie śledzenia z typem referencyjnym utworzonym przy użyciu semantyki stosu.
 
 ### <a name="code"></a>Kod
 

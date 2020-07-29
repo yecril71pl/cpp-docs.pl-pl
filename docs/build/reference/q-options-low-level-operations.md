@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: 722a63a43e5e08fe80b26f908c7ae92df2fdb29c
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: f5342071cef76bcc736f128c344279898a61c462
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034522"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231497"
 ---
 # <a name="q-options-low-level-operations"></a>/Q Opcje (Operacje na niskim poziomie)
 
@@ -20,9 +20,9 @@ Można użyć **/q** opcji kompilatora, aby wykonać następujące operacje komp
 
 - [/Qfast_transcendentals (Wymuś szybkie transcendentals)](qfast-transcendentals-force-fast-transcendentals.md): generuje szybkie transcendentals.
 
-- [/QIfist (pomijaj _ftol)](qifist-suppress-ftol.md): pomija `_ftol`, gdy wymagana jest konwersja z typu zmiennoprzecinkowego na typ Integer (tylko x86).
+- [/QIfist (pomijaj _ftol)](qifist-suppress-ftol.md): pomija `_ftol` , gdy wymagana jest konwersja typu zmiennoprzecinkowego na typ Integer (tylko x86).
 
-- [/Qimprecise_fwaits (Usuń fwaits wewnątrz bloków try)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): usuwa `fwait` polecenia wewnątrz bloków `try`.
+- [/Qimprecise_fwaits (Usuń fwaits wewnątrz bloków try)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): usuwa `fwait` polecenia wewnątrz **`try`** bloków.
 
 - [/QIntel-JCC-Erratum](qintel-jcc-erratum.md): zmniejsza wpływ na wydajność spowodowany przez aktualizację sprawdzenia erraty włączenia MIKROKODU (JCC) firmy Intel.
 

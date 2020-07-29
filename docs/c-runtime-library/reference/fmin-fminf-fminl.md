@@ -33,12 +33,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: df01f2205291920b8c0519db622c93048278beb1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d6cd16c298c3f4bedb8064d66efd2d4bbe20c22b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957094"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216989"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -78,7 +78,7 @@ long double fminl(
 *x*<br/>
 Pierwsza wartość do porównania.
 
-*y*<br/>
+*t*<br/>
 Druga wartość do porównania.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -87,21 +87,21 @@ Jeśli to się powiedzie, zwraca mniejszą liczbę *x* lub *y*.
 
 |Dane wejściowe|Wynik|
 |-----------|------------|
-|*x* jest NaN|*y*|
+|*x* jest NaN|*t*|
 |*y* jest NaN|*x*|
 |*x* i *y* są NaN|NaN|
 
-Funkcja nie powoduje wywołania [_matherr](matherr.md) , powoduje występowanie wyjątków zmiennoprzecinkowych lub zmianę wartości **errno**.
+Funkcja nie powoduje wywołania [_matherr](matherr.md) , spowodować żadnych wyjątków zmiennoprzecinkowych lub zmienić wartość **errno**.
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **fmin —** , które pobierają i zwracają **zmiennoprzecinkowe** i **długie** **podwójne** typy. W programie C **fmin —** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **fmin —** , które pobierają i zwracają **`float`** **`long double`** typy. W programie C **fmin —** zawsze przyjmuje i zwraca **`double`** .
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**fmin —** , **fminf —** , **fminl**|C: \<Math. h ><br />C++: \<Math. h > lub \<cmath >|
+|**fmin —**, **fminf —**, **fminl**|S\<math.h><br />C++: \<math.h> lub\<cmath>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: a64317c75e48111148053cc7efb62fb5a6d79f7f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 03f9673da109151bd2146daf7539841f1cac07c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749195"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217132"
 ---
 # <a name="conditional-expression-operator"></a>Operator wyrażenia warunkowego
 
@@ -37,13 +37,13 @@ Typ wyniku operacji warunkowej zależy od typu *wyrażenia* lub operand *warunko
 
 - Jeśli wyrażenie *i* *wyrażenie warunkowe* mają tę samą strukturę, Unię lub typ wskaźnika, typ wyniku jest taka sama jak struktura, Unia lub typ wskaźnika.
 
-- Jeśli oba operandy mają typ `void`, wynik ma typ `void`.
+- Jeśli oba operandy mają typ **`void`** , wynik ma typ **`void`** .
 
-- Jeśli którykolwiek z operandów jest wskaźnikiem do obiektu dowolnego typu, a drugi operand jest wskaźnikiem do `void`, wskaźnik do obiektu jest konwertowany na wskaźnik do `void` , a wynik jest wskaźnikiem do. `void`
+- Jeśli którykolwiek z operandów jest wskaźnikiem do obiektu dowolnego typu, a drugi operand jest wskaźnikiem do **`void`** , wskaźnik do obiektu jest konwertowany na wskaźnik do, **`void`** a wynik jest wskaźnikiem do **`void`** .
 
 - Jeśli wyrażenie *lub* *wyrażenie warunkowe* jest wskaźnikiem, a drugi operand jest wyrażeniem stałym o wartości 0, typ wyniku jest typem wskaźnika.
 
-W porównaniu typu dla wskaźników, wszelkie Kwalifikatory typu (**const** lub `volatile`) w typie, do którego punkty wskaźnika są nieznaczące, ale typ wyniku dziedziczy kwalifikatory z obu składników warunku.
+W porównaniu typu dla wskaźników, wszelkie Kwalifikatory typu ( **`const`** lub **`volatile`** ) w typie, do którego punkty wskaźnika są nieznaczące, ale typ wyniku dziedziczy kwalifikatory z obu składników warunku.
 
 ## <a name="examples"></a>Przykłady
 
@@ -53,7 +53,7 @@ W poniższych przykładach pokazano użycie operatora warunkowego:
 j = ( i < 0 ) ? ( -i ) : ( i );
 ```
 
-Ten przykład przypisuje wartość `i` bezwzględną `j`do. Jeśli `i` jest mniejszy niż 0, `-i` jest przypisany do `j`. Jeśli `i` jest większy lub równy 0, `i` jest przypisany do. `j`
+Ten przykład przypisuje wartość bezwzględną `i` do `j` . Jeśli `i` jest mniejszy niż 0, `-i` jest przypisany do `j` . Jeśli `i` jest większy lub równy 0, `i` jest przypisany do `j` .
 
 ```cpp
 void f1( void );
@@ -66,8 +66,8 @@ int y;
 ( x == y ) ? ( f1() ) : ( f2() );
 ```
 
-W tym przykładzie są zadeklarowane dwie `f1` funkcje `f2`, i, dwie zmienne `x` i `y`. W dalszej części programu, jeśli dwie zmienne mają tę samą wartość, funkcja `f1` jest wywoływana. W przeciwnym `f2` razie jest wywoływana.
+W tym przykładzie `f1` są zadeklarowane dwie funkcje, i `f2` , dwie zmienne `x` i `y` . W dalszej części programu, jeśli dwie zmienne mają tę samą wartość, funkcja `f1` jest wywoływana. W przeciwnym razie `f2` jest wywoływana.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Operator warunkowy: ? :](../cpp/conditional-operator-q.md)

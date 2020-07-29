@@ -39,12 +39,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 95eb1eb3ca18e0e7d3450951c930a07f954bc299
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bbd1742cdace30d5bc3bd5e9d592bb24a86f917f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916539"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216924"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp —, ldexpf —, ldexpl
 
@@ -77,7 +77,7 @@ long double ldexpl(
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Wartość zmiennoprzecinkowa.
 
 *EXP*<br/>
@@ -85,13 +85,13 @@ Wykładnik wartości całkowitej.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-W<sup>*przypadku powodzenia*</sup> funkcja **ldexp —** zwraca wartość *x* \* 2. W przypadku przepełnienia i w zależności od znaku *x*, **ldexp —** zwraca +/- **HUGE_VAL**; wartość **errno** jest ustawiona na **ERANGE**.
+W przypadku powodzenia funkcja **ldexp —** zwraca wartość *x* \* 2<sup>*exp*</sup> . W przypadku przepełnienia i w zależności od znaku *x*, **ldexp —** zwraca +/- **HUGE_VAL**; wartość **errno** jest ustawiona na **ERANGE**.
 
 Aby uzyskać więcej informacji na temat **errno** i możliwych zwracanych wartości błędów, zobacz [errno, _doserrno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ldexp —** , które mają typ **float** lub **Long** **Double** . W programie C **ldexp —** zawsze przyjmuje wartość typu **Double** i **int** i zwraca wartość typu **Double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **ldexp —** przyjmujących **`float`** lub **`long double`** . W programie C **ldexp —** zawsze przyjmuje **`double`** i **`int`** i zwraca **`double`** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -99,7 +99,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
-|**ldexp —**, **ldexpf —**, **ldexpl**|\<> Math. h|\<cmath>|
+|**ldexp —**, **ldexpf —**, **ldexpl**|\<math.h>|\<cmath>|
 
 Aby uzyskać informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -127,7 +127,7 @@ int main( void )
 4.0 times two to the power of 3 is 32.0
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4394
 ms.assetid: 5de94de0-17e3-4e7c-92f4-5c3c1b825120
-ms.openlocfilehash: f74c115a3cabb421ba5a9cf4c34696a0c223512e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ad6b9624a1bf510465843167d104d1bec189bc70
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165278"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87197361"
 ---
 # <a name="compiler-warning-c4394"></a>Ostrzeżenie kompilatora C4394
 
 "Function": symbol dla domeny AppDomain nie powinien być oznaczony za pomocą __declspec (dllexport)
 
-Funkcja oznaczona przy użyciu modyfikatora`__declspec` [AppDomain](../../cpp/appdomain.md) jest skompilowana do MSIL (nie do natywnego), a tabele eksportu (modyfikator[eksportu](../../windows/export.md)`__declspec`) nie są obsługiwane dla funkcji zarządzanych.
+Funkcja oznaczona [appdomain](../../cpp/appdomain.md) **`__declspec`** modyfikatorem AppDomain jest skompilowana do MSIL (nie do natywnego), a tabele eksportu (modyfikator[eksportu](../../windows/export.md) **`__declspec`** ) nie są obsługiwane dla funkcji zarządzanych.
 
 Można zadeklarować funkcję zarządzaną, aby mieć dostęp publiczny. Aby uzyskać więcej informacji, zobacz [widoczność typów](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) i [widoczność elementów członkowskich](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility).
 
-C4394 jest zawsze wystawiony jako błąd.  To ostrzeżenie można wyłączyć za pomocą `#pragma warning` lub **/WD**; Aby uzyskać więcej informacji, zobacz [Ostrzeżenie](../../preprocessor/warning.md) lub [/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/we,/wo,/WV,/WX (poziom ostrzeżenia)](../../build/reference/compiler-option-warning-level.md) .
+C4394 jest zawsze wystawiony jako błąd.  Możesz wyłączyć to ostrzeżenie przy użyciu `#pragma warning` lub **/WD**; zobacz [Ostrzeżenie](../../preprocessor/warning.md) , [/W,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/we,/wo,/WV,/WX (poziom ostrzeżenia)](../../build/reference/compiler-option-warning-level.md) , aby uzyskać więcej informacji.
 
 ## <a name="example"></a>Przykład
 

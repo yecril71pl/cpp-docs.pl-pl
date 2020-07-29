@@ -36,12 +36,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: def04602cdeb0ad180bd4c51c02f570c94809784
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 644e50564f1b433921a6a0d8099ea5229db7ed93
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914638"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216872"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -62,7 +62,7 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Wartość zmiennoprzecinkowa.
 
 *IntPtr*<br/>
@@ -78,7 +78,7 @@ Funkcja **modf —** dzieli wartość zmiennoprzecinkową *x* na części ułamk
 
 **modf —** ma implementację, która używa Streaming SIMD Extensions 2 (SSE2). Zobacz [_set_SSE2_enable](set-sse2-enable.md) , aby uzyskać informacje i ograniczenia dotyczące korzystania z implementacji SSE2.
 
-Język C++ pozwala na Przeciążenie, dlatego można wywoływać przeciążenia **modf —** , które pobierają i **zwracają parametry** **zmiennoprzecinkowe** lub **długie** . W programie C **modf —** zawsze przyjmuje dwie wartości podwójne i zwraca wartość podwójnej precyzji.
+Język C++ umożliwia Przeciążenie, dlatego można wywoływać przeciążenia **modf —** , które pobierają i zwracają **`float`** **`long double`** parametry lub. W programie C **modf —** zawsze przyjmuje dwie wartości podwójne i zwraca wartość podwójnej precyzji.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -86,7 +86,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**modf —**, **modff —**, **modfl**|C: \<Math. h><br /><br /> C++:, \<cmath> lub \<Math. h>|
+|**modf —**, **modff —**, **modfl**|S\<math.h><br /><br /> C++:, \<cmath> lub\<math.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -114,7 +114,7 @@ int main( void )
 For -14.876543, the fraction is -0.876543 and the integer is -14
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

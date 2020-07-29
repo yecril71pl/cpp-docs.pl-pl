@@ -1,5 +1,5 @@
 ---
-title: '&lt;funkcje atomowe&gt;'
+title: '&lt;funkcje niepodzielne &gt;'
 ms.date: 07/11/2018
 f1_keywords:
 - atomic/std::atomic_compare_exchange_strong
@@ -62,14 +62,14 @@ helpviewer_keywords:
 - std::atomic_store_explicit [C++]
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
-ms.openlocfilehash: b6d03da446e4a3bae02f662e5b106bd5de534d0a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 15a2d86fcaf83c470f52c879ab6fe7525f80aec8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376897"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203952"
 ---
-# <a name="ltatomicgt-functions"></a>&lt;funkcje atomowe&gt;
+# <a name="ltatomicgt-functions"></a>&lt;funkcje niepodzielne &gt;
 
 ||||
 |-|-|-|
@@ -86,7 +86,7 @@ ms.locfileid: "81376897"
 
 ## <a name="atomic_compare_exchange_strong"></a><a name="atomic_compare_exchange_strong"></a>atomic_compare_exchange_strong
 
-Wykonuje atomowej operacji porównania i wymiany.
+Wykonuje porównanie atomowe i wymianę operacji.
 
 ```cpp
 template <class Ty>
@@ -104,26 +104,26 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do obiektu *atomowego,* który `Ty`przechowuje wartość typu .
+*Rozproszony*\
+Wskaźnik do obiektu *niepodzielnego* , który przechowuje wartość typu `Ty` .
 
-*Exp*\
-Wskaźnik do wartości typu `Ty`.
+*EXP*\
+Wskaźnik do wartości typu `Ty` .
 
-*Wartość*\
-Wartość typu `Ty`.
+*Wartościami*\
+Wartość typu `Ty` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli wartości są równe, w przeciwnym razie **false**.
+**`true`** Jeśli wartości są równe, w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wykonuje niepodzielną operację porównania `memory_order_seq_cst`i wymiany przy użyciu argumentów [memory_order](../standard-library/atomic-enums.md#memory_order_enum) niejawnych. Aby uzyskać więcej informacji, zobacz [atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit).
+Ta metoda wykonuje porównanie atomowe i wymianę operacji przy użyciu niejawnych `memory_order_seq_cst` argumentów [memory_order](../standard-library/atomic-enums.md#memory_order_enum) . Aby uzyskać więcej informacji, zobacz [atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit).
 
 ## <a name="atomic_compare_exchange_strong_explicit"></a><a name="atomic_compare_exchange_strong_explicit"></a>atomic_compare_exchange_strong_explicit
 
-Wykonuje atomowej *operacji porównania i wymiany.*
+Wykonuje *porównanie atomowe i wymianę* operacji.
 
 ```cpp
 template <class T>
@@ -145,32 +145,32 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu, który przechowuje `Ty`wartość typu .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który przechowuje wartość typu `Ty` .
 
-*Exp*\
-Wskaźnik do wartości typu `Ty`.
+*EXP*\
+Wskaźnik do wartości typu `Ty` .
 
-*Wartość*\
-Wartość typu `Ty`.
+*Wartościami*\
+Wartość typu `Ty` .
 
-*Zamówienie1*\
-Pierwszy [argument memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
+*Order1*\
+Pierwszy [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argument.
 
 *Order2*\
-Drugi `memory_order` argument. Wartość *Order2* nie `memory_order_release` może `memory_order_acq_rel`być lub , nie może być silniejsza niż wartość *Order1*.
+Drugi `memory_order` argument. Wartość *Order2* nie może być `memory_order_release` lub `memory_order_acq_rel` nie może być silniejszy niż wartość *Order1*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli wartości są równe, w przeciwnym razie **false**.
+**`true`** Jeśli wartości są równe, w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
-*Atomowej operacji porównania i wymiany* porównuje wartość, która jest przechowywana w obiekcie, który jest wskazywał przez *Atom* względem wartości, która jest wskazywalna przez *Exp*. Jeśli wartości są równe, wartość, która jest przechowywana w obiekcie, który jest `read-modify-write` wskazywał przez *atom,* jest zastępowana *wartością* za pomocą operacji i stosowania ograniczeń kolejności pamięci określonych przez *Order1*. Jeśli wartości nie są równe, operacja zastępuje wartość wskazywalną przez *Exp* wartością przechowywaną w obiekcie, który jest wskazywał *atom* i stosuje ograniczenia kolejności pamięci określone przez *Order2*.
+*Niepodzielna operacja porównania i wymiany* porównuje wartość, która jest przechowywana w obiekcie, który jest wskazywany przez *Atom* , względem wartości, która jest wskazywana przez *EXP*. Jeśli wartości są równe, wartość, która jest przechowywana w obiekcie, który jest wskazywany przez *Atom* , jest zastępowana *wartością* przy użyciu `read-modify-write` operacji i stosując ograniczenia zlecenia pamięci, które są określone przez *Order1*. Jeśli wartości nie są równe, operacja zastępuje wartość, która jest wskazywany przez *EXP* wartością przechowywaną w obiekcie, który jest wskazywany przez *Atom* i stosuje ograniczenia zlecenia pamięci, które są określone przez *Order2*.
 
 ## <a name="atomic_compare_exchange_weak"></a><a name="atomic_compare_exchange_weak"></a>atomic_compare_exchange_weak
 
-Wykonuje *słabe atomowej porównania i wymiany* operacji.
+Wykonuje *słabą, niepodzielną operację porównania i wymiany* .
 
 ```cpp
 template <class Ty>
@@ -188,26 +188,26 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu, który przechowuje `Ty`wartość typu .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który przechowuje wartość typu `Ty` .
 
-*Exp*\
-Wskaźnik do wartości typu `Ty`.
+*EXP*\
+Wskaźnik do wartości typu `Ty` .
 
-*Wartość*\
-Wartość typu `Ty`.
+*Wartościami*\
+Wartość typu `Ty` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli wartości są równe, w przeciwnym razie **false**.
+**`true`** Jeśli wartości są równe, w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wykonuje *słabe atomic compare i exchange operacji,* która ma niejawne `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argumentów. Aby uzyskać więcej informacji, zobacz [atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit).
+Ta metoda wykonuje *słabą niepodzielną operację porównania i wymiany* , która ma niejawne `memory_order_seq_cst` argumenty [memory_order](../standard-library/atomic-enums.md#memory_order_enum) . Aby uzyskać więcej informacji, zobacz [atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit).
 
 ## <a name="atomic_compare_exchange_weak_explicit"></a><a name="atomic_compare_exchange_weak_explicit"></a>atomic_compare_exchange_weak_explicit
 
-Wykonuje *słabe atomowej porównania i wymiany* operacji.
+Wykonuje *słabą, niepodzielną operację porównania i wymiany* .
 
 ```cpp
 template <class Ty>
@@ -229,32 +229,32 @@ inline bool atomic_compare_exchange_weak_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu, który przechowuje `Ty`wartość typu .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który przechowuje wartość typu `Ty` .
 
-*Exp*\
-Wskaźnik do wartości typu `Ty`.
+*EXP*\
+Wskaźnik do wartości typu `Ty` .
 
-*Wartość*\
-Wartość typu `Ty`.
+*Wartościami*\
+Wartość typu `Ty` .
 
-*Zamówienie1*\
-Pierwszy [argument memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
+*Order1*\
+Pierwszy [memory_order](../standard-library/atomic-enums.md#memory_order_enum) argument.
 
 *Order2*\
-Drugi `memory_order` argument. Wartość *Order2* nie `memory_order_release` może `memory_order_acq_rel`być ani , ani nie może być silniejsza niż wartość *Order1*.
+Drugi `memory_order` argument. Wartość *Order2* nie może być `memory_order_release` lub ani nie `memory_order_acq_rel` może być silniejszy niż wartość *Order1*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli wartości są równe, w przeciwnym razie **false**.
+**`true`** Jeśli wartości są równe, w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Zarówno silne i słabe smaki *atomic compare i exchange operacji* gwarancji, że nie przechowują nową wartość, jeśli oczekiwane i bieżące wartości nie są równe. Silny smak gwarantuje, że będzie przechowywać nową wartość, jeśli wartości oczekiwane i bieżące są równe. Słaby smak może czasami zwracać **false** i nie przechowywać nową wartość, nawet jeśli bieżące i oczekiwane wartości są równe. Innymi słowy funkcja zwróci **false**, ale późniejsze badanie oczekiwanej wartości może ujawnić, że nie zmieniła się i dlatego powinna być porównana jako równa.
+Zarówno silne, jak i słabe *wersje niepodzielnych operacji porównania i wymiany* gwarantują, że nie przechowują nowej wartości, jeśli wartości oczekiwane i bieżące nie są równe. Silna wersja gwarantuje, że będzie przechowywać nową wartość, jeśli oczekiwane i bieżące wartości są równe. Słaba wersja może czasami zwracać **`false`** i nie przechowywać nowej wartości, nawet jeśli bieżące i oczekiwane wartości są równe. Innymi słowy, funkcja zwróci **`false`** , ale późniejsze badanie oczekiwanej wartości może ujawnić, że nie uległy zmianie, dlatego należy je porównać w równym stopniu.
 
 ## <a name="atomic_exchange"></a><a name="atomic_exchange"></a>atomic_exchange
 
-Używa *wartości,* aby zastąpić przechowywaną wartość *Atom*.
+Używa *wartości* , aby zastąpić przechowywaną wartość *Atom*.
 
 ```cpp
 template <class T>
@@ -266,11 +266,11 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu, który przechowuje `Ty`wartość typu .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który przechowuje wartość typu `Ty` .
 
-*Wartość*\
-Wartość typu `Ty`.
+*Wartościami*\
+Wartość typu `Ty` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -278,11 +278,11 @@ Przechowywana wartość *Atom* przed wymianą.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `atomic_exchange` `read-modify-write` wykonuje operację w celu wymiany wartości przechowywanej w *Atom* z *Wartością* `memory_order_seq_cst`, używając [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+`atomic_exchange`Funkcja wykonuje `read-modify-write` operację, aby przeprowadzić wymianę wartości przechowywanej w *Atom* z *wartością*przy użyciu `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_exchange_explicit"></a><a name="atomic_exchange_explicit"></a>atomic_exchange_explicit
 
-Zastępuje zapisaną wartość *Atom* *wartością*.
+Zastępuje przechowywaną wartość *Atom* z *wartością*.
 
 ```cpp
 template <class Ty>
@@ -300,14 +300,14 @@ inline Ty atomic_exchange_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu, który przechowuje `Ty`wartość typu .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który przechowuje wartość typu `Ty` .
 
-*Wartość*\
-Wartość typu `Ty`.
+*Wartościami*\
+Wartość typu `Ty` .
 
-*Zamówienia*\
-[A memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Porządek*\
+[Memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -315,11 +315,11 @@ Przechowywana wartość *Atom* przed wymianą.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `atomic_exchange_explicit` `read-modify-write` wykonuje operację w celu wymiany wartości przechowywanej w *Atom* z *Wartością,* w ramach ograniczeń pamięci określonych przez *Kolejność*.
+`atomic_exchange_explicit`Funkcja wykonuje `read-modify-write` operację, aby przeprowadzić wymianę wartości przechowywanej w *Atom* z *wartością*w ramach ograniczeń pamięci, które są określone przez *kolejność*.
 
 ## <a name="atomic_fetch_add"></a><a name="atomic_fetch_add"></a>atomic_fetch_add
 
-Dodaje wartość do istniejącej wartości, `atomic` która jest przechowywana w obiekcie.
+Dodaje wartość do istniejącej wartości przechowywanej w `atomic` obiekcie.
 
 ```cpp
 template <class T>
@@ -330,21 +330,21 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu, który przechowuje `T`wskaźnik do wpisywalnego .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który przechowuje wskaźnik do typu `T` .
 
-*Wartość*\
-Wartość typu `ptrdiff_t`.
+*Wartościami*\
+Wartość typu `ptrdiff_t` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość wskaźnika zawartego przez obiekt atomowy bezpośrednio przed wykonaniem operacji.
+Wartość wskaźnika zawartego przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `atomic_fetch_add` wykonuje `read-modify-write` operację, aby niepodzielnie dodać *wartość* do przechowywanej wartości w *Atom*, przy użyciu `memory_order_seq_cst`ograniczenia [memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
+`atomic_fetch_add`Funkcja wykonuje operację, `read-modify-write` Aby dodać niepodzielną *wartość* do wartości przechowywanej w *atomze*przy użyciu `memory_order_seq_cst` ograniczenia [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
-Gdy typem `atomic_address`niepodzielnym jest *, Wartość* ma typ `ptrdiff_t` `char *`i operacja traktuje przechowywany wskaźnik jako .
+Gdy typ niepodzielny to `atomic_address` , *wartość* ma typ, `ptrdiff_t` a operacja traktuje przechowywany wskaźnik jako `char *` .
 
 Ta operacja jest również przeciążona dla typów całkowitych:
 
@@ -356,7 +356,7 @@ integral atomic_fetch_add(atomic-integral* Atom, integral Value) noexcept;
 
 ## <a name="atomic_fetch_add_explicit"></a><a name="atomic_fetch_add_explicit"></a>atomic_fetch_add_explicit
 
-Dodaje wartość do istniejącej wartości, `atomic` która jest przechowywana w obiekcie.
+Dodaje wartość do istniejącej wartości przechowywanej w `atomic` obiekcie.
 
 ```cpp
 template <class T>
@@ -374,21 +374,21 @@ T* atomic_fetch_add_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu, który przechowuje `T`wskaźnik do wpisywalnego .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który przechowuje wskaźnik do typu `T` .
 
-*Wartość*\
-Wartość typu `ptrdiff_t`.
+*Wartościami*\
+Wartość typu `ptrdiff_t` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość wskaźnika zawartego przez obiekt atomowy bezpośrednio przed wykonaniem operacji.
+Wartość wskaźnika zawartego przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `atomic_fetch_add_explicit` wykonuje `read-modify-write` operację, aby niepodzielnie dodać *wartość* do przechowywanej wartości w *Atom,* w `Order` [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ograniczenia, które są określone przez .
+`atomic_fetch_add_explicit`Funkcja wykonuje operację, `read-modify-write` Aby dodać niepodzielną *wartość* do wartości przechowywanej w *atomze*w ramach ograniczeń [memory_order](../standard-library/atomic-enums.md#memory_order_enum) , które są określone przez `Order` .
 
-Gdy typ niepodzielny jest `atomic_address`, `Value` ma typ `ptrdiff_t` i `char *`operacja traktuje przechowywany wskaźnik jako .
+Gdy typ niepodzielny to `atomic_address` , `Value` ma typ, `ptrdiff_t` a operacja traktuje przechowywany wskaźnik jako `char *` .
 
 Ta operacja jest również przeciążona dla typów całkowitych:
 
@@ -406,7 +406,7 @@ integral atomic_fetch_add_explicit(
 
 ## <a name="atomic_fetch_and"></a><a name="atomic_fetch_and"></a>atomic_fetch_and
 
-Wykonuje bitowy `and` na wartość i istniejącą wartość, `atomic` która jest przechowywana w obiekcie.
+Wykonuje wartość bitową `and` dla wartości i istniejącej wartości przechowywanej w `atomic` obiekcie.
 
 ```cpp
 template <class T>
@@ -417,23 +417,23 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu, który przechowuje `T`wartość typu .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który przechowuje wartość typu `T` .
 
-*Wartość*\
-Wartość typu `T`.
+*Wartościami*\
+Wartość typu `T` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość zawarta przez obiekt atomowy bezpośrednio przed wykonaniem operacji.
+Wartość zawartej przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `atomic_fetch_and` `read-modify-write` wykonuje operację, aby zastąpić przechowywaną wartość *Atom* bitowym `and` *wartością* i bieżącą wartością `memory_order_seq_cst`przechowywaną w *Atom*, przy użyciu wiązania [memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
+`atomic_fetch_and`Funkcja wykonuje operację, `read-modify-write` Aby zastąpić przechowywaną wartość *Atom* wartością bitową `and` i bieżącą wartość *Value* przechowywaną w *Atom*przy użyciu `memory_order_seq_cst` ograniczenia [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
 ## <a name="atomic_fetch_and_explicit"></a><a name="atomic_fetch_and_explicit"></a>atomic_fetch_and_explicit
 
-Wykonuje `and` bitowy wartości i istniejącej wartości, która `atomic` jest przechowywana w obiekcie.
+Wykonuje bitową `and` wartość i istniejącą wartość, która jest przechowywana w `atomic` obiekcie.
 
 ```cpp
 template <class T>
@@ -451,26 +451,26 @@ inline T atomic_fetch_and_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu, który przechowuje `T`wartość typu .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który przechowuje wartość typu `T` .
 
-*Wartość*\
-Wartość typu `T`.
+*Wartościami*\
+Wartość typu `T` .
 
-*Zamówienia*\
-[A memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Porządek*\
+[Memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość zawarta przez obiekt atomowy bezpośrednio przed wykonaniem operacji.
+Wartość zawartej przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `atomic_fetch_and_explicit` wykonuje operację, aby zastąpić `read-modify-write` zapisaną wartość *Atom* `and` bitowym *wartością* i bieżącą wartością przechowywaną w *Atom,* w ramach ograniczeń pamięci określonych przez *Kolejność*.
+`atomic_fetch_and_explicit`Funkcja wykonuje operację, `read-modify-write` Aby zastąpić przechowywaną wartość *Atom* wartością bitową `and` i bieżącą wartość *Value* przechowywaną w *Atom*, w ramach ograniczeń pamięci, które są określone przez *kolejność*.
 
 ## <a name="atomic_fetch_or"></a><a name="atomic_fetch_or"></a>atomic_fetch_or
 
-Wykonuje bitowy `or` na wartość i istniejącą wartość, `atomic` która jest przechowywana w obiekcie.
+Wykonuje wartość bitową `or` dla wartości i istniejącej wartości przechowywanej w `atomic` obiekcie.
 
 ```cpp
 template <class T>
@@ -481,23 +481,23 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu, który przechowuje `T`wartość typu .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który przechowuje wartość typu `T` .
 
-*Wartość*\
-Wartość typu `T`.
+*Wartościami*\
+Wartość typu `T` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość zawarta przez obiekt atomowy bezpośrednio przed wykonaniem operacji.
+Wartość zawartej przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `atomic_fetch_or` wykonuje operację, aby zastąpić zapisaną `read-modify-write` wartość *Atom* `or` bitowym *wartością* i bieżącą wartością przechowywaną w *Atom*, używając `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+`atomic_fetch_or`Funkcja wykonuje operację, `read-modify-write` Aby zastąpić przechowywaną wartość *Atom* wartością bitową `or` i bieżącą wartość *Value* przechowywaną w *atomze*przy użyciu `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_fetch_or_explicit"></a><a name="atomic_fetch_or_explicit"></a>atomic_fetch_or_explicit
 
-Wykonuje bitowy `or` na wartość i istniejącą wartość, `atomic` która jest przechowywana w obiekcie.
+Wykonuje wartość bitową `or` dla wartości i istniejącej wartości przechowywanej w `atomic` obiekcie.
 
 ```cpp
 template <class T>
@@ -515,26 +515,26 @@ inline T atomic_fetch_or_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu, który przechowuje `T`wartość typu .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który przechowuje wartość typu `T` .
 
-*Wartość*\
-Wartość typu `T`.
+*Wartościami*\
+Wartość typu `T` .
 
-*Zamówienia*\
-[A memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Porządek*\
+[Memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość zawarta przez obiekt atomowy bezpośrednio przed wykonaniem operacji.
+Wartość zawartej przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `atomic_fetch_or_explicit` wykonuje operację, `read-modify-write` aby zastąpić zapisaną wartość *Atom* bitowym `or` *wartością* i bieżącą wartością przechowywaną w *Atom,* w [ramach ograniczeń memory_order](../standard-library/atomic-enums.md#memory_order_enum) określonych przez *Kolejność*.
+`atomic_fetch_or_explicit`Funkcja wykonuje operację, `read-modify-write` Aby zastąpić przechowywaną wartość *Atom* wartością bitową `or` i bieżącą wartość *Value* przechowywaną w *Atom*, w ramach ograniczeń [memory_order](../standard-library/atomic-enums.md#memory_order_enum) określonych przez *kolejność*.
 
 ## <a name="atomic_fetch_sub"></a><a name="atomic_fetch_sub"></a>atomic_fetch_sub
 
-Odejmuje wartość od istniejącej wartości `atomic` przechowywanej w obiekcie.
+Odejmuje wartość od istniejącej wartości przechowywanej w `atomic` obiekcie.
 
 ```cpp
 template <class T>
@@ -550,21 +550,21 @@ T* atomic_fetch_sub(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu, który przechowuje `T`wskaźnik do wpisywalnego .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który przechowuje wskaźnik do typu `T` .
 
-*Wartość*\
-Wartość typu `ptrdiff_t`.
+*Wartościami*\
+Wartość typu `ptrdiff_t` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość wskaźnika zawartego przez obiekt atomowy bezpośrednio przed wykonaniem operacji.
+Wartość wskaźnika zawartego przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `atomic_fetch_sub` wykonuje `read-modify-write` operację, aby niepodzielnie odejmować *Wartość* od przechowywanej wartości w *Atom*, używając `memory_order_seq_cst`wiązania [memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
+`atomic_fetch_sub`Funkcja wykonuje operację, `read-modify-write` Aby wyrównać niepodzielne *wartości* z wartości przechowywanej w *atomze*przy użyciu `memory_order_seq_cst` ograniczenia [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
-Gdy typem `atomic_address`niepodzielnym jest *, Wartość* ma typ `ptrdiff_t` `char *`i operacja traktuje przechowywany wskaźnik jako .
+Gdy typ niepodzielny to `atomic_address` , *wartość* ma typ, `ptrdiff_t` a operacja traktuje przechowywany wskaźnik jako `char *` .
 
 Ta operacja jest również przeciążona dla typów całkowitych:
 
@@ -575,7 +575,7 @@ integral atomic_fetch_sub(atomic-integral* Atom, integral Value) noexcept;
 
 ## <a name="atomic_fetch_sub_explicit"></a><a name="atomic_fetch_sub_explicit"></a>atomic_fetch_sub_explicit
 
-Odejmuje wartość od istniejącej wartości `atomic` przechowywanej w obiekcie.
+Odejmuje wartość od istniejącej wartości przechowywanej w `atomic` obiekcie.
 
 ```cpp
 template <class T>
@@ -592,21 +592,21 @@ T* atomic_fetch_sub_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu, który przechowuje `T`wskaźnik do wpisywalnego .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który przechowuje wskaźnik do typu `T` .
 
-*Wartość*\
-Wartość typu `ptrdiff_t`.
+*Wartościami*\
+Wartość typu `ptrdiff_t` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość wskaźnika zawartego przez obiekt atomowy bezpośrednio przed wykonaniem operacji.
+Wartość wskaźnika zawartego przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `atomic_fetch_sub_explicit` wykonuje `read-modify-write` operację, aby niepodzielnie odejmować *Wartość* od wartości przechowywanej w *Atom,* w [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ograniczeniach, które są określone przez `Order`.
+`atomic_fetch_sub_explicit`Funkcja wykonuje operację, `read-modify-write` Aby wyrównać niepodzielną *wartość* z wartości przechowywanej w *atomze*w ramach ograniczeń [memory_order](../standard-library/atomic-enums.md#memory_order_enum) , które są określone przez `Order` .
 
-Gdy typem `atomic_address`niepodzielnym jest *, Wartość* ma typ `ptrdiff_t` `char *`i operacja traktuje przechowywany wskaźnik jako .
+Gdy typ niepodzielny to `atomic_address` , *wartość* ma typ, `ptrdiff_t` a operacja traktuje przechowywany wskaźnik jako `char *` .
 
 Ta operacja jest również przeciążona dla typów całkowitych:
 
@@ -624,7 +624,7 @@ integral atomic_fetch_sub_explicit(
 
 ## <a name="atomic_fetch_xor"></a><a name="atomic_fetch_xor"></a>atomic_fetch_xor
 
-Wykonuje bitowy `exclusive or` na wartość i istniejącą wartość, `atomic` która jest przechowywana w obiekcie.
+Wykonuje wartość bitową `exclusive or` dla wartości i istniejącej wartości przechowywanej w `atomic` obiekcie.
 
 ```cpp
 template <class T>
@@ -636,23 +636,23 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu, który przechowuje `T`wartość typu .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który przechowuje wartość typu `T` .
 
-*Wartość*\
-Wartość typu `T`.
+*Wartościami*\
+Wartość typu `T` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość zawarta przez obiekt atomowy bezpośrednio przed wykonaniem operacji.
+Wartość zawartej przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `atomic_fetch_xor` wykonuje operację, aby zastąpić zapisaną `read-modify-write` wartość *Atom* `exclusive or` bitowym *wartością* i bieżącą wartością przechowywaną w *Atom*, używając `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+`atomic_fetch_xor`Funkcja wykonuje operację, `read-modify-write` Aby zastąpić przechowywaną wartość *Atom* wartością bitową `exclusive or` i bieżącą wartość *Value* przechowywaną w *atomze*przy użyciu `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_fetch_xor_explicit"></a><a name="atomic_fetch_xor_explicit"></a>atomic_fetch_xor_explicit
 
-Wykonuje bitowy `exclusive or` na wartość i istniejącą wartość, `atomic` która jest przechowywana w obiekcie.
+Wykonuje wartość bitową `exclusive or` dla wartości i istniejącej wartości przechowywanej w `atomic` obiekcie.
 
 ```cpp
 template <class T>
@@ -670,26 +670,26 @@ inline T atomic_fetch_xor_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu, który przechowuje `T`wartość typu .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który przechowuje wartość typu `T` .
 
-*Wartość*\
-Wartość typu `T`.
+*Wartościami*\
+Wartość typu `T` .
 
-*Zamówienia*\
-[A memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Porządek*\
+[Memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość zawarta przez obiekt atomowy bezpośrednio przed wykonaniem operacji.
+Wartość zawartej przez obiekt niepodzielny bezpośrednio przed wykonaniem operacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja `atomic_fetch_xor_explicit` wykonuje operację, aby zastąpić `read-modify-write` zapisaną wartość *Atom* bitowym `exclusive or` *wartością* i bieżącą wartością przechowywaną w *Atom,* w [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ograniczeniach określonych przez *Order*.
+`atomic_fetch_xor_explicit`Funkcja wykonuje operację, `read-modify-write` Aby zastąpić przechowywaną wartość *Atom* wartością bitową `exclusive or` i bieżącą wartość *Value* przechowywaną w *Atom*, w ramach ograniczeń [memory_order](../standard-library/atomic-enums.md#memory_order_enum) określonych przez *kolejność*.
 
 ## <a name="atomic_flag_clear"></a><a name="atomic_flag_clear"></a>atomic_flag_clear
 
-Ustawia flagę **bool** w [atomic_flag](../standard-library/atomic-flag-structure.md) obiektu na **false,** w `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+Ustawia **`bool`** flagę w obiekcie [atomic_flag](../standard-library/atomic-flag-structure.md) na **`false`** , w `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ```cpp
 inline void atomic_flag_clear(volatile atomic_flag* Flag) noexcept;
@@ -698,12 +698,12 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Flaga*\
+*Znacznik*\
 Wskaźnik do `atomic_flag` obiektu.
 
 ## <a name="atomic_flag_clear_explicit"></a><a name="atomic_flag_clear_explicit"></a>atomic_flag_clear_explicit
 
-Ustawia flagę **bool** w [atomic_flag](../standard-library/atomic-flag-structure.md) obiekt na **false,** w ramach określonych [ograniczeń memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
+Ustawia **`bool`** flagę w obiekcie [atomic_flag](../standard-library/atomic-flag-structure.md) na **`false`** , w ramach określonych ograniczeń [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
 ```cpp
 inline void atomic_flag_clear_explicit(volatile atomic_flag* Flag, memory_order Order) noexcept;
@@ -712,15 +712,15 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
 
 ### <a name="parameters"></a>Parametry
 
-*Flaga*\
+*Znacznik*\
 Wskaźnik do `atomic_flag` obiektu.
 
-*Zamówienia*\
-[A memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Porządek*\
+[Memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_flag_test_and_set"></a><a name="atomic_flag_test_and_set"></a>atomic_flag_test_and_set
 
-Ustawia flagę **bool** w [atomic_flag](../standard-library/atomic-flag-structure.md) obiektu na **true,** w `memory_order_seq_cst`granicach [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+Ustawia **`bool`** flagę w obiekcie [atomic_flag](../standard-library/atomic-flag-structure.md) na **`true`** , w ramach ograniczeń `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ```cpp
 inline bool atomic_flag_test_and_set(volatile atomic_flag* Flag,) noexcept;
@@ -729,16 +729,16 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Flaga*\
+*Znacznik*\
 Wskaźnik do `atomic_flag` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość początkowa *Flaga*.
+Początkowa wartość *flagi*.
 
 ## <a name="atomic_flag_test_and_set_explicit"></a><a name="atomic_flag_test_and_set_explicit"></a>atomic_flag_test_and_set_explicit
 
-Ustawia flagę **bool** w [atomic_flag](../standard-library/atomic-flag-structure.md) obiektu na **true,** w ramach określonych [ograniczeń memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
+Ustawia **`bool`** flagę w obiekcie [atomic_flag](../standard-library/atomic-flag-structure.md) na **`true`** , w ramach określonych ograniczeń [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
 ```cpp
 inline bool atomic_flag_test_and_set_explicit(volatile atomic_flag* Flag, memory_order Order) noexcept;
@@ -747,19 +747,19 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 
 ### <a name="parameters"></a>Parametry
 
-*Flaga*\
+*Znacznik*\
 Wskaźnik do `atomic_flag` obiektu.
 
-*Zamówienia*\
-[A memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Porządek*\
+[Memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość początkowa *Flaga*.
+Początkowa wartość *flagi*.
 
 ## <a name="atomic_init"></a><a name="atomic_init"></a>atomic_init
 
-Ustawia przechowywaną wartość `atomic` w obiekcie.
+Ustawia wartość przechowywaną w `atomic` obiekcie.
 
 ```cpp
 template <class Ty>
@@ -770,19 +770,19 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu, który przechowuje `Ty`wartość typu .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który przechowuje wartość typu `Ty` .
 
-*Wartość*\
-Wartość typu `Ty`.
+*Wartościami*\
+Wartość typu `Ty` .
 
 ### <a name="remarks"></a>Uwagi
 
-`atomic_init`nie jest operacją atomową. Nie jest bezpieczny dla wątków.
+`atomic_init`nie jest operacją niepodzielną. Nie jest to bezpieczne dla wątków.
 
 ## <a name="atomic_is_lock_free"></a><a name="atomic_is_lock_free"></a>atomic_is_lock_free
 
-Określa, czy operacje `atomic` niepodzielne na obiekcie są *wolne od blokady*.
+Określa, czy operacje niepodzielne na `atomic` obiekcie są *wolne od blokady*.
 
 ```cpp
 template <class T>
@@ -793,20 +793,20 @@ inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu, który przechowuje `T`wartość typu .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który przechowuje wartość typu `T` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**prawda,** jeśli operacje atomowe na *Atom* są wolne od blokad; w przeciwnym razie **false**.
+**`true`** Jeśli operacje niepodzielne na *atomze* są wolne od blokady. w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
-Typ niepodzielny jest wolny od blokady, jeśli żadne operacje niepodzielne na tym typie używają blokad. Jeśli ta funkcja zwraca true, typ jest bezpieczny do użycia w programach obsługi sygnału.
+Typ niepodzielny jest zablokowany, jeśli żadna niepodzielna operacja na tym typie nie używa blokad. Jeśli ta funkcja zwraca wartość true, typ jest bezpieczny do użycia w obsłudze sygnałów.
 
 ## <a name="atomic_load"></a><a name="atomic_load"></a>atomic_load
 
-Pobiera przechowywaną wartość `atomic` w obiekcie.
+Pobiera wartość przechowywaną w `atomic` obiekcie.
 
 ```cpp
 template <class Ty>
@@ -817,12 +817,12 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu zawierającego wartość `Ty`typu .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który zawiera wartość typu `Ty` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pobrana wartość przechowywana w *Atom*.
+Pobrana wartość, która jest przechowywana w *Atom*.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -830,7 +830,7 @@ Pobrana wartość przechowywana w *Atom*.
 
 ## <a name="atomic_load_explicit"></a><a name="atomic_load_explicit"></a>atomic_load_explicit
 
-Pobiera przechowywaną wartość `atomic` w obiekcie w określonym [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+Pobiera wartość przechowywaną w `atomic` obiekcie w ramach określonego [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ```cpp
 template <class Ty>
@@ -841,19 +841,19 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu zawierającego wartość `Ty`typu .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który zawiera wartość typu `Ty` .
 
-*Zamówienia*\
-[A memory_order](../standard-library/atomic-enums.md#memory_order_enum). Nie używać `memory_order_release` `memory_order_acq_rel`lub .
+*Porządek*\
+[Memory_order](../standard-library/atomic-enums.md#memory_order_enum). Nie używaj `memory_order_release` ani `memory_order_acq_rel` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pobrana wartość przechowywana w *Atom*.
+Pobrana wartość, która jest przechowywana w *Atom*.
 
 ## <a name="atomic_signal_fence"></a><a name="atomic_signal_fence"></a>atomic_signal_fence
 
-Działa jako *ogrodzenie*— co jest prymitywne synchronizacji pamięci, która wymusza kolejność między operacjami ładowania/przechowywania — między innymi ogrodzeniami w wątku wywołującym, które mają programy obsługi sygnału, które są wykonywane w tym samym wątku.
+Działa jako *ogrodzenie*— jest to element podstawowy synchronizacji pamięci, który wymusza kolejność między operacjami ładowania/przechowywania — między innymi ogrodzeniami w wątku wywołującym, które mają programy obsługi sygnałów, które są wykonywane w tym samym wątku.
 
 ```cpp
 inline void atomic_signal_fence(memory_order Order) noexcept;
@@ -861,25 +861,25 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Zamówienia*\
-Ograniczenie kolejności pamięci, które określa typ ogrodzenia.
+*Porządek*\
+Ograniczenie porządkowania pamięci określające typ ogrodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-*Order,* argument określa typ ogrodzenia.
+Argument *Order* określa typ ogrodzenia.
 
 |||
 |-|-|
-|`memory_order_relaxed`|Ogrodzenie nie ma wpływu.|
-|`memory_order_consume`|Ogrodzenie jest ogrodzeniem nabywanym.|
-|`memory_order_acquire`|Ogrodzenie jest ogrodzeniem nabywanym.|
-|`memory_order_release`|Ogrodzenie jest ogrodzeniem zwalnianym.|
-|`memory_order_acq_rel`|Ogrodzenie jest zarówno ogrodzeniem nabywanym, jak i ogrodzeniem zwalnianym.|
-|`memory_order_seq_cst`|Ogrodzenie jest zarówno ogrodzeniem nabytym, jak i ogrodzeniem zwalnianym i jest sekwencyjnie spójne.|
+|`memory_order_relaxed`|Horyzont nie ma wpływu.|
+|`memory_order_consume`|Ogrodzenie jest ogrodzeniem pozyskiwania.|
+|`memory_order_acquire`|Ogrodzenie jest ogrodzeniem pozyskiwania.|
+|`memory_order_release`|Ogrodzenie jest ogrodzeniem wydania.|
+|`memory_order_acq_rel`|Ogrodzeniem jest zarówno ogrodzeniem, jak i ogrodzeniem wydania.|
+|`memory_order_seq_cst`|Horyzont jest zarówno ogrodzeniem, jak i ogrodzeniem wydania i jest sekwencyjnie spójny.|
 
 ## <a name="atomic_store"></a><a name="atomic_store"></a>atomic_store
 
-Niepodzielnie przechowuje wartość w obiekcie atomowym.
+Niepodzielne przechowuje wartość w obiekcie niepodzielnym.
 
 ```cpp
 template <class Ty>
@@ -890,19 +890,19 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do obiektu atomowego, który `Ty`zawiera wartość typu .
+*Rozproszony*\
+Wskaźnik do obiektu niepodzielnego, który zawiera wartość typu `Ty` .
 
-*Wartość*\
-Wartość typu `Ty`.
+*Wartościami*\
+Wartość typu `Ty` .
 
 ### <a name="remarks"></a>Uwagi
 
-`atomic_store`przechowuje *Wartość* w obiekcie, który jest `memory_order_seq_cst`wskazywał *atom*, w ramach ograniczenia [memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
+`atomic_store`przechowuje *wartość* w obiekcie, który jest wskazywany przez *Atom*, w ramach `memory_order_seq_cst` ograniczenia [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
 ## <a name="atomic_store_explicit"></a><a name="atomic_store_explicit"></a>atomic_store_explicit
 
-Niepodzielnie przechowuje wartość w obiekcie atomowym.
+Niepodzielne przechowuje wartość w obiekcie niepodzielnym.
 
 ```cpp
 template <class Ty>
@@ -920,22 +920,22 @@ inline Ty atomic_store_explicit(
 
 ### <a name="parameters"></a>Parametry
 
-*Atom*\
-Wskaźnik do `atomic` obiektu zawierającego wartość `Ty`typu .
+*Rozproszony*\
+Wskaźnik do `atomic` obiektu, który zawiera wartość typu `Ty` .
 
-*Wartość*\
-Wartość typu `Ty`.
+*Wartościami*\
+Wartość typu `Ty` .
 
-*Zamówienia*\
-[A memory_order](../standard-library/atomic-enums.md#memory_order_enum). Nie `memory_order_consume`używaj `memory_order_acquire`, `memory_order_acq_rel`lub .
+*Porządek*\
+[Memory_order](../standard-library/atomic-enums.md#memory_order_enum). Nie używaj `memory_order_consume` , `memory_order_acquire` , ani `memory_order_acq_rel` .
 
 ### <a name="remarks"></a>Uwagi
 
-`atomic_store`przechowuje *Wartość* w obiekcie, który jest `memory_order` wskazywał *atom*, w obrębie, który jest określony przez *Kolejność*.
+`atomic_store`przechowuje *wartość* w obiekcie, który jest wskazywany przez *Atom*, w obrębie, `memory_order` który jest określony przez *kolejność*.
 
 ## <a name="atomic_thread_fence"></a><a name="atomic_thread_fence"></a>atomic_thread_fence
 
-Działa jako *ogrodzenie*— które jest prymitywne synchronizacji pamięci, które wymusza kolejność między operacjami ładowania/magazynu — bez skojarzonej operacji atomowej.
+Działa jako *ogrodzenie*— jest to element podstawowy synchronizacji pamięci, który wymusza kolejność między operacjami ładowania/przechowywania — bez skojarzonej operacji niepodzielnej.
 
 ```cpp
 inline void atomic_thread_fence(memory_order Order) noexcept;
@@ -943,21 +943,21 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Zamówienia*\
-Ograniczenie kolejności pamięci, które określa typ ogrodzenia.
+*Porządek*\
+Ograniczenie porządkowania pamięci określające typ ogrodzenia.
 
 ### <a name="remarks"></a>Uwagi
 
-*Order,* argument określa typ ogrodzenia.
+Argument *Order* określa typ ogrodzenia.
 
 |||
 |-|-|
-|`memory_order_relaxed`|Ogrodzenie nie ma wpływu.|
-|`memory_order_consume`|Ogrodzenie jest ogrodzeniem nabywanym.|
-|`memory_order_acquire`|Ogrodzenie jest ogrodzeniem nabywanym.|
-|`memory_order_release`|Ogrodzenie jest ogrodzeniem zwalnianym.|
-|`memory_order_acq_rel`|Ogrodzenie jest zarówno ogrodzeniem nabywanym, jak i ogrodzeniem zwalnianym.|
-|`memory_order_seq_cst`|Ogrodzenie jest zarówno ogrodzeniem nabytym, jak i ogrodzeniem zwalnianym i jest sekwencyjnie spójne.|
+|`memory_order_relaxed`|Horyzont nie ma wpływu.|
+|`memory_order_consume`|Ogrodzenie jest ogrodzeniem pozyskiwania.|
+|`memory_order_acquire`|Ogrodzenie jest ogrodzeniem pozyskiwania.|
+|`memory_order_release`|Ogrodzenie jest ogrodzeniem wydania.|
+|`memory_order_acq_rel`|Ogrodzeniem jest zarówno ogrodzeniem, jak i ogrodzeniem wydania.|
+|`memory_order_seq_cst`|Horyzont jest zarówno ogrodzeniem, jak i ogrodzeniem wydania i jest sekwencyjnie spójny.|
 
 ## <a name="kill_dependency"></a><a name="kill_dependency"></a>kill_dependency
 
@@ -970,13 +970,13 @@ Ty kill_dependency(Ty Arg) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Arg*\
-Wartość typu `Ty`.
+*ARG*\
+Wartość typu `Ty` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwracaną wartością jest *Arg*. Ocena *Arg* nie posiada zależności do wywołania funkcji. Przez przerwanie łańcucha zależności możliwe, funkcja może zezwolić kompilatorowi do generowania bardziej wydajnego kodu.
+Wartość zwracana to *ARG*. Obliczanie wartości *ARG* nie jest zależne od wywołania funkcji. Przez podzielenie możliwego łańcucha zależności funkcja może pozwolić kompilatorowi na generowanie bardziej wydajnego kodu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[\<>atomowy](../standard-library/atomic.md)
+[\<atomic>](../standard-library/atomic.md)

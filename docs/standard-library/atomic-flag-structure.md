@@ -6,16 +6,16 @@ f1_keywords:
 - atomic/std::atomic_flag::clear
 - atomic/std::atomic_flag::test_and_set
 ms.assetid: 17f0c2f5-fd39-4a44-873a-b569720a670e
-ms.openlocfilehash: ad4b6dcaf6db1a8abe5b81b4d630e84b54fbaa63
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ff60e05c7d14104e164e8251a9146f8b0d0dcde3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376868"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203926"
 ---
 # <a name="atomic_flag-structure"></a>atomic_flag — Struktura
 
-Opisuje obiekt, który niepodzielnie ustawia i czyści **bool** flagi. Operacje na flagach atomowych są zawsze bez blokady.
+Opisuje obiekt, który niepodzielnie ustawia i czyści **`bool`** flagę. Operacje na flagach niepodzielnych są zawsze zablokowane.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,22 +29,22 @@ struct atomic_flag;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[Wyczyść](#clear)|Ustawia przechowywaną flagę na **false**.|
-|[test_and_set](#test_and_set)|Ustawia przechowywaną flagę na **wartość true** i zwraca początkową wartość flagi.|
+|[Wyczyść](#clear)|Ustawia wartość przechowywanej flagi na **`false`** .|
+|[test_and_set](#test_and_set)|Ustawia wartość przechowywanej flagi na **`true`** i zwraca początkową wartością flagi.|
 
 ## <a name="remarks"></a>Uwagi
 
-`atomic_flag`obiekty mogą być przekazywane do funkcji niebędących [członkami, atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear) [, atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit), [atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)i [atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit). Można je zainicjować przy `ATOMIC_FLAG_INIT`użyciu wartości .
+`atomic_flag`obiekty mogą być przesyłane do funkcji nienależących do elementu członkowskiego [atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear), [atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit), [atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)i [atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit). Można je zainicjować przy użyciu wartości `ATOMIC_FLAG_INIT` .
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<> atomowy
+**Nagłówek:**\<atomic>
 
 **Przestrzeń nazw:** std
 
-## <a name="atomic_flagclear"></a><a name="clear"></a>atomic_flag::wyczyść
+## <a name="atomic_flagclear"></a><a name="clear"></a>atomic_flag:: Clear
 
-Ustawia flagę **bool,** `*this` która jest przechowywana w **false,** w ramach określonych [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ograniczeń.
+Ustawia **`bool`** flagę przechowywaną w **`*this`** do **`false`** , w ramach określonych ograniczeń [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
 ```cpp
 void atomic_flag::clear(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -53,12 +53,12 @@ void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Zamówienia*\
-[A memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Porządek*\
+[Memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-## <a name="atomic_flagtest_and_set"></a><a name="test_and_set"></a>atomic_flag::test_and_set
+## <a name="atomic_flagtest_and_set"></a><a name="test_and_set"></a>atomic_flag:: test_and_set
 
-Ustawia flagę **bool,** `*this` która jest przechowywana w **true**, w ramach określonych [ograniczeń memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
+Ustawia **`bool`** flagę przechowywaną w **`*this`** do **`true`** , w ramach określonych ograniczeń [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
 ```cpp
 bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -67,13 +67,13 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 
 ### <a name="parameters"></a>Parametry
 
-*Zamówienia*\
-[A memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Porządek*\
+[Memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartość początkowa flagi przechowywanej `*this`w pliku .
+Początkowa wartość flagi, która jest przechowywana w **`*this`** .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[\<>atomowy](../standard-library/atomic.md)
+[\<atomic>](../standard-library/atomic.md)

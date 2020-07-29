@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: 507f6b99416cd59c3a0383e3e41a7ae26c44b019
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fbde746cba02605be7fa42e941a30bfa02d0561a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911178"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231315"
 ---
 # <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
@@ -128,7 +128,7 @@ Zakończony zerem, przeszukiwany ciąg.
 *strCharSet*<br/>
 Zestaw znaków zakończony znakiem null.
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -137,15 +137,15 @@ Zwraca wskaźnik do pierwszego wystąpienia dowolnego znaku z *strCharSet* w *st
 
 ## <a name="remarks"></a>Uwagi
 
-`strpbrk` Funkcja zwraca wskaźnik do pierwszego wystąpienia znaku w *str* , który należy do zestawu znaków w *strCharSet*. Wyszukiwanie nie zawiera kończącego znaku null.
+`strpbrk`Funkcja zwraca wskaźnik do pierwszego wystąpienia znaku w *str* , który należy do zestawu znaków w *strCharSet*. Wyszukiwanie nie zawiera kończącego znaku null.
 
-`wcspbrk`i `_mbspbrk` są wersjami znaków dwubajtowych i znakami `strpbrk`wieloznacznymi. Argumenty i wartość zwracana przez `wcspbrk` są ciągami znaków dwubajtowych; te z `_mbspbrk` są ciągami znaków wielobajtowych.
+`wcspbrk`i `_mbspbrk` są wersjami znaków dwubajtowych i znakami wieloznacznymi `strpbrk` . Argumenty i wartość zwracana przez `wcspbrk` są ciągami znaków `_mbspbrk` dwubajtowych; te z są ciągami znaków wieloznacznych.
 
-`_mbspbrk`sprawdza poprawność swoich parametrów. Jeśli *str* lub *strCharSet* ma wartość null, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, `_mbspbrk` zwraca wartość null i `errno` ustawia do EINVAL. `strpbrk`i `wcspbrk` nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie w inny sposób.
+`_mbspbrk`sprawdza poprawność swoich parametrów. Jeśli *str* lub *strCharSet* ma wartość null, zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, `_mbspbrk` zwraca wartość null i ustawia `errno` do EINVAL. `strpbrk`i `wcspbrk` nie weryfikują ich parametrów. Te trzy funkcje zachowują się identycznie w inny sposób.
 
-`_mbspbrk`jest podobna do `_mbscspn` except, `_mbspbrk` która zwraca wskaźnik zamiast wartości typu [size_t](../../c-runtime-library/standard-types.md).
+`_mbspbrk`jest podobna do `_mbscspn` except, która `_mbspbrk` zwraca wskaźnik zamiast wartości typu [size_t](../../c-runtime-library/standard-types.md).
 
-W języku C te funkcje przyjmują wskaźnik **const** dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie pobierające wskaźnik do elementu **const** zwraca wskaźnik do elementu **const**; wersja, która przyjmuje wskaźnik do elementu niebędącego**stałą** , zwraca wskaźnik do elementu innego niż**const**. Makro _CRT_CONST_CORRECT_OVERLOADS jest zdefiniowane, jeśli są dostępne zarówno wersje **const** , jak i**niestałe** tych funkcji. Jeśli wymagane jest zachowanie**niestałe** dla obu przeciążeń C++, zdefiniuj symbol _CONST_RETURN.
+W języku C te funkcje przyjmują **`const`** wskaźnik dla pierwszego argumentu. W języku C++ dostępne są dwa przeciążenia. Przeciążenie pobierające wskaźnik do **`const`** zwraca wskaźnik do **`const`** ; wersja, która przyjmuje wskaźnik do **`const`** niezwracanego wskaźnika do niebędącego elementem **`const`** . Makro _CRT_CONST_CORRECT_OVERLOADS jest zdefiniowane, jeśli **`const`** są dostępne zarówno i nie **`const`** wersje tych funkcji. Jeśli wymagane jest **`const`** zachowanie niezachowania dla obu przeciążeń C++, zdefiniuj symbol _CONST_RETURN.
 
 Wartość wyjściowa jest zależna od ustawienia ustawienia kategorii LC_CTYPE ustawień regionalnych; Aby uzyskać więcej informacji, zobacz [setlocale](setlocale-wsetlocale.md). Wersje tych funkcji bez sufiksu **_l** używają bieżących ustawień regionalnych dla tego zachowania zależnego od ustawień regionalnych. wersja z sufiksem **_l** jest identyczna, z tą różnicą, że używa zamiast tego parametru ustawień regionalnych. Aby uzyskać więcej informacji, zobacz [Ustawienia regionalne](../../c-runtime-library/locale.md).
 
@@ -162,9 +162,9 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|`strpbrk`|\<> String. h|
-|`wcspbrk`|\<ciąg. h> lub \<WCHAR. h>|
-|`_mbspbrk`, `_mbspbrk_l`|\<mbstring. h>|
+|`strpbrk`|\<string.h>|
+|`wcspbrk`|\<string.h> lub \<wchar.h>|
+|`_mbspbrk`, `_mbspbrk_l`|\<mbstring.h>|
 
 Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -202,11 +202,11 @@ int main( void )
 4: 5 pigs
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Manipulowanie ciągami](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
+[Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strchr, wcschr, _mbschr, _mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
