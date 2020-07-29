@@ -108,18 +108,18 @@ helpviewer_keywords:
 - operator>(list) member [STL/CLR]
 - operator>=(list) member [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
-ms.openlocfilehash: 7a07f0cc66492c5e0c10c82a7a6971313e13d77b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1c05aff71b16c3edf1348466df325caacb027554
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208562"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225634"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 
-Klasa szablonu opisuje obiekt, który kontroluje różnej długości sekwencje elementów, które mają dostęp dwukierunkowy. `list` kontenera służy do zarządzania sekwencją elementów jako dwukierunkową listą węzłów, z których każdy ma przechowywać jeden element.
+Klasa szablonu opisuje obiekt, który kontroluje różnej długości sekwencje elementów, które mają dostęp dwukierunkowy. Kontener służy `list` do zarządzania sekwencją elementów jako dwukierunkową listą węzłów, z których każdy ma przechowywać jeden element.
 
-W poniższym opisie `GValue` jest taka sama jak *wartość* , chyba że ostatni jest typem ref, w takim przypadku jest `Value^`.
+W poniższym opisie `GValue` jest taka sama jak *wartość* , chyba że ostatni jest typem ref, w takim przypadku jest to `Value^` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -143,7 +143,7 @@ Typ elementu w kontrolowanej sekwencji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<cliext/list >
+**Nagłówek:**\<cliext/list>
 
 **Przestrzeń nazw:** cliext
 
@@ -203,37 +203,37 @@ Typ elementu w kontrolowanej sekwencji.
 |Operator|Opis|
 |--------------|-----------------|
 |[list::operator= (STL/CLR)](#op_as)|Zastępuje kontrolowaną sekwencję.|
-|[operator!= (list) (STL/CLR)](#op_neq)|Określa, czy obiekt `list` nie jest równy innemu obiektowi `list`.|
-|[operator< (list) (STL/CLR)](#op_lt)|Określa, czy obiekt `list` jest mniejszy niż inny obiekt `list`.|
-|[operator<= (list) (STL/CLR)](#op_lteq)|Określa, czy obiekt `list` jest mniejszy niż lub równy innemu obiektowi `list`.|
-|[operator== (list) (STL/CLR)](#op_eq)|Określa, czy obiekt `list` jest równy innemu obiektowi `list`.|
-|[operator> (list) (STL/CLR)](#op_gt)|Określa, czy obiekt `list` jest większy niż inny obiekt `list`.|
-|[operator>= (list) (STL/CLR)](#op_gteq)|Określa, czy obiekt `list` jest większy niż lub równy innemu obiektowi `list`.|
+|[operator!= (list) (STL/CLR)](#op_neq)|Określa, czy `list` obiekt nie jest równy innemu `list` obiektowi.|
+|[< operatora (lista) (STL/CLR)](#op_lt)|Określa, czy `list` obiekt jest mniejszy niż inny `list` obiekt.|
+|[operator<= (list) (STL/CLR)](#op_lteq)|Określa, czy `list` obiekt jest mniejszy niż lub równy innemu `list` obiektowi.|
+|[operator = = (lista) (STL/CLR)](#op_eq)|Określa, czy `list` obiekt jest równy innemu `list` obiektowi.|
+|[> operatora (lista) (STL/CLR)](#op_gt)|Określa, czy `list` obiekt jest większy niż inny `list` obiekt.|
+|[operator>= (list) (STL/CLR)](#op_gteq)|Określa, czy `list` obiekt jest większy lub równy innemu `list` obiektowi.|
 
 ## <a name="interfaces"></a>Interfejsy
 
-|Interface|Opis|
+|Interfejs|Opis|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Duplikowanie obiektu.|
 |<xref:System.Collections.IEnumerable>|Sekwencja przez elementy.|
 |<xref:System.Collections.ICollection>|Obsługa grupy elementów.|
 |<xref:System.Collections.Generic.IEnumerable%601>|Sekwencja przez wpisane elementy.|
 |<xref:System.Collections.Generic.ICollection%601>|Obsługuj grupę wpisanych elementów.|
-|Wartość\<IList >|Obsługa kontenera ogólnego.|
+|IList\<Value>|Obsługa kontenera ogólnego.|
 
 ## <a name="remarks"></a>Uwagi
 
 Obiekt przydziela i zwalnia magazyn dla sekwencji, która kontroluje jako pojedyncze węzły na liście łączy dwukierunkowych. Organizuje ona elementy przez zmianę linków między węzłami, nigdy przez skopiowanie zawartości jednego węzła do drugiego. Oznacza to, że można wstawiać i usuwać elementy swobodnie bez zakłócania pozostałych elementów. W ten sposób lista jest dobrym kandydatem dla bazowego kontenera dla kolejki klas szablonu [(STL/CLR)](../dotnet/queue-stl-clr.md) lub stosu klas szablonu [(STL/CLR)](../dotnet/stack-stl-clr.md).
 
-Obiekt `list` obsługuje Iteratory dwukierunkowe, co oznacza, że można przechodzić do sąsiadujących elementów przy użyciu iteratora, który wyznacza element w kontrolowanej sekwencji. Specjalny węzeł główny odpowiada iteratorowi zwróconemu przez [listę:: end (STL/CLR)](../dotnet/list-end-stl-clr.md)`()`. Można zmniejszyć ten iterator, aby dotrzeć do ostatniego elementu w kontrolowanej sekwencji, jeśli jest obecny. Można zwiększyć iterator listy, aby dotrzeć do węzła głównego, a następnie będzie on porównywany z `end()`. Ale nie można usunąć odwołania do iteratora zwróconego przez `end()`.
+`list`Obiekt obsługuje Iteratory dwukierunkowe, co oznacza, że można przechodzić do sąsiadujących elementów przy użyciu iteratora, który wyznacza element w kontrolowanej sekwencji. Specjalny węzeł główny odpowiada iteratorowi zwróconemu przez [listę:: end (STL/CLR)](../dotnet/list-end-stl-clr.md) `()` . Można zmniejszyć ten iterator, aby dotrzeć do ostatniego elementu w kontrolowanej sekwencji, jeśli jest obecny. Można zwiększyć iterator listy, aby dotrzeć do węzła głównego, a następnie będzie on porównywany z równą `end()` . Ale nie można usunąć odwołania do iteratora zwróconego przez `end()` .
 
 Należy zauważyć, że nie można odwołać się do elementu listy bezpośrednio przy użyciu jego pozycji liczbowej — który wymaga iteratora dostępu swobodnego. Dlatego *nie* można użyć listy jako bazowego kontenera dla klasy szablonu [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).
 
-Iterator listy przechowuje uchwyt do skojarzonego z nim węzła listy, który z kolei przechowuje dojście do skojarzonego kontenera. Iteratorów można używać tylko ze skojarzonymi obiektami kontenera. Iterator listy pozostaje prawidłowy, dopóki jego skojarzony węzeł listy jest skojarzony z niepewną listą. Ponadto prawidłowy iterator jest dereferencable — można go użyć w celu uzyskania dostępu do lub zmiany wartości elementu, którą wyznacza, tak długo, jak nie jest równa `end()`.
+Iterator listy przechowuje uchwyt do skojarzonego z nim węzła listy, który z kolei przechowuje dojście do skojarzonego kontenera. Iteratorów można używać tylko ze skojarzonymi obiektami kontenera. Iterator listy pozostaje prawidłowy, dopóki jego skojarzony węzeł listy jest skojarzony z niepewną listą. Ponadto prawidłowy iterator jest dereferencable — można go użyć w celu uzyskania dostępu do lub zmiany wartości elementu, który wyznacza, tak długo, jak nie jest równa `end()` .
 
 Wymazywanie lub usuwanie elementu wywołuje destruktor dla jego przechowywanej wartości. Niszczenie kontenera powoduje wymazanie wszystkich elementów. W tym celu kontener, którego typem elementu jest Klasa ref, zapewnia, że żadne elementy nie wyprowadzą kontenera. Należy jednak zauważyć, że kontener dojść *nie* niszczy swoich elementów.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ## <a name="listassign-stlclr"></a><a name="assign"></a>list:: Assign (STL/CLR)
 
@@ -250,7 +250,7 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 
 #### <a name="parameters"></a>Parametry
 
-*count*<br/>
+*liczbą*<br/>
 Liczba elementów do wstawienia.
 
 *pierwszego*<br/>
@@ -269,7 +269,7 @@ Wartość elementu do wstawienia.
 
 Pierwsza funkcja członkowska zastępuje kontrolowana sekwencję z powtórzeniem elementów *Count* wartości *Val*. Służy do wypełniania kontenera wszystkimi elementami o tej samej wartości.
 
-Jeśli `InIt` jest typu Integer, druga funkcja członkowska zachowuje się tak samo jak `assign((size_type)first, (value_type)last)`. W przeciwnym razie zastępuje kontrolowaną sekwencję sekwencją [`first`, `last`). Jest on używany do sterowania sekwencją, która kopiuje kolejną sekwencję.
+Jeśli `InIt` jest typu Integer, druga funkcja członkowska zachowuje się tak samo jak `assign((size_type)first, (value_type)last)` . W przeciwnym razie zastępuje kontrolowaną sekwencję sekwencją [ `first` , `last` ). Jest on używany do sterowania sekwencją, która kopiuje kolejną sekwencję.
 
 Trzecia funkcja członkowska zastępuje kontrolowaną sekwencję sekwencją wyznaczonej przez moduł wyliczający w *prawo*. Jest on używany do naliczania kontrolowanej sekwencji kopii sekwencji opisanej przez moduł wyliczający.
 
@@ -431,7 +431,7 @@ iterator begin();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca iterator dostępu swobodnego, który wyznacza pierwszy element kontrolowanej sekwencji lub tuż poza końcem pustej sekwencji. Służy do uzyskania iteratora, który wyznacza `current` początku kontrolowanej sekwencji, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
+Funkcja członkowska zwraca iterator dostępu swobodnego, który wyznacza pierwszy element kontrolowanej sekwencji lub tuż poza końcem pustej sekwencji. Służy do uzyskania iteratora, który wyznacza `current` początek kontrolowanej sekwencji, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -486,7 +486,7 @@ void clear();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska skutecznie wywołuje [listę:: Erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)`(` [list:: begin (STL/CLR)](../dotnet/list-begin-stl-clr.md)`(),` [list:: end (STL/CLR)](../dotnet/list-end-stl-clr.md)`())`. Jest on używany do upewnienia się, że kontrolowana sekwencja jest pusta.
+Funkcja członkowska skutecznie wywołuje listę [:: Erase (STL/CLR)](../dotnet/list-erase-stl-clr.md) `(` [list:: begin (STL/CLR)](../dotnet/list-begin-stl-clr.md) `(),` [list:: end (STL/CLR)](../dotnet/list-end-stl-clr.md) `())` . Jest on używany do upewnienia się, że kontrolowana sekwencja jest pusta.
 
 ### <a name="example"></a>Przykład
 
@@ -543,7 +543,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt nieokreślonego typu `T2`, który może stanowić iterator stałego dostępu swobodnego dla kontrolowanej sekwencji.
+Typ opisuje obiekt nieokreślonego typu `T2` , który może być używany jako iterator stałego dostępu swobodnego dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -628,7 +628,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt nieokreślonego typu `T4`, który może być używany jako ciągły iterator odwrotny dla kontrolowanej sekwencji.
+Typ opisuje obiekt nieokreślonego typu `T4` , który może być używany jako ciągły iterator odwrotny dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -724,7 +724,7 @@ bool empty();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca wartość true dla pustej kontrolowanej sekwencji. Jest on odpowiednikiem [listy:: size (STL/CLR)](../dotnet/list-size-stl-clr.md)`() == 0`. Służy do sprawdzania, czy lista jest pusta.
+Funkcja członkowska zwraca wartość true dla pustej kontrolowanej sekwencji. Jest równoważne z [listą:: size (STL/CLR)](../dotnet/list-size-stl-clr.md) `() == 0` . Służy do sprawdzania, czy lista jest pusta.
 
 ### <a name="example"></a>Przykład
 
@@ -845,9 +845,9 @@ Element do wymazania.
 
 Pierwsza funkcja członkowska usuwa element kontrolowanej sekwencji wskazywanej przez *WHERE*. Służy do usuwania pojedynczego elementu.
 
-Druga funkcja członkowska usuwa elementy z kontrolowanej sekwencji z zakresu [`first`, `last`). Jest on używany do usuwania elementów sąsiadujących lub więcej.
+Druga funkcja członkowska usuwa elementy z kontrolowanej sekwencji z zakresu [ `first` , `last` ). Jest on używany do usuwania elementów sąsiadujących lub więcej.
 
-Obie funkcje członkowskie zwracają iterator, który wyznacza pierwszy element, który nie został usunięty, lub [list:: end (STL/CLR)](../dotnet/list-end-stl-clr.md)`()`, jeśli taki element nie istnieje.
+Obie funkcje członkowskie zwracają iterator, który wyznacza pierwszy element po usunięciu elementów, lub [listę:: end (STL/CLR)](../dotnet/list-end-stl-clr.md) , `()` Jeśli taki element nie istnieje.
 
 Podczas wymazywania elementów liczba kopii elementów jest liniowa w liczbie elementów między końcem wymazywania a bliskością końca sekwencji. (Podczas wymazywania jednego lub większej liczby elementów na końcu sekwencji nie są kopiowane żadne elementy).
 
@@ -1193,7 +1193,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt typu `GValue`, który opisuje wartość przechowywanego elementu do użycia z interfejsem ogólnym dla tej klasy kontenera szablonu.
+Typ opisuje obiekt typu `GValue` , który opisuje wartość przechowywanego elementu do użycia z interfejsem ogólnym dla tej klasy kontenera szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -1254,7 +1254,7 @@ void insert(iterator where,
 
 #### <a name="parameters"></a>Parametry
 
-*count*<br/>
+*liczbą*<br/>
 Liczba elementów do wstawienia.
 
 *pierwszego*<br/>
@@ -1280,11 +1280,11 @@ Pierwsza funkcja członkowska wstawia element z wartością *Val* i zwraca itera
 
 Druga funkcja członkowska wstawia powtarzające się elementy *Count* wartości *Val*. Służy do wstawiania elementów ciągłych lub innych, które są kopiami tej samej wartości.
 
-Jeśli `InIt` jest typu Integer, trzecia funkcja członkowska zachowuje się tak samo jak `insert(where, (size_type)first, (value_type)last)`. W przeciwnym razie wstawia sekwencję [`first`, `last`). Służy do wstawiania elementów sąsiadujących, które zostały skopiowane z innej sekwencji.
+Jeśli `InIt` jest typu Integer, trzecia funkcja członkowska zachowuje się tak samo jak `insert(where, (size_type)first, (value_type)last)` . W przeciwnym razie wstawia sekwencję [ `first` , `last` ). Służy do wstawiania elementów sąsiadujących, które zostały skopiowane z innej sekwencji.
 
 Czwarta funkcja członkowska wstawia sekwencję wydaną po *prawej stronie*. Służy do wstawiania sekwencji opisanej przez moduł wyliczający.
 
-Podczas wstawiania pojedynczego elementu liczba kopii elementów jest liniowa w liczbie elementów między punktem wstawiania i bliską końcem sekwencji. (Podczas wstawiania co najmniej jednego elementu na końcu sekwencji nie ma żadnych kopii elementów). Jeśli `InIt` jest iteratorem wejściowym, trzecia funkcja członkowska skutecznie wykonuje pojedynczy wstawienie dla każdego elementu w sekwencji. W przeciwnym razie podczas wstawiania `N` elementów liczba kopii elementów jest liniowa w `N` plus liczba elementów między punktem wstawiania a bliskością końca sekwencji.
+Podczas wstawiania pojedynczego elementu liczba kopii elementów jest liniowa w liczbie elementów między punktem wstawiania i bliską końcem sekwencji. (Podczas wstawiania co najmniej jednego elementu na końcu sekwencji nie ma żadnych kopii elementów). Jeśli `InIt` jest iteratorem wejściowym, trzecia funkcja składa efektywnie wykonuje pojedynczy Wstaw dla każdego elementu w sekwencji. W przeciwnym razie, podczas wstawiania `N` elementów liczba kopii elementów jest liniowa `N` oraz liczba elementów między punktem wstawiania a bliskością końca sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -1367,7 +1367,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt nieokreślonego typu `T1`, który może stanowić Iterator dostępu swobodnego dla kontrolowanej sekwencji.
+Typ opisuje obiekt nieokreślonego typu `T1` , który może być używany jako Iterator dostępu swobodnego dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -1423,7 +1423,7 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 
 #### <a name="parameters"></a>Parametry
 
-*count*<br/>
+*liczbą*<br/>
 Liczba elementów do wstawienia.
 
 *pierwszego*<br/>
@@ -1450,19 +1450,19 @@ Konstruktor:
 
 `list(list<Value>% right);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją [`right.begin()`, `right.end()`). Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej przez obiekt listy w *prawo*.
+Inicjuje kontrolowaną sekwencję z sekwencją [ `right.begin()` , `right.end()` ). Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej przez obiekt listy w *prawo*.
 
 Konstruktor:
 
 `list(list<Value>^ right);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją [`right->begin()`, `right->end()`). Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej przez obiekt listy, którego uchwyt jest *prawidłowy*.
+Inicjuje kontrolowaną sekwencję z sekwencją [ `right->begin()` , `right->end()` ). Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej przez obiekt listy, którego uchwyt jest *prawidłowy*.
 
 Konstruktor:
 
 `explicit list(size_type count);`
 
-Inicjuje kontrolowaną sekwencję z elementami *Count* Each z wartością `value_type()`. Służy do wypełniania kontenera wszystkimi elementami o wartości domyślnej.
+Inicjuje kontrolowaną sekwencję z elementami *Count* każda z wartością `value_type()` . Służy do wypełniania kontenera wszystkimi elementami o wartości domyślnej.
 
 Konstruktor:
 
@@ -1476,7 +1476,7 @@ Konstruktor:
 
 `list(InIt first, InIt last);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją [`first`, `last`). Jest on używany do Przekształć sekwencję na kopię innej sekwencji.
+Inicjuje kontrolowaną sekwencję z sekwencją [ `first` , `last` ). Jest on używany do Przekształć sekwencję na kopię innej sekwencji.
 
 Konstruktor:
 
@@ -1571,11 +1571,11 @@ Kontener do scalenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja członkowska usuwa wszystkie elementy z sekwencji kontrolowanej przez *prawo* i wstawia je w kontrolowanej sekwencji. Obie sekwencje muszą być wcześniej uporządkowane według `operator<`--elementy nie mogą zmniejszać wartości podczas wykonywania jednej sekwencji. Utworzona sekwencja jest również uporządkowana według `operator<`. Ta funkcja członkowska służy do scalania dwóch sekwencji, które zwiększają wartość do sekwencji, która również zwiększa wartość.
+Pierwsza funkcja członkowska usuwa wszystkie elementy z sekwencji kontrolowanej przez *prawo* i wstawia je w kontrolowanej sekwencji. Obie sekwencje muszą być wcześniej uporządkowane według `operator<` --elementy nie mogą zmniejszać wartości podczas wykonywania jednej z tych sekwencji. Utworzona sekwencja jest również uporządkowana według `operator<` . Ta funkcja członkowska służy do scalania dwóch sekwencji, które zwiększają wartość do sekwencji, która również zwiększa wartość.
 
-Druga funkcja członkowska zachowuje się tak samo jak pierwszy, z tą różnicą, że sekwencje są uporządkowane według `pred` -- `pred(X, Y)` musi mieć wartość false dla każdego elementu `X`, który następuje `Y` elementu w sekwencji. Służy do scalania dwóch sekwencji uporządkowanych według określonej przez użytkownika funkcji predykatu lub delegata.
+Druga funkcja członkowska zachowuje się tak samo jak pierwszy, z tą różnicą, że sekwencje są uporządkowane według `pred`  --  `pred(X, Y)` muszą mieć wartość false dla każdego elementu `X` , który następuje `Y` po elemencie w sekwencji. Służy do scalania dwóch sekwencji uporządkowanych według określonej przez użytkownika funkcji predykatu lub delegata.
 
-Obie funkcje wykonują stabilne scalanie--żadna para elementów w jednej z oryginalnych sekwencji jest odwrócona w wyniku kontrolowanej sekwencji. Ponadto, jeśli para elementów `X` i `Y` w kontrolowanej sekwencji ma równoważnej kolejności--`!(X < Y) && !(X < Y)`--element z oryginalnej kontrolowanej sekwencji pojawia się przed elementem z sekwencji kontrolowanej przez *prawo*.
+Obie funkcje wykonują stabilne scalanie--żadna para elementów w jednej z oryginalnych sekwencji jest odwrócona w wyniku kontrolowanej sekwencji. Ponadto, jeśli para elementów `X` i `Y` w kontrolowanej sekwencji ma równoważnej kolejności-- `!(X < Y) && !(X < Y)` --element z oryginalnej kontrolowanej sekwencji pojawia się przed elementem z sekwencji kontrolowanej przez *prawo*.
 
 ### <a name="example"></a>Przykład
 
@@ -1663,7 +1663,7 @@ Kontener do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator elementu członkowskiego kopiuje *prawo* do obiektu, a następnie zwraca `*this`. Służy do zastępowania kontrolowanej sekwencji kopią kontrolowanej sekwencji *po prawej stronie*.
+Operator elementu członkowskiego kopiuje *prawo* do obiektu, a następnie zwraca **`*this`** . Służy do zastępowania kontrolowanej sekwencji kopią kontrolowanej sekwencji *po prawej stronie*.
 
 ### <a name="example"></a>Przykład
 
@@ -1845,7 +1845,7 @@ void push_front(value_type val);
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska wstawia element o wartości `val` na początku kontrolowanej sekwencji. Jest on używany do nałączania kolejnego elementu do listy.
+Funkcja członkowska wstawia element z wartością `val` na początku kontrolowanej sekwencji. Jest on używany do nałączania kolejnego elementu do listy.
 
 ### <a name="example"></a>Przykład
 
@@ -1885,7 +1885,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca iterator odwrotny, który wyznacza ostatni element kontrolowanej sekwencji lub tuż poza początkiem pustej sekwencji. W związku z tym wyznacza `beginning` sekwencji odwrotnej. Służy do uzyskania iteratora, który wyznacza `current` początku kontrolowanej sekwencji widocznej w odwrotnej kolejności, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
+Funkcja członkowska zwraca iterator odwrotny, który wyznacza ostatni element kontrolowanej sekwencji lub tuż poza początkiem pustej sekwencji. W związku z tym określa `beginning` odwrotną sekwencję. Służy do uzyskania iteratora, który wyznacza `current` początek kontrolowanej sekwencji widoczny w kolejności odwrotnej, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2000,7 +2000,7 @@ Wartość elementu do usunięcia.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska usuwa element w kontrolowanej sekwencji, dla którego `((System::Object^)val)->Equals((System::Object^)x)` ma wartość true (jeśli istnieje). Służy do wymazywania dowolnego elementu z określoną wartością.
+Funkcja członkowska usuwa element w kontrolowanej sekwencji, dla którego `((System::Object^)val)->Equals((System::Object^)x)` jest spełniony (jeśli istnieje). Służy do wymazywania dowolnego elementu z określoną wartością.
 
 ### <a name="example"></a>Przykład
 
@@ -2060,7 +2060,7 @@ Testuj elementy do usunięcia.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska usuwa z kontrolowanej sekwencji (kasuje) wszystkie elementy `X`, dla których `pred(X)` ma wartość true. Służy do usuwania wszystkich elementów, które spełniają warunek określony jako funkcja lub delegat.
+Funkcja członkowska usuwa z kontrolowanej sekwencji (wymazuje) każdy element `X` , dla którego `pred(X)` ma wartość true. Służy do usuwania wszystkich elementów, które spełniają warunek określony jako funkcja lub delegat.
 
 ### <a name="example"></a>Przykład
 
@@ -2118,7 +2118,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca iterator odwrotny, który wskazuje tuż poza początkiem kontrolowanej sekwencji. W związku z tym wyznacza `end` sekwencji odwrotnej. Służy do uzyskania iteratora, który wyznacza `current` końca kontrolowanej sekwencji widoczny w odwrotnej kolejności, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
+Funkcja członkowska zwraca iterator odwrotny, który wskazuje tuż poza początkiem kontrolowanej sekwencji. W związku z tym określa `end` odwrotną sekwencję. Służy do uzyskania iteratora, który wyznacza `current` koniec kontrolowanej sekwencji widoczny w odwrotnej kolejności, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2183,7 +2183,7 @@ Wartość elementu dopełnienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje składowe zapewniają, że element [list:: size (STL/CLR)](../dotnet/list-size-stl-clr.md)`()` odtąd zwraca *new_size*. Jeśli ta sekwencja musi być większa, funkcja pierwszej składowej dołącza elementy o wartości `value_type()`, podczas gdy druga funkcja członkowska dołącza elementy o wartości *Val*. Aby sekwencja była krótsza, obie funkcje elementów członkowskich skutecznie kasują ostatnią [listę elementów:: size (STL/CLR)](../dotnet/list-size-stl-clr.md)`() -` `new_size` razy. Służy do upewnienia się, że kontrolowana sekwencja ma rozmiar *new_size*, przez przycinanie lub uzupełnienie bieżącej kontrolowanej sekwencji.
+Funkcje składowe zapewniają, że funkcja [list:: size (STL/CLR)](../dotnet/list-size-stl-clr.md) `()` odtąd zwraca *new_size*. Jeśli ta sekwencja musi być większa, funkcja pierwszej składowej dołącza elementy o wartości `value_type()` , podczas gdy druga funkcja członkowska dołącza elementy o wartości *Val*. Aby sekwencja była krótsza, obie funkcje elementów członkowskich skutecznie kasują ostatnią [listę elementów:: size (STL/CLR)](../dotnet/list-size-stl-clr.md) `() -` `new_size` czasy. Służy do upewnienia się, że kontrolowana sekwencja ma rozmiar *new_size*, przez przycinanie lub uzupełnienie bieżącej kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2281,7 +2281,7 @@ typedef T3 reverse_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt nieokreślonego typu `T3`, który może działać jako iterator odwrotny dla kontrolowanej sekwencji.
+Typ opisuje obiekt nieokreślonego typu `T3` , który może być używany jako iterator odwrotny dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2330,7 +2330,7 @@ size_type size();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca długość kontrolowanej sekwencji. Służy do określania liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli dowiesz się, czy sekwencja ma rozmiar różny od zera, zobacz [list:: empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)`()`.
+Funkcja członkowska zwraca długość kontrolowanej sekwencji. Służy do określania liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli dowiesz się, czy sekwencja ma rozmiar różny od zera, zobacz [list:: empty (STL/CLR)](../dotnet/list-empty-stl-clr.md) `()` .
 
 ### <a name="example"></a>Przykład
 
@@ -2438,9 +2438,9 @@ Funkcja porównująca dla par elementów.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja członkowska zmienia elementy w kontrolowanej sekwencji tak, aby były uporządkowane według `operator<`--elementy nie zmniejszają wartości w miarę postępu przez sekwencję. Ta funkcja członkowska służy do sortowania sekwencji w kolejności rosnącej.
+Pierwsza funkcja członkowska zmienia elementy w kontrolowanej sekwencji tak, aby były uporządkowane według `operator<` --elementy nie zmniejszają wartości podczas wykonywania sekwencji. Ta funkcja członkowska służy do sortowania sekwencji w kolejności rosnącej.
 
-Druga funkcja członkowska zachowuje się tak samo jak pierwszy, z tą różnicą, że sekwencja jest uporządkowana przez `pred` -- `pred(X, Y)` ma wartość false dla każdego elementu `X`, który następuje po elemencie `Y` w wynikowej sekwencji. Służy do sortowania sekwencji w kolejności określonej przez funkcję predykatu lub delegata.
+Druga funkcja członkowska zachowuje się tak samo jak pierwszy, z tą różnicą, że sekwencja jest uporządkowana przez `pred`  --  `pred(X, Y)` wartość false dla każdego elementu `X` , który następuje po elemencie `Y` w wynikowej sekwencji. Służy do sortowania sekwencji w kolejności określonej przez funkcję predykatu lub delegata.
 
 Obie funkcje wykonują stabilne sortowanie — żadna para elementów w oryginalnej kontrolowanej sekwencji nie jest odwrócona w wyniku kontrolowanej sekwencji.
 
@@ -2514,11 +2514,11 @@ Gdzie w kontenerze mają być nałączenia przed.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja członkowska wstawia sekwencję sterowaną przez *prawo* przed elementem w kontrolowanej sekwencji wskazywanym przez *WHERE*. Usuwa również wszystkie elementy z *prawej strony*. (`%right` nie może być równe `this`.) Służy do łączenia wszystkich jednej listy z inną.
+Pierwsza funkcja członkowska wstawia sekwencję sterowaną przez *prawo* przed elementem w kontrolowanej sekwencji wskazywanym przez *WHERE*. Usuwa również wszystkie elementy z *prawej strony*. ( `%right` nie może być równe **`this`** ). Służy do łączenia wszystkich jednej listy z inną.
 
 Druga funkcja członkowska usuwa element wskazany *najpierw* w sekwencji kontrolowanej przez *prawo* i wstawia go przed elementem w kontrolowanej sekwencji wskazywanym przez *WHERE*. (Jeśli `where` `==` `first` `||` `where` `== ++first`, nie nastąpi zmiana.) Służy do łączenia pojedynczego elementu jednej listy w inny.
 
-Trzecia funkcja członkowska wstawia Podzakres wyznaczone przez [`first`, `last`) z sekwencji kontrolowanej przez *prawo* przed elementem w kontrolowanej sekwencji wskazywanym przez *WHERE*. Powoduje również usunięcie oryginalnego podzakresu z sekwencji kontrolowanej przez *prawo*. (Jeśli `right` `==` `this`zakres [`first`, `last`) nie może zawierać elementu wskazywanego przez *WHERE*.) Służy do łączenia podsekwencji zero lub więcej elementów z jednej listy do innej.
+Trzecia funkcja członkowska wstawia Podzakres wyznaczone przez [ `first` , `last` ) z sekwencji kontrolowanej przez *prawo* przed elementem w kontrolowanej sekwencji wskazywanym przez *WHERE*. Powoduje również usunięcie oryginalnego podzakresu z sekwencji kontrolowanej przez *prawo*. (Jeśli `right == this` zakres [ `first` , `last` ) nie może zawierać elementu wskazywanego przez *WHERE*.) Służy do łączenia podsekwencji zero lub więcej elementów z jednej listy do innej.
 
 ### <a name="example"></a>Przykład
 
@@ -2594,7 +2594,7 @@ Kontener, za pomocą którego ma zostać zamieniony zawartość.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zamienia kontrolowane sekwencje między `*this` i *po prawej*. Robi to w stałym czasie i nie zgłasza wyjątków. Jest ona używana jako Szybka metoda wymiany zawartości dwóch kontenerów.
+Funkcja członkowska zamienia kontrolowane sekwencje między **`*this`** i *po prawej*. Robi to w stałym czasie i nie zgłasza wyjątków. Jest ona używana jako Szybka metoda wymiany zawartości dwóch kontenerów.
 
 ### <a name="example"></a>Przykład
 
@@ -2709,9 +2709,9 @@ Funkcja porównująca dla par elementów.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja członkowska usuwa z kontrolowanej sekwencji (wymazuje) każdy element, który porównuje równe jego poprzedzającego elementu — Jeśli element `X` poprzedza element `Y` i `X == Y`, funkcja członkowska usuwa `Y`. Jest on używany do usuwania wszystkich, ale jednej kopii każdej podsekwencji sąsiadujących elementów porównywanych z równą. Należy zauważyć, że jeśli kontrolowana sekwencja jest uporządkowana, na przykład przez wywołanie [list:: sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)`()`, funkcja członkowska pozostawia tylko elementy z unikatowymi wartościami. (W związku z tym nazwa).
+Pierwsza funkcja członkowska usuwa z kontrolowanej sekwencji (wymazuje) każdy element, który porównuje równe jego poprzedzającego elementu — Jeśli element `X` poprzedza element `Y` i `X == Y` , funkcja członkowska usunie `Y` . Jest on używany do usuwania wszystkich, ale jednej kopii każdej podsekwencji sąsiadujących elementów porównywanych z równą. Należy zauważyć, że w przypadku uporządkowania kontrolowanej sekwencji, na przykład przez wywołanie [list:: sort (STL/CLR)](../dotnet/list-sort-stl-clr.md) `()` , funkcja członkowska pozostawia tylko elementy z unikatowymi wartościami. (W związku z tym nazwa).
 
-Druga funkcja członkowska zachowuje się tak samo jak pierwszy, z tą różnicą, że usuwa każdy element `Y` po `X` elementu, dla którego `pred(X, Y)`. Jest on używany do usuwania wszystkich, ale jednej kopii każdej podsekwencji sąsiadujących elementów, które spełniają określone przez Ciebie funkcje predykatu lub delegata. Należy zauważyć, że w przypadku uporządkowania kontrolowanej sekwencji, na przykład przez wywołanie `sort(pred)`, funkcja członkowska pozostawia tylko elementy, które nie mają równoważnej kolejności z innymi elementami.
+Druga funkcja członkowska zachowuje się tak samo jak pierwszy, z tą różnicą, że usuwa każdy element `Y` po elemencie, `X` dla którego `pred(X, Y)` . Jest on używany do usuwania wszystkich, ale jednej kopii każdej podsekwencji sąsiadujących elementów, które spełniają określone przez Ciebie funkcje predykatu lub delegata. Należy zauważyć, że w przypadku uporządkowania kontrolowanej sekwencji, na przykład przez wywołanie `sort(pred)` , funkcja członkowska pozostawia tylko elementy, które nie mają równoważnej kolejności z innymi elementami.
 
 ### <a name="example"></a>Przykład
 
@@ -2823,7 +2823,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca `!(left == right)`. Służy do sprawdzania, czy nie *jest on* uporządkowany *tak samo jak w* przypadku porównywania dwóch list w element według elementu.
+Funkcja operatora zwraca wartość `!(left == right)` . Służy do sprawdzania, czy nie *jest on* uporządkowany *tak samo jak w* przypadku porównywania dwóch list w element według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -2870,7 +2870,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-list-stlclr"></a><a name="op_lt"></a>&lt; operatora (lista) (STL/CLR)
+## <a name="operatorlt-list-stlclr"></a><a name="op_lt"></a>operator &lt; (list) (STL/CLR)
 
 Lista jest mniejsza niż porównanie.
 
@@ -2892,7 +2892,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca wartość true, jeśli dla najniższej pozycji `i`, dla której `!(right[i] < left[i])` jest również spełniony `left[i] < right[i]`. W przeciwnym razie zwraca `left->size() < right->size()` używany do sprawdzania, czy *lewa* jest uporządkowana przed *uprawnieniem* , gdy dwie listy są porównywane elementów według elementu.
+Funkcja operator zwraca wartość true, jeśli dla najniższej pozycji `i` `!(right[i] < left[i])` ma również wartość true `left[i] < right[i]` . W przeciwnym razie zwraca jego `left->size() < right->size()` użycie, aby sprawdzić, czy *lewo* jest uporządkowane przed *prawem* , gdy dwie listy są porównywane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -2939,7 +2939,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-list-stlclr"></a><a name="op_lteq"></a>operator&lt;= (list) (STL/CLR)
+## <a name="operatorlt-list-stlclr"></a><a name="op_lteq"></a>operator &lt; = (list) (STL/CLR)
 
 Lista jest mniejsza niż lub równa.
 
@@ -2961,7 +2961,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca `!(right < left)`. Służy do sprawdzania, czy nie *jest on* uporządkowany po *prawej stronie* , gdy dwie listy są porównywane elementów według elementu.
+Funkcja operatora zwraca wartość `!(right < left)` . Służy do sprawdzania, czy nie *jest on* uporządkowany po *prawej stronie* , gdy dwie listy są porównywane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -3030,7 +3030,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca wartość true tylko wtedy, gdy sekwencje sterowane przez *lewo* i *prawo* mają taką samą długość i, dla każdej pozycji `i`, `left[i] ==` `right[i]`. Służy do sprawdzania, czy *lewa* jest uporządkowana *tak samo jak w* przypadku porównywania dwóch list elementów według elementu.
+Funkcja operator zwraca wartość true tylko wtedy, gdy sekwencje sterowane przez *lewo* i *prawo* mają taką samą długość i, dla każdej pozycji `i` `left[i] ==` `right[i]` . Służy do sprawdzania, czy *lewa* jest uporządkowana *tak samo jak w* przypadku porównywania dwóch list elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -3077,7 +3077,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-list-stlclr"></a><a name="op_gt"></a>&gt; operatora (lista) (STL/CLR)
+## <a name="operatorgt-list-stlclr"></a><a name="op_gt"></a>operator &gt; (list) (STL/CLR)
 
 Lista większa niż porównanie.
 
@@ -3099,7 +3099,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca `right` `<` `left`. Służy do sprawdzania, czy *lewa* jest uporządkowana po *prawej stronie* , gdy dwie listy są porównywane elementów według elementu.
+Funkcja operatora zwraca wartość `right` `<` `left` . Służy do sprawdzania, czy *lewa* jest uporządkowana po *prawej stronie* , gdy dwie listy są porównywane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -3146,7 +3146,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-list-stlclr"></a><a name="op_gteq"></a>operator&gt;= (list) (STL/CLR)
+## <a name="operatorgt-list-stlclr"></a><a name="op_gteq"></a>operator &gt; = (list) (STL/CLR)
 
 Lista jest większa lub równa porównaniu.
 
@@ -3168,7 +3168,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca `!(left` `<` `right)`. Służy do sprawdzania, czy nie *jest on* uporządkowany przed *prawem* , gdy dwie listy są porównywane elementów według elementu.
+Funkcja operatora zwraca wartość `!(left` `<` `right)` . Służy do sprawdzania, czy nie *jest on* uporządkowany przed *prawem* , gdy dwie listy są porównywane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 

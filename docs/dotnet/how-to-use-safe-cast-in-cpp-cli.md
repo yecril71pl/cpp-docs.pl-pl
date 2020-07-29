@@ -1,23 +1,23 @@
 ---
-title: 'Instrukcje: Korzystanie z polecenia safe_cast w C++sposób niezamierzony'
+title: 'Instrukcje: Korzystanie z polecenia safe_cast w języku C++/interfejsie wiersza polecenia'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - safe_cast keyword [C++], upcasting
 ms.assetid: 0fbc87d8-ecdf-4cd5-81f4-0d8cc18e2aff
-ms.openlocfilehash: 66faadba9530bc7f3c12513277582e405e1b1b34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56ac19871bcdc5162b959f6d60103387551ac2a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389089"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225660"
 ---
-# <a name="how-to-use-safecast-in-ccli"></a>Instrukcje: Korzystanie z polecenia safe_cast w C++sposób niezamierzony
+# <a name="how-to-use-safe_cast-in-ccli"></a>Instrukcje: Korzystanie z polecenia safe_cast w języku C++/interfejsie wiersza polecenia
 
-W tym artykule pokazano, jak korzystanie z polecenia safe_cast w C++aplikacji w sposób niezamierzony. Aby uzyskać informacje dotyczące polecenia safe_cast w C++/CX, zobacz [safe_cast](../extensions/safe-cast-cpp-component-extensions.md).
+W tym artykule pokazano, jak używać safe_cast w aplikacjach C++/CLI. Aby uzyskać informacje na temat safe_cast w języku C++/CX, zobacz [safe_cast](../extensions/safe-cast-cpp-component-extensions.md).
 
-## <a name="upcasting"></a>Rzutowanie rozszerzające
+## <a name="upcasting"></a>Rzutowanie
 
-Rozszerzające jest rzutowanie z typem pochodnym do jednej z jej klas podstawowych. To rzutowanie jest bezpieczna i nie wymaga jawnego rzutowania notacji. Poniższy przykład pokazuje, jak wykonać rozszerzające za pomocą `safe_cast` i bez niego.
+Rzutowanie jest rzutowane z typu pochodnego do jednej z jej klas podstawowych. To Rzutowanie jest bezpieczne i nie wymaga jawnego zapisu rzutowania. Poniższy przykład pokazuje, jak wykonać rzutowanie, z `safe_cast` i bez niego.
 
 ```cpp
 // safe_upcast.cpp
@@ -68,7 +68,7 @@ in B::Test2
 
 ## <a name="downcasting"></a>Rzutowanie
 
-Rzutowania jest rzutowanie z klasy bazowej do klasy, która pochodzi od klasy bazowej.  Rzutowania jest bezpieczne, tylko wtedy, gdy obiekt, który jest opisany w czasie wykonywania jest faktycznie odnoszący się do obiektu klasy pochodnej.  W odróżnieniu od `static_cast`, `safe_cast` przeprowadza sprawdzanie dynamiczne i zgłasza <xref:System.InvalidCastException> Jeśli konwersja nie powiedzie się.
+Downcast to rzutowanie z klasy bazowej na klasę, która jest pochodną klasy bazowej.  Downcast jest bezpieczny tylko wtedy, gdy obiekt, który jest w trakcie wykonywania, faktycznie odnosi się do obiektu klasy pochodnej.  W przeciwieństwie do **`static_cast`** , `safe_cast` wykonuje dynamiczne sprawdzanie i zgłasza <xref:System.InvalidCastException> , jeśli konwersja nie powiedzie się.
 
 ```cpp
 // safe_downcast.cpp
@@ -119,9 +119,9 @@ in C::Test()
 in B::Test2()
 ```
 
-## <a name="safecast-with-user-defined-conversions"></a>safe_cast z konwersje zdefiniowane przez użytkownika
+## <a name="safe_cast-with-user-defined-conversions"></a>safe_cast ze zdefiniowanymi przez użytkownika konwersjemi
 
-Następny przykład pokazuje, jak można użyć `safe_cast` do wywołania konwersje zdefiniowane przez użytkownika.
+Następny przykład pokazuje, jak można użyć `safe_cast` do wywołania konwersji zdefiniowanych przez użytkownika.
 
 ```cpp
 // safe_cast_udc.cpp
@@ -174,13 +174,13 @@ in operator R^(V& v
 in operator V^(R^ r)
 ```
 
-## <a name="safecast-and-boxing-operations"></a>operacje polecenia safe_cast i pakowania
+## <a name="safe_cast-and-boxing-operations"></a>safe_cast i pakowanie operacji
 
 ### <a name="boxing"></a>Boxing
 
-OPAKOWYWANIE jest zdefiniowany jako konwersji wprowadzony przez kompilator, zdefiniowane przez użytkownika.  W związku z tym, można użyć `safe_cast` do pola wartość na stosie CLR.
+Opakowanie jest zdefiniowane jako konwersja, zdefiniowana przez użytkownika.  W związku z tym można użyć `safe_cast` do pola wartości na stercie CLR.
 
-Poniższy przykład pokazuje boxing z typami wartości prostego i zdefiniowane przez użytkownika.  A `safe_cast` pola zmienną typu wartości, która znajduje się na macierzystym stosu tak, że może ona zostać przypisana do zmiennej na stercie zebranych elementów bezużytecznych.
+Poniższy przykład pokazuje opakowanie z prostymi i zdefiniowanymi przez użytkownika typami wartości.  `safe_cast`Ramki typu wartość zmienna, która znajduje się na stosie macierzystym, dzięki czemu może być przypisana do zmiennej na stosie zebranych elementów bezużytecznych.
 
 ```cpp
 // safe_cast_boxing.cpp
@@ -206,7 +206,7 @@ int main() {
 }
 ```
 
-Następny przykład pokazuje, że pakowania ma priorytet nad konwersja zdefiniowana przez użytkownika, w `safe_cast` operacji.
+Następny przykład pokazuje, że opakowanie ma priorytet nad konwersją zdefiniowaną przez użytkownika w `safe_cast` operacji.
 
 ```cpp
 // safe_cast_boxing_2.cpp
@@ -241,9 +241,9 @@ int main() {
 
 ### <a name="unboxing"></a>Rozpakowywanie
 
-Rozpakowywanie jest zdefiniowany jako konwersji wprowadzony przez kompilator, zdefiniowane przez użytkownika.  W związku z tym, można użyć `safe_cast` do rozpakowania wartością na stosie CLR.
+Rozpakowywanie jest zdefiniowane jako iniekcja zdefiniowana przez użytkownika przez kompilator.  W związku z tym, można użyć `safe_cast` do Unbox wartości na stercie CLR.
 
-Rozpakowywanie to konwersja zdefiniowana przez użytkownika, ale w przeciwieństwie do pakowanie, rozpakowywanie musi jawnie — czyli muszą być wykonywane przez `static_cast`, stylu C cast lub `safe_cast`; Rozpakowywanie nie może zostać wykonana niejawnie.
+Rozpakowywanie jest konwersją zdefiniowaną przez użytkownika, ale w przeciwieństwie do opakowania, rozpakowywanie musi być jawne — to znaczy, że musi być wykonywane przez **`static_cast`** Rzutowanie w stylu C lub `safe_cast` nie można wykonać odpakowania niejawnie.
 
 ```cpp
 // safe_cast_unboxing.cpp
@@ -254,7 +254,7 @@ int main() {
 }
 ```
 
-Ilustruje poniższy przykład rozpakowywania typów wartości i typami pierwotnymi.
+Poniższy przykład pokazuje rozpakowywanie z typami wartości i typami pierwotnymi.
 
 ```cpp
 // safe_cast_unboxing_2.cpp
@@ -300,9 +300,9 @@ int main() {
 }
 ```
 
-## <a name="safecast-and-generic-types"></a>polecenia safe_cast i typów ogólnych
+## <a name="safe_cast-and-generic-types"></a>safe_cast i typy ogólne
 
-Następny przykład pokazuje, jak można użyć `safe_cast` przeprowadzić rzutowania z typu ogólnego.
+Następny przykład pokazuje, jak można użyć `safe_cast` do wykonywania downcast z typem ogólnym.
 
 ```cpp
 // safe_cast_generic_types.cpp

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: dbaffaa42b5cfaf60c41694653651ce0bb0fc199
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 2ef9c879c160d4b27fc51afbdef0e709058bda79
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988412"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225686"
 ---
 # <a name="how-to-use-events-in-ccli"></a>Porady: korzystanie ze zdarzeń w języku C++/interfejsie wiersza polecenia
 
@@ -65,7 +65,7 @@ int main () {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 EventReceiver::Handler
@@ -156,7 +156,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 In event handler H1
@@ -215,7 +215,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 17
@@ -292,7 +292,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 Click(x=7,y=3.14159)
@@ -381,7 +381,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 In event handler H1
@@ -469,14 +469,14 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 In handler H1
 In handler H2 with args 1 and 2.2
 ```
 
-Nie można określić prostego zdarzenia w celu przesłonięcia lub ukrycia zdarzenia klasy bazowej.  Należy zdefiniować wszystkie funkcje dostępu zdarzenia, a następnie określić słowo kluczowe `new` lub `override` dla każdej funkcji metody dostępu.
+Nie można określić prostego zdarzenia w celu przesłonięcia lub ukrycia zdarzenia klasy bazowej.  Należy zdefiniować wszystkie funkcje dostępu zdarzenia, a następnie określić **`new`** `override` słowo kluczowe or dla każdej funkcji metody dostępu.
 
 ```cpp
 // mcppv2_events5_a.cpp
@@ -586,7 +586,7 @@ int main () {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 hi
@@ -640,7 +640,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 hello
@@ -649,4 +649,4 @@ hello
 
 ## <a name="see-also"></a>Zobacz także
 
-[event](../extensions/event-cpp-component-extensions.md)
+[wydarzen](../extensions/event-cpp-component-extensions.md)

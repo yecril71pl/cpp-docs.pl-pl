@@ -1,24 +1,24 @@
 ---
-title: 'Instrukcje: Korzystanie z właściwości w C++sposób niezamierzony'
+title: 'Porady: korzystanie z właściwości w języku C++/interfejsie wiersza polecenia'
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 47cfd4c633942874b7b349da5635b34ea42090ee
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 2b5543e9a9ff70e827778adf2aee89cbc96f0c1d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447323"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225673"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>Instrukcje: Korzystanie z właściwości w C++sposób niezamierzony
+# <a name="how-to-use-properties-in-ccli"></a>Porady: korzystanie z właściwości w języku C++/interfejsie wiersza polecenia
 
-W tym artykule pokazano, jak korzystać z właściwości w C++sposób niezamierzony.
+W tym artykule pokazano, jak używać właściwości w języku C++/CLI.
 
 ## <a name="basic-properties"></a>Podstawowe właściwości
 
-Właściwości podstawowe — te, które jedynie przypisać i odzyskać element członkowski danych prywatnych — nie trzeba jawnie zdefiniować get i ustawić funkcje metod dostępu, ponieważ kompilator automatycznie udostępnia je, gdy tylko typ danych właściwości. Ten kod przedstawia podstawowe właściwości:
+Dla podstawowych właściwości — te, które tylko przypisują i pobierają prywatną składową danych — nie musisz jawnie definiować funkcji metody dostępu get i Set, ponieważ kompilator automatycznie udostępnia je, gdy tylko typ danych właściwości. Ten kod demonstruje podstawową Właściwość:
 
 ```cpp
 // SimpleProperties.cpp
@@ -43,7 +43,7 @@ c->Size = 111
 
 ## <a name="static-properties"></a>Właściwości statyczne
 
-Ten przykładowy kod przedstawia sposób deklarowanie i korzystanie z właściwości statycznej.  Właściwość statyczna dostęp tylko statyczne elementy członkowskie swojej klasy.
+Ten przykładowy kod pokazuje, jak zadeklarować Właściwość statyczną i korzystać z niej.  Właściwość statyczna może uzyskać dostęp tylko do statycznych elementów członkowskich swojej klasy.
 
 ```cpp
 // mcppv2_property_3.cpp
@@ -84,13 +84,13 @@ int main() {
 
 ## <a name="indexed-properties"></a>Właściwości indeksowane
 
-Właściwość indeksowana zwykle przedstawia strukturę danych, która jest dostępna za pomocą operatora indeksu dolnego.
+Właściwość indeksowana zwykle uwidacznia strukturę danych, do której uzyskuje się dostęp przy użyciu operatora indeksu dolnego.
 
-Jeśli używasz Właściwość indeksowana domyślnie, dostęp do struktury danych po prostu odwołując się do nazwy klasy, ale użycie właściwości indeksowanych zdefiniowanych przez użytkownika, należy określić nazwę właściwości dostępu do struktury danych.
+Jeśli używasz domyślnej właściwości indeksowanej, możesz uzyskać dostęp do struktury danych tylko w odniesieniu do nazwy klasy, ale jeśli używasz właściwości indeksowanej zdefiniowanej przez użytkownika, musisz określić nazwę właściwości, aby uzyskać dostęp do struktury danych.
 
-Aby uzyskać informacje o tym, jak korzystać z indeksatora, który jest zapisywany w C#, zobacz [jak: Używanie C# indeksatora (C++sposób niezamierzony)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
+Aby uzyskać informacje o sposobach korzystania z indeksatora, który jest pisany w języku C#, zobacz [How to: korzystanie z indeksatora języka C# (C++/CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
 
-Ten przykład kodu pokazuje, jak używać domyślnej i właściwości indeksowanych zdefiniowanych przez użytkownika:
+Ten przykładowy kod pokazuje, jak używać domyślnych i zdefiniowanych przez użytkownika właściwości indeksowanych:
 
 ```cpp
 // mcppv2_property_2.cpp
@@ -153,7 +153,7 @@ int main() {
 [ 0 2 4 6 8 ]
 ```
 
-Następny przykład pokazuje, jak wywoływać indeksatora domyślne przy użyciu `this` wskaźnika.
+Następny przykład pokazuje, jak wywołać domyślny indeksator przy użyciu **`this`** wskaźnika.
 
 ```cpp
 // call_default_indexer_through_this_pointer.cpp
@@ -177,7 +177,7 @@ private:
 };
 ```
 
-Ten przykład ilustruje sposób używania <xref:System.Reflection.DefaultMemberAttribute> do określenia indeksatora domyślne:
+Ten przykład pokazuje, jak używać <xref:System.Reflection.DefaultMemberAttribute> do określania domyślnego indeksatora:
 
 ```cpp
 // specify_default_indexer.cpp
@@ -193,7 +193,7 @@ public ref struct Squares {
 };
 ```
 
-Następny przykład korzysta z metadanych, który jest tworzony w poprzednim przykładzie.
+Następny przykład zużywa metadane, które są tworzone w poprzednim przykładzie.
 
 ```cpp
 // consume_default_indexer.cpp
@@ -211,7 +211,7 @@ int main() {
 
 ## <a name="virtual-properties"></a>Właściwości wirtualne
 
-Ten przykładowy kod pokazuje, jak deklarować i korzystać z właściwości wirtualnego:
+Ten przykładowy kod pokazuje sposób deklarowania i używania właściwości wirtualnych:
 
 ```cpp
 // mcppv2_property_4.cpp
@@ -259,9 +259,9 @@ int main() {
 
 ## <a name="abstract-and-sealed-properties"></a>Właściwości abstrakcyjne i zapieczętowane
 
-Mimo że [abstrakcyjne](../extensions/abstract-cpp-component-extensions.md) i [zapieczętowanego](../extensions/sealed-cpp-component-extensions.md) słowa kluczowe są określane jako prawidłowa w ECMA C++Specyfikacja sposób niezamierzony Microsoft C++ kompilatora, nie można określić je na proste właściwości ani na Deklaracja właściwości nietrywialnymi właściwości.
+Chociaż [abstrakcyjne](../extensions/abstract-cpp-component-extensions.md) i [zapieczętowane](../extensions/sealed-cpp-component-extensions.md) słowa kluczowe są określone jako prawidłowe w specyfikacji ECMA C++/CLI, dla kompilatora języka Microsoft C++ nie można ich określić na właściwościach prostych ani w deklaracji właściwości właściwości nieprostej.
 
-Aby zadeklarować właściwość zapieczętowana ani abstract, należy zdefiniować właściwość nietrywialnymi, a następnie określ `abstract` lub `sealed` get — słowo kluczowe funkcje.
+Aby zadeklarować Właściwość Sealed lub abstract, należy zdefiniować nieuproszczoną właściwość, a następnie określić **`abstract`** **`sealed`** słowo kluczowe or w funkcjach metody dostępu get i Set.
 
 ```cpp
 // properties_abstract_sealed.cpp
@@ -326,7 +326,7 @@ int main() {
 
 ## <a name="multidimensional-properties"></a>Właściwości wielowymiarowe
 
-Właściwości wielowymiarowe służy do definiowania metody dostępu właściwości, które przyjmują niestandardowych liczba parametrów.
+Możesz użyć wielowymiarowych właściwości, aby zdefiniować metody akcesora właściwości, które mają niestandardową liczbę parametrów.
 
 ```cpp
 // mcppv2_property_5.cpp
@@ -370,7 +370,7 @@ int main() {
 
 ## <a name="overloading-property-accessors"></a>Przeciążanie metod dostępu do właściwości
 
-Poniższy przykład pokazuje, jak można przeciążać właściwości indeksowanych.
+Poniższy przykład pokazuje, jak przeciążać indeksowane właściwości.
 
 ```cpp
 // mcppv2_property_6.cpp
@@ -409,4 +409,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz także
 
-[właściwość](../extensions/property-cpp-component-extensions.md)
+[wartość](../extensions/property-cpp-component-extensions.md)

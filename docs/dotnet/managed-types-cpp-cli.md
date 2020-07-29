@@ -17,22 +17,22 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: b91918d526d83d4cf47436d02b7c67038576bafb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c542151bda780e5306db35049d988e6514fffd62
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152778"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225608"
 ---
 # <a name="managed-types-ccli"></a>Typy zarządzane (C++/CLI)
 
-Visual C++ umożliwia dostęp do funkcji platformy .NET za pomocą zarządzane typy, które zapewniają obsługę funkcji środowiska uruchomieniowego języka wspólnego i podlegają one zalety i ograniczenia środowiska uruchomieniowego.
+Visual C++ umożliwia dostęp do funkcji platformy .NET za pomocą typów zarządzanych, które zapewniają obsługę funkcji środowiska uruchomieniowego języka wspólnego i są objęte zaletami i ograniczeniami środowiska uruchomieniowego.
 
-## <a name="main_functions"></a> Typy zarządzane i funkcja main
+## <a name="managed-types-and-the-main-function"></a><a name="main_functions"></a>Typy zarządzane i funkcja Main
 
-Podczas pisania aplikacji za pomocą **/CLR**, argumenty **main()** funkcja nie może być typu zarządzanego.
+Podczas pisania aplikacji przy użyciu **`/clr`** , argumenty funkcji **Main ()** nie mogą być typu zarządzanego.
 
-Przykładem prawidłowego podpisu jest:
+Przykładem właściwej sygnatury jest:
 
 ```cpp
 // managed_types_and_main.cpp
@@ -40,37 +40,37 @@ Przykładem prawidłowego podpisu jest:
 int main(int, char*[], char*[]) {}
 ```
 
-## <a name="dotnet"></a> .NET framework odpowiedniki typów natywnych języka C++
+## <a name="net-framework-equivalents-to-c-native-types"></a><a name="dotnet"></a>.NET Framework odpowiedników typów natywnych języka C++
 
-W poniższej tabeli przedstawiono słowa kluczowe dla wbudowanych typów języka Visual C++, które są aliasy wstępnie zdefiniowanych typów w **systemu** przestrzeni nazw.
+W poniższej tabeli przedstawiono słowa kluczowe dla wbudowanych typów Visual C++, które są aliasami wstępnie zdefiniowanych typów w przestrzeni nazw **system** .
 
-|Typ wizualizacji języka C++|Typ programu .NET Framework|
+|Typ Visual C++|Typ programu .NET Framework|
 |-----------------------|-------------------------|
-|**void**|<xref:System.Void?displayProperty=nameWithType>|
-|**bool**|<xref:System.Boolean?displayProperty=nameWithType>|
-|**podpisany char** |<xref:System.SByte?displayProperty=nameWithType>|
-|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|
-|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|
-|**krótki** i **short ze znakiem**|<xref:System.Int16?displayProperty=nameWithType>|
-|**short bez znaku**|<xref:System.UInt16?displayProperty=nameWithType>|
-|**int**, **podpisany int**, **długie**, i **podpisany długo**|<xref:System.Int32?displayProperty=nameWithType>|
-|**unsigned int** i **unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|
-|**__int64** i **podpisany __int64**|<xref:System.Int64?displayProperty=nameWithType>|
-|**__int64 bez znaku**|<xref:System.UInt64?displayProperty=nameWithType>|
-|**float**|<xref:System.Single?displayProperty=nameWithType>|
-|**podwójne** i **typu long double**|<xref:System.Double?displayProperty=nameWithType>|
+|**`void`**|<xref:System.Void?displayProperty=nameWithType>|
+|**`bool`**|<xref:System.Boolean?displayProperty=nameWithType>|
+|**`signed char`** |<xref:System.SByte?displayProperty=nameWithType>|
+|**`unsigned char`**|<xref:System.Byte?displayProperty=nameWithType>|
+|**`wchar_t`**|<xref:System.Char?displayProperty=nameWithType>|
+|**`short`** lub**`signed short`**|<xref:System.Int16?displayProperty=nameWithType>|
+|**`unsigned short`**|<xref:System.UInt16?displayProperty=nameWithType>|
+|**`int`**, **`signed int`** , **`long`** i**`signed long`**|<xref:System.Int32?displayProperty=nameWithType>|
+|**`unsigned int`** lub**`unsigned long`**|<xref:System.UInt32?displayProperty=nameWithType>|
+|**`__int64`** lub**`signed __int64`**|<xref:System.Int64?displayProperty=nameWithType>|
+|**`unsigned __int64`**|<xref:System.UInt64?displayProperty=nameWithType>|
+|**`float`**|<xref:System.Single?displayProperty=nameWithType>|
+|**`double`** lub**`long double`**|<xref:System.Double?displayProperty=nameWithType>|
 
-Aby uzyskać więcej informacji na temat opcji kompilatora jako domyślna na podpisane lub niepodpisane **char**, zobacz [/J (domyślny typ char jest niepodpisany)](../build/reference/j-default-char-type-is-unsigned.md).
+Aby uzyskać więcej informacji na temat opcji kompilatora, która jest domyślną wartością **`signed char`** lub **`unsigned char`** , zobacz [ `/J` (domyślny **`char`** Typ to **`unsigned`** )](../build/reference/j-default-char-type-is-unsigned.md).
 
-## <a name="version_issues"></a> Problemy z wersją w przypadku typów wartości zagnieżdżonych w typach natywnych
+## <a name="version-issues-for-value-types-nested-in-native-types"></a><a name="version_issues"></a>Problemy z wersją w przypadku typów wartości zagnieżdżonych w typach natywnych
 
-Należy wziąć pod uwagę składnika zestawu podpisem (silnej nazwy), używany do tworzenia zestawu klienta. Składnik zawiera typ wartości, który jest używany w kliencie jako typ członka natywnych Unii, klasę lub tablica. Przyszłych wersjach składnika zmiany rozmiaru oraz układu typu wartości, klient musi ponownie kompilowana.
+Rozważmy podpisany składnik zestawu (silna nazwa) używany do kompilowania zestawu klienta. Składnik zawiera typ wartości, który jest używany w kliencie jako typ elementu członkowskiego Unii natywnej, klasy lub tablicy. Jeśli przyszła wersja składnika zmienia rozmiar lub układ typu wartości, należy ponownie skompilować klienta.
 
-Utwórz keyfile z [sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) (`sn -k mykey.snk`).
+Utwórz element KeyFile z [sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) ( `sn -k mykey.snk` ).
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład jest składnikiem.
+Poniższy przykład to składnik.
 
 ```cpp
 // nested_value_types.cpp
@@ -89,7 +89,7 @@ public value struct S {
 
 ### <a name="example"></a>Przykład
 
-Klient jest w tym przykładzie:
+Ten przykład jest klientem:
 
 ```cpp
 // nested_value_types_2.cpp
@@ -125,11 +125,11 @@ S.i = 11
 
 ### <a name="comments"></a>Komentarze
 
-Jednak jeśli dodasz innego członka do `struct S` w nested_value_types.cpp, (na przykład `double d;`) i skompiluj ponownie składnik bez konieczności ponownego kompilowania klienta, wynik jest nieobsługiwany wyjątek (typu <xref:System.IO.FileLoadException?displayProperty=fullName>).
+Jeśli jednak dodasz inny element członkowski do `struct S` programu w nested_value_types. cpp, (na przykład `double d;` ) i ponownie skompilujesz składnik bez ponownego kompilowania klienta, wynikiem jest nieobsługiwany wyjątek (typu <xref:System.IO.FileLoadException?displayProperty=fullName> ).
 
-## <a name="test_equality"></a> Jak: Testowanie dla równości
+## <a name="how-to-test-for-equality"></a><a name="test_equality"></a>Instrukcje: testowanie pod kątem równości
 
-W poniższym przykładzie test pod kątem równości, który używa zarządzanych rozszerzeń dla C++ opiera się na co uchwytów dotyczą.
+W poniższym przykładzie test dla równości, który używa Managed Extensions for C++ jest oparty na tym, do czego odnoszą się uchwyty.
 
 ### <a name="example"></a>Przykład
 
@@ -145,38 +145,38 @@ bool Test1() {
 }
 ```
 
-IL dla tego programu pokazuje, że wartość zwracana jest implementowany przy użyciu wywołania op_equality —.
+IL dla tego programu pokazuje, że wartość zwracana jest implementowana przy użyciu wywołania do op_Equality.
 
 ```MSIL
 IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="diagnose_fix"></a> Jak: Diagnozowanie i rozwiązywanie problemów ze zgodnością zestawu
+## <a name="how-to-diagnose-and-fix-assembly-compatibility-problems"></a><a name="diagnose_fix"></a>Instrukcje: diagnozowanie i rozwiązywanie problemów ze zgodnością zestawów
 
-W tym temacie opisano, co może się zdarzyć, gdy wersja zestawu z odwołaniem w czasie kompilacji nie odpowiada wersji zestawu, do których odwołuje się w czasie wykonywania oraz sposób uniknąć tego problemu.
+W tym temacie wyjaśniono, co może się zdarzyć, gdy wersja zestawu, do którego odwołuje się w czasie kompilacji, nie jest zgodna z wersją zestawu, do którego odwołuje się w czasie wykonywania, i jak uniknąć problemu.
 
-Podczas kompilowania zestawu innych zestawów może się odwoływać za pomocą `#using` składni. Podczas kompilacji te zestawy są dostępne przez kompilator. Informacje z tych zestawów są używane do podejmowania decyzji dotyczących optymalizacji.
+Gdy zestaw jest kompilowany, inne zestawy mogą być przywoływane ze `#using` składnią. Podczas kompilowania te zestawy są dostępne dla kompilatora. Informacje z tych zestawów są używane w celu podejmowania decyzji dotyczących optymalizacji.
 
-Jednak jeśli przywoływanego zestawu jest zmienione, a ponownie skompilowana, a nie zostanie ponownie skompilowana odwołujący się zestaw, który jest zależne od tego, zestawy mogą nie być zgodne. Decyzje o optymalizacji, które były prawidłowe w najpierw może nie być prawidłowe w odniesieniu do nowej wersji zestawu. Z powodu niezgodności mogą wystąpić różne błędy czasu wykonywania. Nie ma określonego wyjątku wytworzonego w takich przypadkach. Sposób, w jaki błąd jest zgłaszany w czasie wykonywania zależy od charakteru zmiany kodu, który spowodował problem.
+Jeśli jednak przywoływany zestaw zostanie zmieniony i ponownie skompilowany, a nie zostanie ponownie skompilowana odwołującego się zestawu, który jest od niego zależny, zestawy mogą nie być zgodne. Decyzje dotyczące optymalizacji, które były prawidłowe w pierwszej kolejności, mogą nie być poprawne w odniesieniu do nowej wersji zestawu. Przyczyną niezgodności mogą być różne błędy środowiska uruchomieniowego. Nie ma konkretnego wyjątku, który zostanie wygenerowany w takich przypadkach. Sposób zgłoszenia błędu w czasie wykonywania zależy od rodzaju zmiany kodu, która spowodowała problem.
 
-Te błędy nie powinien być problemu w kodzie produkcyjnym końcowego, tak długo, jak cała aplikacja zostanie ponownie skompilowany dla pełnej wersji produktu. Zestawy, które są wydawane publicznie powinien być oznaczony przez numer wersji oficjalnej, który zapewni uniknąć tych problemów. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji zestawu](/dotnet/framework/app-domains/assembly-versioning).
+Te błędy nie powinny być problemem w końcowym kodzie produkcyjnym, o ile cała aplikacja zostanie odbudowana dla wydanej wersji produktu. Zestawy, które są udostępniane publicznie, powinny być oznaczone oficjalnym numerem wersji, co zapewni uniknięcie tych problemów. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji zestawu](/dotnet/framework/app-domains/assembly-versioning).
 
-### <a name="diagnosing-and-fixing-an-incompatibility-error"></a>Diagnozowanie i rozwiązywanie błędów niezgodności
+### <a name="diagnosing-and-fixing-an-incompatibility-error"></a>Diagnozowanie i rozwiązywanie błędu niezgodności
 
-1. Jeśli występują wyjątki środowiska uruchomieniowego lub inne błędy występujące w kodzie, który odwołuje się do innego zestawu i mają żadne inne określone przyczyny, może być Obsługa nieaktualna zestawu.
+1. Jeśli wystąpią wyjątki środowiska uruchomieniowego lub inne warunki błędu występujące w kodzie, który odwołuje się do innego zestawu, i nie ma żadnych innych zidentyfikowanych przyczyn, może się okazać, że jest to nieaktualne zestawienie.
 
-1. Najpierw należy wyizolować i odtworzenia wyjątek lub innych warunków błędów. Problem, który występuje z powodu nieaktualnych wyjątku należy do odtworzenia.
+1. Najpierw Izoluj i Odtwarzaj wyjątek lub inny warunek błędu. Wystąpił problem spowodowany nieaktualnym wyjątkem.
 
-1. Sprawdź sygnaturę czasową wszelkich zestawów, do których odwołuje się do aplikacji.
+1. Sprawdź sygnaturę czasową wszelkich zestawów, do których odwołuje się aplikacja.
 
-1. W przypadku nowszych niż sygnatura czasowa ostatniej kompilacji aplikacji znacznikami czasu dowolne zestawy, do którego istnieje odwołanie, aplikacja jest nieaktualna. Jeśli ten problem wystąpi, ponownie skompilować aplikację przy użyciu najbardziej aktualnych zestawu i wprowadzać żadnych zmian kodu wymaganych.
+1. Jeśli sygnatury czasowe dowolnego przywoływanych zestawów są późniejsze niż sygnatura czasowa ostatniej kompilacji aplikacji, aplikacja jest nieaktualna. W takim przypadku należy ponownie skompilować aplikację przy użyciu najnowszego zestawu i wprowadzić wymagane zmiany kodu.
 
-1. Uruchom ponownie aplikację, wykonaj kroki odtworzenia problemu, a następnie sprawdź, czy nie występuje wyjątek.
+1. Uruchom ponownie aplikację, wykonaj kroki, które odtwarzają problem i sprawdź, czy nie wystąpił wyjątek.
 
 ### <a name="example"></a>Przykład
 
-Następujący program ilustruje problem przez zmniejszenie dostępność metody i podjęcie próby na dostęp do tej metody w innym zestawie, bez konieczności ponownego kompilowania. Spróbuj skompilować `changeaccess.cpp` pierwszy. Jest to przywoływanego zestawu, co spowoduje zmianę. Następnie skompilować `referencing.cpp`. Kompilacja zakończy się pomyślnie. Teraz Zmniejsz dostępność metody wywoływanej metody. Skompiluj ponownie `changeaccess.cpp` z flagą `/DCHANGE_ACCESS`. To sprawia, że metoda chronionych, a nie prywatne, dzięki czemu będzie można ją wywołać prawnie. Bez konieczności ponownego kompilowania `referencing.exe`, uruchom ponownie aplikację. Wyjątek <xref:System.MethodAccessException> spowoduje.
+Poniższy program ilustruje problem, zmniejszając dostępność metody i próbując uzyskać dostęp do tej metody w innym zestawie bez ponownego kompilowania. Najpierw spróbuj skompilować `changeaccess.cpp` . Jest to przywoływany zestaw, który zostanie zmieniony. Następnie Skompiluj `referencing.cpp` . Kompilacja powiodła się. Teraz Zmniejsz dostępność wywołanej metody. Kompiluj ponownie `changeaccess.cpp` z flagą `/DCHANGE_ACCESS` . Dzięki temu Metoda jest chroniona, a nie prywatna, więc można ją już wywoływać legalnie. Bez ponownej kompilacji `referencing.exe` ponownie uruchom aplikację. Spowoduje to <xref:System.MethodAccessException> powstanie wyjątku.
 
 ```cpp
 // changeaccess.cpp
