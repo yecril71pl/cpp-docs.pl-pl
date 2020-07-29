@@ -1,62 +1,62 @@
 ---
-title: '&lt;Losowe&gt;'
+title: '&lt;wybranych&gt;'
 ms.date: 08/24/2017
 f1_keywords:
 - <random>
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 540daa5bafa28b1d56c55daf33f0b5f5461c8ed6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e52033c68bc5bee21abed0af0e86cbb76000435d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320232"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217652"
 ---
-# <a name="ltrandomgt"></a>&lt;Losowe&gt;
+# <a name="ltrandomgt"></a>&lt;wybranych&gt;
 
-Definiuje możliwości generowania liczb losowych, umożliwiając tworzenie jednolicie rozmieszczonych liczb losowych.
+Definiuje obiekty do losowego generowania liczb, umożliwiając tworzenie równomiernie rozłożonych liczb losowych.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek** \<: losowe>
+**Nagłówek**:\<random>
 
 **Przestrzeń nazw:** std
 
 > [!NOTE]
-> Losowa biblioteka \<> używa instrukcji "#include <initializer_list>".
+> \<random>Biblioteka używa instrukcji "#include <initializer_list>".
 
 ## <a name="summary"></a>Podsumowanie
 
-Generator *liczb losowych* jest obiektem, który tworzy sekwencję wartości pseudolosowych. Generator, który produkuje wartości, które są równomiernie rozłożone w określonym zakresie jest *jednolity generator liczb losowych* (URNG). Szablon klasy przeznaczony do działania jako URNG jest określany jako *aparat,* jeśli ta klasa ma pewne wspólne cechy, które zostały omówione w dalszej części tego artykułu. UrnG może być i zwykle jest w połączeniu z *dystrybucją,* przekazując URNG jako argument do dystrybucji `operator()` do produkcji wartości, które są dystrybuowane w sposób, który jest zdefiniowany przez dystrybucję.
+*Generator liczb losowych* jest obiektem, który tworzy sekwencję wartości pseudolosowych. Generator, który tworzy wartości, które są równomiernie dystrybuowane w określonym zakresie, jest *jednolite generator liczb losowych* (URNG). Szablon klasy zaprojektowany do działania jako URNG jest określany jako *aparat* , jeśli ta klasa ma pewne wspólne cechy, które zostały omówione w dalszej części tego artykułu. URNG może być — i zazwyczaj jest — połączony z *dystrybucją* , przekazując URNG jako argument do dystrybucji w `operator()` celu utworzenia wartości dystrybuowanych w sposób zdefiniowany przez rozkład.
 
-Te linki przejść do głównych sekcji tego artykułu:
+Te linki przeskoczą do najważniejszych sekcji tego artykułu:
 
 - [Przykłady](#code)
 
-- [Lista skategoryzowana](#listing)
+- [Lista z kategoryzacją](#listing)
 
-- [Silniki i dystrybucje](#engdist)
+- [Aparaty i dystrybucje](#engdist)
 
 - [Uwagi](#comments)
 
 ### <a name="quick-tips"></a>Szybkie porady
 
-Oto kilka wskazówek, o których \<należy pamiętać podczas korzystania z losowych>:
+Poniżej przedstawiono kilka porad, które należy wziąć pod uwagę podczas korzystania z programu \<random> :
 
-- W większości celów urngs produkcji nieprzetworzonych bitów, które muszą być kształtowane przez dystrybucje. (Godnym uwagi wyjątkiem jest [std::shuffle(),](../standard-library/algorithm-functions.md#shuffle) ponieważ używa urng bezpośrednio.)
+- W większości zastosowań URNGs tworzy niesformatowane bity, które muszą mieć kształt dystrybucji. (Istotny wyjątek dla tego elementu to [std:: losowo ()](../standard-library/algorithm-functions.md#shuffle) , ponieważ używa on URNG bezpośrednio).
 
-- Pojedyncze wystąpienie urng lub dystrybucji nie można bezpiecznie wywołać jednocześnie, ponieważ uruchamianie URNG lub dystrybucji jest operacją modyfikującą. Aby uzyskać więcej informacji, zobacz [Bezpieczeństwo wątków w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md).
+- Nie można bezpiecznie wywołać pojedynczego wystąpienia URNG lub dystrybucji, ponieważ jest uruchomiona URNG lub dystrybucja jest operacją modyfikującą. Aby uzyskać więcej informacji, zobacz [bezpieczeństwo wątków w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md).
 
-- [Predefedzone typedefs](#typedefs) kilku silników są dostarczane; jest to preferowany sposób tworzenia URNG, jeśli używany jest silnik.
+- Dostępne są [wstępnie zdefiniowane elementy typedef](#typedefs) kilku aparatów; jest to preferowany sposób utworzenia elementu URNG, jeśli jest używany aparat.
 
-- Najbardziej przydatne parowanie dla większości `mt19937` aplikacji `uniform_int_distribution`jest aparat z , jak pokazano w [przykładzie kodu](#code) w dalszej części tego artykułu.
+- Najbardziej przydatnym parowaniem dla większości aplikacji jest `mt19937` aparat z `uniform_int_distribution` , jak pokazano w [przykładzie kodu](#code) w dalszej części tego artykułu.
 
-Istnieje wiele opcji do wyboru \<w losowym nagłówku>, a każdy z nich jest `rand()`lepszy od przestarzałej funkcji C Runtime . Aby uzyskać informacje o `rand()` tym, \<co jest nie tak i jak losowe> rozwiązuje te niedociągnięcia, zobacz [ten film](https://go.microsoft.com/fwlink/p/?linkid=397615).
+Istnieje wiele opcji, które można wybrać w \<random> nagłówku, a każda z nich jest preferowana przez nieaktualną funkcję środowiska uruchomieniowego C `rand()` . Aby uzyskać informacje o błędach `rand()` i sposobach \<random> ich działania, zobacz [ten klip wideo](https://go.microsoft.com/fwlink/p/?linkid=397615).
 
-## <a name="examples"></a><a name="code"></a>Przykłady
+## <a name="examples"></a><a name="code"></a>Pokazują
 
-Poniższy przykład kodu pokazuje, jak wygenerować kilka liczb losowych w tym przypadku pięć z nich przy użyciu generatora utworzonego z niedeterministycznym materiałem siewnym.
+Poniższy przykład kodu pokazuje, jak generować liczby losowe w tym przypadku pięć z nich przy użyciu generatora utworzonego z niedeterministycznym inicjatorem.
 
 ```cpp
 #include <random>
@@ -83,7 +83,7 @@ int main()
 2430338871 3531691818 2723770500 3252414483 3632920437
 ```
 
-Chociaż są to wysokiej jakości liczby losowe i różne za każdym razem, gdy ten program jest uruchamiany, niekoniecznie są one w użytecznym zakresie. Aby kontrolować zakres, należy użyć równomiernego rozkładu, jak pokazano w poniższym kodzie:
+Chociaż są to liczby losowe o wysokiej jakości i są różne za każdym razem, gdy ten program jest uruchamiany, nie musi to być użyteczny zakres. Aby sterować zakresem, użyj jednorodnej dystrybucji, jak pokazano w poniższym kodzie:
 
 ```cpp
 #include <random>
@@ -108,7 +108,7 @@ int main()
 5 1 6 1 2
 ```
 
-Następny przykład kodu pokazuje bardziej realistyczny zestaw przypadków użycia z jednolicie rozproszonych generatorów liczb losowych tasowania zawartości wektora i tablicy.
+Następny przykład kodu przedstawia bardziej realistyczny zestaw przypadków użycia z równomiernie dystrybuowanymi generatorami liczb losowych Shuffling zawartość wektora i tablicy.
 
 ```cpp
 // cl.exe /EHsc /nologo /W4 /MTd
@@ -207,31 +207,31 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 --
 ```
 
-Ten kod pokazuje dwie różne randomizacji — losowo wektor liczb całkowitych i shuffle tablicy indeksowanych danych — z funkcją szablonu testu. Pierwsze wywołanie funkcji testowej używa krypto-bezpieczne, niedeterministyczne, nie-seedable, `random_device`nie powtarzalne URNG . Drugi przebieg testu `mersenne_twister_engine` używa jako URNG, z deterministycznym stałym 32-bitowym materiałem siewnym, co oznacza, że wyniki są powtarzalne. Trzeci test uruchomić `mersenne_twister_engine` nasiona z 32-bitowy `random_device`wynik niedeterministyczny z . Czwarty przebieg testu rozszerza się na ten temat `random_device` przy użyciu [sekwencji materiału siewnego](../standard-library/seed-seq-class.md) wypełnionej wynikami, co skutecznie daje więcej niż 32-bitową niedeterministyczną losowość (ale nadal nie jest bezpieczna krypto). Aby uzyskać więcej informacji, czytaj dalej.
+Ten kod ilustruje dwa różne losowości — losowo wektora liczb całkowitych i losowo tablicę indeksowanych danych — z funkcją szablonu testowego. Pierwsze wywołanie funkcji testowej używa kryptograficznego, niepowtarzalnego, nieURNGego, niedozwolonego do użycia `random_device` . Drugi przebieg testu jest używany `mersenne_twister_engine` jako URNG z deterministyczną 32-bitowym stałym inicjatorem, co oznacza, że wyniki są powtarzalne. Trzecie ziarna przebiegu testowego `mersenne_twister_engine` o 32-bitowym wyniku niedeterministycznym od `random_device` . Czwarty przebieg testu jest rozwijany przy użyciu [sekwencji inicjatora](../standard-library/seed-seq-class.md) wypełnionej `random_device` wynikami, co efektywnie daje ponad 32-bitową losowość niedeterministyczną (ale wciąż nie jest zabezpieczona). Aby uzyskać więcej informacji, przeczytaj artykuł.
 
-## <a name="categorized-listing"></a><a name="listing"></a>Lista skategoryzowana
+## <a name="categorized-listing"></a><a name="listing"></a>Lista z kategoryzacją
 
 ### <a name="uniform-random-number-generators"></a><a name="urngs"></a>Jednolite generatory liczb losowych
 
-URNGs są często opisane w kategoriach tych właściwości:
+URNGs są często opisywane pod kątem następujących właściwości:
 
-1. **Długość okresu:** Ile iteracji potrzeba, aby powtórzyć sekwencję wygenerowanych liczb. Im dłużej, tym lepiej.
+1. **Długość okresu**: ile iteracji ma powtórzyć sekwencję wygenerowanych wartości. Im większa.
 
-2. **Wydajność:** Jak szybko można wygenerować liczby i ile pamięci zajmuje. Im mniejsza, tym lepiej.
+2. **Wydajność**: jak szybko można generować numery i ile pamięci potrzebuje. Im mniejsze.
 
-3. **Jakość:** Jak blisko prawdziwych liczb losowych jest wygenerowana sekwencja. Jest to często nazywane "*przypadkowością*".
+3. **Jakość**: w jaki sposób zbliżone do prawdziwe liczby losowe Wygenerowano sekwencję. Jest to często nazywane "*losowości*".
 
-W poniższych sekcjach przedstawiono jednolite generatory liczb \<losowych (URNGs) podane w losowym nagłówku>.
+W poniższych sekcjach wymieniono jednolite generatory liczb losowych (URNGs), które znajdują się w \<random> nagłówku.
 
-#### <a name="non-deterministic-generator"></a><a name="rd"></a>Generator niedeterministyczny
+#### <a name="non-deterministic-generator"></a><a name="rd"></a>Generator Niedeterministyczny
 
 |||
 |-|-|
-|[Klasa random_device](../standard-library/random-device-class.md)|Generuje niedeterministyczną, kryptograficznie bezpieczną losową sekwencję przy użyciu urządzenia zewnętrznego. Zwykle używane do nasion silnika. Niska wydajność, bardzo wysoka jakość. Aby uzyskać więcej informacji, zobacz [Uwagi](#comments).|
+|[Klasa random_device](../standard-library/random-device-class.md)|Generuje niedeterministyczną, kryptograficznie bezpieczną sekwencję losową przy użyciu urządzenia zewnętrznego. Zwykle używany do wypełniania aparatu. Niska wydajność i bardzo wysoka jakość. Aby uzyskać więcej informacji, zobacz [uwagi](#comments).|
 
-#### <a name="engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a>Typedefs silnika ze wstępnie zdefiniowanymi parametrami
+#### <a name="engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a>Elementy typedef aparatu ze wstępnie zdefiniowanymi parametrami
 
-Do tworzenia komunikatów i tworzenia komunikatorów silnika. Aby uzyskać więcej informacji, zobacz [Aparaty i dystrybucje](#engdist).
+Do tworzenia wystąpień aparatów i adapterów. Aby uzyskać więcej informacji, zobacz [Aparaty i dystrybucje](#engdist).
 
 - `default_random_engine`Domyślny aparat.
 
@@ -239,25 +239,25 @@ Do tworzenia komunikatów i tworzenia komunikatorów silnika. Aby uzyskać więc
     typedef mt19937 default_random_engine;
     ```
 
-- `knuth_b`Silnik Knuth.
+- `knuth_b`Aparat Knuth.
 
     ```cpp
     typedef shuffle_order_engine<minstd_rand0, 256> knuth_b;
     ```
 
-- `minstd_rand0`1988 minimalny standardowy silnik (Lewis, Goodman i Miller, 1969).
+- `minstd_rand0`1988 minimalne standardowe aparatu (Lewis przedstawiają, Goodman i Miller, 1969).
 
     ```cpp
     typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;
     ```
 
-- `minstd_rand`Zaktualizowano minimalny `minstd_rand0` silnik standardowy (Park, Miller i Stockmeyer, 1993).
+- `minstd_rand`Zaktualizowano minimalny silnik standardowy `minstd_rand0` (Park, Miller i Stockmeyer, 1993).
 
     ```cpp
     typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;
     ```
 
-- `mt19937`32-bitowy silnik Twister Mersenne (Matsumoto i Nishimura, 1998).
+- `mt19937`32-bitowy aparat Twister Mersenne (Matsumoto i Nishimura, 1998).
 
     ```cpp
     typedef mersenne_twister_engine<
@@ -269,7 +269,7 @@ Do tworzenia komunikatów i tworzenia komunikatorów silnika. Aby uzyskać więc
         18, 1812433253> mt19937;
     ```
 
-- `mt19937_64`64-bitowy silnik Twister Mersenne (Matsumoto i Nishimura, 2000).
+- `mt19937_64`64-bitowy aparat Twister Mersenne (Matsumoto i Nishimura, 2000).
 
     ```cpp
     typedef mersenne_twister_engine<
@@ -281,232 +281,232 @@ Do tworzenia komunikatów i tworzenia komunikatorów silnika. Aby uzyskać więc
         43, 6364136223846793005ULL> mt19937_64;
     ```
 
-- `ranlux24`24-bitowy silnik RANLUX (Martin Lüscher i Fred James, 1994).
+- `ranlux24`24-bitowy aparat RANLUX (Martin Lüscher i Fred Kuba, 1994).
 
     ```cpp
     typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;
     ```
 
-- `ranlux24_base`Używany jako podstawa `ranlux24`dla .
+- `ranlux24_base`Używany jako podstawa dla `ranlux24` .
 
     ```cpp
     typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;
     ```
 
-- `ranlux48`48-bitowy silnik RANLUX (Martin Lüscher i Fred James, 1994).
+- `ranlux48`48-bitowy aparat RANLUX (Martin Lüscher i Fred Kuba, 1994).
 
     ```cpp
     typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;
     ```
 
-- `ranlux48_base`Używany jako podstawa `ranlux48`dla .
+- `ranlux48_base`Używany jako podstawa dla `ranlux48` .
 
     ```cpp
     typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;
     ```
 
-#### <a name="engine-templates"></a><a name="eng"></a>Szablony silników
+#### <a name="engine-templates"></a><a name="eng"></a>Szablony aparatu
 
-Szablony silników są używane jako samodzielne urny lub jako silniki bazowe przekazywane do [adapterów silnika.](#engadapt) Zazwyczaj są one tworzone z [predefi zdefiniowanym typedef silnika](#typedefs) i przekazywane do [dystrybucji](#distributions). Aby uzyskać więcej informacji, zobacz [aparaty i dystrybucje](#engdist) sekcji.
-
-|||
-|-|-|
-|[linear_congruential_engine — Klasa](../standard-library/linear-congruential-engine-class.md)|Generuje losową sekwencję przy użyciu liniowego algorytmu konwekcyjnego. Najbardziej uproszczone i najniższej jakości.|
-|[Klasa mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)|Generuje losową sekwencję przy użyciu algorytmu twister Mersenne. Najbardziej złożone i jest najwyższej jakości, z wyjątkiem random_device klasy. Bardzo szybka wydajność.|
-|[Klasa subtract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md)|Generuje losową sekwencję przy użyciu algorytmu odejmowania z przenoszeniem. Poprawa na `linear_congruential_engine`, ale znacznie niższa jakość i wydajność niż `mersenne_twister_engine`.|
-
-#### <a name="engine-adaptor-templates"></a><a name="engadapt"></a>Szablony adapterów silnika
-
-Adaptery silnika to szablony, które dostosowują inne (podstawowe) silniki. Zazwyczaj są one tworzone z [predefi zdefiniowanym typedef silnika](#typedefs) i przekazywane do [dystrybucji](#distributions). Aby uzyskać więcej informacji, zobacz [aparaty i dystrybucje](#engdist) sekcji.
+Szablony aparatu są używane jako autonomiczne URNGs lub jako silniki podstawowe przenoszone do [adapterów aparatu](#engadapt). Zwykle są one tworzone ze [wstępnie zdefiniowanym elementem TypeDef](#typedefs) i są przesyłane do [dystrybucji](#distributions). Aby uzyskać więcej informacji, zobacz sekcję [silniki i dystrybucje](#engdist) .
 
 |||
 |-|-|
-|[Klasa discard_block_engine](../standard-library/discard-block-engine-class.md)|Generuje losową sekwencję, odrzucając wartości zwracane przez jego aparat podstawowy.|
-|[Klasa independent_bits_engine](../standard-library/independent-bits-engine-class.md)|Generuje losową sekwencję z określoną liczbą bitów przez przepakowanie bitów z wartości zwracanych przez jego aparat podstawowy.|
-|[shuffle_order_engine — Klasa](../standard-library/shuffle-order-engine-class.md)|Generuje losową sekwencję, ponownie zapisując wartości zwrócone z jego aparatu podstawowego.|
+|[Klasa linear_congruential_engine](../standard-library/linear-congruential-engine-class.md)|Generuje losową sekwencję przy użyciu liniowego algorytmu złożony. Większość uproszczony i najniższej jakości.|
+|[Klasa mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)|Generuje losową sekwencję przy użyciu algorytmu Mersenne Twister. Najbardziej złożona i jest najwyższa jakość z wyjątkiem klasy random_device. Bardzo szybka wydajność.|
+|[Klasa subtract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md)|Generuje losową sekwencję przy użyciu algorytmu odejmowania i przenoszenia. Poprawa `linear_congruential_engine` wydajności, ale znacznie niższa jakość i wydajność niż `mersenne_twister_engine` .|
 
-[[Szablony silników](#eng)]
+#### <a name="engine-adaptor-templates"></a><a name="engadapt"></a>Szablony adaptera
+
+Adaptery aparatu są szablonami, które dostosowują inne (podstawowe) aparaty. Zwykle są one tworzone ze [wstępnie zdefiniowanym elementem TypeDef](#typedefs) i są przesyłane do [dystrybucji](#distributions). Aby uzyskać więcej informacji, zobacz sekcję [silniki i dystrybucje](#engdist) .
+
+|||
+|-|-|
+|[Klasa discard_block_engine](../standard-library/discard-block-engine-class.md)|Generuje losową sekwencję przez odrzucenie wartości zwracanych przez aparat podstawowy.|
+|[Klasa independent_bits_engine](../standard-library/independent-bits-engine-class.md)|Generuje losową sekwencję z określoną liczbą bitów przez przepakowanie bitów z wartości zwracanych przez aparat podstawowy.|
+|[Klasa shuffle_order_engine](../standard-library/shuffle-order-engine-class.md)|Generuje losową sekwencję przez zmianę kolejności wartości zwracanych z aparatu podstawowego.|
+
+[[Szablony aparatu](#eng)]
 
 ### <a name="random-number-distributions"></a><a name="distributions"></a>Rozkłady liczb losowych
 
-W poniższych sekcjach przedstawiono \<rozkłady podane w losowym nagłówku>. Dystrybucje są mechanizmem przetwarzania końcowego, zwykle przy użyciu wyjścia URNG jako danych wejściowych i dystrybucji danych wyjściowych za pomocą zdefiniowanej funkcji statystycznej gęstości prawdopodobieństwa. Aby uzyskać więcej informacji, zobacz [aparaty i dystrybucje](#engdist) sekcji.
+W poniższych sekcjach wymieniono dystrybucje podane w \<random> nagłówku. Dystrybucje to mechanizm przetwarzania końcowego, zwykle korzystający z danych wyjściowych URNG jako dane wejściowe i rozpowszechniania danych wyjściowych przez zdefiniowaną funkcję gęstości prawdopodobieństwa. Aby uzyskać więcej informacji, zobacz sekcję [silniki i dystrybucje](#engdist) .
 
-#### <a name="uniform-distributions"></a>Jednolite rozkłady
-
-|||
-|-|-|
-|[Klasa uniform_int_distribution](../standard-library/uniform-int-distribution-class.md)|Tworzy jednolity rozkład wartości całkowitej w zakresie \[w zamkniętym przedziale a, b] (włącznie).|
-|[Klasa uniform_real_distribution](../standard-library/uniform-real-distribution-class.md)|Tworzy jednolity rozkład wartości rzeczywistej (zmiennoprzecinowej) w zakresie w interwale pół-otwartej [a, b) (wyłączności włącznie).|
-|[generate_canonical](../standard-library/random-functions.md#generate_canonical)|Tworzy równomierny rozkład rzeczywistych (zmiennoprzecinkowych) wartości danej precyzji w całej [0, 1) (włącznie wyłączne).|
-
-[[Rozkłady liczb losowych](#distributions)]
-
-#### <a name="bernoulli-distributions"></a>Rozkłady Bernoulli
+#### <a name="uniform-distributions"></a>Rozkłady jednorodne
 
 |||
 |-|-|
-|[Klasa bernoulli_distribution](../standard-library/bernoulli-distribution-class.md)|Tworzy rozkład Bernoulli wartości **bool.**|
-|[Klasa binomial_distribution](../standard-library/binomial-distribution-class.md)|Tworzy dwumianowy rozkład wartości całkowitych.|
-|[Klasa geometric_distribution](../standard-library/geometric-distribution-class.md)|Tworzy geometryczny rozkład wartości całkowitych.|
-|[Klasa negative_binomial_distribution](../standard-library/negative-binomial-distribution-class.md)|Tworzy ujemny rozkład dwumianowy wartości całkowitych.|
+|[Klasa uniform_int_distribution](../standard-library/uniform-int-distribution-class.md)|Tworzy jednolitą dystrybucję wartości całkowitych dla zakresu w zamkniętym interwale \[ a, b] (włącznie).|
+|[Klasa uniform_real_distribution](../standard-library/uniform-real-distribution-class.md)|Tworzy jednolitą (zmiennoprzecinkową) dystrybucję wartości dla zakresu w interwale o połowie otwartym [a, b) (włącznie z wyłączeniem).|
+|[generate_canonical](../standard-library/random-functions.md#generate_canonical)|Tworzy parzystą dystrybucję wartości rzeczywistych (zmiennoprzecinkowych) dla danej precyzji w zakresie [0, 1) (włącznie z wyłączeniem).|
 
-[[Rozkłady liczb losowych](#distributions)]
+[[Rozkład liczb losowych](#distributions)]
+
+#### <a name="bernoulli-distributions"></a>Rozkłady Bernoulliego
+
+|||
+|-|-|
+|[Klasa bernoulli_distribution](../standard-library/bernoulli-distribution-class.md)|Tworzy rozkład Bernoulliego **`bool`** wartości.|
+|[Klasa binomial_distribution](../standard-library/binomial-distribution-class.md)|Tworzy rozkład dwumianowy wartości liczb całkowitych.|
+|[Klasa geometric_distribution](../standard-library/geometric-distribution-class.md)|Generuje geometryczną dystrybucję wartości całkowitych.|
+|[Klasa negative_binomial_distribution](../standard-library/negative-binomial-distribution-class.md)|Generuje ujemny rozkład dwumianowy wartości liczb całkowitych.|
+
+[[Rozkład liczb losowych](#distributions)]
 
 #### <a name="normal-distributions"></a>Rozkłady normalne
 
 |||
 |-|-|
-|[cauchy_distribution — Klasa](../standard-library/cauchy-distribution-class.md)|Tworzy rozkład Cauchy'ego wartości rzeczywistych (zmiennoprzecinkowych).|
-|[Klasa chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|Tworzy chi-kwadrat rozkład wartości rzeczywistych (zmiennoprzecinkowy).|
-|[Klasa fisher_f_distribution](../standard-library/fisher-f-distribution-class.md)|Tworzy rozkład F (znany również jako rozkład F Snedecora lub rozkład Fishera-Snedecora) wartości rzeczywistych (zmiennoprzecinkowych).|
-|[Klasa lognormal_distribution](../standard-library/lognormal-distribution-class.md)|Tworzy rozkład log-normal wartości rzeczywistych (zmiennoprzecinkowych).|
-|[Klasa normal_distribution](../standard-library/normal-distribution-class.md)|Tworzy normalny (gaussowski) rozkład wartości rzeczywistych (zmiennoprzecinkowych).|
-|[student_t_distribution — Klasa](../standard-library/student-t-distribution-class.md)|Tworzy studenta *t-rozkład*wartości rzeczywistych (zmiennoprzecinkowych) wartości.|
+|[Klasa cauchy_distribution](../standard-library/cauchy-distribution-class.md)|Tworzy rozkład Cauchy wartości rzeczywistych (zmiennoprzecinkowych).|
+|[Klasa chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|Tworzy rozkład wartości rzeczywistej (zmiennoprzecinkowej) w postaci chi-kwadrat.|
+|[Klasa fisher_f_distribution](../standard-library/fisher-f-distribution-class.md)|Tworzy rozkład F (znany również jako rozkład F Snedecor lub rozkład Fisher-Snedecor) rzeczywiste (zmiennoprzecinkowe) wartości.|
+|[Klasa lognormal_distribution](../standard-library/lognormal-distribution-class.md)|Tworzy LOGARYTM normalny dla rzeczywistych (zmiennoprzecinkowych) wartości.|
+|[Klasa normal_distribution](../standard-library/normal-distribution-class.md)|Tworzy normalny (gaussowskie) rozkład rzeczywistych (zmiennoprzecinkowych) wartości.|
+|[Klasa student_t_distribution](../standard-library/student-t-distribution-class.md)|Tworzy dystrybucję *t*dla ucznia rzeczywistych (zmiennoprzecinkowych) wartości.|
 
-[[Rozkłady liczb losowych](#distributions)]
+[[Rozkład liczb losowych](#distributions)]
 
 #### <a name="poisson-distributions"></a>Rozkłady Poissona
 
 |||
 |-|-|
-|[exponential_distribution — Klasa](../standard-library/exponential-distribution-class.md)|Tworzy wykładniczy rozkład wartości rzeczywistych (zmiennoprzecinkowych).|
-|[extreme_value_distribution — Klasa](../standard-library/extreme-value-distribution-class.md)|Tworzy skrajne rozkład wartości rzeczywistych (zmiennoprzecinkowych) wartości.|
-|[gamma_distribution — Klasa](../standard-library/gamma-distribution-class.md)|Tworzy rozkład gamma wartości rzeczywistych (zmiennoprzecinkowych).|
-|[poisson_distribution — Klasa](../standard-library/poisson-distribution-class.md)|Tworzy rozkład poissona wartości całkowitych.|
-|[Klasa weibull_distribution](../standard-library/weibull-distribution-class.md)|Tworzy rozkład Weibulla wartości rzeczywistych (zmiennoprzecinkowych).|
+|[Klasa exponential_distribution](../standard-library/exponential-distribution-class.md)|Tworzy wykładniczą dystrybucję rzeczywistych (zmiennoprzecinkowych) wartości.|
+|[Klasa extreme_value_distribution](../standard-library/extreme-value-distribution-class.md)|Tworzy rozkład wartości rzeczywistych (zmiennoprzecinkowych) wartości.|
+|[Klasa gamma_distribution](../standard-library/gamma-distribution-class.md)|Tworzy rozkład gamma wartości rzeczywistych (zmiennoprzecinkowych).|
+|[Klasa poisson_distribution](../standard-library/poisson-distribution-class.md)|Tworzy rozkład Poissona wartości liczb całkowitych.|
+|[Klasa weibull_distribution](../standard-library/weibull-distribution-class.md)|Tworzy rozkład Weibulla dla rzeczywistych (zmiennoprzecinkowych) wartości.|
 
-[[Rozkłady liczb losowych](#distributions)]
+[[Rozkład liczb losowych](#distributions)]
 
-#### <a name="sampling-distributions"></a>Rozkłady próbek
-
-|||
-|-|-|
-|[Klasa discrete_distribution](../standard-library/discrete-distribution-class.md)|Tworzy dyskretny rozkład liczby całkowitej.|
-|[Klasa piecewise_constant_distribution](../standard-library/piecewise-constant-distribution-class.md)|Tworzy fragmentarycznie stały rozkład wartości rzeczywistych (zmiennoprzecinkowych).|
-|[piecewise_linear_distribution — Klasa](../standard-library/piecewise-linear-distribution-class.md)|Tworzy fragmentarycznie liniowy rozkład wartości rzeczywistych (zmiennoprzecinkowych).|
-
-[[Rozkłady liczb losowych](#distributions)]
-
-### <a name="utility-functions"></a>Funkcje narzędzia
-
-W tej sekcji wymieniono ogólne \<funkcje narzędzia dostępne w nagłówku> losowej.
+#### <a name="sampling-distributions"></a>Dystrybucje próbkowania
 
 |||
 |-|-|
-|[seed_seq — Klasa](../standard-library/seed-seq-class.md)|Generuje nieuprzechostniczą sekwencję kodowany materiału siewnego. Służy do unikania replikacji losowych strumieni zmiennych. Przydatne, gdy wiele urng są tworzone z silników.|
+|[Klasa discrete_distribution](../standard-library/discrete-distribution-class.md)|Tworzy dyskretną dystrybucję całkowitą.|
+|[Klasa piecewise_constant_distribution](../standard-library/piecewise-constant-distribution-class.md)|Tworzy rozkład elementowy stałą dystrybucję rzeczywistych (zmiennoprzecinkowych) wartości.|
+|[Klasa piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)|Tworzy rozkład liniowy rozkład elementowy wartości rzeczywiste (zmiennoprzecinkowe).|
+
+[[Rozkład liczb losowych](#distributions)]
+
+### <a name="utility-functions"></a>Funkcje narzędziowe
+
+W tej sekcji wymieniono ogólne funkcje narzędzia dostępne w \<random> nagłówku.
+
+|||
+|-|-|
+|[Klasa seed_seq](../standard-library/seed-seq-class.md)|Generuje nieobciążone sekwencje inicjatora. Służy do uniknięcia replikacji losowych strumieni variate. Przydatne w przypadku wystąpienia wielu URNGs z aparatów.|
 
 ### <a name="operators"></a>Operatory
 
-W tej sekcji wymieniono \<operatorów podanych w nagłówku> losowej.
+Ta sekcja zawiera listę operatorów, które znajdują się w \<random> nagłówku.
 
 |||
 |-|-|
-|`operator==`|Sprawdza, czy urng po lewej stronie operatora jest równa silnikowi po prawej stronie.|
-|`operator!=`|Sprawdza, czy urng po lewej stronie operatora nie jest równa silnikowi po prawej stronie.|
-|`operator<<`|Zapisuje informacje o stanie do strumienia.|
+|`operator==`|Testuje, czy URNG po lewej stronie operatora jest równy aparatowi po prawej stronie.|
+|`operator!=`|Testuje, czy URNG po lewej stronie operatora nie jest równy aparatowi po prawej stronie.|
+|`operator<<`|Zapisuje informacje o stanie w strumieniu.|
 |`operator>>`|Wyodrębnia informacje o stanie ze strumienia.|
 
-## <a name="engines-and-distributions"></a><a name="engdist"></a>Silniki i dystrybucje
+## <a name="engines-and-distributions"></a><a name="engdist"></a>Aparaty i dystrybucje
 
-Zapoznaj się z poniższymi sekcjami, aby uzyskać informacje \<na temat każdej z tych kategorii szablonów klas zdefiniowanych w losowych>. Obie te kategorie szablonów klas przyjmują typ jako argument i używają nazw parametrów szablonu udostępnionego do opisania właściwości typu, które są dozwolone jako rzeczywisty typ argumentu, w następujący sposób:
+Zapoznaj się z następującymi sekcjami, aby uzyskać informacje o każdej z tych kategorii szablonów klas zdefiniowanych w temacie \<random> . Obie te kategorie szablonu klasy przyjmują typ jako argument i używają nazw parametrów szablonu udostępnionego do opisywania właściwości typu, który jest dozwolony jako rzeczywisty typ argumentu, w następujący sposób:
 
-- `IntType`oznacza **krótki**, **int**, **długi,** **długi,** **niepodpisany krótki,** **niepodpisany int,** **niepodpisany długi**lub **niepodpisany długo.**
+- `IntType`wskazuje,,,,, **`short`** **`int`** ,, **`long`** **`long long`** **`unsigned short`** **`unsigned int`** **`unsigned long`** lub **`unsigned long long`** .
 
-- `UIntType`oznacza **niepodpisane krótkie,** **niepodpisane int,** **niepodpisane długie**lub **niepodpisane długie.**
+- `UIntType`wskazuje **`unsigned short`** , **`unsigned int`** , **`unsigned long`** , lub **`unsigned long long`** .
 
-- `RealType`wskazuje **float,** **double**lub **long double**.
+- `RealType`wskazuje **`float`** , **`double`** , lub **`long double`** .
 
-### <a name="engines"></a>Silniki
+### <a name="engines"></a>Silnika
 
-[Szablony silnika](#eng) i [szablony adaptera silnika](#engadapt) to szablony, których parametry dostosowują utworzony generator.
+Szablony [aparatu](#eng) i [Szablony adaptera aparatów](#engadapt) są szablonami, których parametry dostosowują utworzony Generator.
 
-*Aparat* jest szablonem klasy lub klasy, którego wystąpienia (generatory) działają jako źródło liczb losowych równomiernie rozłożonych między wartością minimalną i maksymalną. *Adapter aparatu* dostarcza sekwencję wartości, które mają różne właściwości losowości, biorąc wartości wytwarzane przez inny aparat liczb losowych i stosując algorytm pewnego rodzaju do tych wartości.
+*Aparat* jest klasą lub szablonem klasy, którego wystąpienia (Generatory) działają jako źródło liczb losowych równomiernie dystrybuowanych między wartością minimalną i maksymalną. *Adapter* przyciąga za sobą sekwencję wartości, które mają różne właściwości losowe, pobierając wartości z innego silnika liczb losowych i stosując algorytm pewnego rodzaju do tych wartości.
 
-Każdy silnik i adapter silnika ma następujące elementy:
+Każdy aparat i aparat adaptera mają następujące elementy członkowskie:
 
-- `typedef`jest typem zwracany przez generatora `operator()`. `numeric-type` `result_type` Jest `numeric-type` przekazywana jako parametr szablonu w wystąpieniu.
+- **`typedef`**`numeric-type` `result_type` jest typem zwracanym przez generatora `operator()` . `numeric-type`Jest przenoszona jako parametr szablonu podczas tworzenia wystąpienia.
 
-- `result_type operator()`zwraca wartości, które są `min()` równomiernie rozłożone między i `max()`.
+- `result_type operator()`zwraca wartości, które są jednolicie dystrybuowane między `min()` i `max()` .
 
-- `result_type min()`zwraca minimalną wartość zwracaną przez `operator()`generatora . Adaptery silnika wykorzystują `min()` wynik silnika bazowego.
+- `result_type min()`Zwraca wartość minimalną, która jest zwracana przez generatora `operator()` . Adaptery silnikowe używają wyniku aparatu podstawowego `min()` .
 
-- `result_type max()`zwraca maksymalną wartość zwracaną przez `operator()`generatora . Gdy `result_type` jest typem integralnym (wartość `max()` całkowita) jest maksymalną wartością, która może być faktycznie zwracana (włącznie); gdy `result_type` jest typu zmiennoprzecinkowego `max()` (wartość rzeczywista), jest najmniejszą wartość większą niż wszystkie wartości, które mogą być zwracane (non-inclusive). Adaptery silnika wykorzystują `max()` wynik silnika bazowego.
+- `result_type max()`zwraca maksymalną wartość, która jest zwracana przez generatora `operator()` . Gdy `result_type` jest typem całkowitym (o wartości całkowitej), `max()` jest wartością maksymalną, która faktycznie może zostać zwrócona (włącznie); gdy `result_type` jest typem zmiennoprzecinkowym (wartość rzeczywista), `max()` jest najmniejszą wartością większą niż wszystkie wartości, które mogą być zwracane (niewłączne). Adaptery silnikowe używają wyniku aparatu podstawowego `max()` .
 
-- `void seed(result_type s)`nasiona generatora `s`o wartości materiału siewnego. W przypadku silników `void seed(result_type s = default_seed)` podpis jest przeznaczony do obsługi `void seed()`parametrów domyślnych (adaptery aparatu definiują osobny , patrz następna podsekcja).
+- `void seed(result_type s)`Nasiona generatora z wartością inicjatora `s` . W przypadku aparatów podpis jest `void seed(result_type s = default_seed)` przeznaczony dla obsługi parametrów domyślnych (adaptery łączników definiują oddzielne `void seed()` , zobacz następną podsekcję).
 
-- `template <class Seq> void seed(Seq& q)`nasiona generatora za pomocą [seed_seq](../standard-library/seed-seq-class.md)`Seq`.
+- `template <class Seq> void seed(Seq& q)`Nasiona generatora przy użyciu [seed_seq](../standard-library/seed-seq-class.md) `Seq` .
 
-- Jawny konstruktor `result_type x` z argumentem, który tworzy `seed(x)`generator rozstawiony tak, jakby przez wywołanie .
+- Jawny Konstruktor z argumentem `result_type x` , który tworzy generator, jako if przez wywołanie `seed(x)` .
 
-- Jawny konstruktor `seed_seq& seq` z argumentem, który tworzy `seed(seq)`generator rozstawiony tak, jakby przez wywołanie .
+- Jawny Konstruktor z argumentem `seed_seq& seq` , który tworzy generator, jako if przez wywołanie `seed(seq)` .
 
-- `void discard(unsigned long long count)`skutecznie `operator()` `count` wywołuje czasy i odrzuca każdą wartość.
+- `void discard(unsigned long long count)`skutecznie wywołuje `operator()` `count` czas i odrzuca każdą wartość.
 
-**Adaptery silnika** dodatkowo obsługują`Engine` te elementy ( jest pierwszym parametrem szablonu adaptera silnika, określającym typ silnika bazowego):
+**Adaptery** obsługują dodatkowo te elementy członkowskie ( `Engine` jest pierwszym parametrem szablonu adaptera silnika, wyznaczając typ aparatu podstawowego):
 
-- Domyślny konstruktor do inicjowania generatora tak, jakby z domyślnego konstruktora aparatu podstawowego.
+- Domyślny konstruktor, który umożliwia zainicjowanie generatora jako IF z domyślnego konstruktora aparatu podstawowego.
 
-- Jawny konstruktor `const Engine& eng`z argumentem . Ma to na celu obsługę konstrukcji kopiowania przy użyciu silnika podstawowego.
+- Jawny Konstruktor z argumentem `const Engine& eng` . Jest to obsługa kopiowania kopii przy użyciu aparatu podstawowego.
 
-- Jawny konstruktor `Engine&& eng`z argumentem . Ma to na celu wsparcie konstrukcji ruchowej za pomocą silnika bazowego.
+- Jawny Konstruktor z argumentem `Engine&& eng` . Ma to na celu obsługę konstrukcji przenoszenia przy użyciu aparatu podstawowego.
 
-- `void seed()`który inicjuje generator z domyślną wartością inicjatora silnika podstawowego.
+- `void seed()`powoduje to zainicjowanie generatora przy użyciu domyślnej wartości inicjatora aparatu podstawowego.
 
-- `const Engine& base()`funkcja właściwości, która zwraca aparat podstawowy, który został użyty do skonstruowania generatora.
+- `const Engine& base()`Funkcja właściwości, która zwraca silnik podstawowy, który został użyty do skonstruowania generatora.
 
-Każdy aparat utrzymuje *stan,* który określa kolejność wartości, które będą `operator()`generowane przez kolejne wywołania . Stany dwóch generatorów z silników tego samego typu można `operator==` porównać za pomocą i `operator!=`. Jeśli dwa stany porównać jako równe, będą generować taką samą sekwencję wartości. Stan obiektu można zapisać w strumieniu jako sekwencję 32-bitowych niepodpisanych wartości przy użyciu `operator<<` generatora. Stan nie jest zmieniany przez zapisanie go. Zapisany stan można odczytać do generatora wystąpienia z aparatu tego `operator>>`samego typu przy użyciu .
+Każdy aparat zachowuje *stan* , który określa sekwencję wartości, które zostaną wygenerowane przez kolejne wywołania do `operator()` . Stany dwóch generatorów, które są tworzone na podstawie silników tego samego typu, można porównać przy użyciu `operator==` i `operator!=` . Jeśli dwa stany są porównywane jako równe, generują taką samą sekwencję wartości. Stan obiektu można zapisać w strumieniu jako sekwencję 32-bitowe niepodpisane wartości przy użyciu `operator<<` generatora. Stan nie jest zmieniany przez zapisanie go. Zapisany stan można odczytać w generatorze skonkretyzowanym z aparatu tego samego typu przy użyciu `operator>>` .
 
 ### <a name="distributions"></a>Dystrybucji
 
-[Rozkłady liczb losowych](#distributions) to szablon klasy lub klasy, którego wystąpienia przekształcają strumień równomiernie rozłożonych liczb losowych uzyskanych z aparatu w strumień liczb losowych, które mają określoną dystrybucję. Każda dystrybucja ma następujących członków:
+[Rozkład liczb losowych](#distributions) jest klasą lub szablonem klasy, którego wystąpienia przekształcają strumień równomiernie dystrybuowanych liczb losowych uzyskanych z aparatu do strumienia liczb losowych, które mają określoną dystrybucję. Każda dystrybucja ma następujące elementy członkowskie:
 
-- `typedef`jest typem zwracany przez dystrybucję `operator()`. `numeric-type` `result_type` Jest `numeric-type` przekazywana jako parametr szablonu w wystąpieniu.
+- **`typedef`**`numeric-type` `result_type` jest typem zwracanym przez dystrybucję `operator()` . `numeric-type`Jest przenoszona jako parametr szablonu podczas tworzenia wystąpienia.
 
-- `template <class URNG> result_type operator()(URNG& gen)`zwraca wartości, które są dystrybuowane zgodnie z `gen` definicją dystrybucji, przy użyciu jako źródła równomiernie rozłożonych wartości losowych i *przechowywanych parametrów rozkładu*.
+- `template <class URNG> result_type operator()(URNG& gen)`zwraca wartości, które są dystrybuowane zgodnie z definicją dystrybucji, za pomocą `gen` jako źródło równomiernie dystrybuowanych wartości losowych i przechowywanych *parametrów dystrybucji*.
 
-- `template <class URNG> result_type operator()(URNG& gen, param_type p)`zwraca wartości rozłożone zgodnie z definicją dystrybucji, przy użyciu `gen` jako źródła równomiernie rozłożonych wartości losowych i struktury `p`parametrów .
+- `template <class URNG> result_type operator()(URNG& gen, param_type p)`zwraca wartości dystrybuowane zgodnie z definicją dystrybucji, używając `gen` jako źródła równomiernie dystrybuowanych wartości losowych i struktury parametrów `p` .
 
-- `typedef`jest pakietem parametrów opcjonalnie przekazanych do `operator()` i jest używany zamiast przechowywanych parametrów do generowania jego wartości zwracanej. `unspecified-type` `param_type`
+- **`typedef`**`unspecified-type` `param_type` jest pakiet parametrów, opcjonalnie przekazywać do `operator()` i jest używany zamiast przechowywanych parametrów w celu wygenerowania jego wartości zwracanej.
 
-- Konstruktor `const param&` inicjuje przechowywane parametry z jego argumentu.
+- `const param&`Konstruktor inicjuje przechowywane parametry z jego argumentu.
 
-- `param_type param() const`pobiera zapisane parametry.
+- `param_type param() const`Pobiera przechowywane parametry.
 
-- `void param(const param_type&)`ustawia zapisane parametry z jego argumentu.
+- `void param(const param_type&)`Ustawia parametry przechowywane z tego argumentu.
 
-- `result_type min()`zwraca minimalną wartość zwracaną przez `operator()`rozkład.
+- `result_type min()`Zwraca wartość minimalną, która jest zwracana przez dystrybucję `operator()` .
 
-- `result_type max()`zwraca maksymalną wartość zwracaną przez `operator()`rozkład. Gdy `result_type` jest typem integralnym (wartość `max()` całkowita) jest maksymalną wartością, która może być faktycznie zwracana (włącznie); gdy `result_type` jest typu zmiennoprzecinkowego `max()` (wartość rzeczywista), jest najmniejszą wartość większą niż wszystkie wartości, które mogą być zwracane (non-inclusive).
+- `result_type max()`zwraca maksymalną wartość zwracaną przez dystrybucję `operator()` . Gdy `result_type` jest typem całkowitym (o wartości całkowitej), `max()` jest wartością maksymalną, która faktycznie może zostać zwrócona (włącznie); gdy `result_type` jest typem zmiennoprzecinkowym (wartość rzeczywista), `max()` jest najmniejszą wartością większą niż wszystkie wartości, które mogą być zwracane (niewłączne).
 
-- `void reset()`odrzuca wszystkie buforowane wartości, tak aby wynik `operator()` następnego wywołania nie zależy od żadnych wartości uzyskanych z aparatu przed wywołaniem.
+- `void reset()`odrzuca wartości w pamięci podręcznej, dzięki czemu wynik następnego wywołania do `operator()` nie zależy od wartości uzyskanych z aparatu przed wywołaniem.
 
-Struktura parametrów jest obiektem, który przechowuje wszystkie parametry potrzebne do dystrybucji. Zawiera ona:
+Struktura parametru jest obiektem, który przechowuje wszystkie parametry, które są zbędne do dystrybucji. Zawiera ona:
 
-- `typedef``distribution-type` , który jest rodzajem jego `distribution_type`dystrybucji.
+- **`typedef`**`distribution-type` `distribution_type` , który jest typem rozkładu.
 
-- Jeden lub więcej konstruktorów, które przyjmują te same listy parametrów, jak konstruktory dystrybucji podjąć.
+- Co najmniej jeden Konstruktor, który przyjmuje te same listy parametrów jak konstruktory dystrybucji.
 
-- Te same funkcje dostępu do parametrów co dystrybucja.
+- Te same funkcje dostępu do parametrów jak dystrybucja.
 
-- Operatory porównywania równości i nierówności.
+- Operatory porównania równości i nierówności.
 
-Aby uzyskać więcej informacji, zobacz podtematy referencyjne poniżej tego, połączone wcześniej w tym artykule.
+Aby uzyskać więcej informacji, zapoznaj się z tematami podrzędnymi odwołań poniżej tego, które zostały połączone wcześniej w tym artykule.
 
 ## <a name="remarks"></a><a name="comments"></a>Uwagi
 
-Istnieją dwa bardzo przydatne urngs`mt19937` w `random_device`programie Visual Studio i — jak pokazano w tej tabeli porównawczej:
+Istnieją dwa wysoce przydatne URNGs w programie Visual Studio — `mt19937` i `random_device` — jak pokazano w tej tabeli porównawczej:
 
-|Urng|Szybko|Krypto-bezpieczne|Seedable (Możliwe do wys|Deterministyczne|
+|URNG|Duża|Zabezpieczenia kryptograficzne|Do rozsadzenia|Deterministyczne|
 |----------|-----------|---------------------|---------------|--------------------|
-|`mt19937`|Tak|Nie|Tak|Tak<sup>*</sup>|
-|`random_device`|Nie|Tak|Nie|Nie|
+|`mt19937`|Tak|Nie|Yes|Opcję<sup>*</sup>|
+|`random_device`|Nie|Yes|Nie|Nie|
 
-<sup>* Po podaniu znanego materiału siewnego.</sup>
+<sup>* Jeśli jest dostarczany ze znanym inicjatorem.</sup>
 
-Mimo że standard ISO C++ nie wymaga `random_device` kryptografii bezpieczne, w programie Visual Studio jest implementowany do kryptograficznie bezpieczne. (Termin "kryptograficznie bezpieczne" nie oznacza gwarancji, ale odnosi się do minimalnego poziomu entropii, a tym samym do poziomu przewidywalności — danego algorytmu randomizacji zapewnia. Aby uzyskać więcej informacji, zobacz artykuł Wikipedia [Kryptograficznie bezpieczny generator numerów pseudolosowych](https://go.microsoft.com/fwlink/p/?linkid=398017).) Ponieważ norma ISO C++ nie wymaga tego, inne platformy mogą implementować `random_device` jako prosty generator liczb pseudolosowych (nie zabezpieczony kryptograficznie) i mogą być odpowiednie tylko jako źródło materiału siewnego dla innego generatora. Sprawdź dokumentację dla tych `random_device` platform podczas korzystania z kodu między platformami.
+Mimo że standard ISO C++ nie musi `random_device` być bezpiecznie zabezpieczony, w programie Visual Studio jest zaimplementowana w celu zabezpieczenia kryptograficznego. (Termin "zabezpieczenia kryptograficzne" nie implikuje gwarancji, ale odnosi się do minimalnego poziomu entropii — i w związku z tym poziom przewidywalności — dany algorytm losowości zapewnia. Aby uzyskać więcej informacji, zapoznaj się z artykułem Wikipedia " [cryptographicly Secure pseudolosowych Number Generator](https://go.microsoft.com/fwlink/p/?linkid=398017)"). Ze względu na to, że standard ISO C++ nie wymaga tego, inne platformy mogą implementować `random_device` jako proste generatory liczb pseudolosowych (niezabezpieczone kryptograficznie) i mogą być odpowiednie jako źródło inicjatora dla innego generatora. Zapoznaj się z dokumentacją dla tych platform, korzystając `random_device` z kodu międzyplatformowego.
 
-Z definicji `random_device` wyniki nie są powtarzalne, a efektem ubocznym jest to, że może działać znacznie wolniej niż inne urny. Większość aplikacji, które nie muszą być kryptograficznie bezpieczne go używać `mt19937` lub podobny aparat, chociaż można zasiewać go z wywołaniem `random_device`, jak pokazano w [przykładzie kodu](#code).
+Zgodnie z definicją `random_device` wyniki nie są odtwarzalne, a efektem ubocznym jest, że może działać znacznie wolniej niż inne URNGs. Większość aplikacji, które nie są wymagane do użycia w kryptografii zabezpieczającej `mt19937` , lub podobnego aparatu, chociaż może chcieć być inicjatorem za pomocą wywołania `random_device` , jak pokazano w [przykładzie kodu](#code).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)

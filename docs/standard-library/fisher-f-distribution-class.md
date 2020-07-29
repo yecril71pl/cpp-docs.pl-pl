@@ -26,16 +26,16 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: 2c6a976f3874d563f5bba600b9894ae0103625b0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0401d2e9b5849bdd9f00628107a142606f5f6933
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319596"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219134"
 ---
 # <a name="fisher_f_distribution-class"></a>fisher_f_distribution — Klasa
 
-Generuje rozkład Fisher F.
+Generuje rozkład F Fishera.
 
 ## <a name="syntax"></a>Składnia
 
@@ -69,34 +69,34 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Typ rzeczywisty*\
-Typ wyniku zmiennoprzecinkowego, domyślnie **podwoić**. Możliwe typy można znaleźć w [ \<>losowych ](../standard-library/random.md).
+*Liczba rzeczywista*\
+Typ wyniku zmiennoprzecinkowego, wartość domyślna to **`double`** . Aby zapoznać się z możliwymi typami, zobacz [\<random>](../standard-library/random.md) .
 
-*Urng*\
-Jednolity silnik generatora liczb losowych. Możliwe typy można znaleźć w [ \<>losowych ](../standard-library/random.md).
+*URNG*\
+Jednolity aparat generatora liczb losowych. Aby zapoznać się z możliwymi typami, zobacz [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy opisuje rozkład, który tworzy wartości typu zmiennoprzecinkowego określonego przez użytkownika lub wpisz **dwukrotnie,** jeśli nie jest dostarczany, dystrybuowane zgodnie z F-Dystrybucji Fishera. W poniższej tabeli znajdują się łącza do artykułów dotyczących poszczególnych członków.
+Szablon klasy opisuje dystrybucję, która produkuje wartości typu zmiennoprzecinkowego określonego przez użytkownika, lub typ **`double`** , jeśli nie jest podany, dystrybuowany zgodnie z rozkładem F-Distribution. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
 ||||
 |-|-|-|
 |[fisher_f_distribution](#fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|
 |`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[param_type](#param_type)|
 
-Właściwość `m()` działa `n()` i zwraca wartości dla `m` `n` przechowywanych parametrów dystrybucji i odpowiednio.
+Funkcje właściwości `m()` i `n()` zwracają wartości dla przechowywanych parametrów dystrybucji `m` oraz `n` odpowiednio.
 
-Element członkowski `param()` właściwości `param_type` ustawia lub zwraca pakiet parametrów przechowywanej dystrybucji.
+Element członkowski właściwości `param()` Ustawia lub zwraca `param_type` przechowywany pakiet parametrów dystrybucji.
 
-`min()` Funkcje `max()` i element członkowski zwracają odpowiednio najmniejszy możliwy wynik i największy możliwy wynik.
+`min()`I `max()` funkcje członkowskie zwracają najmniejszy możliwy wynik i największy możliwy wynik.
 
-Funkcja `reset()` elementu członkowskiego odrzuca wszystkie buforowane wartości, dzięki czemu `operator()` wynik następnego wywołania nie zależy od żadnych wartości uzyskanych z aparatu przed wywołaniem.
+`reset()`Funkcja członkowska odrzuca wszystkie wartości pamięci podręcznej, dzięki czemu wynik następnego wywołania do `operator()` nie zależy od wartości uzyskanych z aparatu przed wywołaniem.
 
-Funkcje `operator()` członkowskie zwracają następną wygenerowaną wartość na podstawie aparatu URNG, z bieżącego pakietu parametrów lub określonego pakietu parametrów.
+`operator()`Funkcje członkowskie zwracają następną wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub z określonym pakietem parametrów.
 
-Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [ \<losowe>](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [\<random>](../standard-library/random.md) .
 
-Aby uzyskać szczegółowe informacje na temat dystrybucji F, zobacz Wolfram MathWorld artykuł [F-Distribution](https://go.microsoft.com/fwlink/p/?linkid=400899).
+Aby uzyskać szczegółowe informacje na temat dystrybucji F, zobacz Wolfram MathWorld artykułu [F-Distribution](https://go.microsoft.com/fwlink/p/?linkid=400899).
 
 ## <a name="example"></a>Przykład
 
@@ -159,7 +159,7 @@ int main()
 
 ## <a name="output"></a>Dane wyjściowe
 
-Pierwszy bieg:
+Pierwsze uruchomienie:
 
 ```Output
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): 1
@@ -183,7 +183,7 @@ Distribution for 10 samples:
     10: 3.4320929653
 ```
 
-Drugi bieg:
+Drugi przebieg:
 
 ```Output
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): 1
@@ -207,7 +207,7 @@ Distribution for 10 samples:
     10: 20829747131.7185860000
 ```
 
-Trzeci bieg:
+Trzeci przebieg:
 
 ```Output
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): .1
@@ -233,11 +233,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe>
+**Nagłówek:**\<random>
 
 **Przestrzeń nazw:** std
 
-## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a>fisher_f_distribution::fisher_f_distribution
+## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a>fisher_f_distribution:: fisher_f_distribution
 
 Konstruuje dystrybucję.
 
@@ -248,24 +248,24 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*M*\
-Parametr `m` rozkładu.
+*mol*\
+`m`Parametr rozkładu.
 
-*N*\
-Parametr `n` rozkładu.
+*Azotan*\
+`n`Parametr rozkładu.
 
-*Parm*\
-Struktura `param_type` używana do konstruowania dystrybucji.
+*parametr*\
+`param_type`Struktura używana do konstruowania rozkładu.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < m` i`0.0 < n`
+**Warunek wstępny:** `0.0 < m` lub`0.0 < n`
 
-Pierwszy konstruktor konstruuje `m` obiekt, którego przechowywana `n` wartość zawiera wartość *m* i której przechowywana wartość posiada wartość *n*.
+Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `m` wartość przechowuje wartość *m* i której przechowywana `n` wartość przechowuje wartość *n*.
 
-Drugi konstruktor tworzy obiekt, którego przechowywane parametry są inicjowane z *parm*. Można uzyskać i ustawić bieżące parametry istniejącej `param()` dystrybucji, wywołując funkcję elementu członkowskiego.
+Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
 
-## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a>fisher_f_distribution::param_type
+## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a>fisher_f_distribution::p aram_type
 
 Przechowuje parametry dystrybucji.
 
@@ -283,21 +283,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*M*\
-Parametr `m` rozkładu.
+*mol*\
+`m`Parametr rozkładu.
 
-*N*\
-Parametr `n` rozkładu.
+*Azotan*\
+`n`Parametr rozkładu.
 
-*Prawo*\
-Obiekt `param_type` do porównania z tym.
+*Kliknij*\
+Obiekt, który `param_type` ma zostać porównany.
 
 ### <a name="remarks"></a>Uwagi
 
-**Warunek wstępny:** `0.0 < m` i`0.0 < n`
+**Warunek wstępny:** `0.0 < m` lub`0.0 < n`
 
-Ta struktura może być przekazywana do konstruktora klasy `param()` dystrybucji w wystąpieniu, do funkcji elementu `operator()` członkowskiego, aby ustawić przechowywane parametry istniejącej dystrybucji i do użycia zamiast przechowywanych parametrów.
+Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, a także `operator()` użyć zamiast przechowywanych parametrów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[\<losowe>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

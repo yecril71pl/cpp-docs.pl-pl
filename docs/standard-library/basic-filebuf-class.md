@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: ae1b6b9460ec58aec319196e3c116bd29c3e80e4
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 7dc244cde3d77ad99add1c35716779a55eac9263
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737504"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219316"
 ---
 # <a name="basic_filebuf-class"></a>basic_filebuf — Klasa
 
@@ -71,7 +71,7 @@ Cechy podstawowego elementu buforu plików (zazwyczaj `char_traits<Char_T>` ).
 Szablon klasy opisuje bufor strumienia, który kontroluje przekazywanie elementów typu *Char_T*, których cechy znakowe są określane przez klasę *TR*, do i z sekwencji elementów przechowywanych w zewnętrznym pliku.
 
 > [!NOTE]
-> Obiekty typu `basic_filebuf` są tworzone z wewnętrznym buforem typu __ \* char__ niezależnie od `char_type` określonego przez parametr typu *Char_T*. Oznacza to, że ciąg Unicode (zawierający **wchar_t** znaków) zostanie przekonwertowany na ciąg ANSI (zawierający znaki **char** ) przed zapisaniem w buforze wewnętrznym. Aby przechowywać ciągi Unicode w buforze, Utwórz nowy bufor typu **wchar_t** i ustaw go przy użyciu [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` metody. Aby zobaczyć przykład demonstrujący to zachowanie, zobacz poniżej.
+> Obiekty typu `basic_filebuf` są tworzone z wewnętrznym buforem typu __ \* char__ niezależnie od `char_type` określonego przez parametr typu *Char_T*. Oznacza to, że ciąg Unicode (zawierający **`wchar_t`** znaki) zostanie przekonwertowany na ciąg ANSI (zawierający **`char`** znaki) przed zapisaniem w buforze wewnętrznym. Aby przechowywać ciągi Unicode w buforze, Utwórz nowy bufor typu **`wchar_t`** i ustaw go przy użyciu [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` metody. Aby zobaczyć przykład demonstrujący to zachowanie, zobacz poniżej.
 
 Obiekt klasy `basic_filebuf<Char_T, Tr>` przechowuje wskaźnik pliku, który określa `FILE` obiekt, który kontroluje strumień skojarzony z otwartym plikiem. Przechowuje również wskaźniki do dwóch zestawów reguł konwersji plików do użycia przez [przepełnienie](#overflow) i [niedomiar](#underflow)chronionych elementów członkowskich. Aby uzyskać więcej informacji, zobacz [`basic_filebuf::open`](#open).
 
@@ -216,7 +216,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 |-|-|
 |[ściśle](#close)|Zamyka plik.|
 |[is_open](#is_open)|Wskazuje, czy plik jest otwarty.|
-|[open](#open)|Otwiera plik.|
+|[Otwórz](#open)|Otwiera plik.|
 |[przepływ](#overflow)|Chroniona funkcja wirtualna, która może być wywoływana, gdy nowy znak zostanie wstawiony do pełnego buforu.|
 |[pbackfail](#pbackfail)|Chroniona funkcja wirtualna elementu członkowskiego próbuje umieścić element w strumieniu wejściowym, a następnie uczynić go bieżącym elementem (wskazywanym przez następny wskaźnik).|
 |[seekoff](#seekoff)|Chroniona funkcja wirtualna elementu członkowskiego próbuje zmienić bieżące położenie dla kontrolowanych strumieni.|
@@ -271,9 +271,9 @@ Funkcja członkowska zwraca wskaźnik o wartości null, jeśli wskaźnik pliku j
 
 ### <a name="remarks"></a>Uwagi
 
-`close`wywołania `fclose(fp)` . Jeśli ta funkcja zwróci wartość różną od zera, funkcja zwraca wskaźnik o wartości null. W przeciwnym razie zwraca **to** , aby wskazać, że plik został pomyślnie zamknięty.
+`close`wywołania `fclose(fp)` . Jeśli ta funkcja zwróci wartość różną od zera, funkcja zwraca wskaźnik o wartości null. W przeciwnym razie zwraca, **`this`** Aby wskazać, że plik został pomyślnie zamknięty.
 
-W przypadku strumienia szerokiego, jeśli jakieś wstawienia wystąpiły od momentu otwarcia strumienia lub od momentu ostatniego wywołania do `streampos` , funkcja wywołuje [`overflow`](#overflow) . Wstawia również wszystkie sekwencje potrzebne do przywrócenia pierwotnego stanu konwersji przy użyciu zestawu reguł konwersji plików `fac` do wywołania `fac.unshift` w razie potrzeby. Każdy wygenerowany element `byte` typu **char** jest zapisywana w skojarzonym strumieniu wydzielonym przez wskaźnik pliku `fp` , tak jak w przypadku kolejnych wywołań formularza `fputc(byte, fp)` . Jeśli wywołanie `fac.unshift` lub dowolny zapis nie powiedzie się, funkcja nie powiedzie się.
+W przypadku strumienia szerokiego, jeśli jakieś wstawienia wystąpiły od momentu otwarcia strumienia lub od momentu ostatniego wywołania do `streampos` , funkcja wywołuje [`overflow`](#overflow) . Wstawia również wszystkie sekwencje potrzebne do przywrócenia pierwotnego stanu konwersji przy użyciu zestawu reguł konwersji plików `fac` do wywołania `fac.unshift` w razie potrzeby. Każdy wygenerowany element `byte` typu **`char`** jest zapisywana w skojarzonym strumieniu wydzielonym przez wskaźnik pliku `fp` , tak jak w przypadku kolejnych wywołań formularza `fputc(byte, fp)` . Jeśli wywołanie `fac.unshift` lub dowolny zapis nie powiedzie się, funkcja nie powiedzie się.
 
 ### <a name="example"></a>Przykład
 
@@ -342,7 +342,7 @@ bool is_open() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli wskaźnik pliku nie ma wartości null.
+**`true`** Jeśli wskaźnik pliku nie ma wartości null.
 
 ### <a name="example"></a>Przykład
 
@@ -413,7 +413,7 @@ Domyślna ochrona otwierania plików, równoważna parametrowi *Shflag* w [_fsop
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli bufor jest już otwarty lub wskaźnik pliku jest wskaźnikiem typu null, funkcja zwraca wskaźnik o wartości null. W przeciwnym razie zwraca **to**.
+Jeśli bufor jest już otwarty lub wskaźnik pliku jest wskaźnikiem typu null, funkcja zwraca wskaźnik o wartości null. W przeciwnym razie zwraca **`this`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -510,7 +510,7 @@ Chroniona funkcja wirtualna elementu członkowskiego umieszcza element w buforze
 
 - Jeśli funkcja może udostępnić `putback` pozycję, można to zrobić, ustawić następny wskaźnik na tym miejscu i zapisać `ch` w tym miejscu.
 
-- Jeśli funkcja może wypchnąć element do strumienia wejściowego, może to zrobić, na przykład przez wywołanie `ungetc` elementu typu **char**.
+- Jeśli funkcja może wypchnąć element do strumienia wejściowego, może to zrobić, na przykład przez wywołanie `ungetc` elementu typu **`char`** .
 
 ## <a name="basic_filebufpos_type"></a><a name="pos_type"></a>basic_filebuf::p os_type
 
@@ -582,7 +582,7 @@ Chroniona funkcja wirtualna elementu członkowskiego próbuje zmienić bieżące
 
 W przypadku pliku otwartego do odczytu i zapisu zarówno strumienie wejściowe, jak i wyjściowe są rozmieszczone wspólnie. Aby przełączać się między wstawianiem i wyodrębnianiem, należy wywołać albo [`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff) lub [`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos) . Wywołania do `pubseekoff` (i `seekoff` ) mają różne ograniczenia dotyczące strumieni tekstu, strumieni binarnych i szerokich strumieni.
 
-W przypadku strumienia szerokiego, jeśli jakieś wstawienia wystąpiły od momentu otwarcia strumienia lub od ostatniego wywołania do `streampos` , funkcja wywołuje [przepełnienie](#overflow). Wstawia również wszystkie sekwencje potrzebne do przywrócenia pierwotnego stanu konwersji przy użyciu zestawu reguł konwersji plików `fac` do wywołania `fac.unshift` w razie potrzeby. Każdy wygenerowany element `byte` typu **char** jest zapisywana w skojarzonym strumieniu wydzielonym przez wskaźnik pliku `fp` , tak jak w przypadku kolejnych wywołań formularza `fputc(byte, fp)` . Jeśli wywołanie `fac.unshift` lub dowolny zapis nie powiedzie się, funkcja nie powiedzie się.
+W przypadku strumienia szerokiego, jeśli jakieś wstawienia wystąpiły od momentu otwarcia strumienia lub od ostatniego wywołania do `streampos` , funkcja wywołuje [przepełnienie](#overflow). Wstawia również wszystkie sekwencje potrzebne do przywrócenia pierwotnego stanu konwersji przy użyciu zestawu reguł konwersji plików `fac` do wywołania `fac.unshift` w razie potrzeby. Każdy wygenerowany element `byte` typu **`char`** jest zapisywana w skojarzonym strumieniu wydzielonym przez wskaźnik pliku `fp` , tak jak w przypadku kolejnych wywołań formularza `fputc(byte, fp)` . Jeśli wywołanie `fac.unshift` lub dowolny zapis nie powiedzie się, funkcja nie powiedzie się.
 
 ## <a name="basic_filebufsetbuf"></a><a name="setbuf"></a>basic_filebuf:: setbuf
 
@@ -608,7 +608,7 @@ Funkcja chronionej składowej zwraca zero, jeśli wskaźnik pliku `fp` jest wska
 
 ### <a name="remarks"></a>Uwagi
 
-`setbuf`wywołania, `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` Aby zaoferować tablicę `count` elementów rozpoczynającą się w *_Buffer* jako bufor strumienia. Jeśli ta funkcja zwróci wartość różną od zera, funkcja zwraca wskaźnik o wartości null. W przeciwnym razie zwraca **to** do sukcesu.
+`setbuf`wywołania, `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` Aby zaoferować tablicę `count` elementów rozpoczynającą się w *_Buffer* jako bufor strumienia. Jeśli ta funkcja zwróci wartość różną od zera, funkcja zwraca wskaźnik o wartości null. W przeciwnym razie powraca **`this`** do sukcesu sygnału.
 
 ## <a name="basic_filebufswap"></a><a name="swap"></a>basic_filebuf:: swap
 
@@ -661,7 +661,7 @@ Chroniona funkcja wirtualna elementu członkowskiego próbuje wyodrębnić bież
 
 - Jeśli pozycja odczytu jest dostępna, przyjmuje się `ch` jako element zapisany w pozycji odczytu i przesuwa następny wskaźnik dla buforu wejściowego.
 
-- Może odczytywać jeden lub więcej elementów typu **char**, tak jak w przypadku kolejnych wywołań formularza `fgetc(fp)` , i przekonwertować je na element `ch` typu `Char_T` za pomocą zestawu reguł konwersji plików `fac` do wywołania `fac.in` w razie potrzeby. W przypadku niepowodzenia odczytu lub konwersji funkcja nie powiedzie się.
+- Może odczytywać jeden lub więcej elementów typu **`char`** , tak jak przez kolejne wywołania formularza `fgetc(fp)` , i przekonwertować je na element `ch` typu `Char_T` za pomocą zestawu reguł konwersji plików `fac` do wywołania `fac.in` w razie potrzeby. W przypadku niepowodzenia odczytu lub konwersji funkcja nie powiedzie się.
 
 ## <a name="see-also"></a>Zobacz także
 

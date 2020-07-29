@@ -34,16 +34,16 @@ helpviewer_keywords:
 - std::basic_istream [C++], tellg
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
-ms.openlocfilehash: 03a6e3a65d6dc8c2fa896949855bd23a01578e5a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: da53db594e057449f2d227f57c902d26396000b7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376826"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219251"
 ---
 # <a name="basic_istream-class"></a>basic_istream — Klasa
 
-Opisuje `Char_T`obiekt, który steruje wyodrębnianiem elementów i zakodowanych obiektów z buforu strumienia z elementami typu , znanymi również jako [char_type](../standard-library/basic-ios-class.md#char_type), których cechy charakteru są określane przez klasę *Tr*, zwymowaną również jako [traits_type](../standard-library/basic-ios-class.md#traits_type).
+Opisuje obiekt, który kontroluje wyodrębnianie elementów i zakodowanych obiektów z bufora strumienia z elementami typu `Char_T` , znanym również jako [char_type](../standard-library/basic-ios-class.md#char_type), których cechy znaku są określane przez klasę *TR*, znaną również jako [traits_type](../standard-library/basic-ios-class.md#traits_type).
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,7 +54,7 @@ class basic_istream : virtual public basic_ios<Char_T, Tr>
 
 ## <a name="remarks"></a>Uwagi
 
-Większość funkcji elementów członkowskich, które [>>operatora](#op_gt_gt) przeciążenia są sformatowane funkcje wejściowe. Podążają za wzorem:
+Większość funkcji Członkowskich, które [>>operatora](#op_gt_gt) przeciążenia są sformatowanymi funkcjami wejściowymi. Są one zgodne ze wzorcem:
 
 ```cpp
 iostate state = goodbit;
@@ -87,7 +87,7 @@ setstate(state);
 return (*this);
 ```
 
-Wiele innych funkcji członkowskich są niesformatowane funkcje wejściowe. Podążają za wzorem:
+Wiele innych funkcji Członkowskich są niesformatowanymi funkcjami wejściowymi. Są one zgodne ze wzorcem:
 
 ```cpp
 iostate state = goodbit;
@@ -119,59 +119,59 @@ if (ok)
 setstate(state);
 ```
 
-Obie grupy funkcji [`setstate`](../standard-library/basic-ios-class.md#setstate) `(eofbit)` wywołać, jeśli napotkają koniec pliku podczas wyodrębniania elementów.
+Obydwa grupy funkcji wywołuje, [`setstate`](../standard-library/basic-ios-class.md#setstate) `(eofbit)` Jeśli napotkają koniec pliku podczas wyodrębniania elementów.
 
-Obiekt `basic_istream<Char_T, Tr>` klasy przechowuje:
+Obiekt obiektów klasy `basic_istream<Char_T, Tr>` :
 
-- Wirtualny publiczny obiekt [`basic_ios`](../standard-library/basic-ios-class.md) `<Char_T, Tr>`podstawowy klasy .
+- Wirtualny, publiczny obiekt podstawowy klasy [`basic_ios`](../standard-library/basic-ios-class.md) `<Char_T, Tr>` .
 
-- Liczba ekstrakcji dla ostatniej operacji niesformatowanych danych wejściowych (wywoływanej `count` w poprzednim kodzie).
+- Liczba wyodrębniania dla ostatniej niesformatowanej operacji wejściowej (wywoływana `count` w poprzednim kodzie).
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [basic_ifstream Class,](../standard-library/basic-ifstream-class.md) aby dowiedzieć się więcej o strumieniach wejściowych.
+Zapoznaj się z przykładem [klasy basic_ifstream](../standard-library/basic-ifstream-class.md) , aby dowiedzieć się więcej o strumieniach wejściowych.
 
-### <a name="constructors"></a>Konstruktorów
+### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Opis|
 |-|-|
-|[basic_istream](#basic_istream)|Konstruuje obiekt `basic_istream`typu .|
+|[basic_istream](#basic_istream)|Konstruuje obiekt typu `basic_istream` .|
 
 ### <a name="member-functions"></a>Funkcje członkowskie
 
-|Funkcja członkowce|Opis|
+|Funkcja członkowska|Opis|
 |-|-|
-|[gcount (liczba gcount)](#gcount)|Zwraca liczbę znaków odczytanych podczas ostatniego niesformatowanego wejścia.|
-|[get](#get)|Odczytuje jeden lub więcej znaków ze strumienia wejściowego.|
-|[Getline](#getline)|Odczytuje wiersz ze strumienia wejściowego.|
-|[Ignoruj](#ignore)|Powoduje, że wiele elementów, które mają być pominięte z bieżącej pozycji odczytu.|
-|[Peek](#peek)|Zwraca następny znak do odczytania.|
+|[gcount](#gcount)|Zwraca liczbę znaków odczytywanych podczas ostatniego niesformatowanych danych wejściowych.|
+|[Pobierz](#get)|Odczytuje jeden lub więcej znaków ze strumienia wejściowego.|
+|[getline](#getline)|Odczytuje wiersz ze strumienia wejściowego.|
+|[Ignoruj](#ignore)|Powoduje pominięcie wielu elementów z bieżącej pozycji odczytu.|
+|[wybierania](#peek)|Zwraca następny znak, który ma zostać odczytany.|
 |[putback](#putback)|Umieszcza określony znak w strumieniu.|
-|[Odczytu](#read)|Odczytuje określoną liczbę znaków ze strumienia i przechowuje je w tablicy.|
-|[readsome](#readsome)|Odczyt tylko z bufora.|
-|[seekg (poszukiwani)](#seekg)|Przesuwa pozycję odczytu w strumieniu.|
-|[Sentry](#sentry)|Klasa zagnieżdżona opisuje obiekt, którego deklaracja struktury sformatowanych funkcji wejściowych i niesformatowanych funkcji wejściowych.|
-|[Wymiany](#swap)|Wymienia `basic_istream` ten obiekt `basic_istream` dla podanego parametru obiektu.|
-|[synchronizacja](#sync)|Synchronizuje skojarzone urządzenie wejściowe strumienia z buforem strumienia.|
-|[tellg ( tellg )](#tellg)|Raportuje bieżącą pozycję odczytu w strumieniu.|
-|[unget](#unget)|Umieszcza ostatnio przeczytany znak z powrotem do strumienia.|
+|[Przeczytaj](#read)|Odczytuje określoną liczbę znaków ze strumienia i zapisuje je w tablicy.|
+|[readsome](#readsome)|Odczytaj tylko z bufora.|
+|[seekg](#seekg)|Przenosi pozycję odczytu w strumieniu.|
+|[WartownikDźwięków](#sentry)|Klasa zagnieżdżona opisuje obiekt, którego struktura deklaracji ma sformatowane funkcje wejściowe i niesformatowane funkcje wejściowe.|
+|[wymiany](#swap)|Wymienia ten `basic_istream` obiekt dla podanego `basic_istream` parametru obiektu.|
+|[synchronizacji](#sync)|Synchronizuje urządzenie wejściowe powiązane ze strumieniem z buforem strumienia.|
+|[tellg](#tellg)|Raportuje bieżącą pozycję odczytu w strumieniu.|
+|[unget](#unget)|Umieszcza ostatnio odczytywany znak z powrotem do strumienia.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
 |[>>operatora](#op_gt_gt)|Wywołuje funkcję w strumieniu wejściowym lub odczytuje sformatowane dane ze strumienia wejściowego.|
-|[operator=](#op_eq)|Przypisuje po `basic_istream` prawej stronie operatora do tego obiektu. Jest to przypisanie przenoszenia `rvalue` obejmujące odwołanie, które nie pozostawia kopii za sobą.|
+|[operator =](#op_eq)|Przypisuje `basic_istream` po prawej stronie operatora do tego obiektu. Jest to przypisanie przenoszenia obejmujące `rvalue` odwołanie, które nie pozostawia kopii w tle.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<istream>
+**Nagłówek:**\<istream>
 
 **Przestrzeń nazw:** std
 
-## <a name="basic_istreambasic_istream"></a><a name="basic_istream"></a>basic_istream::basic_istream
+## <a name="basic_istreambasic_istream"></a><a name="basic_istream"></a>basic_istream:: basic_istream
 
-Konstruuje obiekt `basic_istream`typu .
+Konstruuje obiekt typu `basic_istream` .
 
 ```cpp
 explicit basic_istream(
@@ -187,24 +187,24 @@ basic_istream(basic_istream&& right);
 Obiekt typu [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
 *_Isstd*\
-**prawda,** jeśli jest to standardowy strumień; w przeciwnym razie **false**.
+**`true`** Jeśli jest to strumień standardowy; w przeciwnym razie **`false`** .
 
-*Prawo*\
-Obiekt `basic_istream` do skopiowania.
+*Kliknij*\
+`basic_istream`Obiekt do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy konstruktor inicjuje klasę [`init`](../standard-library/basic-ios-class.md#init) `(strbuf)`podstawową, wywołując . Przechowuje również zero w liczniku ekstrakcji. Aby uzyskać więcej informacji na temat tej liczby ekstrakcji, zobacz uwagi sekcji [basic_istream Class](../standard-library/basic-istream-class.md) omówienia.
+Pierwszy Konstruktor inicjuje klasę bazową, wywołując metodę [`init`](../standard-library/basic-ios-class.md#init) `(strbuf)` . Przechowuje również zero w liczniku wyodrębniania. Aby uzyskać więcej informacji na temat tej liczby wyodrębniania, zobacz sekcję Uwagi w temacie Omówienie [klasy basic_istream](../standard-library/basic-istream-class.md) .
 
-Drugi konstruktor inicjuje klasę `move(right)`podstawową, wywołując . Przechowuje `right.gcount()` również w liczniku ekstrakcji i przechowuje zero w liczniku ekstrakcji dla *right**.
+Drugi Konstruktor inicjuje klasę bazową, wywołując `move(right)` . Przechowuje także `right.gcount()` w liczniku wyodrębniania i przechowuje zero w liczniku ekstrakcji dla * Right * *.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład [basic_ifstream::basic_ifstream,](../standard-library/basic-ifstream-class.md#basic_ifstream) aby dowiedzieć się więcej o strumieniach wejściowych.
+Zapoznaj się z przykładem [basic_ifstream:: basic_ifstream](../standard-library/basic-ifstream-class.md#basic_ifstream) , aby dowiedzieć się więcej o strumieniach wejściowych.
 
-## <a name="basic_istreamgcount"></a><a name="gcount"></a>basic_istream::gcount
+## <a name="basic_istreamgcount"></a><a name="gcount"></a>basic_istream:: gcount
 
-Zwraca liczbę znaków odczytanych podczas ostatniego niesformatowanego wejścia.
+Zwraca liczbę znaków odczytywanych podczas ostatniego niesformatowanych danych wejściowych.
 
 ```cpp
 streamsize gcount() const;
@@ -212,11 +212,11 @@ streamsize gcount() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba ekstrakcji.
+Liczba wyodrębniania.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj [basic_istream::get,](#get) aby odczytać znaki niesformatowane.
+Użyj [basic_istream:: Get](#get) , aby odczytać niesformatowane znaki.
 
 ### <a name="example"></a>Przykład
 
@@ -249,7 +249,7 @@ Type the letter 'a': a
 1
 ```
 
-## <a name="basic_istreamget"></a><a name="get"></a>basic_istream::get
+## <a name="basic_istreamget"></a><a name="get"></a>basic_istream:: Get
 
 Odczytuje jeden lub więcej znaków ze strumienia wejściowego.
 
@@ -266,46 +266,46 @@ basic_istream<Char_T, Tr>& get(basic_streambuf<Char_T, Tr>& strbuf, Char_T delim
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba*\
+*liczbą*\
 Liczba znaków do odczytania z *strbuf*.
 
-*Ogranicznik*\
-Znak, który powinien zakończyć odczyt, jeśli napotka przed *zliczanie*.
+*ogranicznik*\
+Znak, który powinien przerwać odczyt, jeśli został napotkany przed *liczbą*.
 
-*Str*\
-Ciąg, w którym można pisać.
+*str*\
+Ciąg, w którym ma zostać zapisany.
 
 *Ch*\
-Postać do zdobycia.
+Znak do pobrania.
 
 *strbuf*\
-Bufor, w którym można pisać.
+Bufor, który ma zostać zapisany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bezwametryczne formy get zwraca element odczytany jako liczba całkowita lub koniec pliku. Pozostałe formularze zwracają strumień `this`(* ).
+Forma get bez parametrów zwraca element odczytaną jako liczbę całkowitą lub koniec pliku. Pozostałe formularze zwracają strumień (* **`this`** ).
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza niesformatowana funkcja wejściowa wyodrębnia element, jeśli `rdbuf->sbumpc`to możliwe, tak jakby zwracał . W przeciwnym `traits_type::` [`eof`](../standard-library/char-traits-struct.md#eof)razie zwraca . Jeśli funkcja nie wyodrębnia żadnego elementu, wywołuje [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`.
+Pierwsza niesformatowana funkcja wejściowa Wyodrębnia element, jeśli jest to możliwe, tak jak gdyby przez zwraca `rdbuf->sbumpc` . W przeciwnym razie zwraca `traits_type::` [`eof`](../standard-library/char-traits-struct.md#eof) . Jeśli funkcja nie wyodrębni elementu, wywołuje [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)` .
 
-Druga funkcja wyodrębnia [element](../standard-library/basic-ios-class.md#int_type) `meta` int_type w ten sam sposób. Jeśli `meta` porównuje się `traits_type::eof`równe , `setstate(failbit)`funkcja wywołuje . W przeciwnym `traits_type::` [`to_char_type`](../standard-library/char-traits-struct.md#to_char_type) `(meta)` razie, to sklepy w *Ch*. Funkcja zwraca __*this__.
+Druga funkcja Wyodrębnia element [int_type](../standard-library/basic-ios-class.md#int_type) w ten `meta` sam sposób. Jeśli `meta` porównuje równe `traits_type::eof` , funkcja wywołuje `setstate(failbit)` . W przeciwnym razie przechowuje `traits_type::` [`to_char_type`](../standard-library/char-traits-struct.md#to_char_type) `(meta)` w *ch*. Funkcja zwraca __* this__.
 
-Trzecia funkcja `get(str, count, widen('\n'))`zwraca .
+Trzecia funkcja zwraca wartość `get(str, count, widen('\n'))` .
 
-Czwarta funkcja wyodrębnia `count - 1` się do elementów i przechowuje je w tablicy począwszy od *ul.* Zawsze przechowuje `char_type` po wszelkich wyodrębnionych elementów, które przechowuje. W kolejności badania, ekstrakcja zatrzymuje:
+Czwarta funkcja wyodrębnia do `count - 1` elementów i zapisuje je w tablicy, zaczynając od *str*. Zawsze są przechowywane `char_type` po wyodrębnionych elementach, które przechowuje. W kolejności testowania Ekstrakcja zostaje zatrzymana:
 
 - Na końcu pliku.
 
-- Po funkcji wyodrębnia element, który porównuje równe *ogranicznika*. W takim przypadku element jest odłożony z powrotem do kontrolowanej sekwencji.
+- Po wyodrębnieniu elementu, który porównuje równe *ogranicznika*. W tym przypadku element jest przywracany do kontrolowanej sekwencji.
 
-- Po funkcja wyodrębnia `count - 1` elementy.
+- Po wyodrębnieniu elementów przez funkcję `count - 1` .
 
-Jeśli funkcja nie wyodrębni żadnych `setstate(failbit)`elementów, wywołuje . W każdym przypadku zwraca __*this__.
+Jeśli funkcja nie wyodrębni żadnych elementów, wywołuje `setstate(failbit)` . W każdym przypadku zwraca wartość __* this__.
 
-Zwraca się `get(strbuf, widen('\n'))`piątą funkcję .
+Piąta funkcja zwraca wartość `get(strbuf, widen('\n'))` .
 
-Szósta funkcja wyodrębnia elementy i wstawia je w *strbuf*. Wyodrębnianie zatrzymuje się na końcu pliku lub na elemencie, który porównuje się z *ogranicznikiem*, który nie jest wyodrębniany. Zatrzymuje się również, bez wyodrębniania danego elementu, jeśli wstawienie nie powiedzie się lub zgłasza wyjątek (który jest przechwytywany, ale nie rethrown). Jeśli funkcja nie wyodrębni żadnych `setstate(failbit)`elementów, wywołuje . W każdym przypadku funkcja zwraca __*this__.
+Szósta funkcja wyodrębnia elementy i wstawia je w *strbuf*. Ekstrakcja kończy się na końcu pliku lub w elemencie, który porównuje równe *ogranicznik*, który nie został wyodrębniony. Zatrzymuje również, bez wyodrębniania elementu, w przypadku niepowodzenia wstawiania lub zgłasza wyjątek (który jest przechwytywany, ale nie jest ponownie zgłaszany). Jeśli funkcja nie wyodrębni żadnych elementów, wywołuje `setstate(failbit)` . W każdym przypadku funkcja zwraca __* this__.
 
 ### <a name="example"></a>Przykład
 
@@ -332,7 +332,7 @@ int main( )
 1111
 ```
 
-## <a name="basic_istreamgetline"></a><a name="getline"></a>basic_istream::getline
+## <a name="basic_istreamgetline"></a><a name="getline"></a>basic_istream:: getline
 
 Pobiera wiersz ze strumienia wejściowego.
 
@@ -349,32 +349,32 @@ basic_istream<Char_T, Tr>& getline(
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba*\
+*liczbą*\
 Liczba znaków do odczytania z *strbuf*.
 
-*Ogranicznik*\
-Znak, który powinien zakończyć odczyt, jeśli napotka przed *zliczanie*.
+*ogranicznik*\
+Znak, który powinien przerwać odczyt, jeśli został napotkany przed *liczbą*.
 
-*Str*\
-Ciąg, w którym można pisać.
+*str*\
+Ciąg, w którym ma zostać zapisany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Strumień (__*this__).
+Strumień (__* this__).
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca pierwszą z tych niesformatowanych funkcji wejściowych `getline(str, count, widen('\n'))`.
+Pierwszy z tych niesformatowanych funkcji wejściowych zwraca wartość `getline(str, count, widen('\n'))` .
 
-Druga funkcja wyodrębnia `count - 1` się do elementów i przechowuje je w tablicy począwszy od *ul.* Zawsze przechowuje znak zakończenia ciągu po wyodrębnionych elementów, które przechowuje. W kolejności badania, ekstrakcja zatrzymuje:
+Druga funkcja wyodrębnia do `count - 1` elementów i zapisuje je w tablicy, zaczynając od *str*. Zawsze przechowuje znak zakończenia ciągu po wszystkich wyodrębnionych elementach, które przechowuje. W kolejności testowania Ekstrakcja zostaje zatrzymana:
 
 - Na końcu pliku.
 
-- Po funkcji wyodrębnia element, który porównuje równe *ogranicznika*. W takim przypadku element nie jest odłożony z powrotem i nie jest dołączany do kontrolowanej sekwencji.
+- Po wyodrębnieniu elementu, który porównuje równe *ogranicznika*. W tym przypadku element nie jest odłączony i nie jest dołączany do kontrolowanej sekwencji.
 
-- Po funkcja wyodrębnia `count - 1` elementy.
+- Po wyodrębnieniu elementów przez funkcję `count - 1` .
 
-Jeśli funkcja wyodrębnia żadnych `count - 1` elementów [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`lub elementów, wywołuje . W każdym przypadku zwraca __*this__.
+Jeśli funkcja nie wyodrębni elementów lub `count - 1` elementów, wywołuje [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)` . W każdym przypadku zwraca wartość __* this__.
 
 ### <a name="example"></a>Przykład
 
@@ -397,9 +397,9 @@ int main( )
 121
 ```
 
-## <a name="basic_istreamignore"></a><a name="ignore"></a>basic_istream::ignoruj
+## <a name="basic_istreamignore"></a><a name="ignore"></a>basic_istream:: ignore
 
-Powoduje, że wiele elementów, które mają być pominięte z bieżącej pozycji odczytu.
+Powoduje pominięcie wielu elementów z bieżącej pozycji odczytu.
 
 ```cpp
 basic_istream<Char_T, Tr>& ignore(
@@ -409,19 +409,19 @@ basic_istream<Char_T, Tr>& ignore(
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba*\
+*liczbą*\
 Liczba elementów do pominięcia z bieżącej pozycji odczytu.
 
-*Ogranicznik*\
-Element, który, jeśli napotkane przed count, powoduje, `ignore` aby powrócić i zezwalając na wszystkie elementy po *ogranicznik* do odczytania.
+*ogranicznik*\
+Element, który, jeśli napotka przed Count, powoduje `ignore` zwrócenie i umożliwienie wszystkich elementów po odczytaniu przez *ogranicznik* .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Strumień (__*this__).
+Strumień (__* this__).
 
 ### <a name="remarks"></a>Uwagi
 
-Niesformatowana funkcja wprowadzania wyodrębnia się do *zliczania* elementów i odrzuca je. Jeśli *liczyć* `numeric_limits<int>::max`równa się , jednak jest traktowana jako arbitralnie duże. Wyodrębnianie zatrzymuje się na początku `Ch` na `traits_type::` [`to_int_type`](../standard-library/char-traits-struct.md#to_int_type) `(Ch)` końcu pliku lub na elemencie, który porównuje się z *ogranicznikiem* (który jest również wyodrębniany). Funkcja zwraca __*this__.
+Niesformatowana funkcja wejściowa wyodrębnia do *liczby* elementów i odrzuca je. Jeśli *Liczba* jest równa `numeric_limits<int>::max` , jednak jest ono pobierane jako arbitralnie duże. Ekstrakcja kończy się wczesne na końcu pliku lub na elemencie `Ch` , który `traits_type::` [`to_int_type`](../standard-library/char-traits-struct.md#to_int_type) `(Ch)` porównuje równe *ogranicznik* (który również jest wyodrębniany). Funkcja zwraca __* this__.
 
 ### <a name="example"></a>Przykład
 
@@ -445,7 +445,7 @@ Type 'abcdef': abcdef
 def
 ```
 
-## <a name="basic_istreamoperator"></a><a name="op_gt_gt"></a>podstawowy\_istream::operator>>
+## <a name="basic_istreamoperator"></a><a name="op_gt_gt"></a>Basic \_ IStream:: operator>>
 
 Wywołuje funkcję w strumieniu wejściowym lub odczytuje sformatowane dane ze strumienia wejściowego.
 
@@ -471,24 +471,24 @@ basic_istream& operator>>(long double& val);
 
 ### <a name="parameters"></a>Parametry
 
-*Pfn*\
+*PFN*\
 Wskaźnik funkcji.
 
 *strbuf*\
 Obiekt typu `stream_buf`.
 
-*Val*\
-Wartość do odczytu ze strumienia.
+*użyte*\
+Wartość, która ma zostać odczytana ze strumienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Strumień (__*this__).
+Strumień (__* this__).
 
 ### <a name="remarks"></a>Uwagi
 
-Nagłówek \<> istream definiuje również kilka globalnych operatorów ekstrakcji. Aby uzyskać więcej informacji, zobacz [>>  operatora(\<istream>).](../standard-library/istream-operators.md#op_gt_gt)
+\<istream>Nagłówek definiuje również kilka globalnych operatorów wyodrębniania. Aby uzyskać więcej informacji, zobacz [operator>>  ( \<istream> )](../standard-library/istream-operators.md#op_gt_gt).
 
-Pierwsza funkcja elementu członkowskiego zapewnia, że `istr >> ws` [`ws`](../standard-library/istream-functions.md#ws) `(istr)`wyrażenie formularza wywołuje , a następnie zwraca __*this__. Druga i trzecia funkcja zapewniają, że [`hex`](../standard-library/ios-functions.md#hex)inne manipulatory, takie jak , zachowują się podobnie. Pozostałe funkcje to sformatowane funkcje wejściowe.
+Pierwsza funkcja członkowska gwarantuje, że wyrażenie `istr >> ws` wywołuje formularz [`ws`](../standard-library/istream-functions.md#ws) `(istr)` , a następnie zwraca __* this__. Drugie i trzecie funkcje zapewniają, że inne manipulowania, takie jak [`hex`](../standard-library/ios-functions.md#hex) , zachowują się podobnie. Pozostałe funkcje są sformatowanymi funkcjami wejściowymi.
 
 Funkcja:
 
@@ -497,7 +497,7 @@ basic_istream& operator>>(
     basic_streambuf<Char_T, Tr>* strbuf);
 ```
 
-wyodrębnia elementy, jeśli *strbuf* nie jest wskaźnikiem null i wstawia je w *strbuf*. Wyodrębnianie zatrzymuje się na końcu pliku. Zatrzymuje się również bez wyodrębniania danego elementu, jeśli wstawienie nie powiedzie się lub zgłasza wyjątek (który jest przechwytywany, ale nie rethrown). Jeśli funkcja nie wyodrębni żadnych [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`elementów, wywołuje . W każdym przypadku funkcja zwraca __*this__.
+wyodrębnia elementy, jeśli *strbuf* nie jest wskaźnikiem o wartości null i wstawia je w *strbuf*. Wyodrębnianie kończy się na końcu pliku. Jest ona także zatrzymywana bez wyodrębniania elementu, jeśli nie powiedzie się lub wygeneruje wyjątek (który jest przechwytywany, ale nie jest ponownie zgłaszany). Jeśli funkcja nie wyodrębni żadnych elementów, wywołuje [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)` . W każdym przypadku funkcja zwraca __* this__.
 
 Funkcja:
 
@@ -505,7 +505,7 @@ Funkcja:
 basic_istream& operator>>(bool& val);
 ```
 
-wyodrębnia pole i konwertuje je na [`use_facet`](../standard-library/basic-filebuf-class.md#open) `< num_get<Char_T, InIt>(` [`getloc`](../standard-library/ios-base-class.md#getloc) `).` [`get`](../standard-library/ios-base-class.md#getloc) `( InIt(` [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)wartość logiczną, wywołując . `), Init(0), *this, getloc, val)` W `InIt` tym miejscu [`istreambuf_iterator`](../standard-library/istreambuf-iterator-class.md) `<Char_T, Tr>`jest zdefiniowany jako . Funkcja zwraca __*this__.
+wyodrębnia pole i konwertuje je na wartość logiczną, wywołując metodę [`use_facet`](../standard-library/basic-filebuf-class.md#open) `< num_get<Char_T, InIt>(` [`getloc`](../standard-library/ios-base-class.md#getloc) `).` [`get`](../standard-library/ios-base-class.md#getloc) `( InIt(` [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) `), Init(0), *this, getloc, val)` . Tutaj, `InIt` został zdefiniowany jako [`istreambuf_iterator`](../standard-library/istreambuf-iterator-class.md) `<Char_T, Tr>` . Funkcja zwraca __* this__.
 
 Każda z funkcji:
 
@@ -521,9 +521,9 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```
 
-wyodrębnić pole i przekonwertować je `use_facet<num_get<Char_T, InIt>(getloc).` [`get`](#get) `(InIt(rdbuf), Init(0), *this, getloc, val)`na wartość liczbową, wywołując . W `InIt` tym miejscu `istreambuf_iterator<Char_T, Tr>`jest zdefiniowany jako , i *val* ma typu **długi,** **niepodpisany długi**lub **void** <strong>\*</strong> w razie potrzeby.
+Wyodrębnij pole i Przekonwertuj je na wartość liczbową, wywołując metodę `use_facet<num_get<Char_T, InIt>(getloc).` [`get`](#get) `(InIt(rdbuf), Init(0), *this, getloc, val)` . W tym miejscu `InIt` jest zdefiniowane jako `istreambuf_iterator<Char_T, Tr>` , a *Val* ma typ **`long`** , **`unsigned long`** lub **`void`** <strong>\*</strong> w razie konieczności.
 
-Jeśli przekonwertowana wartość nie może być reprezentowana jako [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`typ *val,* funkcja wywołuje . W każdym przypadku funkcja zwraca __*this__.
+Jeśli przekonwertowana wartość nie może być reprezentowana jako typ *Val*, wywołania funkcji [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)` . W każdym przypadku funkcja zwraca __* this__.
 
 Każda z funkcji:
 
@@ -533,9 +533,9 @@ basic_istream& operator>>(double& val);
 basic_istream& operator>>(long double& val);
 ```
 
-wyodrębnić pole i przekonwertować je `use_facet<num_get<Char_T, InIt>(getloc).get(InIt(rdbuf), Init(0), *this, getloc, val)`na wartość liczbową, wywołując . Tutaj, `InIt` jest `istreambuf_iterator<Char_T, Tr>`zdefiniowany jako , i *val* ma typ **double** lub **long double w** razie potrzeby.
+Wyodrębnij pole i Przekonwertuj je na wartość liczbową, wywołując metodę `use_facet<num_get<Char_T, InIt>(getloc).get(InIt(rdbuf), Init(0), *this, getloc, val)` . Tutaj, `InIt` jest zdefiniowane jako `istreambuf_iterator<Char_T, Tr>` , a *Val* ma typ **`double`** lub **`long double`** w razie konieczności.
 
-Jeśli przekonwertowana wartość nie może być reprezentowana jako `setstate(failbit)`typ *val,* funkcja wywołuje . W każdym przypadku zwraca __*this__.
+Jeśli przekonwertowana wartość nie może być reprezentowana jako typ *Val*, wywołania funkcji `setstate(failbit)` . W każdym przypadku zwraca wartość __* this__.
 
 ### <a name="example"></a>Przykład
 
@@ -574,9 +574,9 @@ int main( )
 }
 ```
 
-## <a name="basic_istreamoperator"></a><a name="op_eq"></a>basic_istream::operator=
+## <a name="basic_istreamoperator"></a><a name="op_eq"></a>basic_istream:: operator =
 
-Przypisuje po `basic_istream` prawej stronie operatora do tego obiektu. Jest to przypisanie przenoszenia `rvalue` obejmujące odwołanie, które nie pozostawia kopii za sobą.
+Przypisuje `basic_istream` po prawej stronie operatora do tego obiektu. Jest to przypisanie przenoszenia obejmujące `rvalue` odwołanie, które nie pozostawia kopii w tle.
 
 ```cpp
 basic_istream& operator=(basic_istream&& right);
@@ -584,20 +584,20 @@ basic_istream& operator=(basic_istream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Prawo*\
-Odwołanie `rvalue` do `basic_ifstream` obiektu.
+*Kliknij*\
+`rvalue`Odwołanie do `basic_ifstream` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca __*this__.
+Zwraca __* this__.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator elementu `swap(right)`członkowskiego wywołuje .
+Operator elementu członkowskiego wywołuje `swap(right)` .
 
-## <a name="basic_istreampeek"></a><a name="peek"></a>basic_istream::peek
+## <a name="basic_istreampeek"></a><a name="peek"></a>basic_istream::p EEK
 
-Zwraca następny znak do odczytania.
+Zwraca następny znak, który ma zostać odczytany.
 
 ```cpp
 int_type peek();
@@ -605,11 +605,11 @@ int_type peek();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Następna postać, która zostanie przeczytana.
+Następny znak, który zostanie odczytany.
 
 ### <a name="remarks"></a>Uwagi
 
-Niesformatowana funkcja wprowadzania wyodrębnia element, jeśli to `rdbuf->` [`sgetc`](../standard-library/basic-streambuf-class.md#sgetc)możliwe, tak jakby zwracał . W przeciwnym `traits_type::` [`eof`](../standard-library/char-traits-struct.md#eof)razie zwraca .
+Niesformatowana funkcja wejściowa Wyodrębnia element, jeśli jest to możliwe, tak jak gdyby przez zwraca `rdbuf->` [`sgetc`](../standard-library/basic-streambuf-class.md#sgetc) . W przeciwnym razie zwraca `traits_type::` [`eof`](../standard-library/char-traits-struct.md#eof) .
 
 ### <a name="example"></a>Przykład
 
@@ -640,7 +640,7 @@ Type 'abcde': abcde
 a abcde
 ```
 
-## <a name="basic_istreamputback"></a><a name="putback"></a>basic_istream::putback
+## <a name="basic_istreamputback"></a><a name="putback"></a>basic_istream::p utback
 
 Umieszcza określony znak w strumieniu.
 
@@ -652,15 +652,15 @@ basic_istream<Char_T, Tr>& putback(
 ### <a name="parameters"></a>Parametry
 
 *Ch*\
-Znak, który można umieścić z powrotem w strumieniu.
+Znak, który ma zostać przywrócony do strumienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Strumień (__*this__).
+Strumień (__* this__).
 
 ### <a name="remarks"></a>Uwagi
 
-[Funkcja niesformatowanego wejścia](../standard-library/basic-istream-class.md) oddaje *Ch*, jeśli [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) `->` [`sputbackc`](../standard-library/basic-streambuf-class.md#sputbackc)to możliwe, tak jakby przez wywołanie . Jeśli `rdbuf` wskaźnik zerowy lub wywołanie `sputbackc` `traits_type::` [`eof`](../standard-library/char-traits-struct.md#eof)zwraca, funkcja [`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)`wywołuje . W każdym przypadku zwraca __*this__.
+[Niesformatowana funkcja wejściowa](../standard-library/basic-istream-class.md) przywróci wartość *ch*, jeśli to możliwe, tak jak w przypadku wywołania metody [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) `->` [`sputbackc`](../standard-library/basic-streambuf-class.md#sputbackc) . Jeśli `rdbuf` jest wskaźnikiem typu null lub jeśli wywołanie do `sputbackc` zwraca `traits_type::` [`eof`](../standard-library/char-traits-struct.md#eof) , wywołuje funkcję [`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)` . W każdym przypadku zwraca wartość __* this__.
 
 ### <a name="example"></a>Przykład
 
@@ -686,11 +686,11 @@ int main( )
 qwq
 ```
 
-## <a name="basic_istreamread"></a><a name="read"></a>basic_istream::czytaj
+## <a name="basic_istreamread"></a><a name="read"></a>basic_istream:: Read
 
-Odczytuje określoną liczbę znaków ze strumienia i przechowuje je w tablicy.
+Odczytuje określoną liczbę znaków ze strumienia i zapisuje je w tablicy.
 
-Ta metoda jest potencjalnie niebezpieczne, ponieważ opiera się na wywołującego, aby sprawdzić, czy przekazane wartości są poprawne.
+Ta metoda jest potencjalnie niebezpieczna, ponieważ polega na wywołującym, aby sprawdzić, czy przeszukane wartości są poprawne.
 
 ```cpp
 basic_istream<Char_T, Tr>& read(
@@ -700,19 +700,19 @@ basic_istream<Char_T, Tr>& read(
 
 ### <a name="parameters"></a>Parametry
 
-*Str*\
-Tablica, w której mają być odczytywane znaki.
+*str*\
+Tablica, w której mają zostać odczytane znaki.
 
-*Liczba*\
+*liczbą*\
 Liczba znaków do odczytania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Strumień ( `*this`).
+Strumień ( **`*this`** ).
 
 ### <a name="remarks"></a>Uwagi
 
-Niesformatowana funkcja wprowadzania wyodrębnia elementy do *zliczania* i przechowuje je w tablicy rozpoczynającej się od *ul.* Ekstrakcja zatrzymuje się na początku na [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`końcu pliku, w którym to przypadku funkcja wywołuje . W każdym przypadku zwraca __*this__.
+Niesformatowana funkcja wejściowa wyodrębnia do *liczby* elementów i zapisuje je w tablicy, zaczynając od *str*. Wyodrębnianie kończy się wczesne na końcu pliku, w tym przypadku funkcja wywołuje [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)` . W każdym przypadku zwraca wartość __* this__.
 
 ### <a name="example"></a>Przykład
 
@@ -747,11 +747,11 @@ Type 'abcde': abcde
 abcde
 ```
 
-## <a name="basic_istreamreadsome"></a><a name="readsome"></a>basic_istream::readsome
+## <a name="basic_istreamreadsome"></a><a name="readsome"></a>basic_istream:: readsome
 
-Odczytuje określoną liczbę wartości znaków.
+Odczytuje określoną liczbę wartości znakowych.
 
-Ta metoda jest potencjalnie niebezpieczne, ponieważ opiera się na wywołującego, aby sprawdzić, czy przekazane wartości są poprawne.
+Ta metoda jest potencjalnie niebezpieczna, ponieważ polega na wywołującym, aby sprawdzić, czy przeszukane wartości są poprawne.
 
 ```cpp
 streamsize readsome(
@@ -761,21 +761,21 @@ streamsize readsome(
 
 ### <a name="parameters"></a>Parametry
 
-*Str*\
-Tablica, `readsome` w której przechowuje znaki, które odczytuje.
+*str*\
+Tablica, w której `readsome` są przechowywane znaki odczytywane przez nią.
 
-*Liczba*\
+*liczbą*\
 Liczba znaków do odczytania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba znaków faktycznie przeczytanych, [`gcount`](#gcount).
+Liczba znaków faktycznie odczytywanych, [`gcount`](#gcount) .
 
 ### <a name="remarks"></a>Uwagi
 
-Ta niesformatowana funkcja wprowadzania wyodrębnia elementy z *danych* wejściowych i przechowuje je w tablicy *str*.
+Ta niesformatowana funkcja wejściowa wyodrębnia do *liczby* elementów ze strumienia wejściowego i zapisuje je w tablicy *str*.
 
-Ta funkcja nie czeka na dane wejściowe. Odczytuje wszelkie dostępne dane.
+Ta funkcja nie czeka na dane wejściowe. Odczytuje dane, które są dostępne.
 
 ### <a name="example"></a>Przykład
 
@@ -806,9 +806,9 @@ int main( )
 }
 ```
 
-## <a name="basic_istreamseekg"></a><a name="seekg"></a>basic_istream::seekg
+## <a name="basic_istreamseekg"></a><a name="seekg"></a>basic_istream:: seekg
 
-Przesuwa pozycję odczytu w strumieniu.
+Przenosi pozycję odczytu w strumieniu.
 
 ```cpp
 basic_istream<Char_T, Tr>& seekg(pos_type pos);
@@ -818,29 +818,29 @@ basic_istream<Char_T, Tr>& seekg(off_type off, ios_base::seekdir way);
 
 ### <a name="parameters"></a>Parametry
 
-*Poz*\
-Pozycja bezwzględna, w której ma być przesuń wskaźnik odczytu.
+*Terminal*\
+Pozycja absolutna, w której ma zostać przeniesiony wskaźnik odczytu.
 
-*wył.*\
-Przesunięcie, aby przenieść odczyt wskaźnik względem *drogi*.
+*Logowanie*\
+Przesunięcie, aby przenieść wskaźnik odczytu względem *metody*.
 
-*Sposób*\
-Jednym z [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) wyliczenia.
+*możliwości*\
+Jeden z [ios_base:: seekdir](../standard-library/ios-base-class.md#seekdir) Enumerations.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Strumień (__*this__).
+Strumień (__* this__).
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja elementu członkowskiego wykonuje bezwzględny seek, druga funkcja elementu członkowskiego wykonuje względny seek.
+Pierwsza funkcja członkowska wykonuje jednokrotne wyszukiwanie, druga funkcja członkowska wykonuje przeszukiwanie względne.
 
 > [!NOTE]
-> Nie należy używać funkcji drugiego elementu członkowskiego z plikami tekstowymi, ponieważ standard C++ nie obsługuje względnych żądań w plikach tekstowych.
+> Nie należy używać drugiej funkcji składowej z plikami tekstowymi, ponieważ standard C++ nie obsługuje wyszukiwania relatywnego w plikach tekstowych.
 
-Jeśli [`fail`](../standard-library/basic-ios-class.md#fail) jest false, pierwsza `newpos =` [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) `->` [`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos) `(pos)`funkcja elementu `pos_type` członkowskiego `newpos`wywołuje , dla niektórych obiektów tymczasowych . Jeśli `fail` jest false, druga `newpos = rdbuf->` [`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff) `( off, way)`funkcja wywołuje . W obu przypadkach, `(off_type)newpos == (off_type)(-1)` jeśli (operacja pozycjonowania nie powiedzie się), funkcja wywołuje `istr.` [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`. Obie funkcje zwracają __*this__.
+Jeśli [`fail`](../standard-library/basic-ios-class.md#fail) ma wartość false, Pierwsza funkcja elementu członkowskiego wywołuje `newpos =` [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) `->` [`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos) `(pos)` dla pewnego `pos_type` obiektu tymczasowego `newpos` . Jeśli `fail` ma wartość false, druga funkcja wywołuje `newpos = rdbuf->` [`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff) `( off, way)` . W obu przypadkach, jeśli `(off_type)newpos == (off_type)(-1)` (operacja pozycjonowania zakończy się niepowodzeniem), funkcja wywołuje `istr.` [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)` . Obie funkcje zwracają __* this__.
 
-Jeśli [`fail`](../standard-library/basic-ios-class.md#fail) jest true, funkcje członkowskie nic nie robią.
+Jeśli [`fail`](../standard-library/basic-ios-class.md#fail) ma wartość true, funkcje składowe nic nie rób.
 
 ### <a name="example"></a>Przykład
 
@@ -863,9 +863,9 @@ int main ( )
 }
 ```
 
-## <a name="basic_istreamsentry"></a><a name="sentry"></a>basic_istream::działko
+## <a name="basic_istreamsentry"></a><a name="sentry"></a>basic_istream:: Sentry
 
-Klasa zagnieżdżona opisuje obiekt, którego deklaracja struktury sformatowanych i niesformatowanych funkcji wejściowych.
+Klasa zagnieżdżona opisuje obiekt, którego struktura deklaracji ma sformatowane i niesformatowane funkcje wejściowe.
 
 ```cpp
 class sentry {
@@ -879,15 +879,15 @@ class sentry {
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `_Istr.` [`good`](../standard-library/basic-ios-class.md#good) jest true, konstruktor:
+Jeśli `_Istr.` [`good`](../standard-library/basic-ios-class.md#good) ma wartość true, Konstruktor:
 
-- Wywołania, `_Istr.` [`tie`](../standard-library/basic-ios-class.md#tie) `->` [`flush`](../standard-library/basic-ostream-class.md#flush) jeśli `_Istr.tie` nie jest wskaźnik null.
+- Wywołuje `_Istr.` [`tie`](../standard-library/basic-ios-class.md#tie) `->` [`flush`](../standard-library/basic-ostream-class.md#flush) `_Istr.tie` , jeśli nie jest wskaźnikiem wartości null.
 
-- Skutecznie [`ws`](../standard-library/istream-functions.md#ws) `(_Istr)` wywołuje, `_Istr.` [`flags`](../standard-library/ios-base-class.md#flags) `&` [`skipws`](../standard-library/ios-functions.md#skipws) jeśli jest nonzero.
+- Efektywne wywołania, [`ws`](../standard-library/istream-functions.md#ws) `(_Istr)` Jeśli `_Istr.` [`flags`](../standard-library/ios-base-class.md#flags) `&` [`skipws`](../standard-library/ios-functions.md#skipws) jest różna od zera.
 
-Jeśli po takim `_Istr.good` przygotowaniu jest fałszywy, `_Istr.` [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`konstruktor wywołuje . W każdym przypadku konstruktor przechowuje `_Istr.good` `status`wartość zwróconą przez w . Późniejsze wywołanie, aby `operator bool` dostarczyć tę przechowywaną wartość.
+Jeśli po dodaniu takiego przygotowania `_Istr.good` ma wartość FAŁSZ, Konstruktor wywołuje `_Istr.` [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)` . W każdym przypadku Konstruktor przechowuje wartość zwracaną przez `_Istr.good` `status` . Późniejsze wywołanie w celu `operator bool` dostarczenia tej przechowywanej wartości.
 
-## <a name="basic_istreamswap"></a><a name="swap"></a>basic_istream::swap
+## <a name="basic_istreamswap"></a><a name="swap"></a>basic_istream:: swap
 
 Wymienia zawartość dwóch `basic_istream` obiektów.
 
@@ -897,16 +897,16 @@ void swap(basic_istream& right);
 
 ### <a name="parameters"></a>Parametry
 
-*Prawo*\
+*Kliknij*\
 Odwołanie lvalue do `basic_istream` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja elementu [`basic_ios::swap`](../standard-library/basic-ios-class.md#swap) `(right)`członkowskiego wywołuje . Wymienia również liczbę ekstrakcji z liczbą ekstrakcji dla *prawej*.
+Funkcja elementu członkowskiego wywołuje [`basic_ios::swap`](../standard-library/basic-ios-class.md#swap) `(right)` . Wymienia również liczbę wyodrębniania z liczbą wyodrębniania dla *prawej*.
 
-## <a name="basic_istreamsync"></a><a name="sync"></a>basic_istream::synchronizacja
+## <a name="basic_istreamsync"></a><a name="sync"></a>basic_istream:: Sync
 
-Synchronizuje skojarzone urządzenie wejściowe strumienia z buforem strumienia.
+Synchronizuje urządzenie wejściowe powiązane ze strumieniem z buforem strumienia.
 
 ```cpp
 int sync();
@@ -914,9 +914,9 @@ int sync();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) jest wskaźnikiem zerowym, funkcja zwraca wartość -1. W przeciwnym `rdbuf->` [`pubsync`](../standard-library/basic-streambuf-class.md#pubsync)razie wywołuje . Jeśli to wywołanie zwraca wartość [`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)` -1, funkcja wywołuje i zwraca wartość -1. W przeciwnym razie funkcja zwraca zero.
+Jeśli [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) jest wskaźnikiem typu null, funkcja zwraca wartość-1. W przeciwnym razie wywołuje `rdbuf->` [`pubsync`](../standard-library/basic-streambuf-class.md#pubsync) . Jeśli to wywołanie zwróci wartość-1, funkcja wywołuje [`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)` i zwraca wartość-1. W przeciwnym razie funkcja zwraca wartość zero.
 
-## <a name="basic_istreamtellg"></a><a name="tellg"></a>basic_istream::tellg
+## <a name="basic_istreamtellg"></a><a name="tellg"></a>basic_istream:: tellg
 
 Raportuje bieżącą pozycję odczytu w strumieniu.
 
@@ -930,7 +930,7 @@ Bieżąca pozycja w strumieniu.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli [`fail`](../standard-library/basic-ios-class.md#fail) jest false, funkcja [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) `->` [`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff) `(0, cur, in)`elementu członkowskiego zwraca . W przeciwnym `pos_type(-1)`razie zwraca .
+Jeśli [`fail`](../standard-library/basic-ios-class.md#fail) ma wartość false, funkcja członkowska zwraca [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) `->` [`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff) `(0, cur, in)` . W przeciwnym razie zwraca `pos_type(-1)` .
 
 ### <a name="example"></a>Przykład
 
@@ -958,9 +958,9 @@ int main()
 }
 ```
 
-## <a name="basic_istreamunget"></a><a name="unget"></a>basic_istream::unget
+## <a name="basic_istreamunget"></a><a name="unget"></a>basic_istream:: unget
 
-Umieszcza ostatnio przeczytany znak z powrotem do strumienia.
+Umieszcza ostatnio odczytywany znak z powrotem do strumienia.
 
 ```cpp
 basic_istream<Char_T, Tr>& unget();
@@ -968,13 +968,13 @@ basic_istream<Char_T, Tr>& unget();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Strumień (__*this__).
+Strumień (__* this__).
 
 ### <a name="remarks"></a>Uwagi
 
-[Funkcja niesformatowanego wejścia](../standard-library/basic-istream-class.md) oddaje poprzedni element w strumieniu, `rdbuf->` [`sungetc`](../standard-library/basic-streambuf-class.md#sungetc)jeśli to możliwe, tak jakby przez wywołanie . Jeśli [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) wskaźnik zerowy lub wywołanie `sungetc` `traits_type::` [`eof`](../standard-library/basic-ios-class.md#eof)zwraca, funkcja [`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)`wywołuje . W każdym przypadku zwraca __*this__.
+[Niesformatowana funkcja wejściowa](../standard-library/basic-istream-class.md) umieszcza poprzedni element w strumieniu, jeśli jest to możliwe, tak jak przez wywołanie `rdbuf->` [`sungetc`](../standard-library/basic-streambuf-class.md#sungetc) . Jeśli [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) jest wskaźnikiem typu null lub jeśli wywołanie do `sungetc` zwraca `traits_type::` [`eof`](../standard-library/basic-ios-class.md#eof) , wywołuje funkcję [`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)` . W każdym przypadku zwraca wartość __* this__.
 
-Aby uzyskać `unget` informacje o [`basic_streambuf::sungetc`](../standard-library/basic-streambuf-class.md#sungetc)tym, jak może się nie powieść, zobacz .
+Aby uzyskać informacje o tym `unget` , jak może się nie powieść, zobacz [`basic_streambuf::sungetc`](../standard-library/basic-streambuf-class.md#sungetc) .
 
 ### <a name="example"></a>Przykład
 
@@ -1005,8 +1005,8 @@ Type 'abc': abc
 abc
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Bezpieczeństwo gwintów w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programowanie iostream](../standard-library/iostream-programming.md)\
-[Konwencje iostream](../standard-library/iostreams-conventions.md)
+[Konwencje iostreams](../standard-library/iostreams-conventions.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 0445901f935dbf16872dfeca40ca8d9808dd774e
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 97d81401cfd01d6d39457a9d63c39bc25901128e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737571"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219355"
 ---
 # <a name="safeint-class"></a>SafeInt — Klasa
 
@@ -187,7 +187,7 @@ W przypadku porównania logicznego z obiektem SafeInt porównanie jest wyłączn
 
 - `((uint)~0) > -1`
 
-Pierwsza instrukcja jest rozpoznawana jako **true**, ale druga instrukcja jest rozpoznawana jako `false` . Negacja koniunkcji 0 to 0xFFFFFFFF. W drugiej instrukcji operator porównania domyślnego porównuje 0xFFFFFFFF z 0xFFFFFFFF i traktuje je jako równe. Operator porównania dla `SafeInt` klasy realizuje, że drugi parametr jest ujemny, ale pierwszy parametr jest niepodpisany. Dlatego, chociaż reprezentacja bitowa jest identyczna, `SafeInt` operator logiczny realizuje, że liczba całkowita bez znaku jest większa niż-1.
+Pierwsza instrukcja jest rozpoznawana jako **`true`** , ale druga instrukcja jest rozpoznawana jako **`false`** . Negacja koniunkcji 0 to 0xFFFFFFFF. W drugiej instrukcji operator porównania domyślnego porównuje 0xFFFFFFFF z 0xFFFFFFFF i traktuje je jako równe. Operator porównania dla `SafeInt` klasy realizuje, że drugi parametr jest ujemny, podczas gdy pierwszy parametr jest niepodpisany. W związku z tym mimo że reprezentacja bitowa jest taka sama, `SafeInt` operator logiczny realizuje, że liczba całkowita bez znaku jest większa niż-1.
 
 Należy zachować ostrożność w przypadku używania `SafeInt` klasy razem z `?:` operatorem Trzyelementowy. Rozważmy następujący wiersz kodu.
 
@@ -201,7 +201,7 @@ Kompilator konwertuje ten element:
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);
 ```
 
-Jeśli `flag` jest `false` , kompilator zgłasza wyjątek zamiast przypisywania wartości-1 do `x` . W związku z tym, aby uniknąć tego zachowania, prawidłowy kod, który ma być używany, to poniższy wiersz.
+Jeśli `flag` jest **`false`** , kompilator zgłasza wyjątek zamiast przypisywania wartości-1 do `x` . W związku z tym, aby uniknąć tego zachowania, prawidłowy kod, który ma być używany, to poniższy wiersz.
 
 ```cpp
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;

@@ -1,5 +1,5 @@
 ---
-title: '&lt;ustawić operatory&gt;'
+title: '&lt;Ustaw &gt; Operatory'
 ms.date: 03/27/2019
 f1_keywords:
 - set/std::operator!=
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: 4618030cf81f79a085e16052c8b9c547201e3577
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: a3256b7d963feca75e4a975def0f6da77538d278
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419547"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217509"
 ---
-# <a name="ltsetgt-operators"></a>&lt;ustawić operatory&gt;
+# <a name="ltsetgt-operators"></a>&lt;Ustaw &gt; Operatory
 
-## <a name="op_neq"></a>operator! = (Set)
+## <a name="operator-set"></a><a name="op_neq"></a>operator! = (Set)
 
 Testuje, czy obiekt Set po lewej stronie operatora nie jest równy obiektowi Set po prawej stronie.
 
@@ -35,15 +35,15 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `set`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `set`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli zestawy nie są równe; **wartość false** , jeśli zestawy są równe.
+**`true`** Jeśli zestawy nie są równe; **`false`** Jeśli zestawy są równe.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -86,7 +86,7 @@ The sets s1 and s3 are equal.
 */
 ```
 
-## <a name="op_lt"></a>&lt; operatora (Set)
+## <a name="operatorlt-set"></a><a name="op_lt"></a>operator &lt; (Set)
 
 Testuje, czy obiekt Set po lewej stronie operatora jest mniejszy od obiektu Set po prawej stronie.
 
@@ -96,15 +96,15 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `set`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `set`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli zestaw po lewej stronie operatora jest ściśle mniejszy niż zestaw po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli zestaw po lewej stronie operatora jest ściśle mniejszy niż zestaw po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -147,7 +147,7 @@ The set s1 is not less than the set s3.
 */
 ```
 
-## <a name="op_lt_eq"></a>&lt;operatora = (Set)
+## <a name="operatorlt-set"></a><a name="op_lt_eq"></a>operator &lt; = (Set)
 
 Testuje, czy obiekt Set po lewej stronie operatora jest mniejszy od lub równy obiektowi Set po prawej stronie.
 
@@ -157,15 +157,15 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `set`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `set`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli zestaw po lewej stronie operatora jest mniejszy lub równy zestawowi po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli zestaw po lewej stronie operatora jest mniejszy lub równy zestawowi po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -216,7 +216,7 @@ The set s1 is greater than the set s3.
 Set s1 is less than or equal to the set s4.
 ```
 
-## <a name="op_eq_eq"></a>operator = = (Set)
+## <a name="operator-set"></a><a name="op_eq_eq"></a>operator = = (Set)
 
 Testuje, czy obiekt Set po lewej stronie operatora jest równy obiektowi Set po prawej stronie.
 
@@ -226,15 +226,15 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `set`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `set`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli zestaw po lewej stronie operatora jest równy zestawowi po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli zestaw po lewej stronie operatora jest równy zestawowi po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -278,7 +278,7 @@ The sets s1 and s2 are not equal.
 The sets s1 and s3 are equal.
 ```
 
-## <a name="op_gt"></a>&gt; operatora (Set)
+## <a name="operatorgt-set"></a><a name="op_gt"></a>operator &gt; (Set)
 
 Testuje, czy obiekt Set po lewej stronie operatora jest większy niż obiekt ustawiony po prawej stronie.
 
@@ -288,15 +288,15 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `set`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `set`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli zestaw po lewej stronie operatora jest większy niż zestaw po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli zestaw po lewej stronie operatora jest większy niż zestaw po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -339,7 +339,7 @@ The set s1 is greater than the set s3.
 */
 ```
 
-## <a name="op_gt_eq"></a>&gt;operatora = (Set)
+## <a name="operatorgt-set"></a><a name="op_gt_eq"></a>operator &gt; = (Set)
 
 Testuje, czy obiekt Set po lewej stronie operatora jest większy niż lub równy obiektowi Set po prawej stronie.
 
@@ -349,15 +349,15 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `set`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `set`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**wartość true** , jeśli zestaw po lewej stronie operatora jest większy lub równy zestawowi po prawej stronie listy; w przeciwnym razie **false**.
+**`true`** Jeśli zestaw po lewej stronie operatora jest większy lub równy zestawowi po prawej stronie listy; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -408,7 +408,7 @@ Set s1 is greater than or equal to set s3.
 Set s1 is greater than or equal to set s4.
 ```
 
-## <a name="op_neq_multiset"></a>operator! = (zestaw wielokrotny)
+## <a name="operator-multiset"></a><a name="op_neq_multiset"></a>operator! = (zestaw wielokrotny)
 
 Testuje, czy obiekt zestawu wielokrotnego po lewej stronie operatora nie jest równy obiektowi wielokrotnemu po prawej stronie.
 
@@ -418,15 +418,15 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `multiset`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `multiset`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli zestawy lub zestawy wielozbiorowe nie są równe; **wartość false** , jeśli zestawy lub zestawy wielozbiorowe są równe.
+**`true`** Jeśli zestawy lub zestawy wielozbiorowe nie są równe; **`false`** Jeśli zestawy lub zestawy wielozbiorowe są równe.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -470,7 +470,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="op_lt_multiset"></a>&lt; operatora (zestaw wielokrotny)
+## <a name="operatorlt-multiset"></a><a name="op_lt_multiset"></a>operator &lt; (zestaw wielokrotny)
 
 Testuje, czy obiekt zestawu wielokrotnego po lewej stronie operatora jest mniejszy niż obiekt zestawu wielokrotnego po prawej stronie.
 
@@ -480,15 +480,15 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `multiset`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `multiset`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli zestaw wielokrotny po lewej stronie operatora jest ściśle mniejszy niż zestaw wielokrotny po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli zestaw wielokrotny po lewej stronie operatora jest ściśle mniejszy niż zestaw wielokrotny po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -536,7 +536,7 @@ The multiset s1 is less than the multiset s2.
 The multiset s1 is not less than the multiset s3.
 ```
 
-## <a name="op_lt_eq_multiset"></a>operator&lt;= (zestaw wielokrotny)
+## <a name="operatorlt-multiset"></a><a name="op_lt_eq_multiset"></a>operator &lt; = (zestaw wielokrotny)
 
 Testuje, czy obiekt zestawu wielokrotnego po lewej stronie operatora jest mniejszy niż lub równy obiektowi zestawu wielokrotnego po prawej stronie.
 
@@ -546,15 +546,15 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `multiset`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `multiset`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**wartość true** , jeśli zestaw wielokrotny po lewej stronie operatora jest mniejszy lub równy zestawowi wielokrotnemu po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli zestaw wielokrotny po lewej stronie operatora jest mniejszy lub równy zestawowi wielokrotnemu po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -611,7 +611,7 @@ The multiset s1 is greater than the multiset s3.
 The multiset s1 is less than or equal to the multiset s4.
 ```
 
-## <a name="op_eq_eq_multiset"></a>operator = = (zestaw wielokrotny)
+## <a name="operator-multiset"></a><a name="op_eq_eq_multiset"></a>operator = = (zestaw wielokrotny)
 
 Testuje, czy obiekt zestawu wielokrotnego po lewej stronie operatora jest równy obiektowi zestaw wielokrotny po prawej stronie.
 
@@ -621,15 +621,15 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `multiset`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `multiset`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli zestaw wielokrotny po lewej stronie operatora jest równy zestawowi wielokrotnemu po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli zestaw wielokrotny po lewej stronie operatora jest równy zestawowi wielokrotnemu po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -673,7 +673,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="op_gt_multiset"></a>&gt; operatora (zestaw wielokrotny)
+## <a name="operatorgt-multiset"></a><a name="op_gt_multiset"></a>operator &gt; (zestaw wielokrotny)
 
 Testuje, czy obiekt zestawu wielokrotnego po lewej stronie operatora jest większy niż obiekt zestawu wielokrotnego po prawej stronie.
 
@@ -683,15 +683,15 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `multiset`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `multiset`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli zestaw wielokrotny po lewej stronie operatora jest większy niż zestaw wielokrotny po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli zestaw wielokrotny po lewej stronie operatora jest większy niż zestaw wielokrotny po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -739,7 +739,7 @@ The multiset s1 is not greater than the multiset s2.
 The multiset s1 is greater than the multiset s3.
 ```
 
-## <a name="op_gt_eq_multiset"></a>operator&gt;= (zestaw wielokrotny)
+## <a name="operatorgt-multiset"></a><a name="op_gt_eq_multiset"></a>operator &gt; = (zestaw wielokrotny)
 
 Testuje, czy obiekt zestawu wielokrotnego po lewej stronie operatora jest większy niż lub równy obiektowi zestaw wielokrotny po prawej stronie.
 
@@ -749,15 +749,15 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `multiset`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `multiset`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**wartość true** , jeśli zestaw wielokrotny po lewej stronie operatora jest większy lub równy zestawowi wielokrotnemu po prawej stronie listy; w przeciwnym razie **false**.
+**`true`** Jeśli zestaw wielokrotny po lewej stronie operatora jest większy lub równy zestawowi wielokrotnemu po prawej stronie listy; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 

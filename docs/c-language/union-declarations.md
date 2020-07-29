@@ -6,12 +6,12 @@ helpviewer_keywords:
 - union keyword [C], declarations
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
-ms.openlocfilehash: dbc85a467161457641dd86acf5f3720bf4e14247
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3414a478ec741351f1e1540a214cca38c029749f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291044"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213700"
 ---
 # <a name="union-declarations"></a>Deklaracje złożeń
 
@@ -24,8 +24,8 @@ ms.locfileid: "62291044"
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* *struktury lub Unii*
 
 *struct-lub-Union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**konstrukcja**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Unii**
+&nbsp;&nbsp;&nbsp;&nbsp;**`struct`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`union`**
 
 *Struktura-deklaracja-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Struktura — deklaracja*<br/>
@@ -44,14 +44,14 @@ Zawartość Union jest definiowana jako
 &nbsp;&nbsp;&nbsp;&nbsp;*Struktura — deklarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-deklarator-list*  **,**  *struct-deklarator*
 
-Zmienna z typem **Unii** przechowuje jedną z wartości zdefiniowanych przez ten typ. Te same reguły regulują strukturę i deklaracje Unii. Unie mogą również zawierać pola bitowe.
+Zmienna z **`union`** typem przechowuje jedną z wartości zdefiniowanych przez ten typ. Te same reguły regulują strukturę i deklaracje Unii. Unie mogą również zawierać pola bitowe.
 
-Elementy członkowskie Unii nie mogą mieć niekompletnego typu, `void`typu lub typu funkcji. W związku z tym elementy członkowskie nie mogą być wystąpieniem Unii, ale mogą być wskaźnikami do zadeklarowanego typu złożenia.
+Elementy członkowskie Unii nie mogą mieć niekompletnego typu, typu **`void`** lub typu funkcji. W związku z tym elementy członkowskie nie mogą być wystąpieniem Unii, ale mogą być wskaźnikami do zadeklarowanego typu złożenia.
 
 Deklaracja typu Union jest tylko szablonem. Pamięć nie jest zarezerwowana do momentu zadeklarowania zmiennej.
 
 > [!NOTE]
-> Jeśli jest zadeklarowana Unia dwóch typów i jest przechowywana jedna wartość, a Unia jest dostępna z innym typem, wyniki są niezawodne. Na przykład Unia **zmiennoprzecinkowa** i `int` jest zadeklarowana. Wartość **zmiennoprzecinkowa** jest przechowywana, ale program później uzyskuje dostęp do wartości jako `int`. W takiej sytuacji wartość będzie zależeć od wewnętrznego magazynu wartości **zmiennoprzecinkowych** . Wartość całkowita nie będzie godna zaufania.
+> Jeśli jest zadeklarowana Unia dwóch typów i jest przechowywana jedna wartość, a Unia jest dostępna z innym typem, wyniki są niezawodne. Na przykład Unia **`float`** i **`int`** jest zadeklarowana. **`float`** Wartość jest przechowywana, ale program później uzyskuje dostęp do wartości jako **`int`** . W takiej sytuacji wartość będzie zależeć od wewnętrznego magazynu **`float`** wartości. Wartość całkowita nie będzie godna zaufania.
 
 ## <a name="examples"></a>Przykłady
 
@@ -65,7 +65,7 @@ union sign   /* A definition and a declaration */
 } number;
 ```
 
-W tym przykładzie zdefiniowano zmienną Union `sign` z typem i deklaruje zmienną `number` o nazwie, która ma `svar`dwie składowe:, liczbę `uvar`całkowitą ze znakiem i, liczbę całkowitą bez znaku. Ta deklaracja umożliwia przechowywanie bieżącej wartości `number` jako wartości ze znakiem lub bez znaku. Tag skojarzony z tym typem Unii to `sign`.
+W tym przykładzie zdefiniowano zmienną Union z `sign` typem i deklaruje zmienną o nazwie `number` , która ma dwie składowe: `svar` , liczbę całkowitą ze znakiem i `uvar` , liczbę całkowitą bez znaku. Ta deklaracja umożliwia przechowywanie bieżącej wartości `number` jako wartości ze znakiem lub bez znaku. Tag skojarzony z tym typem Unii to `sign` .
 
 ```C
 union               /* Defines a two-dimensional */
@@ -79,7 +79,7 @@ union               /* Defines a two-dimensional */
 } screen[25][80];
 ```
 
-`screen` Tablica zawiera 2 000 elementów. Każdy element tablicy jest pojedynczym złożeniem z dwoma elementami członkowskimi `window1` : `screenval`i. `window1` Składowa jest strukturą zawierającą dwa elementy członkowskie pola bitowego `icon` i `color`. `screenval` Element członkowski jest `int`. W danym momencie każdy element Union posiada `int` reprezentowane przez `screenval` lub strukturę reprezentowane przez. `window1`
+`screen`Tablica zawiera 2 000 elementów. Każdy element tablicy jest pojedynczym złożeniem z dwoma elementami członkowskimi: `window1` i `screenval` . `window1`Składowa jest strukturą zawierającą dwa elementy członkowskie pola bitowego `icon` i `color` . `screenval`Element członkowski jest **`int`** . W danym momencie każdy element Union posiada **`int`** reprezentowane przez `screenval` lub strukturę reprezentowane przez `window1` .
 
 **Specyficzne dla firmy Microsoft**
 
@@ -121,6 +121,6 @@ Zobacz [struktury i składowe Unii,](../c-language/structure-and-union-members.m
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)

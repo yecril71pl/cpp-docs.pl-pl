@@ -7,18 +7,18 @@ helpviewer_keywords:
 - type casts, involving pointers
 - void pointers
 ms.assetid: 3facc56f-06d3-4570-b1a2-7d4927b83086
-ms.openlocfilehash: 2d907dbcf4f826d364fb68ce65f7d44c6cfe97cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6358216e72f054becf33d18aadb6a3a51bab8363
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312419"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218900"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Konwersje do i z typów wskaźnika
 
 Wskaźnik do jednego typu wartości może być przekonwertowany na wskaźnik do innego typu. Jednakże wynik może być niezdefiniowany, ze względu na wymagania wyrównania i rozmiary różnych typów w magazynie. Wskaźnik do obiektu może być przekonwertowany na wskaźnik do obiektu, którego typ wymaga mniejszego lub takiego samego wyrównania w magazynie i na odwrót bez zmiany.
 
-Wskaźnik do `void` może być przekonwertowany na lub ze wskaźnika do dowolnego typu, bez ograniczeń lub utraty informacji. Jeśli wynik jest konwertowany z powrotem na oryginalny typ, oryginalny wskaźnik jest odzyskiwany.
+Wskaźnik do **`void`** można przekonwertować na wskaźnik do dowolnego typu, bez ograniczeń lub utraty informacji. Jeśli wynik jest konwertowany z powrotem na oryginalny typ, oryginalny wskaźnik jest odzyskiwany.
 
 Jeżeli wskaźnik jest konwertowany na inny wskaźnik tego samego typu, ale o różnych lub dodatkowych kwalifikatorach, nowy wskaźnik jest taki sam jak stary, z wyjątkiem ograniczeń nałożonych przez nowy kwalifikator.
 
@@ -34,8 +34,8 @@ I odwrotnie typ całkowity może być konwertowany na typ wskaźnika, zgodnie z 
 
 - Jeśli rozmiar typu całkowitego różni się od rozmiaru typu wskaźnika, typ całkowity jest najpierw konwertowany na rozmiar wskaźnika, przy użyciu ścieżek konwersji podanych w [konwersji tabel z podpisanych typów całkowitych](../c-language/conversions-from-signed-integral-types.md) i [konwersji z niepodpisanych typów całkowitych](../c-language/conversions-from-unsigned-integral-types.md). Następnie jest ona traktowana jako wartość wskaźnika.
 
-Całkowite wyrażenie stałe z wartością 0 lub takie rzutowanie wyrażenia na typ **void** <strong>\*</strong> może być konwertowane przez rzutowanie typu, przez przypisanie lub przez porównanie do wskaźnika dowolnego typu. Daje to pusty wskaźnik równy innemu pustemu wskaźnikowi tego samego typu, ale taki pusty wskaźnik nie jest równy żadnemu innemu wskaźnikowi do funkcji lub obiektu. Wartości całkowite inne niż stała 0 można przekonwertować na typ wskaźnika, ale wynik nie jest przenośny.
+Całkowite wyrażenie stałe z wartością 0 lub takie rzutowanie wyrażenia na typ **`void`** <strong>\*</strong> może być konwertowane przez rzutowanie typu, przez przypisanie lub przez porównanie do wskaźnika dowolnego typu. Daje to pusty wskaźnik równy innemu pustemu wskaźnikowi tego samego typu, ale taki pusty wskaźnik nie jest równy żadnemu innemu wskaźnikowi do funkcji lub obiektu. Wartości całkowite inne niż stała 0 można przekonwertować na typ wskaźnika, ale wynik nie jest przenośny.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersje przypisań](../c-language/assignment-conversions.md)

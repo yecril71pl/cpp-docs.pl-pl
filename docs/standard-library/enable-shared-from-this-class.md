@@ -7,16 +7,16 @@ helpviewer_keywords:
 - enable_shared_from_this class
 - enable_shared_from_this
 ms.assetid: 9237603d-22e2-421f-b070-838ac006baf5
-ms.openlocfilehash: 152a5e0433f2eab5160fbdedde8f18f42f2303e6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 9b417eabdaf6002724a0fa947dd97dea6f0df0a5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245864"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217782"
 ---
-# <a name="enablesharedfromthis-class"></a>enable_shared_from_this — Klasa
+# <a name="enable_shared_from_this-class"></a>enable_shared_from_this — Klasa
 
-Ułatwia generowanie `shared_ptr`.
+Pomaga wygenerować `shared_ptr` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,20 +38,20 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*\
-Typ kontrolowany przez dzielony wskaźnik.
+*Br*\
+Typ kontrolowany przez wspólny wskaźnik.
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekty pochodzące z `enable_shared_from_this` służy `shared_from_this` metod w funkcji elementów członkowskich, aby utworzyć [shared_ptr](../standard-library/shared-ptr-class.md) właścicieli wystąpienia, które dzielą prawo własności przy użyciu istniejących `shared_ptr` właścicieli. W przeciwnym razie, jeśli tworzysz nową `shared_ptr` przy użyciu **to**, różni się on od istniejących `shared_ptr` właścicieli, co może prowadzić do nieprawidłowe odwołania lub powodują, że obiekt można usunąć więcej niż jeden raz.
+Obiekty pochodzące z `enable_shared_from_this` mogą używać `shared_from_this` metod w funkcjach składowych do tworzenia [shared_ptr](../standard-library/shared-ptr-class.md) właścicieli wystąpienia, które współdzielą własność z istniejącymi `shared_ptr` właścicielami. W przeciwnym razie, jeśli tworzysz nowy `shared_ptr` przy użyciu **`this`** , jest on odrębny od istniejących `shared_ptr` właścicieli, co może prowadzić do nieprawidłowych odwołań lub spowodować, że obiekt zostanie usunięty więcej niż raz.
 
-Konstruktory, destruktor i operator przypisania są chronione, aby uniknąć przypadkowego nadużycie. Typ argumentu szablonu *Ty* musi być typem klasy pochodnej.
+Konstruktory, destruktory i operator przypisania są chronione, aby zapobiec przypadkowemu nadużyciom. Typ argumentu *szablonu musi być typem klasy* pochodnej.
 
-Na przykład użycie zobacz [enable_shared_from_this::shared_from_this](#shared_from_this).
+Przykład użycia można znaleźć w temacie [enable_shared_from_this:: shared_from_this](#shared_from_this).
 
-## <a name="shared_from_this"></a> shared_from_this —
+## <a name="shared_from_this"></a><a name="shared_from_this"></a>shared_from_this
 
-Generuje `shared_ptr` , udostępnia własności wystąpienie z istniejącym `shared_ptr` właścicieli.
+Generuje `shared_ptr` udział własności wystąpienia z istniejącymi `shared_ptr` właścicielami.
 
 ```cpp
 shared_ptr<T> shared_from_this();
@@ -60,7 +60,7 @@ shared_ptr<const T> shared_from_this() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Po utworzeniu klasy pochodnej obiektów z `enable_shared_from_this` podstawowej klasy, `shared_from_this` składowej szablonu funkcje zwracają [shared_ptr — klasa](../standard-library/shared-ptr-class.md) obiektu, który udostępnia własności tego wystąpienia przy użyciu istniejących `shared_ptr` właścicieli. W przeciwnym razie, jeśli tworzysz nową `shared_ptr` z **to**, różni się on od istniejących `shared_ptr` właścicieli, co może prowadzić do nieprawidłowe odwołania lub powodują, że obiekt można usunąć więcej niż jeden raz. Zachowanie jest niezdefiniowane, jeśli wywołasz `shared_from_this` wystąpieniu, który nie jest już własnością `shared_ptr` obiektu.
+Podczas wyprowadzania obiektów z `enable_shared_from_this` klasy bazowej `shared_from_this` funkcje składowe szablonu zwracają [shared_ptr obiektu klasy](../standard-library/shared-ptr-class.md) , który współużytkuje własność tego wystąpienia z istniejącymi `shared_ptr` właścicielami. W przeciwnym razie, jeśli utworzysz nowy `shared_ptr` z **`this`** , jest on odrębny od istniejących `shared_ptr` właścicieli, co może prowadzić do nieprawidłowych odwołań lub spowodować usunięcie obiektu więcej niż raz. Zachowanie jest niezdefiniowane, jeśli wywołujesz `shared_from_this` wystąpienie, które nie jest już własnością `shared_ptr` obiektu.
 
 ### <a name="example"></a>Przykład
 
@@ -96,7 +96,7 @@ int main()
 sp2->val == 3
 ```
 
-## <a name="weak_from_this"></a> weak_from_this
+## <a name="weak_from_this"></a><a name="weak_from_this"></a>weak_from_this
 
 ```cpp
 weak_ptr<T> weak_from_this() noexcept;

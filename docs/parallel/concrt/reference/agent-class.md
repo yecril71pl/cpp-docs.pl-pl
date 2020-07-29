@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-ms.openlocfilehash: f0092f5f90bbdf253c09dbdc80849c3db472212f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f1d98cdc6237f182e0240a85f2fdce3410232195
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422263"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213895"
 ---
 # <a name="agent-class"></a>agent — Klasa
 
@@ -34,21 +34,21 @@ Klasa przeznaczona do użycia jako klasa bazowa dla wszystkich niezależnych age
 class agent;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[Odczynnik](#ctor)|Przeciążone. Konstruuje agenta.|
 |[~ Destruktor agenta](#dtor)|Niszczy agenta.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[Anuluj](#cancel)|Przenosi agenta ze Stanów `agent_created` lub `agent_runnable` do stanu `agent_canceled`.|
-|[start](#start)|Przenosi agenta ze stanu `agent_created` do stanu `agent_runnable` i planuje jego wykonanie.|
+|[Anuluj](#cancel)|Przenosi agenta z `agent_created` lub `agent_runnable` Stanów do `agent_canceled` stanu.|
+|[start](#start)|Przenosi agenta ze `agent_created` stanu do `agent_runnable` stanu i planuje jego wykonanie.|
 |[Stany](#status)|Synchroniczne źródło informacji o stanie od agenta.|
 |[status_port](#status_port)|Asynchroniczne źródło informacji o stanie od agenta.|
 |[trwa](#wait)|Czeka, aż Agent ukończy zadanie.|
@@ -57,10 +57,10 @@ class agent;
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[odbywać](#done)|Przenosi agenta do stanu `agent_done`, wskazując, że Agent został ukończony.|
-|[wykonane](#run)|Reprezentuje główne zadanie agenta. `run` powinna zostać przesłonięta w klasie pochodnej i określa, co Agent powinien wykonać po jego uruchomieniu.|
+|[gotowe](#done)|Przenosi agenta do `agent_done` stanu, wskazując, że Agent został ukończony.|
+|[wykonane](#run)|Reprezentuje główne zadanie agenta. `run`powinien zostać zastąpiony w klasie pochodnej i określa, co Agent powinien wykonać po jego uruchomieniu.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -76,7 +76,7 @@ Aby uzyskać więcej informacji, zobacz [agenci asynchroniczni](../../../paralle
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="ctor"></a>Odczynnik
+## <a name="agent"></a><a name="ctor"></a>Odczynnik
 
 Konstruuje agenta.
 
@@ -91,16 +91,16 @@ agent(ScheduleGroup& _PGroup);
 ### <a name="parameters"></a>Parametry
 
 *_PScheduler*<br/>
-Obiekt `Scheduler`, w ramach którego zaplanowano zadanie wykonywania agenta.
+`Scheduler`Obiekt, w ramach którego zaplanowano zadanie wykonywania agenta.
 
 *_PGroup*<br/>
-Obiekt `ScheduleGroup`, w ramach którego zaplanowano zadanie wykonywania agenta. Używany obiekt `Scheduler` jest implikowany przez grupę harmonogramów.
+`ScheduleGroup`Obiekt, w ramach którego zaplanowano zadanie wykonywania agenta. `Scheduler`Używany obiekt jest implikowany przez grupę harmonogramów.
 
 ### <a name="remarks"></a>Uwagi
 
-Środowisko uruchomieniowe używa domyślnego harmonogramu, jeśli nie określisz parametrów `_PScheduler` lub `_PGroup`.
+Środowisko uruchomieniowe używa domyślnego harmonogramu, jeśli nie określono `_PScheduler` `_PGroup` parametrów lub.
 
-## <a name="dtor"></a>~ Agent
+## <a name="agent"></a><a name="dtor"></a>~ Agent
 
 Niszczy agenta.
 
@@ -110,39 +110,39 @@ virtual ~agent();
 
 ### <a name="remarks"></a>Uwagi
 
-Wystąpił błąd podczas niszczenia agenta, który nie znajduje się w stanie terminalu (`agent_done` lub `agent_canceled`). Można to uniknąć, czekając, aż Agent osiągnie stan terminalu w destruktorze klasy, która dziedziczy z klasy `agent`.
+Wystąpił błąd podczas niszczenia agenta, który nie znajduje się w stanie terminalu ( `agent_done` lub `agent_canceled` ). Można to uniknąć, czekając, aż Agent osiągnie stan terminalu w destruktorze klasy, która dziedziczy z `agent` klasy.
 
-## <a name="cancel"></a>Anuluj
+## <a name="cancel"></a><a name="cancel"></a>Anuluj
 
-Przenosi agenta ze Stanów `agent_created` lub `agent_runnable` do stanu `agent_canceled`.
+Przenosi agenta z `agent_created` lub `agent_runnable` Stanów do `agent_canceled` stanu.
 
 ```cpp
 bool cancel();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli Agent został anulowany, w przeciwnym razie **zwraca wartość false** . Nie można anulować agenta, jeśli został już uruchomiony lub został już ukończony.
+**`true`** Jeśli Agent został anulowany, **`false`** w przeciwnym razie. Nie można anulować agenta, jeśli został już uruchomiony lub został już ukończony.
 
-## <a name="done"></a>odbywać
+## <a name="done"></a><a name="done"></a>odbywać
 
-Przenosi agenta do stanu `agent_done`, wskazując, że Agent został ukończony.
+Przenosi agenta do `agent_done` stanu, wskazując, że Agent został ukończony.
 
 ```cpp
 bool done();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli Agent jest przenoszony do stanu `agent_done`, w przeciwnym razie **false** . Agent, który został anulowany, nie może zostać przeniesiony do stanu `agent_done`.
+**`true`** Jeśli Agent jest przenoszony do `agent_done` stanu, **`false`** w przeciwnym razie. Agent, który został anulowany, nie może zostać przeniesiony do `agent_done` stanu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda powinna być wywoływana na końcu metody `run`, gdy wiadomo, że wykonywanie agenta zakończyło się pomyślnie.
+Ta metoda powinna być wywoływana na końcu `run` metody, gdy wiadomo, że wykonywanie agenta zakończyło się pomyślnie.
 
-## <a name="run"></a>wykonane
+## <a name="run"></a><a name="run"></a>wykonane
 
-Reprezentuje główne zadanie agenta. `run` powinna zostać przesłonięta w klasie pochodnej i określa, co Agent powinien wykonać po jego uruchomieniu.
+Reprezentuje główne zadanie agenta. `run`powinien zostać zastąpiony w klasie pochodnej i określa, co Agent powinien wykonać po jego uruchomieniu.
 
 ```cpp
 virtual void run() = 0;
@@ -150,21 +150,21 @@ virtual void run() = 0;
 
 ### <a name="remarks"></a>Uwagi
 
-Stan agenta zostanie zmieniony na `agent_started` bezpośrednio przed wywołaniem tej metody. Metoda powinna wywołać `done` na agencie przy użyciu odpowiedniego stanu przed zwróceniem i może nie generować żadnych wyjątków.
+Stan agenta jest zmieniany na `agent_started` prawidłowy przed wywołaniem tej metody. Metoda powinna zostać wywołana `done` na agencie przy użyciu odpowiedniego stanu przed zwróceniem i może nie generować żadnych wyjątków.
 
-## <a name="start"></a>Start
+## <a name="start"></a><a name="start"></a>Start
 
-Przenosi agenta ze stanu `agent_created` do stanu `agent_runnable` i planuje jego wykonanie.
+Przenosi agenta ze `agent_created` stanu do `agent_runnable` stanu i planuje jego wykonanie.
 
 ```cpp
 bool start();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli Agent został uruchomiony prawidłowo, w przeciwnym razie **false** . Nie można uruchomić agenta, który został anulowany.
+**`true`** Jeśli Agent został uruchomiony prawidłowo, **`false`** w przeciwnym razie. Nie można uruchomić agenta, który został anulowany.
 
-## <a name="status"></a>Stany
+## <a name="status"></a><a name="status"></a>Stany
 
 Synchroniczne źródło informacji o stanie od agenta.
 
@@ -172,11 +172,11 @@ Synchroniczne źródło informacji o stanie od agenta.
 agent_status status();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca bieżący stan agenta. Zwróć uwagę, że ten zwrócony stan może ulec zmianie natychmiast po zwróceniu.
 
-## <a name="status_port"></a>status_port
+## <a name="status_port"></a><a name="status_port"></a>status_port
 
 Asynchroniczne źródło informacji o stanie od agenta.
 
@@ -184,11 +184,11 @@ Asynchroniczne źródło informacji o stanie od agenta.
 ISource<agent_status>* status_port();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Zwraca źródło komunikatu, które może wysyłać komunikaty o bieżącym stanie agenta.
 
-## <a name="wait"></a>trwa
+## <a name="wait"></a><a name="wait"></a>trwa
 
 Czeka, aż Agent ukończy zadanie.
 
@@ -206,17 +206,17 @@ Wskaźnik do agenta, dla którego ma zostać odczekanie.
 *_Timeout*<br/>
 Maksymalny czas oczekiwania (w milisekundach).
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-`agent_status` agenta po zakończeniu oczekiwania. Może to być `agent_canceled` lub `agent_done`.
+`agent_status`Agent po zakończeniu oczekiwania. Może to być `agent_canceled` albo `agent_done` .
 
 ### <a name="remarks"></a>Uwagi
 
-Zadanie agenta jest wykonywane, gdy Agent przejdzie do `agent_canceled` lub `agent_done` Stanów.
+Zadanie agenta jest wykonywane, gdy Agent przejdzie do `agent_canceled` lub `agent_done` Stany.
 
-Jeśli parametr `_Timeout` ma wartość inną niż stała `COOPERATIVE_TIMEOUT_INFINITE`, zostanie zgłoszony wyjątek [operation_timed_out](operation-timed-out-class.md) w przypadku upływu określonego czasu przed ukończeniem zadania przez agenta.
+Jeśli parametr `_Timeout` ma wartość inną niż stała `COOPERATIVE_TIMEOUT_INFINITE` , zostanie zgłoszony wyjątek [operation_timed_out](operation-timed-out-class.md) w przypadku upływu określonego czasu, zanim Agent ukończy jego zadanie.
 
-## <a name="wait_for_all"></a>wait_for_all
+## <a name="wait_for_all"></a><a name="wait_for_all"></a>wait_for_all
 
 Czeka wszystkim określonym agentom na ukończenie zadań.
 
@@ -230,8 +230,8 @@ static void __cdecl wait_for_all(
 
 ### <a name="parameters"></a>Parametry
 
-*count*<br/>
-Liczba wskaźników agentów znajdujących się w tablicy `_PAgents`.
+*liczbą*<br/>
+Liczba wskaźników agentów znajdujących się w tablicy `_PAgents` .
 
 *_PAgents*<br/>
 Tablica wskaźników do agentów, które mają być oczekiwane.
@@ -244,11 +244,11 @@ Maksymalny czas oczekiwania (w milisekundach).
 
 ### <a name="remarks"></a>Uwagi
 
-Zadanie agenta jest wykonywane, gdy Agent przejdzie do `agent_canceled` lub `agent_done` Stanów.
+Zadanie agenta jest wykonywane, gdy Agent przejdzie do `agent_canceled` lub `agent_done` Stany.
 
-Jeśli parametr `_Timeout` ma wartość inną niż stała `COOPERATIVE_TIMEOUT_INFINITE`, zostanie zgłoszony wyjątek [operation_timed_out](operation-timed-out-class.md) w przypadku upływu określonego czasu przed ukończeniem zadania przez agenta.
+Jeśli parametr `_Timeout` ma wartość inną niż stała `COOPERATIVE_TIMEOUT_INFINITE` , zostanie zgłoszony wyjątek [operation_timed_out](operation-timed-out-class.md) w przypadku upływu określonego czasu, zanim Agent ukończy jego zadanie.
 
-## <a name="wait_for_one"></a>wait_for_one
+## <a name="wait_for_one"></a><a name="wait_for_one"></a>wait_for_one
 
 Czeka, aż jeden z określonych agentów ukończy zadanie.
 
@@ -263,8 +263,8 @@ static void __cdecl wait_for_one(
 
 ### <a name="parameters"></a>Parametry
 
-*count*<br/>
-Liczba wskaźników agentów znajdujących się w tablicy `_PAgents`.
+*liczbą*<br/>
+Liczba wskaźników agentów znajdujących się w tablicy `_PAgents` .
 
 *_PAgents*<br/>
 Tablica wskaźników do agentów, które mają być oczekiwane.
@@ -280,10 +280,10 @@ Maksymalny czas oczekiwania (w milisekundach).
 
 ### <a name="remarks"></a>Uwagi
 
-Zadanie agenta jest wykonywane, gdy Agent przejdzie do `agent_canceled` lub `agent_done` Stanów.
+Zadanie agenta jest wykonywane, gdy Agent przejdzie do `agent_canceled` lub `agent_done` Stany.
 
-Jeśli parametr `_Timeout` ma wartość inną niż stała `COOPERATIVE_TIMEOUT_INFINITE`, zostanie zgłoszony wyjątek [operation_timed_out](operation-timed-out-class.md) w przypadku upływu określonego czasu przed ukończeniem zadania przez agenta.
+Jeśli parametr `_Timeout` ma wartość inną niż stała `COOPERATIVE_TIMEOUT_INFINITE` , zostanie zgłoszony wyjątek [operation_timed_out](operation-timed-out-class.md) w przypadku upływu określonego czasu, zanim Agent ukończy jego zadanie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)

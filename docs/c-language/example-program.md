@@ -2,16 +2,16 @@
 title: Program przykładowy
 ms.date: 11/04/2016
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
-ms.openlocfilehash: fc00ee391fd845039791b8cec727623074a7aeff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da8c772a3534df2c865c18959329ac850e359160
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233942"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218861"
 ---
 # <a name="example-program"></a>Program przykładowy
 
-Następujący program źródłowy C składa się z dwóch plików źródłowych. To daje przegląd różnych deklaracji i możliwych definicji w programie C. W kolejnych sekcjach tej książki opisano, jak napisać te deklaracje, definicje i inicjalizacje oraz jak używać słów kluczowych języka C, **static** takich jak `extern`static i. Funkcja `printf` jest zadeklarowana w pliku nagłówkowym STDIO.H języka C.
+Następujący program źródłowy C składa się z dwóch plików źródłowych. To daje przegląd różnych deklaracji i możliwych definicji w programie C. W kolejnych sekcjach tej książki opisano, jak napisać te deklaracje, definicje i inicjalizacje oraz jak używać słów kluczowych języka C, takich jak **`static`** i **`extern`** . Funkcja `printf` jest zadeklarowana w pliku nagłówkowym STDIO.H języka C.
 
 Założono, że funkcje `main` i `max` są w oddzielnych plikach i wykonywanie programu rozpoczyna się od funkcji `main`. Niejawne funkcje użytkownika są wykonywane przed `main`.
 
@@ -73,6 +73,6 @@ FILE1.C używa deklaracji definiujących do inicjowania zmiennych globalnych `a`
 
 Okres istnienia i widoczność identyfikatorów są omawiane w [okresie istnienia, zakresu, widoczności i powiązania](../c-language/lifetime-scope-visibility-and-linkage.md). Aby uzyskać więcej informacji na temat funkcji, zobacz [Functions](../c-language/functions-c.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Pliki źródłowe i programy źródłowe](../c-language/source-files-and-source-programs.md)

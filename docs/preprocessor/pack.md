@@ -1,6 +1,6 @@
 ---
 title: pack, pragma
-ms.date: 11/11/2019
+ms.date: 07/22/2020
 f1_keywords:
 - pack_CPP
 - vc-pragma.pack
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 037c57a10b1de7dd00249ae60acaef0939e355eb
-ms.sourcegitcommit: 8a01ae145bc65f5bc90d6e47b4a1bdf47b073ee7
+ms.openlocfilehash: 72f94520516cce2ae36b70795fb29e3d4d8068df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765737"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219394"
 ---
 # <a name="pack-pragma"></a>pack, pragma
 
@@ -21,52 +21,52 @@ Określa wyrównanie pakowania dla elementów członkowskich struktury, Unii i k
 
 ## <a name="syntax"></a>Składnia
 
-> **Pakiet #pragma (Pokaż)**\
-> **#pragma Pack (wypychanie** [ **,** *Identyfikator* ] [ **,** *n* ] **)**\
-> **#pragma Pack (pop** [ **,** { *Identyfikator* | *n* }] **)**\
-> **pakiet #pragma (** [ *n* ] **)**
+> **`#pragma pack( show )`**\
+> **`#pragma pack( push`** [ **`,`** *`identifier`* ] [ **`,`** *`n`* ] **`)`**\
+> **`#pragma pack( pop`** [ **`,`** { *`identifier`* | *`n`* } ] **`)`**\
+> **`#pragma pack(`** [ *`n`* ] **`)`**
 
 ### <a name="parameters"></a>Parametry
 
-**wskazują**\
+**`show`**\
 Obowiązkowe Wyświetla bieżącą wartość bajtu na potrzeby wyrównania pakowania. Wartość jest wyświetlana przez komunikat ostrzegawczy.
 
-**wydajności**\
+**`push`**\
 Obowiązkowe Wypycha bieżącą wartość wyrównania pakowania na wewnętrznym stosie kompilatora i ustawia bieżącą wartość wyrównania pakowania na *n*. Jeśli *n* nie jest określony, bieżąca wartość wyrównania pakowania jest wypchnięcia.
 
-**skakując**\
-Obowiązkowe Usuwa rekord z góry wewnętrznego stosu kompilatora. Jeśli *n* nie jest określony za pomocą **pop**, wartość pakowania skojarzona z rekordem wyjściowym w górnej części stosu jest nową wartością wyrównania. Jeśli *n* jest określony, na przykład `#pragma pack(pop, 16)`, *n* zmienia wartość nowej wartości wyrównania. Jeśli używasz *identyfikatora*, na przykład `#pragma pack(pop, r1)`, wszystkie rekordy na stosie są zdjęte do momentu znalezienia rekordu o *identyfikatorze* . Ten rekord to zdjęte, a wartość pakowania skojarzona z rekordem wyjściowym w górnej części stosu jest nową wartością wyrównania. Jeśli używasz *identyfikatora* , który nie został znaleziony w żadnym rekordzie na stosie **, zostanie on** zignorowany.
+**`pop`**\
+Obowiązkowe Usuwa rekord z góry wewnętrznego stosu kompilatora. Jeśli *n* nie jest określony za pomocą **`pop`** , wartość pakowania skojarzona z rekordem wyjściowym w górnej części stosu jest nową wartością wyrównania. Jeśli *n* jest określony, na przykład, `#pragma pack(pop, 16)` *n* zmienia wartość nowej wartości wyrównania. Jeśli zostanie wyświetlona *`identifier`* wartość, na przykład, `#pragma pack(pop, r1)` wszystkie rekordy na stosie są zdjęte do momentu znalezienia rekordu, który *`identifier`* zostanie znaleziony. Ten rekord pobiera zdjęte, a wartość pakowania skojarzona z rekordem znalezionym w górnej części stosu staje się nową wartością wyrównania. Jeśli zostanie wyświetlona *`identifier`* wartość, która nie znajduje się w żadnym rekordzie na stosie, **`pop`** zostanie zignorowana.
 
-Instrukcja `#pragma pack (pop, r1, 2)` jest równoznaczna z `#pragma pack (pop, r1)` operatorem `#pragma pack(2)`.
+Instrukcja `#pragma pack (pop, r1, 2)` jest równoznaczna z `#pragma pack (pop, r1)` operatorem `#pragma pack(2)` .
 
-*identyfikatora*\
-Obowiązkowe W przypadku użycia z opcją **push**przypisuje nazwę rekordu na wewnętrznym stosie kompilatora. Gdy jest używany z **pop**, pop rejestruje wewnętrzny stos do momentu usunięcia *identyfikatora* . Jeśli na stosie wewnętrznym nie znaleziono *identyfikatora* , nic nie jest zdjęte.
+*`identifier`*\
+Obowiązkowe Gdy jest używany z **`push`** , przypisuje nazwę do rekordu na wewnętrznym stosie kompilatora. Gdy jest używany z **`pop`** , pop rejestruje wewnętrzny stos do momentu *`identifier`* usunięcia. Jeśli *`identifier`* nie znaleziono na stosie wewnętrznym, nic nie jest zdjęte.
 
-*Azotan*\
-Obowiązkowe Określa wartość w bajtach, która ma być używana na potrzeby pakowania. Jeśli opcja kompilatora [/ZP](../build/reference/zp-struct-member-alignment.md) nie jest ustawiona dla modułu, wartość domyślna dla *n* to 8. Prawidłowe wartości to 1, 2, 4, 8 i 16. Wyrównanie elementu członkowskiego znajduje się na granicy, która jest wielokrotnością *n*lub wielokrotnością rozmiaru elementu członkowskiego, w zależności od tego, który jest mniejszy.
+*`n`*\
+Obowiązkowe Określa wartość w bajtach, która ma być używana na potrzeby pakowania. Jeśli opcja kompilatora [`/Zp`](../build/reference/zp-struct-member-alignment.md) nie jest ustawiona dla modułu, wartość domyślna *`n`* to 8. Prawidłowe wartości to 1, 2, 4, 8 i 16. Wyrównanie elementu członkowskiego znajduje się na granicy, która jest wielokrotnością *`n`* lub wielokrotnością rozmiaru elementu członkowskiego, w zależności od tego, który jest mniejszy.
 
 ## <a name="remarks"></a>Uwagi
 
-Do *spakowania* klasy jest umieszczanie jej elementów członkowskich bezpośrednio po sobie w pamięci. Może to oznaczać, że niektóre lub wszystkie elementy członkowskie mogą być wyrównane na granicy mniejszej niż domyślne wyrównanie architektury docelowej. **pakiet** daje kontrolę na poziomie deklaracji danych. Różni się od opcji kompilatora [/ZP](../build/reference/zp-struct-member-alignment.md), która zapewnia tylko kontrolę na poziomie modułu. **pakiet** zaczyna obowiązywać przy pierwszej deklaracji **struktury**, **Unii**lub **klasy** po napotkaniu dyrektywy pragma. **pakiet** nie ma wpływu na definicje. **Pakiet** wywołujący bez argumentów ustawia *n* do wartości ustawionej w opcji `/Zp`kompilatora. Jeśli opcja kompilatora nie jest ustawiona, wartość domyślna to 8 dla procesorów x86, ARM i ARM64. Wartość domyślna to 16 dla architektury x64 Native.
+Do *spakowania* klasy jest umieszczanie jej elementów członkowskich bezpośrednio po sobie w pamięci. Może to oznaczać, że niektóre lub wszystkie elementy członkowskie mogą być wyrównane na granicy mniejszej niż domyślne wyrównanie architektury docelowej. **`pack`** daje kontrolę na poziomie deklaracji danych. Różni się on od opcji kompilatora [`/Zp`](../build/reference/zp-struct-member-alignment.md) , która zapewnia tylko kontrolę na poziomie modułu. **pakiet** zaczyna obowiązywać **`struct`** po pierwszej, **`union`** lub **`class`** deklaracji po wystąpieniu dyrektywy pragma. **`pack`** nie ma wpływu na definicje. Wywoływanie **`pack`** bez argumentów ustawia *`n`* wartość ustawioną w opcji kompilatora **`/Zp`** . Jeśli opcja kompilatora nie jest ustawiona, wartość domyślna to 8 dla procesorów x86, ARM i ARM64. Wartość domyślna to 16 dla architektury x64 Native.
 
-W przypadku zmiany wyrównania struktury nie można użyć ilości miejsca w pamięci, ale może zostać wyświetlony spadek wydajności lub nawet uzyskać wyjątek wygenerowany sprzętowo dla niewyrównanego dostępu.  To zachowanie wyjątku można zmodyfikować za pomocą polecenia [SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode).
+W przypadku zmiany wyrównania struktury nie może ona używać ilości miejsca w pamięci. Jednak może zostać wyświetlona utrata wydajności lub nawet wygenerowanie wyjątku generowanego sprzętowo dla niewyrównanych praw dostępu. Zachowanie tego wyjątku można zmienić za pomocą polecenia [`SetErrorMode`](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode) .
 
 Aby uzyskać więcej informacji na temat modyfikowania wyrównania, zobacz następujące artykuły:
 
-- [__alignof](../cpp/alignof-operator.md)
+- [`alignof`](../cpp/alignof-operator.md)
 
-- [dostosowania](../cpp/align-cpp.md)
+- [`align`](../cpp/align-cpp.md)
 
-- [__unaligned](../cpp/unaligned.md)
+- [`__unaligned`](../cpp/unaligned.md)
 
 - [Przykłady wyrównania struktury](../build/x64-software-conventions.md#examples-of-structure-alignment) (specyficzne dla architektury x64)
 
    > [!WARNING]
-   > W programie Visual Studio 2015 i nowszych można używać standardowych operatorów **alignas** i **alignof** , które są w `__alignof` przeciwieństwie `declspec( align )` do i są przenośne przez kompilatory. Standard C++ nie odwołuje się do pakowania, dlatego nadal trzeba używać **pakietu** (lub odpowiedniego rozszerzenia w innych kompilatorach), aby określić wyrównania mniejsze niż rozmiar słowa docelowego architektury docelowej.
+   > W programie Visual Studio 2015 i nowszych można używać standardowych **`alignas`** operatorów i **`alignof`** , które są w przeciwieństwie do **`__alignof`** i **`__declspec( align )`** są przenośne przez kompilatory. Standard C++ nie odwołuje się do pakowania, dlatego **`pack`** do określenia wyrównania mniejszego niż rozmiar wyrazu docelowej architektury należy używać (lub odpowiedniego rozszerzenia dla innych kompilatorów).
 
 ## <a name="examples"></a>Przykłady
 
-Poniższy przykład pokazuje, jak zmienić wyrównanie struktury przy użyciu dyrektywy pragma **Pack** .
+Poniższy przykład pokazuje, jak używać **`pack`** dyrektywy pragma do zmiany wyrównania struktury.
 
 ```cpp
 // pragma_directives_pack.cpp
@@ -122,4 +122,4 @@ Poniższy przykład pokazuje, jak używać składni *wypychania*, *pop*i *show* 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dyrektywy pragma i słowo kluczowe __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Dyrektywy pragma i `__pragma` słowo kluczowe](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

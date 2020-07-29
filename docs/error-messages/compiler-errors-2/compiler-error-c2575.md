@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2575
 ms.assetid: 9eb45706-37ef-4481-b373-6d193ba13634
-ms.openlocfilehash: a63696ba35a8b923f8fbf0c6d6387f2402969cff
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c00ae519f5e6b595ec07d6a617813a3ae79ab72d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755463"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221136"
 ---
 # <a name="compiler-error-c2575"></a>Błąd kompilatora C2575
 
 "Identyfikator": tylko funkcje składowe i bazy mogą być wirtualne
 
-Globalna funkcja lub Klasa jest zadeklarowana `virtual`. Jest to niedozwolone.
+Zadeklaruje globalną funkcję lub klasę **`virtual`** . Jest to niedozwolone.
 
 Poniższy przykład generuje C2575:
 

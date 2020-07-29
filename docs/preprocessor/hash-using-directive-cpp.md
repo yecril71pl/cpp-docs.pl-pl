@@ -1,5 +1,5 @@
 ---
-title: '#Dyrektywa using (C++/CLI)'
+title: '#using, dyrektywa (C++/CLI)'
 ms.date: 08/29/2019
 f1_keywords:
 - friend_as_cpp
@@ -12,69 +12,69 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-ms.openlocfilehash: 5dae5c277055157aef5451c19ee020fbbd2aaccb
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 0da255957e92a570750da2687bf1444df2e6ab13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220200"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219433"
 ---
-# <a name="using-directive-ccli"></a>#using — dyrektywaC++(/CLI)
+# <a name="using-directive-ccli"></a>#using — dyrektywa (C++/CLI)
 
 Importuje metadane do programu skompilowanego z [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="syntax"></a>Składnia
 
-> **#using** *plik* [**as_friend**]
+> **`#using`***plik* [ **`as_friend`** ]
 
 ### <a name="parameters"></a>Parametry
 
 *rozszerzeniem*\
-Plik MSIL. dll,. exe,. Na przykład
+Język pośredni (MSIL) firmy Microsoft *`.dll`* , *`.exe`* , *`.netmodule`* lub *`.obj`* plik. Przykład:
 
 `#using <MyComponent.dll>`
 
-**as_friend**\
-Określa, że wszystkie typy w *pliku* są dostępne. Aby uzyskać więcej informacji, zobacz [zaprzyjaźnioneC++zestawy ()](../dotnet/friend-assemblies-cpp.md).
+**`as_friend`**\
+Określa, że wszystkie typy w *pliku* są dostępne. Aby uzyskać więcej informacji, zobacz [zaprzyjaźnione zestawy (C++)](../dotnet/friend-assemblies-cpp.md).
 
 ## <a name="remarks"></a>Uwagi
 
-*plik* może być plikiem języka pośredniego firmy Microsoft (MSIL), który można zaimportować do zarządzanych i zarządzanych konstrukcji. Jeśli plik. dll zawiera manifest zestawu, wszystkie biblioteki DLL, do których odwołuje się manifest, są importowane, a kompilowany zestaw będzie listować *plik* w metadanych jako odwołanie do zestawu.
+*plik* może być plikiem języka pośredniego firmy Microsoft (MSIL), który można zaimportować do zarządzanych i zarządzanych konstrukcji. Jeśli biblioteka DLL zawiera manifest zestawu, zostaną zaimportowane wszystkie biblioteki DLL, do których odwołuje się manifest. Kompilowany zestaw będzie zawierać listę *plików* w metadanych jako odwołanie do zestawu.
 
-Jeśli *plik* nie zawiera zestawu (Jeśli *plik* jest moduł) i jeśli nie zamierzasz używać informacji o typie z modułu w bieżącej aplikacji (zestawu), masz możliwość wskazywania, że moduł jest częścią zestawu; Użyj [/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md). Typy w module byłyby dostępne dla każdej aplikacji, która odwołuje się do zestawu.
+Prawdopodobnie *plik* nie zawiera zestawu (*plik* jest moduł) i nie zamierzasz używać informacji o typie z modułu w bieżącej aplikacji (zestawu). Może wskazywać, że moduł jest częścią zestawu przy użyciu [/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md). Typy w module byłyby dostępne dla każdej aplikacji, która odwołuje się do zestawu.
 
-Alternatywą dla użycia **#using** jest opcja kompilatora [/Fu](../build/reference/fu-name-forced-hash-using-file.md) .
+Alternatywą do użycia **`#using`** jest opcja kompilatora [/Fu](../build/reference/fu-name-forced-hash-using-file.md) .
 
-zestawy. exe przesłane do **#using** powinny być kompilowane przy użyciu jednego z kompilatorów programu .NET Visual Studio (na przykład Visual Basic C#lub wizualizacji).  Próba zaimportowania metadanych z zestawu. exe skompilowanego za `/clr` pomocą spowoduje wyjątek ładowania pliku.
+zestawy. exe przesłane do **`#using`** powinny być kompilowane przy użyciu jednego z kompilatorów programu .NET Visual Studio (na przykład Visual Basic lub Visual C#).  Próba zaimportowania metadanych z zestawu. exe skompilowanego za pomocą **`/clr`** spowoduje wyjątek ładowania pliku.
 
 > [!NOTE]
-> Składnik, do którego odwołuje się **#using** , może być uruchamiany z inną wersją pliku zaimportowanego w czasie kompilacji, co sprawia, że aplikacja kliencka będzie dawać nieoczekiwane wyniki.
+> Składnik, do którego odwołuje się program, **`#using`** może być uruchamiany z inną wersją pliku zaimportowanego w czasie kompilacji, co sprawia, że aplikacja kliencka będzie dawać nieoczekiwane wyniki.
 
 Aby kompilator rozpoznał typ w zestawie (a nie w module), należy go wymusić, aby rozpoznać typ. Można wymusić to na przykład przez zdefiniowanie wystąpienia typu. Istnieją inne sposoby rozwiązywania nazw typów w zestawie dla kompilatora. Na przykład, jeśli dziedziczysz z typu w zestawie, nazwa typu będzie znana kompilatorowi.
 
-Podczas importowania metadanych utworzonych z kodu źródłowego, który używa [__declspec (thread)](../cpp/thread.md), semantyka wątku nie jest utrwalana w metadanych. Na przykład zmienna zadeklarowana przy użyciu **__declspec (thread)** , skompilowana w programie, który jest skompilowany dla .NET Framework środowiska uruchomieniowego języka wspólnego, a następnie zaimportowana za pośrednictwem **#using**, nie będzie miała semantyki **__declspec (thread)** dla zmiennej.
+Podczas importowania metadanych utworzonych z kodu źródłowego, który został użyty [`__declspec(thread)`](../cpp/thread.md) , semantyka wątku nie jest utrwalana w metadanych. Na przykład zmienna zadeklarowana z **`__declspec(thread)`** , skompilowana w programie, który jest skompilowany dla .NET Framework środowiska uruchomieniowego języka wspólnego, a następnie zaimportowana przez **`#using`** , nie będzie miała **`__declspec(thread)`** semantyki dla zmiennej.
 
-Dostępne są wszystkie typy importowane (zarządzane i natywne) w pliku, do którego odwołuje się **#using** , ale kompilator traktuje typy natywne jako deklaracje, a nie definicje.
+Wszystkie importowane typy (zarządzane i natywne) w pliku, do którego istnieje odwołanie **`#using`** , są dostępne, ale kompilator traktuje typy natywne jako deklaracje, a nie definicje.
 
-plik mscorlib. dll jest automatycznie przywoływany `/clr`podczas kompilowania przy użyciu.
+mscorlib.dll jest automatycznie przywoływany podczas kompilowania przy użyciu **`/clr`** .
 
-Zmienna środowiskowa LIBPATH określa katalogi do przeszukania, gdy kompilator rozpoznaje nazwy plików przesłane do **#using**.
+Zmienna środowiskowa LIBPATH określa katalogi do przeszukania, gdy kompilator rozpoznaje nazwy plików przesłane do **`#using`** .
 
 Kompilator wyszukuje odwołania w następującej ścieżce:
 
-- Ścieżka określona w instrukcji **#using** .
+- Ścieżka określona w **`#using`** instrukcji.
 
 - Bieżący katalog.
 
 - Katalog systemowy .NET Framework.
 
-- Katalogi dodane z opcją kompilatora [/AI](../build/reference/ai-specify-metadata-directories.md) .
+- Katalogi dodane z [`/AI`](../build/reference/ai-specify-metadata-directories.md) opcją kompilatora.
 
 - Katalogi w zmiennej środowiskowej LIBPATH.
 
 ## <a name="example"></a>Przykład
 
-Jeśli kompilujesz zestaw (C) i odwołujesz się do zestawu (B), który sam odwołuje się do innego zestawu (A), nie musisz jawnie odwoływać się do zestawu, chyba że jawnie używasz jednego z typów w C.
+Można skompilować zestaw, który odwołuje się do drugiego zestawu, który odwołuje się do trzeciego zestawu. Musisz tylko jawnie odwoływać się do trzeciego zestawu z pierwszego, jeśli jawnie używasz jednego z jego typów.
 
 ```cpp
 // using_assembly_A.cpp
@@ -97,7 +97,7 @@ public:
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie nie istnieje błąd kompilatora dla nieodwoływania się do *using_assembly_A. dll*, ponieważ program nie używa żadnego z typów zdefiniowanych w *using_assembly_A. cpp*.
+W poniższym przykładzie kompilator nie raportuje błędu dotyczącego odwoływania *using_assembly_A.dll*, ponieważ program nie używa żadnego z typów zdefiniowanych w *using_assembly_A. cpp*.
 
 ```cpp
 // using_assembly_C.cpp

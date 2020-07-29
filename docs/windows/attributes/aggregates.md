@@ -1,5 +1,5 @@
 ---
-title: Agregaty (C++ atrybut com)
+title: Agregaty (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregates
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: 08e623d84553f9fcf556c9cf480c1816c7300460
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 65a166faa9380272c87af92ebaf8294c0e0b1af3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168502"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217288"
 ---
 # <a name="aggregates"></a>aggregates
 
@@ -32,13 +32,13 @@ Wskazuje, że obiekt agreguje obiekt określony przez CLSID.
 Określa identyfikator CLSID obiektu agregowanego.
 
 *variable_name*<br/>
-Nazwa zmiennej, która ma zostać wstawiona. Ta zmienna zawiera `IUnknown` zagregowanego obiektu.
+Nazwa zmiennej, która ma zostać wstawiona. Ta zmienna zawiera obiekt, który `IUnknown` jest agregowany.
 
 ## <a name="remarks"></a>Uwagi
 
-W przypadku zastosowania do obiektu C++ atrybut **Aggregates** implementuje otokę zewnętrzną dla zagregowanego obiektu (określony przez `clsid`).
+W przypadku zastosowania do obiektu atrybut **Aggregates** C++ implementuje otokę zewnętrzną dla zagregowanego obiektu (określonego przez `clsid` ).
 
-Ten atrybut wymaga, aby atrybut [coclass](coclass.md), [ProgID](progid.md)lub [vi_progid](vi-progid.md) (lub inny atrybut, który implikuje jeden z tych) został również zastosowany do tego samego elementu. W przypadku użycia dowolnego pojedynczego atrybutu zostaną automatycznie zastosowane pozostałe dwa. Na przykład jeśli `progid` jest stosowany, `vi_progid` i `coclass` są również stosowane.
+Ten atrybut wymaga, aby atrybut [coclass](coclass.md), [ProgID](progid.md)lub [vi_progid](vi-progid.md) (lub inny atrybut, który implikuje jeden z tych) został również zastosowany do tego samego elementu. W przypadku użycia dowolnego pojedynczego atrybutu zostaną automatycznie zastosowane pozostałe dwa. Na przykład, jeśli `progid` jest stosowany, `vi_progid` i `coclass` są również stosowane.
 
 ### <a name="atl-projects"></a>Projekty ATL
 
@@ -83,18 +83,18 @@ struct CObject : IObject
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **Struktura**|
-|**Powtarzalne**|Yes|
-|**Wymagane atrybuty**|Co najmniej jeden z następujących elementów: `coclass`, `progid`lub `vi_progid`.|
-|**Nieprawidłowe atrybuty**|None|
+|**Dotyczy**|**`class`**, **`struct`**|
+|**Powtarzalne**|Tak|
+|**Wymagane atrybuty**|Co najmniej jeden z następujących elementów: `coclass` , `progid` , lub `vi_progid` .|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty COM](com-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
-[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Agregacja](/windows/win32/com/aggregation)<br/>
+[Atrybuty typedef, enum, Union i struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Agregacji](/windows/win32/com/aggregation)<br/>
 [Niepoddający się agregowaniu](/windows/win32/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)

@@ -9,26 +9,26 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
-ms.openlocfilehash: bc238dd0088558233d84f8bbd15d06743e133449
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d917c93ab8ef2e896f3ef09c9d9191dae49116c3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326017"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213726"
 ---
 # <a name="c-enumeration-declarations"></a>Deklaracje modułów wyliczających języka C
 
 Wyliczenie składa się z zestawu nazwanych stałych całkowitych. Deklaracja typu wyliczeniowego zawiera nazwę (opcjonalnie) tag wyliczeniowy i definiuje zestaw nazwanych liczb całkowitych (nazywanych "wyliczeniami", "wyliczającymi", stałymi "" modułami wyliczającymi "lub" składowymi "). Zmienna z typem wyliczenia przechowuje jedną z wartości zestawu wyliczenia zdefiniowanego przez ten typ.
 
-Zmienne `enum` typu mogą być używane w wyrażeniach indeksowania oraz jako argumenty operacji wszystkich operatorów arytmetycznych i relacyjnych. Wyliczenia stanowią alternatywę dla `#define` dyrektywy preprocesora, dzięki czemu można generować wartości dla Ciebie i przestrzegać normalnych zasad określania zakresu.
+Zmienne **`enum`** typu mogą być używane w wyrażeniach indeksowania oraz jako argumenty operacji wszystkich operatorów arytmetycznych i relacyjnych. Wyliczenia stanowią alternatywę dla `#define` dyrektywy preprocesora, dzięki czemu można generować wartości dla Ciebie i przestrzegać normalnych zasad określania zakresu.
 
-W standardzie ANSI C, wyrażenia definiujące wartość stałej modułu wyliczającego zawsze `int` mają typ; w tym celu magazyn skojarzony ze zmienną wyliczenia jest magazynem wymaganym dla pojedynczej `int` wartości. Stała wyliczenia lub wartość typu wyliczeniowego może być używana wszędzie tam, gdzie język C zezwala na wyrażenie liczby całkowitej.
+W standardzie ANSI C, wyrażenia definiujące wartość stałej modułu wyliczającego zawsze mają **`int`** Typ; w rezultacie magazyn skojarzony ze zmienną wyliczenia jest magazynem wymaganym dla pojedynczej **`int`** wartości. Stała wyliczenia lub wartość typu wyliczeniowego może być używana wszędzie tam, gdzie język C zezwala na wyrażenie liczby całkowitej.
 
 ## <a name="syntax"></a>Składnia
 
 *Wyliczenie — specyfikator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**enum** *identifier*<sub>wybór</sub> identyfikatora wyliczenia **{** *Enumerator-list* **}**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**enum** *Identyfikator* wyliczenia
+&nbsp;&nbsp;&nbsp;&nbsp;**`enum`***identifier*<sub>wybór</sub> **identyfikatora {** *Enumerator-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`enum`***Identyfikator*
 
 *Identyfikator* opcjonalny określa typ wyliczeniowy zdefiniowany przez *moduł wyliczający*. Ten identyfikator jest często nazywany "tagiem" wyliczenia określonego przez listę. Specyfikator typu w formularzu
 
@@ -41,7 +41,7 @@ enum identifier
 
 deklaruje *Identyfikator* jako tag wyliczenia określonego przez *moduł wyliczający* , który nie jest terminalem listy. *Lista modułów wyliczających* definiuje "zawartość modułu wyliczającego". *Lista modułów wyliczających* została szczegółowo opisana poniżej.
 
-Jeśli deklaracja tagu jest widoczna, kolejne deklaracje używające znacznika, ale pomijania modułów *wyliczających* , określają zadeklarowany wcześniej typ wyliczeniowy. Tag musi odwoływać się do zdefiniowanego typu wyliczenia i ten typ wyliczeniowy musi znajdować się w bieżącym zakresie. Ponieważ typ wyliczenia jest zdefiniowany w innym miejscu, *Lista modułów wyliczających* nie jest wyświetlana w tej deklaracji. Deklaracje typów pochodzących z wyliczeń `typedef` i deklaracji dla typów wyliczeniowych mogą użyć znacznika wyliczenia przed zdefiniowaniem typu wyliczenia.
+Jeśli deklaracja tagu jest widoczna, kolejne deklaracje używające znacznika, ale pomijania modułów *wyliczających* , określają zadeklarowany wcześniej typ wyliczeniowy. Tag musi odwoływać się do zdefiniowanego typu wyliczenia i ten typ wyliczeniowy musi znajdować się w bieżącym zakresie. Ponieważ typ wyliczenia jest zdefiniowany w innym miejscu, *Lista modułów wyliczających* nie jest wyświetlana w tej deklaracji. Deklaracje typów pochodzących z wyliczeń i **`typedef`** deklaracji dla typów wyliczeniowych mogą użyć znacznika wyliczenia przed zdefiniowaniem typu wyliczenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,18 +51,18 @@ Jeśli deklaracja tagu jest widoczna, kolejne deklaracje używające znacznika, 
 
 *moduł wyliczający*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Wyliczenie — stała*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Wyliczenie —* **=** *wyrażenie* stałej stałej
+&nbsp;&nbsp;&nbsp;&nbsp;*wyliczenie — stała* **=** *wyrażenie stałe*
 
 *wyliczenie — stała*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identyfikatora*
 
 Każda *stała wyliczenia* na *liście wyliczenia* określa wartość zestawu wyliczenia. Domyślnie pierwsza *stała Wyliczenie* jest skojarzona z wartością 0. Następna *stała wyliczenia* na liście jest skojarzona z wartością ( *wyrażenie stałe* + 1), chyba że jawnie zostanie skojarzona z inną wartością. Nazwa *stałego wyliczenia* jest równoznaczna z jego wartością.
 
-Aby zastąpić domyślną sekwencję wartości, można użyć *wyliczenia-stała = stała* . W takim przypadku, jeśli *wyliczenie-stała = stała* jest wyświetlana na *liście moduł wyliczający*, *stała wyliczenia* jest skojarzona z wartością podaną przez *wyrażenie stałej*. *Wyrażenie stałe* musi mieć `int` typ i może być ujemne.
+Aby zastąpić domyślną sekwencję wartości, można użyć *wyliczenia-stała = stała* . W takim przypadku, jeśli *wyliczenie-stała = stała* jest wyświetlana na *liście moduł wyliczający*, *stała wyliczenia* jest skojarzona z wartością podaną przez *wyrażenie stałej*. *Wyrażenie stałe* musi mieć **`int`** Typ i może być ujemne.
 
 Do elementów członkowskich zestawu wyliczania są stosowane następujące reguły:
 
-- Zestaw wyliczenia może zawierać zduplikowane wartości stałych. Można na przykład skojarzyć wartość 0 z dwoma różnymi identyfikatorami, prawdopodobnie nazwanymi `null` i `zero`, w tym samym zestawie.
+- Zestaw wyliczenia może zawierać zduplikowane wartości stałych. Można na przykład skojarzyć wartość 0 z dwoma różnymi identyfikatorami, prawdopodobnie nazwanymi `null` i `zero` , w tym samym zestawie.
 
 - Identyfikatory na liście wyliczenia muszą być różne od innych identyfikatorów w tym samym zakresie o tej samej widoczności, w tym zwykłych nazw zmiennych i identyfikatorów na innych listach wyliczenia.
 
@@ -85,15 +85,15 @@ enum DAY            /* Defines an enumeration type    */
 } workday;
 ```
 
-Domyślnie jest skojarzona `saturday` wartość 0. Identyfikator `sunday` jest jawnie ustawiony na 0. Pozostałe identyfikatory domyślnie otrzymują wartości od 1 do 5.
+Domyślnie jest skojarzona wartość 0 `saturday` . Identyfikator `sunday` jest jawnie ustawiony na 0. Pozostałe identyfikatory domyślnie otrzymują wartości od 1 do 5.
 
-W tym przykładzie wartość z zestawu `DAY` jest przypisana do zmiennej. `today`
+W tym przykładzie wartość z zestawu `DAY` jest przypisana do zmiennej `today` .
 
 ```
 enum DAY today = wednesday;
 ```
 
-Należy zauważyć, że nazwa stałej wyliczenia jest używana do przypisywania wartości. Ponieważ typ `DAY` wyliczeniowy został poprzednio zadeklarowany, konieczne jest tylko oznakowanie `DAY` wyliczenia.
+Należy zauważyć, że nazwa stałej wyliczenia jest używana do przypisywania wartości. Ponieważ `DAY` Typ wyliczeniowy został poprzednio zadeklarowany, konieczne jest tylko oznakowanie wyliczenia `DAY` .
 
 Aby jawnie przypisać wartość całkowitą do zmiennej typu wyliczeniowego, należy użyć rzutowania typu:
 
@@ -144,6 +144,6 @@ Można również zadeklarować nienazwane typy danych modułu wyliczającego. Na
 enum { yes, no } response;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wyliczenia](../cpp/enumerations-cpp.md)

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - cvtsi2ss instruction
 - _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-ms.openlocfilehash: 0e9bacc56f212e804467d1c6e0159a1749235976
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: a8227fcb482267946ea7ba08ee352c43e1ac6f6e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217452"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218003"
 ---
 # <a name="_mm_cvtsi64x_ss"></a>_mm_cvtsi64x_ss
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
-Generuje rozszerzoną wersję x64 64-bitową liczbę całkowitą do skalarnej wartości zmiennoprzecinkowej o pojedynczej precyzji`cvtsi2ss`().
+Generuje rozszerzoną wersję x64 64-bitową liczbę całkowitą do skalarnej wartości zmiennoprzecinkowej o pojedynczej precyzji ( `cvtsi2ss` ).
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,26 +32,26 @@ __m128 _mm_cvtsi64x_ss(
 ### <a name="parameters"></a>Parametry
 
 *z*\
-podczas `__m128` Struktura zawierająca cztery wartości zmiennoprzecinkowe o pojedynczej precyzji.
+podczas **`__m128`** Struktura zawierająca cztery wartości zmiennoprzecinkowe o pojedynczej precyzji.
 
 *b*\
 podczas 64-bitowa liczba całkowita do przekonwertowania na wartość zmiennoprzecinkową.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-`__m128` Struktura, której pierwsza wartość zmiennoprzecinkowa jest wynikiem konwersji. Pozostałe trzy wartości są kopiowane bez zmian z.
+**`__m128`** Struktura, której pierwsza wartość zmiennoprzecinkowa jest wynikiem konwersji. Pozostałe trzy wartości są kopiowane bez zmian *z.*
 
 ## <a name="requirements"></a>Wymagania
 
 |Wewnętrznej|Architektura|
 |---------------|------------------|
-|`_mm_cvtsi64x_ss`|X64|
+|`_mm_cvtsi64x_ss`|x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
-Struktura reprezentuje rejestr XMM, więc wewnętrzna umożliwia przeniesienie wartości b z pamięci systemowej do rejestru XMM. `__m128`
+**`__m128`** Struktura reprezentuje rejestr XMM, więc wewnętrzna umożliwia przeniesienie wartości *b* z pamięci systemowej do rejestru XMM.
 
 Ta procedura jest dostępna tylko jako wewnętrzna.
 

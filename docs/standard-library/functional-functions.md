@@ -1,5 +1,5 @@
 ---
-title: '&lt;funkcjonalne funkcje&gt;'
+title: '&lt;&gt;funkcje funkcjonalne'
 ms.date: 02/21/2019
 f1_keywords:
 - functional/std::bind
@@ -29,14 +29,14 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: d5a1b0d106774ede13b0e23d4bacb8fbbc47d28f
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: 472200d6941867387d99ab52c08a70467f802f62
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150683"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219121"
 ---
-# <a name="ltfunctionalgt-functions"></a>&lt;funkcjonalne funkcje&gt;
+# <a name="ltfunctionalgt-functions"></a>&lt;&gt;funkcje funkcjonalne
 
 Te funkcje są przestarzałe w języku C++ 11 i zostały usunięte w języku C++ 17:
 
@@ -68,38 +68,38 @@ template <class RTy, class FT, class T1, class T2, ..., class TN>
 *Fey*\
 Typ obiektu do wywołania.
 
-\ *TN*
+*TN*\
 Typ argumentu n wywołania.
 
-\ *Fn*
+*Fn*\
 Obiekt, który ma zostać wywołany.
 
-\ *TN*
+*tN*\
 N-ty argument wywołania.
 
 ### <a name="remarks"></a>Uwagi
 
-Typy `FT, T1, T2, ..., TN` muszą mieć wartość Copy-konstrukcyjną, a `INVOKE(fn, t1, ..., tN)` musi być prawidłowym wyrażeniem dla niektórych wartości `w1, w2, ..., wN`.
+Typy `FT, T1, T2, ..., TN` muszą mieć wartość Copy-konstrukcyjną i `INVOKE(fn, t1, ..., tN)` musi być prawidłowym wyrażeniem dla niektórych wartości `w1, w2, ..., wN` .
 
-Pierwsza funkcja szablonu zwraca otokę wywołania przekazującego `g` z słabym typem wyniku. Efektem `g(u1, u2, ..., uM)` jest `INVOKE(f, v1, v2, ..., vN,` [invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`, gdzie `cv` to kwalifikatory CV `g`, a wartości i typy powiązanych argumentów `v1, v2, ..., vN` są określone poniżej. Służy do powiązania argumentów z wywoływanym obiektem, aby wykonać wywoływany obiekt z listą argumentów, które można wywołać.
+Pierwsza funkcja szablonu zwraca otokę wywołań przekazywania `g` z słabym typem wyniku. Efekt `g(u1, u2, ..., uM)` jest `INVOKE(f, v1, v2, ..., vN,` [invoke_result](../standard-library/invoke-result-class.md) `<FT cv (V1, V2, ..., VN)>::type)` , gdzie `cv` jest kwalifikatory CV `g` i wartości i typy powiązanych argumentów `v1, v2, ..., vN` są określone poniżej. Służy do powiązania argumentów z wywoływanym obiektem, aby wykonać wywoływany obiekt z listą argumentów, które można wywołać.
 
-Druga funkcja szablonu zwraca otokę wywołania przekazywania `g` z typem zagnieżdżonym `result_type`, który jest synonimem dla `RTy`. Efekt `g(u1, u2, ..., uM)` jest `INVOKE(f, v1, v2, ..., vN, RTy)`, gdzie `cv` jest kwalifikatorami OKS `g`, a wartości i typy powiązanych argumentów `v1, v2, ..., vN` są określone poniżej. Służy do powiązania argumentów z wywoływanym obiektem, aby wykonać wywoływany obiekt z listą argumentów o dopasowanej postaci i z określonym typem zwracanym.
+Druga funkcja szablonu zwraca otokę wywołania przekazywania `g` z zagnieżdżonym typem `result_type` , który jest synonimem dla `RTy` . Efektem `g(u1, u2, ..., uM)` jest `INVOKE(f, v1, v2, ..., vN, RTy)` , gdzie `cv` jest kwalifikatory CV `g` i wartości i typy powiązanych argumentów `v1, v2, ..., vN` są określone poniżej. Służy do powiązania argumentów z wywoływanym obiektem, aby wykonać wywoływany obiekt z listą argumentów o dopasowanej postaci i z określonym typem zwracanym.
 
-Wartości powiązanych argumentów `v1, v2, ..., vN` i odpowiadających im typów `V1, V2, ..., VN` zależą od typu odpowiadającego argumentu `ti` typu `Ti` w wywołaniu `bind` i kwalifikatorów OKS `cv` z otoką wywołania `g` w następujący sposób:
+Wartości powiązanych argumentów `v1, v2, ..., vN` i odpowiadające im typy `V1, V2, ..., VN` zależą od typu odpowiadającego argumentu `ti` typu `Ti` w wywołaniu `bind` i kwalifikatory CV `cv` otoki wywołania `g` w następujący sposób:
 
-Jeśli `ti` jest typu `reference_wrapper<T>` argument `vi` jest `ti.get()`, a jego typ `Vi` jest `T&`;
+Jeśli `ti` jest `reference_wrapper<T>` argumentem typu, `vi` `ti.get()` a jego typ `Vi` to `T&` ;
 
-Jeśli wartość `std::is_bind_expression<Ti>::value` jest **równa true** , argument `vi` jest `ti(u1, u2, ..., uM)`, a jego typ `Vi` jest `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`;
+Jeśli wartość `std::is_bind_expression<Ti>::value` jest **`true`** argumentu `vi` `ti(u1, u2, ..., uM)` i jego typ `Vi` to `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type` ;
 
-Jeśli wartość `j` `std::is_placeholder<Ti>::value` nie jest równa zero argumentu `vi` jest `uj`, a jego typ `Vi` jest `Uj&`;
+Jeśli wartość `j` nie jest `std::is_placeholder<Ti>::value` równa zero, argument `vi` jest `uj` i jego typ `Vi` to `Uj&` ;
 
-w przeciwnym razie argument `vi` jest `ti`, a jego typ `Vi` jest `Ti` `cv` `&`.
+w przeciwnym razie argument `vi` jest `ti` i jego typem `Vi` jest `Ti` `cv` `&` .
 
-Na przykład dana funkcja `f(int, int)` wyrażenie `bind(f, _1, 0)` zwraca otokę wywołania przekazującego `cw` takie, że `cw(x)` wywołuje `f(x, 0)`. Wyrażenie `bind(f, 0, _1)` zwraca otokę wywołania przesyłania dalej `cw` taka, która `cw(x)` wywołuje `f(0, x)`.
+Na przykład w przypadku funkcji `f(int, int)` wyrażenie `bind(f, _1, 0)` zwraca otokę wywołania przekazującego `cw` , taką, która `cw(x)` wywołuje `f(x, 0)` . Wyrażenie `bind(f, 0, _1)` zwraca otokę wywołania przekazującego `cw` , taką, która `cw(x)` wywołuje `f(0, x)` .
 
-Liczba argumentów w wywołaniu `bind` i argumentu `fn` musi być równa liczbie argumentów, które mogą być przekazane do możliwego do wywołania `fn`obiektu. Na przykład `bind(cos, 1.0)` jest poprawna i `bind(cos)` i `bind(cos, _1, 0.0)` są nieprawidłowe.
+Liczba argumentów w wywołaniu `bind` i argumencie `fn` musi być równa liczbie argumentów, które mogą być przekazane do możliwego do wywołania obiektu `fn` . Na przykład `bind(cos, 1.0)` jest poprawna, a oba `bind(cos)` i `bind(cos, _1, 0.0)` są nieprawidłowe.
 
-Liczba argumentów w wywołaniu funkcji dla otoki wywołania zwróconej przez `bind` musi być co najmniej tak duże, jak najwyższa wartość ponumerowana `is_placeholder<PH>::value` dla wszystkich argumentów symbolu zastępczego w wywołaniu `bind`. Na przykład `bind(cos, _2)(0.0, 1.0)` jest poprawna (i zwraca `cos(1.0)`), a `bind(cos, _2)(0.0)` jest niepoprawna.
+Liczba argumentów w wywołaniu funkcji do otoki wywołań zwracanych przez `bind` musi być co najmniej tak duża jak najwyższa wartość numerowana `is_placeholder<PH>::value` dla wszystkich argumentów symbolu zastępczego w wywołaniu `bind` . Na przykład, `bind(cos, _2)(0.0, 1.0)` jest poprawne (i zwraca `cos(1.0)` ) i `bind(cos, _2)(0.0)` jest niepoprawne.
 
 ### <a name="example"></a>Przykład
 
@@ -163,10 +163,10 @@ template <class Operation, class Type>
 
 ### <a name="parameters"></a>Parametry
 
-\ *Func*
+*Func*\
 Obiekt funkcji binarnej do przekonwertowania na jednoargumentowy obiekt funkcji.
 
-\ *lewo*
+*lewym*\
 Wartość, do której należy powiązać pierwszy argument obiektu funkcji binarnej.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -177,7 +177,7 @@ Jednoargumentowy obiekt funkcji, który jest wynikiem powiązania pierwszego arg
 
 Powiązania funkcji są rodzajem adaptera funkcji. Ponieważ zwracają one obiekty funkcji, mogą one być używane w niektórych typach kompozycji funkcji do konstruowania bardziej złożonych i zaawansowanych wyrażeń.
 
-Jeśli *Func* jest obiektem typu `Operation` i `c` jest stałą, `bind1st( func, c )` jest taka sama jak Konstruktor klasy [binder1st —](../standard-library/binder1st-class.md) `binder1st<Operation>(func, c)`i jest bardziej wygodna do użycia.
+Jeśli *Func* jest obiektem typu `Operation` i `c` jest stałą, `bind1st( func, c )` to jest taka sama jak Konstruktor klasy [binder1st —](../standard-library/binder1st-class.md) `binder1st<Operation>(func, c)` i jest bardziej wygodna do użycia.
 
 ### <a name="example"></a>Przykład
 
@@ -257,10 +257,10 @@ template <class Operation, class Type>
 
 ### <a name="parameters"></a>Parametry
 
-\ *Func*
+*Func*\
 Obiekt funkcji binarnej do przekonwertowania na jednoargumentowy obiekt funkcji.
 
-*prawa*\
+*Kliknij*\
 Wartość, do której należy powiązać drugi argument obiektu funkcji binarnej.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -271,7 +271,7 @@ Obiekt funkcji jednoargumentowej wynik powiązania drugiego argumentu obiektu fu
 
 Powiązania funkcji są rodzajem adaptera funkcji. Ponieważ zwracają one obiekty funkcji, mogą one być używane w niektórych typach kompozycji funkcji do konstruowania bardziej złożonych i zaawansowanych wyrażeń.
 
-Jeśli *Func* jest obiektem typu `Operation` i `c` jest stałą, `bind2nd(func, c)` jest taka sama jak Konstruktor klasy [binder2nd —](../standard-library/binder2nd-class.md) `binder2nd<Operation>(func, c)`i wygodniejszy do użycia.
+Jeśli *Func* jest obiektem typu `Operation` i `c` jest stałą, `bind2nd(func, c)` to jest taka sama jak Konstruktor klasy [binder2nd —](../standard-library/binder2nd-class.md) i jest `binder2nd<Operation>(func, c)` bardziej wygodna do użycia.
 
 ### <a name="example"></a>Przykład
 
@@ -342,7 +342,7 @@ The number of elements in v1 less than 10 is: 2.
 
 ## <a name="bit_and"></a><a name="bit_and"></a>bit_and
 
-Wstępnie zdefiniowany obiekt funkcji, który wykonuje operacje bitowe (binarne `operator&`) w argumentach.
+Wstępnie zdefiniowany obiekt funkcji, który wykonuje operacje bitowe i operacji (Binary `operator&` ) w argumentach.
 
 ```cpp
 template <class Type = void>
@@ -365,25 +365,25 @@ struct bit_and<void>
 ### <a name="parameters"></a>Parametry
 
 *Typ*, *T*, *U*\
-Dowolny typ, który obsługuje `operator&`, który pobiera operandy dla określonych lub wywnioskowanych typów.
+Dowolny typ, który obsługuje element `operator&` , który pobiera operandy określonego lub wywnioskowanego typu.
 
-\ *lewo*
+*Lewym*\
 Lewy operand operacji bitowej i. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *T*.
 
-*Prawa*\
+*Kliknij*\
 Prawy operand operacji koniunkcji binarnej. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *U*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left & Right`. Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator&`.
+Wynik `Left & Right` . Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator&` .
 
 ### <a name="remarks"></a>Uwagi
 
-`bit_and` Funktor jest ograniczone do typów całkowitych dla podstawowych typów danych lub do typów zdefiniowanych przez użytkownika, które implementują `operator&`binarną.
+`bit_and`Funktor jest ograniczone do typów całkowitych dla podstawowych typów danych lub do typów zdefiniowanych przez użytkownika, które implementują dane binarne `operator&` .
 
 ## <a name="bit_not"></a><a name="bit_not"></a>bit_not
 
-Wstępnie zdefiniowany obiekt funkcji, który wykonuje operacje dopełnienia bitowego (nie) (jednoargumentowe `operator~`) dla tego argumentu. Dodano w języku C++ 14.
+Wstępnie zdefiniowany obiekt funkcji, który wykonuje operacje uzupełniania bitowego (nie) (jednoargumentowe `operator~` ) dla tego argumentu. Dodano w języku C++ 14.
 
 ```cpp
 template <class Type = void>
@@ -403,23 +403,23 @@ struct bit_not<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Typ*\
-Typ, który obsługuje jednoargumentowy `operator~`.
+*Wprowadź*\
+Typ, który obsługuje jednoargumentowy `operator~` .
 
-*Prawa*\
+*Kliknij*\
 Operand operacji uzupełniania bitowego. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentu odwołania lvalue lub rvalue *typu*wywnioskowanego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wynik `~ Right`. Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator~`.
+Wynik `~ Right` . Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator~` .
 
 ### <a name="remarks"></a>Uwagi
 
-`bit_not` Funktor jest ograniczone do typów całkowitych dla podstawowych typów danych lub do typów zdefiniowanych przez użytkownika, które implementują `operator~`binarną.
+`bit_not`Funktor jest ograniczone do typów całkowitych dla podstawowych typów danych lub do typów zdefiniowanych przez użytkownika, które implementują dane binarne `operator~` .
 
 ## <a name="bit_or"></a><a name="bit_or"></a>bit_or
 
-Wstępnie zdefiniowany obiekt funkcji, który wykonuje operacje bitowe (`operator|`) w argumentach.
+Wstępnie zdefiniowany obiekt funkcji, który wykonuje operacje bitowe ( `operator|` ) w argumentach.
 
 ```cpp
 template <class Type = void>
@@ -442,25 +442,25 @@ struct bit_or<void>
 ### <a name="parameters"></a>Parametry
 
 *Typ*, *T*, *U*\
-Dowolny typ, który obsługuje `operator|`, który pobiera operandy dla określonych lub wywnioskowanych typów.
+Dowolny typ, który obsługuje element `operator|` , który pobiera operandy określonego lub wywnioskowanego typu.
 
-\ *lewo*
+*Lewym*\
 Lewy operand operacji bitowej or. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *T*.
 
-*Prawa*\
+*Kliknij*\
 Prawy operand operacji bitowej or. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *U*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left | Right`. Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator|`.
+Wynik `Left | Right` . Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator|` .
 
 ### <a name="remarks"></a>Uwagi
 
-`bit_or` Funktor jest ograniczone do typów całkowitych dla podstawowych typów danych lub do typów zdefiniowanych przez użytkownika, które implementują `operator|`.
+`bit_or`Funktor jest ograniczone do typów całkowitych dla podstawowych typów danych lub do typów zdefiniowanych przez użytkownika, które implementują `operator|` .
 
 ## <a name="bit_xor"></a><a name="bit_xor"></a>bit_xor
 
-Wstępnie zdefiniowany obiekt funkcji, który wykonuje operację bitową XOR (`operator^`binarny) w argumentach.
+Wstępnie zdefiniowany obiekt funkcji, który wykonuje operacje bitowe XOR (Binary `operator^` ) na jego argumentach.
 
 ```cpp
 template <class Type = void>
@@ -483,25 +483,25 @@ struct bit_xor<void>
 ### <a name="parameters"></a>Parametry
 
 *Typ*, *T*, *U*\
-Dowolny typ, który obsługuje `operator^`, który pobiera operandy dla określonych lub wywnioskowanych typów.
+Dowolny typ, który obsługuje element `operator^` , który pobiera operandy określonego lub wywnioskowanego typu.
 
-\ *lewo*
+*Lewym*\
 Lewy operand operacji bitowej XOR. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *T*.
 
-*Prawa*\
+*Kliknij*\
 Prawy operand operacji bitowej XOR. Niewyspecjalizowany szablon przyjmuje argument odwołania lvalue *typu.* Szablon wyspecjalizowany jest idealnym przekazywaniem argumentów odwołania lvalue i rvalue dla typu wywnioskowanego *U*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left ^ Right`. Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator^`.
+Wynik `Left ^ Right` . Wyspecjalizowany szablon robi doskonałe przekazywanie wyniku, który ma typ zwracany przez `operator^` .
 
 ### <a name="remarks"></a>Uwagi
 
-`bit_xor` Funktor jest ograniczone do typów całkowitych dla podstawowych typów danych lub do typów zdefiniowanych przez użytkownika, które implementują `operator^`binarną.
+`bit_xor`Funktor jest ograniczone do typów całkowitych dla podstawowych typów danych lub do typów zdefiniowanych przez użytkownika, które implementują dane binarne `operator^` .
 
 ## <a name="cref"></a><a name="cref"></a>cref
 
-Tworzy element const `reference_wrapper` z argumentu.
+Konstruuje stałą `reference_wrapper` z argumentu.
 
 ```cpp
 template <class Ty>
@@ -513,15 +513,15 @@ reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 
 ### <a name="parameters"></a>Parametry
 
-*Ty*\
+*Br*\
 Typ argumentu, który ma być zawijany.
 
-\ *ARG*
+*ARG*\
 Argument, który ma być zawijany.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja zwraca `reference_wrapper<const Ty>(arg.get())`. Służy do zawijania odwołania const. Druga funkcja zwraca `reference_wrapper<const Ty>(arg)`. Jest on używany do przepakowania opakowanego odwołania jako odwołanie stałe.
+Pierwsza funkcja zwraca wartość `reference_wrapper<const Ty>(arg.get())` . Służy do zawijania odwołania const. Druga funkcja zwraca `reference_wrapper<const Ty>(arg)` . Jest on używany do przepakowania opakowanego odwołania jako odwołanie stałe.
 
 ### <a name="example"></a>Przykład
 
@@ -567,36 +567,36 @@ invoke_result_t<Callable, Args...>
 
 ### <a name="parameters"></a>Parametry
 
-*Możliwy* do\
+*Żądanie*\
 Typ obiektu do wywołania.
 
-*Argumenty*\
+*Argumentów*\
 Typy argumentów wywołania.
 
-\ *Fn*
+*Fn*\
 Obiekt, który ma zostać wywołany.
 
-*argumenty*\
+*argumentów*\
 Argumenty wywołania.
 
-*specyfikacja*\
-Specyfikacja **noexcept** `std::is_nothrow_invocable_v<Callable, Args>)`.
+*określając*\
+**`noexcept`** Specyfikacja `std::is_nothrow_invocable_v<Callable, Args>)` .
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołuje możliwy do wywołujący obiekt *Fn* przy użyciu *argumentów*parametrów. Efektywnie, `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)`, gdzie pseudo funkcja `INVOKE(f, t1, t2, ..., tN)` oznacza jedną z następujących czynności:
+Wywołuje możliwy do wywołujący obiekt *Fn* przy użyciu *argumentów*parametrów. Efektywnie, `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)` , gdzie pseudo funkcja `INVOKE(f, t1, t2, ..., tN)` oznacza jedną z następujących czynności:
 
-- `(t1.*f)(t2, ..., tN)`, gdy `f` jest wskaźnikiem do funkcji składowej klasy `T` i `t1` jest obiektem typu `T` lub odwołaniem do obiektu typu `T` lub odwołaniem do obiektu typu pochodnego od `T`. Oznacza to, że gdy `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` ma wartość true.
+- `(t1.*f)(t2, ..., tN)`gdy `f` jest wskaźnikiem do funkcji składowej klasy `T` i `t1` jest obiektem typu `T` lub odwołaniem do obiektu typu `T` lub odwołaniem do obiektu typu pochodnego od `T` . To jest, gdy `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` ma wartość true.
 
-- `(t1.get().*f)(t2, ..., tN)`, gdy `f` jest wskaźnikiem do funkcji składowej klasy `T` i `std::decay_t<decltype(t1)>` jest specjalizacją `std::reference_wrapper`.
+- `(t1.get().*f)(t2, ..., tN)`gdy `f` jest wskaźnikiem do funkcji składowej klasy `T` i `std::decay_t<decltype(t1)>` jest specjalizacją `std::reference_wrapper` .
 
-- `((*t1).*f)(t2, ..., tN)`, gdy `f` jest wskaźnikiem do funkcji składowej klasy `T` i `t1` nie jest jednym z poprzednich typów.
+- `((*t1).*f)(t2, ..., tN)`gdy `f` jest wskaźnikiem do funkcji składowej klasy `T` i `t1` nie jest jednym z poprzednich typów.
 
-- `t1.*f`, gdy N = = 1 i `f` jest wskaźnikiem do danych składowych klasy `T` i `t1` jest obiektem typu `T` lub odwołaniem do obiektu typu `T` lub odwołaniem do obiektu typu pochodzącego od `T`.  Oznacza to, że gdy `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` ma wartość true.
+- `t1.*f`gdy N = = 1 i `f` jest wskaźnikiem do danych elementu członkowskiego klasy `T` i `t1` jest obiektem typu `T` lub odwołaniem do obiektu typu `T` lub odwołaniem do obiektu typu pochodnego od `T` .  To jest, gdy `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` ma wartość true.
 
-- `t1.get().*f`, gdy N = = 1 i `f` jest wskaźnikiem do danych składowych klasy `T` i `std::decay_t<decltype(t1)>` jest specjalizacją `std::reference_wrapper`.
+- `t1.get().*f`gdy N = = 1 i `f` jest wskaźnikiem do danych składowych klasy `T` i `std::decay_t<decltype(t1)>` jest specjalizacją `std::reference_wrapper` .
 
-- `(*t1).*f`, gdy N = = 1 i `f` jest wskaźnikiem do danych elementu członkowskiego klasy `T` i `t1` nie jest jednym z poprzednich typów.
+- `(*t1).*f`gdy N = = 1 i `f` jest wskaźnikiem do danych składowych klasy `T` i `t1` nie jest jednym z poprzednich typów.
 
 - `f(t1, t2, ..., tN)` we wszystkich innych przypadkach.
 
@@ -690,16 +690,16 @@ unspecified mem_fn(RTy Ty::*pm);
 *RTy*\
 Zwracany typ funkcji opakowanej.
 
-*Ty*\
+*Br*\
 Typ wskaźnika funkcji składowej.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja Template zwraca prosty otokę wywołania `cw`, z słabym typem wyniku, tak że wyrażenie `cw(t, a2, ..., aN)` jest taka sama jak `INVOKE(pm, t, a2, ..., aN)`. Nie generuje żadnych wyjątków.
+Funkcja Template zwraca prostą otokę wywołania `cw` z słabym typem wyniku, tak że wyrażenie jest takie `cw(t, a2, ..., aN)` samo jak `INVOKE(pm, t, a2, ..., aN)` . Nie generuje żadnych wyjątków.
 
-Zwracana otoka wywołania jest pochodną `std::unary_function<cv Ty*, RTy>` (i definiująca zagnieżdżony typ `result_type` jako synonim dla *RTy* i Typ zagnieżdżony `argument_type` jako synonim dla `cv Ty*`) tylko wtedy, gdy typ *ty* jest wskaźnikiem do funkcji składowej z kwalifikatorem CV `cv`, który nie przyjmuje argumentów.
+Zwracana otoka wywołań pochodzi od `std::unary_function<cv Ty*, RTy>` (i definiująca zagnieżdżony typ `result_type` jako synonim dla *RTy* i zagnieżdżony typ `argument_type` jako synonim `cv Ty*` ) tylko wtedy, gdy typ *ty* jest wskaźnikiem do funkcji składowej z kwalifikatorem CV `cv` , który nie przyjmuje argumentów.
 
-Zwracana otoka wywołań pochodzi od `std::binary_function<cv Ty*, T2, RTy>` (i definiująca Typ zagnieżdżony `result_type` jako synonim dla *RTy*, Typ zagnieżdżony `first argument_type` jako synonim dla `cv Ty*`i Typ zagnieżdżony `second argument_type` jako synonim dla `T2`) tylko wtedy, gdy typ *ty* jest wskaźnikiem do funkcji składowej z kwalifikatorem CV `cv`, który przyjmuje jeden argument typu `T2`.
+Zwracana otoka wywołania pochodzi od `std::binary_function<cv Ty*, T2, RTy>` (i definiująca zagnieżdżony typ `result_type` jako synonim dla *RTy*, Typ zagnieżdżony `first argument_type` jako synonim dla `cv Ty*` i zagnieżdżony typ `second argument_type` jako synonim `T2` ), tylko wtedy, gdy typ *ty* jest wskaźnikiem do funkcji składowej z kwalifikatorem CV, `cv` który przyjmuje jeden argument typu `T2` .
 
 ### <a name="example"></a>Przykład
 
@@ -760,11 +760,11 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pMem)(Arg) const);
 ### <a name="parameters"></a>Parametry
 
 *pMem*\
-Wskaźnik do funkcji członkowskiej klasy `Type` do przekonwertowania na obiekt funkcji.
+Wskaźnik do funkcji składowej klasy `Type` , która ma zostać przekonwertowana na obiekt funkcji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt funkcji **const** lub **non_const** typu `mem_fun_t` lub `mem_fun1_t`.
+**`const`** Lub **non_const** obiekt funkcji typu `mem_fun_t` lub `mem_fun1_t` .
 
 ### <a name="example"></a>Przykład
 
@@ -847,11 +847,11 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pMem)(Arg) cons
 ### <a name="parameters"></a>Parametry
 
 *pMem*\
-Wskaźnik do funkcji członkowskiej klasy `Type` do przekonwertowania na obiekt funkcji.
+Wskaźnik do funkcji składowej klasy `Type` , która ma zostać przekonwertowana na obiekt funkcji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt funkcji **const** lub `non_const` typu `mem_fun_ref_t` lub `mem_fun1_ref_t`.
+**`const`** `non_const` Obiekt typu lub `mem_fun_ref_t` `mem_fun1_ref_t` .
 
 ### <a name="example"></a>Przykład
 
@@ -942,7 +942,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& predicate);
 
 ### <a name="parameters"></a>Parametry
 
-\ *predykatu*
+*predykatu*\
 Predykat jednoargumentowy, który ma być negacją.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -951,7 +951,7 @@ Predykat jednoargumentowy, który jest negacją predykatu jednoargumentowego zmo
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `unary_negate` jest konstruowany z predykatu jednoargumentowego `predicate(x)`, to zwraca `!predicate(x)`.
+Jeśli obiekt `unary_negate` jest zbudowany z predykatu jednoargumentowego `predicate(x)` , zwraca `!predicate(x)` .
 
 ### <a name="example"></a>Przykład
 
@@ -1014,7 +1014,7 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="parameters"></a>Parametry
 
-\ *Func*
+*Func*\
 Predykat binarny, który ma być negacją.
 
 ### <a name="return-value"></a>Wartość zwracana
@@ -1023,7 +1023,7 @@ Predykat binarny, który jest negacją elementu binarnego predykatu.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `binary_negate` jest konstruowany z predykatu binarnego `binary_predicate(x, y)`, to zwraca `!binary_predicate(x, y)`.
+Jeśli obiekt `binary_negate` jest zbudowany z predykatu binarnego `binary_predicate(x, y)` , zwraca `!binary_predicate(x, y)` .
 
 ### <a name="example"></a>Przykład
 
@@ -1081,7 +1081,7 @@ Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 
 ## <a name="not_fn"></a><a name="not_fn"></a>not_fn
 
-Szablon funkcji `not_fn` przyjmuje możliwy do naprawnego obiektu i zwraca możliwy do naprawny obiekt. Gdy zwracany obiekt wywołujący jest później wywoływany z niektórymi argumentami, przekazuje je do oryginalnego możliwego do wywołania obiektu i logicznie negacj wynik. Zachowuje wartość i zachowanie kategorii const dla zapakowanego obiektu, który jest wywoływany. `not_fn` jest Nowość w języku C++ 17 i zastępuje przestarzałe `std::not1`, `std::not2`, `std::unary_negate`i `std::binary_negate`.
+`not_fn`Szablon funkcji przyjmuje możliwy do naprawnego obiektu i zwraca możliwy do naprawnego obiektu. Gdy zwracany obiekt wywołujący jest później wywoływany z niektórymi argumentami, przekazuje je do oryginalnego możliwego do wywołania obiektu i logicznie negacj wynik. Zachowuje wartość i zachowanie kategorii const dla zapakowanego obiektu, który jest wywoływany. `not_fn`jest Nowość w języku c++ 17 i zastępuje przestarzałe `std::not1` , `std::not2` , `std::unary_negate` , i `std::binary_negate` .
 
 ```cpp
 template <class Callable>
@@ -1090,12 +1090,12 @@ template <class Callable>
 
 ### <a name="parameters"></a>Parametry
 
-\ *Func*
+*Func*\
 Obiekt możliwy do wywołania, używany do konstruowania otoki wywołań przekazywania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja Template zwraca otokę wywołania, taką jak `return call_wrapper(std::forward<Callable>(func))`, na podstawie tej klasy tylko do specyfikacji:
+Funkcja Template zwraca otokę wywołania, taką jak `return call_wrapper(std::forward<Callable>(func))` , na podstawie tej klasy tylko do specyfikacji:
 
 ```cpp
 class call_wrapper
@@ -1124,7 +1124,7 @@ private:
 };
 ```
 
-Jawny Konstruktor na możliwym do przeniesieniu obiekt *Func* wymaga, aby typ `std::decay_t<Callable>` spełniał wymagania `MoveConstructible`, a `is_constructible_v<FD, Callable>` musi mieć wartość true. Inicjuje zawinięty możliwy do przetworzenia obiekt `fd` z `std::forward<Callable>(func)`i zgłasza wyjątek zgłoszony przez konstrukcję `fd`.
+Jawny Konstruktor dla wywoływanego obiektu *Func* wymaga typu `std::decay_t<Callable>` , aby spełnić wymagania `MoveConstructible` i `is_constructible_v<FD, Callable>` musi mieć wartość true. Inicjuje zapakowany obiekt, który jest wywoływany `fd` z `std::forward<Callable>(func)` i zgłasza każdy wyjątek zgłoszony przez konstrukcję `fd` .
 
 Otoka ujawnia operatory wywołań, które różnią się od kategorii odwołań lvalue lub rvalue i posiadają kwalifikacje stałe, jak pokazano poniżej:
 
@@ -1135,7 +1135,7 @@ template<class... Args> auto operator()(Args&&... args) && -> decltype(!declval<
 template<class... Args> auto operator()(Args&&... args) const&& -> decltype(!declval<invoke_result_t<FD const(Args...)>>());
 ```
 
-Pierwsze dwa są takie same jak `return !std::invoke(fd, std::forward<Args>(args)...)`. Drugie dwa są takie same jak `return !std::invoke(std::move(fd), std::forward<Args>(args)...)`.
+Pierwsze dwa są takie same, jak `return !std::invoke(fd, std::forward<Args>(args)...)` . Drugie dwa są takie same, jak `return !std::invoke(std::move(fd), std::forward<Args>(args)...)` .
 
 ### <a name="example"></a>Przykład
 
@@ -1198,13 +1198,13 @@ Wskaźnik funkcji jednoargumentowej lub binarnej, który ma zostać przekonwerto
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwsza funkcja szablonu zwraca funkcję jednoargumentową [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md) <`Arg`, **wynik**> (\* `pfunc`).
+Pierwsza funkcja szablonu zwraca jednoargumentową funkcję [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)  < `Arg` , **wynik**> ( \* `pfunc` ).
 
-Druga funkcja szablonu zwraca funkcję binarną [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \<**arg1**, **Arg2**, **wynik**> (\* `pfunc`).
+Druga funkcja szablonu zwraca funkcję binarną [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \<**Arg1**, **Arg2**, **Result**> ( \* `pfunc` ).
 
 ### <a name="remarks"></a>Uwagi
 
-Wskaźnik funkcji jest obiektem funkcji. Może być przekazanie do dowolnego algorytmu, który oczekuje funkcji jako parametru, ale nie można go dostosować. Informacje o jego typach zagnieżdżonych są wymagane do używania go z adapterem, na przykład w celu powiązania z nim wartości lub Negate go. Konwersja jednoargumentowych i binarnych wskaźników funkcji pomocnika `ptr_fun` umożliwia adapterom funkcji współdziałanie ze wskaźnikami funkcji jednoargumentowych i binarnych.
+Wskaźnik funkcji jest obiektem funkcji. Może być przekazanie do dowolnego algorytmu, który oczekuje funkcji jako parametru, ale nie można go dostosować. Informacje o jego typach zagnieżdżonych są wymagane do używania go z adapterem, na przykład w celu powiązania z nim wartości lub Negate go. Konwersja jednoargumentowych i binarnych wskaźników funkcji `ptr_fun` pomocnika umożliwia adapterom funkcji współdziałanie ze wskaźnikami funkcji jednoargumentowych i binarnych.
 
 ### <a name="example"></a>Przykład
 
@@ -1212,7 +1212,7 @@ Wskaźnik funkcji jest obiektem funkcji. Może być przekazanie do dowolnego alg
 
 ## <a name="ref"></a><a name="ref"></a>umieszczone
 
-Konstruuje `reference_wrapper` z argumentu.
+Tworzy element a `reference_wrapper` z argumentu.
 
 ```cpp
 template <class Ty>
@@ -1224,11 +1224,11 @@ template <class Ty>
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do `arg`; w `reference_wrapper<Ty>(arg)`.
+Odwołanie do; w odniesieniu do `arg` `reference_wrapper<Ty>(arg)` .
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie zdefiniowano dwie funkcje: jedną powiązaną z zmienną ciągu, drugą powiązaną z odwołaniem zmiennej String obliczanej przez wywołanie do `ref`. Po zmianie wartości zmiennej Pierwsza funkcja nadal używa starej wartości, a druga funkcja używa nowej wartości.
+W poniższym przykładzie zdefiniowano dwie funkcje: jedną powiązaną z zmienną ciągu, drugą powiązaną z odwołaniem zmiennej String obliczanej przez wywołanie `ref` . Po zmianie wartości zmiennej Pierwsza funkcja nadal używa starej wartości, a druga funkcja używa nowej wartości.
 
 ```cpp
 #include <algorithm>
@@ -1304,7 +1304,7 @@ tiger cougar
 
 ## <a name="swap"></a><a name="swap"></a>wymiany
 
-Zamienia dwa obiekty `function`.
+Zamienia dwa `function` obiekty.
 
 ```cpp
 template <class FT>
@@ -1313,18 +1313,18 @@ template <class FT>
 
 ### <a name="parameters"></a>Parametry
 
-\ *ft*
+*STÓP*\
 Typ kontrolowany przez obiekty funkcji.
 
-\ *F1*
+*nacionięcie*\
 Pierwszy obiekt funkcji.
 
-\ *F2*
+*F2*\
 Drugi obiekt funkcji.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja zwraca `f1.swap(f2)`.
+Funkcja zwraca wartość `f1.swap(f2)` .
 
 ### <a name="example"></a>Przykład
 

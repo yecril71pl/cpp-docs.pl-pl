@@ -1,17 +1,17 @@
 ---
-title: size_is (C++ atrybut com)
+title: size_is (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: c511901b3da03d14b1a09e178b70e8f78cd00f8c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 36b960982d1f88cd30bab707dfe7aec73381dfab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166253"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213843"
 ---
 # <a name="size_is"></a>size_is
 
@@ -30,7 +30,7 @@ Rozmiar pamięci przydzieloną dla wskaźników rozmiaru.
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **size_is** C++ ma taką samą funkcjonalność jak atrybut [size_is](/windows/win32/Midl/size-is) MIDL.
+Atrybut **size_is** C++ ma takie same funkcje jak atrybut [size_is](/windows/win32/Midl/size-is) MIDL.
 
 ## <a name="example"></a>Przykład
 
@@ -42,17 +42,17 @@ Zapoznaj się z przykładem [first_is](first-is.md) , aby uzyskać przykład spo
 
 |||
 |-|-|
-|**Dotyczy**|Pole w **strukturze** lub **Unii**, parametr interfejsu, metoda interfejsu|
+|**Dotyczy**|Pole w **`struct`** lub **`union`** , parametr interfejsu, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
 |**Nieprawidłowe atrybuty**|`max_is`|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty IDL](idl-attributes.md)<br/>
-[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Atrybuty typedef, enum, Union i struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atrybuty parametru](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>
 [last_is](last-is.md)<br/>

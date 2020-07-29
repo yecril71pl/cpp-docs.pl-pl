@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, setlocale
 - setlocale pragma
 ms.assetid: e60b43d9-fbdf-4c4e-ac85-805523a13b86
-ms.openlocfilehash: 219354595e5c63b2f13211d43bfa517d97413251
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 9603c132610e0cfb1e8f955be48271870527105b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218178"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219381"
 ---
 # <a name="setlocale-pragma"></a>setlocale, pragma
 
@@ -29,7 +29,7 @@ Ponieważ algorytm konwersji znaków wielobajtowych na znaki szerokie może ró�
 
 Domyślnym ustawieniem *Local-String* jest "".
 
-Ustawienia regionalne "C" mapują każdy znak w ciągu na jego wartość jako **wchar_t**. Inne prawidłowe wartości dla `setlocale` to wpisy znalezione na liście [ciągów języka](../c-runtime-library/language-strings.md) . Na przykład można określić:
+Ustawienia regionalne "C" mapują każdy znak w ciągu na jego wartość jako **`wchar_t`** . Inne prawidłowe wartości dla `setlocale` to wpisy znalezione na liście [ciągów języka](../c-runtime-library/language-strings.md) . Na przykład można określić:
 
 ```cpp
 #pragma setlocale("dutch")

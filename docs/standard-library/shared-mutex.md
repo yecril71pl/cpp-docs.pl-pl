@@ -45,28 +45,28 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: 5dfb0e858bb412daf159ee9efc7dcc13be690886
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f33a9c5fe4c5058d039feff896f7e53fe40cbf31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336723"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217483"
 ---
-# <a name="ltshared_mutex"></a>&lt;> shared_mutex
+# <a name="ltshared_mutex"></a>&lt;shared_mutex>
 
-Nagłówek &lt;shared_mutex> zapewnia podstawowe synchronizacji dla ochrony udostępnionych danych, które mogą być dostępne dla wielu wątków. Oprócz wyłącznej kontroli dostępu zapewnianej przez klasy mutex, udostępnione klasy mutex umożliwiają również współużytkowanie przez wiele wątków dla dostępu niewyłącznego. Udostępnione muteksy mogą służyć do kontrolowania zasobów, które mogą być odczytywane przez kilka wątków bez powodowania sytuacji wyścigu, ale muszą być zapisywane wyłącznie przez pojedynczy wątek.
+&lt;Nagłówek> shared_mutex zawiera elementy pierwotne synchronizacji na potrzeby ochrony danych udostępnionych, do których można uzyskać dostęp za pomocą wielu wątków. Oprócz wyłącznej kontroli dostępu dostarczonej przez klasy muteksów współużytkowane klasy muteksów umożliwiają również współużytkowanie własności przez wiele wątków dla niewyłącznego dostępu. Współdzielone muteksy mogą służyć do kontrolowania zasobów, które mogą być odczytywane przez kilka wątków bez powodowania sytuacji wyścigu, ale muszą być zapisywane wyłącznie na podstawie jednego wątku.
 
-&lt;Nagłówek `shared_mutex` shared_mutex> definiuje klasy i `shared_timed_mutex`, szablon `shared_lock`klasy i funkcję `swap` szablonu dla udostępnionej obsługi obiektu mutex.
+Nagłówek &lt; shared_mutex> definiuje klasy, `shared_mutex` `shared_timed_mutex` szablon klasy i `shared_lock` funkcję szablonu `swap` dla udostępnionej obsługi elementu mutex.
 
 |Klasy|Opis|
 |-------------|-----------------|
-|[Klasa shared_mutex](#class_shared_mutex)|Współużytkowany typ obiektu mutex, który może być zablokowany wyłącznie przez jednego agenta lub udostępniony nie wyłącznie przez wielu agentów.|
-|[Klasa shared_timed_mutex](#class_shared_timed_mutex)|Współużytkowany typ obiektu mutex, który może być zablokowany wyłącznie przez jednego agenta lub udostępniony nie wyłącznie przez wielu agentów.|
-|[Klasa shared_lock](#class_shared_lock)|Szablon klasy, który otacza udostępnionego obiektu mutex do obsługi operacji blokady czasowej i niewyłącznego udostępniania przez wielu agentów.|
+|[Klasa shared_mutex](#class_shared_mutex)|Typ udostępnionego obiektu mutex, który może być zablokowany wyłącznie przez jednego agenta lub udostępniony nieprzeznaczony wyłącznie dla wielu agentów.|
+|[Klasa shared_timed_mutex](#class_shared_timed_mutex)|Udostępniony typ muteksu czasu, który może być zablokowany wyłącznie przez jednego agenta lub udostępniony nieprzeznaczony wyłącznie dla wielu agentów.|
+|[Klasa shared_lock](#class_shared_lock)|Szablon klasy, który otacza współużytkowany element mutex w celu obsługi operacji blokady czasowej i niewyłącznego udostępniania przez wielu agentów.|
 
 |Funkcje|Opis|
 |---------------|-----------------|
-|[Wymiany](#function_swap)|Zamienia zawartość udostępnionych obiektów mutex, do których odwołują się parametry funkcji.|
+|[wymiany](#function_swap)|Zamienia zawartość udostępnionych obiektów mutex, do których odwołują się parametry funkcji.|
 
 ## <a name="syntax"></a>Składnia
 
@@ -83,34 +83,34 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie klasy `shared_mutex` jest *typem obiektu mutex udostępnionym*, typem, który kontroluje współużytkowane własności obiektu mutex w zakresie. Typ udostępnionego obiektu mutex spełnia wszystkie wymagania typu mutex, a także członków do obsługi współużytkowanych własności niewyłącznej.
+Wystąpienie klasy `shared_mutex` jest *wspólnym typem elementu mutex*, typem, który kontroluje współużytkowany własność obiektu mutex w zakresie. Współużytkowany typ muteksu spełnia wszystkie wymagania typu muteksu, a także składowe do obsługi udostępnionej niewyłącznej własności.
 
-Współużytkowane gotex `lock_shared`typ `unlock_shared`obsługuje `try_lock_shared`dodatkowe metody , i:
+Typ udostępnionego obiektu mutex obsługuje dodatkowe metody `lock_shared` , `unlock_shared` i `try_lock_shared` :
 
-- Metoda `lock_shared` blokuje wątek wywołujący, dopóki wątek nie uzyska współużytkowania obiektu mutex.
+- `lock_shared`Metoda blokuje wątek wywołujący do momentu, gdy wątek uzyska wspólną własność obiektu mutex.
 
-- Metoda `unlock_shared` zwalnia współwłasności obiektu mutex posiadanych przez wątek wywołujący.
+- `unlock_shared`Metoda zwalnia wspólną własność obiektu mutex przechowywanego przez wątek wywołujący.
 
-- Metoda `try_lock_shared` próbuje uzyskać współwłasność obiektu mutex bez blokowania. Jego typ zwracany jest zamienny na **bool** i jest **true,** jeśli metoda uzyskuje własność, ale w przeciwnym razie jest **false**.
+- `try_lock_shared`Metoda próbuje uzyskać współużytkowany własność obiektu mutex bez blokowania. Typ zwracany jest konwertowany na **`bool`** i jest, **`true`** Jeśli metoda uzyskuje własność, ale w przeciwnym razie **`false`** .
 
-Klasa `shared_timed_mutex` jest *współużytkowane czasowe mutex typu*, typ, który spełnia wymagania zarówno typu udostępnionego obiektu mutex i typu czasowego mutex.
+Klasa `shared_timed_mutex` jest *udostępnionym typem obiektu mutex*, który spełnia wymagania zarówno typu elementu udostępnionego obiektu mutex, jak i typu muteksu czasu.
 
-Współużytkowane gotex typu `try_lock_shared_for` czasowego obsługuje dodatkowe metody i: `try_lock_shared_until`
+Udostępniony typ muteksu czasu obsługuje dodatkowe metody `try_lock_shared_for` i `try_lock_shared_until` :
 
-- Metoda `try_lock_shared_for` próbuje uzyskać współwłasność obiektu mutex do czasu upływu czasu trwania określonego przez parametr. Jeśli czas trwania nie jest dodatni, `try_lock_shared`metoda jest równoważna . Metoda nie zwraca w określonym czasie, chyba że zostanie uzyskana współwłasność. Jego wartość zwracana jest **true,** jeśli metoda uzyskuje własność, ale w przeciwnym razie jest **false**.
+- `try_lock_shared_for`Metoda próbuje uzyskać udostępnioną własność obiektu mutex do momentu, gdy czas określony przez parametr zostanie zakończony. Jeśli czas trwania nie jest dodatni, metoda jest równoważna z `try_lock_shared` . Metoda nie zwraca wartości w czasie trwania określonym, o ile nie zostanie uzyskana udostępniona własność. Wartość zwracana jest **`true`** , jeśli metoda uzyskuje własność, ale w przeciwnym razie **`false`** .
 
-- Metoda `try_lock_shared_until` próbuje uzyskać współwłasność obiektu mutex, dopóki nie upłynie określony czas bezwzględny. Jeśli określony czas już minął, metoda `try_lock_shared`jest równoważna . Metoda nie zwraca przed określonym czasem, chyba że zostanie uzyskana współwłasność. Jego wartość zwracana jest **true,** jeśli metoda uzyskuje własność, ale w przeciwnym razie jest **false**.
+- `try_lock_shared_until`Metoda próbuje uzyskać udostępnioną własność obiektu mutex do momentu przekazania określonego czasu bezwzględnego. Jeśli określony czas już przeszedł, metoda jest równoważna z `try_lock_shared` . Metoda nie zwraca przed upływem określonego czasu, o ile nie zostanie uzyskana udostępniona własność. Wartość zwracana jest **`true`** , jeśli metoda uzyskuje własność, ale w przeciwnym razie **`false`** .
 
-Szablon `shared_lock` klasy rozszerza obsługę blokowania czasowego i przenoszenia własności do udostępnionego obiektu mutex. Własność mutexu może być uzyskana w trakcie budowy lub `shared_lock` po jego zakończeniu i może zostać przeniesiona na inny obiekt. Obiekty typu `shared_lock` mogą być przenoszone, ale nie kopiowane.
+`shared_lock`Szablon klasy rozszerza obsługę blokowania czasowego i przenoszenia własności do udostępnionego obiektu mutex. Własność obiektu mutex może być uzyskana w konstrukcji lub po nim i może zostać przeniesiona do innego `shared_lock` obiektu. Obiekty typu `shared_lock` można przenosić, ale nie są kopiowane.
 
 > [!WARNING]
-> Począwszy od programu Visual Studio 2015 typy synchronizacji biblioteki standardowej języka C++ są oparte na elementów pierwotnych synchronizacji systemu Windows i nie są już używane concrt (z wyjątkiem sytuacji, gdy platformą docelową jest System Windows XP). Typy zdefiniowane w &lt;shared_mutex> nie powinny być używane z żadnymi typami lub funkcjami ConcRT.
+> Począwszy od programu Visual Studio 2015 typy synchronizacji standardowej biblioteki języka C++ są oparte na prymitywach synchronizacji systemu Windows i nie są już używane ConcRT (z wyjątkiem sytuacji, gdy platforma docelowa to system Windows XP). Typów zdefiniowanych w &lt; shared_mutex> nie należy używać z żadnymi typami lub funkcjami ConcRT.
 
 ## <a name="classes"></a>Klasy
 
 ### <a name="shared_mutex-class"></a><a name="class_shared_mutex"></a>Klasa shared_mutex
 
-Klasa `shared_mutex` implementuje niecykliczne mutex z semantyki współużytkowania.
+Klasa `shared_mutex` implementuje niecykliczny element mutex z semantyką własności udostępnionej.
 
 ```cpp
 class shared_mutex {
@@ -137,7 +137,7 @@ public:
 
 ### <a name="shared_timed_mutex-class"></a><a name="class_shared_timed_mutex"></a>Klasa shared_timed_mutex
 
-Klasa `shared_timed_mutex` implementuje niecykliczne mutex z semantyki współdzielonej własności, która spełnia wymagania typu czasowego mutex.
+Klasa `shared_timed_mutex` implementuje niecykliczny element mutex z semantyką własności współużytkowanej, która spełnia wymagania typu obiektu mutex o określonej godzinie.
 
 ```cpp
 class shared_timed_mutex {
@@ -169,7 +169,7 @@ public:
 
 ### <a name="shared_lock-class"></a><a name="class_shared_lock"></a>Klasa shared_lock
 
-Szablon `shared_lock` klasy steruje współwłasnością udostępnionego obiektu mutex w zakresie. Parametr szablonu musi być współużytkowanemu typowi obiektu mutex.
+Szablon klasy `shared_lock` kontroluje wspólną własność udostępnionego obiektu mutex w zakresie. Parametr szablonu musi być typem udostępnionego obiektu mutex.
 
 ```cpp
 class shared_lock {
@@ -215,7 +215,7 @@ private:
 
 ## <a name="functions"></a>Funkcje
 
-### <a name="swap"></a><a name="function_swap"></a>Wymiany
+### <a name="swap"></a><a name="function_swap"></a>wymiany
 
 Zamienia `shared_lock` obiekty.
 
@@ -224,15 +224,15 @@ template <class Mutex>
 void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 ```
 
-Wymienia zawartość dwóch `shared_lock` obiektów. Skutecznie taki `x.swap(y)`sam jak .
+Wymienia zawartość dwóch `shared_lock` obiektów. Efektywnie tak samo jak w przypadku programu `x.swap(y)` .
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** &lt;shared_mutex>
+**Nagłówek:** &lt; shared_mutex>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Odwołanie do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
 [&lt;>mutex](../standard-library/mutex.md)

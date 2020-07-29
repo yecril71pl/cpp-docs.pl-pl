@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: e77f57bc56a75406745349e19d03bc26edc5470d
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 86ef4afcb5e6e7a9d244a8c2f2126bec7e1ace75
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813512"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217457"
 ---
 # <a name="span-class-c-standard-library"></a>span — Klasa (standardowa biblioteka C++)
 
@@ -86,8 +86,8 @@ class span;
 
 | **Definicje typu** | **Opis** |
 |-|-|
-| [const_pointer](#pointer) | Typ wskaźnika do `const` elementu. |
-| [const_reference](#reference) | Typ odwołania do `const` elementu. |
+| [const_pointer](#pointer) | Typ wskaźnika do **`const`** elementu. |
+| [const_reference](#reference) | Typ odwołania do **`const`** elementu. |
 | [difference_type](#difference_type) | Typ odległości ze znakiem między dwoma elementami. |
 | [element_type](#element_type) | Typ elementu span. |
 | [Iterator](#iterator) | Typ iteratora dla zakresu. |
@@ -95,7 +95,7 @@ class span;
 | [odwoła](#reference) | Typ odwołania do elementu. |
 | [reverse_iterator](#reverse_iterator) | Typ iteratora odwrotnego dla zakresu. |
 | [size_type](#size_type) | Typ wyniku niepodpisanej odległości między dwoma elementami w zakresie. |
-| [value_type](#value_type) | Typ elementu, bez `const` `volatile` kwalifikacji lub. |
+| [value_type](#value_type) | Typ elementu, bez **`const`** **`volatile`** kwalifikacji lub. |
 | **Konstruktory** | **Opis** |
 |[span](#span)| Konstrukcja a `span` .|
 | **Obsługa iteratora** | **Opis** |
@@ -105,9 +105,9 @@ class span;
 |[rend](#rend) | Uzyskaj iterator odwrotny wskazujący przód zakresu; oznacza to, że koniec odwróconego zakresu.|
 | **Elementy dostępu**| **Opis** |
 |[Wstecz](#back) | Pobierz ostatni element z zakresu.|
-|[Data](#data) | Pobierz adres pierwszego elementu w zakresie.|
+|[data](#data) | Pobierz adres pierwszego elementu w zakresie.|
 |[FSB](#front) | Pobierz pierwszy element z zakresu.|
-|[zakład\[\]](#op_at) | Uzyskaj dostęp do elementu w określonej pozycji.|
+|[operator\[\]](#op_at) | Uzyskaj dostęp do elementu w określonej pozycji.|
 | **Obserwatorzy** | **Opis** |
 |[puste](#empty)| Sprawdź, czy zakres jest pusty.|
 |[zmienia](#size) | Pobierz liczbę elementów w zakresie.|
@@ -306,7 +306,7 @@ constexpr bool empty() const noexcept;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca `true` if `this->size() == 0` . W przeciwnym razie `false` .
+Zwraca **`true`** if `this->size() == 0` . W przeciwnym razie **`false`** .
 
 ### <a name="example"></a>Przykład
 
@@ -619,7 +619,7 @@ int main()
 
 ## <a name="spanpointer"></a><a name="pointer"></a> `span::pointer`
 
-Typy wskaźnika i `const` wskaźnika do elementu span.
+Typy wskaźnika i **`const`** wskaźnika do elementu span.
 
 ```cpp
 using pointer = T*;
@@ -693,7 +693,7 @@ int main()
 
 ## <a name="spanreference"></a><a name="reference"></a> `span::reference`
 
-Typy odwołań i `const` odwołania do elementu span.
+Typy odwołań i **`const`** odwołania do elementu span.
 
 ```cpp
 using reference = T&;
@@ -1058,7 +1058,7 @@ mySpan.subspan<1>: 12
 
 ## <a name="spanvalue_type"></a><a name="value_type"></a> `span::value_type`
 
-Typ elementu w zakresie, bez `const` ani `volatile` kwalifikacji.
+Typ elementu w zakresie, bez **`const`** ani **`volatile`** kwalifikacji.
 
 ```cpp
 using value_type = std::remove_cv_t<T>;

@@ -1,5 +1,5 @@
 ---
-title: CStrBufT, klasa
+title: Klasa CStrBufT
 ms.date: 10/18/2018
 f1_keywords:
 - CStrBufT
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - CStrBufT class
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
-ms.openlocfilehash: 71d7b6f7d53e9613b1ac26013d73c1dbd1ef0aab
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 4d9d0b403e572d6fdea65355702467c89587cc3a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746927"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219082"
 ---
-# <a name="cstrbuft-class"></a>CStrBufT, klasa
+# <a name="cstrbuft-class"></a>Klasa CStrBufT
 
-Ta klasa zapewnia automatyczne `GetBuffer` oczyszczanie zasobów `ReleaseBuffer` `CStringT` i wywołuje istniejący obiekt.
+Ta klasa umożliwia automatyczne czyszczenie zasobów `GetBuffer` i `ReleaseBuffer` wywoływanie na istniejącym `CStringT` obiekcie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,23 +33,23 @@ class CStrBufT
 
 #### <a name="parameters"></a>Parametry
 
-*Typ TChar*<br/>
+*TCharType*<br/>
 Typ znaku `CStrBufT` klasy. Może być jedną z następujących czynności:
 
-- **char** (dla ciągów znaków ANSI)
+- **`char`**(dla ciągów znaków ANSI)
 
-- **wchar_t** (dla ciągów znaków Unicode)
+- **`wchar_t`**(dla ciągów znaków Unicode)
 
-- TCHAR (zarówno dla ciągów znaków ANSI, jak i Unicode)
+- Używanie TCHAR (dla ciągów znaków ANSI i Unicode)
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne typedefs
+### <a name="public-typedefs"></a>Publiczne definicje typów
 
 |Nazwa|Opis|
 |----------|-----------------|
-|SZTXSTR|Wskaźnik do stałego ciągu.|
-|PXSTR ( PXSTR )|Wskaźnik do ciągu.|
+|PCXSTR|Wskaźnik do stałego ciągu.|
+|PXSTR|Wskaźnik do ciągu.|
 |`StringType`|Typ ciągu, którego bufor ma być manipulowany przez specjalizacje tego szablonu klasy.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
@@ -62,35 +62,35 @@ Typ znaku `CStrBufT` klasy. Może być jedną z następujących czynności:
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CStrBufT::SetLength](#setlength)|Ustawia długość buforu znaków skojarzonego obiektu ciągu.|
+|[CStrBufT:: SetLength](#setlength)|Ustawia długość buforu znaków skojarzonego obiektu ciągu.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CStrBufT::operator PCXSTR](#operator_pcxstr)|Pobiera wskaźnik **const** do buforu znaków skojarzonego obiektu ciągu.|
-|[CStrBufT::operator PXSTR](#operator_pxstr)|Pobiera wskaźnik do buforu znaków skojarzonego obiektu ciągu.|
+|[CStrBufT:: operator PCXSTR](#operator_pcxstr)|Pobiera **`const`** wskaźnik do buforu znaków skojarzonego obiektu ciągu.|
+|[CStrBufT:: operator PXSTR](#operator_pxstr)|Pobiera wskaźnik do buforu znaków skojarzonego obiektu ciągu.|
 
 ### <a name="public-constants"></a>Stałe publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CStrBufT::AUTO_LENGTH](#auto_length)|Automatycznie określ nową długość ciągu w wydaniu.|
-|[CStrBufT::SET_LENGTH](#set_length)|Ustawianie długości obiektu ciągu w czasie GetBuffer|
+|[CStrBufT:: AUTO_LENGTH](#auto_length)|Automatycznie Ustal nową długość ciągu w wersji.|
+|[CStrBufT:: SET_LENGTH](#set_length)|Ustaw długość obiektu String w czasie GetBuffer|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa jest używana jako klasa otoki do zastępowania wywołań [GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) i [ReleaseBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer)lub [GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) i `ReleaseBuffer`.
+Ta klasa jest używana jako Klasa otoki do zamiany wywołań do [GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) i [ReleaseBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer), lub [GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) i `ReleaseBuffer` .
 
-Zaprojektowany przede wszystkim jako klasa `CStrBufT` pomocnicza, zapewnia wygodny sposób dla dewelopera do pracy z buforem `ReleaseBuffer`znaków obiektu ciągu bez martwienia się o to, jak i kiedy wywołać . Jest to możliwe, ponieważ obiekt otoki wykracza poza zakres naturalnie w przypadku wyjątku lub wielu ścieżek kodu zamykania; powodując jego destruktora, aby zwolnić zasób ciągu.
+Głównie zaprojektowana jako Klasa pomocnika `CStrBufT` zapewnia wygodną metodę pracy dewelopera z buforem znaków obiektu String bez obaw o sposób lub czas wywoływania `ReleaseBuffer` . Jest to możliwe, ponieważ obiekt otoki wykracza poza zakres naturalnie w przypadku wyjątku lub wielu wyjść ze ścieżki kodu; powoduje, że destruktor zwolni zasób ciągu.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlsimpstr.h
+**Nagłówek:** atlsimpstr. h
 
-## <a name="cstrbuftauto_length"></a><a name="auto_length"></a>CStrBufT::AUTO_LENGTH
+## <a name="cstrbuftauto_length"></a><a name="auto_length"></a>CStrBufT:: AUTO_LENGTH
 
-Automatycznie określ nową długość ciągu w wydaniu.
+Automatycznie Ustal nową długość ciągu w wersji.
 
 ```
 static const DWORD AUTO_LENGTH = 0x01;
@@ -98,7 +98,7 @@ static const DWORD AUTO_LENGTH = 0x01;
 
 ### <a name="remarks"></a>Uwagi
 
-Automatycznie określ nową długość ciągu w wydaniu. Ciąg musi być zakończony zerem.
+Automatycznie Ustal nową długość ciągu w wersji. Ciąg musi być zakończony znakiem null.
 
 ## <a name="cstrbuftcstrbuft"></a><a name="cstrbuft"></a>CStrBufT::CStrBufT
 
@@ -111,28 +111,28 @@ explicit CStrBufT(StringType& str) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*Str*<br/>
-Obiekt ciągu skojarzony z buforem. Zazwyczaj `CStrBuf` deweloper użyje wstępnie zdefiniowanych typedefs (wariant TCHAR), `CStrBufA` ( wariant**char)** i `CStrBufW` **(wchar_t** wariant).
+*str*<br/>
+Obiekt ciągu skojarzony z buforem. Zazwyczaj deweloper będzie używać wstępnie zdefiniowanych elementów typedef of `CStrBuf` (używanie TCHAR Variant), `CStrBufA` ( **`char`** Variant) i `CStrBufW` ( **`wchar_t`** Variant).
 
-*nMinLength (Niem.*<br/>
+*nMinLength*<br/>
 Minimalna długość buforu znaków.
 
-*Dwflags*<br/>
+*flagiDW*<br/>
 Określa, czy długość ciągu jest określana automatycznie. Może być jedną z następujących czynności:
 
-- AUTO_LENGTH długość ciągu jest automatycznie określana, gdy [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) jest wywoływana. Ciąg musi być zakończony zerem. Wartość domyślna.
+- AUTO_LENGTH długość ciągu jest określana automatycznie, gdy jest wywoływana [CSimpleStringT:: Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) . Ciąg musi być zakończony znakiem null. Wartość domyślna.
 
-- SET_LENGTH długość ciągu jest ustawiana, gdy wywoływana jest [nazwa CSimpleStringT::GetBuffer.](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer)
+- SET_LENGTH długość ciągu jest ustawiana, gdy wywoływana jest [CSimpleStringT:: GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) .
 
 ### <a name="remarks"></a>Uwagi
 
-Tworzy bufor ciągów dla skojarzonego obiektu ciągu. Podczas budowy [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) lub [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) jest wywoływana.
+Tworzy bufor ciągu dla skojarzonego obiektu ciągu. Podczas konstruowania jest wywoływana [CSimpleStringT:: GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) lub [CSimpleStringT:: GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) .
 
-Należy zauważyć, że konstruktor kopii jest **prywatny**.
+Należy pamiętać, że Konstruktor kopiujący jest **`private`** .
 
-## <a name="cstrbuftoperator-pcxstr"></a><a name="operator_pcxstr"></a>CStrBufT::operator PCXSTR
+## <a name="cstrbuftoperator-pcxstr"></a><a name="operator_pcxstr"></a>CStrBufT:: operator PCXSTR
 
-Bezpośredni dostęp do znaków przechowywanych w skojarzonym obiekcie ciągu jako ciąg w stylu C.
+Bezpośrednio uzyskuje dostęp do znaków przechowywanych w skojarzonym obiekcie ciągu jako ciąg w stylu języka C.
 
 ```
 operator PCXSTR() const throw();
@@ -144,11 +144,11 @@ Wskaźnik znaku do danych ciągu.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie tej funkcji, aby zwrócić wskaźnik do buforu znaków obiektu ciągu. Zawartość obiektu ciągu nie można zmienić za pomocą tego wskaźnika.
+Wywołaj tę funkcję, aby zwrócić wskaźnik do buforu znaków obiektu ciągu. Zawartości obiektu String nie można zmienić za pomocą tego wskaźnika.
 
-## <a name="cstrbuftoperator-pxstr"></a><a name="operator_pxstr"></a>CStrBufT::operator PXSTR
+## <a name="cstrbuftoperator-pxstr"></a><a name="operator_pxstr"></a>CStrBufT:: operator PXSTR
 
-Bezpośredni dostęp do znaków przechowywanych w skojarzonym obiekcie ciągu jako ciąg w stylu C.
+Bezpośrednio uzyskuje dostęp do znaków przechowywanych w skojarzonym obiekcie ciągu jako ciąg w stylu języka C.
 
 ```
 operator PXSTR() throw();
@@ -160,9 +160,9 @@ Wskaźnik znaku do danych ciągu.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie tej funkcji, aby zwrócić wskaźnik do buforu znaków obiektu ciągu. Deweloper może zmienić zawartość obiektu ciągu za pomocą tego wskaźnika.
+Wywołaj tę funkcję, aby zwrócić wskaźnik do buforu znaków obiektu ciągu. Deweloper może zmienić zawartość obiektu ciągu z tym wskaźnikiem.
 
-## <a name="cstrbuftpcxstr"></a><a name="pcxstr"></a>CStrBufT::PCXSTR
+## <a name="cstrbuftpcxstr"></a><a name="pcxstr"></a>CStrBufT::P CXSTR
 
 Wskaźnik do stałego ciągu.
 
@@ -170,7 +170,7 @@ Wskaźnik do stałego ciągu.
 typedef CSimpleStringT<TCharType>::PCXSTR PCXSTR;
 ```
 
-## <a name="cstrbuftpxstr"></a><a name="pxstr"></a>CStrBufT::PXSTR
+## <a name="cstrbuftpxstr"></a><a name="pxstr"></a>CStrBufT::P XSTR
 
 Wskaźnik do ciągu.
 
@@ -178,9 +178,9 @@ Wskaźnik do ciągu.
 typedef CSimpleStringT<TCharType>::PXSTR PXSTR;
 ```
 
-## <a name="cstrbuftset_length"></a><a name="set_length"></a>CStrBufT::SET_LENGTH
+## <a name="cstrbuftset_length"></a><a name="set_length"></a>CStrBufT:: SET_LENGTH
 
-Ustaw długość obiektu ciągu `GetBuffer` w czasie.
+Ustaw długość obiektu String w `GetBuffer` czasie.
 
 ```
 static const DWORD SET_LENGTH = 0x02;
@@ -188,11 +188,11 @@ static const DWORD SET_LENGTH = 0x02;
 
 ### <a name="remarks"></a>Uwagi
 
-Ustaw długość obiektu ciągu w czasie GetBuffer.
+Ustaw długość obiektu String w czasie GetBuffer.
 
-Określa, czy [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) i [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) są wywoływane, gdy obiekt buforu ciągu jest skonstruowany.
+Określa, czy [CSimpleStringT:: GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) i [CSimpleStringT:: GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) są wywoływane podczas konstruowania obiektu buforu ciągu.
 
-## <a name="cstrbuftsetlength"></a><a name="setlength"></a>CStrBufT::SetLength
+## <a name="cstrbuftsetlength"></a><a name="setlength"></a>CStrBufT:: SetLength
 
 Ustawia długość buforu znaków.
 
@@ -202,17 +202,17 @@ void SetLength(int nLength);
 
 ### <a name="parameters"></a>Parametry
 
-*nLength (nLength)*<br/>
-Nowa długość buforu znaków obiektu ciągu.
+*nLength*<br/>
+Nowa długość buforu znaków w obiekcie String.
 
 > [!NOTE]
-> Musi być mniejsza lub równa minimalnej długości buforu `CStrBufT`określonej w konstruktorze .
+> Wartość musi być mniejsza lub równa minimalnej długości buforu określonej w konstruktorze `CStrBufT` .
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie tej funkcji, aby ustawić długość ciągu reprezentowanego przez obiekt buforu.
+Wywołaj tę funkcję, aby ustawić długość ciągu reprezentowanego przez obiekt buforu.
 
-## <a name="cstrbuftstringtype"></a><a name="stringtype"></a>CStrBufT::Rodzaj ciągu
+## <a name="cstrbuftstringtype"></a><a name="stringtype"></a>CStrBufT:: StringType
 
 Typ ciągu, którego bufor ma być manipulowany przez specjalizacje tego szablonu klasy.
 
@@ -222,9 +222,9 @@ typedef CSimpleStringT<TCharType> StringType;
 
 ### <a name="remarks"></a>Uwagi
 
-`TCharType`jest typem znaku używanym do specjalizacji szablonu klasy.
+`TCharType`to typ znaku służący do specjalizacji szablonu klasy.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Klasy współdzielone ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+[Klasy udostępnione ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

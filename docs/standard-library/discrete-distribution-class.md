@@ -23,16 +23,16 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 83d69df399d556025d0f7d4a8ccd714ff43a76ec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 65d5c993efd1cb9c6dd35f11223ed39e026ed7c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368771"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217808"
 ---
 # <a name="discrete_distribution-class"></a>discrete_distribution — Klasa
 
-Generuje dyskretny rozkład liczby całkowitej, który ma interwały o jednolitej szerokości z jednolitym prawdopodobieństwem w każdym interwale.
+Generuje dyskretną dystrybucję całkowitą, która ma jednolite interwały ze jednorodnym prawdopodobieństwem w każdym interwale.
 
 ## <a name="syntax"></a>Składnia
 
@@ -72,23 +72,23 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Typ int*\
-Typ wyniku liczby całkowitej, domyślnie **int**. Możliwe typy można znaleźć w [ \<>losowych ](../standard-library/random.md).
+*IntType*\
+Typ wyniku liczby całkowitej, wartość domyślna to **`int`** . Aby zapoznać się z możliwymi typami, zobacz [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Uwagi
 
-Ten rozkład próbkowania ma odstępy szerokości jednolitej z jednolitym prawdopodobieństwem w każdym interwale. Aby uzyskać informacje na temat innych rozkładów próbkowania, zobacz [piecewise_linear_distribution klasa i](../standard-library/piecewise-linear-distribution-class.md) klasa [piecewise_constant_distribution](../standard-library/piecewise-constant-distribution-class.md).
+Ta dystrybucja próbkowania ma jednolite interwały ze jednorodnym prawdopodobieństwem w każdym interwale. Aby uzyskać informacje na temat innych dystrybucji próbkowania, zobacz [Piecewise_linear_distribution klasy](../standard-library/piecewise-linear-distribution-class.md) i [klasy piecewise_constant_distribution](../standard-library/piecewise-constant-distribution-class.md).
 
-Poniższa tabela zawiera łącza do artykułów o poszczególnych członkach:
+Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków:
 
 |||
 |-|-|
 |[discrete_distribution](#discrete_distribution)|`discrete_distribution::param`|
 |`discrete_distribution::operator()`|[param_type](#param_type)|
 
-Funkcja `vector<double> probabilities()` właściwości zwraca indywidualne prawdopodobieństwa dla każdej wygenerowanej liczby całkowitej.
+Funkcja Property `vector<double> probabilities()` zwraca poszczególne prawdopodobieństwa dla każdej wygenerowanej liczby całkowitej.
 
-Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [ \<losowe>](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [\<random>](../standard-library/random.md) .
 
 ## <a name="example"></a>Przykład
 
@@ -171,11 +171,11 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe>
+**Nagłówek:**\<random>
 
 **Przestrzeń nazw:** std
 
-## <a name="discrete_distributiondiscrete_distribution"></a><a name="discrete_distribution"></a>discrete_distribution::discrete_distribution
+## <a name="discrete_distributiondiscrete_distribution"></a><a name="discrete_distribution"></a>discrete_distribution::d iscrete_distribution
 
 Konstruuje dystrybucję.
 
@@ -200,46 +200,46 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszyW*\
-Pierwszy iterator na liście, z którego można skonstruować dystrybucję.
+*firstW*\
+Pierwszy iterator na liście, z którego ma zostać skonstruowany rozkład.
 
 *lastW*\
-Ostatni iterator na liście, z którego można skonstruować dystrybucję (niewli włącznie, ponieważ iteratory używają pustego elementu na końcu).
+Ostatni iterator na liście, z którego ma zostać skonstruowany rozkład (niewłączny, ponieważ Iteratory używają pustego elementu na końcu).
 
-*lista wag*\
-[initializer_list,](../cpp/initializers.md) z którego można skonstruować dystrybucję.
+*weightlist*\
+[Initializer_list](../cpp/initializers.md) , z którego ma zostać skonstruowany rozkład.
 
-*Liczba*\
-Liczba elementów w zakresie dystrybucji. Jeśli `count==0`, odpowiednik domyślnego konstruktora (zawsze generuje zero).
+*liczbą*\
+Liczba elementów w zakresie dystrybucji. Jeśli `count==0` , odpowiednik konstruktora domyślnego (zawsze generuje zero).
 
-*Niskie*\
+*małą*\
 Najniższa wartość w zakresie dystrybucji.
 
-*Wysokiej*\
+*wysokowydajn*\
 Najwyższa wartość w zakresie dystrybucji.
 
-*wagafunc*\
-Obiekt reprezentujący funkcję prawdopodobieństwa dla rozkładu. Zarówno parametr, jak i zwracana wartość muszą być konwertowane na **podwójną**.
+*weightfunc*\
+Obiekt reprezentujący funkcję prawdopodobieństwa dla dystrybucji. Zarówno parametr, jak i wartość zwracana muszą być konwertowane na **`double`** .
 
-*Parm*\
-Struktura `param_type` używana do konstruowania dystrybucji.
+*parametr*\
+`param_type`Struktura używana do konstruowania rozkładu.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślny konstruktor konstruuje obiekt, którego wartość przechowywane prawdopodobieństwo ma jeden element o wartości 1. Spowoduje to dystrybucji, która zawsze generuje zero.
+Konstruktor domyślny konstruuje obiekt, którego przechowywana wartość prawdopodobieństwa ma jeden element o wartości 1. Spowoduje to dystrybucję, która zawsze generuje zero.
 
-Konstruktor zakresu iteratora, który ma parametry *firstW* i *lastW* konstruuje obiekt rozkładu przy użyciu wartości wagi pobranych z iteratorów w sekwencji interwałów [*firstW*, *lastW*).
+Konstruktor zakresu iteratora, który ma parametry *firstW* i *lastW* konstruuje obiekt dystrybucji przy użyciu wartości wag pobranych z iteratorów w sekwencji interwału [*firstW*, *lastW*).
 
-Konstruktor listy inicjatorów, który ma parametr *listy wagowej,* konstruuje obiekt rozkładu z wagami z *listy wagowej*listy inicjatorów .
+Konstruktor listy inicjatorów, który ma parametr *weightlist* konstruuje obiekt dystrybucji z odważnikami z listy inicjatorów *weightlist*.
 
-Konstruktor, który ma *count*, *low*, *high*, i *weightfunc* parametry konstruuje obiekt rozkładu zainicjowany na podstawie tych reguł:
+Konstruktor, który ma parametry *Count*, *Low*, *High*i *weightfunc* , konstruuje obiekt dystrybucji zainicjowany na podstawie następujących reguł:
 
-- Jeśli *count* < 1, **n** = 1 i jako takie jest odpowiednikiem domyślnego konstruktora, zawsze generowania zero.
-- Jeśli *liczba* > 0, **n** = *count*. Pod **warunkiem, że d** = (*wysoki* - *niski)*/ **n** jest większy od zera, przy użyciu **d** jednolitych podzakładów, każda waga jest przypisana w następujący sposób: `weight[k] = weightfunc(x)`, gdzie **x** = *niskie* + **k** * **d** + **d** / 2, dla **k** = 0, ..., **n** - 1.
+- Jeśli *licznik* < 1, **n** = 1, i jako taki jest równoważny z konstruktorem domyślnym, zawsze generuje zero.
+- Jeśli *Liczba* > 0, **n**  =  *Count*. Podana wartość **d** =*(wysoka*  -  *niska*)/ **n** jest większa od zera, przy użyciu jednolitych podzakresów **d** , każda waga jest przypisywana w następujący sposób: `weight[k] = weightfunc(x)` , gdzie **x**  =  *niska*  +  **k**  *  **d**  +  **d** /2, dla **k** = 0,..., **n** -1.
 
-Konstruktor, który `param_type` ma parametr *parm* konstruuje obiekt dystrybucji przy użyciu *parm* jako przechowywanej struktury parametrów.
+Konstruktor, który ma `param_type` parametr *parametr* konstruuje obiekt dystrybucji przy użyciu *parametr* jako struktury przechowywanego parametru.
 
-## <a name="discrete_distributionparam_type"></a><a name="param_type"></a>discrete_distribution::param_type
+## <a name="discrete_distributionparam_type"></a><a name="param_type"></a>discrete_distribution::p aram_type
 
 Przechowuje wszystkie parametry dystrybucji.
 
@@ -268,34 +268,34 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*pierwszyW*\
-Pierwszy iterator na liście, z którego można skonstruować dystrybucję.
+*firstW*\
+Pierwszy iterator na liście, z którego ma zostać skonstruowany rozkład.
 
 *lastW*\
-Ostatni iterator na liście, z którego można skonstruować dystrybucję (niewli włącznie, ponieważ iteratory używają pustego elementu na końcu).
+Ostatni iterator na liście, z którego ma zostać skonstruowany rozkład (niewłączny, ponieważ Iteratory używają pustego elementu na końcu).
 
-*lista wag*\
-[initializer_list,](../cpp/initializers.md) z którego można skonstruować dystrybucję.
+*weightlist*\
+[Initializer_list](../cpp/initializers.md) , z którego ma zostać skonstruowany rozkład.
 
-*Liczba*\
-Liczba elementów w zakresie dystrybucji. Jeśli *liczba* wynosi 0, jest to równoważne domyślnego konstruktora (zawsze generuje zero).
+*liczbą*\
+Liczba elementów w zakresie dystrybucji. Jeśli *Liczba* jest równa 0, jest to odpowiednik domyślnego konstruktora (zawsze generuje zero).
 
-*Niskie*\
+*małą*\
 Najniższa wartość w zakresie dystrybucji.
 
-*Wysokiej*\
+*wysokowydajn*\
 Najwyższa wartość w zakresie dystrybucji.
 
-*wagafunc*\
-Obiekt reprezentujący funkcję prawdopodobieństwa dla rozkładu. Zarówno parametr, jak i zwracana wartość muszą być konwertowane na **podwójną**.
+*weightfunc*\
+Obiekt reprezentujący funkcję prawdopodobieństwa dla dystrybucji. Zarówno parametr, jak i wartość zwracana muszą być konwertowane na **`double`** .
 
-*Prawo*\
-Obiekt `param_type` do porównania z tym.
+*Kliknij*\
+Obiekt, który `param_type` ma zostać porównany.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten pakiet parametrów `operator()` można przekazać do generowania wartości zwracanej.
+Ten pakiet parametrów może zostać przesłany do `operator()` programu w celu wygenerowania wartości zwracanej.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[\<losowe>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

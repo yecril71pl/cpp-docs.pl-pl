@@ -7,12 +7,12 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: 4df83e944552fd6c0d2482efa72883d87cd45f8c
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 5bdd6cd81051d224714dd66d4604cbdec4ddb552
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140654"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217886"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Wskazówki: korzystanie ze złączy w celu zapobiegania zakleszczeniom
 
@@ -26,7 +26,7 @@ Przed rozpoczęciem tego instruktażu zapoznaj się z następującymi tematami:
 
 - [Agenci asynchroniczni](../../parallel/concrt/asynchronous-agents.md)
 
-- [Przewodnik: tworzenie aplikacji opartej o agentów](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
+- [Przewodnik: Tworzenie aplikacji opartej na agencie](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
 
 - [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)
 
@@ -34,7 +34,7 @@ Przed rozpoczęciem tego instruktażu zapoznaj się z następującymi tematami:
 
 - [Struktury danych synchronizacji](../../parallel/concrt/synchronization-data-structures.md)
 
-## <a name="top"></a>Poszczególne
+## <a name="sections"></a><a name="top"></a>Poszczególne
 
 Ten Instruktaż zawiera następujące sekcje:
 
@@ -44,25 +44,25 @@ Ten Instruktaż zawiera następujące sekcje:
 
 - [Używanie sprzężenia w celu zapobiegania zakleszczeniom](#solution)
 
-## <a name="problem"></a>Problem z rekomendowanych lokali ucztujących
+## <a name="the-dining-philosophers-problem"></a><a name="problem"></a>Problem z rekomendowanych lokali ucztujących
 
 Problem z rekomendowanych lokali ucztujących ilustruje, jak zakleszczenie występuje w aplikacji. W tym problemie pięć ucztujących znajduje się w postaci okrągłej tabeli. Każdy Philosopher alternatywy między myśliją i jedzenia. Każdy Philosopher musi udostępnić Chopstick z sąsiadem po lewej stronie, a inne Chopstick z sąsiadem z prawej strony. Na poniższej ilustracji przedstawiono ten układ.
 
-![Problem z rekomendowanych lokali ucztujących](../../parallel/concrt/media/dining_philosophersproblem.png "Problem ucztujących filozofów")
+![Problem z rekomendowanych lokali ucztujących](../../parallel/concrt/media/dining_philosophersproblem.png "Problem z rekomendowanych lokali ucztujących")
 
 Do Eat, Philosopher musi przechowywać dwie Chopsticks. Jeśli każdy Philosopher ma tylko jeden Chopstick i oczekuje na inny, a następnie Philosopher nie może być Eat i wszystkie zablokować dostęp.
 
 [[Top](#top)]
 
-## <a name="deadlock"></a>Implementacja algorytmie
+## <a name="a-nave-implementation"></a><a name="deadlock"></a>Implementacja algorytmie
 
-W poniższym przykładzie przedstawiono implementację algorytmie problemu ucztujących rekomendowanych lokali. Klasa `philosopher`, która wynika z [współbieżności:: Agent](../../parallel/concrt/reference/agent-class.md), umożliwia każdemu Philosopher działania niezależnie. W przykładzie zastosowano współdzieloną tablicę obiektów [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) , aby nadać każdemu obiektowi `philosopher`emu wyłączny dostęp do pary Chopsticks.
+W poniższym przykładzie przedstawiono implementację algorytmie problemu ucztujących rekomendowanych lokali. `philosopher`Klasa, która pochodzi od [concurrency:: Agent](../../parallel/concrt/reference/agent-class.md), umożliwia każdemu Philosopher działania niezależnie. W przykładzie jest używany współdzielona tablica obiektów [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) , aby zapewnić każdemu `philosopher` obiektowi wyłączny dostęp do pary Chopsticks.
 
-Aby powiązać implementację z ilustracją, Klasa `philosopher` reprezentuje jeden Philosopher. Zmienna `int` reprezentuje każdy Chopstick. Obiekty `critical_section` stanowią posiadaczy Chopsticks. Metoda `run` symuluje życie Philosopher. Metoda `think` symuluje czynność działania, a metoda `eat` symuluje działanie jedzenia.
+Aby powiązać implementację z ilustracją, `philosopher` Klasa reprezentuje jeden Philosopher. **`int`** Zmienna reprezentuje każdy Chopstick. Obiekty są takie same `critical_section` jak posiadacze Chopsticks. `run`Metoda symuluje życie Philosopher. `think`Metoda symuluje czynność działania, a `eat` Metoda symuluje czynność jedzenia.
 
-Obiekt `philosopher` blokuje obydwie `critical_section` obiekty w celu symulowania usuwania Chopsticks z posiadaczy przed wywołaniem metody `eat`. Po wywołaniu `eat`obiekt `philosopher` zwróci Chopsticks do posiadaczy przez ustawienie obiektów `critical_section` z powrotem do stanu odblokowany.
+`philosopher`Obiekt blokuje oba `critical_section` obiekty, aby symulować usuwanie Chopsticks z posiadaczy przed wywołaniem `eat` metody. Po wywołaniu `eat` , `philosopher` obiekt zwraca Chopsticks do posiadaczy przez ustawienie `critical_section` obiektów z powrotem do stanu odblokowany.
 
-Metoda `pickup_chopsticks` ilustruje, gdzie może wystąpić zakleszczenie. Jeśli każdy `philosopher` obiektu uzyska dostęp do jednego z blokad, nie będzie można kontynuować `philosopher` obiektu, ponieważ inne blokady są kontrolowane przez inny obiekt `philosopher`.
+`pickup_chopsticks`Metoda pokazuje, gdzie może wystąpić zakleszczenie. Jeśli każdy `philosopher` obiekt uzyska dostęp do jednego z blokad, żaden obiekt nie `philosopher` może kontynuować, ponieważ druga blokada jest kontrolowana przez inny `philosopher` obiekt.
 
 ### <a name="example"></a>Przykład
 
@@ -70,21 +70,21 @@ Metoda `pickup_chopsticks` ilustruje, gdzie może wystąpić zakleszczenie. Jeś
 
 ### <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `philosophers-deadlock.cpp` a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie, `philosophers-deadlock.cpp` a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
 
-> **CL. exe/EHsc Philosophers-Deadlock. cpp**
+> **cl.exe/EHsc Philosophers-Deadlock. cpp**
 
 [[Top](#top)]
 
-## <a name="solution"></a>Używanie sprzężenia w celu zapobiegania zakleszczeniom
+## <a name="using-join-to-prevent-deadlock"></a><a name="solution"></a>Używanie sprzężenia w celu zapobiegania zakleszczeniom
 
 W tej sekcji pokazano, jak używać buforów komunikatów i funkcji przekazywania komunikatów, aby wyeliminować prawdopodobieństwo zakleszczenia.
 
-Aby powiązać ten przykład do wcześniejszego, Klasa `philosopher` zastępuje każdy obiekt `critical_section` przy użyciu obiektu [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) i obiektu `join`. Obiekt `join` służy jako arbiter, który dostarcza Chopsticks do Philosopher.
+Aby powiązać ten przykład z wcześniejszym, `philosopher` Klasa zastępuje każdy obiekt za `critical_section` pomocą obiektu [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) i `join` obiektu. `join`Obiekt służy jako arbiter, który dostarcza Chopsticks do Philosopher.
 
-Ten przykład używa klasy `unbounded_buffer`, ponieważ gdy obiekt docelowy otrzymuje komunikat z obiektu `unbounded_buffer`, komunikat zostanie usunięty z kolejki komunikatów. Dzięki temu obiekt `unbounded_buffer`, który przechowuje komunikat wskazujący, że Chopstick jest dostępny. Obiekt `unbounded_buffer`, który nie zawiera żadnego komunikatu wskazuje, że jest używany Chopstick.
+Ten przykład używa `unbounded_buffer` klasy, ponieważ gdy obiekt docelowy otrzymuje komunikat z `unbounded_buffer` obiektu, wiadomość zostanie usunięta z kolejki komunikatów. Umożliwia to `unbounded_buffer` obiektowi, który przechowuje komunikat wskazujący, że Chopstick jest dostępny. `unbounded_buffer`Obiekt, który nie zawiera komunikatu, wskazuje, że Chopstick jest używany.
 
-W tym przykładzie używa obiektu niezachłanne `join`, ponieważ sprzężenie inne niż zachłanne powoduje, że każdy obiekt `philosopher` ma dostęp do obu Chopsticks tylko wtedy, gdy oba obiekty `unbounded_buffer` zawierają komunikat. Zachłanne Join nie zapobiega zakleszczeniu, ponieważ sprzężenie zachłanne akceptuje komunikaty zaraz po ich udostępnieniu. Zakleszczenie może wystąpić, jeśli wszystkie obiekty zachłanne `join` będą odbierać jeden z komunikatów, ale czekają na to, aby pozostałe elementy były dostępne.
+W tym przykładzie używa obiektu innego niż zachłanne, `join` ponieważ sprzężenie inne niż zachłanne zapewnia każdy `philosopher` dostęp do obiektu zarówno do Chopsticks, gdy oba `unbounded_buffer` obiekty zawierają komunikat. Zachłanne Join nie zapobiega zakleszczeniu, ponieważ sprzężenie zachłanne akceptuje komunikaty zaraz po ich udostępnieniu. Zakleszczenie może wystąpić, jeśli wszystkie `join` obiekty zachłanne odbierają jeden z komunikatów, ale czekają na to, że inne staną się dostępne.
 
 Aby uzyskać więcej informacji na temat sprzężeń zachłanne i innych niż zachłanne, a różnice między różnymi typami buforów komunikatów, zobacz [asynchroniczne bloki komunikatów](../../parallel/concrt/asynchronous-message-blocks.md).
 
@@ -94,33 +94,33 @@ Aby uzyskać więcej informacji na temat sprzężeń zachłanne i innych niż za
 
 [!code-cpp[concrt-philosophers-deadlock#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_2.cpp)]
 
-1. Zmień typ `_left` i `_right` członków danych klasy `philosopher` na `unbounded_buffer`.
+1. Zmień typ `_left` i `_right` składowe danych `philosopher` klasy na `unbounded_buffer` .
 
 [!code-cpp[concrt-philosophers-join#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_3.cpp)]
 
-1. Zmodyfikuj konstruktora `philosopher`, aby `unbounded_buffer` obiekty jako parametry.
+1. Zmodyfikuj `philosopher` konstruktora, aby przyjmować `unbounded_buffer` obiekty jako parametry.
 
 [!code-cpp[concrt-philosophers-join#3](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_4.cpp)]
 
-1. Zmodyfikuj metodę `pickup_chopsticks`, aby użyć obiektu niezachłanne `join` do odbierania komunikatów z buforów komunikatów dla obu Chopsticks.
+1. Zmodyfikuj `pickup_chopsticks` metodę, aby użyć obiektu innego niż zachłanne `join` do odbierania komunikatów z buforów komunikatów dla obu Chopsticks.
 
 [!code-cpp[concrt-philosophers-join#4](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_5.cpp)]
 
-1. Zmodyfikuj metodę `putdown_chopsticks`, aby zwolnić dostęp do Chopsticks, wysyłając komunikat do buforów komunikatów dla obu Chopsticks.
+1. Zmodyfikuj `putdown_chopsticks` metodę, aby zwolnić dostęp do Chopsticks, wysyłając komunikat do buforów komunikatów dla obu Chopsticks.
 
 [!code-cpp[concrt-philosophers-join#5](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_6.cpp)]
 
-1. Zmodyfikuj metodę `run`, aby przechowywać wyniki metody `pickup_chopsticks` i przekazać te wyniki do metody `putdown_chopsticks`.
+1. Zmodyfikuj `run` metodę, aby trzymać wyniki `pickup_chopsticks` metody i przekazać te wyniki do `putdown_chopsticks` metody.
 
 [!code-cpp[concrt-philosophers-join#6](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_7.cpp)]
 
-1. Zmodyfikuj deklarację zmiennej `chopsticks` w funkcji `wmain`, aby była tablicą `unbounded_buffer` obiektów, które zawierają jeden komunikat.
+1. Zmodyfikuj deklarację `chopsticks` zmiennej w funkcji w taki `wmain` sposób, aby była tablicą `unbounded_buffer` obiektów, które zawierają jeden komunikat.
 
 [!code-cpp[concrt-philosophers-join#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_8.cpp)]
 
 ### <a name="description"></a>Opis
 
-Poniżej przedstawiono zakończono przykład, który używa obiektów zachłanne `join`, aby wyeliminować ryzyko zakleszczenia.
+Poniżej przedstawiono zakończono przykład, w którym są używane obiekty inne niż zachłanne, `join` Aby wyeliminować ryzyko zakleszczenia.
 
 ### <a name="example"></a>Przykład
 
@@ -138,15 +138,15 @@ plato ate 50 times.
 
 ### <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `philosophers-join.cpp` a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
+Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie, `philosophers-join.cpp` a następnie uruchom następujące polecenie w oknie wiersza polecenia programu Visual Studio.
 
-> **CL. exe/EHsc Philosophers-Join. cpp**
+> **cl.exe/EHsc Philosophers-Join. cpp**
 
 [[Top](#top)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Środowisko uruchomieniowe współbieżności — wskazówki](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
+[Instruktaże środowisko uruchomieniowe współbieżności](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Agenci asynchroniczni](../../parallel/concrt/asynchronous-agents.md)<br/>
 [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

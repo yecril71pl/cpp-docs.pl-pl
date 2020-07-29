@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-ms.openlocfilehash: c1972236e30be4e6ca738b606b00398f5c7860e0
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: e45856702eef7f24595d10b81f39047d8f9a08b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754855"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221006"
 ---
 # <a name="compiler-warning-level-1-c4291"></a>Ostrzeżenie kompilatora (poziom 1) C4291
 
-"deklaracja": nie znaleziono usuwania operatora pasującego; pamięć nie zostanie zwolniona, jeśli inicjalizacja zda wyjątek
+"Deklaracja": nie znaleziono pasującego operatora delete; pamięć nie zostanie zwolniona, jeśli Inicjalizacja zgłosi wyjątek
 
-Miejsce [docelowe nowe](../../cpp/new-operator-cpp.md) jest używane, dla którego nie ma miejsca docelowego [usunąć](../../cpp/delete-operator-cpp.md).
+Zostanie użyte [nowe](../../cpp/new-operator-cpp.md) miejsce umieszczenia, dla którego nie ma żadnego [usunięcia](../../cpp/delete-operator-cpp.md)umieszczania.
 
-Gdy pamięć jest przydzielana dla obiektu z **operatorem nowym,** wywoływany jest konstruktor obiektu. Jeśli konstruktor zgłasza wyjątek, wszelkie pamięci, która została przydzielona dla obiektu powinny być cofnięte alokacji. Nie może to mieć miejsca, chyba że istnieje funkcja **usuwania** operatora, która pasuje do **nowego**operatora .
+Po przydzieleniu pamięci dla obiektu z operatorem **`new`** wywoływana jest Konstruktor obiektu. Jeśli Konstruktor zgłasza wyjątek, wszystkie pamięci, które zostały przydzieloną dla tego obiektu, powinny zostać cofnięte. Nie można tego zrobić, chyba że **`delete`** istnieje funkcja operatora zgodna z operatorem **`new`** .
 
-Jeśli operator **jest nowy** bez żadnych dodatkowych argumentów i skompilować z [/GX](../../build/reference/gx-enable-exception-handling.md), [/EHs](../../build/reference/eh-exception-handling-model.md)lub /EHa opcje, aby włączyć obsługę wyjątków, kompilator wygeneruje kod do wywołania operatora **delete,** jeśli konstruktor zgłasza wyjątek.
+W przypadku użycia operatora **`new`** bez dodatkowych argumentów i kompilowania z opcjami [/GX](../../build/reference/gx-enable-exception-handling.md), [/EHS](../../build/reference/eh-exception-handling-model.md)lub/EHa w celu włączenia obsługi wyjątków, kompilator generuje kod do operatora wywołania, **`delete`** Jeśli Konstruktor zgłosi wyjątek.
 
-Jeśli używasz formularza umieszczania **nowego** operatora (formularz z argumentami oprócz rozmiaru alokacji) i konstruktor obiektu zgłasza wyjątek, kompilator nadal będzie generować kod do wywołania **usunięcia**operatora; ale zrobi to tylko wtedy, gdy istnieje formularz umieszczania **usunięcia** operatora, który pasuje do formularza umieszczania **nowego** operatora, który przydzielił pamięć. Przykład:
+Jeśli używasz formy umieszczania **`new`** operatora (formularz z argumentami (oprócz rozmiaru alokacji), a Konstruktor obiektu zgłasza wyjątek, kompilator nadal będzie generował kod do wywołania operatora, **`delete`** ale tylko wtedy, gdy formularz położenia operatora **`delete`** istnieje, zgodny z formularzem umieszczania operatora **`new`** , który przydzielił pamięć. Na przykład:
 
 ```cpp
 // C4291.cpp
@@ -74,7 +74,7 @@ int main(void)
 }
 ```
 
-Powyższy przykład generuje ostrzeżenie C4291, ponieważ nie zdefiniowano formularza umieszczania **usuwania** operatora, który pasuje do formularza umieszczania operatora **nowego**. Aby rozwiązać ten problem, wstaw poniższy kod powyżej **głównego**. Należy zauważyć, że wszystkie parametry funkcji **usuwania** przeciążonego operatora są zgodne z parametrami przeciążonego operatora **new**, z wyjątkiem pierwszego parametru.
+Powyższy przykład generuje ostrzeżenie C4291, ponieważ nie zdefiniowano formy umieszczania operatora **`delete`** , która pasuje do formy położenia operatora **`new`** . Aby rozwiązać ten problem, Wstaw poniższy kod powyżej **Main**. Należy zauważyć, że wszystkie parametry funkcji przeciążonego operatora **`delete`** są zgodne z tymi, które są przeciążone operatora **`new`** , z wyjątkiem pierwszego parametru.
 
 ```cpp
 void operator delete(void* pMem, char* pszFilename, int nLine)

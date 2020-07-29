@@ -1,5 +1,5 @@
 ---
-title: IAtlStringMgr, klasa
+title: Klasa IAtlStringMgr
 ms.date: 10/18/2018
 f1_keywords:
 - IAtlStringMgr
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: c3fabb7a7a6da4129787d219bd83b2a35fa0c4dd
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: bee9c3d27ea05a40d6835d69079fc3e0a56efb86
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746609"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219056"
 ---
-# <a name="iatlstringmgr-class"></a>IAtlStringMgr, klasa
+# <a name="iatlstringmgr-class"></a>Klasa IAtlStringMgr
 
-Ta klasa reprezentuje interfejs `CStringT` do menedżera pamięci.
+Ta klasa reprezentuje interfejs `CStringT` Menedżera pamięci.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,25 +37,25 @@ __interface IAtlStringMgr
 
 |||
 |-|-|
-|[Przydzielić](#allocate)|Wywołanie tej metody, aby przydzielić nową strukturę danych ciągu.|
-|[Klonowanie](#clone)|Wywołanie tej metody, aby zwrócić wskaźnik do nowego `CSimpleStringT`menedżera ciągów do użycia z innym wystąpieniem .|
-|[Bezpłatna](#free)|Wywołanie tej metody, aby zwolnić strukturę danych ciągu.|
-|[GetNilStrąk](#getnilstring)|Zwraca wskaźnik do `CStringData` obiektu używanego przez puste obiekty ciągu.|
-|[Ponowne przydzielić](#reallocate)|Wywołanie tej metody, aby ponownie przydzielić strukturę danych ciągu.|
+|[Alokacji](#allocate)|Wywołaj tę metodę, aby przydzielić nową strukturę danych ciągu.|
+|[Klonowanie](#clone)|Wywołaj tę metodę, aby zwrócić wskaźnik do nowego menedżera ciągów do użycia z innym wystąpieniem `CSimpleStringT` .|
+|[Bezpłatna](#free)|Wywołaj tę metodę, aby zwolnić strukturę danych ciągu.|
+|[GetNilString](#getnilstring)|Zwraca wskaźnik do `CStringData` obiektu używanego przez puste obiekty ciągu.|
+|[Ponowne przydzielenie](#reallocate)|Wywołaj tę metodę, aby ponownie przydzielić strukturę danych ciągu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ten interfejs zarządza pamięcią używaną przez klasy ciągów niezależne od MFC; takich jak [CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md), [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)i [CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md).
+Ten interfejs zarządza pamięcią używaną przez klasy ciągów niezależnych od MFC; takie jak [CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md), [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)i [CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md).
 
-Można również użyć tej klasy do zaimplementowania menedżera pamięci niestandardowej dla niestandardowej klasy ciągu. Aby uzyskać więcej informacji, zobacz [Zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+Można również użyć tej klasy do zaimplementowania niestandardowego menedżera pamięci dla niestandardowej klasy ciągów. Aby uzyskać więcej informacji, zobacz [Zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** atlsimpstr.h
+**Nagłówek:** atlsimpstr. h
 
-## <a name="iatlstringmgrallocate"></a><a name="allocate"></a>IAtlStringMgr::Przydziel
+## <a name="iatlstringmgrallocate"></a><a name="allocate"></a>IAtlStringMgr:: Allocate
 
-Przydziela nową strukturę danych ciągu.
+Przypisuje nową strukturę danych ciągu.
 
 ```
 CStringData* Allocate(int nAllocLength,int nCharSize) throw();
@@ -63,29 +63,29 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*nAllocLength (Niem.*<br/>
+*nAllocLength*<br/>
 Liczba znaków w nowym bloku pamięci.
 
-*nCharSize (Rozmiar)*<br/>
-Rozmiar (w bajtach) typu znaku używanego przez menedżera ciągów.
+*nCharSize*<br/>
+Rozmiar (w bajtach) typu znaku używanego przez Menedżera ciągów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do nowo przydzielonego bloku pamięci.
+Zwraca wskaźnik do nowo przydzielony blok pamięci.
 
 > [!NOTE]
-> Nie sygnalizuj alokacji nie powiodło się, zgłaszając wyjątek. Zamiast tego alokacji nie powiodło się powinny być sygnalizowane przez zwrócenie null.
+> Nie należy sygnalizować nieudanej alokacji przez wyrzucanie wyjątku. Zamiast tego niepowodzenie alokacji powinno być sygnalizowane przez zwrócenie wartości NULL.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie [IAtlStringMgr::Free](#free) lub [IAtlStringMgr::ReAllocate](#reallocate) zwolnić pamięć przydzieloną przez tę metodę.
+Wywołanie [IAtlStringMgr:: Free](#free) lub [IAtlStringMgr:: Reallocate](#reallocate) w celu zwolnienia pamięci przydzielonej przez tę metodę.
 
 > [!NOTE]
 > Aby zapoznać się z przykładami użycia, zobacz [Zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrclone"></a><a name="clone"></a>IAtlStringMgr::Klon
+## <a name="iatlstringmgrclone"></a><a name="clone"></a>IAtlStringMgr:: Clone
 
-Zwraca wskaźnik do nowego menedżera ciągów do `CSimpleStringT`użytku z innym wystąpieniem programu .
+Zwraca wskaźnik do nowego menedżera ciągów do użycia z innym wystąpieniem `CSimpleStringT` .
 
 ```
 IAtlStringMgr* Clone() throw();
@@ -97,14 +97,14 @@ Zwraca kopię `IAtlStringMgr` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Powszechnie wywoływane przez strukturę, gdy menedżer ciągów jest potrzebne dla nowego ciągu. W większości przypadków **ten** wskaźnik jest zwracany.
+Zwykle wywoływane przez platformę, gdy wymagany jest Menedżer ciągów dla nowego ciągu. W większości przypadków **`this`** zwracany jest wskaźnik.
 
-Jednak jeśli menedżer pamięci nie obsługuje używane przez `CSimpleStringT`wiele wystąpień , wskaźnik do menedżera ciągów sharable powinny być zwracane.
+Jeśli jednak Menedżer pamięci nie obsługuje użycia przez wiele wystąpień `CSimpleStringT` , należy zwrócić wskaźnik do możliwego do współdzielenia Menedżera ciągów.
 
 > [!NOTE]
 > Aby zapoznać się z przykładami użycia, zobacz [Zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrfree"></a><a name="free"></a>IAtlStringMgr::Wolny
+## <a name="iatlstringmgrfree"></a><a name="free"></a>IAtlStringMgr:: Free
 
 Zwalnia strukturę danych ciągu.
 
@@ -114,17 +114,17 @@ void Free(CStringData* pData) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Pdata*<br/>
-Wskaźnik do bloku pamięci do uwolnienia.
+*pData*<br/>
+Wskaźnik do bloku pamięci, który ma zostać zwolniony.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwalnia określony blok pamięci wcześniej przydzielony przez [Allocate](#allocate) lub [Reallocate](../../atl/reference/iatlmemmgr-class.md#reallocate).
+Zwalnia określony blok pamięci, który został wcześniej przydzielony po [przydzieleniu lub](#allocate) ponownym [przydzieleniu](../../atl/reference/iatlmemmgr-class.md#reallocate).
 
 > [!NOTE]
 > Aby zapoznać się z przykładami użycia, zobacz [Zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrgetnilstring"></a><a name="getnilstring"></a>IAtlStringGgr::GetNilString
+## <a name="iatlstringmgrgetnilstring"></a><a name="getnilstring"></a>IAtlStringMgr::GetNilString
 
 Zwraca wskaźnik do struktury danych ciągu dla pustego ciągu.
 
@@ -134,19 +134,19 @@ CStringData* GetNilString() throw();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do `CStringData` obiektu używanego do reprezentowania pustego ciągu.
+Wskaźnik do `CStringData` obiektu używany do reprezentowania pustego ciągu.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie tej funkcji, aby zwrócić reprezentację pustego ciągu.
+Wywołaj tę funkcję, aby zwrócić reprezentację pustego ciągu.
 
 > [!NOTE]
-> Podczas implementowania menedżera ciągów niestandardowych, ta funkcja nigdy nie może zakończyć się niepowodzeniem. Można to zapewnić, osadzając `CNilStringData` wystąpienie w klasie menedżera ciągów i zwracać wskaźnik do tego wystąpienia.
+> Podczas implementowania niestandardowego menedżera ciągów ta funkcja nie może kończyć się niepowodzeniem. Można to zapewnić, osadzając wystąpienie elementu `CNilStringData` w klasie Menedżera ciągów i zwracają wskaźnik do tego wystąpienia.
 
 > [!NOTE]
 > Aby zapoznać się z przykładami użycia, zobacz [Zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="iatlstringmgrreallocate"></a><a name="reallocate"></a>IAtlStringMgr::Ponowne przydzielenie
+## <a name="iatlstringmgrreallocate"></a><a name="reallocate"></a>IAtlStringMgr:: Reallocate
 
 Ponownie przydziela strukturę danych ciągu.
 
@@ -159,29 +159,29 @@ CStringData* Reallocate(
 
 ### <a name="parameters"></a>Parametry
 
-*Pdata*<br/>
-Wskaźnik do pamięci wcześniej przydzielonej przez tego menedżera pamięci.
+*pData*<br/>
+Wskaźnik do pamięci przydzielonej wcześniej przez ten Menedżer pamięci.
 
-*nAllocLength (Niem.*<br/>
+*nAllocLength*<br/>
 Liczba znaków w nowym bloku pamięci.
 
-*nCharSize (Rozmiar)*<br/>
-Rozmiar (w bajtach) typu znaku używanego przez menedżera ciągów.
+*nCharSize*<br/>
+Rozmiar (w bajtach) typu znaku używanego przez Menedżera ciągów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do początku nowo przydzielonego bloku pamięci.
+Zwraca wskaźnik do początku nowo przydzielony blok pamięci.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie tej funkcji, aby zmienić rozmiar istniejącego bloku pamięci określonego przez *pData*.
+Wywołaj tę funkcję, aby zmienić rozmiar istniejącego bloku pamięci określonego przez *pData*.
 
-Wywołanie [IAtlStringMgr::Free](#free) zwolnić pamięć przydzieloną przez tę metodę.
+Wywołaj [IAtlStringMgr:: Free](#free) , aby zwolnić pamięć przydzieloną przez tę metodę.
 
 > [!NOTE]
 > Aby zapoznać się z przykładami użycia, zobacz [Zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Klasy współdzielone ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+[Klasy udostępnione ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

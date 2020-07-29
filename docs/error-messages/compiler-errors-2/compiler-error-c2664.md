@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: 93bdac489dea0356ce3da3298cd8ed6bcb6f623c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8bb9ecef2e08e1f65a817e1a6496a421e727eb13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756009"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221123"
 ---
 # <a name="compiler-error-c2664"></a>Błąd kompilatora C2664
 
 "Function": nie można skonwertować argumentu n z "type1" na "type2"
 
-Ten problem konwersji parametrów może wystąpić w przypadku utworzenia wystąpienia klasy i próby niejawnej konwersji na Konstruktor oznaczony za pomocą słowa kluczowego `explicit`. Aby uzyskać więcej informacji na temat konwersji jawnych, zobacz [konwersje typów zdefiniowane przez użytkownika](../../cpp/user-defined-type-conversions-cpp.md).
+Ten problem konwersji parametrów może wystąpić w przypadku utworzenia wystąpienia klasy i próby niejawnej konwersji na Konstruktor oznaczony za pomocą **`explicit`** słowa kluczowego. Aby uzyskać więcej informacji na temat konwersji jawnych, zobacz [konwersje typów zdefiniowane przez użytkownika](../../cpp/user-defined-type-conversions-cpp.md).
 
-Jeśli obiekt tymczasowy jest przekazanie do funkcji, która pobiera odwołanie do obiektu jako parametr, to odwołanie musi być `const` odwołaniem.
+Jeśli obiekt tymczasowy jest przekazanie do funkcji, która pobiera odwołanie do obiektu jako parametr, odwołanie musi być **`const`** odwołaniem.
 
 Jeśli do funkcji jest przekazywany parametr, który jest typu innego niż ten, którego oczekuje funkcja, tymczasowy obiekt jest tworzony za pomocą odpowiedniego konstruktora. Ten tymczasowy obiekt jest następnie przekazywany do funkcji. W tym przypadku tymczasowy obiekt jest używany do zainicjowania odwołania. We wcześniejszych wersjach języka wszystkie odwołania można było zainicjować przez obiekty tymczasowe.
 
@@ -31,7 +31,7 @@ Aby rozwiązać C2664,
 
 C2664 może być też wygenerowany, jeśli klasa ukrywa składową w jednej z jej klas podstawowych.
 
-Aby uzyskać więcej informacji, zobacz [How to: Convert system:: String to wchar_t * lub char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
+Aby uzyskać więcej informacji, zobacz [How to: Convert system:: String to wchar_t * lub \* char](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md).
 
 ## <a name="example"></a>Przykład
 
@@ -78,7 +78,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Następny przykład demonstruje C2664 za pomocą literału ciągu do wywołania `Test`i pokazuje, jak rozwiązać ten problem. Ponieważ parametr jest odwołaniem `szString`, obiekt musi być utworzony przez odpowiedni Konstruktor. W wyniku powstaje tymczasowy obiekt, którego nie można użyć do zainicjowania odwołania.
+Następny przykład ilustruje C2664 za pomocą literału ciągu do wywołania `Test` i pokazuje, jak rozwiązać ten problem. Ponieważ parametr jest `szString` odwołaniem, obiekt musi być utworzony przez odpowiedni Konstruktor. W wyniku powstaje tymczasowy obiekt, którego nie można użyć do zainicjowania odwołania.
 
 ```cpp
 // C2664c.cpp
@@ -119,7 +119,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Kompilator wymusza C++ standardowe wymagania dotyczące stosowania `const`. Ten przykład generuje C2664:
+Kompilator wymusza standardowe wymagania dotyczące języka C++ do zastosowania **`const`** . Ten przykład generuje C2664:
 
 ```cpp
 // C2664d.cpp
@@ -232,7 +232,7 @@ library myproj1 {
 }
 ```
 
-C2664 jest również uruchamiany przy użyciu `wchar_t` podczas przenoszenia kodu z programu Visual C++ 6,0 do nowszych wersji. W programie C++ Visual 6,0 i starszych `wchar_t` była `typedef` dla `unsigned short` i dlatego została niejawnie przekonwertowana na ten typ. Po Visual C++ 6,0, `wchar_t` jest własnym wbudowanym typem, określonym w C++ standardzie i nie jest już niejawnie konwertowany na `unsigned short`. Zobacz [/Zc: wchar_t (Wchar_t jest typem natywnym)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+C2664 jest również uruchamiany przy użyciu **`wchar_t`** podczas przenoszenia kodu z Visual C++ 6,0 do nowszych wersji. W Visual C++ 6,0 i starszych **`wchar_t`** była **`typedef`** dla **`unsigned short`** i była niejawnie przekonwertowana na ten typ. Po Visual C++ 6,0, **`wchar_t`** jest własnym typem wbudowanym, jak określono w standardzie C++, i nie jest już niejawnie konwertowany na **`unsigned short`** . Zobacz [/Zc: wchar_t (Wchar_t jest typem natywnym)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ## <a name="example"></a>Przykład
 

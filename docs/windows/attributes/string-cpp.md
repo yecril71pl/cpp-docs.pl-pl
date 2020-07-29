@@ -1,21 +1,21 @@
 ---
-title: ciąg (C++ atrybut com)
+title: String (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.string
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 96d5e609130b34a4a5f35109ce691c2de470e537
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 68708cce2e167c6f40b461d52861fe4ed82be867
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166165"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213817"
 ---
 # <a name="string-c"></a>string (C++)
 
-Wskazuje **, że tablica Jednowymiarowa**, **wchar_t**, `byte` (lub równoważna) lub wskaźnik do takiej tablicy musi być traktowana jako ciąg.
+Wskazuje, że tablica Jednowymiarowa **`char`** , **`wchar_t`** , `byte` (lub równoważna) lub wskaźnik do takiej tablicy musi być traktowana jako ciąg.
 
 ## <a name="syntax"></a>Składnia
 
@@ -25,7 +25,7 @@ Wskazuje **, że tablica Jednowymiarowa**, **wchar_t**, `byte` (lub równoważna
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **String** C++ ma takie same funkcje jak atrybut MIDL [ciągu](/windows/win32/Midl/string) .
+Atrybut **C++ ma** taką samą funkcjonalność, jak atrybut MIDL [ciągu](/windows/win32/Midl/string) .
 
 ## <a name="example"></a>Przykład
 
@@ -52,13 +52,13 @@ __interface IFireTabCtrl
 |-|-|
 |**Dotyczy**|Tablica lub wskaźnik do tablicy, parametr interfejsu, metoda interfejsu|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty tablicy](array-attributes.md)<br/>
-[export](export.md)
+[wywozu](export.md)

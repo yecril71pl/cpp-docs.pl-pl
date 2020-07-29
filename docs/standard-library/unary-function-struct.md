@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unary_function class
 ms.assetid: 04c2fbdc-c1f6-48ed-b6cc-292a6d484627
-ms.openlocfilehash: deb142bb263af51bee515e445ea705bf248461b5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: a38a22abe4381afd45948e56d46c54f39028517d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243486"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217379"
 ---
-# <a name="unaryfunction-struct"></a>unary_function — Struktura
+# <a name="unary_function-struct"></a>unary_function — Struktura
 
-Pusty podstawowej struktury, która definiuje typy, które mogą być dziedziczone przez klasy pochodne, który dostarcza obiekt funkcji jednoargumentowy.
+Pusta struktura podstawowa, która definiuje typy, które mogą być dziedziczone przez klasy pochodne, które udostępniają jednoargumentowy obiekt funkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,9 +29,9 @@ struct unary_function
 
 ## <a name="remarks"></a>Uwagi
 
-Struktura szablonu służy jako podstawowa dla klas definiujących funkcji składowej typu formularza **element result_type**`operator()`( **constargument_type &** ) **const**.
+Struktura szablonu służy jako podstawa dla klas, które definiują funkcję członkowską formularza **result_type** `operator()` ( **constargument_type&**) **`const`** .
 
-Wszystkie takie funkcje pochodne jednoargumentowy może odwoływać się do ich typ Jedyny argument jako **argument_type** i ich typ zwrotu jako **element result_type**.
+Wszystkie takie pochodne funkcje jednoargumentowe mogą odwoływać się do ich jedynego typu argumentu jako **argument_type** i ich typu zwracanego jako **result_type**.
 
 ## <a name="example"></a>Przykład
 

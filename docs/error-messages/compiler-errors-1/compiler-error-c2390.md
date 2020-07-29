@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2390
 ms.assetid: 06b749ee-d072-4db1-b229-715f2c0728b5
-ms.openlocfilehash: 515e2e151d27dd2eb84fc1dc71b9197b36b14cbb
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 48012c0fe31b2017cad29cc98992c9b1121efa7c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74745047"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221188"
 ---
 # <a name="compiler-error-c2390"></a>Błąd kompilatora C2390
 
@@ -21,7 +21,7 @@ Klasa magazynu nie jest prawidłowa dla identyfikatora zakresu globalnego. Domy�
 
 Możliwe rozwiązania:
 
-- Jeśli identyfikator jest funkcją, zadeklaruj ją z magazynem `extern`.
+- Jeśli identyfikator jest funkcją, zadeklaruj ją z **`extern`** magazynem.
 
 - Jeśli identyfikator jest parametrem formalnym lub zmienną lokalną, zadeklaruj go za pomocą automagazynu.
 

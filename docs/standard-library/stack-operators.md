@@ -1,5 +1,5 @@
 ---
-title: Operatory&gt; stosu &lt;
+title: '&lt;&gt;Operatory stosu'
 ms.date: 11/04/2016
 f1_keywords:
 - stack/std::operator!=
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (stack)
 - std::operator&lt;= (stack)
 - std::operator== (stack)
-ms.openlocfilehash: 169698d30edd4a7995cb05e1909c1ffc38b0b6ef
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ac694e517279e43a501bb8289544e5da5ddba72b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419435"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217418"
 ---
-# <a name="ltstackgt-operators"></a>Operatory&gt; stosu &lt;
+# <a name="ltstackgt-operators"></a>&lt;&gt;Operatory stosu
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 Testuje, czy obiekt stosu po lewej stronie operatora nie jest równy obiektowi stosu po prawej stronie.
 
@@ -35,15 +35,15 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `stack`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `stack`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli stosy lub stosy nie są równe; **Fałsz** , jeśli stosy lub stosy są równe.
+**`true`** Jeśli stosy lub stosy nie są równe; **`false`** Jeśli stosy lub stosy są równe.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -90,7 +90,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_lt"></a>&lt; operatora
+## <a name="operatorlt"></a><a name="op_lt"></a>zakład&lt;
 
 Testuje, czy obiekt stosu po lewej stronie operatora jest mniejszy niż obiekt stosu po prawej stronie.
 
@@ -100,15 +100,15 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `stack`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `stack`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli stos po lewej stronie operatora jest mniejszy od i nie jest równy stosowi po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli stos po lewej stronie operatora jest mniejszy niż i nie jest równy stosowi po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -174,7 +174,7 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).
 ```
 
-## <a name="op_lt_eq"></a>&lt;operatora =
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>zakład&lt;=
 
 Testuje, czy obiekt stosu po lewej stronie operatora jest mniejszy niż lub równy obiektowi stosu po prawej stronie.
 
@@ -184,15 +184,15 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `stack`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `stack`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli stos po lewej stronie operatora jest mniejszy lub równy stosowi po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli stos po lewej stronie operatora jest mniejszy lub równy stosowi po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -241,7 +241,7 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 Testuje, czy obiekt stosu po lewej stronie operatora jest równy obiektowi stosu po prawej stronie.
 
@@ -251,15 +251,15 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `stack`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `stack`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli stosy lub stosy są równe; **Fałsz** , jeśli stosy lub stosy nie są równe.
+**`true`** Jeśli stosy lub stosy są równe; **`false`** Jeśli stosy lub stosy nie są równe.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -306,7 +306,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_gt"></a>&gt; operatora
+## <a name="operatorgt"></a><a name="op_gt"></a>zakład&gt;
 
 Testuje, czy obiekt stosu po lewej stronie operatora jest większy niż obiekt stosu po prawej stronie.
 
@@ -316,15 +316,15 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `stack`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `stack`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli stos po lewej stronie operatora jest większy niż i nie jest równy stosowi po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli stos po lewej stronie operatora jest większy niż i nie jest równy stosowi po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -375,7 +375,7 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.
 ```
 
-## <a name="op_gt_eq"></a>&gt;operatora =
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>zakład&gt;=
 
 Testuje, czy obiekt stosu po lewej stronie operatora jest większy niż lub równy obiektowi stosu po prawej stronie.
 
@@ -385,15 +385,15 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Parametry
 
-\ *lewo*
+*lewym*\
 Obiekt typu `stack`.
 
-*prawa*\
+*Kliknij*\
 Obiekt typu `stack`.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli stos po lewej stronie operatora jest ściśle mniejszy niż stos po prawej stronie operatora; w przeciwnym razie **false**.
+**`true`** Jeśli stos po lewej stronie operatora jest ściśle mniejszy niż stos po prawej stronie operatora; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 

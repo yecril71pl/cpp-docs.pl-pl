@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_move_constructible
 ms.assetid: d186d97b-7b89-470a-8d30-993046a83379
-ms.openlocfilehash: 7f1ccdba11f62fcbeaf54162f80f0717feaa2fa1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 115a1b6c2157a139786c0b8762a9a614bbcd6deb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455861"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217730"
 ---
-# <a name="isnothrowmoveconstructible-class"></a>is_nothrow_move_constructible — klasa
+# <a name="is_nothrow_move_constructible-class"></a>is_nothrow_move_constructible — klasa
 
-Testuje, czy typ  zawiera Konstruktor przenoszenia nothrow.
+Testuje, czy typ ma **`nothrow`** Konstruktor przenoszenia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,7 +35,7 @@ Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* ma Konstruktor pr
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 

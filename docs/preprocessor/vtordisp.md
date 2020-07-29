@@ -8,25 +8,25 @@ helpviewer_keywords:
 - pragmas, vtordisp
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
-ms.openlocfilehash: 3c676ab2bfee1b6cf3caff3ab456a4f23f2744c3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: a6ffc5c0323389d812e659ff68555a8c8c993126
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216482"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219368"
 ---
 # <a name="vtordisp-pragma"></a>vtordisp, pragma
 
-**C++Specjalne**
+**Specyficzne dla języka C++**
 
 Kontroluje dodanie ukrytego `vtordisp` elementu członkowskiego przemieszczenia konstrukcji/niszczenia.
 
 ## <a name="syntax"></a>Składnia
 
-> **#pragma vtordisp (** [ **push,** ] *n* **)** \
-> **#pragma vtordisp (pop)** \
-> **#pragma vtordisp ()** \
-> **#pragma vtordisp (** [ **push,** ] { **on** | **off** } **)**
+> **#pragma vtordisp (** [ **push,** ] *n* **)**\
+> **#pragma vtordisp (pop)**\
+> **#pragma vtordisp ()**\
+> **#pragma vtordisp (** [ **push,** ] { **on**  |  **off** } **)**
 
 ### <a name="parameters"></a>Parametry
 
@@ -37,23 +37,23 @@ Wypchnięcie bieżące `vtordisp` ustawienie na wewnętrznym stosie kompilatora 
 Usuwa górny rekord z wewnętrznego stosu kompilatora i przywraca `vtordisp` ustawienie do usuniętej wartości.
 
 *Azotan*\
-Określa nową wartość `vtordisp` ustawienia. Możliwe wartości to 0, 1 lub 2, odpowiadające `/vd0`opcjom, `/vd1`i `/vd2` kompilatora. Aby uzyskać więcej informacji, zobacz [/VD (Wyłącz przemieszczanie konstrukcji)](../build/reference/vd-disable-construction-displacements.md).
+Określa nową wartość `vtordisp` Ustawienia. Możliwe wartości to 0, 1 lub 2, odpowiadające `/vd0` `/vd1` opcjom, i `/vd2` kompilatora. Aby uzyskać więcej informacji, zobacz [/VD (Wyłącz przemieszczanie konstrukcji)](../build/reference/vd-disable-construction-displacements.md).
 
 **z**\
-`#pragma vtordisp(1)`Odpowiednik.
+Odpowiednik `#pragma vtordisp(1)` .
 
 **Logowanie**\
-`#pragma vtordisp(0)`Odpowiednik.
+Odpowiednik `#pragma vtordisp(0)` .
 
 ## <a name="remarks"></a>Uwagi
 
 Pragma **vtordisp** jest stosowana tylko do kodu, który używa wirtualnych baz. Jeśli w klasie pochodnej przeciążono funkcję wirtualną, która jest dziedziczona z wirtualnej klasy bazowej, oraz jeśli konstruktor lub destruktor klasy pochodnej wywoła tę funkcję za pomocą wskaźnika do wirtualnej klasy bazowej, kompilator może wprowadzić dodatkowe ukryte pola `vtordisp` do klas z bazami wirtualnymi.
 
-Pragma **vtordisp** ma wpływ na układ klas, które go obserwują. Opcje `/vd0`, `/vd1` i`/vd2` określają takie samo zachowanie dla kompletnych modułów. Określenie wartości 0 lub **wyłączenie** powoduje pominięcie ukrytych `vtordisp` elementów członkowskich. Wyłącz **vtordisp** tylko wtedy, gdy nie ma możliwości, że konstruktory i destruktory klasy wywołują funkcje wirtualne na obiekcie wskazywanym przez `this` wskaźnik.
+Pragma **vtordisp** ma wpływ na układ klas, które go obserwują. `/vd0`Opcje, `/vd1` i `/vd2` określają takie samo zachowanie dla kompletnych modułów. Określenie wartości 0 lub **wyłączenie** powoduje pominięcie ukrytych `vtordisp` elementów członkowskich. Wyłącz **vtordisp** tylko wtedy, gdy nie ma możliwości, że konstruktory i destruktory klasy wywołują funkcje wirtualne na obiekcie wskazywanym przez **`this`** wskaźnik.
 
-W przypadku wybrania opcji 1 lub **na**wartość domyślna włączane są ukryte `vtordisp` elementy członkowskie, w których są one potrzebne.
+W przypadku wybrania opcji 1 lub **na**wartość domyślna włączane `vtordisp` są ukryte elementy członkowskie, w których są one potrzebne.
 
-Określenie 2 włącza ukryte `vtordisp` elementy członkowskie dla wszystkich wirtualnych baz z funkcjami wirtualnymi.  `#pragma vtordisp(2)`może być konieczne zapewnienie prawidłowej wydajności **dynamic_cast** na częściowo skonstruowanym obiekcie. Aby uzyskać więcej informacji, zobacz [Ostrzeżenie kompilatora (poziom 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).
+Określenie 2 włącza ukryte `vtordisp` elementy członkowskie dla wszystkich wirtualnych baz z funkcjami wirtualnymi.  `#pragma vtordisp(2)`może być konieczne w celu zapewnienia prawidłowej wydajności **`dynamic_cast`** dla częściowo skonstruowanego obiektu. Aby uzyskać więcej informacji, zobacz [Ostrzeżenie kompilatora (poziom 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).
 
 `#pragma vtordisp()`, bez argumentów, przywraca `vtordisp` ustawienie początkowe ustawienie.
 
@@ -63,7 +63,7 @@ class GetReal : virtual public VBase { ... };
 #pragma vtordisp(pop)
 ```
 
-**ZAKOŃCZENIE C++ określonych**
+**ZAKOŃCZENIE specyficzne dla języka C++**
 
 ## <a name="see-also"></a>Zobacz także
 

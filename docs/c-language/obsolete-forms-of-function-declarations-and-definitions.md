@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
-ms.openlocfilehash: f26e79a586ea451cc51b339b5be593c2359e1f1a
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3311fc846ad0f4f80c2e3b61508edd626a13fbb2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745871"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218796"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>Przestarzałe formy deklaracji i definicji funkcji
 
@@ -26,9 +26,9 @@ double alt_style( a , real )  /* Obsolete function definition */
 }
 ```
 
-Funkcje zwracają liczbę całkowitą lub wskaźnik o takim samym rozmiarze, co `int` nie jest wymagane do posiadania deklaracji, chociaż jest zalecana deklaracja.
+Funkcje zwracają liczbę całkowitą lub wskaźnik o takim samym rozmiarze, co **`int`** nie jest wymagane do posiadania deklaracji, chociaż jest zalecana deklaracja.
 
-Aby zapewnić zgodność ze standardami ANSI C, deklaracje funkcji starego stylu przy użyciu wielokropka teraz generują błąd podczas kompilowania z opcją/za oraz ostrzeżenie poziomu 4 podczas kompilowania z/ze. Przykład:
+Aby zapewnić zgodność ze standardami ANSI C, deklaracje funkcji starego stylu przy użyciu wielokropka teraz generują błąd podczas kompilowania z opcją/za oraz ostrzeżenie poziomu 4 podczas kompilowania z/ze. Na przykład:
 
 ```cpp
 void funct1( a, ... )  /* Generates a warning under /Ze or */
@@ -49,6 +49,6 @@ Deklaracje funkcji starego stylu również generują ostrzeżenia, jeśli nastę
 
 Następna sekcja, [definicje funkcji języka C](../c-language/c-function-definitions.md), pokazuje składnię definicji funkcji, w tym składnię starego stylu. Nieterminali dla listy parametrów w składni starego stylu to *Lista identyfikatorów*.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przegląd funkcji](../c-language/overview-of-functions.md)

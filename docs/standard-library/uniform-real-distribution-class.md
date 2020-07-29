@@ -26,16 +26,16 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: 4f293f73eb1fa8a38bf06692ef5b7938faeab0d0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc003ebe9301c3648b47c796910d20096e7ef23d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367280"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217366"
 ---
 # <a name="uniform_real_distribution-class"></a>uniform_real_distribution — Klasa
 
-Generuje jednolity (każda wartość jest równie prawdopodobne) rozkład zmiennoprzecinkowy w zakresie wyjściowym, który jest wyłączny włącznie.
+Generuje jednolity (każda wartość jest równie prawdopodobna) Dystrybucja zmiennoprzecinkowa w zakresie danych wyjściowych, który jest oparty na wyłączność.
 
 ## <a name="syntax"></a>Składnia
 
@@ -71,29 +71,29 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Typ rzeczywisty*\
-Typ wyniku zmiennoprzecinkowego, domyślnie **podwoić**. Możliwe typy można znaleźć w [ \<>losowych ](../standard-library/random.md).
+*Liczba rzeczywista*\
+Typ wyniku zmiennoprzecinkowego, wartość domyślna to **`double`** . Aby zapoznać się z możliwymi typami, zobacz [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy opisuje rozkład wyłączności włącznie, który tworzy wartości określonego przez użytkownika typu współprzesłonezykowego z rozkładem, dzięki czemu każda wartość jest równie prawdopodobna. W poniższej tabeli znajdują się łącza do artykułów dotyczących poszczególnych członków.
+Szablon klasy zawiera opis dystrybucji z wyłącznym użyciem, która tworzy wartości typu całkowitego zmiennoprzecinkowego, który jest w dystrybucji, tak że każda wartość jest równie prawdopodobna. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
 ||||
 |-|-|-|
 |[uniform_real_distribution](#uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|
 |`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[param_type](#param_type)|
 
-Element członkowski `a()` właściwości zwraca aktualnie przechowywane minimum `b()` powiązane z dystrybucją, podczas gdy zwraca aktualnie przechowywane maksymalne powiązane. Dla tej klasy dystrybucyjnej te wartości minimalne i maksymalne są `min()` `max()` takie same jak te zwracane przez funkcje właściwości wspólnych i opisane w [ \<losowym temacie>.](../standard-library/random.md)
+Element członkowski właściwości `a()` zwraca aktualnie przechowywaną minimalną granicę dystrybucji, podczas gdy `b()` zwraca aktualnie przechowywaną granicę maksymalną. Dla tej klasy dystrybucji te wartości minimalne i maksymalne są takie same jak te, które są zwracane przez funkcje wspólne właściwości `min()` i `max()` opisane w [\<random>](../standard-library/random.md) temacie.
 
-Element członkowski `param()` właściwości `param_type` ustawia lub zwraca pakiet parametrów przechowywanej dystrybucji.
+Element członkowski właściwości `param()` Ustawia lub zwraca `param_type` przechowywany pakiet parametrów dystrybucji.
 
-`min()` Funkcje `max()` i element członkowski zwracają odpowiednio najmniejszy możliwy wynik i największy możliwy wynik.
+`min()`I `max()` funkcje członkowskie zwracają najmniejszy możliwy wynik i największy możliwy wynik.
 
-Funkcja `reset()` elementu członkowskiego odrzuca wszystkie buforowane wartości, dzięki czemu `operator()` wynik następnego wywołania nie zależy od żadnych wartości uzyskanych z aparatu przed wywołaniem.
+`reset()`Funkcja członkowska odrzuca wszystkie wartości pamięci podręcznej, dzięki czemu wynik następnego wywołania do `operator()` nie zależy od wartości uzyskanych z aparatu przed wywołaniem.
 
-Funkcje `operator()` członkowskie zwracają następną wygenerowaną wartość na podstawie aparatu URNG, z bieżącego pakietu parametrów lub określonego pakietu parametrów.
+`operator()`Funkcje członkowskie zwracają następną wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub z określonym pakietem parametrów.
 
-Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [ \<losowe>](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [\<random>](../standard-library/random.md) .
 
 ## <a name="example"></a>Przykład
 
@@ -174,11 +174,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe>
+**Nagłówek:**\<random>
 
 **Przestrzeń nazw:** std
 
-## <a name="uniform_real_distributionuniform_real_distribution"></a><a name="uniform_real_distribution"></a>uniform_real_distribution::uniform_real_distribution
+## <a name="uniform_real_distributionuniform_real_distribution"></a><a name="uniform_real_distribution"></a>uniform_real_distribution:: uniform_real_distribution
 
 Konstruuje dystrybucję.
 
@@ -189,24 +189,24 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*A*\
-Dolna granica dla wartości losowych, włącznie.
+*z*\
+Dolna granica wartości losowych włącznie.
 
-*B*\
-Górna granica dla wartości losowych, wyłącznych.
+*b*\
+Górna granica wartości losowych, na wyłączność.
 
-*Parm*\
-Struktura `param_type` używana do konstruowania dystrybucji.
+*parametr*\
+`param_type`Struktura używana do konstruowania rozkładu.
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:**`a < b`
 
-Pierwszy konstruktor konstruuje obiekt, którego *przechowywana* wartość posiada wartość *a* i którego przechowywana wartość *b* posiada wartość *b*.
+Pierwszy Konstruktor konstruuje obiekt, *którego przechowywana wartość utrzymuje wartość a* i *której* przechowywana wartość *b* utrzymuje wartość *b*.
 
-Drugi konstruktor tworzy obiekt, którego przechowywane parametry są inicjowane z *parm*. Można uzyskać i ustawić bieżące parametry istniejącej `param()` dystrybucji, wywołując funkcję elementu członkowskiego.
+Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
 
-## <a name="uniform_real_distributionparam_type"></a><a name="param_type"></a>uniform_real_distribution::param_type
+## <a name="uniform_real_distributionparam_type"></a><a name="param_type"></a>uniform_real_distribution::p aram_type
 
 Przechowuje wszystkie parametry dystrybucji.
 
@@ -224,21 +224,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*A*\
-Dolna granica dla wartości losowych, włącznie.
+*z*\
+Dolna granica wartości losowych włącznie.
 
-*B*\
-Górna granica dla wartości losowych, wyłącznych.
+*b*\
+Górna granica wartości losowych, na wyłączność.
 
-*Prawo*\
-Obiekt `param_type` do porównania z tym.
+*Kliknij*\
+Obiekt, który `param_type` ma zostać porównany.
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:**`a < b`
 
-Ta struktura może być przekazywana do konstruktora klasy `param()` dystrybucji w wystąpieniu, do funkcji elementu `operator()` członkowskiego, aby ustawić przechowywane parametry istniejącej dystrybucji i do użycia zamiast przechowywanych parametrów.
+Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, a także `operator()` użyć zamiast przechowywanych parametrów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[\<losowe>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

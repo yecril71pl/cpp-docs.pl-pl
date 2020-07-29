@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_integral class
 - is_integral
 ms.assetid: fe9279d0-4495-4e88-bf23-153cc6602397
-ms.openlocfilehash: a367bb06f49dd2c9c64f0c257a3573add5645efe
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a3d618b77d69f5d80736ac20304c9184c5963b25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456237"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217769"
 ---
-# <a name="isintegral-class"></a>is_integral — Klasa
+# <a name="is_integral-class"></a>is_integral — Klasa
 
 Testuje, czy typ jest całkowity.
 
@@ -34,7 +34,7 @@ Typ do zapytania.
 
 Wystąpienie predykatu typu ma wartość true, jeśli typ *ty* jest jednym z typów całkowitych lub `cv-qualified` postaci jednego z typów całkowitych, w przeciwnym razie ma wartość false.
 
-Typem całkowitym jest jeden z wartości typu **bool**, **char**, unsigned char **, wchar_t**, **Short**, unsigned **Short**, **int**, unsigned **int**, **Long**i unsigned **Long**. Ponadto w przypadku kompilatorów, które je dostarczają, typem całkowitym może być jeden z wartości typu **Long**Long, unsigned long **Long**, **__int64**i unsigned **__int64**.
+Typ całkowity to jeden z,,,,,,,,, **`bool`** **`char`** **`unsigned char`** **`signed char`** **`wchar_t`** **`short`** **`unsigned short`** **`int`** **`unsigned int`** **`long`** , i **`unsigned long`** . Ponadto w przypadku kompilatorów, które je dostarczają, typem całkowitym może być jeden z **`long long`** , **`unsigned long long`** , **`__int64`** , i **unsigned __int64**.
 
 ## <a name="example"></a>Przykład
 
@@ -70,12 +70,12 @@ is_integral<float> == false
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[< type_traits >](../standard-library/type-traits.md)\
+[<type_traits>](../standard-library/type-traits.md)\
 [Klasa is_enum](../standard-library/is-enum-class.md)\
-[is_floating_point, klasa](../standard-library/is-floating-point-class.md)
+[Klasa is_floating_point](../standard-library/is-floating-point-class.md)

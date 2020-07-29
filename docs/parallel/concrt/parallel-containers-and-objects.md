@@ -6,48 +6,48 @@ helpviewer_keywords:
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: f3fb2bb57c8bcf65de0a7f74f2992050d8257429
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dffe9b3490f52645414643ebc23ab78553abafff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363044"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213908"
 ---
 # <a name="parallel-containers-and-objects"></a>Równoległe kontenery oraz obiekty
 
-Biblioteka wzorców równoległych (PPL) zawiera kilka kontenerów i obiektów, które zapewniają bezpieczny dostęp do ich elementów.
+Biblioteka równoległych wzorców (PPL) zawiera kilka kontenerów i obiektów, które zapewniają bezpieczny wątkowy dostęp do ich elementów.
 
-Kontener *równoczesnych* zapewnia bezpieczny dostęp do najważniejszych operacji. W tym miejscu, współbieżność oznacza, że wskaźniki lub iteratory są zawsze prawidłowe. Nie jest to gwarancja inicjowania elementu lub określonej kolejności przechodzenia. Funkcjonalność tych kontenerów przypomina te, które są dostarczane przez bibliotekę standardową języka C++. Na przykład [współbieżność::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) klasa przypomina [klasę std::vector,](../../standard-library/vector-class.md) z tą `concurrent_vector` różnicą, że klasa umożliwia dołączanie elementów równolegle. Użyj równoczesnych kontenerów, gdy masz równoległy kod, który wymaga zarówno odczytu i zapisu dostępu do tego samego kontenera.
+*Współbieżny kontener* zapewnia bezpieczny dostęp współbieżności do najważniejszych operacji. W tym miejscu są zawsze ważne wskaźniki lub Iteratory, które są bezpieczne. Nie jest to gwarancja inicjalizacji elementu lub konkretnej kolejności przechodzenia. Funkcje tych kontenerów są podobne do tych, które są dostarczane przez standardową bibliotekę języka C++. Na przykład Klasa [concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) jest podobna do klasy [std:: Vector](../../standard-library/vector-class.md) , z tą różnicą, że `concurrent_vector` Klasa umożliwia równoczesne Dołączanie elementów. Używaj współbieżnych kontenerów w przypadku równoległego kodu, który wymaga dostępu do odczytu i zapisu do tego samego kontenera.
 
-*Równoczesnych obiektu* jest współużytkowana jednocześnie między składnikami. Proces, który oblicza stan równoczesnych obiektów równolegle daje taki sam wynik jak inny proces, który oblicza ten sam stan szeregowo. [Współbieżność::combinable](../../parallel/concrt/reference/combinable-class.md) klasa jest jednym z przykładów równoczesnych typów obiektów. Klasa `combinable` umożliwia równoległe wykonywanie obliczeń, a następnie łączenie tych obliczeń w wynik końcowy. Współbieżne obiekty można użyć mechanizmu synchronizacji, na przykład obiektu mutex, aby zsynchronizować dostęp do udostępnionej zmiennej lub zasobu.
+*Obiekt współbieżny* jest udostępniany jednocześnie między składnikami. Proces, który oblicza stan współbieżnego obiektu równolegle, daje ten sam wynik, co inny proces, który obliczy ten sam stan szeregowo. Klasa [concurrency:: kombinowane](../../parallel/concrt/reference/combinable-class.md) jest jednym z przykładowych typów obiektów współbieżnych. `combinable`Klasa umożliwia wykonywanie obliczeń równolegle, a następnie łączenie tych obliczeń w końcowy wynik. Używaj współbieżnych obiektów, gdy w inny sposób użyjesz mechanizmu synchronizacji, na przykład, elementu mutex, aby synchronizować dostęp do udostępnionej zmiennej lub zasobu.
 
-## <a name="sections"></a><a name="top"></a>Sekcje
+## <a name="sections"></a><a name="top"></a>Poszczególne
 
-W tym temacie opisano szczegółowo następujące równoległe kontenery i obiekty.
+W tym temacie opisano szczegóły następujących kontenerów równoległych i obiektów.
 
-Kontenery równoczesnych:
+Kontenery współbieżne:
 
 - [Klasa concurrent_vector](#vector)
 
-  - [Różnice między concurrent_vector a wektorem](#vector-differences)
+  - [Różnice między concurrent_vector i wektorem](#vector-differences)
 
-  - [Operacje bezpieczne dla współbieżności](#vector-safety)
+  - [Operacje dotyczące współbieżności](#vector-safety)
 
   - [Bezpieczeństwo wyjątków](#vector-exceptions)
 
 - [Klasa concurrent_queue](#queue)
 
-  - [Różnice między concurrent_queue a kolejką](#queue-differences)
+  - [Różnice między concurrent_queue i kolejką](#queue-differences)
 
-  - [Operacje bezpieczne dla współbieżności](#queue-safety)
+  - [Operacje dotyczące współbieżności](#queue-safety)
 
   - [Obsługa iteratora](#queue-iterators)
 
 - [Klasa concurrent_unordered_map](#unordered_map)
 
-  - [Różnice między concurrent_unordered_map a unordered_map](#map-differences)
+  - [Różnice między concurrent_unordered_map i unordered_map](#map-differences)
 
-  - [Operacje bezpieczne dla współbieżności](#map-safety)
+  - [Operacje dotyczące współbieżności](#map-safety)
 
 - [Klasa concurrent_unordered_multimap](#unordered_multimap)
 
@@ -57,7 +57,7 @@ Kontenery równoczesnych:
 
 Obiekty współbieżne:
 
-- [combinable — Klasa](#combinable)
+- [Klasa z kombinacją](#combinable)
 
   - [Metody i funkcje](#combinable-features)
 
@@ -65,102 +65,102 @@ Obiekty współbieżne:
 
 ## <a name="concurrent_vector-class"></a><a name="vector"></a>Klasa concurrent_vector
 
-[Współbieżność::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) klasa jest klasą kontenera sekwencji, która, podobnie jak [klasa std::vector,](../../standard-library/vector-class.md) umożliwia losowy dostęp do jego elementów. Klasa `concurrent_vector` umożliwia współbieżności bezpieczne dołączanie i operacje dostępu do elementów. Operacje dołączania nie unieważniają istniejących wskaźników ani iteratorów. Dostęp do iteratora i operacje przechodzenia są również bezpieczne współbieżności. W tym miejscu, współbieżność oznacza, że wskaźniki lub iteratory są zawsze prawidłowe. Nie jest to gwarancja inicjowania elementu lub określonej kolejności przechodzenia.
+[Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) Klasa jest klasą kontenera sekwencji, która podobnie jak Klasa [Vector:: wektor](../../standard-library/vector-class.md) , umożliwia losowo dostęp do jej elementów. `concurrent_vector`Klasa umożliwia bezpieczne wykonywanie operacji dołączania i dostępu do elementów. Operacje dołączania nie weryfikują istniejących wskaźników lub iteratorów. Operacje dostępu i przechodzenia iteratora są również bezpieczne dla współbieżności. W tym miejscu są zawsze ważne wskaźniki lub Iteratory, które są bezpieczne. Nie jest to gwarancja inicjalizacji elementu lub konkretnej kolejności przechodzenia.
 
-### <a name="differences-between-concurrent_vector-and-vector"></a><a name="vector-differences"></a>Różnice między concurrent_vector a wektorem
+### <a name="differences-between-concurrent_vector-and-vector"></a><a name="vector-differences"></a>Różnice między concurrent_vector i wektorem
 
-Klasa `concurrent_vector` bardzo przypomina `vector` klasę. Złożoność dołączania, dostępu do elementu i operacji dostępu `concurrent_vector` iteratora na `vector` obiekcie są takie same jak dla obiektu. Poniższe punkty ilustrują, gdzie `concurrent_vector` różni się od: `vector`
+`concurrent_vector`Klasa jest ściśle podobna do `vector` klasy. Złożoność operacji dołączania, dostępu do elementów i dostępu iteratora na `concurrent_vector` obiekcie jest taka sama jak w przypadku `vector` obiektu. Poniższe punkty ilustrują, gdzie `concurrent_vector` różnią się od `vector` :
 
-- Dołącz, dostęp do elementu, dostęp do iteratora i `concurrent_vector` operacje przechodzenia iteratora na obiekcie są bezpieczne współbieżności.
+- Operacje dołączania, dostępu do elementów, dostępu iteratora i przechodzenia iteratora do `concurrent_vector` obiektu są bezpieczne dla współbieżności.
 
-- Elementy można dodawać tylko na `concurrent_vector` końcu obiektu. Klasa `concurrent_vector` nie zapewnia `insert` metody.
+- Elementy można dodawać tylko do końca `concurrent_vector` obiektu. `concurrent_vector`Klasa nie dostarcza `insert` metody.
 
-- Obiekt `concurrent_vector` nie używa [semantyki przenoszenia](../../cpp/rvalue-reference-declarator-amp-amp.md) podczas dołączania do niego.
+- `concurrent_vector`Obiekt nie używa [semantyki przenoszenia](../../cpp/rvalue-reference-declarator-amp-amp.md) podczas dołączania do niego.
 
-- Klasa `concurrent_vector` nie zawiera `erase` lub `pop_back` metody. Podobnie `vector`jak w przypadku , użyj [clear](reference/concurrent-vector-class.md#clear) metody, aby usunąć wszystkie elementy z `concurrent_vector` obiektu.
+- `concurrent_vector`Klasa nie udostępnia `erase` `pop_back` metod lub. Podobnie jak w przypadku programu `vector` , należy użyć metody [Clear](reference/concurrent-vector-class.md#clear) , aby usunąć wszystkie elementy z `concurrent_vector` obiektu.
 
-- Klasa `concurrent_vector` nie przechowuje jego elementy ciągłe w pamięci. W związku z tym `concurrent_vector` nie można używać klasy na wszystkie sposoby, które można użyć tablicy. Na przykład dla zmiennej `concurrent_vector`o nazwie `&v[0]+2` `v` typu wyrażenie tworzy niezdefiniowane zachowanie.
+- `concurrent_vector`Klasa nie przechowuje swoich elementów w sposób ciągły w pamięci. W związku z tym nie można użyć `concurrent_vector` klasy we wszystkich sposobach, w których można użyć tablicy. Na przykład dla zmiennej o nazwie `v` typu `concurrent_vector` wyrażenie `&v[0]+2` generuje niezdefiniowane zachowanie.
 
-- Klasa `concurrent_vector` definiuje [metody grow_by](reference/concurrent-vector-class.md#grow_by) i [grow_to_at_least.](reference/concurrent-vector-class.md#grow_to_at_least) Metody te przypominają metodę [zmiany rozmiaru,](reference/concurrent-vector-class.md#resize) z tą różnicą, że są one bezpieczne współbieżności.
+- `concurrent_vector`Klasa definiuje metody [grow_by](reference/concurrent-vector-class.md#grow_by) i [grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least) . Metody te są podobne do metody [zmiany rozmiaru](reference/concurrent-vector-class.md#resize) , z tą różnicą, że są bezpieczne pod względem współbieżności.
 
-- Obiekt `concurrent_vector` nie przenosi swoich elementów podczas dołączania do niego ani zmieniania jego rozmiaru. Dzięki temu istniejące wskaźniki i iteratory pozostają prawidłowe podczas równoczesnych operacji.
+- `concurrent_vector`Obiekt nie zmienia położenia jego elementów po dołączeniu do niego lub zmiany jego rozmiaru. Dzięki temu istniejące wskaźniki i Iteratory pozostają ważne podczas współbieżnych operacji.
 
-- Środowisko wykonawcze nie definiuje wyspecjalizowanej `concurrent_vector` `bool`wersji dla typu .
+- Środowisko uruchomieniowe nie definiuje wyspecjalizowanej wersji programu `concurrent_vector` dla typu **`bool`** .
 
-### <a name="concurrency-safe-operations"></a><a name="vector-safety"></a>Operacje bezpieczne dla współbieżności
+### <a name="concurrency-safe-operations"></a><a name="vector-safety"></a>Operacje dotyczące współbieżności
 
-Wszystkie metody, które dołączyć lub zwiększyć `concurrent_vector` rozmiar obiektu lub uzyskać `concurrent_vector` dostęp do elementu w obiekcie, są współbieżności bezpieczne. W tym miejscu, współbieżność oznacza, że wskaźniki lub iteratory są zawsze prawidłowe. Nie jest to gwarancja inicjowania elementu lub określonej kolejności przechodzenia. Wyjątkiem od tej reguły `resize` jest metoda.
+Wszystkie metody, które dołączają lub zwiększają rozmiar `concurrent_vector` obiektu lub uzyskują dostęp do elementu w `concurrent_vector` obiekcie, są bezpieczne dla współbieżności. W tym miejscu są zawsze ważne wskaźniki lub Iteratory, które są bezpieczne. Nie jest to gwarancja inicjalizacji elementu lub konkretnej kolejności przechodzenia. Wyjątkiem od tej reguły jest `resize` Metoda.
 
-W poniższej tabeli przedstawiono typowe `concurrent_vector` metody i operatory, które są bezpieczne współbieżności.
+W poniższej tabeli przedstawiono typowe `concurrent_vector` metody i operatory, które są bezpieczne pod względem współbieżności.
 
 ||||
 |-|-|-|
-|[O](reference/concurrent-vector-class.md#at)|[Końcu](reference/concurrent-vector-class.md#end)|[&#91;&#93;operatora](reference/concurrent-vector-class.md#operator_at)|
-|[Rozpocząć](reference/concurrent-vector-class.md#begin)|[Przednie](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)|
-|[Wstecz](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin (rbegin)](reference/concurrent-vector-class.md#rbegin)|
-|[capacity](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[Rend](reference/concurrent-vector-class.md#rend)|
-|[Pusty](reference/concurrent-vector-class.md#empty)|[Max_size](reference/concurrent-vector-class.md#max_size)|[Rozmiar](reference/concurrent-vector-class.md#size)|
+|[w](reference/concurrent-vector-class.md#at)|[punktów](reference/concurrent-vector-class.md#end)|[&#91;&#93;operatora](reference/concurrent-vector-class.md#operator_at)|
+|[zaczną](reference/concurrent-vector-class.md#begin)|[FSB](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)|
+|[Wstecz](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin](reference/concurrent-vector-class.md#rbegin)|
+|[pojemności](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)|
+|[puste](reference/concurrent-vector-class.md#empty)|[max_size](reference/concurrent-vector-class.md#max_size)|[zmienia](reference/concurrent-vector-class.md#size)|
 
-Operacje, które środowisko wykonawcze zapewnia zgodność z biblioteką standardową `reserve`języka C++, na przykład, nie są bezpieczne współbieżności. W poniższej tabeli przedstawiono typowe metody i operatory, które nie są bezpieczne współbieżności.
+Operacje wykonywane przez środowisko uruchomieniowe zapewniające zgodność z biblioteką standardową języka C++, na przykład, `reserve` nie są bezpieczne pod względem współbieżności. W poniższej tabeli przedstawiono typowe metody i operatory, które nie są bezpieczne pod względem współbieżności.
 
 |||
 |-|-|
-|[Przypisać](reference/concurrent-vector-class.md#assign)|[Rezerwy](reference/concurrent-vector-class.md#reserve)|
-|[Wyczyść](reference/concurrent-vector-class.md#clear)|[Zmienić rozmiar](reference/concurrent-vector-class.md#resize)|
-|[operator=](reference/concurrent-vector-class.md#operator_eq)|[shrink_to_fit](reference/concurrent-vector-class.md#shrink_to_fit)|
+|[przypisać](reference/concurrent-vector-class.md#assign)|[zarezerwować](reference/concurrent-vector-class.md#reserve)|
+|[Wyczyść](reference/concurrent-vector-class.md#clear)|[Zmień rozmiar](reference/concurrent-vector-class.md#resize)|
+|[operator =](reference/concurrent-vector-class.md#operator_eq)|[shrink_to_fit](reference/concurrent-vector-class.md#shrink_to_fit)|
 
-Operacje modyfikując wartość istniejących elementów nie są bezpieczne współbieżności. Użyj obiektu synchronizacji, takiego jak [obiekt reader_writer_lock,](../../parallel/concrt/reference/reader-writer-lock-class.md) aby zsynchronizować równoczesne operacje odczytu i zapisu z tym samym elementem danych. Aby uzyskać więcej informacji o obiektach synchronizacji, zobacz [Synchronizacja struktur danych](../../parallel/concrt/synchronization-data-structures.md).
+Operacje modyfikujące wartość istniejących elementów nie są bezpieczne pod względem współbieżności. Użyj obiektu synchronizacji, takiego jak obiekt [reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) , aby synchronizować współbieżne operacje odczytu i zapisu do tego samego elementu danych. Aby uzyskać więcej informacji na temat obiektów synchronizacji, zobacz [struktury danych synchronizacji](../../parallel/concrt/synchronization-data-structures.md).
 
-Podczas konwertowania istniejącego kodu, który używa `vector` do użycia, `concurrent_vector`równoczesnych operacji może spowodować zachowanie aplikacji, aby zmienić. Rozważmy na przykład następujący program, który jednocześnie wykonuje `concurrent_vector` dwa zadania na obiekcie. Pierwsze zadanie dołącza dodatkowe elementy `concurrent_vector` do obiektu. Drugie zadanie oblicza sumę wszystkich elementów w tym samym obiekcie.
+Podczas konwersji istniejącego kodu, który używa `vector` do użycia `concurrent_vector` , współbieżne operacje mogą spowodować zmianę działania aplikacji. Rozważmy na przykład następujący program, który jednocześnie wykonuje dwa zadania na `concurrent_vector` obiekcie. Pierwsze zadanie dołącza dodatkowe elementy do `concurrent_vector` obiektu. Drugie zadanie oblicza sumę wszystkich elementów w tym samym obiekcie.
 
 [!code-cpp[concrt-vector-safety#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_1.cpp)]
 
-Mimo `end` że metoda jest współbieżność bezpieczne, równoczesnych wywołania [push_back](reference/concurrent-vector-class.md#push_back) metoda powoduje, `end` że wartość, która jest zwracana przez do zmiany. Liczba elementów, które przechodzi iteratora jest nieokreślony. W związku z tym ten program może produkować inny wynik za każdym razem, gdy go uruchomić. Gdy typ elementu nie jest trywialne, jest możliwe dla `push_back` `end` sytuacji wyścigu istnieje między i wywołania. Metoda `end` może zwrócić element, który jest przydzielony, ale nie w pełni zainicjowane.
+Chociaż `end` Metoda jest bezpieczna współbieżność, współbieżne wywołanie metody [push_back](reference/concurrent-vector-class.md#push_back) powoduje zmianę wartości zwracanej przez `end` . Liczba elementów, których przechodzenie iteratora jest nieokreślony. W związku z tym program ten może generować różne wyniki przy każdym uruchomieniu. Gdy typ elementu jest nieuproszczony, możliwe jest istnienie warunku wyścigu między `push_back` i `end` . `end`Metoda może zwrócić element, który został przydzielony, ale nie został w pełni zainicjowany.
 
 ### <a name="exception-safety"></a><a name="vector-exceptions"></a>Bezpieczeństwo wyjątków
 
-Jeśli operacja wzrostu lub przypisania zgłasza wyjątek, stan `concurrent_vector` obiektu staje się nieprawidłowy. Zachowanie `concurrent_vector` obiektu, który jest w nieprawidłowym stanie jest niezdefiniowana, chyba że określono inaczej. Jednak destruktor zawsze zwalnia pamięć, która przydziela obiekt, nawet jeśli obiekt jest w nieprawidłowym stanie.
+Jeśli operacja wzrostu lub przypisywania zgłasza wyjątek, stan `concurrent_vector` obiektu stanie się nieprawidłowy. Zachowanie `concurrent_vector` obiektu znajdującego się w nieprawidłowym stanie jest niezdefiniowane, chyba że określono inaczej. Jednakże destruktor zawsze zwalnia pamięć przydzielaną przez obiekt, nawet jeśli obiekt jest w nieprawidłowym stanie.
 
-Typ danych elementów wektorowych `T`musi spełniać następujące wymagania. W przeciwnym razie `concurrent_vector` zachowanie klasy jest niezdefiniowane.
+Typ danych elementów wektora, `T` musi spełniać poniższe wymagania. W przeciwnym razie zachowanie `concurrent_vector` klasy jest niezdefiniowane.
 
-- Destruktor nie może rzucać.
+- Destruktor nie może zgłosić.
 
-- Jeśli domyślny lub kopiuj konstruktora zgłasza, destruktor nie może być zadeklarowany przy użyciu `virtual` słowa kluczowego i musi działać poprawnie z pamięcią zainicjowaną zeru.
+- Jeśli Konstruktor Default lub Copy zgłasza, destruktor nie może być zadeklarowany za pomocą **`virtual`** słowa kluczowego i musi działać poprawnie z pamięcią zainicjowaną przez zero.
 
-[[Góra](#top)]
+[[Top](#top)]
 
 ## <a name="concurrent_queue-class"></a><a name="queue"></a>Klasa concurrent_queue
 
-[Współbieżność::concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) klasa, podobnie jak [std::queue](../../standard-library/queue-class.md) klasy, umożliwia dostęp do jego elementów z przodu i z tyłu. Klasa `concurrent_queue` umożliwia współtworza bezpieczne enqueue i dequeue operacji. W tym miejscu, współbieżność oznacza, że wskaźniki lub iteratory są zawsze prawidłowe. Nie jest to gwarancja inicjowania elementu lub określonej kolejności przechodzenia. Klasa `concurrent_queue` zapewnia również obsługę iteratora, który nie jest bezpieczny dla współbieżności.
+Klasa [concurrency:: concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) , podobnie jak Klasa [std:: Queue](../../standard-library/queue-class.md) , umożliwia dostęp do jej elementów przednich i back. `concurrent_queue`Klasa umożliwia wykonywanie operacji w kolejce i dekolejkach bezpiecznych dla współbieżności. W tym miejscu są zawsze ważne wskaźniki lub Iteratory, które są bezpieczne. Nie jest to gwarancja inicjalizacji elementu lub konkretnej kolejności przechodzenia. `concurrent_queue`Klasa zapewnia również obsługę iteratora, która nie jest bezpieczna pod kątem współbieżności.
 
-### <a name="differences-between-concurrent_queue-and-queue"></a><a name="queue-differences"></a>Różnice między concurrent_queue a kolejką
+### <a name="differences-between-concurrent_queue-and-queue"></a><a name="queue-differences"></a>Różnice między concurrent_queue i kolejką
 
-Klasa `concurrent_queue` bardzo przypomina `queue` klasę. Poniższe punkty ilustrują, gdzie `concurrent_queue` różni się od: `queue`
+`concurrent_queue`Klasa jest ściśle podobna do `queue` klasy. Poniższe punkty ilustrują, gdzie `concurrent_queue` różnią się od `queue` :
 
-- Operacje enqueue i dequeue na `concurrent_queue` obiekcie są bezpieczne współbieżności.
+- Operacje na kolejce i dequeuee na `concurrent_queue` obiekcie są bezpieczne dla współbieżności.
 
-- Klasa `concurrent_queue` zapewnia obsługę iteratora, który nie jest bezpieczny dla współbieżności.
+- `concurrent_queue`Klasa zapewnia obsługę iteratora, która nie jest bezpieczna pod kątem współbieżności.
 
-- Klasa `concurrent_queue` nie zawiera `front` lub `pop` metody. Klasa `concurrent_queue` zastępuje te metody, definiując [metodę try_pop.](reference/concurrent-queue-class.md#try_pop)
+- `concurrent_queue`Klasa nie udostępnia `front` `pop` metod lub. `concurrent_queue`Klasa zastępuje te metody, definiując metodę [try_pop](reference/concurrent-queue-class.md#try_pop) .
 
-- Klasa `concurrent_queue` nie zapewnia `back` metody. W związku z tym nie można odwołać się do końca kolejki.
+- `concurrent_queue`Klasa nie dostarcza `back` metody. W związku z tym nie można odwołać się do końca kolejki.
 
-- Klasa `concurrent_queue` zawiera [unsafe_size](reference/concurrent-queue-class.md#unsafe_size) metodę zamiast `size` metody. Metoda `unsafe_size` nie jest bezpieczna współbieżności.
+- `concurrent_queue`Klasa udostępnia metodę [unsafe_size](reference/concurrent-queue-class.md#unsafe_size) zamiast `size` metody. `unsafe_size`Metoda nie jest bezpieczna pod kątem współbieżności.
 
-### <a name="concurrency-safe-operations"></a><a name="queue-safety"></a>Operacje bezpieczne dla współbieżności
+### <a name="concurrency-safe-operations"></a><a name="queue-safety"></a>Operacje dotyczące współbieżności
 
-Wszystkie metody, które są w kolejce do `concurrent_queue` lub dequeue z obiektu są współbieżności bezpieczne. W tym miejscu, współbieżność oznacza, że wskaźniki lub iteratory są zawsze prawidłowe. Nie jest to gwarancja inicjowania elementu lub określonej kolejności przechodzenia.
+Wszystkie metody, które znajdują się w kolejce lub Dequeue z `concurrent_queue` obiektu, są bezpieczne dla współbieżności. W tym miejscu są zawsze ważne wskaźniki lub Iteratory, które są bezpieczne. Nie jest to gwarancja inicjalizacji elementu lub konkretnej kolejności przechodzenia.
 
-W poniższej tabeli przedstawiono typowe `concurrent_queue` metody i operatory, które są bezpieczne współbieżności.
+W poniższej tabeli przedstawiono typowe `concurrent_queue` metody i operatory, które są bezpieczne pod względem współbieżności.
 
 |||
 |-|-|
-|[Pusty](reference/concurrent-queue-class.md#empty)|[Push](reference/concurrent-queue-class.md#push)|
-|[Get_allocator](reference/concurrent-queue-class.md#get_allocator)|[try_pop](reference/concurrent-queue-class.md#try_pop)|
+|[puste](reference/concurrent-queue-class.md#empty)|[push](reference/concurrent-queue-class.md#push)|
+|[get_allocator](reference/concurrent-queue-class.md#get_allocator)|[try_pop](reference/concurrent-queue-class.md#try_pop)|
 
-Mimo `empty` że metoda jest bezpieczna współbieżności, jednoczesna operacja może spowodować kolejki `empty` rosnąć lub zmniejszać przed zwraca metodę.
+Chociaż `empty` Metoda jest bezpieczna współbieżność, współbieżna operacja może spowodować powiększenie lub zmniejszenie kolejki przed `empty` zwróceniem metody.
 
-W poniższej tabeli przedstawiono typowe metody i operatory, które nie są bezpieczne współbieżności.
+W poniższej tabeli przedstawiono typowe metody i operatory, które nie są bezpieczne pod względem współbieżności.
 
 |||
 |-|-|
@@ -169,147 +169,147 @@ W poniższej tabeli przedstawiono typowe metody i operatory, które nie są bezp
 
 ### <a name="iterator-support"></a><a name="queue-iterators"></a>Obsługa iteratora
 
-Zapewnia `concurrent_queue` iteratory, które nie są bezpieczne współbieżności. Zaleca się użycie tych iteratorów tylko do debugowania.
+`concurrent_queue`Zawiera Iteratory, które nie są bezpieczne pod kątem współbieżności. Zalecamy używanie tych iteratorów tylko do debugowania.
 
-Iterator `concurrent_queue` przechodzi przez elementy tylko w kierunku do przodu. W poniższej tabeli przedstawiono operatory, które obsługuje każdy iterator.
+`concurrent_queue`Iterator przechodzą elementy tylko w kierunku do przodu. W poniższej tabeli przedstawiono operatory, które są obsługiwane przez każdy iterator.
 
 |Operator|Opis|
 |--------------|-----------------|
-|`operator++`|Przejście do następnego elementu w kolejce. Ten operator jest przeciążony, aby zapewnić zarówno semantyki przyrostu wstępnego, jak i przyrostowego.|
+|`operator++`|Przechodzi do następnego elementu w kolejce. Ten operator jest przeciążony w celu zapewnienia semantyki wstępnej i przyrostowej.|
 |`operator*`|Pobiera odwołanie do bieżącego elementu.|
 |`operator->`|Pobiera wskaźnik do bieżącego elementu.|
 
-[[Góra](#top)]
+[[Top](#top)]
 
 ## <a name="concurrent_unordered_map-class"></a><a name="unordered_map"></a>Klasa concurrent_unordered_map
 
-[Współbieżność::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) klasa jest klasą kontenera zespolonego, która podobnie jak klasa [std::unordered_map](../../standard-library/unordered-map-class.md) kontroluje sekwencję różnych długości elementów typu [std::pair\<const Key, Ty>](../../standard-library/pair-structure.md). Nieurządzonych map należy potraktować jako słownik, do którego można dodać parę kluczy i wartości lub wyszukać wartość według klucza. Ta klasa jest przydatna, gdy masz wiele wątków lub zadań, które muszą jednocześnie uzyskiwać dostęp do udostępnionego kontenera, wstawić do niego lub zaktualizować go.
+[Concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) Klasa jest klasą kontenera asocjacyjnego, która podobnie jak Klasa [std:: unordered_map](../../standard-library/unordered-map-class.md) , kontroluje różnej długości sekwencje elementów typu [std::p powietrze \<const Key, Ty> ](../../standard-library/pair-structure.md). Zanotuj nieuporządkowaną mapę jako słownik, w którym można dodać parę klucz-wartość lub wyszukać wartość według klucza. Ta klasa jest przydatna w przypadku wielu wątków lub zadań, które muszą jednocześnie uzyskiwać dostęp do udostępnionego kontenera, wstawiać do niego lub aktualizować.
 
-W poniższym przykładzie przedstawiono podstawową strukturę użycia `concurrent_unordered_map`. W tym przykładzie wstawia klawisze znaków w zakresie ['a', 'i']. Ponieważ kolejność operacji jest nieokreślony, ostateczna wartość dla każdego klucza jest również nieokreślony. Jednak jest to bezpieczne, aby wykonać wstawienia równolegle.
+Poniższy przykład pokazuje podstawową strukturę przy użyciu `concurrent_unordered_map` . Ten przykład wstawia klucze znaków z zakresu ["a", "i"]. Ze względu na to, że kolejność operacji jest nieustalona, końcowa wartość dla każdego klucza również jest nieustalona. Można jednak bezpiecznie wykonać wstawienia równolegle.
 
 [!code-cpp[concrt-unordered-map-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_2.cpp)]
 
-Na przykład, który `concurrent_unordered_map` używa do wykonywania mapy i zmniejszyć działanie równolegle, zobacz [Jak: Wykonywanie map i zmniejszanie operacji równolegle](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
+Przykład, który używa `concurrent_unordered_map` do wykonywania mapy i zmniejszania operacji równolegle, można znaleźć [w temacie How to: wykonywanie map i zmniejszanie operacji równolegle](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
 
-### <a name="differences-between-concurrent_unordered_map-and-unordered_map"></a><a name="map-differences"></a>Różnice między concurrent_unordered_map a unordered_map
+### <a name="differences-between-concurrent_unordered_map-and-unordered_map"></a><a name="map-differences"></a>Różnice między concurrent_unordered_map i unordered_map
 
-Klasa `concurrent_unordered_map` bardzo przypomina `unordered_map` klasę. Poniższe punkty ilustrują, gdzie `concurrent_unordered_map` różni się od: `unordered_map`
+`concurrent_unordered_map`Klasa jest ściśle podobna do `unordered_map` klasy. Poniższe punkty ilustrują, gdzie `concurrent_unordered_map` różnią się od `unordered_map` :
 
-- , `erase` `bucket`, `bucket_count`i `bucket_size` metody `unsafe_erase`są `unsafe_bucket` `unsafe_bucket_count`nazwane `unsafe_bucket_size`, , i , odpowiednio. Konwencja `unsafe_` nazewnictwa wskazuje, że te metody nie są bezpieczne współbieżności. Aby uzyskać więcej informacji na temat bezpieczeństwa współbieżności, zobacz [Operacje bezpieczne współbieżności](#map-safety).
+- `erase`Metody, `bucket` , `bucket_count` i `bucket_size` są `unsafe_erase` odpowiednio nazwane,,, `unsafe_bucket` `unsafe_bucket_count` i `unsafe_bucket_size` . `unsafe_`Konwencja nazewnictwa wskazuje, że te metody nie są bezpieczne pod względem współbieżności. Aby uzyskać więcej informacji na temat bezpieczeństwa współbieżności, zobacz [współbieżność wykonywania operacji](#map-safety).
 
-- Operacje wstawiania nie unieważniają istniejących wskaźników ani iteratorów ani nie zmieniają kolejności elementów, które już istnieją na mapie. Operacje wstawiania i przechodzenia mogą występować jednocześnie.
+- Operacje INSERT nie weryfikują istniejących wskaźników lub iteratorów ani nie zmieniają kolejności elementów, które już istnieją na mapie. Operacje INSERT i przechodzenie mogą odbywać się współbieżnie.
 
 - `concurrent_unordered_map`obsługuje tylko iterację do przodu.
 
-- Wstawianie nie unieważnia ani nie aktualizuje `equal_range`iteratorów, które są zwracane przez program . Wstawianie może dołączać nierówne elementy na końcu zakresu. Iterator begin wskazuje na równy element.
+- Wstawienie nie unieważnia ani nie aktualizuje iteratorów, które są zwracane przez `equal_range` . Wstawianie może dołączyć nierówne elementy do końca zakresu. Iterator początkowy wskazuje równą pozycję.
 
-Aby uniknąć zakleszczenia, `concurrent_unordered_map` żadna metoda zawiera blokadę, gdy wywołuje alokator pamięci, funkcje mieszania lub inny kod zdefiniowany przez użytkownika. Ponadto należy upewnić się, że funkcja mieszania zawsze ocenia równe klucze do tej samej wartości. Najlepsze funkcje mieszania równomiernie rozdzielają klucze w przestrzeni kodu skrótu.
+Aby uniknąć zakleszczenia, żadna metoda nie `concurrent_unordered_map` jest blokowana w przypadku wywołania programu przydzielania pamięci, funkcji mieszania lub innego kodu zdefiniowanego przez użytkownika. Ponadto należy upewnić się, że funkcja skrótu zawsze oblicza równe klucze do tej samej wartości. Funkcja Najlepsza wartość skrótu dystrybuuje klucze jednolicie w przestrzeni kodu skrótu.
 
-### <a name="concurrency-safe-operations"></a><a name="map-safety"></a>Operacje bezpieczne dla współbieżności
+### <a name="concurrency-safe-operations"></a><a name="map-safety"></a>Operacje dotyczące współbieżności
 
-Klasa `concurrent_unordered_map` umożliwia operacje wstawiania i dostępu do elementu bezpieczne współbieżności. Operacje wstawiania nie unieważniają istniejących wskaźników ani iteratorów. Dostęp do iteratora i operacje przechodzenia są również bezpieczne współbieżności. W tym miejscu, współbieżność oznacza, że wskaźniki lub iteratory są zawsze prawidłowe. Nie jest to gwarancja inicjowania elementu lub określonej kolejności przechodzenia. W poniższej tabeli `concurrent_unordered_map` przedstawiono powszechnie używane metody i operatory, które są bezpieczne współbieżności.
+`concurrent_unordered_map`Klasa umożliwia bezpieczne wykonywanie operacji wstawiania i dostępu do elementów. Operacje INSERT nie weryfikują istniejących wskaźników lub iteratorów. Operacje dostępu i przechodzenia iteratora są również bezpieczne dla współbieżności. W tym miejscu są zawsze ważne wskaźniki lub Iteratory, które są bezpieczne. Nie jest to gwarancja inicjalizacji elementu lub konkretnej kolejności przechodzenia. W poniższej tabeli przedstawiono najczęściej używane `concurrent_unordered_map` metody i operatory, które są bezpieczne pod względem współbieżności.
 
 |||||
 |-|-|-|-|
-|[O](reference/concurrent-unordered-map-class.md#at)|`count`|`find`|[key_eq](reference/concurrent-unordered-map-class.md#key_eq)|
+|[w](reference/concurrent-unordered-map-class.md#at)|`count`|`find`|[key_eq](reference/concurrent-unordered-map-class.md#key_eq)|
 |`begin`|`empty`|`get_allocator`|`max_size`|
 |`cbegin`|`end`|`hash_function`|[&#91;&#93;operatora](reference/concurrent-unordered-map-class.md#operator_at)|
-|`cend`|`equal_range`|[Wstawić](reference/concurrent-unordered-map-class.md#insert)|`size`|
+|`cend`|`equal_range`|[wstawienia](reference/concurrent-unordered-map-class.md#insert)|`size`|
 
-Chociaż `count` metoda może być wywoływana bezpiecznie z jednocześnie uruchomionych wątków, różne wątki mogą odbierać różne wyniki, jeśli nowa wartość jest jednocześnie wstawiana do kontenera.
+Chociaż `count` Metoda może być wywoływana bezpiecznie z współbieżnie uruchomionych wątków, różne wątki mogą odbierać różne wyniki, jeśli nowa wartość jest jednocześnie wstawiana do kontenera.
 
-W poniższej tabeli przedstawiono powszechnie używane metody i operatory, które nie są bezpieczne dla współbieżności.
+W poniższej tabeli przedstawiono najczęściej używane metody i operatory, które nie są bezpieczne dla współbieżności.
 
 ||||
 |-|-|-|
 |`clear`|`max_load_factor`|`rehash`|
-|`load_factor`|[operator=](reference/concurrent-unordered-map-class.md#operator_eq)
+|`load_factor`|[operator =](reference/concurrent-unordered-map-class.md#operator_eq)
 
-Oprócz tych metod, każda metoda, `unsafe_` która zaczyna się od również nie współbieżności bezpieczne.
+Oprócz tych metod jakakolwiek metoda, która zaczyna się od, `unsafe_` również nie jest bezpieczna pod kątem współbieżności.
 
-[[Góra](#top)]
+[[Top](#top)]
 
 ## <a name="concurrent_unordered_multimap-class"></a><a name="unordered_multimap"></a>Klasa concurrent_unordered_multimap
 
-[Współbieżność::concurrent_unordered_multimap](../../parallel/concrt/reference/concurrent-unordered-multimap-class.md) klasa bardzo przypomina klasę, `concurrent_unordered_map` z tą różnicą, że umożliwia wiele wartości do mapowania do tego samego klucza. Różni się również `concurrent_unordered_map` od następujących sposobów:
+Klasa [concurrency:: concurrent_unordered_multimap](../../parallel/concrt/reference/concurrent-unordered-multimap-class.md) ściśle przypomina `concurrent_unordered_map` klasę, z tą różnicą, że umożliwia mapowanie wielu wartości na ten sam klucz. Różni się to również od `concurrent_unordered_map` następujących sposobów:
 
-- Metoda [concurrent_unordered_multimap::insert](reference/concurrent-unordered-multimap-class.md#insert) zwraca iterator zamiast `std::pair<iterator, bool>`.
+- Metoda [concurrent_unordered_multimap:: INSERT](reference/concurrent-unordered-multimap-class.md#insert) zwraca iterator zamiast `std::pair<iterator, bool>` .
 
-- Klasa `concurrent_unordered_multimap` nie zawiera `operator[]` ani `at` metody.
+- `concurrent_unordered_multimap`Klasa nie oferuje ani nie `operator[]` ma `at` metody.
 
-W poniższym przykładzie przedstawiono podstawową strukturę użycia `concurrent_unordered_multimap`. W tym przykładzie wstawia klawisze znaków w zakresie ['a', 'i']. `concurrent_unordered_multimap`umożliwia klucz ma wiele wartości.
+Poniższy przykład pokazuje podstawową strukturę przy użyciu `concurrent_unordered_multimap` . Ten przykład wstawia klucze znaków z zakresu ["a", "i"]. `concurrent_unordered_multimap`Włącza klucz, aby miał wiele wartości.
 
 [!code-cpp[concrt-unordered-multimap-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_3.cpp)]
 
-[[Góra](#top)]
+[[Top](#top)]
 
 ## <a name="concurrent_unordered_set-class"></a><a name="unordered_set"></a>Klasa concurrent_unordered_set
 
-[Współbieżność::concurrent_unordered_set](../../parallel/concrt/reference/concurrent-unordered-set-class.md) klasa bardzo przypomina klasę, `concurrent_unordered_map` z tą różnicą, że zarządza wartościami zamiast par kluczy i wartości. Klasa `concurrent_unordered_set` nie zawiera `operator[]` ani `at` metody.
+Klasa [concurrency:: concurrent_unordered_set](../../parallel/concrt/reference/concurrent-unordered-set-class.md) ściśle przypomina `concurrent_unordered_map` klasę, z tą różnicą, że zarządza wartościami zamiast par klucz-wartość. `concurrent_unordered_set`Klasa nie oferuje ani nie `operator[]` ma `at` metody.
 
-W poniższym przykładzie przedstawiono podstawową strukturę użycia `concurrent_unordered_set`. W tym przykładzie wstawia wartości znaków w zakresie ['a', 'i']. Można bezpiecznie wykonywać wstawienia równolegle.
+Poniższy przykład pokazuje podstawową strukturę przy użyciu `concurrent_unordered_set` . Ten przykład wstawia wartości znakowe z zakresu ["a", "i"]. Wykonywanie operacji wstawiania równolegle jest bezpieczne.
 
 [!code-cpp[concrt-unordered-set#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_4.cpp)]
 
-[[Góra](#top)]
+[[Top](#top)]
 
 ## <a name="concurrent_unordered_multiset-class"></a><a name="unordered_multiset"></a>Klasa concurrent_unordered_multiset
 
-[Współbieżność::concurrent_unordered_multiset](../../parallel/concrt/reference/concurrent-unordered-multiset-class.md) klasa bardzo przypomina klasę, z `concurrent_unordered_set` tą różnicą, że pozwala na zduplikowane wartości. Różni się również `concurrent_unordered_set` od następujących sposobów:
+Klasa [concurrency:: concurrent_unordered_multiset](../../parallel/concrt/reference/concurrent-unordered-multiset-class.md) ściśle przypomina `concurrent_unordered_set` klasę, z tą różnicą, że umożliwia duplikowanie wartości. Różni się to również od `concurrent_unordered_set` następujących sposobów:
 
-- Metoda [concurrent_unordered_multiset::insert](reference/concurrent-unordered-multiset-class.md#insert) zwraca iterator zamiast `std::pair<iterator, bool>`.
+- Metoda [concurrent_unordered_multiset:: INSERT](reference/concurrent-unordered-multiset-class.md#insert) zwraca iterator zamiast `std::pair<iterator, bool>` .
 
-- Klasa `concurrent_unordered_multiset` nie zawiera `operator[]` ani `at` metody.
+- `concurrent_unordered_multiset`Klasa nie oferuje ani nie `operator[]` ma `at` metody.
 
-W poniższym przykładzie przedstawiono podstawową strukturę użycia `concurrent_unordered_multiset`. W tym przykładzie wstawia wartości znaków w zakresie ['a', 'i']. `concurrent_unordered_multiset`umożliwia wiele razy występować wartości.
+Poniższy przykład pokazuje podstawową strukturę przy użyciu `concurrent_unordered_multiset` . Ten przykład wstawia wartości znakowe z zakresu ["a", "i"]. `concurrent_unordered_multiset`Włącza wartość wiele razy.
 
 [!code-cpp[concrt-unordered-multiset#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_5.cpp)]
 
-[[Góra](#top)]
+[[Top](#top)]
 
-## <a name="combinable-class"></a><a name="combinable"></a>kombinowalna klasa
+## <a name="combinable-class"></a><a name="combinable"></a>Klasa z kombinacją
 
-[Współbieżność::combinable](../../parallel/concrt/reference/combinable-class.md) klasa zapewnia wielokrotnego korzystania z magazynu lokalnego wątku, który umożliwia wykonywanie obliczeń szczegółowe, a następnie scalanie tych obliczeń w wynik końcowy. Obiekt można potraktować `combinable` jako zmienną redukcjów.
+Klasa [concurrency::](../../parallel/concrt/reference/combinable-class.md) Scaled umożliwia wielokrotne użycie magazynu wątków lokalnych, który umożliwia wykonywanie szczegółowych obliczeń, a następnie scalanie tych obliczeń w końcowym wyniku. Obiekt można traktować `combinable` jako zmienną redukcji.
 
-Klasa `combinable` jest przydatna, gdy masz zasób, który jest współużytkowane przez kilka wątków lub zadań. Klasa `combinable` pomaga wyeliminować stan udostępniony, zapewniając dostęp do zasobów udostępnionych w sposób bez blokady. W związku z tym ta klasa stanowi alternatywę dla przy użyciu mechanizmu synchronizacji, na przykład obiektu mutex, do synchronizacji dostępu do udostępnionych danych z wielu wątków.
+`combinable`Klasa jest przydatna w przypadku zasobu, który jest współużytkowany przez kilka wątków lub zadań. `combinable`Klasa pomaga wyeliminować współużytkowany stan, zapewniając dostęp do udostępnionych zasobów w sposób niezależny od blokady. W związku z tym Klasa ta zapewnia alternatywę dla korzystania z mechanizmu synchronizacji, na przykład obiektu mutex, do synchronizowania dostępu do udostępnionych danych z wielu wątków.
 
 ### <a name="methods-and-features"></a><a name="combinable-features"></a>Metody i funkcje
 
-W poniższej tabeli przedstawiono `combinable` niektóre z ważnych metod klasy. Aby uzyskać więcej `combinable` informacji na temat wszystkich metod klasy, zobacz [kombinowalną klasę](../../parallel/concrt/reference/combinable-class.md).
+W poniższej tabeli przedstawiono niektóre ważne metody `combinable` klasy. Aby uzyskać więcej informacji na temat wszystkich `combinable` metod klasy, zobacz [Klasa z kombinacją](../../parallel/concrt/reference/combinable-class.md).
 
 |Metoda|Opis|
 |------------|-----------------|
-|[Lokalnych](reference/combinable-class.md#local)|Pobiera odwołanie do zmiennej lokalnej, która jest skojarzona z bieżącym kontekstem wątku.|
-|[Wyczyść](reference/combinable-class.md#clear)|Usuwa wszystkie zmienne lokalne wątku `combinable` z obiektu.|
-|[combine](reference/combinable-class.md#combine)<br /><br /> [combine_each](reference/combinable-class.md#combine_each)|Używa dostarczonej funkcji kombajnu do generowania wartości końcowej z zestawu wszystkich obliczeń lokalnych wątków.|
+|[LAN](reference/combinable-class.md#local)|Pobiera odwołanie do zmiennej lokalnej, która jest skojarzona z bieżącym kontekstem wątku.|
+|[Wyczyść](reference/combinable-class.md#clear)|Usuwa wszystkie zmienne lokalne wątku z `combinable` obiektu.|
+|[combine](reference/combinable-class.md#combine)<br /><br /> [combine_each](reference/combinable-class.md#combine_each)|Używa podanej funkcji Połącz w celu wygenerowania końcowej wartości z zestawu wszystkich obliczeń lokalnych wątków.|
 
-Klasa `combinable` jest klasą szablonu, która jest sparametryzowana na końcowy wynik scalony. Jeśli wywołasz konstruktora `T` domyślnego, typ parametru szablonu musi mieć domyślny konstruktor i konstruktor kopii. Jeśli `T` typ parametru szablonu nie ma domyślnego konstruktora, wywołaj przeciążoną wersję konstruktora, która przyjmuje funkcję inicjowania jako parametr.
+`combinable`Klasa jest klasą szablonu, która jest sparametryzowane na końcowym scalonym wyniku. Jeśli wywołasz konstruktora domyślnego, `T` Typ parametru szablonu musi mieć konstruktora domyślnego i konstruktora kopiującego. Jeśli `T` Typ parametru szablonu nie ma domyślnego konstruktora, wywołaj przeciążoną wersję konstruktora, który przyjmuje funkcję inicjującą jako parametr.
 
-Dodatkowe dane w `combinable` obiekcie można przechowywać po wywołaniu metody [kombajnu](reference/combinable-class.md#combine) lub [combine_each.](reference/combinable-class.md#combine_each) Można również `combine` wywołać `combine_each` i metody wiele razy. Jeśli nie zmieni `combinable` się wartość `combine` lokalna w obiekcie, i `combine_each` metody dają taki sam wynik za każdym razem, gdy są wywoływane.
+`combinable`Po wywołaniu metody [łączenia](reference/combinable-class.md#combine) lub [combine_each](reference/combinable-class.md#combine_each) można przechowywać dodatkowe dane w obiekcie. Można również wielokrotnie wywołać `combine` metody i `combine_each` . Jeśli żadna wartość lokalna w `combinable` obiekcie nie ulegnie zmianie, `combine` `combine_each` metody i dają ten sam wynik przy każdym wywołaniu.
 
-### <a name="examples"></a><a name="combinable-examples"></a>Przykłady
+### <a name="examples"></a><a name="combinable-examples"></a>Pokazują
 
-Aby uzyskać przykłady dotyczące `combinable` używania klasy, zobacz następujące tematy:
+Aby zapoznać się z przykładami dotyczącymi używania `combinable` klasy, zobacz następujące tematy:
 
-- [Instrukcje: korzystanie z wyników połączonych do poprawiania wydajności](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)
+- [Instrukcje: używanie kombinacji w celu poprawy wydajności](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)
 
-- [Instrukcje: korzystanie z wyników połączonych w celu łączenia zestawów](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)
+- [Instrukcje: używanie kombinacji do łączenia zestawów](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)
 
-[[Góra](#top)]
+[[Top](#top)]
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
-[Instrukcje: korzystanie z kontenerów równoległych do zwiększania wydajności](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br/>
-Pokazuje, jak używać kontenerów równoległych do efektywnego przechowywania i uzyskiwania dostępu do danych równolegle.
+[Instrukcje: korzystanie z kontenerów równoległych w celu zwiększenia wydajności](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br/>
+Pokazuje, jak używać kontenerów równoległych do wydajnego przechowywania i uzyskiwania dostępu do danych.
 
-[Instrukcje: korzystanie z wyników połączonych do poprawiania wydajności](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
-Pokazuje, jak `combinable` używać klasy, aby wyeliminować stan udostępniony, a tym samym zwiększyć wydajność.
+[Instrukcje: używanie kombinacji w celu poprawy wydajności](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
+Pokazuje, w jaki sposób używać `combinable` klasy w celu wyeliminowania stanu udostępnionego, a tym samym zwiększenia wydajności.
 
-[Instrukcje: korzystanie z wyników połączonych w celu łączenia zestawów](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)<br/>
-Pokazuje, jak `combine` używać funkcji do scalania lokalnych zestawów danych wątku.
+[Instrukcje: używanie kombinacji do łączenia zestawów](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)<br/>
+Pokazuje, jak używać `combine` funkcji do scalania lokalnych zestawów danych wątku.
 
-[Biblioteka równoległych wzorców (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
-W tym artykule opisano PPL, który zapewnia imperatywne model programowania, który promuje skalowalność i łatwość użycia do tworzenia równoczesnych aplikacji.
+[Biblioteka równoległych wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
+Opisuje PPL, który zapewnia bezwzględny model programistyczny, który promuje skalowalność i łatwość używania do tworzenia współbieżnych aplikacji.
 
 ## <a name="reference"></a>Dokumentacja
 
@@ -325,4 +325,4 @@ W tym artykule opisano PPL, który zapewnia imperatywne model programowania, kt�
 
 [Klasa concurrent_unordered_multiset](../../parallel/concrt/reference/concurrent-unordered-multiset-class.md)
 
-[combinable — Klasa](../../parallel/concrt/reference/combinable-class.md)
+[Klasa z kombinacją](../../parallel/concrt/reference/combinable-class.md)

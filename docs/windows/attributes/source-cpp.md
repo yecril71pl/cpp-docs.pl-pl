@@ -1,17 +1,17 @@
 ---
-title: Source (C++ atrybut com)
+title: Source (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.source
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 5f961513b948c3195aea864d97313ac09e97344e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 274e446aecc4d0d7096211bbae88e0f170ae44a2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166227"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213830"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -30,7 +30,7 @@ Co najmniej jeden interfejs, który jest określany podczas stosowania atrybutu 
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **Source** C++ ma taką samą funkcjonalność jak [źródłowy](/windows/win32/Midl/source) atrybut MIDL.
+**Źródłowy** atrybut języka C++ ma taką samą funkcjonalność jak [źródłowy](/windows/win32/Midl/source) atrybut MIDL.
 
 Możesz użyć atrybutu [domyślnego](default-cpp.md) , aby określić domyślny interfejs źródłowy dla obiektu.
 
@@ -74,14 +74,14 @@ class NN : public b
 
 |||
 |-|-|
-|**Dotyczy**|**Klasa**, **Struktura**, **interfejs**|
+|**Dotyczy**|**`class`**, **`struct`** , **interfejs**|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|`coclass` (w przypadku zastosowania do klasy lub struktury)|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|`coclass`(w przypadku zastosowania do klasy lub struktury)|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>

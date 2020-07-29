@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-ms.openlocfilehash: 75c7697087b8b3ad8ff15ae4d08f2b4701aaa36a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: adc83ab2d8268460b3a35be44f5733c8b6fa1c43
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142355"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217899"
 ---
 # <a name="transformer-class"></a>Klasa transformatora
 
-Blok komunikatów `transformer` to Jednoelementowy, uporządkowany `propagator_block`, który może akceptować komunikaty jednego typu, i umożliwia przechowywanie nieograniczonej liczby komunikatów innego typu.
+`transformer`Blok obsługi komunikatów to jeden obiekt docelowy, który jest uporządkowany, `propagator_block` który może akceptować komunikaty jednego typu, i umożliwia przechowywanie nieograniczonej liczby komunikatów innego typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,29 +45,29 @@ Typ ładunku komunikatów akceptowanych przez bufor.
 *_Output*<br/>
 Typ ładunku komunikatów przechowywanych i rozpropagowanych przez bufor.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[Funkcja](#ctor)|Przeciążone. Tworzy blok komunikatów `transformer`.|
-|[~ Transformer — destruktor](#dtor)|Niszczy blok komunikatów `transformer`.|
+|[Funkcja](#ctor)|Przeciążone. Tworzy `transformer` blok komunikatów.|
+|[~ Transformer — destruktor](#dtor)|Niszczy `transformer` blok komunikatów.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[accept_message](#accept_message)|Akceptuje komunikat, który był oferowany przez ten blok komunikatów `transformer`, przekazując własność do obiektu wywołującego.|
-|[consume_message](#consume_message)|Wykorzystuje komunikat wcześniej oferowany przez `transformer` i zastrzeżony przez element docelowy, przekazując własność do obiektu wywołującego.|
-|[link_target_notification](#link_target_notification)|Wywołanie zwrotne, które powiadamia, że nowy element docelowy został połączony z tym blokiem komunikatów `transformer`.|
-|[propagate_message](#propagate_message)|Asynchronicznie przekazuje komunikat z bloku `ISource` do tego bloku komunikatów `transformer`. Jest wywoływany przez metodę `propagate`, gdy jest wywoływana przez blok źródłowy.|
+|[accept_message](#accept_message)|Akceptuje komunikat, który był oferowany przez ten `transformer` blok komunikatów, przez przeniesienie własności do obiektu wywołującego.|
+|[consume_message](#consume_message)|Wykorzystuje komunikat wcześniej oferowany przez `transformer` i zarezerwowany przez obiekt docelowy, przekazując własność do obiektu wywołującego.|
+|[link_target_notification](#link_target_notification)|Wywołanie zwrotne, które powiadamia, że nowy element docelowy został połączony z tym `transformer` blokiem obsługi komunikatów.|
+|[propagate_message](#propagate_message)|Asynchronicznie przekazuje komunikat z `ISource` bloku do tego `transformer` bloku obsługi komunikatów. Jest wywoływana przez `propagate` metodę, gdy jest wywoływana przez blok źródłowy.|
 |[propagate_to_any_targets](#propagate_to_any_targets)|Wykonuje funkcję przekształcania w komunikatach wejściowych.|
 |[release_message](#release_message)|Zwalnia poprzednią rezerwację wiadomości. (Zastępuje [source_block:: release_message](source-block-class.md#release_message).)|
-|[reserve_message](#reserve_message)|Rezerwuje komunikat wcześniej oferowany przez ten blok komunikatów `transformer`. (Zastępuje [source_block:: reserve_message](source-block-class.md#reserve_message).)|
+|[reserve_message](#reserve_message)|Rezerwuje komunikat wcześniej oferowany przez ten `transformer` blok komunikatów. (Zastępuje [source_block:: reserve_message](source-block-class.md#reserve_message).)|
 |[resume_propagation](#resume_propagation)|Wznawia propagację po wydaniu rezerwacji. (Zastępuje [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|
-|[send_message](#send_message)|Synchronicznie przekazuje komunikat z bloku `ISource` do tego bloku komunikatów `transformer`. Jest wywoływany przez metodę `send`, gdy jest wywoływana przez blok źródłowy.|
-|[supports_anonymous_source](#supports_anonymous_source)|Zastępuje metodę `supports_anonymous_source`, aby wskazać, że ten blok może akceptować komunikaty, które są do niego udostępniane przez źródło, które nie jest połączone. (Przesłania [ITarget:: supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|
+|[send_message](#send_message)|Synchronicznie przekazuje komunikat z `ISource` bloku do tego `transformer` bloku obsługi komunikatów. Jest wywoływana przez `send` metodę, gdy jest wywoływana przez blok źródłowy.|
+|[supports_anonymous_source](#supports_anonymous_source)|Przesłania `supports_anonymous_source` metodę w celu wskazania, że ten blok może akceptować komunikaty, które są przez nie połączone, za pomocą źródła, które nie jest połączony. (Przesłania [ITarget:: supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -91,9 +91,9 @@ Aby uzyskać więcej informacji, zobacz [asynchroniczne bloki komunikatów](../.
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="accept_message"></a>accept_message
+## <a name="accept_message"></a><a name="accept_message"></a>accept_message
 
-Akceptuje komunikat, który był oferowany przez ten blok komunikatów `transformer`, przekazując własność do obiektu wywołującego.
+Akceptuje komunikat, który był oferowany przez ten `transformer` blok komunikatów, przez przeniesienie własności do obiektu wywołującego.
 
 ```cpp
 virtual message<_Output>* accept_message(runtime_object_identity _MsgId);
@@ -102,15 +102,15 @@ virtual message<_Output>* accept_message(runtime_object_identity _MsgId);
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` oferowanego obiektu `message`.
+Dla `runtime_object_identity` oferowanego `message` obiektu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do obiektu `message`, do którego obiekt wywołujący ma teraz własność.
+Wskaźnik do `message` obiektu, do którego obiekt wywołujący ma teraz własność.
 
-## <a name="consume_message"></a>consume_message
+## <a name="consume_message"></a><a name="consume_message"></a>consume_message
 
-Wykorzystuje komunikat wcześniej oferowany przez `transformer` i zastrzeżony przez element docelowy, przekazując własność do obiektu wywołującego.
+Wykorzystuje komunikat wcześniej oferowany przez `transformer` i zarezerwowany przez obiekt docelowy, przekazując własność do obiektu wywołującego.
 
 ```cpp
 virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
@@ -119,27 +119,27 @@ virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` zużywanego obiektu `message`.
+`runtime_object_identity` `message` Używany obiekt.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do obiektu `message`, do którego obiekt wywołujący ma teraz własność.
+Wskaźnik do `message` obiektu, do którego obiekt wywołujący ma teraz własność.
 
 ### <a name="remarks"></a>Uwagi
 
-Podobnie jak `accept`, ale jest zawsze poprzedzone wywołaniem `reserve`.
+Przypomina `accept` , ale jest zawsze poprzedzone wywołaniem do `reserve` .
 
-## <a name="link_target_notification"></a>link_target_notification
+## <a name="link_target_notification"></a><a name="link_target_notification"></a>link_target_notification
 
-Wywołanie zwrotne, które powiadamia, że nowy element docelowy został połączony z tym blokiem komunikatów `transformer`.
+Wywołanie zwrotne, które powiadamia, że nowy element docelowy został połączony z tym `transformer` blokiem obsługi komunikatów.
 
 ```cpp
 virtual void link_target_notification(_Inout_ ITarget<_Output> *);
 ```
 
-## <a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
 
-Asynchronicznie przekazuje komunikat z bloku `ISource` do tego bloku komunikatów `transformer`. Jest wywoływany przez metodę `propagate`, gdy jest wywoływana przez blok źródłowy.
+Asynchronicznie przekazuje komunikat z `ISource` bloku do tego `transformer` bloku obsługi komunikatów. Jest wywoływana przez `propagate` metodę, gdy jest wywoływana przez blok źródłowy.
 
 ```cpp
 virtual message_status propagate_message(
@@ -150,16 +150,16 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>Parametry
 
 *_PMessage*<br/>
-Wskaźnik do obiektu `message`.
+Wskaźnik do `message` obiektu.
 
 *_PSource*<br/>
 Wskaźnik do bloku źródłowego oferującego komunikat.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 [Message_status](concurrency-namespace-enums.md) wskazanie elementu docelowego, który zdecydował się wykonać wraz z wiadomością.
 
-## <a name="propagate_to_any_targets"></a>propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets
 
 Wykonuje funkcję przekształcania w komunikatach wejściowych.
 
@@ -167,7 +167,7 @@ Wykonuje funkcję przekształcania w komunikatach wejściowych.
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Output> *);
 ```
 
-## <a name="release_message"></a>release_message
+## <a name="release_message"></a><a name="release_message"></a>release_message
 
 Zwalnia poprzednią rezerwację wiadomości.
 
@@ -178,11 +178,11 @@ virtual void release_message(runtime_object_identity _MsgId);
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` wydawany `message` obiektu.
+`runtime_object_identity` `message` Wydawany obiekt.
 
-## <a name="reserve_message"></a>reserve_message
+## <a name="reserve_message"></a><a name="reserve_message"></a>reserve_message
 
-Rezerwuje komunikat wcześniej oferowany przez ten blok komunikatów `transformer`.
+Rezerwuje komunikat wcześniej oferowany przez ten `transformer` blok komunikatów.
 
 ```cpp
 virtual bool reserve_message(runtime_object_identity _MsgId);
@@ -191,17 +191,17 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` obiektu `message`, który jest zarezerwowany.
+Obiekt, który jest `runtime_object_identity` `message` zarezerwowany.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli komunikat został pomyślnie zarezerwowany, w przeciwnym razie **zwraca wartość false** .
+**`true`** Jeśli komunikat został pomyślnie zarezerwowany, **`false`** w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
-Po wywołaniu `reserve`, jeśli zwraca **wartość true**, należy wywołać `consume` lub `release`, aby przejąć lub zwolnić własność wiadomości.
+Po `reserve` wywołaniu, jeśli zwróci **`true`** , `consume` lub `release` musi zostać wywołana w celu podjęcia lub zwolnienia własności wiadomości.
 
-## <a name="resume_propagation"></a>resume_propagation
+## <a name="resume_propagation"></a><a name="resume_propagation"></a>resume_propagation
 
 Wznawia propagację po wydaniu rezerwacji.
 
@@ -209,9 +209,9 @@ Wznawia propagację po wydaniu rezerwacji.
 virtual void resume_propagation();
 ```
 
-## <a name="send_message"></a>send_message
+## <a name="send_message"></a><a name="send_message"></a>send_message
 
-Synchronicznie przekazuje komunikat z bloku `ISource` do tego bloku komunikatów `transformer`. Jest wywoływany przez metodę `send`, gdy jest wywoływana przez blok źródłowy.
+Synchronicznie przekazuje komunikat z `ISource` bloku do tego `transformer` bloku obsługi komunikatów. Jest wywoływana przez `send` metodę, gdy jest wywoływana przez blok źródłowy.
 
 ```cpp
 virtual message_status send_message(
@@ -222,30 +222,30 @@ virtual message_status send_message(
 ### <a name="parameters"></a>Parametry
 
 *_PMessage*<br/>
-Wskaźnik do obiektu `message`.
+Wskaźnik do `message` obiektu.
 
 *_PSource*<br/>
 Wskaźnik do bloku źródłowego oferującego komunikat.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 [Message_status](concurrency-namespace-enums.md) wskazanie elementu docelowego, który zdecydował się wykonać wraz z wiadomością.
 
-## <a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
 
-Zastępuje metodę `supports_anonymous_source`, aby wskazać, że ten blok może akceptować komunikaty, które są do niego udostępniane przez źródło, które nie jest połączone.
+Przesłania `supports_anonymous_source` metodę w celu wskazania, że ten blok może akceptować komunikaty, które są przez nie połączone, za pomocą źródła, które nie jest połączony.
 
 ```cpp
 virtual bool supports_anonymous_source();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , ponieważ blok nie odkłada proponowanych komunikatów.
+**`true`** ponieważ blok nie odkłada proponowanych komunikatów.
 
-## <a name="ctor"></a>Funkcja
+## <a name="transformer"></a><a name="ctor"></a>Funkcja
 
-Tworzy blok komunikatów `transformer`.
+Tworzy `transformer` blok komunikatów.
 
 ```cpp
 transformer(
@@ -292,28 +292,28 @@ Wskaźnik do bloku docelowego do powiązania z transformatorem.
 Funkcja filtru, która określa, czy proponowane komunikaty powinny być akceptowane.
 
 *_PScheduler*<br/>
-Obiekt `Scheduler`, w ramach którego zaplanowano zadanie propagacji dla bloku obsługi komunikatów `transformer`.
+`Scheduler`Obiekt, w ramach którego zaplanowano zadanie propagacji dla `transformer` bloku obsługi komunikatów.
 
 *_PScheduleGroup*<br/>
-Obiekt `ScheduleGroup`, w ramach którego zaplanowano zadanie propagacji dla bloku obsługi komunikatów `transformer`. Używany obiekt `Scheduler` jest implikowany przez grupę harmonogramów.
+`ScheduleGroup`Obiekt, w ramach którego zaplanowano zadanie propagacji dla `transformer` bloku obsługi komunikatów. `Scheduler`Używany obiekt jest implikowany przez grupę harmonogramów.
 
 ### <a name="remarks"></a>Uwagi
 
-Środowisko uruchomieniowe używa domyślnego harmonogramu, jeśli nie określisz parametrów `_PScheduler` lub `_PScheduleGroup`.
+Środowisko uruchomieniowe używa domyślnego harmonogramu, jeśli nie określono `_PScheduler` `_PScheduleGroup` parametrów lub.
 
-Typ `_Transform_method` to Funktor z sygnaturą `_Output (_Input const &)`, która jest wywoływana przez ten blok komunikatów `transformer` do przetwarzania komunikatów.
+Typ `_Transform_method` to Funktor z podpisem `_Output (_Input const &)` , który jest wywoływany przez ten `transformer` blok komunikatów do przetwarzania komunikatów.
 
-Typ `filter_method` to Funktor z sygnaturą `bool (_Input const &)`, która jest wywoływana przez ten blok komunikatów `transformer` do określenia, czy powinien on akceptować oferowany komunikat.
+Typ `filter_method` to Funktor z podpisem `bool (_Input const &)` , który jest wywoływany przez ten `transformer` blok komunikatów, aby określić, czy powinien on akceptować oferowany komunikat.
 
-## <a name="dtor"></a>~ Transformer
+## <a name="transformer"></a><a name="dtor"></a>~ Transformer
 
-Niszczy blok komunikatów `transformer`.
+Niszczy `transformer` blok komunikatów.
 
 ```cpp
 ~transformer();
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
-[call, klasa](call-class.md)
+[Call, Klasa](call-class.md)

@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - __pctype_func
 ms.assetid: d52b8add-d07d-4516-a22f-e836cde0c57f
-ms.openlocfilehash: 67447823b0322e647784cdbe0f3f7228e1c5fb34
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a7972744d322cf16d056f70fff83f529a183020e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919243"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213648"
 ---
 # <a name="__pctype_func"></a>__pctype_func
 
@@ -46,7 +46,7 @@ Wskaźnik do tablicy informacji o klasyfikacji znaków.
 
 ## <a name="remarks"></a>Uwagi
 
-Informacje w tabeli klasyfikacji znaków są przeznaczone tylko do użytku wewnętrznego i są używane przez różne funkcje, które klasyfikują znaki typu `char`. Aby uzyskać więcej informacji, zobacz `Remarks` sekcję [_pctype, _pwctype, _wctype _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md).
+Informacje w tabeli klasyfikacji znaków są przeznaczone tylko do użytku wewnętrznego i są używane przez różne funkcje, które klasyfikują znaki typu **`char`** . Aby uzyskać więcej informacji, zobacz `Remarks` sekcję [_pctype, _pwctype, _wctype _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md).
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](global-state.md).
 
@@ -56,6 +56,6 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 |-------------|---------------------|
 |__pctype_func|CType. h|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [_pctype, _pwctype, _wctype, _mbctype, _mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)

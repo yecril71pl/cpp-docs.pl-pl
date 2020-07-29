@@ -31,12 +31,12 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: 9af34e7dcb13f54b824088fa81b6d5a7145c6ae5
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: c968601d95403dd63540a7a8ec2190a199fa1c5a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334921"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219342"
 ---
 # <a name="safeint-functions"></a>SafeInt — Funkcje
 
@@ -89,12 +89,12 @@ podczas Pierwsza liczba do dodania. Musi to być typ T.
 *'t*<br/>
 podczas Druga liczba, która ma zostać dodana. Musi to być typ U.
 
-*result*<br/>
+*wynika*<br/>
 określoną Parametr, w którym `SafeAdd` jest przechowywany wynik.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true** , jeśli nie wystąpi błąd; **wartość false** , jeśli wystąpi błąd.
+**`true`** Jeśli błąd nie wystąpi; **`false`** Jeśli wystąpi błąd.
 
 ## <a name="safecast"></a><a name="safecast"></a>SafeCast
 
@@ -118,7 +118,7 @@ określoną Odwołanie do nowego typu numeru. Musi to być typ `U` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true** , jeśli nie wystąpi błąd; **wartość false** , jeśli wystąpi błąd.
+**`true`** Jeśli błąd nie wystąpi; **`false`** Jeśli wystąpi błąd.
 
 ## <a name="safedivide"></a><a name="safedivide"></a>SafeDivide
 
@@ -141,12 +141,12 @@ podczas Dywidenda. Musi to być typ T.
 *'t*<br/>
 podczas Dzielnik. Musi to być typ U.
 
-*result*<br/>
+*wynika*<br/>
 określoną Parametr, w którym `SafeDivide` jest przechowywany wynik.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true** , jeśli nie wystąpi błąd; **wartość false** , jeśli wystąpi błąd.
+**`true`** Jeśli błąd nie wystąpi; **`false`** Jeśli wystąpi błąd.
 
 ## <a name="safeequals"></a><a name="safeequals"></a>SafeEquals
 
@@ -170,7 +170,7 @@ podczas Druga liczba do porównania. Musi to być typ U.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli *t* i *u* są równe; w przeciwnym razie **false**.
+**`true`** Jeśli *t* i *u* są równe; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -198,7 +198,7 @@ podczas Druga liczba do porównania. Musi to być typ `U` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli *t* jest większy niż *u*; w przeciwnym razie **false**.
+**`true`** Jeśli *t* jest większy niż *u*; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -226,7 +226,7 @@ podczas Druga liczba do porównania. Musi to być typ `U` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli *t* jest większy lub równy *u*; w przeciwnym razie **false**.
+**`true`** Jeśli *t* jest większy lub równy *u*; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -254,7 +254,7 @@ podczas Druga liczba. Musi to być typ `U` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli *t* jest mniejszy niż *u*; w przeciwnym razie **false**.
+**`true`** Jeśli *t* jest mniejsze niż *u*; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -282,7 +282,7 @@ podczas Druga liczba do porównania. Musi to być typ `U` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli *t* jest mniejsze lub równe *u*; w przeciwnym razie **false**.
+**`true`** Jeśli *t* jest mniejsze lub równe *u*; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -309,12 +309,12 @@ podczas Dzielnik. Musi to być typ `T` .
 *'t*<br/>
 podczas Dywidenda. Musi to być typ `U` .
 
-*result*<br/>
+*wynika*<br/>
 określoną Parametr, w którym `SafeModulus` jest przechowywany wynik.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true** , jeśli nie wystąpi błąd; **wartość false** , jeśli wystąpi błąd.
+**`true`** Jeśli błąd nie wystąpi; **`false`** Jeśli wystąpi błąd.
 
 ## <a name="safemultiply"></a><a name="safemultiply"></a>SafeMultiply
 
@@ -337,12 +337,12 @@ podczas Pierwsza liczba do pomnożenia. Musi to być typ `T` .
 *'t*<br/>
 podczas Druga liczba do pomnożenia. Musi to być typ `U` .
 
-*result*<br/>
+*wynika*<br/>
 określoną Parametr, w którym `SafeMultiply` jest przechowywany wynik.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true`Jeśli błąd nie wystąpi; `false`Jeśli wystąpi błąd.
+**`true`** Jeśli błąd nie wystąpi; **`false`** Jeśli wystąpi błąd.
 
 ## <a name="safenotequals"></a><a name="safenotequals"></a>SafeNotEquals
 
@@ -366,7 +366,7 @@ podczas Druga liczba do porównania. Musi to być typ `U` .
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli *t* i *u* nie są równe; w przeciwnym razie **false**.
+**`true`** Jeśli *t* i *u* nie są równe; w przeciwnym razie **`false`** .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -393,9 +393,9 @@ podczas Pierwszy numer odejmowania. Musi to być typ `T` .
 *'t*<br/>
 podczas Liczba, która ma zostać odjęta od *t*. Musi to być typ `U` .
 
-*result*<br/>
+*wynika*<br/>
 określoną Parametr, w którym `SafeSubtract` jest przechowywany wynik.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true** , jeśli nie wystąpi błąd; **wartość false** , jeśli wystąpi błąd.
+**`true`** Jeśli błąd nie wystąpi; **`false`** Jeśli wystąpi błąd.

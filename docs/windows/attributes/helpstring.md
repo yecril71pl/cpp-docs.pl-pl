@@ -1,17 +1,17 @@
 ---
-title: HelpString (C++ atrybut com)
+title: HelpString (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstring
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: d22ecf5a7131a1368abf2b1fbd8261ec6195b51e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 18a8dbea2387224070903aa10c812c9dd079bf96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166968"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217262"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -25,7 +25,7 @@ Określa ciąg znaków, który jest używany do opisania elementu, do którego m
 
 ### <a name="parameters"></a>Parametry
 
-*string*<br/>
+*parametry*<br/>
 Tekst ciągu pomocy.
 
 ## <a name="remarks"></a>Uwagi
@@ -42,19 +42,19 @@ Zobacz przykład dla elementu [DefaultValue](defaultvalue.md) , aby zapoznać si
 
 |||
 |-|-|
-|**Dotyczy**|**interfejs**, **typedef**, **Klasa**, metoda, właściwość|
+|**Dotyczy**|**interfejs**, **`typedef`** , **`class`** , metoda, właściwość|
 |**Powtarzalne**|Nie|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty IDL](idl-attributes.md)<br/>
 [Atrybuty interfejsu](interface-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)<br/>
 [Atrybuty metody](method-attributes.md)<br/>
-[Atrybuty Typedef, Enum, Union oraz Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Atrybuty typedef, enum, Union i struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [helpfile](helpfile.md)<br/>
 [helpcontext](helpcontext.md)

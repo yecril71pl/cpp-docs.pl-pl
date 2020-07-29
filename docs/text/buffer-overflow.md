@@ -6,16 +6,16 @@ helpviewer_keywords:
 - buffer overflows [C++]
 - MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
-ms.openlocfilehash: 7f9864e6b49446ea68d82e76e877ce9c677b893d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71877ed770384190cb7f856567d9e7e845e3da19
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410762"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217327"
 ---
 # <a name="buffer-overflow"></a>Przepełnienie buforu
 
-Różne rozmiary znaków może powodować problemy, znaki są umieszczane w buforze. Należy wziąć pod uwagę następujący kod, który kopiuje znaków z ciągu, `sz`, do buforu `rgch`:
+Różne rozmiary znaków mogą spowodować problemy podczas umieszczania znaków w buforze. Rozważmy następujący kod, który kopiuje znaki z ciągu, `sz` w buforze `rgch` :
 
 ```cpp
 cb = 0;
@@ -23,7 +23,7 @@ while( cb < sizeof( rgch ) )
     rgch[ cb++ ] = *sz++;
 ```
 
-Pytanie jest: Był ostatni bajt skopiowane bajt wiodący? Następujące nie rozwiązuje problem, ponieważ go może potencjalnie przepełnienie buforu:
+Pytanie: czy ostatni bajt skopiował bajt wiodący? Poniższe rozwiązanie nie rozwiązuje problemu, ponieważ może spowodować przepełnienie buforu:
 
 ```cpp
 cb = 0;
@@ -35,7 +35,7 @@ while( cb < sizeof( rgch ) )
 }
 ```
 
-`_mbccpy` Wywołanie podejmuje próbę wykonania czynności w prawidłowy sposób — kopiowanie znak pełne, czy jest to 1 lub 2 bajtów. Ale nie przyjmuje uwagę, że ostatni znak kopiowany może nie spełniać buforu, jeśli znak jest szeroki 2 bajty. Jakie rozwiązanie będzie odpowiednie jest:
+`_mbccpy`Wywołanie próbuje wykonać poprawną czynność — Skopiuj pełny znak, niezależnie od tego, czy jest to 1 czy 2 bajty. Ale nie przyjmuje się, że ostatni skopiowany znak może nie pasować do buforu, jeśli znak jest 2 b szerokości. Poprawne rozwiązanie to:
 
 ```cpp
 cb = 0;
@@ -47,7 +47,7 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }
 ```
 
-Ten kod sprawdza przepełnienie buforu możliwe w pętli przetestować, za pomocą `_mbclen` rozmiar bieżący znak wskazywany przez `sz`. Poprzez wywołanie `_mbsnbcpy` funkcji, można zastąpić kod w **podczas** pętli za pomocą jednego wiersza kodu. Na przykład:
+Ten kod sprawdza możliwy przepełnienie buforu w teście pętli, przy użyciu `_mbclen` do testowania rozmiaru bieżącego znaku wskazywanego przez `sz` . Wykonując wywołanie `_mbsnbcpy` funkcji, można zamienić kod w **`while`** pętli na pojedynczy wiersz kodu. Na przykład:
 
 ```cpp
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );
@@ -55,4 +55,4 @@ _mbsnbcpy( rgch, sz, sizeof( rgch ) );
 
 ## <a name="see-also"></a>Zobacz także
 
-[Porady dotyczące programowania MBCS](../text/mbcs-programming-tips.md)
+[Wskazówki dotyczące programowania MBCS](../text/mbcs-programming-tips.md)

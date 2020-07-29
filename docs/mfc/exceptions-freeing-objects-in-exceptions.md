@@ -11,12 +11,12 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: e4fafd12d22f6ff7635380e139f60c110a193d9d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a02b71609ec19d6106153bf67e9d56b860cfdfff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622824"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217938"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>Wyjątki: zwalnianie obiektów w wyjątkach
 
@@ -30,9 +30,9 @@ Wyjątki zgłoszone przez platformę lub przez aplikację w normalnym przepływi
 
 Istnieją dwie podstawowe metody do wykonania tej czynności.
 
-- Obsługa wyjątków lokalnie przy użyciu słów kluczowych **try** i **catch** , a następnie zniszczenie wszystkich obiektów z jedną instrukcją.
+- Obsługa wyjątków lokalnie przy użyciu **`try`** **`catch`** słów kluczowych i, a następnie zniszczenie wszystkich obiektów z jedną instrukcją.
 
-- Zniszcz wszystkie obiekty w bloku **catch** przed wygenerowaniem wyjątku poza blokiem w celu dalszej obsługi.
+- Zniszcz wszystkie obiekty w **`catch`** bloku przed wygenerowaniem wyjątku poza blokiem w celu dalszej obsługi.
 
 Te dwa podejścia przedstawiono poniżej jako rozwiązania następujących przykładowych problemów:
 
@@ -50,7 +50,7 @@ Ten nowy przykład konfiguruje procedurę obsługi wyjątków, aby przechwycić 
 
 ## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a>Zgłaszanie wyjątków po usunięciu obiektów
 
-Innym sposobem obsługi wyjątków jest przekazanie ich do następnego zewnętrznego kontekstu obsługi wyjątków. W bloku **catch** można przeprowadzić oczyszczanie lokalnie przyznanych obiektów, a następnie zgłosić wyjątek na potrzeby dalszej obróbki.
+Innym sposobem obsługi wyjątków jest przekazanie ich do następnego zewnętrznego kontekstu obsługi wyjątków. W **`catch`** bloku można przeprowadzić oczyszczanie lokalnie przyznanych obiektów, a następnie zgłosić wyjątek na potrzeby dalszej obróbki.
 
 Funkcja zgłaszania może być niezbędna do cofnięcia alokacji obiektów sterty. Jeśli funkcja zawsze cofa alokację obiektu sterty przed zwróceniem normalnego przypadku, funkcja powinna również cofnąć alokację obiektu sterty przed wygenerowaniem wyjątku. Z drugiej strony, jeśli funkcja nie powoduje zazwyczaj cofnięcia alokacji obiektu przed zwróceniem w normalnym przypadku, należy podjąć decyzje dotyczące wielkości liter, niezależnie od tego, czy obiekt sterty powinien zostać cofnięty.
 
@@ -64,6 +64,6 @@ Jeśli wywołasz funkcje, które mogą zgłaszać wyjątki, możesz użyć blok�
 
 Aby uzyskać więcej informacji, zobacz [wyjątki: Przechwytywanie i usuwanie wyjątków](exceptions-catching-and-deleting-exceptions.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa wyjątków](exception-handling-in-mfc.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - declaring arrays
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
-ms.openlocfilehash: 4bc75e86601da77758490544cc5b02c485dcee46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 917d79a7c4f4d030efaaa769ca8f205cf37f55fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313548"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218926"
 ---
 # <a name="array-declarations"></a>Deklaracje tablicy
 
@@ -28,17 +28,17 @@ ms.locfileid: "62313548"
 
 *init-deklarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Deklarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *inicjator* deklarator
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarator* **=** *inicjator*
 
 *deklarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>wybór</sub> wskaźnika *Direct-deklarator*
 
-*Direct-deklarator*:/\* A funkcja deklarator\*/<br/>
+*Direct-deklarator*:/ \* A funkcja deklarator\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarator***[***wybór wyrażenia stałego*<sub>opt</sub> **]**    
 
 Ze względu na to, że *wyrażenie stałe* jest opcjonalne, składnia ma dwa formy:
 
-- Pierwszy formularz definiuje zmienną tablicową. Argument *stałej wartości* w nawiasach określa liczbę elementów w tablicy. *Wyrażenie stałe*, jeśli istnieje, musi mieć typ całkowity i wartość większą od zera. Każdy element ma typ określony przez *specyfikator typu*, który może być dowolnego typu z wyjątkiem `void`. Element tablicy nie może być typem funkcji.
+- Pierwszy formularz definiuje zmienną tablicową. Argument *stałej wartości* w nawiasach określa liczbę elementów w tablicy. *Wyrażenie stałe*, jeśli istnieje, musi mieć typ całkowity i wartość większą od zera. Każdy element ma typ określony przez *specyfikator typu*, który może być dowolnego typu z wyjątkiem **`void`** . Element tablicy nie może być typem funkcji.
 
 - Druga forma deklaruje zmienną, która została zdefiniowana w innym miejscu. Pomija argument *wyrażenia stałej* w nawiasach, ale nie nawiasów. Tego formularza można używać tylko wtedy, gdy wcześniej zainicjowano tablicę, zadeklarowano ją jako parametr lub zadeklarowano ją jako odwołanie do tablicy jawnie zdefiniowanej w innym miejscu w programie.
 
@@ -72,7 +72,7 @@ Przykłady ilustrują deklaracje tablic:
 float matrix[10][15];
 ```
 
-Tablica dwuwymiarowa o nazwie `matrix` zawiera 150 elementów, każdy z typem **zmiennoprzecinkowym** .
+Tablica dwuwymiarowa o nazwie `matrix` zawiera 150 elementów, każdy **`float`** Typ.
 
 ```C
 struct {
@@ -86,14 +86,14 @@ Jest to Deklaracja tablicy struktur. Ta tablica zawiera 100 elementów; Każdy e
 extern char *name[];
 ```
 
-Ta instrukcja deklaruje typ i nazwę tablicy wskaźników do `char`. Rzeczywista definicja `name` występuje w innym miejscu.
+Ta instrukcja deklaruje typ i nazwę tablicy wskaźników do **`char`** . Rzeczywista definicja `name` występuje w innym miejscu.
 
 **Specyficzne dla firmy Microsoft**
 
-Typ liczby całkowitej wymaganej do przechowywania maksymalnego rozmiaru tablicy jest rozmiarem **size_t**. Zdefiniowane w pliku nagłówka STDDEF. H, **size_t** jest `unsigned int` z zakresem od 0x00000000 do 0x7CFFFFFF.
+Typ liczby całkowitej wymaganej do przechowywania maksymalnego rozmiaru tablicy jest rozmiarem **size_t**. Zdefiniowane w pliku nagłówka STDDEF. H, **size_t** jest **`unsigned int`** z zakresem od 0x00000000 do 0x7CFFFFFF.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Deklaratory i deklaracje zmiennych](../c-language/declarators-and-variable-declarations.md)

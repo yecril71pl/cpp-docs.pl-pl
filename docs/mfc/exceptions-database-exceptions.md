@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 96f9e5f836205df71e03638858cb00b788d03c0b
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: aaed2a9f88c46a405b754b78242478f93cffda31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403728"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217964"
 ---
 # <a name="exceptions-database-exceptions"></a>Wyjątki: wyjątki bazy danych
 
@@ -54,11 +54,11 @@ Dodatkowe informacje o błędach DAO, typie obiektu błędu DAO i kolekcji błę
 
 ## <a name="a-database-exception-handling-example"></a><a name="_core_a_database_exception.2d.handling_example"></a>Przykład obsługi wyjątku bazy danych
 
-Poniższy przykład próbuje utworzyć obiekt pochodny [CRecordset](reference/crecordset-class.md)na stercie przy użyciu operatora **New** , a następnie otworzyć zestaw rekordów (dla źródła danych ODBC). Podobnie jak w przypadku klas DAO, zobacz sekcję "przykład wyjątku DAO" poniżej.
+Poniższy przykład próbuje utworzyć obiekt pochodny [CRecordset](reference/crecordset-class.md)na stercie z **`new`** operatorem, a następnie otworzyć zestaw rekordów (dla źródła danych ODBC). Podobnie jak w przypadku klas DAO, zobacz sekcję "przykład wyjątku DAO" poniżej.
 
 ### <a name="odbc-exception-example"></a>Przykład wyjątku ODBC
 
-Funkcja [Open](reference/crecordset-class.md#open) member może zgłosić wyjątek (typu [CDBEXCEPTION](reference/cdbexception-class.md) dla klas ODBC), dzięki czemu kod ten przenawiasuje `Open` wywołanie z blokiem **try** . Następny blok **catch** będzie przechwytywać `CDBException` . Można sprawdzić, czy sam obiekt wyjątku został wywołany `e` , ale w tym przypadku wystarczy wiedzieć, że próba utworzenia zestawu rekordów zakończyła się niepowodzeniem. Blok **catch** wyświetla okno komunikatu i czyści je, usuwając obiekt zestawu rekordów.
+Funkcja [Open](reference/crecordset-class.md#open) member może zgłosić wyjątek (typu [CDBEXCEPTION](reference/cdbexception-class.md) dla klas ODBC), dzięki czemu ten kod jest w nawiasie `Open` odwołujący się do **`try`** bloku. Następny **`catch`** blok będzie przechwytywać `CDBException` . Można sprawdzić, czy sam obiekt wyjątku został wywołany `e` , ale w tym przypadku wystarczy wiedzieć, że próba utworzenia zestawu rekordów zakończyła się niepowodzeniem. W **`catch`** bloku zostanie wyświetlone okno komunikatu i zostanie ono oczyszczone przez usunięcie obiektu zestawu rekordów.
 
 [!code-cpp[NVC_MFCDatabase#36](codesnippet/cpp/exceptions-database-exceptions_1.cpp)]
 
@@ -74,6 +74,6 @@ Aby zapoznać się z informacjami o błędzie zwracanymi przez `CDaoException` o
 
 Podczas pracy z bazami danych Microsoft Jet (. mdb) i w większości przypadków podczas pracy z ODBC, będzie dostępny tylko jeden obiekt błędu. W rzadkich przypadkach, gdy używasz źródła danych ODBC i występuje wiele błędów, można wykonać pętlę przez zbieranie błędów DAO na podstawie liczby błędów zwróconych przez [CDaoException:: GetErrorCount](reference/cdaoexception-class.md#geterrorcount). Za każdym razem przez pętlę Wywołaj [CDaoException:: GetErrorInfo](reference/cdaoexception-class.md#geterrorinfo) , aby uzupełnić `m_pErrorInfo` element członkowski danych.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa wyjątków](exception-handling-in-mfc.md)
