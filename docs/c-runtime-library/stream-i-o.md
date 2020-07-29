@@ -6,12 +6,12 @@ helpviewer_keywords:
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 0fc49d4cd26593cb02a2ff05c3205cc630ef848c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8bff3cd74dfe4b1e3aa749ec28a361dd4a09c2f7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444623"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231250"
 ---
 # <a name="stream-io"></a>We/Wy strumienia
 
@@ -19,7 +19,7 @@ Te funkcje przetwarzają dane w różnych rozmiarach i formatach, od pojedynczyc
 
 ## <a name="stream-io-routines"></a>Procedury we/wy strumienia
 
-|Procedura|Użycie|
+|Procedura|Zastosowanie|
 |-------------|---------|
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|Wyczyść wskaźnik błędu dla usługi Stream|
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|Zamknij strumień|
@@ -51,13 +51,13 @@ Te funkcje przetwarzają dane w różnych rozmiarach i formatach, od pojedynczyc
 |[getchar, getwchar](../c-runtime-library/reference/getc-getwc.md)|Odczytaj znak z **stdin** (wersje makr **fgetchar** i **fgetwchar**)|
 |[_getmaxstdio](../c-runtime-library/reference/getmaxstdio.md)|Zwraca liczbę jednocześnie otwartych plików dozwolonych na poziomie strumienia we/wy.|
 |[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|Odczytaj wiersz od **stdin**|
-|[_getw](../c-runtime-library/reference/getw.md)|Odczytaj dane binarne **int** ze strumienia|
+|[_getw](../c-runtime-library/reference/getw.md)|Odczytaj **`int`** dane binarne ze strumienia|
 |[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md),[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|Zapisz sformatowane dane do **stdout**|
 |[putc, putwc](../c-runtime-library/reference/putc-putwc.md)|Pisanie znaku w strumieniu (wersje makr **fputc** i **fputwc**)|
 |[putchar, putwchar](../c-runtime-library/reference/putc-putwc.md)|Napisz znak do **stdout** (wersje makr **fputchar** i **fputwchar**)|
 |[puts, _putws](../c-runtime-library/reference/puts-putws.md)|Zapisz wiersz do strumienia|
-|[_putw](../c-runtime-library/reference/putw.md)|Zapisz binarną liczbę **całkowitą** do strumienia|
-|[rewind](../c-runtime-library/reference/rewind.md)|Przenieś położenie pliku do początku strumienia|
+|[_putw](../c-runtime-library/reference/putw.md)|Zapisz dane binarne **`int`** do strumienia|
+|[przewijanie](../c-runtime-library/reference/rewind.md)|Przenieś położenie pliku do początku strumienia|
 |[_rmtmp](../c-runtime-library/reference/rmtmp.md)|Usuń pliki tymczasowe utworzone przez **tmpfile**|
 |[scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md),[scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)|Odczytywanie sformatowanych danych z **stdin**|
 |[setbuf](../c-runtime-library/reference/setbuf.md)|Buforowanie strumienia kontroli|
@@ -93,7 +93,7 @@ Jeśli w programie nie zamknięto jawnie strumienia, strumień jest automatyczni
 
 Dane wejściowe mogą być bezpośrednio zgodne z wywołaniem wywołującym **fflush** lub funkcją pozycjonowania plików (**fseek**, **fsetpos**lub **przewijania do tyłu**). Dane wyjściowe mogą podążać za danymi wejściowymi bez wywołującego wywołania funkcji umieszczania plików, jeśli operacja wejściowa napotka koniec pliku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Dane wejściowe i wyjściowe](../c-runtime-library/input-and-output.md)<br/>
-[Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Wejście i wyjście](../c-runtime-library/input-and-output.md)<br/>
+[Procedury środowiska uruchomieniowego języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>

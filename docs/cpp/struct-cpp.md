@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: e9ffd30dd0017e912fd7c196e2d3f0e987fb0810
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f247a99d3f04a15ebd54718a46dae8512a580d6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330586"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231120"
 ---
 # <a name="struct-c"></a>struktura (C++)
 
-**Struktury** — słowo kluczowe definiuje typ struktury i/lub zmienną typu struktury.
+**`struct`** Słowo kluczowe definiuje typ struktury i/lub zmienną typu struktury.
 
 ## <a name="syntax"></a>Składnia
 
@@ -29,44 +29,44 @@ ms.locfileid: "62330586"
 
 #### <a name="parameters"></a>Parametry
 
-*template-spec*<br/>
+*szablon — Specyfikacja*<br/>
 Opcjonalne specyfikacje szablonu. Aby uzyskać więcej informacji, zobacz [specyfikacje szablonu](templates-cpp.md).
 
-*struct*<br/>
-**Struktury** — słowo kluczowe.
+*konstrukcja*<br/>
+**`struct`** Słowo kluczowe.
 
-*ms-decl-spec*<br/>
-Opcjonalna specyfikacja klasy magazynowania. Aby uzyskać więcej informacji, zobacz [__declspec](../cpp/declspec.md) — słowo kluczowe.
+*MS-decl-spec*<br/>
+Opcjonalna specyfikacja klasy magazynowania. Aby uzyskać więcej informacji, zapoznaj się ze słowem kluczowym [__declspec](../cpp/declspec.md) .
 
-*Tag*<br/>
+*seryjn*<br/>
 Nazwa typu nadana strukturze. Znacznik staje się słowem zastrzeżonym w obrębie struktury. Znacznik jest opcjonalny. W przypadku pominięcia zostanie zdefiniowana anonimowa struktura. Aby uzyskać więcej informacji, zobacz [anonimowe typy klas](../cpp/anonymous-class-types.md).
 
-*base-list*<br/>
-Opcjonalna lista klas lub struktur, z której pochodzą składowe tej struktury. Zobacz [klasy podstawowej](../cpp/base-classes.md) Aby uzyskać więcej informacji. Każda podstawowa nazwy klasy lub struktury może być poprzedzona przez specyfikator dostępu ([publicznych](../cpp/public-cpp.md), [prywatnej](../cpp/private-cpp.md), [chronione](../cpp/protected-cpp.md)) i [wirtualnego](../cpp/virtual-cpp.md) słowo kluczowe. Zobacz tabelę dostępu do elementu członkowskiego w [kontrolowanie dostępu do składowych klasy](member-access-control-cpp.md) Aby uzyskać więcej informacji.
+*Lista podstawowa*<br/>
+Opcjonalna lista klas lub struktur, z której pochodzą składowe tej struktury. Aby uzyskać więcej informacji, zobacz [klasy bazowe](../cpp/base-classes.md) . Każda nazwa klasy bazowej lub struktury może być poprzedzona przez specyfikator dostępu ([Public](../cpp/public-cpp.md), [Private](../cpp/private-cpp.md), [Protected](../cpp/protected-cpp.md)) i [wirtualne](../cpp/virtual-cpp.md) słowo kluczowe. Aby uzyskać więcej informacji, zobacz tabelę dostępu do elementów członkowskich w temacie [Kontrola dostępu do składowych klasy](member-access-control-cpp.md) .
 
 *Lista elementów członkowskich*<br/>
-Lista składników struktury. Zapoznaj się [omówienie składowej klasy](../cpp/class-member-overview.md) Aby uzyskać więcej informacji. Jedyną różnicą jest to, że **struktury** jest używana zamiast **klasy**.
+Lista składników struktury. Aby uzyskać więcej informacji, zapoznaj się z [omówieniem składowej klasy](../cpp/class-member-overview.md) . Jedyną różnicą jest to, że **`struct`** jest używana zamiast **`class`** .
 
-*deklaratory*<br/>
-Lista deklaratora określająca nazwy struktury. Listy deklaratorów deklarują jedno lub więcej wystąpień typu struktury. Deklaratory mogą zawierać listy inicjatorów, jeśli wszystkie elementy członkowskie danych struktury są **publicznych**. Listy inicjatorów są wspólne w strukturach, ponieważ elementy członkowskie danych są **publicznych** domyślnie.  Zobacz [Przegląd Deklaratorów](../cpp/overview-of-declarators.md) Aby uzyskać więcej informacji.
+*Deklaratory*<br/>
+Lista deklaratora określająca nazwy struktury. Listy deklaratorów deklarują jedno lub więcej wystąpień typu struktury. Deklaratory może zawierać listę inicjatorów, jeśli wszystkie elementy członkowskie danych struktury są **`public`** . Listy inicjatorów są wspólne w strukturach, ponieważ elementy członkowskie danych są **`public`** domyślnie.  Aby uzyskać więcej informacji [, zobacz Omówienie Deklaratory](../cpp/overview-of-declarators.md) .
 
 ## <a name="remarks"></a>Uwagi
 
 Typ struktury jest zdefiniowanym przez użytkownika typem złożonym. Składa się z pól lub elementów członkowskich, które mogą mieć różne typy.
 
-W języku C++ struktura jest taka sama jak klasa z tą różnicą, że jej składowe są **publicznych** domyślnie.
+W języku C++ struktura jest taka sama jak Klasa, z tą różnicą, że jej członkowie są **`public`** domyślnie.
 
-Aby uzyskać informacje dotyczące zarządzanych klas i struktur w C++sposób niezamierzony, zobacz [klas i struktur](../extensions/classes-and-structs-cpp-component-extensions.md).
+Aby uzyskać informacje dotyczące zarządzanych klas i struktur w języku C++/CLI, zobacz [klasy i struktury](../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ## <a name="using-a-structure"></a>Korzystanie ze struktury
 
-W języku C, trzeba jawnie użyć **struktury** — słowo kluczowe, aby zadeklarować strukturę. W języku C++, nie trzeba używać **struktury** — słowo kluczowe po zdefiniowaniu typu.
+W języku C, należy jawnie użyć **`struct`** słowa kluczowego, aby zadeklarować strukturę. W języku C++ nie trzeba używać **`struct`** słowa kluczowego po zdefiniowaniu typu.
 
 Istnieje opcja zadeklarowania zmiennych, kiedy typ struktury jest definiowany, przez umieszczenie jednej lub więcej nazw zmiennych, oddzielonych przecinkami, między zamykającym nawiasem klamrowym i średnikiem.
 
 Zmienne struktury mogą być inicjowane. Inicjowanie dla każdej zmiennej musi być ujęte w nawiasy klamrowe.
 
-Aby uzyskać powiązane informacje, zobacz [klasy](../cpp/class-cpp.md), [Unii](../cpp/unions.md), i [wyliczenia](../cpp/enumerations-cpp.md).
+Aby uzyskać powiązane informacje, zobacz [Class](../cpp/class-cpp.md), [Union](../cpp/unions.md)i [enum](../cpp/enumerations-cpp.md).
 
 ## <a name="example"></a>Przykład
 

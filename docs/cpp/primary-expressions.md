@@ -8,16 +8,16 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-ms.openlocfilehash: 03f0d0d04ad8ef2b052b9303d15437c53369a003
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c827f811813091abc62d07f12ac387bc2a0a0cc5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177628"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231146"
 ---
 # <a name="primary-expressions"></a>Wyrażenia podstawowe
 
-Wyrażenia podstawowe są blokami konstrukcyjnymi bardziej złożonych wyrażeń. Są to literały, nazwy i nazwy kwalifikowane przez operator rozpoznawania zakresu (`::`).  Wyrażenie podstawowe może mieć jedną z następujących form:
+Wyrażenia podstawowe są blokami konstrukcyjnymi bardziej złożonych wyrażeń. Są to literały, nazwy i nazwy kwalifikowane przez operator rozpoznawania zakresu ( `::` ).  Wyrażenie podstawowe może mieć jedną z następujących form:
 
 ```
 literal
@@ -28,9 +28,9 @@ name
 
 *Literał* jest stałym wyrażeniem podstawowym. Jego typ zależy od postaci jego specyfikacji. Aby uzyskać pełne informacje na temat określania literałów, zobacz [literały](../cpp/numeric-boolean-and-pointer-literals-cpp.md) .
 
-**To** słowo kluczowe jest wskaźnikiem do obiektu klasy. Jest on dostępny w ramach niestatycznych funkcji składowych i wskazuje na wystąpienie klasy, dla której wywołano funkcję. Nie można użyć słowa kluczowego **this** poza treścią funkcji składowej klasy.
+**`this`** Słowo kluczowe jest wskaźnikiem do obiektu klasy. Jest on dostępny w ramach niestatycznych funkcji składowych i wskazuje na wystąpienie klasy, dla której wywołano funkcję. **`this`** Nie można użyć słowa kluczowego poza treścią funkcji składowej klasy.
 
-Typ wskaźnika **to** `type` **\*const** (gdzie `type` jest nazwą klasy) w funkcjach, które nie modyfikują przede wszystkim **tego** wskaźnika. Poniższy przykład przedstawia deklaracje funkcji składowych i **typy:**
+Typ **`this`** wskaźnika to `type` ** \* stała** (gdzie `type` to nazwa klasy) w funkcjach, które nie modyfikują **`this`** wskaźnika. Poniższy przykład przedstawia deklaracje funkcji składowych i typy **`this`** :
 
 ```cpp
 // expre_Primary_Expressions.cpp
@@ -44,9 +44,9 @@ public:
 };
 ```
 
-Zobacz [ten wskaźnik](this-pointer.md) , aby uzyskać więcej **informacji na temat modyfikowania typu wskaźnika.**
+Zobacz [ten wskaźnik](this-pointer.md) , aby uzyskać więcej informacji na temat modyfikowania typu **`this`** wskaźnika.
 
-Operator rozpoznawania zakresu (`::`), po którym następuje nazwa, stanowi wyrażenie podstawowe.  Nazwy te muszą być nazwami w zakresie globalnym, a nie nazwami elementów członkowskich.  Typ tego wyrażenia zależy od deklaracji nazwy. Jest to wartość l (to znaczy, że może być wyświetlany na lewej stronie wyrażenia operatora przypisania), jeśli nazwa deklarująca to wartość l. Operator rozpoznawania zakresu umożliwia odwoływanie się do globalnej nazwy, nawet jeśli ta nazwa jest ukryta w bieżącym zakresie. Zobacz [zakres](../cpp/scope-visual-cpp.md) , aby zapoznać się z przykładem użycia operatora rozpoznawania zakresu.
+Operator rozpoznawania zakresu ( `::` ), po którym następuje nazwa, stanowi wyrażenie podstawowe.  Nazwy te muszą być nazwami w zakresie globalnym, a nie nazwami elementów członkowskich.  Typ tego wyrażenia zależy od deklaracji nazwy. Jest to wartość l (to znaczy, że może być wyświetlany na lewej stronie wyrażenia operatora przypisania), jeśli nazwa deklarująca to wartość l. Operator rozpoznawania zakresu umożliwia odwoływanie się do globalnej nazwy, nawet jeśli ta nazwa jest ukryta w bieżącym zakresie. Zobacz [zakres](../cpp/scope-visual-cpp.md) , aby zapoznać się z przykładem użycia operatora rozpoznawania zakresu.
 
 Wyrażenie w nawiasach jest wyrażeniem podstawowym, którego typ i wartość są identyczne jak wyrażenia bez nawiasów. Jest to wartość l, jeśli wyrażenie bez nawiasów jest wartością l.
 
@@ -74,6 +74,6 @@ A::B   // a qualified name
 A<int> // a template id
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Typy wyrażeń](../cpp/types-of-expressions.md)

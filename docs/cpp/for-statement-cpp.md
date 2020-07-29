@@ -1,43 +1,43 @@
 ---
 title: for — instrukcja (C++)
-description: Odwołanie do standardu C++ dla instrukcji w programie Microsoft Visual Studio C++.
+description: Odwołanie do standardowej instrukcji C++ for w Microsoft Visual Studio C++.
 f1_keywords:
 - for_cpp
 ms.date: 04/14/2020
 helpviewer_keywords:
 - for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-ms.openlocfilehash: 92f7ae4b1f2fbaaf710cd5a8739b78cb98a0accb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16486fd58a9b3fec750ebef6ec6647f9d92bca3b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375386"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231185"
 ---
 # <a name="for-statement-c"></a>for — instrukcja (C++)
 
-Wykonuje instrukcję wielokrotnie, dopóki warunek przestaje być prawdziwy. Aby uzyskać informacje na temat zakresu opartego na instrukcji, zobacz [oparte na zakresie dla instrukcji (C++)](../cpp/range-based-for-statement-cpp.md).
+Wykonuje instrukcję wielokrotnie, dopóki warunek przestaje być prawdziwy. Aby uzyskać informacje na temat instrukcji for opartej na zakresie, zobacz [zakres-based for — instrukcja (C++)](../cpp/range-based-for-statement-cpp.md).
 
 ## <a name="syntax"></a>Składnia
 
-> **`for (`***init-expression* **`;`** *cond-expression* **`;`** *wyrażenie pętli wyrażenie***`)`**\
-> &nbsp;&nbsp;&nbsp;&nbsp;_Instrukcja_**`;`**
+> **`for (`***init — wyrażenie* **`;`** *cond — wyrażenie* **`;`** *wyrażenie pętli***`)`**\
+> &nbsp;&nbsp;&nbsp;&nbsp;_Merge_**`;`**
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj **for** instrukcji do konstruowania pętli, które muszą wykonać określoną liczbę razy.
+Użyj **`for`** instrukcji, aby skonstruować pętle, które muszą wykonać określoną liczbę razy.
 
-**Instrukcja for** składa się z trzech opcjonalnych części, jak pokazano w poniższej tabeli.
+**`for`** Instrukcja składa się z trzech opcjonalnych części, jak pokazano w poniższej tabeli.
 
 ### <a name="for-loop-elements"></a>Elementy pętli for
 
 |Nazwa składni|Kiedy wykonywane|Opis|
 |-----------------|-------------------|-----------------|
-|`init-expression`|Przed innym elementem **for** `init-expression` instrukcji, jest wykonywany tylko raz. Kontrola następnie `cond-expression`przechodzi do .|Często używane do zainicjowania indeksów pętli. Może zawierać wyrażenia lub deklaracje.|
-|`cond-expression`|Przed wykonaniem każdej iteracji `statement`, w tym pierwszej iteracji. `statement`jest wykonywany `cond-expression` tylko wtedy, gdy jest oblicza true (nonzero).|Wyrażenie obliczane do typu całkowitoliczbowego lub typu klasy, która ma jednoznaczną konwersję na typ całkowitoliczbowy. Normalnie używane do sprawdzania kryteriów zakończenia pętli for.|
-|`loop-expression`|Na końcu każdej iteracji `statement`pliku . Po `loop-expression` wykonaniu `cond-expression` jest oceniane.|Zwykle jest używane do zwiększania indeksów pętli.|
+|`init-expression`|Przed jakimkolwiek innym elementem **`for`** instrukcji `init-expression` jest wykonywane tylko raz. Następnie formant przekazuje do `cond-expression` .|Często używane do zainicjowania indeksów pętli. Może zawierać wyrażenia lub deklaracje.|
+|`cond-expression`|Przed wykonaniem każdej iteracji `statement` , łącznie z pierwszą iteracją. `statement`jest wykonywany tylko wtedy `cond-expression` , gdy wynikiem jest wartość true (niezerowa).|Wyrażenie obliczane do typu całkowitoliczbowego lub typu klasy, która ma jednoznaczną konwersję na typ całkowitoliczbowy. Normalnie używane do sprawdzania kryteriów zakończenia pętli for.|
+|`loop-expression`|Na końcu każdej iteracji `statement` . Po `loop-expression` wykonaniu jest `cond-expression` oceniane.|Zwykle jest używane do zwiększania indeksów pętli.|
 
-Poniższe przykłady pokazują różne sposoby użycia **instrukcji for.**
+W poniższych przykładach przedstawiono różne sposoby używania **`for`** instrukcji.
 
 ```cpp
 #include <iostream>
@@ -64,7 +64,7 @@ int main() {
     // Output: 012
 ```
 
-`init-expression`i `loop-expression` może zawierać wiele instrukcji oddzielonych przecinkami. Przykład:
+`init-expression`i `loop-expression` mogą zawierać wiele instrukcji oddzielonych przecinkami. Na przykład:
 
 ```cpp
 #include <iostream>
@@ -82,7 +82,7 @@ int main(){
     i + j = 19
 ```
 
-`loop-expression`mogą być zwiększane lub zmniejszane lub modyfikowane w inny sposób.
+`loop-expression`można zwiększyć lub zmniejszyć lub zmodyfikować w inny sposób.
 
 ```cpp
 #include <iostream>
@@ -99,11 +99,11 @@ for (int i = 10; i > 0; i--) {
     // Output: 10 12 14 16 18
 ```
 
-A **for** pętli kończy się, gdy [break](../cpp/break-statement-cpp.md), [return](../cpp/return-statement-cpp.md), lub [goto](../cpp/goto-statement-cpp.md) `statement` (do instrukcji oznaczone poza **for** pętli) wewnątrz jest wykonywana. Instrukcja [continue](../cpp/continue-statement-cpp.md) w **for** pętli kończy tylko bieżącą iterację.
+**`for`** Pętla kończy się, gdy jest wykonywane działanie [Break](../cpp/break-statement-cpp.md), [Return](../cpp/return-statement-cpp.md)lub [goto](../cpp/goto-statement-cpp.md) (do instrukcji oznaczonej poza **`for`** pętlą) `statement` . Instrukcja [Continue](../cpp/continue-statement-cpp.md) w **`for`** pętli kończy tylko bieżącą iterację.
 
-Jeśli `cond-expression` zostanie pominięty, jest `true`uważany , a **pętla for** nie zakończy się bez `statement` **przerwy,** **powrotu**lub **goto** w obrębie .
+Jeśli `cond-expression` parametr zostanie pominięty, zostanie on uwzględniony **`true`** , a **`for`** pętla nie zostanie zakończona bez **`break`** , **`return`** , lub **`goto`** wewnątrz `statement` .
 
-Mimo że trzy pola **for** instrukcji są zwykle używane do inicjowania, testowania zakończenia i zwiększania, nie są one ograniczone do tych zastosowań. Na przykład poniższy kod wyświetla cyfry od 0 do 4. W takim `statement` przypadku jest null instrukcji:
+Chociaż trzy pola **`for`** instrukcji są zwykle używane do inicjowania, testowania do zakończenia i zwiększania, nie są ograniczone do tych celów. Na przykład poniższy kod wyświetla cyfry od 0 do 4. W tym przypadku `statement` jest instrukcją o wartości null:
 
 ```cpp
 #include <iostream>
@@ -120,7 +120,7 @@ int main()
 
 ## <a name="for-loops-and-the-c-standard"></a>Pętle for i standard C++
 
-Standard C++ mówi, że zmienna zadeklarowana w **for** pętli wykracza poza zakres po zakończeniu pętli **for.** Przykład:
+Standard C++ wskazuje, że zmienna zadeklarowana w **`for`** pętli nie należy do zakresu po **`for`** zakończeniu pętli. Na przykład:
 
 ```cpp
 for (int i = 0 ; i < 5 ; i++) {
@@ -129,11 +129,11 @@ for (int i = 0 ; i < 5 ; i++) {
 // i is now out of scope under /Za or /Zc:forScope
 ```
 
-Domyślnie w [obszarze /Ze](../build/reference/za-ze-disable-language-extensions.md)zmienna zadeklarowana w pętli **for** pozostaje w zakresie, dopóki zakres otaczającej pętli **for** nie zakończy się.
+Domyślnie, w obszarze [/ze](../build/reference/za-ze-disable-language-extensions.md), zmienna zadeklarowana w **`for`** pętli pozostaje w zakresie do momentu **`for`** zakończenia otaczającego zakresu pętli.
 
-[/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) umożliwia standardowe zachowanie zmiennych zadeklarowanych w pętlach bez konieczności określania `/Za`.
+[/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) włącza standardowe zachowanie zmiennych zadeklarowanych w pętli for, bez konieczności określania `/Za` .
 
-Istnieje również możliwość użycia różnic zakresu **for** pętli do ponownego deklarowania zmiennych w następujący sposób: `/Ze`
+Istnieje również możliwość użycia różnic dotyczących określania zakresu **`for`** pętli, aby ponownie zadeklarować zmienne w `/Ze` następujący sposób:
 
 ```cpp
 // for_statement5.cpp
@@ -145,12 +145,12 @@ int main(){
 }
 ```
 
-To zachowanie bardziej naśladuje standardowe zachowanie zmiennej zadeklarowanej w **for** pętli, która wymaga zmiennych zadeklarowanych w **for** pętli, aby wyjść poza zakres po wykonaniu pętli. Gdy zmienna jest zadeklarowana w **for** pętli, kompilator wewnętrznie promuje go do zmiennej lokalnej w **for** pętli otaczającego zakresu. Jest promowany, nawet jeśli istnieje już zmienna lokalna o tej samej nazwie.
+To zachowanie bardziej ściśle naśladuje standardowe zachowanie zmiennej zadeklarowanej w **`for`** pętli, co wymaga, aby zmienne zadeklarowane w **`for`** pętli przechodzą poza zakres po zakończeniu pętli. Gdy zmienna jest zadeklarowana w **`for`** pętli, kompilator wewnętrznie promuje ją do zmiennej lokalnej w **`for`** zasięgu otaczającym pętli. Jest to promowane, nawet jeśli istnieje już zmienna lokalna o tej samej nazwie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Instrukcje iteracji](../cpp/iteration-statements-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
-[while Statement (C++)](../cpp/while-statement-cpp.md)<br/>
-[Instrukcja do-while (C++)](../cpp/do-while-statement-cpp.md)<br/>
+[While — Instrukcja (C++)](../cpp/while-statement-cpp.md)<br/>
+[do-While — Instrukcja (C++)](../cpp/do-while-statement-cpp.md)<br/>
 [Range-based for, instrukcja (C++)](../cpp/range-based-for-statement-cpp.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - decrement operators [C++], syntax
 - decrement operators [C++]
 ms.assetid: 45ea7fc7-f279-4be9-a216-1d9a0ef9eb7b
-ms.openlocfilehash: ce066a3349d56b278739f586fe851b020da78885
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0b84360f41c665707a03ad453909c054ac741405
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366219"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231159"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>Operatory prefiksów inkrementacji i dekrementacji: ++ i --
 
@@ -31,13 +31,13 @@ ms.locfileid: "81366219"
 
 ## <a name="remarks"></a>Uwagi
 
-Operator przyrostu prefiksu (**++**) dodaje jeden do jego operand; ta przyrostowa wartość jest wynikiem wyrażenia. Operand musi być wartością l, a nie **typem const**. Wynik jest wartością l tego samego typu co operand.
+Operator przyrostu prefiksu ( **++** ) dodaje jeden do operandu; ta wartość przyrostowa jest wynikiem wyrażenia. Argument operacji musi być l-wartością typu nie **`const`** . Wynik jest l-wartością tego samego typu co operand.
 
-Operator dekrementacji prefiksu (**--**) jest analogiczny do operatora przyrostu prefiksu, z tą różnicą, że operand jest zmniejszany o jeden, a wynikiem jest ta wartość zmniejszana.
+Operator zmniejszania prefiksu ( **--** ) jest analogiczny do operatora przyrostu prefiksu, z tą różnicą, że argument operacji jest zmniejszany o jeden, a wynikiem jest wartość tego zmniejszenia.
 
-**Visual Studio 2017 w wersji 15.3 i nowszej** (dostępne z [/std:c++17):](../build/reference/std-specify-language-standard-version.md)Operand operatora przyrostu lub dekrementacji może nie być typu **bool**.
+**Visual Studio 2017 w wersji 15,3 lub nowszej** (dostępny w [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): operand operatora Increment lub zmniejszania nie może być typu **`bool`** .
 
-Zarówno prefiks i przyrost postfix i dekrementacji operatorów wpływa na ich operands. Kluczową różnicą między nimi jest kolejność, w której przyrost lub dekrementowanie odbywa się w ocenie wyrażenia. (Aby uzyskać więcej informacji, zobacz [Postfix Increment and Decrement Operators](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) W formularzu prefiksu przyrost lub dekrementacja odbywa się przed użyciem wartości w ocenie wyrażenia, więc wartość wyrażenia różni się od wartości operandu. W formularzu postfix przyrost lub dekrementacja odbywa się po użyciu wartości w ocenie wyrażenia, więc wartość wyrażenia jest taka sama jak wartość operandu. Na przykład następujący program drukuje "`++i = 6`":
+Operatory prefix i Increment przyrostu i zmniejszania wpływają na ich operandy. Kluczową różnicą między nimi jest kolejność, w której zwiększenie lub zmniejszenie odbywa się podczas obliczania wyrażenia. (Aby uzyskać więcej informacji, zobacz [Operatory przyrostu i zmniejszania](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)). W formie prefiksu, przyrost lub zmniejszenie odbywa się przed użyciem wartości podczas obliczania wyrażenia, więc wartość wyrażenia jest inna niż wartość operandu. W formie przyrostkowej przyrost lub zmniejszenie odbywa się po użyciu wartości podczas obliczania wyrażenia, więc wartość wyrażenia jest taka sama jak wartość operandu. Na przykład następujący program drukuje " `++i = 6` ":
 
 ```cpp
 // expre_Increment_and_Decrement_Operators.cpp
@@ -52,9 +52,9 @@ int main() {
 }
 ```
 
-Operand typu integralnego lub pływającego jest zwiększany lub zmniejszany o wartość całkowitą 1. Typ wyniku jest taki sam jak typ operandu. Operand typu wskaźnika jest zwiększany lub zmniejszany o rozmiar obiektu, który adresuje. Przyrostowy wskaźnik wskazuje na następny obiekt; zdymisjonowany wskaźnik wskazuje poprzedni obiekt.
+Operand typu całkowitego lub zmiennoprzecinkowego jest zwiększany lub zmniejszany przez wartość całkowitą 1. Typ wyniku jest taki sam jak typ argumentu operacji. Operand typu wskaźnika jest zwiększany lub zmniejszany o rozmiar obiektu, do którego się odnosi. Przyrostowy wskaźnik wskazuje na następny obiekt; zmniejszający wskaźnik wskazuje na poprzedni obiekt.
 
-Ponieważ operatory przyrostu i dekrementacji mają skutki uboczne, używanie wyrażeń z operatorami przyrostu lub dekrementacji w [makrze preprocesora](../preprocessor/macros-c-cpp.md) może mieć niepożądane wyniki. Rozważmy następujący przykład:
+Ze względu na to, że operatory zwiększania i zmniejszania mają efekty uboczne, Używanie wyrażeń z operatorami przyrostu lub zmniejszania w [makrze preprocesora](../preprocessor/macros-c-cpp.md) może mieć niepożądane wyniki. Rozważmy następujący przykład:
 
 ```cpp
 // expre_Increment_and_Decrement_Operators2.cpp
@@ -67,19 +67,19 @@ int main()
 }
 ```
 
-Makro rozszerza się do:
+Makro powiększa się do:
 
 ```cpp
 k = ((++i)<(j))?(j):(++i);
 ```
 
-Jeśli `i` jest większa lub `j` równa `j` lub mniejsza niż o 1, zostanie dwukrotnie wzmocniona.
+Jeśli `i` jest większa lub równa `j` lub mniejsza niż `j` 1, zostanie dwukrotnie zwiększona.
 
 > [!NOTE]
-> Funkcje wbudowane języka C++ są preferowane dla makr w wielu przypadkach, ponieważ eliminują skutki uboczne, takie jak opisane w tym miejscu, i umożliwiają językowi bardziej kompletne sprawdzanie typu.
+> Wbudowane funkcje języka C++ są preferowane dla makr w wielu przypadkach, ponieważ eliminują efekty uboczne, takie jak opisane tutaj, i zezwalają na wykonywanie dokładniejszego sprawdzania typu przez język.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Operatory prefiksów inkrementacji i dekrementacji](../c-language/prefix-increment-and-decrement-operators.md)
+[Operatory przyrostu i zmniejszania prefiksu](../c-language/prefix-increment-and-decrement-operators.md)

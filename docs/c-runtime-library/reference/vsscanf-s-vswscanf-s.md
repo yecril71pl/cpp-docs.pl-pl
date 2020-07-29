@@ -24,12 +24,12 @@ f1_keywords:
 - vswscanf_s
 - _vstscanf_s
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-ms.openlocfilehash: bacda4288a6745ea57c31e68e515ae7b37418096
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9150642a6a21198ae43bdea5f33cc5a8f0b6a581
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946017"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189002"
 ---
 # <a name="vsscanf_s-vswscanf_s"></a>vsscanf_s, vswscanf_s
 
@@ -52,10 +52,10 @@ int vswscanf_s(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer*<br/>
+*buforu*<br/>
 Przechowywane dane
 
-*format*<br/>
+*Formatowanie*<br/>
 Ciąg kontroli formatu. Aby uzyskać więcej informacji, zobacz [Formatowanie pól specyfikacji: scanf i wscanf Functions](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 *arglist*<br/>
@@ -71,22 +71,22 @@ Aby uzyskać informacje o tych i innych kodach błędów, zobacz [errno, _doserr
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **vsscanf_s** odczytuje dane z *buforu* do lokalizacji, które są określone przez każdy argument na liście argumentów *arglist* . Argumenty na liście argumentów określają wskaźniki do zmiennych, które mają typ, który odpowiada specyfikatorowi typu w *formacie*. W przeciwieństwie do mniej bezpiecznej wersji **vsscanf**, parametr rozmiaru buforu jest wymagany w przypadku użycia znaków pola typu **c**, **c**, **s**, **s**lub zestawu kontroli ciągów, które są ujęte w **[]** . Rozmiar buforu w znakach musi być podany jako dodatkowy parametr natychmiast po każdym parametrze buforu, który go wymaga.
+Funkcja **vsscanf_s** odczytuje dane z *buforu* do lokalizacji, które są określone przez każdy argument na liście argumentów *arglist* . Argumenty na liście argumentów określają wskaźniki do zmiennych, które mają typ, który odpowiada specyfikatorowi typu w *formacie*. W przeciwieństwie do mniej bezpiecznej wersji **vsscanf**, parametr rozmiaru buforu jest wymagany w przypadku użycia znaków pola typu **c**, **c**, **s**, **s**lub zestawu kontroli ciągów, które są ujęte w **[]**. Rozmiar buforu w znakach musi być podany jako dodatkowy parametr natychmiast po każdym parametrze buforu, który go wymaga.
 
 Rozmiar buforu zawiera kończący wartość null. Pole specyfikacji szerokości może służyć do zapewnienia, że token, który jest odczytywany, będzie pasować do buforu. Jeśli pole specyfikacji szerokości nie jest używane i odczyt tokenu jest zbyt duży, aby zmieścił się w buforze, nic nie jest zapisywane w tym buforze.
 
-Aby uzyskać więcej informacji, zobacz [znaki pól](../../c-runtime-library/scanf-type-field-characters.md) [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) i scanf.
+Aby uzyskać więcej informacji, zobacz [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) i [pola typu scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Parametr size jest typu **unsigned**, not **size_t**.
+> Parametr size ma typ, a **`unsigned`** nie **size_t**.
 
 Argument *Format* kontroluje interpretację pól wejściowych i ma taką samą formę i funkcję jak argument *formatu* dla funkcji **scanf_s** . Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane.
 
-**vswscanf_s** to dwubajtowa wersja **vsscanf_s**; argumenty **vswscanf_s** są ciągami znaków dwubajtowych. **vsscanf_s** nie obsługuje wielobajtowych znaków szesnastkowych. **vswscanf_s** nie obsługuje znaków szesnastkowych o pełnej szerokości Unicode lub "strefy zgodności". W przeciwnym razie **vswscanf_s** i **vsscanf_s** zachowują się identycznie.
+**vswscanf_s** to dwubajtowa wersja **vsscanf_s**; argumenty do **vswscanf_s** są ciągami znaków dwubajtowych. **vsscanf_s** nie obsługuje wielobajtowych znaków szesnastkowych. **vswscanf_s** nie obsługuje znaków szesnastkowych o pełnej szerokości Unicode lub "strefy zgodności". W przeciwnym razie **vswscanf_s** i **vsscanf_s** zachowują się identycznie.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|Nie zdefiniowano _UNICODE & _MBCS|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|Nie zdefiniowano _MBCS _UNICODE &|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vstscanf_s**|**vsscanf_s**|**vsscanf_s**|**vswscanf_s**|
 
@@ -95,7 +95,7 @@ Argument *Format* kontroluje interpretację pól wejściowych i ma taką samą f
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
 |**vsscanf_s**|\<stdio.h>|
-|**vswscanf_s**|\<stdio. h > lub \<WCHAR. h >|
+|**vswscanf_s**|\<stdio.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -153,9 +153,9 @@ Real:     = 15.000000
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
 [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf —, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [vsscanf, vswscanf](vsscanf-vswscanf.md)<br/>
