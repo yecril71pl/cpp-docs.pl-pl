@@ -3,12 +3,12 @@ title: Poznanie SAL
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
-ms.openlocfilehash: fe48e31e5f4390915c4f3b5b6bf9c09bbd9fffe1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 78a254bca6a90826d47f20ee9909a8cc66e23e28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403988"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226050"
 ---
 # <a name="understanding-sal"></a>Poznanie SAL
 
@@ -359,7 +359,7 @@ Visual Studio Code Analysis sprawdza, czy ta funkcja sprawdza obecność wartoś
 
 ### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>Przykład: \_ \_ adnotacja sukcesów w połączeniu z \_ out\_
 
-Adnotacje można stosować do większości obiektów.  W szczególności można dodać adnotacje do całej funkcji.  Jedną z najbardziej oczywistych cech funkcji jest to, że może ona zakończyć się powodzeniem lub niepowodzeniem. Ale podobnie jak skojarzenie między buforem i jego rozmiarem, język C/C++ nie może wyznaczać sukcesu lub niepowodzenia funkcji Express. Za pomocą `_Success_` adnotacji można wypowiedzieć, jakie sukcesy dla funkcji wyglądają jak.  Parametr do `_Success_` adnotacji jest tylko wyrażeniem, gdy wartość true wskazuje, że funkcja zakończyła się powodzeniem. Wyrażenie może być dowolne, co może obsłużyć Analizator adnotacji. Efekty adnotacji po zwracaniu funkcji są stosowane tylko wtedy, gdy funkcja się powiedzie. W tym przykładzie pokazano `_Success_` , jak współdziała z programem `_Out_` w celu wykonania odpowiednich czynności. Możesz użyć słowa kluczowego, `return` aby reprezentować wartość zwracaną.
+Adnotacje można stosować do większości obiektów.  W szczególności można dodać adnotacje do całej funkcji.  Jedną z najbardziej oczywistych cech funkcji jest to, że może ona zakończyć się powodzeniem lub niepowodzeniem. Ale podobnie jak skojarzenie między buforem i jego rozmiarem, język C/C++ nie może wyznaczać sukcesu lub niepowodzenia funkcji Express. Za pomocą `_Success_` adnotacji można wypowiedzieć, jakie sukcesy dla funkcji wyglądają jak.  Parametr do `_Success_` adnotacji jest tylko wyrażeniem, gdy wartość true wskazuje, że funkcja zakończyła się powodzeniem. Wyrażenie może być dowolne, co może obsłużyć Analizator adnotacji. Efekty adnotacji po zwracaniu funkcji są stosowane tylko wtedy, gdy funkcja się powiedzie. W tym przykładzie pokazano `_Success_` , jak współdziała z programem `_Out_` w celu wykonania odpowiednich czynności. Możesz użyć słowa kluczowego, **`return`** aby reprezentować wartość zwracaną.
 
 ```cpp
 _Success_(return != false) // Can also be stated as _Success_(return)
@@ -398,7 +398,7 @@ Oto kilka wytycznych:
 
 Można też dodać adnotacje do wszystkich parametrów, aby upewnić się, że zamierzenie jest jasne w całej i aby ułatwić sprawdzenie, czy adnotacje zostały wykonane.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Korzystanie z adnotacji SAL w celu zmniejszenia liczby defektów kodu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [Dodawanie adnotacji do parametrów funkcji i zwracanych wartości](../code-quality/annotating-function-parameters-and-return-values.md)

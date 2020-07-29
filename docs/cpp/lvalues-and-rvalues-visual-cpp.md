@@ -5,16 +5,16 @@ helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 23625ddf44d16a4dc408b87f27b9cdfba7a9cbd4
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: b4b3ba5fdbc11ec97870b0f06fd1aabd3b57f5ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077237"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225972"
 ---
 # <a name="lvalues-and-rvalues-c"></a>Lvalues i Rvalues (C++)
 
-Każde C++ wyrażenie ma typ i należy do *kategorii wartości*. Kategorie wartości są podstawą reguł, które kompilatorzy muszą wykonać podczas tworzenia, kopiowania i przemieszczania obiektów tymczasowych podczas obliczania wyrażenia.
+Każde wyrażenie języka C++ ma typ i należy do *kategorii wartości*. Kategorie wartości są podstawą reguł, które kompilatorzy muszą wykonać podczas tworzenia, kopiowania i przemieszczania obiektów tymczasowych podczas obliczania wyrażenia.
 
 Standard C++ 17 definiuje kategorie wartości wyrażeń w następujący sposób:
 
@@ -26,9 +26,9 @@ Standard C++ 17 definiuje kategorie wartości wyrażeń w następujący sposób:
 
 Na poniższym diagramie przedstawiono relacje między kategoriami:
 
-![C++Kategorie wartości wyrażenia](media/value_categories.png "C++Kategorie wartości wyrażenia")
+![Kategorie wartości wyrażeń języka C++](media/value_categories.png "Kategorie wartości wyrażeń języka C++")
 
-Lvalue ma adres, do którego Twój program może uzyskać dostęp. Przykłady wyrażeń lvalue zawierają nazwy zmiennych, w tym zmienne **stałe** , elementy tablicy, wywołania funkcji, które zwracają odwołanie lvalue, pola bitowe, Unii i składowe klas.
+Lvalue ma adres, do którego Twój program może uzyskać dostęp. Przykłady wyrażeń lvalue zawierają nazwy zmiennych, w tym **`const`** zmienne, elementy tablicy, wywołania funkcji, które zwracają odwołanie lvalue, pola bitowe, Unii i składowe klas.
 
 Wyrażenie wartością prvalue bez nie ma adresu, który jest dostępny dla programu. Przykłady wyrażeń wartością prvalue bez obejmują literały, wywołania funkcji, które zwracają typ niebędący odwołaniem i obiekty tymczasowe, które są tworzone podczas wyrażenia evalution, ale dostępne tylko dla kompilatora.
 
@@ -66,9 +66,9 @@ int main()
 > [!NOTE]
 > W przykładach w tym temacie przedstawiono poprawne i nieprawidłowe użycie, gdy operatory nie są przeciążone. Przez przeciążanie operatorów można utworzyć wyrażenie, takie jak `j * 4` lvalue.
 
-Warunki *lvalue* i *rvalue* są często używane podczas odwoływania się do odwołań do obiektów. Aby uzyskać więcej informacji na temat odwołań, zobacz [lvalue Reference deklarator: &](../cpp/lvalue-reference-declarator-amp.md) i [rvalue reference deklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Warunki *lvalue* i *rvalue* są często używane podczas odwoływania się do odwołań do obiektów. Aby uzyskać więcej informacji na temat odwołań, zobacz [lvalue Reference deklarator: &](../cpp/lvalue-reference-declarator-amp.md) i [rvalue reference deklarator:  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Podstawowe pojęcia](../cpp/basic-concepts-cpp.md)<br/>
 [Deklarator odwołania do wartości L: &](../cpp/lvalue-reference-declarator-amp.md)<br/>

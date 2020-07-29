@@ -1,5 +1,5 @@
 ---
-title: '&lt;funkcje&gt; wyjątków'
+title: '&lt;&gt;funkcje wyjątków'
 ms.date: 11/04/2016
 f1_keywords:
 - exception/std::current_exception
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: ede3c828437aab1759c6711fc40511c69646a133
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 849f3c8406c43b0efc2d34837e00fee6ff64e52a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076570"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193786"
 ---
-# <a name="ltexceptiongt-functions"></a>&lt;funkcje&gt; wyjątków
+# <a name="ltexceptiongt-functions"></a>&lt;&gt;funkcje wyjątków
 
 ## <a name="current_exception"></a><a name="current_exception"></a>current_exception
 
@@ -47,13 +47,13 @@ Obiekt [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) 
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołaj funkcję `current_exception` w bloku catch. Jeśli wyjątek jest w locie i blok catch może przechwycić wyjątek, funkcja `current_exception` zwraca obiekt `exception_ptr`, który odwołuje się do wyjątku. W przeciwnym razie funkcja zwraca obiekt `exception_ptr` o wartości null.
+Wywołaj `current_exception` funkcję w bloku catch. Jeśli wyjątek jest w locie i blok catch może przechwycić wyjątek, `current_exception` Funkcja zwraca `exception_ptr` obiekt, który odwołuje się do wyjątku. W przeciwnym razie funkcja zwraca obiekt o wartości null `exception_ptr` .
 
-Funkcja `current_exception` przechwytuje wyjątek, który jest w locie, niezależnie od tego, czy instrukcja **catch** określa deklarację [wyjątku](../cpp/try-throw-and-catch-statements-cpp.md) .
+`current_exception`Funkcja przechwytuje wyjątek, który jest w locie, niezależnie od tego, czy **`catch`** instrukcja określa instrukcję [deklaracji wyjątku](../cpp/try-throw-and-catch-statements-cpp.md) .
 
-Destruktor dla bieżącego wyjątku jest wywoływany na końcu bloku **catch** , jeśli ten wyjątek nie zostanie ponownie zgłoszony. Jednak nawet jeśli wywołasz funkcję `current_exception` w destruktorze, funkcja zwróci obiekt `exception_ptr`, który odwołuje się do bieżącego wyjątku.
+Destruktor dla bieżącego wyjątku jest wywoływany na końcu **`catch`** bloku, jeśli nie zostanie ponownie zgłoszony wyjątek. Jednak nawet w przypadku wywołania `current_exception` funkcji w destruktorze funkcja zwraca `exception_ptr` obiekt, który odwołuje się do bieżącego wyjątku.
 
-Kolejne wywołania funkcji `current_exception` zwracają obiekty `exception_ptr`, które odwołują się do różnych kopii bieżącego wyjątku. W związku z tym obiekty są porównane jako nierówne, ponieważ odnoszą się one do poszczególnych kopii, mimo że kopie mają tę samą wartość binarną.
+Kolejne wywołania `current_exception` funkcji zwracają `exception_ptr` obiekty odwołujące się do różnych kopii bieżącego wyjątku. W związku z tym obiekty są porównane jako nierówne, ponieważ odnoszą się one do poszczególnych kopii, mimo że kopie mają tę samą wartość binarną.
 
 ## <a name="make_exception_ptr"></a><a name="make_exception_ptr"></a>make_exception_ptr
 
@@ -66,8 +66,8 @@ template <class E>
 
 ### <a name="parameters"></a>Parametry
 
-*Z wyjątkiem*\
-Klasa z wyjątkiem do skopiowania. Zazwyczaj należy określić obiekt [klasy wyjątku](../standard-library/exception-class.md) jako argument funkcji `make_exception_ptr`, chociaż każdy obiekt klasy może być argumentem.
+*Ale*\
+Klasa z wyjątkiem do skopiowania. Zazwyczaj należy określić obiekt [klasy wyjątku](../standard-library/exception-class.md) jako argument `make_exception_ptr` funkcji, chociaż każdy obiekt klasy może być argumentem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -75,9 +75,9 @@ Obiekt [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) 
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie funkcji `make_exception_ptr` jest równoważne do zgłaszania C++ wyjątku, przechwytywania go w bloku catch, a następnie wywołania funkcji [current_exception](../standard-library/exception-functions.md#current_exception) w celu zwrócenia obiektu `exception_ptr`, który odwołuje się do wyjątku. Implementacja funkcji `make_exception_ptr` firmy Microsoft jest bardziej wydajna niż generowanie i przechwytywanie wyjątku.
+Wywołanie `make_exception_ptr` funkcji jest równoznaczne z wygenerowaniem wyjątku C++, przechwyceniem go w bloku catch, a następnie wywołaniem funkcji [current_exception](../standard-library/exception-functions.md#current_exception) w celu zwrócenia `exception_ptr` obiektu, który odwołuje się do wyjątku. Implementacja firmy Microsoft dla `make_exception_ptr` funkcji jest bardziej wydajna niż zgłaszanie i przechwytywanie wyjątku.
 
-Aplikacja zwykle nie wymaga funkcji `make_exception_ptr` i odradzamy jej używanie.
+Aplikacja zwykle nie wymaga `make_exception_ptr` funkcji i odradza jej używanie.
 
 ## <a name="rethrow_exception"></a><a name="rethrow_exception"></a>rethrow_exception
 
@@ -89,16 +89,16 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>Parametry
 
-*P*\
+*St*\
 Przechwycony wyjątek do ponownego zgłoszenia. Jeśli *P* jest [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)o wartości null, funkcja zgłasza [std:: bad_exception](../standard-library/bad-exception-class.md).
 
 ### <a name="remarks"></a>Uwagi
 
-Po przechowaniu przechwyconego wyjątku w obiekcie `exception_ptr`, wątek główny może przetworzyć obiekt. W wątku podstawowym wywołaj funkcję `rethrow_exception` razem z obiektem `exception_ptr` jako argumentem. Funkcja `rethrow_exception` wyodrębnia wyjątek z obiektu `exception_ptr`, a następnie zgłasza wyjątek w kontekście wątku głównego.
+Po przechowaniu przechwyconego wyjątku w `exception_ptr` obiekcie wątek główny może przetworzyć obiekt. W wątku podstawowym Wywołaj `rethrow_exception` funkcję razem z `exception_ptr` obiektem jako argumentem. `rethrow_exception`Funkcja wyodrębnia wyjątek z `exception_ptr` obiektu, a następnie zgłasza wyjątek w kontekście wątku głównego.
 
 ## <a name="get_terminate"></a><a name="get_terminate"></a>get_terminate
 
-Uzyskuje bieżącą funkcję `terminate_handler`.
+Uzyskuje bieżącą `terminate_handler` funkcję.
 
 ```cpp
 terminate_handler get_terminate();
@@ -106,7 +106,7 @@ terminate_handler get_terminate();
 
 ## <a name="set_terminate"></a><a name="set_terminate"></a>set_terminate
 
-Ustanawia nowy `terminate_handler`, który ma zostać wywołany po zakończeniu programu.
+Ustanawia nowy `terminate_handler` , który zostanie wywołany po zakończeniu działania programu.
 
 ```cpp
 terminate_handler set_terminate(terminate_handler fnew) throw();
@@ -155,7 +155,7 @@ int main()
 
 ## <a name="get_unexpected"></a><a name="get_unexpected"></a>get_unexpected
 
-Uzyskuje bieżącą funkcję `unexpected_handler`.
+Uzyskuje bieżącą `unexpected_handler` funkcję.
 
 ```cpp
 unexpected_handler get_unexpected();
@@ -174,7 +174,7 @@ Jeśli nie jest to typ klasy polimorficznej lub jeśli `nested_exception` jest n
 
 ## <a name="set_unexpected"></a><a name="set_unexpected"></a>set_unexpected
 
-Ustanawia nowy `unexpected_handler`, jeśli wystąpił nieoczekiwany wyjątek.
+Ustanawia nowy, `unexpected_handler` gdy zostanie napotkany nieoczekiwany wyjątek.
 
 ```cpp
 unexpected_handler set_unexpected(unexpected_handler fnew) throw();
@@ -187,13 +187,13 @@ Funkcja, która ma zostać wywołana w przypadku napotkania nieoczekiwanego wyj�
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Adres poprzedniego `unexpected_handler`.
+Adres poprzedniego `unexpected_handler` .
 
 ### <a name="remarks"></a>Uwagi
 
 *fnew* nie może być pustym wskaźnikiem.
 
-C++ Standard wymaga, aby `unexpected` jest wywoływana, gdy funkcja zgłasza wyjątek, który nie znajduje się na liście throw. Bieżąca implementacja nie obsługuje tej funkcji. Poniższy przykład wywołuje `unexpected` bezpośrednio, a następnie wywołuje `unexpected_handler`.
+Standard C++ wymaga, że `unexpected` jest wywoływana, gdy funkcja zgłasza wyjątek, który nie znajduje się na liście throw. Bieżąca implementacja nie obsługuje tej funkcji. Poniższy przykład wywołuje `unexpected` bezpośrednio, który następnie wywołuje `unexpected_handler` .
 
 ### <a name="example"></a>Przykład
 
@@ -230,13 +230,13 @@ void terminate();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja wywołuje procedurę obsługi zakończenia, funkcję typu **void**. Jeśli `terminate` jest wywoływany bezpośrednio przez program, program obsługi zakończenia jest ostatnim ustawieniem przez wywołanie do [set_terminate](../standard-library/exception-functions.md#set_terminate). Jeśli `terminate` jest wywoływana z jednej z kilku przyczyn podczas obliczania wyrażenia throw, procedura obsługi zakończenia jest taka, która obowiązuje natychmiast po obliczeniu wyrażenia throw.
+Funkcja wywołuje procedurę obsługi zakończenia, funkcję typu **`void`** . Jeśli `terminate` jest wywoływana bezpośrednio przez program, procedura obsługi zakończenia jest ostatnim ustawieniem przez wywołanie do [set_terminate](../standard-library/exception-functions.md#set_terminate). Jeśli `terminate` jest wywoływana dla którejkolwiek z kilku innych przyczyn podczas obliczania wyrażenia throw, procedura obsługi zakończenia jest taka, która obowiązuje natychmiast po obliczeniu wyrażenia throw.
 
-Procedura obsługi zakończenia nie może powrócić do jego obiektu wywołującego. W trakcie uruchamiania programu program obsługi kończy działanie, które wywołuje `abort`.
+Procedura obsługi zakończenia nie może powrócić do jego obiektu wywołującego. W trakcie uruchamiania programu program obsługi kończy działanie `abort` .
 
 ### <a name="example"></a>Przykład
 
-Zobacz [set_unexpected](../standard-library/exception-functions.md#set_unexpected) , aby zapoznać się z przykładem korzystania z `terminate`.
+Zobacz [set_unexpected](../standard-library/exception-functions.md#set_unexpected) , aby zapoznać się z przykładem użycia `terminate` .
 
 ## <a name="throw_with_nested"></a><a name="throw_with_nested"></a>throw_with_nested
 
@@ -251,7 +251,7 @@ Zgłasza wyjątek z zagnieżdżonymi wyjątkami.
 
 ## <a name="uncaught_exception"></a><a name="uncaught_exception"></a>uncaught_exception
 
-Zwraca **wartość true** tylko wtedy, gdy zgłoszony wyjątek jest aktualnie przetwarzany.
+Zwraca **`true`** tylko wtedy, gdy zgłoszony wyjątek jest aktualnie przetwarzany.
 
 ```cpp
 bool uncaught_exception();
@@ -259,7 +259,7 @@ bool uncaught_exception();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca **wartość PRAWDA** po zakończeniu obliczania wyrażenia throw oraz przed ukończeniem inicjacji deklaracji wyjątku w procedurze obsługi dopasowania lub wywołując [nieoczekiwany](../standard-library/exception-functions.md#unexpected) wynik w wyniku wyrażenia throw. W szczególności `uncaught_exception` zwróci **wartość true** w przypadku wywołania z destruktora, który jest wywoływany podczas operacji unwindy wyjątku. Na urządzeniach `uncaught_exception` jest obsługiwana tylko w przypadku Windows CE 5,00 i nowszych wersji, w tym platform Windows Mobile 2005.
+Zwraca **`true`** po zakończeniu obliczania wyrażenia throw oraz przed ukończeniem inicjalizacji deklaracji wyjątku w procedurze obsługi dopasowania lub wywołując [nieoczekiwany](../standard-library/exception-functions.md#unexpected) wynik w wyniku wyrażenia throw. W szczególności `uncaught_exception` zwróci **`true`** wartość po wywołaniu z destruktora, który jest wywoływany podczas operacji unwindy wyjątku. Na urządzeniach `uncaught_exception` jest obsługiwana tylko w Windows CE 5,00 i nowszych wersjach, w tym na platformach Windows Mobile 2005.
 
 ### <a name="example"></a>Przykład
 
@@ -324,9 +324,9 @@ void unexpected();
 
 ### <a name="remarks"></a>Uwagi
 
-C++ Standard wymaga, aby `unexpected` jest wywoływana, gdy funkcja zgłasza wyjątek, który nie znajduje się na liście throw. Bieżąca implementacja nie obsługuje tej funkcji. Przykład wywołuje `unexpected` bezpośrednio, który wywołuje nieoczekiwaną procedurę obsługi.
+Standard C++ wymaga, że `unexpected` jest wywoływana, gdy funkcja zgłasza wyjątek, który nie znajduje się na liście throw. Bieżąca implementacja nie obsługuje tej funkcji. Przykład wywołuje `unexpected` bezpośrednio, który wywołuje nieoczekiwaną procedurę obsługi.
 
-Funkcja wywołuje nieoczekiwaną procedurę obsługi, funkcję typu **void**. Jeśli `unexpected` jest wywoływana bezpośrednio przez program, nieoczekiwany program obsługi jest ostatnim ustawieniem przez wywołanie do [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
+Funkcja wywołuje nieoczekiwaną procedurę obsługi, funkcję typu **`void`** . Jeśli `unexpected` jest wywoływana bezpośrednio przez program, nieoczekiwany program obsługi jest ostatnim ustawieniem przez wywołanie do [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
 
 Nieoczekiwany program obsługi nie może powrócić do jego obiektu wywołującego. Może zakończyć wykonywanie przez:
 
@@ -334,10 +334,10 @@ Nieoczekiwany program obsługi nie może powrócić do jego obiektu wywołujące
 
 - Zgłaszanie obiektu typu [bad_exception](../standard-library/bad-exception-class.md).
 
-- Wywoływanie metody [Terminate](../standard-library/exception-functions.md#terminate), `abort` lub **Exit**(`int`).
+- Wywołanie [terminate](../standard-library/exception-functions.md#terminate)metody Terminate `abort` lub `exit` .
 
 Podczas uruchamiania programu nieoczekiwana procedura obsługi jest funkcją, która wywołuje [przerwanie](../standard-library/exception-functions.md#terminate).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [set_unexpected](../standard-library/exception-functions.md#set_unexpected) , aby zapoznać się z przykładem korzystania z `unexpected`.
+Zobacz [set_unexpected](../standard-library/exception-functions.md#set_unexpected) , aby zapoznać się z przykładem użycia `unexpected` .

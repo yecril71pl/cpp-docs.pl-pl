@@ -9,28 +9,28 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: 30972b5668d3eab9ec2118f3d90d7ced1e087275
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 13e6d45642c08a97c06d7099b83e632501267310
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160700"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225816"
 ---
 # <a name="thread"></a>wątek
 
 **Specyficzne dla firmy Microsoft**
 
-Rozszerzony modyfikator klasy magazynu **wątku** jest używany do deklarowania zmiennej lokalnej wątku. Dla przenośnego odpowiednika w języku C++ 11 i nowszych Użyj specyfikatora klasy magazynu [thread_local](../cpp/storage-classes-cpp.md#thread_local) dla kodu przenośnego. W systemie Windows **thread_local** jest zaimplementowany przy użyciu **__declspec (thread)** .
+**`thread`** Rozszerzony modyfikator klasy magazynu jest używany do deklarowania zmiennej lokalnej wątku. Dla przenośnego odpowiednika w języku C++ 11 i nowszych Użyj specyfikatora klasy magazynu [thread_local](../cpp/storage-classes-cpp.md#thread_local) dla kodu przenośnego. W systemie Windows **`thread_local`** jest zaimplementowany przy użyciu **`__declspec(thread)`** .
 
 ## <a name="syntax"></a>Składnia
 
-**__declspec (wątek)** *deklarator*
+**`__declspec(thread)`***deklarator*
 
 ## <a name="remarks"></a>Uwagi
 
 Pamięć lokalna wątku (TLS) to mechanizm, za pomocą którego każdy wątek w procesie wielowątkowym przydziela pamięć dla danych specyficznych wątku. W standardowych programach wielowątkowych, dane są współużytkowane przez wszystkie wątki danego procesu, natomiast pamięć lokalna wątku jest mechanizmem przydzielania danych osobno dla danego wątku. Aby uzyskać pełną dyskusję na temat wątków, zobacz [wielowątkowość](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-Deklaracje zmiennych lokalnych wątku muszą używać [składni atrybutów rozszerzonych](../cpp/declspec.md) i słowa kluczowego **__declspec** ze słowem kluczowym **wątku** . Na przykład, poniższy kod deklaruje lokalną zmienną całkowitą wątku i inicjuje ją wartością:
+Deklaracje zmiennych lokalnych wątku muszą używać [składni atrybutów rozszerzonych](../cpp/declspec.md) i **`__declspec`** słowa kluczowego ze **`thread`** słowem kluczowym. Na przykład, poniższy kod deklaruje lokalną zmienną całkowitą wątku i inicjuje ją wartością:
 
 ```cpp
 __declspec( thread ) int tls_i = 1;
@@ -40,21 +40,21 @@ W przypadku używania zmiennych lokalnych wątków w dynamicznie ładowanych bib
 
 1. Jeśli zmienna jest inicjowana za pomocą wywołania funkcji (w tym konstruktorów), ta funkcja będzie wywoływana tylko dla wątku, który spowodował załadowanie pliku binarnego/DLL do procesu i dla tych wątków, które rozpoczęły się po załadowaniu pliku binarnego/DLL. Funkcje inicjujące nie są wywoływane dla żadnego innego wątku, który został już uruchomiony podczas ładowania biblioteki DLL. Dynamiczna Inicjalizacja występuje w wywołaniu DllMain dla DLL_THREAD_ATTACH, ale biblioteka DLL nigdy nie pobiera tego komunikatu, jeśli biblioteka DLL nie jest w toku podczas uruchamiania wątku.
 
-1. Zmienne lokalne wątku, które są inicjowane statycznie z wartościami stałymi, są zwykle inicjowane prawidłowo we wszystkich wątkach. Jednakże od grudnia 2017 istnieje znany problem związany z zgodnością w kompilatorze firmy Microsoft C++ , w którym zmienne **constexpr** są odbierane jako dynamiczne, a nie statyczne.
+1. Zmienne lokalne wątku, które są inicjowane statycznie z wartościami stałymi, są zwykle inicjowane prawidłowo we wszystkich wątkach. Jednakże od grudnia 2017 występuje problem związany z zgodnością w kompilatorze języka Microsoft C++, według którego **`constexpr`** zmienne są odbierane jako dynamiczne, a nie statyczne.
 
    Uwaga: oczekiwano, że oba te problemy zostaną rozwiązane w przyszłych aktualizacjach kompilatora.
 
 Ponadto należy przestrzegać następujących wytycznych podczas deklarowania lokalnych obiektów wątku i zmiennych:
 
-- Atrybut **Thread** można zastosować tylko do deklaracji klasy i danych oraz definicji; nie można użyć **wątku** dla deklaracji lub definicji funkcji.
+- Można zastosować **`thread`** atrybut tylko do deklaracji klasy i danych oraz definicji; **`thread`** nie można używać w deklaracjach lub definicjach funkcji.
 
-- Można określić atrybut **wątku** tylko dla elementów danych ze statycznym okresem przechowywania. Obejmuje to globalne obiekty danych (zarówno **statyczne** , jak i zewnętrzne), lokalne obiekty **statyczne i statyczne**elementy członkowskie danych klas. Nie można zadeklarować automatycznych obiektów danych przy użyciu atrybutu **wątku** .
+- Można określić **`thread`** atrybut tylko dla elementów danych ze statycznym okresem przechowywania. Obejmuje to globalne obiekty danych (zarówno **`static`** i **`extern`** ), lokalne obiekty statyczne i statyczne elementy członkowskie danych klas. Nie można zadeklarować automatycznych obiektów danych przy użyciu **`thread`** atrybutu.
 
-- Należy użyć atrybutu **wątku** dla deklaracji i definicji obiektu lokalnego wątku, niezależnie od tego, czy deklaracja i definicja występują w tym samym pliku lub oddzielnych plikach.
+- Należy użyć **`thread`** atrybutu dla deklaracji i definicji obiektu lokalnego wątku, niezależnie od tego, czy deklaracja i definicja występują w tym samym pliku lub oddzielnych plikach.
 
-- Nie można użyć atrybutu **wątku** jako modyfikatora typu.
+- Nie można użyć **`thread`** atrybutu jako modyfikatora typu.
 
-- Ponieważ deklaracja obiektów, które używają atrybutu **wątku** , jest dozwolona, te dwa przykłady są semantycznie równoważne:
+- Ponieważ deklaracja obiektów, które używają **`thread`** atrybutu jest dozwolona, te dwa przykłady są semantycznie równoważne:
 
     ```cpp
     // declspec_thread_2.cpp
@@ -71,7 +71,7 @@ Ponadto należy przestrzegać następujących wytycznych podczas deklarowania lo
     __declspec( thread ) B2 BObject2;   // BObject2 declared thread local.
     ```
 
-- Standard C pozwala na inicjalizację obiektu lub zmiennej z wyrażeniem, w którym uczestniczy odwołanie do samego siebie, ale tylko dla obiektów niestatycznych. Mimo C++ że zwykle zezwala na to dynamiczną inicjalizację obiektu z wyrażeniem, w którym jest odwołanie do samego siebie, ten typ inicjalizacji nie jest dozwolony w przypadku obiektów lokalnych wątków. Na przykład:
+- Standard C pozwala na inicjalizację obiektu lub zmiennej z wyrażeniem, w którym uczestniczy odwołanie do samego siebie, ale tylko dla obiektów niestatycznych. Chociaż język C++ zwykle zezwala na takie dynamiczne inicjowanie obiektu z wyrażeniem, w którym jest odwołanie do samego siebie, ten typ inicjalizacji nie jest dozwolony w przypadku obiektów lokalnych wątków. Na przykład:
 
    ```cpp
    // declspec_thread_3.cpp
@@ -81,11 +81,11 @@ Ponadto należy przestrzegać następujących wytycznych podczas deklarowania lo
    Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
    ```
 
-   Wyrażenie **sizeof** , które obejmuje inicjowany obiekt, nie stanowi odwołania do samego siebie i jest dozwolone w C i C++.
+   **`sizeof`** Wyrażenie, które zawiera inicjowany obiekt, nie stanowi odwołania do samego siebie i jest dozwolone w C i C++.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [__declspec](../cpp/declspec.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>

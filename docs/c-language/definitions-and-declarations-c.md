@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - export functions
 ms.assetid: d150395a-89d4-4298-9ac4-08f84fe1261c
-ms.openlocfilehash: 8723c3f09a5e9a8eecf0e552c9f5a7fd9b7f6c68
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e39832f942eb1473be913112fde1d37ddf05674
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234361"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226369"
 ---
 # <a name="definitions-and-declarations-c"></a>Definicje i deklaracje (C)
 
 **Specyficzne dla firmy Microsoft**
 
-Interfejs DLL odwołuje się do wszystkich elementów (funkcji i danych), które są znane do wyeksportowania przez jakiś program w systemie. oznacza to, że wszystkie elementy, które są **dllimport** zadeklarowane `dllexport`jako dllimport lub. Wszystkie deklaracje zawarte w interfejsie DLL muszą określać **dllimport** atrybut dllimport `dllexport` lub Attribute. Jednak definicja może określać tylko `dllexport` atrybut. Na przykład następująca definicja funkcji generuje błąd kompilatora:
+Interfejs DLL odwołuje się do wszystkich elementów (funkcji i danych), które są znane do wyeksportowania przez jakiś program w systemie. oznacza to, że wszystkie elementy, które są zadeklarowane jako **`dllimport`** lub `dllexport` . Wszystkie deklaracje zawarte w interfejsie DLL muszą określać **`dllimport`** `dllexport` atrybut lub. Jednak definicja może określać tylko `dllexport` atrybut. Na przykład następująca definicja funkcji generuje błąd kompilatora:
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -46,7 +46,7 @@ Jest to jednak poprawna składnia:
 DllExport int i = 10;      /* Okay: this is an export definition. */
 ```
 
-Użycie `dllexport` wskazuje definicję, podczas gdy **dllimport** oznacza deklarację. Aby wymusić `extern` deklarację, należy użyć słowa kluczowego. `dllexport` w przeciwnym razie jest implikowana definicja.
+Użycie `dllexport` wskazuje definicję, a mimo to **`dllimport`** oznacza deklarację. Musisz użyć **`extern`** słowa kluczowego with, `dllexport` Aby wymusić deklarację; w przeciwnym razie jest implikowana definicja.
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -58,6 +58,6 @@ Dllimport int j;          /* a declaration. */
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Importowanie bibliotek DLL i eksportowanie funkcji](../c-language/dll-import-and-export-functions.md)
+[Funkcje importowania i eksportowania biblioteki DLL](../c-language/dll-import-and-export-functions.md)

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - unexpected function
 - exception handling, termination
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
-ms.openlocfilehash: 77c8f0ae8c64423a656a2ebbe1fe3ef6dbe1b794
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f05eab14a53c8abc119a8014d5ac99dc076a9c25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948304"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226167"
 ---
 # <a name="set_unexpected-crt"></a>set_unexpected (CRT)
 
@@ -53,7 +53,7 @@ Zwraca wskaźnik do poprzedniej funkcji zakończenia zarejestrowanej przez **_se
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **set_unexpected** instaluje *unexpFunction* jako funkcję wywołana przez **nieoczekiwaną**. **nieoczekiwany** nie jest używany w C++ bieżącej implementacji obsługi wyjątków. Typ **unexpected_function** jest zdefiniowany w EH. H jako wskaźnik do nieoczekiwanej funkcji zdefiniowanej przez użytkownika, *unexpFunction* , która zwraca wartość **void**. Niestandardowa funkcja *unexpFunction* nie powinna zwracać do obiektu wywołującego.
+Funkcja **set_unexpected** instaluje *unexpFunction* jako funkcję wywołana przez **nieoczekiwaną**. **nieoczekiwany** nie jest używany w bieżącej implementacji obsługi wyjątków C++. Typ **unexpected_function** jest zdefiniowany w EH. H jako wskaźnik do nieoczekiwanej funkcji zdefiniowanej przez użytkownika, *unexpFunction* , która zwraca wartość **`void`** . Niestandardowa funkcja *unexpFunction* nie powinna zwracać do obiektu wywołującego.
 
 ```cpp
 typedef void ( *unexpected_function )( );
@@ -61,13 +61,13 @@ typedef void ( *unexpected_function )( );
 
 Domyślnie **nieoczekiwane** wywołania **kończą**. To zachowanie domyślne można zmienić, pisząc własną funkcję zakończenia i wywołując **set_unexpected** z nazwą funkcji jako argumentem. **nieoczekiwane** wywołania ostatnią funkcję podaną jako argument **set_unexpected**.
 
-W przeciwieństwie do niestandardowej funkcji zakończenia zainstalowanej przez wywołanie **set_terminate**, wyjątek może być zgłaszany w *unexpFunction*.
+W przeciwieństwie do niestandardowej funkcji zakończenia zainstalowanej przez wywołanie do **set_terminate**, wyjątek może być zgłaszany z poziomu *unexpFunction*.
 
 W środowisku wielowątkowym nieoczekiwane funkcje są obsługiwane osobno dla każdego wątku. Każdy nowy wątek musi zainstalować własną nieoczekiwaną funkcję. W ten sposób każdy wątek jest odpowiedzialny za jego własną nieoczekiwaną obsługę.
 
-W bieżącej implementacji firmy Microsoft obsługi C++ wyjątków **nieoczekiwane** wywołania **kończą** się domyślnie i nigdy nie są wywoływane przez bibliotekę wykonawczą obsługującą wyjątek. Nie ma konkretnej możliwości wywoływania **nieoczekiwanego** , a nie **przerwania**.
+W bieżącej implementacji obsługi wyjątków języka C++, **nieoczekiwane** wywołania **kończą** się domyślnie i nigdy nie są wywoływane przez bibliotekę wykonawczą obsługującą wyjątek. Nie ma konkretnej możliwości wywoływania **nieoczekiwanego** , a nie **przerwania**.
 
-Istnieje jedna procedura obsługi **set_unexpected** dla wszystkich dynamicznie połączonych bibliotek DLL lub exe; nawet jeśli wywołasz **set_unexpected** , program obsługi może zostać zastąpiony przez inny lub zastępujący procedurę obsługi ustawioną przez inną bibliotekę DLL lub exe.
+Istnieje jedna procedura obsługi **set_unexpected** dla wszystkich dynamicznie połączonych bibliotek DLL lub exe; nawet w przypadku wywołania **set_unexpected** program obsługi może być zastępowany przez inny lub zastępujący moduł obsługi ustawiony przez inną bibliotekę DLL lub exe.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -79,8 +79,8 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa wyjątków — procedury](../../c-runtime-library/exception-handling-routines.md)<br/>
-[abort](abort.md)<br/>
+[Procedury obsługi wyjątków](../../c-runtime-library/exception-handling-routines.md)<br/>
+[przerwij](abort.md)<br/>
 [_get_unexpected](get-unexpected.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>
 [kończyć](terminate-crt.md)<br/>

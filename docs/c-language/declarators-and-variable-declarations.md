@@ -6,12 +6,12 @@ helpviewer_keywords:
 - declarators, definition
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
-ms.openlocfilehash: 928de4b1724577a9fdb282f5109b4b5d0b31c4e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b20cde6982e99dedaff59518b71c041233a01dd8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234533"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226454"
 ---
 # <a name="declarators-and-variable-declarations"></a>Deklaratory i deklaracje zmiennych
 
@@ -20,7 +20,7 @@ W pozostałej części tej sekcji opisano formę i znaczenie deklaracji typów z
 |Typ zmiennej|Opis|
 |----------------------|-----------------|
 |[Zmienne proste](../c-language/simple-variable-declarations.md)|Zmienne pojedynczej wartości z typem całkowitym lub zmiennoprzecinkowym|
-|[Tablice](../c-language/array-declarations.md)|Zmienne złożone z kolekcji elementów tego samego typu|
+|[Macierze](../c-language/array-declarations.md)|Zmienne złożone z kolekcji elementów tego samego typu|
 |[Wskaźniki](../c-language/pointer-declarations.md)|Zmienne wskazujące na inne zmienne i zawierają lokalizacje zmiennych (w postaci adresów), a nie wartości|
 |[Zmienne wyliczenia](../c-language/c-enumeration-declarations.md)|Proste zmienne z typem całkowitym zawierającym jedną wartość z zestawu nazwanych stałych całkowitych|
 |[Struktury](../c-language/structure-declarations.md)|Zmienne złożone z kolekcji wartości, które mogą mieć różne typy|
@@ -36,7 +36,7 @@ W deklarator
 __declspec(thread) char *var;
 ```
 
-`char`jest specyfikatorem typu `__declspec(thread)` i `*` jest modyfikatorem i `var` jest nazwą identyfikatora.
+**`char`** jest specyfikatorem typu `__declspec(thread)` i `*` jest modyfikatorem i `var` jest nazwą identyfikatora.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
@@ -65,7 +65,7 @@ Używasz Deklaratory do deklarowania tablic wartości, wskaźników do wartości
 > [!NOTE]
 > Zapoznaj się z składnią *deklaracji* w temacie [Omówienie deklaracji](../c-language/overview-of-declarations.md) lub [składni języka C](../c-language/c-language-syntax-summary.md) dla składni odwołującej się do *deklarator*.
 
-Gdy deklarator składa się z niezmodyfikowanego identyfikatora, zadeklarowany element ma typ podstawowy. Jeśli gwiazdka (<strong>\*</strong>) pojawia się po lewej stronie identyfikatora, typ jest modyfikowany do typu wskaźnika. Jeśli po identyfikatorze następuje nawias (**[]**), typ jest modyfikowany do typu tablicy. Jeśli po stronie identyfikatora następuje nawias, typ jest modyfikowany do typu funkcji. Aby uzyskać więcej informacji na temat interpretacji pierwszeństwa w deklaracjach, zobacz [Interpretowanie bardziej złożonej Deklaratory](../c-language/interpreting-more-complex-declarators.md).
+Gdy deklarator składa się z niezmodyfikowanego identyfikatora, zadeklarowany element ma typ podstawowy. Jeśli gwiazdka ( <strong>\*</strong> ) pojawia się po lewej stronie identyfikatora, typ jest modyfikowany do typu wskaźnika. Jeśli po identyfikatorze następuje nawias (**[]**), typ jest modyfikowany do typu tablicy. Jeśli po stronie identyfikatora następuje nawias, typ jest modyfikowany do typu funkcji. Aby uzyskać więcej informacji na temat interpretacji pierwszeństwa w deklaracjach, zobacz [Interpretowanie bardziej złożonej Deklaratory](../c-language/interpreting-more-complex-declarators.md).
 
 Każdy deklarator deklaruje co najmniej jeden identyfikator. Element Deklarator musi zawierać specyfikator typu jako kompletną deklarację. Specyfikator typu zawiera typ elementów typu tablicy, typ obiektu, do którego odnosi się typ wskaźnika lub typ zwracany funkcji.
 
@@ -85,6 +85,6 @@ Kompilator języka Microsoft C nie ogranicza liczby deklaratory, która może mo
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Deklaracje i typy](../c-language/declarations-and-types.md)

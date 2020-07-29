@@ -28,12 +28,12 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: fc1dfcc54259dfe40d2fc37be1e1c0ab63ab7c4a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 786246afbb8ce4f733f733af75af3a70ce33006d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916310"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226219"
 ---
 # <a name="_getw"></a>_getw
 
@@ -58,7 +58,7 @@ Wskaźnik do struktury **pliku** .
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcja **_getw** odczytuje następną wartość binarną typu **int** z pliku skojarzonego ze *strumieniem* i zwiększa skojarzony wskaźnik pliku (jeśli istnieje), aby wskazywała na Następny nieprzeczytany znak. **_getw** nie zakłada żadnego specjalnego wyrównania elementów w strumieniu. Problemy z portami mogą wystąpić w **_getw** , ponieważ rozmiar typu **int** i kolejność bajtów w typie **int** różnią się w różnych systemach.
+Funkcja **_getw** odczytuje następną wartość binarną typu **`int`** z pliku skojarzonego ze *strumieniem* i zwiększa skojarzony wskaźnik pliku (jeśli istnieje), aby wskazać Następny nieprzeczytany znak. **_getw** nie zakłada żadnego specjalnego wyrównania elementów w strumieniu. Problemy z portami mogą wystąpić w **_getw** , ponieważ rozmiar **`int`** typu i kolejność bajtów w danym **`int`** typie różnią się w różnych systemach.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -66,7 +66,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**_getw**|\<stdio. h>|
+|**_getw**|\<stdio.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -105,7 +105,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_getwtxt"></a>Dane wejściowe: crt_getw. txt
+### <a name="input-crt_getwtxt"></a>Dane wejściowe: crt_getw.txt
 
 ```Input
 Line one.
@@ -118,7 +118,7 @@ Line two.
 First data word in file: 0x656e694c
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
 [_putw](putw.md)<br/>
