@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-ms.openlocfilehash: 096ccb7ff443d24e0d53e73a5950faa1e85aeae6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 326886f8de8b59cce9df46eb7b0325b7cc9eb9f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194567"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225205"
 ---
 # <a name="linker-tools-error-lnk2031"></a>Błąd narzędzi konsolidatora LNK2031
 
@@ -19,7 +19,7 @@ ms.locfileid: "80194567"
 
 ## <a name="remarks"></a>Uwagi
 
-Podczas próby zaimportowania funkcji natywnej do czystego obrazu należy pamiętać, że niejawne konwencje wywoływania różnią się między natywnymi i czystymi kompilacjami. Aby uzyskać więcej informacji o czystych obrazach, zobacz [czysty iC++możliwy do zweryfikowania kod (/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Podczas próby zaimportowania funkcji natywnej do czystego obrazu należy pamiętać, że niejawne konwencje wywoływania różnią się między natywnymi i czystymi kompilacjami. Aby uzyskać więcej informacji o czystych obrazach, zobacz [czysty i możliwy do zweryfikowania kod (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 **/CLR: Pure** kompilator Option jest przestarzały w programie visual Studio 2015 i nieobsługiwany w programie visual Studio 2017.
 
@@ -52,7 +52,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak używać funkcji natywnej z czystego obrazu. Zanotuj jawny specyfikator konwencji wywoływania **__cdecl** .
+Poniższy przykład pokazuje, jak używać funkcji natywnej z czystego obrazu. Zanotuj jawny **`__cdecl`** specyfikator konwencji wywoływania.
 
 ```cpp
 // LNK2031_c.cpp

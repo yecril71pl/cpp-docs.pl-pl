@@ -1,44 +1,44 @@
 ---
-title: Typy parametrów atrybutu (C++/CLI i C++/CX)
+title: Typy parametrów atrybutu  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-ms.openlocfilehash: b8cb222af2d5b25a90f35d8d32688567bb3fb1d8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c7b219ddad939aab7d6093787dc2fe4131ccced5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172649"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225166"
 ---
-# <a name="attribute-parameter-types--ccli-and-ccx"></a>Typy parametrów atrybutu (C++/CLI i C++/CX)
+# <a name="attribute-parameter-types--ccli-and-ccx"></a>Typy parametrów atrybutu  (C++/CLI i C++/CX)
 
 Wartości przesyłane do atrybutów muszą być znane kompilatorowi w czasie kompilacji.  Parametry atrybutu mogą być następujące:
 
-- **bool**
+- **`bool`**
 
-- **char**, **znak bez znaku**
+- **`char`**, **`unsigned char`**
 
-- **krótkie**, **niepodpisane, krótkie**
+- **`short`**, **`unsigned short`**
 
-- **int**, **unsigned int**
+- **`int`**, **`unsigned int`**
 
-- **Long**, **Long unsigned**
+- **`long`**, **`unsigned long`**
 
-- **__int64**, **niepodpisane __int64**
+- **`__int64`**, **niepodpisane __int64**
 
-- **float**, **Double**
+- **`float`**, **`double`**
 
-- **wchar_t**
+- **`wchar_t`**
 
-- `char*` lub `wchar_t*` lub `System::String*`
+- **`char*`** lub `wchar_t*` lub`System::String*`
 
 - `System::Type ^`
 
 - `System::Object ^`
 
-- **enum**
+- **`enum`**
 
 ## <a name="example"></a>Przykład
 
@@ -122,6 +122,6 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty zdefiniowane przez użytkownika](user-defined-attributes-cpp-component-extensions.md)

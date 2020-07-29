@@ -16,12 +16,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: c68a7c9764e7f52131a90d38db22d2645eed9a4f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 354cd1cac5db775ea56cb5215a8528bdfe9ac5ab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625409"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225010"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Formanty MFC ActiveX: tworzenie podklasy formantu okna
 
@@ -43,7 +43,7 @@ Aby podtworzyć podklasę kontrolki systemu Windows, wykonaj następujące zadan
 
 ## <a name="overriding-issubclassedcontrol-and-precreatewindow"></a><a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a>Zastępowanie IsSubclassedControl i PreCreateWindow
 
-Aby przesłonić `PreCreateWindow` i `IsSubclassedControl` dodać następujące wiersze kodu do **chronionej** sekcji deklaracji klasy kontrolki:
+Aby przesłonić `PreCreateWindow` i `IsSubclassedControl` dodać następujące wiersze kodu do **`protected`** sekcji deklaracji klasy kontrolki:
 
 [!code-cpp[NVC_MFC_AxSub#1](codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_1.h)]
 
@@ -82,12 +82,12 @@ Aby obsłużyć komunikat odbitego okna, Dodaj wpis do mapy komunikatów kontrol
 
 Aby dodać procedurę obsługi komunikatów dla komunikatu odbitego okna, ręcznie wykonaj następujące czynności:
 
-- W klasie Control. Plik H, zadeklaruj funkcję procedury obsługi. Funkcja powinna mieć typ zwracany **LRESULT** i dwa parametry z odpowiednio typami **wParam** i **lParam**. Przykład:
+- W klasie Control. Plik H, zadeklaruj funkcję procedury obsługi. Funkcja powinna mieć typ zwracany **LRESULT** i dwa parametry z odpowiednio typami **wParam** i **lParam**. Na przykład:
 
    [!code-cpp[NVC_MFC_AxSub#5](codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
     [!code-cpp[NVC_MFC_AxSub#6](codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]
 
-- W klasie Control. Plik CPP Dodaj wpis ON_MESSAGE do mapy komunikatów. Parametry tego wpisu powinny być identyfikatorem komunikatu i nazwą funkcji obsługi. Przykład:
+- W klasie Control. Plik CPP Dodaj wpis ON_MESSAGE do mapy komunikatów. Parametry tego wpisu powinny być identyfikatorem komunikatu i nazwą funkcji obsługi. Na przykład:
 
    [!code-cpp[NVC_MFC_AxSub#7](codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
 
@@ -95,6 +95,6 @@ Aby dodać procedurę obsługi komunikatów dla komunikatu odbitego okna, ręczn
 
 Aby zapoznać się z przykładem sposobu przetwarzania komunikatów odbitych, zapoznaj się z [przyciskiem](../overview/visual-cpp-samples.md)Przykładowy formant ActiveX MFC. Zademonstrowano `OnOcmCommand` procedurę obsługi, która wykrywa BN_CLICKED kod powiadomienia i reaguje przez wyzwolenie (wysyłanie) `Click` zdarzenia.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](mfc-activex-controls.md)

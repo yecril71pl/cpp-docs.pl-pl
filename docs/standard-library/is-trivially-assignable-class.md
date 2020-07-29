@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_assignable
 ms.assetid: 1284a8f7-4093-426d-9c9a-dabb46f90d6d
-ms.openlocfilehash: 11aed7fbe2540984d8ed69f88b2a95649e8fee70
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 14a3ee638bd6df3b52e7327ca6e3c77f4a0e8b71
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457489"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224867"
 ---
-# <a name="istriviallyassignable-class"></a>Klasa is_trivially_assignable
+# <a name="is_trivially_assignable-class"></a>Klasa is_trivially_assignable
 
-Testuje, czy wartość `From` typu może być przypisana do typu `To`
+Testuje, czy wartość `From` typu może być przypisana do `To` typu
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,11 +34,11 @@ Typ obiektu, który zawiera wartość.
 
 ## <a name="remarks"></a>Uwagi
 
-Wyrażenie `declval<To>() = declval<From>()` musi być poprawnie sformułowane i musi być znane kompilatorowi, aby nie wymagało nieuproszczonych operacji. Oba `From` i`To` muszą być pełnymi typami, **void**lub tablicami nieznanego powiązania.
+Wyrażenie `declval<To>() = declval<From>()` musi być poprawnie sformułowane i musi być znane kompilatorowi, aby nie wymagało nieuproszczonych operacji. Oba `From` i `To` muszą być pełnymi typami **`void`** lub tablicami nieznanego powiązania.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-ms.openlocfilehash: 9c5c2824778a679627bd3008276849890f43ac7e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 31962e3e7e4af63ec07ad569f7f72782b194032c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190693"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225179"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Błąd kompilatora zasobów RW2002
 
@@ -21,7 +21,7 @@ Błąd analizy
 
 1. **Wymagany typ akceleratora (ASCII lub standardowym VIRTKEY)**
 
-   Pole `type` w instrukcji **akceleratorów** musi zawierać wartość ASCII lub standardowym VIRTKEY.
+   Pole *Type* w instrukcji **akceleratorów** musi zawierać wartość ASCII lub standardowym VIRTKEY.
 
 1. **Oczekiwano instrukcji BEGIN w tabeli akceleratora**
 
@@ -49,7 +49,7 @@ Błąd analizy
 
 1. **Znak kontrolny poza zakresem [^ A-^ Z]**
 
-   Znak kontrolny w instrukcji **akceleratorów** jest nieprawidłowy. Znak następujący po karetki ( **^** ) musi należeć do zakresu od a do z, włącznie.
+   Znak kontrolny w instrukcji **akceleratorów** jest nieprawidłowy. Znak następujący po znaku daszka ( **^** ) musi należeć do zakresu od a do z, włącznie.
 
 1. **Puste menu są niedozwolone**
 
@@ -65,11 +65,11 @@ Błąd analizy
 
 1. **Oczekiwano przecinka w tabeli akceleratora**
 
-   Kompilator zasobów wymaga przecinki między `event` i *idvalue* pól w instrukcji **akceleratorów** .
+   Kompilator zasobów wymaga przecinka między polami *Event* i *idvalue* w instrukcji **Accelerators** .
 
 1. **Oczekiwana nazwa klasy kontrolki**
 
-   Pole `class` instrukcji **sterującej** w instrukcji **okna dialogowego** musi być jednym z następujących typów: przycisk, ComboBox, Edytuj, ListBox, SCROLLBAR, static lub zdefiniowany przez użytkownika. Upewnij się, że Klasa jest wpisana poprawnie.
+   Pole *Class* instrukcji **sterującej** w instrukcji **okna dialogowego** musi być jednym z następujących typów: Button, ComboBox, Edit, ListBox, SCROLLBAR, static lub defined zdefiniowany przez użytkownika. Upewnij się, że Klasa jest wpisana poprawnie.
 
 1. **Oczekiwana nazwa kroju czcionki**
 
@@ -85,11 +85,11 @@ Błąd analizy
 
 1. **Oczekiwana wartość polecenia liczbowego**
 
-   Kompilator zasobów oczekiwał pola numerycznego *idvalue* w instrukcji **akceleratorów** . Upewnij się, że użyto stałej `#define`, aby określić wartość i że stała jest wpisana poprawnie.
+   Kompilator zasobów oczekiwał pola numerycznego *idvalue* w instrukcji **akceleratorów** . Upewnij się, że użyto stałej, `#define` Aby określić wartość i że stała jest wpisana poprawnie.
 
 1. **Oczekiwano stałej liczbowej w tabeli ciągów**
 
-   Stała numeryczna, zdefiniowana w instrukcji `#define`, musi być od razu zgodna ze słowem kluczowym **BEGIN** w instrukcji **String** .
+   Stała numeryczna zdefiniowana w `#define` instrukcji musi być **od** razu zgodna ze słowem kluczowym BEGIN w instrukcji **String** .
 
 1. **Oczekiwany rozmiar punktu liczbowego**
 
@@ -105,19 +105,19 @@ Błąd analizy
 
 1. **Oczekiwano ciągu lub stałego akceleratora polecenia**
 
-   Kompilator zasobów nie mógł określić, jakiego rodzaju klucz jest skonfigurowany dla akceleratora. Pole `event` w instrukcji **Accelerators** może być nieprawidłowe.
+   Kompilator zasobów nie mógł określić, jakiego rodzaju klucz jest skonfigurowany dla akceleratora. Pole *zdarzenia* w instrukcji **akceleratorów** może być nieprawidłowe.
 
 1. **Oczekiwano liczby dla identyfikatora**
 
-   Oczekiwano liczby dla pola `id` instrukcji sterującej w instrukcji **okna dialogowego** . Upewnij się, że dla identyfikatora formantu istnieje instrukcja Number lub `#define`.
+   Oczekiwano liczby dla pola *ID* instrukcji sterującej w instrukcji **okna dialogowego** . Upewnij się, że masz liczbę lub `#define` instrukcję dla identyfikatora formantu.
 
 1. **Oczekiwano ciągu w cudzysłowie w klasie okna dialogowego**
 
-   Pole `class` opcji CLASS w instrukcji **okna dialogowego** musi być liczbą całkowitą lub ciągiem ujętym w znaki podwójnego cudzysłowu.
+   Pole *klasy* opcji klasy w instrukcji **okna dialogowego** musi być liczbą całkowitą lub ciągiem ujętym w znaki podwójnego cudzysłowu.
 
 1. **Oczekiwano ciągu w cudzysłowie w tytule okna dialogowego**
 
-   Pole `captiontext` opcji CAPTION w instrukcji **okna dialogowego** musi być CIĄGIEM znaków ASCII ujętym w znaki podwójnego cudzysłowu.
+   Pole *CaptionText* opcji Caption w instrukcji **okna dialogowego** musi być ciągiem znaków ASCII ujętym w znaki podwójnego cudzysłowu.
 
 1. **Nie znaleziono pliku: filename**
 
@@ -129,11 +129,11 @@ Błąd analizy
 
 1. **Nieprawidłowy akcelerator**
 
-   Pole `event` w instrukcji **akceleratorów** nie zostało rozpoznane lub miało więcej niż dwa znaki.
+   Pole *zdarzenia* w instrukcji **akceleratorów** nie zostało rozpoznane lub miało więcej niż dwa znaki.
 
 1. **Nieprawidłowy typ akceleratora (ASCII lub standardowym VIRTKEY)**
 
-   Pole `type` w instrukcji **akceleratorów** musi zawierać wartość ASCII lub standardowym VIRTKEY.
+   Pole *Type* w instrukcji **akceleratorów** musi zawierać wartość ASCII lub standardowym VIRTKEY.
 
 1. **Nieprawidłowy znak kontrolny**
 
@@ -149,7 +149,7 @@ Błąd analizy
 
 1. **W kontrolce oczekiwano ciągu tekstowego lub liczby porządkowej**
 
-   Pole *tekstowe* instrukcji **sterującej** w instrukcji **okna dialogowego** musi być ciągiem tekstowym lub odwołaniem porządkowym do typu formantu. W przypadku używania numeru porządkowego upewnij się, że masz instrukcję `#define` dla kontrolki.
+   Pole *tekstowe* instrukcji **sterującej** w instrukcji **okna dialogowego** musi być ciągiem tekstowym lub odwołaniem porządkowym do typu formantu. W przypadku używania numeru porządkowego upewnij się, że masz `#define` instrukcję dla kontrolki.
 
 1. **Niedopasowane nawiasy**
 

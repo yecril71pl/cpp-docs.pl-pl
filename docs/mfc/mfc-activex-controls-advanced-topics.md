@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: 87cc0000f74935990cb5956e0fb3afd44e01532b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5ae29ed40d9cc5b78945fb9846a36d6b5a0b27d7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624199"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225036"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Kontrolki ActiveX MFC: tematy zaawansowane
 
@@ -69,7 +69,7 @@ Poniższa procedura dodaje właściwość sparametryzowanej o nazwie Array, do k
 
 1. W polu **Nazwa właściwości** wpisz `Array` .
 
-1. W polu **Typ właściwości** wybierz pozycję **krótkie**.
+1. W polu **Typ właściwości** wybierz opcję **`short`** .
 
 1. W obszarze Typ **implementacji** kliknij pozycję **Pobierz/ustaw metody**.
 
@@ -97,7 +97,7 @@ Ponadto Kreator dodawania właściwości dodaje następujące wiersze do mapy wy
 
 Na koniec implementacje `GetArray` `SetArray` funkcji i są dodawane na końcu. Plik CPP. W większości przypadków zmodyfikujesz funkcję Get, aby zwracała wartość właściwości. Funkcja Set zwykle zawiera kod, który powinien zostać wykonany, przed lub po zmianie właściwości.
 
-Aby ta właściwość była użyteczna, można zadeklarować dwuwymiarową zmienną elementu członkowskiego tablicy w klasie kontrolki typu **Short**, aby przechowywać wartości dla właściwości sparametryzowanej. Następnie można zmodyfikować funkcję Get, aby zwracała wartość przechowywaną w prawidłowym wierszu i kolumnie, zgodnie z parametrami, i zmodyfikować funkcję Set, aby zaktualizować wartość przywoływaną przez parametry wiersza i kolumny.
+Aby ta właściwość była przydatna, można zadeklarować zmienną składową tablicy dwuwymiarowej w klasie kontrolki typu **`short`** , aby przechowywać wartości dla właściwości sparametryzowanej. Następnie można zmodyfikować funkcję Get, aby zwracała wartość przechowywaną w prawidłowym wierszu i kolumnie, zgodnie z parametrami, i zmodyfikować funkcję Set, aby zaktualizować wartość przywoływaną przez parametry wiersza i kolumny.
 
 ## <a name="handling-errors-in-your-activex-control"></a><a name="_core_handling_errors_in_your_activex_control"></a>Obsługa błędów w kontrolce ActiveX
 
@@ -150,7 +150,7 @@ Aby wskazać rodzaj błędu, który wystąpił, formant musi przekazać kod bł�
 |CTL_E_SEARCHTEXTNOTFOUND|Nie znaleziono szukanego tekstu|
 |CTL_E_REPLACEMENTSTOOLONG|Zamienniki są za długie|
 
-W razie potrzeby użyj makra CUSTOM_CTL_SCODE, aby zdefiniować niestandardowy kod błędu dla warunku, który nie jest objęty jednym z standardowych kodów. Parametr dla tego makra powinien być liczbą całkowitą z przedziału od 1000 do 32767 włącznie. Przykład:
+W razie potrzeby użyj makra CUSTOM_CTL_SCODE, aby zdefiniować niestandardowy kod błędu dla warunku, który nie jest objęty jednym z standardowych kodów. Parametr dla tego makra powinien być liczbą całkowitą z przedziału od 1000 do 32767 włącznie. Na przykład:
 
 [!code-cpp[NVC_MFC_AxUI#37](codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]
 
@@ -180,6 +180,6 @@ Można utworzyć kontrolki okna dialogowego, które nie mają interfejsu użytko
 
    [!code-cpp[NVC_MFC_AxCont#19](codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](mfc-activex-controls.md)

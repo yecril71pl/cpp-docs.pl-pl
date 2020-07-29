@@ -5,26 +5,26 @@ ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: 3d08b2294da1599282feeb1739331c31d64a9e59
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f09fd5f112e3538fa2d7fb04c755031d413de9b8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358327"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225153"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>Operator uchwytu do obiektu (^)  (C++/CLI i C++/CX)
 
-*Deklarator dojścia* (`^`, wymawiane "kapelusz"), modyfikuje [specyfikator](../cpp/overview-of-declarators.md) typu oznacza, że zadeklarowany obiekt powinien zostać automatycznie usunięty, gdy system stwierdzi, że obiekt nie jest już dostępny.
+*Dojście deklarator* ( `^` , wymawiane "Hat") modyfikuje [specyfikatora](../cpp/overview-of-declarators.md) typu, aby oznaczało, że zadeklarowany obiekt powinien zostać automatycznie usunięty, gdy system ustali, że obiekt nie jest już dostępny.
 
-## <a name="accessing-the-declared-object"></a>Uzyskiwanie dostępu do zadeklarowany obiekt
+## <a name="accessing-the-declared-object"></a>Uzyskiwanie dostępu do zadeklarowanego obiektu
 
-Zmienna, która jest zadeklarowana z deklaratorem dojścia zachowuje się jak wskaźnik do obiektu. Jednak zmienna wskazuje na cały obiekt, nie może wskazywać na element członkowski obiektu i nie obsługuje arytmetyki wskaźnika. Użyj operatora pośredniego`*`( ), aby uzyskać dostęp do obiektu, a operator dostępu do elementów członkowskich strzałki (`->`), aby uzyskać dostęp do elementu członkowskiego obiektu.
+Zmienna zadeklarowana przy użyciu uchwytu deklarator zachowuje się jak wskaźnik do obiektu. Jednak zmienna wskazuje cały obiekt, nie może wskazywać elementu członkowskiego obiektu i nie obsługuje arytmetycznego wskaźnika. Użyj operatora pośredniego ( `*` ), aby uzyskać dostęp do obiektu, i operator dostępu do elementu członkowskiego ( `->` ), aby uzyskać dostęp do elementu członkowskiego obiektu.
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-Kompilator używa mechanizmu *zliczania odwołań* COM, aby określić, czy obiekt nie jest już używany i można go usunąć. Jest to możliwe, ponieważ obiekt, który pochodzi z interfejsu środowiska wykonawczego systemu Windows jest faktycznie obiekt COM. Liczba odwołań jest zwiększana, gdy obiekt jest tworzony lub kopiowany, i zmniejszana, gdy obiekt jest ustawiony na wartość null lub wykracza poza zakres. Jeśli liczba odwołań zostanie równa zeru, obiekt zostanie automatycznie usunięty.
+Kompilator używa mechanizmu *zliczania odwołań* com, aby określić, czy obiekt nie jest już używany i czy można go usunąć. Jest to możliwe, ponieważ obiekt pochodzący z interfejsu środowisko wykonawcze systemu Windows jest w rzeczywistości obiektem COM. Licznik odwołań jest zwiększany, gdy obiekt jest tworzony lub kopiowany i zmniejszany, gdy obiekt jest ustawiony na wartość null lub wykracza poza zakres. Jeśli liczba odwołań spadnie do zera, obiekt jest automatycznie i natychmiast usuwany.
 
-Zaletą deklaratora dojścia jest to, że w com należy jawnie zarządzać liczbą odwołań dla obiektu, co jest żmudnym i podatnym na błędy procesem. Oznacza to, że aby zwiększyć i zdeklizować liczbę odwołań, należy wywołać metody AddRef() i Release() obiektu. Jednak jeśli deklarujesz obiekt z deklaratorem dojścia, kompilator generuje kod, który automatycznie dostosowuje liczbę odwołań.
+Zaletą obsługi deklarator jest to, że w modelu COM należy jawnie zarządzać liczbą odwołań dla obiektu, który jest żmudnym i podatnym na błędy proces. Oznacza to, że aby zwiększyć i zmniejszyć liczbę odwołań, należy wywołać metody AddRef () i Release () obiektu. Jednakże jeśli zadeklarujesz obiekt z deklarator dojścia, kompilator generuje kod, który automatycznie dostosowuje liczbę odwołań.
 
 Aby uzyskać informacje na temat tworzenia wystąpienia obiektu, zobacz [ref new](ref-new-gcnew-cpp-component-extensions.md).
 
@@ -34,15 +34,15 @@ Opcja kompilatora:`/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
-System używa mechanizmu *modułu zbierającego elementy bezużyteczne* CLR, aby określić, czy obiekt nie jest już używany i można go usunąć. Środowisko wykonawcze języka wspólnego utrzymuje stertę, na której przydziela obiekty i używa odwołań zarządzanych (zmiennych) w programie wskazują lokalizację obiektów na stercie. Gdy obiekt nie jest już używany, pamięć, która zajmuje na stercie jest zwalniany. Okresowo moduł zbierający elementy bezużyteczne kompaktywuje sterty, aby lepiej używać zwolnionej pamięci. Kompaktowanie sterty można przenieść obiekty na stercie, co unieważnia lokalizacje, o których mowa w odwołaniach zarządzanych. Jednak moduł zbierający elementy bezużyteczne jest świadomy lokalizacji wszystkich odwołań zarządzanych i automatycznie aktualizuje je, aby wskazać bieżącą lokalizację obiektów na stercie.
+System używa mechanizmu *modułu zbierającego elementy bezużyteczne* środowiska CLR w celu ustalenia, czy obiekt nie jest już używany i można go usunąć. Środowisko uruchomieniowe języka wspólnego utrzymuje stertę, na której przydziela obiekty, i używa odwołań zarządzanych (zmiennych) w programie wskazuje lokalizację obiektów na stercie. Gdy obiekt nie jest już używany, zwolniona jest pamięć, która jest zajęta na stercie. Okresowo Moduł wyrzucania elementów bezużytecznych kompaktuje stertę, aby lepiej wykorzystać ilość pamięci. Kompaktowanie sterty może przenosić obiekty ze sterty, co unieważnia lokalizacje, do których odwołują się odwołania zarządzane. Jednak Moduł wyrzucania elementów bezużytecznych wie o lokalizacji wszystkich zarządzanych odwołań i automatycznie aktualizuje je, aby wskazać bieżącą lokalizację obiektów na stercie.
 
-Ponieważ natywne wskaźniki`*`C++`&`( ) i odwołania ( ) nie są odwołaniami zarządzanymi, moduł zbierający elementy bezużyteczne nie mogą automatycznie aktualizować adresów, na które wskazują. Aby rozwiązać ten problem, należy użyć deklaratora dojścia, aby określić zmienną, o której moduł zbierający elementy bezużyteczne jest świadomy i może być aktualizowana automatycznie.
+Ponieważ natywne wskaźniki C++ ( `*` ) i odwołania ( `&` ) nie są odwołaniami zarządzanymi, Moduł wyrzucania elementów bezużytecznych nie może automatycznie aktualizować adresów, do których wskazują. Aby rozwiązać ten problem, należy użyć deklarator dojścia do określenia zmiennej, której dotyczy Moduł wyrzucania elementów bezużytecznych i która może zostać zaktualizowana automatycznie.
 
-Aby uzyskać więcej informacji, zobacz [Jak: Deklarowanie uchwytów w typach macierzystych](../dotnet/how-to-declare-handles-in-native-types.md).
+Aby uzyskać więcej informacji, zobacz [instrukcje: deklarowanie dojść w typach natywnych](../dotnet/how-to-declare-handles-in-native-types.md).
 
 ### <a name="examples"></a>Przykłady
 
-W tym przykładzie pokazano, jak utworzyć wystąpienie typu odwołania na zarządzanym stosie.  Ten przykład pokazuje również, że można zainicjować jeden dojście z innym, co powoduje dwa odwołania do tego samego obiektu na zarządzanym stercie zebranej przez śmieci. Należy zauważyć, że przypisanie [nullptr](nullptr-cpp-component-extensions.md) do jednego dojścia nie oznacza obiektu do wyrzucania elementów bezużytecznych.
+Ten przykład pokazuje, jak utworzyć wystąpienie typu odwołania na zarządzanym stosie.  Ten przykład pokazuje również, że możliwe jest zainicjowanie jednego dojścia do innego, co powoduje utworzenie dwóch odwołań do tego samego obiektu na zarządzanej stercie ze stertą. Należy zauważyć, że przypisanie [nullptr](nullptr-cpp-component-extensions.md) do jednego dojścia nie oznacza obiektu do wyrzucania elementów bezużytecznych.
 
 ```cpp
 // mcppv2_handle.cpp
@@ -74,7 +74,7 @@ int main() {
 2
 ```
 
-W poniższym przykładzie pokazano, jak zadeklarować dojście do obiektu na zarządzanym stosie, gdzie typ obiektu jest typem wartości pudełkowej. Przykład pokazuje również, jak uzyskać typ wartości z obiektu pudełkowego.
+Poniższy przykład pokazuje, jak zadeklarować dojście do obiektu na zarządzanym stosie, gdzie typ obiektu jest opakowanym typem wartościowym. Przykład pokazuje również, jak uzyskać typ wartości z obiektu opakowanego.
 
 ```cpp
 // mcppv2_handle_2.cpp
@@ -104,7 +104,7 @@ Not a boxed int
 100
 ```
 
-W tym przykładzie pokazano, że wspólny idiom C++ za pomocą `void*` `Object^`wskaźnika, aby wskazać dowolny obiekt jest zastępowany przez , który może pomieścić dojście do dowolnej klasy odwołania. Pokazuje również, że wszystkie typy, takie jak tablice i delegatów, mogą być konwertowane do dojścia obiektu.
+Ten przykład pokazuje, że typowe idiom języka C++ przy użyciu **`void*`** wskaźnika do wskazywania dowolnego obiektu jest zastępowane przez `Object^` , co może obsłużyć dojście do dowolnej klasy referencyjnej. Pokazuje również, że wszystkie typy, takie jak tablice i Delegaty, można przekonwertować na dojście do obiektu.
 
 ```cpp
 // mcppv2_handle_3.cpp
@@ -149,7 +149,7 @@ Type is System.Int32
 Type is MyDel
 ```
 
-W tym przykładzie pokazano, że dojście może być wyłuskiwane i że element członkowski można uzyskać za pośrednictwem dojścia wyłuskane.
+Ten przykład pokazuje, że można odwoływać się do dojścia oraz uzyskać dostęp do elementu członkowskiego za pośrednictwem dojścia do odwołania.
 
 ```cpp
 // mcppv2_handle_4.cpp
@@ -195,7 +195,7 @@ Array value: 7
 Cannot access array element 11, size is 10
 ```
 
-W tym przykładzie pokazano, że odwołanie natywne (`&`) nie może powiązać z elementem członkowskim **int** typu zarządzanego, ponieważ **int** może być przechowywany w stercie zebranych śmieci, a odwołania macierzyste nie śledzą ruchu obiektów w zarządzanym stosie. Poprawka polega na użyciu zmiennej lokalnej `&` `%`lub na zmianę na , co czyni ją odwołaniem do śledzenia.
+Ten przykład pokazuje, że odwołanie natywne ( `&` ) nie może być powiązane z **`int`** elementem członkowskim typu zarządzanego, ponieważ **`int`** mogą one być przechowywane na stercie, a odwołania natywne nie śledzą przenoszenia obiektów w zarządzanym stosie. Poprawka polega na użyciu zmiennej lokalnej lub do zmiany w `&` `%` , co sprawia, że jest to odwołanie śledzące.
 
 ```cpp
 // mcppv2_handle_5.cpp
@@ -221,7 +221,7 @@ int main() {
 
 Opcja kompilatora:`/clr`
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)<br/>
+[Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Operator odwołania śledzenia](tracking-reference-operator-cpp-component-extensions.md)

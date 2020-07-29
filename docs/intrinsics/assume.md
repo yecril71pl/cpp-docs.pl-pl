@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-ms.openlocfilehash: 06189405703a7cc34f3bd807ec79612394ee899f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 80acb417ed85ced8f72906848474837efe6bc9d1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368199"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225101"
 ---
 # <a name="__assume"></a>__assume
 
 **Specyficzne dla firmy Microsoft**
 
-Przekazuje wskazówkę do optymalizatora.
+Przekazuje wskazówkę do Optymalizatora.
 
 ## <a name="syntax"></a>Składnia
 
@@ -31,31 +31,31 @@ __assume(
 
 ### <a name="parameters"></a>Parametry
 
-*Wyrażenie*\
-Każde wyrażenie, które jest zakładane do oceny true.
+*wyrażenia*\
+Dowolne wyrażenie, które ma zostać obliczone na wartość true.
 
 ## <a name="remarks"></a>Uwagi
 
-Optymalizator zakłada, że warunek `expression` reprezentowany przez jest true w punkcie, `expression` w którym pojawia się słowo kluczowe i pozostaje true, dopóki nie zostanie zmodyfikowany (na przykład przez przypisanie do zmiennej). Selektywne stosowanie wskazówek przekazywanych `__assume` do optymalizatora przez może poprawić optymalizację.
+Optymalizator zakłada, że warunek reprezentowany przez `expression` ma wartość true w punkcie, w którym słowo kluczowe pojawia się i pozostaje prawdziwe do czasu `expression` modyfikacji (na przykład przez przypisanie do zmiennej). Wybiórcze użycie wskazówek przekazanie do Optymalizatora przez program **`__assume`** może poprawić optymalizację.
 
-Jeśli `__assume` instrukcja jest napisana jako sprzeczność (wyrażenie, które zawsze ocenia jako `__assume(0)`fałszywe), jest zawsze traktowana jako . Jeśli kod nie zachowuje się zgodnie z `expression` oczekiwaniami, upewnij się, że zdefiniowane jest prawidłowe i prawdziwe, jak opisano wcześniej. Aby uzyskać więcej `__assume(0)` informacji na temat oczekiwanego zachowania, zobacz późniejsze uwagi.
+Jeśli **`__assume`** instrukcja jest zapisywana jako sprzeczność (wyrażenie, które zawsze ma wartość false), jest zawsze traktowane jako `__assume(0)` . Jeśli kod nie zachowuje się zgodnie z oczekiwaniami, upewnij się, że `expression` zdefiniowany jest prawidłowy i prawdziwy, zgodnie z wcześniejszym opisem. Aby uzyskać więcej informacji na temat oczekiwanego `__assume(0)` zachowania, zobacz późniejsze uwagi.
 
 > [!WARNING]
-> Program nie może zawierać `__assume` nieprawidłowej instrukcji na dostępnej ścieżce. Jeśli kompilator może `__assume` osiągnąć nieprawidłową instrukcję, program może spowodować nieprzewidywalne i potencjalnie niebezpieczne zachowanie.
+> Program nie może zawierać nieprawidłowej **`__assume`** instrukcji w dostępnej ścieżce. Jeśli kompilator może dotrzeć do nieprawidłowej **`__assume`** instrukcji, program może spowodować nieprzewidywalne i potencjalnie niebezpieczne zachowanie.
 
-`__assume`nie jest prawdziwym wewnętrzną. Nie musi być zadeklarowany jako funkcja i nie `#pragma intrinsic` może być stosowany w dyrektywie. Mimo że nie jest generowany kod, kod generowany przez optymalizator ma wpływ.
+`__assume`nie jest oryginalnym elementem wewnętrznym. Nie musi być zadeklarowana jako funkcja i nie może być używana w `#pragma intrinsic` dyrektywie. Chociaż żaden kod nie jest generowany, ma to wpływ na kod wygenerowany przez optymalizator.
 
-Użyj `__assume` w [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) tylko wtedy, gdy potwierdzenia nie jest możliwe do odzyskania. Nie należy `__assume` używać w assert, dla którego masz kolejny kod odzyskiwania błędów, ponieważ kompilator może zoptymalizować od kodu obsługi błędów.
+Użyj **`__assume`** w [potwierdzeniu](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) tylko wtedy, gdy potwierdzenie nie jest możliwe do odzyskania. Nie należy używać **`__assume`** w potwierdzeniu, dla którego kod odzyskiwania został zwrócony, ponieważ kompilator może zoptymalizować kod obsługi błędu.
 
-Oświadczenie `__assume(0)` jest szczególnym przypadkiem. Służy `__assume(0)` do wskazywania ścieżki kodu, do której nie można osiągnąć. W poniższym przykładzie `__assume(0)` pokazano, jak użyć, aby wskazać, że nie można osiągnąć domyślnego przypadku instrukcji switch. Pokazuje to najbardziej typowe `__assume(0)`zastosowanie .
+`__assume(0)`Instrukcja jest szczególnym przypadkiem. Użyj, `__assume(0)` Aby wskazać ścieżkę kodu, której nie można osiągnąć. Poniższy przykład pokazuje, jak używać `__assume(0)` do wskazania, że nie można osiągnąć domyślnego przypadku instrukcji switch. Jest to najbardziej typowe użycie `__assume(0)` .
 
-W przypadku zgodności z poprzednimi wersjami **_assume** jest synonimem **__assume** chyba że określono opcję kompilatora [/Za \(Wyłącz rozszerzenia języka).](../build/reference/za-ze-disable-language-extensions.md)
+W celu zapewnienia zgodności z poprzednimi wersjami, **`_assume`** jest synonimem, **`__assume`** Jeśli opcja kompilatora [/za \( wyłączone rozszerzenia językowe](../build/reference/za-ze-disable-language-extensions.md) nie została określona.
 
 ## <a name="requirements"></a>Wymagania
 
-|Wewnętrzne|Architektura|
+|Wewnętrznej|Architektura|
 |---------------|------------------|
-|`__assume`|x86, ARM, x64, ARM64|
+|**`__assume`**|x86, ARM, x64, ARM64|
 
 ## <a name="example"></a>Przykład
 
@@ -91,17 +91,17 @@ int main(int p)
 }
 ```
 
-Użycie optymalizatora `__assume(0)` informuje, że nie można osiągnąć domyślnego przypadku. Przykład pokazuje, że programista wie, że tylko `p` możliwe dane wejściowe dla będzie 1 lub 2. Jeśli inna wartość jest `p`przekazywana dla programu, program staje się nieprawidłowy i powoduje nieprzewidywalne zachowanie.
+Użycie `__assume(0)` informuje optymalizator, że nie można osiągnąć domyślnego przypadku. Przykład pokazuje, że programista wie, że jedynymi możliwymi danymi wejściowymi `p` będzie 1 lub 2. Jeśli inna wartość jest przenoszona do programu `p` , program jest nieprawidłowy i powoduje nieprzewidywalne zachowanie.
 
-W wyniku `__assume(0)` instrukcji kompilator nie generuje kodu, `p` aby sprawdzić, czy ma wartość, która nie jest reprezentowana w case statement. Aby to działało, instrukcja `__assume(0)` musi być pierwszą instrukcją w treści domyślnej sprawy.
+W wyniku `__assume(0)` instrukcji kompilator nie generuje kodu w celu przetestowania `p` , czy ma wartość, która nie jest reprezentowana w instrukcji case. Aby to działało, `__assume(0)` instrukcja musi być pierwszą instrukcją w treści domyślnego przypadku.
 
-Ponieważ kompilator generuje kod `__assume`na podstawie , że kod może `__assume` nie działać poprawnie, jeśli wyrażenie wewnątrz instrukcji jest false w czasie wykonywania. Jeśli nie masz pewności, że wyrażenie będzie zawsze true w `assert` czasie wykonywania, można użyć funkcji do ochrony kodu.
+Ponieważ kompilator generuje kod na podstawie **`__assume`** , kod może nie działać poprawnie, jeśli wyrażenie wewnątrz **`__assume`** instrukcji ma wartość FAŁSZ w czasie wykonywania. Jeśli nie masz pewności, że wyrażenie będzie zawsze prawdziwe w czasie wykonywania, możesz użyć `assert` funkcji, aby chronić kod.
 
 ```C
 #define ASSERT(e)    ( ((e) || assert(__FILE__, __LINE__)), __assume(e) )
 ```
 
-Niestety to użycie `assert` uniemożliwia kompilatorowi wykonywanie optymalizacji przypadków domyślnych, który został opisany wcześniej w tym dokumencie. Alternatywnie można użyć oddzielnego makra w następujący sposób.
+Niestety, to użycie `assert` uniemożliwi kompilatorowi wykonywanie optymalizacji przypadku domyślnego, która została opisana wcześniej w tym dokumencie. Alternatywnie można użyć oddzielnego makra w następujący sposób.
 
 ```C
 #ifdef DEBUG
@@ -114,9 +114,9 @@ Niestety to użycie `assert` uniemożliwia kompilatorowi wykonywanie optymalizac
       NODEFAULT;
 ```
 
-**ZAKOŃCZ Specyficzne dla firmy Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Wewnętrzne właściwości kompilatora](../intrinsics/compiler-intrinsics.md)\
+[Funkcje wewnętrzne kompilatora](../intrinsics/compiler-intrinsics.md)\
 [Słowa kluczowe](../cpp/keywords-cpp.md)

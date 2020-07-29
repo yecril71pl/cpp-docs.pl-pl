@@ -5,12 +5,12 @@ helpviewer_keywords:
 - using lightweight tasks [Concurrency Runtime]
 - lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-ms.openlocfilehash: e7c6096829a1cd45cfdb849a1899d6b4a2d4cb78
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 7ce18b54835b2380d3baee77b00a670351e3279f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141997"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224919"
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Wskazówki: adaptacja istniejącego kodu do potrzeb zadań lekkich
 
@@ -24,7 +24,7 @@ Przed rozpoczęciem tego instruktażu zapoznaj się z tematem [harmonogram zada�
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje typowy sposób użycia interfejsu API systemu Windows do tworzenia i wykonywania wątku. W tym przykładzie funkcja [myFunction wywołuje](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) `MyThreadFunction` w osobnym wątku.
+Poniższy przykład ilustruje typowy sposób użycia interfejsu API systemu Windows do tworzenia i wykonywania wątku. W tym przykładzie używa [funkcji myFunction do wywołania](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) `MyThreadFunction` w oddzielnym wątku.
 
 ### <a name="initial-code"></a>Kod początkowy
 
@@ -44,45 +44,45 @@ Poniższe kroki pokazują, jak dostosować przykład kodu, aby użyć środowisk
 
 [!code-cpp[concrt-migration-lwt#2](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_2.cpp)]
 
-1. Dodaj `using` dyrektywę dla przestrzeni nazw `concurrency`.
+1. Dodaj **`using`** dyrektywę dla `concurrency` przestrzeni nazw.
 
 [!code-cpp[concrt-migration-lwt#3](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_3.cpp)]
 
-1. Zmień deklarację `MyThreadFunction`, aby użyć konwencji wywoływania `__cdecl` i zwrócić `void`.
+1. Zmień deklarację, `MyThreadFunction` Aby używać **`__cdecl`** konwencji wywoływania i zwrócić **`void`** .
 
 [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]
 
-1. Zmodyfikuj strukturę `MyData` w taki sposób, aby obejmowała obiekt [concurrency:: Event](../../parallel/concrt/reference/event-class.md) , który sygnalizuje główną aplikację, że zadanie zostało zakończone.
+1. Zmodyfikuj `MyData` strukturę w taki sposób, aby zawierała obiekt [concurrency:: Event](../../parallel/concrt/reference/event-class.md) , który sygnalizuje główną aplikację, że zadanie zostało zakończone.
 
 [!code-cpp[concrt-migration-lwt#5](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_5.cpp)]
 
-1. Zastąp wywołanie do `CreateThread` za pomocą wywołania metody [concurrency:: CurrentScheduler:: ScheduleTask —](reference/currentscheduler-class.md#scheduletask) .
+1. Zastąp wywołanie `CreateThread` wywołaniem metody [concurrency:: CurrentScheduler:: ScheduleTask —](reference/currentscheduler-class.md#scheduletask) .
 
 [!code-cpp[concrt-migration-lwt#6](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_6.cpp)]
 
-1. Zastąp wywołanie do `WaitForSingleObject` za pomocą wywołania metody [concurrency:: Event:: wait](reference/event-class.md#wait) , aby poczekać na zakończenie zadania.
+1. Zastąp wywołanie wywołaniem `WaitForSingleObject` metody [concurrency:: Event:: wait](reference/event-class.md#wait) , aby poczekać na zakończenie zadania.
 
 [!code-cpp[concrt-migration-lwt#7](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_7.cpp)]
 
-1. Usuń wywołanie do `CloseHandle`.
+1. Usuń wywołanie metody `CloseHandle` .
 
-1. Zmień sygnaturę definicji `MyThreadFunction`, aby pasowała do kroku 3.
+1. Zmień sygnaturę definicji, `MyThreadFunction` aby pasowała do kroku 3.
 
 [!code-cpp[concrt-migration-lwt#8](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_8.cpp)]
 
-1. Na końcu funkcji `MyThreadFunction` Wywołaj metodę [concurrency:: Event:: Set](reference/event-class.md#set) , aby sygnalizować główną aplikację, że zadanie zostało zakończone.
+1. Na końcu `MyThreadFunction` funkcji Wywołaj metodę [concurrency:: Event:: Set](reference/event-class.md#set) , aby sygnalizować główną aplikację, że zadanie zostało zakończone.
 
 [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]
 
-1. Usuń instrukcję `return` z `MyThreadFunction`.
+1. Usuń **`return`** instrukcję z `MyThreadFunction` .
 
 ### <a name="completed-code"></a>Ukończony kod
 
-W poniższym przykładzie pokazano kod, który używa lekkiego zadania do wywołania funkcji `MyThreadFunction`.
+W poniższym przykładzie pokazano kod, który używa lekkiego zadania do wywołania `MyThreadFunction` funkcji.
 
 [!code-cpp[concrt-migration-lwt#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_10.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
-[Scheduler, klasa](../../parallel/concrt/reference/scheduler-class.md)
+[Scheduler — Klasa](../../parallel/concrt/reference/scheduler-class.md)

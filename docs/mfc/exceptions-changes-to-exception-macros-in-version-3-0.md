@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: 25095257096efd869e237383c5cd202ae4e602c2
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 72b343641b0b43d408c5820ca2a2af1de94ce327
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620172"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225062"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Wyjątki: zmiany w makrach wyjątków w wersji 3.0
 
@@ -34,7 +34,7 @@ Poniższy przykład ilustruje wynik różnicy między wersjami MFC w wersji 3,0 
 
 [!code-cpp[NVC_MFCExceptions#1](codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]
 
-Ten kod działa inaczej w wersji 3,0, ponieważ kontrolka zawsze przechodzi do pierwszego bloku **catch** z zgodną deklaracją wyjątku. Wynik wyrażenia throw
+Ten kod działa inaczej w wersji 3,0, ponieważ kontrolka zawsze przechodzi do pierwszego **`catch`** bloku przy użyciu zgodnej deklaracji wyjątku. Wynik wyrażenia throw
 
 [!code-cpp[NVC_MFCExceptions#19](codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]
 
@@ -60,6 +60,6 @@ Użycie instrukcji **throw** w bloku catch powoduje usunięcie wskaźnika `e` , 
 
 Aby uzyskać więcej informacji, zobacz [wyjątki: Przechwytywanie i usuwanie wyjątków](exceptions-catching-and-deleting-exceptions.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa wyjątków](exception-handling-in-mfc.md)

@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-ms.openlocfilehash: 42e141caed720aa29cf918a2bdf69d9a2c4203dc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2eb09680ef6e7d1ee90b62eee8c8971fb4963212
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509548"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225127"
 ---
 # <a name="safe_cast-ccli-and-ccx"></a>safe_cast (C++/CLI i C++/CX)
 
-Operacja **safe_cast** zwraca określone wyrażenie jako określony typ, jeśli pomyślne; w przeciwnym razie `InvalidCastException`zgłasza.
+Operacja **safe_cast** zwraca określone wyrażenie jako określony typ, jeśli pomyślne; w przeciwnym razie zgłasza `InvalidCastException` .
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
@@ -32,7 +32,7 @@ Operacja **safe_cast** zwraca określone wyrażenie jako określony typ, jeśli 
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-**safe_cast** umożliwia zmianę typu określonego wyrażenia. W sytuacjach, gdy w pełni oczekujesz, że zmienna lub parametr mają być konwertowane do określonego typu, możesz użyć **safe_cast** bez bloku **try-catch** , aby wykryć błędy programowania podczas opracowywania. Aby uzyskać więcej informacji, zobacz [rzutowanieC++(/CX)](../cppcx/casting-c-cx.md).
+**safe_cast** pozwala zmienić typ określonego wyrażenia. W sytuacjach, w których w pełni oczekuje się, że zmienna lub parametr mają być konwertowane do pewnego typu, można użyć **safe_cast** bez bloku **try-catch** do wykrywania błędów programistycznych podczas opracowywania. Aby uzyskać więcej informacji, zobacz [rzutowanie (C++/CX)](../cppcx/casting-c-cx.md).
 
 ### <a name="syntax"></a>Składnia
 
@@ -45,12 +45,12 @@ Operacja **safe_cast** zwraca określone wyrażenie jako określony typ, jeśli 
 *Identyfikator typu*<br/>
 Typ, do którego ma zostać przekształcone *wyrażenie* . Dojście do typu odwołania lub wartości, typ wartości lub odwołanie śledzące do typu odwołania lub wartości.
 
-*expression*<br/>
+*wyrażenia*<br/>
 Wyrażenie, które oblicza do dojścia do typu odwołania lub wartości, typu wartości lub odwołania śledzenia do typu odwołania lub wartości.
 
 ### <a name="remarks"></a>Uwagi
 
-**safe_cast** zgłasza `InvalidCastException` , jeśli nie można przekonwertować *wyrażenia* na typ określony przez *Identyfikator typu*. Aby przechwytywać `InvalidCastException`, określ opcję kompilatora [/EH (model obsługi wyjątków)](../build/reference/eh-exception-handling-model.md) i użyj instrukcji **try/catch** .
+**safe_cast** zgłasza `InvalidCastException` , jeśli nie można przekonwertować *wyrażenia* na typ określony przez *Identyfikator typu*. Aby przechwytywać `InvalidCastException` , określ opcję kompilatora [/EH (model obsługi wyjątków)](../build/reference/eh-exception-handling-model.md) i użyj instrukcji **try/catch** .
 
 ### <a name="requirements"></a>Wymagania
 
@@ -92,7 +92,7 @@ Caught expected exception: InvalidCastException
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
-**safe_cast** umożliwia zmianę typu wyrażenia i wygenerowanie zweryfikowanego kodu MSIL.
+**safe_cast** pozwala zmienić typ wyrażenia i wygenerować zweryfikowany kod MSIL.
 
 ### <a name="syntax"></a>Składnia
 
@@ -105,28 +105,28 @@ Caught expected exception: InvalidCastException
 *Identyfikator typu*<br/>
 Dojście do typu odwołania lub wartości, typ wartości lub odwołanie śledzące do typu odwołania lub wartości.
 
-*expression*<br/>
+*wyrażenia*<br/>
 Wyrażenie, które oblicza do dojścia do typu odwołania lub wartości, typu wartości lub odwołania śledzenia do typu odwołania lub wartości.
 
 ### <a name="remarks"></a>Uwagi
 
-`safe_cast<`Wyrażenie *identyfikatora typu wyrażenia konwertuje wyrażenie*operandu na obiekt typu Type *-ID*. `>(``)`
+Wyrażenie `safe_cast<` *identyfikatora typu*wyrażenia `>(` *expression* `)` konwertuje *wyrażenie* operandu na obiekt typu Type *-ID*.
 
-Kompilator akceptuje [static_cast](../cpp/static-cast-operator.md) w większości miejsc, że zaakceptuje **safe_cast**.  Jednak **safe_cast** ma na celu tworzenie zweryfikowanych MSIL, gdzie **static_cast** może generować niemożliwy do sprawdzenia MSIL.  Zobacz [czysty i możliwy do zweryfikowania kod (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) i [PEVerify. exe (narzędzie PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) , aby uzyskać więcej informacji na temat kodu możliwego do zweryfikowania.
+Kompilator przyjmie [static_cast](../cpp/static-cast-operator.md) w większości przypadków, gdy zostanie zaakceptowany **safe_cast**.  Niemniej jednak **safe_cast** ma na celu wygenerowanie zweryfikowanego MSIL, gdzie **`static_cast`** może utworzyć niemożliwy do sprawdzenia MSIL.  Aby uzyskać więcej informacji na temat kodu możliwego do zweryfikowania, zobacz [czysty i możliwy do zweryfikowania kod (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) i [Peverify.exe (narzędzie PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) .
 
-Podobnie jak **static_cast**, **safe_cast** wywołuje konwersje zdefiniowane przez użytkownika.
+Podobnie **`static_cast`** jak **safe_cast** wywołuje konwersje zdefiniowane przez użytkownika.
 
 Aby uzyskać więcej informacji na temat rzutowania, zobacz [Operatory rzutowania](../cpp/casting-operators.md).
 
-**safe_cast** nie stosuje **const_cast** (Rzutowanie **const**).
+**safe_cast** nie ma zastosowania a **`const_cast`** (odłożenie **`const`** ).
 
 **safe_cast** znajduje się w przestrzeni nazw interfejsu wiersza polecenia.  Aby uzyskać więcej informacji [, zobacz przestrzenie nazw platform, Default i CLI](platform-default-and-cli-namespaces-cpp-component-extensions.md) .
 
 Aby uzyskać więcej informacji na temat **safe_cast**, zobacz:
 
-- [Rzutowania w stylu języka C z/CLRC++(/CLI)](c-style-casts-with-clr-cpp-cli.md)
+- [Rzutowania w stylu C i kompilator /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)
 
-- [Instrukcje: korzystanie z polecenia safe_cast w języku C++/interfejsie wiersza polecenia](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
+- [Instrukcje: Korzystanie z polecenia safe_cast w języku C++/interfejsie wiersza polecenia](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
 
 ### <a name="requirements"></a>Wymagania
 
@@ -134,7 +134,7 @@ Opcja kompilatora:`/clr`
 
 ### <a name="examples"></a>Przykłady
 
-Przykład, w którym kompilator nie akceptuje **static_cast** , ale akceptuje **safe_cast** jest dla rzutowania między niepowiązanymi typami interfejsów.  W przypadku **safe_cast**kompilator nie będzie wystawiał błędu konwersji i wykona sprawdzenie w czasie wykonywania, aby sprawdzić, czy Rzutowanie jest możliwe
+Przykład, w którym kompilator nie akceptuje, **`static_cast`** ale akceptuje **safe_cast** jest dla rzutowania między niepowiązanymi typami interfejsów.  W przypadku **safe_cast**kompilator nie będzie wystawiał błędu konwersji i wykona sprawdzenie w czasie wykonywania, aby sprawdzić, czy Rzutowanie jest możliwe
 
 ```cpp
 // safe_cast.cpp
@@ -166,4 +166,4 @@ Caught expected exception
 
 ## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Automation servers, object lifetime
 - servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
-ms.openlocfilehash: 6e8c4189e8c895cf41323528c70d9277645d8f9d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8031902318a091b0ed5f340b454a14b9df195069
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619069"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225088"
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>Serwery automatyzacji: kwestie okresu istnienia obiektów
 
@@ -20,7 +20,7 @@ Gdy klient automatyzacji tworzy lub aktywuje element OLE, serwer przekazuje klie
 
 Struktura zachowuje wewnętrzną liczbę odwołań do dowolnego obiektu serwera pochodnego od [CCmdTarget](reference/ccmdtarget-class.md). Ta liczba jest aktualizowana, gdy klient usługi Automation lub inna jednostka dodaje lub zwalnia odwołanie do obiektu.
 
-Gdy liczba odwołań zmieni się na 0, struktura wywołuje funkcję wirtualną [CCmdTarget:: OnFinalRelease](reference/ccmdtarget-class.md#onfinalrelease). Domyślna implementacja tej funkcji wywołuje operator **delete** , aby usunąć ten obiekt.
+Gdy liczba odwołań zmieni się na 0, struktura wywołuje funkcję wirtualną [CCmdTarget:: OnFinalRelease](reference/ccmdtarget-class.md#onfinalrelease). Domyślna implementacja tej funkcji wywołuje **`delete`** operatora, aby usunąć ten obiekt.
 
 Biblioteka MFC zapewnia dodatkowe możliwości kontrolowania zachowania aplikacji, gdy klienci zewnętrzni odwołują się do obiektów aplikacji. Oprócz utrzymywania liczby odwołań do poszczególnych obiektów serwery zachowują globalną liczbę aktywnych obiektów. Funkcje globalne [metodę AfxOleLockApp](reference/application-control.md#afxolelockapp) i [funkcję AfxOleUnlockApp](reference/application-control.md#afxoleunlockapp) aktualizują liczbę aktywnych obiektów aplikacji. Jeśli ta liczba jest różna od zera, aplikacja nie zostanie zakończona, gdy użytkownik wybierze opcję Zamknij z menu systemowego lub zakończy pracę z menu plik. Zamiast tego okno główne aplikacji jest ukryte (ale nie zniszczone), dopóki nie zostaną ukończone wszystkie oczekujące żądania klienta. Zwykle `AfxOleLockApp` i `AfxOleUnlockApp` są wywoływane odpowiednio w konstruktorach i destruktorach klas, które obsługują automatyzację.
 
@@ -28,7 +28,7 @@ Czasami okoliczności wymuszają przerwanie działania serwera, gdy klient nadal
 
 W Windows SDK, zobacz `IUnknown::AddRef` i `IUnknown::Release` .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Serwery automatyzacji](automation-servers.md)<br/>
 [AfxOleCanExitApp](reference/application-control.md#afxolecanexitapp)

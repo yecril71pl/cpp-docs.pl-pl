@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4807
 ms.assetid: 089c9f87-fd81-402e-9826-66a8ef1ef1fe
-ms.openlocfilehash: 2424d076be0914a68c3227566cb851b7ab64cc0f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 17a33f7c55fa2825eae1c7d8b9d8ab78e4ed5274
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175041"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225335"
 ---
 # <a name="compiler-warning-level-1-c4807"></a>Ostrzeżenie kompilatora (poziom 1) C4807
 
 "Operation": niebezpieczne połączenie typu "Type" i podpisane pole bitowe typu "Type"
 
-To ostrzeżenie jest generowane podczas porównywania jednego bitowego pola bitowego ze znakiem do zmiennej `bool`. Ze względu na to, że jedno-bitowe, podpisane pole bitowe może zawierać tylko wartości-1 lub 0, jest to nieszkodliwe do porównania z `bool`. Nie są generowane żadne ostrzeżenia dotyczące mieszania `bool` i jeden-bitowego pola bitów bez znaku, ponieważ są one identyczne z `bool` i mogą zawierać tylko 0 lub 1.
+To ostrzeżenie jest generowane podczas porównywania jednego-bitowego pola bitowego ze znakiem ze **`bool`** zmienną. Ponieważ jedno-bitowe, podpisane pole bitowe może zawierać tylko wartości-1 lub 0, jest niebezpieczne do porównania **`bool`** . Nie są generowane żadne ostrzeżenia o miksowaniu **`bool`** i jednobitowej pola bitów bez znaku, ponieważ są one identyczne z **`bool`** i mogą zawierać tylko 0 lub 1.
 
 ## <a name="example"></a>Przykład
 

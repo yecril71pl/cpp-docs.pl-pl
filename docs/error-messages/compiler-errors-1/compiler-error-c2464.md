@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2464
 ms.assetid: ace953d6-b414-49ee-bfef-90578a8da00c
-ms.openlocfilehash: e4952f4702d871ecf1c818b1fc7394e54a1a295f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b2d2766b11d15bdb666baa207591cc9ff279a280
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74743890"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225478"
 ---
 # <a name="compiler-error-c2464"></a>Błąd kompilatora C2464
 
 "Identyfikator": nie można użyć "New", aby przydzielić odwołanie
 
-Identyfikator odwołania został przydzielony przy użyciu operatora `new`. Odwołania nie są obiektami pamięci, dlatego `new` nie można zwrócić do nich wskaźnika. Użyj składni deklaracji zmiennej standardowej, aby zadeklarować odwołanie.
+Identyfikator odwołania został przydzielony do **`new`** operatora. Odwołania nie są obiektami pamięci, dlatego **`new`** nie można zwrócić do nich wskaźnika. Użyj składni deklaracji zmiennej standardowej, aby zadeklarować odwołanie.
 
 Poniższy przykład generuje C2464:
 

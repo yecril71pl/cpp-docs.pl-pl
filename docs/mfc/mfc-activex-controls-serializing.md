@@ -15,12 +15,12 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: c06299f2fc7409476e4f5e5744ea11c962e3b173
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f5e3b4bdf203f90b3550a2521ba51ba451cf3a46
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621201"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225023"
 ---
 # <a name="mfc-activex-controls-serializing"></a>Kontrolki ActiveX MFC: serializacja
 
@@ -58,13 +58,13 @@ Poniższa tabela zawiera listę możliwych funkcji wymiany właściwości, któr
 |**PX_Bool ()**|Serializować Właściwość Boolean typu.|
 |**PX_Color ()**|Serializować Właściwość koloru typu.|
 |**PX_Currency ()**|Serializować właściwość typu **cy** (Currency).|
-|**PX_Double ()**|Serializować Właściwość **Double** typu.|
+|**PX_Double ()**|Serializować **`double`** Właściwość typu.|
 |**PX_Font ()**|Serializować właściwość typu czcionki.|
-|**PX_Float ()**|Serializować właściwość typu **zmiennoprzecinkowego** .|
+|**PX_Float ()**|Serializować **`float`** Właściwość typu.|
 |**PX_IUnknown ()**|Serializować właściwość typu `LPUNKNOWN` .|
-|**PX_Long ()**|Serializować Właściwość **Long** typu.|
+|**PX_Long ()**|Serializować **`long`** Właściwość typu.|
 |**PX_Picture ()**|Serializować Właściwość obrazu typu.|
-|**PX_Short ()**|Serializować **krótką** właściwość typu.|
+|**PX_Short ()**|Serializować **`short`** Właściwość typu.|
 |**PXstring( )**|Serializować `CString` Właściwość typu.|
 |**PX_ULong ()**|Serializować właściwość typu **ULONG** .|
 |**PX_UShort ()**|Serializować właściwość typu **UShort** .|
@@ -93,6 +93,6 @@ W poniższym przykładzie wersja 1 tej kontrolki przykładowej ma tylko właści
 
 Domyślnie kontrolka "konwertuje" stare dane do najnowszego formatu. Na przykład jeśli wersja 2 kontrolki wczytuje dane zapisane w wersji 1, program zapisze format wersji 2 po ponownym zapisaniu. Jeśli chcesz, aby formant zapisywał dane w formacie ostatnim odczytu, Przekaż **false** jako trzeci parametr podczas wywoływania `ExchangeVersion` . Ten trzeci parametr jest opcjonalny i domyślnie ma **wartość true** .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](mfc-activex-controls.md)

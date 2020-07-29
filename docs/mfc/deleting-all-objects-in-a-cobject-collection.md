@@ -10,12 +10,12 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 2921fe4e4f10c96a096d30d8f842eecdfd644ca6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5aac324b6af50db019c2a4b55b26a612cc081894
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615908"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225075"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Usuwanie wszystkich obiektów z kolekcji CObject
 
@@ -38,7 +38,7 @@ W tym artykule opisano sposób usuwania obiektów w programie:
 
 1. Użyj `GetHeadPosition` i, `GetNext` Aby wykonać iterację listy.
 
-1. Użyj operatora **delete** , aby usunąć każdy obiekt w trakcie iteracji.
+1. Użyj **`delete`** operatora, aby usunąć każdy obiekt w trakcie iteracji.
 
 1. Wywołaj `RemoveAll` funkcję, aby usunąć wszystkie elementy z listy po usunięciu obiektów skojarzonych z tymi elementami.
 
@@ -54,7 +54,7 @@ Zauważ różnicę między usunięciem obiektu elementu i usunięciem samego ele
 
 1. Używaj `GetSize` i wartości indeksów całkowitych do iteracji w tablicy.
 
-1. Użyj operatora **delete** , aby usunąć każdy element w trakcie iteracji.
+1. Użyj **`delete`** operatora, aby usunąć każdy element w trakcie iteracji.
 
 1. Wywołaj `RemoveAll` funkcję, aby usunąć wszystkie elementy z tablicy po ich usunięciu.
 
@@ -68,7 +68,7 @@ Podobnie jak w przypadku powyższego przykładu listy, można wywołać, `Remove
 
 1. Używaj `GetStartPosition` i `GetNextAssoc` do iteracji w tablicy.
 
-1. Użyj operatora **delete** , aby usunąć klucz i/lub wartość dla każdego elementu mapy w miarę napotkania w iteracji.
+1. Użyj **`delete`** operatora, aby usunąć klucz i/lub wartość dla każdego elementu mapy w miarę napotkania w iteracji.
 
 1. Wywołaj `RemoveAll` funkcję, aby usunąć wszystkie elementy z mapy po ich usunięciu.
 
@@ -78,6 +78,6 @@ Podobnie jak w przypadku powyższego przykładu listy, można wywołać, `Remove
 
 Można wywołać, `RemoveAll` Aby usunąć wszystkie elementy na mapie lub `RemoveKey` usunąć pojedynczy element z określonym kluczem.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uzyskiwanie dostępu do wszystkich elementów członkowskich kolekcji](accessing-all-members-of-a-collection.md)

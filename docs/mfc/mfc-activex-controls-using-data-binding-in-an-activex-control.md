@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 3f16ea3ad77c676695a9d5ca6e2deb10637de455
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b32dbd8e1777f11998085a90e8851b25e4298e1a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621185"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224997"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Kontrolki ActiveX MFC: używanie powiązania danych w kontrolce ActiveX
 
@@ -93,7 +93,7 @@ Oprócz metody get/set powiązanej z danymi można także utworzyć [Właściwo�
 
 1. Wpisz nazwę właściwości w polu **Nazwa właściwości** . Użyj `MyProp` w tym przykładzie.
 
-1. Wybierz typ danych z listy rozwijanej **Typ właściwości** . Użyj **krótkich** w tym przykładzie.
+1. Wybierz typ danych z listy rozwijanej **Typ właściwości** . Użyj **`short`** w tym przykładzie.
 
 1. W obszarze **Typ implementacji**kliknij pozycję **Pobierz/ustaw metody**.
 
@@ -133,6 +133,6 @@ Oprócz metody get/set powiązanej z danymi można także utworzyć [Właściwo�
 
 Teraz można skompilować projekt, który będzie rejestrował formant. Po wstawieniu kontrolki w oknie dialogowym zostaną dodane **pola danych** i właściwości **źródła danych** , a teraz można wybrać źródło danych i pole do wyświetlenia w formancie.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Kontrolki ActiveX MFC](mfc-activex-controls.md)

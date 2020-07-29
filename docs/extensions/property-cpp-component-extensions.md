@@ -1,18 +1,18 @@
 ---
-title: Właściwość (C++/CLI i C++/CX)
+title: właściwość  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: b961a93628752b11cd1d147268a4947acf29f67a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fbec97a5bd30bb9bb76459ef2f7b0956ae6a264f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171979"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225140"
 ---
-# <a name="property--ccli-and-ccx"></a>Właściwość (C++/CLI i C++/CX)
+# <a name="property--ccli-and-ccx"></a>właściwość  (C++/CLI i C++/CX)
 
 Deklaruje *Właściwość*, która jest funkcją składową, która zachowuje się i jest dostępna, jak element członkowski danych lub element tablicy.
 
@@ -31,7 +31,7 @@ Należy jawnie zadeklarować składową danych, aby zawierała wartość właśc
 *Właściwość indeksowana*<br/>
 Blok właściwości, którego można użyć, aby pobrać i ustawić wartość właściwości, która jest określona przez jeden lub więcej indeksów.
 
-Można utworzyć indeksowaną właściwość, która ma zdefiniowaną przez użytkownika nazwę właściwości lub *domyślną* nazwę właściwości. Nazwa domyślnej właściwości indeksu jest nazwą klasy, w której właściwość jest zdefiniowana. Aby zadeklarować właściwość domyślną, określ słowo kluczowe **default** zamiast nazwy właściwości.
+Można utworzyć indeksowaną właściwość, która ma zdefiniowaną przez użytkownika nazwę właściwości lub *domyślną* nazwę właściwości. Nazwa domyślnej właściwości indeksu jest nazwą klasy, w której właściwość jest zdefiniowana. Aby zadeklarować właściwość domyślną, określ **`default`** słowo kluczowe zamiast nazwy właściwości.
 
 Należy jawnie zadeklarować składową danych, aby zawierała wartość właściwości. Dla właściwości indeksowanej element członkowski danych jest zwykle tablicą lub kolekcją.
 
@@ -58,16 +58,16 @@ property type default[index_list] {
 
 ### <a name="parameters"></a>Parametry
 
-*type*<br/>
+*Wprowadź*<br/>
 Typ danych wartości właściwości i w związku z tym właściwością.
 
 *property_name*<br/>
 Nazwa właściwości.
 
 *Modyfikator dostępu*<br/>
-Kwalifikator dostępu. Prawidłowe kwalifikatory są **statyczne** i **wirtualne**.
+Kwalifikator dostępu. Prawidłowe kwalifikatory to **`static`** i **`virtual`** .
 
-Metody dostępu get lub set nie muszą zgadzać się z kwalifikatorem **wirtualnym** , ale muszą wyrazić zgodę na kwalifikator **statyczny** .
+Metody dostępu get lub set nie muszą zgadzać się z **`virtual`** kwalifikatorem, ale muszą wyrazić zgodę na **`static`** kwalifikator.
 
 *Dziedziczenie — modyfikator*<br/>
 Kwalifikator dziedziczenia. Prawidłowe kwalifikatory są **abstrakcyjne** i **zapieczętowane**.
@@ -75,7 +75,7 @@ Kwalifikator dziedziczenia. Prawidłowe kwalifikatory są **abstrakcyjne** i **z
 *index_list*<br/>
 Rozdzielana przecinkami lista co najmniej jednego indeksu. Każdy indeks składa się z typu indeksu i opcjonalnego identyfikatora, który może być używany w treści metody właściwości.
 
-*value*<br/>
+*wartościami*<br/>
 Wartość, która ma zostać przypisana do właściwości w operacji zestawu lub pobierana w operacji pobierania.
 
 *property_body*<br/>
@@ -83,11 +83,11 @@ Treść metody właściwości zestawu lub get. *Property_body* może użyć *ind
 
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows
 
-Aby uzyskać więcej informacji, zobacz [właściwościC++(/CX)](../cppcx/properties-c-cx.md).
+Aby uzyskać więcej informacji, zobacz [właściwości (C++/CX)](../cppcx/properties-c-cx.md).
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: `/ZW`
+Opcja kompilatora:`/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -111,9 +111,9 @@ modifier property type default[index];
 ### <a name="parameters"></a>Parametry
 
 *modyfikator*<br/>
-Modyfikator, który może być używany w deklaracji właściwości lub metodzie dostępu get/set. Możliwe wartości są **statyczne** i **wirtualne**.
+Modyfikator, który może być używany w deklaracji właściwości lub metodzie dostępu get/set. Możliwe wartości to **`static`** i **`virtual`** .
 
-*type*<br/>
+*Wprowadź*<br/>
 Typ wartości reprezentowanej przez właściwość.
 
 *property_name*<br/>
@@ -124,45 +124,45 @@ Rozdzielana przecinkami lista co najmniej jednego indeksu, określona w nawiasac
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza Przykładowa składnia przedstawia *prostą Właściwość*, która niejawnie deklaruje zarówno `set` jak i `get` metodę. Kompilator automatycznie tworzy pole prywatne do przechowywania wartości właściwości.
+Pierwszy przykład składni pokazuje *prostą Właściwość*, która niejawnie deklaruje zarówno `set` metodę, jak i `get` . Kompilator automatycznie tworzy pole prywatne do przechowywania wartości właściwości.
 
-Druga Przykładowa składnia przedstawia *blok właściwości*, który jawnie deklaruje zarówno metodę `set`, jak i `get`.
+Druga Przykładowa składnia przedstawia *blok właściwości*, który jawnie deklaruje zarówno `set` metodę, jak i `get` .
 
-Trzecia Przykładowa składnia przedstawia zdefiniowaną przez klienta *Właściwość indeksu*. Właściwość index przyjmuje parametry oprócz wartości, która ma być ustawiona lub pobrana. Należy określić nazwę właściwości. W przeciwieństwie do prostej właściwości, metody `set` i/lub `get` właściwości index muszą być jawnie zdefiniowane i należy określić nazwę właściwości.
+Trzecia Przykładowa składnia przedstawia zdefiniowaną przez klienta *Właściwość indeksu*. Właściwość index przyjmuje parametry oprócz wartości, która ma być ustawiona lub pobrana. Należy określić nazwę właściwości. W przeciwieństwie do prostej właściwości, `set` metody i/lub `get` Właściwości indeksu muszą być jawnie zdefiniowane i należy określić nazwę dla właściwości.
 
-Czwarta składnia przykładu przedstawia Właściwość *domyślną* , która zapewnia podobny do tablicy dostęp do wystąpienia typu. Słowo kluczowe, **default**, służy tylko do określenia właściwości domyślnej. Nazwa właściwości domyślnej jest nazwą typu, w którym właściwość jest zdefiniowana.
+Czwarta składnia przykładu przedstawia Właściwość *domyślną* , która zapewnia podobny do tablicy dostęp do wystąpienia typu. Słowo kluczowe, **`default`** , służy tylko do określenia właściwości domyślnej. Nazwa właściwości domyślnej jest nazwą typu, w którym właściwość jest zdefiniowana.
 
-Słowo kluczowe **Property** może występować w klasie, interfejsie lub typie wartości. Właściwość może mieć funkcję get (tylko do odczytu), funkcję Set (tylko do zapisu) lub obie (odczyt i zapis).
+**`property`** Słowo kluczowe może występować w klasie, interfejsie lub typie wartości. Właściwość może mieć funkcję get (tylko do odczytu), funkcję Set (tylko do zapisu) lub obie (odczyt i zapis).
 
 Nazwa właściwości nie może być zgodna z nazwą klasy zarządzanej, która ją zawiera. Zwracany typ funkcji pobierającej musi być zgodny z typem ostatniego parametru odpowiadającej funkcji setter.
 
 Do kodu klienta właściwość ma wygląd zwykłego elementu członkowskiego danych i może być zapisywana lub odczytywana przy użyciu tej samej składni co element członkowski danych.
 
-Metody get i set nie muszą zgadzać się z modyfikatorem **wirtualnym** .
+Metody get i set nie muszą zgadzać się z **`virtual`** modyfikatorem.
 
 Dostępność metody get i set może się różnić.
 
 Definicja metody właściwości może występować poza treścią klasy, podobnie jak zwykła Metoda.
 
-Metoda get i Set dla właściwości wyraża zgodę na modyfikator **statyczny** .
+Metoda get i Set dla właściwości zgadza się na **`static`** modyfikator.
 
 Właściwość jest skalarna, jeśli jej metody get i Set pasują do następującego opisu:
 
-- Metoda get nie ma parametrów i ma `T`zwracanego typu.
+- Metoda get nie ma parametrów i ma zwracany typ `T` .
 
-- Metoda Set ma parametr typu `T`i zwracany typ **void**.
+- Metoda Set ma parametr typu `T` i zwracanego typu **`void`** .
 
 Zakres o takim samym identyfikatorze powinien zawierać tylko jedną właściwość skalarną. Właściwości skalarne nie mogą być przeciążone.
 
-Gdy element członkowski danych właściwości jest zadeklarowany, kompilator wprowadza element członkowski danych — czasami określany jako "magazyn zapasowy" — w klasie. Jednak nazwa elementu członkowskiego danych jest w postaci, w której nie można odwołać się do elementu członkowskiego w źródle, tak jakby był to rzeczywisty element członkowski danych klasy zawierającej. Użyj Ildasm. exe, aby wyświetlić metadane dla danego typu i zobaczyć nazwę wygenerowaną przez kompilator dla magazynu zapasowego właściwości.
+Gdy element członkowski danych właściwości jest zadeklarowany, kompilator wprowadza element członkowski danych — czasami określany jako "magazyn zapasowy" — w klasie. Jednak nazwa elementu członkowskiego danych jest w postaci, w której nie można odwołać się do elementu członkowskiego w źródle, tak jakby był to rzeczywisty element członkowski danych klasy zawierającej. Użyj ildasm.exe, aby wyświetlić metadane dla danego typu i zobaczyć nazwę wygenerowaną przez kompilator dla magazynu zapasowego właściwości.
 
 Różne ułatwienia dostępu są dozwolone dla metod dostępu w bloku właściwości.  Oznacza to, że Metoda set może być publiczna, a metoda Get może być prywatna.  Jednak jest to błąd metody dostępu, aby mieć mniej restrykcyjny dostęp niż to, co znajduje się w deklaracji samej właściwości.
 
-**Właściwość** to kontekstowe słowo kluczowe.  Aby uzyskać więcej informacji, zobacz [kontekstowe słowa kluczowe](context-sensitive-keywords-cpp-component-extensions.md).
+**`property`** jest kontekstowym słowem kluczowym.  Aby uzyskać więcej informacji, zobacz [kontekstowe słowa kluczowe](context-sensitive-keywords-cpp-component-extensions.md).
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: `/clr`
+Opcja kompilatora:`/clr`
 
 ### <a name="examples"></a>Przykłady
 
@@ -210,6 +210,6 @@ test
 21
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

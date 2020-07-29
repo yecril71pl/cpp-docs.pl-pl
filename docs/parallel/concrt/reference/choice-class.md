@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-ms.openlocfilehash: 3e718d0d34580d3bf2f13937159e431134631218
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: a5b9bc26b6d9ec66dc74e7adaad31eea1eece118
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142217"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224984"
 ---
 # <a name="choice-class"></a>Klasa wyboru
 
-Blok komunikatów `choice` jest blokiem pojedynczego źródła, który reprezentuje interakcję przepływu sterowania z zestawem źródeł. Blok wyboru czeka na jedno z wielu źródeł, aby utworzyć komunikat i propaguje indeks źródła, który wygenerował komunikat.
+`choice`Blok komunikatów jest blokiem pojedynczego źródła, który reprezentuje interakcję przepływu sterowania z zestawem źródeł. Blok wyboru czeka na jedno z wielu źródeł, aby utworzyć komunikat i propaguje indeks źródła, który wygenerował komunikat.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,40 +42,40 @@ class choice: public ISource<size_t>;
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
-Typ oparty na `tuple`reprezentujący ładunki źródeł wejściowych.
+*T*<br/>
+`tuple`Typ oparty na liczbie ładunków źródeł wejściowych.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|`type`|Alias typu dla `T`.|
+|`type`|Alias typu dla `T` .|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[Rozwiązanie](#ctor)|Przeciążone. Tworzy blok komunikatów `choice`.|
-|[~ wybór destruktora](#dtor)|Niszczy blok komunikatów `choice`.|
+|[Rozwiązanie](#ctor)|Przeciążone. Tworzy `choice` blok komunikatów.|
+|[~ wybór destruktora](#dtor)|Niszczy `choice` blok komunikatów.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[odebrać](#accept)|Akceptuje komunikat, który został zaoferowany przez ten blok `choice`, przez przeniesienie własności do obiektu wywołującego.|
-|[acquire_ref](#acquire_ref)|Uzyskuje liczbę odwołań w tym bloku komunikatów `choice`, aby zapobiec usunięciu.|
-|[wykorzystania](#consume)|Wykorzystuje komunikat wcześniej oferowany przez ten blok komunikatów `choice` i został pomyślnie zarezerwowany przez obiekt docelowy, przez przeniesienie własności do obiektu wywołującego.|
-|[has_value](#has_value)|Sprawdza, czy ten blok komunikatów `choice` został jeszcze zainicjowany z wartością.|
-|[indeks](#index)|Zwraca indeks do `tuple` reprezentującego element wybrany przez blok komunikatów `choice`.|
-|[link_target](#link_target)|Łączy blok docelowy z tym blokiem komunikatów `choice`.|
+|[odebrać](#accept)|Akceptuje komunikat, który był oferowany przez ten `choice` blok, przekazując własność do obiektu wywołującego.|
+|[acquire_ref](#acquire_ref)|Uzyskuje liczbę odwołań w tym `choice` bloku komunikatów, aby zapobiec usunięciu.|
+|[wykorzystania](#consume)|Wykorzystuje komunikat wcześniej oferowany przez ten `choice` blok komunikatów i został pomyślnie zarezerwowany przez obiekt docelowy, przez przeniesienie własności do obiektu wywołującego.|
+|[has_value](#has_value)|Sprawdza, czy ten `choice` blok komunikatów został jeszcze zainicjowany z wartością.|
+|[indeks](#index)|Zwraca indeks `tuple` reprezentujący element wybrany przez `choice` blok komunikatów.|
+|[link_target](#link_target)|Łączy blok docelowy z tym `choice` blokiem obsługi komunikatów.|
 |[Usuwanie](#release)|Zwalnia poprzednie pomyślne zastrzeżenie dotyczące komunikatów.|
-|[release_ref](#release_ref)|Zwalnia liczbę odwołań w tym bloku komunikatów `choice`.|
-|[zarezerwować](#reserve)|Rezerwuje komunikat wcześniej oferowany przez ten blok komunikatów `choice`.|
-|[unlink_target](#unlink_target)|Odłącza blok docelowy z tego bloku komunikatów `choice`.|
-|[unlink_targets](#unlink_targets)|Odłącza wszystkie elementy docelowe z tego bloku komunikatów `choice`. (Przesłania [ISource:: unlink_targets](isource-class.md#unlink_targets).)|
-|[value](#value)|Pobiera komunikat, którego indeks został wybrany przez blok komunikatów `choice`.|
+|[release_ref](#release_ref)|Zwalnia liczbę odwołań w tym `choice` bloku komunikatów.|
+|[zarezerwować](#reserve)|Rezerwuje komunikat wcześniej oferowany przez ten `choice` blok komunikatów.|
+|[unlink_target](#unlink_target)|Odłącza blok docelowy z tego `choice` bloku komunikatów.|
+|[unlink_targets](#unlink_targets)|Odłącza wszystkie elementy docelowe z tego `choice` bloku komunikatów. (Przesłania [ISource:: unlink_targets](isource-class.md#unlink_targets).)|
+|[wartościami](#value)|Pobiera komunikat, którego indeks został wybrany przez `choice` blok komunikatów.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -95,9 +95,9 @@ Aby uzyskać więcej informacji, zobacz [asynchroniczne bloki komunikatów](../.
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="accept"></a>odebrać
+## <a name="accept"></a><a name="accept"></a>odebrać
 
-Akceptuje komunikat, który został zaoferowany przez ten blok `choice`, przez przeniesienie własności do obiektu wywołującego.
+Akceptuje komunikat, który był oferowany przez ten `choice` blok, przekazując własność do obiektu wywołującego.
 
 ```cpp
 virtual message<size_t>* accept(
@@ -108,18 +108,18 @@ virtual message<size_t>* accept(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` oferowanego obiektu `message`.
+Dla `runtime_object_identity` oferowanego `message` obiektu.
 
 *_PTarget*<br/>
-Wskaźnik do bloku docelowego, który wywołuje metodę `accept`.
+Wskaźnik do bloku docelowego, który wywołuje `accept` metodę.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wskaźnik do komunikatu, którego obiekt wywołujący ma teraz własność.
 
-## <a name="acquire_ref"></a>acquire_ref
+## <a name="acquire_ref"></a><a name="acquire_ref"></a>acquire_ref
 
-Uzyskuje liczbę odwołań w tym bloku komunikatów `choice`, aby zapobiec usunięciu.
+Uzyskuje liczbę odwołań w tym `choice` bloku komunikatów, aby zapobiec usunięciu.
 
 ```cpp
 virtual void acquire_ref(_Inout_ ITarget<size_t>* _PTarget);
@@ -132,11 +132,11 @@ Wskaźnik do bloku docelowego, który wywołuje tę metodę.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana przez obiekt `ITarget`, który jest połączony z tym źródłem podczas `link_target` metody.
+Ta metoda jest wywoływana przez `ITarget` obiekt, który jest połączony z tym źródłem podczas tej `link_target` metody.
 
-## <a name="ctor"></a>Rozwiązanie
+## <a name="choice"></a><a name="ctor"></a>Rozwiązanie
 
-Tworzy blok komunikatów `choice`.
+Tworzy `choice` blok komunikatów.
 
 ```cpp
 explicit choice(
@@ -157,34 +157,34 @@ choice(
 ### <a name="parameters"></a>Parametry
 
 *_Tuple*<br/>
-Wybór `tuple` źródeł.
+Z `tuple` wybranych źródeł.
 
 *_PScheduler*<br/>
-Obiekt `Scheduler`, w ramach którego zaplanowano zadanie propagacji dla bloku obsługi komunikatów `choice`.
+`Scheduler`Obiekt, w ramach którego zaplanowano zadanie propagacji dla `choice` bloku obsługi komunikatów.
 
 *_PScheduleGroup*<br/>
-Obiekt `ScheduleGroup`, w ramach którego zaplanowano zadanie propagacji dla bloku obsługi komunikatów `choice`. Używany obiekt `Scheduler` jest implikowany przez grupę harmonogramów.
+`ScheduleGroup`Obiekt, w ramach którego zaplanowano zadanie propagacji dla `choice` bloku obsługi komunikatów. `Scheduler`Używany obiekt jest implikowany przez grupę harmonogramów.
 
 *_Choice*<br/>
-Blok komunikatów `choice` do skopiowania. Należy zauważyć, że oryginalny obiekt jest oddzielony, co czyni ten konstruktor przenoszenia.
+`choice`Blok komunikatów do skopiowania. Należy zauważyć, że oryginalny obiekt jest oddzielony, co czyni ten konstruktor przenoszenia.
 
 ### <a name="remarks"></a>Uwagi
 
-Środowisko uruchomieniowe używa domyślnego harmonogramu, jeśli nie określisz parametrów `_PScheduler` lub `_PScheduleGroup`.
+Środowisko uruchomieniowe używa domyślnego harmonogramu, jeśli nie określono `_PScheduler` `_PScheduleGroup` parametrów lub.
 
 Konstrukcja przenoszenia nie jest przeprowadzana w ramach blokady, co oznacza, że jest ona dostępna dla użytkownika, aby upewnić się, że w czasie przenoszenia nie ma żadnych lekkich zadań. W przeciwnym razie może wystąpić wiele Races, co prowadzi do wyjątków lub niespójnego stanu.
 
-## <a name="dtor"></a>~ wybór
+## <a name="choice"></a><a name="dtor"></a>~ wybór
 
-Niszczy blok komunikatów `choice`.
+Niszczy `choice` blok komunikatów.
 
 ```cpp
 ~choice();
 ```
 
-## <a name="consume"></a>wykorzystania
+## <a name="consume"></a><a name="consume"></a>wykorzystania
 
-Wykorzystuje komunikat wcześniej oferowany przez ten blok komunikatów `choice` i został pomyślnie zarezerwowany przez obiekt docelowy, przez przeniesienie własności do obiektu wywołującego.
+Wykorzystuje komunikat wcześniej oferowany przez ten `choice` blok komunikatów i został pomyślnie zarezerwowany przez obiekt docelowy, przez przeniesienie własności do obiektu wywołującego.
 
 ```cpp
 virtual message<size_t>* consume(
@@ -195,50 +195,50 @@ virtual message<size_t>* consume(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` zarezerwowanych obiektów `message`.
+`runtime_object_identity`Obiekt zastrzeżony `message` .
 
 *_PTarget*<br/>
-Wskaźnik do bloku docelowego, który wywołuje metodę `consume`.
+Wskaźnik do bloku docelowego, który wywołuje `consume` metodę.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do obiektu `message`, do którego obiekt wywołujący ma teraz własność.
+Wskaźnik do `message` obiektu, do którego obiekt wywołujący ma teraz własność.
 
 ### <a name="remarks"></a>Uwagi
 
-Metoda `consume` jest podobna do `accept`, ale zawsze musi być poprzedzona wywołaniem `reserve` zwracającym **wartość true**.
+`consume`Metoda jest podobna do `accept` , ale musi być zawsze poprzedzona wywołaniem `reserve` zwracanym **`true`** .
 
-## <a name="has_value"></a>has_value
+## <a name="has_value"></a><a name="has_value"></a>has_value
 
-Sprawdza, czy ten blok komunikatów `choice` został jeszcze zainicjowany z wartością.
+Sprawdza, czy ten `choice` blok komunikatów został jeszcze zainicjowany z wartością.
 
 ```cpp
 bool has_value() const;
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli blok odebrał wartość, w przeciwnym razie **false** .
+**`true`** Jeśli blok odebrał wartość, **`false`** w przeciwnym razie.
 
-## <a name="index"></a>indeks
+## <a name="index"></a><a name="index"></a>indeks
 
-Zwraca indeks do `tuple` reprezentującego element wybrany przez blok komunikatów `choice`.
+Zwraca indeks `tuple` reprezentujący element wybrany przez `choice` blok komunikatów.
 
 ```cpp
 size_t index();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Indeks komunikatów.
 
 ### <a name="remarks"></a>Uwagi
 
-Ładunek wiadomości można wyodrębnić przy użyciu metody `get`.
+Ładunek wiadomości można wyodrębnić przy użyciu `get` metody.
 
-## <a name="link_target"></a>link_target
+## <a name="link_target"></a><a name="link_target"></a>link_target
 
-Łączy blok docelowy z tym blokiem komunikatów `choice`.
+Łączy blok docelowy z tym `choice` blokiem obsługi komunikatów.
 
 ```cpp
 virtual void link_target(_Inout_ ITarget<size_t>* _PTarget);
@@ -247,9 +247,9 @@ virtual void link_target(_Inout_ ITarget<size_t>* _PTarget);
 ### <a name="parameters"></a>Parametry
 
 *_PTarget*<br/>
-Wskaźnik do bloku `ITarget`, aby połączyć ten blok komunikatów `choice`.
+Wskaźnik do `ITarget` bloku do łączenia z tym `choice` blokiem obsługi komunikatów.
 
-## <a name="release"></a>Usuwanie
+## <a name="release"></a><a name="release"></a>Usuwanie
 
 Zwalnia poprzednie pomyślne zastrzeżenie dotyczące komunikatów.
 
@@ -262,14 +262,14 @@ virtual void release(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` wydawany `message` obiektu.
+`runtime_object_identity` `message` Wydawany obiekt.
 
 *_PTarget*<br/>
-Wskaźnik do bloku docelowego, który wywołuje metodę `release`.
+Wskaźnik do bloku docelowego, który wywołuje `release` metodę.
 
-## <a name="release_ref"></a>release_ref
+## <a name="release_ref"></a><a name="release_ref"></a>release_ref
 
-Zwalnia liczbę odwołań w tym bloku komunikatów `choice`.
+Zwalnia liczbę odwołań w tym `choice` bloku komunikatów.
 
 ```cpp
 virtual void release_ref(_Inout_ ITarget<size_t>* _PTarget);
@@ -282,11 +282,11 @@ Wskaźnik do bloku docelowego, który wywołuje tę metodę.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda jest wywoływana przez obiekt `ITarget`, który jest odłączany od tego źródła. Blok źródłowy może zwolnić wszystkie zasoby zarezerwowane dla bloku docelowego.
+Ta metoda jest wywoływana przez `ITarget` obiekt, który jest odłączany od tego źródła. Blok źródłowy może zwolnić wszystkie zasoby zarezerwowane dla bloku docelowego.
 
-## <a name="reserve"></a>zarezerwować
+## <a name="reserve"></a><a name="reserve"></a>zarezerwować
 
-Rezerwuje komunikat wcześniej oferowany przez ten blok komunikatów `choice`.
+Rezerwuje komunikat wcześniej oferowany przez ten `choice` blok komunikatów.
 
 ```cpp
 virtual bool reserve(
@@ -297,22 +297,22 @@ virtual bool reserve(
 ### <a name="parameters"></a>Parametry
 
 *_MsgId*<br/>
-`runtime_object_identity` obiektu `message`, który jest zarezerwowany.
+Obiekt, który jest `runtime_object_identity` `message` zarezerwowany.
 
 *_PTarget*<br/>
-Wskaźnik do bloku docelowego, który wywołuje metodę `reserve`.
+Wskaźnik do bloku docelowego, który wywołuje `reserve` metodę.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli komunikat został pomyślnie zarezerwowany, w przeciwnym razie **zwraca wartość false** . Rezerwacje mogą się nie powieść z wielu powodów, takich jak: komunikat został już zarezerwowany lub zaakceptowany przez inny obiekt docelowy, źródło może odmówić rezerwacji i tak dalej.
+**`true`** Jeśli komunikat został pomyślnie zarezerwowany, **`false`** w przeciwnym razie. Rezerwacje mogą się nie powieść z wielu powodów, takich jak: komunikat został już zarezerwowany lub zaakceptowany przez inny obiekt docelowy, źródło może odmówić rezerwacji i tak dalej.
 
 ### <a name="remarks"></a>Uwagi
 
-Po wywołaniu `reserve`, jeśli zakończy się powodzeniem, należy wywołać `consume` lub `release` w celu podjęcia lub zadawania wiadomości odpowiednio.
+Po wywołaniu `reserve` , jeśli zakończy się powodzeniem, należy wywołać `consume` lub `release` w celu przeprowadzenia lub zadawać swój komunikat odpowiednio.
 
-## <a name="unlink_target"></a>unlink_target
+## <a name="unlink_target"></a><a name="unlink_target"></a>unlink_target
 
-Odłącza blok docelowy z tego bloku komunikatów `choice`.
+Odłącza blok docelowy z tego `choice` bloku komunikatów.
 
 ```cpp
 virtual void unlink_target(_Inout_ ITarget<size_t>* _PTarget);
@@ -321,11 +321,11 @@ virtual void unlink_target(_Inout_ ITarget<size_t>* _PTarget);
 ### <a name="parameters"></a>Parametry
 
 *_PTarget*<br/>
-Wskaźnik do bloku `ITarget`, aby odłączyć od tego bloku komunikatów `choice`.
+Wskaźnik do `ITarget` bloku do odłączenia od tego `choice` bloku komunikatów.
 
-## <a name="unlink_targets"></a>unlink_targets
+## <a name="unlink_targets"></a><a name="unlink_targets"></a>unlink_targets
 
-Odłącza wszystkie elementy docelowe z tego bloku komunikatów `choice`.
+Odłącza wszystkie elementy docelowe z tego `choice` bloku komunikatów.
 
 ```cpp
 virtual void unlink_targets();
@@ -333,11 +333,11 @@ virtual void unlink_targets();
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda nie musi być wywoływana z destruktora, ponieważ destruktor dla wewnętrznego bloku `single_assignment` odłączy się prawidłowo.
+Ta metoda nie musi być wywoływana z destruktora, ponieważ destruktor `single_assignment` bloku wewnętrznego odłączy się prawidłowo.
 
-## <a name="value"></a>wartościami
+## <a name="value"></a><a name="value"></a>wartościami
 
-Pobiera komunikat, którego indeks został wybrany przez blok komunikatów `choice`.
+Pobiera komunikat, którego indeks został wybrany przez `choice` blok komunikatów.
 
 ```cpp
 template <
@@ -351,16 +351,16 @@ _Payload_type const& value();
 *_Payload_type*<br/>
 Typ ładunku komunikatu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Obciążenie komunikatu.
+Ładunek wiadomości.
 
 ### <a name="remarks"></a>Uwagi
 
-Ponieważ blok komunikatów `choice` może przyjmować dane wejściowe z różnymi typami ładunku, należy określić typ ładunku w punkcie pobierania. Możesz określić typ na podstawie wyniku metody `index`.
+Ponieważ `choice` blok komunikatów może przyjmować dane wejściowe z różnymi typami ładunku, należy określić typ ładunku w punkcie pobierania. Możesz określić typ na podstawie wyniku `index` metody.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
-[join, klasa](join-class.md)<br/>
-[single_assignment, klasa](single-assignment-class.md)
+[join — Klasa](join-class.md)<br/>
+[Klasa single_assignment](single-assignment-class.md)
