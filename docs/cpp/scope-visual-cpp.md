@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: a5b5601c89991fbe1a148ebaf781fe2ad6a9dfc4
-ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
+ms.openlocfilehash: 5cff7a4607201175c7095a87134850583b76d636
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83204139"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227091"
 ---
 # <a name="scope-c"></a>Zakres (C++)
 
@@ -31,9 +31,9 @@ Istnieje sześć rodzajów zakresu:
 
 - **Zakres lokalny** Nazwa zadeklarowana wewnątrz funkcji lub wyrażenia lambda, łącznie z nazwami parametrów, mają zakres lokalny. Są one często określane jako "locale". Są one widoczne tylko w punkcie deklaracji na końcu funkcji lub treści lambda. Zakres lokalny to rodzaj zakresu blokowego, który został omówiony w dalszej części tego artykułu.
 
-- **Zakres klasy** Nazwy elementów członkowskich klasy mają zakres klasy, który rozciąga się w całej definicji klasy niezależnie od punktu deklaracji. Ułatwienia dostępu składowej klasy są dodatkowo kontrolowane przez **publiczne**, **prywatne**i **chronione** słowa kluczowe. Dostęp do publicznych lub chronionych składowych można uzyskać tylko przy użyciu operatorów wyboru elementu członkowskiego (**.** or **->** ) lub operatory wskaźnika do składowej (**.** <strong>\*</strong> lub **->** <strong>\*</strong> ).
+- **Zakres klasy** Nazwy elementów członkowskich klasy mają zakres klasy, który rozciąga się w całej definicji klasy niezależnie od punktu deklaracji. Ułatwienia dostępu składowej klasy są dodatkowo kontrolowane **`public`** przez **`private`** **`protected`** słowa kluczowe, i. Dostęp do publicznych lub chronionych składowych można uzyskać tylko przy użyciu operatorów wyboru elementu członkowskiego (**.** or **->** ) lub operatory wskaźnika do składowej (**.** <strong>\*</strong> lub **->** <strong>\*</strong> ).
 
-- **Zakres instrukcji** Nazwy zadeklarowane w instrukcji **for**, **if**, **while**lub **Switch** są widoczne do końca bloku instrukcji.
+- **Zakres instrukcji** Nazwy zadeklarowane w **`for`** **`if`** instrukcji,, **`while`** lub **`switch`** są widoczne do końca bloku instrukcji.
 
 - **Zakres funkcji** [Etykieta](labeled-statements.md) ma zakres funkcji, co oznacza, że jest widoczna w całej treści funkcji nawet przed punktem deklaracji. Zakres funkcji umożliwia pisanie instrukcji, takich jak `goto cleanup` przed `cleanup` zadeklarowaniem etykiety.
 
@@ -58,7 +58,7 @@ i = 0
 
 ## <a name="hiding-class-names"></a>Ukrywanie nazw klas
 
-Nazwy klas można ukryć, deklarując funkcję, obiekt lub zmienną lub moduł wyliczający w tym samym zakresie. Jednak nazwy klasy nadal można uzyskać przy użyciu prefiksu **klasy**słowa kluczowego.
+Nazwy klas można ukryć, deklarując funkcję, obiekt lub zmienną lub moduł wyliczający w tym samym zakresie. Jednak nazwy klasy nadal można uzyskać przy użyciu prefiksu słowa kluczowego **`class`** .
 
 ```cpp
 // hiding_class_names.cpp
@@ -94,18 +94,18 @@ int main()
 > [!NOTE]
 > W każdym miejscu jest wywoływana nazwa klasy ( `Account` ) dla, Klasa słowo kluczowe musi być używana w celu odróżnienia go od konta zmiennej o zakresie globalnym. Ta zasada nie ma zastosowania, gdy nazwa klasy występuje po lewej stronie operatora rozpoznawania zakresu (::). Nazwy po lewej stronie operatora rozpoznawania zakresu są zawsze uznawane za nazwy klas.
 
-Poniższy przykład ilustruje sposób deklarowania wskaźnika do obiektu typu `Account` za pomocą słowa kluczowego **Class** :
+Poniższy przykład pokazuje, jak zadeklarować wskaźnik do obiektu typu `Account` za pomocą **`class`** słowa kluczowego:
 
 ```cpp
 class Account *Checking = new class Account( Account );
 ```
 
-`Account`Element w inicjatorze (w nawiasach) w powyższej instrukcji ma zakres globalny; jest to typ **Double**.
+`Account`Element w inicjatorze (w nawiasach) w poprzedniej instrukcji ma zakres globalny; jest to typ **`double`** .
 
 > [!NOTE]
 > Wielokrotne użycie nazw identyfikatorów, jak pokazano w tym przykładzie, jest uznawane za słaby styl programowania.
 
-Aby uzyskać informacje na temat deklaracji i inicjalizacji obiektów klasy, zobacz [klasy, struktury i związki](../cpp/classes-and-structs-cpp.md). Aby uzyskać informacje na temat korzystania z operatorów **New** i **delete** Free-Store, zobacz [New and DELETE Operators](new-and-delete-operators.md).
+Aby uzyskać informacje na temat deklaracji i inicjalizacji obiektów klasy, zobacz [klasy, struktury i związki](../cpp/classes-and-structs-cpp.md). Aby uzyskać informacje o korzystaniu z **`new`** **`delete`** operatorów i operatorem Free-Store, zobacz [New and DELETE Operators](new-and-delete-operators.md).
 
 ## <a name="hiding-names-with-global-scope"></a>Ukrywanie nazw z zakresem globalnym
 
@@ -129,6 +129,6 @@ Block-scoped i has the value: 5
 Global-scoped i has the value: 7
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Podstawowe pojęcia](../cpp/basic-concepts-cpp.md)

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
-ms.openlocfilehash: 454a727f0c002dc476e5fdab217efc3dea716e14
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: d2356d7813167f3973ac2748423c6af7f0b5573b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180712"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227416"
 ---
 # <a name="inline-functions-c"></a>Funkcje śródwierszowe (C++)
 
@@ -157,7 +157,7 @@ Funkcje cykliczne mogą zostać zastąpione kodem wbudowanym do głębokości ok
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-Aby uzyskać więcej informacji na temat używania specyfikatora **wbudowanego** , zobacz:
+Aby uzyskać więcej informacji na temat używania **`inline`** specyfikatora, zobacz:
 
 - [Funkcje składowe klasy wbudowanej](../cpp/inline-functions-cpp.md)
 
@@ -266,7 +266,7 @@ Sample Input: a
 Sample Output: A
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [`noinline`](../cpp/noinline.md)<br/>
 [`auto_inline`](../preprocessor/auto-inline.md)

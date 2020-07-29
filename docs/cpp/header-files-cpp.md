@@ -3,32 +3,32 @@ title: Pliki nagłówkowe (C++)
 ms.date: 12/11/2019
 helpviewer_keywords:
 - header files [C++]
-ms.openlocfilehash: 4ab6a2b2626cde94f35678bc9ec789b80d493b8f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0b76773b8b7d55645c807588fe41b242df9eea2f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367231"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227455"
 ---
 # <a name="header-files-c"></a>Pliki nagłówkowe (C++)
 
-Nazwy elementów programu, takich jak zmienne, funkcje, klasy i tak dalej, muszą być zadeklarowane, zanim będą mogły być używane. Na przykład nie można po `x = 42` prostu pisać bez uprzedniego zadeklarowania "x".
+Nazwy elementów programu, takich jak zmienne, funkcje, klasy i tak dalej, muszą być zadeklarowane przed użyciem. Na przykład nie można tylko pisać `x = 42` bez uprzedniego deklarowania "x".
 
 ```cpp
 int x; // declaration
 x = 42; // use x
 ```
 
-Deklaracja informuje kompilator, czy element jest **int**, **double**, **funkcja**, **klasy** lub innej rzeczy.  Ponadto każda nazwa musi być zadeklarowana (bezpośrednio lub pośrednio) w każdym pliku .cpp, w którym jest używana. Podczas kompilowania programu każdy plik .cpp jest kompilowany niezależnie w jednostkę kompilacji. Kompilator nie ma wiedzy o tym, jakie nazwy są zadeklarowane w innych jednostkach kompilacji. Oznacza to, że jeśli zdefiniujesz klasę lub funkcję lub zmienną globalną, należy podać deklarację tej rzeczy w każdym dodatkowym pliku .cpp, który go używa. Każda deklaracja tego rzeczy musi być dokładnie identyczna we wszystkich plikach. Niewielka niespójność spowoduje błędy lub niezamierzone zachowanie, gdy konsolidator próbuje scalić wszystkie jednostki kompilacji w jeden program.
+Deklaracja instruuje kompilator, czy element jest, **`int`** a **`double`** , **Funkcja**, a **`class`** lub inne.  Ponadto każda nazwa musi być zadeklarowana (bezpośrednio lub pośrednio) w każdym pliku. cpp, w którym jest używana. Podczas kompilowania programu każdy plik CPP jest kompilowany niezależnie do jednostki kompilacji. Kompilator nie ma informacji o tym, jakie nazwy są zadeklarowane w innych jednostkach kompilacji. Oznacza to, że jeśli zdefiniujesz klasę lub funkcję lub zmienną globalną, musisz podać tę deklarację w każdym dodatkowym pliku. cpp, który go używa. Każda deklaracja tego elementu musi być dokładnie taka sama we wszystkich plikach. Niewielka niespójność spowoduje błędy lub niezamierzone zachowanie, gdy konsolidator próbuje scalić wszystkie jednostki kompilacji w jeden program.
 
-Aby zminimalizować ryzyko błędów, C++ przyjęła konwencję używania *plików nagłówka* do zawierania deklaracji. Należy dokonać deklaracji w pliku nagłówka, a następnie użyć dyrektywy #include w każdym pliku cpp lub innego pliku nagłówka, który wymaga tej deklaracji. Dyrektywa #include wstawia kopię pliku nagłówka bezpośrednio do pliku cpp przed kompilacją.
+Aby zminimalizować prawdopodobieństwo wystąpienia błędów, język C++ przyjął konwencję używania *plików nagłówkowych* , aby zawierać deklaracje. Należy wprowadzić deklaracje w pliku nagłówkowym, a następnie użyć dyrektywy #include w każdym pliku. cpp lub w innym pliku nagłówkowym, który wymaga tej deklaracji. Dyrektywa #include wstawia kopię pliku nagłówkowego bezpośrednio do pliku. cpp przed kompilacją.
 
 > [!NOTE]
-> W programie Visual Studio 2019 funkcja *modułów* języka C++20 jest wprowadzana jako ulepszenie i ewentualne zastąpienie plików nagłówkowych. Aby uzyskać więcej informacji, zobacz [Omówienie modułów w języku C++](modules-cpp.md).
+> W programie Visual Studio 2019 funkcja *modułów* c++ 20 została wprowadzona jako udoskonalenie i ostateczne zastąpienie dla plików nagłówkowych. Aby uzyskać więcej informacji, zobacz [Omówienie modułów w języku C++](modules-cpp.md).
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano typowy sposób deklarowania klasy, a następnie użyć jej w innym pliku źródłowym. Zaczniemy od pliku nagłówka, `my_class.h`. Zawiera definicję klasy, ale należy pamiętać, że definicja jest niekompletna; funkcja `do_something` elementu członkowskiego nie jest zdefiniowana:
+Poniższy przykład przedstawia typowy sposób deklarowania klasy, a następnie używania jej w innym pliku źródłowym. Zaczniemy od pliku nagłówkowego `my_class.h` . Zawiera definicję klasy, ale należy pamiętać, że definicja jest niekompletna; `do_something`nie zdefiniowano funkcji składowej:
 
 ```cpp
 // my_class.h
@@ -43,9 +43,9 @@ namespace N
 }
 ```
 
-Następnie utwórz plik implementacji (zazwyczaj z rozszerzeniem .cpp lub podobnym). Wywołamy plik my_class.cpp i podamy definicję deklaracji elementu członkowskiego. Dodajemy `#include` dyrektywę dla pliku "my_class.h", aby deklaracja my_class została wstawiona w tym momencie do `<iostream>` pliku .cpp `std::cout`i dołączamy do wciągania deklaracji dla . Należy zauważyć, że cudzysłowy są używane dla plików nagłówkowych w tym samym katalogu co plik źródłowy, a nawiasy kątowe są używane dla standardowych nagłówków biblioteki. Ponadto wiele standardowych nagłówków biblioteki nie ma .h ani żadnego innego rozszerzenia pliku.
+Następnie utwórz plik implementacji (zazwyczaj z rozszerzeniem. cpp lub podobnego rozszerzenia). Wywołajemy plik my_class. cpp i podaj definicję deklaracji elementu członkowskiego. Dodajemy `#include` dyrektywę dla pliku "my_class. h", aby w tym momencie wstawiono my_class deklarację w pliku. cpp, a my dodaliśmy `<iostream>` do pobrania w deklaracji `std::cout` . Należy zauważyć, że cudzysłowy są używane dla plików nagłówkowych w tym samym katalogu, co plik źródłowy, a nawiasy ostre są używane dla nagłówków biblioteki standardowej. Ponadto wiele nagłówków biblioteki standardowej nie ma. h ani żadnego innego rozszerzenia pliku.
 
-W pliku implementacji możemy opcjonalnie użyć **using** instrukcji, aby uniknąć konieczności kwalifikowania każdej wzmianki o "my_class" lub "cout" z "N::" lub "std::".  Nie umieszczaj **instrukcji w** plikach nagłówkowych!
+W pliku implementacji można opcjonalnie użyć **`using`** instrukcji, aby uniknąć konieczności zakwalifikowania się każdego "my_class" lub "cout" z "N::" lub "std::".  Nie należy umieszczać **`using`** instrukcji w plikach nagłówkowych.
 
 ```cpp
 // my_class.cpp
@@ -61,7 +61,7 @@ void my_class::do_something()
 }
 ```
 
-Teraz możemy `my_class` użyć w innym pliku .cpp. Mamy #include pliku nagłówka, tak aby kompilator ściąga w deklaracji. Wszystko kompilator musi wiedzieć, że my_class jest klasą, która `do_something()`ma funkcję publicznego elementu członkowskiego o nazwie .
+Teraz możemy użyć `my_class` innego pliku. cpp. #Include pliku nagłówkowego, aby kompilator ściągał deklarację. Wszystkie kompilatora muszą wiedzieć, że my_class jest klasą, która ma wywołaną publiczną funkcję członkowską `do_something()` .
 
 ```cpp
 // my_program.cpp
@@ -77,11 +77,11 @@ int main()
 }
 ```
 
-Po zakończeniu kompilowania każdego pliku cpp do plików .obj, przekazuje pliki obj do konsolidatora. Gdy konsolidator scala pliki obiektów znajdzie dokładnie jedną definicję dla my_class; znajduje się w pliku obj wyprodukowanym dla my_class.cpp, a kompilacja powiedzie się.
+Gdy kompilator zakończy Kompilowanie każdego pliku. cpp do plików. obj, przekazuje pliki. obj do konsolidatora. Gdy konsolidator scala pliki obiektów, znajdzie dokładnie jedną definicję dla my_class; znajduje się w pliku. obj, który został utworzony dla my_class. cpp, a kompilacja powiodła się.
 
-## <a name="include-guards"></a>Uwzględnij osłony
+## <a name="include-guards"></a>Dołącz osłony
 
-Zazwyczaj pliki nagłówkowe mają *osłonę dołączaną* lub dyrektywę, `#pragma once` aby upewnić się, że nie są wstawiane wiele razy do pojedynczego pliku cpp.
+Zazwyczaj pliki nagłówkowe mają *osłonę include* lub dyrektywę, `#pragma once` Aby upewnić się, że nie są one wstawiane wielokrotnie do jednego pliku. cpp.
 
 ```cpp
 // my_class.h
@@ -100,22 +100,22 @@ namespace N
 #endif /* MY_CLASS_H */
 ```
 
-## <a name="what-to-put-in-a-header-file"></a>Co umieścić w pliku nagłówka
+## <a name="what-to-put-in-a-header-file"></a>Co należy umieścić w pliku nagłówkowym
 
-Ponieważ plik nagłówka może potencjalnie zostać dołączony przez wiele plików, nie może zawierać definicji, które mogą tworzyć wiele definicji o tej samej nazwie. Następujące są niedozwolone lub są uważane za bardzo złą praktykę:
+Ponieważ plik nagłówka może być potencjalnie dołączany przez wiele plików, nie może zawierać definicji, które mogą generować wiele definicji o tej samej nazwie. Następujące elementy nie są dozwolone lub są uznawane za nieszkodliwe:
 
-- wbudowane definicje typów w obszarze nazw lub w zakresie globalnym
-- definicje funkcji niewwierających
-- definicje zmiennych innych niż const
-- definicje zagregowane
+- Wbudowane definicje typów w przestrzeni nazw lub globalnym zakresie
+- definicje funkcji innych niż inline
+- Definicje zmiennych innych niż const
+- definicje agregacji
 - nienazwane przestrzenie nazw
-- korzystanie z dyrektyw
+- dyrektywy using
 
-Użycie **using** dyrektywy nie musi spowodować błąd, ale może potencjalnie spowodować problem, ponieważ przynosi obszar nazw do zakresu w każdym pliku .cpp, który bezpośrednio lub pośrednio zawiera ten nagłówek.
+Użycie **`using`** dyrektywy nie musi być przyczyną błędu, ale może być przyczyną problemu, ponieważ powoduje, że przestrzeń nazw ma zakres w każdym pliku CPP, który bezpośrednio lub pośrednio zawiera ten nagłówek.
 
 ## <a name="sample-header-file"></a>Przykładowy plik nagłówka
 
-Poniższy przykład przedstawia różne rodzaje deklaracji i definicje, które są dozwolone w pliku nagłówka:
+W poniższym przykładzie przedstawiono różne rodzaje deklaracji i definicje, które są dozwolone w pliku nagłówka:
 
 ```cpp
 // sample.h

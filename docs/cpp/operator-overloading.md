@@ -11,77 +11,77 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-ms.openlocfilehash: a16f68088ffffd6c3cf38f5ae3adda5f2d59fb57
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 822bd5efb3125e69ff60aa42ba6419969cace403
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188574"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227234"
 ---
 # <a name="operator-overloading"></a>Przeładowanie operatora
 
-Słowo kluczowe **operator** deklaruje funkcję określającą *symbol operatora* , gdy jest stosowany do wystąpień klasy. Daje to operatorowi więcej niż jedno znaczenie lub "przeciążenia". Kompilator rozróżnia różne znaczenia operatora, sprawdzając typy jego operandów...
+**`operator`** Słowo kluczowe deklaruje funkcję określającą *symbol operatora* , gdy jest stosowany do wystąpień klasy. Daje to operatorowi więcej niż jedno znaczenie lub "przeciążenia". Kompilator rozróżnia różne znaczenia operatora, sprawdzając typy jego operandów...
 
 ## <a name="syntax"></a>Składnia
 
-> operator *typu* **operator** *— symbol* **(** *Lista parametrów* **)**
+> *Typ* **`operator`** *operator-— symbol* **(** *Lista parametrów* **)**
 
 ## <a name="remarks"></a>Uwagi
 
 Można ponownie zdefiniować funkcję większości wbudowanych operatorów globalnie lub w oparciu o klasę klasy. Przeciążone operatory są implementowane jako funkcje.
 
-Nazwa przeciążonego operatora to **operator** *x*, gdzie *x* jest operatorem, jak pojawia się w poniższej tabeli. Na przykład aby przeciążyć operator dodawania, należy zdefiniować funkcję o nazwie **operator +** . Podobnie aby przeciążać operator dodawania/przypisywania, **+=** , zdefiniuj funkcję o nazwie **operator + =** .
+Nazwa przeciążonego operatora to **`operator`** *x*, gdzie *x* jest operatorem, który pojawia się w poniższej tabeli. Na przykład aby przeciążyć operator dodawania, należy zdefiniować funkcję o nazwie **operator +**. Podobnie, aby przeciążać operator dodawania/przypisywania, **+=** Zdefiniuj funkcję o nazwie **operator + =**.
 
 ### <a name="redefinable-operators"></a>Operatory do przedefiniować
 
-|Operator|Name (Nazwa)|Typ|
+|Operator|Nazwa|Typ|
 |--------------|----------|----------|
-|**,**|Przecinek|Binarny|
-|**!**|Logiczne NOT|Jednostk|
-|**!=**|Nierówność|Binarny|
-|**%**|Modulus|Binarny|
-|**%=**|Modulo i przypisanie|Binarny|
-|**&**|Bitowe ORAZ|Binarny|
-|**&**|Adres|Jednostk|
-|**&&**|Logicznego AND|Binarny|
-|**&=**|Bitowe AND i przypisanie|Binarny|
+|**,**|Przecinek|Binarne|
+|**!**|Operator logiczny NOT|Jednoargumentowy|
+|**!=**|Nierówność|Binarne|
+|**%**|Modulo|Binarne|
+|**%=**|Modulo i przypisanie|Binarne|
+|**&**|Bitowe ORAZ|Binarne|
+|**&**|Adres|Jednoargumentowy|
+|**&&**|Logiczne AND|Binarne|
+|**&=**|Bitowe AND i przypisanie|Binarne|
 |**( )**|Wywołanie funkcji|—|
-|**( )**|Operator rzutowania|Jednostk|
-|**&#42;**|Mnożenie|Binarny|
-|**&#42;**|Odwołuje się do wskaźnika|Jednostk|
-|**&#42;=**|Mnożenie i przypisanie|Binarny|
-|**+**|Dodawanie|Binarny|
-|**+**|Jednoargumentowy Plus|Jednostk|
-|**++**|Zwiększ <sup>1</sup>|Jednostk|
-|**+=**|Dodawanie i przypisanie|Binarny|
-|**-**|Odejmowanie|Binarny|
-|**-**|negacja jednoargumentowa|Jednostk|
-|**--**|Zmniejszenie <sup>1</sup>|Jednostk|
-|**-=**|Odejmowanie i przypisanie|Binarny|
-|**->**|Wybór elementu członkowskiego|Binarny|
-|**->&#42;**|Wybór wskaźnika do elementu członkowskiego|Binarny|
-|**/**|Dzielenie|Binarny|
-|**/=**|Dzielenie i przypisanie|Binarny|
-|**\<**|Mniejsze niż|Binarny|
-|**<<**|Przesunięcie w lewo|Binarny|
-|**<<=**|Przypisanie przesunięcia w lewo|Binarny|
-|**<=**|Mniejsze niż lub równe|Binarny|
-|**=**|Przypisanie|Binarny|
-|**==**|Równości|Binarny|
-|**>**|Większe niż|Binarny|
-|**>=**|Większe niż lub równe|Binarny|
-|**>>**|Przesunięcie w prawo|Binarny|
-|**>>=**|Przypisanie przesunięcia w prawo|Binarny|
+|**( )**|Operator rzutowania|Jednoargumentowy|
+|**&#42;**|Mnożenie|Binarne|
+|**&#42;**|Odwołuje się do wskaźnika|Jednoargumentowy|
+|**&#42;=**|Mnożenie i przypisanie|Binarne|
+|**+**|Dodawanie|Binarne|
+|**+**|Jednoargumentowy Plus|Jednoargumentowy|
+|**++**|Zwiększ <sup>1</sup>|Jednoargumentowy|
+|**+=**|Dodawanie i przypisanie|Binarne|
+|**-**|Odejmowanie|Binarne|
+|**-**|negacja jednoargumentowa|Jednoargumentowy|
+|**--**|Zmniejszenie <sup>1</sup>|Jednoargumentowy|
+|**-=**|Odejmowanie i przypisanie|Binarne|
+|**->**|Wybór elementu członkowskiego|Binarne|
+|**->&#42;**|Wybór wskaźnika do elementu członkowskiego|Binarne|
+|**/**|Dział|Binarne|
+|**/=**|Dzielenie i przypisanie|Binarne|
+|**\<**|Mniejsze niż|Binarne|
+|**<<**|Przesunięcie w lewo|Binarne|
+|**<<=**|Przypisanie przesunięcia w lewo|Binarne|
+|**<=**|Mniejsze niż lub równe|Binarne|
+|**=**|Przypisanie|Binarne|
+|**==**|Równość|Binarne|
+|**>**|Większe niż|Binarne|
+|**>=**|Większe niż lub równe|Binarne|
+|**>>**|Przesunięcie w prawo|Binarne|
+|**>>=**|Przypisanie przesunięcia w prawo|Binarne|
 |**[ ]**|Indeks dolny tablicy|—|
-|**^**|Wyłączny lub|Binarny|
-|**^=**|Wyłączność lub przypisanie|Binarny|
-|**&#124;**|Bitowe alternatywne OR|Binarny|
-|**&#124;=**|Bitowe OR alternatywne i przypisanie|Binarny|
-|**&#124;&#124;**|Logicznego OR|Binarny|
-|**~**|Uzupełnienie jedynkowe|Jednostk|
-|**usuwanie**|Usuwanie|—|
-|**new**|Nowa|—|
-|operatory konwersji|operatory konwersji|Jednostk|
+|**^**|Wyłączny lub|Binarne|
+|**^=**|Wyłączność lub przypisanie|Binarne|
+|**&#124;**|Bitowe alternatywne OR|Binarne|
+|**&#124;=**|Bitowe OR alternatywne i przypisanie|Binarne|
+|**&#124;&#124;**|Logiczne OR|Binarne|
+|**~**|Uzupełnienie jedynkowe|Jednoargumentowy|
+|**`delete`**|Usuń|—|
+|**`new`**|Nowy|—|
+|operatory konwersji|operatory konwersji|Jednoargumentowy|
 
 Istnieją <sup>1</sup> dwie wersje jednoargumentowego przyrostu i zmniejszania: przyrostowe i postinkrementacji.
 
@@ -107,10 +107,10 @@ Operatory podane w poniższej tabeli nie mogą być przeciążone. Tabela zawier
 
 ### <a name="nonredefinable-operators"></a>Operatory Nonredefinable
 
-|Operator|Name (Nazwa)|
+|Operator|Nazwa|
 |-|-|
 |**.**|Wybór elementu członkowskiego|
-|**.&#42;**|Wybór wskaźnika do elementu członkowskiego|
+|**. &#42;**|Wybór wskaźnika do elementu członkowskiego|
 |**::**|Rozpoznawanie zakresu|
 |**? :**|Warunkowe|
 |**#**|Konwersja preprocesora na ciąg|
@@ -125,7 +125,7 @@ pt.operator+( 3 );  // Call addition operator to add 3 to pt.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przeciąża operator **+** , aby dodać dwie liczby zespolone i zwraca wynik.
+Poniższy przykład przeciąża **+** operatora, aby dodać dwie liczby zespolone i zwraca wynik.
 
 ```cpp
 // operator_overloading.cpp
@@ -162,9 +162,9 @@ int main() {
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-- [Zasady ogólne dotyczące przeciążania operatorów](../cpp/general-rules-for-operator-overloading.md)
+- [Ogólne reguły przeciążania operatora](../cpp/general-rules-for-operator-overloading.md)
 
-- [Przeładowanie operatorów jednoargumentowych](../cpp/overloading-unary-operators.md)
+- [Przeciążanie operatorów jednoargumentowych](../cpp/overloading-unary-operators.md)
 
 - [Operatory binarne](../cpp/binary-operators.md)
 
@@ -174,9 +174,9 @@ int main() {
 
 - [Tworzenie indeksów dolnych](../cpp/subscripting.md)
 
-- [Dostęp do składowej](../cpp/member-access.md)
+- [Dostęp do elementu członkowskiego](../cpp/member-access.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

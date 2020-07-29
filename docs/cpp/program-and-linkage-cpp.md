@@ -2,12 +2,12 @@
 title: Jednostki translacji i powiązania (C++)
 ms.date: 12/11/2019
 ms.assetid: a6493ba0-24e2-4c89-956e-9da1dea660cb
-ms.openlocfilehash: e964a3c70c138caf8848e6a6366097cbfb90f548
-ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+ms.openlocfilehash: 5a166efc7ae926f6b028c35007b0972d0a652d6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84108398"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227195"
 ---
 # <a name="translation-units-and-linkage"></a>Jednostki translacji i połączenie
 
@@ -44,7 +44,7 @@ W niektórych przypadkach może być konieczne zadeklarować zmienną globalną 
 
 *Bezpłatna funkcja* to funkcja, która jest definiowana w globalnym lub zakresie przestrzeni nazw. Zmienne globalne inne niż const i bezpłatne funkcje domyślnie mają *powiązania zewnętrzne*; są one widoczne z dowolnej jednostki tłumaczenia w programie. W związku z tym, żaden inny obiekt globalny nie może mieć tej nazwy. Symbol z *wewnętrznym powiązaniem* lub *bez powiązania* jest widoczny tylko w obrębie jednostki tłumaczenia, w której jest zadeklarowany. Jeśli nazwa ma połączenie wewnętrzne, taka sama nazwa może istnieć w innej jednostce tłumaczenia. Zmienne zadeklarowane w definicjach klas lub treści funkcji nie mają powiązania.
 
-Można wymusić, aby nazwa globalna miała połączenie wewnętrzne przez jawne zadeklarowanie go jako **static**. Pozwala to ograniczyć widoczność do tej samej jednostki tłumaczenia, w której jest zadeklarowana. W tym kontekście **statyczny** oznacza coś innego niż w przypadku zastosowania do zmiennych lokalnych.
+Można wymusić, aby nazwa globalna miała połączenie wewnętrzne przez jawne zadeklarowanie go jako **`static`** . Pozwala to ograniczyć widoczność do tej samej jednostki tłumaczenia, w której jest zadeklarowana. W tym kontekście **`static`** oznacza coś innego niż w przypadku zastosowania do zmiennych lokalnych.
 
 Następujące obiekty mają domyślnie powiązania wewnętrzne:
 
@@ -53,7 +53,7 @@ Następujące obiekty mają domyślnie powiązania wewnętrzne:
 - definicje typów
 - obiekty statyczne w zakresie przestrzeni nazw
 
-Aby nadać obiektowi stałemu powiązania zewnętrzne, zadeklaruj go jako **extern** i przypisz do niego wartość:
+Aby nadać obiektowi const powiązania zewnętrzne, zadeklaruj go jako **`extern`** i przypisz mu wartość:
 
 ```cpp
 extern const int value = 42;
@@ -61,6 +61,6 @@ extern const int value = 42;
 
 Aby uzyskać więcej informacji, zobacz [extern](extern-cpp.md) .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Podstawowe pojęcia](../cpp/basic-concepts-cpp.md)

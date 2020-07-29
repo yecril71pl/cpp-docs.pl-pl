@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 5a430154c9ad31a9776eeb2ba569fa0da33fac81
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ae4b695682e00ef2f26287957400344ddd96dff4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373553"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189678"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>UCRT nazwy ustawień regionalnych, Języki i ciągi kraj/region
 
@@ -34,7 +34,7 @@ Region *języka* \[ **\_** _country-region_ \[ __.__ *strona kodowa*]] formularz
 
 Jeśli używasz tylko strony kodowej, aby określić ustawienia regionalne, używany jest domyślny język i kraj/region użytkownika zgłoszone przez [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename) . Na przykład jeśli określisz `".1254"` (turecki ANSI) jako ustawienia regionalne dla użytkownika skonfigurowanego dla języka angielskiego (Stany Zjednoczone), przechowywane są ustawienia regionalne `English_United States.1254` . Nie zaleca się tej formy, ponieważ może to prowadzić do niespójnego zachowania.
 
-Wartość argumentu *ustawień regionalnych* `C` określa minimalne środowisko zgodne ze standardem ANSI dla translacji C. W `C` ustawieniach regionalnych zakłada się, że każdy typ danych **char** ma 1 bajt, a jego wartość jest zawsze mniejsza niż 256. Jeśli *Ustawienia regionalne* wskazują pusty ciąg, ustawienia regionalne to środowisko natywne zdefiniowane w implementacji.
+Wartość argumentu *ustawień regionalnych* `C` określa minimalne środowisko zgodne ze standardem ANSI dla translacji C. W `C` ustawieniach regionalnych przyjęto, że każdy **`char`** Typ danych ma 1 bajt, a jego wartość jest zawsze mniejsza niż 256. Jeśli *Ustawienia regionalne* wskazują pusty ciąg, ustawienia regionalne to środowisko natywne zdefiniowane w implementacji.
 
 W tym samym czasie można określić wszystkie kategorie ustawień regionalnych dla `setlocale` funkcji i, `_wsetlocale` korzystając z `LC_ALL` kategorii. Kategorie można ustawić na te same ustawienia regionalne lub każdą kategorię można ustawić indywidualnie przy użyciu argumentu ustawień regionalnych, który ma tę formę:
 
@@ -48,7 +48,7 @@ _wsetlocale(LC_ALL, L"de-DE");
 _wsetlocale(LC_ALL, L"LC_MONETARY=en-GB;LC_TIME=es-ES");
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja biblioteki środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)<br/>
 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>

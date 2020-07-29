@@ -1,17 +1,17 @@
 ---
 title: Inicjatory
 ms.date: 07/29/2019
-description: Jak zainicjować klasy, struktury, tablice i podstawowe typy w C++.
+description: Jak zainicjować klasy, struktury, tablice i typy podstawowe w języku C++.
 helpviewer_keywords:
 - arrays [C++], array-element initializers
 - aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 2cc68f2384402ce1eb3ac06b414f597a6b3951f0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 98b0c07db8eb10aa47830c9926c6ebcdc3f12dcb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418434"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227442"
 ---
 # <a name="initializers"></a>Inicjatory
 
@@ -81,9 +81,9 @@ Inicjalizacja wartością zerową to ustawienie zmiennej na wartość zero nieja
 
 - Zmienne liczbowe są inicjowane na wartość 0 (lub 0,0 lub 0,0000000000 itp.).
 
-- Zmienne char są inicjowane w celu `'\0'`.
+- Zmienne char są inicjowane do `'\0'` .
 
-- Wskaźniki są inicjowane do **nullptr**.
+- Wskaźniki są inicjowane do **`nullptr`** .
 
 - W tablicach [, klasach,](../standard-library/is-pod-class.md) strukturach i związkach ich składowe zostały zainicjowane do wartości zerowej.
 
@@ -114,9 +114,9 @@ int main() {
 }
 ```
 
-### <a name="default_initialization"></a>Domyślna Inicjalizacja
+### <a name="default-initialization"></a><a name="default_initialization"></a>Domyślna Inicjalizacja
 
-Domyślna Inicjalizacja klas, struktur i Unii jest inicjowana przy użyciu domyślnego konstruktora. Konstruktor domyślny można wywołać bez wyrażenia inicjowania lub za pomocą słowa kluczowego **New** :
+Domyślna Inicjalizacja klas, struktur i Unii jest inicjowana przy użyciu domyślnego konstruktora. Konstruktor domyślny można wywołać bez wyrażenia inicjowania lub **`new`** słowa kluczowego:
 
 ```cpp
 MyClass mc1;
@@ -183,7 +183,7 @@ Inicjalizacja wartości występuje w następujących przypadkach:
 
 - Anonimowy obiekt tymczasowy jest inicjowany za pomocą pustych nawiasów lub nawiasów klamrowych
 
-- Obiekt jest inicjowany za pomocą słowa kluczowego **New** i pustych nawiasów lub nawiasów klamrowych
+- Obiekt jest inicjowany za pomocą **`new`** słowa kluczowego Plus puste nawiasy lub nawiasy klamrowe
 
 Inicjalizacja wartości wykonuje następujące czynności:
 
@@ -274,9 +274,9 @@ Inicjalizacja bezpośrednia jest inicjowana za pomocą (Niepuste) nawiasów klam
 
 - Zmienna jest inicjowana z niepustymi nawiasami klamrowymi lub nawiasami
 
-- Zmienna jest inicjowana za pomocą słowa kluczowego **New** i niepustych nawiasów klamrowych lub nawiasów
+- Zmienna jest inicjowana za pomocą **`new`** słowa kluczowego i niepustych nawiasów klamrowych lub nawiasów
 
-- Zmienna jest inicjowana za pomocą **static_cast**
+- Zmienna jest inicjowana za pomocą**`static_cast`**
 
 - w konstruktorze klasy bazowe i niestatyczne składowe są inicjowane za pomocą listy inicjalizatora
 
@@ -317,7 +317,7 @@ Inicjalizacja listy występuje, gdy zmienna jest inicjowana za pomocą listy ini
 
 - Zmienna jest inicjowana
 
-- Klasa jest inicjowana za pomocą słowa kluczowego **New**
+- Klasa jest inicjowana za pomocą **`new`** słowa kluczowego
 
 - Obiekt jest zwracany z funkcji
 
@@ -362,7 +362,7 @@ int main() {
 }
 ```
 
-### <a name="agginit"></a>Inicjalizacja agregacji
+### <a name="aggregate-initialization"></a><a name="agginit"></a>Inicjalizacja agregacji
 
 Inicjalizacja agregacji jest formą inicjalizacji listy dla tablic lub typów klas (zwykle struktur lub unii), które:
 
@@ -427,7 +427,7 @@ myArr3: 8 9 10 0 0
 ```
 
 > [!IMPORTANT]
-> Elementy członkowskie tablicy, które są zadeklarowane, ale nie są jawnie inicjowane podczas inicjowania agregacji, są inicjowane od zera, jak w `myArr3` powyżej.
+> Elementy członkowskie tablicy, które są zadeklarowane, ale nie są jawnie inicjowane podczas inicjowania agregacji, są inicjowane od zera, jak `myArr3` powyżej.
 
 #### <a name="initializing-unions-and-structs"></a>Inicjowanie Unii i struktur
 
@@ -523,7 +523,7 @@ Zmienna typu odwołania może być deklarowana bez inicjatorów tylko w następu
     class c {public:   int& i;};
     ```
 
-- Deklaracja zmiennej jawnie określona jako **extern**. Na przykład:
+- Deklaracja zmiennej jawnie określona jako **`extern`** . Na przykład:
 
     ```cpp
     extern int& iVal;
@@ -534,10 +534,10 @@ Podczas inicjowania zmiennej typu odwołania, kompilator używa wykresu decyzji 
 ![Wykres decyzyjny na potrzeby inicjalizacji typów referencyjnych](../cpp/media/vc38s71.gif "Wykres decyzyjny na potrzeby inicjalizacji typów referencyjnych") <br/>
 Wykres decyzyjny na potrzeby inicjalizacji typów referencyjnych
 
-Odwołania do typów **nietrwałych** (zadeklarowanych jako **volatile** *TypeName* <strong>&</strong> *Identyfikator*) można zainicjować przy użyciu obiektów **nietrwałych** tego samego typu lub obiektów, które nie zostały zadeklarowane jako **nietrwałe**. Nie mogą jednak być inicjowane z obiektami **const** tego typu. Podobnie odwołania do typów **stałych** (zadeklarowanych jako **const** *TypeName* <strong>&</strong> *Identifier*) mogą być inicjowane przy użyciu obiektów **const** tego samego typu (lub wszystkich elementów, które mają konwersję tego typu lub z obiektami, które nie zostały zadeklarowane jako **const**). Nie mogą jednak być inicjowane z obiektami **nietrwałymi** tego typu.
+Odwołania do **`volatile`** typów (zadeklarowanych jako **`volatile`** *typename* <strong>&</strong> *Identyfikator*TypeName) mogą być inicjowane z **`volatile`** obiektami tego samego typu lub z obiektami, które nie zostały zadeklarowane jako **`volatile`** . Nie mogą jednak być inicjowane z **`const`** obiektami tego typu. Podobnie odwołania do **`const`** typów (zadeklarowane jako **`const`** *typename* <strong>&</strong> *Identyfikator*TypeName) mogą być inicjowane przy użyciu **`const`** obiektów tego samego typu (lub wszystkich elementów, które mają konwersję tego typu lub obiektów, które nie zostały zadeklarowane jako **`const`** ). Nie mogą jednak być inicjowane z **`volatile`** obiektami tego typu.
 
-Odwołania, które nie są kwalifikowane za pomocą słowa kluczowego **const** lub **volatile** , mogą być inicjowane tylko z obiektami zadeklarowanymi jako ani **const** lub **volatile**.
+Odwołania, które nie są kwalifikowane za pomocą **`const`** **`volatile`** słowa kluczowego or, mogą być inicjowane tylko z obiektami zadeklarowanymi jako ani jako ani **`const`** **`volatile`** .
 
 ### <a name="initialization-of-external-variables"></a>Inicjalizacja zmiennych zewnętrznych
 
-Deklaracje zmiennych automatycznych, statycznych i zewnętrznych mogą zawierać inicjatory. Jednakże deklaracje zmiennych zewnętrznych mogą zawierać inicjatory tylko wtedy, gdy zmienne nie są zadeklarowane jako **extern**.
+Deklaracje zmiennych automatycznych, statycznych i zewnętrznych mogą zawierać inicjatory. Jednakże deklaracje zmiennych zewnętrznych mogą zawierać inicjatory tylko wtedy, gdy zmienne nie są zadeklarowane jako **`extern`** .

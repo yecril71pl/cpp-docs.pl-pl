@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator!=
 ms.assetid: 785435da-87a6-4454-9bce-9d288a96dc26
-ms.openlocfilehash: 7780ecd8d03be6fea4ffe3c0be17ed6e995e3f90
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: af7088348cd3f52b38f0277fb7d0a973a1ca0e4b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213660"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226896"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator!= Operator (Microsoft::WRL)
 
@@ -63,7 +63,7 @@ Prawidłowy obiekt.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**prawda** , jeśli obiekty nie są równe; w przeciwnym razie **false**.
+**`true`** Jeśli obiekty nie są równe; w przeciwnym razie **`false`** .
 
 ## <a name="requirements"></a>Wymagania
 
@@ -71,6 +71,6 @@ Prawidłowy obiekt.
 
 **Przestrzeń nazw:** Microsoft:: WRL
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)
+[Microsoft:: WRL, przestrzeń nazw](microsoft-wrl-namespace.md)

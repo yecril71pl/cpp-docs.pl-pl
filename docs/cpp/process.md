@@ -7,26 +7,26 @@ helpviewer_keywords:
 - __declspec keyword [C++], process
 - process __declspec keyword
 ms.assetid: 60eecc2f-4eef-4567-b9db-aaed34733023
-ms.openlocfilehash: 049360dddff2b9ca2ea460b96e027e86899f1ecb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f684c9c2ddfcb0aa166e1240c5f928ee52218f45
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344992"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227208"
 ---
-# <a name="process"></a>proces
+# `process`
 
-Określa, że proces zarządzanej aplikacji powinny mieć pojedynczą kopię określonej zmiennej globalnej, statyczny element członkowski, zmienna lub statyczna zmienna lokalna współużytkowane przez wszystkie domeny aplikacji w procesie. To przede wszystkim był przeznaczony do użycia podczas kompilowania za pomocą **/CLR: pure**, która jest przestarzała w programie Visual Studio 2017 i obsługiwane w programie Visual Studio 2017. Podczas kompilowania za pomocą **/CLR**, zmiennych globalnych i statycznych na proces domyślnie i nie trzeba używać **__declspec(proces)**.
+Określa, że proces aplikacji zarządzanej powinien mieć pojedynczą kopię określonej zmiennej globalnej, statyczną zmienną członkowską lub statyczną zmienną lokalną współdzieloną we wszystkich domenach aplikacji w procesie. Jest to przeznaczone głównie do użycia podczas kompilowania z **`/clr:pure`** , który jest przestarzały w programie Visual studio 2015 i nieobsługiwany w programie Visual studio 2017. Podczas kompilowania z **`/clr`** , zmienne globalne i statyczne są domyślnie przetwarzane na proces i nie muszą być używane **`__declspec(process)`** .
 
-Tylko zmienną globalną, zmienną statycznej składowej lub zmiennej lokalnej statycznej natywnego typu mogą być oznaczone **__declspec(proces)**.
+Tylko zmienna globalna, statyczna zmienna członkowska lub statyczna zmienna lokalna typu natywnego może być oznaczona przy użyciu **`__declspec(process)`** .
 
-**proces** jest prawidłowy tylko podczas kompilowania za pomocą [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
+**`process`** jest prawidłowa tylko w przypadku kompilowania przy użyciu [`/clr`](../build/reference/clr-common-language-runtime-compilation.md) .
 
-Jeśli chcesz, aby każda domena aplikacji, aby mieć własną kopię zmiennej globalnej, użyj [appdomain](../cpp/appdomain.md).
+Jeśli chcesz, aby każda domena aplikacji miała własną kopię zmiennej globalnej, użyj [elementu AppDomain](../cpp/appdomain.md).
 
-Zobacz [domeny aplikacji i programu Visual C++](../dotnet/application-domains-and-visual-cpp.md) Aby uzyskać więcej informacji.
+Aby uzyskać więcej informacji [, zobacz domeny aplikacji i Visual C++](../dotnet/application-domains-and-visual-cpp.md) .
 
 ## <a name="see-also"></a>Zobacz także
 
-[__declspec](../cpp/declspec.md)<br/>
+[`__declspec`](../cpp/declspec.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

@@ -1,18 +1,18 @@
 ---
-title: Inicjowanie nawiasów klamrowych dla klas, struktur i związków
-description: Użyj inicjowania nawiasów klamrowych z dowolną klasą, strukturą lub unią języka C++.
+title: Inicjalizacja nawiasów klamrowych dla klas, struktur i Unii
+description: Użyj inicjowania nawiasów klamrowych z dowolną klasą, strukturą lub Unią języka C++
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: 4628ffe8935fc32e86468c631d5d9e9622d63d2e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d862ff01ef7375c9d46791f7549d8a07682c3586
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374074"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227429"
 ---
 # <a name="brace-initialization"></a>Inicjowanie nawiasów klamrowych
 
-Nie zawsze jest konieczne zdefiniowanie konstruktora dla klasy, zwłaszcza te, które są stosunkowo proste. Użytkownicy mogą inicjować obiekty klasy lub struktury przy użyciu jednolitego inicjowania, jak pokazano w poniższym przykładzie:
+Nie zawsze jest konieczne zdefiniowanie konstruktora dla klasy, szczególnie, które są stosunkowo proste. Użytkownicy mogą inicjować obiekty klasy lub struktury przy użyciu jednolitej inicjalizacji, jak pokazano w następującym przykładzie:
 
 ```cpp
 // no_constructor.cpp
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-Należy zauważyć, że gdy klasa lub struktura nie ma konstruktora, należy podać elementy listy w kolejności, w której elementy członkowskie są zadeklarowane w klasie. Jeśli klasa ma konstruktora, podaj elementy w kolejności parametrów. Jeśli typ ma domyślny konstruktor, niejawnie lub jawnie zadeklarowany, można użyć domyślnego inicjowania nawiasów klamrowych (z pustymi nawiasami klamrowymi). Na przykład następująca klasa może zostać zainicjowana przy użyciu inicjowania nawiasów klamrowych zarówno domyślnie, jak i nieobekonu domyślnych:
+Należy pamiętać, że jeśli Klasa lub struktura nie ma konstruktora, należy dostarczyć elementy listy w kolejności, w której elementy członkowskie są zadeklarowane w klasie. Jeśli klasa ma konstruktora, podaj elementy w kolejności parametrów. Jeśli typ ma konstruktora domyślnego, niejawnie lub jawnie zadeklarowane, można użyć domyślnego inicjowania nawiasów klamrowych (z pustymi nawiasami klamrowymi). Na przykład następująca Klasa może zostać zainicjowana przy użyciu domyślnego i niedomyślnego nawiasu klamrowego:
 
 ```cpp
 #include <string>
@@ -90,7 +90,7 @@ int main()
 }
 ```
 
-Jeśli klasa ma konstruktory inne niż domyślne, kolejność, w której elementy członkowskie klasy pojawiają się w inicjatorze nawiasów klamrowych, jest `class_a` kolejność, w której odpowiednie parametry pojawiają się w konstruktorze, a nie kolejność, w której elementy członkowskie są zadeklarowane (jak w poprzednim przykładzie). W przeciwnym razie, jeśli typ nie ma zadeklarowany konstruktora, kolejność, w której elementy członkowskie pojawiają się w inicjatora nawiasu klamrowego jest taka sama jak kolejność, w której są one zadeklarowane; w takim przypadku można zainicjować dowolną liczbę członków publicznych, ale nie można pominąć żadnego członka. Poniższy przykład pokazuje kolejność, która jest używana w inicjowaniu nawiasów klamrowych, gdy nie ma zadeklarowanej konstruktora:
+Jeśli klasa ma konstruktory inne niż domyślne, kolejność, w której elementy członkowskie klasy pojawiają się w inicjatorze nawiasów klamrowych, jest kolejnością, w której są odpowiednie parametry w konstruktorze, a nie kolejność, w której są zadeklarowane elementy członkowskie (jak `class_a` w poprzednim przykładzie). W przeciwnym razie, jeśli typ nie ma zadeklarowanego konstruktora, kolejność, w której elementy członkowskie pojawiają się w inicjatorze nawiasów klamrowych jest taka sama jak kolejność, w jakiej zostały zadeklarowane; w takim przypadku można zainicjować dowolną liczbę publicznych członków, ale nie można pominąć żadnego elementu członkowskiego. Poniższy przykład pokazuje kolejność, która jest używana w inicjacji w nawiasach klamrowych, gdy nie istnieje zadeklarowany Konstruktor:
 
 ```cpp
 class class_d {
@@ -112,7 +112,7 @@ int main()
 }
 ```
 
-Jeśli domyślny konstruktor jest jawnie zadeklarowany, ale oznaczony jako usunięty, nie można użyć domyślnego inicjowania nawiasu klamrowego:
+Jeśli domyślny konstruktor jest zadeklarowany w sposób jawny, ale oznaczony jako usunięty, nie można użyć domyślnego inicjowania nawiasów klamrowych:
 
 ```cpp
 class class_f {
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-Inicjowania nawiasów klamrowych można używać w dowolnym miejscu, w przypadku którego zwykle inicjujesz — na przykład jako parametr funkcji lub wartość zwracana lub za pomocą **nowego** słowa kluczowego:
+Można użyć inicjalizacji nawiasów klamrowych wszędzie tam, gdzie jest to zwykle inicjowane — na przykład jako parametru funkcji lub wartości zwracanej lub **`new`** słowem kluczowym:
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -136,20 +136,20 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
-W **trybie /std:c++17** reguły inicjowania pustego nawiasu klamrowego są nieco bardziej restrykcyjne. Zobacz [Konstruktory pochodne i rozszerzona inicjalizacja agregacji](constructors-cpp.md#extended_aggregate).
+W trybie **/std: c++ 17** , reguły dla pustego inicjowania nawiasów klamrowych są nieco bardziej restrykcyjne. Zobacz [konstruktory pochodne i rozszerzona Inicjalizacja agregacji](constructors-cpp.md#extended_aggregate).
 
-## <a name="initializer_list-constructors"></a>konstruktory initializer_list
+## <a name="initializer_list-constructors"></a>Konstruktory initializer_list
 
-[Klasa initializer_list](../standard-library/initializer-list-class.md) reprezentuje listę obiektów określonego typu, które mogą być używane w konstruktorze i w innych kontekstach. Initializer_list można utworzyć za pomocą inicjowania nawiasów klamrowych:
+[Klasa initializer_list](../standard-library/initializer-list-class.md) reprezentuje listę obiektów określonego typu, które mogą być używane w konstruktorze, oraz w innych kontekstach. Initializer_list można skonstruować za pomocą inicjowania nawiasów klamrowych:
 
 ```cpp
 initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
-> Aby użyć tej klasy, należy dołączyć [ \<initializer_list>](../standard-library/initializer-list.md) nagłówka.
+> Aby użyć tej klasy, należy dołączyć [\<initializer_list>](../standard-library/initializer-list.md) nagłówek.
 
-Można `initializer_list` skopiować. W takim przypadku członkowie nowej listy są odwołaniami do członków oryginalnej listy:
+`initializer_list`Można skopiować. W takim przypadku elementy członkowskie nowej listy są odwołaniami do członków oryginalnej listy:
 
 ```cpp
 initializer_list<int> ilist1{ 5, 6, 7 };
@@ -158,7 +158,7 @@ if (ilist1.begin() == ilist2.begin())
     cout << "yes" << endl; // expect "yes"
 ```
 
-Standardowe klasy kontenerów biblioteki, `regex`a `initializer_list` także `string`, `wstring`i , mają konstruktorów. Poniższe przykłady pokazują, jak wykonać inicjowanie nawiasów klamrowych za pomocą tych konstruktorów:
+Klasy kontenerów biblioteki standardowej, a także `string` , `wstring` i `regex` , mają `initializer_list` konstruktory. W poniższych przykładach pokazano, jak wykonać inicjalizację nawiasów klamrowych przy użyciu następujących konstruktorów:
 
 ```cpp
 vector<int> v1{ 9, 10, 11 };
@@ -167,7 +167,7 @@ string s{ 'a', 'b', 'c' };
 regex rgx{ 'x', 'y', 'z' };
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)<br/>
-[Konstruktorów](../cpp/constructors-cpp.md)
+[Konstruktory](../cpp/constructors-cpp.md)

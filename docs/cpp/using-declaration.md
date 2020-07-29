@@ -7,16 +7,16 @@ helpviewer_keywords:
 - namespaces [C++], unqualified names in
 - using keyword [C++]
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: d762ea36e83d2384b7bb50c2914f6a634c134d15
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3aa0c7c4615aaf5eae9f4eae534e52167bf79ff0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187846"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227026"
 ---
 # <a name="using-declaration"></a>using — Deklaracja
 
-Deklaracja **using** wprowadza nazwę w regionie deklaratywnym, w którym występuje deklaracja using.
+**`using`** Deklaracja wprowadza nazwę do regionu deklaratywnego, w którym występuje deklaracja using.
 
 ## <a name="syntax"></a>Składnia
 
@@ -27,15 +27,15 @@ using declarator-list ;
 
 ### <a name="parameters"></a>Parametry
 
-*zagnieżdżony specyfikator Name* Sekwencja nazw, klas lub nazw wyliczenia oraz operatory rozpoznawania zakresu (::), zakończone przez operator rozpoznawania zakresu. Aby wprowadzić nazwę z globalnej przestrzeni nazw, można użyć operatora rozpoznawania pojedynczego zakresu. Słowo kluczowe **TypeName** jest opcjonalne i może służyć do rozpoznawania nazw zależnych w przypadku wprowadzenia ich do szablonu klasy z klasy bazowej.
+*zagnieżdżony specyfikator Name* Sekwencja nazw, klas lub nazw wyliczenia oraz operatory rozpoznawania zakresu (::), zakończone przez operator rozpoznawania zakresu. Aby wprowadzić nazwę z globalnej przestrzeni nazw, można użyć operatora rozpoznawania pojedynczego zakresu. Słowo kluczowe **`typename`** jest opcjonalne i może służyć do rozpoznawania nazw zależnych w przypadku wprowadzenia ich do szablonu klasy z klasy bazowej.
 
 *niekwalifikowana-ID* Niekwalifikowane wyrażenie identyfikatora, które może być identyfikatorem, nazwą operatora przeciążonego, zdefiniowanym przez użytkownika operatorem literału lub nazwą funkcji konwersji, nazwą destruktora klasy lub nazwą szablonu i listą argumentów.
 
-*deklarator — lista* Rozdzielana przecinkami lista wartości typu [**TypeName**] *zagnieżdżonej nazwy specyfikatora* *deklaratory,* która jest zastosowana opcjonalnie przez wielokropek.
+*deklarator — lista* Rozdzielana przecinkami lista elementów [ **`typename`** ] *zagnieżdżonych specyfikator nazw* *unqualified-id* deklaratory, po których opcjonalnie wielokropek.
 
 ## <a name="remarks"></a>Uwagi
 
-Deklaracja using wprowadza niekwalifikowaną nazwę jako synonim dla jednostki zadeklarowanej w innym miejscu. Umożliwia ona użycie pojedynczej nazwy z określonej przestrzeni nazw bez jawnej kwalifikacji w regionie deklaracji, w którym występuje. Jest to w przeciwieństwie do [dyrektywy using](../cpp/namespaces-cpp.md#using_directives), która umożliwia używanie *wszystkich* nazw w przestrzeni nazw bez kwalifikacji. Słowo kluczowe **using** jest również używane dla [aliasów typów](../cpp/aliases-and-typedefs-cpp.md).
+Deklaracja using wprowadza niekwalifikowaną nazwę jako synonim dla jednostki zadeklarowanej w innym miejscu. Umożliwia ona użycie pojedynczej nazwy z określonej przestrzeni nazw bez jawnej kwalifikacji w regionie deklaracji, w którym występuje. Jest to w przeciwieństwie do [dyrektywy using](../cpp/namespaces-cpp.md#using_directives), która umożliwia używanie *wszystkich* nazw w przestrzeni nazw bez kwalifikacji. **`using`** Słowo kluczowe jest również używane dla [aliasów typów](../cpp/aliases-and-typedefs-cpp.md).
 
 ## <a name="example"></a>Przykład
 
@@ -125,7 +125,7 @@ In B::f()
 
 ## <a name="example"></a>Przykład
 
-Składowe zadeklarowane za pomocą deklaracji using mogą być przywoływane przy użyciu jawnej kwalifikacji. Prefiks `::` odwołuje się do globalnej przestrzeni nazw.
+Składowe zadeklarowane za pomocą deklaracji using mogą być przywoływane przy użyciu jawnej kwalifikacji. `::`Prefiks odwołuje się do globalnej przestrzeni nazw.
 
 ```cpp
 // using_declaration3.cpp
@@ -167,7 +167,7 @@ In A::g
 
 W przypadku złożenia deklaracji using, synonim utworzony przez deklarację odwołuje się tylko do definicji, które są prawidłowe w punkcie deklaracji using. Definicje dodane do przestrzeni nazw po deklaracji using nie są prawidłowymi synonimami.
 
-Nazwa zdefiniowana za pomocą deklaracji **using** jest aliasem oryginalnej nazwy. Nie ma to wpływu na typ, połączenie ani inne atrybuty oryginalnej deklaracji.
+Nazwa zdefiniowana przez **`using`** deklarację jest aliasem dla jego oryginalnej nazwy. Nie ma to wpływu na typ, połączenie ani inne atrybuty oryginalnej deklaracji.
 
 ```cpp
 // post_declaration_namespace_additions.cpp
@@ -213,7 +213,7 @@ void g() {
 }
 ```
 
-W powyższym przykładzie instrukcja `using B::i` powoduje, że druga `int i` być zadeklarowana w funkcji `g()`. Instrukcja `using B::f` nie powoduje konfliktu z funkcją `f(char)`, ponieważ nazwy funkcji wprowadzone przez `B::f` mają różne typy parametrów.
+W powyższym przykładzie `using B::i` instrukcja powoduje, że druga `int i` zostanie zadeklarowana w `g()` funkcji. `using B::f`Instrukcja nie powoduje konfliktu z funkcją, `f(char)` ponieważ nazwy funkcji wprowadzone przez `B::f` mają różne typy parametrów.
 
 ## <a name="example"></a>Przykład
 
@@ -325,7 +325,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Przestrzenie nazw](../cpp/namespaces-cpp.md)<br/>
+[Namespaces](../cpp/namespaces-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

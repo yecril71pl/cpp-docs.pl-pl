@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4532
 ms.assetid: 4e2a286a-d233-4106-9f65-29be1a94ca02
-ms.openlocfilehash: 97ef7093aa56b41b869979e09d77fc448c6cf43d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b8c7503c7d1c1b711006415a327c360731222042
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186442"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87196347"
 ---
 # <a name="compiler-warning-level-1-c4532"></a>Ostrzeżenie kompilatora (poziom 1) C4532
 
@@ -19,7 +19,7 @@ ms.locfileid: "80186442"
 
 Kompilator napotkał jedno z następujących słów kluczowych:
 
-- [continue](../../cpp/continue-statement-cpp.md)
+- [utrzymać](../../cpp/continue-statement-cpp.md)
 
 - [break](../../cpp/break-statement-cpp.md)
 
@@ -27,9 +27,9 @@ Kompilator napotkał jedno z następujących słów kluczowych:
 
 powodowanie przejścia z [__finally](../../cpp/try-finally-statement.md) lub [finally](../../dotnet/finally.md) bloku podczas nietypowego zakończenia.
 
-Jeśli wystąpi wyjątek, a podczas gdy stos jest usuwany podczas wykonywania programów obsługi zakończenia (`__finally` lub finally), a kod przechodzi z bloku `__finally` przed zakończeniem bloku `__finally`, zachowanie jest niezdefiniowane. Formant nie może powrócić do kodu odwinięcia, więc wyjątek może nie być obsługiwany prawidłowo.
+Jeśli wystąpi wyjątek, a podczas gdy stos jest usuwany podczas wykonywania programów obsługi zakończenia ( **`__finally`** lub bloków finally), a kod przechodzi z **`__finally`** bloku przed **`__finally`** zakończeniem bloku, zachowanie jest niezdefiniowane. Formant nie może powrócić do kodu odwinięcia, więc wyjątek może nie być obsługiwany prawidłowo.
 
-Jeśli musisz wyskoczyć z bloku **__finally** , najpierw sprawdź, czy nie określono nietypowego zakończenia.
+Jeśli musisz wyskoczyć z **`__finally`** bloku, najpierw sprawdź, czy nie określono nietypowego zakończenia.
 
 Poniższy przykład generuje C4532; po prostu Dodaj komentarz do instrukcji skoku, aby rozwiązać ostrzeżenia.
 

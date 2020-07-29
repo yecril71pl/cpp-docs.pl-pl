@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
-ms.openlocfilehash: 41e06cc50f36a077a34d992c416a543e5bf9b593
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7ce730b8d723a839c5b509c825cff84111ca613
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371476"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226922"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits — Struktura
 
-Definiuje wspólne cechy niezainicjowanego uchwytu.
+Definiuje typowe cechy niezainicjowanego dojścia.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,18 +30,18 @@ struct HANDLENullTraits;
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne typedefs
+### <a name="public-typedefs"></a>Publiczne definicje typów
 
 Nazwa   | Opis
 ------ | ---------------------
-`Type` | Synonim handle.
+`Type` | Synonim dla UCHWYTu.
 
 ### <a name="public-methods"></a>Metody publiczne
 
 Nazwa                                                  | Opis
 ----------------------------------------------------- | -----------------------------
-[HANDLENullTraits::Zamknij](#close)                     | Zamyka określony uchwyt.
-[HANDLENullTraits::GetInvalidValue](#getinvalidvalue) | Reprezentuje nieprawidłowy dojście.
+[HANDLENullTraits:: Close](#close)                     | Zamyka określone dojście.
+[HANDLENullTraits:: GetInvalidValue —](#getinvalidvalue) | Reprezentuje nieprawidłowe dojście.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -49,13 +49,13 @@ Nazwa                                                  | Opis
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** corewrappers.h
+**Nagłówek:** corewrappers. h
 
-**Obszar nazw:** Microsoft::WRL::Otoki::HandleTraits
+**Przestrzeń nazw:** Microsoft:: WRL:: otoki:: HandleTraits
 
-## <a name="handlenulltraitsclose"></a><a name="close"></a>HANDLENullTraits::Zamknij
+## <a name="handlenulltraitsclose"></a><a name="close"></a>HANDLENullTraits:: Close
 
-Zamyka określony uchwyt.
+Zamyka określone dojście.
 
 ```cpp
 inline static bool Close(
@@ -65,16 +65,16 @@ inline static bool Close(
 
 ### <a name="parameters"></a>Parametry
 
-*H*<br/>
+*c*<br/>
 Uchwyt do zamknięcia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**true,** jeśli uchwyt *h* zamknięty pomyślnie; w przeciwnym razie **false**.
+**`true`** Jeśli dojście *h* zostało zamknięte pomyślnie; w przeciwnym razie **`false`** .
 
-## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
+## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLENullTraits:: GetInvalidValue —
 
-Reprezentuje nieprawidłowy dojście.
+Reprezentuje nieprawidłowe dojście.
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -82,4 +82,4 @@ inline static Type GetInvalidValue();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zawsze zwraca wartość `nullptr`.
+Zawsze zwraca **`nullptr`** .

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-ms.openlocfilehash: 09348d061fde4cb09eb6eb351f146404f355e184
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f7564270408d14f58d1528c1f41c0afd2dbe219c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187794"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226974"
 ---
-# <a name="__uuidof-operator"></a>Operator __uuidof
+# <a name="__uuidof-operator"></a>`__uuidof`, operator
 
 **Specyficzne dla firmy Microsoft**
 
@@ -25,26 +25,24 @@ Pobiera identyfikator GUID dołączony do wyrażenia.
 
 ## <a name="syntax"></a>Składnia
 
-```
-__uuidof (expression)
-```
+> **`__uuidof (`***wyrażenie***`)`**
 
 ## <a name="remarks"></a>Uwagi
 
 *Wyrażenie* może być nazwą typu, wskaźnikiem, odwołaniem lub tablicą tego typu, szablonem wyspecjalizowanym dla tych typów lub zmienną tych typów. Argument jest prawidłowy, o ile kompilator może go użyć, aby znaleźć dołączony identyfikator GUID.
 
-Szczególnym przypadkiem tego wewnętrznego jest podano wartość **0** lub null jako argument. W takim przypadku **__uuidof** zwróci identyfikator GUID składający się z zer.
+Szczególnym przypadkiem tego wewnętrznego jest podano wartość **0** lub null jako argument. W tym przypadku zwróci **`__uuidof`** Identyfikator GUID składający się z zer.
 
 Użyj tego słowa kluczowego, aby wyodrębnić identyfikator GUID dołączony do:
 
-- Obiekt według atrybutu rozszerzonego [UUID](../cpp/uuid-cpp.md) .
+- Obiekt przez [`uuid`](../cpp/uuid-cpp.md) rozszerzony atrybut.
 
-- Blok biblioteki utworzony przy użyciu atrybutu [modułu](../windows/attributes/module-cpp.md) .
+- Blok biblioteki utworzony przy użyciu [`module`](../windows/attributes/module-cpp.md) atrybutu.
 
 > [!NOTE]
-> W kompilacji debugowania **__uuidof** zawsze inicjuje obiekt dynamicznie (w czasie wykonywania). W kompilacji wydania **__uuidof** można statycznie (w czasie kompilacji) zainicjować obiekt.
+> W kompilacji debugowania **`__uuidof`** zawsze inicjuje obiekt dynamicznie (w czasie wykonywania). W kompilacji wydania **`__uuidof`** można statycznie (w czasie kompilacji) zainicjować obiekt.
 
-W celu zapewnienia zgodności z poprzednimi wersjami **_uuidof** jest synonimem dla **__uuidof** , chyba że opcja kompilatora [/za \(Wyłącz rozszerzenia językowe)](../build/reference/za-ze-disable-language-extensions.md) .
+W celu zapewnienia zgodności z poprzednimi wersjami, **`_uuidof`** jest synonimem, **`__uuidof`** Jeśli opcja kompilatora [ `/Za` \( disable rozszerzenia języka](../build/reference/za-ze-disable-language-extensions.md) nie jest określona.
 
 ## <a name="example"></a>Przykład
 
@@ -73,7 +71,7 @@ int main() {
 
 ## <a name="comments"></a>Komentarze
 
-W przypadkach, gdy nazwa biblioteki nie znajduje się już w zakresie, można użyć `__LIBID_` zamiast **__uuidof**. Na przykład:
+W przypadkach, gdy nazwa biblioteki nie jest już w zakresie, można użyć `__LIBID_` zamiast **`__uuidof`** . Na przykład:
 
 ```cpp
 StringFromCLSID(__LIBID_, &lpolestr);
@@ -81,7 +79,7 @@ StringFromCLSID(__LIBID_, &lpolestr);
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

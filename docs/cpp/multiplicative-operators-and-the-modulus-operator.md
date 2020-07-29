@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiplicative operators [C++]
 - division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
-ms.openlocfilehash: 791f18793b49f7d3a986c3271fddef3acef33062
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c277c93640201de69a4cb29060bc5191aa91629c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367922"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227364"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Operatory mnożenia i Operator modulo
 
@@ -36,21 +36,21 @@ expression % expression
 
 Operatory multiplikatywne to:
 
-- Mnożenie<strong>\*</strong>( )
+- Mnożenie ( <strong>\*</strong> )
 
-- Dywizja**/**( )
+- Dzielenie ( **/** )
 
-- Moduł (pozostała część od**%** podziału) ( )
+- Modulo (reszta z dzielenia) ( **%** )
 
 Te operatory dwuargumentowe mają łączność od lewej do prawej.
 
-Operatory multiplikatywne przyjmują operandy typów arytmetycznych. Operator modułu (**%**) ma bardziej rygorystyczne wymagania, ponieważ jego argumenty muszą być typu integralnego. (Aby uzyskać pozostałą część podziału zmiennoprzecinkowego, użyj funkcji czasu wykonywania, [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Konwersje objęte [konwersjami standardowymi](standard-conversions.md) są stosowane do argumentów, a wynik jest typu przekonwertowanego.
+Operatory multiplikatywne przyjmują operandy typów arytmetycznych. Operator modulo ( **%** ) ma bardziej rygorystyczne wymaganie, aby jego operandy muszą być typu całkowitego. (Aby uzyskać resztę podziału zmiennoprzecinkowego, użyj funkcji Run-Time, [FMOD —](../c-runtime-library/reference/fmod-fmodf.md)). Konwersje omówione w [konwersjach standardowych](standard-conversions.md) są stosowane do operandów, a wynik jest konwertowany typ.
 
 Operator mnożenia daje wynik mnożenia pierwszego operandu przez drugi.
 
 Operator dzielenia daje wynik dzielenia pierwszego operandu przez drugi.
 
-Operator modułu daje pozostałą część podana przez następujące wyrażenie, gdzie *e1* jest pierwszym operandem, a *e2* drugim: *e1* - (*e1* / *e2*) \* *e2*, gdzie oba opery są typu integralnego.
+Operator modulo Zwraca resztę podaną przez następujące wyrażenie, gdzie *E1* jest pierwszym operandem, a *E2* jest drugim: *E1* -(*E1*  /  *E2*) \* *E2*, gdzie oba operandy są typami całkowitymi.
 
 Dzielenie przez 0 w wyrażeniu dzielenia lub modulo jest nieokreślone i powoduje błąd w czasie wykonywania. Dlatego następujące wyrażenia generują nieokreślone, błędne wyniki:
 
@@ -68,15 +68,15 @@ Jeśli oba operandy wyrażenia mnożenia, dzielenia lub modulo mają taki sam zn
 
 W Microsoft C++, wynik wyrażenia modulo jest zawsze taki sam, jak znak pierwszego operandu.
 
-**ZAKOŃCZ Specyficzne dla firmy Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-Jeśli obliczone dzielenie dwóch liczb całkowitych jest niedokładne i tylko jeden argument jest liczbą ujemną, wynik jest największą liczbą całkowitą (w wielkości, pomijając znak), mniejszą niż dokładna wartość, którą dałaby operacja dzielenia. Na przykład wartość obliczona -11 / 3 wynosi -3.66666666. Wynik tego integralnego podziału wynosi -3.
+Jeśli obliczone dzielenie dwóch liczb całkowitych jest niedokładne i tylko jeden argument jest liczbą ujemną, wynik jest największą liczbą całkowitą (w wielkości, pomijając znak), mniejszą niż dokładna wartość, którą dałaby operacja dzielenia. Na przykład obliczona wartość-11/3 wynosi-3,666666666. Wynik tego podziału całkowitego to-3.
 
-Związek między operatorami mnożenia wynika z tożsamości ( \* *e1* / *e2*) *e2* + *e1* % *e2 e1* == *e1 e1*.
+Relacja między operatorami mnożenia jest określona przez tożsamość (*E1*  /  *E2*) \* *E2*  +  *E1*  %  *E2*  ==  *E1*.
 
 ## <a name="example"></a>Przykład
 
-Następujący program pokazuje operatory multiplikatywne. Należy zauważyć, że `10 / 3` albo operand musi być jawnie rzutowana do typu **float,** aby uniknąć obcinania, tak aby oba argumenty są typu **float** przed podziałem.
+Następujący program pokazuje operatory multiplikatywne. Należy zauważyć, że każdy operand elementu `10 / 3` musi być jawnie rzutowany na typ, **`float`** Aby uniknąć obcinania, tak aby oba operandy były typu **`float`** przed dzieleniem.
 
 ```cpp
 // expre_Multiplicative_Operators.cpp
@@ -92,7 +92,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wyrażenia z operatorami dwuargumentowymi](../cpp/expressions-with-binary-operators.md)<br/>
 [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

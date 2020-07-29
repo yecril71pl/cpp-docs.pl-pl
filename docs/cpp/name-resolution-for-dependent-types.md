@@ -2,16 +2,16 @@
 title: Rozpoznawanie nazwy dla typów zależnych
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: e9954eab2793f9adf0de75775563df0ae6f063f3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: de40bd056fe351e679ff32d9908c068ea4c6752a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161157"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227312"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Rozpoznawanie nazwy dla typów zależnych
 
-Użyj parametru **TypeName** dla kwalifikowana nazw w definicjach szablonów, aby poinformować kompilator, że dana kwalifikowana nazwa identyfikuje typ. Aby uzyskać więcej informacji, zobacz [TypeName](../cpp/typename.md).
+Użyj **`typename`** dla kwalifikowanych nazw w definicjach szablonów, aby poinformować kompilator, że dana kwalifikowana nazwa identyfikuje typ. Aby uzyskać więcej informacji, zobacz [TypeName](../cpp/typename.md).
 
 ```cpp
 // template_name_resolution1.cpp
@@ -40,7 +40,7 @@ int main()
 Name resolved by using typename keyword.
 ```
 
-Funkcja wyszukiwania nazw dla nazw zależnych bada nazwy zarówno z kontekstu definicji szablonu, jak i w poniższym przykładzie ten kontekst znajdowa `myFunction(char)`— oraz kontekst tworzenia wystąpienia szablonu. W poniższym przykładzie szablon został skonkretyzowany jako główny; w związku z tym `MyNamespace::myFunction` jest widoczny z punktu tworzenia wystąpienia i jest wybierany jako lepszy odpowiednik. Jeśli zmieniono nazwę `MyNamespace::myFunction`, zamiast tego zostanie wywołane `myFunction(char)`.
+Funkcja wyszukiwania nazw dla nazw zależnych bada nazwy zarówno z kontekstu definicji szablonu, jak i w poniższym przykładzie ten kontekst będzie znajdował się `myFunction(char)` i kontekst tworzenia wystąpienia szablonu. W poniższym przykładzie szablon został skonkretyzowany jako główny; w związku z tym, `MyNamespace::myFunction` jest widoczna z punktu tworzenia wystąpienia i jest wybierana jako lepsza zgodność. Jeśli `MyNamespace::myFunction` zmieniono nazwę, `myFunction(char)` zostanie ona wywołana.
 
 Wszystkie nazwy są rozpoznawane tak, jakby były nazwami zależnymi. Niemniej jednak zalecamy użycie w pełni kwalifikowanych nazw, jeśli występuje konflikt.
 
@@ -119,8 +119,8 @@ int main() {
 }
 ```
 
-Zgodność z regułami uściślania jest wymagana, ponieważ domyślnie C++ zakłada, że `AY::Rebind` nie jest szablonem i dlatego kompilator interpretuje następujący element "`<`" jako mniej niż. Musi wiedzieć, że `Rebind` jest szablonem, dzięki czemu może prawidłowo analizować "`<`" jako nawias ostry.
+Zgodność z regułami uściślania jest wymagana, ponieważ domyślnie język C++ zakłada, że `AY::Rebind` nie jest to szablon i dlatego kompilator interpretuje następujący element " `<` " jako mniej niż. Musi wiedzieć, że `Rebind` jest to szablon, tak aby mógł prawidłowo analizować " `<` " jako nawias ostry.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Rozpoznawanie nazw](../cpp/templates-and-name-resolution.md)
