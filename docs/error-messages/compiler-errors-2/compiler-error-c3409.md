@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: 8ab2e0d152e4c123fa23512bc0111cebd070b3ee
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0bf8b918f254c05bfe57034e25611c8dc17a783a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200867"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231965"
 ---
 # <a name="compiler-error-c3409"></a>Błąd kompilatora C3409
 
@@ -56,7 +56,7 @@ class b : public x {};
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3409, ponieważ wyrażenie lambda używa specyfikacji `mutable`, ale nie dostarcza listy parametrów. Kompilator nie może określić, czy nawiasy kwadratowe są częścią definicji wyrażenia lambda lub bloku atrybutu.
+Poniższy przykład generuje C3409, ponieważ wyrażenie lambda używa **`mutable`** specyfikacji, ale nie dostarcza listy parametrów. Kompilator nie może określić, czy nawiasy kwadratowe są częścią definicji wyrażenia lambda lub bloku atrybutu.
 
 ```cpp
 // C3409b.cpp
@@ -67,8 +67,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[attribute](../../windows/attributes-alphabetical-reference.md)<br/>
+[przypisane](../../windows/attributes-alphabetical-reference.md)<br/>
 [Wyrażenia lambda](../../cpp/lambda-expressions-in-cpp.md)<br/>
 [Składnia wyrażenia lambda](../../cpp/lambda-expression-syntax.md)

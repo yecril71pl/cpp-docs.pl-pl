@@ -2,136 +2,136 @@
 title: 1. Wprowadzenie
 ms.date: 01/16/2019
 ms.assetid: c42e72bc-0e31-4b1c-b670-cd82673c0c5a
-ms.openlocfilehash: 8c735408bdf9f9a13693bd0ad25df185bb1db42a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60a5090814b722cc0d9f6e51ab9038e697a4ed2a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236453"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231653"
 ---
 # <a name="1-introduction"></a>1. Wprowadzenie
 
-W tym dokumencie określa zbiór dyrektywy kompilatora, funkcje i zmienne środowiskowe, używanych do określania równoległości pamięci współużytkowanej w ramach programów C i C++. Funkcje opisane w niniejszym dokumencie jest nazywane zbiorczo *interfejsu programu aplikacji (API) OpenMP C/C++*. Celem tej specyfikacji jest zapewnienie modelu programowania równoległego umożliwia program będzie działał w ramach architektury pamięci współużytkowanej pochodzących od różnych dostawców. Kompilatory od wielu dostawców obsługuje OpenMP API języka C/C++. Więcej informacji na temat OpenMP, w tym *interfejs aplikacji OpenMP Fortran*, można znaleźć w następującej witrynie sieci web:
+Ten dokument określa kolekcję dyrektyw kompilatora, funkcji biblioteki i zmiennych środowiskowych, których można użyć do określenia równoległości pamięci współdzielonej w programach C i C++. Funkcje opisane w tym dokumencie są zbiorczo nazywane *interfejsem programu aplikacji OpenMP C/C++*. Celem tej specyfikacji jest zapewnienie modelu programowania równoległego, który umożliwia przenośny program w ramach architektury pamięci współdzielonej od różnych dostawców. Kompilatory od wielu dostawców obsługują interfejs API OpenMP C/C++. Więcej informacji na temat OpenMP, w tym *interfejsu programu aplikacji OpenMP Pascal*, można znaleźć w następującej witrynie sieci Web:
 
 [https://www.openmp.org](https://www.openmp.org)
 
-Dyrektywy, funkcje i zmienne środowiskowe zdefiniowane w tym dokumencie umożliwiają tworzenie i zarządzanie nimi programów do równoległego przetwarzania, a jednocześnie przenośność. Dyrektywy rozszerzenie C i C++ sekwencyjnego modelu programowania za pomocą jednego programu, który tworzy wiele danych (zawiera system SPMD), konstrukcje podziału pracy i konstrukcje synchronizacji. Obsługują one również udostępnianie i prywatyzacji danych. Kompilatory, które obsługują OpenMP C i C++ API obejmują opcji wiersza polecenia kompilatora, który aktywuje i umożliwia interpretacji wszystkich OpenMP, dyrektywy kompilatora.
+Dyrektywy, funkcje biblioteki i zmienne środowiskowe zdefiniowane w tym dokumencie umożliwiają tworzenie równoległych programów i zarządzanie nimi, umożliwiając przenośność. Dyrektywy rozszerzającą model programowania sekwencyjnego C i C++ za pomocą jednego programu, konstrukcji wielu danych (SPMD), konstrukcji udostępniania pracy i konstrukcji synchronizacji. Obsługują one także udostępnianie i prywatyzacji danych. Kompilatory obsługujące interfejs API OpenMP i C++ zawierają opcję wiersza polecenia do kompilatora, który aktywuje i umożliwia interpretację wszystkich dyrektyw kompilatora OpenMP.
 
 ## <a name="11-scope"></a>1.1 Zakres
 
-Ta specyfikacja obejmuje tylko użytkownik skierowany przetwarzania równoległego, którym jawne zdefiniowanie działania, jakie kompilatora i środowiska wykonawczego systemu Rozwijaj równolegle uruchomić program. Implementacje OpenMP C i C++ nie są wymagane do wyszukania zależności, konfliktów, zakleszczenia, wyścigu lub innych problemów, które powoduje wykonanie programu niepoprawne. Ponosisz odpowiedzialność za zapewnienie poprawnie wykonuje aplikacji przy użyciu konstrukcje OpenMP C i C++ interfejsu API. Generowane przez kompilator automatyczne przetwarzanie równoległe i dyrektywy kompilatora ułatwiają przetwarzania równoległego na takie nie są objęte pomocą techniczną w tym dokumencie.
+Ta specyfikacja obejmuje tylko przetwarzanie równoległe ukierunkowane na użytkownika, w którym można jawnie definiować akcje wykonywane przez kompilator i system czasu wykonywania programu równolegle. Implementacje OpenMP C i C++ nie są wymagane, aby sprawdzać zależności, konflikty, zakleszczenia, sytuacje wyścigu lub inne problemy powodujące nieprawidłowe wykonywanie programu. Użytkownik jest odpowiedzialny za zapewnienie, że aplikacja używająca interfejsów API OpenMP i C++ działa prawidłowo. Automatyczne wygenerowane przez kompilator przetwarzanie równoległe i dyrektywy do kompilatora, aby pomóc temu przetwarzanie równoległe nie zostały omówione w tym dokumencie.
 
-## <a name="12-definition-of-terms"></a>1.2 definicje terminów
+## <a name="12-definition-of-terms"></a>1,2 Definicja warunków
 
 W tym dokumencie są używane następujące terminy:
 
 - ograniczenie
 
-  Punkt synchronizacji, które muszą być dostarczone przez wszystkie wątki w zespole.  Każdy wątek czeka, aż wszystkie wątki w zespole pojawić się w tym momencie. Brak jawnych bariery identyfikowane za pomocą dyrektywy i niejawne bariery utworzone przez implementację.
+  Punkt synchronizacji, do którego muszą dotrzeć wszystkie wątki w zespole.  Każdy wątek czeka, aż wszystkie wątki w zespole dotarły do tego momentu. Istnieją jawne bariery identyfikowane przez dyrektywy i niejawne przeszkody utworzone przez implementację.
 
-- Konstrukcja
+- Konstruuj
 
-  Konstrukcja znajduje się zdanie. Składa się z dyrektywą, następuje strukturalnego bloku. Niektóre dyrektywy nie są częścią konstrukcji. (Zobacz *openmp — dyrektywa* w [dodatek C](c-openmp-c-and-cpp-grammar.md)).
+  Konstrukcja jest instrukcją. Składa się z dyrektywy, a po niej blok strukturalny. Niektóre dyrektywy nie są częścią konstrukcji. (Patrz *dyrektywa OpenMP* w [dodatku C](c-openmp-c-and-cpp-grammar.md)).
 
-- — Dyrektywa
+- dyrektywę
 
-  C lub C++ `#pragma` następuje `omp` identyfikator, inny tekst i nowy wiersz. Dyrektywa określa zachowanie programu.
+  Kod C lub C++ `#pragma` , po którym następuje `omp` Identyfikator, inny tekst i nowy wiersz. Dyrektywa określa zachowanie programu.
 
 - zakres dynamiczny
 
-  Wszystkie instrukcje w *zakresie leksykalnym*, a także każdej instrukcji wewnątrz funkcji, który jest wykonywany w wyniku wykonania instrukcji w zakresie leksykalnym. Zakres dynamiczny jest również nazywany *region*.
+  Wszystkie instrukcje w *zakresie leksykalnym*oraz jakakolwiek instrukcja wewnątrz funkcji, która jest wykonywana w wyniku wykonywania instrukcji w zakresie leksykalnym. Dynamiczny zakres jest również nazywany *regionem*.
 
-- zakres leksykalne
+- zakres leksykalny
 
-  Instrukcje leksykalnie przechowywanych w ramach *strukturalnego bloku*.
+  Instrukcje leksykalne w obrębie *bloku strukturalnego*.
 
-- główny wątek
+- wątek główny
 
-  Wątek, który utworzy zespół po *równoległego regionu* wprowadzeniu.
+  Wątek, który tworzy zespół, gdy zostanie wprowadzony *region równoległy* .
 
-- równoległego regionu
+- Region równoległy
 
-  Instrukcje powiązać konstrukcja równoległa OpenMP, które mogą być wykonywane przez wiele wątków.
+  Instrukcje, które wiążą się z równoległą konstrukcją OpenMP i mogą być wykonywane przez wiele wątków.
 
 - private
 
-  Prywatna zmienna nazwy bloku pamięci, który jest unikatowy w wątku, dzięki czemu odwołania. Istnieje kilka sposobów, aby określić, czy zmienna jest prywatna: definicje w ramach równoległego regionu `threadprivate` dyrektywy, `private`, `firstprivate`, `lastprivate`, lub `reduction` klauzulę lub użyj zmiennej jako `for`pętli Zmienna sterująca w `for` pętli, natychmiast po `for` lub `parallel for` dyrektywy.
+  Zmienna prywatna nazywa blok magazynu, który jest unikatowy dla wątku tworzącego odwołanie. Istnieje kilka sposobów, aby określić, że zmienna jest prywatna: Definicja w ramach równoległego regionu, `threadprivate` dyrektywy,, `private` lub, lub `firstprivate` `lastprivate` `reduction` użycie zmiennej jako **`for`** zmiennej sterującej pętli **`for`** bezpośrednio po `for` `parallel for` dyrektywie lub.
 
 - region
 
-  Zakres dynamiczny.
+  Dynamiczny zakres.
 
-- region szeregowej
+- Region szeregowy
 
-  Instrukcje wykonywane tylko przez *głównym wątku* poza dynamiczny zakres dowolnego *równoległego regionu*.
+  Instrukcje wykonywane tylko przez *wątek główny* poza dynamicznym zakresem dowolnego *równoległego regionu*.
 
-- Serializacji
+- potrzeby
 
-  Wykonywanie równoległe konstrukcji za pomocą:
+  Aby wykonać konstrukcję równoległą przy użyciu:
 
-  - zespół wątków składający się z tylko jednego wątku (czyli głównego wątku dla tego konstrukcja równoległa),
+  - Zespół wątków składający się z tylko jednego wątku (który jest głównym wątkiem dla tej konstrukcji równoległej),
 
-  - Serial kolejność wykonywania instrukcji w bloku strukturalne (takie same kolejność tak, jakby bloku nie były częścią konstrukcja równoległa), a
+  - kolejność szeregowa wykonywania dla instrukcji w bloku strukturalnym (taka sama kolejność jak w przypadku, gdy blok nie był częścią konstrukcji równoległej), i
 
-  - nie wpływa na wartość zwrócona przez obiekt `omp_in_parallel()` (oprócz efekty dowolnego zagnieżdżone konstrukcje równoległe).
+  - nie wpływa na wartość zwracaną przez `omp_in_parallel()` (oprócz efektów zagnieżdżonych konstrukcji równoległych).
 
 - udostępnione
 
-  Udostępnionej zmiennej nazwy jeden blok pamięci masowej. Wszystkie wątki w zespole, uzyskujących dostęp do tej zmiennej również dostęp do tego jednego bloku pamięci.
+  Zmienna współdzielona nazywa pojedynczym blokiem magazynu. Wszystkie wątki w zespole, które uzyskują dostęp do tej zmiennej, również uzyskują dostęp do tego pojedynczego bloku magazynu.
 
-- Blok strukturalny
+- blok strukturalny
 
-  Blok strukturalny jest instrukcją (pojedyncze lub złożone) zawierający pojedynczy wpis i pojedynczego wyjścia. W przypadku skok do lub z instrukcji tej instrukcji jest strukturalnego bloku. (Ta reguła zawiera wywołanie `longjmp`(3C) lub użycia `throw`, mimo że wywołanie `exit` jest dozwolona.) Jeśli jej wykonanie zawsze zaczyna się od otwarcia `{` i zawsze kończy się zamykającym `}`, instrukcję złożonego jest strukturalnego bloku. Instrukcja wyrażeń, wybór instrukcji, instrukcji iteracji lub `try` blok jest blok strukturalny uzyskane odpowiedniej instrukcji złożonej, umieszczając go w `{` i `}` będzie strukturalnego bloku. Nie ma strukturalnego bloku, instrukcja skoku, instrukcja labeled lub instrukcji deklaracji.
+  Blok strukturalny jest instrukcją (pojedynczą lub złożoną), która ma pojedynczy wpis i pojedyncze wyjście. W przypadku przechodzenia do lub z instrukcji, ta instrukcja jest blokiem strukturalnym. (Ta reguła zawiera wywołanie do `longjmp` (3C) lub użycie `throw` , chociaż wywołanie `exit` jest dozwolone.) Jeśli jego wykonanie zawsze rozpoczyna się na otwarciu `{` i zawsze kończą się przy zamykaniu `}` , instrukcja złożona jest blokiem strukturalnym. Instrukcja Expression, instrukcja SELECT, instrukcja iteracji lub **`try`** blok to blok strukturalny, Jeśli odpowiednia złożona instrukcja uzyskana przez zawrzeć ją w `{` i będzie `}` blokiem strukturalnym. Instrukcja skoku, instrukcja oznaczona etykietą lub instrukcja deklaracji nie jest blokiem strukturalnym.
 
-- Zespół
+- zespół
 
-  Jeden lub więcej wątków, współpracujących podczas wykonywania konstrukcji.
+  Co najmniej jeden wątek współdziała podczas wykonywania konstrukcji.
 
 - wątek
 
-  Jednostki wykonywania mający serial przepływ sterowania, zestaw zmiennych prywatnych i dostęp do udostępnionego zmiennych.
+  Jednostka wykonywania ma przepływ szeregowy sterowania, zestaw zmiennych prywatnych i dostęp do zmiennych udostępnionych.
 
 - zmienna
 
-  Identyfikator, opcjonalnie kwalifikowana przez nazwy przestrzeni nazw nazwy obiektu.
+  Identyfikator, opcjonalnie kwalifikowana nazwami przestrzeni nazw, która nazywa obiekt.
 
-## <a name="13-execution-model"></a>1.3 model wykonania
+## <a name="13-execution-model"></a>model wykonywania 1,3
 
-OpenMP używa modelu przyłączaniem do rozwidlenia wykonywanie równoległe. Mimo że ten model rozwidlenia sprzężenia mogą być przydatne w przypadku rozwiązywania różnych problemów, jest to przeznaczony dla dużych aplikacji opartych na tablicy. OpenMP jest przeznaczona do obsługi programów, które są wykonywane prawidłowo, zarówno jako programów do równoległego przetwarzania (biblioteki obsługi wielu wątków i wykonywanie pełnej OpenMP). Jest również dla programów, które są wykonywane prawidłowo jako kolejne programy (dyrektywy ignorowane i proste biblioteki klas zastępczych OpenMP). Jednak jest możliwe i możliwość tworzenia program, który nie działają prawidłowo, gdy są wykonywane sekwencyjnie. Ponadto różny stopień równoległości może spowodować różnych wyników liczbowych ze względu na zmiany w skojarzeniu operacji numerycznych. Na przykład zmniejszenie o dodanie serial mogą mieć różnych wzorców skojarzenia dodanie niż równoległych redukcji. Te różne skojarzenia mogą ulec zmianie wyniki dodawania zmiennoprzecinkowych.
+OpenMP używa modelu przyłączania do rozwidlenia. Chociaż ten model łączenia rozwidlenia może być przydatny do rozwiązywania różnych problemów, jest dostosowany do dużych aplikacji opartych na tablicy. OpenMP jest przeznaczony do obsługi programów, które działają poprawnie zarówno jako programy równoległe (wiele wątków wykonywania, jak i pełną bibliotekę obsługi OpenMP). Jest on również przeznaczony dla programów, które są wykonywane prawidłowo jako programy sekwencyjne (dyrektywy ignorowane i prosta biblioteka pociągania OpenMP). Jednak jest możliwe, że opracowuje program, który nie działa prawidłowo w przypadku wykonywania sekwencyjnie. Ponadto różne stopnie równoległości mogą powodować różne wyniki liczbowe ze względu na zmiany skojarzenia operacji numerycznych. Na przykład redukcja numeru seryjnego może mieć inny wzorzec dla skojarzeń dodatkowych niż w przypadku obniżenia wartości równoległej. Te różne skojarzenia mogą zmieniać wyniki dodawania zmiennoprzecinkowego.
 
-Program napisany za pomocą interfejsu API języka C/C++ OpenMP rozpoczyna wykonywanie jako pojedynczy wątek wykonywania o nazwie *głównym wątku*. Główny wątek wykonuje w regionie serial, dopóki nie zostanie osiągnięty pierwszy konstrukcja równoległa. W interfejsie API języka C/C++ OpenMP `parallel` dyrektywa stanowi konstrukcja równoległa. Po napotkaniu konstrukcja równoległa głównego wątku utworzy zespół wątków, i wzorcem staje się głównej zespołu. Każdy wątek w zespół wykonuje instrukcje dynamiczne zakresu równoległego regionu, z wyjątkiem konstrukcje podziału pracy. Wszystkie wątki w zespole musi wystąpić konstrukcje podziału pracy w tej samej kolejności i co najmniej jeden z wątków, wykonuje instrukcje w ramach skojarzone ze strukturalnego bloku. Możesz też dorozumianych na końcu konstrukcji podziału pracy, bez `nowait` klauzula jest wykonywana przez wszystkie wątki w zespole.
+Program zapisany przy użyciu interfejsu API OpenMP/C++ rozpoczyna wykonywanie jako pojedynczy wątek wykonywania nazywany *wątkiem głównym*. Wątek główny jest wykonywany w regionie szeregowym do momentu napotkania pierwszej równoległej konstrukcji. W interfejsie API OpenMP C/C++ `parallel` dyrektywa stanowi konstrukcję równoległą. Gdy napotkana jest konstrukcja równoległa, wątek główny tworzy zespół wątków, a główny stał się wzorcem zespołu. Każdy wątek w zespole wykonuje instrukcje w dynamicznym zakresie regionu równoległego, z wyjątkiem konstrukcji udostępniania pracy. Wszystkie wątki w zespole muszą napotkać konstrukcje podziału pracy w tej samej kolejności, a co najmniej jeden z wątków wykonuje instrukcje w ramach skojarzonego bloku strukturalnego. Bariera implikowana na końcu konstrukcji udostępniania pracy bez `nowait` klauzuli jest wykonywana przez wszystkie wątki w zespole.
 
-Jeśli wątek modyfikuje obiektów udostępnionych, dotyczy nie tylko własnego środowiska wykonawczego, a także porównanie tych innych wątków w programie. Modyfikacja jest gwarantowane jest pełny, z punktu widzenia inny wątek w następnym punkcie sekwencji (zgodnie z definicją w języku podstawowej), tylko wtedy, gdy obiekt został zadeklarowany jako volatile. W przeciwnym razie zmiany może być kompletny po pierwszych modyfikowanie wątku. Zobacz inne wątki, a następnie (lub jednocześnie) `flush` dyrektywę, który określa obiekt (jawnie lub niejawenie). Gdy `flush` dyrektyw, które są też dorozumianych przez inne dyrektywy OpenMP nie gwarantuje poprawną porządkowanie efekty uboczne, odpowiada za programisty podać dodatkowe, jawna `flush` dyrektywy.
+Jeśli wątek modyfikuje obiekt współużytkowany, dotyczy nie tylko własnego środowiska wykonawczego, ale również do innych wątków w programie. Zmiana zostanie zagwarantowana, z punktu widzenia innego wątku, w następnym punkcie sekwencji (zgodnie z definicją w języku podstawowym) tylko wtedy, gdy obiekt jest zadeklarowany jako nietrwały. W przeciwnym razie modyfikacja zostanie zagwarantowana po pierwszym wątku modyfikowania. Pozostałe wątki następnie (lub współbieżnie) widzą `flush` dyrektywy, która określa obiekt (niejawnie lub jawnie). Gdy `flush` dyrektywy, które są implikowane przez inne dyrektywy OpenMP, nie gwarantują prawidłowej kolejności efektów ubocznych, to programista jest odpowiedzialny za dostarczanie dodatkowych, jawnych `flush` dyrektyw.
 
-Po zakończeniu konstrukcja równoległa w niejawne barierę synchronizować wątków w zespole, a tylko główny wątek kontynuuje wykonywanie. W jednym programie można określić dowolną liczbę równoległych konstrukcji. Co w efekcie program może rozwidlenie i połączyć wiele razy w czasie wykonywania.
+Po zakończeniu konstruowania równoległego wątki w zespole są synchronizowane z niejawną barierą i tylko wątek główny kontynuuje wykonywanie. Dowolna liczba równoległych konstrukcji może być określona w pojedynczym programie. W efekcie program może rozwidlenia i sprzęgać wiele razy podczas wykonywania.
 
-OpenMP C/C++ API umożliwia programistom użyć dyrektyw w funkcje wywołane z wnętrza równoległe konstrukcje. Dyrektyw, które nie pojawiają się w zakresie leksykalnym konstrukcja równoległa, ale może znajdować się w zakresie dynamicznych są nazywane *oddzielone* dyrektywy. Za pomocą dyrektywy oddzielone równolegle z tylko minimalne zmiany dotyczące sekwencyjny program programistów można uruchomić główne części programu. Dzięki tej funkcji można kodu równoległe konstrukcje w górnym poziomy drzewa wywołań programu i użyj dyrektywy, aby kontrolować wykonywanie we wszystkich wywoływanych funkcji.
+Interfejs API OpenMP C/C++ umożliwia programistom używanie dyrektyw w funkcjach wywoływanych z wewnątrz konstrukcji równoległych. Dyrektywy, które nie pojawiają się w zakresie leksykalnym konstrukcji równoległej, ale mogą znajdować się w zakresie dynamicznym są nazywane dyrektywami *oddzielonymi* . W przypadku dyrektyw oddzielonych programiści mogą wykonywać w sposób równoległy główne części programu, z uwzględnieniem tylko minimalnych zmian w programie sekwencyjnym. Korzystając z tej funkcji, można kodu konstrukcje równoległe na najwyższym poziomie drzewa wywołań programu i stosować dyrektywy do sterowania wykonywaniem w którejkolwiek z wywołanych funkcji.
 
-Funkcje, które zapisu do tego samego pliku może spowodować w danych wyjściowych, w którym dane zapisane przez inne wątki pojawia się w kolejności niedeterministyczne danych wyjściowych niezsynchronizowane wywołania do C i C++. Podobnie niezsynchronizowane wywołania do funkcji, które odczytują z tego samego pliku wejściowego może odczytać dane w kolejności jednoznaczne wyniki. Niezsynchronizowane użycia operacji We/Wy, tak, aby każdy wątek uzyskuje dostęp do innego pliku, jest taki sam jak wykonanie szeregowe funkcji we/wy.
+Niezsynchronizowane wywołania funkcji wyjściowych C i C++, które zapisują w tym samym pliku, mogą spowodować wyjście, w którym dane zapisane przez różne wątki pojawiają się w kolejności niedeterministycznej. Podobnie niezsynchronizowane wywołania funkcji wejściowych odczytywanych z tego samego pliku mogą odczytywać dane w kolejności niedeterministycznej. Niezsynchronizowane użycie operacji we/wy, w taki sposób, że każdy wątek uzyskuje dostęp do innego pliku, daje takie same wyniki jak wykonywanie szeregu funkcji we/wy.
 
 ## <a name="14-compliance"></a>1.4 Zgodność
 
-Implementacja OpenMP API języka C/C++ jest *CLS OpenMP* jeśli ją rozpoznaje i zachowuje semantykę wszystkie elementy tej specyfikacji, tak jak w rozdziałach 1, 2, 3, 4, i związanych z dodatek C. dodatki A, B, D, E i f. informacje o wyłącznie do celów i nie są częścią specyfikacji. Implementacji, które zawierają tylko podzestaw interfejsu API nie są zgodne z OpenMP.
+Implementacja interfejsu API OpenMP C/C++ jest *zgodna ze standardem OpenMP* , jeśli rozpoznaje i zachowuje semantykę wszystkich elementów tej specyfikacji, jak określono w rozdziale 1, 2, 3, 4 i dodatek C. Dodatki a, B, D, E i F są wyłącznie do celów informacyjnych i nie są częścią specyfikacji. Implementacje, które zawierają tylko podzestaw interfejsu API, nie są zgodne ze standardem OpenMP.
 
-OpenMP C i C++ interfejsu API jest rozszerzeniem języka podstawowego, która jest obsługiwana przez implementację. Jeśli język podstawowy nie obsługuje konstrukcją języka pierwszej klasy lub rozszerzenie, które pojawia się w tym dokumencie, implementacja OpenMP nie jest wymagane do jego obsługi.
+Interfejs API OpenMP C i C++ jest rozszerzeniem języka podstawowego, który jest obsługiwany przez implementację. Jeśli język podstawowy nie obsługuje konstrukcji językowej lub rozszerzenia, które pojawia się w tym dokumencie, implementacja OpenMP nie jest wymagana do jej obsługi.
 
-Wszystkie standardowe funkcje biblioteki C i C++ i funkcji wbudowanych (oznacza to, że funkcje których kompilator zna określonych) musi być metodą o bezpiecznych wątkach. Niezsynchronizowane korzystania z funkcji metodą o bezpiecznych wątkach, przez inne wątki w ramach równoległego regionu nie generuje niezdefiniowane zachowanie. Jednak to zachowanie nie może być taki sam jak region szeregowe. (Funkcja generowania liczb losowych jest przykładem).
+Wszystkie standardowe funkcje biblioteki C i C++ oraz wbudowane funkcje (czyli funkcje, które kompilator ma określoną wiedzę) muszą być bezpieczne wątkowo. Niezsynchronizowane użycie funkcji bezpiecznych dla wątków przez różne wątki w regionie równoległym nie powoduje utworzenia niezdefiniowanego zachowania. Zachowanie może jednak nie być takie samo jak w przypadku regionu szeregowego. (Przykładowa funkcja generowania liczb losowych).
 
-OpenMP C/C++ API Określa, że określone zachowanie jest *zdefiniowanych w implementacji.* Odpowiadające implementacja OpenMP jest wymagany do definiowania i zarządzania dokumentami jego zachowanie w takich przypadkach. Aby uzyskać listę zachowania zdefiniowane w implementacji, zobacz [dodatku E](e-implementation-defined-behaviors-in-openmp-c-cpp.md).
+Interfejs API OpenMP C/C++ określa, że określone zachowanie jest *zdefiniowane w implementacji.* Zgodność z implementacją OpenMP jest wymagana do zdefiniowania i udokumentowania zachowania w takich przypadkach. Aby zapoznać się z listą zachowań zdefiniowanych w implementacji, zobacz [dodatek E](e-implementation-defined-behaviors-in-openmp-c-cpp.md).
 
-## <a name="15-normative-references"></a>1.5 odwołania normatywne
+## <a name="15-normative-references"></a>1,5 Odwołania normatywne
 
-- 9899:1999 ISO/IEC *informacji o technologii — języki programowania - C*. Tej specyfikacji OpenMP API odwołuje się do 9899:1999 ISO/IEC jako C99.
+- ISO/IEC 9899:1999, *technologia informacyjna — Języki programowania-C*. Ta specyfikacja interfejsu API OpenMP odnosi się do ISO/IEC 9899:1999 jako C99.
 
-- 9899:1990 ISO/IEC *informacji o technologii — języki programowania - C*. Tej specyfikacji OpenMP API odwołuje się do 9899:1990 ISO/IEC jako C90.
+- ISO/IEC 9899:1990, *technologia informacyjna — Języki programowania-C*. Ta specyfikacja interfejsu API OpenMP odnosi się do ISO/IEC 9899:1990 jako C90.
 
-- 14882:1998 ISO/IEC *informacji o technologii — języki programowania - C++*. Tej specyfikacji OpenMP API odwołuje się do 14882:1998 ISO/IEC co kod C++.
+- ISO/IEC 14882:1998, *technologia informacyjna — Języki programowania — C++*. Ta specyfikacja interfejsu API OpenMP odnosi się do ISO/IEC 14882:1998 jako C++.
 
-W przypadku, gdy tej specyfikacji OpenMP API odwołuje się do języka C, odniesienia do języka podstawowego, jest obsługiwana przez implementację.
+Jeśli ta Specyfikacja interfejsu API OpenMP odwołuje się do języka C, odwołanie jest tworzone do podstawowego w języku obsługiwanym przez implementację.
 
 ## <a name="16-organization"></a>1.6 Organizacja
 
-- [Funkcje bibliotek wykonawczych](3-run-time-library-functions.md)
+- [Funkcje bibliotek środowiska uruchomieniowego](3-run-time-library-functions.md)
 - [Zmienne środowiskowe](4-environment-variables.md)
 - [Zachowania zdefiniowane w implementacji w programie OpenMP C/C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
-- [Nowe funkcje w programie OpenMP C/C++ w wersji 2.0](f-new-features-and-clarifications-in-version-2-0.md)
+- [Nowe funkcje w programie OpenMP C/C++ w wersji 2,0](f-new-features-and-clarifications-in-version-2-0.md)

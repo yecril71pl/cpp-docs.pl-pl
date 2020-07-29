@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2084
 ms.assetid: 990b107f-3721-4851-ae8b-4b69a8c149ed
-ms.openlocfilehash: 881ae051b2779fe674b31b64a7cbe7be7cf63705
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f217e0b94e27c0f85879e80b3ae887cb4f76f486
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757894"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216365"
 ---
 # <a name="compiler-error-c2084"></a>Błąd kompilatora C2084
 
@@ -23,7 +23,7 @@ Przed Visual Studio 2002,
 
 - Kompilator akceptuje wiele specjalizacji szablonów, które zostały rozpoznane do tego samego rzeczywistego typu, chociaż dodatkowe definicje nigdy nie będą dostępne. Kompilator wykrywa teraz te wiele definicji.
 
-- `__int32` i `int` były traktowane jako oddzielne typy. Kompilator traktuje teraz `__int32` jako synonim dla `int`. Oznacza to, że kompilator wykrywa wiele definicji, jeśli funkcja jest przeciążona na obu `__int32` i `int` i powoduje błąd.
+- **`__int32`** i **`int`** były traktowane jako oddzielne typy. Kompilator traktuje teraz **`__int32`** jako synonim dla **`int`** . Oznacza to, że kompilator wykrywa wiele definicji, jeśli funkcja jest przeciążona w obu **`__int32`** i występuje **`int`** błąd.
 
 ## <a name="example"></a>Przykład
 

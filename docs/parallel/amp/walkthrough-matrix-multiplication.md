@@ -2,48 +2,48 @@
 title: 'Wskazówki: mnożenie macierzy'
 ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: f30f8dc235bf0e76c342bea26a35bcbb36cfa237
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6387e68304c7b1dbf0531729b7b73b519f40d159
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366810"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215871"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Wskazówki: mnożenie macierzy
 
-W tym przewodniku krok po kroku pokazano, jak używać C++ AMP, aby przyspieszyć wykonywanie mnożenia macierzy. Prezentowane są dwa algorytmy, jeden bez kafelków i jeden z kafelkami.
+W tym przewodniku krok po kroku pokazano, jak za pomocą C++ AMP przyspieszyć wykonywanie operacji mnożenia macierzy. Prezentowane są dwa algorytmy, jeden bez dzielenia i jeden z rozdzieleniem.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 Przed rozpoczęciem:
 
-- Przeczytaj [przegląd C++ AMP](../../parallel/amp/cpp-amp-overview.md).
+- Przeczytaj [C++ amp przegląd](../../parallel/amp/cpp-amp-overview.md).
 
-- Przeczytaj [za pomocą kafelków](../../parallel/amp/using-tiles.md).
+- Przeczytaj [przy użyciu kafelków](../../parallel/amp/using-tiles.md).
 
-- Upewnij się, że korzystasz z co najmniej systemu Windows 7 lub Windows Server 2008 R2.
+- Upewnij się, że korzystasz z systemu Windows 7 lub Windows Server 2008 R2.
 
 ### <a name="to-create-the-project"></a>Aby utworzyć projekt
 
-Instrukcje dotyczące tworzenia nowego projektu różnią się w zależności od wersji programu Visual Studio, które zostały zainstalowane. Aby wyświetlić dokumentację preferowanej wersji programu Visual Studio, użyj formantu selektor **wersji.** Znajduje się w górnej części spisu treści na tej stronie.
+Instrukcje dotyczące tworzenia nowego projektu różnią się w zależności od zainstalowanej wersji programu Visual Studio. Aby wyświetlić dokumentację preferowanej wersji programu Visual Studio, użyj kontrolki selektora **wersji** . Znajduje się w górnej części spisu treści na tej stronie.
 
 ::: moniker range="vs-2019"
 
 ### <a name="to-create-the-project-in-visual-studio-2019"></a>Aby utworzyć projekt w programie Visual Studio 2019
 
-1. Na pasku menu wybierz pozycję **Plik** > **nowego** > **projektu,** aby otworzyć okno dialogowe Tworzenie nowego **projektu.**
+1. Na pasku menu wybierz pozycję **plik** > **Nowy** > **projekt** , aby otworzyć okno dialogowe **Tworzenie nowego projektu** .
 
-1. W górnej części okna dialogowego ustaw **język** na **C++,** ustaw **platformę** na **Windows**i ustaw **typ projektu** na **Konsola**.
+1. W górnej części okna dialogowego Ustaw **Język** na **C++**, ustaw **platformę** na **Windows**i ustaw **Typ projektu** na **Console**.
 
-1. Z filtru listy typów projektów wybierz pozycję **Pusty projekt,** a następnie wybierz pozycję **Dalej**. Na następnej stronie wprowadź *MatrixMultiply* w polu **Nazwa,** aby określić nazwę projektu, i w razie potrzeby określ lokalizację projektu.
+1. Z listy filtrowane typy projektów wybierz pozycję **pusty projekt** , a następnie wybierz przycisk **dalej**. Na następnej stronie wprowadź *MatrixMultiply* w polu **Nazwa** , aby określić nazwę projektu, i w razie potrzeby określ lokalizację projektu.
 
-   ![Nowa aplikacja konsoli](../../build/media/mathclient-project-name-2019.png "Nowa aplikacja konsoli")
+   ![Nowa aplikacja konsolowa](../../build/media/mathclient-project-name-2019.png "Nowa aplikacja konsolowa")
 
-1. Wybierz przycisk **Utwórz,** aby utworzyć projekt klienta.
+1. Wybierz przycisk **Utwórz** , aby utworzyć projekt klienta.
 
-1. W **Eksploratorze rozwiązań**otwórz menu skrótów dla **plików źródłowych**, a następnie wybierz pozycję **Dodaj** > **nowy element**.
+1. W **Eksplorator rozwiązań**Otwórz menu skrótów dla **plików źródłowych**, a następnie wybierz polecenie **Dodaj** > **nowy element**.
 
-1. W oknie dialogowym **Dodawanie nowego elementu** wybierz pozycję Plik **C++ (cpp)**, wprowadź *plik MatrixMultiply.cpp* w polu **Nazwa,** a następnie wybierz przycisk **Dodaj.**
+1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **plik C++ (. cpp)**, wprowadź *MatrixMultiply. cpp* w polu **Nazwa** , a następnie wybierz przycisk **Dodaj** .
 
 ::: moniker-end
 
@@ -51,35 +51,35 @@ Instrukcje dotyczące tworzenia nowego projektu różnią się w zależności od
 
 ### <a name="to-create-a-project-in-visual-studio-2017-or-2015"></a>Aby utworzyć projekt w programie Visual Studio 2017 lub 2015
 
-1. Na pasku menu w programie Visual Studio wybierz pozycję **Plik** > **nowego** > **projektu**.
+1. Na pasku menu w programie Visual Studio wybierz pozycję **plik** > **Nowy** > **projekt**.
 
-1. W obszarze **Zainstalowane** w okienku szablonów wybierz pozycję **Visual C++**.
+1. W obszarze **zainstalowane** w okienku szablony wybierz pozycję **Visual C++**.
 
-1. Wybierz **pozycję Pusty projekt**, wprowadź *matrixmultiply* w polu **Nazwa,** a następnie wybierz przycisk **OK.**
+1. Wybierz pozycję **pusty projekt**, wprowadź *MatrixMultiply* w polu **Nazwa** , a następnie wybierz przycisk **OK** .
 
-1. Wybierz przycisk **Dalej.**
+1. Wybierz przycisk **dalej** .
 
-1. W **Eksploratorze rozwiązań**otwórz menu skrótów dla **plików źródłowych**, a następnie wybierz pozycję **Dodaj** > **nowy element**.
+1. W **Eksplorator rozwiązań**Otwórz menu skrótów dla **plików źródłowych**, a następnie wybierz polecenie **Dodaj** > **nowy element**.
 
-1. W oknie dialogowym **Dodawanie nowego elementu** wybierz pozycję Plik **C++ (cpp)**, wprowadź *plik MatrixMultiply.cpp* w polu **Nazwa,** a następnie wybierz przycisk **Dodaj.**
+1. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **plik C++ (. cpp)**, wprowadź *MatrixMultiply. cpp* w polu **Nazwa** , a następnie wybierz przycisk **Dodaj** .
 
 ::: moniker-end
 
-## <a name="multiplication-without-tiling"></a>Mnożenie bez kafelków
+## <a name="multiplication-without-tiling"></a>Mnożenie bez dzielenia
 
-W tej sekcji należy wziąć pod uwagę mnożenie dwóch macierzy, A i B, które są zdefiniowane w następujący sposób:
+W tej sekcji Rozważmy mnożenie dwóch macierzy, a i B, które są zdefiniowane w następujący sposób:
 
-![3&#45;przez&#45;2 matrycę A](../../parallel/amp/media/campmatrixanontiled.png "3&#45;przez&#45;2 matrycę A")
+![3&#45;przez&#45;2 macierz A](../../parallel/amp/media/campmatrixanontiled.png "3&#45;przez&#45;2 macierz A")
 
-![2&#45;&#45;3 matrycy B](../../parallel/amp/media/campmatrixbnontiled.png "2&#45;&#45;3 matrycy B")
+![2&#45;przez&#45;3 macierze B](../../parallel/amp/media/campmatrixbnontiled.png "2&#45;przez&#45;3 macierze B")
 
-A jest matrycą 3 na 2, a B matrycą 2 na 3. Produktem mnożenia A przez B jest następująca macierz 3 na 3. Produkt jest obliczany przez pomnożenie wierszy A przez kolumny elementu B przez element.
+A to macierz 3-na-2, a B to macierz 2-na-3. Iloczyn mnożenia A przez B to następująca macierz 3-by-3. Produkt jest obliczany przez pomnożenie wierszy A przez kolumny elementów B według elementu.
 
-![3&#45;&#45;3 matrycy produktu](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;&#45;3 matrycy produktu")
+![3&#45;według&#45;3 macierzy produktu](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;według&#45;3 macierzy produktu")
 
-### <a name="to-multiply-without-using-c-amp"></a>Mnożenie bez użycia C++ AMP
+### <a name="to-multiply-without-using-c-amp"></a>Aby pomnożyć bez używania C++ AMP
 
-1. Otwórz MatrixMultiply.cpp i użyj następującego kodu, aby zastąpić istniejący kod.
+1. Otwórz MatrixMultiply. cpp i użyj poniższego kodu, aby zamienić istniejący kod.
 
    ```cpp
    #include <iostream>
@@ -107,17 +107,17 @@ A jest matrycą 3 na 2, a B matrycą 2 na 3. Produktem mnożenia A przez B jest 
    }
    ```
 
-   Algorytm jest prostą implementacją definicji mnożenia macierzy. Nie używa żadnych algorytmów równoległych lub wątkowych, aby skrócić czas obliczeń.
+   Algorytm jest prostą implementacją definicji mnożenia macierzy. Nie używa żadnych algorytmów równoległych lub wielowątkowych, aby skrócić czas obliczeń.
 
-1. Na pasku menu wybierz pozycję Zapisz**wszystko** **.** > 
+1. Na pasku menu wybierz kolejno opcje **plik**  >  **Zapisz wszystko**.
 
-1. Wybierz skrót klawiaturowy **F5,** aby rozpocząć debugowanie i sprawdź, czy dane wyjściowe są poprawne.
+1. Wybierz skrót klawiaturowy **F5** , aby rozpocząć debugowanie i sprawdzić, czy dane wyjściowe są poprawne.
 
-1. Wybierz **pozycję Enter,** aby zakończyć działanie aplikacji.
+1. Wybierz **klawisz ENTER** , aby zakończyć działanie aplikacji.
 
-### <a name="to-multiply-by-using-c-amp"></a>Aby pomnożyć za pomocą C++ AMP
+### <a name="to-multiply-by-using-c-amp"></a>Aby pomnożyć przy użyciu C++ AMP
 
-1. W MatrixMultiply.cpp dodaj następujący kod `main` przed metodą.
+1. W MatrixMultiply. cpp Dodaj następujący kod przed `main` metodą.
 
    ```cpp
    void MultiplyWithAMP() {
@@ -152,16 +152,16 @@ A jest matrycą 3 na 2, a B matrycą 2 na 3. Produktem mnożenia A przez B jest 
    }
    ```
 
-   Kod AMP przypomina kod niż AMP. Wywołanie `parallel_for_each` rozpoczyna jeden wątek `product.extent`dla każdego elementu `for` w , i zastępuje pętle dla wiersza i kolumny. Wartość komórki w wierszu i kolumnie `idx`jest dostępna w pliku . Dostęp do elementów `array_view` obiektu można uzyskać `[]` za pomocą operatora i `()` zmiennej indeksu lub do operatora oraz zmiennych wierszy i kolumn. W przykładzie przedstawiono obie metody. Metoda `array_view::synchronize` kopiuje wartości `product` zmiennej z `productMatrix` powrotem do zmiennej.
+   Kod AMP przypomina kod inny niż AMP. Wywołanie `parallel_for_each` uruchamia jeden wątek dla każdego elementu w `product.extent` , i zastępuje **`for`** pętle dla wiersza i kolumny. Wartość komórki w wierszu i kolumnie jest dostępna w `idx` . Dostęp do elementów obiektu można uzyskać za `array_view` pomocą `[]` operatora i zmiennej indeksu albo `()` operatora i zmiennych wierszy i kolumn. Przykład ilustruje obydwie metody. `array_view::synchronize`Metoda kopiuje wartości `product` zmiennej z powrotem do `productMatrix` zmiennej.
 
-1. Dodaj następujące `include` `using` instrukcje i instrukcje w górnej części MatrixMultiply.cpp.
+1. Dodaj poniższe `include` instrukcje i **`using`** w górnej części MatrixMultiply. cpp.
 
    ```cpp
    #include <amp.h>
    using namespace concurrency;
    ```
 
-1. `main` Zmodyfikuj `MultiplyWithAMP` metodę, aby wywołać metodę.
+1. Zmodyfikuj `main` metodę, aby wywołać `MultiplyWithAMP` metodę.
 
    ```cpp
    int main() {
@@ -171,53 +171,53 @@ A jest matrycą 3 na 2, a B matrycą 2 na 3. Produktem mnożenia A przez B jest 
    }
    ```
 
-1. Naciśnij skrót klawiaturowy **Ctrl**+**F5,** aby rozpocząć debugowanie i sprawdzić, czy dane wyjściowe są poprawne.
+1. Naciśnij **Ctrl** + skrót klawiaturowy CTRL**F5** , aby rozpocząć debugowanie i sprawdzić, czy dane wyjściowe są poprawne.
 
-1. Naciśnij **spację,** aby wyjść z aplikacji.
+1. Naciśnij klawisz **spacji** , aby zakończyć działanie aplikacji.
 
-## <a name="multiplication-with-tiling"></a>Mnożenie z kafelkami
+## <a name="multiplication-with-tiling"></a>Mnożenie z rozdzieleniem
 
-Kafli jest techniką, w której dane partycjonowania do równych rozmiarów podzbiorów, które są znane jako kafelki. Trzy rzeczy zmieniają się podczas korzystania z kafelków.
+Dzielenie jest techniką, w której można podzielić dane na podzbiory o równym rozmiarze, które są znane jako kafelki. Trzy rzeczy zmieniają się w przypadku korzystania z dzielenia.
 
-- Można tworzyć `tile_static` zmienne. Dostęp do `tile_static` danych w przestrzeni może być wiele razy szybszy niż dostęp do danych w przestrzeni globalnej. Wystąpienie zmiennej `tile_static` jest tworzony dla każdego kafelka, a wszystkie wątki na kafelku mają dostęp do zmiennej. Podstawową zaletą kafelków jest `tile_static` przyrost wydajności dzięki dostępowi.
+- Można tworzyć `tile_static` zmienne. Dostęp do danych w `tile_static` miejscu może być dużo szybszy niż dostęp do danych w obszarze globalnym. Wystąpienie `tile_static` zmiennej jest tworzone dla każdego kafelka, a wszystkie wątki na kafelku mają dostęp do zmiennej. Główną zaletą dzielenia jest wzrost wydajności spowodowany `tile_static` dostępem.
 
-- Można wywołać [tile_barrier::wait](reference/tile-barrier-class.md#wait) metody, aby zatrzymać wszystkie wątki w jednym kafelku w określonym wierszu kodu. Nie można zagwarantować kolejność, w której wątki będą uruchamiane, tylko, że wszystkie wątki w jednym kafelku zatrzyma się `tile_barrier::wait` na wywołanie przed ich kontynuowaniem wykonywania.
+- Można wywołać metodę [tile_barrier:: wait](reference/tile-barrier-class.md#wait) , aby zatrzymać wszystkie wątki w jednym kafelku w określonym wierszu kodu. Nie można zagwarantować kolejności, w której wątki będą działać, tylko wtedy, gdy wszystkie wątki w jednym kafelku zostaną zatrzymane w wywołaniu `tile_barrier::wait` przed kontynuowaniem wykonywania.
 
-- Masz dostęp do indeksu wątku względem `array_view` całego obiektu i indeksu względem kafelka. Za pomocą indeksu lokalnego, można ułatwić odczytanie i debugowanie kodu.
+- Masz dostęp do indeksu wątku względem całego `array_view` obiektu i indeksu względem kafelka. Za pomocą lokalnego indeksu można ułatwić odczytywanie i debugowanie kodu.
 
-Aby skorzystać z kafelków w mnożeniu macierzy, algorytm musi podzielić macierz na kafelki, a następnie skopiować dane kafelków do zmiennych w `tile_static` celu szybszego dostępu. W tym przykładzie macierz jest podzielony na podmateitryki o równym rozmiarze. Produkt znajduje się przez pomnożenie podmateiów. Dwa macierze i ich produkt w tym przykładzie to:
+Aby skorzystać z dzielenia na fragmenty macierzy, algorytm musi podzielić macierz na kafelki, a następnie skopiować dane kafelków do zmiennych, `tile_static` Aby uzyskać szybszy dostęp. W tym przykładzie macierz jest partycjonowana do podmacierzy o równym rozmiarze. Produkt jest znaleziony przez pomnożenie podmacierzy. W tym przykładzie dwie macierze i ich produkty są następujące:
 
-![4&#45;&#45;4 matrycą A](../../parallel/amp/media/campmatrixatiled.png "4&#45;&#45;4 matrycą A")
+![4&#45;według&#45;4 macierzy A](../../parallel/amp/media/campmatrixatiled.png "4&#45;według&#45;4 macierzy A")
 
-![4&#45;przez&#45;4 matrycę B](../../parallel/amp/media/campmatrixbtiled.png "4&#45;przez&#45;4 matrycę B")
+![4&#45;według&#45;4 macierzy B](../../parallel/amp/media/campmatrixbtiled.png "4&#45;według&#45;4 macierzy B")
 
-![4&#45;&#45;4 matrycy produktu](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;&#45;4 matrycy produktu")
+![4&#45;według&#45;4 macierzy produktu](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;według&#45;4 macierzy produktu")
 
 Macierze są podzielone na cztery macierze 2x2, które są zdefiniowane w następujący sposób:
 
-![4&#45;przez&#45;4 matrycy A podzielony na 2&#45;przez&#45;2 sub&#45;matryce](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;przez&#45;4 matrycy A podzielony na 2&#45;przez&#45;2 sub&#45;matryce")
+![4&#45;w przypadku macierzy&#45;4 podzielonej na 2&#45;przez&#45;2 macierzy&#45;](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;w przypadku macierzy&#45;4 podzielonej na 2&#45;przez&#45;2 macierzy&#45;")
 
-![4&#45;przez&#45;4 macierzy B podzielonych na 2&#45;przez&#45;2 matryce pod&#45;](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;przez&#45;4 macierzy B podzielonych na 2&#45;przez&#45;2 matryce pod&#45;")
+![4&#45;przez&#45;4 macierz B podzielone na 2&#45;przez&#45;2 macierzy&#45;](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;przez&#45;4 macierz B podzielone na 2&#45;przez&#45;2 macierzy&#45;")
 
-Produkt A i B można teraz zapisać i obliczyć w następujący sposób:
+Produkt a i B można teraz napisać i obliczyć w następujący sposób:
 
-![4&#45;&#45;4 matrycą A B podzieloną na 2&#45;przez&#45;2 matryce podrzędne&#45;](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;&#45;4 matrycą A B podzieloną na 2&#45;przez&#45;2 matryce podrzędne&#45;")
+![4&#45;przez&#45;4 macierz B z podziałem na 2&#45;przez&#45;2 macierzy&#45;](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;przez&#45;4 macierz B z podziałem na 2&#45;przez&#45;2 macierzy&#45;")
 
-Ponieważ `a` macierze `h` są matrycami 2x2, wszystkie produkty i ich sumy są również matrycami 2x2. Wynika z tego również, że produkt A i B jest matrycą 4x4, zgodnie z oczekiwaniami. Aby szybko sprawdzić algorytm, oblicz wartość elementu w pierwszym wierszu, pierwszej kolumnie w produkcie. W tym przykładzie będzie to wartość elementu w pierwszym wierszu i pierwszej kolumnie . `ae + bg` Wystarczy obliczyć pierwszą kolumnę, `ae` `bg` pierwszy wiersz i dla każdego terminu. Ta wartość `ae` `(1 * 1) + (2 * 5) = 11`jest . Wartość dla `bg` `(3 * 1) + (4 * 5) = 23`jest . Ostateczna wartość `11 + 23 = 34`jest , co jest poprawne.
+Ponieważ macierze `a` za pomocą `h` są macierzami 2x2, wszystkie produkty i ich sumy są również macierzami 2x2. Następuje również, że produkt a i B jest macierzą 4x4 zgodnie z oczekiwaniami. Aby szybko sprawdzić algorytm, Oblicz wartość elementu w pierwszym wierszu, w pierwszej kolumnie w produkcie. W przykładzie, który będzie wartością elementu w pierwszym wierszu i pierwszą kolumną `ae + bg` . Musisz tylko obliczyć pierwszą kolumnę, pierwszy wiersz `ae` i `bg` dla każdego okresu. Ta wartość dla `ae` jest równa `(1 * 1) + (2 * 5) = 11` . Wartość parametru `bg` is `(3 * 1) + (4 * 5) = 23` . Końcowa wartość to `11 + 23 = 34` , która jest poprawna.
 
 Aby zaimplementować ten algorytm, kod:
 
-- Używa `tiled_extent` obiektu zamiast obiektu `extent` w wywołaniu. `parallel_for_each`
+- Używa `tiled_extent` obiektu zamiast `extent` obiektu w `parallel_for_each` wywołaniu.
 
-- Używa `tiled_index` obiektu zamiast obiektu `index` w wywołaniu. `parallel_for_each`
+- Używa `tiled_index` obiektu zamiast `index` obiektu w `parallel_for_each` wywołaniu.
 
-- Tworzy `tile_static` zmienne do przechowywania podmateiów.
+- Tworzy `tile_static` zmienne do przechowywania podmacierzy.
 
-- Używa metody, `tile_barrier::wait` aby zatrzymać wątki do obliczania produktów podmateich.
+- Używa `tile_barrier::wait` metody do zatrzymania wątków do obliczania produktów podmacierzy.
 
-### <a name="to-multiply-by-using-amp-and-tiling"></a>Aby pomnożyć za pomocą AMP i kafelków
+### <a name="to-multiply-by-using-amp-and-tiling"></a>Aby pomnożyć przy użyciu AMP i rozdzielenie
 
-1. W MatrixMultiply.cpp dodaj następujący kod `main` przed metodą.
+1. W MatrixMultiply. cpp Dodaj następujący kod przed `main` metodą.
 
    ```cpp
    void MultiplyWithTiling() {
@@ -288,24 +288,24 @@ Aby zaimplementować ten algorytm, kod:
    }
    ```
 
-   Ten przykład znacznie różni się od przykładu bez kafli. Kod używa tych kroków koncepcyjnych:
-   1. Skopiuj elementy płytki[0,0] do `a` `locA`. Skopiuj elementy płytki[0,0] do `b` `locB`. Należy `product` zauważyć, że `a` jest `b`sąsiadująco, nie i . W związku z tym można użyć `a, b`globalnych indeksów, aby uzyskać dostęp , i `product`. Wezwanie do `tile_barrier::wait` jest niezbędne. Zatrzymuje wszystkie wątki w kafelku, `locA` `locB` aż oba i są wypełnione.
+   Ten przykład jest znacznie różny niż w przypadku przykładu bez dzielenia. Kod używa następujących kroków koncepcyjnych:
+   1. Skopiuj elementy kafelka [0, 0] z `a` do `locA` . Skopiuj elementy kafelka [0, 0] z `b` do `locB` . Zwróć uwagę `product` , że jest to fragmenty, nie `a` i `b` . W związku z tym, można użyć indeksów globalnych, aby uzyskać dostęp do `a, b` , i `product` . Wywołanie `tile_barrier::wait` jest niezbędne. Powoduje zatrzymanie wszystkich wątków na kafelku do momentu `locA` wypełnienia obu `locB` .
 
-   1. Pomnóż `locA` `locB` i `product`umieść wyniki w .
+   1. Pomnóż `locA` i `locB` Umieść wyniki w `product` .
 
-   1. Skopiuj elementy płytki[0,1] do `a` `locA`. Skopiuj elementy płytki [1,0] `b` do pliku `locB`.
+   1. Skopiuj elementy kafelka [0, 1] z `a` do `locA` . Skopiuj elementy kafelka [1, 0] z `b` do `locB` .
 
-   1. Pomnożyć `locA` i `locB` dodać je `product`do wyników, które są już w .
+   1. Pomnóż `locA` i `locB` Dodaj je do wyników, które już znajdują się w `product` .
 
-   1. Mnożenie płytek[0,0] jest kompletne.
+   1. Mnożenie kafelka [0, 0] zostało zakończone.
 
-   1. Powtórz tę czynność dla pozostałych czterech płytek. Nie ma indeksowania specjalnie dla kafelków i wątki można wykonać w dowolnej kolejności. Jak każdy wątek `tile_static` wykonuje, zmienne są tworzone dla każdego `tile_barrier::wait` kafelka odpowiednio i wywołanie do sterowania przepływem programu.
+   1. Powtórz dla innych czterech kafelków. Dla kafelków nie istnieje indeksowanie, a wątki można wykonać w dowolnej kolejności. W miarę wykonywania każdego wątku `tile_static` zmienne są tworzone dla każdego kafelka odpowiednio i wywołania do `tile_barrier::wait` sterowania przepływem programu.
 
-   1. Podczas dokładnego zbadania algorytmu należy zauważyć, że `tile_static` każdy podmatebator jest dwukrotnie ładowany do pamięci. Ten transfer danych wymaga czasu. Jednak gdy dane są `tile_static` w pamięci, dostęp do danych jest znacznie szybszy. Ponieważ obliczanie produktów wymaga wielokrotnego dostępu do wartości w podmatryczach, istnieje ogólny przyrost wydajności. Dla każdego algorytmu eksperymentowanie jest wymagane, aby znaleźć optymalny algorytm i rozmiar kafelka.
+   1. Analizując algorytm blisko, Zauważ, że każda podmacierz jest ładowana do `tile_static` pamięci dwa razy. Ten transfer danych trwa. Jednak gdy dane są w `tile_static` pamięci, dostęp do danych jest znacznie szybszy. Ponieważ Obliczanie produktów wymaga powtarzanego dostępu do wartości w podmacierzy, istnieje ogólny wzrost wydajności. Dla każdego algorytmu eksperymentowanie jest wymagane, aby znaleźć optymalny algorytm i rozmiar kafelka.
 
-   W przykładach innych niż AMP i innych niż kafelki każdy element A i B jest dostępny cztery razy z pamięci globalnej, aby obliczyć produkt. W przykładzie kafelka każdy element jest dostępny dwa razy `tile_static` z pamięci globalnej i cztery razy z pamięci. Nie jest to znaczący wzrost wydajności. Jednakże, jeśli A i B były matrycami 1024x1024, a rozmiar płytek 16, nastąpiłby znaczny wzrost wydajności. W takim przypadku każdy element zostanie `tile_static` skopiowany do pamięci tylko `tile_static` 16 razy i dostęp z pamięci 1024 razy.
+   W przykładach innych niż AMP i nienależących do kafelków każdy element A i B jest dostępny cztery razy z pamięci globalnej w celu obliczenia produktu. W przykładzie kafelka każdy element jest dostępny dwa razy z pamięci globalnej i cztery razy z `tile_static` pamięci. To nie jest znaczący wzrost wydajności. Jeśli jednak a i B były macierzami 1024x1024, a rozmiar kafelka wynosi 16, nastąpi znaczący wzrost wydajności. W takim przypadku każdy element zostałby skopiowany do `tile_static` pamięci tylko 16 razy i dostęp do `tile_static` pamięci 1024 razy.
 
-1. Zmodyfikuj `MultiplyWithTiling` metodę główną, aby wywołać metodę, jak pokazano.
+1. Zmodyfikuj metodę Main, aby wywołać `MultiplyWithTiling` metodę, jak pokazano.
 
    ```cpp
    int main() {
@@ -316,11 +316,11 @@ Aby zaimplementować ten algorytm, kod:
    }
    ```
 
-1. Naciśnij skrót klawiaturowy **Ctrl**+**F5,** aby rozpocząć debugowanie i sprawdzić, czy dane wyjściowe są poprawne.
+1. Naciśnij **Ctrl** + skrót klawiaturowy CTRL**F5** , aby rozpocząć debugowanie i sprawdzić, czy dane wyjściowe są poprawne.
 
-1. Naciśnij **spację,** aby wyjść z aplikacji.
+1. Naciśnij klawisz **spacji** , aby zakończyć działanie aplikacji.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Przewodnik: debugowanie aplikacji C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)

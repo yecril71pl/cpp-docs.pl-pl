@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: ae6fcbbcbb1a526dbba857fc9bfa2da5eb897c73
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 108bbbbb7fcb491ecc9ed278c5f7d5002ad02ef3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404309"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231861"
 ---
 # <a name="cbutton-class"></a>Klasa CButton
 
@@ -170,7 +170,7 @@ Potencjalne wpisy mapy komunikatów są następujące:
 
 Jeśli utworzysz `CButton` obiekt z zasobu okna dialogowego, `CButton` obiekt zostanie automatycznie zniszczony, gdy użytkownik zamknie okno dialogowe.
 
-Jeśli utworzysz `CButton` obiekt w oknie, może być konieczne jego zniszczenie. Jeśli obiekt jest tworzony `CButton` na stercie przy użyciu **nowej** funkcji, należy wywołać metodę **delete** dla obiektu, aby zniszczyć go, gdy użytkownik zamknie formant przycisku systemu Windows. Jeśli obiekt zostanie utworzony `CButton` na stosie lub osadzony w obiekcie okna dialogowego nadrzędnym, zostanie zniszczony automatycznie.
+Jeśli utworzysz `CButton` obiekt w oknie, może być konieczne jego zniszczenie. Jeśli obiekt jest tworzony `CButton` na stercie przy użyciu **`new`** funkcji, należy wywołać **`delete`** obiekt, aby zniszczyć go, gdy użytkownik zamknie formant przycisku systemu Windows. Jeśli obiekt zostanie utworzony `CButton` na stosie lub osadzony w obiekcie okna dialogowego nadrzędnym, zostanie zniszczony automatycznie.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -1114,7 +1114,7 @@ Zwraca wartość TRUE dla sukcesu, FALSE w przypadku błędu.
 
 Ta funkcja członkowska emuluje funkcjonalność komunikatu BCM_SETTEXTMARGIN, zgodnie z opisem w sekcji [przyciski](/windows/win32/controls/buttons) Windows SDK.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>

@@ -1,21 +1,21 @@
 ---
-title: '&lt;nowe funkcje&gt;'
+title: '&lt;nowe &gt; funkcje'
 ms.date: 11/04/2016
 f1_keywords:
 - new/std::get_new_handler
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: c912e5be07ea0ebdd3148d30c80c39a5f8cfa1a5
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6b51a5bcbb9c90370cef1391d4020862d2e2cefd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419841"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212179"
 ---
-# <a name="ltnewgt-functions"></a>&lt;nowe funkcje&gt;
+# <a name="ltnewgt-functions"></a>&lt;nowe &gt; funkcje
 
-## <a name="get_new_handler"></a>get_new_handler
+## <a name="get_new_handler"></a><a name="get_new_handler"></a>get_new_handler
 
 ```cpp
 new_handler get_new_handler() noexcept;
@@ -23,9 +23,9 @@ new_handler get_new_handler() noexcept;
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca bieżący `new_handler`.
+Zwraca bieżącą wartość `new_handler` .
 
-## <a name="launder"></a>brudn
+## <a name="launder"></a><a name="launder"></a>brudn
 
 ```cpp
 template <class T>
@@ -34,12 +34,12 @@ template <class T>
 
 ### <a name="parameters"></a>Parametry
 
-\ *PTR*
+*PTR*\
 Adres bajtu w pamięci, który zawiera obiekt, którego typ jest podobny do *T*.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość typu *T\** , która wskazuje na X.
+Wartość typu *T \* * , która wskazuje na X.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -59,9 +59,9 @@ const int b = p->n; // undefined behavior
 const int c = std::launder(p)->n; // OK
 ```
 
-## <a name="nothrow"></a>nothrow
+## <a name="nothrow"></a><a name="nothrow"></a>nothrow
 
-Zawiera obiekt, który ma być używany jako argument dla wersji " **nothrow** " **nowych** i **usuniętych**.
+Dostarcza obiekt, który ma być używany jako argument dla **`nothrow`** wersji **`new`** i **`delete`** .
 
 ```cpp
 extern const std::nothrow_t nothrow;
@@ -73,9 +73,9 @@ Obiekt jest używany jako argument funkcji do dopasowania do typu parametru [std
 
 ### <a name="example"></a>Przykład
 
-Zobacz [operator new](../standard-library/new-operators.md#op_new) i [operator new&#91; ](../standard-library/new-operators.md#op_new_arr) , aby zobaczyć przykłady użycia `std::nothrow_t` jako parametru funkcji.
+Zobacz [operator new](../standard-library/new-operators.md#op_new) i [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) , aby poznać przykłady `std::nothrow_t` użycia jako parametru funkcji.
 
-## <a name="set_new_handler"></a>set_new_handler
+## <a name="set_new_handler"></a><a name="set_new_handler"></a>set_new_handler
 
 Instaluje funkcję użytkownika, która ma być wywoływana, gdy **operator new** nie powiedzie się w trakcie próby przydzielenia pamięci.
 
@@ -86,9 +86,9 @@ new_handler set_new_handler(new_handler Pnew) throw();
 ### <a name="parameters"></a>Parametry
 
 *Pnew*\
-`new_handler`, które mają zostać zainstalowane.
+`new_handler`Do zainstalowania.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 0 pierwszego wywołania i poprzedni `new_handler` przy kolejnych wywołaniach.
 

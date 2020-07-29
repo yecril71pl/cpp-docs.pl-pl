@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 1b084cab0e985f9ab8c593e22d972913130e4380
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: c29178c9640aa9f9eb70e03f624bcd54ab96b42c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813612"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231575"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Przewodnik: Tworzenie tradycyjnej aplikacji klasycznej systemu Windows (C++)
 
@@ -141,9 +141,9 @@ Następnie dowiesz się, jak utworzyć kod dla aplikacji klasycznych systemu Win
    Aby uzyskać informacje na temat parametrów i wartości zwracanej przez tę funkcję, zobacz [WinMain Entry Point](/windows/win32/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
-   > Jakie dodatkowe słowa są takie same, jak `CALLBACK` , lub `HINSTANCE` `_In_` ? Tradycyjny interfejs API systemu Windows używa wstępnie zdefiniowanych w tym samym makr elementów typedef i preprocesora w celu poszerzenia niektórych szczegółów typów i kodu specyficznego dla platformy, takich jak Konwencje wywoływania, deklaracje **__declspec** i dyrektywy pragma kompilatora. W programie Visual Studio można użyć funkcji IntelliSense [Quick info](/visualstudio/ide/using-intellisense#quick-info) , aby zobaczyć, co definiuje te definicje typów i makr. Umieść wskaźnik myszy nad wyrazem zainteresowania lub wybierz go, a następnie naciśnij klawisze **Ctrl** + **K**, **Ctrl** + **i** dla małego okna podręcznego, które zawiera definicję. Aby uzyskać więcej informacji, zobacz [Korzystanie z funkcji IntelliSense](/visualstudio/ide/using-intellisense). Parametry i typy zwracane często używają *adnotacji sal* , aby ułatwić przechwytywanie błędów programistycznych. Aby uzyskać więcej informacji, zobacz [Używanie adnotacji sal w celu zmniejszenia wad kodu C/C++](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Jakie dodatkowe słowa są takie same, jak `CALLBACK` , lub `HINSTANCE` `_In_` ? Tradycyjny interfejs API systemu Windows używa w szerokim stopniu elementów typedef i preprocesora, aby uzyskać streszczenie niektórych szczegółów typów i kodu specyficznego dla platformy, takich jak Konwencje wywoływania, **`__declspec`** deklaracje i dyrektywy pragma kompilatora. W programie Visual Studio można użyć funkcji IntelliSense [Quick info](/visualstudio/ide/using-intellisense#quick-info) , aby zobaczyć, co definiuje te definicje typów i makr. Umieść wskaźnik myszy nad wyrazem zainteresowania lub wybierz go, a następnie naciśnij klawisze **Ctrl** + **K**, **Ctrl** + **i** dla małego okna podręcznego, które zawiera definicję. Aby uzyskać więcej informacji, zobacz [Korzystanie z funkcji IntelliSense](/visualstudio/ide/using-intellisense). Parametry i typy zwracane często używają *adnotacji sal* , aby ułatwić przechwytywanie błędów programistycznych. Aby uzyskać więcej informacji, zobacz [Używanie adnotacji sal w celu zmniejszenia wad kodu C/C++](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
-1. Programy klasyczne systemu Windows wymagają &lt; systemu Windows. h>. &lt;Używanie TCHAR. h> definiuje `TCHAR` makro, które w końcu jest rozpoznawane jako **wchar_t** , jeśli symbol Unicode jest zdefiniowany w projekcie, w przeciwnym razie jest rozpoznawany jako **char**.  Jeśli zawsze kompilujesz przy użyciu standardu UNICODE, nie potrzebujesz używanie TCHAR i możesz bezpośrednio używać **wchar_t** .
+1. Programy klasyczne systemu Windows wymagają &lt; systemu Windows. h>. &lt;Używanie TCHAR. h> definiuje `TCHAR` makro, które jest rozpoznawane jako **`wchar_t`** symbol Unicode w projekcie, w przeciwnym razie jest rozpoznawane jako **`char`** .  Jeśli zawsze kompilujesz przy użyciu standardu UNICODE, nie potrzebujesz używanie TCHAR i możesz bezpośrednio z nich korzystać **`wchar_t`** .
 
    ```cpp
    #include <windows.h>

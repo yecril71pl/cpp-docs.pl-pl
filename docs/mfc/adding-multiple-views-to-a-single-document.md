@@ -7,12 +7,12 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: 83bb7e54567319a7af4bd3d8a6bf02256fef68fb
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 95de3a582c3d45db858e2b4bce0268e1dab63931
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623353"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215975"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Dodawanie wielu widoków do pojedynczego dokumentu
 
@@ -65,7 +65,7 @@ Tworzenie nowej klasy widoku jest łatwe przy użyciu **nowej klasy** polecenie 
 
 Po dodaniu klasy do projektu należy zmienić dostępność niektórych elementów członkowskich klasy widoku.
 
-Modyfikuj *NEWVIEW. H* przez zmianę specyfikatora dostępu z **chronionego** na **publiczny** dla konstruktora i destruktora. Pozwala to na dynamiczne tworzenie i niszczenie klasy oraz modyfikowanie wyglądu widoku, zanim będzie widoczny.
+Modyfikuj *NEWVIEW. H* przez zmianę specyfikatora dostępu z **`protected`** na **`public`** dla konstruktora i destruktora. Pozwala to na dynamiczne tworzenie i niszczenie klasy oraz modyfikowanie wyglądu widoku, zanim będzie widoczny.
 
 Zapisz zmiany i przejdź do następnego kroku.
 
@@ -97,6 +97,6 @@ Ostatni krok polega na dodaniu kodu, który wywołuje `SwitchView` metodę, gdy 
 
 Aby uzyskać więcej informacji na temat dodawania nowych elementów menu i funkcji programu obsługi poleceń, zobacz [programy obsługi dla poleceń i powiadomień o kontrolkach](handlers-for-commands-and-control-notifications.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Architektura dokumentu/widoku](document-view-architecture.md)

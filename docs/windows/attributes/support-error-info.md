@@ -1,17 +1,17 @@
 ---
-title: support_error_info (C++ atrybut com)
+title: support_error_info (atrybut C++ COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.support_error_info
 helpviewer_keywords:
 - support_error_info attribute
 ms.assetid: 20a2b55c-4738-4b35-a71d-e5e9c3a7e3bc
-ms.openlocfilehash: e61ef2efbdc4039f496d7ffbcccc37cc8d111935
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f23241cf5478fa52d9d649acfb4c836b8b9d8f13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166149"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211960"
 ---
 # <a name="support_error_info"></a>support_error_info
 
@@ -26,17 +26,17 @@ Implementuje obsługę zwracania szczegółowych błędów.
 ### <a name="parameters"></a>Parametry
 
 *error_interface*<br/>
-Identyfikator interfejsu implementującego `IErrorInfo`.
+Identyfikator implementujący interfejs `IErrorInfo` .
 
 ## <a name="remarks"></a>Uwagi
 
-Atrybut **support_error_info** C++ implementuje obsługę zwracania szczegółowych błędów kontekstowych napotkanych przez obiekt docelowy dla klienta. Aby obiekt mógł obsłużyć błędy, metody interfejsu `IErrorInfo` muszą być implementowane przez obiekt. Aby uzyskać więcej informacji, zobacz [Obsługa IDispatch i IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md).
+Atrybut **support_error_info** języka C++ implementuje obsługę zwracania szczegółowych, kontekstowych błędów, które są napotkane przez obiekt docelowy dla klienta. Aby obiekt mógł obsłużyć błędy, metody `IErrorInfo` interfejsu muszą być implementowane przez obiekt. Aby uzyskać więcej informacji, zobacz [Obsługa IDispatch i IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md).
 
 Ten atrybut dodaje klasę [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) jako klasę bazową do obiektu docelowego. Powoduje to wykonanie domyślnej implementacji `ISupportErrorInfo` i może być używane, gdy pojedynczy interfejs generuje błędy w obiekcie.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod dodaje domyślną obsługę interfejsu `ISupportErrorInfo` do obiektu `CMyClass`.
+Poniższy kod dodaje domyślną obsługę `ISupportErrorInfo` interfejsu do `CMyClass` obiektu.
 
 ```cpp
 // cpp_attr_ref_support_error_info.cpp
@@ -64,14 +64,14 @@ class CMyClass
 
 |||
 |-|-|
-|**Dotyczy**|**class**|
-|**Powtarzalne**|Yes|
-|**Wymagane atrybuty**|None|
-|**Nieprawidłowe atrybuty**|None|
+|**Dotyczy**|**`class`**|
+|**Powtarzalne**|Tak|
+|**Wymagane atrybuty**|Brak|
+|**Nieprawidłowe atrybuty**|Brak|
 
 Aby uzyskać więcej informacji na temat kontekstów atrybutów, zobacz [konteksty atrybutów](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Atrybuty COM](com-attributes.md)<br/>
 [Atrybuty klasy](class-attributes.md)

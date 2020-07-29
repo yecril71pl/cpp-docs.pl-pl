@@ -11,28 +11,28 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: b7eb3f3b-82c1-48a2-8e63-66bad7397b46
-ms.openlocfilehash: 954088955a3f1530bb298aadbc35c7dd74150b7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df880ed64fa472ff55eb5ee0d17caacf56228ab6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315667"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211895"
 ---
-# <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>/Zc:strictStrings (Wyłączanie konwersji typów literału ciągu)
+# <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>`/Zc:strictStrings`(Wyłącz konwersję typu literału ciągu)
 
-Jeśli zostanie określony, kompilator wymaga ścisłej `const`-zgodności dla wskaźników, zainicjowanej za pomocą literałów ciągów znaków.
+Gdy jest określony, kompilator wymaga ścisłej zgodności **`const`** dla wskaźników inicjowanych za pomocą literałów ciągów.
 
 ## <a name="syntax"></a>Składnia
 
-> **/Zc:strictStrings**[**-**]
+> **`/Zc:strictStrings`**[**`-`**]
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli **/Zc: strictstrings** jest określony, kompilator wymusza standardowe C++ `const` wymagania kwalifikacyjne literałów ciągów jako typ "tablica `const char`" lub "tablica `const wchar_t`", w zależności od deklaracji. Literały ciągów są niezmienne i próba zmodyfikowania zawartości jednego powoduje błąd naruszenia zasad dostępu w czasie wykonywania. Musisz zadeklarować wskaźnik ciągu jako `const` go zainicjować za pomocą literału ciągu lub użyć jawnego `const_cast` zainicjować innej niż`const` wskaźnika. Domyślnie lub jeśli **/Zc:strictStrings-** jest określony, kompilator nie Wymuszaj standard C++ `const` kwalifikacje dla wskaźników ciągu zainicjowanych za pomocą literałów ciągów znaków.
+Jeśli **`/Zc:strictStrings`** jest określony, kompilator wymusza standardowe kwalifikacje języka C++ **`const`** dla literałów ciągów, jako typ "array of `const char` " lub "array of" `const wchar_t` , w zależności od deklaracji. Literały ciągu są niezmienne, a próba zmodyfikowania zawartości jednego wyniku powoduje błąd naruszenia zasad dostępu w czasie wykonywania. Należy zadeklarować wskaźnik ciągu jako **`const`** do zainicjowania go za pomocą literału ciągu lub użyć jawnie **`const_cast`** do zainicjowania wskaźnika, który nie jest **`const`** wskaźnikiem. Domyślnie, lub jeśli **`/Zc:strictStrings-`** jest określony, kompilator nie wymusza standardowych kwalifikacji języka C++ **`const`** dla wskaźników ciągu inicjowanych za pomocą literałów ciągów.
 
-**/Zc: strictstrings** opcja jest domyślnie wyłączona. [/ Permissive-](permissive-standards-conformance.md) — opcja kompilatora niejawnie ustawia tę opcję, ale może być zastąpiona przy użyciu **/Zc:strictStrings-**.
+**`/Zc:strictStrings`** Opcja jest domyślnie wyłączona. [`/permissive-`](permissive-standards-conformance.md)Opcja kompilatora niejawnie ustawia tę opcję, ale można ją zastąpić przy użyciu **`/Zc:strictStrings-`** .
 
-Użyj **/Zc: strictstrings** opcję, aby uniemożliwić kompilacji niepoprawnego kodu. Ten przykład pokazuje, jak prosty błąd w deklaracji prowadzi do awarii w czasie wykonywania:
+Użyj **`/Zc:strictStrings`** opcji, aby zapobiec kompilacji nieprawidłowego kodu. Ten przykład pokazuje, jak prosta błąd deklaracji prowadzi do awarii w czasie wykonywania:
 
 ```cpp
 // strictStrings_off.cpp
@@ -43,7 +43,7 @@ int main() {
 }
 ```
 
-Gdy **/Zc: strictstrings** jest włączone, ten sam kod zgłasza błąd w deklaracji `str`.
+Gdy **`/Zc:strictStrings`** jest włączona, ten sam kod raportuje błąd w deklaracji `str` .
 
 ```cpp
 // strictStrings_on.cpp
@@ -55,21 +55,21 @@ int main() {
 }
 ```
 
-Jeśli używasz `auto` Aby zadeklarować wskaźnik ciągu, kompilator tworzy poprawną `const` deklarację typu wskaźnika dla Ciebie. Podjęto próbę zmodyfikowania zawartości `const` wskaźnik jest zgłaszana przez kompilator jako błąd.
+Jeśli używasz **`auto`** , aby zadeklarować wskaźnik ciągu, kompilator tworzy poprawną **`const`** deklarację typu wskaźnika. Próba zmodyfikowania zawartości **`const`** wskaźnika jest raportowana przez kompilator jako błąd.
 
 > [!NOTE]
-> Standardowa biblioteka C++ w programie Visual Studio 2013 nie obsługuje **/Zc: strictstrings** kompilacji — opcja kompilatora podczas debugowania. Jeśli widzisz kilka [C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md) dane wyjściowe błędów w kompilacji, może to być przyczyną.
+> Standardowa biblioteka języka C++ w Visual Studio 2013 nie obsługuje **`/Zc:strictStrings`** opcji kompilatora w kompilacjach debugowania. Jeśli widzisz kilka błędów [C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md) w danych wyjściowych kompilacji, może to być przyczyną problemu.
 
-Aby uzyskać więcej informacji na temat problemów ze zgodnością w języku Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
+Aby uzyskać więcej informacji na temat problemów ze zgodnością w Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz projekt **stron właściwości** okno dialogowe. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **właściwości konfiguracji** > **C/C++** > **wiersza polecenia** stronę właściwości.
+1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja wiersza polecenia**C/C++**  >  **Command Line** .
 
-1. Modyfikowanie **dodatkowe opcje** właściwości do uwzględnienia **/Zc: strictstrings** , a następnie wybierz **OK**.
+1. Zmodyfikuj właściwość **Opcje dodatkowe** , aby uwzględnić **`/Zc:strictStrings`** , a następnie wybierz przycisk **OK**.
 
 ## <a name="see-also"></a>Zobacz także
 
-[/Zc (Zgodność)](zc-conformance.md)<br/>
+[`/Zc`Zgodności](zc-conformance.md)<br/>

@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-ms.openlocfilehash: dc9eacad744536e640417a4ebf51b975bd05bcc7
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 39aebd9d82f098225c1275ac6f43d64fc1ce3ba8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142032"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231718"
 ---
 # <a name="itarget-class"></a>ITarget — Klasa
 
-Klasa `ITarget` jest interfejsem dla wszystkich bloków docelowych. Bloki docelowe zużywają komunikaty oferowane przez `ISource` bloków.
+`ITarget`Klasa jest interfejsem dla wszystkich bloków docelowych. Bloki docelowe zużywają komunikaty oferowane im przez `ISource` bloki.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,39 +33,39 @@ class ITarget;
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
+*T*<br/>
 Typ danych ładunku w komunikatach akceptowanych przez blok docelowy.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|`filter_method`|Podpis dowolnej metody używanej przez blok, który zwraca wartość `bool`, aby określić, czy proponowany komunikat powinien zostać zaakceptowany.|
-|`type`|Alias typu dla `T`.|
+|`filter_method`|Podpis dowolnej metody używanej przez blok, który zwraca wartość, **`bool`** Aby określić, czy proponowany komunikat powinien zostać zaakceptowany.|
+|`type`|Alias typu dla `T` .|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[~ ITarget destruktor](#dtor)|Niszczy obiekt `ITarget`.|
+|[~ ITarget destruktor](#dtor)|Niszczy `ITarget` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[rozpowszechni](#propagate)|Gdy jest zastępowany w klasie pochodnej, asynchronicznie przekazuje komunikat z bloku źródłowego do tego bloku docelowego.|
 |[Wyślij](#send)|Gdy jest zastępowany w klasie pochodnej, synchronicznie przekazuje komunikat do bloku docelowego.|
-|[supports_anonymous_source](#supports_anonymous_source)|Gdy jest zastępowany w klasie pochodnej, zwraca wartość PRAWDA lub FAŁSZ w zależności od tego, czy blok komunikatów akceptuje komunikaty oferowane przez źródło, które nie jest z nim połączone. Jeśli zastąpiona metoda zwraca **wartość true**, obiekt docelowy nie może odłożyć proponowanego komunikatu, ponieważ użycie przełożonego komunikatu w późniejszym czasie wymaga zidentyfikowania źródła w rejestrze linku źródłowego.|
+|[supports_anonymous_source](#supports_anonymous_source)|Gdy jest zastępowany w klasie pochodnej, zwraca wartość PRAWDA lub FAŁSZ w zależności od tego, czy blok komunikatów akceptuje komunikaty oferowane przez źródło, które nie jest z nim połączone. Jeśli zastąpiona metoda zwraca **`true`** , obiekt docelowy nie może odłożyć proponowanego komunikatu, ponieważ użycie przełożonego komunikatu w późniejszym czasie wymaga, aby źródło było identyfikowane w rejestrze linków źródłowych.|
 
 ### <a name="protected-methods"></a>Metody chronione
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[link_source](#link_source)|Gdy jest zastępowany w klasie pochodnej, łączy określony blok źródłowy z tym blokiem `ITarget`.|
-|[unlink_source](#unlink_source)|Gdy jest zastępowany w klasie pochodnej, odłącza określony blok źródłowy od tego bloku `ITarget`.|
-|[unlink_sources](#unlink_sources)|Gdy jest zastępowany w klasie pochodnej, odłącza wszystkie bloki źródłowe z tego bloku `ITarget`.|
+|[link_source](#link_source)|Gdy jest zastępowany w klasie pochodnej, łączy określony blok źródłowy z tym `ITarget` blokiem.|
+|[unlink_source](#unlink_source)|Gdy jest zastępowany w klasie pochodnej, odłącza określony blok źródłowy od tego `ITarget` bloku.|
+|[unlink_sources](#unlink_sources)|Gdy jest zastępowany w klasie pochodnej, odłącza wszystkie bloki źródłowe od tego `ITarget` bloku.|
 
 ## <a name="remarks"></a>Uwagi
 
@@ -81,17 +81,17 @@ Aby uzyskać więcej informacji, zobacz [asynchroniczne bloki komunikatów](../.
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="dtor"></a>~ ITarget
+## <a name="itarget"></a><a name="dtor"></a>~ ITarget
 
-Niszczy obiekt `ITarget`.
+Niszczy `ITarget` obiekt.
 
 ```cpp
 virtual ~ITarget();
 ```
 
-## <a name="link_source"></a>link_source
+## <a name="link_source"></a><a name="link_source"></a>link_source
 
-Gdy jest zastępowany w klasie pochodnej, łączy określony blok źródłowy z tym blokiem `ITarget`.
+Gdy jest zastępowany w klasie pochodnej, łączy określony blok źródłowy z tym `ITarget` blokiem.
 
 ```cpp
 virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
@@ -100,13 +100,13 @@ virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
 ### <a name="parameters"></a>Parametry
 
 *_PSource*<br/>
-Blok `ISource` połączony z tym blokiem `ITarget`.
+`ISource`Blok połączony z tym `ITarget` blokiem.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja nie powinna być wywoływana bezpośrednio w bloku `ITarget`. Bloki powinny być połączone ze sobą przy użyciu metody `link_target` w blokach `ISource`, co spowoduje wywołanie metody `link_source` w odpowiadającym jej miejscu docelowym.
+Ta funkcja nie powinna być wywoływana bezpośrednio w `ITarget` bloku. Bloki powinny być połączone przy użyciu `link_target` metody w `ISource` blokach, co spowoduje wywołanie `link_source` metody w odpowiadającym jej miejscu docelowym.
 
-## <a name="propagate"></a>rozpowszechni
+## <a name="propagate"></a><a name="propagate"></a>rozpowszechni
 
 Gdy jest zastępowany w klasie pochodnej, asynchronicznie przekazuje komunikat z bloku źródłowego do tego bloku docelowego.
 
@@ -119,20 +119,20 @@ virtual message_status propagate(
 ### <a name="parameters"></a>Parametry
 
 *_PMessage*<br/>
-Wskaźnik do obiektu `message`.
+Wskaźnik do `message` obiektu.
 
 *_PSource*<br/>
 Wskaźnik do bloku źródłowego oferującego komunikat.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 [Message_status](concurrency-namespace-enums.md) wskazanie elementu docelowego, który zdecydował się wykonać wraz z wiadomością.
 
 ### <a name="remarks"></a>Uwagi
 
-Metoda zgłasza wyjątek [invalid_argument](../../../standard-library/invalid-argument-class.md) , jeśli parametr `_PMessage` lub `_PSource` jest `NULL`.
+Metoda zgłasza wyjątek [invalid_argument](../../../standard-library/invalid-argument-class.md) , jeśli `_PMessage` `_PSource` parametr lub jest `NULL` .
 
-## <a name="send"></a>Wyślij
+## <a name="send"></a><a name="send"></a>Wyślij
 
 Gdy jest zastępowany w klasie pochodnej, synchronicznie przekazuje komunikat do bloku docelowego.
 
@@ -145,38 +145,38 @@ virtual message_status send(
 ### <a name="parameters"></a>Parametry
 
 *_PMessage*<br/>
-Wskaźnik do obiektu `message`.
+Wskaźnik do `message` obiektu.
 
 *_PSource*<br/>
 Wskaźnik do bloku źródłowego oferującego komunikat.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 [Message_status](concurrency-namespace-enums.md) wskazanie elementu docelowego, który zdecydował się wykonać wraz z wiadomością.
 
 ### <a name="remarks"></a>Uwagi
 
-Metoda zgłasza wyjątek [invalid_argument](../../../standard-library/invalid-argument-class.md) , jeśli parametr `_PMessage` lub `_PSource` jest `NULL`.
+Metoda zgłasza wyjątek [invalid_argument](../../../standard-library/invalid-argument-class.md) , jeśli `_PMessage` `_PSource` parametr lub jest `NULL` .
 
-Użycie metody `send` poza inicjacją komunikatu i propagowanie komunikatów w sieci jest niebezpieczne i może prowadzić do zakleszczenia.
+Użycie `send` metody poza inicjacją komunikatów i propagowanie komunikatów w sieci jest niebezpieczne i może prowadzić do zakleszczenia.
 
 Gdy `send` zwraca, wiadomość została już zaakceptowana i przekazana do bloku docelowego lub została odrzucona przez element docelowy.
 
-## <a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
 
-Gdy jest zastępowany w klasie pochodnej, zwraca wartość PRAWDA lub FAŁSZ w zależności od tego, czy blok komunikatów akceptuje komunikaty oferowane przez źródło, które nie jest z nim połączone. Jeśli zastąpiona metoda zwraca **wartość true**, obiekt docelowy nie może odłożyć proponowanego komunikatu, ponieważ użycie przełożonego komunikatu w późniejszym czasie wymaga, aby źródło było identyfikowane w rejestrze z linkiem kwaśnym.
+Gdy jest zastępowany w klasie pochodnej, zwraca wartość PRAWDA lub FAŁSZ w zależności od tego, czy blok komunikatów akceptuje komunikaty oferowane przez źródło, które nie jest z nim połączone. Jeśli zastąpiona metoda zwraca **`true`** , obiekt docelowy nie może odłożyć proponowanego komunikatu, ponieważ użycie przełożonego komunikatu w późniejszym czasie wymaga, aby źródło było identyfikowane w rejestrze linku do zasobów.
 
 ```cpp
 virtual bool supports_anonymous_source();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli blok może akceptować komunikat z źródła, które nie jest z nim **powiązane, w przeciwnym razie** .
+**`true`** Jeśli blok może akceptować komunikat z źródła, które nie jest z nim połączone **`false`** .
 
-## <a name="unlink_source"></a>unlink_source
+## <a name="unlink_source"></a><a name="unlink_source"></a>unlink_source
 
-Gdy jest zastępowany w klasie pochodnej, odłącza określony blok źródłowy od tego bloku `ITarget`.
+Gdy jest zastępowany w klasie pochodnej, odłącza określony blok źródłowy od tego `ITarget` bloku.
 
 ```cpp
 virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
@@ -185,21 +185,21 @@ virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 ### <a name="parameters"></a>Parametry
 
 *_PSource*<br/>
-Blok `ISource` jest odłączany od tego bloku `ITarget`.
+`ISource`Blok jest odłączany od tego `ITarget` bloku.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja nie powinna być wywoływana bezpośrednio w bloku `ITarget`. Bloki powinny być rozłączone przy użyciu metod `unlink_target` lub `unlink_targets` w blokach `ISource`, które będą wywoływały metodę `unlink_source` w odpowiadającym jej miejscu docelowym.
+Ta funkcja nie powinna być wywoływana bezpośrednio w `ITarget` bloku. Bloki powinny być rozłączone przy `unlink_target` użyciu `unlink_targets` metod lub w `ISource` blokach, które będą wywoływały `unlink_source` metodę w odpowiadającym jej miejscu docelowym.
 
-## <a name="unlink_sources"></a>unlink_sources
+## <a name="unlink_sources"></a><a name="unlink_sources"></a>unlink_sources
 
-Gdy jest zastępowany w klasie pochodnej, odłącza wszystkie bloki źródłowe z tego bloku `ITarget`.
+Gdy jest zastępowany w klasie pochodnej, odłącza wszystkie bloki źródłowe od tego `ITarget` bloku.
 
 ```cpp
 virtual void unlink_sources() = 0;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
-[ISource, klasa](isource-class.md)
+[Klasa ISource](isource-class.md)

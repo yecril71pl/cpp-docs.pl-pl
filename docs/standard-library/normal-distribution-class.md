@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: 2f64f221e0abdf0cd13b44d5f567aa99f9e4af5c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 138011ec4ccf6c010f002d61cdb8ae8b0bac1796
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376220"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212153"
 ---
 # <a name="normal_distribution-class"></a>normal_distribution — Klasa
 
@@ -71,31 +71,31 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*Typ rzeczywisty*\
-Typ wyniku zmiennoprzecinkowego, domyślnie **podwoić**. Możliwe typy można znaleźć w [ \<>losowych ](../standard-library/random.md).
+*Liczba rzeczywista*\
+Typ wyniku zmiennoprzecinkowego, wartość domyślna to **`double`** . Aby zapoznać się z możliwymi typami, zobacz [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon klasy opisuje rozkład, który tworzy wartości typu całkowitego określonego przez użytkownika lub wpisz **dwukrotnie,** jeśli nie jest podany, dystrybuowane zgodnie z rozkładem normalnym. W poniższej tabeli znajdują się łącza do artykułów dotyczących poszczególnych członków.
+Szablon klasy opisuje dystrybucję, która produkuje wartości typu całkowitego określonego przez użytkownika, lub typ **`double`** , jeśli nie jest podany, dystrybuowany zgodnie z rozkładem normalnym. Poniższa tabela zawiera linki do artykułów na temat poszczególnych członków.
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-Właściwość `mean()` działa `stddev()` i zwraca wartości dla przechowywanych parametrów dystrybucji *średniej* i *stddev* odpowiednio.
+Funkcje właściwości `mean()` i `stddev()` zwracają wartości odpowiednio dla przechowywanych parametrów dystrybucji i *StdDev* . *mean*
 
-Element członkowski `param()` właściwości `param_type` ustawia lub zwraca pakiet parametrów przechowywanej dystrybucji.
+Element członkowski właściwości `param()` Ustawia lub zwraca `param_type` przechowywany pakiet parametrów dystrybucji.
 
-`min()` Funkcje `max()` i element członkowski zwracają odpowiednio najmniejszy możliwy wynik i największy możliwy wynik.
+`min()`I `max()` funkcje członkowskie zwracają najmniejszy możliwy wynik i największy możliwy wynik.
 
-Funkcja `reset()` elementu członkowskiego odrzuca wszystkie buforowane wartości, dzięki czemu `operator()` wynik następnego wywołania nie zależy od żadnych wartości uzyskanych z aparatu przed wywołaniem.
+`reset()`Funkcja członkowska odrzuca wszystkie wartości pamięci podręcznej, dzięki czemu wynik następnego wywołania do `operator()` nie zależy od wartości uzyskanych z aparatu przed wywołaniem.
 
-Funkcje `operator()` członkowskie zwracają następną wygenerowaną wartość na podstawie aparatu URNG, z bieżącego pakietu parametrów lub określonego pakietu parametrów.
+`operator()`Funkcje członkowskie zwracają następną wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub z określonym pakietem parametrów.
 
-Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [ \<losowe>](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat klas dystrybucji i ich członków, zobacz [\<random>](../standard-library/random.md) .
 
-Szczegółowe informacje na temat rozkładu normalnego można znaleźć w artykule Wolfram MathWorld [Normal Distribution](https://go.microsoft.com/fwlink/p/?linkid=400924).
+Aby uzyskać szczegółowe informacje na temat rozkładu normalnego, zobacz artykuł Wolfram MathWorld [Normal Distribution](https://go.microsoft.com/fwlink/p/?linkid=400924).
 
 ## <a name="example"></a>Przykład
 
@@ -183,11 +183,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe>
+**Nagłówek:**\<random>
 
 **Przestrzeń nazw:** std
 
-## <a name="normal_distributionnormal_distribution"></a><a name="normal_distribution"></a>normal_distribution::normal_distribution
+## <a name="normal_distributionnormal_distribution"></a><a name="normal_distribution"></a>normal_distribution:: normal_distribution
 
 Konstruuje dystrybucję.
 
@@ -198,24 +198,24 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*Oznacza*\
-Parametr `mean` rozkładu.
+*zależność*\
+`mean`Parametr rozkładu.
 
-*stddev ( stddev )*\
-Parametr `stddev` rozkładu.
+*stddev*\
+`stddev`Parametr rozkładu.
 
-*Parm*\
-Struktura parametrów używana do konstruowania rozkładu.
+*parametr*\
+Struktura parametru używana do konstruowania rozkładu.
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:**`0.0 < stddev`
 
-Pierwszy konstruktor konstruuje `mean` obiekt, którego wartość przechowywana przechowuje *średnią* wartości i której wartość przechowywana `stddev` przechowuje wartość *stddev*.
+Pierwszy Konstruktor konstruuje obiekt, którego przechowywana `mean` wartość przechowuje wartość *średnia* i której przechowywana `stddev` wartość przechowuje wartość *StdDev*.
 
-Drugi konstruktor tworzy obiekt, którego przechowywane parametry są inicjowane z *parm*. Można uzyskać i ustawić bieżące parametry istniejącej `param()` dystrybucji, wywołując funkcję elementu członkowskiego.
+Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżące parametry istniejącej dystrybucji, wywołując `param()` funkcję członkowską.
 
-## <a name="normal_distributionparam_type"></a><a name="param_type"></a>normal_distribution::param_type
+## <a name="normal_distributionparam_type"></a><a name="param_type"></a>normal_distribution::p aram_type
 
 Przechowuje parametry dystrybucji.
 
@@ -233,21 +233,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*Oznacza*\
-Parametr `mean` rozkładu.
+*zależność*\
+`mean`Parametr rozkładu.
 
-*stddev ( stddev )*\
-Parametr `stddev` rozkładu.
+*stddev*\
+`stddev`Parametr rozkładu.
 
-*Prawo*\
-Struktura `param_type` używana do porównania.
+*Kliknij*\
+`param_type`Struktura użyta do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:**`0.0 < stddev`
 
-Ta struktura może być przekazywana do konstruktora klasy `param()` dystrybucji w wystąpieniu, do funkcji elementu `operator()` członkowskiego, aby ustawić przechowywane parametry istniejącej dystrybucji i do użycia zamiast przechowywanych parametrów.
+Tę strukturę można przesłać do konstruktora klasy dystrybucji podczas tworzenia wystąpienia, do `param()` funkcji składowej, aby ustawić przechowywane parametry istniejącej dystrybucji, a także `operator()` użyć zamiast przechowywanych parametrów.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[\<losowe>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

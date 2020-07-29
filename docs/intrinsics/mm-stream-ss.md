@@ -7,16 +7,16 @@ helpviewer_keywords:
 - movntss instruction
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
-ms.openlocfilehash: 005f4f697d64f6ea68b35dc32daf1217be463a2a
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: ef1a2045a20070b667d416175826e5377fe30ef6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217350"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215988"
 ---
 # <a name="_mm_stream_ss"></a>_mm_stream_ss
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Zapisuje 32-bitowe dane w lokalizacji pamięci bez zanieczyszczania pamięci podręcznych.
 
@@ -35,7 +35,7 @@ void _mm_stream_ss(
 określoną Wskaźnik do lokalizacji, w której zapisano dane źródłowe.
 
 *Zewnętrz*\
-podczas Numer 128-bitowy, który zawiera `float` wartość, która ma zostać zapisywana w dolnych bitach 32.
+podczas Numer 128-bitowy, który zawiera wartość, która **`float`** ma zostać zapisywana w dolnych bitach 32.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -47,13 +47,13 @@ Brak.
 |---------------|------------------|
 |`_mm_stream_ss`|SSE4a|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
-Wewnętrznie generuje `movntss` instrukcję. Aby określić obsługę sprzętową dla tej instrukcji, wywołaj `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 `CPUInfo[2] (ECX)`z. Ten bit ma wartość 1, gdy instrukcja jest obsługiwana i 0 w przeciwnym razie.
+Wewnętrznie generuje `movntss` instrukcję. Aby określić obsługę sprzętową dla tej instrukcji, wywołaj `__cpuid` wewnętrzne z `InfoType=0x80000001` i sprawdź bit 6 z `CPUInfo[2] (ECX)` . Ten bit ma wartość 1, gdy instrukcja jest obsługiwana i 0 w przeciwnym razie.
 
-Jeśli uruchamiasz kod, który używa `_mm_stream_ss` wewnętrznego na sprzęcie, który nie `movntss` obsługuje instrukcji, wyniki są nieprzewidywalne.
+Jeśli uruchamiasz kod, który używa `_mm_stream_ss` wewnętrznego na sprzęcie, który nie obsługuje `movntss` instrukcji, wyniki są nieprzewidywalne.
 
 ## <a name="example"></a>Przykład
 

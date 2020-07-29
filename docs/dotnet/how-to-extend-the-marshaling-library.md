@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: ab3b17638e07a54189803c83163db67c5ebf82a5
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 2a3dccd33b7ad2caee64e31e0f79180dda4649be
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988489"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216391"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>Porady: rozszerzanie biblioteki kierowania
 
 W tym temacie wyjaśniono, jak zwiększyć bibliotekę organizowania, aby zapewnić więcej konwersji między typami danych. Użytkownicy mogą rozszerać bibliotekę Marshal dla wszystkich konwersji danych, które nie są obecnie obsługiwane przez bibliotekę.
 
-Bibliotekę Marshal można rozłożyć na dwa sposoby — z [klasą marshal_context](../dotnet/marshal-context-class.md)lub bez niej. Zapoznaj się z [omówieniem organizowania w C++ ](../dotnet/overview-of-marshaling-in-cpp.md) temacie, aby określić, czy nowa konwersja wymaga kontekstu.
+Bibliotekę Marshal można rozłożyć na dwa sposoby — z [klasą marshal_context](../dotnet/marshal-context-class.md)lub bez niej. Zapoznaj się z [omówieniem organizowania w temacie C++](../dotnet/overview-of-marshaling-in-cpp.md) , aby określić, czy nowa konwersja wymaga kontekstu.
 
 W obu przypadkach należy najpierw utworzyć plik dla nowych konwersji do organizowania. Należy to zrobić, aby zachować integralność standardowych plików biblioteki do organizowania. Jeśli chcesz przenieść projekt na inny komputer lub do innego programisty, musisz skopiować nowy plik kierujący razem z resztą projektu. W ten sposób użytkownik otrzymujący projekt będzie zagwarantować otrzymywanie nowych konwersji i nie będzie musiał modyfikować żadnych plików biblioteki.
 
@@ -30,13 +30,13 @@ W obu przypadkach należy najpierw utworzyć plik dla nowych konwersji do organi
 
    - marshal_windows. h dla typów danych systemu Windows.
 
-   - marshal_cppstd. h dla C++ typów danych biblioteki standardowej.
+   - marshal_cppstd. h dla typów danych standardowej biblioteki języka C++.
 
    - marshal_atl. h dla typów danych ATL.
 
-1. Użyj kodu na końcu tych kroków, aby napisać funkcję konwersji. W tym kodzie, do jest typem do przekonwertowania na, z jest typem, z którego ma zostać wykonana konwersja, a `from` jest parametrem do przekonwertowania.
+1. Użyj kodu na końcu tych kroków, aby napisać funkcję konwersji. W tym kodzie, do jest typem do przekonwertowania na, z jest typem, z którego ma zostać wykonana konwersja, i `from` jest parametrem do przekonwertowania.
 
-1. Zastąp komentarz dotyczący logiki konwersji za pomocą kodu, aby przekonwertować parametr `from` na obiekt typu i zwrócić przekonwertowany obiekt.
+1. Zastąp komentarz dotyczący logiki konwersji z kodem, aby przekonwertować `from` parametr na obiekt typu i zwrócić przekonwertowany obiekt.
 
 ```
 namespace msclr {
@@ -59,19 +59,19 @@ namespace msclr {
 
    - marshal_windows. h dla typów danych systemu Windows.
 
-   - marshal_cppstd. h dla C++ typów danych biblioteki standardowej.
+   - marshal_cppstd. h dla typów danych standardowej biblioteki języka C++.
 
    - marshal_atl. h dla typów danych ATL.
 
-1. Użyj kodu na końcu tych kroków, aby napisać funkcję konwersji. W tym kodzie, na jest typem do przekonwertowania, z jest typem, z którego ma zostać wykonana konwersja, `toObject` jest wskaźnikiem, w którym ma być przechowywany wynik, a `fromObject` jest parametrem do przekonwertowania.
+1. Użyj kodu na końcu tych kroków, aby napisać funkcję konwersji. W tym kodzie, do jest typem do przekonwertowania na, z jest typem do przekonwertowania, `toObject` jest wskaźnikiem, w którym ma być przechowywany wynik, i `fromObject` jest parametrem do przekonwertowania.
 
-1. Zastąp komentarz dotyczący inicjowania przy użyciu kodu, aby zainicjować `toPtr` do odpowiedniej pustej wartości. Na przykład, jeśli jest wskaźnikiem, ustaw dla niego wartość `NULL`.
+1. Zastąp komentarz dotyczący inicjowania przy użyciu kodu, aby zainicjować `toPtr` do odpowiedniej pustej wartości. Na przykład, jeśli jest wskaźnikiem, ustaw go na wartość `NULL` .
 
-1. Zastąp komentarz dotyczący logiki konwersji z kodem, aby przekonwertować parametr `from` na obiekt typu *do* . Ten przekonwertowany obiekt będzie przechowywany w `toPtr`.
+1. Zastąp komentarz dotyczący logiki konwersji z kodem, aby przekonwertować `from` parametr na obiekt typu *do* . Ten przekonwertowany obiekt zostanie zapisany w `toPtr` .
 
-1. Zamień komentarz dotyczący ustawienia `toObject` z kodem, aby ustawić `toObject` do konwertowanego obiektu.
+1. Zamień komentarz dotyczący ustawienia na `toObject` kod, który ma zostać ustawiony `toObject` na przekonwertowany obiekt.
 
-1. Zastąp komentarz dotyczący czyszczenia natywnych zasobów za pomocą kodu, aby zwolnić pamięć przydzieloną przez `toPtr`. Jeśli `toPtr` przydzielonej pamięci przy użyciu `new`, użyj `delete` do zwolnienia pamięci.
+1. Zastąp komentarz dotyczący czyszczenia natywnych zasobów za pomocą kodu, aby zwolnić pamięć przydzieloną przez program `toPtr` . W przypadku `toPtr` przydzielenia pamięci za pomocą programu **`new`** Użyj polecenia, **`delete`** Aby zwolnić pamięć.
 
 ```
 namespace msclr {
@@ -156,7 +156,7 @@ int main() {
 }
 ```
 
-W poprzednim przykładzie funkcja `marshal_as` zwraca dojście do przekonwertowanych danych. Zostało to zrobione w celu uniemożliwienia tworzenia dodatkowej kopii danych. Zwrócenie zmiennej bezpośrednio spowodowałoby konieczność ponoszenia niepotrzebnego kosztu wydajności.
+W poprzednim przykładzie `marshal_as` Funkcja zwraca dojście do przekonwertowanych danych. Zostało to zrobione w celu uniemożliwienia tworzenia dodatkowej kopii danych. Zwrócenie zmiennej bezpośrednio spowodowałoby konieczność ponoszenia niepotrzebnego kosztu wydajności.
 
 ```Output
 Managed name: Jeff Smith
@@ -268,4 +268,4 @@ Native zip code: 98111
 
 ## <a name="see-also"></a>Zobacz także
 
-[Omówienie marshalingu w języku C++](../dotnet/overview-of-marshaling-in-cpp.md)
+[Omówienie organizowania w języku C++](../dotnet/overview-of-marshaling-in-cpp.md)

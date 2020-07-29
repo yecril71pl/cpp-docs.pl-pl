@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2482
 ms.assetid: 98c87da2-625c-4cc2-9bf7-78d15921e779
-ms.openlocfilehash: 5afa81369b2cf329baae02bc1309587015946409
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a68c3f06daf977bda4700a293803859d4aa96771
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80205156"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216209"
 ---
 # <a name="compiler-error-c2482"></a>Błąd kompilatora C2482
 
@@ -19,11 +19,11 @@ ms.locfileid: "80205156"
 
 ## <a name="remarks"></a>Uwagi
 
-W kodzie zarządzanym lub WinRT zmienne zadeklarowane przy użyciu atrybutu modyfikatora klasy magazynu [__declspec (wątku)](../../cpp/thread.md) lub [thread_localgo](../../cpp/storage-classes-cpp.md#thread_local) specyfikatora klasy magazynu nie mogą zostać zainicjowane przy użyciu wyrażenia wymagającego oceny w czasie wykonywania. Do zainicjowania `__declspec(thread)` lub `thread_local` danych w tych środowiskach środowiska uruchomieniowego jest wymagane wyrażenie statyczne.
+W kodzie zarządzanym lub WinRT zmienne zadeklarowane przy użyciu atrybutu modyfikatora klasy magazynu [__declspec (wątku)](../../cpp/thread.md) lub [thread_localgo](../../cpp/storage-classes-cpp.md#thread_local) specyfikatora klasy magazynu nie mogą zostać zainicjowane przy użyciu wyrażenia wymagającego oceny w czasie wykonywania. Do inicjowania `__declspec(thread)` lub **`thread_local`** danych w tych środowiskach uruchomieniowych jest wymagane wyrażenie statyczne.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C2482 w kodzie Managed ( **/CLR**) i in WinRT ( **/zw**):
+Poniższy przykład generuje C2482 w kodzie Managed (**/CLR**) i in WinRT (**/zw**):
 
 ```cpp
 // C2482.cpp
@@ -36,4 +36,4 @@ int j = j;   // OK in C++; C error
 Thread int tls_i2 = sizeof( tls_i2 );   // Okay in C and C++
 ```
 
-Aby rozwiązać ten problem, zainicjuj lokalne przechowywanie wątków przy użyciu wyrażenia stałego, **constexpr**lub static. Wykonaj osobno każdą inicjalizację specyficzną dla wątku.
+Aby rozwiązać ten problem, zainicjuj lokalne przechowywanie wątków przy użyciu stałego **`constexpr`** lub statycznego wyrażenia. Wykonaj osobno każdą inicjalizację specyficzną dla wątku.

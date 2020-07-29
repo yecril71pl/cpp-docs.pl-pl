@@ -5,16 +5,16 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: d065364cf6d3ae824098634c070f3651324aa52a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcef52144e4da932e9e1b6acbcd5f2170c4c7f86
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291343"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211947"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (Utwórz plik binarny trybu jądra)
 
-Tworzy plik binarny, który może zostać wykonany w jądrze Windows.
+Tworzy plik binarny, który może być wykonywany w jądrze systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -24,31 +24,31 @@ Tworzy plik binarny, który może zostać wykonany w jądrze Windows.
 
 ## <a name="arguments"></a>Argumenty
 
-**/kernel**<br/>
-Kod w bieżącym projekcie są kompilowane i połączone za pomocą zestawu reguł języka C++, które są specyficzne dla kodu, który będzie uruchamiany w trybie jądra.
+**/Kernel**<br/>
+Kod w bieżącym projekcie jest kompilowany i połączony przy użyciu zestawu reguł języka C++, które są specyficzne dla kodu, który będzie uruchamiany w trybie jądra.
 
-**/Kernel-**<br/>
-Kod w bieżącym projekcie są kompilowane i połączone bez korzystania z reguł języka C++, które są specyficzne dla kodu, który będzie uruchamiany w trybie jądra.
+**/Kernel**<br/>
+Kod w bieżącym projekcie jest kompilowany i łączony bez używania reguł języka C++, które są specyficzne dla kodu, który będzie uruchamiany w trybie jądra.
 
 ## <a name="remarks"></a>Uwagi
 
-Istnieje nie `#pragma` równoważne do kontrolowania tej opcji.
+Nie ma żadnego `#pragma` równoważnej kontroli tej opcji.
 
-Określanie **/Kernel** opcja informuje kompilator i konsolidator przeprowadzić rozstrzygnięcia, które funkcje języka są dozwolone w trybie jądra i upewnij się, że masz wystarczające siłą, aby zapobiec niestabilności środowiska uruchomieniowego, który jest unikatowy dla Tryb jądra C++. Jest to realizowane w wyniku zabronienia korzystanie z funkcji języka C++, które są one w trybie jądra i udostępnienie ostrzeżenia dla funkcji języka C++, które są potencjalnie szkodliwe, ale nie może być wyłączony.
+Określenie opcji **/kernel** instruuje kompilator i konsolidator, aby rozstrzygnąć, które funkcje języka są dozwolone w trybie jądra, i upewnić się, że posiadasz wystarczającą moc umożliwiającą uniknięcie niestabilności środowiska uruchomieniowego, która jest unikatowa dla trybu jądra C++. Jest to realizowane przez zabronienie używania funkcji języka C++, które są zakłócone w trybie jądra, oraz zapewnianie ostrzeżeń dotyczących funkcji języka C++, które są potencjalnie zakłócające, ale nie można ich wyłączyć.
 
-**/Kernel** opcja ma zastosowanie do kompilatora i konsolidatora fazy kompilacji i jest ustawiona na poziomie projektu. Przekaż **/Kernel** przełącznika, aby poinformować kompilator, że wynikowego pliku binarnego, po połączeniu, powinny być załadowane do jądra Windows. Kompilator będzie zawęzić szerokim zakresie funkcji języka C++ do podzbioru, który jest zgodny z jądra.
+Opcja **/kernel** dotyczy faz kompilatora i konsolidatora kompilacji i jest ustawiana na poziomie projektu. Przekaż przełącznik **/kernel** , aby wskazać kompilatorowi, że dane binarne, po konsolidacji, powinny być załadowane do jądra systemu Windows. Kompilator zawęża zakres funkcji języka C++ do podzestawu, który jest zgodny z jądrem.
 
-W poniższej tabeli wymieniono zmiany w zachowaniu kompilatora podczas **/Kernel** jest określony.
+W poniższej tabeli przedstawiono zmiany zachowania kompilatora, gdy **/kernel** jest określony.
 
-|Typ zachowania|**/ Kernel** zachowanie|
+|Typ zachowania|**/kernel** Domyślnie|
 |-------------------|---------------------------|
-|Obsługa wyjątków języka C++|Wyłączone. Wszystkie wystąpienia elementu `throw` i `try` słowa kluczowe emitować błąd kompilatora (z wyjątkiem Specyfikacja wyjątku `throw()`). Nie **/EH** opcji są zgodne z **/Kernel**, z wyjątkiem **/EH-**.|
-|RTTI|Wyłączone. Wszystkie wystąpienia elementu `dynamic_cast` i `typeid` słowa kluczowe emitować błąd kompilatora, chyba że `dynamic_cast` służy statycznie.|
-|`new` i `delete`|Musisz jawnie zdefiniować `new()` lub `delete()` operator; kompilator ani środowisko uruchomieniowe będzie dostarczać definicję domyślną.|
+|Obsługa wyjątków języka C++|Wyłączona. Wszystkie wystąpienia **`throw`** **`try`** słowa kluczowego and emitują błąd kompilatora (z wyjątkiem specyfikacji wyjątku `throw()` ). Opcje **/EH** są zgodne z **/kernel**, z wyjątkiem **/EH-**.|
+|RTTI|Wyłączona. Wszystkie wystąpienia **`dynamic_cast`** **`typeid`** słowa kluczowego and emitują błąd kompilatora, chyba że **`dynamic_cast`** jest używany statycznie.|
+|`new` i `delete`|Należy jawnie zdefiniować `new()` `delete()` operator or; ani kompilator ani środowisko uruchomieniowe nie będą podawać definicji domyślnej.|
 
-Konwencje wywoływania, niestandardowe [/GS](gs-buffer-security-check.md) opcji kompilacji, a wszystkie optymalizacje są dozwolone, gdy używasz **/Kernel** opcji. Wbudowanie stopniu nie dotyczy **/Kernel**, z tą samą semantyką uznawane przez kompilator. Jeśli chcesz upewnić się, że `__forceinline` wbudowanie kwalifikator jest honorowane, musisz upewnić się, że ostrzeżenie [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) jest włączone, dzięki czemu będzie wiadomo, gdy konkretny `__forceinline` funkcja nie jest śródwierszowa.
+Niestandardowe Konwencje wywoływania, opcja kompilacja [/GS](gs-buffer-security-check.md) i wszystkie optymalizacje są dozwolone w przypadku korzystania z opcji **/kernel** . **/Kernel**z tą samą semantyką, która jest w dużym stopniu niezależna od kompilatora. Jeśli chcesz upewnić się **`__forceinline`** , że kwalifikator jest uznawany za niepodkreślanie, musisz upewnić się, że [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) ostrzegawczy jest włączony, aby wiedzieć, gdy określona **`__forceinline`** Funkcja nie jest wbudowana.
 
-Gdy kompilator jest przekazywany **/Kernel** przełącznika go powoduje wstępne definiowanie makro preprocesora, który nosi nazwę `_KERNEL_MODE` i ma wartość **1**. Możesz użyć tego, aby warunkowo skompilować kod w oparciu o tego, czy środowisko wykonawcze w trybie użytkownika lub w trybie jądra. Na przykład poniższy kod określa, że klasa mają zostać w segmencie pamięci niestronicowanej, gdy jest ona kompilowana do wykonywania w trybie jądra.
+Gdy kompilator przeszedł przełącznik **/kernel** , wstępnie definiuje makro preprocesora o nazwie `_KERNEL_MODE` i ma wartość **1**. Można go użyć do warunkowego kompilowania kodu w zależności od tego, czy środowisko wykonawcze działa w trybie użytkownika, czy na jądrze. Na przykład poniższy kod określa, że klasa powinna znajdować się w segmencie pamięci bez stronicowania, gdy jest kompilowany do wykonywania w trybie jądra.
 
 ```cpp
 #ifdef _KERNEL_MODE
@@ -63,38 +63,38 @@ class NONPAGESECTION MyNonPagedClass
 };
 ```
 
-Niektóre następujących kombinacji Architektura docelowa i **/arch** opcji powodować błąd, gdy są one używane z **/Kernel**:
+Niektóre z następujących kombinacji architektury docelowej i opcji **/Arch** generują błąd, gdy są używane z **/kernel**:
 
-- **/ arch: {SSE&#124;SSE2&#124;AVX}** nie są obsługiwane w x86. Tylko **/arch:IA32** jest obsługiwane w przypadku **/Kernel** na x86.
+- **/arch: {SSE&#124;SSE2&#124;AVX}** nie są obsługiwane w architekturze x86. Tylko **/arch: ia32** jest obsługiwany przez **/kernel** na x86.
 
-- **/ arch:** nie jest obsługiwany przez **/Kernel** na x64.
+- **/arch: AVX** nie jest obsługiwana w przypadku **/kernel** na platformie x64.
 
-Kompilowanie z użyciem **/Kernel** przekazuje także **/Kernel** do konsolidatora. Jest jej, jak ma to wpływ na zachowanie konsolidatora:
+Kompilowanie za pomocą **/kernel** powoduje również przekazanie **/kernel** do konsolidatora. Ma to wpływ na zachowanie konsolidatora:
 
-- Łączenie przyrostowe jest wyłączone. Jeśli dodasz **/ incremental** do wiersza polecenia konsolidatora emituje to błąd krytyczny:
+- Łączenie przyrostowe jest wyłączone. Jeśli dodasz **/Incremental** do wiersza polecenia, konsolidator emituje ten błąd krytyczny:
 
-   **LINK: błąd krytyczny LNK1295: "/ INCREMENTAL" nie jest zgodna z "/ jądra" Specyfikacja; Link bez "/ INCREMENTAL"**
+   **LINK: błąd krytyczny LNK1295: "/INCREMENTAL" jest niezgodny ze specyfikacją "/KERNEL"; link bez "/INCREMENTAL"**
 
-- Konsolidator sprawdza każdy plik obiektu (lub dowolny członek archiwum uwzględnione w bibliotekach statycznych), aby zobaczyć, czy może on został skompilowany przy użyciu **/Kernel** opcji, jednak podano wartość nie. Jeśli wszystkie wystąpienia spełniać te kryteria, konsolidator nadal pomyślnie łączy, ale może być ostrzeżenie, jak pokazano w poniższej tabeli.
+- Konsolidator sprawdza każdy plik obiektu (lub dowolny składowa archiwalny z bibliotek statycznych), aby sprawdzić, czy mógł zostać skompilowany przy użyciu opcji **/kernel** , ale nie jest. Jeśli jakieś wystąpienia spełnią to kryterium, konsolidator nadal pomyślnie łączy się, ale może wydać ostrzeżenie, jak pokazano w poniższej tabeli.
 
-   ||**/ Kernel** obj|**/Kernel-** obj, MASM obj lub cvtresed|Mieszanie z **/Kernel** i **/kernel-** objs|
+   ||**/kernel** obj|**/kernel-** obj, MASM obj lub cvtresed|Mieszanie **/kernel** i **/kernel-** przywołujące obj zawierały|
    |-|----------------------|-----------------------------------------------|-------------------------------------------------|
-   |**/ Kernel łącza**|Yes|Yes|Tak, z ostrzeżeniem LNK4257|
-   |**link**|Tak|Yes|Tak|
+   |**/Kernel linku**|Tak|Tak|Tak z ostrzeżeniem LNK4257|
+   |**powiązań**|Tak|Tak|Tak|
 
-   **LNK4257 obiektu nie został skompilowany z/Kernel; Obraz może nie działać.**
+   **LNK4257 łączenie obiektu nie jest kompilowane z/KERNEL; nie można uruchomić obrazu**
 
-**/Kernel** opcji i **Driver/Driver** opcji działają niezależnie i nie wpływa na drugi.
+Opcja **/kernel** **i polecenie/** /i/+ nie działają niezależnie i nie mają wpływu na pozostałe.
 
-### <a name="to-set-the-kernel-compiler-option-in-visual-studio"></a>Aby ustawić opcję kompilatora/Kernel w programie Visual Studio
+### <a name="to-set-the-kernel-compiler-option-in-visual-studio"></a>Aby ustawić opcję kompilatora/kernel w programie Visual Studio
 
-1. Otwórz **stron właściwości** okno dialogowe dla projektu. Aby uzyskać więcej informacji, zobacz [kompilatora i tworzenia właściwości ustaw C++ w programie Visual Studio](../working-with-project-properties.md).
+1. Otwórz okno dialogowe **strony właściwości** dla projektu. Aby uzyskać więcej informacji, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz **C/C++** folderu.
+1. Wybierz folder **C/C++** .
 
-1. Wybierz **wiersza polecenia** stronę właściwości.
+1. Wybierz stronę właściwości **wiersza polecenia** .
 
-1. W **dodatkowe opcje** Dodaj `/kernel` lub `/kernel-`.
+1. W polu **dodatkowe opcje** Dodaj `/kernel` lub `/kernel-` .
 
 ## <a name="see-also"></a>Zobacz także
 

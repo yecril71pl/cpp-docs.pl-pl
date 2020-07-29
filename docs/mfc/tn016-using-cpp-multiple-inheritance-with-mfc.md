@@ -1,5 +1,5 @@
 ---
-title: 'TN016: Używanie dziedziczenia wielokrotnego języka C++ z MFC'
+title: 'TN016: używanie dziedziczenia wielokrotnego języka C++ z MFC'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.inheritance
@@ -8,34 +8,34 @@ helpviewer_keywords:
 - MI (Multiple Inheritance)
 - multiple inheritance, MFC support for
 ms.assetid: 4ee27ae1-1410-43a5-b111-b6af9b84535d
-ms.openlocfilehash: 76dc2e856ca7db783ee542aa2dbb498fd4c1a769
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c44639e713f6d0b26d5b74e9f645f60c8627e0c8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306132"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231770"
 ---
-# <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: Używanie dziedziczenia wielokrotnego języka C++ z MFC
+# <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: używanie dziedziczenia wielokrotnego języka C++ z MFC
 
-Ta uwaga opisuje sposób dziedziczenie wielokrotne (MI) za pomocą klasy Microsoft Foundation. Korzystanie z wystąpienia Zarządzanego nie jest wymagana z MFC. Warstwa nie jest używany w żadnych klas MFC i nie jest wymagana do zapisywania biblioteki klas.
+Ta Uwaga opisuje sposób używania wielu dziedziczeń (MI) z Microsoft Foundation Classes. Użycie elementu MI nie jest wymagane w przypadku MFC. Element MI nie jest używany w żadnej klasie MFC i nie jest wymagany do zapisu biblioteki klas.
 
-Następujące tematy podrzędne opisują, jak MI wpływa na korzystanie z typowych idiomy MFC, a także zasłaniania ograniczeń MI. Niektóre z tych ograniczeń są ogólne ograniczenia dotyczące języka C++. Inne są nakładane przez architekturę MFC.
+W poniższych tematach opisano, jak to wpływa na użycie wspólnych idiomy MFC, jak również w przypadku niektórych ograniczeń. Niektóre z tych ograniczeń to ogólne ograniczenia języka C++. Inne są nakładane przez architekturę MFC.
 
-Na koniec ta uwaga techniczna znajduje się kompletna aplikacja MFC, która używa aparatu MI.
+Na końcu tej uwagi technicznej znajdziesz kompletną aplikację MFC, która używa MI.
 
 ## <a name="cruntimeclass"></a>CRuntimeClass
 
-Trwałość i mechanizmów tworzenia obiekt dynamiczny użytkowania MFC [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) struktury danych, aby jednoznacznie zidentyfikować klasy. MFC kojarzy jedną z tych struktur do każdej klasy dynamiczne i/lub możliwe do serializacji w aplikacji. Te struktury są inicjowane podczas uruchamiania aplikacji przy użyciu specjalnych obiektu statycznego typu `AFX_CLASSINIT`.
+Mechanizmy trwałości i dynamicznego tworzenia obiektów MFC wykorzystują strukturę danych [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) do unikatowego identyfikowania klas. MFC kojarzy jedną z tych struktur z każdą dynamiczną i/lub możliwy do serializacji klasą w aplikacji. Te struktury są inicjowane, gdy aplikacja jest uruchamiana przy użyciu specjalnego obiektu statycznego typu `AFX_CLASSINIT` .
 
-Bieżąca implementacja parametru `CRuntimeClass` nie obsługuje informacje o typie środowiska uruchomieniowego MI. Oznacza to, że wystąpienia Zarządzanego nie można używać w aplikacji MFC. Jednak masz określone obowiązki podczas pracy z obiektami, które mają więcej niż jednej klasy bazowej.
+Bieżąca implementacja programu `CRuntimeClass` nie obsługuje informacji o typie środowiska uruchomieniowego mi. Nie oznacza to, że nie można użyć MI w aplikacji MFC. Jednak podczas pracy z obiektami, które mają więcej niż jedną klasę bazową, będziesz mieć pewne obowiązki.
 
-[CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) metody nie poprawnie określi typ obiektu, jeśli ma on wiele klas podstawowych. W związku z tym, nie można użyć [CObject](../mfc/reference/cobject-class.md) jako wirtualnej klasy bazowej, a wszystkie wywołania do `CObject` takich jak funkcje Członkowskie [CObject::Serialize](../mfc/reference/cobject-class.md#serialize) i [NoweCObject::operator](../mfc/reference/cobject-class.md#operator_new)musi mieć zakres kwalifikatorów, tak że C++ mogą rozróżniania wywołań funkcji odpowiednie. Jeśli program używa MI w MFC, klasę zawierającą `CObject` klasa bazowa musi być klasy skrajnie po lewej na liście klas bazowych.
+Metoda [CObject:: IsKindOf](../mfc/reference/cobject-class.md#iskindof) nie będzie poprawnie określać typu obiektu, jeśli ma wiele klas bazowych. W związku z tym nie można użyć [CObject](../mfc/reference/cobject-class.md) jako wirtualnej klasy bazowej, a wszystkie wywołania `CObject` funkcji składowych, takich jak [CObject:: serializować](../mfc/reference/cobject-class.md#serialize) i [CObject:: operator new](../mfc/reference/cobject-class.md#operator_new) musi mieć kwalifikatory zakresu, aby C++ mogło odróżnić odpowiednie wywołanie funkcji. Gdy program używa elementu MI w MFC, Klasa, która zawiera `CObject` klasę bazową, musi być klasą znajdującą się po lewej stronie na liście klas bazowych.
 
-Alternatywą jest użycie `dynamic_cast` operatora. Rzutowanie obiektu z MI do jednej z jej klas podstawowych będzie wymusić na kompilatorze funkcji w podanej klasy bazowej. Aby uzyskać więcej informacji, zobacz [dynamic_cast Operator](../cpp/dynamic-cast-operator.md).
+Alternatywą jest użycie **`dynamic_cast`** operatora. Rzutowanie obiektu na jedną z jej klas podstawowych spowoduje wymuszenie użycia przez kompilator funkcji w podanej klasie bazowej. Aby uzyskać więcej informacji, zobacz [dynamic_cast operator](../cpp/dynamic-cast-operator.md).
 
-## <a name="cobject---the-root-of-all-classes"></a>CObject — głównego wszystkie klasy
+## <a name="cobject---the-root-of-all-classes"></a>CObject — katalog główny wszystkich klas
 
-Wszystkie klasy znaczące pochodzi bezpośrednio lub pośrednio z klasy `CObject`. `CObject` jest nie zawiera żadnych danych elementu członkowskiego, ale niesie ze sobą pewne funkcje domyślne. Gdy używasz wystąpienia Zarządzanego, zazwyczaj będzie dziedziczyć z co najmniej dwóch `CObject`-klas pochodnych. W poniższym przykładzie pokazano, jak klasy mogą dziedziczyć [CFrameWnd](../mfc/reference/cframewnd-class.md) i [CObList](../mfc/reference/coblist-class.md):
+Wszystkie znaczące klasy są wyprowadzane bezpośrednio lub pośrednio z klasy `CObject` . `CObject`nie ma żadnych danych elementu członkowskiego, ale ma pewne funkcje domyślne. Gdy używasz MI, zazwyczaj będzie dziedziczyć z dwóch lub więcej `CObject` klas pochodnych. Poniższy przykład ilustruje, jak Klasa może dziedziczyć z [obiektu CFrameWnd](../mfc/reference/cframewnd-class.md) i [CObList](../mfc/reference/coblist-class.md):
 
 ```cpp
 class CListWnd : public CFrameWnd, public CObList
@@ -45,15 +45,15 @@ class CListWnd : public CFrameWnd, public CObList
 CListWnd myListWnd;
 ```
 
-W tym przypadku `CObject` znajduje się, że dwa razy. Oznacza to konieczność sposób odróżnić wszystkich odwołań do `CObject` metody lub operatorów. **Nowy operator** i [operatora delete](../mfc/reference/cobject-class.md#operator_delete) są dwa operatory, które muszą być rozróżniane. Inny przykład poniższy kod powoduje błąd w czasie kompilacji:
+W tym przypadku `CObject` jest uwzględniany dwa razy. Oznacza to, że konieczny jest sposób odróżnienia wszelkich odwołań do `CObject` metod lub operatorów. **Operator new** i [operator delete](../mfc/reference/cobject-class.md#operator_delete) to dwa operatory, które muszą być rozróżnienia. W innym przykładzie Poniższy kod powoduje błąd w czasie kompilacji:
 
 ```cpp
 myListWnd.Dump(afxDump); // compile time error, CFrameWnd::Dump or CObList::Dump
 ```
 
-## <a name="reimplementing-cobject-methods"></a>Reimplementing metod obiektu CObject
+## <a name="reimplementing-cobject-methods"></a>Zaimplementowanie metod CObject
 
-Podczas tworzenia nowej klasy ma co najmniej dwóch `CObject` pochodnych klas bazowych, należy ponownie `CObject` metody, które chcesz, aby inne osoby do użycia. Operatory **nowe** i **Usuń** są obowiązkowe i [zrzutu](../mfc/reference/cobject-class.md#dump) jest zalecane. Następujące reimplements przykład **nowe** i **Usuń** operatorów i `Dump` metody:
+Podczas tworzenia nowej klasy, która ma dwie lub więcej `CObject` pochodnych klas bazowych, należy ponownie wdrożyć metody, `CObject` które mają być używane przez inne osoby. Operatory **`new`** i **`delete`** są obowiązkowe, a [zrzut](../mfc/reference/cobject-class.md#dump) jest zalecany. Poniższy przykład umożliwia zaimplementowanie **`new`** operatorów i **`delete`** i `Dump` metody:
 
 ```cpp
 class CListWnd : public CFrameWnd, public CObList
@@ -76,15 +76,15 @@ public:
 };
 ```
 
-## <a name="virtual-inheritance-of-cobject"></a>Dziedziczenie wirtualne z obiektu CObject
+## <a name="virtual-inheritance-of-cobject"></a>Wirtualne dziedziczenie CObject
 
-Może wydawać się, że praktycznie dziedziczenie `CObject` może rozwiązać problem niejednoznaczności funkcji, ale nie jest wymagane. Ponieważ nie ma żadnych danych elementu członkowskiego w `CObject`, nie trzeba dziedziczenie wirtualne, aby zapobiec wielu kopii danych elementu członkowskiego klasy bazowej. W pierwszym przykładzie, pokazaną wcześniej `Dump` metoda wirtualna jest nadal niejednoznaczny, ponieważ jest implementowane w inny sposób w `CFrameWnd` i `CObList`. Najlepszym sposobem, aby usunąć niejednoznaczność jest postępuj zgodnie z zaleceniami znajdujące się w poprzedniej sekcji.
+Może wydawać się, że wirtualna dziedziczenie `CObject` rozwiązało problem niejednoznaczności funkcji, ale nie jest to przypadek. Ponieważ nie ma żadnych danych elementu członkowskiego `CObject` , nie jest wymagane wirtualne dziedziczenie, aby uniemożliwić wiele kopii danych elementu członkowskiego klasy bazowej. W pierwszym przykładzie, który został pokazany wcześniej, `Dump` Metoda wirtualna jest nadal niejednoznaczna, ponieważ jest zaimplementowana inaczej w `CFrameWnd` i `CObList` . Najlepszym sposobem usunięcia niejednoznaczności jest przestrzeganie zaleceń przedstawionych w poprzedniej sekcji.
 
-## <a name="cobjectiskindof-and-run-time-typing"></a>CObject::IsKindOf i wpisując Run-Time
+## <a name="cobjectiskindof-and-run-time-typing"></a>CObject:: IsKindOf i pisania w czasie wykonywania
 
-Mechanizm Pisownia środowiska wykonawczego, obsługiwane przez MFC w `CObject` używa makra DECLARE_DYNAMIC, IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE, IMPLEMENT_DYNCREATE DECLARE_SERIAL i IMPLEMENT_SERIAL. Te makra można wykonywać sprawdzanie typu run-time w celu zagwarantowania bezpiecznej rzutowań.
+Mechanizm wpisywania w czasie wykonywania obsługiwany przez MFC w programie `CObject` używa makr DECLARE_DYNAMIC, IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE, IMPLEMENT_DYNCREATE, DECLARE_SERIAL i IMPLEMENT_SERIAL. Te makra mogą wykonywać sprawdzanie typu w czasie wykonywania, aby zagwarantować bezpieczną rzutowań.
 
-Te makra obsługują tylko pojedyncza klasa bazowa i będzie działać w sposób ograniczony do klasy wielokrotnie dziedziczone. Klasy bazowej, którą określisz w IMPLEMENT_DYNAMIC lub IMPLEMENT_SERIAL powinny być klasą bazową pierwszy (lub najbardziej z lewej strony). Ta umieszczania umożliwi kontrola skrajnej lewej klasy podstawowej tylko typów. System typu run-time będzie wiadomo, nie ma dodatkowych klas bazowych. W poniższym przykładzie systemów wykonawczej będzie wykonywać sprawdzenie względem typu `CFrameWnd`, ale będzie nic wiedzieć o `CObList`.
+Te makra obsługują tylko jedną klasę bazową i działają w ograniczony sposób w przypadku mnożenia dziedziczonych klas. Klasa bazowa określona w IMPLEMENT_DYNAMIC lub IMPLEMENT_SERIAL powinna być pierwszą klasą bazową (lub z lewej strony). To umieszczanie umożliwi przeprowadzenie sprawdzania typu tylko dla klasy podstawowej z lewej strony. System typu czasu wykonywania nie będzie niczego wiedzieć o dodatkowych klasach bazowych. W poniższym przykładzie systemy czasu wykonywania będą sprawdzać typ względem `CFrameWnd` , ale nic nie wie `CObList` .
 
 ```cpp
 class CListWnd : public CFrameWnd, public CObList
@@ -97,13 +97,13 @@ IMPLEMENT_DYNAMIC(CListWnd, CFrameWnd)
 
 ## <a name="cwnd-and-message-maps"></a>CWnd i mapy komunikatów
 
-Działają poprawnie, w systemie mapy komunikatów MFC są dwoma dodatkowymi wymaganiami:
+Aby system mapy komunikatów MFC działał prawidłowo, istnieją dwa dodatkowe wymagania:
 
-- Musi istnieć tylko jeden `CWnd`-pochodzi z klasy bazowej.
+- Musi istnieć tylko jedna `CWnd` pochodna Klasa bazowa.
 
-- `CWnd`-Klasy pochodnej musi być klasą bazową pierwszy (lub najbardziej z lewej strony).
+- `CWnd`Pochodna Klasa bazowa musi być pierwszą (lub najbardziej do lewej) klasą bazową.
 
-Poniżej przedstawiono kilka przykładów, które nie będą działać:
+Oto kilka przykładów, które nie będą działały:
 
 ```cpp
 class CTwoWindows : public CFrameWnd, public CEdit
@@ -113,9 +113,9 @@ class CListEdit : public CObList, public CEdit
 { /* ... */ }; // error : CEdit (derived from CWnd) must be first
 ```
 
-## <a name="a-sample-program-using-mi"></a>Przykładowy Program za pomocą wystąpienia Zarządzanego
+## <a name="a-sample-program-using-mi"></a>Przykładowy program przy użyciu MI
 
-Poniższy przykład to autonomiczna aplikacja, która składa się z jedną klasę pochodną `CFrameWnd` i [CWinApp](../mfc/reference/cwinapp-class.md). Firma Microsoft nie zaleca się struktury aplikacji w ten sposób, że jest to przykład najmniejszy aplikacji MFC, który ma jedną klasę.
+Poniższy przykład jest aplikacją autonomiczną, która składa się z jednej klasy pochodnej od `CFrameWnd` i [CWinApp](../mfc/reference/cwinapp-class.md). Nie zalecamy struktury aplikacji w ten sposób, ale jest to przykład najmniejszej aplikacji MFC, która ma jedną klasę.
 
 ```cpp
 #include <afxwin.h>
@@ -184,5 +184,5 @@ CHelloAppAndFrame theHelloAppAndFrame;
 
 ## <a name="see-also"></a>Zobacz także
 
-[Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)<br/>
+[Uwagi techniczne według numeru](../mfc/technical-notes-by-number.md)<br/>
 [Uwagi techniczne według kategorii](../mfc/technical-notes-by-category.md)

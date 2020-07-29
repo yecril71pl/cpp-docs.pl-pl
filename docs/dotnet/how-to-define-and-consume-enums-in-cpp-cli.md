@@ -1,23 +1,23 @@
 ---
-title: 'Porady: definiowanie wyliczeń w języku C++/interfejsie wiersza polecenia i korzystanie z nich'
+title: 'Instrukcje: Definiowanie wyliczeń w języku C++/interfejsie wiersza polecenia i korzystanie z nich'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: cf3bb23069b2692c0ca4ce270a5b8060195becf7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f09bb6e9fac30b72c3c4e0682c3d90f2ea9f8760
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370175"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216417"
 ---
-# <a name="how-to-define-and-consume-enums-in-ccli"></a>Porady: definiowanie wyliczeń w języku C++/interfejsie wiersza polecenia i korzystanie z nich
+# <a name="how-to-define-and-consume-enums-in-ccli"></a>Instrukcje: Definiowanie wyliczeń w języku C++/interfejsie wiersza polecenia i korzystanie z nich
 
 W tym temacie omówiono wyliczenia w języku C++/CLI.
 
-## <a name="specifying-the-underlying-type-of-an-enum"></a>Określanie typu bazowego wyliczenia
+## <a name="specifying-the-underlying-type-of-an-enum"></a>Określanie typu podstawowego wyliczenia
 
-Domyślnie podstawowym typem wyliczenia `int`jest .  Można jednak określić typ, który ma być `int`podpisany `short` `long`lub `__int32`niepodpisany, aby mieć określone formy , , , lub `__int64`.  Można również `char`użyć .
+Domyślnie typem podstawowym wyliczenia jest **`int`** .  Można jednak określić typ, który ma być podpisany lub niepodpisany formy **`int`** , **`short`** ,, **`long`** **`__int32`** lub **`__int64`** .  Można również użyć **`char`** .
 
 ```cpp
 // mcppv2_enum_3.cpp
@@ -49,7 +49,7 @@ sun
 
 ## <a name="how-to-convert-between-managed-and-standard-enumerations"></a>Jak konwertować między wyliczeniami zarządzanymi i standardowymi
 
-Nie ma standardowej konwersji między wyliczeniem a typem integralnym; wymagana jest obsada.
+Nie istnieje standardowa konwersja między wyliczeniem a typem całkowitym; wymagane jest rzutowanie.
 
 ```cpp
 // mcppv2_enum_4.cpp
@@ -75,24 +75,24 @@ int main() {
 a and day2 are the same
 ```
 
-## <a name="operators-and-enums"></a>Operatorzy i wyliczenia
+## <a name="operators-and-enums"></a>Operatory i wyliczenia
 
-Następujące operatory są prawidłowe w wyliczeniach w języku C++/CLI:
+Następujące operatory są prawidłowe dla typów wyliczeniowych w języku C++/CLI:
 
 |Operator|
 |--------------|
-|== != \<  >  \<= >=|
+|== != \< >\<= >=|
 |+ -|
 |&#124; ^ & ~|
 |++ --|
 |sizeof|
 
-Operatory &#124; ^ & ~ ++ -- są definiowane tylko dla wyliczeń z integralnymi typami podstawowymi, z wyłączeniem bool.  Oba argumenty muszą być typu wyliczenia.
+Operatory &#124; ^ & ~ + +--są zdefiniowane tylko dla wyliczeń z typami podstawowymi, bez uwzględniania wartości bool.  Oba operandy muszą być typu wyliczeniowego.
 
-Kompilator nie statyczne lub dynamiczne sprawdzanie wyniku operacji wyliczenia; operacja może spowodować wartość nie w zakresie prawidłowych wyliczaczy wyliczenia.
+Kompilator nie sprawdza statycznego ani dynamicznego sprawdzenia wyniku operacji enum; Operacja może spowodować, że wartość nie należy do zakresu prawidłowych modułów wyliczających wyliczenia.
 
 > [!NOTE]
-> C++ 11 wprowadza typy klas wyliczenia w kodzie niezarządzanym, które znacznie różnią się od zarządzanych klas wyliczenia w języku C++/CLI. W szczególności typ klasy wyliczenia C++ 11 nie obsługuje tych samych operatorów co typ klasy zarządzanych wyliczenia w C++/CLI, a kod źródłowy C++/CLI musi zapewnić specyfikator ułatwień dostępu w deklaracjach klasy wyliczenia zarządzanego, aby odróżnić je od deklaracji klas wyliczenia niezarządzanych (C++11). Aby uzyskać więcej informacji na temat klas wyliczanych w językach C++/CLI, C++/CX i C++11, zobacz [klasę wyliczenia](../extensions/enum-class-cpp-component-extensions.md).
+> W języku c++ 11 wprowadzono typy klas enum w niezarządzanym kodzie, które znacząco różnią się od zarządzanych klas wyliczeniowych w języku C++/CLI. W szczególności typ klasy wyliczeniowej języka C++ 11 nie obsługuje tych samych operatorów co typ zarządzanej klasy wyliczeniowej w języku C++/CLI, a kod źródłowy języka C++/CLI musi udostępniać specyfikator dostępności w deklaracjach klasy zarządzanej wyliczenia w celu odróżnienia ich od niezarządzanych (C++ 11) deklaracji klasy wyliczeniowej. Aby uzyskać więcej informacji na temat klas wyliczenia w języku C++/CLI, C++/CX i C++ 11, zobacz [enum Class](../extensions/enum-class-cpp-component-extensions.md).
 
 ```cpp
 // mcppv2_enum_5.cpp
@@ -135,6 +135,6 @@ int main() {
 True
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[enum class](../extensions/enum-class-cpp-component-extensions.md)
+[enum, klasa](../extensions/enum-class-cpp-component-extensions.md)

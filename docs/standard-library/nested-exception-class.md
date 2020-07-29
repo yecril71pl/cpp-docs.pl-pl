@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - nested_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: ed58eb6cc074b54ae6801d2b11089af9a79f8c8f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6ae95880f0bc18928ed9bd4f6b6da14722f6ec60
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441615"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212192"
 ---
 # <a name="nested_exception-class"></a>Klasa nested_exception
 
@@ -43,23 +43,23 @@ class nested_exception {
 |[rethrow_nested](#rethrow_nested)|Zgłasza wyjątek przechowywany.|
 |[nested_ptr](#nested_ptr)|Zwraca przechowywany wyjątek.|
 
-### <a name="op_as"></a>operator =
+### <a name="operator"></a><a name="op_as"></a>operator =
 
 ```cpp
 nested_exception& operator=(const nested_exception&) = default;
 ```
 
-### <a name="nested_ptr"></a>nested_ptr
+### <a name="nested_ptr"></a><a name="nested_ptr"></a>nested_ptr
 
 ```cpp
 exception_ptr nested_ptr() const;
 ```
 
-#### <a name="return-value"></a>Wartość zwrócona
+#### <a name="return-value"></a>Wartość zwracana
 
-Zapisany wyjątek przechwytywany przez ten obiekt `nested_exception`.
+Przechowywany wyjątek przechwytywany przez ten `nested_exception` obiekt.
 
-### <a name="rethrow_nested"></a>rethrow_nested
+### <a name="rethrow_nested"></a><a name="rethrow_nested"></a>rethrow_nested
 
 ```cpp
 [[noreturn]] void rethrow_nested() const;
@@ -67,15 +67,15 @@ Zapisany wyjątek przechwytywany przez ten obiekt `nested_exception`.
 
 #### <a name="remarks"></a>Uwagi
 
-Jeśli `nested_ptr()` zwraca wskaźnik o wartości null, funkcja wywołuje `std::terminate()`. W przeciwnym razie zgłasza wyjątek przechowywany przez `*this`.
+Jeśli `nested_ptr()` zwraca wskaźnik o wartości null, wywołuje funkcję `std::terminate()` . W przeciwnym razie zgłasza przechowywany wyjątek przechwytywany przez **`*this`** .
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<wyjątek >
+**Nagłówek:**\<exception>
 
 **Przestrzeń nazw:** std
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-\ [klasy wyjątku](../standard-library/exception-class.md)
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Klasa wyjątku](../standard-library/exception-class.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

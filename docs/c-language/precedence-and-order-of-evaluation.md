@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-ms.openlocfilehash: 327a5a5344f17f1d84e0cebc1371d56426c95deb
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: c1a5feb4552dd43b26263ebd3080e18adef6cb32
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861076"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211739"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Hierarchia i kolejność ocen
 
@@ -25,12 +25,12 @@ Poniższa tabela podsumowuje pierwszeństwo i łączność (kolejność, w jakie
 | Symbol <sup>1</sup> | Typ operacji | Łączność |
 |-------------|-----------------------|-------------------|
 | `[` `]` `(` `)` `.` `->`<br/>`++``--`(przyrostkowo) | Wyrażenie | Od lewej do prawej |
-| **sizeof** `&` `*` `+` `-` `~` `!`<br/>`++``--`(prefiks) | Jednoargumentowy | Od prawej do lewej |
+| **`sizeof`** `&` `*` `+` `-` `~` `!`<br/>`++``--`(prefiks) | Jednoargumentowy | Od prawej do lewej |
 | *typecasts* | Jednoargumentowy | Od prawej do lewej |
-| `*` `/` `%` | Mnożenia | Od lewej do prawej |
-| `+` `-` | Dana | Od lewej do prawej |
+| `*` `/` `%` | Mnożenie | Od lewej do prawej |
+| `+` `-` | Dodawanie | Od lewej do prawej |
 | `<<` `>>` | Przesunięcie bitowe | Od lewej do prawej |
-| `<` `>` `<=` `>=` | Używa | Od lewej do prawej |
+| `<` `>` `<=` `>=` | Relacyjne | Od lewej do prawej |
 | `==` `!=` | Równość | Od lewej do prawej |
 | `&` | Bitowe i | Od lewej do prawej |
 | `^` | Bitowe wykluczające lub | Od lewej do prawej |

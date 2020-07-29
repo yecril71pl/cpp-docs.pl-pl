@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: 0ff9178679792929bbd6eb92bb6148cfa008dcad
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 44194a6e5bafea2b17c9a1d58c41bf9dc541729d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621695"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231913"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Programy obsługi dla zakresów map komunikatów
 
@@ -143,8 +143,8 @@ Podczas pisania funkcji obsługi należy określić dodatkowy parametr **uint** 
 
 `OnButtonClicked`Procedura obsługi dla pojedynczego komunikatu **BN_CLICKED** nie przyjmuje żadnych parametrów. Ta sama procedura obsługi dla zakresu przycisków przyjmuje jeden **uint**. Dodatkowy parametr umożliwia określenie konkretnej kontrolki odpowiedzialnej za generowanie komunikatu **BN_CLICKED** .
 
-Kod pokazywany w przykładzie jest typowy: konwertowanie wartości przesłanej do `int` zakresu wiadomości i potwierdzenia, że jest to przypadek. Następnie można wykonać inną akcję w zależności od tego, który przycisk został kliknięty.
+Kod pokazywany w przykładzie jest typowy: konwertowanie wartości przesłanej do **`int`** zakresu wiadomości i potwierdzenia, że jest to przypadek. Następnie można wykonać inną akcję w zależności od tego, który przycisk został kliknięty.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Deklarowanie funkcji obsługi komunikatów](declaring-message-handler-functions.md)

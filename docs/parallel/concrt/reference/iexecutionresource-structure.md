@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-ms.openlocfilehash: 4305948aa4e5da36023c1d4fe8b0b84aa4d59e23
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: af6b10d1552770c776762ed195f5efceab30a3d5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377314"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215793"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource — Struktura
 
@@ -34,14 +34,14 @@ struct IExecutionResource;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[IExecutionResource::CurrentSubscriptionLevel](#currentsubscriptionlevel)|Zwraca liczbę aktywnych katalogów głównych procesora wirtualnego i subskrybowanych wątków zewnętrznych obecnie skojarzonych z podstawowym wątkiem sprzętowym, który reprezentuje ten zasób wykonywania.|
-|[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|Zwraca unikatowy identyfikator wątku sprzętowego, który reprezentuje ten zasób wykonywania.|
-|[IExecutionResource::GetNodeId](#getnodeid)|Zwraca unikatowy identyfikator węzła procesora, do którego należy ten zasób wykonywania.|
-|[IExecutionResource::Usuń](#remove)|Zwraca ten zasób wykonania do Menedżera zasobów.|
+|[IExecutionResource:: CurrentSubscriptionLevel —](#currentsubscriptionlevel)|Zwraca liczbę aktywowanych katalogów głównych procesora wirtualnego i subskrybowanych wątków zewnętrznych aktualnie skojarzonych z wątkiem sprzętowym, który reprezentuje ten zasób.|
+|[IExecutionResource:: GetExecutionResourceId —](#getexecutionresourceid)|Zwraca unikatowy identyfikator wątku sprzętowego reprezentowanego przez ten zasób wykonania.|
+|[IExecutionResource:: GetNodeId —](#getnodeid)|Zwraca unikatowy identyfikator węzła procesora, do którego należy ten zasób wykonania.|
+|[IExecutionResource:: Remove](#remove)|Zwraca ten zasób wykonania do Menedżer zasobów.|
 
 ## <a name="remarks"></a>Uwagi
 
-Zasoby wykonania mogą być autonomiczne lub skojarzone z katalogami korzeniowymi procesora wirtualnego. Zasób wykonywania autonomicznego jest tworzony, gdy wątek w aplikacji tworzy subskrypcję wątku. Metody [ISchedulerProxy::SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) i [ISchedulerProxy::RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) utworzyć subskrypcje `IExecutionResource` wątku i zwracać interfejs reprezentujący subskrypcję. Tworzenie subskrypcji wątku jest sposobem poinformowania Menedżera zasobów, że dany wątek będzie uczestniczyć w pracy w kolejce do harmonogramu, wraz z katalogu źródłowego procesora wirtualnego Menedżer zasobów przypisuje do harmonogramu. Menedżer zasobów używa informacji, aby uniknąć nadmiernej subskrypcji wątków sprzętowych, gdzie to możliwe.
+Zasoby wykonywania mogą być autonomiczne lub skojarzone z głównymi procesorami wirtualnymi. Zasób samodzielnego wykonywania jest tworzony, gdy wątek w aplikacji tworzy subskrypcję wątku. Metody [ISchedulerProxy:: SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) i [ISchedulerProxy:: RequestInitialVirtualProcessors —](ischedulerproxy-structure.md#requestinitialvirtualprocessors) tworzą subskrypcje wątków i zwracają `IExecutionResource` interfejs reprezentujący subskrypcję. Tworzenie subskrypcji wątku jest sposobem na poinformowanie Menedżer zasobów, że dany wątek będzie uczestniczyć w kolejce pracy do harmonogramu, wraz z katalogami głównymi procesora wirtualnego Menedżer zasobów przypisywanych do harmonogramu. Menedżer zasobów używa tych informacji, aby uniknąć zasubskrybowania wątków sprzętowych, gdzie to możliwe.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -49,13 +49,13 @@ Zasoby wykonania mogą być autonomiczne lub skojarzone z katalogami korzeniowym
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrtrm.h
+**Nagłówek:** concrtrm. h
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="iexecutionresourcecurrentsubscriptionlevel-method"></a><a name="currentsubscriptionlevel"></a>IExecutionResource::CurrentSubscriptionLevel Metoda
+## <a name="iexecutionresourcecurrentsubscriptionlevel-method"></a><a name="currentsubscriptionlevel"></a>IExecutionResource:: CurrentSubscriptionLevel —, Metoda
 
-Zwraca liczbę aktywnych katalogów głównych procesora wirtualnego i subskrybowanych wątków zewnętrznych obecnie skojarzonych z podstawowym wątkiem sprzętowym, który reprezentuje ten zasób wykonywania.
+Zwraca liczbę aktywowanych katalogów głównych procesora wirtualnego i subskrybowanych wątków zewnętrznych aktualnie skojarzonych z wątkiem sprzętowym, który reprezentuje ten zasób.
 
 ```cpp
 virtual unsigned int CurrentSubscriptionLevel() const = 0;
@@ -67,17 +67,17 @@ Bieżący poziom subskrypcji.
 
 ### <a name="remarks"></a>Uwagi
 
-Poziom subskrypcji informuje, ile uruchomionych wątków jest skojarzonych z wątkiem sprzętowym. Obejmuje to tylko wątki, o których menedżer zasobów jest świadomy w postaci subskrybowanych wątków i katalogów głównych procesora wirtualnego, które aktywnie wykonują serwery proxy wątku.
+Poziom subskrypcji informuje o liczbie uruchomionych wątków skojarzonych z wątkiem sprzętowym. Obejmuje to tylko wątki, dla których Menedżer zasobów jest świadome w postaci wątków subskrybowanych, oraz katalogów głównych procesorów wirtualnych, które aktywnie korzystają z serwerów proxy wątków.
 
-Wywołanie metody [ISchedulerProxy::SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread)lub metody [ISchedulerProxy::RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) z parametrem `doSubscribeCurrentThread` ustawionym na wartość **true** zwiększa poziom subskrypcji wątku sprzętowego o jeden. Zwracają również `IExecutionResource` interfejs reprezentujący subskrypcję. Odpowiednie [wywołanie IExecutionResource::Remove](#remove) zmniejsza poziom subskrypcji wątku sprzętowego o jeden.
+Wywołanie metody [ISchedulerProxy:: SubscribeCurrentThread —](ischedulerproxy-structure.md#subscribecurrentthread)lub metody [ISchedulerProxy:: RequestInitialVirtualProcessors —](ischedulerproxy-structure.md#requestinitialvirtualprocessors) z parametrem `doSubscribeCurrentThread` ustawionym na wartość **`true`** zwiększa poziom subskrypcji wątku sprzętowego o jeden. Zwracają również `IExecutionResource` interfejs reprezentujący subskrypcję. Odpowiednie wywołanie [IExecutionResource:: Remove](#remove) zmniejsza poziom subskrypcji wątku sprzętowego o jeden.
 
-Czynność aktywacji katalogu głównego procesora wirtualnego przy użyciu metody [IVirtualProcessorRoot::Activate](ivirtualprocessorroot-structure.md#activate) zwiększa poziom subskrypcji wątku sprzętowego o jeden. Metody [IVirtualProcessorRoot::Deaktywować](ivirtualprocessorroot-structure.md#deactivate)lub [IExecutionResource::Usuń](#remove) dekrementację poziomu subskrypcji o jeden, gdy jest wywoływany w aktywowanym katalogu głównym procesora wirtualnego.
+Czynność aktywowania głównego wirtualnego procesora przy użyciu metody [IVirtualProcessorRoot:: Activate](ivirtualprocessorroot-structure.md#activate) zwiększa poziom subskrypcji wątku sprzętowego o jeden. Metody [IVirtualProcessorRoot::D eactivate](ivirtualprocessorroot-structure.md#deactivate)lub [IExecutionResource:: Remove](#remove) zmniejszają poziom subskrypcji o jeden po wywołaniu dla aktywowanego wirtualnego procesora.
 
-Menedżer zasobów używa informacji na poziomie subskrypcji jako jeden ze sposobów określania, kiedy mają być przesuwne zasoby między harmonogramami.
+Menedżer zasobów używa informacji o poziomie subskrypcji jako jednego ze sposobów określania czasu przenoszenia zasobów między harmonogramami.
 
-## <a name="iexecutionresourcegetexecutionresourceid-method"></a><a name="getexecutionresourceid"></a>IExecutionResource::Metoda GetExecutionResourceId
+## <a name="iexecutionresourcegetexecutionresourceid-method"></a><a name="getexecutionresourceid"></a>IExecutionResource:: GetExecutionResourceId —, Metoda
 
-Zwraca unikatowy identyfikator wątku sprzętowego, który reprezentuje ten zasób wykonywania.
+Zwraca unikatowy identyfikator wątku sprzętowego reprezentowanego przez ten zasób wykonania.
 
 ```cpp
 virtual unsigned int GetExecutionResourceId() const = 0;
@@ -85,15 +85,15 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Unikatowy identyfikator wątku sprzętowego leżącego u podstaw tego zasobu wykonywania.
+Unikatowy identyfikator wątku sprzętowego odpowiadającego temu zasobowi wykonania.
 
 ### <a name="remarks"></a>Uwagi
 
-Każdy wątek sprzętowy jest przypisywany unikatowy identyfikator przez współbieżność środowiska uruchomieniowego. Jeśli wiele zasobów wykonywania są skojarzone wątku sprzętowego, wszystkie będą miały ten sam identyfikator zasobu wykonywania.
+Każdy wątek sprzętowy ma przypisany unikatowy identyfikator przez środowisko uruchomieniowe współbieżności. Jeśli do wątku sprzętowego są skojarzone wiele zasobów wykonawczych, wszystkie będą miały ten sam identyfikator zasobu wykonania.
 
-## <a name="iexecutionresourcegetnodeid-method"></a><a name="getnodeid"></a>IExecutionResource::Metoda GetNodeId
+## <a name="iexecutionresourcegetnodeid-method"></a><a name="getnodeid"></a>IExecutionResource:: GetNodeId —, Metoda
 
-Zwraca unikatowy identyfikator węzła procesora, do którego należy ten zasób wykonywania.
+Zwraca unikatowy identyfikator węzła procesora, do którego należy ten zasób wykonania.
 
 ```cpp
 virtual unsigned int GetNodeId() const = 0;
@@ -105,13 +105,13 @@ Unikatowy identyfikator węzła procesora.
 
 ### <a name="remarks"></a>Uwagi
 
-Środowisko wykonawcze współbieżności reprezentuje wątki sprzętowe w systemie w grupach węzłów procesora. Węzły są zwykle pochodną topologii sprzętowej systemu. Na przykład wszystkie procesory w określonym gnieździe lub określonym węźle NUMA mogą należeć do tego samego węzła procesora. Menedżer zasobów przypisuje unikatowe identyfikatory do `0` tych węzłów, zaczynając od maksymalnie do momentu włącznie `nodeCount - 1`, gdzie `nodeCount` reprezentuje całkowitą liczbę węzłów procesora w systemie.
+Środowisko uruchomieniowe współbieżności reprezentuje wątki sprzętowe w systemie w grupach węzłów procesora. Węzły są zwykle wyprowadzane z topologii sprzętowej systemu. Na przykład wszystkie procesory w określonym gnieździe lub określony węzeł NUMA mogą należeć do tego samego węzła procesora. Menedżer zasobów przypisuje unikatowe identyfikatory do tych węzłów, rozpoczynając od `0` do i włącznie `nodeCount - 1` , gdzie `nodeCount` reprezentuje łączną liczbę węzłów procesora w systemie.
 
-Liczbę węzłów można uzyskać z funkcji [GetProcessorNodeCount](concurrency-namespace-functions.md).
+Liczbę węzłów można uzyskać z funkcji [GetProcessorNodeCount —](concurrency-namespace-functions.md).
 
-## <a name="iexecutionresourceremove-method"></a><a name="remove"></a>IExecutionResource::Metoda usuwania
+## <a name="iexecutionresourceremove-method"></a><a name="remove"></a>IExecutionResource:: Remove — Metoda
 
-Zwraca ten zasób wykonania do Menedżera zasobów.
+Zwraca ten zasób wykonania do Menedżer zasobów.
 
 ```cpp
 virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
@@ -119,22 +119,22 @@ virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*pScheduler ( pScheduler )*<br/>
-Interfejs do harmonogramu, który żąda żądania usunięcia tego zasobu wykonywania.
+*pScheduler*<br/>
+Interfejs do harmonogramu wykonujący żądanie usunięcia tego zasobu wykonania.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda służy do zwracania autonomicznych zasobów wykonywania, a także zasobów wykonywania skojarzonych z katalogami korzeniowymi procesora wirtualnego do Menedżera zasobów.
+Użyj tej metody, aby zwrócić autonomiczne zasoby wykonawcze, a także zasoby wykonywania skojarzone z głównymi procesorami wirtualnymi do Menedżer zasobów.
 
-Jeśli jest to autonomiczny zasób wykonywania otrzymany z jednej z metod [ISchedulerProxy::SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread) lub [ISchedulerProxy::RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors), wywołanie metody `Remove` zakończy subskrypcję wątku, który zasób został utworzony do reprezentowania. Musisz zakończyć wszystkie subskrypcje wątku przed zamknięciem serwera proxy `Remove` harmonogramu i należy wywołać z wątku, który utworzył subskrypcję.
+Jeśli jest to autonomiczny zasób wykonywania otrzymany z jednej z metod [ISchedulerProxy:: SubscribeCurrentThread —](ischedulerproxy-structure.md#subscribecurrentthread) lub [ISchedulerProxy:: RequestInitialVirtualProcessors —](ischedulerproxy-structure.md#requestinitialvirtualprocessors), wywołanie metody `Remove` spowoduje zakończenie subskrypcji wątku, która reprezentuje zasób. Przed zamknięciem serwera proxy usługi Scheduler wymagane jest zakończenie wszystkich subskrypcji wątków i wywołanie `Remove` z wątku, który utworzył subskrypcję.
 
-Katalogi główne procesora wirtualnego również mogą być `Remove` zwracane do `IVirtualProcessorRoot` Menedżera zasobów, `IExecutionResource` wywołując metodę, ponieważ interfejs dziedziczy z interfejsu. Może być konieczne zwrócenie katalogu głównego procesora wirtualnego albo w odpowiedzi na [wywołanie metody IScheduler::RemoveVirtualProcessors](ischeduler-structure.md#removevirtualprocessors) lub po zakończeniu pracy z nadrzędnym katalogiem procesora wirtualnego z nadmierną subskrypcją uzyskaną z metody [ISchedulerProxy::CreateOversubscriber.](ischedulerproxy-structure.md#createoversubscriber) W przypadku katalogów głównych procesora wirtualnego `Remove` nie ma żadnych ograniczeń, na których wątek może wywołać metodę.
+Również elementy główne procesora wirtualnego można zwrócić do Menedżer zasobów przez wywołanie `Remove` metody, ponieważ interfejs `IVirtualProcessorRoot` dziedziczy po `IExecutionResource` interfejsie. Może być konieczne zwrócenie katalogu głównego wirtualnego procesora w odpowiedzi na wywołanie metody [IScheduler:: RemoveVirtualProcessors —](ischeduler-structure.md#removevirtualprocessors) lub po zakończeniu z zasubskrybowanym korzeniem wirtualnego procesora, który uzyskano z metody [ISchedulerProxy:: CreateOversubscriber —](ischedulerproxy-structure.md#createoversubscriber) . W przypadku katalogów głównych procesorów wirtualnych nie ma żadnych ograniczeń dotyczących tego, które wątki mogą wywołać `Remove` metodę.
 
-`invalid_argument`jest generowany, `pScheduler` jeśli parametr `NULL`jest ustawiony na .
+`invalid_argument`jest zgłaszany, jeśli parametr `pScheduler` jest ustawiony na `NULL` .
 
-`invalid_operation`jest generowany, `pScheduler` jeśli parametr różni się od harmonogramu, dla których utworzono ten zasób wykonywania lub, za pomocą autonomicznego zasobu wykonania, jeśli bieżący wątek różni się od wątku, który utworzył subskrypcję wątku.
+`invalid_operation`jest zgłaszany, jeśli parametr `pScheduler` różni się od harmonogramu, dla którego został utworzony ten zasób wykonywania, lub z autonomicznym zasobem wykonywania, jeśli bieżący wątek jest inny niż wątek, który utworzył subskrypcję wątku.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[współbieżność Obszar nazw](concurrency-namespace.md)<br/>
-[IVirtualProcessorRoot, struktura](ivirtualprocessorroot-structure.md)
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
+[IVirtualProcessorRoot — Struktura](ivirtualprocessorroot-structure.md)

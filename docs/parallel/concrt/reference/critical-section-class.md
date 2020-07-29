@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-ms.openlocfilehash: 24f96282a7728c6db6e0b05d36406f15383913f3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f7df639a879bad7af1b4de401460ff298e466c78
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372680"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215819"
 ---
 # <a name="critical_section-class"></a>critical_section — Klasa
 
-Obiekt mutex nieprzywrotowy, który jest jawnie świadomy środowiska wykonawczego współbieżności.
+Niewspółpracujący obiekt mutex, który jest jawnie świadomy środowisko uruchomieniowe współbieżności.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,7 +33,7 @@ class critical_section;
 
 ## <a name="members"></a>Elementy członkowskie
 
-### <a name="public-typedefs"></a>Publiczne typedefs
+### <a name="public-typedefs"></a>Publiczne definicje typów
 
 |Nazwa|Opis|
 |----------|-----------------|
@@ -43,28 +43,28 @@ class critical_section;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[critical_section::klasa scoped_lock](#critical_section__scoped_lock_class)|Wyjątek bezpieczne otoki RAII dla `critical_section` obiektu.|
+|[critical_section:: scoped_lock, Klasa](#critical_section__scoped_lock_class)|Wyjątek z bezpiecznym otoką RAII dla `critical_section` obiektu.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[critical_section](#ctor)|Tworzy nową sekcję krytyczną.|
-|[~critical_section Destruktor](#dtor)|Niszczy sekcję krytyczną.|
+|[~ critical_section destruktor](#dtor)|Niszczy sekcję krytyczną.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[lock](#lock)|Przejmuje tę sekcję krytyczną.|
-|[native_handle](#native_handle)|Zwraca dojście natywne specyficzne dla platformy, jeśli istnieje.|
+|[skręt](#lock)|Uzyskuje tę sekcję krytyczną.|
+|[native_handle](#native_handle)|Zwraca uchwyt macierzysty specyficzny dla platformy (jeśli taki istnieje).|
 |[try_lock](#try_lock)|Próbuje uzyskać blokadę bez blokowania.|
-|[try_lock_for](#try_lock_for)|Próbuje uzyskać blokadę bez blokowania dla określonej liczby milisekund.|
-|[Odblokować](#unlock)|Odblokowuje sekcję krytyczną.|
+|[try_lock_for](#try_lock_for)|Próbuje uzyskać blokadę bez blokowania przez określoną liczbę milisekund.|
+|[odblokowania](#unlock)|Odblokowuje sekcję krytyczną.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [Struktura danych synchronizacji](../../../parallel/concrt/synchronization-data-structures.md).
+Aby uzyskać więcej informacji, zobacz [struktury danych synchronizacji](../../../parallel/concrt/synchronization-data-structures.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -72,11 +72,11 @@ Aby uzyskać więcej informacji, zobacz [Struktura danych synchronizacji](../../
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** concrt.h
+**Nagłówek:** ConcRT. h
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="critical_section"></a><a name="ctor"></a>Critical_section
+## <a name="critical_section"></a><a name="ctor"></a>critical_section
 
 Tworzy nową sekcję krytyczną.
 
@@ -84,7 +84,7 @@ Tworzy nową sekcję krytyczną.
 critical_section();
 ```
 
-## <a name="critical_section"></a><a name="dtor"></a>~critical_section
+## <a name="critical_section"></a><a name="dtor"></a>~ critical_section
 
 Niszczy sekcję krytyczną.
 
@@ -94,11 +94,11 @@ Niszczy sekcję krytyczną.
 
 ### <a name="remarks"></a>Uwagi
 
-Oczekuje się, że blokada nie jest już utrzymywana podczas pracy destruktora. Zezwalając sekcji krytycznej do destrukcji z blokady nadal przechowywane wyniki w niezdefiniowanym zachowaniu.
+Oczekuje się, że blokada nie jest już utrzymywana podczas działania destruktora. Umożliwienie sekcji krytycznej do destruktora z blokadą nadal ma wynik niezdefiniowanego zachowania.
 
-## <a name="lock"></a><a name="lock"></a>Blokady
+## <a name="lock"></a><a name="lock"></a>skręt
 
-Przejmuje tę sekcję krytyczną.
+Uzyskuje tę sekcję krytyczną.
 
 ```cpp
 void lock();
@@ -106,13 +106,13 @@ void lock();
 
 ### <a name="remarks"></a>Uwagi
 
-Często bezpieczniej jest korzystać z [konstrukcji scoped_lock,](#critical_section__scoped_lock_class) aby `critical_section` nabyć i zwolnić obiekt w sposób bezpieczny wyjątek.
+Często bezpieczniejsze jest wykorzystanie konstrukcji [scoped_lock](#critical_section__scoped_lock_class) do uzyskiwania i zwalniania `critical_section` obiektu w ramach wyjątku bezpieczny sposób.
 
-Jeśli blokada jest już w posiadaniu kontekstu wywołującego, zostanie zgłoszony wyjątek [improper_lock.](improper-lock-class.md)
+Jeśli blokada jest już zatrzymywana przez kontekst wywołujący, zostanie zgłoszony wyjątek [improper_lock](improper-lock-class.md) .
 
 ## <a name="native_handle"></a><a name="native_handle"></a>native_handle
 
-Zwraca dojście natywne specyficzne dla platformy, jeśli istnieje.
+Zwraca uchwyt macierzysty specyficzny dla platformy (jeśli taki istnieje).
 
 ```cpp
 native_handle_type native_handle();
@@ -124,19 +124,19 @@ Odwołanie do sekcji krytycznej.
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt `critical_section` nie jest skojarzony z dojściem macierzystym dla systemu operacyjnego Windows specyficznym dla platformy. Metoda po prostu zwraca odwołanie do samego obiektu.
+`critical_section`Obiekt nie jest skojarzony z uchwytem natywnym specyficznym dla platformy dla systemu operacyjnego Windows. Metoda po prostu zwraca odwołanie do samego obiektu.
 
-## <a name="critical_sectionscoped_lock-class"></a><a name="critical_section__scoped_lock_class"></a>critical_section::klasa scoped_lock
+## <a name="critical_sectionscoped_lock-class"></a><a name="critical_section__scoped_lock_class"></a>critical_section:: scoped_lock, Klasa
 
-Wyjątek bezpieczne otoki RAII dla `critical_section` obiektu.
+Wyjątek z bezpiecznym otoką RAII dla `critical_section` obiektu.
 
 ```cpp
 class scoped_lock;
 ```
 
-## <a name="scoped_lockscoped_lock"></a><a name="critical_section__scoped_lock_ctor"></a>scoped_lock::scoped_lock
+## <a name="scoped_lockscoped_lock"></a><a name="critical_section__scoped_lock_ctor"></a>scoped_lock:: scoped_lock
 
-Konstruuje `scoped_lock` obiekt i `critical_section` uzyskuje obiekt `_Critical_section` przekazany w parametrze. Jeśli sekcja krytyczna jest utrzymywana przez inny wątek, to wywołanie zostanie zablokowane.
+Konstruuje `scoped_lock` obiekt i uzyskuje obiekt, który `critical_section` przeszedł do `_Critical_section` parametru. Jeśli Sekcja krytyczna jest przechowywana przez inny wątek, to wywołanie zostanie zablokowane.
 
 ```cpp
 explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
@@ -147,9 +147,9 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 *_Critical_section*<br/>
 Sekcja krytyczna do zablokowania.
 
-## <a name="scoped_lockscoped_lock"></a><a name="critical_section__scoped_lock_dtor"></a>scoped_lock::~scoped_lock
+## <a name="scoped_lockscoped_lock"></a><a name="critical_section__scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock
 
-Niszczy `scoped_lock` obiekt i zwalnia sekcji krytycznej dostarczonej w jego konstruktora.
+Niszczy `scoped_lock` obiekt i zwalnia sekcję krytyczną podaną w konstruktorze.
 
 ```cpp
 ~scoped_lock();
@@ -165,11 +165,11 @@ bool try_lock();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli blokada została nabyta, wartość **true**; w przeciwnym razie wartość **false**.
+Jeśli blokada została uzyskana, wartość **`true`** ; w przeciwnym razie wartość **`false`** .
 
 ## <a name="try_lock_for"></a><a name="try_lock_for"></a>try_lock_for
 
-Próbuje uzyskać blokadę bez blokowania dla określonej liczby milisekund.
+Próbuje uzyskać blokadę bez blokowania przez określoną liczbę milisekund.
 
 ```cpp
 bool try_lock_for(unsigned int _Timeout);
@@ -178,13 +178,13 @@ bool try_lock_for(unsigned int _Timeout);
 ### <a name="parameters"></a>Parametry
 
 *_Timeout*<br/>
-Liczba milisekund do oczekiwania przed przesuniem czasu.
+Liczba milisekund oczekiwania przed upływem limitu czasu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli blokada została nabyta, wartość **true**; w przeciwnym razie wartość **false**.
+Jeśli blokada została uzyskana, wartość **`true`** ; w przeciwnym razie wartość **`false`** .
 
-## <a name="unlock"></a><a name="unlock"></a>Odblokować
+## <a name="unlock"></a><a name="unlock"></a>odblokowania
 
 Odblokowuje sekcję krytyczną.
 
@@ -192,7 +192,7 @@ Odblokowuje sekcję krytyczną.
 void unlock();
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[współbieżność Obszar nazw](concurrency-namespace.md)<br/>
+[Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
 [Klasa reader_writer_lock](reader-writer-lock-class.md)

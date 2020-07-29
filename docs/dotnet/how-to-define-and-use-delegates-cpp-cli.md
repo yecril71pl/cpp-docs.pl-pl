@@ -1,25 +1,25 @@
 ---
-title: 'Instrukcje: Definiowanie i używanie delegatów (C++sposób niezamierzony)'
+title: 'Porady: definiowanie obiektów delegowanych (C++/CLI) oraz korzystanie z nich'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-ms.openlocfilehash: bcbf5bf978da5b6c13dd131e7a19975381bd97a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 495ceea6afb222d13953b3a25b7a1c836b299de6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387373"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216404"
 ---
-# <a name="how-to-define-and-use-delegates-ccli"></a>Instrukcje: Definiowanie i używanie delegatów (C++sposób niezamierzony)
+# <a name="how-to-define-and-use-delegates-ccli"></a>Porady: definiowanie obiektów delegowanych (C++/CLI) oraz korzystanie z nich
 
-W tym artykule pokazano, jak definiowanie oraz stosowanie delegatów w C++sposób niezamierzony.
+W tym artykule pokazano, jak definiować i używać delegatów w języku C++/CLI.
 
-Mimo że .NET Framework oferuje pewną liczbę obiektów delegowanych, czasami trzeba definiowania nowych delegatów.
+Chociaż .NET Framework udostępnia wiele delegatów, czasami może być konieczne zdefiniowanie nowych delegatów.
 
-Poniższy kod definiuje delegata, który nosi nazwę `MyCallback`. Kod obsługi zdarzeń — funkcja, która jest wywoływana po wyzwoleniu tego nowego delegata — musi mieć typ zwracany `void` i <xref:System.String> odwołania.
+Poniższy przykład kodu definiuje delegata o nazwie `MyCallback` . Kod obsługi zdarzeń — funkcja, która jest wywoływana, gdy ten nowy delegat jest uruchamiany — musi mieć typ zwracany **`void`** i mieć <xref:System.String> odwołanie.
 
-Główna funkcja używa metody statycznej, który jest definiowany przez `SomeClass` do utworzenia wystąpienia `MyCallback` delegować. Delegat staje się alternatywna metoda wywołującego tę funkcję, jak pokazano wysyłając ciąg "pojedynczy" do obiektu delegowanego. Dalej, dodatkowe wystąpienia `MyCallback` są ze sobą powiązane i następnie jest wykonywany przez jedno wywołanie do obiektu delegowanego.
+Funkcja Main używa metody statycznej zdefiniowanej przez program `SomeClass` w celu utworzenia wystąpienia `MyCallback` obiektu delegowanego. Delegat stanie się alternatywną metodą wywołania tej funkcji, jak pokazano przez wysłanie ciągu "Single" do obiektu delegowanego. Następnie dodatkowe wystąpienia `MyCallback` są połączone ze sobą, a następnie wykonywane przez jedno wywołanie do obiektu delegowanego.
 
 ```cpp
 // use_delegate.cpp
@@ -81,7 +81,7 @@ OtherClass::Method - chained, num = 99
 OtherClass::Method - chained, num = 100
 ```
 
-Następny przykład kodu pokazuje, jak skojarzyć pełnomocnika ze składowej klasy wartości.
+Następny przykład kodu pokazuje, jak skojarzyć delegata z elementem członkowskim klasy wartości.
 
 ```cpp
 // mcppv2_del_mem_value_class.cpp
@@ -111,9 +111,9 @@ test
 test
 ```
 
-## <a name="how-to-compose-delegates"></a>Jak składanie obiektów delegowanych
+## <a name="how-to-compose-delegates"></a>Jak redagować delegatów
 
-Można użyć "`-`" operator usuwanie delegata składnika złożone delegata.
+Można użyć `-` operatora "", aby usunąć delegata składnika z delegata złożonego.
 
 ```cpp
 // mcppv2_compose_delegates.cpp
@@ -151,7 +151,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 Invoking delegate a:
@@ -165,11 +165,11 @@ Invoking delegate d:
   Goodbye, D!
 ```
 
-## <a name="pass-a-delegate-to-a-native-function-that-expects-a-function-pointer"></a>Przekazywanie obiektu delegate ^ funkcji macierzystej, która oczekuje wskaźnika funkcji
+## <a name="pass-a-delegate-to-a-native-function-that-expects-a-function-pointer"></a>Przekaż delegata ^ do funkcji natywnej, która oczekuje wskaźnika funkcji
 
-Z zarządzanego składnika można wywołać funkcji natywnej za pomocą funkcji parametry wskaźnika gdzie funkcji macierzystej następnie można wywołać funkcji składowej, typu delegata zarządzanego składnika.
+Za pomocą zarządzanego składnika można wywołać funkcję natywną z parametrami wskaźnika funkcji, gdzie funkcja natywna może wywołać funkcję członkowską delegata zarządzanego składnika.
 
-Ta aplikacja przykładowa tworzy plik .dll, który eksportuje funkcji macierzystej:
+Ten przykład tworzy plik dll, który eksportuje funkcję natywną:
 
 ```cpp
 // delegate_to_native_function.cpp
@@ -183,7 +183,7 @@ extern "C" {
 }
 ```
 
-Następny przykład wykorzystuje plik .dll i przekazuje dojścia delegowany do natywnej funkcji, która oczekuje wskaźnika funkcji.
+Następny przykład zużywa plik. dll i przekazuje uchwyt delegata do funkcji natywnej, która oczekuje wskaźnika funkcji.
 
 ```cpp
 // delegate_to_native_function_2.cpp
@@ -209,15 +209,15 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 Call to Managed Function
 ```
 
-## <a name="to-associate-delegates-with-unmanaged-functions"></a>Aby Kojarzenie obiektów delegowanych z funkcjami niezarządzanymi
+## <a name="to-associate-delegates-with-unmanaged-functions"></a>Aby skojarzyć delegatów z funkcjami niezarządzanymi
 
-Aby skojarzyć pełnomocnika z funkcji natywnej, musi zabalit funkcji macierzystej typu zarządzanego i zadeklarować funkcję do wywołania za pośrednictwem `PInvoke`.
+Aby skojarzyć delegata z funkcją natywną, należy otoczyć funkcję natywną w typie zarządzanym i zadeklarować funkcję do wywołania przez `PInvoke` .
 
 ```cpp
 // mcppv2_del_to_umnangd_func.cpp
@@ -253,27 +253,27 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 hello
 ```
 
-## <a name="to-use-unbound-delegates"></a>Aby użyć niezwiązane obiekty delegowane
+## <a name="to-use-unbound-delegates"></a>Aby użyć niezwiązanych delegatów
 
-Niezwiązanego delegata służy do przekazywania wystąpienia typu, których działanie ma zostać wywołana, gdy wywoływana jest delegat.
+Możesz użyć niepowiązanego delegata, aby przekazać wystąpienie typu, którego funkcja ma być wywoływana, gdy obiekt delegowany jest wywoływany.
 
-Niezwiązane obiekty delegowane są szczególnie przydatne, jeśli chcesz wykonać iterację obiektów z kolekcji — za pomocą [dla poszczególnych usług, w](../dotnet/for-each-in.md) słów kluczowych — i Wywołaj funkcję elementu członkowskiego na każde wystąpienie.
+Niepowiązane Delegaty są szczególnie przydatne, jeśli chcesz wykonać iterację obiektów w kolekcji — za pomocą [for each w](../dotnet/for-each-in.md) słowach kluczowych — i wywołaj funkcję członkowską dla każdego wystąpienia.
 
-Poniżej przedstawiono sposób deklarowania, Utwórz wystąpienie i wywołania powiązane i niepowiązanych delegatów:
+Poniżej przedstawiono sposób deklarowania, tworzenia wystąpień i powiązania powiązań i niepowiązanych obiektów delegowanych:
 
-|Akcja|Powiązane obiekty delegowane|Niezwiązane obiekty delegowane|
+|Akcja|Powiązane Delegaty|Niezwiązane obiekty delegowane|
 |------------|---------------------|-----------------------|
-|Zadeklaruj|Podpis delegata musi odpowiadać podpisowi funkcji, która ma zostać wywołana przez delegat.|Pierwszy parametr podpis delegata jest typem `this` dla obiektu, który chcesz wybrać.<br /><br /> Po pierwszym parametrze podpis delegata musi odpowiadać podpisowi funkcji, która ma zostać wywołana przez delegat.|
-|Utwórz wystąpienie|Podczas tworzenia wystąpienia delegata powiązanych, można określić funkcję wystąpienia lub funkcją globalną lub statyczną składową.<br /><br /> Aby określić funkcję wystąpienia, pierwszy parametr jest wystąpieniem typu, którego funkcja członkowska, który chcesz wybrać, a drugi parametr jest adresem funkcji, która ma zostać wywołana.<br /><br /> Jeśli chcesz wywołać funkcją globalną lub statyczną składową, po prostu przekaż nazwę funkcja globalna lub nazwą funkcji statycznego elementu członkowskiego.|Podczas tworzenia wystąpienia niezwiązanego delegata, po prostu Przekaż adresu funkcji, która ma zostać wywołana.|
-|Wywołania|Po wywołaniu powiązanej delegata, po prostu Przekaż parametry, które są wymagane przez podpis delegata.|Takie same jak granicę delegowanie, ale należy pamiętać, że pierwszy parametr musi być wystąpieniem obiektu, który zawiera funkcję, którą chcesz się połączyć.|
+|Zadeklarować|Podpis delegata musi być zgodny z podpisem funkcji, która ma zostać wywołana przez delegata.|Pierwszy parametr podpisu delegata jest typem **`this`** obiektu, który chcesz wywołać.<br /><br /> Po pierwszym parametrze podpis delegata musi być zgodny z podpisem funkcji, która ma zostać wywołana przez delegata.|
+|Tworzenia|Podczas tworzenia wystąpienia powiązanego delegata można określić funkcję wystąpienia lub globalną lub statyczną funkcję członkowską.<br /><br /> Aby określić funkcję wystąpienia, pierwszy parametr jest wystąpieniem typu, którego funkcja członkowska ma być wywoływana, a drugi parametr jest adresem funkcji, która ma zostać wywołana.<br /><br /> Jeśli chcesz wywołać globalną lub statyczną funkcję członkowską, wystarczy przekazać nazwę funkcji globalnej lub nazwę statycznej funkcji członkowskiej.|Podczas tworzenia wystąpienia niepowiązanego delegata wystarczy przekazać adres funkcji, która ma zostać wywołana.|
+|Call|Po wywołaniu powiązanego delegata, wystarczy przekazać parametry, które są wymagane przez podpis delegata.|Analogicznie jak powiązany delegat, ale należy pamiętać, że pierwszy parametr musi być wystąpieniem obiektu, który zawiera funkcję, która ma zostać wywołana.|
 
-W tym przykładzie pokazano, jak deklarować, wystąpienia i wywoływać niezwiązane obiekty delegowane:
+Ten przykład pokazuje sposób deklarowania, tworzenia wystąpienia i wywołania niezwiązanych delegatów:
 
 ```cpp
 // unbound_delegates.cpp
@@ -336,7 +336,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 2
@@ -351,7 +351,7 @@ int main() {
 7
 ```
 
-Następny przykład ilustruje sposób używania niezwiązane obiekty delegowane i [dla poszczególnych usług, w](../dotnet/for-each-in.md) słów kluczowych do iterowania po obiektów z kolekcji i Wywołaj funkcję elementu członkowskiego na każde wystąpienie.
+Następny przykład pokazuje, jak używać niezwiązanych delegatów i [dla każdego w](../dotnet/for-each-in.md) słowach kluczowych do iteracji przez obiekty w kolekcji i wywoływać funkcję członkowską dla każdego wystąpienia.
 
 ```cpp
 // unbound_delegates_2.cpp
@@ -383,7 +383,7 @@ int main() {
 }
 ```
 
-Ten przykład umożliwia utworzenie niezwiązanego delegata do Akcesory właściwości:
+Ten przykład tworzy niezwiązany delegat do funkcji akcesora właściwości:
 
 ```cpp
 // unbound_delegates_3.cpp
@@ -412,13 +412,13 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 11
 ```
 
-Poniższy przykład pokazuje jak wywołać multiemisji delegata, gdzie jedno wystąpienie jest powiązany i jedno wystąpienie odpowiada niepowiązanych.
+Poniższy przykład pokazuje, jak wywołać delegata multiemisji, gdzie jedno wystąpienie jest powiązane i jedno wystąpienie jest niepowiązane.
 
 ```cpp
 // unbound_delegates_4.cpp
@@ -451,14 +451,14 @@ int main() {
 };
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 in f(R ^ r)
 in f()
 ```
 
-Następny przykład pokazuje, jak utworzyć i wywołać niezwiązanego delegata ogólnego.
+Następny przykład pokazuje, jak utworzyć i wywołać niezwiązany Delegat ogólny.
 
 ```cpp
 // unbound_delegates_5.cpp
@@ -495,7 +495,7 @@ int main() {
 }
 ```
 
-**Output**
+**Dane wyjściowe**
 
 ```Output
 12

@@ -1,22 +1,22 @@
 ---
-title: Compiler Error C2696
+title: Błąd kompilatora C2696
 ms.date: 11/04/2016
 f1_keywords:
 - C2696
 helpviewer_keywords:
 - C2696
 ms.assetid: 6c6eb7df-1230-4346-9a73-abf14c20785d
-ms.openlocfilehash: 340a5d0596160b6c9c7bcfc78aed812f8c5f3fa3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6af217dbcd871ac4edd1852042144802388545b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367606"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216092"
 ---
-# <a name="compiler-error-c2696"></a>Compiler Error C2696
+# <a name="compiler-error-c2696"></a>Błąd kompilatora C2696
 
-Nie można utworzyć tymczasowego obiektu tego typu zarządzanego "type"
+Nie można utworzyć obiektu tymczasowego typu zarządzanego "Type".
 
-Odwołuje się do `const` niezarządzanego w programie, że kompilator wywołanie konstruktora i utworzyć tymczasowego obiektu na stosie. Jednak klasy zarządzanej nigdy nie mogą być tworzone na stosie.
+Odwołania do **`const`** programu w niezarządzanym programie powodują wywołanie konstruktora przez kompilator i utworzenie obiektu tymczasowego na stosie. Jednak klasy zarządzanej nigdy nie można utworzyć na stosie.
 
-C2696 jest dostępna, przy użyciu opcji kompilatora przestarzałe **: oldsyntax**.
+C2696 jest osiągalna tylko przy użyciu przestarzałej opcji kompilatora **/CLR: oldSyntax**.

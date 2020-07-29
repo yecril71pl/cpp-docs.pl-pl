@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-ms.openlocfilehash: e22df5ee65d0219a46065044385dca46aac297a3
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 777b3f5206b4a595b5dcac653d608255e92f4ef6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142371"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231705"
 ---
 # <a name="multi_link_registry-class"></a>multi_link_registry — Klasa
 
-Obiekt `multi_link_registry` jest `network_link_registry`, który zarządza wieloma blokami źródłowymi lub wieloma blokami docelowymi.
+`multi_link_registry`Obiekt jest `network_link_registry` zarządza wieloma blokami źródłowymi lub wieloma blokami docelowymi.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,27 +35,27 @@ class multi_link_registry : public network_link_registry<_Block>;
 ### <a name="parameters"></a>Parametry
 
 *_Block*<br/>
-Typ danych bloku przechowywanych w obiekcie `multi_link_registry`.
+Typ danych bloku przechowywanych w `multi_link_registry` obiekcie.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[multi_link_registry](#ctor)|Konstruuje obiekt `multi_link_registry`.|
-|[~ multi_link_registry destruktor](#dtor)|Niszczy obiekt `multi_link_registry`.|
+|[multi_link_registry](#ctor)|Konstruuje `multi_link_registry` obiekt.|
+|[~ multi_link_registry destruktor](#dtor)|Niszczy `multi_link_registry` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[add](#add)|Dodaje łącze do obiektu `multi_link_registry`. (Zastępuje [network_link_registry:: Add](network-link-registry-class.md#add).)|
-|[zaczną](#begin)|Zwraca iterator do pierwszego elementu w obiekcie `multi_link_registry`. (Zastępuje [network_link_registry:: BEGIN](network-link-registry-class.md#begin).)|
-|[wyświetlana](#contains)|Wyszukuje `multi_link_registry` obiektu dla określonego bloku. (Zastępuje [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
-|[count](#count)|Zlicza elementy w obiekcie `multi_link_registry`. (Zastępuje [network_link_registry:: Count](network-link-registry-class.md#count).)|
-|[remove](#remove)|Usuwa łącze z obiektu `multi_link_registry`. (Zastępuje [network_link_registry:: Remove](network-link-registry-class.md#remove).)|
-|[set_bound](#set_bound)|Ustawia górną granicę dla liczby linków, które mogą być przechowywane w obiekcie `multi_link_registry`.|
+|[add](#add)|Dodaje łącze do `multi_link_registry` obiektu. (Zastępuje [network_link_registry:: Add](network-link-registry-class.md#add).)|
+|[zaczną](#begin)|Zwraca iterator do pierwszego elementu w `multi_link_registry` obiekcie. (Zastępuje [network_link_registry:: BEGIN](network-link-registry-class.md#begin).)|
+|[wyświetlana](#contains)|Przeszukuje `multi_link_registry` obiekt pod kątem określonego bloku. (Zastępuje [network_link_registry:: Contains](network-link-registry-class.md#contains).)|
+|[liczbą](#count)|Zlicza elementy w `multi_link_registry` obiekcie. (Zastępuje [network_link_registry:: Count](network-link-registry-class.md#count).)|
+|[usuwa](#remove)|Usuwa łącze z `multi_link_registry` obiektu. (Zastępuje [network_link_registry:: Remove](network-link-registry-class.md#remove).)|
+|[set_bound](#set_bound)|Ustawia górną granicę dla liczby linków, które `multi_link_registry` obiekt może przechowywać.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -69,9 +69,9 @@ Typ danych bloku przechowywanych w obiekcie `multi_link_registry`.
 
 **Przestrzeń nazw:** współbieżność
 
-## <a name="add"></a>dodana
+## <a name="add"></a><a name="add"></a>dodana
 
-Dodaje łącze do obiektu `multi_link_registry`.
+Dodaje łącze do `multi_link_registry` obiektu.
 
 ```cpp
 virtual void add(_EType _Link);
@@ -84,27 +84,27 @@ Wskaźnik do bloku, który ma zostać dodany.
 
 ### <a name="remarks"></a>Uwagi
 
-Metoda zgłasza wyjątek [invalid_link_target](invalid-link-target-class.md) , jeśli link jest już obecny w rejestrze, lub jeśli powiązano został już ustawiony za pomocą funkcji `set_bound` i Link został usunięty.
+Metoda zgłasza wyjątek [invalid_link_target](invalid-link-target-class.md) , jeśli link jest już obecny w rejestrze lub jeśli powiązano został już ustawiony przy użyciu `set_bound` funkcji i Link został usunięty.
 
-## <a name="begin"></a>zaczną
+## <a name="begin"></a><a name="begin"></a>zaczną
 
-Zwraca iterator do pierwszego elementu w obiekcie `multi_link_registry`.
+Zwraca iterator do pierwszego elementu w `multi_link_registry` obiekcie.
 
 ```cpp
 virtual iterator begin();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Iterator odnoszący się do pierwszego elementu w obiekcie `multi_link_registry`.
+Iterator odnoszący się do pierwszego elementu w `multi_link_registry` obiekcie.
 
 ### <a name="remarks"></a>Uwagi
 
-Stan końcowy jest wskazywany przez łącze `NULL`.
+Stan końcowy jest wskazywany przez `NULL` łącze.
 
-## <a name="contains"></a>wyświetlana
+## <a name="contains"></a><a name="contains"></a>wyświetlana
 
-Wyszukuje `multi_link_registry` obiektu dla określonego bloku.
+Przeszukuje `multi_link_registry` obiekt pod kątem określonego bloku.
 
 ```cpp
 virtual bool contains(_EType _Link);
@@ -113,35 +113,35 @@ virtual bool contains(_EType _Link);
 ### <a name="parameters"></a>Parametry
 
 *_Link*<br/>
-Wskaźnik do bloku, który ma być wyszukiwany w obiekcie `multi_link_registry`.
+Wskaźnik do bloku, który ma być wyszukiwany w `multi_link_registry` obiekcie.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**wartość true** , jeśli znaleziono określony blok, w przeciwnym razie **zwraca wartość false** .
+**`true`** Jeśli określony blok został znaleziony, **`false`** w przeciwnym razie.
 
-## <a name="count"></a>liczbą
+## <a name="count"></a><a name="count"></a>liczbą
 
-Zlicza elementy w obiekcie `multi_link_registry`.
+Zlicza elementy w `multi_link_registry` obiekcie.
 
 ```cpp
 virtual size_t count();
 ```
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Liczba elementów w obiekcie `multi_link_registry`.
+Liczba elementów w `multi_link_registry` obiekcie.
 
-## <a name="ctor"></a>multi_link_registry
+## <a name="multi_link_registry"></a><a name="ctor"></a>multi_link_registry
 
-Konstruuje obiekt `multi_link_registry`.
+Konstruuje `multi_link_registry` obiekt.
 
 ```cpp
 multi_link_registry();
 ```
 
-## <a name="dtor"></a>~ multi_link_registry
+## <a name="multi_link_registry"></a><a name="dtor"></a>~ multi_link_registry
 
-Niszczy obiekt `multi_link_registry`.
+Niszczy `multi_link_registry` obiekt.
 
 ```cpp
 virtual ~multi_link_registry();
@@ -151,9 +151,9 @@ virtual ~multi_link_registry();
 
 Metoda zgłasza wyjątek [invalid_operation](invalid-operation-class.md) , jeśli wywoływana przed usunięciem wszystkich linków.
 
-## <a name="remove"></a>usuwa
+## <a name="remove"></a><a name="remove"></a>usuwa
 
-Usuwa łącze z obiektu `multi_link_registry`.
+Usuwa łącze z `multi_link_registry` obiektu.
 
 ```cpp
 virtual bool remove(_EType _Link);
@@ -164,13 +164,13 @@ virtual bool remove(_EType _Link);
 *_Link*<br/>
 Wskaźnik do usunięcia bloku, jeśli został znaleziony.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-**ma wartość true** , jeśli łącze zostało znalezione i usunięte, w przeciwnym razie **zwraca wartość false** .
+**`true`** Jeśli łącze zostało odnalezione i usunięte, **`false`** w przeciwnym razie.
 
-## <a name="set_bound"></a>set_bound
+## <a name="set_bound"></a><a name="set_bound"></a>set_bound
 
-Ustawia górną granicę dla liczby linków, które mogą być przechowywane w obiekcie `multi_link_registry`.
+Ustawia górną granicę dla liczby linków, które `multi_link_registry` obiekt może przechowywać.
 
 ```cpp
 void set_bound(size_t _MaxLinks);
@@ -179,13 +179,13 @@ void set_bound(size_t _MaxLinks);
 ### <a name="parameters"></a>Parametry
 
 *_MaxLinks*<br/>
-Maksymalna liczba linków, które mogą być przechowywane w obiekcie `multi_link_registry`.
+Maksymalna liczba linków, które mogą być `multi_link_registry` przechowywane w obiekcie.
 
 ### <a name="remarks"></a>Uwagi
 
-Po ustawieniu granicy odłączenie wpisu spowoduje, że obiekt `multi_link_registry` przejdzie do niezmiennego stanu, gdy dalsze wywołania `add` spowodują zgłoszenie wyjątku `invalid_link_target`.
+Po ustawieniu powiązania, odłączenie wpisu spowoduje, że `multi_link_registry` obiekt przejdzie do niezmiennego stanu, gdy dalsze wywołania `add` wywoła `invalid_link_target` wyjątek.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przestrzeń nazw współbieżności](concurrency-namespace.md)<br/>
-[single_link_registry, klasa](single-link-registry-class.md)
+[Klasa single_link_registry](single-link-registry-class.md)

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_void class
 - is_void
 ms.assetid: 99b0de3b-1b38-4949-b053-080e5363174e
-ms.openlocfilehash: 28c162f6a868c8d6640ba17af875d84fef78c79a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 49fef050393f7196fe26aa172ac02792ae5c717e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458871"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212231"
 ---
-# <a name="isvoid-class"></a>is_void — Klasa
+# <a name="is_void-class"></a>is_void — Klasa
 
 Testuje, czy typ jest typem void.
 
@@ -27,12 +27,12 @@ struct is_void;
 
 ### <a name="parameters"></a>Parametry
 
-*&* \
+*&*\
 Typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie predykatu typu ma wartość true, jeśli typ *T* to **void** lub forma kwalifikowana z życiorysem ( **void**), w przeciwnym razie ma wartość false.
+Wystąpienie predykatu typu ma wartość true, jeśli typ *T* jest **`void`** lub forma kwalifikowana dla CV **`void`** , w przeciwnym razie ma wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -68,7 +68,7 @@ is_void<void> == true
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<type_traits >
+**Nagłówek:**\<type_traits>
 
 **Przestrzeń nazw:** std
 

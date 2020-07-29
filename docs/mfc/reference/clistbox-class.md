@@ -1,6 +1,6 @@
 ---
 title: Klasa CListBox
-description: Opis klasy MFC CListBox i jej funkcji członkowskich.
+description: Opis klasy MFC CListBox i jej funkcji składowych.
 ms.date: 01/22/2020
 f1_keywords:
 - CListBox
@@ -103,16 +103,16 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 171038ebaaed815aa687c200fe3210bde8000be3
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 30f28db746856303e10709417ad7545376fd4812
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753590"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231809"
 ---
 # <a name="clistbox-class"></a>Klasa CListBox
 
-Udostępnia funkcje pola listy systemu Windows.
+Oferuje funkcje pola listy systemu Windows.
 
 ## <a name="syntax"></a>Składnia
 
@@ -126,121 +126,121 @@ class CListBox : public CWnd
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CListBox::CListBox](#clistbox)|Konstruuje `CListBox` obiekt.|
+|[CListBox:: CListBox](#clistbox)|Konstruuje `CListBox` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CListBox::AddString](#addstring)|Dodaje ciąg do pola listy.|
-|[CListBox::CharToItem](#chartoitem)|Zastąrpnąć, aby zapewnić niestandardową obsługę WM_CHAR dla pól listy rysowania właściciela, które nie mają ciągów.|
-|[CListBox::CompareItem](#compareitem)|Wywoływane przez strukturę, aby określić położenie nowego elementu w posortowanym polu listy rysowania właściciela.|
-|[CListBox::Tworzenie](#create)|Tworzy pole listy systemu Windows i `CListBox` dołącza je do obiektu.|
-|[CListBox::DeleteItem](#deleteitem)|Wywoływane przez strukturę, gdy użytkownik usuwa element z pola listy rysowania właściciela.|
-|[CListBox::DeleteString](#deletestring)|Usuwa ciąg z pola listy.|
-|[CListBox::Dir](#dir)|Dodaje nazwy plików, dyski lub oba z bieżącego katalogu do pola listy.|
-|[CListBox::DrawItem](#drawitem)|Wywoływane przez strukturę, gdy zmienia się wizualny aspekt pola listy rysowania właściciela.|
-|[CListBox::ZnajdźStrączenie](#findstring)|Wyszukuje ciąg w polu listy.|
-|[CListBox::FindStringExact](#findstringexact)|Znajduje pierwszy ciąg pola listy, który pasuje do określonego ciągu.|
-|[CListBox::GetAnchorIndex](#getanchorindex)|Pobiera indeks od zera bieżącego elementu kotwicy w polu listy.|
-|[CListBox::GetCaretIndex](#getcaretindex)|Określa indeks elementu, który ma prostokąt fokusu w polu listy wielokrotnego zaznaczenia.|
-|[CListBox::GetCount](#getcount)|Zwraca liczbę ciągów w polu listy.|
-|[CListBox::GetCurSel](#getcursel)|Zwraca indeks od zera aktualnie wybranego ciągu w polu listy.|
-|[CListBox::GetHorizontalExtent](#gethorizontalextent)|Zwraca szerokość w pikselach, w których pole listy można przewijać w poziomie.|
-|[CListBox::GetItemData](#getitemdata)|Zwraca wartość skojarzoną z elementem pola listy.|
-|[CListBox::GetItemDataPtr](#getitemdataptr)|Zwraca wskaźnik do elementu pola listy.|
-|[CListBox::GetItemHeight](#getitemheight)|Określa wysokość elementów w polu listy.|
-|[CListBox::GetItemRect](#getitemrect)|Zwraca prostokąt obwiedniowy elementu pola listy, który jest aktualnie wyświetlany.|
-|[CListBox::GetListBoxInfo](#getlistboxinfo)|Pobiera liczbę elementów na kolumnę.|
-|[CListBox::GetLocale](#getlocale)|Pobiera identyfikator ustawień regionalnych dla pola listy.|
-|[CListBox::GetSel](#getsel)|Zwraca stan wyboru elementu pola listy.|
-|[CListBox::GetSelCount](#getselcount)|Zwraca liczbę ciągów aktualnie zaznaczonych w polu listy wielokrotnego wyboru.|
-|[CListBox::GetSelItems](#getselitems)|Zwraca indeksy ciągów aktualnie zaznaczonych w polu listy.|
-|[CListBox::GetText](#gettext)|Kopiuje element pola listy do buforu.|
-|[CListBox::GetTextLen](#gettextlen)|Zwraca długość w bajtach elementu pola listy.|
-|[CListBox::GetTopIndex](#gettopindex)|Zwraca indeks pierwszego widocznego ciągu w polu listy.|
-|[CListBox::InitStorage](#initstorage)|Wstępnie przydziela bloki pamięci dla elementów pola listy i ciągów.|
-|[CListBox::Wstawianie](#insertstring)|Wstawia ciąg w określonej lokalizacji w polu listy.|
-|[CListBox::ItemFromPoint](#itemfrompoint)|Zwraca indeks elementu pola listy znajdującego się najbliżej punktu.|
-|[CListBox::MeasureItem](#measureitem)|Wywoływane przez strukturę, gdy jest tworzony pole listy rysowania właściciela w celu określenia wymiarów pola listy.|
-|[CListBox::ResetContent](#resetcontent)|Czyści wszystkie wpisy z pola listy.|
-|[CListBox::SelectString](#selectstring)|Wyszukuje i wybiera ciąg w polu listy pojedynczego zaznaczenia.|
-|[CListBox::SelItemRange](#selitemrange)|Zaznacza lub odznacza zakres ciągów w polu listy wielokrotnego zaznaczenia.|
-|[CListBox::SetAnchorIndex](#setanchorindex)|Ustawia zakotwiczenie w polu listy wielokrotnego wyboru, aby rozpocząć wybór rozszerzony.|
-|[CListBox::SetCaretIndex](#setcaretindex)|Ustawia prostokąt fokusu na element w określonym indeksie w polu listy wielokrotnego wyboru.|
-|[CListBox::SetColumnWidth](#setcolumnwidth)|Ustawia szerokość kolumny pola listy wielokolumnowej.|
-|[CListBox::SetCurSel](#setcursel)|Wybiera ciąg pola listy.|
-|[CListBox::SetHorizontalExtent](#sethorizontalextent)|Ustawia szerokość w pikselach, że pole listy można przewijać w poziomie.|
-|[CListBox::SetItemData](#setitemdata)|Ustawia wartość skojarzoną z elementem pola listy.|
-|[CListBox::SetItemDataPtr](#setitemdataptr)|Ustawia wskaźnik do elementu pola listy.|
-|[CListBox::SetItemHeight](#setitemheight)|Ustawia wysokość elementów w polu listy.|
-|[CListBox::SetLocale](#setlocale)|Ustawia identyfikator ustawień regionalnych dla pola listy.|
-|[CListBox::SetSel](#setsel)|Zaznacza lub odznacza element pola listy w polu listy z wieloma zaznaczeniami.|
-|[CListBox::SetTabStops](#settabstops)|Ustawia pozycje tabulatora w polu listy.|
-|[CListBox::SetTopIndex](#settopindex)|Ustawia indeks od zera pierwszego widocznego ciągu w polu listy.|
-|[CListBox::VKeyToItem](#vkeytoitem)|Zastąp, aby zapewnić niestandardową obsługę WM_KEYDOWN dla pól list z zestawem stylu LBS_WANTKEYBOARDINPUT.|
+|[CListBox:: AddString](#addstring)|Dodaje ciąg do pola listy.|
+|[CListBox:: CharToItem](#chartoitem)|Przesłoń, aby zapewnić niestandardową obsługę WM_CHAR dla pól listy rysowania przez właściciela, które nie zawierają ciągów.|
+|[CListBox:: CompareItem](#compareitem)|Wywoływane przez platformę, by określić pozycję nowego elementu w sortowanym polu listy rozwijanej przez właściciela.|
+|[CListBox:: Create](#create)|Tworzy pole listy systemu Windows i dołącza je do `CListBox` obiektu.|
+|[CListBox::D eleteItem](#deleteitem)|Wywoływane przez platformę, gdy użytkownik usuwa element z pola listy rysowania przez właściciela.|
+|[CListBox::D eleteString](#deletestring)|Usuwa ciąg z pola listy.|
+|[CListBox::D IR](#dir)|Dodaje nazwy plików, dyski lub oba z bieżącego katalogu do pola listy.|
+|[CListBox::D rawItem](#drawitem)|Wywoływane przez platformę, gdy wizualny aspekt pola listy rysowania przez właściciela zmienia się.|
+|[CListBox:: FindStr](#findstring)|Wyszukuje ciąg w polu listy.|
+|[CListBox:: FindStringExact](#findstringexact)|Znajduje pierwszy ciąg pola listy, który pasuje do określonego ciągu.|
+|[CListBox:: GetAnchorIndex](#getanchorindex)|Pobiera indeks (liczony od zera) bieżącego elementu zakotwiczenia w polu listy.|
+|[CListBox:: GetCaretIndex](#getcaretindex)|Określa indeks elementu, który ma prostokąt fokus w polu listy wielokrotnego wyboru.|
+|[CListBox:: GetCount](#getcount)|Zwraca liczbę ciągów w polu listy.|
+|[CListBox:: GetCurSel](#getcursel)|Zwraca indeks (liczony od zera) aktualnie zaznaczonego ciągu w polu listy.|
+|[CListBox:: GetHorizontalExtent](#gethorizontalextent)|Zwraca szerokość w pikselach, którą pole listy można przewijać w poziomie.|
+|[CListBox:: GetItemData](#getitemdata)|Zwraca wartość skojarzoną z elementem listy.|
+|[CListBox:: GetItemDataPtr](#getitemdataptr)|Zwraca wskaźnik do elementu pola listy.|
+|[CListBox:: GetItemHeight](#getitemheight)|Określa wysokość elementów w polu listy.|
+|[CListBox:: GetItemRect](#getitemrect)|Zwraca prostokąt ograniczenia elementu listy, który jest aktualnie wyświetlany.|
+|[CListBox:: GetListBoxInfo](#getlistboxinfo)|Pobiera liczbę elementów na kolumnę.|
+|[CListBox:: getLocale](#getlocale)|Pobiera identyfikator ustawień regionalnych dla pola listy.|
+|[CListBox:: GetSel](#getsel)|Zwraca stan zaznaczenia elementu listy.|
+|[CListBox:: GetSelCount](#getselcount)|Zwraca liczbę ciągów aktualnie wybranych w polu listy wielokrotnego wyboru.|
+|[CListBox:: GetSelItems](#getselitems)|Zwraca indeksy ciągów aktualnie wybranych w polu listy.|
+|[CListBox:: gettext](#gettext)|Kopiuje element pola listy do buforu.|
+|[CListBox:: GetTextLen](#gettextlen)|Zwraca długość w bajtach elementu pola listy.|
+|[CListBox:: GetTopIndex](#gettopindex)|Zwraca indeks pierwszego widocznego ciągu w polu listy.|
+|[CListBox:: InitStorage](#initstorage)|Wstępnie przydziela bloki pamięci dla elementów pola listy i ciągów.|
+|[CListBox:: InsertString](#insertstring)|Wstawia ciąg w określonej lokalizacji w polu listy.|
+|[CListBox:: ItemFromPoint](#itemfrompoint)|Zwraca indeks elementu pola listy znajdującego się w najbliższym punkcie.|
+|[CListBox:: MeasureItem](#measureitem)|Wywoływane przez platformę, gdy zostanie utworzone pole listy rysowania przez właściciela, aby określić wymiary pola listy.|
+|[CListBox:: ResetContent](#resetcontent)|Czyści wszystkie wpisy w polu listy.|
+|[CListBox:: SelectString](#selectstring)|Wyszukuje i wybiera ciąg w polu listy z pojedynczym wyborem.|
+|[CListBox:: SelItemRange](#selitemrange)|Wybiera lub anuluje zakres ciągów w polu listy wielokrotnego wyboru.|
+|[CListBox:: SetAnchorIndex](#setanchorindex)|Ustawia kotwicę w polu listy wielokrotnego wyboru, aby rozpocząć rozszerzane zaznaczenie.|
+|[CListBox:: SetCaretIndex](#setcaretindex)|Ustawia prostokąt fokusu na element o określonym indeksie w polu listy wielokrotnego wyboru.|
+|[CListBox:: SetColumnWidth](#setcolumnwidth)|Ustawia szerokość kolumny wielokolumnowego pola listy.|
+|[CListBox:: SetCurSel](#setcursel)|Wybiera ciąg w polu listy.|
+|[CListBox:: SetHorizontalExtent](#sethorizontalextent)|Ustawia szerokość w pikselach, którą pole listy można przewijać w poziomie.|
+|[CListBox:: SetItemData](#setitemdata)|Ustawia wartość skojarzoną z elementem listy.|
+|[CListBox:: SetItemDataPtr](#setitemdataptr)|Ustawia wskaźnik do elementu pola listy.|
+|[CListBox:: SetItemHeight](#setitemheight)|Ustawia wysokość elementów w polu listy.|
+|[CListBox:: setlocale](#setlocale)|Ustawia identyfikator ustawień regionalnych dla pola listy.|
+|[CListBox:: SetSel](#setsel)|Zaznacza lub anuluje zaznaczenie elementu listy w polu listy wielokrotnego wyboru.|
+|[CListBox:: SetTabStops](#settabstops)|Ustawia położenie tabulatorów w polu listy.|
+|[CListBox:: SetTopIndex](#settopindex)|Ustawia indeks (liczony od zera) pierwszego widocznego ciągu w polu listy.|
+|[CListBox:: VKeyToItem](#vkeytoitem)|Przesłoń, aby zapewnić obsługę niestandardowych WM_KEYDOWN dla pól listy z ustawionym stylem LBS_WANTKEYBOARDINPUT.|
 
 ## <a name="remarks"></a>Uwagi
 
-W polu listy jest wyświetlana lista elementów, takich jak nazwy plików, które użytkownik może wyświetlać i wybierać.
+W polu listy zostanie wyświetlona lista elementów, takich jak nazwy plików, które użytkownik może wyświetlać i wybierać.
 
-W polu listy z pojedynczym wyborem użytkownik może wybrać tylko jeden element. W polu listy wielokrotnego wyboru można wybrać zakres elementów. Gdy użytkownik wybierze element, jest wyróżniony, a pole listy wysyła komunikat z powiadomieniem do okna nadrzędnego.
+W polu listy z pojedynczym wyborem użytkownik może wybrać tylko jeden element. W polu listy z wielokrotnym wyborem można wybrać zakres elementów. Gdy użytkownik wybierze element, zostanie wyróżniony, a pole listy wysyła komunikat powiadomienia do okna nadrzędnego.
 
-Pole listy można utworzyć z szablonu okna dialogowego lub bezpośrednio w kodzie. Aby utworzyć go bezpośrednio, `CListBox` skonstruuj obiekt, a następnie [wywołaj](#create) funkcję Utwórz `CListBox` element członkowski, aby utworzyć kontrolkę pola listy systemu Windows i dołączyć go do obiektu. Aby użyć pola listy w szablonie okna dialogowego, zadeklaruj `DDX_Control` zmienną pola listy `DoDataExchange` w klasie okna dialogowego, a następnie użyj funkcji klasy okna dialogowego, aby połączyć zmienną elementu członkowskiego z formantem. (Odbywa się to automatycznie po dodaniu zmiennej sterującej do klasy okna dialogowego).
+Pole listy można utworzyć na podstawie szablonu okna dialogowego lub bezpośrednio w kodzie. Aby utworzyć go bezpośrednio, Skonstruuj `CListBox` obiekt, a następnie wywołaj funkcję [Utwórz](#create) element członkowski, aby utworzyć kontrolkę pole listy systemu Windows i dołączyć ją do `CListBox` obiektu. Aby użyć pola listy w szablonie okna dialogowego, zadeklaruj zmienną pola listy w klasie okna dialogowego, a następnie użyj `DDX_Control` w funkcji klasy okna dialogowego, `DoDataExchange` Aby połączyć zmienną członkowską z kontrolką. (jest to wykonywane automatycznie po dodaniu zmiennej sterującej do klasy okna dialogowego).
 
-Budowa może być procesem jednoetapowym w `CListBox`klasie wywodzącej się z . Napisz konstruktora dla klasy `Create` pochodnej i wywołać z wewnątrz konstruktora.
+Konstrukcja może być procesem jednoetapowym klasy pochodzącej od `CListBox` . Napisz konstruktora dla klasy pochodnej i Wywołaj `Create` z konstruktora.
 
-Jeśli chcesz obsługiwać wiadomości powiadomień systemu Windows wysyłane przez pole listy do jego nadrzędnego (zwykle klasy pochodzące z [CDialog](../../mfc/reference/cdialog-class.md)), dodaj wpis mapy wiadomości i funkcję elementu członkowskiego obsługi wiadomości do klasy nadrzędnej dla każdej wiadomości.
+Jeśli chcesz obsługiwać komunikaty powiadomień systemu Windows wysyłane przez pole listy do jego elementu nadrzędnego (zazwyczaj klasy pochodnej z [CDialog](../../mfc/reference/cdialog-class.md)), Dodaj wpis mapy komunikatów i funkcję elementu członkowskiego obsługi komunikatów do klasy nadrzędnej dla każdego komunikatu.
 
-Każdy wpis mapy wiadomości ma następującą formę:
+Każdy wpis mapy komunikatów przyjmuje następującą formę:
 
 `ON_Notification( id, memberFxn )`
 
-gdzie `id` określa identyfikator okna podrzędnego formantu pola listy `memberFxn` wysyłającego powiadomienie i jest nazwą funkcji elementu członkowskiego nadrzędnego, która została napisana w celu obsługi powiadomienia.
+gdzie `id` określa identyfikator okna podrzędnego kontrolki pola listy wysyłającej powiadomienie i `memberFxn` jest nazwą nadrzędnej funkcji członkowskiej, która została zapisywana w celu obsługi powiadomienia.
 
-Prototyp funkcji rodzica jest następujący:
+Prototyp funkcji elementu nadrzędnego jest następujący:
 
 `afx_msg void memberFxn( );`
 
-Poniżej znajduje się lista potencjalnych wpisów mapy wiadomości i opis przypadków, w których będą one wysyłane do rodzica:
+Poniżej znajduje się lista potencjalnych wpisów mapy komunikatów oraz opis przypadków, w których zostałyby one przesłane do elementu nadrzędnego:
 
-- ON_LBN_DBLCLK Użytkownik kliknie dwukrotnie ciąg w polu listy. Ten komunikat powiadomienia wysyła tylko pole listy z [LBS_NOTIFY](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) stylem.
+- ON_LBN_DBLCLK użytkownik kliknie dwukrotnie ciąg w polu listy. Tylko pole listy, które ma styl [LBS_NOTIFY](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , wyśle ten komunikat z powiadomieniem.
 
-- ON_LBN_ERRSPACE Pole listy nie może przydzielić wystarczającej ilości pamięci, aby spełnić żądanie.
+- ON_LBN_ERRSPACE pole listy nie może przydzielić wystarczającej ilości pamięci do spełnienia żądania.
 
-- ON_LBN_KILLFOCUS Pole listy traci fokus wejściowy.
+- ON_LBN_KILLFOCUS pole listy utraci fokus wprowadzania.
 
-- ON_LBN_SELCANCEL Bieżący wybór pola listy zostanie anulowany. Ta wiadomość jest wysyłana tylko wtedy, gdy pole listy ma styl LBS_NOTIFY.
+- ON_LBN_SELCANCEL bieżące zaznaczenie pola listy zostało anulowane. Ten komunikat jest wysyłany tylko wtedy, gdy pole listy ma styl LBS_NOTIFY.
 
-- ON_LBN_SELCHANGE Wybór w polu listy został zmieniony. To powiadomienie nie jest wysyłane, jeśli wybór zostanie zmieniony przez funkcję elementu członkowskiego [CListBox::SetCurSel.](#setcursel) To powiadomienie dotyczy tylko pola listy, które ma styl LBS_NOTIFY. Komunikat powiadomienia LBN_SELCHANGE jest wysyłany dla pola listy wielokrotnego wyboru za każdym razem, gdy użytkownik naciśnie klawisz strzałki, nawet jeśli zaznaczenie nie ulegnie zmianie.
+- ON_LBN_SELCHANGE zaznaczenie w polu listy zostało zmienione. To powiadomienie nie jest wysyłane, jeśli zaznaczenie zostanie zmienione przez funkcję członkowską [CListBox:: SetCurSel](#setcursel) . To powiadomienie ma zastosowanie tylko do pola listy mającego styl LBS_NOTIFY. Wiadomość z powiadomieniem LBN_SELCHANGE jest wysyłana do pola listy wielokrotnego wyboru za każdym razem, gdy użytkownik naciśnie klawisz Strzałka, nawet jeśli zaznaczenie nie zostanie zmienione.
 
-- ON_LBN_SETFOCUS Pole listy odbiera fokus wejściowy.
+- ON_LBN_SETFOCUS pole listy otrzymuje fokus wprowadzania.
 
-- ON_WM_CHARTOITEM Pole listy rysowania właściciela, które nie ma żadnych ciągów, odbiera komunikat WM_CHAR.
+- ON_WM_CHARTOITEM pole listy rysowania przez właściciela, które nie ma ciągów odbiera komunikat WM_CHAR.
 
-- ON_WM_VKEYTOITEM Pole listy ze stylem LBS_WANTKEYBOARDINPUT odbiera wiadomość WM_KEYDOWN.
+- ON_WM_VKEYTOITEM pole listy z stylem LBS_WANTKEYBOARDINPUT otrzymuje komunikat WM_KEYDOWN.
 
-Jeśli obiekt `CListBox` zostanie utworzony w oknie dialogowym (za pośrednictwem zasobu okna dialogowego), `CListBox` obiekt zostanie automatycznie zniszczony po zamknięciu okna dialogowego przez użytkownika.
+Jeśli utworzysz `CListBox` obiekt w oknie dialogowym (za pomocą zasobu okna dialogowego), `CListBox` obiekt zostanie automatycznie zniszczony, gdy użytkownik zamknie okno dialogowe.
 
-Jeśli tworzysz `CListBox` obiekt w oknie, może być `CListBox` konieczne zniszczenie obiektu. Jeśli utworzysz `CListBox` obiekt na stosie, zostanie on automatycznie zniszczony. Jeśli `CListBox` obiekt zostanie utworzony na stercie przy użyciu **nowej** funkcji, należy **wywołać delete** na obiekcie, aby go zniszczyć, gdy użytkownik zamknie okno nadrzędne.
+Jeśli utworzysz `CListBox` obiekt w oknie, może zajść potrzeba zniszczenia `CListBox` obiektu. Jeśli utworzysz `CListBox` obiekt na stosie, zostanie on zniszczony automatycznie. Jeśli obiekt jest tworzony `CListBox` na stercie przy użyciu **`new`** funkcji, należy wywołać **`delete`** obiekt, aby zniszczyć go, gdy użytkownik zamknie okno nadrzędne.
 
-Jeśli przydzielić dowolną `CListBox` pamięć w obiekcie, zastąpić `CListBox` destruktora do usuwania alokacji.
+W przypadku przydzielenia pamięci w `CListBox` obiekcie Zastąp `CListBox` destruktor, aby usunąć alokację.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
-[Cobject](../../mfc/reference/cobject-class.md)
+[CObject](../../mfc/reference/cobject-class.md)
 
-[Ccmdtarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[Cwnd](../../mfc/reference/cwnd-class.md)
+[CWnd](../../mfc/reference/cwnd-class.md)
 
 `CListBox`
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afxwin.h
+**Nagłówek:** afxwin. h
 
-## <a name="clistboxaddstring"></a><a name="addstring"></a>CListBox::AddString
+## <a name="clistboxaddstring"></a><a name="addstring"></a>CListBox:: AddString
 
 Dodaje ciąg do pola listy.
 
@@ -251,25 +251,25 @@ int AddString(LPCTSTR lpszItem);
 ### <a name="parameters"></a>Parametry
 
 *lpszItem*<br/>
-Wskazuje ciąg zakończony z wartością null, który ma zostać dodany.
+Wskazuje ciąg zakończony znakiem null, który ma zostać dodany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks od zera do ciągu w polu listy. Zwracana wartość jest LB_ERR, jeśli wystąpi błąd; zwracana wartość jest LB_ERRSPACE, jeśli nie ma wystarczającego miejsca do przechowywania nowego ciągu.
+Indeks (liczony od zera) do ciągu w polu listy. Wartość zwracana jest LB_ERR w przypadku wystąpienia błędu; wartość zwracana jest LB_ERRSPACE, jeśli jest za mało miejsca, aby można było zapisać nowy ciąg.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli pole listy nie zostało utworzone w stylu [LBS_SORT,](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) ciąg zostanie dodany na końcu listy. W przeciwnym razie ciąg zostanie wstawiony do listy, a lista jest sortowana. Jeśli pole listy zostało utworzone przy LBS_SORT stylu, ale nie w stylu [LBS_HASSTRINGS,](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) struktura sortuje listę `CompareItem` według jednego lub więcej wywołań funkcji elementu członkowskiego.
+Jeśli pole listy nie zostało utworzone za pomocą stylu [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , ciąg zostanie dodany na końcu listy. W przeciwnym razie ciąg zostanie wstawiony do listy, a lista jest posortowana. Jeśli pole listy zostało utworzone przy użyciu LBS_SORT stylu, ale nie stylu [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , struktura sortuje listę według jednego lub większej liczby wywołań `CompareItem` funkcji składowej.
 
-Użyj [insertstring,](#insertstring) aby wstawić ciąg do określonej lokalizacji w polu listy.
+Użyj [InsertString](#insertstring) , aby wstawić ciąg do określonej lokalizacji w polu listy.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#3](../../mfc/codesnippet/cpp/clistbox-class_1.cpp)]
 
-## <a name="clistboxchartoitem"></a><a name="chartoitem"></a>CListBox::CharToItem
+## <a name="clistboxchartoitem"></a><a name="chartoitem"></a>CListBox:: CharToItem
 
-Wywoływane przez strukturę, gdy okno nadrzędne pola listy odbiera komunikat WM_CHARTOITEM z pola listy.
+Wywoływane przez platformę, gdy okno listy nadrzędnej odbierze komunikat WM_CHARTOITEM z pola listy.
 
 ```
 virtual int CharToItem(
@@ -279,37 +279,37 @@ virtual int CharToItem(
 
 ### <a name="parameters"></a>Parametry
 
-*klawisze*<br/>
+*nKey*<br/>
 Kod ANSI znaku wpisanego przez użytkownika.
 
-*Nindex*<br/>
-Bieżąca pozycja list-box caret.
+*nIndex*<br/>
+Bieżąca pozycja karetki z polem listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca — 1 lub - 2 dla braku dalszych działań lub nieujemny numer, aby określić indeks elementu pola listy, na którym ma być wykonać domyślną akcję dla naciśnięcia klawisza. Domyślna implementacja zwraca - 1.
+Zwraca wartość-1 lub-2 w przypadku braku dalszej akcji lub nieujemnej liczby, aby określić indeks elementu pola listy, w którym ma zostać wykonana domyślna akcja dla nacionięcia klawisza. Domyślna implementacja zwraca wartość-1.
 
 ### <a name="remarks"></a>Uwagi
 
-Wiadomość WM_CHARTOITEM jest wysyłana przez pole listy po odebraniu wiadomości WM_CHAR, ale tylko wtedy, gdy pole listy spełnia wszystkie te kryteria:
+Wiadomość WM_CHARTOITEM jest wysyłana przez pole listy, gdy odbierze wiadomość WM_CHAR, ale tylko wtedy, gdy pole listy spełnia wszystkie te kryteria:
 
 - Jest polem listy rysowania przez właściciela.
 
-- Nie ma zestawu stylu [LBS_HASSTRINGS.](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)
+- Nie ma ustawionego stylu [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
-- Posiada co najmniej jeden element.
+- Zawiera co najmniej jeden element.
 
-Nigdy nie należy nazywać tej funkcji samodzielnie. Zastąd w tej funkcji należy zapewnić własną niestandardową obsługę komunikatów klawiatury.
+Nigdy nie należy wywoływać tej funkcji samodzielnie. Zastąp tę funkcję, aby zapewnić własną niestandardową obsługę komunikatów klawiatury.
 
-W zastąpienia należy zwrócić wartość, aby poinformować strukturę, jakie działania zostały wykonane. Zwracana wartość - 1 lub - 2 wskazuje, że obsługiwane wszystkie aspekty wyboru elementu i nie wymaga dalszych działań przez pole listy. Przed zwróceniem - 1 lub - 2, można ustawić zaznaczenie lub przenieść daszek lub obu. Aby ustawić zaznaczenie, użyj [setcursel](#setcursel) lub [SetSel](#setsel). Aby przenieść cieszę, użyj [funkcji SetCaretIndex](#setcaretindex).
+W przesłonięciu należy zwrócić wartość, aby poznać strukturę działania wykonywanego przez użytkownika. Zwracana wartość-1 lub-2 wskazuje, że zostały obsłużone wszystkie aspekty wyboru elementu i nie wymaga żadnych dalszych akcji przez pole listy. Przed zwróceniem wartości-1 lub-2 można ustawić zaznaczenie lub przenieść karetkę lub oba te elementy. Aby ustawić wybór, użyj [SetCurSel](#setcursel) lub [SetSel](#setsel). Aby przenieść karetkę, użyj [SetCaretIndex](#setcaretindex).
 
-Zwracana wartość 0 lub większa określa indeks elementu w polu listy i wskazuje, że pole listy powinno wykonać domyślną akcję dla naciśnięcia klawisza w danym elemencie.
+Wartość zwracana 0 lub większa Określa indeks elementu w polu listy i wskazuje, że pole listy powinno wykonać akcję domyślną dla naciśnięcia klawisza dla danego elementu.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#4](../../mfc/codesnippet/cpp/clistbox-class_2.cpp)]
 
-## <a name="clistboxclistbox"></a><a name="clistbox"></a>CListBox::CListBox
+## <a name="clistboxclistbox"></a><a name="clistbox"></a>CListBox:: CListBox
 
 Konstruuje `CListBox` obiekt.
 
@@ -319,15 +319,15 @@ CListBox();
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruowanie `CListBox` obiektu w dwóch krokach. Najpierw zadzwoń do `ClistBox` konstruktora, a następnie zadzwoń , `Create`który inicjuje pole listy systemu Windows i dołącza go do pliku `CListBox`.
+Obiekt jest konstruowany `CListBox` w dwóch krokach. Najpierw Wywołaj konstruktora, `ClistBox` a następnie Wywołaj `Create` , który inicjuje pole listy systemu Windows i dołącza go do `CListBox` .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#1](../../mfc/codesnippet/cpp/clistbox-class_3.cpp)]
 
-## <a name="clistboxcompareitem"></a><a name="compareitem"></a>CListBox::CompareItem
+## <a name="clistboxcompareitem"></a><a name="compareitem"></a>CListBox:: CompareItem
 
-Wywoływane przez ramy, aby określić względną pozycję nowego elementu w posortowanym polu listy rysowania właściciela.
+Wywoływane przez platformę, by określić względne położenie nowego elementu w sortowanym polu listy rozwijanej właściciela.
 
 ```
 virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
@@ -340,27 +340,27 @@ Długi wskaźnik do `COMPAREITEMSTRUCT` struktury.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskazuje względne położenie dwóch elementów opisanych w strukturze [COMPAREITEMSTRUCT.](/windows/win32/api/winuser/ns-winuser-compareitemstruct) Może to być dowolna z następujących wartości:
+Wskazuje względne położenie dwóch elementów opisanych w strukturze [COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct) . Może to być dowolna z następujących wartości:
 
 |Wartość|Znaczenie|
 |-----------|-------------|
-|-1|Pozycja 1 sortuje przed punktem 2.|
-|0|Pozycja 1 i pozycja 2 sortować tak samo.|
-|1|Pozycja 1 sortuje po pozycji 2.|
+|-1|Element 1 sortuje przed elementem 2.|
+|0|Element 1 i element 2 sortują te same.|
+|1|Element 1 sortuje po elemencie 2.|
 
-Zobacz [CWnd::OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) opis `COMPAREITEMSTRUCT` struktury.
+Opis struktury można znaleźć w temacie [CWnd:: OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) `COMPAREITEMSTRUCT` .
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie ta funkcja elementu członkowskiego nic nie robi. Jeśli utworzysz pole listy rysowania właściciela ze stylem LBS_SORT, należy zastąpić tę funkcję elementu członkowskiego, aby pomóc platformie w sortowaniu nowych elementów dodanych do pola listy.
+Domyślnie ta funkcja członkowska nic nie robi. Jeśli utworzysz pole listy rysowania przez właściciela z stylem LBS_SORT, musisz zastąpić tę funkcję elementu członkowskiego, aby pomóc w strukturze sortowania nowych elementów dodanych do pola listy.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#5](../../mfc/codesnippet/cpp/clistbox-class_4.cpp)]
 
-## <a name="clistboxcreate"></a><a name="create"></a>CListBox::Tworzenie
+## <a name="clistboxcreate"></a><a name="create"></a>CListBox:: Create
 
-Tworzy pole listy systemu Windows i `CListBox` dołącza je do obiektu.
+Tworzy pole listy systemu Windows i dołącza je do `CListBox` obiektu.
 
 ```
 virtual BOOL Create(
@@ -372,31 +372,31 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*Dwstyle*<br/>
-Określa styl pola listy. Zastosuj dowolną [kombinację stylów pola listy](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) do pola.
+*dwStyle*<br/>
+Określa styl pola listy. Zastosuj dowolną kombinację [stylów pola listy](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) do pola.
 
-*Rect*<br/>
-Określa rozmiar i położenie pola listy. Może to być `CRect` obiekt `RECT` lub struktura.
+*cinania*<br/>
+Określa rozmiar i położenie pola listy. Może być `CRect` obiektem lub `RECT` strukturą.
 
 *pParentWnd*<br/>
-Określa okno nadrzędne pola listy (zwykle `CDialog` obiekt). Nie może być null.
+Określa okno nadrzędne pola listy (zazwyczaj `CDialog` obiekt). Nie może mieć wartości NULL.
 
-*Nid*<br/>
+*nID*<br/>
 Określa identyfikator formantu pola listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli się powiedzie; w przeciwnym razie 0.
+Niezerowe, jeśli pomyślne; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruowanie `CListBox` obiektu w dwóch krokach. Najpierw wywołaj konstruktora, a następnie wywołaj `Create`, który inicjuje pole listy systemu Windows i dołącza go do `CListBox` obiektu.
+Obiekt jest konstruowany `CListBox` w dwóch krokach. Najpierw Wywołaj konstruktora, a następnie Wywołaj `Create` , który inicjuje pole listy systemu Windows i dołącza go do `CListBox` obiektu.
 
-Podczas `Create` wykonywania system Windows wysyła [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)i [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) wiadomości do formantu pola listy.
+Gdy `Create` jest wykonywane, system Windows wysyła wiadomości [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)i [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) do kontrolki pole listy.
 
-Te komunikaty są obsługiwane domyślnie przez Funkcje członkowskie [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)i [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) w klasie podstawowej. `CWnd` Aby rozszerzyć domyślną obsługę wiadomości, `CListBox`należy wyprowadzić klasę z , dodać mapę wiadomości do nowej klasy i zastąpić poprzednie funkcje członkowskie programu obsługi wiadomości. Zastąd w celu wykonania wymaganej inicjalizacji `OnCreate`dla nowej klasy.
+Te komunikaty są domyślnie obsługiwane przez funkcje elementu członkowskiego [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)i [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) w `CWnd` klasie bazowej. Aby zwiększyć domyślną obsługę komunikatów, należy utworzyć klasę z `CListBox` , dodać mapę komunikatów do nowej klasy i zastąpić poprzednią funkcję elementu członkowskiego programu obsługi komunikatów. Przesłoń `OnCreate` , na przykład, aby wykonać wymaganą inicjalizację dla nowej klasy.
 
-Zastosuj następujące [style okien](../../mfc/reference/styles-used-by-mfc.md#window-styles) do formantu pola listy.
+Zastosuj następujące [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) do kontrolki pole listy.
 
 - WS_CHILD zawsze
 
@@ -404,21 +404,21 @@ Zastosuj następujące [style okien](../../mfc/reference/styles-used-by-mfc.md#w
 
 - WS_DISABLED rzadko
 
-- WS_VSCROLL Aby dodać pionowy pasek przewijania
+- WS_VSCROLL dodać pionowe paski przewijania
 
-- WS_HSCROLL Aby dodać poziomy pasek przewijania
+- WS_HSCROLL dodać poziomego paska przewijania
 
-- WS_GROUP Do grupowanie formantów
+- WS_GROUP do grup formantów
 
-- WS_TABSTOP Aby umożliwić tabulator do tej kontroli
+- WS_TABSTOP zezwolić na tabulację w tym formancie
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#2](../../mfc/codesnippet/cpp/clistbox-class_5.cpp)]
 
-## <a name="clistboxdeleteitem"></a><a name="deleteitem"></a>CListBox::DeleteItem
+## <a name="clistboxdeleteitem"></a><a name="deleteitem"></a>CListBox::D eleteItem
 
-Wywoływane przez strukturę, gdy użytkownik usuwa element `CListBox` z obiektu rysowania właściciela lub niszczy pole listy.
+Wywoływane przez platformę, gdy użytkownik usuwa element z obiektu rysowania przez właściciela `CListBox` lub niszczy pole listy.
 
 ```
 virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
@@ -427,21 +427,21 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpDeleteItemStruct*<br/>
-Długi wskaźnik do struktury WINDOWS [DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct) zawierający informacje o usuniętym elemencie.
+Długi wskaźnik do struktury [DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct) systemu Windows, który zawiera informacje o usuniętym elemencie.
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślna implementacja tej funkcji nic nie robi. W razie potrzeby należy ponownie narysować tę funkcję, aby ponownie narysować pole listy rysowania przez właściciela.
+Domyślna implementacja tej funkcji nic nie robi. Zastąp tę funkcję, aby ponownie narysować pole listy rysowania przez właściciela zgodnie z wymaganiami.
 
-Zobacz [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) opis `DELETEITEMSTRUCT` struktury.
+Opis struktury można znaleźć w temacie [CWnd:: OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) `DELETEITEMSTRUCT` .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#6](../../mfc/codesnippet/cpp/clistbox-class_6.cpp)]
 
-## <a name="clistboxdeletestring"></a><a name="deletestring"></a>CListBox::DeleteString
+## <a name="clistboxdeletestring"></a><a name="deletestring"></a>CListBox::D eleteString
 
-Usuwa element w pozycji *nIndex* z pola listy.
+Usuwa element z pozycji *nIndex* w polu listy.
 
 ```
 int DeleteString(UINT nIndex);
@@ -449,24 +449,24 @@ int DeleteString(UINT nIndex);
 
 ### <a name="parameters"></a>Parametry
 
-*Nindex*<br/>
-Określa indeks od zera ciągu do usunięcia.
+*nIndex*<br/>
+Określa indeks (liczony od zera) ciągu, który ma zostać usunięty.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba ciągów pozostałych na liście. Zwracana wartość jest LB_ERR, jeśli *nIndex* określa indeks większy niż liczba elementów na liście.
+Liczba ciągów pozostałych na liście. Wartość zwracana jest LB_ERR, jeśli *nIndex* Określa indeks większy niż liczba elementów na liście.
 
 ### <a name="remarks"></a>Uwagi
 
-Wszystkie elementy następujące po *nIndex* teraz przenieść w dół o jedną pozycję. Na przykład jeśli pole listy zawiera dwa elementy, usunięcie pierwszego elementu spowoduje, że pozostały element będzie teraz na pierwszej pozycji. *nIndex*=0 dla towaru na pierwszej pozycji.
+Wszystkie elementy po *nIndex* teraz przechodzą w dół o jedno miejsce. Na przykład, jeśli pole listy zawiera dwa elementy, usunięcie pierwszego elementu spowoduje, że pozostały element zostanie teraz w pierwszej pozycji. *nIndex*= 0 dla elementu w pierwszej pozycji.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#7](../../mfc/codesnippet/cpp/clistbox-class_7.cpp)]
 
-## <a name="clistboxdir"></a><a name="dir"></a>CListBox::Dir
+## <a name="clistboxdir"></a><a name="dir"></a>CListBox::D IR
 
-Dodaje listę nazwy plików, dysków lub obu tych plików do pola listy.
+Dodaje listę nazw plików, dysków lub obu do pola listy.
 
 ```
 int Dir(
@@ -476,34 +476,34 @@ int Dir(
 
 ### <a name="parameters"></a>Parametry
 
-*Attr*<br/>
-Może to być dowolna kombinacja wartości **wyliczenia** `CFile::GetStatu` [opisana](../../mfc/reference/cfile-class.md#getstatus)w s lub dowolna kombinacja następujących wartości:
+*atrybut*<br/>
+Może być dowolną kombinacją **`enum`** wartości opisanych w `CFile::GetStatu` [s](../../mfc/reference/cfile-class.md#getstatus)lub dowolną kombinację następujących wartości:
 
 |Wartość|Znaczenie|
 |-----------|-------------|
-|0x0000|Plik można odczytać lub zapisać.|
-|0x0001|Plik może być odczytywany z, ale nie zapisywane.|
-|0x0002|Plik jest ukryty i nie pojawia się na liście katalogów.|
+|0x0000|Plik może być odczytywany lub zapisywana.|
+|0x0001|Plik może być odczytywany z, ale nie do zapisu.|
+|0x0002|Plik jest ukryty i nie znajduje się na liście katalogów.|
 |0x0004|Plik jest plikiem systemowym.|
 |0x0010|Nazwa określona przez *lpszWildCard* określa katalog.|
 |0x0020|Plik został zarchiwizowany.|
 |0x4000|Uwzględnij wszystkie dyski, które pasują do nazwy określonej przez *lpszWildCard*.|
-|0x8000|Ekskluzywna flaga. Jeśli flaga wyłączności jest ustawiona, wyświetlane są tylko pliki określonego typu. W przeciwnym razie pliki określonego typu są wyświetlane oprócz plików "normalnych".|
+|0x8000|Flaga wyłączna. Jeśli ustawiono flagę wyłączną, wyświetlane są tylko pliki określonego typu. W przeciwnym razie pliki określonego typu są wymienione jako uzupełnienie plików "normal".|
 
 *lpszWildCard*<br/>
-Wskazuje ciąg specyfikacji pliku. Ciąg może zawierać symbole wieloznaczne\*(na przykład *. ).
+Wskazuje ciąg specyfikacji pliku. Ciąg może zawierać symbole wieloznaczne (na przykład *. \* ).
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks od zera ostatniej nazwy pliku dodany do listy. Zwracana wartość jest LB_ERR, jeśli wystąpi błąd; zwracana wartość jest LB_ERRSPACE, jeśli nie ma wystarczającego miejsca do przechowywania nowych ciągów.
+Indeks (liczony od zera) ostatniej nazwy pliku dodany do listy. Wartość zwracana jest LB_ERR w przypadku wystąpienia błędu; wartość zwracana jest LB_ERRSPACE, jeśli jest za mało miejsca, aby można było przechowywać nowe ciągi.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#8](../../mfc/codesnippet/cpp/clistbox-class_8.cpp)]
 
-## <a name="clistboxdrawitem"></a><a name="drawitem"></a>CListBox::DrawItem
+## <a name="clistboxdrawitem"></a><a name="drawitem"></a>CListBox::D rawItem
 
-Wywoływane przez strukturę, gdy zmienia się wizualny aspekt pola listy rysowania właściciela.
+Wywoływane przez platformę, gdy wizualny aspekt pola listy rysowania przez właściciela zmienia się.
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -512,23 +512,23 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpDrawItemStruct*<br/>
-Długi wskaźnik do struktury [DRAWITEMSTRUCT,](/windows/win32/api/winuser/ns-winuser-drawitemstruct) który zawiera informacje o typie wymaganego rysunku.
+Długi wskaźnik do struktury [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) , który zawiera informacje o wymaganym typie rysunku.
 
 ### <a name="remarks"></a>Uwagi
 
-Elementy `itemAction` `itemState` członkowskie `DRAWITEMSTRUCT` konstrukcji definiują akcję rysowania, która ma zostać wykonana.
+`itemAction`Elementy i `itemState` składowe `DRAWITEMSTRUCT` struktury definiują akcję rysowania, która ma zostać wykonana.
 
-Domyślnie ta funkcja elementu członkowskiego nic nie robi. Zastąpokaj tę funkcję elementu członkowskiego, aby zaimplementować rysunek dla obiektu rysowania `CListBox` właściciela. Aplikacja powinna przywrócić wszystkie obiekty interfejsu urządzenia graficznego (GDI) wybrane dla kontekstu wyświetlania dostarczonego w *lpDrawItemStruct* przed zakończeniem tej funkcji elementu członkowskiego.
+Domyślnie ta funkcja członkowska nic nie robi. Przesłoń tę funkcję elementu członkowskiego, aby zaimplementować rysowanie dla obiektu rysowania przez właściciela `CListBox` . Aplikacja powinna przywrócić wszystkie obiekty interfejsu GDI (Graphics Device Interface) wybrane dla kontekstu wyświetlania dostarczonego w *lpDrawItemStruct* przed zakończeniem tej funkcji elementu członkowskiego.
 
-Zobacz [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) opis `DRAWITEMSTRUCT` struktury.
+Opis struktury można znaleźć w temacie [CWnd:: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) `DRAWITEMSTRUCT` .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#9](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]
 
-## <a name="clistboxfindstring"></a><a name="findstring"></a>CListBox::ZnajdźStrączenie
+## <a name="clistboxfindstring"></a><a name="findstring"></a>CListBox:: FindStr
 
-Znajduje pierwszy ciąg w polu listy, który zawiera określony prefiks bez zmiany zaznaczenia pola listy.
+Znajduje pierwszy ciąg w polu listy, który zawiera określony prefiks bez zmiany pola listy.
 
 ```
 int FindString(
@@ -538,27 +538,27 @@ int FindString(
 
 ### <a name="parameters"></a>Parametry
 
-*nStartPo*<br/>
-Zawiera indeks od zera elementu przed pierwszym elementem do przeszukania. Gdy wyszukiwanie osiągnie dolną część pola listy, kontynuuje od góry pola listy z powrotem do elementu określonego przez *nStartAfter*. Jeśli *nStartAfter* jest -1, całe pole listy jest wyszukiwane od początku.
+*nStartAfter*<br/>
+Zawiera indeks (liczony od zera) elementu przed pierwszym elementem do przeszukania. Gdy wyszukiwanie osiągnie dolny koniec pola listy, kontynuuje się z góry pola listy z powrotem do elementu określonego przez *nStartAfter*. Jeśli *nStartAfter* to-1, całe pole listy jest przeszukiwane od początku.
 
 *lpszItem*<br/>
-Wskazuje ciąg zakończony z wartością null, który zawiera prefiks do wyszukania. Wyszukiwanie jest niezależne od liter, więc ten ciąg może zawierać dowolną kombinację wielkich i małych liter.
+Wskazuje ciąg zakończony znakiem null, który zawiera prefiks do wyszukania. Wyszukiwanie jest niezależne od wielkości liter, więc ten ciąg może zawierać dowolną kombinację wielkich i małych liter.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks od zera pasującego elementu lub LB_ERR, jeśli wyszukiwanie zakończyło się niepowodzeniem.
+Indeks (liczony od zera) pasującego elementu lub LB_ERR, jeśli wyszukiwanie nie powiodło się.
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj [selectstring](#selectstring) funkcji elementu członkowskiego, aby zarówno znaleźć i wybrać ciąg.
+Użyj funkcji składowej [SelectString](#selectstring) , aby znaleźć i wybrać ciąg.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#10](../../mfc/codesnippet/cpp/clistbox-class_10.cpp)]
 
-## <a name="clistboxfindstringexact"></a><a name="findstringexact"></a>CListBox::FindStringExact
+## <a name="clistboxfindstringexact"></a><a name="findstringexact"></a>CListBox:: FindStringExact
 
-Znajduje pierwszy ciąg pola listy, który pasuje do ciągu określonego w *lpszFind*.
+Znajduje ciąg pierwszego pola listy, który pasuje do ciągu określonego w *lpszFind*.
 
 ```
 int FindStringExact(
@@ -568,27 +568,27 @@ int FindStringExact(
 
 ### <a name="parameters"></a>Parametry
 
-*nIndexStart (Początek)*<br/>
-Określa indeks od zera elementu przed pierwszym elementem, który ma zostać przeszukany. Gdy wyszukiwanie osiągnie dolną część pola listy, kontynuuje od góry pola listy z powrotem do elementu określonego przez *nIndexStart*. Jeśli *nIndexStart* wynosi -1, całe pole listy jest wyszukiwane od początku.
+*nIndexStart*<br/>
+Określa indeks (liczony od zera) elementu przed pierwszym elementem do przeszukania. Gdy wyszukiwanie osiągnie dolny koniec pola listy, kontynuuje się z góry pola listy z powrotem do elementu określonego przez *nIndexStart*. Jeśli *nIndexStart* to-1, całe pole listy jest przeszukiwane od początku.
 
-*Lpszfind*<br/>
-Wskazuje ciąg zakończony z wartością null do wyszukania. Ten ciąg może zawierać pełną nazwę pliku, w tym rozszerzenie. W wyszukiwaniu nie rozróżnia się wielkość liter, więc ciąg może zawierać dowolną kombinację wielkich i małych liter.
+*lpszFind*<br/>
+Wskazuje ciąg zakończony znakiem null, który ma zostać wyszukany. Ten ciąg może zawierać pełną nazwę pliku, łącznie z rozszerzeniem. W wyszukiwaniu nie jest rozróżniana wielkość liter, dlatego ciąg może zawierać dowolną kombinację wielkich i małych liter.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks pasującego elementu lub LB_ERR, jeśli wyszukiwanie zakończyło się niepowodzeniem.
+Indeks pasującego elementu lub LB_ERR, jeśli wyszukiwanie nie powiodło się.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli pole listy zostało utworzone w stylu rysowania właściciela, ale `FindStringExact` bez stylu [LBS_HASSTRINGS,](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) funkcja elementu członkowskiego próbuje dopasować wartość doubleword do wartości *lpszFind*.
+Jeśli pole listy zostało utworzone przy użyciu stylu rysowania przez właściciela, ale bez stylu [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , `FindStringExact` funkcja członkowska próbuje dopasować wartość DoubleWord do wartości *lpszFind*.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#11](../../mfc/codesnippet/cpp/clistbox-class_11.cpp)]
 
-## <a name="clistboxgetanchorindex"></a><a name="getanchorindex"></a>CListBox::GetAnchorIndex
+## <a name="clistboxgetanchorindex"></a><a name="getanchorindex"></a>CListBox:: GetAnchorIndex
 
-Pobiera indeks od zera bieżącego elementu zakotwiczenia w polu listy.
+Pobiera indeks (liczony od zera) bieżącego elementu zakotwiczenia w polu listy.
 
 ```
 int GetAnchorIndex() const;
@@ -596,19 +596,19 @@ int GetAnchorIndex() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks bieżącego elementu kotwicy, jeśli zakończy się pomyślnie; w przeciwnym razie LB_ERR.
+Indeks bieżącego elementu zakotwiczonego, jeśli powodzenie; w przeciwnym razie LB_ERR.
 
 ### <a name="remarks"></a>Uwagi
 
-W polu listy wielokrotnego zaznaczenia element zakotwiczenia jest pierwszym lub ostatnim elementem w bloku sąsiadujących wybranych elementów.
+W polu listy wielokrotnego wyboru element zakotwiczony jest pierwszym lub ostatnim elementem w bloku ciągłych wybranych elementów.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CListBox::SetAnchorIndex](#setanchorindex).
+  Zobacz przykład dla [CListBox:: SetAnchorIndex](#setanchorindex).
 
-## <a name="clistboxgetcaretindex"></a><a name="getcaretindex"></a>CListBox::GetCaretIndex
+## <a name="clistboxgetcaretindex"></a><a name="getcaretindex"></a>CListBox:: GetCaretIndex
 
-Określa indeks elementu, który ma prostokąt fokusu w polu listy wielokrotnego zaznaczenia.
+Określa indeks elementu, który ma prostokąt fokus w polu listy wielokrotnego wyboru.
 
 ```
 int GetCaretIndex() const;
@@ -616,17 +616,17 @@ int GetCaretIndex() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks od zera elementu, który ma prostokąt fokusu w polu listy. Jeśli pole listy jest polem listy pojedynczego wyboru, zwracana jest wartość zwracana jest indeksem wybranego elementu, jeśli istnieje.
+Indeks (liczony od zera) elementu, który ma prostokąt fokus w polu listy. Jeśli pole listy jest polem listy z pojedynczym wyborem, wartość zwracana jest indeksem elementu, który jest zaznaczony (jeśli istnieje).
 
 ### <a name="remarks"></a>Uwagi
 
-Element może, ale nie musi być wybrany.
+Element może lub nie może być wybrany.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CListBox::SetCaretIndex](#setcaretindex).
+  Zobacz przykład dla [CListBox:: SetCaretIndex](#setcaretindex).
 
-## <a name="clistboxgetcount"></a><a name="getcount"></a>CListBox::GetCount
+## <a name="clistboxgetcount"></a><a name="getcount"></a>CListBox:: GetCount
 
 Pobiera liczbę elementów w polu listy.
 
@@ -640,15 +640,15 @@ Liczba elementów w polu listy lub LB_ERR, jeśli wystąpi błąd.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwrócona liczba jest o jeden większa niż wartość indeksu ostatniego elementu (indeks jest oparty na wartości zerowej).
+Zwracana liczba jest większa niż wartość indeksu ostatniego elementu (indeks jest liczony od zera).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#12](../../mfc/codesnippet/cpp/clistbox-class_12.cpp)]
 
-## <a name="clistboxgetcursel"></a><a name="getcursel"></a>CListBox::GetCurSel
+## <a name="clistboxgetcursel"></a><a name="getcursel"></a>CListBox:: GetCurSel
 
-Pobiera indeks od zera aktualnie wybranego elementu, jeśli istnieje, w polu listy pojedynczego wyboru.
+Pobiera indeks (liczony od zera) aktualnie wybranego elementu, jeśli istnieje, w polu listy z pojedynczym wyborem.
 
 ```
 int GetCurSel() const;
@@ -656,21 +656,21 @@ int GetCurSel() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks od zera aktualnie zaznaczonego elementu, jeśli jest to pole listy pojedynczego wyboru. Jest LB_ERR, jeśli żaden element nie jest aktualnie zaznaczony.
+Indeks (liczony od zera) aktualnie wybranego elementu, jeśli jest to pole listy z pojedynczym wyborem. Jest LB_ERR, jeśli żaden element nie jest aktualnie wybrany.
 
 W polu listy wielokrotnego wyboru indeks elementu, który ma fokus.
 
 ### <a name="remarks"></a>Uwagi
 
-Nie należy `GetCurSel` wywoływać pola listy wielokrotnego wyboru. Zamiast tego użyj [CListBox::GetSelItems.](#getselitems)
+Nie wywołuj `GetCurSel` pola listy wielokrotnego wyboru. Zamiast tego użyj [CListBox:: GetSelItems](#getselitems) .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#13](../../mfc/codesnippet/cpp/clistbox-class_13.cpp)]
 
-## <a name="clistboxgethorizontalextent"></a><a name="gethorizontalextent"></a>CListBox::GetHorizontalExtent
+## <a name="clistboxgethorizontalextent"></a><a name="gethorizontalextent"></a>CListBox:: GetHorizontalExtent
 
-Pobiera z pola listy szerokość w pikselach, za pomocą której można przewijać w poziomie.
+Pobiera z pola listy szerokość w pikselach, w której można przewijać w poziomie.
 
 ```
 int GetHorizontalExtent() const;
@@ -678,7 +678,7 @@ int GetHorizontalExtent() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Przewijana szerokość pola listy w pikselach.
+Szerokość pola listy w pikselach.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -688,9 +688,9 @@ Ma to zastosowanie tylko wtedy, gdy pole listy ma poziomy pasek przewijania.
 
 [!code-cpp[NVC_MFC_CListBox#14](../../mfc/codesnippet/cpp/clistbox-class_14.cpp)]
 
-## <a name="clistboxgetitemdata"></a><a name="getitemdata"></a>CListBox::GetItemData
+## <a name="clistboxgetitemdata"></a><a name="getitemdata"></a>CListBox:: GetItemData
 
-Pobiera wartość dwusłowa dostarczoną przez aplikację skojarzoną z określonym elementem pola listy.
+Pobiera wartość DoubleWord dostarczoną przez aplikację skojarzoną z określonym elementem listy.
 
 ```
 DWORD_PTR GetItemData(int nIndex) const;
@@ -698,8 +698,8 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Nindex*<br/>
-Określa indeks od zera elementu w polu listy.
+*nIndex*<br/>
+Określa indeks (liczony od zera) elementu w polu listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -707,15 +707,15 @@ Wartość skojarzona z elementem lub LB_ERR, jeśli wystąpi błąd.
 
 ### <a name="remarks"></a>Uwagi
 
-Doubleword wartość była *dwItemData* parametr [wywołania SetItemData.](#setitemdata)
+Wartość DoubleWord była parametrem *dwItemData* wywołania [SetItemData](#setitemdata) .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#15](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]
 
-## <a name="clistboxgetitemdataptr"></a><a name="getitemdataptr"></a>CListBox::GetItemDataPtr
+## <a name="clistboxgetitemdataptr"></a><a name="getitemdataptr"></a>CListBox:: GetItemDataPtr
 
-Pobiera dostarczoną przez aplikację wartość 32-bitową skojarzoną z określonym elementem pola listy jako wskaźnik **(void).** <strong>\*</strong>
+Pobiera wartość 32-bitowej dostarczonej przez aplikację skojarzoną z określonym elementem listy jako wskaźnikiem ( **`void`** <strong>\*</strong> ).
 
 ```cpp
 void* GetItemDataPtr(int nIndex) const;
@@ -723,18 +723,18 @@ void* GetItemDataPtr(int nIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Nindex*<br/>
-Określa indeks od zera elementu w polu listy.
+*nIndex*<br/>
+Określa indeks (liczony od zera) elementu w polu listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pobiera wskaźnik lub -1, jeśli wystąpi błąd.
+Pobiera wskaźnik lub-1, jeśli wystąpi błąd.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#16](../../mfc/codesnippet/cpp/clistbox-class_16.cpp)]
 
-## <a name="clistboxgetitemheight"></a><a name="getitemheight"></a>CListBox::GetItemHeight
+## <a name="clistboxgetitemheight"></a><a name="getitemheight"></a>CListBox:: GetItemHeight
 
 Określa wysokość elementów w polu listy.
 
@@ -744,20 +744,20 @@ int GetItemHeight(int nIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Nindex*<br/>
-Określa indeks od zera elementu w polu listy. Ten parametr jest używany tylko wtedy, gdy pole listy ma styl LBS_OWNERDRAWVARIABLE; w przeciwnym razie należy ustawić na 0.
+*nIndex*<br/>
+Określa indeks (liczony od zera) elementu w polu listy. Ten parametr jest używany tylko wtedy, gdy pole listy ma styl LBS_OWNERDRAWVARIABLE; w przeciwnym razie powinna być ustawiona na 0.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wysokość elementów w polu listy w pikselach. Jeśli pole listy ma styl [LBS_OWNERDRAWVARIABLE,](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) zwracaną wartością jest wysokość towaru określonego przez *nIndex*. Jeśli wystąpi błąd, zwracana wartość jest LB_ERR.
+Wysokość w pikselach elementów w polu listy. Jeśli pole listy ma styl [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , wartość zwracana to wysokość elementu określonego przez *nIndex*. Jeśli wystąpi błąd, wartość zwracana jest LB_ERR.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#17](../../mfc/codesnippet/cpp/clistbox-class_17.cpp)]
 
-## <a name="clistboxgetitemrect"></a><a name="getitemrect"></a>CListBox::GetItemRect
+## <a name="clistboxgetitemrect"></a><a name="getitemrect"></a>CListBox:: GetItemRect
 
-Pobiera wymiary prostokąta, który ogranicza element pola listy, ponieważ jest on aktualnie wyświetlany w oknie pola listy.
+Pobiera wymiary prostokąta, który jest powiązany z elementem pola listy, tak jak jest aktualnie wyświetlany w oknie listy.
 
 ```
 int GetItemRect(
@@ -767,21 +767,21 @@ int GetItemRect(
 
 ### <a name="parameters"></a>Parametry
 
-*Nindex*<br/>
-Określa indeks od zera towaru.
+*nIndex*<br/>
+Określa indeks (liczony od zera) elementu.
 
-*Lprect*<br/>
-Określa długi wskaźnik do [struktury RECT,](/windows/win32/api/windef/ns-windef-rect) która odbiera współrzędne klienta pola listy elementu.
+*lpRect*<br/>
+Określa długi wskaźnik do [struktury Rect](/windows/win32/api/windef/ns-windef-rect) , który odbiera współrzędne klienta pola listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-LB_ERR, jeśli wystąpi błąd.
+LB_ERR w przypadku wystąpienia błędu.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#18](../../mfc/codesnippet/cpp/clistbox-class_18.cpp)]
 
-## <a name="clistboxgetlistboxinfo"></a><a name="getlistboxinfo"></a>CListBox::GetListBoxInfo
+## <a name="clistboxgetlistboxinfo"></a><a name="getlistboxinfo"></a>CListBox:: GetListBoxInfo
 
 Pobiera liczbę elementów na kolumnę.
 
@@ -791,13 +791,13 @@ DWORD GetListBoxInfo() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba elementów na `CListBox` kolumnę obiektu.
+Liczba elementów na kolumnę `CListBox` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego emuluje funkcjonalność [komunikatu LB_GETLISTBOXINFO,](/windows/win32/Controls/lb-getlistboxinfo) zgodnie z opisem w windows SDK.
+Ta funkcja członkowska emuluje funkcjonalność komunikatu [LB_GETLISTBOXINFO](/windows/win32/Controls/lb-getlistboxinfo) , zgodnie z opisem w Windows SDK.
 
-## <a name="clistboxgetlocale"></a><a name="getlocale"></a>CListBox::GetLocale
+## <a name="clistboxgetlocale"></a><a name="getlocale"></a>CListBox:: getLocale
 
 Pobiera ustawienia regionalne używane przez pole listy.
 
@@ -811,15 +811,15 @@ Wartość identyfikatora ustawień regionalnych (LCID) dla ciągów w polu listy
 
 ### <a name="remarks"></a>Uwagi
 
-Ustawienia regionalne są używane, na przykład, do określenia kolejności sortowania ciągów w polu listy posortowane.
+Ustawienia regionalne są używane na przykład w celu określenia kolejności sortowania ciągów w posortowanym polu listy.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CListBox::SetLocale](#setlocale).
+  Zobacz przykład dla [CListBox:: Setlocals](#setlocale).
 
-## <a name="clistboxgetsel"></a><a name="getsel"></a>CListBox::GetSel
+## <a name="clistboxgetsel"></a><a name="getsel"></a>CListBox:: GetSel
 
-Pobiera stan wyboru elementu.
+Pobiera stan zaznaczenia elementu.
 
 ```
 int GetSel(int nIndex) const;
@@ -827,26 +827,26 @@ int GetSel(int nIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Nindex*<br/>
-Określa indeks od zera towaru.
+*nIndex*<br/>
+Określa indeks (liczony od zera) elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba dodatnia, jeśli zaznaczony jest określony element; w przeciwnym razie jest to 0. Wartość zwracana jest LB_ERR, jeśli wystąpi błąd.
+Liczba dodatnia, jeśli wybrano określony element; w przeciwnym razie jest równa 0. Wartość zwracana jest LB_ERR w przypadku wystąpienia błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja elementu członkowskiego działa zarówno z polami listy pojedynczego, jak i wielokrotnego wyboru.
+Ta funkcja członkowska działa zarówno w przypadku pól listy pojedynczej, jak i wielokrotnego wyboru.
 
-Aby pobrać indeks aktualnie zaznaczonego elementu pola listy, użyj [CListBox::GetCurSel](#getcursel).
+Aby pobrać indeks aktualnie wybranego elementu pola listy, użyj [CListBox:: GetCurSel](#getcursel).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#19](../../mfc/codesnippet/cpp/clistbox-class_19.cpp)]
 
-## <a name="clistboxgetselcount"></a><a name="getselcount"></a>CListBox::GetSelCount
+## <a name="clistboxgetselcount"></a><a name="getselcount"></a>CListBox:: GetSelCount
 
-Pobiera całkowitą liczbę zaznaczonych elementów w polu listy wielokrotnego wyboru.
+Pobiera łączną liczbę wybranych elementów w polu listy wielokrotnego wyboru.
 
 ```
 int GetSelCount() const;
@@ -854,15 +854,15 @@ int GetSelCount() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba zaznaczonych elementów w polu listy. Jeśli pole listy jest polem listy z pojedynczym wyborem, zwracana wartość jest LB_ERR.
+Liczba wybranych elementów w polu listy. Jeśli pole listy jest polem listy z pojedynczym wyborem, wartość zwracana jest LB_ERR.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CListBox::GetSelItems](#getselitems).
+  Zobacz przykład dla [CListBox:: GetSelItems](#getselitems).
 
-## <a name="clistboxgetselitems"></a><a name="getselitems"></a>CListBox::GetSelItems
+## <a name="clistboxgetselitems"></a><a name="getselitems"></a>CListBox:: GetSelItems
 
-Wypełnia bufor tablicą liczb całkowitych określającą numery towarów wybranych elementów w polu listy wielokrotnego zaznaczenia.
+Wypełnia bufor z tablicą liczb całkowitych, które określają numery elementów wybranych elementów w polu listy wielokrotnego wyboru.
 
 ```
 int GetSelItems(
@@ -872,21 +872,21 @@ int GetSelItems(
 
 ### <a name="parameters"></a>Parametry
 
-*nMaxItems ( nMaxItems )*<br/>
-Określa maksymalną liczbę wybranych elementów, których numery towarów mają być umieszczone w buforze.
+*nMaxItems*<br/>
+Określa maksymalną liczbę wybranych elementów, których numery elementów mają być umieszczane w buforze.
 
-*rgIndex ( rgIndex )*<br/>
-Określa wskaźnik do buforu wystarczająco duży dla liczby całkowitych określonych przez *nMaxItems*.
+*rgIndex*<br/>
+Określa wskaźnik do buforu wystarczająco duży dla liczby liczb całkowitych określonych przez *nMaxItems*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Rzeczywista liczba elementów umieszczonych w buforze. Jeśli pole listy jest polem listy z pojedynczym wyborem, zwracaną wartością jest `LB_ERR`.
+Rzeczywista liczba elementów umieszczonych w buforze. Jeśli pole listy jest polem listy z pojedynczym wyborem, wartość zwracana to `LB_ERR` .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#20](../../mfc/codesnippet/cpp/clistbox-class_20.cpp)]
 
-## <a name="clistboxgettext"></a><a name="gettext"></a>CListBox::GetText
+## <a name="clistboxgettext"></a><a name="gettext"></a>CListBox:: gettext
 
 Pobiera ciąg z pola listy.
 
@@ -902,30 +902,30 @@ void GetText(
 
 ### <a name="parameters"></a>Parametry
 
-*Nindex*<br/>
-Określa indeks od zera ciągu do pobrania.
+*nIndex*<br/>
+Określa indeks (liczony od zera) ciągu, który ma zostać pobrany.
 
-*lpszBuffer (lpszBuffer)*<br/>
-Wskazuje bufor, który odbiera ciąg. Bufor musi mieć wystarczającą ilość miejsca dla ciągu i kończący się znak null. Rozmiar ciągu można określić z wyprzedzeniem, `GetTextLen` wywołując funkcję elementu członkowskiego.
+*lpszBuffer*<br/>
+Wskazuje bufor, który odbiera ciąg. Bufor musi mieć wystarczającą ilość miejsca dla ciągu i kończącego znaku null. Rozmiar ciągu można ustalić przed czasem, wywołując `GetTextLen` funkcję członkowską.
 
 *rString*<br/>
 Odwołanie do `CString` obiektu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Długość (w bajtach) ciągu, z wyłączeniem kończącego się znaku null. Jeśli *nIndex* nie określa prawidłowego indeksu, wartość zwracana jest LB_ERR.
+Długość (w bajtach) ciągu, z wyłączeniem kończącego znaku null. Jeśli *nIndex* nie określa prawidłowego indeksu, wartość zwracana jest LB_ERR.
 
 ### <a name="remarks"></a>Uwagi
 
-Drugi formularz tej funkcji elementu `CString` członkowskiego wypełnia obiekt tekstem ciągu.
+Druga forma tej funkcji składowej wypełnia `CString` obiekt ciągiem tekstu.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#21](../../mfc/codesnippet/cpp/clistbox-class_21.cpp)]
 
-## <a name="clistboxgettextlen"></a><a name="gettextlen"></a>CListBox::GetTextLen
+## <a name="clistboxgettextlen"></a><a name="gettextlen"></a>CListBox:: GetTextLen
 
-Pobiera długość ciągu w elemencie pola listy.
+Pobiera długość ciągu w pozycji listy.
 
 ```
 int GetTextLen(int nIndex) const;
@@ -933,20 +933,20 @@ int GetTextLen(int nIndex) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Nindex*<br/>
-Określa indeks od zera ciągu.
+*nIndex*<br/>
+Określa indeks ciągu liczony od zera.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Długość ciągu w znakach, z wyłączeniem kończącego się znaku null. Jeśli *nIndex* nie określa prawidłowego indeksu, wartość zwracana jest LB_ERR.
+Długość ciągu znaków, z wyłączeniem kończącego znaku null. Jeśli *nIndex* nie określa prawidłowego indeksu, wartość zwracana jest LB_ERR.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CListBox::GetText](#gettext).
+  Zobacz przykład dla [CListBox:: gettext](#gettext).
 
-## <a name="clistboxgettopindex"></a><a name="gettopindex"></a>CListBox::GetTopIndex
+## <a name="clistboxgettopindex"></a><a name="gettopindex"></a>CListBox:: GetTopIndex
 
-Pobiera indeks od zera pierwszego widocznego elementu w polu listy.
+Pobiera indeks (liczony od zera) pierwszego widocznego elementu w polu listy.
 
 ```
 int GetTopIndex() const;
@@ -954,7 +954,7 @@ int GetTopIndex() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks od zera pierwszego widocznego elementu w polu listy, jeśli zakończy się pomyślnie, LB_ERR w przeciwnym razie.
+Indeks (liczony od zera) pierwszego widocznego elementu w polu listy, jeśli się powiedzie, LB_ERR w przeciwnym razie.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -964,7 +964,7 @@ Początkowo element 0 znajduje się u góry pola listy, ale jeśli pole listy je
 
 [!code-cpp[NVC_MFC_CListBox#22](../../mfc/codesnippet/cpp/clistbox-class_22.cpp)]
 
-## <a name="clistboxinitstorage"></a><a name="initstorage"></a>CListBox::InitStorage
+## <a name="clistboxinitstorage"></a><a name="initstorage"></a>CListBox:: InitStorage
 
 Przydziela pamięć do przechowywania elementów pola listy.
 
@@ -976,31 +976,31 @@ int InitStorage(
 
 ### <a name="parameters"></a>Parametry
 
-*nNauki*<br/>
+*nItems*<br/>
 Określa liczbę elementów do dodania.
 
-*n Bajty*<br/>
-Określa ilość pamięci w bajtach, aby przydzielić dla ciągów towarów.
+*nBytes*<br/>
+Określa ilość pamięci (w bajtach) do przydzielenia dla ciągów elementów.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Jeśli się powiedzie, maksymalna liczba elementów, które pole listy można przechowywać przed ponownego przydzielenia pamięci jest potrzebne, w przeciwnym razie LB_ERRSPACE, co oznacza, że nie jest dostępna wystarczająca ilość pamięci.
+Jeśli to się powiedzie, Maksymalna liczba elementów, które mogą być przechowywane w polu listy przed ponownym alokacją pamięci, jest niezbędna, w przeciwnym razie LB_ERRSPACE, co oznacza, że jest za mało dostępnej pamięci.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie tej funkcji przed dodaniem `CListBox`dużej liczby elementów do pliku .
+Wywołaj tę funkcję przed dodaniem dużej liczby elementów do `CListBox` .
 
-Ta funkcja pomaga przyspieszyć inicjowanie pól listy, które mają dużą liczbę elementów (więcej niż 100). Preallocates określonej ilości pamięci, tak aby kolejne [AddString](#addstring), [InsertString](#insertstring)i [Dir](#dir) funkcje zająć jak najkrótszy czas. Można użyć oszacowań dla parametrów. Jeśli przecenić, niektóre dodatkowe pamięci jest przydzielany; Jeśli nie doceniasz, normalna alokacja jest używana dla towarów, które przekraczają wstępnie przydzieloną kwotę.
+Ta funkcja pomaga przyspieszyć inicjalizację pól listy, które mają dużą liczbę elementów (więcej niż 100). Wstępnie przydzieli określoną ilość pamięci, aby kolejne funkcje [AddString](#addstring), [InsertString](#insertstring)i [dir](#dir) miały najkrótszy możliwy czas. Można użyć oszacowań dla parametrów. W przypadku nadmiernego oszacowania część dodatkowej pamięci zostanie przypisana; w przypadku podwyższania szacunku normalna alokacja jest używana dla elementów, które przekraczają wstępnie przydzieloną kwotę.
 
-Tylko system Windows 95/98: Parametr *nItems* jest ograniczony do wartości 16-bitowych. Oznacza to, że pola listy nie mogą zawierać więcej niż 32 767 pozycji. Chociaż liczba elementów jest ograniczona, całkowity rozmiar elementów w polu listy jest ograniczony tylko przez dostępną pamięć.
+Tylko system Windows 95/98: parametr *nItems* jest ograniczony do wartości 16-bitowych. Oznacza to, że pola listy nie mogą zawierać więcej niż 32 767 elementów. Chociaż liczba elementów jest ograniczona, łączny rozmiar elementów w polu listy jest ograniczony tylko przez dostępną pamięć.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#23](../../mfc/codesnippet/cpp/clistbox-class_23.cpp)]
 
-## <a name="clistboxinsertstring"></a><a name="insertstring"></a>CListBox::Wstawianie
+## <a name="clistboxinsertstring"></a><a name="insertstring"></a>CListBox:: InsertString
 
-Wstawia ciąg do pola listy.
+Wstawia ciąg w polu listy.
 
 ```
 int InsertString(
@@ -1010,27 +1010,27 @@ int InsertString(
 
 ### <a name="parameters"></a>Parametry
 
-*Nindex*<br/>
-Określa indeks od zera pozycji do wstawienia ciągu. Jeśli ten parametr jest -1, ciąg jest dodawany na końcu listy.
+*nIndex*<br/>
+Określa indeks pozycji (liczony od zera), w której ma zostać wstawiony ciąg. Jeśli ten parametr ma wartość-1, ciąg zostanie dodany na końcu listy.
 
 *lpszItem*<br/>
-Wskazuje ciąg zakończony z wartością null, który ma zostać wstawiony.
+Wskazuje ciąg zakończony znakiem null, który ma zostać wstawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks od zera pozycji, po której ciąg został wstawiony. Zwracana wartość jest LB_ERR, jeśli wystąpi błąd; zwracana wartość jest LB_ERRSPACE, jeśli nie ma wystarczającego miejsca do przechowywania nowego ciągu.
+Indeks (liczony od zera) pozycji, w której został wstawiony ciąg. Wartość zwracana jest LB_ERR w przypadku wystąpienia błędu; wartość zwracana jest LB_ERRSPACE, jeśli jest za mało miejsca, aby można było zapisać nowy ciąg.
 
 ### <a name="remarks"></a>Uwagi
 
-W przeciwieństwie do Funkcji `InsertString` elementu członkowskiego [AddString,](#addstring) nie powoduje listy z [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) stylu do sortowania.
+W przeciwieństwie do funkcji składowej [AddString](#addstring) `InsertString` nie powoduje sortowania listy z stylem [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#24](../../mfc/codesnippet/cpp/clistbox-class_24.cpp)]
 
-## <a name="clistboxitemfrompoint"></a><a name="itemfrompoint"></a>CListBox::ItemFromPoint
+## <a name="clistboxitemfrompoint"></a><a name="itemfrompoint"></a>CListBox:: ItemFromPoint
 
-Określa element pola listy najbliższy punktowi określonej w *pt*.
+Określa element pola listy najbliższy punkt określony w *pkt pt*.
 
 ```
 UINT ItemFromPoint(
@@ -1040,27 +1040,27 @@ UINT ItemFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*Pt*<br/>
-Punkt, dla którego ma być odnajdywać najbliższy element, określony względem lewego górnego rogu obszaru klienta pola listy.
+*zmiennoprzecinkow*<br/>
+Punkt, dla którego można znaleźć najbliższy element określony względem lewego górnego rogu obszaru klienta w polu listy.
 
-*bOutside (Z boku)*<br/>
-Odwołanie do zmiennej BOOL, która zostanie ustawiona na WARTOŚĆ PRAWDA, jeśli *pt* znajduje się poza obszarem klienta pola listy, FALSE, jeśli *pt* znajduje się wewnątrz obszaru klienta pola listy.
+*bOutside*<br/>
+Odwołanie do zmiennej LOGICZNEj, która zostanie ustawiona na wartość TRUE, jeśli *pt* znajduje się poza obszarem klienckim pola listy, wartość false, jeśli *pt* znajduje się w obszarze klienta pola listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks najbliższej pozycji do punktu określonego w *pt*.
+Indeks najbliższego elementu do punktu określonego w *pkt pt*.
 
 ### <a name="remarks"></a>Uwagi
 
-Za pomocą tej funkcji można określić, który element pola listy kursor myszy zostanie przeniesiony.
+Za pomocą tej funkcji można określić, który element pola listy jest przesuwany nad kursorem myszy.
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [CListBox::SetAnchorIndex](#setanchorindex).
+  Zobacz przykład dla [CListBox:: SetAnchorIndex](#setanchorindex).
 
-## <a name="clistboxmeasureitem"></a><a name="measureitem"></a>CListBox::MeasureItem
+## <a name="clistboxmeasureitem"></a><a name="measureitem"></a>CListBox:: MeasureItem
 
-Wywoływane przez strukturę podczas tworzenia pola listy ze stylem rysowania właściciela.
+Wywoływane przez platformę, gdy zostanie utworzony pole listy z stylem rysowania przez właściciela.
 
 ```
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
@@ -1069,21 +1069,21 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpMeasureItemStruct*<br/>
-Długi wskaźnik do struktury [MEASUREITEMSTRUCT.](/windows/win32/api/winuser/ns-winuser-measureitemstruct)
+Długi wskaźnik do struktury [MEASUREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-measureitemstruct) .
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślnie ta funkcja elementu członkowskiego nic nie robi. Zastąpuj tę funkcję `MEASUREITEMSTRUCT` elementu członkowskiego i wypełnij strukturę, aby poinformować system Windows o wymiarach pola listy. Jeśli pole listy jest tworzony z [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) stylu, framework wywołuje tę funkcję elementu członkowskiego dla każdego elementu w polu listy. W przeciwnym razie ten element członkowski jest wywoływany tylko raz.
+Domyślnie ta funkcja członkowska nic nie robi. Zastąp tę funkcję członkowską i wypełnij `MEASUREITEMSTRUCT` strukturę, aby informować okna o wymiarach pola listy. Jeśli pole listy jest tworzone z stylem [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , struktura wywołuje tę funkcję elementu członkowskiego dla każdego elementu w polu listy. W przeciwnym razie ten element członkowski jest wywoływany tylko raz.
 
-Aby uzyskać więcej informacji na temat [używania](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) stylu LBS_OWNERDRAWFIXED w `SubclassDlgItem` polu listy `CWnd`rysowania właściciela utworzonego za pomocą funkcji członkowskiej , zobacz dyskusję w [notatce technicznej 14](../../mfc/tn014-custom-controls.md).
+Aby uzyskać więcej informacji na temat używania stylu [LBS_OWNERDRAWFIXED](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) w polu listy rysowania przez właściciela utworzonego za pomocą `SubclassDlgItem` funkcji elementu członkowskiego `CWnd` , zapoznaj się z tematem dyskusja w artykule [technicznym 14](../../mfc/tn014-custom-controls.md).
 
-Zobacz [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) opis `MEASUREITEMSTRUCT` struktury.
+Opis struktury można znaleźć w temacie [CWnd:: OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) `MEASUREITEMSTRUCT` .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#25](../../mfc/codesnippet/cpp/clistbox-class_25.cpp)]
 
-## <a name="clistboxresetcontent"></a><a name="resetcontent"></a>CListBox::ResetContent
+## <a name="clistboxresetcontent"></a><a name="resetcontent"></a>CListBox:: ResetContent
 
 Usuwa wszystkie elementy z pola listy.
 
@@ -1095,9 +1095,9 @@ void ResetContent();
 
 [!code-cpp[NVC_MFC_CListBox#26](../../mfc/codesnippet/cpp/clistbox-class_26.cpp)]
 
-## <a name="clistboxselectstring"></a><a name="selectstring"></a>CListBox::SelectString
+## <a name="clistboxselectstring"></a><a name="selectstring"></a>CListBox:: SelectString
 
-Wyszukuje element pola listy, który pasuje do określonego ciągu, a jeśli zostanie znaleziony pasujący element, wybiera element.
+Wyszukuje element pola listy, który pasuje do określonego ciągu, i jeśli zostanie znaleziony pasujący element, zaznacza element.
 
 ```
 int SelectString(
@@ -1107,33 +1107,33 @@ int SelectString(
 
 ### <a name="parameters"></a>Parametry
 
-*nStartPo*<br/>
-Zawiera indeks od zera elementu przed pierwszym elementem do przeszukania. Gdy wyszukiwanie osiągnie dolną część pola listy, kontynuuje od góry pola listy z powrotem do elementu określonego przez *nStartAfter*. Jeśli *nStartAfter* jest -1, całe pole listy jest wyszukiwane od początku.
+*nStartAfter*<br/>
+Zawiera indeks (liczony od zera) elementu przed pierwszym elementem do przeszukania. Gdy wyszukiwanie osiągnie dolny koniec pola listy, kontynuuje się z góry pola listy z powrotem do elementu określonego przez *nStartAfter*. Jeśli *nStartAfter* to-1, całe pole listy jest przeszukiwane od początku.
 
 *lpszItem*<br/>
-Wskazuje ciąg zakończony z wartością null, który zawiera prefiks do wyszukania. Wyszukiwanie jest niezależne od liter, więc ten ciąg może zawierać dowolną kombinację wielkich i małych liter.
+Wskazuje ciąg zakończony znakiem null, który zawiera prefiks do wyszukania. Wyszukiwanie jest niezależne od wielkości liter, więc ten ciąg może zawierać dowolną kombinację wielkich i małych liter.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Indeks wybranego elementu, jeśli wyszukiwanie zakończyło się pomyślnie. Jeśli wyszukiwanie nie powiodło się, zwracana wartość jest LB_ERR, a bieżące zaznaczenie nie zostanie zmienione.
+Indeks wybranego elementu, jeśli wyszukiwanie zakończyło się pomyślnie. Jeśli wyszukiwanie nie powiodło się, wartość zwracana jest LB_ERR i bieżące zaznaczenie nie zostanie zmienione.
 
 ### <a name="remarks"></a>Uwagi
 
-Pole listy zostanie przewijane, jeśli to konieczne, aby wyświetlić zaznaczony element.
+Pole listy jest przewijane, w razie potrzeby, aby przenieść wybrany element do widoku.
 
-Tej funkcji elementu członkowskiego nie można używać z polem listy, które ma [styl LBS_MULTIPLESEL.](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)
+Ta funkcja członkowska nie może być używana z polem listy, które ma styl [LBS_MULTIPLESEL](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
 Element jest wybierany tylko wtedy, gdy jego początkowe znaki (od punktu początkowego) pasują do znaków w ciągu określonym przez *lpszItem*.
 
-Użyj `FindString` funkcji elementu członkowskiego, aby znaleźć ciąg bez zaznaczania elementu.
+Użyj `FindString` funkcji członkowskiej, aby znaleźć ciąg bez wybierania elementu.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#27](../../mfc/codesnippet/cpp/clistbox-class_27.cpp)]
 
-## <a name="clistboxselitemrange"></a><a name="selitemrange"></a>CListBox::SelItemRange
+## <a name="clistboxselitemrange"></a><a name="selitemrange"></a>CListBox:: SelItemRange
 
-Zaznacza wiele kolejnych elementów w polu listy wielokrotnego wyboru.
+Wybiera wiele kolejnych elementów w polu listy wielokrotnego wyboru.
 
 ```
 int SelItemRange(
@@ -1144,30 +1144,30 @@ int SelItemRange(
 
 ### <a name="parameters"></a>Parametry
 
-*bWybierz*<br/>
-Określa sposób ustawiania zaznaczenia. Jeśli *bWybieracz* ma wartość PRAWDA, ciąg jest zaznaczony i wyróżniony; jeśli FAŁSZ, podświetlenie zostanie usunięte, a ciąg nie jest już zaznaczony.
+*bSelect*<br/>
+Określa, jak ustawić wybór. Jeśli *bSelect* ma wartość true, ciąg jest zaznaczony i wyróżniony; w przypadku wartości FALSE wyróżnienie jest usuwane, a ciąg nie jest już zaznaczony.
 
 *nFirstItem*<br/>
-Określa indeks oparty na wartości zero pierwszego elementu do skonfigurowania.
+Określa indeks (liczony od zera) pierwszego elementu, który ma zostać ustawiony.
 
 *nLastItem*<br/>
-Określa indeks od zera ostatniego elementu do ustawionego.
+Określa indeks (liczony od zera) ostatniego elementu, który ma zostać ustawiony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-LB_ERR, jeśli wystąpi błąd.
+LB_ERR w przypadku wystąpienia błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Tej funkcji elementu członkowskiego należy używać tylko w polach listy wielokrotnego wyboru. Jeśli chcesz wybrać tylko jeden element w polu listy wielokrotnego wyboru — to znaczy, jeśli *nFirstItem* jest równa *nLastItem* — zamiast tego należy wywołać funkcję elementu członkowskiego [SetSel.](#setsel)
+Ta funkcja członkowska jest używana tylko z polami list wielokrotnego wyboru. Jeśli musisz wybrać tylko jeden element w polu listy wielokrotnego wyboru — to znaczy, jeśli *nFirstItem* jest równa *nLastItem* — zamiast tego wywołaj funkcję członkowską [SetSel](#setsel) .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#28](../../mfc/codesnippet/cpp/clistbox-class_28.cpp)]
 
-## <a name="clistboxsetanchorindex"></a><a name="setanchorindex"></a>CListBox::SetAnchorIndex
+## <a name="clistboxsetanchorindex"></a><a name="setanchorindex"></a>CListBox:: SetAnchorIndex
 
-Ustawia zakotwiczenie w polu listy wielokrotnego wyboru, aby rozpocząć wybór rozszerzony.
+Ustawia kotwicę w polu listy wielokrotnego wyboru, aby rozpocząć rozszerzane zaznaczenie.
 
 ```cpp
 void SetAnchorIndex(int nIndex);
@@ -1175,20 +1175,20 @@ void SetAnchorIndex(int nIndex);
 
 ### <a name="parameters"></a>Parametry
 
-*Nindex*<br/>
-Określa indeks od zera elementu pola listy, który będzie kotwicą.
+*nIndex*<br/>
+Określa indeks (liczony od zera) elementu pola listy, który będzie zakotwiczeniem.
 
 ### <a name="remarks"></a>Uwagi
 
-W polu listy wielokrotnego zaznaczenia element zakotwiczenia jest pierwszym lub ostatnim elementem w bloku sąsiadujących wybranych elementów.
+W polu listy wielokrotnego wyboru element zakotwiczony jest pierwszym lub ostatnim elementem w bloku ciągłych wybranych elementów.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#29](../../mfc/codesnippet/cpp/clistbox-class_29.cpp)]
 
-## <a name="clistboxsetcaretindex"></a><a name="setcaretindex"></a>CListBox::SetCaretIndex
+## <a name="clistboxsetcaretindex"></a><a name="setcaretindex"></a>CListBox:: SetCaretIndex
 
-Ustawia prostokąt fokusu na element w określonym indeksie w polu listy wielokrotnego wyboru.
+Ustawia prostokąt fokusu na element o określonym indeksie w polu listy wielokrotnego wyboru.
 
 ```
 int SetCaretIndex(
@@ -1198,15 +1198,15 @@ int SetCaretIndex(
 
 ### <a name="parameters"></a>Parametry
 
-*Nindex*<br/>
-Określa indeks od zera elementu, który ma otrzymać prostokąt fokusu w polu listy.
+*nIndex*<br/>
+Określa indeks (liczony od zera) elementu, w którym ma zostać wyświetlony prostokąt fokus w polu listy.
 
-*bScroll (właśc.*<br/>
-Jeśli ta wartość wynosi 0, element jest przewijany, dopóki nie będzie w pełni widoczny. Jeśli ta wartość nie jest 0, element jest przewijany, dopóki nie jest przynajmniej częściowo widoczne.
+*bScroll*<br/>
+Jeśli ta wartość jest równa 0, element zostanie przewinięty do momentu, w którym jest w pełni widoczny. Jeśli ta wartość nie jest równa 0, element zostanie przewinięty do momentu, gdy jest on co najmniej częściowo widoczny.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-LB_ERR, jeśli wystąpi błąd.
+LB_ERR w przypadku wystąpienia błędu.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -1216,9 +1216,9 @@ Jeśli element nie jest widoczny, jest przewijany do widoku.
 
 [!code-cpp[NVC_MFC_CListBox#30](../../mfc/codesnippet/cpp/clistbox-class_30.cpp)]
 
-## <a name="clistboxsetcolumnwidth"></a><a name="setcolumnwidth"></a>CListBox::SetColumnWidth
+## <a name="clistboxsetcolumnwidth"></a><a name="setcolumnwidth"></a>CListBox:: SetColumnWidth
 
-Ustawia szerokość w pikselach wszystkich kolumn w polu listy wielokolumnowej (utworzonej w stylu [LBS_MULTICOLUMN).](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)
+Ustawia szerokość (w pikselach) wszystkich kolumn w wielokolumnowym polu listy (utworzonego za pomocą stylu [LBS_MULTICOLUMN](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) ).
 
 ```cpp
 void SetColumnWidth(int cxWidth);
@@ -1226,16 +1226,16 @@ void SetColumnWidth(int cxWidth);
 
 ### <a name="parameters"></a>Parametry
 
-*cxWidth ( cxWidth )*<br/>
-Określa szerokość w pikselach wszystkich kolumn.
+*cxWidth*<br/>
+Określa szerokość (w pikselach) wszystkich kolumn.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#31](../../mfc/codesnippet/cpp/clistbox-class_31.cpp)]
 
-## <a name="clistboxsetcursel"></a><a name="setcursel"></a>CListBox::SetCurSel
+## <a name="clistboxsetcursel"></a><a name="setcursel"></a>CListBox:: SetCurSel
 
-Wybiera ciąg i przewija go do widoku, jeśli to konieczne.
+Wybiera ciąg i przewija go do widoku, w razie potrzeby.
 
 ```
 int SetCurSel(int nSelect);
@@ -1243,28 +1243,28 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parametry
 
-*nWybranek*<br/>
-Określa indeks od zera wybranego ciągu. Jeśli *nSelect* ma -1, pole listy jest ustawione na brak zaznaczenia.
+*nWybierz*<br/>
+Określa indeks (liczony od zera) ciągu, który ma zostać wybrany. Jeśli *nWybierz* ma wartość-1, pole listy nie ma żadnego wyboru.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-LB_ERR, jeśli wystąpi błąd.
+LB_ERR w przypadku wystąpienia błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Po zaznaczeniu nowego ciągu pole listy usuwa podświetlenie z poprzednio wybranego ciągu.
+Po wybraniu nowego ciągu pole listy usuwa wyróżnienie z wcześniej wybranego ciągu.
 
-Tej funkcji elementu członkowskiego należy używać tylko w polach listy pojedynczego wyboru.
+Ta funkcja członkowska jest używana tylko z polami listy z pojedynczym wyborem.
 
-Aby ustawić lub usunąć zaznaczenie w polu listy z wieloma zaznaczeniami, użyj [CListBox::SetSel](#setsel).
+Aby ustawić lub usunąć zaznaczenie w polu listy wielokrotnego wyboru, użyj [CListBox:: SetSel](#setsel).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#32](../../mfc/codesnippet/cpp/clistbox-class_32.cpp)]
 
-## <a name="clistboxsethorizontalextent"></a><a name="sethorizontalextent"></a>CListBox::SetHorizontalExtent
+## <a name="clistboxsethorizontalextent"></a><a name="sethorizontalextent"></a>CListBox:: SetHorizontalExtent
 
-Ustawia szerokość w pikselach, za pomocą której pole listy można przewijać w poziomie.
+Ustawia szerokość (w pikselach), przez którą pole listy może być przewijane w poziomie.
 
 ```cpp
 void SetHorizontalExtent(int cxExtent);
@@ -1272,22 +1272,22 @@ void SetHorizontalExtent(int cxExtent);
 
 ### <a name="parameters"></a>Parametry
 
-*cxWysekcja*<br/>
-Określa liczbę pikseli, za pomocą których pole listy może być przewijane w poziomie.
+*cxExtent*<br/>
+Określa liczbę pikseli, przez jaką pole listy może być przewijane w poziomie.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli rozmiar pola listy jest mniejszy niż ta wartość, poziomy pasek przewijania przewija elementy w poziomie w polu listy. Jeśli pole listy jest tak duże lub większe niż ta wartość, poziomy pasek przewijania jest ukryty.
+Jeśli rozmiar pola listy jest mniejszy niż ta wartość, poziomy pasek przewijania będzie przewinąć w poziomie elementy w polu listy. Jeśli pole listy jest tak duże lub większe niż ta wartość, poziomy pasek przewijania jest ukryty.
 
-Aby odpowiedzieć na `SetHorizontalExtent`wywołanie , pole listy musi zostać zdefiniowane za pomocą stylu [WS_HSCROLL.](../../mfc/reference/styles-used-by-mfc.md#window-styles)
+Aby odpowiedzieć na wywołanie `SetHorizontalExtent` , pole listy musi być zdefiniowane z stylem [WS_HSCROLL](../../mfc/reference/styles-used-by-mfc.md#window-styles) .
 
-Ta funkcja elementu członkowskiego nie jest przydatna w przypadku pól listy wielokolumnowej. W przypadku pól listy wielokolumnowej należy wywołać `SetColumnWidth` funkcję elementu członkowskiego.
+Ta funkcja członkowska nie jest przydatna w przypadku wielokolumnowych pól listy. Dla wielokolumnowych pól listy Wywołaj `SetColumnWidth` funkcję członkowską.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#33](../../mfc/codesnippet/cpp/clistbox-class_33.cpp)]
 
-## <a name="clistboxsetitemdata"></a><a name="setitemdata"></a>CListBox::SetItemData
+## <a name="clistboxsetitemdata"></a><a name="setitemdata"></a>CListBox:: SetItemData
 
 Ustawia wartość skojarzoną z określonym elementem w polu listy.
 
@@ -1299,23 +1299,23 @@ int SetItemData(
 
 ### <a name="parameters"></a>Parametry
 
-*Nindex*<br/>
-Określa indeks od zera towaru.
+*nIndex*<br/>
+Określa indeks (liczony od zera) elementu.
 
 *dwItemData*<br/>
-Określa wartość skojarzoną z elementem.
+Określa wartość, która ma zostać skojarzona z elementem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-LB_ERR, jeśli wystąpi błąd.
+LB_ERR w przypadku wystąpienia błędu.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#34](../../mfc/codesnippet/cpp/clistbox-class_34.cpp)]
 
-## <a name="clistboxsetitemdataptr"></a><a name="setitemdataptr"></a>CListBox::SetItemDataPtr
+## <a name="clistboxsetitemdataptr"></a><a name="setitemdataptr"></a>CListBox:: SetItemDataPtr
 
-Ustawia wartość 32-bitową skojarzoną z określonym elementem w polu listy jako określony wskaźnik **(void** <strong>\*</strong>).
+Ustawia wartość 32-bitową skojarzoną z określonym elementem w polu listy jako określony wskaźnik ( **`void`** <strong>\*</strong> ).
 
 ```
 int SetItemDataPtr(
@@ -1325,25 +1325,25 @@ int SetItemDataPtr(
 
 ### <a name="parameters"></a>Parametry
 
-*Nindex*<br/>
-Określa indeks od zera towaru.
+*nIndex*<br/>
+Określa indeks (liczony od zera) elementu.
 
-*Pdata*<br/>
-Określa wskaźnik, który ma być skojarzony z elementem.
+*pData*<br/>
+Określa wskaźnik, który ma zostać skojarzony z elementem.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-LB_ERR, jeśli wystąpi błąd.
+LB_ERR w przypadku wystąpienia błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten wskaźnik pozostaje prawidłowy przez cały okres ważności pola listy, nawet jeśli względna pozycja elementu w polu listy może ulec zmianie w miarę dodawania lub usuwania elementów. W związku z tym indeks elementu w polu można zmienić, ale wskaźnik pozostaje niezawodny.
+Ten wskaźnik pozostaje prawidłowy dla życia pola listy, nawet jeśli względne położenie elementu w polu listy może ulec zmianie, gdy elementy są dodawane lub usuwane. W związku z tym indeks elementu w polu może ulec zmianie, ale wskaźnik pozostaje niezawodny.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#35](../../mfc/codesnippet/cpp/clistbox-class_35.cpp)]
 
-## <a name="clistboxsetitemheight"></a><a name="setitemheight"></a>CListBox::SetItemHeight
+## <a name="clistboxsetitemheight"></a><a name="setitemheight"></a>CListBox:: SetItemHeight
 
 Ustawia wysokość elementów w polu listy.
 
@@ -1355,25 +1355,25 @@ int SetItemHeight(
 
 ### <a name="parameters"></a>Parametry
 
-*Nindex*<br/>
-Określa indeks od zera elementu w polu listy. Ten parametr jest używany tylko wtedy, gdy pole listy ma styl LBS_OWNERDRAWVARIABLE; w przeciwnym razie należy ustawić na 0.
+*nIndex*<br/>
+Określa indeks (liczony od zera) elementu w polu listy. Ten parametr jest używany tylko wtedy, gdy pole listy ma styl LBS_OWNERDRAWVARIABLE; w przeciwnym razie powinna być ustawiona na 0.
 
 *cyItemHeight*<br/>
-Określa wysokość elementu w pikselach.
+Określa wysokość (w pikselach) elementu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-LB_ERR, jeśli indeks lub wysokość jest nieprawidłowa.
+LB_ERR, jeśli indeks lub wysokość są nieprawidłowe.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli pole listy ma [styl LBS_OWNERDRAWVARIABLE,](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) ta funkcja ustawia wysokość elementu określonego przez *nIndex*. W przeciwnym razie ta funkcja ustawia wysokość wszystkich elementów w polu listy.
+Jeśli pole listy ma styl [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , ta funkcja Ustawia wysokość elementu określonego przez *nIndex*. W przeciwnym razie ta funkcja Ustawia wysokość wszystkich elementów w polu listy.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#36](../../mfc/codesnippet/cpp/clistbox-class_36.cpp)]
 
-## <a name="clistboxsetlocale"></a><a name="setlocale"></a>CListBox::SetLocale
+## <a name="clistboxsetlocale"></a><a name="setlocale"></a>CListBox:: setlocale
 
 Ustawia identyfikator ustawień regionalnych dla tego pola listy.
 
@@ -1383,24 +1383,24 @@ LCID SetLocale(LCID nNewLocale);
 
 ### <a name="parameters"></a>Parametry
 
-*nNoweLocale*<br/>
-Wartość nowego identyfikatora ustawień regionalnych (LCID) ustawiona dla pola listy.
+*nNewLocale*<br/>
+Nowa wartość identyfikatora ustawień regionalnych (LCID) do ustawienia w polu listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Poprzednia wartość identyfikatora ustawień regionalnych (LCID) dla tego pola listy.
+Wartość poprzedniego identyfikatora ustawień regionalnych (LCID) dla tego pola listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `SetLocale` nie jest wywoływana, domyślne ustawienia regionalne są uzyskiwane z systemu. To domyślne ustawienia regionalne systemu można modyfikować za pomocą aplikacji regionalnej (lub międzynarodowej) Panelu sterowania.
+Jeśli `SetLocale` nie jest wywoływana, domyślne ustawienia regionalne są uzyskiwane z systemu. Domyślne ustawienia regionalne systemu można modyfikować za pomocą aplikacji regionalnej (lub międzynarodowej) panelu sterowania.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#37](../../mfc/codesnippet/cpp/clistbox-class_37.cpp)]
 
-## <a name="clistboxsetsel"></a><a name="setsel"></a>CListBox::SetSel
+## <a name="clistboxsetsel"></a><a name="setsel"></a>CListBox:: SetSel
 
-Wybiera ciąg w polu listy wielokrotnego zaznaczenia.
+Wybiera ciąg w polu listy wielokrotnego wyboru.
 
 ```
 int SetSel(
@@ -1410,29 +1410,29 @@ int SetSel(
 
 ### <a name="parameters"></a>Parametry
 
-*Nindex*<br/>
-Zawiera indeks od zera ciągu, który ma zostać ustawiony. Jeśli -1, zaznaczenie jest dodawane lub usuwane ze wszystkich ciągów, w zależności od wartości *bSelect*.
+*nIndex*<br/>
+Zawiera indeks (liczony od zera) ciągu, który ma zostać ustawiony. Jeśli-1, zaznaczenie jest dodawane lub usuwane ze wszystkich ciągów, w zależności od wartości *bSelect*.
 
-*bWybierz*<br/>
-Określa sposób ustawiania zaznaczenia. Jeśli *bWybieracz* ma wartość PRAWDA, ciąg jest zaznaczony i wyróżniony; jeśli FAŁSZ, podświetlenie zostanie usunięte, a ciąg nie jest już zaznaczony. Określony ciąg jest zaznaczony i wyróżniony domyślnie.
+*bSelect*<br/>
+Określa, jak ustawić wybór. Jeśli *bSelect* ma wartość true, ciąg jest zaznaczony i wyróżniony; w przypadku wartości FALSE wyróżnienie jest usuwane, a ciąg nie jest już zaznaczony. Określony ciąg jest domyślnie zaznaczony i wyróżniony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-LB_ERR, jeśli wystąpi błąd.
+LB_ERR w przypadku wystąpienia błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Tej funkcji elementu członkowskiego należy używać tylko w polach listy wielokrotnego wyboru.
+Ta funkcja członkowska jest używana tylko z polami list wielokrotnego wyboru.
 
-Aby zaznaczyć element z pola listy pojedynczego zaznaczenia, użyj [CListBox::SetCurSel](#setcursel).
+Aby zaznaczyć element z pola listy z pojedynczym wyborem, użyj [CListBox:: SetCurSel](#setcursel).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#38](../../mfc/codesnippet/cpp/clistbox-class_38.cpp)]
 
-## <a name="clistboxsettabstops"></a><a name="settabstops"></a>CListBox::SetTabStops
+## <a name="clistboxsettabstops"></a><a name="settabstops"></a>CListBox:: SetTabStops
 
-Ustawia pozycje tabulatora w polu listy.
+Ustawia położenie tabulatorów w polu listy.
 
 ```cpp
 void SetTabStops();
@@ -1446,33 +1446,33 @@ BOOL SetTabStops(
 ### <a name="parameters"></a>Parametry
 
 *cxEachStop*<br/>
-Tabulatory są ustawiane na każdym *cxEachStop* jednostek dialogowych. Opis jednostki dialogowej można znaleźć w *rgTabStops.*
+Tabulatory są ustawiane dla każdej jednostki okna dialogowego *cxEachStop* . Zobacz *rgTabStops* , aby uzyskać opis jednostki okna dialogowego.
 
-*nTabStops (Niem.*<br/>
-Określa liczbę tabulatorów, które mają być w polu listy.
+*nTabStops*<br/>
+Określa liczbę zatrzymanych tabulatorów w polu listy.
 
-*rgTabStops (100)*<br/>
-Wskazuje pierwszy element członkowski tablicy liczby całkowitych zawierający pozycje tabulatora w jednostkach dialogowych. Jednostka dialogowa jest odległością poziomą lub pionową. Jedna pozioma jednostka okna dialogowego jest równa jednej czwartej bieżącej jednostki szerokości podstawy okna dialogowego, a jedna pionowa jednostka okna dialogowa jest równa jednej ósmej bieżącej jednostki wysokości bazowej okna dialogowego. Jednostki podstawowe okna dialogowego są obliczane na podstawie wysokości i szerokości bieżącej czcionki systemowej. Funkcja `GetDialogBaseUnits` Systemu Windows zwraca bieżące jednostki bazowe okna dialogowego w pikselach. Tabulatory muszą być sortowane w kolejności rosnącej; tylne karty nie są dozwolone.
+*rgTabStops*<br/>
+Wskazuje pierwszy element członkowski tablicy liczb całkowitych zawierających pozycje tabulatora w jednostkach okna dialogowego. Jednostka okna dialogowego to odległość pozioma lub pionowa. Jedna pozioma jednostka okna dialogowego jest równa jednej czwartej bieżącej jednostki szerokości okna dialogowego, a jedna pionowa jednostka okna dialogowego jest równa jednej ósmej aktualnej jednostki wysokości okna dialogowego. Jednostki bazowe okna dialogowego są obliczane na podstawie wysokości i szerokości bieżącej czcionki systemowej. `GetDialogBaseUnits`Funkcja systemu Windows zwraca bieżące jednostki bazowe okna dialogowego w pikselach. Tabulatory muszą być sortowane w kolejności rosnącej; karty wstecz są niedozwolone.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Nonzero jeśli wszystkie karty zostały ustawione; w przeciwnym razie 0.
+Niezerowe, jeśli wszystkie karty zostały ustawione; w przeciwnym razie 0.
 
 ### <a name="remarks"></a>Uwagi
 
-Aby ustawić tabulatory na domyślny rozmiar 2 jednostek dialogowych, należy wywołać wersję bez parametrów tej funkcji elementu członkowskiego. Aby ustawić tabulatory na rozmiar inny niż 2, wywołaj wersję z argumentem *cxEachStop.*
+Aby ustawić, że tabulatory mają być domyślnym rozmiarem 2 jednostek okna dialogowego, wywołaj bezparametrową wersję tej funkcji elementu członkowskiego. Aby ustawić przetrzymywanie tabulatorów o rozmiarze innym niż 2, wywołaj wersję przy użyciu argumentu *cxEachStop* .
 
-Aby ustawić tabulatory na tablicę rozmiarów, użyj wersji z *argumentami rgTabStops* i *nTabStops.* Dla każdej wartości w *rgTabStops*zostanie ustawiony tabulator , do liczby określonej przez *nTabStops*.
+Aby ustawić przetrzymywanie tabulatorów na tablicę rozmiarów, użyj wersji z argumentami *rgTabStops* i *nTabStops* . Tabulator zostanie ustawiony dla każdej wartości w *rgTabStops*, do numeru określonego przez *nTabStops*.
 
-Aby odpowiedzieć na `SetTabStops` wywołanie funkcji elementu członkowskiego, pole listy musi zostać utworzone w stylu [LBS_USETABSTOPS.](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)
+Aby odpowiedzieć na wywołanie `SetTabStops` funkcji elementu członkowskiego, pole listy musi być utworzone z stylem [LBS_USETABSTOPS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#39](../../mfc/codesnippet/cpp/clistbox-class_39.cpp)]
 
-## <a name="clistboxsettopindex"></a><a name="settopindex"></a>CListBox::SetTopIndex
+## <a name="clistboxsettopindex"></a><a name="settopindex"></a>CListBox:: SetTopIndex
 
-Zapewnia, że określony element pola listy jest widoczny.
+Zapewnia widoczność określonego elementu pola listy.
 
 ```
 int SetTopIndex(int nIndex);
@@ -1480,24 +1480,24 @@ int SetTopIndex(int nIndex);
 
 ### <a name="parameters"></a>Parametry
 
-*Nindex*<br/>
-Określa indeks od zera elementu pola listy.
+*nIndex*<br/>
+Określa indeks (liczony od zera) elementu listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zero, jeśli się powiedzie, lub LB_ERR, jeśli wystąpi błąd.
+Zero jeśli kończy się pomyślnie lub LB_ERR, jeśli wystąpi błąd.
 
 ### <a name="remarks"></a>Uwagi
 
-System przewija pole listy, dopóki element określony przez *nIndex* nie pojawi się u góry pola listy lub nie zostanie osiągnięty maksymalny zakres przewijania.
+System przewija pole listy, dopóki element określony przez *nIndex* pojawia się u góry pola listy lub Osiągnięto maksymalny zakres przewijania.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#40](../../mfc/codesnippet/cpp/clistbox-class_40.cpp)]
 
-## <a name="clistboxvkeytoitem"></a><a name="vkeytoitem"></a>CListBox::VKeyToItem
+## <a name="clistboxvkeytoitem"></a><a name="vkeytoitem"></a>CListBox:: VKeyToItem
 
-Wywoływane przez strukturę, gdy okno nadrzędne pola listy odbiera komunikat WM_VKEYTOITEM z pola listy.
+Wywoływane przez platformę, gdy okno listy nadrzędnej odbierze komunikat WM_VKEYTOITEM z pola listy.
 
 ```
 virtual int VKeyToItem(
@@ -1507,39 +1507,39 @@ virtual int VKeyToItem(
 
 ### <a name="parameters"></a>Parametry
 
-*klawisze*<br/>
-Kod klucza wirtualnego klucza, który użytkownik nacisnął. Aby uzyskać listę standardowych kodów kluczy wirtualnych, zobacz Winuser.h
+*nKey*<br/>
+Kod klucza wirtualnego klucza naciśniętego przez użytkownika. Aby uzyskać listę standardowych kodów kluczy wirtualnych, zobacz Winuser. h
 
-*Nindex*<br/>
-Bieżąca pozycja list-box caret.
+*nIndex*<br/>
+Bieżąca pozycja karetki z polem listy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca — 2 dla braku dalszych działań, - 1 dla akcji domyślnej lub numer nieujemny, aby określić indeks elementu pola listy, na którym ma być wykonać domyślną akcję dla naciśnięcia klawisza.
+Zwraca wartość-2 w przypadku braku dalszych akcji,-1 dla akcji domyślnej lub nieujemnej liczby, aby określić indeks elementu pola listy, w którym ma zostać wykonana domyślna akcja dla naciśnięcia klawisza.
 
 ### <a name="remarks"></a>Uwagi
 
-Wiadomość WM_VKEYTOITEM jest wysyłana przez pole listy po odebraniu wiadomości WM_KEYDOWN, ale tylko wtedy, gdy pole listy spełnia obie następujące elementy:
+Wiadomość WM_VKEYTOITEM jest wysyłana przez pole listy, gdy odbierze komunikat WM_KEYDOWN, ale tylko wtedy, gdy pole listy spełnia obie poniższe warunki:
 
-- Ma zestaw stylu [LBS_WANTKEYBOARDINPUT.](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)
+- Ma ustawiony styl [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
-- Posiada co najmniej jeden element.
+- Zawiera co najmniej jeden element.
 
-Nigdy nie należy nazywać tej funkcji samodzielnie. Zastąd w tej funkcji należy zapewnić własną niestandardową obsługę komunikatów klawiatury.
+Nigdy nie należy wywoływać tej funkcji samodzielnie. Zastąp tę funkcję, aby zapewnić własną niestandardową obsługę komunikatów klawiatury.
 
-Należy zwrócić wartość, aby poinformować platformę, jakie działania wykonano przez zastąpienie. Zwracana wartość — 2 wskazuje, że aplikacja obsługiwała wszystkie aspekty wyboru elementu i nie wymaga dalszych działań w polu listy. Przed powrotem - 2, można ustawić zaznaczenie lub przenieść daszek lub obu. Aby ustawić zaznaczenie, użyj [setcursel](#setcursel) lub [SetSel](#setsel). Aby przenieść cieszę, użyj [funkcji SetCaretIndex](#setcaretindex).
+Musisz zwrócić wartość, aby określić, jakie działanie przesłonięcia zostało wykonane. Zwracana wartość-2 wskazuje, że aplikacja obsłuży wszystkie aspekty wyboru elementu i nie wymaga żadnych dalszych akcji przez pole listy. Przed zwróceniem wartości-2 można ustawić zaznaczenie lub przenieść karetkę lub oba te elementy. Aby ustawić wybór, użyj [SetCurSel](#setcursel) lub [SetSel](#setsel). Aby przenieść karetkę, użyj [SetCaretIndex](#setcaretindex).
 
-Zwracana wartość — 1 wskazuje, że pole listy powinno wykonać akcję domyślną w odpowiedzi na naciśnięcie klawisza. Domyślna implementacja zwraca - 1.
+Zwracana wartość-1 oznacza, że pole listy powinno wykonać akcję domyślną w odpowiedzi na naciśnięcie klawisza. Domyślna implementacja zwraca wartość-1.
 
-Zwracana wartość 0 lub większa określa indeks elementu w polu listy i wskazuje, że pole listy powinno wykonać domyślną akcję dla naciśnięcia klawisza w danym elemencie.
+Wartość zwracana 0 lub większa Określa indeks elementu w polu listy i wskazuje, że pole listy powinno wykonać akcję domyślną dla naciśnięcia klawisza dla danego elementu.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_CListBox#41](../../mfc/codesnippet/cpp/clistbox-class_41.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Próbka MFC CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
+[Przykład CTRLTEST MFC](../../overview/visual-cpp-samples.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CWnd](../../mfc/reference/cwnd-class.md)<br/>

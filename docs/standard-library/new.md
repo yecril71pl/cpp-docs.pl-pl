@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: 6155a89c9cbba67ce27253aa64ff70ca7871e748
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2a35a7b4d9581a11d889f3e66d0179c553c4fc25
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457688"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212166"
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
 
@@ -19,7 +19,7 @@ Definiuje kilka typów i funkcji kontrolujących alokację i zwalnianie magazynu
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<nowe >
+**Nagłówek:**\<new>
 
 **Przestrzeń nazw:** std
 
@@ -33,7 +33,7 @@ Niektóre funkcje zadeklarowane w tym nagłówku są wymienne. Implementacja dos
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|Zawiera obiekt, który ma być używany jako argument dla wersji  "nothrow" **nowych** i **usuniętych**.|
+|[nothrow](../standard-library/new-functions.md#nothrow)|Dostarcza obiekt, który ma być używany jako argument dla **`nothrow`** wersji **`new`** i **`delete`** .|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -56,9 +56,9 @@ Niektóre funkcje zadeklarowane w tym nagłówku są wymienne. Implementacja dos
 |||
 |-|-|
 |[Usuwanie operatora](../standard-library/new-operators.md#op_delete)|Funkcja wywołana przez wyrażenie delete do dealokacji magazynu dla poszczególnych obiektów.|
-|[Usuwanie operatora&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|Funkcja wywołana przez wyrażenie delete do dealokacji magazynu dla tablicy obiektów.|
+|[&#91;&#93;usuwania operatora](../standard-library/new-operators.md#op_delete_arr)|Funkcja wywołana przez wyrażenie delete do dealokacji magazynu dla tablicy obiektów.|
 |[Nowy operator](../standard-library/new-operators.md#op_new)|Funkcja wywołana przez nowe wyrażenie do przydzielania pamięci dla pojedynczych obiektów.|
-|[Nowy operator&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|Funkcja wywołana przez nowe wyrażenie do przydzielenia magazynu dla tablicy obiektów.|
+|[Nowy&#91;&#93;operatora](../standard-library/new-operators.md#op_new_arr)|Funkcja wywołana przez nowe wyrażenie do przydzielenia magazynu dla tablicy obiektów.|
 
 ### <a name="enums"></a>Wyliczenia
 
@@ -70,11 +70,11 @@ Niektóre funkcje zadeklarowane w tym nagłówku są wymienne. Implementacja dos
 
 |||
 |-|-|
-|[bad_alloc, klasa](../standard-library/bad-alloc-class.md)|Klasa zawiera opis zgłoszonego wyjątku, aby wskazać, że żądanie alokacji nie powiodło się.|
+|[Klasa bad_alloc](../standard-library/bad-alloc-class.md)|Klasa zawiera opis zgłoszonego wyjątku, aby wskazać, że żądanie alokacji nie powiodło się.|
 |[Klasa bad_array_new_length](../standard-library/bad-array-new-length.md)||
 |[Klasa nothrow_t](../standard-library/nothrow-t-structure.md)|Klasa jest używana jako parametr funkcji dla operatora new, aby wskazać, że funkcja powinna zwrócić wskaźnik o wartości null, aby zgłosić błąd alokacji, zamiast zgłosić wyjątek.|
 
 ## <a name="see-also"></a>Zobacz także
 
 [Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

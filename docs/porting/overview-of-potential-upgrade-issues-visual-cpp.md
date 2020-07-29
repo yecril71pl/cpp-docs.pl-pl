@@ -2,12 +2,12 @@
 title: Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: e42762d4b47931f21536146cd0146b2749c52cf9
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: fcfa8e8ea334cf7c2486513ae162b04014e7f24b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404824"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231640"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Omówienie potencjalnych problemów z uaktualnieniem (Visual C++)
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t jest typem natywnym)
 
-(W Microsoft Visual C++ 6,0 i wcześniejszych **wchar_t** nie został zaimplementowany jako typ wbudowany, ale został zadeklarowany w WCHAR. h jako element typedef dla niepodpisanego Short). Standard C++ wymaga, aby **wchar_t** jest typem wbudowanym. Użycie wersji typedef może spowodować problemy z przenośnością. W przypadku uaktualniania z wcześniejszych wersji programu Visual Studio i napotkania błędu kompilatora C2664, ponieważ kod próbuje niejawnie skonwertować **wchar_t** na **unsigned Short**, zalecamy zmianę kodu w celu naprawienia błędu, a nie ustawienie `/Zc:wchar_t-` . Aby uzyskać więcej informacji, zobacz [/Zc: wchar_t (Wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+(W Microsoft Visual C++ 6,0 i wcześniejszych **`wchar_t`** nie został zaimplementowany jako typ wbudowany, ale został zadeklarowany w WCHAR. h jako element typedef dla niepodpisanego Short). Standard C++ wymaga **`wchar_t`** typu wbudowanego. Użycie wersji typedef może spowodować problemy z przenośnością. W przypadku uaktualniania z wcześniejszych wersji programu Visual Studio i napotkania błędu kompilatora C2664, ponieważ kod próbuje niejawnie skonwertować **`wchar_t`** do **`unsigned short`** , zalecamy zmianę kodu w celu naprawienia błędu, a nie ustawienie `/Zc:wchar_t-` . Aby uzyskać więcej informacji, zobacz [/Zc: wchar_t (Wchar_t jest typem natywnym)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>Uaktualnianie przy użyciu opcji konsolidatora/NODEFAULTLIB,/ENTRY i/NOENTRY
 
@@ -184,7 +184,7 @@ Przed znormalizowaniem Unicode wiele programów używało zestawu znaków wielob
 
 Aby uzyskać więcej informacji, zobacz [przenoszenie z MBCS do Unicode](porting-guide-spy-increment.md#porting_to_unicode). Aby uzyskać ogólne informacje na temat MBCS i Unicode, zobacz [tekst i ciągi w Visual C++](../text/text-and-strings-in-visual-cpp.md) i [międzynarodowe](../c-runtime-library/internationalization.md) .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Uaktualnianie projektów z wcześniejszych wersji Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Ulepszenia zgodności języka C++ w programie Visual Studio](../overview/cpp-conformance-improvements.md)

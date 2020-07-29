@@ -1,21 +1,21 @@
 ---
-title: '&lt;sstream &gt;'
+title: '&lt;strumienia&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <sstream>
 helpviewer_keywords:
 - sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-ms.openlocfilehash: 3f1fb202692d09fa87eb775677e46e1c3f36dbad
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6ab2164e4969a2320f67d479062808b33b0869f9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688944"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212140"
 ---
-# <a name="ltsstreamgt"></a>&lt;sstream &gt;
+# <a name="ltsstreamgt"></a>&lt;strumienia&gt;
 
-Definiuje kilka szablonów klas, które obsługują operacje iostreams na sekwencjach przechowywanych w przydzielonym obiekcie array. Takie sekwencje są łatwo konwertowane do i z obiektów klasy template [basic_string](../standard-library/basic-string-class.md).
+Definiuje kilka szablonów klas, które obsługują operacje iostreams na sekwencjach przechowywanych w przydzielonym obiekcie array. Takie sekwencje są łatwo konwertowane do i z obiektów [basic_string](../standard-library/basic-string-class.md)szablonu klas.
 
 ## <a name="syntax"></a>Składnia
 
@@ -72,50 +72,50 @@ void swap (
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*lewym*|Odwołanie do obiektu `sstream`.|
-|*Kliknij*|Odwołanie do obiektu `sstream`.|
+|*lewym*|Odwołanie do `sstream` obiektu.|
+|*Kliknij*|Odwołanie do `sstream` obiektu.|
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekty typu `char *` mogą korzystać z funkcji w [\<strstream >](../standard-library/strstream.md) do przesyłania strumieniowego. Jednakże > \<strstream jest przestarzałe i zaleca się użycie \<sstream >.
+Obiekty typu `char *` mogą korzystać z funkcji w programie w [\<strstream>](../standard-library/strstream.md) celu przesyłania strumieniowego. Jednak \<strstream> jest przestarzałe, a korzystanie z programu \<sstream> jest zalecane.
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
-|[istringstream —](../standard-library/sstream-typedefs.md#istringstream)|Tworzy typ `basic_istringstream` wyspecjalizowany dla parametru szablonu **char** .|
-|[ostringstream —](../standard-library/sstream-typedefs.md#ostringstream)|Tworzy typ `basic_ostringstream` wyspecjalizowany dla parametru szablonu **char** .|
-|[stringbuf —](../standard-library/sstream-typedefs.md#stringbuf)|Tworzy typ `basic_stringbuf` wyspecjalizowany dla parametru szablonu **char** .|
-|[stringstream —](../standard-library/sstream-typedefs.md#stringstream)|Tworzy typ `basic_stringstream` wyspecjalizowany dla parametru szablonu **char** .|
-|[wistringstream —](../standard-library/sstream-typedefs.md#wistringstream)|Tworzy typ `basic_istringstream` wyspecjalizowany dla parametru szablonu **wchar_t** .|
-|[wostringstream —](../standard-library/sstream-typedefs.md#wostringstream)|Tworzy typ `basic_ostringstream` wyspecjalizowany dla parametru szablonu **wchar_t** .|
-|[wstringbuf —](../standard-library/sstream-typedefs.md#wstringbuf)|Tworzy typ `basic_stringbuf` wyspecjalizowany dla parametru szablonu **wchar_t** .|
-|[wstringstream —](../standard-library/sstream-typedefs.md#wstringstream)|Tworzy typ `basic_stringstream` wyspecjalizowany dla parametru szablonu **wchar_t** .|
+|[istringstream —](../standard-library/sstream-typedefs.md#istringstream)|Tworzy typ `basic_istringstream` wyspecjalizowany dla **`char`** parametru szablonu.|
+|[ostringstream —](../standard-library/sstream-typedefs.md#ostringstream)|Tworzy typ `basic_ostringstream` wyspecjalizowany dla **`char`** parametru szablonu.|
+|[stringbuf —](../standard-library/sstream-typedefs.md#stringbuf)|Tworzy typ `basic_stringbuf` wyspecjalizowany dla **`char`** parametru szablonu.|
+|[stringstream —](../standard-library/sstream-typedefs.md#stringstream)|Tworzy typ `basic_stringstream` wyspecjalizowany dla **`char`** parametru szablonu.|
+|[wistringstream —](../standard-library/sstream-typedefs.md#wistringstream)|Tworzy typ `basic_istringstream` wyspecjalizowany dla **`wchar_t`** parametru szablonu.|
+|[wostringstream —](../standard-library/sstream-typedefs.md#wostringstream)|Tworzy typ `basic_ostringstream` wyspecjalizowany dla **`wchar_t`** parametru szablonu.|
+|[wstringbuf —](../standard-library/sstream-typedefs.md#wstringbuf)|Tworzy typ `basic_stringbuf` wyspecjalizowany dla **`wchar_t`** parametru szablonu.|
+|[wstringstream —](../standard-library/sstream-typedefs.md#wstringstream)|Tworzy typ `basic_stringstream` wyspecjalizowany dla **`wchar_t`** parametru szablonu.|
 
 ### <a name="manipulators"></a>Manipulatory
 
 |||
 |-|-|
-|[wymiany](../standard-library/sstream-functions.md#sstream_swap)|Wymienia wartości między dwoma obiektami `sstream`.|
+|[wymiany](../standard-library/sstream-functions.md#sstream_swap)|Wymienia wartości między dwoma `sstream` obiektami.|
 
 ### <a name="classes"></a>Klasy
 
-|Class|Opis|
+|Klasa|Opis|
 |-|-|
-|[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|Opisuje bufor strumienia, który kontroluje przekazywanie elementów typu `Elem`, których cechy znaku są określane przez klasę `Tr`, do i z sekwencji elementów przechowywanych w obiekcie array.|
-|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Opisuje obiekt, który kontroluje wyodrębnianie elementów i zakodowanych obiektów z bufora strumienia klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <**elem**, **TR**, `Alloc` >, z elementami typu `Elem`, których cechy znaków są określane przez Klasa `Tr` i których elementy są przydzielane przez Alokator klasy `Alloc`.|
-|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Opisuje obiekt, który kontroluje Wstawianie elementów i zakodowanych obiektów do buforu strumienia klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <**elem**, **TR**, `Alloc` >, z elementami typu `Elem`, których cechy znaku są określane przez klasy `Tr` i których elementy są przydzielane przez Alokator klasy `Alloc`.|
-|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Opisuje obiekt, który kontroluje Wstawianie i wyodrębnianie elementów i zakodowanych obiektów przy użyciu buforu strumienia klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <**elem**, **TR**, `Alloc` >, z elementami typu `Elem`, których cechy znaku są określana przez klasę `Tr` i których elementy są przydzielane przez Alokator klasy `Alloc`.|
+|[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|Opisuje bufor strumienia, który kontroluje przekazywanie elementów typu `Elem` , których cechy znaków są określane przez klasę `Tr` , do i z sekwencji elementów przechowywanych w obiekcie array.|
+|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Opisuje obiekt, który kontroluje wyodrębnianie elementów i zakodowanych obiektów z bufora strumienia klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **elem**, **TR**, `Alloc`>, z elementami typu `Elem` , których cechy znaków są określane przez klasę `Tr` , i których elementy są przydzielane przez Alokator klasy `Alloc` .|
+|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Opisuje obiekt, który kontroluje Wstawianie elementów i zakodowanych obiektów do bufora strumienia klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **elem**, **TR**, `Alloc`>, z elementami typu `Elem` , których cechy znaków są określane przez klasę `Tr` , i których elementy są przydzielane przez Alokator klasy `Alloc` .|
+|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Opisuje obiekt, który kontroluje Wstawianie i wyodrębnianie elementów i zakodowanych obiektów przy użyciu bufora strumienia klasy [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **elem**, **TR**, `Alloc`>, z elementami typu `Elem` , których cechy znaków są określane przez klasę `Tr` i których elementy są przydzielane przez Alokator klasy `Alloc` .|
 
 ## <a name="requirements"></a>Wymagania
 
-- **Nagłówek:** \<sstream >
+- **Nagłówek:**\<sstream>
 
 - **Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Odwołania do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md) \
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
-\ [programowania iostream](../standard-library/iostream-programming.md)
-[Konwencje iostream](../standard-library/iostreams-conventions.md)
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programowanie iostream](../standard-library/iostream-programming.md)\
+[Konwencje iostreams](../standard-library/iostreams-conventions.md)

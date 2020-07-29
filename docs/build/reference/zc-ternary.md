@@ -7,32 +7,32 @@ helpviewer_keywords:
 - /Zc:ternary
 - Zc:ternary
 - -Zc:ternary
-ms.openlocfilehash: 7c95f061e195ccf7fef8a6a21d193b257baa5f39
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 04bd0c49528d86ddd4d1e6c77804cf64278db188
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335675"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211882"
 ---
-# <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc:ternary (Wymuszenie reguł operatora warunkowego)
+# <a name="zcternary-enforce-conditional-operator-rules"></a>`/Zc:ternary`(Wymuszaj reguły operatora warunkowego)
 
-Włącz wymuszanie reguł standardu C++ dla typów i konsytów lub zmiennych (cv) kwalifikacji drugiego i trzeciego argumentów w wyrażeniu operatora warunkowego.
+Włącz wymuszanie standardowych reguł języka C++ dla kwalifikacji typów i const lub volatile (CV) dla drugiego i trzeciego operandu w wyrażeniu operatora warunkowego.
 
 ## <a name="syntax"></a>Składnia
 
-> **/Zc:ternary****-**[ ]
+> **`/Zc:ternary`**[**`-`**]
 
 ## <a name="remarks"></a>Uwagi
 
-Począwszy od programu Visual Studio 2017 kompilator obsługuje zachowanie standardowego *operatora warunkowego* języka C++ (**?:**). Jest również znany jako *operator trójskładnikowy.* Standard C++ wymaga, aby trójskładniowe operandy spełniały jeden z trzech warunków: argumenty muszą być tego samego typu i **zgodne** lub **niestabilne** kwalifikacje (kwalifikacje cv) lub tylko jeden operand musi być jednoznacznie zamienicjonowany na ten sam typ i kwalifikację CV co drugi. Lub jeden lub oba argumenty muszą być wyrażeniem rzutu. W wersjach przed Visual Studio 2017 w wersji 15.5 kompilator dozwolone konwersje, które są uważane za niejednoznaczne przez standard.
+Począwszy od programu Visual Studio 2017, kompilator obsługuje zachowanie *operatora warunkowego* standardowego języka C++ ( **`?:`** ). Jest on również znany jako *operator Trzyelementowy*. Standard języka C++ wymaga, aby argumenty operacji trójskładnikowych spełniały jeden z trzech warunków: operandy muszą być tego samego typu **`const`** i **`volatile`** kwalifikacji (CV-kwalifikacja) lub tylko jeden operand musi być jednoznacznie konwertowany na taki sam typ, jak i OKS. Lub, jeden lub oba operandy muszą być wyrażeniem throw. W wersjach wcześniejszych niż wersja 15,5 programu Visual Studio 2017 kompilator zezwolił na konwersje, które są uważane za niejednoznaczne przez Standard.
 
-Po określeniu opcji **/Zc:ternary** kompilator jest zgodny ze standardem. Odrzuca kod, który nie spełnia reguł dla dopasowanych typów i cv kwalifikacji drugiego i trzeciego argumentów.
+Gdy ta **`/Zc:ternary`** opcja jest określona, kompilator jest zgodny ze standardem. Odrzuci kod, który nie spełnia reguł dla dopasowanych typów oraz kwalifikacji CV dla drugiego i trzeciego operandu.
 
-**/Zc:ternary** opcja jest domyślnie wyłączona w programie Visual Studio 2017. Użyj **/Zc:ternary,** aby włączyć zachowanie zgodne lub **/Zc:ternary-** jawnie określić poprzednie zachowanie kompilatora niezgodnego. Opcja [/permissive-](permissive-standards-conformance.md) niejawnie włącza tę opcję, ale można ją zastąpić za pomocą **/Zc:ternary-**.
+**`/Zc:ternary`** Opcja jest domyślnie wyłączona w programie Visual Studio 2017. Użyj **`/Zc:ternary`** , aby włączyć zgodność z zachowaniem lub **`/Zc:ternary-`** jawnie określić poprzednie zachowanie kompilatora niezgodnego. [`/permissive-`](permissive-standards-conformance.md)Opcja ta umożliwia niejawnie włączenie tej opcji, ale można ją zastąpić za pomocą polecenia **`/Zc:ternary-`** .
 
 ### <a name="examples"></a>Przykłady
 
-W tym przykładzie pokazano, jak klasa, która zapewnia zarówno jawne inicjowanie z typu, jak i konwersję na typ, może prowadzić do niejednoznacznych konwersji. Ten kod jest domyślnie akceptowany przez kompilator, ale odrzucany, gdy określono **wartość /Zc:ternary** lub **/permissive.This** code is accepted by the compiler by default, but rejected when /Zc:ternary or /permissive- is specified.
+Ten przykład pokazuje, jak Klasa, która zapewnia zarówno inicjalizację niejawną z typu, jak i konwersję na typ, może prowadzić do niejednoznacznych konwersji. Ten kod jest domyślnie akceptowany przez kompilator, ale jest odrzucany, gdy **/`Zc:ternary`** lub **`/permissive-`** jest określony.
 
 ```cpp
 // zcternary1.cpp
@@ -56,9 +56,9 @@ int main()
 }
 ```
 
-Aby naprawić ten kod, należy jawnie rzutować do preferowanego typu wspólnego lub zapobiec jeden kierunek konwersji typu. Kompilator można zachować z dopasowania konwersji typu przez konwersji jawne.
+Aby naprawić ten kod, należy jawnie rzutować na preferowany typ wspólny lub uniemożliwić jednokierunkową konwersję typu. Kompilator może być zgodny z konwersją typu, ponieważ konwersja jest jawna.
 
-Ważnym wyjątkiem od tego wspólnego wzorca jest, gdy typ argumentów jest jednym z `const char*`typów `const char16_t*`ciągów zakończonych z wartością null, takich jak , i tak dalej. Można również odtworzyć efekt z typów tablic i typów wskaźników, które rozpadają się do. Zachowanie, gdy rzeczywisty drugi lub `?:` trzeci operand jest literał ciągu odpowiedniego typu zależy od standardu języka używane. C++ 17 zmienił semantykę w tym przypadku z C++14. W rezultacie kompilator akceptuje kod w poniższym przykładzie w obszarze domyślny **/std:c++14**, ale odrzuca go po określeniu **/std:c++17**.
+Ważnym wyjątkiem od tego wspólnego wzorca jest, gdy typ operandów jest jednym z typów ciągów zakończonych wartością null, takich jak `const char*` , `const char16_t*` , i tak dalej. Możesz również odtworzyć efekt przy użyciu typów tablic i typów wskaźnika, do których się zanikają. Zachowanie, gdy faktyczny drugi lub trzeci operand `?:` jest literałem ciągu odpowiadającego typu, zależy od użytego standardu języka. W języku c++ 17 zmieniono semantykę w tym przypadku w języku C++ 14. W związku z tym kompilator akceptuje kod w poniższym przykładzie pod wartością domyślną **`/std:c++14`** , ale odrzuca go po określeniu **`/std:c++17`** .
 
 ```cpp
 // zcternary2.cpp
@@ -78,9 +78,9 @@ int main()
 }
 ```
 
-Aby naprawić ten kod, należy wyraźnie odrzucić jeden z argumentów.
+Aby naprawić ten kod, Rzutowanie jednego z operandów jawnie.
 
-W **obszarze /Zc:ternary**kompilator odrzuca operatory warunkowe, w których jeden z argumentów jest **typu void**, a drugi nie jest wyrażeniem throw. Typowe zastosowanie tego wzorca jest w makrach podobnych do ASSERT:
+W obszarze **`/Zc:ternary`** , kompilator odrzuca operatory warunkowe, gdy jeden z argumentów jest typu **`void`** , a drugi nie jest **`throw`** wyrażeniem. Typowym zastosowaniem tego wzorca jest w makrach przypominających podobne:
 
 ```cpp
 // zcternary3.cpp
@@ -97,9 +97,9 @@ int main()
 }
 ```
 
-Typowym rozwiązaniem jest zastąpienie argumentu `void()`nieustąpkią argumentem .
+Typowym rozwiązaniem jest zamienienie argumentu innego niż void na `void()` .
 
-W tym przykładzie pokazano kod, który generuje błąd w obszarze **/Zc:ternary** i **/Zc:ternary-**:
+Ten przykład pokazuje kod, który generuje błąd w obu **`/Zc:ternary`** **`/Zc:ternary-`** :
 
 ```cpp
 // zcternary4.cpp
@@ -114,14 +114,14 @@ int main() {
 }
 ```
 
-Ten kod wcześniej dał ten błąd:
+Ten kod spowodował wcześniej ten błąd:
 
 ```Output
 error C2446: ':': no conversion from 'foo::<lambda_f6cd18702c42f6cd636bfee362b37033>' to 'foo::<lambda_717fca3fc65510deea10bc47e2b06be4>'
 note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
 ```
 
-Z **/Zc:ternary**, przyczyna awarii staje się jaśniejsza. Dowolna z kilku konwencji wywołujących zdefiniowanych w implementacji może służyć do generowania każdego lambda. Jednak kompilator nie ma reguły preferencji, aby odróżnić możliwe podpisy lambda. Nowe dane wyjściowe wyglądają następująco:
+W programie **`/Zc:ternary`** Przyczyna niepowodzenia zostaje wyczyszczona. Do wygenerowania każdego wyrażenia lambda można użyć dowolnej z kilku konwencji wywoływania zdefiniowanych w implementacji. Jednak kompilator nie ma reguły preferencji, aby odróżnić możliwe sygnatury lambda. Nowe dane wyjściowe wyglądają następująco:
 
 ```Output
 error C2593: 'operator ?' is ambiguous
@@ -132,7 +132,7 @@ note: or       'built-in C++ operator?(bool (__vectorcall *)(int,int), bool (__v
 note: while trying to match the argument list '(foo::<lambda_717fca3fc65510deea10bc47e2b06be4>, foo::<lambda_f6cd18702c42f6cd636bfee362b37033>)'
 ```
 
-Typowe źródło problemów znalezionych przez **/Zc:ternary** pochodzi z operatorów warunkowych używanych w meta-programowania szablonu. Niektóre typy wyników zmieniają się w ramach tego przełącznika. W poniższym przykładzie przedstawiono dwa przypadki, w których **/Zc:ternary** zmienia typ wyniku wyrażenia warunkowego w kontekście nie-meta-programowania:
+Typowym źródłem problemów wykrytym przez program są **`/Zc:ternary`** Operatory warunkowe używane w ramach tworzenia meta-programistycznego szablonu. Niektóre typy wyników zmieniają się w ramach tego przełącznika. Poniższy przykład ilustruje dwa przypadki, **`/Zc:ternary`** w których zmiany typu wyniku wyrażenia warunkowego w kontekście niemeta-programowaniu:
 
 ```cpp
 // zcternary5.cpp
@@ -147,18 +147,18 @@ int main(int argc, char**) {
 }
 ```
 
-Typową poprawką jest `std::remove_reference` zastosowanie cechy na typ wyniku, gdzie jest to konieczne, aby zachować stare zachowanie.
+Typowym rozwiązaniem jest zastosowanie `std::remove_reference` cech typu wyników, gdy jest to konieczne, aby zachować stare zachowanie.
 
-Aby uzyskać więcej informacji na temat problemów z zgodnością w programie Visual C++, zobacz [Niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
+Aby uzyskać więcej informacji na temat problemów ze zgodnością w Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
-1. Otwórz okno dialogowe **Strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora języka C++ i właściwości kompilacji w programie Visual Studio.](../working-with-project-properties.md)
+1. Otwórz okno dialogowe **strony właściwości** projektu. Aby uzyskać szczegółowe informacje, zobacz [Ustawianie kompilatora C++ i właściwości kompilacji w programie Visual Studio](../working-with-project-properties.md).
 
-1. Wybierz stronę właściwości**wiersza polecenia** **Właściwości** > konfiguracji**C/C++.** > 
+1. Wybierz **Configuration Properties**  >  stronę właściwości konfiguracja wiersza polecenia**C/C++**  >  **Command Line** .
 
-1. Zmodyfikuj właściwość **Opcje dodatkowe,** aby uwzględnić **/Zc:ternary** lub **/Zc:ternary-** a następnie wybierz przycisk **OK**.
+1. Zmodyfikuj właściwość **Opcje dodatkowe** , aby uwzględnić **`/Zc:ternary`** lub **`/Zc:ternary-`** , a następnie wybierz przycisk **OK**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[/Zc (Zgodność)](zc-conformance.md)
+[`/Zc`Zgodności](zc-conformance.md)

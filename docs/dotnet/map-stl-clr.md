@@ -99,16 +99,16 @@ helpviewer_keywords:
 - operator> (map) member [STL/CLR]
 - operator>= (map) member [STL/CLR]
 ms.assetid: 8b0a7764-b5e4-4175-a802-82b72eb8662a
-ms.openlocfilehash: 19b450e256a428769ca6588227e9249e4e21f51d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cd06942d3795dda9e6c6aaa8794957018fa96ace
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208549"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216378"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 
-Klasa szablonu opisuje obiekt, który kontroluje różnej długości sekwencje elementów, które mają dostęp dwukierunkowy. `map` kontenera służy do zarządzania sekwencją elementów jako (niemal) uporządkowanego drzewa węzłów, z których każdy ma przechowywać jeden element. Element składa się z klucza, do porządkowania sekwencji i mapowanej wartości, która jest przypisana do przebiegu.
+Klasa szablonu opisuje obiekt, który kontroluje różnej długości sekwencje elementów, które mają dostęp dwukierunkowy. Kontener służy `map` do zarządzania sekwencją elementów jako (niemal) uporządkowanym drzewem węzłów, każdy z nich przechowujący jeden element. Element składa się z klucza, do porządkowania sekwencji i mapowanej wartości, która jest przypisana do przebiegu.
 
 W poniższym opisie `GValue` jest taka sama jak:
 
@@ -116,9 +116,9 @@ W poniższym opisie `GValue` jest taka sama jak:
 
 gdzie:
 
-`GKey` jest taka sama jak *klucz* , chyba że ostatni jest typem ref, w takim przypadku jest `Key^`
+`GKey`jest taka sama jak *klucz* , chyba że ostatni jest typem ref, w takim przypadku jest`Key^`
 
-`GMapped` jest taka sama jak *zamapowana* , chyba że jest to typ referencyjny, w takim przypadku `Mapped^`
+`GMapped`jest taka sama jak *zamapowana* , chyba że jest to typ referencyjny, w tym przypadku jest to`Mapped^`
 
 ## <a name="syntax"></a>Składnia
 
@@ -143,12 +143,12 @@ template<typename Key,
 *Klucz*<br/>
 Typ składnika klucza elementu w kontrolowanej sekwencji.
 
-*Mapowane*<br/>
+*Mapped*<br/>
 Typ dodatkowego składnika elementu w kontrolowanej sekwencji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<cliext/map >
+**Nagłówek:**\<cliext/map>
 
 **Przestrzeń nazw:** cliext
 
@@ -201,16 +201,16 @@ Typ dodatkowego składnika elementu w kontrolowanej sekwencji.
 |--------------|-----------------|
 |[map::operator= (STL/CLR)](#op_as)|Zastępuje kontrolowaną sekwencję.|
 |[map::operator(STL/CLR)](#op)|Mapuje klucz do skojarzonej mapowanej wartości.|
-|[operator!= (map) (STL/CLR)](#op_neq)|Określa, czy obiekt `map` nie jest równy innemu obiektowi `map`.|
-|[operator< (map) (STL/CLR)](#op_lt)|Określa, czy obiekt `map` jest mniejszy niż inny obiekt `map`.|
-|[operator<= (map) (STL/CLR)](#op_lteq)|Określa, czy obiekt `map` jest mniejszy niż lub równy innemu obiektowi `map`.|
-|[operator== (map) (STL/CLR)](#op_eq)|Określa, czy obiekt `map` jest równy innemu obiektowi `map`.|
-|[operator> (map) (STL/CLR)](#op_gt)|Określa, czy obiekt `map` jest większy niż inny obiekt `map`.|
-|[operator>= (map) (STL/CLR)](#op_gteq)|Określa, czy obiekt `map` jest większy niż lub równy innemu obiektowi `map`.|
+|[operator! = (map) (STL/CLR)](#op_neq)|Określa, czy `map` obiekt nie jest równy innemu `map` obiektowi.|
+|[< operatora (map) (STL/CLR)](#op_lt)|Określa, czy `map` obiekt jest mniejszy niż inny `map` obiekt.|
+|[operator<= (map) (STL/CLR)](#op_lteq)|Określa, czy `map` obiekt jest mniejszy niż lub równy innemu `map` obiektowi.|
+|[operator = = (map) (STL/CLR)](#op_eq)|Określa, czy `map` obiekt jest równy innemu `map` obiektowi.|
+|[> operatora (map) (STL/CLR)](#op_gt)|Określa, czy `map` obiekt jest większy niż inny `map` obiekt.|
+|[operator>= (map) (STL/CLR)](#op_gteq)|Określa, czy `map` obiekt jest większy lub równy innemu `map` obiektowi.|
 
 ## <a name="interfaces"></a>Interfejsy
 
-|Interface|Opis|
+|Interfejs|Opis|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Duplikowanie obiektu.|
 |<xref:System.Collections.IEnumerable>|Sekwencja przez elementy.|
@@ -218,37 +218,37 @@ Typ dodatkowego składnika elementu w kontrolowanej sekwencji.
 |<xref:System.Collections.Generic.IEnumerable%601>|Sekwencja przez wpisane elementy.|
 |<xref:System.Collections.Generic.ICollection%601>|Obsługuj grupę wpisanych elementów.|
 |<xref:System.Collections.Generic.IDictionary%602>|Obsługuj grupę par {Key, Value}.|
-|ITree < klucz, wartość >|Obsługa kontenera ogólnego.|
+|ITree<klucz, wartość>|Obsługa kontenera ogólnego.|
 
 ## <a name="remarks"></a>Uwagi
 
 Obiekt przydziela i zwalnia magazyn dla sekwencji, która kontroluje jako pojedyncze węzły. Wstawia elementy do (niemal) zrównoważonego drzewa, które zachowuje uporządkowane przez zmianę linków między węzłami, a nigdy przez kopiowanie zawartości jednego węzła do drugiego. Oznacza to, że można wstawiać i usuwać elementy swobodnie bez zakłócania pozostałych elementów.
 
-Obiekt porządkuje sekwencję, która kontroluje, wywołując zapisany obiekt delegata typu [map:: key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md). Podczas konstruowania mapy można określić przechowywany obiekt delegowany. Jeśli określisz brak obiektu delegowanego, wartością domyślną jest porównanie `operator<(key_type, key_type)`. Dostęp do tego przechowywanego obiektu można uzyskać, wywołując element członkowski [map funkcji:: key_comp (STL/CLR)](../dotnet/map-key-comp-stl-clr.md)`()`.
+Obiekt porządkuje sekwencję, która kontroluje, wywołując zapisany obiekt delegata typu [map:: key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md). Podczas konstruowania mapy można określić przechowywany obiekt delegowany. Jeśli określisz brak obiektu delegowanego, wartością domyślną jest porównanie `operator<(key_type, key_type)` . Dostęp do tego przechowywanego obiektu można uzyskać, wywołując mapę funkcji składowej [:: key_comp (STL/CLR)](../dotnet/map-key-comp-stl-clr.md) `()` .
 
-Taki obiekt delegata musi nałożyć ścisłe słabe porządkowanie dla kluczy typu [map:: key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md). Oznacza to, że dla dowolnych dwóch kluczy `X` i `Y`:
+Taki obiekt delegata musi nałożyć ścisłe słabe porządkowanie dla kluczy typu [map:: key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md). Oznacza to, że dla dowolnych dwóch kluczy `X` i `Y` :
 
-`key_comp()(X, Y)` zwraca ten sam wynik Boolean dla każdego wywołania.
+`key_comp()(X, Y)`zwraca ten sam wynik Boolean dla każdego wywołania.
 
-Jeśli `key_comp()(X, Y)` ma wartość true, `key_comp()(Y, X)` musi mieć wartość false.
+Jeśli `key_comp()(X, Y)` ma wartość true, a następnie `key_comp()(Y, X)` musi mieć wartość false.
 
-Jeśli `key_comp()(X, Y)` ma wartość true, wówczas `X` jest określana jako uporządkowana przed `Y`.
+Jeśli `key_comp()(X, Y)` ma wartość true, `X` to przed `Y` .
 
-Jeśli `!key_comp()(X, Y) && !key_comp()(Y, X)` ma wartość true, wówczas `X` i `Y` są określane jako równoważne.
+Jeśli `!key_comp()(X, Y) && !key_comp()(Y, X)` ma wartość true, wówczas `X` i `Y` są określane jako równoważne porządkowanie.
 
-Dla każdego elementu `X`, który poprzedza `Y` w kontrolowanej sekwencji, `key_comp()(Y, X)` ma wartość false. (Dla domyślnego obiektu delegowanego klucze nigdy nie zmniejszają wartości). W przeciwieństwie do [mapy](../dotnet/map-stl-clr.md)klas szablonu, obiekt klasy szablonu `map` nie wymaga, aby klucze dla wszystkich elementów były unikatowe. (Co najmniej dwa klucze mogą mieć równoważne porządkowanie).
+Dla każdego elementu `X` , który poprzedza `Y` w kontrolowanej sekwencji, `key_comp()(Y, X)` ma wartość false. (Dla domyślnego obiektu delegowanego klucze nigdy nie zmniejszają wartości). W przeciwieństwie do [mapy](../dotnet/map-stl-clr.md)klas szablonu, obiekt klasy szablonu `map` nie wymaga, aby klucze dla wszystkich elementów były unikatowe. (Co najmniej dwa klucze mogą mieć równoważne porządkowanie).
 
 Każdy element zawiera oddzielny klucz i zamapowane wartości. Sekwencja jest reprezentowana w sposób, który pozwala na wyszukiwanie, wstawianie i usuwanie dowolnego elementu z liczbą operacji proporcjonalnie do logarytmu liczby elementów w sekwencji (czas logarytmu). Ponadto, wstawianie elementu nie unieważnia iteratorów, a usuwanie elementu unieważnia tylko te iteratory, które wskazują na usunięty element.
 
-Mapa obsługuje Iteratory dwukierunkowe, co oznacza, że można przechodzić do sąsiadujących elementów przy użyciu iteratora, który wyznacza element w kontrolowanej sekwencji. Specjalny węzeł główny odpowiada iteratorowi zwróconemu przez [Mapowanie:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`. Można zmniejszyć ten iterator, aby dotrzeć do ostatniego elementu w kontrolowanej sekwencji, jeśli jest obecny. Można zwiększyć iterator mapy w celu uzyskania dostępu do węzła głównego, a następnie będzie porównywany z `end()`. Ale nie można usunąć odwołania do iteratora zwróconego przez `end()`.
+Mapa obsługuje Iteratory dwukierunkowe, co oznacza, że można przechodzić do sąsiadujących elementów przy użyciu iteratora, który wyznacza element w kontrolowanej sekwencji. Specjalny węzeł główny odpowiada iteratorowi zwróconemu przez [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `()` . Można zmniejszyć ten iterator, aby dotrzeć do ostatniego elementu w kontrolowanej sekwencji, jeśli jest obecny. Można zwiększyć iterator mapy w celu uzyskania dostępu do węzła głównego, a następnie będzie on porównywany z równą `end()` . Ale nie można usunąć odwołania do iteratora zwróconego przez `end()` .
 
 Należy zauważyć, że nie można odwołać się do elementu mapy bezpośrednio przy użyciu jego pozycji liczbowej — który wymaga iteratora dostępu swobodnego.
 
-Iterator mapy przechowuje uchwyt do skojarzonego z nim węzła mapy, który z kolei przechowuje dojście do skojarzonego kontenera. Iteratorów można używać tylko ze skojarzonymi obiektami kontenera. Iterator mapy pozostaje prawidłowy, tak długo, jak skojarzony węzeł mapy jest skojarzony z niepewną mapą. Ponadto prawidłowy iterator jest dereferencable — można go użyć w celu uzyskania dostępu do lub zmiany wartości elementu, którą wyznacza, tak długo, jak nie jest równa `end()`.
+Iterator mapy przechowuje uchwyt do skojarzonego z nim węzła mapy, który z kolei przechowuje dojście do skojarzonego kontenera. Iteratorów można używać tylko ze skojarzonymi obiektami kontenera. Iterator mapy pozostaje prawidłowy, tak długo, jak skojarzony węzeł mapy jest skojarzony z niepewną mapą. Ponadto prawidłowy iterator jest dereferencable — można go użyć w celu uzyskania dostępu do lub zmiany wartości elementu, który wyznacza, tak długo, jak nie jest równa `end()` .
 
 Wymazywanie lub usuwanie elementu wywołuje destruktor dla jego przechowywanej wartości. Niszczenie kontenera powoduje wymazanie wszystkich elementów. W tym celu kontener, którego typem elementu jest Klasa ref, zapewnia, że żadne elementy nie wyprowadzą kontenera. Należy jednak zauważyć, że kontener dojść *nie* niszczy swoich elementów.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ## <a name="mapbegin-stlclr"></a><a name="begin"></a>map:: begin (STL/CLR)
 
@@ -262,7 +262,7 @@ iterator begin();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca iterator dwukierunkowy, który wyznacza pierwszy element kontrolowanej sekwencji lub tuż poza końcem pustej sekwencji. Służy do uzyskania iteratora, który wyznacza `current` początku kontrolowanej sekwencji, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
+Funkcja członkowska zwraca iterator dwukierunkowy, który wyznacza pierwszy element kontrolowanej sekwencji lub tuż poza końcem pustej sekwencji. Służy do uzyskania iteratora, który wyznacza `current` początek kontrolowanej sekwencji, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -313,7 +313,7 @@ void clear();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska skutecznie wywołuje metodę [map:: Erase (STL/CLR)](../dotnet/map-erase-stl-clr.md)`(` [map:: begin (STL/clr)](../dotnet/map-begin-stl-clr.md) ,`(),` [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`())`. Jest on używany do upewnienia się, że kontrolowana sekwencja jest pusta.
+Funkcja członkowska skutecznie wywołuje mapowanie [:: Erase (STL/CLR)](../dotnet/map-erase-stl-clr.md) `(` [map:: begin (STL/CLR)](../dotnet/map-begin-stl-clr.md) `(),` [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `())` . Jest on używany do upewnienia się, że kontrolowana sekwencja jest pusta.
 
 ### <a name="example"></a>Przykład
 
@@ -371,7 +371,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt nieokreślonego typu `T2`, który może obsłużyć jako stały iterator dwukierunkowy dla kontrolowanej sekwencji.
+Typ opisuje obiekt nieokreślonego typu `T2` , który może obsłużyć jako stały iterator dwukierunkowy dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -458,7 +458,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt nieokreślonego typu `T4`, który może być używany jako ciągły iterator odwrotny dla kontrolowanej sekwencji.
+Typ opisuje obiekt nieokreślonego typu `T4` , który może być używany jako ciągły iterator odwrotny dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -500,7 +500,7 @@ size_type count(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*głównych*<br/>
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
@@ -608,7 +608,7 @@ bool empty();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca wartość true dla pustej kontrolowanej sekwencji. Jest to odpowiednik`() == 0`[map:: size (STL/CLR)](../dotnet/map-size-stl-clr.md) . Służy do sprawdzania, czy mapa jest pusta.
+Funkcja członkowska zwraca wartość true dla pustej kontrolowanej sekwencji. Jest to odpowiednik [mapy:: size (STL/CLR)](../dotnet/map-size-stl-clr.md) `() == 0` . Służy do sprawdzania, czy mapa jest pusta.
 
 ### <a name="example"></a>Przykład
 
@@ -707,12 +707,12 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*głównych*<br/>
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca parę iteratorów `cliext::pair<iterator, iterator>(` [map:: lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md)`(key),` [map:: upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)`(key))`. Służy do określania zakresu elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
+Funkcja członkowska zwraca parę iteratorów `cliext::pair<iterator, iterator>(` [map:: lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md) `(key),` [map:: upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md) `(key))` . Służy do określania zakresu elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -773,7 +773,7 @@ bool erase(key_type key)
 *pierwszego*<br/>
 Początek zakresu do wymazania.
 
-*Klucz*<br/>
+*głównych*<br/>
 Wartość klucza do wymazania.
 
 *ostatniego*<br/>
@@ -784,9 +784,9 @@ Element do wymazania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsza funkcja członkowska usuwa element kontrolowanej sekwencji wskazywany przez *WHERE*, a zwraca iterator, który wyznacza pierwszy element, który został poza elementem usunięty, lub [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`, jeśli taki element nie istnieje. Służy do usuwania pojedynczego elementu.
+Pierwsza funkcja członkowska usuwa element kontrolowanej sekwencji wskazywany przez *WHERE*, a zwraca iterator, który wyznacza pierwszy element, który został poza elementem usunięty, lub [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) , `()` Jeśli taki element nie istnieje. Służy do usuwania pojedynczego elementu.
 
-Druga funkcja członkowska usuwa elementy kontrolowanej sekwencji z zakresu [`first`, `last`) i zwraca iterator, który wyznacza pierwszy element pozostały poza elementami usuniętymi lub `end()`, jeśli taki element nie istnieje. Jest on używany do usuwania elementów sąsiadujących lub więcej.
+Druga funkcja członkowska usuwa elementy z kontrolowanej sekwencji z zakresu [ `first` , `last` ) i zwraca iterator, który wyznacza pierwszy element pozostały poza elementami usuniętymi lub `end()` Jeśli taki element nie istnieje. Jest on używany do usuwania elementów sąsiadujących lub więcej.
 
 Trzecia funkcja członkowska usuwa każdy element kontrolowanej sekwencji, którego klucz ma równoważne porządkowanie do *klucza*i zwraca liczbę usuniętych elementów. Służy do usuwania i zliczania wszystkich elementów, które pasują do określonego klucza.
 
@@ -861,12 +861,12 @@ iterator find(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*głównych*<br/>
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli co najmniej jeden element w kontrolowanej sekwencji ma równoważne porządkowanie z *kluczem*, funkcja członkowska zwraca iterator wyznaczający jeden z tych elementów. w przeciwnym razie zwraca wartość [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`. Służy do lokalizowania elementu w kontrolowanej sekwencji, który odpowiada określonemu kluczowi.
+Jeśli co najmniej jeden element w kontrolowanej sekwencji ma równoważne porządkowanie z *kluczem*, funkcja członkowska zwraca iterator wyznaczający jeden z tych elementów. w przeciwnym razie zwraca [mapę:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `()` . Służy do lokalizowania elementu w kontrolowanej sekwencji, który odpowiada określonemu kluczowi.
 
 ### <a name="example"></a>Przykład
 
@@ -1097,7 +1097,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt typu `GValue`, który opisuje wartość przechowywanego elementu do użycia z interfejsem ogólnym dla tej klasy kontenera szablonu.
+Typ opisuje obiekt typu `GValue` , który opisuje wartość przechowywanego elementu do użycia z interfejsem ogólnym dla tej klasy kontenera szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -1174,11 +1174,11 @@ Gdzie w kontenerze do wstawienia (tylko Wskazówka).
 
 Każda funkcja członkowska wstawia sekwencję określoną przez pozostałe operandy.
 
-Pierwsza funkcja członkowska przedsięwzięciach do wstawienia elementu z wartością *Val*i zwraca parę wartości `X`. Jeśli `X.second` ma wartość true, `X.first` wyznacza nowo wstawiony element; w przeciwnym razie `X.first` wyznacza element o równoważnej kolejności, która już istnieje, i nie zostanie wstawiony nowy element. Służy do wstawiania pojedynczego elementu.
+Pierwsza funkcja członkowska przedsięwzięciach do wstawienia elementu z wartością *Val*i zwraca parę wartości `X` . Jeśli `X.second` ma wartość true, `X.first` oznacza nowo wstawiony element; w przeciwnym razie `X.first` oznacza element o równoważnej kolejności, która już istnieje, a nowy element nie zostanie wstawiony. Służy do wstawiania pojedynczego elementu.
 
 Druga funkcja członkowska wstawia element z wartością *Val*przy użyciu instrukcji *WHERE* jako wskazówkę (w celu zwiększenia wydajności) i zwraca iterator, który wyznacza nowo wstawiony element. Służy do wstawiania pojedynczego elementu, który może być przyległy do elementu, który znasz.
 
-Trzecia funkcja członkowska wstawia sekwencję [`first`, `last`). Służy do wstawiania elementów, które zostały skopiowane z innej sekwencji.
+Trzecia funkcja członkowska wstawia sekwencję [ `first` , `last` ). Służy do wstawiania elementów, które zostały skopiowane z innej sekwencji.
 
 Czwarta funkcja członkowska wstawia sekwencję wydaną po *prawej stronie*. Służy do wstawiania sekwencji opisanej przez moduł wyliczający.
 
@@ -1271,7 +1271,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt nieokreślonego typu `T1`, który może obsłużyć iterator dwukierunkowy dla kontrolowanej sekwencji.
+Typ opisuje obiekt nieokreślonego typu `T1` , który może obsłużyć iterator dwukierunkowy dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -1477,12 +1477,12 @@ iterator lower_bound(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*głównych*<br/>
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska określa pierwszy element `X` w kontrolowanej sekwencji, która ma równoważną kolejność do *klucza*. Jeśli taki element nie istnieje, zwraca [Mapowanie:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; w przeciwnym razie zwraca iterator, który wyznacza `X`. Służy do lokalizowania początku sekwencji elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
+Funkcja członkowska określa pierwszy element `X` w kontrolowanej sekwencji, który ma równoważne porządkowanie do *klucza*. Jeśli taki element nie istnieje, zwraca [Mapowanie:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `()` ; w przeciwnym razie zwraca iterator, który wyznacza `X` . Służy do lokalizowania początku sekwencji elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -1536,7 +1536,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 
 #### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*głównych*<br/>
 Wartość klucza do użycia.
 
 *mapowane*<br/>
@@ -1544,7 +1544,7 @@ Mapowana wartość do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca obiekt `value_type`, którego klucz jest *kluczem* i którego zmapowana wartość jest *zamapowana*. Służy do redagowania obiektu odpowiedniego do użycia z kilkoma innymi funkcjami składowymi.
+Funkcja członkowska zwraca `value_type` obiekt, którego klucz jest *kluczem* i którego zmapowana wartość jest *zamapowana*. Służy do redagowania obiektu odpowiedniego do użycia z kilkoma innymi funkcjami składowymi.
 
 ### <a name="example"></a>Przykład
 
@@ -1614,7 +1614,7 @@ Konstruktor:
 
 `map();`
 
-Inicjuje kontrolowaną sekwencję bez elementów, z `key_compare()`predykatu kolejności domyślnej. Służy do określania pustej początkowej kontrolowanej sekwencji przy użyciu domyślnego predykatu porządkowania.
+Inicjuje kontrolowaną sekwencję bez elementów z domyślnym predykatem kolejności `key_compare()` . Służy do określania pustej początkowej kontrolowanej sekwencji przy użyciu domyślnego predykatu porządkowania.
 
 Konstruktor:
 
@@ -1626,25 +1626,25 @@ Konstruktor:
 
 `map(map<Key, Mapped>% right);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją [`right.begin()`, `right.end()`) przy użyciu domyślnego predykatu porządkowania. Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej *przez obiekt mapy*, z domyślnym predykatem kolejności.
+Inicjuje kontrolowaną sekwencję z sekwencją [ `right.begin()` , `right.end()` ) z domyślnym predykatem kolejności. Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej *przez obiekt mapy*, z domyślnym predykatem kolejności.
 
 Konstruktor:
 
 `map(map<Key, Mapped>^ right);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją [`right->begin()`, `right->end()`) przy użyciu domyślnego predykatu porządkowania. Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej *przez obiekt mapy*, z domyślnym predykatem kolejności.
+Inicjuje kontrolowaną sekwencję z sekwencją [ `right->begin()` , `right->end()` ) z domyślnym predykatem kolejności. Służy do określenia początkowej kontrolowanej sekwencji, która jest kopią sekwencji kontrolowanej *przez obiekt mapy*, z domyślnym predykatem kolejności.
 
 Konstruktor:
 
 `template<typename InIter> map(InIter first, InIter last);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją [`first`, `last`) przy użyciu domyślnego predykatu porządkowania. Służy do Przekształć sekwencję na kopię innej sekwencji z domyślnym predykatem kolejności.
+Inicjuje kontrolowaną sekwencję z sekwencją [ `first` , `last` ) z domyślnym predykatem kolejności. Służy do Przekształć sekwencję na kopię innej sekwencji z domyślnym predykatem kolejności.
 
 Konstruktor:
 
 `template<typename InIter> map(InIter first, InIter last, key_compare^ pred);`
 
-Inicjuje kontrolowaną sekwencję z sekwencją [`first`, `last`) z predykatem porządkowania *pred*. Służy do Przekształć sekwencję na kopię innej sekwencji z określonym predykatem kolejności.
+Inicjuje kontrolowaną sekwencję z sekwencją [ `first` , `last` ) z predykatem porządkowania *pred*. Służy do Przekształć sekwencję na kopię innej sekwencji z określonym predykatem kolejności.
 
 Konstruktor:
 
@@ -1808,7 +1808,7 @@ Kontener do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator elementu członkowskiego kopiuje *prawo* do obiektu, a następnie zwraca `*this`. Służy do zastępowania kontrolowanej sekwencji kopią kontrolowanej sekwencji *po prawej stronie*.
+Operator elementu członkowskiego kopiuje *prawo* do obiektu, a następnie zwraca **`*this`** . Służy do zastępowania kontrolowanej sekwencji kopią kontrolowanej sekwencji *po prawej stronie*.
 
 ### <a name="example"></a>Przykład
 
@@ -1858,7 +1858,7 @@ mapped_type operator[](key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*głównych*<br/>
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
@@ -1925,7 +1925,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca iterator odwrotny, który wyznacza ostatni element kontrolowanej sekwencji lub tuż poza początkiem pustej sekwencji. W związku z tym wyznacza `beginning` sekwencji odwrotnej. Służy do uzyskania iteratora, który wyznacza `current` początku kontrolowanej sekwencji widocznej w odwrotnej kolejności, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
+Funkcja członkowska zwraca iterator odwrotny, który wyznacza ostatni element kontrolowanej sekwencji lub tuż poza początkiem pustej sekwencji. W związku z tym określa `beginning` odwrotną sekwencję. Służy do uzyskania iteratora, który wyznacza `current` początek kontrolowanej sekwencji widoczny w kolejności odwrotnej, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2021,7 +2021,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca iterator odwrotny, który wskazuje tuż poza początkiem kontrolowanej sekwencji. W związku z tym wyznacza `end` sekwencji odwrotnej. Służy do uzyskania iteratora, który wyznacza `current` końca kontrolowanej sekwencji widoczny w odwrotnej kolejności, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
+Funkcja członkowska zwraca iterator odwrotny, który wskazuje tuż poza początkiem kontrolowanej sekwencji. W związku z tym określa `end` odwrotną sekwencję. Służy do uzyskania iteratora, który wyznacza `current` koniec kontrolowanej sekwencji widoczny w odwrotnej kolejności, ale jego stan może ulec zmianie w przypadku zmiany długości kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2074,7 +2074,7 @@ typedef T3 reverse_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ opisuje obiekt nieokreślonego typu `T3`, który może działać jako iterator odwrotny dla kontrolowanej sekwencji.
+Typ opisuje obiekt nieokreślonego typu `T3` , który może być używany jako iterator odwrotny dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2116,7 +2116,7 @@ size_type size();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca długość kontrolowanej sekwencji. Służy do określania liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli dowiesz się, czy sekwencja ma rozmiar różny od zera, zobacz [map:: empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)`()`.
+Funkcja członkowska zwraca długość kontrolowanej sekwencji. Służy do określania liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli dowiesz się, czy sekwencja ma rozmiar różny od zera, zobacz [map:: empty (STL/CLR)](../dotnet/map-empty-stl-clr.md) `()` .
 
 ### <a name="example"></a>Przykład
 
@@ -2221,7 +2221,7 @@ Kontener, za pomocą którego ma zostać zamieniony zawartość.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zamienia kontrolowane sekwencje między `this` i *po prawej*. Robi to w stałym czasie i nie zgłasza wyjątków. Jest ona używana jako Szybka metoda wymiany zawartości dwóch kontenerów.
+Funkcja członkowska zamienia kontrolowane sekwencje między **`this`** i *po prawej*. Robi to w stałym czasie i nie zgłasza wyjątków. Jest ona używana jako Szybka metoda wymiany zawartości dwóch kontenerów.
 
 ### <a name="example"></a>Przykład
 
@@ -2334,12 +2334,12 @@ iterator upper_bound(key_type key);
 
 #### <a name="parameters"></a>Parametry
 
-*Klucz*<br/>
+*głównych*<br/>
 Wartość klucza do wyszukania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska określa ostatni element `X` w kontrolowanej sekwencji, która ma równoważną kolejność do *klucza*. Jeśli taki element nie istnieje lub `X` jest ostatnim elementem w kontrolowanej sekwencji, zwraca wartość [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; w przeciwnym razie zwraca iterator, który wyznacza pierwszy element poza `X`. Służy do lokalizowania końca sekwencji elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
+Funkcja członkowska określa ostatni element `X` w kontrolowanej sekwencji, który ma równoważne porządkowanie do *klucza*. Jeśli taki element nie istnieje lub `X` jest ostatnim elementem w kontrolowanej sekwencji, zwraca [Mapowanie:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `()` ; w przeciwnym razie zwraca iterator, który wyznacza pierwszy element poza `X` . Służy do lokalizowania końca sekwencji elementów aktualnie w kontrolowanej sekwencji, która pasuje do określonego klucza.
 
 ### <a name="example"></a>Przykład
 
@@ -2488,7 +2488,7 @@ typedef generic_value value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem dla `generic_value`.
+Typ jest synonimem dla `generic_value` .
 
 ### <a name="example"></a>Przykład
 
@@ -2543,7 +2543,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca `!(left == right)`. Służy do sprawdzania, czy nie *jest on* uporządkowany *tak samo jak w* przypadku porównywania dwóch map przez element.
+Funkcja operatora zwraca wartość `!(left == right)` . Służy do sprawdzania, czy nie *jest on* uporządkowany *tak samo jak w* przypadku porównywania dwóch map przez element.
 
 ### <a name="example"></a>Przykład
 
@@ -2591,7 +2591,7 @@ int main()
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-map-stlclr"></a><a name="op_lt"></a>&lt; operatora (map) (STL/CLR)
+## <a name="operatorlt-map-stlclr"></a><a name="op_lt"></a>operator &lt; (map) (STL/CLR)
 
 Lista jest mniejsza niż porównanie.
 
@@ -2614,7 +2614,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca wartość true, jeśli dla najniższej pozycji `i`, dla której `!(right[i] < left[i])` jest również spełniony `left[i] < right[i]`. W przeciwnym razie zwraca `left->size() < right->size()` używany do sprawdzania, czy *lewa* jest uporządkowana przed *prawem* , gdy dwie mapy są porównywane elementów według elementu.
+Funkcja operator zwraca wartość true, jeśli dla najniższej pozycji `i` `!(right[i] < left[i])` ma również wartość true `left[i] < right[i]` . W przeciwnym razie zwraca go przy `left->size() < right->size()` użyciu, aby sprawdzić, czy *lewa* jest uporządkowana przed *prawem* , gdy dwie mapy są porównywane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -2662,7 +2662,7 @@ int main()
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-map-stlclr"></a><a name="op_lteq"></a>operator&lt;= (map) (STL/CLR)
+## <a name="operatorlt-map-stlclr"></a><a name="op_lteq"></a>operator &lt; = (map) (STL/CLR)
 
 Lista jest mniejsza niż lub równa.
 
@@ -2685,7 +2685,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca `!(right < left)`. Służy do sprawdzania, czy nie *jest on* uporządkowany po *prawej stronie* , gdy dwie mapy są porównywane elementów według elementu.
+Funkcja operatora zwraca wartość `!(right < left)` . Służy do sprawdzania, czy nie *jest on* uporządkowany po *prawej stronie* , gdy dwie mapy są porównywane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -2756,7 +2756,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca wartość true tylko wtedy, gdy sekwencje sterowane przez *lewo* i *prawo* mają taką samą długość i, dla każdej pozycji `i`, `left[i] ==` `right[i]`. Służy do sprawdzania, czy *lewa* jest uporządkowana tak samo jak *w przypadku* porównywania dwóch map przez element.
+Funkcja operator zwraca wartość true tylko wtedy, gdy sekwencje sterowane przez *lewo* i *prawo* mają taką samą długość i, dla każdej pozycji `i` `left[i] ==` `right[i]` . Służy do sprawdzania, czy *lewa* jest uporządkowana tak samo jak *w przypadku* porównywania dwóch map przez element.
 
 ### <a name="example"></a>Przykład
 
@@ -2804,7 +2804,7 @@ int main()
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-map-stlclr"></a><a name="op_gt"></a>&gt; operatora (map) (STL/CLR)
+## <a name="operatorgt-map-stlclr"></a><a name="op_gt"></a>operator &gt; (map) (STL/CLR)
 
 Lista większa niż porównanie.
 
@@ -2827,7 +2827,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca `right` `<` `left`. Służy do sprawdzania, czy *lewa* jest uporządkowana po *prawej stronie* , gdy dwie mapy są porównywane elementów według elementu.
+Funkcja operatora zwraca wartość `right` `<` `left` . Służy do sprawdzania, czy *lewa* jest uporządkowana po *prawej stronie* , gdy dwie mapy są porównywane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 
@@ -2875,7 +2875,7 @@ int main()
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-map-stlclr"></a><a name="op_gteq"></a>operator&gt;= (map) (STL/CLR)
+## <a name="operatorgt-map-stlclr"></a><a name="op_gteq"></a>operator &gt; = (map) (STL/CLR)
 
 Lista jest większa lub równa porównaniu.
 
@@ -2898,7 +2898,7 @@ Prawy kontener do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja operator zwraca `!(left` `<` `right)`. Służy do sprawdzania, czy nie *jest on* uporządkowany przed *prawem* , gdy dwie mapy są porównywane elementów według elementu.
+Funkcja operatora zwraca wartość `!(left` `<` `right)` . Służy do sprawdzania, czy nie *jest on* uporządkowany przed *prawem* , gdy dwie mapy są porównywane elementów według elementu.
 
 ### <a name="example"></a>Przykład
 

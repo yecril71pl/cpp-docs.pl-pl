@@ -5,18 +5,18 @@ helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-ms.openlocfilehash: 284a9cb9268c8c794379c6a5468b0f2b9092b7d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1895bf12cb195ef7b4555d400badf112d377547b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317461"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211921"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>Zwalnianie bibliotek DLL załadowanych z opóźnieniem
 
-Pomocnik dostarczone przez domyślne załadować z opóźnieniem sprawdza, czy deskryptory opóźnionego ładowania mają wskaźnik i kopii oryginalnej tabeli adresów importowania (IAT) w polu pUnloadIAT. Jeśli tak, zostanie ono zapisane wskaźnik na liście importu deskryptora opóźnienia. Dzięki temu funkcja pomocnika odnaleźć biblioteki DLL według nazwy do obsługi jawne zwalnianie tej biblioteki DLL.
+Domyślne, dostarczone przez program pomocnika ładowania opóźnień, aby sprawdzić, czy deskryptory ładowania opóźnień mają wskaźnik i kopię oryginalnej tabeli adresów importu (IAT) w polu pUnloadIAT. Jeśli tak, zostanie zapisany wskaźnik na liście do deskryptora opóźnienia importu. Umożliwia to funkcji pomocnika znalezienie biblioteki DLL według nazwy do obsługi wyładowania biblioteki DLL jawnie.
 
-Poniżej przedstawiono skojarzone struktur i funkcji dla jawne zwalnianie bibliotek DLL ładowanych z opóźnieniem:
+Poniżej przedstawiono skojarzone struktury i funkcje w celu jawnego wyładowania biblioteki DLL załadowanej z opóźnieniem:
 
 ```cpp
 //
@@ -43,17 +43,17 @@ ExternC
 PUnloadInfo __puiHead;
 ```
 
-Struktura UnloadInfo jest implementowany przy użyciu klasy języka C++, który używa **Funkcja LocalAlloc** i **LocalFree** implementacji jako jego operatora **nowe** i operator  **Usuń** odpowiednio. Te opcje są przechowywane w standardowych połączonej listy przy użyciu __puiHead jako nagłówek listy.
+Struktura UnloadInfo jest implementowana przy użyciu klasy języka C++, która korzysta odpowiednio z implementacji **LocalAlloc** i **LocalFree** jako operatora **`new`** i operatora **`delete`** . Te opcje są przechowywane na standardowej liście połączonej przy użyciu __puiHead jako nagłówka listy.
 
-Wywoływanie __FUnloadDelayLoadedDLL spróbuje znaleźć nazwę zapewniają na liście ładowanych bibliotek DLL (wymagana jest dokładne dopasowanie). Jeśli znaleziono kopię IAT w pUnloadIAT są kopiowane w górnej części uruchomionej IAT do przywrócenia wskaźniki thunk, biblioteka zostanie zwolniony z **FreeLibrary**, dopasowywania **UnloadInfo** rekordu jest rozłączony z listy i usunięty, a wartość TRUE jest zwracana.
+Wywołanie __FUnloadDelayLoadedDLL podejmie próbę znalezienia podania nazwy na liście załadowanych bibliotek DLL (wymagane jest dokładne dopasowanie). W przypadku znalezienia kopia IAT w pUnloadIAT jest kopiowana na początku uruchomionego IAT w celu przywrócenia wskaźników thunk, biblioteka jest zwolniona z **FreeLibrary**, pasujący rekord **UnloadInfo** jest odłączany od listy i usunięty, a wartość true jest zwracana.
 
-Argument __FUnloadDelayLoadedDLL2 funkcja jest uwzględniana wielkość liter. Na przykład należy określić:
+Argument funkcji __FUnloadDelayLoadedDLL2 uwzględnia wielkość liter. Na przykład należy określić:
 
 ```cpp
 __FUnloadDelayLoadedDLL2("user32.DLL");
 ```
 
-a nie:
+i nie:
 
 ```cpp
 __FUnloadDelayLoadedDLL2("User32.DLL");.
@@ -61,4 +61,4 @@ __FUnloadDelayLoadedDLL2("User32.DLL");.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Ogólne informacje funkcji Pomocnik](understanding-the-helper-function.md)
+[Zrozumienie funkcji pomocnika](understanding-the-helper-function.md)

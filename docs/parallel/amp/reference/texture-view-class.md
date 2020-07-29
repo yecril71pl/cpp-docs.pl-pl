@@ -14,16 +14,16 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: 6bf4b9666d746199cea92fa2bd52b691c67e4a5b
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 1fa21f2a5a5c1d004fc23d70b686d7e45bbcac81
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126354"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215910"
 ---
 # <a name="texture_view-class"></a>texture_view — Klasa
 
-Zapewnia dostęp do odczytu i zapisu do tekstury. `texture_view` można użyć tylko do odczytu tekstur, których typ wartości to `int`, `unsigned int`lub `float`, które mają domyślny 32-bitowy BPSE. Aby odczytać inne formaty tekstury, użyj `texture_view<const value_type, _Rank>`.
+Zapewnia dostęp do odczytu i zapisu do tekstury. `texture_view`można go użyć tylko do odczytu tekstur, których typem wartości jest **`int`** , **`unsigned int`** , lub **`float`** , które mają domyślnie 32-bitowy BPSE. Aby odczytać inne formaty tekstury, użyj `texture_view<const value_type, _Rank>` .
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,50 +46,50 @@ class texture_view<const value_type, _Rank>
 Typ elementów w agregacji tekstury.
 
 *_Rank*<br/>
-Ranga `texture_view`.
+Ranga `texture_view` .
 
-## <a name="members"></a>Members
+## <a name="members"></a>Elementy członkowskie
 
 ### <a name="public-typedefs"></a>Publiczne definicje typów
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |`value_type`|Typ elementów w agregacji tekstury.|
-|`coordinates_type`|Typ współrzędnych służący do określania Texel w `texture_view`— czyli `short_vector`, który ma taką samą rangę, jak skojarzona tekstura, która ma typ wartości `float`.|
-|`gather_return_type`|Typ zwracany używany do zbierania operacji — to znaczy `short_vector` rangi 4, który przechowuje cztery jednorodne składniki kolorów zebrane z czterech przykładowych wartości Texel.|
+|`coordinates_type`|Typ współrzędnej używanej do określenia Texel w elemencie `texture_view` — czyli, `short_vector` który ma taką samą rangę, jak skojarzona tekstura, która ma typ wartości **`float`** .|
+|`gather_return_type`|Zwracany typ używany do zbierania operacji — to znaczy ranga 4, `short_vector` która przechowuje cztery jednorodne składniki kolorów zebrane z czterech Texel wartości próbkowania.|
 
 ### <a name="public-constructors"></a>Konstruktory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[Konstruktor texture_view](#ctor)|Przeciążone. Tworzy wystąpienie `texture_view`.|
-|[~ texture_view destruktor](#ctor)|Niszczy wystąpienie `texture_view`.|
+|[Konstruktor texture_view](#ctor)|Przeciążone. Konstruuje `texture_view` wystąpienie.|
+|[~ texture_view destruktor](#ctor)|Niszczy `texture_view` wystąpienie.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[gather_alpha](#gather_alpha)|Przeciążone. Próbki tekstury na określonych współrzędnych przy użyciu określonej konfiguracji pobierania próbek i zwraca składniki alfa (w) z czterech próbkowanych tekseli.|
 |[gather_blue](#gather_blue)|Przeciążone. Próbki tekstury na określonych współrzędnych przy użyciu określonej konfiguracji pobierania próbek i zwraca składniki niebieskie (z) z czterech próbkowanych tekseli.|
 |[gather_green](#gather_green)|Przeciążone. Próbki tekstury na określonych współrzędnych przy użyciu określonej konfiguracji pobierania próbek i zwraca składniki zielone (y) z czterech próbkowanych tekseli.|
 |[gather_red](#gather_red)|Przeciążone. Próbkuje teksturę na określonych współrzędnych przy użyciu określonej konfiguracji pobierania próbek i zwraca składniki czerwone (x) z czterech próbkowanych tekseli.|
-|[get](#get)|Przeciążone. Pobiera wartość elementu według indeksu.|
+|[Pobierz](#get)|Przeciążone. Pobiera wartość elementu według indeksu.|
 |[Northwind](#sample)|Przeciążone. Próbki tekstury na określonych współrzędnych i poziomie szczegółowości przy użyciu określonej konfiguracji próbkowania.|
-|[set](#set)|Ustawia wartość elementu według indeksu.|
+|[zbiór](#set)|Ustawia wartość elementu według indeksu.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
 |[operator ()](#operator_call)|Przeciążone. Pobiera wartość elementu według indeksu.|
-|[\[operatora \]](#operator_at)|Przeciążone. Pobiera wartość elementu według indeksu.|
+|[operator\[\]](#operator_at)|Przeciążone. Pobiera wartość elementu według indeksu.|
 |[operator =](#operator_eq)|Przeciążone. Operator przypisania.|
 
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych
 
-|Name (Nazwa)|Opis|
+|Nazwa|Opis|
 |----------|-----------------|
-|[value_type](#value_type)|Typ wartości elementów `texture_view`.|
+|[value_type](#value_type)|Typ wartości elementów `texture_view` .|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -103,17 +103,17 @@ Ranga `texture_view`.
 
 **Przestrzeń nazw:** concurrency:: Graphics
 
-## <a name="dtor"></a>~ texture_view
+## <a name="texture_view"></a><a name="dtor"></a>~ texture_view
 
-Niszczy wystąpienie `texture_view`.
+Niszczy `texture_view` wystąpienie.
 
 ```cpp
 ~texture_view() restrict(amp, cpu);
 ```
 
-## <a name="ctor"></a>texture_view
+## <a name="texture_view"></a><a name="ctor"></a>texture_view
 
-Tworzy wystąpienie `texture_view`.
+Konstruuje `texture_view` wystąpienie.
 
 ```cpp
 texture_view(// [1] constructor
@@ -146,25 +146,25 @@ texture_view(// [7] copy constructor
 ### <a name="parameters"></a>Parametry
 
 *_Src*<br/>
-[1, 2] Konstruktor `texture`, na którym jest tworzony `texture_view` zapisywalny.
+[1, 2] Konstruktor, `texture` w którym `texture_view` jest tworzony zapisywalny.
 
-[3, 4] Konstruktor `texture`, na którym jest tworzony `texture_view` niezapisywalny.
+[3, 4] Konstruktor, `texture` w którym jest tworzony nie zapisywalny `texture_view` .
 
 *_Other*<br/>
-[5] Kopiuj Konstruktor do zapisywalnego `texture_view`.
+[5] Kopiuj Konstruktor do zapisywalnego źródła `texture_view` .
 
-[6, 7] Skopiuj Konstruktor do źródłowej `texture_view`nie do zapisu.
+[6, 7] Kopiuj Konstruktor do źródła bez możliwości zapisu `texture_view` .
 
 *_Mipmap_level*<br/>
-Określony poziom mipmappingu na źródłowym `texture`, do którego `texture_view` ma to możliwość zapisu. Wartość domyślna to 0, co oznacza najwyższy poziom (najbardziej szczegółowy) poziom MIP.
+Określony poziom mipmappingu na źródle `texture` , z którym jest powiązane to zapisywalne `texture_view` . Wartość domyślna to 0, co oznacza najwyższy poziom (najbardziej szczegółowy) poziom MIP.
 
 *_Most_detailed_mip*<br/>
-Najwyższy poziom (najbardziej szczegółowy) poziom MIP dla widoku względem określonego obiektu `texture_view`.
+Najwyższy poziom (najbardziej szczegółowy) poziom MIP dla widoku względem określonego `texture_view` obiektu.
 
 *_Mip_levels*<br/>
-Liczba poziomów mipmappingu dostępnych za pomocą `texture_view`.
+Liczba poziomów mipmappingu dostępnych za pomocą `texture_view` .
 
-## <a name="gather_red"></a>gather_red
+## <a name="gather_red"></a><a name="gather_red"></a>gather_red
 
 Próbkuje teksturę na określonych współrzędnych przy użyciu określonej konfiguracji pobierania próbek i zwraca składniki czerwone (x) z czterech próbkowanych tekseli.
 
@@ -183,19 +183,19 @@ const gather_return_type gather_red(
 ### <a name="parameters"></a>Parametry
 
 *_Address_mode*<br/>
-Tryb adresu, który ma być używany do próbkowania `texture_view`. Tryb adresu jest taki sam dla wszystkich wymiarów.
+Tryb adresu, który ma być używany do próbkowania `texture_view` . Tryb adresu jest taki sam dla wszystkich wymiarów.
 
 *_Sampler*<br/>
-Konfiguracja próbnika do użycia do próbkowania `texture_view`.
+Konfiguracja próbnika do użycia do próbkowania `texture_view` .
 
 *_Coord*<br/>
 Współrzędne, z których ma zostać pobrana próba. Wartości współrzędnych ułamkowych są używane do interpolacji między przykładowym tekseli.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Krótka wektor rangi 4 zawierający składnik czerwony (x) z 4 próbkowanych wartości Texel.
 
-## <a name="gather_green"></a>gather_green
+## <a name="gather_green"></a><a name="gather_green"></a>gather_green
 
 Próbki tekstury na określonych współrzędnych przy użyciu określonej konfiguracji pobierania próbek i zwraca składniki zielone (y) z czterech próbkowanych tekseli.
 
@@ -214,19 +214,19 @@ const gather_return_type gather_green(
 ### <a name="parameters"></a>Parametry
 
 *_Address_mode*<br/>
-Tryb adresu, który ma być używany do próbkowania `texture_view`. Tryb adresu jest taki sam dla wszystkich wymiarów.
+Tryb adresu, który ma być używany do próbkowania `texture_view` . Tryb adresu jest taki sam dla wszystkich wymiarów.
 
 *_Sampler*<br/>
-Konfiguracja próbnika do użycia do próbkowania `texture_view`.
+Konfiguracja próbnika do użycia do próbkowania `texture_view` .
 
 *_Coord*<br/>
 Współrzędne, z których ma zostać pobrana próba. Wartości współrzędnych ułamkowych są używane do interpolacji między przykładowym tekseli.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Krótka wektor rangi 4 zawierający zielony składnik (y) wartości Texel 4 próbki.
 
-## <a name="gather_blue"></a>gather_blue
+## <a name="gather_blue"></a><a name="gather_blue"></a>gather_blue
 
 Próbki tekstury na określonych współrzędnych przy użyciu określonej konfiguracji pobierania próbek i zwraca składniki niebieskie (z) z czterech próbkowanych tekseli.
 
@@ -245,19 +245,19 @@ const gather_return_type gather_blue(
 ### <a name="parameters"></a>Parametry
 
 *_Address_mode*<br/>
-Tryb adresu, który ma być używany do próbkowania `texture_view`. Tryb adresu jest taki sam dla wszystkich wymiarów.
+Tryb adresu, który ma być używany do próbkowania `texture_view` . Tryb adresu jest taki sam dla wszystkich wymiarów.
 
 *_Sampler*<br/>
-Konfiguracja próbnika do użycia do próbkowania `texture_view`.
+Konfiguracja próbnika do użycia do próbkowania `texture_view` .
 
 *_Coord*<br/>
 Współrzędne, z których ma zostać pobrana próba. Wartości współrzędnych ułamkowych są używane do interpolacji między przykładowym tekseli.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Krótka wektor rangi 4 zawierający składnik czerwony (x) z 4 próbkowanych wartości Texel.
 
-## <a name="gather_alpha"></a>gather_alpha
+## <a name="gather_alpha"></a><a name="gather_alpha"></a>gather_alpha
 
 Próbki tekstury na określonych współrzędnych przy użyciu określonej konfiguracji pobierania próbek i zwraca składniki alfa (w) z czterech próbkowanych tekseli.
 
@@ -276,19 +276,19 @@ const gather_return_type gather_alpha(
 ### <a name="parameters"></a>Parametry
 
 *_Address_mode*<br/>
-Tryb adresu, który ma być używany do próbkowania `texture_view`. Tryb adresu jest taki sam dla wszystkich wymiarów.
+Tryb adresu, który ma być używany do próbkowania `texture_view` . Tryb adresu jest taki sam dla wszystkich wymiarów.
 
 *_Sampler*<br/>
-Konfiguracja próbnika do użycia do próbkowania `texture_view`.
+Konfiguracja próbnika do użycia do próbkowania `texture_view` .
 
 *_Coord*<br/>
 Współrzędne, z których ma zostać pobrana próba. Wartości współrzędnych ułamkowych są używane do interpolacji między przykładowym tekseli.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Krótka wektor rangi 4 zawierający składnik alfa (w) z 4 próbkowanych wartości Texel.
 
-## <a name="get"></a>Pobierz
+## <a name="get"></a><a name="get"></a>Pobierz
 
 Pobiera wartość elementu w określonym indeksie.
 
@@ -309,13 +309,13 @@ Indeks elementu, który ma zostać pobrany, prawdopodobnie wielowymiarowy.
 *_Mip_level*<br/>
 Poziom mipmappingu, z którego ma zostać pobrana wartość. Wartość domyślna 0 reprezentuje najbardziej szczegółowy poziom mipmappingu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wartość elementu.
 
-## <a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a>operator =
 
-Przypisuje widok tej samej tekstury, co określony `texture_view` do tego wystąpienia `texture_view`.
+Przypisuje widok takiej samej tekstury jak określony `texture_view` dla tego `texture_view` wystąpienia.
 
 ```cpp
 texture_view<value_type, _Rank>& operator= (// [1] copy constructor
@@ -331,15 +331,15 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ### <a name="parameters"></a>Parametry
 
 *_Other*<br/>
-[1, 2] Kopiuj Konstruktor A zapisywalny obiekt `texture_view`.
+[1, 2] Kopiuj Konstruktor jako zapisywalny `texture_view` obiekt.
 
-[3] Kopiuj Konstruktor do niezapisywalnego obiektu `texture_view`.
+[3] Skopiuj Konstruktor do obiektu, który nie jest zapisywalny `texture_view` .
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do tego wystąpienia `texture_view`.
+Odwołanie do tego `texture_view` wystąpienia.
 
-## <a name="operator_at"></a>operator []
+## <a name="operator"></a><a name="operator_at"></a>operator []
 
 Zwraca wartość elementu według indeksu.
 
@@ -361,11 +361,11 @@ Indeks, prawdopodobnie wielowymiarowy.
 *_I0*<br/>
 Indeks jednowymiarowy.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość elementu indeksowana przez `_Index`.
+Wartość elementu indeksowanego przez `_Index` .
 
-## <a name="operator_call"></a>operator ()
+## <a name="operator"></a><a name="operator_call"></a>operator ()
 
 Zwraca wartość elementu według indeksu.
 
@@ -414,11 +414,11 @@ Najbardziej znaczący składnik indeksu.
 *_I2*<br/>
 Najmniej znaczący składnik indeksu.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
-Wartość elementu indeksowana przez `_Index`.
+Wartość elementu indeksowanego przez `_Index` .
 
-## <a name="sample"></a>Northwind
+## <a name="sample"></a><a name="sample"></a>Northwind
 
 Próbki tekstury na określonych współrzędnych i poziomie szczegółowości przy użyciu określonej konfiguracji próbkowania.
 
@@ -454,11 +454,11 @@ Współrzędne, z których ma zostać pobrana próba. Wartości współrzędnych
 *_Level_of_detail*<br/>
 Wartość określa poziom mipmappingu do próbkowania. Wartości ułamkowe służą do interpolacji między dwoma poziomami mipmappingu. Domyślny poziom szczegółowości to 0, który reprezentuje najbardziej szczegółowy poziom MIP.
 
-### <a name="return-value"></a>Wartość zwrócona
+### <a name="return-value"></a>Wartość zwracana
 
 Wartość próbki interpolowanej.
 
-## <a name="set"></a>zbiór
+## <a name="set"></a><a name="set"></a>zbiór
 
 Ustawia wartość elementu w określonym indeksie dla określonej wartości.
 
@@ -473,10 +473,10 @@ void set(
 *_Index*<br/>
 Indeks elementu, który ma zostać ustawiony, prawdopodobnie wielowymiarowy.
 
-*value*<br/>
+*wartościami*<br/>
 Wartość, dla której ma zostać ustawiony element.
 
-## <a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 Typ wartości elementów texture_view.
 
@@ -484,6 +484,6 @@ Typ wartości elementów texture_view.
 typedef typename const value_type value_type;
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Concurrency::graphics, przestrzeń nazw](concurrency-graphics-namespace.md)
+[Concurrency::graphics — Przestrzeń nazw](concurrency-graphics-namespace.md)

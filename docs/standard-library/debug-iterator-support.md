@@ -11,22 +11,22 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: a5773add9a26d647df6678ffa4f2681b73cff44f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416201"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231588"
 ---
 # <a name="debug-iterator-support"></a>Obsługa iteratora debugowania
 
-Biblioteka wykonawcza wizualizacji C++ wykrywa nieprawidłowe użycie iteratora i potwierdza i wyświetla okno dialogowe w czasie wykonywania. Aby włączyć obsługę iteratora debugowania, należy użyć wersji debugowania biblioteki C++ standardowej i biblioteki środowiska uruchomieniowego języka C do kompilowania programu. Aby uzyskać więcej informacji, zobacz [funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md). Aby uzyskać informacje o sposobach używania sprawdzonych iteratorów, zobacz [sprawdzone Iteratory](../standard-library/checked-iterators.md).
+Visual C++ Biblioteka wykonawcza wykrywa nieprawidłowe użycie iteratora i potwierdza i wyświetla okno dialogowe w czasie wykonywania. Aby włączyć obsługę iteratora debugowania, należy użyć wersji debugowania biblioteki standardowej języka C++ i biblioteki środowiska uruchomieniowego C do skompilowania programu. Aby uzyskać więcej informacji, zobacz [funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md). Aby uzyskać informacje o sposobach używania sprawdzonych iteratorów, zobacz [sprawdzone Iteratory](../standard-library/checked-iterators.md).
 
-Standard C++ opisuje sposób, w jaki funkcje elementów członkowskich mogą powodować, że Iteratory do kontenera stają się nieprawidłowe. Dwa przykłady:
+W standardzie C++ opisano, jak funkcje elementów członkowskich mogą spowodować, że Iteratory do kontenera staną się nieprawidłowe. Dwa przykłady:
 
 - Wymazanie elementu z kontenera powoduje, że Iteratory elementu stają się nieprawidłowe.
 
-- Zwiększenie rozmiaru [wektora](../standard-library/vector.md) przy użyciu instrukcji push lub INSERT powoduje, że iteratory do `vector` stają się nieprawidłowe.
+- Zwiększenie rozmiaru [wektora](../standard-library/vector.md) przy użyciu instrukcji push lub INSERT powoduje, że Iteratory `vector` do stają się nieprawidłowe.
 
 ## <a name="invalid-iterators"></a>Nieprawidłowe Iteratory
 
@@ -130,7 +130,7 @@ Zwróć uwagę, że w tym przykładzie używane jest wyrażenie lambda `[] (int&
 
 ## <a name="iterators-going-out-of-scope"></a>Iteratory wykraczające poza zakres
 
-Testy iteratora debugowania również powodują, że zmienna iteratora zadeklarowana w pętli **for** jest poza zakresem, gdy zostanie zakończony zakres pętli **for** .
+Testy iteratora debugowania również powodują, że zmienna iteratora zadeklarowana w **`for`** pętli jest poza zakresem, gdy **`for`** zamykany jest zakres pętli.
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -173,6 +173,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Standardowa biblioteka C++ — przegląd](../standard-library/cpp-standard-library-overview.md)
+[Omówienie standardowej biblioteki języka C++](../standard-library/cpp-standard-library-overview.md)

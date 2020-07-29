@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: 28b0d826dc02376f952d3522f2f037eacd298b8e
-ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.openlocfilehash: f2419820fb6018613fe3fae39194584076121898
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76123945"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211791"
 ---
 # <a name="main-function-and-program-execution"></a>Funkcja main i wykonywanie programu
 
@@ -28,15 +28,15 @@ main( int argc, char *argv[ ], char *envp[ ] )
 
 ## <a name="remarks"></a>Uwagi
 
-Funkcje w kodzie źródłowym programu wykonują co najmniej jedno określone zadanie. Funkcja **Main** może wywoływać te funkcje, aby wykonać odpowiednie zadania. Gdy **Główne** wywołuje inną funkcję, przekazuje sterowanie wykonywaniem do funkcji, tak aby wykonywanie rozpoczyna się od pierwszej instrukcji w funkcji. Funkcja zwraca kontrolę do wartości **głównej** , gdy `return` instrukcja jest wykonywana lub gdy zostanie osiągnięty koniec funkcji.
+Funkcje w kodzie źródłowym programu wykonują co najmniej jedno określone zadanie. Funkcja **Main** może wywoływać te funkcje, aby wykonać odpowiednie zadania. Gdy **Główne** wywołuje inną funkcję, przekazuje sterowanie wykonywaniem do funkcji, tak aby wykonywanie rozpoczyna się od pierwszej instrukcji w funkcji. Funkcja zwraca kontrolę do wartości **głównej** , gdy **`return`** instrukcja jest wykonywana lub gdy zostanie osiągnięty koniec funkcji.
 
 Można zadeklarować dowolną funkcję, w tym **Main**, w celu posiadania parametrów. Termin „parametr” lub „parametr formalny” dotyczy identyfikatora, który otrzymuje wartość przekazaną do funkcji. Aby uzyskać informacje na temat przekazywania argumentów do parametrów, zobacz [Parametry](../c-language/parameters.md) . Gdy jedna funkcja wywołuje drugą, wywoływana funkcja otrzymuje wartości swoich parametrów od funkcji wywołującej. Wartości te są nazywane „argumentami”. Można zadeklarować formalne parametry do **Main** , aby można było odbierać argumenty z wiersza polecenia przy użyciu tego formatu:
 
-Gdy chcesz przekazać informacje do funkcji **Main** , parametry są tradycyjnie nazwane `argc` i `argv`, chociaż kompilator języka C nie wymaga tych nazw. Typy dla `argc` i `argv` są zdefiniowane przez język C. Tradycyjnie, jeśli trzeci parametr jest przesyłany do **Main**, ten parametr ma `envp`nazwę. Przykłady w dalszej części sekcji pokazują, w jaki sposób używać tych trzech parametrów, aby uzyskać dostęp do argumentów wiersza polecenia. W poniższych sekcjach opisano te parametry.
+Gdy chcesz przekazać informacje do funkcji **Main** , parametry są tradycyjnie nazwane `argc` i `argv` , chociaż kompilator języka C nie wymaga tych nazw. Typy dla `argc` i `argv` są zdefiniowane przez język C. Tradycyjnie, jeśli trzeci parametr jest przesyłany do **Main**, ten parametr ma nazwę `envp` . Przykłady w dalszej części sekcji pokazują, w jaki sposób używać tych trzech parametrów, aby uzyskać dostęp do argumentów wiersza polecenia. W poniższych sekcjach opisano te parametry.
 
 Aby uzyskać opis szerokiej **wersji programu,** zobacz [using wmain](../c-language/using-wmain.md) .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Funkcja Main i argumenty wiersza polecenia (C++)](../cpp/main-function-command-line-args.md)\
 [Analizowanie argumentów wiersza polecenia języka C](../c-language/parsing-c-command-line-arguments.md)
