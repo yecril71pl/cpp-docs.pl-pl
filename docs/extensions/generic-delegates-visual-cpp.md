@@ -1,21 +1,21 @@
 ---
-title: Delegaty ogólneC++(/CLI)
+title: Delegaty ogólne (C++/CLI)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 4c579d0c0ab39a2ddcadfd116bdfed8ba9da2863
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 527f2837f0c29299727a22df8d4f3d807be0e25b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182035"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228716"
 ---
-# <a name="generic-delegates-ccli"></a>Delegaty ogólneC++(/CLI)
+# <a name="generic-delegates-ccli"></a>Delegaty ogólne (C++/CLI)
 
-Parametry typu ogólnego można użyć z delegatami. Aby uzyskać więcej informacji na temat delegatów, zobacz [C++delegat C++(/CLI and/CX)](delegate-cpp-component-extensions.md).
+Parametry typu ogólnego można użyć z delegatami. Aby uzyskać więcej informacji na temat delegatów, zobacz [Delegat (C++/CLI i c++/CX)](delegate-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,7 +39,7 @@ Rozdzielana przecinkami lista identyfikatorów parametrów typu.
 Przyjmuje formularz określony w [ograniczeniach dla parametrów typu ogólnego (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)
 
 *ułatwienia dostępu — Modyfikatory*<br/>
-Obowiązkowe Modyfikatory dostępności (np. **publiczne**, **prywatne**).
+Obowiązkowe Modyfikatory dostępności (np. **`public`** **`private`** ).
 
 *Typ wyniku*<br/>
 Zwracany typ delegata.
@@ -107,7 +107,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład deklaruje ogólny delegat `GenDelegate<ItemType>`, a następnie tworzy jego wystąpienie, kojarząc go z metodą `MyMethod`, która używa parametru typu `ItemType`. Tworzone i wywoływane są dwa wystąpienia delegata (liczba całkowita i podwójna).
+Poniższy przykład deklaruje delegata ogólnego `GenDelegate<ItemType>` , a następnie tworzy wystąpienie go przez skojarzenie go z metodą `MyMethod` , która używa parametru typu `ItemType` . Tworzone i wywoływane są dwa wystąpienia delegata (liczba całkowita i podwójna).
 
 ```cpp
 // generics_generic_delegate.cpp
@@ -162,6 +162,6 @@ Invoking the integer delegate: i = 123, j = 123
 Invoking the double delegate: m = 0.123, n = 0.123
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Typy ogólne](generics-cpp-component-extensions.md)

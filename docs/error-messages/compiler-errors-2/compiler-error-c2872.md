@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2872
 ms.assetid: c619ef97-6e0e-41d7-867c-f8d28a07d553
-ms.openlocfilehash: 103998c7872b683c7405796ee28bd550246ae9bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f57b250f87bd7f2c5808b5a681ddfe49dfa5e876
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257617"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228898"
 ---
 # <a name="compiler-error-c2872"></a>Błąd kompilatora C2872
 
 "*symbol*": niejednoznaczny symbol
 
-Kompilator nie może określić symbol, który odnosi się do. Więcej niż jeden symbol o określonej nazwie znajduje się w zakresie. Zobacz uwagi na końcu komunikat o błędzie dla lokalizacji plików i deklaracje kompilatora znaleziono niejednoznaczny symbol. Aby rozwiązać ten problem, można pełnej kwalifikacji niejednoznaczny symbol za pomocą jego przestrzeń nazw, na przykład `std::byte` lub `::byte`. Można również użyć [alias przestrzeni nazw](../../cpp/namespaces-cpp.md#namespace_aliases) zapewnienie uwzględnianych przestrzeni nazw wygodne krótką nazwę do użycia podczas usuwania niejednoznaczności w nazwach symboli w kodzie źródłowym.
+Kompilator nie może określić, do którego symbolu odwołuje się. Więcej niż jeden symbol o określonej nazwie znajduje się w zakresie. Zobacz uwagi poniżej komunikatu o błędzie dla lokalizacji plików i deklaracji, które kompilator znalazł dla niejednoznacznego symbolu. Aby rozwiązać ten problem, można w pełni kwalifikować niejednoznaczny symbol przy użyciu jego przestrzeni nazw, na przykład `std::byte` lub `::byte` . Można również użyć [aliasu przestrzeni nazw](../../cpp/namespaces-cpp.md#namespace_aliases) , aby nadać dołączonej przestrzeni nazw dogodną krótką nazwę do użycia podczas niejednoznaczności symboli w kodzie źródłowym.
 
-C2872 może wystąpić, jeśli zawiera plik nagłówkowy [użycie dyrektywy](../../cpp/namespaces-cpp.md#using_directives), i znajduje się plik nagłówkowy kolejnych zawierający typ, który jest również w przestrzeni nazw określonej w `using` dyrektywy. Określ `using` dyrektywy dopiero po wszystkie pliki nagłówkowe są określane za pomocą `#include`.
+C2872 może wystąpić, jeśli plik nagłówkowy zawiera [dyrektywę using](../../cpp/namespaces-cpp.md#using_directives)i zostanie dołączony kolejny plik nagłówkowy zawierający typ, który jest również w przestrzeni nazw określonej w **`using`** dyrektywie. Należy określić **`using`** dyrektywę tylko po określeniu wszystkich plików nagłówkowych przy użyciu `#include` .
 
-C2872 może wystąpić w programie Visual Studio 2013, ze względu na konflikt między `Windows::Foundation::Metadata::Platform` typu wyliczeniowego i C++/zdefiniowane CX `Platform` przestrzeni nazw. Aby obejść ten problem, wykonaj następujące kroki:
+C2872 może wystąpić w Visual Studio 2013 ze względu na konflikt między `Windows::Foundation::Metadata::Platform` typem wyliczenia a `Platform` przestrzenią nazw C++/CX-Defined. Aby obejść ten problem, wykonaj następujące kroki:
 
-- Usuń klauzulę "za pomocą Windows::Foundation::Metadata przestrzeni nazw" z plików projektu.
+- Usuń klauzulę "Używanie przestrzeni nazw Windows:: Foundation:: Metadata" z plików projektu.
 
-- Określ w pełni kwalifikowana nazwa dowolnego typu, który znajduje się w tej przestrzeni nazw.
+- Określ w pełni kwalifikowaną nazwę dowolnego typu, który jest zawarty w tej przestrzeni nazw.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład spowoduje wygenerowanie C2872, ponieważ wykonano niejednoznaczne odwołanie do zmiennej o nazwie `i`; dwie zmienne o takiej samej nazwie znajdują się w zakresie:
+Poniższy przykład generuje C2872, ponieważ niejednoznaczne odwołanie do zmiennej o nazwie `i` ; dwie zmienne o tej samej nazwie znajdują się w zakresie:
 
 ```cpp
 // C2872.cpp

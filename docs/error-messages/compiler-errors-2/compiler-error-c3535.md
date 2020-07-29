@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-ms.openlocfilehash: 6b487c0f94a00ec64e0c2178265c5a8c27544a51
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 60ffd5d8decd5c9065ca55cfed34383278359f3e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761559"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228794"
 ---
 # <a name="compiler-error-c3535"></a>Błąd kompilatora C3535
 
 nie można wywnioskować typu dla elementu "type1" z elementu "type2"
 
-Nie można wywnioskować typu zmiennej zadeklarowanej za pomocą słowa kluczowego `auto` na podstawie typu wyrażenia inicjującego. Na przykład ten błąd występuje, gdy wyrażenie inicjacji szacuje się na `void`, który nie jest typem.
+Nie można wywnioskować typu zmiennej zadeklarowanej za pomocą **`auto`** słowa kluczowego na podstawie typu wyrażenia inicjującego. Na przykład ten błąd występuje, gdy wyrażenie inicjacji daje w wyniku wartość **`void`** , która nie jest typem.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-1. Upewnij się, że typ wyrażenia inicjowania nie jest `void`.
+1. Upewnij się, że typ wyrażenia inicjowania nie jest **`void`** .
 
 1. Upewnij się, że deklaracja nie jest wskaźnikiem do typu podstawowego. Aby uzyskać więcej informacji, zobacz [podstawowe typy](../../cpp/fundamental-types-cpp.md).
 
@@ -29,7 +29,7 @@ Nie można wywnioskować typu zmiennej zadeklarowanej za pomocą słowa kluczowe
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład daje C3535, ponieważ wyrażenie inicjacji szacuje się `void`.
+Poniższy przykład daje C3535, ponieważ wyrażenie inicjacji daje w wyniku **`void`** .
 
 ```cpp
 // C3535a.cpp
@@ -70,5 +70,5 @@ auto *p = x;  // C3535
 
 ## <a name="see-also"></a>Zobacz także
 
-[Auto, słowo kluczowe](../../cpp/auto-keyword.md)<br/>
+[Słowo kluczowe "Autouzupełnianie"](../../cpp/auto-keyword.md)<br/>
 [Typy podstawowe](../../cpp/fundamental-types-cpp.md)

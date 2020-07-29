@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3496
 ms.assetid: e19885f2-677f-4c1e-bc69-e35852262dc3
-ms.openlocfilehash: b9542f1904c6797a77c88c88a37aff9348364268
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 993d391f28a59afc8926748f2e6f34ab441657dc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738183"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228859"
 ---
 # <a name="compiler-error-c3496"></a>Błąd kompilatora C3496
 
 element "This" jest zawsze przechwytywany przez wartość: zignorowano element "&"
 
-Nie można przechwycić `this` wskaźnika przez odwołanie.
+Nie można przechwycić **`this`** wskaźnika przez odwołanie.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-- Przechwyć `this` wskaźnik według wartości.
+- Przechwyć **`this`** wskaźnik przez wartość.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład generuje C3496, ponieważ odwołanie do wskaźnika `this` pojawia się na liście przechwytywania wyrażenia lambda:
+Poniższy przykład generuje C3496, ponieważ odwołanie do **`this`** wskaźnika pojawia się na liście przechwytywania wyrażenia lambda:
 
 ```cpp
 // C3496.cpp

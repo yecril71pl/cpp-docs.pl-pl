@@ -2,24 +2,24 @@
 title: Uzyskiwanie wskaźników do buforów danych (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-ms.openlocfilehash: 9e60adc4163e96349f6f4bafa919944e5d8d5b51
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 0b5163dd111adfe5c745a1ad3bbcdc06a675c52c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032372"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87185544"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Uzyskiwanie wskaźników do buforów danych (C++/CX)
 
-W czasie wykonywania systemu Windows interfejs [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) zapewnia neutralne dla języka, oparte na strumieniu środki dostępu do buforów danych. W języku C++ można uzyskać surowy wskaźnik do podstawowej tablicy bajtów przy użyciu interfejsu IBufferByteAccess biblioteki środowiska wykonawczego systemu Windows, który jest zdefiniowany w robuffer.h. Za pomocą tego podejścia można zmodyfikować tablicy bajtów w miejscu bez dokonywania żadnych niepotrzebnych kopii danych.
+W środowisko wykonawcze systemu Windows interfejs [Windows:: Storage:: Streams:: IBuffer](/uwp/api/windows.storage.streams.ibuffer) udostępnia niezależny od języka sposób, aby uzyskać dostęp do buforów danych. W języku C++ można uzyskać surowy wskaźnik do tablicy bazowego bajtowego przy użyciu interfejsu IBufferByteAccess biblioteki środowisko wykonawcze systemu Windows, który jest zdefiniowany w robuffer. h. Korzystając z tej metody, można zmodyfikować w miejscu tablicę bajtową bez wprowadzania żadnych niepotrzebnych kopii danych.
 
-Na poniższym diagramie przedstawiono element obrazu XAML, którego źródłem jest [Windows::UI::Xaml::Media::Imaging WriteableBitmap](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap). Aplikacja kliencka, która jest napisana w dowolnym `WriteableBitmap` języku można przekazać odwołanie do kodu C++, a następnie C++ można użyć odwołania, aby uzyskać w buforze źródłowym. W aplikacji platformy uniwersalnej systemu Windows, która jest napisana w języku C++, można użyć funkcji w poniższym przykładzie bezpośrednio w kodzie źródłowym bez pakowania go w składniku środowiska wykonawczego systemu Windows.
+Na poniższym diagramie przedstawiono element obrazu XAML, którego źródłem jest obiekt [Windows:: UI:: XAML:: Media:: Imaging WriteableBitmap](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap). Aplikacja kliencka, która jest zapisywana w dowolnym języku, może przekazać odwołanie do `WriteableBitmap` kodu języka c++, a następnie w języku c++ można użyć odwołania, aby uzyskać dostęp do źródłowego buforu. W aplikacji platforma uniwersalna systemu Windows, która jest zapisywana w języku C++, można użyć funkcji w poniższym przykładzie bezpośrednio w kodzie źródłowym bez pakowania go w składniku środowisko wykonawcze systemu Windows.
 
-![C&#43;&#43; kod, który uzyskuje bezpośredni dostęp do danych pikseli](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43;&#43; kod, który uzyskuje bezpośredni dostęp do danych pikseli")
+![Kod języka C&#43;&#43; , który uzyskuje dostęp do danych pikseli bezpośrednio](../cppcx/media/ibufferbyteaccessdiagram.png "Kod języka C&#43;&#43; , który uzyskuje dostęp do danych pikseli bezpośrednio")
 
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData
 
-Następująca metoda akceptuje [system Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) i zwraca nieprzetworzony wskaźnik do podstawowej tablicy bajtów. Aby wywołać funkcję, przekaż w [WriteableBitmap::PixelBuffer](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer) właściwości.
+Poniższa metoda akceptuje obiekt [Windows:: Storage:: Streams:: IBuffer](/uwp/api/windows.storage.streams.ibuffer) i zwraca surowy wskaźnik do bazowej tablicy bajtów. Aby wywołać funkcję, należy przekazać Właściwość [WriteableBitmap::P ixelbuffer](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer) .
 
 ```cpp
 #include <wrl.h>
@@ -51,15 +51,15 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
 
 ## <a name="complete-example"></a>Kompletny przykład
 
-Poniższe kroki pokazują, jak utworzyć aplikację uniwersalną `WriteableBitmap` platformy systemu Windows w języku C#, która przekazuje a do biblioteki DLL składnika środowiska wykonawczego systemu Windows W+. Kod C++ uzyskuje wskaźnik do buforu pikseli i wykonuje prostą modyfikację w miejscu obrazu. Alternatywnie można utworzyć aplikację kliencką w języku Visual Basic, JavaScript lub C++ zamiast języka C#. Jeśli używasz języka C++, nie potrzebujesz biblioteki DLL składnika; można po prostu dodać te metody bezpośrednio do MainPage klasy lub innej klasy, które można zdefiniować.
+W poniższych krokach pokazano, jak utworzyć aplikację w języku C# platforma uniwersalna systemu Windows, która przekazuje `WriteableBitmap` do biblioteki DLL składnika Środowisko wykonawcze systemu Windows języka C++. Kod C++ uzyskuje wskaźnik do buforu pikseli i wykonuje prostą modyfikację obrazu w miejscu. Alternatywnie możesz utworzyć aplikację kliencką w Visual Basic, JavaScript lub C++ zamiast języka C#. Jeśli używasz języka C++, nie potrzebujesz biblioteki DLL składnika. można po prostu dodać te metody bezpośrednio do klasy MainPage lub innej zdefiniowanej klasy.
 
 #### <a name="create-the-client"></a>Tworzenie klienta
 
-1. Użyj szablonu pustej aplikacji, aby utworzyć aplikację uniwersalną platformy systemu Windows w języku C#.
+1. Użyj szablonu projektu pustej aplikacji, aby utworzyć aplikację platforma uniwersalna systemu Windows w języku C#.
 
-1. W pliku MainPage.xaml
+1. W MainPage. XAML
 
-   - Użyj tego XAML, `Grid` aby zastąpić element:
+   - Użyj tego kodu XAML, aby zamienić `Grid` element:
 
         ```xml
         <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
@@ -70,9 +70,9 @@ Poniższe kroki pokazują, jak utworzyć aplikację uniwersalną `WriteableBitma
         </Grid>
         ```
 
-1. w MainPage.xaml.cs
+1. W MainPage.xaml.cs
 
-   1. Dodaj te deklaracje obszaru nazw:
+   1. Dodaj następujące deklaracje przestrzeni nazw:
 
         ```csharp
         using Windows.Storage;
@@ -82,13 +82,13 @@ Poniższe kroki pokazują, jak utworzyć aplikację uniwersalną `WriteableBitma
         using Windows.Storage.Pickers;
         ```
 
-   1. Dodaj `WriteableBitmap` zmienną elementu `MainPage` członkowskiego do `m_bm`klasy i nazwij ją .
+   1. Dodaj `WriteableBitmap` zmienną członkowską do `MainPage` klasy i nadaj jej nazwę `m_bm` .
 
         ```csharp
         private WriteableBitmap m_bm;
         ```
 
-   1. Użyj następującego kodu, `OnNavigatedTo` aby zastąpić skrót metody. Spowoduje to otwarcie selektora plików po uruchomieniu aplikacji. (Zwróć uwagę, że `async` słowo kluczowe jest dodawane do podpisu funkcji).
+   1. Użyj poniższego kodu, aby zastąpić `OnNavigatedTo` metodę zastępczą metody. Spowoduje to otwarcie selektora plików podczas uruchamiania aplikacji. (Należy zauważyć, że `async` słowo kluczowe jest dodawane do sygnatury funkcji).
 
         ```csharp
         async protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -116,7 +116,7 @@ Poniższe kroki pokazują, jak utworzyć aplikację uniwersalną `WriteableBitma
         }
         ```
 
-   1. Dodaj program obsługi zdarzeń dla kliknięcia przycisku. (Ponieważ `ImageManipCPP` odwołanie do obszaru nazw nie zostało jeszcze utworzone, może mieć faliste podkreślenie w oknie edytora).
+   1. Dodaj procedurę obsługi zdarzeń dla przycisku. (Ponieważ `ImageManipCPP` odwołanie do przestrzeni nazw nie zostało jeszcze utworzone, może mieć podkreślenie faliste w oknie edytora).
 
         ```csharp
         async private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -129,33 +129,33 @@ Poniższe kroki pokazują, jak utworzyć aplikację uniwersalną `WriteableBitma
 
 #### <a name="create-the-c-component"></a>Tworzenie składnika C++
 
-1. Dodaj nowy składnik środowiska wykonawczego systemu Windows języka C++ do istniejącego rozwiązania i nadaj jego `ImageManipCPP`nazwę . Dodaj odwołanie do niego w projekcie C#, klikając prawym przyciskiem myszy ten projekt w **Eksploratorze rozwiązań** i wybierając pozycję **Dodaj**, **Odwołanie**.
+1. Dodaj nowy składnik C++ środowisko wykonawcze systemu Windows do istniejącego rozwiązania i nadaj mu nazwę `ImageManipCPP` . Dodaj odwołanie do niego w projekcie C#, klikając prawym przyciskiem myszy projekt w **Eksplorator rozwiązań** i wybierając polecenie **Dodaj**, **odwołanie**.
 
-1. W klasie 1.h
+1. W Class1. h
 
-   1. Dodaj `typedef` to w drugiej linii, zaraz po `#pragma once`:
+   1. Dodaj ją **`typedef`** w drugim wierszu po `#pragma once` :
 
         ```cpp
         typedef uint8 byte;
         ```
 
-   1. Dodaj `WebHostHidden` atrybut tuż nad początkiem `Class1` deklaracji.
+   1. Dodaj `WebHostHidden` atrybut tuż powyżej początku `Class1` deklaracji.
 
         ```cpp
         [Windows::Foundation::Metadata::WebHostHidden]
         ```
 
-   1. Dodaj ten podpis `Class1`metody publicznej do:
+   1. Dodaj ten podpis metody publicznej do `Class1` :
 
         ```cpp
         Windows::Foundation::IAsyncAction^ Negativize(Windows::UI::Xaml::Media::Imaging::WriteableBitmap^ bm);
         ```
 
-   1. Dodaj podpis z `GetPointerToPixelData` metody, która jest wyświetlana we wcześniejszym fragmentie kodu. Upewnij się, że ta metoda jest prywatna.
+   1. Dodaj podpis z `GetPointerToPixelData` metody, która jest wyświetlana we wcześniejszym fragmencie kodu. Upewnij się, że ta metoda jest prywatna.
 
-1. W klasie1.cpp
+1. W Class1. cpp
 
-   1. Dodaj `#include` te dyrektywy i deklaracje obszaru nazw:
+   1. Dodaj te `#include` dyrektywy i deklaracje przestrzeni nazw:
 
         ```cpp
         #include <ppltasks.h>
@@ -170,7 +170,7 @@ Poniższe kroki pokazują, jak utworzyć aplikację uniwersalną `WriteableBitma
 
    1. Dodaj implementację `GetPointerToPixelData` z wcześniejszego fragmentu kodu.
 
-   1. Dodaj implementację `Negativize`programu . Ta metoda tworzy efekt, który przypomina film ujemny, cofając wartość każdej wartości RGB w pikselu. Robimy metodę asynchroniczne, ponieważ na większych obrazów może to zająć zauważalną ilość czasu, aby zakończyć.
+   1. Dodaj implementację programu `Negativize` . Ta metoda tworzy efekt, który przypomina folię ujemną przez odwrócenie wartości każdej wartości RGB w pikselu. Tworzymy metodę asynchroniczną, ponieważ w większych obrazach może upłynąć dużo czasu.
 
         ```cpp
         IAsyncAction^ Class1::Negativize(WriteableBitmap^ bm)
@@ -200,6 +200,6 @@ Poniższe kroki pokazują, jak utworzyć aplikację uniwersalną `WriteableBitma
         ```
 
       > [!NOTE]
-      > Ta metoda może działać szybciej, jeśli używasz AMP lub biblioteki wzorców równoległych do równoległości operacji.
+      > Ta metoda może działać szybciej, jeśli do zrównoleglanie operacji użyto biblioteki AMP lub równoległych wzorców.
 
-1. Upewnij się, że masz co najmniej jedno zdjęcie w folderze obrazów, a następnie naciśnij klawisz F5, aby skompilować i uruchomić program.
+1. Upewnij się, że masz co najmniej jeden obraz w folderze Obrazy, a następnie naciśnij klawisz F5, aby skompilować i uruchomić program.

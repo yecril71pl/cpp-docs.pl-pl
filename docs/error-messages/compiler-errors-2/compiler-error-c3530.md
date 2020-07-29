@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3530
 ms.assetid: 21be81ce-b699-4c74-81bc-80a0c34d2d5a
-ms.openlocfilehash: 3766eaa83457ba6cffaf8b1599983a065772911c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 023d7f0a5d509c4b301a9985da8ea7feb1f3d203
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74750146"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228833"
 ---
 # <a name="compiler-error-c3530"></a>Błąd kompilatora C3530
 
 nie można łączyć instrukcji "Auto" z jakimkolwiek innym specyfikatorem typu
 
-Specyfikator typu jest używany ze słowem kluczowym `auto`.
+Specyfikator typu jest używany ze **`auto`** słowem kluczowym.
 
 ### <a name="to-correct-this-error"></a>Aby poprawić ten błąd
 
-1. Nie używaj specyfikatora typu w deklaracji zmiennej, która używa słowa kluczowego `auto`.
+1. Nie używaj specyfikatora typu w deklaracji zmiennej, która używa **`auto`** słowa kluczowego.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład daje C3530, ponieważ zmienna `x` jest zadeklarowana zarówno ze słowem kluczowym `auto`, jak i typem `int`, i ponieważ przykład jest kompilowany z **/Zc:** Auto.
+Poniższy przykład daje C3530, ponieważ zmienna `x` jest zadeklarowana ze **`auto`** słowem kluczowym i typem **`int`** , a ponieważ przykład jest kompilowany z **/Zc:** Auto.
 
 ```cpp
 // C3530.cpp
@@ -39,4 +39,4 @@ int main()
 
 ## <a name="see-also"></a>Zobacz także
 
-[Auto, słowo kluczowe](../../cpp/auto-keyword.md)
+[Słowo kluczowe "Autouzupełnianie"](../../cpp/auto-keyword.md)

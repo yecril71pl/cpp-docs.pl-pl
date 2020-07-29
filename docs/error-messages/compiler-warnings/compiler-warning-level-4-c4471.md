@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-ms.openlocfilehash: 5d7ed7dc84c0ef61c7789deeb128b99977fa6028
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: b107b25714dd3333c3adcb8c83bf56775bf91823
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076938"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228755"
 ---
 # <a name="compiler-warning-level-4-c4471"></a>Ostrzeżenie kompilatora (poziom 4) C4471
 
 "*Wyliczenie*": Deklaracja do przodu wyliczenia nienależącego do zakresu musi mieć typ podstawowy (założono int)
 
-Nie znaleziono deklaracji do przodu wyliczenia nienależącego do zakresu bez specyfikatora dla typu źródłowego. Domyślnie Wizualizacja C++ zakłada, `int` jest typem podstawowym dla wyliczenia. Może to powodować problemy, jeśli inny typ jest używany w definicji wyliczenia, na przykład, jeśli określono inny jawny typ lub inny typ jest niejawnie ustawiany przez inicjatora. Możesz również mieć problemy z przenośnością; Inne kompilatory nie zakładają, `int` jest podstawowym typem wyliczenia.
+Nie znaleziono deklaracji do przodu wyliczenia nienależącego do zakresu bez specyfikatora dla typu źródłowego. Domyślnie Visual C++ zakłada się, **`int`** że jest typem podstawowym dla wyliczenia. Może to powodować problemy, jeśli inny typ jest używany w definicji wyliczenia, na przykład, jeśli określono inny jawny typ lub inny typ jest niejawnie ustawiany przez inicjatora. Możesz również mieć problemy z przenośnością; Inne kompilatory nie zakładają **`int`** , że jest podstawowym typem wyliczenia.
 
 To ostrzeżenie jest domyślnie wyłączone; Możesz użyć/Wall lub/w*N*4471, aby włączyć go w wierszu polecenia, lub użyć [ostrzeżenia](../../preprocessor/warning.md) #pragma w pliku źródłowym.
 

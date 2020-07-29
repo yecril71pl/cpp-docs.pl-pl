@@ -1,5 +1,5 @@
 ---
-title: ref class i ref struct (C++/CLI i C++/CX)
+title: ref class and ref struct (C++/CLI i C++/CX)
 ms.date: 05/30/2019
 ms.topic: reference
 f1_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 78cf7cf16c4ccf29f72038fd79c5d7a1689c05ac
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 42742d8fadad78702a665e5c53119f022bc00971
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172571"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228729"
 ---
-# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class i ref struct (C++/CLI i C++/CX)
+# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class and ref struct (C++/CLI i C++/CX)
 
 Rozszerzenia **klasy ref** lub **ref struct** deklarują klasę lub strukturę, której *okres istnienia obiektu* jest zarządzany automatycznie. Gdy obiekt nie jest już dostępny lub wykracza poza zakres, pamięć zostanie wydzielona.
 
@@ -41,7 +41,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 ### <a name="parameters"></a>Parametry
 
 *class_access*<br/>
-Obowiązkowe Dostępność klasy lub struktury poza zestawem. Możliwe wartości to **Public** i **Private** (wartość domyślna to**Private** ). Zagnieżdżone klasy lub struktury nie mogą mieć specyfikatora *class_access* .
+Obowiązkowe Dostępność klasy lub struktury poza zestawem. Możliwe wartości to **`public`** i **`private`** ( **`private`** jest to wartość domyślna). Zagnieżdżone klasy lub struktury nie mogą mieć specyfikatora *class_access* .
 
 *Nazwij*<br/>
 Nazwa klasy lub struktury.
@@ -50,7 +50,7 @@ Nazwa klasy lub struktury.
 Obowiązkowe [abstrakcyjne](abstract-cpp-component-extensions.md) i [zapieczętowane](sealed-cpp-component-extensions.md) są prawidłowymi modyfikatorami.
 
 *inherit_access*<br/>
-Obowiązkowe Dostępność *base_type*. Jedyna dozwolona dostępność jest **publiczna** (wartość domyślna to**Public** ).
+Obowiązkowe Dostępność *base_type*. Jedyna dozwolona dostępność to **`public`** (wartość **`public`** domyślna).
 
 *base_type*<br/>
 Obowiązkowe Typ podstawowy. Jednak typ wartości nie może działać jako typ podstawowy.
@@ -59,17 +59,17 @@ Aby uzyskać więcej informacji, zobacz opisy dotyczące języka dla tego parame
 
 ### <a name="remarks"></a>Uwagi
 
-Domyślną dostępnością elementu członkowskiego obiektu zadeklarowanego za pomocą klasy **ref** lub **klasy wartości** jest **Private**. I domyślna dostępność elementu członkowskiego obiektu zadeklarowanego za pomocą struktury **ref** lub **struktury wartości** jest **publiczna**.
+Domyślna dostępność elementu członkowskiego dla obiektu zadeklarowanego za pomocą klasy **ref** lub **klasy wartości** to **`private`** . A domyślną dostępnością elementu członkowskiego obiektu zadeklarowanego za pomocą **struktury ref** lub **struktury wartości** jest **`public`** .
 
-Gdy typ referencyjny dziedziczy z innego typu odwołania, funkcje wirtualne w klasie bazowej muszą jawnie zostać zastąpione (z [zastąpieniem](override-cpp-component-extensions.md)) lub ukryty (z [nowym miejscem w tabeli metod wirtualnych)](new-new-slot-in-vtable-cpp-component-extensions.md)). Funkcje klasy pochodnej muszą być również jawnie oznaczone jako **wirtualne**.
+Gdy typ referencyjny dziedziczy z innego typu odwołania, funkcje wirtualne w klasie bazowej muszą jawnie zostać zastąpione (z [zastąpieniem](override-cpp-component-extensions.md)) lub ukryty (z [nowym miejscem w tabeli metod wirtualnych)](new-new-slot-in-vtable-cpp-component-extensions.md)). Funkcje klasy pochodnej muszą być również jawnie oznaczone jako **`virtual`** .
 
-Aby wykryć w czasie kompilacji, niezależnie od tego, czy typ jest **klasą referencyjną** , czy **strukturą ref**, czy **klasą wartości** lub **strukturą wartości**, użyj `__is_ref_class (type)`, `__is_value_class (type)`lub `__is_simple_value_class (type)`. Aby uzyskać więcej informacji, zobacz [Obsługa kompilatora dla cech typu](compiler-support-for-type-traits-cpp-component-extensions.md).
+Aby wykryć w czasie kompilacji, niezależnie od tego, czy typ jest **klasą referencyjną** , czy **strukturą ref**, czy **klasą wartości** lub **strukturą wartości**, użyj `__is_ref_class (type)` , `__is_value_class (type)` , lub `__is_simple_value_class (type)` . Aby uzyskać więcej informacji, zobacz [Obsługa kompilatora dla cech typu](compiler-support-for-type-traits-cpp-component-extensions.md).
 
 Aby uzyskać więcej informacji na temat klas i struktur, zobacz
 
 - [Tworzenie wystąpień klas i struktur](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md)
 
-- [Semantyka stosu języka C++ dla typów odwołań](../dotnet/cpp-stack-semantics-for-reference-types.md)
+- [Semantyka stosu języka C++ dla typów referencyjnych](../dotnet/cpp-stack-semantics-for-reference-types.md)
 
 - [Klasy, struktury i związki](../cpp/classes-and-structs-cpp.md)
 
@@ -79,7 +79,7 @@ Aby uzyskać więcej informacji na temat klas i struktur, zobacz
 
 - [Konwersje zdefiniowane przez użytkownika (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md)
 
-- [Instrukcje: opakowywanie klasy natywnej do użycia w języku C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
+- [Instrukcje: Zawijanie klasy natywnej do użycia przez C #](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
 - [Klasy ogólne [C++/CLI]](generic-classes-cpp-cli.md)
 
@@ -96,17 +96,17 @@ Obowiązkowe Typ podstawowy. **Klasa ref** lub **ref struct** mogą dziedziczyć
 
 Gdy deklarujesz obiekt za pomocą słowa kluczowego **ref** lub **ref struct** , uzyskuje dostęp do obiektu za pomocą dojścia do obiektu; oznacza to, że wskaźnik licznika odwołania do obiektu. Gdy zadeklarowana zmienna wykracza poza zakres, kompilator automatycznie usuwa obiekt źródłowy. Gdy obiekt jest używany jako parametr w wywołaniu lub jest przechowywany w zmiennej, dojście do obiektu jest faktycznie przekazywanie lub przechowywane.
 
-Podczas deklarowania obiektu za pomocą **klasy wartości** lub słów kluczowych **struktury wartości** , okres istnienia obiektu zadeklarowanego obiektu nie jest nadzorowany. Obiekt jest podobny do żadnej innej klasy C++ standardowej lub struktury.
+Podczas deklarowania obiektu za pomocą **klasy wartości** lub słów kluczowych **struktury wartości** , okres istnienia obiektu zadeklarowanego obiektu nie jest nadzorowany. Obiekt jest podobny do żadnej innej standardowej klasy C++ lub struktury.
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: `/ZW`
+Opcja kompilatora:`/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
 ### <a name="remarks"></a>Uwagi
 
-W poniższej tabeli wymieniono różnice dotyczące składni pokazanej w sekcji **wszystkie środowiska uruchomieniowe** , które C++są specyficzne dla/CLI.
+W poniższej tabeli wymieniono różnice dotyczące składni pokazanej w sekcji **wszystkie środowiska uruchomieniowe** , które są specyficzne dla języka C++/CLI.
 
 ### <a name="parameters"></a>Parametry
 
@@ -119,8 +119,8 @@ Słowa kluczowe **klasy wartości** i **struktury wartości** instruują kompila
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: `/clr`
+Opcja kompilatora:`/clr`
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

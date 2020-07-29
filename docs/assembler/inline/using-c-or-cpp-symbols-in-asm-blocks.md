@@ -8,31 +8,31 @@ helpviewer_keywords:
 - __asm keyword [C++], C/C++ elements in
 - Visual C++, in __asm blocks
 ms.assetid: 0758ffdc-dfe9-41c8-a5e1-fd395bcac328
-ms.openlocfilehash: fd9f8b444d263818aca1b16260f70730d5350e7c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ecdd3b6b6916a5c9585678838d8e494a58e0508c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169113"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87191199"
 ---
 # <a name="using-c-or-c-symbols-in-__asm-blocks"></a>Użycie symboli C lub C++ w blokach __asm
 
 **Specyficzne dla firmy Microsoft**
 
-Blok `__asm` może odwoływać się do dowolnego języka C++ C lub symbolu w zakresie, w którym znajduje się blok. (C i C++ symbole są nazwami zmiennych, nazwami funkcji i etykietami, czyli nazwami, które nie są symbolicznymi ani elementami członkowskimi `enum`. Nie można wywołać C++ funkcji Członkowskich.)
+**`__asm`** Blok może odwoływać się do dowolnego symbolu C lub C++ w zakresie, w którym znajduje się blok. (Symbole C i C++ są nazwami zmiennych, nazwami funkcji i etykietami, czyli nazwami, które nie są symbolicznymi ani **`enum`** elementami członkowskimi). Nie można wywołać funkcji składowych języka C++.)
 
-Istnieją pewne ograniczenia dotyczące używania języka C i C++ symboli:
+Istnieją pewne ograniczenia dotyczące używania symboli C i C++:
 
-- Każda instrukcja języka asemblera może zawierać tylko jeden znak C C++ lub. Wiele symboli może występować w tej samej instrukcji zestawu tylko z wyrażeniami **długości**, **typu**i **rozmiaru** .
+- Każda instrukcja języka asemblera może zawierać tylko jeden symbol C lub C++. Wiele symboli może występować w tej samej instrukcji zestawu tylko z wyrażeniami **długości**, **typu**i **rozmiaru** .
 
-- Funkcje, do których odwołuje się blok `__asm`, muszą być zadeklarowane we wcześniejszej części tego programu. W przeciwnym razie kompilator nie może rozróżnić nazw funkcji i etykiet w bloku `__asm`.
+- Funkcje, do których odwołuje się **`__asm`** blok, muszą być zadeklarowane we wcześniejszej części tego programu. W przeciwnym razie kompilator nie może rozróżnić nazw funkcji i etykiet w **`__asm`** bloku.
 
-- Blok `__asm` nie może używać żadnych znaków C C++ ani symboli mających takie same pisownia jak słowa zastrzeżone MASM (bez względu na wielkość liter). Słowa zastrzeżone MASM zawierają nazwy instrukcji, takie jak **push** i Register Names, takie jak si.
+- **`__asm`** Blok nie może używać żadnych symboli C lub C++ o takich samych pisowniach jak słowa zastrzeżone MASM (niezależnie od wielkości liter). Słowa zastrzeżone MASM zawierają nazwy instrukcji, takie jak **push** i Register Names, takie jak si.
 
-- Tagi struktury i Unii nie są rozpoznawane w blokach `__asm`.
+- Tagi struktury i Unii nie są rozpoznawane w **`__asm`** blokach.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Korzystanie z C lub C++ w blokach __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>
+[Używanie C lub C++ w blokach __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>
