@@ -11,12 +11,12 @@ helpviewer_keywords:
 - '... ellipsis'
 - function calls, variable number of arguments
 ms.assetid: 8808fb26-4822-42f5-aba3-ac64b54e151b
-ms.openlocfilehash: 22a2a363379163073ca722511d0baa0690110310
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 9fee0c214b697126708ae36b4daee082ac0171e9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032112"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227936"
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>Wywołania z różną liczbą argumentów
 
@@ -24,7 +24,7 @@ Lista parametrów częściowych może zostać zakończona przez notację wielokr
 
 Aby wywołać funkcję o zmiennej liczbie argumentów, wystarczy określić dowolną liczbę argumentów w wywołaniu funkcji. Przykładem jest funkcja `printf` z biblioteki wykonawczej C. Wywołanie funkcji musi zawierać jeden argument dla każdej nazwy typu zadeklarowanej w liście parametrów lub liście typów argumentów.
 
-Wszystkie argumenty określone w wywołaniu funkcji są umieszczenie w stosie, chyba że określono konwencję wywoływania `__fastcall`. Liczba parametrów zadeklarowanych dla funkcji określa, ile argumentów pochodzi ze stosu i jest przypisanych do parametrów. Użytkownik jest odpowiedzialny za pobieranie dodatkowych argumentów ze stosu i określanie, ile argumentów jest obecne. Plik STDARG.H zawiera makra stylu ANSI do uzyskiwania dostępu do argumentów funkcji, które mają zmienną liczbę argumentów. Ponadto, makra stylu XENIX w VARARGS.H są nadal obsługiwane.
+Wszystkie argumenty określone w wywołaniu funkcji są umieszczane na stosie, o ile nie **`__fastcall`** określono konwencji wywoływania. Liczba parametrów zadeklarowanych dla funkcji określa, ile argumentów pochodzi ze stosu i jest przypisanych do parametrów. Użytkownik jest odpowiedzialny za pobieranie dodatkowych argumentów ze stosu i określanie, ile argumentów jest obecne. Plik STDARG.H zawiera makra stylu ANSI do uzyskiwania dostępu do argumentów funkcji, które mają zmienną liczbę argumentów. Ponadto, makra stylu XENIX w VARARGS.H są nadal obsługiwane.
 
 Ta przykładowa deklaracja dotyczy funkcji, która wywołuje zmienną liczbę argumentów:
 
@@ -32,6 +32,6 @@ Ta przykładowa deklaracja dotyczy funkcji, która wywołuje zmienną liczbę ar
 int average( int first, ...);
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wywołania funkcji](../c-language/function-calls.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-ms.openlocfilehash: 9c42ce5b23e6f755dafd57bdb5a5f79cf1adb4ec
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 76e8abdaa2e2d0d8ba14209b45982b6a7f63f2e4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857089"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227858"
 ---
 # <a name="function-prototypes"></a>Prototypy funkcji
 
@@ -50,7 +50,7 @@ Prototyp ma ten sam formularz, który jest definicją funkcji, z tą różnicą,
 
 Prototypy funkcji mają następujące ważne zastosowania:
 
-- Określają typ zwracany dla funkcji, które zwracają typy inne niż **int**. Chociaż funkcje, które zwracają wartości **int** , nie wymagają prototypów, zalecane są prototypy.
+- Określają typ zwracany dla funkcji, które zwracają typy inne niż **`int`** . Chociaż funkcje, które zwracają **`int`** wartości nie wymagają prototypów, zalecane są prototypy.
 
 - Bez kompletnych prototypów są wykonywane standardowe konwersje, ale nie są podejmowane próby sprawdzenia typu lub liczby argumentów z liczbą parametrów.
 
@@ -58,11 +58,11 @@ Prototypy funkcji mają następujące ważne zastosowania:
 
 - Lista parametrów służy do sprawdzania zgodności argumentów w wywołaniu funkcji z parametrami w definicji funkcji.
 
-Przekonwertowany typ każdego parametru określa interpretację argumentów wywoływanych przez funkcję na stosie. Niezgodność typów między argumentem a parametrem może spowodować, że argumenty na stosie będą interpretowane nieprawidłowo. Na przykład na komputerze 16-bitowym, jeśli wskaźnik 16-bitowy jest przenoszona jako argument, zadeklarowany jako parametr **Long** , pierwsze 32 bitów na stosie jest interpretowane jako **Long** Parameter. Ten błąd tworzy problemy nie tylko z **długim** parametrem, ale z dowolnymi parametrami, które je obserwują. Możesz wykryć błędy tego rodzaju, deklarując kompletne prototypy funkcji dla wszystkich funkcji.
+Przekonwertowany typ każdego parametru określa interpretację argumentów wywoływanych przez funkcję na stosie. Niezgodność typów między argumentem a parametrem może spowodować, że argumenty na stosie będą interpretowane nieprawidłowo. Na przykład na komputerze 16-bitowym, jeśli wskaźnik 16-bitowy jest przenoszona jako argument, zadeklarowany jako **`long`** parametr, pierwsze 32 bitów na stosie jest interpretowane jako **`long`** parametr. Ten błąd tworzy problemy nie tylko z **`long`** parametrem, ale z dowolnymi parametrami, które go obserwują. Możesz wykryć błędy tego rodzaju, deklarując kompletne prototypy funkcji dla wszystkich funkcji.
 
-Prototyp tworzy atrybuty funkcji tak, aby wywołania funkcji, która poprzedza jej definicję (lub wystąpią w innych plikach źródłowych), można sprawdzić pod kątem typu argumentu i niezgodności typów zwracanych. Na przykład, jeśli określisz **statyczny** specyfikator klasy magazynu w prototypie, należy również określić klasę magazynu **statycznego** w definicji funkcji.
+Prototyp tworzy atrybuty funkcji tak, aby wywołania funkcji, która poprzedza jej definicję (lub wystąpią w innych plikach źródłowych), można sprawdzić pod kątem typu argumentu i niezgodności typów zwracanych. Na przykład, jeśli określisz **`static`** specyfikator klasy magazynowania w prototypie, należy również określić **`static`** klasę magazynu w definicji funkcji.
 
-Kompletne deklaracje parametrów ( `int a` ) mogą być mieszane z abstrakcyjną Deklaratory ( `int` ) w tej samej deklaracji. Na przykład następująca deklaracja ma charakter prawny:
+Kompletne deklaracje parametrów ( `int a` ) mogą być mieszane z abstrakcyjną Deklaratory ( **`int`** ) w tej samej deklaracji. Na przykład następująca deklaracja ma charakter prawny:
 
 ```C
 int add( int a, int );
@@ -70,13 +70,13 @@ int add( int a, int );
 
 Prototyp może zawierać zarówno typ, jak i identyfikator dla, każde wyrażenie, które jest przesyłane jako argument. Jednak takie identyfikatory mają zakres tylko do końca deklaracji. Prototyp może również odzwierciedlać fakt, że liczba argumentów jest zmienna lub że żadne argumenty nie są przekazane. Bez takiej listy niezgodne elementy mogą nie być ujawnione, więc kompilator nie może generować komunikatów diagnostycznych dotyczących ich. Zobacz [argumenty](../c-language/arguments.md) , aby uzyskać więcej informacji na temat sprawdzania typu.
 
-Zakres prototypu w kompilatorze języka Microsoft C jest teraz zgodny ze standardem ANSI w przypadku kompilowania z użyciem opcji kompilatora **/za** . Oznacza to, że w przypadku deklarowania w prototypie tagu **struktury** lub **Unii** , znacznik jest wprowadzany w tym zakresie, a nie w zakresie globalnym. Na przykład podczas kompilowania z **/za** dla zgodności ANSI, nigdy nie można wywołać tej funkcji bez uzyskiwania błędu niezgodności typów:
+Zakres prototypu w kompilatorze języka Microsoft C jest teraz zgodny ze standardem ANSI w przypadku kompilowania z użyciem opcji kompilatora **/za** . Oznacza to, że Jeśli zadeklarujesz **`struct`** **`union`** tag lub w obrębie prototypu, tag jest wprowadzany w tym zakresie, a nie w zakresie globalnym. Na przykład podczas kompilowania z **/za** dla zgodności ANSI, nigdy nie można wywołać tej funkcji bez uzyskiwania błędu niezgodności typów:
 
 ```C
 void func1( struct S * );
 ```
 
-Aby poprawić kod, Zdefiniuj lub Zadeklaruj **strukturę** lub **Unię** w zakresie globalnym przed prototypem funkcji:
+Aby poprawić kod, Zdefiniuj lub Zadeklaruj **`struct`** lub **`union`** w zakresie globalnym przed prototypem funkcji:
 
 ```C
 struct S;

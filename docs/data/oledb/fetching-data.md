@@ -7,22 +7,22 @@ helpviewer_keywords:
 - fetching
 - OLE DB consumer templates [C++], fetching data
 ms.assetid: b07f747f-9855-4f27-a03d-b1d5b10fa284
-ms.openlocfilehash: 441f036d1677806e81bc419ec6a45e810e63a34f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 919eb059f5d3f29d491bf7a6598b0c77163bd783
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409062"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87184647"
 ---
 # <a name="fetching-data"></a>Pobieranie danych
 
-Po otwarciu źródła danych, sesji i rowset — obiekty można pobrać danych. W zależności od typu dostępu, którego używasz może być konieczne powiązanie kolumn.
+Po otwarciu źródła danych, sesji i obiektów zestawu wierszy można pobrać dane. W zależności od typu używanego akcesora może być konieczne powiązanie kolumn.
 
-## <a name="to-fetch-data"></a>Można pobrać danych
+## <a name="to-fetch-data"></a>Aby pobrać dane
 
-1. Otwórz zestaw wierszy przy użyciu odpowiedniego **Otwórz** polecenia.
+1. Otwórz zestaw wierszy przy użyciu odpowiedniego polecenia **Otwórz** .
 
-1. Jeśli używasz `CManualAccessor`, powiązanie kolumn danych wyjściowych, jeśli jeszcze tego nie zrobiłeś. Poniższy przykład pochodzi z [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer) próbki. Aby powiązać kolumny, należy wywołać `GetColumnInfo`, a następnie utwórz metody dostępu z powiązaniami, jak pokazano w poniższym przykładzie:
+1. Jeśli używasz programu `CManualAccessor` , powiąż kolumny wyjściowe, jeśli jeszcze nie zostało to zrobione. Poniższy przykład jest pobierany z przykładu [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer) . Aby powiązać kolumny, należy wywołać metodę `GetColumnInfo` , a następnie utworzyć metodę dostępu przy użyciu powiązań, jak pokazano w poniższym przykładzie:
 
     ```cpp
     // From the DBViewer Sample CDBTreeView::OnQueryEdit
@@ -39,7 +39,7 @@ Po otwarciu źródła danych, sesji i rowset — obiekty można pobrać danych. 
     rs.Bind();
     ```
 
-1. Zapis **podczas** pętli do pobierania danych. W pętli, wywołaj `MoveNext` aby poszerzyć kursor i przetestować wartość zwracaną względem S_OK, jak pokazano w poniższym przykładzie:
+1. Napisz **`while`** pętlę, aby pobrać dane. W pętli Zadzwoń `MoveNext` do następnego kursora i przetestuj wartość zwracaną względem S_OK, jak pokazano w następującym przykładzie:
 
     ```cpp
     while (rs.MoveNext() == S_OK)
@@ -49,9 +49,9 @@ Po otwarciu źródła danych, sesji i rowset — obiekty można pobrać danych. 
     }
     ```
 
-1. W ramach **podczas** pętli, możesz pobrać dane według typu dostępu.
+1. W ramach **`while`** pętli można pobrać dane zgodnie z typem metody dostępu.
 
-   - Jeśli używasz [CAccessor](../../data/oledb/caccessor-class.md) klasy, powinny mieć rekord użytkownika, który zawiera elementy członkowskie danych. Jak pokazano w poniższym przykładzie, aby uzyskać dostęp do danych przy użyciu tych składowych danych:
+   - W przypadku używania klasy [CAccessor](../../data/oledb/caccessor-class.md) należy mieć rekord użytkownika zawierający elementy członkowskie danych. Dostęp do danych można uzyskać przy użyciu tych elementów członkowskich danych, jak pokazano w następującym przykładzie:
 
         ```cpp
         while (rs.MoveNext() == S_OK)
@@ -63,7 +63,7 @@ Po otwarciu źródła danych, sesji i rowset — obiekty można pobrać danych. 
         }
         ```
 
-   - Jeśli używasz `CDynamicAccessor` lub `CDynamicParameterAccessor` klasy, możesz pobrać dane, używając dostępu do funkcji `GetValue` i `GetColumn`, jak pokazano w poniższym przykładzie. Jeśli chcesz określić typ danych jest używany, należy użyć `GetType`.
+   - Jeśli używasz `CDynamicAccessor` `CDynamicParameterAccessor` klasy or, możesz pobrać dane przy użyciu funkcji dostępu `GetValue` i `GetColumn` , jak pokazano w poniższym przykładzie. Jeśli chcesz określić typ używanych danych, użyj polecenia `GetType` .
 
         ```cpp
         while (rs.MoveNext() == S_OK)
@@ -78,7 +78,7 @@ Po otwarciu źródła danych, sesji i rowset — obiekty można pobrać danych. 
         }
         ```
 
-   - Jeśli używasz `CManualAccessor`, należy określić własne elementy członkowskie danych, powiązać je samodzielnie i uzyskiwać do nich dostęp bezpośrednio, jak pokazano w poniższym przykładzie:
+   - Jeśli używasz `CManualAccessor` , musisz określić własnych członków danych, powiązać je samodzielnie i uzyskać dostęp do nich bezpośrednio, jak pokazano w następującym przykładzie:
 
         ```cpp
         while (rs.MoveNext() == S_OK)

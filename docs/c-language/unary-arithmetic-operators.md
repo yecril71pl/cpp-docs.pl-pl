@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logical negation
 - '! operator, unary arithmetic operators'
 ms.assetid: 78c91415-d469-499e-9dfe-4435350fd333
-ms.openlocfilehash: f64bc5107cf0df55fd445d04d557e952702deaee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0acbd98e25c05fee6fb5217bf00d80287460dbeb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290667"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189925"
 ---
 # <a name="unary-arithmetic-operators"></a>Jednoargumentowe operatory arytmetyczne
 
@@ -29,7 +29,7 @@ Jednoargumentowy C plus, negacja arytmetyczna, uzupełnienie i operatory negacji
 |**+**|Jednoargumentowy operator plus poprzedzający wyrażenie w nawiasach wymusza grupowanie zamkniętych działań. Jest używany z wyrażeniami dotyczącymi więcej niż jednego operatora binarnego zespolonego lub przemiennego. Argument musi być typu arytmetycznego. Wynikiem jest wartość operandu. Operand wewnętrzny ulega promocji typu całkowitego. Typ wyniku jest typem promowanego operandu.|
 |**-**|Operator arytmetyczny negacji daje wartość negatywną (dopełnienie dwójki) swojego operandu. Argument musi być wartością typu całkowitego lub zmiennoprzecinkowego. Ten operator wykonuje zwykle konwersje arytmetyczne.|
 |`~`|Operator uzupełnienia bitowego (lub bitowego NOT) wytwarza bitowe uzupełnienie swojego operandu. Argument musi być typu całkowitego. Ten operator wykonuje zwykle konwersje arytmetyczne; wynik ma typ operandu po konwersji.|
-|**!**|Operator logiczny negacji (logicznego NOT) produkuje wartość 0, jeżeli jej operand ma wartość true (niezerową) i wartość 1, jeśli jej operand ma wartość false (0). Wynik ma typ `int`. Operand musi być wartością typu całkowitego, zmiennoprzecinkowego lub wartością wskaźnika.|
+|**!**|Operator logiczny negacji (logicznego NOT) produkuje wartość 0, jeżeli jej operand ma wartość true (niezerową) i wartość 1, jeśli jej operand ma wartość false (0). Wynik ma **`int`** Typ. Operand musi być wartością typu całkowitego, zmiennoprzecinkowego lub wartością wskaźnika.|
 
 Jednoargumentowe operatory arytmetyczne na wskaźniki są niedozwolone.
 
@@ -42,7 +42,7 @@ short x = 987;
     x = -x;
 ```
 
-W powyższym przykładzie nowa wartość `x` jest wartością ujemną równą 987 lub-987.
+W powyższym przykładzie nowa wartość jest wartością `x` ujemną równą 987 lub-987.
 
 ```
 unsigned short y = 0xAAAA;
@@ -57,6 +57,6 @@ if( !(x < y) )
 
 Jeśli `x` jest większy lub równy od `y`, wynikiem wyrażenia jest 1 (true). Jeśli `x` jest mniejszy od `y`, wynik jest równy 0 (false).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wyrażenia z operatorami jednoargumentowymi](../cpp/expressions-with-unary-operators.md)

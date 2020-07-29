@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extended storage-class attributes
 - storage class specifiers, C storage classes
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
-ms.openlocfilehash: c2e372ebe93b9240ac6f489e8b1aefc1fbbded80
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5e1fe80f3bc1f581c6ea05c54409b1e76eacfce7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857154"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190224"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Rozszerzone atrybuty klasy magazynu języka C
 
@@ -27,17 +27,17 @@ Składnia atrybutu rozszerzonego określająca informacje klasy magazynu używa 
 ## <a name="syntax"></a>Składnia
 
 *specyfikator klasy magazynu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *rozszerzony-decl-modyfikator-SEQ* **)**  / \* specyficzny dla firmy Microsoft\*/
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *rozszerzony-decl-modyfikator-SEQ* **)**  / \* Specyficzne dla firmy Microsoft\*/
 
-*Extended-decl-modyfikator-SEQ*:&nbsp; &nbsp; &nbsp; &nbsp; / \* specyficzny dla firmy Microsoft\*/<br/>
+*Extended-decl-modyfikator-SEQ*: &nbsp; &nbsp; &nbsp; &nbsp; / \* specyficzny dla firmy Microsoft\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*rozszerzony-decl-modyfikator*<sub>wyboru</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modyfikator-SEQ* *Extended-decl-modyfikator*
 
-*Extended-decl-modyfikator*:&nbsp; &nbsp; &nbsp; &nbsp; / \* specyficzny dla firmy Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**nici**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**okiem**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
+*Extended-decl-modyfikator*: &nbsp; &nbsp; &nbsp; &nbsp; / \* specyficzny dla firmy Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`thread`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`naked`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`dllimport`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`dllexport`**
 
 Biały znak oddziela Modyfikatory deklaracji. Należy zauważyć, że *rozszerzony-decl-modyfikator-SEQ* może być pusty; w takim przypadku __declspec nie ma żadnego wpływu.
 
@@ -45,6 +45,6 @@ Atrybuty klasy magazynu "threaded, dllimport" i "dllexport" są właściwością
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Deklaracje i typy](../c-language/declarations-and-types.md)

@@ -1,5 +1,5 @@
 ---
-title: '/Guard: ehcont (Włącz metadane kontynuacji EH)'
+title: /guard:ehcont (Włącz metadane kontynuacji EH)
 description: 'Przewodnik dotyczący opcji kompilatora Microsoft C++/Guard: ehcont.'
 ms.date: 06/03/2020
 f1_keywords:
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - /guard:ehcont
 - /guard:ehcont compiler option
-ms.openlocfilehash: e8775b331440e932efb16148ee15acf1c740cd6e
-ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
+ms.openlocfilehash: c1b960bf13a6a7b7ff67996c9fa5119075216dae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84425539"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190523"
 ---
-# <a name="guardehcont-enable-eh-continuation-metadata"></a>/Guard: ehcont (Włącz metadane kontynuacji EH)
+# <a name="guardehcont-enable-eh-continuation-metadata"></a>/guard:ehcont (Włącz metadane kontynuacji EH)
 
 Włącza generowanie metadanych kontynuacji EH (EHCONT) przez kompilator.
 
@@ -33,7 +33,7 @@ Ta **`/guard:ehcont`** opcja jest dostępna w programie Visual Studio 2019 w wer
 
 Gdy dostępne są stosy w tle, aby zapobiec atakom ROP, osoby atakujące przechodzą do korzystania z innych metod korzystania z programu. Jedną z technik, z których mogą korzystać, jest uszkodzenie wartości wskaźnika instrukcji wewnątrz struktury [kontekstu](/windows/win32/api/winnt/ns-winnt-context) . Ta struktura jest przenoszona do wywołań systemowych, które przekierowują wykonywanie wątku, takich jak `NtContinue` , [`RtlRestoreContext`](/windows/win32/api/winnt/nf-winnt-rtlrestorecontext) , i [`SetThreadContext`](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadcontext) . `CONTEXT`Struktura jest przechowywana w pamięci. Uszkodzenie wskaźnika instrukcji, który zawiera, może spowodować, że system wywołuje przekazanie wykonania do adresu kontrolowanego przez osobę atakującą. Obecnie program `NTContinue` można wywołać z dowolnym punktem kontynuacji. Dlatego ważne jest, aby zweryfikować wskaźnik instrukcji po włączeniu stosów w tle.
 
-`RtlRestoreContext`i `NtContinue` są używane w trakcie obsługi wyjątków strukturalnych (SEH), aby odwinięcie do ramki docelowej zawierającej `__except` blok. Wskaźnik instrukcji `__except` bloku nie powinien znajdować się na stosie w tle, ponieważ spowodowałoby to niepowodzenie walidacji wskaźnika instrukcji. **`/guard:ehcont`** Przełącznik kompilatora generuje "tabelę kontynuacji EH". Zawiera posortowaną listę RVA wszystkich prawidłowych elementów docelowych kontynuacji obsługi wyjątków w danych binarnych. `NtContinue`najpierw sprawdza stos cienia dla wskaźnika instrukcji podanej przez użytkownika, a jeśli tam nie znaleziono wskaźnika instrukcji, sprawdza tabelę kontynuacji EH z pliku binarnego zawierającego wskaźnik instrukcji. Jeśli zawiera plik binarny, który nie został skompilowany za pomocą tabeli, można kontynuować, aby zapewnić zgodność z starszymi plikami binarnymi `NtContinue` . Ważne jest odróżnienie od starszych plików binarnych, które nie mają danych EHCONT, oraz plików binarnych zawierających dane EHCONT, ale nie żadnych wpisów w tabeli. Dawniej Zezwalaj na wszystkie adresy wewnątrz pliku binarnego jako prawidłowe cele kontynuacji. Ta ostatnia nie zezwala na żadne adresy w pliku binarnym jako prawidłowy cel kontynuacji.
+`RtlRestoreContext`i `NtContinue` są używane w trakcie obsługi wyjątków strukturalnych (SEH), aby odwinięcie do ramki docelowej zawierającej **`__except`** blok. Wskaźnik instrukcji **`__except`** bloku nie powinien znajdować się na stosie w tle, ponieważ spowodowałoby to niepowodzenie walidacji wskaźnika instrukcji. **`/guard:ehcont`** Przełącznik kompilatora generuje "tabelę kontynuacji EH". Zawiera posortowaną listę RVA wszystkich prawidłowych elementów docelowych kontynuacji obsługi wyjątków w danych binarnych. `NtContinue`najpierw sprawdza stos cienia dla wskaźnika instrukcji podanej przez użytkownika, a jeśli tam nie znaleziono wskaźnika instrukcji, sprawdza tabelę kontynuacji EH z pliku binarnego zawierającego wskaźnik instrukcji. Jeśli zawiera plik binarny, który nie został skompilowany za pomocą tabeli, można kontynuować, aby zapewnić zgodność z starszymi plikami binarnymi `NtContinue` . Ważne jest odróżnienie od starszych plików binarnych, które nie mają danych EHCONT, oraz plików binarnych zawierających dane EHCONT, ale nie żadnych wpisów w tabeli. Dawniej Zezwalaj na wszystkie adresy wewnątrz pliku binarnego jako prawidłowe cele kontynuacji. Ta ostatnia nie zezwala na żadne adresy w pliku binarnym jako prawidłowy cel kontynuacji.
 
 **`/guard:ehcont`** Opcja musi być przeniesiona do kompilatora i konsolidatora, aby wygenerować RVA docelowy kontynuacji EH dla danych binarnych. Jeśli dane binarne są kompilowane przy użyciu jednego `cl` polecenia, kompilator przekazuje opcję do konsolidatora. Kompilator przekazuje również [**`/guard:cf`**](guard-enable-control-flow-guard.md) opcję do konsolidatora. Jeśli kompilujesz i łączesz oddzielnie, te opcje muszą być ustawione zarówno dla poleceń kompilatora, jak i konsolidatora.
 
@@ -87,7 +87,7 @@ e:\>link /dump /loadconfig CETTest.exe
 
 1. W kontrolce listy rozwijanej wybierz **tak (/Guard: ehcont)** , aby włączyć metadane kontynuacji EH lub **nie (/Guard: ehcont-)** , aby je wyłączyć.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [/Guard (Włącz ochronę przepływu sterowania)](guard-enable-control-flow-guard.md)\
 [Opcje kompilatora MSVC](compiler-options.md)\

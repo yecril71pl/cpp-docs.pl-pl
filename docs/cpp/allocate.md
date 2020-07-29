@@ -7,24 +7,22 @@ helpviewer_keywords:
 - __declspec keyword [C++], allocate
 - allocate __declspec keyword
 ms.assetid: 67828b31-de60-4c0e-b0a6-ef3aab22641d
-ms.openlocfilehash: 6d9429aa7c079f0f99a936019e5945092dc1f006
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0bf31423cd76c838cbeffa7458bbccb89592bf43
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181528"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227624"
 ---
 # <a name="allocate"></a>allocate
 
 **Specyficzne dla firmy Microsoft**
 
-Specyfikator deklaracji **alokacji** zawiera nazwę segmentu danych, do którego zostanie przydzielony element danych.
+**`allocate`** Specyfikator deklaracji nazywa segment danych, w którym zostanie przydzielony element danych.
 
 ## <a name="syntax"></a>Składnia
 
-```
-   __declspec(allocate("segname")) declarator
-```
+> **`__declspec(allocate("`***segname* **`))`** *deklarator*
 
 ## <a name="remarks"></a>Uwagi
 
@@ -38,7 +36,7 @@ Nazwa *segname* musi być zadeklarowana przy użyciu jednej z następujących pr
 
 - [init_seg](../preprocessor/init-seg.md)
 
-- [sekcja](../preprocessor/section.md)
+- [Paragraf](../preprocessor/section.md)
 
 ## <a name="example"></a>Przykład
 
@@ -53,7 +51,7 @@ int main() {
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[__declspec](../cpp/declspec.md)<br/>
+[`__declspec`](../cpp/declspec.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

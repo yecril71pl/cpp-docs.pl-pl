@@ -5,12 +5,12 @@ helpviewer_keywords:
 - converting floating point
 - floating-point conversion
 ms.assetid: 96804c8e-fa3b-4742-9006-0082ed9e57f2
-ms.openlocfilehash: c2f7c25015b36545f969796a1f85d355d715427a
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 72d0f95a6e48dcf0a5e8fea3757e85f9a03bf7e4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998717"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227897"
 ---
 # <a name="conversions-from-floating-point-types"></a>Konwersje z typów zmiennoprzecinkowych
 
@@ -20,19 +20,19 @@ Wartość zmiennoprzecinkowa konwertowana na typ całkowity jest najpierw obcina
 
 **Specyficzne dla firmy Microsoft**
 
-Kompilatory firmy Microsoft wykorzystują reprezentację binary32 IEEE-754 dla wartości **zmiennoprzecinkowych** i reprezentację binary64 dla **Long Double** i **Double**. Ponieważ **Long Double** i **Double** używają tej samej reprezentacji, mają one ten sam zakres i precyzję.
+Kompilatory firmy Microsoft używają reprezentacji binary32 IEEE-754 dla **`float`** wartości i reprezentacji binary64 dla **`long double`** i **`double`** . Ponieważ **`long double`** i **`double`** używają tej samej reprezentacji, mają one ten sam zakres i precyzję.
 
-Gdy kompilator konwertuje liczbę zmiennoprzecinkową **podwójną** lub **długą** na **zmiennoprzecinkową**, zaokrągla wynik zgodnie z kontrolkami środowisk zmiennoprzecinkowych, które domyślnie są "okrągłe do najbliższe, powiązania z parzystością". Jeśli wartość liczbowa jest zbyt duża lub zbyt niska, aby mogła być reprezentowana jako liczbowa wartość **zmiennoprzecinkowa** , wynik konwersji jest dodatnią lub ujemną nieskończoność zgodnie ze znakiem oryginalnej wartości i zostanie zgłoszony wyjątek przepełnienia, jeśli jest włączony.
+Gdy kompilator konwertuje **`double`** **`long double`** liczbę zmiennoprzecinkową na a **`float`** , zaokrągla wynik zgodnie z kontrolkami środowisk zmiennoprzecinkowych, które domyślnie są "zaokrąglone do najbliższe, powiązania z parzystością". Jeśli wartość liczbowa jest zbyt duża lub zbyt niska, aby mogła być reprezentowana jako wartość liczbowa **`float`** , wynik konwersji jest dodatnią lub ujemną nieskończoność zgodnie ze znakiem oryginalnej wartości i zostanie zgłoszony wyjątek przepełnienia, jeśli jest włączony.
 
-Podczas konwertowania na typy całkowite wynik konwersji do typu mniejszego niż **Long** jest wynikiem konwersji wartości na wartość **Long**, a następnie konwertowania na typ wyniku.
+Podczas konwertowania na typy całkowite, wynik konwersji na typ mniejszy niż **`long`** jest wynikiem konwersji wartości na **`long`** , a następnie przekonwertowania na typ wyniku.
 
-Dla konwersji na typy całkowite o rozmiarze co najmniej tak **długo**, konwersja wartości, która jest zbyt duża lub zbyt niska do reprezentowania w typie wynikowym, może zwracać jedną z następujących wartości:
+Dla konwersji na typy całkowite co najmniej tak duże jak **`long`** , konwersja wartości, która jest zbyt duża lub zbyt niska do reprezentowania w typie wynikowym, może zwracać jedną z następujących wartości:
 
 - Wynik może być *wartością wskaźnikową*, która jest reprezentacją z wartości od zera. W przypadku podpisanych typów jest to najniższa wartość reprezentacja (0x800... 0). W przypadku typów bez znaku jest to najwyższa reprezentacja wartości (0xFF... F).
 
 - Wyniki mogą być *nasycone*, gdzie wartości zbyt wysokie do reprezentowania są konwertowane na największą reprezentację wartości, a wartości zbyt niskie do reprezentowania są konwertowane na najniższą reprezentację wartości. Jedna z tych dwóch wartości jest również używana jako wartość wskaźnikowa.
 
-- W przypadku konwersji do **niepodpisanej** długiej lub **niepodpisanej długi**czas, wynikiem konwersji wartości poza zakresem może być wartość inna niż najwyższa lub najniższa wartość, którą można reprezentować. Określa, czy wynik jest wartością wskaźnikową, czy niezależną od opcji kompilatora i architektury docelowej. Przyszłe wydania kompilatora mogą zwrócić wartość nasyconej lub wskaźnikowej.
+- W przypadku konwersji na **`unsigned long`** lub **`unsigned long long`** , wynik konwersji wartości poza zakresem może być wartością inną niż najwyższa lub najniższa wartość, którą można reprezentować. Określa, czy wynik jest wartością wskaźnikową, czy niezależną od opcji kompilatora i architektury docelowej. Przyszłe wydania kompilatora mogą zwrócić wartość nasyconej lub wskaźnikowej.
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
@@ -40,34 +40,34 @@ W poniższej tabeli zestawiono konwersje z typów zmiennoprzecinkowych.
 
 ## <a name="table-of-conversions-from-floating-point-types"></a>Tabela konwersji z typów zmiennoprzecinkowych
 
-|Z|Do|Metoda|
+|Źródło|Działanie|Metoda|
 |----------|--------|------------|
-|**float**|**char**|Konwertuj na **Long**; Konwertuj wartość **Long** na **char**|
-|**float**|**short**|Konwertuj na **Long**; Konwertuj z **Long** na **Short**|
-|**float**|**int**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **int**, wynik jest niezdefiniowany.|
-|**float**|**długi**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **Long**, wynik jest niezdefiniowany.|
-|**float**|**long long**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **Long Long**, wynik jest niezdefiniowany.|
-|**float**|**unsigned char**|Konwertuj na **Long**; Konwertuj **Long** na **znak bez znaku**|
-|**float**|**unsigned short**|Konwertuj na **Long**; Konwertuj **Long** na **Short bez znaku**|
-|**float**|**bajt**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **unsigned**, wynik jest niezdefiniowany.|
-|**float**|**unsigned long**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży, aby można go było przedstawić jako **Long unsigned**, wynik jest niezdefiniowany.|
-|**float**|**bez znaku Long Long**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **unsigned long long**, wynik jest niezdefiniowany.|
-|**float**|**double**|Reprezentuje jako **Double**.|
-|**float**|**Long Double**|Reprezentuje jako **Long Double**.|
-|**double**|**char**|Konwertuj na **zmiennoprzecinkowe**; Konwertuj wartość **zmiennoprzecinkową** na wartość typu **char**|
-|**double**|**short**|Konwertuj na **zmiennoprzecinkowe**; Konwertuj **zmiennoprzecinkowe** na **krótkie**|
-|**double**|**int**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **int**, wynik jest niezdefiniowany.|
-|**double**|**długi**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **Long**, wynik jest niezdefiniowany.|
-|**double**|**unsigned char**|Konwertuj na **Long**; Konwertuj **Long** na **znak bez znaku**|
-|**double**|**unsigned short**|Konwertuj na **Long**; Konwertuj **Long** na **Short bez znaku**|
-|**double**|**bajt**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **unsigned**, wynik jest niezdefiniowany.|
-|**double**|**unsigned long**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży, aby można go było przedstawić jako **Long unsigned**, wynik jest niezdefiniowany.|
-|**double**|**bez znaku Long Long**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **unsigned long long**, wynik jest niezdefiniowany.|
-|**double**|**float**|Reprezentuje jako wartość **zmiennoprzecinkową**. Jeśli wartość **podwójnej precyzji** nie może być reprezentowana dokładnie jako **zmiennoprzecinkowa**, nastąpi utrata dokładności. Jeśli wartość jest zbyt duża, aby była reprezentowana jako **zmiennoprzecinkowa**, wynik jest niezdefiniowany.|
-|**double**|**Long Double**|Wartość **Long Double** jest traktowana jako **Double**.|
+|**`float`**|**`char`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`char`**|
+|**`float`**|**`short`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`short`**|
+|**`float`**|**`int`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`int`** , wynik jest niezdefiniowany.|
+|**`float`**|**`long`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`long`** , wynik jest niezdefiniowany.|
+|**`float`**|**`long long`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`long long`** , wynik jest niezdefiniowany.|
+|**`float`**|**`unsigned char`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`unsigned char`**|
+|**`float`**|**`unsigned short`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`unsigned short`**|
+|**`float`**|**`unsigned`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`unsigned`** , wynik jest niezdefiniowany.|
+|**`float`**|**`unsigned long`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`unsigned long`** , wynik jest niezdefiniowany.|
+|**`float`**|**`unsigned long long`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`unsigned long long`** , wynik jest niezdefiniowany.|
+|**`float`**|**`double`**|Reprezentuje jako **`double`** .|
+|**`float`**|**`long double`**|Reprezentuje jako **`long double`** .|
+|**`double`**|**`char`**|Konwertuj na **`float`** ; Konwertuj **`float`** na**`char`**|
+|**`double`**|**`short`**|Konwertuj na **`float`** ; Konwertuj **`float`** na**`short`**|
+|**`double`**|**`int`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`int`** , wynik jest niezdefiniowany.|
+|**`double`**|**`long`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`long`** , wynik jest niezdefiniowany.|
+|**`double`**|**`unsigned char`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`unsigned char`**|
+|**`double`**|**`unsigned short`**|Konwertuj na **`long`** ; Konwertuj **`long`** na**`unsigned short`**|
+|**`double`**|**`unsigned`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`unsigned`** , wynik jest niezdefiniowany.|
+|**`double`**|**`unsigned long`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`unsigned long`** , wynik jest niezdefiniowany.|
+|**`double`**|**`unsigned long long`**|Obetnij w punkcie dziesiętnym. Jeśli wynik jest zbyt duży do reprezentowania jako **`unsigned long long`** , wynik jest niezdefiniowany.|
+|**`double`**|**`float`**|Reprezentuje jako **`float`** . Jeśli **`double`** wartość nie może być reprezentowana dokładnie jako **`float`** , wystąpi spadek dokładności. Jeśli wartość jest zbyt duża, aby była reprezentowana jako **`float`** , wynik jest niezdefiniowany.|
+|**`double`**|**`long double`**|**`long double`** Wartość jest traktowana jako **`double`** .|
 
-Konwersje z **Long Double** są takie same jak konwersje z **Double**.
+Konwersje z **`long double`** metody są takie same jak konwersje z **`double`** .
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersje przypisań](../c-language/assignment-conversions.md)

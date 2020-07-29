@@ -7,12 +7,12 @@ helpviewer_keywords:
 - null statement
 - null values, expressions
 ms.assetid: 72576ce6-26d0-4379-be65-fee522088790
-ms.openlocfilehash: 4fdfa2283e40856ccaffd55daacb697b1344134b
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 58825544121c6cb189b52469403effb93f5f5f8c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343419"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227819"
 ---
 # <a name="null-statement-c"></a>Instrukcja o wartości Null (C)
 
@@ -24,7 +24,7 @@ ms.locfileid: "64343419"
 
 ## <a name="remarks"></a>Uwagi
 
-Instrukcje, takie **jak** **do**, **Jeśli**i `while` wymagają, aby instrukcja wykonywalna była wyświetlana jako treść instrukcji. Instrukcja o wartości null spełnia wymagania składniowe w przypadkach, w których nie jest wymagana treść instrukcji merytorycznej.
+Instrukcje, takie jak **`do`** ,, **`for`** **`if`** i **`while`** wymagają, aby instrukcja wykonywalna była wyświetlana jako treść instrukcji. Instrukcja o wartości null spełnia wymagania składniowe w przypadkach, w których nie jest wymagana treść instrukcji merytorycznej.
 
 Podobnie jak w przypadku każdej innej instrukcji języka C, można dołączyć etykietę przed instrukcją o wartości null. Aby oznaczyć element, który nie jest instrukcją, taką jak zamykający nawias klamrowy instrukcji złożonej, można dodać etykietę do instrukcji null i wstawić ją bezpośrednio przed elementem, aby uzyskać ten sam efekt.
 
@@ -35,8 +35,8 @@ for ( i = 0; i < 10; line[i++] = 0 )
      ;
 ```
 
-W tym przykładzie wyrażenie Loop instrukcji `line[i++] = 0` `line` **for** inicjuje pierwsze 10 elementów z wartości 0. Treść instrukcji jest instrukcją o wartości null, ponieważ dalsze instrukcje nie są wymagane.
+W tym przykładzie wyrażenie pętli **`for`** instrukcji `line[i++] = 0` inicjuje pierwsze 10 elementów od `line` do 0. Treść instrukcji jest instrukcją o wartości null, ponieważ dalsze instrukcje nie są wymagane.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Instrukcje](../c-language/statements-c.md)
