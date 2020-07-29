@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4740
 ms.assetid: 85528969-966a-44b4-8a2f-971704c64477
-ms.openlocfilehash: 679f577eb7911b401473ee570e367ed5a8a094eb
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 0aa4cb9df3f6f9d7499c67fb0b07bee5dabd6d73
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74989486"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219836"
 ---
 # <a name="compiler-warning-level-4-c4740"></a>Ostrzeżenie kompilatora (poziom 4) C4740
 
 przepływ wewnątrz lub z wbudowanego kodu ASM pomija optymalizację globalną
 
-W przypadku przejścia do lub z bloku `asm` globalne optymalizacje są wyłączone dla tej funkcji.
+W przypadku przejścia do lub z **`asm`** bloku, optymalizacje globalne są wyłączone dla tej funkcji.
 
 Poniższy przykład generuje C4740:
 

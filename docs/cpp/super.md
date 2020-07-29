@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: b6f6a7e108224ab4c97893104c5d6c38d325fa42
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3afc2e8049cfcca40db389bed84baa6f42dae126
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160830"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213154"
 ---
-# <a name="__super"></a>__super
+# `__super`
 
 **Specyficzne dla firmy Microsoft**
 
@@ -29,9 +29,9 @@ __super::member_function();
 
 Wszystkie dostępne metody klasy podstawowej są brane pod uwagę podczas fazy rozpoznawania przeciążenia, a funkcja, która zapewnia najlepszą zgodność, jest wywoływana.
 
-**__super** może występować tylko w treści funkcji składowej.
+**`__super`** może wystąpić tylko w treści funkcji składowej.
 
-nie można użyć **__super** z deklaracją using. Aby uzyskać więcej informacji, zobacz [Używanie deklaracji](../cpp/using-declaration.md) .
+**`__super`** nie można używać z deklaracją using. Aby uzyskać więcej informacji, zobacz [Używanie deklaracji](../cpp/using-declaration.md) .
 
 Wprowadzając [atrybuty](../windows/attributes/attributes-alphabetical-reference.md) , które wprowadzają kod, kod może zawierać co najmniej jedną klasę bazową, której nazwy mogą nie być znane, ale zawierają metody, które chcesz wywołać.
 
@@ -60,6 +60,6 @@ struct D : B1, B2 {
 
 **ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)

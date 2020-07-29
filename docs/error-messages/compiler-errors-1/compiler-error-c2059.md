@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-ms.openlocfilehash: f91eb428fcb49c81187788730128545916955790
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 52b389806f5bacac78750bc745cd77699eb59735
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127663"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212881"
 ---
 # <a name="compiler-error-c2059"></a>Błąd kompilatora C2059
 
@@ -19,7 +19,7 @@ Błąd składniowy: "token"
 
 Token spowodował błąd składniowy.
 
-Poniższy przykład generuje komunikat o błędzie dla wiersza, który deklaruje `j`.
+Poniższy przykład generuje komunikat o błędzie dla wiersza, który deklaruje `j` .
 
 ```cpp
 // C2059e.cpp
@@ -31,7 +31,7 @@ Poniższy przykład generuje komunikat o błędzie dla wiersza, który deklaruje
 
 Aby określić przyczynę błędu, sprawdź nie tylko wiersz, który znajduje się w komunikacie o błędzie, ale również wiersze znajdujące się powyżej. Jeśli badanie wierszy nie daje wskazówki o problemie, spróbuj dodać komentarz do wiersza, który jest wymieniony w komunikacie o błędzie i być może kilka wierszy powyżej.
 
-Jeśli komunikat o błędzie występuje w symbolu, który bezpośrednio następuje po zmiennej `typedef`, upewnij się, że zmienna jest zdefiniowana w kodzie źródłowym.
+Jeśli komunikat o błędzie występuje w symbolu, który bezpośrednio następuje po **`typedef`** zmiennej, upewnij się, że zmienna jest zdefiniowana w kodzie źródłowym.
 
 C2059 jest wywoływane, gdy nazwa symbolu preprocesora jest ponownie używana jako identyfikator. W poniższym przykładzie kompilator widzi `DIGITS.ONE` jako liczbę 1, która nie jest prawidłowa jako nazwa elementu wyliczenia:
 
@@ -111,7 +111,7 @@ namespace A  {
 }
 ```
 
-C2059 może wystąpić, gdy operator, który może kwalifikować się do nazwy (`::`, `->`i `.`), musi następować słowo kluczowe `template`, jak pokazano w tym przykładzie:
+C2059 może wystąpić, gdy operator, który może kwalifikować nazwę ( `::` , `->` i `.` ) musi następować słowo kluczowe **`template`** , jak pokazano w tym przykładzie:
 
 ```cpp
 template <typename T> struct Allocator {
@@ -125,7 +125,7 @@ template <typename X, typename AY> struct Container {
 };
 ```
 
-Domyślnie zakłada się C++ , że `AY::Rebind` nie jest szablonem. w związku z tym następujące `<` są interpretowane jako znak mniejszości.  Musisz powiadomić kompilator jawnie, że `Rebind` jest szablonem, aby mógł prawidłowo przeanalizować nawias ostry. Aby naprawić ten błąd, użyj słowa kluczowego `template` dla nazwy typu zależnego, jak pokazano poniżej:
+Domyślnie C++ zakłada, że `AY::Rebind` nie jest to szablon; w związku z tym następujące `<` jest interpretowane jako znak mniejszości.  Musisz poinformować kompilator jawnie, że `Rebind` jest szablonem, aby mógł prawidłowo przeanalizować nawias ostry. Aby naprawić ten błąd, użyj **`template`** słowa kluczowego dla nazwy typu zależnego, jak pokazano poniżej:
 
 ```cpp
 template <typename T> struct Allocator {

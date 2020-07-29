@@ -9,16 +9,16 @@ helpviewer_keywords:
 - volatile objects
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
-ms.openlocfilehash: 841b2e1e4ffbec87a170c45be8ad0cd0f831a0ef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bbdd7d03d820b9fc0d541dbb31d55b641226f14e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371899"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213102"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 
-Kwalifikator typu, którego można użyć do zadeklarowania, że obiekt może być modyfikowany w programie przez sprzęt.
+Kwalifikator typu, którego można użyć do zadeklarowania, że obiekt może zostać zmodyfikowany w programie przez sprzęt.
 
 ## <a name="syntax"></a>Składnia
 
@@ -28,49 +28,49 @@ volatile declarator ;
 
 ## <a name="remarks"></a>Uwagi
 
-Przełącznik [/volatile](../build/reference/volatile-volatile-keyword-interpretation.md) kompilatora można użyć, aby zmodyfikować sposób, w jaki kompilator interpretuje to słowo kluczowe.
+Aby zmodyfikować sposób interpretacji tego słowa kluczowego przez kompilator, można użyć przełącznika kompilatora [/volatile](../build/reference/volatile-volatile-keyword-interpretation.md) .
 
-Visual Studio interpretuje słowo kluczowe **volatile** inaczej w zależności od architektury docelowej. Dla ARM, jeśli nie **/volatile** kompilator opcja jest określona, kompilator wykonuje tak, jakby **/volatile:iso** zostały określone. Dla architektur innych niż ARM, jeśli nie **/volatile** kompilator opcja jest określona, kompilator wykonuje tak, jakby **/volatile:ms** zostały określone; w związku z tym dla architektur innych niż ARM zdecydowanie zaleca się określenie **/volatile:iso**i używać jawnych ujednuchwień synchronizacji i wewnętrznego kompilatora, gdy masz do czynienia z pamięcią współużytkowaną przez wątki.
+Program Visual Studio interpretuje **`volatile`** słowo kluczowe inaczej w zależności od architektury docelowej. W przypadku ARM, jeśli nie określono opcji kompilatora **/volatile** , kompilator wykonuje tak, jakby określono **/volatile: ISO** . W przypadku architektur innych niż ARM, jeśli nie określono opcji kompilatora **/volatile** , kompilator wykonuje tak, jakby **/volatile: MS** zostały określone; w związku z tym, w przypadku architektur innych niż ARM zdecydowanie zaleca się określenie **/volatile: ISO**i użycie jawnych elementów pierwotnych synchronizacji i wewnętrznych kompilatorów podczas pracy z pamięcią udostępnioną przez wątki.
 
-Można użyć **kwalifikator volatile,** aby zapewnić dostęp do lokalizacji pamięci, które są używane przez procesy asynchroniczne, takie jak programy obsługi przerwań.
+Kwalifikator może służyć **`volatile`** do zapewnienia dostępu do lokalizacji pamięci, które są używane przez procesy asynchroniczne, takie jak programy obsługi przerwań.
 
-Gdy **volatile** jest używany na zmiennej, która ma również [__restrict](../cpp/extension-restrict.md) słowa kluczowego, **volatile** ma pierwszeństwo.
+Gdy **`volatile`** jest używany w zmiennej, która ma także słowo kluczowe [__restrict](../cpp/extension-restrict.md) , **`volatile`** ma pierwszeństwo.
 
-Jeśli **element członkowski struktury** jest oznaczony jako **lotny,** wówczas **volatile** jest propagowany do całej struktury. Jeśli struktura nie ma długości, która może być skopiowana na bieżącej architekturze przy użyciu jednej instrukcji, **volatile** mogą zostać całkowicie utracone na tej strukturze.
+Jeśli **`struct`** element członkowski jest oznaczony jako **`volatile`** , **`volatile`** jest propagowany do całej struktury. Jeśli struktura nie ma długości, która może zostać skopiowana do bieżącej architektury przy użyciu jednej instrukcji, **`volatile`** może zostać całkowicie utracona w tej strukturze.
 
-Słowo kluczowe **volatile** może nie mieć wpływu na pole, jeśli spełniony jest jeden z następujących warunków:
+**`volatile`** Słowo kluczowe może nie mieć wpływu na pole, jeśli spełniony jest jeden z następujących warunków:
 
-- Długość pola nietrwałego przekracza maksymalny rozmiar, który można skopiować na bieżącej architekturze przy użyciu jednej instrukcji.
+- Długość pola nietrwałego przekracza maksymalny rozmiar, który można skopiować do bieżącej architektury przy użyciu jednej instrukcji.
 
-- Długość najbardziej zewnętrznej **struktury**zawierającej — lub jeśli jest to element członkowski ewentualnie zagnieżdżonej **struktury**— przekracza maksymalny rozmiar, który można skopiować na bieżącej architekturze przy użyciu jednej instrukcji.
+- Długość najbardziej zewnętrznego **`struct`** lub, jeśli jest to element członkowski prawdopodobnie zagnieżdżonej **`struct`** — przekracza maksymalny rozmiar, który można skopiować do bieżącej architektury przy użyciu jednej instrukcji.
 
-Mimo że procesor nie zmienia kolejności dostępu do pamięci nieskrywowanej, zmienne nieskładkalne muszą być oznaczone jako **zmienne,** aby zagwarantować, że kompilator nie zamieści ponownie kolejności dostępu do pamięci.
+Mimo że procesor nie porządkuje dostępu do pamięci z pamięcią podręczną, zmienne, które nie są buforowane, muszą być oznaczone jako, **`volatile`** Aby zagwarantować, że kompilator nie zmienia kolejności dostępu do pamięci.
 
-Obiekty, które są zadeklarowane jako **nietrwałe** nie są używane w niektórych optymalizacji, ponieważ ich wartości można zmienić w dowolnym momencie.  System zawsze odczytuje bieżącą wartość obiektu lotnego, gdy jest wymagany, nawet jeśli poprzednia instrukcja poprosiła o wartość z tego samego obiektu.  Ponadto wartość obiektu jest zapisywana natychmiast przy przypisywaniu.
+Obiekty, które są zadeklarowane jako **`volatile`** nie są używane w niektórych optymalizacjach, ponieważ ich wartości mogą się zmieniać w dowolnym momencie.  System zawsze odczytuje bieżącą wartość obiektu nietrwałego, gdy jest żądany, nawet jeśli poprzednia instrukcja zażądała wartości z tego samego obiektu.  Ponadto wartość obiektu jest zapisywana natychmiast po przypisaniu.
 
-## <a name="iso-compliant"></a>Zgodność z normą ISO
+## <a name="iso-compliant"></a>Zgodne ISO
 
-Jeśli znasz słowo kluczowe volatile języka C# lub znasz zachowanie **volatile** we wcześniejszych wersjach kompilatora Microsoft C++(MSVC), należy pamiętać, że C ++ 11 ISO Standard **volatile** — słowo kluczowe jest inny i jest obsługiwany w msvc, gdy określono opcję [kompilatora /volatile:iso.](../build/reference/volatile-volatile-keyword-interpretation.md) (W przypadku arm jest on domyślnie określony). Słowo kluczowe **volatile** w kodzie standardu ISO języka C++11 ma być używane tylko w celu uzyskania dostępu do sprzętu; nie używać go do komunikacji między wątkami. W przypadku komunikacji między wątkami należy użyć mechanizmów takich jak [\<std::atomic T>](../standard-library/atomic.md) z [biblioteki standardowej języka C++.](../standard-library/cpp-standard-library-reference.md)
+Jeśli znasz słowo kluczowe nietrwałe języka C# lub znasz zachowanie **`volatile`** we wcześniejszych wersjach kompilatora języka Microsoft C++ (MSVC), pamiętaj, że słowo kluczowe standardowego języka c++ 11 ISO **`volatile`** jest inne i jest obsługiwane w MSVC, jeśli określono opcję kompilatora [/volatile: ISO](../build/reference/volatile-volatile-keyword-interpretation.md) . (W przypadku usługi ARM jest ona domyślnie określona). **`volatile`** Słowo kluczowe w standardowym kodzie ISO języka c++ 11 ma być używane tylko na potrzeby dostępu do sprzętu; nie należy używać go do komunikacji między wątkami. W przypadku komunikacji między wątkami należy używać mechanizmów takich jak [std:: \<T> ](../standard-library/atomic.md) informal z [standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md).
 
-## <a name="end-of-iso-compliant"></a>Koniec zgodności z normą ISO
+## <a name="end-of-iso-compliant"></a>Koniec zgodności z ISO
 
 **Specyficzne dla firmy Microsoft**
 
-Gdy używana jest opcja **kompilatora /volatile:ms** — domyślnie, gdy są ukierunkowane architektury inne niż ARM — kompilator generuje dodatkowy kod do obsługi kolejności między odwołaniami do obiektów nietrwałych oprócz utrzymywania kolejności odwołań do innych obiektów globalnych. W szczególności:
+Gdy używana jest opcja " **/volatile: MS** Compiler" — domyślnie, gdy architektury inne niż ARM są celem — kompilator generuje dodatkowy kod, aby zachować porządkowanie między odwołaniami do obiektów nietrwałych, a także do zarządzania kolejnością odwołań do innych obiektów globalnych. W szczególności:
 
-- Zapis do obiektu lotnego (znanego również jako zapis lotny) ma semantykę wydania; oznacza to, że odwołanie do obiektu globalnego lub statycznego, który występuje przed zapis do obiektu lotnego w sekwencji instrukcji nastąpi przed tym volatile zapisu w skompilowanym pliku binarnym.
+- Zapis do obiektu nietrwałego (znanego również jako zapis nietrwały) ma semantykę wersji; oznacza to, że odwołanie do obiektu globalnego lub statycznego, który występuje przed zapisem do obiektu nietrwałego w sekwencji instrukcji, zostanie wykonane przed nietrwałym zapisem w skompilowanym pliku binarnym.
 
-- Odczyt obiektu lotnego (znanego również jako odczyt lotny) ma semantykę Acquire; oznacza to, że odwołanie do obiektu globalnego lub statycznego, który występuje po odczytie pamięci nietrwałej w sekwencji instrukcji wystąpi po tym volatile odczytu w skompilowanym pliku binarnym.
+- Odczyt obiektu nietrwałego (znanego również jako nietrwały odczyt) uzyskuje semantykę; oznacza to, że odwołanie do obiektu globalnego lub statycznego, który występuje po odczytaniu pamięci lotnej w sekwencji instrukcji, nastąpi po tej nietrwałej odczytaniu w skompilowanym pliku binarnym.
 
-Dzięki temu nietrwałe obiekty mają być używane do blokad pamięci i zwalnia w aplikacjach wielowątkowych.
+Pozwala to na używanie obiektów lotnych do blokowania pamięci i wydań w aplikacjach wielowątkowych.
 
 > [!NOTE]
-> Gdy opiera się na rozszerzonej gwarancji, która jest podana, gdy **/volatile:ms** opcja kompilatora jest używany, kod jest nieprzenośny.
+> Gdy jest to oparte na rozszerzonej gwarancji, która jest dostarczana, gdy opcja kompilatora **/volatile: MS** jest używana, kod nie jest przenośny.
 
-**ZAKOŃCZ Specyficzne dla firmy Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
 [const](../cpp/const-cpp.md)<br/>
-[Wskaźniki stałe i nietrwałe](../cpp/const-and-volatile-pointers.md)
+[Wskaźniki const i volatile](../cpp/const-and-volatile-pointers.md)

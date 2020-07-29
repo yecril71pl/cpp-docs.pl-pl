@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2638
 ms.assetid: 9d4275e8-406d-455e-afee-3a37799230e0
-ms.openlocfilehash: 6053e9bcf49159e8ceefe9264d30319493c4cf1b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 863537c60584ba836c6605f31249ada95a88a1bf
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74748349"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212699"
 ---
 # <a name="compiler-error-c2638"></a>Błąd kompilatora C2638
 
 "Identyfikator": modyfikator __based niedozwolony dla wskaźnika do składowej
 
-Modyfikator `__based` nie może być używany dla wskaźników do elementów członkowskich.
+**`__based`** Modyfikator nie może być używany dla wskaźników do elementów członkowskich.
 
 Poniższy przykład generuje C2638:
 

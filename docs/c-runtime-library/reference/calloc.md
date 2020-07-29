@@ -28,12 +28,12 @@ helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: 76243342233ea895b947d4aa4a246b316aa8f405
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 067ce6f347f4b24ad8c85990e70fe4d79305535c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918722"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213635"
 ---
 # <a name="calloc"></a>calloc
 
@@ -50,15 +50,15 @@ void *calloc(
 
 ### <a name="parameters"></a>Parametry
 
-*Liczba*<br/>
+*liczba*<br/>
 Liczba elementów.
 
-*size*<br/>
+*zmienia*<br/>
 Długość w bajtach każdego elementu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**calloc** zwraca wskaźnik do przydzielonych miejsc. Miejsce do magazynowania wskazywane przez wartość zwracaną jest gwarantowane odpowiednio wyrównane do przechowywania dowolnego typu obiektu. Aby uzyskać wskaźnik do typu innego niż **void**, należy użyć rzutowania typu dla zwracanej wartości.
+**calloc** zwraca wskaźnik do przydzielonych miejsc. Miejsce do magazynowania wskazywane przez wartość zwracaną jest gwarantowane odpowiednio wyrównane do przechowywania dowolnego typu obiektu. Aby uzyskać wskaźnik do typu innego niż **`void`** , należy użyć rzutowania typu dla zwracanej wartości.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -68,7 +68,7 @@ Funkcja **calloc** przydziela miejsce do magazynowania dla tablicy elementów *l
 
 W implementacji firmy Microsoft, jeśli *Liczba* lub *rozmiar* wynosi zero, **calloc** zwraca wskaźnik do przydzielony blok o rozmiarze innym niż zero. Próba odczytu lub zapisu przez zwrócony wskaźnik prowadzi do niezdefiniowanego zachowania.
 
-**calloc** używa funkcji C++ [_set_new_mode](set-new-mode.md) , aby ustawić *Nowy tryb obsługi*. Nowy tryb obsługi wskazuje, czy w przypadku niepowodzenia **calloc** ma wywołać nową procedurę obsługi jako ustawioną przez [_set_new_handler](set-new-handler.md). Domyślnie **calloc** nie wywołuje nowej procedury obsługi w przypadku niepowodzenia przydzielenia pamięci. To zachowanie domyślne można przesłonić, aby w przypadku niepowodzenia przydzielenia pamięci przez **calloc** program wywołuje nową procedurę obsługi w taki sam sposób, w jaki operator **New** wykonuje, gdy nie powiedzie się z tego samego powodu. Aby zastąpić wartość domyślną, Połącz
+**calloc** używa funkcji C++ [_set_new_mode](set-new-mode.md) , aby ustawić *Nowy tryb obsługi*. Nowy tryb obsługi wskazuje, czy w przypadku niepowodzenia **calloc** ma wywołać nową procedurę obsługi jako ustawioną przez [_set_new_handler](set-new-handler.md). Domyślnie **calloc** nie wywołuje nowej procedury obsługi w przypadku niepowodzenia przydzielenia pamięci. Można zastąpić to zachowanie domyślne, tak aby w przypadku niepowodzenia przydzielenia pamięci przez program **calloc** w taki sam sposób wywołuje nową procedurę obsługi w taki sam sposób, jak w przypadku **`new`** niepowodzenia z tego samego powodu. Aby zastąpić wartość domyślną, Połącz
 
 ```C
 _set_new_mode(1);
@@ -78,7 +78,7 @@ Wczesne w programie lub łącz z *NEWMODE. OBJ* (zobacz [Opcje linku](../../c-ru
 
 Gdy aplikacja jest połączona z wersją debugową bibliotek uruchomieniowych C, **calloc** jest rozpoznawana jako [_calloc_dbg](calloc-dbg.md). Aby uzyskać więcej informacji na temat sposobu zarządzania sterty podczas procesu debugowania, zobacz [sterta debugowania CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**calloc** jest oznaczona `__declspec(noalias)` i `__declspec(restrict)`, co oznacza, że funkcja nie modyfikuje zmiennych globalnych i że wskaźnik nie ma aliasu. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczaj](../../cpp/restrict.md).
+**calloc** jest oznaczona `__declspec(noalias)` i `__declspec(restrict)` , co oznacza, że funkcja nie modyfikuje zmiennych globalnych i że wskaźnik nie ma aliasu. Aby uzyskać więcej informacji, zobacz [noalias](../../cpp/noalias.md) i [ograniczaj](../../cpp/restrict.md).
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -86,7 +86,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**calloc**|\<STDLIB. h> i \<malloc. h>|
+|**calloc**|\<stdlib.h> i \<malloc.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -117,7 +117,7 @@ int main( void )
 Allocated 40 long integers
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Alokacja pamięci](../../c-runtime-library/memory-allocation.md)<br/>
 [zwolniony](free.md)<br/>

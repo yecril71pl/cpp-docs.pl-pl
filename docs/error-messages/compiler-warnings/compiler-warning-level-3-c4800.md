@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4800
 ms.assetid: 4f409799-a250-45ed-bb5f-657691b0d9f7
-ms.openlocfilehash: 828b38aeb184741af284f2d7722017b24f6255a3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a516be2e6e1966c3249ed21cc6d480ddea8b5ec1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198591"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220018"
 ---
 # <a name="compiler-warning-level-4-c4800"></a>Ostrzeżenie kompilatora (poziom 4) C4800
 
@@ -23,7 +23,7 @@ Program Visual Studio 2019 lub nowszy:
 C4800 to ostrzeżenie poziomu 3 w programie Visual Studio 2015 i jego wcześniejszych wersjach:
 > "*Type*": wymuszanie wartości logicznej "true" lub "false" (ostrzeżenie o wydajności)
 
-To ostrzeżenie jest generowane, gdy wartość zostanie niejawnie przekonwertowana na typ `bool`. Zazwyczaj ten komunikat jest spowodowany przypisaniem zmiennych `int` do `bool` zmiennych, w których zmienna `int` zawiera tylko wartości **true** i **false**, i może zostać ponownie zadeklarowana jako `bool`typu. Jeśli nie można ponownie zapisać wyrażenia w celu użycia typu `bool`, można dodać "`!=0`" do wyrażenia, które daje typ wyrażenia `bool`. Rzutowanie wyrażenia na typ `bool` nie powoduje wyłączenia ostrzeżenia, które jest zgodne z projektem.
+To ostrzeżenie jest generowane, gdy wartość jest niejawnie konwertowana na typ **`bool`** . Zazwyczaj ten komunikat jest spowodowany przypisaniem **`int`** zmiennych do zmiennych, w **`bool`** których **`int`** zmienna zawiera tylko wartości **`true`** i **`false`** i może być ponownie zadeklarowana jako typ **`bool`** . Jeśli nie możesz ponownie zapisać wyrażenia w celu użycia typu **`bool`** , możesz dodać " `!=0` " do wyrażenia, które zwraca typ wyrażenia **`bool`** . Rzutowanie wyrażenia do typu **`bool`** nie powoduje wyłączenia ostrzeżenia, które jest zgodne z projektem.
 
 ::: moniker range=">= vs-2017"
 To ostrzeżenie nie jest emitowane w programie Visual Studio 2017.

@@ -1,5 +1,5 @@
 ---
-title: Platform::STAThreadAttribute, klasa
+title: 'Platform:: STAThreadAttribute, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-ms.openlocfilehash: 05fb2879839c504f49f56e25ffe28329aa969c69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a8220d8cddca29e621b21fc56966efdb42cb32e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183383"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213024"
 ---
-# <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute, klasa
+# <a name="platformstathreadattribute-class"></a>Platform:: STAThreadAttribute, Klasa
 
-Wskazuje, że model wątkowy dla aplikacji jest jednowątkowym (przedziale STA).
+Wskazuje, że model wątkowości dla aplikacji jest apartamentem jednowątkowym (STA).
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,13 +38,13 @@ public ref class STAThreadAttribute sealed : Attribute
 
 ### <a name="public-methods"></a>Metody publiczne
 
-Dziedziczy atrybut STAThreadAttribute [Platform::Object, klasa](../cppcx/platform-object-class.md). STAThreadAttribute także przeciążenia lub ma następujące składowe:
+Atrybut STAThreadAttribute dziedziczy z [klasy platform:: Object](../cppcx/platform-object-class.md). STAThreadAttribute również przeciążać lub ma następujących członków:
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[STAThreadAttribute::Equals](#equals)|Określa, czy określony obiekt jest równy bieżącemu obiektowi.|
-|[STAThreadAttribute::GetHashCode](#gethashcode)|Zwraca kod skrótu dla tego wystąpienia.|
-|[STAThreadAttribute::ToString](#tostring)|Zwraca ciąg, który reprezentuje bieżący obiekt.|
+|[STAThreadAttribute:: Equals](#equals)|Określa, czy dany obiekt jest taki sam, jak bieżący obiekt.|
+|[STAThreadAttribute:: GetHashCode](#gethashcode)|Zwraca wartość skrótu dla tego wystąpienia.|
+|[STAThreadAttribute:: ToString](#tostring)|Zwraca ciąg reprezentujący bieżący obiekt.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -52,11 +52,11 @@ Dziedziczy atrybut STAThreadAttribute [Platform::Object, klasa](../cppcx/platfor
 
 ### <a name="requirements"></a>Wymagania
 
-**Nagłówek:** collection.h
+**Nagłówek:** Collection. h
 
-**Namespace:** Platforma
+**Przestrzeń nazw:** Platformach
 
-## <a name="ctor"></a> Konstruktor STAThreadAttribute
+## <a name="stathreadattribute-constructor"></a><a name="ctor"></a>Konstruktor STAThreadAttribute
 
 Inicjuje nowe wystąpienie klasy STAThreadAttribute.
 
@@ -66,9 +66,9 @@ Inicjuje nowe wystąpienie klasy STAThreadAttribute.
 public:STAThreadAttribute();
 ```
 
-## <a name="equals"></a> STAThreadAttribute::Equals
+## <a name="stathreadattributeequals"></a><a name="equals"></a>STAThreadAttribute:: Equals
 
-Określa, czy określony obiekt jest równy bieżącemu obiektowi.
+Określa, czy dany obiekt jest taki sam, jak bieżący obiekt.
 
 ### <a name="syntax"></a>Składnia
 
@@ -78,16 +78,16 @@ public:virtual override bool Equals( Object^ obj );
 
 ### <a name="parameters"></a>Parametry
 
-*obj*<br/>
+*obiektów*<br/>
 Obiekt do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obiekty są równe; w przeciwnym razie **false**.
+**`true`** Jeśli obiekty są równe; w przeciwnym razie **`false`** .
 
-## <a name="gethashcode"></a> STAThreadAttribute::GetHashCode
+## <a name="stathreadattributegethashcode"></a><a name="gethashcode"></a>STAThreadAttribute:: GetHashCode
 
-Zwraca kod skrótu dla tego wystąpienia.
+Zwraca wartość skrótu dla tego wystąpienia.
 
 ### <a name="syntax"></a>Składnia
 
@@ -99,9 +99,9 @@ public:int GetHashCode();
 
 Kod skrótu dla tego wystąpienia.
 
-## <a name="tostring"></a> STAThreadAttribute::ToString
+## <a name="stathreadattributetostring"></a><a name="tostring"></a>STAThreadAttribute:: ToString
 
-Zwraca ciąg, który reprezentuje bieżący obiekt.
+Zwraca ciąg reprezentujący bieżący obiekt.
 
 ### <a name="syntax"></a>Składnia
 
@@ -111,8 +111,8 @@ public:String^ ToString();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ciąg, który reprezentuje bieżący obiekt.
+Ciąg reprezentujący bieżący obiekt.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Namespace platformy](platform-namespace-c-cx.md)
+[Przestrzeń nazw platformy](platform-namespace-c-cx.md)

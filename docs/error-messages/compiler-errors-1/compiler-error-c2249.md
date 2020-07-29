@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2249
 ms.assetid: bdd6697c-e04b-49b9-8e40-d9eb6d74f2b6
-ms.openlocfilehash: 24db84c9205173f098e493c4ea6393fb96592276
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f50cb27a239e794b87a15920a36e96529bd6a466
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758895"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212803"
 ---
 # <a name="compiler-error-c2249"></a>Błąd kompilatora C2249
 
 "member": brak dostępnej ścieżki umożliwiającej dostęp do składowej zadeklarowanej w wirtualnej podstawowej "Class"
 
-`member` jest dziedziczona z niepublicznej `virtual` klasy bazowej lub struktury.
+`member`Jest dziedziczona z niepublicznej **`virtual`** klasy podstawowej lub struktury.
 
 ## <a name="example"></a>Przykład
 
@@ -42,7 +42,7 @@ int main() {
 
 ## <a name="example"></a>Przykład
 
-C2249 może również wystąpić, jeśli spróbujesz przypisać strumień z biblioteki C++ standardowej do innego strumienia.  Poniższy przykład generuje C2249.
+C2249 może również wystąpić, jeśli próbujesz przypisać strumień z standardowej biblioteki języka C++ do innego strumienia.  Poniższy przykład generuje C2249.
 
 ```cpp
 // C2249_2.cpp

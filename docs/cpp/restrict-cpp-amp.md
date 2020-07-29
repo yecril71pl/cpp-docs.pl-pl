@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
-ms.openlocfilehash: b3464b758c6b66cdbd5015ee4b7c9d11eb2209dd
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 31db9e8c6f18879e65596593c10a8b3413c5cea9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404941"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213271"
 ---
 # <a name="restrict-c-amp"></a>ograniczenie (C++ AMP)
 
 Specyfikator ograniczenia może być stosowany do funkcji i deklaracji lambda. Wymusza on ograniczenia dotyczące kodu w funkcji i zachowania funkcji w zastosowaniach, które korzystają ze środowiska uruchomieniowego C++ Accelerated Massive Parallelism (C++ AMP).
 
 > [!NOTE]
-> Aby uzyskać informacje na temat **ograniczenia** słowa kluczowego, które jest częścią atrybutów klasy magazynu **__declspec** , zobacz [ograniczanie](../cpp/restrict.md).
+> Aby uzyskać informacje na temat **`restrict`** słowa kluczowego, które jest częścią **`__declspec`** atrybutów klasy magazynu, zobacz [ograniczanie](../cpp/restrict.md).
 
-Klauzula **ograniczenia** przyjmuje następujące formy:
+**`restrict`** Klauzula przyjmuje następujące formy:
 
 |Klauzula|Opis|
 |------------|-----------------|
@@ -31,7 +31,7 @@ Klauzula **ograniczenia** przyjmuje następujące formy:
 
 ## <a name="remarks"></a>Uwagi
 
-Słowo kluczowe **ograniczenia** jest kontekstowym słowem kluczowym. Specyfikatory ograniczeń `cpu` i `amp` nie są słowami zarezerwowanymi. Lista specyfikatorów nie jest rozszerzalna. Funkcja, która nie ma klauzuli **ograniczenia** , jest taka sama jak funkcja, która ma `restrict(cpu)` klauzulę.
+**`restrict`** Słowo kluczowe jest kontekstowym słowem kluczowym. Specyfikatory ograniczeń `cpu` i `amp` nie są słowami zarezerwowanymi. Lista specyfikatorów nie jest rozszerzalna. Funkcja, która nie ma klauzuli, **`restrict`** jest taka sama jak funkcja, która ma `restrict(cpu)` klauzulę.
 
 Funkcja z klauzulą `restrict(amp)` ma następujące ograniczenia:
 
@@ -39,7 +39,7 @@ Funkcja z klauzulą `restrict(amp)` ma następujące ograniczenia:
 
 - Funkcja musi być możliwa do wbudowania.
 
-- Funkcja może deklarować tylko zmienne **int**, **unsigned int**, **float**i **Double** oraz klasy i struktury, które zawierają tylko te typy. wartość **logiczna** jest również dozwolona, ale musi być wyrównania 4-bajtowego, jeśli jest używana w typie złożonym.
+- Funkcja może deklarować tylko **`int`** zmienne, **`unsigned int`** , **`float`** , i **`double`** oraz klasy i struktury, które zawierają tylko te typy. **`bool`** jest również dozwolone, ale musi być wyrównania 4-bajtowe, jeśli jest używany w typie złożonym.
 
 - Funkcje lambda nie mogą przechwytywać poprzez odwołanie i nie mogą przechwytywać wskaźników.
 
@@ -61,19 +61,19 @@ Funkcja z klauzulą `restrict(amp)` ma następujące ograniczenia:
 
   - Wskaźniki do wskaźników.
 
-  - instrukcji **goto** .
+  - **`goto`** zatwierdzeni.
 
   - Instrukcje oznaczone.
 
-  - instrukcje **try**, **catch**i **throw** .
+  - **`try`**, **`catch`** , lub **`throw`** instrukcji.
 
   - Zmienne globalne.
 
   - Zmienne statyczne. Zamiast tego użyj [słowa kluczowego tile_static](../cpp/tile-static-keyword.md) .
 
-  - **dynamic_cast** casts.
+  - **`dynamic_cast`** rzutowania.
 
-  - Operator **typeid** .
+  - **`typeid`** Operator.
 
   - Deklaracje asm.
 
@@ -104,6 +104,6 @@ void callFunctions() restrict(amp)
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)

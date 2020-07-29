@@ -7,19 +7,19 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 74e215204ef334bb67e8f044622d35f4e76fe401
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5010512b2c5f19a236d2f44bd3acf00097a3e168
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187963"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213141"
 ---
 # <a name="unions"></a>Unie
 
 > [!NOTE]
 > W języku C++ 17 i nowszych Klasa **std:: Variant** jest bezpieczną alternatywą dla Unii.
 
-**Unia** jest typem zdefiniowanym przez użytkownika, w którym wszyscy członkowie mają tę samą lokalizację w pamięci. Oznacza to, że w dowolnym momencie Unia może zawierać nie więcej niż jeden obiekt z listy członków. Oznacza to również, że niezależnie od tego, jak wiele składowych jest Unii, zawsze używa wystarczającej ilości pamięci do przechowywania największego elementu członkowskiego.
+A **`union`** jest typem zdefiniowanym przez użytkownika, w którym wszyscy członkowie mają tę samą lokalizację w pamięci. Oznacza to, że w dowolnym momencie Unia może zawierać nie więcej niż jeden obiekt z listy członków. Oznacza to również, że niezależnie od tego, jak wiele składowych jest Unii, zawsze używa wystarczającej ilości pamięci do przechowywania największego elementu członkowskiego.
 
 Unia może być przydatna do zachowywania pamięci, jeśli masz wiele obiektów i/lub ograniczoną ilość pamięci. Jednak wymaga to poprawnego użycia, ponieważ użytkownik jest odpowiedzialny za zapewnienie, że zawsze uzyskuje się dostęp do ostatniego elementu członkowskiego, który został zapisany. Jeśli jakiekolwiek typy elementów członkowskich mają Konstruktor nieuproszczony, należy napisać dodatkowy kod, aby jawnie skonstruować i zniszczyć ten element członkowski. Przed użyciem Unii należy rozważyć, czy problem, który próbujesz rozwiązać, może być lepiej wyrażony przy użyciu klasy bazowej i klas pochodnych.
 
@@ -41,7 +41,7 @@ Elementy członkowskie, które może zawierać Unia. Zobacz uwagi.
 
 ## <a name="declaring-a-union"></a>Deklarowanie unii
 
-Rozpocznij deklarację Unii za pomocą słowa kluczowego **Union** i umieść listę elementów członkowskich w nawiasach klamrowych:
+Rozpocznij deklarację Unii ze **`union`** słowem kluczowym i umieść listę elementów członkowskich w nawiasach klamrowych:
 
 ```cpp
 // declaring_a_union.cpp
@@ -151,7 +151,7 @@ W poprzednim przykładzie należy zauważyć, że Unia w strukturze wejściowej 
 
 Oczywiście w poprzednim przykładzie przedstawiono problem, który można również rozwiązać przy użyciu klas, które pochodzą ze wspólnej klasy bazowej, i rozgałęziać kod na podstawie typu środowiska uruchomieniowego każdego obiektu w kontenerze. Może to spowodować, że kod jest łatwiejszy do utrzymania i zrozumienia, ale może być również wolniejszy niż używanie Unii. Ponadto za pomocą Unii można przechowywać całkowicie niepowiązane typy i dynamicznie zmieniać typ wartości przechowywanej bez zmiany typu samej zmiennej Union. W związku z tym można utworzyć niejednorodną tablicę elementu webuniontype, której elementy przechowują różne wartości różnych typów.
 
-Należy zauważyć, że struktura `Input` w powyższym przykładzie może być łatwo Nieużyta. Aby uzyskać dostęp do elementu członkowskiego, który zawiera dane, należy prawidłowo użyć rozróżniacza. Możesz chronić przed nieprawidłowym użyciem, przekazując pozycję Union jako prywatną i udostępniając specjalne funkcje dostępu, jak pokazano w następnym przykładzie.
+Należy zauważyć, że `Input` Struktura w powyższym przykładzie może być łatwo użyta. Aby uzyskać dostęp do elementu członkowskiego, który zawiera dane, należy prawidłowo użyć rozróżniacza. Możesz chronić przed nieprawidłowym użyciem, przekazując pozycję Union jako prywatną i udostępniając specjalne funkcje dostępu, jak pokazano w następnym przykładzie.
 
 ## <a name="unrestricted-unions-c11"></a>Nieograniczone związki (C++ 11)
 
@@ -648,15 +648,15 @@ Nazwy zadeklarowane w Unii anonimowej są używane bezpośrednio, podobnie jak z
 
 Oprócz ograniczeń dla nazwanych Unii, anonimowe Unii podlegają dodatkowym ograniczeniom:
 
-- Muszą być również zadeklarowane jako **static** , jeśli są zadeklarowane w zakresie pliku lub przestrzeni nazw.
+- Muszą być również zadeklarowane jako **`static`** zadeklarowane w zakresie pliku lub przestrzeni nazw.
 
-- Mogą mieć tylko **publiczne** elementy członkowskie; **prywatne** i **chronione** elementy członkowskie w Unii anonimowej generują błędy.
+- Mogą mieć tylko **`public`** członków, **`private`** a **`protected`** Członkowie w Unii anonimowej generują błędy.
 
 - Nie mogą mieć funkcji Członkowskich.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Klasy i struktury](../cpp/classes-and-structs-cpp.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)<br/>
-[class](../cpp/class-cpp.md)<br/>
-[struct](../cpp/struct-cpp.md)
+[określonej](../cpp/class-cpp.md)<br/>
+[konstrukcja](../cpp/struct-cpp.md)

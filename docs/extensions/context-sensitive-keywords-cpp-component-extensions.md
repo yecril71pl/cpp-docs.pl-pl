@@ -1,5 +1,5 @@
 ---
-title: Kontekstowe słowa kluczowe (C++/CLI i C++/CX)
+title: Kontekstowe słowa kluczowe  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-ms.openlocfilehash: 53fcaf13eb56ae14841861bffd1a29376304b8d6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 82bf4c3f0deed788b7b1e50f1d8d82e63dc27f6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182178"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219745"
 ---
-# <a name="context-sensitive-keywords--ccli-and-ccx"></a>Kontekstowe słowa kluczowe (C++/CLI i C++/CX)
+# <a name="context-sensitive-keywords--ccli-and-ccx"></a>Kontekstowe słowa kluczowe  (C++/CLI i C++/CX)
 
 *Kontekstowe słowa kluczowe* są elementami języka, które są rozpoznawane tylko w określonych kontekstach. Poza określonym kontekstem, kontekstowe słowo kluczowe może być symbolem zdefiniowanym przez użytkownika.
 
@@ -24,11 +24,11 @@ ms.locfileid: "80182178"
 
 Poniżej znajduje się lista kontekstowych słów kluczowych:
 
-- [abstract](abstract-cpp-component-extensions.md)
+- [streszczeń](abstract-cpp-component-extensions.md)
 
-- [delegate](delegate-cpp-component-extensions.md)
+- [Wierz](delegate-cpp-component-extensions.md)
 
-- [event](event-cpp-component-extensions.md)
+- [wydarzen](event-cpp-component-extensions.md)
 
 - [finally](../dotnet/finally.md)
 
@@ -38,15 +38,15 @@ Poniżej znajduje się lista kontekstowych słów kluczowych:
 
 - `internal`
 
-- [literal](literal-cpp-component-extensions.md)
+- [wpisać](literal-cpp-component-extensions.md)
 
 - [override](override-cpp-component-extensions.md)
 
-- [właściwość](property-cpp-component-extensions.md)
+- [wartość](property-cpp-component-extensions.md)
 
 - [sealed](sealed-cpp-component-extensions.md)
 
-- `where` (część [generyczna](generics-cpp-component-extensions.md))
+- `where`(część [rodzajów](generics-cpp-component-extensions.md))
 
 Na potrzeby czytelności można ograniczyć użycie słów kluczowych kontekstowych jako symboli zdefiniowanych przez użytkownika.
 
@@ -58,7 +58,7 @@ Na potrzeby czytelności można ograniczyć użycie słów kluczowych kontekstow
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: `/ZW`
+Opcja kompilatora:`/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -68,11 +68,11 @@ Opcja kompilatora: `/ZW`
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: `/clr`
+Opcja kompilatora:`/clr`
 
 ### <a name="examples"></a>Przykłady
 
-Poniższy przykład kodu pokazuje, że w odpowiednim kontekście słowo kluczowe kontekstowe **Właściwości** może służyć do definiowania właściwości i zmiennej.
+Poniższy przykład kodu pokazuje, że w odpowiednim kontekście **`property`** słowo kluczowe kontekstowe może służyć do definiowania właściwości i zmiennej.
 
 ```cpp
 // context_sensitive_keywords.cpp
@@ -99,6 +99,6 @@ int main() {
 100
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

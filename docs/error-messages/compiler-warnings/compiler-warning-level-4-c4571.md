@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4571
 ms.assetid: 07aa17bd-b15c-4266-824c-57cc445e8edd
-ms.openlocfilehash: 3a8f2093e90f8a681d171e19e2b8a066546f8684
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 4fe99e12c5d2dfb725e1e4aa0ac2fb0b1ccb4f28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990655"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219888"
 ---
 # <a name="compiler-warning-level-4-c4571"></a>Ostrzeżenie kompilatora (poziom 4) C4571
 
-Informacyjne: semantyka catch (...) zmieniła się C++ od Visual 7,1; wyjątki strukturalne (SEH) nie są już przechwytywane
+Informacyjne: semantyka catch (...) zmieniła się od Visual C++ 7,1; wyjątki strukturalne (SEH) nie są już przechwytywane
 
 C4571 jest generowany dla każdego bloku catch (...) podczas kompilowania z **/EHS**.
 
-Podczas kompilowania z **/EHS**, blok catch (...) nie będzie przechwytywać wyjątku strukturalnego (na przykład dzielenia przez zero, wskaźnika o wartości null); blok catch (...) będzie przechwytywać tylko jawnie zgłoszone C++ wyjątki.  Aby uzyskać więcej informacji, zobacz [Obsługa wyjątków](../../cpp/exception-handling-in-visual-cpp.md).
+Podczas kompilowania z **/EHS**, blok catch (...) nie będzie przechwytywać wyjątku strukturalnego (na przykład dzielenia przez zero, wskaźnika o wartości null); blok catch (...) będzie przechwytywać tylko jawnie zgłoszone wyjątki języka C++.  Aby uzyskać więcej informacji, zobacz [Obsługa wyjątków](../../cpp/exception-handling-in-visual-cpp.md).
 
 To ostrzeżenie jest domyślnie wyłączone.  Włącz to ostrzeżenie, aby upewnić się, że podczas kompilowania z użyciem bloków catch (...) **/EHS** nie mają być przechwytywane wyjątki strukturalne.  Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
@@ -27,9 +27,9 @@ Można rozwiązać C4571 w jeden z następujących sposobów:
 
 - Kompiluj z **/EHa** , jeśli nadal chcesz, aby bloki catch (...) przechwytywać wyjątki strukturalne.
 
-- Nie włączaj C4571, jeśli nie chcesz, aby bloki catch (...) mogły przechwytywać wyjątki strukturalne, ale nadal chcesz używać bloków catch (...).  Nadal można przechwytywać wyjątki strukturalne przy użyciu słów kluczowych obsługujących wyjątek strukturalny ( **__try**, **__except**i **__finally**).  Należy jednak pamiętać, że skompilowane destruktory **/EHS** będą wywoływane tylko w C++ przypadku zgłoszenia wyjątku, a nie w przypadku wystąpienia wyjątku SEH.
+- Nie włączaj C4571, jeśli nie chcesz, aby bloki catch (...) mogły przechwytywać wyjątki strukturalne, ale nadal chcesz używać bloków catch (...).  Nadal można przechwytywać wyjątki strukturalne przy użyciu słów kluczowych obsługujących wyjątek strukturalny (**__try**, **`__except`** i **`__finally`** ).  Należy jednak pamiętać, że skompilowane destruktory **/EHS** będą wywoływane tylko wtedy, gdy zostanie zgłoszony wyjątek języka C++, a nie w przypadku wystąpienia wyjątku SEH.
 
-- Zamień blok catch (...) na bloki catch dla określonych C++ wyjątków i opcjonalnie Dodaj obsługę wyjątków C++ strukturalnych wokół obsługi wyjątków ( **__try**, **__except**i **__finally**).  Aby uzyskać więcej informacji, zobacz [ObsługaC++wyjątków strukturalnych (C/)](../../cpp/structured-exception-handling-c-cpp.md) .
+- Zamień blok catch (...) na bloki catch dla określonych wyjątków C++ i opcjonalnie Dodaj obsługę wyjątków strukturalnych wokół obsługi wyjątków C++ (**__try**, **`__except`** i **`__finally`** ).  Aby uzyskać więcej informacji, zobacz [Obsługa wyjątków strukturalnych (C/C++)](../../cpp/structured-exception-handling-c-cpp.md) .
 
 Aby uzyskać więcej informacji, zobacz [/EH (model obsługi wyjątków)](../../build/reference/eh-exception-handling-model.md) .
 

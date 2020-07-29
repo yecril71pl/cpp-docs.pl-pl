@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: 85ff8d77bda30bcf0b107f733098d07c4fd80283
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 6d3102cfd41d68458332025cbf3410e3f169523b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813525"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212452"
 ---
 # <a name="cfileexception-class"></a>Klasa CFileException
 
@@ -185,7 +185,7 @@ int m_cause;
 
 ### <a name="remarks"></a>Uwagi
 
-Ten element członkowski danych jest zmienną publiczną typu **int**. Moduły wyliczające i ich znaczenie są następujące:
+Ten element członkowski danych jest publiczną zmienną typu **`int`** . Moduły wyliczające i ich znaczenie są następujące:
 
 | Błąd | Wartość i znaczenie |
 |--|--|
@@ -300,4 +300,4 @@ Wskaźnik do ciągu zawierającego nazwę pliku, który spowodował wyjątek, je
 
 [Klasa CException](../../mfc/reference/cexception-class.md)<br/>
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
-[Przetwarzanie wyjątków](../../mfc/reference/exception-processing.md)
+[Przetwarzanie wyjątku](../../mfc/reference/exception-processing.md)

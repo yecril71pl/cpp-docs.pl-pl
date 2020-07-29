@@ -23,12 +23,12 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-ms.openlocfilehash: e9b5aa1f7dc20cc920a51c2c36371eb907469875
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 75cfdc33c21059e190fd04f4cd1b73716e74ac42
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957066"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213583"
 ---
 # <a name="fpclassify"></a>fpclassify
 
@@ -61,7 +61,7 @@ Wartość zmiennoprzecinkowa do przetestowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fpclassify —** zwraca liczbę całkowitą wskazującą klasę zmiennoprzecinkową argumentu *x*. W tej tabeli przedstawiono możliwe wartości zwrócone przez **fpclassify —** , zdefiniowane w \<Math. h >.
+**fpclassify —** zwraca liczbę całkowitą wskazującą klasę zmiennoprzecinkową argumentu *x*. W tej tabeli przedstawiono możliwe wartości zwrócone przez **fpclassify —**, zdefiniowane w \<math.h> .
 
 |Wartość|Opis|
 |-----------|-----------------|
@@ -73,17 +73,17 @@ Wartość zmiennoprzecinkowa do przetestowania.
 
 ## <a name="remarks"></a>Uwagi
 
-W C, **fpclassify —** to makro; w C++programie **fpclassify —** jest funkcją przeciążoną przy użyciu typów argumentów **zmiennoprzecinkowych**, **Double**lub **Long** **Double**. W obu przypadkach zwracana wartość zależy od typu obowiązywania wyrażenia argumentu, a nie na żadnej pośredniej reprezentacji. Na przykład normalna **Podwójna** lub **długa** **Podwójna** wartość może stać się nieskończonością, nienormalną lub zerem wartość w przypadku przekonwertowania na typ **float**.
+W C, **fpclassify —** to makro; w języku C++ **fpclassify —** jest funkcją przeciążoną przy użyciu typów argumentów **`float`** , **`double`** , lub **`long double`** . W obu przypadkach zwracana wartość zależy od typu obowiązywania wyrażenia argumentu, a nie na żadnej pośredniej reprezentacji. Na przykład normalna **`double`** lub **`long double`** wartość może być wartością nieskończoną, nienormalną lub zerową, gdy jest konwertowany na **`float`** .
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja/makro|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |---------------------|---------------------------|-------------------------------|
-|**fpclassify**|\<math.h>|\<Math. h > lub \<cmath >|
+|**fpclassify**|\<math.h>|\<math.h> lub \<cmath>|
 
 Makra **fpclassify —** i funkcje **fpclassify —** są zgodne ze specyfikacjami ISO C99 i c++ 11. Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

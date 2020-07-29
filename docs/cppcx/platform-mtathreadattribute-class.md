@@ -1,5 +1,5 @@
 ---
-title: Platform::MTAThreadAttribute, klasa
+title: 'Platform:: MTAThreadAttribute, Klasa'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-ms.openlocfilehash: 4564def412834ae0586292e8aa533d3b2bd0d679
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 700eeae226be48c1f6659d621f2f5c0ed397bb7f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152673"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213050"
 ---
-# <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute, klasa
+# <a name="platformmtathreadattribute-class"></a>Platform:: MTAThreadAttribute, Klasa
 
-Wskazuje, że model wątkowy dla aplikacji jest wielowątkowej (MTA).
+Wskazuje, że model wątkowości dla aplikacji jest apartamentem wielowątkowym (MTA).
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,17 +32,17 @@ public ref class MTAThreadAttribute sealed : Attribute
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[1 Konstruktor MTAThreadAttribute](#ctor) konstruktora|Inicjuje nowe wystąpienie klasy.|
+|Konstruktor [MTAThreadAttribute 1](#ctor)|Inicjuje nowe wystąpienie klasy.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
-Dziedziczy atrybut MTAThreadAttribute [Platform::Object, klasa](../cppcx/platform-object-class.md). MTAThreadAttribute także przeciążenia lub ma następujące składowe:
+Atrybut MTAThreadAttribute dziedziczy z [klasy platform:: Object](../cppcx/platform-object-class.md). MTAThreadAttribute również przeciążać lub ma następujących członków:
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[MTAThreadAttribute::Equals](#equals)|Określa, czy określony obiekt jest równy bieżącemu obiektowi.|
-|[MTAThreadAttribute::GetHashCode](#gethashcode)|Zwraca kod skrótu dla tego wystąpienia.|
-|[MTAThreadAttribute::ToString](#tostring)|Zwraca ciąg, który reprezentuje bieżący obiekt.|
+|[MTAThreadAttribute:: Equals](#equals)|Określa, czy dany obiekt jest taki sam, jak bieżący obiekt.|
+|[MTAThreadAttribute:: GetHashCode](#gethashcode)|Zwraca wartość skrótu dla tego wystąpienia.|
+|[MTAThreadAttribute:: ToString](#tostring)|Zwraca ciąg reprezentujący bieżący obiekt.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia
 
@@ -50,11 +50,11 @@ Dziedziczy atrybut MTAThreadAttribute [Platform::Object, klasa](../cppcx/platfor
 
 ### <a name="requirements"></a>Wymagania
 
-**Metadane:** platform.winmd
+**Metadane:** obiekt platform. winmd
 
-**Namespace:** Platforma
+**Przestrzeń nazw:** Platformach
 
-## <a name="ctor"></a> Konstruktor MTAThreadAttribute
+## <a name="mtathreadattribute-constructor"></a><a name="ctor"></a>Konstruktor MTAThreadAttribute
 
 Inicjuje nowe wystąpienie klasy MTAThreadAttribute.
 
@@ -64,9 +64,9 @@ Inicjuje nowe wystąpienie klasy MTAThreadAttribute.
 public:MTAThreadAttribute();
 ```
 
-## <a name="equals"></a> MTAThreadAttribute::Equals
+## <a name="mtathreadattributeequals"></a><a name="equals"></a>MTAThreadAttribute:: Equals
 
-Określa, czy określony obiekt jest równy bieżącemu obiektowi.
+Określa, czy dany obiekt jest taki sam, jak bieżący obiekt.
 
 ### <a name="syntax"></a>Składnia
 
@@ -76,16 +76,16 @@ public:virtual override bool Equals( Object^ obj );
 
 ### <a name="parameters"></a>Parametry
 
-*obj*<br/>
+*obiektów*<br/>
 Obiekt do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obiekty są równe; w przeciwnym razie **false**.
+**`true`** Jeśli obiekty są równe; w przeciwnym razie **`false`** .
 
-## <a name="gethashcode"></a> MTAThreadAttribute::GetHashCode
+## <a name="mtathreadattributegethashcode"></a><a name="gethashcode"></a>MTAThreadAttribute:: GetHashCode
 
-Zwraca kod skrótu dla tego wystąpienia.
+Zwraca wartość skrótu dla tego wystąpienia.
 
 ### <a name="syntax"></a>Składnia
 
@@ -97,9 +97,9 @@ public:int GetHashCode();
 
 Kod skrótu dla tego wystąpienia.
 
-## <a name="tostring"></a> MTAThreadAttribute::ToString
+## <a name="mtathreadattributetostring"></a><a name="tostring"></a>MTAThreadAttribute:: ToString
 
-Zwraca ciąg, który reprezentuje bieżący obiekt.
+Zwraca ciąg reprezentujący bieżący obiekt.
 
 ### <a name="syntax"></a>Składnia
 
@@ -109,8 +109,8 @@ public:String^ ToString();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ciąg, który reprezentuje bieżący obiekt.
+Ciąg reprezentujący bieżący obiekt.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Namespace platformy](platform-namespace-c-cx.md)
+[Przestrzeń nazw platformy](platform-namespace-c-cx.md)

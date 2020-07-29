@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-ms.openlocfilehash: 0da32aae9a8c2c7f21ee9576e1e1147822314a36
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5f95e9fc55acd33705b855c7c4f0ef268d4776a0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172181"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219693"
 ---
 # <a name="__identifier-ccli"></a>__identifier (C++/CLI)
 
-Umożliwia używanie C++ słów kluczowych jako identyfikatorów.
+Umożliwia korzystanie z słów kluczowych języka C++ jako identyfikatorów.
 
 ## <a name="all-platforms"></a>Wszystkie platformy
 
@@ -35,13 +35,13 @@ Użycie słowa kluczowego **__identifier** dla identyfikatorów, które nie są 
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: `/ZW`
+Opcja kompilatora:`/ZW`
 
 ### <a name="examples"></a>Przykłady
 
 **Przykład**
 
-W poniższym przykładzie Klasa o nazwie **Template** jest tworzona w C# i dystrybuowana jako biblioteka DLL. W programie C++/CLI, który używa klasy **szablonu** , słowo kluczowe **__identifier** ukrywa fakt, że **szablon** jest standardowym C++ słowem kluczowym.
+W poniższym przykładzie Klasa o nazwie `template` jest tworzona w języku C# i dystrybuowana jako biblioteka DLL. W programie C++/CLI, który używa `template` klasy, **`__identifier`** słowo kluczowe ukrywa fakt, że `template` jest standardowym słowem kluczowym języka C++.
 
 ```csharp
 // identifier_template.cs
@@ -65,15 +65,15 @@ int main() {
 
 ### <a name="remarks"></a>Uwagi
 
-Słowo kluczowe **__identifier** jest prawidłowe z opcją kompilatora `/clr`.
+Słowo kluczowe **__identifier** jest prawidłowe z `/clr` opcją kompilatora.
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: `/clr`
+Opcja kompilatora:`/clr`
 
 ### <a name="examples"></a>Przykłady
 
-W poniższym przykładzie Klasa o nazwie **Template** jest tworzona w C# i dystrybuowana jako biblioteka DLL. W programie C++/CLI, który używa klasy **szablonu** , słowo kluczowe **__identifier** ukrywa fakt, że **szablon** jest standardowym C++ słowem kluczowym.
+W poniższym przykładzie Klasa o nazwie `template` jest tworzona w języku C# i dystrybuowana jako biblioteka DLL. W programie C++/CLI, który używa `template` klasy, **`__identifier`** słowo kluczowe ukrywa fakt, że `template` jest standardowym słowem kluczowym języka C++.
 
 ```csharp
 // identifier_template.cs
@@ -94,7 +94,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)<br/>
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)<br/>
+[Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

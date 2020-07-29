@@ -8,16 +8,16 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-ms.openlocfilehash: ad17991d84acb7e531baf9435610ebd566197a22
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6ae750f1a8825096ee30adb01768d5603ab23a01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217502"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219667"
 ---
 # <a name="__ll_rshift"></a>__ll_rshift
 
-**Microsoft Specific**
+**Specyficzne dla firmy Microsoft**
 
 Przenosi wartość 64-bitową określoną przez pierwszy parametr w prawo przez liczbę bitów określoną przez drugi parametr.
 
@@ -48,11 +48,11 @@ Maska przesunięta przez `nBit` bity.
 |---------------|------------------|
 |`__ll_rshift`|x86, x64|
 
-**Plik nagłówka** \<intrin. h >
+**Plik nagłówka**\<intrin.h>
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli drugi parametr jest większy niż 64 na x64 (32 na x86), ta liczba jest pobierana z modulo 64 (32 na x86), aby określić liczbę bitów do przesunięcia. Prefiks wskazuje, że jest to operacja na `long long`, inna nazwa dla `__int64`, 64-bitowy typ całkowity ze znakiem. `ll`
+Jeśli drugi parametr jest większy niż 64 na x64 (32 na x86), ta liczba jest pobierana z modulo 64 (32 na x86), aby określić liczbę bitów do przesunięcia. `ll`Prefiks wskazuje, że jest to operacja na **`long long`** , inna nazwa dla **`__int64`** , 64-bitowy typ całkowity ze znakiem.
 
 ## <a name="example"></a>Przykład
 

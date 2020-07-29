@@ -35,12 +35,12 @@ f1_keywords:
 - _strtold_l
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-ms.openlocfilehash: ba57eed25fd8e1310b9e837c55cb1e1f7ec2b718
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 14d67153eda851edc543e6eb2ad441ef35132ee5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912601"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213492"
 ---
 # <a name="strtold-_strtold_l-wcstold-_wcstold_l"></a>strtold, _strtold_l, wcstold, _wcstold_l
 
@@ -77,12 +77,12 @@ Ciąg zakończony znakiem null do przekonwertowania.
 *endptr*<br/>
 Wskaźnik do znaku, który zatrzyma skanowanie.
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**strtold** zwraca wartość liczby zmiennoprzecinkowej jako **długą** **podwójną**, z wyjątkiem sytuacji, gdy reprezentacja spowodowałaby przepełnienie — w takim przypadku funkcja zwraca wartość +/-**HUGE_VALL**. Znak **HUGE_VALL** jest zgodny ze znakiem wartości, która nie może być reprezentowana. **strtold** zwraca wartość 0, jeśli nie można wykonać konwersji lub występuje niedopełnienie.
+**strtold** zwraca wartość liczby zmiennoprzecinkowej jako **`long double`** , z wyjątkiem sytuacji, gdy reprezentacja spowodowałoby przepełnienie — w takim przypadku funkcja zwraca wartość +/-**HUGE_VALL**. Znak **HUGE_VALL** jest zgodny ze znakiem wartości, która nie może być reprezentowana. **strtold** zwraca wartość 0, jeśli nie można wykonać konwersji lub występuje niedopełnienie.
 
 **wcstold** zwraca wartości analogicznie do **strtold**. W przypadku obu funkcji **errno** jest ustawiony na **ERANGE** , jeśli występuje przepełnienie lub nadmiarowy i zostanie wywołana procedura obsługi nieprawidłowego parametru, zgodnie z opisem w [walidacji parametru](../../c-runtime-library/parameter-validation.md).
 
@@ -90,7 +90,7 @@ Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _dose
 
 ## <a name="remarks"></a>Uwagi
 
-Każda funkcja konwertuje ciąg wejściowy *strSource* na **Long** **Double**. Funkcja **strtold** przestaje odczytywania ciągu *strSource* przy pierwszym znaku, którego nie może rozpoznać jako części liczby. Może to być kończący znak null. Dwubajtowa wersja **strtold** jest **wcstold**; jego argument *strSource* jest ciągiem znaków dwubajtowych. W przeciwnym razie funkcje te zachowują się identycznie.
+Każda funkcja konwertuje ciąg wejściowy *strSource* na **`long double`** . Funkcja **strtold** przestaje odczytywania ciągu *strSource* przy pierwszym znaku, którego nie może rozpoznać jako części liczby. Może to być kończący znak null. Dwubajtowa wersja **strtold** jest **wcstold**; jego argument *strSource* jest ciągiem znaków dwubajtowych. W przeciwnym razie funkcje te zachowują się identycznie.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -109,14 +109,14 @@ Jeśli *endptr* nie ma **wartości null**, wskaźnik do znaku, który zatrzymał
 
 [*odstęp*] [*Sign*] [*cyfry*] [. *cyfry*] [{**d** &#124; **d** &#124; **e** &#124; **e**} [*Sign*]*cyfr*]
 
-*Odstępy* mogą składać się ze znaków spacji i tabulatora, które są ignorowane; *znak* jest znakiem plus**+**() lub minus**-**(); i *cyfry* są jedną lub większą liczbą cyfr dziesiętnych. Jeśli żadne cyfry nie pojawiają się przed znakiem podstawy, co najmniej jeden musi występować po znaku podstawy. Po cyfrach dziesiętnych można stosować wykładnikę, która składa się z litery wprowadzającej (**d**, **d**, **e**lub **e**) i opcjonalnie podpisanej liczby całkowitej. Jeśli nie zostanie wyświetlona żadna część wykładnika ani znak podstawy, przyjmuje się, że znak podstawy będzie podążać za ostatnią cyfrą w ciągu. Pierwszy znak, który nie pasuje do tego formularza, zatrzyma skanowanie.
+*Odstępy* mogą składać się ze znaków spacji i tabulatora, które są ignorowane; *znak* jest znakiem plus ( **+** ) lub minus ( **-** ); i *cyframi* jest jedna lub więcej cyfr dziesiętnych. Jeśli żadne cyfry nie pojawiają się przed znakiem podstawy, co najmniej jeden musi występować po znaku podstawy. Po cyfrach dziesiętnych można stosować wykładnikę, która składa się z litery wprowadzającej (**d**, **d**, **e**lub **e**) i opcjonalnie podpisanej liczby całkowitej. Jeśli nie zostanie wyświetlona żadna część wykładnika ani znak podstawy, przyjmuje się, że znak podstawy będzie podążać za ostatnią cyfrą w ciągu. Pierwszy znak, który nie pasuje do tego formularza, zatrzyma skanowanie.
 
 ## <a name="requirements"></a>Wymagania
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strtold**, **_strtold_l**|\<STDLIB. h>|
-|**wcstold**, **_wcstold_l**|\<STDLIB. h> lub \<WCHAR. h>|
+|**strtold**, **_strtold_l**|\<stdlib.h>|
+|**wcstold**, **_wcstold_l**|\<stdlib.h> lub \<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -151,12 +151,12 @@ string = 3.1415926535898This stopped it
    Stopped scan at: This stopped it
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
 [Funkcje ciągu do wartości numerycznych](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>

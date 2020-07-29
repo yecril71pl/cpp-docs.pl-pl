@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2864
 ms.assetid: d0ca2ad9-90a6-4aef-8511-98a3b414c102
-ms.openlocfilehash: 122e0455f84d8940eda04f3968e883dd1f0cd444
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: cfa928c84fbf6c841e3caaf51dda526a7ae184fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998665"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212660"
 ---
 # <a name="compiler-error-c2864"></a>Błąd kompilatora C2864
 
@@ -19,7 +19,7 @@ ms.locfileid: "71998665"
 
 ## <a name="remarks"></a>Uwagi
 
-Aby zainicjować element członkowski danych `static`, który jest zdefiniowany jako `volatile`, `const` lub nie jest typem całkowitym, należy użyć instrukcji definicji elementu członkowskiego. Nie można ich zainicjować w deklaracji.
+Aby zainicjować **`static`** element członkowski danych, który jest zdefiniowany jako **`volatile`** Typ, który **`const`** nie jest typem całkowitym, należy użyć instrukcji definicji elementu członkowskiego. Nie można ich zainicjować w deklaracji.
 
 ## <a name="example"></a>Przykład
 

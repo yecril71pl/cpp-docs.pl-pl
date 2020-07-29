@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-ms.openlocfilehash: 905a9bb32544dbd7453d46362e100047516d22a8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f5d5ac364096ea1a4505b2ead81f25367a9c9458
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209576"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212959"
 ---
 # <a name="setting-properties-in-your-provider"></a>Ustawianie właściwości w dostawcy
 
@@ -20,7 +20,7 @@ W kodzie dostawcy wygenerowanym przez Kreatora Znajdź mapę właściwości odpo
 
 Na mapie właściwości Dodaj makro [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md) . PROPERTY_INFO_ENTRY_EX przyjmuje cztery parametry:
 
-- Identyfikator właściwości odpowiadający właściwości. Usuń pierwsze siedem znaków ("DBPROP_") od początku nazwy właściwości. Na przykład, jeśli chcesz dodać `DBPROP_MAXROWS`, Przekaż `MAXROWS` jako pierwszy element. Jeśli jest to właściwość niestandardowa, Przekaż pełną nazwę identyfikatora GUID (na przykład `DBMYPROP_MYPROPERTY`).
+- Identyfikator właściwości odpowiadający właściwości. Usuń pierwsze siedem znaków ("DBPROP_") od początku nazwy właściwości. Na przykład, jeśli chcesz dodać `DBPROP_MAXROWS` , Przekaż `MAXROWS` jako pierwszy element. Jeśli jest to właściwość niestandardowa, Przekaż pełną nazwę identyfikatora GUID (na przykład `DBMYPROP_MYPROPERTY` ).
 
 - Typ Variant właściwości (WE [właściwościach OLE DB](/previous-versions/windows/desktop/ms722734(v=vs.85)) w **odniesieniu do OLE DB programisty**). Wprowadź typ VT_ (na przykład VT_BOOL lub VT_I2) odpowiadający typowi danych.
 
@@ -39,14 +39,14 @@ Na mapie właściwości Dodaj makro [PROPERTY_INFO_ENTRY_EX](../../data/oledb/pr
 
 Dostawcy OLE DB firmy Microsoft ignorują następujące właściwości OLE DB:
 
-- `DBPROP_MAXROWS` działa tylko w przypadku dostawców tylko do odczytu (czyli, w których `DBPROP_IRowsetChange` i `DBPROP_IRowsetUpdate` są **fałszywe**); w przeciwnym razie ta właściwość nie jest obsługiwana.
+- `DBPROP_MAXROWS`działa tylko z dostawcami tylko do odczytu (to oznacza, gdzie `DBPROP_IRowsetChange` i `DBPROP_IRowsetUpdate` są **`false`** ); w przeciwnym razie ta właściwość nie jest obsługiwana.
 
-- `DBPROP_MAXPENDINGROWS` jest ignorowana; Dostawca określa swój własny limit.
+- `DBPROP_MAXPENDINGROWS`jest ignorowany; Dostawca określa swój własny limit.
 
-- `DBPROP_MAXOPENROWS` jest ignorowana; Dostawca określa swój własny limit.
+- `DBPROP_MAXOPENROWS`jest ignorowany; Dostawca określa swój własny limit.
 
-- `DBPROP_CANHOLDROWS` jest ignorowana; Dostawca określa swój własny limit.
+- `DBPROP_CANHOLDROWS`jest ignorowany; Dostawca określa swój własny limit.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Praca z szablonami dostawców OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

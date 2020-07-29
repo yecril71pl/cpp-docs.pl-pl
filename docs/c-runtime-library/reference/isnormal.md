@@ -1,21 +1,21 @@
 ---
-title: isnormal —
+title: isnormal
 ms.date: 01/31/2019
 f1_keywords:
 - isnormal
 - math/isnormal
 helpviewer_keywords:
 - isnormal function
-ms.openlocfilehash: e426fbce71efff1e810a03b8347e7c48aa0d91d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e12cabb57f2e51c08b4d93af33dae85164d016b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286443"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213531"
 ---
-# <a name="isnormal"></a>isnormal —
+# <a name="isnormal"></a>isnormal
 
-Określa, czy wartość zmiennoprzecinkowa jest normalna wartość.
+Określa, czy wartość zmiennoprzecinkowa jest wartością normalną.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,27 +33,27 @@ inline bool isnormal(
 ### <a name="parameters"></a>Parametry
 
 *x*<br/>
-Wartość zmiennoprzecinkowa do testowania.
+Wartość zmiennoprzecinkowa do przetestowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**isnormal —** zwraca wartość różną od zera (**true** w C++ kodu) Jeśli argument *x* jest zero, podnormalnych, nieskończone ani jest NaN. W przeciwnym razie **isnormal —** zwraca wartość 0 (**false** w C++ kodu).
+Funkcja **isnormal** zwraca wartość różną od zera ( **`true`** w kodzie C++), jeśli argument *x* nie jest zerem, subnormal, Infinity ani NaN. W przeciwnym razie funkcja **isnormal** zwraca wartość 0 ( **`false`** w kodzie C++).
 
 ## <a name="remarks"></a>Uwagi
 
-**isnormal —** jest makrem, gdy kompilowany jako C i wbudowany szablon funkcji, gdy kompilowany jako C++.
+**isnormal** to makro skompilowane jako C i szablon wbudowanej funkcji w przypadku skompilowania jako C++.
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |--------------|---------------------------|-------------------------------|
-|**isnormal**|\<math.h>|\<Math.h > lub \<cmath >|
+|**isnormal**|\<math.h>|\<math.h> lub \<cmath>|
 
-Aby uzyskać więcej informacji na temat zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
+Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-[Obsługa liczb zmiennoprzecinkowych](../../c-runtime-library/floating-point-support.md)<br/>
+[Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

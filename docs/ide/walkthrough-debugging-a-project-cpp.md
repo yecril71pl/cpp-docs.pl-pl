@@ -1,60 +1,60 @@
 ---
-title: 'Przewodnik: Debugowanie projektu (C++)'
+title: 'Wskazówki: debugowanie projektu (C++)'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - projects [C++], debugging
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: ce792345b045a1e647de6363ca094fb3f3826b73
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 61433213619c16caf67de905a6da93c7360db298
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400976"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219680"
 ---
-# <a name="walkthrough-debugging-a-project-c"></a>Przewodnik: Debugowanie projektu (C++)
+# <a name="walkthrough-debugging-a-project-c"></a>Wskazówki: debugowanie projektu (C++)
 
-W tym przewodniku możesz zmodyfikować program, aby rozwiązać ten problem, który znaleziony podczas testowania projektu.
+W tym instruktażu zmodyfikujesz program, aby rozwiązać problem znaleziony podczas testowania projektu.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- W tym przewodniku przyjęto założenie, że rozumiesz podstawy języka C++.
+- W tym instruktażu założono, że rozumiesz podstawy języka C++.
 
-- Przyjęto również założenie, że zostały wykonane wcześniej pokrewne instruktaże, które są wymienione w [przy użyciu programu Visual Studio IDE dla programowanie aplikacji klasycznych w języku C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+- Przyjęto również założenie, że zostały wykonane wcześniejsze powiązane instruktaże, które są wymienione na liście [przy użyciu środowiska IDE programu Visual Studio na potrzeby programowania aplikacji klasycznych](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)w języku C++.
 
-### <a name="to-fix-a-program-that-has-a-bug"></a>Aby naprawić program, który zawiera usterkę
+### <a name="to-fix-a-program-that-has-a-bug"></a>Aby naprawić program, który ma usterkę
 
-1. Aby zobaczyć, co występuje, gdy `Cardgame` obiekt jest niszczony, wyświetlanie destruktor dla `Cardgame` klasy.
+1. Aby zobaczyć, co się dzieje `Cardgame` , gdy obiekt jest niszczony, Wyświetl destruktor dla `Cardgame` klasy.
 
-   Na pasku menu wybierz **widoku** > **Widok klas**.
+   Na pasku menu wybierz polecenie **Wyświetl**  >  **Widok klasy**.
 
-   W **Widok klas** okna, rozwiń węzeł **gry** drzewa projektu i wybierz pozycję **wartość Cardgame** klasy, aby wyświetlić elementy członkowskie klasy i metody.
+   W oknie **Widok klasy** rozwiń drzewo projektu **gry** i wybierz klasę **plik Cardgame** , aby wyświetlić elementy członkowskie i metody klasy.
 
-   Otwórz menu skrótów dla **~Cardgame(void)** destruktora, a następnie wybierz **przejdź do definicji**.
+   Otwórz menu skrótów dla destruktora **~ plik Cardgame (void)** , a następnie wybierz **Przejdź do definicji**.
 
-1. Aby zmniejszyć `totalParticipants` po zakończeniu wartość Cardgame, Dodaj następujący kod między otwierające i zamykające nawiasy klamrowe z `Cardgame::~Cardgame` destruktora.
+1. Aby zmniejszyć `totalParticipants` czas plik Cardgame, Dodaj następujący kod między otwierającym i zamykającym nawiasem klamrowym `Cardgame::~Cardgame` destruktora.
 
    [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]
 
-1. Plik Cardgame.cpp powinien wyglądać podobnie poniższy kod, po zmianach przypominać:
+1. Plik plik Cardgame. cpp powinien wyglądać podobnie do poniższego kodu:
 
    [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
 
-1. Na pasku menu wybierz **kompilacji** > **Kompiluj rozwiązanie**.
+1. Na pasku menu wybierz polecenie **Kompiluj**  >  **kompilację rozwiązania**.
 
-1. Po zakończeniu kompilacji, uruchom go w trybie debugowania, wybierając **debugowania** > **Rozpocznij debugowanie** na pasku menu lub wybierając **F5** klucza. Program wstrzymuje w pierwszym punkcie przerwania.
+1. Po zakończeniu kompilacji uruchom ją w trybie debugowania, wybierając **Debuguj**  >  **Rozpocznij debugowanie** na pasku menu lub wybierając klawisz **F5** . Program zatrzymuje się przy pierwszym punkcie przerwania.
 
-1. Aby przejść przez program, na pasku menu wybierz **debugowania** > **Step Over**, lub wybierz **F10** klucza.
+1. Aby przejść przez program, na pasku menu wybierz **Debuguj**  >  **krok nad**lub wybierz klawisz **F10** .
 
-   Należy zauważyć, że po każdym poleceniu `Cardgame` Konstruktor wykonuje wartość `totalParticipants` zwiększa się. Gdy `PlayGames` funkcja zwróci wartość, ponieważ do każdego `Cardgame` wystąpienie wykracza poza zakres i zostanie usunięta i destruktor jest wywoływany, `totalParticipants` zmniejsza. Tuż przed `return` instrukcja jest wykonywana, `totalParticipants` jest równa 0.
+   Należy zauważyć, że po wykonaniu każdego `Cardgame` konstruktora wartość `totalParticipants` rośnie. Gdy `PlayGames` Funkcja zwraca, ponieważ każde `Cardgame` wystąpienie wykracza poza zakres i jest usuwane (a destruktor jest wywoływany), `totalParticipants` zmniejsza. Tuż przed **`return`** wykonaniem instrukcji jest `totalParticipants` równa 0.
 
-1. Kontynuuj przechodzenie krok po kroku za pośrednictwem programu aż do jej zakończenia lub pozwolić mu działać, wybierając **debugowania** > **Uruchom** na pasku menu lub wybierając **F5** klucza.
+1. Kontynuuj przechodzenie przez program do momentu jego zakończenia lub pozwól na jego uruchomienie, wybierając polecenie **Debuguj**  >  **Run** na pasku menu lub wybierając klawisz **F5** .
 
 ## <a name="next-steps"></a>Następne kroki
 
 **Poprzednie:** [Przewodnik: Testowanie projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
-**Dalej:** [Przewodnik: Wdrażanie programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
+**Dalej:** [Przewodnik: wdrażanie programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
 
 ## <a name="see-also"></a>Zobacz także
 

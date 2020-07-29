@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-ms.openlocfilehash: 817e74d278aa3d91c65ffeb8ab9ac5844041446e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9914818520fafb707b6821ba827e867b8aea9928
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198968"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220031"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>Ostrzeżenie kompilatora (poziom 3) C4191
 
@@ -25,11 +25,11 @@ Kilka operacji obejmujących wskaźniki funkcji są uważane za niebezpieczne:
 
 - Argumenty lub typy zwracane z różnymi rozmiarami, kategoriami typów lub klasyfikacjami.
 
-- Różne długości list argumentów (na `__cdecl`, tylko na rzutach z większej listy do krótszej listy, nawet jeśli krótszy jest VarArgs).
+- Różne długości list argumentów (włączone **`__cdecl`** , tylko na rzutach z dłuższej listy do krótszej listy, nawet jeśli krótszy jest VarArgs).
 
-- Wskaźnik do danych (innych niż **void** <strong>\*</strong>) jest aliasem dla wskaźnika do działania.
+- Wskaźnik do danych (innych niż **`void`** <strong>\*</strong> ) aliasowany względem wskaźnika do działania.
 
-- Wszelkie inne różnice typu, które mogą spowodować błąd lub ostrzeżenie na `reinterpret_cast`.
+- Wszelkie inne różnice typu, które mogą spowodować błąd lub ostrzeżenie na **`reinterpret_cast`** .
 
 Wywołanie tej funkcji za pomocą wskaźnika wynikowego może spowodować awarię programu.
 

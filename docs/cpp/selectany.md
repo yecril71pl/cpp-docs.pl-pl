@@ -7,41 +7,39 @@ helpviewer_keywords:
 - __declspec keyword [C++], selectany
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
-ms.openlocfilehash: e8ca82900ffd16264aca494950d4793029e55d9c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e279184322c239e7768eb8fd4321ee451b2cb94c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365596"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213232"
 ---
-# <a name="selectany"></a>selectany
+# `selectany`
 
 **Specyficzne dla firmy Microsoft**
 
-Informuje kompilator, że zadeklarowany element danych globalnych (zmienna lub obiekt) jest pobraniem dowolnego COMDAT (funkcja spakowana).
+Informuje kompilator, że zadeklarowany element danych globalnych (zmienna lub obiekt) jest pobraniem COMDAT (spakowaną funkcją).
 
 ## <a name="syntax"></a>Składnia
 
-```
-__declspec( selectany ) declarator
-```
+> **`__declspec( selectany )`***deklarator*
 
 ## <a name="remarks"></a>Uwagi
 
-W czasie łącza, jeśli wiele definicji COMDAT są widoczne, konsolidator wybiera jeden i odrzuca resztę. Jeśli zaznaczona jest opcja konsolidatora [/OPT:REF](../build/reference/opt-optimizations.md) (Optymalizacje), nastąpi eliminacja COMDAT w celu usunięcia wszystkich elementów danych, które nie zostały odwołane w danych wyjściowych konsolidatora.
+W czasie linku, jeśli są widoczne liczne definicje elementu COMDAT, konsolidator wybiera jeden i odrzuca resztę. Jeśli wybrano opcję konsolidatora [`/OPT:REF`](../build/reference/opt-optimizations.md) (Optymalizacja), COMDAT eliminacja nastąpi w celu usunięcia wszystkich elementów danych, do których nie ma odwołań w danych wyjściowych konsolidatora.
 
-Konstruktory i przypisanie przez funkcję globalną lub metody statyczne w deklaracji nie tworzą odwołania i nie uniemożliwi /OPT:REF eliminacji. Skutki uboczne takiego kodu nie powinny zależeć od tego, kiedy nie istnieją żadne inne odwołania do danych.
+Konstruktory i przypisania przez funkcję globalną lub metody statyczne w deklaracji nie tworzą odwołania i nie uniemożliwią/OPT: eliminacji odwołania. Skutki uboczne tego kodu nie powinny być zależne od tego, czy istnieją inne odwołania do danych.
 
-W przypadku dynamicznie inicjowanych obiektów **globalnych, selectany** odrzuci kod inicjowania obiektu nieodwołanego, jak również.
+W przypadku dynamicznej inicjacji obiekty globalne **`selectany`** odrzucają również kod inicjujący obiektu, którego nie można odwołać.
 
-Globalny element danych można zwykle zainicjować tylko raz w projekcie EXE lub DLL. **selectany** może być używany do inicjowania danych globalnych zdefiniowanych przez nagłówki, gdy ten sam nagłówek pojawia się w więcej niż jednym pliku źródłowym. **selectany** jest dostępny zarówno w kompilatorach C i C++.
+Element danych globalnych można zwykle zainicjować tylko raz w projekcie EXE lub DLL. **`selectany`** może służyć do inicjowania danych globalnych zdefiniowanych przez nagłówki, gdy ten sam nagłówek występuje w więcej niż jednym pliku źródłowym. **`selectany`** jest dostępny zarówno w kompilatorach C, jak i C++.
 
 > [!NOTE]
-> **selectany** można zastosować tylko do rzeczywistego inicjowania globalnych elementów danych, które są widoczne zewnętrznie.
+> **`selectany`** mogą być stosowane tylko do rzeczywistej inicjalizacji elementów danych globalnych, które są widoczne na zewnątrz.
 
 ## <a name="example"></a>Przykład
 
-Ten kod pokazuje, jak używać atrybutu **selectany:**
+Ten kod pokazuje, jak używać **`selectany`** atrybutu:
 
 ```cpp
 //Correct - x1 is initialized and externally visible
@@ -75,7 +73,7 @@ __declspec(selectany) X x(1);
 
 ## <a name="example"></a>Przykład
 
-Ten kod pokazuje, jak używać atrybutu **selectany,** aby zapewnić składanie danych COMDAT podczas korzystania z opcji konsolidatora [/OPT:ICF.](../build/reference/opt-optimizations.md) Należy zauważyć, że dane muszą być oznaczone **selectany** i umieszczone w **const** (tylko w brzmieniu) sekcji. Należy jawnie określić sekcję tylko do odczytu.
+Ten kod pokazuje, jak używać **`selectany`** atrybutu w celu zapewnienia, że dane COMDAT są również używane w przypadku korzystania z [`/OPT:ICF`](../build/reference/opt-optimizations.md) opcji konsolidatora. Należy zauważyć, że dane muszą być oznaczone **`selectany`** i umieszczone w **`const`** sekcji (ReadOnly). Należy jawnie określić sekcję tylko do odczytu.
 
 ```cpp
 // selectany2.cpp
@@ -88,9 +86,9 @@ int main() {
 }
 ```
 
-**ZAKOŃCZ Specyficzne dla firmy Microsoft**
+**ZAKOŃCZENIE określonych przez firmę Microsoft**
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[__declspec](../cpp/declspec.md)<br/>
+[`__declspec`](../cpp/declspec.md)<br/>
 [Słowa kluczowe](../cpp/keywords-cpp.md)

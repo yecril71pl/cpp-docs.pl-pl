@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4289
 ms.assetid: 0dbd2863-4cde-4e16-894b-104a2d5fa724
-ms.openlocfilehash: b9083670465d68493d90a8e96ff7ee5db34c1978
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 8742fd5e64f2ba1877fa3fbecfb221ef295d463e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991326"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219901"
 ---
 # <a name="compiler-warning-level-4-c4289"></a>Ostrzeżenie kompilatora (poziom 4) C4289
 
 użyte rozszerzenie niestandardowe: 'var' : zmienna sterowania pętlą zadeklarowana w pętli for jest używana poza zakresem pętli for
 
-Podczas kompilowania z [/ze](../../build/reference/za-ze-disable-language-extensions.md) i **/Zc: forScope-** , zmienna zadeklarowana w pętli [for](../../cpp/for-statement-cpp.md) została użyta po zakresie pętli **for**.
+Podczas kompilowania z [/ze](../../build/reference/za-ze-disable-language-extensions.md) i **/Zc: forScope-**, zmienna zadeklarowana w pętli [for](../../cpp/for-statement-cpp.md) została użyta po **`for`** zakresie pętli.
 
-Zobacz [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) , aby uzyskać informacje na temat sposobu określania zachowania standardowego w programie **dla** pętli z **/ze**.
+Zobacz [/Zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) , aby uzyskać informacje na temat określania zachowania standardowego w **`for`** pętlach z **/ze**.
 
 To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji [, zobacz ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 

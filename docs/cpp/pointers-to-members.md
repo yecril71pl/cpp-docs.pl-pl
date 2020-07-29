@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: 75bd29310d64b0309ac48be053aa43cc0084aa2d
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: fe92f848c5d5240f1afc657f5fb176513c8f9d88
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226097"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213297"
 ---
 # <a name="pointers-to-members"></a>Wskaźniki do elementów członkowskich
 
@@ -25,7 +25,7 @@ Deklaracje wskaźników do elementów członkowskich to specjalne przypadki dekl
 
    - Opcjonalny specyfikator klasy magazynu.
 
-   - Opcjonalne specyfikatory **const** i **volatile** .
+   - Opcjonalne **`const`** i **`volatile`** specyfikatory.
 
    - Specyfikator typu: nazwa typu. Jest to typ elementu członkowskiego, który ma być wskazywany, a nie Klasa.
 
@@ -39,7 +39,7 @@ Deklaracje wskaźników do elementów członkowskich to specjalne przypadki dekl
 
    - __`*`__ Operator.
 
-   - Opcjonalne specyfikatory **const** i **volatile** .
+   - Opcjonalne **`const`** i **`volatile`** specyfikatory.
 
    - Identyfikator identyfikujący wskaźnik do elementu członkowskiego.
 
@@ -79,7 +79,7 @@ int main()
 }
 ```
 
-W poprzednim przykładzie, `pwCaption` jest wskaźnikiem do dowolnego elementu członkowskiego klasy `Window` , która jest typu `char*` . Typ `pwCaption` to `char * Window::*` . Następny fragment kodu deklaruje wskaźniki do `SetCaption` `GetCaption` funkcji składowych i.
+W poprzednim przykładzie, `pwCaption` jest wskaźnikiem do dowolnego elementu członkowskiego klasy `Window` , która jest typu **`char*`** . Typ `pwCaption` to `char * Window::*` . Następny fragment kodu deklaruje wskaźniki do `SetCaption` `GetCaption` funkcji składowych i.
 
 ```cpp
 const char * (Window::* pfnwGC)() = &Window::GetCaption;

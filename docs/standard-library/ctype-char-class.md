@@ -1,5 +1,5 @@
 ---
-title: Klasa CType &lt;char &gt;
+title: ctype &lt; char — &gt; Klasa
 ms.date: 11/04/2016
 f1_keywords:
 - ctype<char>
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-ms.openlocfilehash: 08bf2c5c814eaed7b409295fcf50c66577f6a5d9
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d2c74ef46babe388cfa6d649e8b4501b7c235bb9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688147"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220967"
 ---
-# <a name="ctypeltchargt-class"></a>Klasa CType &lt;char &gt;
+# <a name="ctypeltchargt-class"></a>ctype &lt; char — &gt; Klasa
 
-Klasa jest jawną specjalizacją szablonu klasy `ctype\<CharType>` do typu **char**, opisująca obiekt, który może stanowić zestaw reguł ustawień regionalnych w celu scharakteryzowania różnych właściwości znaku typu **char**.
+Klasa jest jawną specjalizacją szablonu klasy `ctype\<CharType>` do wpisywania **`char`** opisującą obiekt, który może stanowić zestaw reguł ustawień regionalnych w celu scharakteryzowania różnych właściwości znaku typu **`char`** .
 
 ## <a name="syntax"></a>Składnia
 
@@ -108,28 +108,28 @@ protected:
 
 Jawna specjalizacja różni się od szablonu klasy na kilka sposobów:
 
-- Obiekt klasy CType < `char` > zapisuje wskaźnik do pierwszego elementu tabeli masek CType, tablicę elementów UCHAR_MAX + 1 typu `ctype_base::mask`. Przechowuje również obiekt logiczny, który wskazuje, czy tablica powinna zostać usunięta (przy użyciu `operator delete[]`), gdy obiekt > **elem**CType \< zostanie zniszczony.
+- Obiekt klasy `ctype<char>` przechowuje wskaźnik do pierwszego elementu tabeli maski CType, tablicę elementów typu UCHAR_MAX + 1 `ctype_base::mask` . Przechowuje również obiekt logiczny, który wskazuje, czy tablica powinna zostać usunięta (przy użyciu `operator delete[]` ), gdy \< **Elem**> obiekt CType zostanie zniszczony.
 
-- Jego jedyny Konstruktor publiczny pozwala określić `tab`, tabelę masek CType i `del`, czyli obiekt logiczny, który ma wartość true, jeśli tablica powinna zostać usunięta, gdy < CType `char`, > obiekt zostanie zniszczony, a także odwołań do parametrów liczby odwołań.
+- Jego jedyny Konstruktor publiczny pozwala określić `tab` , tabelę masek CType i `del` , obiekt logiczny, który ma wartość true, jeśli tablica powinna zostać usunięta `ctype<char>` , gdy obiekt jest niszczony, a także odwołań do parametrów liczby odwołań.
 
 - Funkcja chronionego elementu członkowskiego `table` zwraca przechowywaną tabelę masek CType.
 
-- Statyczny Obiekt członkowski `table_size` określa minimalną liczbę elementów w tabeli masek CType.
+- Statyczny Obiekt członkowski `table_size` określa minimalną liczbę elementów w tabeli maski CType.
 
-- Chroniona statyczna funkcja członkowska `classic_table` (zwraca tabelę masek CType odpowiednią dla ustawień regionalnych "C".
+- Chroniona funkcja statyczna elementu członkowskiego `classic_table` (zwraca tabelę maski CType odpowiednią dla ustawień regionalnych "C".
 
-- Brak chronionych wirtualnych funkcji składowych [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is)lub [do_scan_not](../standard-library/ctype-class.md#do_scan_not). Odpowiednie publiczne funkcje Członkowskie wykonują równoważne operacje.
+- Brak chronionych wirtualnych funkcji Członkowskich [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is)lub [do_scan_not](../standard-library/ctype-class.md#do_scan_not). Odpowiednie publiczne funkcje Członkowskie wykonują równoważne operacje.
 
-Elementy członkowskie [do_narrow](../standard-library/ctype-class.md#do_narrow) i [do_widen](../standard-library/ctype-class.md#do_widen) nie zmieniają się.
+Funkcje składowe [do_narrow](../standard-library/ctype-class.md#do_narrow) i [do_widen](../standard-library/ctype-class.md#do_widen) kopiowania elementów bez zmian.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<locale >
+**Nagłówek:**\<locale>
 
 **Przestrzeń nazw:** std
 
 ## <a name="see-also"></a>Zobacz także
 
-[Klasa aspektów](locale-class.md#facet_class) \
-[Klasa ctype_base](../standard-library/ctype-base-class.md) \
-[Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[facet — Klasa](locale-class.md#facet_class)\
+[Klasa ctype_base](../standard-library/ctype-base-class.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

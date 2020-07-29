@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-ms.openlocfilehash: e66b0b3545b3f28a8f7b4ca14c29ffe1e0fc260c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 883710ad4538fb9081ad0c8cfaa169380ddbaf55
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939301"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213622"
 ---
 # <a name="carg-cargf-cargl"></a>carg, cargf, cargl
 
@@ -66,7 +66,7 @@ long double cargl(
 
 ### <a name="parameters"></a>Parametry
 
-*z*<br/>
+*porządku*<br/>
 Liczba złożona.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -75,11 +75,11 @@ Argument (znany również jako faza) *z.* Wynik jest w interwale [-π, + π].
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **carg** , które pobierają wartości **_Fcomplex** lub **_Lcomplex** i zwracają wartości **zmiennoprzecinkowe** lub **długie** **Double** . W programie C **carg** zawsze przyjmuje wartość **_Dcomplex** i zwraca wartość **podwójną** .
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **carg** , które pobierają wartości **_Fcomplex** lub **_Lcomplex** , i zwracają **`float`** lub **`long double`** wartości. W programie C **carg** zawsze przyjmuje wartość **_Dcomplex** i zwraca **`double`** wartość.
 
 ## <a name="requirements"></a>Wymagania
 
-|Procedura|Nagłówek języka C|C++nagłówki|
+|Procedura|Nagłówek języka C|Nagłówek C++|
 |-------------|--------------|------------------|
 |**carg**, **cargf**, **cargl**|\<complex.h>|\<ccomplex>|
 

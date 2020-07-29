@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2248
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
-ms.openlocfilehash: 843676638037aab9544f1fbd8c5c6d56d351e485
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d35ded4b06423be53911f3efd0b55d75cb979773
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80206560"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212816"
 ---
 # <a name="compiler-error-c2248"></a>Błąd kompilatora C2248
 
 "*member*": nie można uzyskać dostępu do składowej "*access_level*" zadeklarowanej w klasie "*class*"
 
-Elementy członkowskie klasy pochodnej nie mogą uzyskać dostępu `private` składowych klasy bazowej. Nie można uzyskać dostępu do `private` lub `protected` członków wystąpień klasy.
+Elementy członkowskie klasy pochodnej nie mogą uzyskać dostępu do **`private`** składowych klasy bazowej. Nie można uzyskać dostępu do **`private`** **`protected`** wystąpień klasy ani ich składowych.
 
 ## <a name="example"></a>Przykład
 
@@ -51,7 +51,7 @@ int main() {
 }
 ```
 
-Inny problem zgodności, który ujawnia C2248, to użycie znajomych i specjalizacji szablonów. Aby rozwiązać ten problem, należy zadeklarować zaprzyjaźnione funkcje szablonu za pomocą pustej listy parametrów szablonu < > lub określonych parametrów szablonu.
+Inny problem zgodności, który ujawnia C2248, to użycie znajomych i specjalizacji szablonów. Aby rozwiązać ten problem, należy zadeklarować zaprzyjaźnione funkcje szablonu przy użyciu pustej listy parametrów szablonu <> lub określonych parametrów szablonu.
 
 ```cpp
 // C2248_template.cpp

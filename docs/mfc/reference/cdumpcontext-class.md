@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-ms.openlocfilehash: e89bbc5f263dc9303140e43914619090109b8315
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3a81e06586e6de14d57ce4c4de36dc30c73383f1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753209"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212517"
 ---
 # <a name="cdumpcontext-class"></a>Klasa CDumpContext
 
-Obsługuje dane wyjściowe diagnostyczne zorientowane na strumień w postaci tekstu czytelnego dla człowieka.
+Obsługuje dane wyjściowe diagnostyki zorientowane strumieniowo w postaci tekstu do odczytu przez człowieka.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,45 +41,45 @@ class CDumpContext
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDumpContext::CDumpContext](#cdumpcontext)|Konstruuje `CDumpContext` obiekt.|
+|[CDumpContext:: CDumpContext](#cdumpcontext)|Konstruuje `CDumpContext` obiekt.|
 
 ### <a name="public-methods"></a>Metody publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDumpContext::DumpAsHex](#dumpashex)|Zrzuca wskazany element w formacie szesnastkowym.|
-|[CDumpContext::Opróżnianie](#flush)|Opróżnia wszystkie dane w buforze kontekstu zrzutu.|
-|[CDumpContext::GetDepth](#getdepth)|Pobiera liczbę całkowitą odpowiadającą głębokości zrzutu.|
-|[CDumpContext::HexDump](#hexdump)|Zrzutów bajtów zawartych w tablicy w formacie szesnastkowym.|
-|[CDumpContext::SetDepth](#setdepth)|Ustawia głębokość zrzutu.|
+|[CDumpContext::D umpAsHex](#dumpashex)|Zrzuca wskazany element w formacie szesnastkowym.|
+|[CDumpContext:: Flush](#flush)|Opróżnia wszystkie dane w buforze kontekstu zrzutu.|
+|[CDumpContext:: getgłębokości](#getdepth)|Pobiera liczbę całkowitą odpowiadającą głębokości zrzutu.|
+|[CDumpContext:: HexDump](#hexdump)|Zrzuca bajty zawarte w tablicy w formacie szesnastkowym.|
+|[CDumpContext:: setgłębokości](#setdepth)|Ustawia głębokość zrzutu.|
 
 ### <a name="public-operators"></a>Operatory publiczne
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[CDumpContext::operator&lt;&lt;](#operator_lt_lt)|Wstawia zmienne i obiekty do kontekstu zrzutu.|
+|[CDumpContext:: operator&lt;&lt;](#operator_lt_lt)|Wstawia zmienne i obiekty do kontekstu zrzutu.|
 
 ## <a name="remarks"></a>Uwagi
 
-`CDumpContext`nie ma klasy podstawowej.
+`CDumpContext`nie ma klasy bazowej.
 
-Możesz użyć [afxDump](diagnostic-services.md#afxdump), wstępnie `CDumpContext` zadeklarowanego obiektu, dla większości dumpingu. Obiekt `afxDump` jest dostępny tylko w wersji debugowania biblioteki klas programu Microsoft Foundation.
+W przypadku większości dumpingu można użyć [afxDump](diagnostic-services.md#afxdump), wstępnie zadeklarowanego `CDumpContext` obiektu. `afxDump`Obiekt jest dostępny tylko w wersji Debug Biblioteka MFC.
 
-Kilka usług [diagnostycznych](../../mfc/reference/diagnostic-services.md) `afxDump` pamięci używać do ich danych wyjściowych.
+Kilka z [usług diagnostycznych](../../mfc/reference/diagnostic-services.md) pamięci używa `afxDump` do ich danych wyjściowych.
 
-W środowisku systemu Windows dane wyjściowe `afxDump` ze wstępnie zdefiniowanego `cerr` obiektu, koncepcyjnie podobne do `OutputDebugString`strumienia, są kierowane do debugera za pośrednictwem funkcji systemu Windows .
+W środowisku systemu Windows dane wyjściowe ze wstępnie zdefiniowanego `afxDump` obiektu, koncepcyjnie podobny do `cerr` strumienia, są kierowane do debugera za pośrednictwem funkcji systemu Windows `OutputDebugString` .
 
-Klasa `CDumpContext` ma przeciążony operator wstawiania ( **<<**) dla `CObject` wskaźników, które zrzuca dane obiektu. Jeśli potrzebujesz niestandardowego formatu zrzutu dla obiektu pochodnego, należy zastąpić [CObject::Dump](../../mfc/reference/cobject-class.md#dump). Większość klas programu Microsoft Foundation `Dump` implementuje zastąpioną funkcję elementu członkowskiego.
+`CDumpContext`Klasa ma przeciążony operator wstawiania ( **<<** ) dla `CObject` wskaźników, które zrzucają dane obiektu. Jeśli potrzebujesz niestandardowego formatu zrzutu dla obiektu pochodnego, Przesłoń [CObject::D UMP](../../mfc/reference/cobject-class.md#dump). Większość klas Microsoft Foundation implementuje przesłoniętą `Dump` funkcję członkowską.
 
-Klasy, które nie `CObject`są pochodną `CTime`, `CTimeSpan`takich jak `CString`, `CDumpContext` i , mają własne przeciążone operatory wstawiania, podobnie jak często używane struktury, takie jak `CFileStatus`, `CPoint`i `CRect`.
+Klasy, które nie pochodzą z `CObject` , takie jak `CString` , `CTime` i `CTimeSpan` mają własne przeciążone `CDumpContext` Operatory wstawiania, tak jak często używane struktury, takie jak `CFileStatus` , `CPoint` i `CRect` .
 
-Jeśli użyjesz [makra IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) lub [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) w implementacji klasy, spowoduje `CObject::Dump` wydrukowanie `CObject`nazwy klasy pochodnej. W przeciwnym razie `CObject`zostanie wydrukowany plik .
+Jeśli używasz makra [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) lub [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) w implementacji klasy, `CObject::Dump` zostanie wydrukowana nazwa `CObject` klasy pochodnej. W przeciwnym razie zostanie wydrukowany `CObject` .
 
-Klasa `CDumpContext` jest dostępna zarówno w wersji debugowania i `Dump` wydania biblioteki, ale funkcja elementu członkowskiego jest zdefiniowana tylko w wersji debugowania. Użyj **instrukcji #ifdef _DEBUG,**  /  `#endif` aby zassmować kod `Dump` diagnostyczny, w tym niestandardowe funkcje członkowskie.
+`CDumpContext`Klasa jest dostępna zarówno dla wersji debugowania, jak i wersji biblioteki, ale `Dump` funkcja członkowska jest definiowana tylko w wersji do debugowania. Użyj instrukcji **#ifdef _DEBUG**  /  `#endif` , aby przeciągać kod diagnostyczny, łącznie z niestandardowymi `Dump` funkcjami składowymi.
 
-Przed utworzeniem `CDumpContext` własnego obiektu należy `CFile` utworzyć obiekt, który służy jako miejsce docelowe zrzutu.
+Przed utworzeniem własnego obiektu należy `CDumpContext` utworzyć `CFile` obiekt, który służy jako miejsce docelowe zrzutu.
 
-Aby uzyskać `CDumpContext`więcej informacji na temat , zobacz [Debugowanie aplikacji MFC](/visualstudio/debugger/mfc-debugging-techniques).
+Aby uzyskać więcej informacji na temat `CDumpContext` , zobacz [debugowanie aplikacji MFC](/visualstudio/debugger/mfc-debugging-techniques).
 
 **#define _DEBUG**
 
@@ -89,11 +89,11 @@ Aby uzyskać `CDumpContext`więcej informacji na temat , zobacz [Debugowanie apl
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** afx.h
+**Nagłówek:** AFX. h
 
-## <a name="cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a>CDumpContext::CDumpContext
+## <a name="cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a>CDumpContext:: CDumpContext
 
-Konstruuje obiekt `CDumpContext`klasy .
+Konstruuje obiekt klasy `CDumpContext` .
 
 ```
 CDumpContext(CFile* pFile = NULL);
@@ -101,20 +101,20 @@ CDumpContext(CFile* pFile = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*p Plik*<br/>
+*pFile*<br/>
 Wskaźnik do `CFile` obiektu, który jest miejscem docelowym zrzutu.
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt `afxDump` jest konstruowany automatycznie.
+`afxDump`Obiekt jest konstruowany automatycznie.
 
-Nie zapisuj `CFile` do podstawowej, gdy kontekst zrzutu jest aktywny; w przeciwnym razie będzie kolidować z wysypiskiem. W środowisku systemu Windows dane wyjściowe są kierowane `OutputDebugString`do debugera za pośrednictwem funkcji systemu Windows .
+Nie zapisuj w źródłowym czasie, `CFile` gdy kontekst zrzutu jest aktywny; w przeciwnym razie będzie przeszkadzać w zrzucie. W środowisku systemu Windows dane wyjściowe są kierowane do debugera za pośrednictwem funkcji systemu Windows `OutputDebugString` .
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_Utilities#12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]
 
-## <a name="cdumpcontextdumpashex"></a><a name="dumpashex"></a>CDumpContext::DumpAsHex
+## <a name="cdumpcontextdumpashex"></a><a name="dumpashex"></a>CDumpContext::D umpAsHex
 
 Zrzuca określony typ sformatowany jako liczby szesnastkowe.
 
@@ -135,15 +135,15 @@ Odwołanie do `CDumpContext` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołanie tej funkcji elementu członkowskiego, aby zrzucić element określonego typu jako numer szesnastkowy. Aby zrzucić tablicę, wywołanie [CDumpContext::HexDump](#hexdump).
+Wywołaj tę funkcję elementu członkowskiego, aby zrzucić element określonego typu jako liczbę szesnastkową. Aby zrzucić tablicę, wywołaj [CDumpContext:: hexdump](#hexdump).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_Utilities#13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]
 
-## <a name="cdumpcontextflush"></a><a name="flush"></a>CDumpContext::Opróżnianie
+## <a name="cdumpcontextflush"></a><a name="flush"></a>CDumpContext:: Flush
 
-Wymusza wszystkie dane pozostające w buforach do zapisania w pliku dołączonym do kontekstu zrzutu.
+Wymusza, aby wszystkie pozostałe dane w buforach były zapisywane do pliku dołączonego do kontekstu zrzutu.
 
 ```cpp
 void Flush();
@@ -153,9 +153,9 @@ void Flush();
 
 [!code-cpp[NVC_MFC_Utilities#14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]
 
-## <a name="cdumpcontextgetdepth"></a><a name="getdepth"></a>CDumpContext::GetDepth
+## <a name="cdumpcontextgetdepth"></a><a name="getdepth"></a>CDumpContext:: getgłębokości
 
-Określa, czy głęboki lub płytki zrzut jest w trakcie procesu.
+Określa, czy zrzut głębokiego lub płytki jest w toku.
 
 ```
 int GetDepth() const;
@@ -163,15 +163,15 @@ int GetDepth() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Głębokość zrzutu ustawiona `SetDepth`przez .
+Głębokość zrzutu ustawiona przez `SetDepth` .
 
 ### <a name="example"></a>Przykład
 
-  Zobacz przykład [setDepth](#setdepth).
+  Zobacz przykład dla elementu [setgłębokości](#setdepth).
 
-## <a name="cdumpcontexthexdump"></a><a name="hexdump"></a>CDumpContext::HexDump
+## <a name="cdumpcontexthexdump"></a><a name="hexdump"></a>CDumpContext:: HexDump
 
-Zrzuca tablicę bajtów sformatowanych jako liczby szesnastkowe.
+Zrzuca tablicę bajtów sformatowaną jako liczby szesnastkowe.
 
 ```cpp
 void HexDump(
@@ -183,27 +183,27 @@ void HexDump(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszLine (linia lpszLine)*<br/>
-Ciąg wyjściowy na początku nowego wiersza.
+*lpszLine*<br/>
+Ciąg do wyjścia na początku nowego wiersza.
 
-*pby (polski)*<br/>
+*pby*<br/>
 Wskaźnik do buforu zawierającego bajty do zrzutu.
 
-*n Bajty*<br/>
-Liczba bajtów do zrzucenia.
+*nBytes*<br/>
+Liczba bajtów do zrzutu.
 
-*nWidth (ww.*<br/>
-Maksymalna liczba bajtów po cenach dumpingowych na linię (a nie szerokość linii wyjściowej).
+*nWidth*<br/>
+Maksymalna liczba bajtów zrzucanych na wiersz (nie szerokość linii wyjściowej).
 
 ### <a name="remarks"></a>Uwagi
 
-Aby zrzucić pojedynczy, określony typ elementu jako numer szesnastkowy, zadzwoń [do CDumpContext::DumpAsHex](#dumpashex).
+Aby zrzucić pojedynczy, konkretny typ elementu jako liczbę szesnastkową, wywołaj [CDumpContext::D umpashex](#dumpashex).
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_Utilities#15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]
 
-## <a name="cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a>CDumpContext::operator&lt;&lt;
+## <a name="cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a>CDumpContext:: operator&lt;&lt;
 
 Wyprowadza określone dane do kontekstu zrzutu.
 
@@ -233,21 +233,21 @@ CDumpContext& operator<<(HFONT h);
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie. `CDumpContext` Za pomocą zwracanej wartości można zapisać wiele wstawień w jednym wierszu kodu źródłowego.
+`CDumpContext`Odwołanie. Przy użyciu wartości zwracanej można napisać wiele wstawek w jednym wierszu kodu źródłowego.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator wstawiania jest `CObject` przeciążony dla wskaźników, a także dla większości typów pierwotnych. Wskaźnik do znaku powoduje zrzut zawartości ciągu; wskaźnik do **void** powoduje szesnastkowe zrzutu adresu tylko. Longlong powoduje zrzut 64-bitowej liczby całkowitej podpisanej; ULONGLONG powoduje zrzut 64-bitowej niepodpisanej liczby całkowitej.
+Operator wstawiania jest przeciążony dla `CObject` wskaźników oraz dla większości typów pierwotnych. Wskaźnik do znaku powoduje zrzut treści ciągu; wskaźnik do **`void`** wyniku w szesnastkowym zrzucie tylko adresu. LONGLONG skutkuje zrzutem 64-bitowej liczby całkowitej ze znakiem; ULONGLONG skutkuje zrzutem 64-bitowej liczby całkowitej bez znaku.
 
-Jeśli użyjesz makra IMPLEMENT_DYNAMIC lub IMPLEMENT_SERIAL w implementacji klasy, operator wstawiania, za `CObject::Dump`pośrednictwem `CObject`, wydrukuje nazwę klasy pochodnej. W przeciwnym razie `CObject`zostanie wydrukowany plik . Jeśli zastąpisz `Dump` funkcję klasy, możesz podać bardziej znaczące dane wyjściowe zawartości obiektu zamiast zrzutu szesnastkowego.
+W przypadku użycia makra IMPLEMENT_DYNAMIC lub IMPLEMENT_SERIAL w implementacji klasy, operator wstawiania, przez `CObject::Dump` , będzie drukował nazwę `CObject` klasy pochodnej. W przeciwnym razie zostanie wydrukowany `CObject` . Jeśli zastąpisz `Dump` funkcję klasy, możesz podać bardziej zrozumiały wynik zawartości obiektu zamiast zrzutu szesnastkowego.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_Utilities#17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]
 
-## <a name="cdumpcontextsetdepth"></a><a name="setdepth"></a>CDumpContext::SetDepth
+## <a name="cdumpcontextsetdepth"></a><a name="setdepth"></a>CDumpContext:: setgłębokości
 
-Ustawia głębokość dla zrzutu.
+Ustawia głębokość zrzutu.
 
 ```cpp
 void SetDepth(int nNewDepth);
@@ -260,16 +260,16 @@ Nowa wartość głębokości.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli są dumpingu typu pierwotnego `CObject` lub proste, który nie zawiera żadnych wskaźników do innych obiektów, a następnie wartość 0 jest wystarczająca. Wartość większa niż 0 określa głęboki zrzut, w którym wszystkie obiekty są po cenach dumpingowych cyklicznie. Na przykład głębokie zrzutu kolekcji zrzuci wszystkie elementy kolekcji. Można użyć innych określonych wartości głębokości w klasach pochodnych.
+W przypadku zatopienia typu pierwotnego lub prostego `CObject` , który nie zawiera wskaźników do innych obiektów, wartość 0 jest wystarczająca. Wartość większa niż 0 określa zrzut głębokiego, w którym wszystkie obiekty są rekursywnie roztopione. Na przykład głębokie zrzut kolekcji spowoduje zrzut wszystkich elementów kolekcji. W klasach pochodnych można używać innych konkretnych wartości głębokości.
 
 > [!NOTE]
-> Odwołania cykliczne nie są wykrywane w głębokich zrzutach i mogą powodować nieskończone pętle.
+> Odwołania cykliczne nie są wykrywane w przypadku zrzutów głębokiego i mogą powodować nieskończone pętle.
 
 ### <a name="example"></a>Przykład
 
 [!code-cpp[NVC_MFC_Utilities#16](../../mfc/codesnippet/cpp/cdumpcontext-class_6.cpp)]
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Wykres hierarchii](../../mfc/hierarchy-chart.md)<br/>
 [Klasa CFile](../../mfc/reference/cfile-class.md)<br/>

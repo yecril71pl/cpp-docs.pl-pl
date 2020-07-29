@@ -1,25 +1,25 @@
 ---
-title: Kompilator ostrzeżenie (poziom 4) C4062
+title: Ostrzeżenie kompilatora (poziom 4) C4062
 ms.date: 04/05/2019
 f1_keywords:
 - C4062
 helpviewer_keywords:
 - C4062
 ms.assetid: 36d1c6ae-c917-4b08-bf30-2eb49ee94169
-ms.openlocfilehash: 79658afc31565b708cdbd8a88f49b887cdd10cf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efe021c9994e20f2630e31537bcc6099783b4308
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401413"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220005"
 ---
-# <a name="compiler-warning-level-4-c4062"></a>Kompilator ostrzeżenie (poziom 4) C4062
+# <a name="compiler-warning-level-4-c4062"></a>Ostrzeżenie kompilatora (poziom 4) C4062
 
-> Moduł wyliczający "*identyfikator*'w przełączniku Enum'*wyliczenie*" nie jest obsługiwany
+> moduł wyliczający "*Identifier*" w instrukcji Switch*wyliczenia "enum" nie*jest obsługiwany
 
-Moduł wyliczający *identyfikator* nie ma przypisanego skojarzone `case` obsługi w `switch` instrukcji i ma nie `default` etykietę, która może przechwycić go. Brak przypadku może być nadzoru i potencjalny błąd w kodzie. Powiązane ostrzeżenia na nieużywanych moduły wyliczające w `switch` instrukcje, które `default` przypadku zobacz [C4061](compiler-warning-level-4-c4061.md).
+*Identyfikator* modułu wyliczającego nie ma skojarzonego `case` programu obsługi w **`switch`** instrukcji i nie ma **`default`** etykiety, która może go przechwycić. Brakująca sprawa może być nadzorem i jest potencjalnym błędem w kodzie. Aby uzyskać ostrzeżenie dotyczące nieużywanych modułów wyliczających w **`switch`** instrukcjach **`default`** , które mają przypadek, zobacz [C4061](compiler-warning-level-4-c4061.md).
 
-To ostrzeżenie jest domyślnie wyłączona. Aby uzyskać więcej informacji o sposobie włączania ostrzeżeń, które są domyślnie wyłączone, zobacz [kompilatora ostrzeżenia, są wyłączone domyślnie](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+To ostrzeżenie jest domyślnie wyłączone. Aby uzyskać więcej informacji o sposobie włączania ostrzeżeń, które są domyślnie wyłączone, zobacz [ostrzeżenia kompilatora, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Przykład
 

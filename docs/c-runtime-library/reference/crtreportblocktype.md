@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-ms.openlocfilehash: cd50de1d1ade1d83b97bc465ff7e4c73b52fba2d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1fccb66632e832b491832cfac12fb1940bdf0f87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942337"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213596"
 ---
 # <a name="_crtreportblocktype"></a>_CrtReportBlockType
 
@@ -55,11 +55,11 @@ Wskaźnik do prawidłowego bloku sterty debugowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Gdy przeszedł prawidłowy wskaźnik debugowania, funkcja **_CrtReportBlockType** zwraca typ bloku i podtyp w postaci **int**. Po przekazaniu nieprawidłowego wskaźnika funkcja zwraca wartość-1.
+Gdy przeszedł prawidłowy wskaźnik debugowania, funkcja **_CrtReportBlockType** zwraca typ bloku i podtyp w postaci **`int`** . Po przekazaniu nieprawidłowego wskaźnika funkcja zwraca wartość-1.
 
 ## <a name="remarks"></a>Uwagi
 
-Aby wyodrębnić typ i podtyp zwracany przez **_CrtReportBlockType**, użyj makr **_BLOCK_TYPE** i **_BLOCK_SUBTYPE** (zdefiniowanych w CRTDBG. h) dla zwracanej wartości.
+Aby wyodrębnić typ i podtyp zwracany przez **_CrtReportBlockType**, użyj makr **_BLOCK_TYPE** i **_BLOCK_SUBTYPE** (zdefiniowane w CRTDBG. h) dla zwracanej wartości.
 
 Aby uzyskać informacje o typach bloków alokacji i sposobach ich użycia, zobacz [typy bloków na stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
 

@@ -1,5 +1,5 @@
 ---
-title: offsetof Macro
+title: makro OffsetOf — makro
 ms.date: 11/04/2016
 api_location:
 - msvcrt.dll
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-ms.openlocfilehash: 278fca89046fcfc98e8c3ff726918cb4319e4ab0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ee6d5e56bb9f41a842e53984f754c7c07d58a125
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951252"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213505"
 ---
-# <a name="offsetof-macro"></a>offsetof Macro
+# <a name="offsetof-macro"></a>makro OffsetOf — makro
 
 Pobiera przesunięcie elementu członkowskiego od początku jego struktury nadrzędnej.
 
@@ -44,7 +44,7 @@ size_t offsetof(
 
 ### <a name="parameters"></a>Parametry
 
-*structName*<br/>
+*Typ struktury*<br/>
 Nazwa nadrzędnej struktury danych.
 
 *memberName*<br/>
@@ -56,7 +56,7 @@ Nazwa elementu członkowskiego w nadrzędnej strukturze danych, dla którego ma 
 
 ## <a name="remarks"></a>Uwagi
 
-Makro **makro OffsetOf** zwraca przesunięcie w bajtach *elementu MemberName* od początku struktury określonej przez *structname* jako wartość typu **size_t**. Można określić typy za pomocą słowa kluczowego **struct** .
+Makro **makro OffsetOf** zwraca przesunięcie w bajtach *elementu MemberName* od początku struktury określonej przez *structname* jako wartość typu **size_t**. Możesz określić typy za pomocą **`struct`** słowa kluczowego.
 
 > [!NOTE]
 > **makro OffsetOf** nie jest funkcją i nie można jej opisać przy użyciu prototypu języka C.
@@ -65,7 +65,7 @@ Makro **makro OffsetOf** zwraca przesunięcie w bajtach *elementu MemberName* od
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**offsetof**|\<stddef.h>|
+|**makro OffsetOf**|\<stddef.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

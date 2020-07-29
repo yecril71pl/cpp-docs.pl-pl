@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4714
 ms.assetid: 22c7fd0c-899d-4e9b-95f3-725b2c49fb46
-ms.openlocfilehash: 8ea4212eaddf14546827728b31299063021a959f
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 286a9e6e12643d3dadd070e7c4cf4b2dd350c02c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74989639"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219862"
 ---
 # <a name="compiler-warning-level-4-c4714"></a>Ostrzeżenie kompilatora (poziom 4) C4714
 
-Funkcja "Function" oznaczona jako __forceinline nie została wbudowana
+> Funkcja "Function" oznaczona jako __forceinline nie została wbudowana
 
 Dana funkcja została wybrana do rozwijania wbudowanego, ale kompilator nie przeprowadził tworzenia konspektu.
 
-Chociaż `__forceinline` jest silniejszym wskazaniem kompilatora niż `__inline`, funkcja tworzenia konspektu jest nadal wykonywana na podstawie uznania kompilatora, ale nie są używane żadne algorytmy heurystyczne w celu określenia korzyści ze stosowania tej funkcji.
+Chociaż **`__forceinline`** jest to silniejszy wskaźnik do kompilatora niż **`__inline`** , jest nadal wykonywane na podstawie uznania kompilatora, ale nie są używane żadne algorytmy heurystyczne w celu określenia korzyści ze stosowania tej funkcji.
 
 W niektórych przypadkach kompilator nie będzie wbudowanej określonej funkcji dla powodów mechanicznych. Na przykład kompilator nie będzie wbudowany:
 
@@ -33,7 +33,7 @@ W niektórych przypadkach kompilator nie będzie wbudowanej określonej funkcji 
 
 - Działa z listą argumentów zmiennych.
 
-- Funkcja z instrukcją **try** (C++ obsługa wyjątków).
+- Funkcja z **`try`** instrukcją (obsługa wyjątków C++).
 
 Poniższy przykład generuje C4714:
 

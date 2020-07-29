@@ -33,12 +33,12 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: e5e313f08fc7e6d00a1cffc9522d3c8a818cd152
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fb171d622d5bc187342054a74e8aa19f83c3c560
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917228"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213609"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
@@ -59,7 +59,7 @@ long double cosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*y*<br/>
+*x*<br/>
 Kąt w radianach.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -71,11 +71,11 @@ Domyślnie, jeśli wynik jest za duży w wywołaniu **cosh —**, **coshf —** 
 |Dane wejściowe|Wyjątek SEH|Wyjątek Matherr|
 |-----------|-------------------|-----------------------|
 |**QNAN**, **IND**|brak|**_DOMAIN**|
-|*x* ≥ 7.104760 e + 002|**niedokładne**+**przepełnienie**|**PRZEPŁYW**|
+|*x* ≥ 7.104760 e + 002|**NIEdokładne** + **Przepełnienie**|**PRZEPŁYW**|
 
 ## <a name="remarks"></a>Uwagi
 
-Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cosh —** , które pobierają i zwracają wartości **zmiennoprzecinkowe** lub **długie** o **podwójnej precyzji** . W programie C **cosh —** zawsze przyjmuje i zwraca wartość **Double**.
+Ponieważ C++ pozwala na Przeciążenie, można wywoływać przeciążenia **cosh —** , które pobierają i zwracają **`float`** **`long double`** wartości. W programie C **cosh —** zawsze przyjmuje i zwraca **`double`** .
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -83,7 +83,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek (C)|Wymagany nagłówek (C++)|
 |-------------|---------------------|-|
-|**coshf —**, **COSL**, **coshl**|\<> Math. h|\<cmath> lub \<Math. h>|
+|**coshf —**, **COSL**, **coshl**|\<math.h>|\<cmath> lub \<math.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -91,7 +91,7 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runt
 
 Zobacz przykład w [SINH, sinhf —, sinh](sinh-sinhf-sinhl.md).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
