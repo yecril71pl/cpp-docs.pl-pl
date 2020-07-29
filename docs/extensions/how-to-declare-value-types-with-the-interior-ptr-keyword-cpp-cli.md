@@ -6,25 +6,25 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 46f8c39affe5a3c0ad8648162f0fde5371eb30ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172285"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195580"
 ---
 # <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>Poradnik: Deklarowanie typów wartości za pomocą słowa kluczowego interior_ptr (C++/CLI)
 
 **Interior_ptr** może być używana z typem wartości.
 
 > [!IMPORTANT]
-> Ta funkcja języka jest obsługiwana przez opcję kompilatora `/clr`, ale nie za pomocą opcji kompilatora `/ZW`.
+> Ta funkcja języka jest obsługiwana przez `/clr` opcję kompilatora, ale nie przez `/ZW` opcję kompilatora.
 
 ## <a name="example"></a>Przykład
 
 ### <a name="description"></a>Opis
 
-Poniższy C++przykład/CLI pokazuje, jak używać **interior_ptr** z typem wartości.
+Poniższy przykład C++/CLI pokazuje, jak używać **interior_ptr** z typem wartości.
 
 ### <a name="code"></a>Kod
 
@@ -69,9 +69,9 @@ int main() {
 
 ### <a name="description"></a>Opis
 
-W typie wartości wskaźnik **ten** jest obliczany do interior_ptr.
+W typie wartości **`this`** wskaźnik szacuje się interior_ptr.
 
-W treści niestatycznej funkcji składowej typu wartości `V`jest **to** wyrażenie typu `interior_ptr<V>` którego wartość jest adresem obiektu, dla którego wywoływana jest funkcja.
+W treści niestatycznej funkcji składowej typu wartości `V` , **`this`** jest wyrażeniem typu, `interior_ptr<V>` którego wartość jest adresem obiektu, dla którego wywoływana jest funkcja.
 
 ### <a name="code"></a>Kod
 
@@ -93,7 +93,7 @@ value struct V {
 
 Poniższy przykład pokazuje, jak używać operatora address-of ze statycznymi składowymi.
 
-Adres statycznego elementu członkowskiego C++ typu wizualizacji daje wskaźnik natywny.  Adres elementu członkowskiego typu wartości statycznej jest wskaźnikiem zarządzanym, ponieważ element członkowski typu wartości jest przypisywany na stercie środowiska uruchomieniowego i może być przenoszony przez moduł zbierający elementy bezużyteczne.
+Adres elementu członkowskiego typu statycznego Visual C++ zwraca wskaźnik natywny.  Adres elementu członkowskiego typu wartości statycznej jest wskaźnikiem zarządzanym, ponieważ element członkowski typu wartości jest przypisywany na stercie środowiska uruchomieniowego i może być przenoszony przez moduł zbierający elementy bezużyteczne.
 
 ### <a name="code"></a>Kod
 
@@ -127,6 +127,6 @@ int main() {
 hello
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)

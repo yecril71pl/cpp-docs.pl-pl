@@ -1,5 +1,5 @@
 ---
-title: zdarzenie (C++/CLI i C++/CX)
+title: zdarzenie  (C++/CLI i C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 90682ba699f6316cb6b38a3b78c44e853cd5473f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8a0674defb0f5e81e0d1417bab5a282cf82b82b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172389"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195697"
 ---
-# <a name="event--ccli-and-ccx"></a>zdarzenie (C++/CLI i C++/CX)
+# <a name="event--ccli-and-ccx"></a>zdarzenie  (C++/CLI i C++/CX)
 
 Słowo kluczowe **zdarzenia** deklaruje *zdarzenie*, które jest powiadomieniem do zarejestrowanych subskrybentów (*programy obsługi zdarzeń*), które miały coś interesu.
 
 ## <a name="all-runtimes"></a>Wszystkie środowiska wykonawcze
 
-C++/CX obsługuje deklarowanie *elementu członkowskiego zdarzenia* lub *bloku zdarzeń*. Element członkowski zdarzenia jest skrótem do deklarowania bloku zdarzeń. Domyślnie członek zdarzenia deklaruje funkcje `add()`, `remove()`i `raise()`, które są zadeklarowane jawnie w bloku zdarzeń. Aby dostosować funkcje w składowej zdarzenia, zadeklaruj blok zdarzenia zamiast tego, a następnie zastąp wymagane funkcje.
+C++/CX obsługuje deklarowanie *elementu członkowskiego zdarzenia* lub *bloku zdarzeń*. Element członkowski zdarzenia jest skrótem do deklarowania bloku zdarzeń. Domyślnie członek zdarzenia deklaruje `add()` funkcje, i, `remove()` `raise()` które są zadeklarowane jawnie w bloku zdarzenia. Aby dostosować funkcje w składowej zdarzenia, zadeklaruj blok zdarzenia zamiast tego, a następnie zastąp wymagane funkcje.
 
 ### <a name="syntax"></a>Składnia
 
@@ -41,19 +41,19 @@ modifiereventdelegate^ event_name
 ### <a name="parameters"></a>Parametry
 
 *modyfikator*<br/>
-Modyfikator, który może być używany w deklaracji zdarzenia lub metodzie dostępu do zdarzeń.  Możliwe wartości są **statyczne** i **wirtualne**.
+Modyfikator, który może być używany w deklaracji zdarzenia lub metodzie dostępu do zdarzeń.  Możliwe wartości to **`static`** i **`virtual`** .
 
-*delegate*<br/>
+*Wierz*<br/>
 [Delegat](delegate-cpp-component-extensions.md), którego sygnatura musi być zgodna z programem obsługi zdarzeń.
 
 *event_name*<br/>
 Nazwa zdarzenia.
 
 *return_value*<br/>
-Wartość zwracana metody dostępu do zdarzenia.  Aby można było zweryfikować, zwracany typ musi być typem **void**.
+Wartość zwracana metody dostępu do zdarzenia.  Aby można było zweryfikować, zwracany typ musi być **`void`** .
 
-*parameters*<br/>
-obowiązkowe Parametry metody `raise`, które pasują do sygnatury parametru *delegata* .
+*wejściowe*<br/>
+obowiązkowe Parametry `raise` metody, które pasują do sygnatury parametru *delegata* .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -62,12 +62,12 @@ Zdarzenie jest skojarzeniem między delegatem a funkcją członkowską (procedur
 Istnieją dwa rodzaje deklaracji zdarzeń:
 
 *element członkowski danych zdarzenia*<br/>
-Kompilator automatycznie tworzy magazyn dla zdarzenia w postaci elementu członkowskiego typu delegata, a następnie tworzy wewnętrzne `add()`, `remove()`i `raise()` funkcje składowe. Składowa danych zdarzenia musi być zadeklarowana wewnątrz klasy. Zwracany typ typu zwracanego delegata musi być zgodny z typem zwracanym programu obsługi zdarzeń.
+Kompilator automatycznie tworzy magazyn dla zdarzenia w postaci elementu członkowskiego typu delegata i tworzy `add()` funkcje wewnętrzne, `remove()` i i `raise()` składowe. Składowa danych zdarzenia musi być zadeklarowana wewnątrz klasy. Zwracany typ typu zwracanego delegata musi być zgodny z typem zwracanym programu obsługi zdarzeń.
 
 *blok zdarzeń*<br/>
-Blok zdarzeń umożliwia jawne deklarowanie i Dostosowywanie zachowania `add()`, `remove()`i `raise()` metod.
+Blok zdarzeń pozwala jawnie zadeklarować i dostosować zachowanie `add()` `remove()` metod,, i `raise()` .
 
-**Operatory + =** i **operator-=** umożliwiają dodawanie i usuwanie programu obsługi zdarzeń lub wywołaj metody `add()` i `remove()` jawnie.
+**Operatory + =** i **operator-=** umożliwiają dodawanie i usuwanie programu obsługi zdarzeń, a także wywoływanie `add()` `remove()` metod i.
 
 **zdarzenie** jest kontekstowego słowa kluczowego; Aby uzyskać więcej informacji, zobacz [kontekstowe słowa kluczowe](context-sensitive-keywords-cpp-component-extensions.md) .
 
@@ -75,13 +75,13 @@ Blok zdarzeń umożliwia jawne deklarowanie i Dostosowywanie zachowania `add()`,
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji, zobacz [EventsC++(/CX)](../cppcx/events-c-cx.md).
+Aby uzyskać więcej informacji, zobacz [Events (C++/CX)](../cppcx/events-c-cx.md).
 
 Jeśli zamierzasz dodać, a następnie usunąć procedurę obsługi zdarzeń, musisz zapisać strukturę EventRegistrationToken, która jest zwracana przez operację dodawania. Następnie w operacji usuwania należy użyć zapisanej struktury EventRegistrationToken, aby zidentyfikować procedurę obsługi zdarzeń, która ma zostać usunięta.
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: `/ZW`
+Opcja kompilatora:`/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -105,19 +105,19 @@ modifiereventdelegate^ event_name
 ### <a name="parameters"></a>Parametry
 
 *modyfikator*<br/>
-Modyfikator, który może być używany w deklaracji zdarzenia lub metodzie dostępu do zdarzeń.  Możliwe wartości są **statyczne** i **wirtualne**.
+Modyfikator, który może być używany w deklaracji zdarzenia lub metodzie dostępu do zdarzeń.  Możliwe wartości to **`static`** i **`virtual`** .
 
-*delegate*<br/>
+*Wierz*<br/>
 [Delegat](delegate-cpp-component-extensions.md), którego sygnatura musi być zgodna z programem obsługi zdarzeń.
 
 *event_name*<br/>
 Nazwa zdarzenia.
 
 *return_value*<br/>
-Wartość zwracana metody dostępu do zdarzenia.  Aby można było zweryfikować, zwracany typ musi być typem **void**.
+Wartość zwracana metody dostępu do zdarzenia.  Aby można było zweryfikować, zwracany typ musi być **`void`** .
 
-*parameters*<br/>
-obowiązkowe Parametry metody `raise`, które pasują do sygnatury parametru *delegata* .
+*wejściowe*<br/>
+obowiązkowe Parametry `raise` metody, które pasują do sygnatury parametru *delegata* .
 
 ### <a name="remarks"></a>Uwagi
 
@@ -135,11 +135,11 @@ Bloki zdarzeń pozwalają dostosować zachowanie metod dodawania, usuwania i wyw
 
 Zwracany typ procedury obsługi zdarzeń musi być zgodny z typem zwracanym delegata.
 
-W .NET Framework można traktować składową danych tak, jakby była to sama metoda (czyli `Invoke` Metoda odpowiadającego mu delegata). Należy wstępnie zdefiniować typ delegata do deklarowania elementu członkowskiego danych zdarzenia zarządzanego. W przeciwieństwie do zarządzanej metody zdarzenia niejawnie definiuje odpowiadającą zarządzaną delegata, jeśli nie jest jeszcze zdefiniowana.  Przykład zawiera przykładowy kod na końcu tego tematu.
+W .NET Framework można traktować składową danych tak, jakby była to sama metoda (czyli `Invoke` Metoda odpowiedniego delegata). Należy wstępnie zdefiniować typ delegata do deklarowania elementu członkowskiego danych zdarzenia zarządzanego. W przeciwieństwie do zarządzanej metody zdarzenia niejawnie definiuje odpowiadającą zarządzaną delegata, jeśli nie jest jeszcze zdefiniowana.  Przykład zawiera przykładowy kod na końcu tego tematu.
 
 Podczas deklarowania zdarzenia zarządzanego można określić metody dostępu Add i Remove, które będą wywoływane, gdy programy obsługi zdarzeń zostaną dodane lub usunięte przy użyciu operatorów + = i-=. Metody dodawania, usuwania i wywoływania mogą być wywoływane jawnie.
 
-Aby można było tworzyć i używać zdarzeń w wizualizacji C++, należy wykonać następujące czynności:
+Aby można było tworzyć i używać zdarzeń w Visual C++, należy wykonać następujące czynności:
 
 1. Utwórz lub Zidentyfikuj delegata. W przypadku definiowania własnego zdarzenia należy również upewnić się, że istnieje delegat do użycia ze słowem kluczowym **zdarzenia** . Jeśli zdarzenie jest wstępnie zdefiniowane, w .NET Framework na przykład, odbiorcy zdarzenia muszą znać nazwę delegata.
 
@@ -161,13 +161,13 @@ Aby można było tworzyć i używać zdarzeń w wizualizacji C++, należy wykona
 
    - Utwórz obiekt klasy, która zawiera definicję zdarzenia.
 
-Aby uzyskać więcej informacji C++o zdarzeniach/CLI, zobacz
+Aby uzyskać więcej informacji o zdarzeniach/CLI języka C++, zobacz
 
 - [Zdarzenia w interfejsie](../dotnet/how-to-use-events-in-cpp-cli.md)
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: `/clr`
+Opcja kompilatora:`/clr`
 
 ### <a name="examples"></a>Przykłady
 
@@ -230,7 +230,7 @@ OnClick: 7, 3.14159
 OnDblClick: Hello
 ```
 
-Poniższy przykład kodu demonstruje logikę używaną do generowania metody `raise` prostego zdarzenia: Jeśli zdarzenie ma jednego lub więcej subskrybentów, wywołanie metody `raise` niejawnie lub jawnie wywołuje delegata. Jeśli typ zwracany delegata nie jest typem **void** i jeśli nie istnieją Subskrybenci zdarzeń, Metoda `raise` zwraca wartość domyślną dla typu delegata. Jeśli nie ma subskrybentów zdarzeń, wywołanie metody `raise` po prostu zwróci i nie zostanie zgłoszony żaden wyjątek. Jeśli typ zwracany delegata nie jest typem **void**, zwracany jest typ delegata.
+Poniższy przykład kodu demonstruje logikę używaną do generowania `raise` metody zdarzenia uproszczonego: Jeśli zdarzenie ma jednego lub więcej subskrybentów, wywołanie `raise` metody niejawnie lub jawnie wywołuje delegata. Jeśli typ zwracany delegata nie jest **`void`** i jeśli nie ma żadnych subskrybentów zdarzeń, `raise` Metoda zwraca wartość domyślną dla typu delegata. Jeśli nie ma subskrybentów zdarzeń, wywołanie `raise` metody po prostu zwraca i żaden wyjątek nie zostanie zgłoszony. Jeśli typem zwracanym delegata nie jest **`void`** , zwracany jest typ delegata.
 
 ```cpp
 // trivial_events.cpp
@@ -270,6 +270,6 @@ int main() {
 688
 ```
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)
