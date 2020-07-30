@@ -1,21 +1,21 @@
 ---
 title: Korzystanie z zestawów reguł do określania reguł C++ do uruchomienia
-ms.date: 07/13/2020
+ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 8b6d3fe8c8e441d4b233f2f4008d8aae9225726f
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: b132400485c041b96e81736bcda04922b2cda88c
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373856"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389821"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Korzystanie z zestawów reguł do określania reguł C++ do uruchomienia
 
-W programie Visual Studio można utworzyć i zmodyfikować niestandardowy *zestaw reguł* , aby spełniał wymagania dotyczące projektu związane z analizą kodu. Domyślne zestawy reguł są przechowywane w `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` .
+W programie Visual Studio można utworzyć i zmodyfikować niestandardowy *zestaw reguł* , aby spełniał wymagania dotyczące projektu związane z analizą kodu. Domyślne zestawy reguł są przechowywane w *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`* .
 
-**Program Visual Studio 2017 w wersji 15,7 lub nowszej:** Zestawy reguł niestandardowych można utworzyć przy użyciu dowolnego edytora tekstu i zastosować je w przypadku kompilacji w wierszu polecenia niezależnie od tego, jakiego systemu kompilacji używasz. Aby uzyskać więcej informacji, zobacz [/analyze: reguł](/cpp/build/reference/analyze-code-analysis).
+**Program Visual Studio 2017 w wersji 15,7 lub nowszej:** Zestawy reguł niestandardowych można utworzyć przy użyciu dowolnego edytora tekstu i zastosować je w przypadku kompilacji w wierszu polecenia niezależnie od tego, jakiego systemu kompilacji używasz. Aby uzyskać więcej informacji, zobacz [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis).
 
 Aby utworzyć niestandardowy zestaw reguł języka C++ w programie Visual Studio, projekt C/C++ musi być otwarty w środowisku IDE programu Visual Studio. Następnie można otworzyć standardowy zestaw reguł w edytorze zestawu reguł, a następnie dodać lub usunąć określone reguły i opcjonalnie zmienić akcję, która występuje, gdy analiza kodu ustali, że reguła została naruszona.
 
@@ -23,9 +23,11 @@ Aby utworzyć nowy niestandardowy zestaw reguł, Zapisz go przy użyciu nowej na
 
 ## <a name="to-create-a-custom-rule-from-a-single-existing-rule-set"></a>Aby utworzyć regułę niestandardową na podstawie jednego istniejącego zestawu reguł
 
-1. W Eksplorator rozwiązań otwórz menu skrótów dla projektu, a następnie wybierz **Właściwości**.
+::: moniker range="<=vs-2017"
 
-1. Na karcie **Właściwości** wybierz pozycję **Analiza kodu**.
+1. W Eksplorator rozwiązań otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości**.
+
+1. W oknie dialogowym **strony właściwości** wybierz stronę właściwości **Konfiguracja** > **ogólna Analiza kodu** > **General** .
 
 1. Z listy rozwijanej **zestaw reguł** wykonaj jedną z następujących czynności:
 
@@ -36,6 +38,25 @@ Aby utworzyć nowy niestandardowy zestaw reguł, Zapisz go przy użyciu nowej na
    - Wybierz **\<Browse...>** , aby określić istniejący zestaw reguł, którego nie ma na liście.
 
 1. Wybierz pozycję **Otwórz** , aby wyświetlić reguły w edytorze zestawu reguł.
+
+::: moniker-end
+::: moniker range=">=vs-2019"
+
+1. W Eksplorator rozwiązań otwórz menu skrótów dla projektu, a następnie wybierz polecenie **Właściwości**.
+
+1. W oknie dialogowym **strony właściwości** wybierz stronę właściwości **Konfiguracja** > **Analiza kodu** właściwości > **Microsoft** .
+
+1. Z listy rozwijanej **aktywne reguły** wykonaj jedną z następujących czynności:
+
+   - Wybierz zestaw reguł, który chcesz dostosować.
+
+     \-oraz
+
+   - Wybierz **\<Browse...>** , aby określić istniejący zestaw reguł, którego nie ma na liście.
+
+1. Wybierz pozycję **Otwórz** , aby wyświetlić reguły w edytorze zestawu reguł.
+
+::: moniker-end
 
 ## <a name="to-modify-a-rule-set-in-the-rule-set-editor"></a>Aby zmodyfikować zestaw reguł w edytorze zestawu reguł
 
@@ -77,41 +98,23 @@ Aby utworzyć nowy niestandardowy zestaw reguł, Zapisz go przy użyciu nowej na
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>Aby utworzyć zestaw reguł w edytorze tekstu
 
-Można utworzyć niestandardowy zestaw reguł w edytorze tekstów, zapisać go w dowolnej lokalizacji z `.ruleset` rozszerzeniem i zastosować go przy użyciu opcji kompilatora [/analyze: zestaw reguł](/cpp/build/reference/analyze-code-analysis) .
+Można utworzyć niestandardowy zestaw reguł w edytorze tekstów, zapisać go w dowolnej lokalizacji z *`.ruleset`* rozszerzeniem i zastosować z [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis) opcją kompilatora.
 
 Poniższy przykład przedstawia podstawowy plik zestawu reguł, którego można użyć jako punktu wyjścia:
 
-::: moniker range="<=vs-2017"
-
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="New Rule Set" Description=" " ToolsVersion="15.0">
+<RuleSet Name="New Rule Set" Description="New rules to apply." ToolsVersion="10.0">
   <Rules AnalyzerId="Microsoft.Analyzers.NativeCodeAnalysis" RuleNamespace="Microsoft.Rules.Native">
     <Rule Id="C6001" Action="Warning" />
     <Rule Id="C26494" Action="Warning" />
   </Rules>
 </RuleSet>
 ```
-
-::: moniker-end
-
-::: moniker range=">=vs-2019"
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="New Rule Set" Description=" " ToolsVersion="16.0">
-  <Rules AnalyzerId="Microsoft.Analyzers.NativeCodeAnalysis" RuleNamespace="Microsoft.Rules.Native">
-    <Rule Id="C6001" Action="Warning" />
-    <Rule Id="C26494" Action="Warning" />
-  </Rules>
-</RuleSet>
-```
-
-::: moniker-end
 
 ## <a name="ruleset-schema"></a>Schemat zestawu reguł
 
-Poniższy schemat zestawu reguł zawiera opis schematu XML pliku zestawu reguł. Schemat zestawu reguł jest przechowywany w `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd` . Można jej użyć do programistycznego tworzenia własnych zestawów reguł lub do sprawdzenia, czy niestandardowe zestaw reguł jest zgodny z prawidłowym formatem. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie dokumentu XML na podstawie schematu XSD](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019).
+Poniższy schemat zestawu reguł zawiera opis schematu XML pliku zestawu reguł. Schemat zestawu reguł jest przechowywany w *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* . Można jej użyć do programistycznego tworzenia własnych zestawów reguł lub do sprawdzenia, czy niestandardowe zestaw reguł jest zgodny z prawidłowym formatem. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie dokumentu XML na podstawie schematu XSD](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019).
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

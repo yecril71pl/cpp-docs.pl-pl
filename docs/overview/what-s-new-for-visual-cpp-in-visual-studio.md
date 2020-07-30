@@ -3,12 +3,12 @@ title: Co nowego w języku C++ w programie Visual Studio
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: e8202d03517086192ae893caff0602ec86fcb426
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 28b3708c8064623a364b7a60eb63c508808b0a0b
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226792"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390003"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Co nowego w języku C++ w programie Visual Studio
 
@@ -513,12 +513,11 @@ CPPRestSDK, Międzyplatformowy interfejs API sieci Web dla języka C++, został 
 
 Kilka operacji języka C++, które używają aparatu IntelliSense do refaktoryzacji i nawigowania po kodzie przebiega znacznie szybciej. Następujące numery opierają się na rozwiązaniu Visual Studio chrom z projektami 3500:
 
-|||
-|-|-|
-|Cechy|Poprawa wydajności|
-|Zmień nazwę|5.3 x|
-|Zmień sygnaturę |4,5 x|
-|Znajdź wszystkie odwołania|4,7 x|
+| Cechy | Poprawa wydajności |
+|--|--|
+| Zmień nazwę | 5.3 x |
+| Zmień sygnaturę | 4,5 x |
+| Znajdź wszystkie odwołania | 4,7 x |
 
 Język C++ obsługuje teraz kombinację klawiszy Ctrl + kliknij **Przejdź do definicji**, dzięki czemu można łatwo dołączać do definicji myszą. Wizualizator struktury z pakietu narzędzi do wydajnej wydajności jest teraz również uwzględniony w produkcie.
 
@@ -667,7 +666,7 @@ Podstawowe narzędzia do sprawdzania kodu C++ wymuszające stosowanie [podstawow
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 w wersji 15.7
 
-- Dodano obsługę dla [/analyze: zestaw](../build/reference/analyze-code-analysis.md)reguł, który pozwala określić reguły analizy kodu do uruchomienia.
+- Dodano obsługę [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md) , która umożliwia określenie reguł analizy kodu do uruchomienia.
 - Dodano obsługę dodatkowych reguł podstawowe wytyczne dotyczące języka C++.  Aby uzyskać więcej informacji, zobacz [using the podstawowe wytyczne dotyczące języka C++ checks](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
 
 ## <a name="unit-testing-in-visual-studio-2017"></a>Testy jednostkowe w programie Visual Studio 2017
@@ -697,7 +696,7 @@ Narzędzia Diagnostyka grafiki programu Visual Studio: można ich używać do re
 
 - **Wyszukiwanie i filtrowanie w tabeli obiektów:** Zapewnia szybki i łatwy sposób znajdowania szukanych zasobów.
 
-  ![Wyszukiwanie](media/search.png)
+  ![Wyszukaj](media/search.png)
 
 - **Historia zasobów:** Ten nowy widok zapewnia ulepszony sposób wyświetlania całej historii modyfikacji zasobu, ponieważ był używany podczas renderowania przechwyconej ramki. Aby wywoływać historię dla dowolnego zasobu, kliknij ikonę zegara obok dowolnego hiperłącza zasobu.
 

@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
-ms.openlocfilehash: 7519706c0a8e23c56f8951647fb16c24d3f1e189
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e85ce8baed9a1ef39e0ab759ab86a5b570a42fa6
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216690"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389951"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>Informacje dotyczące narzędzia do sprawdzania podstawowe wytyczne dotyczące języka C++
 
-Ta sekcja zawiera listę ostrzeżeń narzędzia do sprawdzania podstawowe wytyczne dotyczące języka C++. Aby uzyskać informacje na temat analizy kodu, zobacz [/analyze (analiza kodu)](/cpp/build/reference/analyze-code-analysis) i [Szybki Start: Analiza kodu C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
+Ta sekcja zawiera listę ostrzeżeń narzędzia do sprawdzania podstawowe wytyczne dotyczące języka C++. Aby uzyskać informacje na temat analizy kodu, zobacz [ `/analyze` (analiza kodu)](/cpp/build/reference/analyze-code-analysis) i [Szybki Start: Analiza kodu C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
 
 > [!NOTE]
 > Niektóre ostrzeżenia należy do więcej niż jednej grupy, a nie wszystkie ostrzeżenia zawierają kompletny temat odwołania.
@@ -280,6 +280,6 @@ Następujące ostrzeżenia są obecne w wczesnej fazie z zestawem najważniejszy
 - 26425 ASSIGNING_TO_STATIC
 - 26499 NO_LIFETIME_TRACKING
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Korzystanie z funkcji sprawdzania podstawowe wytyczne dotyczące języka C++](using-the-cpp-core-guidelines-checkers.md)
