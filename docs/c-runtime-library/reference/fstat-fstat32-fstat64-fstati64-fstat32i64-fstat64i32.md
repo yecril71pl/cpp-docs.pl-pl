@@ -57,12 +57,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 81c272187c681010e7b8560d43f2fad87e1e0fdc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 75ab00e8ee464e9042ba266b8d72e5ded48785ee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910125"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221903"
 ---
 # <a name="_fstat-_fstat32-_fstat64-_fstati64-_fstat32i64-_fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -132,7 +132,7 @@ Ponieważ stat. h używa typu [_dev_t](../../c-runtime-library/standard-types.md
 
 Różnice tych funkcji obsługują 32-bitowe lub 64-bitowe typy czasu i 32-bitowe lub 64-bitowe długości plików. Pierwszy sufiks numeryczny (**32** lub **64**) wskazuje rozmiar używanego typu czasu; drugi sufiks jest **I32** lub **I64**, wskazując, czy rozmiar pliku jest reprezentowany jako 32-bitowa czy 64-bitowa liczba całkowita.
 
-**_fstat** jest odpowiednikiem **_fstat64i32**, a **Struktura** **_stat** zawiera czas 64-bitowy. Jest to prawdziwe, chyba że **_USE_32BIT_TIME_T** jest zdefiniowany, w takim przypadku stare zachowanie jest stosowane; **_fstat** używa czasu 32-bitowego, a **struktura** **_stat** zawiera 32-bitowy czas. Ta sama wartość dotyczy **_fstati64**.
+**_fstat** jest równoważne **_fstat64i32**, a **`struct`** **_stat** zawiera czas 64-bitowy. Jest to prawdziwe, chyba że **_USE_32BIT_TIME_T** jest zdefiniowany, w takim przypadku stare zachowanie jest stosowane; **_fstat** używa czasu 32-bitowego, a **`struct`** **_stat** zawiera 32-bitowy czas. Ta sama wartość dotyczy **_fstati64**.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -153,12 +153,12 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fstat**|\<sys/stat. h> i \<sys/Types. h>|
-|**_fstat32**|\<sys/stat. h> i \<sys/Types. h>|
-|**_fstat64**|\<sys/stat. h> i \<sys/Types. h>|
-|**_fstati64**|\<sys/stat. h> i \<sys/Types. h>|
-|**_fstat32i64**|\<sys/stat. h> i \<sys/Types. h>|
-|**_fstat64i32**|\<sys/stat. h> i \<sys/Types. h>|
+|**_fstat**|\<sys/stat.h> i \<sys/types.h>|
+|**_fstat32**|\<sys/stat.h> i \<sys/types.h>|
+|**_fstat64**|\<sys/stat.h> i \<sys/types.h>|
+|**_fstati64**|\<sys/stat.h> i \<sys/types.h>|
+|**_fstat32i64**|\<sys/stat.h> i \<sys/types.h>|
+|**_fstat64i32**|\<sys/stat.h> i \<sys/types.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 3d73aa32243776215b04303b37a4398bc8c35c04
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 26ebadf49632b9e312f3d0c0a0788720d3230312
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911588"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218614"
 ---
 # <a name="localtime_s-_localtime32_s-_localtime64_s"></a>localtime_s, _localtime32_s, _localtime64_s
 
@@ -82,7 +82,7 @@ Zero, jeśli powodzenie. Wartość zwracana jest kodem błędu w przypadku wyst�
 
 |*tmDest*|*sourceTime*|Wartość zwracana|Wartość w *tmDest*|Wywołuje procedurę obsługi nieprawidłowego parametru|
 |-----------|------------|------------------|--------------------|---------------------------------------|
-|**NULL**|ile|**EINVAL**|Nie zmodyfikowano|Tak|
+|**NULL**|dowolny|**EINVAL**|Nie zmodyfikowano|Tak|
 |Nie **ma wartości null** (wskazuje na prawidłową pamięć)|**NULL**|**EINVAL**|Wszystkie pola ustawione na wartość-1|Tak|
 |Nie **ma wartości null** (wskazuje na prawidłową pamięć)|mniejsze niż 0 lub większe niż **_MAX__TIME64_T**|**EINVAL**|Wszystkie pola ustawione na wartość-1|Nie|
 
@@ -101,7 +101,7 @@ Funkcja **localtime_s** konwertuje czas przechowywania jako wartość [time_t](.
 
 **localtime_s** jest funkcją wbudowaną, która oblicza **_localtime64_s**, a **time_t** jest równoznaczna z **__time64_t**. Jeśli trzeba wymusić, aby kompilator interpretował **time_t** jako stary **time_t**32-bitowy, można zdefiniować **_USE_32BIT_TIME_T**. Spowoduje to **localtime_s** ocenę **_localtime32_s**. Nie jest to zalecane, ponieważ aplikacja może zakończyć się niepowodzeniem po 18 stycznia 2038 i nie jest dozwolona na platformach 64-bitowych.
 
-Pola typu struktury [TM](../../c-runtime-library/standard-types.md) przechowują następujące wartości, z których każdy **jest liczbą całkowitą**.
+Pola typu struktury [TM](../../c-runtime-library/standard-types.md) przechowują następujące wartości, z których każdy jest **`int`** .
 
 |Pole|Opis|
 |-|-|
@@ -123,7 +123,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek C|Wymagany nagłówek C++|
 |-------------|---------------------|-|
-|**localtime_s**, **_localtime32_s**, **_localtime64_s**|\<> godziny. h|\<CTime> lub \<Time. h>|
+|**localtime_s**, **_localtime32_s**, **_localtime64_s**|\<time.h>|\<ctime> lub \<time.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

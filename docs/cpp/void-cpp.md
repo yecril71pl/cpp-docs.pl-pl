@@ -8,22 +8,22 @@ helpviewer_keywords:
 - functions [C++], void
 - pointers, void
 ms.assetid: d203edba-38e6-4056-8b89-011437351057
-ms.openlocfilehash: 2de019f908942a58b232877fcd9eebc4689d8e22
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fddfc2e3295552414a00692006ab12725dc07d52
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187482"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213115"
 ---
 # <a name="void-c"></a>void (C++)
 
-W przypadku użycia jako zwracanego typu funkcji **void** słowo kluczowe Określa, że funkcja nie zwraca wartości. W przypadku użycia dla listy parametrów funkcji **void** określa, że funkcja nie przyjmuje żadnych parametrów. Gdy jest używany w deklaracji wskaźnika, **void** określa, że wskaźnik jest "uniwersalny".
+W przypadku użycia jako zwracanego typu funkcji **`void`** słowo kluczowe Określa, że funkcja nie zwraca wartości. W przypadku użycia dla listy parametrów funkcji **`void`** określa, że funkcja nie przyjmuje żadnych parametrów. Gdy jest używany w deklaracji wskaźnika, **`void`** określa, że wskaźnik jest "uniwersalny".
 
-Jeśli typ wskaźnika to **void\*** , wskaźnik może wskazywać wszelkie zmienne, które nie są zadeklarowane za pomocą słowa kluczowego **const** lub **volatile** . Nie można usunąć odwołania do wskaźnika **void\*** , chyba że jest on rzutowany na inny typ. Wskaźnik **\*void** można przekonwertować na dowolny inny typ wskaźnika danych.
+Jeśli typ wskaźnika to ** \* void**, wskaźnik może wskazywać wszelkie zmienne, które nie są zadeklarowane za pomocą **`const`** **`volatile`** słowa kluczowego or. Nie można usunąć odwołania do **pustego \* ** wskaźnika, chyba że jest rzutowany na inny typ. Wskaźnik **void \* ** można przekonwertować na dowolny inny typ wskaźnika danych.
 
-Wskaźnik **void** może wskazywać na funkcję, ale nie do elementu członkowskiego klasy w C++.
+**`void`** Wskaźnik może wskazywać na funkcję, ale nie do składowej klasy w języku C++.
 
-Nie można zadeklarować zmiennej typu **void**.
+Nie można zadeklarować zmiennej typu **`void`** .
 
 ## <a name="example"></a>Przykład
 

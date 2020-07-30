@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: ffd0967b741475b260eef80ec24d56874a6bcb1f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0f2e81e3cd757214805817af2a355a93c1cfd096
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213814"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220473"
 ---
 # <a name="make-function"></a>Make — Funkcja
 
@@ -164,8 +164,8 @@ ComPtr<T> Make();
 
 ### <a name="parameters"></a>Parametry
 
-*&*<br/>
-Klasa określona przez użytkownika, która dziedziczy po `WRL::RuntimeClass`.
+*T*<br/>
+Klasa określona przez użytkownika, która dziedziczy z `WRL::RuntimeClass` .
 
 *TArg1*<br/>
 Typ argumentu 1, który jest przesyłany do określonej klasy środowiska uruchomieniowego.
@@ -223,7 +223,7 @@ Argument 9, który jest przesyłany do określonej klasy środowiska uruchomieni
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obiekt `ComPtr<T>`, jeśli się powiedzie; w przeciwnym razie `nullptr`.
+`ComPtr<T>`Obiekt, jeśli się to powiedzie; w przeciwnym razie **`nullptr`** .
 
 ## <a name="remarks"></a>Uwagi
 
@@ -237,4 +237,4 @@ Zobacz [jak: Tworzenie wystąpień WRL składników bezpośrednio](how-to-instan
 
 ## <a name="see-also"></a>Zobacz też
 
-[Microsoft::WRL, przestrzeń nazw](microsoft-wrl-namespace.md)
+[Microsoft:: WRL, przestrzeń nazw](microsoft-wrl-namespace.md)

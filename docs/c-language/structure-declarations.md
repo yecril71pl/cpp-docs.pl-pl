@@ -8,12 +8,12 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b9aa30cfeecbd60fda61e6a484043c82c9a3b28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157809"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217054"
 ---
 # <a name="structure-declarations"></a>Deklaracje struktur
 
@@ -26,8 +26,8 @@ ms.locfileid: "62157809"
 &nbsp;&nbsp;&nbsp;&nbsp;*Identyfikator* *struktury lub Unii*
 
 *struct-lub-Union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**konstrukcja**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Unii**
+&nbsp;&nbsp;&nbsp;&nbsp;**`struct`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`union`**
 
 *Struktura-deklaracja-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Struktura — deklaracja*<br/>
@@ -53,7 +53,7 @@ Wcześniej zdefiniowany *Identyfikator* (tag) może służyć do odwoływania si
 
 *Deklaracja struktury-list* określa typy i nazwy elementów członkowskich struktury. Argument *listy deklaracji struktury* zawiera co najmniej jedną deklarację zmiennej lub pola bitowego.
 
-Każda zmienna zadeklarowana na *liście struktury deklaracji* jest definiowana jako element członkowski typu struktury. Deklaracje zmiennych w ramach *listy deklaracji struktury* mają taki sam formularz jak inne deklaracje zmiennych omówione w tej sekcji, z tą różnicą, że deklaracje nie mogą zawierać specyfikatorów klasy magazynu ani inicjatorów. Elementy członkowskie struktury mogą mieć dowolne typy zmiennych, z `void`wyjątkiem typu, niekompletnego typu lub typu funkcji.
+Każda zmienna zadeklarowana na *liście struktury deklaracji* jest definiowana jako element członkowski typu struktury. Deklaracje zmiennych w ramach *listy deklaracji struktury* mają taki sam formularz jak inne deklaracje zmiennych omówione w tej sekcji, z tą różnicą, że deklaracje nie mogą zawierać specyfikatorów klasy magazynu ani inicjatorów. Elementy członkowskie struktury mogą mieć dowolne typy zmiennych, z wyjątkiem typu **`void`** , niekompletnego typu lub typu funkcji.
 
 Składowej nie można zadeklarować jako typu struktury, w której występuje. Jednakże element członkowski może być zadeklarowany jako wskaźnik do typu struktury, w którym występuje tak długo, jak typ struktury ma tag. Pozwala to na tworzenie połączonych list struktur.
 
@@ -94,13 +94,13 @@ struct employee   /* Defines a structure variable named temp */
 } temp;
 ```
 
-`employee` Struktura ma trzy elementy członkowskie: `name`, `id`, i `class`. `name` Składowa jest 20-elementową tablicą `id` i i `class` są prostymi elementami członkowskimi z `int` i **długim** typem. Identyfikator `employee` jest identyfikatorem struktury.
+`employee`Struktura ma trzy elementy członkowskie: `name` , `id` , i `class` . `name`Składowa jest 20-elementową tablicą i `id` i `class` są prostymi elementami członkowskimi z **`int`** i **`long`** typu, odpowiednio. Identyfikator `employee` jest identyfikatorem struktury.
 
 ```C
 struct employee student, faculty, staff;
 ```
 
-W tym przykładzie zdefiniowano trzy zmienne `student`struktury `faculty`:, `staff`, i. Każda struktura ma tę samą listę trzech elementów członkowskich. Elementy członkowskie są zadeklarowane jako mają typ `employee`struktury zdefiniowany w poprzednim przykładzie.
+W tym przykładzie zdefiniowano trzy zmienne struktury: `student` , `faculty` , i `staff` . Każda struktura ma tę samą listę trzech elementów członkowskich. Elementy członkowskie są zadeklarowane jako mają typ struktury `employee` zdefiniowany w poprzednim przykładzie.
 
 ```C
 struct           /* Defines an anonymous struct and a */
@@ -109,7 +109,7 @@ struct           /* Defines an anonymous struct and a */
 } complex;
 ```
 
-Struktura ma dwa elementy członkowskie z typem **float** `x` i `y` `complex` Typ struktury nie ma tagu i w związku z tym jest nienazwany lub anonimowy.
+`complex`Struktura ma dwa elementy członkowskie **`float`** typu, `x` i `y` . Typ struktury nie ma tagu i w związku z tym jest nienazwany lub anonimowy.
 
 ```C
 struct sample   /* Defines a structure named x */
@@ -120,9 +120,9 @@ struct sample   /* Defines a structure named x */
 } x;
 ```
 
-Pierwsze dwa elementy członkowskie struktury są `char` zmienną i wskaźnikiem do wartości **zmiennoprzecinkowej** . Trzeci członek, `next`,, jest zadeklarowany jako wskaźnik do zdefiniowanego typu struktury (`sample`).
+Pierwsze dwa elementy członkowskie struktury są **`char`** zmienną i wskaźnikiem do **`float`** wartości. Trzeci członek, `next` ,, jest zadeklarowany jako wskaźnik do zdefiniowanego typu struktury ( `sample` ).
 
-Struktury anonimowe mogą być przydatne, gdy tag o nazwie nie jest wymagany. Jest to przypadek, gdy jedna deklaracja definiuje wszystkie wystąpienia struktury. Przykład:
+Struktury anonimowe mogą być przydatne, gdy tag o nazwie nie jest wymagany. Jest to przypadek, gdy jedna deklaracja definiuje wszystkie wystąpienia struktury. Na przykład:
 
 ```C
 struct
@@ -149,9 +149,9 @@ struct somestruct
 
 Kompilator umożliwia tablicę o rozmiarze niezmienionym lub zerowym jako ostatni element członkowski struktury. Może to być przydatne, jeśli rozmiar tablicy stałej jest różny, gdy jest używany w różnych sytuacjach. Deklaracja takiej struktury wygląda następująco:
 
-**struct** *Identyfikator* struktury **{** *type* <em>Nazwa</em> *zestawu deklaracji* **];};\[**
+**`struct`***Identyfikator* **{** *zestaw deklaracji* *typu* <em>Array-Name</em>** \[ ];};**
 
-Tablice bez rozmiaru mogą występować tylko jako ostatni element członkowski struktury. Struktury zawierające deklaracje tablic bez rozmiaru mogą być zagnieżdżane w innych strukturach, o ile nie są zadeklarowane dalsze składowe w żadnej z otaczających struktur. Tablice takich struktur są niedozwolone. `sizeof` Operator, gdy jest stosowany do zmiennej tego typu lub samego typu, przyjmuje wartość 0 dla rozmiaru tablicy.
+Tablice bez rozmiaru mogą występować tylko jako ostatni element członkowski struktury. Struktury zawierające deklaracje tablic bez rozmiaru mogą być zagnieżdżane w innych strukturach, o ile nie są zadeklarowane dalsze składowe w żadnej z otaczających struktur. Tablice takich struktur są niedozwolone. **`sizeof`** Operator, gdy jest stosowany do zmiennej tego typu lub samego typu, przyjmuje wartość 0 dla rozmiaru tablicy.
 
 Deklaracje struktury można także określić bez elementu deklarator, gdy są one elementami członkowskimi innej struktury lub Unii. Nazwy pól są podwyższane do otaczającej struktury. Na przykład struktura pustego wygląda następująco:
 

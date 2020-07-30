@@ -8,18 +8,18 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: be5af8f6b2edaa8f93fef7ae06b2175b54b25396
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d001cab897323d86d284958f322d155120a726a5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172481"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219757"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Ograniczenia parametrów typu ogólnego (C++/CLI)
 
 W deklaracjach typu ogólnego lub metody można zakwalifikować parametr typu z ograniczeniami. Ograniczenie jest wymaganiem, że typy używane jako argumenty typu muszą być zgodne. Na przykład ograniczenie może oznaczać, że argument typu musi implementować określony interfejs lub dziedziczyć z określonej klasy.
 
-Ograniczenia są opcjonalne; nieokreślanie ograniczenia parametru jest równoznaczne z ograniczeniami tego parametru do <xref:System.Object>.
+Ograniczenia są opcjonalne; nieokreślanie ograniczenia parametru jest równoznaczne z ograniczeniami tego parametru do <xref:System.Object> .
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,19 +37,19 @@ Jeden z parametrów typu, który ma zostać ograniczony.
 
 Lista może również zawierać klasę. Dla argumentu typu, aby spełnić ograniczenie klasy bazowej, musi to być taka sama klasa jak ograniczenie lub dziedziczyć z ograniczenia.
 
-Można także określić **gcnew ()** , aby wskazać, że argument typu musi mieć publiczny Konstruktor bez parametrów; lub **Klasa ref** wskazująca, że argument typu musi być typem referencyjnym, w tym dowolną klasą, interfejsem, delegatem lub typem tablicy; lub **Klasa wartości** wskazująca, że argument typu musi być typem wartości. Można określić dowolny typ wartości z wyjątkiem wartości null\<T >.
+Można także określić **gcnew ()** , aby wskazać, że argument typu musi mieć publiczny Konstruktor bez parametrów; lub **Klasa ref** wskazująca, że argument typu musi być typem referencyjnym, w tym dowolną klasą, interfejsem, delegatem lub typem tablicy; lub **Klasa wartości** wskazująca, że argument typu musi być typem wartości. Można określić dowolny typ wartości, z wyjątkiem dopuszczający wartości null \<T> .
 
 Jako ograniczenie można także określić parametr generyczny. Argument typu dostarczony dla ograniczonego typu musi być lub pochodzić od typu ograniczenia. Jest to nazywane ograniczeniem typu owies.
 
 ## <a name="remarks"></a>Uwagi
 
-Klauzula CONSTRAINT składa się z miejsca, w **którym** następuje parametr typu, dwukropek ( **:** ) i ograniczenie, które określa charakter ograniczenia w parametrze typu. **gdzie** jest kontekstowego słowa kluczowego; Aby uzyskać więcej informacji, zobacz [kontekstowe słowa kluczowe](context-sensitive-keywords-cpp-component-extensions.md) . Oddziel wiele klauzul **WHERE** spacją.
+Klauzula CONSTRAINT składa się z miejsca, w **którym** następuje parametr typu, dwukropek (**:**) i ograniczenie, które określa charakter ograniczenia w parametrze typu. **gdzie** jest kontekstowego słowa kluczowego; Aby uzyskać więcej informacji, zobacz [kontekstowe słowa kluczowe](context-sensitive-keywords-cpp-component-extensions.md) . Oddziel wiele klauzul **WHERE** spacją.
 
 Ograniczenia są stosowane do parametrów typu w celu umieszczenia ograniczeń dotyczących typów, które mogą być używane jako argumenty dla typu ogólnego lub metody.
 
 Ograniczenia klas i interfejsów określają, że typy argumentów muszą być lub dziedziczyć z określonej klasy lub zaimplementować określony interfejs.
 
-Zastosowanie ograniczeń do typu ogólnego lub metody umożliwia kod w tym typie lub metodzie, aby wykorzystać znane funkcje typów z ograniczeniami. Na przykład można zadeklarować klasę generyczną w taki sposób, aby parametr typu implementuje interfejs `IComparable<T>`:
+Zastosowanie ograniczeń do typu ogólnego lub metody umożliwia kod w tym typie lub metodzie, aby wykorzystać znane funkcje typów z ograniczeniami. Na przykład można zadeklarować klasę generyczną w taki sposób, aby parametr typu implementuje `IComparable<T>` Interfejs:
 
 ```cpp
 // generics_constraints_1.cpp
@@ -60,11 +60,11 @@ where T : IComparable<T>
 ref class List {};
 ```
 
-To ograniczenie wymaga, aby argument typu użyty dla `T` implementuje `IComparable<T>` w czasie kompilacji. Pozwala również na wywoływanie metod interfejsu, takich jak `CompareTo`. Nie jest konieczne rzutowanie na wystąpienie parametru typu w celu wywołania metod interfejsu.
+To ograniczenie wymaga, aby argument typu użyty dla `T` implementowania `IComparable<T>` w czasie kompilacji. Pozwala również na wywoływanie metod interfejsu, takich jak `CompareTo` . Nie jest konieczne rzutowanie na wystąpienie parametru typu w celu wywołania metod interfejsu.
 
 Nie można wywołać metod statycznych w klasie argumentu typu za pomocą parametru typu; można je wywoływać tylko za pomocą rzeczywistego nazwanego typu.
 
-Ograniczenie nie może być typem wartości, włącznie z wbudowanymi typami, takimi jak **int** lub **Double**. Ponieważ typy wartości nie mogą mieć klas pochodnych, tylko jedna z nich może kiedykolwiek spełnić ograniczenie. W takim przypadku generyczne można napisać ponownie przy użyciu parametru typu zamienionego przez określony typ wartości.
+Ograniczenie nie może być typem wartości, włącznie z wbudowanymi typami, takimi jak **`int`** lub **`double`** . Ponieważ typy wartości nie mogą mieć klas pochodnych, tylko jedna z nich może kiedykolwiek spełnić ograniczenie. W takim przypadku generyczne można napisać ponownie przy użyciu parametru typu zamienionego przez określony typ wartości.
 
 Ograniczenia są wymagane w niektórych przypadkach, ponieważ kompilator nie zezwoli na użycie metod lub innych funkcji nieznanego typu, chyba że ograniczenia oznaczają, że nieznany typ obsługuje metody lub interfejsy.
 
@@ -179,9 +179,9 @@ int main() {
 
 Gdy parametr typu generycznego jest używany jako ograniczenie, jest on nazywany ograniczeniem typu owies. Ograniczenia typu owies są przydatne, gdy funkcja członkowska z własnym parametrem typu musi ograniczyć ten parametr do parametru typu zawierającego.
 
-W poniższym przykładzie `T` jest ograniczeniem typu "owies" w kontekście metody `Add`.
+W poniższym przykładzie, `T` jest ograniczeniem typu "owies" w kontekście `Add` metody.
 
-Ograniczenia typu owies mogą być również używane w definicjach klas ogólnych. Użyteczność nieprawidłowych ograniczeń typu z klasami generycznymi jest ograniczona, ponieważ kompilator może założenie, że nic nie dotyczy ograniczenia typu wychodzącego, z wyjątkiem tego, że pochodzi od <xref:System.Object>. W scenariuszach, w których chcesz wymusić relację dziedziczenia między dwoma parametrami typu, należy używać wychodzących ograniczeń typu dla klas ogólnych.
+Ograniczenia typu owies mogą być również używane w definicjach klas ogólnych. Użyteczność nieprawidłowych ograniczeń typu z klasami generycznymi jest ograniczona, ponieważ kompilator może założenie, że nic nie dotyczy ograniczenia typu wychodzącego, z wyjątkiem tego, że pochodzi od <xref:System.Object> . W scenariuszach, w których chcesz wymusić relację dziedziczenia między dwoma parametrami typu, należy używać wychodzących ograniczeń typu dla klas ogólnych.
 
 ```cpp
 // generics_constraints_6.cpp

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-ms.openlocfilehash: a7ff3a8eaa3d9d42a5f1a9a7bf277a847aeccfee
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d99b895076025aa50028bb4cd21df9e13c98197f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910870"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233967"
 ---
 # <a name="strtof-_strtof_l-wcstof-_wcstof_l"></a>strtof, _strtof_l, wcstof, _wcstof_l
 
@@ -88,7 +88,7 @@ Ciąg zakończony znakiem null do przekonwertowania.
 *endptr*<br/>
 Wskaźnik do znaku, który zatrzyma skanowanie.
 
-*locale*<br/>
+*ustawienie*<br/>
 Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -101,7 +101,7 @@ Aby uzyskać więcej informacji na temat kodów powrotnych, zobacz [errno, _dose
 
 ## <a name="remarks"></a>Uwagi
 
-Każda funkcja konwertuje ciąg wejściowy *strSource* na wartość **zmiennoprzecinkową**. Funkcja **strtof** konwertuje *strSource* na wartość o pojedynczej precyzji. **strtof** przestaje odczytywania ciągu *strSource* przy pierwszym znaku, którego nie może rozpoznać jako części liczby. Może to być kończący znak null. **wcstof** to dwubajtowa wersja **strtof**; jego argument *strSource* jest ciągiem znaków dwubajtowych. W przeciwnym razie funkcje te zachowują się identycznie.
+Każda funkcja konwertuje ciąg wejściowy *strSource* na **`float`** . Funkcja **strtof** konwertuje *strSource* na wartość o pojedynczej precyzji. **strtof** przestaje odczytywania ciągu *strSource* przy pierwszym znaku, którego nie może rozpoznać jako części liczby. Może to być kończący znak null. **wcstof** to dwubajtowa wersja **strtof**; jego argument *strSource* jest ciągiem znaków dwubajtowych. W przeciwnym razie funkcje te zachowują się identycznie.
 
 Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmienić, zobacz [stan globalny w CRT](../global-state.md).
 
@@ -120,7 +120,7 @@ Jeśli *endptr* nie ma **wartości null**, wskaźnik do znaku, który zatrzymał
 
 [*odstęp*] [*Sign*] [*cyfry*] [__.__ *cyfry*] [{**e** &#124; **e**} [*Sign*] *cyfry*]
 
-*Odstępy* mogą składać się ze znaków spacji i tabulatora, które są ignorowane; *znak* jest znakiem plus**+**() lub minus**-**(); i *cyfry* są jedną lub większą liczbą cyfr dziesiętnych. Jeśli żadne cyfry nie pojawiają się przed znakiem podstawy, co najmniej jeden musi występować po znaku podstawy. Po cyfrach dziesiętnych można stosować wykładnikę, która składa się z litery wprowadzającej (**e** lub **e**) i opcjonalnie cyfry ze znakiem. Jeśli nie zostanie wyświetlona żadna część wykładnika ani znak podstawy, przyjmuje się, że znak podstawy będzie podążać za ostatnią cyfrą w ciągu. Pierwszy znak, który nie pasuje do tego formularza, zatrzyma skanowanie.
+*Odstępy* mogą składać się ze znaków spacji i tabulatora, które są ignorowane; *znak* jest znakiem plus ( **+** ) lub minus ( **-** ); i *cyframi* jest jedna lub więcej cyfr dziesiętnych. Jeśli żadne cyfry nie pojawiają się przed znakiem podstawy, co najmniej jeden musi występować po znaku podstawy. Po cyfrach dziesiętnych można stosować wykładnikę, która składa się z litery wprowadzającej (**e** lub **e**) i opcjonalnie cyfry ze znakiem. Jeśli nie zostanie wyświetlona żadna część wykładnika ani znak podstawy, przyjmuje się, że znak podstawy będzie podążać za ostatnią cyfrą w ciągu. Pierwszy znak, który nie pasuje do tego formularza, zatrzyma skanowanie.
 
 Wersje UCRT tych funkcji nie obsługują konwersji liter wykładnika Pascal (**d** lub **d**). To niestandardowe rozszerzenie było obsługiwane przez wcześniejsze wersje CRT i może być istotną zmianą dla kodu.
 
@@ -128,8 +128,8 @@ Wersje UCRT tych funkcji nie obsługują konwersji liter wykładnika Pascal (**d
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**strtof**, **_strtof_l**|C: \<STDLIB. h> C++: &lt;cstdlib> lub \<STDLIB. h>|
-|**wcstof**, **_wcstof_l**|C: \<STDLIB. h> lub \<WCHAR. h> C++: &lt;cstdlib>, \<stdlib. h> lub \<WCHAR. h>|
+|**strtof**, **_strtof_l**|C: \<stdlib.h> C++: &lt; cstdlib> lub\<stdlib.h>|
+|**wcstof**, **_wcstof_l**|C: \<stdlib.h> lub \<wchar.h> C++: &lt; cstdlib>, \<stdlib.h> lub\<wchar.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -167,8 +167,8 @@ string = 3.14159This stopped it
 
 [Konwersja danych](../../c-runtime-library/data-conversion.md)<br/>
 [Obsługa zmiennoprzecinkowa](../../c-runtime-library/floating-point-support.md)<br/>
-[Interpretacja wielobajtowych sekwencji znaków](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[Interpretacja sekwencji znaków wielobajtowych](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
 [Funkcje ciągu do wartości numerycznych](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>

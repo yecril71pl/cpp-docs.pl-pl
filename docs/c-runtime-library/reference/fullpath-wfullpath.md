@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: f7ef9e8416e73a403abfb30f637afeb4a68e8592
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8583ea17930721f8d8b80aa5066dbc07372ce243
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909951"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231393"
 ---
 # <a name="_fullpath-_wfullpath"></a>_fullpath, _wfullpath
 
@@ -71,7 +71,7 @@ Wskaźnik do buforu zawierającego bezwzględną lub pełną nazwę ścieżki lu
 Nazwa ścieżki względnej.
 
 *maxLength*<br/>
-Maksymalna długość buforu nazw ścieżek bezwzględnych (*absPath*). Ta długość jest wyrażona w bajtach dla **_fullpath** , ale w postaci szerokich znaków (**wchar_t**) dla **_wfullpath**.
+Maksymalna długość buforu nazw ścieżek bezwzględnych (*absPath*). Ta długość jest wyrażona w bajtach dla **_fullpath** , ale w postaci szerokich znaków ( **`wchar_t`** ) dla **_wfullpath**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -111,8 +111,8 @@ Jeśli bufor *absPath* ma **wartość null**, **_fullpath** wywołuje metodę [m
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**_fullpath**|\<STDLIB. h>|
-|**_wfullpath**|\<STDLIB. h> lub \<WCHAR. h>|
+|**_fullpath**|\<stdlib.h>|
+|**_wfullpath**|\<stdlib.h> lub \<wchar.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

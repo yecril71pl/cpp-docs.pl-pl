@@ -52,7 +52,7 @@ wymagany jest/std: c++ 17 lub nowszy.
 | [from_chars](charconv-functions.md#from_chars) | Konwertuj znaki na liczbę całkowitą, zmiennoprzecinkową lub podwójną. |
 | [to_chars](charconv-functions.md#to_chars)| Przekonwertuj liczbę całkowitą, zmiennoprzecinkową lub podwójną na chars. |
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
 [Dokumentacja plików nagłówkowych](cpp-standard-library-header-files.md)
 

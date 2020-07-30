@@ -1,5 +1,5 @@
 ---
-title: '&lt;ios &gt;'
+title: '&lt;wykonane&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <ios>
@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: a322e517a4adb51879fc2a60f6c08f6561276de9
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 59ff0d1a9538bd43cc2164306e6a37a3b307067d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689505"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212270"
 ---
-# <a name="ltiosgt"></a>&lt;ios &gt;
+# <a name="ltiosgt"></a>&lt;wykonane&gt;
 
 Definiuje kilka typów i funkcji podstawowych dla operacji iostreams. Ten nagłówek jest zwykle uwzględniany przez inne nagłówki iostream; rzadko umieszczasz ją bezpośrednio.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek**: \<ios >
+**Nagłówek**:\<ios>
 
 **Przestrzeń nazw:** std
 
 > [!NOTE]
-> Biblioteka > \<ios używa instrukcji `#include <iosfwd>`.
+> \<ios>Biblioteka używa `#include <iosfwd>` instrukcji.
 
 ## <a name="remarks"></a>Uwagi
 
-Duża grupa funkcji to manipulowanie. Manipulator zadeklarowany w \<ios > zmienia wartości przechowywanych w obiekcie argument klasy [ios_base](../standard-library/ios-base-class.md). Inne manipulowania wykonuje akcje dotyczące strumieni kontrolowanych przez obiekty typu pochodnego od tej klasy, takie jak specjalizacja jednego z szablonów klas [basic_istream](../standard-library/basic-istream-class.md) lub [basic_ostream](../standard-library/basic-ostream-class.md). Na przykład [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) czyści flagę formatu `ios_base::skipws` w obiekcie `str`, który może być jednym z tych typów.
+Duża grupa funkcji to manipulowanie. Manipulator zadeklarowany w elemencie \<ios> Modyfikuje wartości przechowywane w obiekcie argumentów klasy [ios_base](../standard-library/ios-base-class.md). Inne manipulowania wykonuje akcje dotyczące strumieni kontrolowanych przez obiekty typu pochodnego od tej klasy, na przykład specjalizacji jednego z szablonów klas [basic_istream](../standard-library/basic-istream-class.md) lub [basic_ostream](../standard-library/basic-ostream-class.md). Na przykład [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) Czyści flagę formatu `ios_base::skipws` w obiekcie `str` , który może być jednego z tych typów.
 
-Możesz również wywołać Manipulator przez wstawienie go do strumienia wyjściowego lub wyodrębnienie go ze strumienia wejściowego z powodu specjalnych operacji wstawiania i wyodrębniania dostarczonych dla klas pochodnych z `ios_base`. Na przykład:
+Możesz również wywołać Manipulator przez wstawienie go do strumienia wyjściowego lub wyodrębnienie go ze strumienia wejściowego, z powodu specjalnych operacji wstawiania i wyodrębniania dostarczonych dla klas pochodnych `ios_base` . Na przykład:
 
 ```cpp
 istr>> noskipws;
@@ -56,9 +56,9 @@ wywołania [noskipws](../standard-library/ios-functions.md#noskipws)(**ISTR**).
 
 |||
 |-|-|
-|[boolalpha](../standard-library/ios-functions.md#boolalpha)|Określa, że zmienne typu [bool](../cpp/bool-cpp.md) są wyświetlane jako **true** lub **false** w strumieniu.|
-|[grudzień](../standard-library/ios-functions.md#dec)|Określa, że zmienne całkowite pojawiają się w notacji Base 10.|
-|[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Konfiguruje flagi obiektu `ios_base`, aby użyć domyślnego formatu wyświetlania wartości zmiennoprzecinkowych.|
+|[boolalpha](../standard-library/ios-functions.md#boolalpha)|Określa, że zmienne typu [bool](../cpp/bool-cpp.md) są wyświetlane jako **`true`** lub **`false`** w strumieniu.|
+|[dec](../standard-library/ios-functions.md#dec)|Określa, że zmienne całkowite pojawiają się w notacji Base 10.|
+|[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Konfiguruje flagi `ios_base` obiektu, aby użyć domyślnego formatu wyświetlania wartości zmiennoprzecinkowych.|
 |[FIXED](../standard-library/ios-functions.md#fixed)|Określa, że liczba zmiennoprzecinkowa jest wyświetlana w notacji o stałej liczbie dziesiętnej.|
 |[szesnastkowy](../standard-library/ios-functions.md#hex)|Określa, że zmienne całkowite pojawiają się w notacji Base 16.|
 |[hexfloat](../standard-library/ios-functions.md#hexfloat)|
@@ -95,13 +95,13 @@ wywołania [noskipws](../standard-library/ios-functions.md#noskipws)(**ISTR**).
 
 |||
 |-|-|
-|[basic_ios](../standard-library/basic-ios-class.md)|Szablon klasy zawiera opis funkcji magazynu i elementów członkowskich wspólnych dla strumieni danych wejściowych (klasy template [basic_istream](../standard-library/basic-istream-class.md)) i strumieni wyjściowych (klasy template [basic_ostream](../standard-library/basic-ostream-class.md)), które są zależne od parametrów szablonu.|
+|[basic_ios](../standard-library/basic-ios-class.md)|Szablon klasy zawiera opis funkcji magazynu i elementów członkowskich wspólnych dla strumieni danych wejściowych (szablonu klasy [basic_istream](../standard-library/basic-istream-class.md)) i strumieni wyjściowych ( [basic_ostream](../standard-library/basic-ostream-class.md)szablonu klasy), które są zależne od parametrów szablonu.|
 |[FPOS](../standard-library/fpos-class.md)|Szablon klasy opisuje obiekt, który może przechowywać wszystkie informacje potrzebne do przywrócenia dowolnego wskaźnika położenia pliku w ramach dowolnego strumienia.|
 |[ios_base](../standard-library/ios-base-class.md)|Klasa zawiera opis funkcji magazynu i elementów członkowskich wspólnych dla strumieni wejściowych i wyjściowych, które nie zależą od parametrów szablonu.|
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 
-[Odwołania do plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md) \
-[Bezpieczeństwo wątku w C++ standardowej bibliotece](../standard-library/thread-safety-in-the-cpp-standard-library.md) \
-\ [programowania iostream](../standard-library/iostream-programming.md)
-[Konwencje iostream](../standard-library/iostreams-conventions.md)
+[Dokumentacja plików nagłówkowych](../standard-library/cpp-standard-library-header-files.md)\
+[Bezpieczeństwo wątku w standardowej bibliotece języka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programowanie iostream](../standard-library/iostream-programming.md)\
+[Konwencje iostreams](../standard-library/iostreams-conventions.md)

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
-ms.openlocfilehash: ed4bc7eea85e5263d59817082caed99bde3d75d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 310083a650f842c6c0f0912efe1ceddb66c4fd6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353485"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214753"
 ---
 # <a name="compiler-error-c2143"></a>Błąd kompilatora C2143
 
-Błąd składniowy: brakuje "token1" przed "token2"
+Błąd składniowy: Brak "token1" przed "token2"
 
-Kompilator oczekuje określonego tokenu (czyli elementów języka innego niż biały znak), a zamiast tego znaleziono inny token.
+Kompilator oczekiwał określonego tokenu (oznacza to, że element języka inny niż biały znak) i zamiast niego znalazł inny token.
 
-Sprawdź [C++ Language Reference](../../cpp/cpp-language-reference.md) ustalenie, gdy kod jest nieprawidłowy. Ponieważ kompilator może zgłosić ten błąd, po napotkaniu wiersza, który powoduje, że ten problem, sprawdź kilka wierszy kodu, które poprzedzają błędu.
+Sprawdź [odwołanie do języka C++](../../cpp/cpp-language-reference.md) , aby określić, gdzie kod jest syntaktycznie niepoprawny. Ponieważ kompilator może zgłosić ten błąd po napotkaniu wiersza, który powoduje problem, zaznacz kilka wierszy kodu, które poprzedzają błąd.
 
 C2143 może wystąpić w różnych sytuacjach.
 
-Może wystąpić, gdy operator, który może kwalifikować się nazwę (`::`, `->`, i `.`) musi następować słowo kluczowe `template`, jak w tym przykładzie:
+Może wystąpić, gdy operator, który może kwalifikować nazwę ( `::` , `->` i `.` ) musi następować słowo kluczowe **`template`** , jak w poniższym przykładzie:
 
 ```cpp
 class MyClass
@@ -35,7 +35,7 @@ class MyClass
 };
 ```
 
-Domyślnie C++ założono, że `Ty::PutFuncType` nie jest szablonem; w związku z tym, że `<` jest interpretowany jako mniej-niż logowania.  Musisz poinformować kompilator jawnie, `PutFuncType` jest szablon, aby go można poprawnie przeanalizować nawiasu ostrego. Aby rozwiązać ten problem, należy użyć `template` słów kluczowych dotyczących nazwy typ zależny, jak pokazano poniżej:
+Domyślnie C++ zakłada, że `Ty::PutFuncType` nie jest to szablon; w związku z tym następujące `<` jest interpretowane jako znak mniejszości.  Musisz poinformować kompilator jawnie, że `PutFuncType` jest szablonem, aby mógł prawidłowo przeanalizować nawias ostry. Aby naprawić ten błąd, użyj **`template`** słowa kluczowego dla nazwy typu zależnego, jak pokazano poniżej:
 
 ```cpp
 class MyClass
@@ -47,7 +47,7 @@ class MyClass
 };
 ```
 
-C2143 może wystąpić, gdy **/CLR** jest używany i `using` dyrektywy występuje błąd składni:
+C2143 może wystąpić, gdy jest używany **/CLR** , a **`using`** dyrektywa ma błąd składniowy:
 
 ```cpp
 // C2143a.cpp
@@ -56,7 +56,7 @@ using namespace System.Reflection;   // C2143
 using namespace System::Reflection;
 ```
 
-Może również wystąpić, próba skompilowania pliku kodu źródłowego za pomocą składni CLR bez również przy użyciu **/CLR**:
+Może również wystąpić podczas próby skompilowania pliku kodu źródłowego przy użyciu składni CLR bez użycia **/CLR**:
 
 ```cpp
 // C2143b.cpp
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-Pierwszy znak niebędący odstępem, który następuje po `if` instrukcja musi być lewy nawias. Kompilator nie może tłumaczyć czymkolwiek:
+Pierwszy znak, który nie jest odstępem **`if`** po instrukcji, musi być lewym nawiasem. Kompilator nie może przetłumaczyć żadnych innych elementów:
 
 ```cpp
 // C2143c.cpp
@@ -85,7 +85,7 @@ int main() {
 }
 ```
 
-C2143 może wystąpić, jeśli brak w wierszu, w którym zostanie wykryty błąd zamykającego nawiasu klamrowego, nawiasy lub średnika lub na jeden z wierszy powyżej:
+C2143 może wystąpić, gdy brakuje zamykającego nawiasu klamrowego, nawiasu lub średnika w wierszu, w którym został wykryty błąd lub jeden z powyższych wierszy:
 
 ```cpp
 // C2143d.cpp
@@ -96,7 +96,7 @@ class X {
 } x;
 ```
 
-Lub, jeśli w deklaracji klasy istnieje nieprawidłowy tag:
+Lub jeśli w deklaracji klasy występuje nieprawidłowy Tag:
 
 ```cpp
 // C2143e.cpp
@@ -108,7 +108,7 @@ class + {};   // C2143 + is an invalid tag name
 class ValidName {};   // OK
 ```
 
-Lub jeśli etykieta nie jest dołączony do instrukcji. Jeśli samodzielnie, należy dodać etykietę, na przykład na końcu instrukcji złożonej, dołącz go do Instrukcja o wartości null:
+Lub gdy etykieta nie jest dołączona do instrukcji. Jeśli musisz umieścić etykietę na przykład na końcu złożonej instrukcji, Dołącz ją do instrukcji o wartości null:
 
 ```cpp
 // C2143f.cpp
@@ -122,7 +122,7 @@ void func1() {
 }
 ```
 
-Ten błąd może wystąpić, gdy niekwalifikowanej rozmowy z typem w standardowej bibliotece C++:
+Ten błąd może wystąpić, gdy do typu w standardowej bibliotece języka C++ zostanie wykonane niekwalifikowane wywołanie:
 
 ```cpp
 // C2143g.cpp
@@ -132,7 +132,7 @@ static vector<char> bad;   // C2143
 static std::vector<char> good;   // OK
 ```
 
-Lub braku przełącznika `typename` — słowo kluczowe:
+Lub brak **`typename`** słowa kluczowego:
 
 ```cpp
 // C2143h.cpp
@@ -151,7 +151,7 @@ X<T>::Y X<T>::memFunc() {   // C2143
 }
 ```
 
-Lub jeśli zostanie podjęta próba zdefiniować jawne utworzenie wystąpienia:
+Lub jeśli spróbujesz zdefiniować jawne utworzenie wystąpienia:
 
 ```cpp
 // C2143i.cpp
@@ -164,7 +164,7 @@ template void PrintType(float i, float j){}   // C2143
 template void PrintType(float i, float j);   // OK
 ```
 
-W programie C zmienne muszą zostać zadeklarowane na początku funkcji i nie może być zadeklarowana po funkcji wykonuje instrukcje-declaration.
+W programie C zmienne muszą być zadeklarowane na początku funkcji i nie mogą być deklarowane po wykonaniu przez funkcję instrukcji niezwiązanych z deklaracją.
 
 ```C
 // C2143j.c

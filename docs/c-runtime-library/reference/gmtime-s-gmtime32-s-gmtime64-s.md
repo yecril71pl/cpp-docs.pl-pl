@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: 152b0569d452fc48af7583b23c6a2449cb24d0d6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8cebd2eab1c0a5b650f33ccca1e87a0a8cad1e08
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916221"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213557"
 ---
 # <a name="gmtime_s-_gmtime32_s-_gmtime64_s"></a>gmtime_s, _gmtime32_s, _gmtime64_s
 
@@ -85,7 +85,7 @@ Zero, jeśli powodzenie. Wartość zwracana jest kodem błędu w przypadku wyst�
 
 |*tmDest*|*sourceTime*|Przesłać|Wartość w *tmDest*|
 |-----------|------------|------------|--------------------|
-|**NULL**|ile|**EINVAL**|Nie zmodyfikowano.|
+|**NULL**|dowolny|**EINVAL**|Nie zmodyfikowano.|
 |Nie **ma wartości null** (wskazuje na prawidłową pamięć)|**NULL**|**EINVAL**|Wszystkie pola mają ustawioną wartość-1.|
 |Nie **ma wartości null**|< 0|**EINVAL**|Wszystkie pola mają ustawioną wartość-1.|
 
@@ -98,7 +98,7 @@ Funkcja **_gmtime32_s** przerywa wartość *sourceTime* i zapisuje ją w struktu
 > [!NOTE]
 > Środowisko docelowe powinno próbować określić, czy obowiązuje czas letni. Biblioteka środowiska uruchomieniowego C przyjmuje reguły Stany Zjednoczone na potrzeby implementowania obliczeń czasu letniego.
 
-Każde pole struktury jest typu **int**, jak pokazano w poniższej tabeli.
+Wszystkie pola struktury są typu **`int`** , jak pokazano w poniższej tabeli.
 
 |Pole|Opis|
 |-|-|
@@ -122,7 +122,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek C|Wymagany nagłówek C++|
 |-------------|---------------------|-|
-|**gmtime_s**, **_gmtime32_s**, **_gmtime64_s**|\<> godziny. h|\<CTime> lub \<Time. h>|
+|**gmtime_s**, **_gmtime32_s**, **_gmtime64_s**|\<time.h>|\<ctime> lub \<time.h>|
 
 Aby uzyskać więcej informacji o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 

@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-ms.openlocfilehash: 264ac0a56996b0dcbeeb64246623eca1a3fc73ff
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: affec6dcd88290b24a92cd9035a131baee38bcf1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172155"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214272"
 ---
 # <a name="interior_ptr-ccli"></a>interior_ptr (C++/CLI)
 
@@ -30,7 +30,7 @@ ms.locfileid: "80172155"
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: `/ZW`
+Opcja kompilatora:`/ZW`
 
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania
 
@@ -45,12 +45,12 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 ### <a name="parameters"></a>Parametry
 
 *cv_qualifier*<br/>
-kwalifikatory **const** lub **volatile** .
+**`const`** lub **`volatile`** kwalifikatory.
 
-*type*<br/>
+*Wprowadź*<br/>
 Typ *inicjatora*.
 
-*var*<br/>
+*funkcję*<br/>
 Nazwa zmiennej **interior_ptr** .
 
 *skład*<br/>
@@ -66,7 +66,7 @@ Wewnętrzny wskaźnik można zadeklarować tylko na stosie.  Wewnętrzny wskaźn
 
 Ponieważ wewnętrzne wskaźniki istnieją tylko na stosie, pobranie adresu wskaźnika wewnętrznego daje niezarządzany wskaźnik.
 
-**interior_ptr** ma niejawną konwersję na wartość **logiczną**, która umożliwia korzystanie z instrukcji warunkowych.
+**interior_ptr** ma niejawną konwersję na **`bool`** , która umożliwia korzystanie z instrukcji warunkowych.
 
 Aby uzyskać informacje na temat sposobu deklarowania wewnętrznego wskaźnika, który wskazuje na obiekt, którego nie można przenieść na stertie zebranych elementów bezużytecznych, zobacz [pin_ptr](pin-ptr-cpp-cli.md).
 
@@ -74,17 +74,17 @@ Aby uzyskać informacje na temat sposobu deklarowania wewnętrznego wskaźnika, 
 
 Aby uzyskać więcej informacji na temat wewnętrznych wskaźników, zobacz.
 
-- [Instrukcje: deklarowanie wewnętrznych wskaźników i zarządzanych tablic oraz posługiwanie się nimi (C++/CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
+- [Poradnik: Deklarowanie wewnętrznych wskaźników i zarządzanych tablic oraz posługiwanie się nimi (C++/CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
 
 - [Instrukcje: deklarowanie typów wartości za pomocą słowa kluczowego interior_ptr (C++/CLI)](how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)
 
-- [Instrukcje: funkcje przeładowania z wewnętrznymi i natywnymi wskaźnikami (C++/CLI)](how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)
+- [Poradnik: Funkcje przeładowania z wewnętrznymi i natywnymi wskaźnikami (C++/CLI)](how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)
 
-- [Instrukcje: deklarowanie wewnętrznych wskaźników za pomocą słowa kluczowego const (C++/CLI)](how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)
+- [Poradnik: Deklarowanie wewnętrznych wskaźników za pomocą słowa kluczowego const (C++/CLI)](how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)
 
 ### <a name="requirements"></a>Wymagania
 
-Opcja kompilatora: `/clr`
+Opcja kompilatora:`/clr`
 
 ### <a name="examples"></a>Przykłady
 
@@ -124,4 +124,4 @@ int main() {
 
 ## <a name="see-also"></a>Zobacz też
 
-[Rozszerzenia składników dla platformy .NET i platformy uniwersalnej systemu Windows](component-extensions-for-runtime-platforms.md)
+[Rozszerzenia składników dla platform .NET i platformy UWP](component-extensions-for-runtime-platforms.md)

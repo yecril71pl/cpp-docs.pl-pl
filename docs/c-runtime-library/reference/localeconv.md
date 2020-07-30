@@ -28,12 +28,12 @@ helpviewer_keywords:
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-ms.openlocfilehash: c154af87f135f5bf119de26ea8cd0be545ed5382
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c4e1820ac412a0447c5059ecc92375275f7b2701
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916406"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218640"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -57,12 +57,12 @@ Funkcja **localeconv** pobiera szczegółowe informacje o formatowaniu liczbowym
 |-|-|
 decimal_point,<br/>_W_decimal_point|Wskaźnik na znak dziesiętny dla ilości niepieniężnych.
 thousands_sep,<br/>_W_thousands_sep|Wskaźnik do znaku, który oddziela grupy cyfr po lewej stronie przecinka dziesiętnego dla ilości niepieniężnych.
-grouping|Wskaźnik do liczby całkowitej o rozmiarze **char**, która zawiera rozmiar każdej grupy cyfr w ilościach niepieniężnych.
+grouping|Wskaźnik do **`char`** liczby całkowitej o rozmiarze, która zawiera rozmiar każdej grupy cyfr w ilościach niepieniężnych.
 int_curr_symbol,<br/>_W_int_curr_symbol|Wskaźnik na Międzynarodowy symbol waluty dla bieżących ustawień regionalnych. Pierwsze trzy znaki określają alfabetyczny symbol waluty międzynarodowej zgodnie z definicją w *kodzie ISO 4217 dla reprezentacji standardu walutowego i funduszy* . Czwarty znak (bezpośrednio poprzedzający znak null) oddziela Międzynarodowy symbol waluty od ilości pieniężnej.
 currency_symbol,<br/>_W_currency_symbol|Wskaźnik na symbol waluty lokalnej dla bieżących ustawień regionalnych.
 mon_decimal_point,<br/>_W_mon_decimal_point|Wskaźnik na znak dziesiętny dla ilości pieniężnych.
 mon_thousands_sep,<br/>_W_mon_thousands_sep|Wskaźnik do separatora grup cyfr na lewo od miejsca dziesiętnego w ilościach pieniężnych.
-mon_grouping|Wskaźnik do liczby całkowitej o rozmiarze **char**, która zawiera rozmiar każdej grupy cyfr w ilościach pieniężnych.
+mon_grouping|Wskaźnik do **`char`** liczby całkowitej o rozmiarze, która zawiera rozmiar każdej grupy cyfr w ilościach pieniężnych.
 positive_sign,<br/>_W_positive_sign|Ciąg oznaczający znak w przypadku nieujemnych ilości pieniężnych.
 negative_sign,<br/>_W_negative_sign|Ciąg oznaczający znak w przypadku ujemnych ilości pieniężnych.
 int_frac_digits|Liczba cyfr z prawej strony punktu dziesiętnego w przypadku szesnastkowie sformatowanych ilości pieniężnych.
@@ -74,9 +74,9 @@ n_sep_by_space|Ustaw wartość 1, jeśli symbol waluty jest rozdzielony spacją 
 p_sign_posn|Pozycja znaku pozytywnego w nieujemnych, sformatowanych ilościach pieniężnych.
 n_sign_posn|Pozycja znaku pozytywnego w ujemnych sformatowanych ilościach pieniężnych.
 
-O ile nie określono, członkowie struktury **lconv** , która ma `char *` i `wchar_t *` wersje są wskaźnikami do ciągów. Każdy z tych elementów równy **""** (lub **L ""** dla **wchar_t** <strong>\*</strong>) ma zerową długość lub nie jest obsługiwany w bieżących ustawieniach regionalnych. Należy pamiętać, że **decimal_point** i **_W_decimal_point** są zawsze obsługiwane i o niezerowej długości.
+O ile nie określono, członkowie struktury **lconv** , która ma `char *` i `wchar_t *` wersje są wskaźnikami do ciągów. Każdy z tych elementów równy **""** (lub **L ""** dla **`wchar_t`** <strong>\*</strong> ) ma zerową długość lub nie jest obsługiwany w bieżących ustawieniach regionalnych. Należy pamiętać, że **decimal_point** i **_W_decimal_point** są zawsze obsługiwane i o niezerowej długości.
 
-Składowe **znaku** struktury są małymi nieujemnymi liczbami, a nie znakami. Wszystkie te, które są równe **CHAR_MAX** nie są obsługiwane w bieżących ustawieniach regionalnych.
+**`char`** Elementy członkowskie struktury są małymi nieujemnymi liczbami, a nie znakami. Wszystkie te, które są równe **CHAR_MAX** nie są obsługiwane w bieżących ustawieniach regionalnych.
 
 Wartości **grupowania** i **mon_grouping** są interpretowane zgodnie z następującymi regułami:
 
@@ -122,7 +122,7 @@ Domyślnie globalny stan tej funkcji jest objęty zakresem aplikacji. Aby to zmi
 
 |Procedura|Wymagany nagłówek|
 |-------------|---------------------|
-|**localeconv**|\<locale. h>|
+|**localeconv**|\<locale.h>|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodność](../../c-runtime-library/compatibility.md).
 
@@ -132,8 +132,8 @@ Wszystkie wersje [bibliotek uruchomieniowych języka C](../../c-runtime-library/
 
 ## <a name="see-also"></a>Zobacz też
 
-[Ustawienie](../../c-runtime-library/locale.md)<br/>
+[Regionalne](../../c-runtime-library/locale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>
-[strcoll — Funkcje](../../c-runtime-library/strcoll-functions.md)<br/>
+[Funkcje strcoll —](../../c-runtime-library/strcoll-functions.md)<br/>
 [strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
 [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>

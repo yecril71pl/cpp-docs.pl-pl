@@ -5,12 +5,12 @@ helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: abef6f4e641b7936157ee063443a5b2a220fdd52
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5aee23f72c5b0fb955b4dcc76a3f8c51eca7be70
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623513"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204238"
 ---
 # <a name="allocators"></a>Allocators
 
@@ -28,7 +28,7 @@ Standardowa biblioteka języka C++ zawiera domyślną implementację alokatora. 
 
 ## <a name="writing-your-own-allocator-c11"></a>Pisanie własnego alokatora (C++ 11)
 
-Domyślny Alokator używa **nowych** i usunięć do przydzielania i **cofania** alokacji pamięci. Jeśli chcesz użyć innej metody alokacji pamięci, takiej jak użycie pamięci współużytkowanej, należy utworzyć własny Alokator. Jeśli jest przeznaczony dla języka C++ 11 i musisz napisać nowy Alokator niestandardowy, jeśli to możliwe, należy wprowadzić minimalny Alokator. Nawet jeśli już zaimplementowano alokatora w starym stylu, Rozważ zmodyfikowanie go jako *minimalnego alokatora* , aby skorzystać z bardziej wydajnej `construct()` metody, która zostanie udostępniona automatycznie.
+Domyślny Alokator używa **`new`** i **`delete`** do przydzielania i cofania alokacji pamięci. Jeśli chcesz użyć innej metody alokacji pamięci, takiej jak użycie pamięci współużytkowanej, należy utworzyć własny Alokator. Jeśli jest przeznaczony dla języka C++ 11 i musisz napisać nowy Alokator niestandardowy, jeśli to możliwe, należy wprowadzić minimalny Alokator. Nawet jeśli już zaimplementowano alokatora w starym stylu, Rozważ zmodyfikowanie go jako *minimalnego alokatora* , aby skorzystać z bardziej wydajnej `construct()` metody, która zostanie udostępniona automatycznie.
 
 Minimalny Alokator wymaga znacznie mniej typowego i umożliwia skoncentrowanie się na `allocate` `deallocate` funkcjach składowych, które wykonują wszystkie prace. Podczas tworzenia minimalnego alokatora nie należy wdrażać żadnych elementów członkowskich z wyjątkiem tych, które przedstawiono w poniższym przykładzie:
 
